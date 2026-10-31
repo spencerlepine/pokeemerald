@@ -91,6 +91,18 @@ def main():
     lines += ["", "## Story", "", "| Metric | Count | % |", "|---|---:|---:|",
               f"| timeline events rewritten | {tld} / {len(tl)} | {pct(tld, len(tl))} |"]
 
+    port = read("game_port.csv")
+    by_table = defaultdict(Counter)
+    for r in port:
+        by_table[r["table"]][r["game_status"]] += 1
+    no_file = sum(1 for r in port if r["notes"].startswith("no game source file"))
+    lines += ["", "## Game port (Step 4)", "",
+              "Every row of `database/game_port.csv` is one thing to copy into `../game` by hand.", "",
+              "| Source table | Rows | NOT_STARTED | DONE |", "|---|---:|---:|---:|",
+              *[f"| {t} | {sum(c.values())} | {c['NOT_STARTED']} | {c['DONE']} |" for t, c in sorted(by_table.items())],
+              f"| **total** | {len(port)} | {sum(c['NOT_STARTED'] for c in by_table.values())} | {sum(c['DONE'] for c in by_table.values())} |",
+              "", f"Mapped rows with no game source file recorded: {no_file}."]
+
     planets = Counter(r["planet"] for r in swap if r["entity_type"] == "location" and r["planet"])
     lines += ["", "## Locations per planet", "", "| Planet | Region-map locations |", "|---|---:|",
               *[f"| {p} | {n} |" for p, n in sorted(planets.items())]]

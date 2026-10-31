@@ -36,7 +36,20 @@ Every row carries four status columns:
 | `art_status` | `PENDING_ART` | Uses (renamed) Emerald art for now; must be redrawn in Step 5. |
 | | `NEEDS_PLACEHOLDER` | Net-new: Step 4 must copy an existing asset (`placeholder_from`) first. |
 | | `KEEP_ANIM` / `KEEP_ART` / `NO_ART` | Reuse the existing animation / art, or nothing to draw. |
-| `game_status` | `NOT_STARTED` | Step 4 updates this as rows land in the game. |
+| `game_status` | `NOT_STARTED` / `DONE` | Step 4 sets `DONE` as each row lands in `../game`. Carried by entities, net_new, texts, timeline_events and pending_art. |
+
+## Porting into the game
+
+The wiki and `../game` never import each other. Content is copied into the game by hand, piece by piece.
+Two lists drive that work:
+
+- **Art:** `database/pending_art.csv`, one row per image or animation, including the art that net-new rows need.
+  `art_status` says what to draw.
+- **Game port:** `database/game_port.csv`, one row per thing to change in `../game`: every entity, every
+  line of text, every story event and every art file. `game_file` / `game_line` give the place in `../game`;
+  `wiring` lists what the row is tied to (map, sprite, script, speaker, flags, trainers); `depends_on` says what
+  must land first. Once a row is in the game, set `game_status` to `DONE` in the table named by `table`
+  (the source of truth) and rebuild; `game_port.csv` is generated from those tables.
 
 ## Tables (database/, generated)
 

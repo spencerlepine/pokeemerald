@@ -540,6 +540,84 @@ def pending_art(rows):
     return out
 
 
+def net_new_art(net):
+    """NET_NEW rows that need new art have no Emerald asset; list them so the art list is complete."""
+    out = []
+    for n in net:
+        if n["art_status"] not in ("PENDING_ART", "NEEDS_PLACEHOLDER"):
+            continue
+        out.append({"asset_id": n["id"], "kind": "net_new", "subkind": n["entity_type"], "path": "",
+                    "width": "", "height": "", "used_by": f"{n['id']}:net_new", "sw_entity": n["sw_name"],
+                    "sw_subject": n["sw_name"], "suggested_path": "", "art_status": n["art_status"],
+                    "drawn_by": "", "art_notes": (f"placeholder: copy the art of {n['placeholder_from']}"
+                                                  if n.get("placeholder_from") else "new art, no Emerald asset")})
+    return out
+
+
+# --------------------------------------------------------------------------- game port (Step 4)
+# One row per thing to copy from this wiki into ../game by hand. The wiki and the game never import each
+# other: a porter edits ../game/<game_file>, then sets game_status DONE here (in the table named by `table`).
+
+PORT_COLS = ["port_id", "table", "kind", "wiki_id", "swap_kind", "action", "game_file", "game_line",
+             "wiring", "depends_on", "game_status", "notes"]
+# Entity columns that tie a row to other game content (maps, sprites, scripts, flags, parties...).
+WIRING_COLS = ["map", "graphics", "script", "visibility_flag", "map_ids", "home_map", "trainer_ids",
+               "trainer_class", "trainer_pic", "party_symbol", "species", "sprite", "sprite_ids", "layout",
+               "primary_tileset", "secondary_tileset", "heal_location", "sign_text_id", "flag_id",
+               "teaches_move", "taught_by_item", "organization_ids", "related_entity_ids"]
+ENTITY_ACTION = {"HOTSWAP": "swap name/constant/description to the Star Wars version",
+                 "KEEP": "keep as is; check every reference still matches after the swaps",
+                 "NET_NEW": "build new content (see progress/NET_NEW_DESIGNS.md)"}
+
+
+def _wiring(r, cols):
+    return "; ".join(f"{c}={r[c]}" for c in cols if r.get(c))
+
+
+def game_port(ents, net, texts, tl, art):
+    out = []
+    net_by_id = {n["id"]: n for n in net}
+
+    def add(**kw):
+        out.append({c: kw.get(c, "") for c in PORT_COLS} | {"game_status": "NOT_STARTED"})
+
+    for e in sorted(ents, key=lambda e: (e["entity_type"], e["id"])):
+        n = net_by_id.get(e["id"])
+        src = e.get("source_file", "")
+        note = ""
+        if e["swap_kind"] == "NET_NEW":
+            src = ""
+        elif not src or src == "curated":
+            note = "no game source file recorded; find it in ../game by hand"
+            src = ""
+        add(port_id=f"entity|{e['id']}", table="entities.csv", kind=e["entity_type"] or "unknown",
+            wiki_id=e["id"], swap_kind=e["swap_kind"], action=ENTITY_ACTION[e["swap_kind"]], game_file=src,
+            wiring=_wiring(n, ("placeholder_from",)) if n else _wiring(e, WIRING_COLS),
+            depends_on=n["depends_on"] if n else "", notes=note)
+    for t in texts:
+        add(port_id=f"text|{t['text_id']}", table="texts.csv", kind=f"text:{t['text_context'] or t['text_origin']}",
+            wiki_id=t["text_id"], swap_kind="HOTSWAP" if t["sw_text_raw"] != t["emerald_text_raw"] else "KEEP",
+            action="replace the text with sw_text_raw", game_file=t["source_file"], game_line=t["source_line"],
+            wiring=_wiring(t, ("map_id", "speaker_label")),
+            notes="may overflow the text box" if t["overflow_risk"] else "")
+    for t in tl:
+        add(port_id=f"event|{t['id']}", table="timeline_events.csv", kind=f"event:{t.get('type', '')}",
+            wiki_id=t["id"], swap_kind="HOTSWAP",
+            action="check the event's scripts, flags, maps, trainers and characters all use the swapped content",
+            wiring=_wiring(t, ("trigger_flag", "completion_flag", "map_ids", "trainer_ids", "character_ids",
+                               "related_entity_ids")),
+            depends_on=t.get("previous_event_id", ""))
+    for a in art:
+        new = a["kind"] == "net_new"
+        add(port_id=f"art|{a['asset_id']}", table="pending_art.csv", kind=f"art:{a['kind']}",
+            wiki_id=a["asset_id"], swap_kind="NET_NEW" if new else ("KEEP" if a["art_status"] == "KEEP_ANIM" else "HOTSWAP"),
+            action=("keep the animation; rename only if suggested_path is set" if a["art_status"] == "KEEP_ANIM"
+                    else "copy the redrawn art into ../game once art_status is DONE"),
+            game_file=a["path"], wiring=a["used_by"],
+            depends_on="" if a["art_status"] == "KEEP_ANIM" else "art_status DONE in pending_art.csv")
+    return out
+
+
 # --------------------------------------------------------------------------- main
 
 def main() -> None:
@@ -602,6 +680,8 @@ def main() -> None:
                      "sw_description": n["description"], "notes": n["balance_note"],
                      "derived_from": "mapping/net_new.csv"})
     write("swap_map.csv", swap, swap_cols)
+    for n in net:
+        n["game_status"] = "NOT_STARTED"
     write("net_new.csv", net)
 
     # entities: Emerald columns + Star Wars overlay
@@ -642,9 +722,13 @@ def main() -> None:
           [{"emerald_term": k, "sw_term": " / ".join(v), "source": "AMBIGUOUS (not applied)"}
            for k, v in sorted(ambiguous.items())])
     texts, tcounts = draft_texts(terms)
+    for t in texts:
+        t["game_status"] = "NOT_STARTED"
     write("texts.csv", texts)
 
-    art = pending_art(rows)
+    art = pending_art(rows) + net_new_art(net)
+    for a in art:
+        a["game_status"] = "NOT_STARTED"
     write("pending_art.csv", art)
 
     # area progression with planets
@@ -677,7 +761,12 @@ def main() -> None:
     for t in tl_map:
         if t not in {x["id"] for x in tl}:
             warn(f"mapping/timeline.csv: unknown event {t}")
+    for o in tl:
+        o["game_status"] = "NOT_STARTED"
     write("timeline_events.csv", tl)
+
+    port = game_port(ent_out, net, texts, tl, art)
+    write("game_port.csv", port, PORT_COLS)
 
     info = [{"key": "emerald_db", "value": str(EMERALD)},
             {"key": "emerald_db_commit", "value": next((r["value"] for r in read(EMERALD / "build_info.csv")

@@ -53,6 +53,11 @@ can be `[x]` with its rows still DRAFT.
 - [x] **E2 Habitat swaps.** Encounter tables unchanged (balance identical); every off-world companion explained in `progress/HABITATS.md` (`tools/habitats.py`, notes in `mapping/habitat_notes.csv`).
 - [x] **E3 Net-new designs.** `progress/NET_NEW_DESIGNS.md`: maps, reserved unused flags/vars, level bands and placeholders for every net-new row (rows now DRAFT).
 
+## Phase F: port into the game (Step 4)
+
+- [x] **F0 Port tracking.** Every entity, text, story event and art file has `game_status` NOT_STARTED; net-new art is in `pending_art.csv`; `database/game_port.csv` lists all 22,699 port items with game file, line, wiring and dependencies.
+- [ ] **F1 Port.** Copy each `game_port.csv` row into `../game` by hand and set `game_status` DONE in its source table.
+
 ## Log
 
 Append one line per working session: date · chunk(s) · commit · notes.
@@ -86,3 +91,4 @@ Append one line per working session: date · chunk(s) · commit · notes.
 - 2026-10-31 · owner decisions round 2 · see git log · Arena leaders Biggs (1), Sabine (4), Kanan & Ezra (7). Canon-creature pass: 15 invented companions renamed to canon creatures (`mapping/proposals/canon_pass.csv`). 0 overflow, 0 warnings. Remaining: E1-E3.
 - 2026-10-31 · E2 + E3 · see git log · Habitats: 143 wild species checked, 0 unexplained, GNARLSPAWN line re-homed to Endor, no encounter changes. Net-new designs for 16 rows with flags from Emerald's unused slots. Remaining: E1 owner review.
 - 2026-10-31 · E1 · see git log · Owner approved the bible. All 6,982 swap rows DONE (mapping files plus the rows the build derives from them), all 11,229 texts CURATED, 0 warnings. Step 3 complete; next is Step 4 (apply to the game code).
+- 2026-10-31 · F0 · see git log · game_status on texts, timeline events, net-new and art; net-new art added to pending_art; game_port.csv generated (22,699 rows); 0 warnings.
