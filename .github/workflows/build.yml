@@ -42,22 +42,24 @@ jobs:
       - name: Install agbcc
         run: |
           ./build.sh
-          ./install.sh ../
+          ./install.sh ../game
         working-directory: agbcc
 
       - name: Compare
         run: make -j${nproc} all syms
+        working-directory: game
 
       - name: Modern
         env:
           MODERN: 1
           COMPARE: 0
         run: make -j${nproc} all
+        working-directory: game
 
       - name: Move symfiles
         if: ${{ github.event_name == 'push' }}
         run: |
-          cp -v *.sym symbols/
+          cp -v game/*.sym symbols/
           echo "SYMBOLS_COMMIT_MSG=$( git log --format=%s ${GITHUB_SHA} )" >> $GITHUB_ENV
 
       - name: Update symfiles
