@@ -1,0 +1,367 @@
+text_id,sw_text_raw,notes
+PetalburgWoods_Text_HaveYouSeenShroomish,"Hello, have you seen a COMPANION\ncalled FELUSPORE around here?\pI really love that COMPANION.$",
+PetalburgWoods_Text_HandOverThosePapers,You! ORGANA ENGINEER!\pHand over those schematics!$,
+PetalburgWoods_Text_YouveGotSomeNerve,"Grrr… You've got some nerve\nmeddling with THE CARTEL!\lCome on and battle me again!\pI wish I could say that, but I'm out of\nCOMPANIONS…\pAnd, hey, we of THE CARTEL are also\nafter something in BESTINE.\pI'll let you go today!$",
+PetalburgWoods_Text_ThatWasAwfullyClose,"Whew…\nThat was awfully close!\pThanks to you, he didn't rob me of\nthese important schematics.\pI know, I'll give you a DURASTEEL POD as\nmy thanks!$",
+PetalburgWoods_Text_TeamAquaAfterSomethingInRustboro,"Didn't that CARTEL thug say\nthey were after something in\lBESTINE, too?$",
+PetalburgWoods_Text_GoBugPokemonTeam,"I caught a whole bunch of COMPANIONS!\pGo, go, go!\nMy BUG COMPANION team!$",
+PetalburgWoods_Text_ImOutOfPokeBalls,I caught a bunch of COMPANIONS.\nNow I'm out of CAPTURE PODS.$,
+PetalburgWoods_Text_InstantlyPopularWithBugPokemon,"If you take BUG COMPANIONS to class,\nyou get to be instantly popular!$",
+PetalburgWoods_Text_IWantRematch1,I want a rematch when my BUG\nCOMPANIONS grow up!\pI'm registering you in my COMLINK!$,
+PetalburgWoods_Text_IWantRematch2,I want a rematch when my BUG\nCOMPANIONS grow up!\pI'm registering you in my COMLINK!$,
+PetalburgWoods_Text_IveBeenTrainingHard,"You get to be popular if you have\nstrong COMPANIONS, right?\lSo, I've been training hard.$",
+PetalburgWoods_Text_StayOutOfTallGrass,"Yo, there!\nYour COMPANION doing okay?\pIf your COMPANIONS are weak and you\nwant to avoid battles, stay out\lof the scrub.$",
+PetalburgWoods_Text_MiracleSeedExplanation,"It's a MIRACLE SEED.\nIf a COMPANION holds that item, its\lGRASS-type moves become stronger.\pBesides MIRACLE SEED, I think there are\nother convenient items for COMPANIONS\lto hold.$",
+Route104_Text_BrineyLivesInSeasideCottage,That shack by the landing pad is where\nHAN lives.\pThey say he's the best pilot in the\nOUTER RIM. Just ask him!$,
+Route104_Text_WhatsItLikeAtBottomOfSea,"The water, huh?\pI wonder what's at the bottom of\nthe lake?$",
+Route104_Text_OnlyThrowBallAtWildPokemon,You're a thief if you try to steal\nsomeone else's COMPANION.\pYou should throw CAPTURE PODS only at\nwild COMPANIONS.$,
+Route104_Text_MrBrineysCottage,HAN'S LANDING PAD$,
+Route104_Text_RouteSignPetalburg,ROUTE 104\n{RIGHT_ARROW} MOS ENTHA$,
+Route104_Text_RouteSignRustboro,ROUTE 104\n{UP_ARROW} BESTINE$,
+Route104_Text_PrettyPetalFlowShop,DESERT BLOOM FLOWER SHOP$,
+Route104_Text_TrainerTipsDoubleBattles,"TRAINER TIPS\pIn the OUTER RIM there are pairs\nof TRAINERS who challenge others\lfor 2-on-2 COMPANION battles called\lDOUBLE BATTLES.\pIn a DOUBLE BATTLE, the TRAINER must\nsend out two COMPANIONS, the one at\lthe left of the list and the top one.\lWatch how COMPANIONS are lined up.$",
+Route104_Text_MayHaventRaisedPokemon,"MIRA: Oh, what's the matter?\pHaven't you caught or raised your\nCOMPANIONS very much?\pThat's not very good for a TRAINER!$",
+Route104_Text_MayPostBattle,"MIRA: I can tell you've gotten pretty\ngood at handling COMPANIONS.\pBut instead of only making them\nbattle, be like HAN and CHEWIE.\pIt's important to become friends with\nyour COMPANIONS, too.$",
+Route104_Text_BrendanNoConfidence,KAEL: What's the matter? Don't have\nany confidence in your COMPANIONS?$,
+Route104_Text_BrendanPostBattle,"KAEL: You've gotten pretty decent\nat handling COMPANIONS.\pBut, you know, you shouldn't just be\nmaking COMPANIONS battle.\pLike HAN and CHEWIE, you should\nbe real partners with your COMPANIONS.$",
+Route104_MrBrineysHouse_Text_WaitUpPeeko,"HAN: Hold on, kid!\nWait up, CHEWIE!$",
+Route104_MrBrineysHouse_Text_ItsYouLetsSailToDewford,"Hm? You're {PLAYER}{KUN}!\nYou saved my buddy CHEWIE!\lI owe you one, kid.\pWhat's that?\nYou need a ride?\pHeh…\pYou've got a MESSAGE DISC for KACHIRHO\nand a package for MOS EISLEY, huh?\pQuite the busy life you must lead!\pSure, what you're asking is\nno problem at all.\pYou've come to the right pilot!\nWe'll fly to KASHYYYK first.$",
+Route104_MrBrineysHouse_Text_SetSailForDewford,"HAN: KASHYYYK it is, then!\pPunch it, CHEWIE!$",
+Route104_MrBrineysHouse_Text_DeclineDeliverySail,HAN: Is that so?\nYour deliveries can wait?\pJust tell me whenever you're\nready to fly!$,
+Route104_MrBrineysHouse_Text_NeedToMakeDeliveriesSailToDewford,"HAN: Hey, kid!\nI know exactly what you want to say!\pYou're to deliver a MESSAGE DISC to\nKACHIRHO and a package to MOS EISLEY.\pNo problem at all. You're looking at\nthe best pilot in the OUTER RIM!\pFirst, we'll head for KASHYYYK.$",
+Route104_MrBrineysHouse_Text_NeedToDeliverPackageSailToDewford,"HAN: Hey, kid!\nI know exactly what you want to say!\pYou're to deliver a package to\nRIC OLIé in MOS EISLEY.\pNo problem at all. You're looking at\nthe best pilot in the OUTER RIM!\pFirst, we'll head for KASHYYYK.$",
+Route104_MrBrineysHouse_Text_WhereAreWeBound,"HAN: Hey, kid!\nFor you, the FALCON flies anytime!\pSo, where are we headed?$",
+Route104_MrBrineysHouse_Text_TellMeWheneverYouWantToSail,"HAN: Is that so?\nWell, CHEWIE owes you one.\pJust tell me whenever you're\nready to fly!$",
+Route104_MrBrineysHouse_Text_Peeko,CHEWIE: Rrrwaaaghh!$,
+Route116_Text_ScoundrelMadeOffWithPeeko,"Ohhh, what am I gonna do?\pCHEWIE and I were picking up parts\nwhen some cartel thug jumped us…\pThat scoundrel made off with my\nco-pilot! With CHEWIE!\pCHEWIIIIEEEE!$",
+Route116_Text_DiggingTunnelWhenGoonOrderedMeOut,Nnn… Roar!\nWhat's going on?\pI was digging the tunnel without any\ntools when some goon ordered me out!\pThat tunnel's filled with COMPANIONS\nthat react badly to loud noises.\lThey could cause an uproar.\pThat's why we stopped using heavy\nequipment for tunneling…\pI'm worried that the goon will do\nsomething stupid and startle the\lCOMPANION into an uproar.$,
+Route116_Text_ThankYouTokenOfAppreciation,"Oh! It's you!\pYou're that person who not only helped\nme in JUNDLAND WASTES, but also got\lback my stolen package and then even\lgraciously delivered it to MOS EISLEY!\pRIC OLIé informed us that the\npackage arrived, too!\pI thank you very, very much!\pWhy, if I were a sandstorm, I would\nbury you in gratitude and hail\lyou as a hero!\pFor you, the most wonderful TRAINER,\nI bear good news!\pRecently, our company developed\na new kind of CAPTURE POD.\pAs a token of our appreciation, this\nis our gift to our wonderful TRAINER!$",
+Route116_Text_RusturfTunnelSign,BEGGAR'S CANYON TUNNEL\n“Linking BESTINE and ANCHORHEAD”\p“The tunnel project has been\ncanceled.”$,
+Route116_TunnelersRestHouse_Text_WeHadToStopBoring,"That BEGGAR'S CANYON there…\pAt first, we had a huge work crew boring\nthrough rock with the latest machinery.\lBut, we had to stop.\pIt turns out that we would have had\na negative effect on wild COMPANIONS in\lthe area.\pSo, we've got nothing to do but loll\naround here doing nothing.$",
+Route116_TunnelersRestHouse_Text_ManDiggingHisWayToVerdanturf,"There's a man digging his way to\nANCHORHEAD all by his lonesome.\lHe's desperate to get through.\pHe says that if he digs little by little\nwithout using machines, he won't\ldisturb COMPANIONS, and he'll avoid\lharming the natural environment.\pI wonder if he made it through yet.$",
+Route116_TunnelersRestHouse_Text_GetToVerdanturfWithoutTunnel,"To get to ANCHORHEAD without using\nthis TUNNEL, you'd have to fly to\lKASHYYYK, then MOS EISLEY,\lthen travel through MOS ESPA.$",
+RustboroCity_Text_GymLeaderIsntEasyWithFire,"I challenged the ARENA LEADER, but…\pIt's not going to be easy winning with\nmy FIRE-type COMPANIONS…\pFIRE-type COMPANIONS don't match up\nwell against ROCK-type COMPANIONS…$",
+RustboroCity_Text_MrBrineyWalksInTheTunnel,The pilot HAN has a landing pad\nsouth of here.\pHe goes poking around in the canyon\nevery so often.$,
+RustboroCity_Text_MrBrineyLovesPeeko,"The pilot HAN has a landing pad\nsouth of here.\pHe said he was going to MOS EISLEY\nfor parts with his co-pilot, CHEWIE.\pThose two are never apart.$",
+RustboroCity_Text_WowYouHavePokemon,"Wow, you have COMPANIONS with you, too.\pWhen I get bigger, I'm going to go\nplaces with COMPANIONS, too.$",
+RustboroCity_Text_CatchRarePokemonIfIGoToSchool,"BESTINE ACADEMY!\pIf I go to this school, will I be able\nto catch rare COMPANIONS easily?$",
+RustboroCity_Text_WaitDontTakeMyGoods,Wait! Pleeeaaase!\pDon't take my PARTS!$,
+RustboroCity_Text_MayPassedBrineyWantToBattle,"MIRA: Oh, by the way, I passed\nHAN in JUNDLAND WASTES.\pI guess he's on his way back to his\nlanding pad.\pHow's your DATAPAD coming along,\n{PLAYER}{KUN}? Mine's looking pretty decent!\pSo…\nHow about a little battle?$",
+RustboroCity_Text_MayOhHaventRaisedPokemonEnough,"MIRA: Oh, what's the matter?\pHaven't you caught or raised your\nCOMPANIONS very much?\pThat's not very good for a TRAINER!$",
+RustboroCity_Text_MayMrBrineyHint,"MIRA: Oh, by the way, HAN, who\nI just passed…\p{PLAYER}{KUN}, you just moved here so you\nmight not know this, but HAN\lis a legendary pilot.$",
+RustboroCity_Text_BrendanPassedBrineyWantToBattle,"KAEL: By the way, {PLAYER}, I walked\nby HAN in JUNDLAND WASTES.\pI bet he was on his way back to his\nlanding pad.\p{PLAYER}, how's your DATAPAD?\nHave you filled in any pages yet?\pMine rules.\pWant to have a battle to test how\nfar you've progressed?$",
+RustboroCity_Text_BrendanNoConfidenceInPokemon,KAEL: What's the matter? Don't have\nany confidence in your COMPANIONS?$,
+RustboroCity_Text_BrendanMrBrineyHint,"KAEL: By the way, you know\nHAN? The guy I just passed?\pI bet you didn't know this, since you\njust moved here, {PLAYER}, but\lHAN is a legendary pilot.$",
+RustboroCity_Text_GymSign,BESTINE ARENA\nLEADER: BIGGS\p“The ROCK-loving teacher!”$,
+RustboroCity_Text_TrainersSchoolSign,BESTINE ACADEMY\p“We'll teach you anything about\nCOMPANIONS!”$,
+RustboroCity_Text_DevelopedNewPokenavFeature,"I've been developing an added feature\nfor the COMLINK…\pAnd it turned out great!\p{PLAYER}, may I see that COMLINK?\nThe one the SENATOR gave you?$",
+RustboroCity_Text_AddedMatchCallPleaseCallMrStone,"There you go, {PLAYER}!\pI added a new feature named\nMATCH CALL to your COMLINK.\pUsing the MATCH CALL feature,\nyou can chat with people who have\lbeen registered in your COMLINK.\p{PLAYER}, SENATOR ORGANA should\nbe registered in your COMLINK.\pTest it out.\nPlease give the SENATOR a call.$",
+RustboroCity_CuttersHouse_Text_YouCanPutThisHMToGoodUse,"That determined expression…\nThat limber way you move…\lAnd your well-trained COMPANIONS…\pYou're obviously a skilled TRAINER!\pNo, wait, don't say a word.\nI can tell just by looking at you.\pI'm sure that you can put this\nHIDDEN MACHINE to good use.\pNo need to be modest or shy.\nGo on, take it!$",
+RustboroCity_CuttersHouse_Text_ExplainCut,"That HIDDEN MACHINE, or HM for\nshort, is VIBROBLADE.\pAn HM move is one that can be used\nby COMPANIONS outside of battle.\pA COMPANION that knows VIBROBLADE can\nslice through thin trees if the TRAINER\lhas earned the DUNE SHARD.\pAnd, unlike a TM, an HM can be used\nmore than once.$",
+RustboroCity_CuttersHouse_Text_DadHelpedClearLandOfTrees,"When they were expanding the city of\nBESTINE, my dad helped out.\pHis COMPANIONS used VIBROBLADE to\nclear the land of trees.$",
+RustboroCity_DevonCorp_1F_Text_RocksMetalDisplay,"Samples of rocks and metal are\ndisplayed in the glass case.\pThere's a panel with some writing\non it…\p“HOUSE ORGANA got its start as\na mining company.\p“The company also refined durasteel\nfrom desert ore.\p“From that humble start as a producer\nof raw materials, HOUSE ORGANA\ldeveloped.\p“HOUSE ORGANA is now a manufacturer of\na wide range of industrial products.”$",
+RustboroCity_DevonCorp_1F_Text_ProductDisplay,"Prototypes and test products fill\nthe glass display case.\pThere's a panel with a description…\p“In addition to starfighters,\nHOUSE ORGANA now markets droids and\lmedical supplies for better lives.\p“Recently, HOUSE ORGANA has begun\nmarketing tools for COMPANION\lTRAINERS, including CAPTURE PODS and\lCOMLINK systems.”$",
+RustboroCity_DevonCorp_2F_Text_DeviceForTalkingToPokemon,We're developing a device for talking\nwith COMPANIONS.\pBut we haven't had much success…$,
+RustboroCity_DevonCorp_2F_Text_WeFinallyMadeNewBalls,We finally made new kinds of\nCAPTURE PODS!\pThe REPEAT POD makes it easier to catch\nCOMPANIONS you've caught before.\pThe TIMER POD gets better at catching\nCOMPANIONS the longer a battle runs.\pBoth are proudly developed by\nHOUSE ORGANA.\pPlease give them a try!$,
+RustboroCity_DevonCorp_2F_Text_WowThatsAPokenav,"Oh, wow!\nThat's a COMLINK!\pIt came about as a result of the\nSENATOR's wish to keep people\lin touch across the stars.\pWould you like me to describe its\nfeatures in detail?\pNo, no. I think you'll find out just by\ntrying the COMLINK out.$",
+RustboroCity_DevonCorp_2F_Text_DeviceToVisualizePokemonDreams,I'm trying to develop a device that\nvisually reproduces the dreams of\lCOMPANIONS…\pBut it's not going well.$,
+RustboroCity_DevonCorp_2F_Text_DevelopDeviceToResurrectFossils,"I've been trying to develop a device\nthat revives COMPANIONS from fossils…\pAnd, it's working!$",
+RustboroCity_DevonCorp_2F_Text_HandedFossilToResearcher,Excellent!\nLet's do this right away.\p{PLAYER} handed the {STR_VAR_1} to\nthe ORGANA ENGINEER.$,
+RustboroCity_DevonCorp_2F_Text_ReceivedMonFromResearcher,{PLAYER} received {STR_VAR_2} from\nthe ORGANA ENGINEER.$,
+RustboroCity_DevonCorp_3F_Text_MrStoneIHaveFavor,"I'm BAIL ORGANA, senator of ALDERAAN\nand head of HOUSE ORGANA.\pI'd just got word about you!\pYou saved our staff not just once,\nbut twice!\pI have a favor to ask of an amazing\nperson like you.\pI understand that you're delivering\na package to MOS EISLEY's SHIPYARD.\pWell, on the way, could you stop off on\nKASHYYYK?\pMy daughter LEIA is there. Please\ndeliver this MESSAGE DISC to her.$",Bail is chairman of House Organa; Leia is his daughter (so 'the PRESIDENT's son' = Leia)
+RustboroCity_DevonCorp_3F_Text_MrStoneWantYouToHaveThis,"SEN. ORGANA: Now, a senator never asks\na favor for nothing in return.\pThat's why I want you to have this!$",
+RustboroCity_DevonCorp_3F_Text_MrStoneExplainPokenavRestUp,"SEN. ORGANA: That device…\pIt's a COMMUNICATION LINK, or COMLINK\nfor short.\pIt's an indispensable tool for any\nTRAINER on an adventure.\pIt has a star chart of the OUTER RIM.\pYou can find KASHYYYK and\nMOS EISLEY easily!\pBy the way, I've heard that the\nEMPIRE and the CARTEL have been\lmaking trouble far and wide.\pI think it would be best if you rested\nup before you go on your way.$",
+RustboroCity_DevonCorp_3F_Text_NotFamiliarWithTrends,"SEN. ORGANA: Since my youth, I've\nimmersed myself in politics.\pConsequently, I'm not familiar with\ntrends and that sort of thing.\pBut do young people all want to be\nTRAINERS at the ILUM TEMPLE?$",
+RustboroCity_DevonCorp_3F_Text_ThisIs3rdFloorWaitHere,"This is the third floor of\nHOUSE ORGANA.\pOur PRESIDENT's OFFICE is on\nthis floor.\pAnyway, I can't tell you how much I'm\ngrateful for what you've done.\pUm… By the way, that parcel\nyou got back for us…\pCould I get you to deliver that to\nthe SHIPYARD in MOS EISLEY?\pIt would be awful if those robbers\ntried to take it again.\pUh… Hehehe, so, uh, could I count\non you to do that for me?\pOh, that's right.\nCould you wait here a second?$",
+RustboroCity_DevonCorp_3F_Text_WordWithPresidentComeWithMe,SENATOR ORGANA would like to have\na word with you.\pPlease come with me.$,
+RustboroCity_DevonCorp_3F_Text_RareRocksDisplay,It's a collection of rare rocks and\nstones assembled by the SENATOR.$,
+RustboroCity_Flat1_1F_Text_PokemonStrange,COMPANIONS are such strange beings.$,
+RustboroCity_Flat1_2F_Text_ThankYouIllGiveYouWallpaper,"Thank you!\pThanks to you, my darling WALDA\nlaughed for me!\pActually, I may not look all that\nspecial, but I'm one of HOUSE\lORGANA's top researchers.\pSo, how about I do something in return\nfor you?\pI know, I'll add some new wallpaper\npatterns for the BOXES in the HoloNet\lCOMPANION Storage System.\pIn the wallpaper pattern menu,\nselect “FRIENDS.”\pThat will give you access to the new\nwallpaper patterns.$",
+RustboroCity_Flat2_3F_Text_PresidentCollectsRareStones,SENATOR ORGANA likes to collect\nrare stones.$,
+RustboroCity_Flat2_3F_Text_PresidentsSonAlsoCollectsRareStones,I think the SENATOR's daughter also\ncollects rare crystals.$,
+RustboroCity_Gym_Text_GymGuideAdvice,"Yo, how's it going?\pListen, my friend!\nWould you like to reach ILUM?\pI'm no TRAINER, not me, but I can\nsure give you winning advice.\pThat's settled, then! We'll aim for the\nTRIALS OF ILUM together!\pIt's your job as a TRAINER to collect\nARENA SHARDS, am I right?\pBut ARENA LEADERS aren't pushovers!\pAnd that's where I come in!\nI'm here to provide expert advice!\pBIGGS, the ARENA LEADER, is a user\nof ROCK-type COMPANIONS.\pThe ROCK type is very durable, but\nit can't stand WATER-type and\lGRASS-type moves.\pCome see me afterwards, if you beat\nthe ARENA LEADER.\pWell, go for it!$",
+RustboroCity_Gym_Text_GymGuidePostVictory,Whoa! What a breathtaking victory!\nMy cheering must've worked!\pGreat!\nCheck your TRAINER CARD.\pThe DUNE SHARD you got should be\nproperly recorded on it.\pIn other words…\pYou've climbed the first step on\nthe road to ILUM!\pThat's got to feel awesome!$,
+RustboroCity_Gym_Text_MarcPostBattle,I have to hand it to our LEADER.\pIt took smarts and sense for him to\npick the tough ROCK type.$,
+RustboroCity_Gym_Text_RoxanneIntro,"Hello, I am BIGGS, the BESTINE\nARENA LEADER.\pI became an ARENA LEADER so that I\ncould apply what I teach at the\lACADEMY in battle.\pWould you kindly demonstrate how you\nbattle, and with which COMPANIONS?$",
+RustboroCity_Gym_Text_RoxanneDefeat,So…\nI lost…\pIt seems that I still have much more\nto learn…\pI understand.\pThe ILUM TEMPLE's rules state\nthat TRAINERS are to be given this\lif they defeat an ARENA LEADER.\pPlease accept the official ILUM\nTEMPLE DUNE SHARD.$,
+RustboroCity_Gym_Text_StoneBadgeInfoTakeThis,"The DUNE SHARD heightens the ATTACK\npower of your COMPANIONS.\pIt also enables them to use the HM move\nVIBROBLADE outside of battle.\pPlease take this with you, too.$",
+RustboroCity_Gym_Text_RoxannePostRematch,BIGGS: I still have much to learn\nwhen it comes to battling COMPANIONS.\pThat awareness makes me love battling\nall that much more!$,
+RustboroCity_Gym_Text_RoxanneRematchNeedTwoMons,"BIGGS: I'm so glad to see you again.\nI'm BIGGS, the ARENA LEADER here.\pI'm sure we've both experienced many\nbattles since we last met.\pI would like to see how much better\nwe've become…\pOh, no…\nYou only have one COMPANION with you?\pPlease return with at least one more\nCOMPANION.$",
+RustboroCity_House1_Text_AllSortsOfPlaces,"In all sorts of places, there are all\nsorts of COMPANIONS and people.\pI find that fascinating, so I go to all\nsorts of places.$",
+RustboroCity_House2_Text_RoxanneKnowsALot,"BIGGS, the ARENA LEADER, really knows\na lot about COMPANIONS.\pHe's really strong, too!$",
+RustboroCity_House3_Text_IGivePerfectlySuitedNicknames,"For my own COMPANIONS, I give them\nperfectly suited nicknames!\pIt's my expression of, uh…\noriginality, yes, that's it!$",
+RustboroCity_Mart_Text_ShouldBuySuperPotionsInstead,My COMPANION evolved.\nIt has a lot of HP now.\pI should buy BACTA PATCHES for it\ninstead of ordinary BACTA SPRAYS.$,
+RustboroCity_PokemonCenter_1F_Text_MaleAndFemalePokemon,"Just like people, there are male and\nfemale COMPANIONS.\pBut no one seems to have any idea how\nthey're different.$",
+RustboroCity_PokemonSchool_Text_BlackboardListsStatusChanges,The blackboard lists status changes\nthat may affect COMPANIONS in battle.$,
+RustboroCity_PokemonSchool_Text_ExplainQuickClaw,A COMPANION holding the QUICK CLAW will\noccasionally speed up and get to move\lbefore its opponent.\pThere are many other items that are\nmeant to be held by COMPANIONS.\pJust those alone will give you many\ntopics to study!$,
+RustboroCity_PokemonSchool_Text_TradingRightNow,I'm trading COMPANIONS with my friend\nright now.$,
+RustboroCity_PokemonSchool_Text_PokemontCantUseManMadeItems,"COMPANIONS can hold items, but they\ndon't know what to do with man-made\litems like BACTA SPRAY and ANTITOXIN.$",
+RustboroCity_PokemonSchool_Text_ConfusedPokemonAttacksItself,"You know how some COMPANION moves can\nconfuse a COMPANION?\pA confused COMPANION will sometimes\nattack itself without meaning to.\pBut once it leaves battle, it will\nreturn to normal.$",
+RustboroCity_PokemonSchool_Text_PokemonHealItselfWithBerry,"A COMPANION holding a FRUIT will heal\nitself…\pThere are many kinds of items that\nCOMPANIONS can hold…\pBoy, it sure is hard taking notes\ndown…$",
+RustboroCity_PokemonSchool_Text_StudentsNotes,"It's this student's notebook…\pCOMPANIONS are to be caught using\nCAPTURE PODS.\pUp to six COMPANIONS can accompany\na TRAINER.\pA TRAINER is someone who catches\nCOMPANIONS, raises them, and battles\lwith them.\pA TRAINER's mission is to defeat\nthe strong TRAINERS who await\lchallengers in ARENAS.$",
+RustboroCity_PokemonSchool_Text_ScottMetAlreadyCut,"Hello? Didn't we meet before?\nI think back in MOS ENTHA.\pLet me introduce myself.\nMy name's LANDO.\pI've been traveling everywhere in\nsearch of outstanding TRAINERS.\pMore specifically, I'm looking for\nCOMPANION battle experts. Heh.\pSo, what brings you to this ACADEMY?\nAre you a TRAINER, too?\pThe first thing you should do is to\nteach a COMPANION VIBROBLADE.\pIf I remember correctly, someone in\nthis town has VIBROBLADE.$",
+RustboroCity_PokemonSchool_Text_ScottStoneBadge,"LANDO: Oh, what's that?\pIt's a DUNE SHARD, isn't it?\nThat's pretty impressive, I'd say.\pBut, you know, I would've loved to see\nyou in battle.\pIt's hard to tell what you're like as\na TRAINER from a SHARD alone.$",
+RustboroCity_PokemonSchool_Text_ScottMetAlreadyStoneBadge,"Hello? Didn't we meet before?\nI think back in MOS ENTHA.\pLet me introduce myself.\nMy name's LANDO.\pI've been traveling everywhere in\nsearch of outstanding TRAINERS.\pMore specifically, I'm looking for\nCOMPANION battle experts.\pOh, what's that?\nIt's a DUNE SHARD, isn't it?\pThat's pretty impressive, I'd say, for\na starting TRAINER like yourself.\pBut, you know, I would've loved to see\nyou in battle.\pIt's hard to tell what you're like as\na TRAINER from a SHARD alone.$",
+RusturfTunnel_Text_Peeko,CHEWIE: Rrrwaaaghh!$,
+RusturfTunnel_Text_GruntIntro,"Grah, blast it all!\pThat WOOKIEE hostage turned out\nto be nothing but trouble!\pAnd to think I made a getaway…\nIn this tunnel to nowhere!\pHey! You!\nSo you want to battle me?$",
+RusturfTunnel_Text_PeekoGladToSeeYouSafe,"CHEWIE!\nAm I glad to see you, buddy!$",
+RusturfTunnel_Text_ThankYouLetsGoHomePeeko,"CHEWIE says he owes you a life debt.\pName's HAN. HAN SOLO.\nAnd, you are?\p… … … … … … … …\n… … … … … … … …\pAh, so you're {PLAYER}{KUN}!\nThanks, kid. I mean it.\pIf you ever need a ride somewhere,\ndon't hesitate to ask!\pYou can usually find me at my\nlanding pad near JUNDLAND WASTES.\pCome on, CHEWIE, let's get out\nof here.\pCHEWIE: Hrrrnnn!$","Chewie is Han's co-pilot, a character (never a creature)"
+RusturfTunnel_Text_WhyCantTheyKeepDigging,"… …\pWhy can't they keep digging?\nIs the bedrock too hard?\pMy beloved awaits me in ANCHORHEAD\njust beyond here…\pIf BESTINE and ANCHORHEAD were\njoined by this tunnel, I could visit\lher every day…\pBut this…\nWhat am I to do?$",
+RusturfTunnel_Text_ToGetToVerdanturf,"To get from BESTINE to ANCHORHEAD,\nyou need to fly to KASHYYYK, then\lMOS EISLEY, then pass MOS ESPA…$",
+RusturfTunnel_Text_ExplainStrength,"That HM contains STRENGTH.\pIf a muscular COMPANION were to learn\nthat, it would be able to move even\llarge boulders.$",
+RusturfTunnel_Text_MikeIntro,"What do you call a wild man out in the\ncanyon? A canyon man, right?\pSo why don't they call a COMPANION in\nthe canyon a canyon COMPANION?$",
+RusturfTunnel_Text_MikeDefeat,My COMPANIONS…\nRan out of power…$,
+RusturfTunnel_Text_MikePostBattle,"They halted development here to\nprotect COMPANIONS, right?\lThere's a feel-good story!$",
+PetalburgWoods_Text_TrainerTipsPP,"TRAINER TIPS\pBesides Hit Points (HP), COMPANIONS\nhave Power Points (PP) that are used to\lmake moves during battle.\pIf a COMPANION runs out of PP, it must\nbe taken to a BACTA CENTER.$",
+RustboroCity_DevonCorp_3F_Text_ThankYouForDeliveringLetter,"SEN. ORGANA: You delivered my\nMESSAGE DISC? Thank you kindly!\pThis is my way of thanking you.\nIt should help you, a TRAINER.$",
+RustboroCity_DevonCorp_3F_Text_VisitCaptSternShipyard,"At the SHIPYARD in MOS EISLEY,\nyou should go see RIC OLIé.$",
+RustboroCity_Text_WeShortenItToDevon,HOUSE ORGANA of ALDERAAN…\nWe all just shorten it to ORGANA.\pThey make all sorts of\nconvenient products.$,
+PetalburgWoods_Text_NotAOneToBeFound,Hmmm…\nNot a one to be found…$,"reviewed, no change needed"
+PetalburgWoods_Text_IWasGoingToAmbushYou,"I was going to ambush you, but you\nhad to dawdle in JUNDLAND WASTES\lforever, didn't you?\pI got sick of waiting, so here I am!$",reviewed AUTO draft
+PetalburgWoods_Text_YouHaveToHelpMe,"Aiyeeeh!\pYou're a COMPANION TRAINER, aren't you?\nYou've got to help me, please!$",reviewed AUTO draft
+PetalburgWoods_Text_NoOneCrossesTeamAqua,"Hunh? What do you think you're doing?\nWhat, you're going to protect him?\pNo one who crosses THE CARTEL\ngets any mercy, not even a kid!\pCome on and battle me!$",reviewed AUTO draft
+PetalburgWoods_Text_YoureKiddingMe,You're kidding me! You're tough!$,"reviewed, no change needed"
+PetalburgWoods_Text_ICantBeWastingTime,Uh-oh! It's a crisis!\nI can't be wasting time!$,"reviewed, no change needed"
+PetalburgWoods_Text_YoureLoadedWithItems,You're loaded with items.\nI can't give you this DURASTEEL POD.$,reviewed AUTO draft
+PetalburgWoods_Text_ICouldntWin,"I have all these COMPANIONS,\nbut I couldn't win…$",reviewed AUTO draft
+PetalburgWoods_Text_CantBePopularIfILose,I can't be popular if I lose.$,"reviewed, no change needed"
+PetalburgWoods_Text_PeopleRespectYou,"If you have a big BUG COMPANION,\npeople respect you for it.$",reviewed AUTO draft
+PetalburgWoods_Text_MyPokemonHaveGrown,My BUG COMPANIONS have grown.\nI'll be popular again.$,reviewed AUTO draft
+PetalburgWoods_Text_CantBePopularIfLose,I can't be popular if I lose.$,"reviewed, no change needed"
+PetalburgWoods_Text_HiddenItemsExplanation,"Sometimes, there are things on the\nground even if you can't see them.\pThat's why I always check where I'm\nwalking.$","reviewed, no change needed"
+PetalburgWoods_Text_TryUsingThisItem,"Oh, neat!\nThat's the SHARD from BESTINE ARENA!\pYou must be a TRAINER.\nYou should try using this item.$",reviewed AUTO draft
+PetalburgWoods_Text_TrainerTipsExperience,"TRAINER TIPS\pAny COMPANION that appears even once\nin a battle is awarded EXP Points.\pTo raise a weak COMPANION, put it at the\nleft of the team list.\pAs soon as a battle starts, switch it\nout. It will earn EXP Points without\lbeing exposed to any harm.$",reviewed AUTO draft
+Route104_Text_ThrowBallAtWeakenedPokemon,"If you're going to throw a CAPTURE POD,\nweaken the wild COMPANION first.\pIt will be easier to catch if it's been\npoisoned, burned, or lulled to sleep.$",reviewed AUTO draft
+Route104_Text_ImNotATrainer,"Oh, no, I'm not a TRAINER.\pBut that's right, if TRAINERS lock eyes,\nit's a challenge to battle.\pIf you don't want to battle, stay out\nof their sight.$","reviewed, no change needed"
+Route104_Text_LikeFillingMouthWithSeedsTakeThis,"I like filling my mouth with seeds,\nthen spitting them out fast!\pYou can have this, so you try it out!\pUse it on a COMPANION, and it will learn\na move for firing seeds rapidly.$",reviewed AUTO draft
+Route104_Text_TMsAreOneTimeUse,"A word of advice!\pA TM, TECHNICAL MACHINE, is good only\nfor one-time use.\pOnce you use it, it's gone.\nThink twice before using it!$","reviewed, no change needed"
+Route104_Text_DontNeedThisTakeIt,"This FLOWER SHOP started selling\nsaplings recently.\pIt made me so happy, I went overboard\nshopping.\pI don't need this WHITE HERB anymore.\nWould you take it, please?$","reviewed, no change needed"
+Route104_Text_FlowerShopSellingSaplings,"This FLOWER SHOP started selling\nsaplings recently.\pIt made me so happy, I went overboard\nshopping. Where should I put them?$","reviewed, no change needed"
+Route104_Text_MayWeShouldRegister,"MIRA: Oh, hi, {PLAYER}{KUN}!\pHOUSE ORGANA upgraded your COMLINK\nwith the MATCH CALL system, huh?\pWe should register each other so we\ncan get in contact anytime.$",reviewed AUTO draft
+Route104_Text_RegisteredMay,{PLAYER} registered MIRA\nin the COMLINK.$,reviewed AUTO draft
+Route104_Text_MayHowsYourPokedex,"MIRA: Oh, by the way, {PLAYER}{KUN},\nhow's your DATAPAD coming along?$",reviewed AUTO draft
+Route104_Text_MayMinesDecentLetsBattle,Mine's looking pretty decent.\nSo…\lHow about a little battle?$,"reviewed, no change needed"
+Route104_Text_MayLetsBattle,"MIRA: So, what do you think?\nHow about a little battle here?$",reviewed AUTO draft
+Route104_Text_MayIntro,"MIRA: You just became a TRAINER,\n{PLAYER}{KUN}. I'm not going to lose!$",reviewed AUTO draft
+Route104_Text_MayDefeat,Yikes!\nYou're better than I expected!$,"reviewed, no change needed"
+Route104_Text_BrendanWeShouldRegister,"KAEL: Oh, hey, {PLAYER}!\pCool, you had HOUSE ORGANA install the\nMATCH CALL system on your COMLINK!\pLet's register each other in our\nCOMLINKS so we can keep in touch.$",reviewed AUTO draft
+Route104_Text_RegisteredBrendan,{PLAYER} registered KAEL\nin the COMLINK.$,reviewed AUTO draft
+Route104_Text_BrendanHowsYourPokedex,"KAEL: {PLAYER}, how's your DATAPAD?\nHave you filled in any pages yet?$",reviewed AUTO draft
+Route104_Text_BrendanDoingGreatLetsBattle,"Me, I'm doing great!\pWant to check out how good I am with\na battle?$","reviewed, no change needed"
+Route104_Text_BrendanLetsBattle,KAEL: What's up?\nWant to have a battle with me?$,reviewed AUTO draft
+Route104_Text_BrendanIntro,"KAEL: I know you just became\na TRAINER, but I won't go easy!$",reviewed AUTO draft
+Route104_Text_BrendanDefeat,Hmm…\nYou're pretty good.$,"reviewed, no change needed"
+Route116_Text_WantToDigTunnel,Nnn… Roar!\pI want to dig that tunnel!$,"reviewed, no change needed"
+Route116_Text_GoonHightailedItOutOfTunnel,Nnn… Roar!\pThat goofy goon hightailed it out of\nthe tunnel! I can go back to digging!$,"reviewed, no change needed"
+Route116_Text_NewBallAvailableAtMart,Our new CAPTURE POD will be available\nat the SUPPLY DEPOT in BESTINE.\pPlease do try it out!\nThank you and bye-bye!$,reviewed AUTO draft
+Route116_Text_BagIsJamPacked,Your BAG is jam-packed.\nI can't give you this REPEAT POD.$,reviewed AUTO draft
+Route116_Text_TokenOfAppreciation,"As a token of our appreciation for\nyour delivering our package, I have\la gift of a new kind of CAPTURE POD\lfor our most wonderful TRAINER!$",reviewed AUTO draft
+Route116_Text_CanYouHelpMeFindGlasses,I dropped my glasses…\nCan you help me find them?$,"reviewed, no change needed"
+Route116_Text_MayISeeThoseGlasses,Those glasses!\nMay I see them for a second?$,"reviewed, no change needed"
+Route116_Text_NotWhatImLookingForMaybeTheyArentHere,Hmm…\nThese are BLACKGLASSES.\lThey're not what I'm looking for…\pMaybe my glasses aren't around\nhere…$,"reviewed, no change needed"
+Route116_Text_CantFindGlassesNotHere,Hmm…\nI can't find my glasses anywhere…\lMaybe they're not around here…$,"reviewed, no change needed"
+Route116_Text_NotWhatImLookingFor,Hmm…\nThese are BLACKGLASSES.\lThey're not what I'm looking for…$,"reviewed, no change needed"
+Route116_Text_RouteSignRustboro,ROUTE 116\n{LEFT_ARROW} BESTINE$,reviewed AUTO draft
+Route116_Text_TunnelersRestHouse,TUNNELER'S REST HOUSE$,"reviewed, no change needed"
+Route116_Text_TrainerTipsBToStopEvolution,"TRAINER TIPS\pIf you want to stop a COMPANION from\nevolving, press the B Button while it\lis trying to evolve.\lThe startled COMPANION will stop.\pThis is called an evolution cancel.$",reviewed AUTO draft
+Route116_Text_TrainerTipsBagHasPockets,TRAINER TIPS\pYour BAG has several POCKETS.\pItems you obtain are automatically\nplaced in the appropriate POCKETS.\pNo TRAINER can afford to be without\na BAG of their own.$,"reviewed, no change needed"
+Route116_TunnelersRestHouse_Text_TunnelHasGoneThrough,"Did you hear? The TUNNEL to ANCHORHEAD\nhas gone through!\pSometimes, if you hope strongly enough,\ndreams do come true.$",reviewed AUTO draft
+RustboroCity_Text_SneakyLookingManWentAroundCorner,"Hm? A sneaky-looking man?\pCome to think of it, yes, a shady-\nlooking guy went around the corner.$","reviewed, no change needed"
+RustboroCity_Text_HaveYouChallengedGym,"Have you taken the ARENA\nchallenge?\pWhen you get that shiny ARENA SHARD\nin hand, I guess TRAINERS begin to\lrealize what is required of them.$",reviewed AUTO draft
+RustboroCity_Text_HeyThatsRustborosGymBadge,"Hey, that's BESTINE's ARENA SHARD!\pOut of all the ARENA SHARDS,\nBESTINE's is the coolest, I'd say.$",reviewed AUTO draft
+RustboroCity_Text_YoureNewAroundHere,Oh? Who might you be?\nYou're a new face around these parts.\pHave you just transferred into the\nBESTINE ACADEMY?$,reviewed AUTO draft
+RustboroCity_Text_PokemonCanChangeLookFromExp,"If a COMPANION gains experience in\nbattles, it can sometimes change in\lthe way it looks.$",reviewed AUTO draft
+RustboroCity_Text_PokemonChangeShape,"A COMPANION changes shape?\nIf one did that, I would be shocked!$",reviewed AUTO draft
+RustboroCity_Text_TradePokemonGrowFast,"A COMPANION you get in a trade from\nsomeone grows fast.\pBut if you don't have certain ARENA\nSHARDS, it may not obey you…$",reviewed AUTO draft
+RustboroCity_Text_OutOfTheWay,Get out!\nOut of the way!$,"reviewed, no change needed"
+RustboroCity_Text_HelpMeIWasRobbed,"Oh, it's you!\pYou're that fantastic TRAINER who\nhelped me in JUNDLAND WASTES!\pHelp me! I was robbed by THE CARTEL!\nI have to get the ORGANA PARTS back!\pIf I don't…\nI'm going to be in serious trouble.$",reviewed AUTO draft
+RustboroCity_Text_ShadyCharacterTookOffTowardsTunnel,"That shady character, I think he took\noff towards the tunnel over there.$","reviewed, no change needed"
+RustboroCity_Text_YouGotItThankYou,"Oh! How did it go?\nThe ORGANA PARTS?\pYou did!\nYou got them back!\pYou really are a great TRAINER!\pI know! As my thanks, I'll give you\nanother DURASTEEL POD!$",reviewed AUTO draft
+RustboroCity_Text_YoureLoadedWithItems,You're loaded with items.\nI can't give you this DURASTEEL POD.$,reviewed AUTO draft
+RustboroCity_Text_PleaseComeWithMe,"Excuse me, please!\nPlease come with me!$","reviewed, no change needed"
+RustboroCity_Text_MayHiLetsRegister,"MIRA: Oh, hi, {PLAYER}{KUN}!\pYou had a MATCH CALL feature put\non your COMLINK!\pLet's register each other so we can\ncontact one another anytime!\p… … … … … …$",reviewed AUTO draft
+RustboroCity_Text_RegisteredMay,Registered MIRA\nin the COMLINK.$,reviewed AUTO draft
+RustboroCity_Text_MayWantToBattle,"MIRA: So, what do you think?\nHow about a little battle here?$",reviewed AUTO draft
+RustboroCity_Text_MayImNotGoingToLose,"MIRA: You just became a TRAINER,\n{PLAYER}{KUN}. I'm not going to lose!$",reviewed AUTO draft
+RustboroCity_Text_MayDefeat,Yikes!\nYou're better than I expected!$,"reviewed, no change needed"
+RustboroCity_Text_BrendanHiLetsRegister,"KAEL: Oh, hey, {PLAYER}!\pYou had a MATCH CALL feature put\non your COMLINK! Cool!\pLet's register each other so we can\nget in touch anytime!\p… … … … … …$",reviewed AUTO draft
+RustboroCity_Text_RegisteredBrendan,Registered KAEL\nin the COMLINK.$,reviewed AUTO draft
+RustboroCity_Text_BrendanWantToBattle,KAEL: What's up?\nWant to have a battle with me?$,reviewed AUTO draft
+RustboroCity_Text_BrendanIWontGoEasy,"KAEL: I know you just became\na TRAINER, but I won't go easy!$",reviewed AUTO draft
+RustboroCity_Text_BrendanDefeat,Hmm…\nYou're pretty good.$,"reviewed, no change needed"
+RustboroCity_Text_TunnelNearingCompletion,"“Timesaving tunnel nearing\ncompletion!”\p…Is what it says on the sign, but\nthere's also a big “X” splashed\lacross it in red paint…$","reviewed, no change needed"
+RustboroCity_Text_DevonCorpSign,"HOUSE ORGANA\p“For all your living needs, we make\nit all.”$",reviewed AUTO draft
+RustboroCity_Text_DevonCorpBranchOfficeSign,HOUSE ORGANA BRANCH OFFICE\p“Access limited to HOUSE ORGANA\nemployees and authorized personnel.”$,reviewed AUTO draft
+RustboroCity_Text_CitySign,BESTINE\p“The city probing the integration of\nnature and science.”$,reviewed AUTO draft
+RustboroCity_Text_CuttersHouse,CUTTER'S HOUSE$,"reviewed, no change needed"
+RustboroCity_Text_PleaseSelectPokenav,Please select the COMLINK.$,reviewed AUTO draft
+RustboroCity_Text_IdBetterGetBackToWork,"Okay, I'd better get back to work.\nPlease take care, {PLAYER}!$","reviewed, no change needed"
+RustboroCity_Text_YouCanHave2On2Battle,"Did you know this?\pYou can have a 2-on-2 battle even\nif you're not with another TRAINER.\pIf you catch the eyes of two TRAINERS\nwhen you have two or more COMPANIONS,\lthey'll both challenge you.\pDon't you think it'd be cool if you\ncould beat two TRAINERS by yourself?$",reviewed AUTO draft
+RustboroCity_DevonCorp_1F_Text_WelcomeToDevonCorp,Hello and welcome to the HOUSE\nORGANA.\pWe're proud producers of items and\nmedicine that enhance your life.$,reviewed AUTO draft
+RustboroCity_DevonCorp_1F_Text_StaffGotRobbed,One of our research staff stupidly\ngot robbed of an important parcel.$,"reviewed, no change needed"
+RustboroCity_DevonCorp_1F_Text_ThoseShoesAreOurProduct,"Hey, those RUNNING SHOES!\nThey're one of our products!\pIt makes me happy when I see someone\nusing something we made.$","reviewed, no change needed"
+RustboroCity_DevonCorp_1F_Text_RobberWasntVeryBright,"That stolen parcel…\pWell, sure it's important, but it's not\nanything that anyone can use.\pIn my estimation, that robber must not\nhave been very bright.$","reviewed, no change needed"
+RustboroCity_DevonCorp_1F_Text_SoundsLikeStolenGoodsRecovered,It sounds like they've recovered\nthe ripped-off ORGANA PARTS.$,reviewed AUTO draft
+RustboroCity_DevonCorp_1F_Text_OnlyAuthorizedPeopleEnter,"I'm sorry, only authorized people\nare allowed to enter here.$","reviewed, no change needed"
+RustboroCity_DevonCorp_1F_Text_HowCouldWeGetRobbed,It's beyond stupid.\nHow could we get robbed?$,"reviewed, no change needed"
+RustboroCity_DevonCorp_1F_Text_YoureAlwaysWelcomeHere,"Hi, there!\nYou're always welcome here!$","reviewed, no change needed"
+RustboroCity_DevonCorp_2F_Text_DevelopingNewBalls,I'm developing new kinds of\nCAPTURE PODS…\pBut I haven't made much headway…$,reviewed AUTO draft
+RustboroCity_DevonCorp_2F_Text_IMadePokenav,"I made the COMLINK!\pAs an engineer, I feel blessed to have\nmade something so great!$",reviewed AUTO draft
+RustboroCity_DevonCorp_2F_Text_WantToBringFossilBackToLife,Wait! That thing you have there…\nIs that a COMPANION fossil?\pWould you like to bring that COMPANION\nback to life?\pI can with my newly developed\nFOSSIL REGENERATOR.$,reviewed AUTO draft
+RustboroCity_DevonCorp_2F_Text_OhIsThatSo,"Oh, is that so?\pHOUSE ORGANA's technological expertise\nis outstanding, I tell you.$",reviewed AUTO draft
+RustboroCity_DevonCorp_2F_Text_TwoFossilsPickOne,"Oh, now that's a surprise!\nYou have not one, but two, fossils?\pUnfortunately, my machine can only\nregenerate one COMPANION at a time.\pWould you like to pick one of your\nfossils for regeneration?$",reviewed AUTO draft
+RustboroCity_DevonCorp_2F_Text_FossilRegeneratorTakesTime,"The FOSSIL REGENERATOR, which I made,\nis incredible.\pBut it has one drawback--it takes\na long time to work.\pSo, uh… How about you go for a stroll\nand look around for a while?$","reviewed, no change needed"
+RustboroCity_DevonCorp_2F_Text_FossilizedMonBroughtBackToLife,"Thanks for waiting!\pYour fossilized COMPANION has been\nbrought back to life!\pThe fossil was an ancient COMPANION.\n{STR_VAR_2}, it was!$",reviewed AUTO draft
+RustboroCity_DevonCorp_2F_Text_TooManyPokemon,"Uh-oh, you've got too many COMPANIONS.\nYou have no room for this one.$",reviewed AUTO draft
+RustboroCity_DevonCorp_2F_Text_DevelopNewPokenavFeature,I'm trying to develop a new feature\nfor the COMLINK…\pBut it's not going well.$,reviewed AUTO draft
+RustboroCity_DevonCorp_2F_Text_WhatToWorkOnNext,"Well, now what shall I work on\ndeveloping next?\pOur company allows us to make our\ninspirations into reality.\pOne couldn't ask for a better\nenvironment as an engineer.$","reviewed, no change needed"
+RustboroCity_DevonCorp_3F_Text_ReceivedPokenav,{PLAYER} received a COMLINK.$,reviewed AUTO draft
+RustboroCity_DevonCorp_3F_Text_MrStoneGoWithCautionAndCare,"SEN. ORGANA: Well, then, {PLAYER}{KUN},\ngo with caution and care!$",reviewed AUTO draft
+RustboroCity_DevonCorp_3F_Text_CountingOnYou,SEN. ORGANA: I'm counting on you!$,reviewed AUTO draft
+RustboroCity_DevonCorp_3F_Text_ExplainExpShare,SEN. ORGANA: A COMPANION holding that\nEXP. LINK will be given some of the\lEXP Points from battle.\pIt will get EXP Points even if it didn't\nactually battle.\pI would say EXP. LINK is quite useful\nfor raising weak COMPANIONS.$,reviewed AUTO draft
+RustboroCity_DevonCorp_3F_Text_PleaseGoAhead,"Please, go ahead.$","reviewed, no change needed"
+RustboroCity_DevonCorp_3F_Text_RepeatAndTimerHugelyPopular,"HOUSE ORGANA's new products, the\nREPEAT POD and TIMER POD, have become\lhugely popular among TRAINERS.$",reviewed AUTO draft
+RustboroCity_Flat1_1F_Text_EveryPokemonHasAbility,Every COMPANION has a special ability\nthat it can use.$,reviewed AUTO draft
+RustboroCity_Flat1_2F_Text_ComingUpWithMealsIsHard,"Oh, it's so hard every day…\pWhat's hard?\nYou need to ask?\pIt's trying to figure out what to\nmake for meals every day.\pIt really isn't easy coming up with\nmeals every day.$","reviewed, no change needed"
+RustboroCity_Flat1_2F_Text_HelloDoYouKnowFunnyPhrase,"Oh, hello!\nWelcome to the PEPPER household.\pI have a question for you.\nHave you ever baby-sat?\pYou see, I'm a new father, so raising\na child is all new to me.\pAnd I have a problem. My daughter\nWALDA doesn't laugh enough.\pI think she'd laugh for me if I told\nher something funny.\pDo you know of a funny word or\nphrase you can tell me?$","reviewed, no change needed"
+RustboroCity_Flat1_2F_Text_BeenSayingXDoYouKnowBetterPhrase,I've been saying “{STR_VAR_1}”\nto amuse her lately.\pDo you know of a better word or\na phrase that might work?$,"reviewed, no change needed"
+RustboroCity_Flat1_2F_Text_WonderfulLetsHearSuggestion,"Oh, that's wonderful.\nSo, let's hear it, your suggestion.$","reviewed, no change needed"
+RustboroCity_Flat1_2F_Text_OhIsThatRight,"Oh, is that right?\pWell, if you come up with a good\nsuggestion, I'm all ears.$","reviewed, no change needed"
+RustboroCity_Flat1_2F_Text_LetsGiveItATry2,"Ah, I see.\nWell, let's give it a try, shall we?$","reviewed, no change needed"
+RustboroCity_Flat1_2F_Text_OhShesLaughing,"{STR_VAR_1}.\n{STR_VAR_1}.\pOh, yes! She's laughing!\nOh, I am as delighted as she!$","reviewed, no change needed"
+RustboroCity_Flat1_2F_Text_LetsGiveItATry,"Ah, I see.\nWell, let's give it a try, shall we?$","reviewed, no change needed"
+RustboroCity_Flat1_2F_Text_ShesNotSmilingAtAll,{STR_VAR_1}.\n{STR_VAR_1}.\pHmmm… She's not smiling at all.\nMaybe WALDA is one serious child…$,"reviewed, no change needed"
+RustboroCity_Flat1_2F_Text_ThinkOfMyOwnPhrase,"Oh, so you don't know any good words.\nI'd better think for myself, then.\pHmm…\nHow about “{STR_VAR_1}”?\lLet's see if that will work.$","reviewed, no change needed"
+RustboroCity_Flat1_2F_Text_ShesNotSmilingAtAll2,{STR_VAR_1}.\n{STR_VAR_1}.\pHmmm… She's not smiling at all.\nMaybe WALDA is one serious child…$,"reviewed, no change needed"
+RustboroCity_Flat1_2F_Text_OhYouDontKnowAny,"Oh, so you don't know any good words.\nI guess I'll try to amuse her with\lthe saying I used before.\pAnyways, if you have a good suggestion,\ndon't hesitate in telling me, okay?$","reviewed, no change needed"
+RustboroCity_Flat1_2F_Text_ItsAPokemonPlushDoll,It's a COMPANION plush DOLL!$,reviewed AUTO draft
+RustboroCity_Flat2_1F_Text_DevonWorkersLiveHere,HOUSE ORGANA's workers live in\nthis building.$,reviewed AUTO draft
+RustboroCity_Flat2_1F_Text_Skitty,LOTHKIT: Gyaaaah!$,reviewed AUTO draft
+RustboroCity_Flat2_2F_Text_DevonWasTinyInOldDays,"Way back in the old days, HOUSE ORGANA\nwas just a teeny, tiny company.$",reviewed AUTO draft
+RustboroCity_Flat2_2F_Text_MyDaddyMadeThisYouCanHaveIt,"My daddy's working at the CORPORATION.\pMy daddy made this!\nBut I can't use it, so you can have it.$","reviewed, no change needed"
+RustboroCity_Flat2_2F_Text_GoingToWorkAtDevonToo,"My daddy's working at the CORPORATION.\pWhen I grow up, I'm going to work for\nHOUSE ORGANA, too.$",reviewed AUTO draft
+RustboroCity_Gym_Text_JoshIntro,Don't take us ARENA TRAINERS lightly!\nI'll show you why we're better!$,reviewed AUTO draft
+RustboroCity_Gym_Text_JoshDefeat,You were too good for me…$,"reviewed, no change needed"
+RustboroCity_Gym_Text_JoshPostBattle,You haven't seen anything of the ROCK\ntype's terrifying power!$,"reviewed, no change needed"
+RustboroCity_Gym_Text_TommyIntro,"If you can't beat me, you won't stand\na chance against BIGGS!$",reviewed AUTO draft
+RustboroCity_Gym_Text_TommyDefeat,Wow! You've got some potential!$,"reviewed, no change needed"
+RustboroCity_Gym_Text_TommyPostBattle,BIGGS is stronger than me by\nseveral times.\pYou'd better be on your guard!$,reviewed AUTO draft
+RustboroCity_Gym_Text_MarcIntro,"We might be in the middle of town,\nbut so what?\pMy ROCK COMPANIONS need room to\nrampage!$",reviewed AUTO draft
+RustboroCity_Gym_Text_MarcDefeat,"Oh, man oh man!\nOur challenger is one feisty customer!$","reviewed, no change needed"
+RustboroCity_Gym_Text_ReceivedStoneBadge,{PLAYER} received the DUNE SHARD\nfrom BIGGS.$,reviewed AUTO draft
+RustboroCity_Gym_Text_ExplainRockTomb,"That TECHNICAL MACHINE, TM39,\ncontains ROCK TOMB.\pIt not only inflicts damage by dropping\nrocks, it also lowers SPEED.\pIf you use a TM, it instantly teaches\nthe move to a COMPANION.\pRemember, a TM can be used only once,\nso think before you use it.$",reviewed AUTO draft
+RustboroCity_Gym_Text_RoxannePostBattle,"Since you are so strong, you should\nchallenge other ARENA LEADERS.\pBy battling many TRAINERS, you should\nlearn many things.$",reviewed AUTO draft
+RustboroCity_Gym_Text_GymStatue,BESTINE ARENA$,reviewed AUTO draft
+RustboroCity_Gym_Text_GymStatueCertified,BESTINE ARENA\pBIGGS'S CERTIFIED TRAINERS:\n{PLAYER}$,reviewed AUTO draft
+RustboroCity_Gym_Text_RoxanneRegisterCall,"… … … … … …\n… … … … … Beep!\pBIGGS: Oh, hello, {PLAYER}?\nThis is BIGGS of BESTINE.\pI heard from TARFFUL that you're\nmoving up through the ranks of\lTRAINERS at an incredible clip.\pWell, I'd rather not think that\nI can't beat you.\pI promise, I will shape up my ARENA\nso that you may challenge us again.\pI hope you'll be looking forward to\nthat occasion as much as me!\p… … … … … …\n… … … … … Click!$",reviewed AUTO draft
+RustboroCity_Gym_Text_RegisteredRoxanne,Registered ARENA LEADER BIGGS\nin the COMLINK.$,reviewed AUTO draft
+RustboroCity_Gym_Text_RoxannePreRematch,"BIGGS: I'm so glad to see you again.\nI'm BIGGS, the ARENA LEADER here.\pI'm sure we've both experienced many\nbattles since we last met.\pI would like to see how much better\nwe've become. Let us battle!$",reviewed AUTO draft
+RustboroCity_Gym_Text_RoxanneRematchDefeat,"Grr…\nAgain, I have lost…$","reviewed, no change needed"
+RustboroCity_House1_Text_IllTradeIfYouWant,"Huh? My COMPANION is cute?\nSure, I knew that.\pBut if you really want, I'm willing\nto trade it to you.\pI'll trade you my {STR_VAR_2} for\na {STR_VAR_1} if you want.$",reviewed AUTO draft
+RustboroCity_House1_Text_PleaseBeGoodToMyPokemon,Eheheh…\nPlease be good to my COMPANION.$,reviewed AUTO draft
+RustboroCity_House1_Text_DoesntLookLikeMonToMe,Huh? That doesn't look anything like\na {STR_VAR_1} to me.$,"reviewed, no change needed"
+RustboroCity_House1_Text_YouDontWantToThatsOkay,"Oh, if you don't want to, that's okay.\nBut my COMPANION is cute, you know…$",reviewed AUTO draft
+RustboroCity_House1_Text_AnyPokemonCanBeCute,Any COMPANION can be cute if you raise\nit with care and kindness.$,reviewed AUTO draft
+RustboroCity_House2_Text_TrainerSchoolExcellent,"The ACADEMY is excellent.\pIf you study there, you could even\nbecome an ARENA LEADER.$",reviewed AUTO draft
+RustboroCity_House3_Text_NamingPikachuPekachu,"But giving the name PEKACHU to\nan IONRAT? It seems pointless.\pI suppose it is good to use a name\nthat's easy to understand, but…$",reviewed AUTO draft
+RustboroCity_House3_Text_Pekachu,PEKACHU: Peka!$,"reviewed, no change needed"
+RustboroCity_Mart_Text_BuyingHealsInCaseOfShroomish,I'm buying some NERVE TONICS and\nANTITOXINS.\pJust in case I run into FELUSPORE\nin JUNDLAND WASTES.$,reviewed AUTO draft
+RustboroCity_Mart_Text_GettingEscapeRopeJustInCase,I'm getting a GRAPPLE LINE just in\ncase I get lost in a cave.\pI just need to use it to get back to\nthe entrance.$,reviewed AUTO draft
+RustboroCity_PokemonCenter_1F_Text_PokemonHavePersonalities,"My COMPANION has a NAIVE nature, and\nmy friend's has a JOLLY nature.\pIt's fascinating how COMPANIONS have\npersonalities!$",reviewed AUTO draft
+RustboroCity_PokemonCenter_1F_Text_HMCutNextDoor,The man next door gave me an HM!\pI used it to teach my COMPANION how to\nVIBROBLADE down skinny trees.$,reviewed AUTO draft
+RustboroCity_PokemonSchool_Text_ReadWhichTopic,Which topic do you want to read?$,"reviewed, no change needed"
+RustboroCity_PokemonSchool_Text_ExplainPoison,"If a COMPANION is poisoned, it will\nsteadily lose HP.\pThe effects of poison remain after\na battle.\pA poisoned COMPANION's HP will drop\nwhile it is traveling.\pHeal a poisoning using an ANTITOXIN.$",reviewed AUTO draft
+RustboroCity_PokemonSchool_Text_ExplainParalysis,"If a COMPANION becomes paralyzed,\nits SPEED drops.\pIt may also not be able to move while\nit is in battle.\pParalysis remains after battle.\nCure it using a NERVE TONIC.$",reviewed AUTO draft
+RustboroCity_PokemonSchool_Text_ExplainSleep,"If a COMPANION falls asleep, it will be\nunable to attack.\pA COMPANION may wake up on its own,\nbut if a battle ends while it is\lsleeping, it will stay asleep.\pWake it up using a STIM PATCH.$",reviewed AUTO draft
+RustboroCity_PokemonSchool_Text_ExplainBurn,"A burn reduces ATTACK power, and it\nsteadily reduces the victim's HP.\pA burn lingers after battle.\nCure a burn using a BURN GEL.$",reviewed AUTO draft
+RustboroCity_PokemonSchool_Text_ExplainFreeze,"If a COMPANION is frozen, it becomes\ncompletely helpless.\pIt will remain frozen after battle.\nThaw it out using a THAW PACK.$",reviewed AUTO draft
+RustboroCity_PokemonSchool_Text_StudentsWhoDontStudyGetQuickClaw,Students who don't study get a little\ntaste of my QUICK CLAW.\pWhether or not you are a good student \nwill be evident from the way you use\lthis item.$,"reviewed, no change needed"
+RustboroCity_PokemonSchool_Text_AlwaysWantedSeedot,"I always wanted an ACORNLET, and\nI'm finally getting one!$",reviewed AUTO draft
+RustboroCity_PokemonSchool_Text_StudentTalentLevelUnknown,LANDO: Hmm…\pThe talent levels of the students here\nare unknown. The potential's there.$,reviewed AUTO draft
+RusturfTunnel_Text_ComeAndGetSome,"What, are you coming?\nCome and get some, then!$","reviewed, no change needed"
+RusturfTunnel_Text_GruntDefeat,Urrrggh! My career in crime comes to\na dead end!$,"reviewed, no change needed"
+RusturfTunnel_Text_GruntTakePackage,"This is plain not right…\pThe BOSS told me this would be a\nslick-and-easy job to pull.\pAll I had to do was steal some package\nfrom HOUSE ORGANA.\pTch!\nYou want it back that badly, take it!$",reviewed AUTO draft
+RusturfTunnel_Text_YouShatteredBoulderTakeHM,"Wow! You shattered that boulder\nblocking the way.\pTo show you how much I appreciate it,\nI'd like you to have this HM.$","reviewed, no change needed"
+RusturfTunnel_Text_WandaReunion,"CAMIE!\nNow I can see you anytime!\pCAMIE: That's…wonderful.\pPlease, take some rest at my home.$",reviewed AUTO draft
+RusturfTunnel_Text_BoyfriendOnOtherSideOfRock,On the other side of this rock…\nMy boyfriend is there.\pHe… He's not just digging the tunnel\nto come see me.\pHe works his hands raw and rough\nfor the benefit of everyone.$,"reviewed, no change needed"
+Route104_Text_GinaIntro,"GARA: Okay, let's battle with our\nCOMPANION!$",reviewed AUTO draft
+Route104_Text_GinaDefeat,GARA: Losing upsets me!$,reviewed AUTO draft
+Route104_Text_GinaPostBattle,GARA: You are strong!\nWe have to train lots more!$,reviewed AUTO draft
+Route104_Text_GinaNotEnoughMons,"GARA: Oh? Only one COMPANION?\nThen, we don't battle with you.\pIf there's only one COMPANION, it will\nbe lonesome. That's not nice.$",reviewed AUTO draft
+Route104_Text_MiaIntro,"MYA: We are twins, so we battle\nCOMPANION together.$",reviewed AUTO draft
+Route104_Text_MiaDefeat,"MYA: We battled together, but we\nboth lost…$",reviewed AUTO draft
+Route104_Text_MiaPostBattle,MYA: We will train our COMPANION more\nand be strong like you.$,reviewed AUTO draft
+Route104_Text_MiaNotEnoughMons,MYA: You want to battle with us?\pIt's a big no-no if you don't have two\nCOMPANIONS with you.\lWe're too strong for you!$,reviewed AUTO draft
+Route104_Text_IvanIntro,Why keep it a secret?\nI'm the WATER COMPANION expert!\pHuh?\nYou don't know me?$,reviewed AUTO draft
+Route104_Text_IvanDefeat,"I thought I wasn't too bad, if I may\nsay so, but I guess not… Bleah…$","reviewed, no change needed"
+Route104_Text_IvanPostBattle,I got too into fishing.\nI forgot I had to raise my COMPANION…$,reviewed AUTO draft
+Route104_Text_BillyIntro,Leaving footprints in the sand is\nso fun!$,"reviewed, no change needed"
+Route104_Text_BillyDefeat,Waah! I got sand in my runners!\nThey're all gritty!$,"reviewed, no change needed"
+Route104_Text_BillyPostBattle,"I want to leave my footprints in\nthe sand everywhere, but they\ldisappear quickly…$","reviewed, no change needed"
+Route104_Text_HaleyIntro,"Should I…\nOr shouldn't I?\pOkay, sure, I will battle!$","reviewed, no change needed"
+Route104_Text_HaleyDefeat,I shouldn't have battled…$,"reviewed, no change needed"
+Route104_Text_HaleyPostBattle,"If you're faced with a decision and\nyou let someone else choose for you,\lyou will regret it, however things\lturn out.$","reviewed, no change needed"
+Route104_Text_HaleyRegister1,"You're strong, but should I register\nyou in my COMLINK?\lMaybe I shouldn't…\pOkay, sure, I will register you!$",reviewed AUTO draft
+Route104_Text_HaleyRegister2,"You're strong, but should I register\nyou in my COMLINK?\lMaybe I shouldn't…\pOkay, sure, I will register you!$",reviewed AUTO draft
+Route104_Text_HaleyRematchIntro,"Come on, battle with me!$","reviewed, no change needed"
+Route104_Text_HaleyRematchDefeat,Ohh…\nI thought I could win…$,"reviewed, no change needed"
+Route104_Text_HaleyPostRematch,"I made the decision to battle, so\nI can accept this loss with grace.\pI am still upset about losing!$","reviewed, no change needed"
+Route104_Text_WinstonIntro,"Oh, sure, I'll accept your challenge.\nI have a lot of money.$","reviewed, no change needed"
+Route104_Text_WinstonDefeat,Why couldn't I win?$,"reviewed, no change needed"
+Route104_Text_WinstonPostBattle,There are some things money can't buy.\nThat's COMPANION…$,reviewed AUTO draft
+Route104_Text_WinstonRegister1,"Hm?\nAh, you've obtained a COMLINK.\pI will gladly register you.\nAfter all, I have plenty of money.$",reviewed AUTO draft
+Route104_Text_WinstonRegister2,"Hm?\nAh, you've obtained a COMLINK.\pI will gladly register you.\nAfter all, I have plenty of money.$",reviewed AUTO draft
+Route104_Text_WinstonRematchIntro,"After I lost to you, I learned a bunch\nof things about COMPANIONS.$",reviewed AUTO draft
+Route104_Text_WinstonRematchDefeat,I lost again?\nWhy couldn't I win?$,"reviewed, no change needed"
+Route104_Text_WinstonPostRematch,"I'm fabulously wealthy, but I can't\nseem to win at COMPANION…\pIt's so deep, the world of COMPANIONS…$",reviewed AUTO draft
+Route104_Text_CindyIntro,We must have been fated to meet.\nMay I ask you for a battle?$,"reviewed, no change needed"
+Route104_Text_CindyDefeat,"Oh, my!$","reviewed, no change needed"
+Route104_Text_CindyPostBattle,“Hello” is the beginning of “good-bye.”\nI hope we meet again.$,"reviewed, no change needed"
+Route104_Text_CindyRegister1,"Hello, we meet again.\pWe seem to be drawn together. Let's\nregister each other in our COMLINKS.$",reviewed AUTO draft
+Route104_Text_CindyRegister2,We should commemorate how we seem\nto be drawn to each other.\pLet's register each other in our\nCOMLINKS.$,reviewed AUTO draft
+Route104_Text_CindyRematchIntro,"Hello, we meet again.\nMay I ask you for a battle?$","reviewed, no change needed"
+Route104_Text_CindyRematchDefeat,"Oh, my…\nI did the best that I could…$","reviewed, no change needed"
+Route104_Text_CindyPostRematch,“Hello” is the beginning of “good-bye.”\nI hope we meet again.$,"reviewed, no change needed"
+Route104_Text_DarianIntro,"I fished up a tough-looking COMPANION!\pIt has this magical quality to it!\nIt surely looks tough, yes it does!$",reviewed AUTO draft
+Route104_Text_DarianDefeat,What the…$,"reviewed, no change needed"
+Route104_Text_DarianPostBattle,"Hey, COLOFRY, you sure don't live up\nto your name, do you?$",reviewed AUTO draft
+Route116_Text_ClarkIntro,"If the tunnel doesn't go through, then\nI'll just go over the top.$","reviewed, no change needed"
+Route116_Text_ClarkDefeat,Gasp… Gasp…\nLosing made me tired…$,"reviewed, no change needed"
+Route116_Text_ClarkPostBattle,"It's no big deal if there's no tunnel.\nTo a HIKER, mountains are roads!$","reviewed, no change needed"
+Route116_Text_JoeyIntro,My COMPANION rule!\nCheck them out!$,reviewed AUTO draft
+Route116_Text_JoeyDefeat,Ouch! A scrape!\nI have to put on a bandage!$,"reviewed, no change needed"
+Route116_Text_JoeyPostBattle,Bandages are signs of toughness!\nI've got another one!$,"reviewed, no change needed"
+Route116_Text_JoseIntro,My BUG COMPANIONS are tough!\nLet's battle!$,reviewed AUTO draft
+Route116_Text_JoseDefeat,I lost!\nI thought I had you!$,"reviewed, no change needed"
+Route116_Text_JosePostBattle,"BUG COMPANIONS evolve quickly.\nSo they get strong quickly, too.$",reviewed AUTO draft
+Route116_Text_JaniceIntro,Let me teach you how strong my\nadorable COMPANION is!$,reviewed AUTO draft
+Route116_Text_JaniceDefeat,You're a notch above me…$,"reviewed, no change needed"
+Route116_Text_JanicePostBattle,"COMPANION that possess cuteness and\npower, that's ideal, I think.$",reviewed AUTO draft
+Route116_Text_JerryIntro,We learn all sorts of things at the\nACADEMY.\pI want to test things out for real!$,reviewed AUTO draft
+Route116_Text_JerryDefeat,I slacked off in school…\nThat's why I lost.$,"reviewed, no change needed"
+Route116_Text_JerryPostBattle,"I'll have to redo some courses at\nthe ACADEMY.\lIf I don't, BIGGS will be steamed.$",reviewed AUTO draft
+Route116_Text_JerryRegister1,"I learned at the ACADEMY\nthat a COMLINK can register TRAINERS.\pI don't really get what that means,\nso can I just try it?$",reviewed AUTO draft
+Route116_Text_JerryRegister2,"I learned at the ACADEMY\nthat a COMLINK can register TRAINERS.\pI don't really get what that means,\nso can I just try it?$",reviewed AUTO draft
+Route116_Text_JerryRematchIntro,I've been studying seriously at the\nACADEMY.\lI won't lose like I did last time.$,reviewed AUTO draft
+Route116_Text_JerryRematchDefeat,Hunh?\nI studied diligently.$,"reviewed, no change needed"
+Route116_Text_JerryPostRematch,"I'll have to redo some courses at\nthe ACADEMY.\lIf I don't, BIGGS will be steamed.$",reviewed AUTO draft
+Route116_Text_KarenIntro,"I study at school, and I study on\nthe way home, too!$","reviewed, no change needed"
+Route116_Text_KarenDefeat,I'm in shock--I lost?$,"reviewed, no change needed"
+Route116_Text_KarenPostBattle,"Awww, I'll never become an elegant\nTRAINER like BIGGS this way!$",reviewed AUTO draft
+Route116_Text_KarenRegister1,"Oh, wow! Isn't that a COMLINK?\nI have one, too! Please register me!$",reviewed AUTO draft
+Route116_Text_KarenRegister2,"Oh, wow! Isn't that a COMLINK?\nI have one, too! Please register me!$",reviewed AUTO draft
+Route116_Text_KarenRematchIntro,I studied a whole lot since I saw you.\nYou must see my achievements!$,"reviewed, no change needed"
+Route116_Text_KarenRematchDefeat,I'm in shock.\nI lost again?$,"reviewed, no change needed"
+Route116_Text_KarenPostRematch,"You've beaten BIGGS?\nI can't beat you, then. Not yet.$",reviewed AUTO draft
+Route116_Text_SarahIntro,"Just so you know, I've never once been\nbested by anyone at anything.$","reviewed, no change needed"
+Route116_Text_SarahDefeat,"Oh, my goodness.\nThis is a new experience for me.$","reviewed, no change needed"
+Route116_Text_SarahPostBattle,"My life of luxury affords me all that\nI could possibly desire.\pHowever, when it comes to COMPANION,\nmy wealth has no meaning.$",reviewed AUTO draft
+Route116_Text_DawsonIntro,"When you lay your eyes on my\nCOMPANION's gorgeous fur, their beauty\lwill render you helpless!$",reviewed AUTO draft
+Route116_Text_DawsonDefeat,"Oh, baby, say it isn't so!$","reviewed, no change needed"
+Route116_Text_DawsonPostBattle,"Oh, no, no, no!\nYou've mussed up my COMPANION's fur!\lYou've ruined my hairdo, too!\lI'll have to call my stylist now!$",reviewed AUTO draft
+Route116_Text_DevanIntro,We'll rock you hard!$,"reviewed, no change needed"
+Route116_Text_DevanDefeat,Aiyiyi!\nNo contest at all!$,"reviewed, no change needed"
+Route116_Text_DevanPostBattle,"I should try different COMPANION\ntypes, that's what I ought to do.$",reviewed AUTO draft
+Route116_Text_JohnsonIntro,"It's a dead end up here.\nI'm bored, so can we battle?$","reviewed, no change needed"
+Route116_Text_JohnsonDefeat,That was fun even though I lost.$,"reviewed, no change needed"
+Route116_Text_JohnsonPostBattle,Want to stay here and keep\nme company?$,"reviewed, no change needed"

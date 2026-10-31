@@ -1,108 +1,105 @@
-"""Compare what is in database/ against what exists in the pokeemerald source.
+"""Write progress/COVERAGE.md from database/ (run tools/build.py first).
 
-    python3 tools/coverage.py      # prints the report and rewrites progress/COVERAGE.md
-
-Each metric is (game count, database count). Automatic metrics come from the
-source tree; "curated" metrics measure the hand-written lore layer that the
-checklist in progress/CHECKLIST.md tracks.
+    python3 tools/coverage.py
 """
 from __future__ import annotations
 
-import json
-import re
+import csv
 import sys
-from collections import Counter
+from collections import Counter, defaultdict
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
-from common import DATABASE_DIR, REPO_DIR, SRC, read, read_csv  # noqa: E402
+ROOT = Path(__file__).resolve().parent.parent
+DB = ROOT / "database"
+csv.field_size_limit(sys.maxsize)
+
+# Order and labels of the entity types in the report; anything else is listed after.
+TYPES = [("species", "Creatures (species)"), ("character", "Story characters"), ("organization", "Organizations"),
+         ("trainer", "Trainers"), ("trainer_class", "Trainer classes"), ("location", "Region-map locations"),
+         ("map", "Maps"), ("item", "Items"), ("move", "Moves"), ("ability", "Abilities"), ("game_type", "Types"),
+         ("badge", "Badges (shards)"), ("npc", "NPC / object events"), ("object_graphics", "Overworld sprites"),
+         ("trainer_pic", "Trainer pics"), ("tileset", "Tilesets"), ("facility_trainer", "Frontier / tent trainers"),
+         ("contest_opponent", "Showcase rivals"), ("decoration", "Hideout decorations"), ("storyline", "Storylines"),
+         ("facility", "Grand Arena facilities"), ("nature", "Natures"), ("ribbon", "Ribbons"), ("growth_rate", "Growth rates")]
 
 
-def t(name):
-    return read_csv(DATABASE_DIR / f"{name}.csv")
+def read(name):
+    with (DB / name).open(encoding="utf-8", newline="") as f:
+        return list(csv.DictReader(f))
 
 
-def main() -> None:
-    ents = t("entities")
-    by_type = Counter(e["entity_type"] for e in ents)
-    texts, scripts, dialogue, flags = t("texts"), t("scripts"), t("dialogue"), t("story_flags")
-    events = t("map_events")
-    rows = []
+def pct(a, b):
+    return f"{100 * a // b}%" if b else "—"
 
-    def add(area, metric, game, db, note=""):
-        pct = (100.0 * db / game) if game else 100.0
-        rows.append((area, metric, game, db, pct, note))
 
-    sp = len(re.findall(r"^\s*\[SPECIES_\w+\]\s*=", read("src/data/pokemon/species_info.h"), re.M)) - 1
-    add("Pokémon", "species (incl. 25 old Unown placeholders)", sp, by_type["species"])
-    add("Pokémon", "moves", len(re.findall(r"^\s*\[MOVE_\w+\]\s*=", read("src/data/battle_moves.h"), re.M)) - 1, by_type["move"])
-    add("Pokémon", "abilities", len(re.findall(r"\[ABILITY_\w+\]\s*=\s*_", read("src/data/text/abilities.h"))) - 1, by_type["ability"])
-    add("Pokémon", "types", 18, by_type["game_type"])
-    add("Items", "items", len(re.findall(r"^\s*\[ITEM_\w+\]\s*=", read("src/data/items.h"), re.M)) - 1, by_type["item"])
-    add("Trainers", "trainers", len(re.findall(r"^\s*\[TRAINER_\w+\]\s*=", read("src/data/trainers.h"), re.M)) - 1, by_type["trainer"])
-    add("Trainers", "trainer classes", len(re.findall(r"\[TRAINER_CLASS_\w+\]", read("src/data/text/trainer_class_names.h"))), by_type["trainer_class"])
-    add("World", "maps", len(list((SRC / "data/maps").glob("*/map.json"))), by_type["map"])
-    add("World", "region map sections", len(json.loads(read("src/data/region_map/region_map_sections.json"))["map_sections"]), by_type["location"])
-    n_obj = sum(len(json.loads(p.read_text()).get("object_events") or []) for p in (SRC / "data/maps").glob("*/map.json"))
-    add("World", "map object events (NPCs/props)", n_obj, by_type["npc"])
-    n_ev = sum(len(d.get("object_events") or []) + len(d.get("coord_events") or []) + len(d.get("bg_events") or [])
-               for d in (json.loads(p.read_text()) for p in (SRC / "data/maps").glob("*/map.json")))
-    add("World", "all map events (objects+triggers+signs)", n_ev, len(events))
-    add("World", "overworld sprite ids", len(re.findall(r"\[OBJ_EVENT_GFX_\w+\]\s*=", read("src/data/object_events/object_event_graphics_info_pointers.h"))) + 16, by_type["object_graphics"])
-    add("Text", "text blocks (.string labels)", len(texts), len(texts), "texts.csv is the source of truth for dialogue")
-    used = sum(1 for x in texts if x.get("used_by_scripts"))
-    add("Text", "texts referenced by an overworld script", len(texts), used, "rest are used from C code / indirectly")
-    npcs_with = len({d["speaker_entity_id"] for d in dialogue if d["speaker_entity_id"].startswith("npc:")})
-    add("Text", "NPCs with attributed dialogue", by_type["npc"], npcs_with, "all object events incl. props")
-    props = ("item-ball", "cuttable-tree", "breakable-rock", "pushable-boulder", "berry-tree", "doll", "cushion", "fossil", "truck",
-             "moving-box", "boat", "ss-tidal", "cable-car", "statue", "submarine", "shadow", "birchs-bag", "var-")
-    people = {e["id"] for e in ents if e["entity_type"] == "npc" and not any(p in e.get("graphics", "") for p in props)}
-    spoke = {d["speaker_entity_id"] for d in dialogue}
-    add("Text", "people NPCs (non-prop sprites) with attributed dialogue", len(people), len(people & spoke),
-        "rest: scripted cutscene actors without their own script, or NPCs whose text is shown from C")
-    add("Scripts", "script labels", len(scripts), len(scripts))
-    add("Scripts", "flags + vars", len(flags), len(flags))
-    pngs = len(list(SRC.glob("graphics/**/*.png"))) + len(list(SRC.glob("data/tilesets/**/*.png")))
-    add("Art", "PNG art files inventoried", pngs, sum(1 for a in t("art_assets") if a["kind"] != "battle_animation"))
-
-    # curated lore layer
-    speakers = Counter(x["speaker_label"] for x in texts if x["speaker_label"] and x.get("text_origin") != "c")
-    trainer_names = {n.strip() for e in ents if e["entity_type"] in ("trainer", "facility_trainer")
-                     for n in e.get("game_name", "").upper().split("&")}
-    chars = [e for e in ents if e["entity_type"] == "character"]
-    aliases = set()
-    for c in chars:
-        aliases.update(a.strip().upper() for a in (c.get("speaker_labels") or "").split("|") if a.strip())
-    named = [s for s, n in speakers.items() if n >= 2 and not s.startswith("{")]
-    add("Lore (curated)", "named speakers (>=2 lines) mapped to a character", len(named), sum(1 for s in named if s in aliases))
-    add("Lore (curated)", "named speakers mapped to a character or a trainer name", len(named), sum(1 for s in named if s in aliases or s in trainer_names),
-        "unmapped: " + ", ".join(sorted(s for s in named if s not in aliases and s not in trainer_names))[:300])
-    add("Lore (curated)", "story characters", "", len(chars))
-    add("Lore (curated)", "organizations", "", by_type["organization"])
-    tl = t("timeline_events")
-    add("Lore (curated)", "story timeline events", "", len(tl))
-    locs = [e for e in ents if e["entity_type"] == "location" and e.get("on_region_map") == "true"]
-    add("Lore (curated)", "region-map locations with lore written", len(locs), sum(1 for e in locs if e.get("history")))
-    prog = t("area_progression")
-    add("Balance", "maps in area_progression (auto)", "", len(prog))
-    add("Balance", "area_progression rows with chapter/badges assigned", len(prog), sum(1 for p in prog if p.get("badges_expected")))
-    add("Balance", "area_progression rows with gating (requires) written", len(prog), sum(1 for p in prog if p.get("requires")))
-
+def main():
+    swap = read("swap_map.csv")
+    by_type = defaultdict(list)
+    for r in swap:
+        by_type[r["entity_type"] or "(none)"].append(r)
     lines = ["# Coverage report", "", "Generated by `python3 tools/coverage.py`; do not edit by hand.", "",
-             f"pokeemerald: `{_commit()}`", "", "| Area | Metric | In game | In DB | % | Note |", "|---|---|---:|---:|---:|---|"]
-    for area, metric, game, db, pct, note in rows:
-        p = f"{pct:.0f}%" if game != "" else "—"
-        lines.append(f"| {area} | {metric} | {game} | {db} | {p} | {note} |")
-    out = "\n".join(lines) + "\n"
-    (REPO_DIR / "progress" / "COVERAGE.md").write_text(out)
-    print(out)
+             "`decided` = a Star Wars name is chosen (DRAFT or DONE) or the row is a deliberate KEEP.", "",
+             "## Mapping status by entity type", "",
+             "| Entity type | Emerald rows | HOTSWAP decided | HOTSWAP TODO | KEEP | NET_NEW | decided % |",
+             "|---|---:|---:|---:|---:|---:|---:|"]
+    order = [t for t, _ in TYPES] + sorted(t for t in by_type if t not in dict(TYPES))
+    labels = dict(TYPES)
+    for t in order:
+        rows = by_type.get(t, [])
+        if not rows:
+            continue
+        emer = [r for r in rows if r["swap_kind"] != "NET_NEW"]
+        hd = sum(1 for r in emer if r["swap_kind"] == "HOTSWAP" and r["map_status"] in ("DRAFT", "DONE"))
+        ht = sum(1 for r in emer if r["swap_kind"] == "HOTSWAP" and r["map_status"] == "TODO")
+        keep = sum(1 for r in emer if r["swap_kind"] == "KEEP")
+        new = sum(1 for r in rows if r["swap_kind"] == "NET_NEW")
+        lines.append(f"| {labels.get(t, t)} | {len(emer)} | {hd} | {ht} | {keep} | {new} | {pct(hd + keep, len(emer))} |")
 
+    texts = read("texts.csv")
+    tc = Counter(r["text_status"] for r in texts)
+    over = sum(1 for r in texts if r["overflow_risk"])
+    lines += ["", "## Dialogue and text", "",
+              "| Metric | Count | % |", "|---|---:|---:|",
+              f"| Emerald texts | {len(texts)} | |",
+              f"| CURATED (hand-written Star Wars version) | {tc['CURATED']} | {pct(tc['CURATED'], len(texts))} |",
+              f"| AUTO (names/terms swapped, needs a read-through) | {tc['AUTO']} | {pct(tc['AUTO'], len(texts))} |",
+              f"| UNCHANGED (no Emerald names in it; may still need a lore rewrite) | {tc['UNCHANGED']} | {pct(tc['UNCHANGED'], len(texts))} |",
+              f"| lines that may overflow the text box after the swap | {over} | |"]
 
-def _commit():
-    for r in read_csv(DATABASE_DIR / "build_info.csv"):
-        if r["key"] == "pokeemerald_commit":
-            return r["value"]
-    return "unknown"
+    csv.field_size_limit(1 << 30)
+    species = [e for e in read("entities.csv") if e["id"].startswith("species:") and e.get("swap_kind") == "HOTSWAP"]
+    dp = sum(1 for e in species if e.get("datapad_text"))
+    lines += ["", "## Datapad entries", "",
+              "| Metric | Count | % |", "|---|---:|---:|",
+              f"| species with a Star Wars datapad entry and category | {dp} | {pct(dp, len(species))} |",
+              f"| species held (sentient people or named characters, decision pending) | {len(species) - dp} | |"]
+
+    art = read("pending_art.csv")
+    ac = Counter(r["art_status"] for r in art)
+    named = sum(1 for r in art if r["suggested_path"])
+    subj = sum(1 for r in art if r.get("sw_subject"))
+    lines += ["", "## Art", "",
+              "| Metric | Count |", "|---|---:|",
+              f"| art assets (PNGs + move animations) | {len(art)} |",
+              *[f"| {k} | {v} |" for k, v in sorted(ac.items())],
+              f"| assets with a suggested Star Wars file name | {named} |",
+              f"| assets with a named Star Wars subject (sprites, trainer pics, tilesets) | {subj} |",
+              f"| NET_NEW rows needing placeholder art | {sum(1 for r in swap if r['swap_kind'] == 'NET_NEW' and r['art_status'] == 'NEEDS_PLACEHOLDER')} |"]
+
+    tl = read("timeline_events.csv")
+    tld = sum(1 for r in tl if r["map_status"] != "TODO")
+    lines += ["", "## Story", "", "| Metric | Count | % |", "|---|---:|---:|",
+              f"| timeline events rewritten | {tld} / {len(tl)} | {pct(tld, len(tl))} |"]
+
+    planets = Counter(r["planet"] for r in swap if r["entity_type"] == "location" and r["planet"])
+    lines += ["", "## Locations per planet", "", "| Planet | Region-map locations |", "|---|---:|",
+              *[f"| {p} | {n} |" for p, n in sorted(planets.items())]]
+
+    w = read("build_warnings.csv")
+    lines += ["", f"Build warnings: {len(w)} (see `database/build_warnings.csv`).", ""]
+    out = ROOT / "progress" / "COVERAGE.md"
+    out.write_text("\n".join(lines), encoding="utf-8")
+    print(f"wrote {out.relative_to(ROOT)}")
 
 
 if __name__ == "__main__":

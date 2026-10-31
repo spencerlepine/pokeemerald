@@ -1,0 +1,217 @@
+emerald_id,sw_name,swap_kind,map_status,art_status,sw_basis,sw_description,notes
+item:poke-ball,CAPTURE POD,HOTSWAP,DONE,PENDING_ART,original,Standard stasis pod for catching companions.,Capture-pod family replaces Poké Balls.
+item:great-ball,DURASTEEL POD,HOTSWAP,DONE,PENDING_ART,original,Reinforced pod with a better catch rate.,Capture-pod family replaces Poké Balls.
+item:ultra-ball,BESKAR POD,HOTSWAP,DONE,PENDING_ART,original,"Mandalorian-iron pod, high catch rate.",Capture-pod family replaces Poké Balls.
+item:master-ball,KYBER POD,HOTSWAP,DONE,PENDING_ART,original,Kyber-locked pod that never fails.,Capture-pod family replaces Poké Balls.
+item:safari-ball,SAFARI POD,HOTSWAP,DONE,PENDING_ART,original,Pod used only in the Felucia Reserve.,Capture-pod family replaces Poké Balls.
+item:net-ball,NET POD,HOTSWAP,DONE,PENDING_ART,original,Pod tuned for water and bug companions.,Capture-pod family replaces Poké Balls.
+item:dive-ball,DIVE POD,HOTSWAP,DONE,PENDING_ART,original,Pod that works best underwater.,Capture-pod family replaces Poké Balls.
+item:nest-ball,NEST POD,HOTSWAP,DONE,PENDING_ART,original,Pod that works best on weak companions.,Capture-pod family replaces Poké Balls.
+item:repeat-ball,REPEAT POD,HOTSWAP,DONE,PENDING_ART,original,Pod for species already registered.,Capture-pod family replaces Poké Balls.
+item:timer-ball,TIMER POD,HOTSWAP,DONE,PENDING_ART,original,Pod that gets better the longer a battle lasts.,Capture-pod family replaces Poké Balls.
+item:luxury-ball,LUXURY POD,HOTSWAP,DONE,PENDING_ART,original,Comfortable pod that raises friendship.,Capture-pod family replaces Poké Balls.
+item:premier-ball,PREMIER POD,HOTSWAP,DONE,PENDING_ART,original,Commemorative pod.,Capture-pod family replaces Poké Balls.
+item:potion,BACTA SPRAY,HOTSWAP,DONE,PENDING_ART,original,Restores 20 HP.,
+item:super-potion,BACTA PATCH,HOTSWAP,DONE,PENDING_ART,original,Restores 50 HP.,
+item:hyper-potion,BACTA PACK,HOTSWAP,DONE,PENDING_ART,original,Restores 200 HP.,
+item:max-potion,BACTA TANK,HOTSWAP,DONE,PENDING_ART,original,Fully restores HP.,
+item:full-restore,MEDPAC,HOTSWAP,DONE,PENDING_ART,original,Restores HP and cures status.,
+item:revive,REVIVE STIM,HOTSWAP,DONE,PENDING_ART,original,Revives a fainted companion.,
+item:max-revive,BACTA REVIVE,HOTSWAP,DONE,PENDING_ART,original,Fully revives a fainted companion.,
+item:antidote,ANTITOXIN,HOTSWAP,DONE,PENDING_ART,original,Cures poison.,
+item:burn-heal,BURN GEL,HOTSWAP,DONE,PENDING_ART,original,Cures burns.,
+item:ice-heal,THAW PACK,HOTSWAP,DONE,PENDING_ART,original,Thaws a frozen companion.,
+item:awakening,STIM PATCH,HOTSWAP,DONE,PENDING_ART,original,Wakes a sleeping companion.,
+item:paralyze-heal,NERVE TONIC,HOTSWAP,DONE,PENDING_ART,original,Cures paralysis.,
+item:full-heal,FULL MEDKIT,HOTSWAP,DONE,PENDING_ART,original,Cures any status.,
+item:ether,POWER CELL,HOTSWAP,DONE,PENDING_ART,original,Restores PP of one move.,
+item:max-ether,MAX CELL,HOTSWAP,DONE,PENDING_ART,original,Fully restores PP of one move.,
+item:elixir,POWER PACK,HOTSWAP,DONE,PENDING_ART,original,Restores PP of all moves.,
+item:max-elixir,MAX PACK,HOTSWAP,DONE,PENDING_ART,original,Fully restores PP of all moves.,
+item:fresh-water,BLUE MILK,HOTSWAP,DONE,PENDING_ART,original,Bantha blue milk. Restores 50 HP.,
+item:soda-pop,JAWA JUICE,HOTSWAP,DONE,PENDING_ART,original,Fizzy cantina drink. Restores 60 HP.,
+item:lemonade,MEILOORUN,HOTSWAP,DONE,PENDING_ART,original,Sweet meiloorun juice. Restores 80 HP.,
+item:moomoo-milk,BANTHA MILK,HOTSWAP,DONE,PENDING_ART,original,Rich milk. Restores 100 HP.,
+item:lava-cookie,ASH CAKE,HOTSWAP,DONE,PENDING_ART,original,Sullustan ash cake. Cures status.,
+item:energy-powder,ENERGY POWDER,HOTSWAP,DONE,PENDING_ART,original,,
+item:energy-root,ENERGY ROOT,HOTSWAP,DONE,PENDING_ART,original,,
+item:heal-powder,HEAL POWDER,HOTSWAP,DONE,PENDING_ART,original,,
+item:revival-herb,REVIVAL HERB,HOTSWAP,DONE,PENDING_ART,original,,
+item:escape-rope,GRAPPLE LINE,HOTSWAP,DONE,PENDING_ART,original,Climb out of any cave.,
+item:repel,REPULSOR,HOTSWAP,DONE,PENDING_ART,original,Keeps weak companions away.,
+item:super-repel,REPULSOR II,HOTSWAP,DONE,PENDING_ART,original,Keeps weak companions away longer.,
+item:max-repel,REPULSOR III,HOTSWAP,DONE,PENDING_ART,original,Keeps weak companions away longest.,
+item:rare-candy,POWER RATION,HOTSWAP,DONE,PENDING_ART,original,Raises a companion by one level.,
+item:poke-doll,HOLO DECOY,HOTSWAP,DONE,PENDING_ART,original,Lets you flee from a wild companion.,
+item:guard-spec,SHIELD SPEC.,HOTSWAP,DONE,PENDING_ART,original,,
+item:sacred-ash,KYBER ASH,HOTSWAP,DONE,PENDING_ART,original,Revives the whole party.,
+item:mach-bike,SWOOP BIKE,HOTSWAP,DONE,PENDING_ART,original,Brown hover-bike built for raw speed (Mach Bike).,
+item:acro-bike,SPEEDER BIKE,HOTSWAP,DONE,PENDING_ART,original,White hover-bike built for tricks and jumps (Acro Bike).,
+item:coin-case,CHIP CASE,HOTSWAP,DONE,PENDING_ART,original,Holds sabacc chips.,
+item:itemfinder,SCANNER,HOTSWAP,DONE,PENDING_ART,original,Detects hidden items.,
+item:ss-ticket,STARLINER PASS,HOTSWAP,DONE,PENDING_ART,original,Boarding pass for the STAR TIDAL.,
+item:contest-pass,SHOWCASE PASS,HOTSWAP,DONE,PENDING_ART,original,Entry to Cloud City Showcases.,
+item:wailmer-pail,WATER CANTEEN,HOTSWAP,DONE,PENDING_ART,original,Waters berry plants.,
+item:devon-goods,ORGANA PARTS,HOTSWAP,DONE,PENDING_ART,original,Bongo-sub parts made by House Organa.,
+item:soot-sack,ASH SACK,HOTSWAP,DONE,PENDING_ART,original,Collects volcanic ash.,
+item:pokeblock-case,TREAT CASE,HOTSWAP,DONE,PENDING_ART,original,Holds COMPANION TREATS.,
+item:letter,MESSAGE DISC,HOTSWAP,DONE,PENDING_ART,original,Sen. Organa's sealed message for Leia.,
+item:eon-ticket,TYTHON PASS,HOTSWAP,DONE,PENDING_ART,original,Pass to Tython Isle.,
+item:red-orb,RED KYBER,HOTSWAP,DONE,PENDING_ART,original,Kyber crystal bound to SANDO.,
+item:blue-orb,BLUE KYBER,HOTSWAP,DONE,PENDING_ART,original,Kyber crystal bound to GREATKRAYT.,
+item:scanner,DATA SCANNER,HOTSWAP,DONE,PENDING_ART,original,Old scanner found in the Republic Wreck.,
+item:go-goggles,SAND GOGGLES,HOTSWAP,DONE,PENDING_ART,original,Lets you see through sandstorms.,
+item:meteorite,METEORITE,HOTSWAP,DONE,PENDING_ART,original,Fragment that fell on Sullust.,
+item:root-fossil,FROND FOSSIL,HOTSWAP,DONE,PENDING_ART,original,Fossil of an ancient sea-lily.,
+item:claw-fossil,CLAW FOSSIL,HOTSWAP,DONE,PENDING_ART,original,Fossil of an ancient claw.,
+item:devon-scope,ORGANA SCOPE,HOTSWAP,DONE,PENDING_ART,original,Reveals the invisible TAOZIN.,
+item:magma-emblem,CODE CYLINDER,HOTSWAP,DONE,PENDING_ART,original,Imperial code cylinder; opens Fortress Vader.,
+item:mystic-ticket,MORTIS PASS,HOTSWAP,DONE,PENDING_ART,original,Pass to the Mortis Gate.,
+item:aurora-ticket,ATOLLON PASS,HOTSWAP,DONE,PENDING_ART,original,Pass to Atollon.,
+item:old-sea-map,WELLSPRING MAP,HOTSWAP,DONE,PENDING_ART,original,Map to the Wellspring of Life.,
+item:basement-key,BASEMENT KEY,HOTSWAP,DONE,PENDING_ART,original,,
+item:storage-key,STORAGE KEY,HOTSWAP,DONE,PENDING_ART,original,,
+item:room-1-key,RM. 1 KEY,HOTSWAP,DONE,PENDING_ART,original,,
+item:room-2-key,RM. 2 KEY,HOTSWAP,DONE,PENDING_ART,original,,
+item:room-4-key,RM. 4 KEY,HOTSWAP,DONE,PENDING_ART,original,,
+item:room-6-key,RM. 6 KEY,HOTSWAP,DONE,PENDING_ART,original,,
+item:old-rod,OLD ROD,HOTSWAP,DONE,PENDING_ART,original,,
+item:good-rod,GOOD ROD,HOTSWAP,DONE,PENDING_ART,original,,
+item:super-rod,SUPER ROD,HOTSWAP,DONE,PENDING_ART,original,,
+item:powder-jar,POWDER JAR,HOTSWAP,DONE,PENDING_ART,original,,
+item:exp-share,EXP. LINK,HOTSWAP,DONE,PENDING_ART,original,Shares battle experience over a comlink link.,
+item:soul-dew,KYBER DEW,HOTSWAP,DONE,PENDING_ART,original,Kyber droplet that boosts ASHLA and BOGAN.,
+item:everstone,CARBONITE,HOTSWAP,DONE,PENDING_ART,original,Holder will not evolve.,
+item:kings-rock,HUTT CROWN,HOTSWAP,DONE,PENDING_ART,original,May make the foe flinch.,
+item:dragon-scale,KRAYT SCALE,HOTSWAP,DONE,PENDING_ART,original,,
+item:up-grade,DROID UPGRADE,HOTSWAP,DONE,PENDING_ART,original,Upgrades a 3PO UNIT into a TC UNIT.,
+item:metal-coat,DURASTEEL COAT,HOTSWAP,DONE,PENDING_ART,original,,
+item:deep-sea-tooth,DEEPSEA TOOTH,HOTSWAP,DONE,PENDING_ART,original,,
+item:deep-sea-scale,DEEPSEA SCALE,HOTSWAP,DONE,PENDING_ART,original,,
+item:light-ball,ION CELL,HOTSWAP,DONE,PENDING_ART,original,Boosts IONRAT.,
+item:stick,REED STICK,HOTSWAP,DONE,PENDING_ART,original,Boosts NUNA.,
+item:thick-club,KRAYT BONE,HOTSWAP,DONE,PENDING_ART,original,Boosts SKULLKIT and BONELORD.,
+item:lucky-punch,LUCKY GLOVE,HOTSWAP,DONE,PENDING_ART,original,,
+item:twisted-spoon,FORCE CHARM,HOTSWAP,DONE,PENDING_ART,original,Boosts Force-type moves.,
+item:spell-tag,SPIRIT TAG,HOTSWAP,DONE,PENDING_ART,original,Boosts Spirit-type moves.,
+item:cleanse-tag,CLEANSE TAG,HOTSWAP,DONE,PENDING_ART,original,,
+item:red-scarf,RED SCARF,HOTSWAP,DONE,PENDING_ART,original,,
+item:blue-scarf,BLUE SCARF,HOTSWAP,DONE,PENDING_ART,original,,
+item:pink-scarf,PINK SCARF,HOTSWAP,DONE,PENDING_ART,original,,
+item:green-scarf,GREEN SCARF,HOTSWAP,DONE,PENDING_ART,original,,
+item:yellow-scarf,YELLOW SCARF,HOTSWAP,DONE,PENDING_ART,original,,
+item:hp-up,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:protein,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:iron,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:carbos,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:calcium,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:zinc,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:pp-up,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:pp-max,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:dire-hit,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:x-attack,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:x-defend,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:x-speed,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:x-accuracy,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:x-special,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:fluffy-tail,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:sun-stone,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:moon-stone,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:fire-stone,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:thunder-stone,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:water-stone,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:leaf-stone,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:tiny-mushroom,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:big-mushroom,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:pearl,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:big-pearl,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:stardust,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:star-piece,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:nugget,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:heart-scale,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:blue-flute,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:yellow-flute,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:red-flute,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:black-flute,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:white-flute,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:berry-juice,FRUIT JUICE,HOTSWAP,DONE,PENDING_ART,original,Fruit juice. Same effect as Berry Juice.,
+item:shoal-salt,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:shoal-shell,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:red-shard,RED CRYSTAL,HOTSWAP,DONE,PENDING_ART,original,Crystal fragment traded for evolution stones.,Renamed so it never clashes with arena SHARDS (badges).
+item:blue-shard,BLUE CRYSTAL,HOTSWAP,DONE,PENDING_ART,original,Crystal fragment traded for evolution stones.,Renamed so it never clashes with arena SHARDS (badges).
+item:yellow-shard,YELLOW CRYSTAL,HOTSWAP,DONE,PENDING_ART,original,Crystal fragment traded for evolution stones.,Renamed so it never clashes with arena SHARDS (badges).
+item:green-shard,GREEN CRYSTAL,HOTSWAP,DONE,PENDING_ART,original,Crystal fragment traded for evolution stones.,Renamed so it never clashes with arena SHARDS (badges).
+item:bright-powder,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:white-herb,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:macho-brace,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:quick-claw,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:soothe-bell,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:mental-herb,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:choice-band,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:silver-powder,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:amulet-coin,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:smoke-ball,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:focus-band,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:lucky-egg,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:scope-lens,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:leftovers,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:soft-sand,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:hard-stone,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:miracle-seed,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:black-glasses,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:black-belt,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:magnet,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:mystic-water,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:sharp-beak,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:poison-barb,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:never-melt-ice,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:charcoal,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:dragon-fang,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:silk-scarf,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:shell-bell,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:sea-incense,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:lax-incense,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:metal-powder,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
+item:cheri-berry,JOGAN FRUIT,HOTSWAP,DONE,PENDING_ART,canon:Jogan fruit,Fruit from Tatooine. Same effect as the Emerald berry.,
+item:chesto-berry,MUJA FRUIT,HOTSWAP,DONE,PENDING_ART,canon:Muja fruit,Fruit from Tatooine. Same effect as the Emerald berry.,
+item:pecha-berry,PALLIE FRUIT,HOTSWAP,DONE,PENDING_ART,canon:Pallie fruit,Fruit from Tatooine. Same effect as the Emerald berry.,
+item:rawst-berry,SHUURA FRUIT,HOTSWAP,DONE,PENDING_ART,canon:Shuura fruit,Fruit from Naboo. Same effect as the Emerald berry.,
+item:aspear-berry,BLBA FRUIT,HOTSWAP,DONE,PENDING_ART,canon:Blba tree,Fruit from Dantooine. Same effect as the Emerald berry.,
+item:leppa-berry,WROSHYR FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Kashyyyk (wroshyr seed pod). Same effect as the Emerald berry.,
+item:oran-berry,HUBBA FRUIT,HOTSWAP,DONE,PENDING_ART,canon:Hubba gourd,Fruit from Tatooine. Same effect as the Emerald berry.,
+item:persim-berry,SAPIR FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Endor. Same effect as the Emerald berry.,
+item:lum-berry,ILUM FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Ilum (frost fruit that grows near kyber). Same effect as the Emerald berry.,
+item:sitrus-berry,JUMBA FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Felucia. Same effect as the Emerald berry.,
+item:figy-berry,SUNRED FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Tatooine. Same effect as the Emerald berry.,
+item:wiki-berry,KASHA FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Kashyyyk. Same effect as the Emerald berry.,
+item:mago-berry,MOSSRA FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Dagobah. Same effect as the Emerald berry.,
+item:aguav-berry,AGARA FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Yavin 4. Same effect as the Emerald berry.,
+item:iapapa-berry,PAPAWA FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Kamino. Same effect as the Emerald berry.,
+item:razz-berry,RAZAK FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Endor. Same effect as the Emerald berry.,
+item:bluk-berry,BLUSK FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Dagobah. Same effect as the Emerald berry.,
+item:nanab-berry,NANAKA FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Felucia. Same effect as the Emerald berry.,
+item:wepear-berry,WEPA FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Endor. Same effect as the Emerald berry.,
+item:pinap-berry,PINJA FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Yavin 4. Same effect as the Emerald berry.,
+item:pomeg-berry,POMOGO FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Sullust. Same effect as the Emerald berry.,
+item:kelpsy-berry,KELPA FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Kamino. Same effect as the Emerald berry.,
+item:qualot-berry,QUALA FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Kashyyyk. Same effect as the Emerald berry.,
+item:hondew-berry,DEWMELON FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Tatooine. Same effect as the Emerald berry.,
+item:grepa-berry,GRAVA FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Bespin. Same effect as the Emerald berry.,
+item:tamato-berry,TAMATA FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Sullust. Same effect as the Emerald berry.,
+item:cornn-berry,CORNA FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Tatooine. Same effect as the Emerald berry.,
+item:magost-berry,MAGOSA FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Jedha. Same effect as the Emerald berry.,
+item:rabuta-berry,RABUTO FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Endor. Same effect as the Emerald berry.,
+item:nomel-berry,NOMELA FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Hoth. Same effect as the Emerald berry.,
+item:spelon-berry,SPELNA FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Mustafar. Same effect as the Emerald berry.,
+item:pamtre-berry,PAMTRA FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Felucia. Same effect as the Emerald berry.,
+item:watmel-berry,DUNEMEL FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Tatooine. Same effect as the Emerald berry.,
+item:durin-berry,DURA FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Sullust. Same effect as the Emerald berry.,
+item:belue-berry,BELUA FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Kamino. Same effect as the Emerald berry.,
+item:liechi-berry,LIESHA FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Dagobah. Same effect as the Emerald berry.,
+item:ganlon-berry,GANLO FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Jedha. Same effect as the Emerald berry.,
+item:salac-berry,SALAKA FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Felucia. Same effect as the Emerald berry.,
+item:petaya-berry,PETAJA FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Yavin 4. Same effect as the Emerald berry.,
+item:apicot-berry,APIKA FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Hoth. Same effect as the Emerald berry.,
+item:lansat-berry,LANSA FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Ilum. Same effect as the Emerald berry.,
+item:starf-berry,STARFALL FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Sullust (grows where meteorites land). Same effect as the Emerald berry.,
+item:enigma-berry,WHILLS FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from unknown (event fruit). Same effect as the Emerald berry.,

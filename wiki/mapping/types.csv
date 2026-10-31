@@ -1,0 +1,19 @@
+emerald_id,sw_name,swap_kind,map_status,art_status,sw_basis,sw_description,notes
+type:normal,,KEEP,DONE,KEEP_ART,,,Elemental type name kept.
+type:fighting,,KEEP,DONE,KEEP_ART,,,Elemental type name kept.
+type:flying,,KEEP,DONE,KEEP_ART,,,Elemental type name kept.
+type:poison,,KEEP,DONE,KEEP_ART,,,Elemental type name kept.
+type:ground,,KEEP,DONE,KEEP_ART,,,Elemental type name kept.
+type:rock,,KEEP,DONE,KEEP_ART,,,Elemental type name kept.
+type:bug,,KEEP,DONE,KEEP_ART,,,Elemental type name kept.
+type:ghost,SPIRIT,HOTSWAP,DONE,PENDING_ART,,"Force spirits, wraiths and echoes.",Display name only; type chart unchanged.
+type:steel,,KEEP,DONE,KEEP_ART,,,Elemental type name kept.
+type:mystery,,KEEP,DONE,KEEP_ART,,,Elemental type name kept.
+type:fire,,KEEP,DONE,KEEP_ART,,,Elemental type name kept.
+type:water,,KEEP,DONE,KEEP_ART,,,Elemental type name kept.
+type:grass,,KEEP,DONE,KEEP_ART,,,Elemental type name kept.
+type:electric,,KEEP,DONE,KEEP_ART,,,Elemental type name kept.
+type:psychic,FORCE,HOTSWAP,DONE,PENDING_ART,databank:1-the-phantom-menace:weapons+tech:the-force,Force-sensitive creatures.,Display name only; type chart unchanged. Type icon needs redraw.
+type:ice,,KEEP,DONE,KEEP_ART,,,Elemental type name kept.
+type:dragon,,KEEP,DONE,KEEP_ART,,,Elemental type name kept.
+type:dark,,KEEP,DONE,KEEP_ART,,,Elemental type name kept.

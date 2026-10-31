@@ -1,114 +1,74 @@
-# Emerald DB
+# Star Wars Emerald DB
 
-A relational, chronological snapshot of **Pokémon Emerald**, extracted directly
-from the [pokeemerald](https://github.com/spencerlepine/pokeemerald)
-decompilation, plus a curated lore layer (story timeline, characters,
-organizations, location history, area progression).
+The Star Wars rewrite of [emerald-db](https://github.com/spencerlepine/emerald-db):
+every Pokémon Emerald row (creature, character, place, item, move, trainer,
+line of dialogue, story beat, art file) mapped to its Star Wars replacement,
+keyed by the same Emerald id. Lore comes from
+[starwars-db](https://github.com/spencerlepine/starwars-db); the game is
+[pokeemerald](https://github.com/spencerlepine/pokeemerald).
 
-It follows the layout of [starwars-db](https://github.com/spencerlepine/starwars-db)
-so both databases can be browsed with the same wiki and mapped onto each other
-in the next step (`emerald-starwars-db`).
-
-**Resuming work?** Start at [`POPULATE-EMERALD-DB-PROMPT.md`](POPULATE-EMERALD-DB-PROMPT.md).
-Progress: [`progress/CHECKLIST.md`](progress/CHECKLIST.md) ·
+**Resuming work?** Start at [`POPULATE-EMERALD-SW-DB-PROMPT.md`](POPULATE-EMERALD-SW-DB-PROMPT.md).
+Story: [`bible/STORY.md`](bible/STORY.md) ·
+progress: [`progress/CHECKLIST.md`](progress/CHECKLIST.md) ·
 coverage: [`progress/COVERAGE.md`](progress/COVERAGE.md).
 
 ## Build
 
 ```sh
-# reads the game source from ../game (or set POKEEMERALD_DIR)
+# emerald-db and starwars-db cloned next to this repo
 python3 tools/build.py      # regenerate database/
 python3 tools/coverage.py   # refresh progress/COVERAGE.md
-python3 tools/balance_audit.py  # level curve vs gym aces -> progress/BALANCE.md
+python3 tools/habitats.py   # refresh progress/HABITATS.md (wild companions vs. home planets)
 python3 wiki/server.py      # browse at http://127.0.0.1:8000
 ```
 
-`database/` is generated; never edit it by hand. Game facts come from
-`tools/extract_*.py`; hand-written lore lives in `curated/*.csv` and is
-overlaid by id (curated values win, extra columns are added).
-`database/build_info.csv` records the pokeemerald commit and row counts.
+## Statuses
 
-## IDs
+Every row carries four status columns:
 
-Ids are opaque, stable strings `<type>:<slug>` derived from the game constant
-(`SPECIES_TREECKO` → `species:treecko`). Every entity also stores
-`source_constant` and `source_file`, which is what Step 4 find/replace keys on.
-
-| Prefix | Entity type | From |
+| Column | Values | Meaning |
 |---|---|---|
-| `species:` | species | `src/data/pokemon/species_info.h` |
-| `move:` | move | `src/data/battle_moves.h` |
-| `item:` | item (incl. TMs/HMs, berries, key items) | `src/data/items.h` |
-| `ability:` / `type:` / `growth-rate:` | ability / game_type / growth_rate | text + constants |
-| `trainer:` / `trainer-class:` / `trainer-pic:` | trainer data | `src/data/trainers.h` etc. |
-| `map:` | map (every `data/maps/*/map.json`) | map.json |
-| `location:` | region-map section (town/route/dungeon as named on the map) | `region_map_sections.json` |
-| `npc:<map>:<n>` | object event n (1-based) on a map | map.json `object_events` |
-| `object-gfx:` | overworld sprite | `object_event_graphics_info*.h` |
-| `tileset:` | tileset | `src/data/tilesets/headers.h` |
-| `nature:` / `decoration:` / `ribbon:` | natures, secret-base decorations, ribbons | `src/pokemon.c`, `src/data/decoration/`, ribbon text |
-| `facility:` / `facility-trainer:<facility>:<name>` | Battle Frontier facilities; frontier / tent / Trainer Hill opponents | `src/data/battle_frontier/` |
-| `contest-opponent:` | contest rivals | `src/data/contest_opponents.h` |
-| `badge:` | the eight gym badges (field move + obedience gates) | `src/party_menu.c`, `src/battle_util.c` |
-| `character:` / `organization:` / `storyline:` | curated lore | `curated/` |
+| `swap_kind` | `HOTSWAP` | 1:1 replacement of an Emerald row (same id, same numbers, new name and lore). Step 4 can apply these with find/replace. |
+| | `KEEP` | Generic game term kept as is (natures, most moves, TM labels, unused slots). |
+| | `NET_NEW` | New content with no Emerald counterpart (`mapping/net_new.csv`). Step 4 builds these *after* all hotswaps. |
+| | `CUT` | Emerald content to remove (none yet). |
+| `map_status` | `TODO` / `DRAFT` / `DONE` / `IDEA` | Authoring state in this DB. `DRAFT` = a Star Wars version exists but has not been reviewed. `IDEA` = net-new proposal not designed yet. |
+| `art_status` | `PENDING_ART` | Uses (renamed) Emerald art for now; must be redrawn in Step 5. |
+| | `NEEDS_PLACEHOLDER` | Net-new: Step 4 must copy an existing asset (`placeholder_from`) first. |
+| | `KEEP_ANIM` / `KEEP_ART` / `NO_ART` | Reuse the existing animation / art, or nothing to draw. |
+| `game_status` | `NOT_STARTED` | Step 4 updates this as rows land in the game. |
 
-Non-entity rows: script and text ids are assembler labels
-(`LittlerootTown_Text_...`); flags/vars are `flag:<slug>` / `var:<slug>` in
-`story_flags.csv`; art assets are keyed by their path in pokeemerald.
+## Tables (database/, generated)
 
-## Tables
+| Table | What it is |
+|---|---|
+| `swap_map.csv` | **The Step 4 table.** One row per Emerald entity plus every NET_NEW row: `emerald_id, sw_id, entity_type, swap_kind, map_status, art_status, game_status, emerald_name, sw_name, emerald_title, sw_title, emerald_constant, sw_constant, planet, sw_basis, sw_description, notes, derived_from`. `sw_constant` is the proposed new C constant (`SPECIES_TREECKO` → `SPECIES_WOOKLET`). |
+| `entities.csv` | Emerald `entities.csv` with `title` / `description` replaced by the Star Wars version and the status columns added; the Emerald values stay in `emerald_title` / `emerald_description`. All stats and game columns are unchanged. |
+| `texts.csv` | Every Emerald text block: `emerald_text_raw`, `sw_text_raw`, `text_status` (`CURATED` hand-written, `AUTO` names and terms swapped, `UNCHANGED`), `terms_applied`, `overflow_risk` (a line is wider than the 208 px text box in Emerald's font, see `progress/NOTES.md`). |
+| `text_terms.csv` | The term dictionary the auto drafts used (glossary + every mapped name), plus ambiguous terms that were left alone. |
+| `pending_art.csv` | Every art asset (PNG or move animation), the entities that use it, the Star Wars entity, a `suggested_path` with the new name, and its `art_status`. |
+| `area_progression.csv` | Emerald's balance table (levels, badges expected, gating) with `planet` and `sw_map_title`. Use it before adding or moving anything. |
+| `timeline_events.csv` | The 45 Emerald story events with the Star Wars version (`emerald_title` / `emerald_description` kept). |
+| `net_new.csv` | All net-new content with placeholder source, dependencies and balance notes. |
+| `build_info.csv`, `build_warnings.csv` | Inputs, counts, warnings (must be 0 before committing). |
 
-Core (same shape as starwars-db; the wiki reads these):
+Unchanged game data (learnsets, parties, encounters, map events, scripts,
+flags) is not copied: join emerald-db's tables on the same ids.
 
-- `entities.csv` — one row per entity. Common columns `id, entity_type,
-  category, collection, title, description, history, image_path, image_status,
-  source_constant, source_file`, then the sparse union of type-specific
-  attributes (base stats, power/accuracy, price, map weather, …). List values
-  are JSON arrays.
-- `relationships.csv` — `(source_id, relationship, target_id)`: `has_type`,
-  `has_ability`, `evolves_to`, `teaches_move`, `trainer_class`, `uses_species`,
-  `rematch_N`, `located_in`, `connects_<dir>`, `warps_to`, `appears_on`,
-  `uses_sprite`, `is_trainer`, `battled_on`, `found_wild_in`, `hidden_item`,
-  `gives_item`, `gives_pokemon`, `static_encounter_on`, plus curated links.
-- `metadata.csv` — repeatable `(entity_id, field, value, related_entity_id)`.
-- `timeline_events.csv` / `timeline_entities.csv` — curated story chronology
-  and the entities involved in each event. `year` is the chapter number,
-  `release_year` the badges held.
-- `entity_images.csv` — wiki images (copied into `database/images/`).
+## Hand-written input (mapping/)
 
-Game data:
+See [`mapping/README.md`](mapping/README.md). One CSV per area
+(`species`, `characters`, `items`, `moves`, `types`, `abilities`, `badges`,
+`trainer_classes`, `locations`, `glossary`, `net_new`, `timeline`), keyed by
+`emerald_id`. Trainers, maps and texts are mostly *derived* from these.
 
-- `species_learnsets.csv` — `species_id, method (level_up|tm_hm|egg|tutor), level, order, move_id, source_symbol`.
-- `species_evolutions.csv` — `species_id, method, parameter, parameter_entity_id, evolves_to_id`.
-- `type_effectiveness.csv` — attacking/defending type multipliers (incl. Foresight-ignored rows).
-- `trainer_parties.csv` — `trainer_id, slot, species_id, level, iv, held_item_id, moves (|), party_symbol`.
-- `wild_encounters.csv` — `map_id, method (land|water|rock_smash|old_rod|good_rod|super_rod), slot, slot_rate_percent, area_rate, species_id, min_level, max_level`.
-- `map_connections.csv` — edge connections and warps between maps.
-- `map_events.csv` — every object, trigger (coord) and sign/hidden-item (bg) event with coordinates, sprite, script, visibility flag.
-- `mart_inventory.csv` — what each Poké Mart / shop script sells.
-- `area_progression.csv` — one row per playable map: wild level range (land / any method), first-tier trainer level range, first timeline event that visits it, `badges_expected`, `requires` (HM items, badge flags, key items) and `gating_notes`. The balancing reference for adding or moving content.
-- `item_locations.csv` — every item ball, hidden item and scripted item gift with map, coordinates, flag and `badges_expected`.
-- `pokemon_gifts.csv` — scripted gift Pokémon, eggs and static encounters with level and map (starters and fossils are given from C specials, not listed here).
-- `facility_mons.csv` / `facility_trainer_pools.csv` — Battle Frontier and Battle Tent Pokémon sets and which sets each facility trainer draws from.
-- `easy_chat_words.csv` — every Easy Chat word (used to decode frontier/Trainer Hill speech and by TV/Mauville man features).
+## Queries
 
-Scripts and text:
-
-- `texts.csv` — every `.string` block in the scripts plus every `const u8 x[] = _("…")` string in `src/`: `text_id, map_id, source_file, source_line, speaker_label, text (clean), text_raw (exact), used_by_scripts, text_origin (script|c), text_context`.
-- `scripts.csv` — every script label with what it touches: texts, jumps, movement, flags set/cleared/checked, vars, items given/taken, Pokémon given/battled, trainers, warps, marts, specials, music.
-- `dialogue.csv` — text lines attributed to the NPC / sign / trigger that shows them, in script order, with `role` (dialogue, trainer_intro, trainer_defeat, postbattle, rematch, sign …).
-- `trainer_dialogue.csv` — trainer intro/defeat/not-enough-Pokémon text per trainer.
-- `story_flags.csv` — every flag and var with category and the scripts/maps that set and check it (the backbone of story progression and gating).
-
-Art:
-
-- `art_assets.csv` — every PNG in `graphics/` and `data/tilesets/` plus move animation scripts; `art_status` = `ORIGINAL`.
-- `entity_art.csv` — `(entity_id, asset_id, role)`: front/back pics, palettes, icons, footprints, overworld sprites, trainer pics, item icons, battle animations.
-
-Curated (see `curated/README.md`): story timeline, characters, organizations,
-location lore, area progression, storylines.
-
-## Wiki
-
-`wiki/` is the starwars-db wiki with Emerald labels: it discovers CSVs at
-runtime, so new tables appear automatically. See `wiki/README.md`.
+```sh
+# everything still waiting for art
+python3 -c "import csv;print(sum(r['art_status']=='PENDING_ART' for r in csv.DictReader(open('database/pending_art.csv'))))"
+# every net-new item
+grep NET_NEW database/swap_map.csv
+# all hotswaps for creatures, old -> new constant
+python3 -c "import csv;[print(r['emerald_constant'],r['sw_constant']) for r in csv.DictReader(open('database/swap_map.csv')) if r['entity_type']=='species' and r['swap_kind']=='HOTSWAP']"
+```

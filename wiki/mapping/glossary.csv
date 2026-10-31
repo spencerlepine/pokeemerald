@@ -1,0 +1,102 @@
+emerald_term,sw_term,scope,notes
+POKéMON TRAINER,COMPANION TRAINER,text,
+POKéMON CENTER,BACTA CENTER,text,
+POKéMON LEAGUE,ILUM TEMPLE,text,
+POKéMON CONTEST,SHOWCASE,text,
+POKéMON,COMPANION,text,"Singular and plural are the same word in Emerald text; the auto draft does not add an S, so plural lines need a curated pass."
+POKéDEX,DATAPAD,text,
+POKéNAV,COMLINK,text,
+POKéBLOCK,COMPANION TREAT,text,
+POKé BALL,CAPTURE POD,text,
+POKé MART,SUPPLY DEPOT,text,
+POKéMANIAC,BEASTMANIAC,text,
+POKéFAN,BEASTFAN,text,
+POKé,COMPANION,text,Fallback for any remaining POKé prefix.
+PKMN,COMPANION,text,
+GYM LEADER,ARENA LEADER,text,
+GYM,ARENA,text,
+BADGES,SHARDS,text,
+BADGE,SHARD,text,
+ELITE FOUR,FOUR TRIALS,text,
+HOENN,OUTER RIM,text,
+TEAM AQUA,THE CARTEL,text,
+TEAM MAGMA,THE EMPIRE,text,
+AQUA ADMIN,CARTEL HUNTER,text,
+MAGMA ADMIN,IMPERIAL OFFICER,text,
+AQUA,CARTEL,text,
+MAGMA,IMPERIAL,text,"Only matched as a whole uppercase word, so MAGMA ARMOR (ability, kept) is protected by longest-first matching."
+DEVON RESEARCHER,ORGANA ENGINEER,text,
+DEVON,HOUSE ORGANA,text,
+S.S. TIDAL,STAR TIDAL,text,
+SECRET BASE,HIDEOUT,text,
+BATTLE FRONTIER,GRAND ARENA,text,
+SAFARI ZONE,FELUCIA RESERVE,text,
+GAME CORNER,SABACC DEN,text,
+DAY CARE,NURSERY,text,
+CONTEST,SHOWCASE,text,
+WEATHER INSTITUTE,ENDOR STATION,text,
+SPACE CENTER,LAUNCH TOWER,text,
+OCEANIC MUSEUM,SPACER MUSEUM,text,
+TRAINER'S SCHOOL,ACADEMY,text,
+CABLE CAR,SHUTTLE,text,
+LANETTE's PC,TESS's TERMINAL,text,
+CYCLING ROAD,PODRACE TRACK,text,
+POKéNAVS,COMLINKS,text,
+POKéDEXES,DATAPADS,text,
+POKéCENTER,BACTA CENTER,text,
+POKéRUS,MIDIPOX,text,Rare beneficial virus.
+PSYCHIC-type,FORCE-type,text,Type mention (PSYCHIC alone is ambiguous: move / type / trainer class).
+PSYCHIC type,FORCE type,text,
+GHOST-type,SPIRIT-type,text,
+GHOST type,SPIRIT type,text,
+POKéMON GYM,ARENA,text,
+BERRIES,FRUIT,text,Berries are Star Wars fruits (B4b)
+BERRY,FRUIT,text,"Covers BERRY BLENDER, BERRY MASTER, BERRY POUCH in dialogue"
+POKé BALLS,CAPTURE PODS,text,plural
+POKéMON MART,SUPPLY DEPOT,text,
+POKéMON MARTS,SUPPLY DEPOTS,text,
+POKé MARTS,SUPPLY DEPOTS,text,
+MART,DEPOT,text,short form in signs
+POKéMON CENTERS,BACTA CENTERS,text,
+POKéMON CONTESTS,SHOWCASES,text,
+CONTESTS,SHOWCASES,text,
+POKéMON GYMS,ARENAS,text,
+GYMS,ARENAS,text,
+GYM LEADERS,ARENA LEADERS,text,
+a GYM,an ARENA,text,article fix
+A GYM,An ARENA,text,article fix
+a POKéMON GYM,an ARENA,text,article fix
+POKéMON NEWS,HOLONET NEWS,text,
+POKéMON WIRELESS CLUB,HOLONET CLUB,text,
+POKéMON CHAMPION,ILUM CHAMPION,text,
+POKéMON LAB,COMPANION LAB,text,
+POKéMON EGG,COMPANION EGG,text,
+MECHADOLL,QUIZ DROID,text,Trick House puzzle droids
+MECHADOLLS,QUIZ DROIDS,text,
+PETALBURG WOODS,JUNDLAND WASTES,text,
+COINS,CHIPS,text,Sabacc Den chips (CHIP CASE)
+COIN,CHIP,text,
+EVER GRANDE,ILUM,text,"Ever Grande City without CITY"
+POKéMON\nLEAGUE,ILUM\nTEMPLE,text,split across a line
+FRONTIER PASS,ARENA PASS,text,Lando's Grand Arena pass
+FRONTIER BRAINS,ARENA BOSSES,text,the seven bounty hunters
+FRONTIER\nBRAINS,ARENA\nBOSSES,text,
+FRONTIER BRAIN,ARENA BOSS,text,
+FRONTIER MANIAC,ARENA MANIAC,text,
+BATTLE\nFRONTIER,GRAND\nARENA,text,
+BATTLE\lFRONTIER,GRAND\lARENA,text,
+{PKMN},COMPANION,text,the PKMN glyph token becomes the plain word
+on live TV,live on the HOLONET,text,TV is the HOLONET
+on TV,on the HOLONET,text,
+TV,HOLONET,text,
+television,the HOLONET,text,
+GBA Game Link cables,COMLINK cables,text,link hardware is the COMLINK
+GBA Game Link cable,COMLINK cable,text,
+Game Boy Advance Game Link cable,COMLINK cable,text,
+Game Link cables,COMLINK cables,text,
+Game Link cable,COMLINK cable,text,
+Wireless Adapters,wireless COMLINKS,text,
+Wireless Adapter,wireless COMLINK,text,
+Wireless Communication System,COMLINK Network,text,
+Wireless Communication,the COMLINK Network,text,
+PC,TERMINAL,text,the PC is a TERMINAL

@@ -1,0 +1,271 @@
+text_id,sw_text_raw,notes
+MossdeepCity_Text_WantKingsRockStevenGaveMe,"I got this from LEIA, but I don't\nknow what it's good for.\pI think it's called HUTT CROWN.\nDo you want it?$",
+MossdeepCity_Text_WhatToDoWithWeirdRock,"Yeah, you think so, too! What are you\nsupposed to do with some weird rock?$",
+MossdeepCity_Text_SpaceCenterReceivedLetter,The base's LAUNCH TOWER has been\nlaunching huge rockets.\pThere's been some kind of an uproar\nover a letter they received recently.$,
+MossdeepCity_Text_SpaceCenterLaunchingRockets,The base's LAUNCH TOWER has been\nlaunching huge rockets.$,
+MossdeepCity_Text_MossdeepTargetedByMagma,"I heard from a PILOT buddy that\nthe CARTEL set up shop in CLOUD CITY.\pI also heard that someone came along\nand wiped the floor with them!\pBut YAVIN 4 here's been targeted\nby the EMPIRE.\pIf you want to know what they're up to,\ngo visit the LAUNCH TOWER.$",
+MossdeepCity_Text_NiceIfWorldCoveredByFlowers,Wouldn't it be nice?\pIf the whole galaxy was covered in\njungle and flowers like this moon?$,
+MossdeepCity_Text_SurfExhilarating,"A voyage on a ship is fine.\pBut crossing the sea with COMPANIONS\nusing SURF…\pNow that's an exhilarating trip!\nWouldn't you agree, youngster?$",
+MossdeepCity_Text_CitySign,YAVIN 4\n“The jungle moon. Cherish COMPANIONS!”$,
+MossdeepCity_Text_GymSign,"MASSASSI TEMPLE ARENA\nLEADERS: KANAN & EZRA\p“Master and apprentice, one in\nthe Force!”$",
+MossdeepCity_Text_SootopolisNewGymLeader,"Ahh… It feels great letting the waves\nwash over my feet…\pSpeaking of water, you know that\nswamp world DAGOBAH?\pI think the ARENA there had a new\nLEADER come in.\pPeople tell me the new LEADER once\nmentored OBI-WAN.$",
+MossdeepCity_Text_ScottSomethingWrongWithTown,"LANDO: {PLAYER}{KUN}, feeling good?\nI'm doing great!\pI'd heard YAVIN 4's ARENA LEADER is\npretty strong, so I decided to come\ltake a look-see for myself.\pBut there's something wrong about\nthis place.\pPeople are going on about a warning\nletter and the LAUNCH TOWER…\pI don't think it concerns me in any\nway, though.$",
+MossdeepCity_Gym_Text_GymGuideAdvice,"Yo, how's it going, ILUM-bound\n{PLAYER}?\pThe ARENA LEADERS here use\nFORCE-type COMPANIONS.\pIf you go up against them with\nFIGHTING- or POISON-type COMPANIONS,\lthey'll inflict horrible damage!\pPlus, they'll come at you with\noutstanding combination attacks.\pIf you want to win, show them how\ntight you are with your COMPANIONS.\lGo for it!$",
+MossdeepCity_Gym_Text_VirgilPostBattle,"If there are prodigies in the galaxy,\nthen our ARENA LEADERS are them!\pHowever, you may be even more talented\nthan them…$",
+MossdeepCity_Gym_Text_BlakeIntro,"Fufufufu… Watch me levitate a CAPTURE\nPOD with the Force!\pWrooooooooaaaar!\n… … … … … … …\pSometimes, I'm out of sync…$",
+MossdeepCity_Gym_Text_BlakePostBattle,"A CAPTURE POD was too heavy to lift\nwith the Force. But this dust bunny…\pWhoooooooooooooooh!\n… … … … … …\pNo, I'm not cheating!\nI didn't blow on it! Honestly!$",
+MossdeepCity_Gym_Text_NicholasIntro,Wroooar! Have a taste of my super\nCOMPANIONS hard-battling power!$,
+MossdeepCity_Gym_Text_TateAndLizaIntro,"KANAN: Hehehe… Were you surprised?\pEZRA: Fufufu… Were you surprised?\pKANAN: That there are two LEADERS?\nEZRA: That there are two LEADERS?\pKANAN: I am his master!\nEZRA: I am his PADAWAN!\pKANAN: We don't need to talk because…\nEZRA: Through the Force, we sense…\pKANAN: What the other is thinking…\nEZRA: All in our minds!\pKANAN: This combination of ours…\nEZRA: Can you beat it?$",Kanan & Ezra are master and Padawan (Emerald's twins)
+MossdeepCity_Gym_Text_ExplainCalmMind,KANAN: That TM04 contains…\nEZRA: CALM MIND!\pKANAN: It raises SP. ATK and…\nEZRA: It raises SP. DEF!\pKANAN: It's a move that's perfect…\nEZRA: For FORCE-type COMPANIONS!\p… … … … … …$,
+MossdeepCity_Gym_Text_TateAndLizaPostBattle,"KANAN: Looks like the bond between you\nand your COMPANIONS is stronger than\lthe bond of master and apprentice.\pEZRA: You will become even stronger!\nWe've battled you, so we know.$",
+MossdeepCity_Gym_Text_TateAndLizaNeedTwoMons,"KANAN: Hehehe… Were you surprised?\pEZRA: That there are two LEADERS?\pKANAN: Oops, you have only one…\nEZRA: COMPANION that can battle.\pKANAN: We can't battle that way!\pEZRA: If you want to challenge us,\nbring some more COMPANIONS.$",
+MossdeepCity_Gym_Text_GymStatue,MASSASSI TEMPLE ARENA$,
+MossdeepCity_Gym_Text_GymStatueCertified,MASSASSI TEMPLE ARENA\pEZRA AND KANAN'S CERTIFIED TRAINERS:\n{PLAYER}$,
+MossdeepCity_Gym_Text_TateAndLizaPreRematch,KANAN: COMPANIONS…\nEZRA: COMPANIONS…\pKANAN: By changing the party's mix…\nEZRA: The battle style changes.\pKANAN: But me…\nEZRA: But me…\pKANAN: I'll always be with EZRA!\nEZRA: I'll always be with KANAN!\pKANAN: Our combination…\nEZRA: We'll show you again and again!$,
+MossdeepCity_Gym_Text_TateAndLizaRematchNeedTwoMons,KANAN: You're back again…\nEZRA: You're back again…\pKANAN: To give us a rematch.\nEZRA: To give us a rematch.\pKANAN: But…\nEZRA: For our match…\pKANAN: You brought just one COMPANION!\nEZRA: You brought just one COMPANION!\pKANAN: We need you to bring at least…\nEZRA: Two COMPANIONS next time.$,
+MossdeepCity_House2_Text_SisterMailsBoyfriendInFortree,My little sister exchanges MAIL with\nher boyfriend on ENDOR.\pI don't envy her one bit at all.$,
+MossdeepCity_House2_Text_PokemonCarriesMailBackAndForth,"Even though I can't see my friend\non ENDOR, my COMPANION carries MAIL\lback and forth for us.\pI'm not lonesome, even though we're\napart.$",
+MossdeepCity_House3_Text_GoAfterSeafloorPokemon,Go after the seafloor COMPANIONS with\nyour SUPER ROD.$,
+MossdeepCity_House4_Text_BrotherLikesToFindBases,My little brother says he likes to go\nfind people's HIDEOUTS.$,
+MossdeepCity_House4_Text_BrotherLikesToVisitBasesAndBattle,My little brother says he likes to\nvisit people's HIDEOUTS and have\lCOMPANION battles.$,
+MossdeepCity_Mart_Text_NetAndDiveBallsRare,The NET and DIVE PODS are rare\nCAPTURE PODS that are only made here.\pA NET POD is effective against\nBUG-type and WATER-type COMPANIONS.\pA DIVE POD works best on COMPANIONS\nat the bottom of the sea.$,
+MossdeepCity_Mart_Text_ReviveIsFantastic,"REVIVE STIM is fantastic!\pGive it to a fainted COMPANION,\nand the COMPANION will arise.\pBut be careful, REVIVE STIM won't\nrestore the used-up PP of moves.$",
+MossdeepCity_Mart_Text_MaxRepelLastsLongest,"REPULSOR III keeps all weak\nCOMPANIONS away.\pOut of all the REPULSOR sprays, it lasts\nthe longest.$",
+MossdeepCity_SpaceCenter_1F_Text_MagmaHaveSightsOnSpaceCenter,Those IMPERIAL thugs have their sights\nset on our LAUNCH TOWER.\pBut we can't allow anything that minor\nto interfere with our rocket launch!$,
+MossdeepCity_SpaceCenter_1F_Text_FoundThisYouCanHaveIt,"I was taking a stroll down the beach\nwhen I found this.\pIt's not anything I need, so you can\nhave it.$",
+MossdeepCity_SpaceCenter_1F_Text_HoennFamousForMeteorShowers,The OUTER RIM has been famous for\nits meteor showers for a long time.$,
+MossdeepCity_SpaceCenter_1F_Text_MagmaCantStealFuelTakeThis,"The EMPIRE can't be allowed to steal\nthe rocket fuel.\pOh, by the way, you can have this stone\nI found on the beach.$",
+MossdeepCity_SpaceCenter_1F_Text_CantStrollOnBeachWithMagma,"With the EMPIRE around, I guess\nstrolls on the beach aren't safe.$",
+MossdeepCity_SpaceCenter_1F_Text_DidPokemonComeFromSpace,Some people claim that COMPANIONS came\nfrom space. Could it be true?$,
+MossdeepCity_SpaceCenter_1F_Text_AquaShouldBeatMagma,"The CARTEL should take care of\nthe EMPIRE!\pBut if they did that, the CARTEL would\nbecome bold and brazen, wouldn't they?$",
+MossdeepCity_SpaceCenter_1F_Text_MagmaWantsToSpoilMyDream,A giant chunk of metal bursts through\nthe skies and flies into space…\pBut the EMPIRE wants to spoil\nthat dream of mine!\pI'm not having any of that!$,
+MossdeepCity_SpaceCenter_1F_Text_StevenMagmaCantBeAllowedToTakeFuel,"LEIA: {PLAYER}{KUN}, have you read that\nproclamation already?\pThe EMPIRE is coming after the rocket\nfuel at this base.\pI don't know what they'd need it for,\nbut they can't be allowed to take it.\pI'll keep an eye on things for\na while longer.\pIn the meantime, why don't you go\nlook around the base?$",
+MossdeepCity_SpaceCenter_1F_Text_Grunt4PostBattle,What are we going to do with\nthe rocket fuel?\pHow would I know?\nAsk LORD VADER upstairs!$,
+MossdeepCity_SpaceCenter_1F_Text_Grunt2Intro,"LORD VADER said no one, but no one,\ngets past me!$",
+MossdeepCity_SpaceCenter_1F_Text_Grunt2PostBattle,"Please, tell LORD VADER that\nI never abandoned my post.\lThat I stayed to the bitter end…$",
+MossdeepCity_SpaceCenter_1F_Text_MagmaIntentToStealNotice,This is…\nAn intent-to-steal notice?\p“To the staff of the LAUNCH TOWER:\nThe EMPIRE will soon visit you.\p“We will take your rocket fuel.\nResistance is futile.\p“Let there be more land!\n                                          THE EMPIRE”$,
+MossdeepCity_SpaceCenter_2F_Text_MossdeepIdealForRockets,"YAVIN 4 has mostly calm weather,\nand its winds are stable.\pIt's an ideal location for launching\nrockets.$",
+MossdeepCity_SpaceCenter_2F_Text_WhyWouldMagmaStealRocketFuel,Why would the EMPIRE want to steal\nour rocket fuel in the first place?$,
+MossdeepCity_SpaceCenter_2F_Text_MagmaCantGetAwayWithThis,"If the EMPIRE takes the rocket fuel,\nI won't be able to go to space!\pThey can't be allowed to get away\nwith such an outrage!$",
+MossdeepCity_SpaceCenter_2F_Text_DoesMagmaWantToGoToSpace,"The EMPIRE…\nDo they want to go to space, too?$",
+MossdeepCity_SpaceCenter_2F_Text_Grunt5PostBattle,Are we being useful to LORD VADER\nat all?$,
+MossdeepCity_SpaceCenter_2F_Text_StevenWhyStealRocketFuel,LEIA: The EMPIRE…\pWhat's the point of stealing rocket\nfuel?$,
+MossdeepCity_SpaceCenter_2F_Text_MaxieUseFuelToEruptVolcano,"VADER: Since you are so curious,\nyou deserve an explanation.\pWe are going to jettison the entire\nload into MUSTAFAR PEAK!\pWith GREATKRAYT gone, I have no need\nfor that slag heap of a mountain!\pThe fuel's power will make the\nvolcano erupt!\pIt will be savage!$",
+MossdeepCity_SpaceCenter_2F_Text_MaxieWeFailedIsAquaAlsoMisguided,VADER: We failed to make the volcano\nerupt…\pWe failed to control GREATKRAYT after\nwe had awoken it…\pIs our goal to expand the land\nmisguided?\p… … … … … …\n… … … … … …\pIf…\nIf the EMPIRE is wrong…\l… … … … … …\pThen JABBA's plan to drown the worlds\nmust be just as misguided…$,Vader's doubt mirrors Maxie's; Jabba's drowned-worlds plan
+MossdeepCity_SpaceCenter_2F_Text_MaxieWeWillGiveUp,VADER: All right…\nWe will give up on the fuel…\pThere appear to be more important\nmatters that I must examine…$,
+MossdeepCity_SpaceCenter_2F_Text_StevenThankYouComeSeeMeAtHome,"LEIA: Whew, that was too tense.\n{PLAYER}{KUN}, thank you.\pI have something to give you as\nthanks for your support.\pPlease come see me at home\nafter this.\pOh, yes, I don't live on TATOOINE.\nI live right here at the base.$",
+MossdeepCity_StevensHouse_Text_UnderwateCavernBetweenMossdeepSootopolis,"LEIA: Apparently, there's an\nunderwater cavern on the way from\lYAVIN 4 to DAGOBAH.\pYou know, the one that RIC OLIé\nfound in his submarine.$",
+MossdeepCity_StevensHouse_Text_LetterFromSteven,"It's a letter.\p… … … … … …\pTo {PLAYER}{KUN}…\pI've decided to do a little soul-\nsearching and train on the road.\pI don't plan to return home for some\ntime.\pI have a favor to ask of you.\pI want you to take the CAPTURE POD on\nthe desk.\pInside it is an R1 UNIT, my favorite\ndroid.\pI'm counting on you.\pMay our paths cross someday.\pLEIA ORGANA$",Leia's surname: ORGANA (Steven Stone); R1 UNIT (Beldum) is a droid
+MossdeepCity_StevensHouse_Text_CollectionOfRareRocks,It's a collection of rare stones and\ncrystals assembled by LEIA.$,
+MossdeepCity_GameCorner_1F_Text_PokemonJumpInfo,"“COMPANION JUMP”\pMake your COMPANION skip the VINE WHIP\nrope with the A Button.\pOnly mini COMPANIONS around 28 inches\nor less may participate.\pCOMPANIONS that only swim, burrow,\nor fly are not good at jumping.\pAs a result, those COMPANIONS may not\nparticipate.\pGood things happen if everyone\njumps in time.$",
+MossdeepCity_GameCorner_1F_Text_ExplainRequiredMon,It doesn't look like you have any\nCOMPANIONS that you can enter…\pWould you like me to explain what\nkinds of COMPANIONS can enter?$,
+MossdeepCity_GameCorner_1F_Text_ShortJumpingPokemonAllowed,"“COMPANION JUMP” is open to\nCOMPANIONS around 28 inches or less.\pWhat you can't enter are those\nCOMPANIONS that can't jump.\pYou know, like COMPANIONS that only\nswim, burrow, or fly.\pThat's all you need to know.$",
+Route124_DivingTreasureHuntersHouse_Text_HaveYouSeenAnyShards,"Tell me, have you seen any CRYSTALS\nfrom ancient times?$",
+Route124_DivingTreasureHuntersHouse_Text_YouHaventGotAnyShards,"You haven't got any treasures\nfor me…\pIf you see any CRYSTALS, like the RED\nCRYSTAL, you've got to trade it with me!$",
+Route124_DivingTreasureHuntersHouse_Text_ThatsAShardIllTradeYou,"Oh, hey! That…\nThat's a CRYSTAL! I'm looking for those!\pOh, man, you've got to trade that\nwith me! I'll give you something good!$",
+Route124_Text_RolandPostBattle,I'm getting chilled…\nI've been in the water too long…\pI wish I could ride a COMPANION like\nyou…$,
+Route124_Text_IsabellaPostBattle,You can find pretty colored crystals\nof all kinds around here.$,
+Route125_Text_ErnestIntro,"Ahoy! I'm a buff, tough SAILOR!\nI've braved the galaxy's seas!$",
+Route125_Text_ErnestPostBattle,"The meltwater rises and falls inside\nthe WAMPA CAVE.\pBy the way, it's about six hours from\nhigh water to low water. Did you know?$",Shoal Cave tides = Hoth meltwater (same timer)
+Route125_Text_ErnestRematchPostBattle,"The WAMPA CAVE…\pThere are places you can and can't\nget to depending on the rise and fall\lof the meltwater.\pBy the way, it's about six hours from\nhigh water to low water. Don't forget!$",
+Route125_Text_KimPostBattle,"KAI: A funny old man lives in the\nWAMPA CAVE, doesn't he?\pLet's go see him, ISRA!$",
+Route125_Text_IrisIntro,"ISRA: KAI, can you tell me what we're\nlooking for out here?$",
+Route125_Text_IrisPostBattle,"ISRA: KAI, are we really going into\nthe WAMPA CAVE?\lWe'll freeze.$",
+Route125_Text_SharonIntro,How would you like to take on the\nWATER-type COMPANIONS I raised?$,
+ShoalCave_LowTideLowerRoom_Text_CanOvercomeColdWithFocus,"The penetrating cold of\nHOTH is an impediment to training.\pBut with focus, one can overcome!\pWith this FOCUS BAND, buckle down and\nwithstand the cold!$",
+MossdeepCity_Text_YouCanKeepIt,"Why would you want it?\nYou're weird.\pYou can keep it, but keep it a secret\nfrom LEIA.$",reviewed AUTO draft
+MossdeepCity_Text_StevensHouseOverThere,LEIA's house is right over there!$,reviewed AUTO draft
+MossdeepCity_Text_WailmerWatching,"Around YAVIN 4, you can see wild\nAIWHALET.\pIt's called, uh…\nWhat was it now…\pWAI, WAI, WAI…\pAIWHALET watching!$",reviewed AUTO draft
+MossdeepCity_Text_FeelReliefOnLand,"I'm a SAILOR, so the sea's obviously\nmore important to me.\pBut you know? When I get back on land\nafter a long voyage, I do feel relief!$","reviewed, no change needed"
+MossdeepCity_Text_LifeNeedsSeaToLive,"All life needs the sea to live, even\nthough it makes its home on the land.\pLife, having run its course, becomes\nsoil and returns to the land.\pAnd the sea is always connected to\nthe land.\pYes, like the very shoreline here.$","reviewed, no change needed"
+MossdeepCity_Text_SpecialSpaceCenterRock,"This rock has a special meaning to\nthe people at the LAUNCH TOWER.\pThey put it here as their wish for\ntheir rockets to fly safely.\pWhen you make a wish, what do you use?\nDo you wish upon a star?\pI use a wish tag to make it happen.\nThat's what I do.$",reviewed AUTO draft
+MossdeepCity_Text_ItsAWhiteRock,It's a white rock.$,"reviewed, no change needed"
+MossdeepCity_Text_SpaceCenterSign,YAVIN 4 LAUNCH TOWER\n“The closest place to space.”$,reviewed AUTO draft
+RS_MysteryEventsHouse_Text_OldManGreeting,"When I was young, I traveled the world\nas a COMPANION TRAINER.\pNow that I've become an old buzzard,\nmy only amusement is watching young\lTRAINERS battle.$",reviewed AUTO draft
+RS_MysteryEventsHouse_Text_DoorIsLocked,The door appears to be locked.$,"reviewed, no change needed"
+RS_MysteryEventsHouse_Text_ChallengeVisitingTrainer,A TRAINER named {STR_VAR_1} is\nvisiting my home.\pWould you like to challenge\n{STR_VAR_1}?$,"reviewed, no change needed"
+RS_MysteryEventsHouse_Text_YouWontBattle,You won't battle? I'm disappointed\nthat I can't see you battle…$,"reviewed, no change needed"
+RS_MysteryEventsHouse_Text_KeepItToA3On3,"Oh, good, good!\pBut my house isn't all that sturdy.\pCould I ask you to keep it down to\na 3-on-3 match?$","reviewed, no change needed"
+RS_MysteryEventsHouse_Text_SaveYourProgress,"Before you two battle, you should\nsave your progress.$","reviewed, no change needed"
+RS_MysteryEventsHouse_Text_HopeToSeeAGoodMatch,I hope to see a good match!$,"reviewed, no change needed"
+RS_MysteryEventsHouse_Text_BattleTie,"So, it became a standoff.\pIt was a brilliant match in which\nneither side conceded a step!$","reviewed, no change needed"
+RS_MysteryEventsHouse_Text_BattleWon,"That was superlative!\pWhy, it was like seeing myself in\nmy youth again!$","reviewed, no change needed"
+RS_MysteryEventsHouse_Text_BattleLost,"Ah, too bad for you!\pBut it was a good match.\nI hope you can win next time.$","reviewed, no change needed"
+MossdeepCity_Gym_Text_GymGuidePostVictory,"Wow, you're astounding!\nYou're one great TRAINER!$","reviewed, no change needed"
+MossdeepCity_Gym_Text_PrestonIntro,Battles hinge on the strength of your\nspirit! The weak-spirited will never win!$,"reviewed, no change needed"
+MossdeepCity_Gym_Text_PrestonDefeat,I lost!\nI must temper my spirit again!$,"reviewed, no change needed"
+MossdeepCity_Gym_Text_PrestonPostBattle,The indecisive lose.\nThat's my warning to you.$,"reviewed, no change needed"
+MossdeepCity_Gym_Text_VirgilIntro,Let me see your talent!$,"reviewed, no change needed"
+MossdeepCity_Gym_Text_VirgilDefeat,You possess spectacular talent!$,"reviewed, no change needed"
+MossdeepCity_Gym_Text_BlakeDefeat,"My COMPANION battling skills are out\nof sync, too!$",reviewed AUTO draft
+MossdeepCity_Gym_Text_HannahIntro,"When you lose to me, don't be too hard\non yourself.\pIt's not that you're weak--I'm just\ntoo strong!$","reviewed, no change needed"
+MossdeepCity_Gym_Text_HannahDefeat,You're just too strong!$,"reviewed, no change needed"
+MossdeepCity_Gym_Text_HannahPostBattle,I'm not going to get down on myself for\nlosing. I just need to train harder.\pPositive thinking--that's my strong\npoint!$,"reviewed, no change needed"
+MossdeepCity_Gym_Text_SamanthaIntro,"I see it…\nI see your future…\pIf you can beat me, I will tell you\nyour future!$","reviewed, no change needed"
+MossdeepCity_Gym_Text_SamanthaDefeat,I surrender!$,"reviewed, no change needed"
+MossdeepCity_Gym_Text_SamanthaPostBattle,You will wage a terrifically intense\nbattle with our ARENA LEADERS…\pThe result…\nYou won't hear it from me!$,reviewed AUTO draft
+MossdeepCity_Gym_Text_MauraIntro,The roads you have traveled…\nWhat you have experienced…\pCome at me with everything you've\nlearned!$,"reviewed, no change needed"
+MossdeepCity_Gym_Text_MauraDefeat,You've traveled a path of greatness!$,"reviewed, no change needed"
+MossdeepCity_Gym_Text_MauraPostBattle,"A bright future awaits those who have\nworked diligently.\pFor those who lazed idly, there is\nonly despair at the end.\pWhat goes around comes around…$","reviewed, no change needed"
+MossdeepCity_Gym_Text_SylviaIntro,"Even at the risk of life, I will win\nthis battle!$","reviewed, no change needed"
+MossdeepCity_Gym_Text_SylviaDefeat,What you do…\nIt horrifies me…$,"reviewed, no change needed"
+MossdeepCity_Gym_Text_SylviaPostBattle,How dare you beat me…\pIt won't be my fault if something\nhorrible befalls you…$,"reviewed, no change needed"
+MossdeepCity_Gym_Text_NateIntro,Hohoho.\pYou need me to show you how tenacious\nthe FORCE type can be.$,reviewed AUTO draft
+MossdeepCity_Gym_Text_NateDefeat,"Oh! My, my!\nYour battle style is fantastic!$","reviewed, no change needed"
+MossdeepCity_Gym_Text_NatePostBattle,"I… I don't let defeat rattle m-me,\nhowever b-badly.$","reviewed, no change needed"
+MossdeepCity_Gym_Text_KathleenIntro,"Let me show you a perfectly awful,\nhorrifying time!$","reviewed, no change needed"
+MossdeepCity_Gym_Text_KathleenDefeat,N-nooooo!$,"reviewed, no change needed"
+MossdeepCity_Gym_Text_KathleenPostBattle,Your vitality is contagious!\nGet away from me quickly!$,"reviewed, no change needed"
+MossdeepCity_Gym_Text_CliffordIntro,"I may be past my prime, but I suggest\nyou not patronize me.$","reviewed, no change needed"
+MossdeepCity_Gym_Text_CliffordDefeat,"Ah, you overflow with the power\nof youth!$","reviewed, no change needed"
+MossdeepCity_Gym_Text_CliffordPostBattle,It seems that I could not overcome\nyour youthful energy.$,"reviewed, no change needed"
+MossdeepCity_Gym_Text_MaceyIntro,You're not getting through to the end!\nNot if I can help it!$,"reviewed, no change needed"
+MossdeepCity_Gym_Text_MaceyDefeat,How could you be so ludicrously\nstrong?$,"reviewed, no change needed"
+MossdeepCity_Gym_Text_MaceyPostBattle,"Humph! You may be strong, but you're\nnot suitable for the FORCE type!\pThe way you battle is somehow brutal!$",reviewed AUTO draft
+MossdeepCity_Gym_Text_NicholasDefeat,Oh!\nDone in!$,"reviewed, no change needed"
+MossdeepCity_Gym_Text_NicholasPostBattle,All right! I think I'll develop a special\ninvincible COMPANION power next.$,reviewed AUTO draft
+MossdeepCity_Gym_Text_TateAndLizaDefeat,"KANAN: What?! Our combination…\nEZRA: Was shattered!\pKANAN: It can't be helped. You've won…\nEZRA: So, in recognition, take this.$",reviewed AUTO draft
+MossdeepCity_Gym_Text_ReceivedMindBadge,{PLAYER} received the FORCE SHARD\nfrom KANAN and EZRA.$,reviewed AUTO draft
+MossdeepCity_Gym_Text_ExplainMindBadgeTakeThis,"KANAN: The FORCE SHARD enhances the\nSP. ATK and SP. DEF of COMPANIONS.\pEZRA: It also lets you use the HM move\nDIVE outside of battle.\pKANAN: You should also take this, too.$",reviewed AUTO draft
+MossdeepCity_Gym_Text_RegisteredTateAndLiza,Registered ARENA LEADERS KANAN & EZRA\nin the COMLINK.$,reviewed AUTO draft
+MossdeepCity_Gym_Text_TateAndLizaRematchDefeat,KANAN: You and your COMPANION…\nEZRA: It's as if you were siblings!$,reviewed AUTO draft
+MossdeepCity_Gym_Text_TateAndLizaPostRematch,"KANAN: You can knock us down,\nbut we'll never stay down!\pEZRA: Because the two of us,\nwe always support each other!$",reviewed AUTO draft
+MossdeepCity_House1_Text_HmmYourPokemon,Hmm!\nYour {STR_VAR_1}…$,"reviewed, no change needed"
+MossdeepCity_House1_Text_ItLikesXPokeblocks,"It likes {STR_VAR_1}S,\ndoesn't it?\pNo, I'm positive of it! It definitely\nlikes {STR_VAR_1}S!$","reviewed, no change needed"
+MossdeepCity_House1_Text_DoesntLikeOrDislikePokeblocks,It doesn't appear to like or dislike\nany {POKEBLOCK}S.$,"reviewed, no change needed"
+MossdeepCity_House1_Text_HusbandCanTellPokeblockMonLikes,My husband can tell what kind of\n{POKEBLOCK}S a COMPANION likes at a glance.$,reviewed AUTO draft
+MossdeepCity_House2_Text_Wingull,SHYYYOLET: Pihyoh!$,reviewed AUTO draft
+MossdeepCity_House3_Text_YouWantSuperRod,"Hey there, TRAINER!\nA SUPER ROD really is super!\pSay all you want, but this baby can\ncatch COMPANIONS off the seafloor!\pWhat do you think?\nYou want it, don't you?$",reviewed AUTO draft
+MossdeepCity_House3_Text_SuperRodIsSuper,"You bet, you bet!\nAfter all, a SUPER ROD is really super!$","reviewed, no change needed"
+MossdeepCity_House3_Text_TryDroppingRodInWater,"If there's any water, try dropping in\nyour ROD and see what bites!$","reviewed, no change needed"
+MossdeepCity_House3_Text_DontYouLikeToFish,Hunh?\nDon't you like to fish?$,"reviewed, no change needed"
+MossdeepCity_House4_Text_YouMadeSecretBaseNearX,Was it you who made a HIDEOUT\nnear {STR_VAR_1}?$,reviewed AUTO draft
+MossdeepCity_House4_Text_MakeSecretBase,You should make a HIDEOUT\nsomewhere. I'll go find it!$,reviewed AUTO draft
+MossdeepCity_House4_Text_Skitty,LOTHKIT: Miyaan?$,reviewed AUTO draft
+MossdeepCity_PokemonCenter_1F_Text_GymLeaderDuoFormidable,"The ARENA LEADERS in this town are\na formidable duo.\pTheir combination attacks are, like,\nexcellent and wow!$",reviewed AUTO draft
+MossdeepCity_PokemonCenter_1F_Text_AbilitiesMightChangeMoves,"Depending on the special abilities of\nCOMPANIONS, some moves might change\lor not work at all.$",reviewed AUTO draft
+MossdeepCity_PokemonCenter_2F_Text_Woman5,"If I win a whole lot of link battles\nand show everyone how good I am,\lI might get a fan following!$","reviewed, no change needed"
+MossdeepCity_SpaceCenter_1F_Text_RocketLaunchImminent,The rocket's launch is imminent!$,"reviewed, no change needed"
+MossdeepCity_SpaceCenter_1F_Text_SuccessfulLaunchNumber,The rocket launched safely!\nThat's successful launch no. {STR_VAR_1}!$,"reviewed, no change needed"
+MossdeepCity_SpaceCenter_1F_Text_HaywireButRocketLaunchImminent,"I know that things are a little\nhaywire right now, but…\pThe rocket's launch is imminent!$","reviewed, no change needed"
+MossdeepCity_SpaceCenter_1F_Text_HaywireButSuccessfulLaunchNumber,"I know that things are a little\nhaywire right now, but…\pThe rocket launched safely!\nThat's successful launch no. {STR_VAR_1}!$","reviewed, no change needed"
+MossdeepCity_SpaceCenter_1F_Text_RocketLaunchDemandsPerfection,"A rocket launch demands perfection.\nNot even a 1% margin of error is allowed.\pEven if it's 99% okay, the whole thing\nis useless if 1% happens to be no good.\pDespite that, we never stop trying.\nWhy? It's a dream that never ends.$","reviewed, no change needed"
+MossdeepCity_SpaceCenter_1F_Text_RocketsBoggleMyMind,A giant chunk of metal bursts through\nthe skies and flies into space…\pIt boggles my mind!$,"reviewed, no change needed"
+MossdeepCity_SpaceCenter_1F_Text_Grunt3Intro,"As promised, we've come for\nthe rocket fuel!$","reviewed, no change needed"
+MossdeepCity_SpaceCenter_1F_Text_Grunt3Defeat,Ran out of fuel…$,"reviewed, no change needed"
+MossdeepCity_SpaceCenter_1F_Text_Grunt3PostBattle,Don't think you're on a roll just\nbecause you've beaten me!$,"reviewed, no change needed"
+MossdeepCity_SpaceCenter_1F_Text_Grunt1Intro,We gave you fair warning!\nThere's nothing sneaky about us!$,"reviewed, no change needed"
+MossdeepCity_SpaceCenter_1F_Text_Grunt1Defeat,Grrr…\nWe should've used sneaky treachery…$,"reviewed, no change needed"
+MossdeepCity_SpaceCenter_1F_Text_Grunt1PostBattle,"Okay, I get it already! The next time,\nwe'll come unannounced.$","reviewed, no change needed"
+MossdeepCity_SpaceCenter_1F_Text_Grunt4Intro,The rocket fuel the LAUNCH TOWER has\nin storage--that's what we're after.\pWe mean to take every last bit of it!$,reviewed AUTO draft
+MossdeepCity_SpaceCenter_1F_Text_Grunt4Defeat,"Please, can you spare some fuel?\nEven a chintzy cup will do!$","reviewed, no change needed"
+MossdeepCity_SpaceCenter_1F_Text_Grunt2Defeat,Ack! Ack! Aaack!$,"reviewed, no change needed"
+MossdeepCity_SpaceCenter_2F_Text_WouldveLikedToBeAstronaut,"If only I was a little younger, I would\nhave liked being an astronaut…\pNo… It's not too late!\nI can and will try!$","reviewed, no change needed"
+MossdeepCity_SpaceCenter_2F_Text_WishOrdinaryPeopleCouldGoIntoSpace,I wish ordinary people could go into\nspace one day…$,"reviewed, no change needed"
+MossdeepCity_SpaceCenter_2F_Text_YoureOutnumberedTakeUsOn,"What's wrong with you?\pYou're outnumbered three to one,\nbut you still want to take us on?$","reviewed, no change needed"
+MossdeepCity_SpaceCenter_2F_Text_GoodAnswer,Good answer!\nThat's what a smart person'll do!$,"reviewed, no change needed"
+MossdeepCity_SpaceCenter_2F_Text_Grunt5Intro,"A reckless go-getter, are you?\nOkay, I'll go first!$","reviewed, no change needed"
+MossdeepCity_SpaceCenter_2F_Text_Grunt5Defeat,I lost!\nBut!$,"reviewed, no change needed"
+MossdeepCity_SpaceCenter_2F_Text_Grunt6Intro,It's too soon to be relieved!\nI'm up next!$,"reviewed, no change needed"
+MossdeepCity_SpaceCenter_2F_Text_Grunt6Defeat,"I lost, too!\nBut!$","reviewed, no change needed"
+MossdeepCity_SpaceCenter_2F_Text_Grunt7Intro,I bet you want to take a break.\nBut I'm not about to let you do that!$,"reviewed, no change needed"
+MossdeepCity_SpaceCenter_2F_Text_Grunt7Defeat,We should've taken a break…\nThat's what we should've done…$,"reviewed, no change needed"
+MossdeepCity_SpaceCenter_2F_Text_Grunt6PostBattle,"Three of us here, and look at the sorry\nmess we got ourselves into.$","reviewed, no change needed"
+MossdeepCity_SpaceCenter_2F_Text_Grunt7PostBattle,We three losing like this…\nWe look worse than usual by triple!$,"reviewed, no change needed"
+MossdeepCity_SpaceCenter_2F_Text_WellTakeCareOfYou,"Hehehe!\pWe come all the way here to get some\nfuel, and we're interfered with again!\pIf you're going to mess with us too,\nwe'll take care of you at the same time!$","reviewed, no change needed"
+MossdeepCity_SpaceCenter_2F_Text_MaxieDontInterfere,VADER: Clear out of the way!\nDon't you dare interfere!$,reviewed AUTO draft
+MossdeepCity_SpaceCenter_2F_Text_StevenAreYouReadyToBattle,LEIA: {PLAYER}{KUN}!\nYou're going to help me?\pLet's go into battle together!\nAre you ready?$,reviewed AUTO draft
+MossdeepCity_SpaceCenter_2F_Text_StevenHurryGetReadyQuickly,"LEIA: Then, hurry!\nGet ready quickly!$",reviewed AUTO draft
+MossdeepCity_SpaceCenter_2F_Text_JustWantToExpandLand,All I want…\nI just want to expand the land mass…$,"reviewed, no change needed"
+MossdeepCity_SpaceCenter_Text_TabithaDefeat,I'm with our leader…$,"reviewed, no change needed"
+MossdeepCity_StevensHouse_Text_YouveEarnedHMDive,"LEIA: {PLAYER}{KUN}…\pAs you can see, there's not much here,\nbut this is my home.\pThank you for all that you've done.\pThis is my token of appreciation.\nIt's the HIDDEN MACHINE DIVE.\pNo need to be shy--you've earned\nthis HM.$",reviewed AUTO draft
+MossdeepCity_StevensHouse_Text_ExplainDive,"LEIA: While you're using SURF, you\nshould notice dark patches of water.\pUse DIVE if you come to deep water\nlike it. You'll drop to the seafloor.\pWhen you want to come back up, use\nDIVE again.\pIn some places, it won't be possible\nfor you to surface, though.$",reviewed AUTO draft
+MossdeepCity_StevensHouse_Text_TakeBallContainingBeldum,{PLAYER} checked the CAPTURE POD.\pIt contained the COMPANION\nR1 UNIT.\pTake the CAPTURE POD?$,reviewed AUTO draft
+MossdeepCity_StevensHouse_Text_ObtainedBeldum,{PLAYER} obtained an R1 UNIT.$,reviewed AUTO draft
+MossdeepCity_StevensHouse_Text_NoSpaceForAnotherMon,There is no space for another\nCOMPANION.$,reviewed AUTO draft
+MossdeepCity_StevensHouse_Text_LeftPokeBallWhereItWas,{PLAYER} left the CAPTURE POD where\nit was.$,reviewed AUTO draft
+Route124_Text_HuntersHouse,HUNTER'S HOUSE$,"reviewed, no change needed"
+Route124_DivingTreasureHuntersHouse_Text_Greeting,I'm the DIVING TREASURE HUNTER!\pI'm the awesome dude who makes\ndeep-sea dives to gather treasures\lresting at the bottom.$,"reviewed, no change needed"
+Route124_DivingTreasureHuntersHouse_Text_WhatDoYouWantToTrade,What do you want to trade?$,"reviewed, no change needed"
+Route124_DivingTreasureHuntersHouse_Text_YoullTradeShardForStone,"You'll trade your {STR_VAR_1} for\nmy {STR_VAR_2}, then?$","reviewed, no change needed"
+Route124_DivingTreasureHuntersHouse_Text_ItsADeal,It's a done deal!\nUse that wisely!$,"reviewed, no change needed"
+Route124_DivingTreasureHuntersHouse_Text_TradeSomethingElse,Do you want to trade something else?$,"reviewed, no change needed"
+Route124_DivingTreasureHuntersHouse_Text_BagFull,"Whoops, your BAG's full.\nGet rid of some items, friend!$","reviewed, no change needed"
+Route124_DivingTreasureHuntersHouse_Text_ComeBackIfYouChangeMind,"No? That's a downer.\nWell, if you change your mind, come back.$","reviewed, no change needed"
+Route124_DivingTreasureHuntersHouse_Text_ShardTradeBoard,{CLEAR_TO 10}Wanted item{CLEAR_TO 124}Trade item\n{CLEAR_TO 15}RED CRYSTAL{CLEAR_TO 89}{LEFT_ARROW}{RIGHT_ARROW}{CLEAR_TO 123}FIRE STONE{CLEAR_TO 200}\p{CLEAR_TO 10}Wanted item{CLEAR_TO 124}Trade item\n{CLEAR_TO 6}YELLOW CRYSTAL{CLEAR_TO 89}{LEFT_ARROW}{RIGHT_ARROW}{CLEAR_TO 115}THUNDERSTONE{CLEAR_TO 200}\p{CLEAR_TO 10}Wanted item{CLEAR_TO 124}Trade item\n{CLEAR_TO 12}BLUE CRYSTAL{CLEAR_TO 89}{LEFT_ARROW}{RIGHT_ARROW}{CLEAR_TO 121}WATER STONE{CLEAR_TO 200}\p{CLEAR_TO 10}Wanted item{CLEAR_TO 124}Trade item\n{CLEAR_TO 8}GREEN CRYSTAL{CLEAR_TO 89}{LEFT_ARROW}{RIGHT_ARROW}{CLEAR_TO 123}LEAF STONE$,reviewed AUTO draft
+ShoalCave_LowTideLowerRoom_Text_EverythingStartsWithFocus,Everything starts with focus!$,"reviewed, no change needed"
+ShoalCave_LowTideEntranceRoom_Text_AreYouPlanningOnGoingInThere,Are you planning on going deep\nin there?\pHow about bringing me back some\nSHOAL SALT and SHOAL SHELLS?\pI can make you something good if\nyou bring me the ingredients.$,"reviewed, no change needed"
+ShoalCave_LowTideEntranceRoom_Text_BringMe4ShoalSaltAndShells,"If you bring me four each of the\nSHOAL SALT and SHOAL SHELLS,\lI can make you a SHELL BELL…\pYou can get those ingredients\nevery day.$","reviewed, no change needed"
+ShoalCave_LowTideEntranceRoom_Text_WouldYouLikeShellBell,"Oh, hey! SHOAL SALT and SHOAL SHELLS!\nAnd enough of them, too!\pWould you like me to make you\na SHELL BELL with them?$","reviewed, no change needed"
+ShoalCave_LowTideEntranceRoom_Text_MakeShellBellRightAway,"All righty, then! I'll make you\na SHELL BELL right away.\p… … … … … … … …\n… … … … … … … …\pThere! Done!$","reviewed, no change needed"
+ShoalCave_LowTideEntranceRoom_Text_ExplainShellBell,"Have a COMPANION hold on to that.\nIt'll love it, that's for certain.\pWhy, the SHELL BELL's chime…\nIt's simply sublime!\pYou can get its ingredients every day,\nso I can make you more.$",reviewed AUTO draft
+ShoalCave_LowTideEntranceRoom_Text_WantedToMakeShellBell,Oh… Is that so…\nI wanted to make a SHELL BELL…$,"reviewed, no change needed"
+ShoalCave_LowTideEntranceRoom_Text_NoSpaceInYourBag,You don't have space in your BAG\nif I were to make it for you.\pYou should make room and come back\nfor a SHELL BELL.$,"reviewed, no change needed"
+ShoalCave_Text_WasShoalSaltNowNothing,"There was some SHOAL SALT here.\nBut, there's nothing here now.$","reviewed, no change needed"
+ShoalCave_Text_WasShoallShellNowNothing,"There was a SHOAL SHELL here.\nBut, there's nothing here now.$","reviewed, no change needed"
+Route124_Text_SpencerIntro,"Hey, are you lost at sea?\pIf you can beat my COMPANION,\nI can serve as your pilot.$",reviewed AUTO draft
+Route124_Text_SpencerDefeat,I lost my bearings in battle!$,"reviewed, no change needed"
+Route124_Text_SpencerPostBattle,"Many people lose their bearings at sea.\pIf you're that sort, you should refer\nto the COMLINK's MAP.$",reviewed AUTO draft
+Route124_Text_RolandIntro,Hm! You're riding a COMPANION instead\nof swimming yourself…\pI am envious!$,reviewed AUTO draft
+Route124_Text_RolandDefeat,Oh!\nI can't…$,"reviewed, no change needed"
+Route124_Text_JennyIntro,"If you just float in the sea like\nthis, COMPANIONS come around to play.$",reviewed AUTO draft
+Route124_Text_JennyDefeat,"Oh, darn.\nI've gone and lost.$","reviewed, no change needed"
+Route124_Text_JennyPostBattle,"While swimming, I noticed that some\nCOMPANIONS attack, and some just\lwatch.\pI guess COMPANIONS have personalities\nof their own.$",reviewed AUTO draft
+Route124_Text_JennyRegister,"It's only on a whim, but maybe I'll get\nyou to register me in your COMLINK.$",reviewed AUTO draft
+Route124_Text_JennyRematchIntro,"If you just float in the sea like this,\nTRAINERS challenge you!$","reviewed, no change needed"
+Route124_Text_JennyRematchDefeat,That's strange…\nI lost again…$,"reviewed, no change needed"
+Route124_Text_JennyPostRematch,"This has nothing to do with anything,\nbut maybe I'll visit the TRICK HOUSE.$","reviewed, no change needed"
+Route124_Text_GraceIntro,I'm growing bored of swimming…\nHow about a battle?$,"reviewed, no change needed"
+Route124_Text_GraceDefeat,I had no idea that you were\nthis strong!$,"reviewed, no change needed"
+Route124_Text_GracePostBattle,All the effort you put in must have\nmade you this strong.$,"reviewed, no change needed"
+Route124_Text_ChadIntro,Fufufufu… I dive deep underwater\nto go deep under cover.\lPlumbing the depths is where I excel!$,"reviewed, no change needed"
+Route124_Text_ChadDefeat,"Glub, glub, glub…\nI'm sinking…$","reviewed, no change needed"
+Route124_Text_ChadPostBattle,I have it on good authority that\nthere's a DIVE spot around here.\pIt gives me the urge to go deep\nagain…$,"reviewed, no change needed"
+Route124_Text_LilaIntro,"LISS: Sigh…\pHere I am in the sea, but who's with me?\nMy little brother!\pLet's battle so I won't have to dwell\non that!$",reviewed AUTO draft
+Route124_Text_LilaDefeat,LISS: ROY! It's your fault we lost!\nYou're in for it later!$,reviewed AUTO draft
+Route124_Text_LilaPostBattle,"LISS: Sigh…\pIf only it wasn't my little brother\nnext to me, but a nice boyfriend…$",reviewed AUTO draft
+Route124_Text_LilaNotEnoughMons,LISS: You're planning to battle us?\nNot unless you have two COMPANIONS.$,reviewed AUTO draft
+Route124_Text_RoyIntro,RAN: My big sister is tough at\nCOMPANION!\pDon't cry when you lose!$,reviewed AUTO draft
+Route124_Text_RoyDefeat,RAN: Uh-oh…\nMy big sister will chew me out…$,reviewed AUTO draft
+Route124_Text_RoyPostBattle,RAN: My big sister is really scary\nwhen she gets angry.\pThat's why she doesn't have a\nboyfriend.$,reviewed AUTO draft
+Route124_Text_LilaRoyRegister,"RAN: Will you battle with us again?\nBut take it easy next time, okay?$",reviewed AUTO draft
+Route124_Text_RoyNotEnoughMons,"RAN: Did you want to battle us?\nBring two COMPANIONS, then.$",reviewed AUTO draft
+Route124_Text_LilaRematchIntro,"LISS: Sigh…\pHere I am in the sea, but who's with me?\nMy little brother!\pOh, hi, it's been a while. Let's battle\nso I won't have to dwell on things!$",reviewed AUTO draft
+Route124_Text_LilaRematchDefeat,LISS: ROY!\nIt's your fault we lost again!\pWe're having a training session later!$,reviewed AUTO draft
+Route124_Text_LilaPostRematch,"LISS: Sigh…\pIf I had a nice boyfriend, we'd beat\nanyone with lovely combinations…$",reviewed AUTO draft
+Route124_Text_LilaRematchNotEnoughMons,LISS: You're planning to battle us?\nNot unless you have two COMPANIONS.$,reviewed AUTO draft
+Route124_Text_RoyRematchIntro,"RAN: If we lose, I'll catch heck.\nI'm going to go totally all out!$",reviewed AUTO draft
+Route124_Text_RoyRematchDefeat,RAN: Uh-oh…\nMy big sister will chew me out again.$,reviewed AUTO draft
+Route124_Text_RoyPostRematch,RAN: My big sister is really scary\nwhen she gets angry.\pShe's going to make me train really\nhard with COMPANIONS later…$,reviewed AUTO draft
+Route124_Text_RoyRematchNotEnoughMons,"RAN: Did you want to battle us?\nBring two COMPANIONS, then.$",reviewed AUTO draft
+Route124_Text_DeclanIntro,"Here I am swimming by my lonesome\non this wide, beautiful sea.\pThere's no other word for it.\nThis is pathetic!$","reviewed, no change needed"
+Route124_Text_DeclanDefeat,I'm feeling blue.\nBlue as the sky…$,"reviewed, no change needed"
+Route124_Text_DeclanPostBattle,I should chat up lady SWIMMERS\nand invite them on a long swim.$,"reviewed, no change needed"
+Route124_Text_IsabellaIntro,I'm not going to lose to some\nsurfer TRAINER.$,"reviewed, no change needed"
+Route124_Text_IsabellaDefeat,I've only got sweat in my eyes!\nI am not crying!$,"reviewed, no change needed"
+Route125_Text_NolenIntro,"I heard you approaching, so I hung\naround for you!$","reviewed, no change needed"
+Route125_Text_NolenDefeat,I surrender!$,"reviewed, no change needed"
+Route125_Text_NolenPostBattle,Sound travels faster in water than\nit does through air.$,"reviewed, no change needed"
+Route125_Text_StanIntro,"Hey, there!\nCheck out my sweet COMPANION!$",reviewed AUTO draft
+Route125_Text_StanDefeat,I floundered…$,"reviewed, no change needed"
+Route125_Text_StanPostBattle,"I was blown away by SEASTEED's charm,\nso I started swimming, too.$",reviewed AUTO draft
+Route125_Text_TanyaIntro,I'm tired of swimming.\nAre you up for a battle with me?$,"reviewed, no change needed"
+Route125_Text_TanyaDefeat,You're too much!$,"reviewed, no change needed"
+Route125_Text_TanyaPostBattle,Whew…\nWhich way is it to YAVIN 4?$,reviewed AUTO draft
+Route125_Text_SharonDefeat,Lost it…$,"reviewed, no change needed"
+Route125_Text_SharonPostBattle,Your power… You're the real deal.\nI'm amazed!$,"reviewed, no change needed"
+Route125_Text_ErnestDefeat,Gwrroooar!\nI couldn't win!$,"reviewed, no change needed"
+Route125_Text_ErnestRegister,"Register me in your COMLINK,\nand I'll tell you something good.$",reviewed AUTO draft
+Route125_Text_ErnestRematchIntro,"It's high time I get my payback\nfrom you! Come on, we're battling!$","reviewed, no change needed"
+Route125_Text_ErnestRematchDefeat,I couldn't win!\nI flat out couldn't win!$,"reviewed, no change needed"
+Route125_Text_KimIntro,"KAI: A funny old man lives in the\nWAMPA CAVE. Someone told me.\lAre you going to see him, too?$",reviewed AUTO draft
+Route125_Text_KimDefeat,KAI: I thought we would win.$,reviewed AUTO draft
+Route125_Text_KimNotEnoughMons,"KAI: No, no, no! You need two\nCOMPANIONS, or it's just no good!$",reviewed AUTO draft
+Route125_Text_IrisDefeat,"ISRA: Oh, we came sort of close.$",reviewed AUTO draft
+Route125_Text_IrisNotEnoughMons,"ISRA: Oh, we could never, ever do\nanything like a 2-on-1 battle.$",reviewed AUTO draft
+Route125_Text_PresleyIntro,Why would a BIRDKEEPER like me\ncome out to the sea?$,"reviewed, no change needed"
+Route125_Text_PresleyDefeat,Okay.\nI'll tell you why I'm here.$,"reviewed, no change needed"
+Route125_Text_PresleyPostBattle,I put a message in a bottle and put\nit out to sea.\pI'm sure that a girl SWIMMER will\nfind it!$,"reviewed, no change needed"
+Route125_Text_AuronIntro,Hey! Was it you throwing garbage\ninto the sea?$,"reviewed, no change needed"
+Route125_Text_AuronDefeat,"Oh, you weren't throwing trash into\nthe sea.$","reviewed, no change needed"
+Route125_Text_AuronPostBattle,I found an unsightly bottle bobbing\nin the waves earlier.\pIt angers me that someone would\npollute the sea!$,"reviewed, no change needed"

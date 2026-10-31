@@ -1,0 +1,91 @@
+text_id,sw_text_raw,notes
+EverGrandeCity_Text_CitySign,ILUM\p“The ice world where the kyber\ncrystals grow.”$,
+EverGrandeCity_Text_EnteringPokemonLeague,ENTERING THE ILUM TEMPLE\nCENTER GATE$,
+EverGrandeCity_SidneysRoom_Text_IntroSpeech,"MAUL: …\pSo, the next one comes.\nI am the TRIAL OF FEAR.\pI am what you dread in the dark.\nShow me that you do not run.\pAt last we will have a battle that\ncan only be staged here, in the\lILUM TEMPLE!$",Four Trials are Force visions (bible/STORY.md); Maul = fear
+EverGrandeCity_SidneysRoom_Text_Defeat,…You did not run.\nThe vision fades.$,
+EverGrandeCity_SidneysRoom_Text_PostBattleSpeech,Fear leads to anger.\nYou let it pass through you.\pYou have what it takes to go far.\nGo on to the next TRIAL.$,
+EverGrandeCity_PhoebesRoom_Text_IntroSpeech,"QUI-GON: Hello, young one.\pI am the TRIAL OF LOSS.\nI trained my spirit at the JEDHA\lTEMPLE, and it outlived me.\pThere, I learned to commune with\nSPIRIT-type COMPANIONS.\pThe bond I share with my COMPANIONS\nreaches past death itself.\pSo, come. See if you can even\ntouch my COMPANIONS!$",
+EverGrandeCity_PhoebesRoom_Text_Defeat,"Ah.\nWell done, young one.$",
+EverGrandeCity_PhoebesRoom_Text_PostBattleSpeech,"There's a deep bond between you\nand your COMPANIONS, too.\pNo one is ever truly gone.\nRemember that when you lose someone.\pI'd like to see how far your bond\nwill carry you.\pGo ahead, move on to the next TRIAL.$",
+EverGrandeCity_GlaciasRoom_Text_IntroSpeech,"I am KI-ADI, the TRIAL OF BETRAYAL.\pI fell on the frozen world MYGEETO,\nwhen my own troops turned on me.\pThe ice here holds that memory.\pAll I have seen since are weak\nTRAINERS and their COMPANIONS.\pWhat about you?\pIt would please me to no end if I could\ngo all out against you!$",
+EverGrandeCity_GlaciasRoom_Text_Defeat,You and your COMPANIONS…\nHow hot your spirits burn!\pThe all-consuming heat overwhelms.\pIt's no surprise that my icy skills\nfailed to harm you.$,
+EverGrandeCity_GlaciasRoom_Text_PostBattleSpeech,"Your COMPANIONS will never betray you.\nDo not betray them.\pAdvance to the next room.\nThere, face the hardest TRIAL.$",
+EverGrandeCity_DrakesRoom_Text_IntroSpeech,"I am ANAKIN, the last of the FOUR\nTRIALS, the DRAGON master!\pOnce I was a hero.\nThen I chose power over everything.\pIn their natural state, COMPANIONS are\nwild living things. They are free.\pAt times, they hinder us.\nAt times, they help us.\pFor us to battle with COMPANIONS as\npartners, do you know what it takes?\pIf you don't, then you will never\nprevail over me!$",
+EverGrandeCity_DrakesRoom_Text_Defeat,Superb.\nYou are stronger than I was.$,
+EverGrandeCity_DrakesRoom_Text_PostBattleSpeech,"You deserve every credit for coming\nthis far as a TRAINER of COMPANIONS.\pYou do seem to know what is needed.\pYes, what a TRAINER needs is a\nvirtuous heart. I forgot that.\pCOMPANIONS touch the good hearts of\nTRAINERS and learn right from wrong.\pThey touch the good hearts of\nTRAINERS and grow strong.\pGo! Go onwards!\nOBI-WAN is waiting!$",
+EverGrandeCity_ChampionsRoom_Text_IntroSpeech,"OBI-WAN: Hello there, {PLAYER}{KUN}.\pThat incident on DAGOBAH…\nThat was superb work, putting an end\lto that crisis.\pOh, forgive me.\pIt wouldn't be fair to say that you\nalone ended the crisis.\pYou overcame it by working as one\nwith your COMPANIONS.\pWe TRAINERS raise COMPANIONS by giving\nthem items and by teaching them new\ltechniques for battle.\pBut we ourselves also learn many\nthings from COMPANIONS.\pAnd this is where your achievements\nare put to the test.\pNow!\pWho fights in truest harmony with\ntheir COMPANIONS in the OUTER RIM?\pShow me right here and now!$",Obi-Wan: 'Hello there'
+EverGrandeCity_ChampionsRoom_Text_Defeat,"I, the CHAMPION, fall in defeat…\pThat was wonderful work.\nThe Force is with you, truly.\lAnd it was glorious!\pWell done, {PLAYER}{KUN}!\pYou are a truly noble COMPANION\nTRAINER!$",
+EverGrandeCity_ChampionsRoom_Text_PostBattleSpeech,"OBI-WAN: The COMPANIONS you sent into\nbattle…\pAt times they moved like a spring\nbreeze, and at times they struck\llike lightning.\pWith light, yet surefooted, calm,\nyou led your COMPANIONS.\pEven I was moved by your\nmasterful performance!\pYou now stand at the peak\nof the ILUM TEMPLE.\pI now proclaim you to be the new\nCHAMPION of the OUTER RIM…$",
+EverGrandeCity_ChampionsRoom_Text_BirchArriveRatePokedex,"PROF. KORR: See?\nWhat did I tell you, {RIVAL}?\pDidn't I tell you that you don't need\nto worry about {PLAYER}{KUN}?\p… … … … … … … …\n{PLAYER}{KUN}, you've finally done it.\pWhen I heard that you defeated your\nown father at the MOS ENTHA ARENA,\lI thought perhaps you had a chance…\pBut to think you've actually become\nthe ILUM CHAMPION!\pAh, yes!\pWhat became of your DATAPAD?\nHere, let me see.$",
+EverGrandeCity_HallOfFame_Text_HereWeHonorLeagueChampions,OBI-WAN: This room…\pThis is where we keep records of\nCOMPANIONS that prevailed through\lharsh battles.\pIt is here that the ILUM CHAMPIONS\nare honored.$,
+EverGrandeCity_PokemonCenter_1F_Text_BelieveInYourPokemon,The long and harrowing CRYSTAL CAVES…\pIt's like reliving the path one has\ntraveled in life…\pBelieve in your COMPANIONS and give it\nyour very best!$,
+EverGrandeCity_PokemonLeague_1F_Text_GoForth,"TRAINER! Believe in yourself and your\nCOMPANIONS, and go forth!$",
+VictoryRoad_1F_Text_WallyNotGoingToLoseAnymore,"LUKE: Hi! {PLAYER}!\pI bet you're surprised to see me here!\pI made it all the way here, and it's\nall thanks to you!\p{PLAYER}, losing to you that time\nmade me stronger!\pBut I'm not going to lose anymore!\pI'm going to win! For the COMPANIONS\nwho gave me courage and strength!\pOkay… Here I come!$",
+VictoryRoad_1F_Text_HopeIntro,These caves seem to go on forever.\nOnly the strong reach the TEMPLE.$,
+VictoryRoad_1F_Text_QuincyPostBattle,Getting through here safely--that's\nthe final test for any TRAINER aiming\lto become the ILUM CHAMPION.\pThe crystals here only glow for\nthose who keep going.$,
+VictoryRoad_B1F_Text_ShannonIntro,"To win your way through the ILUM\nTEMPLE, you need the trust of your\lCOMPANIONS.$",
+VictoryRoad_B1F_Text_ShannonPostBattle,"By being together all the time, trust\ngrows between COMPANIONS and\lTRAINERS.$",
+VictoryRoad_B1F_Text_MitchellPostBattle,"Even outside of battle, I sense\nincredible power emanating from you\land your COMPANIONS.$",
+VictoryRoad_B2F_Text_OwenPostBattle,"The rumors I heard, that tough little\nkid is from MOS ENTHA.$",
+EverGrandeCity_Text_EnteringVictoryRoad,ENTERING CRYSTAL CAVES$,reviewed AUTO draft
+EverGrandeCity_ChampionsRoom_Text_MayAdvice,MIRA: {PLAYER}{KUN}!\pHere's some advice before you challenge\nthe CHAMPION…$,reviewed AUTO draft
+EverGrandeCity_ChampionsRoom_Text_MayItsAlreadyOver,"MIRA: Huh?\nWhat, what, what?\p{PLAYER}{KUN}…\nCould it be that…\lIt's already over?$",reviewed AUTO draft
+EverGrandeCity_ChampionsRoom_Text_BrendanAdvice,KAEL: {PLAYER}!\pHow would you like some advice before\nyou challenge the CHAMPION?…$,reviewed AUTO draft
+EverGrandeCity_ChampionsRoom_Text_BrendanYouveWon,KAEL: {PLAYER}…\pAre you trying to tell me…\nYou've beaten the CHAMPION?$,reviewed AUTO draft
+EverGrandeCity_ChampionsRoom_Text_BirchCongratulations,"PROF. KORR: Anyways,\ncongratulations!\pNow, go proudly into the final room!$",reviewed AUTO draft
+EverGrandeCity_ChampionsRoom_Text_WallaceComeWithMe,"OBI-WAN: {PLAYER}{KUN}…\pNo, let me rephrase that properly.\pThe new CHAMPION!\pCome with me.$",reviewed AUTO draft
+EverGrandeCity_ChampionsRoom_Text_WallaceWaitOutside,"OBI-WAN: I'm sorry, but…\pFrom here on, only those TRAINERS who\nhave become CHAMPIONS may enter.\pYou'll have to wait outside with\nPROF. KORR.$",reviewed AUTO draft
+EverGrandeCity_ChampionsRoom_Text_MayCongratulations,"MIRA: Groan…\p… … … … … … … …\n… … … … … … … …\pI'm just joking! That's okay!\nThat's the rule!\p{PLAYER}{KUN}!\nHonestly, congratulations!$",reviewed AUTO draft
+EverGrandeCity_ChampionsRoom_Text_BrendanCongratulations,"KAEL: Whaaaat?! … … … … …\n… … … … … … … …\pIt can't be helped if that's the rule.\p{PLAYER}, way to go!\nCongratulations!$",reviewed AUTO draft
+EverGrandeCity_HallOfFame_Text_LetsRecordYouAndYourPartnersNames,"OBI-WAN: Come on, let's record your\nname as a TRAINER who triumphed over\lthe ILUM TEMPLE, and the names of\lthe partners who battled with you.$",reviewed AUTO draft
+EverGrandeCity_PokemonCenter_1F_Text_LeagueAfterVictoryRoad,"The ILUM TEMPLE is only a short\ndistance after the CRYSTAL CAVES.\pIf you've come this far, what choice\ndo you have but to keep going?$",reviewed AUTO draft
+EverGrandeCity_PokemonCenter_1F_Text_ScottHappyForYou,"LANDO: {PLAYER}{KUN}, you've clawed your\nway up to face the ILUM TEMPLE!\pI'm happy for you!\nYou made my cheering worthwhile!\p{PLAYER}{KUN}, if you were to become\nthe ILUM TEMPLE CHAMPION…\pI'll get in touch with you then.\pOkay, {PLAYER}{KUN}.\nGo for greatness!$",reviewed AUTO draft
+EverGrandeCity_PokemonLeague_1F_Text_MustHaveAllGymBadges,"Beyond this point, only those TRAINERS\nwho have collected all the ARENA SHARDS\lare permitted to enter.\pTRAINER, let us confirm that you have\nall the ARENA SHARDS.$",reviewed AUTO draft
+EverGrandeCity_PokemonLeague_1F_Text_HaventObtainedAllBadges,"You haven't obtained all the SHARDS.\pIf you're bound for the ILUM\nTEMPLE, you must return with them.$",reviewed AUTO draft
+VictoryRoad_1F_Text_WallyEntranceDefeat,"Wow!\n{PLAYER}, you are strong, after all!$","reviewed, no change needed"
+VictoryRoad_1F_Text_WallyPostEntranceBattle,"LUKE: I couldn't beat you today,\n{PLAYER}, but one of these days, I'll\lcatch up to you!$",reviewed AUTO draft
+VictoryRoad_1F_Text_WallyIntro,"LUKE: Hi! {PLAYER}!\pI've gotten stronger since that last\ntime! I wanted to show you, {PLAYER}!\pOkay… Here I come!$",reviewed AUTO draft
+VictoryRoad_1F_Text_WallyDefeat,"Wow!\n{PLAYER}, you are strong, after all!$","reviewed, no change needed"
+VictoryRoad_1F_Text_WallyPostBattle,"LUKE: I couldn't beat you this time,\ntoo… But one of these days, {PLAYER},\lI'm going to catch up to you…\pAnd challenge the ILUM TEMPLE!$",reviewed AUTO draft
+VictoryRoad_1F_Text_EdgarIntro,"I've made it this far a couple times,\nbut the last stretch is so long…$","reviewed, no change needed"
+VictoryRoad_1F_Text_EdgarDefeat,My dream ends here again…$,"reviewed, no change needed"
+VictoryRoad_1F_Text_EdgarPostBattle,"You've made it this far. Keep the\nmomentum going and become the\lCHAMPION! If anyone can, it's you!$","reviewed, no change needed"
+VictoryRoad_1F_Text_AlbertIntro,I didn't come all this way to lose now.\nThat possibility doesn't exist!$,"reviewed, no change needed"
+VictoryRoad_1F_Text_AlbertDefeat,Impossible…\nI lost?$,"reviewed, no change needed"
+VictoryRoad_1F_Text_AlbertPostBattle,I lost here…\pThat means I lack the qualifications\nto become the CHAMPION…$,"reviewed, no change needed"
+VictoryRoad_1F_Text_HopeDefeat,Your battle style is fantastic…$,"reviewed, no change needed"
+VictoryRoad_1F_Text_HopePostBattle,You seem to have the potential for\nbecoming the CHAMPION.$,"reviewed, no change needed"
+VictoryRoad_1F_Text_QuincyIntro,What is the CRYSTAL CAVES?\nI'll tell you if you win!$,reviewed AUTO draft
+VictoryRoad_1F_Text_QuincyDefeat,Okay!\nWell done!$,"reviewed, no change needed"
+VictoryRoad_1F_Text_KatelynnIntro,I have nothing to say to anyone\nthat's come this far. Come on!$,"reviewed, no change needed"
+VictoryRoad_1F_Text_KatelynnDefeat,This is a disgrace…$,"reviewed, no change needed"
+VictoryRoad_1F_Text_KatelynnPostBattle,"Humph, go right on ahead.\nSee if I care.$","reviewed, no change needed"
+VictoryRoad_B1F_Text_SamuelIntro,The thought that I'm getting closer to\nthe ILUM TEMPLE…\pI'm getting stage fright…$,reviewed AUTO draft
+VictoryRoad_B1F_Text_SamuelDefeat,I couldn't do a thing…$,"reviewed, no change needed"
+VictoryRoad_B1F_Text_SamuelPostBattle,The ILUM TEMPLE became distant\nagain… What a letdown…$,reviewed AUTO draft
+VictoryRoad_B1F_Text_ShannonDefeat,Your relationship is based on\nsolid trust.$,"reviewed, no change needed"
+VictoryRoad_B1F_Text_MichelleIntro,This isn't the goal. It's only a place\non the way to the ILUM TEMPLE.$,reviewed AUTO draft
+VictoryRoad_B1F_Text_MichelleDefeat,That's the way!$,"reviewed, no change needed"
+VictoryRoad_B1F_Text_MichellePostBattle,"You'll do fine, for sure!\nYour COMPANIONS are all eager to go!$",reviewed AUTO draft
+VictoryRoad_B1F_Text_MitchellIntro,My COMPANIONS are cosmically\nawe inspiring!$,reviewed AUTO draft
+VictoryRoad_B1F_Text_MitchellDefeat,I've never met anyone like you before.$,"reviewed, no change needed"
+VictoryRoad_B1F_Text_HalleIntro,"Okay, no need to get your back up!\nRelax, let's take it easy!$","reviewed, no change needed"
+VictoryRoad_B1F_Text_HalleDefeat,Whoa!\nWonderful!$,"reviewed, no change needed"
+VictoryRoad_B1F_Text_HallePostBattle,"Sure, this is CRYSTAL CAVES.\pBut it's not all that different from\nthe path you've taken so far.\pTry to enjoy things the rest of\nthe way!$",reviewed AUTO draft
+VictoryRoad_B2F_Text_VitoIntro,"I trained together with my whole family,\nevery one of us!\lI'm not losing to anyone!$","reviewed, no change needed"
+VictoryRoad_B2F_Text_VitoDefeat,Better than my family?!\nIs that possible?!$,"reviewed, no change needed"
+VictoryRoad_B2F_Text_VitoPostBattle,I was better than everyone in my\nfamily. I've never lost before…\pI've lost my confidence…\nMaybe I'll go home…$,"reviewed, no change needed"
+VictoryRoad_B2F_Text_OwenIntro,I'd heard that there was a tough\nlittle kid around. Do they mean you?$,"reviewed, no change needed"
+VictoryRoad_B2F_Text_OwenDefeat,The little shrimp is tough!$,"reviewed, no change needed"
+VictoryRoad_B2F_Text_CarolineIntro,You must be getting a little tired.$,"reviewed, no change needed"
+VictoryRoad_B2F_Text_CarolineDefeat,No signs of tiring at all!$,"reviewed, no change needed"
+VictoryRoad_B2F_Text_CarolinePostBattle,CRYSTAL CAVES and the ILUM TEMPLE\nare long and grueling challenges.\lBeware of fatigue!$,reviewed AUTO draft
+VictoryRoad_B2F_Text_JulieIntro,You shouldn't get complacent just\nbecause you have a lot of ARENA SHARDS.\pThere's always going to be someone\nwho's better than you!$,reviewed AUTO draft
+VictoryRoad_B2F_Text_JulieDefeat,You're better than me!$,"reviewed, no change needed"
+VictoryRoad_B2F_Text_JuliePostBattle,Gaze on your collected SHARDS and\nremember the TRAINERS you've faced.$,reviewed AUTO draft
+VictoryRoad_B2F_Text_FelixIntro,"I've come this far, but the tension's\ngiving me awful stomach pain…$","reviewed, no change needed"
+VictoryRoad_B2F_Text_FelixDefeat,Ooh…\nIt hurts…$,"reviewed, no change needed"
+VictoryRoad_B2F_Text_FelixPostBattle,I can't help getting all tense knowing\nthat I'm nearing the ILUM TEMPLE.\pIt's all I can do to feign calm.$,reviewed AUTO draft
+VictoryRoad_B2F_Text_DianneIntro,The elite among the elite gather in\nthis cave.\pHow are you finding it?$,"reviewed, no change needed"
+VictoryRoad_B2F_Text_DianneDefeat,Not rattled in the least bit!$,"reviewed, no change needed"
+VictoryRoad_B2F_Text_DiannePostBattle,You do have guts! I like that!\nKeep it going!$,"reviewed, no change needed"

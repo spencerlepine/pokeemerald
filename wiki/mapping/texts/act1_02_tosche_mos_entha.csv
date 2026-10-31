@@ -1,0 +1,203 @@
+text_id,sw_text_raw,notes
+OldaleTown_Text_SavingMyProgress,"I want to take a rest, so I'm saving my\nprogress.$",
+OldaleTown_Text_IWorkAtPokemonMart,Hi!\nI work at a SUPPLY DEPOT.\pCan I get you to come with me?$,
+OldaleTown_Text_ThisIsAPokemonMart,"This is a SUPPLY DEPOT.\nJust look for our blue roof.\pWe sell a variety of goods including\nCAPTURE PODS for catching COMPANIONS.\pHere, I'd like you to have this as\na promotional item.$",
+OldaleTown_Text_PotionExplanation,"A BACTA SPRAY works anytime, so it's\neven more useful than a BACTA CENTER\lin certain situations.$",
+OldaleTown_Text_WaitDontComeInHere,"Aaaaah! Wait!\nPlease don't come in here.\pI just discovered the footprints of\na rare COMPANION!\pWait until I finish sketching\nthem, okay?$",
+OldaleTown_Text_DiscoveredFootprints,"I just discovered the footprints of\na rare COMPANION!\pWait until I finish sketching\nthem, okay?$",
+OldaleTown_Text_FinishedSketchingFootprints,I finished sketching the footprints of\na rare COMPANION.\pBut it turns out they were only my\nown footprints…$,
+OldaleTown_Text_MayLetsGoBack,MIRA: {PLAYER}{KUN}!\nOver here!\lLet's hurry home!$,
+OldaleTown_Text_BrendanLetsGoBack,"KAEL: I'm heading back to my dad's\nLAB now.\l{PLAYER}, you should hustle back, too.$",
+OldaleTown_Text_TownSign,TOSCHE STATION\n“Where things start off scarce.”$,
+OldaleTown_House1_Text_LeftPokemonGoesOutFirst,"When a COMPANION battle starts, the\none at the left of the list goes out\lfirst.\pSo, when you get more COMPANIONS in\nyour party, try switching around the\lorder of your COMPANIONS.\pIt could give you an advantage.$",
+OldaleTown_House2_Text_PokemonLevelUp,"When COMPANIONS battle, they\neventually level up and become\lstronger.$",
+OldaleTown_House2_Text_YoullGoFurtherWithStrongPokemon,"If the COMPANIONS with you get\nstronger, you'll be able to go farther\laway from here.$",
+OldaleTown_Mart_Text_PokeBallsAreSoldOut,The clerk says they're all sold out.\nI can't buy any CAPTURE PODS.$,
+OldaleTown_Mart_Text_ImGoingToBuyPokeBalls,I'm going to buy lots of CAPTURE PODS\nand catch a bunch of COMPANIONS!$,
+OldaleTown_Mart_Text_RestoreHPWithPotion,"If a COMPANION loses all of its HP\nand faints, it won't be able to battle.\pTo keep your COMPANION from fainting,\nrestore its HP with a BACTA SPRAY.$",
+OldaleTown_PokemonCenter_1F_Text_TrainersCanUsePC,"That terminal in the corner there is\nfor any COMPANION TRAINER to use.\pNaturally, that means you're welcome\nto use it, too.$",
+OldaleTown_PokemonCenter_1F_Text_PokemonCentersAreGreat,"BACTA CENTERS are great!\pYou can use their services as much\nas you like, and it's all for free.\lYou never have to worry!$",
+OldaleTown_PokemonCenter_1F_Text_WirelessClubNotAvailable,The HOLONET CLUB on\nthe second floor was built recently.\pBut they say they're still making\nadjustments.$,
+OldaleTown_PokemonCenter_1F_Text_TradedInWirelessClub,The HOLONET CLUB on\nthe second floor was built recently.\pI traded COMPANIONS right away.$,
+Route102_Text_WatchMeCatchPokemon,"LUKE: {PLAYER}…\nCOMPANIONS hide in scrub like this,\ldon't they?\pPlease watch me and see if I can\ncatch one properly.\p…Whoa!$",
+Route102_Text_WallyIDidIt,LUKE: I did it… It's my…\nMy COMPANION!$,
+Route102_Text_LetsGoBack,"{PLAYER}, thank you!\nLet's go back to the ARENA!$",
+Route102_Text_ImNotVeryTall,"I'm…not very tall, so I sink right\ninto the scrub.\pThe dust goes up my nose and…\nFwafwafwafwafwa…\pFwatchoo!$",
+Route102_Text_CatchWholeBunchOfPokemon,I'm going to catch a whole bunch of\nCOMPANIONS!$,
+Route102_Text_RouteSignOldale,ROUTE 102\n{RIGHT_ARROW} TOSCHE STATION$,
+Route102_Text_RouteSignPetalburg,ROUTE 102\n{LEFT_ARROW} MOS ENTHA$,
+Route103_Text_MayRoute103Pokemon,MIRA: Let's see… The COMPANIONS found\non ROUTE 103 include…$,
+Route103_Text_MayLetsBattle,"Oh, hi, {PLAYER}{KUN}!\p…Oh, I see, my dad gave you\na COMPANION as a gift.\pSince we're here, let's have a quick\nbattle!\pI'll give you a taste of what being\na TRAINER is like.$",
+Route103_Text_MayDefeated,"Wow! That's great!\n{PLAYER}{KUN}, you're pretty good!$",
+Route103_Text_MayTimeToHeadBack,"MIRA: I think I know why my dad has\nan eye out for you now.\pI mean, you just got that COMPANION,\nbut it already likes you.\pYou might be able to befriend any\nkind of COMPANIONS easily.\pWell, it's time to head back to\nthe LAB.$",
+Route103_Text_BrendanRoute103Pokemon,"KAEL: Okay, so it's this one and\nthat one that live on ROUTE 103…$",
+Route103_Text_BrendanLetsBattle,"Hey, it's {PLAYER}!\p…Oh, yeah, Dad gave you a COMPANION.\pSince we're here, how about a little\nbattle?\pI'll teach you what being a TRAINER's\nabout!$",
+Route103_Text_BrendanDefeated,"Huh, {PLAYER}, you're not too shabby.$",
+Route103_Text_BrendanTimeToHeadBack,"KAEL: I think I get it.\nI think I know why my dad has his eye\lout for you now.\pLook, your COMPANION already likes you,\neven though you just got it.\p{PLAYER}, I get the feeling that you\ncould befriend any COMPANION with\lease.\pWe should head back to the LAB.$",
+Route103_Text_ShouldHaveBroughtPotion,My COMPANION is staggeringly tired…\nI should have brought a BACTA SPRAY…$,
+Route103_Text_ShortcutToOldale,"If you cross the water from here,\nit'll be a shortcut to TOSCHE STATION.\pFufufu, that's useful, isn't it?$",
+Route103_Text_RouteSign,ROUTE 103\n{DOWN_ARROW} TOSCHE STATION$,
+PetalburgCity_Text_WhereIsWally,Where has our LUKE gone?\pWe have to leave for ANCHORHEAD\nvery soon…$,
+PetalburgCity_Text_AreYouRookieTrainer,Hiya! Are you maybe…\nA rookie TRAINER?\pDo you know what COMPANION TRAINERS\ndo when they reach a new town?\pThey first check what kind of ARENA\nis in the town.$,
+PetalburgCity_Text_ThisIsPetalburgGym,See? This is MOS ENTHA's ARENA.$,
+PetalburgCity_Text_ThisIsGymSign,This is the ARENA's sign. Look for it\nwhenever you're looking for an ARENA.$,
+PetalburgCity_Text_WaterReflection,My face is reflected in the oasis.\pIt's a shining grin full of hope…\pOr it could be a look of somber silence\nstruggling with fear…\pWhat do you see reflected in your face?$,
+PetalburgCity_Text_FullPartyExplanation,Let's say you have six COMPANIONS.\nIf you catch another one…\pIt is automatically sent to a STORAGE\nBOX over the HoloNet.$,
+PetalburgCity_Text_GymSign,MOS ENTHA ARENA\nLEADER: DORAN\l“A man in pursuit of power!”$,
+PetalburgCity_Text_CitySign,MOS ENTHA\n“An oasis at the edge of the dunes.”$,
+PetalburgCity_Text_WallyHouseSign,THE LARS' TOWN HOUSE$,
+PetalburgCity_Text_AreYouATrainer,"Excuse me!\pLet me guess, from the way you're\ndressed, are you a COMPANION TRAINER?$",
+PetalburgCity_Text_WellMaybeNot,"… … … … … …\pWell, maybe not.\nYour clothes aren't all that dirty.\pYou're either a rookie TRAINER,\nor maybe you're just an ordinary kid.$",
+PetalburgCity_Text_ImLookingForTalentedTrainers,I'm roaming the stars in search of\ntalented TRAINERS.\pI'm sorry to have taken your time.$,
+PetalburgCity_Gym_Text_DadYoureHereWithYourPokemon,"DAD: Hm?\pWell, if it isn't {PLAYER}!\nSo you're all finished moving in?\pI'm surprised that you managed to\nget here by yourself.\pOh, I see.\nYou're with your COMPANION.\pHm… Then I guess you're going to\nbecome a TRAINER like me, {PLAYER}.\pThat's great news!\nI'll be looking forward to it!$",
+PetalburgCity_Gym_Text_WallyIdLikeAPokemon,"Um… I…\nI'd like to get a COMPANION, please…$",
+PetalburgCity_Gym_Text_DadOhYoureWallyRight,"DAD: Hm? You're… Uh… Oh, right.\nYou're OWEN's boy, LUKE, right?$",
+PetalburgCity_Gym_Text_WallyIveNeverCaughtAPokemon,"LUKE: I'm going to go stay with my\nrelatives in ANCHORHEAD.\pI thought I would be lonely by myself,\nso I wanted to take a COMPANION along.\pBut I've never caught a COMPANION.\nI don't know how…$",
+PetalburgCity_Gym_Text_DadPlayerGoWithWally,"DAD: {PLAYER}, you heard that,\nright?\pGo with LUKE and make sure that he\nsafely catches a COMPANION.$",
+PetalburgCity_Gym_Text_IllLoanYouMyZigzagoon,"LUKE, here, I'll loan you my SCURRIER.\pLUKE received a SCURRIER!$",
+PetalburgCity_Gym_Text_WallyThankYouAndDadGivesPokeBall,"LUKE: Oh, wow!\nA COMPANION!\pDAD: Hm. Take a CAPTURE POD, too.\nGo for it!\pLUKE received a CAPTURE POD!$",
+PetalburgCity_Gym_Text_WallyThankYouBye,"LUKE: Thank you, yes, it did.\nHere's your COMPANION back.\p{PLAYER}, thank you for coming along\nwith me.\pYou two are why I was able to catch\nmy COMPANION.\pI promise I'll take really good\ncare of it.\pOh! Aunt BERU's waiting for me,\nso I have to go!\pBye, {PLAYER}!$",
+PetalburgCity_Gym_Text_DadGoCollectBadges,"DAD: Now…\p{PLAYER}, if you want to become a\nstrong TRAINER, here's my advice.\pHead for BESTINE beyond this\ntown.\pThere, you should challenge\nthe ARENA LEADER, BIGGS.\pAfter him, go on to the other\nARENAS and defeat their LEADERS.\pCollect SHARDS from them,\nunderstood?\pOf course, I'm an ARENA LEADER, too.\nWe'll battle one day, {PLAYER}.\pBut that's only after you become\nstronger.$",
+PetalburgCity_Gym_Text_NormanGoToRustboro,"DAD: Hm? Aren't you going to the\nARENA in BESTINE?\pThere's no challenge for me to\nbattle a greenhorn TRAINER.\p{PLAYER}, I want you to challenge me\nwhen you become a lot stronger.\pI'll battle you, {PLAYER}, when you\ncan show me four ARENA SHARDS, okay?$",
+PetalburgCity_Gym_Text_NormanGoToDewford,"DAD: I see… So, you've beaten\nthe ARENA LEADER in BESTINE.\pBut there are many more TRAINERS\nwho are stronger than you, {PLAYER}.\pOn KASHYYYK, in KACHIRHO, is an\nARENA LEADER named TARFFUL.\pYou should go challenge him.$",
+PetalburgCity_Gym_Text_YouHaveGottenStronger,"DAD: Hm… {PLAYER}, you have gotten\nstronger.\pI can tell by the number of SHARDS\nthat you've earned.$",
+PetalburgCity_Gym_Text_NormanIntro,"DAD: Hm…\nSo, you did get four ARENA SHARDS.\pFine, as I promised, we will have\na COMPANION battle.\p{PLAYER}…\pI'm so happy that I can have\na real battle with my own child.\pBut, a battle is a battle!\pI will do everything in my power as\nan ARENA LEADER to win.\p{PLAYER}, you'd better give it your\nbest shot, too!$",
+PetalburgCity_Gym_Text_NormanDefeat,"…\pI… I can't…\pI can't believe it. {PLAYER}…\pI lost to {PLAYER}?\pBut, rules are rules!\nHere, take this.$",
+PetalburgCity_Gym_Text_ReceivedBalanceBadge,{PLAYER} received the BALANCE SHARD\nfrom DAD!$,
+PetalburgCity_Gym_Text_ExplainBalanceBadgeTakeThis,"DAD: With that SHARD, the DEFENSE\nof all your COMPANIONS will increase.\pCOMPANIONS that know the HM SURF\nwill be able to travel over water.\pThis is my gift to you. {PLAYER}, I'm\nsure you can use it correctly.$",
+PetalburgCity_Gym_Text_ExplainFacade,"DAD: TM42 contains FACADE.\pIt doubles the power of moves if\nthe COMPANION is poisoned, paralyzed,\lor burned.\pIt might be able to turn a bad\nsituation into an advantage.$",
+PetalburgCity_Gym_Text_DadHappyAndSad,"DAD: As the ARENA LEADER, I can't\nexpress how upset I am…\pBut as a father, it makes me both\nhappy and a little sad. It's odd…$",
+PetalburgCity_Gym_Text_PleaseComeWithMe,"Ah, there you are, {PLAYER}{KUN}!\pPlease come with me.\nI have something I want you to have.$",
+PetalburgCity_Gym_Text_LetMeBorrowPlayer,"DORAN, you don't mind, do you?\pLet me borrow your {PLAYER}{KUN} for\na minute or two.$",
+PetalburgCity_Gym_Text_DadGoingToKeepTraining,"DAD: {PLAYER}, you should go visit\nyour mother every so often.\pI'm going to stay here and redouble\nmy training.\pIt would bother me as a TRAINER to\nnot avenge my loss to you, {PLAYER}!$",
+PetalburgCity_Gym_Text_DadNoAmountOfTrainingIsEnough,"DAD: {PLAYER}, how are things going?\pThe world of COMPANIONS is deep.\pI honestly think that no amount of\ntraining would ever be enough.$",
+PetalburgCity_Gym_Text_GymGuideAdvice,"Hey, how's it going, ILUM-\nbound {PLAYER}?\pThe doors in this ARENA open when you\nbeat the awaiting TRAINERS.\pWhoops! The doors in this room are\nalready open, so don't attack me!\pThe TRAINERS of MOS ENTHA ARENA\nuse all kinds of items.\pThe door at the left leads to\nthe SPEED ROOM.\pThe door at the right leads to\nthe ACCURACY ROOM.\pThe room's name will be on\nthe door, so choose carefully.\pOnce you've chosen the door…\nWell, hey, go for it!$",
+PetalburgCity_Gym_Text_RandallPostBattle,Go on to the next room where a new\nchallenge awaits you.\pAt the left is the CONFUSION ROOM.\pThe right door leads to the DEFENSE\nROOM.$,"CONFUSION is the status here, not the move (MIND TRICK)"
+PetalburgCity_Gym_Text_RandallPostBadge,"Whomever you beat, and whomever you\nmay lose to, you never shirk from\ltraining yourself and your COMPANIONS.\pThat's what I think being an\nARENA LEADER is all about.$",
+PetalburgCity_Gym_Text_ParkerIntro,This is the CONFUSION ROOM.\pLet me see how well bonded you are\nwith your COMPANIONS!$,
+PetalburgCity_Gym_Text_GeorgePostBadge,"I'm going to keep training at ARENAS.\nOne day, I'll become a LEADER.$",
+PetalburgCity_Gym_Text_MaryPostBattle,"There are some even stronger\nTRAINERS waiting for you.\pThe left is the DEFENSE ROOM, and\nthe right is the RECOVERY ROOM.\pYour COMPANIONS' ATTACK power will be\non trial either way.$",
+PetalburgCity_Gym_Text_MaryPostBadge,Do you know what we're trying to\nachieve as TRAINERS?\pWe're striving to become soul mates\nwith our COMPANIONS.$,
+PetalburgCity_Gym_Text_JodyIntro,Our ARENA LEADER told us to go all out\nand beat you.\pEven if you happen to be the\nLEADER's kid!$,
+PetalburgCity_Gym_Text_JodyPostBattle,"The way you use your COMPANIONS…\nIt's like your father's style.\pGo on through! The ARENA LEADER, your\nfather, is waiting!$",
+PetalburgCity_Gym_Text_JodyPostBadge,"Sure, it's fine to make your COMPANIONS\nstronger.\pBut what decides the winner?\pWhy, it's the feelings TRAINERS have\nfor their COMPANIONS.$",
+PetalburgCity_Gym_Text_EnterConfusionRoom,"“CONFUSION ROOM,” the sign says.\pDo you want to go through?$",
+PetalburgCity_Gym_Text_EnterGymLeadersRoom,“ARENA LEADER'S ROOM\p“See for yourself what COMPANIONS\nawait you!” the sign says.\pDo you want to go through?$,
+PetalburgCity_Gym_Text_NormanPreRematch,"DAD: {PLAYER}…\nI had a feeling that you would come.\pI would never refuse to accept\na challenge from you.\pYou do understand, don't you?\pInside an ARENA, it doesn't matter that\nwe are a parent and child.\p…No, because we are parent and child,\nwe owe it to each other to do the best\lwe can. Isn't that right, {PLAYER}?$",
+PetalburgCity_Gym_Text_NormanRematchNeedTwoMons,"DAD: {PLAYER}…\nI had a feeling that you would come.\pI would never refuse to accept\na challenge from you.\pYou do understand, don't you?\pInside an ARENA, it doesn't matter that\nwe are a parent and child.\pHm? Wait a second, {PLAYER}.\pDo you only have one COMPANION that is\ncapable of battle?\pSorry, but you'll have to come back\nwith at least two COMPANIONS.$",
+PetalburgCity_House1_Text_TravelingIsWonderful,"Traveling is wonderful!\pWhen I was young, I roamed the stars\nand the canyons!$",
+PetalburgCity_House1_Text_GoOnAdventure,"Sigh…\pI wish I could go on an adventure\nwith some COMPANIONS…\pCrawl through the desert scrub…\nClimb rocky, rugged canyons…\pJump across the stars…\nWander about in dark caves…\pAnd, sometimes, even get a little\nhomesick…\pIt must be fabulous to travel!$",
+PetalburgCity_House2_Text_NormanBecameGymLeader,DORAN became our town's new\nARENA LEADER.\pI think he called his family over from\nthe Core Worlds.$,
+PetalburgCity_House2_Text_BattledNormanOnce,"I battled DORAN once, but, whew,\nhe was way too strong.\pHow would I put it?\pI just got the feeling that he\nlives for COMPANIONS.$",
+PetalburgCity_Mart_Text_WeakWillGrowStronger,"Even if a COMPANION is weak now,\nit will grow stronger.\pThe most important thing is love!\nLove for your COMPANIONS!$",
+PetalburgCity_Mart_Text_RepelIsUseful,"Do you use REPULSOR?\nIt keeps COMPANIONS away, so it's\luseful when you're in a hurry.$",
+PetalburgCity_PokemonCenter_1F_Text_PCStorageSystem,That HoloNet COMPANION Storage\nSystem…\pWhoever made it must be some kind\nof a scientific wizard!$,
+PetalburgCity_PokemonCenter_1F_Text_OranBerryRegainedHP,"When my COMPANION ate a\nHUBBA FRUIT, it regained HP!$",
+PetalburgCity_PokemonCenter_1F_Text_ManyTypesOfPokemon,"There are many types of COMPANIONS.\pAll types have their strengths and\nweaknesses against other types.\pDepending on the types of COMPANIONS,\na battle could be easy or hard.$",
+PetalburgCity_PokemonCenter_1F_Text_TreeckoIsGrassType,"For example, your KATARNKIT\nis a GRASS type.\pIt's strong against the WATER and\nGROUND types.\pBut, it's weak against FIRE-type\nCOMPANIONS.$",
+PetalburgCity_PokemonCenter_1F_Text_TorchicIsFireType,"For example, your SUNCHICK\nis a FIRE type.\pIt's strong against the GRASS and\nBUG types.\pBut, it's weak against WATER-type\nCOMPANIONS.$",
+PetalburgCity_PokemonCenter_1F_Text_MudkipIsWaterType,"For example, your MARSHLET\nis a WATER type.\pIt's strong against the FIRE type.\pBut, it's weak against GRASS-type\nand ELECTRIC-type COMPANIONS.$",
+PetalburgCity_WallysHouse_Text_ThanksForPlayingWithWally,"You're…\nAh, you must be {PLAYER}{KUN}, right?\pThank you for looking after LUKE a\nlittle while ago.\pHe's been restless ever since he was\nlittle. He dreams of the stars.\pWe've sent him to stay with friends\nin ANCHORHEAD for a while.\pThere's more water there, and\nfewer dust storms.\pWhat's that? Where's LUKE?\nHe's already left, our LUKE.\pI wonder where he could have\ngotten by now?$","Luke is restless, not frail (Beru speaking)"
+PetalburgCity_WallysHouse_Text_PleaseExcuseUs,"{PLAYER}{KUN}! Please excuse us for\ndragging you here this way.\pBut our LUKE's become so confident\nsince he went to ANCHORHEAD.\pWe owe it all to you!\pWhen LUKE left town, you helped\nhim catch a COMPANION, right?\pI think that made LUKE really\nhappy.\pActually, not just LUKE.\nIt made me, his uncle OWEN, happy too.\pHappy that he's gained such a great\nfriend as you.\pThis isn't a bribe or anything, but\nI'd really like you to have this.$",
+PetalburgCity_WallysHouse_Text_YouMetWallyInEverGrandeCity,"Oh? You met LUKE in\nILUM?\pOh, {PLAYER}{KUN}, don't be silly.\pHe may have grown up, but he\ncan't fly somewhere far away like\lthat all by himself.$",
+PetalburgCity_WallysHouse_Text_WallyLeftWithoutTelling,"I want you to keep this a secret\nfrom my husband…\pBut our LUKE left ANCHORHEAD\nwithout telling anyone.\pYou know, LUKE is reckless, but\nhe's surprisingly strong-willed.\pI'm sure that he'll come back safe\nand sound one day!$",
+PetalburgCity_WallysHouse_Text_WallyWasReallyHappy,LUKE was really happy when he told\nus that he caught a COMPANION.\pIt's been ages since I've seen him\nsmile like that.$,
+PetalburgCity_WallysHouse_Text_WonderHowWallyIsDoing,I wonder how our LUKE is doing?$,
+PetalburgCity_WallysHouse_Text_SurfGoAllSortsOfPlaces,"If your COMPANION can SURF, you'll be\nable to go to all sorts of places.$",
+PetalburgCity_WallysHouse_Text_WallyIsComingHomeSoon,LUKE's coming home soon.\nI'm looking forward to that.$,
+PetalburgCity_Gym_Text_DadHmISee,DAD: Hm. I see.$,"reviewed, no change needed"
+PetalburgCity_Gym_Text_WallyOhWowThankYou,"LUKE: Oh, wow!\nThank you!$",reviewed AUTO draft
+PetalburgCity_Gym_Text_WouldYouReallyComeWithMe,{PLAYER}… Would you really come\nwith me?$,"reviewed, no change needed"
+PetalburgCity_Gym_Text_DadSoDidItWorkOut,"DAD: So, did it work out?$","reviewed, no change needed"
+PetalburgCity_Gym_Text_GymGuidePostVictory,"{PLAYER}! Whoa! You've overcome even\nyour own father!\pLike, whoa!\nWhat a stunning turn of events!$","reviewed, no change needed"
+PetalburgCity_Gym_Text_RandallIntro,"The ability to attack before the\nopponent…\pJust that alone puts me at a great\nadvantage, don't you agree?$","reviewed, no change needed"
+PetalburgCity_Gym_Text_RandallDefeat,That was a magnificent battle!$,"reviewed, no change needed"
+PetalburgCity_Gym_Text_ParkerDefeat,I couldn't confuse your team enough…\nYou share a strong bond together.$,"reviewed, no change needed"
+PetalburgCity_Gym_Text_ParkerPostBattle,The next room is the STRENGTH ROOM.\nCan you withstand brute force?$,"reviewed, no change needed"
+PetalburgCity_Gym_Text_ParkerPostBadge,"After you beat our LEADER, the\ntraining has become a lot tougher.$","reviewed, no change needed"
+PetalburgCity_Gym_Text_GeorgeIntro,"Just when you think you're going to\nwin, your opponent restores HP…\pCan you just imagine how awful that\nmust feel?\pI'll show you exactly how awful it\nfeels!$","reviewed, no change needed"
+PetalburgCity_Gym_Text_GeorgeDefeat,I couldn't restore HP enough…\nWhat ATTACK power…$,"reviewed, no change needed"
+PetalburgCity_Gym_Text_GeorgePostBattle,"I should have expected no less from\nour LEADER's kid.\pNo, wait! A TRAINER's abilities are\nearned only through effort.\pI lost because my own efforts\nweren't enough.\pGo on! The ONE-HIT KO ROOM is next.$","reviewed, no change needed"
+PetalburgCity_Gym_Text_BerkeIntro,I'm not going to take it easy just\nbecause you're our LEADER's kid.\pI'll show you how horrid it is for\na COMPANION to take a critical hit!$,reviewed AUTO draft
+PetalburgCity_Gym_Text_BerkeDefeat,Your power…\nYou're the real deal.$,"reviewed, no change needed"
+PetalburgCity_Gym_Text_BerkePostBattle,"Your father really is strong.\nHe's a TRAINER worth my respect.\pAnd, I sense the same glow coming\nfrom you as your father.\pI hope that you'll stage a terrific\nbattle with your father!$","reviewed, no change needed"
+PetalburgCity_Gym_Text_BerkePostBadge,"Since your dad became the LEADER,\nthe TRAINERS of MOS ENTHA have\lbecome a lot tougher.$",reviewed AUTO draft
+PetalburgCity_Gym_Text_MaryIntro,Giggle…\nThis is the ACCURACY ROOM.\pIt's pretty nasty when every attack\nlands without fail.$,"reviewed, no change needed"
+PetalburgCity_Gym_Text_MaryDefeat,You were a cut above me…$,"reviewed, no change needed"
+PetalburgCity_Gym_Text_AlexiaIntro,"The higher the DEFENSE, the more\nreckless I can be in attack.$","reviewed, no change needed"
+PetalburgCity_Gym_Text_AlexiaDefeat,Our defenses weren't enough…$,"reviewed, no change needed"
+PetalburgCity_Gym_Text_AlexiaPostBattle,"I think you've taught me a valuable\nlesson here.\pNow, go on! The left door goes to\nthe STRENGTH ROOM.\pThe right door opens to\nthe ONE-HIT KO ROOM.\pBoth of them have TRAINERS who are\nskilled at offense.$","reviewed, no change needed"
+PetalburgCity_Gym_Text_AlexiaPostBadge,Hi! Have you tried using SURF?$,"reviewed, no change needed"
+PetalburgCity_Gym_Text_JodyDefeat,But… I went all out!$,"reviewed, no change needed"
+PetalburgCity_Gym_Text_DoorAppearsLocked,This door appears to be locked\nright now…$,"reviewed, no change needed"
+PetalburgCity_Gym_Text_EnterSpeedRoom,"“SPEED ROOM,” the sign says.\pDo you want to go through?$","reviewed, no change needed"
+PetalburgCity_Gym_Text_DoorAppearsLocked2,This door appears to be locked\nright now…$,"reviewed, no change needed"
+PetalburgCity_Gym_Text_EnterAccuracyRoom,"“ACCURACY ROOM,” the sign says.\pDo you want to go through?$","reviewed, no change needed"
+PetalburgCity_Gym_Text_EnterDefenseRoom,"“DEFENSE ROOM,” the sign says.\pDo you want to go through?$","reviewed, no change needed"
+PetalburgCity_Gym_Text_EnterRecoveryRoom,"“RECOVERY ROOM,” the sign says.\pDo you want to go through?$","reviewed, no change needed"
+PetalburgCity_Gym_Text_EnterStrengthRoom,"“STRENGTH ROOM,” the sign says.\pDo you want to go through?$","reviewed, no change needed"
+PetalburgCity_Gym_Text_EnterOHKORoom,"“ONE-HIT KO ROOM,” the sign says.\pDo you want to go through?$","reviewed, no change needed"
+PetalburgCity_Gym_Text_GymStatue,MOS ENTHA ARENA$,reviewed AUTO draft
+PetalburgCity_Gym_Text_GymStatueCertified,MOS ENTHA ARENA\pDORAN'S CERTIFIED TRAINERS:\n{PLAYER}$,reviewed AUTO draft
+PetalburgCity_Gym_Text_NormanRematchDefeat,Uh… Haha…\nMaybe that was going too hard…$,"reviewed, no change needed"
+PetalburgCity_Gym_Text_NormanPostRematch,"DAD: {PLAYER}…\nWhat is your dream?\pMy dream…\nHahaha…\lIt has already come true, actually.$","reviewed, no change needed"
+PetalburgCity_Mart_Text_TakeSomeAntidotesWithYou,"Do you have any ANTITOXINS with\nyou?\pIf you walk around with a poisoned\nCOMPANION, it will lose HP until it\lfaints. Take some ANTITOXINS with you.$",reviewed AUTO draft
+Route102_Text_CalvinIntro,"If you have COMPANION with you, then\nyou're an official COMPANION TRAINER!\lYou can't say no to my challenge!$",reviewed AUTO draft
+Route102_Text_CalvinDefeated,"Arrgh, I lost…\nI should have trained mine more…$","reviewed, no change needed"
+Route102_Text_CalvinPostBattle,"Listen, you. If you're strong,\nyou should have told me before!$","reviewed, no change needed"
+Route102_Text_CalvinRegister,"I've been working hard at this since\nI saw you before.\pI'd like to battle you again, so can\nyou register me in your COMLINK?$",reviewed AUTO draft
+Route102_Text_CalvinRegisterShort,"I'd like to battle you again, so can\nyou register me in your COMLINK?$",reviewed AUTO draft
+Route102_Text_CalvinRematchIntro,"Ever since I lost to you, I desperately\ntrained my COMPANION.\lYou can't say no to my challenge!$",reviewed AUTO draft
+Route102_Text_CalvinRematchDefeated,"Arrgh, I lost…\nIs my training method not right?$","reviewed, no change needed"
+Route102_Text_CalvinRematchPostBattle,"If you're going to get stronger,\nI'll get stronger, too.$","reviewed, no change needed"
+Route102_Text_AllenIntro,Did you just become a TRAINER?\nWe're both beginners!$,"reviewed, no change needed"
+Route102_Text_AllenDefeated,I called you because I thought\nI could beat you…$,"reviewed, no change needed"
+Route102_Text_AllenPostBattle,I haven't won once yet…\nI wish I would win soon…$,"reviewed, no change needed"
+Route102_Text_RickIntro,Hahah! Our eyes met!\nI'll take you on with my BUG COMPANION!$,reviewed AUTO draft
+Route102_Text_RickDefeated,Ow! Down and out!$,"reviewed, no change needed"
+Route102_Text_RickPostBattle,"If you lock eyes with a TRAINER,\nyou have to challenge! It's a rule!$","reviewed, no change needed"
+Route102_Text_TianaIntro,I'm going to keep winning and aim\nto be the best TRAINER.\pHelp me further my career!$,"reviewed, no change needed"
+Route102_Text_TianaDefeated,I ended up furthering your career…$,"reviewed, no change needed"
+Route102_Text_TianaPostBattle,"To keep winning my way up, I see that\nI have to catch more COMPANIONS.$",reviewed AUTO draft
+Route103_Text_DaisyIntro,Did you feel the tug of our\nsoul-soothing fragrance?$,"reviewed, no change needed"
+Route103_Text_DaisyDefeated,You weren't led astray by our aroma…$,"reviewed, no change needed"
+Route103_Text_DaisyPostBattle,Aromatherapy is a form of mental\nhealing that works with fragrances.$,"reviewed, no change needed"
+Route103_Text_AmyIntro,ARA: I'm AMY.\nAnd this is my little sister LIV.\lWe battle together!$,reviewed AUTO draft
+Route103_Text_AmyDefeated,"ARA: Uh-oh, we lost.$",reviewed AUTO draft
+Route103_Text_AmyPostBattle,ARA: You have to think about all\nkinds of things when you're battling\lagainst two TRAINERS.$,reviewed AUTO draft
+Route103_Text_AmyNotEnoughPokemon,"ARA: Uh-oh, you have only one\nCOMPANION with you.\lYou can't battle us like that.$",reviewed AUTO draft
+Route103_Text_LivIntro,LIRA: We battle together as one\nteam.$,reviewed AUTO draft
+Route103_Text_LivDefeated,"LIRA: Oh, we lost, big sister…$",reviewed AUTO draft
+Route103_Text_LivPostBattle,"LIRA: We work perfectly together,\nme and my big sister…\pBut we still lost…$",reviewed AUTO draft
+Route103_Text_AmyLivRegister,"LIRA: Really, we're a lot better…\nIt's true! We'll show you next time!$",reviewed AUTO draft
+Route103_Text_LivNotEnoughPokemon,"LIRA: If you want to battle us,\nyou have to have two COMPANIONS!\lIt's not fair if you don't!$",reviewed AUTO draft
+Route103_Text_AmyRematchIntro,ARA: I'm AMY.\nAnd this is my little sister LIV.\lWe battle together!$,reviewed AUTO draft
+Route103_Text_AmyRematchDefeated,"ARA: Aww, boo!\nWe couldn't win again…$",reviewed AUTO draft
+Route103_Text_AmyRematchPostBattle,ARA: You have to think about all\nkinds of things when you're battling\lagainst two TRAINERS.$,reviewed AUTO draft
+Route103_Text_AmyRematchNotEnoughPokemon,"ARA: Uh-oh, you have only one\nCOMPANION with you.\lYou can't battle us like that.$",reviewed AUTO draft
+Route103_Text_LivRematchIntro,LIRA: We battle together as one\nteam.$,reviewed AUTO draft
+Route103_Text_LivRematchDefeated,"LIRA: Awww, we lost again…\nBig sister…$",reviewed AUTO draft
+Route103_Text_LivRematchPostBattle,"LIRA: We work perfectly together,\nme and my big sister…\pBut why did we lose again?$",reviewed AUTO draft
+Route103_Text_LivRematchNotEnoughPokemon,"LIRA: If you want to battle us, you\nhave to have two COMPANIONS!\lIt's not fair if you don't!$",reviewed AUTO draft
+Route103_Text_AndrewIntro,Gah! My fishing line's all snarled up!\nI'm getting frustrated and mean!\lThat's it! Battle me!$,"reviewed, no change needed"
+Route103_Text_AndrewDefeated,Gah! Lost it!\nI'm even more annoyed now!$,"reviewed, no change needed"
+Route103_Text_AndrewPostBattle,"Gah, I'm still boiling mad…\nGrrrrr…$","reviewed, no change needed"
+Route103_Text_MiguelIntro,My COMPANION is delightfully adorable!\nDon't be shy--I'll show you!$,reviewed AUTO draft
+Route103_Text_MiguelDefeated,"Oh, my gosh!\nMy darling COMPANIONS!$",reviewed AUTO draft
+Route103_Text_MiguelPostBattle,My delightful COMPANION looks darling\neven when it's fainted!$,reviewed AUTO draft
+Route103_Text_MiguelRegister,I'll get you to come out and look in\non my delightful COMPANION again!$,reviewed AUTO draft
+Route103_Text_MiguelRematchIntro,"Hi, you! My delightfully adorable\nCOMPANION has become more darling!$",reviewed AUTO draft
+Route103_Text_MiguelRematchDefeated,Oh!\nMy darling COMPANIONS!$,reviewed AUTO draft
+Route103_Text_MiguelRematchPostBattle,"The more I spend time with it, the more\nadorable my COMPANION becomes.$",reviewed AUTO draft
+Route103_Text_PeteIntro,This sort of distance…\nYou should just swim it!$,"reviewed, no change needed"
+Route103_Text_PeteDefeated,"Oh, that's good going!$","reviewed, no change needed"
+Route103_Text_PetePostBattle,"Oh, I understand where you're coming\nfrom now.\pIf I had a COMPANION that trusty,\nI'd want to SURF on it, too!$",reviewed AUTO draft
+Route103_Text_IsabelleIntro,Watch where you're going!\nWe're going to crash!$,"reviewed, no change needed"
+Route103_Text_IsabelleDefeated,Groan…$,"reviewed, no change needed"
+Route103_Text_IsabellePostBattle,I'm a poor swimmer so I was practicing…\nSorry for almost crashing into you.$,"reviewed, no change needed"
+Route103_Text_RhettIntro,Whoa!\nHow'd you get into a space this small?$,"reviewed, no change needed"
+Route103_Text_RhettDefeated,Whoa!\nThe kid can rock!$,"reviewed, no change needed"
+Route103_Text_RhettPostBattle,Do you like cramped quarters\nlike this?$,"reviewed, no change needed"
+Route103_Text_MarcosIntro,Did my guitar's wailing draw you in?$,"reviewed, no change needed"
+Route103_Text_MarcosDefeated,My one-man show is ruined…$,"reviewed, no change needed"
+Route103_Text_MarcosPostBattle,"I was playing my guitar where few\npeople were around, but a lot of fans\lhave gathered.\pHeh, maybe I should turn pro.$","reviewed, no change needed"

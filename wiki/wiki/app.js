@@ -77,7 +77,7 @@ async function renderHome() {
   const categories = Object.entries(state.facets.categories).sort((a, b) => b[1] - a[1]);
   content.innerHTML = `
     <section class="hero-band">
-      <div class="hero-copy"><div class="eyebrow">A living reference snapshotted from the pokeemerald source</div><h1>Emerald Archive</h1><p>A connected guide to the people, places, objects and events across Pokémon Emerald, extracted from the game source.</p></div>
+      <div class="hero-copy"><div class="eyebrow">The Star Wars rewrite of the Emerald database</div><h1>Star Wars Emerald Archive</h1><p>Every Emerald row mapped to its Star Wars replacement: hotswaps, net-new content and pending art.</p></div>
       <div class="hero-stat"><strong>${fmtNumber(entityCount)}</strong><span>indexed entries</span></div>
     </section>
     <div class="stats-grid">${state.tables.map((table) => `<div class="stat-tile"><span>${esc(label(table.name))}</span><strong>${fmtNumber(table.count)}</strong></div>`).join("")}</div>

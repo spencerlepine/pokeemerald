@@ -1,0 +1,109 @@
+text_id,sw_text_raw,notes
+AbandonedShip_CaptainsOffice_Text_ThisIsSSCactus,This ship was the REPUBLIC cruiser\nTIDE RUNNER. It's from the Clone Wars.$,S.S. CACTUS -> REPUBLIC cruiser TIDE RUNNER (Republic Wreck)
+AbandonedShip_Corridors_1F_Text_CharlieIntro,What's so funny about having my inner\ntube aboard the wreck?$,
+AbandonedShip_Corridors_B1F_Text_DuncanIntro,"When we go out to sea, we SAILORS\nalways bring our COMPANIONS.\lHow about a quick battle?$",
+AbandonedShip_Corridors_B1F_Text_YayItsAShip,Yay!\nIt's a starship!$,
+AbandonedShip_Rooms2_1F_Text_KiraPostRematch,KEZA: We're not leaving until we raise\nour COMPANIONS some more and we find\lthe treasures here!$,
+AbandonedShip_Rooms_1F_Text_ThaliaIntro,What in the galaxy would compel you to\ncome here? You must be curious!$,
+AbandonedShip_Rooms_1F_Text_ThaliaRematchIntro,What in the galaxy would compel you to\ncome back? You must really be curious!$,
+AbandonedShip_Rooms_B1F_Text_GettingQueasy,"Urrrrppp…\pI'm getting queasy just being aboard\nthis ship…\pIt's not even moving, but…$",
+AbandonedShip_CaptainsOffice_Text_NoSuccessFindingScanner,"I'm investigating this ship on behalf\nof RIC OLIé.\pHe asked me to find a DATA SCANNER,\nbut I haven't had any luck…$",
+AbandonedShip_Corridors_B1F_Text_DuncanPostBattle,"The ship's bottom has sunk into the\ndepths.\pIf a COMPANION could go underwater,\nwe might make some progress…$",
+AbandonedShip_Rooms2_1F_Text_DanRematchIntro,"DOV: We've been searching for\ntreasures all this time.\pOur COMPANIONS have grown stronger.\nLet us show you, okay?$",
+SSTidal_Text_FastCurrentsHopeYouEnjoyVoyage,This starliner is built to fly\nthrough the roughest hyperlanes.\pWe hope you enjoy your voyage with us.\nFeel free to explore the ship.$,
+SSTidal_Text_HopeYouEnjoyVoyage,We hope you enjoy your voyage on\nour starliner.$,
+SSTidal_Text_MadeLandInSlateport,We have landed at MOS EISLEY.\nThank you for flying with us.$,
+SSTidal_Text_MadeLandInLilycove,We have landed at CLOUD CITY.\nThank you for flying with us.$,
+SSTidalCorridor_Text_CanRestInCabin2,"It'll be some time before we land,\nI reckon.\pYou can rest up in your cabin if you'd\nlike. Your cabin's No. 2.\pThe bed in there is soft and plushy.\nI can attest to how comfy it is!$",
+SSTidalCorridor_Text_VisitOtherCabins,Go visit other cabins.\nTRAINERS bored of the flight will\lbe itching to battle.$,
+SSTidalCorridor_Text_HorizonSpreadsBeyondPorthole,Stars streak past beyond\nthe viewport.$,
+SSTidalCorridor_Text_BrineyWelcomeAboard,"HAN: Welcome aboard, {PLAYER}{KUN}!\pThey made me honorary captain of\nthe STAR TIDAL!\pYou can call me CAPTAIN HAN now!\pYou know, I swore I'd never fly a\nbig, slow liner like this…\pBut look at her! She stirred my\nsleeping soul as a pilot!$",
+SSTidalCorridor_Text_Peeko,CHEWIE: Rrrwaaaghh!$,"Chewbacca is a person, not a Wingull"
+SSTidalCorridor_Text_ScottBattleFrontierInvite,"LANDO: Well, hi, hi!\n{PLAYER}{KUN}, {PLAYER}{KUN}!\pSomething's come up, so I have to\ndisembark, but am I glad to see you!\pCongratulations, ILUM CHAMPION!\pThere's a place I'd like to invite\nsomeone like you.\pIt's the…\nGRAND ARENA!\pWhat's the place like?\nYou'll understand when you see it!\pI've spoken with the ship's CAPTAIN\nabout this.\pThe next time you take the starliner,\nyou should be able to fly to\lthe GRAND ARENA.\pOkay, {PLAYER}{KUN}, I'll be waiting for you\nat the GRAND ARENA!$",
+SSTidalLowerDeck_Text_LeonardIntro,This is the bottom of the ship's hull.\nThere's plenty of room.\lIt'll be all right for a battle.$,
+SSTidalRooms_Text_ColtonIntro,"I often fly to CLOUD CITY.\pI enjoy attending SHOWCASES,\nyou see.$",
+SSTidalRooms_Text_ColtonPostBattle,I get so excited imagining what kinds\nof COMPANIONS I'll see in the next\lSHOWCASE. The anticipation thrills!$,
+SSTidalRooms_Text_GarretPostBattle,Perhaps I shall get Father to acquire\na yacht for me.\lA star yacht for me and COMPANIONS!$,
+SSTidalRooms_Text_NaomiPostBattle,"A galaxy cruise on a luxury liner has\nits charms, I must say…\pBut, I will admit there is an appealing\nside to touring the OUTER RIM like this.$",
+SSTidalRooms_Text_MicahPostBattle,"Friends need not be human.\nFor me, COMPANIONS are true friends!$",
+SSTidalRooms_Text_JedIntro,"JOSS: I feel a little shy, but…\nWe'll show you our lovey-dovey power!$",
+SSTidalRooms_Text_JedPostBattle,JOSS: It's the first time our lovey-\ndovey power couldn't prevail!\lYou must be an awesome TRAINER!$,
+FarawayIsland_Entrance_Text_SailorReturn,CAPTAIN HAN can be so maddeningly\nfickle…\pDo you want to return to CLOUD CITY?$,
+FarawayIsland_Interior_Text_Mew,Myuu…$,
+AbandonedShip_CaptainsOffice_Text_OhCanYouDeliverScanner,"Oh! That's a DATA SCANNER!\pListen, can I get you to deliver that\nto RIC OLIé?\pI want to investigate this ship a\nlittle more.$",reviewed AUTO draft
+AbandonedShip_Corridors_1F_Text_CharlieDefeat,"Whoa, you overwhelmed me!$","reviewed, no change needed"
+AbandonedShip_Corridors_1F_Text_CharliePostBattle,It's not easy throwing CAPTURE PODS\nwhile hanging on to an inner tube!$,reviewed AUTO draft
+AbandonedShip_Corridors_1F_Text_IsntItFunHere,Isn't it fun here?\nI get excited just being here!$,"reviewed, no change needed"
+AbandonedShip_Corridors_B1F_Text_DuncanDefeat,"Whoops, I'm sunk!$","reviewed, no change needed"
+AbandonedShip_Corridors_B1F_Text_DoorIsLocked,The door is locked.\p“STORAGE” is painted on the door.$,"reviewed, no change needed"
+AbandonedShip_Corridors_B1F_Text_InsertedStorageKey,"{PLAYER} inserted and turned the\nSTORAGE KEY.\pThe inserted KEY stuck fast,\nbut the door opened.$","reviewed, no change needed"
+AbandonedShip_Text_TheDoorIsOpen,The door is open.$,"reviewed, no change needed"
+AbandonedShip_HiddenFloorCorridors_Text_Rm1DoorIsLocked,The door is locked.\p“RM. 1” is painted on the door.$,"reviewed, no change needed"
+AbandonedShip_HiddenFloorCorridors_Text_Rm2DoorIsLocked,The door is locked.\p“RM. 2” is painted on the door.$,"reviewed, no change needed"
+AbandonedShip_HiddenFloorCorridors_Text_Rm4DoorIsLocked,The door is locked.\p“RM. 4” is painted on the door.$,"reviewed, no change needed"
+AbandonedShip_HiddenFloorCorridors_Text_Rm6DoorIsLocked,The door is locked.\p“RM. 6” is painted on the door.$,"reviewed, no change needed"
+AbandonedShip_HiddenFloorCorridors_Text_InsertedKey,"{PLAYER} inserted and turned the\nKEY.\pThe inserted KEY stuck fast,\nbut the door opened.$","reviewed, no change needed"
+AbandonedShip_HiddenFloorRooms_Text_BrightShinyTrash,It's bright and shiny!\nBut it's just trash…$,"reviewed, no change needed"
+AbandonedShip_Rooms2_1F_Text_DanIntro,"DOV: While searching for treasures,\nwe discovered a TRAINER!$",reviewed AUTO draft
+AbandonedShip_Rooms2_1F_Text_DanDefeat,DOV: We couldn't win even though\nwe worked together…$,reviewed AUTO draft
+AbandonedShip_Rooms2_1F_Text_DanPostBattle,DOV: We can't find any treasures…\nI wonder if someone got them already?$,reviewed AUTO draft
+AbandonedShip_Rooms2_1F_Text_DanNotEnoughMons,DOV: You don't even have two\nCOMPANIONS. You can't expect to beat\lus like that.$,reviewed AUTO draft
+AbandonedShip_Rooms2_1F_Text_KiraIntro,KEZA: Oh?\nWe were searching for treasures.\lBut we discovered a TRAINER instead!$,reviewed AUTO draft
+AbandonedShip_Rooms2_1F_Text_KiraDefeat,"KEZA: Ooh, so strong!$",reviewed AUTO draft
+AbandonedShip_Rooms2_1F_Text_KiraPostBattle,KEZA: Where could the treasures be?\pI've already decided what I'm buying\nwhen we find the treasures!$,reviewed AUTO draft
+AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons,"KEZA: Oh, you don't have two\nCOMPANIONS? We'll have to battle some\lother time!$",reviewed AUTO draft
+AbandonedShip_Rooms2_1F_Text_KiraRegister,"KEZA: Oh, you make me so angry!\nI'm going to register you for that!$",reviewed AUTO draft
+AbandonedShip_Rooms2_1F_Text_DanRematchDefeat,"DOV: You're strong, as usual!$",reviewed AUTO draft
+AbandonedShip_Rooms2_1F_Text_DanPostRematch,"DOV: We can't find any treasures,\nwe lose at COMPANION…\pI want to go home… But if I say that,\nshe gets all angry with me…$",reviewed AUTO draft
+AbandonedShip_Rooms2_1F_Text_DanRematchNotEnoughMons,DOV: You don't even have two\nCOMPANIONS. You can't expect to beat\lus like that.$,reviewed AUTO draft
+AbandonedShip_Rooms2_1F_Text_KiraRematchIntro,"KEZA: Oh? We meet again!\pJust like us, you still haven't given up\nsearching for treasures, have you?\pWant to make it so the loser has\nto give up searching?$",reviewed AUTO draft
+AbandonedShip_Rooms2_1F_Text_KiraRematchDefeat,"KEZA: Oh, we lost again…$",reviewed AUTO draft
+AbandonedShip_Rooms2_1F_Text_KiraRematchNotEnoughMons,"KEZA: Oh, you don't have two\nCOMPANIONS? We'll have to battle some\lother time!$",reviewed AUTO draft
+AbandonedShip_Rooms2_1F_Text_JaniIntro,"I'm not good at swimming,\nbut I am good at battles!$","reviewed, no change needed"
+AbandonedShip_Rooms2_1F_Text_JaniDefeat,Oops.\nThat didn't go very well.$,"reviewed, no change needed"
+AbandonedShip_Rooms2_1F_Text_JaniPostBattle,Walking around barefoot in this ship\nis kind of gross.$,"reviewed, no change needed"
+AbandonedShip_Rooms2_1F_Text_GarrisonIntro,Strength and compassion…\nThose are a TRAINER's treasures!$,"reviewed, no change needed"
+AbandonedShip_Rooms2_1F_Text_GarrisonDefeat,"Ah, there is something about you\nthat sparkles.$","reviewed, no change needed"
+AbandonedShip_Rooms2_1F_Text_GarrisonPostBattle,"In a cabin somewhere on board,\nI saw something sparkle.$","reviewed, no change needed"
+AbandonedShip_Rooms2_B1F_Text_PerfectPlaceToGoExploring,This is a perfect place to go exploring!\nIt's exciting here!\pI bet there're amazing treasures on\nboard.$,"reviewed, no change needed"
+AbandonedShip_Rooms_1F_Text_TakingALookAround,"Ships of this sort are rare, so I'm\ntaking a look around.\pHmhm…\nThere appear to be other cabins…$","reviewed, no change needed"
+AbandonedShip_Rooms_1F_Text_ThaliaDefeat,"Not just curious, but also strong…$","reviewed, no change needed"
+AbandonedShip_Rooms_1F_Text_ThaliaPostBattle,"The man next door…\pHe says he's just sightseeing,\nbut I don't know about that.$","reviewed, no change needed"
+AbandonedShip_Rooms_1F_Text_ThaliaRegister,You're such a tough TRAINER!\nLet me register you as a memento!$,"reviewed, no change needed"
+AbandonedShip_Rooms_1F_Text_ThaliaRematchDefeat,Aren't you too strong?$,"reviewed, no change needed"
+AbandonedShip_Rooms_1F_Text_ThaliaPostRematch,I'm sure that man's up to something!\nHe just acts so suspiciously!$,"reviewed, no change needed"
+AbandonedShip_Rooms_1F_Text_DemetriusIntro,Waaah!\nI've been found! …Huh?$,"reviewed, no change needed"
+AbandonedShip_Rooms_1F_Text_DemetriusDefeat,"Oh, you're not my mom.$","reviewed, no change needed"
+AbandonedShip_Rooms_1F_Text_DemetriusPostBattle,"I'm in trouble with my mom, so I ran.\nKeep it a secret where I am!$","reviewed, no change needed"
+FarawayIsland_Interior_Text_TheFeelingOfBeingWatchedFaded,The feeling of being watched faded…$,"reviewed, no change needed"
+SSTidalCorridor_Text_WeveArrived,We've arrived!$,"reviewed, no change needed"
+SSTidalCorridor_Text_EnjoyYourCruise,Enjoy your cruise!$,"reviewed, no change needed"
+SSTidalCorridor_Text_Cabin1,Cabin 1$,"reviewed, no change needed"
+SSTidalCorridor_Text_Cabin2,Cabin 2$,"reviewed, no change needed"
+SSTidalCorridor_Text_Cabin3,Cabin 3$,"reviewed, no change needed"
+SSTidalCorridor_Text_Cabin4,Cabin 4$,"reviewed, no change needed"
+SSTidalLowerDeck_Text_PhillipIntro,Arrrgh! I'm fed up and dog-tired of\ncleaning this huge place!\pLet's have a quick battle!$,"reviewed, no change needed"
+SSTidalLowerDeck_Text_PhillipDefeat,"Little bro, I lost!$","reviewed, no change needed"
+SSTidalLowerDeck_Text_PhillipPostBattle,"We're the CLEANUP BROTHERS!\pThe old one dumps the detergent,\nand the young one does the scrubbing!$","reviewed, no change needed"
+SSTidalLowerDeck_Text_LeonardDefeat,"Big bro, I lost!$","reviewed, no change needed"
+SSTidalLowerDeck_Text_LeonardPostBattle,"We're the CLEANUP BROTHERS!\pThe old one dumps the detergent,\nand the young one does the scrubbing!$","reviewed, no change needed"
+SSTidalRooms_Text_TakeRestOnBed,There's a bed…\nLet's take a rest.$,"reviewed, no change needed"
+SSTidalRooms_Text_ColtonDefeat,That was an enjoyable match!$,"reviewed, no change needed"
+SSTidalRooms_Text_MicahIntro,Are your friends strong?$,"reviewed, no change needed"
+SSTidalRooms_Text_MicahDefeat,"Your friends are, indeed, strong.$","reviewed, no change needed"
+SSTidalRooms_Text_ThomasIntro,Child…\nDid you knock on the door?$,"reviewed, no change needed"
+SSTidalRooms_Text_ThomasDefeat,A loss is to be accepted without haste\nor panic.$,"reviewed, no change needed"
+SSTidalRooms_Text_ThomasPostBattle,To be never ruffled in any situation is\nthe GENTLEMAN's code of conduct.$,"reviewed, no change needed"
+SSTidalRooms_Text_JedDefeat,JOSS: Sigh…$,reviewed AUTO draft
+SSTidalRooms_Text_JedNotEnoughMons,JOSS: You only have one COMPANION?\nIsn't that just too lonesome?$,reviewed AUTO draft
+SSTidalRooms_Text_LeaIntro,"LYA: I feel a little silly, but…\nWe'll show you our lovey-dovey power!$",reviewed AUTO draft
+SSTidalRooms_Text_LeaDefeat,"LYA: Oh, boo!$",reviewed AUTO draft
+SSTidalRooms_Text_LeaPostBattle,LYA: I can't believe it!\nOur lovey-dovey power failed…\lYou must be an awesome TRAINER!$,reviewed AUTO draft
+SSTidalRooms_Text_LeaNotEnoughMons,LYA: I wanted to battle… But you don't\neven have two COMPANIONS…$,reviewed AUTO draft
+SSTidalRooms_Text_GarretIntro,"Ah, you've come just in time.\pI'm bored, you see.\nYou may entertain me.$","reviewed, no change needed"
+SSTidalRooms_Text_GarretDefeat,…That will do.$,"reviewed, no change needed"
+SSTidalRooms_Text_NaomiIntro,"Oh, you're such an adorable TRAINER.\nWould you like to have tea?\lOr would you rather battle?$","reviewed, no change needed"
+SSTidalRooms_Text_NaomiDefeat,I see.\nYou're the active sort.$,"reviewed, no change needed"
+SSTidalRooms_Text_NotSuspiciousTakeThis,"Uh… Hi! I… I'm not acting suspicious!\nUh… You can have this! For free!\pIt… Honestly, I didn't SNATCH it from\nsomeone! I'd never do such a thing!\lIt's clean! You can use it!$","reviewed, no change needed"
+SSTidalRooms_Text_ExplainSnatch,SNATCH steals the beneficial effects\nof certain moves before they can be\lused by a foe or ally.$,"reviewed, no change needed"
+IslandCave_Braille_RunLapAroundWall,STAY CLOSE\nTO THE WALL.\nRUN AROUND\nONE LAP.$,"reviewed, no change needed"

@@ -1,0 +1,309 @@
+text_id,sw_text_raw,notes
+AquaHideout_1F_Text_OurBossIsSnatchingSomething,What? What? What do you want with\nthe CARTEL?\pThe mighty JABBA isn't here! He's gone\noff to snatch something important!\p… …\nWhere did he go?\pWahaha! Do you really think I'd tell\nyou something that crucial?$,
+AquaHideout_1F_Text_BossWentToJackASubmarine,What? What? What do you want with\nthe CARTEL?\pThe mighty JABBA isn't here! \nHe's gone off to jack a submarine!\p… …\nWhere did he go?\pWahaha! Do you really think I'd tell\nyou something that crucial?$,
+AquaHideout_1F_Text_BossIsOnRoute122,What? What? What do you want with\nthe CARTEL?\pThe mighty JABBA isn't here! He's on his\nway to the JEDHA TEMPLE!\p… …\nWhy did he go?\pWahaha! Do you really think I'd tell\nyou something that crucial?$,
+AquaHideout_1F_Text_BossIsInSlateportCity,What? What? What do you want with\nthe CARTEL?\pThe mighty JABBA isn't here! \nHe's on his way to MOS EISLEY!\p… …\nWhy did he go?\pWahaha! Do you really think I'd tell\nyou something that crucial?$,
+AquaHideout_1F_Text_WhereMightMagmaHideoutBe,What? What?\nAre you an EMPIRE spy?\pI hear that the EMPIRE is trying to\nawaken an awesome COMPANION at their\lFORTRESS.\pBut where might their FORTRESS be?$,
+AquaHideout_1F_Text_TeamMagmaAtMtChimney,What? What?\nAre you an EMPIRE spy?\pI hear that the EMPIRE is after an\nawesome COMPANION at MUSTAFAR PEAK.\pBut what is that COMPANION like?$,
+AquaHideout_1F_Text_Grunt1PostBattle,"I took the loss for the CARTEL,\nbut I did my job…$",
+AquaHideout_B1F_Text_Grunt5PostBattle,"If you scurry too much, other CARTEL\nthugs might get you.$",
+AquaHideout_B1F_Text_Grunt7Intro,Hey!\nYou there!\pWhich do you think is cooler?\nThe CARTEL's outfits or the EMPIRE's?$,
+AquaHideout_B2F_Text_MattIntro,"BOBA FETT: …\pSo. You got this far.\pThe others were paid to slow you\ndown. I'm paid to stop you.\pNothing personal, kid.$","Boba Fett (Matt): terse bounty hunter, paid by Jabba; never catchable"
+AquaHideout_B2F_Text_MattDefeat,…Not bad.\nNot bad at all.$,
+AquaHideout_B2F_Text_OurBossGotThroughHisPreparations,"BOBA FETT: You fight well.\pBut while we were busy, JABBA\nfinished his preparations.$",
+AquaHideout_B2F_Text_MattPostBattle,"BOBA FETT: JABBA has gone to some\ncave under the sea.\pIf you want to give chase, search\nthe deep waters past YAVIN 4.\pYou won't find it.\nBut I'll be watching if you do.$",
+AquaHideout_B2F_Text_Grunt4PostBattle,Mighty JABBA…\nIs this good enough?$,
+AquaHideout_B2F_Text_Grunt6PostBattle,"That reminds me… I can't remember\nwhere I put the KYBER POD.\pIf I fail to guard it, JABBA will\nfeed me to the RANCOR…$",
+AquaHideout_B2F_Text_Grunt8Intro,"When I joined the CARTEL, the first\nthing I had to learn was how these\lwarp panels connected.$",
+LilycoveCity_Text_MayShoppingLetsBattle,"MIRA: Oh, hey?\n{PLAYER}{KUN}, are you shopping, too?\pI bought a whole bunch of DOLLS and\nPOSTERS.\pOf course, I've also caught a lot of\nCOMPANIONS, and I'm raising them\lproperly, too.\pActually, I'm more worried if you're\nraising COMPANIONS properly, {PLAYER}{KUN}.\pI'll battle with you, so you can show\nme your COMPANIONS, {PLAYER}{KUN}.$",
+LilycoveCity_Text_MayBattleMe,"MIRA: Come on, battle with me, so I can\ncheck out your COMPANIONS!$",
+LilycoveCity_Text_MayWontBeBeaten,"MIRA: The COMPANIONS I raised won't be\nbeaten by yours, {PLAYER}{KUN}!$",
+LilycoveCity_Text_BrendanShoppingLetsBattle,"KAEL: Oh, hey, it's {PLAYER}.\pI'm running an errand for my dad.\nNo, I'm not buying any DOLLS.\pAnyways, it's been a while.\pWant to have a battle to see who's been\nraising COMPANIONS better?$",
+LilycoveCity_Text_BrendanYouGoingToPokemonLeague,"{PLAYER}, what are you going to do?\pSince you're that strong, are you\ntaking the ILUM TEMPLE challenge?\pHeh, even me--if I trained my\nCOMPANIONS a bit more, I should be\lstronger than you, {PLAYER}.\pWell, anyway, hang in there!$",
+LilycoveCity_Text_BrendanYouGoingToBattleFrontier,"{PLAYER}, what are you going to do?\pAre you taking the GRAND ARENA\nchallenge?\pOr, are you going to complete your\nDATAPAD?\pSince you're that strong, you should\nconsider the GRAND ARENA.\pHeh, if I train my COMPANIONS a bit more,\nI'll get stronger than you, {PLAYER}.\pMaybe I should go to the GRAND\nARENA.\pWell, anyway, hang in there!$",
+LilycoveCity_Text_MovedLootIntoHideoutToday,Fufufu…\pWe moved more loot into our secret\nHIDEOUT today…\pWh-who are you?!\nI was just talking to myself!$,
+LilycoveCity_Text_ChanceToDoBigThings,"I'm just a THUG, so I don't know what\nthe mighty JABBA is thinking…\pBut being in the CARTEL, I know I'll get\nthe chance to do big things!\pWh-who are you?!\nI was just talking to myself!$",
+LilycoveCity_Text_DontGoNearCaveInCove,"Hey, you!\pDon't go near the old mine under\nthe city!\pWhy? You don't need a reason why!\nI'm an adult, so you just listen to me!$",
+LilycoveCity_Text_IfWorldBecomesOurs,"If this whole wide galaxy becomes ours,\nthe CARTEL's, it will be a happier\lplace for COMPANIONS, too.$",
+LilycoveCity_Text_WailmerLeapOutOfWater,There! AIWHALET!\nLeap out of the clouds now!$,
+LilycoveCity_Text_StrangeCaveInCove,Have you seen that strange old mine\nin the under-levels of the city?$,
+LilycoveCity_Text_TeamAquaBeenTrainingWailmer,The CARTEL's been training their\nAIWHALET by the docks.\pWe PILOTS can't get our cloud cars\nout with them in the way!$,
+LilycoveCity_Text_SomeonePuntedTeamAquaOut,"Hey, did you know?\pSomeone punted the CARTEL out of\nthe way for us!\pThat got the AIWHALET away from the\ndocks, so our cloud cars can fly again.$",
+LilycoveCity_Text_SomeoneStoleMyPokemon,I was taking a relaxing snooze at the\nsky inn to the sound of the wind…\pWhen someone stole my COMPANION!\pWho's the abductor?\nThe CARTEL? Is it the CARTEL?$,
+LilycoveCity_Text_TeamAquaRenovatedCavern,"Hm, you know of the old TIBANNA mine\nunder the city?\pIt had been abandoned for years,\nbut then that CARTEL lot came\lalong and made their renovations.\pThey call themselves\n“honest businessmen”!\pBut what they do and what they say\ndon't match at all!$",Aqua Hideout = old Tibanna mine under Cloud City
+LilycoveCity_Text_TeamAquaLotGoneForGood,"That old mine under the city…\pI didn't notice it right away,\nbut it's completely empty now.\pThat CARTEL lot, they must\nhave gone away for good.$",
+LilycoveCity_Text_ContestHallInTown,There's a SHOWCASE HALL\nright in this here town. \pThat means well-raised COMPANIONS will\ncome from all over the galaxy.\pMy heart swells with excitement!$,
+LilycoveCity_Text_GoingToMoveDeleterForHMs,"I'll teach my COMPANIONS some new\nmoves for entering a SHOWCASE.\pSo, I'm going to see the MOVE DELETER\nand make it forget HM moves.$",
+LilycoveCity_Text_ImFromKanto,I came from the CORE WORLDS.\pThe OUTER RIM is beautiful with\nall its wild worlds and nature.\pHunh? Wait a second…\pCould there be rare COMPANIONS that\nlive only in this area?$,
+LilycoveCity_Text_SeaRemainsForeverYoung,"Even as we grow old and wrinkled,\nthe cloud sea remains forever young\lwith the vivid brilliance of life…\pFwohoho fwohohohoho…$",
+LilycoveCity_Text_SixtyYearsAgoHusbandProposed,It was sixty years ago that my husband\nproposed to me here.\lThe clouds remain as beautiful as ever.\pMufufufu mufufufufufu…$,
+LilycoveCity_Text_CitySign,CLOUD CITY\p“The city that floats above\nthe clouds.”$,Cloud City floats above Bespin's cloud sea
+LilycoveCity_Text_HarborSignUnderConstruction,CLOUD CITY LANDING PLATFORM\p“The starliner STAR TIDAL is under\nconstruction in MOS EISLEY.\p“Service is scheduled to begin\nshortly.”$,
+LilycoveCity_Text_HarborSign,CLOUD CITY LANDING PLATFORM\p“Enjoy a delightful cruise on\nthe starliner STAR TIDAL.”$,
+LilycoveCity_Text_HeardTowerCalledSkyPillar,"I heard there's a tower somewhere out\nin the stars.\pIt's called the ASTEROID SPIRE, I hear.$",
+LilycoveCity_Text_BerrySuitsYou,"When it gets right down to it…\pThe same way suits suit me perfectly,\na crisp breeze suits the clouds.\pAnd you, a FRUIT suits you to a “T”…\pWhy should that be so?$",
+LilycoveCity_Text_PokeblocksSuitPokemon,"When it gets right down to it…\pThe way dignified simplicity suits me,\n{POKEBLOCK}S perfectly suit COMPANIONS.$",
+LilycoveCity_ContestHall_Text_GiveItBestSmartAppeal,"MC: Okay, SMART COMPANIONS and their\nTRAINERS, are you ready?!\pGive it your best showing!\nLet's appeal!$",
+LilycoveCity_ContestHall_Text_EnteredWrongContest,"Ayayayay…\nI entered the wrong SHOWCASE.\pI entered this tough COMPANIONS in\nthe SMARTNESS SHOWCASE…\pCome on, wow them with a smart-looking\nROCK SMASH.$",
+LilycoveCity_ContestHall_Text_RaisedMonToBeSmart,"I've spent many a year, and all my\nwisdom besides, raising this COMPANION\lto be smart.\pIt won't be easily bested by some\nyoung pup's COMPANIONS.\pMy dear wife, are you seeing this?$",
+LilycoveCity_ContestHall_Text_GanderAtAllThosePrettyPokemon,Wahahahah!\pWill you take a gander at all those\npretty COMPANIONS!\lI just love this sort of glitz!$,
+LilycoveCity_ContestHall_Text_CantWinOnBeautyAlone,You can't always win on just beauty\nalone.\pYou have to groom your COMPANION so\nit's nice and glossy like mine.$,
+LilycoveCity_ContestHall_Text_PokemonLooksLikeYoungerMe,"This pretty COMPANIONS looks just like\nme when I was younger.\pRight when I said that, my husband\nspewed the caf he was drinking.\pDid I say something funny?$",
+LilycoveCity_ContestHall_Text_ThatGirlThereIsCutest,I think that girl over there is\nthe cutest of the lot.\pWhat's that? They're judging\nCOMPANIONS by their looks?$,
+LilycoveCity_ContestHall_Text_BeautyContestStage,BEAUTY SHOWCASE STAGE\nBE ALLURED BY BEAUTIFUL COMPANIONS!$,
+LilycoveCity_ContestHall_Text_CuteContestStage,CUTENESS SHOWCASE STAGE\nBE CHARMED BY CUTE COMPANIONS!$,
+LilycoveCity_ContestHall_Text_SmartContestStage,SMARTNESS SHOWCASE STAGE\nBE IMPRESSED BY SMART COMPANIONS!$,
+LilycoveCity_CoveLilyMotel_1F_Text_GuestsDoubledByMascot,"Hm, so they doubled the guests by\nusing COMPANIONS as attractions?\pHm, well, maybe I should make a cute\nCOMPANION our inn's mascot.\pI wonder if that will attract more\nguests to stay with us?$",
+LilycoveCity_CoveLilyMotel_1F_Text_NoGuestsWithTeamAqua,"Oh, sorry, sorry!\nI was too involved in the HOLONET!\pSince that CARTEL came to town,\nthe tourists have been staying away.$",
+LilycoveCity_CoveLilyMotel_1F_Text_CantSeeTheTV,"Hey, down in front!\nI can't see the HOLONET!$",
+LilycoveCity_CoveLilyMotel_1F_Text_HeardAquaHideoutBusted,"Oh, sorry, sorry!\nI was too involved in the HOLONET!\pI heard that someone busted\nthe CARTEL HIDEOUT.\pThanks to that, we just booked\na reservation from a big group.\pIt was a company called… Uh…\nGAME something…$",
+LilycoveCity_CoveLilyMotel_1F_Text_BetterGetWorkingOnGuestsDinner,"Oh, sorry, sorry!\nI was too involved in the HOLONET.\pOh, yes. A big group of guests arrived\na little while ago.\pThey booked in as GAME FREAK,\nso I guess they must make games.\pUh-oh, I'd better get working on\ntheir dinner!$",
+LilycoveCity_CoveLilyMotel_2F_Text_ImTheGraphicArtist,I'm the GRAPHIC ARTIST! Aren't the\nOUTER RIM's COMPANIONS interesting?$,
+LilycoveCity_CoveLilyMotel_2F_Text_SeaBreezeTicklesHeart,The breeze over the clouds tickles my\nheart. It feels wonderful here!$,
+LilycoveCity_CoveLilyMotel_2F_Text_NeverLeaveWithoutGameBoy,You never know when and where\npeople will challenge you.\pThat's why I never leave home without\nmy HOLOGAME.$,
+LilycoveCity_Text_MayGoingBackToLittleroot,"MIRA: I'm thinking of going back to\nMOS PELGO soon.\pI've caught a good group of\nCOMPANIONS, and my DATAPAD is coming\lalong, so I'm going home to show my dad.$",
+LilycoveCity_CoveLilyMotel_2F_Text_SnoozingPreferBattles,"LANDO: … … … … …\n… … … … … Zzz…\p… … … … … Huh?!\nOh, sorry, sorry! I was snoozing!\pI came to check out this COMPANION\nSHOWCASE thing.\pI have to admit, it does look quite\nentertaining, but…\pConsider me a purist--I prefer\nbattles and tough TRAINERS.\pBut that's just me.\p{PLAYER}{KUN}, I hope you'll enjoy everything\nlike the ARENAS, SHOWCASES, the\lBATTLE TENT, the whole works!$",
+LilycoveCity_CoveLilyMotel_2F_Text_ContestsDoTakeStrategy,"LANDO: I think it does take strategy\nto win a SHOWCASE.\pSHOWCASE strategy is one way\nof becoming a better TRAINER, I'd say.$",
+LilycoveCity_DepartmentStore_1F_Text_WelcomeToDeptStore,Welcome to the CLOUD CITY\nDEPARTMENT STORE.$,
+LilycoveCity_DepartmentStoreRooftop_Text_SetDatesForClearOutSales,"Don't they have set dates for their\nclear-out sales?\pI watch the HOLONET, but they never\nshow any ads.$",
+LilycoveCity_DepartmentStore_3F_Text_ItemsBestForTougheningPokemon,"For quickly toughening up COMPANIONS,\nitems are the best.\pPROTEIN boosts ATTACK,\nand CALCIUM raises SP. ATK.$",
+LilycoveCity_DepartmentStore_4F_Text_AttackOrDefenseTM,Hmm…\pAn attacking move…\nOr a defensive move…\pIt's no easy matter to decide which TM\nmoves should be taught to COMPANIONS…$,
+LilycoveCity_DepartmentStore_5F_Text_GettingDollInsteadOfPokemon,"I'm not big enough to raise COMPANIONS,\nso I'm getting a cute DOLL instead.$",
+LilycoveCity_DepartmentStore_1F_Text_TicketMatchesPCMon,Congratulations!\pThe ID number of your stored\n{STR_VAR_1} matches your\lLOTO TICKET's number!$,
+LilycoveCity_Harbor_Text_FerryUnavailable,"I beg your pardon?\nYou're looking for a flight?\pI'm sorry, the starliner service isn't\navailable at present…$",
+LilycoveCity_Harbor_Text_MayISeeYourTicket,"Hello, are you here for the starliner?\nMay I see your TICKET?$",
+LilycoveCity_Harbor_Text_NoTicket,{PLAYER} doesn't have the TICKET…\pI'm terribly sorry.\pYou must have a TICKET to board\nthe starliner.$,
+LilycoveCity_Harbor_Text_SailAnotherTime,Please fly with us another time!$,
+LilycoveCity_Harbor_Text_PleaseBoard,Please board the starliner and wait\nfor departure.$,
+LilycoveCity_Harbor_Text_SailorFerryUnavailable,"Until they finish building the\nstarliner, we crew have nothing to do…\pI wish they'd get a move on, the folks\nat the SHIPYARD in MOS EISLEY.$",
+LilycoveCity_Harbor_Text_SailorFerryAvailable,"The starliner STAR TIDAL is finally\nin service.\pThe SHIPYARD folks in MOS EISLEY\nmust've worked extra hard.\pWell, it's my turn to get busy now!$",
+LilycoveCity_House4_Text_MysteriesAtBottomOfSea,"The galaxy's biggest mysteries are\nat the bottom of its seas.\pSomebody said that, but I don't know…$",
+LilycoveCity_House4_Text_UnderwaterTrenchMossdeepSootopolis,"There's a deep underwater trench\nnear YAVIN 4 that leads to DAGOBAH.\pThat's what someone told me, anyway.$",
+LilycoveCity_LilycoveMuseum_1F_Text_WelcomeToLilycoveMuseum,Welcome to CLOUD CITY MUSEUM.\pPlease take the time to enjoy our\ncollection of fantastic artwork\lfeaturing COMPANIONS.$,
+LilycoveCity_LilycoveMuseum_1F_Text_PaintingOfGrassPokemon,It's a painting of GRASS COMPANIONS\nswaying in a breeze.\pThey appear to be enjoying the wind's\ngentle caress.$,
+LilycoveCity_LilycoveMuseum_1F_Text_MuseumTouristDestination,"The ART MUSEUM has become a favorite\ntourist destination.\pIt's great for CLOUD CITY…\nNo, great for the OUTER RIM!\pThis is what I've heard--a lone TRAINER\nprocured all the paintings upstairs.$",
+LilycoveCity_LilycoveMuseum_2F_Text_PleaseObtainPaintingsForExhibit,"I beg your pardon. I didn't intend\nto monopolize the conversation.\pNow, as you are young, and yet\nobviously well traveled…\pYou must encounter lively COMPANIONS\nand works of art depicting them.\pIf you were to come across such\na painting, may we ask you to obtain\lthe artist's permission to exhibit\lit here?$",
+LilycoveCity_LilycoveMuseum_2F_Text_ItsPaintingOfPokemon,It's a painting of COMPANIONS.$,
+LilycoveCity_LilycoveMuseum_2F_Text_NewPaintingsSurprisedMe,"I've been away awhile, so the new\npaintings up here surprised me.\pI wish someone would paint my\nCOMPANIONS this pretty.$",
+LilycoveCity_LilycoveMuseum_2F_Text_ThesePaintingsOfYourPokemon,"Wow, is that right? These paintings are\nof your COMPANIONS.\pIsn't that just the ultimate joy for\na TRAINER?$",
+LilycoveCity_MoveDeletersHouse_Text_ICanMakeMonForgetMove,"Uh…\nOh, yes, I'm the MOVE DELETER.\pI can make COMPANIONS forget moves.\pWould you like me to do that?$",
+LilycoveCity_PokemonCenter_1F_Text_HowManyKindsOfPokemon,I wonder how many kinds of COMPANIONS\nthere are in the galaxy.\pIt'd be great to cross the stars and\ntrade COMPANIONS with people far away.$,
+LilycoveCity_PokemonCenter_1F_Text_HeardAboutRottenScoundrels,I've been hearing about some rotten\nscoundrels who steal COMPANIONS and\lrip off METEORITES.$,
+LilycoveCity_PokemonCenter_1F_Text_HaventSeenRottenScoundrels,Those rotten scoundrels who steal\nCOMPANIONS and rip off METEORITES…\pI haven't seen them around recently.$,
+LilycoveCity_PokemonTrainerFanClub_Text_NoOneCanKnockYouButTrainerStronger,"You are really popular…\pYou're strong, and you're caring to\nCOMPANIONS. No one can knock you.\pBut, you know, I believe in {STR_VAR_1}.\p{STR_VAR_1} is definitely stronger!\nI'm positive!$",
+LilycoveCity_PokemonTrainerFanClub_HopeYouCatchTVSpecial,There's going to be a HOLONET special\non {STR_VAR_1} very soon.\pI hope you catch it!$,
+AquaHideout_1F_Text_Grunt1Intro,Ayiyiyi!\nSuspicious character spotted!$,"reviewed, no change needed"
+AquaHideout_1F_Text_Grunt1Defeat,Grrrrr…\nI lost it!$,"reviewed, no change needed"
+AquaHideout_B1F_Text_Grunt2Intro,"If you want to know the secret about\nour HIDEOUT, you have me to beat!$","reviewed, no change needed"
+AquaHideout_B1F_Text_Grunt2Defeat,I can't win at all…$,"reviewed, no change needed"
+AquaHideout_B1F_Text_Grunt2PostBattle,"Our HIDEOUT's secret?\pWell, let's just say…\nThere's a submarine at the far end!\pBut, by now…\nKekekeke…$","reviewed, no change needed"
+AquaHideout_B1F_Text_Grunt3Intro,Fuel supply loaded A-OK!\nIn-cruise snacks loaded A-OK!\pNothing left to do but KO a pesky\nmeddler!$,"reviewed, no change needed"
+AquaHideout_B1F_Text_Grunt3Defeat,I took a serious licking!$,"reviewed, no change needed"
+AquaHideout_B1F_Text_Grunt3PostBattle,Humph!\nThis was supposed to happen!\pMy mission was to just hold you up!$,"reviewed, no change needed"
+AquaHideout_B1F_Text_Grunt5Intro,Yawn… Keeping watch over the\nHIDEOUT bores me. I'll take you on.$,"reviewed, no change needed"
+AquaHideout_B1F_Text_Grunt5Defeat,"Yawn…\nOh, I lost…$","reviewed, no change needed"
+AquaHideout_B1F_Text_Grunt7Defeat,I lost in a cool way…$,"reviewed, no change needed"
+AquaHideout_B1F_Text_Grunt7PostBattle,"If you have a cool uniform, you look\ngood even in a loss, don't you think?$","reviewed, no change needed"
+AquaHideout_B2F_Text_Grunt4Intro,"Wahahah, I grew weary of waiting!\nYou owe me a battle, too!$","reviewed, no change needed"
+AquaHideout_B2F_Text_Grunt4Defeat,Tired of waiting…\nLost and dazed…$,"reviewed, no change needed"
+AquaHideout_B2F_Text_Grunt6Intro,"Warp panels, the HIDEOUT's pride\nand joy!\pYou're clueless about where you are,\naren't you?\pFluster and tire out the enemy, then\nlower the boom! That's our plan!$","reviewed, no change needed"
+AquaHideout_B2F_Text_Grunt6Defeat,What's wrong with you?\nYou're not tired at all!$,"reviewed, no change needed"
+AquaHideout_B2F_Text_Grunt8Defeat,I was too occupied thinking about\nthe warp panels…$,"reviewed, no change needed"
+AquaHideout_B2F_Text_Grunt8PostBattle,I'll have to learn about how I can\nbattle more effectively…$,"reviewed, no change needed"
+LilycoveCity_Text_MayNotRaisingPokemon,"MIRA: Oh, why? {PLAYER}{KUN}, haven't you\nbeen raising your COMPANIONS?\pThat's not a very good showing as a\nTRAINER…$",reviewed AUTO draft
+LilycoveCity_Text_MayDefeat,"… … … … … … … …\pI remember the battle I had with you,\n{PLAYER}{KUN}, on ROUTE 103.\pThat battle helped you become this\nstrong, {PLAYER}{KUN}, didn't it?$","reviewed, no change needed"
+LilycoveCity_Text_MayYouGoingToCollectBadges,"{PLAYER}{KUN}, what are you going to do?\pCollect all the ARENA SHARDS and take\nthe ILUM TEMPLE challenge?\pWell, while you're collecting SHARDS,\n{PLAYER}{KUN}, I'm going to work on my\lDATAPAD. I'll complete it before you!\pSee you!$",reviewed AUTO draft
+LilycoveCity_Text_MayYouGoingToPokemonLeague,"{PLAYER}{KUN}, what are you going to do?\pAre you taking the ILUM TEMPLE\nchallenge?\pOr, are you going to complete your\nDATAPAD?\pI might've lost to you in battling,\nbut I'll finish my DATAPAD before you!\pSee you!$",reviewed AUTO draft
+LilycoveCity_Text_MayYouGoingToBattleFrontier,"{PLAYER}{KUN}, what are you going to do?\pAre you taking the GRAND ARENA\nchallenge?\pOr, are you going to complete your\nDATAPAD?\pI might've lost to you in battling,\nbut I'll finish my DATAPAD before you!\pSee you!$",reviewed AUTO draft
+LilycoveCity_Text_BrendanNoConfidence,"KAEL: Oh, what's the matter?\nDon't have the confidence?$",reviewed AUTO draft
+LilycoveCity_Text_BrendanBattleMe,KAEL: Want to battle to see who's\nbeen raising COMPANIONS better?$,reviewed AUTO draft
+LilycoveCity_Text_BrendanWontBeBeaten,"KAEL: Aww, but you know I'm not\ngoing to lose to no {PLAYER}.$",reviewed AUTO draft
+LilycoveCity_Text_BrendanDefeat,Humph…\nYou've done a lot of raising.\pThat stings a bit--I had a head start\non you as a TRAINER…$,"reviewed, no change needed"
+LilycoveCity_Text_BrendanGoingBackToLittleroot,"KAEL: I…\nI plan on going home to MOS PELGO.\pYou know I'm helping out my dad on his\nDATAPAD. It's coming together pretty\ldecently, so I should go show him.$",reviewed AUTO draft
+LilycoveCity_Text_BrendanYouGoingToCollectBadges,"{PLAYER}, what are you going to do?\pCollect all the ARENA SHARDS and take\nthe ILUM TEMPLE challenge?\pMaybe I'll do that, too…\pWell, anyway, hang in there!$",reviewed AUTO draft
+LilycoveCity_Text_GetLostMessingUpTraining,"Hunh? What do you want?\pYou're messing up our training,\nso can you, like, get lost?$","reviewed, no change needed"
+LilycoveCity_Text_MissingPokemonCameBack,My missing COMPANION…\nIt came back without me noticing!$,reviewed AUTO draft
+LilycoveCity_Text_ImArtDealer,"I'm an ART DEALER.\pI am a buyer and seller of fine art,\nespecially paintings.\pI've heard that the MUSEUM here has\nmagnificent works on exhibit…$","reviewed, no change needed"
+LilycoveCity_Text_ContestHallSign,SHOWCASE HALL\n“The gathering place for TRAINERS!”$,reviewed AUTO draft
+LilycoveCity_Text_MotelSign,COVE LILY MOTEL\p“Remember us as COVE LILY of\nCLOUD CITY.”$,reviewed AUTO draft
+LilycoveCity_Text_MuseumSign,CLOUD CITY MUSEUM\p“COMPANION Masterpiece Collection\non exhibit!”$,reviewed AUTO draft
+LilycoveCity_Text_MuseumSignPlayersExhibit,CLOUD CITY MUSEUM\p“{PLAYER}'s COMPANION Collection\non exhibit!”$,reviewed AUTO draft
+LilycoveCity_Text_TrainerFanClubSign,COMPANION TRAINER FAN CLUB\pThe names of TRAINERS are scribbled\nall over the sign…$,reviewed AUTO draft
+LilycoveCity_Text_DepartmentStoreSign,CLOUD CITY DEPARTMENT STORE\p“Overflowing with great merchandise\nand excitement!\p“A great place to find that something\nyou need!”$,reviewed AUTO draft
+LilycoveCity_Text_MoveDeletersHouseSign,MOVE DELETER'S HOUSE\p“Unwanted COMPANION moves deleted.”$,reviewed AUTO draft
+LilycoveCity_Text_DoYouKnowAboutBerryBlender,Do you know about the machine\nFRUIT BLENDER?$,reviewed AUTO draft
+LilycoveCity_Text_FasterSpinBetterPokeblocks,"People have to work together to get it\nto spin faster.\pThe faster you can make it spin, the\nbetter {POKEBLOCK}S you can get, I've heard.$","reviewed, no change needed"
+LilycoveCity_Text_ExplainBerryBlender,"It's used for making a kind of candy\ncalled a {POKEBLOCK}.\pIf you give a good {POKEBLOCK} to a COMPANION,\nits condition will improve by a lot.$",reviewed AUTO draft
+LilycoveCity_Text_SawTallTowerOnRoute131,I saw this tall tower somewhere\naround ROUTE 131.\pCould that possibly be…?$,"reviewed, no change needed"
+LilycoveCity_Text_JustArrivedAndSawRarePokemon,We just arrived here on our\nhoneymoon vacation.\pWe happened to see a DRAGON-type\nCOMPANION flying way up in the sky.\pDo cool COMPANIONS like that live in\nthe OUTER RIM region?$,reviewed AUTO draft
+LilycoveCity_Text_HoneymoonVowToSeeRarePokemon,"On our honeymoon, we vowed to see as\nmany rare COMPANIONS as we can.\pSo we were delighted to see a rare\nCOMPANION as soon as we arrived.\pI mean, we are totally happy!$",reviewed AUTO draft
+LilycoveCity_ContestHall_Text_TodayWonSmartnessContest,"This COMPANION won the BEAUTY\nSHOWCASE here before.\pWell, guess what? Today, I made it\nwin a SMARTNESS SHOWCASE!\pMy abilities scare even me…$",reviewed AUTO draft
+LilycoveCity_ContestHall_Text_EnteredBunchOfContests,"I've entered a bunch of SHOWCASES,\nso I'm seeing how things work.\pIf you're in a COOLNESS SHOWCASE,\ncool moves go over as appeals.\pBut smart moves and cute moves\ndon't go over well, for instance.$",reviewed AUTO draft
+LilycoveCity_ContestHall_Text_ManWhoWonEarlierHadPokeblocks,That young man who won earlier had\na whole bunch of different {POKEBLOCK}S.\pCan you win if you had that many\nof those things?$,"reviewed, no change needed"
+LilycoveCity_ContestHall_Text_IsntThisPlaceHumongous,"Whoa, isn't this place humongous!\pThe tension in the air… It's not\nlike a SHOWCASE hall in the sticks.$",reviewed AUTO draft
+LilycoveCity_ContestHall_Text_AreYouEnjoyingThisContest,"JUDGE: Are you enjoying this SHOWCASE?\pCome back with three friends, and\nall of you may enter a SHOWCASE!$",reviewed AUTO draft
+LilycoveCity_ContestHall_Text_IfMonPullsSmartMoveNext,"There it is!\pIf my COMPANION pulls a smart move\nnext, the audience's excitement will\lpeak!$",reviewed AUTO draft
+LilycoveCity_ContestHall_Text_DontAppreciateCuteLeechLife,"Oh, dear, no!\pMy darling MYNOCK's LEECH LIFE is so\ncute I kept using it over and over!\pBut these mean people don't appreciate\nit at all!$",reviewed AUTO draft
+LilycoveCity_ContestHall_Text_YoureBeautifulGrandpa,"Kiyaaah! You're beautiful, Grandpa!$","reviewed, no change needed"
+LilycoveCity_ContestHall_Text_AllSeemToUseDifferentMoves,"Even when TRAINERS enter the same kind\nof COMPANIONS, they all seem to use\ldifferent moves for appeals.\pIt's just like the way people have\ndifferent styles for battling.$",reviewed AUTO draft
+LilycoveCity_ContestHall_Text_PokemonSmarterThanTrainers,I think the COMPANIONS look smarter\nthan their TRAINERS. By a lot.$,reviewed AUTO draft
+LilycoveCity_ContestHall_Text_StillLoveSmartnessContests,"When all's said and done, I still love\nSMARTNESS SHOWCASES.\pThat intellectual green color…\nIt's so… So… Cool.$",reviewed AUTO draft
+LilycoveCity_ContestHall_Text_AreYouEnteringBeautyContest,"MC: Are you entering the BEAUTY\nSHOWCASE, too? Good luck!$",reviewed AUTO draft
+LilycoveCity_ContestHall_Text_EveryPokemonPristineBeauty,"JUDGE: Ah, every COMPANION here is\na model of pristine beauty!\pWhy, I almost forgot to score them!$",reviewed AUTO draft
+LilycoveCity_ContestHall_Text_EyesWillBeGluedToMyBeauty,A COMPANION this beautiful…\nThere isn't another one like it.\pEveryone's eyes will be glued to\nmy beauty.$,reviewed AUTO draft
+LilycoveCity_ContestHall_Text_OverdidGrooming,Waaaah!\pI brushed and groomed my COMPANION\ncarefully for this SHOWCASE…\pBut I overdid it… My COMPANION's coat\nturned all scraggly…\pWhat should I do?$,reviewed AUTO draft
+LilycoveCity_ContestHall_Text_JudgeWontSeeAuroraBeam,"This AURORA BEAM is so dazzling,\nthe JUDGE won't be able to see it.\pUh, wait a second…\nThat'll be meaningless, then!$","reviewed, no change needed"
+LilycoveCity_ContestHall_Text_WinBeautyContestMakesMeHappy,"You know, if I win at a BEAUTY\nSHOWCASE, sure it makes me\lhappy. More than usual, anyway.$",reviewed AUTO draft
+LilycoveCity_ContestHall_Text_InTheMiddleOfContest,"MC: Uh-oh! Hello!\nWe're in the middle of a SHOWCASE!\pPlease enter at our registration\ncounter and come out, okay?$",reviewed AUTO draft
+LilycoveCity_ContestHall_Text_SuchCharmingCuteAppeals,"JUDGE: Oh, such charming and cute\nappeals!\pOh, my goodness! What a perfectly\nadorable WATER SPORT appeal!$","reviewed, no change needed"
+LilycoveCity_ContestHall_Text_MyAzurillWasDistracted,"Oh, no… My sweet BLOOPKIT was\ndistracted by another COMPANION.$",reviewed AUTO draft
+LilycoveCity_ContestHall_Text_NeverWonBattleButContest,"My COMPANION has never won in a battle,\nbut put it in a SHOWCASE and look out!$",reviewed AUTO draft
+LilycoveCity_ContestHall_Text_PetalDanceIsMarvel,My COMPANION's PETAL DANCE is a marvel\nof elegance.\pI won't let anyone disturb its\nperformance.$,reviewed AUTO draft
+LilycoveCity_ContestHall_Text_MyMonAppealSoMuchCuter,"Everyone's COMPANIONS are very cute.\pHowever, if my COMPANIONS were to make\na cute appeal…\pI'm sure that it would be so much \ncuter than the others.$",reviewed AUTO draft
+LilycoveCity_ContestHall_Text_MyChildIsInContest,My child is in this SHOWCASE.$,reviewed AUTO draft
+LilycoveCity_ContestHall_Text_ComeOnDear,"Come on, dear. Go for it!\nYour COMPANION is the best!$",reviewed AUTO draft
+LilycoveCity_ContestHall_Text_WantCuteMonOfMyOwn,"Ohh, seeing all these cute COMPANIONS,\nthey make we want to get my own!\pI'm going to go catch some!$",reviewed AUTO draft
+LilycoveCity_ContestLobby_Text_LadyGaveMePokeblockCase,Yippee!\pThe lady at the reception counter\ngave me a case for {POKEBLOCK}S!$,"reviewed, no change needed"
+LilycoveCity_ContestLobby_Text_MakePokeblocksDifferentBerries,"Make {POKEBLOCK}S and put them in there.\pWhen you make a {POKEBLOCK}, everyone\nhas to put in a different FRUIT.$",reviewed AUTO draft
+LilycoveCity_ContestLobby_Text_YourPokemonSpurredMeToPaint,"Congratulations!\pI did a painting of your COMPANION to\ncommemorate its victory…\pWell, your COMPANION's appeals were\nso fantastic, it spurred me into\lpainting better than I usually do.\lLook, see?$",reviewed AUTO draft
+LilycoveCity_ContestLobby_Text_ShouldITakePaintingToMuseum,"What do you think? I'm confident in\nwhat I've done, but do you like it?\pA work of this caliber, it wouldn't look\nout of place in an art museum.\pHuh? An art museum really is looking\nfor paintings?\pDo you think I should take this there?$","reviewed, no change needed"
+LilycoveCity_ContestLobby_Text_IllTakePaintingToMuseum,"What, really? Then, sure, I will take\nthis painting there right now.\pI'll give it a proper title, too.\pI hope they'll like it and consider\nexhibiting this.\pPlease check if they did accept this.\nThank you!$","reviewed, no change needed"
+LilycoveCity_ContestLobby_Text_TakeMementoOfPainting,"Oh, that's right!\pAs a memento of me painting your\nCOMPANION, please take this.$",reviewed AUTO draft
+LilycoveCity_ContestLobby_Text_ReceivedARibbon,{PLAYER} received a RIBBON.$,"reviewed, no change needed"
+LilycoveCity_ContestLobby_Text_PutTheRibbonOnMon,{PLAYER} put the RIBBON on\n{STR_VAR_1}.$,"reviewed, no change needed"
+LilycoveCity_ContestLobby_Text_OkaySeeYou,"Okay, see you!$","reviewed, no change needed"
+LilycoveCity_ContestLobby_Text_TakeHomeButIdLikeToTakeToMuseum,"Oh… Then, I guess I'll just take\nthis home with me…\pBut, you know, I would like to take\nthis to the art museum… Okay?$","reviewed, no change needed"
+LilycoveCity_ContestLobby_Text_FineThatsTheWayItIs,"Oh, fine, that's the way it is.\nI will hang this in my own house.\pI'll just have to try harder next time.\nWell, be seeing you.$","reviewed, no change needed"
+LilycoveCity_ContestLobby_Text_MasterRankHereICome,"Hoo, boy… Master Rank SHOWCASES,\nhere I come.\pThe world will know that my dearest\nCOMPANION is the cutest being in all\lexistence. The time has come!\lUheheheh.$",reviewed AUTO draft
+LilycoveCity_ContestLobby_Text_WholeVarietyOfPokemonHere,You can see a whole variety of\nCOMPANIONS here.\pThat's why I make this place a regular\npart of my daily stroll.$,reviewed AUTO draft
+LilycoveCity_ContestLobby_Text_ContestFeastForEyes,"Wow, coming out to a SHOWCASE is\na feast for these eyes!\pWould you look at all the COMPANIONS\nthat just scream to be painted?$",reviewed AUTO draft
+LilycoveCity_ContestLobby_Text_ToughContestIsExtreme,"The TOUGHNESS SHOWCASE is like\nextreme, man!\pThose muscular appeals…\nCascading sweat… I swoon!$",reviewed AUTO draft
+LilycoveCity_ContestLobby_Text_LavishedCareOnMon,"Day in and day out, I lavished my care\non this COMPANION.\pIts condition is peaking.\nToday, victory is mine!$",reviewed AUTO draft
+LilycoveCity_ContestLobby_Text_MadePokeblocksWithFamily,"I made {POKEBLOCK}S with Mom, Dad, and\nBig Sister. They turned out great!\pI bet you can make smoother, better\n{POKEBLOCK}S if you have more people.$","reviewed, no change needed"
+LilycoveCity_CoveLilyMotel_1F_Text_MonFoundLostItem,Amazing! You're telling me a COMPANION\nfound someone's lost item?\pThat's something. If we had some smart\nCOMPANIONS like that…\pWe could recover anything that our\nguests mislaid…$,reviewed AUTO draft
+LilycoveCity_CoveLilyMotel_1F_Text_HouseSittingMonCaughtBurglar,Amazing! A house-sitting COMPANION\ncaught a burglar?\pThat's something. If we had a tough\nCOMPANION as a security guard…\pWe would be able to provide our guests\nwith greater safety.$,reviewed AUTO draft
+LilycoveCity_CoveLilyMotel_2F_Text_ShowMeCompletedDex,"I'm the GAME DESIGNER.\pOh, is that right?\nYou're working on a DATAPAD?\pIt's tough trying to complete it,\nbut don't give up.\pIf you do complete it, please come\nshow me.$",reviewed AUTO draft
+LilycoveCity_CoveLilyMotel_2F_Text_FilledPokedexGiveYouThis,"Wow! That's awesome!\nYep, it's totally awesome!\pThis DATAPAD is completely filled!\nYou really must love COMPANIONS!\pI'm so impressed!\pLet me give you something in\nrecognition of your feat!$",reviewed AUTO draft
+LilycoveCity_CoveLilyMotel_2F_Text_ImTheProgrammer,Me? You're talking to me?\nI'm the PROGRAMMER.\pI wonder what the SLOTS are\nlike here.$,"reviewed, no change needed"
+LilycoveCity_CoveLilyMotel_2F_Text_GirlsAreCute,"The girl TUBERS, they're cute, hey?\nTo battle against a cute TUBER…\pWhoop, it's so awesome!\pAnd the TWINS! Aren't they cute?\nA 2-on-2 battle with TWINS…\pWhoop, it's unbearably fun!$","reviewed, no change needed"
+LilycoveCity_DepartmentStoreRooftop_Text_BeenWaitingForClearOutSale,"Yes! I've been waiting a long time for\nthis clear-out sale.\pThey have items that you can only get\nhere. I'm going to load up, that I am!$","reviewed, no change needed"
+LilycoveCity_DepartmentStoreRooftop_Text_BoneDryThirsty,Ohh… I'm bone-dry thirsty!$,"reviewed, no change needed"
+LilycoveCity_DepartmentStoreRooftop_Text_WhichDrinkWouldYouLike,It's a VENDING MACHINE.\nWhich drink would you like?$,"reviewed, no change needed"
+LilycoveCity_DepartmentStoreRooftop_Text_CanOfDrinkDroppedDown,Clang!\pA can of {STR_VAR_1} dropped down.$,"reviewed, no change needed"
+LilycoveCity_DepartmentStoreRooftop_Text_ExtraCanOfDrinkDroppedDown,Clang!\pScore! An extra can of {STR_VAR_1}\ndropped down!$,"reviewed, no change needed"
+LilycoveCity_DepartmentStoreRooftop_Text_NotEnoughMoney,Not enough money…$,"reviewed, no change needed"
+LilycoveCity_DepartmentStoreRooftop_Text_DecidedAgainstBuyingDrink,Decided against buying a drink.$,"reviewed, no change needed"
+LilycoveCity_DepartmentStore_1F_Text_IBuyAllSortsOfThings,"Whenever I come to the DEPARTMENT\nSTORE, I always end up buying all sorts\lof things because it's so fun.$","reviewed, no change needed"
+LilycoveCity_DepartmentStore_1F_Text_MomBuyingMeFurniture,"Today, my mom is going to buy me some\nnice furniture.$","reviewed, no change needed"
+LilycoveCity_DepartmentStore_1F_Text_BuyingSomethingForAzumarill,I'm buying something for my BLOOPHARE\nas a reward for winning a SHOWCASE.$,reviewed AUTO draft
+LilycoveCity_DepartmentStore_1F_Text_Azumarill,BLOOPHARE: Maririroo!$,reviewed AUTO draft
+LilycoveCity_DepartmentStore_1F_Text_FloorNamesSign,1F: SERVICE COUNTER\n    LOTTERY CORNER\p2F: TRAINER'S ZONE\p3F: BATTLE COLLECTION\p4F: TM CORNER\p5F: COMPANION DOLL FLOOR\pROOFTOP: ROOFTOP PLAZA$,reviewed AUTO draft
+LilycoveCity_DepartmentStore_1F_Text_WirelessCommIsFun,"the COMLINK Network is a\nlot of fun, isn't it?\pI think it lets you do things that\nweren't possible before.\pFor instance, you can now trade\nwith people you couldn't before.\pI think it's going to be exciting!$",reviewed AUTO draft
+LilycoveCity_DepartmentStore_1F_Text_SpreadWordAboutWirelessComm,I want to spread the word about how\nfun the COMLINK Network can be.$,reviewed AUTO draft
+LilycoveCity_DepartmentStore_2F_Text_LearnToUseItemsProperly,"Learn to use items properly.\nThat's basic, really.$","reviewed, no change needed"
+LilycoveCity_DepartmentStore_2F_Text_GoodGiftForHusband,My husband is waiting at home.\nWhat would make a good gift for him?$,"reviewed, no change needed"
+LilycoveCity_DepartmentStore_2F_Text_StockUpOnItems,I'm leaving on a long journey soon.\nI need to stock up on items.$,"reviewed, no change needed"
+LilycoveCity_DepartmentStore_3F_Text_WantMoreEndurance,"I want my COMPANION to have more\nendurance.\pI'm trying to decide whether to raise\nDEFENSE with IRON, or SP. DEF with ZINC.$",reviewed AUTO draft
+LilycoveCity_DepartmentStore_3F_Text_GaveCarbosToSpeedUpMon,"I gave a CARBOS to my COMPANION,\nand its SPEED went up.$",reviewed AUTO draft
+LilycoveCity_DepartmentStore_4F_Text_FiftyDifferentTMs,There are so many different kinds of\nTM moves.\pA catalog I read said there are fifty\ndifferent kinds.$,"reviewed, no change needed"
+LilycoveCity_DepartmentStore_4F_Text_PokemonOnlyHaveFourMoves,"I'd like to get all the different TMs,\nbut a COMPANION learns only four moves.$",reviewed AUTO draft
+LilycoveCity_DepartmentStore_5F_Text_PlaceFullOfCuteDolls,"This place is full of cute DOLLS.\pI should buy some for me, instead of\njust for my children.$","reviewed, no change needed"
+LilycoveCity_DepartmentStore_5F_Text_SellManyCuteMatsHere,They sell many cute MATS here.\pI wonder which one I should get?\nMaybe I'll buy them all…$,"reviewed, no change needed"
+LilycoveCity_DepartmentStore_5F_Text_ClosedRooftopForWeather,I think they closed the rooftop\nbecause the weather is wild today.$,"reviewed, no change needed"
+LilycoveCity_Harbor_Text_FlashTicketWhereTo,{PLAYER} flashed the TICKET.\pPerfect! That's all you need!\pAnd where would you like to go?$,"reviewed, no change needed"
+LilycoveCity_Harbor_Text_SlateportItIs,"MOS EISLEY it is, then!$",reviewed AUTO draft
+LilycoveCity_Harbor_Text_BattleFrontierItIs,"GRAND ARENA it is, then!$",reviewed AUTO draft
+LilycoveCity_Harbor_Text_WhereWouldYouLikeToGo,"Then, where would you like to go?$","reviewed, no change needed"
+LilycoveCity_House1_Text_PokemonPartnersNotTools,"COMPANIONS are partners to people.\nThey aren't our tools.\pUnfortunately, there are some people\nwho fail to understand that…$",reviewed AUTO draft
+LilycoveCity_House1_Text_Kecleon,TAOZIN: Ruroro?$,reviewed AUTO draft
+LilycoveCity_House2_Text_NotAwakeYetHaveThis,Huh? What? What's that?\pI'm not near awake yet…\nYou can have this…$,"reviewed, no change needed"
+LilycoveCity_House2_Text_SleepIsEssential,Yawn…\pSleep is essential for good health…\nSleep and regain health…$,"reviewed, no change needed"
+LilycoveCity_House3_Text_LearnFromMasterOfPokeblocks,"Oh, my, my! Are you traveling alone?\nBut you're so young! Good for you!\pI'm sure my kids could learn a thing\nor two from you!\pMe? I'm a master of {POKEBLOCK}S.\pIf I get serious just a little, why,\nI can concoct great {POKEBLOCK}S.\pWould you like to learn from me,\na master of {POKEBLOCK}S?$","reviewed, no change needed"
+LilycoveCity_House3_Text_OhAreYouSure,"Oh? Are you sure?\pYou shouldn't always try to do\neverything by yourself, dear!$","reviewed, no change needed"
+LilycoveCity_House3_Text_ExplainPokeblocks,"Oh, good! You're a smart soul!\nThis is a bit long, so listen up!\pAre you ready?\pIf you look at {POKEBLOCK}S, you should see\nthat they are rated on how they feel.\pThe lower the feel rating,\nthe better it is. Don't forget this!\pA good {POKEBLOCK} has a low feel\nrating and a high level.\pA COMPANION can eat more good\n{POKEBLOCK}S than ordinary ones, too.\pAnd this is important.\pIf you want to make smooth {POKEBLOCK}S,\nuse different kinds of FRUIT.\pDon't be stingy--the kinds of FRUIT\naffect the smoothness of {POKEBLOCK}S.\pAnd another thing.\pThe more people blending FRUIT,\nthe smoother the {POKEBLOCK}S.\pThat's why you should talk to other\npeople and make {POKEBLOCK}S together.\pThat's about all you need to know to\nmake good {POKEBLOCK}S.\pIf everyone had COMPANION they love,\nsmooth {POKEBLOCK}S, and a loving family,\lthe world would be a happier place.\pDon't give up, dear!$",reviewed AUTO draft
+LilycoveCity_House3_Text_HappyToHaveQuadruplets,"When my wife gave birth to quadruplets,\nyou bet I was shocked.\pBut, now, seeing them play together,\nit makes me happy.$","reviewed, no change needed"
+LilycoveCity_House3_Text_GoingToWinMultiBattles,"We're having MULTI BATTLES, but I know\nI'm going to win.$","reviewed, no change needed"
+LilycoveCity_House3_Text_LikeMixingAtRecordCorner,We like mixing stuff at\nthe RECORD CORNER.\pBut what gets mixed up?$,"reviewed, no change needed"
+LilycoveCity_House3_Text_MakePokeblocksWithBerryBlender,We're going to make super {POKEBLOCK}S\nwith a FRUIT BLENDER!$,reviewed AUTO draft
+LilycoveCity_House3_Text_GoingToEnterContest,"I want to brag about how tough my\nCOMPANION is, so we're going to enter\la SHOWCASE together.$",reviewed AUTO draft
+LilycoveCity_LilycoveMuseum_1F_Text_ImCuratorHaveYouViewedOurPaintings,I'm the CURATOR of this MUSEUM of\nfine arts.\pIt's heartening to see someone so\nyoung as you in our MUSEUM.\pHave you viewed our collection of\npaintings already?$,"reviewed, no change needed"
+LilycoveCity_LilycoveMuseum_1F_Text_NotDisturbYouTakeYourTime,"Ah, then let me not disturb you.\nPlease, do take your time.$","reviewed, no change needed"
+LilycoveCity_LilycoveMuseum_1F_Text_HaveYouAnInterestInPaintings,"Oh? I do believe that you seem to\nbe a COMPANION TRAINER.\pHave you an interest in paintings,\ntoo?$",reviewed AUTO draft
+LilycoveCity_LilycoveMuseum_1F_Text_HonoredYoudVisitInSpiteOfThat,I see…\pI'm honored that you would visit\nus in spite of that.$,"reviewed, no change needed"
+LilycoveCity_LilycoveMuseum_1F_Text_ExcellentCanYouComeWithMe,"Ah, excellent!\nYou do like paintings!\pThen, may I ask you to come with me?$","reviewed, no change needed"
+LilycoveCity_LilycoveMuseum_1F_Text_VeryOldPainting,It's a very old painting.\nThe paint is peeling here and there.$,"reviewed, no change needed"
+LilycoveCity_LilycoveMuseum_1F_Text_OddLandscapeFantasticScenery,It's an odd landscape with bizarre\nand fantastic scenery.$,"reviewed, no change needed"
+LilycoveCity_LilycoveMuseum_1F_Text_PaintingOfBeautifulWoman,"It's a painting of a beautiful, smiling\nwoman with a COMPANION on her lap.$",reviewed AUTO draft
+LilycoveCity_LilycoveMuseum_1F_Text_PaintingOfLegendaryPokemon,It's a painting of a legendary\nCOMPANION from long ago.\pThe artist painted this from\nimagination.$,reviewed AUTO draft
+LilycoveCity_LilycoveMuseum_1F_Text_PaintingOfBerries,It's a delicious-looking painting\nof FRUIT.\pThis painting could make you hungry!$,reviewed AUTO draft
+LilycoveCity_LilycoveMuseum_Text_BirdPokemonSculptureReplica,It's a replica of a famous sculpture.\pIt depicts an ancient BIRD COMPANION.$,reviewed AUTO draft
+LilycoveCity_LilycoveMuseum_1F_Text_BigPokeBallCarvedFromStone,It's a big CAPTURE POD carved from\na black stone.\pIt was apparently used in festivals\nin the olden days.$,reviewed AUTO draft
+LilycoveCity_LilycoveMuseum_1F_Text_StoneTabletWithAncientText,"It's a huge stone tablet inscribed\nwith COMPANIONS and dense text in the\lsmall characters of an ancient,\lunreadable language.$",reviewed AUTO draft
+LilycoveCity_LilycoveMuseum_1F_Text_WorksOfMagnificence,Hmmm…\nWhat works of great magnificence…$,"reviewed, no change needed"
+LilycoveCity_LilycoveMuseum_1F_Text_MustntForgetLoveForFineArts,"Battling with COMPANIONS is fun,\nI'll grant you that.\pBut one mustn't forget our love for\nthe fine arts.$",reviewed AUTO draft
+LilycoveCity_LilycoveMuseum_1F_Text_ThisMuseumIsInspiration,"This ART MUSEUM… Well, you could\nsee many fantastic paintings.\pAnd the CURATOR is a wonderful person.\pAmong artists like myself, this MUSEUM\nis an inspiration.$","reviewed, no change needed"
+LilycoveCity_LilycoveMuseum_1F_Text_ThisLadyIsPretty,This lady is pretty!\nShe's like Mommy!$,"reviewed, no change needed"
+LilycoveCity_LilycoveMuseum_1F_Text_ThisPokemonIsAdorable,This COMPANION is adorable!\nJust like our little boy!$,reviewed AUTO draft
+LilycoveCity_LilycoveMuseum_1F_Text_HeardMuseumGotNewPaintings,"I'd heard that this ART MUSEUM got\nin some new paintings.\pSo, naturally I hurried over.\pAre the new paintings up on\nthe second floor?$","reviewed, no change needed"
+LilycoveCity_LilycoveMuseum_1F_Text_CuratorHasBeenCheerful,"Lately, the CURATOR has been\nunusually cheerful.\pI bet something good happened for him.\nDefinitely.$","reviewed, no change needed"
+LilycoveCity_LilycoveMuseum_1F_Text_AimToSeeGreatPaintings,I aim to see many great paintings\nhere and learn from them.\pI have this dream of one day having\nmy artwork exhibited here.$,"reviewed, no change needed"
+LilycoveCity_LilycoveMuseum_2F_Text_ThisIsExhibitHall,This is our special exhibit hall.$,"reviewed, no change needed"
+LilycoveCity_LilycoveMuseum_2F_Text_ExplainExhibitHall,"As you can plainly see, there is not\na single painting on exhibit.\pHere, I don't wish to exhibit works of\nso-called classical art.\pSuch classical works you can see on\nour ground floor.\pI wish to exhibit work that is far\ndifferent from the classics.\pArt, after all, is not restricted to old,\nfamous works!\pThis exhibit hall, I wish to fill it with…\pModern and vibrant artworks of\nCOMPANIONS seemingly ready to spring\lforth into glorious life!$",reviewed AUTO draft
+LilycoveCity_LilycoveMuseum_2F_Text_WishToFillExhibit,I wish to fill this exhibit hall with\nmodern and vibrant paintings of\lCOMPANIONS.$,reviewed AUTO draft
+LilycoveCity_LilycoveMuseum_2F_Text_ThanksAddedNewPainting,"Thanks to you, we've added a new\npainting to our collection!\pI've heard it depicts your COMPANION.\nTruly magnificent!\pThank you so very, very much!$",reviewed AUTO draft
+LilycoveCity_LilycoveMuseum_2F_Text_ItsYouPlayer,Ah! It's you!\n{PLAYER}!$,"reviewed, no change needed"
+LilycoveCity_LilycoveMuseum_2F_Text_PaintingsAttractedMoreGuests,"Isn't this marvelous?\nThis collection of paintings!\pEach one of them flawless!\nNone better than another!\pThese paintings have attracted\nmore guests to our ART MUSEUM.\pSincerely, I thank you, {PLAYER}.\nThis is my dream come true!$","reviewed, no change needed"
+LilycoveCity_LilycoveMuseum_2F_Text_TokenOfGratitude,This is merely a token of my gratitude.$,"reviewed, no change needed"
+LilycoveCity_LilycoveMuseum_2F_Text_KeepThisForYou,I will keep this for you until we\nmeet again.$,"reviewed, no change needed"
+LilycoveCity_LilycoveMuseum_2F_Text_HonorToHaveYouVisit,"Ah, so good to see you, {PLAYER}!\pIt's an honor to have you visit us\non your busy journeys.\pPlease, relax and do enjoy your\nvisit with us.$","reviewed, no change needed"
+LilycoveCity_LilycoveMuseum_2F_Text_ItsPinkPictureFrame,It's a picture frame with pink-colored\nadornments.$,"reviewed, no change needed"
+LilycoveCity_LilycoveMuseum_2F_Text_ItsYellowPictureFrame,It's a picture frame with\nyellow-colored adornments.$,"reviewed, no change needed"
+LilycoveCity_LilycoveMuseum_2F_Text_ItsBluePictureFrame,It's a picture frame with\nblue-colored adornments.$,"reviewed, no change needed"
+LilycoveCity_LilycoveMuseum_2F_Text_ItsRedPictureFrame,It's a picture frame with\nred-colored adornments.$,"reviewed, no change needed"
+LilycoveCity_LilycoveMuseum_2F_Text_ItsGreenPictureFrame,It's a picture frame with\ngreen-colored adornments.$,"reviewed, no change needed"
+LilycoveCity_LilycoveMuseum_2F_Text_NewPaintingsRatherAmusing,"Well… So this is where they show\nthe topical COMPANION paintings.\pI see, these new paintings are indeed\nrather amusing.$",reviewed AUTO draft
+LilycoveCity_MoveDeletersHouse_Text_WhichMonShouldForget,Which COMPANION should forget a move?$,reviewed AUTO draft
+LilycoveCity_MoveDeletersHouse_Text_WhichMoveShouldBeForgotten,Which move should be forgotten?$,"reviewed, no change needed"
+LilycoveCity_MoveDeletersHouse_Text_MonOnlyKnowsOneMove,{STR_VAR_1} knows only one move\nso it can't be forgotten…$,"reviewed, no change needed"
+LilycoveCity_MoveDeletersHouse_Text_MonsMoveShouldBeForgotten,Hm! {STR_VAR_1}'s {STR_VAR_2}?\nThat move should be forgotten?$,"reviewed, no change needed"
+LilycoveCity_MoveDeletersHouse_Text_MonHasForgottenMove,It worked to perfection!\p{STR_VAR_1} has forgotten\n{STR_VAR_2} completely.$,"reviewed, no change needed"
+LilycoveCity_MoveDeletersHouse_Text_ComeAgain,Come again if there are moves that\nneed to be forgotten.$,"reviewed, no change needed"
+LilycoveCity_MoveDeletersHouse_Text_EggCantForgetMoves,What?\nNo EGG should know any moves.$,"reviewed, no change needed"
+LilycoveCity_MoveDeletersHouse_Text_CantForgetSurf,Hm!\pYour {STR_VAR_1} doesn't seem willing\nto forget SURF.$,"reviewed, no change needed"
+LilycoveCity_PokemonTrainerFanClub_Text_OhWowItsPlayer,"Oh, wow!\nIt's {PLAYER}!$","reviewed, no change needed"
+LilycoveCity_PokemonTrainerFanClub_Text_HeardAboutYouImYourFan,"I've heard the news!\nYou're really strong, aren't you?\pWe always argue about who is the\nstrongest of all TRAINERS here.\pSo when I heard about you, I decided\nto be your fan!\pI hope you'll keep on battling other\ntough TRAINERS.\pThat way, we'll be able to see more\nof your hot, hot battles.\pThat will make the others here see\nexactly how great you are.\pRemember, I'm cheering for you,\n{PLAYER}!$","reviewed, no change needed"
+LilycoveCity_PokemonTrainerFanClub_Text_YoureOneWeWantToWin,"Yo, {PLAYER}!\nYou're the one we want to win!$","reviewed, no change needed"
+LilycoveCity_PokemonTrainerFanClub_Text_OthersDontKnowYoureTheBest,"The others, they don't know that\nyou're the best of the best!\pIsn't that right, {PLAYER}?\nShow them you've got guts!$","reviewed, no change needed"
+LilycoveCity_PokemonTrainerFanClub_Text_TrainersPowerIsOutOfTheOrdinary,"I hate to say this, but the TRAINER\neverybody's talking about is\l{STR_VAR_1}, no question about it!\pThat TRAINER's power…\nIt's out of the ordinary.$","reviewed, no change needed"
+LilycoveCity_PokemonTrainerFanClub_Text_TrainerIsBestNoOneWantsToListen,Darn it… I've been telling people\nthat {STR_VAR_1} is the best now…\pBut no one wants to listen…$,"reviewed, no change needed"
+LilycoveCity_PokemonTrainerFanClub_Text_HearingAboutToughNewTrainer,"I've been hearing things about\na tough new TRAINER.\pThis TRAINER's supposed to be beating\nARENA LEADERS, even.\pDo you know anything about this\nnew TRAINER?$",reviewed AUTO draft
+LilycoveCity_PokemonTrainerFanClub_Text_ImPullingForYou,Oh!\n{PLAYER}!\pGo for it!\nI'm pulling for you!$,"reviewed, no change needed"
+LilycoveCity_PokemonTrainerFanClub_Text_BrawlyNoImYourFan,"Sigh…\nTARFFUL…\pOh, no! Wait!\nThat's not right! No, no, no!\pI'm your fan through and through!\pSo make me proud!\nGo for it!$",reviewed AUTO draft
+LilycoveCity_PokemonTrainerFanClub_Text_ICantHelpLikingBrawly,"I can't help it, I can only get to\nlike TARFFUL…$",reviewed AUTO draft
+LilycoveCity_PokemonTrainerFanClub_Text_NobodyUnderstandsBrawly,"Nobody understands the charm of\nTARFFUL…\pI don't care!\pEven if I'm the only one, I'm going\nto keep cheering for TARFFUL!$",reviewed AUTO draft
+LilycoveCity_PokemonTrainerFanClub_Text_MyFavoriteTrainerIsBrawly,"Whatever anyone says, my favorite\nTRAINER is KACHIRHO's ARENA LEADER\lTARFFUL!$",reviewed AUTO draft
+LilycoveCity_PokemonTrainerFanClub_Text_YouveSurpassedYourFather,"You've surpassed your own father in\nevery regard!\pI'm telling you, so there's no question\nabout it at all!$","reviewed, no change needed"
+LilycoveCity_PokemonTrainerFanClub_Text_YourFatherNeverGaveUpSoKeepOnBattling,"Even when things turned bleak,\nyour father never gave up.\pThis I know to be true.\pYou never give up even if you lose!\nSo keep on battling!$","reviewed, no change needed"
+LilycoveCity_PokemonTrainerFanClub_Text_LongWayToGoComparedToNorman,"DORAN battled with more power,\ncharisma, and showmanship than you.\pEven though people may say that\nyou're strong…\pYou've still got a long way to go\ncompared to your father.$",reviewed AUTO draft
+LilycoveCity_PokemonTrainerFanClub_Text_YouAndNormanAreDifferent,You're beginning to get the same\nair of awe DORAN exudes.\pBut there's something conclusively\ndifferent between you and DORAN.\pI can't tell you what that is.\nYou'll have to find it yourself.$,reviewed AUTO draft
+LilycoveCity_PokemonTrainerFanClub_Text_WeDiscussStrongestTrainers,"Everyone here, we're all huge fans\nof COMPANION battles.\pWe discuss who we consider to be\nthe strongest of all TRAINERS.\pIf you were to become famous,\nwe might even become your fans!$",reviewed AUTO draft
+LilycoveCity_PokemonTrainerFanClub_Text_OhWoweeItsPlayer,"Oh, woweee! It's {PLAYER}!\nFor real, too!\pPlease, shake my hand, shake my hand!$","reviewed, no change needed"
+LilycoveCity_PokemonTrainerFanClub_Text_AlwaysCheerForYou,"I'll always cheer for you, {PLAYER}!\nAlways, always!\pI don't want to see you lose ever,\n{PLAYER}.\pBecause I know you're really,\nreally strong, {PLAYER}!$","reviewed, no change needed"
+LilycoveCity_PokemonTrainerFanClub_Text_EveryoneThinksTrainerIsCool,"{STR_VAR_1} is really cool…\pEveryone thinks so, right, right?$","reviewed, no change needed"
+LilycoveCity_PokemonTrainerFanClub_Text_TrainerIsReallyCoolItsJustMe,"{STR_VAR_1} really is cool, don't\nyou think so?\pEven if it's just me, I'm going to keep\ncheering my favorite TRAINER.$","reviewed, no change needed"
+LilycoveCity_PokemonTrainerFanClub_Text_WishThereWasTrainerLikeThat,My favorite TRAINER is…\pCool…\pStrong…\pAnd really nice…\pI wish there was a TRAINER like that…$,"reviewed, no change needed"
+LilycoveCity_PokemonTrainerFanClub_Text_WantToBeStrongLikeYou,"Whoa! It's {PLAYER}!\nWicked!\pWhen I grow up, I want to be strong\nlike you, {PLAYER}!$","reviewed, no change needed"
+LilycoveCity_PokemonTrainerFanClub_Text_OnlyOneWhoCheersForYou,"Even if I'm the only one…\pYou'll always be the only one\nI cheer for, {PLAYER}!\pBecause I believe in you, {PLAYER}!$","reviewed, no change needed"
+LilycoveCity_PokemonTrainerFanClub_Text_TrainerIsWickedlyCool,{STR_VAR_1} is so wickedly cool…\nI want to shake hands with my hero.$,"reviewed, no change needed"
+LilycoveCity_PokemonTrainerFanClub_Text_NeverGoingToStopBeingTrainersFan,"Even if I'm the only one…\pI'm never going to stop being\n{STR_VAR_1}'s fan!\pBecause I've heard, {STR_VAR_1}\nnever loses!$","reviewed, no change needed"
+LilycoveCity_PokemonTrainerFanClub_Text_YoureAmazingAfterAll,"{PLAYER}!\nYou are amazing after all!\pEver since I set eyes on you,\nI knew that you were great.\pIt looks like my eyes didn't deceive me.$","reviewed, no change needed"
+LilycoveCity_PokemonTrainerFanClub_Text_ImInYourCorner,Who cares about the others.\nI'm in your corner!\pYou don't need to worry. Just get\nout there and battle like always.$,"reviewed, no change needed"
+LilycoveCity_PokemonTrainerFanClub_Text_ThinkTrainerIsNumberOne,"You're a pretty decent TRAINER,\nI think.\pBut I also think that {STR_VAR_1}\nis number one right now.\pThat's just my opinion.\nDon't worry about it too much.$","reviewed, no change needed"
+LilycoveCity_PokemonTrainerFanClub_Text_YoureMaybeStrongerThanTrainer,"Wow, you really are strong.\nMaybe even stronger than {STR_VAR_1}.\pBut {STR_VAR_1} needs me.\pIf I don't cheer for {STR_VAR_1},\nwho will?$","reviewed, no change needed"
+LilycoveCity_PokemonTrainerFanClub_Text_YouChangedMyMind,"You've changed my mind!\nYou are strong, aren't you?\pI'd like you to tell me how you managed\nto get so strong!$","reviewed, no change needed"
+LilycoveCity_PokemonTrainerFanClub_Text_YouBattleAttractivelyInToughSituation,"The tougher the situation, the more\nattractively you battle.\pI can't wait for your next battle!$","reviewed, no change needed"
+LilycoveCity_PokemonTrainerFanClub_Text_TrainerIsStandout,"Among the recently hot TRAINERS,\n{STR_VAR_1} is the standout.\pThat toughness, it's simply not normal.\pYou're doing okay, but you're not in\nthe same class as {STR_VAR_1}.$","reviewed, no change needed"
+LilycoveCity_PokemonTrainerFanClub_Text_YouImpressive,You…\pImpressive!$,"reviewed, no change needed"
+LilycoveCity_PokemonTrainerFanClub_Text_OnlyIRecognizeYourTrueWorth,"Your true worth, it is fine if only\nI recognized it.\pThe others I doubt will understand\nthe hidden power that beats within.$","reviewed, no change needed"
+LilycoveCity_PokemonTrainerFanClub_Text_HaventRealizedPotential,"Yes, I see strength in your eyes.\pBut!\pYou still haven't realized your\npotential.$","reviewed, no change needed"
+LilycoveCity_PokemonTrainerFanClub_Text_YourePowerfulButNotTrueStrength,"It is true that you are tremendously\npowerful.\pBut!\nI can tell…\pThat strength cannot be considered\ntrue strength yet!\pTrue strength is…!\n… …\pActually, I have no idea, either.$","reviewed, no change needed"

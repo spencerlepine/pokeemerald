@@ -1,0 +1,877 @@
+text_id,sw_text_raw,notes
+LilycoveCity_ContestLobby_Text_ExplainContestRanks,"There are four ranks of\nSHOWCASES.\pNORMAL, SUPER, HYPER, and MASTER\nare the four ranks.\pIn the NORMAL Rank, any COMPANION may\nenter.\pAny COMPANION that won a NORMAL Rank\nSHOWCASE may move up to the SUPER Rank\lin the same category.\pIn the same way, a SUPER Rank winner\ncan move up to the HYPER Rank, and\la HYPER Rank winner can advance to\lthe MASTER Rank in the same category.\pA COMPANION that won in the MASTER\nRank may compete in the MASTER Rank as\loften as its TRAINER wants.$",
+LilycoveCity_ContestLobby_Text_Explain4PlayerContest,"When four players are ready, connect\nover a COMLINK, and register\lwith me, please.\pPlease choose the same SHOWCASE\nas your fellow contestants.\pThe SHOWCASE begins as soon as all\nplayers register their entry.\pAfter that, the usual SHOWCASE rules\napply.$",
+LilycoveCity_ContestLobby_Text_PlayerAt4PCounterUseGMode,"At least one player has entered using\nthe 4-player reception counter.\pThere must be four players connected\nusing COMLINK cables.\pWhen the four players are ready,\nselect G-MODE (GLOBAL MODE),\lthen register to enter again, please.$",
+LilycoveCity_ContestLobby_Text_ExplainLinkContest,"This is a SHOWCASE for two to four\nplayers linked by COMLINK.\pParticipants are first asked to choose\nthe mode they wish to enter.\pThere are two different modes.\pE-MODE (EMERALD MODE) is for\ntwo to four players, each with\lthis game.\pG-MODE (GLOBAL MODE) is only for\nfour players, each with this game\lor an older version.\pThe players should discuss which mode\nthey want, then choose the same mode.\pOnce all the players have chosen\nthe same SHOWCASE in the same mode,\lthe entry registration is complete.\pAfter that, a SHOWCASE will start in\nthe usual manner.$",Ruby/Sapphire cartridge references -> 'an older version'
+LilycoveCity_ContestLobby_Text_ExplainEMode,"In E-MODE (EMERALD MODE),\na LINK SHOWCASE can be held with\ltwo to four players. Each player must\lhave this game.\pThe players must be linked with each\nother by COMLINK.\pIf there are fewer than four players,\nTRAINERS in the hall will join to fill\lthe 4-player SHOWCASE lineup.\pPlease be aware that E-MODE is not\navailable in older versions.$",
+LilycoveCity_ContestLobby_Text_ExplainGMode,G-MODE (GLOBAL MODE) is specifically\nfor four players who are linked using\lCOMLINK cables.\pEach player must have this game or\nan older version.\pThe SHOWCASE starts after all players\nchoose G-MODE (this game) or\lenter through the 4-player reception\lcounter (an older version).$,
+LilycoveCity_ContestLobby_Text_NoWirelessAdapterInGMode,I'm terribly sorry.\pG-MODE does not function\nwith a wireless COMLINK.\pPlease select E-MODE or try\nagain using a COMLINK cable.$,
+gText_ApprenticeWhichLevelMode10,"Yippee!\nI'll buy you a starship for that!\pOf course I'm lying again!\nBut… Thank you, master!\pYou know how there's Level 50 and\nOpen Level at the BATTLE TOWER?\pI'm having trouble deciding which\nlevel I should challenge…\pCan you decide for me, master?$",
+gText_ApprenticeWhichMonFirst0,"Waah, {PLAYER}!\nI have a dilemma, sob…\pI want to begin battling other people,\nbut I don't know what to do.\pHow should I line up my COMPANIONS\nso they'll be at their strongest?\pPlease tell me, {PLAYER}. If you were me,\nwhich of these COMPANIONS would you\lsend out first?$",
+gText_ApprenticeMonThanks9,"Uh-huh, one {STR_VAR_1} it is!\nOK, A-OK!\lI'll get one in a POD, like, cram!\pAll right, thanks, as always!\nAdios!$",
+sText_RegisterMonAtTradingBoard,Welcome to the TRADING BOARD.\pYou may register your COMPANION\nand offer it up for a trade.\pWould you like to register one of\nyour COMPANIONS?,
+LilycoveCity_ContestLobby_Text_ReceptionDontHavePokeblockCase,"Hello!\pThis is the reception counter for\nSHOWCASES.\pOh? It appears that you don't have\na {POKEBLOCK} CASE yet.\pIn that case, we need to provide you\nwith this!$",reviewed AUTO draft
+LilycoveCity_ContestLobby_Text_NowThatWeveClearedThatUp,"Okay, now that we've cleared that\nup…\pHello!\pThis is the reception counter for\nSHOWCASES.$",reviewed AUTO draft
+LilycoveCity_ContestLobby_Text_ContestReception,Hello!\pThis is the reception counter for\nSHOWCASES.$,reviewed AUTO draft
+LilycoveCity_ContestLobby_Text_CounterOnlyFor4PlayerContests,Hello!\pThis reception counter is only\nfor 4-player SHOWCASES.$,reviewed AUTO draft
+LilycoveCity_ContestLobby_Text_EnterContest1,Would you like to enter your COMPANION\nin our SHOWCASES?$,reviewed AUTO draft
+LilycoveCity_ContestLobby_Text_WhichTopic1,Which topic would you like?$,"reviewed, no change needed"
+LilycoveCity_ContestLobby_Text_ExplainContests,"A SHOWCASE involves four\nTRAINERS entering one COMPANION each\lin competitive judging.\pA SHOWCASE has two stages of judging,\nprimary and secondary.\pPrimary judging is a popularity poll\ninvolving the audience.\pSecondary judging features appeals\nby the COMPANION using their moves.\pPlan appeals carefully to earn the\nmost attention of the JUDGE and\lexcite the audience.\lDo your best to stand out.\pThe primary and secondary scores are\nadded at the end.\pThe COMPANION garnering the highest\nscore is declared the winner.$",reviewed AUTO draft
+LilycoveCity_ContestLobby_Text_ExplainContestTypes,"There are five kinds of SHOWCASES.\pCOOL, BEAUTY, CUTE, SMART, and\nTOUGH are the five categories.\pChoose the SHOWCASE that is right for\nthe COMPANION you plan to enter.$",reviewed AUTO draft
+LilycoveCity_ContestLobby_Text_EnterWhichRank,Which Rank would you like to enter?$,"reviewed, no change needed"
+LilycoveCity_ContestLobby_Text_EnterWhichContest1,Which SHOWCASE would you like to enter?$,reviewed AUTO draft
+LilycoveCity_ContestLobby_Text_EnterWhichPokemon1,Which COMPANION would you like to\nenter?$,reviewed AUTO draft
+LilycoveCity_ContestLobby_Text_MonNotQualifiedForRank,"I'm terribly sorry, but your COMPANION\nis not qualified to compete at this\lRank yet…$",reviewed AUTO draft
+LilycoveCity_ContestLobby_Text_EggCannotTakePart,"I'm sorry, but an EGG cannot take part\nin a SHOWCASE.$",reviewed AUTO draft
+LilycoveCity_ContestLobby_Text_MonInNoConditionForContest,Your COMPANION appears to be in no\ncondition to take part in a SHOWCASE…$,reviewed AUTO draft
+LilycoveCity_ContestLobby_Text_AlreadyWonEnterAnyway,"Oh, but that RIBBON…\pYour COMPANION has won this SHOWCASE\nbefore, hasn't it?\pWould you like to enter it in this\nSHOWCASE anyway?$",reviewed AUTO draft
+LilycoveCity_ContestLobby_Text_ConfirmContestMon,Is that your SHOWCASE COMPANION?$,reviewed AUTO draft
+LilycoveCity_ContestLobby_Text_YourMonIsEntryNum4,"Okay, your COMPANION will be entered\nin this SHOWCASE.\pYour COMPANION is Entry No. 4.\nThe SHOWCASE will begin shortly.$",reviewed AUTO draft
+LilycoveCity_ContestLobby_Text_ComeThroughHere,Please come in through here.\nGood luck!$,"reviewed, no change needed"
+LilycoveCity_ContestLobby_Text_PokemonWonWeHavePrize,"Congratulations! Your COMPANION is the\nSHOWCASE winner!\pWe have your prize right here.\nPlease, right this way!$",reviewed AUTO draft
+LilycoveCity_ContestLobby_Text_ComeBackForPrizeLater,Please come back for your prize\nlater on.$,"reviewed, no change needed"
+ContestHall_Text_GettingStartedParticipantsAsFollows,MC: Hello! We're just getting started\nwith a {STR_VAR_3} Rank COMPANION\l{STR_VAR_2}!\pThe participating TRAINERS and their\nCOMPANIONS are as follows:$,reviewed AUTO draft
+ContestHall_Text_GettingStartedParticipantsAsFollowsLink,MC: Hello! We're just getting started\nwith a 4-player linked COMPANION\l{STR_VAR_2}!\pThe participating TRAINERS and their\nCOMPANIONS are as follows:$,reviewed AUTO draft
+ContestHall_Text_EntryXTrainersMon,MC: Entry No. {STR_VAR_2}!\n{STR_VAR_1}'s {STR_VAR_3}!$,"reviewed, no change needed"
+ContestHall_Text_SeenContestantsAudienceWillVote,"MC: We've just seen the four COMPANIONS\ncontestants.\pNow it's time for primary judging!\pThe audience will vote on their\nfavorite COMPANION contestants.\pWithout any further ado, let the\nvoting begin!$",reviewed AUTO draft
+ContestHall_Text_VotingUnderWay,Voting under way…$,"reviewed, no change needed"
+ContestHall_Text_VotingCompleteLetsAppeal,"Voting is now complete!\pWhile the votes are being tallied,\nlet's move on to secondary judging!\pThe second stage of judging is the\nmuch anticipated appeal time!\pMay the contestants amaze us with\nsuperb appeals of dazzling moves!\pLet's see a little enthusiasm!\nLet's appeal!$","reviewed, no change needed"
+ContestHall_Text_ThatsItForJudging,MC: That's it for judging!$,"reviewed, no change needed"
+ContestHall_Text_ThankYouForAppeals,Thank you all for a most wonderful\ndisplay of quality appeals!\pThis concludes all judging!\nThank you for your fine efforts!$,"reviewed, no change needed"
+ContestHall_Text_JudgeLooksReady,"Now, all that remains is the pulse-\npounding proclamation of the winner.\pThe JUDGE looks ready to make\nthe announcement!$","reviewed, no change needed"
+ContestHall_Text_WeWillNowDeclareWinner,JUDGE: We will now declare the winner!$,"reviewed, no change needed"
+ContestHall_Text_CongratsTrainerXandMon,"MC: Entry No. {STR_VAR_2}!\p{STR_VAR_3} and {STR_VAR_1},\ncongratulations!$","reviewed, no change needed"
+ContestHall_Text_CongratsPleaseCompeteAgain,MC: Congratulations!\nPlease do compete again!$,"reviewed, no change needed"
+ContestHall_Text_AcceptYourPrize,MC: Here you are!\nPlease accept your prize!$,"reviewed, no change needed"
+ContestHall_Text_ConferRibbonAsPrize,We confer on you this RIBBON\nas your prize!$,"reviewed, no change needed"
+ContestHall_Text_ReceivedRibbon,{PLAYER} received a RIBBON.$,"reviewed, no change needed"
+ContestHall_Text_PutRibbonOnMon,{PLAYER} put the RIBBON on\n{STR_VAR_1}.$,"reviewed, no change needed"
+ContestHall_Text_PickUpPrizeAtCounterLater,Please pick up your prize at\nthe reception counter later.\lPlease do compete again!$,"reviewed, no change needed"
+ContestHall_Text_OnlyRegister4Players,"I only register four players for\nSHOWCASES.\pIf three other players link up, all\nfour may enter the same SHOWCASE.\pWould you like to take part?$",reviewed AUTO draft
+LilycoveCity_ContestLobby_Text_ProgressWillBeSaved,"Before entering a SHOWCASE, your\nprogress will be saved.$",reviewed AUTO draft
+LilycoveCity_ContestLobby_Text_ParticipateAnotherTime,We hope you will participate another\ntime.$,"reviewed, no change needed"
+LilycoveCity_ContestLobby_Text_EnterContest2,Would you like to enter a SHOWCASE?$,reviewed AUTO draft
+LilycoveCity_ContestLobby_Text_EnterWhichContest2,Which SHOWCASE would you like to enter?$,reviewed AUTO draft
+LilycoveCity_ContestLobby_Text_EnterWhichPokemon2,Which COMPANION would you like to\nenter?$,reviewed AUTO draft
+LilycoveCity_ContestLobby_Text_Transmitting,Transmitting…$,"reviewed, no change needed"
+LilycoveCity_ContestLobby_Text_TransmissionError,Transmission error…$,"reviewed, no change needed"
+LilycoveCity_ContestLobby_Text_PlayersChoseDifferentContest,You may have chosen a different\nSHOWCASE than another player.$,reviewed AUTO draft
+LilycoveCity_ContestLobby_Text_PlayersMadeDifferentChoice,You may have made a different\nchoice than another player.$,"reviewed, no change needed"
+LilycoveCity_ContestLobby_Text_PleaseWaitBButtonCancel,Please wait.\n… … B Button: Cancel$,"reviewed, no change needed"
+LilycoveCity_ContestLobby_Text_ParticipateAnotherTime2,We hope you will participate another\ntime.$,"reviewed, no change needed"
+LilycoveCity_ContestLobby_Text_TransmissionErrorTryAgain,Transmission error.\nPlease try again.$,"reviewed, no change needed"
+LilycoveCity_ContestLobby_Text_YourMonIsEntryNumX,Your COMPANION will be entered in\nthe SHOWCASE.\pYour COMPANION is Entry No.\n{STR_VAR_2}.$,reviewed AUTO draft
+LilycoveCity_ContestLobby_Text_ContestBeginShortly,The SHOWCASE will begin shortly.$,reviewed AUTO draft
+LilycoveCity_ContestLobby_Text_LinkContestReception,Welcome! This is the SHOWCASE\nlink reception counter.\pYou may enter SHOWCASES together with\none or more friends.$,reviewed AUTO draft
+LilycoveCity_ContestLobby_Text_WhichTopic2,Which topic would you like?$,"reviewed, no change needed"
+LilycoveCity_ContestLobby_Text_EnterContest3,Would you like to enter a SHOWCASE?$,reviewed AUTO draft
+LilycoveCity_ContestLobby_Text_EnterWhichContest3,Which SHOWCASE would you like to enter?$,reviewed AUTO draft
+LilycoveCity_ContestLobby_Text_MonInNoCondition2,Your COMPANION appears to be in no\ncondition to take part in a SHOWCASE…$,reviewed AUTO draft
+LilycoveCity_ContestLobby_Text_EggCannotTakePart2,"I'm sorry, but an EGG cannot take part\nin a SHOWCASE.$",reviewed AUTO draft
+LilycoveCity_ContestLobby_Text_EnterWhichPokemon3,Which COMPANION would you like to\nenter?$,reviewed AUTO draft
+LilycoveCity_ContestLobby_Text_PleaseDecideLinkLeader,Please decide which of you will\nbecome the GROUP LEADER.\pThe other players must then choose\n“JOIN GROUP.”$,"reviewed, no change needed"
+LilycoveCity_ContestLobby_Text_WhichContestMode,Which SHOWCASE MODE would you like\nto enter?$,reviewed AUTO draft
+ContestHall_Text_GettingStartedWireless,MC: Hello! We're just getting started\nwith a 4-player linked COMPANION\l{STR_VAR_2}!$,reviewed AUTO draft
+ContestHall_Text_ParticipantsAsFollows,The participating TRAINERS and their\nCOMPANIONS are as follows:$,reviewed AUTO draft
+ContestHall_Text_WeveSeenContestants,MC: We've just seen the four COMPANIONS\ncontestants.\pNow it's time for primary judging!$,reviewed AUTO draft
+ContestHall_Text_AudienceWillVote,The audience will vote on their\nfavorite COMPANION contestants.$,reviewed AUTO draft
+ContestHall_Text_LetVotingBegin,"Without any further ado,\nlet the voting begin!$","reviewed, no change needed"
+ContestHall_Text_VotingComplete,"Voting is now complete!\pWhile the votes are being tallied,\nlet's move on to secondary judging!$","reviewed, no change needed"
+ContestHall_Text_SecondStageOfJudging,The second stage of judging is\nthe much-anticipated appeal time!\pMay the contestants amaze us with\nsuperb appeals of dazzling moves!$,"reviewed, no change needed"
+ContestHall_Text_LetsAppeal,Let's see a little enthusiasm!\nLet's appeal!$,"reviewed, no change needed"
+gText_ApprenticeChallenge0,"Um, I'm {STR_VAR_1}'s no. {STR_VAR_2} apprentice.\nSnivel… This tension is getting to me…$","reviewed, no change needed"
+gText_ApprenticeChallenge1,I'm {STR_VAR_1}'s no. {STR_VAR_2} apprentice!\nHere we come!$,"reviewed, no change needed"
+gText_ApprenticeChallenge2,I'm the no. {STR_VAR_2} apprentice of {STR_VAR_1}!\nAccept my challenge!$,"reviewed, no change needed"
+gText_ApprenticeChallenge3,Um… I'm {STR_VAR_1}'s no. {STR_VAR_2} apprentice…\nDo you think someone like me can win?$,"reviewed, no change needed"
+gText_ApprenticeChallenge4,I'm {STR_VAR_1}'s no. {STR_VAR_2} apprentice!\nI'll let you challenge me!$,"reviewed, no change needed"
+gText_ApprenticeChallenge5,"I'm horribly busy, but I also happen\nto be {STR_VAR_1}'s no. {STR_VAR_2} apprentice.$","reviewed, no change needed"
+gText_ApprenticeChallenge6,I'm {STR_VAR_1}'s no. {STR_VAR_2} apprentice.\nGlad to meet you!$,"reviewed, no change needed"
+gText_ApprenticeChallenge7,I serve as {STR_VAR_1}'s no. {STR_VAR_2} apprentice.\nMay I begin?$,"reviewed, no change needed"
+gText_ApprenticeChallenge8,Eek! I'm {STR_VAR_1}'s no. {STR_VAR_2} apprentice!\nI'll do my best!$,"reviewed, no change needed"
+gText_ApprenticeChallenge9,Yeehaw! I'm {STR_VAR_1}'s no. {STR_VAR_2} apprentice!\nPut 'em up!$,"reviewed, no change needed"
+gText_ApprenticeChallenge10,"I'm {STR_VAR_1}'s 1,000th apprentice!\nActually, I'm no. {STR_VAR_2}! Here goes!$","reviewed, no change needed"
+gText_ApprenticeChallenge11,"Yeah, I'm {STR_VAR_1}'s no. {STR_VAR_2} apprentice!\nLet's get rockin' and a-rollin'!$","reviewed, no change needed"
+gText_ApprenticeChallenge12,Yippee-yahoo! I'm what you call\n{STR_VAR_1}'s no. {STR_VAR_2} apprentice!$,"reviewed, no change needed"
+gText_ApprenticeChallenge13,Cough! I'm {STR_VAR_1}'s no. {STR_VAR_2} apprentice.\nGood to meet you! Cough!$,"reviewed, no change needed"
+gText_ApprenticeChallenge14,This is nerve-racking…\nI'm the no. {STR_VAR_2} apprentice of {STR_VAR_1}.$,"reviewed, no change needed"
+gText_ApprenticeChallenge15,"I am {STR_VAR_1}'s no. {STR_VAR_2} apprentice,\nand that's no lie.$","reviewed, no change needed"
+gText_ApprenticePleaseTeach0,"Are you… {PLAYER}?\nOh! Sniff…sob…\pOh! S-sorry…\nI'm so nervous, I can't help crying…\pI'm {STR_VAR_1}, and I really look up\nto you, {PLAYER}.\pI… I had this dream of one day meeting\nyou and asking you about COMPANIONS.\pPlease, please, {PLAYER}!\nPlease teach me about COMPANIONS!$",reviewed AUTO draft
+gText_ApprenticeRejectTeaching0,"Oh… B-but…\nSnivel… Waaaaaaah!\pPlease!\nI'm begging you, please!$","reviewed, no change needed"
+gText_ApprenticeWhichLevelMode0,"Oh, really? You will?\nAwesome! Wicked! Awoooh!\pOh… I'm sorry…\nI'm so happy, I'm crying…\pUm… Then please tell me!\nIt's about the BATTLE TOWER.\pWhich would be better for me: Level 50\nor the Open Level?$","reviewed, no change needed"
+gText_ApprenticeLevelModeThanks0,"{STR_VAR_1}?\nWaaaaah!\pOh! I'm so sorry!\nYou've made me happy by choosing\lthe level for me, and it's made me cry…\pSnivel…\nThank you so much!\lPlease talk with me again!$","reviewed, no change needed"
+gText_ApprenticePleaseTeach1,"Wowee! You're {PLAYER}, aren't you?\nYou're awesomely strong, aren't you?\pI'm {STR_VAR_1}!\nI just became a TRAINER!\pPlease, {PLAYER}!\nCan you be my teacher and tell me\llots about being a TRAINER?$","reviewed, no change needed"
+gText_ApprenticeRejectTeaching1,"Aww, why?\nOh, please? Pretty please?\lPlease be my teacher, please!$","reviewed, no change needed"
+gText_ApprenticeWhichLevelMode1,Yay! Great!\pThe first thing I wanted to ask you is\nabout the BATTLE TOWER!\pThe Level 50 and Open Level Rooms…\nWhich would be perfect for me?$,"reviewed, no change needed"
+gText_ApprenticeLevelModeThanks1,"{STR_VAR_1}, huh? That's true!\nI'll do my best there!\pIf we meet here again, please teach\nme something else, teacher!$","reviewed, no change needed"
+gText_ApprenticePleaseTeach2,"Um… Are you {PLAYER}?\nMy name is {STR_VAR_1}.\pI want to become a COMPANION TRAINER,\nbut I don't know what to do…\pSo I thought maybe I could ask you for\nadvice because you're so famous.\p{PLAYER}, could you give me advice?$",reviewed AUTO draft
+gText_ApprenticeRejectTeaching2,"Oh, but…\pI sincerely want to become a COMPANION\nTRAINER!\pPlease, can you answer my questions?$",reviewed AUTO draft
+gText_ApprenticeWhichLevelMode2,"Thank you!\nHere's my first question right away!\pThe BATTLE TOWER has two levels,\nLevel 50 and Open Level, right?\pWhich level do you think is more\nsuitable for me?$","reviewed, no change needed"
+gText_ApprenticeLevelModeThanks2,"Oh, the {STR_VAR_1} challenge?\nUnderstood!\pIf I have another question, I'll come\nback here for your advice!$","reviewed, no change needed"
+gText_ApprenticePleaseTeach3,"Oh? Huh? You're…\nNo, that can't be true.\pThere isn't any way that someone\nlike me could meet {PLAYER}.\p…You really are {PLAYER}?\nI can't believe I'm talking to you!\pWhen something this good happens,\nonly terrible things will happen to me\lnow, I just know it…\p…I'm sorry…\nI'm… {STR_VAR_1}…\pThere isn't anything special about\nme that I can be proud of…\pI shouldn't even say anything about\nmyself because you'll forget…\pI had this dream that if I ever met\nyou, {PLAYER}, that maybe I could ask\lyou for advice as a TRAINER.\pBut I don't think you would agree\nto that.\p…Or will you be so kind as to give\nme advice?$","reviewed, no change needed"
+gText_ApprenticeRejectTeaching3,"I knew it…\pIt had to happen because I'm such\na really boring nobody…\pBut I thought just maybe…\nYou won't reconsider, will you?\pBut I can't give up just like that.\nI'll ask you while I'm still lucky!\pPlease, will you be so kind as to give\nme advice?$","reviewed, no change needed"
+gText_ApprenticeWhichLevelMode3,"Really? I can't believe it!\nI can't believe you'll advise me!\lI… I'm so happy…\pWhat I want to ask you is really\ntrivial, but I can't decide…\pAt the BATTLE TOWER, they let you\nchoose Level 50 or Open Level.\pWhich course do you think even I may\nhave a chance at?$","reviewed, no change needed"
+gText_ApprenticeLevelModeThanks3,"{STR_VAR_1}? Okay!\nBut do you really think someone like\lme would have a chance?\pI'll do my best, even though I don't\nthink it will work.\pThank you very much for spending\ntime with someone like me.$","reviewed, no change needed"
+gText_ApprenticePleaseTeach4,"Oh! You're {PLAYER}{KUN}, aren't you?\pI've heard that you're tough at\nCOMPANION!\pI'm {STR_VAR_1}!\nI'll be your friend!\pDid you know?\pYou can't win at the GRAND ARENA\nif all you know is what they teach at\lthe ACADEMY.\pI'm willing to listen to your advice.\nYou'll agree, of course?$",reviewed AUTO draft
+gText_ApprenticeRejectTeaching4,Huh? Why are you refusing me?\nIt's me who's asking you!\lYou have to reconsider!$,"reviewed, no change needed"
+gText_ApprenticeWhichLevelMode4,"Okay, so there is this something.\nI want you to decide it for me.\pYou know that the BATTLE TOWER has\nLevel 50 and Open Level Rooms?\pWhich do you think would be good\nfor me, {PLAYER}{KUN}?$","reviewed, no change needed"
+gText_ApprenticeLevelModeThanks4,"Okay, {STR_VAR_1} is suitable for me?\nThank you!\pKnowing that you made the decision,\n{PLAYER}{KUN}, I won't be so upset if\lI lose.\pOkay, I'll look to you for advice again.\nBye!$","reviewed, no change needed"
+gText_ApprenticePleaseTeach5,"Oh, hi, there! {PLAYER}{KUN}!\nI know you because you're famous!\lCall me {STR_VAR_1}! Glad to meet you!\pI'm a TRIATHLETE, so I keep myself\nfit even while I raise COMPANIONS.\pI'm also involved with other things\nlike work, napping, ballroom dancing…\pBeing this busy, it's not so easy for\nme to become a decent TRAINER.\pSo, I have a proposition!\pThere must be a reason why we met.\nSo, {PLAYER}{KUN}, how about sharing your\lwisdom with me every so often?$",reviewed AUTO draft
+gText_ApprenticeRejectTeaching5,"Oh, but, please?\nA guy like me needs someone like\lyou, {PLAYER}{KUN}!\pHonestly, I need your advice!$","reviewed, no change needed"
+gText_ApprenticeWhichLevelMode5,"Thank you! That's more like it!\nSo, let's start with an easy one!\pYou know about the BATTLE TOWER's\ntwo courses, right?\lYou know, Level 50 and Open Level.\pMe being a busy guy, which one should\nI gear up for?$","reviewed, no change needed"
+gText_ApprenticeLevelModeThanks5,"{STR_VAR_1}, huh? Okay, gotcha.\nI'll find time somehow and give it a go!\p…Whoops, I'd better go to work!\nThanks! See you around!$","reviewed, no change needed"
+gText_ApprenticePleaseTeach6,"No way! Uh-uh!\nAre you maybe the real {PLAYER}?\pA-hah! Awesome! I'm {STR_VAR_1},\nso pleased to meet you!\p{PLAYER}, you're very strong,\naren't you?\pEveryone's talking about you!\pOh! I just had this great idea!\nI'll get advice off you, {PLAYER}!\lI'm sure it will make me tougher!\pIsn't it a great idea?\nPlease, I want your advice!$","reviewed, no change needed"
+gText_ApprenticeRejectTeaching6,"Ahahaha, you can pretend to be mean,\nbut you can't fool me!\lYou really mean okay, don't you?$","reviewed, no change needed"
+gText_ApprenticeWhichLevelMode6,"Yay! I knew you'd have a big heart,\n{PLAYER}!\pWhat should I ask you first?\n…Oh, I thought of something!\pDrum roll, please!\nThe question I have is…\pIf I were to take a BATTLE TOWER\nchallenge, which way should I go?\pLevel 50 or Open Level?\nWhich suits me more?$","reviewed, no change needed"
+gText_ApprenticeLevelModeThanks6,"Oh-oh-oh!\n{STR_VAR_1}, you say!\lThank you for a totally cool reply!\pI guess that's about all I wanted\nto ask you today.\pLet's meet here again, okay?\nThanks!$","reviewed, no change needed"
+gText_ApprenticePleaseTeach7,"I beg your pardon, but…\nAre you {PLAYER}?\pI'm {STR_VAR_1}, and I am delighted to\nmake your acquaintance.\pI have long been an admirer\nof yours…\p… … … … … …\pUm… I hope you don't find this\nrequest too much of a burden, but…\pMay I become your apprentice,\n{PLAYER}?$","reviewed, no change needed"
+gText_ApprenticeRejectTeaching7,"Oh…!\p… … … … … …\n… … … … … …\p…I must have fainted from shock.\nI'm sorry, I must have misheard you.\pPlease! Please say that you will\naccept me as your apprentice!$","reviewed, no change needed"
+gText_ApprenticeWhichLevelMode7,"Oh… I'm delighted!\pI don't wish to waste your time,\nso please advise me on this.\pI plan to take a BATTLE TOWER\nchallenge soon.\pHowever, there are two levels…\pWhich would be most suitable for me?\nLevel 50 or Open Level?$","reviewed, no change needed"
+gText_ApprenticeLevelModeThanks7,"{STR_VAR_1} is your choice!\nI see. I will do my best!\pThank you, {PLAYER}.\nI hope I can count on you again.\lPlease take care!$","reviewed, no change needed"
+gText_ApprenticePleaseTeach8,"Eek! Eek! {PLAYER}!\nYou spoke to me!\lI… I'm overjoyed!\pMe! My name is {STR_VAR_1}!\nI just became a TRAINER!\pI'm delighted I met you, {PLAYER},\nthe big name in COMPANION circles!\pOh-oh-oh, I know!\nMay I ask a huge favor, {PLAYER}?\pPlease take me in as your apprentice!\nI want to learn from you!$",reviewed AUTO draft
+gText_ApprenticeRejectTeaching8,"Waaaah!\n{PLAYER} turned me down…\lIt… It's an invaluable experience!\p{PLAYER}, please! I want to hear\nan affirmative answer this time!\pI beg you for your guidance!$","reviewed, no change needed"
+gText_ApprenticeWhichLevelMode8,"Hieeeeh! {PLAYER} said yes!\n{PLAYER} said yes!\pI won't be able to sleep tonight…\nThank you ever so much!\pThen, here's my question!\pAt the BATTLE TOWER, what is right\nfor me, Level 50 or Open Level?$","reviewed, no change needed"
+gText_ApprenticeLevelModeThanks8,{STR_VAR_1}! Perfectly understood!\nI understand perfectly!\lI'm deliriously delighted!\pI hope you'll be willing to teach me\nsome more another time.$,"reviewed, no change needed"
+gText_ApprenticePleaseTeach9,"Whoa! Could you be…\nMight you be… {PLAYER}{KUN}?!\lThat strong and famous TRAINER?\lWell, hello, aren't I just the luckiest!\pHello, the name's {STR_VAR_1}!\pI've been on the lookout for\na COMPANION teacher.\pAnd with impeccably good timing,\nalong came you, {PLAYER}{KUN}!\pSo, there you have it, {PLAYER}{KUN}!\nLet me apprentice under you!$",reviewed AUTO draft
+gText_ApprenticeRejectTeaching9,"Gwaaaah!\nYou're quite cool and tough…\pDon't be that way, please.\nI'm asking you!$","reviewed, no change needed"
+gText_ApprenticeWhichLevelMode9,"Oh, yeah! That's a solid reply!\nExcellent, I might add!\pSo how about a first piece of advice\non the BATTLE TOWER?\pIf I were to go, what would be better?\nLevel 50 or Open Level?$","reviewed, no change needed"
+gText_ApprenticeLevelModeThanks9,"Uh-huh, {STR_VAR_1} it is!\nOK, A-OK!\lI'll go show my mettle, like, jam!\pAll right, I'll look to you as my mentor!\nAdios!$","reviewed, no change needed"
+gText_ApprenticePleaseTeach10,"Oh, hey, {PLAYER}{KUN}, right?\nThe police were looking for you!\p… … …\nOf course I'm lying!\pMe, I'm {STR_VAR_1}. Despite the way\nI look, I'm the ILUM CHAMPION!\l…That's a lie, too!\pThis is no lie, though.\nI'm not very good at battling.\pSo, how about you becoming my master\nabout all things COMPANION?$",reviewed AUTO draft
+gText_ApprenticeRejectTeaching10,"If you're going to act cold like that,\nI'll show you what I'll do!\pWaaah! Waaah! Waaah!\nHiccup!\pHahaha, that was my FAKE TEARS!\pCome on, will you please be\nmy COMPANION master?$",reviewed AUTO draft
+gText_ApprenticeLevelModeThanks10,"Okay, so {STR_VAR_1} is better!\nI'll go to the other level, then!\pJust kidding!\nI'll obey your teaching, master!\pThanks, master!\nI hope you'll keep teaching me!$","reviewed, no change needed"
+gText_ApprenticePleaseTeach11,"A-H-O-Y!\nAnd that spells ahoy, and it means hi!\pI'm {STR_VAR_1}, the rappin' SAILOR\nam I!\pYour turn now, tell me a little about\nyourself, give it a try!\pUh-huh, uh-huh!\n{PLAYER}{KUN}'s your name,\land COMPANION's your game!\pAnd you're at a delicate age\nwhen all the world's your stage!\pAnyway, I just want to say,\nthat you're the tenth TRAINER\lI've spoken to today.\pLet's make that a celebration!\nBecome my mentor for commemoration!$",reviewed AUTO draft
+gText_ApprenticeRejectTeaching11,"But!\nYou have to work with me!\pDon't be such a tease!\nBecome my mentor, please!$","reviewed, no change needed"
+gText_ApprenticeWhichLevelMode11,"That's it!\n{PLAYER}, you've got the spirit!\pSo here's my first question\nthat begs your suggestion!\pIt's about the BATTLE TOWER,\nand it hinges on my power!\pLevel 50 and Open Level there be,\nwhich is the one that's good for me?$","reviewed, no change needed"
+gText_ApprenticeLevelModeThanks11,"Okay, {STR_VAR_1} it is, you say!\nI'll go and take it on my way!\pIf it's advice I ever need,\n{PLAYER}, your word I'll always heed!$","reviewed, no change needed"
+gText_ApprenticePleaseTeach12,"Say, hey, aren't you {PLAYER}?\nWhat should I do? Talk to you?\lWhy not? I'm already talking to you!\p{PLAYER}, are you surprised at me?\nI'd better tell you who I happen to be!\p{STR_VAR_1} is what you can call me.\nThe brightest star in guitardom,\lthat's me!\pAre you receiving me?\nYou are receiving me!\pMy luck's at its best,\nI'll hit you with a request!\p{PLAYER}, let me be your underling!\nI want you to teach me everything!$","reviewed, no change needed"
+gText_ApprenticeRejectTeaching12,"You're turning me down, then?\nI'll just have to ask you again!\p{PLAYER}, I beg to be your underling!\nI need you to teach me everything!$","reviewed, no change needed"
+gText_ApprenticeWhichLevelMode12,"Lucky, yeah, woohoo!\nShould I pop a question to you?\pSince we're near the BATTLE TOWER,\nhow about a question about its power?\pOf the choices you see,\nwhich is the right one for me?$","reviewed, no change needed"
+gText_ApprenticeLevelModeThanks12,"If {STR_VAR_1} is what you suggest,\nit must be the very best!\pWell, {PLAYER}, I have to roam free,\nbut don't you forget about me.\pSee you again, my smart friend!$","reviewed, no change needed"
+gText_ApprenticePleaseTeach13,"Oh, hi! You there!\nCan I get you to massage my shoulder?\p…Yes, there! That's it!\nOuch, ouch! Oooh, that feels great!\pMy name's {STR_VAR_1}.\nI take karate training, but my body's\lnot built to take the abuse…\pI decided I'll battle COMPANION and\ntoughen myself up.\pYou're {PLAYER}{KUN}, aren't you?\nThe ILUM TEMPLE CHAMP?\pListen, can I get you to give me\nadvice?$",reviewed AUTO draft
+gText_ApprenticeRejectTeaching13,"Oh, why?\pI won't be a big bother, I promise!\nPlease?$","reviewed, no change needed"
+gText_ApprenticeWhichLevelMode13,"Thank you. Mighty good of you!\n…Cough! Cough!\pOogh, I have to toughen up quick…\pI'll be heading off to the BATTLE TOWER\nright away, but what would be better\lfor me? Level 50 or Open Level?$","reviewed, no change needed"
+gText_ApprenticeLevelModeThanks13,"Hm, all right. That's {STR_VAR_1}.\nI'll go there right away.\pI hope I can keep hitting you up for\nhelp--after all, you're my mentor!$","reviewed, no change needed"
+gText_ApprenticePleaseTeach14,"Er… Um…\n{PLAYER}{KUN}…?\pPlease, don't look at me that way.\nYou're making me all self-conscious.\pI… I'm {STR_VAR_1}.\pI'm really embarrassed to say this,\nbut I explore ancient ruins and such.\pI'm even more embarrassed to admit\nI'm interested in the GRAND ARENA.\p{PLAYER}{KUN}, you have a reputation as\na tough TRAINER…\pIt's hard for me to say this,\nbut I want to ask something.\pCould you become my teacher and\ngive me advice?$",reviewed AUTO draft
+gText_ApprenticeRejectTeaching14,Please don't brush me off like this!\nI can't live with the humiliation.\pPlease become my teacher!\nI need your advice!$,"reviewed, no change needed"
+gText_ApprenticeWhichLevelMode14,"Th-thank you…\pBut please don't look at me like that.\nIt makes me all flustered.\pPlease, answer me without looking\nat my eyes.\pAt the BATTLE TOWER…\nWhich level should I attempt?$","reviewed, no change needed"
+gText_ApprenticeLevelModeThanks14,"Oh… Okay!\nI'll try my hand at that.\pI hope I can make a valiant challenge\nwithout getting all flustered…\pThank you, {PLAYER}{KUN}.\nIf we meet again, I hope you will be\las helpful.$","reviewed, no change needed"
+gText_ApprenticePleaseTeach15,"Hm? You appear to be {PLAYER}{KUN}…\nBut are you really real?\pYou may call me {STR_VAR_1}.\pI have been toying with the idea of\napprenticing under a strong TRAINER.\pSo, I must say I'm lucky you came along!\n…You really are {PLAYER}{KUN}, yes?\pNo, no, if you are real, it's fine.\nI merely want you to recognize me\las your apprentice.$","reviewed, no change needed"
+gText_ApprenticeRejectTeaching15,Oh?\nBut what would compel you to refuse?\pI apologize for being skeptical about\nyour identity.\pPlease accept my apology and\naccept me as your apprentice.$,"reviewed, no change needed"
+gText_ApprenticeWhichLevelMode15,"You really are accepting me?\nI don't wish to celebrate prematurely.\pIf it is true, I apologize.\nBut now, I need your advice.\pIf I were to enter the BATTLE TOWER,\nwhat would be worthy of me?\lLevel 50 or Open Level?$","reviewed, no change needed"
+gText_ApprenticeLevelModeThanks15,"{STR_VAR_1}?\nAre you certain?\pI see. If that's the case, that's fine.\nI thank you for your time.\pI realize I can annoy, but it delights\nme that you have accepted me.\pLet us meet again!$","reviewed, no change needed"
+gText_ApprenticeWhatHeldItem0,"Sigh… Sob…\nOh, {PLAYER}!\pI'm all tangled up in a dilemma\nthat I can't decide.\pI can't decide what I should make\nmy {STR_VAR_1} hold.\pPlease tell me, {PLAYER}.\nWhat item should I make it hold?$","reviewed, no change needed"
+gText_ApprenticeHoldNothing0,"Oh, really? I shouldn't make\nmy {STR_VAR_1} hold anything?$","reviewed, no change needed"
+gText_ApprenticeThanksNoHeldItem0,"Oh, okay! I'm delighted it's settled!\nAwesome! Wicked! Awoooh!\pThank you so much!$","reviewed, no change needed"
+gText_ApprenticeThanksHeldItem0,"Oh, I'm so glad…\nI think I have that {STR_VAR_1}, too.\pI'm delighted it's settled!\nAwesome! Wicked! Awoooh!\pThank you so much!$","reviewed, no change needed"
+gText_ApprenticeItemAlreadyRecommended0,"Waaaah! Please don't be mean!\pThat item {STR_VAR_1} was already\nrecommended to me before, sob…\pOr do you mean I shouldn't make\nmy {STR_VAR_2} hold anything?$","reviewed, no change needed"
+gText_ApprenticeWhatHeldItem1,"Yay! It's {PLAYER}!\nGreat! I wanted to ask you something!\pDo you make your COMPANION hold items?\nI want to make mine hold items, but…\pWhat item would be good for\n{STR_VAR_1} to hold?\pWhat do you think?$",reviewed AUTO draft
+gText_ApprenticeHoldNothing1,Huh? You mean my {STR_VAR_1} doesn't\nhave to hold anything?$,"reviewed, no change needed"
+gText_ApprenticeThanksNoHeldItem1,"Oh, I get it! I'll do that!\nThanks for teaching me!$","reviewed, no change needed"
+gText_ApprenticeThanksHeldItem1,"Oh, wow! One {STR_VAR_1}, huh?\nOkay, I'll do that!\pThanks for teaching me!$","reviewed, no change needed"
+gText_ApprenticeItemAlreadyRecommended1,"Oh, uh, no, that's not what I meant.\nI want to know about a different item\lthan the ones I already know.\pOr do you mean that my COMPANION\ndoesn't have to hold anything this\ltime?$",reviewed AUTO draft
+gText_ApprenticeWhatHeldItem2,"{PLAYER}, hello!\nIt's about my {STR_VAR_1}…\pI want to make it hold a good item.\nWhat would be good for it?$","reviewed, no change needed"
+gText_ApprenticeHoldNothing2,"Oh, then my {STR_VAR_1} doesn't have\nto hold anything?$","reviewed, no change needed"
+gText_ApprenticeThanksNoHeldItem2,"Okay, I got it!\nSee you again!$","reviewed, no change needed"
+gText_ApprenticeThanksHeldItem2,"Oh, the item {STR_VAR_1}?\nUnderstood!\pI'll do my best to find one!\nSee you again!$","reviewed, no change needed"
+gText_ApprenticeItemAlreadyRecommended2,Somebody taught me about\nthe {STR_VAR_1} already.\pI want my COMPANION to hold a different\nkind of item.\pOr do you think {STR_VAR_2} doesn't\nhave to hold anything?$,reviewed AUTO draft
+gText_ApprenticeWhatHeldItem3,"Hello, {PLAYER}…\nI'm sorry to disturb you, but I have\lsomething else I wanted to ask you.\pI don't think I'm good enough to win\nmatches on my own, so I'm thinking of\lmaking my {STR_VAR_1} hold an item.\pBut I don't know what would be good.\p{PLAYER}, please, could you decide\nfor me?$","reviewed, no change needed"
+gText_ApprenticeHoldNothing3,A COMPANION belonging to someone like\nme would be better off without an item?$,reviewed AUTO draft
+gText_ApprenticeThanksNoHeldItem3,I understand…\nYou're saying I shouldn't rely on items.\lI'll do my best not to!\pThank you very much!$,"reviewed, no change needed"
+gText_ApprenticeThanksHeldItem3,"The item {STR_VAR_1}, okay.\nI'm not sure if I can get one…\lNo! I'll do my best to get it.\pThank you very much!$","reviewed, no change needed"
+gText_ApprenticeItemAlreadyRecommended3,"Oh, but…\nI think I've heard about that before…\pIs it maybe because I haven't handled\nthe item {STR_VAR_1} very well?\pOr do you mean I shouldn't make\nmy {STR_VAR_2} hold anything?$","reviewed, no change needed"
+gText_ApprenticeWhatHeldItem4,"Oh, {PLAYER}{KUN}.\nThere's something I wanted to ask you.\pYou know how you decided which\nCOMPANION I should have for me?\pBut I never asked you what item\nit should be holding.\pSince you already gave me advice,\nhow about seeing this to the end?\pWhat would be good? I want to make\nmy {STR_VAR_1} hold something.$",reviewed AUTO draft
+gText_ApprenticeHoldNothing4,Oh! So my {STR_VAR_1} should do\nthe best it can empty-handed?$,"reviewed, no change needed"
+gText_ApprenticeThanksNoHeldItem4,"If you think that's best, I'll do that.\pKnowing that you made the decision,\n{PLAYER}{KUN}, I won't be so upset if\lI lose.\pOkay, I'll look to you for advice again.\nBye!$","reviewed, no change needed"
+gText_ApprenticeThanksHeldItem4,"The item {STR_VAR_1}, huh?\nNot bad. I'll use it!\pKnowing that you made the decision,\n{PLAYER}{KUN}, I won't be so upset if\lI lose.\pOkay, I'll look to you for advice again.\nBye!$","reviewed, no change needed"
+gText_ApprenticeItemAlreadyRecommended4,Huh? What are you saying?\nYou told me about the {STR_VAR_1}\lalready before.\pOr do you mean my {STR_VAR_2} should\ndo the best it can empty-handed?$,"reviewed, no change needed"
+gText_ApprenticeWhatHeldItem5,"Yo, {PLAYER}{KUN}!\pWe're both busy, but we seem to run\ninto each other often anyway!\pToday I have to do some walking,\ncleaning, and brushing.\pI haven't even had the time to buy\nmy precious {STR_VAR_1} anything.\pI don't have any time, so how about\ngiving me advice on what I should make\lmy {STR_VAR_1} hold?$","reviewed, no change needed"
+gText_ApprenticeHoldNothing5,"Oh, so me being a busy guy, you say\nmy {STR_VAR_1} doesn't need anything?$","reviewed, no change needed"
+gText_ApprenticeThanksNoHeldItem5,"Okay, gotcha.\nI won't need any time for that.\pThanks today!\nSee you around!$","reviewed, no change needed"
+gText_ApprenticeThanksHeldItem5,"Okay, gotcha.\nI'll find time somehow and find\lthat {STR_VAR_1} you recommended.\pI'm glad I met a good mentor in you.\nThanks! See you around!$","reviewed, no change needed"
+gText_ApprenticeItemAlreadyRecommended5,"Huh? I already know about\nthat {STR_VAR_1}.\pOh, right, I get it.\nSo me being a busy guy, you say\lmy {STR_VAR_2} doesn't need anything?$","reviewed, no change needed"
+gText_ApprenticeWhatHeldItem6,"Hiya, {PLAYER}! It's me!\nI need to tap your mind again today.\lPlease, I need your advice!\pDrum roll, please!\nThe question I have is…\pIf I want to make my {STR_VAR_1} hold\nan item, what should it be?$","reviewed, no change needed"
+gText_ApprenticeHoldNothing6,"Is that right? My {STR_VAR_1} doesn't\nneed to hold an item, you're saying.$","reviewed, no change needed"
+gText_ApprenticeThanksNoHeldItem6,"Okay, that's what I'll do!\pI guess that's about all I wanted\nto ask you today.\pLet's meet here again, okay?\nThanks!$","reviewed, no change needed"
+gText_ApprenticeThanksHeldItem6,"Uh-huh! One {STR_VAR_1}.\nWhat a cool choice!\lI'll definitely try that!\pI guess that's about all I wanted\nto ask you today.\pLet's meet here again, okay?\nThanks!$","reviewed, no change needed"
+gText_ApprenticeItemAlreadyRecommended6,"Ahahah! That's silly!\nYou already told me about that\l{STR_VAR_1} before!\pAre you feeling okay, {PLAYER}?\pOh, wait! My {STR_VAR_2} doesn't\nneed to hold an item, you're saying.$","reviewed, no change needed"
+gText_ApprenticeWhatHeldItem7,"Hello, {PLAYER}. I hope you've been\nkeeping well.\pMay I approach you for advice?\pIn a recent battle, my opponent\nseemed to have given his COMPANION\lan item to hold.\pAs a result, I was defeated…\pI don't wish to be left behind.\nI would like to make my {STR_VAR_1}\lhold an item, too.\pIt would please me if you could decide\nwhat would be right for my COMPANION…$",reviewed AUTO draft
+gText_ApprenticeHoldNothing7,In other words… My COMPANION has\nno need to hold an item?$,reviewed AUTO draft
+gText_ApprenticeThanksNoHeldItem7,"I understand clearly now!\nI will keep trying like this.\pThank you, {PLAYER}.\nI hope I can count on you again.\lPlease take care!$","reviewed, no change needed"
+gText_ApprenticeThanksHeldItem7,"One {STR_VAR_1} it is!\nI will order it right away.\pThank you, {PLAYER}.\nI hope I can count on you again.\lPlease take care!$","reviewed, no change needed"
+gText_ApprenticeItemAlreadyRecommended7,"You've already told me about that,\nand I already have it.\pOr are you saying… My COMPANION has\nno need to hold an item?$",reviewed AUTO draft
+gText_ApprenticeWhatHeldItem8,"Eek! {PLAYER}!\nI… I'm overjoyed to see you again!\pOh-oh-oh! There's something I just\nhad to ask you, {PLAYER}!\pPlease decide what my {STR_VAR_1}\nshould be holding!$","reviewed, no change needed"
+gText_ApprenticeHoldNothing8,"Oh, wow! I didn't expect that answer!\nSo, a hold item isn't necessary?$","reviewed, no change needed"
+gText_ApprenticeThanksNoHeldItem8,Perfectly understood!\nI'll keep at this without an item!\pI hope you'll be willing to teach me\nsome more another time.$,"reviewed, no change needed"
+gText_ApprenticeThanksHeldItem8,"{STR_VAR_1}! I'll use that!\pUm… Could it be, {PLAYER}, you also\nmake your COMPANION hold that item?\pI'll be sure to get it!\nI hope you'll be willing to teach me\lsome more another time.$",reviewed AUTO draft
+gText_ApprenticeItemAlreadyRecommended8,"Oh? You recommended that\n{STR_VAR_1} before, too.\pOr is it the best thing to hold?\nOr do you mean that my {STR_VAR_2}\ldoesn't need anything to hold?$","reviewed, no change needed"
+gText_ApprenticeWhatHeldItem9,"Hola!\nMy maestro, {PLAYER}{KUN}!\pI want to hit you up for advice on\nCOMPANION tools.\pWhat do you think would be good for\nmy {STR_VAR_1} to hold?\pDon't be shy now.\nLet's blurt it out!$",reviewed AUTO draft
+gText_ApprenticeHoldNothing9,"Oh? So, you're saying my {STR_VAR_1}\ncan win without holding any item?$","reviewed, no change needed"
+gText_ApprenticeThanksNoHeldItem9,"Si, bueno!\nI'll give it my best shot, like, slam!\pAll right, thanks, as always!\nAdios!$","reviewed, no change needed"
+gText_ApprenticeThanksHeldItem9,"Uh-huh, that's one {STR_VAR_1}?\nSi, bueno!\lI'll go find me one, like, bam!\pAll right, thanks, as always!\nAdios!$","reviewed, no change needed"
+gText_ApprenticeItemAlreadyRecommended9,"No, no! You already told me about\nthat {STR_VAR_1} thing before.\pOh, now wait just one minute here…\nSo, you're saying my {STR_VAR_2}\lcan win without holding any item?$","reviewed, no change needed"
+gText_ApprenticeWhatHeldItem10,"{PLAYER}{KUN}, something unbelievable\nhas happened!\pI woke up this morning, and my\nCOMPANION had 10 NUGGETS!\pOf course I'm lying!\nWahahaha!\pThis is no lie, though.\nI'm not very good at thinking about\lwhat items COMPANION should hold.\pSo, how about deciding for me what\nmy {STR_VAR_1} should hold, master?$",reviewed AUTO draft
+gText_ApprenticeHoldNothing10,What's that mean?\nDon't make it hold anything?$,"reviewed, no change needed"
+gText_ApprenticeThanksNoHeldItem10,"Okay, so it shouldn't hold anything.\nThen, I'd better get something for it!\pJust kidding!\nI'll obey your teaching, master!\pThanks, master!\nI hope you'll keep teaching me!$","reviewed, no change needed"
+gText_ApprenticeThanksHeldItem10,"Okay, so it's one {STR_VAR_1}!\nI'll make it hold anything but that!\pJust kidding!\nI'll obey your teaching, master!\pThanks, master!\nI hope you'll keep teaching me!$","reviewed, no change needed"
+gText_ApprenticeItemAlreadyRecommended10,"Um, you told me about that before,\ndidn't you?\pIsn't there something else?\pOr do you mean, don't make\nmy {STR_VAR_2} hold anything?$","reviewed, no change needed"
+gText_ApprenticeWhatHeldItem11,"A-H-O-Y!\nAnd that spells ahoy!\pThe rappin' SAILOR am I!\nI present to you a question\lthat's pretty fly!\pIt's an item question\nthat begs your suggestion!\pMy {STR_VAR_1} needs an item to hold,\nWhat should it be, if I may be bold?$","reviewed, no change needed"
+gText_ApprenticeHoldNothing11,Is that right?\nMy {STR_VAR_1} doesn't need to be\lholding anything tight?$,"reviewed, no change needed"
+gText_ApprenticeThanksNoHeldItem11,"Okay, I hear you, sure I do!\nMy COMPANION will go empty-handed, too!\pIf it's advice I ever need,\n{PLAYER}, your word I'll always heed!$",reviewed AUTO draft
+gText_ApprenticeThanksHeldItem11,"Okay, one {STR_VAR_1},\nthat's what I'll use.\lI was right to make you choose!\pIf it's advice I ever need,\n{PLAYER}, your word I'll always heed!$","reviewed, no change needed"
+gText_ApprenticeItemAlreadyRecommended11,"Okay, one {STR_VAR_1}, you say?\nYou told me that the other day.\lI need a new idea, a brand new way.\pOr, what, is that right?\nMy COMPANION doesn't need to hold\lanything tight?$",reviewed AUTO draft
+gText_ApprenticeWhatHeldItem12,"Say, hey, {PLAYER}!\nI found you again today!\pWhat should I do? Get your advice?\nWhy not? I'm already talking to you!\p{PLAYER}, are you getting sick of me?\nNah, no way, that can't be.\pWill you hear me out?\nI'm looking for advice--that's what\lI'm talking about.\pIt's about a hold item for\nmy {STR_VAR_1} that'd be good.\lMy indecision is making me brood.$","reviewed, no change needed"
+gText_ApprenticeHoldNothing12,My {STR_VAR_1} needs nothing?\nDoesn't need to hold anything?$,"reviewed, no change needed"
+gText_ApprenticeThanksNoHeldItem12,"If holding nothing is the best,\nI'll do as you suggest!\pWell, {PLAYER}, I have to roam free,\nbut don't you forget about me.\pSee you again, my smart friend!$","reviewed, no change needed"
+gText_ApprenticeThanksHeldItem12,"If holding that {STR_VAR_1} is\nthe best, I'll do as you suggest!\pWell, {PLAYER}, I have to roam free,\nbut don't you forget about me.\pSee you again, my smart friend!$","reviewed, no change needed"
+gText_ApprenticeItemAlreadyRecommended12,"Haven't I heard about that\n{STR_VAR_1} before?\lI'm certain I have, that's for sure!\pI need a new something!\nOr, my {STR_VAR_2} needs nothing?\lDoesn't need to hold anything?$","reviewed, no change needed"
+gText_ApprenticeWhatHeldItem13,"Gwah! Ouch! {PLAYER}{KUN}, my arm's broken!\nDon't touch it, please!\pI must've broken it while I was trying\nout different hold items with my posse\lof COMPANION.\pSo, things being this way,\nI need you to decide for me.\p{PLAYER}{KUN}, what do you think would be\ngood for my {STR_VAR_1} to hold?$",reviewed AUTO draft
+gText_ApprenticeHoldNothing13,Ouch…\pSo your suggestion is my {STR_VAR_1}\ndoesn't have to hold anything?$,"reviewed, no change needed"
+gText_ApprenticeThanksNoHeldItem13,"Hm, all right. That would be easier\nfor me, the way things are now.\pI hope I can keep hitting you up\nfor help like this.$","reviewed, no change needed"
+gText_ApprenticeThanksHeldItem13,"Hm, all right. That's one {STR_VAR_1}.\nMy COMPANION's arm is fine, so I'll make\lit hold that item right away.\pI hope I can keep hitting you up\nfor help like this.$",reviewed AUTO draft
+gText_ApprenticeItemAlreadyRecommended13,"No, no, you told me about that\n{STR_VAR_1} before, remember?\pHow about telling me something\neven better?\pOh, wait a second.\nSo your suggestion is my {STR_VAR_2}\ldoesn't have to hold anything?$","reviewed, no change needed"
+gText_ApprenticeWhatHeldItem14,"Er… Um…\n{PLAYER}{KUN}…\pPlease, don't look at me that way.\nMy COMPANIONS don't have anything.\pI… I'm really embarrassed about this,\nbut I really need your advice.\pI can't decide what hold item would\nmake my {STR_VAR_1} strong.\p{PLAYER}{KUN}, what do you think would\nbe good?$",reviewed AUTO draft
+gText_ApprenticeHoldNothing14,"Oh… Then, you think it would be better\nif my {STR_VAR_1} didn't have an item?$","reviewed, no change needed"
+gText_ApprenticeThanksNoHeldItem14,"Oh… Okay!\nI'll go without an item.\pThis is nerve-racking, though.\nWouldn't it be too cool?\pThank you, {PLAYER}{KUN}.\nIf we meet again, I hope you will be\las helpful.$","reviewed, no change needed"
+gText_ApprenticeThanksHeldItem14,"Oh… Okay!\nI'll go with that {STR_VAR_1}.\pThis is nerve-racking, though.\nWouldn't it be too cool?\pThank you, {PLAYER}{KUN}.\nIf we meet again, I hope you will be\las helpful.$","reviewed, no change needed"
+gText_ApprenticeItemAlreadyRecommended14,B-but I already heard about that.\pPlease don't brush me off like this!\nI can't live with the humiliation.\pOh… Am I jumping to conclusions?\nDo you think it would be better if\lmy {STR_VAR_2} didn't have an item?$,"reviewed, no change needed"
+gText_ApprenticeWhatHeldItem15,"Hm? You appear to be {PLAYER}{KUN}…\nBut are you really?\lPerhaps you're a twin?\pOh, no, no, no, don't worry!\nIf you really are {PLAYER}, please\lforget about my rudeness.\pWhat I would like is some more of\nyour fine advice.\pI have here my {STR_VAR_1} that I wish\nto make hold a convenient item.\pWhat would be worthy of it?$","reviewed, no change needed"
+gText_ApprenticeHoldNothing15,It's better if it held nothing?\nAre you certain?$,"reviewed, no change needed"
+gText_ApprenticeThanksNoHeldItem15,"I see. If that's the case, that's fine.\nI thank you for your time.\pLet us meet again!$","reviewed, no change needed"
+gText_ApprenticeThanksHeldItem15,"One {STR_VAR_1}?\nAre you certain?\pI see. If that's the case, that's fine.\nI thank you for your time.\pI do hope my COMPANION will be able to\nput it to good use.\pLet us meet again!$",reviewed AUTO draft
+gText_ApprenticeItemAlreadyRecommended15,"No, no, wait a minute.\nI believe you taught me that before.\pI would like you to recommend\nsomething different this time.\pPerhaps you're suggesting that\nmy {STR_VAR_2} should hold nothing?\lAre you certain?$","reviewed, no change needed"
+gText_ApprenticeMonFirstThanks0,"My {STR_VAR_1} should go first?\nWaaaaah!\pOh! I'm so sorry! You've made me happy\nby choosing my first COMPANION, and\lit's made me cry…\pThank you so much!$",reviewed AUTO draft
+gText_ApprenticeWhichMonFirst1,"Yay! It's {PLAYER}!\nGreat! I wanted to ask you something!\pUm, of my COMPANION, which do you\nthink should go out first?$",reviewed AUTO draft
+gText_ApprenticeMonFirstThanks1,"My {STR_VAR_1}? That's true.\nOkay, I'll do that!\pThanks for teaching me!$","reviewed, no change needed"
+gText_ApprenticeWhichMonFirst2,"{PLAYER}, hello!\pI think, in a battle, it's very important\nwhich COMPANION comes out first.\pOut of the COMPANION that I have,\nwhich would be good to send out first?$",reviewed AUTO draft
+gText_ApprenticeMonFirstThanks2,"My {STR_VAR_1} goes first?\nOkay, I got it!\pSee you again!$","reviewed, no change needed"
+gText_ApprenticeWhichMonFirst3,"Hello, {PLAYER}…\nI'm sorry to disturb you again with\lanother question.\pI have so little confidence, I don't\nknow what I'd do without you, {PLAYER}.\pIt may be a waste of time for me to\neven worry about it, but I just can't\ldecide something…\pWhich of my COMPANION should I send\nout first in a battle?$",reviewed AUTO draft
+gText_ApprenticeMonFirstThanks3,My {STR_VAR_1}?\nUnderstood!\pI can't believe that you would bother\nto answer my questions so often!\pI'm so grateful that you would even\nspeak with me… Thank you!$,"reviewed, no change needed"
+gText_ApprenticeWhichMonFirst4,"Oh, {PLAYER}{KUN}! It's me!\nI'm so glad to see you because I have\lthis little problem.\pI can't decide how my COMPANION should\nbe lined up. Could you decide for me?\pOh, you don't need to decide the whole\nparty right now.\pHow about deciding just the first\nCOMPANION for me?$",reviewed AUTO draft
+gText_ApprenticeMonFirstThanks4,"My {STR_VAR_1}? That's great!\pKnowing that you made the decision,\n{PLAYER}{KUN}, I won't be so upset if\lI lose.\pOkay, I'll look to you for advice again.\nBye!$","reviewed, no change needed"
+gText_ApprenticeWhichMonFirst5,"Hi, my teacher {PLAYER}{KUN}!\nI'm busy again today!\pI have to do some cycling, shopping,\nand humming.\pI haven't even had the time to decide\nhow to line up my COMPANION team.\pSo, how about checking out my team?\nWhich one should go first?$",reviewed AUTO draft
+gText_ApprenticeMonFirstThanks5,"Okay, gotcha.\nI have enough time at least to put\lmy {STR_VAR_1} at the head of the line!\pWhoops, my girlfriend's waiting!\nThanks! See you around!$","reviewed, no change needed"
+gText_ApprenticeWhichMonFirst6,"Yoohoo! Hiya, {PLAYER}!\nYou always walk around looking tough!\pListen, I need something from you\nagain! It's the usual thing!\pDrum roll, please!\nThe question I have is about my team.\pWhich COMPANION of mine should be first\nto go out in a battle?$",reviewed AUTO draft
+gText_ApprenticeMonFirstThanks6,"Hmhm!\nMy {STR_VAR_1}, you say!\lThanks for a most cool answer!\pI guess that's about all I wanted\nto ask you today.\pLet's meet here again, okay?\nThanks!$","reviewed, no change needed"
+gText_ApprenticeWhichMonFirst7,"Thank you so much for stopping to\nchat with me, {PLAYER}.\pI know I'm taking advantage of your\nkindness, but may I ask for advice?\pI would like you to decide on the order\nof my COMPANION team.\pIt would please me if you could decide\nwhich COMPANION should come first.$",reviewed AUTO draft
+gText_ApprenticeMonFirstThanks7,"My {STR_VAR_1} it is!\nI will put it first right away!\pThank you, {PLAYER}.\nI hope I can count on you again.\lPlease take care!$","reviewed, no change needed"
+gText_ApprenticeWhichMonFirst8,"Eek! {PLAYER}!\nI… I'm overjoyed to see you again!\pMy COMPANIONS have become much\nstronger!\pBut I don't always win. It seems to\ndepend on which COMPANION goes first.\p{PLAYER}, please, I need your help!\pPlease decide which of my COMPANION\nshould go out first!$",reviewed AUTO draft
+gText_ApprenticeMonFirstThanks8,"Sigh… I'm overwhelmed with happiness…\pIt's like a dream having you decide\nfor me, {PLAYER}.\pBut perfectly understood!\nI will go with my {STR_VAR_1} first!\pI hope you'll be willing to teach me\nsome more another time.$","reviewed, no change needed"
+gText_ApprenticeWhichMonFirst9,"Hello, hello!\nMy mentor, {PLAYER}{KUN}!\lHit me with your sage advice today!\pYou see, I pulled together a team of\nthree COMPANIONS. So far so good.\pBut the team's battling order's not\nsettled yet.\pThis is where you come in, {PLAYER}{KUN}!\nYou decide which COMPANION leads off!\pDon't be shy now.\nLet's blurt it out!$",reviewed AUTO draft
+gText_ApprenticeMonFirstThanks9,"Uh-huh, my {STR_VAR_1} leads off!\nOK, A-OK!\lI'll reorder the lineup, like, wham!\pAll right, thanks, as always!\nAdios!$","reviewed, no change needed"
+gText_ApprenticeWhichMonFirst10,"{PLAYER}{KUN}, listen!\nIt's a crisis!\pMy COMPANION, all three of them, go into\nbattle at once!\pOf course that's impossible!\nWahahaha!\pThis is no lie, though.\nI'm not very good at thinking about\lhow I should line up my COMPANION.\pSo, how about deciding for me which\nCOMPANION should go first, master?$",reviewed AUTO draft
+gText_ApprenticeMonFirstThanks10,"Okay, so it's my {STR_VAR_1} you chose?\nI'll let any but that one go first!\pJust kidding!\nI'll obey your teaching, master!\pThanks, master!\nI hope you'll keep teaching me!$","reviewed, no change needed"
+gText_ApprenticeWhichMonFirst11,"A-H-O-Y!\nAnd that spells ahoy!\pThe rappin' SAILOR am I!\nI present to you a question\lthat's pretty fly!\pIt's a team lineup question\nthat begs your suggestion!\pOut of this lot, which should go first\nas the first on the spot?$","reviewed, no change needed"
+gText_ApprenticeMonFirstThanks11,"Okay, I hear you, sure I do!\nI'll switch them up, that I'll do!\pIf it's advice I ever need,\n{PLAYER}, your word I'll always heed!$","reviewed, no change needed"
+gText_ApprenticeWhichMonFirst12,"Yahoo, {PLAYER}!\nHow do you do?\pWhat should I do? Go ahead and ask?\nUh-huh, I have something to ask!\lAre you receiving me?\lYou are receiving me!\pYou have to decide, which of my\nCOMPANION is the first to ride!\lInto battle, I mean to say.$",reviewed AUTO draft
+gText_ApprenticeMonFirstThanks12,"My {STR_VAR_1}? Yes!\nThat'll do, there's no distress!\pWell, {PLAYER}, I have to roam free,\nbut don't you forget about me.\pSee you again, my smart friend!$","reviewed, no change needed"
+gText_ApprenticeWhichMonFirst13,"…Oof…ooch… {PLAYER}{KUN}…\nMy stomach's hurting all of a sudden…\p…It's getting better now…\pI must've worried myself sick racking\nmy brains on how I should line up\lmy posse of COMPANION.\pSo, things being this way,\nI need you to decide for me.\p{PLAYER}{KUN}, which of my COMPANION should\ngo first? So I'd win, I mean.$",reviewed AUTO draft
+gText_ApprenticeMonFirstThanks13,"Hm, all right.\nMy {STR_VAR_1} goes first.\pI'll fix the lineup like that after\nI have my supper.\pI hope I can keep hitting you up\nfor help like this.$","reviewed, no change needed"
+gText_ApprenticeWhichMonFirst14,"Er… Um…\n{PLAYER}{KUN}?\pPlease, don't look at me that way.\nYou're making me feel all flustered.\pUm…\nI really need your advice.\pIt makes me bashful to say this,\nbut I chose my 3-COMPANION team.\lI can't decide on the order, though.\pWhich COMPANION should I send out\nfirst so I at least look capable?$",reviewed AUTO draft
+gText_ApprenticeMonFirstThanks14,"Oh… Okay!\nI'll lead with my {STR_VAR_1}.\pI hope I can do my best without\ngetting all flustered.\pThank you, {PLAYER}{KUN}.\nIf we meet again, I hope you will be\las helpful.$","reviewed, no change needed"
+gText_ApprenticeWhichMonFirst15,"Hm? You appear to be {PLAYER}{KUN}…\nBut are you really?\lPerhaps you're a clever look-alike?\pOh, no, no, no, don't worry!\nIf you really are {PLAYER}, please\lforget about my rudeness.\pWhat I would like is your fine advice.\pI have here my COMPANION team.\nI would like you to tell me which one\lshould go first in a battle.$",reviewed AUTO draft
+gText_ApprenticeMonFirstThanks15,"My {STR_VAR_1}…\nYou aren't pulling my leg?\pI see. If that's the case, that's fine.\nI thank you for your time.\pI am as you see, but I shall do\nmy best.\pLet us meet again!$","reviewed, no change needed"
+gText_ApprenticeWhichMon0,"Snivel…\nOh, {PLAYER}!\pWhat perfect timing!\nThere's something I just can't decide…\pI can't decide which COMPANION I should\nbe using.\pI can't decide between the COMPANION\n{STR_VAR_1} and {STR_VAR_2}…\p{PLAYER}, which do you think will give\neven me a chance at winning?$",reviewed AUTO draft
+gText_ApprenticeMonThanks0,"Snivel… I… I understand!\nOh! I'm so sorry!\lYou've made me so happy, I'm crying…\pI'll do my best to catch one\n{STR_VAR_1}!\pThank you so much!$","reviewed, no change needed"
+gText_ApprenticeWhichMon1,"Yay! It's {PLAYER}!\nYay, you came at the right time, too!\lI need your advice again!\pUm, I'm all mixed up--should I use\nmy {STR_VAR_1} or {STR_VAR_2}…\pWhich do you think I should raise,\n{PLAYER}?$","reviewed, no change needed"
+gText_ApprenticeMonThanks1,"Oh, so my {STR_VAR_1} is better!\nOkay, I'll do that!\pThanks for teaching me!$","reviewed, no change needed"
+gText_ApprenticeWhichMon2,"{PLAYER}, hello!\nI have a question I wanted to ask.\pI'm in a dilemma over whether I should\nraise one {STR_VAR_1} or {STR_VAR_2}.\pWhich COMPANIONS do you think will\nbe stronger?$",reviewed AUTO draft
+gText_ApprenticeMonThanks2,"{STR_VAR_1} is your choice?\nOkay, I got it!\pI'll go catch a strong {STR_VAR_1}\nright away!\pSee you again!$","reviewed, no change needed"
+gText_ApprenticeWhichMon3,"Hello, {PLAYER}…\pUm, you've probably already forgotten\nabout someone like me…\p…But that doesn't matter if you\ncould give me advice…\pI can't decide on the one kind of\nCOMPANION I should raise…\pI've narrowed the field to the\nCOMPANION {STR_VAR_1} and {STR_VAR_2},\lbut that's where I became stuck…\p{PLAYER}, you probably don't want to\nbother, but please decide for me.$",reviewed AUTO draft
+gText_ApprenticeMonThanks3,But will a wild {STR_VAR_1} even pay\nattention to me?\pI will try!\pBut will I even be able to catch one…\nNo! I'll do my best!\pThank you!$,"reviewed, no change needed"
+gText_ApprenticeWhichMon4,"Oh, {PLAYER}{KUN}! I'm so glad to see you!\nI was about to go looking for you!\pCan you decide what kind of COMPANION\nI should use?\pFor instance…\nHow about the COMPANION {STR_VAR_1}\land {STR_VAR_2}?\pWhich one do you think would be\nbetter?$",reviewed AUTO draft
+gText_ApprenticeMonThanks4,"{STR_VAR_1}? That's great!\pKnowing that you made the decision,\n{PLAYER}{KUN}, I won't be so upset if\lI lose.\pOkay, I'll look to you for advice again.\nBye!$","reviewed, no change needed"
+gText_ApprenticeWhichMon5,"If it isn't {PLAYER}{KUN}! How's it going?\nI'm busy again as always!\pI want to do good with COMPANIONS, too,\nbut I haven't been able to decide\lwhich COMPANION I should use.\pYou know how {STR_VAR_1} look strong?\nBut {STR_VAR_2} are tough to ignore.\p{PLAYER}{KUN}, give me some of your good\nadvice! Which one'd be good for me?$",reviewed AUTO draft
+gText_ApprenticeMonThanks5,"Okay, gotcha.\nI'll find time somehow and catch me\lthat {STR_VAR_1} you recommended.\pI'm glad I met a good mentor in you.\nThanks! See you around!$","reviewed, no change needed"
+gText_ApprenticeWhichMon6,"Oh!\nYay, it's {PLAYER}!\pI didn't waste any time boasting to\nmy friends about meeting you!\pI need to tap your mind again today.\nIt's an easy one for you!\pDrum roll, please!\nThe question I have is…\pIf I were to raise a COMPANION,\nand the choices were one {STR_VAR_1}\lor {STR_VAR_2}, which should it be?$",reviewed AUTO draft
+gText_ApprenticeMonThanks6,"Ahhh!\n{STR_VAR_1}, you say!\lThanks for a most cool answer!\pI guess that's about all I wanted\nto ask you today.\pLet's meet here again, okay?\nThanks!$","reviewed, no change needed"
+gText_ApprenticeWhichMon7,"Oh, is it you, {PLAYER}?\nI'm delighted to see you again!\pEver since I became your apprentice,\nmy confidence has been blooming.\pI think I'm ready to raise a COMPANION\nof my own!\p{PLAYER}, may I impose on you to choose\nwhich COMPANION I should raise?\pThe choices are the COMPANION\n{STR_VAR_1} or {STR_VAR_2}…\lWhich COMPANION is right for me?$",reviewed AUTO draft
+gText_ApprenticeMonThanks7,"One {STR_VAR_1} it is!\nI will find one right away!\pThank you, {PLAYER}.\nI hope I can count on you again.\lPlease take care!$","reviewed, no change needed"
+gText_ApprenticeWhichMon8,"Eek! {PLAYER}! I met you again!\nI… I'm overjoyed!\pOh-oh-oh, I know!\nI shouldn't pass up this opportunity!\pMay I ask a huge favor, {PLAYER}?\nPlease choose a COMPANION for me!\pPlease decide which would be better,\n{STR_VAR_1} or {STR_VAR_2}!$",reviewed AUTO draft
+gText_ApprenticeMonThanks8,Wow! You decided for me!\nOne {STR_VAR_1} is what I'll raise to\lthe best of my ability.\pI hope you'll be willing to teach me\nsome more another time.$,"reviewed, no change needed"
+gText_ApprenticeWhichMon9,"Hey, hey!\nMy mentor, {PLAYER}{KUN}!\pHello, I've been looking for you\nfor some more of your sage advice!\pWhich kind of COMPANIONS would be right\nfor me, one {STR_VAR_1} or {STR_VAR_2}?\pDon't be shy now.\nLet's blurt it out!$",reviewed AUTO draft
+gText_ApprenticeWhichMon10,"{PLAYER}{KUN}, listen! Big news!\nI caught a mirage COMPANION!\pOf course I'm lying!\nWahahaha!\pThis is no lie, though.\nI'm not very good at catching\lCOMPANIONS.\pSo, how about deciding for me which\nkind of COMPANIONS I should catch,\lmaster?\pWhich would be better?\n{STR_VAR_1} or {STR_VAR_2}?$",reviewed AUTO draft
+gText_ApprenticeMonThanks10,"Okay, so it's {STR_VAR_1} you chose?\nI'll grab the other kind, then!\pJust kidding!\nI'll obey your teaching, master!\pThanks, master!\nI hope you'll keep teaching me!$","reviewed, no change needed"
+gText_ApprenticeWhichMon11,"A-H-O-Y!\nAnd that spells ahoy!\pThe rappin' SAILOR am I!\nSurely you remember who am I?\pToday, I have a COMPANION question\nthat begs your suggestion!\pI have the choice between this\n{STR_VAR_1} and {STR_VAR_2}, you see.\lWhich is the one to catch for me?$",reviewed AUTO draft
+gText_ApprenticeMonThanks11,"{STR_VAR_1}, you say, hey, hey!\nI'll go get me one right away!\pIf it's advice I ever need,\n{PLAYER}, your word I'll always heed!$","reviewed, no change needed"
+gText_ApprenticeWhichMon12,"Oh, wow, if it isn't {PLAYER}!\pWhat should I do? Get your advice?\nWhy not? I'm already talking to you!\pIt's been a long time. Let me break\nthe ice. I'm also looking for advice!\lAre you receiving me?\lYou are receiving me!\pMy COMPANION--which should I use?\nIt's either {STR_VAR_1} or {STR_VAR_2}.\lWhich do you choose?$",reviewed AUTO draft
+gText_ApprenticeMonThanks12,"If that {STR_VAR_1} is the best,\nI'll do as you suggest!\pWell, {PLAYER}, I have to roam free,\nbut don't you forget about me.\pSee you again, my smart friend!$","reviewed, no change needed"
+gText_ApprenticeWhichMon13,"Oh, hi, {PLAYER}{KUN}…\nI have this horrible headache…\pI must've worried too much about\nthe kind of COMPANION I should raise.\pSo, things being this way,\nI need you to decide for me.\p{PLAYER}{KUN}, if I had to choose between\nthe COMPANION {STR_VAR_1} and\l{STR_VAR_2}, which should it be?$",reviewed AUTO draft
+gText_ApprenticeMonThanks13,"Hm, one {STR_VAR_1}, all right.\nI'll go look for one when I get better.\pI hope I can keep hitting you up\nfor help like this.$","reviewed, no change needed"
+gText_ApprenticeWhichMon14,"Er… Um…\n{PLAYER}{KUN}…?\pPlease, don't look at me that way.\nI'm getting all flustered…\lI… I need your advice.\pI… I'm really embarrassed, but I can't\ndecide which COMPANION to use.\pIf the choices were {STR_VAR_1} or\n{STR_VAR_2}, which would be better?$",reviewed AUTO draft
+gText_ApprenticeMonThanks14,"Oh… Okay!\nI'll do my best with one {STR_VAR_1}.\pI hope I can do my best without\ngetting all flustered.\pThank you, {PLAYER}{KUN}.\nIf we meet again, I hope you will be\las helpful.$","reviewed, no change needed"
+gText_ApprenticeWhichMon15,"Hm? You appear to be {PLAYER}{KUN}…\nBut are you really real?\pNo, no, if you are real, it's fine.\nIncidentally, I would like to obtain\lyour advice.\pIt's about the COMPANION I am to use.\pIf the choices are the COMPANION\n{STR_VAR_1} and {STR_VAR_2}, which is\lmore worthy of me?$",reviewed AUTO draft
+gText_ApprenticeMonThanks15,"{STR_VAR_1}?\nAre you certain?\pI see. If that's the case, that's fine.\nI thank you for your time.\pI do hope it is something even I can\nhandle with aplomb.\pLet us meet again!$","reviewed, no change needed"
+gText_ApprenticeWhichMove0,"Waaah! Oh, {PLAYER}!\nSnivel… Hiccup…\pI have a dilemma!\nI can't decide on a move for\lmy {STR_VAR_1}…\pPlease, please, {PLAYER}.\nCan you decide for me?\pFor my {STR_VAR_1}, which move would\nbe the better choice: {STR_VAR_2}\lor {STR_VAR_3}?$","reviewed, no change needed"
+gText_ApprenticeMoveThanks0,"{STR_VAR_1}?\nWaaaaah!\pOh! I'm so sorry, {PLAYER}!\nYou've made me so happy by deciding\lthe move, I'm crying…\pSnivel…\nThank you so much!$","reviewed, no change needed"
+gText_ApprenticeWhichMove1,"Yay! Hi, {PLAYER}!\nI need your advice again!\pI want to teach my {STR_VAR_1}\na cool move.\pI like either of the moves\n{STR_VAR_2} or {STR_VAR_3}.\lWhat's your recommendation?$","reviewed, no change needed"
+gText_ApprenticeMoveThanks1,"{STR_VAR_1} is better? I guess so!\nOkay, I'll go with that!\pIf we meet here again, please teach\nme something else, teacher!$","reviewed, no change needed"
+gText_ApprenticeWhichMove2,"{PLAYER}, hello!\nIt's about my {STR_VAR_1}, but I'm\lworried about its moves.\pYou see, it's the moves {STR_VAR_2}\nand {STR_VAR_3}.\pWhich is stronger and better for\nmy {STR_VAR_1}?$","reviewed, no change needed"
+gText_ApprenticeMoveThanks2,"{STR_VAR_1} is your choice?\nOkay, I got it!\pI'll go teach {STR_VAR_1} to\nmy COMPANION right away!\pSee you again!$",reviewed AUTO draft
+gText_ApprenticeWhichMove3,"Ohhh, {PLAYER}…\nI'm hopeless, no, really!\pI've decided to raise a COMPANION,\nbut now I can't even decide what\lmove I should let it learn…\pI know that it doesn't mean anything\nto you, {PLAYER}.\pBut it means a lot to me…\pPlease, {PLAYER}, could you choose\na move for my {STR_VAR_1}?\pIf you could even choose between\n{STR_VAR_2} and {STR_VAR_3}…$",reviewed AUTO draft
+gText_ApprenticeMoveThanks3,I understand!\pBut will it even be willing to learn\n{STR_VAR_1} for me…\lNo! I'll do my best!\pThank you!$,"reviewed, no change needed"
+gText_ApprenticeWhichMove4,"Oh, {PLAYER}{KUN}!\nI was just hoping to see you, too!\pI was wondering what move would\nbe suitable for my {STR_VAR_1}.\pI can't decide, so can you decide\nfor me instead?\pFor instance… How about the moves\n{STR_VAR_2} and {STR_VAR_3}?\lWhich one would be better?$","reviewed, no change needed"
+gText_ApprenticeMoveThanks4,"{STR_VAR_1}? That's great!\pKnowing that you made the decision,\n{PLAYER}{KUN}, I won't be so upset if\lI lose.\pOkay, I'll look to you for advice again.\nBye!$","reviewed, no change needed"
+gText_ApprenticeWhichMove5,"How could things be this busy?\nHey, if it isn't {PLAYER}{KUN}!\lHow's it going?\pSince I got up this morning, I've done\nmy jogging, swimming, and cooking!\pYou wouldn't believe how busy I am!\pI can't even decide what move\nmy {STR_VAR_1} should learn!\p{STR_VAR_2} looks good, huh?\nBut {STR_VAR_3}'s also decent.\p{PLAYER}{KUN}, give me some of your good\nadvice! Which move'd be good for me?$","reviewed, no change needed"
+gText_ApprenticeMoveThanks5,"Okay, gotcha.\nI'll make room in my schedule and\lteach that move.\pI'm glad I met a good mentor in you.\nThanks! See you around!$","reviewed, no change needed"
+gText_ApprenticeWhichMove6,"Oh! Lucky!\nI met you again, {PLAYER}!\lI need to tap your mind again today.\pDrum roll, please!\nThe question I have is…\pFor my {STR_VAR_1}, which is the move\nbest suited, {STR_VAR_2} or\l{STR_VAR_3}?$","reviewed, no change needed"
+gText_ApprenticeMoveThanks6,"Ahhh!\n{STR_VAR_1}, you say!\lThanks for a most cool answer!\pI guess that's about all I wanted\nto ask you today.\pLet's meet here again, okay?\nThanks!$","reviewed, no change needed"
+gText_ApprenticeWhichMove7,"Oh, hello, {PLAYER}.\nI trust you've been well?\pI have to seek your advice again.\nIt's about my dearest {STR_VAR_1}.\pWhat would be the ideal move for\nmy lovable {STR_VAR_1}?\l{STR_VAR_2} or {STR_VAR_3}?$","reviewed, no change needed"
+gText_ApprenticeMoveThanks7,"{STR_VAR_1} it is!\nI will teach that right away!\pThank you, {PLAYER}.\nI hope I can count on you again.\lPlease take care!$","reviewed, no change needed"
+gText_ApprenticeWhichMove8,"Eek! {PLAYER}! I met you again!\nI… I'm overjoyed!\pWhenever I'm in need, you're always\nthere for me, {PLAYER}!\pToday, I want you to recommend\na move for me!\pPlease choose a move for\nmy {STR_VAR_1}!\pWhich move would be better,\n{STR_VAR_2} or {STR_VAR_3}?$","reviewed, no change needed"
+gText_ApprenticeMoveThanks8,Oh-oh-oh! Thank you!\n{STR_VAR_1} is it!\lPerfectly understood!\pI hope you'll be willing to teach me\nsome more another time.$,"reviewed, no change needed"
+gText_ApprenticeWhichMove9,"Hola, {PLAYER}{KUN}, bueno!\nI'm hoping for some more of\lyour sage advice today!\pWhat would be the best move for\nmy {STR_VAR_1}?\pIt should be something that'll\nlet me win just like that!\pWould it be {STR_VAR_2}?\nOr {STR_VAR_3}?$","reviewed, no change needed"
+gText_ApprenticeMoveThanks9,"Uh-huh, {STR_VAR_1} it is!\nSi, bueno!\lI'll get it taught, like, ka-blam!\pAll right, thanks, as always!\nAdios!$","reviewed, no change needed"
+gText_ApprenticeWhichMove10,"{PLAYER}{KUN}, it's completely wild!\pMy COMPANION!\nIt learned six moves!\pOf course I'm lying!\nWahahaha!\pThis is no lie, though.\nI'm not very good at choosing moves\lfor my COMPANION.\pSo, how about deciding for me which\nkind of move I should teach?\p{STR_VAR_2} or {STR_VAR_3}--which\nwould go with my {STR_VAR_1} best?$",reviewed AUTO draft
+gText_ApprenticeMoveThanks10,"Okay, so it's {STR_VAR_1} you chose?\nI'll choose another move, then!\pJust kidding!\nI'll obey your teaching, master!\pThanks, master!\nI hope you'll keep teaching me!$","reviewed, no change needed"
+gText_ApprenticeWhichMove11,"A-H-O-Y!\nAnd that spells ahoy!\pThe rappin' SAILOR am I!\nI'm always with it, don't ask me why.\pToday, I have a move question\nthat begs your suggestion!\p{STR_VAR_2} and {STR_VAR_3} are\nthe moves. What would be the best\lfor my {STR_VAR_1} so it grooves?$","reviewed, no change needed"
+gText_ApprenticeMoveThanks11,"{STR_VAR_1}, you say, hey, hey!\nI'll go teach that right away!\pIf it's advice I ever need,\n{PLAYER}, your word I'll always heed!$","reviewed, no change needed"
+gText_ApprenticeWhichMove12,"Oh, yeahah, if it isn't {PLAYER}!\pWhat should I do? Get your advice?\nWhy not? I'm already talking to you!\p{PLAYER}, are you surprised by me?\nI want your advice, can't you see?\pAre you receiving me?\nYou are receiving me!\pMy {STR_VAR_1}--what should it use?\nIt's {STR_VAR_2} or {STR_VAR_3},\lwhat do you choose?$","reviewed, no change needed"
+gText_ApprenticeMoveThanks12,"If that {STR_VAR_1} is the best,\nI'll do as you suggest!\pWell, {PLAYER}, I have to roam free,\nbut don't you forget about me.\pSee you again, my smart friend!$","reviewed, no change needed"
+gText_ApprenticeWhichMove13,"Gahack! Gaah! Oh, {PLAYER}{KUN}…\nI have this lousy cold, I do…\pI want to pick a move for my COMPANION,\nbut I'm not up to it…\pSo, things being this way,\nI need you to decide for me.\p{PLAYER}{KUN}, if I had to choose between\n{STR_VAR_2} and {STR_VAR_3} for\lmy {STR_VAR_1}, which would it be?$",reviewed AUTO draft
+gText_ApprenticeMoveThanks13,"Hm, {STR_VAR_1}, all right. Cough!\nI'll go teach it when I get better.\pI hope I can keep hitting you up\nfor help like this.$","reviewed, no change needed"
+gText_ApprenticeWhichMove14,"Er… Um…\n{PLAYER}{KUN}…?\pPlease, don't look at me that way.\nI'm getting all flustered…\lI… I need your advice.\pI… I'm really embarrassed, but I can't\ndecide what move I should teach\lmy COMPANION.\pIt's for my {STR_VAR_1}.\nIf the choices were {STR_VAR_2} or\l{STR_VAR_3}, which would be better?$",reviewed AUTO draft
+gText_ApprenticeMoveThanks14,"Oh… Okay!\nI'll try that {STR_VAR_1}.\pI hope I can teach that move…\nThis is so nerve-racking…\pThank you, {PLAYER}{KUN}.\nIf we meet again, I hope you will be\las helpful.$","reviewed, no change needed"
+gText_ApprenticeWhichMove15,"Hm? You appear to be {PLAYER}{KUN}…\nBut are you really real?\pPerhaps you're one of those popular\nmimics?\pNo, no, if you are real, it's fine.\nNo need to be upset, I assure you!\pIncidentally, I would like to obtain\nyour advice.\pIt's about my {STR_VAR_1}.\pWhich move would be better for it to\nuse, {STR_VAR_2} or {STR_VAR_3}?$","reviewed, no change needed"
+gText_ApprenticeMoveThanks15,"{STR_VAR_1}?\nThere's no question about that?\pI see. If that's the case, that's fine.\nI thank you for your time.\pI do hope it is something even\nmy COMPANION can learn.\pLet us meet again!$",reviewed AUTO draft
+gText_ApprenticePickWinSpeech0,"Oh… {PLAYER}?\nIt is {PLAYER}!\lOh! Sniff…sob… Please, listen!\pI… When I battle, I get so nervous,\nI can't help crying even if I win…\pI wish I could say something cool\nwhen I win…\pPlease, please, {PLAYER}!\nCould you maybe teach me something\lcool to say when I win so I don't cry?$","reviewed, no change needed"
+gText_ApprenticeWinSpeechThanks0,"{STR_VAR_1}\pAwesome! Wicked! Awoooh!\nIt's really cool!\pOh… I'm sorry…\nI'm so happy, I'm crying…\pSnivel… {PLAYER}!\nThank you so much for everything!\pI will battle the best I can for\nyour sake, {PLAYER}!\p{PLAYER}…\nNext time… We should battle!$","reviewed, no change needed"
+gText_ApprenticePickWinSpeech1,Yay! It's {PLAYER}! Hello!\nI wanted to ask you something!\pI want to say something cool when\nI win a match.\pDo you have a cool saying that\nyou could recommend?$,"reviewed, no change needed"
+gText_ApprenticeWinSpeechThanks1,"{STR_VAR_1}\pOh, wow! That is so cool!\nOkay, I'll say that!\pThanks for teaching me all this time!\nI'm going to do the best I can\lwherever I go from now on!\pWhen we meet again, it'll be for\na battle!$","reviewed, no change needed"
+gText_ApprenticePickWinSpeech2,"{PLAYER}, hello!\pMy COMPANION and I are ready for\nanything, except for one thing.\pI think it would be good if I had\nsomething to shout when I win.\pCould you think up something good\nto say?$",reviewed AUTO draft
+gText_ApprenticeWinSpeechThanks2,"{STR_VAR_1}\p…Cool!\nI will use that!\pI'm going out to battle all over\nthe place.\pWho knows, I may even get to battle\nyou one day, {PLAYER}.\pNext time, let's meet at a place\nof battle!$","reviewed, no change needed"
+gText_ApprenticePickWinSpeech3,"Hello, {PLAYER}…\nI'm sorry to bug you, but I'm hopeless…\pEven when…\nEven when I win, I don't have anything\lspecial to say…\pI know that it doesn't mean anything\nto you, {PLAYER}.\pBut it means a lot to me…\pPlease, {PLAYER}, what should I say\nif I win a battle?$","reviewed, no change needed"
+gText_ApprenticeWinSpeechThanks3,"{STR_VAR_1}\pThat's inspired…\pUh… Is it okay for someone like me\nto even say that?\pNo! I'll do my best!\p{PLAYER}, thank you so much for\nputting up with me for so long…\pI promise to do my best from now on.\pI'm sure you'll quickly forget about\nsomeone like me, but let's meet\lsomewhere again!$","reviewed, no change needed"
+gText_ApprenticePickWinSpeech4,"Oh, {PLAYER}{KUN}.\nThere's something I want you to hear.\pI know that I don't always sound\nnice or polite…\pWhen I win a battle, I think I come\nacross as being arrogant.\pI don't want people to dislike me,\nso I want to say something nice to\lsomeone I beat.\pBut I can't think of anything good!\nCould you think something up for me?$","reviewed, no change needed"
+gText_ApprenticeWinSpeechThanks4,"{STR_VAR_1}\pNot bad!\nYup, that's what I'll go with!\pI'm going to hit the road and do what\nI can with what you taught me in\lmy head and heart.\pI'm sorry that I've been so pushy\nwith you!\pNext time, we battle, okay?\nSee you!$","reviewed, no change needed"
+gText_ApprenticePickWinSpeech5,"Oh, I can't get over how busy I am!\nOh, hey, I was looking for you, {PLAYER}{KUN}.\pAre you well as usual?\nThings haven't changed for me at all.\pI've got running, fighting, and mapping\nto do. Why am I so busy?\pBut even though I'm busy, it'd be rude\nto just turn on my heels and walk away\lfrom a win without saying a word.\pSo, what would be a cool saying to\nunderline my coolness when I'm done\land walking away? {PLAYER}{KUN}, help me!$","reviewed, no change needed"
+gText_ApprenticeWinSpeechThanks5,"{STR_VAR_1}\pOkay, gotcha.\nI can find time to say that!\pHonestly, I'm glad I met a good mentor\nlike you.\pI'm going to make time somehow so\nI can get into battling.\pThanks for everything, {PLAYER}{KUN}!\nWe have to battle, you and me, one day!$","reviewed, no change needed"
+gText_ApprenticePickWinSpeech6,"I lucked out again!\n{PLAYER}! Am I glad to see you!\lLike usual, I need your advice!\pDrum roll, please!\nThe last question I have is…\pIf I win a battle and want to end\nit with a cool flourish, what\lshould I say?$","reviewed, no change needed"
+gText_ApprenticeWinSpeechThanks6,"{STR_VAR_1}\pThat… That's fabulous!\nIt's dignified and cool! I claim it!\p…Listen, I think I'm getting decent\nat this, huh?\pSo, I'm thinking of challenging other\nTRAINERS from now on.\p{PLAYER}, your advice really helped me.\pMaybe one day, there'll be a time when\nwe battle!\pThank you for everything!$","reviewed, no change needed"
+gText_ApprenticePickWinSpeech7,"Oh, {PLAYER}.\nI'm so glad I met you!\pI no longer have any concerns with\nregard to my COMPANION.\pIt's myself that worries me…\pDo you know how a TRAINER says\na few things upon winning a battle?\pDefinitely, I wish I could do that,\ntoo!\pPlease, what should I say when\nI win a battle?$",reviewed AUTO draft
+gText_ApprenticeWinSpeechThanks7,"{STR_VAR_1}\pAh! That saying! It refreshes me\nand makes me feel reborn!\pI must use that right away!\pAnd now, I must take my leave,\n{PLAYER}…\pI will go out to battle many others,\nbut never will I forget your teachings.\pPerhaps one day…\nFarewell!$","reviewed, no change needed"
+gText_ApprenticePickWinSpeech8,"Eek! I spotted {PLAYER}!\nI… I'm overjoyed to see you!\pOh-oh-oh! There's something I just\nhad to ask you!\pA little while ago, I won a battle.\nThat part was giddying!\pBut it made me so overjoyed that\nI choked up and couldn't say a thing!\pSo now, {PLAYER}, please, I want you to\nthink up an exit line for when I win!$","reviewed, no change needed"
+gText_ApprenticeWinSpeechThanks8,"{STR_VAR_1}\pWaaaaah!\nI'm going to say that?!\lI… I'm delirious with joy!\pTh-th-thank you!\nI have nothing left to regret now!\pI'm going to travel now and battle\nall sorts of people.\pEverything, I owe it to you, {PLAYER}.\nReally, really, thank you!\pI've got to go now, but let's meet\nin battle one day!$","reviewed, no change needed"
+gText_ApprenticePickWinSpeech9,"Hola, bueno!\n{PLAYER}{KUN}!\pYou know, I'm getting the itch to roam\nand battle where I may.\pBut before I do, I want your advice\nonce again, please!\pIf I were to win a battle, what would\nbe a good boast I could say to my\lfallen TRAINER opponent?$","reviewed, no change needed"
+gText_ApprenticeWinSpeechThanks9,"{STR_VAR_1}\pUh-huh, that's sweet!\nSi, bueno!\lI'll try saying that, like, ham!\pAnd now, it's time to say good-bye!\nThanks for all sorts of things!\pGive me a battle one day, OK?\nAdios!$","reviewed, no change needed"
+gText_ApprenticePickWinSpeech10,"{PLAYER}{KUN}, there's big trouble!\pWhen I win a battle, I brag about it\nfor an hour at least!\pOf course I'm lying!\nWahahaha!\pThis is no lie, though.\nI'm not very good at chatting.\pSo, how about deciding for me what\nI should say after winning a battle,\lmaster?$","reviewed, no change needed"
+gText_ApprenticeWinSpeechThanks10,"{STR_VAR_1}\pThat's what I should say, huh?\nThen, I'll stay away from that!\pJust kidding!\nI'll obey your teaching, master!\pThanks for teaching me all this time,\nmaster!\pI'm finally understanding what being\na TRAINER is about.\pI'm going to go out and win battles\nagainst any TRAINER.\pMaybe it'll be you one day, master!\pThat's all!\nFarewell, my master!$","reviewed, no change needed"
+gText_ApprenticePickWinSpeech11,"A-H-O-Y!\nAnd that spells ahoy!\pThe rappin' SAILOR am I!\nThis will be my last question,\ldon't you cry!\pIt's a saying question\nthat begs your suggestion!\pIf I win a match, what can I say\nin a real cool way?$","reviewed, no change needed"
+gText_ApprenticeWinSpeechThanks11,"{STR_VAR_1}\pPerfect! That's what I'll use.\nI was right to make you choose!\pAnd now, I think it'd be best,\nif I were to fly the nest!\pThanks for all you taught me.\nI'll be off on a battle spree!\pB-O-N-V-O-Y-A-G-E!\nAnd that spells bon voyage,\lto you this is my homage!$","reviewed, no change needed"
+gText_ApprenticePickWinSpeech12,"Oh, yeah, {PLAYER}!\nI found you again today!\pWhat should I do? Ask you again?\nWhy not? I'm already asking you!\pAnyways, {PLAYER}…\nAre you receiving me?\lYou are receiving me!\lI need some more advice for me!\pIt's about what I should yell.\nSomething cool to holler when\la battle ends well.\pCome on, I wanna hear you say it!$","reviewed, no change needed"
+gText_ApprenticeWinSpeechThanks12,"{STR_VAR_1}\pAll right, all right!\nI'll use that because it's so tight!\pI'm out of things to ask you.\nWaving bye is all that's left to do.\pBut maybe one day we'll meet, with one\ndestined to go down in defeat.\pBut, it really is time to say farewell.\pWell, {PLAYER}, I have to roam free,\nbut don't you forget about me!\pTake care, {PLAYER}!\nLove ya!$","reviewed, no change needed"
+gText_ApprenticePickWinSpeech13,"{PLAYER}{KUN}, I'm finished…\nMy nose won't stop dripping…\pI was trying to think up something\ncool to say when I win a battle.\pIt inspired me so much, it made me cry,\nand now my nose won't stop running…\pSo, things being this way,\nI need you to decide for me, {PLAYER}{KUN}.\pWhen I win a battle,\nwhat should I say?$","reviewed, no change needed"
+gText_ApprenticeWinSpeechThanks13,"{STR_VAR_1}\p… … …That's good.\nNo, it's awe inspiring!\lIt's bringing fresh tears to my eyes!\pBut in spite of my tears and runny\nnose, I will use that saying!\pI'm plumb out of things to ask you,\n{PLAYER}{KUN}.\pFrom now on, we're rivals!\nThanks for everything!$","reviewed, no change needed"
+gText_ApprenticePickWinSpeech14,"Er… Um…\n{PLAYER}{KUN}…\pPlease, don't look at me that way.\nYou're making me all nervous.\pI… I need your advice again.\nI'll make it my last, though…\pIt's really embarrassing to ask,\nbut what if I win a battle?\lWhat should I say?$","reviewed, no change needed"
+gText_ApprenticeWinSpeechThanks14,"{STR_VAR_1}\pOh… Okay!\nI'll try to say that!\lI might be too nervous to say it…\pThank you, {PLAYER}{KUN}.\nI have to say good-bye now.\pI'll obey all that you've taught me,\n{PLAYER}{KUN}, and do the best I can.$","reviewed, no change needed"
+gText_ApprenticePickWinSpeech15,"Hm? You appear to be {PLAYER}{KUN}…\nBut are you really?\lPerhaps a clever {PLAYER} DOLL?\pOh, no, no, no, don't worry!\nIf you really are real, please\lforget about my rudeness.\pNo need to be so angry. All I wish for\nis more of your fine advice.\pIt concerns a saying.\pMore precisely, what should I say\nif I win a battle?$","reviewed, no change needed"
+gText_ApprenticeWinSpeechThanks15,"{STR_VAR_1}\p… … … … … …\nWhen I win a match…\p{STR_VAR_1}\p…Are you serious?\pI see. If you are serious, that's fine.\nI thank you for your time.\pI do hope even I will be able to\nput that saying to good use.\pI seem to have run dry on what advice\nI need.\pI do believe it's high time I bid you\nfarewell and strike out on my own.\pThank you, my mentor!\nI apologize for my skepticism!$","reviewed, no change needed"
+gTest_MissedTurn,Missed turn$,"reviewed, no change needed"
+gText_LinkStandby4,Link standby!$,"reviewed, no change needed"
+gText_WinnerIsPlayersMonCongrats,The winner is {STR_VAR_1}'s {STR_VAR_2}!\nCongratulations!$,"reviewed, no change needed"
+gText_WinnerIsPlayersMon,The winner is {STR_VAR_1}'s {STR_VAR_2}!{PAUSE_UNTIL_PRESS}$,"reviewed, no change needed"
+gText_PrimaryJudgingNumX,Primary judging: No. {STR_VAR_1}{PAUSE_UNTIL_PRESS}$,"reviewed, no change needed"
+gText_SecondaryJudgingNumX,Secondary judging: No. {STR_VAR_1}{PAUSE_UNTIL_PRESS}$,"reviewed, no change needed"
+gText_SetEventNumX,Set event: No. {STR_VAR_1}{PAUSE_UNTIL_PRESS}$,"reviewed, no change needed"
+gText_MoveUsedMostOften,The move used most often:\n{STR_VAR_1}{PAUSE_UNTIL_PRESS}$,"reviewed, no change needed"
+gText_MostImpressiveMon,The most impressive COMPANION:\n{STR_VAR_1}'s {STR_VAR_2}{PAUSE_UNTIL_PRESS}$,reviewed AUTO draft
+gText_SetEventNumX2,Set event: No. {STR_VAR_1}{PAUSE_UNTIL_PRESS}$,"reviewed, no change needed"
+gText_LinkTVProgramWillNotBeMadeTrainerLost,A link HOLONET program will not be made\nbecause the TRAINER lost.{PAUSE_UNTIL_PRESS}$,reviewed AUTO draft
+gContestHallPaintingCaption,{STR_VAR_1}\n{STR_VAR_2}'s {STR_VAR_3}$,"reviewed, no change needed"
+gContestPaintingContest,SHOWCASE$,reviewed AUTO draft
+gContestRankNormal,NORMAL RANK$,"reviewed, no change needed"
+gContestRankSuper,SUPER RANK$,"reviewed, no change needed"
+gContestRankHyper,HYPER RANK$,"reviewed, no change needed"
+gContestRankMaster,MASTER RANK$,"reviewed, no change needed"
+gContestLink,LINK$,"reviewed, no change needed"
+gContestCoolness,COOLNESS$,"reviewed, no change needed"
+gContestBeauty,BEAUTY$,"reviewed, no change needed"
+gContestCuteness,CUTENESS$,"reviewed, no change needed"
+gContestSmartness,SMARTNESS$,"reviewed, no change needed"
+gContestToughness,TOUGHNESS$,"reviewed, no change needed"
+gContestPaintingCool1,Nonstop supercool--\nthe inestimable {STR_VAR_1}$,"reviewed, no change needed"
+gContestPaintingCool2,"Hey, there! The good-looking COMPANION\n{STR_VAR_1}$",reviewed AUTO draft
+gContestPaintingCool3,"The marvelous, wonderful, and\nvery great {STR_VAR_1}$","reviewed, no change needed"
+gContestPaintingBeauty1,This century's last Venus--\nthe beautiful {STR_VAR_1}$,"reviewed, no change needed"
+gContestPaintingBeauty2,"{STR_VAR_1}'s dazzling,\nglittering smile$","reviewed, no change needed"
+gContestPaintingBeauty3,BACTA CENTER's super idol--\nthe incomparable {STR_VAR_1}$,reviewed AUTO draft
+gContestPaintingCute1,The lovely and sweet {STR_VAR_1}$,"reviewed, no change needed"
+gContestPaintingCute2,The pretty {STR_VAR_1}'s\nwinning portrait$,"reviewed, no change needed"
+gContestPaintingCute3,Give us a wink!\nThe cutie COMPANION {STR_VAR_1}$,reviewed AUTO draft
+gContestPaintingSmart1,The smartness maestro--\nthe wise COMPANION {STR_VAR_1}$,reviewed AUTO draft
+gContestPaintingSmart2,{STR_VAR_1}--the one chosen\nabove all COMPANIONS$,reviewed AUTO draft
+gContestPaintingSmart3,The excellent {STR_VAR_1}'s\nmoment of elegance$,"reviewed, no change needed"
+gContestPaintingTough1,The powerfully muscular\nspeedster {STR_VAR_1}$,"reviewed, no change needed"
+gContestPaintingTough2,"The strong, stronger, and\nstrongest {STR_VAR_1}$","reviewed, no change needed"
+gContestPaintingTough3,The mighty tough\nhyper COMPANION {STR_VAR_1}$,reviewed AUTO draft
+gText_HighlyAppealingMove,A highly appealing move.$,"reviewed, no change needed"
+gText_UserMoreEasilyStartled,"After this move, the user is\nmore easily startled.$","reviewed, no change needed"
+gText_GreatAppealButNoMoreToEnd,"Makes a great appeal, but\nallows no more to the end.$","reviewed, no change needed"
+gText_UsedRepeatedlyWithoutBoringJudge,Can be repeatedly used\nwithout boring the JUDGE.$,"reviewed, no change needed"
+gText_AvoidStartledByOthersOnce,Can avoid being startled\nby others once.$,"reviewed, no change needed"
+gText_AvoidStartledByOthers,Can avoid being startled\nby others.$,"reviewed, no change needed"
+gText_AvoidStartledByOthersLittle,Can avoid being startled\nby others a little.$,"reviewed, no change needed"
+gText_UserLessLikelyStartled,"After this move, the user is\nless likely to be startled.$","reviewed, no change needed"
+gText_SlightlyStartleFrontMon,Slightly startles the\nCOMPANION in front.$,reviewed AUTO draft
+gText_SlightlyStartleAppealed,Slightly startles those\nthat have made appeals.$,"reviewed, no change needed"
+gText_StartleAppealedBeforeUser,Startles the COMPANION that\nappealed before the user.$,reviewed AUTO draft
+gText_StartleAllAppealed,Startles all COMPANIONS that\nhave done their appeals.$,reviewed AUTO draft
+gText_BadlyStartleFrontMon,Badly startles the\nCOMPANION in front.$,reviewed AUTO draft
+gText_BadlyStartleAppealed,Badly startles those that\nhave made appeals.$,"reviewed, no change needed"
+gText_StartleAppealedBeforeUser2,Startles the COMPANION that\nappealed before the user.$,reviewed AUTO draft
+gText_StartleAllAppealed2,Startles all COMPANIONS that\nhave done their appeals.$,reviewed AUTO draft
+gText_ShiftJudgesAttentionFromOthers,Shifts the JUDGE's\nattention from others.$,"reviewed, no change needed"
+gText_StartleMonHasJudgesAttention,Startles the COMPANION that\nhas the JUDGE's attention.$,reviewed AUTO draft
+gText_JamOthersMissesTurn,"Jams the others, and misses\none turn of appeals.$","reviewed, no change needed"
+gText_StartleMonsMadeSameTypeAppeal,Startles COMPANION that\nmade a same-type appeal.$,reviewed AUTO draft
+gText_BadlyStartleCoolAppeals,Badly startles COMPANION\nthat made COOL appeals.$,reviewed AUTO draft
+gText_BadlyStartleBeautyAppeals,Badly startles COMPANION\nthat made BEAUTY appeals.$,reviewed AUTO draft
+gText_BadlyStartleCuteAppeals,Badly startles COMPANION\nthat made CUTE appeals.$,reviewed AUTO draft
+gText_BadlyStartleSmartAppeals,Badly startles COMPANION\nthat made SMART appeals.$,reviewed AUTO draft
+gText_BadlyStartleToughAppeals,Badly startles COMPANION\nthat made TOUGH appeals.$,reviewed AUTO draft
+gText_MakeMonAfterUserNervous,Makes one COMPANION after\nthe user nervous.$,reviewed AUTO draft
+gText_MakeAllMonsAfterUserNervous,Makes all COMPANIONS after\nthe user nervous.$,reviewed AUTO draft
+gText_WorsenConditionOfThoseMadeAppeals,Worsens the condition of\nthose that made appeals.$,"reviewed, no change needed"
+gText_BadlyStartleMonsGoodCondition,Badly startles COMPANION in\ngood condition.$,reviewed AUTO draft
+gText_AppealGreatIfPerformedFirst,The appeal works great if\nperformed first.$,"reviewed, no change needed"
+gText_AppealGreatIfPerformedLast,The appeal works great if\nperformed last.$,"reviewed, no change needed"
+gText_AppealAsGoodAsThoseBeforeIt,Makes the appeal as good\nas those before it.$,"reviewed, no change needed"
+gText_AppealAsGoodAsOneBeforeIt,Makes the appeal as good\nas the one before it.$,"reviewed, no change needed"
+gText_AppealBetterLaterItsPerformed,The appeal works better\nthe later it is performed.$,"reviewed, no change needed"
+gText_AppealVariesDependingOnTiming,The appeal's quality varies\ndepending on its timing.$,"reviewed, no change needed"
+gText_WorksWellIfSameTypeAsBefore,Works well if it's the same\ntype as the one before.$,"reviewed, no change needed"
+gText_WorksWellIfDifferentTypeAsBefore,Works well if different in\ntype than the one before.$,"reviewed, no change needed"
+gText_AffectedByAppealInFront,Affected by how well the\nappeal in front goes.$,"reviewed, no change needed"
+gText_UpsConditionHelpsPreventNervousness,Ups the user's condition.\nHelps prevent nervousness.$,"reviewed, no change needed"
+gText_AppealWorksWellIfConditionGood,The appeal works well if the\nuser's condition is good.$,"reviewed, no change needed"
+gText_NextAppealMadeEarlier,The next appeal can be\nmade earlier next turn.$,"reviewed, no change needed"
+gText_NextAppealMadeLater,The next appeal can be\nmade later next turn.$,"reviewed, no change needed"
+gText_TurnOrderMoreEasilyScrambled,Makes the next turn's order\nmore easily scrambled.$,"reviewed, no change needed"
+gText_ScrambleOrderOfNextAppeals,Scrambles the order of\nappeals on the next turn.$,"reviewed, no change needed"
+gText_AppealExcitesAudienceInAnyContest,An appeal that excites the\naudience in any SHOWCASE.$,reviewed AUTO draft
+gText_BadlyStartlesMonsGoodAppeals,Badly startles all COMPANIONS\nthat made good appeals.$,reviewed AUTO draft
+gText_AppealBestMoreCrowdExcited,The appeal works best the\nmore the crowd is excited.$,"reviewed, no change needed"
+gText_TemporarilyStopCrowdExcited,Temporarily stops the\ncrowd from growing excited.$,"reviewed, no change needed"
+gText_RainDance,RAIN DANCE$,"reviewed, no change needed"
+gText_Rage,RAGE$,"reviewed, no change needed"
+gText_FocusEnergy,FOCUS ENERGY$,"reviewed, no change needed"
+gText_Hypnosis,HYPNOSIS$,"reviewed, no change needed"
+gText_Softboiled,SELF REPAIR$,reviewed AUTO draft
+gText_HornAttack,HORN ATTACK$,"reviewed, no change needed"
+gText_SwordsDance,SWORDS DANCE$,"reviewed, no change needed"
+gText_Conversion,CONVERSION$,"reviewed, no change needed"
+gText_SunnyDay,SUNNY DAY$,"reviewed, no change needed"
+gText_Rest2,REST$,"reviewed, no change needed"
+gText_Vicegrip,VICEGRIP$,"reviewed, no change needed"
+gText_DefenseCurl,DEFENSE CURL$,"reviewed, no change needed"
+gText_LockOn,TARGET LOCK$,reviewed AUTO draft
+gContestMoveTypeCoolText,COOL$,"reviewed, no change needed"
+gContestMoveTypeBeautyText,BEAUTY$,"reviewed, no change needed"
+gContestMoveTypeCuteText,CUTE$,"reviewed, no change needed"
+gContestMoveTypeSmartText,SMART$,"reviewed, no change needed"
+gContestMoveTypeToughText,TOUGH$,"reviewed, no change needed"
+gText_AppealNumWhichMoveWillBePlayed,Appeal no. {STR_VAR_1}!\nWhich move will be played?$,"reviewed, no change needed"
+gText_AppealNumButItCantParticipate,Appeal no. {STR_VAR_1}!\nBut it can't participate!$,"reviewed, no change needed"
+gText_MonAppealedWithMove,{STR_VAR_1} appealed with\n{STR_VAR_2}!$,"reviewed, no change needed"
+gText_MonWasWatchingOthers,{STR_VAR_1} was watching\nthe others.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_AllOutOfAppealTime,We're all out of\nAppeal Time!{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_ButAppealWasJammed,But the appeal was\njammed.$,"reviewed, no change needed"
+gText_FollowedAnotherMonsLead,It followed another\nCOMPANION's lead.$,reviewed AUTO draft
+gText_ButItMessedUp,But it messed up.$,"reviewed, no change needed"
+gText_WentBetterThanUsual,It went better than\nusual.$,"reviewed, no change needed"
+gText_JudgeLookedAwayForSomeReason,The JUDGE looked away\nfor some reason.$,"reviewed, no change needed"
+gText_WorkedHardToBuildOnPastMistakes,It worked hard to build on\npast mistakes.$,"reviewed, no change needed"
+gText_CantMakeAnyMoreMoves,It can't make any more\nmoves.$,"reviewed, no change needed"
+gText_WorkedFrighteninglyWell,It worked frighteningly\nwell.$,"reviewed, no change needed"
+gText_WorkedHardAsStandoutMon,It worked as hard as the\nstandout COMPANION.$,reviewed AUTO draft
+gText_JudgedLookedOnExpectantly,The JUDGE looked on\nexpectantly.$,"reviewed, no change needed"
+gText_WorkedRatherWell,It worked rather well.$,"reviewed, no change needed"
+gText_WorkedLittleBetterThanUsual,It worked a little better\nthan usual.$,"reviewed, no change needed"
+gText_MonFailedToStandOutAtAll,{STR_VAR_1} failed to\nstand out at all…{PAUSE_UNTIL_PRESS}$,"reviewed, no change needed"
+gText_MonDidntStandOutVeryMuch,{STR_VAR_1} didn't stand\nout very much…{PAUSE_UNTIL_PRESS}$,"reviewed, no change needed"
+gText_MonCaughtALittleAttention,{STR_VAR_1} caught a\nlittle attention.{PAUSE_UNTIL_PRESS}$,"reviewed, no change needed"
+gText_MonAttractedALotOfAttention,{STR_VAR_1} attracted a\nlot of attention.{PAUSE_UNTIL_PRESS}$,"reviewed, no change needed"
+gText_MonCommandedTotalAttention,{STR_VAR_1} commanded\ntotal attention.{PAUSE_UNTIL_PRESS}$,"reviewed, no change needed"
+gText_MonHasntMadeItsAppeal,{STR_VAR_1} hasn't made\nits appeal.{PAUSE_UNTIL_PRESS}$,"reviewed, no change needed"
+gText_AnticipationSwelledForMonsAppealNext2,Anticipation swelled for\n{STR_VAR_1}'s appeal next.$,"reviewed, no change needed"
+gText_EmptyContestString,$,"reviewed, no change needed"
+gText_JudgesViewsOnMonHeldFirm,The JUDGE 's views on\n{STR_VAR_1} held firm.$,"reviewed, no change needed"
+gText_MonsXChangedPerceptions,{STR_VAR_1}'s {STR_VAR_3}\nchanged perceptions.$,"reviewed, no change needed"
+gText_MonsAppealEffectWoreOff,{STR_VAR_1}'s appeal\neffect wore off.$,"reviewed, no change needed"
+gText_SpecialAppealsEffectWoreOff,The special appeal's\neffect wore off.$,"reviewed, no change needed"
+gText_EveryonesAppealsMadeToLookSame,Everyone's appeals were\nmade to look the same.$,"reviewed, no change needed"
+gText_CheapenedMonsAppeal,It cheapened\n{STR_VAR_2}'s appeal.$,"reviewed, no change needed"
+gText_CheapenedAppealOfThoseAhead,It cheapened the appeal\nof those ahead.$,"reviewed, no change needed"
+gText_StoleAttentionAwayFromMon,It stole attention away\nfrom {STR_VAR_2}.$,"reviewed, no change needed"
+gText_CheapenedMonsAppeal2,It cheapened\n{STR_VAR_2}'s appeal.$,"reviewed, no change needed"
+gText_SeverelyCheapenedOtherAppeals,It severely cheapened\nother appeals.$,"reviewed, no change needed"
+gText_AnticipationSwelledForMonsAppealNext,Anticipation swelled for\n{STR_VAR_1}'s appeal next.$,"reviewed, no change needed"
+gText_CheapenedAppealOfThoseAhead2,It cheapened the appeal\nof those ahead.$,"reviewed, no change needed"
+gText_CheapenedJudgesFavoriteAppeal,It cheapened the JUDGE's\nfavorite appeal.$,"reviewed, no change needed"
+gText_AppealsOfOthersCheapenedByHalf,The appeals of others\nwere cheapened by half.$,"reviewed, no change needed"
+gText_StoodOutToMakeUpForBeingJammed,It stood out to make up\nfor being jammed.$,"reviewed, no change needed"
+gText_CantParticipateInAppealsAnyMore,It can't participate in\nappeals any more.$,"reviewed, no change needed"
+gText_TouchedJudgeForFantasticAppeal,It touched the JUDGE for\na fantastic appeal.$,"reviewed, no change needed"
+gText_AnticipationRoseForUpcomingAppeals,Anticipation rose for\nupcoming appeals.$,"reviewed, no change needed"
+gText_StoodOutAsMuchAsSpecialAppeals,It stood out as much as\nspecial appeals.$,"reviewed, no change needed"
+gText_StoodOutAsMuchAsMon,It stood out as much as\n{STR_VAR_1}.$,"reviewed, no change needed"
+gText_JammedAppealsMadeEvenLessNoticeable,Jammed appeals were made\neven less noticeable.$,"reviewed, no change needed"
+gText_EveryonesAppealsMadeSame,Everyone's appeals were\nmade the same.$,"reviewed, no change needed"
+gText_BecameMoreConsciousOfOtherMons,It became more conscious\nof the other COMPANIONS.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,reviewed AUTO draft
+gText_MonCantMakeAnAppealAfterThis,{STR_VAR_1} can't make an\nappeal after this.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_SettledDownJustLittleBit,It settled down just a\nlittle bit.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_BecameObliviousToOtherMons,It became oblivious to\nthe other COMPANIONS.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,reviewed AUTO draft
+gText_BecameLessAwareOfOtherMons,It became less aware of\nthe other COMPANIONS.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,reviewed AUTO draft
+gText_StoppedCaringAboutOtherMons,It stopped caring about\nother COMPANION much.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,reviewed AUTO draft
+gText_TriedToStartleOtherMons,It tried to startle the\nother COMPANION.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,reviewed AUTO draft
+gText_TriedToDazzleOthers,It tried to dazzle the\nothers.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_JudgeLookedAwayFromMon,The JUDGE looked away\nfrom {STR_VAR_1}.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_TriedToUnnerveNextMon,It tried to unnerve the\nnext COMPANION.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,reviewed AUTO draft
+gText_MonBecameNervous,{STR_VAR_1} became\nnervous.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_AppealTriedToUnnerveWaitingMons,The appeal tried to\nunnerve waiting COMPANION.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,reviewed AUTO draft
+gText_TauntedMonsDoingWell,It taunted COMPANION\ndoing well.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,reviewed AUTO draft
+gText_MonRegainedItsForm,{STR_VAR_1} regained its\nform.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_TriedToJamMonDoingWell,It tried to jam COMPANION\ndoing well.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,reviewed AUTO draft
+gText_StandoutMonHustledEvenMore,The standout {STR_VAR_1}\nhustled even more.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_LargelyUnnoticedMonWorkedHard,The largely unnoticed\n{STR_VAR_1} worked hard.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_WorkedAsMuchAsMonBefore,It worked as much as\nCOMPANION before it.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,reviewed AUTO draft
+gText_MonsAppealDidNotGoWell,{STR_VAR_1}'s appeal did\nnot go well.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_WorkedAsMuchAsPrecedingMon,It worked as much as the\npreceding COMPANION.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,reviewed AUTO draft
+gText_MonsAppealDidNotGoWell2,{STR_VAR_1}'s appeal did\nnot go well.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_MonsAppealDidNotGoWell3,{STR_VAR_1}'s appeal did\nnot go well.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_MonsAppealWentSlightlyWell,{STR_VAR_1}'s appeal\nwent slightly well.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_MonsAppealWentPrettyWell,{STR_VAR_1}'s appeal\nwent pretty well.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_MonsAppealWentExcellently,{STR_VAR_1}'s appeal\nwent excellently.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_MonsAppealWasDud,{STR_VAR_1}'s appeal was\na dud.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_MonsAppealDidNotWorkVeryWell,{STR_VAR_1}'s appeal did\nnot work very well.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_MonsAppealWentSlightlyWell2,{STR_VAR_1}'s appeal\nwent slightly well.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_MonsAppealWentPrettyWell2,{STR_VAR_1}'s appeal\nwent pretty well.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_MonsAppealWentVeryWell,{STR_VAR_1}'s appeal\nwent very well.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_MonsAppealWentExcellently2,{STR_VAR_1}'s appeal\nwent excellently.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_SameTypeAsOneBeforeGood,It's the same type as the\nCOMPANION before--good!{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,reviewed AUTO draft
+gText_NotSameTypeAsOneBeforeGood,It's not the same type as\nthe one before--good!{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_StoodOutMuchMoreThanMonBefore,It stood out much more\nthan the COMPANION before.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,reviewed AUTO draft
+gText_DidntDoAsWellAsMonBefore,It didn't do as well as the\nCOMPANION before.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,reviewed AUTO draft
+gText_MonsConditionRoseAboveUsual,{STR_VAR_1}'s condition\nrose above usual.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_MonsHotStatusMadeGreatAppeal,{STR_VAR_1}'s hot status\nmade it a great appeal!{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_MovedUpInLineForNextAppeal,It moved up in line for\nthe next appeal.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_MovedBackInLineForNextAppeal,It moved back in line once\nfor the next appeal.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_ScrambledUpOrderForNextTurn,It scrambled up the\norder for the next turn.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_JudgeLookedAtMonExpectantly,The JUDGE looked at\n{STR_VAR_1} expectantly.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_AppealComboWentOverWell,The appeal combo went\nover well.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_AppealComboWentOverVeryWell,The appeal combo went\nover very well.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_AppealComboWentOverExcellently,The appeal combo went\nover excellently.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_MonManagedToAvertGaze,{STR_VAR_1} managed to\navert its gaze.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_MonManagedToAvoidSeeingIt,{STR_VAR_1} managed to\navoid seeing it.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_MonIsntFazedByThatSortOfThing,{STR_VAR_1} isn't fazed\nby that sort of thing.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_MonBecameALittleDistracted,{STR_VAR_1} became a\nlittle distracted.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_TriedToStartleOtherPokemon,It tried to startle the\nother COMPANION.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,reviewed AUTO draft
+gText_MonLookedDownOutOfDistraction,{STR_VAR_1} looked down\nout of distraction.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_MonTurnedBackOutOfDistraction,{STR_VAR_1} turned back\nout of distraction.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_MonCouldntHelpUtteringCry,{STR_VAR_1} couldn't help\nuttering a cry.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_MonCouldntHelpLeapingUp,{STR_VAR_1} couldn't help\nleaping up.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_MonTrippedOutOfDistraction,{STR_VAR_1} tripped over\nout of distraction.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_MonWasTooNervousToMove,{STR_VAR_1} was too\nnervous to move.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_ButItMessedUp2,But it messed up.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_ButItFailedToMakeTargetNervous,But it failed to make\nthe target nervous.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_ButItFailedToMakeAnyoneNervous,But it failed to make\nanyone nervous.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_ButItWasIgnored,But it was ignored…{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_CouldntImproveItsCondition,But it couldn't improve\nits condition…{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_BadConditionResultedInWeakAppeal,Its bad condition\nresulted in a weak appeal.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_MonWasUnaffected,{STR_VAR_1} was\nunaffected.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_RepeatedAppeal,{STR_VAR_1} disappointed\nby repeating an appeal.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_MonsXWentOverGreat,{STR_VAR_1}'s {STR_VAR_3}\nwent over great.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_MonsXDidntGoOverWell,{STR_VAR_1}'s {STR_VAR_3}\ndidn't go over well here…{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_MonsXGotTheCrowdGoing,{STR_VAR_1}'s {STR_VAR_3}\ngot the crowd going.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_MonCantAppealNextTurn,{STR_VAR_1} can't appeal\nnext turn…{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_AttractedCrowdsAttention,It attracted the crowd's\nattention.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_CrowdContinuesToWatchMon,The crowd continues to\nwatch {STR_VAR_3}.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_MonsMoveIsIgnored,{STR_VAR_1}'s\n{STR_VAR_2} is ignored.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+gText_Contest_Shyness,shyness$,"reviewed, no change needed"
+gText_Contest_Anxiety,anxiety$,"reviewed, no change needed"
+gText_Contest_Laziness,laziness$,"reviewed, no change needed"
+gText_Contest_Hesitancy,hesitancy$,"reviewed, no change needed"
+gText_Contest_Fear,fear$,"reviewed, no change needed"
+gText_Contest_Coolness,coolness$,"reviewed, no change needed"
+gText_Contest_Beauty,beauty$,"reviewed, no change needed"
+gText_Contest_Cuteness,cuteness$,"reviewed, no change needed"
+gText_Contest_Smartness,smartness$,"reviewed, no change needed"
+gText_Contest_Toughness,toughness$,"reviewed, no change needed"
+gText_Tension,TENSION$,"reviewed, no change needed"
+gText_CoolMove,COOL Move$,"reviewed, no change needed"
+gText_BeautyMove,BEAUTY Move$,"reviewed, no change needed"
+gText_CuteMove,CUTE Move$,"reviewed, no change needed"
+gText_SmartMove,SMART Move$,"reviewed, no change needed"
+gText_ToughMove,TOUGH Move$,"reviewed, no change needed"
+gText_3QuestionMarks,???$,"reviewed, no change needed"
+sText_PleaseWaitAWhile,Please wait a while{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.\n{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.,"reviewed, no change needed"
+gGiftRibbonDescriptionPart1_2003RegionalTourney,2003 REGIONAL TOURNEY,"reviewed, no change needed"
+gGiftRibbonDescriptionPart2_Champion,CHAMPION RIBBON,"reviewed, no change needed"
+gGiftRibbonDescriptionPart1_2003NationalTourney,2003 NATIONAL TOURNEY,"reviewed, no change needed"
+gGiftRibbonDescriptionPart1_2003GlobalCup,2003 GLOBAL CUP,"reviewed, no change needed"
+gGiftRibbonDescriptionPart2_RunnerUp,Runner-up RIBBON,"reviewed, no change needed"
+gGiftRibbonDescriptionPart2_Semifinalist,Semifinalist RIBBON,"reviewed, no change needed"
+gGiftRibbonDescriptionPart1_2004RegionalTourney,2004 REGIONAL TOURNEY,"reviewed, no change needed"
+gGiftRibbonDescriptionPart1_2004NationalTourney,2004 NATIONAL TOURNEY,"reviewed, no change needed"
+gGiftRibbonDescriptionPart1_2004GlobalCup,2004 GLOBAL CUP,"reviewed, no change needed"
+gGiftRibbonDescriptionPart1_2005RegionalTourney,2005 REGIONAL TOURNEY,"reviewed, no change needed"
+gGiftRibbonDescriptionPart1_2005NationalTourney,2005 NATIONAL TOURNEY,"reviewed, no change needed"
+gGiftRibbonDescriptionPart1_2005GlobalCup,2005 GLOBAL CUP,"reviewed, no change needed"
+gGiftRibbonDescriptionPart1_PokemonBattleCup,COMPANION BATTLE CUP,reviewed AUTO draft
+gGiftRibbonDescriptionPart2_Participation,Participation RIBBON,"reviewed, no change needed"
+gGiftRibbonDescriptionPart1_PokemonLeague,ILUM TEMPLE,reviewed AUTO draft
+gGiftRibbonDescriptionPart1_AdvanceCup,ADVANCE CUP,"reviewed, no change needed"
+gGiftRibbonDescriptionPart1_PokemonTournament,COMPANION Tournament,reviewed AUTO draft
+gGiftRibbonDescriptionPart2_Participation2,Participation RIBBON,"reviewed, no change needed"
+gGiftRibbonDescriptionPart1_PokemonEvent,COMPANION Event,reviewed AUTO draft
+gGiftRibbonDescriptionPart1_PokemonFestival,COMPANION Festival,reviewed AUTO draft
+gGiftRibbonDescriptionPart1_DifficultyClearing,Difficulty-clearing,"reviewed, no change needed"
+gGiftRibbonDescriptionPart2_Commemorative,Commemorative RIBBON,"reviewed, no change needed"
+gGiftRibbonDescriptionPart1_ClearingAllChallenges,RIBBON awarded for,"reviewed, no change needed"
+gGiftRibbonDescriptionPart2_ClearingAllChallenges,clearing all challenges.,"reviewed, no change needed"
+gGiftRibbonDescriptionPart1_100StraightWin,100-straight Win,"reviewed, no change needed"
+gGiftRibbonDescriptionPart1_DarknessTower,DARKNESS TOWER Clear,"reviewed, no change needed"
+gGiftRibbonDescriptionPart1_RedTower,RED TOWER Clear,"reviewed, no change needed"
+gGiftRibbonDescriptionPart1_BlackironTower,BLACKIRON TOWER Clear,"reviewed, no change needed"
+gGiftRibbonDescriptionPart1_FinalTower,FINAL TOWER Clear,"reviewed, no change needed"
+gGiftRibbonDescriptionPart1_LegendMaking,Legend-making,"reviewed, no change needed"
+gGiftRibbonDescriptionPart1_PokemonCenterTokyo,BACTA CENTER TOKYO,reviewed AUTO draft
+gGiftRibbonDescriptionPart1_PokemonCenterOsaka,BACTA CENTER OSAKA,reviewed AUTO draft
+gGiftRibbonDescriptionPart1_PokemonCenterNagoya,BACTA CENTER NAGOYA,reviewed AUTO draft
+gGiftRibbonDescriptionPart1_PokemonCenterNY,BACTA CENTER NY,reviewed AUTO draft
+gGiftRibbonDescriptionPart1_SummerHolidays,Summer Holidays RIBBON,"reviewed, no change needed"
+gGiftRibbonDescriptionPart2_EmptyString,,"reviewed, no change needed"
+gGiftRibbonDescriptionPart1_WinterHolidays,Winter Holidays RIBBON,"reviewed, no change needed"
+gGiftRibbonDescriptionPart1_SpringHolidays,Spring Holidays RIBBON,"reviewed, no change needed"
+gGiftRibbonDescriptionPart1_Evergreen,Evergreen RIBBON,"reviewed, no change needed"
+gGiftRibbonDescriptionPart1_SpecialHoliday,Special Holiday RIBBON,"reviewed, no change needed"
+gGiftRibbonDescriptionPart1_HardWorker,Hard Worker RIBBON,"reviewed, no change needed"
+gGiftRibbonDescriptionPart1_LotsOfFriends,Lots of Friends RIBBON,"reviewed, no change needed"
+gGiftRibbonDescriptionPart1_FullOfEnergy,Full of Energy RIBBON,"reviewed, no change needed"
+gGiftRibbonDescriptionPart1_LovedPokemon,A commemorative RIBBON,"reviewed, no change needed"
+gGiftRibbonDescriptionPart2_LovedPokemon,for a loved COMPANION.,reviewed AUTO draft
+gGiftRibbonDescriptionPart1_LoveForPokemon,RIBBON that shows,"reviewed, no change needed"
+gGiftRibbonDescriptionPart2_LoveForPokemon,love for COMPANION.,reviewed AUTO draft
+sText_EmptyString,,"reviewed, no change needed"
+sText_Colon,:,"reviewed, no change needed"
+sText_ID,{ID},"reviewed, no change needed"
+sText_PleaseStartOver,Please start over from the beginning.,"reviewed, no change needed"
+sText_WirelessSearchCanceled,The WIRELESS COMMUNICATION\nSYSTEM search has been canceled.,"reviewed, no change needed"
+sText_AwaitingCommunucation2,Awaiting communication\nfrom another player.,"reviewed, no change needed"
+sText_AwaitingCommunication,{STR_VAR_1}! Awaiting\ncommunication from another player.,"reviewed, no change needed"
+sText_AwaitingLinkPressStart,{STR_VAR_1}! Awaiting link!\nPress START when everyone's ready.,"reviewed, no change needed"
+sJPText_SingleBattle,シングルバトルを かいさいする,"reviewed, no change needed"
+sJPText_DoubleBattle,ダブルバトルを かいさいする,"reviewed, no change needed"
+sJPText_MultiBattle,マルチバトルを かいさいする,"reviewed, no change needed"
+sJPText_TradePokemon,ポケモンこうかんを かいさいする,"reviewed, no change needed"
+sJPText_Chat,チャットを かいさいする,"reviewed, no change needed"
+sJPText_DistWonderCard,ふしぎなカードをくばる,"reviewed, no change needed"
+sJPText_DistWonderNews,ふしぎなニュースをくばる,"reviewed, no change needed"
+sJPText_DistMysteryEvent,ふしぎなできごとを かいさいする,"reviewed, no change needed"
+sJPText_HoldPokemonJump,なわとびを かいさいする,"reviewed, no change needed"
+sJPText_HoldBerryCrush,きのみマッシャーを かいさいする,"reviewed, no change needed"
+sJPText_HoldBerryPicking,きのみどりを かいさいする,"reviewed, no change needed"
+sJPText_HoldSpinTrade,ぐるぐるこうかんを かいさいする,"reviewed, no change needed"
+sJPText_HoldSpinShop,ぐるぐるショップを かいさいする,"reviewed, no change needed"
+sText_1PlayerNeeded,1 player\nneeded.,"reviewed, no change needed"
+sText_2PlayersNeeded,2 players\nneeded.,"reviewed, no change needed"
+sText_3PlayersNeeded,3 players\nneeded.,"reviewed, no change needed"
+sText_4PlayersNeeded,4 players\nneeded.,"reviewed, no change needed"
+sText_2PlayerMode,2-PLAYER\nMODE,"reviewed, no change needed"
+sText_3PlayerMode,3-PLAYER\nMODE,"reviewed, no change needed"
+sText_4PlayerMode,4-PLAYER\nMODE,"reviewed, no change needed"
+sText_5PlayerMode,5-PLAYER\nMODE,"reviewed, no change needed"
+sText_BButtonCancel,{B_BUTTON}CANCEL,"reviewed, no change needed"
+sJPText_SearchingForParticipants,ため\nさんかしゃ ぼしゅうちゅう です！,"reviewed, no change needed"
+sText_PlayerContactedYouForXAccept,{STR_VAR_2} contacted you for\n{STR_VAR_1}. Accept?,"reviewed, no change needed"
+sText_PlayerContactedYouShareX,{STR_VAR_2} contacted you.\nWill you share {STR_VAR_1}?,"reviewed, no change needed"
+sText_PlayerContactedYouAddToMembers,{STR_VAR_2} contacted you.\nAdd to the members?,"reviewed, no change needed"
+sText_AreTheseMembersOK,{STR_VAR_1}!\nAre these members OK?,"reviewed, no change needed"
+sText_CancelModeWithTheseMembers,Cancel {STR_VAR_1} MODE\nwith these members?,"reviewed, no change needed"
+sText_AnOKWasSentToPlayer,An “OK” was sent\nto {STR_VAR_1}.,"reviewed, no change needed"
+sText_OtherTrainerUnavailableNow,The other TRAINER doesn't appear\nto be available now…\p,"reviewed, no change needed"
+sText_CantTransmitTrainerTooFar,You can't transmit with a TRAINER\nwho is too far away.\p,"reviewed, no change needed"
+sText_TrainersNotReadyYet,The other TRAINER(S) is/are not\nready yet.\p,"reviewed, no change needed"
+sText_ModeWithTheseMembersWillBeCanceled,The {STR_VAR_1} MODE with\nthese members will be canceled.{PAUSE 60},"reviewed, no change needed"
+sText_MemberNoLongerAvailable,There is a member who can no\nlonger remain available.\p,"reviewed, no change needed"
+sText_TrainerAppearsUnavailable,The other TRAINER appears\nunavailable…\p,"reviewed, no change needed"
+sText_PlayerSentBackOK,{STR_VAR_1} sent back an “OK”!,"reviewed, no change needed"
+sText_PlayerOKdRegistration,{STR_VAR_1} OK'd your registration as\na member.,"reviewed, no change needed"
+sText_PlayerRepliedNo,"{STR_VAR_1} replied, “No…”\p","reviewed, no change needed"
+sText_AwaitingOtherMembers,{STR_VAR_1}!\nAwaiting other members!,"reviewed, no change needed"
+sText_QuitBeingMember,Quit being a member?,"reviewed, no change needed"
+sText_StoppedBeingMember,You stopped being a member.\p,"reviewed, no change needed"
+sText_WirelessLinkEstablished,The WIRELESS COMMUNICATION\nSYSTEM link has been established.,"reviewed, no change needed"
+sText_WirelessLinkDropped,The WIRELESS COMMUNICATION\nSYSTEM link has been dropped…,"reviewed, no change needed"
+sText_LinkWithFriendDropped,The link with your friend has been\ndropped…,"reviewed, no change needed"
+sText_PlayerRepliedNo2,"{STR_VAR_1} replied, “No…”","reviewed, no change needed"
+sText_DoYouWantXMode,Do you want the {STR_VAR_2}\nMODE?,"reviewed, no change needed"
+sText_DoYouWantXMode2,Do you want the {STR_VAR_2}\nMODE?,"reviewed, no change needed"
+sText_CommunicatingPleaseWait,Communicating…\nPlease wait.,"reviewed, no change needed"
+sText_AwaitingPlayersResponseAboutTrade,Awaiting {STR_VAR_1}'s response about\nthe trade…,"reviewed, no change needed"
+sText_Communicating,Communicating{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.\n{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.,"reviewed, no change needed"
+sText_CommunicatingWithPlayer,Communicating with {STR_VAR_1}{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.\n{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.,"reviewed, no change needed"
+sText_HiDoSomethingMale,Hiya! Is there something that you\nwanted to do?,"reviewed, no change needed"
+sText_HiDoSomethingFemale,Hello!\nWould you like to do something?,"reviewed, no change needed"
+sText_HiDoSomethingAgainMale,"{STR_VAR_1}: Hiya, we meet again!\nWhat are you up for this time?","reviewed, no change needed"
+sText_HiDoSomethingAgainFemale,"{STR_VAR_1}: Oh! {PLAYER}, hello!\nWould you like to do something?","reviewed, no change needed"
+sText_DoSomethingMale,Want to do something?,"reviewed, no change needed"
+sText_DoSomethingFemale,Would you like to do something?,"reviewed, no change needed"
+sText_DoSomethingAgainMale,{STR_VAR_1}: What would you like to\ndo now?,"reviewed, no change needed"
+sText_DoSomethingAgainFemale,{STR_VAR_1}: Want to do anything else?,"reviewed, no change needed"
+sText_SomebodyHasContactedYou,Somebody has contacted you.{PAUSE 60},"reviewed, no change needed"
+sText_PlayerHasContactedYou,{STR_VAR_1} has contacted you.{PAUSE 60},"reviewed, no change needed"
+sText_AwaitingResponseFromTrainer,Awaiting a response from\nthe other TRAINER…,"reviewed, no change needed"
+sText_AwaitingResponseFromPlayer,Awaiting a response from\n{STR_VAR_1}…,"reviewed, no change needed"
+sText_ShowTrainerCard,The other TRAINER showed\nyou their TRAINER CARD.\pWould you like to show your\nTRAINER CARD?,"reviewed, no change needed"
+sText_BattleChallenge,The other TRAINER challenges you\nto battle.\pWill you accept the battle\nchallenge?,"reviewed, no change needed"
+sText_ChatInvitation,The other TRAINER invites you\nto chat.\pWill you accept the chat\ninvitation?,"reviewed, no change needed"
+sText_OfferToTradeMon,There is an offer to trade your\nregistered Lv. {DYNAMIC 0} {DYNAMIC 1}\pin exchange for a\nLv. {DYNAMIC 2} {DYNAMIC 3}.\pWill you accept this trade\noffer?,"reviewed, no change needed"
+sText_OfferToTradeEgg,There is an offer to trade your\nregistered EGG.\lWill you accept this trade offer?,"reviewed, no change needed"
+sText_ChatDropped,The chat has been dropped.\p,"reviewed, no change needed"
+sText_OfferDeclined1,You declined the offer.\p,"reviewed, no change needed"
+sText_OfferDeclined2,You declined the offer.\p,"reviewed, no change needed"
+sText_ChatEnded,The chat was ended.\p,"reviewed, no change needed"
+sText_JoinChatMale,"Oh, hey! We're in a chat right now.\nWant to join us?","reviewed, no change needed"
+sText_PlayerJoinChatMale,"{STR_VAR_1}: Hey, {PLAYER}!\nWe're having a chat right now.\lWant to join us?","reviewed, no change needed"
+sText_JoinChatFemale,"Oh, hi! We're having a chat now.\nWould you like to join us?","reviewed, no change needed"
+sText_PlayerJoinChatFemale,"{STR_VAR_1}: Oh, hi, {PLAYER}!\nWe're having a chat now.\lWould you like to join us?","reviewed, no change needed"
+sText_TrainerAppearsBusy,……\nThe TRAINER appears to be busy…\p,"reviewed, no change needed"
+sText_WaitForBattleMale,"A battle, huh?\nAll right, just give me some time.","reviewed, no change needed"
+sText_WaitForChatMale,"You want to chat, huh?\nSure, just wait a little.","reviewed, no change needed"
+sText_ShowTrainerCardMale,"Sure thing! As my “Greetings,”\nhere's my TRAINER CARD.","reviewed, no change needed"
+sText_WaitForBattleFemale,"A battle? Of course, but I need\ntime to get ready.","reviewed, no change needed"
+sText_WaitForChatFemale,"Did you want to chat?\nOkay, but please wait a moment.","reviewed, no change needed"
+sText_ShowTrainerCardFemale,"As my introduction, I'll show you\nmy TRAINER CARD.","reviewed, no change needed"
+sText_WaitForChatMale2,"You want to chat, huh?\nSure, just wait a little.","reviewed, no change needed"
+sText_DoneWaitingBattleMale,Thanks for waiting!\nLet's get our battle started!{PAUSE 60},"reviewed, no change needed"
+sText_DoneWaitingChatMale,All right!\nLet's chat!{PAUSE 60},"reviewed, no change needed"
+sText_DoneWaitingBattleFemale,Sorry I made you wait!\nLet's get started!{PAUSE 60},"reviewed, no change needed"
+sText_DoneWaitingChatFemale,Sorry I made you wait!\nLet's chat.{PAUSE 60},"reviewed, no change needed"
+sText_TradeWillBeStarted,The trade will be started.{PAUSE 60},"reviewed, no change needed"
+sText_BattleWillBeStarted,The battle will be started.{PAUSE 60},"reviewed, no change needed"
+sText_EnteringChat,Entering the chat…{PAUSE 60},"reviewed, no change needed"
+sText_BattleDeclinedMale,Sorry! My COMPANIONS don't seem to\nbe feeling too well right now.\lLet me battle you another time.\p,reviewed AUTO draft
+sText_BattleDeclinedFemale,"I'm terribly sorry, but my COMPANIONS\naren't feeling well…\pLet's battle another time.\p",reviewed AUTO draft
+sText_ShowTrainerCardDeclinedMale,Huh? My TRAINER CARD…\nWhere'd it go now?\lSorry! I'll show you another time!\p,"reviewed, no change needed"
+sText_ShowTrainerCardDeclinedFemale,Oh? Now where did I put my\nTRAINER CARD?…\lSorry! I'll show you later!\p,"reviewed, no change needed"
+sText_IfYouWantToDoSomethingMale,"If you want to do something with\nme, just give me a shout!\p","reviewed, no change needed"
+sText_IfYouWantToDoSomethingFemale,"If you want to do something with\nme, don't be shy.\p","reviewed, no change needed"
+sText_TrainerBattleBusy,"Whoops! Sorry, but I have to do\nsomething else.\lAnother time, okay?\p","reviewed, no change needed"
+sText_NeedTwoMonsOfLevel30OrLower1,"If you want to battle, you need\ntwo COMPANIONS that are below\lLv. 30.\p",reviewed AUTO draft
+sText_NeedTwoMonsOfLevel30OrLower2,"For a battle, you need two\nCOMPANIONS that are below Lv. 30.\p",reviewed AUTO draft
+sText_DeclineChatMale,"Oh, all right.\nCome see me anytime, okay?\p","reviewed, no change needed"
+stext_DeclineChatFemale,Oh…\nPlease come by anytime.\p,"reviewed, no change needed"
+sText_ChatDeclinedMale,"Oh, sorry!\nI just can't right this instant.\lLet's chat another time.\p","reviewed, no change needed"
+sText_ChatDeclinedFemale,"Oh, I'm sorry.\nI have too much to do right now.\lLet's chat some other time.\p","reviewed, no change needed"
+sText_YoureToughMale,Whoa!\nI can tell you're pretty tough!\p,"reviewed, no change needed"
+sText_UsedGoodMoveMale,You used that move?\nThat's good strategy!\p,"reviewed, no change needed"
+sText_BattleSurpriseMale,Way to go!\nThat was an eye-opener!\p,"reviewed, no change needed"
+sText_SwitchedMonsMale,Oh! How could you use that\nCOMPANION in that situation?\p,reviewed AUTO draft
+sText_YoureToughFemale,That COMPANION…\nIt's been raised really well!\p,reviewed AUTO draft
+sText_UsedGoodMoveFemale,That's it!\nThis is the right move now!\p,"reviewed, no change needed"
+sText_BattleSurpriseFemale,That's awesome!\nYou can battle that way?\p,"reviewed, no change needed"
+sText_SwitchedMonsFemale,You have exquisite timing for\nswitching COMPANION!\p,reviewed AUTO draft
+sText_LearnedSomethingMale,"Oh, I see!\nThis is educational!\p","reviewed, no change needed"
+sText_ThatsFunnyMale,Don't say anything funny anymore!\nI'm sore from laughing!\p,"reviewed, no change needed"
+sText_RandomChatMale1,Oh?\nSomething like that happened.\p,"reviewed, no change needed"
+sText_RandomChatMale2,Hmhm… What?\nSo is this what you're saying?\p,"reviewed, no change needed"
+sText_LearnedSomethingFemale,Is that right?\nI didn't know that.\p,"reviewed, no change needed"
+sText_ThatsFunnyFemale,Ahaha!\nWhat is that about?\p,"reviewed, no change needed"
+sText_RandomChatFemale1,"Yes, that's exactly it!\nThat's what I meant.\p","reviewed, no change needed"
+sText_RandomChatFemale2,In other words…\nYes! That's right!\p,"reviewed, no change needed"
+sText_ShowedTrainerCardMale1,I'm just showing my TRAINER CARD\nas my way of greeting.\p,"reviewed, no change needed"
+sText_ShowedTrainerCardMale2,I hope I get to know you better!\p,"reviewed, no change needed"
+sText_ShowedTrainerCardFemale1,We're showing each other our\nTRAINER CARDS to get acquainted.\p,"reviewed, no change needed"
+sText_ShowedTrainerCardFemale2,Glad to meet you.\nPlease don't be a stranger!\p,"reviewed, no change needed"
+sText_MaleTraded1,Yeahah!\nI really wanted this COMPANION!\p,reviewed AUTO draft
+sText_MaleTraded2,"Finally, a trade got me that\nCOMPANION I'd wanted a long time.\p",reviewed AUTO draft
+sText_FemaleTraded1,I'm trading COMPANION right now.\p,reviewed AUTO draft
+sText_FemaleTraded2,I finally got that COMPANION I\nwanted in a trade!\p,reviewed AUTO draft
+sText_XCheckedTradingBoard,{STR_VAR_1} checked the\nTRADING BOARD.\p,"reviewed, no change needed"
+sText_TradingBoardInfo,"This TRADING BOARD is used for\noffering a COMPANION for a trade.\pAll you need to do is register a\nCOMPANION for a trade.\pAnother TRAINER may offer a party\nCOMPANION in return for the trade.\pWe hope you will register COMPANION\nand trade them with many, many\lother TRAINERS.\pWould you like to register one of\nyour COMPANION?",reviewed AUTO draft
+sText_ThankYouForRegistering,We have registered your COMPANION for\ntrade on the TRADING BOARD.\pThank you for using this service!\p,reviewed AUTO draft
+sText_NobodyHasRegistered,Nobody has registered any COMPANION\nfor trade on the TRADING BOARD.\p\n,reviewed AUTO draft
+sText_ChooseRequestedMonType,Please choose the type of COMPANION\nthat you would like in the trade.\n,reviewed AUTO draft
+sText_WhichMonWillYouOffer,Which of your party COMPANION will\nyou offer in trade?\p,reviewed AUTO draft
+sText_RegistrationCanceled,Registration has been canceled.\p,"reviewed, no change needed"
+sText_RegistrationCompleted,Registration has been completed.\p,"reviewed, no change needed"
+sText_TradeCanceled,The trade has been canceled.\p,"reviewed, no change needed"
+sText_CancelRegistrationOfMon,Cancel the registration of your\nLv. {STR_VAR_2} {STR_VAR_1}?,"reviewed, no change needed"
+sText_CancelRegistrationOfEgg,Cancel the registration of your\nEGG?,"reviewed, no change needed"
+sText_RegistrationCanceled2,The registration has been canceled.\p,"reviewed, no change needed"
+sText_TradeTrainersWillBeListed,TRAINERS wishing to make a trade\nwill be listed.,"reviewed, no change needed"
+sText_ChooseTrainerToTradeWith2,Please choose the TRAINER with whom\nyou would like to trade COMPANIONS.,reviewed AUTO draft
+sText_AskTrainerToMakeTrade,Would you like to ask {STR_VAR_1} to\nmake a trade?,"reviewed, no change needed"
+sText_AwaitingResponseFromTrainer2,Awaiting a response from\nthe other TRAINER…,"reviewed, no change needed"
+sText_NotRegisteredAMonForTrade,You have not registered a COMPANION\nfor trading.\p,reviewed AUTO draft
+sText_DontHaveTypeTrainerWants,You don't have a {STR_VAR_2}-type\nCOMPANION that {STR_VAR_1} wants.\p,reviewed AUTO draft
+sText_DontHaveEggTrainerWants,You don't have an EGG that\n{STR_VAR_1} wants.\p,"reviewed, no change needed"
+sText_PlayerCantTradeForYourMon,{STR_VAR_1} can't make a trade for\nyour COMPANION right now.\p,reviewed AUTO draft
+sText_CantTradeForPartnersMon,You can't make a trade for\n{STR_VAR_1}'s COMPANION right now.\p,reviewed AUTO draft
+sText_TradeOfferRejected,Your trade offer was rejected.\p,"reviewed, no change needed"
+sText_EggTrade,EGG TRADE,"reviewed, no change needed"
+sText_ChooseJoinCancel,{DPAD_UPDOWN}CHOOSE  {A_BUTTON}JOIN  {B_BUTTON}CANCEL,"reviewed, no change needed"
+sText_ChooseTrainer,Please choose a TRAINER.,"reviewed, no change needed"
+sText_ChooseTrainerSingleBattle,Please choose a TRAINER for\na SINGLE BATTLE.,"reviewed, no change needed"
+sText_ChooseTrainerDoubleBattle,Please choose a TRAINER for\na DOUBLE BATTLE.,"reviewed, no change needed"
+sText_ChooseLeaderMultiBattle,Please choose the LEADER\nfor a MULTI BATTLE.,"reviewed, no change needed"
+sText_ChooseTrainerToTradeWith,Please choose the TRAINER to\ntrade with.,"reviewed, no change needed"
+sText_ChooseTrainerToShareWonderCards,Please choose the TRAINER who is\nsharing WONDER CARDS.,"reviewed, no change needed"
+sText_ChooseTrainerToShareWonderNews,Please choose the TRAINER who is\nsharing WONDER NEWS.,"reviewed, no change needed"
+sText_ChooseLeaderPokemonJump,Jump with mini COMPANION!\nPlease choose the LEADER.,reviewed AUTO draft
+sText_ChooseLeaderBerryCrush,FRUIT CRUSH!\nPlease choose the LEADER.,reviewed AUTO draft
+sText_ChooseLeaderBerryPicking,KAADULORD FRUIT-PICKING!\nPlease choose the LEADER.,reviewed AUTO draft
+sText_ChooseLeaderBerryBlender,FRUIT BLENDER!\nPlease choose the LEADER.,reviewed AUTO draft
+sText_ChooseLeaderRecordCorner,RECORD CORNER!\nPlease choose the LEADER.,"reviewed, no change needed"
+sText_ChooseLeaderCoolContest,COOLNESS SHOWCASE!\nPlease choose the LEADER.,reviewed AUTO draft
+sText_ChooseLeaderBeautyContest,BEAUTY SHOWCASE!\nPlease choose the LEADER.,reviewed AUTO draft
+sText_ChooseLeaderCuteContest,CUTENESS SHOWCASE!\nPlease choose the LEADER.,reviewed AUTO draft
+sText_ChooseLeaderSmartContest,SMARTNESS SHOWCASE!\nPlease choose the LEADER.,reviewed AUTO draft
+sText_ChooseLeaderToughContest,TOUGHNESS SHOWCASE!\nPlease choose the LEADER.,reviewed AUTO draft
+sText_ChooseLeaderBattleTowerLv50,BATTLE TOWER LEVEL 50!\nPlease choose the LEADER.,"reviewed, no change needed"
+sText_ChooseLeaderBattleTowerOpenLv,BATTLE TOWER OPEN LEVEL!\nPlease choose the LEADER.,"reviewed, no change needed"
+sText_SearchingForWirelessSystemWait,Searching for a WIRELESS\nCOMMUNICATION SYSTEM. Wait...,"reviewed, no change needed"
+sText_MustHaveTwoMonsForDoubleBattle,"For a DOUBLE BATTLE, you must have\nat least two COMPANIONS.\p",reviewed AUTO draft
+sText_AwaitingPlayersResponse,Awaiting {STR_VAR_1}'s response…,"reviewed, no change needed"
+sText_PlayerHasBeenAskedToRegisterYouPleaseWait,{STR_VAR_1} has been asked to register\nyou as a member. Please wait.,"reviewed, no change needed"
+sText_AwaitingResponseFromWirelessSystem,Awaiting a response from the\nWIRELESS COMMUNICATION SYSTEM.,"reviewed, no change needed"
+sText_PleaseWaitForOtherTrainersToGather,Please wait for other TRAINERS to\ngather and get ready.,"reviewed, no change needed"
+sText_NoCardsSharedRightNow,No CARDS appear to be shared \nright now.,"reviewed, no change needed"
+sText_NoNewsSharedRightNow,No NEWS appears to be shared\nright now.,"reviewed, no change needed"
+sText_Battle,BATTLE,"reviewed, no change needed"
+sText_Chat2,CHAT,"reviewed, no change needed"
+sText_Greetings,GREETINGS,"reviewed, no change needed"
+sText_Exit,EXIT,"reviewed, no change needed"
+sText_Exit2,EXIT,"reviewed, no change needed"
+sText_Info,INFO,"reviewed, no change needed"
+sText_NameWantedOfferLv,NAME{CLEAR_TO 60}WANTED{CLEAR_TO 110}OFFER{CLEAR_TO 198}LV.,"reviewed, no change needed"
+sText_SingleBattle,SINGLE BATTLE,"reviewed, no change needed"
+sText_DoubleBattle,DOUBLE BATTLE,"reviewed, no change needed"
+sText_MultiBattle,MULTI BATTLE,"reviewed, no change needed"
+sText_PokemonTrades,COMPANION TRADES,reviewed AUTO draft
+sText_Chat,CHAT,"reviewed, no change needed"
+sText_Cards,CARDS,"reviewed, no change needed"
+sText_WonderCards,WONDER CARDS,"reviewed, no change needed"
+sText_WonderNews,WONDER NEWS,"reviewed, no change needed"
+sText_PokemonJump,COMPANION JUMP,reviewed AUTO draft
+sText_BerryCrush,FRUIT CRUSH,reviewed AUTO draft
+sText_BerryPicking,FRUIT-PICKING,reviewed AUTO draft
+sText_Search,SEARCH,"reviewed, no change needed"
+sText_BerryBlender,FRUIT BLENDER,reviewed AUTO draft
+sText_RecordCorner,RECORD CORNER,"reviewed, no change needed"
+sText_CoolContest,COOL SHOWCASE,reviewed AUTO draft
+sText_BeautyContest,BEAUTY SHOWCASE,reviewed AUTO draft
+sText_CuteContest,CUTE SHOWCASE,reviewed AUTO draft
+sText_SmartContest,SMART SHOWCASE,reviewed AUTO draft
+sText_ToughContest,TOUGH SHOWCASE,reviewed AUTO draft
+sText_BattleTowerLv50,BATTLE TOWER LV. 50,"reviewed, no change needed"
+sText_BattleTowerOpenLv,BATTLE TOWER OPEN LEVEL,"reviewed, no change needed"
+sText_ItsNormalCard,It's a NORMAL CARD.,"reviewed, no change needed"
+sText_ItsBronzeCard,It's a BRONZE CARD!,"reviewed, no change needed"
+sText_ItsCopperCard,It's a COPPER CARD!,"reviewed, no change needed"
+sText_ItsSilverCard,It's a SILVER CARD!,"reviewed, no change needed"
+sText_ItsGoldCard,It's a GOLD CARD!,"reviewed, no change needed"
+sText_TrainerCardInfoPage1,This is {DYNAMIC 0} {DYNAMIC 1}'s\nTRAINER CARD…\l{DYNAMIC 2}\pDATAPAD: {DYNAMIC 3}\nTIME:    {DYNAMIC 4}:{DYNAMIC 5}\p,reviewed AUTO draft
+sText_TrainerCardInfoPage2,BATTLES: WINS: {DYNAMIC 0}  LOSSES: {DYNAMIC 2}\nTRADES: {DYNAMIC 3}\p“{DYNAMIC 4} {DYNAMIC 5}\n{DYNAMIC 6} {DYNAMIC 7}”\p,"reviewed, no change needed"
+sText_GladToMeetYouMale,{DYNAMIC 1}: Glad to have met you!{PAUSE 60},"reviewed, no change needed"
+sText_GladToMeetYouFemale,{DYNAMIC 1}: Glad to meet you!{PAUSE 60},"reviewed, no change needed"
+sText_FinishedCheckingPlayersTrainerCard,Finished checking {DYNAMIC 1}'s\nTRAINER CARD.{PAUSE 60},"reviewed, no change needed"

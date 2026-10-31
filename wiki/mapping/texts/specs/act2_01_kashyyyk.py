@@ -1,0 +1,70 @@
+# Kashyyyk: Kachirho (Dewford), the Shadowlands (Granite Cave), Routes 105-109, plus Han's flights.
+KEEP_REST_MAPS = ("map:dewford", "map:granite", "map:route105", "map:route106", "map:route107", "map:route108", "map:route109")
+PUNCH = r"Punch it, CHEWIE!$"
+FIX = {
+"DewfordTown_Text_TinyIslandCommunity": r"KACHIRHO is a small Wookiee village.\nIf something gets trendy here,\leveryone picks up on it right away.$",
+"DewfordTown_Text_TownSign": r"KACHIRHO\n“A village among the wroshyr roots.”$",
+"DewfordTown_Text_GymSign": [("“A big wave in fighting!”", "“The mightiest arms on KASHYYYK!”")],
+"Route104_Text_LandedInDewfordDeliverLetter": r"HAN: Okay, kid.\nWe've landed on KASHYYYK.\pI suppose you're off to deliver that\nMESSAGE DISC to, who was it now, LEIA!$",
+"DewfordTown_Text_SetSailBackToPetalburg": r"HAN: Have you delivered your\nMESSAGE DISC?\pOr did you want to fly back to\nMOS ENTHA?$",
+"DewfordTown_Text_PetalburgWereSettingSail2": r"HAN: MOS ENTHA it is, then!\p" + PUNCH,
+"DewfordTown_Text_GoDeliverIllBeWaiting": [("I'll be waiting.", "I'll be on the FALCON.")],
+"DewfordTown_Text_BrineyLandedInDewford": r"HAN: Okay, kid.\nWe've landed in KACHIRHO!\pJust tell me whenever you're\nready to fly again!$",
+"DewfordTown_Text_WhereAreWeBound": r"HAN: Hey, kid!\nFor you, the FALCON flies anytime!\pSo, where are we headed?$",
+"DewfordTown_Text_PetalburgWereSettingSail": r"HAN: MOS ENTHA, is it?\p" + PUNCH,
+"DewfordTown_Text_SlateportWereSettingSail": r"HAN: MOS EISLEY, is it?\p" + PUNCH,
+"DewfordTown_Text_JustTellMeWhenYouNeedToSetSail": r"HAN: Just tell me whenever you're\nready to fly again!$",
+"DewfordTown_Text_BrineyLandedInSlateportDeliverGoods": r"HAN: Okay, kid.\nWe've landed in MOS EISLEY!\pI suppose you're going to see\nRIC OLIé and deliver the ORGANA PARTS?$",
+"DewfordTown_Text_BrineyLandedInSlateport": r"HAN: Okay, kid.\nWe've landed in MOS EISLEY!\pJust tell me whenever you're\nready to fly again!$",
+"Route109_Text_BrineySailToDewfordQuestion": r"HAN: I thought you were supposed\nto deliver the ORGANA PARTS.\pWant to fly back to\nKASHYYYK, then?$",
+"Route109_Text_BrineyDewfordItIs": r"HAN: KASHYYYK it is, then!\p" + PUNCH,
+"Route109_Text_BrineyDeliverDevonGoods": [("I'll be waiting.", "I'll be on the FALCON.")],
+"Route109_Text_BrineyWhereAreWeBound": r"HAN: Hey, kid!\nFor you, the FALCON flies anytime!\pSo, where are we headed?$",
+"Route109_Text_BrineyTellMeWhenYouNeedToSail": r"HAN: Just tell me whenever you're\nready to fly again!$",
+# Kachirho arena (Tarfful)
+"DewfordTown_Gym_Text_GymGuideAdvice": [("Hey, how's it going, CHAMPION-\nbound {PLAYER}?", "Hey, how's it going, ILUM-\nbound {PLAYER}?"), ("KACHIRHO's ARENA LEADER TARFFUL commands\nFIGHTING-type COMPANIONS.", "KACHIRHO's LEADER TARFFUL commands\nFIGHTING-type COMPANIONS."), ("with NORMAL-type\nCOMPANION is asking for trouble.", "with NORMAL-type\nCOMPANIONS is asking for trouble."), ("FIGHTING COMPANIONS will lay a serious\nsmack down on NORMAL COMPANIONS,", "FIGHTING COMPANIONS will lay a serious\nsmack down on NORMAL ones,"), ("as dark as\nthe ocean floor.", "as dark as\nthe SHADOWLANDS.")],
+"DewfordTown_Gym_Text_JocelynPostBattle": [("No, I'll become the ILUM TEMPLE\nCHAMPION!", "No, I'll pass the TRIALS\nOF ILUM!")],
+"DewfordTown_Gym_Text_BrendenIntro": r"I'll show you the gumption of\na spacer!$",
+"DewfordTown_Gym_Text_BrendenPostBattle": [("Oh, aye! You're worthy", "Fine! You're worthy")],
+"DewfordTown_Gym_Text_BrawlyIntro": r"Rrrooaaarrgh!\nI'm TARFFUL, KACHIRHO's ARENA LEADER!\pI've wrestled the wild beasts of\nthe forest floor and grown tough\lin the pitch-black SHADOWLANDS!\pSo you wanted to challenge me?\nLet me see what you're made of!$",
+"DewfordTown_Gym_Text_BrawlyDefeat": r"Hrrrnnn! You hit much harder\nthan I expected!\pYou knocked me flat!\pOkay, you've got me.\nTake this ARENA SHARD!$",
+"DewfordTown_Gym_Text_BrawlyPostBattle": r"I can see your talent growing like\na wroshyr tree. One day it will tower\lover every TRAINER out there!$",
+"DewfordTown_Gym_Text_BrawlyPreRematch": r"TARFFUL: A wroshyr tree may bend, but\nit always stands up again.\pA mighty talent like you…\nI knew you would return!\pShow me how much higher\nyou've climbed!$",
+"DewfordTown_Gym_Text_BrawlyRematchDefeat": r"Hrrnn!\nFlattened again!$",
+"DewfordTown_Gym_Text_BrawlyPostRematch": r"TARFFUL: Battling is vast and deep.\nYou can't see the bottom.\lIt's just like the forests of KASHYYYK!$",
+"DewfordTown_Gym_Text_BrawlyRematchNeedTwoMons": r"TARFFUL: A wroshyr tree may bend, but\nit always stands up again.\pA mighty talent like you…\nI knew you would return!\pOh? You only have one COMPANION\nthat can battle.\pI'm sorry, but I'd like you to come back\nwith at least two COMPANIONS.$",
+# Kachirho hall and houses
+"DewfordTown_Hall_Text_TVShowAboutTrend": [("Isn't there a HOLONET show on it?", "Isn't there a HoloNet show on it?")],
+"DewfordTown_Hall_Text_IsTrendMorePopularAcrossSea": [("Across the sea…", "On other worlds…")],
+"DewfordTown_Hall_Text_BooksAboutTrend": [("\lCOMPANION…", "\lCOMPANIONS…"), ("It's neatly jammed with books about", "It's neatly jammed with datacards on")],
+"DewfordTown_Hall_Text_OrganizeTrendParty": [("party\lon the island.", "party\lin the village.")],
+"DewfordTown_Hall_Text_LoveSludgeBombButTrendInToo": [("But COMPANION with the move", "But COMPANIONS with the move")],
+"DewfordTown_House1_Text_LotToBeSaidForLivingOnIsland": r"There's a lot to be said for living in\na small village like this in harmony\lwith COMPANIONS and the family.$",
+"DewfordTown_House1_Text_LifeGoesSlowlyOnIsland": r"I left the busy port of MOS EISLEY\nwhen I married my husband here.\pLife goes by slowly in this little\nvillage. But being surrounded by the\lgreat forest--that's happiness, too.$",
+"DewfordTown_House2_Text_BrawlySoCool": [("you bothered to cross the sea\nto visit KACHIRHO?", "you came all the way\nto KACHIRHO?")],
+"DewfordTown_PokemonCenter_1F_Text_StoneCavern": r"There's a cave system at the edge\nof the village: the SHADOWLANDS.\pI've heard you can find rare\ncrystals down there.$",
+# Shadowlands (Granite Cave) and Leia
+"GraniteCave_1F_Text_GetsDarkAheadHereYouGo": [("He knew how to use FLASH, so he ought\nto be all right, but…", "She knew how to use FLASH, so she\nought to be all right, but…"), ("Well, for us HIKERS, helping out those\nthat we meet is our motto.", "For us PROSPECTORS, helping out\nthose we meet is our motto.")],
+"GraniteCave_StevensRoom_Text_ImStevenLetterForMe": r"My name is LEIA.\pI'm surveying rare crystals,\nso I travel here and there.\pOh?\nA MESSAGE DISC for me?$",
+"GraniteCave_StevensRoom_Text_ThankYouTakeThis": [("You went through all this trouble to\ndeliver that. I need to thank you.", "You went through all this trouble to\ndeliver that. My father thanks you, too.")],
+"GraniteCave_StevensRoom_Text_CouldBecomeChampionLetsRegister": [("If you keep training, you could even\nbecome the CHAMPION of the ILUM\lTEMPLE one day. That's what I think.", "If you keep training, you could even\npass the TRIALS OF ILUM one day.\lThat's what I think.")],
+"Route104_Text_DadPokenavCall": [("I just heard from HOUSE ORGANA's SEN. ORGANA\nabout your COMLINK,", "I just heard from SENATOR ORGANA\nabout your COMLINK,")],
+"Route106_Text_TrainerTips": [("Advice on catching COMPANIONS with a ROD:", "Catching COMPANIONS with a ROD:")],
+# Route 109 and the Seashore House
+"Route109_Text_LittleKidsDartAround": [("Mine are with my COMPANION, so they", "Mine are with my COMPANIONS, so they")],
+"Route109_Text_ZigzagoonPicksUpLitter": [("If we pollute the sea,", "If we pollute the water,")],
+"Route109_Text_TrainerTipsSign": [("COMPANION at the same level may not", "COMPANIONS at the same level may not"), ("COMPANION raised by TRAINERS are said", "COMPANIONS raised by TRAINERS are said")],
+"Route109_SeashoreHouse_Text_SeashoreHouseIntro": [("hot\nCOMPANION battles.", "hot\nCOMPANION battles.")],
+"Route109_SeashoreHouse_Text_TakeTheseSodaPopBottles": [("It's half a dozen bottles of JAWA JUICE!", "It's six bottles of JAWA JUICE!")],
+"Route109_SeashoreHouse_Text_WantToBuySodaPop": [("Just ¥300 a bottle!", "Just 300 credits a bottle!")],
+"Route109_SeashoreHouse_Text_JohannaIntro": [("TRAINERS and COMPANION!", "TRAINERS and COMPANIONS!")],
+"Route109_SeashoreHouse_Text_SimonPostBattle": [("If one of my COMPANION knew the move", "If one of my COMPANIONS knew the move")],
+# --- overflow fixes (trainer lines) ---
+"Route106_Text_ElliotRematchPostBattle": r"Win or lose, COMPANIONS are the best!\nYou agree with me, right?$",
+"Route109_Text_MelIntro": r"MERI: We're, like, totally in love.\nOur romance is heating up KASHYYYK!$",
+"Route109_Text_MelNotEnoughPokemon": r"MERI: We're, like, truly in love.\nThat's why we make our COMPANIONS\lbattle together.$",
+}
+NOTES = {"DewfordTown_Gym_Text_BrawlyIntro": "Tarfful speaks Basic in game text (Wookiee roar for flavour)",
+         "GraniteCave_StevensRoom_Text_ImStevenLetterForMe": "Leia is surveying kyber for the Rebellion; 'rare stones' -> crystals"}
+
+REFLOW = True

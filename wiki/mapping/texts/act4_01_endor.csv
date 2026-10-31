@@ -1,0 +1,417 @@
+text_id,sw_text_raw,notes
+FortreeCity_Text_SawGiganticPokemonInSky,"No one believes me, but I saw this\ngigantic COMPANION in the sky.\pIt seemed to squirm as it flew toward\nROUTE 131.\pBy the way… Sniff…\nUm… You, uh…smell singed.\pWere you on MUSTAFAR or something?$",
+FortreeCity_Text_TreesGrowByDrinkingRainwater,"The ground absorbs rainwater, and\ntrees grow by drinking that water…\pBRIGHT TREE VILLAGE exists because\nthere's both water and soil.$",
+FortreeCity_Text_EveryoneHealthyAndLively,"The village is made of huts built\nhigh in the trees.\pPerhaps because of that lifestyle,\neveryone is healthy and lively.\pWhy, even myself--I feel as if I've\ngrown thirty years younger.$",
+FortreeCity_Text_PokemonThatEvolveWhenTraded,There are COMPANIONS that evolve when\nyou trade them! That's what I heard.$,
+FortreeCity_Text_CitySign,BRIGHT TREE VILLAGE\n“The treetop home of the EWOKS.”$,
+FortreeCity_Text_GymSign,BRIGHT TREE ARENA\nLEADER: CHIRPA\p“The EWOK chief who rides the\nforest winds.”$,
+FortreeCity_DecorationShop_Text_MerchandiseSentToPC,Merchandise you buy here is sent to\nyour own terminal.\pThat's fantastic! I wish they could\nalso deliver me home like that.$,
+FortreeCity_House1_Text_TradingMemoriesWithOthers,Trading COMPANIONS with others…\pIt's as if you're trading your own\nmemories with other people.$,
+FortreeCity_House2_Text_HiddenPowersArousedByNature,People… COMPANIONS…\pTheir hidden powers are awoken by\nliving close to the Force…$,
+FortreeCity_House2_Text_CoinInWhichHand,"Let this old woman see if your hidden\npower has awoken…\pI hold a credit chip in my hand.\pNow, tell me, have I palmed it in\nthe right hand? Or in the left?$",
+FortreeCity_House2_Text_CorrectTryAgainWhichHand,"Oh! Yes, correct!\pWe shall try again.\pIn which hand have I palmed the chip?\nThe right or left?$",
+FortreeCity_House2_Text_CorrectTryAgainWhichHand2,"Oh! Yes, correct!\pWe shall try again.\pIn which hand have I palmed the chip?\nThe right or left?$",
+FortreeCity_House2_Text_YourHiddenPowerHasAwoken,"Oh! Splendid!\nYour hidden power has awoken!\pHere, take this and awaken the hidden\npower of your COMPANIONS.$",
+FortreeCity_House3_Text_MetStevenHadAmazingPokemon,"While speaking about DATAPADS,\nI remembered something.\pI met this TRAINER, LEIA, when\nI was searching for rare crystals.\pHoo, boy, she had some amazing\nCOMPANIONS with her.\pThey weren't just rare, they were\ntrained to terrifying extremes!\pShe might even be stronger than the\nARENA LEADER in this village…$",
+FortreeCity_House4_Text_BringsWorldCloserTogether,"By being together with COMPANIONS,\npeople make more and more friends.\pAnd that brings the galaxy closer\ntogether. I think it's wonderful!$",
+FortreeCity_House5_Text_TreeHousesAreGreat,The tree huts of BRIGHT TREE are great!\pI think it's the number one village for\nliving together with COMPANIONS.$,
+FortreeCity_House5_Text_AdaptedToNature,COMPANIONS and people have adapted to\nnature for survival.\pThere's no need to make nature\nconform to the way we want to live.$,
+FortreeCity_Mart_Text_RareCandyMakesMonGrow,A POWER RATION makes a COMPANION grow\nimmediately by one level.$,
+FortreeCity_PokemonCenter_1F_Text_GoToSafariZone,"Listen, kid, are you working\non a DATAPAD?\pHmm… Fly to the FELUCIA RESERVE.\nThat's my suggestion.$",
+FortreeCity_Gym_Text_GymGuideAdvice,"Yo, how's it going, ILUM-bound\n{PLAYER}?\pBRIGHT TREE ARENA LEADER CHIRPA is\na master of FLYING-type COMPANIONS.\pHe's waiting at the back of this ARENA,\nbehind the rotating doors.\pHe's waiting for new challengers\nwho are trying to take wing!\pOkay, go for it!$",
+FortreeCity_Gym_Text_FlintPostBattle,CHIEF CHIRPA is wise and strong.\nHe's the ultimate LEADER!\pYub nub!$,
+FortreeCity_Gym_Text_AshleyPostBattle,"Thanks to CHIRPA, the EWOKS of\nBRIGHT TREE can live without fear.$",
+FortreeCity_Gym_Text_HumbertoIntro,"When CHIRPA takes to battle, his face\nshines with fierce determination…\pI'm not letting you witness that\nproud sight!$",
+FortreeCity_Gym_Text_WinonaIntro,"I am CHIRPA. I am the chief of\nBRIGHT TREE VILLAGE and its ARENA.\pI have become one with BIRD COMPANIONS\nand have glided over the forest…\pHowever grueling the battle, we have\ntriumphed with grace…\pWitness the elegant flight of\nmy BIRD COMPANIONS and I!$",Chief Chirpa is male; arena is in his village
+FortreeCity_Gym_Text_WinonaDefeat,"Never before have I seen a TRAINER\ncommand COMPANIONS with more grace\lthan I…\pIn recognition of your prowess,\nI present to you this ARENA SHARD.$",
+FortreeCity_Gym_Text_WinonaPostBattle,"Though I fell to you, I will remain\ndevoted to BIRD COMPANIONS.$",
+FortreeCity_Gym_Text_WinonaPreRematch,"CHIRPA: We EWOKS can never escape\ngravity's pull on the ground.\pBut by striving for excellence,\nwe have the power to soar!\pYou have passed the TRIALS\nOF ILUM.\pPlease, allow me to see your power\nat full flight!$",
+FortreeCity_Gym_Text_WinonaRematchNeedTwoMons,"CHIRPA: We EWOKS can never escape\ngravity's pull on the ground.\pBut by striving for excellence,\nwe have the power to soar!\pYou have passed the TRIALS\nOF ILUM.\pPlease, allow me to see your power\nat full flight!\pOh, no… Do you have but one\nCOMPANION with you?\pPlease return with two COMPANIONS\nat the very least.$",
+FortreeCity_Gym_Text_JaredIntro,Behold the elegant battle style of\nBIRD COMPANIONS!$,
+Route118_Text_StevenQuestions,"LEIA: Hi, {PLAYER}{KUN}!\pIt's me, LEIA!\nWe met in the SHADOWLANDS.\pHave you met many kinds of COMPANIONS\nsince I last saw you?\pThere are so many kinds of COMPANIONS\nin this wide galaxy of ours.\pIf you wanted to raise only your\nfavorites, that's fine.\pPerhaps you find it more fun to raise\nall sorts of COMPANIONS.\pAs a TRAINER of COMPANIONS,\nwhat do you think?\pOf course, it's not any of my business.\pIt would be nice if we were to meet\nagain somewhere.$",
+Route118_Text_CanCrossRiversWithSurf,"Even if there isn't a boat, you can\ncross rivers and lakes if you have\la COMPANION that knows SURF.\pCOMPANIONS can be counted on to do so\nmuch!$",
+Route118_Text_RouteSignMauville,ROUTE 118\n{LEFT_ARROW} HANGAR TO TATOOINE$,
+Route118_Text_RosePostBattle,"Flowers, COMPANIONS…\nI love whatever smells nice.\pStinky things…\nI'll pass.$",
+Route118_Text_PerryPostBattle,You've got great COMPANIONS.\nI'll have to train mine better.$,
+Route118_Text_BarnyPostBattle,I couldn't win by training COMPANIONS\nwhile I fished…\pWas I doing things in half measures?$,
+Route118_Text_WadeIntro,"For FISHERMEN, equipment is the key.\pBut for TRAINERS, the key ingredients\nare COMPANIONS and heart, of course!$",
+Route118_Text_RosePostRematch,"If you use a sweet aroma properly,\nCOMPANIONS will be attracted by it.$",
+Route119_Text_BrendanIntro,"KAEL: {PLAYER}! So this is where\nyou've been looking for COMPANIONS?\pLet me see how good you got.\nI'll test you!\pNow!\nIt's a battle, so battle!$",
+Route119_Text_BrendanIllGiveYouThis,"KAEL: I'd say you're good enough\nto search for COMPANIONS anywhere.\pHere, I'll give you this.\nTry it out.$",
+Route119_Text_MayExplainFly,"MIRA: Use FLY, and your COMPANION will\ninstantly carry you to any town you've\lalready visited.\pBut, to use FLY, you have to get\nthe ARENA SHARD from BRIGHT TREE.\lThat's important, so don't forget.\pYou should FLY home to\nMOS PELGO for a change.\pI bet your mom's worried about you,\n{PLAYER}{KUN}.\pWell, let's meet again somewhere!$",
+Route119_Text_StayAwayFromWeatherInstitute,"We're standing lookout here.\pHey, you! Stay away from ENDOR\nSTATION. It's not safe.$",
+Route119_Text_TallGrassSnaresBikeTires,Tch…\nIt's a no-go…\pThe ferns snag a BIKE's repulsors.\nThere's no way you can ride here.$,
+Route119_Text_CanYourMonMakeSecretBase,Can your COMPANION use its SECRET\nPOWER on a big pile of ferns and make a\lHIDEOUT?$,
+Route119_Text_JacksonRematchIntro,I'm going to regain my wild spirit by\nbeing together with COMPANIONS.$,
+Route119_Text_JacksonPostRematch,Believe in your COMPANIONS.\nBelieve in yourself.\pThe road will reveal itself to you.$,
+Route119_Text_CatherineRematchIntro,How's your journey with COMPANIONS\ngoing?$,
+Route119_Text_CatherinePostRematch,"In the same way that you, as a TRAINER,\nrely on your COMPANIONS, your\lCOMPANIONS rely on you.$",
+Route119_Text_PhilIntro,I'll show you the true potential of me\nand my BIRD COMPANIONS!$,
+Route119_Text_HideoPostBattle,"To hide a tree, use a forest!\nTo hide a COMPANION, use COMPANIONS!\pThere is no deep, hidden meaning\nto that.$",
+Route119_House_Text_RumorAboutCaveOfOrigin,I heard about a place called the\nCAVE OF EVIL.\pPeople rumor that the spirits of\nCOMPANIONS are revived there. Could\lsomething like that really happen?$,
+Route119_WeatherInstitute_1F_Text_Grunt1Intro,"JABBA got interested in the\nresearch they have going here,\lso he sent us out.\pYou quit meddling!$",
+Route119_WeatherInstitute_1F_Text_Grunt1PostBattle,The mighty JABBA knows everything.\pBut I'm just a THUG. What would I know\nabout what he's thinking?$,
+Route119_WeatherInstitute_1F_Text_WowYoureStrong,"Wow, you're really strong!\pI wish I could be a COMPANION TRAINER\nlike you!$",
+Route119_WeatherInstitute_1F_Text_ProfStudyingRain,"The PROFESSOR loves rain.\nThat's a fact.\pBut if it keeps raining, people will be in\ntrouble. That's another fact.\pAnd thus, the PROFESSOR is studying\nif the rain can be put to good use.$",
+Route119_WeatherInstitute_1F_Text_NoticingAbnormalWeather,"On the 2nd floor of the STATION,\nwe study the weather patterns over\lthe OUTER RIM region.\pWe've been noticing temporary and\nisolated cases of droughts and\lheavy rain lately…$",
+Route119_WeatherInstitute_1F_Text_WhatWereAquasUpTo,Hello!\nWe've been saved by your actions!\pWhat I don't understand is what in the\ngalaxy the CARTEL was up to.$,
+Route119_WeatherInstitute_2F_Text_Grunt2Intro,The STATION built a type of COMPANION\nthat has something to do with the\lweather. We're here to take it!$,
+Route119_WeatherInstitute_2F_Text_Grunt2PostBattle,"If the COMPANION they made here can\ncontrol the weather freely, then we of\lthe CARTEL definitely need it!$",
+Route119_WeatherInstitute_2F_Text_Grunt3Intro,We're the CARTEL!\nWe show up wherever anything rare\lis found!$,
+Route119_WeatherInstitute_2F_Text_Grunt3PostBattle,You don't have any idea what we of\nthe CARTEL are working towards!\lYou stay out of our way!$,
+Route119_WeatherInstitute_2F_Text_ShellyIntro,"Hssssss!\pYou're going to meddle in the CARTEL's\naffairs?\pYou're either absolutely fearless,\nsimply ignorant, or both!\pBOSSK has hunted bigger prey.\nYou'll make a fine trophy, kiddy!$","Bossk (Shelly): Trandoshan trophy hunter, hisses"
+Route119_WeatherInstitute_2F_Text_ShellyDefeat,Hssss!\nYou're disgustingly strong!$,
+Route119_WeatherInstitute_2F_Text_ShellyPostBattle,"It's bad enough to have the EMPIRE\nblunder about, but now there's you!\pWhat makes you want to sniff around\nin our business, anyway?$",
+Route119_WeatherInstitute_2F_Text_TeamMagmaJustPassedBy,We have a situation here!\pAn EMPIRE shuttle just flew past\nENDOR STATION.\pIt appears to be headed for the\nJEDHA TEMPLE!$,
+Route119_WeatherInstitute_2F_Text_WeHaveToHurryToMtPyre,"What?!\pWe can't waste any more time here!\nWe have to hurry to JEDHA, too!\pHssssss!\nEMPIRE, just you wait!$",
+Route119_WeatherInstitute_2F_Text_PokemonChangesWithWeather,That COMPANION changes shape\naccording to the weather conditions.\pThere're plenty of them at the\nSTATION--go ahead and take it.$,
+Route119_Text_BrendanExplainFly,"KAEL: Use FLY, and your COMPANION\ninstantly carries you to any town\lyou've already visited.\pBut you need the ARENA SHARD from\nBRIGHT TREE to do that.\pAnyway, I have to move along.$",
+Route119_Text_ScottWayToGoBeSeeingYou,"LANDO: Hahahah!\nWay to go, {PLAYER}{KUN}!\pI just passed by a TRAINER riding\na BIKE.\pYou just beat that TRAINER, didn't you?\nIt was pretty obvious that you did.\pThe kid looked really upset with\na face all red from anger.\pI sure seem to run into you often.\nAre you off to BRIGHT TREE ARENA next?\pI expect you'll do well at the ARENA.\nWell, I'll be seeing you!$",
+FortreeCity_Text_UsedDevonScopePokemonFled,{PLAYER} used the ORGANA SCOPE.\pAn invisible COMPANION became fully\nvisible!\pThe startled COMPANION fled!$,
+Route120_Text_StevenUsedDevonScope,LEIA used the ORGANA SCOPE.\pAn invisible COMPANION became fully\nvisible!\pThe startled COMPANION attacked!$,
+Route120_Text_StevenGreeting,"LEIA: Hm? {PLAYER}{KUN}, hi.\nIt's been a while.\pThere's something here that you can't\nsee, right?\pNow, if I were to use this device on\nthe invisible obstacle…\pNo, no. Rather than describing it,\nI should just show you.\lThat would be more fun.\p{PLAYER}{KUN}, are your COMPANIONS ready\nfor battle?$",
+Route120_Text_StevenReadyForBattle,"LEIA: {PLAYER}{KUN}, are your COMPANIONS\nready for battle?$",
+Route120_Text_StevenGiveDevonScope,"LEIA: I see…\nYour battle style is intriguing.\pYour COMPANIONS have obviously grown\nsince I first met you on KASHYYYK.\pI'd like you to have this\nORGANA SCOPE.\pWho knows, there may be other\nconcealed COMPANIONS.$",
+Route120_Text_StevenGoodbye,"LEIA: {PLAYER}{KUN}.\pI enjoy seeing COMPANIONS and\nTRAINERS who strive together.\pI think you're doing great.\pWell, let's meet again somewhere.$",
+Route120_Text_LorenzoIntro,I'll check your COMPANIONS and see if\nthey're fit for the outdoors.$,
+Route120_Text_LorenzoDefeat,"With COMPANIONS that strong, you're in\nno danger of needing rescue!$",
+Route120_Text_JennaPostBattle,Fitness training is in my routine.\nI always run with my COMPANIONS.$,
+Route120_Text_JeffreyPostRematch,… … … … … …\n… … … … … …\lI'll try harder…\lFor my precious BUG COMPANIONS…$,
+Route120_Text_ClarissaDefeat,A parasol can't ward off COMPANION\nattacks…$,
+Route120_Text_ClarissaPostBattle,I don't think strong sunlight is good\nfor my COMPANIONS.\lSo I shield them with my parasol.$,
+Route120_Text_KeigoIntro,I will copy the moves of COMPANIONS\nand create new ninja techniques.$,
+Route120_Text_CalliePostBattle,"Should I evolve my COMPANIONS?\nThey're cute the way they are, though.$",
+Route120_Text_LeonelPostBattle,I think it's awesome you're so strong\nbattling with your favorite\lCOMPANIONS.$,
+Route120_Text_BerriesExpressionOfLoveIsntIt,"FRUIT grows by soaking up sunlight.\pWe help the FRUIT grow by watering\nit regularly.\pIt's an expression of love, isn't it?$",
+Route121_Text_OkayMoveOutToMtPyre,Okay!\nWe're to fly out to JEDHA!$,
+Route121_Text_AheadLoomsMtPyre,Shuttles from this pad fly to JEDHA…\pIts TEMPLE is a monument to the\nspirits of departed COMPANIONS…$,Route 121's pier is a shuttle pad to Jedha (net:hangar rows)
+Route121_Text_MtPyrePierSign,SHUTTLE PAD: JEDHA TEMPLE\p…The sign is old and worn out.\nThe words are barely legible…$,
+Route121_Text_SafariZoneSign,“Filled with rare COMPANIONS!”\nSHUTTLE TO THE FELUCIA RESERVE$,
+Route121_Text_VanessaPostBattle,I'm going to a SHOWCASE in CLOUD CITY.\pMy COMPANIONS should have no problem\nsweeping the MASTER CLASS.$,
+Route121_Text_WalterIntro,"With my COMPANIONS, I have traveled\nto the galaxy's four corners.\pYou might say I have some confidence\nin my abilities.$",
+Route121_Text_WalterRematchIntro,"With my COMPANIONS, I have traveled\nto the galaxy's four corners.\pYou might say I have some confidence\nin my abilities.$",
+Route121_Text_WalterPostBattle,I would like to cross the galaxy once\nagain with my COMPANIONS.$,
+Route121_Text_WalterPostRematch,"Your COMPANIONS and you…\pYour prowess together will be\nconsidered strong, even off-world.$",
+Route121_Text_JoyPostBattle,"JOA: Ehehe, I'll have to train with KESS,\nmy senior student partner, again.$",
+Route121_Text_JessicaPostBattle,Maybe I'll go catch more COMPANIONS at\nthe RESERVE.$,
+Route121_Text_JessicaPostRematch,Maybe I'll go catch more COMPANIONS at\nthe RESERVE.$,
+Route121_Text_MylesIntro,There's nothing I love more than\nchecking out other people's\lCOMPANIONS!$,
+Route121_Text_MylesPostBattle,"They're great, your COMPANIONS!\nHow do you raise them?$",
+Route121_Text_CalePostBattle,I bought too much stuff at\nthe CLOUD CITY DEPT. STORE.\pIt's a short flight from here.\nI wish I had a BAG like yours.$,
+Route121_SafariZoneEntrance_Text_WelcomeToSafariZone,"Welcome to the FELUCIA RESERVE\nSHUTTLE!\pOn FELUCIA, you may see many kinds\nof COMPANIONS rarely seen out here.\pAnd, you'll see them in their wild,\nuntamed state in natural habitats.\pWhat's more, the gates are open\nto COMPANION TRAINERS.\pYou're encouraged to catch COMPANIONS\nfor keeps!\pCome in and enjoy the FELUCIA RESERVE!$",Safari Zone entrance = shuttle office to the Felucia Reserve
+Route121_SafariZoneEntrance_Text_FirstTimeInfo,"When you enter the RESERVE, you\nstart with 30 SAFARI PODS for\lcatching COMPANIONS.\pThe SAFARI Game is over when you run\nout of SAFARI PODS, or when you've\lwalked 500 steps.\pCome in and enjoy the FELUCIA RESERVE!$",
+Route121_SafariZoneEntrance_Text_WouldYouLikeToPlay,Welcome to the FELUCIA RESERVE!\pAll you can catch for 500 credits!\nWould you like to play a SAFARI Game?$,
+Route121_SafariZoneEntrance_Text_ThatWillBe500Please,"That will be 500 credits, please.$",
+Route121_SafariZoneEntrance_Text_PCIsFull,Excuse me!\nYour storage BOX is full.$,
+Route123_Text_LoveGrassMonsHaveAny,I love GRASS-type COMPANIONS!\pDo you have any GRASS-type\nCOMPANIONS?$,
+Route123_Text_CheckTreesWithMyGrassMon,I check trees with my GRASS-type\nCOMPANIONS. I'm like a tree doctor.$,
+Route123_Text_RouteSignMtPyre,{UP_ARROW} SHUTTLE PAD: JEDHA TEMPLE\n“Forbidden to the faint of heart.”$,
+Route123_Text_JackiIntro,Don't be too happy if your COMPANIONS\ndevelop psychic powers.\pYou need to refine those powers to\nmake them really useful.$,
+Route123_Text_KindraIntro,JEDHA TEMPLE…\nWhere the spirits of COMPANIONS sleep…\lWill your COMPANIONS sleep?$,
+Route123_Text_KindraPostBattle,JEDHA TEMPLE…\nWhere the spirits of COMPANIONS sleep…\pIt must overflow with a power that\nsoothes spirits…$,
+Route123_Text_AlbertoPostBattle,I gather BIRD COMPANION feathers that\nscatter during battles.\pI'm going to make a hat with\nBIRD COMPANION feathers.$,
+Route123_Text_EdIntro,"When there are no TRAINERS around,\nI let my COMPANIONS battle each other.\lI watch them.$",
+Route123_Text_EdDefeat,I kind of like your COMPANIONS.$,
+Route123_BerryMastersHouse_Text_VisitPrettyPetalFlowerShop,Be sure to visit the PRETTY PETAL\nflower shop near BESTINE\lon TATOOINE.\pLet flowers fill the world!$,
+Route123_BerryMastersHouse_Text_JoyNeverGoesOutOfMyLife,Our four grandchildren should become\nmore accomplished than my husband.\pJoy never goes out of my life!$,
+Kecleon_Text_UseDevonScopeMonAttacked,{PLAYER} used the ORGANA SCOPE.\pAn invisible COMPANION became fully\nvisible!\pThe startled COMPANION attacked!$,
+Route121_Text_MarcelIntro,"My COMPANIONS have never lost!\nOn their next win, I'm entering them\lin SHOWCASES.$",
+Route123_Text_AlbertoDefeat,"Even in defeat, BIRD COMPANIONS\nare cool!$",
+FortreeCity_Text_SomethingBlockingGym,"I want to go to the ARENA,\nbut something's blocking the way.\pAfter all the bother I went through\ntraining on ROUTE 120…$",reviewed AUTO draft
+FortreeCity_Text_ThisTimeIllBeatWinona,"I've got my pride-and-joy COMPANION\nwith me. This time, I'll beat CHIRPA.$",reviewed AUTO draft
+FortreeCity_Text_BugPokemonComeThroughWindow,Living on top of trees is okay.\pBut sometimes BUG COMPANIONS come in\nthrough windows.\lIt can be really startling.$,reviewed AUTO draft
+FortreeCity_Text_SomethingUnseeable,Something unseeable is in the way.$,"reviewed, no change needed"
+FortreeCity_Text_UnseeableUseDevonScope,Something unseeable is in the way.\pWant to use the ORGANA SCOPE?$,reviewed AUTO draft
+FortreeCity_DecorationShop_Text_BuyingDeskForDolls,"I'm buying a pretty desk and I'm\nputting my cute DOLLS on it.\pIf I don't, when I decorate my\nHIDEOUT, my DOLLS will get\ldirty or poked with splinters.$",reviewed AUTO draft
+FortreeCity_Gym_Text_GymGuidePostVictory,You did it!\nYou've achieved liftoff!$,"reviewed, no change needed"
+FortreeCity_Gym_Text_JaredDefeat,You…\nYou're strong…$,"reviewed, no change needed"
+FortreeCity_Gym_Text_JaredPostBattle,A TRAINER has to be smart to keep\nup with unexpected turns of events.\pDo you have the smarts to get to\nour LEADER?$,"reviewed, no change needed"
+FortreeCity_Gym_Text_EdwardoIntro,"The lovers of BIRD COMPANIONS aspire\nto join this ARENA.\pAs a member of the BRIGHT TREE ARENA,\nI'm not allowed to lose!$",reviewed AUTO draft
+FortreeCity_Gym_Text_EdwardoDefeat,It was too much of a load for me\nto bear…$,"reviewed, no change needed"
+FortreeCity_Gym_Text_EdwardoPostBattle,"The world is huge, and there are\ncountless tough TRAINERS.\pI'm going to keep training and make\nmyself even stronger.$","reviewed, no change needed"
+FortreeCity_Gym_Text_FlintIntro,"There's no need for CHIRPA, our ARENA\nLEADER, to deal with you!\pI'm plenty good enough for you!$",reviewed AUTO draft
+FortreeCity_Gym_Text_FlintDefeat,"CHIRPA, I…\nI lost!$",reviewed AUTO draft
+FortreeCity_Gym_Text_AshleyIntro,CHIRPA taught me personally!\nYou can't beat me easily!$,reviewed AUTO draft
+FortreeCity_Gym_Text_AshleyDefeat,I was beaten…$,"reviewed, no change needed"
+FortreeCity_Gym_Text_HumbertoDefeat,Urk!\nI couldn't stop you.$,"reviewed, no change needed"
+FortreeCity_Gym_Text_HumbertoPostBattle,You'd better watch it!\nDon't get distracted staring at CHIRPA\lor you'll go crashing down in a heap!$,reviewed AUTO draft
+FortreeCity_Gym_Text_DariusIntro,"You'd better know that there are all\nsorts of FLYING-type COMPANIONS.\pYou do know that, right?$",reviewed AUTO draft
+FortreeCity_Gym_Text_DariusDefeat,You seem to know your stuff!$,"reviewed, no change needed"
+FortreeCity_Gym_Text_DariusPostBattle,"Sure, you beat me all right.\nBut you'd better watch it! Our LEADER\lCHIRPA's COMPANIONS are all business.$",reviewed AUTO draft
+FortreeCity_Gym_Text_ReceivedFeatherBadge,{PLAYER} received the CANOPY SHARD\nfrom CHIRPA.$,reviewed AUTO draft
+FortreeCity_Gym_Text_ExplainFeatherBadgeTakeThis,"With the CANOPY SHARD, all COMPANIONS\nup to LV 70, even those received\lthrough trades, will obey your every\lcommand.\pYou will also be able to use\nthe HM move FLY outside of battle.\pAnd this…\nThis is a gift from me.$",reviewed AUTO draft
+FortreeCity_Gym_Text_ExplainAerialAce,TM40 contains AERIAL ACE.\pIts speed…\nNo COMPANION should be able to avoid it.\p… … … … … …$,reviewed AUTO draft
+FortreeCity_Gym_Text_RegisteredWinona,Registered ARENA LEADER CHIRPA\nin the COMLINK.$,reviewed AUTO draft
+FortreeCity_Gym_Text_GymStatue,BRIGHT TREE ARENA$,reviewed AUTO draft
+FortreeCity_Gym_Text_GymStatueCertified,BRIGHT TREE ARENA\pCHIRPA'S CERTIFIED TRAINERS:\n{PLAYER}$,reviewed AUTO draft
+FortreeCity_Gym_Text_WinonaRematchDefeat,I failed to reach your height again…$,"reviewed, no change needed"
+FortreeCity_Gym_Text_WinonaPostRematch,"CHIRPA: Even though I have lost,\nthe wings of my heart remain unbroken.\pI can rise and soar again and\nyet again.\pI am convinced of it!$",reviewed AUTO draft
+FortreeCity_House1_Text_YouWillTradeWontYou,"Wrooooaaar! I need it!\nI have to get me a {STR_VAR_1}!\lI'll do anything for it!\p…Uh… Did you hear that?\nMy shout from the bottom of my heart?\pHaving heard that, you will trade\nyour {STR_VAR_1} for my {STR_VAR_2},\lwon't you?$","reviewed, no change needed"
+FortreeCity_House1_Text_MonYouTakeCare,"Oh, yeah, right on!\p{STR_VAR_1}, welcome!\n{STR_VAR_2}, you take care!$","reviewed, no change needed"
+FortreeCity_House1_Text_ThisIsntAMon,"Uh, no, I don't think so.\nThat isn't a {STR_VAR_1}.$","reviewed, no change needed"
+FortreeCity_House1_Text_YouWontTradeMe,No? You won't trade me?\nEven after I bared my heart to you?$,"reviewed, no change needed"
+FortreeCity_House1_Text_GoingToMakeVolbeatStrong,I'm going to make GLOWFLY super\nstrong from this moment on!\pI hope you do the same with PIT DROID!$,reviewed AUTO draft
+FortreeCity_House1_Text_Zigzagoon,SCURRIER: Gumomoh?$,reviewed AUTO draft
+FortreeCity_House2_Text_ExplainHiddenPower,HIDDEN POWER is a move that changes\nwith the COMPANION.$,reviewed AUTO draft
+FortreeCity_House2_Text_YouGuessedWrong,"No, too bad.\nYou guessed wrong.$","reviewed, no change needed"
+FortreeCity_House3_Text_OhYouHavePokedex,"What's that thing you have there?\p… … … … … …\pOh, it's called a DATAPAD?\nIt's really awesome!$",reviewed AUTO draft
+FortreeCity_House4_Text_GoBirdPokemon,"There!\nGo, BIRD COMPANIONS!$",reviewed AUTO draft
+FortreeCity_House4_Text_AskedWingullToRunErrand,"Heheh, I asked my SHYYYOLET to run\nan errand for me.$",reviewed AUTO draft
+FortreeCity_House4_Text_WelcomeWingullTakeMentalHerb,"Good!\nWelcome back, SHYYYOLET!\pHuh? What is this?\nWhat is it holding?\pA MENTAL HERB?\nIt must have picked it up somewhere.\pBut I'm not a TRAINER, so you can\nhave it.$",reviewed AUTO draft
+FortreeCity_House4_Text_FriendsFarAwayThanksToWingull,"Thanks to my SHYYYOLET, I have friends\nwho live far away.$",reviewed AUTO draft
+FortreeCity_House4_Text_Wingull,SHYYYOLET: Pihyoh!$,reviewed AUTO draft
+FortreeCity_House5_Text_Zigzagoon,SCURRIER: Bufuu!$,reviewed AUTO draft
+FortreeCity_Mart_Text_SuperRepelBetter,"REPULSOR II lasts a long time,\nand it gets the job done.\pIt's much better than an ordinary\nREPULSOR.$",reviewed AUTO draft
+FortreeCity_Mart_Text_StockUpOnItems,I always stock up on more items than\nI'm sure I'll need.\pYou never know what might happen.\nBetter to be safe than sorry!$,"reviewed, no change needed"
+FortreeCity_PokemonCenter_1F_Text_RecordCornerIsNeat,"Have you done anything at\nthe RECORD CORNER?\pIt's pretty neat. It mixes and matches\nthe records of TRAINERS.\pI don't know quite how it works,\nbut it's cool. It's exciting, even!$","reviewed, no change needed"
+FortreeCity_PokemonCenter_1F_Text_DoYouKnowAboutPokenav,"Oh, wow, you have a COMLINK!\nAnd it's just like mine!\pDo you know about COMLINK's\nMATCH CALL system?\pAccess it, and you can chat with\nregistered TRAINERS anytime.\pIt also shows you which TRAINERS\nwant a rematch with you.\pIt's really nifty! Those HOUSE ORGANA\nguys sure know what they're doing!$",reviewed AUTO draft
+Route118_Text_YouAgreeGoodRodIsGood,Hmm!\nA GOOD ROD is really good!\pWouldn't you agree?$,"reviewed, no change needed"
+Route118_Text_IdenticalMindsTakeThis,Hmm!\nWe're of identical minds!\pHmm!\nTake this GOOD ROD!$,"reviewed, no change needed"
+Route118_Text_TryYourLuckFishing,"Wherever there's water, try your luck\nat fishing.$","reviewed, no change needed"
+Route118_Text_DontYouLikeToFish,Don't you like to fish?$,"reviewed, no change needed"
+Route118_Text_TryCatchingMonWithGoodRod,Try catching all sorts of COMPANIONS\nwith your GOOD ROD.$,reviewed AUTO draft
+Route118_Text_RouteSign119,ROUTE 118\n{UP_ARROW} ROUTE 119$,"reviewed, no change needed"
+Route119_Text_MayIntro,MIRA: {PLAYER}{KUN}!\nWhere were you? I was looking for you!\pHow much stronger have you gotten?\nLet me check for you!\pReady with your COMPANION?\nOf course you are! Go!$,reviewed AUTO draft
+Route119_Text_MayDefeat,"Achah!\n{PLAYER}{KUN}, you're strong!\pI was worried that you might be\nstruggling with your training.$","reviewed, no change needed"
+Route119_Text_MayPresentForYou,"MIRA: But I had absolutely nothing to\nworry about! Keep it up!\pAnd, here! I have a present for you.$",reviewed AUTO draft
+Route119_Text_BrendanDefeat,Hmm…\nYou've gotten pretty darn decent.$,"reviewed, no change needed"
+Route119_Text_ScottYouWonAtFortreeGym,"… … … … … …\n… … … … … Beep!\pLANDO: Hiya, {PLAYER}{KUN}, it's me!\pJust as I thought, you won at\nthe BRIGHT TREE ARENA.\pYour strength…\nPerhaps you really are the TRAINER\lthat I've been searching for.\pRemember, you have a fan in me.\nI'll be cheering from the sidelines.\lKeep up the great work!\p… … … … … …\n… … … … … Click!$",reviewed AUTO draft
+Route119_Text_DontGoNearWeatherInstitute,"Lookout duty is surprisingly boring.\pHey, you! Please don't go near the\nENDOR STATION.$",reviewed AUTO draft
+Route119_Text_ThoughtFlyByCatchingBirdMons,"I thought you FLY by catching a whole\nflock of BIRD COMPANIONS, and then\lhanging on to them somehow.\pBut it turns out there's an HM move\ncalled FLY!\pI wish I'd known about that a long\ntime ago…$",reviewed AUTO draft
+Route119_Text_RouteSignFortree,ROUTE 119\n{RIGHT_ARROW} BRIGHT TREE$,reviewed AUTO draft
+Route119_Text_WeatherInstitute,ENDOR STATION$,reviewed AUTO draft
+Route119_Text_TrainerTipsDecoration,TRAINER TIPS\pUp to sixteen decorations and\nfurniture items can be placed in\la HIDEOUT.\pPick your favorite items and create\nyour very own HIDEOUT exactly the\lway you want.$,reviewed AUTO draft
+Route119_House_Text_Wingull,SHYYYOLET: Pihyoh!$,reviewed AUTO draft
+Route119_WeatherInstitute_1F_Text_Grunt1Defeat,Blast it…\nBlasted by a kid…$,"reviewed, no change needed"
+Route119_WeatherInstitute_1F_Text_Grunt4Intro,Huh?\nWhat's a kid doing here?$,"reviewed, no change needed"
+Route119_WeatherInstitute_1F_Text_Grunt4Defeat,Huh?\nI lost?!$,"reviewed, no change needed"
+Route119_WeatherInstitute_1F_Text_Grunt4PostBattle,"Oh, no…\nI'll catch an earful for losing to a kid…\pI should just take a nap in the bed…$","reviewed, no change needed"
+Route119_WeatherInstitute_1F_Text_EveryoneWentUpstairs,"While I was sleeping, everyone went\nupstairs!$","reviewed, no change needed"
+Route119_WeatherInstitute_1F_Text_TakeRestInBed,There's a bed…\nLet's take a rest.$,"reviewed, no change needed"
+Route119_WeatherInstitute_2F_Text_Grunt2Defeat,Our plan's being spoiled by a kid?$,"reviewed, no change needed"
+Route119_WeatherInstitute_2F_Text_Grunt3Defeat,You got me!$,"reviewed, no change needed"
+Route119_WeatherInstitute_2F_Text_Grunt5Intro,"Don't tell me you're looking for that\nweather COMPANION, too?\pThat's a no-no!\nWe were here to get it first!$",reviewed AUTO draft
+Route119_WeatherInstitute_2F_Text_Grunt5Defeat,"Oh, will you look at my COMPANION?$",reviewed AUTO draft
+Route119_WeatherInstitute_2F_Text_Grunt5PostBattle,"Humph, so what?\nWhat we want…\pWhat we really want isn't here…\nIhihihihi…$","reviewed, no change needed"
+Route119_WeatherInstitute_2F_Text_ThanksPleaseTakePokemon,"Thanks!\nThanks to you, we're safe!\pIt might be an odd way of thanking you,\nbut take this COMPANION.$",reviewed AUTO draft
+Route119_WeatherInstitute_2F_Text_NoRoomForPokemon,Hm? You don't seem to have any room\nfor this COMPANION.$,reviewed AUTO draft
+Route119_WeatherInstitute_2F_Text_PlayerReceivedCastform,{PLAYER} received CLIMADROID!$,reviewed AUTO draft
+Route119_WeatherInstitute_2F_Text_ChangingWeatherRidiculous,"I've been researching rain for many\nyears, but it's ridiculous to think that\lhumans can freely change the weather.$","reviewed, no change needed"
+Route119_WeatherInstitute_2F_Text_GroudonWeather,"I track weather patterns over\nthe OUTER RIM region.\pPresently, a drought has been recorded\nin {STR_VAR_1}.\pCould that mean, somewhere near\n{STR_VAR_1}…$",reviewed AUTO draft
+Route119_WeatherInstitute_2F_Text_KyogreWeather,"I track weather patterns over\nthe OUTER RIM region.\pPresently, heavy rainfall has been\nrecorded over {STR_VAR_1}.\pCould that mean, somewhere near\n{STR_VAR_1}…$",reviewed AUTO draft
+Route119_WeatherInstitute_2F_Text_NoAbnormalWeather,"Abnormal weather conditions are\nno longer being reported.\pThe occasional rainfall is a blessing,\nreally.$","reviewed, no change needed"
+Route120_Text_StevenIllWaitHere,"LEIA: No?\pI'll wait here, so you can get ready.$",reviewed AUTO draft
+Route120_Text_StevenShowMeYourPower,"LEIA: {PLAYER}{KUN}, show me your true\npower as a TRAINER!$",reviewed AUTO draft
+Kecleon_Text_SomethingUnseeable,Something unseeable is in the way.$,"reviewed, no change needed"
+Kecleon_Text_WantToUseDevonScope,Something unseeable is in the way.\pWant to use the ORGANA SCOPE?$,reviewed AUTO draft
+Route120_Text_RouteSignFortree,ROUTE 120\n{LEFT_ARROW} BRIGHT TREE$,reviewed AUTO draft
+Route120_Text_RouteSign121,{RIGHT_ARROW} ROUTE 121\n{LEFT_ARROW} ROUTE 120$,"reviewed, no change needed"
+Route123_Text_YouLikeGrassMonsTooHaveThis,"Oh?\pYou like GRASS-type COMPANIONS, too,\ndon't you?\pI'm so happy, you can have this!\nIt's a token of our friendship.$",reviewed AUTO draft
+Route123_Text_RouteSign,{RIGHT_ARROW} ROUTE 123\n{LEFT_ARROW} ROUTE 118$,"reviewed, no change needed"
+Route123_Text_BerryMastersHouse,FRUIT MASTER'S HOUSE$,reviewed AUTO draft
+AncientTomb_Braille_ShineInTheMiddle,"THOSE WHO\nINHERIT OUR\nWILL, SHINE\nIN THE MIDDLE.$","reviewed, no change needed"
+Route118_Text_RoseIntro,The aroma of flowers has a magical\npower. It cleanses us body and soul.$,"reviewed, no change needed"
+Route118_Text_RoseDefeat,"Oh, dear me.\nI seem to have lost.$","reviewed, no change needed"
+Route118_Text_RoseRegister,Sniff… That odor--it's a COMLINK!\nWe must register each other!$,reviewed AUTO draft
+Route118_Text_RoseRematchIntro,Were you drawn here by the sweet\naroma?$,"reviewed, no change needed"
+Route118_Text_RoseRematchDefeat,The power of aroma…\nIt didn't seem to do much.$,"reviewed, no change needed"
+Route118_Text_PerryIntro,BIRD COMPANIONS that FLY elegantly in\nthe sky… They're the best!$,reviewed AUTO draft
+Route118_Text_PerryDefeat,Urgh…\nI crashed…$,"reviewed, no change needed"
+Route118_Text_ChesterIntro,Take flight!\nMy BIRD COMPANIONS!$,reviewed AUTO draft
+Route118_Text_ChesterDefeat,They did take flight…$,"reviewed, no change needed"
+Route118_Text_ChesterPostBattle,"If they'd get stronger, they'd be able\nto fly more freely…$","reviewed, no change needed"
+Route118_Text_BarnyIntro,"I'm a FISHERMAN, but also a TRAINER.\nI'm raising the COMPANIONS I caught.$",reviewed AUTO draft
+Route118_Text_BarnyDefeat,I thought I was doing okay in my\ntraining…$,"reviewed, no change needed"
+Route118_Text_WadeDefeat,I was beaten in heart?$,"reviewed, no change needed"
+Route118_Text_WadePostBattle,"Come to think of it, fishing is a battle\nbetween a FISHERMAN and a COMPANION.$",reviewed AUTO draft
+Route118_Text_DaltonIntro,Let my melody rock your soul!$,"reviewed, no change needed"
+Route118_Text_DaltonDefeat,La-lalala…$,"reviewed, no change needed"
+Route118_Text_DaltonPostBattle,An electric guitar doesn't always\nhave to be noisy…\pIt can be strummed to squeeze out\nthis heart-stirring melody…$,"reviewed, no change needed"
+Route118_Text_DaltonRegister,"When I compose better melodies,\nyou have to come listen, okay?$","reviewed, no change needed"
+Route118_Text_DaltonRematchIntro,A melody from my COMPANION and me…\nLet us deliver it to your soul.$,reviewed AUTO draft
+Route118_Text_DaltonRematchDefeat,La-lalala…$,"reviewed, no change needed"
+Route118_Text_DaltonPostRematch,"When I play, my emotions should reach\nyou through my electric guitar…$","reviewed, no change needed"
+Route118_Text_DeandreIntro,"Go, go, go!\nCOMPANION 1, 2, and 3!$",reviewed AUTO draft
+Route118_Text_DeandreDefeat,"Come in, COMPANION! Are you okay?\nCOMPANION 1, 2, and 3?!$",reviewed AUTO draft
+Route118_Text_DeandrePostBattle,Isn't it cool that I have a COMPANION\nbattle team?\pYou can copy me--I don't mind!$,reviewed AUTO draft
+Route119_Text_BrentIntro,We're the MIMIC CIRCLE!\nWe MIMIC what you do!$,"reviewed, no change needed"
+Route119_Text_BrentDefeat,Whoopsie!\nI lost!$,"reviewed, no change needed"
+Route119_Text_BrentPostBattle,What's so good about mimicry?\pFufufu…\nYou'll never understand…$,"reviewed, no change needed"
+Route119_Text_DonaldIntro,"So, we finally meet! My BUG COMPANIONS\nwill keep you company!$",reviewed AUTO draft
+Route119_Text_DonaldDefeat,I wish we'd never met…$,"reviewed, no change needed"
+Route119_Text_DonaldPostBattle,I want to MIMIC you some more.\nCan you hurry up and move?$,"reviewed, no change needed"
+Route119_Text_TaylorIntro,"If you step forward, we step forward.\pIf you turn right, we turn, too…$","reviewed, no change needed"
+Route119_Text_TaylorDefeat,"But if you win, I lose…$","reviewed, no change needed"
+Route119_Text_TaylorPostBattle,I can't MIMIC you winning the match.\nThat's just impossible…\lIt's burning me up…$,"reviewed, no change needed"
+Route119_Text_DougIntro,"Yep, you've finally caught me!\nOr were you trying to avoid me?$","reviewed, no change needed"
+Route119_Text_DougDefeat,"Whoop, that was a great match!$","reviewed, no change needed"
+Route119_Text_DougPostBattle,We're the MIMIC CIRCLE!\nI hope you enjoyed our performance.$,"reviewed, no change needed"
+Route119_Text_GregIntro,"You don't know who I am, do you?\pBut, I also don't know you.\nSo, we'll battle!$","reviewed, no change needed"
+Route119_Text_GregDefeat,You're pretty strong!$,"reviewed, no change needed"
+Route119_Text_GregPostBattle,"Until you go away somewhere, we'll\nkeep on mimicking your every move.$","reviewed, no change needed"
+Route119_Text_KentIntro,The MIMIC CIRCLE was formed by people\nwho like to MIMIC.\pA battle starts the instant we meet!$,"reviewed, no change needed"
+Route119_Text_KentDefeat,I give up!$,"reviewed, no change needed"
+Route119_Text_KentPostBattle,Won't you join our MIMIC CIRCLE?$,"reviewed, no change needed"
+Route119_Text_JacksonIntro,"Who has the knowledge and\nthe technique for survival?\pCOMPANION RANGERS, that's who!$",reviewed AUTO draft
+Route119_Text_JacksonDefeat,I didn't have enough COMPANIONS\nknow-how…$,reviewed AUTO draft
+Route119_Text_JacksonPostBattle,To break away from civilization and\nawaken the wild spirit within!\pThat's our vision.$,"reviewed, no change needed"
+Route119_Text_JacksonRegister,I hope you'll give me a rematch without\nmocking my lack of knowledge.$,"reviewed, no change needed"
+Route119_Text_JacksonRematchDefeat,You've remained strong!$,"reviewed, no change needed"
+Route119_Text_CatherineIntro,"Oh? Look at you.\pFor someone on an adventure,\nyou're traveling awfully light.$","reviewed, no change needed"
+Route119_Text_CatherineDefeat,Accidents happen when you're not\nprepared!$,"reviewed, no change needed"
+Route119_Text_CatherinePostBattle,"You're traveling light but you have\neverything you need.\pYou're on top of things mentally and\nphysically, too.$","reviewed, no change needed"
+Route119_Text_CatherineRegister,"Do you have a COMLINK?\nIt's a must-have tool for any TRAINER.\pOh, you do have one!\nLet's register each other, then!$",reviewed AUTO draft
+Route119_Text_CatherineRematchDefeat,I'm still missing something…$,"reviewed, no change needed"
+Route119_Text_HughIntro,The vast sky holds untold promise!\pNothing can compare to the sheer\nexhilaration of flight!$,"reviewed, no change needed"
+Route119_Text_HughDefeat,Down and out!$,"reviewed, no change needed"
+Route119_Text_HughPostBattle,My BIRD COMPANIONS made my dreams of\nflying come true!$,reviewed AUTO draft
+Route119_Text_PhilDefeat,We lacked potential…$,"reviewed, no change needed"
+Route119_Text_PhilPostBattle,"Ever since I was a little kid, I always\nadmired BIRD COMPANIONS…$",reviewed AUTO draft
+Route119_Text_YasuIntro,"To lurk in shadows, and live in\ndarkness… That is my destiny.\pI emerge to challenge you!$","reviewed, no change needed"
+Route119_Text_YasuDefeat,I admit defeat!$,"reviewed, no change needed"
+Route119_Text_YasuPostBattle,"Those defeated in battle withdraw\nquietly back into the shadows.\lThat, too, is destiny…$","reviewed, no change needed"
+Route119_Text_TakashiIntro,"If you're not on your guard,\nyou're in for some pain!$","reviewed, no change needed"
+Route119_Text_TakashiDefeat,You're surprisingly good!$,"reviewed, no change needed"
+Route119_Text_TakashiPostBattle,My surprise attack ended in\nfailure…$,"reviewed, no change needed"
+Route119_Text_HideoIntro,"To hide a tree, use a forest!$","reviewed, no change needed"
+Route119_Text_HideoDefeat,I bow to your superiority.$,"reviewed, no change needed"
+Route119_Text_ChrisIntro,You spoke to me…\nSo you want to challenge me!\pSure! I'll try out the COMPANION I\ncaught while SURFING!$,reviewed AUTO draft
+Route119_Text_ChrisDefeat,I don't have a clue about what it\ntakes to win.$,"reviewed, no change needed"
+Route119_Text_ChrisPostBattle,Go for a SURF on my COMPANION…\pThen fish off its back…\pIt's an indescribably luxuriant moment!$,reviewed AUTO draft
+Route119_Text_FabianIntro,"Hit me with a power chord!\nVictory is mine!\lIt's our time to shine, whoa, yeah!$","reviewed, no change needed"
+Route119_Text_FabianDefeat,"You showed me who's the boss!\nWe'll have to take the loss, oh, no!$","reviewed, no change needed"
+Route119_Text_FabianPostBattle,Hit me with another power chord!\nLeave me alone!\lYour win you have to atone!$,"reviewed, no change needed"
+Route119_Text_DaytonIntro,Hohoho!\nI like kid TRAINERS!\lLet's have a good one!$,"reviewed, no change needed"
+Route119_Text_DaytonDefeat,You're pretty amazing!\nHohoho!$,"reviewed, no change needed"
+Route119_Text_DaytonPostBattle,Hohoho!\nI'll try emulating the pep of kid\lTRAINERS like you!$,"reviewed, no change needed"
+Route119_Text_RachelIntro,"Wherever and whenever I may be,\nI always have my parasol in hand.$","reviewed, no change needed"
+Route119_Text_RachelDefeat,"Oh, but…\nThat's not fair.$","reviewed, no change needed"
+Route119_Text_RachelPostBattle,You're asking if my parasol is heavy?\nYour BAG is filled with more junk than\lI ever carry around.$,"reviewed, no change needed"
+Route120_Text_ColinIntro,Do you have any moves that can strike\na flying COMPANION?$,reviewed AUTO draft
+Route120_Text_ColinDefeat,You soared above me!$,"reviewed, no change needed"
+Route120_Text_ColinPostBattle,"The move FLY is convenient,\ndon't you think?\pWhile the COMPANION is flying,\nalmost no moves can strike it.$",reviewed AUTO draft
+Route120_Text_RobertIntro,My COMPANION is strong!\nHow about yours?$,reviewed AUTO draft
+Route120_Text_RobertDefeat,Your COMPANIONS were stronger…$,reviewed AUTO draft
+Route120_Text_RobertPostBattle,A COMPANION that grows steadily is one\nyou can count on.$,reviewed AUTO draft
+Route120_Text_RobertRegister,You can be counted on to get better.\nI'd like to register you in my COMLINK!$,reviewed AUTO draft
+Route120_Text_RobertRematchIntro,A COMPANION that grows steadily is one\nyou can count on.$,reviewed AUTO draft
+Route120_Text_RobertRematchDefeat,Your COMPANIONS are seriously strong.$,reviewed AUTO draft
+Route120_Text_RobertPostRematch,"My COMPANIONS are growing stronger.\nI have to grow stronger, too.$",reviewed AUTO draft
+Route120_Text_LorenzoPostBattle,To travel wherever your heart desires\nwith COMPANIONS…\lThat's the joy of being a TRAINER.$,reviewed AUTO draft
+Route120_Text_JennaIntro,"How's your physical fitness?\nIf you're not fit, you could have a\lrough time in critical situations.$","reviewed, no change needed"
+Route120_Text_JennaDefeat,"I'm totally fit, but…$","reviewed, no change needed"
+Route120_Text_JeffreyIntro,… … … … … …\n… … … … … …\lWant to battle?$,"reviewed, no change needed"
+Route120_Text_JeffreyDefeat,Lost it…$,"reviewed, no change needed"
+Route120_Text_JeffreyPostBattle,… … … … … …\n… … … … … …\lI'll try harder…$,"reviewed, no change needed"
+Route120_Text_JeffreyRegister,… … … … … …\n… … … … … …\lDo you have a COMLINK…?$,reviewed AUTO draft
+Route120_Text_JeffreyRematchIntro,… … … … … …\n… … … … … …\lWant to battle again?$,"reviewed, no change needed"
+Route120_Text_JeffreyRematchDefeat,… … … … … …\nI lost again…$,"reviewed, no change needed"
+Route120_Text_JenniferIntro,"COMPANIONS have many special abilities.\nIf you want to become a first-class\lTRAINER, learn about them.$",reviewed AUTO draft
+Route120_Text_JenniferDefeat,You're obviously thinking.$,"reviewed, no change needed"
+Route120_Text_JenniferPostBattle,The special abilities of COMPANIONS\nwill make battle styles change.$,reviewed AUTO draft
+Route120_Text_ChipIntro,Who might you be?\pAre you perhaps searching for ancient\nruins that are rumored to possibly\lexist according to legend?$,"reviewed, no change needed"
+Route120_Text_ChipDefeat,What a disgraceful setback…$,"reviewed, no change needed"
+Route120_Text_ChipPostBattle,That giant rock… I would like to\nbelieve it may indeed contain ancient\lruins. But I see no entrance.$,"reviewed, no change needed"
+Route120_Text_ClarissaIntro,Why am I carrying this parasol?\pI'll tell you if you can win against me.$,"reviewed, no change needed"
+Route120_Text_AngelicaIntro,"Me, COMPANION, and my parasol…\pIf any one of them is missing,\nthe picture of beauty will be ruined.$",reviewed AUTO draft
+Route120_Text_AngelicaDefeat,You've completely ruined my beauty…$,"reviewed, no change needed"
+Route120_Text_AngelicaPostBattle,"A parasol wouldn't suit you at all.\pWhy, something like this would only\nget in your way.$","reviewed, no change needed"
+Route120_Text_KeigoDefeat,The creation of new ninja techniques\nis but a distant dream…$,"reviewed, no change needed"
+Route120_Text_KeigoPostBattle,Perhaps I ought to apprentice under\na ninja sensei.$,"reviewed, no change needed"
+Route120_Text_RileyIntro,We ninja conceal ourselves under our\ncamouflage cloaks.\lI bet you didn't know where I was!$,"reviewed, no change needed"
+Route120_Text_RileyDefeat,I lost!\nI should camouflage my shame!$,"reviewed, no change needed"
+Route120_Text_RileyPostBattle,Our camouflage cloaks are all\nhandmade.$,"reviewed, no change needed"
+Route120_Text_CallieIntro,"If you don't pay attention,\nyou could get hurt!$","reviewed, no change needed"
+Route120_Text_CallieDefeat,Ouch!\nI was the one to get hurt.$,"reviewed, no change needed"
+Route120_Text_LeonelIntro,Your party COMPANION…\nDo you have different types?$,reviewed AUTO draft
+Route120_Text_LeonelDefeat,I've seen your policy in action!$,"reviewed, no change needed"
+Route121_Text_VanessaIntro,Will you play with my delightfully\npretty COMPANION?$,reviewed AUTO draft
+Route121_Text_VanessaDefeat,This isn't what I meant!$,"reviewed, no change needed"
+Route121_Text_WalterDefeat,"Ah, well played.$","reviewed, no change needed"
+Route121_Text_WalterRegister,Your COMPANION prowess is remarkable.\nAllow me to register you as a memento.$,reviewed AUTO draft
+Route121_Text_WalterRematchDefeat,"Ah, well played.$","reviewed, no change needed"
+Route121_Text_TammyIntro,There are powers beyond our\nunderstanding in the world…$,"reviewed, no change needed"
+Route121_Text_TammyDefeat,I have lost…$,"reviewed, no change needed"
+Route121_Text_TammyPostBattle,JEDHA TEMPLE…\nThere is a mysterious power\lat work there…$,reviewed AUTO draft
+Route121_Text_KateIntro,"KESS: Together, we're fearless!\nWe'll demonstrate how tough we are!$",reviewed AUTO draft
+Route121_Text_KateDefeat,KESS: I blew it in front of my junior\nstudent partner…$,reviewed AUTO draft
+Route121_Text_KatePostBattle,"KESS: When someone's relying on me,\nI get this urge to look cool in front\lof them…$",reviewed AUTO draft
+Route121_Text_KateNotEnoughMons,"KESS: If you've only got one COMPANION,\nwe can't battle with you.\pThat would be bullying.$",reviewed AUTO draft
+Route121_Text_JoyIntro,"JOA: Together, we're fearless!\nWe'll demonstrate how tough we are!$",reviewed AUTO draft
+Route121_Text_JoyDefeat,"JOA: Please forgive me, KATE!$",reviewed AUTO draft
+Route121_Text_JoyNotEnoughMons,JOA: You need at least two COMPANIONS\nif you're going to challenge us!$,reviewed AUTO draft
+Route121_Text_JessicaIntro,Stop! Have a good look at my precious\nCOMPANION!$,reviewed AUTO draft
+Route121_Text_JessicaDefeat,"Oh, how dare you!\nDon't take it so seriously!$","reviewed, no change needed"
+Route121_Text_JessicaRegister,I took it easy on you this time!\nIt won't be that way the next time!$,"reviewed, no change needed"
+Route121_Text_JessicaRematchIntro,My precious COMPANIONS grew!\nHave a good look!$,reviewed AUTO draft
+Route121_Text_JessicaRematchDefeat,"Oh, how dare you!\nYou still won't take it easy!$","reviewed, no change needed"
+Route121_Text_CristinIntro,I have this routine.\nDefeat five TRAINERS a day.\lGuess what? You're number five!$,"reviewed, no change needed"
+Route121_Text_CristinDefeat,No!\nYou're horrid!$,"reviewed, no change needed"
+Route121_Text_CristinPostBattle,I didn't expect to lose this easily…\nI'll win next time!$,"reviewed, no change needed"
+Route121_Text_CristinRegister,That was total humiliation!\nI won't forget you…\lHand over your COMLINK!$,reviewed AUTO draft
+Route121_Text_CristinRematchIntro,I have this new routine.\nDefeat ten TRAINERS a day.\lGuess what? You're number ten!$,"reviewed, no change needed"
+Route121_Text_CristinRematchDefeat,Wait! That's nasty!\nI demand a rematch!$,"reviewed, no change needed"
+Route121_Text_CristinPostRematch,An opponent I just can't beat…\nSnivel…\lI can't believe this is happening…$,"reviewed, no change needed"
+Route121_Text_CaleIntro,"Can't you see that I have all this\nstuff with me?\pDespite that, you still insist that\nwe battle?$","reviewed, no change needed"
+Route121_Text_CaleDefeat,Of course I lost!\nI'm holding stuff in both hands!$,"reviewed, no change needed"
+Route121_Text_MylesDefeat,Super awesome!$,"reviewed, no change needed"
+Route121_Text_PatIntro,I want everybody to see the COMPANION\nI've raised!$,reviewed AUTO draft
+Route121_Text_PatDefeat,Wow!\nSpectacular!$,"reviewed, no change needed"
+Route121_Text_PatPostBattle,I raise every COMPANION with the same\nlove and care--I don't pick favorites.$,reviewed AUTO draft
+Route121_Text_MarcelDefeat,"Oh, now what happened here?$","reviewed, no change needed"
+Route121_Text_MarcelPostBattle,I may have to train my gang some more\nbefore entering any SHOWCASE.$,reviewed AUTO draft
+Route123_Text_WendyIntro,Want to determine how strong you are?\nI'll be the test!$,"reviewed, no change needed"
+Route123_Text_WendyDefeat,You passed with flying colors!$,"reviewed, no change needed"
+Route123_Text_WendyPostBattle,To best even me…\nYour strength is marvelous!$,"reviewed, no change needed"
+Route123_Text_BraxtonIntro,You seem to have a big collection\nof ARENA SHARDS.\pLet me see if you're actually worthy of\nthose SHARDS!$,reviewed AUTO draft
+Route123_Text_BraxtonDefeat,"Oh, you're worthy, all right!$","reviewed, no change needed"
+Route123_Text_BraxtonPostBattle,You did your SHARDS proud in that\nmatch!$,reviewed AUTO draft
+Route123_Text_VioletIntro,They say that good times are filled\nwith good aromas.$,"reviewed, no change needed"
+Route123_Text_VioletDefeat,Oh…\nI smell the bitter scent of misery…$,"reviewed, no change needed"
+Route123_Text_VioletPostBattle,The FRUIT MASTER's garden is filled\nwith uplifting fragrances.$,reviewed AUTO draft
+Route123_Text_CameronIntro,Being a psychic is about willpower.\pI've willed myself not to lose to\nanyone. That makes me strong!$,"reviewed, no change needed"
+Route123_Text_CameronDefeat,I feel sad…$,"reviewed, no change needed"
+Route123_Text_CameronPostBattle,Being a psychic is about willpower.\nI thought I wouldn't lose to you…$,"reviewed, no change needed"
+Route123_Text_CameronRegister,"I sense it!\nYou and I shall battle again!\lI can't tell if I'll win, though…\pLet's see your COMLINK.$",reviewed AUTO draft
+Route123_Text_CameronRematchIntro,I've convinced myself that I won't\nlose anymore. That makes me strong!$,"reviewed, no change needed"
+Route123_Text_CameronRematchDefeat,I feel sad…$,"reviewed, no change needed"
+Route123_Text_CameronPostRematch,I should train at JEDHA TEMPLE…\nI'll never beat you this way…$,reviewed AUTO draft
+Route123_Text_JackiDefeat,Overwhelmed!$,"reviewed, no change needed"
+Route123_Text_JackiPostBattle,We all have psychic powers.\nWe've just forgotten how to use them.$,"reviewed, no change needed"
+Route123_Text_JackiRegister,I would like to face you again.\nIs that okay with you?$,"reviewed, no change needed"
+Route123_Text_JackiRematchIntro,Have you awoken the psychic powers\nwithin you?$,"reviewed, no change needed"
+Route123_Text_JackiRematchDefeat,Astounding!$,"reviewed, no change needed"
+Route123_Text_JackiPostRematch,"Your power with COMPANIONS…\nThat could be a psychic power, too.$",reviewed AUTO draft
+Route123_Text_MiuIntro,"MIKA: Hello, TRAINER. I hope your\nCOMPANION won't cry when they lose.$",reviewed AUTO draft
+Route123_Text_MiuDefeat,"MIKA: Uh-oh, we lost.$",reviewed AUTO draft
+Route123_Text_MiuPostBattle,"MIKA: TRAINER, your COMPANIONS are\nstrong because you are friends.$",reviewed AUTO draft
+Route123_Text_MiuNotEnoughMons,MIKA: It's no fun to battle if you\ndon't have two COMPANIONS.$,reviewed AUTO draft
+Route123_Text_YukiIntro,YUN: Okay!\nWe're beating the TRAINER's COMPANION!$,reviewed AUTO draft
+Route123_Text_YukiDefeat,"YUN: Uh-oh, we lost.$",reviewed AUTO draft
+Route123_Text_YukiPostBattle,YUN: Why are you so strong?\nWe've never lost before.$,reviewed AUTO draft
+Route123_Text_YukiNotEnoughMons,YUN: It's no fun to battle if you\ndon't have two COMPANIONS.$,reviewed AUTO draft
+Route123_Text_KindraDefeat,Overflowing with vitality…$,"reviewed, no change needed"
+Route123_Text_FernandoIntro,I'll turn your lights out while\nI rip through this tune!$,"reviewed, no change needed"
+Route123_Text_FernandoDefeat,"Hey, hold it!\nI was still playing the intro!$","reviewed, no change needed"
+Route123_Text_FernandoPostBattle,You're rock steady.\nI'd like to write a tune about you.$,"reviewed, no change needed"
+Route123_Text_FernandoRegister,"The next time, lend your ears to\nthe full tune, will you?$","reviewed, no change needed"
+Route123_Text_FernandoRematchIntro,Today's the day I'm going to do it!\nI'll turn out your lights before\lI finish singing my song!$,"reviewed, no change needed"
+Route123_Text_FernandoRematchDefeat,"Hey, hold it!\nI haven't even hit the chorus!$","reviewed, no change needed"
+Route123_Text_FernandoPostRematch,"I thought you'd be so enthralled\nby my tune, you'd lose.$","reviewed, no change needed"
+Route123_Text_DavisIntro,This is my awesome BUG COMPANION!\nMy big brother got it for me.$,reviewed AUTO draft
+Route123_Text_DavisDefeat,Waaaah!\nYou meanie!$,"reviewed, no change needed"
+Route123_Text_DavisPostBattle,Don't tell my brother I lost.\nYou have to keep it a secret!$,"reviewed, no change needed"
+Route123_Text_JazmynIntro,My confidence will get a boost by\nbeating someone obviously strong!$,"reviewed, no change needed"
+Route123_Text_JazmynDefeat,There goes my confidence…$,"reviewed, no change needed"
+Route123_Text_JazmynPostBattle,"They say that you can't judge a person\nby their appearance.\pBut often, their looks don't lie…$","reviewed, no change needed"
+Route123_Text_FrederickIntro,"Hello, child!\nCan you spare some time?$","reviewed, no change needed"
+Route123_Text_FrederickDefeat,"Ah, a mighty capable child!\nLet me contribute to your allowance.$","reviewed, no change needed"
+Route123_Text_FrederickPostBattle,Contribute to your allowance?\nWasn't the prize money enough?$,"reviewed, no change needed"
+Route123_Text_AlbertoIntro,"I have to tell you, BIRD COMPANIONS\nare my obsession!\pBirds are cool!\nThey're the best!$",reviewed AUTO draft
+Route123_Text_EdPostBattle,"Hehe, I'm swiping your battling ideas!\nI think they'll make me better.$","reviewed, no change needed"
+Route123_Text_JonasIntro,"I lay in ambush, and a TRAINER has\nlanded in my trap!$","reviewed, no change needed"
+Route123_Text_JonasDefeat,"If you don't lose, how am I supposed\nto have fun playing ninja?$","reviewed, no change needed"
+Route123_Text_JonasPostBattle,I'm going to ambush a weaker-looking\nTRAINER next time.$,"reviewed, no change needed"
+Route123_Text_KayleyIntro,I just bought this parasol.\nMy cuteness should be up by a third!$,"reviewed, no change needed"
+Route123_Text_KayleyDefeat,You're better than me by about\nfive times!$,"reviewed, no change needed"
+Route123_Text_KayleyPostBattle,Using accessories effectively is\nthe secret behind fashion appeal.$,"reviewed, no change needed"

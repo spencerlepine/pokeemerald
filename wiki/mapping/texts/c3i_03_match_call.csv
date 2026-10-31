@@ -1,0 +1,630 @@
+text_id,sw_text_raw,notes
+MatchCall_NegativeBattleText8,"Oh, {PLAYER}{KUN}, how do you do?\nThis is {STR_VAR_1} speaking.\pHow are your COMPANIONS doing?\nI lost a match the other day.\pI need to try harder!\nSee you again!$",
+MatchCall_NegativeBattleText11,"Ah, {PLAYER}{KUN}.\nThis is {STR_VAR_1}.\lHow are your COMPANIONS?\pI just lost yet another battle.\pWell, see you!$",
+MatchCall_PositiveBattleText9,"Oh, {PLAYER}{KUN}, hi there!\nThis is {STR_VAR_1}!\pHow are your COMPANIONS holding up?\nMine just won a battle!\pMy {STR_VAR_2} was spectacular,\nI must say!\pI wish I could've shown you!\nSee you again!$",
+MatchCall_SameRouteBattleRequestText6,"Hey, {PLAYER}{KUN}.\n{STR_VAR_1} here.\lHow are your COMPANIONS keeping?\pOh, is that right? You're around\n{STR_VAR_2}?\pWell, then, we'd better have\na rematch.\pI can wait, sure.\nSee you!$",
+MatchCall_DifferentRouteBattleRequestText3,"Hey there, {PLAYER}!\nIt's me, {STR_VAR_1}.\pMy COMPANIONS have grown a lot\ntougher since last time.\pI want to see how strong they've\nbecome with your COMPANIONS, {PLAYER}.\pSo, let's have a battle!\pI'll be waiting for you around\n{STR_VAR_2}.$",
+MatchCall_DifferentRouteBattleRequestText7,"…Er, {PLAYER}{KUN}?\n{STR_VAR_1} here…\lSo? Are your COMPANIONS growing?\pMine sure got stronger.\nI'd like to show you.\pI'll be around {STR_VAR_2}.\nCome see me for a match.\pSee you around.$",
+MatchCall_DifferentRouteBattleRequestText9,"Oh, {PLAYER}{KUN}, hi there!\nThis is {STR_VAR_1}!\lHow are your COMPANIONS doing?\pMy COMPANIONS keep getting better.\nI'd like to show you, {PLAYER}{KUN}.\pI'm around {STR_VAR_2} now,\nso let's battle if you're close by.\pHope I see you soon!$",
+MatchCall_DifferentRouteBattleRequestText11,"Ah, {PLAYER}{KUN}.\nThis is {STR_VAR_1}.\lWhere might you be now?\pMy COMPANIONS are full of life.\nThey appear to be looking forward\lto seeing your COMPANIONS, {PLAYER}{KUN}.\pI'm around {STR_VAR_2} now.\nI hope you'll seek us out.$",
+MatchCall_DifferentRouteBattleRequestText13,"Ah, hello, {PLAYER}{KUN}!\nThis is {STR_VAR_1}!\lAre your COMPANIONS keeping well?\pMy COMPANIONS have been so healthy,\nthey don't look capable of losing!\pI would surely love to have another\nbattle with you.\pIf you're near {STR_VAR_2},\ndo come see us.$",
+MatchCall_PersonalizedText30,I am… {STR_VAR_1}.\nPeople call me an EXPERT.\pBut there is one thing I know.\nI could not be an EXPERT on my own\lpower.\pOnly with the help of COMPANIONS can\na TRAINER become an EXPERT.\pHumph! I believe I may have said\nsomething deep and profound!\pI shall leave you in good spirits!$,
+MatchCall_PersonalizedText41,"Hello, {PLAYER}{KUN}.\n{STR_VAR_1} here.\pHow are your COMPANIONS doing?\pMy DRAGON COMPANIONS appear to be\nin peak form. Bye for now.$",
+MatchCall_PersonalizedText54,"Hi, it's {STR_VAR_1}. You know,\nthe TRAINER who's always prepared!\p{PLAYER}{KUN}, do you have enough items?\nAre your COMPANIONS fit for action?\pKeeping everything perfect around\nyou all the time is the secret to\lkeeping your journey going.\pI'd better go check my own\nsupplies! Be vigilant!$",
+MatchCall_PersonalizedText60,"It's a pleasure to chat with\na young TRAINER like you.\pI imagine that you will continue to\nenjoy COMPANIONS whatever your age.\pWouldn't it be good if you had\na partnership like ours?\pOf course, {PLAYER}{KUN}, you already\nenjoy the trust and companionship\lof your COMPANION now.\pYou have the makings of long and\nenduring relationships already!\pHahaha!\nNever be discouraged!$",
+MatchCall_Text_Mom1,MOM: Your father and you…\nEveryone is captivated by COMPANIONS.\pWhat is the charm of COMPANIONS?\pMe?\nI adore COMPANIONS that help me with\lmy everyday chores.$,
+MatchCall_Text_Scott1,"LANDO: Howdy, {PLAYER}{KUN}!\pYou know how COMPANIONS can be found\neverywhere?\pLike in the mountains, in the sea,\nin tall grass anywhere?\pJust like COMPANIONS, you can find\nTRAINERS everywhere, too.\pAs a result, I have to hurry\neverywhere, too. Busy, busy!$",
+MatchCall_Text_May1,"MIRA: Hi, {PLAYER}{KUN}!\pHAN says he's retired from smuggling,\nbut I still see him flying around\lwith CHEWIE sometimes.\pHe must love flying still.$","Han (Briney) is a retired smuggler; Chewie (Peeko) is his co-pilot, not a pet"
+MatchCall_Text_Brendan1,"KAEL: Hey, {PLAYER}!\pHAN says he's retired from smuggling,\nbut I still see him flying around\lwith CHEWIE sometimes.\pI guess he must love\nflying still.$",
+MatchCall_Text_Steven1,"LEIA: Hi, {PLAYER}{KUN}!\pHave you been to MOS ESPA\nalready?\pYou should visit the bike shop\nand get a SWOOP BIKE.\pThen, try exploring the SHADOWLANDS\nof KASHYYYK thoroughly.\pYou may make a new discovery\nthere.$",
+gText_MatchCallSchoolKid_Karen_Pokemon,I love any kind of COMPANIONS!,
+gText_MatchCallPokefan_Miguel_Intro2,trust with your COMPANIONS.,
+gText_MatchCallSwimmer_Jenny_Intro2,I was interviewed on the HOLONET.,
+MatchCall_PersonalizedText25,Snivel… It's… {STR_VAR_1}…\n…Sob…\pBIGGS chewed me out in class\ntoday.\pBut I don't dislike him or anything.\pBIGGS tells me exactly what\nI did wrong so I can learn from it.\pYou bet I'll be going to\nthe ACADEMY tomorrow!\pSee you later!$,
+MatchCall_PersonalizedText26,"It's {STR_VAR_1}!\pBIGGS let me battle with him\nyesterday.\pThe results…\nTerrible, like you needed to ask.\pBut I was delighted that BIGGS\nwould even let me challenge him!\pYou wouldn't believe how much\nmore I admire him!\pI'm going to really focus and work!\nI'd better go!$",
+MatchCall_WildBattleText1,"Hi! {PLAYER}{KUN}, hello!\nThis is {STR_VAR_1}.\pI saw this {STR_VAR_2} a while back\nbut I couldn't catch it.\pIt was so close, too!\nWell, see you again!$","reviewed, no change needed"
+MatchCall_WildBattleText2,"Hello, {PLAYER}{KUN}.\nIt's {STR_VAR_1}.\pI tried to catch a nice {STR_VAR_2}\na little while ago.\pBut, it got away.\nI was sure disappointed!\pOkay, bye!$","reviewed, no change needed"
+MatchCall_WildBattleText3,"Hey there, {PLAYER}!\nIt's me, {STR_VAR_1}.\pI just took a shot at catching\nthis {STR_VAR_2}, but it took off.\pI came oh so close, too!\pIt spoiled my day…\nAll right, see you!$","reviewed, no change needed"
+MatchCall_WildBattleText4,"Hey, {PLAYER}{KUN}.\n{STR_VAR_1} here.\pYou know the COMPANION {STR_VAR_2}?\nI came close to getting one.\pIt was just a while back.\nI thought I had it but it escaped.\pIf I see it again, I'll get it for\nsure, though.\pOkay, catch you later.$",reviewed AUTO draft
+MatchCall_WildBattleText5,"Hiya, {PLAYER}{KUN}!\nIt's {STR_VAR_1}.\lCatching any COMPANION lately?\pA little while ago I came close to\nnabbing one, but it got loose.\pRight, take care!$",reviewed AUTO draft
+MatchCall_WildBattleText6,"Hey, {PLAYER}{KUN}.\n{STR_VAR_1} here.\lCaught any COMPANION lately?\pI nearly nabbed one the other day.\nBut it evaded me somehow.\pYou take care.$",reviewed AUTO draft
+MatchCall_WildBattleText7,"…Uh, {PLAYER}{KUN}?\nIt's me, {STR_VAR_1}.\pOh, wait! Wait!\nI can catch this {STR_VAR_2}…\pAaarrrgh! It bolted loose!\nThat wasn't just close!$","reviewed, no change needed"
+MatchCall_WildBattleText8,"Oh, {PLAYER}{KUN}, how do you do?\nThis is {STR_VAR_1} speaking.\pHave you had success catching\nCOMPANIONS lately?\pI came very close a little while\nago, but my target got free.\pI need to try harder!\nSee you again!$",reviewed AUTO draft
+MatchCall_WildBattleText9,"Oh, {PLAYER}{KUN}, hi there!\nThis is {STR_VAR_1}!\pSo? Are you getting more COMPANIONS\ntogether?\pI'm having a rotten time of it!\nThey all get away from me!\pSee you!$",reviewed AUTO draft
+MatchCall_WildBattleText10,"Oh, {PLAYER}{KUN}, hello…\nThis is {STR_VAR_1}.\pListen, I came within a whisker of\ncatching this {STR_VAR_2}…\pBut, it gave me the slip…\pI need to try harder.\nSee you around.$","reviewed, no change needed"
+MatchCall_WildBattleText11,"Ah, {PLAYER}{KUN}.\nThis is {STR_VAR_1}.\lHow are things with you?\pI tried to catch a wild {STR_VAR_2}\nearlier, but it managed to flee.\pI feel defeated…$","reviewed, no change needed"
+MatchCall_WildBattleText12,"Hello, {PLAYER}{KUN}.\nIt's me, {STR_VAR_1}.\lAre you still catching COMPANIONS?\pI've been trying to catch them\nmyself, but it's not so easy.\pThe way of COMPANIONS is deep!$",reviewed AUTO draft
+MatchCall_WildBattleText13,"Ah, hello, {PLAYER}{KUN}!\nThis is {STR_VAR_1}!\lHave you been catching COMPANIONS?\pI've been trying to catch them\nmyself, but with little success.\pThe way of COMPANIONS is deep!$",reviewed AUTO draft
+MatchCall_WildBattleText14,"Oh, hi, {PLAYER}{KUN}, how do you do?\nThis is {STR_VAR_1}.\pJust now, I tried to catch a cute\n{STR_VAR_2}.\pIt got away, though!\nOh, you bet I was disappointed!\pBye-bye!$","reviewed, no change needed"
+MatchCall_WildBattleText15,"Hey, {PLAYER}!\nThis is {STR_VAR_1}!\pI've been thinking about trying\nto catch me some COMPANIONS.\pBut I can't seem to find any.\nIt's a real puzzler for me!\pI'm at my wit's end!\nSee you around!$",reviewed AUTO draft
+MatchCall_NegativeBattleText1,"Hi! {PLAYER}{KUN}, hello!\nThis is {STR_VAR_1}.\pI tried battling another TRAINER,\nbut I lost.\pIt was really disappointing.\nWell, see you again!$","reviewed, no change needed"
+MatchCall_NegativeBattleText2,"Hello, {PLAYER}{KUN}.\nIt's {STR_VAR_1}.\pI challenged someone else after\nwe battled.\pI came close, but I ended up\nlosing. Oh, well!$","reviewed, no change needed"
+MatchCall_NegativeBattleText3,"Hey there, {PLAYER}!\nIt's me, {STR_VAR_1}.\pI just got cleaned in a battle.\pI guess I need to raise my team\nsome more!$","reviewed, no change needed"
+MatchCall_NegativeBattleText4,"Hey, {PLAYER}.\n{STR_VAR_1} here.\pI tried another battle yesterday,\nbut I couldn't pull out the win.\pMy team needs more raising.\nOkay, catch you later.$","reviewed, no change needed"
+MatchCall_NegativeBattleText5,"Hiya, {PLAYER}!\nIt's {STR_VAR_1}.\pHow are things with you?\pI've been battling on,\nbut I haven't won very often.\pI can't get it together.\nRight, take care!$","reviewed, no change needed"
+MatchCall_NegativeBattleText6,"Hey, {PLAYER}.\n{STR_VAR_1} here.\pHow's it going for you?\pI've been battling hard lately,\nbut to little success.\pI can't get into the groove.\nYou take care.$","reviewed, no change needed"
+MatchCall_NegativeBattleText7,"{STR_VAR_1} here.\nHow's it going lately?\pI lost a battle yesterday,\nand it's filled my thoughts.\pI have to devise a plan…\nSee you.$","reviewed, no change needed"
+MatchCall_NegativeBattleText9,"Oh, {PLAYER}{KUN}, hi there!\nThis is {STR_VAR_1}!\pListen, listen, you have to hear\nthis!\pI had a COMPANION battle earlier,\nbut I lost at the last second.\pOh, it burns me up!$",reviewed AUTO draft
+MatchCall_NegativeBattleText10,"Oh, {PLAYER}{KUN}, hello…\nThis is {STR_VAR_1}.\pA little earlier, I was in a battle.\nI lost, though.\pI need to raise my COMPANION more.\nSee you around.$",reviewed AUTO draft
+MatchCall_NegativeBattleText12,"Hello, {PLAYER}{KUN}.\nIt's me, {STR_VAR_1}.\lAre you still battling hard?\pAs for me, I lost recently, so I've\nbeen training my team all over.\pLet's meet again.$","reviewed, no change needed"
+MatchCall_NegativeBattleText13,"Ah, hello, {PLAYER}{KUN}!\nThis is {STR_VAR_1}!\pI hope you've been keeping well.\pI was in a battle just a little\nwhile before this.\p{PLAYER}{KUN}, try to be active like me.\nSee you again!$","reviewed, no change needed"
+MatchCall_NegativeBattleText14,"Oh, hi, {PLAYER}{KUN}.\nThis is {STR_VAR_1}.\pAre you doing good?\pYou should go home every so often,\nthough.\pBye-bye!$","reviewed, no change needed"
+MatchCall_PositiveBattleText1,"Hi! {PLAYER}{KUN}, hello!\nThis is {STR_VAR_1}!\pI battled another TRAINER earlier.\nI won! I won!\pMy {STR_VAR_2} really worked hard\nfor me. This is so great!$","reviewed, no change needed"
+MatchCall_PositiveBattleText2,"Hello, {PLAYER}{KUN}!\nIt's {STR_VAR_1}!\pI had a battle yesterday and\nI won! It's fantastic!$","reviewed, no change needed"
+MatchCall_PositiveBattleText3,"Hey there, {PLAYER}!\nIt's me, {STR_VAR_1}!\lHow's your battling?\pMe, I had a battle the other day,\nand my {STR_VAR_2} came up huge!\pThe next time I battle you,\n{PLAYER}, it won't be me losing!$","reviewed, no change needed"
+MatchCall_PositiveBattleText4,"Hey, {PLAYER}.\n{STR_VAR_1} here.\pI had a match earlier.\nI managed to win, but it was close.\pMy {STR_VAR_2} put on one\ninspired showing.$","reviewed, no change needed"
+MatchCall_PositiveBattleText5,"Hiya, {PLAYER}{KUN}!\nIt's {STR_VAR_1}.\pHow are things with you?\nBattling much?\pI just won a while back!\nMy {STR_VAR_2} was brilliant!\pYou wait. I'm going to beat you\nnext time! Right, take care!$","reviewed, no change needed"
+MatchCall_PositiveBattleText6,"Hey, {PLAYER}{KUN}.\n{STR_VAR_1} here.\pHow's it going for you?\pI've been riding a hot streak.\nWhy, I just won a battle.\pWhen we have our next battle,\nI'm sure not going to lose!$","reviewed, no change needed"
+MatchCall_PositiveBattleText7,{PLAYER}{KUN}?\n{STR_VAR_1} here.\pMy {STR_VAR_2} is a force!\nIt won me another battle just now!\pI can't wait to have a rematch\nwith you.$,"reviewed, no change needed"
+MatchCall_PositiveBattleText8,"Oh, {PLAYER}{KUN}, how do you do?\nThis is {STR_VAR_1} speaking.\pI hope you've been well.\nI wanted to tell you I just won.\pMy {STR_VAR_2} worked especially\nhard to get the win.\pSee you again!$","reviewed, no change needed"
+MatchCall_PositiveBattleText10,"Oh, {PLAYER}{KUN}, hello…\nThis is {STR_VAR_1}.\pHow has life been treating you?\pMy COMPANIONS appear to be charged\nwith energy.\pI just won a battle with them.\nSee you around.$",reviewed AUTO draft
+MatchCall_PositiveBattleText11,"Ah, {PLAYER}{KUN}.\nThis is {STR_VAR_1}.\pBeen in any battles lately?\nI just won another one today!\pI'm on a roll! Gahahaha!\nWell, see you!$","reviewed, no change needed"
+MatchCall_PositiveBattleText12,"Hello, {PLAYER}{KUN}.\nIt's me, {STR_VAR_1}.\pI trust you've been well?\nI'm still bursting with life!\pWhy, just now, I won another match.\nI'm not stepping aside to you\lyoungsters yet!$","reviewed, no change needed"
+MatchCall_PositiveBattleText13,"Ah, hello, {PLAYER}{KUN}!\nThis is {STR_VAR_1}!\pI hope you've been keeping well.\nI still have a bounce in my step!\pWhy, I just won a battle yet again.\nOh, I won't lose to young people\lquite yet!\pSee you again!$","reviewed, no change needed"
+MatchCall_PositiveBattleText14,"Oh, hi, {PLAYER}{KUN}.\nThis is {STR_VAR_1}.\pI was in a battle recently, and my\n{STR_VAR_2} was exceptional!\pI wish you could have seen it,\n{PLAYER}{KUN}. Bye-bye!$","reviewed, no change needed"
+MatchCall_SameRouteBattleRequestText1,"Hi! {PLAYER}, hello!\nThis is {STR_VAR_1}.\pHuh? Wait, you're near\n{STR_VAR_2}?\pOh, wow, we have to battle, then!\nI'll be waiting! See you!$","reviewed, no change needed"
+MatchCall_SameRouteBattleRequestText2,"Hello, {PLAYER}!\nIt's {STR_VAR_1}.\pOh? You happen to be around\n{STR_VAR_2} right now?\pWould you like to battle now?\nI'll wait for you! See you!$","reviewed, no change needed"
+MatchCall_SameRouteBattleRequestText3,"Hey there, {PLAYER}!\nIt's me, {STR_VAR_1}.\pOh, hey, are you near\n{STR_VAR_2} right now?\pHow would you like to battle with\nme right now?\pI'm not losing again!\nI'll be waiting! Catch you soon!$","reviewed, no change needed"
+MatchCall_SameRouteBattleRequestText4,"Hey, {PLAYER}{KUN}.\n{STR_VAR_1} here.\pWhereabouts are you now?\nHuh? {STR_VAR_2}?\pWant to battle now?\nI'll wait for you. See you!$","reviewed, no change needed"
+MatchCall_SameRouteBattleRequestText5,"Hiya, {PLAYER}{KUN}!\nIt's {STR_VAR_1}.\lHow are things with you?\pYou're where now?\n{STR_VAR_2}?\pWell, how about we have a quick\nrematch right away?\pI'll keep an eye out for you.\nSee you soon!$","reviewed, no change needed"
+MatchCall_SameRouteBattleRequestText7,"…Er, {PLAYER}{KUN}?\n{STR_VAR_1} here…\pOh, you happen to be around\n{STR_VAR_2}?\pThen, let's battle.\nRight away, I mean.\pI'll show you my COMPANION.\nI'll wait for you.$",reviewed AUTO draft
+MatchCall_SameRouteBattleRequestText8,"Oh, {PLAYER}{KUN}, how do you do?\nThis is {STR_VAR_1} speaking.\pI hope you're doing well.\nOh, you're near {STR_VAR_2}.\pWould you like to have a battle\nwith me, then?\pI'll wait for you.\nSee you soon!$","reviewed, no change needed"
+MatchCall_SameRouteBattleRequestText9,"Oh, {PLAYER}{KUN}, hi there!\nThis is {STR_VAR_1}!\pAre you keeping up?\nOh, you're near {STR_VAR_2}?\pOh, well, then don't you think we\nshould battle?\pDon't keep me waiting too long!$","reviewed, no change needed"
+MatchCall_SameRouteBattleRequestText10,"Oh, {PLAYER}{KUN}, hello…\nThis is {STR_VAR_1}.\pHow are things with you?\nOh, you're near {STR_VAR_2}.\pWe should have a battle now, then.\pI'm ready and waiting.\nBe quick!$","reviewed, no change needed"
+MatchCall_SameRouteBattleRequestText11,"Ah, {PLAYER}{KUN}.\nThis is {STR_VAR_1}.\pAh, so where you are now is\n{STR_VAR_2}?\pWell, then, we just have to have\na battle, don't you think?\pI'll wait around for you!\nSee you real quick!$","reviewed, no change needed"
+MatchCall_SameRouteBattleRequestText12,"Hello, {PLAYER}{KUN}.\nIt's me, {STR_VAR_1}.\lWhere might you be now?\p{STR_VAR_2}?\nThat's quite close by!\pWhat do you say we have a battle\nnow?\pI can wait.\nSee you!$","reviewed, no change needed"
+MatchCall_SameRouteBattleRequestText13,"Ah, hello, {PLAYER}{KUN}!\nThis is {STR_VAR_1}!\pI hope you've been keeping well.\nOh, you're near {STR_VAR_2}?\pSince that's not very far away,\ncome see me for a battle.\pI'll wait for you.\nBye for now.$","reviewed, no change needed"
+MatchCall_SameRouteBattleRequestText14,"Oh, hi, {PLAYER}{KUN}.\nThis is {STR_VAR_1}.\pYou're what? …{STR_VAR_2}?\nThat's very close.\pDon't you think we ought to have\na battle?\pI'll be looking for you!\nBye-bye!$","reviewed, no change needed"
+MatchCall_DifferentRouteBattleRequestText1,"Hi! {PLAYER}, hello!\nThis is {STR_VAR_1}.\pWant to have a battle with me?\pI'll be waiting for you around\n{STR_VAR_2}!$","reviewed, no change needed"
+MatchCall_DifferentRouteBattleRequestText2,"Hello, {PLAYER}!\nIt's {STR_VAR_1}.\pWould you like to have a battle\nwith me again?\pYou can find me around\n{STR_VAR_2}. I'll be waiting!$","reviewed, no change needed"
+MatchCall_DifferentRouteBattleRequestText4,"Hey, {PLAYER}{KUN}.\n{STR_VAR_1} here.\lHow are things with you?\pMy COMPANIONS have grown pretty\ntough lately.\pHey, how would you like to have\nanother battle with me?\pLet's meet up around\n{STR_VAR_2}, okay?$",reviewed AUTO draft
+MatchCall_DifferentRouteBattleRequestText5,"Hiya, {PLAYER}{KUN}!\nIt's {STR_VAR_1}.\pMy COMPANIONS are growing up in\ndecent ways.\pI'd really like to have another\nbattle with you.\pI'll keep an eye out for you around\n{STR_VAR_2}. See you soon!$",reviewed AUTO draft
+MatchCall_DifferentRouteBattleRequestText6,"Hey, {PLAYER}{KUN}.\n{STR_VAR_1} here.\lI hope you're on top of things.\pI was thinking I'd like another\nbattle with you. What do you say?\pIf you feel like a battle,\ncome to {STR_VAR_2}.\pSee you!$","reviewed, no change needed"
+MatchCall_DifferentRouteBattleRequestText8,"Oh, {PLAYER}{KUN}, how do you do?\nThis is {STR_VAR_1} speaking.\pI hope you're doing well.\nMy COMPANIONS are very frisky.\pIf you're ever in the area, please\ngive me a rematch.\pI'll be around {STR_VAR_2}.\nUntil then, good-bye!$",reviewed AUTO draft
+MatchCall_DifferentRouteBattleRequestText10,"Oh, {PLAYER}{KUN}, hello…\nThis is {STR_VAR_1}.\lSo, how are things with you?\pMy COMPANIONS have grown much\nstronger than before.\pI'd love another battle with you,\n{PLAYER}{KUN}.\pI'll be around {STR_VAR_2}.\nCome see me if you're close.$",reviewed AUTO draft
+MatchCall_DifferentRouteBattleRequestText12,"Hello, {PLAYER}{KUN}.\nIt's me, {STR_VAR_1}.\pI should tell you, my COMPANIONS have\ngrown to be quite robust lately.\pI would like to see them in a battle\nwith you, {PLAYER}{KUN}.\pWe'll be around {STR_VAR_2}.\nCome see us anytime!$",reviewed AUTO draft
+MatchCall_DifferentRouteBattleRequestText14,"Oh, hi, {PLAYER}{KUN}.\nThis is {STR_VAR_1}.\lKeeping well, I hope.\pOh, yes! My COMPANIONS are\nmuch stronger than before.\pDon't you think we ought to have\na battle, {PLAYER}{KUN}?\pWe'll be waiting for you around\n{STR_VAR_2}.\pCome see us anytime, okay?$",reviewed AUTO draft
+MatchCall_PersonalizedText1,"It's me, the mountain-loving\n{STR_VAR_1}!\pWell, since we met, have you grown\nto appreciate the mountains more?\pI rarely see you in the mountains…\pNext time, we'll meet somewhere\naround {STR_VAR_2}.$","reviewed, no change needed"
+MatchCall_PersonalizedText2,This is {STR_VAR_1}.\nHello.\pI was just telling a new TRAINER\nabout you.\pI told her about a strong TRAINER\nwho raises COMPANION with care.\pI hope you'll become a TRAINER\nthat everyone will admire.\pI hope we meet again!$,reviewed AUTO draft
+MatchCall_PersonalizedText3,"Hello! It's {STR_VAR_1}.\pI love where I am now.\nIt's pleasant with sweet aromas!\pI think someone planted FRUIT,\nand they burst into bloom.\pSee you again sometime!$",reviewed AUTO draft
+MatchCall_PersonalizedText4,"Hello! Thirty years of exploration,\n{STR_VAR_1} at your service!\pIt seems that you're energetically\ntraveling here and there.\pHave you discovered any new ruins?\nPlease tell if you have!\pNow, if you'll excuse me,\nI have ruins to explore.$","reviewed, no change needed"
+MatchCall_PersonalizedText5,"It's {STR_VAR_1}!\pKnow what I'm doing today?\nLooking at waves from the beach!\pSigh… The waves are all sparkly.\nThe sea is the prettiest from here.\lI'm getting hungry, so bye-bye!$","reviewed, no change needed"
+MatchCall_PersonalizedText6,"Munch-chew…\nOh, hi, it's {STR_VAR_1}.\lI love eating on the beach.\pMy COMPANION and I have been doing\ngreat. We're fully fueled!\lI'm going for a swim. Bye!$",reviewed AUTO draft
+MatchCall_PersonalizedText7,"Hello, this is {STR_VAR_1}…\pI've grown a little jaded with this\nwhole COOLTRAINER thing…\pEveryone thinks I'm a perfect\nTRAINER, and that makes me try to\llive up to that expectation.\pBut I guess that goes with being\na COOLTRAINER.\pI'll just have to buckle down…\nand grin and bear it.\pYou're the only person that I could\nconfide in like this.\pBut when I see you next,\ndon't worry, I won't whine!$","reviewed, no change needed"
+MatchCall_PersonalizedText8,"Yahoo, it's {STR_VAR_1}!\nHow do you do?\pI've been raising my COMPANIONS with\nyou as the target.\pI don't intend to lose when we\nbattle again.\pIsn't it great to have TRAINER\nfriends? Let's meet again!$",reviewed AUTO draft
+MatchCall_PersonalizedText9,"It's {STR_VAR_1}…\nRight now, behind you…\lWasn't there something…?\pThe power of the COMPANION that\nsleep here at JEDHA TEMPLE…\pIt's telling me about you…\pYou should walk away quickly and\nnever once look back…\pGiggle…\nFarewell…$",reviewed AUTO draft
+MatchCall_PersonalizedText10,"This is {STR_VAR_1}.\nHow do you do?\pIsn't it convenient that we can\nchat like this at a distance?\pBefore, if I wanted to speak with\nanyone, I had to have my father\ldrive me…\pI should be going now.\nI'm glad we had this chat.$","reviewed, no change needed"
+MatchCall_PersonalizedText11,"It's {STR_VAR_1}!\nWill you listen to this?\pI like the FELUCIA RESERVE a lot,\nbut whenever I go, I get lost!\pAll that tall grass!\nAnd it's much too spread out!\pI feel better getting that off\nmy chest!\pI'm off to the FELUCIA RESERVE again!\nCatch you!$",reviewed AUTO draft
+MatchCall_PersonalizedText12,"Hello, {STR_VAR_1} here.\nYes, correct, I am rich, yes.\pI should tell you, my wealth has\ngrown since we last met.\pWhat's more, my COMPANIONS have also\ngrown stronger.\pI can't shake the feeling that\nthis world exists for me!\pOh, no need to say a word!\nEveryone knows it's true!\pOh, you must excuse me, I have this\nformal dinner to attend.$",reviewed AUTO draft
+MatchCall_PersonalizedText13,"Ufufufufu…\nIt's me, {STR_VAR_1}…\pCan you guess what I'm seeing?\nA pair of {STR_VAR_2} in a battle.\pMaybe I'll try catching the winner…\nUfufufufufu…\pI… I'm kind of busy now.\nI have to go.$","reviewed, no change needed"
+MatchCall_PersonalizedText14,"Oh, it's {STR_VAR_1}!\pI was just thinking I'm getting\nbored of the REPUBLIC WRECK.\pBut since I'm already here,\nand I want to beat you once,\lI'll be sticking around a bit more.\pIf you feel compelled, why don't\nyou come see me?\pI think today will be the day that\nI finally challenge the man next\ldoor to a match.\pBe seeing you!$",reviewed AUTO draft
+MatchCall_PersonalizedText15,"I'm {STR_VAR_1}!\nThe man of the sea!\pYou know what I think?\pThe TRAINERS out at sea are\nthe toughest of the tough!\pYou should learn from me and train\nin the sea…\pWhoops, giant surf rising!\pIt's a great training opportunity!\nSorry, but I have to go!$","reviewed, no change needed"
+MatchCall_PersonalizedText16,"It's {STR_VAR_1}! Listen, I've been\nteaching karate to my COMPANION.\pBut now they're better than me!\nI've done nothing but lose to them!\pBut even though I may lose to\nCOMPANION, I won't lose to another\lTRAINER, no sir!\pWe have to battle again!\nUgwaah!$",reviewed AUTO draft
+MatchCall_PersonalizedText17,"It's me, {STR_VAR_1}.\nHow're your travels unwinding?\p…Whoa, is that right?\nSounds awfully stimulating!\pI think I could write a song about\none of your episodes.\p…Oh, hey, I'm feeling it.\nI hear the riffs in my head.\pI'd better get this tune properly\nwritten, so I've got to fly! Later!$","reviewed, no change needed"
+MatchCall_PersonalizedText18,"This is {STR_VAR_1}…\nHear my new song.\pLalala, {STR_VAR_2}, {STR_VAR_2}!\nWhy are you that {STR_VAR_2}?\lWhy can't I be you, {STR_VAR_2}?\lLala, {STR_VAR_2} and {STR_VAR_1},\l{STR_VAR_1} and {STR_VAR_2}…\pRepeat chorus, fade…$","reviewed, no change needed"
+MatchCall_PersonalizedText19,"I'm {STR_VAR_1}, you know,\nthe camping expert!\pWhen we battled, I couldn't help\nbut lose to you.\pAfter all, my expertise is in\ncamping.\pBut win or lose, I like to battle\nwhen I'm camping.\pBattle with us again, okay?\nOh, and let's go camping, too!$","reviewed, no change needed"
+MatchCall_PersonalizedText20,"It's me, me, {STR_VAR_1}!\pI'd like to climb other mountains\nthan this one, to be honest.\pBut I'm not sure if there'd be any\nladies like on MUSTAFAR PEAK.\pIf you know any other mountain\nwith ladies around, let me know!\pEhehehe, see you around!$",reviewed AUTO draft
+MatchCall_PersonalizedText21,… … … … … …\n… … … … … …\lIt's {STR_VAR_1}…\p… … … … … …\n… … … … … …\lThat's all today…$,"reviewed, no change needed"
+MatchCall_PersonalizedText22,"This is {STR_VAR_1}. Today, I had\nthis feeling I would chat with you.\pMy desire to defeat you builds\nby day and by night.\pYou have a rival like that, yes?\nI wish it were me…\pI'm glad you heard me out.\nSee you!$","reviewed, no change needed"
+MatchCall_PersonalizedText23,"It's {STR_VAR_1}.\pWhen there's a strong TRAINER\nnearby, I can sometimes sense that\lsomehow.\pDid you pass close by, {PLAYER}{KUN}?\nMaybe it was you.\pI'll be waiting for your visit.\nBye!$","reviewed, no change needed"
+MatchCall_PersonalizedText24,"Hello, this is {STR_VAR_1}.\nYou sound well, {PLAYER}{KUN}.\pI've traveled around the world,\nbut I must say I've taken a great\lshine to this region.\pI plan to stay here a while.\nPerhaps we can meet again?\pI've not forgotten your dazzling\ntechniques.\pI do hope for a rematch.$","reviewed, no change needed"
+MatchCall_PersonalizedText27,"Hi, it's ANNA! I'm with my junior\npartner MEG again today.\pI really love caring for MEG and\nCOMPANIONS. They're so cute!\pI wish I could look after them\nas if they were my siblings!\pOh, hi, MEG!\nDid you get the buns?\pHuh? No, no, I'm not treating you\nlike my personal slave!\pYou lost the match, so you have\nto go buy the bread as punishment!\pI wouldn't treat you like a slave,\nMEG! You're too special to me!\pI have to go now.\nIt's time for our snack!$",reviewed AUTO draft
+MatchCall_PersonalizedText28,"I love COMPANIONS!\nIt's {STR_VAR_1} from the FAN CLUB!\pYou have to hear this!\nMy sweet COMPANION…\pSnort! Wahaha!\nI can't say any more! It's a secret!\lIt's just too cute for words!\pOh, my sweet {STR_VAR_2} is begging\nfor a {POKEBLOCK}!\pIt's the picture of cuteness!\pSorry, but I can't talk now!\nYou'll have to hear this next time!$",reviewed AUTO draft
+MatchCall_PersonalizedText29,"Ohoho!\pThis is {STR_VAR_1}! I can't wait to\ntell you about my darling COMPANION!\pPlease, you must listen to this.\nIt's about my darling {STR_VAR_2}.\pWhenever anyone picks it up,\nit leaps straight into my arms!\pOh… Oh… Could there be anything\nmore blissful?\pOh, it feels so heavenly!\pI'm so glad I could share some of\nmy happiness with you.\pWell, I must be going.\nBye, now!$",reviewed AUTO draft
+MatchCall_PersonalizedText31,"It's {STR_VAR_1}.\nI'm glad to chat with you!\pI am feeling alive and refreshed\nsoaking in this hot-spring tub.\pI've been battling young TRAINERS\nsince we met, but you're still\lthe best of the lot.\pI imagine you'll become an EXPERT\nin your old age! Ohohoho…$","reviewed, no change needed"
+MatchCall_PersonalizedText32,"Yay! This is {STR_VAR_1}!\nWhat's up?\pI might be imagining this, but when\nI win battles, my shorts seem to\lfeel, like, better. Materially.\pWhat do I mean by that?\nIt's kind of hard to explain, but…\lHow would I say this now…\lMy shorts feel silkier!\pAnd when I battled you, {PLAYER}{KUN},\nmy shorts felt icky and coarse.\p… … … … … …\nYou didn't really believe that?\lEhehehe, that's all! Bye now!$","reviewed, no change needed"
+MatchCall_PersonalizedText33,"Ahoy!\n{STR_VAR_1} here!\pAs always, I'm fishing with wild\nabandon!\pAre there other places I can fish\nthan the sea and rivers?\pI get these powerful urges to\nfish just about anywhere!\pOh, gosh, darn it!\nMy line's tangled up!\pGotta go!\nFind me some new fishing spots!$","reviewed, no change needed"
+MatchCall_PersonalizedText34,"Hey, there! It's {STR_VAR_1}.\nAre you taking it casually?\pEver since I was a kid, you know,\nI've always been placid, huh?\pI never was much for getting all\nstressed or rushing things.\pBut wouldn't you know it,\nI'm now a TRIATHLETE.\pYou just can't tell where life will\ntake you, if you get my drift.\pYou're a TRAINER now, but who\nknows what the future holds, huh?\pImagine yourself as a teacher,\nor maybe an artist. Cool, huh?\pBut, hey, be cool. Take it casual.\nSee you around.$","reviewed, no change needed"
+MatchCall_PersonalizedText35,"This is {STR_VAR_1}!\nI'm cycling right now.\pI love swimming and running,\nbut cycling is my first love!\pIt makes my whole body feel as if\nI'm one with the wind.\pIt exhilarates me as if I were\nflying!\pOkay! Today, I'm going to set a new\nPODRACE TRACK record!\pYou should make the challenge, too!\nSee you!$",reviewed AUTO draft
+MatchCall_PersonalizedText36,"Yo, this is {STR_VAR_1}! I'm smack\nin the middle of a triathlon!\pBut, hey, I've always got time to\nshoot the breeze!\pWorking out with COMPANIONS feels\nmighty good!\pWithout exchanging words, we synch\nas if we shared a heart.\pIt's inspiring!\pGasp… Chatting while running…\nI'm getting run down…\lGasp… Have…to…go…$",reviewed AUTO draft
+MatchCall_PersonalizedText37,"Hi, it's {STR_VAR_1}.\nIf you want to improve endurance,\lhigh-altitude training is it!\pTry running on a mountaintop.\nYou'll be gasping in no time!\pI'm getting oxygen starved, too!\nSee you!$","reviewed, no change needed"
+MatchCall_PersonalizedText38,"Oh, it's {STR_VAR_1}, hello.\pI've been swimming a lot but I still\ncan't seem to reach EVERGRANDE.\pMaybe I'm just going in circles.\pNo, no, that can't be possible.\nWahahaha.\lTake care!$","reviewed, no change needed"
+MatchCall_PersonalizedText39,"Hey, it's {STR_VAR_1}…\nWhoops!\pSplash!\pBlug-blug-blug-blug…\pSploosh!\pWhiff-whiff! Whiff-whiff!\pHey! Sorry about that!\nI just put on some suntan oil.\pSo my COMLINK went whoopsy\nout of my hand into the water!\pBut, boy, HOUSE ORGANA's COMLINK is\nbuilt tough. It survived that dunking!\pAnyways, I'm busy sunbathing,\nso let's chat another time.$",reviewed AUTO draft
+MatchCall_PersonalizedText40,"Hello, this is {STR_VAR_1}.\pOut of the three triathlon events,\nI like swimming best.\pBut if I stay in the sea too long,\nwon't I get all prune-like?\pOoh, triathlon is such a grueling\ntest of human endurance! Bye!$","reviewed, no change needed"
+MatchCall_PersonalizedText42,{STR_VAR_1} here.\pMy {STR_VAR_2} has grown even more\ntough than that last time.\pI'm not going to lose again to you.\nYou wait till next time!\pSee you around!$,"reviewed, no change needed"
+MatchCall_PersonalizedText43,It is {STR_VAR_1} here.\pI have continued with my studies\nin the art of concealment.\pBut I have been too successful.\nNo one has been able to find me.\lMy success makes me lonely…\pLike smoke I disappear!\nFarewell!$,"reviewed, no change needed"
+MatchCall_PersonalizedText44,"This is {STR_VAR_1}.\nI kept up my training since we met.\pMy {STR_VAR_2} is getting pretty\ntough.\pTraining on a beach is effective,\njust as I thought. Bye now!$","reviewed, no change needed"
+MatchCall_PersonalizedText45,"How do you do?\nThis is {STR_VAR_1}.\pI wonder when this yucky volcanic\nash will stop falling?\pIf it gets too deep, it will cover\nup the pattern on my parasol…\pLet's promise to meet again!$","reviewed, no change needed"
+MatchCall_PersonalizedText46,"Hi, {STR_VAR_1} here.\pDid you know that it's easier to\nfloat in the sea than a pool?\pJust by lying still, your body will\nfloat on its own.\pBut if you float for too long,\nwatch that you don't get carried\loff too far out.\p…Where am I, anyway?\nI'd better go!$","reviewed, no change needed"
+MatchCall_PersonalizedText47,"Oh, {PLAYER}{KUN}, hello!\nThis is {STR_VAR_1}.\lI'm up in the mountains now.\pBut the ground is too bumpy.\nI can't pitch my tent here…\pOh, I had a brilliant idea!\pMaybe I can get my COMPANION to tamp\nthe ground flat here!\pI'm going to try that!\nBye-bye!$",reviewed AUTO draft
+MatchCall_PersonalizedText48,"Oh, hi, hi, this is {STR_VAR_1}!\pI'm raising COMPANIONS with LIV!\nWe're trying very hard!\pIf we try harder, can we become\nnumber one? Bye-bye!$",reviewed AUTO draft
+MatchCall_PersonalizedText49,"{STR_VAR_1} here!\pI'm a SAILOR, but I'm not on a boat\nnow.\pIt makes me wonder--what should\na SAILOR on land be called?\pThat's what I've been thinking\nwhile staring out across the waves.\pAll right, next time!$","reviewed, no change needed"
+MatchCall_PersonalizedText50,"It's {STR_VAR_1}.\nSo? Get any more COMPANIONS?\pIf you catch a new COMPANION,\nyou have to come show me.\pI won't whine for it, honest.\nI'll be waiting. See you.$",reviewed AUTO draft
+MatchCall_PersonalizedText51,"This is {STR_VAR_1}.\pAre you raising your COMPANIONS\nin the optimal way?\pThe air is clean where I am.\nIt's the perfect environment for\lraising COMPANION.\pIf you're going to focus on raising\nCOMPANIONS, you should come out to\l{STR_VAR_2}. Take care now.$",reviewed AUTO draft
+MatchCall_PersonalizedText52,"Hi, this is {STR_VAR_1}.\pI gave a {POKEBLOCK} to my {STR_VAR_2}.\nIt seemed to enjoy it very much.\pIt looks like COMPANIONS have their\nlikes and dislikes with {POKEBLOCK}S.\pI find that quite fascinating.\nPlease do take care.$",reviewed AUTO draft
+MatchCall_PersonalizedText53,"{STR_VAR_1} here.\pIf you cooperate with COMPANIONS,\none can be comfortable in the wild.\pEveryone should realize that and\ncooperate with COMPANIONS more.\pThat would be ideal.\nI really think so.\pI think you're on the right track!\nCatch you later!$",reviewed AUTO draft
+MatchCall_PersonalizedText55,"It's {STR_VAR_1}!\nIt's {STR_VAR_1}!\p{STR_VAR_2} is a very busy\nthoroughfare, so I get challenged\lby all kinds of TRAINERS every day.\pToday, I won five battles and lost\nonly three!\pHow did you do today?\nTell me about it next time, okay?$","reviewed, no change needed"
+MatchCall_PersonalizedText56,"It's me, {STR_VAR_1}.\pI'm popular because I have lots\nof BUG COMPANIONS, right?\pWell, I took a bunch of my fave\nbugs to school today.\pThis girl I like started crying!\nGo ahead and laugh if you want.\pI have to try teaching her what\nmakes BUG COMPANIONS so appealing.\pSnivel…\nSee you!$",reviewed AUTO draft
+MatchCall_PersonalizedText57,Hah! Hah! Hah! Hah!\pHi! It's {STR_VAR_1}! Hah! Hah!\pTrying to chat…\nWhile climbing…\lIs harsh exercise… Hah! Hah!\pUrgh! Oof…\nIt's steeper now…\lWe'll chat…another time…\lHah! Hah! Hah!$,"reviewed, no change needed"
+MatchCall_PersonalizedText58,"Oh, hi!\pI'm still searching for treasures\nwith KIRA!\pMaybe there isn't any treasure\nhere at all…\pBut the important thing is for me\nto search alongside KIRA.\pOh, hey, KIRA!\nWh-why are you angry?\pI'm not ignoring you, honey!\nYou're my one and only!\p…{PLAYER}, I have to go, bye!$","reviewed, no change needed"
+MatchCall_PersonalizedText59,"This is {STR_VAR_1}!\pI went to KACHIRHO's ARENA again\nfor training.\pTARFFUL, the ARENA LEADER, seems\nto be tougher now.\pSomething about being toughened\nby the wild waves…\pBut he's still as cool as ever.\nThe ladies adore him!\lIt makes me envious, frankly.\pI wonder… Is his friend BRUNO\nthe same way as TARFFUL?\pYou know, all sweaty or smelly,\nand prone to calling people\l“big wave,” that sort of thing.\pBut, hey, this jealousy thing isn't\nvery seemly, is it?\pForget this chat ever happened,\nhow about it? So long!$",reviewed AUTO draft
+MatchCall_PersonalizedText61,"Hi, this is {STR_VAR_1}!\nWe just won a battle!\pWe don't win often, but it was this\ncool SWIMMER guy.\pMy sister was steamed!\pShe wanted to pretend that she\nwas weak to make an impression!\pShe always chews me out whether\nwe win or lose!\p{PLAYER}{KUN}, can you say something\nto her next time?\pOkay, see you!$","reviewed, no change needed"
+MatchCall_PersonalizedText62,"{STR_VAR_1} here, yes.\nI headed out to sea yesterday.\pI had been hoping to find a new\nruin to explore.\pBut the tides somehow seemed to\ncarry me back where I started.\pI'm still weak at battling, too…\nFeel free to mock me…\lBut I won't give up.\pMy day will come when I discover\na new ruin!\pThat's all I have to say!\nFarewell for now!$","reviewed, no change needed"
+MatchCall_PersonalizedText63,"Ahoy there!\nIt's me, {STR_VAR_1}!\lI'm out on ROUTE 108 now!\lIn other words, where I always am!\pToday, a gorgeous SWIMMER \nswam by me!\pSo I startled her with a shout!\pAnd she gave me a nasty glare!\pThat's all from ROUTE 108!\nBrought to you by {STR_VAR_1}!$","reviewed, no change needed"
+MatchCall_PersonalizedText64,"It's {STR_VAR_1}!\pI'm kind of busy, but I figured\nI should let you know that I've\lbeaten five TRAINERS again today.\pIf I keep this pace up, I can\nprobably beat you next time.\pI think we'll be good rivals,\nyou and I. Good-bye for now!$","reviewed, no change needed"
+MatchCall_BattleFrontierStreakText1,"Hi! This is {STR_VAR_1}.\nI heard the news!\pThey say you did excellent at\nthe {STR_VAR_2}.\pIt's awesome, {STR_VAR_3} straight wins?\nSee you!$","reviewed, no change needed"
+MatchCall_BattleFrontierStreakText2,"Hello, it's {STR_VAR_1}!\nI heard about you!\pThey said you won {STR_VAR_3} straight\nbattles at the {STR_VAR_2}.\pThat's special! I should try\nharder, too! See you!$","reviewed, no change needed"
+MatchCall_BattleFrontierStreakText3,"Hey there, {PLAYER}!\nIt's me, {STR_VAR_1}.\pI heard you went on a tear at\nthe {STR_VAR_2}!\pA big {STR_VAR_3}-win streak…\nThat is a big record, isn't it?\pI'd better get it together, too!\nCatch you soon!$","reviewed, no change needed"
+MatchCall_BattleFrontierStreakText4,"Hey, {PLAYER}{KUN}.\n{STR_VAR_1} here. What's up?\pThere's a rumor going around that\nyou strung together {STR_VAR_3} straight\lwins at the {STR_VAR_2}.\pI'd better step it up, too.\nSee you!$","reviewed, no change needed"
+MatchCall_BattleFrontierStreakText5,"Hiya, {PLAYER}{KUN}!\nIt's {STR_VAR_1}.\pYou were at the {STR_VAR_2}\nand won {STR_VAR_3} battles in a row?\lIsn't that something!\pI'd better work on my COMPANION more.\nSee you soon!$",reviewed AUTO draft
+MatchCall_BattleFrontierStreakText6,"Hey, {PLAYER}{KUN}.\n{STR_VAR_1} here. How are you?\pBy the way, I heard you pulled off\nthe feat of {STR_VAR_3} straight wins at\lthe {STR_VAR_2}.\pThat inspires me to focus on\nraising my team.$","reviewed, no change needed"
+MatchCall_BattleFrontierStreakText7,"…Er, {PLAYER}{KUN}?\n{STR_VAR_1} here…\pOh, yeah, you were over at\nthe {STR_VAR_2}, right?\pAnd you won {STR_VAR_3} battles in a row.\pOh, there goes a rare COMPANION!\nI have to go!$",reviewed AUTO draft
+MatchCall_BattleFrontierStreakText8,"Oh, {PLAYER}{KUN}, how do you do?\nThis is {STR_VAR_1} speaking.\lI hope you're doing well.\pOh, but, you are. I've heard that\nyou won {STR_VAR_3} matches in a row at\lthe {STR_VAR_2}.\pThat's very impressive!\nI hope you stay successful.$","reviewed, no change needed"
+MatchCall_BattleFrontierStreakText9,"Oh, {PLAYER}{KUN}, hi there!\nThis is {STR_VAR_1}!\pI heard! Your {STR_VAR_3}-win streak at\nthe {STR_VAR_2}!\pThat is so cool!\nI'd better try harder, too!$","reviewed, no change needed"
+MatchCall_BattleFrontierStreakText10,"Oh, {PLAYER}{KUN}, hello…\nThis is {STR_VAR_1}.\pYou won {STR_VAR_3} straight battles at\nthe {STR_VAR_2}?\pThat's quite the accomplishment.\nI need to work harder.$","reviewed, no change needed"
+MatchCall_BattleFrontierStreakText11,"Ah, {PLAYER}{KUN}.\nThis is {STR_VAR_1}.\pI hear you're the terror of\nthe {STR_VAR_2}?\pYou won, what, {STR_VAR_3} matches in\na row?\pYou're good, you.\nI wonder how many I can win?$","reviewed, no change needed"
+MatchCall_BattleFrontierStreakText12,"Hello, {PLAYER}{KUN}.\nIt's me, {STR_VAR_1}.\lAre you keeping well?\pSomeone passed on word about you.\nHow you won {STR_VAR_3} straight battles\lat a place named {STR_VAR_2}?\pThat's quite the tale.\nSee you!$","reviewed, no change needed"
+MatchCall_BattleFrontierStreakText13,"Ah, hello, {PLAYER}{KUN}!\nThis is {STR_VAR_1}!\lI hope you've been keeping well.\pThey say you won {STR_VAR_3} straight\nbattles at the {STR_VAR_2}.\pI admire your energy!\nBye now.$","reviewed, no change needed"
+MatchCall_BattleFrontierStreakText14,"Oh, hi, {PLAYER}{KUN}.\nThis is {STR_VAR_1}.\pI heard about you!\nDidn't you just win {STR_VAR_3} battles in\la row at the {STR_VAR_2}?\pYou're an inspiration!\nBye-bye!$","reviewed, no change needed"
+MatchCall_BattleFrontierRecordStreakText1,Hi! This is {STR_VAR_1}.\nI heard the news!\pThey say you did excellent at\nthe {STR_VAR_2}.\pIt's awesome--{STR_VAR_3} straight wins?\nSee you!$,"reviewed, no change needed"
+MatchCall_BattleFrontierRecordStreakText2,"Hello, it's {STR_VAR_1}!\nI heard about you!\pThey said you won {STR_VAR_3} straight\nbattles at the {STR_VAR_2}.\pThat's special! I should try\nharder, too! See you!$","reviewed, no change needed"
+MatchCall_BattleFrontierRecordStreakText3,"Hey there, {PLAYER}!\nIt's me, {STR_VAR_1}.\pI heard you went on a tear at\nthe {STR_VAR_2}!\pA big {STR_VAR_3}-win streak…\nThat is a big record, isn't it?\pI'd better get it together, too!\nCatch you soon!$","reviewed, no change needed"
+MatchCall_BattleFrontierRecordStreakText4,"Hey, {PLAYER}{KUN}.\n{STR_VAR_1} here. What's up?\pThere's a rumor going around that\nyou strung together {STR_VAR_3} straight\lwins at the {STR_VAR_2}.\pI'd better step it up, too.\nSee you!$","reviewed, no change needed"
+MatchCall_BattleFrontierRecordStreakText5,"Hiya, {PLAYER}{KUN}!\nIt's {STR_VAR_1}.\pYou were at the {STR_VAR_2}\nand won {STR_VAR_3} battles in a row?\lIsn't that something!\pMe? I'd say I'm coming along.\nSee you soon!$","reviewed, no change needed"
+MatchCall_BattleFrontierRecordStreakText6,"Hey, {PLAYER}{KUN}.\n{STR_VAR_1} here. How are you?\pBy the way, I heard you pulled off\nthe feat of {STR_VAR_3} straight wins at\lthe {STR_VAR_2}.\pI'd better try harder myself!\nSee you soon!$","reviewed, no change needed"
+MatchCall_BattleFrontierRecordStreakText7,"…Er, {PLAYER}{KUN}?\n{STR_VAR_1} here…\pOh, yeah, you were over at\nthe {STR_VAR_2}, right?\pAnd you won {STR_VAR_3} battles in a row.\pOh, there goes a rare COMPANION!\nI have to go!$",reviewed AUTO draft
+MatchCall_BattleFrontierRecordStreakText8,"Oh, {PLAYER}{KUN}, how do you do?\nThis is {STR_VAR_1} speaking.\lI hope you're doing well.\pOh, but, you are. I've heard that\nyou won {STR_VAR_3} matches in a row at\lthe {STR_VAR_2}.\pThat's very impressive!\nI'd better work on my COMPANION, too!$",reviewed AUTO draft
+MatchCall_BattleFrontierRecordStreakText9,"Oh, {PLAYER}{KUN}, hi there!\nThis is {STR_VAR_1}!\pI heard! Your {STR_VAR_3}-win streak at\nthe {STR_VAR_2}!\pThat is so cool!\nI'd better try harder, too!$","reviewed, no change needed"
+MatchCall_BattleFrontierRecordStreakText10,"Oh, {PLAYER}{KUN}, hello…\nThis is {STR_VAR_1}.\pYou won {STR_VAR_3} straight battles at\nthe {STR_VAR_2}?\pThat's quite the accomplishment.\nI need to work harder.$","reviewed, no change needed"
+MatchCall_BattleFrontierRecordStreakText11,"Ah, {PLAYER}{KUN}.\nThis is {STR_VAR_1}.\pI hear you're the terror of\nthe {STR_VAR_2}?\pYou won, what, {STR_VAR_3} matches in\na row?\pYou're good, you.\nI wonder how many I can win?$","reviewed, no change needed"
+MatchCall_BattleFrontierRecordStreakText12,"Hello, {PLAYER}{KUN}.\nIt's me, {STR_VAR_1}.\lAre you keeping well?\pSomeone passed on word about you.\nHow you won {STR_VAR_3} straight battles\lat a place named {STR_VAR_2}?\pThat's quite the tale.\nSee you!$","reviewed, no change needed"
+MatchCall_BattleFrontierRecordStreakText13,"Ah, hello, {PLAYER}{KUN}!\nThis is {STR_VAR_1}!\lI hope you've been keeping well.\pThey say you won {STR_VAR_3} straight\nbattles at the {STR_VAR_2}.\pI admire your energy!\nBye now.$","reviewed, no change needed"
+MatchCall_BattleFrontierRecordStreakText14,"Oh, hi, {PLAYER}{KUN}.\nThis is {STR_VAR_1}.\lI heard about you!\pDidn't you just win {STR_VAR_3} battles in\na row at the {STR_VAR_2}?\pYou're an inspiration!\nBye-bye!$","reviewed, no change needed"
+MatchCall_BattleDomeText1,"Hi! {PLAYER}?\nHello, this is {STR_VAR_1}!\lI heard the news!\pYou became the champion at\nthe {STR_VAR_2} {STR_VAR_3} times?\pIt's awesome! I have to do better!\nSee you!$","reviewed, no change needed"
+MatchCall_BattleDomeText2,"Hello, it's {STR_VAR_1}!\nI heard about you!\pThey said you won {STR_VAR_3} titles\nat the {STR_VAR_2}.\pThat's super! I wonder if I can\nbecome a champion?$","reviewed, no change needed"
+MatchCall_BattleDomeText3,"Hey there, {PLAYER}!\nIt's me, {STR_VAR_1}.\lHow's it going?\pI heard you won events {STR_VAR_3} times\nat the {STR_VAR_2}!\pMake it one more next time!\nCatch you soon!$","reviewed, no change needed"
+MatchCall_BattleDomeText4,"Hey, {PLAYER}{KUN}.\n{STR_VAR_1} here.\pI heard you became the champion\nat the {STR_VAR_2} {STR_VAR_3} times.\pSounds like you're working hard.\nI'll try to keep up!$","reviewed, no change needed"
+MatchCall_BattleDomeText5,"Hiya, {PLAYER}{KUN}!\nIt's {STR_VAR_1}.\pI heard you won {STR_VAR_3} times\noutright at the {STR_VAR_2}.\pI'd better get with it, too!\nSee you soon!$","reviewed, no change needed"
+MatchCall_BattleDomeText6,"Hey, {PLAYER}{KUN}?\n{STR_VAR_1} here. How are you?\pBy the way, I heard you became\nthe champion {STR_VAR_3} times at\lthe {STR_VAR_2}.\pI'd better raise my COMPANION before\nyou pull farther ahead.$",reviewed AUTO draft
+MatchCall_BattleDomeText7,"{PLAYER}{KUN}?\n{STR_VAR_1} here.\pYou were at the {STR_VAR_2}\nand became the champ {STR_VAR_3} times?\pThat's neat. By the way, have you\ncaught any rare COMPANION lately?\pOh, is that right.\nOkay, bye.$",reviewed AUTO draft
+MatchCall_BattleDomeText8,"Oh, {PLAYER}{KUN}, how do you do?\nThis is {STR_VAR_1} speaking.\lI hope you're doing well.\lOh, but, you are.\pI've heard that you won {STR_VAR_3} titles\nat the {STR_VAR_2}.\pI must raise my COMPANIONS like you.\nSee you again.$",reviewed AUTO draft
+MatchCall_BattleDomeText9,"Oh, {PLAYER}{KUN}, hi there!\nThis is {STR_VAR_1}!\pI heard! You took the title\n{STR_VAR_3} times at the {STR_VAR_2}!\pThat is so cool!\nI'd better try harder, too!$","reviewed, no change needed"
+MatchCall_BattleDomeText10,"Oh, {PLAYER}{KUN}, hello.\nThis is {STR_VAR_1}.\pYou won {STR_VAR_3} straight times at\nthe {STR_VAR_2}?\pThat's quite the accomplishment.\nI need to work harder.$","reviewed, no change needed"
+MatchCall_BattleDomeText11,"Ah, {PLAYER}{KUN}.\nThis is {STR_VAR_1}.\pI hear you're the terror of\nthe {STR_VAR_2}?\pYou won, what, {STR_VAR_3} straight times\nnow?\pI wonder if I can ever become\na champion?\p…Pretty well impossible?\nWell, see you!$","reviewed, no change needed"
+MatchCall_BattleDomeText12,"Hello, {PLAYER}{KUN}.\nIt's me, {STR_VAR_1}.\lAre you keeping well?\pYou've won {STR_VAR_3} events at a place\nnamed {STR_VAR_2}?\pThat's quite the tale.\nSee you!$","reviewed, no change needed"
+MatchCall_BattleDomeText13,"Ah, hello, {PLAYER}{KUN}!\nThis is {STR_VAR_1}!\lI hope you've been keeping well.\pThey say you won {STR_VAR_3} events\nat the {STR_VAR_2}?\pI admire your energy!\nBye now.$","reviewed, no change needed"
+MatchCall_BattleDomeText14,"Oh, hi, {PLAYER}{KUN}.\nThis is {STR_VAR_1}.\lI heard about you!\pDidn't you win {STR_VAR_3} titles\nat the {STR_VAR_2}?\pYou're an inspiration!\nSee you again!$","reviewed, no change needed"
+MatchCall_BattlePikeText1,"Hi! {PLAYER}?\nHello, this is {STR_VAR_1}!\lI heard the news!\pYou got through {STR_VAR_3} rooms\nat the {STR_VAR_2}!\pThat's awesome!\nSee you!$","reviewed, no change needed"
+MatchCall_BattlePikeText2,"Hello, it's {STR_VAR_1}!\nI heard about you!\pThey said you won your way through\n{STR_VAR_3} rooms at the {STR_VAR_2}.\pI have to try much harder!\nBye!$","reviewed, no change needed"
+MatchCall_BattlePikeText3,"Hey there, {PLAYER}!\nIt's me, {STR_VAR_1}.\lHow's it going?\pI heard you won through {STR_VAR_3} rooms\nat the {STR_VAR_2}!\pTry to do even better next time!\nCatch you soon!$","reviewed, no change needed"
+MatchCall_BattlePikeText4,"Hey, {PLAYER}{KUN}.\n{STR_VAR_1} here.\pI heard you blew through {STR_VAR_3} rooms\nat the {STR_VAR_2}.\pI'd better train my COMPANION and\ntry to keep up!$",reviewed AUTO draft
+MatchCall_BattlePikeText5,"Hiya, {PLAYER}{KUN}!\nIt's {STR_VAR_1}.\pI heard you got past {STR_VAR_3} rooms\nat the {STR_VAR_2}.\pI'd better get with it, too!\nSee you soon!$","reviewed, no change needed"
+MatchCall_BattlePikeText6,"Hey, {PLAYER}{KUN}?\n{STR_VAR_1} here. How are you?\pBy the way, I heard you got through\n{STR_VAR_3} rooms at the {STR_VAR_2}.\pI'd better raise my COMPANION before\nyou pull further ahead.$",reviewed AUTO draft
+MatchCall_BattlePikeText7,"{PLAYER}{KUN}?\n{STR_VAR_1} here.\pYou were at the {STR_VAR_2}\nand won your way past {STR_VAR_3} rooms?\pThat's wicked.\pOh, there goes a rare COMPANION!\nOkay, bye.$",reviewed AUTO draft
+MatchCall_BattlePikeText8,"Oh, {PLAYER}{KUN}, how do you do?\nThis is {STR_VAR_1} speaking.\lI hope you're doing well.\lOh, but, you are.\pI've heard that you got through\n{STR_VAR_3} rooms at the {STR_VAR_2}.\pThat's quite impressive!\nI must raise my COMPANIONS like you.\lSee you again.$",reviewed AUTO draft
+MatchCall_BattlePikeText9,"Oh, {PLAYER}{KUN}, hi there!\nThis is {STR_VAR_1}!\pI heard! You won your way through\n{STR_VAR_3} rooms at the {STR_VAR_2}!\pThat is so cool!\nI'd better try harder, too!$","reviewed, no change needed"
+MatchCall_BattlePikeText10,"Oh, {PLAYER}{KUN}, hello.\nThis is {STR_VAR_1}.\pYou won your way past {STR_VAR_3} rooms\nat the {STR_VAR_2}?\pThat's quite the accomplishment.\nI need to work harder.$","reviewed, no change needed"
+MatchCall_BattlePikeText11,"Ah, {PLAYER}{KUN}.\nThis is {STR_VAR_1}.\pI hear you're the terror of\nthe {STR_VAR_2}?\pYou got through, what, {STR_VAR_3} rooms?\nThat's gotta count for something.\pI wonder if I can ever become\na champion?\p…Pretty well impossible?\nWell, see you!$","reviewed, no change needed"
+MatchCall_BattlePikeText12,"Hello, {PLAYER}{KUN}.\nIt's me, {STR_VAR_1}.\lAre you keeping well?\pYou've won through {STR_VAR_3} rooms at\na place named {STR_VAR_2}?\pThat's quite the tale.\nSee you!$","reviewed, no change needed"
+MatchCall_BattlePikeText13,"Ah, hello, {PLAYER}{KUN}!\nThis is {STR_VAR_1}!\lI hope you've been keeping well.\pThey say you won in {STR_VAR_3} rooms\nat the {STR_VAR_2}?\pI admire your energy!\nBye now.$","reviewed, no change needed"
+MatchCall_BattlePikeText14,"Oh, hi, {PLAYER}{KUN}.\nThis is {STR_VAR_1}.\lI heard about you!\pDidn't you get through {STR_VAR_3} rooms\nat the {STR_VAR_2}?\pYou're an inspiration!\nSee you again!$","reviewed, no change needed"
+MatchCall_BattlePyramidText1,"Hi! {PLAYER}?\nHello, this is {STR_VAR_1}!\lI heard the news!\pYou climbed {STR_VAR_3} floors inside\nthe {STR_VAR_2}, right?\pThat's awesome!\nI should try that challenge.$","reviewed, no change needed"
+MatchCall_BattlePyramidText2,"Hello, it's {STR_VAR_1}!\nI heard about you!\pThey said you won your way through\n{STR_VAR_3} floors in the {STR_VAR_2}.\pWow, that's fantastic!\nI'd better raise my COMPANION, too!$",reviewed AUTO draft
+MatchCall_BattlePyramidText3,"Hey there, {PLAYER}!\nIt's me, {STR_VAR_1}.\lHow's it going?\pI heard you climbed {STR_VAR_3} floors\nin the {STR_VAR_2}!\pTry to do even better next time!\nCatch you soon!$","reviewed, no change needed"
+MatchCall_BattlePyramidText4,"Hey, {PLAYER}{KUN}.\n{STR_VAR_1} here.\pI heard you scaled {STR_VAR_3} floors\nin the {STR_VAR_2}.\pI'd better work hard and try\nto keep up!$","reviewed, no change needed"
+MatchCall_BattlePyramidText5,"Hiya, {PLAYER}{KUN}!\nIt's {STR_VAR_1}.\pI heard you climbed {STR_VAR_3} floors\nin the {STR_VAR_2}.\pI'd better get with it, too!\nSee you soon!$","reviewed, no change needed"
+MatchCall_BattlePyramidText6,"Hey, {PLAYER}{KUN}?\n{STR_VAR_1} here. How are you?\pBy the way, I heard you got through\n{STR_VAR_3} floors in the {STR_VAR_2}.\pI'd better raise my COMPANION before\nyou pull further ahead.$",reviewed AUTO draft
+MatchCall_BattlePyramidText7,"{PLAYER}{KUN}?\n{STR_VAR_1} here.\pYou were at the {STR_VAR_2}\nand won your way up {STR_VAR_3} floors?\pNeat. Were there any rare COMPANION\nthere?\pNo, huh?\nOkay, bye.$",reviewed AUTO draft
+MatchCall_BattlePyramidText8,"Oh, {PLAYER}{KUN}, how do you do?\nThis is {STR_VAR_1} speaking.\lI hope you're doing well.\lOh, but, you are.\pI've heard that you got through\n{STR_VAR_3} floors in the {STR_VAR_2}.\pThat's quite impressive!\nI must raise my COMPANIONS like you.\lSee you again.$",reviewed AUTO draft
+MatchCall_BattlePyramidText9,"Oh, {PLAYER}{KUN}, hi there!\nThis is {STR_VAR_1}!\pI heard! You won your way through\n{STR_VAR_3} floors in the {STR_VAR_2}!\pThat is so cool!\nI'd better try harder, too!$","reviewed, no change needed"
+MatchCall_BattlePyramidText10,"Oh, {PLAYER}{KUN}, hello.\nThis is {STR_VAR_1}.\pYou climbed {STR_VAR_3} floors inside\nthe {STR_VAR_2}?\pThat's quite the accomplishment.\nI need to work harder.$","reviewed, no change needed"
+MatchCall_BattlePyramidText11,"Ah, {PLAYER}{KUN}.\nThis is {STR_VAR_1}.\pI hear you're the terror of\nthe {STR_VAR_2}?\pYou rose through, what, {STR_VAR_3} floors?\nThat's gotta count for something.\pI wonder if I can ever become\na champion?\p…Pretty well impossible?\nWell, see you!$","reviewed, no change needed"
+MatchCall_BattlePyramidText12,"Hello, {PLAYER}{KUN}.\nIt's me, {STR_VAR_1}.\lAre you keeping well?\pYou've won through {STR_VAR_3} floors in\na place named {STR_VAR_2}?\pThat's quite the tale.\nSee you!$","reviewed, no change needed"
+MatchCall_BattlePyramidText13,"Ah, hello, {PLAYER}{KUN}!\nThis is {STR_VAR_1}!\lI hope you've been keeping well.\pThey say you climbed {STR_VAR_3} floors\nin the {STR_VAR_2}?\pI admire your energy!\nBye now.$","reviewed, no change needed"
+MatchCall_BattlePyramidText14,"Oh, hi, {PLAYER}{KUN}.\nThis is {STR_VAR_1}.\lI heard about you!\pDidn't you get through {STR_VAR_3} floors\nin the {STR_VAR_2}?\pYou're an inspiration!\nSee you again!$","reviewed, no change needed"
+MatchCall_Text_Mom2,"MOM: Hi, {PLAYER}!\nYour father keeps himself locked\laway in the MOS ENTHA ARENA.\pHe comes home every so often.\nBut he goes back to the ARENA when\lhe's eaten everything he can.\pI'm guessing that losing to you\nwas a big blow to his pride!$",reviewed AUTO draft
+MatchCall_Text_Mom3,"MOM: {PLAYER}…\nDon't worry about me or the house.\pWear those RUNNING SHOES until\nthey fall apart, honey!$","reviewed, no change needed"
+MatchCall_Text_Roxanne_Preparing,"BIGGS: Oh, hello, {PLAYER}!\pI've been hard at work retraining\nsince we met.\pI will still need some more time\nbefore I can reopen the ARENA.\pBut when I do, please visit my ARENA\nfor a rematch!$",reviewed AUTO draft
+MatchCall_Text_Roxanne_PreparingPostGame,"BIGGS: Is this {PLAYER}?\nCongratulations!\lI've been hearing about you!\pAs for me, I need some more time\nbefore I can reopen the ARENA.\pBut when I do, please visit my ARENA\nfor a rematch!$",reviewed AUTO draft
+MatchCall_Text_Roxanne_RematchReady,BIGGS: {PLAYER}!\nMy ARENA is ready!\pPlease visit BESTINE whenever\nyou can!$,reviewed AUTO draft
+MatchCall_Text_Roxanne_PostRematch,"BIGGS: At the BESTINE ARENA,\nthe fact that we battled, {PLAYER},\lis a matter of pride.$",reviewed AUTO draft
+MatchCall_Text_Brawly_Preparing,"TARFFUL: Hey, there, {PLAYER}{KUN}!\pI learned a lot from the battle we\nhad together.\pI intend to do my training over,\nthen reopen the ARENA.\pIt's going to take some time before\nI'm ready to run the ARENA again.\pBut if I can reopen the ARENA,\nI want you to challenge us again.$",reviewed AUTO draft
+MatchCall_Text_Brawly_PreparingPostGame,"TARFFUL: Hey, {PLAYER}{KUN}!\nCongratulations!\pWord about your exploits arrived\non tidal winds!\pIt appears as if I need to work on\nmy training some more.\pIt's going to take some time before\nI'm ready to run the ARENA again.\pBut if I can reopen the ARENA,\nI want you to challenge us again.$",reviewed AUTO draft
+MatchCall_Text_Brawly_RematchReady,"TARFFUL: Hey, {PLAYER}{KUN}!\nMy ARENA's ready for action!\pCome back to KACHIRHO anytime\nfor another challenge!$",reviewed AUTO draft
+MatchCall_Text_Brawly_PostRematch,"TARFFUL: {PLAYER}{KUN}, I don't think\nI'll ever get bored of battling you!$",reviewed AUTO draft
+MatchCall_Text_Wattson_Preparing,"WATTO: Oh, it's you!\pAfter you left, I've been redoing\nmy training from scratch.\pI'd say I could use a wee bit more\ntime to reopen my ARENA.\pYou'll have to wait till then!\nWahahahaha!$",reviewed AUTO draft
+MatchCall_Text_Wattson_PreparingPostGame,"WATTO: Wahahahaha!\pYou've really done it, haven't you?\nI've been getting word about you!\pIt seems I need to retrain some\nmore still.\pI'd say I could use a wee bit more\ntime to reopen my ARENA.\pYou'll have to wait till then!\nWahahahaha!$",reviewed AUTO draft
+MatchCall_Text_Wattson_RematchReady,"WATTO: Oh, it's you!\nMy ARENA's ready!\pVisit MOS ESPA anytime!\nWahahahaha!$",reviewed AUTO draft
+MatchCall_Text_Wattson_PostRematch,WATTO: Wahahaha!\pA battle with you is always charged\nwith shocking power!$,reviewed AUTO draft
+MatchCall_Text_Flannery_Preparing,"SABINE: {PLAYER}…\pWhen we battled, I learned exactly\nhow immature I was.\pBut I'm not done yet!\pI'm going to redo my training and\nreopen the ARENA.\pWhen the time comes, {PLAYER},\nplease challenge us again.$",reviewed AUTO draft
+MatchCall_Text_Flannery_PreparingPostGame,"SABINE: Hello, {PLAYER}?\nCongratulations!\pWord of your success has reached\nus like the heat of a volcano!\pOur training is coming along very\nwell here.\pWhen the ARENA's ready, a mark will\nappear beside my name in the\lMATCH CALL list.$",reviewed AUTO draft
+MatchCall_Text_Flannery_RematchReady,"SABINE: Oh, {PLAYER}?\nOur ARENA's ready!\pCome to PIRIN for a soak\nin the hot spring and a challenge!$",reviewed AUTO draft
+MatchCall_Text_Flannery_PostRematch,SABINE: {PLAYER}…\nI'm positive that you keep getting\lbetter at training every time.$,reviewed AUTO draft
+MatchCall_Text_Winona_Preparing,"CHIRPA: Hello, {PLAYER}!\pThanks to our battle, I've come\nto understand my weak points!\pWhen I reopen the ARENA, I won't go\ndown in defeat again!$",reviewed AUTO draft
+MatchCall_Text_Winona_PreparingPostGame,"CHIRPA: You've done it, {PLAYER}!\pNews about the new CHAMPION\nhas reached us in BRIGHT TREE!\pBut… The next time we battle,\nit's not going to end the same way.$",reviewed AUTO draft
+MatchCall_Text_Winona_RematchReady,CHIRPA: Is this {PLAYER}?\nOur ARENA is back in operation!\pWe're waiting for you in BRIGHT TREE!$,reviewed AUTO draft
+MatchCall_Text_Winona_PostRematch,"CHIRPA: {PLAYER}…\nThough I have lost, my wings will\lnever break.\pYes, in exactly the same way that\nyou never lost sight of your dream.$",reviewed AUTO draft
+MatchCall_Text_TateLiza_Preparing,KANAN: Oh! You're…\nEZRA: {PLAYER}!\pKANAN: We're in training again…\nEZRA: So we can reopen our ARENA!\pKANAN: When our ARENA is ready…\nEZRA: When our ARENA is ready…\pKANAN: A mark'll appear by our name…\nEZRA: On the MATCH CALL list.$,reviewed AUTO draft
+MatchCall_Text_TateLiza_PreparingPostGame,"KANAN: {PLAYER}, congratulations!\nEZRA: {PLAYER}, congratulations!\pKANAN: The two of us are…\nEZRA: Still in training!\pKANAN: We need some more time, but…\nEZRA: When our ARENA is ready…\pKANAN: A mark'll appear by our name…\nEZRA: On the MATCH CALL list.$",reviewed AUTO draft
+MatchCall_Text_TateLiza_RematchReady,KANAN: {PLAYER}!\nEZRA: {PLAYER}!\pKANAN: Our ARENA is ready!\nEZRA: Our ARENA is ready!\pKANAN: Please come visit…\nEZRA: YAVIN 4 anytime!$,reviewed AUTO draft
+MatchCall_Text_TateLiza_PostRematch,"KANAN: {PLAYER}, the battle we had…\nEZRA: Is an invaluable experience.\pKANAN: It would be nice if…\nEZRA: We could all battle again!$",reviewed AUTO draft
+MatchCall_Text_Juan_Preparing,YODA: Hmm…\n{PLAYER}{KUN}… Was it?\pOur battle together--it brought\nto me memories of when I first\lencountered OBI-WAN.\pPerhaps you are a genius who may\nyet surpass OBI-WAN!$,reviewed AUTO draft
+MatchCall_Text_Juan_PreparingPostGame,"YODA: Fufu… {PLAYER}{KUN}…\nYou've finally achieved your goal.\pMy eye for appraising talent wasn't\nmistaken…\pI wish for another chance to meet\nyou, for you have scaled the peak\lof power and prestige.$",reviewed AUTO draft
+MatchCall_Text_Juan_RematchReady,"YODA: Hoho… {PLAYER}{KUN}…\pOur DAGOBAH ARENA has finally\nreopened.\pIf you wish to see me, you are\nwelcome to visit anytime.$",reviewed AUTO draft
+MatchCall_Text_Juan_PostRematch,"YODA: {PLAYER}{KUN}…\pLike the finest music, the battles\nwe wage together strike chords\lof inspiration in my heart…\pWhen I close my eyes, I see visions\nof you soaring with the melody…$",reviewed AUTO draft
+MatchCall_Text_Sidney,"MAUL: Yo, {PLAYER}!\pIf you want to battle with me\nagain, you come on back whenever\lyou like to the ILUM TEMPLE.\pI'll always be here!\nI'll be waiting!$",reviewed AUTO draft
+MatchCall_Text_Phoebe,"QUI-GON: Hi, {PLAYER}!\pHow about coming back here again\nsometime?\pI'd like to see how much tighter\nyour bond has grown with your\lCOMPANION.$",reviewed AUTO draft
+MatchCall_Text_Glacia,"KI-ADI: Hello, {PLAYER}.\pI trust you haven't become\ncomplacent with your power?\pIf you feel the need to cool your\nhot emotions just a little, do come\lto the ILUM TEMPLE…$",reviewed AUTO draft
+MatchCall_Text_Drake,"ANAKIN: That voice… {PLAYER}, is it?\nYou sound well…\pI understand that there is now\na facility called the GRAND\lARENA that tests the skills of\lTRAINERS.\pHowever, if you wish to have real\nbattles, there is no substitute for\lthe ILUM TEMPLE!\pDon't you agree, {PLAYER}?$",reviewed AUTO draft
+MatchCall_Text_Wallace,"OBI-WAN: Hello, {PLAYER}{KUN}.\nHave you met LEIA?\pHe is…\nActually incredibly skilled.\pHowever, he's an odd soul who\nrarely battles.\pInstead, he would rather look for\nrare stones.\pI'm sure he's digging in a cave or\na craggy mountain somewhere.\pBut what is a rare stone exactly?\nAll I can think of is a METEORITE…$",reviewed AUTO draft
+MatchCall_Text_MayRayquazaCall,"… … … … … …\n… … … … … Beep!\pMIRA: Hi, {PLAYER}{KUN}!\pI was just in TIPOCA CITY a little\nwhile ago.\pI saw a giant green COMPANION\nflying high in the sky.\pI…\nI've never seen anything like it.\pI wonder what it was.\nIs this maybe a major discovery?\p… … … … … …\n… … … … … Click!$",reviewed AUTO draft
+MatchCall_Text_BrendanRayquazaCall,"… … … … … …\n… … … … … Beep!\pKAEL: Hey, {PLAYER}!\nI was in TIPOCA CITY just now.\pI saw this huge green COMPANION\nflying across the sky.\pI've never seen anything that\namazing before.\pI wish you could've seen it,\n{PLAYER}.\p… … … … … …\n… … … … … Click!$",reviewed AUTO draft
+MatchCall_Text_May2,"MIRA: Hi, {PLAYER}{KUN}!\pYou know how little towns like\nMOS ENTHA and KACHIRHO have ARENAS?\pFor some reason, the big port of\nMOS EISLEY doesn't have an ARENA.\pWhen they finally build an ARENA there,\nI should apply to be the LEADER.$",reviewed AUTO draft
+MatchCall_Text_May3,"MIRA: Hi, {PLAYER}{KUN}!\pDo you remember a man named\nthe CUTTER in BESTINE?\lHe had a house there, remember?\pWell, I found out his younger\nbrother lives in MOS ESPA.\pCan you guess his name?\p… … … … … …\n… … … … … …\pThe ROCK SMASH GUY!$",reviewed AUTO draft
+MatchCall_Text_May4,MIRA: {PLAYER}{KUN}?\pBEGGAR'S CANYON…\nThey named it that because it\ljoins BESTINE and ANCHORHEAD.$,reviewed AUTO draft
+MatchCall_Text_May5,"MIRA: {PLAYER}{KUN}, how are you?\pI'm out on ROUTE 111 now.\pI'm going to get a rest at an old\nlady's house.\pShe lives just north of\nthe desert.$",reviewed AUTO draft
+MatchCall_Text_May6,"MIRA: Hi, {PLAYER}{KUN}!\pDid you know about the MIRAGE\nTOWER in the desert?\pThey say, like a mirage, it seems\nto mysteriously come and go.\pI wish I could see it.$",reviewed AUTO draft
+MatchCall_Text_May7,"MIRA: {PLAYER}{KUN}, yahoo!\nI'm on ROUTE 119 now.\pThere's a big river here, and\nit often rains.\pI got soaked!$",reviewed AUTO draft
+MatchCall_Text_May8,"MIRA: {PLAYER}{KUN}, hi.\pJEDHA TEMPLE is a memorial to\nCOMPANION whose lives have ended.\pMaybe as a result, it's infested\nwith many SPIRIT-type COMPANIONS!$",reviewed AUTO draft
+MatchCall_Text_May9,"MIRA: Hi, {PLAYER}{KUN}!\pI was thinking of going to the hot\nspring in PIRIN.\pBut on the way, around ASHEN\nPASS, I ran into some bad-looking\lcharacters. The mood was ugly!$",reviewed AUTO draft
+MatchCall_Text_May10,"MIRA: Hi, {PLAYER}{KUN}!\nDid you see the news?\pThey say RIC OLIé discovered\nthe DROWNED CAVERN while on his\lsubmarine expedition.$",reviewed AUTO draft
+MatchCall_Text_May11,"MIRA: Hi, {PLAYER}{KUN}!\nDon't you think it's neat?\pEven if you don't have a boat,\nyou can cross the sea using\la COMPANION's move.\pDid you know there's more?\pThere's a COMPANION move that lets\nyou go to the bottom of the sea.$",reviewed AUTO draft
+MatchCall_Text_May12,"MIRA: Hi, {PLAYER}{KUN}!\nHope things are okay!\pHave you been on the sea and\nfound your way to the other side\lblocked?\pTry diving deep underwater and\nfollowing trenches.\pWhen you get to the other side,\ncome up to the surface. Easy!$",reviewed AUTO draft
+MatchCall_Text_May13,"MIRA: Hi, {PLAYER}{KUN}!\pHow's it going?\nAre you filling your DATAPAD?\pI heard a rumor that there are\nsuper-ancient COMPANION out there.\lAnd there are three of them!\pI would love to see even one…$",reviewed AUTO draft
+MatchCall_Text_May14,"MIRA: {PLAYER}{KUN}!\nI heard the rumors!\pYou beat the DAGOBAH ARENA\nLEADER?\pThat means you don't have far\nto go, do you?$",reviewed AUTO draft
+MatchCall_Text_May15,"MIRA: There isn't a single TRAINER\nleft in OUTER RIM who doesn't know who\lyou are, {PLAYER}{KUN}!\pWhen I tell people that I'm friends\nwith you, {PLAYER}{KUN}, they're all\lsurprised!$",reviewed AUTO draft
+MatchCall_Text_Brendan2,"KAEL: Hey, {PLAYER}!\pI don't get how little towns like\nMOS ENTHA and KACHIRHO have ARENAS.\pI mean, not when the big port of\nMOS EISLEY doesn't have an ARENA.\pWhen they finally build an ARENA there,\nI should apply to be the LEADER.$",reviewed AUTO draft
+MatchCall_Text_Brendan3,"KAEL: Yo, {PLAYER}!\pDo you remember a guy named\nthe CUTTER in BESTINE?\lHe had a house there, right?\pWell, it turns out his little\nbrother lives in MOS ESPA.\pCan you guess his name?\p… … … … … …\n… … … … … …\pThe ROCK SMASH GUY!$",reviewed AUTO draft
+MatchCall_Text_Brendan4,KAEL: This voice… {PLAYER}?\pThey gave BEGGAR'S CANYON its name\nbecause it joins BESTINE and\lANCHORHEAD.\pDid you know that?$,reviewed AUTO draft
+MatchCall_Text_Brendan5,"KAEL: {PLAYER}, what's up?\pHey, I'm out on ROUTE 111 now.\pI'm going to rest up at an old\nlady's house north of the desert.\pIf you're in the area, you should\nvisit her, too.$",reviewed AUTO draft
+MatchCall_Text_Brendan6,"KAEL: Hey, {PLAYER}!\pDid you know about the MIRAGE\nTOWER in the desert?\pThey say, like a mirage, it can be\nseen only sometimes.\pI'd like to see that!$",reviewed AUTO draft
+MatchCall_Text_Brendan7,"KAEL: Who's this? Oh, {PLAYER}?\nGuess what? I'm on ROUTE 119 now.\pThere's a big river here, and\nit rains all the time.\pI got soaked to the bone!$",reviewed AUTO draft
+MatchCall_Text_Brendan8,KAEL: {PLAYER}!\pJEDHA TEMPLE is a memorial to\nCOMPANION whose lives have ended.\pThat's probably why it's infested\nwith many SPIRIT-type COMPANIONS!$,reviewed AUTO draft
+MatchCall_Text_Brendan9,"KAEL: Hey there, {PLAYER}.\pI was on my way back to the hot\nspring in PIRIN.\pBut around ASHEN PASS, I ran into\nsome nasty-looking characters.\pThose creeps…\nI think they were THE EMPIRE.$",reviewed AUTO draft
+MatchCall_Text_Brendan10,"KAEL: Hi, {PLAYER}!\nDid you catch the news?\pThey say RIC OLIé discovered\nthe DROWNED CAVERN while on his\lsubmarine expedition.$",reviewed AUTO draft
+MatchCall_Text_Brendan11,"KAEL: Hey there, {PLAYER}!\nDon't you think it's awesome?\pEven if you don't have a boat,\nyou can cross the sea using\la COMPANION's move.\pAnd, there's a move that lets you\ntravel to the bottom of the sea.\pMan, COMPANION can do anything!$",reviewed AUTO draft
+MatchCall_Text_Brendan12,"KAEL: Howdy, {PLAYER}!\nHow are you holding up?\pEver found your way to the other\nside blocked while on the sea?\pTry diving deep underwater and\nfollowing trenches at the bottom.\pWhen you get to the other side,\ncome up to the surface. Simple!$",reviewed AUTO draft
+MatchCall_Text_Brendan13,"KAEL: Hey there, {PLAYER}!\pHow's it going? Filling up your\nDATAPAD successfully?\pI heard a rumor that there are\nsuper-ancient COMPANION out there.\lAnd not just one--three!\pI'd love to catch even one…$",reviewed AUTO draft
+MatchCall_Text_Brendan14,KAEL: {PLAYER}!\nI heard the rumors!\pYou beat the DAGOBAH ARENA\nLEADER? Awesome!\pYou're getting awful close now!$,reviewed AUTO draft
+MatchCall_Text_Brendan15,"KAEL: There isn't a TRAINER in\nall of OUTER RIM who doesn't know who\lyou are, {PLAYER}!\pWhen I tell people that I'm friends\nwith you, {PLAYER}, they get pretty\lenvious!$",reviewed AUTO draft
+MatchCall_Text_Wally1,"LUKE: Oh, {PLAYER}!\pI've been getting healthier and\nmore physically fit.\pI hope I can become a TRAINER like\nyou soon, {PLAYER}!$",reviewed AUTO draft
+MatchCall_Text_Wally2,"LUKE: {PLAYER}, hello!\pAfter BEGGAR'S CANYON went\nthrough, CAMIE's been very happy!$",reviewed AUTO draft
+MatchCall_Text_Wally3,"LUKE: Oh, {PLAYER}!\pI… I left my uncle's place in\nANCHORHEAD without telling anyone.\pI wonder if he's furious with me…\p{PLAYER}, you understand how\nI feel, don't you?$",reviewed AUTO draft
+MatchCall_Text_Wally4,"LUKE: {PLAYER}?\nIt's me, LUKE!\pThe world of TRAINERS is amazing!\pWhen I have my COMPANION with me,\nall sorts of people say hi!\pIt's as if everyone's getting\nconnected through COMPANION!$",reviewed AUTO draft
+MatchCall_Text_Wally5,"LUKE: {PLAYER}? It's awesome!\nThat AURALET we caught together?\lIt evolved, {PLAYER}!\pMaybe I'm talented…\pOh, but I shouldn't get a big head\nlike that!\pAfter all, it's the COMPANION that\nshould be praised!$",reviewed AUTO draft
+MatchCall_Text_Wally6,… … … … … …\n… … … … … …\pLUKE appears to be out of\nthe COMLINK's service area…$,reviewed AUTO draft
+MatchCall_Text_Wally7,"LUKE: Oh, {PLAYER}!\pBefore I met you, I hardly ever\nleft my house…\pBut now, I'm on an adventure with\nmy very own COMPANION…\p{PLAYER}…\nThank you…$",reviewed AUTO draft
+MatchCall_Text_Scott2,"LANDO: I'm on ROUTE 119 right now.\nIt's teeming with TRAINERS!\pIt's also overgrown with tall grass\neverywhere, it seems.\pWalking around in shorts here\nmakes me all ticklish!$",reviewed AUTO draft
+MatchCall_Text_Scott3,"LANDO: Hi, hi, {PLAYER}{KUN}!\pHave you had the chance to climb\nJEDHA TEMPLE?\pThe place is a memorial to COMPANIONS\nthat have passed away.\pIt's somewhere every TRAINER\nshould climb to the top of once.$",reviewed AUTO draft
+MatchCall_Text_Scott4,"LANDO: Hi, {PLAYER}{KUN}!\pI've been hearing about these odd\ngangs being a nuisance.\pTHE EMPIRE and THE CARTEL,\nI think they were.\pI would think there'd be some\nskilled TRAINERS among them.\p…But if they're thugs…$",reviewed AUTO draft
+MatchCall_Text_Scott5,"LANDO: Oh, hi, {PLAYER}{KUN}.\pMight there be tough TRAINERS\nat the bottom of the sea?\pI can't go check for myself.\nI can't swim, for one.\lAnd I don't raise COMPANIONS…$",reviewed AUTO draft
+MatchCall_Text_Scott6,"LANDO: Hi, hi, {PLAYER}{KUN}!\pYou know that you can challenge\nthe ILUM TEMPLE when you've\lcollected all the ARENA SHARDS?\pWith your talent, becoming the\nCHAMPION isn't a pipe dream.\pBut did you know?\nThere's somewhere even better.\pBut, that's all I'm willing to say\nfor the time being.\pIt's something you can look\nforward to.\pWhen you've won your way through\nthe ILUM TEMPLE into the HALL\lOF FAME!$",reviewed AUTO draft
+MatchCall_Text_Scott7,… … … … … …\n… … … … … …\pLANDO appears to be out of\nthe COMLINK's service area…$,reviewed AUTO draft
+MatchCall_Text_Norman1,"DAD: In BESTINE, there's a man\nthat goes by the odd name of\lthe CUTTER.\pIf you're in the area, you should\npay him a visit.$",reviewed AUTO draft
+MatchCall_Text_Norman2,"DAD: Hm… Little by little, but also\nvery surely, you're getting\ltougher, {PLAYER}.\pThe stronger you get, the farther\nand higher you soar from Mother\land me…\pThis feeling is hard to explain.$","reviewed, no change needed"
+MatchCall_Text_Norman3,DAD: I see…\nYou've collected four ARENA SHARDS…\pThere's no avoiding it now.\nWe will battle like I promised.\pCome anytime.\nWe'll all be waiting for you!$,reviewed AUTO draft
+MatchCall_Text_Norman4,DAD: {PLAYER}! You'd better go visit\nMother every so often.\pI'm going to remain here and\nredouble my training.\pThe way of battling is deep\nand unforgiving!$,"reviewed, no change needed"
+MatchCall_Text_Norman5,"DAD: Oh, hi, {PLAYER}!\pWhat's that? CODE CYLINDER?\nI don't know what that's about.\pBut with a name like that, it may\nbe somehow linked to a volcano!$",reviewed AUTO draft
+MatchCall_Text_Norman_Preparing,DAD: Hiyah! Haah! Dwah!\p…Oh? {PLAYER}!\pYou caught me right in the middle\nof a COMPANION training session!$,reviewed AUTO draft
+MatchCall_Text_Norman_PreparingPostGame,DAD: {PLAYER}!\pWho would've thought you'd become\nthe ILUM TEMPLE CHAMPION…\pOkay!\nI won't be left behind!$,reviewed AUTO draft
+MatchCall_Text_Norman_RematchReady,"DAD: Hm? {PLAYER}?\nWhat good timing!\pThis time, I'm going to challenge\nyou to battle.\pI'm waiting in the MOS ENTHA ARENA.\nAccept my challenge anytime!$",reviewed AUTO draft
+MatchCall_Text_Norman_PostRematch,"DAD: …You amaze me, {PLAYER}.\nHow much higher will you soar?$","reviewed, no change needed"
+MatchCall_Text_Steven2,"LEIA: Hi, {PLAYER}{KUN}!\pI've met a lot of different\nTRAINERS so far.\pBut you're one of a kind.\nYou're not like anyone else.$",reviewed AUTO draft
+MatchCall_Text_Steven3,"LEIA: Hi, {PLAYER}{KUN}!\pWhen you're on an adventure with\nyour COMPANION, what do you think?\pDo you consider them to be strong\npartners?\pDo you think of them as fun\ncompanions?\pDepending on how you think, your\nadventure's significance changes.$",reviewed AUTO draft
+MatchCall_Text_Steven4,"LEIA: Hello?\n{PLAYER}{KUN}?\pI'm involved in a spot of trouble\nat the LAUNCH TOWER.\pI'm sorry, but I can't talk now.\nBye!$",reviewed AUTO draft
+MatchCall_Text_Steven5,LEIA: Oh!\n{PLAYER}{KUN}!\pThere's no need to talk.\nIt's past time for talking.\pYou have to believe in yourself\nand do what's right.$,reviewed AUTO draft
+MatchCall_Text_Steven6,… … … … … …\pLEIA appears not to be getting\nthe call…$,reviewed AUTO draft
+MatchCall_Text_Steven7,LEIA: {PLAYER}{KUN}… Congratulations\nfor entering the HALL OF FAME.\p… … … … … …\n… … … … … …\pI hope we can meet again\nsomewhere!$,reviewed AUTO draft
+MatchCall_Text_BirchRegisterCall,"PROF. KORR: Oh, {PLAYER}{KUN}!\nI've already heard about you!\pIt seems your COMLINK's been\nupgraded with MATCH CALL.\pWell, I should register, too!\pThat way, I'd be able to examine\nyour DATAPAD even while you're\lout in the field.\p… … … … … …$",reviewed AUTO draft
+MatchCall_Text_RegisteredBirch,Registered PROF. KORR\nin the COMLINK.$,reviewed AUTO draft
+MatchCall_Text_UnusedProfBirch,"PROF. KORR: When one has both\nthe DATAPAD and COMLINK, studying\lCOMPANIONS becomes more fun, eh?$",reviewed AUTO draft
+MatchCall_Text_MrStone1,"SEN. ORGANA: Oh? {PLAYER}{KUN}!\pSince you called me, the COMLINK\nmust be working properly!\pOther people will be registered,\nso try calling them up, too!\pGood! Good!\nYou seem to be quite happy!\pHm…\nHow could I know that?\pIt's because I'm looking down at\nyou from my office window!\pWahahaha!\nSee you again!$",reviewed AUTO draft
+MatchCall_Text_MrStone2,"SEN. ORGANA: Oh? {PLAYER}{KUN}!\pWhat's wrong? Have you forgotten\nabout that little errand of mine?\pI need you to deliver my letter\nto LEIA in KACHIRHO.\pAfter that, deliver our parcel to\nRIC OLIé in MOS EISLEY.\pYou remember, don't you?\pNow, since I am a busy PRESIDENT,\nI have to go! Bye-bye!$",reviewed AUTO draft
+MatchCall_Text_MrStone3,"SEN. ORGANA: Oh! {PLAYER}{KUN}!\pAh, so you've met LEIA!\nI'd better reward you, then!\pWhen you visit BESTINE again,\ncome see me at my office.\pI'll be waiting for you!$",reviewed AUTO draft
+MatchCall_Text_MrStone4,"SEN. ORGANA: Oh! {PLAYER}{KUN}!\pDid you know that HOUSE ORGANA was\ndigging the BEGGAR'S CANYON?\pBut we shut down the operation to\nprotect the COMPANION in the area.\pIt's a no-brainer, really.\pIt's more important to let COMPANIONS\nlive in peace than worry about our\lown convenience.$",reviewed AUTO draft
+MatchCall_Text_MrStone5,"SEN. ORGANA: Hello, hello, {PLAYER}{KUN}!\pI heard from someone in MOS ENTHA\nthat you're DORAN's child!\pNo wonder you're such a capable\nbeing!$",reviewed AUTO draft
+MatchCall_Text_MrStone6,SEN. ORGANA: What's that?\pYou battled your own father and\ndefeated him?\pThat's astounding!\pI had no idea that I befriended\nsomeone so special! Wahaha!$,reviewed AUTO draft
+MatchCall_Text_MrStone7,"Hello!\nThis is HOUSE ORGANA CORPORATI…\lOh, hello, {PLAYER}!\pOur PRESIDENT was here a little\nwhile ago, but he's gone out.\pOur PRESIDENT is busy, but you\nseem to be just as busy, {PLAYER}.$",reviewed AUTO draft
+MatchCall_Text_MrStone8,…Huh? …What's that?\pGROU… Yes? …DON?\pYou're breaking up…\n…can't hear…\pBZZZZ…$,"reviewed, no change needed"
+MatchCall_Text_MrStone9,…Huh? …What's that?\pSeaflo… Yes? …Caver…?\pYou're breaking up…\n…can't hear…\pBZZZZ…$,"reviewed, no change needed"
+MatchCall_Text_MrStone10,"SEN. ORGANA: {PLAYER}{KUN}! It's me!\pYou were apparently involved in all\nsorts of things, but I, being busy,\lhaven't a clue exactly what!\pHowever, I urge you to take\nthe road you believe in and walk it.\pI'll always be in your corner!\nTake care!$",reviewed AUTO draft
+MatchCall_Text_MrStone11,"SEN. ORGANA: … … … … … …\nIs this maybe {PLAYER}{KUN}?\pYour voice is so full of confidence,\nI didn't recognize you right off!\pHm! You must come visit us at HOUSE\nORGANA sometime!$",reviewed AUTO draft
+gText_MatchCallAromaLady_Rose_Strategy,Becalm fighting emotions.,"reviewed, no change needed"
+gText_MatchCallAromaLady_Rose_Pokemon,Fragrant GRASS COMPANIONS.,reviewed AUTO draft
+gText_MatchCallAromaLady_Rose_Intro1,Soothing aromas make the,"reviewed, no change needed"
+gText_MatchCallAromaLady_Rose_Intro2,body and mind healthy.,"reviewed, no change needed"
+gText_MatchCallRuinManiac_Andres_Strategy,I'm not very good at this.,"reviewed, no change needed"
+gText_MatchCallRuinManiac_Andres_Pokemon,Ruin-exploration partners.,"reviewed, no change needed"
+gText_MatchCallRuinManiac_Andres_Intro1,I am searching for undersea,"reviewed, no change needed"
+gText_MatchCallRuinManiac_Andres_Intro2,ruins and relics.,"reviewed, no change needed"
+gText_MatchCallRuinManiac_Dusty_Strategy,Overwhelm with power!,"reviewed, no change needed"
+gText_MatchCallRuinManiac_Dusty_Pokemon,Craggy ROCK COMPANIONS.,reviewed AUTO draft
+gText_MatchCallRuinManiac_Dusty_Intro1,"In search of ancient lore,","reviewed, no change needed"
+gText_MatchCallRuinManiac_Dusty_Intro2,I travel the world.,"reviewed, no change needed"
+gText_MatchCallTuber_Lola_Strategy,I'm going to try hard!,"reviewed, no change needed"
+gText_MatchCallTuber_Lola_Pokemon,Good swimmer COMPANION.,reviewed AUTO draft
+gText_MatchCallTuber_Lola_Intro1,I wish I could swim without,"reviewed, no change needed"
+gText_MatchCallTuber_Lola_Intro2,using an inner tube.,"reviewed, no change needed"
+gText_MatchCallTuber_Ricky_Strategy,I don't know. I'll try hard.,"reviewed, no change needed"
+gText_MatchCallTuber_Ricky_Pokemon,WATER COMPANIONS are buddies.,reviewed AUTO draft
+gText_MatchCallTuber_Ricky_Intro1,It's not like I can't swim.,"reviewed, no change needed"
+gText_MatchCallTuber_Ricky_Intro2,I just like my inner tube.,"reviewed, no change needed"
+gText_MatchCallSisAndBro_LilaAndRoy_Strategy,We split our duties.,"reviewed, no change needed"
+gText_MatchCallSisAndBro_LilaAndRoy_Pokemon,We like friendly COMPANION.,reviewed AUTO draft
+gText_MatchCallSisAndBro_LilaAndRoy_Intro1,We enjoy COMPANION together,reviewed AUTO draft
+gText_MatchCallSisAndBro_LilaAndRoy_Intro2,as sister and brother.,"reviewed, no change needed"
+gText_MatchCallCooltrainer_Cristin_Strategy,I finish with power moves!,"reviewed, no change needed"
+gText_MatchCallCooltrainer_Cristin_Pokemon,A mix of different types.,"reviewed, no change needed"
+gText_MatchCallCooltrainer_Cristin_Intro1,I aim to become the ultimate,"reviewed, no change needed"
+gText_MatchCallCooltrainer_Cristin_Intro2,TRAINER!,"reviewed, no change needed"
+gText_MatchCallCooltrainer_Brooke_Strategy,Exploit the foe's weakness.,"reviewed, no change needed"
+gText_MatchCallCooltrainer_Brooke_Pokemon,Balance is crucial.,"reviewed, no change needed"
+gText_MatchCallCooltrainer_Brooke_Intro1,My goal is to become the,"reviewed, no change needed"
+gText_MatchCallCooltrainer_Brooke_Intro2,ILUM CHAMPION.,reviewed AUTO draft
+gText_MatchCallCooltrainer_Wilton_Strategy,Upset the opponent.,"reviewed, no change needed"
+gText_MatchCallCooltrainer_Wilton_Pokemon,Type doesn't matter.,"reviewed, no change needed"
+gText_MatchCallCooltrainer_Wilton_Intro1,I'm a top student at the,"reviewed, no change needed"
+gText_MatchCallCooltrainer_Wilton_Intro2,ACADEMY.,reviewed AUTO draft
+gText_MatchCallHexManiac_Valerie_Strategy,"Slow, steady suffering.","reviewed, no change needed"
+gText_MatchCallHexManiac_Valerie_Pokemon,Scary to meet at night.,"reviewed, no change needed"
+gText_MatchCallHexManiac_Valerie_Intro1,I see things that others,"reviewed, no change needed"
+gText_MatchCallHexManiac_Valerie_Intro2,can't see...,"reviewed, no change needed"
+gText_MatchCallLady_Cindy_Strategy,Anything to win.,"reviewed, no change needed"
+gText_MatchCallLady_Cindy_Pokemon,Gorgeous type!,"reviewed, no change needed"
+gText_MatchCallLady_Cindy_Intro1,I have a pool specially for,"reviewed, no change needed"
+gText_MatchCallLady_Cindy_Intro2,my COMPANION at home.,reviewed AUTO draft
+gText_MatchCallBeauty_Thalia_Strategy,You'll fall under my spell!,"reviewed, no change needed"
+gText_MatchCallBeauty_Thalia_Pokemon,Mature WATER type.,"reviewed, no change needed"
+gText_MatchCallBeauty_Thalia_Intro1,I dream of cruising around,"reviewed, no change needed"
+gText_MatchCallBeauty_Thalia_Intro2,the world on a luxury liner.,"reviewed, no change needed"
+gText_MatchCallBeauty_Jessica_Strategy,I'll lead you astray.,"reviewed, no change needed"
+gText_MatchCallBeauty_Jessica_Pokemon,"Cute, of course.","reviewed, no change needed"
+gText_MatchCallBeauty_Jessica_Intro1,I love the FELUCIA RESERVE.,reviewed AUTO draft
+gText_MatchCallBeauty_Jessica_Intro2,I seem to end up there.,"reviewed, no change needed"
+gText_MatchCallRichBoy_Winston_Strategy,Strategy? Who needs it?,"reviewed, no change needed"
+gText_MatchCallRichBoy_Winston_Pokemon,I spent big money on it!,"reviewed, no change needed"
+gText_MatchCallRichBoy_Winston_Intro1,"I, being rich, sleep in a","reviewed, no change needed"
+gText_MatchCallRichBoy_Winston_Intro2,custom COMPANION bed.,reviewed AUTO draft
+gText_MatchCallPokeManiac_Steve_Strategy,Wrestle down with power.,"reviewed, no change needed"
+gText_MatchCallPokeManiac_Steve_Pokemon,Took all night to catch.,"reviewed, no change needed"
+gText_MatchCallPokeManiac_Steve_Intro1,"Big, burly, and buff","reviewed, no change needed"
+gText_MatchCallPokeManiac_Steve_Intro2,COMPANIONS are the best...,reviewed AUTO draft
+gText_MatchCallSwimmer_Tony_Strategy,Ram at full speed!,"reviewed, no change needed"
+gText_MatchCallSwimmer_Tony_Pokemon,Funky WATER type!,"reviewed, no change needed"
+gText_MatchCallSwimmer_Tony_Intro1,"If I can't be out swimming,","reviewed, no change needed"
+gText_MatchCallSwimmer_Tony_Intro2,I'll be pumping weights.,"reviewed, no change needed"
+gText_MatchCallBlackBelt_Nob_Strategy,Grand slam pummeling!,"reviewed, no change needed"
+gText_MatchCallBlackBelt_Nob_Pokemon,FIGHTING type.,"reviewed, no change needed"
+gText_MatchCallBlackBelt_Nob_Intro1,"Not to brag, but I can bust","reviewed, no change needed"
+gText_MatchCallBlackBelt_Nob_Intro2,ten roof tiles!,"reviewed, no change needed"
+gText_MatchCallBlackBelt_Koji_Strategy,Witness karate power!,"reviewed, no change needed"
+gText_MatchCallBlackBelt_Koji_Pokemon,My partners in training!,"reviewed, no change needed"
+gText_MatchCallBlackBelt_Koji_Intro1,Let us discuss matters of,"reviewed, no change needed"
+gText_MatchCallBlackBelt_Koji_Intro2,the world with bare fists!,"reviewed, no change needed"
+gText_MatchCallGuitarist_Fernando_Strategy,Rock to stunning sounds!,"reviewed, no change needed"
+gText_MatchCallGuitarist_Fernando_Pokemon,Electric-and-sound combo!,"reviewed, no change needed"
+gText_MatchCallGuitarist_Fernando_Intro1,My compositions will shock,"reviewed, no change needed"
+gText_MatchCallGuitarist_Fernando_Intro2,you and stun you!,"reviewed, no change needed"
+gText_MatchCallGuitarist_Dalton_Strategy,I'll electrify you!,"reviewed, no change needed"
+gText_MatchCallGuitarist_Dalton_Pokemon,They're ELECTRIC!,"reviewed, no change needed"
+gText_MatchCallGuitarist_Dalton_Intro1,I want to make people cry,"reviewed, no change needed"
+gText_MatchCallGuitarist_Dalton_Intro2,with songs from my heart.,"reviewed, no change needed"
+gText_MatchCallKindler_Bernie_Strategy,Burn it all down!,"reviewed, no change needed"
+gText_MatchCallKindler_Bernie_Pokemon,Burn-inducing COMPANION.,reviewed AUTO draft
+gText_MatchCallKindler_Bernie_Intro1,"When you light a campfire,","reviewed, no change needed"
+gText_MatchCallKindler_Bernie_Intro2,be sure there's some water.,"reviewed, no change needed"
+gText_MatchCallCamper_Ethan_Strategy,Hang in and be tenacious!,"reviewed, no change needed"
+gText_MatchCallCamper_Ethan_Pokemon,I'll raise any COMPANION.,reviewed AUTO draft
+gText_MatchCallCamper_Ethan_Intro1,COMPANION raised in the wild,reviewed AUTO draft
+gText_MatchCallCamper_Ethan_Intro2,grow strong!,"reviewed, no change needed"
+gText_MatchCallOldCouple_JohnAndJay_Strategy,Our love lets us prevail.,"reviewed, no change needed"
+gText_MatchCallOldCouple_JohnAndJay_Pokemon,We've had them for years.,"reviewed, no change needed"
+gText_MatchCallOldCouple_JohnAndJay_Intro1,"Married 50 years, we've","reviewed, no change needed"
+gText_MatchCallOldCouple_JohnAndJay_Intro2,devotedly raised COMPANION.,reviewed AUTO draft
+gText_MatchCallBugManiac_Jeffrey_Strategy,Attack in waves!,"reviewed, no change needed"
+gText_MatchCallBugManiac_Jeffrey_Pokemon,BUG COMPANIONS are cool.,reviewed AUTO draft
+gText_MatchCallBugManiac_Jeffrey_Intro1,I go into the forest every,"reviewed, no change needed"
+gText_MatchCallBugManiac_Jeffrey_Intro2,day to catch BUG COMPANIONS.,reviewed AUTO draft
+gText_MatchCallPsychic_Cameron_Strategy,Daze and confuse!,"reviewed, no change needed"
+gText_MatchCallPsychic_Cameron_Pokemon,Ones with weird powers.,"reviewed, no change needed"
+gText_MatchCallPsychic_Cameron_Intro1,I can see through exactly,"reviewed, no change needed"
+gText_MatchCallPsychic_Cameron_Intro2,what you're thinking!,"reviewed, no change needed"
+gText_MatchCallPsychic_Jacki_Strategy,Battle at full power.,"reviewed, no change needed"
+gText_MatchCallPsychic_Jacki_Pokemon,COMPANION of many mysteries.,reviewed AUTO draft
+gText_MatchCallPsychic_Jacki_Intro1,"When we spoke, I was really","reviewed, no change needed"
+gText_MatchCallPsychic_Jacki_Intro2,using telepathy.,"reviewed, no change needed"
+gText_MatchCallGentleman_Walter_Strategy,Calm and collected.,"reviewed, no change needed"
+gText_MatchCallGentleman_Walter_Pokemon,COMPANION of distinction.,reviewed AUTO draft
+gText_MatchCallGentleman_Walter_Intro1,We enjoy a spot of tea,"reviewed, no change needed"
+gText_MatchCallGentleman_Walter_Intro2,every day. It's imported.,"reviewed, no change needed"
+gText_MatchCallSchoolKid_Karen_Strategy,I use my head to battle.,"reviewed, no change needed"
+gText_MatchCallSchoolKid_Karen_Intro1,My daddy gives me spending,"reviewed, no change needed"
+gText_MatchCallSchoolKid_Karen_Intro2,money if I ace a test.,"reviewed, no change needed"
+gText_MatchCallSchoolKid_Jerry_Strategy,My knowledge rules!,"reviewed, no change needed"
+gText_MatchCallSchoolKid_Jerry_Pokemon,Any smart COMPANIONS!,reviewed AUTO draft
+gText_MatchCallSchoolKid_Jerry_Intro1,I want to be a COMPANION,reviewed AUTO draft
+gText_MatchCallSchoolKid_Jerry_Intro2,researcher in the future.,"reviewed, no change needed"
+gText_MatchCallSrAndJr_AnnaAndMeg_Strategy,We talk it over first.,"reviewed, no change needed"
+gText_MatchCallSrAndJr_AnnaAndMeg_Pokemon,COMPANION that we both like.,reviewed AUTO draft
+gText_MatchCallSrAndJr_AnnaAndMeg_Intro1,We're senior and junior,"reviewed, no change needed"
+gText_MatchCallSrAndJr_AnnaAndMeg_Intro2,students into COMPANION!,reviewed AUTO draft
+gText_MatchCallPokefan_Isabel_Strategy,"Go for it, my dears!","reviewed, no change needed"
+gText_MatchCallPokefan_Isabel_Pokemon,I have no likes or dislikes.,"reviewed, no change needed"
+gText_MatchCallPokefan_Isabel_Intro1,While out shopping for,"reviewed, no change needed"
+gText_MatchCallPokefan_Isabel_Intro2,"supper, I battle too.","reviewed, no change needed"
+gText_MatchCallPokefan_Miguel_Strategy,I battle with love!,"reviewed, no change needed"
+gText_MatchCallPokefan_Miguel_Pokemon,A COMPANION raised with love!,reviewed AUTO draft
+gText_MatchCallPokefan_Miguel_Intro1,It's important to build,"reviewed, no change needed"
+gText_MatchCallExpert_Timothy_Strategy,I see through your moves!,"reviewed, no change needed"
+gText_MatchCallExpert_Timothy_Pokemon,The essence of FIGHTING.,"reviewed, no change needed"
+gText_MatchCallExpert_Timothy_Intro1,I'm not ready to give way,"reviewed, no change needed"
+gText_MatchCallExpert_Timothy_Intro2,to the young yet!,"reviewed, no change needed"
+gText_MatchCallExpert_Shelby_Strategy,Attack while defending.,"reviewed, no change needed"
+gText_MatchCallExpert_Shelby_Pokemon,The FIGHTING type.,"reviewed, no change needed"
+gText_MatchCallExpert_Shelby_Intro1,"Being old, I have my own","reviewed, no change needed"
+gText_MatchCallExpert_Shelby_Intro2,style of battling.,"reviewed, no change needed"
+gText_MatchCallYoungster_Calvin_Strategy,I do what I can.,"reviewed, no change needed"
+gText_MatchCallYoungster_Calvin_Pokemon,I use different types.,"reviewed, no change needed"
+gText_MatchCallYoungster_Calvin_Intro1,I'm going to keep working,"reviewed, no change needed"
+gText_MatchCallYoungster_Calvin_Intro2,until I beat an ARENA LEADER.,reviewed AUTO draft
+gText_MatchCallFisherman_Elliot_Strategy,I battle patiently.,"reviewed, no change needed"
+gText_MatchCallFisherman_Elliot_Pokemon,WATER COMPANIONS to battle!,reviewed AUTO draft
+gText_MatchCallFisherman_Elliot_Intro1,I'm the world's only guy to,"reviewed, no change needed"
+gText_MatchCallFisherman_Elliot_Intro2,catch a huge COMPANION!,reviewed AUTO draft
+gText_MatchCallTriathlete_Isaiah_Strategy,Exploit the environment!,"reviewed, no change needed"
+gText_MatchCallTriathlete_Isaiah_Pokemon,All hail the WATER type!,"reviewed, no change needed"
+gText_MatchCallTriathlete_Isaiah_Intro1,I won't be beaten by some,"reviewed, no change needed"
+gText_MatchCallTriathlete_Isaiah_Intro2,beach bum SWIMMER!,"reviewed, no change needed"
+gText_MatchCallTriathlete_Maria_Strategy,Speed above all!,"reviewed, no change needed"
+gText_MatchCallTriathlete_Maria_Pokemon,I use a speedy COMPANION.,reviewed AUTO draft
+gText_MatchCallTriathlete_Maria_Intro1,A marathon is a challenge,"reviewed, no change needed"
+gText_MatchCallTriathlete_Maria_Intro2,against your own self.,"reviewed, no change needed"
+gText_MatchCallTriathlete_Abigail_Strategy,Defense is crucial.,"reviewed, no change needed"
+gText_MatchCallTriathlete_Abigail_Pokemon,My COMPANION is solid.,reviewed AUTO draft
+gText_MatchCallTriathlete_Abigail_Intro1,"I started this for dieting,","reviewed, no change needed"
+gText_MatchCallTriathlete_Abigail_Intro2,but I got right into it.,"reviewed, no change needed"
+gText_MatchCallTriathlete_Dylan_Strategy,Strike before stricken!,"reviewed, no change needed"
+gText_MatchCallTriathlete_Dylan_Pokemon,A fast-running COMPANION!,reviewed AUTO draft
+gText_MatchCallTriathlete_Dylan_Intro1,"If you ran and ran, you'd","reviewed, no change needed"
+gText_MatchCallTriathlete_Dylan_Intro2,become one with the wind.,"reviewed, no change needed"
+gText_MatchCallTriathlete_Katelyn_Strategy,All-out offensive!,"reviewed, no change needed"
+gText_MatchCallTriathlete_Katelyn_Pokemon,WATER COMPANIONS rule!,reviewed AUTO draft
+gText_MatchCallTriathlete_Katelyn_Intro1,I must swim over 6 miles,"reviewed, no change needed"
+gText_MatchCallTriathlete_Katelyn_Intro2,every day.,"reviewed, no change needed"
+gText_MatchCallTriathlete_Benjamin_Strategy,Push and push again!,"reviewed, no change needed"
+gText_MatchCallTriathlete_Benjamin_Pokemon,The strength of STEEL.,"reviewed, no change needed"
+gText_MatchCallTriathlete_Benjamin_Intro1,"If you're sweating, get","reviewed, no change needed"
+gText_MatchCallTriathlete_Benjamin_Intro2,fluids into you regularly.,"reviewed, no change needed"
+gText_MatchCallTriathlete_Pablo_Strategy,Draw the power of WATER.,"reviewed, no change needed"
+gText_MatchCallTriathlete_Pablo_Pokemon,Toughened WATER COMPANIONS.,reviewed AUTO draft
+gText_MatchCallTriathlete_Pablo_Intro1,"Training COMPANION is good,",reviewed AUTO draft
+gText_MatchCallTriathlete_Pablo_Intro2,but don't neglect yourself.,"reviewed, no change needed"
+gText_MatchCallDragonTamer_Nicolas_Strategy,It's about COMPANIONS power!,reviewed AUTO draft
+gText_MatchCallDragonTamer_Nicolas_Pokemon,See the power of DRAGONS!,"reviewed, no change needed"
+gText_MatchCallDragonTamer_Nicolas_Intro1,I'll become legendary as the,"reviewed, no change needed"
+gText_MatchCallDragonTamer_Nicolas_Intro2,strongest one day!,"reviewed, no change needed"
+gText_MatchCallBirdKeeper_Robert_Strategy,I'll show you my technique!,"reviewed, no change needed"
+gText_MatchCallBirdKeeper_Robert_Pokemon,Elegantly wheeling BIRDS.,"reviewed, no change needed"
+gText_MatchCallBirdKeeper_Robert_Intro1,"My BIRD COMPANIONS, deliver my",reviewed AUTO draft
+gText_MatchCallBirdKeeper_Robert_Intro2,love to that girl!,"reviewed, no change needed"
+gText_MatchCallNinjaBoy_Lao_Strategy,You'll suffer from poison!,"reviewed, no change needed"
+gText_MatchCallNinjaBoy_Lao_Pokemon,Poisonous COMPANION.,reviewed AUTO draft
+gText_MatchCallNinjaBoy_Lao_Intro1,I undertake training so,"reviewed, no change needed"
+gText_MatchCallNinjaBoy_Lao_Intro2,that I may become a ninja.,"reviewed, no change needed"
+gText_MatchCallBattleGirl_Cyndy_Strategy,The first strike wins!,"reviewed, no change needed"
+gText_MatchCallBattleGirl_Cyndy_Pokemon,Speedy FIGHTING type.,"reviewed, no change needed"
+gText_MatchCallBattleGirl_Cyndy_Intro1,"If my COMPANION lose,",reviewed AUTO draft
+gText_MatchCallBattleGirl_Cyndy_Intro2,I'll carry on the fight!,"reviewed, no change needed"
+gText_MatchCallParasolLady_Madeline_Strategy,"Go, go, my COMPANION!",reviewed AUTO draft
+gText_MatchCallParasolLady_Madeline_Pokemon,I'll raise anything.,"reviewed, no change needed"
+gText_MatchCallParasolLady_Madeline_Intro1,UV rays are your skin's,"reviewed, no change needed"
+gText_MatchCallParasolLady_Madeline_Intro2,enemy. Get protected.,"reviewed, no change needed"
+gText_MatchCallSwimmer_Jenny_Strategy,No mercy!,"reviewed, no change needed"
+gText_MatchCallSwimmer_Jenny_Pokemon,Cute WATER COMPANIONS.,reviewed AUTO draft
+gText_MatchCallSwimmer_Jenny_Intro1,I have too many fans.,"reviewed, no change needed"
+gText_MatchCallPicnicker_Diana_Strategy,I think about this & that.,"reviewed, no change needed"
+gText_MatchCallPicnicker_Diana_Pokemon,I like all COMPANIONS.,reviewed AUTO draft
+gText_MatchCallPicnicker_Diana_Intro1,What lies beyond that,"reviewed, no change needed"
+gText_MatchCallPicnicker_Diana_Intro2,yonder hill?,"reviewed, no change needed"
+gText_MatchCallTwins_AmyAndLiv_Strategy,We battle together!,"reviewed, no change needed"
+gText_MatchCallTwins_AmyAndLiv_Pokemon,We train together!,"reviewed, no change needed"
+gText_MatchCallTwins_AmyAndLiv_Intro1,"We like the same COMPANION,",reviewed AUTO draft
+gText_MatchCallTwins_AmyAndLiv_Intro2,but different desserts.,"reviewed, no change needed"
+gText_MatchCallSailor_Ernest_Strategy,I force things with power!,"reviewed, no change needed"
+gText_MatchCallSailor_Ernest_Pokemon,WATER and FIGHTING types.,"reviewed, no change needed"
+gText_MatchCallSailor_Ernest_Intro1,Seamen are rough spirits!,"reviewed, no change needed"
+gText_MatchCallSailor_Ernest_Intro2,Any complaints?,"reviewed, no change needed"
+gText_MatchCallSailor_Cory_Strategy,Up for a fight anytime!,"reviewed, no change needed"
+gText_MatchCallSailor_Cory_Pokemon,WATER COMPANIONS are my faves!,reviewed AUTO draft
+gText_MatchCallSailor_Cory_Intro1,"If you want to shout loud,","reviewed, no change needed"
+gText_MatchCallSailor_Cory_Intro2,suck in air with your belly!,"reviewed, no change needed"
+gText_MatchCallCollector_Edwin_Strategy,Protect COMPANION from harm.,reviewed AUTO draft
+gText_MatchCallCollector_Edwin_Pokemon,I love rare COMPANIONS.,reviewed AUTO draft
+gText_MatchCallCollector_Edwin_Intro1,I want to collect all the,"reviewed, no change needed"
+gText_MatchCallCollector_Edwin_Intro2,world's rare COMPANIONS.,reviewed AUTO draft
+gText_MatchCallPkmnBreeder_Lydia_Strategy,I count on power.,"reviewed, no change needed"
+gText_MatchCallPkmnBreeder_Lydia_Pokemon,COMPANIONS are my children.,reviewed AUTO draft
+gText_MatchCallPkmnBreeder_Lydia_Intro1,It takes knowledge and,"reviewed, no change needed"
+gText_MatchCallPkmnBreeder_Lydia_Intro2,love to raise COMPANIONS.,reviewed AUTO draft
+gText_MatchCallPkmnBreeder_Isaac_Strategy,Full-on attack!,"reviewed, no change needed"
+gText_MatchCallPkmnBreeder_Isaac_Pokemon,Anything. I'll raise it.,"reviewed, no change needed"
+gText_MatchCallPkmnBreeder_Isaac_Intro1,I give them {POKEBLOCK}S for,"reviewed, no change needed"
+gText_MatchCallPkmnBreeder_Isaac_Intro2,going after SHOWCASE titles.,reviewed AUTO draft
+gText_MatchCallPkmnBreeder_Gabrielle_Strategy,I raise COMPANIONS with care.,reviewed AUTO draft
+gText_MatchCallPkmnBreeder_Gabrielle_Pokemon,Fun-to-raise COMPANIONS.,reviewed AUTO draft
+gText_MatchCallPkmnBreeder_Gabrielle_Intro1,Treat every COMPANION you,reviewed AUTO draft
+gText_MatchCallPkmnBreeder_Gabrielle_Intro2,meet with respect.,"reviewed, no change needed"
+gText_MatchCallPkmnRanger_Catherine_Strategy,I believe in my COMPANION.,reviewed AUTO draft
+gText_MatchCallPkmnRanger_Catherine_Pokemon,I like strong COMPANIONS.,reviewed AUTO draft
+gText_MatchCallPkmnRanger_Catherine_Intro1,I'm training for rescue,"reviewed, no change needed"
+gText_MatchCallPkmnRanger_Catherine_Intro2,work with my COMPANION.,reviewed AUTO draft
+gText_MatchCallPkmnRanger_Jackson_Strategy,Attack in waves!,"reviewed, no change needed"
+gText_MatchCallPkmnRanger_Jackson_Pokemon,I use different types.,"reviewed, no change needed"
+gText_MatchCallPkmnRanger_Jackson_Intro1,Those who destroy nature,"reviewed, no change needed"
+gText_MatchCallPkmnRanger_Jackson_Intro2,must never be forgiven!,"reviewed, no change needed"
+gText_MatchCallLass_Haley_Strategy,I'll show you some guts!,"reviewed, no change needed"
+gText_MatchCallLass_Haley_Pokemon,Cute COMPANIONS are my faves!,reviewed AUTO draft
+gText_MatchCallLass_Haley_Intro1,"After a battle, I always","reviewed, no change needed"
+gText_MatchCallLass_Haley_Intro2,bathe with my COMPANION.,reviewed AUTO draft
+gText_MatchCallBugCatcher_James_Strategy,Lightning-fast attack!,"reviewed, no change needed"
+gText_MatchCallBugCatcher_James_Pokemon,BUG COMPANIONS are number 1!,reviewed AUTO draft
+gText_MatchCallBugCatcher_James_Intro1,If you want to catch BUG,"reviewed, no change needed"
+gText_MatchCallBugCatcher_James_Intro2,"COMPANION, wake up early.",reviewed AUTO draft
+gText_MatchCallHiker_Trent_Strategy,I battle with power.,"reviewed, no change needed"
+gText_MatchCallHiker_Trent_Pokemon,Hard-bodied COMPANION.,reviewed AUTO draft
+gText_MatchCallHiker_Trent_Intro1,I've been planning a month,"reviewed, no change needed"
+gText_MatchCallHiker_Trent_Intro2,for today's hike.,"reviewed, no change needed"
+gText_MatchCallHiker_Sawyer_Strategy,I like it hot!,"reviewed, no change needed"
+gText_MatchCallHiker_Sawyer_Pokemon,Hot COMPANION!,reviewed AUTO draft
+gText_MatchCallHiker_Sawyer_Intro1,"As much as I love COMPANIONS,",reviewed AUTO draft
+gText_MatchCallHiker_Sawyer_Intro2,I surely like hiking!,"reviewed, no change needed"
+gText_MatchCallYoungCouple_LoisAndHal_Strategy,Lovey-dovey strategy!,"reviewed, no change needed"
+gText_MatchCallYoungCouple_LoisAndHal_Pokemon,Lovey-dovey COMPANION!,reviewed AUTO draft
+gText_MatchCallYoungCouple_LoisAndHal_Intro1,We're lovey-dovey!,"reviewed, no change needed"
+gText_MatchCallYoungCouple_LoisAndHal_Intro2,Forever lovey-dovey!,"reviewed, no change needed"
+gText_MatchCallPkmnTrainer_Wally_Strategy,We let it all hang out.,"reviewed, no change needed"
+gText_MatchCallPkmnTrainer_Wally_Pokemon,The 1st COMPANION I caught.,reviewed AUTO draft
+gText_MatchCallPkmnTrainer_Wally_Intro1,COMPANION and I have grown,reviewed AUTO draft
+gText_MatchCallPkmnTrainer_Wally_Intro2,stronger together.,"reviewed, no change needed"
+gText_MatchCallRockinWhiz_Roxanne_Strategy,ROCK-type power attack.,"reviewed, no change needed"
+gText_MatchCallRockinWhiz_Roxanne_Pokemon,I prefer rock-hard COMPANION.,reviewed AUTO draft
+gText_MatchCallRockinWhiz_Roxanne_Intro1,A LEADER of a big ARENA bears,reviewed AUTO draft
+gText_MatchCallRockinWhiz_Roxanne_Intro2,a lot of responsibility.,"reviewed, no change needed"
+gText_MatchCallTheBigHit_Brawly_Strategy,Direct physical action!,"reviewed, no change needed"
+gText_MatchCallTheBigHit_Brawly_Pokemon,FIGHTING COMPANIONS rule!,reviewed AUTO draft
+gText_MatchCallTheBigHit_Brawly_Intro1,The world awaits me as the,"reviewed, no change needed"
+gText_MatchCallTheBigHit_Brawly_Intro2,next big wave!,"reviewed, no change needed"
+gText_MatchCallSwellShock_Wattson_Strategy,I choose to electrify.,"reviewed, no change needed"
+gText_MatchCallSwellShock_Wattson_Pokemon,Get shocked by electricity!,"reviewed, no change needed"
+gText_MatchCallSwellShock_Wattson_Intro1,One must never throw a,"reviewed, no change needed"
+gText_MatchCallSwellShock_Wattson_Intro2,match. Even I must not.,"reviewed, no change needed"
+gText_MatchCallPassionBurn_Flannery_Strategy,Battle aggressively.,"reviewed, no change needed"
+gText_MatchCallPassionBurn_Flannery_Pokemon,Burn with passion!,"reviewed, no change needed"
+gText_MatchCallPassionBurn_Flannery_Intro1,Completely wash away daily,"reviewed, no change needed"
+gText_MatchCallPassionBurn_Flannery_Intro2,fatigue in hot springs!,"reviewed, no change needed"
+gText_MatchCallReliableOne_Dad_Strategy,I flexibly adapt my style.,"reviewed, no change needed"
+gText_MatchCallReliableOne_Dad_Pokemon,Grown in a balanced manner.,"reviewed, no change needed"
+gText_MatchCallReliableOne_Dad_Intro1,I walk the 30 minutes from,"reviewed, no change needed"
+gText_MatchCallReliableOne_Dad_Intro2,home to here every day.,"reviewed, no change needed"
+gText_MatchCallSkyTamer_Winona_Strategy,I take advantage of speed.,"reviewed, no change needed"
+gText_MatchCallSkyTamer_Winona_Pokemon,Graceful sky dancers.,"reviewed, no change needed"
+gText_MatchCallSkyTamer_Winona_Intro1,The ultimate would be to,"reviewed, no change needed"
+gText_MatchCallSkyTamer_Winona_Intro2,live as one with nature.,"reviewed, no change needed"
+gText_MatchCallMysticDuo_TateAndLiza_Strategy,We battle in cooperation.,"reviewed, no change needed"
+gText_MatchCallMysticDuo_TateAndLiza_Pokemon,Always friendly COMPANION.,reviewed AUTO draft
+gText_MatchCallMysticDuo_TateAndLiza_Intro1,Papa has trouble telling,"reviewed, no change needed"
+gText_MatchCallMysticDuo_TateAndLiza_Intro2,the two of us apart!,"reviewed, no change needed"
+gText_MatchCallDandyCharm_Juan_Strategy,I use splendid waterpower.,"reviewed, no change needed"
+gText_MatchCallDandyCharm_Juan_Pokemon,COMPANION of elegance!,reviewed AUTO draft
+gText_MatchCallDandyCharm_Juan_Intro1,The adulation of beautiful,"reviewed, no change needed"
+gText_MatchCallDandyCharm_Juan_Intro2,ladies fills me with energy!,"reviewed, no change needed"
+gText_MatchCallEliteFour_Sidney_Strategy,Offense over defense!,"reviewed, no change needed"
+gText_MatchCallEliteFour_Sidney_Pokemon,The DARK side's beauties.,"reviewed, no change needed"
+gText_MatchCallEliteFour_Sidney_Intro1,"They said I was a punk, but","reviewed, no change needed"
+gText_MatchCallEliteFour_Sidney_Intro2,I'm one of the FOUR TRIALS!,reviewed AUTO draft
+gText_MatchCallEliteFour_Phoebe_Strategy,Confuse and confound.,"reviewed, no change needed"
+gText_MatchCallEliteFour_Phoebe_Pokemon,There's nothing definite.,"reviewed, no change needed"
+gText_MatchCallEliteFour_Phoebe_Intro1,I wonder how my grandma at,"reviewed, no change needed"
+gText_MatchCallEliteFour_Phoebe_Intro2,JEDHA TEMPLE is doing?,reviewed AUTO draft
+gText_MatchCallEliteFour_Glacia_Strategy,I use items for help.,"reviewed, no change needed"
+gText_MatchCallEliteFour_Glacia_Pokemon,Flaming passion in icy cold!,"reviewed, no change needed"
+gText_MatchCallEliteFour_Glacia_Intro1,The ICE type can be better,"reviewed, no change needed"
+gText_MatchCallEliteFour_Glacia_Intro2,trained in this hot land.,"reviewed, no change needed"
+gText_MatchCallEliteFour_Drake_Strategy,Harness strong abilities.,"reviewed, no change needed"
+gText_MatchCallEliteFour_Drake_Pokemon,The raw power of DRAGONS!,"reviewed, no change needed"
+gText_MatchCallEliteFour_Drake_Intro1,I dedicate myself to the,"reviewed, no change needed"
+gText_MatchCallEliteFour_Drake_Intro2,COMPANION that saved me.,reviewed AUTO draft
+gText_MatchCallChampion_Wallace_Strategy,Dignity and respect.,"reviewed, no change needed"
+gText_MatchCallChampion_Wallace_Pokemon,I prefer COMPANION of grace.,reviewed AUTO draft
+gText_MatchCallChampion_Wallace_Intro1,I represent beauty as,"reviewed, no change needed"
+gText_MatchCallChampion_Wallace_Intro2,well as intelligence.,"reviewed, no change needed"

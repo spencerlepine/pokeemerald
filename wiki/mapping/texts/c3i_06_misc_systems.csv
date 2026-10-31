@@ -1,0 +1,963 @@
+text_id,sw_text_raw,notes
+sCreditsText_PkmnEmeraldVersion,EMERALD SW VERSION,title line; the staff credits keep the real names
+sCreditsText_JapanBrailleLibrary,Japan Braille Library,
+MauvilleCity_PokemonCenter_1F_Text_BikeTradesTitle,The Speeder-Loving TRAINER$,
+MauvilleCity_PokemonCenter_1F_Text_BikeTradesAction,Traded bikes$,
+MauvilleCity_PokemonCenter_1F_Text_BikeTradesStory,This is a tale of a TRAINER\nnamed {STR_VAR_3}.\pThis TRAINER swapped bikes\n{STR_VAR_1} times!\p{STR_VAR_3} must love speeders deeply\nand passionately!$,
+MauvilleCity_PokemonCenter_1F_Text_EggsHatchedStory,This is a tale of a TRAINER\nnamed {STR_VAR_3}.\pThis TRAINER hatched {STR_VAR_1}\nCOMPANIONS from EGGS!\p{STR_VAR_3} is a legendary warmer\nof EGGS!$,
+MauvilleCity_PokemonCenter_1F_Text_SafariGamesStory,This is a tale of a TRAINER\nnamed {STR_VAR_3}.\pThis TRAINER went into the FELUCIA\nRESERVE {STR_VAR_1} times!\p{STR_VAR_3} is a TRAINER whose wild side\nmust come out in the FELUCIA RESERVE!$,
+MauvilleCity_PokemonCenter_1F_Text_TVWatchedStory,This is a tale of a TRAINER\nnamed {STR_VAR_3}.\pThis TRAINER watched the HOLONET\n{STR_VAR_1} times!\p{STR_VAR_3} must love the HOLONET!$,
+SlateportCity_BattleTentLobby_Text_HoldMonsForSafekeeping,"Okay, I will hold your COMPANIONS for\nsafekeeping while you compete.$",
+SlateportCity_BattleTentLobby_Text_ReturnRentalMonsSaveResults,Thank you for participating!\pI will return your COMPANIONS\nin exchange for our rental COMPANIONS.\pI must also save your event results.\nPlease wait.$,
+SlateportCity_BattleTentLobby_Text_ReturnMonsExchangeRentals,I will return your COMPANIONS\nin exchange for our rental COMPANIONS.$,
+SlateportCity_BattleTentLobby_Text_WonThreeMatchesReturnMons,Congratulations!\nYou've won three straight matches!\pI will return your COMPANIONS\nin exchange for our rental COMPANIONS.\pI must also save your event results.\nPlease wait.$,
+VerdanturfTown_BattleTentLobby_Text_ExplainNatureRules,"Depending on its nature, a COMPANION\nmay prefer to attack no matter what.\pAnother COMPANION may prefer to\nprotect itself from any harm.\pYet another may enjoy vexing or\nconfounding its foes.\pDepending on its nature, a COMPANION\nwill have favorite moves that it is good\lat using.\pIt may also dislike certain moves that\nit has trouble using.$",
+VerdanturfTown_BattleTentLobby_Text_ExplainUnderpoweredRules,"When not under command by its TRAINER,\na COMPANION may be unable to\leffectively use certain moves.\pA COMPANION is not good at using any\nmove that it dislikes.\pIf a COMPANION only knows moves that\ndo not match its nature, it will often\lbe unable to live up to its potential.$",
+BattleTentLobby_Text_ExplainLevelRules,"At this BATTLE TENT, the levels of\nyour opponents will be adjusted to\lmatch the levels of your COMPANIONS.\pHowever, no TRAINER you face will\nhave any COMPANION below Level 30.$",
+CableClub_Text_TradeUsingLinkCable,Trade COMPANIONS with another player\nusing a COMLINK cable.$,
+CableClub_Text_YouMayTradeHere,You may trade your COMPANIONS here\nwith another TRAINER.$,
+CableClub_Text_CantMixWithJapaneseGame,"Sorry, there is a transmission error.\pYou may not mix records with games\nfrom another region.$",English only: region lock text made generic
+CableClub_Text_ExplainWirelessClubFirstTime,"On the top floor, there are two\nrooms.\pFirst, the room on the left.\nIt's the UNION ROOM.\pYou may link up with TRAINERS\naround you who have also entered\lthe UNION ROOM.\pWith them, you may do things like\nchat, battle, and trade.\pSecond, the room on the right is\nthe DIRECT CORNER.\pYou may trade or battle COMPANIONS\nwith your friends in this room.\pIf the wireless COMLINK isn't\nconnected, you may still link up\lusing a COMLINK cable.\pIf that is the case, you must go\nto the DIRECT CORNER.\pI hope you enjoy the COMLINK\nNetwork.$",
+CableClub_Text_ExplainWirelessClub,"Let me explain how the HOLONET\nCLUB works.\pOn this, the top floor, there are\ntwo rooms.\pFirst, the room on the left.\nIt's the UNION ROOM.\pYou may link up with TRAINERS\naround you who have also entered\lthe UNION ROOM.\pWith them, you may do things like\nchat, battle, and trade.\pSecond, the room on the right is\nthe DIRECT CORNER.\pYou may trade or battle COMPANIONS\nwith your friends in this room.\pSometimes, you may not be able to\nfind your friends in the UNION ROOM\lor the DIRECT CORNER.\pIn that case, please move closer\nto your friends.\pIf the wireless COMLINK isn't\nconnected, you may still link up\lusing a COMLINK cable.\pIf that is the case, you must go\nto the DIRECT CORNER.\pI hope you enjoy the COMLINK\nNetwork.$",
+MossdeepCity_GameCorner_1F_Text_OnlyDodrioAllowed,KAADULORD FRUIT-PICKING is a game\nthat only KAADULORD may enter.$,
+EventTicket_Text_BrineyLetsSail,"{PLAYER}{KUN}, I'm terribly sorry.\pYou came to me seeking my help,\nand we almost turned you away.\pWell, let me make things right.\pWe'll fly right away, of course!\pLet's find this isle on\nthis WELLSPRING MAP!$",
+EventTicket_Text_OddTicketGetOnBoard,"Is it you who brought that odd\nPASS?\pWhere you're trying to go is an isle\nthat's far, far out past the charts.\pNo one knows what awaits there…\pThe very thought gets my blood going\nas a pilot!\pGet on board, kid!$","Briney -> Captain Han (pilot, says 'kid')"
+EventTicket_Text_OddTicketsWhereTo,"Is it you who brought those\nodd PASSES?\p… … …Hm.\pThese PASSES will get you to places\nfar out past the charts.\pNo one knows what awaits there,\nor what may happen there.\pThe very thought gets my blood going\nas a pilot!\pGet on board, kid!\nWhere do we fly first?$",
+BirthIsland_Harbor_Text_SailorReturn,"What an oddly shaped rock, eh?\nDo you want to return to CLOUD CITY?$",
+sText_AuroraTicketBagFull,"Oh, I'm sorry, {PLAYER}.\nYour BAG's KEY ITEMS POCKET is full.\pPlease store something in your\nTERMINAL, then come back for this.$",
+sText_MysticTicketBagFull,"Oh, I'm sorry, {PLAYER}.\nYour BAG's KEY ITEMS POCKET is full.\pPlease store something in your\nTERMINAL, then come back for this.$",
+sText_MysteryGiftOldSeaMapBagFull,"Oh, I'm sorry, {PLAYER}.\nYour BAG's KEY ITEMS POCKET is full.\pPlease store something in your\nTERMINAL, then come back for this.$",
+MauvilleCity_PokemonCenter_1F_Text_SendDecorToYourPC,Then we'll trade!\nI'll send my decoration to your\lTERMINAL.$,
+Text_PictureBookShelf,There's a set of COMPANION picture\nbooks.$,
+sText_BerryProgramWillBeUpdatedPressA,The FRUIT Program on your older\nversion will be updated.\n{COLOR RED}{SHADOW LIGHT_RED}Press the A Button.,
+sText_TurnOffPowerHoldingStartSelect,"Please turn on the power of the older\nversion while holding START and\nSELECT simultaneously. Then, ensure\nthe picture above appears.",
+sText_BerryProgramUpdate,FRUIT Program Update,
+InsideOfTruck_Text_BoxPrintedWithMonLogo,The box has a COMPANION logo on it.\pIt's a COMPANION brand moving and\ndelivery service.$,
+MauvilleCity_PokemonCenter_1F_Text_PokemonEvolvedStory,This is a tale of a TRAINER\nnamed {STR_VAR_3}.\pThis TRAINER made {STR_VAR_1}\nCOMPANIONS evolve!\p{STR_VAR_3} is the ultimate evolver\nof COMPANIONS!$,
+FallarborTown_BattleTentLobby_Text_ExplainFallarborTent,"In the INYUSU TOR BATTLE TENT,\nwe undertake the Set KO Tourney.\pAll participants enter with a team of\nthree COMPANIONS.\pThe three COMPANIONS must be lined up\nin the order that they are to appear in.\pIn battle, the COMPANIONS will appear\none at a time in the preset order.\pOnce a COMPANION enters battle, it must\nremain out until the match is decided.\pIf a match remains undecided in\nthree turns, it goes to judging.\pIf you wish to interrupt your challenge,\nplease save the game.\pIf you don't save, you will not be able\nto continue with your challenge.\pIf you pull off the feat of beating\nthree TRAINERS in succession,\lwe will present you with a fine prize.$",
+VerdanturfTown_BattleTentLobby_Text_ExplainVerdanturfTent,"In the ANCHORHEAD BATTLE TENT,\nthere is one crucial rule that must\lbe obeyed.\pTRAINERS are permitted only to switch\ntheir COMPANIONS in and out.\pTRAINERS are otherwise forbidden to\ncommand their COMPANIONS.\pThe COMPANIONS will behave according\nto their nature and battle on their own.\pYou must put your trust in your\nCOMPANIONS and watch over them.\pIf you achieve the honor of beating\nthree TRAINERS in succession,\lwe will present you with a prize.\pIf you want to interrupt your\nchallenge, please save the game.\pIf you don't save before interrupting,\nyou will be disqualified.$",
+VerdanturfTown_BattleTentLobby_Text_ExplainWhenInDangerRules,"Depending on its nature, a COMPANION\nmay start using moves that don't match\lits nature when it is in trouble.\pIf a COMPANION begins behaving oddly\nin a pinch, watch it carefully.$",
+LittlerootTown_Text_WaitPlayer,"MOM: Wait, {PLAYER}!$","reviewed, no change needed"
+LittlerootTown_Text_SwitchShoesWithRunningShoes,{PLAYER} switched shoes with the\nRUNNING SHOES.$,"reviewed, no change needed"
+LittlerootTown_Text_ExplainRunningShoes,"MOM: {PLAYER}, those shoes came with\ninstructions.\p“Press the B Button while wearing these\nRUNNING SHOES to run extra-fast!\p“Slip on these RUNNING SHOES and race\nin the great outdoors!”$","reviewed, no change needed"
+LittlerootTown_Text_PlayersHouse,{PLAYER}'s HOUSE$,"reviewed, no change needed"
+PlayersHouse_2F_Text_Notebook,{PLAYER} flipped open the notebook.\pADVENTURE RULE NO. 1\nOpen the MENU with START.\pADVENTURE RULE NO. 2\nRecord your progress with SAVE.\pThe remaining pages are blank…$,"reviewed, no change needed"
+RivalsHouse_1F_Text_OhYoureTheNewNeighbor,"Oh, hello. And you are?\p… … … … … … … … …\n… … … … … … … … …\pOh, you're {PLAYER}{KUN}, our new next-door\nneighbor! Hi!\pWe have a {STR_VAR_1} about the same\nage as you.\pOur {STR_VAR_1} was excited about making\na new friend.\pOur {STR_VAR_1} is upstairs, I think.$","reviewed, no change needed"
+RivalsHouse_1F_Text_WentOutToRoute103,"Oh, {RIVAL} went out to ROUTE 103\njust a little while ago.\pLike father, like child.\n{RIVAL} can't stay quietly at home.$","reviewed, no change needed"
+LittlerootTown_ProfessorBirchsLab_Text_OhYourBagsFull,Oh? Your BAG's full.$,"reviewed, no change needed"
+LittlerootTown_ProfessorBirchsLab_Text_HeyYourBagsFull,"Hey, your BAG's full.$","reviewed, no change needed"
+LittlerootTown_ProfessorBirchsLab_Text_SeriousLookingMachine,It's a serious-looking machine.\nThe PROF must use this for research.$,"reviewed, no change needed"
+LittlerootTown_ProfessorBirchsLab_Text_NicknameJohtoStarter,Want to give a nickname to\nthe {STR_VAR_1} you received?$,"reviewed, no change needed"
+Route101_Text_HelpMe,H-help me!$,"reviewed, no change needed"
+Route101_Text_DontLeaveMe,Wh-Where are you going?!\nDon't leave me like this!$,"reviewed, no change needed"
+BerryBlender_Text_WantToMakePokeblocks,Oh? Did you want to make some {POKEBLOCK}S\nwith this old-timer?$,"reviewed, no change needed"
+BerryBlender_Text_Excellent,Excellent!$,"reviewed, no change needed"
+BerryBlender_Text_MadeOldTimerSad,Oh…\nYou've made this old-timer sad…$,"reviewed, no change needed"
+BerryBlender_Text_KnowHowToMakePokeblocks,Do you know how to make a {POKEBLOCK}?$,"reviewed, no change needed"
+BerryBlender_Text_LetsBerryBlender,"Let's get started, then!\pLet's FRUIT BLENDER!$",reviewed AUTO draft
+BerryBlender_Text_ExplainBerryBlending,"Okay, a little explanation, then.\pOh, don't worry, it's quite simple.\pWhen the BLENDER's arrow comes to\nyour marker, just press the A Button.\pThat's all you have to do.\nYou'll see how easy it is when you try.$","reviewed, no change needed"
+BerryBlender_Text_DontHaveAnyBerries,"Oh?\nYou don't have any FRUIT?\pIf you don't have any FRUIT,\nyou can't make any {POKEBLOCK}S.$",reviewed AUTO draft
+BerryBlender_Text_CanHaveOneOfMyBerries,"Well, that won't do at all now, will it?\pIf you don't mind leftovers, you can\nhave one of my FRUIT.\pThat way, we could make some {POKEBLOCK}S\ntogether using the FRUIT BLENDER.$",reviewed AUTO draft
+BerryBlender_Text_DontHaveAnyBerriesToSpare,"If I had some FRUIT left over,\nI'd gladly give you one…\pBut, I don't have any to spare today.\nWe'll have to do this another time.$",reviewed AUTO draft
+BerryBlender_Text_PokeblockCaseIsFull,But your {POKEBLOCK} CASE is full.\pYou should use some {POKEBLOCK}S before\nyou come see me again.$,"reviewed, no change needed"
+BerryBlender_Text_DontHavePokeblockCase,But you don't have a {POKEBLOCK} CASE.\pYou should get a {POKEBLOCK} CASE and then\ncome see me.$,"reviewed, no change needed"
+BerryBlender_Text_LetsGetBlendingAlready,Let's get blending already!$,"reviewed, no change needed"
+BerryBlender_Text_WhatKindOfPokeblockWillIGet,I wonder what kind of {POKEBLOCK} I'll get?\nThis is so exciting!$,"reviewed, no change needed"
+BerryBlender_Text_WantToBlendPokeblocksWithUs,"Hi, there! Did you want to blend some\n{POKEBLOCK}S with us?$","reviewed, no change needed"
+BerryBlender_Text_Okay,Okay!$,"reviewed, no change needed"
+BerryBlender_Text_ThatsTooBad,That's too bad…\pBut we'll always be around whenever\nyou get the urge to blend!$,"reviewed, no change needed"
+BerryBlender_Text_KnowHowToMakePokeblocks2,"Of course, you do know how to\nblend {POKEBLOCK}S, don't you?$","reviewed, no change needed"
+BerryBlender_Text_LetsBerryBlender2,"Let's get started, then!\pLet's FRUIT BLENDER!$",reviewed AUTO draft
+BerryBlender_Text_ExplainBerryBlending2,"Okay!\nLet me explain it to you!\pWhen the spinning BLENDER's arrow\nreaches your marker, just press\lthe A Button.\pThat's all it takes.\nPretty easy, don't you think?$","reviewed, no change needed"
+BerryBlender_Text_DontHaveAnyBerries2,"Oh, but wait a second here…\nYou don't have any FRUIT.\pYou can't make any {POKEBLOCK}S without\nFRUIT…\pWe'll always be around whenever you\nget hold of some FRUIT to blend.$",reviewed AUTO draft
+BerryBlender_Text_PokeblockCaseIsFull2,"Oh, but wait a second here…\nYour {POKEBLOCK} CASE is full.\pYou should use some {POKEBLOCK}S and\nthen come back.$","reviewed, no change needed"
+BerryBlender_Text_DontHavePokeblockCase2,"Oh, but wait a second here…\nYou don't have a {POKEBLOCK} CASE.\pYou should get a {POKEBLOCK} CASE and\nthen come back.$","reviewed, no change needed"
+BerryBlender_Text_MakePokeblocksWithOurGroup,"Oh, hello! Did you want to make some\n{POKEBLOCK}S with our little group?$","reviewed, no change needed"
+BerryBlender_Text_OhDear,"Oh, dear!$","reviewed, no change needed"
+BerryBlender_Text_LeftUsInShock,"Oh, dear me…\pYou've left us in shock!$","reviewed, no change needed"
+BerryBlender_Text_KnowHowToMakePokeblocks3,"Naturally, you know how to make\n{POKEBLOCK}S, don't you?$","reviewed, no change needed"
+BerryBlender_Text_LetsBerryBlender3,"Okay, dear!\nLet's get started!\pLet's FRUIT BLENDER!$",reviewed AUTO draft
+BerryBlender_Text_ExplainBerryBlending3,"Oh, dear!\pThen, I'll explain it to you nicely.\pWhen the BLENDER's arrow spins to\nyour marker, press the A Button.\pThat's all it takes.\nIsn't it simple?$","reviewed, no change needed"
+BerryBlender_Text_DontHaveAnyBerries3,"You don't have any FRUIT,\ndo you?\pIf you don't have any FRUIT,\nyou can't make any {POKEBLOCK}S.\pWe'll always be making {POKEBLOCK}S here,\nso let's make some together when\lyou get a FRUIT or two.$",reviewed AUTO draft
+BerryBlender_Text_PokeblockCaseIsFull3,"Your {POKEBLOCK} CASE is full,\nit looks like.\pYou should use some {POKEBLOCK}S up\nand then come back.$","reviewed, no change needed"
+BerryBlender_Text_DontHavePokeblockCase3,"You haven't gotten a {POKEBLOCK} CASE\nyet, it looks like.\pYou need to get a {POKEBLOCK} CASE before\nyou come back.$","reviewed, no change needed"
+BerryBlender_Text_SetNewBlenderRecord,Okay! Today's going to be the day that\nI set a new BLENDER speed record!$,"reviewed, no change needed"
+BerryBlender_Text_LookGoodAtBlendingJoinUs,"Oh, dear!\nYou look as if you're good at blending.\lWould you like to join us?$","reviewed, no change needed"
+BerryBlender_Text_MakeDeliciousPokeblocks,I'm going to make delicious {POKEBLOCK}S\nand make my COMPANION cuter.$,reviewed AUTO draft
+BerryBlender_Text_SaveGameBeforeBerryBlenderLink,{POKEBLOCK}S will be made with your friends \nfrom FRUIT in the FRUIT BLENDER.\pIs it okay to save the game before\nlinking with your friends?$,reviewed AUTO draft
+BerryBlender_Text_SearchingForFriends,Searching for your friends…\n… … B Button: Cancel$,"reviewed, no change needed"
+BerryBlender_Text_Player1Arrived,{STR_VAR_1} arrived.$,"reviewed, no change needed"
+BerryBlender_Text_Player1And2Arrived,{STR_VAR_1} and {STR_VAR_2} arrived.$,"reviewed, no change needed"
+BerryBlender_Text_AllPlayersArrived,"{STR_VAR_1}, {STR_VAR_2}, and\n{STR_VAR_3} arrived.$","reviewed, no change needed"
+BerryBlender_Text_NoBerriesLink,You have no FRUIT.\nThe FRUIT BLENDER can't be used.$,reviewed AUTO draft
+BerryBlender_Text_PokeblockCaseIsFullLink,Your {POKEBLOCK} CASE is full.\nThe FRUIT BLENDER can't be used.$,reviewed AUTO draft
+BerryBlender_Text_DontHavePokeblockCaseLink,You don't have a {POKEBLOCK} CASE.\nThe FRUIT BLENDER can't be used.$,reviewed AUTO draft
+BerryBlender_Text_LoveMakingPokeblocks,I love making {POKEBLOCK}S.\pI always have some FRUIT with me.$,reviewed AUTO draft
+BerryBlender_Text_MakePokeblocksUsingBerryBlender,"If you'd like, we could make some\n{POKEBLOCK}S together using the\lFRUIT BLENDER.$",reviewed AUTO draft
+BerryBlender_Text_DontHaveAnyBerriesHaveOne,"Oh?\nYou don't have any FRUIT?\pWell, that won't do at all now, will it?\pIf you don't mind leftovers, you can\nhave one of my FRUIT.$",reviewed AUTO draft
+BerryBlender_Text_UseItToMakePokeblocksTogether,We'll use it to make {POKEBLOCK}S together\nusing the FRUIT BLENDER.$,reviewed AUTO draft
+BerryBlender_Text_DontHaveAnyBerriesNoneToSpare,"Oh?\nYou don't have any FRUIT?\pIf I had some left over, I'd gladly\ngive you one…\pBut, I don't have any to spare today.\nSorry about that.$",reviewed AUTO draft
+sText_MysteryGiftAlteringCave,Thank you for using the MYSTERY\nGIFT System.\pThere appears to be a rumor about\nrare COMPANIONS sightings.\pThe sightings reportedly came from\nthe ALTERING CAVE on ROUTE 103.\pPerhaps it would be worthwhile for\nyou to investigate this rumor.$,reviewed AUTO draft
+sText_AuroraTicketForYou,Thank you for using the MYSTERY\nGIFT System.\pYou must be {PLAYER}.\nThere is a ticket here for you.$,"reviewed, no change needed"
+sText_AuroraTicketUseAtPort,It appears to be for use at the\nCLOUD CITY port.\pWhy not give it a try and see what\nit is about?$,reviewed AUTO draft
+sText_AuroraTicketThankYou,Thank you for using the MYSTERY\nGIFT System.$,"reviewed, no change needed"
+sText_MysteryGiftBattleCountCard,Thank you for using the MYSTERY\nGIFT System.\pYour BATTLE COUNT CARD keeps\ntrack of your battle record against\lTRAINERS with the same CARD.\pLook for and battle TRAINERS who\nhave the same CARD as you.\pYou may check the overall rankings\nby reading the NEWS.\pPlease do give it a try!$,"reviewed, no change needed"
+sText_MysteryGiftBattleCountCard_WonPrize,Thank you for using the MYSTERY\nGIFT System.\pCongratulations!\pYou have won a prize for winning\nthree battles!\pWe hope you will be inspired to\nbattle some more.$,"reviewed, no change needed"
+sText_MysticTicketForYou,Thank you for using the MYSTERY\nGIFT System.\pYou must be {PLAYER}.\nThere is a ticket here for you.$,"reviewed, no change needed"
+sText_MysticTicketUseAtPort,It appears to be for use at the\nCLOUD CITY port.\pWhy not give it a try and see what\nit is about?$,reviewed AUTO draft
+sText_MysticTicketThankYou,Thank you for using the MYSTERY\nGIFT System.$,"reviewed, no change needed"
+sText_MysteryGiftOldSeaMapForYou,Thank you for using the MYSTERY\nGIFT System.\pLet me confirm--you are {PLAYER}?\pWe received this WELLSPRING MAP\naddressed to you.$,reviewed AUTO draft
+sText_MysteryGiftOldSeaMapUseAtPort,It appears to be for use at the\nCLOUD CITY port.\pWhy not give it a try and see what\nit is about?$,reviewed AUTO draft
+sText_MysteryGiftOldSeaMapThankYou,Thank you for using the MYSTERY\nGIFT System.$,"reviewed, no change needed"
+sText_MysteryGiftEgg,Thank you for using the MYSTERY\nGIFT System.\pFrom the BACTA CENTER we\nhave a gift--a COMPANION EGG!\pPlease raise it with love and\nkindness.$,reviewed AUTO draft
+sText_FullParty,"Oh, your party appears to be full.\pPlease come see me after storing\na COMPANION on a TERMINAL.$",reviewed AUTO draft
+sText_MysteryGiftStampCard,Thank you for using the STAMP CARD\nSystem.\pYou have {STR_VAR_1} more to collect to\nfill your STAMP CARD.$,"reviewed, no change needed"
+sText_MysteryGiftVisitingTrainerInstructions,"Thank you for using the MYSTERY\nGIFT System.\pBy holding this WONDER CARD, you\nmay take part in a survey at a\lSUPPLY DEPOT.\pUse these surveys to invite\nTRAINERS to DAGOBAH.\p…Let me give you a secret\npassword for a survey:\p“GIVE ME\nAWESOME TRAINER”\pWrite that in on a survey and send\nit to the WIRELESS\lCOMMUNICATION SYSTEM.$",reviewed AUTO draft
+sText_MysteryGiftVisitingTrainerArrived,Thank you for using the MYSTERY\nGIFT System.\pA TRAINER has arrived in\nDAGOBAH looking for you.\pWe hope you will enjoy\nbattling the visiting TRAINER.\pYou may invite other TRAINERS by\nentering other passwords.\pTry looking for other passwords\nthat may work.$,reviewed AUTO draft
+LilycoveCity_PokemonCenter_1F_Text_ImTheFavorLady,I'm the FAVOR LADY…$,"reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_ObsessedWithThing,I've recently developed an obsession\nfor {STR_VAR_1} things…$,"reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_ThankYouForLastTime,Oh…\nThank you for last time…$,"reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_PlayerGaveMeBadThing,"Before, I think it was {STR_VAR_3}…\p{STR_VAR_3} gave me one {STR_VAR_2},\nsaying it was {STR_VAR_1}.\pBut it wasn't {STR_VAR_1}.\nNot in the least bit.$","reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_PlayerGaveMeGreatThing,"Before, {STR_VAR_3} gave me a very\n{STR_VAR_1} {STR_VAR_2}.\pI cherish it now.$","reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_WillYouShareThing,"Listen, if you have anything that\nis {STR_VAR_1}, will you share it\lwith me?$","reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_WhatWillYouGiveMe,…Really?\nWhat will you give me?$,"reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_IsThatSoGoodbye,"Is that so?\nThen, it's good-bye…$","reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_NotWillingToShare,Oh…\nYou're not willing to share?$,"reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_IllTryToCherishIt,"Oh?\nThat {STR_VAR_2} is {STR_VAR_1}?\p…Oh, is that right?\pWell, I owe you a thanks anyway.\nI'll try to cherish it…$","reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_IWillCherishThis,Oh…\pThat's a quite {STR_VAR_1}\n{STR_VAR_2}…\pIsn't it nice?\nIt's so dreamy…\pThank you…\nI will cherish this…$,"reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_IWillTreasureThis,"…Oh, oh, oh…\pThis is amazing!\nThis really is {STR_VAR_1}!\pI never knew that one {STR_VAR_2}\ncould be this {STR_VAR_1}!\pThank you!\pI will treasure this for the rest\nof my life!$","reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_IllGiveYouThisInReturn,I'll give you this wonderful item in\nreturn for your fabulous gift.\pI hope you will cherish it…$,"reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_YouDontHaveSpaceForIt,"Oh, you can't have it if you don't have\nthe space for it.\pPlease come see me when you get\nyour BAG organized…$","reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_ImTheQuizLady,I'm the QUIZ LADY!\nI love quizzes!$,"reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_WaitingToTakeYourQuiz,"Oh?\pI'm waiting for a challenger to answer\nthe quiz you made.\pWe can chat another time, okay?$","reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_WaitingForChallenger,I'm waiting for someone to challenge\na quiz this {STR_VAR_1} thought up!$,"reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_TakeQuizChallenge,"If you answer correctly, you can win\nfabulous prizes!\pWould you like to take the quiz\nchallenge?$","reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_WaitForAnswer,… … … … … …\n… … … … … …$,"reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_HowBoringBye,"Oh, how boring!\nBye-bye!$","reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_YoureGoingToQuit,Awww!\nYou're going to quit?$,"reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_TakeTheQuizAnotherTime,Please take the quiz challenge\nanother time!$,"reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_YouGotItRight,You're amazing! You've got it right!\nYou're one sharp customer!$,"reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_YouGotItRightYouveWonPersonsPrize,Congratulations!\nYou've got the quiz right!\pYou've won a prize provided by\n{STR_VAR_1}!$,"reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_XReceivedOneY,{STR_VAR_1} received\none {STR_VAR_2}!$,"reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_YourBagIsFilledUp,Oh? Your BAG is filled up!\nCome see me when you have room.$,"reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_WrongTheCorrectAnswerIs,Hmm… Wrong!\nThe correct answer is “{STR_VAR_3}”!$,"reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_IGetToKeepPrize,Too bad!\pI get to keep the quiz prize\n{STR_VAR_1} now!$,"reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_MakeYourOwnQuiz,"Listen, listen!\nWould you like to make your own quiz?$","reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_MaybeNextTime,"Oh, I see…\nWell, maybe next time!$","reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_PickYourPrize,"Okay, the first thing you have to do\nis pick the prize for the person that\lanswers your quiz correctly.\pBut beware, if the person taking\nthe quiz can't get it right, I get to\lkeep the prize!$","reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_QuitChoosingPrize,"If you don't choose a prize,\nyour quiz can't be made.\pAre you going to quit making\nyour quiz?$","reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_WriteYourQuiz,"Oh, how nice!\nThat's a wonderful prize!\pNext, you need to write your quiz\nquestion and its answer.$","reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_QuitWritingQuizQuestion,Are you going to quit writing\nyour quiz question?$,"reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_QuitWritingQuizAnswer,Are you going to quit choosing\nyour quiz answer?$,"reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_IllLookForAChallenger,Thank you!\nYou've put together a nice quiz.\pI'll go look for someone who'll take\nyour quiz challenge right away.$,"reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_ImTheContestLady,I'm the SHOWCASE LADY!\nI sure do love SHOWCASES!$,reviewed AUTO draft
+LilycoveCity_PokemonCenter_1F_Text_ThankForPokeblock,Thanks for your {POKEBLOCK} before!$,"reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_MyFriendDisplaysQuality,This is my friend {STR_VAR_1}!\nIt's the epitome of {STR_VAR_2}!\pBut I think that it will display\neven more {STR_VAR_2}!$,"reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_DontHaveAPokeblockCase,"So, I need your help!\pPlease, may I have one {POKEBLOCK}?\nAll I'm asking for is one!\p…Oh, but…\nDon't you have a {POKEBLOCK} CASE?\lThat's no good. Next time, then!$","reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_AskingForOnePokeblock,"So, I need your help!\pPlease, may I have one {POKEBLOCK}?\nAll I'm asking for is one!$","reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_ICantHaveOnePokeblock,Awww!\nI can't have one {POKEBLOCK}?!$,"reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_WhatACheapskate,Sheesh!\nWhat a cheapskate!$,"reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_IllUseYourPokeblock,Yay!\nThank you!\pI'll feed my COMPANION your {POKEBLOCK}\nright away.$,reviewed AUTO draft
+LilycoveCity_PokemonCenter_1F_Text_NoChangeThanks,"…It doesn't seem to have changed\nin any way at all…\pHmm…\pOh, well!\nThank you very much!$","reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_ReallyImprovedThanks,"Oh, yay!\nIt's really delighted!\pI think it really improved {STR_VAR_1}'s\n{STR_VAR_2} quality, too.\pThank you so much!$","reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_ReadyToEnterContests,"Hmm…\pI think we may be ready to enter\nsome SHOWCASES.\pIf you see us in one somewhere,\nI hope you'll cheer for us.$",reviewed AUTO draft
+LilycoveCity_PokemonCenter_1F_Text_Zigzagoon,{STR_VAR_1}: Guguuh!$,"reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_Kecleon,{STR_VAR_1}: Igigigiiih!$,"reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_Poochyena,{STR_VAR_1}: Baaarun…$,"reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_Pikachu,{STR_VAR_1}: Pikka!$,"reviewed, no change needed"
+LilycoveCity_PokemonCenter_1F_Text_Skitty,{STR_VAR_1}: Umyaaaan!$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_WantToTradeDecor,"Hi, I'm the TRADER.\nWant to trade decorations with me?$","reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_TraderFeelingTheBlues,Oh…\nYou've left me feeling the blues…$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_WeveAlreadyTraded,"But we've traded decorations already,\nyou and I.$","reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_PickADecorItem,"If you see any decorative item that\nyou want of mine, speak up.$","reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_YouDontWantAnything,You don't want anything?\nI feel unwanted…$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_OnceBelongedToPlayerDoYouWantIt,That decorative item once belonged\nto {STR_VAR_1}.\pDo you want it?$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_YouDontHaveAnyDecor,Uh… Wait a second. You don't have a\nsingle piece of decoration!$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_PickTheDecorToTrade,"Okay, pick the decoration that you'll\ntrade to me.$","reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_YouDontWantToTrade,You won't trade with me?\nI feel unwanted…$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_YouveNoRoomForThis,You've got all the {STR_VAR_2}S that can\nbe stored. You've no room for this.$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_SoWellTradeTheseDecor,"Okay, so we'll trade my {STR_VAR_3}\nfor your {STR_VAR_2}?$","reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_ThatDecorIsInUse,That piece of decoration is in use.\nYou can't trade it.$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_CantTradeThatOne,Oops! Sorry! That's a really rare\npiece of decoration.\lI can't trade that one away!\pCan I interest you in something else?$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_WillYouHearMyTale,I'm the STORYTELLER.\nI'll tell you tales of legendary\lTRAINERS.\pWill you hear my tale?$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_StorytellerFeelingTheBlues,Oh…\nYou've left me feeling the blues…$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_WhichTaleToTell,I know of these legends.\nWhich tale will you have me tell?$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_IKnowNoTales,"But, I know of no legendary TRAINERS.\nHence, I know no tales.\pWhere does one find a TRAINER worthy\nof a legendary tale?$","reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_YouDidStatXTimes,What's that?!\nYou… You…\p{STR_VAR_2}\n{STR_VAR_1} time(s)?!\pThat is indeed magnificent!\nIt's the birth of a new legend!$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_CouldThereBeOtherLegends,"It gets me thinking, could there be\nother TRAINERS with more impressive\llegends awaiting discovery?$","reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_HaveYouAnyLegendaryTales,"Are you a TRAINER?\pThen tell me, have you any tales that\nare even remotely legendary?$","reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_HearAnotherLegendaryTale,Incidentally… Would you care to hear\nanother legendary tale?$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_NotWorthyOfLegend,Hmm…\nI'm not satisfied…\pI wish you would bring me news worthy\nof being called a legend.$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_IWishMorePeopleWereInterested,I wish more people would be interested\nin hearing my epic tales of legendary\lTRAINERS.$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_SavedGameTitle,The Save-Happy TRAINER$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_SavedGameAction,Saved the game$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_SavedGameStory,This is a tale of a TRAINER\nnamed {STR_VAR_3}.\pThis TRAINER saved the game\n{STR_VAR_1} times!\pA more cautious TRAINER than\n{STR_VAR_3} one will never find!$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_TrendsStartedTitle,The Trendsetter TRAINER$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_TrendsStartedAction,Started trends$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_TrendsStartedStory,This is a tale of a TRAINER\nnamed {STR_VAR_3}.\pThis TRAINER started new trends\n{STR_VAR_1} times!\p{STR_VAR_3} is setting trends for all\nthe OUTER RIM region!$,reviewed AUTO draft
+MauvilleCity_PokemonCenter_1F_Text_BerriesPlantedTitle,The FRUIT-Planting TRAINER$,reviewed AUTO draft
+MauvilleCity_PokemonCenter_1F_Text_BerriesPlantedAction,Planted FRUIT$,reviewed AUTO draft
+MauvilleCity_PokemonCenter_1F_Text_BerriesPlantedStory,This is a tale of a TRAINER\nnamed {STR_VAR_3}.\pThis TRAINER planted FRUIT\n{STR_VAR_1} times!\p{STR_VAR_3} is a legendary lover of\nFRUIT!$,reviewed AUTO draft
+MauvilleCity_PokemonCenter_1F_Text_InterviewsTitle,The Interviewed TRAINER$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_InterviewsAction,Got interviewed$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_InterviewsStory,This is a tale of a TRAINER\nnamed {STR_VAR_3}.\pThis TRAINER got interviewed\n{STR_VAR_1} times!\p{STR_VAR_3} must be a TRAINER who's\nattracting much attention!$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_TrainerBattlesTitle,The Battle-Happy TRAINER$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_TrainerBattlesAction,Battled$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_TrainerBattlesStory,This is a tale of a TRAINER\nnamed {STR_VAR_3}.\pThis TRAINER battled {STR_VAR_1} times!\p{STR_VAR_3} must be a TRAINER who can\nnever refuse a chance to battle!$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_PokemonCaughtTitle,The COMPANION-Catching TRAINER$,reviewed AUTO draft
+MauvilleCity_PokemonCenter_1F_Text_PokemonCaughtAction,Caught COMPANION$,reviewed AUTO draft
+MauvilleCity_PokemonCenter_1F_Text_PokemonCaughtStory,This is a tale of a TRAINER\nnamed {STR_VAR_3}.\pThis TRAINER caught\n{STR_VAR_1} COMPANION!\p{STR_VAR_3} is a legendary catcher of\nwild COMPANIONS!$,reviewed AUTO draft
+MauvilleCity_PokemonCenter_1F_Text_FishingPokemonCaughtTitle,The Fishing TRAINER$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_FishingPokemonCaughtAction,Caught COMPANION with a ROD$,reviewed AUTO draft
+MauvilleCity_PokemonCenter_1F_Text_FishingPokemonCaughtStory,This is a tale of a TRAINER\nnamed {STR_VAR_3}.\pThis TRAINER caught\n{STR_VAR_1} COMPANION while fishing!\p{STR_VAR_3} is a legendary fishing\nexpert!$,reviewed AUTO draft
+MauvilleCity_PokemonCenter_1F_Text_EggsHatchedTitle,The EGG-Warming TRAINER$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_EggsHatchedAction,Hatched EGGS$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_PokemonEvolvedTitle,The Evolver TRAINER$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_PokemonEvolvedAction,Evolved COMPANION$,reviewed AUTO draft
+MauvilleCity_PokemonCenter_1F_Text_UsedPokemonCenterTitle,The BACTA CENTER-Loving TRAINER$,reviewed AUTO draft
+MauvilleCity_PokemonCenter_1F_Text_UsedPokemonCenterAction,Used BACTA CENTERS$,reviewed AUTO draft
+MauvilleCity_PokemonCenter_1F_Text_UsedPokemonCenterStory,This is a tale of a TRAINER\nnamed {STR_VAR_3}.\pThis TRAINER healed COMPANION\n{STR_VAR_1} times at BACTA CENTERS!\pThere could be no greater lover of\nBACTA CENTERS than {STR_VAR_3}!$,reviewed AUTO draft
+MauvilleCity_PokemonCenter_1F_Text_RestedAtHomeTitle,The Homebody TRAINER$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_RestedAtHomeAction,Rested COMPANION at home$,reviewed AUTO draft
+MauvilleCity_PokemonCenter_1F_Text_RestedAtHomeStory,This is a tale of a TRAINER\nnamed {STR_VAR_3}.\pThis TRAINER healed COMPANION\n{STR_VAR_1} times at home!\pThere could be no more of a homebody\nthan {STR_VAR_3}!$,reviewed AUTO draft
+MauvilleCity_PokemonCenter_1F_Text_SafariGamesTitle,The SAFARI-Loving TRAINER$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_SafariGamesAction,Entered the FELUCIA RESERVE$,reviewed AUTO draft
+MauvilleCity_PokemonCenter_1F_Text_UsedCutTitle,The VIBROBLADE-Frenzy TRAINER$,reviewed AUTO draft
+MauvilleCity_PokemonCenter_1F_Text_UsedCutAction,Used VIBROBLADE$,reviewed AUTO draft
+MauvilleCity_PokemonCenter_1F_Text_UsedCutStory,This is a tale of a TRAINER\nnamed {STR_VAR_3}.\pThis TRAINER used VIBROBLADE\n{STR_VAR_1} times!\p{STR_VAR_3} is a TRAINER who just must\nlove to VIBROBLADE!$,reviewed AUTO draft
+MauvilleCity_PokemonCenter_1F_Text_UsedRockSmashTitle,The ROCK-SMASHING TRAINER$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_UsedRockSmashAction,Smashed rocks$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_UsedRockSmashStory,This is a tale of a TRAINER\nnamed {STR_VAR_3}.\pThis TRAINER used ROCK SMASH\n{STR_VAR_1} times!\p{STR_VAR_3} must be a TRAINER who\ncan't leave a stone unsmashed!$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_MovedBasesTitle,The Move-Loving TRAINER$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_MovedBasesAction,Moved the HIDEOUT$,reviewed AUTO draft
+MauvilleCity_PokemonCenter_1F_Text_MovedBasesStory,This is a tale of a TRAINER\nnamed {STR_VAR_3}.\pThis TRAINER moved the HIDEOUT\n{STR_VAR_1} times!\p{STR_VAR_3} is a TRAINER who loves\nto move houses often!$,reviewed AUTO draft
+MauvilleCity_PokemonCenter_1F_Text_UsedSplashTitle,The SPLASH-Happy TRAINER$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_UsedSplashAction,Used SPLASH$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_UsedSplashStory,This is a tale of a TRAINER\nnamed {STR_VAR_3}.\pThis TRAINER used SPLASH\n{STR_VAR_1} times!\p{STR_VAR_3} is a TRAINER who must love\nSPLASHING around!$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_UsedStruggleTitle,The Tenacious TRAINER$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_UsedStruggleAction,Resorted to using STRUGGLE$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_UsedStruggleStory,This is a tale of a TRAINER\nnamed {STR_VAR_3}.\pThis TRAINER had to rely on STRUGGLE\n{STR_VAR_1} times!\p{STR_VAR_3} is a tenacious TRAINER\nwho never gives in to adversity!$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_SlotJackpotsTitle,The SLOT Champ$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_SlotJackpotsAction,Won the jackpot on the SLOTS$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_SlotJackpotsStory,This is a tale of a TRAINER\nnamed {STR_VAR_3}.\pThis TRAINER won the jackpot on\nthe SLOTS {STR_VAR_1} times.\p{STR_VAR_3} is a TRAINER who was lucky\non the SLOTS!$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_RouletteWinsTitle,The ROULETTE Champ$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_RouletteWinsAction,Had consecutive ROULETTE wins of$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_RouletteWinsStory,This is a tale of a TRAINER\nnamed {STR_VAR_3}.\pThis TRAINER won in ROULETTE\n{STR_VAR_1} times in a row.\p{STR_VAR_3} was lucky when the ball\nbounced in ROULETTE!$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_BattleTowerChallengesTitle,The BATTLE TOWER Challenger$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_BattleTowerChallengesAction,Took the BATTLE TOWER challenge$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_BattleTowerChallengesStory,This is a tale of a TRAINER\nnamed {STR_VAR_3}.\pThis TRAINER took the BATTLE TOWER\nchallenge {STR_VAR_1} times!\p{STR_VAR_3} is a TRAINER who aspires\nfor excellence in the BATTLE TOWER!$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_MadePokeblocksTitle,The Blend-Loving TRAINER$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_MadePokeblocksAction,Made {POKEBLOCK}S$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_MadePokeblocksStory,This is a tale of a TRAINER\nnamed {STR_VAR_3}.\pThis TRAINER made {POKEBLOCK}S\n{STR_VAR_1} times!\pThere is none better at using a FRUIT\nBLENDER than {STR_VAR_3}!$,reviewed AUTO draft
+MauvilleCity_PokemonCenter_1F_Text_EnteredContestsTitle,The SHOWCASE-Loving TRAINER$,reviewed AUTO draft
+MauvilleCity_PokemonCenter_1F_Text_EnteredContestsAction,Entered SHOWCASES$,reviewed AUTO draft
+MauvilleCity_PokemonCenter_1F_Text_EnteredContestsStory,This is a tale of a TRAINER\nnamed {STR_VAR_3}.\pThis TRAINER entered SHOWCASES\n{STR_VAR_1} times!\p{STR_VAR_3} must love showing off\nCOMPANION to others!$,reviewed AUTO draft
+MauvilleCity_PokemonCenter_1F_Text_WonContestsTitle,The SHOWCASE Master$,reviewed AUTO draft
+MauvilleCity_PokemonCenter_1F_Text_WonContestsAction,Won SHOWCASES$,reviewed AUTO draft
+MauvilleCity_PokemonCenter_1F_Text_WonContestsStory,This is a tale of a TRAINER\nnamed {STR_VAR_3}.\pThis TRAINER won SHOWCASES\n{STR_VAR_1} times!\p{STR_VAR_3} must be an incredible\nSHOWCASE master!$,reviewed AUTO draft
+MauvilleCity_PokemonCenter_1F_Text_TimesShoppedTitle,The Happy Shopper$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_TimesShoppedAction,Shopped$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_TimesShoppedStory,This is a tale of a TRAINER\nnamed {STR_VAR_3}.\pThis TRAINER bought items in shops\n{STR_VAR_1} times!\p{STR_VAR_3} must be one of those\npeople who are born to shop.$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_UsedItemFinderTitle,The Item-Finding TRAINER$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_UsedItemFinderAction,Used a SCANNER$,reviewed AUTO draft
+MauvilleCity_PokemonCenter_1F_Text_UsedItemFinderStory,This is a tale of a TRAINER\nnamed {STR_VAR_3}.\pThis TRAINER used a SCANNER\n{STR_VAR_1} times!\p{STR_VAR_3} must enjoy scouring the\nground for hidden items!$,reviewed AUTO draft
+MauvilleCity_PokemonCenter_1F_Text_TimesRainedTitle,The Rain-Soaked TRAINER$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_TimesRainedAction,Got rained on$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_TimesRainedStory,This is a tale of a TRAINER\nnamed {STR_VAR_3}.\pThis TRAINER got soaked by rain\n{STR_VAR_1} times!\p{STR_VAR_3}'s charisma must even\nattract rain!$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_CheckedPokedexTitle,The Avid DATAPAD Reader$,reviewed AUTO draft
+MauvilleCity_PokemonCenter_1F_Text_CheckedPokedexAction,Checked a DATAPAD$,reviewed AUTO draft
+MauvilleCity_PokemonCenter_1F_Text_CheckedPokedexStory,This is a tale of a TRAINER\nnamed {STR_VAR_3}.\pThis TRAINER checked a DATAPAD\n{STR_VAR_1} times!\p{STR_VAR_3} must love inspecting\nCOMPANION in a DATAPAD!$,reviewed AUTO draft
+MauvilleCity_PokemonCenter_1F_Text_ReceivedRibbonsTitle,The RIBBON Collector$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_ReceivedRibbonsAction,Received RIBBONS$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_ReceivedRibbonsStory,This is a tale of a TRAINER\nnamed {STR_VAR_3}.\pThis TRAINER received RIBBONS\n{STR_VAR_1} times!\p{STR_VAR_3} must be a TRAINER who\nloves to collect RIBBONS!$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_LedgesJumpedTitle,The Ledge-Jumping TRAINER$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_LedgesJumpedAction,Jumped down ledges$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_LedgesJumpedStory,"This is a tale of a TRAINER\nnamed {STR_VAR_3}.\pThis TRAINER jumped down ledges\n{STR_VAR_1} times!\pIf there's a ledge to be jumped,\n{STR_VAR_3} can't ignore it!$","reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_TVWatchedTitle,The Legendary HOLONET Viewer$,reviewed AUTO draft
+MauvilleCity_PokemonCenter_1F_Text_TVWatchedAction,Watched HOLONET$,reviewed AUTO draft
+MauvilleCity_PokemonCenter_1F_Text_CheckedClockTitle,The Time-Conscious TRAINER$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_CheckedClockAction,Checked the time$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_CheckedClockStory,This is a tale of a TRAINER\nnamed {STR_VAR_3}.\pThis TRAINER checked the time\n{STR_VAR_1} times!\p{STR_VAR_3} must be a punctual TRAINER\nwho's conscious of the time.$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_WonLotteryTitle,The COMPANION LOTTERY Wizard$,reviewed AUTO draft
+MauvilleCity_PokemonCenter_1F_Text_WonLotteryAction,Won COMPANION LOTTERIES$,reviewed AUTO draft
+MauvilleCity_PokemonCenter_1F_Text_WonLotteryStory,This is a tale of a TRAINER\nnamed {STR_VAR_3}.\pThis TRAINER won COMPANION LOTTERIES\n{STR_VAR_1} times!\p{STR_VAR_3} must have many friends\nto trade COMPANIONS with!$,reviewed AUTO draft
+MauvilleCity_PokemonCenter_1F_Text_UsedDaycareTitle,The NURSERY-Using Trainer$,reviewed AUTO draft
+MauvilleCity_PokemonCenter_1F_Text_UsedDaycareAction,Left COMPANION at the NURSERY$,reviewed AUTO draft
+MauvilleCity_PokemonCenter_1F_Text_UsedDaycareStory,This is a tale of a TRAINER\nnamed {STR_VAR_3}.\pThis TRAINER left COMPANION with the\nNURSERY {STR_VAR_1} times!\p{STR_VAR_3} must be a real go-getter\nwho raises COMPANION aggressively!$,reviewed AUTO draft
+MauvilleCity_PokemonCenter_1F_Text_RodeCableCarTitle,The SHUTTLE-Loving TRAINER$,reviewed AUTO draft
+MauvilleCity_PokemonCenter_1F_Text_RodeCableCarAction,Rode the SHUTTLE$,reviewed AUTO draft
+MauvilleCity_PokemonCenter_1F_Text_RodeCableCarStory,This is a tale of a TRAINER\nnamed {STR_VAR_3}.\pThis TRAINER rode the SHUTTLE\n{STR_VAR_1} times!\p{STR_VAR_3} must be a busy TRAINER\nwho's up and down all the time!$,reviewed AUTO draft
+MauvilleCity_PokemonCenter_1F_Text_HotSpringsTitle,The Hot Spring-Loving TRAINER$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_HotSpringsAction,Bathed in hot springs$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_HotSpringsStory,This is a tale of a TRAINER\nnamed {STR_VAR_3}.\pThis TRAINER bathed in hot springs\n{STR_VAR_1} times!\p{STR_VAR_3} must be a TRAINER with\nbaby-smooth skin!$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_HearMyStory,I'm GIDDY!\nI have a scintillating story for you!\pWould you like to hear my story?$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_GiddyFeelingTheBlues,Oh…\nYou've left me feeling the blues…$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_AlsoIWasThinking,"Also, I was thinking…$","reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_WeShouldChatAgain,"That's about it, I think…\pWe should chat again!\nBye-bye!$","reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_WouldYouLikeToHearMySong,"Hi, I'm the BARD.\nWould you like to hear my song?$","reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_BardFeelingTheBlues1,Oh…\nYou've left me feeling the blues…$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_WishICouldPlaySongForOthers,"Oh, what a moving song…\nI wish I could play it for others…$","reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_WouldYouLikeToWriteSomeLyrics,So?\nHow do you like my song?\pBut I'm none too happy about\nthe lyrics.\pHow would you like to write some\nnew lyrics for me?$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_BardFeelingTheBlues2,Oh…\nYou've left me feeling the blues…$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_LetMeSingItForYou,Thank you kindly!\nLet me sing it for you.$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_ThatHowYouWantedSongToGo,Was that how you wanted your song\nto go?$,"reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_IllSingThisSongForAWhile,"Okay! That's it, then.\nI'll sing this song for a while.$","reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_TeachWhatsHipAndHappening,"Hey, yo! They call me the HIPSTER.\nI'll teach you what's hip and happening.$","reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_IAlreadyTaughtYou,"But, hey, I taught you what's hip and\nhappening already.\pI'd like to spread the good word to\nother folks.$","reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_IveGotNothingNewToTeach,"But, hey, you already know a lot about\nwhat's hip and happening.\pI've got nothing new to teach you!$","reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_HaveYouHeardOfWord,"Hey, have you heard about\n“{STR_VAR_1}”?\pWhat's it mean? Well…\nAsk your daddy or mommy, okay?$","reviewed, no change needed"
+Text_RepelWoreOff,REPULSOR's effect wore off…$,reviewed AUTO draft
+Route111_Text_MakingRoomUseTMToMakeYourOwn,What's that?\nWhat am I doing?\pI'm thinking about making my own room\nhere using a COMPANION move.\pI know! I'll give you this TM.\nWill you use it to make your own room?$,reviewed AUTO draft
+Route111_Text_ExplainSecretPower,"Find a big tree that looks like it might\ndrop some vines.\pUse SECRET POWER in front of the tree.\nSome vines should get free and drop\ldown, so you can climb the tree.\pYou'll find a lot of space for putting\nyour favorite things.\pIt'll be your own secret room…\nA HIDEOUT!\pYou should make one, too.\pAnother thing, you don't always have\nto make your HIDEOUT in a tree.\pTry using SECRET POWER on rock walls\nthat have small indents in them.\pI'm going to look for other places, too.\nOkay, bye!$",reviewed AUTO draft
+Route111_Text_DontWantThis,"Oh, you don't want this?\nIf you change your mind, tell me, okay?$","reviewed, no change needed"
+Route111_Text_DontHaveAnyRoom,"Oh, you don't have any room for this.\pI'll hold on to it, so come back for it\nanother time, okay?$","reviewed, no change needed"
+SecretBase_Text_SmallIndentInWall,There's a small indent in the wall.$,"reviewed, no change needed"
+SecretBase_Text_IndentUseSecretPower,There's a small indent in the wall.\pUse the SECRET POWER?$,"reviewed, no change needed"
+SecretBase_Text_DiscoveredSmallCavern,Discovered a small cavern!$,"reviewed, no change needed"
+SecretBase_Text_WantToMakeYourSecretBaseHere,Want to make your HIDEOUT here?$,reviewed AUTO draft
+Text_ThisIsATestSignpostMsg,This is a test message.\nThis is a signpost.$,"reviewed, no change needed"
+gText_AbnormalWeatherEnded_Rain,The massive downpour appears to\nhave stopped…$,"reviewed, no change needed"
+gText_AbnormalWeatherEnded_Sun,The intense sunshine appears to\nhave subsided…$,"reviewed, no change needed"
+FallarborTown_BattleTentLobby_Text_WelcomeToBattleTent,I welcome you to the BATTLE TENT\nINYUSU TOR SITE!\pI am your guide to the Set KO Tourney!$,reviewed AUTO draft
+FallarborTown_BattleTentLobby_Text_TakeChallenge,"Now, do you wish to take the challenge\nof a Set KO Tourney?$","reviewed, no change needed"
+FallarborTown_BattleTentLobby_Text_AwaitAnotherChallenge,We await your challenge on\nanother occasion!$,"reviewed, no change needed"
+FallarborTown_BattleTentLobby_Text_SaveBeforeChallenge,"Before showing you to the BATTLE\nTENT, I must save. Is that okay?$","reviewed, no change needed"
+FallarborTown_BattleTentLobby_Text_WhichLevelMode,"We offer two levels of challenge,\nLevel 50 and Open Level.\lWhich is your choice?$","reviewed, no change needed"
+FallarborTown_BattleTentLobby_Text_SelectThreeMons,"Very well, now select your\nthree COMPANION, please.$",reviewed AUTO draft
+FallarborTown_BattleTentLobby_Text_NotEnoughValidMonsLv50,"My dear challenger!\pYou do not have the three COMPANIONS\nrequired for entry.\pThey also must not hold the same\nkinds of items.\pEGGS{STR_VAR_1} ineligible.\pWhen you have made your preparations,\nplease do return.$",reviewed AUTO draft
+FallarborTown_BattleTentLobby_Text_NotEnoughValidMonsLvOpen,"My dear challenger!\pYou do not have the three COMPANIONS\nrequired for entry.\pTo qualify, you must bring three\ndifferent kinds of COMPANIONS.\pThey also must not hold the same\nkinds of items.\pEGGS{STR_VAR_1} ineligible.\pWhen you have made your preparations,\nplease do return.$",reviewed AUTO draft
+FallarborTown_BattleTentLobby_Text_GuideYouToBattleTent,I shall now guide you to\nthe BATTLE TENT.$,"reviewed, no change needed"
+FallarborTown_BattleTentLobby_Text_DidntSaveBeforeQuitting,"My dear challenger!\pYou did not save the game before\nshutting down, did you?\pIt is unfortunate, but that has\nresulted in your disqualification\lfrom your challenge.\pYou may, of course, start with a fresh\nchallenge.$","reviewed, no change needed"
+FallarborTown_BattleTentLobby_Text_BeatThreeTrainers,How splendid! You have beaten\nthree TRAINERS in succession!$,"reviewed, no change needed"
+FallarborTown_BattleTentLobby_Text_WaitWhileSaveGame,Please wait while I save the game.$,"reviewed, no change needed"
+FallarborTown_BattleTentLobby_Text_PresentYouWithPrize,"In commemoration of your 3-win streak,\nwe present you with this prize.$","reviewed, no change needed"
+FallarborTown_BattleTentLobby_Text_ReceivedPrize,{PLAYER} received the prize\n{STR_VAR_1}.$,"reviewed, no change needed"
+FallarborTown_BattleTentLobby_Text_BagFullReturnForPrize,Oh?\nYour BAG seems to be full.\pI urge you to clear space and\nreturn for your prize.$,"reviewed, no change needed"
+FallarborTown_BattleTentLobby_Text_ThankYouWaitWhileSaving,Thank you so much for participating!\pPlease wait while I save the game.$,"reviewed, no change needed"
+FallarborTown_BattleTentLobby_Text_AwaitAnotherChallenge2,We await your challenge on\nanother occasion!$,"reviewed, no change needed"
+FallarborTown_BattleTentLobby_Text_LookingForwardToArrival,"We have been looking forward to\nyour arrival.\pBefore I show you to the BATTLE TENT,\nI must save the game. Please wait.$","reviewed, no change needed"
+VerdanturfTown_BattleTentLobby_Text_WelcomeToBattleTent,"I welcome you to the BATTLE TENT\nANCHORHEAD SITE!\pHere, the TRAINER's trust toward\nCOMPANION is tested.$",reviewed AUTO draft
+VerdanturfTown_BattleTentLobby_Text_TakeChallenge,Do you wish to take the ANCHORHEAD\nBATTLE TENT challenge?$,reviewed AUTO draft
+VerdanturfTown_BattleTentLobby_Text_ReturnFortified,"When you have fortified your heart\nand COMPANION, you must return.$",reviewed AUTO draft
+VerdanturfTown_BattleTentLobby_Text_WhichLevelMode,"There are two levels of difficulty,\nLevel 50 and Open Level.\lWhich is your choice of a challenge?$","reviewed, no change needed"
+VerdanturfTown_BattleTentLobby_Text_NotEnoughValidMonsLv50,"Sigh…\pYou do not have the three COMPANIONS\nrequired for the challenge.\pTo enter, you must provide three\ndifferent kinds of COMPANIONS.\pThey also must not be holding\nthe same kinds of items.\pEGGS{STR_VAR_1} ineligible.\pCome back when you have made\nyour preparations.$",reviewed AUTO draft
+VerdanturfTown_BattleTentLobby_Text_NotEnoughValidMonsLvOpen,"Sigh…\pYou do not have the three COMPANIONS\nrequired for the challenge.\pTo enter, you must provide three\ndifferent kinds of COMPANIONS.\pThey also must not be holding\nthe same kinds of items.\pEGGS{STR_VAR_1} ineligible.\pCome back when you have made\nyour preparations.$",reviewed AUTO draft
+VerdanturfTown_BattleTentLobby_Text_SelectThreeMons,"Good. Now, you must select your\nthree COMPANION.$",reviewed AUTO draft
+VerdanturfTown_BattleTentLobby_Text_SaveBeforeChallenge,I must save before I show you to\nthe BATTLE TENT. Is that okay?$,"reviewed, no change needed"
+VerdanturfTown_BattleTentLobby_Text_NowFollowMe,"Good.\nNow, follow me.$","reviewed, no change needed"
+VerdanturfTown_BattleTentLobby_Text_ResultsWillBeRecorded,I feel privileged for having seen\nyour COMPANION's exploits.\pThe results will be recorded.\nI must ask you to briefly wait.$,reviewed AUTO draft
+VerdanturfTown_BattleTentLobby_Text_AchievedThreeWinStreak,To achieve a 3-win streak…\pThe bonds that bind your heart with\nyour COMPANIONS seem firm and true.$,reviewed AUTO draft
+VerdanturfTown_BattleTentLobby_Text_FeatWillBeRecorded,Your feat will be recorded.\nI must ask you to briefly wait.$,"reviewed, no change needed"
+VerdanturfTown_BattleTentLobby_Text_PresentYouWithPrize,"For the feat of your 3-win streak,\nwe present you with this prize.$","reviewed, no change needed"
+SlateportCity_BattleTentLobby_Text_WelcomeToBattleTent,Welcome to the BATTLE TENT\nMOS EISLEY SITE!\pI am your guide to the Battle Swap\nTournament.$,reviewed AUTO draft
+SlateportCity_BattleTentLobby_Text_TakeChallenge,Would you like to take the Battle\nSwap challenge?$,"reviewed, no change needed"
+SlateportCity_BattleTentLobby_Text_ExplainSlateportTent,"Here at the MOS EISLEY BATTLE TENT,\nwe hold Battle Swap events\lusing rental COMPANIONS.\pFirst, you will be loaned three\nCOMPANIONS specifically for this event.\pUsing the supplied rental COMPANION,\nyou must conduct a SINGLE BATTLE.\pIf you win, you are permitted to trade\none of your rental COMPANION.\pRepeat this cycle of battling and\ntrading--if you win three times in\la row, you will earn a fine prize.\pIf you want to interrupt your\nchallenge, please save the game.\pIf you don't save before interrupting,\nyou will be disqualified.$",reviewed AUTO draft
+SlateportCity_BattleTentLobby_Text_LookForwardToNextVisit,We look forward to your next visit.$,"reviewed, no change needed"
+SlateportCity_BattleTentLobby_Text_WhichLevelMode,Which level do you wish to challenge?\nLevel 50 or Level 100?$,"reviewed, no change needed"
+SlateportCity_BattleTentLobby_Text_SaveBeforeChallenge,"Before you begin your challenge,\nI need to save data. Is that okay?$","reviewed, no change needed"
+SlateportCity_BattleTentLobby_Text_StepThisWay,Please step this way.$,"reviewed, no change needed"
+SlateportCity_BattleTentLobby_Text_AwardYouThisPrize,"In recognition of your 3-win streak,\nwe award you this prize.$","reviewed, no change needed"
+SlateportCity_BattleTentLobby_Text_NoRoomInBagMakeRoom,Oh?\nYou seem to have no room for this.\pPlease make room in your BAG and\nlet me know.$,"reviewed, no change needed"
+SlateportCity_BattleTentLobby_Text_BeenWaitingForYou,"We've been waiting for you!\pBefore we resume your challenge,\nI must save the game.$","reviewed, no change needed"
+SlateportCity_BattleTentLobby_Text_DidntSaveBeforeQuitting,"I'm sorry to say this, but you didn't\nsave before you quit playing last time.\pAs a result, you have been disqualified\nfrom your challenge.$","reviewed, no change needed"
+SlateportCity_BattleTentLobby_Text_ReturnPersonalMons,We'll return your personal COMPANION.$,reviewed AUTO draft
+SlateportCity_BattleTentLobby_Text_ReceivedPrize,{PLAYER} received the prize\n{STR_VAR_1}.$,"reviewed, no change needed"
+SlateportCity_BattleTentLobby_Text_RulesAreListed,The Battle Swap rules are listed.$,"reviewed, no change needed"
+SlateportCity_BattleTentLobby_Text_ReadWhichHeading,Which heading do you want to read?$,"reviewed, no change needed"
+SlateportCity_BattleTentLobby_Text_ExplainBasicRules,"In a Battle Swap event, you may use\nonly three COMPANIONS.\pWhether you are renting or swapping,\nyour team may not have two or more\lof the same COMPANION.$",reviewed AUTO draft
+SlateportCity_BattleTentLobby_Text_ExplainSwapPartnerRules,You may swap COMPANION only with\nthe TRAINER you have just defeated.\pYou may swap for only those COMPANIONS\nused by the beaten TRAINER.$,reviewed AUTO draft
+SlateportCity_BattleTentLobby_Text_ExplainSwapNumberRules,"After every battle you win, you may\nswap for one of your defeated\lopponent's COMPANION.\pYou will not be able to swap COMPANION\nwith the third TRAINER in the event.$",reviewed AUTO draft
+SlateportCity_BattleTentLobby_Text_ExplainSwapNotes,"There are two key points to be aware\nof when swapping COMPANION.\pFirst, when swapping, you can't check\nthe stats of the COMPANION you are\labout to receive.\pSecond, the COMPANION on your team\nare lined up in sequence, depending on\lthe order in which you rented them.\pThis sequence remains unchanged\neven when swaps are made.$",reviewed AUTO draft
+SlateportCity_BattleTentLobby_Text_ExplainMonRules,The COMPANION of the MOS EISLEY\nBATTLE TENT are all rentals.\pAll rental COMPANIONS are kept at\nLevel 30.$,reviewed AUTO draft
+VerdanturfTown_BattleTentLobby_Text_RulesAreListed2,The ANCHORHEAD BATTLE TENT\nrules are listed.$,reviewed AUTO draft
+VerdanturfTown_BattleTentLobby_Text_ReadWhichHeading,Which heading do you want to read?$,"reviewed, no change needed"
+VerdanturfTown_BattleTentLobby_Text_ExplainBasicRules,"Here at the ANCHORHEAD BATTLE TENT,\nCOMPANIONS are required to think and\lbattle by themselves.\pUnlike in the wild, COMPANIONS that live\nwith people behave differently\ldepending on their nature.$",reviewed AUTO draft
+VerdanturfTown_BattleTentLobby_Text_ExplainMoveRules,There are offensive moves that inflict\ndirect damage on the foe.\pThere are defensive moves that are\nused to prepare for enemy attacks or\lused to heal HP and so on.\pThere are also other somewhat-odd\nmoves that may enfeeble the foes with\lstat problems including poison and \lparalysis.\pCOMPANION will consider using moves in\nthese three categories.$,reviewed AUTO draft
+VerdanturfTown_BattleTentLobby_Text_RulesAreListed,The ANCHORHEAD BATTLE TENT\nrules are listed.$,reviewed AUTO draft
+gText_Birch_AndYouAre,And you are?$,"reviewed, no change needed"
+gText_Birch_BoyOrGirl,Are you a boy?\nOr are you a girl?$,"reviewed, no change needed"
+gText_Birch_WhatsYourName,All right.\nWhat's your name?$,"reviewed, no change needed"
+gText_Birch_SoItsPlayer,So it's {PLAYER}{KUN}?$,"reviewed, no change needed"
+BerryBlender_Text_BlendWithTheBlendMaster,"BLEND MASTER: Indeed I am!\nThe BLEND MASTER am I!\pBlend with me, and you shall witness\nthe mastery I bring to blending!$","reviewed, no change needed"
+BerryBlender_Text_SeeMyMasteryInAction,"BLEND MASTER: Hmmm! So, you wish to\nsee my mastery in action?$","reviewed, no change needed"
+BerryBlender_Text_TooBusyNowIsee,"Hmmm!\pSo, you are too busy now, I see!\pBut fear not!\nI shall be here all day!\lHurry back from your errand!$","reviewed, no change needed"
+BerryBlender_Text_BlendMasterNoBerries,Hmmm!\pYou haven't got a single FRUIT!\pI shall be here all day!\nHurry back with some FRUIT!$,reviewed AUTO draft
+BerryBlender_Text_BlendMasterKnowHowToMakePokeblocks,Of course!\nOf course!\pIncidentally…\nYou do know how to blend {POKEBLOCK}S\lfrom FRUIT?$,reviewed AUTO draft
+BerryBlender_Text_BlendMasterExplainBerryBlending,"Hmmm!\pAh, but it is a simple process!\pWhen the BLENDER's arrow comes to\nyour marker, just press the A Button.\pThat's all you have to do.\pWhen you see how precisely I press\nthe A Button, you will understand.$","reviewed, no change needed"
+BerryBlender_Text_BlendMasterLetsBerryBlender,"Fine!\pLet's get started, then!\pAll together with the BLEND MASTER,\nlet's FRUIT BLENDER!$",reviewed AUTO draft
+BerryBlender_Text_BlendMasterNoPokeblockCase,Hmmm!\pYou don't appear to have gotten\nthe {POKEBLOCK} CASE!\pI shall be here all day!\nObtain the {POKEBLOCK} CASE and hurry back!$,"reviewed, no change needed"
+BerryBlender_Text_BlendMasterPokeblockCaseFull,Hmmm!\pYour {POKEBLOCK} CASE appears to be full!\pI shall be here all day!\nUse some {POKEBLOCK}S and hurry back!$,"reviewed, no change needed"
+BerryBlender_Text_WhoaAwesome,Whoa!\nAwesome!$,"reviewed, no change needed"
+BerryBlender_Text_WickedlyFast,Wickedly fast!$,"reviewed, no change needed"
+BerryBlender_Text_WhatAnExpert,What an expert!$,"reviewed, no change needed"
+BerryBlender_Text_MadeAmazingPokeblocksWithMaster,"When I blended with the MASTER,\nwe made amazing {POKEBLOCK}S!$","reviewed, no change needed"
+BerryBlender_Text_QualitiesOfBlendMaster,Eyes that track the arrow with\nmachinelike intensity…\pA hand that taps the A Button\nwith clockwork-like precision…\pPossessing these qualities makes\nthe BLEND MASTER truly great.$,"reviewed, no change needed"
+BerryBlender_Text_MasterWorksOnSkillsInMountains,"The BLEND MASTER's supposed to work\non his skills deep in the mountains.\pSometimes, he comes to CLOUD CITY\nto blend FRUIT all day long.$",reviewed AUTO draft
+CableClub_Text_WelcomeWhichCableClubService,Welcome to the COMPANION CABLE\nCLUB.\pWhich of our services do you wish\nto use?$,reviewed AUTO draft
+CableClub_Text_WhichService,Which of our services do you wish\nto use?$,"reviewed, no change needed"
+CableClub_Text_BattleUsingLinkCable,You may battle another TRAINER\nusing a COMLINK cable.$,reviewed AUTO draft
+CableClub_Text_RecordCornerUsingLinkCable,You can use the RECORD CORNER with\nothers using a COMLINK cable.$,reviewed AUTO draft
+CableClub_Text_CloseThisMenu,Close this menu.$,"reviewed, no change needed"
+CableClub_Text_NeedTwoMonsForDoubleBattle,"For a DOUBLE BATTLE, you must\nhave at least two COMPANIONS.$",reviewed AUTO draft
+CableClub_Text_NeedTwoMonsToTrade,"For trading, you must have at\nleast two COMPANIONS with you.$",reviewed AUTO draft
+CableClub_Text_CantTradeEnigmaBerry,A COMPANION holding the {STR_VAR_1}\nFRUIT can't be traded.$,reviewed AUTO draft
+gText_PleaseWaitForLink,Please wait.\n… … B Button: Cancel$,"reviewed, no change needed"
+gText_ConfirmLinkWhenPlayersReady,When all players are ready…\nA Button: Confirm\lB Button: Cancel$,"reviewed, no change needed"
+gText_ConfirmStartLinkWithXPlayers,Start link with {STR_VAR_1} players.\nA Button: Confirm\lB Button: Cancel$,"reviewed, no change needed"
+gText_AwaitingLinkup,Awaiting linkup…\n… … B Button: Cancel$,"reviewed, no change needed"
+CableClub_Text_OkayToSaveProgress,Your progress must be saved before\nlinking. Is it okay to save?$,"reviewed, no change needed"
+CableClub_Text_PleaseEnter,Please enter.$,"reviewed, no change needed"
+CableClub_Text_DirectYouToYourRoom,I'll direct you to your room now.$,"reviewed, no change needed"
+Text_SomeoneIsNotReadyToLink,Someone is not ready to link.\pPlease come back after everyone\nhas made preparations.$,"reviewed, no change needed"
+Text_LinkErrorPleaseReset,"Sorry, we have a link error…\nPlease reset and try again.$","reviewed, no change needed"
+Text_PlayersMadeDifferentSelections,The link partners appear to have\nmade different selections.$,"reviewed, no change needed"
+CableClub_Text_PleaseVisitAgain,Please do visit again.$,"reviewed, no change needed"
+CableClub_Text_IncorrectNumberOfParticipants,The number of participants is\nincorrect.$,"reviewed, no change needed"
+CableClub_Text_CantSingleBattleWithXPlayers,The SINGLE BATTLE Mode can't be\nplayed by {STR_VAR_1} players.$,"reviewed, no change needed"
+CableClub_Text_CantDoubleBattleWithXPlayers,The DOUBLE BATTLE Mode can't be\nplayed by {STR_VAR_1} players.$,"reviewed, no change needed"
+CableClub_Text_NeedFourPlayers,There must be four players to play\nthis Battle Mode.$,"reviewed, no change needed"
+CableClub_Text_PleaseConfirmNumberAndRestart,Please confirm the number of\nplayers and start again.$,"reviewed, no change needed"
+Text_TerminateLinkConfirmation,The link will be terminated if you\nleave the room. Is that okay?$,"reviewed, no change needed"
+Text_TerminateLinkPleaseWait,Terminating link…\nYou will be escorted out of\lthe room. Please wait.$,"reviewed, no change needed"
+CableClub_Text_TooBusyToNotice,This TRAINER is too busy to\nnotice…$,"reviewed, no change needed"
+CableClub_Text_GotToLookAtTrainerCard,Score! Got to look at {STR_VAR_1}'s\nTRAINER CARD!$,"reviewed, no change needed"
+CableClub_Text_GotToLookAtColoredTrainerCard,Score! Got to look at {STR_VAR_1}'s\nTRAINER CARD!\pIt's a {STR_VAR_2} card!$,"reviewed, no change needed"
+BattleColosseum_2P_Text_TakePlaceStartBattle,Please take your place and start\nyour battle.$,"reviewed, no change needed"
+TradeCenter_Text_TakeSeatStartTrade,Please take your seat and start\nyour trade.$,"reviewed, no change needed"
+RecordCorner_Text_ThanksForComing,Thanks for coming.$,"reviewed, no change needed"
+CableClub_Text_TrainerCardDataOverwritten,The TRAINER CARD data will\nbe overwritten.$,"reviewed, no change needed"
+CableClub_Text_HopeToSeeYouAgain,I hope to see you again!$,"reviewed, no change needed"
+CableClub_Text_NotSetUpForFarAwayRegion,I'm awfully sorry.\pWe're not set up to conduct trades\nwith TRAINERS far away in another\lregion yet…$,"reviewed, no change needed"
+CableClub_Text_OtherTrainerNotReady,The other TRAINER is not ready.$,"reviewed, no change needed"
+CableClub_Text_YouHaveAMonThatCantBeTaken,You have at least one COMPANION\nthat can't be taken.$,reviewed AUTO draft
+RecordCorner_Text_TakeSeatAndWait,Please take your seat and wait.$,"reviewed, no change needed"
+RecordCorner_Text_PlayerSentOverOneX,{STR_VAR_1} sent over one\n{STR_VAR_2}.$,"reviewed, no change needed"
+CableClub_Text_AdapterNotConnected,The wireless COMLINK is not\nconnected properly.$,reviewed AUTO draft
+CableClub_Text_ParticipantsStepUpToCounter,Participants are asked to step up\nto the reception counter.$,"reviewed, no change needed"
+CableClub_Text_Hello,Hello!$,"reviewed, no change needed"
+CableClub_Text_PleaseWait,Please wait.$,"reviewed, no change needed"
+CableClub_Text_YouMayBattleHere,You may battle with your friends\nhere.$,"reviewed, no change needed"
+CableClub_Text_CanMakeBerryPowder,Two to five TRAINERS can make\nFRUIT POWDER together.$,reviewed AUTO draft
+CableClub_Text_CanMixRecords,The records of two to four players\ncan be mixed together.$,"reviewed, no change needed"
+CableClub_Text_GuideToVariousServices,A guide to the WIRELESS CLUB's\nvarious services.$,"reviewed, no change needed"
+CableClub_Text_CancelSelectedItem,Cancels the selected MENU item.$,"reviewed, no change needed"
+CableClub_Text_WhichBattleMode,Which battle mode would you like?$,"reviewed, no change needed"
+CableClub_Text_ReturnsToPreviousStep,Returns to the previous step.$,"reviewed, no change needed"
+CableClub_Text_NeedBerryForBerryCrush,"To use the FRUIT CRUSH service,\nyou must have at least one FRUIT.$",reviewed AUTO draft
+CableClub_Text_NeedTwoMonsForUnionRoom,"To enter the UNION ROOM, you must\nhave at least two COMPANIONS.$",reviewed AUTO draft
+CableClub_Text_NoEnigmaBerryInUnionRoom,No COMPANION holding the {STR_VAR_1}\nFRUIT may enter the UNION ROOM.$,reviewed AUTO draft
+CableClub_Text_UnionRoomAdapterNotConnected,"This is the HOLONET CLUB\nUNION ROOM.\pUnfortunately, your wireless\nCOMLINK is not connected properly.\pPlease do come again.$",reviewed AUTO draft
+CableClub_Text_OhExcuseMe,Oh…\nExcuse me!$,"reviewed, no change needed"
+CableClub_Text_PlayerIsWaiting,It appears as if {STR_VAR_1} is playing\nright now.\lGo for it!$,"reviewed, no change needed"
+MossdeepCity_GameCorner_1F_Text_DescribeWhichGame,"I can explain game rules to you,\nif you'd like.\pWhich game should I describe?$","reviewed, no change needed"
+MossdeepCity_GameCorner_1F_Text_DodrioBerryPickingInfo,"“KAADULORD FRUIT-PICKING”\pCommand KAADULORD's three heads to\ncatch falling FRUIT.\pPress right, up, or left on the\n{PLUS} Control Pad to move the heads.\pTo play this game, you must have\na KAADULORD.$",reviewed AUTO draft
+MossdeepCity_GameCorner_1F_Text_TalkToOldManToPlay,"If you want to play a game,\nplease tell the old man beside me.$","reviewed, no change needed"
+MossdeepCity_GameCorner_1F_Text_WelcomeCanYouWait,"Hi, welcome!\nAre you here to play games using\lthe COMLINK Network?\pCan you wait just a little bit?$",reviewed AUTO draft
+MossdeepCity_GameCorner_1F_Text_ComeAgain,"All right, come again!$","reviewed, no change needed"
+MossdeepCity_GameCorner_1F_Text_AdapterNotConnected,The wireless COMLINK isn't connected.\nCome back when it's hooked up!$,reviewed AUTO draft
+MossdeepCity_GameCorner_1F_Text_PlayWhichGame,"All right, which game did you want\nto play?$","reviewed, no change needed"
+MossdeepCity_GameCorner_1F_Text_EnterWhichPokemon,Which COMPANION would you like to\nenter?$,reviewed AUTO draft
+MossdeepCity_GameCorner_1F_Text_AllGoodToGo,"Okay, you're all good to go.\nDon't let the others beat you!$","reviewed, no change needed"
+MossdeepCity_GameCorner_1F_Text_LeavingDoComeAgain,Are you leaving now?\nDo come again!$,"reviewed, no change needed"
+MossdeepCity_GameCorner_1F_Text_RetryPlease,"Could you retry this from the start\nagain, please?$","reviewed, no change needed"
+CableClub_Text_WelcomeWhichDirectCornerRoom,Welcome to the HOLONET\nCLUB DIRECT CORNER.\pYou may interact directly with\nyour friends here.\pWhich room would you like to\nenter?$,reviewed AUTO draft
+CableClub_Text_TradePokemon,Would you like to trade COMPANIONS?$,reviewed AUTO draft
+CableClub_Text_PlayWhichBattleMode,Which Battle Mode would you like\nto play?$,"reviewed, no change needed"
+CableClub_Text_AccessRecordCorner,Would you like to access\nthe RECORD CORNER?$,"reviewed, no change needed"
+CableClub_Text_UseBerryCrush,Would you like to use the\nFRUIT CRUSH System?$,reviewed AUTO draft
+CableClub_Text_ExplainBattleModes,There are three Battle Modes.\pSINGLE BATTLE is for two TRAINERS\nwith one or more COMPANIONS each.\pEach TRAINER can have one COMPANION\nin battle at a time.\pDOUBLE BATTLE is for two TRAINERS\nwith two or more COMPANIONS each.\pEach TRAINER will send out two\nCOMPANIONS in battle at a time.\pMULTI BATTLE is for four TRAINERS\nwith one or more COMPANIONS each.\pEach TRAINER can have one COMPANION\nin battle at a time.$,reviewed AUTO draft
+CableClub_Text_ChooseGroupLeaderOfTwo,Please decide which of you two\nwill become the LEADER.\pThe other player must then choose\n“JOIN GROUP.”$,"reviewed, no change needed"
+CableClub_Text_ChooseGroupLeaderOfFour,Please decide which of you four\nwill become the GROUP LEADER.\pThe other players must then choose\n“JOIN GROUP.”$,"reviewed, no change needed"
+CableClub_Text_ChooseGroupLeader,Please decide which of you will\nbecome the GROUP LEADER.\pThe other players must then choose\n“JOIN GROUP.”$,"reviewed, no change needed"
+CableClub_Text_WelcomeUnionRoomEnter,"Welcome to the HOLONET\nCLUB UNION ROOM.\pYou may interact directly with\nother TRAINERS here, some of\lwhom you may not even know.\pWould you like to enter the ROOM?$",reviewed AUTO draft
+CableClub_Text_UnionRoomInfo,"The TRAINERS in the UNION ROOM\nwill be those players around you\lwho have also entered the ROOM.\pYou may do all sorts of things\nhere, such as exchanging greetings.\pYou may enter two COMPANIONS up to\nLv. 30 for a one-on-one battle.\pYou may take part in a chat with\ntwo to five people.\pOr, you may register a COMPANION for\ntrade.\pWould you like to enter the ROOM?$",reviewed AUTO draft
+CableClub_Text_EnjoyUnionRoom,I hope you enjoy your time in\nthe UNION ROOM.$,"reviewed, no change needed"
+CableClub_Text_FirstTimeRightThisWay,"Hello!\nMy name is TEALA.\pThis must be your first time\nup here.\pI'll show you how the COMLINK\nNetwork works.\pFirst, I need to show you this\nfloor of our BACTA CENTER.\pRight this way, please.$",reviewed AUTO draft
+CableClub_Text_AskAboutLinking,"Hello, {PLAYER}!\pIt's me, TEALA, the BACTA\nCENTER 2F attendant.\pIs there something you needed to\nask me about linking?$",reviewed AUTO draft
+CableClub_Text_HopeYouEnjoyWirelessSystem,I hope you enjoy the COMLINK\nNetwork.$,reviewed AUTO draft
+Text_BookShelf,It's filled with all sorts of books.$,"reviewed, no change needed"
+Text_PokemonCenterBookShelf,COMPANION magazines!\nCOMPANION PAL…\pCOMPANION HANDBOOK…\nADORABLE COMPANION…$,reviewed AUTO draft
+Text_Vase,"This vase looks expensive…\nPeered inside…\pBut, it was empty.$","reviewed, no change needed"
+Text_EmptyTrashCan,It's empty.$,"reviewed, no change needed"
+Text_ShopShelf,The shelves brim with all sorts of\nCOMPANIONS merchandise.$,reviewed AUTO draft
+Text_Blueprint,A blueprint of some sort?\nIt's too complicated!$,"reviewed, no change needed"
+EventTicket_Text_OldSeaMapTooFar,"What's up, youngster?\pWhat, it's you who's supposed to have\na tattered old map?\pLet's have a look.\n… … … … … …\pBoy, this is quite a ways away.\nI'm afraid I can't help you…$","reviewed, no change needed"
+EventTicket_Text_BrineyHoldOnASecond,HAN: Hold on a second!\pWhat's the idea of turning down\nsomeone that I owe so much to?$,reviewed AUTO draft
+NavelRock_Harbor_Text_SailorReturn,Did… Did you hear that?\nThat low growling from deep in there.\pAre you sure it's safe?\nDo you think we should leave?$,"reviewed, no change needed"
+FarawayIsland_Entrance_Text_Sign,"The writing is fading as if it was\nwritten a long time ago…\p“…ber, 6th day\nIf any human…sets foot here…\lagain…et it be a kindhearted pers…\l…ith that hope, I depar…”$","reviewed, no change needed"
+gText_HowMayIServeYou,Welcome!\pHow may I serve you?$,"reviewed, no change needed"
+gText_PleaseComeAgain,Please come again!$,"reviewed, no change needed"
+gText_PlayerWhatCanIDoForYou,"{PLAYER}{KUN}, welcome!\pWhat can I do for you?$","reviewed, no change needed"
+GiddyText_SoPretty, so pretty!$,"reviewed, no change needed"
+GiddyText_SoDarling, so darling!$,"reviewed, no change needed"
+GiddyText_SoRelaxed, so relaxed!$,"reviewed, no change needed"
+GiddyText_SoSunny, so sunny!$,"reviewed, no change needed"
+GiddyText_SoDesirable, so desirable!$,"reviewed, no change needed"
+GiddyText_SoExciting, so exciting!$,"reviewed, no change needed"
+GiddyText_SoAmusing, so amusing!$,"reviewed, no change needed"
+GiddyText_SoMagical, so magical!$,"reviewed, no change needed"
+GiddyText_Is, is$,"reviewed, no change needed"
+GiddyText_DontYouAgree,\nDon't you agree?$,"reviewed, no change needed"
+GiddyText_ISoWantToGoOnAVacation,I so want to go on a vacation.\nWould you happen to know a nice place?$,"reviewed, no change needed"
+GiddyText_IBoughtCrayonsWith120Colors,I bought crayons with 120 colors!\nDon't you think that's nice?$,"reviewed, no change needed"
+GiddyText_WouldntItBeNiceIfWeCouldFloat,Wouldn't it be nice if we could float\naway on a cloud of bubbles?$,"reviewed, no change needed"
+GiddyText_WhenYouWriteOnASandyBeach,"When you write on a sandy beach,\nthey wash away. It makes me sad.$","reviewed, no change needed"
+GiddyText_WhatsTheBottomOfTheSeaLike,What's the bottom of the sea like?\nJust once I would so love to go!$,"reviewed, no change needed"
+GiddyText_WhenYouSeeTheSettingSunDoesIt,"When you see the setting sun, does it\nmake you want to go home?$","reviewed, no change needed"
+GiddyText_LyingBackInTheGreenGrass,"Lying back in the green grass…\nOh, it's so, so nice!$","reviewed, no change needed"
+GiddyText_SecretBasesAreSoWonderful,SECRET BASES are so wonderful!\nCan't you feel the excitement?$,"reviewed, no change needed"
+Text_BootUpPC,{PLAYER} booted up the TERMINAL.$,reviewed AUTO draft
+gText_WhichPCShouldBeAccessed,Which TERMINAL should be accessed?$,reviewed AUTO draft
+gText_AccessedSomeonesPC,Accessed SOMEONE'S TERMINAL.$,reviewed AUTO draft
+gText_StorageSystemOpened,COMPANION Storage System opened.$,reviewed AUTO draft
+gText_AccessedPlayersPC,Accessed {PLAYER}'s TERMINAL.$,reviewed AUTO draft
+gText_AccessedLanettesPC,Accessed TESS's TERMINAL.$,reviewed AUTO draft
+gText_PkmnTransferredSomeonesPC,{STR_VAR_2} was transferred to\nSOMEONE'S TERMINAL.\pIt was placed in \nBOX “{STR_VAR_1}.”$,reviewed AUTO draft
+gText_PkmnTransferredLanettesPC,{STR_VAR_2} was transferred to\nTESS'S TERMINAL.\pIt was placed in \nBOX “{STR_VAR_1}.”$,reviewed AUTO draft
+gText_PkmnTransferredSomeonesPCBoxFull,BOX “{STR_VAR_3}” on\nSOMEONE'S TERMINAL was full.\p{STR_VAR_2} was transferred to\nBOX “{STR_VAR_1}.”$,reviewed AUTO draft
+gText_PkmnTransferredLanettesPCBoxFull,BOX “{STR_VAR_3}” on\nTESS'S TERMINAL was full.\p{STR_VAR_2} was transferred to\nBOX “{STR_VAR_1}.”$,reviewed AUTO draft
+gText_NoMoreRoomForPokemon,There's no more room for COMPANION!\pThe COMPANION BOXES are full and\ncan't accept any more!$,reviewed AUTO draft
+gText_NicknameThisPokemon,Do you want to give a nickname to\nthis {STR_VAR_1}?$,"reviewed, no change needed"
+Questionnaire_Text_FillOut,There is a questionnaire.\nWould you like to fill it out?$,"reviewed, no change needed"
+Questionnaire_Text_ThankYou,Thank you for taking the time to\nfill out our questionnaire.\pYour feedback will be used for\nfuture reference.$,"reviewed, no change needed"
+Questionnaire_Text_YouKnowThoseWordsGift,"Oh, hello!\nYou know those words?\pThat means you must know about\nthe MYSTERY GIFT.\pFrom now on, you should be\nreceiving MYSTERY GIFTS!$","reviewed, no change needed"
+Questionnaire_Text_YouCanAccessMysteryGift,"Once you save your game, you can\naccess the MYSTERY GIFT.$","reviewed, no change needed"
+Questionnaire_Text_YouKnowThoseWordsEvent,"Oh, hello!\nYou know those words?\pThat means you must know about\nthe MYSTERY EVENT.$","reviewed, no change needed"
+Questionnaire_Text_YouCanAccessMysteryEvent,"Once you save your game, you can\naccess the MYSTERY EVENT.$","reviewed, no change needed"
+MysteryGift_Text_TheresATicketForYou,Thank you for using the MYSTERY\nEVENT System.\pYou must be {PLAYER}.\nThere is a ticket here for you.$,"reviewed, no change needed"
+MysteryGift_Text_TryUsingItAtLilycovePort,It appears to be for use at\nthe CLOUD CITY port.\pWhy not give it a try and see what\nit is about?$,reviewed AUTO draft
+Text_WouldYouLikeToMixRecords,Would you like to mix records with\nother TRAINERS?$,"reviewed, no change needed"
+Text_WeHopeToSeeYouAgain,We hope to see you again!$,"reviewed, no change needed"
+gText_ConfirmSave,Would you like to save the game?$,"reviewed, no change needed"
+gText_AlreadySavedFile,There is already a saved file.\nIs it okay to overwrite it?$,"reviewed, no change needed"
+gText_SavingDontTurnOff,SAVING…\nDON'T TURN OFF THE POWER.$,"reviewed, no change needed"
+gText_PlayerSavedGame,{PLAYER} saved the game.$,"reviewed, no change needed"
+gText_DifferentSaveFile,"WARNING!\pThere is a different game file that\nis already saved.\pIf you save now, the other file's\nadventure, including items and\lCOMPANIONS, will be entirely lost.\pAre you sure you want to save now\nand overwrite the other save file?$",reviewed AUTO draft
+gText_SaveError,Save error.\pPlease exchange the\nbackup memory.$,"reviewed, no change needed"
+gText_SavingDontTurnOffPower,SAVING…\nDON'T TURN OFF THE POWER.$,"reviewed, no change needed"
+gText_WantToUseSurf,The water is dyed a deep blue…\nWould you like to SURF?$,"reviewed, no change needed"
+gText_PlayerUsedSurf,{STR_VAR_1} used SURF!$,"reviewed, no change needed"
+gTrickHouse_Mechadoll_Oddish,GNARLSPAWN$,reviewed AUTO draft
+gTrickHouse_Mechadoll_Poochyena,MASSIFF$,reviewed AUTO draft
+gTrickHouse_Mechadoll_Taillow,HAWKBATKIT$,reviewed AUTO draft
+gTrickHouse_Mechadoll_Azurill,BLOOPKIT$,reviewed AUTO draft
+gTrickHouse_Mechadoll_Lotad,BOGLING$,reviewed AUTO draft
+gTrickHouse_Mechadoll_Wingull,SHYYYOLET$,reviewed AUTO draft
+gTrickHouse_Mechadoll_Dustox,DUSTMOTH$,reviewed AUTO draft
+gTrickHouse_Mechadoll_Zubat,MYNOCK$,reviewed AUTO draft
+gTrickHouse_Mechadoll_Nincada,HIVEGRUB$,reviewed AUTO draft
+gTrickHouse_Mechadoll_Ralts,AURALET$,reviewed AUTO draft
+gTrickHouse_Mechadoll_Zigzagoon,SCURRIER$,reviewed AUTO draft
+gTrickHouse_Mechadoll_Slakoth,SLOTHLET$,reviewed AUTO draft
+gTrickHouse_Mechadoll_Poochyena2,MASSIFF$,reviewed AUTO draft
+gTrickHouse_Mechadoll_Shroomish,FELUSPORE$,reviewed AUTO draft
+gTrickHouse_Mechadoll_Zigzagoon2,SCURRIER$,reviewed AUTO draft
+gTrickHouse_Mechadoll_Poochyena3,MASSIFF$,reviewed AUTO draft
+gTrickHouse_Mechadoll_Zubat2,MYNOCK$,reviewed AUTO draft
+gTrickHouse_Mechadoll_Carvanha,OPEEFRY$,reviewed AUTO draft
+gTrickHouse_Mechadoll_BurnHeal,BURN GEL$,reviewed AUTO draft
+gTrickHouse_Mechadoll_HarborMail,HARBOR MAIL$,"reviewed, no change needed"
+gTrickHouse_Mechadoll_SamePrice,Same price$,"reviewed, no change needed"
+gTrickHouse_Mechadoll_60Yen,¥60$,"reviewed, no change needed"
+gTrickHouse_Mechadoll_55Yen,¥55$,"reviewed, no change needed"
+gTrickHouse_Mechadoll_Nothing,Nothing$,"reviewed, no change needed"
+gTrickHouse_Mechadoll_CostMore,They will cost more.$,"reviewed, no change needed"
+gTrickHouse_Mechadoll_CostLess,They will cost less.$,"reviewed, no change needed"
+gTrickHouse_Mechadoll_SamePrice2,Same price$,"reviewed, no change needed"
+gTrickHouse_Mechadoll_Male,Male$,"reviewed, no change needed"
+gTrickHouse_Mechadoll_Female,Female$,"reviewed, no change needed"
+gTrickHouse_Mechadoll_Neither,Neither$,"reviewed, no change needed"
+gTrickHouse_Mechadoll_ElderlyMen,Elderly men$,"reviewed, no change needed"
+gTrickHouse_Mechadoll_ElderlyLadies,Elderly ladies$,"reviewed, no change needed"
+gTrickHouse_Mechadoll_SameNumber,Same number$,"reviewed, no change needed"
+gTrickHouse_Mechadoll_None,None$,"reviewed, no change needed"
+gTrickHouse_Mechadoll_One,1$,"reviewed, no change needed"
+gTrickHouse_Mechadoll_Two,2$,"reviewed, no change needed"
+gTrickHouse_Mechadoll_Two2,2$,"reviewed, no change needed"
+gTrickHouse_Mechadoll_Three,3$,"reviewed, no change needed"
+gTrickHouse_Mechadoll_Four,4$,"reviewed, no change needed"
+gTrickHouse_Mechadoll_Six,6$,"reviewed, no change needed"
+gTrickHouse_Mechadoll_Seven,7$,"reviewed, no change needed"
+gTrickHouse_Mechadoll_Eight,8$,"reviewed, no change needed"
+gTrickHouse_Mechadoll_Six2,6$,"reviewed, no change needed"
+gTrickHouse_Mechadoll_Seven2,7$,"reviewed, no change needed"
+gTrickHouse_Mechadoll_Eight2,8$,"reviewed, no change needed"
+sText_ShedinjaJpnName,ヌケニン,"reviewed, no change needed"
+gStatusConditionString_PoisonJpn,どく$$$$$,"reviewed, no change needed"
+gStatusConditionString_SleepJpn,ねむり$$$$,"reviewed, no change needed"
+gStatusConditionString_ParalysisJpn,まひ$$$$$,"reviewed, no change needed"
+gStatusConditionString_BurnJpn,やけど$$$$,"reviewed, no change needed"
+gStatusConditionString_IceJpn,こおり$$$$,"reviewed, no change needed"
+gStatusConditionString_ConfusionJpn,こんらん$$$,"reviewed, no change needed"
+gStatusConditionString_LoveJpn,メロメロ$$$,"reviewed, no change needed"
+sText_DashesNoPlayer,-------,"reviewed, no change needed"
+sText_DashesNoScore,----,"reviewed, no change needed"
+sUnusedText_YesNo,YES\nNO,"reviewed, no change needed"
+sUnusedText_2,▶,"reviewed, no change needed"
+sUnusedText_Space, ,"reviewed, no change needed"
+sUnusedText_Terminating,Terminating.,"reviewed, no change needed"
+sUnusedText_LinkPartnerNotFound,Link partner(s) not found.\nPlease try again.\p,"reviewed, no change needed"
+sText_BerryBlenderStart,Starting up the FRUIT BLENDER.\pPlease select a FRUIT from your BAG\nto put in the FRUIT BLENDER.\p,reviewed AUTO draft
+sText_NewParagraph,\p,"reviewed, no change needed"
+sText_WasMade, was made!,"reviewed, no change needed"
+sText_Mister,MISTER,"reviewed, no change needed"
+sText_Laddie,LADDIE,"reviewed, no change needed"
+sText_Lassie,LASSIE,"reviewed, no change needed"
+sText_Master,MASTER,"reviewed, no change needed"
+sText_Dude,DUDE,"reviewed, no change needed"
+sText_Miss,MISS,"reviewed, no change needed"
+sText_PressAToStart,Press the A Button to start.,"reviewed, no change needed"
+sText_CommunicationStandby,{COLOR DARK_GRAY}{HIGHLIGHT WHITE}{SHADOW LIGHT_GRAY}Communication standby…\nPlease wait.,"reviewed, no change needed"
+sText_WouldLikeToBlendAnotherBerry,Would you like to blend another FRUIT?,reviewed AUTO draft
+sText_RunOutOfBerriesForBlending,You've run out of FRUIT for\nblending in the FRUIT BLENDER.\p,reviewed AUTO draft
+sText_YourPokeblockCaseIsFull,Your {POKEBLOCK} CASE is full.\p,"reviewed, no change needed"
+sText_HasNoBerriesToPut, has no FRUIT to put in\nthe FRUIT BLENDER.,reviewed AUTO draft
+sText_ApostropheSPokeblockCaseIsFull,'s {POKEBLOCK} CASE is full.\p,"reviewed, no change needed"
+sText_BlendingResults,RESULTS OF BLENDING,"reviewed, no change needed"
+sText_BerryUsed,FRUIT USED,reviewed AUTO draft
+sText_SpaceBerry, FRUIT,reviewed AUTO draft
+sText_Time,Time:,"reviewed, no change needed"
+sText_Min, min. ,"reviewed, no change needed"
+sText_Sec, sec.,"reviewed, no change needed"
+sText_MaximumSpeed,MAXIMUM SPEED,"reviewed, no change needed"
+sText_RPM, RPM,"reviewed, no change needed"
+sText_Dot,.,"reviewed, no change needed"
+sText_NewLine,\n,"reviewed, no change needed"
+sText_Space, ,"reviewed, no change needed"
+sText_Ranking,RANKING,"reviewed, no change needed"
+sText_TheLevelIs,The level is ,"reviewed, no change needed"
+sText_TheFeelIs,", and the feel is ","reviewed, no change needed"
+sText_Dot2,.,"reviewed, no change needed"
+sJPText_GoodTvReady,\nいいHOLONETができました ,reviewed AUTO draft
+sJPText_BadTvReady,\nダメHOLONETができました ,reviewed AUTO draft
+sText_RubySapphire,Ruby/Sapphire,"reviewed, no change needed"
+sText_Emerald,Emerald,"reviewed, no change needed"
+sText_EnsureGBAConnectionMatches,Please ensure the connection of your\nGame Boy Advance system matches this.\n{COLOR RED}{SHADOW LIGHT_RED}YES: Press the A Button.\nNO: Turn off the power and try again.,"reviewed, no change needed"
+sText_TransmittingPleaseWait,Transmitting. Please wait.\n{COLOR RED}{SHADOW LIGHT_RED}Please do not turn off the power or\nunplug the Game Boy Advance Game\nLink Cable.,"reviewed, no change needed"
+sText_PleaseFollowInstructionsOnScreen,Please follow the instructions on your\nCOMPANION Ruby/Sapphire screen.,reviewed AUTO draft
+sText_TransmissionFailureTryAgain,Transmission failure.\n{COLOR RED}{SHADOW LIGHT_RED}Please try again.,"reviewed, no change needed"
+sCreditsText_EmptyString,,"reviewed, no change needed"
+sCreditsText_Credits,Credits,"reviewed, no change needed"
+sCreditsText_ExecutiveDirector,Executive Director,"reviewed, no change needed"
+sCreditsText_Director,Director,"reviewed, no change needed"
+sCreditsText_ArtDirector,Art Director,"reviewed, no change needed"
+sCreditsText_BattleDirector,Battle Director,"reviewed, no change needed"
+sCreditsText_MainProgrammer,Main Programmer,"reviewed, no change needed"
+sCreditsText_BattleSystemPgrms,Battle System Programmers,"reviewed, no change needed"
+sCreditsText_FieldSystemPgrms,Field System Programmer,"reviewed, no change needed"
+sCreditsText_Programmers,Programmers,"reviewed, no change needed"
+sCreditsText_MainGraphicDesigner,Main Graphic Designer,"reviewed, no change needed"
+sCreditsText_GraphicDesigners,Graphic Designers,"reviewed, no change needed"
+sCreditsText_PkmnDesigners,COMPANION Designers,reviewed AUTO draft
+sCreditsText_MusicComposition,Music Composition,"reviewed, no change needed"
+sCreditsText_SoundEffectsAndPkmnVoices,Sound Effects & COMPANION Voices,reviewed AUTO draft
+sCreditsText_GameDesigners,Game Designers,"reviewed, no change needed"
+sCreditsText_ScenarioPlot,Scenario Plot,"reviewed, no change needed"
+sCreditsText_Scenario,Scenario,"reviewed, no change needed"
+sCreditsText_ScriptDesigners,Script Designers,"reviewed, no change needed"
+sCreditsText_MapDesigners,Map Designers,"reviewed, no change needed"
+sCreditsText_MapDataDesigners,Map Data Designers,"reviewed, no change needed"
+sCreditsText_ParametricDesigners,Parametric Designers,"reviewed, no change needed"
+sCreditsText_PokedexText,DATAPAD Text,reviewed AUTO draft
+sCreditsText_EnvAndToolPgrms,Environment & Tool Programmers,"reviewed, no change needed"
+sCreditsText_NCLProductTesting,NCL Product Testing,"reviewed, no change needed"
+sCreditsText_SpecialThanks,Special Thanks,"reviewed, no change needed"
+sCreditsText_Coordinators,Coordinators,"reviewed, no change needed"
+sCreditsText_Producers,Producers,"reviewed, no change needed"
+sCreditsText_ExecProducers,Executive Producers,"reviewed, no change needed"
+sCreditsText_InfoSupervisors,Information Supervisors,"reviewed, no change needed"
+sCreditsText_TaskManagers,Task Managers,"reviewed, no change needed"
+sCreditsText_BrailleCodeCheck,Braille Code Check,"reviewed, no change needed"
+sCreditsText_WorldDirector,World Director,"reviewed, no change needed"
+sCreditsText_BattleFrontierData,Battle Frontier Data,"reviewed, no change needed"
+sCreditsText_SupportProgrammers,Support Programmers,"reviewed, no change needed"
+sCreditsText_Artwork,Artwork,"reviewed, no change needed"
+sCreditsText_LeadProgrammer,Lead Programmer,"reviewed, no change needed"
+sCreditsText_LeadGraphicArtist,Lead Graphic Artist,"reviewed, no change needed"
+sCreditsText_SatoshiTajiri,Satoshi Tajiri,"reviewed, no change needed"
+sCreditsText_JunichiMasuda,Junichi Masuda,"reviewed, no change needed"
+sCreditsText_KenSugimori,Ken Sugimori,"reviewed, no change needed"
+sCreditsText_ShigekiMorimoto,Shigeki Morimoto,"reviewed, no change needed"
+sCreditsText_TetsuyaWatanabe,Tetsuya Watanabe,"reviewed, no change needed"
+sCreditsText_HisashiSogabe,Hisashi Sogabe,"reviewed, no change needed"
+sCreditsText_SosukeTamada,Sosuke Tamada,"reviewed, no change needed"
+sCreditsText_AkitoMori,Akito Mori,"reviewed, no change needed"
+sCreditsText_KeitaKagaya,Keita Kagaya,"reviewed, no change needed"
+sCreditsText_YoshinoriMatsuda,Yoshinori Matsuda,"reviewed, no change needed"
+sCreditsText_HiroyukiNakamura,Hiroyuki Nakamura,"reviewed, no change needed"
+sCreditsText_MasaoTaya,Masao Taya,"reviewed, no change needed"
+sCreditsText_SatoshiNohara,Satoshi Nohara,"reviewed, no change needed"
+sCreditsText_TomomichiOhta,Tomomichi Ohta,"reviewed, no change needed"
+sCreditsText_MiyukiIwasawa,Miyuki Iwasawa,"reviewed, no change needed"
+sCreditsText_TakenoriOhta,Takenori Ohta,"reviewed, no change needed"
+sCreditsText_HironobuYoshida,Hironobu Yoshida,"reviewed, no change needed"
+sCreditsText_MotofumiFujiwara,Motofumi Fujiwara,"reviewed, no change needed"
+sCreditsText_SatoshiOhta,Satoshi Ohta,"reviewed, no change needed"
+sCreditsText_AsukaIwashita,Asuka Iwashita,"reviewed, no change needed"
+sCreditsText_AimiTomita,Aimi Tomita,"reviewed, no change needed"
+sCreditsText_TakaoUnno,Takao Unno,"reviewed, no change needed"
+sCreditsText_KanakoEo,Kanako Eo,"reviewed, no change needed"
+sCreditsText_JunOkutani,Jun Okutani,"reviewed, no change needed"
+sCreditsText_AtsukoNishida,Atsuko Nishida,"reviewed, no change needed"
+sCreditsText_MuneoSaito,Muneo Saito,"reviewed, no change needed"
+sCreditsText_RenaYoshikawa,Rena Yoshikawa,"reviewed, no change needed"
+sCreditsText_GoIchinose,Go Ichinose,"reviewed, no change needed"
+sCreditsText_MorikazuAoki,Morikazu Aoki,"reviewed, no change needed"
+sCreditsText_KojiNishino,Koji Nishino,"reviewed, no change needed"
+sCreditsText_KenjiMatsushima,Kenji Matsushima,"reviewed, no change needed"
+sCreditsText_TetsujiOhta,Tetsuji Ohta,"reviewed, no change needed"
+sCreditsText_HitomiSato,Hitomi Sato,"reviewed, no change needed"
+sCreditsText_TakeshiKawachimaru,Takeshi Kawachimaru,"reviewed, no change needed"
+sCreditsText_TeruyukiShimoyamada,Teruyuki Shimoyamada,"reviewed, no change needed"
+sCreditsText_ShigeruOhmori,Shigeru Ohmori,"reviewed, no change needed"
+sCreditsText_TadashiTakahashi,Tadashi Takahashi,"reviewed, no change needed"
+sCreditsText_ToshinobuMatsumiya,Toshinobu Matsumiya,"reviewed, no change needed"
+sCreditsText_AkihitoTomisawa,Akihito Tomisawa,"reviewed, no change needed"
+sCreditsText_HirokiEnomoto,Hiroki Enomoto,"reviewed, no change needed"
+sCreditsText_KazuyukiTerada,Kazuyuki Terada,"reviewed, no change needed"
+sCreditsText_YuriSakurai,Yuri Sakurai,"reviewed, no change needed"
+sCreditsText_HiromiSagawa,Hiromi Sagawa,"reviewed, no change needed"
+sCreditsText_KenjiTominaga,Kenji Tominaga,"reviewed, no change needed"
+sCreditsText_YoshioTajiri,Yoshio Tajiri,"reviewed, no change needed"
+sCreditsText_TeikoSasaki,Teiko Sasaki,"reviewed, no change needed"
+sCreditsText_SachikoHamano,Sachiko Hamano,"reviewed, no change needed"
+sCreditsText_ChieMatsumiya,Chie Matsumiya,"reviewed, no change needed"
+sCreditsText_AkikoShinozaki,Akiko Shinozaki,"reviewed, no change needed"
+sCreditsText_AstukoFujii,Astuko Fujii,"reviewed, no change needed"
+sCreditsText_NozomuSaito,Nozomu Saito,"reviewed, no change needed"
+sCreditsText_KenkichiToyama,Kenkichi Toyama,"reviewed, no change needed"
+sCreditsText_SuguruNakatsui,Suguru Nakatsui,"reviewed, no change needed"
+sCreditsText_YumiFunasaka,Yumi Funasaka,"reviewed, no change needed"
+sCreditsText_NaokoYanase,Naoko Yanase,"reviewed, no change needed"
+sCreditsText_NCLSuperMarioClub,NCL Super Mario Club,"reviewed, no change needed"
+sCreditsText_AtsushiTada,Atsushi Tada,"reviewed, no change needed"
+sCreditsText_TakahiroOhnishi,Takahiro Ohnishi,"reviewed, no change needed"
+sCreditsText_NorihideOkamura,Norihide Okamura,"reviewed, no change needed"
+sCreditsText_HiroNakamura,Hiro Nakamura,"reviewed, no change needed"
+sCreditsText_HiroyukiUesugi,Hiroyuki Uesugi,"reviewed, no change needed"
+sCreditsText_TerukiMurakawa,Teruki Murakawa,"reviewed, no change needed"
+sCreditsText_AkiraKinashi,Akira Kinashi,"reviewed, no change needed"
+sCreditsText_MichikoTakizawa,Michiko Takizawa,"reviewed, no change needed"
+sCreditsText_MakikoTakada,Makiko Takada,"reviewed, no change needed"
+sCreditsText_TakanaoKondo,Takanao Kondo,"reviewed, no change needed"
+sCreditsText_AiMashima,Ai Mashima,"reviewed, no change needed"
+sCreditsText_GakujiNomoto,Gakuji Nomoto,"reviewed, no change needed"
+sCreditsText_TakehiroIzushi,Takehiro Izushi,"reviewed, no change needed"
+sCreditsText_HitoshiYamagami,Hitoshi Yamagami,"reviewed, no change needed"
+sCreditsText_KyokoWatanabe,Kyoko Watanabe,"reviewed, no change needed"
+sCreditsText_TakaoNakano,Takao Nakano,"reviewed, no change needed"
+sCreditsText_HiroyukiJinnai,Hiroyuki Jinnai,"reviewed, no change needed"
+sCreditsText_HiroakiTsuru,Hiroaki Tsuru,"reviewed, no change needed"
+sCreditsText_TsunekazIshihara,Tsunekaz Ishihara,"reviewed, no change needed"
+sCreditsText_SatoruIwata,Satoru Iwata,"reviewed, no change needed"
+sCreditsText_KazuyaSuyama,Kazuya Suyama,"reviewed, no change needed"
+sCreditsText_SatoshiMitsuhara,Satoshi Mitsuhara,"reviewed, no change needed"
+sCreditsText_TomotakaKomura,Tomotaka Komura,"reviewed, no change needed"
+sCreditsText_MikikoOhhashi,Mikiko Ohhashi,"reviewed, no change needed"
+sCreditsText_DaisukeHoshino,Daisuke Hoshino,"reviewed, no change needed"
+sCreditsText_KenjiroIto,Kenjiro Ito,"reviewed, no change needed"
+sCreditsText_RuiKawaguchi,Rui Kawaguchi,"reviewed, no change needed"
+sCreditsText_ShunsukeKohori,Shunsuke Kohori,"reviewed, no change needed"
+sCreditsText_SachikoNakamichi,Sachiko Nakamichi,"reviewed, no change needed"
+sCreditsText_FujikoNomura,Fujiko Nomura,"reviewed, no change needed"
+sCreditsText_KazukiYoshihara,Kazuki Yoshihara,"reviewed, no change needed"
+sCreditsText_RetsujiNomoto,Retsuji Nomoto,"reviewed, no change needed"
+sCreditsText_AzusaTajima,Azusa Tajima,"reviewed, no change needed"
+sCreditsText_ShusakuEgami,Shusaku Egami,"reviewed, no change needed"
+sCreditsText_PackageAndManual,Package & Manual Illustration,"reviewed, no change needed"
+sCreditsText_EnglishVersion,English Version Coordinators,"reviewed, no change needed"
+sCreditsText_Translator,Translator,"reviewed, no change needed"
+sCreditsText_TextEditor,Text Editor,"reviewed, no change needed"
+sCreditsText_NCLCoordinator,NCL Coordinator,"reviewed, no change needed"
+sCreditsText_GraphicDesigner,Graphic Designer,"reviewed, no change needed"
+sCreditsText_NOAProductTesting,NOA Product Testing,"reviewed, no change needed"
+sCreditsText_HideyukiNakajima,Hideyuki Nakajima,"reviewed, no change needed"
+sCreditsText_HidenoriSaeki,Hidenori Saeki,"reviewed, no change needed"
+sCreditsText_YokoWatanabe,Yoko Watanabe,"reviewed, no change needed"
+sCreditsText_SakaeKimura,Sakae Kimura,"reviewed, no change needed"
+sCreditsText_ChiakiShinkai,Chiaki Shinkai,"reviewed, no change needed"
+sCreditsText_SethMcMahill,Seth McMahill,"reviewed, no change needed"
+sCreditsText_NobOgasawara,Nob Ogasawara,"reviewed, no change needed"
+sCreditsText_TeresaLillygren,Teresa Lillygren,"reviewed, no change needed"
+sCreditsText_KimikoNakamichi,Kimiko Nakamichi,"reviewed, no change needed"
+sCreditsText_SouichiYamamoto,Souichi Yamamoto,"reviewed, no change needed"
+sCreditsText_YuichiroIto,Yuichiro Ito,"reviewed, no change needed"
+sCreditsText_ThomasHertzog,Thomas Hertzog,"reviewed, no change needed"
+sCreditsText_MikaKurosawa,Mika Kurosawa,"reviewed, no change needed"
+sCreditsText_NationalFederationBlind,National Federation of the Blind,"reviewed, no change needed"
+sCreditsText_PatriciaAMaurer,Patricia A. Maurer,"reviewed, no change needed"
+sCreditsText_EuropeanBlindUnion,European Blind Union,"reviewed, no change needed"
+sCreditsText_AustralianBrailleAuthority,Australian Braille Authority,"reviewed, no change needed"
+sCreditsText_RoyalNewZealandFederationBlind,Royal New Zealand Federation for the Blind,"reviewed, no change needed"
+sCreditsText_MotoyasuTojima,Motoyasu Tojima,"reviewed, no change needed"
+sCreditsText_NicolaPrattBarlow,Nicola Pratt-Barlow,"reviewed, no change needed"
+sCreditsText_ShellieDow,Shellie Dow,"reviewed, no change needed"
+sCreditsText_ErikJohnson,Erik Johnson,"reviewed, no change needed"
+sText_UnusedTextFormat,{COLOR WHITE}{HIGHLIGHT TRANSPARENT}{SHADOW DARK_GRAY},"reviewed, no change needed"
+gText_MaleSymbol4,♂,"reviewed, no change needed"
+gText_FemaleSymbol4,♀,"reviewed, no change needed"
+gText_GenderlessSymbol,,"reviewed, no change needed"
+sText_SpaceMove, MOVE,"reviewed, no change needed"
+sText_Slash,/,"reviewed, no change needed"
+sText_Lv,Lv. ,"reviewed, no change needed"
+sText_ThreeDashes,---,"reviewed, no change needed"
+sText_FourQuestionMarks,????,"reviewed, no change needed"
+sText_UnusedEmpty,,"reviewed, no change needed"
+sText_IsThisTradeOkay,Is this trade okay?,"reviewed, no change needed"
+sText_Cancel,CANCEL,"reviewed, no change needed"
+sText_ChooseAPkmn,Choose a COMPANION.,reviewed AUTO draft
+sText_Summary,SUMMARY,"reviewed, no change needed"
+sText_Trade,TRADE,"reviewed, no change needed"
+sText_CancelTrade,Cancel trade?,"reviewed, no change needed"
+sJPText_PressBButtonToQuit,Bボタン　で　もどります,"reviewed, no change needed"
+sText_Summary2,SUMMARY,"reviewed, no change needed"
+sText_Trade2,TRADE,"reviewed, no change needed"
+sText_TheTradeHasBeenCanceled,{COLOR DARK_GRAY}{HIGHLIGHT WHITE}{SHADOW LIGHT_GRAY}The trade has\nbeen canceled.,"reviewed, no change needed"
+sText_OnlyPkmnForBattle,That's your only\nCOMPANION for battle.,reviewed AUTO draft
+sText_WaitingForYourFriend,{COLOR DARK_GRAY}{HIGHLIGHT WHITE}{SHADOW LIGHT_GRAY}Waiting for your friend\nto finish…,"reviewed, no change needed"
+sText_YourFriendWantsToTrade,Your friend wants\nto trade COMPANIONS.,reviewed AUTO draft
+sText_ShedinjaJP,ヌケニン,"reviewed, no change needed"
+sJapaneseEggNickname,タマゴ,"reviewed, no change needed"
+sJPText_Vowels,あいうえおかき,"reviewed, no change needed"
+sText_Letters,ABCDEFG,"reviewed, no change needed"
+sText_Digits,0123456,"reviewed, no change needed"
+sText_Clear17,{CLEAR 17},"reviewed, no change needed"
+sText_ShedinjaJapaneseName,ヌケニン,"reviewed, no change needed"
+dot,·,"reviewed, no change needed"
+LandmarkName_FlowerShop,FLOWER SHOP,"reviewed, no change needed"
+LandmarkName_PetalburgWoods,JUNDLAND WASTES,reviewed AUTO draft
+LandmarkName_MrBrineysCottage,HAN'S COTTAGE,reviewed AUTO draft
+LandmarkName_AbandonedShip,REPUBLIC WRECK,reviewed AUTO draft
+LandmarkName_SeashoreHouse,SEASHORE HOUSE,"reviewed, no change needed"
+LandmarkName_SlateportBeach,MOS EISLEY BEACH,reviewed AUTO draft
+LandmarkName_CyclingRoad,PODRACE TRACK,reviewed AUTO draft
+LandmarkName_NewMauville,ESPA GENERATOR,reviewed AUTO draft
+LandmarkName_TrickHouse,TRICK HOUSE,"reviewed, no change needed"
+LandmarkName_OldLadysRestShop,OLD LADY'S REST STOP,"reviewed, no change needed"
+LandmarkName_Desert,DESERT,"reviewed, no change needed"
+LandmarkName_WinstrateFamily,THE WINSTRATE FAMILY,"reviewed, no change needed"
+LandmarkName_CableCar,SHUTTLE,reviewed AUTO draft
+LandmarkName_GlassWorkshop,GLASS WORKSHOP,"reviewed, no change needed"
+LandmarkName_WeatherInstitute,ENDOR STATION,reviewed AUTO draft
+LandmarkName_MeteorFalls,STARFALL CAVERN,reviewed AUTO draft
+LandmarkName_TunnelersRestHouse,TUNNELER'S RESTHOUSE,"reviewed, no change needed"
+LandmarkName_RusturfTunnel,BEGGAR'S CANYON,reviewed AUTO draft
+LandmarkName_PokemonDayCare,COMPANION NURSERY,reviewed AUTO draft
+LandmarkName_SafariZoneEntrance,FELUCIA RESERVE ENTRANCE,reviewed AUTO draft
+LandmarkName_MtPyre,JEDHA TEMPLE,reviewed AUTO draft
+LandmarkName_ShoalCave,WAMPA CAVE,reviewed AUTO draft
+LandmarkName_SeafloorCavern,DROWNED CAVERN,reviewed AUTO draft
+LandmarkName_GraniteCave,SHADOWLANDS,reviewed AUTO draft
+LandmarkName_OceanCurrent,OCEAN CURRENT,"reviewed, no change needed"
+LandmarkName_LanettesHouse,TESS'S HOUSE,reviewed AUTO draft
+LandmarkName_FieryPath,MAGMA TUNNELS,reviewed AUTO draft
+LandmarkName_JaggedPass,ASHEN PASS,reviewed AUTO draft
+LandmarkName_SkyPillar,ASTEROID SPIRE,reviewed AUTO draft
+LandmarkName_BerryMastersHouse,FRUIT MASTER'S HOUSE,reviewed AUTO draft
+LandmarkName_IslandCave,ICE GROTTO,reviewed AUTO draft
+LandmarkName_DesertRuins,TUSKEN RUINS,reviewed AUTO draft
+LandmarkName_ScorchedSlab,SCORCHED HOLLOW,reviewed AUTO draft
+LandmarkName_AncientTomb,ANCIENT TOMB,"reviewed, no change needed"
+LandmarkName_SealedChamber,SEALED VAULT,reviewed AUTO draft
+LandmarkName_FossilManiacsHouse,FOSSIL MANIAC'S HOUSE,"reviewed, no change needed"
+LandmarkName_HuntersHouse,HUNTER'S HOUSE,"reviewed, no change needed"
+LandmarkName_MagmaHideout,FORTRESS VADER,reviewed AUTO draft
+LandmarkName_MirageTower,SANDCRAWLER,reviewed AUTO draft
+LandmarkName_AlteringCave,ALTERING CAVE,"reviewed, no change needed"
+LandmarkName_DesertUnderpass,KRAYT GRAVEYARD,reviewed AUTO draft
+LandmarkName_TrainerHill,TRIAL SPIRE,reviewed AUTO draft
+sUnusedTransparentWhite,{HIGHLIGHT TRANSPARENT}{COLOR WHITE},"reviewed, no change needed"
+sText_PyramidFloor1,PYRAMID FLOOR 1,"reviewed, no change needed"
+sText_PyramidFloor2,PYRAMID FLOOR 2,"reviewed, no change needed"
+sText_PyramidFloor3,PYRAMID FLOOR 3,"reviewed, no change needed"
+sText_PyramidFloor4,PYRAMID FLOOR 4,"reviewed, no change needed"
+sText_PyramidFloor5,PYRAMID FLOOR 5,"reviewed, no change needed"
+sText_PyramidFloor6,PYRAMID FLOOR 6,"reviewed, no change needed"
+sText_PyramidFloor7,PYRAMID FLOOR 7,"reviewed, no change needed"
+sText_Pyramid,PYRAMID,"reviewed, no change needed"
+sText_PokenavCallEllipsis,………………\p,"reviewed, no change needed"
+sEmptyItemName,,"reviewed, no change needed"
+gText_MysteryEventBerry,Obtained a {STR_VAR_2} FRUIT!\nDad has it at MOS ENTHA ARENA.,reviewed AUTO draft
+gText_MysteryEventBerryTransform,The {STR_VAR_1} FRUIT transformed into\none {STR_VAR_2} FRUIT.,reviewed AUTO draft
+gText_MysteryEventBerryObtained,The {STR_VAR_1} FRUIT has already been\nobtained.,reviewed AUTO draft
+gText_MysteryEventSpecialRibbon,A special RIBBON was awarded to\nyour party COMPANION.,reviewed AUTO draft
+gText_MysteryEventNationalDex,The DATAPAD has been upgraded\nwith the NATIONAL MODE.,reviewed AUTO draft
+gText_MysteryEventRareWord,A rare word has been added.,"reviewed, no change needed"
+gText_MysteryEventSentOver,{STR_VAR_1} was sent over!,"reviewed, no change needed"
+gText_MysteryEventFullParty,Your party is full.\n{STR_VAR_1} could not be sent over.,"reviewed, no change needed"
+gText_MysteryEventNewTrainer,A new TRAINER has arrived in\nOUTER RIM.,reviewed AUTO draft
+gText_MysteryEventNewAdversaryInBattleTower,A new adversary has arrived in the\nBATTLE TOWER.,"reviewed, no change needed"
+gText_MysteryEventCantBeUsed,This data can't be used in\nthis version.,"reviewed, no change needed"
+sText_CanceledReadingCard,Canceled reading\nthe Card.,"reviewed, no change needed"
+sText_AlphabetUpperLower,ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!,"reviewed, no change needed"
+sText_No000,{NO}000,"reviewed, no change needed"
+sText_TenDashes,----------,"reviewed, no change needed"
+sExpandedPlaceholder_PokedexDescription,,"reviewed, no change needed"
+sText_TenDashes2,----------,"reviewed, no change needed"
+sText_OutOf30,/30,"reviewed, no change needed"
+sMemoNatureTextColor,{COLOR LIGHT_RED}{SHADOW GREEN},"reviewed, no change needed"
+sMemoMiscTextColor,{COLOR WHITE}{SHADOW DARK_GRAY},"reviewed, no change needed"
+sStatsLeftColumnLayout,{DYNAMIC 0}/{DYNAMIC 1}\n{DYNAMIC 2}\n{DYNAMIC 3},"reviewed, no change needed"
+sStatsRightColumnLayout,{DYNAMIC 0}\n{DYNAMIC 1}\n{DYNAMIC 2},"reviewed, no change needed"
+sMovesPPLayout,{PP}{DYNAMIC 0}/{DYNAMIC 1},"reviewed, no change needed"
+sText_MaleSymbol,{COLOR_HIGHLIGHT_SHADOW LIGHT_RED WHITE GREEN}♂{COLOR_HIGHLIGHT_SHADOW DARK_GRAY WHITE LIGHT_GRAY},"reviewed, no change needed"
+sText_FemaleSymbol,{COLOR_HIGHLIGHT_SHADOW LIGHT_GREEN WHITE BLUE}♀{COLOR_HIGHLIGHT_SHADOW DARK_GRAY WHITE LIGHT_GRAY},"reviewed, no change needed"
+sText_NoGenderSymbol,{UNK_SPACER},"reviewed, no change needed"
+sText_CallingDots,·{PAUSE 4}·{PAUSE 4}·{PAUSE 4}·{PAUSE 4}·\p,"reviewed, no change needed"
+sGenderlessIconString,{UNK_SPACER},"reviewed, no change needed"
+gText_EasyChatKeyboard_ABCDEFothers,{CLEAR 11}A{CLEAR 6}B{CLEAR 6}C{CLEAR 26}D{CLEAR 6}E{CLEAR 6}F{CLEAR 26}others,"reviewed, no change needed"
+gText_EasyChatKeyboard_GHIJKL,{CLEAR 11}G{CLEAR 6}H{CLEAR 6}I{CLEAR 26}J{CLEAR 6}K{CLEAR 6}L,"reviewed, no change needed"
+gText_EasyChatKeyboard_MNOPQRS,{CLEAR 11}M{CLEAR 6}N{CLEAR 6}O{CLEAR 26}P{CLEAR 6}Q{CLEAR 6}R{CLEAR 6}S{CLEAR 26} ,"reviewed, no change needed"
+gText_EasyChatKeyboard_TUVWXYZ,{CLEAR 11}T{CLEAR 6}U{CLEAR 6}V{CLEAR 26}W{CLEAR 6}X{CLEAR 6}Y{CLEAR 6}Z{CLEAR 26} ,"reviewed, no change needed"
+gText_NamingScreenKeyboard_abcdef,{CLEAR 11}a{CLEAR 6}b{CLEAR 6}c{CLEAR 26}d{CLEAR 6}e{CLEAR 6}f{CLEAR 6} {CLEAR 30}.,"reviewed, no change needed"
+gText_NamingScreenKeyboard_ghijkl,"{CLEAR 11}g{CLEAR 6}h{CLEAR 7}i{CLEAR 27}j{CLEAR 7}k{CLEAR 7}l{CLEAR 7} {CLEAR 30},","reviewed, no change needed"
+gText_NamingScreenKeyboard_mnopqrs,{CLEAR 11}m{CLEAR 6}n{CLEAR 6}o{CLEAR 26}p{CLEAR 6}q{CLEAR 7}r{CLEAR 6}s{CLEAR 27} ,"reviewed, no change needed"
+gText_NamingScreenKeyboard_tuvwxyz,{CLEAR 11}t{CLEAR 6}u{CLEAR 6}v{CLEAR 26}w{CLEAR 6}x{CLEAR 6}y{CLEAR 6}z{CLEAR 26} ,"reviewed, no change needed"
+gText_NamingScreenKeyboard_ABCDEF,{CLEAR 11}A{CLEAR 6}B{CLEAR 6}C{CLEAR 26}D{CLEAR 6}E{CLEAR 6}F{CLEAR 6} {CLEAR 30}.,"reviewed, no change needed"
+gText_NamingScreenKeyboard_GHIJKL,"{CLEAR 11}G{CLEAR 6}H{CLEAR 6}I{CLEAR 26}J{CLEAR 6}K{CLEAR 6}L{CLEAR 6} {CLEAR 30},","reviewed, no change needed"
+gText_NamingScreenKeyboard_MNOPQRS,{CLEAR 11}M{CLEAR 6}N{CLEAR 6}O{CLEAR 26}P{CLEAR 6}Q{CLEAR 6}R{CLEAR 6}S{CLEAR 26} ,"reviewed, no change needed"
+gText_NamingScreenKeyboard_TUVWXYZ,{CLEAR 11}T{CLEAR 6}U{CLEAR 6}V{CLEAR 26}W{CLEAR 6}X{CLEAR 6}Y{CLEAR 6}Z{CLEAR 26} ,"reviewed, no change needed"
+gText_NamingScreenKeyboard_01234,{CLEAR 11}0{CLEAR 16}1{CLEAR 16}2{CLEAR 16}3{CLEAR 16}4{CLEAR 16} ,"reviewed, no change needed"
+gText_NamingScreenKeyboard_56789,{CLEAR 11}5{CLEAR 16}6{CLEAR 16}7{CLEAR 16}8{CLEAR 16}9{CLEAR 16} ,"reviewed, no change needed"
+gText_NamingScreenKeyboard_Symbols1,{CLEAR 12}!{CLEAR 17}?{CLEAR 16}♂{CLEAR 16}♀{CLEAR 16}/{CLEAR 17}-,"reviewed, no change needed"
+gText_NamingScreenKeyboard_Symbols2,{CLEAR 11}…{CLEAR 16}“{CLEAR 16}”{CLEAR 18}‘{CLEAR 19}'{CLEAR 18} ,"reviewed, no change needed"
+gText_UnionRoomChatKeyboard_ABCDE,ABCDE,"reviewed, no change needed"
+gText_UnionRoomChatKeyboard_FGHIJ,FGHIJ,"reviewed, no change needed"
+gText_UnionRoomChatKeyboard_KLMNO,KLMNO,"reviewed, no change needed"
+gText_UnionRoomChatKeyboard_PQRST,PQRST,"reviewed, no change needed"
+gText_UnionRoomChatKeyboard_UVWXY,UVWXY,"reviewed, no change needed"
+gText_UnionRoomChatKeyboard_Z,Z    ,"reviewed, no change needed"
+gText_UnionRoomChatKeyboard_01234Upper,01234,"reviewed, no change needed"
+gText_UnionRoomChatKeyboard_56789Upper,56789,"reviewed, no change needed"
+gText_UnionRoomChatKeyboard_PunctuationUpper,".,!? ","reviewed, no change needed"
+gText_UnionRoomChatKeyboard_SymbolsUpper,-/&… ,"reviewed, no change needed"
+gText_UnionRoomChatKeyboard_abcde,abcde,"reviewed, no change needed"
+gText_UnionRoomChatKeyboard_fghij,fghij,"reviewed, no change needed"
+gText_UnionRoomChatKeyboard_klmno,klmno,"reviewed, no change needed"
+gText_UnionRoomChatKeyboard_pqrst,pqrst,"reviewed, no change needed"
+gText_UnionRoomChatKeyboard_uvwxy,uvwxy,"reviewed, no change needed"
+gText_UnionRoomChatKeyboard_z,z    ,"reviewed, no change needed"
+gText_UnionRoomChatKeyboard_01234Lower,01234,"reviewed, no change needed"
+gText_UnionRoomChatKeyboard_56789Lower,56789,"reviewed, no change needed"
+gText_UnionRoomChatKeyboard_PunctuationLower,".,!? ","reviewed, no change needed"
+gText_UnionRoomChatKeyboard_SymbolsLower,-/&… ,"reviewed, no change needed"
+gText_EmptyTextInput1,,"reviewed, no change needed"
+gText_EmptyTextInput2,,"reviewed, no change needed"
+gText_EmptyTextInput3,,"reviewed, no change needed"
+gText_EmptyTextInput4,,"reviewed, no change needed"
+gText_EmptyTextInput5,,"reviewed, no change needed"
+gText_EmptyTextInput6,,"reviewed, no change needed"
+gText_EmptyTextInput7,,"reviewed, no change needed"
+gText_EmptyTextInput8,,"reviewed, no change needed"
+gText_UnionRoomChatKeyboard_Emoji1,{EMOJI_MISCHIEVOUS}{EMOJI_HAPPY}{EMOJI_ANGRY}{EMOJI_SURPRISED}{EMOJI_BIGANGER},"reviewed, no change needed"
+gText_UnionRoomChatKeyboard_Emoji2,{EMOJI_BIGSMILE}{EMOJI_EVIL}{EMOJI_NEUTRAL}{EMOJI_TIRED}{EMOJI_SHOCKED},"reviewed, no change needed"
+gText_UnionRoomChatKeyboard_Emoji3,{EMOJI_LEAF}{EMOJI_FIRE}{EMOJI_WATER}{EMOJI_BOLT}{EMOJI_BALL},"reviewed, no change needed"
+gText_UnionRoomChatKeyboard_Emoji4,♂♀{EMOJI_LEFT_PAREN}{EMOJI_RIGHT_PAREN}{EMOJI_TILDE},"reviewed, no change needed"
+gText_UnionRoomChatKeyboard_Emoji5,{EMOJI_LEFT_EYE}{EMOJI_RIGHT_EYE}{EMOJI_SMALLWHEEL}{EMOJI_SPHERE}{EMOJI_IRRITATED},"reviewed, no change needed"
+gText_UnionRoomChatKeyboard_Emoji6,{EMOJI_AT}{EMOJI_BIGWHEEL}{EMOJI_TONGUE}{EMOJI_ACUTE}{EMOJI_GRAVE},"reviewed, no change needed"
+gText_UnionRoomChatKeyboard_Emoji7,{EMOJI_RIGHT_FIST}{EMOJI_LEFT_FIST}{EMOJI_TRIANGLE_OUTLINE}{EMOJI_UNION}{EMOJI_GREATER_THAN},"reviewed, no change needed"
+gText_UnionRoomChatKeyboard_Emoji8,{EMOJI_CIRCLE}{EMOJI_TRIANGLE}{EMOJI_SQUARE}{EMOJI_HEART}{EMOJI_MOON},"reviewed, no change needed"
+gText_UnionRoomChatKeyboard_Emoji9,{EMOJI_NOTE}{EMOJI_PLUS}{EMOJI_MINUS}{EMOJI_EQUALS}{EMOJI_PIPE},"reviewed, no change needed"
+gText_UnionRoomChatKeyboard_Emoji10,{EMOJI_HIGHBAR}{EMOJI_UNDERSCORE};: ,"reviewed, no change needed"
+sText_HofTime,{STR_VAR_1}:{STR_VAR_2}:{STR_VAR_3},"reviewed, no change needed"
+sText_Ellipsis,…,"reviewed, no change needed"

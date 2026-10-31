@@ -1,0 +1,581 @@
+asset_id,sw_subject
+data/tilesets/primary/building/anim/tv_turned_on/0.png,Interiors: adobe and durasteel rooms shared by every planet (animation: tv turned on)
+data/tilesets/primary/building/anim/tv_turned_on/1.png,Interiors: adobe and durasteel rooms shared by every planet (animation: tv turned on)
+data/tilesets/primary/building/tiles.png,Interiors: adobe and durasteel rooms shared by every planet
+data/tilesets/primary/general/anim/flower/0.png,"Outdoors: Tatooine desert scrub, sand, rock and water edges shared by every planet (animation: flower)"
+data/tilesets/primary/general/anim/flower/1.png,"Outdoors: Tatooine desert scrub, sand, rock and water edges shared by every planet (animation: flower)"
+data/tilesets/primary/general/anim/flower/2.png,"Outdoors: Tatooine desert scrub, sand, rock and water edges shared by every planet (animation: flower)"
+data/tilesets/primary/general/anim/land_water_edge/0.png,"Outdoors: Tatooine desert scrub, sand, rock and water edges shared by every planet (animation: land water edge)"
+data/tilesets/primary/general/anim/land_water_edge/1.png,"Outdoors: Tatooine desert scrub, sand, rock and water edges shared by every planet (animation: land water edge)"
+data/tilesets/primary/general/anim/land_water_edge/2.png,"Outdoors: Tatooine desert scrub, sand, rock and water edges shared by every planet (animation: land water edge)"
+data/tilesets/primary/general/anim/land_water_edge/3.png,"Outdoors: Tatooine desert scrub, sand, rock and water edges shared by every planet (animation: land water edge)"
+data/tilesets/primary/general/anim/sand_water_edge/0.png,"Outdoors: Tatooine desert scrub, sand, rock and water edges shared by every planet (animation: sand water edge)"
+data/tilesets/primary/general/anim/sand_water_edge/1.png,"Outdoors: Tatooine desert scrub, sand, rock and water edges shared by every planet (animation: sand water edge)"
+data/tilesets/primary/general/anim/sand_water_edge/2.png,"Outdoors: Tatooine desert scrub, sand, rock and water edges shared by every planet (animation: sand water edge)"
+data/tilesets/primary/general/anim/sand_water_edge/3.png,"Outdoors: Tatooine desert scrub, sand, rock and water edges shared by every planet (animation: sand water edge)"
+data/tilesets/primary/general/anim/sand_water_edge/4.png,"Outdoors: Tatooine desert scrub, sand, rock and water edges shared by every planet (animation: sand water edge)"
+data/tilesets/primary/general/anim/sand_water_edge/5.png,"Outdoors: Tatooine desert scrub, sand, rock and water edges shared by every planet (animation: sand water edge)"
+data/tilesets/primary/general/anim/sand_water_edge/6.png,"Outdoors: Tatooine desert scrub, sand, rock and water edges shared by every planet (animation: sand water edge)"
+data/tilesets/primary/general/anim/water/0.png,"Outdoors: Tatooine desert scrub, sand, rock and water edges shared by every planet (animation: water)"
+data/tilesets/primary/general/anim/water/1.png,"Outdoors: Tatooine desert scrub, sand, rock and water edges shared by every planet (animation: water)"
+data/tilesets/primary/general/anim/water/2.png,"Outdoors: Tatooine desert scrub, sand, rock and water edges shared by every planet (animation: water)"
+data/tilesets/primary/general/anim/water/3.png,"Outdoors: Tatooine desert scrub, sand, rock and water edges shared by every planet (animation: water)"
+data/tilesets/primary/general/anim/water/4.png,"Outdoors: Tatooine desert scrub, sand, rock and water edges shared by every planet (animation: water)"
+data/tilesets/primary/general/anim/water/5.png,"Outdoors: Tatooine desert scrub, sand, rock and water edges shared by every planet (animation: water)"
+data/tilesets/primary/general/anim/water/6.png,"Outdoors: Tatooine desert scrub, sand, rock and water edges shared by every planet (animation: water)"
+data/tilesets/primary/general/anim/water/7.png,"Outdoors: Tatooine desert scrub, sand, rock and water edges shared by every planet (animation: water)"
+data/tilesets/primary/general/anim/waterfall/0.png,"Outdoors: Tatooine desert scrub, sand, rock and water edges shared by every planet (animation: waterfall)"
+data/tilesets/primary/general/anim/waterfall/1.png,"Outdoors: Tatooine desert scrub, sand, rock and water edges shared by every planet (animation: waterfall)"
+data/tilesets/primary/general/anim/waterfall/2.png,"Outdoors: Tatooine desert scrub, sand, rock and water edges shared by every planet (animation: waterfall)"
+data/tilesets/primary/general/anim/waterfall/3.png,"Outdoors: Tatooine desert scrub, sand, rock and water edges shared by every planet (animation: waterfall)"
+data/tilesets/primary/general/tiles.png,"Outdoors: Tatooine desert scrub, sand, rock and water edges shared by every planet"
+data/tilesets/primary/secret_base/tiles.png,HIDEOUT interior basics
+data/tilesets/primary/secret_base/unknown_tiles.png,HIDEOUT interior basics
+data/tilesets/secondary/battle_arena/tiles.png,GRAND ARENA: BATTLE ARENA (4-LOM's ring)
+data/tilesets/secondary/battle_dome/tiles.png,GRAND ARENA: BATTLE DOME (Dengar's stadium)
+data/tilesets/secondary/battle_factory/tiles.png,GRAND ARENA: BATTLE FACTORY (IG-88's droid works)
+data/tilesets/secondary/battle_frontier/tiles.png,GRAND ARENA: shared facility interiors
+data/tilesets/secondary/battle_frontier_outside_east/anim/flag/0.png,"GRAND ARENA plaza, east (Lando's arena world) (animation: flag)"
+data/tilesets/secondary/battle_frontier_outside_east/anim/flag/1.png,"GRAND ARENA plaza, east (Lando's arena world) (animation: flag)"
+data/tilesets/secondary/battle_frontier_outside_east/anim/flag/2.png,"GRAND ARENA plaza, east (Lando's arena world) (animation: flag)"
+data/tilesets/secondary/battle_frontier_outside_east/anim/flag/3.png,"GRAND ARENA plaza, east (Lando's arena world) (animation: flag)"
+data/tilesets/secondary/battle_frontier_outside_east/tiles.png,"GRAND ARENA plaza, east (Lando's arena world)"
+data/tilesets/secondary/battle_frontier_outside_west/anim/flag/0.png,"GRAND ARENA plaza, west, with the starliner pad (animation: flag)"
+data/tilesets/secondary/battle_frontier_outside_west/anim/flag/1.png,"GRAND ARENA plaza, west, with the starliner pad (animation: flag)"
+data/tilesets/secondary/battle_frontier_outside_west/anim/flag/2.png,"GRAND ARENA plaza, west, with the starliner pad (animation: flag)"
+data/tilesets/secondary/battle_frontier_outside_west/anim/flag/3.png,"GRAND ARENA plaza, west, with the starliner pad (animation: flag)"
+data/tilesets/secondary/battle_frontier_outside_west/tiles.png,"GRAND ARENA plaza, west, with the starliner pad"
+data/tilesets/secondary/battle_frontier_ranking_hall/tiles.png,GRAND ARENA ranking hall
+data/tilesets/secondary/battle_palace/tiles.png,GRAND ARENA: BATTLE PALACE (Zuckuss's temple)
+data/tilesets/secondary/battle_pike/tiles.png,GRAND ARENA: BATTLE PIKE (Gardulla's Hutt den)
+data/tilesets/secondary/battle_pyramid/anim/statue_shadow/0.png,GRAND ARENA: BATTLE PYRAMID (Dexter's ancient ziggurat) (animation: statue shadow)
+data/tilesets/secondary/battle_pyramid/anim/statue_shadow/1.png,GRAND ARENA: BATTLE PYRAMID (Dexter's ancient ziggurat) (animation: statue shadow)
+data/tilesets/secondary/battle_pyramid/anim/statue_shadow/2.png,GRAND ARENA: BATTLE PYRAMID (Dexter's ancient ziggurat) (animation: statue shadow)
+data/tilesets/secondary/battle_pyramid/anim/torch/0.png,GRAND ARENA: BATTLE PYRAMID (Dexter's ancient ziggurat) (animation: torch)
+data/tilesets/secondary/battle_pyramid/anim/torch/1.png,GRAND ARENA: BATTLE PYRAMID (Dexter's ancient ziggurat) (animation: torch)
+data/tilesets/secondary/battle_pyramid/anim/torch/2.png,GRAND ARENA: BATTLE PYRAMID (Dexter's ancient ziggurat) (animation: torch)
+data/tilesets/secondary/battle_pyramid/tiles.png,GRAND ARENA: BATTLE PYRAMID (Dexter's ancient ziggurat)
+data/tilesets/secondary/battle_tent/tiles.png,BATTLE TENT: desert canvas tent
+data/tilesets/secondary/bike_shop/anim/blinking_lights/0.png,"Wald's speeder shop, Mos Espa (animation: blinking lights)"
+data/tilesets/secondary/bike_shop/anim/blinking_lights/1.png,"Wald's speeder shop, Mos Espa (animation: blinking lights)"
+data/tilesets/secondary/bike_shop/tiles.png,"Wald's speeder shop, Mos Espa"
+data/tilesets/secondary/brendans_mays_house/tiles.png,"Player's homestead, Mos Pelgo (Tatooine dome house)"
+data/tilesets/secondary/cable_club/tiles.png,HOLONET CLUB upstairs at the Bacta Center
+data/tilesets/secondary/cable_club/unknown_tiles.png,HOLONET CLUB upstairs at the Bacta Center
+data/tilesets/secondary/cave/anim/lava/0.png,"Caves: sandstone, Kashyyyk roots, Sullust lava tubes, Ilum ice (animation: lava)"
+data/tilesets/secondary/cave/anim/lava/1.png,"Caves: sandstone, Kashyyyk roots, Sullust lava tubes, Ilum ice (animation: lava)"
+data/tilesets/secondary/cave/anim/lava/2.png,"Caves: sandstone, Kashyyyk roots, Sullust lava tubes, Ilum ice (animation: lava)"
+data/tilesets/secondary/cave/anim/lava/3.png,"Caves: sandstone, Kashyyyk roots, Sullust lava tubes, Ilum ice (animation: lava)"
+data/tilesets/secondary/cave/anim/lava/4.png,"Caves: sandstone, Kashyyyk roots, Sullust lava tubes, Ilum ice (animation: lava)"
+data/tilesets/secondary/cave/anim/lava/5.png,"Caves: sandstone, Kashyyyk roots, Sullust lava tubes, Ilum ice (animation: lava)"
+data/tilesets/secondary/cave/anim/lava/6.png,"Caves: sandstone, Kashyyyk roots, Sullust lava tubes, Ilum ice (animation: lava)"
+data/tilesets/secondary/cave/anim/lava/7.png,"Caves: sandstone, Kashyyyk roots, Sullust lava tubes, Ilum ice (animation: lava)"
+data/tilesets/secondary/cave/tiles.png,"Caves: sandstone, Kashyyyk roots, Sullust lava tubes, Ilum ice"
+data/tilesets/secondary/contest/tiles.png,Cloud City SHOWCASE hall
+data/tilesets/secondary/dewford/anim/flag/0.png,"KACHIRHO, Kashyyyk: wroshyr-root village on the lagoon (animation: flag)"
+data/tilesets/secondary/dewford/anim/flag/1.png,"KACHIRHO, Kashyyyk: wroshyr-root village on the lagoon (animation: flag)"
+data/tilesets/secondary/dewford/anim/flag/2.png,"KACHIRHO, Kashyyyk: wroshyr-root village on the lagoon (animation: flag)"
+data/tilesets/secondary/dewford/anim/flag/3.png,"KACHIRHO, Kashyyyk: wroshyr-root village on the lagoon (animation: flag)"
+data/tilesets/secondary/dewford/tiles.png,"KACHIRHO, Kashyyyk: wroshyr-root village on the lagoon"
+data/tilesets/secondary/dewford_gym/tiles.png,KACHIRHO ARENA: dark wroshyr hollow
+data/tilesets/secondary/elite_four/anim/floor_light/0.png,ILUM TEMPLE: the Four Trials' vision chambers (animation: floor light)
+data/tilesets/secondary/elite_four/anim/floor_light/1.png,ILUM TEMPLE: the Four Trials' vision chambers (animation: floor light)
+data/tilesets/secondary/elite_four/anim/wall_lights/0.png,ILUM TEMPLE: the Four Trials' vision chambers (animation: wall lights)
+data/tilesets/secondary/elite_four/anim/wall_lights/1.png,ILUM TEMPLE: the Four Trials' vision chambers (animation: wall lights)
+data/tilesets/secondary/elite_four/anim/wall_lights/2.png,ILUM TEMPLE: the Four Trials' vision chambers (animation: wall lights)
+data/tilesets/secondary/elite_four/anim/wall_lights/3.png,ILUM TEMPLE: the Four Trials' vision chambers (animation: wall lights)
+data/tilesets/secondary/elite_four/tiles.png,ILUM TEMPLE: the Four Trials' vision chambers
+data/tilesets/secondary/ever_grande/anim/flowers/0.png,"ILUM: snow, crystal outcrops and temple steps (animation: flowers)"
+data/tilesets/secondary/ever_grande/anim/flowers/1.png,"ILUM: snow, crystal outcrops and temple steps (animation: flowers)"
+data/tilesets/secondary/ever_grande/anim/flowers/2.png,"ILUM: snow, crystal outcrops and temple steps (animation: flowers)"
+data/tilesets/secondary/ever_grande/anim/flowers/3.png,"ILUM: snow, crystal outcrops and temple steps (animation: flowers)"
+data/tilesets/secondary/ever_grande/anim/flowers/4.png,"ILUM: snow, crystal outcrops and temple steps (animation: flowers)"
+data/tilesets/secondary/ever_grande/anim/flowers/5.png,"ILUM: snow, crystal outcrops and temple steps (animation: flowers)"
+data/tilesets/secondary/ever_grande/anim/flowers/6.png,"ILUM: snow, crystal outcrops and temple steps (animation: flowers)"
+data/tilesets/secondary/ever_grande/anim/flowers/7.png,"ILUM: snow, crystal outcrops and temple steps (animation: flowers)"
+data/tilesets/secondary/ever_grande/tiles.png,"ILUM: snow, crystal outcrops and temple steps"
+data/tilesets/secondary/facility/tiles.png,Generic Imperial / House Organa facility interior
+data/tilesets/secondary/fallarbor/tiles.png,"INYUSU TOR, Sullust: ash-dusted settlement"
+data/tilesets/secondary/fortree/tiles.png,"BRIGHT TREE, Endor: Ewok treetop village and rope bridges"
+data/tilesets/secondary/fortree_gym/tiles.png,BRIGHT TREE ARENA: treetop platforms
+data/tilesets/secondary/generic_building/tiles.png,"Generic interiors: cantina, house, office"
+data/tilesets/secondary/inside_of_truck/tiles.png,Inside the Jawa sandcrawler (opening scene)
+data/tilesets/secondary/inside_ship/tiles.png,"Starship interiors: STAR TIDAL, Republic wreck, Han's freighter"
+data/tilesets/secondary/island_harbor/tiles.png,"Event-pass landing pads (Tython, Mortis, Atollon)"
+data/tilesets/secondary/lab/tiles.png,"PROF. KORR's lab, Mos Pelgo"
+data/tilesets/secondary/lavaridge/anim/steam/0.png,"PIRIN, Sullust: volcanic springs and steam vents (animation: steam)"
+data/tilesets/secondary/lavaridge/anim/steam/1.png,"PIRIN, Sullust: volcanic springs and steam vents (animation: steam)"
+data/tilesets/secondary/lavaridge/anim/steam/2.png,"PIRIN, Sullust: volcanic springs and steam vents (animation: steam)"
+data/tilesets/secondary/lavaridge/anim/steam/3.png,"PIRIN, Sullust: volcanic springs and steam vents (animation: steam)"
+data/tilesets/secondary/lavaridge/tiles.png,"PIRIN, Sullust: volcanic springs and steam vents"
+data/tilesets/secondary/lavaridge_gym/tiles.png,PIRIN ARENA: geothermal vents
+data/tilesets/secondary/lilycove/tiles.png,"CLOUD CITY, Bespin: white towers and landing platforms over the cloud sea"
+data/tilesets/secondary/lilycove_museum/tiles.png,Cloud City art gallery
+data/tilesets/secondary/mauville/anim/flower_1/0.png,"MOS ESPA, Tatooine: domed podrace city (animation: flower 1)"
+data/tilesets/secondary/mauville/anim/flower_1/1.png,"MOS ESPA, Tatooine: domed podrace city (animation: flower 1)"
+data/tilesets/secondary/mauville/anim/flower_1/2.png,"MOS ESPA, Tatooine: domed podrace city (animation: flower 1)"
+data/tilesets/secondary/mauville/anim/flower_1/3.png,"MOS ESPA, Tatooine: domed podrace city (animation: flower 1)"
+data/tilesets/secondary/mauville/anim/flower_1/4.png,"MOS ESPA, Tatooine: domed podrace city (animation: flower 1)"
+data/tilesets/secondary/mauville/anim/flower_2/0.png,"MOS ESPA, Tatooine: domed podrace city (animation: flower 2)"
+data/tilesets/secondary/mauville/anim/flower_2/1.png,"MOS ESPA, Tatooine: domed podrace city (animation: flower 2)"
+data/tilesets/secondary/mauville/anim/flower_2/2.png,"MOS ESPA, Tatooine: domed podrace city (animation: flower 2)"
+data/tilesets/secondary/mauville/anim/flower_2/3.png,"MOS ESPA, Tatooine: domed podrace city (animation: flower 2)"
+data/tilesets/secondary/mauville/anim/flower_2/4.png,"MOS ESPA, Tatooine: domed podrace city (animation: flower 2)"
+data/tilesets/secondary/mauville/tiles.png,"MOS ESPA, Tatooine: domed podrace city"
+data/tilesets/secondary/mauville_game_corner/tiles.png,Mos Espa sabacc parlor
+data/tilesets/secondary/mauville_gym/anim/electric_gates/0.png,MOS ESPA ARENA: Watto's junkyard with charged fences (animation: electric gates)
+data/tilesets/secondary/mauville_gym/anim/electric_gates/1.png,MOS ESPA ARENA: Watto's junkyard with charged fences (animation: electric gates)
+data/tilesets/secondary/mauville_gym/tiles.png,MOS ESPA ARENA: Watto's junkyard with charged fences
+data/tilesets/secondary/meteor_falls/tiles.png,"STARFALL CAVERN, Sullust"
+data/tilesets/secondary/mirage_tower/tiles.png,The SANDCRAWLER that comes and goes in the desert
+data/tilesets/secondary/mossdeep/tiles.png,YAVIN 4: jungle around the Massassi temples and the LAUNCH TOWER
+data/tilesets/secondary/mossdeep_game_corner/tiles.png,Yavin 4 rec room
+data/tilesets/secondary/mossdeep_gym/tiles.png,MASSASSI TEMPLE arena: Force-switch floors
+data/tilesets/secondary/mystery_events_house/tiles.png,Mystery event house
+data/tilesets/secondary/navel_rock/tiles.png,MORTIS GATE
+data/tilesets/secondary/oceanic_museum/tiles.png,"SPACER MUSEUM, Mos Eisley"
+data/tilesets/secondary/pacifidlog/anim/log_bridges/0.png,"TIPOCA CITY, Kamino: stilt platforms in endless rain (animation: log bridges)"
+data/tilesets/secondary/pacifidlog/anim/log_bridges/1.png,"TIPOCA CITY, Kamino: stilt platforms in endless rain (animation: log bridges)"
+data/tilesets/secondary/pacifidlog/anim/log_bridges/2.png,"TIPOCA CITY, Kamino: stilt platforms in endless rain (animation: log bridges)"
+data/tilesets/secondary/pacifidlog/anim/water_currents/0.png,"TIPOCA CITY, Kamino: stilt platforms in endless rain (animation: water currents)"
+data/tilesets/secondary/pacifidlog/anim/water_currents/1.png,"TIPOCA CITY, Kamino: stilt platforms in endless rain (animation: water currents)"
+data/tilesets/secondary/pacifidlog/anim/water_currents/2.png,"TIPOCA CITY, Kamino: stilt platforms in endless rain (animation: water currents)"
+data/tilesets/secondary/pacifidlog/anim/water_currents/3.png,"TIPOCA CITY, Kamino: stilt platforms in endless rain (animation: water currents)"
+data/tilesets/secondary/pacifidlog/anim/water_currents/4.png,"TIPOCA CITY, Kamino: stilt platforms in endless rain (animation: water currents)"
+data/tilesets/secondary/pacifidlog/anim/water_currents/5.png,"TIPOCA CITY, Kamino: stilt platforms in endless rain (animation: water currents)"
+data/tilesets/secondary/pacifidlog/anim/water_currents/6.png,"TIPOCA CITY, Kamino: stilt platforms in endless rain (animation: water currents)"
+data/tilesets/secondary/pacifidlog/anim/water_currents/7.png,"TIPOCA CITY, Kamino: stilt platforms in endless rain (animation: water currents)"
+data/tilesets/secondary/pacifidlog/tiles.png,"TIPOCA CITY, Kamino: stilt platforms in endless rain"
+data/tilesets/secondary/petalburg/tiles.png,"MOS ENTHA, Tatooine: small dome town"
+data/tilesets/secondary/petalburg_gym/tiles.png,MOS ENTHA ARENA: Doran's training rooms
+data/tilesets/secondary/pokemon_center/tiles.png,BACTA CENTER: bacta tanks and 2-1B's counter
+data/tilesets/secondary/pokemon_day_care/tiles.png,Creature nursery ranch
+data/tilesets/secondary/pokemon_fan_club/tiles.png,COMPANION FAN CLUB lounge
+data/tilesets/secondary/pokemon_school/tiles.png,TRAINER ACADEMY classroom
+data/tilesets/secondary/pretty_petal_flower_shop/tiles.png,Moisture-garden flower shop near Bestine
+data/tilesets/secondary/rustboro/anim/fountain/0.png,"BESTINE, Tatooine: House Organa office tower and academy (animation: fountain)"
+data/tilesets/secondary/rustboro/anim/fountain/1.png,"BESTINE, Tatooine: House Organa office tower and academy (animation: fountain)"
+data/tilesets/secondary/rustboro/anim/windy_water/0.png,"BESTINE, Tatooine: House Organa office tower and academy (animation: windy water)"
+data/tilesets/secondary/rustboro/anim/windy_water/1.png,"BESTINE, Tatooine: House Organa office tower and academy (animation: windy water)"
+data/tilesets/secondary/rustboro/anim/windy_water/2.png,"BESTINE, Tatooine: House Organa office tower and academy (animation: windy water)"
+data/tilesets/secondary/rustboro/anim/windy_water/3.png,"BESTINE, Tatooine: House Organa office tower and academy (animation: windy water)"
+data/tilesets/secondary/rustboro/anim/windy_water/4.png,"BESTINE, Tatooine: House Organa office tower and academy (animation: windy water)"
+data/tilesets/secondary/rustboro/anim/windy_water/5.png,"BESTINE, Tatooine: House Organa office tower and academy (animation: windy water)"
+data/tilesets/secondary/rustboro/anim/windy_water/6.png,"BESTINE, Tatooine: House Organa office tower and academy (animation: windy water)"
+data/tilesets/secondary/rustboro/anim/windy_water/7.png,"BESTINE, Tatooine: House Organa office tower and academy (animation: windy water)"
+data/tilesets/secondary/rustboro/tiles.png,"BESTINE, Tatooine: House Organa office tower and academy"
+data/tilesets/secondary/rustboro_gym/tiles.png,BESTINE ARENA: sandstone halls
+data/tilesets/secondary/rusturf_tunnel/tiles.png,BEGGAR'S CANYON tunnel
+data/tilesets/secondary/seashore_house/tiles.png,Seaside cantina (Kashyyyk shore)
+data/tilesets/secondary/secret_base/blue_cave/tiles.png,HIDEOUT: ice cave (Hoth / Ilum)
+data/tilesets/secondary/secret_base/blue_cave/unused_tiles.png,HIDEOUT: ice cave (Hoth / Ilum)
+data/tilesets/secondary/secret_base/brown_cave/tiles.png,HIDEOUT: sandstone cave (Tatooine)
+data/tilesets/secondary/secret_base/brown_cave/unused_tiles.png,HIDEOUT: sandstone cave (Tatooine)
+data/tilesets/secondary/secret_base/red_cave/tiles.png,HIDEOUT: lava cave (Sullust / Mustafar)
+data/tilesets/secondary/secret_base/red_cave/unused_tiles.png,HIDEOUT: lava cave (Sullust / Mustafar)
+data/tilesets/secondary/secret_base/shrub/tiles.png,HIDEOUT: scrub den (Tatooine)
+data/tilesets/secondary/secret_base/shrub/unused_tiles.png,HIDEOUT: scrub den (Tatooine)
+data/tilesets/secondary/secret_base/tree/tiles.png,HIDEOUT: wroshyr hollow (Kashyyyk / Endor)
+data/tilesets/secondary/secret_base/tree/unused_tiles.png,HIDEOUT: wroshyr hollow (Kashyyyk / Endor)
+data/tilesets/secondary/secret_base/yellow_cave/tiles.png,HIDEOUT: desert cave (Jundland)
+data/tilesets/secondary/secret_base/yellow_cave/unused_tiles.png,HIDEOUT: desert cave (Jundland)
+data/tilesets/secondary/shop/tiles.png,Supply depot interior
+data/tilesets/secondary/slateport/anim/balloons/0.png,"MOS EISLEY, Tatooine: spaceport, docking bays, market (animation: balloons)"
+data/tilesets/secondary/slateport/anim/balloons/1.png,"MOS EISLEY, Tatooine: spaceport, docking bays, market (animation: balloons)"
+data/tilesets/secondary/slateport/anim/balloons/2.png,"MOS EISLEY, Tatooine: spaceport, docking bays, market (animation: balloons)"
+data/tilesets/secondary/slateport/anim/balloons/3.png,"MOS EISLEY, Tatooine: spaceport, docking bays, market (animation: balloons)"
+data/tilesets/secondary/slateport/tiles.png,"MOS EISLEY, Tatooine: spaceport, docking bays, market"
+data/tilesets/secondary/sootopolis/anim/stormy_water/0_groudon.png,DAGOBAH: swamp basin ringed by gnarltrees (animation: stormy water)
+data/tilesets/secondary/sootopolis/anim/stormy_water/0_kyogre.png,DAGOBAH: swamp basin ringed by gnarltrees (animation: stormy water)
+data/tilesets/secondary/sootopolis/anim/stormy_water/1_groudon.png,DAGOBAH: swamp basin ringed by gnarltrees (animation: stormy water)
+data/tilesets/secondary/sootopolis/anim/stormy_water/1_kyogre.png,DAGOBAH: swamp basin ringed by gnarltrees (animation: stormy water)
+data/tilesets/secondary/sootopolis/anim/stormy_water/2_groudon.png,DAGOBAH: swamp basin ringed by gnarltrees (animation: stormy water)
+data/tilesets/secondary/sootopolis/anim/stormy_water/2_kyogre.png,DAGOBAH: swamp basin ringed by gnarltrees (animation: stormy water)
+data/tilesets/secondary/sootopolis/anim/stormy_water/3_groudon.png,DAGOBAH: swamp basin ringed by gnarltrees (animation: stormy water)
+data/tilesets/secondary/sootopolis/anim/stormy_water/3_kyogre.png,DAGOBAH: swamp basin ringed by gnarltrees (animation: stormy water)
+data/tilesets/secondary/sootopolis/anim/stormy_water/4_groudon.png,DAGOBAH: swamp basin ringed by gnarltrees (animation: stormy water)
+data/tilesets/secondary/sootopolis/anim/stormy_water/4_kyogre.png,DAGOBAH: swamp basin ringed by gnarltrees (animation: stormy water)
+data/tilesets/secondary/sootopolis/anim/stormy_water/5_groudon.png,DAGOBAH: swamp basin ringed by gnarltrees (animation: stormy water)
+data/tilesets/secondary/sootopolis/anim/stormy_water/5_kyogre.png,DAGOBAH: swamp basin ringed by gnarltrees (animation: stormy water)
+data/tilesets/secondary/sootopolis/anim/stormy_water/6_groudon.png,DAGOBAH: swamp basin ringed by gnarltrees (animation: stormy water)
+data/tilesets/secondary/sootopolis/anim/stormy_water/6_kyogre.png,DAGOBAH: swamp basin ringed by gnarltrees (animation: stormy water)
+data/tilesets/secondary/sootopolis/anim/stormy_water/7_groudon.png,DAGOBAH: swamp basin ringed by gnarltrees (animation: stormy water)
+data/tilesets/secondary/sootopolis/anim/stormy_water/7_kyogre.png,DAGOBAH: swamp basin ringed by gnarltrees (animation: stormy water)
+data/tilesets/secondary/sootopolis/tiles.png,DAGOBAH: swamp basin ringed by gnarltrees
+data/tilesets/secondary/sootopolis_gym/anim/front_waterfall/0.png,DAGOBAH ARENA: Yoda's hut and root-falls (animation: front waterfall)
+data/tilesets/secondary/sootopolis_gym/anim/front_waterfall/1.png,DAGOBAH ARENA: Yoda's hut and root-falls (animation: front waterfall)
+data/tilesets/secondary/sootopolis_gym/anim/front_waterfall/2.png,DAGOBAH ARENA: Yoda's hut and root-falls (animation: front waterfall)
+data/tilesets/secondary/sootopolis_gym/anim/side_waterfall/0.png,DAGOBAH ARENA: Yoda's hut and root-falls (animation: side waterfall)
+data/tilesets/secondary/sootopolis_gym/anim/side_waterfall/1.png,DAGOBAH ARENA: Yoda's hut and root-falls (animation: side waterfall)
+data/tilesets/secondary/sootopolis_gym/anim/side_waterfall/2.png,DAGOBAH ARENA: Yoda's hut and root-falls (animation: side waterfall)
+data/tilesets/secondary/sootopolis_gym/tiles.png,DAGOBAH ARENA: Yoda's hut and root-falls
+data/tilesets/secondary/trainer_hill/tiles.png,TRIAL SPIRE
+data/tilesets/secondary/trick_house_puzzle/tiles.png,TRICK HOUSE puzzle rooms (Garindan)
+data/tilesets/secondary/underwater/anim/seaweed/0.png,"Underwater: seas of Kashyyyk, Yavin 4 and Dagobah (animation: seaweed)"
+data/tilesets/secondary/underwater/anim/seaweed/1.png,"Underwater: seas of Kashyyyk, Yavin 4 and Dagobah (animation: seaweed)"
+data/tilesets/secondary/underwater/anim/seaweed/2.png,"Underwater: seas of Kashyyyk, Yavin 4 and Dagobah (animation: seaweed)"
+data/tilesets/secondary/underwater/anim/seaweed/3.png,"Underwater: seas of Kashyyyk, Yavin 4 and Dagobah (animation: seaweed)"
+data/tilesets/secondary/underwater/tiles.png,"Underwater: seas of Kashyyyk, Yavin 4 and Dagobah"
+data/tilesets/secondary/union_room/tiles.png,HOLONET CLUB union room
+data/tilesets/secondary/unused_1/0.png,Unused tileset (kept)
+data/tilesets/secondary/unused_1/1.png,Unused tileset (kept)
+data/tilesets/secondary/unused_1/2.png,Unused tileset (kept)
+data/tilesets/secondary/unused_1/3.png,Unused tileset (kept)
+data/tilesets/secondary/unused_1/tiles.png,Unused tileset (kept)
+data/tilesets/secondary/unused_2/0.png,Unused tileset (kept)
+data/tilesets/secondary/unused_2/1.png,Unused tileset (kept)
+data/tilesets/secondary/unused_2/tiles.png,Unused tileset (kept)
+graphics/object_events/pics/berry_trees/aguav.png,AGARA FRUIT plant
+graphics/object_events/pics/berry_trees/aspear.png,BLBA FRUIT plant
+graphics/object_events/pics/berry_trees/cheri.png,JOGAN FRUIT plant
+graphics/object_events/pics/berry_trees/chesto.png,MUJA FRUIT plant
+graphics/object_events/pics/berry_trees/cornn.png,CORNA FRUIT plant
+graphics/object_events/pics/berry_trees/dirt_pile.png,Loose soil
+graphics/object_events/pics/berry_trees/durin.png,DURA FRUIT plant
+graphics/object_events/pics/berry_trees/figy.png,SUNRED FRUIT plant
+graphics/object_events/pics/berry_trees/grepa.png,GRAVA FRUIT plant
+graphics/object_events/pics/berry_trees/hondew.png,DEWMELON FRUIT plant
+graphics/object_events/pics/berry_trees/iapapa.png,PAPAWA FRUIT plant
+graphics/object_events/pics/berry_trees/kelpsy.png,KELPA FRUIT plant
+graphics/object_events/pics/berry_trees/lansat.png,LANSA FRUIT plant
+graphics/object_events/pics/berry_trees/leppa.png,WROSHYR FRUIT plant
+graphics/object_events/pics/berry_trees/liechi.png,LIESHA FRUIT plant
+graphics/object_events/pics/berry_trees/lum.png,ILUM FRUIT plant
+graphics/object_events/pics/berry_trees/mago.png,MOSSRA FRUIT plant
+graphics/object_events/pics/berry_trees/nomel.png,NOMELA FRUIT plant
+graphics/object_events/pics/berry_trees/oran.png,HUBBA FRUIT plant
+graphics/object_events/pics/berry_trees/pamtre.png,PAMTRA FRUIT plant
+graphics/object_events/pics/berry_trees/pecha.png,PALLIE FRUIT plant
+graphics/object_events/pics/berry_trees/persim.png,SAPIR FRUIT plant
+graphics/object_events/pics/berry_trees/pomeg.png,POMOGO FRUIT plant
+graphics/object_events/pics/berry_trees/rabuta.png,RABUTO FRUIT plant
+graphics/object_events/pics/berry_trees/rawst.png,SHUURA FRUIT plant
+graphics/object_events/pics/berry_trees/razz.png,RAZAK FRUIT plant
+graphics/object_events/pics/berry_trees/sitrus.png,JUMBA FRUIT plant
+graphics/object_events/pics/berry_trees/spelon.png,SPELNA FRUIT plant
+graphics/object_events/pics/berry_trees/sprout.png,Fruit sprout
+graphics/object_events/pics/berry_trees/tamato.png,TAMATA FRUIT plant
+graphics/object_events/pics/berry_trees/wepear.png,WEPA FRUIT plant
+graphics/object_events/pics/berry_trees/wiki.png,KASHA FRUIT plant
+graphics/object_events/pics/cushions/ball_cushion.png,CAPTURE POD cushion
+graphics/object_events/pics/cushions/diamond_cushion.png,Diamond-pattern cushion
+graphics/object_events/pics/cushions/fire_cushion.png,Flame-pattern cushion
+graphics/object_events/pics/cushions/grass_cushion.png,Leaf-pattern cushion
+graphics/object_events/pics/cushions/kiss_cushion.png,KISS CUSHION (heart-shaped)
+graphics/object_events/pics/cushions/pika_cushion.png,IONRAT cushion
+graphics/object_events/pics/cushions/round_cushion.png,Round cushion
+graphics/object_events/pics/cushions/spin_cushion.png,Spiral cushion
+graphics/object_events/pics/cushions/water_cushion.png,Wave-pattern cushion
+graphics/object_events/pics/cushions/zigzag_cushion.png,Zigzag cushion
+graphics/object_events/pics/dolls/azurill_doll.png,BLOOPKIT doll
+graphics/object_events/pics/dolls/baltoy_doll.png,HOLOSHARD doll
+graphics/object_events/pics/dolls/big_blastoise_doll.png,Big TORPEDTURT doll
+graphics/object_events/pics/dolls/big_charizard_doll.png,Big LAVADRAGON doll
+graphics/object_events/pics/dolls/big_lapras_doll.png,Big PURRGIL doll
+graphics/object_events/pics/dolls/big_regice_doll.png,Big ICEWARDEN doll
+graphics/object_events/pics/dolls/big_regirock_doll.png,Big ROCKWARDEN doll
+graphics/object_events/pics/dolls/big_registeel_doll.png,Big DURAWARDEN doll
+graphics/object_events/pics/dolls/big_rhydon_doll.png,Big RANCOR doll
+graphics/object_events/pics/dolls/big_snorlax_doll.png,Big HAPPABORE doll
+graphics/object_events/pics/dolls/big_venusaur_doll.png,Big BLOOMBEAST doll
+graphics/object_events/pics/dolls/big_wailmer_doll.png,Big AIWHALET doll
+graphics/object_events/pics/dolls/chikorita_doll.png,LEAFKIT doll
+graphics/object_events/pics/dolls/clefairy_doll.png,MOONLET doll
+graphics/object_events/pics/dolls/cyndaquil_doll.png,CINDERMOLE doll
+graphics/object_events/pics/dolls/ditto_doll.png,SHIFTBLOB doll
+graphics/object_events/pics/dolls/duskull_doll.png,WRAITHLET doll
+graphics/object_events/pics/dolls/gulpin_doll.png,SARLACLET doll
+graphics/object_events/pics/dolls/jigglypuff_doll.png,LULLAPUFF doll
+graphics/object_events/pics/dolls/kecleon_doll.png,TAOZIN doll
+graphics/object_events/pics/dolls/lotad_doll.png,BOGLING doll
+graphics/object_events/pics/dolls/marill_doll.png,BLOOPRAT doll
+graphics/object_events/pics/dolls/meowth_doll.png,TUSKCAT doll
+graphics/object_events/pics/dolls/mudkip_doll.png,MARSHLET doll
+graphics/object_events/pics/dolls/pichu_doll.png,IONKIT doll
+graphics/object_events/pics/dolls/pikachu_doll.png,IONRAT doll
+graphics/object_events/pics/dolls/seedot_doll.png,ACORNLET doll
+graphics/object_events/pics/dolls/skitty_doll.png,LOTHKIT doll
+graphics/object_events/pics/dolls/smoochum_doll.png,NARGLET doll
+graphics/object_events/pics/dolls/swablu_doll.png,VELKLET doll
+graphics/object_events/pics/dolls/togepi_doll.png,LUCKEGG doll
+graphics/object_events/pics/dolls/torchic_doll.png,SUNCHICK doll
+graphics/object_events/pics/dolls/totodile_doll.png,SNAPPER doll
+graphics/object_events/pics/dolls/treecko_doll.png,KATARNKIT doll
+graphics/object_events/pics/dolls/unused_magnemite_doll.png,MOUSEDROID doll
+graphics/object_events/pics/dolls/unused_natu_doll.png,CONVORLET doll
+graphics/object_events/pics/dolls/unused_pikachu_doll.png,IONRAT doll
+graphics/object_events/pics/dolls/unused_porygon2_doll.png,TC UNIT doll
+graphics/object_events/pics/dolls/unused_squirtle_doll.png,SHELLPUP doll
+graphics/object_events/pics/dolls/unused_wooper_doll.png,OGGDOLET doll
+graphics/object_events/pics/dolls/wynaut_doll.png,YSALAKIT doll
+graphics/object_events/pics/misc/birchs_bag.png,PROF. KORR's field satchel
+graphics/object_events/pics/misc/birth_island_stone.png,Triangular Force monolith (Mortis gate)
+graphics/object_events/pics/misc/breakable_rock.png,Cracked sandstone boulder (ROCK SMASH)
+graphics/object_events/pics/misc/cable_car.png,Bespin cloud car gondola
+graphics/object_events/pics/misc/cuttable_tree.png,Thorny scrub bush (VIBROBLADE)
+graphics/object_events/pics/misc/fossil.png,Fossil in a stasis case
+graphics/object_events/pics/misc/item_ball.png,CAPTURE POD lying on the ground
+graphics/object_events/pics/misc/moving_box.png,Cargo crate
+graphics/object_events/pics/misc/mr_brineys_boat.png,HAN's light freighter skiff
+graphics/object_events/pics/misc/pushable_boulder.png,Heavy boulder (STRENGTH)
+graphics/object_events/pics/misc/ss_tidal.png,STAR TIDAL starliner
+graphics/object_events/pics/misc/statue.png,Jedi statue
+graphics/object_events/pics/misc/submarine_shadow.png,Shadow of the Gungan sub under water
+graphics/object_events/pics/misc/truck.png,Jawa sandcrawler (moving van)
+graphics/object_events/pics/people/artist.png,Holo-artist with a stylus and paint-stained smock
+graphics/object_events/pics/people/beauty.png,Core World socialite in a flowing gown
+graphics/object_events/pics/people/black_belt.png,Teräs Käsi brawler in a training wrap
+graphics/object_events/pics/people/boy_1.png,Moisture-farm kid in desert tunic and goggles
+graphics/object_events/pics/people/boy_2.png,Spaceport kid in a padded flight jacket
+graphics/object_events/pics/people/boy_3.png,Market-town kid with a toy blaster
+graphics/object_events/pics/people/brendan/acro_bike.png,"KAEL (player, boy), riding the white SPEEDER BIKE"
+graphics/object_events/pics/people/brendan/decorating.png,"KAEL (player, boy), decorating a hideout"
+graphics/object_events/pics/people/brendan/field_move.png,"KAEL (player, boy), using a field move"
+graphics/object_events/pics/people/brendan/fishing.png,"KAEL (player, boy), fishing"
+graphics/object_events/pics/people/brendan/mach_bike.png,"KAEL (player, boy), riding the brown SWOOP BIKE"
+graphics/object_events/pics/people/brendan/running.png,"KAEL (player, boy), running"
+graphics/object_events/pics/people/brendan/surfing.png,"KAEL (player, boy), riding a COMPANION across water"
+graphics/object_events/pics/people/brendan/underwater.png,"KAEL (player, boy), diving underwater"
+graphics/object_events/pics/people/brendan/walking.png,"KAEL (player, boy), walking"
+graphics/object_events/pics/people/brendan/watering.png,"KAEL (player, boy), watering fruit with the WATER CANTEEN"
+graphics/object_events/pics/people/bug_catcher.png,Kid with a bug net and specimen jar
+graphics/object_events/pics/people/cameraman.png,HOLONET camera operator with a holocam on his shoulder
+graphics/object_events/pics/people/camper.png,Farmhand in work overalls and a wide hat
+graphics/object_events/pics/people/contest_judge.png,Showcase judge in formal Cloud City robes
+graphics/object_events/pics/people/cook.png,Cantina cook in an apron
+graphics/object_events/pics/people/cycling_triathlete_f.png,Swoop racer (f) in racing leathers
+graphics/object_events/pics/people/cycling_triathlete_m.png,Swoop racer (m) in racing leathers
+graphics/object_events/pics/people/devon_employee.png,HOUSE ORGANA engineer in a grey jumpsuit
+graphics/object_events/pics/people/elite_four/drake.png,"ANAKIN (Force vision): dark robes, scarred face, blue-white glow"
+graphics/object_events/pics/people/elite_four/glacia.png,"KI-ADI (Force vision): Jedi general's robes, tall Cerean head, frost-blue glow"
+graphics/object_events/pics/people/elite_four/phoebe.png,"QUI-GON (Force spirit): Jedi robes, long hair, spectral blue"
+graphics/object_events/pics/people/elite_four/sidney.png,"MAUL (Force vision): black robes, red-and-black tattoos, horns"
+graphics/object_events/pics/people/expert_f.png,Veteran spacer woman with a cane
+graphics/object_events/pics/people/expert_m.png,Veteran spacer man in an old flight suit
+graphics/object_events/pics/people/fat_man.png,Portly merchant in a heavy coat
+graphics/object_events/pics/people/fisherman.png,Angler with a long rod and wide hat
+graphics/object_events/pics/people/frontier_brains/anabel.png,"AURRA SING: pale bounty hunter, long rifle, head antenna"
+graphics/object_events/pics/people/frontier_brains/brandon.png,DEXTER JETTSTER: four-armed Besalisk cook in an apron
+graphics/object_events/pics/people/frontier_brains/greta.png,4-LOM: insectoid protocol-turned-hunter droid in a long coat
+graphics/object_events/pics/people/frontier_brains/lucy.png,GARDULLA THE HUTT: Hutt matriarch with jewelry
+graphics/object_events/pics/people/frontier_brains/noland.png,IG-88: tall assassin droid with a cylindrical head
+graphics/object_events/pics/people/frontier_brains/spenser.png,ZUCKUSS: insectoid Gand findsman with breathing tubes
+graphics/object_events/pics/people/frontier_brains/tucker.png,DENGAR: hunter with a bandaged head and heavy armor
+graphics/object_events/pics/people/gameboy_kid.png,Kid playing a handheld hologame
+graphics/object_events/pics/people/gentleman.png,Senate diplomat in formal robes
+graphics/object_events/pics/people/girl_1.png,Moisture-farm girl in a desert dress
+graphics/object_events/pics/people/girl_2.png,Spaceport girl with braids and a jacket
+graphics/object_events/pics/people/girl_3.png,Market-town girl with a basket
+graphics/object_events/pics/people/gym_leaders/brawly.png,TARFFUL: Wookiee chieftain with a bandolier
+graphics/object_events/pics/people/gym_leaders/flannery.png,SABINE WREN: Mandalorian girl in painted armor with dyed hair
+graphics/object_events/pics/people/gym_leaders/juan.png,YODA: small green Jedi Master with a gimer stick
+graphics/object_events/pics/people/gym_leaders/liza.png,EZRA BRIDGER: teenage Padawan in an orange jacket
+graphics/object_events/pics/people/gym_leaders/norman.png,"DORAN: the player's father, Mos Entha arena leader, rugged pilot coat"
+graphics/object_events/pics/people/gym_leaders/roxanne.png,BIGGS DARKLIGHTER: young pilot in a flight jacket with a datapad
+graphics/object_events/pics/people/gym_leaders/tate.png,KANAN JARRUS: bearded Jedi with a ponytail and green armor plates
+graphics/object_events/pics/people/gym_leaders/wattson.png,WATTO: winged Toydarian junk dealer
+graphics/object_events/pics/people/gym_leaders/winona.png,CHIRPA: elder Ewok chief with a staff
+graphics/object_events/pics/people/hex_maniac.png,Nightsister in red robes
+graphics/object_events/pics/people/hiker.png,Prospector with a pickaxe and pack
+graphics/object_events/pics/people/hot_springs_old_woman.png,Old Sullustan woman in a towel
+graphics/object_events/pics/people/lass.png,Young woman in a Naboo dress
+graphics/object_events/pics/people/leaf.png,"LEAF (FireRed leftover, kept)"
+graphics/object_events/pics/people/link_receptionist.png,HOLONET CLUB receptionist in a uniform
+graphics/object_events/pics/people/little_boy.png,Small boy in a tunic
+graphics/object_events/pics/people/little_girl.png,Small girl in a smock
+graphics/object_events/pics/people/man_1.png,Desert townsman in a robe
+graphics/object_events/pics/people/man_2.png,Spaceport worker in a jumpsuit
+graphics/object_events/pics/people/man_3.png,Middle-aged trader in a vest
+graphics/object_events/pics/people/man_4.png,Bearded spacer
+graphics/object_events/pics/people/man_5.png,Farmer with a hydrospanner
+graphics/object_events/pics/people/maniac.png,Beast maniac with a creature-print shirt
+graphics/object_events/pics/people/mart_employee.png,Supply-depot clerk in a vest
+graphics/object_events/pics/people/mauville_old_man_1.png,Old storyteller (Mos Espa) with a long beard
+graphics/object_events/pics/people/mauville_old_man_2.png,"Old storyteller (Mos Espa), seated"
+graphics/object_events/pics/people/may/acro_bike.png,"MIRA (player, girl), riding the white SPEEDER BIKE"
+graphics/object_events/pics/people/may/decorating.png,"MIRA (player, girl), decorating a hideout"
+graphics/object_events/pics/people/may/field_move.png,"MIRA (player, girl), using a field move"
+graphics/object_events/pics/people/may/fishing.png,"MIRA (player, girl), fishing"
+graphics/object_events/pics/people/may/mach_bike.png,"MIRA (player, girl), riding the brown SWOOP BIKE"
+graphics/object_events/pics/people/may/running.png,"MIRA (player, girl), running"
+graphics/object_events/pics/people/may/surfing.png,"MIRA (player, girl), riding a COMPANION across water"
+graphics/object_events/pics/people/may/underwater.png,"MIRA (player, girl), diving underwater"
+graphics/object_events/pics/people/may/walking.png,"MIRA (player, girl), walking"
+graphics/object_events/pics/people/may/watering.png,"MIRA (player, girl), watering fruit with the WATER CANTEEN"
+graphics/object_events/pics/people/mom.png,"MOM: the player's mother, homesteader clothes"
+graphics/object_events/pics/people/mystery_event_deliveryman.png,Courier droid handler with a parcel
+graphics/object_events/pics/people/ninja_boy.png,Infiltrator in a dark hooded suit
+graphics/object_events/pics/people/nurse.png,2-1B surgical droid (Bacta Center)
+graphics/object_events/pics/people/old_man.png,Elderly desert man with a walking stick
+graphics/object_events/pics/people/old_woman.png,Elderly woman with a shawl
+graphics/object_events/pics/people/picnicker.png,Homesteader with a basket
+graphics/object_events/pics/people/pokefan_f.png,Beast fan (f) with a creature plush
+graphics/object_events/pics/people/pokefan_m.png,Beast fan (m) with a creature-print vest
+graphics/object_events/pics/people/prof_birch.png,PROF. KORR: field researcher with a datapad and dusty coat
+graphics/object_events/pics/people/psychic_m.png,Force adept in a hooded robe
+graphics/object_events/pics/people/quinty_plump.png,Plump Cloud City noble
+graphics/object_events/pics/people/red.png,"RED (FireRed leftover, kept)"
+graphics/object_events/pics/people/reporter_f.png,HOLONET reporter (f) with a microphone
+graphics/object_events/pics/people/reporter_m.png,HOLONET reporter (m) with a microphone
+graphics/object_events/pics/people/rich_boy.png,Young noble in a fine tunic
+graphics/object_events/pics/people/rooftop_sale_woman.png,Rooftop sales clerk in Cloud City uniform
+graphics/object_events/pics/people/rs_little_boy.png,Small boy (old Ruby/Sapphire sprite)
+graphics/object_events/pics/people/ruby_sapphire_brendan/running.png,"KAEL (old Ruby/Sapphire sprite), running"
+graphics/object_events/pics/people/ruby_sapphire_brendan/walking.png,"KAEL (old Ruby/Sapphire sprite), walking"
+graphics/object_events/pics/people/ruby_sapphire_may/running.png,"MIRA (old Ruby/Sapphire sprite), running"
+graphics/object_events/pics/people/ruby_sapphire_may/walking.png,"MIRA (old Ruby/Sapphire sprite), walking"
+graphics/object_events/pics/people/running_triathlete_f.png,"Swoop racer (f) on foot, training"
+graphics/object_events/pics/people/running_triathlete_m.png,"Swoop racer (m) on foot, training"
+graphics/object_events/pics/people/sailor.png,Spacer in a deck jumpsuit and cap
+graphics/object_events/pics/people/school_kid_m.png,Academy cadet with a satchel
+graphics/object_events/pics/people/scientist_1.png,Researcher in a lab coat
+graphics/object_events/pics/people/scientist_2.png,Senior researcher with goggles
+graphics/object_events/pics/people/scott.png,"LANDO CALRISSIAN: cape, blue shirt, a smile"
+graphics/object_events/pics/people/steven.png,"LEIA ORGANA: white gown, side-bun hair"
+graphics/object_events/pics/people/swimmer_f.png,Swimmer (f) in a dive suit
+graphics/object_events/pics/people/swimmer_m.png,Swimmer (m) in a dive suit
+graphics/object_events/pics/people/teala.png,HOLONET CLUB attendant TEALA
+graphics/object_events/pics/people/team_aqua/aqua_member_f.png,Cartel thug (f): Weequay enforcer in scrappy armor
+graphics/object_events/pics/people/team_aqua/aqua_member_m.png,Cartel thug (m): Gamorrean-style brute in leathers
+graphics/object_events/pics/people/team_aqua/archie.png,JABBA THE HUTT on a repulsor sled
+graphics/object_events/pics/people/team_magma/magma_member_f.png,Stormtrooper (f): white armor
+graphics/object_events/pics/people/team_magma/magma_member_m.png,Stormtrooper (m): white armor
+graphics/object_events/pics/people/team_magma/maxie.png,"DARTH VADER: black armor, cape, helmet"
+graphics/object_events/pics/people/tuber_f.png,Kid (f) with a flotation ring
+graphics/object_events/pics/people/tuber_m.png,Kid (m) with a flotation ring
+graphics/object_events/pics/people/tuber_m_swimming.png,Kid (m) paddling in a flotation ring
+graphics/object_events/pics/people/twin.png,Twin kid in matching tunics
+graphics/object_events/pics/people/union_room_attendant.png,HOLONET CLUB attendant
+graphics/object_events/pics/people/unused_woman.png,Woman (unused sprite)
+graphics/object_events/pics/people/wallace.png,"OBI-WAN KENOBI: brown Jedi robes, beard"
+graphics/object_events/pics/people/wally.png,"LUKE SKYWALKER: farm-boy tunic, white wrappings"
+graphics/object_events/pics/people/woman_1.png,Desert townswoman in a headscarf
+graphics/object_events/pics/people/woman_2.png,Spaceport worker (f)
+graphics/object_events/pics/people/woman_3.png,Trader (f) with a satchel
+graphics/object_events/pics/people/woman_4.png,Mother with a shopping bag
+graphics/object_events/pics/people/woman_5.png,Elegant Naboo woman
+graphics/object_events/pics/people/youngster.png,Young farm boy in shorts and boots
+graphics/object_events/pics/pokemon/azumarill.png,BLOOPHARE (overworld)
+graphics/object_events/pics/pokemon/azurill.png,BLOOPKIT (overworld)
+graphics/object_events/pics/pokemon/deoxys.png,SHIFTSTAR (overworld)
+graphics/object_events/pics/pokemon/dusclops.png,SITHWRAITH (overworld)
+graphics/object_events/pics/pokemon/enemy_zigzagoon.png,SCURRIER (overworld)
+graphics/object_events/pics/pokemon/groudon.png,GREATKRAYT (overworld)
+graphics/object_events/pics/pokemon/ho_oh.png,DAWNWING (overworld)
+graphics/object_events/pics/pokemon/kecleon.png,TAOZIN (overworld)
+graphics/object_events/pics/pokemon/kirlia.png,AURADANCER (overworld)
+graphics/object_events/pics/pokemon/kyogre.png,SANDO (overworld)
+graphics/object_events/pics/pokemon/latias_latios.png,ASHLA / BOGAN (overworld)
+graphics/object_events/pics/pokemon/lugia.png,TIDEWING (overworld)
+graphics/object_events/pics/pokemon/mew.png,PRIMORDIAL (overworld)
+graphics/object_events/pics/pokemon/pikachu.png,IONRAT (overworld)
+graphics/object_events/pics/pokemon/poochyena.png,MASSIFF (overworld)
+graphics/object_events/pics/pokemon/rayquaza.png,EXOGORTH (overworld)
+graphics/object_events/pics/pokemon/rayquaza_still.png,EXOGORTH (overworld)
+graphics/object_events/pics/pokemon/regi.png,ROCKWARDEN / ICEWARDEN / DURAWARDEN (overworld)
+graphics/object_events/pics/pokemon/skitty.png,LOTHKIT (overworld)
+graphics/object_events/pics/pokemon/sudowoodo.png,GNARLTREE (overworld)
+graphics/object_events/pics/pokemon/vigoroth.png,SLOTHFURY (overworld)
+graphics/object_events/pics/pokemon/wingull.png,SHYYYOLET (overworld)
+graphics/object_events/pics/pokemon/zigzagoon.png,SCURRIER (overworld)
+graphics/trainers/back_pics/brendan.png,"KAEL (player, boy), back view throwing a CAPTURE POD"
+graphics/trainers/back_pics/brendan_rs.png,KAEL (old Ruby/Sapphire back pic)
+graphics/trainers/back_pics/leaf.png,"LEAF (FireRed leftover, kept)"
+graphics/trainers/back_pics/may.png,"MIRA (player, girl), back view throwing a CAPTURE POD"
+graphics/trainers/back_pics/may_rs.png,MIRA (old Ruby/Sapphire back pic)
+graphics/trainers/back_pics/red.png,"RED (FireRed leftover, kept)"
+graphics/trainers/back_pics/steven.png,"LEIA ORGANA, back view (multi battle partner)"
+graphics/trainers/back_pics/wally.png,"LUKE SKYWALKER, back view (catching tutorial)"
+graphics/trainers/front_pics/aqua_admin_f.png,BOUNTY HUNTER (f): armored hunter for the Cartel
+graphics/trainers/front_pics/aqua_admin_m.png,BOSSK: Trandoshan hunter in a flight suit
+graphics/trainers/front_pics/aqua_grunt_f.png,CARTEL THUG (f): Weequay enforcer
+graphics/trainers/front_pics/aqua_grunt_m.png,CARTEL THUG (m): Gamorrean-style brute
+graphics/trainers/front_pics/aqua_leader_archie.png,JABBA THE HUTT on his repulsor sled
+graphics/trainers/front_pics/arena_tycoon_greta.png,"4-LOM, ARENA ACE"
+graphics/trainers/front_pics/aroma_lady.png,HERBALIST with a flower basket
+graphics/trainers/front_pics/battle_girl.png,WARRIOR (f) in combat wraps
+graphics/trainers/front_pics/beauty.png,SOCIALITE in a gown
+graphics/trainers/front_pics/bird_keeper.png,AVIAN KEEPER with a bird on her glove
+graphics/trainers/front_pics/black_belt.png,BRAWLER in a training wrap
+graphics/trainers/front_pics/brendan.png,KAEL (rival/partner front pic)
+graphics/trainers/front_pics/brendan_rs.png,KAEL (old Ruby/Sapphire front pic)
+graphics/trainers/front_pics/bug_catcher.png,Bug-catcher kid with a net
+graphics/trainers/front_pics/bug_maniac.png,Bug maniac in a hooded bug suit
+graphics/trainers/front_pics/camper.png,FARMHAND
+graphics/trainers/front_pics/champion_wallace.png,"OBI-WAN KENOBI, JEDI MASTER"
+graphics/trainers/front_pics/collector.png,Collector with a display case
+graphics/trainers/front_pics/cooltrainer_f.png,VETERAN (f) in a flight suit
+graphics/trainers/front_pics/cooltrainer_m.png,VETERAN (m) in a flight suit
+graphics/trainers/front_pics/cycling_triathlete_f.png,SWOOP RACER (f) on a swoop
+graphics/trainers/front_pics/cycling_triathlete_m.png,SWOOP RACER (m) on a swoop
+graphics/trainers/front_pics/dome_ace_tucker.png,"DENGAR, DOME ACE"
+graphics/trainers/front_pics/dragon_tamer.png,BEAST TAMER with a whip
+graphics/trainers/front_pics/elite_four_drake.png,ANAKIN (Force vision)
+graphics/trainers/front_pics/elite_four_glacia.png,KI-ADI-MUNDI (Force vision)
+graphics/trainers/front_pics/elite_four_phoebe.png,QUI-GON JINN (Force spirit)
+graphics/trainers/front_pics/elite_four_sidney.png,DARTH MAUL (Force vision)
+graphics/trainers/front_pics/expert_f.png,Veteran spacer (f)
+graphics/trainers/front_pics/expert_m.png,Veteran spacer (m)
+graphics/trainers/front_pics/factory_head_noland.png,"IG-88, FACTORY ACE"
+graphics/trainers/front_pics/fisherman.png,ANGLER
+graphics/trainers/front_pics/gentleman.png,DIPLOMAT
+graphics/trainers/front_pics/guitarist.png,MUSICIAN with a kloo horn
+graphics/trainers/front_pics/hex_maniac.png,NIGHTSISTER
+graphics/trainers/front_pics/hiker.png,PROSPECTOR
+graphics/trainers/front_pics/interviewer.png,HOLOREPORTER with a camera droid
+graphics/trainers/front_pics/kindler.png,LAVA MINER in a heat suit
+graphics/trainers/front_pics/lady.png,ARISTOCRAT
+graphics/trainers/front_pics/lass.png,Young woman in a Naboo dress
+graphics/trainers/front_pics/leader_brawly.png,"TARFFUL, KACHIRHO ARENA leader"
+graphics/trainers/front_pics/leader_flannery.png,"SABINE WREN, PIRIN ARENA leader"
+graphics/trainers/front_pics/leader_juan.png,"YODA, DAGOBAH ARENA leader"
+graphics/trainers/front_pics/leader_norman.png,"DORAN, MOS ENTHA ARENA leader"
+graphics/trainers/front_pics/leader_roxanne.png,"BIGGS DARKLIGHTER, BESTINE ARENA leader"
+graphics/trainers/front_pics/leader_tate_and_liza.png,"KANAN JARRUS and EZRA BRIDGER, MASSASSI TEMPLE leaders"
+graphics/trainers/front_pics/leader_wattson.png,"WATTO, MOS ESPA ARENA leader"
+graphics/trainers/front_pics/leader_winona.png,"CHIRPA, BRIGHT TREE ARENA leader"
+graphics/trainers/front_pics/leaf.png,"LEAF (FireRed leftover, kept)"
+graphics/trainers/front_pics/magma_admin.png,IMPERIAL OFFICER (VEERS and other admins)
+graphics/trainers/front_pics/magma_grunt_f.png,STORMTROOPER (f)
+graphics/trainers/front_pics/magma_grunt_m.png,STORMTROOPER (m)
+graphics/trainers/front_pics/magma_leader_maxie.png,"DARTH VADER, SITH LORD"
+graphics/trainers/front_pics/may.png,MIRA (rival/partner front pic)
+graphics/trainers/front_pics/may_rs.png,MIRA (old Ruby/Sapphire front pic)
+graphics/trainers/front_pics/ninja_boy.png,INFILTRATOR in a dark hooded suit
+graphics/trainers/front_pics/old_couple.png,Old moisture-farmer couple
+graphics/trainers/front_pics/palace_maven_spenser.png,"ZUCKUSS, PALACE ACE"
+graphics/trainers/front_pics/parasol_lady.png,Lady with a sunshade
+graphics/trainers/front_pics/picnicker.png,HOMESTEADER
+graphics/trainers/front_pics/pike_queen_lucy.png,"GARDULLA THE HUTT, PIKE ACE"
+graphics/trainers/front_pics/pokefan_f.png,BEASTFAN (f)
+graphics/trainers/front_pics/pokefan_m.png,BEASTFAN (m)
+graphics/trainers/front_pics/pokemaniac.png,BEASTMANIAC in a creature costume
+graphics/trainers/front_pics/pokemon_breeder_f.png,BREEDER (f)
+graphics/trainers/front_pics/pokemon_breeder_m.png,BREEDER (m)
+graphics/trainers/front_pics/pokemon_ranger_f.png,PATHFINDER (f) with a scout pack
+graphics/trainers/front_pics/pokemon_ranger_m.png,PATHFINDER (m) with a scout pack
+graphics/trainers/front_pics/psychic_f.png,FORCE ADEPT (f) in a hooded robe
+graphics/trainers/front_pics/psychic_m.png,FORCE ADEPT (m) in a hooded robe
+graphics/trainers/front_pics/pyramid_king_brandon.png,"DEXTER JETTSTER, PYRAMID ACE"
+graphics/trainers/front_pics/red.png,"RED (FireRed leftover, kept)"
+graphics/trainers/front_pics/rich_boy.png,YOUNG NOBLE
+graphics/trainers/front_pics/ruin_maniac.png,RELIC HUNTER with a lamp
+graphics/trainers/front_pics/running_triathlete_f.png,SWOOP RACER (f) running
+graphics/trainers/front_pics/running_triathlete_m.png,SWOOP RACER (m) running
+graphics/trainers/front_pics/sailor.png,SPACER
+graphics/trainers/front_pics/salon_maiden_anabel.png,"AURRA SING, TOWER ACE"
+graphics/trainers/front_pics/school_kid_f.png,CADET (f) with a datapad
+graphics/trainers/front_pics/school_kid_m.png,CADET (m) with a datapad
+graphics/trainers/front_pics/sis_and_bro.png,Sister and brother paddlers
+graphics/trainers/front_pics/sr_and_jr.png,Old and young angler pair
+graphics/trainers/front_pics/steven.png,LEIA ORGANA
+graphics/trainers/front_pics/swimmer_f.png,Swimmer (f) in a dive suit
+graphics/trainers/front_pics/swimmer_m.png,Swimmer (m) in a dive suit
+graphics/trainers/front_pics/swimming_triathlete_f.png,SWOOP RACER (f) swimming leg
+graphics/trainers/front_pics/swimming_triathlete_m.png,SWOOP RACER (m) swimming leg
+graphics/trainers/front_pics/tuber_f.png,PADDLER (f) with a flotation ring
+graphics/trainers/front_pics/tuber_m.png,PADDLER (m) with a flotation ring
+graphics/trainers/front_pics/twins.png,Twin kids
+graphics/trainers/front_pics/wally.png,LUKE SKYWALKER
+graphics/trainers/front_pics/young_couple.png,Young homesteader couple
+graphics/trainers/front_pics/youngster.png,Young farm boy

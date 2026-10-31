@@ -1,0 +1,929 @@
+text_id,sw_text_raw,notes
+sText_TrainerBlockedBall,The TRAINER blocked the POD!,
+sText_ItDodgedBall,It dodged the thrown POD!\nThis COMPANION can't be caught!,
+sText_PkmnSentToPC,{B_OPPONENT_MON1_NAME} was sent to\n{B_PC_CREATOR_NAME} TERMINAL.,PC -> TERMINAL across shared systems
+sText_YouThrowABallNowRight,"You throw a POD now, right?\nI… I'll do my best!",
+gText_SafariZoneMenu,POD{CLEAR_TO 56}{POKEBLOCK}\nGO NEAR{CLEAR_TO 56}RUN,
+gText_PlayerHouseBootPC,{PLAYER} booted up the TERMINAL.$,
+SecretBase_Text_BootUpPC,{PLAYER} booted up the TERMINAL.$,
+SecretBase_Text_AllDecorationsWillBeReturned,All decorations and furniture in your\nHIDEOUT will be returned to your\lTERMINAL.\pIs that okay?$,
+gText_TheDecorWasTransferredToThePC,The {STR_VAR_2} was transferred\nto the TERMINAL.$,
+gText_PokemonTrainerSchoolEmail,There's a message from the TRAINER\nACADEMY.\p… … … … … …\pA COMPANION may learn up to four moves.\pA TRAINER's expertise is tested on the\nmove sets chosen for COMPANIONS.\p… … … … … …$,
+SecretBase_Text_ToyTV,A realistic toy HOLOPROJECTOR. It could\nbe easily mistaken for the real thing.$,
+SecretBase_Text_SeedotTV,A toy HOLOPROJECTOR shaped like an\nACORNLET. It looks ready to roll away\lon its own…$,
+SecretBase_Text_SkittyTV,A toy HOLOPROJECTOR shaped like a\nLOTHKIT. It looks ready to stroll away…$,
+gText_WouldYouLikeToRestYourPkmn,"Hello, and welcome to\nthe BACTA CENTER.\pWe restore your tired COMPANIONS\nto full health.\pWould you like to rest your COMPANIONS?$",the nurse heals the whole team: plural
+gText_IllTakeYourPkmn,"Okay, I'll take your COMPANIONS\nfor a few seconds.$",
+gText_IllTakeYourPkmn2,"Okay, I'll take your COMPANIONS\nfor a few seconds.$",
+gText_RestoredPkmnToFullHealth,Thank you for waiting.\pWe've restored your COMPANIONS\nto full health.$,
+gText_NoticesGoldCard,"Th-that card…\nCould it be… The GOLD CARD?!\pOh, the gold color is brilliant!\nThe four stars seem to sparkle!\pI've seen several TRAINERS with\na SILVER CARD before, but, {PLAYER},\lyou're the first TRAINER I've ever\lseen with a GOLD CARD!\pOkay, {PLAYER}, please allow me\nthe honor of resting your COMPANIONS!$",
+Route117_Text_SeeWifeIfYoudLikeMeToRaiseMon,"I'm the DAY-CARE MAN.\pI help take care of the precious\nCOMPANIONS of TRAINERS.\pIf you'd like me to raise your\nCOMPANION, have a word with my wife.$",
+SafariZone_South_Text_Man,"I want to keep going deeper, but I\nforgot to bring a SPEEDER BIKE.\pSomething tells me that rare\nCOMPANIONS live in the outlying areas.$",
+SafariZone_North_Text_Fisherman,I'm on a mission to find WATER\nCOMPANIONS you don't see anywhere else\lin the OUTER RIM.\pDo you have any idea where the lake is?$,
+gBirchDexRatingText_SoYouveSeenAndCaught,"Hmhm…\pSo, you've seen {STR_VAR_1} COMPANIONS,\nand you've caught {STR_VAR_2}\lCOMPANIONS…$",
+gBirchDexRatingText_OnANationwideBasis,"Hmhm…\nAcross the whole galaxy…\pYou've seen {STR_VAR_1} COMPANIONS,\nand you've caught {STR_VAR_2}\lCOMPANIONS…$",
+LilycoveCity_DepartmentStore_1F_Text_LotteryCornerDrawTicket,"This is the COMPANION LOTTERY CORNER.\pAll shoppers at our DEPARTMENT STORE\nget to draw a COMPANION LOTO TICKET.\pIf the LOTO TICKET's number matches\nthe ID number of any of your\lCOMPANIONS, you will receive a fabulous\lgift.\pWould you like to draw a COMPANION\nLOTO TICKET?$",
+EventTicket_Text_ShowOldSeaMap,The starliner to MOS EISLEY is…\pI beg your pardon?\nCan we fly to this place on the map?\pI know someone who will help you better.\nPlease wait.$,
+EventTicket_Text_ThatPass,The starliner to MOS EISLEY is…\pOh?\nThat PASS…$,
+EventTicket_Text_ShowEonTicket,"HAN: Hey, kid, are you the one who\nbrought that mighty odd PASS?\pI'll tell you, you're trying to reach a\ntiny rock of an isle way out past\lthe charts.\pNo telling what we'll run into\nonce we get there.\lI've got a bad feeling about this.\pAll aboard!$",Briney's sea-dog lines -> Captain Han ('bad feeling about this')
+EventTicket_Text_SouthernIslandSailBack,"HAN: Kid, there's nothing here to\nsee or do on this forgettable rock.\pWhat say we fly back to CLOUD CITY?$",
+gText_PokemartSign,“Selected items for your convenience!”\nSUPPLY DEPOT$,reviewed AUTO draft
+gText_PokemonCenterSign,“Rejuvenate your tired partners!”\nBACTA CENTER$,reviewed AUTO draft
+gText_MomOrDadMightLikeThisProgram,{STR_VAR_1} might like this program.\n… … … … … … … … … … … … … … … …\pBetter get going!$,"reviewed, no change needed"
+gText_WhichFloorWouldYouLike,Welcome to CLOUD CITY DEPARTMENT\nSTORE.\pWhich floor would you like?$,reviewed AUTO draft
+gText_SandstormIsVicious,The sandstorm is vicious.\nIt's impossible to keep going.$,"reviewed, no change needed"
+gText_SelectWithoutRegisteredItem,An item in the BAG can be\nregistered to SELECT for easy use.$,"reviewed, no change needed"
+gText_PokeblockLinkCanceled,The link was canceled.$,"reviewed, no change needed"
+gText_UnusedNicknameReceivedPokemon,Want to give a nickname to\nthe {STR_VAR_2} you received?$,"reviewed, no change needed"
+gText_PlayerWhitedOut,{PLAYER} is out of usable\nCOMPANION!\p{PLAYER} whited out!$,reviewed AUTO draft
+gText_RegisteredTrainerinPokeNav,Registered {STR_VAR_1} {STR_VAR_2}\nin the COMLINK.$,reviewed AUTO draft
+gText_ComeBackWithSecretPower,"Do you know the TM SECRET POWER?\pOur group, we love the TM SECRET\nPOWER.\pOne of our members will give it to you.\nCome back and show me if you get it.\pWe'll accept you as a member and sell\nyou good stuff in secrecy.$","reviewed, no change needed"
+gText_PokerusExplanation,"Your COMPANION may be infected with\nMIDIPOX.\pLittle is known about the MIDIPOX\nexcept that they are microscopic life-\lforms that attach to COMPANION.\pWhile infected, COMPANIONS are said to\ngrow exceptionally well.$",reviewed AUTO draft
+gText_DoorOpenedFarAway,It sounded as if a door opened\nsomewhere far away.$,"reviewed, no change needed"
+gText_BigHoleInTheWall,There is a big hole in the wall.$,"reviewed, no change needed"
+gText_SorryWirelessClubAdjustments,I'm terribly sorry.\nThe HOLONET CLUB is\lundergoing adjustments now.$,reviewed AUTO draft
+gText_UndergoingAdjustments,It appears to be undergoing\nadjustments…$,"reviewed, no change needed"
+gText_SorryTradeCenterInspections,I'm terribly sorry. The TRADE CENTER\nis undergoing inspections.$,"reviewed, no change needed"
+gText_SorryRecordCornerPreparation,I'm terribly sorry. The RECORD CORNER\nis under preparation.$,"reviewed, no change needed"
+gText_PlayerHandedOverTheItem,{PLAYER} handed over the\n{STR_VAR_1}.$,"reviewed, no change needed"
+gText_ThankYouForAccessingMysteryGift,Thank you for accessing the\nMYSTERY GIFT System.$,"reviewed, no change needed"
+gText_PlayerFoundOneTMHM,{PLAYER} found one {STR_VAR_1}\n{STR_VAR_2}!$,"reviewed, no change needed"
+gText_Sudowoodo_Attacked,The weird tree doesn't like the\nWATER CANTEEN!\pThe weird tree attacked!$,reviewed AUTO draft
+gText_LegendaryFlewAway,The {STR_VAR_1} flew away!$,"reviewed, no change needed"
+PlayersHouse_1F_Text_IsntItNiceInHere,"MOM: See, {PLAYER}?\nIsn't it nice in here, too?$","reviewed, no change needed"
+PlayersHouse_1F_Text_ArentYouInterestedInRoom,"MOM: Well, {PLAYER}?\pAren't you interested in seeing your\nvery own room?$","reviewed, no change needed"
+PlayersHouse_1F_Text_GoSetTheClock,"MOM: {PLAYER}.\pGo set the clock in your room, honey.$","reviewed, no change needed"
+PlayersHouse_1F_Text_OhComeQuickly,"MOM: Oh! {PLAYER}, {PLAYER}!\nQuick! Come quickly!$","reviewed, no change needed"
+PlayersHouse_1F_Text_ItsOverWeMissedHim,"MOM: Oh… It's over.\pI think DAD was on, but we missed him.\nToo bad.$","reviewed, no change needed"
+PlayersHouse_1F_Text_SeeYouHoney,"MOM: See you, honey!$","reviewed, no change needed"
+PlayersHouse_1F_Text_YouShouldRestABit,"MOM: How are you doing, {PLAYER}?\nYou look a little tired.\pI think you should rest a bit.$","reviewed, no change needed"
+PlayersHouse_1F_Text_TakeCareHoney,"MOM: Take care, honey!$","reviewed, no change needed"
+PlayersHouse_1F_Text_DontPushYourselfTooHard,"Don't push yourself too hard, dear.\nYou can always come home.\pGo for it, honey!$","reviewed, no change needed"
+PlayersHouse_1F_Text_RunningShoesManual,It's the instruction booklet for the\nRUNNING SHOES.\p“Press the B Button to run while\nwearing your RUNNING SHOES.\p“Lace up your RUNNING SHOES and hit\nthe road running!”$,"reviewed, no change needed"
+PlayersHouse_1F_Text_IsThatABreakingStory,MOM: Is that a breaking news story?$,"reviewed, no change needed"
+BerryTree_Text_ItsSoftLoamySoil,"It's soft, loamy soil.$","reviewed, no change needed"
+BerryTree_Text_WantToPlant,"It's soft, loamy soil.\nWant to plant a FRUIT?$",reviewed AUTO draft
+BerryTree_Text_PlantedOneBerry,"{PLAYER} planted one {STR_VAR_1} in\nthe soft, loamy soil.$","reviewed, no change needed"
+BerryTree_Text_BerryGrowthStage1,One {STR_VAR_1} was planted here.$,"reviewed, no change needed"
+BerryTree_Text_BerryGrowthStage2,{STR_VAR_1} has sprouted.$,"reviewed, no change needed"
+BerryTree_Text_BerryGrowthStage3,This {STR_VAR_1} plant is growing taller.$,"reviewed, no change needed"
+BerryTree_Text_BerryGrowthStage4,These {STR_VAR_1} flowers are blooming\n{STR_VAR_2}.$,"reviewed, no change needed"
+BerryTree_Text_CareAdverbGreat,very beautifully$,"reviewed, no change needed"
+BerryTree_Text_CareAdverbPoor,cutely$,"reviewed, no change needed"
+BerryTree_Text_CareAdverbGood,prettily$,"reviewed, no change needed"
+BerryTree_Text_WantToPick,You found {STR_VAR_2} {STR_VAR_1}!\pDo you want to pick the\n{STR_VAR_1}?$,"reviewed, no change needed"
+BerryTree_Text_PickedTheBerry,{PLAYER} picked the {STR_VAR_2} {STR_VAR_1}.$,"reviewed, no change needed"
+BerryTree_Text_PutAwayBerry,{PLAYER} put away the {STR_VAR_1}\nin the BAG's FRUIT POCKET.\pThe soil returned to its soft and\nloamy state.$,reviewed AUTO draft
+BerryTree_Text_BerryPocketFull,The BAG's FRUIT POCKET is full.\pThe {STR_VAR_1} couldn't be taken.$,reviewed AUTO draft
+BerryTree_Text_BerryLeftUnpicked,{PLAYER} left the {STR_VAR_1}\nunpicked.$,"reviewed, no change needed"
+BerryTree_Text_WantToWater,Want to water the {STR_VAR_1} with the\nWATER CANTEEN?$,reviewed AUTO draft
+BerryTree_Text_WateredTheBerry,{PLAYER} watered the {STR_VAR_1}.$,"reviewed, no change needed"
+BerryTree_Text_PlantIsDelighted,The plant seems to be delighted.$,"reviewed, no change needed"
+BerryTree_Text_ExclamationPoint,!$,"reviewed, no change needed"
+Route117_Text_DoYouWantEgg,"Ah, it's you!\pWe were raising your COMPANIONS,\nand my goodness, were we surprised!\pYour COMPANION had an EGG!\pWe don't know how it got there,\nbut your COMPANION had it.\pYou do want it, yes?$",reviewed AUTO draft
+Route117_Text_YourMonIsDoingFine,"Ah, it's you! Good to see you.\nYour {STR_VAR_1}'s doing fine.$","reviewed, no change needed"
+Route117_Text_IllKeepIt,"Well then, I'll keep it.\nThanks!$","reviewed, no change needed"
+Route117_Text_YouHaveNoRoomForIt,You have no room for it…\nCome back when you've made room.$,"reviewed, no change needed"
+Route117_Text_ReceivedEgg,{PLAYER} received the EGG from\nthe DAY-CARE MAN.$,"reviewed, no change needed"
+Route117_Text_TakeGoodCareOfIt,Take good care of it.$,"reviewed, no change needed"
+Route117_Text_FriendlyWithOtherTrainersMon,"By the way, about your {STR_VAR_1},\nit seemed to be friendly with\l{STR_VAR_2}'s {STR_VAR_3}.\pI may even have seen it receiving\na piece of MAIL.$","reviewed, no change needed"
+Route117_Text_SeeWifeIfYouWantToPickUpMon,"If you want to pick up your COMPANION,\nhave a word with my wife.$",reviewed AUTO draft
+Route117_Text_YourMonsAreDoingFine,"Ah, it's you! Your {STR_VAR_1} and\n{STR_VAR_2} are doing fine.$","reviewed, no change needed"
+Route117_Text_IWillKeepDoYouWantIt,"I really will keep it.\nYou do want this, yes?$","reviewed, no change needed"
+Route117_PokemonDayCare_Text_WouldYouLikeUsToRaiseAMon,I'm the DAY-CARE LADY.\pWe can raise COMPANIONS for you.\pWould you like us to raise one?$,reviewed AUTO draft
+Route117_PokemonDayCare_Text_WhichMonShouldWeRaise,Which COMPANION should we raise for\nyou?$,reviewed AUTO draft
+Route117_PokemonDayCare_Text_WellRaiseYourMon,"Fine, we'll raise your {STR_VAR_1}\nfor a while.\pCome back for it later.$","reviewed, no change needed"
+Route117_PokemonDayCare_Text_WeCanRaiseOneMore,We can raise two of your COMPANIONS.\nWould you like us to raise one more?$,reviewed AUTO draft
+Route117_PokemonDayCare_Text_HusbandWasLookingForYou,My husband was looking for you.$,"reviewed, no change needed"
+Route117_PokemonDayCare_Text_FineThenComeAgain,"Oh, fine, then.\nCome again.$","reviewed, no change needed"
+Route117_PokemonDayCare_Text_NotEnoughMoney,You don't have enough money…$,"reviewed, no change needed"
+Route117_PokemonDayCare_Text_TakeOtherOneBackToo,"Will you take back the other one,\ntoo?$","reviewed, no change needed"
+Route117_PokemonDayCare_Text_ComeAgain,Fine.\nCome again.$,"reviewed, no change needed"
+Route117_PokemonDayCare_Text_GoodToSeeYou,"Ah, it's you! Good to see you.\nYour COMPANION can only be doing good!$",reviewed AUTO draft
+Route117_PokemonDayCare_Text_YourMonHasGrownXLevels,"By level, your {STR_VAR_1} has\ngrown by {STR_VAR_2}.$","reviewed, no change needed"
+Route117_PokemonDayCare_Text_YourTeamIsFull,"Your COMPANION team is full.\nMake room, then come see me.$",reviewed AUTO draft
+Route117_PokemonDayCare_Text_TakeBackWhichMon,Which COMPANION will you take back?$,reviewed AUTO draft
+Route117_PokemonDayCare_Text_ItWillCostX,"If you want your {STR_VAR_1} back,\nit will cost ¥{STR_VAR_2}.$","reviewed, no change needed"
+Route117_PokemonDayCare_Text_HeresYourMon,Perfect!\nHere's your COMPANION.$,reviewed AUTO draft
+Route117_PokemonDayCare_Text_TookBackMon,{PLAYER} took back {STR_VAR_1} from\nthe DAY-CARE LADY.$,"reviewed, no change needed"
+Route117_PokemonDayCare_Text_YouHaveJustOneMon,Oh? But you have just one\nCOMPANION.\pCome back another time.$,reviewed AUTO draft
+Route117_PokemonDayCare_Text_TakeYourMonBack,Will you take your COMPANION back?$,reviewed AUTO draft
+Route117_PokemonDayCare_Text_WhatWillYouBattleWith,"If you leave me that COMPANION,\nwhat will you battle with?\pCome back another time.$",reviewed AUTO draft
+Text_EggHatchHuh,Huh?$,"reviewed, no change needed"
+Route117_PokemonDayCare_Text_YoullBeLeftWithJustOne,"Huh?\nNow, now.\pIf you leave that COMPANION with\nme, you'll be left with just one.\pYou will be better off if you catch\nsome more, I dare say.$",reviewed AUTO draft
+Text_WantToCut,This tree looks like it can be\nVIBROBLADE down!\pWould you like to VIBROBLADE it?$,reviewed AUTO draft
+Text_MonUsedFieldMove,{STR_VAR_1} used {STR_VAR_2}!$,"reviewed, no change needed"
+Text_CantCut,This tree looks like it can be\nVIBROBLADE down!$,reviewed AUTO draft
+Text_WantToSmash,This rock appears to be breakable.\nWould you like to use ROCK SMASH?$,"reviewed, no change needed"
+Text_CantSmash,"It's a rugged rock, but a COMPANION\nmay be able to smash it.$",reviewed AUTO draft
+Text_WantToStrength,"It's a big boulder, but a COMPANION\nmay be able to push it aside.\pWould you like to use STRENGTH?$",reviewed AUTO draft
+Text_MonUsedStrength,{STR_VAR_1} used STRENGTH!\p{STR_VAR_1}'s STRENGTH made it\npossible to move boulders around!$,"reviewed, no change needed"
+Text_CantStrength,"It's a big boulder, but a COMPANION\nmay be able to push it aside.$",reviewed AUTO draft
+Text_StrengthActivated,STRENGTH made it possible to move\nboulders around.$,"reviewed, no change needed"
+Text_CantWaterfall,A wall of water is crashing down with\na mighty roar.$,"reviewed, no change needed"
+Text_WantToWaterfall,It's a large waterfall.\nWould you like to use WATERFALL?$,"reviewed, no change needed"
+Text_MonUsedWaterfall,{STR_VAR_1} used WATERFALL.$,"reviewed, no change needed"
+Text_CantDive,The sea is deep here. A COMPANION\nmay be able to go underwater.$,reviewed AUTO draft
+Text_WantToDive,The sea is deep here.\nWould you like to use DIVE?$,"reviewed, no change needed"
+Text_MonUsedDive,{STR_VAR_1} used DIVE.$,"reviewed, no change needed"
+Text_CantSurface,Light is filtering down from above.\nA COMPANION may be able to surface.$,reviewed AUTO draft
+Text_WantToSurface,Light is filtering down from above.\nWould you like to use DIVE?$,"reviewed, no change needed"
+Text_FailSweetScent,Looks like there's nothing here…$,"reviewed, no change needed"
+ProfileMan_Text_CollectTrainerProfiles,"Hello there, TRAINER!\nYou've got a wonderful smile, there.\pI have a hobby--collecting the profiles\nof COMPANION TRAINERS.$",reviewed AUTO draft
+ProfileMan_Text_MayISeeYourProfile,"So, how about it?\nMay I see your profile?$","reviewed, no change needed"
+ProfileMan_Text_EasyChatExplanation,"You make your own profile by putting\ntogether four words or phrases.\pHere, I'll show you an example of a\nprofile using four pieces of text.\pYou can switch those four pieces with\nother text pieces any which way you\llike to make your own profile.\pThere are a lot of text pieces that\nyou can use.\pThey are arranged in groups like\nCOMPANIONS, lifestyles, and hobbies so\lit is easier to look them up.\pSo, first, choose the group of text\npieces to display a list of choices.\pThen, pick the choice you want.\pRepeat for the remaining text choices,\nand you'll have your very own profile.$",reviewed AUTO draft
+ProfileMan_Text_LetsSeeItThen,"Yes! Thank you!\nSo, let's see it, then.$","reviewed, no change needed"
+ProfileMan_Text_ImagineYouWouldHaveWonderfulProfile,"Oh, no, really?\pI imagine someone like you would have\na wonderful profile…$","reviewed, no change needed"
+ProfileMan_Text_NotIntoItRightNow,"Oh? You're not into it right now?\pWell, anytime is good by me!$","reviewed, no change needed"
+ProfileMan_Text_YouHaveWonderfulSmile,"Hello there, TRAINER!\nYou've got a wonderful smile.$","reviewed, no change needed"
+ProfileMan_Text_MayISeeYourNewProfile,May I see your new profile?$,"reviewed, no change needed"
+ProfileMan_Text_EvenBetterThanLastProfile,Yes! Thank you!\pI hope it's even better than the profile\nyou showed me before.$,"reviewed, no change needed"
+ProfileMan_Text_LikeProfileWayItIs,"Oh, you like your profile the way it is.\pI don't blame you--it's a wonderful\nprofile the way it is now.$","reviewed, no change needed"
+ProfileMan_Text_FantasticProfile,"F-fantastic!\pYour profile, it's wonderful!\nIt really says what you're about.\pWhy, anyone hearing this profile would\nbe captivated by you!\pThank you!$","reviewed, no change needed"
+ProfileMan_Text_YouKnowSecretSaying,Oh?\nYou know the secret saying!\pThat means you're now a fellow member\nof the MYSTERY EVENT CLUB!$,"reviewed, no change needed"
+Roulette_Text_PlayMinimumWagerIsX,The minimum wager at this table\nis {STR_VAR_1}. Do you want to play?$,"reviewed, no change needed"
+Roulette_Text_NotEnoughCoins,You don't have enough CHIPS.$,reviewed AUTO draft
+Roulette_Text_SpecialRateTable,Special rate table right now!$,"reviewed, no change needed"
+Roulette_Text_ControlsInstruction,"Place your wager with the + Control\nPad, then press the A Button.$","reviewed, no change needed"
+Roulette_Text_ItsAHit,It's a hit!$,"reviewed, no change needed"
+Roulette_Text_Jackpot,Jackpot!$,"reviewed, no change needed"
+Roulette_Text_NothingDoing,Nothing doing!$,"reviewed, no change needed"
+Roulette_Text_YouveWonXCoins,You've won {STR_VAR_1} CHIPS!$,reviewed AUTO draft
+Roulette_Text_NoCoinsLeft,No CHIPS left…$,reviewed AUTO draft
+Roulette_Text_KeepPlaying,Keep playing?$,"reviewed, no change needed"
+Roulette_Text_BoardWillBeCleared,The ROULETTE board will be cleared.$,"reviewed, no change needed"
+Roulette_Text_YouDontHaveACoinCase,You don't have a CHIP CASE.$,reviewed AUTO draft
+Roulette_Text_CoinCaseIsFull,Your CHIP CASE is full!\nCoins can be exchanged for prizes.$,reviewed AUTO draft
+SafariZone_Text_WouldYouLikeToExit,Would you like to exit the FELUCIA\nRESERVE right now?$,reviewed AUTO draft
+SafariZone_Text_TimesUp,Ding-dong! Time's up!\nYour SAFARI Game is over.$,"reviewed, no change needed"
+SafariZone_Text_OutOfBalls,You've run out of SAFARI PODS.\nYour SAFARI Game is over.$,reviewed AUTO draft
+SafariZone_Text_PlacePokeblockOnFeeder,Would you like to place a {POKEBLOCK}\non the {POKEBLOCK} FEEDER?$,"reviewed, no change needed"
+SafariZone_Text_PokeblockStillHere,The {STR_VAR_1} you left\nbefore is still here.$,"reviewed, no change needed"
+SafariZone_Text_PokeblockWasPlaced,The {STR_VAR_1} was placed\non the {POKEBLOCK} FEEDER.$,"reviewed, no change needed"
+Route121_SafariZoneEntrance_Text_WelcomeFirstTime,Welcome to the FELUCIA RESERVE!\nIs it your first time here?$,reviewed AUTO draft
+Route121_SafariZoneEntrance_Text_ComeInAndEnjoy,Come in and enjoy the FELUCIA RESERVE!$,reviewed AUTO draft
+Route121_SafariZoneEntrance_Text_PlayAnotherTime,Okay.\nPlease play another time!$,"reviewed, no change needed"
+Route121_SafariZoneEntrance_Text_NotEnoughMoney,You don't have enough money.\nSorry.$,"reviewed, no change needed"
+Route121_SafariZoneEntrance_Text_HereAreYourSafariBalls,Here are your SAFARI PODS.$,reviewed AUTO draft
+Route121_SafariZoneEntrance_Text_Received30SafariBalls,{PLAYER} received 30 SAFARI PODS.$,reviewed AUTO draft
+Route121_SafariZoneEntrance_Text_PleaseEnjoyYourself,"We'll let you know when your game\nis over.\pSo, until then, enjoy yourself, please!\nOff you go on your wild excursion!$","reviewed, no change needed"
+Route121_SafariZoneEntrance_Text_YouNeedPokeblockCase,Excuse me!\nYou seem to be without a {POKEBLOCK} CASE.\pYour SAFARI Game will be much more\nfruitful if you use {POKEBLOCK}S.\pPlease come back with a {POKEBLOCK} CASE.\pYou may obtain a {POKEBLOCK} CASE from\nthe CLOUD CITY SHOWCASE HALL.$,reviewed AUTO draft
+SafariZone_South_Text_StillHaveTimeExit,You still have time left. Would you like\nto exit the FELUCIA RESERVE now?$,reviewed AUTO draft
+SafariZone_South_Text_EnjoyTheRestOfYourAdventure,Please enjoy the rest of your wild\nadventure!$,"reviewed, no change needed"
+SafariZone_South_Text_ExitEarlyThankYouForPlaying,Okay.\pI'll take back your remaining SAFARI\nPODS.\pThank you for playing.\nWe hope to see you again.$,reviewed AUTO draft
+SafariZone_South_Text_GoodLuck,"Good luck!\pIf you need anything, don't hesitate\nto tell me, please!$","reviewed, no change needed"
+SafariZone_South_Text_Boy,"Did you know?\pIf you put a {POKEBLOCK} in that square box,\nCOMPANIONS gather around.$",reviewed AUTO draft
+SafariZone_Southwest_Text_Woman,"Sometimes, when I toss a {POKEBLOCK} at \nCOMPANION, it gets ignored.\pDo COMPANIONS have likes and dislikes\nabout what they eat?$",reviewed AUTO draft
+SafariZone_Northwest_Text_Man,Gasp… Gasp…\nI…made it out here…but…\pI'm exhausted… I don't have the\nenergy to catch COMPANIONS…$,reviewed AUTO draft
+SafariZone_North_Text_Man,I'm going to catch a lot of rare\nCOMPANIONS here and trade them with my\lfriends!$,reviewed AUTO draft
+SafariZone_South_Text_Youngster,I put a {POKEBLOCK} on the {POKEBLOCK} FEEDER.\nBut it seems to have disappeared.\pI guess COMPANION must have eaten it\nwithout me noticing.$,reviewed AUTO draft
+Route121_SafariZoneEntrance_Text_TrainerTip,FELUCIA RESERVE TRAINER TIP!\pThrow {POKEBLOCK}S at wild COMPANIONS to make\nthem less likely to flee.$,reviewed AUTO draft
+SafariZone_Southwest_Text_RestHouseSign,“Relieve your tired feet.”\nREST HOUSE$,"reviewed, no change needed"
+SafariZone_RestHouse_Text_Youngster,"I don't have any {POKEBLOCK}S, but I caught\na good number of COMPANIONS.\pYou can improve your chances of making\na catch by getting closer to them\lbefore throwing a SAFARI POD.$",reviewed AUTO draft
+SafariZone_RestHouse_Text_PsychicM,"If you use {POKEBLOCK}S, wild COMPANIONS won't\nbe so quick to run away.\pIt's not much use to give {POKEBLOCK}S to\nCOMPANIONS that don't flee easily.$",reviewed AUTO draft
+SafariZone_RestHouse_Text_FatMan,"If you put a {POKEBLOCK} on the FEEDER,\nCOMPANIONS are attracted to it.\pI think COMPANION with the same sort of\nnature are drawn by a certain {POKEBLOCK}.$",reviewed AUTO draft
+SafariZone_South_Text_AreaOffLimits1,"This area is still under construction.\nIt's off-limits, sorry!$","reviewed, no change needed"
+SafariZone_Southeast_Text_ExpansionIsFinished,The FELUCIA RESERVE's expansion\nproject is finished now.\pWe hope you will enjoy the new area.$,reviewed AUTO draft
+SafariZone_South_Text_AreaOffLimits2,"This area is still under construction.\nIt's off-limits, sorry!$","reviewed, no change needed"
+SafariZone_Southeast_Text_LittleGirl,Wow! Whee! I haven't seen any of\nthese COMPANION before!$,reviewed AUTO draft
+SafariZone_Southeast_Text_FatMan,The COMPANION in this area are all\nnew to me.\pAnd I'm allowed to catch these rare\nCOMPANIONS! Too cool!$,reviewed AUTO draft
+SafariZone_Southeast_Text_RichBoy,The COMPANION around here seem to be\nfrom somewhere other than OUTER RIM.$,reviewed AUTO draft
+SafariZone_Northeast_Text_Boy,I only have a couple SAFARI PODS left.\pI'm having a hard time trying to\ndecide what I should catch.$,reviewed AUTO draft
+SafariZone_Northeast_Text_Woman,I heard that you can see IONRAT here.\nWhere might one be?$,reviewed AUTO draft
+SafariZone_Northeast_Text_Girl,"Oh, boo!\nI can't seem to catch anything!\pI'll end up wasting the admission\nprice if I don't catch something!$","reviewed, no change needed"
+SecretBase_Text_TreeCanBeClimbed,"If some vines drop down, this tree can\nbe climbed.$","reviewed, no change needed"
+SecretBase_Text_TreeUseSecretPower,"If some vines drop down, this tree can\nbe climbed.\pUse the SECRET POWER?$","reviewed, no change needed"
+SecretBase_Text_VineDroppedDown,A thick vine dropped down!$,"reviewed, no change needed"
+SecretBase_Text_ClumpOfGrass,"If this clump of grass can be moved,\nit might be possible to go inside.$","reviewed, no change needed"
+SecretBase_Text_ClumpUseSecretPower,"If this clump of grass can be moved,\nit might be possible to go inside.\pUse the SECRET POWER?$","reviewed, no change needed"
+SecretBase_Text_DiscoveredSmallEntrance,Discovered a small entrance!$,"reviewed, no change needed"
+SecretBase_Text_WantToRegisterSecretBase,Do you want to register\n{STR_VAR_1}'s HIDEOUT?$,reviewed AUTO draft
+SecretBase_Text_AlreadyRegisteredDelete,This data is already registered.\nWould you like to delete it?$,"reviewed, no change needed"
+SecretBase_Text_TooManyBasesDeleteSome,Up to 10 locations can be registered.\pDelete a location if you want to\nregister another location.$,"reviewed, no change needed"
+SecretBase_Text_RegistrationCompleted,Registration completed.$,"reviewed, no change needed"
+SecretBase_Text_DataUnregistered,Data has been unregistered.$,"reviewed, no change needed"
+SecretBase_Text_WhatWouldYouLikeToDo,What would you like to do?$,"reviewed, no change needed"
+SecretBase_Text_RegistryInfo,"Once registered, a HIDEOUT will not\ndisappear unless the other TRAINER\lmoves it to a different location.\pIf a HIDEOUT is deleted from the\nregistered list, another one may take\lits place.\pUp to ten HIDEOUT locations\nmay be registered.$",reviewed AUTO draft
+SecretBase_Text_BattleTowerShield,A shield of {STR_VAR_2} that marks winning\n{STR_VAR_1} times in a row at the BATTLE TOWER.$,"reviewed, no change needed"
+SecretBase_Text_WouldYouLikeToMoveBases,You may only make one HIDEOUT.\pWould you like to move from the SECRET\nBASE near {STR_VAR_1}?$,reviewed AUTO draft
+SecretBase_Text_MovingCompletedUseSecretPower,Moving completed.\pWould you like to use the SECRET POWER?$,"reviewed, no change needed"
+PetalburgCity_Gym_Text_GiveEnigmaBerry,"DAD: Hi, {PLAYER}!\pI just received a very rare FRUIT.\nI'd like you to have it.$",reviewed AUTO draft
+Route104_Text_PlantBerriesInSoilTakeThis,"If you see FRUIT growing in loamy\nsoil, feel free to take them.\pBut make sure you plant a FRUIT in the\nsame spot. That's common courtesy.\pHere, I'll share this with you.$",reviewed AUTO draft
+Route104_Text_TrainersOftenMakeMonHoldBerries,"The way you look, you must be a\nTRAINER, no?\pTRAINERS often make COMPANION hold\nFRUIT.\pIt's up to you whether to grow FRUIT\nor use them.$",reviewed AUTO draft
+Route111_Text_WateredPlantsEveryDayTakeBerry,"I watered the plants every day.\nThey grew lots of flowers.\pAnd they gave me lots of FRUIT, too.\pHere you go!\nYou can have it!$",reviewed AUTO draft
+Route111_Text_GoingToTryToMakeDifferentColorBerries,"I'm going to try really hard and make\nFRUIT in different colors.\pI hope you try hard, too!$",reviewed AUTO draft
+Route111_Text_WhatColorBerriesToLookForToday,I wonder what color FRUIT I'll look\nfor today?$,reviewed AUTO draft
+Route114_Text_LoveUsingBerryCrushShareBerry,"I love using the FRUIT CRUSH machine,\nso I'm collecting FRUIT.\pI'll share one with you, if you'd like.$",reviewed AUTO draft
+Route114_Text_TryBerryCrushWithFriends,You should try the FRUIT CRUSH\nmachine with your friends.$,reviewed AUTO draft
+Route114_Text_FunToThinkAboutBerries,Which FRUIT should be planted?\nShould you use or hoard FRUIT?\pIt's fun to think about.$,reviewed AUTO draft
+Route120_Text_YesYouUnderstand,"Yes, yes.\nYou understand what I mean.\pYou should take this.$","reviewed, no change needed"
+Route120_Text_MakeYourOwnImpressions,"Oh… But it is important to make your\nown impressions, I guess…\pYou can have this.$","reviewed, no change needed"
+Route120_Text_BerryIsRareRaiseItWithCare,I think that FRUIT is rare.\nI hope you raise it with loving care.$,reviewed AUTO draft
+Route120_Text_IllGetMoreBerriesFromBerryMaster,I'll get more FRUIT from\nthe FRUIT MASTER.$,reviewed AUTO draft
+LilycoveCity_Text_BecauseYoureTrainer,When it gets right down to it…\pIt's because you're a TRAINER!$,"reviewed, no change needed"
+Route123_BerryMastersHouse_Text_YoureDeservingOfBerry,"You may call me the FRUIT MASTER.\pI dream of filling the world with\nbeautiful flowers, so I raise FRUIT\land hand them out to everyone.\pYou're deserving of one!$",reviewed AUTO draft
+Route123_BerryMastersHouse_Text_WhyBeStingyTakeAnother,Why be stingy?\nTake another!$,"reviewed, no change needed"
+Route123_BerryMastersHouse_Text_DoneForToday,I'm done for today.\nCome again another day.\pLet flowers fill the world!$,"reviewed, no change needed"
+Route123_BerryMastersHouse_Text_HeardAGoodSayingLately,"The way my husband grows FRUIT,\noh, he's the best in the world.\pHe makes me proud, that he does.\pIncidentally, child, have you heard\na good saying lately?$",reviewed AUTO draft
+Route123_BerryMastersHouse_Text_InspirationalTakeThis,"Ah! What a remarkable saying!\nInspirational, it is!\pI want you to have this.$","reviewed, no change needed"
+Route123_BerryMastersHouse_Text_GoodSayingTakeThis,Oh! A good saying it is.\nYou're quite remarkable.\pI want you to have this.$,"reviewed, no change needed"
+Route123_BerryMastersHouse_Text_Ah,Ah…$,"reviewed, no change needed"
+Route104_PrettyPetalFlowerShop_Text_ThisIsPrettyPetalFlowerShop,Hello!\pThis is the PRETTY PETAL flower shop.\nSpreading flowers all over the world!$,"reviewed, no change needed"
+Route104_PrettyPetalFlowerShop_Text_LearnAboutBerries,"{PLAYER}{KUN}, would you like to learn about\nFRUIT?$",reviewed AUTO draft
+Route104_PrettyPetalFlowerShop_Text_IntroLearnAboutBerries,"Your name is?\p{PLAYER}{KUN}.\nThat's a nice name.\p{PLAYER}{KUN}, would you like to learn about\nFRUIT?$",reviewed AUTO draft
+Route104_PrettyPetalFlowerShop_Text_BerriesExplanation,"FRUIT grow on trees that thrive\nonly in soft, loamy soil.\pIf you take some FRUIT, be sure to\nplant one in the loamy soil again.\pA planted FRUIT will soon sprout,\ngrow into a plant, flower beautifully,\lthen grow FRUIT again.\pI want to see the whole wide world\nfilled with beautiful flowers.\lThat's my dream.\pPlease help me, {PLAYER}{KUN}. Plant FRUIT\nand bring more flowers into the world.$",reviewed AUTO draft
+Route104_PrettyPetalFlowerShop_Text_FlowersBringHappiness,"Flowers bring so much happiness to\npeople, don't they?$","reviewed, no change needed"
+Route104_PrettyPetalFlowerShop_Text_YouCanHaveThis,"Hello!\pThe more attention you give to flowers,\nthe more beautifully they bloom.\pYou'll like tending flowers. I'm sure\nof it. You can have this.$","reviewed, no change needed"
+Route104_PrettyPetalFlowerShop_Text_WailmerPailExplanation,"While FRUIT plants are growing,\nwater them with the WATER CANTEEN.\pOh, another thing.\pIf you don't pick FRUIT for a while,\nthey'll drop off onto the ground.\lBut they'll sprout again.\pIsn't that awesome?\nIt's like they have the will to live.$",reviewed AUTO draft
+Route104_PrettyPetalFlowerShop_Text_ImGrowingFlowers,"I'm trying to be like my big sisters.\nI'm growing flowers, too!\pHere you go!\nIt's for you!$","reviewed, no change needed"
+Route104_PrettyPetalFlowerShop_Text_MachineMixesBerries,"You can plant a FRUIT and grow it big,\nor you can make a COMPANION hold it.\pBut now they have a machine that mixes\nup different FRUIT and makes candies\lfor COMPANION.\pI want some candy, too.$",reviewed AUTO draft
+SootopolisCity_Text_NameIsKiriHaveOneOfThese,"Hi, what's your name?\p… … …  … … …  … … …\nOkay. That's nice!\pMy name is KIRI.\pMy mommy and daddy named me that so\nI would grow healthy and warmhearted.\lThat's what they wished.\pYou can have one of these.$","reviewed, no change needed"
+SootopolisCity_Text_GiveYouThisBerryToo,"KIRI will give you this FRUIT, too!\nI really like it lots!$",reviewed AUTO draft
+SootopolisCity_Text_WhatKindOfWishInYourName,I wonder what kind of wish is included\nin your name.$,"reviewed, no change needed"
+SootopolisCity_Text_LikeSeasonBornIn,"Spring, summer, autumn, and winter.\pIf you're born in springtime, do you like\nthe spring, and if you're born in the\lsummer, do you like the summer?$","reviewed, no change needed"
+SootopolisCity_Text_ThenILoveAutumn,"Then KIRI was born in the autumn,\nso I love the autumn!\pWhich season do you like?$","reviewed, no change needed"
+SootopolisCity_Text_OhDoesntMatter,Oh…\nIt doesn't matter…\pThere's so much that I want to know…$,"reviewed, no change needed"
+EventTicket_Text_SailHome,"Aye, right, then!\nSail home we will!$","reviewed, no change needed"
+EventTicket_Text_AsYouLike,"Aye, right, as you like, then.$","reviewed, no change needed"
+SouthernIsland_Interior_Text_Sign,“All dreams are but another reality.\nNever forget…”$,"reviewed, no change needed"
+SouthernIsland_Exterior_Text_Sign,“Those whose memories fade seek to\ncarve them in their hearts…”$,"reviewed, no change needed"
+LilycoveCity_DepartmentStore_1F_Text_ComeBackTomorrow,Please come back tomorrow.$,"reviewed, no change needed"
+LilycoveCity_DepartmentStore_1F_Text_PleaseVisitAgain,Please do visit again.$,"reviewed, no change needed"
+LilycoveCity_DepartmentStore_1F_Text_PleasePickTicket,Please pick a LOTO TICKET.\n…{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}…{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}…{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$,"reviewed, no change needed"
+LilycoveCity_DepartmentStore_1F_Text_TicketNumberIsXPleaseWait,The LOTO TICKET number is {STR_VAR_1}.\pI need to run a check on this number\nto see if it matches any of your\lCOMPANION's ID numbers. Please wait.$,reviewed AUTO draft
+LilycoveCity_DepartmentStore_1F_Text_TicketMatchesPartyMon,Congratulations!\pThe ID number of your team's\n{STR_VAR_1} matches your\lLOTO TICKET's number!$,"reviewed, no change needed"
+LilycoveCity_DepartmentStore_1F_Text_NoNumbersMatched,I'm sorry.\nNone of the numbers matched.$,"reviewed, no change needed"
+LilycoveCity_DepartmentStore_1F_Text_TwoDigitsMatched,"Two digits matched, so you win the\nthird prize!\lYou've won the {STR_VAR_1}!$","reviewed, no change needed"
+LilycoveCity_DepartmentStore_1F_Text_ThreeDigitsMatched,"Three digits matched, so you win the\nsecond prize!\lYou've won the {STR_VAR_1}!$","reviewed, no change needed"
+LilycoveCity_DepartmentStore_1F_Text_FourDigitsMatched,"Four digits matched, so you win the\nfirst prize!\lYou've won the {STR_VAR_1}!$","reviewed, no change needed"
+LilycoveCity_DepartmentStore_1F_Text_AllFiveDigitsMatched,"Oh, my goodness, all five digits\nmatched!\pYou've won the jackpot prize!\nYou've won the {STR_VAR_1}!$","reviewed, no change needed"
+LilycoveCity_DepartmentStore_1F_Text_NoRoomForThis,Oh?\nYou seem to have no room for this.\pPlease make room in your BAG and\nlet me know.$,"reviewed, no change needed"
+LilycoveCity_DepartmentStore_1F_Text_PrizeWeveBeenHolding,"{PLAYER}?\nYes, I've been expecting you.\pThis is the prize we've been holding\nfor you.$","reviewed, no change needed"
+LilycoveCity_DepartmentStore_1F_Text_PleaseVisitAgain2,Please do visit again.$,"reviewed, no change needed"
+MoveTutor_Text_ThisMoveCanOnlyBeLearnedOnce,This move can be learned only\nonce. Is that okay?$,"reviewed, no change needed"
+MoveTutor_Text_SwaggerTeach,"Heh! My COMPANION totally rules!\nIt's cooler than any COMPANION!\pI was lipping off with a swagger in\nmy step like that when the CHAIRMAN\lchewed me out.\pThat took the swagger out of my step.\pIf you'd like, I'll teach the move\nSWAGGER to a COMPANION of yours.$",reviewed AUTO draft
+MoveTutor_Text_SwaggerDeclined,"What, no? Can't you get into\nthe spirit of things?$","reviewed, no change needed"
+MoveTutor_Text_SwaggerWhichMon,"All right, which COMPANION wants to\nlearn how to SWAGGER?$",reviewed AUTO draft
+MoveTutor_Text_SwaggerTaught,I'll just praise my COMPANION from now\non without the swagger.$,reviewed AUTO draft
+MoveTutor_Text_RolloutTeach,"Did you know that you can go from\nhere a long way in that direction\lwithout changing direction?\pI might even be able to roll\nthat way.\pDo you think your COMPANION will\nwant to roll, too?\pI can teach one the move ROLLOUT\nif you'd like.$",reviewed AUTO draft
+MoveTutor_Text_RolloutDeclined,You don't need to be shy about it.\nLet's roll!$,"reviewed, no change needed"
+MoveTutor_Text_RolloutWhichMon,"Ehehe, sure thing! It'd be great if\nthe COMPANION looked like me.$",reviewed AUTO draft
+MoveTutor_Text_RolloutTaught,"Rolling around in the grass makes me\nhappy. Come on, let's roll!$","reviewed, no change needed"
+MoveTutor_Text_FuryCutterTeach,"There's a move that gets stronger\nwhen you keep using it in a row.\pIt's a BUG-type move, and it is\nwickedly cool.\pIt's called FURY CUTTER.\nWant me to teach it to a COMPANION?$",reviewed AUTO draft
+MoveTutor_Text_FuryCutterDeclined,We're not on the same wavelength.$,"reviewed, no change needed"
+MoveTutor_Text_FuryCutterWhichMon,Yay! Show me which COMPANION I should\nteach.$,reviewed AUTO draft
+MoveTutor_Text_FuryCutterTaught,I get a thrill watching to see if\nthe move keeps hitting in succession!$,"reviewed, no change needed"
+MoveTutor_MimicTeach,"Ah, young one!\pI am also a young one, but I mimic\nthe styles and speech of the elderly\lfolks of this town.\pWhat do you say, young one?\nWould you agree to it if I were to\loffer to teach the move MIMIC?$","reviewed, no change needed"
+MoveTutor_MimicDeclined,"Oh, boo! I wanted to teach MIMIC\nto your COMPANION!$",reviewed AUTO draft
+MoveTutor_Text_MimicWhichMon,Fwofwo! And so I shall!\nLet me see the COMPANION\lyou wish me to teach.$,reviewed AUTO draft
+MoveTutor_Text_MimicTaught,MIMIC is a move of great depth.\pCould you execute it to perfection\nas well as me…?$,"reviewed, no change needed"
+MoveTutor_Text_MetronomeTeach,"I want all sorts of things!\nBut I used up my allowance…\pWouldn't it be nice if there were\na spell that made money appear when\lyou waggle a finger?\pIf you want, I can teach your\nCOMPANION the move METRONOME.\pMoney won't appear, but your COMPANION\nwill waggle a finger. Yes?$",reviewed AUTO draft
+MoveTutor_Text_MetronomeDeclined,Okay. I'll be here if you change\nyour mind.$,"reviewed, no change needed"
+MoveTutor_Text_MetronomeWhichMon,Okay! I'll teach it!\nWhich COMPANION should I teach?$,reviewed AUTO draft
+MoveTutor_Text_MetronomeTaught,"When a COMPANION waggles its finger\nlike a METRONOME, all sorts of nice\lthings happen.\pWouldn't it be nice if we could\nuse it, too?$",reviewed AUTO draft
+MoveTutor_Text_SleepTalkTeach,"Humph! My wife relies on HIDDEN\nPOWER to stay awake.\pShe should just take a nap like I do,\nand SLEEP TALK.\pI can teach your COMPANION how to\nSLEEP TALK instead. Interested?$",reviewed AUTO draft
+MoveTutor_Text_SleepTalkDeclined,"Oh, fine, fine. You want to stay awake\nwith HIDDEN POWER, too…$","reviewed, no change needed"
+MoveTutor_Text_SleepTalkWhichMon,"Ah, an appreciative child!\nWhich COMPANION should I teach?$",reviewed AUTO draft
+MoveTutor_Text_SleepTalkTaught,I've never once gotten my wife's\ncoin trick right.\pI would be happy if I got it right\neven as I SLEEP TALK…$,"reviewed, no change needed"
+MoveTutor_Text_SubstituteTeach,When I see the wide world from up\nhere on the roof…\pI think about how nice it would be\nif there were more than just one me\lso I could enjoy all sorts of lives.\pOf course it's not possible.\nGiggle…\pI know! Would you be interested in\nhaving a COMPANION learn SUBSTITUTE?$,reviewed AUTO draft
+MoveTutor_Text_SubstituteDeclined,"Oh, no?\pA COMPANION can make a copy of\nitself using it, you know.$",reviewed AUTO draft
+MoveTutor_Text_SubstituteWhichMon,Giggle…\nWhich COMPANIONS do you want me to\lteach SUBSTITUTE?$,reviewed AUTO draft
+MoveTutor_Text_SubstituteTaught,"We human beings should enjoy our\nown lives to the utmost!\pI hope you'll get that way, too!$","reviewed, no change needed"
+MoveTutor_Text_DynamicPunchTeach,"I can't do this anymore!\pIt's utterly hopeless!\pI'm a FIGHTING-type TRAINER,\nso I can't win at the YAVIN 4 ARENA\lno matter how hard I try!\pArgh! Punch! Punch! Punch!\nPunch! Punch! Punch!\pWhat, don't look at me that way!\nI'm only hitting the ground!\pOr do you want me to teach your\nCOMPANION DYNAMICPUNCH?$",reviewed AUTO draft
+MoveTutor_Text_DynamicPunchDeclined,Darn! You're even making fun of me?\nPunch! Punch! Punch!$,"reviewed, no change needed"
+MoveTutor_Text_DynamicPunchWhichMon,What? You do? You're a good person!\nWhich COMPANION should I teach?$,reviewed AUTO draft
+MoveTutor_Text_DynamicPunchTaught,I want you to win at the YAVIN 4 ARENA\nusing that DYNAMICPUNCH!$,reviewed AUTO draft
+MoveTutor_Text_DoubleEdgeTeach,"Sigh…\pDAGOBAH's ARENA LEADER is really\nlovably admirable.\pBut that also means I have many\nrivals for his attention.\pHe's got appeal with a DOUBLE-EDGE.\nI couldn't even catch his eye.\pPlease, let me teach your COMPANION\nthe move DOUBLE-EDGE!$",reviewed AUTO draft
+MoveTutor_Text_DoubleEdgeDeclined,Oh…\nEven you rejected me…$,"reviewed, no change needed"
+MoveTutor_Text_DoubleEdgeWhichMon,"Okay, which COMPANION should I teach\nDOUBLE-EDGE?$",reviewed AUTO draft
+MoveTutor_Text_DoubleEdgeTaught,I won't live for love anymore!\nI'll become tough!$,"reviewed, no change needed"
+MoveTutor_Text_ExplosionTeach,"I don't intend to be going nowhere\nfast in the sticks like this forever.\pYou watch me, I'll get out to the city\nand become a huge hit.\pSeriously, I'm going to cause\na huge DETONATE of popularity!\pIf you overheard that, I'll happily\nteach DETONATE to your COMPANION!$",reviewed AUTO draft
+MoveTutor_Text_ExplosionDeclined,Gaah! You're turning me down because\nI live in the country?$,"reviewed, no change needed"
+MoveTutor_Text_ExplosionWhichMon,Fine! A DETONATE it is!\nWhich COMPANION wants to blow up?$,reviewed AUTO draft
+MoveTutor_Text_ExplosionTaught,"For a long time, I've taught COMPANION\nhow to use DETONATE, but I've yet\lto ignite my own DETONATE…\pMaybe it's because deep down,\nI would rather stay here…$",reviewed AUTO draft
+gText_ObtainedTheItem,Obtained the {STR_VAR_2}!$,"reviewed, no change needed"
+gText_TheBagIsFull,The BAG is full…$,"reviewed, no change needed"
+gText_PutItemInPocket,{PLAYER} put away the {STR_VAR_2}\nin the {STR_VAR_3} POCKET.$,"reviewed, no change needed"
+gText_PlayerFoundOneItem,{PLAYER} found one {STR_VAR_2}!$,"reviewed, no change needed"
+gText_TooBadBagIsFull,Too bad!\nThe BAG is full…$,"reviewed, no change needed"
+gText_PlayerPutItemInBag,{PLAYER} put away the {STR_VAR_2}\nin the BAG.$,"reviewed, no change needed"
+gText_ObtainedTheDecor,Obtained the {STR_VAR_2}!$,"reviewed, no change needed"
+gText_NoRoomLeftForAnother,Too bad! There's no room left for\nanother {STR_VAR_2}…$,"reviewed, no change needed"
+gText_WeHopeToSeeYouAgain,We hope to see you again!$,"reviewed, no change needed"
+gText_WelcomeCutShort,"Hello, and welcome to\nthe BACTA CENTER.\pWe restore your tired COMPANION\nto full health.\pWould you like to…$",reviewed AUTO draft
+gText_YouWantTheUsual,"I'm delighted to see you, {PLAYER}!\nYou want the usual, am I right?$","reviewed, no change needed"
+gText_ThankYouForWaiting,Thank you for waiting.$,"reviewed, no change needed"
+gText_WeHopeToSeeYouAgain2,We hope to see you again!$,"reviewed, no change needed"
+gBirchDexRatingText_AreYouCurious,"PROF. KORR: Ah, {PLAYER}{KUN}!\pAre you curious about how your\nDATAPAD is coming along?$",reviewed AUTO draft
+gBirchDexRatingText_Cancel,"Hm? Oh, you haven't caught enough\nCOMPANION to make it worthwhile.$",reviewed AUTO draft
+gBirchDexRatingText_LessThan10,Go into grassy areas more and look\nfor COMPANION more carefully.$,reviewed AUTO draft
+gBirchDexRatingText_LessThan20,"I guess you're getting the hang\nof it. But, it gets harder from here.$","reviewed, no change needed"
+gBirchDexRatingText_LessThan30,Some COMPANION only appear in\ncertain areas.\lYou must be persistent.$,reviewed AUTO draft
+gBirchDexRatingText_LessThan40,"Well, it could use more quantity,\nbut this is looking more like\la DATAPAD now.$",reviewed AUTO draft
+gBirchDexRatingText_LessThan50,This is coming along pretty good.\nKeep up the effort.$,"reviewed, no change needed"
+gBirchDexRatingText_LessThan60,Are you using any RODS?\nThere are many COMPANIONS in the sea.$,reviewed AUTO draft
+gBirchDexRatingText_LessThan70,"Instead of just catching COMPANIONS,\nhow about making them evolve, too?$",reviewed AUTO draft
+gBirchDexRatingText_LessThan80,This is going to be a fantastic\nDATAPAD.\lThat's the feeling I'm getting.$,reviewed AUTO draft
+gBirchDexRatingText_LessThan90,You've collected this many…\nYour talent is remarkable!$,"reviewed, no change needed"
+gBirchDexRatingText_LessThan100,Have you visited the FELUCIA RESERVE?\pI hear there are some COMPANIONS that\ncan only be caught there.$,reviewed AUTO draft
+gBirchDexRatingText_LessThan110,You've finally reached\nthe 100-kind mark.\pThis is an impressive DATAPAD!$,reviewed AUTO draft
+gBirchDexRatingText_LessThan120,There might be COMPANION that can be\nfound using ROCK SMASH.$,reviewed AUTO draft
+gBirchDexRatingText_LessThan130,You should get some more COMPANIONS\nby trading with others.$,reviewed AUTO draft
+gBirchDexRatingText_LessThan140,I've heard of COMPANIONS that evolve\nwhen they come to fully love their\lTRAINERS.$,reviewed AUTO draft
+gBirchDexRatingText_LessThan150,I had no idea that there were so many\nCOMPANION species in the OUTER RIM\lregion.$,reviewed AUTO draft
+gBirchDexRatingText_LessThan160,"On occasion, some COMPANIONS appear\nin large numbers like outbreaks.\pDon't miss opportunities like\nthose.$",reviewed AUTO draft
+gBirchDexRatingText_LessThan170,One can get a very good idea about\nthe COMPANION of the OUTER RIM region\lby looking through your DATAPAD.$,reviewed AUTO draft
+gBirchDexRatingText_LessThan180,"I would say you already qualify as\na COMPANION PROFESSOR, and a good\lone, too!$",reviewed AUTO draft
+gBirchDexRatingText_LessThan190,"With a DATAPAD this complete,\nyou're a real professional at this!$",reviewed AUTO draft
+gBirchDexRatingText_LessThan200,You're very close to completing\nthis DATAPAD.\lI can feel it in my bones!$,reviewed AUTO draft
+gBirchDexRatingText_DexCompleted,Congratulations!\nYour DATAPAD is complete!$,reviewed AUTO draft
+gPokeNewsTextSlateport_Upcoming,"Greetings!\nIt's time for HOLONET NEWS.\pMOS EISLEY's most popular kind of guy,\nthe ENERGY GURU, is in the news again!\pHe promises to, “Stupendously go for\nit in just this many days: {STR_VAR_1}!”\pWhile he refused to elaborate on what\nhe will stupendously go for, the\lENERGY GURU advised, “Save up your\lmoney. That'll be good…”\pIt sounds like a trip to MOS EISLEY\nwould be well worth your while that day.\pThat's the news on HOLONET NEWS.$",reviewed AUTO draft
+gPokeNewsTextSlateport_Ongoing,Greetings!\nIt's time for HOLONET NEWS.\pThis is the news you've all been\nwaiting for!\pMOS EISLEY'S ENERGY GURU is going\nfor it stupendously in the MARKET!\pHe promises unbeatable bargain\nprices on CALCIUM and PROTEIN!\pA trip to MOS EISLEY sounds\nworthwhile. Why not visit and shop\lto your heart's content?\pThat's the news on HOLONET NEWS.$,reviewed AUTO draft
+gPokeNewsTextSlateport_Ending,"Greetings!\nIt's time for HOLONET NEWS.\pThis is the news you've all been\nwaiting for!\pMOS EISLEY'S ENERGY GURU is going\nfor it stupendously in the MARKET!\pHe promises unbeatable bargain\nprices on CALCIUM and PROTEIN!\pAccording to the ENERGY GURU, he\nstill has ample merchandise left.\pWhy not visit MOS EISLEY for\na most enjoyable shopping trip?\pThat's the news on HOLONET NEWS.$",reviewed AUTO draft
+gPokeNewsTextGameCorner_Upcoming,Greetings!\nIt's time for HOLONET NEWS.\pIt's approaching!\nIt's finally coming!\pThe SABACC DEN's service day will be\nhere in just this many days: {STR_VAR_1}!\pEven those who are usually unlucky\nmay be lucky on this particular day!\pThat's the news on HOLONET NEWS.$,reviewed AUTO draft
+gPokeNewsTextGameCorner_Ongoing,Greetings!\nIt's time for HOLONET NEWS.\pIt's here!\nIt's finally arrived!\pSABACC DEN's service day has finally\narrived!\pCould you be lucky at the SLOTS \nand ROULETTE?\pThe location is MOS ESPA.\nThis is the place!\pThat's the news on HOLONET NEWS.$,reviewed AUTO draft
+gPokeNewsTextGameCorner_Ending,Greetings!\nIt's time for HOLONET NEWS.\pIt's here!\nIt's finally arrived!\pSABACC DEN's service day has finally\narrived!\pCould you be lucky at the SLOTS\nand ROULETTE?\pTime is limited and has almost run out.\nThe location is MOS ESPA.\pThat's the news on HOLONET NEWS.$,reviewed AUTO draft
+gPokeNewsTextLilycove_Upcoming,Greetings!\nIt's time for HOLONET NEWS.\pWe've just received wonderful news\nfrom CLOUD CITY DEPARTMENT STORE.\pThe DEPARTMENT STORE's clear-out sale\nwill be in just this many days: {STR_VAR_1}!\pThat thingamajig or that doodad that\nyou've always wanted could be yours!\pThat's the news on HOLONET NEWS.$,reviewed AUTO draft
+gPokeNewsTextLilycove_Ongoing,Greetings!\nIt's time for HOLONET NEWS.\pThis is the news you've all been\nwaiting for!\pCLOUD CITY DEPARTMENT STORE's\nclear-out sale has finally arrived!\pAll the thingamajigs and doodads that\nyou've always dreamt about…\pYou may be in for fateful encounters\nwith them all!\pThat's the news on HOLONET NEWS.$,reviewed AUTO draft
+gPokeNewsTextLilycove_Ending,Greetings!\nIt's time for HOLONET NEWS.\pThis is the news you've all been\nwaiting for!\pCLOUD CITY DEPARTMENT STORE's\nclear-out sale has finally arrived!\pAll the thingamajigs and doodads that\nyou've always dreamt about…\pYou may be in for fateful encounters\nwith them all!\pThat's the news on HOLONET NEWS.$,reviewed AUTO draft
+gPokeNewsTextBlendMaster_Upcoming,Greetings!\nIt's time for HOLONET NEWS.\pWe have big news for everyone\ninvolved in the making of {POKEBLOCK}S.\pThe legendary BLEND MASTER will be\nappearing in CLOUD CITY with just\la mere {STR_VAR_1}-day wait to go!\pThe BLEND MASTER is said to be the best\nin all OUTER RIM when it comes to\lspinning a FRUIT BLENDER.\pThose people who want to make great\n{POKEBLOCK}S or see the MASTER in action\lare urged to save their FRUIT.\pThat's the news on HOLONET NEWS.$,reviewed AUTO draft
+gPokeNewsTextBlendMaster_Ongoing,Greetings!\nIt's time for HOLONET NEWS.\pWe have big news for everyone\ninvolved in the making of {POKEBLOCK}S.\pThe legendary BLEND MASTER has\nfinally appeared!\pThe BLEND MASTER is spinning\nthe FRUIT BLENDER at the CLOUD CITY\lSHOWCASE HALL.\pThose people who want to make great\n{POKEBLOCK}S or see the MASTER in action\lshould hurry to CLOUD CITY.\pThat's the news on HOLONET NEWS.$,reviewed AUTO draft
+gPokeNewsTextBlendMaster_Ending,"Greetings!\nIt's time for HOLONET NEWS.\pIt's incredible!\nToo incredible, even!\pThe FRUIT BLENDER is spinning at\na dizzying pace!\pThe BLEND MASTER has lived up to\nhis reputation!\pThe BLEND MASTER will soon be\nleaving CLOUD CITY.\pIf you haven't seen the MASTER in\naction, don't waste this chance!\lHead to CLOUD CITY right now!\pThat's the news on HOLONET NEWS.$",reviewed AUTO draft
+SecretBase_Text_Trainer0Intro,"Have you made a HIDEOUT already?\pI went here, there, everywhere before\nchoosing this place.\pSince you're already here, how would\nyou like to battle?$",reviewed AUTO draft
+SecretBase_Text_Trainer0AcceptBattle,Okay!\nHere we come!$,"reviewed, no change needed"
+SecretBase_Text_Trainer0DeclineBattle,"Hunh?\nOh, you can't now…$","reviewed, no change needed"
+SecretBase_Text_Trainer0Defeated,Waaargh! You're too strong!\nAbout me losing… Please keep it secret!$,"reviewed, no change needed"
+SecretBase_Text_Trainer0PostBattle,What do you think of my HIDEOUT?\nCome visit me again tomorrow.$,reviewed AUTO draft
+SecretBase_Text_Trainer0PreChampion,"Have you made a HIDEOUT already?\pI went here, there, everywhere before\nchoosing this place.\pFeel free to hang out!$",reviewed AUTO draft
+SecretBase_Text_Trainer5Intro,"There're a lot of places where\nyou can make a HIDEOUT.\pBut I like this spot best.\nDon't you think it's nice?\pOh, would you like to have a battle?$",reviewed AUTO draft
+SecretBase_Text_Trainer5AcceptBattle,"Okay, here goes!$","reviewed, no change needed"
+SecretBase_Text_Trainer5DeclineBattle,"Oh…\nYou can't now, okay.$","reviewed, no change needed"
+SecretBase_Text_Trainer5Defeated,Hmmm… It's our loss…\nBut don't tell anyone!\lIt's a confidential secret!$,"reviewed, no change needed"
+SecretBase_Text_Trainer5PostBattle,"If you're in this area again,\nI hope you'll visit me.$","reviewed, no change needed"
+SecretBase_Text_Trainer5PreChampion,There're a lot of places where you can\nmake a HIDEOUT.\pBut I like this spot best.\nDon't you think it's nice?$,reviewed AUTO draft
+SecretBase_Text_Trainer1Intro,"This is a popular spot.\nIt's always taken.\pOh! Were you thinking about\ntaking this spot, too?\pI'll tell you what, you can have this\nspot if you can beat me.$","reviewed, no change needed"
+SecretBase_Text_Trainer1AcceptBattle,Okay!\nI'm going to defend my HIDEOUT!$,reviewed AUTO draft
+SecretBase_Text_Trainer1DeclineBattle,Hunh? Is that right?\nYou're not interested in this spot?$,"reviewed, no change needed"
+SecretBase_Text_Trainer1Defeated,I can't keep going!\nI surrender!$,"reviewed, no change needed"
+SecretBase_Text_Trainer1PostBattle,"Okay, when I move one day,\nthis place will be yours!$","reviewed, no change needed"
+SecretBase_Text_Trainer1PreChampion,This is a popular spot.\nIt's always taken.\pI waited a long time for it to open.\nI finally got to use it!$,"reviewed, no change needed"
+SecretBase_Text_Trainer6Intro,Welcome to my COMPANION LAB.\pI carry out research on battling in\nsecrecy.\pWould you like to see how strong I am?$,reviewed AUTO draft
+SecretBase_Text_Trainer6AcceptBattle,I'm going to go all out!$,"reviewed, no change needed"
+SecretBase_Text_Trainer6DeclineBattle,"Oh.\nSome other time, then!$","reviewed, no change needed"
+SecretBase_Text_Trainer6Defeated,Hmm… I've still got lots to learn.\nI have to study some more.$,"reviewed, no change needed"
+SecretBase_Text_Trainer6PostBattle,Thanks for battling with me.\nPlease come back again tomorrow.$,"reviewed, no change needed"
+SecretBase_Text_Trainer6PreChampion,Welcome to my COMPANION LAB.\pI carry out research on battling in\nsecrecy.$,reviewed AUTO draft
+SecretBase_Text_Trainer2Intro,"A big mansion is nice, but I like this\nsort of place more.\pI like it because all kinds of people\ncome visit me.\pSo, how would you like a battle?$","reviewed, no change needed"
+SecretBase_Text_Trainer2AcceptBattle,That's the way!$,"reviewed, no change needed"
+SecretBase_Text_Trainer2DeclineBattle,"When you're ready, give me a shout!$","reviewed, no change needed"
+SecretBase_Text_Trainer2Defeated,Aww! Done in!\nBut it's still fun to battle!$,"reviewed, no change needed"
+SecretBase_Text_Trainer2PostBattle,"Well, anyway, I should go buy some\ndecorations and furniture.\pI want my HIDEOUT to be a place\nother people can enjoy.$",reviewed AUTO draft
+SecretBase_Text_Trainer2PreChampion,"A big mansion is nice, but I like this\nsort of place more.\pI like it because all kinds of people\ncome visit me.$","reviewed, no change needed"
+SecretBase_Text_Trainer7Intro,"I simply adore shopping for decorations\nand furniture.\pI also love raising COMPANIONS just\nas much.\pIf you would be so kind, will you battle\nwith my COMPANION?$",reviewed AUTO draft
+SecretBase_Text_Trainer7AcceptBattle,Thank you.\nShall we begin?$,"reviewed, no change needed"
+SecretBase_Text_Trainer7DeclineBattle,Oh.\nHow disappointing…$,"reviewed, no change needed"
+SecretBase_Text_Trainer7Defeated,I concede…$,"reviewed, no change needed"
+SecretBase_Text_Trainer7PostBattle,That was all in good fun!\nI should go enjoy shopping now.$,"reviewed, no change needed"
+SecretBase_Text_Trainer7PreChampion,I simply adore shopping for decorations\nand furniture.\pI also love raising COMPANIONS just\nas much.$,reviewed AUTO draft
+SecretBase_Text_Trainer3Intro,"Some people make their SECRET BASES in\nhard-to-find places.\lDo they want to just lie low?\pBut since you found me, how about we\nhave a battle?$","reviewed, no change needed"
+SecretBase_Text_Trainer3AcceptBattle,I'm not going down easily!$,"reviewed, no change needed"
+SecretBase_Text_Trainer3DeclineBattle,Oh… Are you maybe tired from searching\nfor this place?$,"reviewed, no change needed"
+SecretBase_Text_Trainer3Defeated,I went down…$,"reviewed, no change needed"
+SecretBase_Text_Trainer3PostBattle,Where's your HIDEOUT?\nI should go visit you there.$,reviewed AUTO draft
+SecretBase_Text_Trainer3PreChampion,Some people make their SECRET BASES in\nhard-to-find places.\lDo they want to just lie low?$,"reviewed, no change needed"
+SecretBase_Text_Trainer8Intro,"People have told me that you can get\ndecorations in several ways.\pWe should have a race to see who can\nget nicer decorations and furniture!\pIn the meantime, want to battle?$","reviewed, no change needed"
+SecretBase_Text_Trainer8AcceptBattle,This is my HIDEOUT.\nI can't lose!$,reviewed AUTO draft
+SecretBase_Text_Trainer8DeclineBattle,I'll battle with you anytime.$,"reviewed, no change needed"
+SecretBase_Text_Trainer8Defeated,Huh?\nDid I just lose?$,"reviewed, no change needed"
+SecretBase_Text_Trainer8PostBattle,I won't lose at collecting decorations.\nCome visit again!$,"reviewed, no change needed"
+SecretBase_Text_Trainer8PreChampion,People have told me that you can get\ndecorations in several ways.\pWe should have a race to see who can\nget nicer decorations and furniture!$,"reviewed, no change needed"
+SecretBase_Text_Trainer4Intro,"I found a spot I liked, and I did it up\nwith my favorite decorations.\pI raise my favorite COMPANION and grow\nstronger with it.\pThat's what I do.\nWant to battle with me?$",reviewed AUTO draft
+SecretBase_Text_Trainer4AcceptBattle,Show me what you're made of!$,"reviewed, no change needed"
+SecretBase_Text_Trainer4DeclineBattle,I guess there are times when you're not\ninto it.$,"reviewed, no change needed"
+SecretBase_Text_Trainer4Defeated,I know exactly what you're made of now.$,"reviewed, no change needed"
+SecretBase_Text_Trainer4PostBattle,We can both become stronger.\nLet's keep at it!$,"reviewed, no change needed"
+SecretBase_Text_Trainer4PreChampion,"I found a spot I liked, and I did it up\nwith my favorite decorations.\pI raise my favorite COMPANION and grow\nstronger with it.\pEvery day is a great day.$",reviewed AUTO draft
+SecretBase_Text_Trainer9Intro,"You can learn a lot about the taste\nand sense of people by the kinds of\ldecorations they have, and how they\ldisplay them.\pWhat do you think of my taste?\nAre you speechless?\pWant to see my taste in battling?$","reviewed, no change needed"
+SecretBase_Text_Trainer9AcceptBattle,There's no holding back!$,"reviewed, no change needed"
+SecretBase_Text_Trainer9DeclineBattle,I'll be happy to demonstrate my style\nanytime.$,"reviewed, no change needed"
+SecretBase_Text_Trainer9Defeated,You're supremely talented!\nYour power seems to be limitless…$,"reviewed, no change needed"
+SecretBase_Text_Trainer9PostBattle,What did you think of my style?\nI'll keep on polishing it!$,"reviewed, no change needed"
+SecretBase_Text_Trainer9PreChampion,"You can learn a lot about the taste\nand sense of people by the kinds of\ldecorations they have, and how they\ldisplay them.\pWhat do you think of my taste?\nAre you speechless?$","reviewed, no change needed"
+sText_Trainer1LoseText,{B_TRAINER1_LOSE_TEXT},"reviewed, no change needed"
+sText_PkmnGainedEXP,{B_BUFF1} gained{B_BUFF2}\n{B_BUFF3} EXP. Points!\p,"reviewed, no change needed"
+sText_EmptyString4,,"reviewed, no change needed"
+sText_ABoosted, a boosted,"reviewed, no change needed"
+sText_PkmnGrewToLv,{B_BUFF1} grew to\nLV. {B_BUFF2}!{WAIT_SE}\p,"reviewed, no change needed"
+sText_PkmnLearnedMove,{B_BUFF1} learned\n{B_BUFF2}!{WAIT_SE}\p,"reviewed, no change needed"
+sText_TryToLearnMove1,{B_BUFF1} is trying to\nlearn {B_BUFF2}.\p,"reviewed, no change needed"
+sText_TryToLearnMove2,"But, {B_BUFF1} can't learn\nmore than four moves.\p","reviewed, no change needed"
+sText_TryToLearnMove3,Delete a move to make\nroom for {B_BUFF2}?,"reviewed, no change needed"
+sText_PkmnForgotMove,{B_BUFF1} forgot\n{B_BUFF2}.\p,"reviewed, no change needed"
+sText_StopLearningMove,{PAUSE 32}Stop learning\n{B_BUFF2}?,"reviewed, no change needed"
+sText_DidNotLearnMove,{B_BUFF1} did not learn\n{B_BUFF2}.\p,"reviewed, no change needed"
+sText_UseNextPkmn,Use next COMPANION?,reviewed AUTO draft
+sText_AttackMissed,{B_ATK_NAME_WITH_PREFIX}'s\nattack missed!,"reviewed, no change needed"
+sText_PkmnProtectedItself,{B_DEF_NAME_WITH_PREFIX}\nprotected itself!,"reviewed, no change needed"
+sText_AvoidedDamage,{B_DEF_NAME_WITH_PREFIX} avoided\ndamage with {B_DEF_ABILITY}!,"reviewed, no change needed"
+sText_PkmnMakesGroundMiss,{B_DEF_NAME_WITH_PREFIX} makes GROUND\nmoves miss with {B_DEF_ABILITY}!,"reviewed, no change needed"
+sText_PkmnAvoidedAttack,{B_DEF_NAME_WITH_PREFIX} avoided\nthe attack!,"reviewed, no change needed"
+sText_ItDoesntAffect,It doesn't affect\n{B_DEF_NAME_WITH_PREFIX}…,"reviewed, no change needed"
+sText_AttackerFainted,{B_ATK_NAME_WITH_PREFIX}\nfainted!\p,"reviewed, no change needed"
+sText_TargetFainted,{B_DEF_NAME_WITH_PREFIX}\nfainted!\p,"reviewed, no change needed"
+sText_PlayerGotMoney,{B_PLAYER_NAME} got ¥{B_BUFF1}\nfor winning!\p,"reviewed, no change needed"
+sText_PlayerWhiteout,{B_PLAYER_NAME} is out of\nusable COMPANION!\p,reviewed AUTO draft
+sText_PlayerWhiteout2,{B_PLAYER_NAME} whited out!{PAUSE_UNTIL_PRESS},"reviewed, no change needed"
+sText_PreventsEscape,{B_SCR_ACTIVE_NAME_WITH_PREFIX} prevents\nescape with {B_SCR_ACTIVE_ABILITY}!\p,"reviewed, no change needed"
+sText_CantEscape2,Can't escape!\p,"reviewed, no change needed"
+sText_AttackerCantEscape,{B_ATK_NAME_WITH_PREFIX} can't escape!,"reviewed, no change needed"
+sText_HitXTimes,Hit {B_BUFF1} time(s)!,"reviewed, no change needed"
+sText_PkmnFellAsleep,{B_EFF_NAME_WITH_PREFIX}\nfell asleep!,"reviewed, no change needed"
+sText_PkmnMadeSleep,{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nmade {B_EFF_NAME_WITH_PREFIX} sleep!,"reviewed, no change needed"
+sText_PkmnAlreadyAsleep,{B_DEF_NAME_WITH_PREFIX} is\nalready asleep!,"reviewed, no change needed"
+sText_PkmnAlreadyAsleep2,{B_ATK_NAME_WITH_PREFIX} is\nalready asleep!,"reviewed, no change needed"
+sText_PkmnWasntAffected,{B_DEF_NAME_WITH_PREFIX}\nwasn't affected!,"reviewed, no change needed"
+sText_PkmnWasPoisoned,{B_EFF_NAME_WITH_PREFIX}\nwas poisoned!,"reviewed, no change needed"
+sText_PkmnPoisonedBy,{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\npoisoned {B_EFF_NAME_WITH_PREFIX}!,"reviewed, no change needed"
+sText_PkmnHurtByPoison,{B_ATK_NAME_WITH_PREFIX} is hurt\nby poison!,"reviewed, no change needed"
+sText_PkmnAlreadyPoisoned,{B_DEF_NAME_WITH_PREFIX} is already\npoisoned.,"reviewed, no change needed"
+sText_PkmnBadlyPoisoned,{B_EFF_NAME_WITH_PREFIX} is badly\npoisoned!,"reviewed, no change needed"
+sText_PkmnEnergyDrained,{B_DEF_NAME_WITH_PREFIX} had its\nenergy drained!,"reviewed, no change needed"
+sText_PkmnWasBurned,{B_EFF_NAME_WITH_PREFIX} was burned!,"reviewed, no change needed"
+sText_PkmnBurnedBy,{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nburned {B_EFF_NAME_WITH_PREFIX}!,"reviewed, no change needed"
+sText_PkmnHurtByBurn,{B_ATK_NAME_WITH_PREFIX} is hurt\nby its burn!,"reviewed, no change needed"
+sText_PkmnAlreadyHasBurn,{B_DEF_NAME_WITH_PREFIX} already\nhas a burn.,"reviewed, no change needed"
+sText_PkmnWasFrozen,{B_EFF_NAME_WITH_PREFIX} was\nfrozen solid!,"reviewed, no change needed"
+sText_PkmnFrozenBy,{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nfroze {B_EFF_NAME_WITH_PREFIX} solid!,"reviewed, no change needed"
+sText_PkmnIsFrozen,{B_ATK_NAME_WITH_PREFIX} is\nfrozen solid!,"reviewed, no change needed"
+sText_PkmnWasDefrosted,{B_DEF_NAME_WITH_PREFIX} was\ndefrosted!,"reviewed, no change needed"
+sText_PkmnWasDefrosted2,{B_ATK_NAME_WITH_PREFIX} was\ndefrosted!,"reviewed, no change needed"
+sText_PkmnWasDefrostedBy,{B_ATK_NAME_WITH_PREFIX} was\ndefrosted by {B_CURRENT_MOVE}!,"reviewed, no change needed"
+sText_PkmnWasParalyzed,{B_EFF_NAME_WITH_PREFIX} is paralyzed!\nIt may be unable to move!,"reviewed, no change needed"
+sText_PkmnWasParalyzedBy,{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nparalyzed {B_EFF_NAME_WITH_PREFIX}!\lIt may be unable to move!,"reviewed, no change needed"
+sText_PkmnIsParalyzed,{B_ATK_NAME_WITH_PREFIX} is paralyzed!\nIt can't move!,"reviewed, no change needed"
+sText_PkmnIsAlreadyParalyzed,{B_DEF_NAME_WITH_PREFIX} is\nalready paralyzed!,"reviewed, no change needed"
+sText_PkmnHealedParalysis,{B_DEF_NAME_WITH_PREFIX} was\nhealed of paralysis!,"reviewed, no change needed"
+sText_PkmnDreamEaten,{B_DEF_NAME_WITH_PREFIX}'s\ndream was eaten!,"reviewed, no change needed"
+sText_StatsWontIncrease,{B_ATK_NAME_WITH_PREFIX}'s {B_BUFF1}\nwon't go higher!,"reviewed, no change needed"
+sText_StatsWontDecrease,{B_DEF_NAME_WITH_PREFIX}'s {B_BUFF1}\nwon't go lower!,"reviewed, no change needed"
+sText_TeamStoppedWorking,Your team's {B_BUFF1}\nstopped working!,"reviewed, no change needed"
+sText_FoeStoppedWorking,The foe's {B_BUFF1}\nstopped working!,"reviewed, no change needed"
+sText_PkmnIsConfused,{B_ATK_NAME_WITH_PREFIX} is\nconfused!,"reviewed, no change needed"
+sText_PkmnHealedConfusion,{B_ATK_NAME_WITH_PREFIX} snapped\nout of confusion!,"reviewed, no change needed"
+sText_PkmnWasConfused,{B_EFF_NAME_WITH_PREFIX} became\nconfused!,"reviewed, no change needed"
+sText_PkmnAlreadyConfused,{B_DEF_NAME_WITH_PREFIX} is\nalready confused!,"reviewed, no change needed"
+sText_PkmnFellInLove,{B_DEF_NAME_WITH_PREFIX}\nfell in love!,"reviewed, no change needed"
+sText_PkmnInLove,{B_ATK_NAME_WITH_PREFIX} is in love\nwith {B_SCR_ACTIVE_NAME_WITH_PREFIX}!,"reviewed, no change needed"
+sText_PkmnImmobilizedByLove,{B_ATK_NAME_WITH_PREFIX} is\nimmobilized by love!,"reviewed, no change needed"
+sText_PkmnBlownAway,{B_DEF_NAME_WITH_PREFIX} was\nblown away!,"reviewed, no change needed"
+sText_PkmnChangedType,{B_ATK_NAME_WITH_PREFIX} transformed\ninto the {B_BUFF1} type!,"reviewed, no change needed"
+sText_PkmnFlinched,{B_ATK_NAME_WITH_PREFIX} flinched!,"reviewed, no change needed"
+sText_PkmnRegainedHealth,{B_DEF_NAME_WITH_PREFIX} regained\nhealth!,"reviewed, no change needed"
+sText_PkmnHPFull,{B_DEF_NAME_WITH_PREFIX}'s\nHP is full!,"reviewed, no change needed"
+sText_PkmnRaisedSpDef,{B_ATK_PREFIX2}'s {B_CURRENT_MOVE}\nraised SP. DEF!,"reviewed, no change needed"
+sText_PkmnRaisedSpDefALittle,{B_ATK_PREFIX2}'s {B_CURRENT_MOVE}\nraised SP. DEF a little!,"reviewed, no change needed"
+sText_PkmnRaisedDef,{B_ATK_PREFIX2}'s {B_CURRENT_MOVE}\nraised DEFENSE!,"reviewed, no change needed"
+sText_PkmnRaisedDefALittle,{B_ATK_PREFIX2}'s {B_CURRENT_MOVE}\nraised DEFENSE a little!,"reviewed, no change needed"
+sText_PkmnCoveredByVeil,{B_ATK_PREFIX2}'s party is covered\nby a veil!,"reviewed, no change needed"
+sText_PkmnUsedSafeguard,{B_DEF_NAME_WITH_PREFIX}'s party is protected\nby SAFEGUARD!,"reviewed, no change needed"
+sText_PkmnSafeguardExpired,{B_ATK_PREFIX3}'s party is no longer\nprotected by SAFEGUARD!,"reviewed, no change needed"
+sText_PkmnWentToSleep,{B_ATK_NAME_WITH_PREFIX} went\nto sleep!,"reviewed, no change needed"
+sText_PkmnSleptHealthy,{B_ATK_NAME_WITH_PREFIX} slept and\nbecame healthy!,"reviewed, no change needed"
+sText_PkmnWhippedWhirlwind,{B_ATK_NAME_WITH_PREFIX} whipped\nup a whirlwind!,"reviewed, no change needed"
+sText_PkmnTookSunlight,{B_ATK_NAME_WITH_PREFIX} took\nin sunlight!,"reviewed, no change needed"
+sText_PkmnLoweredHead,{B_ATK_NAME_WITH_PREFIX} lowered\nits head!,"reviewed, no change needed"
+sText_PkmnIsGlowing,{B_ATK_NAME_WITH_PREFIX} is glowing!,"reviewed, no change needed"
+sText_PkmnFlewHigh,{B_ATK_NAME_WITH_PREFIX} flew\nup high!,"reviewed, no change needed"
+sText_PkmnDugHole,{B_ATK_NAME_WITH_PREFIX} dug a hole!,"reviewed, no change needed"
+sText_PkmnHidUnderwater,{B_ATK_NAME_WITH_PREFIX} hid\nunderwater!,"reviewed, no change needed"
+sText_PkmnSprangUp,{B_ATK_NAME_WITH_PREFIX} sprang up!,"reviewed, no change needed"
+sText_PkmnSqueezedByBind,{B_DEF_NAME_WITH_PREFIX} was squeezed by\n{B_ATK_NAME_WITH_PREFIX}'s BIND!,"reviewed, no change needed"
+sText_PkmnTrappedInVortex,{B_DEF_NAME_WITH_PREFIX} was trapped\nin the vortex!,"reviewed, no change needed"
+sText_PkmnTrappedBySandTomb,{B_DEF_NAME_WITH_PREFIX} was trapped\nby SAND TOMB!,"reviewed, no change needed"
+sText_PkmnWrappedBy,{B_DEF_NAME_WITH_PREFIX} was WRAPPED by\n{B_ATK_NAME_WITH_PREFIX}!,"reviewed, no change needed"
+sText_PkmnClamped,{B_ATK_NAME_WITH_PREFIX} CLAMPED\n{B_DEF_NAME_WITH_PREFIX}!,"reviewed, no change needed"
+sText_PkmnHurtBy,{B_ATK_NAME_WITH_PREFIX} is hurt\nby {B_BUFF1}!,"reviewed, no change needed"
+sText_PkmnFreedFrom,{B_ATK_NAME_WITH_PREFIX} was freed\nfrom {B_BUFF1}!,"reviewed, no change needed"
+sText_PkmnCrashed,{B_ATK_NAME_WITH_PREFIX} kept going\nand crashed!,"reviewed, no change needed"
+gText_PkmnShroudedInMist,{B_ATK_PREFIX2} became\nshrouded in MIST!,"reviewed, no change needed"
+sText_PkmnProtectedByMist,{B_SCR_ACTIVE_NAME_WITH_PREFIX} is protected\nby MIST!,"reviewed, no change needed"
+gText_PkmnGettingPumped,{B_ATK_NAME_WITH_PREFIX} is getting\npumped!,"reviewed, no change needed"
+sText_PkmnHitWithRecoil,{B_ATK_NAME_WITH_PREFIX} is hit\nwith recoil!,"reviewed, no change needed"
+sText_PkmnProtectedItself2,{B_ATK_NAME_WITH_PREFIX} protected\nitself!,"reviewed, no change needed"
+sText_PkmnBuffetedBySandstorm,{B_ATK_NAME_WITH_PREFIX} is buffeted\nby the sandstorm!,"reviewed, no change needed"
+sText_PkmnPeltedByHail,{B_ATK_NAME_WITH_PREFIX} is pelted\nby HAIL!,"reviewed, no change needed"
+sText_PkmnsXWoreOff,{B_ATK_PREFIX1}'s {B_BUFF1}\nwore off!,"reviewed, no change needed"
+sText_PkmnSeeded,{B_DEF_NAME_WITH_PREFIX} was seeded!,"reviewed, no change needed"
+sText_PkmnEvadedAttack,{B_DEF_NAME_WITH_PREFIX} evaded\nthe attack!,"reviewed, no change needed"
+sText_PkmnSappedByLeechSeed,{B_ATK_NAME_WITH_PREFIX}'s health is\nsapped by LEECH SEED!,"reviewed, no change needed"
+sText_PkmnFastAsleep,{B_ATK_NAME_WITH_PREFIX} is fast\nasleep.,"reviewed, no change needed"
+sText_PkmnWokeUp,{B_ATK_NAME_WITH_PREFIX} woke up!,"reviewed, no change needed"
+sText_PkmnUproarKeptAwake,But {B_SCR_ACTIVE_NAME_WITH_PREFIX}'s UPROAR\nkept it awake!,"reviewed, no change needed"
+sText_PkmnWokeUpInUproar,{B_ATK_NAME_WITH_PREFIX} woke up\nin the UPROAR!,"reviewed, no change needed"
+sText_PkmnCausedUproar,{B_ATK_NAME_WITH_PREFIX} caused\nan UPROAR!,"reviewed, no change needed"
+sText_PkmnMakingUproar,{B_ATK_NAME_WITH_PREFIX} is making\nan UPROAR!,"reviewed, no change needed"
+sText_PkmnCalmedDown,{B_ATK_NAME_WITH_PREFIX} calmed down.,"reviewed, no change needed"
+sText_PkmnCantSleepInUproar,But {B_DEF_NAME_WITH_PREFIX} can't\nsleep in an UPROAR!,"reviewed, no change needed"
+sText_PkmnStockpiled,{B_ATK_NAME_WITH_PREFIX} STOCKPILED\n{B_BUFF1}!,"reviewed, no change needed"
+sText_PkmnCantStockpile,{B_ATK_NAME_WITH_PREFIX} can't\nSTOCKPILE any more!,"reviewed, no change needed"
+sText_PkmnCantSleepInUproar2,But {B_DEF_NAME_WITH_PREFIX} can't\nsleep in an UPROAR!,"reviewed, no change needed"
+sText_UproarKeptPkmnAwake,But the UPROAR kept\n{B_DEF_NAME_WITH_PREFIX} awake!,"reviewed, no change needed"
+sText_PkmnStayedAwakeUsing,{B_DEF_NAME_WITH_PREFIX} stayed awake\nusing its {B_DEF_ABILITY}!,"reviewed, no change needed"
+sText_PkmnStoringEnergy,{B_ATK_NAME_WITH_PREFIX} is storing\nenergy!,"reviewed, no change needed"
+sText_PkmnUnleashedEnergy,{B_ATK_NAME_WITH_PREFIX} unleashed\nenergy!,"reviewed, no change needed"
+sText_PkmnFatigueConfusion,{B_ATK_NAME_WITH_PREFIX} became\nconfused due to fatigue!,"reviewed, no change needed"
+sText_PlayerPickedUpMoney,{B_PLAYER_NAME} picked up\n¥{B_BUFF1}!\p,"reviewed, no change needed"
+sText_PkmnUnaffected,{B_DEF_NAME_WITH_PREFIX} is\nunaffected!,"reviewed, no change needed"
+sText_PkmnTransformedInto,{B_ATK_NAME_WITH_PREFIX} transformed\ninto {B_BUFF1}!,"reviewed, no change needed"
+sText_PkmnMadeSubstitute,{B_ATK_NAME_WITH_PREFIX} made\na SUBSTITUTE!,"reviewed, no change needed"
+sText_PkmnHasSubstitute,{B_ATK_NAME_WITH_PREFIX} already\nhas a SUBSTITUTE!,"reviewed, no change needed"
+sText_SubstituteDamaged,The SUBSTITUTE took damage\nfor {B_DEF_NAME_WITH_PREFIX}!\p,"reviewed, no change needed"
+sText_PkmnSubstituteFaded,{B_DEF_NAME_WITH_PREFIX}'s\nSUBSTITUTE faded!\p,"reviewed, no change needed"
+sText_PkmnMustRecharge,{B_ATK_NAME_WITH_PREFIX} must\nrecharge!,"reviewed, no change needed"
+sText_PkmnRageBuilding,{B_DEF_NAME_WITH_PREFIX}'s RAGE\nis building!,"reviewed, no change needed"
+sText_PkmnMoveWasDisabled,{B_DEF_NAME_WITH_PREFIX}'s {B_BUFF1}\nwas disabled!,"reviewed, no change needed"
+sText_PkmnMoveDisabledNoMore,{B_ATK_NAME_WITH_PREFIX} is disabled\nno more!,"reviewed, no change needed"
+sText_PkmnGotEncore,{B_DEF_NAME_WITH_PREFIX} got\nan ENCORE!,"reviewed, no change needed"
+sText_PkmnEncoreEnded,{B_ATK_NAME_WITH_PREFIX}'s ENCORE\nended!,"reviewed, no change needed"
+sText_PkmnTookAim,{B_ATK_NAME_WITH_PREFIX} took aim\nat {B_DEF_NAME_WITH_PREFIX}!,"reviewed, no change needed"
+sText_PkmnSketchedMove,{B_ATK_NAME_WITH_PREFIX} SKETCHED\n{B_BUFF1}!,"reviewed, no change needed"
+sText_PkmnTryingToTakeFoe,{B_ATK_NAME_WITH_PREFIX} is trying\nto take its foe with it!,"reviewed, no change needed"
+sText_PkmnTookFoe,{B_DEF_NAME_WITH_PREFIX} took\n{B_ATK_NAME_WITH_PREFIX} with it!,"reviewed, no change needed"
+sText_PkmnReducedPP,Reduced {B_DEF_NAME_WITH_PREFIX}'s\n{B_BUFF1} by {B_BUFF2}!,"reviewed, no change needed"
+sText_PkmnStoleItem,{B_ATK_NAME_WITH_PREFIX} stole\n{B_DEF_NAME_WITH_PREFIX}'s {B_LAST_ITEM}!,"reviewed, no change needed"
+sText_TargetCantEscapeNow,{B_DEF_NAME_WITH_PREFIX} can't\nescape now!,"reviewed, no change needed"
+sText_PkmnFellIntoNightmare,{B_DEF_NAME_WITH_PREFIX} fell into\na NIGHTMARE!,"reviewed, no change needed"
+sText_PkmnLockedInNightmare,{B_ATK_NAME_WITH_PREFIX} is locked\nin a NIGHTMARE!,"reviewed, no change needed"
+sText_PkmnLaidCurse,{B_ATK_NAME_WITH_PREFIX} cut its own HP and\nlaid a CURSE on {B_DEF_NAME_WITH_PREFIX}!,"reviewed, no change needed"
+sText_PkmnAfflictedByCurse,{B_ATK_NAME_WITH_PREFIX} is afflicted\nby the CURSE!,"reviewed, no change needed"
+sText_SpikesScattered,SPIKES were scattered all around\nthe opponent's side!,"reviewed, no change needed"
+sText_PkmnHurtBySpikes,{B_SCR_ACTIVE_NAME_WITH_PREFIX} is hurt\nby SPIKES!,"reviewed, no change needed"
+sText_PkmnIdentified,{B_ATK_NAME_WITH_PREFIX} identified\n{B_DEF_NAME_WITH_PREFIX}!,"reviewed, no change needed"
+sText_PkmnPerishCountFell,{B_ATK_NAME_WITH_PREFIX}'s PERISH count\nfell to {B_BUFF1}!,"reviewed, no change needed"
+sText_PkmnBracedItself,{B_ATK_NAME_WITH_PREFIX} braced\nitself!,"reviewed, no change needed"
+sText_PkmnEnduredHit,{B_DEF_NAME_WITH_PREFIX} ENDURED\nthe hit!,"reviewed, no change needed"
+sText_MagnitudeStrength,MAGNITUDE {B_BUFF1}!,"reviewed, no change needed"
+sText_PkmnCutHPMaxedAttack,{B_ATK_NAME_WITH_PREFIX} cut its own HP\nand maximized ATTACK!,"reviewed, no change needed"
+sText_PkmnCopiedStatChanges,{B_ATK_NAME_WITH_PREFIX} copied\n{B_DEF_NAME_WITH_PREFIX}'s stat changes!,"reviewed, no change needed"
+sText_PkmnGotFree,{B_ATK_NAME_WITH_PREFIX} got free of\n{B_DEF_NAME_WITH_PREFIX}'s {B_BUFF1}!,"reviewed, no change needed"
+sText_PkmnShedLeechSeed,{B_ATK_NAME_WITH_PREFIX} shed\nLEECH SEED!,"reviewed, no change needed"
+sText_PkmnBlewAwaySpikes,{B_ATK_NAME_WITH_PREFIX} blew away\nSPIKES!,"reviewed, no change needed"
+sText_PkmnFledFromBattle,{B_ATK_NAME_WITH_PREFIX} fled from\nbattle!,"reviewed, no change needed"
+sText_PkmnForesawAttack,{B_ATK_NAME_WITH_PREFIX} foresaw\nan attack!,"reviewed, no change needed"
+sText_PkmnTookAttack,{B_DEF_NAME_WITH_PREFIX} took the\n{B_BUFF1} attack!,"reviewed, no change needed"
+sText_PkmnChoseXAsDestiny,{B_ATK_NAME_WITH_PREFIX} chose\n{B_CURRENT_MOVE} as its destiny!,"reviewed, no change needed"
+sText_PkmnAttack,{B_BUFF1}'s attack!,"reviewed, no change needed"
+sText_PkmnCenterAttention,{B_ATK_NAME_WITH_PREFIX} became the\ncenter of attention!,"reviewed, no change needed"
+sText_PkmnChargingPower,{B_ATK_NAME_WITH_PREFIX} began\ncharging power!,"reviewed, no change needed"
+sText_NaturePowerTurnedInto,NATURE POWER turned into\n{B_CURRENT_MOVE}!,"reviewed, no change needed"
+sText_PkmnStatusNormal,{B_ATK_NAME_WITH_PREFIX}'s status\nreturned to normal!,"reviewed, no change needed"
+sText_PkmnSubjectedToTorment,{B_DEF_NAME_WITH_PREFIX} was subjected\nto TORMENT!,"reviewed, no change needed"
+sText_PkmnTighteningFocus,{B_ATK_NAME_WITH_PREFIX} is tightening\nits focus!,"reviewed, no change needed"
+sText_PkmnFellForTaunt,{B_DEF_NAME_WITH_PREFIX} fell for\nthe TAUNT!,"reviewed, no change needed"
+sText_PkmnReadyToHelp,{B_ATK_NAME_WITH_PREFIX} is ready to\nhelp {B_DEF_NAME_WITH_PREFIX}!,"reviewed, no change needed"
+sText_PkmnSwitchedItems,{B_ATK_NAME_WITH_PREFIX} switched\nitems with its opponent!,"reviewed, no change needed"
+sText_PkmnObtainedX,{B_ATK_NAME_WITH_PREFIX} obtained\n{B_BUFF1}.,"reviewed, no change needed"
+sText_PkmnObtainedX2,{B_DEF_NAME_WITH_PREFIX} obtained\n{B_BUFF2}.,"reviewed, no change needed"
+sText_PkmnObtainedXYObtainedZ,{B_ATK_NAME_WITH_PREFIX} obtained\n{B_BUFF1}.\p{B_DEF_NAME_WITH_PREFIX} obtained\n{B_BUFF2}.,"reviewed, no change needed"
+sText_PkmnCopiedFoe,{B_ATK_NAME_WITH_PREFIX} copied\n{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}!,"reviewed, no change needed"
+sText_PkmnMadeWish,{B_ATK_NAME_WITH_PREFIX} made a WISH!,"reviewed, no change needed"
+sText_PkmnWishCameTrue,{B_BUFF1}'s WISH\ncame true!,"reviewed, no change needed"
+sText_PkmnPlantedRoots,{B_ATK_NAME_WITH_PREFIX} planted its roots!,"reviewed, no change needed"
+sText_PkmnAbsorbedNutrients,{B_ATK_NAME_WITH_PREFIX} absorbed\nnutrients with its roots!,"reviewed, no change needed"
+sText_PkmnAnchoredItself,{B_DEF_NAME_WITH_PREFIX} anchored\nitself with its roots!,"reviewed, no change needed"
+sText_PkmnWasMadeDrowsy,{B_ATK_NAME_WITH_PREFIX} made\n{B_DEF_NAME_WITH_PREFIX} drowsy!,"reviewed, no change needed"
+sText_PkmnKnockedOff,{B_ATK_NAME_WITH_PREFIX} knocked off\n{B_DEF_NAME_WITH_PREFIX}'s {B_LAST_ITEM}!,"reviewed, no change needed"
+sText_PkmnSwappedAbilities,{B_ATK_NAME_WITH_PREFIX} swapped abilities\nwith its opponent!,"reviewed, no change needed"
+sText_PkmnSealedOpponentMove,{B_ATK_NAME_WITH_PREFIX} sealed the\nopponent's move(s)!,"reviewed, no change needed"
+sText_PkmnWantsGrudge,{B_ATK_NAME_WITH_PREFIX} wants the\nopponent to bear a GRUDGE!,"reviewed, no change needed"
+sText_PkmnLostPPGrudge,{B_ATK_NAME_WITH_PREFIX}'s {B_BUFF1} lost\nall its PP due to the GRUDGE!,"reviewed, no change needed"
+sText_PkmnShroudedItself,{B_ATK_NAME_WITH_PREFIX} shrouded\nitself in {B_CURRENT_MOVE}!,"reviewed, no change needed"
+sText_PkmnMoveBounced,{B_ATK_NAME_WITH_PREFIX}'s {B_CURRENT_MOVE}\nwas bounced back by MAGIC COAT!,"reviewed, no change needed"
+sText_PkmnWaitsForTarget,{B_ATK_NAME_WITH_PREFIX} waits for a target\nto make a move!,"reviewed, no change needed"
+sText_PkmnSnatchedMove,{B_DEF_NAME_WITH_PREFIX} SNATCHED\n{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s move!,"reviewed, no change needed"
+sText_ElectricityWeakened,Electricity's power was\nweakened!,"reviewed, no change needed"
+sText_FireWeakened,Fire's power was\nweakened!,"reviewed, no change needed"
+sText_XFoundOneY,{B_ATK_NAME_WITH_PREFIX} found\none {B_LAST_ITEM}!,"reviewed, no change needed"
+sText_SoothingAroma,A soothing aroma wafted\nthrough the area!,"reviewed, no change needed"
+sText_ItemsCantBeUsedNow,Items can't be used now.{PAUSE 64},"reviewed, no change needed"
+sText_ForXCommaYZ,"For {B_SCR_ACTIVE_NAME_WITH_PREFIX},\n{B_LAST_ITEM} {B_BUFF1}","reviewed, no change needed"
+sText_PkmnUsedXToGetPumped,{B_SCR_ACTIVE_NAME_WITH_PREFIX} used\n{B_LAST_ITEM} to get pumped!,"reviewed, no change needed"
+sText_PkmnLostFocus,{B_ATK_NAME_WITH_PREFIX} lost its\nfocus and couldn't move!,"reviewed, no change needed"
+sText_PkmnWasDraggedOut,{B_DEF_NAME_WITH_PREFIX} was\ndragged out!\p,"reviewed, no change needed"
+sText_TheWallShattered,The wall shattered!,"reviewed, no change needed"
+sText_ButNoEffect,But it had no effect!,"reviewed, no change needed"
+sText_PkmnHasNoMovesLeft,{B_ACTIVE_NAME_WITH_PREFIX} has no\nmoves left!\p,"reviewed, no change needed"
+sText_PkmnMoveIsDisabled,{B_ACTIVE_NAME_WITH_PREFIX}'s {B_CURRENT_MOVE}\nis disabled!\p,"reviewed, no change needed"
+sText_PkmnCantUseMoveTorment,{B_ACTIVE_NAME_WITH_PREFIX} can't use the same\nmove in a row due to the TORMENT!\p,"reviewed, no change needed"
+sText_PkmnCantUseMoveTaunt,{B_ACTIVE_NAME_WITH_PREFIX} can't use\n{B_CURRENT_MOVE} after the TAUNT!\p,"reviewed, no change needed"
+sText_PkmnCantUseMoveSealed,{B_ACTIVE_NAME_WITH_PREFIX} can't use the\nsealed {B_CURRENT_MOVE}!\p,"reviewed, no change needed"
+sText_PkmnMadeItRain,{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nmade it rain!,"reviewed, no change needed"
+sText_PkmnRaisedSpeed,{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nraised its SPEED!,"reviewed, no change needed"
+sText_PkmnProtectedBy,{B_DEF_NAME_WITH_PREFIX} was protected\nby {B_DEF_ABILITY}!,"reviewed, no change needed"
+sText_PkmnPreventsUsage,{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nprevents {B_ATK_NAME_WITH_PREFIX}\lfrom using {B_CURRENT_MOVE}!,"reviewed, no change needed"
+sText_PkmnRestoredHPUsing,{B_DEF_NAME_WITH_PREFIX} restored HP\nusing its {B_DEF_ABILITY}!,"reviewed, no change needed"
+sText_PkmnsXMadeYUseless,{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nmade {B_CURRENT_MOVE} useless!,"reviewed, no change needed"
+sText_PkmnChangedTypeWith,{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nmade it the {B_BUFF1} type!,"reviewed, no change needed"
+sText_PkmnPreventsParalysisWith,{B_EFF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nprevents paralysis!,"reviewed, no change needed"
+sText_PkmnPreventsRomanceWith,{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nprevents romance!,"reviewed, no change needed"
+sText_PkmnPreventsPoisoningWith,{B_EFF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nprevents poisoning!,"reviewed, no change needed"
+sText_PkmnPreventsConfusionWith,{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nprevents confusion!,"reviewed, no change needed"
+sText_PkmnRaisedFirePowerWith,{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nraised its FIRE power!,"reviewed, no change needed"
+sText_PkmnAnchorsItselfWith,{B_DEF_NAME_WITH_PREFIX} anchors\nitself with {B_DEF_ABILITY}!,"reviewed, no change needed"
+sText_PkmnCutsAttackWith,{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\ncuts {B_DEF_NAME_WITH_PREFIX}'s ATTACK!,"reviewed, no change needed"
+sText_PkmnPreventsStatLossWith,{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nprevents stat loss!,"reviewed, no change needed"
+sText_PkmnHurtsWith,{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nhurt {B_ATK_NAME_WITH_PREFIX}!,"reviewed, no change needed"
+sText_PkmnTraced,{B_SCR_ACTIVE_NAME_WITH_PREFIX} TRACED\n{B_BUFF1}'s {B_BUFF2}!,"reviewed, no change needed"
+sText_PkmnsXPreventsBurns,{B_EFF_NAME_WITH_PREFIX}'s {B_EFF_ABILITY}\nprevents burns!,"reviewed, no change needed"
+sText_PkmnsXBlocksY,{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nblocks {B_CURRENT_MOVE}!,"reviewed, no change needed"
+sText_PkmnsXBlocksY2,{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nblocks {B_CURRENT_MOVE}!,"reviewed, no change needed"
+sText_PkmnsXRestoredHPALittle2,{B_ATK_NAME_WITH_PREFIX}'s {B_ATK_ABILITY}\nrestored its HP a little!,"reviewed, no change needed"
+sText_PkmnsXWhippedUpSandstorm,{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nwhipped up a sandstorm!,"reviewed, no change needed"
+sText_PkmnsXIntensifiedSun,{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nintensified the sun's rays!,"reviewed, no change needed"
+sText_PkmnsXPreventsYLoss,{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nprevents {B_BUFF1} loss!,"reviewed, no change needed"
+sText_PkmnsXInfatuatedY,{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\ninfatuated {B_ATK_NAME_WITH_PREFIX}!,"reviewed, no change needed"
+sText_PkmnsXMadeYIneffective,{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nmade {B_CURRENT_MOVE} ineffective!,"reviewed, no change needed"
+sText_PkmnsXCuredYProblem,{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\ncured its {B_BUFF1} problem!,"reviewed, no change needed"
+sText_ItSuckedLiquidOoze,It sucked up the\nLIQUID OOZE!,"reviewed, no change needed"
+sText_PkmnTransformed,{B_SCR_ACTIVE_NAME_WITH_PREFIX} transformed!,"reviewed, no change needed"
+sText_PkmnsXTookAttack,{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\ntook the attack!,"reviewed, no change needed"
+gText_PkmnsXPreventsSwitching,{B_BUFF1}'s {B_LAST_ABILITY}\nprevents switching!\p,"reviewed, no change needed"
+sText_PreventedFromWorking,{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nprevented {B_SCR_ACTIVE_NAME_WITH_PREFIX}'s\l{B_BUFF1} from working!,"reviewed, no change needed"
+sText_PkmnsXMadeItIneffective,{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nmade it ineffective!,"reviewed, no change needed"
+sText_PkmnsXPreventsFlinching,{B_EFF_NAME_WITH_PREFIX}'s {B_EFF_ABILITY}\nprevents flinching!,"reviewed, no change needed"
+sText_PkmnsXPreventsYsZ,{B_ATK_NAME_WITH_PREFIX}'s {B_ATK_ABILITY}\nprevents {B_DEF_NAME_WITH_PREFIX}'s\l{B_DEF_ABILITY} from working!,"reviewed, no change needed"
+sText_PkmnsXCuredItsYProblem,{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\ncured its {B_BUFF1} problem!,"reviewed, no change needed"
+sText_PkmnsXHadNoEffectOnY,{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nhad no effect on {B_EFF_NAME_WITH_PREFIX}!,"reviewed, no change needed"
+sText_StatSharply,sharply ,"reviewed, no change needed"
+gText_StatRose,rose!,"reviewed, no change needed"
+sText_StatHarshly,harshly ,"reviewed, no change needed"
+sText_StatFell,fell!,"reviewed, no change needed"
+sText_AttackersStatRose,{B_ATK_NAME_WITH_PREFIX}'s {B_BUFF1}\n{B_BUFF2},"reviewed, no change needed"
+gText_DefendersStatRose,{B_DEF_NAME_WITH_PREFIX}'s {B_BUFF1}\n{B_BUFF2},"reviewed, no change needed"
+sText_UsingItemTheStatOfPkmnRose,"Using {B_LAST_ITEM}, the {B_BUFF1}\nof {B_SCR_ACTIVE_NAME_WITH_PREFIX} {B_BUFF2}","reviewed, no change needed"
+sText_AttackersStatFell,{B_ATK_NAME_WITH_PREFIX}'s {B_BUFF1}\n{B_BUFF2},"reviewed, no change needed"
+sText_DefendersStatFell,{B_DEF_NAME_WITH_PREFIX}'s {B_BUFF1}\n{B_BUFF2},"reviewed, no change needed"
+sText_StatsWontIncrease2,{B_ATK_NAME_WITH_PREFIX}'s stats won't\ngo any higher!,"reviewed, no change needed"
+sText_StatsWontDecrease2,{B_DEF_NAME_WITH_PREFIX}'s stats won't\ngo any lower!,"reviewed, no change needed"
+sText_CriticalHit,A critical hit!,"reviewed, no change needed"
+sText_OneHitKO,It's a one-hit KO!,"reviewed, no change needed"
+sText_123Poof,"{PAUSE 32}1, {PAUSE 15}2, and{PAUSE 15}… {PAUSE 15}… {PAUSE 15}… {PAUSE 15}{PLAY_SE SE_BALL_BOUNCE_1}Poof!\p","reviewed, no change needed"
+sText_AndEllipsis,And…\p,"reviewed, no change needed"
+sText_HMMovesCantBeForgotten,HM moves can't be\nforgotten now.\p,"reviewed, no change needed"
+sText_NotVeryEffective,It's not very effective…,"reviewed, no change needed"
+sText_SuperEffective,It's super effective!,"reviewed, no change needed"
+sText_GotAwaySafely,{PLAY_SE SE_FLEE}Got away safely!\p,"reviewed, no change needed"
+sText_PkmnFledUsingIts,{PLAY_SE SE_FLEE}{B_ATK_NAME_WITH_PREFIX} fled\nusing its {B_LAST_ITEM}!\p,"reviewed, no change needed"
+sText_PkmnFledUsing,{PLAY_SE SE_FLEE}{B_ATK_NAME_WITH_PREFIX} fled\nusing {B_ATK_ABILITY}!\p,"reviewed, no change needed"
+sText_WildPkmnFled,{PLAY_SE SE_FLEE}Wild {B_BUFF1} fled!,"reviewed, no change needed"
+sText_PlayerDefeatedLinkTrainer,Player defeated\n{B_LINK_OPPONENT1_NAME}!,"reviewed, no change needed"
+sText_TwoLinkTrainersDefeated,Player beat {B_LINK_OPPONENT1_NAME}\nand {B_LINK_OPPONENT2_NAME}!,"reviewed, no change needed"
+sText_PlayerLostAgainstLinkTrainer,Player lost against\n{B_LINK_OPPONENT1_NAME}!,"reviewed, no change needed"
+sText_PlayerLostToTwo,Player lost to {B_LINK_OPPONENT1_NAME}\nand {B_LINK_OPPONENT2_NAME}!,"reviewed, no change needed"
+sText_PlayerBattledToDrawLinkTrainer,Player battled to a draw against\n{B_LINK_OPPONENT1_NAME}!,"reviewed, no change needed"
+sText_PlayerBattledToDrawVsTwo,Player battled to a draw against\n{B_LINK_OPPONENT1_NAME} and {B_LINK_OPPONENT2_NAME}!,"reviewed, no change needed"
+sText_WildFled,{PLAY_SE SE_FLEE}{B_LINK_OPPONENT1_NAME} fled!,"reviewed, no change needed"
+sText_TwoWildFled,{PLAY_SE SE_FLEE}{B_LINK_OPPONENT1_NAME} and\n{B_LINK_OPPONENT2_NAME} fled!,"reviewed, no change needed"
+sText_NoRunningFromTrainers,No! There's no running\nfrom a TRAINER battle!\p,"reviewed, no change needed"
+sText_CantEscape,Can't escape!\p,"reviewed, no change needed"
+sText_DontLeaveBirch,PROF. KORR: Don't leave me like this!\p,reviewed AUTO draft
+sText_ButNothingHappened,But nothing happened!,"reviewed, no change needed"
+sText_ButItFailed,But it failed!,"reviewed, no change needed"
+sText_ItHurtConfusion,It hurt itself in its\nconfusion!,"reviewed, no change needed"
+sText_MirrorMoveFailed,The MIRROR MOVE failed!,"reviewed, no change needed"
+sText_StartedToRain,It started to rain!,"reviewed, no change needed"
+sText_DownpourStarted,A downpour started!,"reviewed, no change needed"
+sText_RainContinues,Rain continues to fall.,"reviewed, no change needed"
+sText_DownpourContinues,The downpour continues.,"reviewed, no change needed"
+sText_RainStopped,The rain stopped.,"reviewed, no change needed"
+sText_SandstormBrewed,A sandstorm brewed!,"reviewed, no change needed"
+sText_SandstormRages,The sandstorm rages.,"reviewed, no change needed"
+sText_SandstormSubsided,The sandstorm subsided.,"reviewed, no change needed"
+sText_SunlightGotBright,The sunlight got bright!,"reviewed, no change needed"
+sText_SunlightStrong,The sunlight is strong.,"reviewed, no change needed"
+sText_SunlightFaded,The sunlight faded.,"reviewed, no change needed"
+sText_StartedHail,It started to hail!,"reviewed, no change needed"
+sText_HailContinues,Hail continues to fall.,"reviewed, no change needed"
+sText_HailStopped,The hail stopped.,"reviewed, no change needed"
+sText_FailedToSpitUp,But it failed to SPIT UP\na thing!,"reviewed, no change needed"
+sText_FailedToSwallow,But it failed to SWALLOW\na thing!,"reviewed, no change needed"
+sText_WindBecameHeatWave,The wind turned into a\nHEAT WAVE!,"reviewed, no change needed"
+sText_StatChangesGone,All stat changes were\neliminated!,"reviewed, no change needed"
+sText_CoinsScattered,Coins scattered everywhere!,"reviewed, no change needed"
+sText_TooWeakForSubstitute,It was too weak to make\na SUBSTITUTE!,"reviewed, no change needed"
+sText_SharedPain,The battlers shared\ntheir pain!,"reviewed, no change needed"
+sText_BellChimed,A bell chimed!,"reviewed, no change needed"
+sText_FaintInThree,All affected COMPANION will\nfaint in three turns!,reviewed AUTO draft
+sText_NoPPLeft,There's no PP left for\nthis move!\p,"reviewed, no change needed"
+sText_ButNoPPLeft,But there was no PP left\nfor the move!,"reviewed, no change needed"
+sText_PkmnIgnoresAsleep,{B_ATK_NAME_WITH_PREFIX} ignored\norders while asleep!,"reviewed, no change needed"
+sText_PkmnIgnoredOrders,{B_ATK_NAME_WITH_PREFIX} ignored\norders!,"reviewed, no change needed"
+sText_PkmnBeganToNap,{B_ATK_NAME_WITH_PREFIX} began to nap!,"reviewed, no change needed"
+sText_PkmnLoafing,{B_ATK_NAME_WITH_PREFIX} is\nloafing around!,"reviewed, no change needed"
+sText_PkmnWontObey,{B_ATK_NAME_WITH_PREFIX} won't\nobey!,"reviewed, no change needed"
+sText_PkmnTurnedAway,{B_ATK_NAME_WITH_PREFIX} turned away!,"reviewed, no change needed"
+sText_PkmnPretendNotNotice,{B_ATK_NAME_WITH_PREFIX} pretended\nnot to notice!,"reviewed, no change needed"
+sText_EnemyAboutToSwitchPkmn,{B_TRAINER1_CLASS} {B_TRAINER1_NAME} is\nabout to use {B_BUFF2}.\pWill {B_PLAYER_NAME} change\nCOMPANION?,reviewed AUTO draft
+sText_PkmnLearnedMove2,{B_ATK_NAME_WITH_PREFIX} learned\n{B_BUFF1}!,"reviewed, no change needed"
+sText_PlayerDefeatedLinkTrainerTrainer1,Player defeated\n{B_TRAINER1_CLASS} {B_TRAINER1_NAME}!\p,"reviewed, no change needed"
+sText_CreptCloser,{B_PLAYER_NAME} crept closer to\n{B_OPPONENT_MON1_NAME}!,"reviewed, no change needed"
+sText_CantGetCloser,{B_PLAYER_NAME} can't get any closer!,"reviewed, no change needed"
+sText_PkmnWatchingCarefully,{B_OPPONENT_MON1_NAME} is watching\ncarefully!,"reviewed, no change needed"
+sText_PkmnCuriousAboutX,{B_OPPONENT_MON1_NAME} is curious about\nthe {B_BUFF1}!,"reviewed, no change needed"
+sText_PkmnEnthralledByX,{B_OPPONENT_MON1_NAME} is enthralled by\nthe {B_BUFF1}!,"reviewed, no change needed"
+sText_PkmnIgnoredX,{B_OPPONENT_MON1_NAME} completely ignored\nthe {B_BUFF1}!,"reviewed, no change needed"
+sText_ThrewPokeblockAtPkmn,{B_PLAYER_NAME} threw a {POKEBLOCK}\nat the {B_OPPONENT_MON1_NAME}!,"reviewed, no change needed"
+sText_OutOfSafariBalls,{PLAY_SE SE_DING_DONG}ANNOUNCER: You're out of\nSAFARI PODS! Game over!\p,reviewed AUTO draft
+sText_OpponentMon1Appeared,{B_OPPONENT_MON1_NAME} appeared!\p,"reviewed, no change needed"
+sText_WildPkmnAppeared,Wild {B_OPPONENT_MON1_NAME} appeared!\p,"reviewed, no change needed"
+sText_LegendaryPkmnAppeared,Wild {B_OPPONENT_MON1_NAME} appeared!\p,"reviewed, no change needed"
+sText_WildPkmnAppearedPause,Wild {B_OPPONENT_MON1_NAME} appeared!{PAUSE 127},"reviewed, no change needed"
+sText_TwoWildPkmnAppeared,Wild {B_OPPONENT_MON1_NAME} and\n{B_OPPONENT_MON2_NAME} appeared!\p,"reviewed, no change needed"
+sText_Trainer1WantsToBattle,{B_TRAINER1_CLASS} {B_TRAINER1_NAME}\nwould like to battle!\p,"reviewed, no change needed"
+sText_LinkTrainerWantsToBattle,{B_LINK_OPPONENT1_NAME}\nwants to battle!,"reviewed, no change needed"
+sText_TwoLinkTrainersWantToBattle,{B_LINK_OPPONENT1_NAME} and {B_LINK_OPPONENT2_NAME}\nwant to battle!,"reviewed, no change needed"
+sText_Trainer1SentOutPkmn,{B_TRAINER1_CLASS} {B_TRAINER1_NAME} sent\nout {B_OPPONENT_MON1_NAME}!,"reviewed, no change needed"
+sText_Trainer1SentOutTwoPkmn,{B_TRAINER1_CLASS} {B_TRAINER1_NAME} sent\nout {B_OPPONENT_MON1_NAME} and {B_OPPONENT_MON2_NAME}!,"reviewed, no change needed"
+sText_Trainer1SentOutPkmn2,{B_TRAINER1_CLASS} {B_TRAINER1_NAME} sent\nout {B_BUFF1}!,"reviewed, no change needed"
+sText_LinkTrainerSentOutPkmn,{B_LINK_OPPONENT1_NAME} sent out\n{B_OPPONENT_MON1_NAME}!,"reviewed, no change needed"
+sText_LinkTrainerSentOutTwoPkmn,{B_LINK_OPPONENT1_NAME} sent out\n{B_OPPONENT_MON1_NAME} and {B_OPPONENT_MON2_NAME}!,"reviewed, no change needed"
+sText_TwoLinkTrainersSentOutPkmn,{B_LINK_OPPONENT1_NAME} sent out {B_LINK_OPPONENT_MON1_NAME}!\n{B_LINK_OPPONENT2_NAME} sent out {B_LINK_OPPONENT_MON2_NAME}!,"reviewed, no change needed"
+sText_LinkTrainerSentOutPkmn2,{B_LINK_OPPONENT1_NAME} sent out\n{B_BUFF1}!,"reviewed, no change needed"
+sText_LinkTrainerMultiSentOutPkmn,{B_LINK_SCR_TRAINER_NAME} sent out\n{B_BUFF1}!,"reviewed, no change needed"
+sText_GoPkmn,Go! {B_PLAYER_MON1_NAME}!,"reviewed, no change needed"
+sText_GoTwoPkmn,Go! {B_PLAYER_MON1_NAME} and\n{B_PLAYER_MON2_NAME}!,"reviewed, no change needed"
+sText_GoPkmn2,Go! {B_BUFF1}!,"reviewed, no change needed"
+sText_DoItPkmn,Do it! {B_BUFF1}!,"reviewed, no change needed"
+sText_GoForItPkmn,"Go for it, {B_BUFF1}!","reviewed, no change needed"
+sText_YourFoesWeakGetEmPkmn,"Your foe's weak!\nGet 'em, {B_BUFF1}!","reviewed, no change needed"
+sText_LinkPartnerSentOutPkmnGoPkmn,{B_LINK_PARTNER_NAME} sent out {B_LINK_PLAYER_MON2_NAME}!\nGo! {B_LINK_PLAYER_MON1_NAME}!,"reviewed, no change needed"
+sText_PkmnThatsEnough,"{B_BUFF1}, that's enough!\nCome back!","reviewed, no change needed"
+sText_PkmnComeBack,"{B_BUFF1}, come back!","reviewed, no change needed"
+sText_PkmnOkComeBack,"{B_BUFF1}, OK!\nCome back!","reviewed, no change needed"
+sText_PkmnGoodComeBack,"{B_BUFF1}, good!\nCome back!","reviewed, no change needed"
+sText_Trainer1WithdrewPkmn,{B_TRAINER1_CLASS} {B_TRAINER1_NAME}\nwithdrew {B_BUFF1}!,"reviewed, no change needed"
+sText_LinkTrainer1WithdrewPkmn,{B_LINK_OPPONENT1_NAME} withdrew\n{B_BUFF1}!,"reviewed, no change needed"
+sText_LinkTrainer2WithdrewPkmn,{B_LINK_SCR_TRAINER_NAME} withdrew\n{B_BUFF1}!,"reviewed, no change needed"
+sText_WildPkmnPrefix,Wild ,"reviewed, no change needed"
+sText_FoePkmnPrefix,Foe ,"reviewed, no change needed"
+sText_EmptyString8,,"reviewed, no change needed"
+sText_FoePkmnPrefix2,Foe,"reviewed, no change needed"
+sText_AllyPkmnPrefix,Ally,"reviewed, no change needed"
+sText_FoePkmnPrefix3,Foe,"reviewed, no change needed"
+sText_AllyPkmnPrefix2,Ally,"reviewed, no change needed"
+sText_FoePkmnPrefix4,Foe,"reviewed, no change needed"
+sText_AllyPkmnPrefix3,Ally,"reviewed, no change needed"
+sText_AttackerUsedX,{B_ATK_NAME_WITH_PREFIX} used\n{B_BUFF2},"reviewed, no change needed"
+sText_ExclamationMark,!,"reviewed, no change needed"
+sText_ExclamationMark2,!,"reviewed, no change needed"
+sText_ExclamationMark3,!,"reviewed, no change needed"
+sText_ExclamationMark4,!,"reviewed, no change needed"
+sText_ExclamationMark5,!,"reviewed, no change needed"
+sText_HP2,HP,"reviewed, no change needed"
+sText_Attack2,ATTACK,"reviewed, no change needed"
+sText_Defense2,DEFENSE,"reviewed, no change needed"
+sText_Speed,SPEED,"reviewed, no change needed"
+sText_SpAtk2,SP. ATK,"reviewed, no change needed"
+sText_SpDef2,SP. DEF,"reviewed, no change needed"
+sText_Accuracy,accuracy,"reviewed, no change needed"
+sText_Evasiveness,evasiveness,"reviewed, no change needed"
+sText_PokeblockWasTooSpicy,was too spicy!,"reviewed, no change needed"
+sText_PokeblockWasTooDry,was too dry!,"reviewed, no change needed"
+sText_PokeblockWasTooSweet,was too sweet!,"reviewed, no change needed"
+sText_PokeblockWasTooBitter,was too bitter!,"reviewed, no change needed"
+sText_PokeblockWasTooSour,was too sour!,"reviewed, no change needed"
+sText_PlayerUsedItem,{B_PLAYER_NAME} used\n{B_LAST_ITEM}!,"reviewed, no change needed"
+sText_WallyUsedItem,LUKE used\n{B_LAST_ITEM}!,reviewed AUTO draft
+sText_Trainer1UsedItem,{B_TRAINER1_CLASS} {B_TRAINER1_NAME}\nused {B_LAST_ITEM}!,"reviewed, no change needed"
+sText_DontBeAThief,Don't be a thief!,"reviewed, no change needed"
+sText_YouMissedPkmn,You missed the COMPANION!,reviewed AUTO draft
+sText_PkmnBrokeFree,"Oh, no!\nThe COMPANION broke free!",reviewed AUTO draft
+sText_ItAppearedCaught,Aww!\nIt appeared to be caught!,"reviewed, no change needed"
+sText_AarghAlmostHadIt,Aargh!\nAlmost had it!,"reviewed, no change needed"
+sText_ShootSoClose,"Shoot!\nIt was so close, too!","reviewed, no change needed"
+sText_GotchaPkmnCaughtPlayer,Gotcha!\n{B_OPPONENT_MON1_NAME} was caught!{WAIT_SE}{PLAY_BGM MUS_CAUGHT}\p,"reviewed, no change needed"
+sText_GotchaPkmnCaughtWally,Gotcha!\n{B_OPPONENT_MON1_NAME} was caught!{WAIT_SE}{PLAY_BGM MUS_CAUGHT}{PAUSE 127},"reviewed, no change needed"
+sText_GiveNicknameCaptured,Give a nickname to the\ncaptured {B_OPPONENT_MON1_NAME}?,"reviewed, no change needed"
+sText_Someones,someone's,"reviewed, no change needed"
+sText_Lanettes,TESS's,reviewed AUTO draft
+sText_PkmnDataAddedToDex,{B_OPPONENT_MON1_NAME}'s data was\nadded to the DATAPAD.\p,reviewed AUTO draft
+sText_ItIsRaining,It is raining.,"reviewed, no change needed"
+sText_SandstormIsRaging,A sandstorm is raging.,"reviewed, no change needed"
+sText_BoxIsFull,The BOX is full!\nYou can't catch any more!\p,"reviewed, no change needed"
+sText_EnigmaBerry,WHILLS FRUIT,reviewed AUTO draft
+sText_BerrySuffix, FRUIT,reviewed AUTO draft
+sText_PkmnsItemCuredParalysis,{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_LAST_ITEM}\ncured paralysis!,"reviewed, no change needed"
+sText_PkmnsItemCuredPoison,{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_LAST_ITEM}\ncured poison!,"reviewed, no change needed"
+sText_PkmnsItemHealedBurn,{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_LAST_ITEM}\nhealed its burn!,"reviewed, no change needed"
+sText_PkmnsItemDefrostedIt,{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_LAST_ITEM}\ndefrosted it!,"reviewed, no change needed"
+sText_PkmnsItemWokeIt,{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_LAST_ITEM}\nwoke it from its sleep!,"reviewed, no change needed"
+sText_PkmnsItemSnappedOut,{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_LAST_ITEM}\nsnapped it out of confusion!,"reviewed, no change needed"
+sText_PkmnsItemCuredProblem,{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_LAST_ITEM}\ncured its {B_BUFF1} problem!,"reviewed, no change needed"
+sText_PkmnsItemNormalizedStatus,{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_LAST_ITEM}\nnormalized its status!,"reviewed, no change needed"
+sText_PkmnsItemRestoredHealth,{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_LAST_ITEM}\nrestored health!,"reviewed, no change needed"
+sText_PkmnsItemRestoredPP,{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_LAST_ITEM}\nrestored {B_BUFF1}'s PP!,"reviewed, no change needed"
+sText_PkmnsItemRestoredStatus,{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_LAST_ITEM}\nrestored its status!,"reviewed, no change needed"
+sText_PkmnsItemRestoredHPALittle,{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_LAST_ITEM}\nrestored its HP a little!,"reviewed, no change needed"
+sText_ItemAllowsOnlyYMove,{B_LAST_ITEM} allows the\nuse of only {B_CURRENT_MOVE}!\p,"reviewed, no change needed"
+sText_PkmnHungOnWithX,{B_DEF_NAME_WITH_PREFIX} hung on\nusing its {B_LAST_ITEM}!,"reviewed, no change needed"
+gText_EmptyString3,,"reviewed, no change needed"
+gText_PkmnIsEvolving,What?\n{STR_VAR_1} is evolving!,"reviewed, no change needed"
+gText_CongratsPkmnEvolved,Congratulations! Your {STR_VAR_1}\nevolved into {STR_VAR_2}!{WAIT_SE}\p,"reviewed, no change needed"
+gText_PkmnStoppedEvolving,Huh? {STR_VAR_1}\nstopped evolving!\p,"reviewed, no change needed"
+gText_EllipsisQuestionMark,……?\p,"reviewed, no change needed"
+gText_WhatWillPkmnDo,What will\n{B_ACTIVE_NAME_WITH_PREFIX} do?,"reviewed, no change needed"
+gText_WhatWillPkmnDo2,What will\n{B_PLAYER_NAME} do?,"reviewed, no change needed"
+gText_WhatWillWallyDo,What will\nLUKE do?,reviewed AUTO draft
+gText_LinkStandby,{PAUSE 16}Link standby…,"reviewed, no change needed"
+gText_BattleMenu,FIGHT{CLEAR_TO 56}BAG\nCOMPANION{CLEAR_TO 56}RUN,reviewed AUTO draft
+gText_MoveInterfacePP,PP ,"reviewed, no change needed"
+gText_MoveInterfaceType,TYPE/,"reviewed, no change needed"
+gText_MoveInterfacePPType,{PALETTE 5}{COLOR_HIGHLIGHT_SHADOW DYNAMIC_COLOR4 DYNAMIC_COLOR5 DYNAMIC_COLOR6}PP\nTYPE/,"reviewed, no change needed"
+gText_MoveInterfaceDynamicColors,{PALETTE 5}{COLOR_HIGHLIGHT_SHADOW DYNAMIC_COLOR4 DYNAMIC_COLOR5 DYNAMIC_COLOR6},"reviewed, no change needed"
+gText_WhichMoveToForget4,{PALETTE 5}{COLOR_HIGHLIGHT_SHADOW DYNAMIC_COLOR4 DYNAMIC_COLOR5 DYNAMIC_COLOR6}Which move should\nbe forgotten?,"reviewed, no change needed"
+gText_BattleYesNoChoice,{PALETTE 5}{COLOR_HIGHLIGHT_SHADOW DYNAMIC_COLOR4 DYNAMIC_COLOR5 DYNAMIC_COLOR6}Yes\nNo,"reviewed, no change needed"
+gText_BattleSwitchWhich,{PALETTE 5}{COLOR_HIGHLIGHT_SHADOW DYNAMIC_COLOR4 DYNAMIC_COLOR5 DYNAMIC_COLOR6}Switch\nwhich?,"reviewed, no change needed"
+gText_BattleSwitchWhich2,{PALETTE 5}{COLOR_HIGHLIGHT_SHADOW DYNAMIC_COLOR4 DYNAMIC_COLOR5 DYNAMIC_COLOR6},"reviewed, no change needed"
+gText_BattleSwitchWhich3,{UP_ARROW},"reviewed, no change needed"
+gText_BattleSwitchWhich4,{ESCAPE 4},"reviewed, no change needed"
+gText_BattleSwitchWhich5,-,"reviewed, no change needed"
+sText_HP,HP,"reviewed, no change needed"
+sText_Attack,ATTACK,"reviewed, no change needed"
+sText_Defense,DEFENSE,"reviewed, no change needed"
+sText_SpAtk,SP. ATK,"reviewed, no change needed"
+sText_SpDef,SP. DEF,"reviewed, no change needed"
+gText_SafariBalls,{HIGHLIGHT DARK_GRAY}SAFARI PODS,reviewed AUTO draft
+gText_SafariBallLeft,{HIGHLIGHT DARK_GRAY}Left: ${HIGHLIGHT DARK_GRAY},"reviewed, no change needed"
+gText_Sleep,sleep,"reviewed, no change needed"
+gText_Poison,poison,"reviewed, no change needed"
+gText_Burn,burn,"reviewed, no change needed"
+gText_Paralysis,paralysis,"reviewed, no change needed"
+gText_Ice,ice,"reviewed, no change needed"
+gText_Confusion,confusion,"reviewed, no change needed"
+gText_Love,love,"reviewed, no change needed"
+gText_SpaceAndSpace, and ,"reviewed, no change needed"
+gText_CommaSpace,", ","reviewed, no change needed"
+gText_Space2, ,"reviewed, no change needed"
+gText_LineBreak,\l,"reviewed, no change needed"
+gText_NewLine,\n,"reviewed, no change needed"
+gText_Are,are,"reviewed, no change needed"
+gText_Are2,are,"reviewed, no change needed"
+gText_BadEgg,Bad EGG,"reviewed, no change needed"
+gText_BattleWallyName,LUKE,reviewed AUTO draft
+gText_Win,{HIGHLIGHT TRANSPARENT}Win,"reviewed, no change needed"
+gText_Loss,{HIGHLIGHT TRANSPARENT}Loss,"reviewed, no change needed"
+gText_Draw,{HIGHLIGHT TRANSPARENT}Draw,"reviewed, no change needed"
+sText_SpaceIs, is,"reviewed, no change needed"
+sText_ApostropheS,'s,"reviewed, no change needed"
+gText_BattleTourney,BATTLE TOURNEY,"reviewed, no change needed"
+sText_Round1,Round 1,"reviewed, no change needed"
+sText_Round2,Round 2,"reviewed, no change needed"
+sText_Semifinal,Semifinal,"reviewed, no change needed"
+sText_Final,Final,"reviewed, no change needed"
+gText_TheGreatNewHope,The great new hope!\p,"reviewed, no change needed"
+gText_WillChampionshipDreamComeTrue,Will the championship dream come true?!\p,"reviewed, no change needed"
+gText_AFormerChampion,A former CHAMPION!\p,"reviewed, no change needed"
+gText_ThePreviousChampion,The previous CHAMPION!\p,"reviewed, no change needed"
+gText_TheUnbeatenChampion,The unbeaten CHAMPION!\p,"reviewed, no change needed"
+gText_PlayerMon1Name,{B_PLAYER_MON1_NAME},"reviewed, no change needed"
+gText_Vs,VS,"reviewed, no change needed"
+gText_OpponentMon1Name,{B_OPPONENT_MON1_NAME},"reviewed, no change needed"
+gText_Mind,Mind,"reviewed, no change needed"
+gText_Skill,Skill,"reviewed, no change needed"
+gText_Body,Body,"reviewed, no change needed"
+gText_Judgment,{B_BUFF1}{CLEAR 13}Judgment{CLEAR 13}{B_BUFF2},"reviewed, no change needed"
+sText_TwoTrainersSentPkmn,{B_TRAINER1_CLASS} {B_TRAINER1_NAME} sent\nout {B_OPPONENT_MON1_NAME}!\p{B_TRAINER2_CLASS} {B_TRAINER2_NAME} sent\nout {B_OPPONENT_MON2_NAME}!,"reviewed, no change needed"
+sText_Trainer2SentOutPkmn,{B_TRAINER2_CLASS} {B_TRAINER2_NAME} sent\nout {B_BUFF1}!,"reviewed, no change needed"
+sText_TwoTrainersWantToBattle,{B_TRAINER1_CLASS} {B_TRAINER1_NAME} and\n{B_TRAINER2_CLASS} {B_TRAINER2_NAME}\lwant to battle!\p,"reviewed, no change needed"
+sText_InGamePartnerSentOutZGoN,"{B_PARTNER_CLASS} {B_PARTNER_NAME} sent\nout {B_PLAYER_MON2_NAME}!\lGo, {B_PLAYER_MON1_NAME}!","reviewed, no change needed"
+sText_TwoInGameTrainersDefeated,{B_TRAINER1_CLASS} {B_TRAINER1_NAME} and\n{B_TRAINER2_CLASS} {B_TRAINER2_NAME}\lwere defeated!\p,"reviewed, no change needed"
+sText_Trainer2LoseText,{B_TRAINER2_LOSE_TEXT},"reviewed, no change needed"
+sText_PkmnIncapableOfPower,{B_ATK_NAME_WITH_PREFIX} appears incapable\nof using its power!,"reviewed, no change needed"
+sText_GlintAppearsInEye,A glint appears in\n{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s eyes!,"reviewed, no change needed"
+sText_PkmnGettingIntoPosition,{B_SCR_ACTIVE_NAME_WITH_PREFIX} is getting into\nposition!,"reviewed, no change needed"
+sText_PkmnBeganGrowlingDeeply,{B_SCR_ACTIVE_NAME_WITH_PREFIX} began growling deeply!,"reviewed, no change needed"
+sText_PkmnEagerForMore,{B_SCR_ACTIVE_NAME_WITH_PREFIX} is eager for more!,"reviewed, no change needed"
+sText_RefIfNothingIsDecided,"REFEREE: If nothing is decided in\n3 turns, we will go to judging!","reviewed, no change needed"
+sText_RefThatsIt,REFEREE: That's it! We will now go to\njudging to determine the winner!,"reviewed, no change needed"
+sText_RefJudgeMind,"REFEREE: Judging category 1, Mind!\nThe COMPANION showing the most guts!\p",reviewed AUTO draft
+sText_RefJudgeSkill,"REFEREE: Judging category 2, Skill!\nThe COMPANION using moves the best!\p",reviewed AUTO draft
+sText_RefJudgeBody,"REFEREE: Judging category 3, Body!\nThe COMPANION with the most vitality!\p",reviewed AUTO draft
+sText_RefPlayerWon,REFEREE: Judgment: {B_BUFF1} to {B_BUFF2}!\nThe winner is {B_PLAYER_NAME}'s {B_PLAYER_MON1_NAME}!\p,"reviewed, no change needed"
+sText_RefOpponentWon,REFEREE: Judgment: {B_BUFF1} to {B_BUFF2}!\nThe winner is {B_TRAINER1_NAME}'s {B_OPPONENT_MON1_NAME}!\p,"reviewed, no change needed"
+sText_RefDraw,REFEREE: Judgment: 3 to 3!\nWe have a draw!\p,"reviewed, no change needed"
+sText_DefeatedOpponentByReferee,{B_PLAYER_MON1_NAME} defeated the opponent\n{B_OPPONENT_MON1_NAME} in a REFEREE's decision!,"reviewed, no change needed"
+sText_LostToOpponentByReferee,{B_PLAYER_MON1_NAME} lost to the opponent\n{B_OPPONENT_MON1_NAME} in a REFEREE's decision!,"reviewed, no change needed"
+sText_TiedOpponentByReferee,{B_PLAYER_MON1_NAME} tied the opponent\n{B_OPPONENT_MON1_NAME} in a REFEREE's decision!,"reviewed, no change needed"
+sText_RefCommenceBattle,REFEREE: {B_PLAYER_MON1_NAME} VS {B_OPPONENT_MON1_NAME}!\nCommence battling!,"reviewed, no change needed"
+sText_QuestionForfeitMatch,Would you like to forfeit the match\nand quit now?,"reviewed, no change needed"
+sText_ForfeitedMatch,{B_PLAYER_NAME} forfeited the match!,"reviewed, no change needed"
+sText_Trainer1WinText,{B_TRAINER1_WIN_TEXT},"reviewed, no change needed"
+sText_Trainer2WinText,{B_TRAINER2_WIN_TEXT},"reviewed, no change needed"
+sText_Trainer1Fled,{PLAY_SE SE_FLEE}{B_TRAINER1_CLASS} {B_TRAINER1_NAME} fled!,"reviewed, no change needed"
+sText_PlayerLostAgainstTrainer1,Player lost against\n{B_TRAINER1_CLASS} {B_TRAINER1_NAME}!,"reviewed, no change needed"
+sText_PlayerBattledToDrawTrainer1,Player battled to a draw against\n{B_TRAINER1_CLASS} {B_TRAINER1_NAME}!,"reviewed, no change needed"
+gText_RecordBattleToPass,Would you like to record your battle\non your ARENA PASS?,reviewed AUTO draft
+gText_BattleRecordedOnPass,{B_PLAYER_NAME}'s battle result was recorded\non the ARENA PASS.,reviewed AUTO draft
+sText_LinkTrainerWantsToBattlePause,{B_LINK_OPPONENT1_NAME}\nwants to battle!{PAUSE 49},"reviewed, no change needed"
+sText_TwoLinkTrainersWantToBattlePause,{B_LINK_OPPONENT1_NAME} and {B_LINK_OPPONENT2_NAME}\nwant to battle!{PAUSE 49},"reviewed, no change needed"
+sText_EmptyStatus,$$$$$$$,"reviewed, no change needed"

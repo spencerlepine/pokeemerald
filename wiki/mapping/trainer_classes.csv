@@ -1,0 +1,67 @@
+emerald_id,sw_name,swap_kind,map_status,art_status,sw_basis,sw_description,notes
+trainer-class:pkmn-trainer-1,TRAINER,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:pkmn-trainer-2,TRAINER,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:rival,TRAINER,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:rs-protag,TRAINER,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:hiker,PROSPECTOR,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:team-aqua,CARTEL THUG,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:pkmn-breeder,BREEDER,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:cooltrainer,VETERAN,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:cooltrainer-2,VETERAN,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:bird-keeper,AVIAN KEEPER,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:swimmer-m,,KEEP,DONE,PENDING_ART,,,Generic class name kept; trainer pics still redrawn.
+trainer-class:swimmer-f,,KEEP,DONE,PENDING_ART,,,Generic class name kept; trainer pics still redrawn.
+trainer-class:team-magma,STORMTROOPER,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:expert,,KEEP,DONE,PENDING_ART,,,Generic class name kept; trainer pics still redrawn.
+trainer-class:aqua-admin,BOUNTYHUNTER,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:black-belt,BRAWLER,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:aqua-leader,CRIME LORD,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:hex-maniac,NIGHTSISTER,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:aroma-lady,HERBALIST,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:ruin-maniac,RELIC HUNTER,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:interviewer,HOLOREPORTER,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:tuber-f,PADDLER,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:tuber-m,PADDLER,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:lady,ARISTOCRAT,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:beauty,SOCIALITE,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:rich-boy,YOUNG NOBLE,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:pokemaniac,BEASTMANIAC,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:guitarist,MUSICIAN,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:kindler,LAVA MINER,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:camper,FARMHAND,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:picnicker,HOMESTEADER,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:bug-maniac,,KEEP,DONE,PENDING_ART,,,Generic class name kept; trainer pics still redrawn.
+trainer-class:psychic,FORCE ADEPT,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:gentleman,DIPLOMAT,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:elite-four,VISION,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:leader,,KEEP,DONE,PENDING_ART,,,Generic class name kept; trainer pics still redrawn.
+trainer-class:school-kid,CADET,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:sr-and-jr,,KEEP,DONE,PENDING_ART,,,Generic class name kept; trainer pics still redrawn.
+trainer-class:winstrate,DARKLIGHTER,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:pokefan,BEASTFAN,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:youngster,,KEEP,DONE,PENDING_ART,,,Generic class name kept; trainer pics still redrawn.
+trainer-class:champion,JEDI MASTER,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:fisherman,ANGLER,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:triathlete,SWOOP RACER,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:dragon-tamer,BEAST TAMER,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:ninja-boy,INFILTRATOR,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:battle-girl,WARRIOR,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:parasol-lady,,KEEP,DONE,PENDING_ART,,,Generic class name kept; trainer pics still redrawn.
+trainer-class:twins,,KEEP,DONE,PENDING_ART,,,Generic class name kept; trainer pics still redrawn.
+trainer-class:sailor,SPACER,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:magma-admin,OFFICER,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:bug-catcher,,KEEP,DONE,PENDING_ART,,,Generic class name kept; trainer pics still redrawn.
+trainer-class:pkmn-ranger,PATHFINDER,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:magma-leader,SITH LORD,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:lass,,KEEP,DONE,PENDING_ART,,,Generic class name kept; trainer pics still redrawn.
+trainer-class:young-couple,,KEEP,DONE,PENDING_ART,,,Generic class name kept; trainer pics still redrawn.
+trainer-class:old-couple,,KEEP,DONE,PENDING_ART,,,Generic class name kept; trainer pics still redrawn.
+trainer-class:sis-and-bro,,KEEP,DONE,PENDING_ART,,,Generic class name kept; trainer pics still redrawn.
+trainer-class:salon-maiden,TOWER ACE,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:dome-ace,DOME ACE,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:palace-maven,PALACE ACE,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:arena-tycoon,ARENA ACE,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:factory-head,FACTORY ACE,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:pike-queen,PIKE ACE,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:pyramid-king,PYRAMID ACE,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:collector,,KEEP,DONE,PENDING_ART,,,Generic class name kept; trainer pics still redrawn.

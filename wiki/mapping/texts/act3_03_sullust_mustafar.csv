@@ -1,0 +1,237 @@
+text_id,sw_text_raw,notes
+FallarborTown_Text_HaveYouChallengedFlannery,"Have you already challenged SABINE,\nthe LEADER of PIRIN ARENA?\pHer grandfather was famous.\nHe was one of the FOUR TRIALS in the\lILUM TEMPLE at one point.\pI wouldn't be surprised if SABINE\nbecame a great TRAINER in her\lown right.$",Sabine Wren keeps Flannery's grandfather
+FallarborTown_Text_TownSign,INYUSU TOR\n“A farming town in the ashfall.”$,
+FallarborTown_Text_MoveTutorSign,MOVE TUTOR'S HOUSE\n“New moves taught to COMPANIONS.”$,
+FallarborTown_ContestHall_Text_MonAllTheseRibbons,See!\nMy COMPANION won all these RIBBONS!\pHave yours earned any RIBBONS?\nYou can check them on your COMLINK.$,
+FallarborTown_BattleTentLobby_Text_FallarborTentMyFavorite,You know how BATTLE TENTS offer\ndifferent events in different towns?\pMy favorite is definitely the BATTLE\nTENT in INYUSU TOR.\pI think it's fantastic how TRAINERS\ntry to win with all their faith in\ltheir COMPANIONS.$,
+FallarborTown_CozmosHouse_Text_MeteoriteWillNeverBeMineNow,DR. TIEN: Oh…\nI never should have let myself be\lconned into telling the EMPIRE where\lyou can find METEORITES…\pThat METEORITE from STARFALL CAVERN…\nIt's never going to be mine now…$,
+FallarborTown_CozmosHouse_Text_IsThatMeteoriteMayIHaveIt,"Oh!\nHah?\pThat item…\pCould it be?\pIs it the METEORITE that the EMPIRE\ntook from STARFALL CAVERN?\pPlease, may I have it?\pI'm not asking for it for free.\nHow about in exchange for this TM?$",
+FallarborTown_CozmosHouse_Text_CozmoWentToMeteorFalls,DR. TIEN went off to STARFALL CAVERN\non ROUTE 114 with some people from\lthe EMPIRE.$,
+FallarborTown_MoveRelearnersHouse_Text_ImTheMoveTutor,I'm the MOVE TUTOR.\pI know all the moves that COMPANIONS\nlearn--every one of them--and I can\lteach COMPANIONS those moves.\pI can teach a move to a COMPANION\nof yours if you'd like.\pI'll do it for a HEART SCALE.\nI'm collecting those now.$,
+FallarborTown_PokemonCenter_1F_Text_LanetteGreeting,"Oh, hello.\nYou are?\pOkay, your name's {PLAYER}{KUN}.\nI can see that you're a TRAINER.\pSo that means you use the COMPANION\nStorage System I developed.\pHow I arrived at that conclusion is\na simple deductive process.\pYou spoke to me because you wanted\nto access something on this terminal.\pOh, I'm sorry. I'm TESS.\pHonestly, I'm glad to meet you--it's\ngreat you're using the Storage System.\pIf you could, please visit me at home.\nMy house is on ROUTE 114.$",
+FallarborTown_PokemonCenter_1F_Text_FossilManiacEdgeOfTown,"I wonder what COMPANIONS looked like\nlong, long ago?\pMaybe the FOSSIL MANIAC at the edge\nof town will know.$",
+FallarborTown_Text_RegionKnownForMeteors,This region's been known for meteors\nsince the olden days.\pThey say STARFALL CAVERN was carved\nout by a falling meteorite long ago.$,
+LavaridgeTown_Gym_1F_Text_ExplainHeatBadgeTakeThis,"With a MAGMA SHARD, all COMPANIONS\nup to Level 50, even those you get in\ltrades from other people, will obey\lyou completely.\pAnd, it lets COMPANIONS use the HM move\nSTRENGTH outside of battle.\pThis is a token of my appreciation.\nDon't be shy about taking it!$",
+LavaridgeTown_House_Text_WifeWarmingEggInHotSprings,My wife's warming an EGG in the hot\nsprings. This is what she told me.\pShe left two COMPANIONS at the\nNURSERY. And they found that EGG!$,
+MeteorFalls_1F_1R_Text_DontExpectMercyFromMagma,"Heh?\pI don't know who you are, but if you get\nin the way of the EMPIRE, don't\lexpect any mercy!$",
+MeteorFalls_1F_1R_Text_HoldItRightThereMagma,"Hold it right there, EMPIRE scum!\pYou're badly mistaken if you think you\ncan have your way with the galaxy!$",
+MeteorFalls_1F_1R_Text_BeSeeingYouTeamAqua,"Hehehe!\nEven the CARTEL shows up!\pBut it's too much trouble to deal with\nyou all…\pHeh, it doesn't matter!\pWe've got the METEORITE, so off to\nMUSTAFAR PEAK we go!\pHehehe! Be seeing you, you CARTEL\nslimeballs!$",
+MeteorFalls_1F_1R_Text_ArchieSeenYouBefore,"JABBA: Didn't I see you before?\nAt MOS EISLEY's MUSEUM?\pAh, so your name is {PLAYER}.\pAt the time, I thought you were one\nof the EMPIRE's goons.\pHo ho ho…\nYou're one odd kid.\pThe EMPIRE is a dangerous group of\ntotal fanatics.\pThey scorch and pave whole worlds,\nclaiming to bring order.\pThey are the rivals to us,\nthe swamp-loving CARTEL!$",
+MeteorFalls_1F_1R_Text_BossWeShouldChaseMagma,"Mighty JABBA, we should give chase\nto the EMPIRE…$",
+MeteorFalls_1F_1R_Text_ArchieYesNoTellingWhatMagmaWillDo,"JABBA: Yes, yes, we must!\nWe've got to hurry.\pThere's no telling what the EMPIRE\nwill do at MUSTAFAR PEAK!$",
+MeteorFalls_1F_1R_Text_ArchieFarewell,"JABBA: {PLAYER}, you should keep\nan eye out for the EMPIRE, too.\pFarewell!$",
+MeteorFalls_1F_1R_Text_MeetProfCozmo,"I… I'm TIEN…\nI'm a PROFESSOR…\pThe EMPIRE asked me to guide them\nto STARFALL CAVERN…\pBut they tricked me.\nThey even took my METEORITE away…\pAnd then another bunch,\nthe CARTEL, showed up.\pAfter that…\nI don't understand any of it.\pBut the EMPIRE…\pWhat are they going to do with that\nMETEORITE at MUSTAFAR PEAK?$",
+MeteorFalls_1F_1R_Text_WhatsTeamMagmaDoingAtMtChimney,DR. TIEN: But the EMPIRE…\pWhat are they going to do with that\nMETEORITE at MUSTAFAR PEAK?$,
+MeteorFalls_1F_2R_Text_NicolasIntro,This is where we DRAGON users do our\ntraining.\pThey say a JEDI once trained here.\nNow do you see how special it is here?$,
+MeteorFalls_1F_2R_Text_NicolasPostBattle,The road ahead remains long and harsh.\pWhen will my COMPANIONS and I become\nthe best?$,
+MeteorFalls_1F_2R_Text_JohnIntro,JARO: We've always battled COMPANIONS\ntogether as a twosome.\lWe've confidence in ourselves.$,
+MeteorFalls_1F_2R_Text_JohnRematchIntro,JARO: We've always battled COMPANIONS\ntogether as a twosome.\lWe've confidence in ourselves.$,
+MeteorFalls_StevensCave_Text_ShouldKnowHowGoodIAmExpectWorst,"LEIA: Oh, wow, {PLAYER}{KUN}.\nI'm amazed you knew where to find me.\pDo you, uh…maybe think of me as\njust a crystal maniac?\pNo, that can't be right.\pWe battled alongside each other at\nthe YAVIN 4 LAUNCH TOWER.\pYou should have a very good idea\nabout how good I am.\pOkay, {PLAYER}{KUN}, if you're going to mount\na serious challenge, expect the worst!$",Emerald text says SOOTOPOLIS SPACE CENTER (source typo); the space center is on MOSSDEEP = YAVIN 4
+MeteorFalls_StevensCave_Text_MyPredictionCameTrue,"LEIA: Come to think of it, ever since\nour paths first crossed in the\lSHADOWLANDS of KASHYYYK, I felt it.\pI thought that you would eventually\npass the TRIALS OF ILUM.\pMy predictions usually come true.\pAnd where will you go from here?\p… … … … … …\n… … … … … …\pFufufu, even I couldn't tell you that.$",
+MtChimney_Text_MaxieIntro,"VADER: Hm?\nWho are you?\p… … … … … …\n… … … … … …\pJABBA has been complaining about a\nchild meddling in the CARTEL's\laffairs.\pIt must be you he meant.\pSo you think you can interfere\nwith the EMPIRE?\pNow you listen.\nWater breeds swamps, and swamps\lbreed disorder.\pSolid land can be ordered.\nIt can be built on and controlled.\pThe EMPIRE will expand the land of\nevery world in the galaxy.\pAnd for that, we need the power of\nwhat sleeps within this mountain…\pI have said too much.\pBut, no matter!\nI will show you the power of\lthe dark side!$",Vader's motive mirrors Jabba's: land and order vs swamps (bible/STORY.md)
+MtChimney_Text_MaxieDefeat,Impressive…\nMost impressive.$,
+MtChimney_Text_MaxieYouHaventSeenLastOfMagma,"VADER: Enough.\nI will withdraw, for now.\pThe Force is strong with you…\nBut this is not the last you will\lsee of the EMPIRE.\pEven without the METEORITE, once\nI possess the BLUE KYBER…$",
+MtChimney_Text_TabithaIntro,Hehehe!\pSo you've come all the way here!\pBut you're too late!\nI've already delivered the METEORITE\lfrom STARFALL CAVERN to LORD VADER!$,
+MtChimney_Text_TabithaDefeat,"Hehehe…\pEven though I've lost, if LORD VADER\nawakens that thing…$",
+MtChimney_Text_TabithaPostBattle,"LORD VADER, hurry!\nGive it the METEORITE's energy!\pHehehe…$",
+MtChimney_Text_Grunt2Intro,"We of the EMPIRE are working hard for\neveryone's sake.\pLike, if that thing's power made more\nland, there'd be more places to live.\pEveryone'd be happy!$",
+MtChimney_Text_Grunt2PostBattle,"LORD VADER says, “It will bring order\nto everyone.”\pBut why does everyone keep getting\nin our way?$",
+MtChimney_Text_Grunt1PostBattle,"A kid like you, you ought to be\nplaying in the sand!$",
+MtChimney_Text_TeamAquaAlwaysMessingWithPlans,That annoying CARTEL…\nThey always mess with our plans!$,
+MtChimney_Text_AquasNameSimilar,We're the EMPIRE!\pThey're the CARTEL!\pThey're nothing but smugglers\nin fancy robes!$,
+MtChimney_Text_ArchieGoStopTeamMagma,"JABBA: Grr, {PLAYER}!\nI should've guessed you'd show up!\pSee for yourself what the fanatics\nof the EMPIRE are up to!\pThey're trying to inject the stolen\nMETEORITE's power into the volcano!\pDoing something like that will cause\nthe volcano's eruption!$",
+MtChimney_Text_ArchieThankYou,"JABBA: {PLAYER}!\nThank you!\pWith your help, we thwarted the\nEMPIRE's destructive plan!\pBut… You…\nWhose side are you on?\pHo ho ho, it doesn't matter.\pWe will remain vigilant and keep up\nour pursuit of the EMPIRE.\p{PLAYER}, we shall meet again!$",
+MtChimney_Text_MagmaOutnumbersUs,Darn… The EMPIRE outnumbers us!\nWe can't keep up with them!$,
+MtChimney_Text_LessHabitatForWaterPokemon,"If they expand the land, there'll be\nfewer swamps for HUTTS!$",
+MtChimney_Text_MagmasNameSimilar,We're the CARTEL!\pThey're the EMPIRE!\pThey're nothing but bullies in\nshiny armor!$,
+MtChimney_Text_LavaCookiesJust200,ASH CAKES are MUSTAFAR PEAK's local\nspecialty.\pTry one. It's just 200 credits.$,
+MtChimney_Text_RouteSign,{DOWN_ARROW} ASHEN PASS\nPIRIN AHEAD$,
+MtChimney_Text_ShelbyRematchIntro,"If you can mesh your heart with those\nof your COMPANIONS, why, you should be\lable to achieve great things.$",
+MtChimney_Text_ShelbyPostRematch,Perhaps your heart has become one\nwith the hearts of your COMPANIONS.$,
+MtChimney_Text_SheilaIntro,I've finally made it to MUSTAFAR PEAK.\nI want to make my COMPANIONS battle!$,
+MtChimney_Text_SheilaPostBattle,"Like I said, I've finally made it to\nMUSTAFAR PEAK. It would be a shame if\lI only do a little sightseeing…\pI want to get in some battles and buy\nASH CAKES as souvenirs.$",
+MtChimney_Text_ShelbyIntro,I've been to the lava springs and\nrefreshed my tired bones.\lRight now I'm feeling strong!$,
+MtChimney_Text_ShirleyIntro,"Since I bathed in the lava springs,\nI've been feeling great!\lI'm sure I'm going to win!$",
+MtChimney_Text_ShirleyDefeat,Yowch!\nI'm getting a chill out of the springs.$,
+MtChimney_Text_ShirleyPostBattle,I'll have to take another dip in the\nlava springs. Want to join me?\pJust joking!$,
+MtChimney_CableCarStation_Text_CableCarReadyGetOn,The SHUTTLE is ready to go down.\nWould you like to be on it?$,
+JaggedPass_Text_DianaPostBattle,Did you know?\pSome people cleverly ride their\nbikes up this horribly bumpy pass.$,
+JaggedPass_Text_JulioPostBattle,"My bike bounced around so much,\nmy rear end's sore…$",
+JaggedPass_Text_DianaRematchIntro,Picnics are fun wherever you go.\nJust like COMPANIONS!$,
+LavaridgeTown_Text_MayNiceBadgesTakeThis,"MIRA: {PLAYER}{KUN}! Long time no see!\pOh? While I visited the hot springs,\nyou got the PIRIN ARENA SHARD.\pYou must have collected\ngood COMPANIONS…\lNo, I believe you raised some.\pI guess it would be okay for you to\nhave this.$",
+LavaridgeTown_Text_HaveEggWillYouTakeIt,"I have here an EGG.\pI'd hoped to hatch it by covering it in\nhot sand by the hot springs.\lBut that doesn't seem to be enough…\pI've heard it would be best if it were\nkept together with COMPANIONS and\lcarried about.\pYou are a TRAINER, yes?\nAnd your COMPANIONS radiate vitality.\pSo, what say you?\nWill you take this EGG to hatch?$",
+LavaridgeTown_Text_BatheInHotSpringsEveryDay,I bathe in the hot springs every day.\pI want to become a wise and strong\nARENA LEADER like SABINE.$,
+LavaridgeTown_Text_IfPokemonInHotSprings,"If people put COMPANIONS in hot\nsprings, it might be seriously strange.\pWhy, it might be an electric bath, or\na bubble bath, or even a lava bath…$",
+LavaridgeTown_Text_TownSign,PIRIN\p“HOT SPRINGS OF SULLUST\nAn excellent place for relaxing!”$,
+LavaridgeTown_Text_HerbShopSign,PIRIN HERB SHOP\n“Bitter taste--better cure!”$,
+LavaridgeTown_Gym_1F_Text_GymGuideAdvice,"Hey, how's it going, ILUM-bound\n{PLAYER}?\pPIRIN's ARENA LEADER SABINE\nuses FIRE-type COMPANIONS.\pHer passion for COMPANIONS burns\nhotter than a volcano.\pDon't get too close to her--you'll burn!\nHose her down with water and then\lgo for it!$",
+LavaridgeTown_Gym_1F_Text_GeraldIntro,Can your COMPANIONS withstand\n392-degree heat?$,
+LavaridgeTown_Gym_1F_Text_DaniellePostBattle,I'm going to be a quick and strong\nTRAINER just like SABINE.$,
+LavaridgeTown_Gym_1F_Text_FlanneryIntro,"Welcome… No, wait.\pPuny TRAINER, how good to see you've\nmade it here!\pI have been entrusted with the…\nNo, wait.\pI am SABINE, and I'm the ARENA\nLEADER here!\pUh…\nDare not underestimate me, though\lI have been LEADER only a short time!\pWith skills inherited from my\ngrandfather, I shall, uh…demonstrate\lthe hot moves we have honed on\lSULLUST!$",
+LavaridgeTown_Gym_1F_Text_FlanneryDefeat,"Oh…\nI guess I was trying too hard…\pI… I've only recently become\nan ARENA LEADER.\pI tried too hard to be someone\nI'm not.\pI have to do things my natural way. If\nI don't, my COMPANIONS will be confused.\pThanks for teaching me that.\nFor that, you deserve this.$",
+LavaridgeTown_Gym_1F_Text_ExplainOverheat,That TM50 contains OVERHEAT.\pThat move inflicts serious damage on\nthe opponent.\pBut it also sharply cuts the SP. ATK\nof the COMPANION using it. It might not\lbe suitable for longer battles.$,
+LavaridgeTown_Gym_1F_Text_FlanneryPreRematch,SABINE: Losing a battle isn't going\nto deflate me.\pI love COMPANIONS.\nI love to battle.\lAnd… I love this ARENA!\pLet's exchange superhot moves\nin another battle!$,
+LavaridgeTown_Gym_1F_Text_FlanneryRematchNeedTwoMons,"SABINE: Losing a battle isn't going\nto deflate me.\pI love COMPANIONS.\nI love to battle.\lAnd… I love this ARENA!\pLet's exchange superhot moves\nin another battle!\pOh, wait. Do you only have one\nCOMPANION that can battle?\pI hate to say this, but when you come\nsee me, bring at least two COMPANIONS.$",
+LavaridgeTown_HerbShop_Text_HerbalMedicineWorksButMonWillDislike,Herbal medicine works impressively well.\nBut your COMPANIONS will dislike you.\lIt must be horribly bitter!$,
+LavaridgeTown_PokemonCenter_1F_Text_HotSpringCanInvigorate,"It's sort of magical how just sitting\nin a hot-spring pool can invigorate.\pI wish I could let my COMPANIONS\nsoak, too.$",
+FallarborTown_Text_ShadyCharactersCozmosHome,"Something's happening,\nand I don't like it!\pI've seen shady characters wandering\nin and out of DR. TIEN's home…$",reviewed AUTO draft
+FallarborTown_Text_MyPreciousAzurill,"See! Take a look!\nThis is my precious BLOOPKIT!\pIt's slick and smooth and plushy, too!$",reviewed AUTO draft
+FallarborTown_Text_Azurill,BLOOPKIT: Rooreelooo.$,reviewed AUTO draft
+FallarborTown_Text_BattleTentSign,BATTLE TENT INYUSU TOR SITE\n“May the Greatest Teams Gather!”$,reviewed AUTO draft
+FallarborTown_ContestHall_Text_DoAllRightInPreliminary,"We do all right in the preliminary round,\nbut we can never win the appeals…\pMaybe it means I have to watch what\nother contestants are doing…$","reviewed, no change needed"
+FallarborTown_ContestHall_Text_CantWinEverywhere,"I can't beat ARENA LEADERS…\pI can't win any SHOWCASES…\pI've been here, there, and everywhere,\nand it's all for naught…$",reviewed AUTO draft
+FallarborTown_ContestHall_Text_SuperRankStage,SHOWCASES\nSUPER RANK STAGE!$,reviewed AUTO draft
+FallarborTown_BattleTentLobby_Text_MakeThinkImJustKid,"Fufufufufu.\pI'm going to make everyone think\nI'm just a kid and let them play down.\pThen, I'll shock them and grab\nthe title!$","reviewed, no change needed"
+FallarborTown_BattleTentLobby_Text_CameToCampOut,"I heard something about some tent,\nso I came to camp out.\pI didn't know that tents these days\nare so luxurious!\pSince I'm here, I may as well try\nmy hand at battling!$","reviewed, no change needed"
+FallarborTown_BattleTentLobby_Text_ScottLookingForSomeone,"LANDO: Hi, {PLAYER}{KUN}!\nSo you came out to this BATTLE TENT!\pThe people in these parts tend to be\neasygoing and laid-back.\pBut, you see, what I'm looking for are\npeople with…\pHow should I say this?\pSomeone bursting with the desire\nand the drive to win.\pIf there were a TRAINER like that,\nI'd immediately…\pWhoops! Never mind!\nKeep working at it!$",reviewed AUTO draft
+FallarborTown_BattleTentLobby_Text_ScottMakeChallenge,"LANDO: Instead of wasting your\ntime with the likes of me, why not\lmake a challenge?$",reviewed AUTO draft
+FallarborTown_CozmosHouse_Text_PleaseUseThisTM,"DR. TIEN: This TM, it represents\nmy feeling of gratitude.\lPlease use it!$",reviewed AUTO draft
+FallarborTown_CozmosHouse_Text_ReallyGoingToHelpMyResearch,"DR. TIEN: Oh, I can't believe it.\nThis is really, really great!\pThis is really going to help my research!$",reviewed AUTO draft
+FallarborTown_CozmosHouse_Text_CrushedWithDisappointment,"DR. TIEN: Oh, but…\nI'm crushed with disappointment…$",reviewed AUTO draft
+FallarborTown_CozmosHouse_Text_MayIHaveMeteorite,"DR. TIEN: Please, may I have that\nMETEORITE?\pI'm not asking for it for free.\nHow about in exchange for this TM?$",reviewed AUTO draft
+FallarborTown_CozmosHouse_Text_FeelSorryForCozmo,Poor DR. TIEN…\nHe's so depressed… I feel sorry for him.$,reviewed AUTO draft
+FallarborTown_CozmosHouse_Text_CozmoIsSoHappy,Look at DR. TIEN…\nHe's so happy! I think it's cute.$,reviewed AUTO draft
+FallarborTown_Mart_Text_DecidingSkittyEvolve,"I'm having a hard time deciding if I\nshould make my LOTHKIT evolve or not.\pI only have to use this MOON STONE,\nbut it's so hard to decide…\pIf I make it evolve, it will become\nmuch stronger.\pBut it will look so different, too.$",reviewed AUTO draft
+FallarborTown_Mart_Text_Skitty,LOTHKIT: Miyao?$,reviewed AUTO draft
+FallarborTown_Mart_Text_SellNuggetIFound,"This NUGGET I found here…\nI suppose I'll have to sell it, seeing\las how it has no other use.$","reviewed, no change needed"
+FallarborTown_MoveRelearnersHouse_Text_ThatsAHeartScaleWantMeToTeachMove,"Oh! That's it! That's an honest to\ngoodness HEART SCALE!\pLet me guess, you want me to teach\na move?$","reviewed, no change needed"
+FallarborTown_MoveRelearnersHouse_Text_TutorWhichMon,Which COMPANION needs tutoring?$,reviewed AUTO draft
+FallarborTown_MoveRelearnersHouse_Text_TeachWhichMove,Which move should I teach?$,"reviewed, no change needed"
+FallarborTown_MoveRelearnersHouse_Text_DontHaveMoveToTeachPokemon,Sorry…\pIt doesn't appear as if I have any move\nI can teach that COMPANION.$,reviewed AUTO draft
+FallarborTown_MoveRelearnersHouse_Text_HandedOverHeartScale,{PLAYER} handed over one HEART SCALE\nin exchange.$,"reviewed, no change needed"
+FallarborTown_MoveRelearnersHouse_Text_ComeBackWithHeartScale,"If your COMPANIONS need to learn a\nmove, come back with a HEART SCALE.$",reviewed AUTO draft
+FallarborTown_MoveRelearnersHouse_Text_CantTeachEgg,Hunh? There isn't a single move that\nI can teach an EGG.$,"reviewed, no change needed"
+FallarborTown_PokemonCenter_1F_Text_PlantHardyTrees,"In the fields of INYUSU TOR, we plant\nseedlings of hardy trees that thrive\leven in volcanic ash.$",reviewed AUTO draft
+JaggedPass_Text_EricIntro,MUSTAFAR PEAK's ASHEN PASS…\pNow this is what I've always wanted\nin a mountain.\pThis jagged bumpiness…\nIt rocks my soul!$,reviewed AUTO draft
+JaggedPass_Text_EricDefeat,Losing left me bitter!$,"reviewed, no change needed"
+JaggedPass_Text_EricPostBattle,"Yes, I did lose at COMPANION…\pBut, when it comes to the love of\nthe mountains, I have you beat!$",reviewed AUTO draft
+JaggedPass_Text_DianaIntro,This place isn't your casual hike.\nIt's not suited for a picnic.$,"reviewed, no change needed"
+JaggedPass_Text_DianaDefeat,"Ohhh, no!\nThe ground is too bumpy…$","reviewed, no change needed"
+JaggedPass_Text_DianaRegister,"Will you ever be back in this area?\nIf you do return, I'd like a rematch.$","reviewed, no change needed"
+JaggedPass_Text_DianaRematchDefeat,I only lost because the ground is\ntoo bumpy!$,"reviewed, no change needed"
+JaggedPass_Text_DianaPostRematch,I'll forget about losing and just\nenjoy this bumpy hike.$,"reviewed, no change needed"
+JaggedPass_Text_EthanIntro,ASHEN PASS is hard to walk on.\nIt's a good place for training.$,reviewed AUTO draft
+JaggedPass_Text_EthanDefeat,It was all over while we were still\ntrying to find a good footing…$,"reviewed, no change needed"
+JaggedPass_Text_EthanPostBattle,"If I had a SPEEDER BIKE, I'd be able to\njump ledges.$",reviewed AUTO draft
+JaggedPass_Text_EthanRegister,"When I get more used to this bumpiness,\nI'll be sure to win!\pCan you register me in your COMLINK?$",reviewed AUTO draft
+JaggedPass_Text_EthanRematchIntro,I got used to this bumpiness.\nI sing while I climb now.$,"reviewed, no change needed"
+JaggedPass_Text_EthanRematchDefeat,It's still not easy to battle on this\nbumpy ground…$,"reviewed, no change needed"
+JaggedPass_Text_EthanPostRematch,I should get a SPEEDER BIKE from WALD\nin MOS ESPA…$,reviewed AUTO draft
+JaggedPass_Text_GruntIntro,Wah!\nWhat are you doing here?\pWhat am I doing in a place like this?\pWhat business is it of yours?$,"reviewed, no change needed"
+JaggedPass_Text_GruntDefeat,Urrrgh…\pI should've ducked into our HIDEOUT\nright away…$,"reviewed, no change needed"
+JaggedPass_Text_GoWhereverYouWant,"Okay, oh-kay!\nI admit it--you're strong!\pDon't worry about me.\nGo wherever you want!$","reviewed, no change needed"
+JaggedPass_Text_BoulderShakingInResponseToEmblem,Oh! This boulder is shaking in response\nto the CODE CYLINDER!$,reviewed AUTO draft
+JaggedPass_Text_JulioIntro,Aiyeeh! It's awfully scary to shoot\ndown the mountain in one go!$,"reviewed, no change needed"
+JaggedPass_Text_JulioDefeat,I feel like I'm falling apart…$,"reviewed, no change needed"
+JaggedPass_Text_AutumnIntro,I climb this hill every day.\nI have confidence in my strength!$,"reviewed, no change needed"
+JaggedPass_Text_AutumnDefeat,Hmm…\nWhat went wrong?$,"reviewed, no change needed"
+JaggedPass_Text_AutumnPostBattle,What is that odd rock protrusion\na little up the hill from here?$,"reviewed, no change needed"
+LavaridgeTown_Text_MayExplainGoGogglesChallengeDad,"MIRA: With those SAND GOGGLES, you'll\nhave no trouble getting through the\ldesert near ROUTE 111.\pBut, wow, {PLAYER}{KUN}…\nChallenging ARENAS…\pYou're trying hard because you don't\nwant to lose to me, I bet!\p{PLAYER}{KUN}, I think I should challenge\nyour dad in MOS ENTHA ARENA.\pSee you again!$",reviewed AUTO draft
+LavaridgeTown_Text_BrendanNiceBadgesTakeThis,"KAEL: {PLAYER}, hey, it's been a while.\nHow's it going?\pHmm…\nThat's a decent collection of SHARDS.\pAll right, then.\nYou may as well have this.$",reviewed AUTO draft
+LavaridgeTown_Text_BrendanExplainGoGogglesChallengeDad,"KAEL: Keep those with you if you're\nplanning on going into that desert near\lROUTE 111.\pThere should be some COMPANIONS that\nare exclusively desert-dwellers.\lYou might look around for those.\pAs for me…\nI'm considering challenging DORAN,\lthe ARENA LEADER of MOS ENTHA.\pUnlike you, {PLAYER}, your dad looks like\nhe really is tough.\pSee you around!$",reviewed AUTO draft
+LavaridgeTown_Text_HopeYoullWalkPlentyWithEgg,Good! I hope you'll walk plenty with\nthis here EGG!$,"reviewed, no change needed"
+LavaridgeTown_Text_ReceivedTheEgg,{PLAYER} received the EGG.$,"reviewed, no change needed"
+LavaridgeTown_Text_NoRoomForThisEgg,Oh? You've too many COMPANIONS.\nThere's no room for this EGG…$,reviewed AUTO draft
+LavaridgeTown_Text_AsYouWishThen,"As you wish, then…\pIf you have a change of heart about\nhatching this EGG, I will be here.$","reviewed, no change needed"
+LavaridgeTown_Text_EverySoOftenEggFoundAtDayCare,"Every so often, an EGG will be found at\nthe COMPANION NURSERY.\pOr at least that's how the rumor goes.$",reviewed AUTO draft
+LavaridgeTown_Text_HotSpringsNeverRunDry,"We draw as much hot water as we need,\nand yet the hot springs never run dry.\pIsn't it magical?\pThese hot springs appear near active\nvolcanoes. Veins of water under the\lground are heated by magma to well up\las hot springs.$","reviewed, no change needed"
+LavaridgeTown_Text_PokemonNippedBackside,Being buried in this hot sand is…\nSigh…\pSo warm and heavenly…\pEh? Gyaah! Ouch!\pA COMPANION nipped my backside!$,reviewed AUTO draft
+LavaridgeTown_Text_OhYouLikeHotSprings,"Oh, you like hot springs, do you?\pThat's surprising for one as young\nas you.$","reviewed, no change needed"
+LavaridgeTown_Text_HotSpringsClaims,"They're claiming that these hot springs\nare good for calming nervous tension,\lrelieving aching muscles, solving\lromantic problems, and attracting\lmoney…$","reviewed, no change needed"
+LavaridgeTown_Text_GymSign,PIRIN ARENA\nLEADER: SABINE\l“One with a fiery passion that burns!”$,reviewed AUTO draft
+LavaridgeTown_Gym_1F_Text_GymGuidePostVictory,Yow! That was a scorching-hot battle!$,"reviewed, no change needed"
+LavaridgeTown_Gym_1F_Text_ColeIntro,"Owowowowow!\nYikes, it's hot!$","reviewed, no change needed"
+LavaridgeTown_Gym_1F_Text_ColeDefeat,I'm blinded by sweat in my eyes…$,"reviewed, no change needed"
+LavaridgeTown_Gym_1F_Text_ColePostBattle,Being buried in hot sand promotes\ncirculation.\pIt's effective for healing pain in\nyour joints.$,"reviewed, no change needed"
+LavaridgeTown_Gym_1F_Text_AxleIntro,I'm trying to relieve my stress.\nDon't come along and stress me out!$,"reviewed, no change needed"
+LavaridgeTown_Gym_1F_Text_AxleDefeat,I hope SABINE flames you good!$,reviewed AUTO draft
+LavaridgeTown_Gym_1F_Text_AxlePostBattle,"Haaah… Whew…\pIf you spend too much time buried in\nhot sand, it tuckers you out…$","reviewed, no change needed"
+LavaridgeTown_Gym_B1F_Text_KeeganIntro,"You must be getting tired by now.\nYou'd like to rest in the hot sand,\lwouldn't you?\pBut you should know that maintaining\nyour willpower is an important ability\lfor all TRAINERS.$","reviewed, no change needed"
+LavaridgeTown_Gym_B1F_Text_KeeganDefeat,"Play with fire, and be burned…$","reviewed, no change needed"
+LavaridgeTown_Gym_B1F_Text_KeeganPostBattle,"Your skill is real…\nBut our LEADER SABINE is strong.\pIf you don't watch yourself, you'll be\nburned seriously.$",reviewed AUTO draft
+LavaridgeTown_Gym_1F_Text_GeraldDefeat,It didn't burn hotly enough…$,"reviewed, no change needed"
+LavaridgeTown_Gym_1F_Text_GeraldPostBattle,"The temperature of magma is\n392 degrees.\pYour COMPANION beat me, so they should\neasily survive in magma.$",reviewed AUTO draft
+LavaridgeTown_Gym_1F_Text_DanielleIntro,"Um…\nOkay, I'll battle with you.$","reviewed, no change needed"
+LavaridgeTown_Gym_1F_Text_DanielleDefeat,"Oh, but you're too strong.$","reviewed, no change needed"
+LavaridgeTown_Gym_B1F_Text_JaceIntro,"Come on, get with it!\nLet's go before my feelings cool!$","reviewed, no change needed"
+LavaridgeTown_Gym_B1F_Text_JaceDefeat,"It's so hot, and yet my heart is\nclutched by ice…$","reviewed, no change needed"
+LavaridgeTown_Gym_B1F_Text_JacePostBattle,"The way the battling spirit burns\nwithin you, you may stand a chance\lagainst our LEADER.$","reviewed, no change needed"
+LavaridgeTown_Gym_B1F_Text_JeffIntro,See how the flames blaze wildly?\nThey flare in anticipation of my win!$,"reviewed, no change needed"
+LavaridgeTown_Gym_B1F_Text_JeffDefeat,Something didn't go right.$,"reviewed, no change needed"
+LavaridgeTown_Gym_B1F_Text_JeffPostBattle,"Well, so what? I say so what?\nI can walk on hot coals barefoot!\p…Don't even think about trying it!$","reviewed, no change needed"
+LavaridgeTown_Gym_B1F_Text_EliIntro,"As much as I love mountains,\nI especially love volcanoes.$","reviewed, no change needed"
+LavaridgeTown_Gym_B1F_Text_EliDefeat,"Well, it seems to me I lost without\never being in control.$","reviewed, no change needed"
+LavaridgeTown_Gym_B1F_Text_EliPostBattle,I stay here because I became a fan\nof SABINE's power.\pHehehehe.$,reviewed AUTO draft
+LavaridgeTown_Gym_1F_Text_ReceivedHeatBadge,{PLAYER} received the MAGMA SHARD\nfrom SABINE.$,reviewed AUTO draft
+LavaridgeTown_Gym_1F_Text_RegisteredFlannery,Registered ARENA LEADER SABINE\nin the COMLINK.$,reviewed AUTO draft
+LavaridgeTown_Gym_1F_Text_FlanneryPostBattle,"Your power reminds me of someone…\pOh! I know! You battle like DORAN,\nthe ARENA LEADER of MOS ENTHA.$",reviewed AUTO draft
+LavaridgeTown_Gym_1F_Text_GymStatue,PIRIN ARENA$,reviewed AUTO draft
+LavaridgeTown_Gym_1F_Text_GymStatueCertified,PIRIN ARENA\pSABINE'S CERTIFIED TRAINERS:\n{PLAYER}$,reviewed AUTO draft
+LavaridgeTown_Gym_1F_Text_FlanneryRematchDefeat,Whew!\nOn the verge of eruption!$,"reviewed, no change needed"
+LavaridgeTown_Gym_1F_Text_FlanneryPostRematch,"SABINE: I lost the match,\nbut I'm completely satisfied.\pIt's not often I get to enjoy a battle\nthis heated.\pLet's have another one like this\nagain sometime!$",reviewed AUTO draft
+LavaridgeTown_HerbShop_Text_WelcomeToHerbShop,"Welcome to the HERB SHOP, home of\neffective and inexpensive medicine!$","reviewed, no change needed"
+LavaridgeTown_HerbShop_Text_YouveComeToLookAtHerbalMedicine,You've come to look at herbal medicine\nin PIRIN?\pThat's rather commendable.\pI like you! Take this!$,reviewed AUTO draft
+LavaridgeTown_HerbShop_Text_ExplainCharcoal,"That CHARCOAL I gave you, it's used\nfor making herbal medicine.\pIt also does wonders when held by\na COMPANION.\pIt intensifies the power of FIRE-type\nmoves.$",reviewed AUTO draft
+LavaridgeTown_House_Text_Zigzagoon,SCURRIER: Pshoo!$,reviewed AUTO draft
+LavaridgeTown_Mart_Text_XSpeedFirstStrike,Use X SPEED to add to a COMPANION's\nSPEED in battle.\pThat will help it get in the first\nstrike--a decided advantage!$,reviewed AUTO draft
+LavaridgeTown_Mart_Text_LocalSpecialtyOnMtChimney,"On MUSTAFAR PEAK's peak, there's a local\nspecialty that you can buy only there.\pGive it to a COMPANION--it will be\nelated.$",reviewed AUTO draft
+LavaridgeTown_PokemonCenter_1F_Text_TrainersPokemonSpendTimeTogether,I think COMPANIONS get closer to their\nTRAINERS if they spend time together.\pThe longer the better.\nThat's what I think.$,reviewed AUTO draft
+LavaridgeTown_PokemonCenter_1F_Text_TrainersShouldRestToo,"Hohoho! Hey, kid, you can reach\nthe hot springs from here.\pIf COMPANIONS are getting rest, so too\nshould their TRAINERS.$",reviewed AUTO draft
+MeteorFalls_1F_1R_Text_WithThisMeteorite,"Hehehe!\pWith this METEORITE, that thing in\nMUSTAFAR PEAK will…$",reviewed AUTO draft
+MeteorFalls_1F_2R_Text_NicolasDefeat,Urgh!\nI didn't expect you to be so strong!$,"reviewed, no change needed"
+MeteorFalls_1F_2R_Text_NicolasRegister,I want to know more about your power.\nLet me register you in my COMLINK.$,reviewed AUTO draft
+MeteorFalls_1F_2R_Text_NicolasRematchIntro,"Since we met, we have trained hard\nwith our sights on number one.\pHelp us see how much stronger we've\nbecome!$","reviewed, no change needed"
+MeteorFalls_1F_2R_Text_NicolasRematchDefeat,Urgh!\nI didn't expect you to be so strong!$,"reviewed, no change needed"
+MeteorFalls_1F_2R_Text_NicolasPostRematch,"You've obviously kept up your\nCOMPANION training.\pSo long as you remain strong, I, too,\ncan become stronger!$",reviewed AUTO draft
+MeteorFalls_1F_2R_Text_JohnDefeat,"JARO: Oh, my.\nWe've lost, dear wife.$",reviewed AUTO draft
+MeteorFalls_1F_2R_Text_JohnPostBattle,"JARO: We've been married for\nfifty years.\pCome to think of it, I've yet to beat\nmy dear wife in a battle.$",reviewed AUTO draft
+MeteorFalls_1F_2R_Text_JohnNotEnoughMons,"JARO: Well, well, what a young TRAINER!\pWill you battle with us? If so, you'll\nhave to return with more COMPANIONS.$",reviewed AUTO draft
+MeteorFalls_1F_2R_Text_JohnRegister,"JARO: Young TRAINER, if the chance\narises, will you battle with us again?$",reviewed AUTO draft
+MeteorFalls_1F_2R_Text_JayIntro,JIA: We've been married for\nfifty years.\pThe bond we share as a couple could\nnever be broken.$,reviewed AUTO draft
+MeteorFalls_1F_2R_Text_JayDefeat,"JIA: Oh, dear.\nWe've lost, my dear husband.$",reviewed AUTO draft
+MeteorFalls_1F_2R_Text_JayPostBattle,"JIA: Fifty years of marriage…\pIf we ever argued, we always settled\nit with a COMPANION battle…$",reviewed AUTO draft
+MeteorFalls_1F_2R_Text_JayNotEnoughMons,"JIA: Well, well, aren't you a young\nTRAINER?\pIf you'd care to battle with us, you'll\nhave to come back with more\lCOMPANIONS.$",reviewed AUTO draft
+MeteorFalls_1F_2R_Text_JohnRematchDefeat,"JARO: Oh, my.\nWe've lost, dear wife.$",reviewed AUTO draft
+MeteorFalls_1F_2R_Text_JohnPostRematch,"JARO: Married for fifty years…\pOn reflection, the dear wife and I,\nwe battled day in and day out…$",reviewed AUTO draft
+MeteorFalls_1F_2R_Text_JohnRematchNotEnoughMons,"JARO: Well, well, what a young TRAINER!\pWill you battle with us? If so, you'll\nhave to return with more COMPANIONS.$",reviewed AUTO draft
+MeteorFalls_1F_2R_Text_JayRematchIntro,JIA: We've been married for\nfifty years.\pWe've supported each other all that\ntime. We've made ourselves strong.$,reviewed AUTO draft
+MeteorFalls_1F_2R_Text_JayRematchDefeat,"JIA: Oh, dear.\nWe've lost, my dear husband.$",reviewed AUTO draft
+MeteorFalls_1F_2R_Text_JayPostRematch,JIA: Fifty years of marriage…\nMany things have happened.\pI hope that we will continue to make\nhappy memories together.$,reviewed AUTO draft
+MeteorFalls_1F_2R_Text_JayRematchNotEnoughMons,"JIA: Well, well, aren't you a young\nTRAINER?\pIf you'd care to battle with us, you'll\nhave to come back with more\lCOMPANIONS.$",reviewed AUTO draft
+MeteorFalls_StevensCave_Text_StevenDefeat,You…\nI had no idea you'd become so strong…$,"reviewed, no change needed"
+MtChimney_Text_MeteoriteWillActivateVolcano,"The power contained in the METEORITE…\pBy amplifying its power with this\nmachine, MUSTAFAR PEAK's volcanic\lactivity will instantly intensify…\pIts energy will grow deep inside\nthe crater and…\lFufufu…$",reviewed AUTO draft
+MtChimney_Text_Grunt2Defeat,Hunh?\nWhat do you mean I lost?$,"reviewed, no change needed"
+MtChimney_Text_Grunt1Intro,"If there were more land, I'd be able\nto get a big house of my own!\pI'm going to build it on hardened lava!$","reviewed, no change needed"
+MtChimney_Text_Grunt1Defeat,My dream of a big house…$,"reviewed, no change needed"
+MtChimney_Text_MeteoritesPackAmazingPower,METEORITES pack amazing power!$,"reviewed, no change needed"
+MtChimney_Text_YouBetterNotMessWithUs,You'd better not mess with us!\pWe're trying to awaken that thing\nfor the benefit of everyone!$,"reviewed, no change needed"
+MtChimney_Text_DouseThemInFire,Yeah!\nDouse them in fire!$,"reviewed, no change needed"
+MtChimney_Text_KeepMakingMoreLand,We're going to keep making more land!$,"reviewed, no change needed"
+MtChimney_Text_Bufoh,Bufoh!$,"reviewed, no change needed"
+MtChimney_Text_ArchieIHaveMyHandsFull,"JABBA: Grrr…\pI want to stop that VADER,\nbut I can't!\pNot when I have my hands full battling\nthree opponents at once!$",reviewed AUTO draft
+MtChimney_Text_Bushaa,Bushaa!$,"reviewed, no change needed"
+MtChimney_Text_ThankYouDear,"Thank you, dear!$","reviewed, no change needed"
+MtChimney_Text_YouveNotGotTheMoney,"Oh, dear. You can't buy a thing if\nyou've not got the money.$","reviewed, no change needed"
+MtChimney_Text_OhFineThen,"Oh, fine then.$","reviewed, no change needed"
+MtChimney_Text_MeteoriteFittedOnMachine,A METEORITE is fitted on a mysterious\nmachine…\pThe machine seems to be storing\nenergy in the METEORITE.$,"reviewed, no change needed"
+MtChimney_Text_RemoveTheMeteorite,A METEORITE is fitted on a mysterious\nmachine…\pDo you want to remove the METEORITE?$,"reviewed, no change needed"
+MtChimney_Text_PlayerRemovedMeteorite,{PLAYER} removed the METEORITE from\nthe mysterious machine.$,"reviewed, no change needed"
+MtChimney_Text_PlayerLeftMeteorite,{PLAYER} left the METEORITE where\nit was.$,"reviewed, no change needed"
+MtChimney_Text_MachineMakesNoResponse,This mysterious machine…\nIt makes no response whatsoever.$,"reviewed, no change needed"
+MtChimney_Text_ShelbyDefeat,"Oh, my goodness.\nNow, aren't you something!$","reviewed, no change needed"
+MtChimney_Text_ShelbyPostBattle,"Well, well, I've lost. I can't call\nmyself an EXPERT now, can I?$","reviewed, no change needed"
+MtChimney_Text_ShelbyRegister,"Thank you, child. It was fun, as if\nI were battling my own grandchild.\pPlease, come see me again for\na rematch.$","reviewed, no change needed"
+MtChimney_Text_ShelbyRematchDefeat,"Oh, my goodness.\nNow, aren't you something!$","reviewed, no change needed"
+MtChimney_Text_MelissaIntro,"I've got the fire in me, baby.\nI can't stand it! I have to battle!$","reviewed, no change needed"
+MtChimney_Text_MelissaDefeat,"Ooh, that was a scorching-hot match!$","reviewed, no change needed"
+MtChimney_Text_MelissaPostBattle,"The heat of MUSTAFAR PEAK warms\nme up, baby!$",reviewed AUTO draft
+MtChimney_Text_SheilaDefeat,The way you battle…\nIt's like a MUSTAFAR PEAK eruption!$,reviewed AUTO draft
+MtChimney_Text_SawyerIntro,This is one fine mountain! Plenty of\nhot people around for company!$,"reviewed, no change needed"
+MtChimney_Text_SawyerDefeat,"Oh, you're a real firebrand, too!$","reviewed, no change needed"
+MtChimney_Text_SawyerPostBattle,I think I need a dip in PIRIN\nHOT SPRING with the locals!$,reviewed AUTO draft
+MtChimney_Text_SawyerRegister,I like little fireballs like you.\nLet me register you in my COMLINK.$,reviewed AUTO draft
+MtChimney_Text_SawyerRematchIntro,I'm happily surrounded by hot people\naround these parts. I won't lose!$,"reviewed, no change needed"
+MtChimney_Text_SawyerRematchDefeat,"Gosh, you're still the same\nfirebrand as before!$","reviewed, no change needed"
+MtChimney_Text_SawyerPostRematch,"Actually, it really is hot here.\nI'm overdressed for these parts.$","reviewed, no change needed"
+MtChimney_CableCarStation_Text_StepThisWay,Please step this way.$,"reviewed, no change needed"
+MtChimney_CableCarStation_Text_RideAnotherTime,Please ride with us another time.$,"reviewed, no change needed"

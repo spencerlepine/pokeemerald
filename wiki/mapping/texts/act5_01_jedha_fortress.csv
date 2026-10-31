@@ -1,0 +1,133 @@
+text_id,sw_text_raw,notes
+MagmaHideout_1F_Text_Grunt1Intro,"When the EMPIRE has roll call, we get\nimportant guard posts in the order\lthat we line up.\pThat's why I'm stuck off in this corner.\nI'm always late to roll call!$",
+MagmaHideout_1F_Text_Grunt2Intro,"LORD VADER told us to dig into\nMUSTAFAR PEAK, so we dug and dug.\pAnd in the course of digging, we came\nacross something that blew our minds!\pWhat did we find?\pFuhahaha!\nI'll tell you if you beat me!$",
+MagmaHideout_2F_1R_Text_Grunt14Intro,"What, what, what?\pOnly EMPIRE troops are supposed\nto be in here!\pBut you're not wearing the EMPIRE's\narmor…\pYou rouse my suspicion!\nBattle with me!$",
+MagmaHideout_2F_1R_Text_Grunt14Defeat,Aiyiyi…\nMy pride as a STORMTROOPER…$,
+MagmaHideout_2F_1R_Text_Grunt14PostBattle,"If you suffer from chills, you should\njoin the EMPIRE. It's warm here.$",
+MagmaHideout_2F_2R_Text_Grunt15PostBattle,"We dug up something beyond belief!\nAnd, we got the BLUE KYBER!\pAll that's left is for LORD VADER to…\nFufufu… Fwahahaha!$",
+MagmaHideout_2F_2R_Text_Grunt6Intro,I can't stand heat. Maybe I should've\njoined the CARTEL instead…$,
+MagmaHideout_2F_2R_Text_Grunt6Defeat,"Yeah, I really may not be right for\nthe EMPIRE…$",
+MagmaHideout_2F_2R_Text_Grunt6PostBattle,"Don't you miss fresh air, being\nin a place like this?$",
+MagmaHideout_2F_2R_Text_Grunt7Intro,"You can hear tremors here sometimes.\pCould it be the volcano rattling?\nOr is it GREAT…\pWhoops!\nNo, no, never mind!$",
+MagmaHideout_2F_2R_Text_Grunt7PostBattle,"You just happened to win this time,\nbut that doesn't matter.\pThe EMPIRE's goal is about to be\nreached!$",
+MagmaHideout_3F_1R_Text_Grunt9PostBattle,Do you think it's odd that we wear\nfull armor in a lava-filled fortress?$,
+MagmaHideout_3F_1R_Text_Grunt16Intro,We serve LORD VADER and his vision\nof order.\pI don't care if you're with the CARTEL\nor if you're just some kid passing by.\pNo one interferes with us and gets\naway with it!$,
+MagmaHideout_3F_1R_Text_Grunt16PostBattle,Listen to me.\nThe EMPIRE is right!\pDon't listen to the CARTEL.\nDon't believe their lies!$,
+MagmaHideout_3F_2R_Text_Grunt10Intro,I follow every order LORD VADER\ngives. But you know what?\pDoing stuff like digging up a super-\nancient COMPANION and ripping off\lsomeone's METEORITE…\pI think we're going a little too far.\nWhat do you think?$,
+MagmaHideout_3F_2R_Text_Grunt10PostBattle,"You know, losing to you cleared my mind.\pThe next time I see LORD VADER…\nWell… Maybe I'll keep quiet.$",
+MagmaHideout_4F_Text_Grunt12PostBattle,LORD VADER!\nAn intruder is headed your way!$,
+MagmaHideout_4F_Text_TabithaIntro,"Hehehe!\nYou made it this far, so I'll tell you!\pThat's right!\nUp ahead, GREATKRAYT is sleeping!\pLORD VADER went to GREATKRAYT just\nseconds ago!\pIt's going to awaken real soon!\nHehe! Hehehe!$",
+MagmaHideout_4F_Text_TabithaPostBattle,"…And while you wasted time with me,\nLORD VADER will have awakened\nGREATKRAYT…$",
+MagmaHideout_4F_Text_MaxieOhItWasYou,VADER: So. It was you.\pI have sensed you poking around\nuninvited here and there…\pI see it now.\nYou have used the Force against me!$,
+MagmaHideout_4F_Text_MaxieDefeat,The Force is strong with you…\nStronger than I had foreseen.$,Vader's second loss: he senses the player's Force strength
+MagmaHideout_4F_Text_MaxieImGoingAfterGroudon,"VADER: There has to be some reason\nwhy GREATKRAYT fled…\pThat's what you're trying to say,\nisn't it?\p… … … … … …\n… … … … … …\pYou think I did not know that?\pWith GREATKRAYT gone, I have no\nfurther need for this volcano.\pI am going after GREATKRAYT.\nThis is where we part!$",
+MtPyre_1F_Text_TakeThisForYourOwnGood,All sorts of beings wander the slopes\nof the JEDHA TEMPLE…\pThere is no telling what may happen.\nTake this. It's for your own good.$,
+MtPyre_1F_Text_ComeToPayRespects,Did you come to pay your respects\nto the spirits of departed COMPANIONS?\pYou must care for your COMPANIONS a\nlot.$,
+MtPyre_2F_Text_MarkIntro,Hey! Are you searching for COMPANIONS?\nYou came along after me! You're rude!$,
+MtPyre_2F_Text_LeahPostBattle,Our family has been TRAINERS here\nsince my great-grandmother's time…\pIt is my duty to protect this\ntemple…$,
+MtPyre_3F_Text_WilliamIntro,The Force in this holy place\nhas elevated my psychic power!\pA mere child like you…\nYou dream of winning?$,
+MtPyre_3F_Text_GabriellePostBattle,COMPANIONS no longer of this world.\nCOMPANIONS that are with you now.\pAnd the COMPANIONS you will meet\nin the future…\pThey are all to be equally cherished.\nPlease remember that.$,
+MtPyre_3F_Text_GabriellePostRematch,COMPANIONS no longer of this world.\nCOMPANIONS that are with you now.\pAnd the COMPANIONS you will meet\nin the future…\pThey are all to be equally cherished.\nI see that you've remembered that.$,
+MtPyre_3F_Text_GabrielleRegister,"I would like to see your COMPANIONS\nwhen they grow up some more…\pPlease, I need to see your COMLINK.$",
+MtPyre_6F_Text_ValeriePostBattle,Perhaps the power is from the spirits\nof COMPANIONS in fitful sleep here…$,
+MtPyre_6F_Text_ValeriePostRematch,"The COMPANIONS at rest here…\nSometimes, they play…$",
+MtPyre_Summit_Text_Grunt1Intro,No! Those EMPIRE goons got\nhere ahead of us!\pWe can't fall behind!$,
+MtPyre_Summit_Text_Grunt1Defeat,I thought you were one of the\nSTORMTROOPERS coming back…$,
+MtPyre_Summit_Text_Grunt2Intro,"Hah!\nToo bad for you!\pIf you came earlier, you only would've\nhad to battle the wimpy EMPIRE.\pBut since you arrived now, you have\nto take on us toughies!$",
+MtPyre_Summit_Text_Grunt2Defeat,Urgh… I should've let you take on\nthe EMPIRE first…$,
+MtPyre_Summit_Text_Grunt3Intro,"You…\nWe saw you at MUSTAFAR PEAK.\pYou're not EMPIRE or CARTEL,\nso why would you be here?$",
+MtPyre_Summit_Text_Grunt3Defeat,"If you're going to mess with anyone,\nlet it be the EMPIRE…$",
+MtPyre_Summit_Text_Grunt3PostBattle,"Heh, it doesn't matter!\nWe bought ourselves some time!\pThe mighty JABBA should have snatched\nwhat he was after!$",
+MtPyre_Summit_Text_Grunt4Intro,"Oh, I know!\nYou tried to join the EMPIRE,\lbut they wouldn't have you!\pWell, don't think that we'll let you\njoin the CARTEL!$",
+MtPyre_Summit_Text_Grunt4Defeat,"If you want to join the CARTEL that\nbadly, we can consider it…$",
+MtPyre_Summit_Text_Grunt4PostBattle,We have a great thing going with\nus thugs and the mighty JABBA.$,
+MtPyre_Summit_Text_ArchieWeGotTheOrbLetsGo,"JABBA: The EMPIRE's VADER got ahead\nof us, but we also got what we wanted.\pThe RED KYBER kept at JEDHA TEMPLE…\nI, JABBA, now have it in my possession!\pHo ho ho… Now every dry world will\nbecome a swamp fit for a HUTT!\pCome, my thugs!\nWe're pulling out!$",Jabba's swamp motive (NOTES.md)
+MtPyre_Summit_Text_BothOrbsTakenMagmaLeftThis,"Oh, no…\nThis cannot happen…\pNot only the BLUE KYBER, but even\nthe RED KYBER has been taken…\pThe BLUE and RED KYBER must never\nbe separated. They belong together.\pWhat are those men trying to do with\nthe two crystals?\p… … … … … …\n… … … … … …\pOh, yes. Was it the EMPIRE who came\nand took the BLUE KYBER first?\pWell, in their haste, they left this\nbehind.\pI couldn't imagine what exactly it\ncould be.\pI would like you to have it.\nPerhaps it will be useful in some way.$",
+MtPyre_Summit_Text_GroudonKyogreAwakened,"Oh, my goodness…\pYou say GREATKRAYT and SANDO\nhave both been awakened?\pIt is said that the BLUE KYBER and\nthe RED KYBER quelled the rage of\lthe two COMPANIONS…\pIt is also said that the true owner\nof the crystals still exists.\pHowever, no one knows who, or what\nexactly, the crystals belong to.\pIt could be a human, or perhaps\na COMPANION, but no one knows.$",
+MtPyre_Summit_Text_ThoseTwoMenReturnedOrbs,The two who took the crystals came\nback to return them on their own.\pThose men…\nPerhaps they are not so evil after all…$,
+MtPyre_Summit_Text_SuperAncientPokemonTaughtUs,"The embodiments of the land, sea,\nand the stars…\pThat is said to be the identities of\nthe super-ancient COMPANIONS…\pIn the same way that we humans and\nCOMPANIONS have life, every world, too,\lis alive…\pThe super-ancient COMPANIONS have\ntaught us that…$",
+MtPyre_Summit_Text_WillYouHearOutMyTale,Here at the TEMPLE we calm the\nspirits of departed COMPANIONS…\pThis is a high place where one can\nsee the stars of the OUTER RIM…\pThe disembodied spirits of COMPANIONS\nmust find solace here…\pIs it coincidence that you are here…\pWill you hear out my tale? A tale long\ntold in the OUTER RIM region?$,
+MtPyre_Summit_Text_GroudonKyogreTale,"It happened long, long ago…\pThe worlds were wracked by a ferocious\nclash between the COMPANION of the\lland and the COMPANION of the sea…\pThe COMPANION of the land raised\nmountains and dried up the seas…\pThe COMPANION of the sea raised huge\nwaves and drowned the lands…\pTheir fierce duel raged without end.\pThe worlds were engulfed in massive\ninfernos and vicious storms.\pThe BLUE and RED KYBER brought\nan end to the calamity.\pLight poured from the two crystals and\ncalmed the enraged adversaries.\pThe pair, made docile, dove deep into\nthe sea where eventually they\ldisappeared…$",
+MtPyre_Summit_Text_HoennTrioTale,"It happened long, long ago…\pThe worlds were wracked by a ferocious\nclash between the COMPANION of the\lland and the COMPANION of the sea…\pThe COMPANION of the land raised\nmountains and dried up the seas…\pThe COMPANION of the sea raised huge\nwaves and drowned the lands…\pTheir fierce duel raged without end.\pThe worlds were engulfed in massive\nfires and vicious storms.\pIt was then that the COMPANION of\nthe stars descended from the void.\pThe COMPANION, shining a vivid green,\ncalmed the two enraged COMPANIONS.\pThen, its duty done, the green\nCOMPANION flew off into the starry\lblack…$",EXOGORTH (Rayquaza) is the creature of the stars
+MtPyre_Summit_Text_HearTheNewLegendOfHoenn,It is my role to pass on the legends\nof OUTER RIM to future generations.\pAnd the crisis that just ended on\nDAGOBAH rewrote a legend…\pHave you the time to hear the new\nlegend of OUTER RIM?$,
+MagmaHideout_1F_Text_Grunt1Defeat,"I'm always late for training sessions,\ntoo!\pI hate to say it, but I'm wimpy…$","reviewed, no change needed"
+MagmaHideout_1F_Text_Grunt1PostBattle,"Okay, I'll try to put a little more\neffort into things from now on…$","reviewed, no change needed"
+MagmaHideout_1F_Text_Grunt2Defeat,Arrgh!\nTaken down!$,"reviewed, no change needed"
+MagmaHideout_1F_Text_Grunt2PostBattle,"I won't tell you after all.\nYou'll find out when you get there!\pIt'd be better if you saved surprises\nto the end, don't you think?$","reviewed, no change needed"
+MagmaHideout_2F_1R_Text_Grunt3Intro,Hold it right there!\pYou don't really expect me to keep\nmy trap shut and let you waltz by me?$,"reviewed, no change needed"
+MagmaHideout_2F_1R_Text_Grunt3Defeat,Ooh wow!\nI concede!$,"reviewed, no change needed"
+MagmaHideout_2F_1R_Text_Grunt3PostBattle,Maybe it would've been better if I did\njust let you go unchallenged…$,"reviewed, no change needed"
+MagmaHideout_2F_1R_Text_Grunt4Intro,Ahah!\nAn intruder!$,"reviewed, no change needed"
+MagmaHideout_2F_1R_Text_Grunt4Defeat,Graaah!$,"reviewed, no change needed"
+MagmaHideout_2F_1R_Text_Grunt4PostBattle,I've already lost.\pDo I really need to keep running\naround in a circle?$,"reviewed, no change needed"
+MagmaHideout_2F_1R_Text_Grunt5Intro,"Oh, oh!\nAn intruder!$","reviewed, no change needed"
+MagmaHideout_2F_1R_Text_Grunt5Defeat,Mutter…$,"reviewed, no change needed"
+MagmaHideout_2F_1R_Text_Grunt5PostBattle,"Actually, I'm no expert at battling…$","reviewed, no change needed"
+MagmaHideout_2F_2R_Text_Grunt15Intro,I don't have a bone to pick with you.\nI'm just following orders!$,"reviewed, no change needed"
+MagmaHideout_2F_2R_Text_Grunt15Defeat,"I may have lost, but…$","reviewed, no change needed"
+MagmaHideout_2F_2R_Text_Grunt7Defeat,You're a fiery battler.\nJust like a volcano!$,"reviewed, no change needed"
+MagmaHideout_2F_2R_Text_Grunt8Intro,One of our guys was freaking out that\nhe lost his CODE CYLINDER…\pWait a minute!\nWas it you who found it?$,reviewed AUTO draft
+MagmaHideout_2F_2R_Text_Grunt8Defeat,I'm having trouble believing this…$,"reviewed, no change needed"
+MagmaHideout_2F_2R_Text_Grunt8PostBattle,I'm getting this feeling that our plan\nis going to end in failure…$,"reviewed, no change needed"
+MagmaHideout_3F_1R_Text_Grunt9Intro,What did I do to deserve this guard\nposting?\pMy left ear is burning up!$,"reviewed, no change needed"
+MagmaHideout_3F_1R_Text_Grunt9Defeat,I'm getting heat exhaustion…$,"reviewed, no change needed"
+MagmaHideout_3F_1R_Text_Grunt16Defeat,"Oh, no!\nYou're not to be trusted at all!$","reviewed, no change needed"
+MagmaHideout_3F_2R_Text_Grunt10Defeat,"Yeah, I think we are doing something\nwrong somehow.$","reviewed, no change needed"
+MagmaHideout_4F_Text_Grunt11Intro,"I want to see GREATKRAYT, too, but they\nwon't let me see even its tail…\pIt's got me feeling really frustrated.\pOh, no!\nI blabbed about GREATKRAYT!$",reviewed AUTO draft
+MagmaHideout_4F_Text_Grunt11Defeat,I guess it's impossible to win if one\ndoesn't have a calm mind…$,"reviewed, no change needed"
+MagmaHideout_4F_Text_Grunt11PostBattle,I wonder if GREATKRAYT even has a tail?$,reviewed AUTO draft
+MagmaHideout_4F_Text_Grunt12Intro,Fuhahaha!\nSoon! Very soon!\lOur grand objective will be achieved!$,"reviewed, no change needed"
+MagmaHideout_4F_Text_Grunt12Defeat,"Grrr…\nI've come so far, but now this?$","reviewed, no change needed"
+MagmaHideout_4F_Text_Grunt13Intro,You're not finished yet!\nYou're not getting by me easily!$,"reviewed, no change needed"
+MagmaHideout_4F_Text_Grunt13Defeat,Was I that easy to knock down?$,"reviewed, no change needed"
+MagmaHideout_4F_Text_Grunt13PostBattle,"C-come on, one more match…$","reviewed, no change needed"
+MagmaHideout_4F_Text_TabithaDefeat,Taken down again…\nHehe…$,"reviewed, no change needed"
+MagmaHideout_4F_Text_MaxieAwakenGroudon,VADER: GREATKRAYT…\pNothing could awaken you from your\nsleep bathed in magma…\pThis BLUE KYBER is what you sought.\nWasn't it?\pI have brought you the BLUE KYBER.\nLet its shine awaken you!\pAnd show me…\nShow me the full extent of your power!$,reviewed AUTO draft
+MagmaHideout_4F_Text_MaxieGroudonWhatsWrong,VADER: GREATKRAYT!\nWhat's wrong?\pWasn't the BLUE KYBER the key?\pGREATKRAYT!\nWhere have you gone…$,reviewed AUTO draft
+MtPyre_1F_Text_ExplainCleanseTag,Have a COMPANION hold that\nCLEANSE TAG.\pIt will help ward off wild COMPANIONS.$,reviewed AUTO draft
+MtPyre_1F_Text_RestingPlaceOfZigzagoon,This is the final resting place of my\nSCURRIER. I cherished it…$,reviewed AUTO draft
+MtPyre_2F_Text_MemoriesOfSkitty,Memories of my darling LOTHKIT…\nMy eyes overflow thinking about it.$,reviewed AUTO draft
+MtPyre_2F_Text_TumbledFromFloorAbove,"Ooch, ouch… There are holes in the\nground here and there.\pI didn't notice and took a tumble from\nthe floor above.$","reviewed, no change needed"
+MtPyre_2F_Text_MarkDefeat,"Ayieeeeh!\nI'm sorry, forgive me, please!$","reviewed, no change needed"
+MtPyre_2F_Text_MarkPostBattle,"People don't come here often, so\nI thought there'd be rare COMPANIONS.$",reviewed AUTO draft
+MtPyre_2F_Text_LukeIntro,"LORN: We're here on a dare.\pHeheh, if I show her how cool I am,\nshe'll fall for me. I know it!\pI know! I'll cream you and show her\nhow cool I am!$",reviewed AUTO draft
+MtPyre_2F_Text_LukeDefeat,LORN: Whoopsie!$,reviewed AUTO draft
+MtPyre_2F_Text_LukePostBattle,"LORN: Well, we lost but that's okay!\nI'm right here by your side.\lWe'll make it through this dare!$",reviewed AUTO draft
+MtPyre_2F_Text_LukeNotEnoughMons,"LORN: If you want to take me on,\nbring some more COMPANIONS.\pIf you don't, I won't be able to show\noff to my girl how cool I am!$",reviewed AUTO draft
+MtPyre_2F_Text_DezIntro,"DIA: I came here on a dare with my\nboyfriend.\pIt's really scary, but I'm with my\nboyfriend. It's okay.\pI know! I'll get my boyfriend to look\ncool by beating you!$",reviewed AUTO draft
+MtPyre_2F_Text_DezDefeat,DIA: Waaaah! I'm scared!$,reviewed AUTO draft
+MtPyre_2F_Text_DezPostBattle,"DIA: We're lovey-dovey, so we don't\ncare if we lose!$",reviewed AUTO draft
+MtPyre_2F_Text_DezNotEnoughMons,"DIA: If you want to challenge us, you\nshould bring at least two COMPANIONS.\pMy boyfriend's strong.\nJust one COMPANION won't do at all.$",reviewed AUTO draft
+MtPyre_2F_Text_LeahIntro,You are an unfamiliar sight…\nDepart before anything befalls you!$,"reviewed, no change needed"
+MtPyre_2F_Text_LeahDefeat,Hmm…\nYou're durable.$,"reviewed, no change needed"
+MtPyre_2F_Text_ZanderIntro,Kiyaaaaah!\nI'm terrified!$,"reviewed, no change needed"
+MtPyre_2F_Text_ZanderDefeat,Nooooooo!\nI lost my wits!$,"reviewed, no change needed"
+MtPyre_2F_Text_ZanderPostBattle,I get freaked out every time I see\nanything move…\pI shouldn't have come here to train…$,"reviewed, no change needed"
+MtPyre_3F_Text_WilliamDefeat,I drown in self-pity…$,"reviewed, no change needed"
+MtPyre_3F_Text_WilliamPostBattle,"My psychic powers have surely\ngrown several times, but…$","reviewed, no change needed"
+MtPyre_3F_Text_KaylaIntro,"Ahahahaha!\pThis is no place for children, least\nof all you!$","reviewed, no change needed"
+MtPyre_3F_Text_KaylaDefeat,I lost that cleanly…$,"reviewed, no change needed"
+MtPyre_3F_Text_KaylaPostBattle,"This means my training is still not\nenough…\pI've got to keep working toward the\nsummit…\pGo, me!$","reviewed, no change needed"
+MtPyre_3F_Text_GabrielleIntro,Why have you come here?$,"reviewed, no change needed"
+MtPyre_3F_Text_GabrielleDefeat,That was amazing!\nYou're a very special TRAINER.$,"reviewed, no change needed"
+MtPyre_3F_Text_GabrielleRematchIntro,"Oh, it's you…\pHave you come to show me your grown\nCOMPANION?$",reviewed AUTO draft
+MtPyre_3F_Text_GabrielleRematchDefeat,How amazing!\nYou are a special person.$,"reviewed, no change needed"
+MtPyre_5F_Text_AtsushiIntro,Teacher…\nPlease watch over my progress!$,"reviewed, no change needed"
+MtPyre_5F_Text_AtsushiDefeat,Teacher…\nPlease forgive me!$,"reviewed, no change needed"
+MtPyre_5F_Text_AtsushiPostBattle,"Until I improve, my teacher, who rests\nhere, will never find true peace…$","reviewed, no change needed"
+MtPyre_4F_Text_TashaIntro,I love all things horrifying…\nIt's like a disease…\pWhen I'm here…\nI shiver with fear…$,"reviewed, no change needed"
+MtPyre_4F_Text_TashaDefeat,"Losing, I dislike…$","reviewed, no change needed"
+MtPyre_4F_Text_TashaPostBattle,I want to see dreadful things…\nI can't leave…\pStay…\nWon't you stay with me?$,"reviewed, no change needed"
+MtPyre_6F_Text_ValerieIntro,When I'm here…\nA curious power flows into me…$,"reviewed, no change needed"
+MtPyre_6F_Text_ValerieDefeat,The power is ebbing away…$,"reviewed, no change needed"
+MtPyre_6F_Text_ValerieRegister,"Fufufu… I lost the match, but…\nI have this little ability…\pWithout ever laying my hands on\nyour COMLINK… Hiyah!$",reviewed AUTO draft
+MtPyre_6F_Text_ValerieRematchIntro,Behind you…\nWhat is it…$,"reviewed, no change needed"
+MtPyre_6F_Text_ValerieRematchDefeat,Something faded away…$,"reviewed, no change needed"
+MtPyre_6F_Text_CedricIntro,Have you lost your bearings?\nHave no fear for I am here!$,"reviewed, no change needed"
+MtPyre_6F_Text_CedricDefeat,Weren't you lost?$,"reviewed, no change needed"
+MtPyre_6F_Text_CedricPostBattle,I had this feeling that a lost TRAINER\nwould be panicked and easy to beat.\pIt's dirty and I won't try it again…$,"reviewed, no change needed"
+MtPyre_Summit_Text_Grunt1PostBattle,"Yeah, so you are strong…\nBut there're a lot of us!$","reviewed, no change needed"
+MtPyre_Summit_Text_Grunt2PostBattle,You don't know anything!\nSo why are you messing with us?$,"reviewed, no change needed"
+MtPyre_Summit_Text_OrbsHaveBeenTaken,The BLUE KYBER and RED KYBER taken by\nthose sinister men…\pThey must never be apart…\nI fear something terrible will happen…$,reviewed AUTO draft
+MtPyre_Summit_Text_WellThatTooIsFine,"I see…\nWell, that, too, is fine…$","reviewed, no change needed"
+MtPyre_Summit_Text_MaxieSilence,VADER: {PLAYER}…\p… … … … … …\n… … … … … …$,reviewed AUTO draft

@@ -1,0 +1,281 @@
+text_id,sw_text_raw,notes
+DewfordTown_Text_TinyIslandCommunity,"KACHIRHO is a small Wookiee village.\nIf something gets trendy here,\leveryone picks up on it right away.$",
+DewfordTown_Text_TownSign,KACHIRHO\n“A village among the wroshyr roots.”$,
+DewfordTown_Text_GymSign,KACHIRHO ARENA\nLEADER: TARFFUL\l“The mightiest arms on KASHYYYK!”$,
+Route104_Text_LandedInDewfordDeliverLetter,"HAN: Okay, kid.\nWe've landed on KASHYYYK.\pI suppose you're off to deliver that\nMESSAGE DISC to, who was it now, LEIA!$",
+DewfordTown_Text_SetSailBackToPetalburg,HAN: Have you delivered your\nMESSAGE DISC?\pOr did you want to fly back to\nMOS ENTHA?$,
+DewfordTown_Text_PetalburgWereSettingSail2,"HAN: MOS ENTHA it is, then!\pPunch it, CHEWIE!$",
+DewfordTown_Text_GoDeliverIllBeWaiting,HAN: Then you go on and deliver\nthe MESSAGE DISC. I'll be on the FALCON.$,
+DewfordTown_Text_BrineyLandedInDewford,"HAN: Okay, kid.\nWe've landed in KACHIRHO!\pJust tell me whenever you're\nready to fly again!$",
+DewfordTown_Text_WhereAreWeBound,"HAN: Hey, kid!\nFor you, the FALCON flies anytime!\pSo, where are we headed?$",
+DewfordTown_Text_PetalburgWereSettingSail,"HAN: MOS ENTHA, is it?\pPunch it, CHEWIE!$",
+DewfordTown_Text_SlateportWereSettingSail,"HAN: MOS EISLEY, is it?\pPunch it, CHEWIE!$",
+DewfordTown_Text_JustTellMeWhenYouNeedToSetSail,HAN: Just tell me whenever you're\nready to fly again!$,
+DewfordTown_Text_BrineyLandedInSlateportDeliverGoods,"HAN: Okay, kid.\nWe've landed in MOS EISLEY!\pI suppose you're going to see\nRIC OLIé and deliver the ORGANA PARTS?$",
+DewfordTown_Text_BrineyLandedInSlateport,"HAN: Okay, kid.\nWe've landed in MOS EISLEY!\pJust tell me whenever you're\nready to fly again!$",
+Route109_Text_BrineySailToDewfordQuestion,"HAN: I thought you were supposed\nto deliver the ORGANA PARTS.\pWant to fly back to\nKASHYYYK, then?$",
+Route109_Text_BrineyDewfordItIs,"HAN: KASHYYYK it is, then!\pPunch it, CHEWIE!$",
+Route109_Text_BrineyDeliverDevonGoods,HAN: Then you go on and deliver\nthe ORGANA PARTS. I'll be on the FALCON.$,
+Route109_Text_BrineyWhereAreWeBound,"HAN: Hey, kid!\nFor you, the FALCON flies anytime!\pSo, where are we headed?$",
+Route109_Text_BrineyTellMeWhenYouNeedToSail,HAN: Just tell me whenever you're\nready to fly again!$,
+DewfordTown_Gym_Text_GymGuideAdvice,"Hey, how's it going, ILUM-\nbound {PLAYER}?\pKACHIRHO's LEADER TARFFUL commands\nFIGHTING-type COMPANIONS.\pGoing against him with NORMAL-type\nCOMPANIONS is asking for trouble.\pFIGHTING COMPANIONS will lay a serious\nsmack down on NORMAL ones,\lso be careful!\pWhat's worse, the ARENA is as dark as\nthe SHADOWLANDS.\pBut it will get brighter after defeating\nthe TRAINERS in your way.\pHey, okay, go for it!$",
+DewfordTown_Gym_Text_JocelynPostBattle,"I'm not going to waste this loss.\nI'll use it to motivate me to train!\pOne day I'll become an ARENA LEADER…\pNo, I'll pass the TRIALS\nOF ILUM!$",
+DewfordTown_Gym_Text_BrendenIntro,I'll show you the gumption of\na spacer!$,
+DewfordTown_Gym_Text_BrendenPostBattle,Fine! You're worthy of seeing\nour ARENA LEADER.$,
+DewfordTown_Gym_Text_BrawlyIntro,"Rrrooaaarrgh!\nI'm TARFFUL, KACHIRHO's ARENA LEADER!\pI've wrestled the wild beasts of\nthe forest floor and grown tough\lin the pitch-black SHADOWLANDS!\pSo you wanted to challenge me?\nLet me see what you're made of!$",Tarfful speaks Basic in game text (Wookiee roar for flavour)
+DewfordTown_Gym_Text_BrawlyDefeat,"Hrrrnnn! You hit much harder\nthan I expected!\pYou knocked me flat!\pOkay, you've got me.\nTake this ARENA SHARD!$",
+DewfordTown_Gym_Text_BrawlyPostBattle,I can see your talent growing like\na wroshyr tree. One day it will tower\lover every TRAINER out there!$,
+DewfordTown_Gym_Text_BrawlyPreRematch,"TARFFUL: A wroshyr tree may bend, but\nit always stands up again.\pA mighty talent like you…\nI knew you would return!\pShow me how much higher\nyou've climbed!$",
+DewfordTown_Gym_Text_BrawlyRematchDefeat,Hrrnn!\nFlattened again!$,
+DewfordTown_Gym_Text_BrawlyPostRematch,TARFFUL: Battling is vast and deep.\nYou can't see the bottom.\lIt's just like the forests of KASHYYYK!$,
+DewfordTown_Gym_Text_BrawlyRematchNeedTwoMons,"TARFFUL: A wroshyr tree may bend, but\nit always stands up again.\pA mighty talent like you…\nI knew you would return!\pOh? You only have one COMPANION\nthat can battle.\pI'm sorry, but I'd like you to come back\nwith at least two COMPANIONS.$",
+DewfordTown_Hall_Text_TVShowAboutTrend,This whole business about\n“{STR_VAR_1}”…\lIsn't there a HoloNet show on it?$,
+DewfordTown_Hall_Text_IsTrendMorePopularAcrossSea,On other worlds…\pIs “{STR_VAR_1}”\neven more popular?$,
+DewfordTown_Hall_Text_BooksAboutTrend,IDENTIFYING GOOD\n“{STR_VAR_1}” &\lBAD “{STR_VAR_1}”…\pTHE LINK BETWEEN\n“{STR_VAR_1}” AND\lCOMPANIONS…\pUSEFUL\n“{STR_VAR_1}”…\pIt's neatly jammed with datacards on\n“{STR_VAR_1}.”$,
+DewfordTown_Hall_Text_OrganizeTrendParty,"Anyway, as I was saying earlier, we\nshould get together and organize a\l“{STR_VAR_1}” party\lin the village.$",
+DewfordTown_Hall_Text_LoveSludgeBombButTrendInToo,"I love SLUDGE BOMB.\pBut COMPANIONS with the move\n“{STR_VAR_1}”\lare in, too.$",
+DewfordTown_House1_Text_LotToBeSaidForLivingOnIsland,There's a lot to be said for living in\na small village like this in harmony\lwith COMPANIONS and the family.$,
+DewfordTown_House1_Text_LifeGoesSlowlyOnIsland,"I left the busy port of MOS EISLEY\nwhen I married my husband here.\pLife goes by slowly in this little\nvillage. But being surrounded by the\lgreat forest--that's happiness, too.$",
+DewfordTown_House2_Text_BrawlySoCool,"Wow, you came all the way\nto KACHIRHO?\pDid you maybe come here because you\nheard about TARFFUL?\pHe's so cool…\nEveryone idolizes him.$",
+DewfordTown_PokemonCenter_1F_Text_StoneCavern,There's a cave system at the edge\nof the village: the SHADOWLANDS.\pI've heard you can find rare\ncrystals down there.$,
+GraniteCave_1F_Text_GetsDarkAheadHereYouGo,"Hey, you.\nIt gets awfully dark ahead.\lIt'll be tough trying to explore.\pThat guy who came by earlier…\nLEIA, I think it was.\pShe knew how to use FLASH, so she\nought to be all right, but…\pFor us PROSPECTORS, helping out\nthose we meet is our motto.\pHere you go, I'll pass this on to you.$",
+GraniteCave_StevensRoom_Text_ImStevenLetterForMe,"My name is LEIA.\pI'm surveying rare crystals,\nso I travel here and there.\pOh?\nA MESSAGE DISC for me?$",Leia is surveying kyber for the Rebellion; 'rare stones' -> crystals
+GraniteCave_StevensRoom_Text_ThankYouTakeThis,"LEIA: Okay, thank you.\pYou went through all this trouble to\ndeliver that. My father thanks you, too.\pLet me see…\nI'll give you this TM.\pIt contains my favorite move,\nSTEEL WING.$",
+GraniteCave_StevensRoom_Text_CouldBecomeChampionLetsRegister,"LEIA: Your COMPANIONS appear quite\ncapable.\pIf you keep training, you could even\npass the TRIALS OF ILUM one day.\lThat's what I think.\pI know, since we've gotten to know each\nother, let's register one another in\lour COMLINKS.\p… … … … … …$",
+Route104_Text_DadPokenavCall,"… … … … … …\n… … … … … Beep!\pDAD: Oh, {PLAYER}?\p… … … … … …\nWhere are you now?\lIt sounds windy wherever you are.\pI just heard from SENATOR ORGANA\nabout your COMLINK, so I decided\lto give you a call.\pIt sounds like you're doing fine,\nso that's fine with me.\pYou take care now.\p… … … … … …\n… … … … … Click!$",
+Route106_Text_TrainerTips,TRAINER TIPS\pCatching COMPANIONS with a ROD:\nPress the A Button if you get a bite.$,
+Route109_Text_LittleKidsDartAround,"Little kids can dart around so quickly…\pYou don't dare take your eyes off them\nfor an instant. It's very taxing.\pMine are with my COMPANIONS, so they\nshould be okay, but…$",
+Route109_Text_ZigzagoonPicksUpLitter,"The water around these parts is clean.\pBut, I get my SCURRIER to pick up\nlitter from the shoreline at times.\pDirty water becomes rain and joins our\nrivers, which we drink from…\pIf we pollute the water, it all comes\nback to haunt us eventually.$",
+Route109_Text_TrainerTipsSign,TRAINER TIPS\pCOMPANIONS at the same level may not\nalways have identical stats.\pCOMPANIONS raised by TRAINERS are said\nto grow stronger than wild COMPANIONS.$,
+Route109_SeashoreHouse_Text_SeashoreHouseIntro,"I'm the owner of the SEASHORE HOUSE.\nBut you can call me MR. SEA!\pWhat I love above all is to see hot\nCOMPANION battles.\pLet me see that your heart burns hot!\pIf you can defeat all the TRAINERS\nhere, I'll reward your efforts.$",
+Route109_SeashoreHouse_Text_TakeTheseSodaPopBottles,"You're scorching hot!\nThose battles blazed!\lI'm more than just satisfied!\pAs thanks for showing me your hot\nstreak, I want you to take these.\pIt's six bottles of JAWA JUICE!$",
+Route109_SeashoreHouse_Text_WantToBuySodaPop,Want to buy some JAWA JUICE?\nCOMPANIONS love it!\pJust 300 credits a bottle!\nBuy some!$,
+Route109_SeashoreHouse_Text_JohannaIntro,Boring battles aren't worth the effort.\pFiery hot battles are what toughen up\nTRAINERS and COMPANIONS!$,
+Route109_SeashoreHouse_Text_SimonPostBattle,"If one of my COMPANIONS knew the move\nfor carrying me across water on its\lback, I could get rid of this inner tube.$",
+Route106_Text_ElliotRematchPostBattle,"Win or lose, COMPANIONS are the best!\nYou agree with me, right?$",
+Route109_Text_MelIntro,"MERI: We're, like, totally in love.\nOur romance is heating up KASHYYYK!$",
+Route109_Text_MelNotEnoughPokemon,"MERI: We're, like, truly in love.\nThat's why we make our COMPANIONS\lbattle together.$",
+DewfordTown_Text_HallSign,KACHIRHO HALL\n“Everyone's information exchange!”$,reviewed AUTO draft
+DewfordTown_Text_GettingItchToFish,This is a renowned fishing spot.\nAre you getting the itch to fish?$,"reviewed, no change needed"
+DewfordTown_Text_GiveYouOneOfMyRods,"I hear you, and I like what\nyou're saying!\pI'll give you one of my fishing RODS.$","reviewed, no change needed"
+DewfordTown_Text_ThrowInFishingAdvice,"And, as an added bonus, I'll even throw\nin a little fishing advice!\pFirst, you want to face the water,\nthen use the ROD.\pFocus your mind…\nIf you get a bite, pull on the ROD.\pSometimes you can snag something\nimmediately, but with bigger catches,\lyou need to time the pulls on your ROD\lto haul them in.$","reviewed, no change needed"
+DewfordTown_Text_ThatsTooBadThen,"Oh, is that so?\nThat's too bad, then.$","reviewed, no change needed"
+DewfordTown_Text_HowsYourFishing,Yo!\nHow's your fishing?$,"reviewed, no change needed"
+DewfordTown_Text_GreatHaulInSomeBigOnes,Is that right! That's great!\nHaul in some big ones!$,"reviewed, no change needed"
+DewfordTown_Text_FishingAdvice,"Oh, hey, don't get down on yourself!\nI'll give you a little fishing advice.\pFirst, you want to face the water,\nthen use the ROD.\pFocus your mind…\nIf you get a bite, pull the ROD.\pSometimes you can snag something\nimmediately, but with bigger catches,\lyou need to time the pulls on your ROD\lto haul them in.$","reviewed, no change needed"
+DewfordTown_Text_XIsTheBiggestHappeningThingRight,"I like what's hip, happening, and trendy.\nI'm always checking it out.\pListen, have you heard about this new\n“{STR_VAR_1}”?\pThat's right!\nOf course you know!\pI mean, sheesh,\n“{STR_VAR_1}”…\lIt's the hottest thing in cool!\pWherever you're from,\n“{STR_VAR_1}”\lis the biggest happening thing, right?$","reviewed, no change needed"
+DewfordTown_Text_TellMeWhatsNewAndIn,"Hunh?\nIt's not the hip and happening thing?\pWell, hey, you have to tell me,\nwhat's new and what's “in”?$","reviewed, no change needed"
+DewfordTown_Text_OfCourseIKnowAboutThat,"Hunh?\n“{STR_VAR_2}”?\p… …\p…Uh… Yeah! That's right!\nYeah, I knew that! Knew it all along!\pOf course I know about that!\n“{STR_VAR_2},” right?\pYeah, that's it, it's there!\nIsn't “{STR_VAR_2}”\lthe coolest, or what?\pIt's the hippest thing in hip.\nYou think I'd not know about it?\p“{STR_VAR_1}”…\nIt's, like, so five minutes ago.\pNow, “{STR_VAR_2}” is\nwhat's vital and in tune with the times!$","reviewed, no change needed"
+DewfordTown_Text_XHuhIThinkYIsCool,"Hmm…\n“{STR_VAR_2},” huh?\pBut personally, I think\n“{STR_VAR_1}”\lis what's real in cool.$","reviewed, no change needed"
+DewfordTown_Text_HearOfAnyTrendsComeShareWithMe,"Well, if you hear of any happening new\ntrends, come share them with me, okay?$","reviewed, no change needed"
+DewfordTown_Text_YeahDefinitionOfInRightNow,"Yeah, absolutely right!\p“{STR_VAR_1}” is the\ndefinition of “in” right now.$","reviewed, no change needed"
+DewfordTown_Gym_Text_GymGuidePostVictory,"Whoah! It's turned too bright in here!\pYour future is bright, too!$","reviewed, no change needed"
+DewfordTown_Gym_Text_TakaoIntro,Might is right!\nCome on!$,"reviewed, no change needed"
+DewfordTown_Gym_Text_TakaoDefeat,Not enough power…$,"reviewed, no change needed"
+DewfordTown_Gym_Text_TakaoPostBattle,Your skill overcame my strength!\nYour technique is commendable!$,"reviewed, no change needed"
+DewfordTown_Gym_Text_JocelynIntro,There's no need for TARFFUL to be\ninvolved!\pI'll crush you!$,reviewed AUTO draft
+DewfordTown_Gym_Text_JocelynDefeat,But… How?\nHow could I lose so easily?$,"reviewed, no change needed"
+DewfordTown_Gym_Text_LauraIntro,Don't you dare brush me off!\nIt's not my fault if you cry!$,"reviewed, no change needed"
+DewfordTown_Gym_Text_LauraDefeat,Waaaaaaah!\nI lost!$,"reviewed, no change needed"
+DewfordTown_Gym_Text_LauraPostBattle,"I battle in the dark to make my heart\nstronger.\pBut because it's so dark, I can never\nsee TARFFUL's face…$",reviewed AUTO draft
+DewfordTown_Gym_Text_LilithIntro,Ufufu…\nAre you stumbling around in the dark?$,"reviewed, no change needed"
+DewfordTown_Gym_Text_LilithDefeat,"Oh, you…\nI don't want to know you!$","reviewed, no change needed"
+DewfordTown_Gym_Text_LilithPostBattle,You deserve to stay lost and end up\nback at the entrance again!$,"reviewed, no change needed"
+DewfordTown_Gym_Text_BrendenDefeat,How'd this happen?\nIt's not like me to lose this way!$,"reviewed, no change needed"
+DewfordTown_Gym_Text_CristianIntro,"If you mean to pass, it has to be\nthrough me!$","reviewed, no change needed"
+DewfordTown_Gym_Text_CristianDefeat,Grrrrr!\nVastly overpowered!$,"reviewed, no change needed"
+DewfordTown_Gym_Text_CristianPostBattle,You win!\nGo after that SHARD!$,reviewed AUTO draft
+DewfordTown_Gym_Text_ReceivedKnuckleBadge,{PLAYER} received the WROSHYR SHARD\nfrom TARFFUL.$,reviewed AUTO draft
+DewfordTown_Gym_Text_KnuckleBadgeInfoTakeThis,"The WROSHYR SHARD makes all\nCOMPANIONS up to Level 30, even those\lyou get in trades, obey without\lquestion.\pAnd, you'll be able to use the HM move\nFLASH outside of battle.\pIf you'd like, use this TECHNICAL\nMACHINE, too.$",reviewed AUTO draft
+DewfordTown_Gym_Text_ExplainBulkUp,That TM08 contains BULK UP.\pIt's a move that raises both ATTACK\nand DEFENSE stats.\p… … … … … …$,"reviewed, no change needed"
+DewfordTown_Gym_Text_RegisteredBrawly,Registered ARENA LEADER TARFFUL\nin the COMLINK.$,reviewed AUTO draft
+DewfordTown_Gym_Text_GymStatue,KACHIRHO ARENA$,reviewed AUTO draft
+DewfordTown_Gym_Text_GymStatueCertified,KACHIRHO ARENA\pTARFFUL'S CERTIFIED TRAINERS:\n{PLAYER}$,reviewed AUTO draft
+DewfordTown_Hall_Text_CantImagineLifeWithoutTrend,"What's in vogue? Why, it has to be\n“{STR_VAR_1}”!\pI can't imagine what life would be like\nwithout “{STR_VAR_1}”!$","reviewed, no change needed"
+DewfordTown_Hall_Text_GettingBoredOfTrend,"What's in vogue? Why, it has to be\n“{STR_VAR_1}”!\pBut I'm getting kind of bored with it.\pI should look for the next big thing.$","reviewed, no change needed"
+DewfordTown_Hall_Text_TeachingMonAboutTrend,"I'm teaching my COMPANION about\n“{STR_VAR_1},”\lbut it's not going well.\pIt's a bit too much, I think.$",reviewed AUTO draft
+DewfordTown_Hall_Text_DeepLinkBetweenXAndY,I'm studying up on the hip and trendy\n“{STR_VAR_1}” now.\pIs it true that there's a deep link\nbetween “{STR_VAR_1}”\land “{STR_VAR_2}”?$,"reviewed, no change needed"
+DewfordTown_Hall_Text_MyHunchWasRight,"Oh!\nSo, my hunch was right!\pI'm one step closer to being hip and\nhappening, yowza!$","reviewed, no change needed"
+DewfordTown_Hall_Text_NotEasyToKeepUp,What?!\nIs that so?!\pIt's not easy for an older fellow like\nme to keep up with trends!$,"reviewed, no change needed"
+DewfordTown_Hall_Text_CollectTrendMerchandise,"I collect official\n“{STR_VAR_1}”\llicensed merchandise.\pI have official\n“{STR_VAR_1}” DOLLS…\pOfficial “{STR_VAR_1}”\nbrand clothing…\pAnd officially licensed\n“{STR_VAR_1}”\lpicture books.\pHeheh, I own!\nI'm not sharing anything with you!$","reviewed, no change needed"
+DewfordTown_Hall_Text_TrendsScream,“{STR_VAR_1}'S\nSCREAM” is the title.$,"reviewed, no change needed"
+DewfordTown_Hall_Text_TrendsSmile,“{STR_VAR_1}'S\nSMILE” is the title.$,"reviewed, no change needed"
+DewfordTown_Hall_Text_LastTrend,It's titled “THE LAST\n{STR_VAR_1}”.$,"reviewed, no change needed"
+DewfordTown_Hall_Text_BirthOfTrend,It's titled “THE BIRTH OF\n{STR_VAR_1}”.$,"reviewed, no change needed"
+DewfordTown_Hall_Text_SawTrendCoolestThing,"I saw “{STR_VAR_1}”!\nCool, huh?\pIt's, like, the coolest thing going!\pIt was awesome!\nIt was the real thing, oh yeah!$","reviewed, no change needed"
+DewfordTown_Hall_Text_AllegedTrendNotAuthentic,"Oh, no, no, no.\pThat alleged\n“{STR_VAR_1}”\lyou claim to have seen--it's not.\pThe authentic article is much…\nHow should I say it?\lSharper, yet more mellow!\pAh, no matter. It's astonishing!$","reviewed, no change needed"
+DewfordTown_Hall_Text_ComposedTrendThemeSong,"Hey, listen, I composed a theme song\nfor “{STR_VAR_1}.”\p“{STR_VAR_1}”\nis really popular right now.\pOkay, listen!\n… …\pOh!\n{STR_VAR_1}!\pWonderful\n{STR_VAR_1}!$","reviewed, no change needed"
+DewfordTown_Hall_Text_WorkOnYourSinging,"… …\pI dare say, chap, it would pay for you\nto work on your singing before you\ltrifle yourself with\l“{STR_VAR_1}.”$","reviewed, no change needed"
+DewfordTown_Hall_Text_BrilliantIndeed,"Oh, a smashing good idea!\pIt will settle once and for all\nwho is the best at\l“{STR_VAR_1}.”\lBrilliant, indeed!\pStarting today, our lives will revolve\naround “{STR_VAR_1}”!$","reviewed, no change needed"
+DewfordTown_Hall_Text_TrendHasBecomePartOfLife,"I was thinking, though…\pWouldn't you agree that\n“{STR_VAR_1}” has\lgrown from being something trendy to\lbeing a part of our daily lives?$","reviewed, no change needed"
+DewfordTown_Hall_Text_TrendWeighsHeavilyOnMind,"Beg pardon?\nThat much, what?\pHowever, it's true that\n“{STR_VAR_1}”\lweighs heavily on your mind, whether\lyou're awake or asleep.\pAbsolutely, you're the\n“{STR_VAR_1}”\lPROFESSOR, old sport!$","reviewed, no change needed"
+DewfordTown_Hall_Text_IfWeTeamUpWellBeInvincible,"If you and me team up as a combo,\nwe'll be invincible when it comes to all\lthings “{STR_VAR_1}”!$","reviewed, no change needed"
+DewfordTown_Hall_Text_WellBeTrendDuo,"Spot on, my friend!\pWe shall be the\n“{STR_VAR_1}” DUO!\pIsn't that a ripe image?\nHahahah!$","reviewed, no change needed"
+DewfordTown_Hall_Text_GiveYouSludgeBomb,"For me, SLUDGE BOMB is at the peak\nof popularity. It's the one.\pHunh? You're telling me that you don't\nknow about SLUDGE BOMB?\pThat's outright pitiful.\nI'll give you one.$","reviewed, no change needed"
+DewfordTown_House1_Text_Zigzagoon,SCURRIER: Guguuh!$,reviewed AUTO draft
+DewfordTown_House2_Text_WantYouToHaveSilkScarf,"Gorge your eyes on this!\pIt's a SILK SCARF. It's right at the\ncutting edge of fashion, yeah!\pOh, I can see your eyes twinkling!\nYou appreciate my dazzling style!\pOh, you're a delight!\nHere you go. I want you to have it!$","reviewed, no change needed"
+DewfordTown_House2_Text_NoRoom,"Oh, you don't have room?\pNow, listen tight, this SCARF is a must-\nhave! Why, I would sell all my items\lin order to get it!$","reviewed, no change needed"
+DewfordTown_House2_Text_ExplainSilkScarf,The SILK SCARF raises the power of\nNORMAL-type moves.\pIt's a marvelous SCARF that will go\nwith almost all COMPANIONS!$,reviewed AUTO draft
+DewfordTown_PokemonCenter_1F_Text_FaintedMonCanUseHM,"Even if a COMPANION faints and can't\nbattle, it can still use a move learned\lfrom a HIDDEN MACHINE (HM).$",reviewed AUTO draft
+GraniteCave_1F_Text_ExplainFlash,"Teach that hidden move FLASH to\na COMPANION and use it.\pIt lights up even the inky darkness\nof caves.\pBut, to use it, you need the ARENA SHARD\nfrom KACHIRHO's ARENA.$",reviewed AUTO draft
+GraniteCave_StevensRoom_Text_RegisteredSteven,Registered LEIA\nin the COMLINK.$,reviewed AUTO draft
+GraniteCave_StevensRoom_Text_IveGotToHurryAlong,"Now, I've got to hurry along.$","reviewed, no change needed"
+GraniteCave_StevensRoom_Text_OhBagIsFull,"Oh, your BAG is full…\nThat's too bad, then.$","reviewed, no change needed"
+Route104_Text_RegisteredDadInPokenav,Registered DAD DORAN\nin the COMLINK.$,reviewed AUTO draft
+Route109_Text_ChillAtMyPapasSpot,"Yo, TRAINERS!\nWhether you're hot to trot,\lor cool cat not,\lchill at my papa's spot!$","reviewed, no change needed"
+Route109_Text_SandCastleTakingLongTime,Our sand castle's taking a long time\nto make.$,"reviewed, no change needed"
+Route109_Text_YouCanHaveThis,You can have this!$,"reviewed, no change needed"
+Route109_Text_WereGoingToMakeBigCastle,We're going to get all the sand from\nthe beach and make a big castle!\pAnd then we're going to be a king and\nqueen.\pWe'll let you be a servant.$,"reviewed, no change needed"
+Route109_Text_ZigzagoonCry,SCURRIER: Guguu?$,reviewed AUTO draft
+Route109_Text_SeashoreHouseSign,SEASHORE HOUSE\p“May hot battles rage on hot sands!\nThe place for hot TRAINERS!”$,"reviewed, no change needed"
+Route109_SeashoreHouse_Text_ShowMeSomeHotMatches,Show me some hot matches!\pI run this SEASHORE HOUSE just for\nthat reason alone!$,"reviewed, no change needed"
+Route109_SeashoreHouse_Text_BagFull,"Oh, but hey, your BAG's jammed full.\nI'll hang on to these for you.$","reviewed, no change needed"
+Route109_SeashoreHouse_Text_HereYouGo,Here you go!$,"reviewed, no change needed"
+Route109_SeashoreHouse_Text_NotEnoughMoney,You don't have the money.$,"reviewed, no change needed"
+Route109_SeashoreHouse_Text_ThatsTooBad,No?\nThat's too bad.$,"reviewed, no change needed"
+Route109_SeashoreHouse_Text_DwayneIntro,"If you're looking for a battle in the\nSEASHORE HOUSE, you'll find no\lhotter TRAINER than me, matey!$","reviewed, no change needed"
+Route109_SeashoreHouse_Text_DwayneDefeated,"That was a hot battle!\nI can accept that loss, matey!$","reviewed, no change needed"
+Route109_SeashoreHouse_Text_DwaynePostBattle,"Whenever I'm in MOS EISLEY, I enjoy\nhot battles and ice-cold JAWA JUICE!$",reviewed AUTO draft
+Route109_SeashoreHouse_Text_JohannaDefeated,That's hot!$,"reviewed, no change needed"
+Route109_SeashoreHouse_Text_JohannaPostBattle,"Whew, I'm all thirsty.\nMaybe I'll have a JAWA JUICE.$",reviewed AUTO draft
+Route109_SeashoreHouse_Text_SimonIntro,"I'm going to show you how great\nmy COMPANIONS are, but don't cry!$",reviewed AUTO draft
+Route109_SeashoreHouse_Text_SimonDefeated,"…I lost, but I won't cry…$","reviewed, no change needed"
+Route105_Text_FosterIntro,There's supposed to be a mystical\nrock around here.\lDo you know anything about it?$,"reviewed, no change needed"
+Route105_Text_FosterDefeated,"I was thinking too much about that\nrock, while my COMPANION remained weak…$",reviewed AUTO draft
+Route105_Text_FosterPostBattle,I can spend hours and hours staring\nat a nice rock without growing bored.$,"reviewed, no change needed"
+Route105_Text_LuisIntro,"Whew! I was worried that a kid was\ndrowning when I saw you.\pYou seem to be okay, so what do you\nsay to a battle?$","reviewed, no change needed"
+Route105_Text_LuisDefeated,Glub… Glub…$,"reviewed, no change needed"
+Route105_Text_LuisPostBattle,"If you are drowning, the signal is to\nwave one arm toward the beach.$","reviewed, no change needed"
+Route105_Text_DominikIntro,Swimming the deep blue sea…\nIt feels the greatest!$,"reviewed, no change needed"
+Route105_Text_DominikDefeated,I lost…\nNow I'm feeling blue…$,"reviewed, no change needed"
+Route105_Text_DominikPostBattle,"Why is the sea blue?\pI learned about that at the MUSEUM in\nMOS EISLEY, but I forgot.$",reviewed AUTO draft
+Route105_Text_BeverlyIntro,My body feels lighter in the water.\nIt's as if I've gotten slimmer!$,"reviewed, no change needed"
+Route105_Text_BeverlyDefeated,I'm floating…$,"reviewed, no change needed"
+Route105_Text_PostBattle,Your body weight is reduced to just\none tenth in the water.\pThat would make me…\nWhoops! I'm not telling you my weight!$,"reviewed, no change needed"
+Route105_Text_ImaniIntro,"The blue, blue sky…\nThe vast sea…\lIt's so peaceful…$","reviewed, no change needed"
+Route105_Text_ImaniDefeated,I lost while I was lounging!$,"reviewed, no change needed"
+Route105_Text_ImaniPostBattle,I want to be told I'm relaxing to be\nwith. Giggle.$,"reviewed, no change needed"
+Route105_Text_AndresIntro,I'm convinced that the sea keeps\nsecrets from us.$,"reviewed, no change needed"
+Route105_Text_AndresDefeated,Yes…\nI am no good at battling…$,"reviewed, no change needed"
+Route105_Text_AndresPostBattle,I'm sure there are many secrets to be\ndiscovered in the world's seas.\pI mean to find them all!$,"reviewed, no change needed"
+Route105_Text_AndresRegister,"Huh? I'm so weak, but you're willing\nto register me in your COMLINK?$",reviewed AUTO draft
+Route105_Text_AndresRematchIntro,I've told you that I'm weak…\nAre you sure you want to do this?$,"reviewed, no change needed"
+Route105_Text_AndresRematchDefeated,Yes…\nI didn't think I could win.$,"reviewed, no change needed"
+Route105_Text_AndresRematchPostBattle,"I may be weak at battling, but my\ndrive to explore can't be bested.\pI will travel the seas all around\nthe world!$","reviewed, no change needed"
+Route105_Text_JosueIntro,I'm exhausted from swimming.\nI'm just not used to it.\pI need a battle for a change of pace!$,"reviewed, no change needed"
+Route105_Text_JosueDefeated,I lost because I battled at sea.$,"reviewed, no change needed"
+Route105_Text_JosuePostBattle,"Yeah, for me, the sky is a much better\nmatch than the sea.$","reviewed, no change needed"
+Route106_Text_ElliotIntro,"Which do you prefer, fishing in the\nsea or a stream?$","reviewed, no change needed"
+Route106_Text_ElliotDefeated,"Like in deep-sea fishing, I lost\nspectacularly!$","reviewed, no change needed"
+Route106_Text_ElliotPostBattle,"Fishing is the greatest whether it's\nin the sea or a stream.\lYou agree with me, right?$","reviewed, no change needed"
+Route106_Text_ElliotRegister,"Fishing's great, but so is battling.\nIf you don't mind, can we meet again?$","reviewed, no change needed"
+Route106_Text_ElliotRematchIntro,I caught a bunch of COMPANIONS\nfishing. I'll show you an impressive\lbattle!$,reviewed AUTO draft
+Route106_Text_ElliotRematchDefeated,I lost again spectacularly!$,"reviewed, no change needed"
+Route106_Text_NedIntro,What do people do if they need to go\nto a washroom?\pWhat if my ROD hooks a big one while\nI'm in the washroom? I just can't go…$,"reviewed, no change needed"
+Route106_Text_NedDefeated,I lost because I'm trying to not go\nto the washroom…$,"reviewed, no change needed"
+Route106_Text_NedPostBattle,"Oh, no! I've got this feeling I'll hook\na big one!$","reviewed, no change needed"
+Route106_Text_DouglasIntro,"Hahahah! I'm a lousy runner, but in\nthe water you can't catch me!$","reviewed, no change needed"
+Route106_Text_DouglasDefeated,I give up!$,"reviewed, no change needed"
+Route106_Text_DouglasPostBattle,I wouldn't lose in a swim race…$,"reviewed, no change needed"
+Route106_Text_KylaIntro,The sea is my backyard. I'm not going\nto take it easy because you're a kid!$,"reviewed, no change needed"
+Route106_Text_KylaDefeated,Did you take it easy on me by any\nchance?$,"reviewed, no change needed"
+Route106_Text_KylaPostBattle,Drifting along with the waves…\nI love it! Why don't you give it a try?$,"reviewed, no change needed"
+Route107_Text_DarrinIntro,Yawn…\pI must have drifted off to sleep while\nI was drifting in the waves.$,"reviewed, no change needed"
+Route107_Text_DarrinDefeated,"Ahaha, I lost…\nI'll take a snooze, I think…$","reviewed, no change needed"
+Route107_Text_DarrinPostBattle,"Floating and being rocked by\nthe waves--it's like sleeping in\la plush, comfy bed.$","reviewed, no change needed"
+Route107_Text_TonyIntro,The sea is like my backyard.\nLet's battle!$,"reviewed, no change needed"
+Route107_Text_TonyDefeated,I lost on my home field…\nI'm in shock!$,"reviewed, no change needed"
+Route107_Text_TonyPostBattle,"I swim the seas with a heart full of\ndreams…\pIt's a song!\nAnyways, I'm swimming some more.$","reviewed, no change needed"
+Route107_Text_TonyRegister,"You've shocked me to the bone!\nWell, so you won't forget me…$","reviewed, no change needed"
+Route107_Text_TonyRematchIntro,"Swimming in the big, wide sea,\nmy COMPANION has grown stronger!$",reviewed AUTO draft
+Route107_Text_TonyRematchDefeated,"What a shock!\pMy COMPANION has gotten stronger, but\nI stayed weak as a TRAINER!$",reviewed AUTO draft
+Route107_Text_TonyRematchPostBattle,What you learn in battle makes you\na stronger TRAINER.\lThe waves taught me that.$,"reviewed, no change needed"
+Route107_Text_DeniseIntro,Do you know a little town called\nKACHIRHO?$,reviewed AUTO draft
+Route107_Text_DeniseDefeated,I hate this!$,"reviewed, no change needed"
+Route107_Text_DenisePostBattle,A weird saying is getting really\ntrendy at KACHIRHO HALL.$,reviewed AUTO draft
+Route107_Text_BethIntro,"Did you want to battle me?\nSure, I'll go with you!$","reviewed, no change needed"
+Route107_Text_BethDefeated,I wasn't good enough for you.$,"reviewed, no change needed"
+Route107_Text_BethPostBattle,"I think you're going to keep getting\nbetter. I'll go for it, too!$","reviewed, no change needed"
+Route107_Text_LisaIntro,LENA: We challenge you as a sister\nand brother!$,reviewed AUTO draft
+Route107_Text_LisaDefeated,LENA: Awesome.\nYou're in a different class of tough.$,reviewed AUTO draft
+Route107_Text_LisaPostBattle,LENA: Do you have any friends who\nwould go to the beach with you?$,reviewed AUTO draft
+Route107_Text_LisaNotEnoughPokemon,"LENA: If you want to battle with us,\nbring more COMPANIONS.$",reviewed AUTO draft
+Route107_Text_RayIntro,"ROK: We always battle COMPANION,\nme and my sister.\pI always lose, but we can beat you\n2-on-2!$",reviewed AUTO draft
+Route107_Text_RayDefeated,"ROK: Wowee, you're at a higher level\nthan us!$",reviewed AUTO draft
+Route107_Text_RayPostBattle,"ROK: My sister gave me my COMPANION.\nI raised it, and now it's my important\lpartner!$",reviewed AUTO draft
+Route107_Text_RayNotEnoughPokemon,"ROK: If you want to battle us,\ngo bring some more COMPANIONS!$",reviewed AUTO draft
+Route107_Text_CamronIntro,"I'm in the middle of a triathlon,\nbut I'm nowhere near tired!$","reviewed, no change needed"
+Route107_Text_CamronDefeated,That exhausted me…$,"reviewed, no change needed"
+Route107_Text_CamronPostBattle,I still have swimming and running left\nto do after this.\pAm I going to be okay?$,"reviewed, no change needed"
+Route108_Text_JeromeIntro,My dream is to swim the world's seven\nseas!$,"reviewed, no change needed"
+Route108_Text_JeromeDefeated,I won't be able to swim the seven seas\nlike this…$,"reviewed, no change needed"
+Route108_Text_JeromePostBattle,Playing with marine COMPANION is one of\nthe pleasures of swimming!$,reviewed AUTO draft
+Route108_Text_MatthewIntro,"Ahoy, there! Are you going out to\nthe REPUBLIC WRECK, too?$",reviewed AUTO draft
+Route108_Text_MatthewDefeated,I'm sinking!\nGlub… Glub…$,"reviewed, no change needed"
+Route108_Text_MatthewPostBattle,Some people even go inside that\nREPUBLIC WRECK.$,reviewed AUTO draft
+Route108_Text_TaraIntro,My liar of a boyfriend told me that\nI look great in a bikini…$,"reviewed, no change needed"
+Route108_Text_TaraDefeated,"Oh, boo!$","reviewed, no change needed"
+Route108_Text_TaraPostBattle,"Even if it's a lie, I love being told\nI look great…\lWe girls are so complex…$","reviewed, no change needed"
+Route108_Text_MissyIntro,I love the sea!\nI forget all my worries when I swim!$,"reviewed, no change needed"
+Route108_Text_MissyDefeated,"When I lose a battle, I get all\nstressed out!$","reviewed, no change needed"
+Route108_Text_MissyPostBattle,Work off your stress by swimming!\nIt's so healthy!$,"reviewed, no change needed"
+Route108_Text_CoryIntro,"I love WATER-type COMPANIONS.\nI love other COMPANIONS, too!$",reviewed AUTO draft
+Route108_Text_CoryDefeated,Waaah! I lost!\nWaaah! Waaah!$,"reviewed, no change needed"
+Route108_Text_CoryPostBattle,Shouting is good for me!\nIt uplifts me!$,"reviewed, no change needed"
+Route108_Text_CoryRegister,"I love tough TRAINERS, too!\nRegister me in your COMLINK!$",reviewed AUTO draft
+Route108_Text_CoryRematchIntro,"Win or lose, I love battling at sea!$","reviewed, no change needed"
+Route108_Text_CoryRematchDefeated,Waaah! I lost again!\nWaaah! Waaah!$,"reviewed, no change needed"
+Route108_Text_CoryRematchPostBattle,"If you're faced with a challenge,\ntry shouting at the sea!$","reviewed, no change needed"
+Route108_Text_CarolinaIntro,I take huge pride in my COMPANION.\nWe'll show you one speedy battle!$,reviewed AUTO draft
+Route108_Text_CarolinaDefeated,That wasn't cute at all.$,"reviewed, no change needed"
+Route108_Text_CarolinaPostBattle,"Since I'm at sea like this, I wouldn't\nmind putting on a pink, frilly swimsuit…$","reviewed, no change needed"
+Route109_Text_DavidIntro,Hiyah! Look at my chiseled abs!\nThis is what you call “cut”!$,"reviewed, no change needed"
+Route109_Text_DavidDefeated,Aiyah!\nFlubbed out!$,"reviewed, no change needed"
+Route109_Text_DavidPostBattle,Hiyah!\pMy sculpted abs have nothing to do\nwith COMPANION battles!$,reviewed AUTO draft
+Route109_Text_AliceIntro,Are you properly protected against\nthe sun?$,"reviewed, no change needed"
+Route109_Text_AliceDefeated,"Ouch, ouch, ouch!$","reviewed, no change needed"
+Route109_Text_AlicePostBattle,Cheeks are the most prone to burning!$,"reviewed, no change needed"
+Route109_Text_HueyIntro,"I've laid anchor in ports around\nthe world, but MOS EISLEY's the best.$",reviewed AUTO draft
+Route109_Text_HueyDefeated,You're the best!$,"reviewed, no change needed"
+Route109_Text_HueyPostBattle,In the best port was the best\nTRAINER…$,"reviewed, no change needed"
+Route109_Text_EdmondIntro,Urrrrppp…\nBattle? With me?$,"reviewed, no change needed"
+Route109_Text_EdmondDefeated,Urp… Ooooooohhhhhh…\nUrrrrpppp…$,"reviewed, no change needed"
+Route109_Text_EdmondPostBattle,"I'm usually stronger than this!\nI'm just seasick as a dog!\pI'm a SAILOR, but…$","reviewed, no change needed"
+Route109_Text_RickyIntro,I'm thirsty… I could go for a JAWA JUICE\nat the SEASHORE HOUSE…$,reviewed AUTO draft
+Route109_Text_RickyDefeated,Groan…$,"reviewed, no change needed"
+Route109_Text_RickyPostBattle,I'm getting famished… My inner tube\nlooks like a giant doughnut…$,"reviewed, no change needed"
+Route109_Text_RickyRegister,Will you have another match with me\nwhen I'm not all thirsty?$,"reviewed, no change needed"
+Route109_Text_RickyRematchIntro,"I'm hungry, but I've got enough pep in\nme for a battle!$","reviewed, no change needed"
+Route109_Text_RickyRematchDefeated,I lost…\nIt's because I'm hungry…$,"reviewed, no change needed"
+Route109_Text_RickyRematchPostBattle,"When you eat on a beach, everything\nseems to taste a little better.$","reviewed, no change needed"
+Route109_Text_LolaIntro,Doesn't a beach umbrella look like\na giant flower?$,"reviewed, no change needed"
+Route109_Text_LolaDefeated,Mommy!$,"reviewed, no change needed"
+Route109_Text_LolaPostBattle,"If you look at the beach from the sky,\nit looks like a big flower garden!$","reviewed, no change needed"
+Route109_Text_LolaRegister,Me?\nI'm here every day!$,"reviewed, no change needed"
+Route109_Text_LolaRematchIntro,I'm not losing to you again!\nThat's why I have my inner tube!$,"reviewed, no change needed"
+Route109_Text_LolaRematchDefeated,Mommy!$,"reviewed, no change needed"
+Route109_Text_LolaRematchPostBattle,"If I have an inner tube, me and my\nCOMPANION's cuteness goes way up!$",reviewed AUTO draft
+Route109_Text_AustinaIntro,"I can't swim without my inner tube,\nbut I won't lose at COMPANION!$",reviewed AUTO draft
+Route109_Text_AustinaDefeated,Did I lose because I have an inner\ntube?$,"reviewed, no change needed"
+Route109_Text_AustinaPostBattle,My inner tube is a fashion item.\nI can't be seen without it.$,"reviewed, no change needed"
+Route109_Text_GwenIntro,"Hi, big TRAINER.\nWill you battle with me?$","reviewed, no change needed"
+Route109_Text_GwenDefeated,"Oh, you're strong.$","reviewed, no change needed"
+Route109_Text_GwenPostBattle,How did you get to be so strong?$,"reviewed, no change needed"
+Route109_Text_CarterIntro,Wahahah! This dude's going to catch\nhimself a big one!$,"reviewed, no change needed"
+Route109_Text_CarterDefeated,This dude just lost one…$,"reviewed, no change needed"
+Route109_Text_CarterPostBattle,"This dude thinks you're a big one.\nNo, you're a big-one-to-be!$","reviewed, no change needed"
+Route109_Text_PaulIntro,"PAZ: Well, this is a mood-breaker.\pI wish you wouldn't disturb our\nprecious time together.$",reviewed AUTO draft
+Route109_Text_PaulDefeated,"PAZ: Well, I give up.$",reviewed AUTO draft
+Route109_Text_PaulPostBattle,"PAZ: Well, don't tell anyone that\nwe're here.\lThis is just our private world of two!$",reviewed AUTO draft
+Route109_Text_PaulNotEnoughPokemon,"PAZ: We're totally, deeply in love. That's\nwhy we make our COMPANION battle\ltogether.$",reviewed AUTO draft
+Route109_Text_MelDefeated,"MERI: We lost, and it's my fault!\nPAUL will hate me!$",reviewed AUTO draft
+Route109_Text_MelPostBattle,"MERI: Um, PAUL, are you angry with me?\nPlease don't be angry.$",reviewed AUTO draft
+Route109_Text_ChandlerIntro,Tadaah! See?\nMy inner tube's round!$,"reviewed, no change needed"
+Route109_Text_ChandlerDefeated,"Oh, oh!\nToo bad!$","reviewed, no change needed"
+Route109_Text_ChandlerPostBattle,"After I showed you my round inner\ntube, too…$","reviewed, no change needed"
+Route109_Text_HaileyIntro,"I can't swim, so I'm pretending\nto swim.$","reviewed, no change needed"
+Route109_Text_HaileyDefeated,I thought so!\nI didn't think we could win.$,"reviewed, no change needed"
+Route109_Text_HaileyPostBattle,"When I learn how to swim, I think\nmy COMPANION will become tougher.$",reviewed AUTO draft
+Route109_Text_ElijahIntro,"For a guy as macho as me, this kind\nof COMPANION is the perfect match!$",reviewed AUTO draft
+Route109_Text_ElijahDefeated,"I'm cool even in defeat, hey?$","reviewed, no change needed"
+Route109_Text_ElijahPostBattle,"For a guy as macho as me, a port\nis the perfect setting!\pI guess I'll head for MOS EISLEY.$",reviewed AUTO draft

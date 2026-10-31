@@ -1,0 +1,76 @@
+# tileset folder|Star Wars subject (planet / biome). Animation frames inherit the folder's subject.
+primary/building|Interiors: adobe and durasteel rooms shared by every planet
+primary/general|Outdoors: Tatooine desert scrub, sand, rock and water edges shared by every planet
+primary/secret_base|HIDEOUT interior basics
+secondary/battle_arena|GRAND ARENA: BATTLE ARENA (4-LOM's ring)
+secondary/battle_dome|GRAND ARENA: BATTLE DOME (Dengar's stadium)
+secondary/battle_factory|GRAND ARENA: BATTLE FACTORY (IG-88's droid works)
+secondary/battle_frontier|GRAND ARENA: shared facility interiors
+secondary/battle_frontier_outside_east|GRAND ARENA plaza, east (Lando's arena world)
+secondary/battle_frontier_outside_west|GRAND ARENA plaza, west, with the starliner pad
+secondary/battle_frontier_ranking_hall|GRAND ARENA ranking hall
+secondary/battle_palace|GRAND ARENA: BATTLE PALACE (Zuckuss's temple)
+secondary/battle_pike|GRAND ARENA: BATTLE PIKE (Gardulla's Hutt den)
+secondary/battle_pyramid|GRAND ARENA: BATTLE PYRAMID (Dexter's ancient ziggurat)
+secondary/battle_tent|BATTLE TENT: desert canvas tent
+secondary/bike_shop|Wald's speeder shop, Mos Espa
+secondary/brendans_mays_house|Player's homestead, Mos Pelgo (Tatooine dome house)
+secondary/cable_club|HOLONET CLUB upstairs at the Bacta Center
+secondary/cave|Caves: sandstone, Kashyyyk roots, Sullust lava tubes, Ilum ice
+secondary/contest|Cloud City SHOWCASE hall
+secondary/dewford|KACHIRHO, Kashyyyk: wroshyr-root village on the lagoon
+secondary/dewford_gym|KACHIRHO ARENA: dark wroshyr hollow
+secondary/elite_four|ILUM TEMPLE: the Four Trials' vision chambers
+secondary/ever_grande|ILUM: snow, crystal outcrops and temple steps
+secondary/facility|Generic Imperial / House Organa facility interior
+secondary/fallarbor|INYUSU TOR, Sullust: ash-dusted settlement
+secondary/fortree|BRIGHT TREE, Endor: Ewok treetop village and rope bridges
+secondary/fortree_gym|BRIGHT TREE ARENA: treetop platforms
+secondary/generic_building|Generic interiors: cantina, house, office
+secondary/inside_of_truck|Inside the Jawa sandcrawler (opening scene)
+secondary/inside_ship|Starship interiors: STAR TIDAL, Republic wreck, Han's freighter
+secondary/island_harbor|Event-pass landing pads (Tython, Mortis, Atollon)
+secondary/lab|PROF. KORR's lab, Mos Pelgo
+secondary/lavaridge|PIRIN, Sullust: volcanic springs and steam vents
+secondary/lavaridge_gym|PIRIN ARENA: geothermal vents
+secondary/lilycove|CLOUD CITY, Bespin: white towers and landing platforms over the cloud sea
+secondary/lilycove_museum|Cloud City art gallery
+secondary/mauville|MOS ESPA, Tatooine: domed podrace city
+secondary/mauville_game_corner|Mos Espa sabacc parlor
+secondary/mauville_gym|MOS ESPA ARENA: Watto's junkyard with charged fences
+secondary/meteor_falls|STARFALL CAVERN, Sullust
+secondary/mirage_tower|The SANDCRAWLER that comes and goes in the desert
+secondary/mossdeep|YAVIN 4: jungle around the Massassi temples and the LAUNCH TOWER
+secondary/mossdeep_game_corner|Yavin 4 rec room
+secondary/mossdeep_gym|MASSASSI TEMPLE arena: Force-switch floors
+secondary/mystery_events_house|Mystery event house
+secondary/navel_rock|MORTIS GATE
+secondary/oceanic_museum|SPACER MUSEUM, Mos Eisley
+secondary/pacifidlog|TIPOCA CITY, Kamino: stilt platforms in endless rain
+secondary/petalburg|MOS ENTHA, Tatooine: small dome town
+secondary/petalburg_gym|MOS ENTHA ARENA: Doran's training rooms
+secondary/pokemon_center|BACTA CENTER: bacta tanks and 2-1B's counter
+secondary/pokemon_day_care|Creature nursery ranch
+secondary/pokemon_fan_club|COMPANION FAN CLUB lounge
+secondary/pokemon_school|TRAINER ACADEMY classroom
+secondary/pretty_petal_flower_shop|Moisture-garden flower shop near Bestine
+secondary/rustboro|BESTINE, Tatooine: House Organa office tower and academy
+secondary/rustboro_gym|BESTINE ARENA: sandstone halls
+secondary/rusturf_tunnel|BEGGAR'S CANYON tunnel
+secondary/seashore_house|Seaside cantina (Kashyyyk shore)
+secondary/secret_base/blue_cave|HIDEOUT: ice cave (Hoth / Ilum)
+secondary/secret_base/brown_cave|HIDEOUT: sandstone cave (Tatooine)
+secondary/secret_base/red_cave|HIDEOUT: lava cave (Sullust / Mustafar)
+secondary/secret_base/shrub|HIDEOUT: scrub den (Tatooine)
+secondary/secret_base/tree|HIDEOUT: wroshyr hollow (Kashyyyk / Endor)
+secondary/secret_base/yellow_cave|HIDEOUT: desert cave (Jundland)
+secondary/shop|Supply depot interior
+secondary/slateport|MOS EISLEY, Tatooine: spaceport, docking bays, market
+secondary/sootopolis|DAGOBAH: swamp basin ringed by gnarltrees
+secondary/sootopolis_gym|DAGOBAH ARENA: Yoda's hut and root-falls
+secondary/trainer_hill|TRIAL SPIRE
+secondary/trick_house_puzzle|TRICK HOUSE puzzle rooms (Garindan)
+secondary/underwater|Underwater: seas of Kashyyyk, Yavin 4 and Dagobah
+secondary/union_room|HOLONET CLUB union room
+secondary/unused_1|Unused tileset (kept)
+secondary/unused_2|Unused tileset (kept)

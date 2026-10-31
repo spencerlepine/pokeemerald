@@ -1,0 +1,435 @@
+text_id,sw_text_raw,notes
+Route111_Text_ToughToKeepWinningUpTheRanks,"If you don't raise your COMPANIONS\nsome more, it could be tough to keep\lwinning up through the ranks.\pI've heard the ILUM TEMPLE's\nFOUR TRIALS are far stronger than\lany ARENA LEADER.$",
+Route111_Text_ShouldBeMirageTowerAroundHere,"There should be a giant SANDCRAWLER\naround here somewhere.\pBut for some reason, you can see it\nsometimes, and sometimes not.\pThe JAWAS keep driving it around,\nI guess.$",Mirage Tower = a JAWA SANDCRAWLER that appears and vanishes
+Route111_Text_MirageTowerClearlyVisible,"I see it!\nThe SANDCRAWLER!\pThe one they said was a mirage\nis clearly visible!\pBut it looks so rusty…\nIt could fall apart anytime…\pI want to go inside it, but I can't\nget my courage up for it…$",
+Route111_Text_ThatWasShockingSandRainedDown,Whoa…\nThat was shocking.\pThe SANDCRAWLER just fell apart all\nof a sudden.\pWhat was it like inside?\nWere there JAWAS and such?$,
+Route111_Text_MirageTowerHasntBeenSeenSince,"Since I spoke to you, the SANDCRAWLER\nhasn't been seen.\pPerhaps the JAWAS sold it for\nparts…$",
+Route111_OldLadysRestStop_Text_RestUpHere,"Oh, dear, dear.\nAren't your COMPANIONS exhausted?\pIf you'd like, rest up here.\nThat's a fine idea! You should do that.$",
+Route111_OldLadysRestStop_Text_StillTiredTakeAnotherRest,"Oh, dear, dear.\nAre your COMPANIONS still tired?\pYou should take another rest here.\nThat's a fine idea. You should do that.$",
+Route111_WinstrateFamilysHouse_Text_MySonIsStrongerThanYou,"You're the first TRAINER I've seen who\ndeploys COMPANIONS so masterfully.\pBut, I should tell you--my son is\nstronger than you.\pHe even took the ILUM TEMPLE\nchallenge, I'll have you know.$",
+Route111_WinstrateFamilysHouse_Text_LikeYouToHaveMachoBrace,"We use this MACHO BRACE to more\neffectively strengthen our COMPANIONS\lin training.\pSince you've beaten all of us here,\nI don't know if you need it, but we\lwould like you to have our MACHO BRACE.$",
+Route111_WinstrateFamilysHouse_Text_GrandsonStrong,"There's no question that you're strong.\pBut if you were to battle my grandson,\nyou'd end up crying in frustration.\pHe's much stronger than any TRAINER\nour family knows.\pHe must be taking the TRIALS OF\nILUM by now.\pKnowing my grandson, he could have\npassed them already!$",
+Route111_WinstrateFamilysHouse_Text_GrandsonStrongShort,"My grandson must be taking the\nTRIALS OF ILUM by now.\pKnowing my grandson, he could have\npassed them already!$",
+Route112_Text_LeaderGoingToAwakenThing,"Hey, is LORD VADER really going\nto awaken that thing?$",
+Route112_Text_YeahWeNeedMeteorite,Those are our orders. But I heard\nwe need a METEORITE to do it.$,
+Route113_Text_FunWalkingThroughAsh,It's fun walking through the volcano's\nashes on the ground and scrub.\pYou can see where you walked--it's\nreally neat!$,
+Route114_Text_AllMyMonDoesIsRoarTakeThis,"All my COMPANION does is ROAR…\nNo one dares to come near me…\pSigh… If you would, please take\nthis TM away…$",
+Route114_Text_ExplainRoar,TM05 contains ROAR.\nA ROAR sends COMPANIONS scurrying.$,
+Route114_Text_Poochyena,Grrrarf! Rrarf!$,
+Route114_FossilManiacsTunnel_Text_DevonCorpRevivingFossils,"You found a FOSSIL, didn't you?\nThat's so nice… It's so dreamy…\pWhat are you going to do with that\nFOSSIL?\pFrom what I've heard, HOUSE ORGANA is\ndoing research on reviving COMPANIONS\lfrom FOSSILS…\pI love my FOSSILS, so I would never\ndo anything like that…$",
+Route114_LanettesHouse_Text_ResearchNotesPage1,It's TESS's research notes.\nThere's information about BOXES.\pBOXES should hold 30 COMPANIONS each.\pEach TRAINER should be able to store\n420 COMPANIONS on the system.\pKeep reading?$,
+Route114_LanettesHouse_Text_ResearchNotesPage2,A marking system should be added to\nmake COMPANIONS easier to organize.\pThe name and wallpaper design of each\nBOX will be made changeable to please\lthe stored COMPANIONS.\pKeep reading?$,
+Route114_LanettesHouse_Text_EmailFromBill,"There's a message from someone on\nthe terminal.\p“… … … … … … …\p“Your Storage System offers more\nconvenience than mine.\p“It has a lot of user-friendly features\nthat make it fun and useful, too.\p“It makes me proud that I played\na part in its development.\p“Here's hoping that you'll continue\nresearch in Storage Systems.\p“From LOBOT, CLOUD CITY\n… … … … … … … …”$",BILL (Kanto) -> LOBOT of Cloud City
+Route117_Text_DayCareSign,COMPANION NURSERY\n“Let us raise your COMPANIONS.”$,
+VerdanturfTown_Text_ManTryingToDigTunnel,My papa told me.\pHe says this tunnel is full of\ntimid COMPANIONS.\pThey get all scared of loud noise and\nmake a big uproar.\pSo they had to stop the big tunnel\nproject.\pBut there's one man. He's trying to dig\nthe tunnel by himself!$,
+VerdanturfTown_Text_AirCleanHere,"The way the winds blow, sandstorms\nnever reach this far.\pThe air is clean and fresh here.\nLiving here should do wonders for\lanyone stuck on a moisture farm.$",
+VerdanturfTown_Text_TownSign,ANCHORHEAD\p“The windswept town where moisture\nfarmers meet.”$,
+VerdanturfTown_ContestHall_Text_RaisedMonToBeCute,I raised my COMPANION to be cute.\pI found out you can put COMPANIONS in\na SHOWCASE for cuteness!\pI'm so glad I raised my COMPANION with\nloving care…$,
+VerdanturfTown_Mart_Text_NestBallOnWeakenedPokemon,The NEST POD works better on\nweakened COMPANIONS.\pANCHORHEAD is the only place you can\nbuy it.$,
+VerdanturfTown_PokemonCenter_1F_Text_FaithInYourPokemon,You can't consider yourself a real\nTRAINER if you don't have faith\lin your COMPANIONS.\pOnly those people who can believe\nin their battling COMPANIONS can win\lthrough to the very end.$,
+VerdanturfTown_House_Text_TrainersGatherAtPokemonLeague,"Far away, on the ice world ILUM,\nis the ILUM TEMPLE.\pThe TRAINERS who gather there are\nall frighteningly well skilled.$",
+VerdanturfTown_WandasHouse_Text_WallysNextDoor,"UNCLE: Oh! {PLAYER}{KUN}!\nLUKE's next door.\pBut, boy, there's something I have to\ntell you.\pGetting off the farm is doing\nwonders for LUKE's spirits.\pMaybe it's not just the environment.\nIt could be COMPANIONS that are giving\lthe boy hope.$",
+VerdanturfTown_WandasHouse_Text_WallyGoneThatFar,"UNCLE: Is that right?\nLUKE's gone away that far all by\lhimself…\pWell, I have to give him credit--he\nhas his father's restless blood.$",
+VerdanturfTown_WandasHouse_Text_MeetWanda,"CAMIE: You are?\nOh, right, I get it!\pYou're the {PLAYER} who LUKE was\ntelling me about.\pI've known LUKE since we were kids.\nGlad to meet you!\pI think LUKE's grown a lot more\nconfident since he came here.$",
+VerdanturfTown_WandasHouse_Text_DontWorryAboutWally,"CAMIE: Don't worry about LUKE.\nHe'll be just fine.\pI know LUKE, and he has\nCOMPANIONS with him, too.$",
+VerdanturfTown_WandasHouse_Text_IfAnythingHappenedToWally,"If anything were to happen to LUKE,\nI would never be able to look OWEN\land BERU in the eye…$",
+VerdanturfTown_WandasHouse_Text_WallyWasInEverGrande,LUKE was on ILUM?\pOWEN and BERU would be astonished\nto hear that!$,
+Route111_Text_DustyDefeat,"While I have searched for ruins,\nI've not searched for strong\lCOMPANIONS.$",
+Route112_Text_BryantIntro,I caught hot COMPANIONS in the MAGMA\nTUNNELS! Take a look!$,
+Route113_Text_WyattIntro,Y-you want to battle with me?\nEven though I just caught my\lCOMPANION?$,
+Route117_Text_MariaIntro,"I do my triathlon training with my\nCOMPANIONS, so I'm pretty confident\labout my speed.$",
+Route113_GlassWorkshop_Text_NoRoomInPC,"Oh?\nYou've no room in your TERMINAL,\nhuff-puff?\pI'll hold on to it, so come back later,\nhuff-puff.$",
+DesertUnderpass_Text_FoundRootFossil,{PLAYER} found the FROND FOSSIL.$,reviewed AUTO draft
+DesertUnderpass_Text_FoundClawFossil,{PLAYER} found the CLAW FOSSIL.$,"reviewed, no change needed"
+MirageTower_4F_Text_TakeRootFossil,"You found the FROND FOSSIL.\pIf this FOSSIL is taken, the ground\naround it will likely crumble away…\pTake the FROND FOSSIL anyway?$",reviewed AUTO draft
+MirageTower_4F_Text_LeftRootFossilAlone,{PLAYER} left the FROND FOSSIL alone.$,reviewed AUTO draft
+MirageTower_4F_Text_TakeClawFossil,"You found the CLAW FOSSIL.\pIf this FOSSIL is taken, the ground\naround it will likely crumble away…\pTake the CLAW FOSSIL anyway?$","reviewed, no change needed"
+MirageTower_4F_Text_LeaveClawFossilAlone,{PLAYER} left the CLAW FOSSIL alone.$,"reviewed, no change needed"
+Route111_Text_BattleOurFamily,Hello! I take it you're a traveler.\pHow's this? What do you say to taking\non our family of four in a series of\lCOMPANION battles?$,reviewed AUTO draft
+Route111_Text_IsThatSo,"Is that so?\nDrop in, if you change your mind!$","reviewed, no change needed"
+Route111_Text_VictorIntro,That's the spirit! I like you!$,"reviewed, no change needed"
+Route111_Text_VictorDefeat,Aiyah!\nYou're a lot tougher than I expected!$,"reviewed, no change needed"
+Route111_Text_VictorPostBattle,"Hey, all!\nI've found a pretty strong TRAINER!$","reviewed, no change needed"
+Route111_Text_VictoriaIntro,"Oh, my goodness! Aren't you young?\pYou must be quite the TRAINER to beat\nmy husband, though.\pIt's my turn to battle now!$","reviewed, no change needed"
+Route111_Text_VictoriaDefeat,"Oh, gosh!\nI can't get over how strong you are!$","reviewed, no change needed"
+Route111_Text_VictoriaPostBattle,There's a strong TRAINER here!\nThis one's really strong!$,"reviewed, no change needed"
+Route111_Text_ViviIntro,"You're stronger than Mommy? Wow!\pBut I'm strong, too!\nReally! Honestly!$","reviewed, no change needed"
+Route111_Text_ViviDefeat,Huh? Did I just lose?$,"reviewed, no change needed"
+Route111_Text_ViviPostBattle,This stinks…\p…Snivel… Grandma!$,"reviewed, no change needed"
+Route111_Text_VickyIntro,"How dare you make my granddaughter\ncry!\pFor that, I'm going to smack you!\nPrepare to lose!$","reviewed, no change needed"
+Route111_Text_VickyDefeat,Kwah! You are strong…\nMy granddaughter was right…$,"reviewed, no change needed"
+Route111_Text_VickyPostBattle,"If you're not in any hurry,\nvisit with us awhile.$","reviewed, no change needed"
+Route111_Text_WinstrateFamilyDestroyedMe,"I challenged the WINSTRATE family,\nbut four matches in a row is tough\lgoing… They destroyed me.$","reviewed, no change needed"
+Route111_Text_RouteSignMauville,ROUTE 111\n{DOWN_ARROW} MOS ESPA$,reviewed AUTO draft
+Route111_Text_WinstrateHouseSign,“Our family's hearts beat as one!”\nTHE WINSTRATE'S HOUSE$,"reviewed, no change needed"
+Route111_Text_RouteSign112,ROUTE 111\n{LEFT_ARROW} ROUTE 112$,"reviewed, no change needed"
+Route111_Text_RouteSign113,ROUTE 111\n{LEFT_ARROW} ROUTE 113$,"reviewed, no change needed"
+Route111_Text_OldLadysRestStopSign,OLD LADY'S REST STOP\n“Come in and rest your tired bones.”$,"reviewed, no change needed"
+Route111_Text_TrainerTipsSpAtkSpDef,"TRAINER TIPS\pOne of the indicators of a COMPANION's\npowerfulness is SP. ATK. It stands for\l“SPECIAL ATTACK.”\pLikewise, SP. DEF stands for “SPECIAL\nDEFENSE.”$",reviewed AUTO draft
+Route111_Text_ClawFossilDisappeared,The CLAW FOSSIL disappeared into\nthe sand…$,"reviewed, no change needed"
+Route111_Text_RootFossilDisappeared,The FROND FOSSIL disappeared into\nthe sand…$,reviewed AUTO draft
+Route111_Text_MauvilleUncleToldMeToTakeRockSmash,"Oh, no!\pMy uncle in MOS ESPA told me to take\nROCK SMASH with me if I was going to\lROUTE 111!\pMy uncle? He lives across from\nthe bike shop in MOS ESPA.$",reviewed AUTO draft
+Route111_Text_TrainerHillSign,"{RIGHT_ARROW} TRIAL SPIRE ENTRANCE\p“Scale the heights, you hot-blooded\nTRAINERS!”$",reviewed AUTO draft
+Route111_OldLadysRestStop_Text_TakeYourTimeRestUp,That's right.\nTake your time and rest up!$,"reviewed, no change needed"
+Route111_OldLadysRestStop_Text_DontNeedToBeShy,Is that so?\nYou don't need to be shy about it.$,"reviewed, no change needed"
+Route111_WinstrateFamilysHouse_Text_PassionateAboutBattles,"When it comes to COMPANION battles,\nwe tend to be pretty passionate.$",reviewed AUTO draft
+Route111_WinstrateFamilysHouse_Text_StrongerFamilyMembers,Mommy is stronger than Daddy.\pI'm stronger than Mommy.\pAnd Grandma's stronger than me!\pBut my big brother is even stronger\nthan Grandma.$,"reviewed, no change needed"
+Route112_Text_OhThatsWhyCrewWentToFallarbor,"Oh, I get it now. That's why the rest\nof the crew went out to INYUSU TOR.$",reviewed AUTO draft
+Route112_Text_CantLetAnyonePassUntilTheyreBack,"You got it. And until they come back,\nwe're not to let anyone pass, right.$","reviewed, no change needed"
+Route112_Text_NotEasyToGetBackToLavaridge,"Eh, I'd like to get to MOS ESPA, but if\nI went down these ledges, it'd be no\leasy matter to get back to PIRIN.$",reviewed AUTO draft
+Route112_Text_MtChimneyCableCarSign,MUSTAFAR PEAK SHUTTLE\n“A short walk {UP_ARROW} way!”$,reviewed AUTO draft
+Route112_Text_MtChimneySign,"MUSTAFAR PEAK\p“For PIRIN or the summit,\nplease take the SHUTTLE.”$",reviewed AUTO draft
+Route112_Text_RouteSignLavaridge,ROUTE 112\n{LEFT_ARROW} PIRIN$,reviewed AUTO draft
+Route112_CableCarStation_Text_CableCarReadyGetOn,The SHUTTLE is ready to go up.\nWould you like to be on it?$,reviewed AUTO draft
+Route112_CableCarStation_Text_StepThisWay,Please step this way.$,"reviewed, no change needed"
+Route112_CableCarStation_Text_RideAnotherTime,Please ride with us another time.$,"reviewed, no change needed"
+Route113_Text_AshCanBeFashionedIntoGlass,Wahahaha! Today's technology is a\nwondrous thing!\pTake this volcanic ash here.\nIt can be fashioned into glass.$,"reviewed, no change needed"
+Route113_Text_RouteSign111,ROUTE 113\n{RIGHT_ARROW} ROUTE 111$,"reviewed, no change needed"
+Route113_Text_RouteSignFallarbor,ROUTE 113\n{LEFT_ARROW} INYUSU TOR$,reviewed AUTO draft
+Route113_Text_TrainerTipsRegisterKeyItems,TRAINER TIPS\pYou may register one of the KEY ITEMS\nin your BAG as SELECT.\pSimply press SELECT to use\nthe registered item conveniently.$,"reviewed, no change needed"
+Route113_Text_GlassWorkshopSign,GLASS WORKSHOP\n“Turning Volcanic Ash into Glass Items”$,"reviewed, no change needed"
+Route113_GlassWorkshop_Text_GoCollectAshWithThis,"This area is covered in volcanic ash,\nhuff-puff!\pI'm specially gifted, huff-puff.\pI make glass out of volcanic ash\nand make items, huff-puff.\pGo collect ashes with this, huff-puff.$","reviewed, no change needed"
+Route113_GlassWorkshop_Text_ExplainSootSack,"Just take that ASH SACK and walk\nthrough piles of ash, huff-puff.\pAnd it will fill up with the volcanic ash,\nhuff-puff.\pOnce you think you've collected a good\namount, come see me, huff-puff.$",reviewed AUTO draft
+Route113_GlassWorkshop_Text_LetsSeeCollectedAshes,"Have you collected ashes, huff-puff?\nLet me see, huff-puff.$","reviewed, no change needed"
+Route113_GlassWorkshop_Text_NotEnoughAshNeedX,"Hmmm…\nThere's not enough ash here, huff-puff.\lI can't make glass with this, huff-puff.\pLet's see… {STR_VAR_1} is the number of steps\nyou'll need to walk for me to make you\la BLUE FLUTE, huff-puff.$","reviewed, no change needed"
+Route113_GlassWorkshop_Text_WhichGlassItemWoudYouLike,"Oh!\nYou've got a lot of ashes, huff-puff!\pI'll make you a glass item, huff-puff!\nWhich one would you like, huff-puff?$","reviewed, no change needed"
+Route113_GlassWorkshop_Text_IsThatTheItemForYou,"A {STR_VAR_1}, huff-puff?\nIs that the one for you, huff-puff?$","reviewed, no change needed"
+Route113_GlassWorkshop_Text_WhichWouldYouLike,"Which one would you like, huff-puff?$","reviewed, no change needed"
+Route113_GlassWorkshop_Text_IllMakeItemForYou,"A {STR_VAR_1} it is, then, huff-puff!\pOkay! I'll make it for you, huff-puff.\nJust wait a little while, huff-puff.$","reviewed, no change needed"
+Route113_GlassWorkshop_Text_NotEnoughAshToMakeItem,"A {STR_VAR_1}, huff-puff?\pThere's not enough ash here to make\nthat, though, huff-puff.\pLet's see… {STR_VAR_2} is the number of steps\nyou'll need to walk through volcanic ash\lfor me to make that item, huff-puff.\pWhich item would you rather have me\nmake instead, huff-puff?$","reviewed, no change needed"
+Route113_GlassWorkshop_Text_AllThatAshButDontWantAnything,"You've collected all that ash, but you\ndon't want anything, huff-puff?$","reviewed, no change needed"
+Route113_GlassWorkshop_Text_IveFinishedGlassItem,"Ah, I've finished your {STR_VAR_1}.\nTake it, huff-puff.$","reviewed, no change needed"
+Route113_GlassWorkshop_Text_NoRoomInBag,"Oh?\nYou've no room in your BAG, huff-puff.\pI'll hold on to it, so come back later,\nhuff-puff.$","reviewed, no change needed"
+Route113_GlassWorkshop_Text_HaventGotYourSootSack,"Hah? You haven't got your ASH SACK\nwith you, huff-puff.\pYou have to keep it with you to collect\nvolcanic ash, huff-puff.$",reviewed AUTO draft
+Route113_GlassWorkshop_Text_FunToBlowGlassFlute,It's fun to blow a glass flute while\nmy boss is talking.\pHuff-huff! Puff-puff!$,"reviewed, no change needed"
+Route114_Text_MeteorFallsSign,STARFALL CAVERN\nBESTINE THROUGH HERE$,reviewed AUTO draft
+Route114_Text_FossilManiacsHouseSign,FOSSIL MANIAC'S HOUSE\n“Fossils gratefully accepted!”$,"reviewed, no change needed"
+Route114_Text_LanettesHouse,TESS'S HOUSE$,reviewed AUTO draft
+Route114_FossilManiacsHouse_Text_HaveThisToDigLikeMyBrother,"My big brother's the FOSSIL MANIAC…\nHe's a nice guy who loves FOSSILS…\pHe loves digging holes, too…\nHe dug this hole by himself…\pYou can have this, so you can DIG\nholes just like my big brother…$","reviewed, no change needed"
+Route114_FossilManiacsHouse_Text_DigReturnsYouToEntrance,"If you make a COMPANION DIG inside a\ncave, you're returned to the entrance…$",reviewed AUTO draft
+Route114_FossilManiacsHouse_Text_RocksFillDisplayCase,Rocks in peculiar shapes fill\nthe display case…$,"reviewed, no change needed"
+Route114_FossilManiacsHouse_Text_CrammedWithBooks,"THE COMPOSITION OF STRATA…\nHOW RAIN SHAPES THE LAND…\lSTONES, SOIL, AND ROCK…\pIt's crammed with books.$","reviewed, no change needed"
+Route114_FossilManiacsTunnel_Text_LookInDesertForFossils,"I'm the FOSSIL MANIAC…\nI'm a nice guy who loves FOSSILS…\pDo you want a FOSSIL?\pBut the FOSSILS around these parts all\nbelong to me… None for you…\pIf you can't bear to go without\na FOSSIL, look in a desert where there\lare boulders and sand that may hide\lFOSSILS…$","reviewed, no change needed"
+Route114_FossilManiacsTunnel_Text_FossilsAreWonderful,FOSSILS are so… Wonderful…\nIt's so dreamy…$,"reviewed, no change needed"
+Route114_FossilManiacsTunnel_Text_NotSafeThatWay,"Oh…\nIt's not safe that way…\pI was digging away, you see…\nWhen the whole wall collapsed…\pI think there's a giant cavern\nunderneath now…\pBut I've left it alone because I don't\nthink there are any FOSSILS there…$","reviewed, no change needed"
+Route114_LanettesHouse_Text_EverythingClutteredKeepThis,"TESS: Oh! {PLAYER}{KUN}!\pI'm sorry everything is so cluttered…\nWhen I get engrossed in research,\lthings end up this way…\pThis is embarrassing… Please keep\nthis a secret in exchange for this.$",reviewed AUTO draft
+Route114_LanettesHouse_Text_OrganizeYourBoxes,May I offer advice about my COMPANION\nStorage System?\pYou should organize your BOXES so you\ncan tell which COMPANIONS are in them.$,reviewed AUTO draft
+Route114_LanettesHouse_Text_ResearchNotesPage3,"When storing a COMPANION, it should be\nsent to the BOX inspected last.\pIf that BOX is full, the received\nCOMPANION is stored in the next BOX.\pIn other words, when a BOX is examined,\nit is automatically selected as the BOX\lto which COMPANIONS are sent.$",reviewed AUTO draft
+Route114_LanettesHouse_Text_ClosedTheNotebook,{PLAYER} closed the notebook.$,"reviewed, no change needed"
+Route115_Text_NeverKnowWhenCavePokemonWillAppear,Exploring a cave isn't like walking\non a road.\pYou never know when wild COMPANIONS\nwill appear. It's full of suspense.$,reviewed AUTO draft
+Route115_Text_RouteSignRustboro,ROUTE 115\n{DOWN_ARROW} BESTINE$,reviewed AUTO draft
+Route115_Text_MeteorFallsSign,STARFALL CAVERN\nINYUSU TOR THROUGH HERE$,reviewed AUTO draft
+Route117_Text_DayCarePokemonHadNewMove,"I left my COMPANION at the NURSERY.\pWhen I got it back, it had a new move\nthat I didn't teach it.\lI was really, really surprised.$",reviewed AUTO draft
+Route117_Text_ArentTheseFlowersPretty,What do you think?\nAren't these flowers pretty?\pI planted them all!$,"reviewed, no change needed"
+Route117_Text_AirIsTastyHere,The air is tasty here!$,"reviewed, no change needed"
+Route117_Text_RouteSignVerdanturf,ROUTE 117\n{LEFT_ARROW} ANCHORHEAD$,reviewed AUTO draft
+Route117_Text_RouteSignMauville,ROUTE 117\n{RIGHT_ARROW} MOS ESPA$,reviewed AUTO draft
+VerdanturfTown_Text_ManDugTunnelForLove,"There was a man who dug a tunnel for\na lady he loved.\pI don't really get it, but hey!$","reviewed, no change needed"
+VerdanturfTown_Text_MakeBattleTentDebut,"My COMPANION and I, we've been riding\na hot winning streak.\pSo I decided to make my BATTLE TENT\ndebut in this town.$",reviewed AUTO draft
+VerdanturfTown_Text_GuyTryingToBustThroughCave,Did you see the cave next to the\nSUPPLY DEPOT?\pThere's a guy in there who's trying to\nbust up boulders so he can bust out\lthrough to the other side.\pIt'd be great if we could go through…\nIt'll make it easy to visit BESTINE.$,reviewed AUTO draft
+VerdanturfTown_Text_EasyToGetToRustboroNow,That cave next to the SUPPLY DEPOT\nis now a tunnel to the other side.\pIt's great--it's easy to go shop for\nnew HOUSE ORGANA products in BESTINE\lnow.$,reviewed AUTO draft
+VerdanturfTown_Text_WandasHouse,CAMIE'S HOUSE$,reviewed AUTO draft
+VerdanturfTown_Text_BattleTentSign,BATTLE TENT ANCHORHEAD SITE\n“Feast Your Eyes on Battles!”$,reviewed AUTO draft
+VerdanturfTown_Text_RusturfTunnelSign,BEGGAR'S CANYON\n“Linking BESTINE and ANCHORHEAD\p“The tunnel project has been\ncanceled.”$,reviewed AUTO draft
+VerdanturfTown_ContestHall_Text_WhichContestYouEntering,"Which SHOWCASE are you entering?\nWant a piece of advice?\pIn any SHOWCASE, for example, a CUTE\nSHOWCASE, I don't think they judge you\lonly on cuteness in the first round.\pYou need to work out ways for raising\nCOMPANIONS better.$",reviewed AUTO draft
+VerdanturfTown_ContestHall_Text_MyMonRules,"My COMPANION rules!\pIt's cool, tough yet beautiful, cute,\nand smart. It's complete!\pI may as well go for wins in every\nsingle SHOWCASE.$",reviewed AUTO draft
+VerdanturfTown_ContestHall_Text_NormalRankStage,SHOWCASES\nNORMAL RANK STAGE!$,reviewed AUTO draft
+VerdanturfTown_BattleTentLobby_Text_MonsReluctantToUseDislikedMoves,"If it doesn't like a certain move,\na COMPANION will be reluctant to use it.\pIt doesn't matter how strong it is,\neither.\pFor example, a COMPANION with a GENTLE\nnature probably won't enjoy hurting\lits opponents.\pIf it can't seem to live up to its\npotential, it's probably failing at\lusing a disliked move against its will.$",reviewed AUTO draft
+VerdanturfTown_BattleTentLobby_Text_GentleMonsScaryIfAngry,"My big sister is gentle usually.\nBut when she gets angry,\lshe's really, really scary!\pI bet a gentle COMPANION will be scary\nif it gets angry!$",reviewed AUTO draft
+VerdanturfTown_BattleTentLobby_Text_AttractionRunsDeep,"My feelings toward my COMPANION…\nThe attraction runs deep…\pOh, hi, you didn't see that, did you?\nWell, it doesn't matter.\pHow would you like this TM for\nyour COMPANION?$",reviewed AUTO draft
+VerdanturfTown_BattleTentLobby_Text_AttractionMutual,My feelings toward my COMPANION…\nI'm sure the attraction is mutual!\pThey battle exactly the way I want\nthem to!$,reviewed AUTO draft
+VerdanturfTown_BattleTentLobby_Text_TaughtWhatKindsOfMoves,What kind of moves have you taught\nyour COMPANION?\pI think you would give yourself\nan advantage if they knew how to\lheal or protect themselves.$,reviewed AUTO draft
+VerdanturfTown_BattleTentLobby_Text_ScottCanMeetToughTrainers,"LANDO: Hey there, {PLAYER}{KUN}!\nI thought I might see you here.\pA BATTLE TENT's a place where\nyou can meet tough TRAINERS.\pIt doesn't matter what the rules are,\nor how battles are waged, either.\p{PLAYER}{KUN}, I expect you to do\nthe best you can!$",reviewed AUTO draft
+VerdanturfTown_BattleTentLobby_Text_ScottVisitRegularly,LANDO: I visit here regularly in hopes\nof seeing tough TRAINERS in action\lin whatever the situation.$,reviewed AUTO draft
+VerdanturfTown_FriendshipRatersHouse_Text_SeeHowMuchPokemonLikesYou,Let me see your COMPANION.\nI'll check to see how much it likes you.\pOh.\nYour COMPANION…$,reviewed AUTO draft
+VerdanturfTown_FriendshipRatersHouse_Text_AdoresYou,It adores you.\nIt can't possibly love you any more.\lI even feel happy seeing it.$,"reviewed, no change needed"
+VerdanturfTown_FriendshipRatersHouse_Text_VeryHappy,It seems to be very happy.\nIt obviously likes you a whole lot.$,"reviewed, no change needed"
+VerdanturfTown_FriendshipRatersHouse_Text_LikesYouQuiteALot,It likes you quite a lot.\nIt seems to want to be babied a little.$,"reviewed, no change needed"
+VerdanturfTown_FriendshipRatersHouse_Text_GettingUsedToYou,It's getting used to you.\nIt seems to believe in you.$,"reviewed, no change needed"
+VerdanturfTown_FriendshipRatersHouse_Text_NotUsedToYou,It's not very used to you yet.\nIt neither loves nor hates you.$,"reviewed, no change needed"
+VerdanturfTown_FriendshipRatersHouse_Text_VeryWary,It's very wary.\nIt has scary viciousness in its eyes.\lIt doesn't like you much at all.$,"reviewed, no change needed"
+VerdanturfTown_FriendshipRatersHouse_Text_DetestsYou,This is a little hard for me to say…\pYour COMPANION simply detests you.\nDoesn't that make you uncomfortable?$,reviewed AUTO draft
+VerdanturfTown_FriendshipRatersHouse_Text_Pikachu,IONRAT: Pika pika!$,reviewed AUTO draft
+VerdanturfTown_House_Text_DefeatEliteFourInARow,"In the ILUM TEMPLE, I think the\nrules say that you have to battle the\lFOUR TRIALS all in a row.\pIf you lose to any of them, you have\nto begin your challenge again from the\lfirst one.$",reviewed AUTO draft
+VerdanturfTown_Mart_Text_XSpecialIsCrucial,"For any COMPANION match, X SPECIAL\nis crucial.\pIt jacks up the power of some moves\neven though it's only for one battle.$",reviewed AUTO draft
+VerdanturfTown_Mart_Text_NoStrategyGuidesForBattleTent,They don't seem to sell any winning\nstrategy guides for the BATTLE TENT…\pIt seems one must rely on one's\nown wits after all…$,"reviewed, no change needed"
+VerdanturfTown_PokemonCenter_1F_Text_VisitForBattleTent,The reason why anyone would visit\nANCHORHEAD…\pIt's the BATTLE TENT. It goes without\nsaying.\pOr is there somebody here that you\ncame to see?$,reviewed AUTO draft
+VerdanturfTown_WandasHouse_Text_StrongerSpeech,"LUKE: I lost to you, {PLAYER}, but I'm\nnot feeling down anymore.\pBecause I have a new purpose in life.\nTogether with my AURALET, I'm going\lto challenge ARENAS and become\la great TRAINER.\pPlease watch me, {PLAYER}.\nI'm going to be stronger than you.\pWhen I do, I'm going to challenge you\nto another battle.$",reviewed AUTO draft
+VerdanturfTown_WandasHouse_Text_StrongerSpeechShort,"LUKE: Please watch me, {PLAYER}.\nI'm going to get stronger than you.\pWhen I do, I'm going to challenge you\nto another battle.$",reviewed AUTO draft
+VerdanturfTown_WandasHouse_Text_WallySlippedOff,LUKE's gone away…\nHe slipped off on his own…$,reviewed AUTO draft
+VerdanturfTown_WandasHouse_Text_CanSeeGirlfriendEveryDay,"Thanks to you, I can see my girlfriend\nevery day.\lHappy? You bet I am!$","reviewed, no change needed"
+VerdanturfTown_WandasHouse_Text_DaughtersBoyfriendDriven,"My daughter's boyfriend is a very\ndriven and passionate sort of person.\pHe's been digging a tunnel nonstop\njust so he can see my daughter.\pMy daughter's a little concerned,\nso she goes out to the tunnel a lot.$","reviewed, no change needed"
+VerdanturfTown_WandasHouse_Text_DaughtersBoyfriendWasDigging,It's amazing. My daughter's boyfriend\nwas digging the tunnel by hand!\pIt's so incredible!$,"reviewed, no change needed"
+DesertRuins_Braille_UseRockSmash,"LEFT, LEFT,\nDOWN, DOWN.\nTHEN, USE\nROCK SMASH.$","reviewed, no change needed"
+Route111_Text_DrewIntro,"Oh, hey! Those SAND GOGGLES suit you.\nBut I think they look better on me.\pLet's decide who they look better on\nwith a battle!$",reviewed AUTO draft
+Route111_Text_DrewDefeat,I couldn't see what was happening at\nmy sides because of the SAND GOGGLES.$,reviewed AUTO draft
+Route111_Text_DrewPostBattle,The SAND GOGGLES make it possible to\nget through sandstorms.\lThat makes me happy!$,reviewed AUTO draft
+Route111_Text_HeidiIntro,"I'm having a picnic in the desert.\pYou can always find a TRAINER,\nso I can enjoy a battle here, too!$","reviewed, no change needed"
+Route111_Text_HeidiDefeat,Ohhh! You're mean!$,"reviewed, no change needed"
+Route111_Text_HeidiPostBattle,"When you're battling in a sandstorm,\nwatch out for your COMPANION's HP.\pIt can faint if you don't keep\nan eye on it!$",reviewed AUTO draft
+Route111_Text_BeauIntro,"Wearing these SAND GOGGLES makes me\nfeel like a superhero.\lRight now, nobody can beat me!$",reviewed AUTO draft
+Route111_Text_BeauDefeat,I can't win on spirit alone…$,"reviewed, no change needed"
+Route111_Text_BeauPostBattle,I'm going to be a real hero one day.\nI'm going to work harder to make me\land my COMPANION stronger.$,reviewed AUTO draft
+Route111_Text_BeckyIntro,I heard there are fossils to be found\nin the desert. Where could they be?$,"reviewed, no change needed"
+Route111_Text_BeckyDefeat,I came up short…$,"reviewed, no change needed"
+Route111_Text_BeckyPostBattle,"If they can find fossils in the desert,\nit must have been a sea before.$","reviewed, no change needed"
+Route111_Text_DustyIntro,For thirty years I have searched for\nancient ruins!\lI am to be challenged?$,"reviewed, no change needed"
+Route111_Text_DustyPostBattle,"For thirty years I have searched for\nancient ruins!\pNo, wait, was that forty years?\nWhich was it now?$","reviewed, no change needed"
+Route111_Text_DustyRegister,"I haven't been searching for any\ntough COMPANION.\pBut, for some reason, I sure do like\nCOMLINKS.$",reviewed AUTO draft
+Route111_Text_DustyRematchIntro,"For thirty years I have searched for\nancient ruins!\pNo, wait, was that forty years?\nAnyway, am I to be challenged?$","reviewed, no change needed"
+Route111_Text_DustyRematchDefeat,"I've found no ruins, nor have I found\nany strong COMPANION…$",reviewed AUTO draft
+Route111_Text_DustyPostRematch,"For thirty years I have searched for\nancient ruins!\pNo, wait, was that forty years\nI've searched?\pHmm… It could even be fifty…\nHow long have I been at this?$","reviewed, no change needed"
+Route111_Text_TravisIntro,"I'm full of pep!\nAnd my COMPANION is peppy, too!$",reviewed AUTO draft
+Route111_Text_TravisDefeat,My COMPANION lost its pep…$,reviewed AUTO draft
+Route111_Text_TravisPostBattle,"When I see a TRAINER with a lot of pep,\nI can't help looking.$","reviewed, no change needed"
+Route111_Text_IreneIntro,"I don't know where you're going,\nbut would you like to battle?$","reviewed, no change needed"
+Route111_Text_IreneDefeat,"Oh, you're disgustingly good!$","reviewed, no change needed"
+Route111_Text_IrenePostBattle,"I'm thinking that I should go to\nMUSTAFAR PEAK, but the view around\lhere is very nice, too.$",reviewed AUTO draft
+Route111_Text_DaisukeIntro,"To train myself, I challenge all\nwhom I meet!$","reviewed, no change needed"
+Route111_Text_DaisukeDefeat,Uncle! I give up!$,"reviewed, no change needed"
+Route111_Text_DaisukePostBattle,All I can do is keep training until\nI can defeat strong TRAINERS such\las yourself.$,"reviewed, no change needed"
+Route111_Text_WiltonIntro,Show me how much you've toughened\nyour COMPANION.$,reviewed AUTO draft
+Route111_Text_WiltonDefeat,"I see, you've toughened them\nconsiderably.$","reviewed, no change needed"
+Route111_Text_WiltonPostBattle,COMPANION and TRAINERS learn much\nthrough battling.\pWhat's important is to never give up\neven if you lose.$,reviewed AUTO draft
+Route111_Text_WiltonRegister,There is much to be learned from\nyour training style.\pI request a rematch if it\nbehooves you.$,"reviewed, no change needed"
+Route111_Text_WiltonRematchIntro,We're training here to elevate our\ngame to the next level.\lStay and train with us!$,"reviewed, no change needed"
+Route111_Text_WiltonRematchDefeat,"Ooh, you're decent!$","reviewed, no change needed"
+Route111_Text_WiltonPostRematch,"Since you're that strong, you should\naim for the ILUM TEMPLE.$",reviewed AUTO draft
+Route111_Text_BrookeIntro,"Oh, your COMPANIONS look like serious\nactors.\lI have to ask you for an engagement.$",reviewed AUTO draft
+Route111_Text_BrookeDefeat,"They didn't just look strong,\nthey are strong!$","reviewed, no change needed"
+Route111_Text_BrookePostBattle,"I thought I was raising my COMPANIONS\ndiligently, but, oh no, there is still\lmuch to be done.$",reviewed AUTO draft
+Route111_Text_BrookeRegister,I wish I could become friends with\nmore strong people like you!$,"reviewed, no change needed"
+Route111_Text_BrookeRematchIntro,You can make COMPANION stronger or\nweaker depending on the moves you\lteach them.\pWhat kinds of moves do your COMPANIONS\nknow?$,reviewed AUTO draft
+Route111_Text_BrookeRematchDefeat,You've taught them good moves!$,"reviewed, no change needed"
+Route111_Text_BrookePostRematch,Maybe I should have stopped my\nCOMPANION from evolving until they\llearned better moves…$,reviewed AUTO draft
+Route111_Text_CeliaIntro,I shouldn't have come to a place like\nthis for a picnic!$,"reviewed, no change needed"
+Route111_Text_CeliaDefeat,Aww!\nI really shouldn't have come!$,"reviewed, no change needed"
+Route111_Text_CeliaPostBattle,"In a sandstorm like this, I can't set\nthe places for a picnic even with my\lSAND GOGGLES on…$",reviewed AUTO draft
+Route111_Text_BryanIntro,How tough are you?\nWe shall expose that secret!$,"reviewed, no change needed"
+Route111_Text_BryanDefeat,Oh! Your strength!\nIt is shrouded in mystery!$,"reviewed, no change needed"
+Route111_Text_BryanPostBattle,This desert hoards mysteries in\nits shifting sands!$,"reviewed, no change needed"
+Route111_Text_BrandenIntro,I'll give you some of my sandwich\nif you'll lose.$,"reviewed, no change needed"
+Route111_Text_BrandenDefeat,Tch! I thought a sandwich would be\nenough of a bribe…$,"reviewed, no change needed"
+Route111_Text_BrandenPostBattle,My DEWLING loves eating\nmy sandwiches.$,reviewed AUTO draft
+Route111_Text_TyronIntro,This is my favorite kind of COMPANIONS!$,reviewed AUTO draft
+Route111_Text_TyronDefeat,Wait! Did you get a good look at my\nCOMPANION?$,reviewed AUTO draft
+Route111_Text_TyronPostBattle,"When having a battle, I get a kick out\nof showing off my COMPANION.\pI bet everyone feels that way when\nthey enter a battle!$",reviewed AUTO draft
+Route111_Text_CelinaIntro,Show me how to put a little excitement\ninto my life.$,"reviewed, no change needed"
+Route111_Text_CelinaDefeat,Oh… My…\nThat was too much excitement.$,"reviewed, no change needed"
+Route111_Text_CelinaPostBattle,My pulse is still racing.\nYou're one fabulous TRAINER.$,"reviewed, no change needed"
+Route111_Text_HaydenIntro,"When you're as famished as I am,\nthere is no room for pity!$","reviewed, no change needed"
+Route111_Text_HaydenDefeat,Groan…$,"reviewed, no change needed"
+Route111_Text_HaydenPostBattle,My stomach is grumbling!\nMaybe I can grill some FRUIT…$,reviewed AUTO draft
+Route111_Text_BiancaIntro,Did you come from MOS ESPA?\nThen you should be full of energy!$,reviewed AUTO draft
+Route111_Text_BiancaDefeat,Ooh lala!\nThat's a lot to take!$,"reviewed, no change needed"
+Route111_Text_BiancaPostBattle,This road here…\nYou have quite a ways to travel.$,"reviewed, no change needed"
+Route112_Text_BriceIntro,Hahahaha!\nHow about we have a battle?\lYou and me!\lHahahaha!$,"reviewed, no change needed"
+Route112_Text_BriceDefeat,I lost!\nHahahaha!$,"reviewed, no change needed"
+Route112_Text_BricePostBattle,Hahahahaha! Something flew up my nose!\nHahahaha-hatchoo!$,"reviewed, no change needed"
+Route112_Text_TrentIntro,"My legs are solid from pounding up\nand down the mountains.\pThey're not going to buckle easily,\nfriend!$","reviewed, no change needed"
+Route112_Text_TrentDefeat,Ouch! My legs cramped up!$,"reviewed, no change needed"
+Route112_Text_TrentPostBattle,"Try hiking, and I mean really\npounding, on these mountain trails\lwith a heavy pack weighing dozens of\lpounds.\pThat, my friend, will get your body\ninto serious shape.$","reviewed, no change needed"
+Route112_Text_TrentRegister,"Ow, my legs have cramped up.\nCan you grab me some bandages from\lmy backpack?\pNo, that's my COMLINK!\nOh, fine, I'll register you.$",reviewed AUTO draft
+Route112_Text_TrentRematchIntro,"I've been keeping fit by hiking.\nPower, I have in spades!$","reviewed, no change needed"
+Route112_Text_TrentRematchDefeat,I got trumped in power?$,"reviewed, no change needed"
+Route112_Text_TrentRematchPostBattle,I hear there are some seriously tough\nTRAINERS on top of MUSTAFAR PEAK.\pI intend to get up there and give them\na challenge!$,reviewed AUTO draft
+Route112_Text_LarryIntro,I'm strong.\nI won't cry if I lose.$,"reviewed, no change needed"
+Route112_Text_LarryDefeat,Waaaah!$,"reviewed, no change needed"
+Route112_Text_LarryPostBattle,I'm not crying because I miss my mommy!\nSnivel…$,"reviewed, no change needed"
+Route112_Text_CarolIntro,"When you're out on a picnic, why,\nyou simply have to sing!\lCome on, sing with me!$","reviewed, no change needed"
+Route112_Text_CarolDefeat,"Oh, you're so strong!$","reviewed, no change needed"
+Route112_Text_CarolPostBattle,"It doesn't matter if you're good or bad\nat singing or COMPANION.\pIf you have the most fun, you win!$",reviewed AUTO draft
+Route112_Text_BryantDefeat,What a bumpy ride that was!$,"reviewed, no change needed"
+Route112_Text_BryantPostBattle,I like the way you battle.\nIt has a certain flair to it.$,"reviewed, no change needed"
+Route112_Text_ShaylaIntro,"Oh, aren't you an adorable TRAINER!\nPlease, I need a romantic battle!\lI'm somewhat decent!$","reviewed, no change needed"
+Route112_Text_ShaylaDefeat,"Oh, how strong you are!\nYou've given me quite a shock!$","reviewed, no change needed"
+Route112_Text_ShaylaPostBattle,Are you busy right now?\nI was thinking that maybe we can have\la rematch right now…\lBut it's all right if you're busy.$,"reviewed, no change needed"
+Route113_Text_JaylenIntro,Can you guess why it's so cool\naround here?$,"reviewed, no change needed"
+Route113_Text_JaylenDefeat,Peeuuw!\nThat stinks!$,"reviewed, no change needed"
+Route113_Text_JaylenPostBattle,"The volcanic ash blocks the sun,\nso it doesn't get very warm.\pThat's good for me--I can't stand heat!$","reviewed, no change needed"
+Route113_Text_DillonIntro,The volcano's eruption is proof that\nthe earth is alive.$,"reviewed, no change needed"
+Route113_Text_DillonDefeat,You're some kind of strong!$,"reviewed, no change needed"
+Route113_Text_DillonPostBattle,"Ouch! Owww! I can't see!\nI got ashes in my eyelashes!\pGet it? Ashes and eyelashes?\pOkay, that was bad, sorry…$","reviewed, no change needed"
+Route113_Text_MadelineIntro,"I use this parasol to ward off this\nfilthy, yucky volcanic ash from\lmy dear BANTHACALF.$",reviewed AUTO draft
+Route113_Text_MadelineDefeat,"Huff, huff…\nI am exhausted…$","reviewed, no change needed"
+Route113_Text_MadelinePostBattle,You're very good at this.\nI must say I'm impressed!$,"reviewed, no change needed"
+Route113_Text_MadelineRegister,"Here, slide under my parasol.\nLet me register you in my COMLINK.$",reviewed AUTO draft
+Route113_Text_MadelineRematchIntro,"Oh, hello, hasn't it been a while?\nMay I invite you to battle?$","reviewed, no change needed"
+Route113_Text_MadelineRematchDefeat,"Oh, how super!$","reviewed, no change needed"
+Route113_Text_MadelinePostRematch,You've remained very good at this.\nI must say I'm impressed!$,"reviewed, no change needed"
+Route113_Text_LaoIntro,From out of the ashes I leap! Hiyah!\nI challenge thee!$,"reviewed, no change needed"
+Route113_Text_LaoDefeat,With honor I admit defeat!$,"reviewed, no change needed"
+Route113_Text_LaoPostBattle,I must refine the art of concealment.\nI bid thee farewell.$,"reviewed, no change needed"
+Route113_Text_LaoRegister,Yiiyaah! Witness the ancient ninja\ntechnique of COMLINK registration!$,reviewed AUTO draft
+Route113_Text_LaoRematchIntro,From out of the ashes I leap! Hiyah!\nI challenge thee!$,"reviewed, no change needed"
+Route113_Text_LaoRematchDefeat,With honor I admit defeat!$,"reviewed, no change needed"
+Route113_Text_LaoPostRematch,My flawless concealment was let down\nby my immature battle skills…\pI bid thee farewell.$,"reviewed, no change needed"
+Route113_Text_LungIntro,Thanks for finding me!\nBut we still have to battle!$,"reviewed, no change needed"
+Route113_Text_LungDefeat,I'll use my ninjutsu on you…\n“VOLCANIC ASH SWIRL CLOAK”!\p…What?\nIt's already over?$,"reviewed, no change needed"
+Route113_Text_LungPostBattle,You know what's crummy about hiding?\nIt's lonely if no one comes along.$,"reviewed, no change needed"
+Route113_Text_ToriIntro,"TOVA: Both of us, we collect ashes.\nWe battle COMPANION, too.$",reviewed AUTO draft
+Route113_Text_ToriDefeat,"TOVA: We lost… It's boring, so I'm going\nto get some more ashes.$",reviewed AUTO draft
+Route113_Text_ToriPostBattle,"TOVA: How much ash do we have?\nEnough for a WHITE FLUTE, I hope.$",reviewed AUTO draft
+Route113_Text_ToriNotEnoughMons,"TOVA: We want to battle 2-on-2.\nIf we didn't, we would lose!$",reviewed AUTO draft
+Route113_Text_TiaIntro,"TIA: Both of us, we collect ashes.\nWe battle COMPANION, too.$",reviewed AUTO draft
+Route113_Text_TiaDefeat,"TIA: We couldn't win… It's boring,\nso I'm getting some more ashes.$","reviewed, no change needed"
+Route113_Text_TiaPostBattle,TIA: We have a lot of ashes!\nI think enough for a WHITE FLUTE!$,"reviewed, no change needed"
+Route113_Text_TiaNotEnoughMons,"TIA: We want to battle 2-on-2.\nIf we don't, we won't win!$","reviewed, no change needed"
+Route113_Text_CobyIntro,"Pfft, with these wings I can\nflick you away!$","reviewed, no change needed"
+Route113_Text_CobyDefeat,A… What?$,"reviewed, no change needed"
+Route113_Text_CobyPostBattle,I don't know what to say when I get\nbeaten so easily…$,"reviewed, no change needed"
+Route113_Text_SophieIntro,The warmth here is making me drowsy.\nBattle with me so I can stay awake.$,"reviewed, no change needed"
+Route113_Text_SophieDefeat,This is a dream.\nI'm sure of it…$,"reviewed, no change needed"
+Route113_Text_SophiePostBattle,Losing burns me up…\nI'm just going to sleep right here!\lZzz!$,"reviewed, no change needed"
+Route113_Text_LawrenceIntro,Were you maybe in the middle\nof gathering volcanic ashes?$,"reviewed, no change needed"
+Route113_Text_LawrenceDefeat,Ehehe.\nWe got beaten cleanly.$,"reviewed, no change needed"
+Route113_Text_LawrencePostBattle,"I ought to hide under the ashes, too.$","reviewed, no change needed"
+Route113_Text_WyattDefeat,Y-you're all happy to win?\nEven though it's only me?$,"reviewed, no change needed"
+Route113_Text_WyattPostBattle,"Oh, so now you want to say a word to\nthe loser?\pAren't you just the coolest?\nHumph!$","reviewed, no change needed"
+Route114_Text_LennyIntro,Yodelayhihoo!\p… …\pYou're supposed to shout\n“yodelayhihoo” since it doesn't\lecho here!$,"reviewed, no change needed"
+Route114_Text_LennyDefeat,Yodelayhihoo!$,"reviewed, no change needed"
+Route114_Text_LennyPostBattle,"When I was a wee tyke, I believed there\nwas someone copying me and shouting\lback, “Yodelayhihoo.”$","reviewed, no change needed"
+Route114_Text_LucasIntro,"If you're not prepared, you shouldn't\nbe up in the mountains!$","reviewed, no change needed"
+Route114_Text_LucasDefeat,The mountains are unforgiving…$,"reviewed, no change needed"
+Route114_Text_LucasPostBattle,"In the winter, mountains turn deadly\nwith blizzards and avalanches.$","reviewed, no change needed"
+Route114_Text_ShaneIntro,"Camping's fun! You can fish, roast\nmarshmallows, and tell spooky stories!\pBut the best of all are the COMPANION\nbattles!$",reviewed AUTO draft
+Route114_Text_ShaneDefeat,Way too strong!$,"reviewed, no change needed"
+Route114_Text_ShanePostBattle,I think it's great that I can go\ncamping with my COMPANION.$,reviewed AUTO draft
+Route114_Text_NancyIntro,I need to exercise after a meal.\nLet's have a match!$,"reviewed, no change needed"
+Route114_Text_NancyDefeat,"Oh, no!$","reviewed, no change needed"
+Route114_Text_NancyPostBattle,I just had a tasty meal.\nI'm getting drowsy…$,"reviewed, no change needed"
+Route114_Text_SteveIntro,Ufufufufufu…\nWant to battle against my COMPANION?$,reviewed AUTO draft
+Route114_Text_SteveDefeat,M-My COMPANION…$,reviewed AUTO draft
+Route114_Text_StevePostBattle,"A big body that's all lumpy and hard,\nenormous horns, and vicious fangs…\pUfufufufu…\nI wish I had a COMPANIONS like that…$",reviewed AUTO draft
+Route114_Text_SteveRegister,Don't forget what you've done to me!\nI'll make it so you can't forget!$,"reviewed, no change needed"
+Route114_Text_SteveRematchIntro,"Ufufufufufu…\nCome on, battle my COMPANION…$",reviewed AUTO draft
+Route114_Text_SteveRematchDefeat,I feel so lucky getting to see your\nCOMPANION…$,reviewed AUTO draft
+Route114_Text_StevePostRematch,"Ufufufufufu…\pWhen I see COMPANION battling, I get all\nshivery and shaky…$",reviewed AUTO draft
+Route114_Text_BernieIntro,"If you're lighting a campfire,\nmake sure you have water handy.$","reviewed, no change needed"
+Route114_Text_BernieDefeat,Thanks for dousing my fire!$,"reviewed, no change needed"
+Route114_Text_BerniePostBattle,You really do have to be careful with\nany sort of fire in a forest.\pDon't ever underestimate the power\nof fire.$,"reviewed, no change needed"
+Route114_Text_BernieRegister,You set my spirit on fire.\nLet's register each other!$,"reviewed, no change needed"
+Route114_Text_BernieRematchIntro,Have you learned to keep water handy\nfor campfires?$,"reviewed, no change needed"
+Route114_Text_BernieRematchDefeat,"I got hosed down before I could\nflare up, I guess.$","reviewed, no change needed"
+Route114_Text_BerniePostRematch,You really do have to be careful with\nany sort of fire in a forest.\pDon't ever underestimate the power\nof fire.$,"reviewed, no change needed"
+Route114_Text_ClaudeIntro,"If we were fishing, you wouldn't stand\na chance against me.\lSo, bring on your COMPANION!$",reviewed AUTO draft
+Route114_Text_ClaudeDefeat,"If we were fishing, I would've won…$","reviewed, no change needed"
+Route114_Text_ClaudePostBattle,I think I'll try my luck at landing\na big one at STARFALL CAVERN.\pThere has to be something in there.\nI just know it.$,reviewed AUTO draft
+Route114_Text_NolanIntro,"I like to fish. But I also like to\nbattle!\pIf anyone challenges me, I'm there,\neven if I'm fishing.$","reviewed, no change needed"
+Route114_Text_NolanDefeat,"I like to battle, but that doesn't\nmean I'm good at it…$","reviewed, no change needed"
+Route114_Text_NolanPostBattle,"This time I'll do it!\pI always think that, so I can't walk\naway from fishing or COMPANION.$",reviewed AUTO draft
+Route114_Text_TyraIntro,"TARA: Well, sure.\nI'm in the mood for it.\lI'll teach you a little about COMPANION.$",reviewed AUTO draft
+Route114_Text_TyraDefeat,TARA: What an amazing battle style!$,reviewed AUTO draft
+Route114_Text_TyraPostBattle,TARA: I was teaching my junior IVY\nabout COMPANIONS.$,reviewed AUTO draft
+Route114_Text_TyraNotEnoughMons,"TARA: Giggle…\nIf you want to battle with us, just one\lCOMPANION isn't enough!$",reviewed AUTO draft
+Route114_Text_IvyIntro,IVI: Who taught you about COMPANIONS?$,reviewed AUTO draft
+Route114_Text_IvyDefeat,IVI: What an amazing battle style!$,reviewed AUTO draft
+Route114_Text_IvyPostBattle,"IVI: I started training COMPANION\nbecause TYRA, my student mentor,\ltaught me!$",reviewed AUTO draft
+Route114_Text_IvyNotEnoughMons,IVI: Do you only have one COMPANION?\nI think it must feel lonesome.$,reviewed AUTO draft
+Route114_Text_KaiIntro,"I landed a big one!\nA huge one, I tell you!$","reviewed, no change needed"
+Route114_Text_KaiDefeat,What was that about?\nDid mine lose in size?$,"reviewed, no change needed"
+Route114_Text_KaiPostBattle,Okay!\nI'll just fish me a bigger one!$,"reviewed, no change needed"
+Route114_Text_CharlotteIntro,Me!\nI'm not just a pretty face!$,"reviewed, no change needed"
+Route114_Text_CharlotteDefeat,That wasn't cute in the least!$,"reviewed, no change needed"
+Route114_Text_CharlottePostBattle,I don't want a COMPANION that's\njust cute.\pI adore cute ones that have a quirk\nor two!$,reviewed AUTO draft
+Route114_Text_AngelinaIntro,Have you made your COMPANION evolve\nvery much?$,reviewed AUTO draft
+Route114_Text_AngelinaDefeat,"Oh, I see.\nThat's good to know.$","reviewed, no change needed"
+Route114_Text_AngelinaPostBattle,"Some COMPANION change so much when\nthey evolve, it's startling!$",reviewed AUTO draft
+Route115_Text_TimothyIntro,Hm…\nYou seem rather capable…\lLet me keep you company!$,"reviewed, no change needed"
+Route115_Text_TimothyDefeat,You're much stronger than\nI'd imagined!$,"reviewed, no change needed"
+Route115_Text_TimothyPostBattle,There is no such thing as a born genius.\nIt all depends on effort!\lThat is what I believe…$,"reviewed, no change needed"
+Route115_Text_TimothyRegister,"Hmm… A loss this thorough has been\na distant memory.\pIf you would allow it, I wish for\nanother opportunity to do battle.$","reviewed, no change needed"
+Route115_Text_TimothyRematchIntro,"Hm… As always, your agility speaks\nfor itself.\lCome, keep me company!$","reviewed, no change needed"
+Route115_Text_TimothyRematchDefeat,As strong as ever!$,"reviewed, no change needed"
+Route115_Text_TimothyPostRematch,All it takes is effort!\pI lost because I haven't put in enough\neffort!$,"reviewed, no change needed"
+Route115_Text_KoichiIntro,You!\pMy B1 DROID!\pDemand a battle!$,reviewed AUTO draft
+Route115_Text_KoichiDefeat,"Ouch, ouch, ouch!$","reviewed, no change needed"
+Route115_Text_KoichiPostBattle,"My B1 DROID crew!\pSo long as they seek power, I will\ngrow strong with them!$",reviewed AUTO draft
+Route115_Text_NobIntro,My strongest skill is busting bricks\nwith my forehead!$,"reviewed, no change needed"
+Route115_Text_NobDefeat,Ugwaaaah!\nMy head is busted!$,"reviewed, no change needed"
+Route115_Text_NobPostBattle,I've been teaching my COMPANION\nkarate.\pIt looks like they'll get a lot better\nthan me. I'm excited about that.$,reviewed AUTO draft
+Route115_Text_NobRegister,You impress me! Give me a rematch\nafter I redo my training!$,"reviewed, no change needed"
+Route115_Text_NobRematchIntro,"After you beat me, we trained hard to\nimprove our skills.\lCome on, give us a rematch!$","reviewed, no change needed"
+Route115_Text_NobRematchDefeat,Ugwaaah!\nWe lost again!$,"reviewed, no change needed"
+Route115_Text_NobPostRematch,My COMPANION will grow stronger!\nI'll redouble my training!$,reviewed AUTO draft
+Route115_Text_CyndyIntro,This beach is my secret training spot!\nDon't come butting in!$,"reviewed, no change needed"
+Route115_Text_CyndyDefeat,I haven't trained enough!$,"reviewed, no change needed"
+Route115_Text_CyndyPostBattle,The sand acts as a cushion to reduce\nimpact and prevent injury.\lThis is the perfect place to train.$,"reviewed, no change needed"
+Route115_Text_CyndyRegister,"Okay, fine, you're free to come here.\nIn return, I'd like to battle you again.$","reviewed, no change needed"
+Route115_Text_CyndyRematchIntro,"Okay, let's get this battle on!$","reviewed, no change needed"
+Route115_Text_CyndyRematchDefeat,I can battle but my COMPANION…$,reviewed AUTO draft
+Route115_Text_CyndyPostRematch,"Even when I lose, I still get some\nenjoyment out of it.\lIt must be that I love COMPANIONS.$",reviewed AUTO draft
+Route115_Text_HectorIntro,I have a rare COMPANION!\nWould you like me to show you?$,reviewed AUTO draft
+Route115_Text_HectorDefeat,"You…\nYou want my COMPANION, don't you?$",reviewed AUTO draft
+Route115_Text_HectorPostBattle,I have this rare COMPANION.\nIt's enough to keep me satisfied.$,reviewed AUTO draft
+Route115_Text_KyraIntro,I'll battle while I'm running!\nTry to keep up with me!$,"reviewed, no change needed"
+Route115_Text_KyraDefeat,"Gasp, gasp…$","reviewed, no change needed"
+Route115_Text_KyraPostBattle,I made the mistake of trying to battle\nwhile running!\pI should take a run to calm down…$,"reviewed, no change needed"
+Route115_Text_JaidenIntro,Take that!\nUltra COMPANION ninja attack!$,reviewed AUTO draft
+Route115_Text_JaidenDefeat,Waaah!\nOur strategy failed!$,"reviewed, no change needed"
+Route115_Text_JaidenPostBattle,"But my COMPANIONS were ultra,\nweren't they?$",reviewed AUTO draft
+Route115_Text_HeleneIntro,My COMPANIONS have black belt-level\nstrength!$,reviewed AUTO draft
+Route115_Text_HeleneDefeat,This is too humiliating!$,"reviewed, no change needed"
+Route115_Text_HelenePostBattle,"I rarely meet anyone who's better\nthan me…\pI get it now!\nYou're an ARENA LEADER, aren't you?$",reviewed AUTO draft
+Route115_Text_AlixIntro,Our eyes met!\nThere's no getting away now!$,"reviewed, no change needed"
+Route115_Text_AlixDefeat,Gah!\nNot bad!$,"reviewed, no change needed"
+Route115_Text_AlixPostBattle,"Oh, well.\nI think I will TELEPORT home.$","reviewed, no change needed"
+Route115_Text_MarleneIntro,You've disturbed my meditation…\nYou'll be punished for it.$,"reviewed, no change needed"
+Route115_Text_MarleneDefeat,You've broken my concentration!$,"reviewed, no change needed"
+Route115_Text_MarlenePostBattle,I was meditating with my COMPANION.\nBut this place isn't very peaceful…$,reviewed AUTO draft
+Route117_Text_IsaacIntro,"Listen, could I get you to battle\nthe COMPANION I'm raising?$",reviewed AUTO draft
+Route117_Text_IsaacDefeat,You've raised yours superbly…$,"reviewed, no change needed"
+Route117_Text_IsaacPostBattle,COMPANION isn't all about power.\pPolishing a unique aspect of one's\ncharacter is another way of enjoying\lCOMPANION.$,reviewed AUTO draft
+Route117_Text_IsaacRegister,I'm going to redouble my training.\nWould you come look in on us?$,"reviewed, no change needed"
+Route117_Text_IsaacRematchIntro,"The COMPANION I've been raising are\nlooking good, just like before.$",reviewed AUTO draft
+Route117_Text_IsaacRematchDefeat,You know how to raise them properly.\nYou might have NURSERY skills…$,reviewed AUTO draft
+Route117_Text_IsaacPostRematch,Your COMPANIONS are growing good!\nYou should enter them in SHOWCASES.$,reviewed AUTO draft
+Route117_Text_LydiaIntro,"Please, allow me to evaluate if you\nhave raised your COMPANION properly.$",reviewed AUTO draft
+Route117_Text_LydiaDefeat,"Yes, they are growing properly.$","reviewed, no change needed"
+Route117_Text_LydiaPostBattle,Try raising COMPANIONS with more\nattention to their character traits.$,reviewed AUTO draft
+Route117_Text_LydiaRegister,I'm glad I met a superb TRAINER in you.\nI hope to see you again.$,"reviewed, no change needed"
+Route117_Text_LydiaRematchIntro,Allow me to reevaluate if you have\nraised your COMPANION properly.$,reviewed AUTO draft
+Route117_Text_LydiaRematchDefeat,They are growing admirably.$,"reviewed, no change needed"
+Route117_Text_LydiaPostRematch,"COMPANIONS seem to like different\nkinds of {POKEBLOCK}S, depending on their nature.$",reviewed AUTO draft
+Route117_Text_DylanIntro,"I'm in the middle of a triathlon, but,\nwhatever, let's have a battle!$","reviewed, no change needed"
+Route117_Text_DylanDefeat,I ran out of energy!$,"reviewed, no change needed"
+Route117_Text_DylanPostBattle,I may have blown it…\pI might have dropped to last during\nthat battle…$,"reviewed, no change needed"
+Route117_Text_DylanRegister,"COMPANIONS have to be strong, too?\nI'd like you to train me!$",reviewed AUTO draft
+Route117_Text_DylanRematchIntro,"I'm smack in the middle of a triathlon,\nbut I'm comfortably ahead.\lLet's make this a quick battle!$","reviewed, no change needed"
+Route117_Text_DylanRematchDefeat,I ran out of energy again!$,"reviewed, no change needed"
+Route117_Text_DylanPostRematch,"I was tops in swimming and cycling,\nbut I'm not quite that confident with\lCOMPANION yet.$",reviewed AUTO draft
+Route117_Text_MariaDefeat,"I need to get more practices in,\nI guess.$","reviewed, no change needed"
+Route117_Text_MariaPostBattle,Training is meaningful only if you\nkeep it up regularly.\pOkay! I'll resume my training!\nTomorrow!$,"reviewed, no change needed"
+Route117_Text_MariaRegister,"You appear to be training properly…\nIf you'd like, I'll battle you later!$","reviewed, no change needed"
+Route117_Text_MariaRematchIntro,Are you keeping up with your training?\nI sure am!\lLet me show you the evidence!$,"reviewed, no change needed"
+Route117_Text_MariaRematchDefeat,"I need to get more practices in,\nI guess.$","reviewed, no change needed"
+Route117_Text_MariaPostRematch,I'll resume training tomorrow.\nLet's battle again sometime!$,"reviewed, no change needed"
+Route117_Text_DerekIntro,Once a BUG CATCHER!\nAnd now a BUG MANIAC!\pBut my love for COMPANION remains\nunchanged!$,reviewed AUTO draft
+Route117_Text_DerekDefeat,My ineptitude also remains\nunchanged…$,"reviewed, no change needed"
+Route117_Text_DerekPostBattle,"All I did was follow my heart, and now\nthey call me a BUG MANIAC…\pStill, I am an expert on BUG COMPANIONS,\nso it's only natural that they call me\la BUG MANIAC.$",reviewed AUTO draft
+Route117_Text_AnnaIntro,AINA: I'm with my pretty junior student\npartner. I have to do good!$,reviewed AUTO draft
+Route117_Text_AnnaDefeat,AINA: I'm with my pretty junior student\npartner! Let me win!$,reviewed AUTO draft
+Route117_Text_AnnaPostBattle,AINA: Your COMPANIONS have some good\ncombinations.\pI'd say you're second only to us!$,reviewed AUTO draft
+Route117_Text_AnnaAndMegRegister,"AINA: We can't take this lying down!\nYou will come back, won't you?$",reviewed AUTO draft
+Route117_Text_AnnaNotEnoughMons,"AINA: If you want to battle us,\nbring two COMPANIONS with you.$",reviewed AUTO draft
+Route117_Text_MegIntro,MEZ: I'm going to tag up with my super\nsenior student partner and beat you!$,reviewed AUTO draft
+Route117_Text_MegDefeat,"MEZ: Oh, no!\nI'm sorry, ANNA! I let you down…$",reviewed AUTO draft
+Route117_Text_MegPostBattle,"MEZ: I dragged ANNA down…\nIf I didn't, she would have won!$",reviewed AUTO draft
+Route117_Text_MegNotEnoughMons,"MEZ: Do you only have one COMPANION?\nWe can't battle with you, then.\pWe want to have a 2-on-2 battle.$",reviewed AUTO draft
+Route117_Text_AnnaRematchIntro,"AINA: I can't keep losing in front of\nmy junior partner, right?$",reviewed AUTO draft
+Route117_Text_AnnaRematchDefeat,AINA: I couldn't get into the groove.$,reviewed AUTO draft
+Route117_Text_AnnaPostRematch,AINA: Your COMPANIONS have some good\ncombinations.\pI'd say you're second only to us!$,reviewed AUTO draft
+Route117_Text_AnnaRematchNotEnoughMons,"AINA: If you want to battle us,\nbring two COMPANIONS with you.$",reviewed AUTO draft
+Route117_Text_MegRematchIntro,MEZ: I'm going to tag up with my\nsenior partner and win this time!$,reviewed AUTO draft
+Route117_Text_MegRematchDefeat,MEZ: Too strong!$,reviewed AUTO draft
+Route117_Text_MegPostRematch,"MEZ: I battled together with my\nsenior partner, but we lost…\pThat's so discouraging…$",reviewed AUTO draft
+Route117_Text_MegRematchNotEnoughMons,"MEZ: Do you only have one COMPANION?\nWe can't battle with you, then.\pWe want to have a 2-on-2 battle.$",reviewed AUTO draft
+Route117_Text_MelinaIntro,Isn't it nice? To battle while looking\nat pretty flowers?$,"reviewed, no change needed"
+Route117_Text_MelinaDefeat,"Oh, that's quite impressive!$","reviewed, no change needed"
+Route117_Text_MelinaPostBattle,It feels wonderful to go for a jog\nwhile looking at flowers.$,"reviewed, no change needed"
+Route117_Text_BrandiIntro,Let me demonstrate the power\nhidden within a FORCE PUSH COMPANION!$,reviewed AUTO draft
+Route117_Text_BrandiDefeat,Astonishing!$,"reviewed, no change needed"
+Route117_Text_BrandiPostBattle,FORCE PUSH COMPANIONS are complex.\nYou should try catching some.$,reviewed AUTO draft
+Route117_Text_AishaIntro,Concentrate on getting the win.\nThat's how I battle!$,"reviewed, no change needed"
+Route117_Text_AishaDefeat,I don't waste any time being angry\nover a loss--I would rather train.$,"reviewed, no change needed"
+Route117_Text_AishaPostBattle,"I think that if you worry about losing,\nyou're more likely to lose.$","reviewed, no change needed"

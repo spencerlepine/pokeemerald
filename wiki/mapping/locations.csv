@@ -1,0 +1,214 @@
+emerald_id,sw_name,swap_kind,map_status,art_status,planet,sw_description,notes
+location:littleroot-town,MOS PELGO,HOTSWAP,DONE,PENDING_ART,TATOOINE,Tiny moisture-farming settlement where the player's family lands. Prof. Korr's lab.,
+location:oldale-town,TOSCHE STATION,HOTSWAP,DONE,PENDING_ART,TATOOINE,Power-converter station and trading post with a Bacta Center.,
+location:dewford-town,KACHIRHO,HOTSWAP,DONE,PENDING_ART,KASHYYYK,Wookiee lagoon city at the foot of the wroshyr trees; Tarfful's arena.,
+location:lavaridge-town,PIRIN,HOTSWAP,DONE,PENDING_ART,SULLUST,Sullustan hot-spring town; Sabine's arena.,
+location:fallarbor-town,INYUSU TOR,HOTSWAP,DONE,PENDING_ART,SULLUST,Ash-covered farm town; Dr. Tien's house and a Showcase hall.,
+location:verdanturf-town,ANCHORHEAD,HOTSWAP,DONE,PENDING_ART,TATOOINE,Quiet farm town with clean air; Camie's family and a Showcase hall.,
+location:pacifidlog-town,TIPOCA CITY,HOTSWAP,DONE,PENDING_ART,KAMINO,Stilt city on Kamino's endless ocean.,
+location:petalburg-city,MOS ENTHA,HOTSWAP,DONE,PENDING_ART,TATOOINE,Farm town; Doran's arena and the Lars family's home.,
+location:slateport-city,MOS EISLEY,HOTSWAP,DONE,PENDING_ART,TATOOINE,"Wretched hive of scum and villainy: spaceport, market, Ric Olié's shipyard, the Spacer Museum.",
+location:mauville-city,MOS ESPA,HOTSWAP,DONE,PENDING_ART,TATOOINE,"Podracing city under one roof; Watto's arena, Wald's bike shop, the Sabacc Den.",
+location:rustboro-city,BESTINE,HOTSWAP,DONE,PENDING_ART,TATOOINE,"Tatooine's capital: House Organa office, the academy, Biggs's arena.",
+location:fortree-city,BRIGHT TREE,HOTSWAP,DONE,PENDING_ART,ENDOR,Ewok treetop village; Chief Chirpa's arena.,
+location:lilycove-city,CLOUD CITY,HOTSWAP,DONE,PENDING_ART,BESPIN,"Floating city: department store, Showcase hall, museum, harbor.",
+location:mossdeep-city,YAVIN 4,HOTSWAP,DONE,PENDING_ART,YAVIN 4,Secret Rebel base in the jungle; launch tower and the Massassi Temple arena.,
+location:sootopolis-city,DAGOBAH,HOTSWAP,DONE,PENDING_ART,DAGOBAH,Hidden swamp hollow reached by diving; Yoda's arena and the Cave of Evil.,
+location:ever-grande-city,ILUM,HOTSWAP,DONE,PENDING_ART,ILUM,Ice world of the Jedi crystal caves and the hidden temple.,
+location:route-101,ROUTE 101,HOTSWAP,DONE,PENDING_ART,TATOOINE,,Route number kept; tiles become the planet's biome.
+location:route-102,ROUTE 102,HOTSWAP,DONE,PENDING_ART,TATOOINE,,Route number kept; tiles become the planet's biome.
+location:route-103,ROUTE 103,HOTSWAP,DONE,PENDING_ART,TATOOINE,,Route number kept; tiles become the planet's biome.
+location:route-104,ROUTE 104,HOTSWAP,DONE,PENDING_ART,TATOOINE,,Route number kept; tiles become the planet's biome.
+location:route-105,ROUTE 105,HOTSWAP,DONE,PENDING_ART,KASHYYYK,,Route number kept; tiles become the planet's biome.
+location:route-106,ROUTE 106,HOTSWAP,DONE,PENDING_ART,KASHYYYK,,Route number kept; tiles become the planet's biome.
+location:route-107,ROUTE 107,HOTSWAP,DONE,PENDING_ART,KASHYYYK,,Route number kept; tiles become the planet's biome.
+location:route-108,ROUTE 108,HOTSWAP,DONE,PENDING_ART,KASHYYYK,Republic Wreck offshore.,Route number kept; tiles become the planet's biome.
+location:route-109,ROUTE 109,HOTSWAP,DONE,PENDING_ART,KASHYYYK,,Route number kept; tiles become the planet's biome.
+location:route-110,ROUTE 110,HOTSWAP,DONE,PENDING_ART,TATOOINE,Boonta Eve podrace course runs along its Cycling Road.,Route number kept; tiles become the planet's biome.
+location:route-111,ROUTE 111,HOTSWAP,DONE,PENDING_ART,TATOOINE,The DUNE SEA desert with sandstorms (SAND GOGGLES).,Route number kept; tiles become the planet's biome.
+location:route-112,ROUTE 112,HOTSWAP,DONE,PENDING_ART,TATOOINE,Shuttle (cable car) to Mustafar Peak.,Route number kept; tiles become the planet's biome.
+location:route-113,ROUTE 113,HOTSWAP,DONE,PENDING_ART,SULLUST,,Route number kept; tiles become the planet's biome.
+location:route-114,ROUTE 114,HOTSWAP,DONE,PENDING_ART,SULLUST,,Route number kept; tiles become the planet's biome.
+location:route-115,ROUTE 115,HOTSWAP,DONE,PENDING_ART,TATOOINE,,Route number kept; tiles become the planet's biome.
+location:route-116,ROUTE 116,HOTSWAP,DONE,PENDING_ART,TATOOINE,,Route number kept; tiles become the planet's biome.
+location:route-117,ROUTE 117,HOTSWAP,DONE,PENDING_ART,TATOOINE,Creature Nursery.,Route number kept; tiles become the planet's biome.
+location:route-118,ROUTE 118,HOTSWAP,DONE,PENDING_ART,ENDOR,,Route number kept; tiles become the planet's biome.
+location:route-119,ROUTE 119,HOTSWAP,DONE,PENDING_ART,ENDOR,Treewalk forest; Endor Station.,Route number kept; tiles become the planet's biome.
+location:route-120,ROUTE 120,HOTSWAP,DONE,PENDING_ART,ENDOR,Endor forest; TAOZIN hide here.,Route number kept; tiles become the planet's biome.
+location:route-121,ROUTE 121,HOTSWAP,DONE,PENDING_ART,ENDOR,,Route number kept; tiles become the planet's biome.
+location:route-122,ROUTE 122,HOTSWAP,DONE,PENDING_ART,JEDHA,Holy waters around Jedha.,Route number kept; tiles become the planet's biome.
+location:route-123,ROUTE 123,HOTSWAP,DONE,PENDING_ART,ENDOR,,Route number kept; tiles become the planet's biome.
+location:route-124,ROUTE 124,HOTSWAP,DONE,PENDING_ART,YAVIN 4,,Route number kept; tiles become the planet's biome.
+location:route-125,ROUTE 125,HOTSWAP,DONE,PENDING_ART,YAVIN 4,,Route number kept; tiles become the planet's biome.
+location:route-126,ROUTE 126,HOTSWAP,DONE,PENDING_ART,DAGOBAH,,Route number kept; tiles become the planet's biome.
+location:route-127,ROUTE 127,HOTSWAP,DONE,PENDING_ART,DAGOBAH,,Route number kept; tiles become the planet's biome.
+location:route-128,ROUTE 128,HOTSWAP,DONE,PENDING_ART,DAGOBAH,,Route number kept; tiles become the planet's biome.
+location:route-129,ROUTE 129,HOTSWAP,DONE,PENDING_ART,DAGOBAH,,Route number kept; tiles become the planet's biome.
+location:route-130,ROUTE 130,HOTSWAP,DONE,PENDING_ART,DAGOBAH,,Route number kept; tiles become the planet's biome.
+location:route-131,ROUTE 131,HOTSWAP,DONE,PENDING_ART,KAMINO,,Route number kept; tiles become the planet's biome.
+location:route-132,ROUTE 132,HOTSWAP,DONE,PENDING_ART,KAMINO,,Route number kept; tiles become the planet's biome.
+location:route-133,ROUTE 133,HOTSWAP,DONE,PENDING_ART,KAMINO,,Route number kept; tiles become the planet's biome.
+location:route-134,ROUTE 134,HOTSWAP,DONE,PENDING_ART,KAMINO,,Route number kept; tiles become the planet's biome.
+location:underwater-124,UNDERWATER,HOTSWAP,DONE,PENDING_ART,YAVIN 4,,
+location:underwater-126,UNDERWATER,HOTSWAP,DONE,PENDING_ART,DAGOBAH,,
+location:underwater-127,UNDERWATER,HOTSWAP,DONE,PENDING_ART,DAGOBAH,,
+location:underwater-128,UNDERWATER,HOTSWAP,DONE,PENDING_ART,DAGOBAH,,
+location:underwater-sootopolis,UNDERWATER,HOTSWAP,DONE,PENDING_ART,DAGOBAH,,
+location:granite-cave,SHADOWLANDS,HOTSWAP,DONE,PENDING_ART,KASHYYYK,Dark lower levels of the wroshyr forest; Leia waits deep inside.,
+location:mt-chimney,MUSTAFAR PEAK,HOTSWAP,DONE,PENDING_ART,MUSTAFAR,Lava summit where Vader is fought for the first time.,
+location:safari-zone,FELUCIA RESERVE,HOTSWAP,DONE,PENDING_ART,FELUCIA,Off-world creature preserve.,
+location:battle-frontier,GRAND ARENA,HOTSWAP,DONE,PENDING_ART,GRAND ARENA,Lando's post-game arena island.,
+location:petalburg-woods,JUNDLAND WASTES,HOTSWAP,DONE,PENDING_ART,TATOOINE,Rocky canyon badlands; Tusken territory.,
+location:rusturf-tunnel,BEGGAR'S CANYON,HOTSWAP,DONE,PENDING_ART,TATOOINE,Narrow canyon tunnel Fixer is digging by hand.,
+location:abandoned-ship,REPUBLIC WRECK,HOTSWAP,DONE,PENDING_ART,KASHYYYK,Wreck of a Republic cruiser from the Battle of Kashyyyk.,
+location:new-mauville,ESPA GENERATOR,HOTSWAP,DONE,PENDING_ART,TATOOINE,Old power generator under Mos Espa.,
+location:meteor-falls,STARFALL CAVERN,HOTSWAP,DONE,PENDING_ART,SULLUST,Cavern where a meteorite fell; Empire and Cartel clash.,
+location:meteor-falls2,STARFALL CAVERN,HOTSWAP,DONE,PENDING_ART,SULLUST,Duplicate section.,
+location:mt-pyre,JEDHA TEMPLE,HOTSWAP,DONE,PENDING_ART,JEDHA,Holy mountain temple of the Whills; RED and BLUE KYBER.,
+location:aqua-hideout-old,HUTT HIDEOUT,HOTSWAP,DONE,PENDING_ART,BESPIN,Unused duplicate section.,
+location:shoal-cave,WAMPA CAVE,HOTSWAP,DONE,PENDING_ART,HOTH,Ice caves with tides of meltwater.,
+location:seafloor-cavern,DROWNED CAVERN,HOTSWAP,DONE,PENDING_ART,DAGOBAH,Sunken cave where SANDO sleeps.,
+location:underwater-seafloor-cavern,UNDERWATER,HOTSWAP,DONE,PENDING_ART,DAGOBAH,,
+location:victory-road,CRYSTAL CAVES,HOTSWAP,DONE,PENDING_ART,ILUM,Kyber caves before the temple; final rival battle with Luke.,
+location:mirage-island,MIRAGE ISLE,HOTSWAP,DONE,PENDING_ART,DAGOBAH,Islet that only appears sometimes.,
+location:cave-of-origin,CAVE OF EVIL,HOTSWAP,DONE,PENDING_ART,DAGOBAH,Force vergence where the titans clash.,
+location:southern-island,TYTHON ISLE,HOTSWAP,DONE,PENDING_ART,TYTHON,Island of the Force dragons ASHLA and BOGAN.,
+location:fiery-path,MAGMA TUNNELS,HOTSWAP,DONE,PENDING_ART,SULLUST,Volcanic tunnels.,
+location:fiery-path2,MAGMA TUNNELS,HOTSWAP,DONE,PENDING_ART,SULLUST,Duplicate section.,
+location:jagged-pass,ASHEN PASS,HOTSWAP,DONE,PENDING_ART,SULLUST,Steep ash trail down from Mustafar's landing pad.,
+location:jagged-pass2,ASHEN PASS,HOTSWAP,DONE,PENDING_ART,SULLUST,Duplicate section.,
+location:sealed-chamber,SEALED VAULT,HOTSWAP,DONE,PENDING_ART,KAMINO,Aurebesh-glyph vault that wakes the Wardens.,
+location:underwater-sealed-chamber,UNDERWATER,HOTSWAP,DONE,PENDING_ART,DAGOBAH,,
+location:scorched-slab,SCORCHED HOLLOW,HOTSWAP,DONE,PENDING_ART,ENDOR,Sun-baked hollow under the forest.,
+location:island-cave,ICE GROTTO,HOTSWAP,DONE,PENDING_ART,KASHYYYK,Home of ICEWARDEN.,
+location:desert-ruins,TUSKEN RUINS,HOTSWAP,DONE,PENDING_ART,TATOOINE,Home of ROCKWARDEN.,
+location:ancient-tomb,ANCIENT TOMB,HOTSWAP,DONE,PENDING_ART,ENDOR,Home of DURAWARDEN.,
+location:inside-of-truck,CARGO HOLD,HOTSWAP,DONE,PENDING_ART,TATOOINE,Freighter cargo hold where the game opens.,
+location:sky-pillar,ASTEROID SPIRE,HOTSWAP,DONE,PENDING_ART,ASTEROID FIELD,Ancient spire on an asteroid; the EXOGORTH's lair.,
+location:secret-base,HIDEOUT,HOTSWAP,DONE,PENDING_ART,,,
+location:dynamic,,KEEP,DONE,NO_ART,,,
+location:pallet-town,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:viridian-city,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:pewter-city,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:cerulean-city,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:lavender-town,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:vermilion-city,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:celadon-city,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:fuchsia-city,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:cinnabar-island,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:indigo-plateau,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:saffron-city,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:route-4-pokecenter,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:route-10-pokecenter,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:route-1,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:route-2,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:route-3,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:route-4,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:route-5,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:route-6,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:route-7,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:route-8,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:route-9,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:route-10,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:route-11,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:route-12,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:route-13,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:route-14,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:route-15,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:route-16,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:route-17,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:route-18,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:route-19,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:route-20,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:route-21,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:route-22,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:route-23,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:route-24,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:route-25,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:viridian-forest,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:mt-moon,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:s-s-anne,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:underground-path,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:underground-path-2,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:digletts-cave,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:kanto-victory-road,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:rocket-hideout,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:silph-co,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:pokemon-mansion,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:kanto-safari-zone,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:pokemon-league,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:rock-tunnel,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:seafoam-islands,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:pokemon-tower,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:cerulean-cave,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:power-plant,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:one-island,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:two-island,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:three-island,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:four-island,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:five-island,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:seven-island,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:six-island,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:kindle-road,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:treasure-beach,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:cape-brink,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:bond-bridge,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:three-isle-port,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:sevii-isle-6,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:sevii-isle-7,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:sevii-isle-8,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:sevii-isle-9,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:resort-gorgeous,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:water-labyrinth,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:five-isle-meadow,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:memorial-pillar,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:outcast-island,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:green-path,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:water-path,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:ruin-valley,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:trainer-tower,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:canyon-entrance,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:sevault-canyon,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:tanoby-ruins,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:sevii-isle-22,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:sevii-isle-23,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:sevii-isle-24,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:navel-rock-frlg,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:mt-ember,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:berry-forest,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:icefall-cave,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:rocket-warehouse,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:trainer-tower-2,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:dotted-hole,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:lost-cave,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:pattern-bush,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:altering-cave-frlg,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:tanoby-chambers,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:three-isle-path,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:tanoby-key,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:birth-island-frlg,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:monean-chamber,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:liptoo-chamber,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:weepth-chamber,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:dilford-chamber,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:scufib-chamber,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:rixy-chamber,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:viapois-chamber,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:ember-spa,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:special-area,,KEEP,DONE,NO_ART,,,Kanto/Sevii section from FireRed; not used in Emerald's world.
+location:aqua-hideout,HUTT HIDEOUT,HOTSWAP,DONE,PENDING_ART,BESPIN,Cartel base hidden in Cloud City's under-levels; Boba Fett guards it.,
+location:magma-hideout,FORTRESS VADER,HOTSWAP,DONE,PENDING_ART,MUSTAFAR,Vader's castle above the lava.,
+location:mirage-tower,SANDCRAWLER,HOTSWAP,DONE,PENDING_ART,TATOOINE,"Wrecked Jawa sandcrawler that appears in the Dune Sea, holds two fossils, and collapses.",
+location:birth-island,ATOLLON,HOTSWAP,DONE,PENDING_ART,ATOLLON,Home of the BENDU.,
+location:faraway-island,WELLSPRING,HOTSWAP,DONE,PENDING_ART,MORTIS,Wellspring of Life; home of the PRIMORDIAL.,
+location:artisan-cave,ARTISAN CAVE,HOTSWAP,DONE,PENDING_ART,GRAND ARENA,,
+location:marine-cave,MARINE CAVE,HOTSWAP,DONE,PENDING_ART,DAGOBAH,Unused in Emerald.,
+location:underwater-marine-cave,UNDERWATER,HOTSWAP,DONE,PENDING_ART,DAGOBAH,,
+location:terra-cave,TERRA CAVE,HOTSWAP,DONE,PENDING_ART,TATOOINE,Unused in Emerald.,
+location:underwater-105,UNDERWATER,HOTSWAP,DONE,PENDING_ART,KASHYYYK,,
+location:underwater-125,UNDERWATER,HOTSWAP,DONE,PENDING_ART,YAVIN 4,,
+location:underwater-129,UNDERWATER,HOTSWAP,DONE,PENDING_ART,DAGOBAH,,
+location:desert-underpass,KRAYT GRAVEYARD,HOTSWAP,DONE,PENDING_ART,TATOOINE,Tunnels under the bones of dead krayt dragons.,
+location:altering-cave,ALTERING CAVE,HOTSWAP,DONE,PENDING_ART,GRAND ARENA,,
+location:navel-rock,MORTIS GATE,HOTSWAP,DONE,PENDING_ART,MORTIS,Gate to the realm of the FATHER and the DAUGHTER.,
+location:trainer-hill,TRIAL SPIRE,HOTSWAP,DONE,PENDING_ART,TATOOINE,Timed tower challenge.,

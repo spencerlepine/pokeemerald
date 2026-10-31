@@ -1,0 +1,225 @@
+text_id,sw_text_raw,notes
+SlateportCity_Text_WonderIfLighthouseStartlesPokemon,The beacon on the spaceport tower\nreaches dozens of miles away.\pI wonder if it doesn't startle the\nCOMPANIONS out in the wastes.$,
+SlateportCity_Text_SeaweedFullOfLife,"Ooh, look at this!\pThe womp rat jerky around these\nparts is fresh and full of flavor.\pWhy, it looks like it could even rear up\nand attack!$",
+SlateportCity_Text_HowTownIsBornAndGrows,"Where the ships land, the goods\nof a hundred worlds gather.\pAnd where people gather, a market\nsoon starts.\pThat is how a town is born and grows.$",
+SlateportCity_Text_SlateportWonderfulPlace,Shopping where you can hear ships\nfrom a hundred worlds land…\pMOS EISLEY is such a wonderful place!$,
+SlateportCity_Text_GoingToCompeteInBattleTent,"Wroooar! I'm going to compete in\nthe BATTLE TENT, too!\pBut before that, I need to catch\nsome COMPANIONS!$",
+SlateportCity_Text_BushedHikingFromMauville,"Whew… I'm just bushed…\pI hiked over from MOS ESPA.\nBut, boy, this city's huge.\pIf I'd known this, I would've ridden\nmy SPEEDER here.$",
+SlateportCity_Text_EveryoneCallsHimCaptStern,"OLIé, the fellow who built the\nMUSEUM, also happens to be the leader\lof a deep-water exploration team.\pHe flew for Queen AMIDALA once, so\neveryone still calls him CAPTAIN.$",
+SlateportCity_Text_VisitedMuseumOften,"When I was a child, I visited\nthe MUSEUM often.\pI used to dream about the mysteries of\nthe stars after seeing the exhibits.$",
+SlateportCity_Text_SaysSomethingLikeSeaIsEndless,"Let's see…\pUm… I think it says something like\n“the stars are endless.”\pYup, I'm pretty sure that's what\nit says.$",
+SlateportCity_Text_ShouldveBroughtMyGameBoy,Grumble…\pI should've brought my holo-game\nso I wouldn't get bored in line…\pGrumble…$,
+SlateportCity_Text_SeaIsSoWet,The galaxy is just so vast…\pCould the stars have been made by\nthe tears shed by COMPANIONS?$,
+SlateportCity_Text_SinkOldBoats,Do you know what they do with old\nships that become too creaky to fly?\pJAWAS strip them down and sell the\nparts right back to us!$,
+SlateportCity_Text_CaptainComeBackWithBigFish,What's going on here?\pDid the good CAPTAIN come back with\na big find from the deep?$,
+SlateportCity_Text_AmIOnTV,Hey! Are you watching?\nAm I on the HoloNet?$,
+SlateportCity_Text_CaptainsACelebrity,A HoloNet interview! Here!\nThe CAPTAIN's a celebrity!$,
+SlateportCity_Text_SternWhewFirstInterview,RIC OLIé: Whew…\pThat was my first time to be filmed for\nthe HoloNet. That was nerve-wracking.$,
+SlateportCity_Text_OhPlayerWeMadeDiscovery,Oh! {PLAYER}{KUN}!\nYou're looking great!\pWe made a huge discovery on our last\ndeep-water dive.\pWe found an underwater cavern on\nROUTE 128.\pWe think it's the habitat of a\nCOMPANION that's said to have been\llong extinct.$,
+SlateportCity_Text_AquaWillAssumeControlOfSubmarine,"Fufufu…\nRIC OLIé, I presume.\pWe of THE CARTEL will assume\ncontrol of your BONGO sub!\pYour objections are meaningless!\nWe expect your total cooperation!\pFufufu…\nJust watch and learn what the\lCARTEL has planned!$",
+SlateportCity_Text_FromHarborTryingToTakeSub,It's from the SPACEPORT!\pThe BONGO sub!\nThey're trying to take it!$,
+SlateportCity_Text_SternsShipyardWantedSign,OLIé'S SHIPYARD\p“Wanted: A pilot capable of flying\nthrough any asteroid field.”$,
+SlateportCity_Text_SternsShipyardNearsCompletion,OLIé'S SHIPYARD\p“The starliner STAR TIDAL nears\ncompletion for serving the ports of\lMOS EISLEY and CLOUD CITY.”$,
+SlateportCity_Text_SternsShipyardFerryComplete,OLIé'S SHIPYARD\p“Boarding for the STAR TIDAL to\nCLOUD CITY is handled at\lthe SPACEPORT.”$,
+SlateportCity_Text_PokemonFanClubSign,COMPANION FAN CLUB\n“Calling all fans of COMPANIONS!”$,
+SlateportCity_Text_OceanicMuseumSign,“The endless stars connect\nall life.”\pSPACER MUSEUM$,
+SlateportCity_Text_CitySign,MOS EISLEY\p“You will never find a more wretched\nhive of scum and villainy.”$,Obi-Wan's line from A New Hope
+SlateportCity_Text_HarborFerryUnderConstruction,MOS EISLEY SPACEPORT\p“The starliner STAR TIDAL is under\nconstruction in the SHIPYARD.\p“Service is scheduled to begin\nshortly.”$,
+SlateportCity_Text_HarborSign,MOS EISLEY SPACEPORT\p“Enjoy a delightful cruise on\nthe starliner STAR TIDAL.”$,
+SlateportCity_Text_ExplainBerryPowder,I recently had machines installed at\nBACTA CENTERS for crushing FRUIT.\pThe FRUIT CRUSH machines are at\nthe DIRECT CORNER upstairs.\pDid you know?\pCould you make FRUIT POWDER for\nme using those machines?\pI can make you all sorts of medicine\nif you bring me lots of FRUIT POWDER.$,
+SlateportCity_ContestHall_Text_JudgeWouldntDoToMissContest,"JUDGE: Well, hello there!\nI see that you're a TRAINER!\pThen, it just wouldn't do for you\nto miss a SHOWCASE!\pGet a SHOWCASE PASS in ANCHORHEAD\nand enter anytime!$",
+SlateportCity_ContestHall_Text_GetUrgeToMoveWithMon,Don't you get the urge to move with\nCOMPANIONS if they're putting on an\lenergetic appeal?$,
+SlateportCity_BattleTentLobby_Text_IllTryUsingBugMons,"I don't really like BUG COMPANIONS,\nbut maybe I'll try using some for\la change of pace.\pWho knows, I might even get to like\nthem!$",
+SlateportCity_BattleTentLobby_Text_BattleEvenWithoutToughMons,You can battle all you want here even\nif you don't have any tough COMPANIONS.$,
+SlateportCity_Harbor_Text_FerryServiceUnavailable,"I beg your pardon?\nYou're looking for a ship?\pI'm sorry, starliner service isn't\navailable at present…$",
+SlateportCity_Harbor_Text_MayISeeYourTicket,"Hello, are you here for the starliner?\nMay I see your PASS?$",
+SlateportCity_Harbor_Text_YouMustHaveTicket,{PLAYER} doesn't have the PASS…\pI'm terribly sorry.\pYou must have a PASS to board\nthe starliner.$,
+SlateportCity_Harbor_Text_FlashedTicketWhereTo,{PLAYER} flashed the PASS.\pPerfect! That's all you need!\pAnd where would you like to go?$,
+SlateportCity_Harbor_Text_SailAnotherTime,Please fly with us another time!$,
+SlateportCity_Harbor_Text_PleaseBoardFerry,Please board the starliner and wait\nfor departure.$,
+SlateportCity_Harbor_Text_LoveToGoDeepUnderwaterSomeday,A journey to the bottom of the deep…\nI wonder what it'd be like?\pI'd love to go deep underwater like\nthat someday.$,
+SlateportCity_Harbor_Text_AbnormalWeather,"For a ship to fly safely, we need to\nknow about the weather!\pSpeaking of weather, I heard something\nfrom a guy at the ENDOR STATION.\pHe was saying abnormal weather has\nbeen reported all over the place!\pYou should visit the ENDOR STATION\nand ask around!$",
+SlateportCity_Harbor_Text_SubTooSmallForMe,"I wanted to go with RIC OLIé on\nthe deep-water expedition.\pBut the BONGO's too small for me.\pIf I squeezed in, there wouldn't be\nany room for the CAPTAIN…$",
+SlateportCity_Harbor_Text_CaptSternWhyStealMySubmarine,"RIC OLIé: Why…\pWhy would THE CARTEL steal my\nBONGO EXPLORER?\pThey can't be after the slumbering\nCOMPANION at the bottom of the deep…\pBut even if I were to chase them,\nI don't stand a chance against them…$",
+SlateportCity_Harbor_Text_TeamAquaLeftNeedDive,"RIC OLIé: Oh, {PLAYER}{KUN}…\pOkay… So THE CARTEL left before you\ncould stop them…\pOh, no, don't blame yourself.\nYou're not responsible for this.\pTrying to catch a BONGO sub…\nIt's impossible for most people.\pYou would need a COMPANION that knows\nhow to DIVE…\pPerhaps if you went out to\nYAVIN 4…\pA lot of divers live out there, so\nsomeone might teach you…$",
+SlateportCity_Harbor_Text_NeedDiveToCatchSub,"RIC OLIé: Trying to catch a\nBONGO sub… It's impossible.\pYou would need a COMPANION that knows\nhow to DIVE…\pPerhaps if you went out to\nYAVIN 4…\pA lot of divers live out there, so\nsomeone might teach you…$",
+SlateportCity_Harbor_Text_WontBeLongBeforeWeFinishFerry,"RIC OLIé: Oh, yes.\nHAN came to our SHIPYARD.\pIt won't be long now before we finish\nbuilding the starliner!$",
+SlateportCity_Harbor_Text_FinishedMakingFerry,RIC OLIé: {PLAYER}{KUN}!\pWe finally finished building the\nstarliner STAR TIDAL!\pWe couldn't have done it without\nyour friend HAN.\pPlease go for a short cruise on it!$,
+SlateportCity_House_Text_NatureToDoWithStatGains,My COMPANION has a HASTY nature.\pIt has higher SPEED compared to\nmy other COMPANIONS.\pMaybe their nature has something to\ndo with the stat gains of COMPANIONS.$,
+SlateportCity_Mart_Text_GreatBallIsBetter,"A DURASTEEL POD beats a CAPTURE POD\nat catching COMPANIONS.\pWith this, I should be able to get that\nelusive COMPANION…$",
+SlateportCity_PokemonCenter_1F_Text_RaiseDifferentTypesOfPokemon,"Want a tip for battling?\pI'd say it's raising different kinds\nof COMPANIONS in a balanced manner.\pIt's no good to make just one\nCOMPANION strong.\pIf it has a type disadvantage,\nit might not stand a chance.$",
+SlateportCity_PokemonCenter_1F_Text_TradedMonWithFriend,"I trade COMPANIONS with my friends.\pIf a traded COMPANION is holding an\nitem, it makes me twice as happy!$",
+SlateportCity_OceanicMuseum_1F_Text_WouldYouLikeToEnter,Welcome to the SPACER MUSEUM.\pThe entrance fee is 50 credits.\nWould you like to enter?$,
+SlateportCity_OceanicMuseum_1F_Text_DidntHaveMoney,"I didn't have 50 credits, so it took\na long time getting by the receptionist.$",
+SlateportCity_OceanicMuseum_1F_Text_LearnAboutSeaForBattling,I want to learn about the stars and\nuse that knowledge for battling.$,
+SlateportCity_OceanicMuseum_1F_Text_SternIsRoleModel,"I get all giddy and gooey when\nI see a starship!\pFor me, RIC OLIé is the number\none role model!$",
+SlateportCity_OceanicMuseum_1F_Text_MustBePokemonWeDontKnow,"The galaxy is vast without end, and\ninfinitely deep…\pThere must be many COMPANIONS that\nwe don't know about.$",
+SlateportCity_OceanicMuseum_1F_Text_WantSeaPokemon,I want a water COMPANION.\pI think it would feel cool and nice\nto hug on a hot day.$,
+SlateportCity_OceanicMuseum_1F_Text_RememberMeTakeThis,"Aiyeeeh!\nWhat are you doing here?\pMe? I'm the CARTEL thug\nyou thumped before, remember?\lBack in BEGGAR'S CANYON?\pHere, take this!\nYou have to forgive me!$",
+SlateportCity_OceanicMuseum_1F_Text_WhirlpoolExperiment,"Blue plasma is spiraling inside\na glass vessel.\p“This is a model of a hyperspace\nvortex, made with magnets.”$",
+SlateportCity_OceanicMuseum_1F_Text_WaterfallExperiment,A red ball is bobbing up and down\ninside a glass vessel.\p“This is a model of a REPULSORLIFT\nkeeping a speeder afloat.”$,
+SlateportCity_OceanicMuseum_1F_Text_OceanSoilDisplay,"It's a sample of a meteorite.\p“Over many years, dust and rock from\nspace settle on every world, making\lthin layers.\p“By analyzing these layers, the\nancient past is revealed.”$",
+SlateportCity_OceanicMuseum_1F_Text_BeachSandDisplay,It's a sample of Tatooine sand.\p“Stones from the mountains are\nworn down by sandstorms where they\lare chipped and ground down.\p“They are reduced to grains and end\nup in the DUNE SEA.”$,
+SlateportCity_OceanicMuseum_1F_Text_OceanicMinifact1,"“SPACER MINIFACT 1\nWhy is hyperspace blue?\p“In hyperspace, light is stretched\ninto long streaks.\p“Our eyes see the bent starlight\nas a swirling blue tunnel.”$",museum displays re-themed from ocean science to spacefaring
+SlateportCity_OceanicMuseum_1F_Text_OceanicMinifact2,"“SPACER MINIFACT 2\nWhy do TATOOINE's suns look red?\p“Sunset light passes through a lot\nof dust in the air.\p“Dust scatters the blue light away,\nso the twin suns set in red.”$",
+SlateportCity_OceanicMuseum_1F_Text_OceanicMinifact3,“SPACER MINIFACT 3\nWhich is bigger? Space or worlds?\p“Space is almost entirely empty.\p“All the worlds of the galaxy would\nfit in a speck of its emptiness.”$,
+SlateportCity_OceanicMuseum_1F_Text_FossilDisplay,"It's a fossil with wavy ridges on it.\p“Sand on TATOOINE gets scoured\nby the wind.\p“The wind marks the sand with\nsmall ridges and valleys.\p“If this sand turns to stone, it is\ncalled a ripple mark.”$",
+SlateportCity_OceanicMuseum_1F_Text_DepthMeasuringMachine,A strange machine is rotating under\na glass dome.\pMaybe it's a navicomputer for\nplotting hyperspace jumps…$,
+SlateportCity_OceanicMuseum_2F_Text_ThankYouForTheParts,"Yes? If you're looking for OLIé,\nthat would be me.\pAh! Those must be the parts I ordered\nfrom SENATOR ORGANA at HOUSE ORGANA.\pThank you! That's great!\nWe can prepare for our expedition now.$",
+SlateportCity_OceanicMuseum_2F_Text_ArchieWarning,"We are THE CARTEL,\nand the wet swamp is our home!\pAnd I am the CARTEL's master,\nJABBA the HUTT!\pWhat makes you interfere with us?\p…No! You can't be!\nYou're not one of THE EMPIRE?\pWait, that can't be right.\nYou're not dressed for the part.\p… … … … … …\n… … … … … …\pCOMPANIONS, people… All life began\nin the water.\pSo, THE CARTEL will bring the water\nback to these dry worlds.\pA swamp fit for a HUTT, on every\nworld of the OUTER RIM!\pAh, fine…\nYou're still too young to understand\lour noble objective.\pBut, I warn you, don't even consider\ninterfering with our plans again.\pThe consequences will cost you\ndearly!\pAnd don't you forget it!$",Jabba's motive: drown the dry worlds into Hutt swamps (SANDO is the sea titan)
+SlateportCity_OceanicMuseum_2F_Text_SternIveGotToGo,"RIC OLIé: Whoops!\nThere's no time to lose!\pWe have to set out on our deep-water\nexpedition really soon.\pThanks again, but now I've got\nto go!\pFeel free to wander around and check\nout our facilities, though.$",
+SlateportCity_OceanicMuseum_2F_Text_RemindsMeOfAbandonedShip,I saw a model of a cruiser here.\pIt reminded me of the REPUBLIC WRECK\nnear KACHIRHO…$,
+SlateportCity_OceanicMuseum_2F_Text_WantToRideSubmarine,"Wow, the BONGO sub's awesome!\nI want to go for a ride!$",
+SlateportCity_OceanicMuseum_2F_Text_WaterQualitySample1,"“STARDUST SAMPLE 1,” the\nlabel says.\pSpace is all connected, but the\ndust seems to differ by sector.$",
+SlateportCity_OceanicMuseum_2F_Text_WaterQualitySample2,"“STARDUST SAMPLE 2,” the\nlabel says.\pDoes the color of nebulas differ\nby sector, too?$",
+SlateportCity_OceanicMuseum_2F_Text_PressureExperiment,"A rubber ball is expanding and\nshrinking.\p“In deep water, the weight of water\nitself exerts pressure.\p“That's why a BONGO sub's hull must\nbe so strong.\p“In the deepest swamps of DAGOBAH,\nthe pressure can crush a speeder\llike a can.”$",
+SlateportCity_OceanicMuseum_2F_Text_HoennModel,“STAR CHART OF THE OUTER RIM”\pIt's a hologram of the\nOUTER RIM.\pWhere is MOS PELGO on this?$,
+SlateportCity_OceanicMuseum_2F_Text_DeepSeawaterDisplay,"It's a display on the hyperlanes.\p“Between the stars, hyperlanes follow\nsafe routes around gravity wells\land nebulas.”$",
+SlateportCity_OceanicMuseum_2F_Text_SurfaceSeawaterDisplay,"It's a display on solar winds.\p“Close to a star, ships are pushed\nby winds of charged particles.”$",
+SlateportCity_OceanicMuseum_2F_Text_SSTidalReplica,“THE STARLINER STAR TIDAL\p“A scale replica of the ship under\nconstruction at OLIé'S SHIPYARD.”$,
+SlateportCity_OceanicMuseum_2F_Text_SubmarineReplica,“BONGO EXPLORER\p“A replica of the high-performance\nGUNGAN deep-water submarine.”$,
+SlateportCity_OceanicMuseum_2F_Text_SumbersibleReplica,"“PROBE DROID\p“A replica of a compact, unmanned\ndroid for deep-water exploration.”$",
+SlateportCity_OceanicMuseum_2F_Text_SSAnneReplica,“NABOO ROYAL STARSHIP\p“A replica of the chrome ship that\nRIC OLIé flew for the QUEEN.”$,
+SlateportCity_PokemonFanClub_Text_MeetChairman,"Er-hem! I am the CHAIRMAN of the\nCOMPANION FAN CLUB!\pBeing the CHAIRMAN, I am naturally\nthe most important!\pNo one can best me when it comes\nto raising COMPANIONS. No one!\pWell, let me tell you about\nSHOWCASES.\pThey're events where one can show off\nCOMPANIONS for the world to see!\pHowever, they're held in far-off towns,\nso I cannot participate often enough.\pThat is why we gather here to show\noff our COMPANIONS, and have others\lshow us theirs.$",
+SlateportCity_PokemonFanClub_Text_AllowMeToExamineYourPokemon,Er-hem! I see you've participated in\na SHOWCASE!\pPlease! Allow me to examine how you\nhave raised your COMPANION.\pIt delights me no end to see\nCOMPANIONS raised by other TRAINERS.\pThe happy faces of COMPANIONS\nraised with proper care…\pThe kindly eyes of the TRAINER that\nnurtured and raised the COMPANION…\pThe very thought fills my heart to\noverwhelming with joy.\pOh! I do beg your pardon!\nForgive me for prattling on so!\pPlease! Allow me to examine how much\nyour COMPANION has grown!$,
+SlateportCity_PokemonFanClub_Text_ExplainGreenScarf,Let a COMPANION hold that GREEN SCARF.\pThat will enhance the\nsmartness of a COMPANION!$,
+SlateportCity_PokemonFanClub_Text_MonEnjoyedProtein,Do COMPANIONS enjoy having items used\non them?\pMine acted really happy when I gave\nit some PROTEIN.$,
+SlateportCity_PokemonFanClub_Text_Azumarill,BLOOPHARE: Bloop-bloop?$,
+SlateportCity_SternsShipyard_1F_Text_MeetDockDeliverToStern,"Hm?\nHi, I'm DOCK.\pRIC OLIé commissioned me to\ndesign a starliner.\pOh! That there…\nAre they ORGANA PARTS?\pBut, hmm…\nThis won't do…\pRIC OLIé went off somewhere.\nHe said he had some work to do.\pCould I get you to go find RIC\nOLIé and deliver that to him?$",
+SlateportCity_SternsShipyard_1F_Text_CouldUseAdviceFromVeteran,DOCK: Shipbuilding is an art.\pA lot of things can't be figured out\njust by calculating.\pI really could use advice from a veteran\npilot who knows ships…$,
+SlateportCity_SternsShipyard_1F_Text_BrineyJoinedUs,"DOCK: Hi! HAN's joined us to\nlend us his help.\pThanks to that hotshot pilot, the\nstarliner is steadily coming together.$",
+SlateportCity_SternsShipyard_1F_Text_FerryIsReady,"DOCK: The starliner is finally ready!\pThe new STAR TIDAL is truly a marvel\nof technology!\pBut, I get the feeling that we can\nmake something even better.\pYou know, there's never an end to\ntechnology's march.$",
+SlateportCity_SternsShipyard_1F_Text_DecidedToHelpDock,"HAN: Hey, {PLAYER}{KUN}!\nIt's been too long!\pSince I met you, I've been looking\nfor honest work. Don't laugh.\pSo I've decided to help DOCK build\na starliner.\pAfter all, a starliner can carry\na lot of people.\pBut, you know, that DOCK is really\nsomething special.\pWith his knack for technology and\nmy flying, I'm sure that we can\lbuild one great ship!$",
+SlateportCity_SternsShipyard_1F_Text_SeaIsLikeLivingThing,"The suns, the sandstorms, where\nthe moons sit in the sky…\pThese and other conditions make\nevery flight a little different.\pThat's right!\nThe sky is like a living thing!$",
+SlateportCity_SternsShipyard_1F_Text_GetSeasickEasily,I get spacesick real easily.\nSo I get to help out here instead.$,
+SlateportCity_SternsShipyard_2F_Text_FloatsBecauseBuoyancy,Don't you think it's strange that\na ship made of heavy durasteel floats?\pIt floats because of a device\ncalled a REPULSORLIFT.$,
+SlateportCity_Text_EnergyGuruSellWhatYouNeed,I'm the ENERGY GURU! I'll go for it and\nsell you what you need!$,"reviewed, no change needed"
+SlateportCity_Text_OhYourPokemon,Oh?\nYour {STR_VAR_1}…$,"reviewed, no change needed"
+SlateportCity_Text_PleaseGiveItThisEffortRibbon,"Went for it stupendously!\pAs its reward, please give it this\nEFFORT RIBBON.$","reviewed, no change needed"
+SlateportCity_Text_ReceivedEffortRibbon,{PLAYER} received the EFFORT RIBBON.$,"reviewed, no change needed"
+SlateportCity_Text_PutEffortRibbonOnMon,{PLAYER} put the EFFORT RIBBON\non {STR_VAR_1}.$,"reviewed, no change needed"
+SlateportCity_Text_GoForItLittleHarder,"You have to go for it a little harder.\pIf you do, I'll give your COMPANION\nsomething nice.$",reviewed AUTO draft
+SlateportCity_Text_EffortRibbonLooksGoodOnIt,"Oh! Your {STR_VAR_1}, that EFFORT\nRIBBON looks good on it!$","reviewed, no change needed"
+SlateportCity_Text_BuyBricksSoDecorWontGetDirty,"If you put DOLLS or CUSHIONS on\nthe floor, they'll get dirty.\pI'm going to buy some BRICKS so my\nDOLLS and CUSHIONS won't get dirty\lwhen I leave them out.$","reviewed, no change needed"
+SlateportCity_Text_WhatsLongLineOverThere,What is that over there?\nThat long line…$,"reviewed, no change needed"
+SlateportCity_Text_QuitPushing,"Hey, there! Quit pushing!\nThis is the line, can't you see?$","reviewed, no change needed"
+SlateportCity_Text_AquaHasPolicy,THE CARTEL has a policy of\nassembling and dispersing at\lthe operation site.$,reviewed AUTO draft
+SlateportCity_Text_BossIsBrilliant,Our BOSS is brilliant.\pWhat would he want to do with\na MUSEUM now?$,"reviewed, no change needed"
+SlateportCity_Text_WhatsNewSchemeIWonder,"What's the new scheme, I wonder?\pOur BOSS is scary when he's mad, so\nI'd better not screw things up…$","reviewed, no change needed"
+SlateportCity_Text_ShouldTakeItAll,"If there's something we need in\nthe MUSEUM, we should take it all!$","reviewed, no change needed"
+SlateportCity_Text_DontButtIn,"Hey, you there!\nDon't butt in!$","reviewed, no change needed"
+SlateportCity_Text_RemindsMeOfLongLineForGames,"A long line, huh?\pIt reminds me of the times I lined up to\nbuy smash-hit games…$","reviewed, no change needed"
+SlateportCity_Text_WhyAreWeLiningUp,Why are we even lining up and paying?\nWe should just march in!$,"reviewed, no change needed"
+SlateportCity_Text_WhatDoYouWant,What?\nWhat do you want?$,"reviewed, no change needed"
+SlateportCity_Text_IllReadSignForYou,You want to read this sign?\nI'll read it for you!$,"reviewed, no change needed"
+SlateportCity_Text_HotSpringsAfterOperation,"When this operation's over, I'll take\nyou to a hot spring spa!\pThat's what our leader said.\nI can't wait!$","reviewed, no change needed"
+SlateportCity_Text_BuyTooMuch,"Whenever I visit here, I get carried\naway and buy too much.$","reviewed, no change needed"
+SlateportCity_Text_GetNameRaterToHelpYou,"If you want to change your COMPANION's\nnickname, you'll have to get the NAME\lRATER to help you.$",reviewed AUTO draft
+SlateportCity_Text_CantChangeTradeMonName,"Any COMPANION you get in a trade,\nyou can't change its nickname.\pThe original TRAINER's love for that\nCOMPANION is in the nickname.$",reviewed AUTO draft
+SlateportCity_Text_BattleTentBuiltRecently,"Recently, a BATTLE TENT was built\nin MOS EISLEY.\pARENAS are fun, but the BATTLE TENT's\nawesome in its own way.\pYou should go find tough COMPANIONS\nfor the BATTLE TENT!$",reviewed AUTO draft
+SlateportCity_Text_CaptSternBeingInterviewed,I was hoping that it was a famous star\nso I could get an autograph.\pBut who's that being interviewed?\nIsn't that RIC OLIé?$,reviewed AUTO draft
+SlateportCity_Text_InterviewerSoCool,"That lady interviewer is so cool\nand pretty.\pWhen I grow up, I'm going to be\nan international journalist!$","reviewed, no change needed"
+SlateportCity_Text_SternSaysDiscoveredSomething,RIC OLIé says they discovered\nsomething at the bottom of the sea.\pI wonder what it is?\nWhat could it be?$,reviewed AUTO draft
+SlateportCity_Text_BigSmileForCamera,"TOV: Okay, RIC OLIé, a big smile\nfor the camera!$",reviewed AUTO draft
+SlateportCity_Text_MostInvaluableExperience,"GIRA: I see, I see. You've had a most\ninvaluable experience…$",reviewed AUTO draft
+SlateportCity_Text_SternMoveAheadWithExploration,"RIC OLIé: Yes, indeed. We intend to\nmove ahead with our exploration.$",reviewed AUTO draft
+SlateportCity_Text_GabbyWonderfulThanksForInterview,"GIRA: That's wonderful, RIC OLIé!\nThank you for taking the time from\lyour busy schedule to talk to us.\pWe hope we can interview you again\nwith news of more discoveries!$",reviewed AUTO draft
+SlateportCity_Text_SternWhatWasAllThat,RIC OLIé: What was that all about?\pIt sounded like someone using\na megaphone…\pWhere did it come from?$,reviewed AUTO draft
+SlateportCity_Text_PleaseComeWithMe,"{PLAYER}{KUN}!\nPlease, come with me!$","reviewed, no change needed"
+SlateportCity_Text_BattleTentSign,BATTLE TENT MOS EISLEY SITE\n“Find it! The ultimate COMPANION!”$,reviewed AUTO draft
+SlateportCity_Text_MarketSign,MOS EISLEY MARKET\n“Unique items found nowhere else!”$,reviewed AUTO draft
+SlateportCity_Text_NameRatersHouseSign,NAME RATER'S HOUSE\n“COMPANION nicknames rated.”$,reviewed AUTO draft
+SlateportCity_Text_ExplainBerries,"If a wild COMPANION gets hurt, it heals\nitself by chewing on FRUIT.\pDid you know that?\pSomebody saw that and got the idea\nof making medicine from FRUIT.\pDid you know that?\pTo turn FRUIT into medicine,\nthey must be crushed into powder.\pDid you know that?\pYou seem to have an interest\nin FRUIT!\pI've got something good for someone\nlike you.$",reviewed AUTO draft
+SlateportCity_Text_BroughtMeSomeBerryPowder,Have you brought me some\nFRUIT POWDER?$,reviewed AUTO draft
+SlateportCity_Text_ExchangeWhatWithIt,What would you like to exchange\nit with?$,"reviewed, no change needed"
+SlateportCity_Text_ExchangeBerryPowderForItem,"Okay, you want to exchange your\nFRUIT POWDER for one {STR_VAR_1}?$",reviewed AUTO draft
+SlateportCity_Text_DontHaveEnoughBerryPowder,"Oh, dear. You don't have enough\nFRUIT POWDER.$",reviewed AUTO draft
+SlateportCity_Text_FineBerryPowderTradeSomethingElse,This is fine FRUIT POWDER.\nIt will make excellent medicine.\pWould you like to trade more of your\nFRUIT POWDER for something else?$,reviewed AUTO draft
+SlateportCity_Text_WhenYouGetMoreBringItToMe,"Okay! When you get some more\nFRUIT POWDER, bring it to me, please!$",reviewed AUTO draft
+SlateportCity_Text_ComeBackToTradeBerryPowder,Come back if you'd like to trade your\nFRUIT POWDER for some medicine.\pI'm always running a bazaar here.\pDid you know?$,reviewed AUTO draft
+SlateportCity_Text_YouDroveTeamAquaAway,"LANDO: Huh?\nI'm sure I met you somewhere before.\pHave I introduced myself to you?\nIf not, my name's LANDO.\pI just saw THE CARTEL run away from\nhere like they were stung.\pLet me guess--you drove them away?$",reviewed AUTO draft
+SlateportCity_Text_MaybeThisTrainer,"LANDO: Hmm…\nMaybe, just maybe, this TRAINER…$",reviewed AUTO draft
+SlateportCity_Text_LetsRegisterEachOther,"LANDO: All right! I think you're going\nto become a good friend.\pSo, let's register each other in our\nCOMLINKS.\p… … … … … …$",reviewed AUTO draft
+SlateportCity_Text_RegisteredScott,Registered this LANDO person\nin the COMLINK.$,reviewed AUTO draft
+SlateportCity_Text_KeepEyeOnTrainersBeSeeingYou,"LANDO: What I'd like to do is tag along\nwith you, but I do want to keep an eye\lon the talents of other people, too.\pSo, I'll be off to roam other towns\na bit more.\pBe seeing you, {PLAYER}{KUN}!$",reviewed AUTO draft
+SlateportCity_Text_TakingBattleTentChallenge,"LANDO: Oh, hey!\nIf it isn't {PLAYER}{KUN}!\p{PLAYER}{KUN}, let me guess--you're going\nto take the BATTLE TENT challenge?\pYeah! That's a good idea!\nThat's a really great idea!\pAfter all, a tough TRAINER is\nthe perfect fit for the BATTLE TENT!\pGive it your best effort!$",reviewed AUTO draft
+SlateportCity_ContestHall_Text_AdviceForContests,"Want a tasty little bit of advice\nfor SHOWCASES?\pUsing a certain move after another\ncertain kind of move sometimes gets\lyou extra attention.\pIf you know what you're doing,\nyou can score big in appeal.\pOf course, your opponents might try\ndisrupting your COMPANION's showing.$",reviewed AUTO draft
+SlateportCity_ContestHall_Text_MyPapaIsContestJudge,"My papa, he's a SHOWCASE JUDGE.\pI wonder what I should be when I\ngrow up, a JUDGE or an ARENA LEADER?$",reviewed AUTO draft
+SlateportCity_ContestHall_Text_ImLikeMajorlyCheesed,"Hey, man, I'm like majorly cheesed,\nyou know. Like, you know, I just\lwanted to know why my COMPANION\lnever won, you know, like, hey?\pSo, like, I gave the JUDGE my two\ncents, you know, they're free.\pAnd he wouldn't hear me out, like, hey!\nSo, like, total bummer, man!\pHey, like, you! Zip it, you know?\nJust, you know, take this!$",reviewed AUTO draft
+SlateportCity_ContestHall_Text_ExplainTorment,"That's, like, TM41, you know?\nHey, it's TORMENT, you hearing me?\pLike, it won't let the other guy\nuse the same move twice in a row, see?\pHey, now, you listen here, like,\nI'm not laying a torment on you!$","reviewed, no change needed"
+SlateportCity_ContestHall_Text_MCStepUpTakePartInContest,"MC: Oh, my, my!\nNow isn't that a dandy of a COMPANION?\pPlease! Do step right up and take\npart in our splendid SHOWCASES!\pYou'll do well! I'm sure of it!\nMy eyes have never failed me!$",reviewed AUTO draft
+SlateportCity_ContestHall_Text_ItsAppealTime,It's appeal time!\nWhat should I lead with?$,"reviewed, no change needed"
+SlateportCity_ContestHall_Text_DidntPayAttentionToAppeal,"They didn't pay much attention to\nmy COMPANION's appeal…\pHumph, that JUDGE, he doesn't know\na good thing when he sees it.$",reviewed AUTO draft
+SlateportCity_ContestHall_Text_RewardWithSageAdvice,"Oh, hi! You must be a serious fan to get\nthis close to the action.\pI'll reward your enthusiasm with\nthis sage advice.\pIf a move goes over really well,\nthe audience will get excited.\pThe COMPANION that makes its appeal\nright when everyone's excited…\pWell, you'd think something good has\nto happen!$",reviewed AUTO draft
+SlateportCity_ContestHall_Text_MoreFreakedOutThanMon,I can't do this! I'm more freaked out\nthan my COMPANION.\pI'm shivering and my heart is racing!$,reviewed AUTO draft
+SlateportCity_ContestHall_Text_BattleAndContestAlike,"A battle and a SHOWCASE aren't the\nsame, but they are alike, too.\pYou need to work hard and believe\nin the COMPANION you've raised.$",reviewed AUTO draft
+SlateportCity_ContestHall_Text_MonLooksOnTopOfGame,"That COMPANION looks like it's on top\nof its game, huh?\pA COMPANION that does good in the\nsecondary judging seems to be more\lrelaxed when it's doing appeals.$",reviewed AUTO draft
+SlateportCity_ContestHall_Text_MyMonBetterThanThatLot,"Will you look at that sorry sight?\pHeh, my COMPANION's absolutely better\nthan that lot!$",reviewed AUTO draft
+SlateportCity_ContestHall_Text_HyperRankStage,SHOWCASES\nHYPER RANK STAGE!$,reviewed AUTO draft
+SlateportCity_BattleTentLobby_Text_CouldntFindMonForMe,"So, like, I couldn't find myself any\nCOMPANIONS that were, like, for me.\pSo, I figured, like, hey, I should file\na complaint to the guy there?\pAnd he wouldn't hear me out, like, hey!\nSo, like, total bummer, man!\pHey, like, you! Zip it, you know?\nJust, you know, take this!$",reviewed AUTO draft
+SlateportCity_BattleTentLobby_Text_ExplainTorment,"That's, like, TM41, you know?\nHey, it's TORMENT, you hearing me?\pLike, it won't let the other guy\nuse the same move twice in a row, see?\pHey, now, you listen here, like,\nI'm not laying a torment on you!$","reviewed, no change needed"
+SlateportCity_BattleTentLobby_Text_NiceIfMoreSelection,Wouldn't it be nice if they had more of\na selection?$,"reviewed, no change needed"
+SlateportCity_Harbor_Text_LilycoveItIs,"CLOUD CITY it is, then!$",reviewed AUTO draft
+SlateportCity_Harbor_Text_BattleFrontierItIs,"GRAND ARENA it is, then!$",reviewed AUTO draft
+SlateportCity_Harbor_Text_WhereWouldYouLikeToGo,"Then, where would you like to go?$","reviewed, no change needed"
+SlateportCity_Harbor_Text_SameThugsTriedToRobAtMuseum,RIC OLIé: Those thugs…\pThey're the same lot who tried to rob\nthe ORGANA PARTS at the MUSEUM.$,reviewed AUTO draft
+SlateportCity_Harbor_Text_ArchieYouAgainHideoutInLilycove,"JABBA: Oh?\nNot you again…\pYou are tenacious to track us here,\nthat much I will give you.\pBut now…\nNo one can stop us! No one!\pOr, will you follow us back to our\nHIDEOUT in CLOUD CITY?\pFwahahahaha…$",reviewed AUTO draft
+SlateportCity_Harbor_Text_WouldYouTradeScanner,"RIC OLIé: Oh?\n{PLAYER}{KUN}, that item you have…\pThat's a DATA SCANNER! That would sure\nhelp us on our explorations.\p{PLAYER}{KUN}, would you trade your\nDATA SCANNER for something?\pLike, say, a DEEPSEA TOOTH or\na DEEPSEA SCALE that I have?$",reviewed AUTO draft
+SlateportCity_Harbor_Text_IfYouWantToTradeLetMeKnow,"RIC OLIé: Are you certain?\nIt's useless to you, {PLAYER}{KUN}…\pWell, okay, then. If you want to trade\nyour DATA SCANNER, let me know.$",reviewed AUTO draft
+SlateportCity_Harbor_Text_TradeForDeepSeaTooth,RIC OLIé: So you'll trade it for\nmy DEEPSEA TOOTH?$,reviewed AUTO draft
+SlateportCity_Harbor_Text_TradeForDeepSeaScale,RIC OLIé: So you'll trade it for\nmy DEEPSEA SCALE?$,reviewed AUTO draft
+SlateportCity_Harbor_Text_WhichOneDoYouWant,RIC OLIé: Which one do you want?$,reviewed AUTO draft
+SlateportCity_Harbor_Text_HandedScannerToStern,{PLAYER} handed the DATA SCANNER to\nRIC OLIé.$,reviewed AUTO draft
+SlateportCity_Harbor_Text_ThisWillHelpResearch,"RIC OLIé: Thanks, {PLAYER}{KUN}!\nThis will help our research a lot!$",reviewed AUTO draft
+SlateportCity_House_Text_MustBeGoingToBattleTent,"You're a TRAINER, aren't you?\pSince you came to MOS EISLEY,\nyou must be going to the BATTLE TENT.$",reviewed AUTO draft
+SlateportCity_Mart_Text_SomeItemsOnlyAtMart,The MARKET does have some interesting\nmerchandise.\pBut there are some items you can only\nget at a SUPPLY DEPOT.$,reviewed AUTO draft
+SlateportCity_NameRatersHouse_Text_PleasedToRateMonNickname,"Hi, hi! I'm the NAME RATER!\nI'm the fortune-teller of names!\pI shall be pleased to rate your\nCOMPANION's nickname.$",reviewed AUTO draft
+SlateportCity_NameRatersHouse_Text_CritiqueWhichMonNickname,Which COMPANION's nickname should\nI critique?$,reviewed AUTO draft
+SlateportCity_NameRatersHouse_Text_FineNameSuggestBetterOne,"Hmmm… {STR_VAR_1}, is it? That is\nquite a fine name you bestowed.\pBut! What say you, if I were to\nsuggest a slightly better name?$","reviewed, no change needed"
+SlateportCity_NameRatersHouse_Text_WhatShallNewNameBe,"Ah, good. Then, what shall the new\nnickname be?$","reviewed, no change needed"
+SlateportCity_NameRatersHouse_Text_MonShallBeKnownAsName,"Done! From now on, this COMPANION\nshall be known as {STR_VAR_1}!\pIt is a better name than before!\nHow fortunate for you!$",reviewed AUTO draft
+SlateportCity_NameRatersHouse_Text_DoVisitAgain,I see.\nDo come visit again.$,"reviewed, no change needed"
+SlateportCity_NameRatersHouse_Text_NameNoDifferentYetSuperior,"Done! From now on, this COMPANION\nshall be known as {STR_VAR_1}!\pIt looks no different from before,\nand yet, this is vastly superior!\pHow fortunate for you!$",reviewed AUTO draft
+SlateportCity_NameRatersHouse_Text_MagnificentName,Hmmm… {STR_VAR_1} it is!\pThis is a magnificent nickname!\nIt is impeccably beyond reproach!\pYou'll do well to cherish your\n{STR_VAR_1} now and beyond.$,"reviewed, no change needed"
+SlateportCity_NameRatersHouse_Text_ThatIsMerelyAnEgg,"Now, now.\nThat is merely an EGG!$","reviewed, no change needed"
+SlateportCity_OceanicMuseum_1F_Text_PleaseEnjoyYourself,Please enjoy yourself.$,"reviewed, no change needed"
+SlateportCity_OceanicMuseum_1F_Text_NotEnoughMoney,"Oh? I'm sorry, but you don't seem to\nhave enough money.$","reviewed, no change needed"
+SlateportCity_OceanicMuseum_1F_Text_CatchUpWithYourGroup,Oh? You're with that group that\nwent in earlier?\pYou're the only one who's late.\nYou'd better go catch up to them!$,"reviewed, no change needed"
+SlateportCity_OceanicMuseum_1F_Text_AquaExistForGoodOfAll,"We, THE CARTEL, exist for the good\nof all!$",reviewed AUTO draft
+SlateportCity_OceanicMuseum_1F_Text_OurBossIsntHere,"We were told to assemble here,\nso we did, but…\pOur BOSS, the linchpin, isn't here.$","reviewed, no change needed"
+SlateportCity_OceanicMuseum_1F_Text_WouldStuffHereMakeMeRich,"If I ripped off the stuff here,\nwould it make me rich?$","reviewed, no change needed"
+SlateportCity_OceanicMuseum_1F_Text_CanLearnForNefariousDeeds,"What I learn here, I can put to use on\nnefarious deeds…$","reviewed, no change needed"
+SlateportCity_OceanicMuseum_1F_Text_RustboroBungled,"If our goons didn't bungle things\nin BESTINE, we wouldn't be here!$",reviewed AUTO draft
+SlateportCity_OceanicMuseum_1F_Text_HopeINeverSeeYouAgain,"That TM, it suits you more than it\ndoes me.\pHope I never see you again!\nWahahaha!$","reviewed, no change needed"
+SlateportCity_OceanicMuseum_1F_Text_YouHaveToTakeThis,"Awww, come on!\nYou have to take this and let me go!$","reviewed, no change needed"
+SlateportCity_OceanicMuseum_2F_Text_WellTakeThoseParts,"Hehehe, hold it!\nWe'll take those parts!$","reviewed, no change needed"
+SlateportCity_OceanicMuseum_2F_Text_SternWhoAreYou,RIC OLIé: Wh-what?\nWho are you people?$,reviewed AUTO draft
+SlateportCity_OceanicMuseum_2F_Text_WereTeamAqua,We're THE CARTEL!\pOur BOSS wants those parts!\nShut your yap and fork them over!$,reviewed AUTO draft
+SlateportCity_OceanicMuseum_2F_Text_Grunt1Defeat,Awaaaah!\nA kid beat me!$,"reviewed, no change needed"
+SlateportCity_OceanicMuseum_2F_Text_BossGoingToBeFurious,"Oh, man, what a disaster…\nThe BOSS is going to be furious…$","reviewed, no change needed"
+SlateportCity_OceanicMuseum_2F_Text_LetMeTakeCareOfThis,"Humph, sniveling wimp!\nLet me take care of this!$","reviewed, no change needed"
+SlateportCity_OceanicMuseum_2F_Text_Grunt2Defeat,"What?!\nI lost, too!$","reviewed, no change needed"
+SlateportCity_OceanicMuseum_2F_Text_MeddlingKid,"Now what? If we don't get the parts,\nwe're in for it!\pArrgh, I didn't count on being meddled\nwith by some meddling kid!$","reviewed, no change needed"
+SlateportCity_OceanicMuseum_2F_Text_CameToSeeWhatsTakingSoLong,"I came to see what was taking so\nlong to snatch some parts, and you\lsimps are held up by a mere child?$","reviewed, no change needed"
+SlateportCity_OceanicMuseum_2F_Text_SternThankYouForSavingUs,"RIC OLIé: You're…\nAh, okay, you're {PLAYER}{KUN}…\pAnyway, that was a tense situation!\nThank you for saving us!\pOh, yes, I almost forgot that you even\nbrought the parts from HOUSE ORGANA!$",reviewed AUTO draft
+SlateportCity_OceanicMuseum_2F_Text_DontRunInMuseum,Don't you dare run around inside\nthe MUSEUM!$,"reviewed, no change needed"
+SlateportCity_PokemonFanClub_Text_LikeToSeeEnteredContestPokemon,"The COMPANION of a TRAINER who has\nentered a SHOWCASE…\lThat, I would like to see.$",reviewed AUTO draft
+SlateportCity_PokemonFanClub_Text_HowIsYourPokemonGrowing,How is your COMPANION growing?\nAllow me to examine it.$,reviewed AUTO draft
+SlateportCity_PokemonFanClub_Text_HmHmISee,"Hm, hm…\nI see…$","reviewed, no change needed"
+SlateportCity_PokemonFanClub_Text_GiveMonMorePokeblocks,"Hmmm… It's not bad, but it's not\ngood, either…\pYou, the TRAINER, must put more\neffort into raising this COMPANION!\pFor instance, may I suggest that\nyou give it more {POKEBLOCK}S?$",reviewed AUTO draft
+SlateportCity_PokemonFanClub_Text_NoSpaceForReward,"Oh, my…\pYour COMPANION is growing quite well,\nso you deserve a reward.\pUnfortunately, you have no space for\nthis in your BAG.$",reviewed AUTO draft
+SlateportCity_PokemonFanClub_Text_MonMostImpressiveGiveItThis,"Your {STR_VAR_1}, it is growing in\na most impressive manner!\lIt is one fine specimen!\pBut! If you were to give it this,\nit would grow even better! Indeed!$","reviewed, no change needed"
+SlateportCity_PokemonFanClub_Text_ExplainRedScarf,Let a COMPANION hold that RED SCARF.\pEveryone will recognize the coolness\nof that COMPANION!$,reviewed AUTO draft
+SlateportCity_PokemonFanClub_Text_ExplainBlueScarf,Let a COMPANION hold that BLUE SCARF.\pIts beauty will be accentuated much\nmore than now!$,reviewed AUTO draft
+SlateportCity_PokemonFanClub_Text_ExplainPinkScarf,Let a COMPANION hold that PINK SCARF.\pIt will draw out the cuteness of\nthe COMPANION some more!$,reviewed AUTO draft
+SlateportCity_PokemonFanClub_Text_ExplainYellowScarf,Let a COMPANION hold that YELLOW\nSCARF.\pIt will bolster your COMPANION's\ntoughness so much more!$,reviewed AUTO draft
+SlateportCity_PokemonFanClub_Text_NothingElseToGiveYou,"I'm sorry, but I've nothing else to\ngive you! None at all!\pAfter all, you're blessed with the gift\nof raising COMPANIONS without\lresorting to any items!$",reviewed AUTO draft
+SlateportCity_PokemonFanClub_Text_ShowMePokemonThatLoveYou,"I love seeing COMPANIONS that love\ntheir TRAINERS.\pCOMPANIONS are very sensitive to\nthe feelings of their TRAINERS.\pIf you treat your COMPANION with love\nand care, they'll love you back.\pWhen your COMPANIONS grow to love you,\nplease come show me.$",reviewed AUTO draft
+SlateportCity_PokemonFanClub_Text_PokemonAdoresYou,"Your COMPANION really adores you.\pFor you, a most compassionate\nTRAINER, a gift from the FAN CLUB!$",reviewed AUTO draft
+SlateportCity_PokemonFanClub_Text_TreatPokemonWithLove,"COMPANIONS are very sensitive to\nthe feelings of their TRAINERS.\pIf you treat your COMPANION with love\nand care, they'll love you back.$",reviewed AUTO draft
+SlateportCity_PokemonFanClub_Text_PokemonDontLikeFainting,"If you keep letting a COMPANION faint\nin battle, it'll come to resent it.\pSoon, it will become less trusting\nof the TRAINER.\pIn other words, it certainly won't\nlike you very much.$",reviewed AUTO draft
+SlateportCity_PokemonFanClub_Text_Skitty,LOTHKIT: Fffnyaaaah…$,reviewed AUTO draft
+SlateportCity_PokemonFanClub_Text_Zigzagoon,SCURRIER: Kyuuu…$,reviewed AUTO draft
+SlateportCity_SternsShipyard_1F_Text_CantMakeHeadsOrTails,"Umm… If this goes here, and that\ngoes over there…\pThen where does this thing go?\nAnd what about that doohickey?\pAaargh! I can't make heads or tails\nof this!$","reviewed, no change needed"
+SlateportCity_SternsShipyard_1F_Text_CouldYouFindStern,DOCK: Where could RIC OLIé have\ngone off to?\pCould you go find RIC OLIé and\ndeliver that parcel to him?$,reviewed AUTO draft
+SlateportCity_SternsShipyard_2F_Text_ShipDesignMoreLikeBuilding,Designing a large ship is more like\nmaking a big building than putting\ltogether a transportation vehicle.$,"reviewed, no change needed"

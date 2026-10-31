@@ -1,0 +1,157 @@
+text_id,sw_text_raw,notes
+PacifidlogTown_Text_FastRunningCurrent,"The sea around TIPOCA CITY has\na fast-running tide.\pIf you decide to SURF, you could end\nup swept away somewhere else.$",
+PacifidlogTown_Text_NeatHousesOnWater,"See, isn't it neat?\nThese houses stand on stilts over\lthe sea!\pI was born here!$",
+PacifidlogTown_Text_SkyPillarTooScary,"The ASTEROID SPIRE?\p…Oh, you must mean that tall, tall\nrock out among the asteroids.\pIf you asked me, I wouldn't climb it.\nIt's too scary to get up that high.\pLife at sea level in TIPOCA CITY,\nthat suits me fine.$",
+PacifidlogTown_Text_TownSign,"TIPOCA CITY\p“Where the rain never stops, and\nthe sea never sleeps.”$",Kamino: endless rain over an ocean world
+PacifidlogTown_House1_Text_RegiStory,"In the OUTER RIM, there are three\nCOMPANIONS that represent the power\lof rock, ice, and steel.\pThey say they were built long ago\nto guard deep caves.\pThat's the story I heard when I was\njust a little kid.$",
+PacifidlogTown_House2_Text_ChairmansYoungerBrotherOnVacation,"Er-hem!\pI am the COMPANION FAN CLUB's most\nimportant person, the CHAIRMAN's\lyounger brother.\pI'm here enjoying my vacation with\nCOMPANIONS, yes, indeed.$",
+PacifidlogTown_House2_Text_ViciousPokemonTakeThis,It has a vicious look to it.\pA frightening COMPANION like that\ndeserves a TM like this.$,
+PacifidlogTown_House4_Text_PeopleSawHighFlyingPokemon,People were saying they saw a\nCOMPANION flying high above the OUTER\lRIM.\pIs it flying around all the time?\nDoesn't it need to rest somewhere?$,
+PacifidlogTown_House4_Text_SkyPokemon,A star COMPANION!\nA star COMPANION!$,
+PacifidlogTown_PokemonCenter_1F_Text_OnColonyOfCorsola,"TIPOCA CITY stands on top of\na reef of CORALITH.\pIf I told you that, would you believe\nme?$",
+PacifidlogTown_PokemonCenter_1F_Text_AncestorsLivedOnBoats,The ancestors of the people in\nTIPOCA CITY were said to have been\lborn on boats and then lived and died\laboard them.\pI understand that they lived that way\nbecause they were searching for\lsomething.$,
+Route131_Text_ReliPostBattle,RIA: The people of TIPOCA CITY live\nwith the sea and COMPANIONS from\lthe time they are born.$,
+Route131_Text_IanPostBattle,"ISKO: You know how TIPOCA CITY is\na town on stilts?\pSo, wherever there is the sea,\nthat's a part of TIPOCA CITY!$",
+Route131_Text_TaliaPostBattle,There is an odd place nearby.\nThere's a huge spire out in the\lasteroids. Why don't you go look?$,
+Route132_Text_GilbertPostBattle,"TRAINERS travel from world to\nworld, so they must be fit, too.$",
+Route132_Text_KiyoIntro,I think about COMPANIONS all day long.\nHow could you possibly beat me?$,
+Route132_Text_KiyoPostBattle,"Urggh…\nYou're a COMPANION fanatic, aren't you?\pYou must think about COMPANIONS all\nday long, don't you?$",
+Route133_Text_BeckPostBattle,"I'd like to go back to ENDOR,\nbut I've grown to like this place, too.$",
+Route134_Text_JackPostBattle,I think COMPANIONS enjoy the fast\ncurrents around these parts.$,
+Route134_Text_AaronPostBattle,"We will return for more training at\nSTARFALL CAVERN on SULLUST.\pIf you'd like, you should go, too.\nIt will definitely toughen you up!$",
+SkyPillar_Outside_Text_GotToGoBackForSootopolis,OBI-WAN: This isn't good…\pThe weather distortion is spreading\neven here…\p{PLAYER}{KUN}.\pEXOGORTH should be farther up\nfrom here.\pI'm worried about DAGOBAH.\nI've got to go back.\pEverything is in your hands now.\nDon't fail us!$,
+SealedChamber_InnerRoom_Braille_WeOweAllToThePokemon,WE OWE ALL\nTO THE\nCOMPANION.$,Braille glyphs: Step 5 redraws as Aurebesh; keep line breaks
+SealedChamber_InnerRoom_Braille_ButWeSealedThePokemonAway,"BUT, WE\nSEALED THE\nCOMPANION\nAWAY.$",
+SealedChamber_InnerRoom_Braille_OpenDoorEternalPokemonWaits,OPEN A DOOR.\nAN ETERNAL\nCOMPANION\nWAITS.$,
+Route133_Text_WarrenIntro,"I want to win like everyone else, but\nI won't raise COMPANIONS like everyone\lelse.$",
+Route134_Text_AlexPostBattle,My BIRD COMPANIONS get tired quickly\nafter a long flight…$,
+PacifidlogTown_House1_Text_SixDotsOpenThreeDoors,"“Six dots open three doors.”\pGrandpa used to say that, but I don't\nknow what he meant.$","reviewed, no change needed"
+PacifidlogTown_House2_Text_AhYourPokemon,Ah!\nYour COMPANION…$,reviewed AUTO draft
+PacifidlogTown_House2_Text_AdoringPokemonTakeThis,"It clearly likes you very much.\pA COMPANION that adoring and adorable\ndeserves a TM like this, no?$",reviewed AUTO draft
+PacifidlogTown_House2_Text_PutInSomeMoreEffort,"Hmm…\nIt's not bad, but it's also not good.\pYou, as the TRAINER, need to put in\nsome more effort.$","reviewed, no change needed"
+PacifidlogTown_House2_Text_ExplainReturnFrustration,"If a COMPANION likes you a lot, RETURN's\npower is enhanced.\pIf it doesn't like you, FRUSTRATION's\npower goes up.$",reviewed AUTO draft
+PacifidlogTown_House2_Text_GetGoodTMInXDays,"Oh, yes. In about {STR_VAR_1} or so days,\nI should be getting a good TM or two.\pYou should come see me then.\nI'll give you a TM that's suitable for\lyour COMPANION.$",reviewed AUTO draft
+PacifidlogTown_House2_Text_Rurii,BLOOPKIT: Rurii.$,reviewed AUTO draft
+PacifidlogTown_House2_Text_VeryFriendlyWithTrainer,It appears to be very friendly with the\nTRAINER.$,"reviewed, no change needed"
+PacifidlogTown_House2_Text_Rururi,BLOOPKIT: Rururi!$,reviewed AUTO draft
+PacifidlogTown_House2_Text_DoesntLikeTrainerVeryMuch,It doesn't appear to like the TRAINER\nvery much.$,"reviewed, no change needed"
+PacifidlogTown_House3_Text_WillingToTradeIt,"Check out this {STR_VAR_2}!\pIt's the {STR_VAR_2} that I caught\nyesterday to celebrate my birthday!\pOh, I can see that you want it!\nAfter all, it's priceless!\pI'll tell you what. I might be willing\nto trade it for a {STR_VAR_1}.$","reviewed, no change needed"
+PacifidlogTown_House3_Text_ItsSubtlyDifferentThankYou,"Oh, so this is a {STR_VAR_1}?\pIt's sort of like a {STR_VAR_2},\nand yet it's subtly different.\pThank you!$","reviewed, no change needed"
+PacifidlogTown_House3_Text_WontAcceptAnyLessThanRealMon,"No, no, no! I won't accept any\nless than a real {STR_VAR_1}!$","reviewed, no change needed"
+PacifidlogTown_House3_Text_NotDesperateOrAnything,"Oh, so you're not going to go through\nwith this?\pThat's cool. I'm not desperate to make\na trade or anything.$","reviewed, no change needed"
+PacifidlogTown_House3_Text_ReallyWantedToGetBagon,"I know I could go looking for one\non my own, but…\pBut I really wanted to get a DACTHATCH\nthat another TRAINER caught…$",reviewed AUTO draft
+PacifidlogTown_House3_Text_IsThatAPokedex,Is that a DATAPAD?\pDid you get to meet a lot of different\nCOMPANIONS?\pI wish I was like you.$,reviewed AUTO draft
+PacifidlogTown_House4_Text_WhereDidYouComeFrom,Where did you come from?$,"reviewed, no change needed"
+PacifidlogTown_House4_Text_YesTown,Yes?\nYES TOWN?\pI've never heard of a place like that.$,"reviewed, no change needed"
+PacifidlogTown_House4_Text_YouHaveToComeFromSomewhere,No? That doesn't make any sense.\nYou have to come from somewhere.\pOh! Wait! You're not going to say you\nwere born at the bottom of the sea?$,"reviewed, no change needed"
+PacifidlogTown_House5_Text_CantSeeMirageIslandToday,I can't see MIRAGE ISLE today…$,reviewed AUTO draft
+PacifidlogTown_House5_Text_CanSeeMirageIslandToday,Oh! Oh my!\nI can see MIRAGE ISLE today!$,reviewed AUTO draft
+PacifidlogTown_House5_Text_MirageIslandAppearDependingOnWeather,MIRAGE ISLE…\pIt must become visible and invisible\ndepending on the weather conditions\lthat make mirages appear.\pOr is it really appearing and\ndisappearing?$,reviewed AUTO draft
+PacifidlogTown_PokemonCenter_1F_Text_WhatColorTrainerCard,What color is your TRAINER CARD?\nMine's copper!$,"reviewed, no change needed"
+SkyPillar_Outside_Text_DoorIsClosed,The door is closed.$,"reviewed, no change needed"
+SkyPillar_Outside_Text_OpenedDoorToSkyPillar,"OBI-WAN: Oh, my, I'm terribly sorry!\pIn my haste, I didn't notice that\nI'd left you behind!\pI've opened the locked door of\nthe ASTEROID SPIRE.\p{PLAYER}{KUN}, let's be on our way!$",reviewed AUTO draft
+SkyPillar_Outside_Text_EarthquakeNotMomentToWaste,OBI-WAN: It's an earthquake!\pThere's not a moment to waste!\nWe've got to hurry!$,reviewed AUTO draft
+SkyPillar_Outside_Text_SituationGettingWorse,OBI-WAN: Hmm…\nThe situation is getting worse…$,reviewed AUTO draft
+SkyPillar_Top_Text_RayquazaFlewOff,The awakened EXOGORTH flew off…$,reviewed AUTO draft
+SealedChamber_OuterRoom_Braille_ABC,ABC$,"reviewed, no change needed"
+SealedChamber_OuterRoom_Braille_GHI,GHI$,"reviewed, no change needed"
+SealedChamber_OuterRoom_Braille_MNO,MNO$,"reviewed, no change needed"
+SealedChamber_OuterRoom_Braille_TUV,TUV$,"reviewed, no change needed"
+SealedChamber_OuterRoom_Braille_DEF,DEF$,"reviewed, no change needed"
+SealedChamber_OuterRoom_Braille_JKL,JKL$,"reviewed, no change needed"
+SealedChamber_OuterRoom_Braille_PQRS,PQRS$,"reviewed, no change needed"
+SealedChamber_OuterRoom_Braille_Period,.$,"reviewed, no change needed"
+SealedChamber_OuterRoom_Braille_WXYZ,WXYZ$,"reviewed, no change needed"
+SealedChamber_OuterRoom_Braille_Comma,",$","reviewed, no change needed"
+SealedChamber_OuterRoom_Braille_DigHere,DIG HERE.$,"reviewed, no change needed"
+SealedChamber_InnerRoom_Braille_FirstWailordLastRelicanth,FIRST COMES\nAIWHA.\nLAST COMES\nRELICFISH.$,reviewed AUTO draft
+SealedChamber_InnerRoom_Braille_InThisCaveWeHaveLived,IN THIS\nCAVE WE\nHAVE\nLIVED.$,"reviewed, no change needed"
+SealedChamber_InnerRoom_Braille_WeFearedIt,WE FEARED IT.$,"reviewed, no change needed"
+SealedChamber_InnerRoom_Braille_ThoseWithCourageHope,"THOSE WITH\nCOURAGE,\nTHOSE WITH\nHOPE.$","reviewed, no change needed"
+Route131_Text_RichardIntro,"The sea is teeming with COMPANIONS.\nIt's not easy swimming, I tell you.$",reviewed AUTO draft
+Route131_Text_RichardDefeat,COMPANION raised by TRAINERS are\nseriously tough…$,reviewed AUTO draft
+Route131_Text_RichardPostBattle,Gasp… Gasp…\nI'm wiped out…\pThe going's easy. It's the leaving\nthat's the hard part.\pWill I have any energy left to make\nthe return trip?$,"reviewed, no change needed"
+Route131_Text_HermanIntro,The sea… The sea… The sea…\nThe sea as far as these eyes can see!\lI'm sick and tired of the sea!$,"reviewed, no change needed"
+Route131_Text_HermanDefeat,Bleah!$,"reviewed, no change needed"
+Route131_Text_HermanPostBattle,"Bored I am by the sea, but swim I must.\pI'm a born swimmer!\nThat's what I am.$","reviewed, no change needed"
+Route131_Text_SusieIntro,"Hi, sweetie, wait!\nWe should battle, you and I!$","reviewed, no change needed"
+Route131_Text_SusieDefeat,You're tough in spite of the way\nyou look!$,"reviewed, no change needed"
+Route131_Text_SusiePostBattle,Did you see a guy over there who whines\nthat he's bored of the sea?\pThat's all talk.\nHe's hopelessly in love with the sea!$,"reviewed, no change needed"
+Route131_Text_KaraIntro,Why do men love bathing suits so much?\pThey all ogle me!$,"reviewed, no change needed"
+Route131_Text_KaraDefeat,I'm out of my depth!$,"reviewed, no change needed"
+Route131_Text_KaraPostBattle,Maybe it's not my bathing suit that\nmakes men look. It must be my beauty!$,"reviewed, no change needed"
+Route131_Text_ReliIntro,RIA: We'll work together as siblings\nto take you on!$,reviewed AUTO draft
+Route131_Text_ReliDefeat,RIA: We couldn't win even though we\nworked together…$,reviewed AUTO draft
+Route131_Text_ReliNotEnoughMons,"RIA: You don't have two COMPANIONS?\nWe can't enjoy a battle, then.$",reviewed AUTO draft
+Route131_Text_IanIntro,ISKO: I'm doing my best together with\nmy sis!$,reviewed AUTO draft
+Route131_Text_IanDefeat,"ISKO: I did my best with my sis,\nbut we still couldn't win…$",reviewed AUTO draft
+Route131_Text_IanNotEnoughMons,"ISKO: If you have two COMPANIONS,\nwe'll take you on!$",reviewed AUTO draft
+Route131_Text_TaliaIntro,"If you can beat me, I'll give you some\ngreat information!$","reviewed, no change needed"
+Route131_Text_TaliaDefeat,Oh?\nDid I lose?$,"reviewed, no change needed"
+Route131_Text_KevinIntro,"The people of TIPOCA CITY are\na peaceful bunch.\pThey never get angry.\nThat goes for me, too.$",reviewed AUTO draft
+Route131_Text_KevinDefeat,Oops!$,"reviewed, no change needed"
+Route131_Text_KevinPostBattle,"Tch! …Oh, wait.\nI'm not angry. Honestly!\pBut, boy, you're strong!\nHahaha!$","reviewed, no change needed"
+Route132_Text_GilbertIntro,"I used to catch colds all the time as\na kid, but I became totally fit after\lI started swimming.$","reviewed, no change needed"
+Route132_Text_GilbertDefeat,I crave more power…$,"reviewed, no change needed"
+Route132_Text_DanaIntro,I try not to swim where the currents\nare too strong.$,"reviewed, no change needed"
+Route132_Text_DanaDefeat,"Oh, please, no!$","reviewed, no change needed"
+Route132_Text_DanaPostBattle,"If I get swept away, I'll lose all my\nsense of place…$","reviewed, no change needed"
+Route132_Text_RonaldIntro,"Win or lose, you'll never know until\nyou try!$","reviewed, no change needed"
+Route132_Text_RonaldDefeat,Waah!\nI sank in defeat!$,"reviewed, no change needed"
+Route132_Text_RonaldPostBattle,I never battle when I know I'll win.\nI like to battle at the razor's edge of\lvictory and defeat!$,"reviewed, no change needed"
+Route132_Text_KiyoDefeat,I lose.\nI will concede defeat.$,"reviewed, no change needed"
+Route132_Text_MakaylaIntro,"I'm always with my husband,\nbut I can win even without him.$","reviewed, no change needed"
+Route132_Text_MakaylaDefeat,"Oh, I guess I wasn't good enough.$","reviewed, no change needed"
+Route132_Text_MakaylaPostBattle,That young man over there looks just\nlike my husband when he was young.\pHe's making me blush!$,"reviewed, no change needed"
+Route132_Text_JonathanIntro,Someone's been watching me intently.\nWas it you?$,"reviewed, no change needed"
+Route132_Text_JonathanDefeat,"Wow!\nThat's pretty strong, all right!$","reviewed, no change needed"
+Route132_Text_JonathanPostBattle,I can't shake this feeling that\nsomeone's watching me.\pI can't concentrate!$,"reviewed, no change needed"
+Route132_Text_PaxtonIntro,Now where could my wife have gone?\nI'm always with her.\lI wonder if I can win on my own.$,"reviewed, no change needed"
+Route132_Text_PaxtonDefeat,"Ah, I see that I couldn't manage\nto win on my own after all.$","reviewed, no change needed"
+Route132_Text_PaxtonPostBattle,My wife must be looking for me.\nI'd best go find her right away.$,"reviewed, no change needed"
+Route132_Text_DarcyIntro,I liked training here by myself.\nIt's awful that all these people came!$,"reviewed, no change needed"
+Route132_Text_DarcyDefeat,Okay! I won't complain about other\npeople being here.$,"reviewed, no change needed"
+Route132_Text_DarcyPostBattle,I suppose I can partner up with that\nold man and challenge that other team.$,"reviewed, no change needed"
+Route133_Text_FranklinIntro,"Did the currents carry you here, too?\nThis must have been fated.\lLet's battle!$","reviewed, no change needed"
+Route133_Text_FranklinDefeat,Strong!\nToo much so!$,"reviewed, no change needed"
+Route133_Text_FranklinPostBattle,It's just my luck that a tough TRAINER\nlike you would drift here…\lI must be cursed…$,"reviewed, no change needed"
+Route133_Text_DebraIntro,"I've led a life of woe and misery…\nI've been cast away, and this is where\lI've drifted…$","reviewed, no change needed"
+Route133_Text_DebraDefeat,Another loss…$,"reviewed, no change needed"
+Route133_Text_DebraPostBattle,A life adrift…\nI don't want it anymore!$,"reviewed, no change needed"
+Route133_Text_LindaIntro,Welcome!\nI've been expecting you!$,"reviewed, no change needed"
+Route133_Text_LindaDefeat,No! Please!$,"reviewed, no change needed"
+Route133_Text_LindaPostBattle,A strong child TRAINER…\nThat's so annoying!$,"reviewed, no change needed"
+Route133_Text_WarrenDefeat,Darn it!\nMy way is still too slack!$,"reviewed, no change needed"
+Route133_Text_WarrenPostBattle,"It's way more fun to do things the way\nI want than to be like everybody else.\lI mean, that's obvious!$","reviewed, no change needed"
+Route133_Text_BeckIntro,I came all the way out here with my\nBIRD COMPANION.$,reviewed AUTO draft
+Route133_Text_BeckDefeat,You…\nYou're stunningly cool!$,"reviewed, no change needed"
+Route133_Text_MollieIntro,I must have battled thousands\nof times. I've lost count.$,"reviewed, no change needed"
+Route133_Text_MollieDefeat,"I may have lost thousands of times,\nbut a loss still stings.$","reviewed, no change needed"
+Route133_Text_MolliePostBattle,"Keep at this, youngster. So you can\nbecome like my husband and me.$","reviewed, no change needed"
+Route133_Text_ConorIntro,Young people are too happy to go with\nthe flow. They're without direction.$,"reviewed, no change needed"
+Route133_Text_ConorDefeat,You have a firm sense of purpose.$,"reviewed, no change needed"
+Route133_Text_ConorPostBattle,Don't let others lead you astray.\nDon't lose direction as you grow older.$,"reviewed, no change needed"
+Route134_Text_JackIntro,Even those COMPANIONS that can swim\nare carried along by the rapid currents.$,reviewed AUTO draft
+Route134_Text_JackDefeat,Aiyeeeeh!$,"reviewed, no change needed"
+Route134_Text_LaurelIntro,My HEARTFIN are looking for a fun\nmatch. Will you join us?$,reviewed AUTO draft
+Route134_Text_LaurelDefeat,Oopsie!$,"reviewed, no change needed"
+Route134_Text_LaurelPostBattle,There's a collector who's after\nthe SCALES of HEARTFIN.$,reviewed AUTO draft
+Route134_Text_AlexIntro,"Okeydokey! That's enough rest, gang!\nIt's time for a match!$","reviewed, no change needed"
+Route134_Text_AlexDefeat,Tuckered out again…$,"reviewed, no change needed"
+Route134_Text_HitoshiIntro,You're a COMPANION TRAINER.\nNo need for words. We battle now.$,reviewed AUTO draft
+Route134_Text_HitoshiDefeat,… … … … … …\n… … … … … …$,"reviewed, no change needed"
+Route134_Text_HitoshiPostBattle,"It was I who challenged you, and yet\nI lost. I am deeply shamed…$","reviewed, no change needed"
+Route134_Text_AaronIntro,The savage tide in this area serves to\nmake us stronger than ever.$,"reviewed, no change needed"
+Route134_Text_AaronDefeat,I willingly concede defeat.$,"reviewed, no change needed"
+Route134_Text_KelvinIntro,O-our boat!\nThe tide carried it away!$,"reviewed, no change needed"
+Route134_Text_KelvinDefeat,"Awawawawah!\nPlease, stop! Please!$","reviewed, no change needed"
+Route134_Text_KelvinPostBattle,"If we can't SURF, how are we supposed\nto get home?\pActually, I know a fainted COMPANION\ncan still SURF, but it feels wrong.$",reviewed AUTO draft
+Route134_Text_MarleyIntro,Can your COMPANION dodge our\nlightning-quick attacks?$,reviewed AUTO draft
+Route134_Text_MarleyDefeat,I never knew such a technique existed!\nYou've defeated us thoroughly.$,"reviewed, no change needed"
+Route134_Text_MarleyPostBattle,I haven't lost my passion for speed.\nI will try harder.$,"reviewed, no change needed"
+Route134_Text_ReynaIntro,My COMPANION can't be taken down\neasily!$,reviewed AUTO draft
+Route134_Text_ReynaDefeat,You're kidding!\nExplain how I lost!$,"reviewed, no change needed"
+Route134_Text_ReynaPostBattle,"Haha!\nYou won, all right!\pI'll work my way back up by taking on\nTRAINERS I happen to meet!$","reviewed, no change needed"
+Route134_Text_HudsonIntro,"Listen, have you seen another SAILOR\naround here?$","reviewed, no change needed"
+Route134_Text_HudsonDefeat,"Now, that's something!$","reviewed, no change needed"
+Route134_Text_HudsonPostBattle,"Our boat drifted out to sea.\pMy buddy's a timid fellow, so I'm\nworried about him.$","reviewed, no change needed"

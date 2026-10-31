@@ -1,0 +1,138 @@
+text_id,sw_text_raw,notes
+MauvilleCity_Text_UncleHesTooPeppy,"UNCLE: It's because of COMPANIONS that\nthis boy's got more pep, I suppose…\lBut he's become a bit too peppy…$",
+MauvilleCity_Text_UncleYourePushingIt,"UNCLE: Now hold on, LUKE.\pSince you started raising COMPANIONS,\nyou have grown quite a lot stronger.\pBut don't you think you're pushing it\nto suddenly challenge an ARENA?$",
+MauvilleCity_Text_ThankYouNotEnoughToBattle,"{PLAYER}, thank you.\nBeing a TRAINER is tough, isn't it?\pIt's not enough just to have\nCOMPANIONS and make them battle. That\lisn't what being a real TRAINER is\labout.$",
+MauvilleCity_Text_NurseHurtMonBackToHealth,"You know, it's cool to have COMPANION\nbattles and stuff…\pBut if your COMPANION gets hurt,\nyou have to nurse it back to health.$",
+MauvilleCity_Text_PokemonCanJumpYouOnBike,"Even if you're riding a BIKE,\nwild COMPANIONS could jump you.$",
+MauvilleCity_Text_CitySign,MOS ESPA\n“Home of the BOONTA EVE CLASSIC!”$,
+MauvilleCity_Text_GymSign,MOS ESPA ARENA\nLEADER: WATTO\l“The junk dealer with a spark!”$,
+MauvilleCity_Text_BikeShopSign,“Ride the dunes and shake up your\nsoul!”\lWALD'S BIKES$,
+MauvilleCity_Text_RydelVeryGenerous,"Have you been to WALD'S BIKES yet?\pWALD, the owner, is a very generous\nman.$",
+MauvilleCity_Text_ExplainTV,"Hi, do you check out the HoloNet\nat all?\pThey've added a bunch of cool new\nshows recently.\pThe HoloNet is so cool. I've seen my\nfriends on it just out of the blue.\pAnd, sometimes, they even put you on\nwithout telling you.\pI wish I would be on the HoloNet\nsometime.\pThat's why I think you should check\nout HoloNet screens whenever you can.$",
+MauvilleCity_Text_BeenCheckingOutTV,"Hi, have you been checking out the\nHoloNet?$",
+MauvilleCity_BikeShop_Text_RydelGreeting,"Well, well, what have we here?\nA most energetic customer!\pMe? You may call me WALD.\nI'm the owner of this bike shop.$",
+MauvilleCity_BikeShop_Text_ExplainBikesChooseWhichOne,"WALD: Hm, hm… … … … …\pYou're saying that you came all this\nway from MOS PELGO?\pMy goodness!\nThat's ridiculously far!\pIf you had one of my BIKES, you could\ngo anywhere easily while feeling the\lgentle caress of the wind!\pI'll tell you what!\nI'll give you a BIKE!\pOh, wait a second!\pI forgot to tell you that there are\ntwo kinds of BIKES!\pThey are the SWOOP BIKE and\nthe SPEEDER BIKE!\pThe SWOOP BIKE is for riders who want\nto feel the wind in their faces!\pAnd a SPEEDER BIKE is for those who\nprefer technical rides!\pI'm a real sweetheart, so you can\nhave whichever one you like!\pWhich one will you choose?$",
+MauvilleCity_BikeShop_Text_HowToRideMachBike,"A BIKE moves in the direction that\nthe + Control Pad is pressed.\pIt will speed up once it gets going.\pTo stop, release the + Control Pad.\nThe BIKE will slow to a stop.\pWant to read a different page?$",
+MauvilleCity_BikeShop_Text_SandySlopes,"There are small sandy slopes\nall over the OUTER RIM.\pThe loose, crumbly sand makes it\nimpossible to climb normally.\pBut if you have a SWOOP BIKE, you can\nzip up a sandy slope.\pWant to read a different page?$",
+MauvilleCity_BikeShop_Text_Wheelies,"Press the B Button while riding,\nand the nose of the bike lifts up.\pYou can zip around with the nose\nup using the + Control Pad.\pThis technique is called a wheelie.\pWant to read a different page?$",
+MauvilleCity_GameCorner_Text_WereYouLookingForCoins,Were you looking for CHIPS?\pIt's 1000 credits for 50 CHIPS.\nWould you like some?$,
+MauvilleCity_Gym_Text_GymGuideAdvice,"Hey, how's it going, ILUM-\nbound {PLAYER}?\pWATTO, the LEADER of MOS ESPA\nARENA, uses ELECTRIC-type COMPANIONS.\pIf you challenge him with WATER-type\nCOMPANIONS, he'll zap them! Bzzt!\pAnd, he's put in switch-controlled\ndoors all over his ARENA! Eccentric!\pHey, go for it!$",
+MauvilleCity_Gym_Text_KirkPostBattle,"COMPANIONS and rock, it's all about\nheart, whoa-yeah!$",
+MauvilleCity_BikeShop_Text_ExchangedAcroForMach,{PLAYER} traded the SPEEDER BIKE\nfor a SWOOP BIKE.$,
+MauvilleCity_BikeShop_Text_ExchangedMachForAcro,{PLAYER} traded the SWOOP BIKE\nfor a SPEEDER BIKE.$,
+MauvilleCity_Gym_Text_ShawnPostBattle,"WATTO, our ARENA LEADER, has been\naround for a long, long time.\pHe was betting on podraces before\nyour daddy was born, that old coot.$",
+MauvilleCity_Gym_Text_VivianPostBattle,I've heard that WATTO has run his\njunk shop in MOS ESPA for ages.\pHe was a TRAINER long before we\nbecame TRAINERS.\lHe must know all sorts of things!$,
+MauvilleCity_Gym_Text_AngeloPostBattle,MOS ESPA ARENA's WATTO has wings\nthat buzz so fast they hum.\lIt makes me happy!$,
+MauvilleCity_Gym_Text_WattsonIntro,"I've given up betting on podraces,\nI have. That SKYWALKER boy cost me\leverything.\pAnd so, I put my time into making\ndoor traps in my ARENA.\pOh? Now, what are you doing here?\pWhat's that? You say you've gotten\npast all my rigged doors?\pWahahahah!\nNow, that is amusing!\pThen, I, WATTO, the LEADER of\nMOS ESPA ARENA, shall electrify you!$",Watto lost Anakin (and Shmi) on the Boonta Eve bet; canon nod
+MauvilleCity_Gym_Text_ExplainDynamoBadgeTakeThis,"With the SPARK SHARD, COMPANIONS can\nuse ROCK SMASH out of battle.\pAnd, it will make your COMPANIONS a\nlittle bit faster, too.\pHmm…\nYou should take this, too!$",
+MauvilleCity_Gym_Text_WattsonPreRematch,WATTO: Ah-ha! Here at last!\nI know what you want.\lYou want to battle my COMPANIONS!\pWahahahaha!\pI'll make sparks fly from you!\nDon't say I didn't warn you!$,
+MauvilleCity_Gym_Text_WattsonRematchNeedTwoMons,"WATTO: Ah-ha! Here at last!\nI know what you want.\lYou want to battle my COMPANIONS!\pWahahahaha!\pOops! Wait!\nYou've only one COMPANION with you!\pCome see me with two or more\nCOMPANIONS, all right?$",
+MauvilleCity_House2_Text_BuyHarborMailAtSlateport,"If I had a BIKE, it'd be easy to ride to\nMOS EISLEY for some shopping.\pI'd be able to buy HARBOR MAIL at the\nSUPPLY DEPOT in MOS EISLEY…$",
+MauvilleCity_Mart_Text_ItemsToTemporarilyElevateStats,There are items that temporarily\nelevate the stats of COMPANIONS.\pThe ones I know you use in battle\nare X ATTACK and X DEFEND…\pI do believe that there are others\nlike them.$,
+MauvilleCity_PokemonCenter_1F_Text_MyDataUpdatedFromRecordCorner,"When I accessed the RECORD CORNER,\nthe data for what's hot in KACHIRHO\lgot updated.\pNow that bit of data is the same\nas my friend's!$",
+NewMauville_Inside_Text_GeneratorRadiatingHeat,The ESPA GENERATOR is radiating heat\nthat can be felt even at a distance.\pIt looks like it should be turned off\nas soon as possible.$,
+MauvilleCity_BikeShop_Text_OhYourBikeIsInPC,"Oh? What happened to that BIKE\nI gave you?\pOh, I get it, you stored it using\nyour TERMINAL.\pWell, take it out of TERMINAL storage,\nand I'll be happy to exchange it!\pMay the wind always be at your back\non your adventure!$",
+MauvilleCity_Text_WallyWantToChallengeGym,"LUKE: Aww, UNCLE, please?\pI want to challenge this ARENA and see\nhow much better I've become.\pPlease? May I, please?$",reviewed AUTO draft
+MauvilleCity_Text_WallyWeCanBeatAnyone,"LUKE: I'm not pushing it.\pIf I combine forces with AURALET,\nwe can beat anyone!$",reviewed AUTO draft
+MauvilleCity_Text_WallyWillYouBattleMe,"LUKE: Oh! Hi, {PLAYER}!\pI've gotten a lot stronger since\nwe met.\p{PLAYER}, I want you and my UNCLE to\nunderstand that.\p{PLAYER}, please, will you have\na battle with me?$",reviewed AUTO draft
+MauvilleCity_Text_WallyMyUncleWontKnowImStrong,"LUKE: Oh… If you won't battle me,\n{PLAYER}, my UNCLE won't know that I've\lbecome really strong.$",reviewed AUTO draft
+MauvilleCity_Text_UncleCanYouBattleWally,"UNCLE: {PLAYER}{KUN}, was it?\nOn LUKE's behalf, can I ask you to\lbattle with him just this once?\pI don't think he's going to listen to\nany reason the way he is now.$",reviewed AUTO draft
+MauvilleCity_Text_WallyPleaseBattleMe,"LUKE: {PLAYER}, please!\nBattle with me, please.$",reviewed AUTO draft
+MauvilleCity_Text_WallyHereICome,"LUKE: {PLAYER}, thank you.\pOkay… Here I come!$",reviewed AUTO draft
+MauvilleCity_Text_WallyDefeat,LUKE: … … … … … … …\p… … … … … … … …\pI lost…$,reviewed AUTO draft
+MauvilleCity_Text_WallyIllGoBackToVerdanturf,LUKE: UNCLE…\nI'll go back to ANCHORHEAD…$,reviewed AUTO draft
+MauvilleCity_Text_UncleNoNeedToBeDown,"UNCLE: LUKE, there's no need to be so\ndown on yourself.\pWhy, what's keeping you from becoming\nstronger and stronger?\pCome on, let's go home.\nEveryone's waiting for you.$",reviewed AUTO draft
+MauvilleCity_Text_UncleVisitUsSometime,"UNCLE: {PLAYER}{KUN}, it just dawned on me\nthat you must be the TRAINER who kept\lan eye out for LUKE when he caught\lhis COMPANION.\pWhy don't you visit us in ANCHORHEAD\nsometime?\lI'm sure LUKE would enjoy it.$",reviewed AUTO draft
+MauvilleCity_Text_WallyPokenavCall,"… … … … … …\n… … … … … Beep!\pLUKE: Oh, hello, {PLAYER}!\pI just wanted to tell you that\nmy uncle bought me a COMLINK!\pNow I can get in touch with you\nanytime, {PLAYER}!\p… … … … … …\n… … … … … Click!$",reviewed AUTO draft
+MauvilleCity_Text_RegisteredWally,Registered LUKE\nin the COMLINK.$,reviewed AUTO draft
+MauvilleCity_Text_ScottYouDidntHoldBack,"LANDO: Hehe…\nI was watching that match!\pYou're friends with that boy LUKE,\naren't you?\pBut you didn't hold anything back\nand beat him impressively.\pYeah! That's what a real COMPANION\nbattle is all about!\pI idolize TRAINERS like that!\p… … … … … …\nI'll be cheering for you!$",reviewed AUTO draft
+MauvilleCity_Text_WattsonNeedFavorTakeKey,"WATTO: Oh, {PLAYER}{KUN}!\nYou look like you have a lot of zip!\lThat's a good thing, wahahahaha!\pFine! I've decided!\nI need a favor, {PLAYER}{KUN}!\pMOS ESPA has an underground\nsector called ESPA GENERATOR.\p{PLAYER}{KUN}, I'd like you to go there and\nswitch off the GENERATOR.\pThe GENERATOR has been running a bit\nhaywire. It's getting unsafe.\pHere, this is the KEY to get into\nESPA GENERATOR.$",reviewed AUTO draft
+MauvilleCity_Text_WattsonWontBeChallenge,"WATTO: Don't you worry about it.\nIt won't be a challenge to you.\pThe entrance to ESPA GENERATOR is just\na short SURF away from ROUTE 110.\pThat's it, then, you have my trust!\nWahahahaha!$",reviewed AUTO draft
+MauvilleCity_Text_WattsonThanksTakeTM,"WATTO: Wahahahaha!\pI knew it, {PLAYER}{KUN}! I knew I'd made\nthe right choice asking you!\pThis is my thanks--a TM containing\nTHUNDERBOLT!\pGo on, you've earned it!$",reviewed AUTO draft
+MauvilleCity_Text_WattsonYoungTakeCharge,WATTO: Wahahahaha!\pIt pleases me to no end to see\nthe young step up and take charge!$,reviewed AUTO draft
+MauvilleCity_Text_AllSortsOfPeopleComeThrough,"The roads of this town stretch north\nand south, and east and west.\pBecause of that, we get all sorts of\npeople coming through.$","reviewed, no change needed"
+MauvilleCity_Text_GameCornerSign,“The play spot for all!”\nMOS ESPA SABACC DEN$,reviewed AUTO draft
+MauvilleCity_BikeShop_Text_DidYouComeFromFarAway,WALD: Your RUNNING SHOES…\nThey're awfully filthy.\pDid you come from far away?$,reviewed AUTO draft
+MauvilleCity_BikeShop_Text_GuessYouDontNeedBike,"WALD: Is that right?\pThen, I guess you have no need for\nany of my BIKES.$",reviewed AUTO draft
+MauvilleCity_BikeShop_Text_ChoseMachBike,{PLAYER} chose the SWOOP BIKE.$,reviewed AUTO draft
+MauvilleCity_BikeShop_Text_ChoseAcroBike,{PLAYER} chose the SPEEDER BIKE.$,reviewed AUTO draft
+MauvilleCity_BikeShop_Text_ComeBackToSwitchBikes,"WALD: If you get the urge to switch\nBIKES, just come see me!$",reviewed AUTO draft
+MauvilleCity_BikeShop_Text_WantToSwitchBikes,WALD: Oh? Were you thinking about\nswitching BIKES?$,reviewed AUTO draft
+MauvilleCity_BikeShop_Text_IllSwitchBikes,"WALD: Okay, no problem!\nI'll switch BIKES for you!$",reviewed AUTO draft
+MauvilleCity_BikeShop_Text_HappyYouLikeIt,"WALD: Good, good!\nI'm happy that you like it!$",reviewed AUTO draft
+MauvilleCity_BikeShop_Text_HandbooksAreInBack,"I'm learning about BIKES while\nI work here.\pIf you need advice on how to ride your\nBIKE, there're a couple handbooks in\lthe back.$","reviewed, no change needed"
+MauvilleCity_BikeShop_Text_MachHandbookWhichPage,It's a handbook on the SWOOP BIKE.\pWhich page do you want to read?$,reviewed AUTO draft
+MauvilleCity_BikeShop_Text_HowToTurnMachBike,"A SWOOP BIKE is speedy, but it can't\nstop very quickly.\pIt gets a little tricky to get around\na corner.\pRelease the + Control Pad a little\nbefore the corner and slow down.\pWant to read a different page?$",reviewed AUTO draft
+MauvilleCity_BikeShop_Text_AcroHandbookWhichPage,It's a handbook on the SPEEDER BIKE.\pWhich page do you want to read?$,reviewed AUTO draft
+MauvilleCity_BikeShop_Text_BunnyHops,"Keeping the B Button pressed,\nyour BIKE can hop on the spot.\pThis technique is called a bunny hop.\pYou can ride while hopping, too.\pWant to read a different page?$","reviewed, no change needed"
+MauvilleCity_BikeShop_Text_Jumps,Press the B Button and the + Control\nPad at the same time to jump.\pPress the + Control Pad to the side\nto jump sideways.\pPress it backwards to make the BIKE\nchange directions while jumping.\pWant to read a different page?$,"reviewed, no change needed"
+MauvilleCity_GameCorner_Text_ThisIsMauvilleGameCorner,This is MOS ESPA SABACC DEN.$,reviewed AUTO draft
+MauvilleCity_GameCorner_Text_NeedCoinCaseForCoins,"Okay, you wanted some CHIPS for\nthe games?\pBut you don't have a CHIP CASE for\nstowing the CHIPS.$",reviewed AUTO draft
+MauvilleCity_GameCorner_Text_ThankYouHereAreYourCoins,Thank you very much!\nHere are your CHIPS!$,reviewed AUTO draft
+MauvilleCity_GameCorner_Text_DontHaveEnoughMoney,Um… You don't appear to have\nenough money…$,"reviewed, no change needed"
+MauvilleCity_GameCorner_Text_CoinCaseIsFull,Oh?\nYour CHIP CASE is full.$,reviewed AUTO draft
+MauvilleCity_GameCorner_Text_DontNeedCoinsThen,"Oh… You don't need CHIPS, then?\nGood luck on your adventure!$",reviewed AUTO draft
+MauvilleCity_GameCorner_Text_ExchangeCoinsForPrizes,Welcome.\pYou can exchange your CHIPS for\nprizes here.$,reviewed AUTO draft
+MauvilleCity_GameCorner_Text_WhichPrize,Which prize would you like?$,"reviewed, no change needed"
+MauvilleCity_GameCorner_Text_SoYourChoiceIsTheTMX,So your choice is\nthe {STR_VAR_1} {STR_VAR_2}?$,"reviewed, no change needed"
+MauvilleCity_GameCorner_Text_SendToYourHomePC,Thank you!\nWe'll send it to your TERMINAL at home.$,reviewed AUTO draft
+MauvilleCity_GameCorner_Text_NotEnoughCoins,You don't have enough CHIPS.$,reviewed AUTO draft
+MauvilleCity_GameCorner_Text_NoRoomForPlacingDecor,There isn't any room available for\nplacing {STR_VAR_1}.$,"reviewed, no change needed"
+MauvilleCity_GameCorner_Text_OhIsThatSo,"Oh, is that so? \nYou need to save some CHIPS before\lcoming back here.$",reviewed AUTO draft
+MauvilleCity_GameCorner_Text_SoYourChoiceIsX,So your choice is {STR_VAR_1}?$,"reviewed, no change needed"
+MauvilleCity_GameCorner_Text_HereYouGo,Here you go!$,"reviewed, no change needed"
+MauvilleCity_GameCorner_Text_CantCarryAnyMore,"Oh, you can't carry any more than that.$","reviewed, no change needed"
+MauvilleCity_GameCorner_Text_GotTwoOfSameDollWantOne,I made a mistake and got two of\nthe same DOLLS.\pWould you like one of them?$,"reviewed, no change needed"
+MauvilleCity_GameCorner_Text_HereYouGo2,Here you go!$,"reviewed, no change needed"
+MauvilleCity_GameCorner_Text_YouWantItButNotNow,"Huh?\nYou want it, but not right now?$","reviewed, no change needed"
+MauvilleCity_GameCorner_Text_DontBeNegative,"Oh, don't be so negative!\nYou can have this!$","reviewed, no change needed"
+MauvilleCity_GameCorner_Text_CantWinJackpot,"There's a prize I want, but I can't win\nthe jackpot.$","reviewed, no change needed"
+MauvilleCity_GameCorner_Text_NeedCoinCaseGoNextDoor,"Hey, kid, if you want to play here,\nyou need a CHIP CASE.\pI think the young lady next door\nhad one. Go see her!$",reviewed AUTO draft
+MauvilleCity_GameCorner_Text_LuckOnlyLastSoLongTakeCoins,"My luck can only last so long.\nThis is too much for me.\lHere, take some CHIPS!$",reviewed AUTO draft
+MauvilleCity_GameCorner_Text_MauvilleSomethingForEveryone,"MOS ESPA has something for\neveryone.\pFor me, it's the SABACC DEN.$",reviewed AUTO draft
+MauvilleCity_GameCorner_Text_RouletteTablesDifferentRates,The ROULETTE tables have different\nrates.\pCheck your CHIPS if you're going to\npick a table.$,reviewed AUTO draft
+MauvilleCity_GameCorner_Text_EasyToLoseTrackOfTime,It's easy to lose track of time in here. \nI should get back to work.$,"reviewed, no change needed"
+MauvilleCity_GameCorner_Text_CoinsAreNeededToPlay,CHIPS are needed to play here\nin the SABACC DEN.$,reviewed AUTO draft
+MauvilleCity_GameCorner_Text_RouletteOnlyLuck,"This ROULETTE thing…\nIt's rather demanding.\pWin or lose, it's only by luck.$","reviewed, no change needed"
+MauvilleCity_GameCorner_Text_UpTo3CoinsCanBeUsed,Up to three CHIPS can be used to play\nthe SLOTS.$,reviewed AUTO draft
+MauvilleCity_GameCorner_Text_DifficultToStopOn7,"It's very difficult to make it stop\nright on “7.”\pIf it stops on “7” during the REEL TIME\nbonus game, you'll receive extra CHIPS.$",reviewed AUTO draft
+MauvilleCity_GameCorner_Text_HeresSomeSlotsInfo,"Here's some information for you\nabout the SLOTS.\pThe more lightning bolts you stock,\nthe more REEL TIME chances you get.\pIn a game with the maximum five\nREEL TIME chances…\pIt is possible to receive four regular\nbonuses, then a big bonus.\pThat would total 660 CHIPS, but it's\nvery difficult to get.$",reviewed AUTO draft
+MauvilleCity_GameCorner_Text_CantPlayWithNoCoinCase,You can't play if you don't have\na CHIP CASE.$,reviewed AUTO draft
+MauvilleCity_Gym_Text_GymGuidePostVictory,"Whoa, you're electrifying!\nYou've powered the door open!$","reviewed, no change needed"
+MauvilleCity_Gym_Text_KirkIntro,"My electric soul, it'll shatter your\ndreams whole, whoa-yeahah!$","reviewed, no change needed"
+MauvilleCity_Gym_Text_KirkDefeat,"That was plugged in, amped up,\nover-driven electric, man!$","reviewed, no change needed"
+MauvilleCity_Gym_Text_ShawnIntro,I trained under WATTO!\nThere ain't no way I'll lose easily!$,reviewed AUTO draft
+MauvilleCity_Gym_Text_ShawnDefeat,Unplugged and turned off…$,"reviewed, no change needed"
+MauvilleCity_Gym_Text_BenIntro,This ARENA's got puzzles!\nIsn't it fun?$,reviewed AUTO draft
+MauvilleCity_Gym_Text_BenDefeat,It's no fun to lose…$,"reviewed, no change needed"
+MauvilleCity_Gym_Text_BenPostBattle,WATTO says he likes setting up\nlittle traps with switches.$,reviewed AUTO draft
+MauvilleCity_Gym_Text_VivianIntro,"With my charm and my COMPANION's moves,\nyou'll be shocked!$",reviewed AUTO draft
+MauvilleCity_Gym_Text_VivianDefeat,I'm shocked by your power!$,"reviewed, no change needed"
+MauvilleCity_Gym_Text_AngeloIntro,I love shiny things!$,"reviewed, no change needed"
+MauvilleCity_Gym_Text_AngeloDefeat,Oh…\nMy eyes are frazzled…$,"reviewed, no change needed"
+MauvilleCity_Gym_Text_WattsonDefeat,"Wahahahah!\nFine, I lost!\pYou ended up giving me a thrill!\nTake this SHARD!$",reviewed AUTO draft
+MauvilleCity_Gym_Text_ReceivedDynamoBadge,{PLAYER} received the SPARK SHARD\nfrom WATTO.$,reviewed AUTO draft
+MauvilleCity_Gym_Text_ExplainShockWave,That TM34 there contains FORCE BOLT.\pIt's a trustworthy move that never\nmisses! You can count on it!\p… … … … … …$,reviewed AUTO draft
+MauvilleCity_Gym_Text_RegisteredWattson,Registered ARENA LEADER WATTO\nin the COMLINK.$,reviewed AUTO draft
+MauvilleCity_Gym_Text_WattsonPostBattle,"I swell with optimism, seeing a promising\nyoung TRAINER like you!$","reviewed, no change needed"
+MauvilleCity_Gym_Text_WattsonGoForthAndEndeavor,"Wahahahah!\nGo forth and endeavor, youngster!$","reviewed, no change needed"
+MauvilleCity_Gym_Text_GymStatue,MOS ESPA ARENA$,reviewed AUTO draft
+MauvilleCity_Gym_Text_GymStatueCertified,MOS ESPA ARENA\pWATTO'S CERTIFIED TRAINERS:\n{PLAYER}$,reviewed AUTO draft
+MauvilleCity_Gym_Text_WattsonRematchDefeat,Oof…\nOur batteries ran dry…$,"reviewed, no change needed"
+MauvilleCity_Gym_Text_WattsonPostRematch,"WATTO: We'll have to recharge our\nbatteries again.\pWhen we're fully charged up, we'll\ngladly accept your challenge.\pSo, come back again sometime,\nwon't you?$",reviewed AUTO draft
+MauvilleCity_House1_Text_ImRockSmashDudeTakeThis,"Woohoo!\pI hear people call me the ROCK SMASH\nGUY, but I find that sort of degrading.\pI think I deserve a bit more respect,\nlike maybe the ROCK SMASH DUDE.\pWoohoo!\pAnyways, your COMPANIONS look pretty\nstrong.\pI like that!\nHere, take this HIDDEN MACHINE!$",reviewed AUTO draft
+MauvilleCity_House1_Text_ExplainRockSmash,"That HM contains ROCK SMASH.\pIf you come across large boulders\nthat block your path…\pWell, use that HM move and smash\nthem right out of your way!\pYes, sir! Smash rocks aside, I say!\nWoohoo!$","reviewed, no change needed"
+MauvilleCity_House1_Text_MonCanFlyOutOfSmashedRock,"Oh, yes, if you smash a rock, a\nCOMPANION could come flying out of\lhiding.\pWoohoo!$",reviewed AUTO draft
+MauvilleCity_House2_Text_TradeHarborMailForCoinCase,Oh! You have HARBOR MAIL?\nWill you trade it for a CHIP CASE?$,reviewed AUTO draft
+MauvilleCity_House2_Text_IllTradeYouCoinCase,"Oh, I'm so happy!\nOkay, I'll trade you a CHIP CASE!$",reviewed AUTO draft
+MauvilleCity_House2_Text_UseCoinCaseAtGameCorner,That CHIP CASE can be used\nat the SABACC DEN.$,reviewed AUTO draft
+MauvilleCity_House2_Text_ThatsDisappointing,"Oh, that's disappointing.\pA CHIP CASE is needed for the\nSABACC DEN.$",reviewed AUTO draft
+MauvilleCity_Mart_Text_DecisionsDetermineBattle,"Use a certain move, or use an item\ninstead…\pThe TRAINER's decisions determine how\nbattles turn out, I think.$","reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_ManOverThereSaysWeirdThings,"That man over there, he says weird\nthings!\pHe's funny in a weird way.\nI doubt I'll forget about him!$","reviewed, no change needed"
+MauvilleCity_PokemonCenter_1F_Text_RecordCornerSoundsFun,"A RECORD CORNER opened upstairs in\nthe BACTA CENTER.\pI don't know what it's about, but it\nsounds fun. I'll go check it out!$",reviewed AUTO draft
+MauvilleCity_PokemonCenter_2F_Text_Youngster,Did you know that you can link battle\nat the COLOSSEUM here?\pThey put up your record on the wall\nfor everyone to see.\pIt's embarrassing if you lose more\noften than you win…$,"reviewed, no change needed"
+NewMauville_Entrance_Text_DoorIsLocked,The door is locked.$,"reviewed, no change needed"
+NewMauville_Entrance_Text_UseBasementKey,Use the BASEMENT KEY?$,"reviewed, no change needed"
+NewMauville_Entrance_Text_UsedBasementKey,{PLAYER} used the BASEMENT KEY.\pThe door opened!$,"reviewed, no change needed"
+NewMauville_Inside_Text_GeneratorQuietedDown,The generator quieted down.$,"reviewed, no change needed"
+NewMauville_Inside_Text_SteppedOnSwitchGeneratorStopped,{PLAYER} stepped on the switch.\pClick…\p… … … … … … … …\n… … … … … … … …\pThe generator appears to have\nstopped…$,"reviewed, no change needed"

@@ -1,0 +1,252 @@
+text_id,sw_text_raw,notes
+Route110_Text_MayLetsBattle,"MIRA: Hi, {PLAYER}{KUN}, long time no see!\pWhile I was searching for other\nCOMPANIONS, my COMPANIONS grew\lstronger.\pSo…\nHow about a little battle?$",
+Route110_Text_RideBikeAtFullSpeed,Wouldn't it be great to race a\nBIKE down the PODRACE TRACK?$,
+Route110_Text_YouGotBikeFromRydel,"Oh, hey, you got that BIKE from WALD!\pOh, it's glaringly obvious.\nIt says right on your bike…\pWALD, WALD, WALD, WALD, WALD,\nWALD, WALD, WALD, WALD, WALD,\pWALD, WALD, WALD, WALD, WALD,\nWALD, WALD, WALD, WALD, WALD,\pWALD, WALD, WALD, WALD, WALD,\nWALD, WALD, WALD, WALD, WALD,\pWALD, WALD, WALD, WALD, WALD,\nWALD, WALD, WALD, WALD, WALD,\pWALD, WALD, WALD, WALD, WALD…\nThat name's everywhere.\pYou should ride it around all over\nthe place--it's good advertising!$",
+Route110_Text_TwoRoads,"The two roads, one above, one below…\pA road each for racers and COMPANIONS.\nPerhaps that is right and fair.$",
+Route110_Text_WhichShouldIChoose,"Which should I choose?\pMake a beeline for MOS ESPA on\nPODRACE TRACK, or take the low road\land look for COMPANIONS?$",
+Route110_Text_ChallengeReactionBest,Bravo! Splendid showing!\pYour love of racing comes from deep\nwithin your heart.\lYou've shaken me to my very soul!$,
+Route110_Text_ChallengeReactionOk,"I would consider you a work in\nprogress.\pStill, I hope you don't forget the\nsheer pleasure of racing.$",
+Route110_Text_ChallengeReactionBad,"My word… Your piloting skills border\non terrifying.\pMost certainly, you need much more\npractice riding.$",
+Route110_Text_ChallengeReactionWorst,…I am aghast…\pYou're perhaps not cut out for this\nunfortunate racing business.\pYou ought to give serious thought to\nreturning that BIKE to WALD.$,
+Route110_Text_SeasideParkingSign,SPEEDER PARKING$,
+Route110_Text_TrickHouseSign,“Three steps {RIGHT_ARROW} and two steps {UP_ARROW}\nto reach GARINDAN's TRICK HOUSE.”$,
+Route110_SeasideCyclingRoadNorthEntrance_Text_GoAllOutOnCyclingRoad,"On PODRACE TRACK, you can go all out\nand race as fast as you'd like.\pIt feels great to go that fast, but try\nnot to crash into anyone!$",
+Route110_SeasideCyclingRoadSouthEntrance_Text_GoAllOutOnCyclingRoad,"On PODRACE TRACK, you can go all out\nand race as fast as you'd like.\pIt feels great to go that fast, but try\nnot to crash into anyone!$",
+Route110_SeasideCyclingRoadNorthEntrance_Text_TooDangerousToWalk,"Sorry, you can't walk on the PODRACE\nTRACK. It's too dangerous.\pPlease come back with a BIKE.$",
+Route110_SeasideCyclingRoadSouthEntrance_Text_TooDangerousToWalk,"Sorry, you can't walk on the PODRACE\nTRACK. It's too dangerous.\pPlease come back with a BIKE.$",
+Route110_TrickHouseEnd_Text_FountainOfIdeasRunDry,Wh-what should I do?\nMy fountain of ideas for tricks has\lrun dry…\pPerhaps it is time I toured the galaxy\non a quest to devise new tricks…$,
+Route110_TrickHouseEntrance_Text_TheyCallMeTrickMaster,Behold!\pFor I am the greatest living mystery\nof a spy in all of the OUTER RIM!\lThey call me GARINDAN…\pThe TRICK MASTER!\nWahahaha! Glad to meet you!$,
+Route110_TrickHouseEnd_Text_AllNightToMakeMechadolls,"It took me all night to build QUIZ\nDROIDS and another to write the quiz…\pYou're almost my equal in greatness by\none, two places!$",
+Route110_Text_AcroBikesDoNotQualify,"On this PODRACE TRACK, those riding\nSWOOP BIKES are rated for their number\lof collisions and their total times.\pSPEEDER BIKES don't qualify for rating.\nThey turn too easily. It's not fair.$",
+Route110_TrickHousePuzzle2_Text_GeorgiaPostBattle,"You're strong, aren't you?\nMaybe even an ARENA LEADER!$",
+Route110_TrickHousePuzzle5_Text_Mechadoll3Quiz2,QUIZ DROID 3 QUIZ.\pSell one DURASTEEL POD and buy one\nBACTA SPRAY. How much is left?$,
+Route110_TrickHouseEntrance_Text_MechadollWhichTent,"QUIZ DROID 5 I AM!\nIF REWARD IS NOT TAKEN BY YOU,\lTHEN TRICK MASTER YOU CANNOT FOLLOW.\pRED TENT OR BLUE TENT,\nWHICH DO YOU PREFER?$",
+Route110_TrickHousePuzzle5_Text_Mechadoll2Quiz3,QUIZ DROID 2 QUIZ.\pWhich of these COMPANIONS did the\nCARTEL use in JUNDLAND WASTES?$,
+Route110_TrickHousePuzzle5_Text_Mechadoll5Quiz3,"QUIZ DROID 5 QUIZ.\pOn the PODRACE TRACK, how many\nSWOOP RACERS were there?$",
+Route110_TrickHousePuzzle6_Text_BennyIntro,Maybe I could get my BIRD COMPANION\nto fly me over the wall…$,
+Route110_TrickHousePuzzle8_Text_VincentPostBattle,You've passed the TRIALS OF\nILUM? That's too much!$,
+Route110_Text_AnthonyPostBattle,Speed alone won't win me battles.\nI need to reconsider this…$,
+Route110_Text_EdwinPostBattle,"When I see a COMPANION I don't know,\nmy passion as a collector is ignited!$",
+Route110_Text_TimmyIntro,I found some cool COMPANIONS in the\nscrub around here!$,
+Route110_Text_WeCantTalkAboutAquaActivities,THE CARTEL's activities…\nWe can't talk about them yet.$,reviewed AUTO draft
+Route110_Text_KickUpARuckus,I want to get going to MOS EISLEY and\nkick up a ruckus!$,reviewed AUTO draft
+Route110_Text_MyFirstJobInAqua,This is my first job after joining\nTHE CARTEL. It's a little scary.$,reviewed AUTO draft
+Route110_Text_AquaActionsBringSmiles,THE CARTEL's actions should bring\nsmiles to people's faces!$,reviewed AUTO draft
+Route110_Text_MayDefeated,Yikes!\nYou're better than I expected!$,"reviewed, no change needed"
+Route110_Text_MayTakeThis,"MIRA: {PLAYER}{KUN}, you've been busy\ntraining, too, haven't you?\pI think you deserve a reward!\nThis is from me!$",reviewed AUTO draft
+Route110_Text_MayExplainItemfinder,"MIRA: That's a SCANNER.\pTry it out. If there is an item that's\nnot visible, it emits a sound.\pOkay, {PLAYER}{KUN}, let's meet again!\pI know it's a little silly coming from\nme, but I think you should train a lot\lharder for the next time.$",reviewed AUTO draft
+Route110_Text_BrendanLetsBattle,"KAEL: Hey, {PLAYER}.\nSo this is where you were.\lHow's it going?\pHave you been raising your COMPANIONS?\nI'll check for you.$",reviewed AUTO draft
+Route110_Text_BrendanDefeated,Hmm…\nYou're pretty good.$,"reviewed, no change needed"
+Route110_Text_BrendanTakeThis,"KAEL: {PLAYER}, you've trained\nwithout me noticing…\pGood enough!\nHere, take this.$",reviewed AUTO draft
+Route110_Text_BrendanExplainItemfinder,"KAEL: That's a SCANNER.\pUse it to root around for items that\naren't visible.\pIf it senses something, it emits\na sound.\pAnyway, I'm off to look for new\nCOMPANIONS.$",reviewed AUTO draft
+Route110_Text_HairStreamsBehindMe,How do you like the way my raven-\ncolored hair streams behind me?\pI grew my hair out just for that.$,"reviewed, no change needed"
+Route110_Text_WalkOnTheLowRoad,"I don't have a BIKE, so I'll take\na leisurely walk on the low road.$","reviewed, no change needed"
+Route110_Text_BikeTechniques,Learning techniques will make BIKE\nriding even more fun.\pThere are some places that you can\nreach only by using a BIKE technique.$,"reviewed, no change needed"
+Route110_Text_CyclingChallengeResultSummary,Number of collisions:\n… … {STR_VAR_1}!\pTotal time:\n… … {STR_VAR_2}!$,"reviewed, no change needed"
+Route110_Text_ChallengeReactionGood,Your technique is remarkable.\pI suggest you speed up a bit while\nstill avoiding collisions.$,"reviewed, no change needed"
+Route110_Text_RatedForNumberOfCollisions,"This is PODRACE TRACK.\pIf you were to ride from MOS ESPA to\nMOS EISLEY on a SWOOP BIKE, you would\lbe rated for the number of collisions\land your total time.$",reviewed AUTO draft
+Route110_Text_AlwaysAimHigher,"Regardless of the results, I count on\nseeing more challenges from you.\lAlways aim higher!$","reviewed, no change needed"
+Route110_Text_SlateportCitySign,ROUTE 110\n{DOWN_ARROW} MOS EISLEY$,reviewed AUTO draft
+Route110_Text_CyclingRoadSign,SEASIDE PODRACE TRACK$,reviewed AUTO draft
+Route110_Text_AquaWasHere,"“THE CARTEL was here!”\pSomeone painted that onto this sign,\nbut then someone else painted over it.\p“THE EMPIRE rules!” is what it\nsays now.$",reviewed AUTO draft
+Route110_Text_Route103Sign,ROUTE 110\n{LEFT_ARROW} ROUTE 103$,"reviewed, no change needed"
+Route110_Text_MauvilleCitySign,ROUTE 110\n{UP_ARROW} MOS ESPA$,reviewed AUTO draft
+Route110_Text_TrainerTipsPrlzSleep,TRAINER TIPS\pThe foe can be made helpless by\nparalyzing it or causing it to sleep.\pIt is an important technique for\nCOMPANION battles.$,reviewed AUTO draft
+Route110_Text_TrainerTipsRegisterItems,TRAINER TIPS\pThe items in the BAG can be reorganized\nby pressing SELECT.$,"reviewed, no change needed"
+Route110_Text_BestRecord,THE BEST RECORD TO DATE…\pNo. of collisions: {STR_VAR_1}\pElapsed time: {STR_VAR_2}$,"reviewed, no change needed"
+Route110_Text_ThereIsNoRecord,THE BEST RECORD TO DATE…\pNo one seems to have taken the\nchallenge. There is no record…$,"reviewed, no change needed"
+Route110_Text_ImagineSeeingYouHere,"PROF. KORR: Oh, {PLAYER}{KUN}!\nImagine seeing you here!\pAnd where might my {RIVAL} be?$",reviewed AUTO draft
+Route110_Text_HeardYouInstallMatchCall,"Oh, I see!\nYou two are running separately.\lWell, that's fine.\pOh, yes, I heard that your COMLINK\nhad the MATCH CALL system installed.\pWell, then, I should register you in\nmy COMLINK as well.\pThat way, even when we're apart,\nI can rate your DATAPAD anytime.\p… … … … … …$",reviewed AUTO draft
+Route110_Text_RegisteredBirchInPokenav,Registered PROF. KORR\nin the COMLINK.$,reviewed AUTO draft
+Route110_Text_KeepAnEyeOutForRival,"PROF. KORR: {PLAYER}{KUN}…\pPlease keep an eye out for my {RIVAL}.\n… … … … … …\pWell, I had better get going.\nSee you again, {PLAYER}{KUN}!$",reviewed AUTO draft
+Route110_TrickHouseEnd_Text_YouveMadeItToMe,Aak!\nYou've made it to me?\lHmmm… You're sharp!$,"reviewed, no change needed"
+Route110_TrickHouseEnd_Text_AllNightToPlantTrees,"It took me all night to plant all those\ntrees…\pYou're almost my equal in greatness by\none, two, three, four, five, six places!$","reviewed, no change needed"
+Route110_TrickHouseEnd_Text_AllNightToMakeMaze,"It took me all night to make the maze…\pYou're almost my equal in greatness by\none, two, three, four, five places!$","reviewed, no change needed"
+Route110_TrickHouseEnd_Text_AllNightToPreparePanels,"It took me all night to prepare\nthe wall panels…\pYou're almost my equal in greatness by\none, two, three, four places!$","reviewed, no change needed"
+Route110_TrickHouseEnd_Text_AllNightToShoveBoulders,"It took me all night to shove in those\nboulders…\pYou're almost my equal in greatness by\none, two, three places!$","reviewed, no change needed"
+Route110_TrickHouseEnd_Text_AllNightToInstallDoors,It took me all night to install\nthe doors…\pYou're almost my equal in greatness!$,"reviewed, no change needed"
+Route110_TrickHouseEnd_Text_AllNightSettingUpArrows,It took me all night setting up arrows…\pYou're my equal in greatness!$,"reviewed, no change needed"
+Route110_TrickHouseEnd_Text_AllNightPolishingFloors,It took me all night polishing floors…\pYou're above me in greatness!\nPossibly…$,"reviewed, no change needed"
+Route110_TrickHouseEnd_Text_DefeatedMePreferWhichTent,"I hate to admit defeat, but you have\nbested me!\pStill, you must have been reeled in by\nmy charisma for you to visit me again\land again. Yes, you must have!\pBut that has nothing to do with my\nlosing!\pIn recognition of the friendship\nbetween you, the driven, and the genius\lthat is myself, I demand that you take\lthis keepsake!\pActually there are two--\na RED TENT and a BLUE TENT.\lWhich do you prefer?$","reviewed, no change needed"
+Route110_TrickHouseEnd_Text_NoRoomInPC,"What? No room in your TERMINAL?\nWhat am I to make of that?\pI wish I could say that, but I am much\ntoo kind and caring, so come back later!$",reviewed AUTO draft
+Route110_TrickHouseEnd_Text_LeavingOnJourney,"… … … … … …\pI am leaving on a journey of discovery.\nA quest in search of new tricks.\pI wish that you will one day visit and\nentertain me again.\pAnd now, farewell!$","reviewed, no change needed"
+Route110_TrickHouseEnd_Text_YouHaveEarnedThisReward,Fine!\nYou have earned this reward!$,"reviewed, no change needed"
+Route110_TrickHouseEnd_Text_NoRoomForThis,"What? Have you no room for this?\nWhat manner of items do you carry?\pBut fine, since you've reached me,\nyour reward will be with me till later.$","reviewed, no change needed"
+Route110_TrickHouseEnd_Text_MakeNewTricksToStumpYou,"Scrub that smug smirk from your face!\nIt's much too early to think you've won!\pI'll make new tricks to stump you, I will.\nYou may mock me only when you're done.\pCome back for the next exciting\ninstallment!$","reviewed, no change needed"
+Route110_TrickHouseEnd_Text_YoureIgnoringMe,"Now, now! You're ignoring me now?\nNow that, I consider heartbreaking!$","reviewed, no change needed"
+Route110_TrickHouseEntrance_Text_YoureBeingWatched,You're being watched…$,"reviewed, no change needed"
+Route110_TrickHouseEntrance_Text_ConcealedBeneathDesk,Hah? Grrr…\pHow did you know I concealed myself\nbeneath this desk? You're sharp!$,"reviewed, no change needed"
+Route110_TrickHouseEntrance_Text_ConcealedBehindTree,Hah? Grrr…\pHow did you know I concealed myself\nbehind this tree? You're sharp!$,"reviewed, no change needed"
+Route110_TrickHouseEntrance_Text_ConcealedInDresser,Hah? Grrr…\pHow did you know I concealed myself\nin this dresser? You're sharp!$,"reviewed, no change needed"
+Route110_TrickHouseEntrance_Text_ConealedBeyondWindow,Hah? Grrr…\pHow did you know I concealed myself\nbeyond this window? You're sharp!$,"reviewed, no change needed"
+Route110_TrickHouseEntrance_Text_ConcealedInPlanter,Hah? Grrr…\pHow did you know I concealed myself\nin this planter? You're sharp!$,"reviewed, no change needed"
+Route110_TrickHouseEntrance_Text_ConcealedInCupboard,Hah? Grrr…\pHow did you know I concealed myself\nin this cupboard? You're sharp!$,"reviewed, no change needed"
+Route110_TrickHouseEntrance_Text_ConcealedBehindWindow,Hah? Grrr…\pHow did you know I concealed myself\nbehind this window? You're sharp!$,"reviewed, no change needed"
+Route110_TrickHouseEntrance_Text_ConcealedBeneathCushion,Hah? Grrr…\pHow did you know I concealed myself\nbeneath this cushion? You're sharp!$,"reviewed, no change needed"
+Route110_TrickHouseEntrance_Text_ComeToChallengeTrickHouse,"You, you've come to challenge\nmy TRICK HOUSE, haven't you?\pThat's why you're here, isn't it?\nYes, it is!\pConsider your challenge accepted!\pEnter through the scroll there,\nand let your challenge commence!\pI shall be waiting in the back!$","reviewed, no change needed"
+Route110_TrickHouseEntrance_Text_ItsAScroll,It's a scroll.$,"reviewed, no change needed"
+Route110_TrickHouseEntrance_Text_GoInHoleBehindScroll,There is a big hole behind the scroll!\pWant to go in?$,"reviewed, no change needed"
+Route110_TrickHouseEntrance_Text_LeavingOnJourneyNote,There is a note affixed to the scroll…\p“I am leaving on a journey.\nDon't look for me. TRICK MASTER”$,"reviewed, no change needed"
+Route110_TrickHouseEntrance_Text_NextTimeUseThisTrick,"For the next time, I'll use this trick,\nand that scheme, and those ruses…\pMufufufu… If I may say so, it's\nbrilliantly difficult, even for me!$","reviewed, no change needed"
+Route110_TrickHouseEntrance_Text_InMidstOfDevisingNewChallenges,"Hah? What?!\nOh, it's you!\pI'm in the midst of devising new tricky\nchallenges!\pIt's not too much to ask for a bit more\ntime for me to think, is it now?\lYou wouldn't begrudge me that?\lCome back in a little while!$","reviewed, no change needed"
+Route110_TrickHouseEntrance_Text_YoureHereToAcceptReward,"Ah, it's you! You're here to accept the\nreward from before, isn't that right?\lYes, right I am!\pHere!\nI'll give it to you now!$","reviewed, no change needed"
+Route110_TrickHouseEntrance_Text_DidYouNotComeToClaimReward,Hah?\nDid you not come to claim your reward?$,"reviewed, no change needed"
+Route110_TrickHouseEntrance_Text_ThenFarewell,THEN FAREWELL.$,"reviewed, no change needed"
+Route110_TrickHouseEntrance_Text_PCFullAgain,"YOUR TERMINAL STATUS: FULL AGAIN.\nMEAN, YOU ARE.$",reviewed AUTO draft
+Route110_TrickHousePuzzle_Text_FoundAScroll,{PLAYER} found a scroll.$,"reviewed, no change needed"
+Route110_TrickHousePuzzle_Text_MemorizedSecretCode,{PLAYER} memorized the secret code\nwritten on the scroll.$,"reviewed, no change needed"
+Route110_TrickHousePuzzle_Text_SecretCodeWrittenOnIt,A secret code is written on it.$,"reviewed, no change needed"
+Route110_TrickHouseEntrance_Text_DoorLockedWriteSecretCodeHere,"The door is locked.\p…On closer inspection, this is written\non it: “Write the secret code here.”$","reviewed, no change needed"
+Route110_TrickHousePuzzle1_Text_WroteSecretCodeLockOpened,{PLAYER} wrote down the secret code\non the door.\p“TRICK MASTER is fabulous.”\n… … … … … … … …\pThe lock clicked open!$,"reviewed, no change needed"
+Route110_TrickHousePuzzle1_Text_SallyIntro,I'll hack and slash my way to victory\nwith the VIBROBLADE we just learned!$,reviewed AUTO draft
+Route110_TrickHousePuzzle1_Text_SallyDefeat,Why are you so serious?$,"reviewed, no change needed"
+Route110_TrickHousePuzzle1_Text_SallyPostBattle,I never get tired of hacking\nand slashing!$,"reviewed, no change needed"
+Route110_TrickHousePuzzle1_Text_EddieIntro,I wandered into this weird house\nby accident…$,"reviewed, no change needed"
+Route110_TrickHousePuzzle1_Text_EddieDefeat,And now I've lost…$,"reviewed, no change needed"
+Route110_TrickHousePuzzle1_Text_EddiePostBattle,"I lost my way, I lost a battle, and I'm\nnow even more lost… I can't get out…$","reviewed, no change needed"
+Route110_TrickHousePuzzle1_Text_RobinIntro,Just who is the TRICK MASTER?$,"reviewed, no change needed"
+Route110_TrickHousePuzzle1_Text_RobinDefeat,I lost while I was lost in thought!$,"reviewed, no change needed"
+Route110_TrickHousePuzzle1_Text_RobinPostBattle,You're strong!\nJust who are you?$,"reviewed, no change needed"
+Route110_TrickHousePuzzle2_Text_WroteSecretCodeLockOpened,{PLAYER} wrote down the secret code\non the door.\p“TRICK MASTER is smart.”\n… … … … … … … …\pThe lock clicked open!$,"reviewed, no change needed"
+Route110_TrickHousePuzzle2_Text_TedIntro,Which switch closes which hole?$,"reviewed, no change needed"
+Route110_TrickHousePuzzle2_Text_TedDefeat,"After that battle, I'm even more\nconfused!$","reviewed, no change needed"
+Route110_TrickHousePuzzle2_Text_TedPostBattle,Can I get you to push all the buttons\nfor me?$,"reviewed, no change needed"
+Route110_TrickHousePuzzle2_Text_PaulIntro,Oh! You're on your second TRICK HOUSE\nchallenge!$,"reviewed, no change needed"
+Route110_TrickHousePuzzle2_Text_PaulDefeat,You're good at battling too?$,"reviewed, no change needed"
+Route110_TrickHousePuzzle2_Text_PaulPostBattle,The TRICK MASTER rigged all the tricks\nin this house all by himself.$,"reviewed, no change needed"
+Route110_TrickHousePuzzle2_Text_GeorgiaIntro,"I want to make my own ARENA one day.\nSo, I'm studying how to set traps.$",reviewed AUTO draft
+Route110_TrickHousePuzzle2_Text_GeorgiaDefeat,I didn't study battling enough!$,"reviewed, no change needed"
+Route110_TrickHousePuzzle3_Text_WroteSecretCodeLockOpened,{PLAYER} wrote down the secret code\non the door.\p“TRICK MASTER is coveted.”\n… … … … … … … …\pThe lock clicked open!$,"reviewed, no change needed"
+Route110_TrickHousePuzzle3_Text_JustinIntro,I keep coming back to this same place!$,"reviewed, no change needed"
+Route110_TrickHousePuzzle3_Text_JustinDefeat,"I'm already having trouble, and then\nyou have to beat me? It's not fair!$","reviewed, no change needed"
+Route110_TrickHousePuzzle3_Text_JustinPostBattle,It's full of doors here!\nIt's too small and dark in here! Help!$,"reviewed, no change needed"
+Route110_TrickHousePuzzle3_Text_MarthaIntro,I don't know what's going on here.\nI'm starting to feel sad…$,"reviewed, no change needed"
+Route110_TrickHousePuzzle3_Text_MarthaDefeat,You… You're awful!$,"reviewed, no change needed"
+Route110_TrickHousePuzzle3_Text_MarthaPostBattle,"I know I'm weak!\nAnd, I have no sense of direction!$","reviewed, no change needed"
+Route110_TrickHousePuzzle3_Text_AlanIntro,I don't get it. What would anyone want\nwith a house this bizarre?$,"reviewed, no change needed"
+Route110_TrickHousePuzzle3_Text_AlanDefeat,I don't get it.\nHow did I lose?$,"reviewed, no change needed"
+Route110_TrickHousePuzzle3_Text_AlanPostBattle,I don't get it.\nHow many traps are in this house?\pYou may be the one to solve that.$,"reviewed, no change needed"
+Route110_TrickHousePuzzle4_Text_WroteSecretCodeLockOpened,{PLAYER} wrote down the secret code\non the door.\p“TRICK MASTER is cool.”\n… … … … … … … …\pThe lock clicked open!$,"reviewed, no change needed"
+Route110_TrickHousePuzzle4_Text_CoraIntro,It's too much bother to think this out.\nI only wanted to battle!$,"reviewed, no change needed"
+Route110_TrickHousePuzzle4_Text_CoraDefeat,"Even though I lost, I still like battling\nthe best!$","reviewed, no change needed"
+Route110_TrickHousePuzzle4_Text_CoraPostBattle,Wouldn't you agree? You would go\nanywhere if TRAINERS were there.$,"reviewed, no change needed"
+Route110_TrickHousePuzzle4_Text_YujiIntro,"Heh! Boulders like this, I can brush\naside with one finger!$","reviewed, no change needed"
+Route110_TrickHousePuzzle4_Text_YujiDefeat,"I can push boulders, but I can't solve\nthe puzzle…$","reviewed, no change needed"
+Route110_TrickHousePuzzle4_Text_YujiPostBattle,It's not good enough to be brawny…\nYou have to use your head. Be brainy!$,"reviewed, no change needed"
+Route110_TrickHousePuzzle4_Text_PaulaIntro,"The TRICK HOUSE is getting trickier,\nisn't it?$","reviewed, no change needed"
+Route110_TrickHousePuzzle4_Text_PaulaDefeat,Aaak!$,"reviewed, no change needed"
+Route110_TrickHousePuzzle4_Text_PaulaPostBattle,Has anyone made it to the end?$,"reviewed, no change needed"
+Route110_TrickHousePuzzle5_Text_WroteSecretCodeLockOpened,{PLAYER} wrote down the secret code\non the door.\p“TRICK MASTER is a genius.”\n… … … … … … … …\pThe lock clicked open!$,"reviewed, no change needed"
+Route110_TrickHousePuzzle5_Text_Mechadoll1Intro,"CLICKETY-CLACK…\nQUIZ DROID 1 AM I!\pIF YOU ANSWER QUIZZES CORRECTLY,\nTHEN YOU WILL GO TO QUIZ DROID 5.\lTHEN YOU CAN OBTAIN THE SECRET CODE.$",reviewed AUTO draft
+Route110_TrickHousePuzzle5_Text_Mechadoll1Quiz1,QUIZ DROID 1 QUIZ.\pOne of these COMPANIONS is not found\non ROUTE 110. Which one is it?$,reviewed AUTO draft
+Route110_TrickHousePuzzle5_Text_Mechadoll1Quiz2,QUIZ DROID 1 QUIZ.\pOne of these COMPANIONS is not of the\nWATER type. Which one is it?$,reviewed AUTO draft
+Route110_TrickHousePuzzle5_Text_Mechadoll1Quiz3,QUIZ DROID 1 QUIZ.\pOne of these COMPANIONS does not use\nLEECH LIFE. Which one is it?$,reviewed AUTO draft
+Route110_TrickHousePuzzle5_Text_CorrectGoThrough,CONGRATULATIONS. CORRECT YOU ARE.\nGO THROUGH. PLEASE.$,"reviewed, no change needed"
+Route110_TrickHousePuzzle5_Text_DisappointmentError,BZZZT. DISAPPOINTMENT.\nERROR.$,"reviewed, no change needed"
+Route110_TrickHousePuzzle5_Text_Wahahahaha,WAHAHAHAHA! WAHAHAHAHA!\nCLICKETY-CLACK!$,"reviewed, no change needed"
+Route110_TrickHousePuzzle5_Text_WaitForNextChallenge,YOUR NEXT CHALLENGE WE WAIT FOR.$,"reviewed, no change needed"
+Route110_TrickHousePuzzle5_Text_Mechadoll2Intro,CLICKETY-CLACK…\nQUIZ DROID 2 AM I!\pQUIZ DROID 1'S QUIZ DIFFICULTY LEVEL\nIS SET TOO LOW.$,reviewed AUTO draft
+Route110_TrickHousePuzzle5_Text_Mechadoll2Quiz1,QUIZ DROID 2 QUIZ.\pWhich of these COMPANIONS did LUKE\nborrow from your father?$,reviewed AUTO draft
+Route110_TrickHousePuzzle5_Text_Mechadoll2Quiz2,QUIZ DROID 2 QUIZ.\pWhich of these COMPANIONS was chasing\nPROF. KORR?$,reviewed AUTO draft
+Route110_TrickHousePuzzle5_Text_Mechadoll3Intro,CLICKETY-CLACK…\nQUIZ DROID 3 AM I!\pMATTERS OF MONEY ARE MY SOLE FOCUS.$,reviewed AUTO draft
+Route110_TrickHousePuzzle5_Text_Mechadoll3Quiz1,QUIZ DROID 3 QUIZ.\pWhich costs more?\nThree HARBOR MAILS or one BURN GEL?$,reviewed AUTO draft
+Route110_TrickHousePuzzle5_Text_Mechadoll3Quiz3,QUIZ DROID 3 QUIZ.\pDo one REPULSOR and JAWA JUICE cost\nmore than one BACTA PATCH?$,reviewed AUTO draft
+Route110_TrickHousePuzzle5_Text_Mechadoll4Intro,CLICKETY-CLACK…\nQUIZ DROID 4 THAT IS ME!\pMY QUIZ IS AN OBJECT OF BEAUTY.$,reviewed AUTO draft
+Route110_TrickHousePuzzle5_Text_Mechadoll4Quiz1,"QUIZ DROID 4 QUIZ.\pIn SEASHORE HOUSE, were there more men\nor women?$",reviewed AUTO draft
+Route110_TrickHousePuzzle5_Text_Mechadoll4Quiz2,"QUIZ DROID 4 QUIZ.\pIn PIRIN, were there more\nelderly men or elderly women?$",reviewed AUTO draft
+Route110_TrickHousePuzzle5_Text_Mechadoll4Quiz3,"QUIZ DROID 4 QUIZ.\pIn the ACADEMY, how many\ngirl students were there?$",reviewed AUTO draft
+Route110_TrickHousePuzzle5_Text_Mechadoll5Intro,CLICKETY-CLACK…\nQUIZ DROID 5 AM I!\pTHE MASTER'S BEST AND PROUDEST\nACHIEVEMENT AM I.$,reviewed AUTO draft
+Route110_TrickHousePuzzle5_Text_Mechadoll5Quiz1,"QUIZ DROID 5 QUIZ.\pIn MOS EISLEY's COMPANION FAN CLUB,\nhow many COMPANIONS were there?$",reviewed AUTO draft
+Route110_TrickHousePuzzle5_Text_Mechadoll5Quiz2,"QUIZ DROID 5 QUIZ.\pIn BRIGHT TREE, how many\ntree houses were there?$",reviewed AUTO draft
+Route110_TrickHousePuzzle6_Text_WroteSecretCodeLockOpened,{PLAYER} wrote down the secret code\non the door.\p“TRICK MASTER is my life.”\n… … … … … … … …\pThe lock clicked open!$,"reviewed, no change needed"
+Route110_TrickHousePuzzle6_Text_SophiaIntro,"When I heard there was a strange\nhouse, I had to check it out.$","reviewed, no change needed"
+Route110_TrickHousePuzzle6_Text_SophiaDefeat,I've discovered a tough TRAINER!$,"reviewed, no change needed"
+Route110_TrickHousePuzzle6_Text_SophiaPostBattle,I'm sure having a good time checking\nthis place out.\pIt's a challenge I've found worth\nrepeating!$,"reviewed, no change needed"
+Route110_TrickHousePuzzle6_Text_BennyDefeat,Gwaaah! I blew it!$,"reviewed, no change needed"
+Route110_TrickHousePuzzle6_Text_BennyPostBattle,Ehehehe… I guess I lost because\nI was trying to cheat.$,"reviewed, no change needed"
+Route110_TrickHousePuzzle6_Text_SebastianIntro,I'm getting dizzy from these rotating\ndoors…$,"reviewed, no change needed"
+Route110_TrickHousePuzzle6_Text_SebastianDefeat,Everything's spinning around and\naround. I can't take this anymore…$,"reviewed, no change needed"
+Route110_TrickHousePuzzle6_Text_SebastianPostBattle,You don't seem to be affected at all.\nOr do you have your poker face on?$,"reviewed, no change needed"
+Route110_TrickHousePuzzle7_Text_WroteSecretCodeLockOpened,{PLAYER} wrote down the secret code\non the door.\p“TRICK MASTER is huggable.”\n… … … … … … … …\pThe lock clicked open!$,"reviewed, no change needed"
+Route110_TrickHousePuzzle7_Text_JoshuaIntro,The TRICK MASTER always vanishes\nlike smoke. How does he do it?$,"reviewed, no change needed"
+Route110_TrickHousePuzzle7_Text_JoshuaDefeat,Aiyeeeh! You're much too strong!\nHow do you do it?$,"reviewed, no change needed"
+Route110_TrickHousePuzzle7_Text_JoshuaPostBattle,"I wish I could appear and disappear as\nif I were smoke, too.$","reviewed, no change needed"
+Route110_TrickHousePuzzle7_Text_PatriciaIntro,Going around the same spot…\nIt begets ill fortune…$,"reviewed, no change needed"
+Route110_TrickHousePuzzle7_Text_PatriciaDefeat,Defeated!\nIt's a bad sign…$,"reviewed, no change needed"
+Route110_TrickHousePuzzle7_Text_PatriciaPostBattle,I've circled the same spot over ten\ntimes now… It's ill fortune…$,"reviewed, no change needed"
+Route110_TrickHousePuzzle7_Text_AlexisIntro,Whoever wins will get through here\nfirst. That's the feeling I get.$,"reviewed, no change needed"
+Route110_TrickHousePuzzle7_Text_AlexisDefeat,"Oh!\nWell, go ahead, then!$","reviewed, no change needed"
+Route110_TrickHousePuzzle7_Text_AlexisPostBattle,You're solving all the puzzles in the\nTRICK HOUSE. That's the feeling I get.$,"reviewed, no change needed"
+Route110_TrickHousePuzzle7_Text_MarielaIntro,"Nufufufu, here at last!\nLet's get right with it!$","reviewed, no change needed"
+Route110_TrickHousePuzzle7_Text_MarielaDefeat,You're so casual about winning!$,"reviewed, no change needed"
+Route110_TrickHousePuzzle7_Text_MarielaPostBattle,Humph! I'm not upset!\nNot me!$,"reviewed, no change needed"
+Route110_TrickHousePuzzle7_Text_AlvaroIntro,I ever so closely watched you coming!$,"reviewed, no change needed"
+Route110_TrickHousePuzzle7_Text_AlvaroDefeat,This outcome I didn't see coming…$,"reviewed, no change needed"
+Route110_TrickHousePuzzle7_Text_AlvaroPostBattle,"Well, anyway, we both picked a weird\nplace to get acquainted.\pAs one weirdo to another,\nlet's do our best!$","reviewed, no change needed"
+Route110_TrickHousePuzzle7_Text_EverettIntro,It's awfully cramped in here…$,"reviewed, no change needed"
+Route110_TrickHousePuzzle7_Text_EverettDefeat,"Oh, yes, strong you are.$","reviewed, no change needed"
+Route110_TrickHousePuzzle7_Text_EverettPostBattle,"I was hoping to switch places with you\nwhen I beat you, but…$","reviewed, no change needed"
+Route110_TrickHousePuzzle8_Text_WroteSecretCodeLockOpened,{PLAYER} wrote down the secret code\non the door.\p“TRICK MASTER I love.”\n… … … … … … … …\pThe lock clicked open!$,"reviewed, no change needed"
+Route110_TrickHousePuzzle8_Text_VincentIntro,Not many TRAINERS have made it\nthis far.$,"reviewed, no change needed"
+Route110_TrickHousePuzzle8_Text_VincentDefeat,"That must mean you're tough, too…$","reviewed, no change needed"
+Route110_TrickHousePuzzle8_Text_KeiraIntro,Consider yourself lucky to be\nbattling me!$,"reviewed, no change needed"
+Route110_TrickHousePuzzle8_Text_KeiraDefeat,This isn't right!\nI can't lose!$,"reviewed, no change needed"
+Route110_TrickHousePuzzle8_Text_KeiraPostBattle,It's a miracle that you beat me.\nYou can brag about it.$,"reviewed, no change needed"
+Route110_TrickHousePuzzle8_Text_LeroyIntro,"You've been slugging through the TRICK\nHOUSE challenge, too.$","reviewed, no change needed"
+Route110_TrickHousePuzzle8_Text_LeroyDefeat,I see…\nYou possess an extraordinary style.$,"reviewed, no change needed"
+Route110_TrickHousePuzzle8_Text_LeroyPostBattle,Seeing someone like you should please\nthe TRICK MASTER.$,"reviewed, no change needed"
+Route110_Text_JacobIntro,Whoa! Watch it!\nI guess you're not used to BIKE racing.$,"reviewed, no change needed"
+Route110_Text_JacobDefeated,Whoa!\nMy brakes failed!$,"reviewed, no change needed"
+Route110_Text_JacobPostBattle,Flat tires and brake problems can\ncause serious injury!\lInspect your BIKE for problems!$,"reviewed, no change needed"
+Route110_Text_AnthonyIntro,"Yo, you!\nCan you keep up with my speed?$","reviewed, no change needed"
+Route110_Text_AnthonyDefeated,Crash and burn!$,"reviewed, no change needed"
+Route110_Text_BenjaminIntro,Don't panic if your BIKE's going fast!$,"reviewed, no change needed"
+Route110_Text_BenjaminDefeated,I shouldn't panic during COMPANION\nbattles…$,reviewed AUTO draft
+Route110_Text_BenjaminPostBattle,There's no need to panic or stress.\nTake it easy. There's plenty of time.$,"reviewed, no change needed"
+Route110_Text_BenjaminRegister,I'll keep chugging on without stressing.\nGive me a shout if you're up to it.$,"reviewed, no change needed"
+Route110_Text_BenjaminRematchIntro,Aren't you going a little too fast?\nTake it easy and let's battle.$,"reviewed, no change needed"
+Route110_Text_BenjaminRematchDefeated,"I didn't panic, but I still lost…$","reviewed, no change needed"
+Route110_Text_BenjaminRematchPostBattle,There's no need to panic or stress.\nTake it easy. There's plenty of time.$,"reviewed, no change needed"
+Route110_Text_AbigailIntro,"The triathlon is hard in the extreme.\pYou have to complete the three events\nof swimming, cycling, and running.$","reviewed, no change needed"
+Route110_Text_AbigailDefeated,"COMPANION battles are hard, too!$",reviewed AUTO draft
+Route110_Text_AbigailPostBattle,"I'm exhausted, so I need a break.\nIt's important to get proper rest.$","reviewed, no change needed"
+Route110_Text_AbigailRegister,"You know, I like you!\nLet's have a rematch on PODRACE TRACK.$",reviewed AUTO draft
+Route110_Text_AbigailRematchIntro,Isn't it neat to hold a battle while\ncycling?$,"reviewed, no change needed"
+Route110_Text_AbigailRematchDefeated,Wow…\nHow could you be so strong?$,"reviewed, no change needed"
+Route110_Text_AbigailRematchPostBattle,Were you going after a record?\pI'm sorry if I held you up!$,"reviewed, no change needed"
+Route110_Text_JasmineIntro,I've been riding without stopping.\nMy thighs are like rocks!$,"reviewed, no change needed"
+Route110_Text_JasmineDefeated,I'm worried about muscle cramps…$,"reviewed, no change needed"
+Route110_Text_JasminePostBattle,"Oh, you have some ARENA SHARDS?\nNo wonder you're so strong!$",reviewed AUTO draft
+Route110_Text_EdwardIntro,I have foreseen your intentions!\nI cannot possibly lose!$,"reviewed, no change needed"
+Route110_Text_EdwardDefeated,I failed to prophesize my own demise!$,"reviewed, no change needed"
+Route110_Text_EdwardPostBattle,I see your future…\pHmm…\nI see a shining light…$,"reviewed, no change needed"
+Route110_Text_JaclynIntro,Ahahahaha!\nI'll dazzle you with my wonders!$,"reviewed, no change needed"
+Route110_Text_JaclynDefeated,I wondrously lost!$,"reviewed, no change needed"
+Route110_Text_JaclynPostBattle,"You managed to win only because it was\na wonder! Yes, a wonder!\lDon't think you can win all the time!$","reviewed, no change needed"
+Route110_Text_EdwinIntro,"Could I see your COMPANION?\nJust one look, please?$",reviewed AUTO draft
+Route110_Text_EdwinDefeated,I wanted to complete\nmy collection…$,"reviewed, no change needed"
+Route110_Text_EdwinRegister,"I like collecting MATCH CALL\nregistrations, too…$","reviewed, no change needed"
+Route110_Text_EdwinRematchIntro,"Hi, have you caught any new COMPANION?\pCould I see your COMPANION?\nJust one look, please?$",reviewed AUTO draft
+Route110_Text_EdwinRematchDefeated,Your COMPANION…\nI envy you.$,reviewed AUTO draft
+Route110_Text_EdwinRematchPostBattle,"Oh, I long to make all rare COMPANIONS\nmine!$",reviewed AUTO draft
+Route110_Text_DaleIntro,Hey!\nDon't sneak up behind me like that!$,"reviewed, no change needed"
+Route110_Text_DaleDefeated,I lost!\nDrat!$,"reviewed, no change needed"
+Route110_Text_DalePostBattle,Fishing is all about concentration.\nYou have to focus on the floater.$,"reviewed, no change needed"
+Route110_Text_IsabelIntro,Ahahaha! I would go anywhere to show\noff my delightful COMPANION.$,reviewed AUTO draft
+Route110_Text_IsabelDefeated,"Oh, dear, this won't do.$","reviewed, no change needed"
+Route110_Text_IsabelPostBattle,"Rather than battling, perhaps I should\nshow off my COMPANION at the FAN CLUB.$",reviewed AUTO draft
+Route110_Text_IsabelRegister,That wasn't close to what I could\ndo to show off my COMPANION.\pI'll have you as my captive audience\nas often as possible!$,reviewed AUTO draft
+Route110_Text_IsabelRematchIntro,Ahahahaha! I would be happy to show\noff my COMPANION as often as you like!$,reviewed AUTO draft
+Route110_Text_IsabelRematchDefeated,"Oh, dear, this won't do.$","reviewed, no change needed"
+Route110_Text_IsabelRematchPostBattle,"I don't think that I could ever stop\nfrom showing off my COMPANION.\pBut I like to battle, too!$",reviewed AUTO draft
+Route110_Text_TimmyDefeated,Being cool isn't enough to win…$,"reviewed, no change needed"
+Route110_Text_TimmyPostBattle,It's hard to battle with COMPANIONS you\njust caught.$,reviewed AUTO draft
+Route110_Text_AlyssaIntro,I fell off PODRACE TRACK…\pI'll get over my embarrassment by\nbattling with you!$,reviewed AUTO draft
+Route110_Text_AlyssaDefeated,Oops!\nI ended up losing!$,"reviewed, no change needed"
+Route110_Text_AlyssaPostBattle,Falling… Losing…\nThis is so humiliating for me!$,"reviewed, no change needed"
+Route110_Text_JosephIntro,"Okay! Full-throttle time! If you can't\ngroove, you get left behind!$","reviewed, no change needed"
+Route110_Text_JosephDefeated,You got into the groove all right…$,"reviewed, no change needed"
+Route110_Text_JosephPostBattle,This isn't going to bring me down!\nLosing has made me a better man!$,"reviewed, no change needed"
+Route110_Text_KalebIntro,When cute COMPANIONS help each other…\nYou won't see a more adorable sight!$,reviewed AUTO draft
+Route110_Text_KalebDefeated,Have you no compassion or pity?$,"reviewed, no change needed"
+Route110_Text_KalebPostBattle,"Okay, okay, you've done the best you\ncould, my pretties.$","reviewed, no change needed"

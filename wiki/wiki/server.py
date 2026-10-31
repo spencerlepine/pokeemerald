@@ -44,7 +44,7 @@ def json_response(handler: BaseHTTPRequestHandler, payload: object, status: int 
 
 
 class WikiHandler(BaseHTTPRequestHandler):
-    server_version = "EmeraldWiki/1.0"
+    server_version = "EmeraldSWWiki/1.0"
 
     def do_GET(self) -> None:
         parsed = urlparse(self.path)
@@ -255,14 +255,14 @@ class WikiHandler(BaseHTTPRequestHandler):
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Serve the local Emerald CSV wiki.")
+    parser = argparse.ArgumentParser(description="Serve the local Star Wars Emerald CSV wiki.")
     parser.add_argument("--host", default="127.0.0.1")
     parser.add_argument("--port", type=int, default=8000)
     args = parser.parse_args()
     if not DATABASE_DIR.is_dir():
         parser.error(f"Database directory not found: {DATABASE_DIR}")
     server = ThreadingHTTPServer((args.host, args.port), WikiHandler)
-    print(f"Emerald Wiki: http://{args.host}:{args.port}")
+    print(f"Star Wars Emerald Wiki: http://{args.host}:{args.port}")
     try:
         server.serve_forever()
     except KeyboardInterrupt:
