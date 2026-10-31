@@ -23,10 +23,13 @@ case "$cmd" in
   up)
     ensure_xvfb
     extra=(); [ -n "${1:-}" ] && extra=(--savestate "$(realpath "$1")")
+    # A stopped session's directory lingers and blocks reusing its id ("session_exists").
+    # `status --all` archives confirmed-dead sessions into ~/.mgba-live-mcp/runtime/archived_sessions/.
+    "$LIVE_CLI" status --all >/dev/null 2>&1 || true
     # --fast = fps target 600 (still ~40-60 fps real on software GL)
     "$LIVE_CLI" start --rom "$ROM" --mgba-path "$MGBA_PREFIX/bin/mgba-qt" --session-id "$SESSION" \
       --ready-timeout 40 --fast "${extra[@]}" ;;
-  down)    "$LIVE_CLI" stop --session "$SESSION" ;;
+  down)    "$LIVE_CLI" stop --session "$SESSION"; "$LIVE_CLI" status --all >/dev/null 2>&1 || true ;;
   lua)     "$LIVE_CLI" run-lua --session "$SESSION" --code "$1" ;;
   luafile) "$LIVE_CLI" run-lua --session "$SESSION" --file "$(realpath "$1")" ;;
   tap)     "$LIVE_CLI" input-tap --session "$SESSION" --key "$1" --frames "${2:-6}" ;;

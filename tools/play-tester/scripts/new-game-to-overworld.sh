@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # From a fresh boot (no .sav next to the ROM), mash A (START every 8th tap) through the title,
 # Birch's speech and naming until gMain.callback2 == CB2_Overworld. Lands in the moving truck.
-# Then saves savestates/out: $PLAYTEST_OUT/truck.ss0. Took ~35 taps in testing.
+# Then saves $PLAYTEST_OUT/truck.ss0 and a screenshot. ~35 taps / ~13 s in testing (needs `live.sh up` first).
 set -euo pipefail
 cd "$(dirname "$0")/.."
 source scripts/env.sh
