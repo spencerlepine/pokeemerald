@@ -51,6 +51,7 @@ MAPPING_FILES = ["species", "characters", "items", "moves", "types", "abilities"
 SWAP_KINDS = {"HOTSWAP", "NET_NEW", "KEEP", "CUT"}
 MAP_STATUSES = {"TODO", "DRAFT", "DONE", "IDEA"}
 ART_STATUSES = {"PENDING_ART", "NEEDS_PLACEHOLDER", "KEEP_ANIM", "KEEP_ART", "NO_ART"}
+AUDIO_STATUSES = {"PENDING_AUDIO", "NEEDS_PLACEHOLDER", "KEEP_AUDIO", "NO_AUDIO"}
 
 warnings: list[str] = []
 
@@ -563,6 +564,185 @@ def net_new_art(net):
     return out
 
 
+# --------------------------------------------------------------------------- sound and visual effects
+# mapping/asset_inventory.csv is generated from ../game by tools/scan_game_assets.py (music, sound effects,
+# cries, VFX). mapping/audio.csv and mapping/vfx.csv hold the hand-written Star Wars decision for each row,
+# plus net-new rows (`net:*`) and ghost rows (swap_kind CUT: an Emerald asset to delete, never added back).
+
+AUDIO_COLS = ["asset_id", "category", "kind", "swap_kind", "map_status", "audio_status", "priority",
+              "emerald_constant", "sw_constant", "sw_subject", "used_in", "used_by", "placeholder_from",
+              "replaced_by", "depends_on", "source_file", "source_line", "asset_file", "suggested_path",
+              "ref_count", "refs", "made_by", "notes"]
+ART_EXTRA_COLS = ["swap_kind", "source_line", "placeholder_from", "replaced_by", "depends_on"]
+
+
+def _check_decision(src, d, status_col, statuses):
+    for col, allowed in (("swap_kind", SWAP_KINDS), ("map_status", MAP_STATUSES), (status_col, statuses)):
+        if d.get(col) not in allowed:
+            warn(f"{src}: {d['asset_id']} bad {col} {d.get(col)!r}")
+    if d["swap_kind"] == "NET_NEW" and not d["asset_id"].startswith("net:"):
+        warn(f"{src}: {d['asset_id']} is NET_NEW but its id does not start with net:")
+    if d["asset_id"].startswith("net:") and d["swap_kind"] != "NET_NEW":
+        warn(f"{src}: {d['asset_id']} must be NET_NEW")
+    if d["swap_kind"] == "CUT" and d[status_col] not in ("NO_ART", "NO_AUDIO"):
+        warn(f"{src}: ghost row {d['asset_id']} must have {status_col} NO_ART / NO_AUDIO")
+
+
+def load_asset_decisions():
+    inv_path = MAPPING / "asset_inventory.csv"
+    if not inv_path.exists():
+        warn("mapping/asset_inventory.csv missing; run tools/scan_game_assets.py")
+        return {}, {}, {}
+    inv = {r["asset_id"]: r for r in read(inv_path)}
+    audio = {r["asset_id"]: r for r in read(MAPPING / "audio.csv")} if (MAPPING / "audio.csv").exists() else {}
+    vfx = {r["asset_id"]: r for r in read(MAPPING / "vfx.csv")} if (MAPPING / "vfx.csv").exists() else {}
+    for d in audio.values():
+        _check_decision("mapping/audio.csv", d, "audio_status", AUDIO_STATUSES)
+    for d in vfx.values():
+        _check_decision("mapping/vfx.csv", d, "art_status", ART_STATUSES)
+    return inv, audio, vfx
+
+
+def _refs_ok(d, src, known):
+    for col in ("placeholder_from", "replaced_by", "depends_on"):
+        v = d.get(col, "")
+        if v and v not in known:
+            warn(f"{src}: {d['asset_id']} {col} {v} is not a known asset, entity, flag or net-new id")
+
+
+def pending_audio(rows, entities, inv, decisions, known):
+    """One row per music track, sound effect, phoneme and cry in ../game, plus net-new and ghost audio."""
+    folder_map = {e["map_folder"]: e["id"] for e in entities if e["entity_type"] == "map" and e.get("map_folder")}
+    trainers_by_music = Counter(e["encounter_music"] for e in entities if e["entity_type"] == "trainer")
+    out = []
+    for aid, r in inv.items():
+        if r["category"] not in ("music", "sfx", "cry"):
+            continue
+        d = decisions.get(aid)
+        used = []
+        for u in filter(None, r["used_by"].split("|")):
+            if u.startswith("map_folder:"):
+                mid = folder_map.get(u.split(":", 1)[1])
+                if mid:
+                    used.append(mid)
+            else:
+                used.append(u)
+        if r["category"] == "cry" and not d:
+            sp = rows.get(used[0]) if used else None
+            if not sp:
+                warn(f"cry {aid}: no species row and no decision in mapping/audio.csv")
+                continue
+            is_droid = "droid" in (sp.get("sw_description", "") + " " + sp.get("sw_basis", "")).lower()
+            voice = ("electronic droid voice: beeps, whistles and servo whirs" if is_droid
+                     else "creature call that fits its look and size")
+            d = {"sw_constant": "CRY_" + constant("", sp["sw_name"]), "swap_kind": "HOTSWAP", "map_status": "DRAFT",
+                 "audio_status": "PENDING_AUDIO", "priority": "2",
+                 "sw_subject": f"{sp['sw_name']}: {voice}. {sp.get('sw_description', '')}".strip(),
+                 "notes": "derived from mapping/species.csv"}
+        if not d:
+            warn(f"{aid}: no decision in mapping/audio.csv")
+            continue
+        # where the player hears it, in Star Wars terms
+        used_in = []
+        if r["category"] == "music":
+            seen = set()
+            for mid in used:
+                m = rows.get(mid, {})
+                t = (m.get("sw_title") or m.get("emerald_title") or "").split(" · ")[0]
+                if t and t not in seen:
+                    seen.add(t)
+                    used_in.append(f"{t} ({m.get('planet')})" if m.get("planet") else t)
+            key = r["emerald_constant"].replace("MUS_ENCOUNTER_", "").lower().replace("_", "-")
+            if r["emerald_constant"].startswith("MUS_ENCOUNTER_") and trainers_by_music.get(key):
+                used_in.append(f"{trainers_by_music[key]} trainers' encounter music")
+        elif r["category"] == "sfx":
+            used_in = sorted({rows[u]["sw_name"] for u in used if u in rows and rows[u].get("sw_name")})
+        elif r["category"] == "cry" and used and used[0] in rows:
+            used_in = [rows[used[0]]["sw_name"]]
+        sw_const = d.get("sw_constant", "")
+        suggested = ""
+        if d["swap_kind"] in ("HOTSWAP", "NET_NEW") and sw_const:
+            suggested = (f"sound/direct_sound_samples/cries/{sw_const[4:].lower()}.wav" if r["category"] == "cry"
+                         else f"sound/songs/midi/{sw_const.lower()}.mid")
+        _refs_ok(d, "mapping/audio.csv", known)
+        out.append({"asset_id": aid, "category": r["category"], "kind": r["kind"], "swap_kind": d["swap_kind"],
+                    "map_status": d["map_status"], "audio_status": d["audio_status"], "priority": d.get("priority", ""),
+                    "emerald_constant": r["emerald_constant"], "sw_constant": sw_const,
+                    "sw_subject": d.get("sw_subject", ""), "used_in": "; ".join(used_in[:12]) +
+                    (f"; +{len(used_in) - 12} more" if len(used_in) > 12 else ""),
+                    "used_by": "|".join(used), "placeholder_from": d.get("placeholder_from", ""),
+                    "replaced_by": d.get("replaced_by", ""), "depends_on": d.get("depends_on", ""),
+                    "source_file": r["source_file"], "source_line": r["source_line"], "asset_file": r["asset_file"],
+                    "suggested_path": suggested, "ref_count": r["ref_count"], "refs": r["refs"], "made_by": "",
+                    "notes": d.get("notes", "")})
+    for aid, d in decisions.items():
+        if aid in inv:
+            continue
+        if not aid.startswith("net:"):
+            warn(f"mapping/audio.csv: {aid} is not in mapping/asset_inventory.csv")
+            continue
+        _refs_ok(d, "mapping/audio.csv", known)
+        ph = inv.get(d.get("placeholder_from", ""), {})
+        cat = ph.get("category", "sfx")
+        out.append({"asset_id": aid, "category": cat, "kind": "net_new", "swap_kind": "NET_NEW",
+                    "map_status": d["map_status"], "audio_status": d["audio_status"], "priority": d.get("priority", ""),
+                    "sw_constant": d.get("sw_constant", ""), "sw_subject": d.get("sw_subject", ""),
+                    "placeholder_from": d.get("placeholder_from", ""), "replaced_by": d.get("replaced_by", ""),
+                    "depends_on": d.get("depends_on", ""),
+                    "suggested_path": f"sound/songs/midi/{d.get('sw_constant', '').lower()}.mid" if d.get("sw_constant") else "",
+                    "made_by": "", "notes": d.get("notes", "") or (
+                        f"placeholder: copy {ph.get('asset_file') or d.get('placeholder_from')} under the new name first")})
+    for r in out:
+        for c in AUDIO_COLS:
+            r.setdefault(c, "")
+        r["game_status"] = "NOT_STARTED"
+    order = {"music": 0, "sfx": 1, "cry": 2}
+    out.sort(key=lambda r: (order.get(r["category"], 9), r["kind"] == "net_new", r["asset_id"]))
+    return out
+
+
+def vfx_art(inv, decisions, art, known):
+    """VFX rows (battle status/general/special animations, field effects, weather, battle transitions), net-new VFX
+    and ghost overrides for existing art rows, in pending_art.csv's format."""
+    art_ids = {a["asset_id"]: a for a in art}
+    out = []
+    for a in art:  # every existing art row says whether it is a hotswap, a keep or net-new
+        a["swap_kind"] = "NET_NEW" if a["kind"] == "net_new" else ("KEEP" if a["art_status"] == "KEEP_ANIM" else "HOTSWAP")
+    for aid, r in inv.items():
+        if r["category"] != "vfx":
+            continue
+        d = decisions.get(aid)
+        if not d:
+            warn(f"{aid}: no decision in mapping/vfx.csv")
+            continue
+        _refs_ok(d, "mapping/vfx.csv", known)
+        out.append({"asset_id": aid, "kind": "vfx_" + r["kind"], "subkind": r["subkind"], "path": r["source_file"],
+                    "width": "", "height": "", "used_by": r["used_by"], "sw_entity": "",
+                    "sw_subject": d.get("sw_subject", ""), "suggested_path": "", "art_status": d["art_status"],
+                    "drawn_by": "", "art_notes": d.get("notes", ""), "swap_kind": d["swap_kind"],
+                    "source_line": r["source_line"], "placeholder_from": d.get("placeholder_from", ""),
+                    "replaced_by": d.get("replaced_by", ""), "depends_on": d.get("depends_on", "")})
+    for aid, d in decisions.items():
+        if aid in inv:
+            continue
+        _refs_ok(d, "mapping/vfx.csv", known)
+        if aid in art_ids:  # override of an existing art row (ghosts for unused art)
+            art_ids[aid].update(swap_kind=d["swap_kind"], art_status=d["art_status"],
+                                sw_subject=d.get("sw_subject") or art_ids[aid]["sw_subject"],
+                                art_notes=d.get("notes", ""), replaced_by=d.get("replaced_by", ""))
+        elif aid.startswith("net:"):
+            out.append({"asset_id": aid, "kind": "vfx_net_new", "subkind": "", "path": "", "width": "", "height": "",
+                        "used_by": "", "sw_entity": "", "sw_subject": d.get("sw_subject", ""), "suggested_path": "",
+                        "art_status": d["art_status"], "drawn_by": "",
+                        "art_notes": d.get("notes", "") or f"placeholder: copy {d.get('placeholder_from')} first",
+                        "swap_kind": "NET_NEW", "source_line": "", "placeholder_from": d.get("placeholder_from", ""),
+                        "replaced_by": d.get("replaced_by", ""), "depends_on": d.get("depends_on", "")})
+        else:
+            warn(f"mapping/vfx.csv: {aid} is neither in mapping/asset_inventory.csv nor in pending_art.csv")
+    out.sort(key=lambda a: (a["kind"], a["asset_id"]))
+    return out
+
+
 # --------------------------------------------------------------------------- game port (Step 4)
 # One row per thing to copy from this wiki into ../game by hand. The wiki and the game never import each
 # other: a porter edits ../game/<game_file>, then sets game_status DONE here (in the table named by `table`).
@@ -583,7 +763,10 @@ def _wiring(r, cols):
     return "; ".join(f"{c}={r[c]}" for c in cols if r.get(c))
 
 
-def game_port(ents, net, texts, tl, art):
+GHOST_ACTION = "ghost: delete it from ../game (see notes) and never add it back; DONE means deleted"
+
+
+def game_port(ents, net, texts, tl, art, audio):
     out = []
     net_by_id = {n["id"]: n for n in net}
 
@@ -619,13 +802,31 @@ def game_port(ents, net, texts, tl, art):
                                "related_entity_ids")),
             depends_on=t.get("previous_event_id", ""))
     for a in art:
-        new = a["kind"] == "net_new"
+        sk = a["swap_kind"]
+        if sk == "CUT":
+            action, dep = GHOST_ACTION, a.get("replaced_by", "")
+        elif a["art_status"] in ("KEEP_ANIM", "KEEP_ART", "NO_ART"):
+            action, dep = "keep as is; rename only if suggested_path is set", ""
+        elif a["art_status"] == "NEEDS_PLACEHOLDER" and a.get("placeholder_from"):
+            action = f"add it: copy {a['placeholder_from']} as a placeholder, swap in the new art once art_status is DONE"
+            dep = a.get("depends_on", "")
+        else:
+            action, dep = "copy the redrawn art into ../game once art_status is DONE", "art_status DONE in pending_art.csv"
         add(port_id=f"art|{a['asset_id']}", table="pending_art.csv", kind=f"art:{a['kind']}",
-            wiki_id=a["asset_id"], swap_kind="NET_NEW" if new else ("KEEP" if a["art_status"] == "KEEP_ANIM" else "HOTSWAP"),
-            action=("keep the animation; rename only if suggested_path is set" if a["art_status"] == "KEEP_ANIM"
-                    else "copy the redrawn art into ../game once art_status is DONE"),
-            game_file=a["path"], wiring=a["used_by"],
-            depends_on="" if a["art_status"] == "KEEP_ANIM" else "art_status DONE in pending_art.csv")
+            wiki_id=a["asset_id"], swap_kind=sk, action=action, game_file=a["path"], game_line=a.get("source_line", ""),
+            wiring=a["used_by"], depends_on=dep, notes=a.get("art_notes", "") if sk == "CUT" else "")
+    for s in audio:
+        sk = s["swap_kind"]
+        action = {"HOTSWAP": "replace the sound with the new one once audio_status is DONE; keep its song/cry id",
+                  "KEEP": "keep as is",
+                  "CUT": GHOST_ACTION,
+                  "NET_NEW": f"add a new sound ({s['sw_constant']}): copy {s['placeholder_from']} as a placeholder, "
+                             "then swap in the new one once audio_status is DONE"}[sk]
+        add(port_id=f"audio|{s['asset_id']}", table="pending_audio.csv", kind=f"audio:{s['category']}:{s['kind']}",
+            wiki_id=s["asset_id"], swap_kind=sk, action=action, game_file=s["asset_file"] or s["source_file"],
+            game_line="" if s["asset_file"] else s["source_line"], wiring=s["used_by"],
+            depends_on=s["depends_on"] or ("audio_status DONE in pending_audio.csv" if sk == "HOTSWAP" else s["replaced_by"]),
+            notes=s["notes"] if sk in ("CUT", "NET_NEW") else "")
     return out
 
 
@@ -738,9 +939,17 @@ def main() -> None:
     write("texts.csv", texts)
 
     art = pending_art(rows) + net_new_art(net)
+    inv, audio_dec, vfx_dec = load_asset_decisions()
+    known = (set(by_id) | {f["flag_id"] for f in read(EMERALD / "story_flags.csv")} | {n["id"] for n in net}
+             | set(inv) | set(audio_dec) | set(vfx_dec) | {a["asset_id"] for a in art})
+    art += vfx_art(inv, vfx_dec, art, known)
     for a in art:
         a["game_status"] = "NOT_STARTED"
-    write("pending_art.csv", art)
+    art_cols = list(art[0].keys())
+    art_cols = [c for c in art_cols if c not in ART_EXTRA_COLS + ["game_status"]] + ART_EXTRA_COLS + ["game_status"]
+    write("pending_art.csv", art, art_cols)
+    audio = pending_audio(rows, entities, inv, audio_dec, known)
+    write("pending_audio.csv", audio, AUDIO_COLS + ["game_status"])
 
     # area progression with planets
     ap = []
@@ -776,7 +985,7 @@ def main() -> None:
         o["game_status"] = "NOT_STARTED"
     write("timeline_events.csv", tl)
 
-    port = game_port(ent_out, net, texts, tl, art)
+    port = game_port(ent_out, net, texts, tl, art, audio)
     write("game_port.csv", port, PORT_COLS)
 
     info = [{"key": "emerald_db", "value": str(EMERALD)},
@@ -787,6 +996,9 @@ def main() -> None:
             {"key": "texts_auto", "value": str(tcounts["AUTO"])},
             {"key": "texts_curated", "value": str(tcounts["CURATED"])},
             {"key": "texts_unchanged", "value": str(tcounts["UNCHANGED"])},
+            {"key": "art_rows", "value": str(len(art))},
+            {"key": "audio_rows", "value": str(len(audio))},
+            {"key": "ghost_rows", "value": str(sum(r["swap_kind"] == "CUT" for r in art + audio))},
             {"key": "warnings", "value": str(len(warnings))}]
     write("build_info.csv", info)
     write("build_warnings.csv", [{"warning": w} for w in sorted(set(warnings))])

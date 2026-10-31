@@ -1,17 +1,20 @@
 # Star Wars Emerald wiki
 
 Every Pokémon Emerald row (creature, character, place, item, move, trainer, line of dialogue, story event,
-art file) mapped to its Star Wars replacement, keyed by the same Emerald id. The mapping is finished and
+art file, visual effect, music track, sound effect, cry) mapped to its Star Wars replacement, keyed by the same Emerald id. The mapping is finished and
 approved. **`database/` is the source of truth** for porting it into the game source in [`../game`](../game).
 
 The wiki and `../game` never import each other. Content is copied into the game by hand, piece by piece.
 
 ## Porting into the game
 
-Two lists drive the work. Both live in `database/` and can be browsed with `python3 wiki/server.py`.
+Three lists drive the work. All live in `database/` and can be browsed with `python3 wiki/server.py`.
 
-- **Art:** `pending_art.csv`, one row per image or animation (including the art that net-new rows need).
+- **Art:** `pending_art.csv`, one row per image, move animation and visual effect (battle status/general/special
+  animations, field effects, weather, battle transitions), including the art that net-new rows need.
   `art_status` says what to draw.
+- **Audio:** `pending_audio.csv`, one row per music track, sound effect and companion cry in `../game`, plus net-new
+  sounds. `audio_status` says what to compose or record; `sw_subject` is the brief and `priority` the order.
 - **Game port:** `game_port.csv`, one row per thing to change in `../game`: every entity, line of text,
   story event and art file.
   - `game_file` / `game_line`: where it lives in `../game`.
@@ -35,7 +38,16 @@ hotswaps, following [`bible/NET_NEW_DESIGNS.md`](bible/NET_NEW_DESIGNS.md).
 | `art_status` | `PENDING_ART` | Uses the renamed Emerald art until it is redrawn. |
 | | `NEEDS_PLACEHOLDER` | Net-new: copy the asset named in `placeholder_from` first. |
 | | `KEEP_ANIM` / `KEEP_ART` / `NO_ART` | Reuse the existing animation or art, or nothing to draw. |
-| `game_status` | `NOT_STARTED` / `DONE` | Whether the row has landed in `../game`. |
+| `audio_status` | `PENDING_AUDIO` | Mapped: the Emerald sound plays as a placeholder until the Star Wars one replaces it (same song / cry id). |
+| | `NEEDS_PLACEHOLDER` | Net-new: copy the sound named in `placeholder_from` under the new name first. |
+| | `KEEP_AUDIO` / `NO_AUDIO` | Reuse the Emerald sound as is, or nothing to make. |
+| `game_status` | `NOT_STARTED` / `DONE` | Whether the row has landed in `../game`. For a `CUT` row, `DONE` means deleted. |
+
+`swap_kind` also takes **`CUT`**: a **ghost row**, an Emerald asset that is not in the Star Wars game (unused FireRed
+songs, never-played sound effects, unused art and field effects). Ghost rows are never added to the game; they stay
+in the wiki so the port knows what to delete and can tell what has been deleted (`game_status` `DONE`). Song, cry
+and field-effect ids are table indexes, so deleting a ghost keeps its slot (point it at a silent song or cry).
+`replaced_by` names the row that takes a ghost's place, if any.
 
 ## Tables (database/, generated)
 
@@ -46,7 +58,8 @@ hotswaps, following [`bible/NET_NEW_DESIGNS.md`](bible/NET_NEW_DESIGNS.md).
 | `entities.csv` | Emerald's entities with the Star Wars title and description; Emerald's stay in `emerald_title` / `emerald_description`. Stats and game columns are unchanged. |
 | `texts.csv` | Every Emerald text with its Star Wars version (`sw_text_raw`), `source_file` / `source_line`, `overflow_risk` (wider than the 208 px text box) and `ui_wider_px`. |
 | `text_terms.csv` | Term dictionary (glossary + every mapped name). |
-| `pending_art.csv` | Every art asset, who uses it, its Star Wars subject, a `suggested_path` and its `art_status`. |
+| `pending_art.csv` | Every art asset and visual effect, who uses it, its Star Wars subject, a `suggested_path`, its `art_status` and `swap_kind`. VFX rows (`kind` `vfx_*`) point at `path:source_line` in `../game`. |
+| `pending_audio.csv` | Every music track, sound effect, phoneme and cry: `emerald_constant` → `sw_constant`, the brief (`sw_subject`), where it plays (`used_in`, `used_by`), `source_file:source_line`, `asset_file`, `suggested_path`, `refs`, `priority`, `audio_status`, `swap_kind`. |
 | `timeline_events.csv` | The 45 story events, rewritten. |
 | `net_new.csv` | Net-new content with placeholder, dependencies and balance notes. |
 | `area_progression.csv` | Emerald's balance table (levels, badges, gating) with planet and new map titles. |
@@ -64,6 +77,33 @@ in `../game`. Every `source_file` is a path relative to `../game`.
 - Name limits: creature 10, move 12, item 14, ability 12, type 6, trainer class 12, trainer name 10, map name 16.
 - [`bible/STORY.md`](bible/STORY.md) is the story: planets, factions, cast, acts.
 
+## Sound and visual effects
+
+`tools/scan_game_assets.py` walks `../game` and writes `mapping/asset_inventory.csv` (every song, sound effect, cry and
+VFX, with its source line and where the game uses it). The Star Wars decision for each is hand-written in
+`mapping/audio.csv` and `mapping/vfx.csv`; the build warns about any inventory row without a decision, so a new asset
+cannot be missed. Images were already complete: all 4,076 PNGs under `graphics/` and `data/tilesets/` are rows in
+`pending_art.csv` (check: every PNG path in `../game` is a `path` there).
+
+The current pass (all `DRAFT`, waiting for the owner's review):
+
+- **Music** (211 Emerald songs): 140 mapped to a Star Wars track with a brief, 70 ghosts (FireRed/LeafGreen and
+  beta songs Emerald never plays), `MUS_DUMMY` kept. 5 net-new tracks: Fortress Vader, VS Vader, VS Boba Fett, the
+  Death Star site, hyperspace travel. Briefs ask for original music, never quotes of the film scores.
+- **Sound effects** (269 + 51 bard phonemes): 277 reused as is (UI, field, most move sounds, the phonemes),
+  26 mapped (capture pods, comlink, blast doors, hover-bike, kyber hum, the opening freighter), 17 ghosts
+  (never played). 17 net-new: blaster bolt, lightsaber ignite / swing / clash / hum, Force push / choke / lightning,
+  turbolaser, ion cannon, vibroblade, slicer spike, hyperspace jump, astromech chatter, Imperial alarm, Vader's
+  breathing, TIE flyby. Each new move sound replaces the old one only in that move's animation.
+- **Cries** (388): one per companion (droids get beeps and servos), derived from `mapping/species.csv`; 2 ghosts
+  (unused slots).
+- **VFX** (162 + 8 net-new): most animations are kept and only their sprites are redrawn (already in
+  `pending_art.csv`). Mapped: transitions that draw Pokémon shapes or logos in code (capture pod, Cartel and Imperial
+  crests, titans, Aurebesh instead of Braille, the Grand Arena logo), the Bacta Center heal, the EXOGORTH spotlight
+  and the vault puzzle. Net-new: hyperspace jump, Vader and Boba Fett transitions, an overworld lightsaber, a field
+  Force push, and the move animations for BLASTER SHOT, SABER SLASH and FORCE CHOKE.
+- **Ghost art:** the 11 files in `graphics/unused/` and 3 unused field effects.
+
 ## Open decisions
 
 - **Water on desert worlds.** Tatooine maps (Mos Eisley, Routes 103/104/109/110) have sea tiles and SURF works
@@ -79,6 +119,7 @@ in `../game`. Every `source_file` is a path relative to `../game`.
 [`mapping/README.md`](mapping/README.md)) plus the emerald-db and starwars-db databases:
 
 ```sh
+python3 tools/scan_game_assets.py   # mapping/asset_inventory.csv from ../game (re-run after the game changes)
 EMERALD_DB_DIR=/path/to/emerald-db/database STARWARS_DB_DIR=/path/to/starwars-db/database python3 tools/build.py
 python3 tools/habitats.py   # species_habitats.csv
 python3 wiki/server.py      # browse at http://127.0.0.1:8000
