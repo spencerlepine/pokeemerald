@@ -3,6 +3,9 @@
 One tool per asset group: everything a group needs is scoped together so one tool can generate any asset in it.
 Each tool takes a row from the wiki (`../wiki/database/pending_art.csv` or `pending_audio.csv`), generates the asset,
 and the row's status is set to `DONE` when it lands in `../game`. Ghost rows (`swap_kind` `CUT`) need no tool: they are deletions.
+Rows marked `todo` `HUMAN-TODO` (logo, title screen, intro, credits, story cutscenes, menu images with Pokémon
+branding; decided in `../wiki/mapping/branding.csv`) are replaced by hand, not by a tool, and generic menu art is
+`KEEP_ART`. So `ui-skin-generator` and `cutscene-generator` only matter if you later want to restyle the kept UI.
 
 Categories (A1, B3, ...) are listed under [Art categories](#art-categories) below: every PNG in `../game` belongs to
 exactly one. They were first audited in the prototype repo

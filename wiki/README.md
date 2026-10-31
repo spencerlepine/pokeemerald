@@ -43,6 +43,13 @@ hotswaps, following [`bible/NET_NEW_DESIGNS.md`](bible/NET_NEW_DESIGNS.md).
 | | `KEEP_AUDIO` / `NO_AUDIO` | Reuse the Emerald sound as is, or nothing to make. |
 | `game_status` | `NOT_STARTED` / `DONE` | Whether the row has landed in `../game`. For a `CUT` row, `DONE` means deleted. |
 
+`todo` is **`HUMAN-TODO`** on art rows a person replaces by hand, with no generator tool: the game logo, the
+title screen, the intro and credits, story cutscenes, and every menu image with Pokémon branding baked in (POKéDEX /
+POKéNAV / HOENN text, Poké Ball icons, the Pikachu diploma, type labels, wallpapers with Pokémon). Their decisions
+are in `mapping/branding.csv`, which also holds `brand:*` rows for branding that is not an image (the ROM header
+title in `Makefile`). Menu art without Pokémon branding there is `KEEP_ART`.
+Query: `grep HUMAN-TODO database/pending_art.csv`.
+
 `swap_kind` also takes **`CUT`**: a **ghost row**, an Emerald asset that is not in the Star Wars game (unused FireRed
 songs, never-played sound effects, unused art and field effects). Ghost rows are never added to the game; they stay
 in the wiki so the port knows what to delete and can tell what has been deleted (`game_status` `DONE`). Song, cry

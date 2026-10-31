@@ -573,7 +573,8 @@ AUDIO_COLS = ["asset_id", "category", "kind", "swap_kind", "map_status", "audio_
               "emerald_constant", "sw_constant", "sw_subject", "used_in", "used_by", "placeholder_from",
               "replaced_by", "depends_on", "source_file", "source_line", "asset_file", "suggested_path",
               "ref_count", "refs", "made_by", "notes"]
-ART_EXTRA_COLS = ["swap_kind", "source_line", "placeholder_from", "replaced_by", "depends_on"]
+ART_EXTRA_COLS = ["swap_kind", "todo", "source_line", "placeholder_from", "replaced_by", "depends_on"]
+TODOS = {"", "HUMAN-TODO"}
 
 
 def _check_decision(src, d, status_col, statuses):
@@ -600,6 +601,15 @@ def load_asset_decisions():
         _check_decision("mapping/audio.csv", d, "audio_status", AUDIO_STATUSES)
     for d in vfx.values():
         _check_decision("mapping/vfx.csv", d, "art_status", ART_STATUSES)
+    # branding, title screen, cutscenes and menus: overrides of pending_art rows plus `brand:*` rows (not images)
+    if (MAPPING / "branding.csv").exists():
+        for d in read(MAPPING / "branding.csv"):
+            _check_decision("mapping/branding.csv", d, "art_status", ART_STATUSES)
+            if d.get("todo", "") not in TODOS:
+                warn(f"mapping/branding.csv: {d['asset_id']} bad todo {d['todo']!r}")
+            if d["asset_id"] in vfx:
+                warn(f"mapping/branding.csv: {d['asset_id']} is also in mapping/vfx.csv")
+            vfx[d["asset_id"]] = d
     return inv, audio, vfx
 
 
@@ -720,16 +730,23 @@ def vfx_art(inv, decisions, art, known):
                     "width": "", "height": "", "used_by": r["used_by"], "sw_entity": "",
                     "sw_subject": d.get("sw_subject", ""), "suggested_path": "", "art_status": d["art_status"],
                     "drawn_by": "", "art_notes": d.get("notes", ""), "swap_kind": d["swap_kind"],
-                    "source_line": r["source_line"], "placeholder_from": d.get("placeholder_from", ""),
+                    "todo": d.get("todo", ""), "source_line": r["source_line"], "placeholder_from": d.get("placeholder_from", ""),
                     "replaced_by": d.get("replaced_by", ""), "depends_on": d.get("depends_on", "")})
     for aid, d in decisions.items():
         if aid in inv:
             continue
         _refs_ok(d, "mapping/vfx.csv", known)
         if aid in art_ids:  # override of an existing art row (ghosts for unused art)
-            art_ids[aid].update(swap_kind=d["swap_kind"], art_status=d["art_status"],
+            art_ids[aid].update(swap_kind=d["swap_kind"], art_status=d["art_status"], todo=d.get("todo", ""),
                                 sw_subject=d.get("sw_subject") or art_ids[aid]["sw_subject"],
                                 art_notes=d.get("notes", ""), replaced_by=d.get("replaced_by", ""))
+        elif aid.startswith("brand:"):
+            out.append({"asset_id": aid, "kind": "branding", "subkind": "", "path": d.get("path", ""), "width": "",
+                        "height": "", "used_by": "", "sw_entity": "", "sw_subject": d.get("sw_subject", ""),
+                        "suggested_path": "", "art_status": d["art_status"], "drawn_by": "",
+                        "art_notes": d.get("notes", ""), "swap_kind": d["swap_kind"], "todo": d.get("todo", ""),
+                        "source_line": d.get("source_line", ""), "placeholder_from": d.get("placeholder_from", ""),
+                        "replaced_by": d.get("replaced_by", ""), "depends_on": d.get("depends_on", "")})
         elif aid.startswith("net:"):
             out.append({"asset_id": aid, "kind": "vfx_net_new", "subkind": "", "path": "", "width": "", "height": "",
                         "used_by": "", "sw_entity": "", "sw_subject": d.get("sw_subject", ""), "suggested_path": "",
@@ -739,6 +756,8 @@ def vfx_art(inv, decisions, art, known):
                         "replaced_by": d.get("replaced_by", ""), "depends_on": d.get("depends_on", "")})
         else:
             warn(f"mapping/vfx.csv: {aid} is neither in mapping/asset_inventory.csv nor in pending_art.csv")
+    for a in art + out:
+        a.setdefault("todo", "")
     out.sort(key=lambda a: (a["kind"], a["asset_id"]))
     return out
 
@@ -805,6 +824,8 @@ def game_port(ents, net, texts, tl, art, audio):
         sk = a["swap_kind"]
         if sk == "CUT":
             action, dep = GHOST_ACTION, a.get("replaced_by", "")
+        elif a.get("todo") == "HUMAN-TODO":
+            action, dep = "HUMAN-TODO: replace it by hand (no generator tool), then set game_status DONE", ""
         elif a["art_status"] in ("KEEP_ANIM", "KEEP_ART", "NO_ART"):
             action, dep = "keep as is; rename only if suggested_path is set", ""
         elif a["art_status"] == "NEEDS_PLACEHOLDER" and a.get("placeholder_from"):
@@ -814,7 +835,8 @@ def game_port(ents, net, texts, tl, art, audio):
             action, dep = "copy the redrawn art into ../game once art_status is DONE", "art_status DONE in pending_art.csv"
         add(port_id=f"art|{a['asset_id']}", table="pending_art.csv", kind=f"art:{a['kind']}",
             wiki_id=a["asset_id"], swap_kind=sk, action=action, game_file=a["path"], game_line=a.get("source_line", ""),
-            wiring=a["used_by"], depends_on=dep, notes=a.get("art_notes", "") if sk == "CUT" else "")
+            wiring=a["used_by"], depends_on=dep,
+            notes=a.get("art_notes", "") if sk == "CUT" else (f"HUMAN-TODO: {a['sw_subject']}" if a.get("todo") else ""))
     for s in audio:
         sk = s["swap_kind"]
         action = {"HOTSWAP": "replace the sound with the new one once audio_status is DONE; keep its song/cry id",
@@ -999,6 +1021,7 @@ def main() -> None:
             {"key": "art_rows", "value": str(len(art))},
             {"key": "audio_rows", "value": str(len(audio))},
             {"key": "ghost_rows", "value": str(sum(r["swap_kind"] == "CUT" for r in art + audio))},
+            {"key": "human_todo_rows", "value": str(sum(r.get("todo") == "HUMAN-TODO" for r in art))},
             {"key": "warnings", "value": str(len(warnings))}]
     write("build_info.csv", info)
     write("build_warnings.csv", [{"warning": w} for w in sorted(set(warnings))])

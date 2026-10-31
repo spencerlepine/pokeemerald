@@ -1,0 +1,642 @@
+asset_id,swap_kind,map_status,art_status,todo,sw_subject,placeholder_from,replaced_by,depends_on,path,source_line,notes
+graphics/bag/bag_female.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/bag/bag_male.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/bag/bag_pyramid.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/bag/check_berry.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/bag/check_berry_circle.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/bag/hm.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/bag/menu.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/bag/rotating_ball.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Poké Ball icon → CAPTURE POD icon.,,,,,,Replace by hand; no generator tool.
+graphics/bag/select_button.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_frontier/arena_judgment_symbols.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_frontier/factory_screen/action_box_left.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_frontier/factory_screen/action_box_right.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_frontier/factory_screen/action_highlight_left.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_frontier/factory_screen/action_highlight_middle.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_frontier/factory_screen/action_highlight_right.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_frontier/factory_screen/arrow.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_frontier/factory_screen/menu.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_frontier/factory_screen/menu_highlight_left.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_frontier/factory_screen/menu_highlight_right.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_frontier/factory_screen/mon_pic_bg.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_frontier/factory_screen/mon_pic_bg_anim.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_frontier/factory_screen/pokeball.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Poké Ball icon → CAPTURE POD icon.,,,,,,Replace by hand; no generator tool.
+graphics/battle_frontier/tourney_buttons.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_frontier/tourney_info_card.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_frontier/tourney_line.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_frontier/tourney_tree.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_interface/ball_caught_indicator.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Poké Ball icon → CAPTURE POD icon.,,,,,,Replace by hand; no generator tool.
+graphics/battle_interface/ball_display.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Poké Ball icon → CAPTURE POD icon.,,,,,,Replace by hand; no generator tool.
+graphics/battle_interface/ball_status_bar.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Poké Ball icon → CAPTURE POD icon.,,,,,,Replace by hand; no generator tool.
+graphics/battle_interface/enemy_mon_shadow.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_interface/expbar.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_interface/healthbox_doubles_frameend.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_interface/healthbox_doubles_frameend_bar.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_interface/healthbox_doubles_opponent.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_interface/healthbox_doubles_player.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_interface/healthbox_safari.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_interface/healthbox_singles_opponent.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_interface/healthbox_singles_player.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_interface/hpbar.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_interface/hpbar_anim.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_interface/hpbar_anim_unused.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_interface/hpbar_unused.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_interface/level_up_banner.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_interface/misc.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_interface/misc_frameend.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_interface/numbers1.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_interface/numbers2.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_interface/status.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_interface/status2.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_interface/status3.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_interface/status4.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_interface/textbox.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_interface/unused_status_summary.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_interface/unused_window.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_interface/unused_window2.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_interface/unused_window2bar.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_interface/unused_window3.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_interface/unused_window4.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_transitions/big_pokeball.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Poké Ball wipe → capture pod.,,,,,,Replace by hand; no generator tool.
+graphics/battle_transitions/elite_four_bg.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_transitions/frontier_logo.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Battle Frontier logo wipe → Grand Arena logo.,,,,,,Replace by hand; no generator tool.
+graphics/battle_transitions/frontier_logo_center.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Battle Frontier logo wipe → Grand Arena logo.,,,,,,Replace by hand; no generator tool.
+graphics/battle_transitions/frontier_logo_circles.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Battle Frontier logo wipe → Grand Arena logo.,,,,,,Replace by hand; no generator tool.
+graphics/battle_transitions/frontier_squares_1.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_transitions/frontier_squares_2.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_transitions/frontier_squares_3.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_transitions/frontier_squares_4.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_transitions/frontier_squares_blanktiles.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_transitions/groudon.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Legendary silhouette wipe → GREATKRAYT / SANDO / EXOGORTH.,,,,,,Replace by hand; no generator tool.
+graphics/battle_transitions/kyogre.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Legendary silhouette wipe → GREATKRAYT / SANDO / EXOGORTH.,,,,,,Replace by hand; no generator tool.
+graphics/battle_transitions/pokeball.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Poké Ball wipe → capture pod.,,,,,,Replace by hand; no generator tool.
+graphics/battle_transitions/pokeball_trail.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Poké Ball wipe → capture pod.,,,,,,Replace by hand; no generator tool.
+graphics/battle_transitions/rayquaza.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Legendary silhouette wipe → GREATKRAYT / SANDO / EXOGORTH.,,,,,,Replace by hand; no generator tool.
+graphics/battle_transitions/regis.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Regi Braille pattern wipe → Aurebesh glyphs (Warden vaults).,,,,,,Replace by hand; no generator tool.
+graphics/battle_transitions/shrinking_box.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_transitions/team_aqua.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Team Aqua logo wipe → Hutt Cartel crest.,,,,,,Replace by hand; no generator tool.
+graphics/battle_transitions/team_magma.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Team Magma logo wipe → Imperial crest.,,,,,,Replace by hand; no generator tool.
+graphics/battle_transitions/unused_brendan.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_transitions/unused_lass.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_transitions/vs.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/battle_transitions/vs_frame.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/berry_blender/arrow.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/berry_blender/arrow_old.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/berry_blender/center.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/berry_blender/countdown_numbers.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/berry_blender/outer.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/berry_blender/particles.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/berry_blender/score_symbols.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/berry_blender/start.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/berry_crush/crusher.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/berry_crush/crusher_base.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/berry_crush/impact.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/berry_crush/sparkle.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/berry_crush/timer_digits.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/berry_fix/gba_connect.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Berry Fix link program screens (Game Boy branding); only seen when linking to Ruby/Sapphire.
+graphics/berry_fix/gba_transfer.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Berry Fix link program screens (Game Boy branding); only seen when linking to Ruby/Sapphire.
+graphics/berry_fix/gba_transfer_error.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Berry Fix link program screens (Game Boy branding); only seen when linking to Ruby/Sapphire.
+graphics/berry_fix/gba_transfer_highlight.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Berry Fix link program screens (Game Boy branding); only seen when linking to Ruby/Sapphire.
+graphics/berry_fix/logo.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Berry Fix link program screens (Game Boy branding); only seen when linking to Ruby/Sapphire.
+graphics/berry_fix/window.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Berry Fix link program screens (Game Boy branding); only seen when linking to Ruby/Sapphire.
+graphics/birch_speech/birch.png,HOTSWAP,DRAFT,PENDING_ART,,Prof. Korr's intro portrait (sprite-trainer-generator).,,,,,,
+graphics/birch_speech/shadow.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/birch_speech/unused_beauty.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/cable_car/bg.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Mt. Chimney view from the cable car → Mustafar lava fields seen from the shuttle.,,,,,,Replace by hand; no generator tool.
+graphics/cable_car/cable.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Cable → remove or turn into a landing beam (the shuttle has no cable).,,,,,,Replace by hand; no generator tool.
+graphics/cable_car/cable_car.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Cable car → shuttle.,,,,,,Replace by hand; no generator tool.
+graphics/cable_car/door.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/cave_transition/tiles.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/contest/applause.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Showcase audience and judge; generic people.
+graphics/contest/applause_meter.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Showcase audience and judge; generic people.
+graphics/contest/audience.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Showcase audience and judge; generic people.
+graphics/contest/faces.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Showcase audience and judge; generic people.
+graphics/contest/interface.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Showcase audience and judge; generic people.
+graphics/contest/japanese/audience.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Showcase audience and judge; generic people.
+graphics/contest/japanese/floor.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Showcase audience and judge; generic people.
+graphics/contest/japanese/frame_1.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Showcase audience and judge; generic people.
+graphics/contest/japanese/frame_2.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Showcase audience and judge; generic people.
+graphics/contest/japanese/interface.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Showcase audience and judge; generic people.
+graphics/contest/japanese/letters.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Showcase audience and judge; generic people.
+graphics/contest/japanese/meter.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Showcase audience and judge; generic people.
+graphics/contest/japanese/numbers.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Showcase audience and judge; generic people.
+graphics/contest/japanese/symbols.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Showcase audience and judge; generic people.
+graphics/contest/japanese/voltage.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Showcase audience and judge; generic people.
+graphics/contest/judge.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Showcase audience and judge; generic people.
+graphics/contest/judge_symbols.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Showcase audience and judge; generic people.
+graphics/contest/nextturn.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Showcase audience and judge; generic people.
+graphics/contest/nextturn_numbers.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Showcase audience and judge; generic people.
+graphics/contest/nextturn_random.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Showcase audience and judge; generic people.
+graphics/contest/results_screen/text_window.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Showcase audience and judge; generic people.
+graphics/contest/results_screen/tiles.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Showcase audience and judge; generic people.
+graphics/contest/slider_heart.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Showcase audience and judge; generic people.
+graphics/credits/the_end_copyright.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,THE END + copyright card → your own end card and notice.,,,,,,Replace by hand; no generator tool.
+graphics/diploma/tiles.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Pokédex diploma (Pikachu and Pokémon art) → Datapad certificate with Star Wars companions.,,,,,,Replace by hand; no generator tool.
+graphics/dodrio_berry_picking/berries.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/dodrio_berry_picking/bg.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/dodrio_berry_picking/cloud.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/dodrio_berry_picking/dodrio.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Link minigame: Dodrio → a companion (optional, wireless-only).",,,,,,Replace by hand; no generator tool.
+graphics/dodrio_berry_picking/status.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/dodrio_berry_picking/tree_border.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/easy_chat/button_window.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/easy_chat/interview_frame.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/easy_chat/mode.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/easy_chat/rectangle_cursor.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/easy_chat/scroll_indicator.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/easy_chat/start_select_buttons.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/easy_chat/text_input_frame.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/easy_chat/triangle_cursor.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/easy_chat/window.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/evolution_scene/bg.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/fonts/braille.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Braille font (Regi puzzles) → Aurebesh.,,,,,,Replace by hand; no generator tool.
+graphics/fonts/down_arrow.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/fonts/down_arrow_alt.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/fonts/japanese_bold.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/fonts/japanese_frlg_female.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/fonts/japanese_frlg_male.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/fonts/japanese_normal.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/fonts/japanese_short.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/fonts/japanese_small.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/fonts/keypad_icons.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/fonts/latin_narrow.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/fonts/latin_normal.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/fonts/latin_short.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/fonts/latin_small.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/fonts/latin_small_narrow.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/fonts/unused_frlg_blanked_down_arrow.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/fonts/unused_frlg_down_arrow.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/frontier_pass/bg.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Frontier Pass: BATTLE FRONTIER / FRONTIER PASS text, map and symbols → ARENA PASS and the Grand Arena.",,,,,,Replace by hand; no generator tool.
+graphics/frontier_pass/cursor.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Frontier Pass: BATTLE FRONTIER / FRONTIER PASS text, map and symbols → ARENA PASS and the Grand Arena.",,,,,,Replace by hand; no generator tool.
+graphics/frontier_pass/map_and_card.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Frontier Pass: BATTLE FRONTIER / FRONTIER PASS text, map and symbols → ARENA PASS and the Grand Arena.",,,,,,Replace by hand; no generator tool.
+graphics/frontier_pass/map_cursor.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Frontier Pass: BATTLE FRONTIER / FRONTIER PASS text, map and symbols → ARENA PASS and the Grand Arena.",,,,,,Replace by hand; no generator tool.
+graphics/frontier_pass/map_heads.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Frontier Pass: BATTLE FRONTIER / FRONTIER PASS text, map and symbols → ARENA PASS and the Grand Arena.",,,,,,Replace by hand; no generator tool.
+graphics/frontier_pass/map_screen.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Frontier Pass: BATTLE FRONTIER / FRONTIER PASS text, map and symbols → ARENA PASS and the Grand Arena.",,,,,,Replace by hand; no generator tool.
+graphics/frontier_pass/medals.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Frontier Pass: BATTLE FRONTIER / FRONTIER PASS text, map and symbols → ARENA PASS and the Grand Arena.",,,,,,Replace by hand; no generator tool.
+graphics/interface/arrow_cursor.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/interface/blank.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/interface/menu_info.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Type labels (PSYCHC → FORCE, GHOST → SPIRIT) and the Poké Ball icons → pods.",,,,,,Replace by hand; no generator tool.
+graphics/interface/mon_markings.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/interface/mon_markings_menu.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/interface/mystery_gift_textbox_border.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/interface/option_menu_equals_sign.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/interface/outline_cursor.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/interface/scroll_indicator.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/interface/status_icons.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/interface/swap_line.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/interface/ui_learn_move.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/intro/copyright.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Boot copyright screen (©Nintendo / Creatures / GAME FREAK) → your own credit and fan-project notice.,,,,,,Replace by hand; no generator tool.
+graphics/intro/scene_1/bg.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Opening scene 1 (Flygon and Latias fly past) → Star Wars companions / a ship over Tatooine.,,,,,,Replace by hand; no generator tool.
+graphics/intro/scene_1/drops_logo.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"GAME FREAK logo in the opening (water drops) → your studio logo, or cut the scene.",,,,,,Replace by hand; no generator tool.
+graphics/intro/scene_1/flygon.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Opening scene 1 (Flygon and Latias fly past) → Star Wars companions / a ship over Tatooine.,,,,,,Replace by hand; no generator tool.
+graphics/intro/scene_1/lati.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Opening scene 1 (Flygon and Latias fly past) → Star Wars companions / a ship over Tatooine.,,,,,,Replace by hand; no generator tool.
+graphics/intro/scene_1/sparkle.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Opening scene 1 (Flygon and Latias fly past) → Star Wars companions / a ship over Tatooine.,,,,,,Replace by hand; no generator tool.
+graphics/intro/scene_2/bicycle.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Bicycle → speeder bike.,,,,,,Replace by hand; no generator tool.
+graphics/intro/scene_2/brendan.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Player on a bike in the opening → KAEL / MIRA on a speeder bike.,,,,,,Replace by hand; no generator tool.
+graphics/intro/scene_2/brendan_credits.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Player riding in the credits → KAEL / MIRA on a speeder bike.,,,,,,Replace by hand; no generator tool.
+graphics/intro/scene_2/clouds.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Opening scenery (Hoenn houses, trees, grass, clouds) → Tatooine homesteads, dunes, twin suns.",,,,,,Replace by hand; no generator tool.
+graphics/intro/scene_2/clouds_bg.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Opening scenery (Hoenn houses, trees, grass, clouds) → Tatooine homesteads, dunes, twin suns.",,,,,,Replace by hand; no generator tool.
+graphics/intro/scene_2/flygon.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Pokémon in the opening chase → Star Wars companions (e.g. the starters).,,,,,,Replace by hand; no generator tool.
+graphics/intro/scene_2/grass.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Opening scenery (Hoenn houses, trees, grass, clouds) → Tatooine homesteads, dunes, twin suns.",,,,,,Replace by hand; no generator tool.
+graphics/intro/scene_2/house_silhouette.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Opening scenery (Hoenn houses, trees, grass, clouds) → Tatooine homesteads, dunes, twin suns.",,,,,,Replace by hand; no generator tool.
+graphics/intro/scene_2/houses.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Opening scenery (Hoenn houses, trees, grass, clouds) → Tatooine homesteads, dunes, twin suns.",,,,,,Replace by hand; no generator tool.
+graphics/intro/scene_2/latias.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Pokémon in the opening chase → Star Wars companions (e.g. the starters).,,,,,,Replace by hand; no generator tool.
+graphics/intro/scene_2/latios.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Pokémon in the opening chase → Star Wars companions (e.g. the starters).,,,,,,Replace by hand; no generator tool.
+graphics/intro/scene_2/manectric.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Pokémon in the opening chase → Star Wars companions (e.g. the starters).,,,,,,Replace by hand; no generator tool.
+graphics/intro/scene_2/may.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Player on a bike in the opening → KAEL / MIRA on a speeder bike.,,,,,,Replace by hand; no generator tool.
+graphics/intro/scene_2/may_credits.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Player riding in the credits → KAEL / MIRA on a speeder bike.,,,,,,Replace by hand; no generator tool.
+graphics/intro/scene_2/torchic.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Pokémon in the opening chase → Star Wars companions (e.g. the starters).,,,,,,Replace by hand; no generator tool.
+graphics/intro/scene_2/trees.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Opening scenery (Hoenn houses, trees, grass, clouds) → Tatooine homesteads, dunes, twin suns.",,,,,,Replace by hand; no generator tool.
+graphics/intro/scene_2/trees_small.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Opening scenery (Hoenn houses, trees, grass, clouds) → Tatooine homesteads, dunes, twin suns.",,,,,,Replace by hand; no generator tool.
+graphics/intro/scene_2/volbeat.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Pokémon in the opening chase → Star Wars companions (e.g. the starters).,,,,,,Replace by hand; no generator tool.
+graphics/intro/scene_3/bubbles.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Opening battle effects and background → match the new titans scene.,,,,,,Replace by hand; no generator tool.
+graphics/intro/scene_3/clouds.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Opening battle effects and background → match the new titans scene.,,,,,,Replace by hand; no generator tool.
+graphics/intro/scene_3/groudon.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Legendaries in the opening → GREATKRAYT, SANDO, EXOGORTH.",,,,,,Replace by hand; no generator tool.
+graphics/intro/scene_3/kyogre.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Legendaries in the opening → GREATKRAYT, SANDO, EXOGORTH.",,,,,,Replace by hand; no generator tool.
+graphics/intro/scene_3/legend_bg.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Opening battle effects and background → match the new titans scene.,,,,,,Replace by hand; no generator tool.
+graphics/intro/scene_3/lightning.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Opening battle effects and background → match the new titans scene.,,,,,,Replace by hand; no generator tool.
+graphics/intro/scene_3/misc.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Opening battle effects and background → match the new titans scene.,,,,,,Replace by hand; no generator tool.
+graphics/intro/scene_3/pokeball.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Poké Ball thrown in the opening battle → capture pod.,,,,,,Replace by hand; no generator tool.
+graphics/intro/scene_3/rayquaza.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Legendaries in the opening → GREATKRAYT, SANDO, EXOGORTH.",,,,,,Replace by hand; no generator tool.
+graphics/intro/scene_3/rayquaza_clouds.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Legendaries in the opening → GREATKRAYT, SANDO, EXOGORTH.",,,,,,Replace by hand; no generator tool.
+graphics/intro/scene_3/streaks.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Opening battle effects and background → match the new titans scene.,,,,,,Replace by hand; no generator tool.
+graphics/link/321start.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/link/321start_static.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/link/comm_error_bg.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/link/minigame_digits.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/link/minigame_digits2.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/link/test_digits.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/link/wireless_display.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/link/wireless_icon.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/mail/bead/tiles.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/mail/dream/tiles.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/mail/fab/tiles.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/mail/glitter/tiles.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/mail/harbor/tiles.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/mail/mech/tiles.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/mail/orange/tiles.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/mail/retro/tiles.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/mail/shadow/tiles.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/mail/tropic/tiles.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/mail/wave/tiles.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/mail/wood/tiles.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/map_popup/brick.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/map_popup/brick_outline.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/map_popup/marble.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/map_popup/marble_outline.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/map_popup/stone.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/map_popup/stone2.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/map_popup/stone2_outline.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/map_popup/stone_outline.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/map_popup/underwater.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/map_popup/underwater_outline.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/map_popup/wood.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/map_popup/wood_outline.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/misc/clock_small.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/misc/confetti.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/misc/evo_sparkle.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/misc/japanese_hof.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/misc/mirage_tower.png,HOTSWAP,DRAFT,PENDING_ART,,"Mirage Tower → the SANDCRAWLER (vfx-generator, field objects).",,,,,,
+graphics/misc/mirage_tower_crumbles.png,HOTSWAP,DRAFT,PENDING_ART,,"Mirage Tower → the SANDCRAWLER (vfx-generator, field objects).",,,,,,
+graphics/naming_screen/back_button.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/naming_screen/cursor.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/naming_screen/cursor_filled.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/naming_screen/cursor_squished.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/naming_screen/input_arrow.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/naming_screen/menu.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/naming_screen/ok_button.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/naming_screen/page_swap_button.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/naming_screen/page_swap_frame.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/naming_screen/page_swap_lower.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/naming_screen/page_swap_others.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/naming_screen/page_swap_upper.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/naming_screen/pc_icon_off.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/naming_screen/pc_icon_on.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/naming_screen/underscore.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/party_menu/bg.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/party_menu/hold_icons.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/party_menu/pokeball.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Poké Ball icon → CAPTURE POD icon.,,,,,,Replace by hand; no generator tool.
+graphics/party_menu/pokeball_small.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Poké Ball icon → CAPTURE POD icon.,,,,,,Replace by hand; no generator tool.
+graphics/picture_frame/beauty.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/picture_frame/cool.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/picture_frame/cute.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/picture_frame/lobby.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/picture_frame/smart.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/picture_frame/tough.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokeblock/device.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokeblock/menu.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokeblock/pokeblock.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokeblock/use_screen/condition.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokeblock/use_screen/graph.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokeblock/use_screen/mon_frame.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokeblock/use_screen/updown.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokedex/area_glow.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokedex/area_marker.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokedex/area_unknown.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokedex/arrows.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokedex/caught_ball.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Poké Ball icon → CAPTURE POD icon.,,,,,,Replace by hand; no generator tool.
+graphics/pokedex/cry_meter.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokedex/cry_meter_needle.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokedex/cry_screen_bg.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokedex/interface.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Baked-in text POKéDEX / HOENN / NATIONAL → DATAPAD / OUTER RIM / GALACTIC.,,,,,,Replace by hand; no generator tool.
+graphics/pokedex/menu.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Baked-in text POKéDEX / HOENN / NATIONAL → DATAPAD / OUTER RIM / GALACTIC.,,,,,,Replace by hand; no generator tool.
+graphics/pokedex/noball_unused.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokedex/region_map.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Hoenn region map → Outer Rim galaxy map with the game's planets.,,,,,,Replace by hand; no generator tool.
+graphics/pokedex/region_map_affine.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Hoenn region map → Outer Rim galaxy map with the game's planets.,,,,,,Replace by hand; no generator tool.
+graphics/pokedex/search_menu.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Baked-in text POKéDEX / HOENN / NATIONAL → DATAPAD / OUTER RIM / GALACTIC.,,,,,,Replace by hand; no generator tool.
+graphics/pokemon_jump/bg.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_jump/bonuses.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_jump/star.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_jump/venusaur.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Link minigame: Venusaur → a companion (optional, wireless-only).",,,,,,Replace by hand; no generator tool.
+graphics/pokemon_jump/vine1.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_jump/vine2.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_jump/vine3.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_jump/vine4.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/arrow.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/box_selection_popup_center.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/box_selection_popup_sides.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/hand_cursor.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/hand_cursor_shadow.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/item_info_frame.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/menu.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Baked-in text PKMN DATA / PARTY POKéMON → COMPANION wording.,,,,,,Replace by hand; no generator tool.
+graphics/pokemon_storage/scrolling_bg.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Box background with a faint Poké Ball pattern → capture pod pattern.,,,,,,Replace by hand; no generator tool.
+graphics/pokemon_storage/wallpapers/azumarill/bg.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,'Friends' wallpaper showing a Pokémon → a Star Wars companion.,,,,,,Replace by hand; no generator tool.
+graphics/pokemon_storage/wallpapers/beach/bg.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/beach/frame.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/blank/bg.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/block/bg.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/cave/bg.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/cave/frame.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/circles/bg.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/city/bg.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/city/frame.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/crag/bg.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/crag/frame.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/desert/bg.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/desert/frame.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/diagonal/bg.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/dusclops/bg.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,'Friends' wallpaper showing a Pokémon → a Star Wars companion.,,,,,,Replace by hand; no generator tool.
+graphics/pokemon_storage/wallpapers/forest/bg.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/forest/frame.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/frame/bg.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/friends_frame1.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/friends_frame2.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/horizontal/bg.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/icons/aqua.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Wallpaper icon showing a Pokémon, a team logo or a Poké Ball → Star Wars companion, crest or pod.",,,,,,Replace by hand; no generator tool.
+graphics/pokemon_storage/wallpapers/icons/asterisk.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/icons/big_asterisk.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/icons/bolt.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/icons/brick.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/icons/circle.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/icons/cross.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/icons/crystal.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/icons/diglett.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Wallpaper icon showing a Pokémon, a team logo or a Poké Ball → Star Wars companion, crest or pod.",,,,,,Replace by hand; no generator tool.
+graphics/pokemon_storage/wallpapers/icons/dot.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/icons/five_star.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/icons/footprint.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/icons/four_circles.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/icons/four_star.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/icons/heart.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/icons/koffing.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Wallpaper icon showing a Pokémon, a team logo or a Poké Ball → Star Wars companion, crest or pod.",,,,,,Replace by hand; no generator tool.
+graphics/pokemon_storage/wallpapers/icons/latis.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Wallpaper icon showing a Pokémon, a team logo or a Poké Ball → Star Wars companion, crest or pod.",,,,,,Replace by hand; no generator tool.
+graphics/pokemon_storage/wallpapers/icons/line_circle.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/icons/lotad.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Wallpaper icon showing a Pokémon, a team logo or a Poké Ball → Star Wars companion, crest or pod.",,,,,,Replace by hand; no generator tool.
+graphics/pokemon_storage/wallpapers/icons/luvdisc.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Wallpaper icon showing a Pokémon, a team logo or a Poké Ball → Star Wars companion, crest or pod.",,,,,,Replace by hand; no generator tool.
+graphics/pokemon_storage/wallpapers/icons/magma.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Wallpaper icon showing a Pokémon, a team logo or a Poké Ball → Star Wars companion, crest or pod.",,,,,,Replace by hand; no generator tool.
+graphics/pokemon_storage/wallpapers/icons/maze.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/icons/minun.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Wallpaper icon showing a Pokémon, a team logo or a Poké Ball → Star Wars companion, crest or pod.",,,,,,Replace by hand; no generator tool.
+graphics/pokemon_storage/wallpapers/icons/pichu.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Wallpaper icon showing a Pokémon, a team logo or a Poké Ball → Star Wars companion, crest or pod.",,,,,,Replace by hand; no generator tool.
+graphics/pokemon_storage/wallpapers/icons/plusle.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Wallpaper icon showing a Pokémon, a team logo or a Poké Ball → Star Wars companion, crest or pod.",,,,,,Replace by hand; no generator tool.
+graphics/pokemon_storage/wallpapers/icons/pokeball.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Wallpaper icon showing a Pokémon, a team logo or a Poké Ball → Star Wars companion, crest or pod.",,,,,,Replace by hand; no generator tool.
+graphics/pokemon_storage/wallpapers/icons/ribbon.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/icons/spinda.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Wallpaper icon showing a Pokémon, a team logo or a Poké Ball → Star Wars companion, crest or pod.",,,,,,Replace by hand; no generator tool.
+graphics/pokemon_storage/wallpapers/icons/star_in_circle.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/icons/togepi.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Wallpaper icon showing a Pokémon, a team logo or a Poké Ball → Star Wars companion, crest or pod.",,,,,,Replace by hand; no generator tool.
+graphics/pokemon_storage/wallpapers/legendary/bg.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Wallpaper showing Pokémon → Star Wars companions or titans.,,,,,,Replace by hand; no generator tool.
+graphics/pokemon_storage/wallpapers/ludicolo/bg.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Wallpaper showing Pokémon → Star Wars companions or titans.,,,,,,Replace by hand; no generator tool.
+graphics/pokemon_storage/wallpapers/machine/bg.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/machine/frame.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/pikachu/bg.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,'Friends' wallpaper showing a Pokémon → a Star Wars companion.,,,,,,Replace by hand; no generator tool.
+graphics/pokemon_storage/wallpapers/plain/bg.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/plain/frame.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/pokecenter/bg.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Poké Ball / Pokémon Center wallpaper → bacta center / capture pod theme.,,,,,,Replace by hand; no generator tool.
+graphics/pokemon_storage/wallpapers/pokecenter/frame.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Poké Ball / Pokémon Center wallpaper → bacta center / capture pod theme.,,,,,,Replace by hand; no generator tool.
+graphics/pokemon_storage/wallpapers/pokecenter2/bg.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Poké Ball / Pokémon Center wallpaper → bacta center / capture pod theme.,,,,,,Replace by hand; no generator tool.
+graphics/pokemon_storage/wallpapers/polkadot/bg.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/polkadot/frame.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/ribbon/bg.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/river/bg.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/river/frame.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/savanna/bg.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/savanna/frame.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/screen/bg.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/seafloor/bg.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/seafloor/frame.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/sky/bg.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/sky/frame.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/snow/bg.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/snow/frame.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/volcano/bg.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/volcano/frame.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokemon_storage/wallpapers/whiscash/bg.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Wallpaper showing Pokémon → Star Wars companions or titans.,,,,,,Replace by hand; no generator tool.
+graphics/pokemon_storage/wallpapers/zigzagoon/bg.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Wallpaper showing Pokémon → Star Wars companions or titans.,,,,,,Replace by hand; no generator tool.
+graphics/pokemon_storage/waveform.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokenav/bg_dots.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokenav/blue_light.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokenav/condition/cancel.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokenav/condition/graph.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokenav/condition/graph_data.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokenav/condition/pokeball.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Poké Ball icon → CAPTURE POD icon.,,,,,,Replace by hand; no generator tool.
+graphics/pokenav/condition/pokeball_placeholder.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Poké Ball icon → CAPTURE POD icon.,,,,,,Replace by hand; no generator tool.
+graphics/pokenav/condition/search_results.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokenav/condition/sparkle.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokenav/device_outline.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,PokéNav device outline → comlink.,,,,,,Replace by hand; no generator tool.
+graphics/pokenav/header.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Baked-in text POKéNAV / POKéMON NAVIGATOR → COMLINK.,,,,,,Replace by hand; no generator tool.
+graphics/pokenav/left_headers/beauty.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokenav/left_headers/condition.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokenav/left_headers/cool.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokenav/left_headers/cute.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokenav/left_headers/hoenn_map.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,'HOENN MAP' label → 'GALAXY MAP'.,,,,,,Replace by hand; no generator tool.
+graphics/pokenav/left_headers/main_menu.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokenav/left_headers/match_call.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokenav/left_headers/party.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokenav/left_headers/ribbons.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokenav/left_headers/search.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokenav/left_headers/smart.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokenav/left_headers/tough.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokenav/list_arrows.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokenav/match_call/nav_icon.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,PokéNav device icon → comlink.,,,,,,Replace by hand; no generator tool.
+graphics/pokenav/match_call/options_cursor.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokenav/match_call/pokeball.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Poké Ball icon → CAPTURE POD icon.,,,,,,Replace by hand; no generator tool.
+graphics/pokenav/match_call/ui.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokenav/match_call/window.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokenav/message.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokenav/nav_icon.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,PokéNav device icon → comlink.,,,,,,Replace by hand; no generator tool.
+graphics/pokenav/options/beauty.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokenav/options/cancel.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokenav/options/condition.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokenav/options/cool.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokenav/options/cute.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokenav/options/hoenn_map.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,'HOENN MAP' label → 'GALAXY MAP'.,,,,,,Replace by hand; no generator tool.
+graphics/pokenav/options/match_call.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokenav/options/party.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokenav/options/ribbons.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokenav/options/search.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokenav/options/smart.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokenav/options/switch_off.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokenav/options/tough.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokenav/region_map/brendan_icon.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Player head on the map → KAEL / MIRA.,,,,,,Replace by hand; no generator tool.
+graphics/pokenav/region_map/city_zoom_text.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Map legend text POKéMON CENTER / POKé MART / POKéMON GYM / POKéMON CONTEST → BACTA CENTER / SUPPLY DEPOT / ARENA / SHOWCASE.,,,,,,Replace by hand; no generator tool.
+graphics/pokenav/region_map/cursor_large.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokenav/region_map/cursor_small.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokenav/region_map/fly_target_icons.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokenav/region_map/frame.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokenav/region_map/map.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Hoenn region map → Outer Rim galaxy map with the game's planets.,,,,,,Replace by hand; no generator tool.
+graphics/pokenav/region_map/may_icon.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Player head on the map → KAEL / MIRA.,,,,,,Replace by hand; no generator tool.
+graphics/pokenav/region_map/zoom_tiles.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokenav/ribbons/icons.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokenav/ribbons/icons_big.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokenav/ribbons/list_bg.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokenav/ribbons/summary_bg.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/rayquaza_scene/scene_1/clouds.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Story cutscene: Groudon vs Kyogre, Rayquaza descends → GREATKRAYT vs SANDO, the EXOGORTH descends.",,,,,,Replace by hand; no generator tool.
+graphics/rayquaza_scene/scene_1/groudon.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Story cutscene: Groudon vs Kyogre, Rayquaza descends → GREATKRAYT vs SANDO, the EXOGORTH descends.",,,,,,Replace by hand; no generator tool.
+graphics/rayquaza_scene/scene_1/groudon_claw.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Story cutscene: Groudon vs Kyogre, Rayquaza descends → GREATKRAYT vs SANDO, the EXOGORTH descends.",,,,,,Replace by hand; no generator tool.
+graphics/rayquaza_scene/scene_1/groudon_shoulder.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Story cutscene: Groudon vs Kyogre, Rayquaza descends → GREATKRAYT vs SANDO, the EXOGORTH descends.",,,,,,Replace by hand; no generator tool.
+graphics/rayquaza_scene/scene_1/kyogre.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Story cutscene: Groudon vs Kyogre, Rayquaza descends → GREATKRAYT vs SANDO, the EXOGORTH descends.",,,,,,Replace by hand; no generator tool.
+graphics/rayquaza_scene/scene_1/kyogre_dorsal_fin.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Story cutscene: Groudon vs Kyogre, Rayquaza descends → GREATKRAYT vs SANDO, the EXOGORTH descends.",,,,,,Replace by hand; no generator tool.
+graphics/rayquaza_scene/scene_1/kyogre_pectoral_fin.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Story cutscene: Groudon vs Kyogre, Rayquaza descends → GREATKRAYT vs SANDO, the EXOGORTH descends.",,,,,,Replace by hand; no generator tool.
+graphics/rayquaza_scene/scene_2/bg.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Story cutscene: Groudon vs Kyogre, Rayquaza descends → GREATKRAYT vs SANDO, the EXOGORTH descends.",,,,,,Replace by hand; no generator tool.
+graphics/rayquaza_scene/scene_2/rayquaza.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Story cutscene: Groudon vs Kyogre, Rayquaza descends → GREATKRAYT vs SANDO, the EXOGORTH descends.",,,,,,Replace by hand; no generator tool.
+graphics/rayquaza_scene/scene_2/smoke.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Story cutscene: Groudon vs Kyogre, Rayquaza descends → GREATKRAYT vs SANDO, the EXOGORTH descends.",,,,,,Replace by hand; no generator tool.
+graphics/rayquaza_scene/scene_3/bg.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Story cutscene: Groudon vs Kyogre, Rayquaza descends → GREATKRAYT vs SANDO, the EXOGORTH descends.",,,,,,Replace by hand; no generator tool.
+graphics/rayquaza_scene/scene_3/light.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Story cutscene: Groudon vs Kyogre, Rayquaza descends → GREATKRAYT vs SANDO, the EXOGORTH descends.",,,,,,Replace by hand; no generator tool.
+graphics/rayquaza_scene/scene_3/rayquaza.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Story cutscene: Groudon vs Kyogre, Rayquaza descends → GREATKRAYT vs SANDO, the EXOGORTH descends.",,,,,,Replace by hand; no generator tool.
+graphics/rayquaza_scene/scene_3/rayquaza_tail.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Story cutscene: Groudon vs Kyogre, Rayquaza descends → GREATKRAYT vs SANDO, the EXOGORTH descends.",,,,,,Replace by hand; no generator tool.
+graphics/rayquaza_scene/scene_4/bg.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Story cutscene: Groudon vs Kyogre, Rayquaza descends → GREATKRAYT vs SANDO, the EXOGORTH descends.",,,,,,Replace by hand; no generator tool.
+graphics/rayquaza_scene/scene_4/rayquaza.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Story cutscene: Groudon vs Kyogre, Rayquaza descends → GREATKRAYT vs SANDO, the EXOGORTH descends.",,,,,,Replace by hand; no generator tool.
+graphics/rayquaza_scene/scene_4/streaks.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Story cutscene: Groudon vs Kyogre, Rayquaza descends → GREATKRAYT vs SANDO, the EXOGORTH descends.",,,,,,Replace by hand; no generator tool.
+graphics/rayquaza_scene/scene_5/groudon.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Story cutscene: Groudon vs Kyogre, Rayquaza descends → GREATKRAYT vs SANDO, the EXOGORTH descends.",,,,,,Replace by hand; no generator tool.
+graphics/rayquaza_scene/scene_5/groudon_tail.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Story cutscene: Groudon vs Kyogre, Rayquaza descends → GREATKRAYT vs SANDO, the EXOGORTH descends.",,,,,,Replace by hand; no generator tool.
+graphics/rayquaza_scene/scene_5/kyogre.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Story cutscene: Groudon vs Kyogre, Rayquaza descends → GREATKRAYT vs SANDO, the EXOGORTH descends.",,,,,,Replace by hand; no generator tool.
+graphics/rayquaza_scene/scene_5/kyogre_splash.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Story cutscene: Groudon vs Kyogre, Rayquaza descends → GREATKRAYT vs SANDO, the EXOGORTH descends.",,,,,,Replace by hand; no generator tool.
+graphics/rayquaza_scene/scene_5/light.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Story cutscene: Groudon vs Kyogre, Rayquaza descends → GREATKRAYT vs SANDO, the EXOGORTH descends.",,,,,,Replace by hand; no generator tool.
+graphics/rayquaza_scene/scene_5/rayquaza.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Story cutscene: Groudon vs Kyogre, Rayquaza descends → GREATKRAYT vs SANDO, the EXOGORTH descends.",,,,,,Replace by hand; no generator tool.
+graphics/rayquaza_scene/scene_5/rayquaza_tail.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Story cutscene: Groudon vs Kyogre, Rayquaza descends → GREATKRAYT vs SANDO, the EXOGORTH descends.",,,,,,Replace by hand; no generator tool.
+graphics/rayquaza_scene/scene_5/ring.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Story cutscene: Groudon vs Kyogre, Rayquaza descends → GREATKRAYT vs SANDO, the EXOGORTH descends.",,,,,,Replace by hand; no generator tool.
+graphics/reset_rtc_screen/arrow_down.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/reset_rtc_screen/arrow_right.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/roulette/azurill.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Roulette Pokémon and ball → Sabacc den companions and a chip.,,,,,,Replace by hand; no generator tool.
+graphics/roulette/ball.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Roulette Pokémon and ball → Sabacc den companions and a chip.,,,,,,Replace by hand; no generator tool.
+graphics/roulette/ball_counter.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/roulette/center.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/roulette/credit.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/roulette/cursor.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/roulette/grid_icons.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/roulette/headers.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/roulette/makuhita.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Roulette Pokémon and ball → Sabacc den companions and a chip.,,,,,,Replace by hand; no generator tool.
+graphics/roulette/multiplier.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/roulette/numbers.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/roulette/shadow.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/roulette/shroomish.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Roulette Pokémon and ball → Sabacc den companions and a chip.,,,,,,Replace by hand; no generator tool.
+graphics/roulette/skitty.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Roulette Pokémon and ball → Sabacc den companions and a chip.,,,,,,Replace by hand; no generator tool.
+graphics/roulette/tailow.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Roulette Pokémon and ball → Sabacc den companions and a chip.,,,,,,Replace by hand; no generator tool.
+graphics/roulette/wheel.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/roulette/window.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/roulette/wynaut.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Roulette Pokémon and ball → Sabacc den companions and a chip.,,,,,,Replace by hand; no generator tool.
+graphics/shop/menu.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/shop/money.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/slot_machine/bolt.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/slot_machine/digital_display.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/slot_machine/duck.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/slot_machine/large_bolt/0.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/slot_machine/large_bolt/1.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/slot_machine/menu.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/slot_machine/numbers/0.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/slot_machine/numbers/1.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/slot_machine/numbers/2.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/slot_machine/numbers/3.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/slot_machine/numbers/4.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/slot_machine/numbers/5.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/slot_machine/numbers/6.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/slot_machine/numbers/7.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/slot_machine/numbers/8.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/slot_machine/numbers/9.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/slot_machine/pika_aura.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Slot reels and Pikachu bonus → Sabacc den symbols and a Star Wars mascot.,,,,,,Replace by hand; no generator tool.
+graphics/slot_machine/reel_symbols/1.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Slot reels and Pikachu bonus → Sabacc den symbols and a Star Wars mascot.,,,,,,Replace by hand; no generator tool.
+graphics/slot_machine/reel_symbols/2.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Slot reels and Pikachu bonus → Sabacc den symbols and a Star Wars mascot.,,,,,,Replace by hand; no generator tool.
+graphics/slot_machine/reel_symbols/3.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Slot reels and Pikachu bonus → Sabacc den symbols and a Star Wars mascot.,,,,,,Replace by hand; no generator tool.
+graphics/slot_machine/reel_symbols/4.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Slot reels and Pikachu bonus → Sabacc den symbols and a Star Wars mascot.,,,,,,Replace by hand; no generator tool.
+graphics/slot_machine/reel_symbols/5.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Slot reels and Pikachu bonus → Sabacc den symbols and a Star Wars mascot.,,,,,,Replace by hand; no generator tool.
+graphics/slot_machine/reel_symbols/6.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Slot reels and Pikachu bonus → Sabacc den symbols and a Star Wars mascot.,,,,,,Replace by hand; no generator tool.
+graphics/slot_machine/reel_symbols/7.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Slot reels and Pikachu bonus → Sabacc den symbols and a Star Wars mascot.,,,,,,Replace by hand; no generator tool.
+graphics/slot_machine/reel_time_explosion/0.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/slot_machine/reel_time_explosion/1.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/slot_machine/reel_time_machine.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Slot reels and Pikachu bonus → Sabacc den symbols and a Star Wars mascot.,,,,,,Replace by hand; no generator tool.
+graphics/slot_machine/reel_time_number_gap.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/slot_machine/reel_time_numbers/0.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/slot_machine/reel_time_numbers/1.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/slot_machine/reel_time_numbers/2.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/slot_machine/reel_time_numbers/3.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/slot_machine/reel_time_numbers/4.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/slot_machine/reel_time_numbers/5.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/slot_machine/reel_time_pikachu.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Slot reels and Pikachu bonus → Sabacc den symbols and a Star Wars mascot.,,,,,,Replace by hand; no generator tool.
+graphics/slot_machine/shadow.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/slot_machine/smoke.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/starter_choose/pokeball_selection.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Three Poké Balls on Prof. Birch's bag → three capture pods.,,,,,,Replace by hand; no generator tool.
+graphics/starter_choose/starter_circle.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/starter_choose/tiles.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Birch's bag on Hoenn grass → Prof. Korr's bag on Tatooine sand.,,,,,,Replace by hand; no generator tool.
+graphics/summary_screen/a_button.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/summary_screen/b_button.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/summary_screen/move_select.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/summary_screen/tiles.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/text_window/1.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/text_window/10.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/text_window/11.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/text_window/12.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/text_window/13.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/text_window/14.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/text_window/15.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/text_window/16.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/text_window/17.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/text_window/18.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/text_window/19.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/text_window/2.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/text_window/20.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/text_window/3.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/text_window/4.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/text_window/5.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/text_window/6.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/text_window/7.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/text_window/8.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/text_window/9.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/text_window/message_box.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/title_screen/clouds.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Sky behind the title → starfield / asteroid field.,,,,,,Replace by hand; no generator tool.
+graphics/title_screen/emerald_version.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,'EMERALD VERSION' banner under the logo → your subtitle (the credits already say EMERALD SW VERSION).,,,,,,Replace by hand; no generator tool.
+graphics/title_screen/logo_shine.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/title_screen/pokemon_logo.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,GAME LOGO on the title screen: replace the POKéMON logo with the Star Wars Emerald logo (your own design; don't copy the Lucasfilm logo). Redo pokemon_logo.pal and pokemon_logo.bin with it.,,,,,,Replace by hand; no generator tool.
+graphics/title_screen/press_start.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/title_screen/rayquaza.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Rayquaza behind the logo → the EXOGORTH (redo rayquaza.bin / rayquaza_and_clouds.pal).,,,,,,Replace by hand; no generator tool.
+graphics/trade/cable_end.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,GBA link hardware drawing; generic.
+graphics/trade/cursor.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,GBA link hardware drawing; generic.
+graphics/trade/gba.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,GBA link hardware drawing; generic.
+graphics/trade/gba_affine.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,GBA link hardware drawing; generic.
+graphics/trade/gba_screen.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,GBA link hardware drawing; generic.
+graphics/trade/link_mon_glow.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,GBA link hardware drawing; generic.
+graphics/trade/link_mon_shadow.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,GBA link hardware drawing; generic.
+graphics/trade/menu.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,GBA link hardware drawing; generic.
+graphics/trade/pokeball.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Poké Ball icon → CAPTURE POD icon.,,,,,,Replace by hand; no generator tool.
+graphics/trade/pokeball_symbol.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Poké Ball icon → CAPTURE POD icon.,,,,,,Replace by hand; no generator tool.
+graphics/trade/wireless_signal.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,GBA link hardware drawing; generic.
+graphics/trainer_card/badges.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,The 8 Hoenn badges → the 8 kyber shards.,,,,,,Replace by hand; no generator tool.
+graphics/trainer_card/frlg/badges.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/trainer_card/frlg/stickers.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/trainer_card/frlg/tiles.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/trainer_card/tiles.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Trainer card: baked-in labels (TRAINER CARD, POKéDEX) → DATAPAD wording; Poké Ball emblem → pod.",,,,,,Replace by hand; no generator tool.
+graphics/trainer_hill/records_window.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/types/bug.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/types/contest_beauty.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/types/contest_cool.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/types/contest_cute.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/types/contest_smart.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/types/contest_tough.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/types/dark.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/types/dragon.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/types/electric.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/types/fight.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/types/fire.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/types/flying.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/types/ghost.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,GHOST type label → SPIRIT.,,,,,,Replace by hand; no generator tool.
+graphics/types/grass.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/types/ground.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/types/ice.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/types/mystery.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/types/normal.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/types/poison.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/types/psychic.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,PSYCHIC type label → FORCE.,,,,,,Replace by hand; no generator tool.
+graphics/types/rock.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/types/steel.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/types/water.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/union_room_chat/background.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/union_room_chat/keyboard.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/union_room_chat/keyboard_cursor.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/union_room_chat/r_button.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/union_room_chat/r_button_labels.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/union_room_chat/text_entry_arrow.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/union_room_chat/text_entry_cursor.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/wallclock/clock.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/wallclock/hand.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/wireless_status_screen/bg.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/wonder_card/bg1.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/wonder_card/bg2.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/wonder_card/bg3.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/wonder_card/bg4.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/wonder_card/bg5.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/wonder_card/bg6.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/wonder_card/bg7.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/wonder_card/bg8.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/wonder_card/stamp_shadow.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/wonder_news/bg1.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/wonder_news/bg2.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/wonder_news/bg3.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/wonder_news/bg7.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/wonder_news/bg8.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+brand:rom-title,HOTSWAP,DRAFT,NO_ART,HUMAN-TODO,"ROM header title 'POKEMON EMER' (12 chars, shown by emulators and flash carts) → your title, e.g. 'SW EMERALD'.",,,,Makefile,2,Not an image. Keep GAME_CODE BPEE (Makefile:3): emulators use it to pick the save type and RTC.
