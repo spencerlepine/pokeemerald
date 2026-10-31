@@ -32,7 +32,6 @@ Clone side by side. **Only emerald-sw-db is written to.**
 git clone https://github.com/spencerlepine/emerald-sw-db.git
 git clone https://github.com/spencerlepine/emerald-db.git     # read-only
 git clone https://github.com/spencerlepine/starwars-db.git    # read-only
-git clone https://github.com/spencerlepine/pokeemerald.git    # read-only, optional (emerald-db already has the data)
 cd emerald-sw-db
 python3 tools/build.py      # mapping/ + ../emerald-db/database -> database/
 python3 tools/coverage.py   # progress/COVERAGE.md
@@ -41,6 +40,9 @@ python3 wiki/server.py      # optional: http://127.0.0.1:8000
 
 Python 3.10+ standard library only. Set `EMERALD_DB_DIR` / `STARWARS_DB_DIR`
 if the other repos are not next to this one.
+
+This folder is `wiki/` inside the pokeemerald repo, and the game source is next to it
+in `../game`. Every `source_file` in `database/` is a path relative to `../game`.
 
 ## Rules
 

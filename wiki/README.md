@@ -4,8 +4,8 @@ The Star Wars rewrite of [emerald-db](https://github.com/spencerlepine/emerald-d
 every Pokémon Emerald row (creature, character, place, item, move, trainer,
 line of dialogue, story beat, art file) mapped to its Star Wars replacement,
 keyed by the same Emerald id. Lore comes from
-[starwars-db](https://github.com/spencerlepine/starwars-db); the game is
-[pokeemerald](https://github.com/spencerlepine/pokeemerald).
+[starwars-db](https://github.com/spencerlepine/starwars-db); the game source
+is [`../game`](../game) in this repository.
 
 **Resuming work?** Start at [`POPULATE-EMERALD-SW-DB-PROMPT.md`](POPULATE-EMERALD-SW-DB-PROMPT.md).
 Story: [`bible/STORY.md`](bible/STORY.md) ·

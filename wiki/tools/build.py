@@ -38,7 +38,7 @@ STARWARS = Path(os.environ.get("STARWARS_DB_DIR", ROOT.parent / "starwars-db" / 
 
 csv.field_size_limit(sys.maxsize)
 
-# In-game name limits (pokeemerald include/constants/global.h, include/region_map.h)
+# In-game name limits (../game/include/constants/global.h, ../game/include/region_map.h)
 NAME_LIMITS = {"species": 10, "move": 12, "item": 14, "ability": 12, "game_type": 6,
                "trainer_class": 12, "location": 16, "trainer": 10, "badge": 14}
 CONSTANT_PREFIX = {"species": "SPECIES_", "move": "MOVE_", "item": "ITEM_", "ability": "ABILITY_",
@@ -370,8 +370,8 @@ PLURAL_BEFORE = re.compile(r"(\b(?:all|many|some|several|two|three|four|five|six
                            r"(?:\\[nl]| ))COMPANION\b")
 
 
-# Pixel width of a text line in Emerald's normal font (glyph widths from pokeemerald src/fonts.c,
-# mapped through charmap.txt into tools/font_widths.json). The field text box is 208 px wide:
+# Pixel width of a text line in Emerald's normal font (glyph widths from ../game/src/fonts.c,
+# mapped through ../game/charmap.txt into tools/font_widths.json). The field text box is 208 px wide:
 # no Emerald script line without placeholders is wider than that.
 FONT_WIDTHS = json.loads((ROOT / "tools" / "font_widths.json").read_text(encoding="utf-8"))
 BOX_PX = 208
