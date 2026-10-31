@@ -9,14 +9,15 @@ is not one of the planets it is found on gets an explanation:
   SEA        a sea species found on the open-water routes between worlds
   MIGRANT / REHOME / STORY   hand decisions in mapping/habitat_notes.csv
 
-Writes database/species_habitats.csv and progress/HABITATS.md. Run after tools/build.py.
+Writes database/species_habitats.csv. Run after tools/build.py.
 """
 import collections
 import csv
+import os
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-EMERALD = ROOT.parent / "emerald-db" / "database"
+EMERALD = Path(os.environ.get("EMERALD_DB_DIR", ROOT.parent / "emerald-db" / "database"))
 
 
 def read(p):
@@ -69,17 +70,6 @@ def main():
         w.writeheader()
         w.writerows(out)
     c = collections.Counter(r["decision"] for r in out)
-    md = ["# Habitats (E2)", "",
-          "Encounter tables are unchanged from Emerald, so balance is identical. This report checks each wild companion's",
-          "home planet against the planets where it can be caught, and explains every one that lives off its home world.",
-          "Source: `tools/habitats.py`, hand notes in `mapping/habitat_notes.csv`, output `database/species_habitats.csv`.", "",
-          "| decision | species |", "|---|---|"]
-    md += [f"| {k} | {v} |" for k, v in sorted(c.items())]
-    md += ["", "## Off-world companions", "", "| companion | home | found on | decision | why |", "|---|---|---|---|---|"]
-    for r in out:
-        if r["decision"] != "HOME":
-            md.append(f"| {r['sw_name']} | {r['home_planet']} | {r['wild_planets'].replace('|', ', ')} | {r['decision']} | {r['lore_note']} |")
-    (ROOT / "progress" / "HABITATS.md").write_text("\n".join(md) + "\n", encoding="utf-8")
     print(f"{len(out)} wild species; " + ", ".join(f"{k} {v}" for k, v in sorted(c.items())))
     for sid in unexplained:
         print("UNEXPLAINED", sid, species[sid]["sw_name"], species[sid]["home_planet"], dict(found[sid]))

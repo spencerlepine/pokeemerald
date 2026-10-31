@@ -67,7 +67,7 @@ SU+"HoennTrioTale": r"It happened long, long ago…\pThe worlds were wracked by 
 SU+"HearTheNewLegendOfHoenn": [("And the crisis that just ended in\nDAGOBAH rewrote a legend…", "And the crisis that just ended on\nDAGOBAH rewrote a legend…")],
 }
 NOTES = {
-SU+"ArchieWeGotTheOrbLetsGo": "Jabba's swamp motive (NOTES.md)",
+SU+"ArchieWeGotTheOrbLetsGo": "Jabba's swamp motive (bible/STORY.md)",
 MH+"4F_Text_MaxieDefeat": "Vader's second loss: he senses the player's Force strength",
 SU+"HoennTrioTale": "EXOGORTH (Rayquaza) is the creature of the stars",
 }

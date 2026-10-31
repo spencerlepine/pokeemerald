@@ -423,6 +423,12 @@ def line_px(line: str) -> int:
     return total
 
 
+# Menu and screen strings sit in fixed or auto-sized windows that only the game code knows. A Star Wars string
+# wider than Emerald's gets `ui_wider_px`; during the port its window must fit it (or the text gets shorter).
+UI_FILES = ("src/strings.c", "src/battle_message.c", "src/text_input_strings.c", "src/landmark.c",
+            "src/data/text/gift_ribbon_descriptions.h", "src/data/union_room.h", "src/data/credits.h")
+
+
 def draft_texts(terms: dict[str, str]):
     keys = sorted(terms, key=lambda k: (-len(k), k))
     pattern = re.compile(r"(?:(?<=\\[nlp])|(?<![A-Za-z0-9é]))(" + "|".join(re.escape(k) for k in keys) + r")(?![A-Za-z0-9é])")
@@ -457,13 +463,16 @@ def draft_texts(terms: dict[str, str]):
         new_lines = re.split(r"\\[nlp]", new)
         longest = max((line_px(x) for x in old_lines), default=0)
         overflow = any(line_px(x) > max(longest, BOX_PX) for x in new_lines)
+        ui_over = 0
+        if t["source_file"] in UI_FILES or (t["source_file"].startswith("src/") and t["text_context"] != "dialogue"):
+            ui_over = max(0, max(line_px(x) for x in new_lines) - max(line_px(x) for x in old_lines))
         counts[status] += 1
         out.append({"text_id": t["text_id"], "map_id": t["map_id"], "source_file": t["source_file"],
                     "source_line": t["source_line"], "speaker_label": t["speaker_label"],
                     "text_origin": t["text_origin"], "text_context": t["text_context"],
                     "emerald_text_raw": raw, "sw_text_raw": new, "text_status": status,
                     "terms_applied": "|".join(sorted(set(used))), "overflow_risk": "yes" if overflow else "",
-                    "notes": note})
+                    "ui_wider_px": str(ui_over) if ui_over else "", "notes": note})
     return out, counts
 
 
@@ -567,7 +576,7 @@ WIRING_COLS = ["map", "graphics", "script", "visibility_flag", "map_ids", "home_
                "teaches_move", "taught_by_item", "organization_ids", "related_entity_ids"]
 ENTITY_ACTION = {"HOTSWAP": "swap name/constant/description to the Star Wars version",
                  "KEEP": "keep as is; check every reference still matches after the swaps",
-                 "NET_NEW": "build new content (see progress/NET_NEW_DESIGNS.md)"}
+                 "NET_NEW": "build new content (see bible/NET_NEW_DESIGNS.md)"}
 
 
 def _wiring(r, cols):
@@ -599,7 +608,9 @@ def game_port(ents, net, texts, tl, art):
             wiki_id=t["text_id"], swap_kind="HOTSWAP" if t["sw_text_raw"] != t["emerald_text_raw"] else "KEEP",
             action="replace the text with sw_text_raw", game_file=t["source_file"], game_line=t["source_line"],
             wiring=_wiring(t, ("map_id", "speaker_label")),
-            notes="may overflow the text box" if t["overflow_risk"] else "")
+            notes="; ".join(x for x in ("may overflow the text box" if t["overflow_risk"] else "",
+                                        f"UI string {t['ui_wider_px']} px wider than Emerald's: make its window fit"
+                                        if t["ui_wider_px"] else "") if x))
     for t in tl:
         add(port_id=f"event|{t['id']}", table="timeline_events.csv", kind=f"event:{t.get('type', '')}",
             wiki_id=t["id"], swap_kind="HOTSWAP",

@@ -4,8 +4,7 @@ This is the creative source of truth for the rewrite. Every row in
 `mapping/*.csv` should agree with this file. When a decision here changes,
 update this file first, then the mapping rows, then rebuild.
 
-Status: **DRAFT v1** (first full pass). Everything is open to change by the
-project owner. Items marked *(open)* are known weak spots.
+Status: **approved** by the owner on 2026-10-31.
 
 ---
 
@@ -114,6 +113,10 @@ this is a flicker of Anakin, not a redemption. That comes later, outside the
 game.
 
 ---
+
+Motives: Jabba (Archie) wants to drown the dry worlds into swamps "fit for a HUTT" (SANDO, the sea titan).
+Vader (Maxie) mirrors it with land: an Imperial plan to dry out worlds for industry and garrisons
+(GREATKRAYT, the land titan).
 
 ## 5. Cast (main characters)
 
@@ -224,7 +227,7 @@ The roster is in `mapping/species.csv` (all 386 species). Rules used:
    creatures (`mapping/proposals/canon_pass.csv`).
 6. **Names fit the game:** at most 10 characters, uppercase.
 7. **Where the companion lives should make sense for its planet.** Encounter tables stay as in Emerald (balance identical);
-   `progress/HABITATS.md` explains every companion found off its home world (migrant, reserve, sea, story...).
+   `database/species_habitats.csv` explains every companion found off its home world (migrant, reserve, sea, story...).
 
 The starters: **KATARNKIT → KATARNJAW → KATARN** (Grass, Kashyyyk),
 **SUNCHICK → SUNSTRIDER → SUNBLAZER** (Fire/Fighting, Tatooine),
@@ -238,7 +241,7 @@ BOGAN** (Lati@s), **WHILLSTAR** (Jirachi), **SHIFTSTAR** (Deoxys), **TIDEWING / 
 
 ## 8. Ideas waiting for Step 4+ (NET_NEW)
 
-Tracked as rows in `mapping/net_new.csv`, not built yet. Designs (maps, flags, level bands, placeholders) are in `progress/NET_NEW_DESIGNS.md`:
+Tracked as rows in `mapping/net_new.csv`, not built yet. Designs (maps, flags, level bands, placeholders) are in `bible/NET_NEW_DESIGNS.md`:
 
 - Boba Fett as a multi-stage bounty-hunt storyline (rival boss fights only; he is never catchable and never joins the party).
 - Slicing droids instead of throwing capture pods.

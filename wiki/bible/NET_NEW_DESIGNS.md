@@ -1,8 +1,8 @@
-# Net-new designs (E3)
+# Net-new designs
 
 One section per `net:` row in `mapping/net_new.csv`. Each design lists the maps it touches, the story flags and vars it
 needs, its level band (taken from `database/area_progression.csv`, so nothing sits outside the band of the act it is in),
-and the placeholder assets Step 4 can use until Step 5 draws the real art.
+and the placeholder assets the port can use until the art is drawn the real art.
 
 The new flags and vars come only from slots that `emerald-db/database/story_flags.csv` marks as unused
 (`unused=true`), so no existing script is affected.
@@ -89,4 +89,4 @@ Each new move clones an existing move's data row. Only the name, description and
 
 ## Habitat swaps (`net:habitat-swaps`)
 
-Resolved in E2 with no slot swaps, so wild balance stays identical to Emerald. `progress/HABITATS.md` explains every companion that lives off its home world: it is either a migrant, part of the Felucia Reserve, widespread, a sea species, part of the story, or re-homed (the GNARLSPAWN line now lives on Endor).
+Resolved with no slot swaps, so wild balance stays identical to Emerald. `database/species_habitats.csv` (built by `tools/habitats.py`) explains every companion that lives off its home world: it is either a migrant, part of the Felucia Reserve, widespread, a sea species, part of the story, or re-homed (the GNARLSPAWN line now lives on Endor).
