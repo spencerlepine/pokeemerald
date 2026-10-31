@@ -53,7 +53,7 @@ ID_COLUMN = {"entities": "id", "timeline_events": "id", "dialogue": "line_id", "
 
 def run() -> None:
     if not SRC.exists():
-        sys.exit(f"pokeemerald not found at {SRC}; set POKEEMERALD_DIR")
+        sys.exit(f"game source not found at {SRC}; set POKEEMERALD_DIR")
     tables: dict[str, list[dict]] = defaultdict(list)
     for name in EXTRACTORS:
         try:

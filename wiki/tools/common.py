@@ -1,7 +1,7 @@
 """Shared helpers for extracting data from the pokeemerald decompilation.
 
-Every extractor reads the pokeemerald checkout (POKEEMERALD_DIR, default
-../pokeemerald next to this repo) and returns rows for the tables in
+Every extractor reads the pokeemerald game source (POKEEMERALD_DIR, default
+../game next to this wiki folder) and returns rows for the tables in
 database/. Nothing here writes files; build.py does that.
 """
 from __future__ import annotations
@@ -16,7 +16,7 @@ from pathlib import Path
 REPO_DIR = Path(__file__).resolve().parent.parent
 DATABASE_DIR = REPO_DIR / "database"
 CURATED_DIR = REPO_DIR / "curated"
-SRC = Path(os.environ.get("POKEEMERALD_DIR", REPO_DIR.parent / "pokeemerald")).resolve()
+SRC = Path(os.environ.get("POKEEMERALD_DIR", REPO_DIR.parent / "game")).resolve()
 
 csv.field_size_limit(sys.maxsize)
 

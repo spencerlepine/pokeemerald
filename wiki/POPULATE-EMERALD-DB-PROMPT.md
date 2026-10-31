@@ -27,25 +27,25 @@ gating) matters as much as lore.
 
 ## Setup
 
-Clone side by side (only emerald-db is written to):
+The database lives in `wiki/` inside the pokeemerald repo and reads the game
+source from `../game/` (the sibling folder):
 
 ```sh
-git clone https://github.com/spencerlepine/emerald-db.git
-git clone https://github.com/spencerlepine/pokeemerald.git      # read-only source
+git clone https://github.com/spencerlepine/pokeemerald.git
 git clone https://github.com/spencerlepine/starwars-db.git      # read-only reference
-cd emerald-db
-python3 tools/build.py        # regenerates database/ from ../pokeemerald + curated/
+cd pokeemerald/wiki
+python3 tools/build.py        # regenerates database/ from ../game + curated/
 python3 tools/coverage.py     # writes progress/COVERAGE.md
 python3 tools/balance_audit.py  # writes progress/BALANCE.md (level curve check)
 python3 wiki/server.py        # optional: http://127.0.0.1:8000
 ```
 
-Python 3.10+ standard library only. Set `POKEEMERALD_DIR` if pokeemerald is not
-at `../pokeemerald`.
+Python 3.10+ standard library only. Set `POKEEMERALD_DIR` to read the game
+source from somewhere other than `../game`.
 
 ## Rules
 
-- **Never push to `pokeemerald` or `starwars-db`.** Read them only.
+- **Never edit `../game/` or `starwars-db` from this work.** Read them only.
 - **Never hand-edit `database/*.csv`.** It is generated. Change an extractor in
   `tools/` (game facts) or a file in `curated/` (lore written by you), then
   rebuild. build.py overlays curated rows on extracted rows by id.

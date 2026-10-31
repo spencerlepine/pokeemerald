@@ -16,7 +16,7 @@ coverage: [`progress/COVERAGE.md`](progress/COVERAGE.md).
 ## Build
 
 ```sh
-# pokeemerald checked out next to this repo (or set POKEEMERALD_DIR)
+# reads the game source from ../game (or set POKEEMERALD_DIR)
 python3 tools/build.py      # regenerate database/
 python3 tools/coverage.py   # refresh progress/COVERAGE.md
 python3 tools/balance_audit.py  # level curve vs gym aces -> progress/BALANCE.md
