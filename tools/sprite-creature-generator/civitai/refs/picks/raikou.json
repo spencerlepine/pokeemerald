@@ -1,9 +1,10 @@
 {
   "init": "refs/raikou_prep.png",
-  "init_source": "refs/sources/raikou/raikou_cut.png",
+  "init_source": "refs/sources/raikou/raikou_alien.png",
   "flip": false,
-  "denoise": 0.5,
-  "desc": "side three-quarter view, whole body, centred, facing left: powerful yellow storm tiger roaring, dark purple lightning stripes, bristling cheek mane, long ringed tail",
+  "denoise": 0.55,
+  "desc": "side three-quarter view, whole body, centred, facing left: gaunt sinewy alien storm tiger snarling with bared fangs, small slit-pupil eyes, ridged hide with dark purple lightning stripes, purple quills along the spine, bristling cheek mane, long ringed whip tail, menacing predator, alien fauna",
   "colour": "golden yellow with dark purple stripes",
-  "ref_note": "Ralltiir tiger line art recoloured gold by hand, flipped, width 48 so it is not cut off; round 3"
+  "ref_note": "Ralltiir tiger line art recoloured gold, flipped; alien pass: PIL purple dorsal quills (owner: too friendly)",
+  "negative": "cute, chibi, kawaii, big eyes, smiling, happy, cartoon mascot, plush, toy"
 }
