@@ -14,7 +14,7 @@ Route131_Text_ReliPostBattle,RIA: The people of TIPOCA CITY live\nwith the sea a
 Route131_Text_IanPostBattle,"ISKO: You know how TIPOCA CITY is\na town on stilts?\pSo, wherever there is the sea,\nthat's a part of TIPOCA CITY!$",
 Route131_Text_TaliaPostBattle,There is an odd place nearby.\nThere's a huge spire out in the\lasteroids. Why don't you go look?$,
 Route132_Text_GilbertPostBattle,"TRAINERS travel from world to\nworld, so they must be fit, too.$",
-Route132_Text_KiyoIntro,I think about COMPANIONS all day long.\nHow could you possibly beat me?$,
+Route132_Text_KiyoIntro,Hrrrmm.\p(I think about COMPANIONS all day.\nHow could you possibly beat me?)$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route132_Text_KiyoPostBattle,"Urggh…\nYou're a COMPANION fanatic, aren't you?\pYou must think about COMPANIONS all\nday long, don't you?$",
 Route133_Text_BeckPostBattle,"I'd like to go back to ENDOR,\nbut I've grown to like this place, too.$",
 Route134_Text_JackPostBattle,I think COMPANIONS enjoy the fast\ncurrents around these parts.$,
@@ -99,7 +99,7 @@ Route132_Text_DanaPostBattle,"If I get swept away, I'll lose all my\nsense of pl
 Route132_Text_RonaldIntro,"Win or lose, you'll never know until\nyou try!$","reviewed, no change needed"
 Route132_Text_RonaldDefeat,Waah!\nI sank in defeat!$,"reviewed, no change needed"
 Route132_Text_RonaldPostBattle,I never battle when I know I'll win.\nI like to battle at the razor's edge of\lvictory and defeat!$,"reviewed, no change needed"
-Route132_Text_KiyoDefeat,I lose.\nI will concede defeat.$,"reviewed, no change needed"
+Route132_Text_KiyoDefeat,Hrrnnn.\p(I lose. I will concede defeat.)$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route132_Text_MakaylaIntro,"I'm always with my husband,\nbut I can win even without him.$","reviewed, no change needed"
 Route132_Text_MakaylaDefeat,"Oh, I guess I wasn't good enough.$","reviewed, no change needed"
 Route132_Text_MakaylaPostBattle,That young man over there looks just\nlike my husband when he was young.\pHe's making me blush!$,"reviewed, no change needed"
@@ -138,7 +138,7 @@ Route134_Text_LaurelDefeat,Oopsie!$,"reviewed, no change needed"
 Route134_Text_LaurelPostBattle,There's a collector who's after\nthe SCALES of HEARTFIN.$,reviewed AUTO draft
 Route134_Text_AlexIntro,"Okeydokey! That's enough rest, gang!\nIt's time for a match!$","reviewed, no change needed"
 Route134_Text_AlexDefeat,Tuckered out again…$,"reviewed, no change needed"
-Route134_Text_HitoshiIntro,You're a COMPANION TRAINER.\nNo need for words. We battle now.$,reviewed AUTO draft
+Route134_Text_HitoshiIntro,…Rrrrr.\p(You're a COMPANION TRAINER. No need\nfor words. We battle now.)$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route134_Text_HitoshiDefeat,… … … … … …\n… … … … … …$,"reviewed, no change needed"
 Route134_Text_HitoshiPostBattle,"It was I who challenged you, and yet\nI lost. I am deeply shamed…$","reviewed, no change needed"
 Route134_Text_AaronIntro,The savage tide in this area serves to\nmake us stronger than ever.$,"reviewed, no change needed"

@@ -23,9 +23,9 @@ MagmaHideout_4F_Text_MaxieDefeat,The Force is strong with you…\nStronger than 
 MagmaHideout_4F_Text_MaxieImGoingAfterGroudon,"VADER: There has to be some reason\nwhy GREATKRAYT fled…\pThat's what you're trying to say,\nisn't it?\p… … … … … …\n… … … … … …\pYou think I did not know that?\pWith GREATKRAYT gone, I have no\nfurther need for this volcano.\pI am going after GREATKRAYT.\nThis is where we part!$",
 MtPyre_1F_Text_TakeThisForYourOwnGood,All sorts of beings wander the slopes\nof the JEDHA TEMPLE…\pThere is no telling what may happen.\nTake this. It's for your own good.$,
 MtPyre_1F_Text_ComeToPayRespects,Did you come to pay your respects\nto the spirits of departed COMPANIONS?\pYou must care for your COMPANIONS a\nlot.$,
-MtPyre_2F_Text_MarkIntro,Hey! Are you searching for COMPANIONS?\nYou came along after me! You're rude!$,
+MtPyre_2F_Text_MarkIntro,Hey! Are you hunting COMPANIONS?\nYou followed my trail! You're rude!$,trainer recast 2026-11-01 (bible/RECAST.md)
 MtPyre_2F_Text_LeahPostBattle,Our family has been TRAINERS here\nsince my great-grandmother's time…\pIt is my duty to protect this\ntemple…$,
-MtPyre_3F_Text_WilliamIntro,The Force in this holy place\nhas elevated my psychic power!\pA mere child like you…\nYou dream of winning?$,
+MtPyre_3F_Text_WilliamIntro,"The Force is strong in this holy\nplace. I have walked it for years.\pCome, child. Show me what guides\nyou.$",trainer recast 2026-11-01 (bible/RECAST.md)
 MtPyre_3F_Text_GabriellePostBattle,COMPANIONS no longer of this world.\nCOMPANIONS that are with you now.\pAnd the COMPANIONS you will meet\nin the future…\pThey are all to be equally cherished.\nPlease remember that.$,
 MtPyre_3F_Text_GabriellePostRematch,COMPANIONS no longer of this world.\nCOMPANIONS that are with you now.\pAnd the COMPANIONS you will meet\nin the future…\pThey are all to be equally cherished.\nI see that you've remembered that.$,
 MtPyre_3F_Text_GabrielleRegister,"I would like to see your COMPANIONS\nwhen they grow up some more…\pPlease, I need to see your COMLINK.$",
@@ -100,10 +100,10 @@ MtPyre_2F_Text_DezPostBattle,"DIA: We're lovey-dovey, so we don't\ncare if we lo
 MtPyre_2F_Text_DezNotEnoughMons,"DIA: If you want to challenge us, you\nshould bring at least two COMPANIONS.\pMy boyfriend's strong.\nJust one COMPANION won't do at all.$",reviewed AUTO draft
 MtPyre_2F_Text_LeahIntro,You are an unfamiliar sight…\nDepart before anything befalls you!$,"reviewed, no change needed"
 MtPyre_2F_Text_LeahDefeat,Hmm…\nYou're durable.$,"reviewed, no change needed"
-MtPyre_2F_Text_ZanderIntro,Kiyaaaaah!\nI'm terrified!$,"reviewed, no change needed"
-MtPyre_2F_Text_ZanderDefeat,Nooooooo!\nI lost my wits!$,"reviewed, no change needed"
+MtPyre_2F_Text_ZanderIntro,Hwaaargh!\p(This old temple terrifies me!)$,trainer recast 2026-11-01 (bible/RECAST.md)
+MtPyre_2F_Text_ZanderDefeat,Rrrooo!\p(I lost my wits!)$,trainer recast 2026-11-01 (bible/RECAST.md)
 MtPyre_2F_Text_ZanderPostBattle,I get freaked out every time I see\nanything move…\pI shouldn't have come here to train…$,"reviewed, no change needed"
-MtPyre_3F_Text_WilliamDefeat,I drown in self-pity…$,"reviewed, no change needed"
+MtPyre_3F_Text_WilliamDefeat,"The Force will be with you,\nalways.$",trainer recast 2026-11-01 (bible/RECAST.md)
 MtPyre_3F_Text_WilliamPostBattle,"My psychic powers have surely\ngrown several times, but…$","reviewed, no change needed"
 MtPyre_3F_Text_KaylaIntro,"Ahahahaha!\pThis is no place for children, least\nof all you!$","reviewed, no change needed"
 MtPyre_3F_Text_KaylaDefeat,I lost that cleanly…$,"reviewed, no change needed"
@@ -112,8 +112,8 @@ MtPyre_3F_Text_GabrielleIntro,Why have you come here?$,"reviewed, no change need
 MtPyre_3F_Text_GabrielleDefeat,That was amazing!\nYou're a very special TRAINER.$,"reviewed, no change needed"
 MtPyre_3F_Text_GabrielleRematchIntro,"Oh, it's you…\pHave you come to show me your grown\nCOMPANION?$",reviewed AUTO draft
 MtPyre_3F_Text_GabrielleRematchDefeat,How amazing!\nYou are a special person.$,"reviewed, no change needed"
-MtPyre_5F_Text_AtsushiIntro,Teacher…\nPlease watch over my progress!$,"reviewed, no change needed"
-MtPyre_5F_Text_AtsushiDefeat,Teacher…\nPlease forgive me!$,"reviewed, no change needed"
+MtPyre_5F_Text_AtsushiIntro,Hrrrmmm…\p(Elders of the forest…\nplease watch over my progress!)$,trainer recast 2026-11-01 (bible/RECAST.md)
+MtPyre_5F_Text_AtsushiDefeat,Hrrnnn…\p(Elders… please forgive me!)$,trainer recast 2026-11-01 (bible/RECAST.md)
 MtPyre_5F_Text_AtsushiPostBattle,"Until I improve, my teacher, who rests\nhere, will never find true peace…$","reviewed, no change needed"
 MtPyre_4F_Text_TashaIntro,I love all things horrifying…\nIt's like a disease…\pWhen I'm here…\nI shiver with fear…$,"reviewed, no change needed"
 MtPyre_4F_Text_TashaDefeat,"Losing, I dislike…$","reviewed, no change needed"

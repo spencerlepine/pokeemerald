@@ -70,8 +70,8 @@ DewfordTown_Text_XHuhIThinkYIsCool,"Hmm…\n“{STR_VAR_2},” huh?\pBut persona
 DewfordTown_Text_HearOfAnyTrendsComeShareWithMe,"Well, if you hear of any happening new\ntrends, come share them with me, okay?$","reviewed, no change needed"
 DewfordTown_Text_YeahDefinitionOfInRightNow,"Yeah, absolutely right!\p“{STR_VAR_1}” is the\ndefinition of “in” right now.$","reviewed, no change needed"
 DewfordTown_Gym_Text_GymGuidePostVictory,"Whoah! It's turned too bright in here!\pYour future is bright, too!$","reviewed, no change needed"
-DewfordTown_Gym_Text_TakaoIntro,Might is right!\nCome on!$,"reviewed, no change needed"
-DewfordTown_Gym_Text_TakaoDefeat,Not enough power…$,"reviewed, no change needed"
+DewfordTown_Gym_Text_TakaoIntro,Rrraaaugh!\p(Might is right! Come on!)$,trainer recast 2026-11-01 (bible/RECAST.md)
+DewfordTown_Gym_Text_TakaoDefeat,Hrrnnn…\p(Not enough power…)$,trainer recast 2026-11-01 (bible/RECAST.md)
 DewfordTown_Gym_Text_TakaoPostBattle,Your skill overcame my strength!\nYour technique is commendable!$,"reviewed, no change needed"
 DewfordTown_Gym_Text_JocelynIntro,There's no need for TARFFUL to be\ninvolved!\pI'll crush you!$,reviewed AUTO draft
 DewfordTown_Gym_Text_JocelynDefeat,But… How?\nHow could I lose so easily?$,"reviewed, no change needed"
@@ -82,8 +82,8 @@ DewfordTown_Gym_Text_LilithIntro,Ufufu…\nAre you stumbling around in the dark?
 DewfordTown_Gym_Text_LilithDefeat,"Oh, you…\nI don't want to know you!$","reviewed, no change needed"
 DewfordTown_Gym_Text_LilithPostBattle,You deserve to stay lost and end up\nback at the entrance again!$,"reviewed, no change needed"
 DewfordTown_Gym_Text_BrendenDefeat,How'd this happen?\nIt's not like me to lose this way!$,"reviewed, no change needed"
-DewfordTown_Gym_Text_CristianIntro,"If you mean to pass, it has to be\nthrough me!$","reviewed, no change needed"
-DewfordTown_Gym_Text_CristianDefeat,Grrrrr!\nVastly overpowered!$,"reviewed, no change needed"
+DewfordTown_Gym_Text_CristianIntro,"Wrrrraaagh!\p(If you mean to pass, it has to be\nthrough me!)$",trainer recast 2026-11-01 (bible/RECAST.md)
+DewfordTown_Gym_Text_CristianDefeat,Grrrrr!\p(Vastly overpowered!)$,trainer recast 2026-11-01 (bible/RECAST.md)
 DewfordTown_Gym_Text_CristianPostBattle,You win!\nGo after that SHARD!$,reviewed AUTO draft
 DewfordTown_Gym_Text_ReceivedKnuckleBadge,{PLAYER} received the WROSHYR SHARD\nfrom TARFFUL.$,reviewed AUTO draft
 DewfordTown_Gym_Text_KnuckleBadgeInfoTakeThis,"The WROSHYR SHARD makes all\nCOMPANIONS up to Level 30, even those\lyou get in trades, obey without\lquestion.\pAnd, you'll be able to use the HM move\nFLASH outside of battle.\pIf you'd like, use this TECHNICAL\nMACHINE, too.$",reviewed AUTO draft
@@ -138,8 +138,8 @@ Route109_SeashoreHouse_Text_DwayneDefeated,"That was a hot battle!\nI can accept
 Route109_SeashoreHouse_Text_DwaynePostBattle,"Whenever I'm in MOS EISLEY, I enjoy\nhot battles and ice-cold JAWA JUICE!$",reviewed AUTO draft
 Route109_SeashoreHouse_Text_JohannaDefeated,That's hot!$,"reviewed, no change needed"
 Route109_SeashoreHouse_Text_JohannaPostBattle,"Whew, I'm all thirsty.\nMaybe I'll have a JAWA JUICE.$",reviewed AUTO draft
-Route109_SeashoreHouse_Text_SimonIntro,"I'm going to show you how great\nmy COMPANIONS are, but don't cry!$",reviewed AUTO draft
-Route109_SeashoreHouse_Text_SimonDefeated,"…I lost, but I won't cry…$","reviewed, no change needed"
+Route109_SeashoreHouse_Text_SimonIntro,"Rrrip!\p(I'm going to show you how great my\nCOMPANIONS are, but don't cry!)$",trainer recast 2026-11-01 (bible/RECAST.md)
+Route109_SeashoreHouse_Text_SimonDefeated,"Mrrrow…\p(…I lost, but I won't cry…)$",trainer recast 2026-11-01 (bible/RECAST.md)
 Route105_Text_FosterIntro,There's supposed to be a mystical\nrock around here.\lDo you know anything about it?$,"reviewed, no change needed"
 Route105_Text_FosterDefeated,"I was thinking too much about that\nrock, while my COMPANION remained weak…$",reviewed AUTO draft
 Route105_Text_FosterPostBattle,I can spend hours and hours staring\nat a nice rock without growing bored.$,"reviewed, no change needed"
@@ -204,7 +204,7 @@ Route107_Text_RayIntro,"ROK: We always battle COMPANION,\nme and my sister.\pI a
 Route107_Text_RayDefeated,"ROK: Wowee, you're at a higher level\nthan us!$",reviewed AUTO draft
 Route107_Text_RayPostBattle,"ROK: My sister gave me my COMPANION.\nI raised it, and now it's my important\lpartner!$",reviewed AUTO draft
 Route107_Text_RayNotEnoughPokemon,"ROK: If you want to battle us,\ngo bring some more COMPANIONS!$",reviewed AUTO draft
-Route107_Text_CamronIntro,"I'm in the middle of a triathlon,\nbut I'm nowhere near tired!$","reviewed, no change needed"
+Route107_Text_CamronIntro,"I'm in the middle of a swoop rally,\nbut I'm nowhere near tired!$",trainer recast 2026-11-01 (bible/RECAST.md)
 Route107_Text_CamronDefeated,That exhausted me…$,"reviewed, no change needed"
 Route107_Text_CamronPostBattle,I still have swimming and running left\nto do after this.\pAm I going to be okay?$,"reviewed, no change needed"
 Route108_Text_JeromeIntro,My dream is to swim the world's seven\nseas!$,"reviewed, no change needed"
@@ -241,25 +241,25 @@ Route109_Text_HueyPostBattle,In the best port was the best\nTRAINER…$,"reviewe
 Route109_Text_EdmondIntro,Urrrrppp…\nBattle? With me?$,"reviewed, no change needed"
 Route109_Text_EdmondDefeated,Urp… Ooooooohhhhhh…\nUrrrrpppp…$,"reviewed, no change needed"
 Route109_Text_EdmondPostBattle,"I'm usually stronger than this!\nI'm just seasick as a dog!\pI'm a SAILOR, but…$","reviewed, no change needed"
-Route109_Text_RickyIntro,I'm thirsty… I could go for a JAWA JUICE\nat the SEASHORE HOUSE…$,reviewed AUTO draft
-Route109_Text_RickyDefeated,Groan…$,"reviewed, no change needed"
+Route109_Text_RickyIntro,Mrrrp…\p(I'm thirsty… I could go for a JAWA\nJUICE at the SEASHORE HOUSE…)$,trainer recast 2026-11-01 (bible/RECAST.md)
+Route109_Text_RickyDefeated,Hrrrooo…\p(Groan…)$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route109_Text_RickyPostBattle,I'm getting famished… My inner tube\nlooks like a giant doughnut…$,"reviewed, no change needed"
 Route109_Text_RickyRegister,Will you have another match with me\nwhen I'm not all thirsty?$,"reviewed, no change needed"
-Route109_Text_RickyRematchIntro,"I'm hungry, but I've got enough pep in\nme for a battle!$","reviewed, no change needed"
-Route109_Text_RickyRematchDefeated,I lost…\nIt's because I'm hungry…$,"reviewed, no change needed"
+Route109_Text_RickyRematchIntro,"Rrrip!\p(I'm hungry, but I've got enough pep\nin me for a battle!)$",trainer recast 2026-11-01 (bible/RECAST.md)
+Route109_Text_RickyRematchDefeated,Mrrrow…\p(I lost… It's because I'm hungry…)$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route109_Text_RickyRematchPostBattle,"When you eat on a beach, everything\nseems to taste a little better.$","reviewed, no change needed"
-Route109_Text_LolaIntro,Doesn't a beach umbrella look like\na giant flower?$,"reviewed, no change needed"
-Route109_Text_LolaDefeated,Mommy!$,"reviewed, no change needed"
+Route109_Text_LolaIntro,Mrrp!\p(Doesn't a wroshyr leaf look like\na giant umbrella?)$,trainer recast 2026-11-01 (bible/RECAST.md)
+Route109_Text_LolaDefeated,Mrrraaa!\p(Mommy!)$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route109_Text_LolaPostBattle,"If you look at the beach from the sky,\nit looks like a big flower garden!$","reviewed, no change needed"
 Route109_Text_LolaRegister,Me?\nI'm here every day!$,"reviewed, no change needed"
-Route109_Text_LolaRematchIntro,I'm not losing to you again!\nThat's why I have my inner tube!$,"reviewed, no change needed"
-Route109_Text_LolaRematchDefeated,Mommy!$,"reviewed, no change needed"
+Route109_Text_LolaRematchIntro,Rrrip!\p(I'm not losing to you again! That's\nwhy I have my log float!)$,trainer recast 2026-11-01 (bible/RECAST.md)
+Route109_Text_LolaRematchDefeated,Mrrraaa!\p(Mommy!)$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route109_Text_LolaRematchPostBattle,"If I have an inner tube, me and my\nCOMPANION's cuteness goes way up!$",reviewed AUTO draft
-Route109_Text_AustinaIntro,"I can't swim without my inner tube,\nbut I won't lose at COMPANION!$",reviewed AUTO draft
-Route109_Text_AustinaDefeated,Did I lose because I have an inner\ntube?$,"reviewed, no change needed"
+Route109_Text_AustinaIntro,"Yip!\p(I can't swim without my log float,\nbut I won't lose a battle!)$",trainer recast 2026-11-01 (bible/RECAST.md)
+Route109_Text_AustinaDefeated,Mrrrp?\p(Did I lose because of my log\nfloat?)$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route109_Text_AustinaPostBattle,My inner tube is a fashion item.\nI can't be seen without it.$,"reviewed, no change needed"
-Route109_Text_GwenIntro,"Hi, big TRAINER.\nWill you battle with me?$","reviewed, no change needed"
-Route109_Text_GwenDefeated,"Oh, you're strong.$","reviewed, no change needed"
+Route109_Text_GwenIntro,"Mrrp!\p(Hi, big TRAINER.\nWill you battle with me?)$",trainer recast 2026-11-01 (bible/RECAST.md)
+Route109_Text_GwenDefeated,"Mrrow.\p(Oh, you're strong.)$",trainer recast 2026-11-01 (bible/RECAST.md)
 Route109_Text_GwenPostBattle,How did you get to be so strong?$,"reviewed, no change needed"
 Route109_Text_CarterIntro,Wahahah! This dude's going to catch\nhimself a big one!$,"reviewed, no change needed"
 Route109_Text_CarterDefeated,This dude just lost one…$,"reviewed, no change needed"
@@ -268,13 +268,13 @@ Route109_Text_PaulIntro,"PAZ: Well, this is a mood-breaker.\pI wish you wouldn't
 Route109_Text_PaulDefeated,"PAZ: Well, I give up.$",reviewed AUTO draft
 Route109_Text_PaulPostBattle,"PAZ: Well, don't tell anyone that\nwe're here.\lThis is just our private world of two!$",reviewed AUTO draft
 Route109_Text_PaulNotEnoughPokemon,"PAZ: We're totally, deeply in love. That's\nwhy we make our COMPANION battle\ltogether.$",reviewed AUTO draft
-Route109_Text_MelDefeated,"MERI: We lost, and it's my fault!\nPAUL will hate me!$",reviewed AUTO draft
+Route109_Text_MelDefeated,"MERI: We lost, and it's my fault!\nPAZ will hate me!$",trainer recast 2026-11-01 (bible/RECAST.md)
 Route109_Text_MelPostBattle,"MERI: Um, PAUL, are you angry with me?\nPlease don't be angry.$",reviewed AUTO draft
-Route109_Text_ChandlerIntro,Tadaah! See?\nMy inner tube's round!$,"reviewed, no change needed"
-Route109_Text_ChandlerDefeated,"Oh, oh!\nToo bad!$","reviewed, no change needed"
+Route109_Text_ChandlerIntro,Mrrp! Tadaah!\p(See? I carved my own log float!)$,trainer recast 2026-11-01 (bible/RECAST.md)
+Route109_Text_ChandlerDefeated,"Mrrow!\p(Oh, oh! Too bad!)$",trainer recast 2026-11-01 (bible/RECAST.md)
 Route109_Text_ChandlerPostBattle,"After I showed you my round inner\ntube, too…$","reviewed, no change needed"
-Route109_Text_HaileyIntro,"I can't swim, so I'm pretending\nto swim.$","reviewed, no change needed"
-Route109_Text_HaileyDefeated,I thought so!\nI didn't think we could win.$,"reviewed, no change needed"
+Route109_Text_HaileyIntro,"Yip, yip!\p(I can't swim, so I'm pretending\nto swim.)$",trainer recast 2026-11-01 (bible/RECAST.md)
+Route109_Text_HaileyDefeated,Mrrrow…\p(I knew it! I didn't think we\ncould win.)$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route109_Text_HaileyPostBattle,"When I learn how to swim, I think\nmy COMPANION will become tougher.$",reviewed AUTO draft
 Route109_Text_ElijahIntro,"For a guy as macho as me, this kind\nof COMPANION is the perfect match!$",reviewed AUTO draft
 Route109_Text_ElijahDefeated,"I'm cool even in defeat, hey?$","reviewed, no change needed"

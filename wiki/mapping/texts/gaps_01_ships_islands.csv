@@ -1,6 +1,6 @@
 text_id,sw_text_raw,notes
 AbandonedShip_CaptainsOffice_Text_ThisIsSSCactus,This ship was the REPUBLIC cruiser\nTIDE RUNNER. It's from the Clone Wars.$,S.S. CACTUS -> REPUBLIC cruiser TIDE RUNNER (Republic Wreck)
-AbandonedShip_Corridors_1F_Text_CharlieIntro,What's so funny about having my inner\ntube aboard the wreck?$,
+AbandonedShip_Corridors_1F_Text_CharlieIntro,Rrrip!\p(What's so funny about bringing my\nlog float aboard the wreck?)$,trainer recast 2026-11-01 (bible/RECAST.md)
 AbandonedShip_Corridors_B1F_Text_DuncanIntro,"When we go out to sea, we SAILORS\nalways bring our COMPANIONS.\lHow about a quick battle?$",
 AbandonedShip_Corridors_B1F_Text_YayItsAShip,Yay!\nIt's a starship!$,
 AbandonedShip_Rooms2_1F_Text_KiraPostRematch,KEZA: We're not leaving until we raise\nour COMPANIONS some more and we find\lthe treasures here!$,
@@ -21,7 +21,7 @@ SSTidalCorridor_Text_BrineyWelcomeAboard,"HAN: Welcome aboard, {PLAYER}{KUN}!\pT
 SSTidalCorridor_Text_Peeko,CHEWIE: Rrrwaaaghh!$,"Chewbacca is a person, not a Wingull"
 SSTidalCorridor_Text_ScottBattleFrontierInvite,"LANDO: Well, hi, hi!\n{PLAYER}{KUN}, {PLAYER}{KUN}!\pSomething's come up, so I have to\ndisembark, but am I glad to see you!\pCongratulations, ILUM CHAMPION!\pThere's a place I'd like to invite\nsomeone like you.\pIt's the…\nGRAND ARENA!\pWhat's the place like?\nYou'll understand when you see it!\pI've spoken with the ship's CAPTAIN\nabout this.\pThe next time you take the starliner,\nyou should be able to fly to\lthe GRAND ARENA.\pOkay, {PLAYER}{KUN}, I'll be waiting for you\nat the GRAND ARENA!$",
 SSTidalLowerDeck_Text_LeonardIntro,This is the bottom of the ship's hull.\nThere's plenty of room.\lIt'll be all right for a battle.$,
-SSTidalRooms_Text_ColtonIntro,"I often fly to CLOUD CITY.\pI enjoy attending SHOWCASES,\nyou see.$",
+SSTidalRooms_Text_ColtonIntro,"I often fly to MOS ESPA.\pI never miss the BOONTA EVE CLASSIC,\nyou see.$",trainer recast 2026-11-01 (bible/RECAST.md)
 SSTidalRooms_Text_ColtonPostBattle,I get so excited imagining what kinds\nof COMPANIONS I'll see in the next\lSHOWCASE. The anticipation thrills!$,
 SSTidalRooms_Text_GarretPostBattle,Perhaps I shall get Father to acquire\na yacht for me.\lA star yacht for me and COMPANIONS!$,
 SSTidalRooms_Text_NaomiPostBattle,"A galaxy cruise on a luxury liner has\nits charms, I must say…\pBut, I will admit there is an appealing\nside to touring the OUTER RIM like this.$",
@@ -31,7 +31,7 @@ SSTidalRooms_Text_JedPostBattle,JOSS: It's the first time our lovey-\ndovey powe
 FarawayIsland_Entrance_Text_SailorReturn,CAPTAIN HAN can be so maddeningly\nfickle…\pDo you want to return to CLOUD CITY?$,
 FarawayIsland_Interior_Text_Mew,Myuu…$,
 AbandonedShip_CaptainsOffice_Text_OhCanYouDeliverScanner,"Oh! That's a DATA SCANNER!\pListen, can I get you to deliver that\nto RIC OLIé?\pI want to investigate this ship a\nlittle more.$",reviewed AUTO draft
-AbandonedShip_Corridors_1F_Text_CharlieDefeat,"Whoa, you overwhelmed me!$","reviewed, no change needed"
+AbandonedShip_Corridors_1F_Text_CharlieDefeat,"Mrrraa!\p(Whoa, you overwhelmed me!)$",trainer recast 2026-11-01 (bible/RECAST.md)
 AbandonedShip_Corridors_1F_Text_CharliePostBattle,It's not easy throwing CAPTURE PODS\nwhile hanging on to an inner tube!$,reviewed AUTO draft
 AbandonedShip_Corridors_1F_Text_IsntItFunHere,Isn't it fun here?\nI get excited just being here!$,"reviewed, no change needed"
 AbandonedShip_Corridors_B1F_Text_DuncanDefeat,"Whoops, I'm sunk!$","reviewed, no change needed"
@@ -59,8 +59,8 @@ AbandonedShip_Rooms2_1F_Text_DanRematchNotEnoughMons,DOV: You don't even have tw
 AbandonedShip_Rooms2_1F_Text_KiraRematchIntro,"KEZA: Oh? We meet again!\pJust like us, you still haven't given up\nsearching for treasures, have you?\pWant to make it so the loser has\nto give up searching?$",reviewed AUTO draft
 AbandonedShip_Rooms2_1F_Text_KiraRematchDefeat,"KEZA: Oh, we lost again…$",reviewed AUTO draft
 AbandonedShip_Rooms2_1F_Text_KiraRematchNotEnoughMons,"KEZA: Oh, you don't have two\nCOMPANIONS? We'll have to battle some\lother time!$",reviewed AUTO draft
-AbandonedShip_Rooms2_1F_Text_JaniIntro,"I'm not good at swimming,\nbut I am good at battles!$","reviewed, no change needed"
-AbandonedShip_Rooms2_1F_Text_JaniDefeat,Oops.\nThat didn't go very well.$,"reviewed, no change needed"
+AbandonedShip_Rooms2_1F_Text_JaniIntro,"Mrrrp!\p(I'm not good at swimming,\nbut I am good at battles!)$",trainer recast 2026-11-01 (bible/RECAST.md)
+AbandonedShip_Rooms2_1F_Text_JaniDefeat,Mrrrow…\p(Oops. That didn't go very well.)$,trainer recast 2026-11-01 (bible/RECAST.md)
 AbandonedShip_Rooms2_1F_Text_JaniPostBattle,Walking around barefoot in this ship\nis kind of gross.$,"reviewed, no change needed"
 AbandonedShip_Rooms2_1F_Text_GarrisonIntro,Strength and compassion…\nThose are a TRAINER's treasures!$,"reviewed, no change needed"
 AbandonedShip_Rooms2_1F_Text_GarrisonDefeat,"Ah, there is something about you\nthat sparkles.$","reviewed, no change needed"
@@ -91,7 +91,7 @@ SSTidalRooms_Text_TakeRestOnBed,There's a bed…\nLet's take a rest.$,"reviewed,
 SSTidalRooms_Text_ColtonDefeat,That was an enjoyable match!$,"reviewed, no change needed"
 SSTidalRooms_Text_MicahIntro,Are your friends strong?$,"reviewed, no change needed"
 SSTidalRooms_Text_MicahDefeat,"Your friends are, indeed, strong.$","reviewed, no change needed"
-SSTidalRooms_Text_ThomasIntro,Child…\nDid you knock on the door?$,"reviewed, no change needed"
+SSTidalRooms_Text_ThomasIntro,"Child…\nDid you knock on the door?\pI am the Governor of NABOO,\nyou know.$",trainer recast 2026-11-01 (bible/RECAST.md)
 SSTidalRooms_Text_ThomasDefeat,A loss is to be accepted without haste\nor panic.$,"reviewed, no change needed"
 SSTidalRooms_Text_ThomasPostBattle,To be never ruffled in any situation is\nthe GENTLEMAN's code of conduct.$,"reviewed, no change needed"
 SSTidalRooms_Text_JedDefeat,JOSS: Sigh…$,reviewed AUTO draft

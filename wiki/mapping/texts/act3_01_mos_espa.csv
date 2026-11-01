@@ -108,8 +108,8 @@ MauvilleCity_Gym_Text_BenDefeat,It's no fun to lose…$,"reviewed, no change nee
 MauvilleCity_Gym_Text_BenPostBattle,WATTO says he likes setting up\nlittle traps with switches.$,reviewed AUTO draft
 MauvilleCity_Gym_Text_VivianIntro,"With my charm and my COMPANION's moves,\nyou'll be shocked!$",reviewed AUTO draft
 MauvilleCity_Gym_Text_VivianDefeat,I'm shocked by your power!$,"reviewed, no change needed"
-MauvilleCity_Gym_Text_AngeloIntro,I love shiny things!$,"reviewed, no change needed"
-MauvilleCity_Gym_Text_AngeloDefeat,Oh…\nMy eyes are frazzled…$,"reviewed, no change needed"
+MauvilleCity_Gym_Text_AngeloIntro,Teeha! Shiny!\p(I love shiny things! WATTO pays\nme in shiny bits.)$,trainer recast 2026-11-01 (bible/RECAST.md)
+MauvilleCity_Gym_Text_AngeloDefeat,Ee chee…\p(My eyes are frazzled…)$,trainer recast 2026-11-01 (bible/RECAST.md)
 MauvilleCity_Gym_Text_WattsonDefeat,"Wahahahah!\nFine, I lost!\pYou ended up giving me a thrill!\nTake this SHARD!$",reviewed AUTO draft
 MauvilleCity_Gym_Text_ReceivedDynamoBadge,{PLAYER} received the SPARK SHARD\nfrom WATTO.$,reviewed AUTO draft
 MauvilleCity_Gym_Text_ExplainShockWave,That TM34 there contains FORCE BOLT.\pIt's a trustworthy move that never\nmisses! You can count on it!\p… … … … … …$,reviewed AUTO draft

@@ -69,7 +69,7 @@ Route125_Text_ErnestIntro,"Ahoy! I'm a buff, tough SAILOR!\nI've braved the gala
 Route125_Text_ErnestPostBattle,"The meltwater rises and falls inside\nthe WAMPA CAVE.\pBy the way, it's about six hours from\nhigh water to low water. Did you know?$",Shoal Cave tides = Hoth meltwater (same timer)
 Route125_Text_ErnestRematchPostBattle,"The WAMPA CAVE…\pThere are places you can and can't\nget to depending on the rise and fall\lof the meltwater.\pBy the way, it's about six hours from\nhigh water to low water. Don't forget!$",
 Route125_Text_KimPostBattle,"KAI: A funny old man lives in the\nWAMPA CAVE, doesn't he?\pLet's go see him, ISRA!$",
-Route125_Text_IrisIntro,"ISRA: KAI, can you tell me what we're\nlooking for out here?$",
+Route125_Text_IrisIntro,R4: Bwee-doo-woo?\p(R4 asks KAI what they're looking\nfor out here.)$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route125_Text_IrisPostBattle,"ISRA: KAI, are we really going into\nthe WAMPA CAVE?\lWe'll freeze.$",
 Route125_Text_SharonIntro,How would you like to take on the\nWATER-type COMPANIONS I raised?$,
 ShoalCave_LowTideLowerRoom_Text_CanOvercomeColdWithFocus,"The penetrating cold of\nHOTH is an impediment to training.\pBut with focus, one can overcome!\pWith this FOCUS BAND, buckle down and\nwithstand the cold!$",
@@ -222,7 +222,7 @@ Route124_Text_ChadIntro,Fufufufu… I dive deep underwater\nto go deep under cov
 Route124_Text_ChadDefeat,"Glub, glub, glub…\nI'm sinking…$","reviewed, no change needed"
 Route124_Text_ChadPostBattle,I have it on good authority that\nthere's a DIVE spot around here.\pIt gives me the urge to go deep\nagain…$,"reviewed, no change needed"
 Route124_Text_LilaIntro,"LISS: Sigh…\pHere I am in the sea, but who's with me?\nMy little brother!\pLet's battle so I won't have to dwell\non that!$",reviewed AUTO draft
-Route124_Text_LilaDefeat,LISS: ROY! It's your fault we lost!\nYou're in for it later!$,reviewed AUTO draft
+Route124_Text_LilaDefeat,LISS: RAN! It's your fault we lost!\nYou're in for it later!$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route124_Text_LilaPostBattle,"LISS: Sigh…\pIf only it wasn't my little brother\nnext to me, but a nice boyfriend…$",reviewed AUTO draft
 Route124_Text_LilaNotEnoughMons,LISS: You're planning to battle us?\nNot unless you have two COMPANIONS.$,reviewed AUTO draft
 Route124_Text_RoyIntro,RAN: My big sister is tough at\nCOMPANION!\pDon't cry when you lose!$,reviewed AUTO draft
@@ -231,7 +231,7 @@ Route124_Text_RoyPostBattle,RAN: My big sister is really scary\nwhen she gets an
 Route124_Text_LilaRoyRegister,"RAN: Will you battle with us again?\nBut take it easy next time, okay?$",reviewed AUTO draft
 Route124_Text_RoyNotEnoughMons,"RAN: Did you want to battle us?\nBring two COMPANIONS, then.$",reviewed AUTO draft
 Route124_Text_LilaRematchIntro,"LISS: Sigh…\pHere I am in the sea, but who's with me?\nMy little brother!\pOh, hi, it's been a while. Let's battle\nso I won't have to dwell on things!$",reviewed AUTO draft
-Route124_Text_LilaRematchDefeat,LISS: ROY!\nIt's your fault we lost again!\pWe're having a training session later!$,reviewed AUTO draft
+Route124_Text_LilaRematchDefeat,LISS: RAN!\nIt's your fault we lost again!\pWe're having a training session later!$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route124_Text_LilaPostRematch,"LISS: Sigh…\pIf I had a nice boyfriend, we'd beat\nanyone with lovely combinations…$",reviewed AUTO draft
 Route124_Text_LilaRematchNotEnoughMons,LISS: You're planning to battle us?\nNot unless you have two COMPANIONS.$,reviewed AUTO draft
 Route124_Text_RoyRematchIntro,"RAN: If we lose, I'll catch heck.\nI'm going to go totally all out!$",reviewed AUTO draft
@@ -261,8 +261,8 @@ Route125_Text_ErnestRematchDefeat,I couldn't win!\nI flat out couldn't win!$,"re
 Route125_Text_KimIntro,"KAI: A funny old man lives in the\nWAMPA CAVE. Someone told me.\lAre you going to see him, too?$",reviewed AUTO draft
 Route125_Text_KimDefeat,KAI: I thought we would win.$,reviewed AUTO draft
 Route125_Text_KimNotEnoughMons,"KAI: No, no, no! You need two\nCOMPANIONS, or it's just no good!$",reviewed AUTO draft
-Route125_Text_IrisDefeat,"ISRA: Oh, we came sort of close.$",reviewed AUTO draft
-Route125_Text_IrisNotEnoughMons,"ISRA: Oh, we could never, ever do\nanything like a 2-on-1 battle.$",reviewed AUTO draft
+Route125_Text_IrisDefeat,R4: Bweep-bweep.\p(R4 says they came sort of close.)$,trainer recast 2026-11-01 (bible/RECAST.md)
+Route125_Text_IrisNotEnoughMons,R4: Bwoo! Bwee-boo!\p(R4 refuses to fight a 2-on-1\nbattle.)$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route125_Text_PresleyIntro,Why would a BIRDKEEPER like me\ncome out to the sea?$,"reviewed, no change needed"
 Route125_Text_PresleyDefeat,Okay.\nI'll tell you why I'm here.$,"reviewed, no change needed"
 Route125_Text_PresleyPostBattle,I put a message in a bottle and put\nit out to sea.\pI'm sure that a girl SWIMMER will\nfind it!$,"reviewed, no change needed"

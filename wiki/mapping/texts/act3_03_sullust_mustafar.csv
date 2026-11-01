@@ -22,7 +22,7 @@ MeteorFalls_1F_1R_Text_ArchieYesNoTellingWhatMagmaWillDo,"JABBA: Yes, yes, we mu
 MeteorFalls_1F_1R_Text_ArchieFarewell,"JABBA: {PLAYER}, you should keep\nan eye out for the EMPIRE, too.\pFarewell!$",
 MeteorFalls_1F_1R_Text_MeetProfCozmo,"I… I'm TIEN…\nI'm a PROFESSOR…\pThe EMPIRE asked me to guide them\nto STARFALL CAVERN…\pBut they tricked me.\nThey even took my METEORITE away…\pAnd then another bunch,\nthe CARTEL, showed up.\pAfter that…\nI don't understand any of it.\pBut the EMPIRE…\pWhat are they going to do with that\nMETEORITE at MUSTAFAR PEAK?$",
 MeteorFalls_1F_1R_Text_WhatsTeamMagmaDoingAtMtChimney,DR. TIEN: But the EMPIRE…\pWhat are they going to do with that\nMETEORITE at MUSTAFAR PEAK?$,
-MeteorFalls_1F_2R_Text_NicolasIntro,This is where we DRAGON users do our\ntraining.\pThey say a JEDI once trained here.\nNow do you see how special it is here?$,
+MeteorFalls_1F_2R_Text_NicolasIntro,This is where we NIGHTBROTHERS train\nour great beasts.\pThey say a JEDI once trained here.\nNow do you see how special it is here?$,trainer recast 2026-11-01 (bible/RECAST.md)
 MeteorFalls_1F_2R_Text_NicolasPostBattle,The road ahead remains long and harsh.\pWhen will my COMPANIONS and I become\nthe best?$,
 MeteorFalls_1F_2R_Text_JohnIntro,JARO: We've always battled COMPANIONS\ntogether as a twosome.\lWe've confidence in ourselves.$,
 MeteorFalls_1F_2R_Text_JohnRematchIntro,JARO: We've always battled COMPANIONS\ntogether as a twosome.\lWe've confidence in ourselves.$,
@@ -102,7 +102,7 @@ FallarborTown_MoveRelearnersHouse_Text_HandedOverHeartScale,{PLAYER} handed over
 FallarborTown_MoveRelearnersHouse_Text_ComeBackWithHeartScale,"If your COMPANIONS need to learn a\nmove, come back with a HEART SCALE.$",reviewed AUTO draft
 FallarborTown_MoveRelearnersHouse_Text_CantTeachEgg,Hunh? There isn't a single move that\nI can teach an EGG.$,"reviewed, no change needed"
 FallarborTown_PokemonCenter_1F_Text_PlantHardyTrees,"In the fields of INYUSU TOR, we plant\nseedlings of hardy trees that thrive\leven in volcanic ash.$",reviewed AUTO draft
-JaggedPass_Text_EricIntro,MUSTAFAR PEAK's ASHEN PASS…\pNow this is what I've always wanted\nin a mountain.\pThis jagged bumpiness…\nIt rocks my soul!$,reviewed AUTO draft
+JaggedPass_Text_EricIntro,"MUSTAFAR PEAK's ASHEN PASS…\pNow this is what I've always wanted\nin a dig site.\pThis jagged, ore-rich rock…\nIt rocks my soul!$",trainer recast 2026-11-01 (bible/RECAST.md)
 JaggedPass_Text_EricDefeat,Losing left me bitter!$,"reviewed, no change needed"
 JaggedPass_Text_EricPostBattle,"Yes, I did lose at COMPANION…\pBut, when it comes to the love of\nthe mountains, I have you beat!$",reviewed AUTO draft
 JaggedPass_Text_DianaIntro,This place isn't your casual hike.\nIt's not suited for a picnic.$,"reviewed, no change needed"
@@ -121,7 +121,7 @@ JaggedPass_Text_GruntIntro,Wah!\nWhat are you doing here?\pWhat am I doing in a 
 JaggedPass_Text_GruntDefeat,Urrrgh…\pI should've ducked into our HIDEOUT\nright away…$,"reviewed, no change needed"
 JaggedPass_Text_GoWhereverYouWant,"Okay, oh-kay!\nI admit it--you're strong!\pDon't worry about me.\nGo wherever you want!$","reviewed, no change needed"
 JaggedPass_Text_BoulderShakingInResponseToEmblem,Oh! This boulder is shaking in response\nto the CODE CYLINDER!$,reviewed AUTO draft
-JaggedPass_Text_JulioIntro,Aiyeeh! It's awfully scary to shoot\ndown the mountain in one go!$,"reviewed, no change needed"
+JaggedPass_Text_JulioIntro,Aiyeeh! It's awfully scary to shoot\ndown the mountain on a swoop!$,trainer recast 2026-11-01 (bible/RECAST.md)
 JaggedPass_Text_JulioDefeat,I feel like I'm falling apart…$,"reviewed, no change needed"
 JaggedPass_Text_AutumnIntro,I climb this hill every day.\nI have confidence in my strength!$,"reviewed, no change needed"
 JaggedPass_Text_AutumnDefeat,Hmm…\nWhat went wrong?$,"reviewed, no change needed"
@@ -159,7 +159,7 @@ LavaridgeTown_Gym_B1F_Text_JacePostBattle,"The way the battling spirit burns\nwi
 LavaridgeTown_Gym_B1F_Text_JeffIntro,See how the flames blaze wildly?\nThey flare in anticipation of my win!$,"reviewed, no change needed"
 LavaridgeTown_Gym_B1F_Text_JeffDefeat,Something didn't go right.$,"reviewed, no change needed"
 LavaridgeTown_Gym_B1F_Text_JeffPostBattle,"Well, so what? I say so what?\nI can walk on hot coals barefoot!\p…Don't even think about trying it!$","reviewed, no change needed"
-LavaridgeTown_Gym_B1F_Text_EliIntro,"As much as I love mountains,\nI especially love volcanoes.$","reviewed, no change needed"
+LavaridgeTown_Gym_B1F_Text_EliIntro,"As much as I love digging,\nI especially love lava mines.$",trainer recast 2026-11-01 (bible/RECAST.md)
 LavaridgeTown_Gym_B1F_Text_EliDefeat,"Well, it seems to me I lost without\never being in control.$","reviewed, no change needed"
 LavaridgeTown_Gym_B1F_Text_EliPostBattle,I stay here because I became a fan\nof SABINE's power.\pHehehehe.$,reviewed AUTO draft
 LavaridgeTown_Gym_1F_Text_ReceivedHeatBadge,{PLAYER} received the MAGMA SHARD\nfrom SABINE.$,reviewed AUTO draft
@@ -226,7 +226,7 @@ MtChimney_Text_MelissaIntro,"I've got the fire in me, baby.\nI can't stand it! I
 MtChimney_Text_MelissaDefeat,"Ooh, that was a scorching-hot match!$","reviewed, no change needed"
 MtChimney_Text_MelissaPostBattle,"The heat of MUSTAFAR PEAK warms\nme up, baby!$",reviewed AUTO draft
 MtChimney_Text_SheilaDefeat,The way you battle…\nIt's like a MUSTAFAR PEAK eruption!$,reviewed AUTO draft
-MtChimney_Text_SawyerIntro,This is one fine mountain! Plenty of\nhot people around for company!$,"reviewed, no change needed"
+MtChimney_Text_SawyerIntro,"Fine work camp, this! Plenty of\nhot folks around for company!$",trainer recast 2026-11-01 (bible/RECAST.md)
 MtChimney_Text_SawyerDefeat,"Oh, you're a real firebrand, too!$","reviewed, no change needed"
 MtChimney_Text_SawyerPostBattle,I think I need a dip in PIRIN\nHOT SPRING with the locals!$,reviewed AUTO draft
 MtChimney_Text_SawyerRegister,I like little fireballs like you.\nLet me register you in my COMLINK.$,reviewed AUTO draft

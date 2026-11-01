@@ -4,9 +4,9 @@ PetalburgWoods_Text_HandOverThosePapers,You! ORGANA ENGINEER!\pHand over those s
 PetalburgWoods_Text_YouveGotSomeNerve,"Grrr… You've got some nerve\nmeddling with THE CARTEL!\lCome on and battle me again!\pI wish I could say that, but I'm out of\nCOMPANIONS…\pAnd, hey, we of THE CARTEL are also\nafter something in BESTINE.\pI'll let you go today!$",
 PetalburgWoods_Text_ThatWasAwfullyClose,"Whew…\nThat was awfully close!\pThanks to you, he didn't rob me of\nthese important schematics.\pI know, I'll give you a DURASTEEL POD as\nmy thanks!$",
 PetalburgWoods_Text_TeamAquaAfterSomethingInRustboro,"Didn't that CARTEL thug say\nthey were after something in\lBESTINE, too?$",
-PetalburgWoods_Text_GoBugPokemonTeam,"I caught a whole bunch of COMPANIONS!\pGo, go, go!\nMy BUG COMPANION team!$",
+PetalburgWoods_Text_GoBugPokemonTeam,"Utinni!\p(I scavenged a whole bunch of\nCOMPANIONS!)\p(Go, go, go!\nMy scrap-heap team!)$",trainer recast 2026-11-01 (bible/RECAST.md)
 PetalburgWoods_Text_ImOutOfPokeBalls,I caught a bunch of COMPANIONS.\nNow I'm out of CAPTURE PODS.$,
-PetalburgWoods_Text_InstantlyPopularWithBugPokemon,"If you take BUG COMPANIONS to class,\nyou get to be instantly popular!$",
+PetalburgWoods_Text_InstantlyPopularWithBugPokemon,"Utinni!\p(Bring good salvage to the clan\nmeet, and you're instantly popular!)$",trainer recast 2026-11-01 (bible/RECAST.md)
 PetalburgWoods_Text_IWantRematch1,I want a rematch when my BUG\nCOMPANIONS grow up!\pI'm registering you in my COMLINK!$,
 PetalburgWoods_Text_IWantRematch2,I want a rematch when my BUG\nCOMPANIONS grow up!\pI'm registering you in my COMLINK!$,
 PetalburgWoods_Text_IveBeenTrainingHard,"You get to be popular if you have\nstrong COMPANIONS, right?\lSo, I've been training hard.$",
@@ -123,11 +123,11 @@ PetalburgWoods_Text_NoOneCrossesTeamAqua,"Hunh? What do you think you're doing?\
 PetalburgWoods_Text_YoureKiddingMe,You're kidding me! You're tough!$,"reviewed, no change needed"
 PetalburgWoods_Text_ICantBeWastingTime,Uh-oh! It's a crisis!\nI can't be wasting time!$,"reviewed, no change needed"
 PetalburgWoods_Text_YoureLoadedWithItems,You're loaded with items.\nI can't give you this DURASTEEL POD.$,reviewed AUTO draft
-PetalburgWoods_Text_ICouldntWin,"I have all these COMPANIONS,\nbut I couldn't win…$",reviewed AUTO draft
-PetalburgWoods_Text_CantBePopularIfILose,I can't be popular if I lose.$,"reviewed, no change needed"
+PetalburgWoods_Text_ICouldntWin,"Ubanya…\p(I have all these COMPANIONS,\nbut I couldn't win…)$",trainer recast 2026-11-01 (bible/RECAST.md)
+PetalburgWoods_Text_CantBePopularIfILose,Ubanya…\p(I can't be popular if I lose.)$,trainer recast 2026-11-01 (bible/RECAST.md)
 PetalburgWoods_Text_PeopleRespectYou,"If you have a big BUG COMPANION,\npeople respect you for it.$",reviewed AUTO draft
-PetalburgWoods_Text_MyPokemonHaveGrown,My BUG COMPANIONS have grown.\nI'll be popular again.$,reviewed AUTO draft
-PetalburgWoods_Text_CantBePopularIfLose,I can't be popular if I lose.$,"reviewed, no change needed"
+PetalburgWoods_Text_MyPokemonHaveGrown,Utinni!\p(My COMPANIONS have grown. I'll be\npopular at the clan meet again.)$,trainer recast 2026-11-01 (bible/RECAST.md)
+PetalburgWoods_Text_CantBePopularIfLose,Ubanya…\p(I can't be popular if I lose.)$,trainer recast 2026-11-01 (bible/RECAST.md)
 PetalburgWoods_Text_HiddenItemsExplanation,"Sometimes, there are things on the\nground even if you can't see them.\pThat's why I always check where I'm\nwalking.$","reviewed, no change needed"
 PetalburgWoods_Text_TryUsingThisItem,"Oh, neat!\nThat's the SHARD from BESTINE ARENA!\pYou must be a TRAINER.\nYou should try using this item.$",reviewed AUTO draft
 PetalburgWoods_Text_TrainerTipsExperience,"TRAINER TIPS\pAny COMPANION that appears even once\nin a battle is awarded EXP Points.\pTo raise a weak COMPANION, put it at the\nleft of the team list.\pAs soon as a battle starts, switch it\nout. It will earn EXP Points without\lbeing exposed to any harm.$",reviewed AUTO draft
@@ -298,7 +298,7 @@ Route104_Text_IvanPostBattle,I got too into fishing.\nI forgot I had to raise my
 Route104_Text_BillyIntro,Leaving footprints in the sand is\nso fun!$,"reviewed, no change needed"
 Route104_Text_BillyDefeat,Waah! I got sand in my runners!\nThey're all gritty!$,"reviewed, no change needed"
 Route104_Text_BillyPostBattle,"I want to leave my footprints in\nthe sand everywhere, but they\ldisappear quickly…$","reviewed, no change needed"
-Route104_Text_HaleyIntro,"Should I…\nOr shouldn't I?\pOkay, sure, I will battle!$","reviewed, no change needed"
+Route104_Text_HaleyIntro,"Should I…\nOr shouldn't I?\pMy QUEEN would say yes.\nOkay, I will battle!$",trainer recast 2026-11-01 (bible/RECAST.md)
 Route104_Text_HaleyDefeat,I shouldn't have battled…$,"reviewed, no change needed"
 Route104_Text_HaleyPostBattle,"If you're faced with a decision and\nyou let someone else choose for you,\lyou will regret it, however things\lturn out.$","reviewed, no change needed"
 Route104_Text_HaleyRegister1,"You're strong, but should I register\nyou in my COMLINK?\lMaybe I shouldn't…\pOkay, sure, I will register you!$",reviewed AUTO draft
@@ -325,14 +325,14 @@ Route104_Text_CindyPostRematch,“Hello” is the beginning of “good-bye.”\n
 Route104_Text_DarianIntro,"I fished up a tough-looking COMPANION!\pIt has this magical quality to it!\nIt surely looks tough, yes it does!$",reviewed AUTO draft
 Route104_Text_DarianDefeat,What the…$,"reviewed, no change needed"
 Route104_Text_DarianPostBattle,"Hey, COLOFRY, you sure don't live up\nto your name, do you?$",reviewed AUTO draft
-Route116_Text_ClarkIntro,"If the tunnel doesn't go through, then\nI'll just go over the top.$","reviewed, no change needed"
+Route116_Text_ClarkIntro,"If the tunnel doesn't go through, then\nI'll just dig it through myself.$",trainer recast 2026-11-01 (bible/RECAST.md)
 Route116_Text_ClarkDefeat,Gasp… Gasp…\nLosing made me tired…$,"reviewed, no change needed"
 Route116_Text_ClarkPostBattle,"It's no big deal if there's no tunnel.\nTo a HIKER, mountains are roads!$","reviewed, no change needed"
 Route116_Text_JoeyIntro,My COMPANION rule!\nCheck them out!$,reviewed AUTO draft
 Route116_Text_JoeyDefeat,Ouch! A scrape!\nI have to put on a bandage!$,"reviewed, no change needed"
 Route116_Text_JoeyPostBattle,Bandages are signs of toughness!\nI've got another one!$,"reviewed, no change needed"
-Route116_Text_JoseIntro,My BUG COMPANIONS are tough!\nLet's battle!$,reviewed AUTO draft
-Route116_Text_JoseDefeat,I lost!\nI thought I had you!$,"reviewed, no change needed"
+Route116_Text_JoseIntro,Utinni!\p(My COMPANIONS are as tough as a\nsandcrawler! Let's battle!)$,trainer recast 2026-11-01 (bible/RECAST.md)
+Route116_Text_JoseDefeat,Ubanya!\p(I lost! I thought I had you!)$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route116_Text_JosePostBattle,"BUG COMPANIONS evolve quickly.\nSo they get strong quickly, too.$",reviewed AUTO draft
 Route116_Text_JaniceIntro,Let me teach you how strong my\nadorable COMPANION is!$,reviewed AUTO draft
 Route116_Text_JaniceDefeat,You're a notch above me…$,"reviewed, no change needed"

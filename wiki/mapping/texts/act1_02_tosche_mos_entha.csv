@@ -74,7 +74,7 @@ PetalburgCity_Gym_Text_DadNoAmountOfTrainingIsEnough,"DAD: {PLAYER}, how are thi
 PetalburgCity_Gym_Text_GymGuideAdvice,"Hey, how's it going, ILUM-\nbound {PLAYER}?\pThe doors in this ARENA open when you\nbeat the awaiting TRAINERS.\pWhoops! The doors in this room are\nalready open, so don't attack me!\pThe TRAINERS of MOS ENTHA ARENA\nuse all kinds of items.\pThe door at the left leads to\nthe SPEED ROOM.\pThe door at the right leads to\nthe ACCURACY ROOM.\pThe room's name will be on\nthe door, so choose carefully.\pOnce you've chosen the door…\nWell, hey, go for it!$",
 PetalburgCity_Gym_Text_RandallPostBattle,Go on to the next room where a new\nchallenge awaits you.\pAt the left is the CONFUSION ROOM.\pThe right door leads to the DEFENSE\nROOM.$,"CONFUSION is the status here, not the move (MIND TRICK)"
 PetalburgCity_Gym_Text_RandallPostBadge,"Whomever you beat, and whomever you\nmay lose to, you never shirk from\ltraining yourself and your COMPANIONS.\pThat's what I think being an\nARENA LEADER is all about.$",
-PetalburgCity_Gym_Text_ParkerIntro,This is the CONFUSION ROOM.\pLet me see how well bonded you are\nwith your COMPANIONS!$,
+PetalburgCity_Gym_Text_ParkerIntro,This is the CONFUSION ROOM.\pThis is RED LEADER. Let me see how\nwell bonded you are with your\lCOMPANIONS!$,trainer recast 2026-11-01 (bible/RECAST.md)
 PetalburgCity_Gym_Text_GeorgePostBadge,"I'm going to keep training at ARENAS.\nOne day, I'll become a LEADER.$",
 PetalburgCity_Gym_Text_MaryPostBattle,"There are some even stronger\nTRAINERS waiting for you.\pThe left is the DEFENSE ROOM, and\nthe right is the RECOVERY ROOM.\pYour COMPANIONS' ATTACK power will be\non trial either way.$",
 PetalburgCity_Gym_Text_MaryPostBadge,Do you know what we're trying to\nachieve as TRAINERS?\pWe're striving to become soul mates\nwith our COMPANIONS.$,
@@ -110,13 +110,13 @@ PetalburgCity_Gym_Text_WallyOhWowThankYou,"LUKE: Oh, wow!\nThank you!$",reviewed
 PetalburgCity_Gym_Text_WouldYouReallyComeWithMe,{PLAYER}… Would you really come\nwith me?$,"reviewed, no change needed"
 PetalburgCity_Gym_Text_DadSoDidItWorkOut,"DAD: So, did it work out?$","reviewed, no change needed"
 PetalburgCity_Gym_Text_GymGuidePostVictory,"{PLAYER}! Whoa! You've overcome even\nyour own father!\pLike, whoa!\nWhat a stunning turn of events!$","reviewed, no change needed"
-PetalburgCity_Gym_Text_RandallIntro,"The ability to attack before the\nopponent…\pJust that alone puts me at a great\nadvantage, don't you agree?$","reviewed, no change needed"
+PetalburgCity_Gym_Text_RandallIntro,"The ability to strike before the\nopponent… A pilot learns that first.\pI may be big, but in a cockpit I'm\nquick. Don't you agree?$",trainer recast 2026-11-01 (bible/RECAST.md)
 PetalburgCity_Gym_Text_RandallDefeat,That was a magnificent battle!$,"reviewed, no change needed"
 PetalburgCity_Gym_Text_ParkerDefeat,I couldn't confuse your team enough…\nYou share a strong bond together.$,"reviewed, no change needed"
 PetalburgCity_Gym_Text_ParkerPostBattle,The next room is the STRENGTH ROOM.\nCan you withstand brute force?$,"reviewed, no change needed"
 PetalburgCity_Gym_Text_ParkerPostBadge,"After you beat our LEADER, the\ntraining has become a lot tougher.$","reviewed, no change needed"
 PetalburgCity_Gym_Text_GeorgeIntro,"Just when you think you're going to\nwin, your opponent restores HP…\pCan you just imagine how awful that\nmust feel?\pI'll show you exactly how awful it\nfeels!$","reviewed, no change needed"
-PetalburgCity_Gym_Text_GeorgeDefeat,I couldn't restore HP enough…\nWhat ATTACK power…$,"reviewed, no change needed"
+PetalburgCity_Gym_Text_GeorgeDefeat,I couldn't restore HP enough…\nI can't maneuver!$,trainer recast 2026-11-01 (bible/RECAST.md)
 PetalburgCity_Gym_Text_GeorgePostBattle,"I should have expected no less from\nour LEADER's kid.\pNo, wait! A TRAINER's abilities are\nearned only through effort.\pI lost because my own efforts\nweren't enough.\pGo on! The ONE-HIT KO ROOM is next.$","reviewed, no change needed"
 PetalburgCity_Gym_Text_BerkeIntro,I'm not going to take it easy just\nbecause you're our LEADER's kid.\pI'll show you how horrid it is for\na COMPANION to take a critical hit!$,reviewed AUTO draft
 PetalburgCity_Gym_Text_BerkeDefeat,Your power…\nYou're the real deal.$,"reviewed, no change needed"
@@ -153,8 +153,8 @@ Route102_Text_CalvinRematchPostBattle,"If you're going to get stronger,\nI'll ge
 Route102_Text_AllenIntro,Did you just become a TRAINER?\nWe're both beginners!$,"reviewed, no change needed"
 Route102_Text_AllenDefeated,I called you because I thought\nI could beat you…$,"reviewed, no change needed"
 Route102_Text_AllenPostBattle,I haven't won once yet…\nI wish I would win soon…$,"reviewed, no change needed"
-Route102_Text_RickIntro,Hahah! Our eyes met!\nI'll take you on with my BUG COMPANION!$,reviewed AUTO draft
-Route102_Text_RickDefeated,Ow! Down and out!$,"reviewed, no change needed"
+Route102_Text_RickIntro,Utinni!\p(Hah! Our eyes met! I'll take you\non with my COMPANION!)$,trainer recast 2026-11-01 (bible/RECAST.md)
+Route102_Text_RickDefeated,Ubanya!\p(Ow! Down and out!)$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route102_Text_RickPostBattle,"If you lock eyes with a TRAINER,\nyou have to challenge! It's a rule!$","reviewed, no change needed"
 Route102_Text_TianaIntro,I'm going to keep winning and aim\nto be the best TRAINER.\pHelp me further my career!$,"reviewed, no change needed"
 Route102_Text_TianaDefeated,I ended up furthering your career…$,"reviewed, no change needed"
@@ -162,7 +162,7 @@ Route102_Text_TianaPostBattle,"To keep winning my way up, I see that\nI have to 
 Route103_Text_DaisyIntro,Did you feel the tug of our\nsoul-soothing fragrance?$,"reviewed, no change needed"
 Route103_Text_DaisyDefeated,You weren't led astray by our aroma…$,"reviewed, no change needed"
 Route103_Text_DaisyPostBattle,Aromatherapy is a form of mental\nhealing that works with fragrances.$,"reviewed, no change needed"
-Route103_Text_AmyIntro,ARA: I'm AMY.\nAnd this is my little sister LIV.\lWe battle together!$,reviewed AUTO draft
+Route103_Text_AmyIntro,ARA: I'm ARA.\nAnd this is my little sister LIRA.\lWe battle together!$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route103_Text_AmyDefeated,"ARA: Uh-oh, we lost.$",reviewed AUTO draft
 Route103_Text_AmyPostBattle,ARA: You have to think about all\nkinds of things when you're battling\lagainst two TRAINERS.$,reviewed AUTO draft
 Route103_Text_AmyNotEnoughPokemon,"ARA: Uh-oh, you have only one\nCOMPANION with you.\lYou can't battle us like that.$",reviewed AUTO draft
@@ -171,7 +171,7 @@ Route103_Text_LivDefeated,"LIRA: Oh, we lost, big sister…$",reviewed AUTO draf
 Route103_Text_LivPostBattle,"LIRA: We work perfectly together,\nme and my big sister…\pBut we still lost…$",reviewed AUTO draft
 Route103_Text_AmyLivRegister,"LIRA: Really, we're a lot better…\nIt's true! We'll show you next time!$",reviewed AUTO draft
 Route103_Text_LivNotEnoughPokemon,"LIRA: If you want to battle us,\nyou have to have two COMPANIONS!\lIt's not fair if you don't!$",reviewed AUTO draft
-Route103_Text_AmyRematchIntro,ARA: I'm AMY.\nAnd this is my little sister LIV.\lWe battle together!$,reviewed AUTO draft
+Route103_Text_AmyRematchIntro,ARA: I'm ARA.\nAnd this is my little sister LIRA.\lWe battle together!$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route103_Text_AmyRematchDefeated,"ARA: Aww, boo!\nWe couldn't win again…$",reviewed AUTO draft
 Route103_Text_AmyRematchPostBattle,ARA: You have to think about all\nkinds of things when you're battling\lagainst two TRAINERS.$,reviewed AUTO draft
 Route103_Text_AmyRematchNotEnoughPokemon,"ARA: Uh-oh, you have only one\nCOMPANION with you.\lYou can't battle us like that.$",reviewed AUTO draft
@@ -182,7 +182,7 @@ Route103_Text_LivRematchNotEnoughPokemon,"LIRA: If you want to battle us, you\nh
 Route103_Text_AndrewIntro,Gah! My fishing line's all snarled up!\nI'm getting frustrated and mean!\lThat's it! Battle me!$,"reviewed, no change needed"
 Route103_Text_AndrewDefeated,Gah! Lost it!\nI'm even more annoyed now!$,"reviewed, no change needed"
 Route103_Text_AndrewPostBattle,"Gah, I'm still boiling mad…\nGrrrrr…$","reviewed, no change needed"
-Route103_Text_MiguelIntro,My COMPANION is delightfully adorable!\nDon't be shy--I'll show you!$,reviewed AUTO draft
+Route103_Text_MiguelIntro,My COMPANION is my little champion!\nDon't be shy--I'll show you!$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route103_Text_MiguelDefeated,"Oh, my gosh!\nMy darling COMPANIONS!$",reviewed AUTO draft
 Route103_Text_MiguelPostBattle,My delightful COMPANION looks darling\neven when it's fainted!$,reviewed AUTO draft
 Route103_Text_MiguelRegister,I'll get you to come out and look in\non my delightful COMPANION again!$,reviewed AUTO draft
@@ -195,9 +195,9 @@ Route103_Text_PetePostBattle,"Oh, I understand where you're coming\nfrom now.\pI
 Route103_Text_IsabelleIntro,Watch where you're going!\nWe're going to crash!$,"reviewed, no change needed"
 Route103_Text_IsabelleDefeated,Groan…$,"reviewed, no change needed"
 Route103_Text_IsabellePostBattle,I'm a poor swimmer so I was practicing…\nSorry for almost crashing into you.$,"reviewed, no change needed"
-Route103_Text_RhettIntro,Whoa!\nHow'd you get into a space this small?$,"reviewed, no change needed"
-Route103_Text_RhettDefeated,Whoa!\nThe kid can rock!$,"reviewed, no change needed"
+Route103_Text_RhettIntro,Rrrowr?\p(How did you squeeze into a space\nthis small?)$,trainer recast 2026-11-01 (bible/RECAST.md)
+Route103_Text_RhettDefeated,Hrrah!\p(The cub can fight!)$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route103_Text_RhettPostBattle,Do you like cramped quarters\nlike this?$,"reviewed, no change needed"
-Route103_Text_MarcosIntro,Did my guitar's wailing draw you in?$,"reviewed, no change needed"
+Route103_Text_MarcosIntro,Did my kloo horn's wailing draw\nyou in?$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route103_Text_MarcosDefeated,My one-man show is ruined…$,"reviewed, no change needed"
 Route103_Text_MarcosPostBattle,"I was playing my guitar where few\npeople were around, but a lot of fans\lhave gathered.\pHeh, maybe I should turn pro.$","reviewed, no change needed"

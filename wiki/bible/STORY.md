@@ -144,6 +144,15 @@ Full list with ids and trainer links: `mapping/characters.csv`.
 | Pokémon Center nurse | **2-1B** | Medical droid. |
 | Frontier Brains | Bounty hunters: **Aurra Sing, Dengar, Zuckuss, 4-LOM, IG-88, Gardulla the Hutt, Dexter Jettster** | Lando hires them for the Grand Arena. |
 
+### Everyone else
+
+Generic trainers are species, droids and jobs from the films, chosen to fit the planet they stand on: Ugnaught miners,
+Jawas, Ewok scouts and shamans, Wookiees and Wookiee cubs, Mon Calamari and Nautolan divers, Quarren anglers, Rodian
+game hunters, swoop racers, Mandalorians, Nightbrothers, pilots with their astromechs. Famous minor characters appear as
+trainer names when the class picture matches them (Porkins and Red Leader in Doran's arena, Malakili, Logray, Teebo,
+Paploo, Clegg Holdfast, Lumpy, Sabé, Lor San Tekka, Merrin, Sio Bibble, Deak, Windy, Kitwarr). The big names stay with
+the story cast above. Full list, art to-dos and line changes: `bible/RECAST.md`.
+
 ### Arena leaders (gyms), in badge order
 
 | # | Emerald | Star Wars | Planet / town | Type | Shard |
@@ -182,6 +191,9 @@ The chapter-by-chapter rewrite is in `mapping/timeline.csv`. In short:
 2. **Kashyyyk & Mos Eisley (Act 2).** Tarfful's arena, deliver the message to
    Leia in the Shadowlands. Han flies you on to Mos Eisley: Jabba and Boba
    Fett first appear at the spacer museum, hunting Ric Olié's sub parts.
+   The Mos Eisley Cantina (the old fan club building) is open from here on:
+   no story, just Wuher, the band, Ponda Baba and Dr. Evazan, and an optional
+   battle with Greedo, who takes you for Han's crew.
 3. **Mos Espa, Sullust, Mustafar (Act 3).** Watto's arena and the podrace
    course. Hover-bikes from Wald. The Empire steals a meteorite at Starfall
    Cavern; you climb Mustafar Peak and beat **Vader** for the first time. Sabine's
@@ -250,3 +262,4 @@ Tracked as rows in `mapping/net_new.csv`, not built yet. Designs (maps, flags, l
 - Light side / dark side affinity that picks between evolution branches (the TOOKA line already splits JEDITOOKA / SITHTOOKA by day / night).
 - Sandstorm and blizzard weather that changes encounters.
 - New moves with new animations: FORCE CHOKE, BLASTER SHOT, SABER SLASH.
+- The Mos Eisley Cantina: Wuher's bar, the Modal Nodes, Ponda Baba, Dr. Evazan, Momaw Nadon and an optional Greedo battle, with six new walkers and its own band music.

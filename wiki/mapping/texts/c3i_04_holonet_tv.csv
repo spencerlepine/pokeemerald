@@ -380,12 +380,12 @@ GabbyAndTy_Text_KeepingAnEyeOutForYou,FODE: We'll be keeping an eye out\nfor you
 GabbyAndTy_Text_GabbyNotEnoughMons,FODE: Is there a strong TRAINER\nanywhere with a lot of COMPANIONS?$,reviewed AUTO draft
 GabbyAndTy_Text_GiveUsAnInterviewThisTime,"FODE: Wow, you are something!\pYou've gotten a lot stronger--a lot--\nsince we last battled.\pWe were right about you when we\nspotted you as a hot TRAINER.\pSo, anyway, what do you think?\nAre you willing to give us an interview\lthis time?$",reviewed AUTO draft
 GabbyAndTy_Text_GabbyDefeat,FODE: That was an intense battle!\nDid you get all that on camera?$,reviewed AUTO draft
-GabbyAndTy_Text_TyPreFirstBattle,"BEED: Hey, lookie here! A tough-looking\nTRAINER here, of all places!\lCamera's rolling!$",reviewed AUTO draft
-GabbyAndTy_Text_TyIntro,"BEED: Hey, lookie here!\nI remember you!\pI'll get this battle all on this\nhere camera!$",reviewed AUTO draft
+GabbyAndTy_Text_TyPreFirstBattle,"BEED: Boska! Wanta dobra!\p(Hey, lookie here! A tough-looking\nTRAINER, of all places!)\p(Camera's rolling!)$",trainer recast 2026-11-01 (bible/RECAST.md)
+GabbyAndTy_Text_TyIntro,"BEED: Boska! Ee chu ta!\p(Hey, lookie here! I remember you!)\p(I'll get this whole battle on\nthe holocam!)$",trainer recast 2026-11-01 (bible/RECAST.md)
 GabbyAndTy_Text_TyPostBattle,BEED: You're a natural!\nGot me some prime footage right here!$,reviewed AUTO draft
-GabbyAndTy_Text_TyNotEnoughMons,"BEED: Do you only have the one COMPANION\nand that's it?\pIf you had more COMPANIONS, it'd make\nfor better footage, but…$",reviewed AUTO draft
-GabbyAndTy_Text_TyDefeatFirstTime,"BEED: Yep, we sure spotted a hot\nTRAINER. This is a huge scoop for us!$",reviewed AUTO draft
-GabbyAndTy_Text_TyDefeat,"BEED: Yep, I got it all.\nThat whole battle's on camera.$",reviewed AUTO draft
+GabbyAndTy_Text_TyNotEnoughMons,"BEED: Wonka?\p(Only the one COMPANION, and\nthat's it?)\p(More COMPANIONS would make for\nbetter footage, but…)$",trainer recast 2026-11-01 (bible/RECAST.md)
+GabbyAndTy_Text_TyDefeatFirstTime,BEED: Hee hee! Mee jewz!\p(We sure spotted a hot TRAINER.\nThis is a huge scoop for us!)$,trainer recast 2026-11-01 (bible/RECAST.md)
+GabbyAndTy_Text_TyDefeat,BEED: Hee hee!\p(Got it all. That whole battle's\non the holocam.)$,trainer recast 2026-11-01 (bible/RECAST.md)
 gTVInSearchOfTrainersText00,"IN SEARCH OF TRAINERS…\pFODE: Hi! Today I'm visiting an area\nnear {STR_VAR_1}.\pWe're trying to spot some up-and-\ncoming new talent in the field.\pToday, we turned our lens on the\nTRAINER {PLAYER}.\pThere's something about this TRAINER\nthat piqued our interest.$",reviewed AUTO draft
 gTVInSearchOfTrainersText01,"We've battled {PLAYER} before, but we\ncan attest that the TRAINER has most\ldefinitely improved from before.\pI knew we were onto someone special\nwhen we spotted this TRAINER!$","reviewed, no change needed"
 gTVInSearchOfTrainersText02,"The best way to determine how strong\na TRAINER is…\pWell, the fastest way is to battle.\nAnd so we began our investigation!\p… …\pThat's how we ended up in battle\nwith {PLAYER}.\pIn a dominating performance, we were\nflattened, rolled up, and tossed aside!\p{PLAYER} is ruthlessly strong…\pHere's our impressions after having\nbattled our featured TRAINER.$","reviewed, no change needed"

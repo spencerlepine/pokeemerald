@@ -224,11 +224,11 @@ Route126_Text_NikkiPostBattle,You thrashed me… I want to\ndisappear in a wave 
 Route126_Text_BrendaIntro,"Hello, kiddo!\nWant a battle with me?$","reviewed, no change needed"
 Route126_Text_BrendaDefeat,"Oh, noooooh!$","reviewed, no change needed"
 Route126_Text_BrendaPostBattle,I love frolicking with COMPANIONS in\nthe sea like this!$,reviewed AUTO draft
-Route126_Text_PabloIntro,Check out this sculpted body!\nI'm more cut than a BLACK BELT!$,"reviewed, no change needed"
+Route126_Text_PabloIntro,Check out this sculpted body!\nI'm more cut than a WOOKIEE!$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route126_Text_PabloDefeat,Whoops! Too strong!\nNot bad! Not bad at all!$,"reviewed, no change needed"
 Route126_Text_PabloPostBattle,Losing to you stimulated my senses! I'll\ntrain myself and COMPANIONS harder!$,reviewed AUTO draft
 Route126_Text_PabloRegister,"Yep, you're not bad at all!\nI'd like to get to know you more!$","reviewed, no change needed"
-Route126_Text_PabloRematchIntro,Check out this beautiful body!\nI'm more shapely than a SWIMMER!$,"reviewed, no change needed"
+Route126_Text_PabloRematchIntro,Check out this beautiful body!\nI'm more shapely than a NAUTOLAN!$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route126_Text_PabloRematchDefeat,Whoops! Really too strong!\nNot bad! Not bad at all!$,"reviewed, no change needed"
 Route126_Text_PabloPostRematch,I'm going to train even harder!\nYou're a great motivator!\lYou have to come back again!$,"reviewed, no change needed"
 Route126_Text_LeonardoIntro,"I couldn't even swim last year,\nbut now I'm a decent SWIMMER.\pI think I'm capable of anything now.$","reviewed, no change needed"
@@ -257,12 +257,12 @@ Route127_Text_RogerPostBattle,"My fishing line's doing a dance!\nThe tangle tang
 Route127_Text_AidanIntro,BIRD COMPANIONS have excellent vision.\nThey spot prey from great heights.$,reviewed AUTO draft
 Route127_Text_AidanDefeat,Whew… I give up.$,"reviewed, no change needed"
 Route127_Text_AidanPostBattle,There're lots of diving spots in\nthe sea around here.\pYou can spot them easily from the sky\nbecause of their darker color.$,"reviewed, no change needed"
-Route127_Text_KojiIntro,Run in your bare feet.\nThat will toughen up your soles!$,"reviewed, no change needed"
-Route127_Text_KojiDefeat,Yowch!\nI got a pebble under a toenail!$,"reviewed, no change needed"
+Route127_Text_KojiIntro,"Rrrowr!\p(Run barefoot, like a Wookiee.\nThat will toughen up your soles!)$",trainer recast 2026-11-01 (bible/RECAST.md)
+Route127_Text_KojiDefeat,Yaaargh!\p(A pebble got stuck in my fur!)$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route127_Text_KojiPostBattle,"Going barefoot feels great.\nBut your RUNNING SHOES are cool, too.$","reviewed, no change needed"
 Route127_Text_KojiRegister,This is what I do to people who beat me!\nI hope we can do this again.$,"reviewed, no change needed"
-Route127_Text_KojiRematchIntro,I still run in my bare feet daily.\nMy soles are tough!$,"reviewed, no change needed"
-Route127_Text_KojiRematchDefeat,Yowch!\nPebbles dug into my arches!$,"reviewed, no change needed"
+Route127_Text_KojiRematchIntro,Hrrah!\p(I still run barefoot every day.\nMy soles are tough!)$,trainer recast 2026-11-01 (bible/RECAST.md)
+Route127_Text_KojiRematchDefeat,Yaaargh!\p(Pebbles dug into my paws!)$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route127_Text_KojiPostRematch,Want to go barefoot for a while?\nSo I can try your RUNNING SHOES?$,"reviewed, no change needed"
 Route127_Text_AthenaIntro,We should have a slow and methodical\nmatch.$,"reviewed, no change needed"
 Route127_Text_AthenaDefeat,You didn't give me the chance to\ndo any strategizing.$,"reviewed, no change needed"
@@ -274,11 +274,11 @@ Route128_Text_IsaiahRegister,"I know I'm not good now, but I think\nI can win ev
 Route128_Text_IsaiahRematchIntro,I'm still feeling good. I'll keep on\nswimming to ILUM.$,reviewed AUTO draft
 Route128_Text_IsaiahRematchDefeat,I've yet to taste my first victory…$,"reviewed, no change needed"
 Route128_Text_IsaiahPostRematch,I'll eventually reach ILUM\nwhere I can eventually win…$,reviewed AUTO draft
-Route128_Text_KatelynIntro,"You have to swim, cycle, and then run\na marathon in a triathlon.\pIt's a grueling race that consists\nof three events.$","reviewed, no change needed"
+Route128_Text_KatelynIntro,"In a SWOOP RALLY you swim, ride a\nswoop, and then run the last leg.\pIt's a grueling race that consists\nof three legs.$",trainer recast 2026-11-01 (bible/RECAST.md)
 Route128_Text_KatelynDefeat,"A COMPANION battle is grueling, too…$",reviewed AUTO draft
 Route128_Text_KatelynPostBattle,"I have to ride a BIKE next, but…\nI'm about to throw in the towel…$","reviewed, no change needed"
 Route128_Text_KatelynRegister,"Well, I may as well make the best\nof this. I'd like a rematch sometime.$","reviewed, no change needed"
-Route128_Text_KatelynRematchIntro,A triathlon is long. But I guess the\nroad to become the ILUM CHAMPION\lis also a long and grueling one.$,reviewed AUTO draft
+Route128_Text_KatelynRematchIntro,A rally is long. But I guess the\nroad to become the ILUM CHAMPION\lis also a long and grueling one.$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route128_Text_KatelynRematchDefeat,A COMPANION battle really is harsh\nand unforgiving…$,reviewed AUTO draft
 Route128_Text_AlexaIntro,We've been working so hard to mount\nan ILUM TEMPLE challenge…\pWe can't afford to lose now!$,reviewed AUTO draft
 Route128_Text_AlexaDefeat,Oh!\nHow could this happen?!$,"reviewed, no change needed"
@@ -293,10 +293,10 @@ Route128_Text_HarrisonDefeat,Ouch!\nI guess it was impossible to win.$,"reviewed
 Route128_Text_CarleeIntro,The sunlight seems to be more harsh\nin this area.$,"reviewed, no change needed"
 Route128_Text_CarleeDefeat,I couldn't see very well because of\nthe sun's glare.$,"reviewed, no change needed"
 Route128_Text_CarleePostBattle,I should go back soon.\nI need to reapply my sunscreen.$,"reviewed, no change needed"
-Route129_Text_ChaseIntro,This is my first triathlon.\nI'm all tense and nervous!$,"reviewed, no change needed"
+Route129_Text_ChaseIntro,This is my first swoop rally.\nI'm all tense and nervous!$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route129_Text_ChaseDefeat,Wroooaaar!\nI failed to win!$,"reviewed, no change needed"
 Route129_Text_ChasePostBattle,"If I'm all tensed up, I won't be able to\ngive it my all.$","reviewed, no change needed"
-Route129_Text_AllisonIntro,"I'm in the middle of a triathlon,\nbut, sure, why don't we battle?$","reviewed, no change needed"
+Route129_Text_AllisonIntro,"I'm in the middle of a rally,\nbut, sure, why don't we battle?$",trainer recast 2026-11-01 (bible/RECAST.md)
 Route129_Text_AllisonDefeat,I was sure I'd win!$,"reviewed, no change needed"
 Route129_Text_ReedIntro,"Say hey, hey!\nLet's get on with it!$","reviewed, no change needed"
 Route129_Text_ReedDefeat,"Beat, I'm beaten.\nThat's it, done!$","reviewed, no change needed"

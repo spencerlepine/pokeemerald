@@ -41,6 +41,16 @@ Rules kept: no trainer changes class, party or prize money (HOTSWAP). Only names
 
 Species that don't speak Basic (Wookiees, Wookiee cubs, Ewoks, Jawas) have their lines shown as translations after a sound, the way KOTOR subtitles Shyriiwook.
 
+## Lines
+
+184 trainer lines in `mapping/texts/` were rewritten to match the new identities (their notes say `trainer recast 2026-11-01`):
+
+- **WOOKIEE, WOOKIEE CUB, EWOK, SHAMAN, JAWA:** a sound, then the translation in brackets ("Rrraaaugh!\p(Might is right! Come on!)", "Utinni!", "Yub nub!"). Ewoks and Jawas met away from their home worlds say why (a Jawa sandcrawler stripping crashed walkers on Endor, an Ewok scout far from the forest moon).
+- **PILOT&DROID:** the second speaker in each pair is the astromech, so R3, R4, R5 and R7 beep and are translated (R5's motivator blows when it loses). **FODE&BEED:** Beed speaks Huttese, as at the Boonta Eve.
+- **SWOOP RACER:** the triathlon is a three-leg SWOOP RALLY (swim, swoop, run). **UGNAUGHT:** digging and hauling ore instead of hiking. **RACE FAN:** podrace talk. **GAME HUNTER:** hunting talk. **MANDALORIAN:** beskar and "This is the Way". **NIGHTBROTHER**, **ANGLER**, **MUSICIAN** (kloo horn), **JUNK DEALER** (Toydarian haggling): the lines that still named the old job.
+- **Cameos:** Porkins, Red Leader Dreis and Dutch in Doran's arena, Malakili's beast that is "no rancor yet", Logray, Teebo and Paploo on Endor, Clegg Holdfast on the podrace course, Lor San Tekka at the Jedha temple, Sio Bibble on the starliner and Sabe.
+- Names left over from Emerald in pair lines (AMY, LIV, PAUL, ROY) now use the new names.
+
 ## Art to-dos
 
 - **36 trainer front pics** are PENDING_ART again, with new subjects in `mapping/art_subjects_src/trainer_pics.txt` and new briefs in `tools/sprite-trainer-generator/civitai/jobs.json` (the old per-pic cleanup overrides were dropped). Their wiki art and art_ready rows are deleted. The old pics are still in `game/` until new ones ship, so their `game_status` is back to NOT_STARTED. `python3 batch.py --list` shows them (about 108 Buzz for one take each).
@@ -65,6 +75,10 @@ Species that don't speak Basic (Wookiees, Wookiee cubs, Ewoks, Jawas) have their
 | `fisherman` | Quarren angler: face tentacles, slicker coat, long pole | ANGLER |
 
 Shared generic walkers (man_5, woman_2, girl_3, man_3, woman_5, lass…) were left alone, so a few classes still walk as a generic person until the port re-points them (listed in `mapping/net_new.csv`, `net:walker-*`).
+
+## Mos Eisley Cantina
+
+The Slateport fan club building is now the **Mos Eisley Cantina** (`map:slateport-city-pokemon-fan-club`, design and every line in `bible/NET_NEW_DESIGNS.md`, row `net:mos-eisley-cantina`). It is flavour only: WUHER and his drinks (no droids!), FIGRIN D'AN and DOIKK NA'TS on the band stage, PONDA BABA (the SWAGGER tutor) and DR. EVAZAN at the bar, MOMAW NADON, a Twi'lek dancer, and an optional battle with GREEDO (the unused `TRAINER_TERRY` slot). The COMPANION FAN CLUB still meets in the back booth, so every fan club script keeps working. New walkers, all PENDING_ART with placeholders: `net:walker-wuher`, `net:walker-bith`, `net:walker-aqualish`, `net:walker-evazan`, `net:walker-ithorian`, `net:walker-protocol-droid` (outside the door), plus `net:walker-ewok` for the EWOK and SHAMAN trainers. The room's tileset (now with a cantina subject) and the music (`net:music-cantina-band`) are to-dos too.
 
 ## Lore cameos (trainer names)
 

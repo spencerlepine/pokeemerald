@@ -36,8 +36,8 @@ VerdanturfTown_WandasHouse_Text_IfAnythingHappenedToWally,"If anything were to h
 VerdanturfTown_WandasHouse_Text_WallyWasInEverGrande,LUKE was on ILUM?\pOWEN and BERU would be astonished\nto hear that!$,
 Route111_Text_DustyDefeat,"While I have searched for ruins,\nI've not searched for strong\lCOMPANIONS.$",
 Route112_Text_BryantIntro,I caught hot COMPANIONS in the MAGMA\nTUNNELS! Take a look!$,
-Route113_Text_WyattIntro,Y-you want to battle with me?\nEven though I just caught my\lCOMPANION?$,
-Route117_Text_MariaIntro,"I do my triathlon training with my\nCOMPANIONS, so I'm pretty confident\labout my speed.$",
+Route113_Text_WyattIntro,Y-you want to battle with me?\nEven though I just bagged my\lfirst COMPANION?$,trainer recast 2026-11-01 (bible/RECAST.md)
+Route117_Text_MariaIntro,"I do my rally training with my\nCOMPANIONS, so I'm pretty confident\labout my speed.$",trainer recast 2026-11-01 (bible/RECAST.md)
 Route113_GlassWorkshop_Text_NoRoomInPC,"Oh?\nYou've no room in your TERMINAL,\nhuff-puff?\pI'll hold on to it, so come back later,\nhuff-puff.$",
 DesertUnderpass_Text_FoundRootFossil,{PLAYER} found the FROND FOSSIL.$,reviewed AUTO draft
 DesertUnderpass_Text_FoundClawFossil,{PLAYER} found the CLAW FOSSIL.$,"reviewed, no change needed"
@@ -185,8 +185,8 @@ Route111_Text_TravisPostBattle,"When I see a TRAINER with a lot of pep,\nI can't
 Route111_Text_IreneIntro,"I don't know where you're going,\nbut would you like to battle?$","reviewed, no change needed"
 Route111_Text_IreneDefeat,"Oh, you're disgustingly good!$","reviewed, no change needed"
 Route111_Text_IrenePostBattle,"I'm thinking that I should go to\nMUSTAFAR PEAK, but the view around\lhere is very nice, too.$",reviewed AUTO draft
-Route111_Text_DaisukeIntro,"To train myself, I challenge all\nwhom I meet!$","reviewed, no change needed"
-Route111_Text_DaisukeDefeat,Uncle! I give up!$,"reviewed, no change needed"
+Route111_Text_DaisukeIntro,"Rrrraugh!\p(To train myself, I challenge all\nwhom I meet!)$",trainer recast 2026-11-01 (bible/RECAST.md)
+Route111_Text_DaisukeDefeat,Hrrooo!\p(Enough! I give up!)$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route111_Text_DaisukePostBattle,All I can do is keep training until\nI can defeat strong TRAINERS such\las yourself.$,"reviewed, no change needed"
 Route111_Text_WiltonIntro,Show me how much you've toughened\nyour COMPANION.$,reviewed AUTO draft
 Route111_Text_WiltonDefeat,"I see, you've toughened them\nconsiderably.$","reviewed, no change needed"
@@ -226,11 +226,11 @@ Route111_Text_BiancaPostBattle,This road here…\nYou have quite a ways to trave
 Route112_Text_BriceIntro,Hahahaha!\nHow about we have a battle?\lYou and me!\lHahahaha!$,"reviewed, no change needed"
 Route112_Text_BriceDefeat,I lost!\nHahahaha!$,"reviewed, no change needed"
 Route112_Text_BricePostBattle,Hahahahaha! Something flew up my nose!\nHahahaha-hatchoo!$,"reviewed, no change needed"
-Route112_Text_TrentIntro,"My legs are solid from pounding up\nand down the mountains.\pThey're not going to buckle easily,\nfriend!$","reviewed, no change needed"
+Route112_Text_TrentIntro,"My legs are solid from hauling ore\nup and down the canyons.\pThey're not going to buckle easily,\nfriend!$",trainer recast 2026-11-01 (bible/RECAST.md)
 Route112_Text_TrentDefeat,Ouch! My legs cramped up!$,"reviewed, no change needed"
 Route112_Text_TrentPostBattle,"Try hiking, and I mean really\npounding, on these mountain trails\lwith a heavy pack weighing dozens of\lpounds.\pThat, my friend, will get your body\ninto serious shape.$","reviewed, no change needed"
 Route112_Text_TrentRegister,"Ow, my legs have cramped up.\nCan you grab me some bandages from\lmy backpack?\pNo, that's my COMLINK!\nOh, fine, I'll register you.$",reviewed AUTO draft
-Route112_Text_TrentRematchIntro,"I've been keeping fit by hiking.\nPower, I have in spades!$","reviewed, no change needed"
+Route112_Text_TrentRematchIntro,"I've been keeping fit hauling ore.\nPower, I have in spades!$",trainer recast 2026-11-01 (bible/RECAST.md)
 Route112_Text_TrentRematchDefeat,I got trumped in power?$,"reviewed, no change needed"
 Route112_Text_TrentRematchPostBattle,I hear there are some seriously tough\nTRAINERS on top of MUSTAFAR PEAK.\pI intend to get up there and give them\na challenge!$,reviewed AUTO draft
 Route112_Text_LarryIntro,I'm strong.\nI won't cry if I lose.$,"reviewed, no change needed"
@@ -257,15 +257,15 @@ Route113_Text_MadelineRegister,"Here, slide under my parasol.\nLet me register y
 Route113_Text_MadelineRematchIntro,"Oh, hello, hasn't it been a while?\nMay I invite you to battle?$","reviewed, no change needed"
 Route113_Text_MadelineRematchDefeat,"Oh, how super!$","reviewed, no change needed"
 Route113_Text_MadelinePostRematch,You've remained very good at this.\nI must say I'm impressed!$,"reviewed, no change needed"
-Route113_Text_LaoIntro,From out of the ashes I leap! Hiyah!\nI challenge thee!$,"reviewed, no change needed"
-Route113_Text_LaoDefeat,With honor I admit defeat!$,"reviewed, no change needed"
+Route113_Text_LaoIntro,Yub yub!\p(From out of the ashes I leap!\nI challenge thee!)$,trainer recast 2026-11-01 (bible/RECAST.md)
+Route113_Text_LaoDefeat,Ee chee wa maa!\p(With honor I admit defeat!)$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route113_Text_LaoPostBattle,I must refine the art of concealment.\nI bid thee farewell.$,"reviewed, no change needed"
 Route113_Text_LaoRegister,Yiiyaah! Witness the ancient ninja\ntechnique of COMLINK registration!$,reviewed AUTO draft
-Route113_Text_LaoRematchIntro,From out of the ashes I leap! Hiyah!\nI challenge thee!$,"reviewed, no change needed"
-Route113_Text_LaoRematchDefeat,With honor I admit defeat!$,"reviewed, no change needed"
+Route113_Text_LaoRematchIntro,Yub yub!\p(From out of the ashes I leap!\nI challenge thee!)$,trainer recast 2026-11-01 (bible/RECAST.md)
+Route113_Text_LaoRematchDefeat,Ee chee wa maa!\p(With honor I admit defeat!)$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route113_Text_LaoPostRematch,My flawless concealment was let down\nby my immature battle skills…\pI bid thee farewell.$,"reviewed, no change needed"
-Route113_Text_LungIntro,Thanks for finding me!\nBut we still have to battle!$,"reviewed, no change needed"
-Route113_Text_LungDefeat,I'll use my ninjutsu on you…\n“VOLCANIC ASH SWIRL CLOAK”!\p…What?\nIt's already over?$,"reviewed, no change needed"
+Route113_Text_LungIntro,"Teeha!\p(You found me, far from the forest\nmoon! But we still have to battle!)$",trainer recast 2026-11-01 (bible/RECAST.md)
+Route113_Text_LungDefeat,(I'll use my scout trick on you…\n“VOLCANIC ASH SWIRL CLOAK”!)\p…Yub?\nIt's already over?$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route113_Text_LungPostBattle,You know what's crummy about hiding?\nIt's lonely if no one comes along.$,"reviewed, no change needed"
 Route113_Text_ToriIntro,"TOVA: Both of us, we collect ashes.\nWe battle COMPANION, too.$",reviewed AUTO draft
 Route113_Text_ToriDefeat,"TOVA: We lost… It's boring, so I'm going\nto get some more ashes.$",reviewed AUTO draft
@@ -286,11 +286,11 @@ Route113_Text_LawrenceDefeat,Ehehe.\nWe got beaten cleanly.$,"reviewed, no chang
 Route113_Text_LawrencePostBattle,"I ought to hide under the ashes, too.$","reviewed, no change needed"
 Route113_Text_WyattDefeat,Y-you're all happy to win?\nEven though it's only me?$,"reviewed, no change needed"
 Route113_Text_WyattPostBattle,"Oh, so now you want to say a word to\nthe loser?\pAren't you just the coolest?\nHumph!$","reviewed, no change needed"
-Route114_Text_LennyIntro,Yodelayhihoo!\p… …\pYou're supposed to shout\n“yodelayhihoo” since it doesn't\lecho here!$,"reviewed, no change needed"
-Route114_Text_LennyDefeat,Yodelayhihoo!$,"reviewed, no change needed"
+Route114_Text_LennyIntro,Hoo-weee!\p… …\pYou're supposed to holler back\n“hoo-weee” since it doesn't\lecho here!$,trainer recast 2026-11-01 (bible/RECAST.md)
+Route114_Text_LennyDefeat,Hoo-weee!$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route114_Text_LennyPostBattle,"When I was a wee tyke, I believed there\nwas someone copying me and shouting\lback, “Yodelayhihoo.”$","reviewed, no change needed"
-Route114_Text_LucasIntro,"If you're not prepared, you shouldn't\nbe up in the mountains!$","reviewed, no change needed"
-Route114_Text_LucasDefeat,The mountains are unforgiving…$,"reviewed, no change needed"
+Route114_Text_LucasIntro,"If you're not prepared, you shouldn't\nbe out on these lava flats!$",trainer recast 2026-11-01 (bible/RECAST.md)
+Route114_Text_LucasDefeat,The lava flats are unforgiving…$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route114_Text_LucasPostBattle,"In the winter, mountains turn deadly\nwith blizzards and avalanches.$","reviewed, no change needed"
 Route114_Text_ShaneIntro,"Camping's fun! You can fish, roast\nmarshmallows, and tell spooky stories!\pBut the best of all are the COMPANION\nbattles!$",reviewed AUTO draft
 Route114_Text_ShaneDefeat,Way too strong!$,"reviewed, no change needed"
@@ -318,14 +318,14 @@ Route114_Text_ClaudePostBattle,I think I'll try my luck at landing\na big one at
 Route114_Text_NolanIntro,"I like to fish. But I also like to\nbattle!\pIf anyone challenges me, I'm there,\neven if I'm fishing.$","reviewed, no change needed"
 Route114_Text_NolanDefeat,"I like to battle, but that doesn't\nmean I'm good at it…$","reviewed, no change needed"
 Route114_Text_NolanPostBattle,"This time I'll do it!\pI always think that, so I can't walk\naway from fishing or COMPANION.$",reviewed AUTO draft
-Route114_Text_TyraIntro,"TARA: Well, sure.\nI'm in the mood for it.\lI'll teach you a little about COMPANION.$",reviewed AUTO draft
+Route114_Text_TyraIntro,"TARA: Well, sure. I'm in the mood\nfor it.\pR7 and I will teach you a little\nabout COMPANIONS.$",trainer recast 2026-11-01 (bible/RECAST.md)
 Route114_Text_TyraDefeat,TARA: What an amazing battle style!$,reviewed AUTO draft
 Route114_Text_TyraPostBattle,TARA: I was teaching my junior IVY\nabout COMPANIONS.$,reviewed AUTO draft
 Route114_Text_TyraNotEnoughMons,"TARA: Giggle…\nIf you want to battle with us, just one\lCOMPANION isn't enough!$",reviewed AUTO draft
-Route114_Text_IvyIntro,IVI: Who taught you about COMPANIONS?$,reviewed AUTO draft
-Route114_Text_IvyDefeat,IVI: What an amazing battle style!$,reviewed AUTO draft
+Route114_Text_IvyIntro,R7: Bwee-doo?\p(R7 wants to know who taught you\nabout COMPANIONS.)$,trainer recast 2026-11-01 (bible/RECAST.md)
+Route114_Text_IvyDefeat,R7: Bweeeoooo!\p(R7 is impressed by your battle\nstyle!)$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route114_Text_IvyPostBattle,"IVI: I started training COMPANION\nbecause TYRA, my student mentor,\ltaught me!$",reviewed AUTO draft
-Route114_Text_IvyNotEnoughMons,IVI: Do you only have one COMPANION?\nI think it must feel lonesome.$,reviewed AUTO draft
+Route114_Text_IvyNotEnoughMons,R7: Bwoo-dweep…\p(R7 thinks your one COMPANION must\nfeel lonesome.)$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route114_Text_KaiIntro,"I landed a big one!\nA huge one, I tell you!$","reviewed, no change needed"
 Route114_Text_KaiDefeat,What was that about?\nDid mine lose in size?$,"reviewed, no change needed"
 Route114_Text_KaiPostBattle,Okay!\nI'll just fish me a bigger one!$,"reviewed, no change needed"
@@ -342,15 +342,15 @@ Route115_Text_TimothyRegister,"Hmm… A loss this thorough has been\na distant m
 Route115_Text_TimothyRematchIntro,"Hm… As always, your agility speaks\nfor itself.\lCome, keep me company!$","reviewed, no change needed"
 Route115_Text_TimothyRematchDefeat,As strong as ever!$,"reviewed, no change needed"
 Route115_Text_TimothyPostRematch,All it takes is effort!\pI lost because I haven't put in enough\neffort!$,"reviewed, no change needed"
-Route115_Text_KoichiIntro,You!\pMy B1 DROID!\pDemand a battle!$,reviewed AUTO draft
-Route115_Text_KoichiDefeat,"Ouch, ouch, ouch!$","reviewed, no change needed"
+Route115_Text_KoichiIntro,Wrrah!\p(You there! My companions and I\ndemand a battle!)$,trainer recast 2026-11-01 (bible/RECAST.md)
+Route115_Text_KoichiDefeat,"Aargh, aargh!\p(Ouch, ouch, ouch!)$",trainer recast 2026-11-01 (bible/RECAST.md)
 Route115_Text_KoichiPostBattle,"My B1 DROID crew!\pSo long as they seek power, I will\ngrow strong with them!$",reviewed AUTO draft
-Route115_Text_NobIntro,My strongest skill is busting bricks\nwith my forehead!$,"reviewed, no change needed"
-Route115_Text_NobDefeat,Ugwaaaah!\nMy head is busted!$,"reviewed, no change needed"
+Route115_Text_NobIntro,Rrrooargh!\p(My strongest skill is busting\nbricks with my forehead!)$,trainer recast 2026-11-01 (bible/RECAST.md)
+Route115_Text_NobDefeat,Hwaaargh!\p(My head is busted!)$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route115_Text_NobPostBattle,I've been teaching my COMPANION\nkarate.\pIt looks like they'll get a lot better\nthan me. I'm excited about that.$,reviewed AUTO draft
 Route115_Text_NobRegister,You impress me! Give me a rematch\nafter I redo my training!$,"reviewed, no change needed"
-Route115_Text_NobRematchIntro,"After you beat me, we trained hard to\nimprove our skills.\lCome on, give us a rematch!$","reviewed, no change needed"
-Route115_Text_NobRematchDefeat,Ugwaaah!\nWe lost again!$,"reviewed, no change needed"
+Route115_Text_NobRematchIntro,"Rrraugh!\p(After you beat me, we trained hard\nto improve our skills.)\p(Come on, give us a rematch!)$",trainer recast 2026-11-01 (bible/RECAST.md)
+Route115_Text_NobRematchDefeat,Hrrnnn!\p(We lost again!)$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route115_Text_NobPostRematch,My COMPANION will grow stronger!\nI'll redouble my training!$,reviewed AUTO draft
 Route115_Text_CyndyIntro,This beach is my secret training spot!\nDon't come butting in!$,"reviewed, no change needed"
 Route115_Text_CyndyDefeat,I haven't trained enough!$,"reviewed, no change needed"
@@ -359,16 +359,16 @@ Route115_Text_CyndyRegister,"Okay, fine, you're free to come here.\nIn return, I
 Route115_Text_CyndyRematchIntro,"Okay, let's get this battle on!$","reviewed, no change needed"
 Route115_Text_CyndyRematchDefeat,I can battle but my COMPANION…$,reviewed AUTO draft
 Route115_Text_CyndyPostRematch,"Even when I lose, I still get some\nenjoyment out of it.\lIt must be that I love COMPANIONS.$",reviewed AUTO draft
-Route115_Text_HectorIntro,I have a rare COMPANION!\nWould you like me to show you?$,reviewed AUTO draft
+Route115_Text_HectorIntro,"I've got a rare COMPANION! For you,\na special price… just to look!$",trainer recast 2026-11-01 (bible/RECAST.md)
 Route115_Text_HectorDefeat,"You…\nYou want my COMPANION, don't you?$",reviewed AUTO draft
 Route115_Text_HectorPostBattle,I have this rare COMPANION.\nIt's enough to keep me satisfied.$,reviewed AUTO draft
 Route115_Text_KyraIntro,I'll battle while I'm running!\nTry to keep up with me!$,"reviewed, no change needed"
 Route115_Text_KyraDefeat,"Gasp, gasp…$","reviewed, no change needed"
 Route115_Text_KyraPostBattle,I made the mistake of trying to battle\nwhile running!\pI should take a run to calm down…$,"reviewed, no change needed"
-Route115_Text_JaidenIntro,Take that!\nUltra COMPANION ninja attack!$,reviewed AUTO draft
-Route115_Text_JaidenDefeat,Waaah!\nOur strategy failed!$,"reviewed, no change needed"
+Route115_Text_JaidenIntro,Yaaah!\p(Take that! Ultra EWOK ambush!)$,trainer recast 2026-11-01 (bible/RECAST.md)
+Route115_Text_JaidenDefeat,Waaah!\p(Our ambush failed!)$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route115_Text_JaidenPostBattle,"But my COMPANIONS were ultra,\nweren't they?$",reviewed AUTO draft
-Route115_Text_HeleneIntro,My COMPANIONS have black belt-level\nstrength!$,reviewed AUTO draft
+Route115_Text_HeleneIntro,My COMPANIONS have beskar-level\nstrength!$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route115_Text_HeleneDefeat,This is too humiliating!$,"reviewed, no change needed"
 Route115_Text_HelenePostBattle,"I rarely meet anyone who's better\nthan me…\pI get it now!\nYou're an ARENA LEADER, aren't you?$",reviewed AUTO draft
 Route115_Text_AlixIntro,Our eyes met!\nThere's no getting away now!$,"reviewed, no change needed"
@@ -377,12 +377,12 @@ Route115_Text_AlixPostBattle,"Oh, well.\nI think I will TELEPORT home.$","review
 Route115_Text_MarleneIntro,You've disturbed my meditation…\nYou'll be punished for it.$,"reviewed, no change needed"
 Route115_Text_MarleneDefeat,You've broken my concentration!$,"reviewed, no change needed"
 Route115_Text_MarlenePostBattle,I was meditating with my COMPANION.\nBut this place isn't very peaceful…$,reviewed AUTO draft
-Route117_Text_IsaacIntro,"Listen, could I get you to battle\nthe COMPANION I'm raising?$",reviewed AUTO draft
+Route117_Text_IsaacIntro,"Listen, could you battle the beast\nI'm raising?\pIt's no rancor yet, but it's\ngetting there!$",trainer recast 2026-11-01 (bible/RECAST.md)
 Route117_Text_IsaacDefeat,You've raised yours superbly…$,"reviewed, no change needed"
 Route117_Text_IsaacPostBattle,COMPANION isn't all about power.\pPolishing a unique aspect of one's\ncharacter is another way of enjoying\lCOMPANION.$,reviewed AUTO draft
 Route117_Text_IsaacRegister,I'm going to redouble my training.\nWould you come look in on us?$,"reviewed, no change needed"
-Route117_Text_IsaacRematchIntro,"The COMPANION I've been raising are\nlooking good, just like before.$",reviewed AUTO draft
-Route117_Text_IsaacRematchDefeat,You know how to raise them properly.\nYou might have NURSERY skills…$,reviewed AUTO draft
+Route117_Text_IsaacRematchIntro,"The beasts I've been raising are\nlooking good, just like before.$",trainer recast 2026-11-01 (bible/RECAST.md)
+Route117_Text_IsaacRematchDefeat,You know how to raise them properly.\nYou'd make a fine beast handler…$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route117_Text_IsaacPostRematch,Your COMPANIONS are growing good!\nYou should enter them in SHOWCASES.$,reviewed AUTO draft
 Route117_Text_LydiaIntro,"Please, allow me to evaluate if you\nhave raised your COMPANION properly.$",reviewed AUTO draft
 Route117_Text_LydiaDefeat,"Yes, they are growing properly.$","reviewed, no change needed"
@@ -391,11 +391,11 @@ Route117_Text_LydiaRegister,I'm glad I met a superb TRAINER in you.\nI hope to s
 Route117_Text_LydiaRematchIntro,Allow me to reevaluate if you have\nraised your COMPANION properly.$,reviewed AUTO draft
 Route117_Text_LydiaRematchDefeat,They are growing admirably.$,"reviewed, no change needed"
 Route117_Text_LydiaPostRematch,"COMPANIONS seem to like different\nkinds of {POKEBLOCK}S, depending on their nature.$",reviewed AUTO draft
-Route117_Text_DylanIntro,"I'm in the middle of a triathlon, but,\nwhatever, let's have a battle!$","reviewed, no change needed"
+Route117_Text_DylanIntro,"I'm in the middle of a rally, but,\nwhatever, let's have a battle!$",trainer recast 2026-11-01 (bible/RECAST.md)
 Route117_Text_DylanDefeat,I ran out of energy!$,"reviewed, no change needed"
 Route117_Text_DylanPostBattle,I may have blown it…\pI might have dropped to last during\nthat battle…$,"reviewed, no change needed"
 Route117_Text_DylanRegister,"COMPANIONS have to be strong, too?\nI'd like you to train me!$",reviewed AUTO draft
-Route117_Text_DylanRematchIntro,"I'm smack in the middle of a triathlon,\nbut I'm comfortably ahead.\lLet's make this a quick battle!$","reviewed, no change needed"
+Route117_Text_DylanRematchIntro,"I'm smack in the middle of a rally,\nbut I'm comfortably ahead.\lLet's make this a quick battle!$",trainer recast 2026-11-01 (bible/RECAST.md)
 Route117_Text_DylanRematchDefeat,I ran out of energy again!$,"reviewed, no change needed"
 Route117_Text_DylanPostRematch,"I was tops in swimming and cycling,\nbut I'm not quite that confident with\lCOMPANION yet.$",reviewed AUTO draft
 Route117_Text_MariaDefeat,"I need to get more practices in,\nI guess.$","reviewed, no change needed"
@@ -404,32 +404,32 @@ Route117_Text_MariaRegister,"You appear to be training properly…\nIf you'd lik
 Route117_Text_MariaRematchIntro,Are you keeping up with your training?\nI sure am!\lLet me show you the evidence!$,"reviewed, no change needed"
 Route117_Text_MariaRematchDefeat,"I need to get more practices in,\nI guess.$","reviewed, no change needed"
 Route117_Text_MariaPostRematch,I'll resume training tomorrow.\nLet's battle again sometime!$,"reviewed, no change needed"
-Route117_Text_DerekIntro,Once a BUG CATCHER!\nAnd now a BUG MANIAC!\pBut my love for COMPANION remains\nunchanged!$,reviewed AUTO draft
-Route117_Text_DerekDefeat,My ineptitude also remains\nunchanged…$,"reviewed, no change needed"
+Route117_Text_DerekIntro,"Yub nub!\p(Once a little scout, and now\na SHAMAN!)\p(But my love for COMPANIONS\nremains unchanged!)$",trainer recast 2026-11-01 (bible/RECAST.md)
+Route117_Text_DerekDefeat,Ee chee…\p(My clumsiness also remains\nunchanged…)$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route117_Text_DerekPostBattle,"All I did was follow my heart, and now\nthey call me a BUG MANIAC…\pStill, I am an expert on BUG COMPANIONS,\nso it's only natural that they call me\la BUG MANIAC.$",reviewed AUTO draft
-Route117_Text_AnnaIntro,AINA: I'm with my pretty junior student\npartner. I have to do good!$,reviewed AUTO draft
-Route117_Text_AnnaDefeat,AINA: I'm with my pretty junior student\npartner! Let me win!$,reviewed AUTO draft
+Route117_Text_AnnaIntro,AINA: I'm flying with my trusty R3\nunit. I have to do good!$,trainer recast 2026-11-01 (bible/RECAST.md)
+Route117_Text_AnnaDefeat,AINA: R3 was watching…\nI wanted to win!$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route117_Text_AnnaPostBattle,AINA: Your COMPANIONS have some good\ncombinations.\pI'd say you're second only to us!$,reviewed AUTO draft
 Route117_Text_AnnaAndMegRegister,"AINA: We can't take this lying down!\nYou will come back, won't you?$",reviewed AUTO draft
 Route117_Text_AnnaNotEnoughMons,"AINA: If you want to battle us,\nbring two COMPANIONS with you.$",reviewed AUTO draft
-Route117_Text_MegIntro,MEZ: I'm going to tag up with my super\nsenior student partner and beat you!$,reviewed AUTO draft
-Route117_Text_MegDefeat,"MEZ: Oh, no!\nI'm sorry, ANNA! I let you down…$",reviewed AUTO draft
+Route117_Text_MegIntro,R3: Bweep! Bwee-dee-doo!\p(R3 is going to tag up with its\npilot and beat you!)$,trainer recast 2026-11-01 (bible/RECAST.md)
+Route117_Text_MegDefeat,R3: Bwoooo…\p(R3 is sorry it let AINA down…)$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route117_Text_MegPostBattle,"MEZ: I dragged ANNA down…\nIf I didn't, she would have won!$",reviewed AUTO draft
-Route117_Text_MegNotEnoughMons,"MEZ: Do you only have one COMPANION?\nWe can't battle with you, then.\pWe want to have a 2-on-2 battle.$",reviewed AUTO draft
-Route117_Text_AnnaRematchIntro,"AINA: I can't keep losing in front of\nmy junior partner, right?$",reviewed AUTO draft
+Route117_Text_MegNotEnoughMons,R3: Dwee-boop?\p(R3 says you only have one\nCOMPANION.)\p(It wants a 2-on-2 battle.)$,trainer recast 2026-11-01 (bible/RECAST.md)
+Route117_Text_AnnaRematchIntro,"AINA: I can't keep losing in front of\nmy own droid, right?$",trainer recast 2026-11-01 (bible/RECAST.md)
 Route117_Text_AnnaRematchDefeat,AINA: I couldn't get into the groove.$,reviewed AUTO draft
 Route117_Text_AnnaPostRematch,AINA: Your COMPANIONS have some good\ncombinations.\pI'd say you're second only to us!$,reviewed AUTO draft
 Route117_Text_AnnaRematchNotEnoughMons,"AINA: If you want to battle us,\nbring two COMPANIONS with you.$",reviewed AUTO draft
-Route117_Text_MegRematchIntro,MEZ: I'm going to tag up with my\nsenior partner and win this time!$,reviewed AUTO draft
-Route117_Text_MegRematchDefeat,MEZ: Too strong!$,reviewed AUTO draft
+Route117_Text_MegRematchIntro,R3: Bweep-boop!\p(R3 will tag up with its pilot and\nwin this time!)$,trainer recast 2026-11-01 (bible/RECAST.md)
+Route117_Text_MegRematchDefeat,R3: Bzzzt!\p(Too strong!)$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route117_Text_MegPostRematch,"MEZ: I battled together with my\nsenior partner, but we lost…\pThat's so discouraging…$",reviewed AUTO draft
-Route117_Text_MegRematchNotEnoughMons,"MEZ: Do you only have one COMPANION?\nWe can't battle with you, then.\pWe want to have a 2-on-2 battle.$",reviewed AUTO draft
+Route117_Text_MegRematchNotEnoughMons,R3: Dwee-boop?\p(R3 says you only have one\nCOMPANION.)\p(It wants a 2-on-2 battle.)$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route117_Text_MelinaIntro,Isn't it nice? To battle while looking\nat pretty flowers?$,"reviewed, no change needed"
 Route117_Text_MelinaDefeat,"Oh, that's quite impressive!$","reviewed, no change needed"
 Route117_Text_MelinaPostBattle,It feels wonderful to go for a jog\nwhile looking at flowers.$,"reviewed, no change needed"
 Route117_Text_BrandiIntro,Let me demonstrate the power\nhidden within a FORCE PUSH COMPANION!$,reviewed AUTO draft
 Route117_Text_BrandiDefeat,Astonishing!$,"reviewed, no change needed"
 Route117_Text_BrandiPostBattle,FORCE PUSH COMPANIONS are complex.\nYou should try catching some.$,reviewed AUTO draft
-Route117_Text_AishaIntro,Concentrate on getting the win.\nThat's how I battle!$,"reviewed, no change needed"
+Route117_Text_AishaIntro,Concentrate on getting the win.\nThis is the Way.$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route117_Text_AishaDefeat,I don't waste any time being angry\nover a loss--I would rather train.$,"reviewed, no change needed"
 Route117_Text_AishaPostBattle,"I think that if you worry about losing,\nyou're more likely to lose.$","reviewed, no change needed"

@@ -130,8 +130,8 @@ Route110_TrickHousePuzzle4_Text_WroteSecretCodeLockOpened,{PLAYER} wrote down th
 Route110_TrickHousePuzzle4_Text_CoraIntro,It's too much bother to think this out.\nI only wanted to battle!$,"reviewed, no change needed"
 Route110_TrickHousePuzzle4_Text_CoraDefeat,"Even though I lost, I still like battling\nthe best!$","reviewed, no change needed"
 Route110_TrickHousePuzzle4_Text_CoraPostBattle,Wouldn't you agree? You would go\nanywhere if TRAINERS were there.$,"reviewed, no change needed"
-Route110_TrickHousePuzzle4_Text_YujiIntro,"Heh! Boulders like this, I can brush\naside with one finger!$","reviewed, no change needed"
-Route110_TrickHousePuzzle4_Text_YujiDefeat,"I can push boulders, but I can't solve\nthe puzzle…$","reviewed, no change needed"
+Route110_TrickHousePuzzle4_Text_YujiIntro,"Wrrah!\p(Boulders like this, I can brush\naside with one paw!)$",trainer recast 2026-11-01 (bible/RECAST.md)
+Route110_TrickHousePuzzle4_Text_YujiDefeat,"Hrrrnn…\p(I can push boulders, but I can't\nsolve the puzzle…)$",trainer recast 2026-11-01 (bible/RECAST.md)
 Route110_TrickHousePuzzle4_Text_YujiPostBattle,It's not good enough to be brawny…\nYou have to use your head. Be brainy!$,"reviewed, no change needed"
 Route110_TrickHousePuzzle4_Text_PaulaIntro,"The TRICK HOUSE is getting trickier,\nisn't it?$","reviewed, no change needed"
 Route110_TrickHousePuzzle4_Text_PaulaDefeat,Aaak!$,"reviewed, no change needed"
@@ -195,27 +195,27 @@ Route110_TrickHousePuzzle8_Text_KeiraPostBattle,It's a miracle that you beat me.
 Route110_TrickHousePuzzle8_Text_LeroyIntro,"You've been slugging through the TRICK\nHOUSE challenge, too.$","reviewed, no change needed"
 Route110_TrickHousePuzzle8_Text_LeroyDefeat,I see…\nYou possess an extraordinary style.$,"reviewed, no change needed"
 Route110_TrickHousePuzzle8_Text_LeroyPostBattle,Seeing someone like you should please\nthe TRICK MASTER.$,"reviewed, no change needed"
-Route110_Text_JacobIntro,Whoa! Watch it!\nI guess you're not used to BIKE racing.$,"reviewed, no change needed"
-Route110_Text_JacobDefeated,Whoa!\nMy brakes failed!$,"reviewed, no change needed"
+Route110_Text_JacobIntro,Whoa! Watch it!\nGuess you're not used to SWOOP racing.$,trainer recast 2026-11-01 (bible/RECAST.md)
+Route110_Text_JacobDefeated,Whoa!\nMy repulsors failed!$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route110_Text_JacobPostBattle,Flat tires and brake problems can\ncause serious injury!\lInspect your BIKE for problems!$,"reviewed, no change needed"
 Route110_Text_AnthonyIntro,"Yo, you!\nCan you keep up with my speed?$","reviewed, no change needed"
 Route110_Text_AnthonyDefeated,Crash and burn!$,"reviewed, no change needed"
-Route110_Text_BenjaminIntro,Don't panic if your BIKE's going fast!$,"reviewed, no change needed"
+Route110_Text_BenjaminIntro,Don't panic if your SWOOP's going fast!$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route110_Text_BenjaminDefeated,I shouldn't panic during COMPANION\nbattles…$,reviewed AUTO draft
 Route110_Text_BenjaminPostBattle,There's no need to panic or stress.\nTake it easy. There's plenty of time.$,"reviewed, no change needed"
 Route110_Text_BenjaminRegister,I'll keep chugging on without stressing.\nGive me a shout if you're up to it.$,"reviewed, no change needed"
 Route110_Text_BenjaminRematchIntro,Aren't you going a little too fast?\nTake it easy and let's battle.$,"reviewed, no change needed"
 Route110_Text_BenjaminRematchDefeated,"I didn't panic, but I still lost…$","reviewed, no change needed"
 Route110_Text_BenjaminRematchPostBattle,There's no need to panic or stress.\nTake it easy. There's plenty of time.$,"reviewed, no change needed"
-Route110_Text_AbigailIntro,"The triathlon is hard in the extreme.\pYou have to complete the three events\nof swimming, cycling, and running.$","reviewed, no change needed"
+Route110_Text_AbigailIntro,"A SWOOP RALLY is hard in the extreme.\pYou have to finish three legs:\nswimming, swoop riding and running.$",trainer recast 2026-11-01 (bible/RECAST.md)
 Route110_Text_AbigailDefeated,"COMPANION battles are hard, too!$",reviewed AUTO draft
 Route110_Text_AbigailPostBattle,"I'm exhausted, so I need a break.\nIt's important to get proper rest.$","reviewed, no change needed"
 Route110_Text_AbigailRegister,"You know, I like you!\nLet's have a rematch on PODRACE TRACK.$",reviewed AUTO draft
-Route110_Text_AbigailRematchIntro,Isn't it neat to hold a battle while\ncycling?$,"reviewed, no change needed"
+Route110_Text_AbigailRematchIntro,Isn't it neat to hold a battle while\nriding a swoop?$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route110_Text_AbigailRematchDefeated,Wow…\nHow could you be so strong?$,"reviewed, no change needed"
 Route110_Text_AbigailRematchPostBattle,Were you going after a record?\pI'm sorry if I held you up!$,"reviewed, no change needed"
-Route110_Text_JasmineIntro,I've been riding without stopping.\nMy thighs are like rocks!$,"reviewed, no change needed"
-Route110_Text_JasmineDefeated,I'm worried about muscle cramps…$,"reviewed, no change needed"
+Route110_Text_JasmineIntro,I've been riding without stopping.\nMy grip is like a vise!$,trainer recast 2026-11-01 (bible/RECAST.md)
+Route110_Text_JasmineDefeated,I'm worried about hand cramps…$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route110_Text_JasminePostBattle,"Oh, you have some ARENA SHARDS?\nNo wonder you're so strong!$",reviewed AUTO draft
 Route110_Text_EdwardIntro,I have foreseen your intentions!\nI cannot possibly lose!$,"reviewed, no change needed"
 Route110_Text_EdwardDefeated,I failed to prophesize my own demise!$,"reviewed, no change needed"
@@ -232,7 +232,7 @@ Route110_Text_EdwinRematchPostBattle,"Oh, I long to make all rare COMPANIONS\nmi
 Route110_Text_DaleIntro,Hey!\nDon't sneak up behind me like that!$,"reviewed, no change needed"
 Route110_Text_DaleDefeated,I lost!\nDrat!$,"reviewed, no change needed"
 Route110_Text_DalePostBattle,Fishing is all about concentration.\nYou have to focus on the floater.$,"reviewed, no change needed"
-Route110_Text_IsabelIntro,Ahahaha! I would go anywhere to show\noff my delightful COMPANION.$,reviewed AUTO draft
+Route110_Text_IsabelIntro,Ahahaha! I follow the podrace circuit\neverywhere to show off my COMPANION.$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route110_Text_IsabelDefeated,"Oh, dear, this won't do.$","reviewed, no change needed"
 Route110_Text_IsabelPostBattle,"Rather than battling, perhaps I should\nshow off my COMPANION at the FAN CLUB.$",reviewed AUTO draft
 Route110_Text_IsabelRegister,That wasn't close to what I could\ndo to show off my COMPANION.\pI'll have you as my captive audience\nas often as possible!$,reviewed AUTO draft
@@ -241,7 +241,7 @@ Route110_Text_IsabelRematchDefeated,"Oh, dear, this won't do.$","reviewed, no ch
 Route110_Text_IsabelRematchPostBattle,"I don't think that I could ever stop\nfrom showing off my COMPANION.\pBut I like to battle, too!$",reviewed AUTO draft
 Route110_Text_TimmyDefeated,Being cool isn't enough to win…$,"reviewed, no change needed"
 Route110_Text_TimmyPostBattle,It's hard to battle with COMPANIONS you\njust caught.$,reviewed AUTO draft
-Route110_Text_AlyssaIntro,I fell off PODRACE TRACK…\pI'll get over my embarrassment by\nbattling with you!$,reviewed AUTO draft
+Route110_Text_AlyssaIntro,I fell off the PODRACE TRACK…\pI'll get over my embarrassment by\nbattling with you!$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route110_Text_AlyssaDefeated,Oops!\nI ended up losing!$,"reviewed, no change needed"
 Route110_Text_AlyssaPostBattle,Falling… Losing…\nThis is so humiliating for me!$,"reviewed, no change needed"
 Route110_Text_JosephIntro,"Okay! Full-throttle time! If you can't\ngroove, you get left behind!$","reviewed, no change needed"
