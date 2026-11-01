@@ -1,10 +1,10 @@
 {
   "init": "refs/jolteon_prep.png",
-  "init_source": "refs/sources/jolteon/jolteon_cut.png",
+  "init_source": "refs/sources/jolteon/jolteon_alien.png",
   "flip": false,
-  "denoise": 0.5,
-  "desc": "side view, whole body, small, centred, facing left: bright yellow static tooka cat, huge tall pointed ears, spiky bristling fur tufts on neck and tail, orange stripes, thin legs",
+  "denoise": 0.55,
+  "desc": "side view, whole body, small, centred, facing left: gaunt wary alien static tooka, huge tall pointed ears, small slit eyes, snarling bared teeth, needle quills bristling on head back and tail, orange stripes, sinewy thin clawed legs, alien fauna",
   "colour": "bright yellow with orange stripes and white tips",
-  "negative": "grey, black and white, sketch",
-  "ref_note": "Canon tooka turnaround (YJA, Betsy Bauer) side view, recoloured yellow by hand and background cleaned; round 3"
+  "negative": "grey, black and white, sketch, cute, chibi, kawaii, big eyes, smiling, happy, cartoon mascot, plush, toy",
+  "ref_note": "Canon tooka turnaround (YJA) recoloured yellow; alien pass: PIL slit eye, fanged mouth, lean jaw, quills (owner: too friendly)"
 }
