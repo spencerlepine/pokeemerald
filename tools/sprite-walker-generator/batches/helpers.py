@@ -5,7 +5,15 @@ no side effects (unlike importing an older batch file, which rewrites its own sp
 import yaml
 
 P = "graphics/object_events/pics/people/"
+PK = "graphics/object_events/pics/pokemon/"
 STEPS = {"down": ("down_a", "down_b"), "up": ("up_a", "up_b"), "left": ("left_a", "left_b")}
+# kit -> (stand -> step frames that copy its patches, y offset of those step frames)
+KIT_STEPS = {
+    "person16x32": (STEPS, 1),
+    "person16x16": (STEPS, 1),
+    "flyer16x16": ({"down": ("down_a",), "up": ("up_a",), "left": ("left_a",)}, -1),
+    "person16x32_bow": ({"down": ("bow",)}, 1),
+}
 
 
 def block(x, y, text):
@@ -16,19 +24,25 @@ def block(x, y, text):
 
 
 def spec(name, gi, pal, replaces, desc, note, materials, legend, accept, base=None, remap=None,
-         patches=None, frames=None, steps=None, kit="person16x32"):
-    d = {"name": name, "description": desc, "kit": kit, "replaces": P + replaces,
+         patches=None, frames=None, steps=None, kit="person16x32", root=P, step_patches=True):
+    """root: folder of `replaces`/`base` under the game (P = people/; use PK for pokemon/).
+    step_patches: copy each stand patch onto its step frames (moved by the kit's bob); turn it off
+    or override a step frame through `patches` when the step frame needs its own art."""
+    d = {"name": name, "description": desc, "kit": kit, "replaces": root + replaces,
          "graphics_info": gi, "notes": note, "palette": pal, "palette_tag": f"OBJ_EVENT_PAL_TAG_{pal.upper()}",
          "shade": True, "materials": materials, "legend": legend, "accept": accept}
     if base:
-        d["base_sheet"] = P + base
+        d["base_sheet"] = root + base
         if remap:
             d["remap"] = remap
     fr = {}
+    smap, dy = KIT_STEPS.get(kit, ({}, 0))
     for stand, pts in (patches or {}).items():
         fr[stand] = {"patches": pts}
-        for step in (() if kit.endswith("_still") else STEPS[stand]):
-            fr[step] = {"patches": [{**p, "y": p["y"] + 1} for p in pts]}
+    for stand, pts in (patches or {}).items():
+        for step in (smap.get(stand, ()) if step_patches else ()):
+            if step not in (patches or {}):
+                fr[step] = {"patches": [{**p, "y": p["y"] + dy} for p in pts]}
     for k, g in (frames or {}).items():
         for r in g:
             assert len(r) == 16, (name, k, len(r), r)

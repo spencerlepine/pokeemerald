@@ -48,6 +48,23 @@ python -m walker_sprite corpus                                # re-measure vanil
 (bottom-anchored), `half:` (left half, mirrored, optional `mirror_shade`), `base:` + `shift` +
 `patch_y`/`rows` (D4), or `mirror_of:`; any of them plus `patches:`.
 
+Kits (`kit:`), one per sheet layout Emerald uses for one-tile objects:
+
+| Kit | Sheet | Frames | Used by |
+|---|---|---|---|
+| `person16x32` | 144x32 | the nine above | most people, Kirlia, Mew, Dusclops |
+| `person16x32_still` | 48x32 | down, up, left | gym leaders, Elite Four, Sudowoodo |
+| `person16x32_bow` | 64x32 | down, up, left, bow | the Pokemon Center nurse |
+| `person16x32_single` | 16x32 | down | the player decorating a secret base |
+| `person16x16` | 144x16 | the nine above | little kids, tubers, ninja boy |
+| `person16x16_still` | 48x16 | down, up, left | small overworld Pokemon (Pikachu, Skitty...) |
+| `flyer16x16` | 96x16 | down, down_a, up, up_a, left, left_a | Wingull (one flap frame per facing) |
+| `person32x32` | 288x32 | the nine above | bikes, big Pokemon (not used yet) |
+
+The style score was measured on 16x32 people; for other kits compare with the vanilla score that
+`lint.txt` prints under the report. `palettes/kael.pal` and `palettes/mira.pal` are the player
+palettes in NPC index order (the vanilla player palettes use another layout).
+
 ## Format (what the game needs)
 
 | Fact | Value | Source |

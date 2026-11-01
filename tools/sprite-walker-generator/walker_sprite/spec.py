@@ -80,6 +80,63 @@ KITS = {
         "oam": "16x32",
         "still": True,
     },
+    # Small walkers: kids, tubers, the ninja boy (144x16, nine 16x16 frames, .size 128).
+    "person16x16": {
+        "frame": (16, 16),
+        "order": ["down", "up", "left", "down_a", "down_b", "up_a", "up_b", "left_a", "left_b"],
+        "stand": ["down", "up", "left"],
+        "walk": {
+            "down": ["down_a", "down", "down_b", "down"],
+            "up": ["up_a", "up", "up_b", "up"],
+            "left": ["left_a", "left", "left_b", "left"],
+        },
+        "size": 128,
+        "oam": "16x16",
+    },
+    # Small overworld Pokemon (48x16: down, up, left; the pic table repeats them for walking).
+    "person16x16_still": {
+        "frame": (16, 16),
+        "order": ["down", "up", "left"],
+        "stand": ["down", "up", "left"],
+        "walk": {"down": ["down"] * 4, "up": ["up"] * 4, "left": ["left"] * 4},
+        "size": 128,
+        "oam": "16x16",
+        "still": True,
+    },
+    # Flapping flyers (Wingull, 96x16): one stand and one flap frame per facing; the pic table
+    # plays sheet frames 0,2,4 as stands and 1,3,5 as both step frames.
+    "flyer16x16": {
+        "frame": (16, 16),
+        "order": ["down", "down_a", "up", "up_a", "left", "left_a"],
+        "stand": ["down", "up", "left"],
+        "walk": {
+            "down": ["down_a", "down", "down_a", "down"],
+            "up": ["up_a", "up", "up_a", "up"],
+            "left": ["left_a", "left", "left_a", "left"],
+        },
+        "size": 128,
+        "oam": "16x16",
+    },
+    # The Pokemon Center nurse (64x32): three stands plus a bow (sheet frame 3, anim frame 9).
+    "person16x32_bow": {
+        "frame": (16, 32),
+        "order": ["down", "up", "left", "bow"],
+        "stand": ["down", "up", "left"],
+        "walk": {"down": ["down"] * 4, "up": ["up"] * 4, "left": ["left"] * 4},
+        "size": 256,
+        "oam": "16x32",
+        "still": True,
+    },
+    # One-frame sheets (the player decorating a secret base, 16x32).
+    "person16x32_single": {
+        "frame": (16, 32),
+        "order": ["down"],
+        "stand": ["down"],
+        "walk": {"down": ["down"] * 4},
+        "size": 256,
+        "oam": "16x32",
+        "still": True,
+    },
     # Multi-tile walkers: same nine frames, 32x32 each (sheet 288x32), as the Mach/Acro bike
     # sheets and the 32x32 legendaries use. graphics_info needs .size = 512, .width/.height = 32,
     # .oam = &gObjectEventBaseOam_32x32, .subspriteTables = sOamTables_32x32.

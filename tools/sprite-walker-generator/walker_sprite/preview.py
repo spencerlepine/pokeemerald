@@ -62,7 +62,7 @@ def walk_gif(frames: dict, colours, kit: str, out: Path, z: int = 4) -> None:
     for t in range(4):
         canvas = Image.new("RGB", (len(dirs) * (w + 4) * z, (h + 2) * z), BG)
         for i, dname in enumerate(dirs):
-            src = walk["left" if dname == "right" else dname][t]
+            src = walk.get("left" if dname == "right" else dname, walk["down"])[t]
             fr = rgba_frame(frames[src], colours)
             if dname == "right":
                 fr = fr.transpose(Image.FLIP_LEFT_RIGHT)
@@ -121,7 +121,7 @@ def scene(frames: dict, colours, kit: str, out: Path, emerald: Path, neighbours:
         fr, cols = read_frames(emerald / rel)
         cast.append(rgba_frame(fr[0], cols))
     # layout: vanilla walkers first, then ours (down, left, up), one metatile apart
-    cast += [rgba_frame(frames[n], colours) for n in ("down", "left", "up")]
+    cast += [rgba_frame(frames.get(n, frames["down"]), colours) for n in ("down", "left", "up")]
     fw, fh = KITS[kit]["frame"]
     cols_n = len(cast) + 2
     rows = []
@@ -174,7 +174,7 @@ def compare(specs: list, out: Path, emerald: Path | None = None, z: int = 6) -> 
     rows = []
     for s in specs:
         cols = spec_palette(s)
-        frs = [rgba_frame(s.frames[n], cols) for n in ("down", "left", "up")]
+        frs = [rgba_frame(s.frames.get(n, s.frames["down"]), cols) for n in ("down", "left", "up")]
         w, h = s.w, s.h
         big = Image.new("RGB", (3 * (w * z + 6), h * z), BG)
         for i, f in enumerate(frs):
@@ -213,20 +213,28 @@ def batch_review(specs: list, out: Path, emerald: Path, z: int = 6) -> None:
 
     ground = _metatile_renderer(emerald)(1)
     def stands(fr_by_name, cols):
-        return [rgba_frame(fr_by_name[n], cols) for n in ("down", "left", "up")]
+        return [rgba_frame(fr_by_name.get(n, fr_by_name["down"]), cols) for n in ("down", "left", "up")]
     rows, old_line, new_line = [], [], []
-    w, h = specs[0].w, specs[0].h
+    w, h = max(s.w for s in specs), max(s.h for s in specs)
+
+    def pad(frs):  # mixed kits share a sheet: shorter frames stand on the same ground line
+        out = []
+        for f in frs:
+            c = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+            c.paste(f, ((w - f.width) // 2, h - f.height))
+            out.append(c)
+        return out
     for s in specs:
         old = []
         if s.replaces and (emerald / s.replaces).exists():
             try:
-                fr, cols = read_frames(emerald / s.replaces, (w, h))
-                old = stands(dict(zip(("down", "up", "left"), fr[:3])), cols)
+                fr, cols = read_frames(emerald / s.replaces, (s.w, s.h))
+                old = pad(stands(dict(zip(KITS[s.kit]["order"], fr)), cols))
             except ValueError:
                 pass
         if not old:
             old = [Image.new("RGBA", (w, h), (0, 0, 0, 0))] * 3
-        new = stands(s.frames, spec_palette(s))
+        new = pad(stands(s.frames, spec_palette(s)))
         old_line.append(old[0]); new_line.append(new[0])
         rows.append((s.name, old, new))
     cell = w * z + 6
@@ -315,7 +323,7 @@ def variants_review(specs: list, out: Path, emerald: Path, z: int = 5) -> None:
     d = ImageDraw.Draw(im)
 
     def stands(frames, cols):
-        return [rgba_frame(frames[n], cols) for n in ("down", "left", "up")]
+        return [rgba_frame(frames.get(n, frames["down"]), cols) for n in ("down", "left", "up")]
 
     def panel(frs):
         p = Image.new("RGB", (pw, h * z), BG)

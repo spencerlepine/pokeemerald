@@ -98,11 +98,12 @@ def cmd_build(a) -> int:
         print(f"note: no pokeemerald at {em}; skipped scene.png (set EMERALD_DIR)")
     preview.showcase(out / "preview")
     text = report(errors, warnings, m, kit=s.kit, accept=s.meta.get("accept"))
-    if s.replaces and (em / s.replaces).exists() and spec_mod.KITS[s.kit]["frame"] == (16, 32):
-        vf, vc = sheet.read_frames(em / s.replaces)
+    if s.replaces and (em / s.replaces).exists():
+        vf, vc = sheet.read_frames(em / s.replaces, spec_mod.KITS[s.kit]["frame"])
         vm = lint_mod.sheet_metrics(dict(zip(spec_mod.KITS[s.kit]["order"], vf)), vc, s.kit)
         vs, _ = lint_mod.score(vm["summary"], kit=s.kit)
-        text += f"\n\nvanilla {s.replaces}: style score {vs}/100 (match or beat it; a FAIL it shares is inherited, not new)"
+        vcol = vm["summary"].get("colours_used")
+        text += f"\n\nvanilla {s.replaces}: style score {vs}/100, colours_used {vcol} (match or beat it; a FAIL it shares is inherited, not new)"
     (out / "lint.txt").write_text(text + "\n")
     (out / "metrics.json").write_text(json.dumps(m, indent=1))
     print(f"wrote {png.relative_to(TOOL)} and previews in {(out / 'preview').relative_to(TOOL)}")
@@ -142,15 +143,17 @@ def cmd_verify(a) -> int:
     with tempfile.TemporaryDirectory() as t:
         bpp = Path(t) / "x.4bpp"
         back = Path(t) / "back.png"
-        subprocess.run([str(g), str(png), str(bpp), "-mwidth", "2", "-mheight", "4"], check=True)
+        fw, fh = spec_mod.KITS[s.kit]["frame"]
+        mw, mh = str(fw // 8), str(fh // 8)
+        subprocess.run([str(g), str(png), str(bpp), "-mwidth", mw, "-mheight", mh], check=True)
         pal_file = Path(t) / "p.gbapal"
         subprocess.run([str(g), str(sheet.PALETTE_DIR / f"{s.palette}.pal"), str(pal_file)], check=True)
         subprocess.run(
-            [str(g), str(bpp), str(back), "-mwidth", "2", "-mheight", "4", "-width", str(png_w(png) // 8), "-palette", str(pal_file)],
+            [str(g), str(bpp), str(back), "-mwidth", mw, "-mheight", mh, "-width", str(png_w(png) // 8), "-palette", str(pal_file)],
             check=True,
         )
-        a_frames, _ = sheet.read_frames(png)
-        b_frames, _ = sheet.read_frames(back)
+        a_frames, _ = sheet.read_frames(png, (fw, fh))
+        b_frames, _ = sheet.read_frames(back, (fw, fh))
         size = bpp.stat().st_size
     ok = a_frames == b_frames
     nfr, fsize = len(spec_mod.KITS[s.kit]["order"]), spec_mod.KITS[s.kit]["size"]
@@ -242,8 +245,13 @@ def cmd_shader(a) -> int:
 def cmd_regions(a) -> int:
     """Print a vanilla sheet (or any sheet) as material-letter grids, ready to edit into a spec."""
     from . import shade as shade_mod
-    frames, _ = sheet.read_frames(a.png)
-    order = spec_mod.KITS["person16x32"]["order"]
+    from PIL import Image
+    h = Image.open(a.png).height
+    frames, _ = sheet.read_frames(a.png, (16, h))
+    kit = a.kit or {16: "person16x16", 32: "person16x32"}[h]
+    order = spec_mod.KITS[kit]["order"]
+    if len(order) != len(frames):
+        order = [f"frame{i}" for i in range(len(frames))]
     for n, fr in zip(order, frames):
         print(f"  {n}: |")
         for row in shade_mod.regions_of(fr):
@@ -279,6 +287,7 @@ def main(argv=None) -> int:
     sub.add_parser("shader").set_defaults(fn=cmd_shader)
     rg = sub.add_parser("regions")
     rg.add_argument("png")
+    rg.add_argument("--kit", help="name frames by this kit's order (default: by sheet height)")
     rg.set_defaults(fn=cmd_regions)
     rp = sub.add_parser("review")
     rp.add_argument("out")
