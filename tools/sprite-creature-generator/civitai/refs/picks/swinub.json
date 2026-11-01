@@ -2,9 +2,9 @@
   "init": "refs/swinub_prep.png",
   "init_source": "/tmp/claude-0/-home-user/510f0079-9430-50be-b656-57ddf5b64e74/scratchpad/mask/r2_taunkit.png",
   "flip": false,
-  "denoise": 0.5,
-  "desc": "small fluffy tauntaun kit in side view, shaggy mane, stubby curled horn nubs, round snout, long tail, whole body",
+  "denoise": 0.42,
+  "desc": "small fluffy tauntaun kit standing in side view facing left, shaggy mane, stubby curled horn nubs, round snout, long tail, whole body, clean simple shapes",
   "colour": "cream white and pale brown fur, tan snout",
   "ref_note": "young fluffy tauntaun cut out of Tauntaun_Species.jpg (Legends; same image as piloswine, different animal), grass masked locally, flipped",
-  "negative": "grass, background"
+  "negative": "grass, background, sketch lines"
 }
