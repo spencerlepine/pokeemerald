@@ -17,7 +17,8 @@ database/music.csv has one row per song: every MUS_* track in ../game plus every
     sound/song_table.inc; midi_tracks / tempo_bpm / length_s / loops are read from the .mid itself.
 
 database/music_by_map.csv lists every map with the song it plays, its planet and map type, so each planet's
-music can be read in one place.
+music can be read in one place. `planned_music` is the net-new song that takes the map over (mapping/music.csv
+`maps`), e.g. a per-planet split of a song Emerald shares across planets.
 
 Deterministic: same inputs give a byte-identical file.
 """
@@ -43,7 +44,7 @@ COLS = ["asset_id", "wiki_title", "music_category", "music_form", "rewrite_statu
         "placeholder_from", "depends_on", "asset_file", "suggested_path", "player", "voicegroup", "volume",
         "reverb", "song_priority", "midi_tracks", "tempo_bpm", "length_s", "loops", "tech_notes", "notes"]
 MAP_COLS = ["map_id", "sw_map_title", "map_title", "planet", "map_type", "music", "wiki_title", "music_category",
-            "music_form"]
+            "music_form", "planned_music"]
 
 warnings: list[str] = []
 
@@ -162,7 +163,7 @@ def main() -> list[str]:
     labels = {r["asset_id"]: r for r in read(MAPPING / "music.csv")}
     maps = {r["map_id"]: r for r in read(DB / "area_progression.csv")} if (DB / "area_progression.csv").exists() else {}
     cfg, players = midi_cfg(), song_players()
-    out, by_map = [], {}
+    out, by_map, planned_by = [], {}, {}
     for a in audio:
         aid = a["asset_id"]
         lab = labels.get(aid)
@@ -175,6 +176,12 @@ def main() -> list[str]:
         if form not in FORMS:
             warn(f"mapping/music.csv: {aid} bad music_form {form!r}")
         map_ids = [u for u in a["used_by"].split("|") if u.startswith("map:")]
+        planned = [m for m in lab.get("maps", "").split("|") if m]  # maps a net-new song takes over
+        for m in planned:
+            if m not in maps:
+                warn(f"mapping/music.csv: {aid} map {m} is not in database/area_progression.csv")
+            planned_by.setdefault(m, []).append(aid)
+        map_ids = map_ids or planned
         planets = []
         for m in map_ids:
             p = maps.get(m, {}).get("planet", "")
@@ -202,7 +209,8 @@ def main() -> list[str]:
                 warn(f"{aid}: ../game/{f} missing")
         out.append(r)
         for m in map_ids:
-            by_map.setdefault(m, []).append(r)
+            if m not in planned:
+                by_map.setdefault(m, []).append(r)
     order = {c: i for i, c in enumerate(["FRONT_END", "TOWN", "ROUTE", "TRAVEL", "DUNGEON", "BUILDING", "FACILITY",
                                          "MINIGAME", "EVENT", "ENCOUNTER", "BATTLE", "VICTORY", "FANFARE", "SYSTEM",
                                          "UNUSED"])}
@@ -227,7 +235,8 @@ def main() -> list[str]:
                       "music": "|".join(s["asset_id"] for s in songs),
                       "wiki_title": "|".join(s["wiki_title"] for s in songs),
                       "music_category": "|".join(s["music_category"] for s in songs),
-                      "music_form": "|".join(s["music_form"] for s in songs)})
+                      "music_form": "|".join(s["music_form"] for s in songs),
+                      "planned_music": "|".join(planned_by.get(mid, []))})
     mrows.sort(key=lambda r: (r["planet"] or "~", r["map_id"]))
     write(DB / "music_by_map.csv", mrows, MAP_COLS)
     todo = sum(r["rewrite_status"] == "TODO" for r in out)

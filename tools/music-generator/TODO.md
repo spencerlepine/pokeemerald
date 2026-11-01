@@ -5,7 +5,7 @@
 Background music, battle music and fanfares, from the briefs in the wiki.
 
 - **Categories:** audio: music
-- **Wiki rows:** `music.csv`, one row per song: 149 with `rewrite_status` TODO (140 HOTSWAP + 9 NET_NEW). The 70 ghost rows (never played in Emerald) and `MUS_DUMMY` are SKIP. Same rows as `pending_audio.csv` category `music`, plus labels and tech notes.
+- **Wiki rows:** `music.csv`, one row per song: 178 with `rewrite_status` TODO (140 HOTSWAP + 38 NET_NEW, 29 of them per-planet versions of town, route and dungeon songs Emerald shares across planets). The 70 ghost rows (never played in Emerald) and `MUS_DUMMY` are SKIP. Same rows as `pending_audio.csv` category `music`, plus labels and tech notes.
 - **Labels:** `music_category` (TOWN, ROUTE, BATTLE, FANFARE…) and `music_form` (`LOOP`, `AMBIENT`, `CUE`, `JINGLE`); see `wiki/mapping/README.md` (`music.csv`).
 - **Tech notes per row:** `player` (BGM or the fanfare player), `voicegroup`, `volume`, `reverb`, `midi_tracks`, `tempo_bpm`, `length_s`, `loops` (the Emerald file's `[` `]` loop markers), `tech_notes`. Keep a song's loop/no-loop and roughly its length so scripts that wait on it still line up.
 - **Names:** `wiki_title` is the Emerald constant until the song gets its Star Wars title (`sw_title` in `wiki/mapping/music.csv`).
