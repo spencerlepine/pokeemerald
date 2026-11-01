@@ -7,6 +7,8 @@
 #include "decompress.h"
 #include "event_data.h"
 #include "intro.h"
+#include "intro_crawl.h"
+#include "util.h"
 #include "m4a.h"
 #include "main.h"
 #include "main_menu.h"
@@ -45,6 +47,8 @@ static void MainCB2(void);
 static void Task_TitleScreenPhase1(u8);
 static void Task_TitleScreenPhase2(u8);
 static void Task_TitleScreenPhase3(u8);
+static void Task_TitleScreenCrawlOut(u8);
+static void StartTitleScreenCrawlOut(u8);
 static void CB2_GoToMainMenu(void);
 static void CB2_GoToClearSaveDataScreen(void);
 static void CB2_GoToResetRtcScreen(void);
@@ -779,7 +783,13 @@ static void Task_TitleScreenPhase2(u8 taskId)
 // Show Rayquaza silhouette and process main title screen input
 static void Task_TitleScreenPhase3(u8 taskId)
 {
-    if (JOY_NEW(A_BUTTON) || JOY_NEW(START_BUTTON))
+    if ((JOY_NEW(A_BUTTON) || JOY_NEW(START_BUTTON)) && IntroCrawl_ShouldPlay())
+    {
+        // First boot with no save: send the logo off into space, then the opening crawl
+        FadeOutBGM(4);
+        StartTitleScreenCrawlOut(taskId);
+    }
+    else if (JOY_NEW(A_BUTTON) || JOY_NEW(START_BUTTON))
     {
         FadeOutBGM(4);
         BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_WHITEALPHA);
@@ -820,6 +830,145 @@ static void Task_TitleScreenPhase3(u8 taskId)
         }
     }
 }
+
+// ---------------------------------------------------------------------------------------------
+// Hand-off to the opening crawl (intro_crawl.c), first boot only.
+// The logo (BG2, affine) and the KYBER VERSION banner (OBJ) shrink away into the distance and
+// darken, the clouds (BG1) blend out, then BG1 is pointed at a cloudless copy of the gradient and
+// cross-faded over BG0 so the creature melts away. What is left is the bare deep-space gradient,
+// which the crawl keeps on screen.
+// ---------------------------------------------------------------------------------------------
+
+#define CRAWL_OUT_FRAMES        180
+#define CRAWL_OUT_CENTER_X      120  // screen point the logo shrinks towards
+#define CRAWL_OUT_CENTER_Y      56
+#define CRAWL_OUT_LOGO_TEX_X    (-29) // BG2X the title screen draws the logo with
+#define CRAWL_OUT_RECEDE        15   // 1/scale grows by this/256 per frame (logo is ~1/11 size at the end)
+#define CRAWL_OUT_LOGO_FADE_AT  100  // frame the logo starts darkening
+#define CRAWL_OUT_CLOUDS_END    48   // clouds fully blended out by this frame
+#define CRAWL_OUT_CREATURE_END  112  // creature fully gone by this frame
+#define CRAWL_OUT_SKY_SCREEN    28   // screen block for the cloudless gradient map (intro_crawl.c uses it too)
+#define CRAWL_OUT_SKY_CHARBASE  2    // BG0's tiles (the gradient + creature)
+
+#define tOutFrame data[5]
+
+static void StartTitleScreenCrawlOut(u8 taskId)
+{
+    u16 i;
+
+    for (i = 0; i < MAX_SPRITES; i++)
+    {
+        struct Sprite *sprite = &gSprites[i];
+        if (!sprite->inUse)
+            continue;
+        if (sprite->template == &sStartCopyrightBannerSpriteTemplate)
+        {
+            // "Press Start" and copyright go straight away
+            sprite->callback = SpriteCallbackDummy;
+            sprite->invisible = TRUE;
+        }
+        else if (sprite->template == &sVersionBannerLeftSpriteTemplate
+              || sprite->template == &sVersionBannerRightSpriteTemplate)
+        {
+            // The version banner shrinks with the logo
+            sprite->oam.affineMode = ST_OAM_AFFINE_NORMAL;
+            sprite->oam.matrixNum = 0;
+        }
+    }
+    SetOamMatrix(0, 0x100, 0, 0, 0x100);
+    gTasks[taskId].tOutFrame = 0;
+    gTasks[taskId].func = Task_TitleScreenCrawlOut;
+}
+
+static void Task_TitleScreenCrawlOut(u8 taskId)
+{
+    s32 frame = gTasks[taskId].tOutFrame;
+    s32 invScale = 0x100 + frame * CRAWL_OUT_RECEDE; // texture px per screen px, 8.8
+    s32 bgX, bgY;
+    u16 i;
+
+    // Logo: scale BG2 about CRAWL_OUT_CENTER
+    bgX = ((CRAWL_OUT_CENTER_X + CRAWL_OUT_LOGO_TEX_X) << 8) - invScale * CRAWL_OUT_CENTER_X;
+    bgY = (CRAWL_OUT_CENTER_Y << 8) - invScale * CRAWL_OUT_CENTER_Y;
+    SetGpuReg(REG_OFFSET_BG2PA, invScale);
+    SetGpuReg(REG_OFFSET_BG2PD, invScale);
+    SetGpuReg(REG_OFFSET_BG2X_L, bgX);
+    SetGpuReg(REG_OFFSET_BG2X_H, bgX >> 16);
+    SetGpuReg(REG_OFFSET_BG2Y_L, bgY);
+    SetGpuReg(REG_OFFSET_BG2Y_H, bgY >> 16);
+
+    // Version banner: same scale, and slide each half towards the centre
+    SetOamMatrix(0, invScale, 0, 0, invScale);
+    for (i = 0; i < MAX_SPRITES; i++)
+    {
+        struct Sprite *sprite = &gSprites[i];
+        if (sprite->inUse && sprite->oam.affineMode == ST_OAM_AFFINE_NORMAL)
+        {
+            sprite->x2 = ((sprite->x - CRAWL_OUT_CENTER_X) * 0x100) / invScale - (sprite->x - CRAWL_OUT_CENTER_X);
+            sprite->y2 = ((sprite->y - CRAWL_OUT_CENTER_Y) * 0x100) / invScale - (sprite->y - CRAWL_OUT_CENTER_Y);
+        }
+    }
+
+    // Darken the logo (BG palettes 0-13, skipping the backdrop colour) and the banner (OBJ palette 0)
+    if (frame >= CRAWL_OUT_LOGO_FADE_AT)
+    {
+        u8 coeff = ((frame - CRAWL_OUT_LOGO_FADE_AT) * 16) / (CRAWL_OUT_FRAMES - CRAWL_OUT_LOGO_FADE_AT);
+        BlendPalette(BG_PLTT_ID(0) + 1, 14 * 16 - 1, coeff, RGB_BLACK);
+        BlendPalette(OBJ_PLTT_ID(0), 16, coeff, RGB_BLACK);
+    }
+
+    // Clouds: keep drifting while BG1's blend weight drops from 6 to 0
+    if (frame < CRAWL_OUT_CLOUDS_END)
+    {
+        if (++gTasks[taskId].tCounter & 1)
+        {
+            gTasks[taskId].tBg1Y++;
+            gBattle_BG1_Y = gTasks[taskId].tBg1Y / 2;
+        }
+        SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(6 - (frame * 6) / CRAWL_OUT_CLOUDS_END, 15));
+    }
+    else if (frame == CRAWL_OUT_CLOUDS_END)
+    {
+        // Clouds are invisible now. Point BG1 at the gradient with the creature taken out:
+        // every column copies column 31 of BG0's map, which is always plain gradient (off screen).
+        u16 *src = (u16 *)BG_SCREEN_ADDR(26);
+        u16 *dst = (u16 *)BG_SCREEN_ADDR(CRAWL_OUT_SKY_SCREEN);
+        u16 x, y;
+
+        ScanlineEffect_Stop();
+        for (y = 0; y < 32; y++)
+            for (x = 0; x < 32; x++)
+                dst[y * 32 + x] = src[y * 32 + 31];
+        gBattle_BG1_X = 0;
+        gBattle_BG1_Y = 0;
+        SetGpuReg(REG_OFFSET_BG1HOFS, 0);
+        SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(0, 16));
+        SetGpuReg(REG_OFFSET_BG1CNT, BGCNT_PRIORITY(2) | BGCNT_CHARBASE(CRAWL_OUT_SKY_CHARBASE) | BGCNT_SCREENBASE(CRAWL_OUT_SKY_SCREEN) | BGCNT_16COLOR | BGCNT_TXT256x256);
+    }
+    else if (frame <= CRAWL_OUT_CREATURE_END)
+    {
+        // Cross-fade the cloudless gradient (BG1) over the gradient + creature (BG0)
+        u8 eva = ((frame - CRAWL_OUT_CLOUDS_END) * 16) / (CRAWL_OUT_CREATURE_END - CRAWL_OUT_CLOUDS_END);
+        SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(eva, 16 - eva));
+        if (frame == CRAWL_OUT_CREATURE_END)
+        {
+            SetGpuReg(REG_OFFSET_BLDCNT, 0);
+            SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_MODE_1 | DISPCNT_OBJ_1D_MAP | DISPCNT_BG1_ON | DISPCNT_BG2_ON | DISPCNT_OBJ_ON);
+        }
+    }
+
+    if (++gTasks[taskId].tOutFrame > CRAWL_OUT_FRAMES)
+    {
+        // Logo is a speck and fully dark: drop it and hand over to the crawl
+        SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_MODE_1 | DISPCNT_BG1_ON);
+        SetGpuReg(REG_OFFSET_BG2PA, 0x100);
+        SetGpuReg(REG_OFFSET_BG2PD, 0x100);
+        DestroyTask(taskId);
+        SetMainCallback2(CB2_InitIntroCrawl);
+    }
+}
+
+#undef tOutFrame
 
 static void CB2_GoToMainMenu(void)
 {
