@@ -256,6 +256,10 @@ def derive(entities, by_id, mapping):
         suffix = e.get("title", "")
         if suffix.startswith(emer_loc):
             suffix = suffix[len(emer_loc):].lstrip(" ·")
+        if r["derived_from"].startswith("mapping") and r["sw_name"]:
+            # a room renamed in mapping/world_objects.csv ("MOS EISLEY · Cantina") keeps its own name and description
+            r.update(planet=loc.get("planet", ""), swap_kind=r["swap_kind"] or loc.get("swap_kind", "HOTSWAP"))
+            continue
         r.update(sw_name=(base + (" · " + suffix if suffix else "")) if base else "",
                  sw_title=(base + (" · " + suffix if suffix else "")) if base else "",
                  planet=loc.get("planet", ""), map_status=loc.get("map_status", "TODO") if base else ("DONE" if loc.get("swap_kind") == "KEEP" else "TODO"),

@@ -261,10 +261,10 @@ LilycoveCity_DepartmentStore_1F_Text_NoRoomForThis,Oh?\nYou seem to have no room
 LilycoveCity_DepartmentStore_1F_Text_PrizeWeveBeenHolding,"{PLAYER}?\nYes, I've been expecting you.\pThis is the prize we've been holding\nfor you.$","reviewed, no change needed"
 LilycoveCity_DepartmentStore_1F_Text_PleaseVisitAgain2,Please do visit again.$,"reviewed, no change needed"
 MoveTutor_Text_ThisMoveCanOnlyBeLearnedOnce,This move can be learned only\nonce. Is that okay?$,"reviewed, no change needed"
-MoveTutor_Text_SwaggerTeach,"Heh! My COMPANION totally rules!\nIt's cooler than any COMPANION!\pI was lipping off with a swagger in\nmy step like that when the CHAIRMAN\lchewed me out.\pThat took the swagger out of my step.\pIf you'd like, I'll teach the move\nSWAGGER to a COMPANION of yours.$",reviewed AUTO draft
-MoveTutor_Text_SwaggerDeclined,"What, no? Can't you get into\nthe spirit of things?$","reviewed, no change needed"
+MoveTutor_Text_SwaggerTeach,"PONDA BABA: Hrrgh! Grrrhk!\p(My COMPANION's the meanest in\nMOS EISLEY! Nobody crosses it!)\p(I was strutting around with a\nswagger like that when the CHAIRMAN\lchewed me out.)\p(That took the swagger out of\nmy step.)\p(If you'd like, I'll teach the move\nSWAGGER to a COMPANION of yours.)$",cantina recast 2026-11-01 (bible/NET_NEW_DESIGNS.md)
+MoveTutor_Text_SwaggerDeclined,"PONDA BABA: Hrrgh!\p(What, no? You don't like me\neither?)$",cantina recast 2026-11-01 (bible/NET_NEW_DESIGNS.md)
 MoveTutor_Text_SwaggerWhichMon,"All right, which COMPANION wants to\nlearn how to SWAGGER?$",reviewed AUTO draft
-MoveTutor_Text_SwaggerTaught,I'll just praise my COMPANION from now\non without the swagger.$,reviewed AUTO draft
+MoveTutor_Text_SwaggerTaught,PONDA BABA: Hrrk.\p(I'll just praise my COMPANION from\nnow on. No more swagger.)$,cantina recast 2026-11-01 (bible/NET_NEW_DESIGNS.md)
 MoveTutor_Text_RolloutTeach,"Did you know that you can go from\nhere a long way in that direction\lwithout changing direction?\pI might even be able to roll\nthat way.\pDo you think your COMPANION will\nwant to roll, too?\pI can teach one the move ROLLOUT\nif you'd like.$",reviewed AUTO draft
 MoveTutor_Text_RolloutDeclined,You don't need to be shy about it.\nLet's roll!$,"reviewed, no change needed"
 MoveTutor_Text_RolloutWhichMon,"Ehehe, sure thing! It'd be great if\nthe COMPANION looked like me.$",reviewed AUTO draft

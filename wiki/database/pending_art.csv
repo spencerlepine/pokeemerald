@@ -4442,6 +4442,13 @@ net:death-star-site,net_new,area,,,,,,net:death-star-site:net_new,Death Star con
 net:move-force-choke,net_new,move,,,,,,net:move-force-choke:net_new,FORCE CHOKE,FORCE CHOKE,,PENDING_ART,,placeholder: copy the art of move:crunch,NET_NEW,,,,,,NOT_STARTED
 net:move-blaster-shot,net_new,move,,,,,,net:move-blaster-shot:net_new,BLASTER SHOT,BLASTER SHOT,,PENDING_ART,,placeholder: copy the art of move:swift,NET_NEW,,,,,,NOT_STARTED
 net:move-saber-slash,net_new,move,,,,,,net:move-saber-slash:net_new,SABER SLASH,SABER SLASH,,PENDING_ART,,placeholder: copy the art of move:slash,NET_NEW,,,,,,NOT_STARTED
+net:walker-ewok,net_new,object_graphics,,,,,,net:walker-ewok:net_new,Walker: Ewok,Walker: Ewok,,PENDING_ART,,placeholder: copy the art of object-gfx:winona,NET_NEW,,,,,,NOT_STARTED
+net:walker-wuher,net_new,object_graphics,,,,,,net:walker-wuher:net_new,Walker: Wuher,Walker: Wuher,,PENDING_ART,,placeholder: copy the art of object-gfx:man-4,NET_NEW,,,,,,NOT_STARTED
+net:walker-bith,net_new,object_graphics,,,,,,net:walker-bith:net_new,Walker: Bith musician,Walker: Bith musician,,PENDING_ART,,placeholder: copy the art of object-gfx:psychic-m,NET_NEW,,,,,,NOT_STARTED
+net:walker-aqualish,net_new,object_graphics,,,,,,net:walker-aqualish:net_new,Walker: Ponda Baba,Walker: Ponda Baba,,PENDING_ART,,placeholder: copy the art of object-gfx:man-4,NET_NEW,,,,,,NOT_STARTED
+net:walker-evazan,net_new,object_graphics,,,,,,net:walker-evazan:net_new,Walker: Dr. Evazan,Walker: Dr. Evazan,,PENDING_ART,,placeholder: copy the art of object-gfx:man-3,NET_NEW,,,,,,NOT_STARTED
+net:walker-ithorian,net_new,object_graphics,,,,,,net:walker-ithorian:net_new,Walker: Momaw Nadon,Walker: Momaw Nadon,,PENDING_ART,,placeholder: copy the art of object-gfx:gentleman,NET_NEW,,,,,,NOT_STARTED
+net:walker-protocol-droid,net_new,object_graphics,,,,,,net:walker-protocol-droid:net_new,Walker: protocol droid,Walker: protocol droid,,PENDING_ART,,placeholder: copy the art of object-gfx:devon-employee,NET_NEW,,,,,,NOT_STARTED
 brand:rom-title,branding,,Makefile,,,,,,,"ROM header title 'POKEMON EMER' (12 chars, shown by emulators and flash carts) → your title, e.g. 'SW EMERALD'.",,NO_ART,,Not an image. Keep GAME_CODE BPEE (Makefile:3): emulators use it to pick the save type and RTC.,HOTSWAP,HUMAN-TODO,2,,,,NOT_STARTED
 vfx:General_CastformChange,vfx_battle_anim,general,data/battle_anim_scripts.s,,,,,,,Keep the animation; its sprites are redrawn through pending_art (battle_anims).,,KEEP_ANIM,,,KEEP,,10305,,,,NOT_STARTED
 vfx:General_DoomDesireHit,vfx_battle_anim,general,data/battle_anim_scripts.s,,,,,ANIM_TAG_EXPLOSION|SE_M_CONFUSE_RAY|SE_M_SELF_DESTRUCT,,Keep the animation; its sprites are redrawn through pending_art (battle_anims).,,KEEP_ANIM,,,KEEP,,10601,,,,NOT_STARTED
