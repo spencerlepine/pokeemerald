@@ -1,0 +1,10 @@
+{
+  "init": "refs/articuno_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/1/1e/ShriekHawk-Monstrous.png/revision/latest?cb=20251222025659",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "majestic icy blue legendary bird with wide frosted wings and a long trailing tail",
+  "colour": "light blue white blue",
+  "negative": "red wings",
+  "ref_note": "Canon shriek-hawk render with alpha, wings spread in flight; flipped to face left; red wing membrane recoloured to ice blue by args (black ice vulture still cut out as a box)"
+}

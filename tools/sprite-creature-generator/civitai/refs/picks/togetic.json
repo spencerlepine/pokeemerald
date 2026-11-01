@@ -1,0 +1,9 @@
+{
+  "init": "refs/togetic_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/d/dd/ChamCham-2021THRA4.png/revision/latest?cb=20231009103733",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small furry flying creature with broad bat wings and a curled tail",
+  "colour": "rust orange and cream",
+  "ref_note": "ChamCham body plan for winged luck creature"
+}

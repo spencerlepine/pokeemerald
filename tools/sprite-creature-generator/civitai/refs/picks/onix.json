@@ -1,0 +1,9 @@
+{
+  "init": "refs/onix_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/6/65/Duracrete_worm.jpg/revision/latest?cb=20090713024719",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "long rearing segmented slug with spiny ridges and feeler tendrils around its mouth",
+  "colour": "brown and tan",
+  "ref_note": "steelix uses DuracreteSlug-FFp48 so onix takes the older worm art"
+}

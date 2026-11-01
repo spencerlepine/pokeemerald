@@ -1,0 +1,9 @@
+{
+  "init": "refs/kabuto_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/b/bc/Mythology-Gampassa1.jpg/revision/latest?cb=20131109115814",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small brown fossil creature hiding under a smooth dome shell with stubby legs",
+  "colour": "brown dark brown grey",
+  "ref_note": "Gampassa (giant turtle) art: dome-shelled body, clean cut, head left"
+}

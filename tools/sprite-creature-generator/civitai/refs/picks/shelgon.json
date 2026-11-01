@@ -1,0 +1,9 @@
+{
+  "init": "refs/shelgon_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/0/02/UtapauBeastConcept-AndreKirk.png/revision/latest/scale-to-width-down/1000?cb=20251128162857#crop=0.186,0.648,0.408,0.812",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "hunched reptile hatchling sealed inside a heavy segmented white armor shell with only stubby legs and jaws showing",
+  "colour": "bone white and pale khaki",
+  "ref_note": "Utapau large beast concept (TCW, Andre Kirk), coloured side view cropped from the turnaround sheet on flat gray: segmented armor shell reads as the dactillion's armored molt; faces left"
+}

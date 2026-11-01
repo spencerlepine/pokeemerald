@@ -1,0 +1,10 @@
+{
+  "init": "refs/togepi_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/9/91/D-O_Fathead.png/revision/latest/scale-to-width-down/1000?cb=20221029015457",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "tiny creature with a round egg shell body and a small head poking out on top",
+  "colour": "cream white and green",
+  "negative": "machine, metal, robot, wheel",
+  "ref_note": "D-O droid used only for its round egg body with small head shape"
+}

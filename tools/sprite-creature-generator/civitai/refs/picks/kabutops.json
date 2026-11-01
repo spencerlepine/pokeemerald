@@ -1,0 +1,9 @@
+{
+  "init": "refs/kabutops_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/f/fd/PurpleMantis-SSW3.png/revision/latest?cb=20250213061109",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "upright armoured brown fossil predator with two scythe blade arms and a ridged shell",
+  "colour": "brown tan dark brown",
+  "ref_note": "Canon purple mantis (game sprite render) with alpha: scythe-armed insect body, head left; purple art so colour arg pushes brown"
+}

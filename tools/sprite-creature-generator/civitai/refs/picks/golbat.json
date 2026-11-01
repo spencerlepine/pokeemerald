@@ -1,0 +1,9 @@
+{
+  "init": "refs/golbat_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/3/37/Salt_mynock_concept_art.jpg/revision/latest?cb=20220112201519#crop=0,0.22,1,0.95",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "large space bat gliding on huge membrane wings with a gaping round sucker maw and a long tail",
+  "colour": "grey brown and tan",
+  "ref_note": "databank Mynock; salt mynock concept sketch on clean white, side glide with head left; title text cropped out"
+}

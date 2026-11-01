@@ -1,0 +1,9 @@
+{
+  "init": "refs/drowzee_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/b/b6/ITOinterrogator-NEGTD.png/revision/latest/scale-to-width-down/1000?cb=20221026032423",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small floating black sphere droid with a glowing photoreceptor and thin probe arms",
+  "colour": "black and silver",
+  "ref_note": "hypno uses InterrogationDroid-SW100Objects"
+}

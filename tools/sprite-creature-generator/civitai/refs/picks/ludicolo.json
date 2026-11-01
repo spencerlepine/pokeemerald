@@ -1,0 +1,10 @@
+{
+  "init": "refs/ludicolo_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/3/33/Fambaa-FF47.png/revision/latest?cb=20230927033404",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "huge four-legged swamp lizard carrying a round shield generator dish",
+  "colour": "olive brown and tan",
+  "negative": "rider, human",
+  "ref_note": "Fambaa FF47 render with shield generator"
+}

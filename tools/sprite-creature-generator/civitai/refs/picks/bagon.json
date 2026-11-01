@@ -1,0 +1,9 @@
+{
+  "init": "refs/bagon_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/b/b6/Voritor_lizard_concept_art.jpg/revision/latest?cb=20220111161010#crop=0.0,0.21,1.0,0.92",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "stocky wingless reptile hatchling with a hard bony head and a ridged back crest",
+  "colour": "pale gray and white",
+  "ref_note": "Voritor lizard concept art (pencil on white), label cropped off: stocky crested reptile facing left as the flightless dactillion hatchling; no juvenile dactillion art exists"
+}

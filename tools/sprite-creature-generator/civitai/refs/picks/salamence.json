@@ -1,0 +1,9 @@
+{
+  "init": "refs/salamence_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/e/ed/Dactillion.png/revision/latest/scale-to-width-down/1000?cb=20240209035219",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "great flying dactillion with huge leathery wings spread wide and a long crested beak",
+  "colour": "dark gray and maroon",
+  "ref_note": "Dactillion render (transparent, no rider): full wingspan in flight with head to the left"
+}

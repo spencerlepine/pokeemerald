@@ -1,0 +1,10 @@
+{
+  "init": "refs/nuzleaf_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/7/73/Galaxies_Dulok_concept_art.jpg/revision/latest?cb=20090310001540#crop=0.2,0.03,0.85,0.97",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "crouching long-nosed forest imp with a leaf tuft on its head",
+  "colour": "brown and tan",
+  "negative": "spear, weapon, signature",
+  "ref_note": "Galaxies Dulok concept sketch as Endor imp base; ink only"
+}

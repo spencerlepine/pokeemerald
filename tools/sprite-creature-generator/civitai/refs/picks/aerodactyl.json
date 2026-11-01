@@ -1,0 +1,10 @@
+{
+  "init": "refs/aerodactyl_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/c/c7/Pterosaur5.jpg/revision/latest/scale-to-width-down/1000?cb=20090422201304#crop=0,0.0,1,0.68",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "ancient purple pterosaur predator with wide leathery wings a crested head and a fanged beak",
+  "colour": "purple grey",
+  "negative": "black and white, sketch",
+  "ref_note": "Legends pterosaur line art, second smaller pterosaur cropped out; flipped so the head faces left; greyscale so colour comes from args"
+}

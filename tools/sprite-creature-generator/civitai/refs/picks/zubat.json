@@ -1,0 +1,9 @@
+{
+  "init": "refs/zubat_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/9/9c/Mynock-AA.png/revision/latest?cb=20200427023903",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small leathery space bat with ragged wings a round sucker mouth and a long thin tail",
+  "colour": "rusty brown and orange",
+  "ref_note": "databank Mynock; Alien Archive render, transparent side view with head left"
+}

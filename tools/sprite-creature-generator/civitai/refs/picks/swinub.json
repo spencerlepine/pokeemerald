@@ -5,5 +5,5 @@
   "denoise": 0.5,
   "desc": "small fluffy tauntaun kit with stubby curled horn nubs and a round snout",
   "colour": "cream white and tan",
-  "ref_note": "Tauntaun SWE render (front view); transparent; different image and pose from piloswine; width 32 because the tall figure is height-capped, keeps the kit visibly smaller"
+  "ref_note": "Tauntaun SWE render (front view); transparent; different image and pose from piloswine; width 26 because this tall figure is height-bound (gives ~44 px tall), keeps the kit small next to piloswine"
 }
