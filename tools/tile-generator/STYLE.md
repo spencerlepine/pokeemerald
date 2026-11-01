@@ -79,3 +79,7 @@ own primary recolour (stage 1 recipe) and each town a secondary.
   slots per bank are the budget for this; check them before planning an effect.
 - **Lava from water:** let hue follow lightness (`hue_by_light: [10, 100]`, dark red to yellow) and raise
   contrast (`light_scale: 1.3`): the drawn wave crests become glowing seams with no new pixels.
+- **Metal floors are tone-level patterns.** The Facility floor kit has a lit set and a shadowed set (the
+  shadow set is every index + 1) whose halves mix under walls, so a new floor is drawn once as tone levels
+  (`ground.deck_plate`, `ground.grate`) and written into both sets by the `pattern` op with two tone maps.
+  Keep every top half compatible with every bottom half.

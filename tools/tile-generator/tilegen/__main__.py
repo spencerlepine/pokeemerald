@@ -90,6 +90,14 @@ def _build_pair(rec, primary: str, secondary: str):
                                light_blobs=op.get("light_blobs", 2), dark_dots=op.get("dark_dots", 4), blob=op.get("blob", 2))
             for mid in op["metatiles"]:
                 edit.set_metatile_layer(ts, mid, op.get("layer", 0), np.block([[A, B], [B, A]]))
+        elif op["op"] == "pattern":           # write a tone-level pattern into tile ids (all metatiles using them follow)
+            lvl = ground.PATTERNS[op["pattern"]](**op.get("args", {}))
+            lut = np.array(op["tones"], np.uint8)
+            img = lut[np.minimum(lvl, len(lut) - 1)]
+            base = gba.NUM_TILES_IN_PRIMARY if ts.secondary else 0
+            for r, row in enumerate(op["tiles"]):
+                for c, tid in enumerate(row):
+                    ts.tiles[tid - base] = img[r * 8:(r + 1) * 8, c * 8:(c + 1) * 8]
         elif op["op"] == "rebank":
             mids = list(op.get("metatiles", []))
             if "metatiles_with_tiles" in op:

@@ -13,10 +13,21 @@ rules:
     set:   {hue: 250, chroma: 7, light_scale: 1.2, light: -34}
   - name: panel-grey
     match: {banks: ["facility:6", "facility:8", "facility:9", "facility:10", "facility:11"], hue: [255, 300], chroma_min: 6, chroma_max: 30}
-    set:   {hue: 255, chroma: 4}
+    set:   {hue: 280, chroma: 4}
   - name: panel-white
     match: {banks: ["facility:6", "facility:8", "facility:9"], chroma_max: 14, light_min: 84}
-    set:   {hue: 255, chroma: 3, light: -10}
+    set:   {hue: 280, chroma: 3, light: -10}
   - name: panel-neutral
     match: {banks: ["facility:6"], chroma_max: 10, light_max: 84}
-    set:   {hue: 255, chroma: 3, light: -6}
+    set:   {hue: 280, chroma: 3, light: -6}
+retexture:                     # the hideout's ribbed floor -> square glossy deck plates (lit and shadowed sets)
+  - op: pattern
+    tileset: secondary
+    pattern: deck_plate
+    tiles: [[768, 769], [784, 785]]
+    tones: [10, 11, 12]
+  - op: pattern
+    tileset: secondary
+    pattern: deck_plate
+    tiles: [[800, 801], [816, 817]]
+    tones: [11, 12, 13]

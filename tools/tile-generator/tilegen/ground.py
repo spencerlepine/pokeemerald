@@ -126,3 +126,34 @@ def tile_grid(pieces: dict[str, np.ndarray], order: list[str], cols: int) -> np.
         r, c = divmod(k, cols)
         out[r * size:(r + 1) * size, c * size:(c + 1) * size] = pieces[name]
     return out
+
+
+# ----------------------------------------------------------------------------- metal floors (Death Star)
+# Patterns return a 16x16 map of tone *levels* (0 = lightest); the recipe maps levels to bank indices, so the
+# same pattern fills the lit and the shadowed floor tiles (vanilla Facility: shadow = every index + 1).
+
+def deck_plate(bolts: bool = False) -> np.ndarray:
+    """One square deck plate per metatile: dark seam on the top row and right column, a 1 px lit bevel inside
+    it (light from the upper left), a flat glossy field, and a short reflection streak."""
+    p = np.ones((16, 16), np.uint8)
+    p[0, :] = 2; p[:, 15] = 2
+    p[1, :15] = 0; p[1:, 0] = 0
+    for i in range(4):                      # diagonal gloss streak, upper left of the plate
+        p[4 + i, 9 - i] = 0
+    if bolts:
+        for y, x in ((3, 3), (3, 12), (12, 3), (12, 12)):
+            p[y, x] = 2
+    return p
+
+
+def grate(period: int = 4) -> np.ndarray:
+    """A floor grate: dark slots every `period` rows between lit bars, with a frame seam like deck_plate."""
+    p = np.ones((16, 16), np.uint8)
+    for y in range(2, 16, period):
+        p[y, 2:14] = 2
+        p[y - 1, 2:14] = 0
+    p[0, :] = 2; p[:, 15] = 2; p[1:, 0] = 0
+    return p
+
+
+PATTERNS = {"deck_plate": deck_plate, "grate": grate}
