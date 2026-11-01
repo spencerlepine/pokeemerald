@@ -39,7 +39,8 @@ def sources(sp: str) -> tuple[Path, Path] | None:
     sj = HERE / "runs" / sp / "sources.json"  # the downloads behind the installed sprites
     if sj.exists():
         s = json.loads(sj.read_text())
-        return HERE / s["front"], HERE / s["back"]
+        if HERE / s["front"] == front:  # stale after a --redo installed a new take
+            return HERE / s["front"], HERE / s["back"]
     want = (batch.ART / "graphics" / "pokemon" / sp / "back.png").read_bytes()
     raw = HERE / "runs" / sp / "raw"
     cands = sorted((p for p in raw.glob("*_back_*.png") if p.stem > front.stem), key=lambda p: p.stem)
