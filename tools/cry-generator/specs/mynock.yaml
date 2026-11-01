@@ -1,0 +1,25 @@
+name: mynock
+slot: zubat
+brief: "MYNOCK: silicon-based cave parasite that chews power cables."
+kind: creature
+size: 0.25
+seed: 4
+layers:
+  # A leathery, electric screech with a fluttering chitter: half bat, half shorted cable.
+  - type: voice
+    pitch: [[0, 1100], [0.08, 1900], [0.3, 1700], [0.5, 1300]]
+    source: {saw: 0.7, pulse: 0.5, pulse_width: 0.15, noise: 0.25}
+    vowels: [[0, ee], [0.25, ae], [0.5, e]]
+    env: [[0, 0], [0.015, 1], [0.35, 0.8], [0.52, 0]]
+    vibrato: {rate: 32, depth: 0.05}
+    growl: 0.3
+    growl_rate: 60
+    jitter: 0.03
+    drive: 3
+  - type: tone
+    at: 0.06
+    wave: square
+    pitch: [[0, 3000], [0.4, 2400]]
+    warble: {rate: 55, depth: 0.15, shape: square}
+    env: [[0, 0], [0.02, 0.35], [0.35, 0.25], [0.42, 0]]
+    gain: 0.4

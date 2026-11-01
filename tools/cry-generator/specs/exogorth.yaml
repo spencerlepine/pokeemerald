@@ -1,0 +1,33 @@
+name: exogorth
+slot: rayquaza
+brief: "EXOGORTH: titan of the void, the space slug that calms the other two."
+kind: creature
+size: 0.95
+seed: 21
+layers:
+  # A vast, slow bellow: a deep buzzing throat that swells, wavers in frame-steps like the old
+  # chip-era legendaries, and sags into a hollow, breathy moan.
+  - type: voice
+    pitch: [[0, 150], [0.3, 230], [0.8, 210], [1.2, 190], [1.55, 120]]
+    pitch_step: 0.05
+    source: {saw: 0.8, pulse: 0.5, pulse_width: 0.35, noise: 0.05}
+    vowels: [[0, u], [0.3, o], [0.8, aw], [1.5, u]]
+    env: [[0, 0], [0.12, 1], [1.0, 0.85], [1.6, 0]]
+    growl: 0.4
+    growl_rate: 23
+    jitter: 0.015
+    drive: 1.8
+  - type: voice
+    at: 0.08
+    pitch: [[0, 450], [0.4, 690], [1.0, 630], [1.45, 380]]
+    pitch_step: 0.05
+    source: {pulse: 0.7, pulse_width: 0.25, saw: 0.3}
+    vowels: [[0, o], [0.6, a], [1.4, o]]
+    env: [[0, 0], [0.25, 0.7], [1.1, 0.5], [1.5, 0]]
+    gain: 0.55
+  - type: noise
+    at: 0.9
+    band: [[0, 900], [0.7, 500]]
+    q: 1.2
+    env: [[0, 0], [0.2, 0.4], [0.75, 0]]
+    gain: 0.25

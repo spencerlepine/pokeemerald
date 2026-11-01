@@ -1,0 +1,37 @@
+name: massiff
+slot: poochyena
+brief: "MASSIFF: snapping desert lizard-hound kept by Tuskens. Chases Prof. Korr in the intro."
+kind: creature
+size: 0.45
+seed: 11
+layers:
+  # A jaw snap, then two reptilian barks ("hrak-ak") that drag into a short hissing snarl.
+  - type: click
+    times: [0.0]
+    gain: 0.6
+  - type: voice
+    at: 0.01
+    pitch: [[0, 300], [0.05, 430], [0.13, 330]]
+    source: {saw: 0.9, pulse: 0.4, pulse_width: 0.3, noise: 0.15}
+    vowels: [[0, aw], [0.06, a], [0.13, er]]
+    env: [[0, 0], [0.008, 1], [0.1, 0.8], [0.14, 0]]
+    growl: 0.5
+    growl_rate: 42
+    jitter: 0.03
+    drive: 2.5
+  - type: voice
+    at: 0.16
+    pitch: [[0, 360], [0.04, 470], [0.18, 300], [0.32, 230]]
+    source: {saw: 0.9, pulse: 0.4, pulse_width: 0.3, noise: 0.2}
+    vowels: [[0, a], [0.12, er], [0.3, rr]]
+    env: [[0, 0], [0.008, 1], [0.15, 0.8], [0.33, 0]]
+    growl: 0.6
+    growl_rate: 36
+    jitter: 0.04
+    drive: 2.5
+  - type: noise
+    at: 0.3
+    band: [[0, 2400], [0.2, 1700]]
+    q: 1.5
+    env: [[0, 0], [0.03, 0.5], [0.18, 0.2], [0.22, 0]]
+    gain: 0.35

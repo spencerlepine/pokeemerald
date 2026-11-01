@@ -1,0 +1,25 @@
+name: sunchick
+slot: torchic
+brief: "SUNCHICK: desert fowl chick that stores the heat of the twin suns. Starter."
+kind: creature
+size: 0.15
+seed: 3
+layers:
+  # A quick peep, then a longer, rising "peeyip" with a warm rasp: a chick, but a dusty, sun-baked one.
+  # Buzzy source at 600-900 Hz; the brightness comes from the formants (i / ee), like the vanilla cries.
+  - type: voice
+    pitch: [[0, 620], [0.05, 860], [0.09, 700]]
+    source: {pulse: 0.8, saw: 0.4, pulse_width: 0.3, noise: 0.05}
+    vowels: [[0, i], [0.09, e]]
+    env: [[0, 0], [0.01, 1], [0.07, 0.8], [0.1, 0]]
+    vibrato: {rate: 22, depth: 0.02}
+  - type: voice
+    at: 0.12
+    pitch: [[0, 640], [0.06, 940], [0.2, 880], [0.33, 600]]
+    source: {pulse: 0.8, saw: 0.4, pulse_width: 0.28, noise: 0.06}
+    vowels: [[0, i], [0.12, ee], [0.3, ae]]
+    env: [[0, 0], [0.012, 1], [0.2, 0.85], [0.34, 0]]
+    vibrato: {rate: 26, depth: 0.03}
+    growl: 0.15
+    growl_rate: 55
+    jitter: 0.012

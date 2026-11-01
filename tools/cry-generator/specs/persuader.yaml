@@ -1,0 +1,26 @@
+name: persuader
+slot: aggron
+brief: "PERSUADER: NR-N99 Persuader tank droid. Heavy treads, servos and a low alarm warble."
+kind: droid
+size: 0.9
+seed: 9
+layers:
+  # A heavy motor grinding up, a low two-tone warning blare, and the motor winding down.
+  - type: servo
+    pitch: [[0, 55], [0.25, 140], [0.8, 120], [1.05, 60]]
+    harmonics: [1.0, 0.8, 0.6, 0.5, 0.3, 0.25]
+    env: [[0, 0], [0.08, 0.8], [0.9, 0.7], [1.08, 0]]
+    grit: 0.8
+    drive: 3
+    gain: 0.8
+  - type: tone
+    at: 0.18
+    wave: pulse
+    width: 0.3
+    pitch: [[0, 330], [0.17, 330], [0.18, 250], [0.36, 250], [0.37, 330], [0.55, 280]]
+    env: [[0, 0], [0.01, 1], [0.17, 1], [0.18, 0.4], [0.19, 1], [0.36, 1], [0.37, 0.4], [0.38, 1], [0.6, 0]]
+    drive: 2
+    gain: 0.8
+  - type: click
+    times: [0.02, 0.06, 0.9, 0.96]
+    gain: 0.5

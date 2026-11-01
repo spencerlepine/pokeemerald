@@ -1,0 +1,25 @@
+name: r2_unit
+slot: metagross
+brief: "R2 UNIT: R2-series astromech, the smartest droid line. Beeps, whistles and servo whirs."
+kind: droid
+size: 0.3
+seed: 5
+layers:
+  # Servo spin-up, three chattering beeps, then a rising-falling whistle: curious and cheeky.
+  - type: servo
+    pitch: [[0, 140], [0.15, 420], [0.25, 380]]
+    env: [[0, 0], [0.05, 0.6], [0.2, 0.5], [0.27, 0]]
+    grit: 0.4
+    gain: 0.5
+  - type: tone
+    at: 0.12
+    wave: sine
+    pitch: [[0, 2100], [0.05, 2100], [0.051, 1500], [0.1, 1500], [0.101, 2600], [0.15, 2400]]
+    warble: {rate: 34, depth: 0.08, shape: square}
+    env: [[0, 0], [0.005, 1], [0.045, 1], [0.05, 0.2], [0.055, 1], [0.095, 1], [0.1, 0.2], [0.105, 1], [0.15, 0.9], [0.16, 0]]
+  - type: tone
+    at: 0.32
+    wave: tri
+    pitch: [[0, 900], [0.18, 3200], [0.3, 2700], [0.5, 1200]]
+    warble: {rate: 9, depth: 0.04}
+    env: [[0, 0], [0.02, 1], [0.4, 0.9], [0.5, 0]]
