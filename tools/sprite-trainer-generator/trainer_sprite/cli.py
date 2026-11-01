@@ -6,6 +6,8 @@
     python -m trainer_sprite inspect <vanilla.png> out.png       # material map of a pic's palette indices
     python -m trainer_sprite compare output/x.png a.yaml b.yaml  # side-by-side review sheet
     python -m trainer_sprite corpus                              # re-measure the vanilla trainer pics
+    python -m trainer_sprite status                              # worklist: every wiki front pic, spec / built
+    python -m trainer_sprite sheet  out.png [a.yaml ...]         # contact sheet (default: every spec in art/)
 
 Outputs go to output/<name>/ (name from the spec).
 
@@ -122,8 +124,27 @@ def cmd_verify(a) -> int:
     return 0 if ok and size == 2048 and psize == 32 else 1
 
 
+def palette_source(em: Path, pic: str) -> str | None:
+    """Where the game loads this front pic's palette from (src/data/graphics/trainers.h).
+    Most pics build it from the PNG itself; the player, rival, Wally and Steven pics share a
+    .pal in graphics/trainers/palettes/ with their back pic, and the PNG's colours are ignored."""
+    import re
+
+    h = em / "src/data/graphics/trainers.h"
+    if not h.exists():
+        return None
+    text = h.read_text()
+    m = re.search(r"gTrainerFrontPic_(\w+)\[\]\s*=\s*INCGFX_U32\(\"" + re.escape(pic) + r"\"", text)
+    if not m:
+        return None
+    p = re.search(r"gTrainerPalette_" + m.group(1) + r"\[\]\s*=\s*INCGFX_U32\(\"([^\"]+)\"", text)
+    return p.group(1) if p else None
+
+
 def cmd_install(a) -> int:
-    """Copy the pic over the vanilla file it replaces (the palette travels inside the PNG)."""
+    """Copy the pic over the vanilla file it replaces. The palette travels inside the PNG, except
+    for pics whose palette is a shared .pal (player, rival, Wally, Steven): that file is written
+    too, and it is shared with the back pic, so the back pic must use the same 16 colours."""
     s = spec_mod.load(a.spec)
     if not s.replaces:
         print("spec has no `replaces:`")
@@ -131,6 +152,73 @@ def cmd_install(a) -> int:
     em = emerald_dir()
     shutil.copyfile(out_dir(s) / f"{s.name}.png", em / s.replaces)
     print(f"copied -> {em / s.replaces}")
+    src = palette_source(em, s.replaces)
+    if src and src.endswith(".pal"):
+        from . import palette as pal
+
+        pal.write_jasc(em / src, sheet.spec_palette(s))
+        print(f"wrote palette -> {em / src} (shared with the back pic: keep them identical)")
+    return 0
+
+
+def subjects() -> dict[str, str]:
+    """Wiki brief per front pic: ../../wiki/mapping/art_subjects.csv (asset_id -> sw_subject)."""
+    import csv
+
+    f = TOOL.parents[1] / "wiki/mapping/art_subjects.csv"
+    if not f.exists():
+        return {}
+    with f.open() as fh:
+        return {r["asset_id"]: r["sw_subject"] for r in csv.DictReader(fh) if "/trainers/front_pics/" in r["asset_id"]}
+
+
+def all_specs() -> list:
+    out = []
+    for p in sorted((TOOL / "art").glob("*.yaml")):
+        try:
+            out.append(spec_mod.load(p))
+        except Exception as e:  # noqa: BLE001 - report and keep going
+            print(f"skip {p.name}: {e}", file=sys.stderr)
+    return out
+
+
+def cmd_status(a) -> int:
+    """The worklist for mass generation: every front pic the wiki lists, with its brief and
+    whether a spec exists and is built. KEEP rows (FireRed leftovers) are listed as kept."""
+    subj = subjects()
+    by_pic = {}
+    for p in sorted((TOOL / "art").glob("*.yaml")):
+        import yaml
+
+        d = yaml.safe_load(p.read_text())
+        by_pic.setdefault(d.get("replaces"), []).append(d["name"])
+    em = emerald_dir()
+    rows = []
+    pics = sorted(set(subj) | {k for k in by_pic if k})
+    for pic in pics:
+        names = by_pic.get(pic, [])
+        built = [n for n in names if (OUT / n / f"{n}.png").exists()]
+        brief = subj.get(pic, "(not in the wiki)")
+        state = "keep" if "kept" in brief.lower() else ("built" if built else ("spec" if names else "todo"))
+        paired = (em / "graphics/trainers/back_pics" / Path(pic).name).exists()
+        rows.append((state, Path(pic).stem, ",".join(names), brief, "palette shared with its back pic" if paired else ""))
+    counts = {}
+    for r in rows:
+        counts[r[0]] = counts.get(r[0], 0) + 1
+    w = max(len(r[1]) for r in rows)
+    for r in rows:
+        print(f"{r[0]:<6} {r[1]:<{w}}  {r[2]:<18} {r[3]}" + (f"  [{r[4]}]" if r[4] else ""))
+    print("\n" + ", ".join(f"{k}: {v}" for k, v in sorted(counts.items())))
+    return 0
+
+
+def cmd_sheet(a) -> int:
+    """Contact sheet: every pic at 2x in a battle-scene crop, labelled with name and brief."""
+    specs = [spec_mod.load(p) for p in a.specs] if a.specs else all_specs()
+    em = emerald_dir()
+    trainer.contact(specs, Path(a.out), em if (em / "graphics/battle_environment").exists() else None,
+                    sheet.spec_palette, subjects(), cols=a.cols)
+    print(f"wrote {a.out} ({len(specs)} pics)")
     return 0
 
 
@@ -191,6 +279,12 @@ def main(argv=None) -> int:
         sp.add_argument("spec")
         sp.set_defaults(fn=fn)
     sub.add_parser("corpus").set_defaults(fn=cmd_corpus)
+    sub.add_parser("status").set_defaults(fn=cmd_status)
+    shp = sub.add_parser("sheet")
+    shp.add_argument("out")
+    shp.add_argument("specs", nargs="*")
+    shp.add_argument("--cols", type=int, default=6)
+    shp.set_defaults(fn=cmd_sheet)
     ip = sub.add_parser("inspect")
     ip.add_argument("png")
     ip.add_argument("out")

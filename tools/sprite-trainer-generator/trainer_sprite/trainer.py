@@ -240,3 +240,27 @@ def compare(specs: list, out: Path, emerald: Path | None, colours_of) -> None:
         if sc:
             im.paste(sc.crop((120, 0, 240, 112)).resize((240, 224), Image.NEAREST).crop((0, 0, 64 * z, 160)), (x, lab + 64 * z + 8))
     im.save(out)
+
+
+def contact(specs: list, out: Path, emerald: Path | None, colours_of, briefs: dict, cols: int = 6) -> None:
+    """Mass-review sheet: per pic, a 2x battle-scene crop (or the pic on the battle green) with
+    its name and wiki brief, `cols` per row."""
+    cw, ch, lab = 2 * 120, 2 * 104, 26
+    rows = (len(specs) + cols - 1) // cols or 1
+    im = Image.new("RGB", (cols * (cw + 8) + 8, rows * (ch + lab + 8) + 8), (24, 24, 30))
+    d = ImageDraw.Draw(im)
+    for i, s in enumerate(specs):
+        x, y = 8 + (i % cols) * (cw + 8), 8 + (i // cols) * (ch + lab + 8)
+        cols_ = colours_of(s)
+        g = s.frames["front"]
+        if emerald:
+            cell = battle_scene(g, cols_, emerald).crop((120, 0, 240, 104))
+        else:
+            cell = Image.new("RGB", (120, 104), (115, 197, 164))
+            r = rgba_frame(g, cols_)
+            cell.paste(r, (40, 8), r)
+        im.paste(cell.resize((cw, ch), Image.NEAREST), (x, y + lab))
+        d.text((x, y), s.name, fill=(240, 240, 240))
+        brief = briefs.get(s.replaces or "", "")
+        d.text((x, y + 12), brief[:38], fill=(160, 160, 170))
+    im.save(out)

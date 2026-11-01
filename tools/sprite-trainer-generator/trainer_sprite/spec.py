@@ -134,6 +134,22 @@ def _repaint(rp: dict, legend: dict[str, int], w: int, h: int, where: str) -> Gr
 
 
 
+def _load_pic(rel: str) -> Grid:
+    """A vanilla pic's palette-index grid (for `graft` layers), relative to EMERALD_DIR."""
+    from PIL import Image
+
+    from .cli import emerald_dir
+
+    src = emerald_dir() / rel
+    if not src.exists():
+        raise rig_mod.RigError(f"graft pic {src} not found (set EMERALD_DIR)")
+    im = Image.open(src)
+    if im.mode != "P":
+        raise rig_mod.RigError(f"graft pic {src} is not an indexed PNG")
+    px = im.load()
+    return [[px[x, y] for x in range(im.width)] for y in range(im.height)]
+
+
 def _transparent(legend: dict[str, int]) -> str:
     for ch, idx in legend.items():
         if idx == 0:
@@ -180,7 +196,7 @@ def load(path: str | Path) -> Spec:
             g = _repaint(f["repaint"], legend, w, h, where)
             if "rig" in f:
                 try:
-                    g = rig_mod.render(f["rig"], legend, w, h, where, base=g)
+                    g = rig_mod.render(f["rig"], legend, w, h, where, base=g, load_pic=_load_pic)
                 except rig_mod.RigError as e:
                     raise SpecError(str(e)) from None
         elif "mirror_of" in f:

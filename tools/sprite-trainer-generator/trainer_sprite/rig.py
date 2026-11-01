@@ -24,6 +24,22 @@ out; `recolour: "a:b c:d"` on any shape swaps characters inside it; `shape: edge
 `behind: true` on a shaded shape paints only still-transparent pixels, so it tucks behind the
 base figure (a jetpack over the shoulder, a cape, hair buns behind the head).
 
+Silhouette ops (reshape the repainted base; all pixel-exact, nothing is resampled):
+- `shape: graft` copies a box of *another* vanilla pic onto this one, with its own remap:
+  `{shape: graft, pic: graphics/trainers/front_pics/hiker.png, box: [x, y, w, h], at: [x, y],
+  remap: {1: K, 2: a, ...}, flip: false, behind: false}`. Every index used inside the box must
+  be mapped (map to the transparent character to drop a material). Use it to swap a head,
+  an arm, a coat tail or a prop between bases: this is how a figure gets a silhouette no single
+  vanilla pic has.
+- `shape: move` cuts a box and pastes it shifted: `{shape: move, box: [x, y, w, h], by: [dx, dy],
+  flip: false, keep: false}` (`keep: true` copies instead of cutting). Raise an arm, lower a
+  head, widen a stance.
+- `shape: rows` inserts or removes rows: `{shape: rows, at: y, add: n, x: [x0, x1]}` repeats row
+  `y` n times, pushing everything above it up (feet stay put); a negative `add` deletes rows and
+  pulls the part above down. `x` limits it to a column range. Taller, shorter, a longer coat.
+- `shape: cols` does the same sideways: `{shape: cols, at: x, add: n, y: [y0, y1]}` repeats
+  column `x`, pushing everything right of it further right. Broader shoulders, a bulkier alien.
+
 Shapes: `pixels` (x, y, rows: hand-placed pixels, `_` keeps; use it for details that must sit
 *under* a later layer, e.g. a face the lightsaber passes in front of), `capsule` (from, to, r: [r_from, r_to]), `ellipse` (at, r: [rx, ry], angle: degrees
 clockwise), `poly` (pts).
@@ -112,14 +128,114 @@ def _mask(layer, joints, w, h, where):
     return m
 
 
-def render(rig: dict, legend: dict[str, int], w: int, h: int, where: str, base=None) -> list[list[int]]:
-    """Draw the layers onto `base` (a grid, e.g. a repainted vanilla pic) or an empty frame."""
+def _box(layer, lw):
+    b = layer.get("box")
+    if not (isinstance(b, (list, tuple)) and len(b) == 4):
+        raise RigError(f"{lw}: box is [x, y, w, h]")
+    return [int(v) for v in b]
+
+
+def _graft(g, layer, legend, w, h, lw, load_pic):
+    if load_pic is None:
+        raise RigError(f"{lw}: graft needs a pokeemerald checkout to read {layer.get('pic')!r}")
+    src = load_pic(str(layer["pic"]))
+    sh, sw = len(src), len(src[0])
+    bx, by, bw, bh = _box(layer, lw)
+    ax, ay = (int(v) for v in layer.get("at", [bx, by]))
+    remap = {int(k): str(v) for k, v in (layer.get("remap") or {}).items()}
+    for k, ch in remap.items():
+        if ch not in legend:
+            raise RigError(f"{lw}: remap {k} -> {ch!r} is not in the legend")
+    flip = bool(layer.get("flip"))
+    behind = bool(layer.get("behind"))
+    snap = [list(r) for r in g]
+    missing = set()
+    for dy in range(bh):
+        for dx in range(bw):
+            sx, sy = bx + dx, by + dy
+            if not (0 <= sx < sw and 0 <= sy < sh):
+                continue
+            v = src[sy][sx]
+            if not v:
+                continue
+            if v not in remap:
+                missing.add(v)
+                continue
+            tx = ax + (bw - 1 - dx if flip else dx)
+            ty = ay + dy
+            idx = legend[remap[v]]
+            if 0 <= tx < w and 0 <= ty < h and idx and not (behind and snap[ty][tx]):
+                g[ty][tx] = idx
+    if missing:
+        raise RigError(f"{lw}: remap is missing indices {sorted(missing)} used inside the box")
+
+
+def _move(g, layer, w, h, lw):
+    bx, by, bw, bh = _box(layer, lw)
+    dx, dy = (int(v) for v in layer.get("by", [0, 0]))
+    flip = bool(layer.get("flip"))
+    cut = [[g[y][x] if 0 <= x < w and 0 <= y < h else 0 for x in range(bx, bx + bw)] for y in range(by, by + bh)]
+    if not layer.get("keep"):
+        for y in range(max(by, 0), min(by + bh, h)):
+            for x in range(max(bx, 0), min(bx + bw, w)):
+                g[y][x] = 0
+    for j, row in enumerate(cut):
+        for i, v in enumerate(row[::-1] if flip else row):
+            tx, ty = bx + i + dx, by + j + dy
+            if v and 0 <= tx < w and 0 <= ty < h:
+                g[ty][tx] = v
+
+
+def _rows(g, layer, w, h, lw):
+    at, n = int(layer["at"]), int(layer["add"])
+    x0, x1 = (int(v) for v in layer.get("x", [0, w - 1]))
+    for x in range(max(x0, 0), min(x1, w - 1) + 1):
+        col = [g[y][x] for y in range(h)]
+        if n >= 0:  # repeat row `at` n times; rows above move up
+            new = col[n : at + 1] + [col[at]] * n + col[at + 1 :]
+        else:  # delete rows at-|n|+1 .. at; rows above move down
+            k = -n
+            new = [0] * k + col[: at - k + 1] + col[at + 1 :]
+        for y in range(h):
+            g[y][x] = new[y]
+
+
+def _cols(g, layer, w, h, lw):
+    at, n = int(layer["at"]), int(layer["add"])
+    y0, y1 = (int(v) for v in layer.get("y", [0, h - 1]))
+    for y in range(max(y0, 0), min(y1, h - 1) + 1):
+        row = g[y]
+        if n >= 0:  # repeat column `at` n times; columns to the right move right
+            new = row[:at] + [row[at]] * n + row[at : w - n]
+        else:  # delete columns at .. at+|n|-1; columns to the right move left
+            k = -n
+            new = row[:at] + row[at + k :] + [0] * k
+        g[y] = new[:w]
+
+
+def render(rig: dict, legend: dict[str, int], w: int, h: int, where: str, base=None, load_pic=None) -> list[list[int]]:
+    """Draw the layers onto `base` (a grid, e.g. a repainted vanilla pic) or an empty frame.
+    `load_pic(path)` returns a vanilla pic's index grid (for `graft`)."""
     joints = rig.get("joints", {})
     lx, ly = rig.get("light", LIGHT)
     g = [list(r) for r in base] if base else [[0] * w for _ in range(h)]
     default_outline = "K" if "K" in legend else None
     for i, layer in enumerate(rig.get("layers", [])):
         lw = f"{where}: layer {i} ({layer.get('name', layer.get('shape'))})"
+        op = layer.get("shape")
+        if op in ("graft", "move", "rows", "cols"):
+            try:
+                if op == "graft":
+                    _graft(g, layer, legend, w, h, lw, load_pic)
+                elif op == "move":
+                    _move(g, layer, w, h, lw)
+                elif op == "rows":
+                    _rows(g, layer, w, h, lw)
+                else:
+                    _cols(g, layer, w, h, lw)
+            except KeyError as e:
+                raise RigError(f"{lw}: missing key {e}") from None
+            continue
         if layer.get("shape") == "pixels":  # hand-placed pixels at this depth (`_` = keep)
             x0, y0 = int(layer["x"]), int(layer["y"])
             for dy, ln in enumerate(str(layer["rows"]).strip("\n").split("\n")):
