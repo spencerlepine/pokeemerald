@@ -1,9 +1,9 @@
 {
   "init": "refs/slugma_prep.png",
-  "init_source": "https://static.wikia.nocookie.net/starwars/images/1/16/Lworv.jpg/revision/latest?cb=20090419200903",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/f/f0/MustafarLavaFleaNEGAS.jpg/revision/latest/scale-to-width-down/1000?cb=20090709062948",
   "flip": false,
-  "denoise": 0.55,
-  "desc": "small molten lava grub with eye stalks and glowing cracked skin rising from a splash of lava",
-  "colour": "glowing red and orange",
-  "ref_note": "Lava worm (Legends) line art on white; clean cutout; flipped so the head faces left; black-and-white art so colour comes from the prompt (denoise 0.55)"
+  "denoise": 0.5,
+  "desc": "small molten lava grub with glowing cracked shell crawling out of a splash of lava, whole body",
+  "colour": "glowing red orange and dark brown",
+  "ref_note": "NEGAS lava flea (same line as magcargo's lava flea), coloured art instead of line art"
 }
