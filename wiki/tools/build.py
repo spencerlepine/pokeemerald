@@ -734,7 +734,7 @@ def pending_audio(rows, entities, inv, decisions, known):
             continue
         _refs_ok(d, "mapping/audio.csv", known)
         ph = inv.get(d.get("placeholder_from", ""), {})
-        cat = ph.get("category", "sfx")
+        cat = ph.get("category") or ("music" if d.get("sw_constant", "").startswith("MUS_") else "sfx")
         out.append({"asset_id": aid, "category": cat, "kind": "net_new", "swap_kind": "NET_NEW",
                     "map_status": d["map_status"], "audio_status": d["audio_status"], "priority": d.get("priority", ""),
                     "sw_constant": d.get("sw_constant", ""), "sw_subject": d.get("sw_subject", ""),
@@ -1028,6 +1028,8 @@ def main() -> None:
         a["planet"] = r.get("planet", "")
         ap.append(a)
     write("area_progression.csv", ap)
+    import build_music  # tools/build_music.py: database/music.csv + music_by_map.csv for tools/music-generator
+    warnings.extend(f"music: {w}" for w in build_music.main())
 
     # timeline
     tl_map = {t["emerald_event_id"]: t for t in read(MAPPING / "timeline.csv")} if (MAPPING / "timeline.csv").exists() else {}

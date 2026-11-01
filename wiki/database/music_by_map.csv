@@ -1,0 +1,221 @@
+map_id,sw_map_title,map_title,planet,map_type,music,wiki_title,music_category,music_form
+map:sky-pillar-1f,ASTEROID SPIRE · 1F,Sky Pillar · 1F,ASTEROID FIELD,underground,audio:MUS_MT_CHIMNEY,MUS_MT_CHIMNEY,ROUTE,LOOP
+map:sky-pillar-2f,ASTEROID SPIRE · 2F,Sky Pillar · 2F,ASTEROID FIELD,underground,audio:MUS_MT_CHIMNEY,MUS_MT_CHIMNEY,ROUTE,LOOP
+map:sky-pillar-3f,ASTEROID SPIRE · 3F,Sky Pillar · 3F,ASTEROID FIELD,underground,audio:MUS_MT_CHIMNEY,MUS_MT_CHIMNEY,ROUTE,LOOP
+map:sky-pillar-4f,ASTEROID SPIRE · 4F,Sky Pillar · 4F,ASTEROID FIELD,underground,audio:MUS_MT_CHIMNEY,MUS_MT_CHIMNEY,ROUTE,LOOP
+map:sky-pillar-5f,ASTEROID SPIRE · 5F,Sky Pillar · 5F,ASTEROID FIELD,underground,audio:MUS_MT_CHIMNEY,MUS_MT_CHIMNEY,ROUTE,LOOP
+map:sky-pillar-entrance,ASTEROID SPIRE · Entrance,Sky Pillar · Entrance,ASTEROID FIELD,underground,audio:MUS_MT_CHIMNEY,MUS_MT_CHIMNEY,ROUTE,LOOP
+map:sky-pillar-outside,ASTEROID SPIRE · Outside,Sky Pillar · Outside,ASTEROID FIELD,route,audio:MUS_MT_CHIMNEY,MUS_MT_CHIMNEY,ROUTE,LOOP
+map:sky-pillar-top,ASTEROID SPIRE · Top,Sky Pillar · Top,ASTEROID FIELD,route,audio:MUS_MT_CHIMNEY,MUS_MT_CHIMNEY,ROUTE,LOOP
+map:aqua-hideout-1f,HUTT HIDEOUT · 1F,Aqua Hideout · 1F,BESPIN,indoor,audio:MUS_AQUA_MAGMA_HIDEOUT,MUS_AQUA_MAGMA_HIDEOUT,DUNGEON,LOOP
+map:aqua-hideout-b1f,HUTT HIDEOUT · B1F,Aqua Hideout · B1F,BESPIN,indoor,audio:MUS_AQUA_MAGMA_HIDEOUT,MUS_AQUA_MAGMA_HIDEOUT,DUNGEON,LOOP
+map:aqua-hideout-b2f,HUTT HIDEOUT · B2F,Aqua Hideout · B2F,BESPIN,indoor,audio:MUS_AQUA_MAGMA_HIDEOUT,MUS_AQUA_MAGMA_HIDEOUT,DUNGEON,LOOP
+map:lilycove-city,CLOUD CITY,Lilycove City,BESPIN,city,audio:MUS_LILYCOVE,MUS_LILYCOVE,TOWN,LOOP
+map:cave-of-origin-1f,CAVE OF EVIL · Cave Of Origin · 1F,Cave Of Origin · 1F,DAGOBAH,underground,audio:MUS_CAVE_OF_ORIGIN,MUS_CAVE_OF_ORIGIN,DUNGEON,AMBIENT
+map:cave-of-origin-b1f,CAVE OF EVIL · Cave Of Origin · B1F,Cave Of Origin · B1F,DAGOBAH,underground,MUS_NONE,MUS_NONE,SILENT,SILENT
+map:cave-of-origin-entrance,CAVE OF EVIL · Cave Of Origin · Entrance,Cave Of Origin · Entrance,DAGOBAH,underground,audio:MUS_CAVE_OF_ORIGIN,MUS_CAVE_OF_ORIGIN,DUNGEON,AMBIENT
+map:marine-cave-end,MARINE CAVE · End,Marine Cave · End,DAGOBAH,underground,audio:MUS_PETALBURG_WOODS,MUS_PETALBURG_WOODS,DUNGEON,AMBIENT
+map:marine-cave-entrance,MARINE CAVE · Entrance,Marine Cave · Entrance,DAGOBAH,underground,audio:MUS_PETALBURG_WOODS,MUS_PETALBURG_WOODS,DUNGEON,AMBIENT
+map:route126,ROUTE 126,Route 126,DAGOBAH,ocean-route,audio:MUS_ROUTE120,MUS_ROUTE120,ROUTE,LOOP
+map:route127,ROUTE 127,Route 127,DAGOBAH,ocean-route,audio:MUS_ROUTE120,MUS_ROUTE120,ROUTE,LOOP
+map:route128,ROUTE 128,Route 128,DAGOBAH,ocean-route,audio:MUS_ROUTE120,MUS_ROUTE120,ROUTE,LOOP
+map:route129,ROUTE 129,Route 129,DAGOBAH,ocean-route,audio:MUS_ROUTE119,MUS_ROUTE119,ROUTE,LOOP
+map:route130,ROUTE 130,Route 130,DAGOBAH,ocean-route,audio:MUS_ROUTE119,MUS_ROUTE119,ROUTE,LOOP
+map:seafloor-cavern-entrance,DROWNED CAVERN · Entrance,Seafloor Cavern · Entrance,DAGOBAH,underground,audio:MUS_MT_CHIMNEY,MUS_MT_CHIMNEY,ROUTE,LOOP
+map:seafloor-cavern-room1,DROWNED CAVERN · Room 1,Seafloor Cavern · Room 1,DAGOBAH,underground,audio:MUS_MT_CHIMNEY,MUS_MT_CHIMNEY,ROUTE,LOOP
+map:seafloor-cavern-room2,DROWNED CAVERN · Room 2,Seafloor Cavern · Room 2,DAGOBAH,underground,audio:MUS_MT_CHIMNEY,MUS_MT_CHIMNEY,ROUTE,LOOP
+map:seafloor-cavern-room3,DROWNED CAVERN · Room 3,Seafloor Cavern · Room 3,DAGOBAH,underground,audio:MUS_MT_CHIMNEY,MUS_MT_CHIMNEY,ROUTE,LOOP
+map:seafloor-cavern-room4,DROWNED CAVERN · Room 4,Seafloor Cavern · Room 4,DAGOBAH,underground,audio:MUS_MT_CHIMNEY,MUS_MT_CHIMNEY,ROUTE,LOOP
+map:seafloor-cavern-room5,DROWNED CAVERN · Room 5,Seafloor Cavern · Room 5,DAGOBAH,underground,audio:MUS_MT_CHIMNEY,MUS_MT_CHIMNEY,ROUTE,LOOP
+map:seafloor-cavern-room6,DROWNED CAVERN · Room 6,Seafloor Cavern · Room 6,DAGOBAH,underground,audio:MUS_MT_CHIMNEY,MUS_MT_CHIMNEY,ROUTE,LOOP
+map:seafloor-cavern-room7,DROWNED CAVERN · Room 7,Seafloor Cavern · Room 7,DAGOBAH,underground,audio:MUS_MT_CHIMNEY,MUS_MT_CHIMNEY,ROUTE,LOOP
+map:seafloor-cavern-room8,DROWNED CAVERN · Room 8,Seafloor Cavern · Room 8,DAGOBAH,underground,audio:MUS_MT_CHIMNEY,MUS_MT_CHIMNEY,ROUTE,LOOP
+map:seafloor-cavern-room9,DROWNED CAVERN · Room 9,Seafloor Cavern · Room 9,DAGOBAH,underground,audio:MUS_MT_CHIMNEY,MUS_MT_CHIMNEY,ROUTE,LOOP
+map:sootopolis-city,DAGOBAH,Sootopolis City,DAGOBAH,city,audio:MUS_SOOTOPOLIS,MUS_SOOTOPOLIS,TOWN,LOOP
+map:sootopolis-city-gym-1f,DAGOBAH · Gym · 1F,Sootopolis City · Gym · 1F,DAGOBAH,indoor,audio:MUS_GYM,MUS_GYM,BUILDING,LOOP
+map:sootopolis-city-gym-b1f,DAGOBAH · Gym · B1F,Sootopolis City · Gym · B1F,DAGOBAH,indoor,audio:MUS_GYM,MUS_GYM,BUILDING,LOOP
+map:underwater-marine-cave,UNDERWATER · Marine Cave,Underwater · Marine Cave,DAGOBAH,underwater,audio:MUS_PETALBURG_WOODS,MUS_PETALBURG_WOODS,DUNGEON,AMBIENT
+map:underwater-route126,UNDERWATER · Route 126,Underwater · Route 126,DAGOBAH,underwater,audio:MUS_UNDERWATER,MUS_UNDERWATER,DUNGEON,AMBIENT
+map:underwater-route127,UNDERWATER · Route 127,Underwater · Route 127,DAGOBAH,underwater,audio:MUS_UNDERWATER,MUS_UNDERWATER,DUNGEON,AMBIENT
+map:underwater-route128,UNDERWATER · Route 128,Underwater · Route 128,DAGOBAH,underwater,audio:MUS_UNDERWATER,MUS_UNDERWATER,DUNGEON,AMBIENT
+map:underwater-route129,UNDERWATER · Route 129,Underwater · Route 129,DAGOBAH,underwater,audio:MUS_UNDERWATER,MUS_UNDERWATER,DUNGEON,AMBIENT
+map:underwater-route134,UNDERWATER · Route 134,Underwater · Route 134,DAGOBAH,underwater,audio:MUS_UNDERWATER,MUS_UNDERWATER,DUNGEON,AMBIENT
+map:underwater-seafloor-cavern,UNDERWATER · Seafloor Cavern,Underwater · Seafloor Cavern,DAGOBAH,underwater,audio:MUS_UNDERWATER,MUS_UNDERWATER,DUNGEON,AMBIENT
+map:underwater-sealed-chamber,UNDERWATER · Sealed Chamber,Underwater · Sealed Chamber,DAGOBAH,underwater,audio:MUS_UNDERWATER,MUS_UNDERWATER,DUNGEON,AMBIENT
+map:underwater-sootopolis-city,UNDERWATER · Sootopolis City,Underwater · Sootopolis City,DAGOBAH,underwater,audio:MUS_UNDERWATER,MUS_UNDERWATER,DUNGEON,AMBIENT
+map:ancient-tomb,ANCIENT TOMB,Ancient Tomb,ENDOR,underground,audio:MUS_SEALED_CHAMBER,MUS_SEALED_CHAMBER,DUNGEON,AMBIENT
+map:fortree-city,BRIGHT TREE,Fortree City,ENDOR,city,audio:MUS_FORTREE,MUS_FORTREE,TOWN,LOOP
+map:fortree-city-gym,BRIGHT TREE · Gym,Fortree City · Gym,ENDOR,indoor,audio:MUS_GYM,MUS_GYM,BUILDING,LOOP
+map:route118,ROUTE 118,Route 118,ENDOR,route,audio:MUS_ROUTE118,MUS_ROUTE118,ROUTE,LOOP
+map:route119,ROUTE 119,Route 119,ENDOR,route,audio:MUS_ROUTE119,MUS_ROUTE119,ROUTE,LOOP
+map:route119-weather-institute-1f,ROUTE 119 · Weather Institute · 1F,Route 119 · Weather Institute · 1F,ENDOR,indoor,audio:MUS_RUSTBORO,MUS_RUSTBORO,TOWN,LOOP
+map:route119-weather-institute-2f,ROUTE 119 · Weather Institute · 2F,Route 119 · Weather Institute · 2F,ENDOR,indoor,audio:MUS_RUSTBORO,MUS_RUSTBORO,TOWN,LOOP
+map:route120,ROUTE 120,Route 120,ENDOR,route,audio:MUS_ROUTE120,MUS_ROUTE120,ROUTE,LOOP
+map:route121,ROUTE 121,Route 121,ENDOR,route,audio:MUS_ROUTE120,MUS_ROUTE120,ROUTE,LOOP
+map:route123,ROUTE 123,Route 123,ENDOR,route,audio:MUS_ROUTE122,MUS_ROUTE122,ROUTE,LOOP
+map:scorched-slab,SCORCHED HOLLOW,Scorched Slab,ENDOR,underground,audio:MUS_PETALBURG_WOODS,MUS_PETALBURG_WOODS,DUNGEON,AMBIENT
+map:safari-zone-north,FELUCIA RESERVE · North,Safari Zone · North,FELUCIA,route,audio:MUS_SAFARI_ZONE,MUS_SAFARI_ZONE,BUILDING,LOOP
+map:safari-zone-northeast,FELUCIA RESERVE · Northeast,Safari Zone · Northeast,FELUCIA,route,audio:MUS_SAFARI_ZONE,MUS_SAFARI_ZONE,BUILDING,LOOP
+map:safari-zone-northwest,FELUCIA RESERVE · Northwest,Safari Zone · Northwest,FELUCIA,route,audio:MUS_SAFARI_ZONE,MUS_SAFARI_ZONE,BUILDING,LOOP
+map:safari-zone-south,FELUCIA RESERVE · South,Safari Zone · South,FELUCIA,route,audio:MUS_SAFARI_ZONE,MUS_SAFARI_ZONE,BUILDING,LOOP
+map:safari-zone-southeast,FELUCIA RESERVE · Southeast,Safari Zone · Southeast,FELUCIA,route,audio:MUS_SAFARI_ZONE,MUS_SAFARI_ZONE,BUILDING,LOOP
+map:safari-zone-southwest,FELUCIA RESERVE · Southwest,Safari Zone · Southwest,FELUCIA,route,audio:MUS_SAFARI_ZONE,MUS_SAFARI_ZONE,BUILDING,LOOP
+map:altering-cave,ALTERING CAVE,Altering Cave,GRAND ARENA,underground,audio:MUS_RG_SEVII_CAVE,MUS_RG_SEVII_CAVE,DUNGEON,AMBIENT
+map:artisan-cave-1f,ARTISAN CAVE · 1F,Artisan Cave · 1F,GRAND ARENA,underground,audio:MUS_PETALBURG_WOODS,MUS_PETALBURG_WOODS,DUNGEON,AMBIENT
+map:artisan-cave-b1f,ARTISAN CAVE · B1F,Artisan Cave · B1F,GRAND ARENA,underground,audio:MUS_PETALBURG_WOODS,MUS_PETALBURG_WOODS,DUNGEON,AMBIENT
+map:battle-frontier-battle-pyramid-floor,GRAND ARENA · Battle Pyramid Floor,Battle Frontier · Battle Pyramid Floor,GRAND ARENA,indoor,MUS_NONE,MUS_NONE,SILENT,SILENT
+map:battle-frontier-outside-east,GRAND ARENA · Outside East,Battle Frontier · Outside East,GRAND ARENA,route,audio:MUS_B_FRONTIER,MUS_B_FRONTIER,FACILITY,LOOP
+map:battle-frontier-outside-west,GRAND ARENA · Outside West,Battle Frontier · Outside West,GRAND ARENA,route,audio:MUS_B_FRONTIER,MUS_B_FRONTIER,FACILITY,LOOP
+map:shoal-cave-high-tide-entrance-room,WAMPA CAVE · High Tide Entrance Room,Shoal Cave · High Tide Entrance Room,HOTH,underground,audio:MUS_MT_PYRE,MUS_MT_PYRE,DUNGEON,AMBIENT
+map:shoal-cave-high-tide-inner-room,WAMPA CAVE · High Tide Inner Room,Shoal Cave · High Tide Inner Room,HOTH,underground,audio:MUS_MT_PYRE,MUS_MT_PYRE,DUNGEON,AMBIENT
+map:shoal-cave-low-tide-entrance-room,WAMPA CAVE · Low Tide Entrance Room,Shoal Cave · Low Tide Entrance Room,HOTH,underground,audio:MUS_MT_PYRE,MUS_MT_PYRE,DUNGEON,AMBIENT
+map:shoal-cave-low-tide-ice-room,WAMPA CAVE · Low Tide Ice Room,Shoal Cave · Low Tide Ice Room,HOTH,underground,audio:MUS_MT_PYRE,MUS_MT_PYRE,DUNGEON,AMBIENT
+map:shoal-cave-low-tide-inner-room,WAMPA CAVE · Low Tide Inner Room,Shoal Cave · Low Tide Inner Room,HOTH,underground,audio:MUS_MT_PYRE,MUS_MT_PYRE,DUNGEON,AMBIENT
+map:shoal-cave-low-tide-lower-room,WAMPA CAVE · Low Tide Lower Room,Shoal Cave · Low Tide Lower Room,HOTH,underground,audio:MUS_MT_PYRE,MUS_MT_PYRE,DUNGEON,AMBIENT
+map:shoal-cave-low-tide-stairs-room,WAMPA CAVE · Low Tide Stairs Room,Shoal Cave · Low Tide Stairs Room,HOTH,underground,audio:MUS_MT_PYRE,MUS_MT_PYRE,DUNGEON,AMBIENT
+map:ever-grande-city,ILUM,Ever Grande City,ILUM,city,audio:MUS_EVER_GRANDE,MUS_EVER_GRANDE,TOWN,LOOP
+map:ever-grande-city-champions-room,ILUM · Champions Room,Ever Grande City · Champions Room,ILUM,indoor,audio:MUS_VICTORY_ROAD,MUS_VICTORY_ROAD,DUNGEON,AMBIENT
+map:ever-grande-city-drakes-room,ILUM · Drakes Room,Ever Grande City · Drakes Room,ILUM,indoor,audio:MUS_VICTORY_ROAD,MUS_VICTORY_ROAD,DUNGEON,AMBIENT
+map:ever-grande-city-glacias-room,ILUM · Glacias Room,Ever Grande City · Glacias Room,ILUM,indoor,audio:MUS_VICTORY_ROAD,MUS_VICTORY_ROAD,DUNGEON,AMBIENT
+map:ever-grande-city-phoebes-room,ILUM · Phoebes Room,Ever Grande City · Phoebes Room,ILUM,indoor,audio:MUS_VICTORY_ROAD,MUS_VICTORY_ROAD,DUNGEON,AMBIENT
+map:ever-grande-city-sidneys-room,ILUM · Sidneys Room,Ever Grande City · Sidneys Room,ILUM,indoor,audio:MUS_VICTORY_ROAD,MUS_VICTORY_ROAD,DUNGEON,AMBIENT
+map:victory-road-1f,CRYSTAL CAVES · 1F,Victory Road · 1F,ILUM,underground,audio:MUS_VICTORY_ROAD,MUS_VICTORY_ROAD,DUNGEON,AMBIENT
+map:victory-road-b1f,CRYSTAL CAVES · B1F,Victory Road · B1F,ILUM,underground,audio:MUS_VICTORY_ROAD,MUS_VICTORY_ROAD,DUNGEON,AMBIENT
+map:victory-road-b2f,CRYSTAL CAVES · B2F,Victory Road · B2F,ILUM,underground,audio:MUS_VICTORY_ROAD,MUS_VICTORY_ROAD,DUNGEON,AMBIENT
+map:mt-pyre-1f,JEDHA TEMPLE · Mt Pyre · 1F,Mt Pyre · 1F,JEDHA,indoor,audio:MUS_MT_PYRE,MUS_MT_PYRE,DUNGEON,AMBIENT
+map:mt-pyre-2f,JEDHA TEMPLE · Mt Pyre · 2F,Mt Pyre · 2F,JEDHA,indoor,audio:MUS_MT_PYRE,MUS_MT_PYRE,DUNGEON,AMBIENT
+map:mt-pyre-3f,JEDHA TEMPLE · Mt Pyre · 3F,Mt Pyre · 3F,JEDHA,indoor,audio:MUS_MT_PYRE,MUS_MT_PYRE,DUNGEON,AMBIENT
+map:mt-pyre-4f,JEDHA TEMPLE · Mt Pyre · 4F,Mt Pyre · 4F,JEDHA,indoor,audio:MUS_MT_PYRE,MUS_MT_PYRE,DUNGEON,AMBIENT
+map:mt-pyre-5f,JEDHA TEMPLE · Mt Pyre · 5F,Mt Pyre · 5F,JEDHA,indoor,audio:MUS_MT_PYRE,MUS_MT_PYRE,DUNGEON,AMBIENT
+map:mt-pyre-6f,JEDHA TEMPLE · Mt Pyre · 6F,Mt Pyre · 6F,JEDHA,indoor,audio:MUS_MT_PYRE,MUS_MT_PYRE,DUNGEON,AMBIENT
+map:mt-pyre-exterior,JEDHA TEMPLE · Mt Pyre · Exterior,Mt Pyre · Exterior,JEDHA,route,audio:MUS_MT_PYRE_EXTERIOR,MUS_MT_PYRE_EXTERIOR,ROUTE,AMBIENT
+map:mt-pyre-summit,JEDHA TEMPLE · Mt Pyre · Summit,Mt Pyre · Summit,JEDHA,route,audio:MUS_MT_PYRE_EXTERIOR,MUS_MT_PYRE_EXTERIOR,ROUTE,AMBIENT
+map:route122,ROUTE 122,Route 122,JEDHA,route,audio:MUS_ROUTE122,MUS_ROUTE122,ROUTE,LOOP
+map:pacifidlog-town,TIPOCA CITY,Pacifidlog Town,KAMINO,town,audio:MUS_LILYCOVE,MUS_LILYCOVE,TOWN,LOOP
+map:route131,ROUTE 131,Route 131,KAMINO,ocean-route,audio:MUS_ROUTE119,MUS_ROUTE119,ROUTE,LOOP
+map:route132,ROUTE 132,Route 132,KAMINO,ocean-route,audio:MUS_ROUTE119,MUS_ROUTE119,ROUTE,LOOP
+map:route133,ROUTE 133,Route 133,KAMINO,ocean-route,audio:MUS_ROUTE119,MUS_ROUTE119,ROUTE,LOOP
+map:route134,ROUTE 134,Route 134,KAMINO,ocean-route,audio:MUS_ROUTE119,MUS_ROUTE119,ROUTE,LOOP
+map:sealed-chamber-inner-room,SEALED VAULT · Inner Room,Sealed Chamber · Inner Room,KAMINO,underground,audio:MUS_SEALED_CHAMBER,MUS_SEALED_CHAMBER,DUNGEON,AMBIENT
+map:sealed-chamber-outer-room,SEALED VAULT · Outer Room,Sealed Chamber · Outer Room,KAMINO,underground,audio:MUS_SEALED_CHAMBER,MUS_SEALED_CHAMBER,DUNGEON,AMBIENT
+map:abandoned-ship-captains-office,REPUBLIC WRECK · Captains Office,Abandoned Ship · Captains Office,KASHYYYK,underground,audio:MUS_ABANDONED_SHIP,MUS_ABANDONED_SHIP,DUNGEON,AMBIENT
+map:abandoned-ship-corridors-1f,REPUBLIC WRECK · Corridors · 1F,Abandoned Ship · Corridors · 1F,KASHYYYK,underground,audio:MUS_ABANDONED_SHIP,MUS_ABANDONED_SHIP,DUNGEON,AMBIENT
+map:abandoned-ship-corridors-b1f,REPUBLIC WRECK · Corridors · B1F,Abandoned Ship · Corridors · B1F,KASHYYYK,underground,audio:MUS_ABANDONED_SHIP,MUS_ABANDONED_SHIP,DUNGEON,AMBIENT
+map:abandoned-ship-deck,REPUBLIC WRECK · Deck,Abandoned Ship · Deck,KASHYYYK,underground,audio:MUS_ABANDONED_SHIP,MUS_ABANDONED_SHIP,DUNGEON,AMBIENT
+map:abandoned-ship-hidden-floor-corridors,REPUBLIC WRECK · Hidden Floor Corridors,Abandoned Ship · Hidden Floor Corridors,KASHYYYK,underground,audio:MUS_ABANDONED_SHIP,MUS_ABANDONED_SHIP,DUNGEON,AMBIENT
+map:abandoned-ship-hidden-floor-rooms,REPUBLIC WRECK · Hidden Floor Rooms,Abandoned Ship · Hidden Floor Rooms,KASHYYYK,underground,audio:MUS_ABANDONED_SHIP,MUS_ABANDONED_SHIP,DUNGEON,AMBIENT
+map:abandoned-ship-room-b1f,REPUBLIC WRECK · Room · B1F,Abandoned Ship · Room · B1F,KASHYYYK,underground,audio:MUS_ABANDONED_SHIP,MUS_ABANDONED_SHIP,DUNGEON,AMBIENT
+map:abandoned-ship-rooms-1f,REPUBLIC WRECK · Rooms · 1F,Abandoned Ship · Rooms · 1F,KASHYYYK,underground,audio:MUS_ABANDONED_SHIP,MUS_ABANDONED_SHIP,DUNGEON,AMBIENT
+map:abandoned-ship-rooms-b1f,REPUBLIC WRECK · Rooms · B1F,Abandoned Ship · Rooms · B1F,KASHYYYK,underground,audio:MUS_ABANDONED_SHIP,MUS_ABANDONED_SHIP,DUNGEON,AMBIENT
+map:abandoned-ship-rooms2-1f,REPUBLIC WRECK · Rooms 2 · 1F,Abandoned Ship · Rooms 2 · 1F,KASHYYYK,underground,audio:MUS_ABANDONED_SHIP,MUS_ABANDONED_SHIP,DUNGEON,AMBIENT
+map:abandoned-ship-rooms2-b1f,REPUBLIC WRECK · Rooms 2 · B1F,Abandoned Ship · Rooms 2 · B1F,KASHYYYK,underground,audio:MUS_ABANDONED_SHIP,MUS_ABANDONED_SHIP,DUNGEON,AMBIENT
+map:abandoned-ship-underwater1,REPUBLIC WRECK · Underwater 1,Abandoned Ship · Underwater 1,KASHYYYK,underwater,audio:MUS_UNDERWATER,MUS_UNDERWATER,DUNGEON,AMBIENT
+map:abandoned-ship-underwater2,REPUBLIC WRECK · Underwater 2,Abandoned Ship · Underwater 2,KASHYYYK,underwater,audio:MUS_UNDERWATER,MUS_UNDERWATER,DUNGEON,AMBIENT
+map:dewford-town,KACHIRHO,Dewford Town,KASHYYYK,town,audio:MUS_DEWFORD,MUS_DEWFORD,TOWN,LOOP
+map:dewford-town-gym,KACHIRHO · Gym,Dewford Town · Gym,KASHYYYK,indoor,audio:MUS_GYM,MUS_GYM,BUILDING,LOOP
+map:granite-cave-1f,SHADOWLANDS · 1F,Granite Cave · 1F,KASHYYYK,underground,audio:MUS_PETALBURG_WOODS,MUS_PETALBURG_WOODS,DUNGEON,AMBIENT
+map:granite-cave-b1f,SHADOWLANDS · B1F,Granite Cave · B1F,KASHYYYK,underground,audio:MUS_PETALBURG_WOODS,MUS_PETALBURG_WOODS,DUNGEON,AMBIENT
+map:granite-cave-b2f,SHADOWLANDS · B2F,Granite Cave · B2F,KASHYYYK,underground,audio:MUS_PETALBURG_WOODS,MUS_PETALBURG_WOODS,DUNGEON,AMBIENT
+map:granite-cave-stevens-room,SHADOWLANDS · Stevens Room,Granite Cave · Stevens Room,KASHYYYK,underground,audio:MUS_PETALBURG_WOODS,MUS_PETALBURG_WOODS,DUNGEON,AMBIENT
+map:island-cave,ICE GROTTO,Island Cave,KASHYYYK,underground,audio:MUS_SEALED_CHAMBER,MUS_SEALED_CHAMBER,DUNGEON,AMBIENT
+map:route105,ROUTE 105,Route 105,KASHYYYK,route,audio:MUS_ROUTE104,MUS_ROUTE104,ROUTE,LOOP
+map:route106,ROUTE 106,Route 106,KASHYYYK,route,audio:MUS_ROUTE104,MUS_ROUTE104,ROUTE,LOOP
+map:route107,ROUTE 107,Route 107,KASHYYYK,route,audio:MUS_ROUTE104,MUS_ROUTE104,ROUTE,LOOP
+map:route108,ROUTE 108,Route 108,KASHYYYK,route,audio:MUS_ROUTE104,MUS_ROUTE104,ROUTE,LOOP
+map:route109,ROUTE 109,Route 109,KASHYYYK,route,audio:MUS_ROUTE104,MUS_ROUTE104,ROUTE,LOOP
+map:route109-seashore-house,ROUTE 109 · Seashore House,Route 109 · Seashore House,KASHYYYK,indoor,audio:MUS_DEWFORD,MUS_DEWFORD,TOWN,LOOP
+map:underwater-route105,UNDERWATER · Route 105,Underwater · Route 105,KASHYYYK,underwater,audio:MUS_UNDERWATER,MUS_UNDERWATER,DUNGEON,AMBIENT
+map:navel-rock-b1f,MORTIS GATE · B1F,Navel Rock · B1F,MORTIS,underground,audio:MUS_RG_SEVII_CAVE,MUS_RG_SEVII_CAVE,DUNGEON,AMBIENT
+map:navel-rock-bottom,MORTIS GATE · Bottom,Navel Rock · Bottom,MORTIS,underground,audio:MUS_RG_SEVII_CAVE,MUS_RG_SEVII_CAVE,DUNGEON,AMBIENT
+map:navel-rock-down01,MORTIS GATE · Down 01,Navel Rock · Down 01,MORTIS,underground,audio:MUS_RG_SEVII_CAVE,MUS_RG_SEVII_CAVE,DUNGEON,AMBIENT
+map:navel-rock-down02,MORTIS GATE · Down 02,Navel Rock · Down 02,MORTIS,underground,audio:MUS_RG_SEVII_CAVE,MUS_RG_SEVII_CAVE,DUNGEON,AMBIENT
+map:navel-rock-down03,MORTIS GATE · Down 03,Navel Rock · Down 03,MORTIS,underground,audio:MUS_RG_SEVII_CAVE,MUS_RG_SEVII_CAVE,DUNGEON,AMBIENT
+map:navel-rock-down04,MORTIS GATE · Down 04,Navel Rock · Down 04,MORTIS,underground,audio:MUS_RG_SEVII_CAVE,MUS_RG_SEVII_CAVE,DUNGEON,AMBIENT
+map:navel-rock-down05,MORTIS GATE · Down 05,Navel Rock · Down 05,MORTIS,underground,audio:MUS_RG_SEVII_CAVE,MUS_RG_SEVII_CAVE,DUNGEON,AMBIENT
+map:navel-rock-down06,MORTIS GATE · Down 06,Navel Rock · Down 06,MORTIS,underground,audio:MUS_RG_SEVII_CAVE,MUS_RG_SEVII_CAVE,DUNGEON,AMBIENT
+map:navel-rock-down07,MORTIS GATE · Down 07,Navel Rock · Down 07,MORTIS,underground,audio:MUS_RG_SEVII_CAVE,MUS_RG_SEVII_CAVE,DUNGEON,AMBIENT
+map:navel-rock-down08,MORTIS GATE · Down 08,Navel Rock · Down 08,MORTIS,underground,audio:MUS_RG_SEVII_CAVE,MUS_RG_SEVII_CAVE,DUNGEON,AMBIENT
+map:navel-rock-down09,MORTIS GATE · Down 09,Navel Rock · Down 09,MORTIS,underground,audio:MUS_RG_SEVII_CAVE,MUS_RG_SEVII_CAVE,DUNGEON,AMBIENT
+map:navel-rock-down10,MORTIS GATE · Down 10,Navel Rock · Down 10,MORTIS,underground,audio:MUS_RG_SEVII_CAVE,MUS_RG_SEVII_CAVE,DUNGEON,AMBIENT
+map:navel-rock-down11,MORTIS GATE · Down 11,Navel Rock · Down 11,MORTIS,underground,audio:MUS_RG_SEVII_CAVE,MUS_RG_SEVII_CAVE,DUNGEON,AMBIENT
+map:navel-rock-entrance,MORTIS GATE · Entrance,Navel Rock · Entrance,MORTIS,underground,audio:MUS_RG_SEVII_CAVE,MUS_RG_SEVII_CAVE,DUNGEON,AMBIENT
+map:navel-rock-fork,MORTIS GATE · Fork,Navel Rock · Fork,MORTIS,underground,audio:MUS_RG_SEVII_CAVE,MUS_RG_SEVII_CAVE,DUNGEON,AMBIENT
+map:navel-rock-top,MORTIS GATE · Top,Navel Rock · Top,MORTIS,underground,audio:MUS_RG_SEVII_CAVE,MUS_RG_SEVII_CAVE,DUNGEON,AMBIENT
+map:navel-rock-up1,MORTIS GATE · Up 1,Navel Rock · Up 1,MORTIS,underground,audio:MUS_RG_SEVII_CAVE,MUS_RG_SEVII_CAVE,DUNGEON,AMBIENT
+map:navel-rock-up2,MORTIS GATE · Up 2,Navel Rock · Up 2,MORTIS,underground,audio:MUS_RG_SEVII_CAVE,MUS_RG_SEVII_CAVE,DUNGEON,AMBIENT
+map:navel-rock-up3,MORTIS GATE · Up 3,Navel Rock · Up 3,MORTIS,underground,audio:MUS_RG_SEVII_CAVE,MUS_RG_SEVII_CAVE,DUNGEON,AMBIENT
+map:navel-rock-up4,MORTIS GATE · Up 4,Navel Rock · Up 4,MORTIS,underground,audio:MUS_RG_SEVII_CAVE,MUS_RG_SEVII_CAVE,DUNGEON,AMBIENT
+map:magma-hideout-1f,FORTRESS VADER · 1F,Magma Hideout · 1F,MUSTAFAR,underground,audio:MUS_AQUA_MAGMA_HIDEOUT,MUS_AQUA_MAGMA_HIDEOUT,DUNGEON,LOOP
+map:magma-hideout-2f-1r,FORTRESS VADER · 2F · 1R,Magma Hideout · 2F · 1R,MUSTAFAR,underground,audio:MUS_AQUA_MAGMA_HIDEOUT,MUS_AQUA_MAGMA_HIDEOUT,DUNGEON,LOOP
+map:magma-hideout-2f-2r,FORTRESS VADER · 2F · 2R,Magma Hideout · 2F · 2R,MUSTAFAR,underground,audio:MUS_AQUA_MAGMA_HIDEOUT,MUS_AQUA_MAGMA_HIDEOUT,DUNGEON,LOOP
+map:magma-hideout-2f-3r,FORTRESS VADER · 2F · 3R,Magma Hideout · 2F · 3R,MUSTAFAR,underground,audio:MUS_AQUA_MAGMA_HIDEOUT,MUS_AQUA_MAGMA_HIDEOUT,DUNGEON,LOOP
+map:magma-hideout-3f-1r,FORTRESS VADER · 3F · 1R,Magma Hideout · 3F · 1R,MUSTAFAR,underground,audio:MUS_AQUA_MAGMA_HIDEOUT,MUS_AQUA_MAGMA_HIDEOUT,DUNGEON,LOOP
+map:magma-hideout-3f-2r,FORTRESS VADER · 3F · 2R,Magma Hideout · 3F · 2R,MUSTAFAR,underground,audio:MUS_AQUA_MAGMA_HIDEOUT,MUS_AQUA_MAGMA_HIDEOUT,DUNGEON,LOOP
+map:magma-hideout-3f-3r,FORTRESS VADER · 3F · 3R,Magma Hideout · 3F · 3R,MUSTAFAR,underground,audio:MUS_AQUA_MAGMA_HIDEOUT,MUS_AQUA_MAGMA_HIDEOUT,DUNGEON,LOOP
+map:magma-hideout-4f,FORTRESS VADER · 4F,Magma Hideout · 4F,MUSTAFAR,underground,audio:MUS_AQUA_MAGMA_HIDEOUT,MUS_AQUA_MAGMA_HIDEOUT,DUNGEON,LOOP
+map:mt-chimney,MUSTAFAR PEAK · Mt Chimney,Mt Chimney,MUSTAFAR,route,audio:MUS_MT_CHIMNEY,MUS_MT_CHIMNEY,ROUTE,LOOP
+map:fallarbor-town,INYUSU TOR,Fallarbor Town,SULLUST,town,audio:MUS_FALLARBOR,MUS_FALLARBOR,TOWN,LOOP
+map:fiery-path,MAGMA TUNNELS,Fiery Path,SULLUST,underground,audio:MUS_PETALBURG_WOODS,MUS_PETALBURG_WOODS,DUNGEON,AMBIENT
+map:jagged-pass,ASHEN PASS,Jagged Pass,SULLUST,route,audio:MUS_PETALBURG_WOODS,MUS_PETALBURG_WOODS,DUNGEON,AMBIENT
+map:lavaridge-town,PIRIN,Lavaridge Town,SULLUST,town,audio:MUS_OLDALE,MUS_OLDALE,TOWN,LOOP
+map:lavaridge-town-gym-1f,PIRIN · Gym · 1F,Lavaridge Town · Gym · 1F,SULLUST,indoor,audio:MUS_GYM,MUS_GYM,BUILDING,LOOP
+map:meteor-falls-1f-1r,STARFALL CAVERN · 1F · 1R,Meteor Falls · 1F · 1R,SULLUST,underground,audio:MUS_CAVE_OF_ORIGIN,MUS_CAVE_OF_ORIGIN,DUNGEON,AMBIENT
+map:meteor-falls-1f-2r,STARFALL CAVERN · 1F · 2R,Meteor Falls · 1F · 2R,SULLUST,underground,audio:MUS_CAVE_OF_ORIGIN,MUS_CAVE_OF_ORIGIN,DUNGEON,AMBIENT
+map:meteor-falls-b1f-1r,STARFALL CAVERN · B1F · 1R,Meteor Falls · B1F · 1R,SULLUST,underground,audio:MUS_CAVE_OF_ORIGIN,MUS_CAVE_OF_ORIGIN,DUNGEON,AMBIENT
+map:meteor-falls-b1f-2r,STARFALL CAVERN · B1F · 2R,Meteor Falls · B1F · 2R,SULLUST,underground,audio:MUS_CAVE_OF_ORIGIN,MUS_CAVE_OF_ORIGIN,DUNGEON,AMBIENT
+map:meteor-falls-stevens-cave,STARFALL CAVERN · Stevens Cave,Meteor Falls · Stevens Cave,SULLUST,underground,audio:MUS_CAVE_OF_ORIGIN,MUS_CAVE_OF_ORIGIN,DUNGEON,AMBIENT
+map:route113,ROUTE 113,Route 113,SULLUST,route,audio:MUS_ROUTE113,MUS_ROUTE113,ROUTE,AMBIENT
+map:route114,ROUTE 114,Route 114,SULLUST,route,audio:MUS_ROUTE110,MUS_ROUTE110,ROUTE,LOOP
+map:desert-ruins,TUSKEN RUINS,Desert Ruins,TATOOINE,underground,audio:MUS_SEALED_CHAMBER,MUS_SEALED_CHAMBER,DUNGEON,AMBIENT
+map:desert-underpass,KRAYT GRAVEYARD,Desert Underpass,TATOOINE,underground,audio:MUS_MT_CHIMNEY,MUS_MT_CHIMNEY,ROUTE,LOOP
+map:littleroot-town,MOS PELGO,Littleroot Town,TATOOINE,town,audio:MUS_LITTLEROOT,MUS_LITTLEROOT,TOWN,LOOP
+map:mauville-city,MOS ESPA,Mauville City,TATOOINE,city,audio:MUS_RUSTBORO,MUS_RUSTBORO,TOWN,LOOP
+map:mauville-city-gym,MOS ESPA · Gym,Mauville City · Gym,TATOOINE,indoor,audio:MUS_GYM,MUS_GYM,BUILDING,LOOP
+map:mirage-tower-1f,SANDCRAWLER · 1F,Mirage Tower · 1F,TATOOINE,underground,audio:MUS_MT_CHIMNEY,MUS_MT_CHIMNEY,ROUTE,LOOP
+map:mirage-tower-2f,SANDCRAWLER · 2F,Mirage Tower · 2F,TATOOINE,underground,audio:MUS_MT_CHIMNEY,MUS_MT_CHIMNEY,ROUTE,LOOP
+map:mirage-tower-3f,SANDCRAWLER · 3F,Mirage Tower · 3F,TATOOINE,underground,audio:MUS_MT_CHIMNEY,MUS_MT_CHIMNEY,ROUTE,LOOP
+map:mirage-tower-4f,SANDCRAWLER · 4F,Mirage Tower · 4F,TATOOINE,underground,audio:MUS_MT_CHIMNEY,MUS_MT_CHIMNEY,ROUTE,LOOP
+map:new-mauville-entrance,ESPA GENERATOR · Entrance,New Mauville · Entrance,TATOOINE,underground,audio:MUS_MT_PYRE,MUS_MT_PYRE,DUNGEON,AMBIENT
+map:new-mauville-inside,ESPA GENERATOR · Inside,New Mauville · Inside,TATOOINE,underground,audio:MUS_MT_PYRE,MUS_MT_PYRE,DUNGEON,AMBIENT
+map:oldale-town,TOSCHE STATION,Oldale Town,TATOOINE,town,audio:MUS_OLDALE,MUS_OLDALE,TOWN,LOOP
+map:petalburg-city,MOS ENTHA,Petalburg City,TATOOINE,city,audio:MUS_PETALBURG,MUS_PETALBURG,TOWN,LOOP
+map:petalburg-city-gym,MOS ENTHA · Gym,Petalburg City · Gym,TATOOINE,indoor,audio:MUS_GYM,MUS_GYM,BUILDING,LOOP
+map:petalburg-woods,JUNDLAND WASTES,Petalburg Woods,TATOOINE,route,audio:MUS_PETALBURG_WOODS,MUS_PETALBURG_WOODS,DUNGEON,AMBIENT
+map:route101,ROUTE 101,Route 101,TATOOINE,route,audio:MUS_ROUTE101,MUS_ROUTE101,ROUTE,LOOP
+map:route102,ROUTE 102,Route 102,TATOOINE,route,audio:MUS_ROUTE101,MUS_ROUTE101,ROUTE,LOOP
+map:route103,ROUTE 103,Route 103,TATOOINE,route,audio:MUS_ROUTE101,MUS_ROUTE101,ROUTE,LOOP
+map:route104,ROUTE 104,Route 104,TATOOINE,route,audio:MUS_ROUTE104,MUS_ROUTE104,ROUTE,LOOP
+map:route104-prototype,ROUTE 104 · Prototype,Route 104 · Prototype,TATOOINE,route,audio:MUS_ROUTE104,MUS_ROUTE104,ROUTE,LOOP
+map:route110,ROUTE 110,Route 110,TATOOINE,route,audio:MUS_ROUTE110,MUS_ROUTE110,ROUTE,LOOP
+map:route110-trick-house-puzzle1,ROUTE 110 · Trick House Puzzle 1,Route 110 · Trick House Puzzle 1,TATOOINE,indoor,audio:MUS_TRICK_HOUSE,MUS_TRICK_HOUSE,BUILDING,LOOP
+map:route110-trick-house-puzzle2,ROUTE 110 · Trick House Puzzle 2,Route 110 · Trick House Puzzle 2,TATOOINE,indoor,audio:MUS_TRICK_HOUSE,MUS_TRICK_HOUSE,BUILDING,LOOP
+map:route110-trick-house-puzzle3,ROUTE 110 · Trick House Puzzle 3,Route 110 · Trick House Puzzle 3,TATOOINE,indoor,audio:MUS_TRICK_HOUSE,MUS_TRICK_HOUSE,BUILDING,LOOP
+map:route110-trick-house-puzzle4,ROUTE 110 · Trick House Puzzle 4,Route 110 · Trick House Puzzle 4,TATOOINE,indoor,audio:MUS_TRICK_HOUSE,MUS_TRICK_HOUSE,BUILDING,LOOP
+map:route110-trick-house-puzzle6,ROUTE 110 · Trick House Puzzle 6,Route 110 · Trick House Puzzle 6,TATOOINE,indoor,audio:MUS_TRICK_HOUSE,MUS_TRICK_HOUSE,BUILDING,LOOP
+map:route110-trick-house-puzzle7,ROUTE 110 · Trick House Puzzle 7,Route 110 · Trick House Puzzle 7,TATOOINE,indoor,audio:MUS_TRICK_HOUSE,MUS_TRICK_HOUSE,BUILDING,LOOP
+map:route110-trick-house-puzzle8,ROUTE 110 · Trick House Puzzle 8,Route 110 · Trick House Puzzle 8,TATOOINE,indoor,audio:MUS_TRICK_HOUSE,MUS_TRICK_HOUSE,BUILDING,LOOP
+map:route111,ROUTE 111,Route 111,TATOOINE,route,audio:MUS_ROUTE110,MUS_ROUTE110,ROUTE,LOOP
+map:route112,ROUTE 112,Route 112,TATOOINE,route,audio:MUS_ROUTE110,MUS_ROUTE110,ROUTE,LOOP
+map:route115,ROUTE 115,Route 115,TATOOINE,route,audio:MUS_ROUTE104,MUS_ROUTE104,ROUTE,LOOP
+map:route116,ROUTE 116,Route 116,TATOOINE,route,audio:MUS_ROUTE104,MUS_ROUTE104,ROUTE,LOOP
+map:route117,ROUTE 117,Route 117,TATOOINE,route,audio:MUS_ROUTE110,MUS_ROUTE110,ROUTE,LOOP
+map:rustboro-city,BESTINE,Rustboro City,TATOOINE,city,audio:MUS_RUSTBORO,MUS_RUSTBORO,TOWN,LOOP
+map:rustboro-city-gym,BESTINE · Gym,Rustboro City · Gym,TATOOINE,indoor,audio:MUS_GYM,MUS_GYM,BUILDING,LOOP
+map:rusturf-tunnel,BEGGAR'S CANYON,Rusturf Tunnel,TATOOINE,underground,audio:MUS_PETALBURG_WOODS,MUS_PETALBURG_WOODS,DUNGEON,AMBIENT
+map:slateport-city,MOS EISLEY,Slateport City,TATOOINE,city,audio:MUS_SLATEPORT,MUS_SLATEPORT,TOWN,LOOP
+map:slateport-city-oceanic-museum-2f,MOS EISLEY · Oceanic Museum · 2F,Slateport City · Oceanic Museum · 2F,TATOOINE,indoor,audio:MUS_OCEANIC_MUSEUM,MUS_OCEANIC_MUSEUM,BUILDING,LOOP
+map:terra-cave-end,TERRA CAVE · End,Terra Cave · End,TATOOINE,underground,audio:MUS_PETALBURG_WOODS,MUS_PETALBURG_WOODS,DUNGEON,AMBIENT
+map:terra-cave-entrance,TERRA CAVE · Entrance,Terra Cave · Entrance,TATOOINE,underground,audio:MUS_PETALBURG_WOODS,MUS_PETALBURG_WOODS,DUNGEON,AMBIENT
+map:verdanturf-town,ANCHORHEAD,Verdanturf Town,TATOOINE,town,audio:MUS_VERDANTURF,MUS_VERDANTURF,TOWN,LOOP
+map:southern-island-exterior,TYTHON ISLE · Exterior,Southern Island · Exterior,TYTHON,route,audio:MUS_ABANDONED_SHIP,MUS_ABANDONED_SHIP,DUNGEON,AMBIENT
+map:southern-island-interior,TYTHON ISLE · Interior,Southern Island · Interior,TYTHON,route,audio:MUS_ABANDONED_SHIP,MUS_ABANDONED_SHIP,DUNGEON,AMBIENT
+map:mossdeep-city,YAVIN 4,Mossdeep City,YAVIN 4,city,audio:MUS_RUSTBORO,MUS_RUSTBORO,TOWN,LOOP
+map:mossdeep-city-gym,YAVIN 4 · Gym,Mossdeep City · Gym,YAVIN 4,indoor,audio:MUS_GYM,MUS_GYM,BUILDING,LOOP
+map:mossdeep-city-space-center-1f,YAVIN 4 · Space Center · 1F,Mossdeep City · Space Center · 1F,YAVIN 4,indoor,audio:MUS_RUSTBORO,MUS_RUSTBORO,TOWN,LOOP
+map:mossdeep-city-space-center-2f,YAVIN 4 · Space Center · 2F,Mossdeep City · Space Center · 2F,YAVIN 4,indoor,audio:MUS_RUSTBORO,MUS_RUSTBORO,TOWN,LOOP
+map:route124,ROUTE 124,Route 124,YAVIN 4,ocean-route,audio:MUS_ROUTE120,MUS_ROUTE120,ROUTE,LOOP
+map:route125,ROUTE 125,Route 125,YAVIN 4,ocean-route,audio:MUS_ROUTE120,MUS_ROUTE120,ROUTE,LOOP
+map:underwater-route124,UNDERWATER · Route 124,Underwater · Route 124,YAVIN 4,underwater,audio:MUS_UNDERWATER,MUS_UNDERWATER,DUNGEON,AMBIENT
+map:underwater-route125,UNDERWATER · Route 125,Underwater · Route 125,YAVIN 4,underwater,audio:MUS_UNDERWATER,MUS_UNDERWATER,DUNGEON,AMBIENT
+map:ss-tidal-lower-deck,,SS Tidal Lower Deck,,indoor,audio:MUS_SAILING,MUS_SAILING,TRAVEL,LOOP
+map:ss-tidal-rooms,,SS Tidal Rooms,,indoor,audio:MUS_SAILING,MUS_SAILING,TRAVEL,LOOP
