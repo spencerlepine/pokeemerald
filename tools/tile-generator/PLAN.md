@@ -76,3 +76,12 @@ Next, in order:
    drawings (steam, sparks) wait until a recolour can't do it.
 4. ~~Stage 5: interior floor and wall kits (2D)~~ shipped as ART_READY (Brendan/May house, Pokémon Center).
 5. ~~Stage 8: battle backgrounds~~ recipe `battle:` rules; Tatooine tall grass checked in the ROM with `scripts/rom-battle.sh`.
+
+### Checkpoint (2026-11-01, owner approved)
+
+Approved: planet recolours (tatooine, hoth, sullust, sullust-lava, endor, dagobah, kamino; themes in
+`wiki/bible/PALETTE.md`), interiors shipped ART_READY, battle backgrounds, stage 6 animation preview,
+`death-star.yaml` (Facility kit: deck plates, grates, trench walls, hangar) and `star-destroyer.yaml`
+(InsideShip kit: grey panels and roofs, Imperial bunks, buoys removed via `layout_edits`).
+Open: `install` does not write edited map.bin yet; the Death Star General rules need a Death Star copy of the
+primary at install. **Next: 3D objects and buildings, with the owner's guidance.**
