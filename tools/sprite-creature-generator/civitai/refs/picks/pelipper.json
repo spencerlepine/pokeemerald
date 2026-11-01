@@ -1,9 +1,9 @@
 {
   "init": "refs/pelipper_prep.png",
-  "init_source": "https://static.wikia.nocookie.net/starwars/images/1/10/ShyyyoBird-ConceptArt-AmyFry.png/revision/latest/scale-to-width-down/1000?cb=20260622212644#crop=0.57,0.0,0.995,0.47",
+  "init_source": "refs/sources/pelipper/shyyyo_jfo_cut.png",
   "flip": false,
   "denoise": 0.5,
-  "desc": "huge crested shyyyo seabird, whole body, broad wings, heavy hooked beak, long tail, three-quarter view",
-  "colour": "slate blue and yellow",
-  "ref_note": "Amy Fry shyyyo concept, wider crop so the whole bird body is in"
+  "desc": "tall crested shyyyo seabird standing, long neck, big dark hooked beak and crest, pale feathered body, folded wings, long thin tail, side view facing left, whole body, small, centred",
+  "colour": "pale lavender grey with dark slate beak and crest",
+  "ref_note": "ShyyyoBird-JFO render, hand-masked from dark bg, dark translucent wing lifted to pale; replaces dark Amy Fry crop (wingull's)"
 }
