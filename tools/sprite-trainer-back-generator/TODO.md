@@ -1,6 +1,6 @@
 # sprite-trainer-back-generator
 
-**Status:** TODO. Not built yet; this file marks the scope.
+**Status:** IN-REVIEW. The tool is built (`trainer_back_sprite/`); Kael, Mira, Luke and Leia mockups are in `output/`. This file is the original scope.
 
 Player and partner battle back sprites (the capture-pod throw).
 
