@@ -1,9 +1,9 @@
 {
   "init": "refs/taillow_prep.png",
-  "init_source": "https://static.wikia.nocookie.net/starwars/images/0/04/Hawkbat-WoSW.png/revision/latest?cb=20231008181636",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/0/04/Hawkbat-WoSW.png/revision/latest?cb=20231008181636#crop=0,0,1,0.72",
   "flip": false,
   "denoise": 0.5,
-  "desc": "small hawk-bat chick with folded leathery wings and a bold stare",
-  "colour": "blue and cream",
-  "ref_note": "WoSW hawk-bat render with alpha; folded-wing pose for the chick"
+  "desc": "small hawk-bat chick with short folded leathery wings and a bold stare, whole body, small, centred",
+  "colour": "purple and cream",
+  "ref_note": "WoSW hawk-bat render, lower wing tips trimmed so it is not too tall for the frame"
 }
