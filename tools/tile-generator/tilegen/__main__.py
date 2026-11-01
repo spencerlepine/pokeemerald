@@ -90,6 +90,14 @@ def _build_pair(rec, primary: str, secondary: str):
                                light_blobs=op.get("light_blobs", 2), dark_dots=op.get("dark_dots", 4), blob=op.get("blob", 2))
             for mid in op["metatiles"]:
                 edit.set_metatile_layer(ts, mid, op.get("layer", 0), np.block([[A, B], [B, A]]))
+        elif op["op"] == "rebank":
+            mids = list(op.get("metatiles", []))
+            if "metatiles_with_tiles" in op:
+                mids += edit.metatiles_using_tiles(ts, *op["metatiles_with_tiles"])
+            alloc = edit.free_tile_ids(ts, op.get("free_below", gba.NUM_TILES_IN_PRIMARY))
+            n = edit.rebank_metatiles(ts, sorted(set(mids)), op["from"], op["to"], op.get("map", {}), alloc)
+            if n == 0:
+                raise SystemExit(f"rebank op matched nothing: {op}")
         else:
             raise SystemExit(f"unknown retexture op {op['op']}")
     return van, new
@@ -133,6 +141,29 @@ def cmd_install(a):
         print(f"installed {ts.path.relative_to(gba.game_dir())}")
 
 
+def cmd_anim(a):
+    """Stage 6: play a layout's tileset animations for vanilla and each recipe, as one GIF grid."""
+    from . import anim, recolour, review
+    L = gba.layouts(); lay = L[a.layout]
+    crop = tuple(a.crop) if a.crop else None
+    cols = []
+    van = None
+    for r in a.recipes:
+        rec = recolour.Recipe.load(r)
+        v, new = _build_pair(rec, lay.primary, lay.secondary)
+        van = van or v
+        cols.append((rec.name, anim.render_frames(lay, new, a.steps, crop)))
+    cols.insert(0, ("vanilla", anim.render_frames(lay, van or gba.TilesetPair(gba.load_tileset_by_header(lay.primary),
+                                                 gba.load_tileset_by_header(lay.secondary)), a.steps, crop)))
+    rows = [cols[i:i + a.cols] for i in range(0, len(cols), a.cols)]
+    frames = [review.stack([review.side_by_side([(n, f[i]) for n, f in row], zoom_factor=a.zoom) for row in rows])
+              for i in range(a.steps)]
+    out = Path(a.out); out.parent.mkdir(parents=True, exist_ok=True)
+    anim.save_gif(frames, out, zoom=1)
+    frames[0].save(out.with_suffix(".png"))
+    print(f"{out}  ({a.steps} steps, {len(cols)} panels)")
+
+
 def cmd_list_layouts(a):
     for name, l in sorted(gba.layouts().items()):
         if name.startswith("LAYOUT_"):
@@ -166,6 +197,10 @@ def main(argv=None):
     s = sub.add_parser("install", help="build and copy the pair a layout uses into game/ (gate enforced)")
     s.add_argument("recipe"); s.add_argument("--layout", default="LittlerootTown_Layout"); s.add_argument("--out", default="out")
     s.set_defaults(fn=cmd_install)
+    s = sub.add_parser("anim", help="stage 6: GIF of a layout's tileset animations, vanilla and per recipe")
+    s.add_argument("layout"); s.add_argument("out"); s.add_argument("recipes", nargs="*")
+    s.add_argument("--crop", type=int, nargs=4, metavar=("L", "T", "R", "B")); s.add_argument("--steps", type=int, default=8)
+    s.add_argument("--cols", type=int, default=4); s.add_argument("--zoom", type=int, default=1); s.set_defaults(fn=cmd_anim)
     s = sub.add_parser("list-layouts"); s.add_argument("filter", nargs="?"); s.set_defaults(fn=cmd_list_layouts)
     s = sub.add_parser("list-tilesets"); s.set_defaults(fn=cmd_list_tilesets)
 

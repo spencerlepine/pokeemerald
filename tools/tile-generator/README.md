@@ -31,6 +31,13 @@ python -m tilegen render-map LittlerootTown_Layout out.png --zoom 2   # a map as
 python -m tilegen render-tileset gTileset_Petalburg out.png --cols 16 # every metatile of a tileset
 ```
 
+```bash
+python -m tilegen anim Route103_Layout out/anim/route103.gif recipes/tatooine.yaml recipes/sullust-lava.yaml --crop 336 40 656 264
+```
+
+`anim` plays the pair's tileset animations (parsed from `src/tileset_anims.c`, one step per 16 game frames)
+for vanilla and each recipe and writes a GIF grid plus a still of the first frame.
+
 `render-map` is the review tool for everything that follows: a generated tileset is dropped into a real
 layout and compared with the vanilla render side by side, so the owner judges it in context and not as
 a sheet of squares.

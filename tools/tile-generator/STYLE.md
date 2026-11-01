@@ -73,3 +73,9 @@ own primary recolour (stage 1 recipe) and each town a secondary.
   are untouched by hue rules; every planet recipe needs explicit `chroma_max` stone and `hue: [330, 70]` rock rules.
 - Recolouring the shared primary also recolours the Pokémon Center / Mart roofs that live in it. Those become
   Bacta Center / supply depot assets later, so this is tolerated during prototyping.
+- **Effects share banks with unrelated art.** The rocks and foam standing in General's water are drawn in
+  bank 1, which also colours signs and fences, so a lava recipe can't recolour them alone. The `rebank` op
+  clones those tiles into the water bank's free slots (vanilla magenta / duplicate entries) instead. Free
+  slots per bank are the budget for this; check them before planning an effect.
+- **Lava from water:** let hue follow lightness (`hue_by_light: [10, 100]`, dark red to yellow) and raise
+  contrast (`light_scale: 1.3`): the drawn wave crests become glowing seams with no new pixels.

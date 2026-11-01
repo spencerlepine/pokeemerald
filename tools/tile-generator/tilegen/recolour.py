@@ -18,6 +18,10 @@ overrides:                  # bank-level exact values win over rules
 skip_banks: ["general:4"]   # leave as is
 ```
 
+A rule's `match` may add `banks: ["general:4"]` to act on named banks only, and `set` may use
+`hue_by_light: [h_dark, h_light]` (hue follows lightness: lava, fire). `extends: base.yaml` makes a variant
+whose rules are tried before the base recipe's.
+
 `set` keys: `hue` (absolute degrees) or `hue_shift`; `chroma` (absolute) or `chroma_scale`; `light` (shift)
 and `light_scale` (contrast about L=50). Colours no rule matches are kept. Results are snapped to GBA steps
 and de-duplicated inside a bank (a duplicate is nudged 8 in L so two ramps never merge).
@@ -43,8 +47,11 @@ class Rule:
     light_min: float = -1.0
     light_max: float = 101.0
     set: dict = field(default_factory=dict)
+    banks: set[str] | None = None               # limit to banks, e.g. {"general:4"} (the water bank)
 
-    def matches(self, lch) -> bool:
+    def matches(self, lch, key: str | None = None) -> bool:
+        if self.banks is not None and key not in self.banks:
+            return False
         L, C, H = lch
         if C < self.chroma_min or C > self.chroma_max:
             return False
@@ -65,6 +72,9 @@ class Rule:
         s = self.set
         if "hue" in s:
             H = float(s["hue"])
+        if "hue_by_light" in s:                  # [hue at L=0, hue at L=100]: lava, fire, sunsets
+            a, b = s["hue_by_light"]
+            H = a + (b - a) * L / 100.0
         if "hue_shift" in s:
             H = (H + float(s["hue_shift"])) % 360
         if "chroma" in s:
@@ -98,12 +108,21 @@ class Recipe:
                 m = r.get("match", {})
                 out.append(Rule(r.get("name", "?"), tuple(m["hue"]) if "hue" in m else None,
                                 m.get("chroma_min", 0.0), m.get("chroma_max", 1e9),
-                                m.get("light_min", -1.0), m.get("light_max", 101.0), r.get("set", {})))
+                                m.get("light_min", -1.0), m.get("light_max", 101.0), r.get("set", {}),
+                                set(m["banks"]) if "banks" in m else None))
             return out
         rules = parse(d.get("rules"))
-        ov = {}
+        base = None
+        if d.get("extends"):                    # a variant: its rules first, then the base recipe's
+            base = Recipe.load(Path(path).parent / d["extends"])
+            rules = rules + base.rules
+        ov = dict(base.overrides) if base else {}
         for bank, entries in (d.get("overrides") or {}).items():
             ov[bank] = {int(k): colour.hex_to_rgb(v) for k, v in entries.items()}
+        if base:
+            return Recipe(d["name"], rules, ov, set(d.get("skip_banks") or []) | base.skip_banks,
+                          d.get("notes", base.notes), d.get("retexture") or base.retexture,
+                          parse(d.get("battle")) + base.battle_rules)
         return Recipe(d["name"], rules, ov, set(d.get("skip_banks") or []), d.get("notes", ""), d.get("retexture") or [],
                       parse(d.get("battle")))
 
@@ -121,7 +140,7 @@ def recolour_bank(pal: list[Colour], recipe: Recipe, key: str, log: list[str] | 
     overrides = recipe.overrides.get(key, {})
     for i in range(1, 16):
         # a vanilla duplicate (unused slot, or the same colour twice) stays a duplicate
-        dup = next((j for j in range(1, i) if pal[j] == pal[i]), None)
+        dup = next((j for j in range(1, i) if pal[j] == pal[i] and j not in overrides), None)
         if dup is not None and i not in overrides:
             out.append(out[dup])
             seen.add(np.array(out[-1], np.uint8).tobytes())
@@ -136,7 +155,7 @@ def recolour_bank(pal: list[Colour], recipe: Recipe, key: str, log: list[str] | 
             why = "kept"
             if key not in recipe.skip_banks:
                 for r in recipe.rules:
-                    if r.matches(lch[i]):
+                    if r.matches(lch[i], key):
                         c = colour.lch_to_srgb(r.apply(lch[i]))
                         why = r.name
                         break

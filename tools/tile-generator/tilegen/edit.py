@@ -95,3 +95,33 @@ def rgb_to_bank_indices(rgb: np.ndarray, bank: list[tuple[int, int, int]], alpha
     if alpha is not None:
         idx[~alpha] = 0
     return idx
+
+
+def rebank_metatiles(ts: gba.Tileset, mids, frm: int, to: int, idxmap: dict[int, int], alloc: list[int]) -> int:
+    """Move the `frm`-bank entries of some metatiles to bank `to`, remapping colour indices with `idxmap`
+    (indices not in the map stay). The affected tiles are cloned (once per source tile, ids popped from
+    `alloc`), so other metatiles that share them keep their bank and look. Use it to give an effect its own
+    colours (lava rocks) when its tiles share a bank with unrelated art. Returns the tiles cloned."""
+    base = gba.NUM_TILES_IN_PRIMARY if ts.secondary else 0
+    lut = np.arange(16, dtype=np.uint8)
+    for k, v in idxmap.items():
+        lut[int(k)] = int(v)
+    clones: dict[int, int] = {}
+    for mid in mids:
+        for layer, q, tid, hf, vf, bank in list(metatile_entries(ts, mid)):
+            if bank != frm or tid <= 0:
+                continue
+            if tid not in clones:
+                new = alloc.pop(0)
+                if new >= len(ts.tiles):
+                    grow_tiles(ts, new + 1 - len(ts.tiles))
+                ts.tiles[new] = lut[ts.tiles[tid]]
+                clones[tid] = new
+            ts.metatiles[mid, layer, q] = (clones[tid] + base) | (hf << 10) | (vf << 11) | (to << 12)
+    return len(clones)
+
+
+def metatiles_using_tiles(ts: gba.Tileset, lo: int, hi: int) -> list[int]:
+    """Metatiles that draw any tile id in [lo, hi) (e.g. the animated water range 432-462)."""
+    return [m for m in range(ts.n_metatiles)
+            if any(lo <= (int(e) & 0x3FF) < hi for e in ts.metatiles[m].flatten())]
