@@ -1,0 +1,44 @@
+{
+  "trainer": {
+    "stem": "magma_leader_maxie",
+    "wiki_path": "graphics/trainers/front_pics/magma_leader_maxie.png",
+    "sw_subject": "DARTH VADER, SITH LORD",
+    "subject": "Darth Vader",
+    "desc": "tall man in black armour, black helmet with mask, long black cape, chest control box, belt, red lightsaber in hand",
+    "theme": "imperial-order",
+    "style": ""
+  },
+  "lora": {
+    "id": 443092,
+    "name": "XL v1",
+    "baseModel": "SDXL 1.0",
+    "trainedWords": [],
+    "air": null,
+    "files": [
+      {
+        "name": "pk_trainer_xl_v1.safetensors",
+        "sizeKB": 445819.83984375,
+        "sha256": "078E09DA2A123964B7EB30DB23EC24D59FB082343F69C7FAF925C4C07E97023E"
+      }
+    ]
+  },
+  "checkpoint": "urn:air:sdxl:checkpoint:civitai:101055@128078",
+  "params": {
+    "prompt": "pokemon trainer sprite, pixel art, darth vader, tall man in black armour, black helmet with mask, long black cape, chest control box, belt, red lightsaber in hand, full body, standing, facing left, three-quarter view, solid white background, simple background, limited palette, black, grey and red",
+    "negativePrompt": "scenery, detailed background, gradient background, floor, shadow, text, watermark, signature, frame, border, multiple characters, cropped, cut off feet, blurry, 3d, photo, realistic, painting, smooth shading",
+    "scheduler": "EulerA",
+    "steps": 25,
+    "cfgScale": 7.0,
+    "width": 768,
+    "height": 768,
+    "seed": 1428269130,
+    "clipSkip": 2
+  },
+  "strength": 1.0,
+  "format": "jpeg",
+  "seed": 1428269130,
+  "workflowId": "13596363-20261101072311420-pr39",
+  "jobId": "993318f4-63c3-4800-91e4-f231e2837d06",
+  "cost": "10 blue",
+  "generated": "20261101-072350"
+}
