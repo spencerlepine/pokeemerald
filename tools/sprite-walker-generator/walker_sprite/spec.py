@@ -179,6 +179,21 @@ class Spec:
         return KITS[self.kit]["frame"][1]
 
 
+# Player action sheets (32x32 frames in Emerald's own order, which the pic tables index by
+# number): field move 5, surfing 6, watering 6, underwater 4, fishing 12, Acro Bike 27.
+# Frame 0 is named "down" so previews and lint have a stand frame; the rest are f1, f2, ...
+for _n in (4, 5, 6, 12, 27):
+    KITS[f"frames32x32_{_n}"] = {
+        "frame": (32, 32),
+        "order": ["down"] + [f"f{i}" for i in range(1, _n)],
+        "stand": ["down"],
+        "walk": {"down": ["down"] * 4},
+        "size": 512,
+        "oam": "32x32",
+        "still": True,
+    }
+
+
 class SpecError(ValueError):
     pass
 

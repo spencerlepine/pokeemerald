@@ -19,7 +19,7 @@ KIT_STEPS = {
 def block(x, y, text):
     rows = text.strip("\n").split("\n")
     assert len({len(r) for r in rows}) == 1, rows
-    assert x + len(rows[0]) <= 16, (x, rows[0])
+    assert x + len(rows[0]) <= 32, (x, rows[0])  # spec() checks it against the kit's width
     return {"x": x, "y": y, "rows": "\n".join(rows)}
 
 
@@ -36,6 +36,13 @@ def spec(name, gi, pal, replaces, desc, note, materials, legend, accept, base=No
         if remap:
             d["remap"] = remap
     fr = {}
+    import sys, os
+    sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    from walker_sprite.spec import KITS
+    fw = KITS[kit]["frame"][0]
+    for pts in (patches or {}).values():
+        for p in pts:
+            assert p["x"] + len(p["rows"].split("\n")[0]) <= fw, (name, p["x"], fw)
     smap, dy = KIT_STEPS.get(kit, ({}, 0))
     for stand, pts in (patches or {}).items():
         fr[stand] = {"patches": pts}
@@ -45,11 +52,11 @@ def spec(name, gi, pal, replaces, desc, note, materials, legend, accept, base=No
                 fr[step] = {"patches": [{**p, "y": p["y"] + dy} for p in pts]}
     for k, g in (frames or {}).items():
         for r in g:
-            assert len(r) == 16, (name, k, len(r), r)
+            assert len(r) == fw, (name, k, len(r), r)
         fr[k] = "\n".join(g) + "\n"
     for k, (b, py, rows) in (steps or {}).items():
         for r in rows:
-            assert len(r) == 16, (name, k, len(r), r)
+            assert len(r) == fw, (name, k, len(r), r)
         fr[k] = {"base": b, "shift": 1, "patch_y": py, "rows": "\n".join(rows) + "\n"}
     d["frames"] = fr
     open(f"art/{name}.yaml", "w").write(yaml.safe_dump(d, sort_keys=False, width=200))
