@@ -5,5 +5,6 @@
   "denoise": 0.5,
   "desc": "graceful light-furred tooka cat with tall tufted ears a calm face and a ringed tail held high",
   "colour": "white and soft grey stripes",
-  "ref_note": "YJA tooka turnaround (Betsy Bauer), side view cropped; clean line art on white; faces left. Light art for the light-side tooka"
+  "ref_note": "YJA tooka turnaround (Betsy Bauer), side view cropped; faces left unflipped (the earlier pick was mirrored by mistake)",
+  "negative": "red spots, green spots"
 }
