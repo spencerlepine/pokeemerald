@@ -1,0 +1,57 @@
+# Inyusu Tor (Sullust): hot-swap of MUS_FALLARBOR. STYLE of "The Birth of the Twins and Padme's Destiny"
+# (wiki ref_tracks soundtrack:revenge-sith:14): an original melody, not a quote. Taken from the cue: A minor,
+# ~88 bpm, harp arpeggios under a lyrical woodwind line, a string pad on the chord's third, soft low bass.
+# Brief (sw_subject): ash-dusted mining village, melancholic but cozy.
+name: fallarbor-inyusu-tor
+replaces: MUS_FALLARBOR
+form: LOOP
+voicegroup: fallarbor             # keep the vanilla voicegroup: flute 73, harp 46, strings 48, fretless 35, squares
+master_volume: 80
+tempo: 88
+steps_per_beat: 2                 # eighth-note grid
+time_signature: [4, 4]
+seed: 11
+
+parts:
+  flute:   {program: 73, channel: 0, volume: 100, pan: 8,   range: [E4, C6], gate: 0.96, lfo_speed: 30, lfo_delay: 20, mod: 6, humanize: {vel: 6}}
+  harp:    {program: 46, channel: 1, volume: 84,  pan: -20, octave: 3, range: [A3, E5], gate: 0.9, humanize: {vel: 8}}
+  strings: {program: 48, channel: 2, volume: 62,  pan: 24,  octave: 4, range: [A3, A4], gate: 1.0}
+  bass:    {program: 35, channel: 3, volume: 92,  pan: 0,   octave: 2, range: [E2, E3], gate: 0.9, role: bass}
+  echo:    {program: 80, channel: 4, volume: 40,  pan: -36, range: [C4, C5], gate: 0.9, mono: true}
+
+progressions:
+  verse:  "Am | F | C | G | Am | Dm | E | Am"
+  bridge: "F | G | Em | Am | Dm | Am | Dm:4 E:4 | E"
+  intro:  "Am | Am"
+
+phrases:
+  arp: "^1:1 ^2:1 ^3:1 ^4:1 ^3:1 ^2:1 ^1:1 ^2:1"
+  arp_up: "^1:1 ^2:1 ^3:1 ^4:1 ^5:1 ^4:1 ^3:1 ^2:1"
+  pad: "^2:8"
+  walk: "^1:4 ^3:2 ^1:2"
+  tune_a: |
+    E5:3 D5:1 C5:2 B4:2 | A4:4 C5:2 F5:2 | E5:3 D5:1 E5:2 G5:2 | D5:6 r:2 |
+    E5:3 D5:1 C5:2 A4:2 | F4:2 A4:2 D5:3 C5:1 | B4:4 G#4:2 B4:2 | A4:6 r:2
+  tune_b: |
+    C5:2 F5:2 E5:2 C5:2 | D5:2 G5:2 F5:2 D5:2 | E5:3 G5:1 B5:4 | A5:4 E5:4 |
+    F5:3 E5:1 D5:2 A4:2 | C5:3 B4:1 A4:2 E4:2 | F4:2 A4:2 G#4:2 B4:2 | B4:4 C5:2 D5:2
+  echo_b: "A4:8 | B4:8 | G4:8 | C5:8 | A4:8 | E4:8 | D4:4 E4:4 | G#4:8"
+
+sections:
+  intro:
+    bars: 2
+    chords: intro
+    ramp: {harp: [-14, 0]}
+    parts: {harp: arp, bass: walk, strings: "r:8 | ^2:8", flute: "r:8 | r:4 A4:1 B4:1 C5:1 D5':1"}
+  a:
+    bars: 8
+    chords: verse
+    parts: {flute: tune_a, harp: arp, strings: pad, bass: walk}
+  b:
+    bars: 8
+    chords: bridge
+    ramp: {harp: [4, -2]}
+    parts: {flute: tune_b, harp: arp_up, strings: pad, bass: walk, echo: echo_b}
+
+arrangement: [intro, a, b]
+loop_start: a
