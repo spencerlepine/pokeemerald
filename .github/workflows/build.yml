@@ -1,72 +1,127 @@
 name: CI
 
+# Folder that holds the game source (the Makefile lives here).
+# This is the only value to change if the game source moves.
+env:
+  GAME_DIR: game
+  AGBCC_REF: da598c1d918402c42c0c0d7128ba14567f3175e9 # pinned pret/agbcc commit
+
 on:
   push:
-    branches: [ master ]
+    branches: [master]
+    paths-ignore: ['tools/**', 'wiki/**', '**.md']
   pull_request:
+    paths-ignore: ['tools/**', 'wiki/**', '**.md']
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    env:
-      GAME_VERSION: EMERALD
-      GAME_REVISION: 0
-      GAME_LANGUAGE: ENGLISH
-      MODERN: 0
-      COMPARE: 1
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@v4
 
-      - name: Checkout syms
-        if: ${{ github.event_name == 'push' }}
-        uses: actions/checkout@master
+      # A ROM built from this exact source (and this workflow) already exists -> skip.
+      - name: Check for an existing build of this source
+        id: rom
+        uses: actions/cache/restore@v4
         with:
-          path: symbols
-          ref: symbols
+          path: ${{ env.GAME_DIR }}/pokeemerald.gba
+          key: rom-${{ hashFiles(format('{0}/**', env.GAME_DIR), format('!{0}/**/*.md', env.GAME_DIR), '.github/workflows/build.yml') }}
+          lookup-only: true
 
-      - name: Checkout agbcc
-        uses: actions/checkout@master
+      - name: Source unchanged, skipping build
+        if: steps.rom.outputs.cache-hit == 'true'
+        run: echo "A ROM for this exact game source was already built and passed. Nothing to do."
+
+      - name: Lint
+        if: steps.rom.outputs.cache-hit != 'true'
+        run: |
+          set -e
+          echo "Checking for merge conflict markers..."
+          if git grep -nE '^(<<<<<<<|>>>>>>>)( |$)' -- "$GAME_DIR"; then
+            echo "::error::Merge conflict markers found"; exit 1
+          fi
+          echo "Checking JSON files parse..."
+          git ls-files -z "$GAME_DIR/*.json" | xargs -0 python3 -c '
+          import json, sys
+          bad = 0
+          for f in sys.argv[1:]:
+              try:
+                  json.load(open(f, encoding="utf-8"))
+              except Exception as e:
+                  bad += 1
+                  print(f"::error file={f}::{e}")
+          sys.exit(1 if bad else 0)'
+
+      - name: Install packages
+        if: steps.rom.outputs.cache-hit != 'true'
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y -q binutils-arm-none-eabi libpng-dev
+
+      - name: Cache agbcc
+        if: steps.rom.outputs.cache-hit != 'true'
+        id: agbcc
+        uses: actions/cache@v4
         with:
-          path: agbcc
-          repository: pret/agbcc
+          path: ${{ env.GAME_DIR }}/tools/agbcc
+          key: agbcc-${{ env.AGBCC_REF }}-ubuntu-24.04
 
-      - name: Install binutils
+      - name: Build agbcc
+        if: steps.rom.outputs.cache-hit != 'true' && steps.agbcc.outputs.cache-hit != 'true'
         run: |
-          sudo apt update
-          sudo apt install gcc-arm-none-eabi binutils-arm-none-eabi libpng-dev
-        # build-essential and git are already installed
-        # gcc-arm-none-eabi is only needed for the modern build
-        # as an alternative to dkP
-
-      - name: Install agbcc
-        run: |
+          git clone https://github.com/pret/agbcc "$RUNNER_TEMP/agbcc"
+          cd "$RUNNER_TEMP/agbcc"
+          git checkout "$AGBCC_REF"
           ./build.sh
-          ./install.sh ../game
-        working-directory: agbcc
+          ./install.sh "$GITHUB_WORKSPACE/$GAME_DIR"
 
-      - name: Compare
-        run: make -j${nproc} all syms
-        working-directory: game
+      - name: Build ROM
+        if: steps.rom.outputs.cache-hit != 'true'
+        working-directory: ${{ env.GAME_DIR }}
+        run: make -j"$(nproc)"
 
-      - name: Modern
-        env:
-          MODERN: 1
-          COMPARE: 0
-        run: make -j${nproc} all
-        working-directory: game
-
-      - name: Move symfiles
-        if: ${{ github.event_name == 'push' }}
+      - name: Test ROM
+        if: steps.rom.outputs.cache-hit != 'true'
+        working-directory: ${{ env.GAME_DIR }}
         run: |
-          cp -v game/*.sym symbols/
-          echo "SYMBOLS_COMMIT_MSG=$( git log --format=%s ${GITHUB_SHA} )" >> $GITHUB_ENV
+          python3 - pokeemerald.gba <<'EOF'
+          import sys
+          rom = open(sys.argv[1], "rb").read()
+          errors = []
+          if not 0x200 <= len(rom) <= 32 * 1024 * 1024:
+              errors.append(f"bad ROM size {len(rom)} bytes (max 32 MiB)")
+          # Nintendo logo bitmap the BIOS checks at boot (first and last bytes are enough).
+          if rom[0x04:0x08] != bytes.fromhex("24ffae51") or rom[0x9C:0xA0] != bytes.fromhex("21d4f807"):
+              errors.append("Nintendo logo in header is wrong")
+          if rom[0xB2] != 0x96:
+              errors.append("fixed header byte 0xB2 is not 0x96")
+          if rom[0xBD] != (-(sum(rom[0xA0:0xBD]) + 0x19)) & 0xFF:
+              errors.append("header complement checksum is wrong")
+          if rom[0xAC:0xB0] != b"BPEE":
+              errors.append(f"game code is {rom[0xAC:0xB0]!r}, expected BPEE")
+          for e in errors:
+              print(f"::error::{e}")
+          print(f"ROM {len(rom)} bytes, title {rom[0xA0:0xAC].rstrip(bytes(1)).decode(errors='replace')!r}")
+          sys.exit(1 if errors else 0)
+          EOF
 
-      - name: Update symfiles
-        if: ${{ github.event_name == 'push' }}
-        uses: EndBug/add-and-commit@v7
+      - name: Upload ROM
+        if: steps.rom.outputs.cache-hit != 'true'
+        uses: actions/upload-artifact@v4
         with:
-          branch: symbols
-          cwd: "./symbols"
-          add: "*.sym"
-          message: ${{ env.SYMBOLS_COMMIT_MSG }}
+          name: rom-${{ github.sha }}
+          path: ${{ env.GAME_DIR }}/pokeemerald.gba
+          retention-days: 14
+
+      - name: Remember this source as built
+        if: steps.rom.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: ${{ env.GAME_DIR }}/pokeemerald.gba
+          key: ${{ steps.rom.outputs.cache-primary-key }}
