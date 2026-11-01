@@ -2,7 +2,7 @@
   "init": "refs/grumpig_prep.png",
   "init_source": "https://static.wikia.nocookie.net/starwars/images/b/b3/PufferPig-TSWB.png/revision/latest?cb=20211225064328",
   "flip": false,
-  "denoise": 0.5,
+  "denoise": 0.45,
   "desc": "Bulky grown puffer pig with a long trunk snout horn nubs a spiked back and glowing gem studs",
   "colour": "slate blue grey and tan",
   "ref_note": "Puffer pig render (The Star Wars Book); alpha, whole body three-quarter toward the left; grown stage"
