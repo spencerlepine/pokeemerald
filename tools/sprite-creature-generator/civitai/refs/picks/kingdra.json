@@ -2,8 +2,8 @@
   "init": "refs/kingdra_prep.png",
   "init_source": "https://static.wikia.nocookie.net/starwars/images/6/68/KamoradonConceptArt-EpisodeGuide.jpg/revision/latest?cb=20241202174130#crop=0.05,0.0,0.82,0.3",
   "flip": false,
-  "denoise": 0.55,
-  "desc": "regal long sea dragon swimming in side view, crested head with fanged jaws, broad flipper fins, dark shell on back, whole body",
+  "denoise": 0.45,
+  "desc": "long sea dragon swimming in side view, crested head with fanged jaws, flipper fins, dark shell on back, whole body",
   "colour": "teal blue and grey",
-  "ref_note": "Kamoradon concept art (Episode Guide): side view top figure, faces left, whole body on plain grey"
+  "ref_note": "Kamoradon concept art (Episode Guide): side view top figure, faces left, whole body on plain grey; denoise 0.45 for front/back colour match"
 }
