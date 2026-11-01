@@ -182,14 +182,14 @@ class Spec:
 # Player action sheets (32x32 frames in Emerald's own order, which the pic tables index by
 # number): field move 5, surfing 6, watering 6, underwater 4, fishing 12, Acro Bike 27.
 # Frame 0 is named "down" so previews and lint have a stand frame; the rest are f1, f2, ...
-for _n in (4, 5, 6, 12, 27):
-    KITS[f"frames32x32_{_n}"] = {
-        "frame": (32, 32),
+for _sz, _n in [(32, n) for n in (1, 2, 3, 4, 5, 6, 12, 27)] + [(64, 1), (64, 5)]:
+    KITS[f"frames{_sz}x{_sz}_{_n}"] = {
+        "frame": (_sz, _sz),
         "order": ["down"] + [f"f{i}" for i in range(1, _n)],
         "stand": ["down"],
         "walk": {"down": ["down"] * 4},
-        "size": 512,
-        "oam": "32x32",
+        "size": _sz * _sz // 2,
+        "oam": f"{_sz}x{_sz}",
         "still": True,
     }
 
