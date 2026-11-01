@@ -1,42 +1,42 @@
 name: sw_ewok
-description: 'NEW WALKER (net:walker-ewok): Ewok scout: brown multi-tone fur, ochre leather hood with round fur ears poking through, big glinting black eyes, tan muzzle, hide strap and pouch, a small stone-tipped
-  spear (placeholder: Boy 1). Used by the EWOK and SHAMAN trainers.'
+description: 'NEW WALKER (net:walker-ewok): Ewok scout like the film''s Wicket: muted tan-rust leather hood with a bone-bead cord, draping as a short ragged cape to the belly, pale fur face ring, small
+  dark eyes, dark shaggy brown fur, small fur ear tufts, empty hands (placeholder: Boy 1). Used by the EWOK and SHAMAN trainers.'
 kit: person16x32
 replaces: graphics/object_events/pics/people/boy_1.png
 graphics_info: SwEwok
-notes: 'Recast group d2 (redraw of the 16x16 r_rcd.py version, rejected as too squished): 16x32 kit, 19 rows tall, shade mode on Boy 1''s kid body as regions (shirt -> torso fur T, arms/legs -> fur B, shorts
-  and shoes -> lower fur D). Hand-toned head: brown fur face lit on brow and cheeks, tan muzzle with a black nose, big eyes with white glints, ochre hood framing the face with a back drape and a red crown
-  bead, round fur ears through it. Hide strap to a tan hip pouch; spear (dark shaft, red binding, white stone tip). Brown and hornless, unlike grey horn-hooded Chirpa (winona).'
+notes: 'Recast group d2 round 3 (owner: closer to the film, no spear, less cute and bright). 16x32 kit, 19 rows, on Boy 1''s kid body as regions (walk and bob kept), all hand-toned on NPC_2: muted tan-rust
+  leather hood and short ragged cape (skin shade lit, burnt-umber ramp-a dark body, ramp-b dark deep folds), dark cord with a bone and an amber bead, pale beige face ring, heavy brow, 1-px dark eyes, dark
+  muzzle, black nose, mouth line, small dark ear tufts; the body is dark shaggy brown fur with empty swinging arms. Brown-furred and hornless, unlike grey-furred, bone-horned Chirpa (winona).'
 palette: npc_2
 palette_tag: OBJ_EVENT_PAL_TAG_NPC_2
 shade: true
-materials:
-  T: c@
-  B: c
-  D: c
+materials: {}
 legend:
-  k: 15
+  R: 3
+  H: 6
+  o: 7
+  X: 10
+  x: 13
+  C: 4
   W: 14
+  G: 1
+  L: 1
+  b: 2
+  B: 12
+  s: 11
+  e: 15
   n: 15
-  f: 11
-  g: 12
-  d: 13
-  Y: 5
-  O: 6
-  h: 7
-  q: 1
-  M: 2
-  m: 3
-  t: 4
-  U: 2
-  p: 7
-  A: 7
-  y: 6
-  r: 9
+  m: 13
+  u: 12
+  g: 11
+  Z: 13
+  Q: 15
+  P: 12
+  V: 3
+  Y: 11
 accept:
-  skin_tones: Ewok fur is the brown ramp; only the muzzle and pouch use the skin ramp
   hair_rows: a leather hood over fur
-  eye_row: big Ewok eyes inside the fur face
+  eye_row: small Ewok eyes deep in the hood
 frames:
   down: '................
 
@@ -62,43 +62,43 @@ frames:
 
     ................
 
-    ..dd........dd.t
+    ...uu......uu...
 
-    .dfgd.hhhh.dgfdW
+    ...uxRRRRRRxu...
 
-    .dggdhOYYOhdggdW
+    ..xRRRRRRRRRRx..
 
-    ..dhOOYYOrOOhd.r
+    .xRoooRRRRoooRx.
 
-    .hOOOYOOOOOOOOhp
+    .xoCCHWCCCCCCox.
 
-    .hOOhhhhhhhhOOhp
+    .xoobLGbbGLboox.
 
-    .hOhdggggggdhOhp
+    .xRobBBbbBBboRx.
 
-    .hOgWkffffWkgOhp
+    .xXobeBbbBeboXx.
 
-    .hhgkkgffgkkghhp
+    .xXobbsnnsbboXx.
 
-    .hhggfqMMqfgghhp
+    .xXoGbbmmbbGoXx.
 
-    ..hdgMMnnMMgdh.p
+    ..xxoGbbbbGoxx..
 
-    ..BhdgmMMmgdhB.p
+    ..ZxRRoxxoRRxZ..
 
-    .BByATTTTTTTBBBp
+    .ZYxooRRRRooxYZ.
 
-    .BBBByATTTTBBBBp
+    .QYxXooRRooXxYQ.
 
-    ..BBDTTyATTDBB.p
+    ..QxxoxxxoxxVQ..
 
-    ..hOOYOOOOAhh..p
+    ...QPPYPPPYPQ...
 
-    ...DDBBDhUUhD..p
+    ...QYPPPYPPPQ...
 
-    ...DDDDDDttDD..p
+    ...QPPPQQPPPQ...
 
-    ....DDD..DDD....
+    ....QQQ..QQQ....
 
     ................
 
@@ -127,43 +127,43 @@ frames:
 
     ................
 
-    t.dd........dd..
+    ...uu......uu...
 
-    Wdfgd.hhhh.dgfd.
+    ...uxRRRRRRxu...
 
-    WdggdhOYYOhdggd.
+    ..xRRRRRRRRRRx..
 
-    r.dhOOYYOrOOhd..
+    .xRRRRRRRRRRRRx.
 
-    phOOYOOhhOOOOOh.
+    .xoCCCCCCHWCCox.
 
-    phOOOOhOOhOOOOh.
+    .xRRRRRRRRRRRRx.
 
-    phOOOOhOOhOOOOh.
+    .xoooRRRRRRooox.
 
-    phOOOOhOOhOOOOh.
+    .xXooooooooooXx.
 
-    phhOOOhOOhOOOhh.
+    .xXoRRRRRRRRoXx.
 
-    pdhhOOhOOhOOhhd.
+    .xXooooRRooooXx.
 
-    pgdhhhOOOOhhhdg.
+    .xXoooooooooXXx.
 
-    p.dgdhhOOhhdgd..
+    ..xoxooxxooxox..
 
-    pBBBThhhhhAyBBB.
+    .ZVxYxxPYxxPxVZ.
 
-    pBBBBTTTAyTBBBB.
+    .QYVPPYPPPYPVYQ.
 
-    p.BBDTAyTTTDBB..
+    ..QYYPPPYPPPYQ..
 
-    p.hhAOOYOOOOh...
+    ...QPPYPPPYPQ...
 
-    p..DDBBDDBBDD...
+    ...QYPPPYPPPQ...
 
-    p..DDDDDDDDDD...
+    ...QPPPQQPPPQ...
 
-    ....DDD..DDD....
+    ....QQQ..QQQ....
 
     ................
 
@@ -192,43 +192,43 @@ frames:
 
     ................
 
-    ......dd...dd..t
+    .....uu...uu....
 
-    .....dfgd.dfgd.W
+    ....uxRRRRRxu...
 
-    ....hdggdhdggdhW
+    ...xRRRRRRRRRx..
 
-    ...hOOddOYOddOhr
+    ..xRRRRRRRRRRRx.
 
-    ..hOOOOYYOOOrOhp
+    .xWHCCRRRRRRRox.
 
-    ..hOOOOOOhOOOOhp
+    .xbLGxRRRRRRoox.
 
-    .hhhhhOOOhOOOOhp
+    .BBbbxoooooooXx.
 
-    .dggghhOOhOOOOhp
+    .eBbbxRRRRRRoXx.
 
-    .gWkfghOOhOOOOhp
+    nsbbbxooRRooXXx.
 
-    qgkkgghOOhOOOh.p
+    mbGbxoooooooXXx.
 
-    nMMggghOhhOOhh.p
+    .xbbxoRoooooXx..
 
-    .MmgdhhhOOOhh..p
+    ..xRRoxoooox....
 
-    ....TTyABBTT...p
+    ..xoRRRRRoxZ....
 
-    ....TTBByATT...p
+    ..xXooRRoxYZ....
 
-    ...hOYOOOOhD...p
+    ...xxoxxxPPQ....
 
-    .....DDhUUhD...p
+    .....QYPPPYQ....
 
-    .....BBBttD....p
+    .....QPPYPQ.....
 
-    ....DDDDDDD....p
+    ....QPPPPPQ.....
 
-    .....DDDDD......
+    .....QQQQQ......
 
     ................
 
@@ -257,45 +257,45 @@ frames:
 
     ................
 
-    ...............t
+    ................
 
-    .dd........dd..W
+    ..uu......uu....
 
-    dfgd.hhhh.dgfd.W
+    ..uxRRRRRRxu....
 
-    dggdhOYYOhdggd.r
+    .xRRRRRRRRRRx...
 
-    .dhOOYYOrOOhd..p
+    xRoooRRRRoooRx..
 
-    hOOOYOOOOOOOOh.p
+    xoCCHWCCCCCCox..
 
-    hOOhhhhhhhhOOh.p
+    xoobLGbbGLboox..
 
-    hOhdggggggdhOh.p
+    xRobBBbbBBboRx..
 
-    hOgWkffffWkgOh.p
+    xXobeBbbBeboXx..
 
-    hhgkkgffgkkghh.p
+    xXobbsnnsbboXx..
 
-    hhggfqMMqfgghh.p
+    xXoGbbmmbbGoXx..
 
-    .hdgMMnnMMgdh..p
+    .xxoGbbbbGoxx...
 
-    .BhdgmMMmgdhB..p
+    .QxRRoxxoRRxZ...
 
-    ..yATTTTTTTBB..p
+    ..xooRRRRooxZ...
 
-    ...DyATTTTBBBB.p
+    ...xXooRRooXxQ..
 
-    ...DDTyATTBBBB.p
+    ...xxoxxxoxxVQ..
 
-    .hOOYOOOOAhhB..p
+    ...QYPPPYPQQQ...
 
-    ....DDBhUUh....p
+    ....QPPPPQ......
 
-    ....DDDDtt......
+    ....QPPPQ.......
 
-    .....DDD........
+    .....QQQ........
 
     '
   down_b: '................
@@ -324,43 +324,43 @@ frames:
 
     ................
 
-    ...dd........dd.
+    ....uu......uu..
 
-    ..dfgd.hhhh.dgfd
+    ....uxRRRRRRxu..
 
-    ..dggdhOYYOhdggd
+    ...xRRRRRRRRRRx.
 
-    ...dhOOYYOrOOhdW
+    ..xRoooRRRRoooRx
 
-    ..hOOOYOOOOOOOOh
+    ..xoCCHWCCCCCCox
 
-    ..hOOhhhhhhhhOOh
+    ..xoobLGbbGLboox
 
-    ..hOhdggggggdhOh
+    ..xRobBBbbBBboRx
 
-    ..hOgWkffffWkgOh
+    ..xXobeBbbBeboXx
 
-    ..hhgkkgffgkkghh
+    ..xXobbsnnsbboXx
 
-    ..hhggfqMMqfgghh
+    ..xXoGbbmmbbGoXx
 
-    ...hdgMMnnMMgdhp
+    ...xxoGbbbbGoxx.
 
-    ...BhdgmMMmgdhBp
+    ...ZxRRoxxoRRxQ.
 
-    ...ByATTTTTTBB.p
+    ...ZxooRRRRoox..
 
-    ..BBBByATTTTD..p
+    ..QxXooRRooXx...
 
-    ..BBBBTTyATDD..p
+    ..QxxoxxxoxxQ...
 
-    ...hOOYOOOOAhh.p
+    ...QQQPPYPPPQ...
 
-    ......DDBhUUh..p
+    ......QPPPPQ....
 
-    .......DDDtt...p
+    .......QPPPQ....
 
-    ........DDD....p
+    ........QQQ.....
 
     '
   up_a: '................
@@ -387,45 +387,45 @@ frames:
 
     ................
 
-    t...............
+    ................
 
-    W..dd........dd.
+    ....uu......uu..
 
-    W.dfgd.hhhh.dgfd
+    ....uxRRRRRRxu..
 
-    r.dggdhOYYOhdggd
+    ...xRRRRRRRRRRx.
 
-    p..dhOOYYOrOOhd.
+    ..xRRRRRRRRRRRRx
 
-    p.hOOYOOhhOOOOOh
+    ..xoCCCCCCHWCCox
 
-    p.hOOOOhOOhOOOOh
+    ..xRRRRRRRRRRRRx
 
-    p.hOOOOhOOhOOOOh
+    ..xoooRRRRRRooox
 
-    p.hOOOOhOOhOOOOh
+    ..xXooooooooooXx
 
-    p.hhOOOhOOhOOOhh
+    ..xXoRRRRRRRRoXx
 
-    p.dhhOOhOOhOOhhd
+    ..xXooooRRooooXx
 
-    p.gdhhhOOOOhhhdg
+    ..xXoooooooooXXx
 
-    pBBdgdhhOOhhdgd.
+    .QVxoxooxxooxox.
 
-    p.BBTThhhhhAy...
+    ..QVxPxxPPxxVx..
 
-    p..DTTTTTAyBBB..
+    ...QYPPPYPPPYQ..
 
-    p..DDTTAyTBBBB..
+    ...QPPYPPPYPYQ..
 
-    p..hhAOOYOOOOh..
+    ...QYPPPYPQQQ...
 
-    p...DDBBDD......
+    ....QPPPPQ......
 
-    ....DDDDD.......
+    ....QPPPQ.......
 
-    .....DDD........
+    .....QQQ........
 
     '
   up_b: '................
@@ -454,43 +454,43 @@ frames:
 
     ................
 
-    .dd........dd...
+    ..uu......uu....
 
-    dfgd.hhhh.dgfd..
+    ..uxRRRRRRxu....
 
-    dggdhOYYOhdggd..
+    .xRRRRRRRRRRx...
 
-    WdhOOYYOrOOhd...
+    xRRRRRRRRRRRRx..
 
-    hOOYOOhhOOOOOh..
+    xoCCCCCCHWCCox..
 
-    hOOOOhOOhOOOOh..
+    xRRRRRRRRRRRRx..
 
-    hOOOOhOOhOOOOh..
+    xoooRRRRRRooox..
 
-    hOOOOhOOhOOOOh..
+    xXooooooooooXx..
 
-    hhOOOhOOhOOOhh..
+    xXoRRRRRRRRoXx..
 
-    dhhOOhOOhOOhhd..
+    xXooooRRooooXx..
 
-    gdhhhOOOOhhhdg..
+    xXoooooooooXXx..
 
-    pdgdhhOOhhdgdBB.
+    .xoxooxxooxoxVQ.
 
-    p..BhhhhhAyTBB..
+    ..xVxxYPxxYxVQ..
 
-    p.BBBBTAyTTTD...
+    ..QYYPPPYPPPQ...
 
-    p.BBBAyTTTTDD...
+    ..QYPPYPPPYPQ...
 
-    phhAOOYOOOOhD...
+    ...QQQPPYPPPQ...
 
-    p.....DDBBDD....
+    ......QPPPPQ....
 
-    p......DDDDD....
+    .......QPPPQ....
 
-    p.......DDD.....
+    ........QQQ.....
 
     '
   left_a: '................
@@ -517,45 +517,45 @@ frames:
 
     ................
 
-    ...............t
+    ................
 
-    ......dd...dd..W
+    .....uu...uu....
 
-    .....dfgd.dfgd.W
+    ....uxRRRRRxu...
 
-    ....hdggdhdggdhr
+    ...xRRRRRRRRRx..
 
-    ...hOOddOYOddOhp
+    ..xRRRRRRRRRRRx.
 
-    ..hOOOOYYOOOrOhp
+    .xWHCCRRRRRRRox.
 
-    ..hOOOOOOhOOOOhp
+    .xbLGxRRRRRRoox.
 
-    .hhhhhOOOhOOOOhp
+    .BBbbxoooooooXx.
 
-    .dggghhOOhOOOOhp
+    .eBbbxRRRRRRoXx.
 
-    .gWkfghOOhOOOOhp
+    nsbbbxooRRooXXx.
 
-    qgkkgghOOhOOOh.p
+    mbGbxoooooooXXx.
 
-    nMMggghOhhOOhh.p
+    .xbbxoRoooooXx..
 
-    .MmgdhhhOOOhh..p
+    ..xRRoxoooox....
 
-    ....TTyABBTT...p
+    ..xoRRRRRoxZ....
 
-    ....TTTByABT...p
+    ...xXooRRoxQ....
 
-    ...hOYOOOOhDD..p
+    ....xxoxxxYPQ...
 
-    ...DBBDhUUhBD..p
+    ...QYPPPYPPPQ...
 
-    ...DDDBDttBDD..p
+    ...QPPPPQQPPQ...
 
-    ....DDDD..DD....
+    ....QPPQ..QQ....
 
-    .....DD.........
+    .....QQ.........
 
     '
   left_b: '................
@@ -584,42 +584,42 @@ frames:
 
     ................
 
-    ......dd...dd...
+    .....uu...uu....
 
-    .....dfgd.dfgd.t
+    ....uxRRRRRxu...
 
-    ....hdggdhdggdhW
+    ...xRRRRRRRRRx..
 
-    ...hOOddOYOddOhW
+    ..xRRRRRRRRRRRx.
 
-    ..hOOOOYYOOOrOhr
+    .xWHCCRRRRRRRox.
 
-    ..hOOOOOOhOOOOhp
+    .xbLGxRRRRRRoox.
 
-    .hhhhhOOOhOOOOhp
+    .BBbbxoooooooXx.
 
-    .dggghhOOhOOOOhp
+    .eBbbxRRRRRRoXx.
 
-    .gWkfghOOhOOOOhp
+    nsbbbxooRRooXXx.
 
-    qgkkgghOOhOOOh.p
+    mbGbxoooooooXXx.
 
-    nMMggghOhhOOhh.p
+    .xbbxoRoooooXx..
 
-    .MmgdhhhOOOhh..p
+    ..xRRoxoooox....
 
-    ....TTyABBTT...p
+    ..xoRRRRRoxZ....
 
-    ....TBBByATT...p
+    ...xXooRRoxQ....
 
-    ...hOYOOOOhD...p
+    ....xxoxxxYQ....
 
-    ...DBDBhUUhBB..p
+    ...QYPPPYPPPQ...
 
-    ...DDBDDttBBD..p
+    ...QPPPQPPPPQ...
 
-    ....DDD.DDDDD..p
+    ....QQQ.QPPPQ...
 
-    .........DDD...p
+    .........QQQ....
 
     '
