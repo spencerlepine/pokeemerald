@@ -1,6 +1,10 @@
 {
   "flip": false,
-  "desc": "Hulking legendary lava lion standing on four strong legs facing left, thick shaggy mane of grey smoke, single blade horn, glowing orange cracks on its body, long tail, three-quarter view, whole body, simple clean shape",
-  "colour": "dark brown with glowing orange and grey mane",
-  "ref_note": "text only: sabercat on rock is purple and cropped; mustafar beast art cluttered"
+  "desc": "hulking horned volcano cat crouched to pounce, single blade horn, long curling tail, whole body, no rock",
+  "colour": "dark brown and ember orange",
+  "ref_note": "Sabercat (TUR) cutout, crop now keeps the paws; flipped; recoloured brown",
+  "init": "refs/entei_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/d/db/Sabercat-TUR.png/revision/latest?cb=20230123145330#crop=0.08,0,1,0.97",
+  "denoise": 0.5,
+  "negative": "rock, cliff"
 }
