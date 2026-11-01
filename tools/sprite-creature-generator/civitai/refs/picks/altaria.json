@@ -2,7 +2,7 @@
   "init": "refs/altaria_prep.png",
   "init_source": "https://static.wikia.nocookie.net/starwars/images/6/67/Velker-woswfg.jpg/revision/latest/scale-to-width-down/1000?cb=20070124222549#crop=0.28,0,0.91,0.63",
   "flip": false,
-  "denoise": 0.5,
+  "denoise": 0.45,
   "desc": "Graceful velker cloud flyer with one huge sail-like wing fin a sleek ribbed body and a long trailing tail",
   "colour": "pale blue grey and cream",
   "ref_note": "Velker field-guide painting cropped to the upper velker and flipped to face left; tail tip cut by the crop; a yellow glow fragment sits at the left edge",
