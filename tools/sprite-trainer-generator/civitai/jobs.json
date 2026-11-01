@@ -121,7 +121,8 @@
   "negative": "human face, human skin, beard, bald, dwarf, man",
   "theme": "factions",
   "style": "",
-  "strength": 0.5
+  "strength": 0.5,
+  "tolerance": 0
  },
  "bug_catcher": {
   "subject": "Jawa",
@@ -129,7 +130,8 @@
   "negative": "visible face, mouth, skin, hair",
   "theme": "factions",
   "style": "",
-  "pose": "standing, facing left, three-quarter view, full body, small figure centered with empty space around it"
+  "pose": "standing, facing left, three-quarter view, full body, small figure centered with empty space around it",
+  "tolerance": 0
  },
  "bug_maniac": {
   "subject": "Ewok shaman",
@@ -273,7 +275,8 @@
   "negative": "pink, magenta, bright colours, hair, human face, trumpet, clown",
   "theme": "factions",
   "style": "",
-  "strength": 0.55
+  "strength": 0.55,
+  "tolerance": 0
  },
  "hex_maniac": {
   "subject": "Nightsister witch",
@@ -287,7 +290,8 @@
   "theme": "factions",
   "style": "",
   "negative": "human face, human nose, pickaxe, shovel, large tools, captain hat, beard on chin",
-  "strength": 0.5
+  "strength": 0.5,
+  "tolerance": 0
  },
  "interviewer": {
   "subject": "two-headed alien",
@@ -295,7 +299,8 @@
   "negative": "one head, single head, human face, hair, blonde",
   "theme": "factions",
   "style": "",
-  "strength": 0.5
+  "strength": 0.5,
+  "tolerance": 0
  },
  "kindler": {
   "subject": "lava miner",
@@ -491,7 +496,8 @@
   "negative": "hair, jester, hat, horns, anime, bright costume",
   "theme": "factions",
   "style": "",
-  "strength": 0.55
+  "strength": 0.55,
+  "tolerance": 0
  },
  "pokefan_m": {
   "subject": "podrace spectator",
@@ -499,7 +505,8 @@
   "theme": "factions",
   "style": "",
   "negative": "anime, bright colours, cap, cartoon, cheerful mascot",
-  "strength": 0.55
+  "strength": 0.55,
+  "tolerance": 0
  },
  "pokemaniac": {
   "subject": "Rodian hunter",
@@ -563,7 +570,8 @@
   "negative": "human face, hair, nose, hat, eyebrows, pale skin, cowboy",
   "theme": "factions",
   "style": "",
-  "strength": 0.5
+  "strength": 0.5,
+  "tolerance": 0
  },
  "running_triathlete_f": {
   "subject": "female swoop racer on foot",
@@ -655,7 +663,8 @@
   "negative": "human face, human skin, costume, mask, hood, bear, doll, hair",
   "theme": "factions",
   "style": "",
-  "strength": 0.5
+  "strength": 0.5,
+  "tolerance": 0
  },
  "tuber_m": {
   "subject": "young Wookiee",
@@ -663,7 +672,8 @@
   "negative": "human face, human skin, costume, mask, hood, bear, doll, hair",
   "theme": "factions",
   "style": "",
-  "strength": 0.5
+  "strength": 0.5,
+  "tolerance": 0
  },
  "twins": {
   "subject": "Twi'lek twin girls",

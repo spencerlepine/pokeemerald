@@ -543,7 +543,8 @@ def finish(raw: Path, theme: str, fit: str, free: int) -> Path:
     final = out_dir / f"{stem}.png"
     pal = out_dir / f"{stem}.pal"
     cmd = [sys.executable, "-m", "gba_palette", "enforce", str(rgba), str(final), "--bpp", "4",
-           "--theme", theme, "--free", str(free), "--write-pal", str(pal)]
+           "--theme", theme, "--free", str(free), "--write-pal", str(pal),
+           "--tolerance", str(job.get("tolerance", 12))]  # 0 keeps the art's own colours (no pull onto the theme)
     _run(cmd)
     ok = _run([sys.executable, "-m", "gba_palette", "check", str(final), "--theme", theme], check=False)
     Image.open(final).convert("RGBA").resize((256, 256), Image.NEAREST).save(out_dir / f"{stem}_4x.png")
