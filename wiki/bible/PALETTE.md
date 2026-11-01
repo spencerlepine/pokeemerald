@@ -114,6 +114,155 @@ Mid-tones, so dark sprite outlines stay visible.
 | Arena Floor | `#687888` | 104, 120, 136 | backdrop |
 | Arena Pad | `#98A8B0` | 152, 168, 176 | backdrop |
 
+One theme per planet, generated from the approved tile-generator recipes: the colours each recipe gives the shared outdoor tileset (General). Regenerate after a recipe changes.
+
+## Planet: Tatooine: Twin Suns
+
+Ground green -> Tatooine sand; canopies -> dusty scrub olive; roof reds and peaches -> adobe clay; dirt -> warm sand-brown; sand yellows and water kept; cool outline greys kept. Generated from `tools/tile-generator/recipes/tatooine.yaml` (recoloured General banks).
+
+| Color | Hex | RGB | Role |
+|---|---|---|---|
+| Ground | `#D8C088` | 216, 192, 136 | primary |
+| Ground Shade | `#C0A878` | 192, 168, 120 | secondary |
+| Tall Grass | `#B09868` | 176, 152, 104 | neutral |
+| Canopy Light | `#C8C080` | 200, 192, 128 | neutral |
+| Canopy | `#908048` | 144, 128, 72 | tertiary |
+| Canopy Dark | `#585028` | 88, 80, 40 | neutral |
+| Path | `#E0A878` | 224, 168, 120 | neutral |
+| Sand | `#F0C890` | 240, 200, 144 | neutral |
+| Sand Light | `#F8E0B0` | 248, 224, 176 | neutral |
+| Rock | `#987070` | 152, 112, 112 | neutral |
+| Rock Dark | `#604050` | 96, 64, 80 | neutral |
+| Water | `#5088D0` | 80, 136, 208 | accent |
+| Water Light | `#80A8D8` | 128, 168, 216 | accent |
+| Water Deep | `#004888` | 0, 72, 136 | neutral |
+
+## Planet: Hoth: Ice Field
+
+Ground -> packed snow (cold white-blue); canopies -> frosted dark evergreen; dirt/sand -> trampled grey snow; rock -> blue-grey ice rock; roofs keep a warm accent so towns read. Generated from `tools/tile-generator/recipes/hoth.yaml` (recoloured General banks).
+
+| Color | Hex | RGB | Role |
+|---|---|---|---|
+| Ground | `#D8E8F0` | 216, 232, 240 | primary |
+| Ground Shade | `#C0D0D8` | 192, 208, 216 | secondary |
+| Tall Grass | `#B0C0C8` | 176, 192, 200 | neutral |
+| Canopy Light | `#78B0B0` | 120, 176, 176 | neutral |
+| Canopy | `#407878` | 64, 120, 120 | tertiary |
+| Canopy Dark | `#204848` | 32, 72, 72 | neutral |
+| Path | `#88A8C0` | 136, 168, 192 | neutral |
+| Sand | `#C0D8E8` | 192, 216, 232 | neutral |
+| Sand Light | `#E0F0F8` | 224, 240, 248 | neutral |
+| Rock | `#987070` | 152, 112, 112 | neutral |
+| Rock Dark | `#604050` | 96, 64, 80 | neutral |
+| Water | `#78A8D0` | 120, 168, 208 | accent |
+| Water Light | `#A0C0E0` | 160, 192, 224 | accent |
+| Water Deep | `#386088` | 56, 96, 136 | neutral |
+
+## Planet: Sullust: Ash and Ember
+
+Ground -> warm charcoal ash; canopies -> scorched dark olive; dirt -> rust-brown cinder; sand -> pale ash drifts; water -> sulphur-teal hot springs. Generated from `tools/tile-generator/recipes/sullust.yaml` (recoloured General banks).
+
+| Color | Hex | RGB | Role |
+|---|---|---|---|
+| Ground | `#786860` | 120, 104, 96 | primary |
+| Ground Shade | `#685850` | 104, 88, 80 | secondary |
+| Tall Grass | `#584840` | 88, 72, 64 | neutral |
+| Canopy Light | `#988060` | 152, 128, 96 | neutral |
+| Canopy | `#604828` | 96, 72, 40 | tertiary |
+| Canopy Dark | `#302008` | 48, 32, 8 | neutral |
+| Path | `#D07068` | 208, 112, 104 | neutral |
+| Sand | `#C8B0A8` | 200, 176, 168 | neutral |
+| Sand Light | `#D8C8C0` | 216, 200, 192 | neutral |
+| Rock | `#987070` | 152, 112, 112 | neutral |
+| Rock Dark | `#604050` | 96, 64, 80 | neutral |
+| Water | `#009898` | 0, 152, 152 | accent |
+| Water Light | `#60B0B0` | 96, 176, 176 | accent |
+| Water Deep | `#005058` | 0, 80, 88 | neutral |
+
+## Planet: Sullust Lava Fields: Magma Flow
+
+Sullust ash fields with lava flows instead of water. Water frames are reused as lava frames (same animation). Generated from `tools/tile-generator/recipes/sullust-lava.yaml` (recoloured General banks).
+
+| Color | Hex | RGB | Role |
+|---|---|---|---|
+| Ground | `#786860` | 120, 104, 96 | primary |
+| Ground Shade | `#685850` | 104, 88, 80 | secondary |
+| Tall Grass | `#584840` | 88, 72, 64 | neutral |
+| Canopy Light | `#988060` | 152, 128, 96 | neutral |
+| Canopy | `#604828` | 96, 72, 40 | tertiary |
+| Canopy Dark | `#302008` | 48, 32, 8 | neutral |
+| Path | `#D07068` | 208, 112, 104 | neutral |
+| Sand | `#C8B0A8` | 200, 176, 168 | neutral |
+| Sand Light | `#D8C8C0` | 216, 200, 192 | neutral |
+| Rock | `#987070` | 152, 112, 112 | neutral |
+| Rock Dark | `#604050` | 96, 64, 80 | neutral |
+| Water | `#E07818` | 224, 120, 24 | accent |
+| Water Light | `#F8A830` | 248, 168, 48 | accent |
+| Water Deep | `#880000` | 136, 0, 0 | neutral |
+
+## Planet: Endor: Forest Moon
+
+Deep cool forest. Ground -> dark moss; canopies -> deep blue-green; dirt -> rich redwood-brown loam; wood (fortree huts) -> redwood bark; water -> dark forest stream. Generated from `tools/tile-generator/recipes/endor.yaml` (recoloured General banks).
+
+| Color | Hex | RGB | Role |
+|---|---|---|---|
+| Ground | `#709868` | 112, 152, 104 | primary |
+| Ground Shade | `#588058` | 88, 128, 88 | secondary |
+| Tall Grass | `#487048` | 72, 112, 72 | neutral |
+| Canopy Light | `#50A868` | 80, 168, 104 | neutral |
+| Canopy | `#006838` | 0, 104, 56 | tertiary |
+| Canopy Dark | `#003810` | 0, 56, 16 | neutral |
+| Path | `#C07058` | 192, 112, 88 | neutral |
+| Sand | `#D89878` | 216, 152, 120 | neutral |
+| Sand Light | `#F0B090` | 240, 176, 144 | neutral |
+| Rock | `#987070` | 152, 112, 112 | neutral |
+| Rock Dark | `#604050` | 96, 64, 80 | neutral |
+| Water | `#186890` | 24, 104, 144 | accent |
+| Water Light | `#5888A0` | 88, 136, 160 | accent |
+| Water Deep | `#003050` | 0, 48, 80 | neutral |
+
+## Planet: Dagobah: Bog
+
+Murky, low-contrast, grey-green. Ground -> bog moss; canopies -> gnarl-tree olive grey; dirt -> mud; stone -> mossy grey; water -> opaque swamp green. Generated from `tools/tile-generator/recipes/dagobah.yaml` (recoloured General banks).
+
+| Color | Hex | RGB | Role |
+|---|---|---|---|
+| Ground | `#788868` | 120, 136, 104 | primary |
+| Ground Shade | `#687050` | 104, 112, 80 | secondary |
+| Tall Grass | `#586040` | 88, 96, 64 | neutral |
+| Canopy Light | `#909060` | 144, 144, 96 | neutral |
+| Canopy | `#585830` | 88, 88, 48 | tertiary |
+| Canopy Dark | `#283010` | 40, 48, 16 | neutral |
+| Path | `#987858` | 152, 120, 88 | neutral |
+| Sand | `#A89880` | 168, 152, 128 | neutral |
+| Sand Light | `#B8B098` | 184, 176, 152 | neutral |
+| Rock | `#504838` | 80, 72, 56 | neutral |
+| Rock Dark | `#604050` | 96, 64, 80 | neutral |
+| Water | `#386040` | 56, 96, 64 | accent |
+| Water Light | `#607860` | 96, 120, 96 | accent |
+| Water Deep | `#002008` | 0, 32, 8 | neutral |
+
+## Planet: Kamino: Storm Sea
+
+Storm-grey ocean, white-grey platforms. Ground -> wet grey deck; canopies -> grey kelp; water -> dark slate storm sea; wood (log bridges) -> pale durasteel. Generated from `tools/tile-generator/recipes/kamino.yaml` (recoloured General banks).
+
+| Color | Hex | RGB | Role |
+|---|---|---|---|
+| Ground | `#98A8B0` | 152, 168, 176 | primary |
+| Ground Shade | `#889098` | 136, 144, 152 | secondary |
+| Tall Grass | `#788088` | 120, 128, 136 | neutral |
+| Canopy Light | `#70A0A0` | 112, 160, 160 | neutral |
+| Canopy | `#386868` | 56, 104, 104 | tertiary |
+| Canopy Dark | `#183838` | 24, 56, 56 | neutral |
+| Path | `#A8B8C0` | 168, 184, 192 | neutral |
+| Sand | `#D0E0E8` | 208, 224, 232 | neutral |
+| Sand Light | `#E8F8F8` | 232, 248, 248 | neutral |
+| Rock | `#889090` | 136, 144, 144 | neutral |
+| Rock Dark | `#505860` | 80, 88, 96 | neutral |
+| Water | `#306070` | 48, 96, 112 | accent |
+| Water Light | `#607888` | 96, 120, 136 | accent |
+| Water Deep | `#002038` | 0, 32, 56 | neutral |
+
 ## Rules of thumb
 
 - **Creatures pop, chrome recedes.** Menus stay low saturation, so the only saturated things on screen are creatures, HP and the gold cursor.
