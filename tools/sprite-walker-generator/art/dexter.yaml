@@ -3,231 +3,389 @@ description: 'DEXTER JETTSTER: four-armed Besalisk cook in an apron (replaces Br
 kit: person16x32
 replaces: graphics/object_events/pics/people/frontier_brains/brandon.png
 graphics_info: Brandon
-notes: From scratch, stays on NPC_3. Hide uses ramp A (grey-lavender) with 7 as its outline; the second pair of arms is folded over the apron.
+notes: 'D13: fat_man''s body as regions (shirt -> apron, skin -> olive hide, trousers -> blue), new crested head with a wide mouth and wattle, second pair of arms raised at the shoulders. Moves to NPC_1
+  for the olive ramp.'
 palette: npc_3
 palette_tag: OBJ_EVENT_PAL_TAG_NPC_3
+shade: true
+materials:
+  h: skin-a
+  U: a
+  r: a
+  j: skin-a
+  w: w/a!
+  b: c!
 legend:
-  .: 0
-  '1': 1
-  '2': 2
-  '3': 3
-  '4': 4
-  '5': 5
-  '6': 6
-  '7': 7
-  '8': 8
-  '9': 9
-  A: 10
-  B: 11
-  C: 12
-  D: 13
-  E: 14
-  F: 15
+  k: 15
+  M: 7
 accept:
-  skin_tones: Besalisk hide uses ramp A (5/6/7), not the human skin ramp
-  eye_row: eyes sit high on a crested, hairless head
-  hair_rows: 'no hair: a short crest, then skull'
-  step_change: the lower arms are folded and the apron hangs straight; the bob, the forearms, the apron hem and the feet move
-  orphans: smooth hide and a plain apron; specks only on the apron and crest
+  height: '22 rows: the crest adds 2 on top of fat_man''s 20'
+  skin_tones: Besalisk hide uses ramp A, not the human skin ramp
+  eye_row: small eyes high on a wide hairless head
+  hair_rows: 'no hair: a short crest'
+  step_change: the folded arms and apron hang still; the bob, hem and feet move
+base_sheet: graphics/object_events/pics/people/fat_man.png
+remap:
+  s: h
+  b: w
+  c: b
+  a: b
 frames:
-  down: '....7CBBBC7.....
+  down:
+    patches:
+    - x: 0
+      y: 9
+      rows: '.......rr.......
 
-    ...7755666577...
+        ......rrrr......
 
-    ..755666666657..
+        .....hhrrhh.....
 
-    .756EF6666FE657.
+        ...hhhhrrhhhh...
 
-    .7566F6666F6657.
+        ..hhhhhhhhhhhh..
 
-    .75666666666657.
+        ..hhhhhhhhhhhh..
 
-    ..756777777657..
+        .hhkhhhhhhhhkhh.
 
-    ..775666666577..
+        .hhkhhhhhhhhkhh.
 
-    ...77666666677..
+        .hhhMMMMMMMMhhh.
 
-    .7756EEEEEE6577.
+        .hhjjjjjjjjjjhh.
 
-    75667EEEEE676657
+        ..hhjjjjjjjjhh..
 
-    75667E6EEEE76657
+        ...hhhhhhhhhh...'
+    - &id001
+      x: 0
+      y: 19
+      rows: 'U.
 
-    75667EEEEEE76657
+        UU
 
-    7566755555576657
+        UU
 
-    .77667555576677.
+        .U'
+    - &id002
+      x: 14
+      y: 19
+      rows: '.U
 
-    ..77EEEE6EEE77..
+        UU
 
-    ..7DCCCDDCCCD7..
+        UU
 
-    ...DCCD..DCCD...
-
-    ...DDDD..DDDD...
-
-    ................
-
-    '
-  up: '.....7CBBC7.....
-
-    ...7755666577...
-
-    ..755666666657..
-
-    .75666666666657.
-
-    .75666666666657.
-
-    .75666666666657.
-
-    ..756666666657..
-
-    ..775666666577..
-
-    ...77666666677..
-
-    .775666EE666577.
-
-    7566766666676657
-
-    7566766EE6676657
-
-    7566766666676657
-
-    7566766666676657
-
-    .77666666666677.
-
-    ..777777777777..
-
-    ..7DCCCDDCCCD7..
-
-    ...DCCD..DCCD...
-
-    ...DDDD..DDDD...
-
-    ................
-
-    '
-  left: '......7CBC7.....
-
-    ....775566677...
-
-    ...75566666657..
-
-    ..7F5666666657..
-
-    ..7F6666666657..
-
-    ..766666666657..
-
-    ..77766666657...
-
-    ...7766666667...
-
-    ....77666667....
-
-    ...75EEE66657...
-
-    ..756EEEE66657..
-
-    ..756EEEE66657..
-
-    ..756EEEE66657..
-
-    ..755555666657..
-
-    ...7755566657...
-
-    ...77EEEE6677...
-
-    ...7DCCCCCCD7...
-
-    ....DCCDDCCD....
-
-    ....DDDD.DDDD...
-
-    ................
-
-    '
+        U.'
   down_a:
-    base: down
-    shift: 1
-    patch_y: 26
-    rows: '7567555557666657
+    patches:
+    - x: 0
+      y: 10
+      rows: '.......rr.......
 
-      .77675555766677.
+        ......rrrr......
 
-      ..77EEEE6EEE77..
+        .....hhrrhh.....
 
-      ..7DCCCDDCCCD7..
+        ...hhhhrrhhhh...
 
-      ...DCCD..DDDD...
+        ..hhhhhhhhhhhh..
 
-      ...DDDD.........
+        ..hhhhhhhhhhhh..
 
-      '
+        .hhkhhhhhhhhkhh.
+
+        .hhkhhhhhhhhkhh.
+
+        .hhhMMMMMMMMhhh.
+
+        .hhjjjjjjjjjjhh.
+
+        ..hhjjjjjjjjhh..
+
+        ...hhhhhhhhhh...'
+    - x: 0
+      y: 20
+      rows: 'U.
+
+        UU
+
+        UU
+
+        .U'
+    - x: 14
+      y: 20
+      rows: '.U
+
+        UU
+
+        UU
+
+        U.'
   down_b:
-    base: down
-    shift: 1
-    patch_y: 26
-    rows: '7566675555576657
+    patches:
+    - x: 0
+      y: 10
+      rows: '.......rr.......
 
-      .77666755557677.
+        ......rrrr......
 
-      ..77EEEE6EEE77..
+        .....hhrrhh.....
 
-      ..7DCCCDDCCCD7..
+        ...hhhhrrhhhh...
 
-      ...DDDD..DCCD...
+        ..hhhhhhhhhhhh..
 
-      .........DDDD...
+        ..hhhhhhhhhhhh..
 
-      '
+        .hhkhhhhhhhhkhh.
+
+        .hhkhhhhhhhhkhh.
+
+        .hhhMMMMMMMMhhh.
+
+        .hhjjjjjjjjjjhh.
+
+        ..hhjjjjjjjjhh..
+
+        ...hhhhhhhhhh...'
+    - x: 0
+      y: 20
+      rows: 'U.
+
+        UU
+
+        UU
+
+        .U'
+    - x: 14
+      y: 20
+      rows: '.U
+
+        UU
+
+        UU
+
+        U.'
+  up:
+    patches:
+    - x: 0
+      y: 9
+      rows: '.......rr.......
+
+        ......rrrr......
+
+        .....hhrrhh.....
+
+        ...hhhhrrhhhh...
+
+        ..hhhhhrrhhhhh..
+
+        ..hhhhhhhhhhhh..
+
+        .hhhhhhhhhhhhhh.
+
+        .hhhhhhhhhhhhhh.
+
+        .hhhhhhhhhhhhhh.
+
+        .hhhhhhhhhhhhhh.
+
+        ..hhhhhhhhhhhh..
+
+        ...hhhhhhhhhh...'
+    - *id001
+    - *id002
   up_a:
-    base: up
-    shift: 1
-    patch_y: 29
-    rows: '..7DCCCDDCCCD7..
+    patches:
+    - x: 0
+      y: 10
+      rows: '.......rr.......
 
-      ...DCCD..DDDD...
+        ......rrrr......
 
-      ...DDDD.........
+        .....hhrrhh.....
 
-      '
+        ...hhhhrrhhhh...
+
+        ..hhhhhrrhhhhh..
+
+        ..hhhhhhhhhhhh..
+
+        .hhhhhhhhhhhhhh.
+
+        .hhhhhhhhhhhhhh.
+
+        .hhhhhhhhhhhhhh.
+
+        .hhhhhhhhhhhhhh.
+
+        ..hhhhhhhhhhhh..
+
+        ...hhhhhhhhhh...'
+    - x: 0
+      y: 20
+      rows: 'U.
+
+        UU
+
+        UU
+
+        .U'
+    - x: 14
+      y: 20
+      rows: '.U
+
+        UU
+
+        UU
+
+        U.'
   up_b:
-    base: up
-    shift: 1
-    patch_y: 29
-    rows: '..7DCCCDDCCCD7..
+    patches:
+    - x: 0
+      y: 10
+      rows: '.......rr.......
 
-      ...DDDD..DCCD...
+        ......rrrr......
 
-      .........DDDD...
+        .....hhrrhh.....
 
-      '
+        ...hhhhrrhhhh...
+
+        ..hhhhhrrhhhhh..
+
+        ..hhhhhhhhhhhh..
+
+        .hhhhhhhhhhhhhh.
+
+        .hhhhhhhhhhhhhh.
+
+        .hhhhhhhhhhhhhh.
+
+        .hhhhhhhhhhhhhh.
+
+        ..hhhhhhhhhhhh..
+
+        ...hhhhhhhhhh...'
+    - x: 0
+      y: 20
+      rows: 'U.
+
+        UU
+
+        UU
+
+        .U'
+    - x: 14
+      y: 20
+      rows: '.U
+
+        UU
+
+        UU
+
+        U.'
+  left:
+    patches:
+    - x: 0
+      y: 9
+      rows: '.......rr.......
+
+        ......rrrr......
+
+        .....hhhrrh.....
+
+        ...hhhhhhrrhh...
+
+        ..hhhhhhhhhrhh..
+
+        ..hhhhhhhhhhhh..
+
+        ..hkhhhhhhhhhhh.
+
+        ..hkhhhhhhhhhhh.
+
+        .MMMMMMMhhhhhhh.
+
+        .jjjjjjjhhhhhhh.
+
+        ..jjjjjjhhhhhh..
+
+        ...hhhhhhhhhh...'
+    - x: 1
+      y: 19
+      rows: 'U.
+
+        UU
+
+        .U'
   left_a:
-    base: left
-    shift: 1
-    patch_y: 29
-    rows: '...7DCCCCCCD7...
+    patches:
+    - x: 0
+      y: 10
+      rows: '.......rr.......
 
-      ...DCCD...DCCD..
+        ......rrrr......
 
-      ...DDDD.........
+        .....hhhrrh.....
 
-      '
+        ...hhhhhhrrhh...
+
+        ..hhhhhhhhhrhh..
+
+        ..hhhhhhhhhhhh..
+
+        ..hkhhhhhhhhhhh.
+
+        ..hkhhhhhhhhhhh.
+
+        .MMMMMMMhhhhhhh.
+
+        .jjjjjjjhhhhhhh.
+
+        ..jjjjjjhhhhhh..
+
+        ...hhhhhhhhhh...'
+    - x: 1
+      y: 20
+      rows: 'U.
+
+        UU
+
+        .U'
   left_b:
-    base: left
-    shift: 1
-    patch_y: 29
-    rows: '...7DCCCCCCD7...
+    patches:
+    - x: 0
+      y: 10
+      rows: '.......rr.......
 
-      .....DCCDCCD....
+        ......rrrr......
 
-      ........DDDD....
+        .....hhhrrh.....
 
-      '
+        ...hhhhhhrrhh...
+
+        ..hhhhhhhhhrhh..
+
+        ..hhhhhhhhhhhh..
+
+        ..hkhhhhhhhhhhh.
+
+        ..hkhhhhhhhhhhh.
+
+        .MMMMMMMhhhhhhh.
+
+        .jjjjjjjhhhhhhh.
+
+        ..jjjjjjhhhhhh..
+
+        ...hhhhhhhhhh...'
+    - x: 1
+      y: 20
+      rows: 'U.
+
+        UU
+
+        .U'

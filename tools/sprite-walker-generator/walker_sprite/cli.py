@@ -215,6 +215,38 @@ def cmd_parts(a) -> int:
     return 0
 
 
+def cmd_shader(a) -> int:
+    """Learn the form-shading table from the vanilla walkers and write a visual self-check."""
+    from . import shade as shade_mod
+    em = emerald_dir()
+    sheets = {}
+    for f in sorted((em / "graphics/object_events/pics/people").rglob("*.png")):
+        try:
+            frames, cols = sheet.read_frames(f)
+        except ValueError:
+            continue
+        if len(frames) == 9:
+            sheets[str(f.relative_to(em))] = frames
+    res = shade_mod.train(sheets)
+    shade_mod.TABLE_FILE.write_text(json.dumps(res))
+    print(f"shader: {len(res['table'])} keys from {res['samples']} pixels; vanilla re-shaded from its own regions: {res['accuracy']:.0%} tone accuracy")
+    preview.shader_check(sheets, em, shade_mod, shade_mod.CORPUS / "shader-check.png")
+    print("wrote corpus/shader-check.png (vanilla above, re-shaded from regions below)")
+    return 0
+
+
+def cmd_regions(a) -> int:
+    """Print a vanilla sheet (or any sheet) as material-letter grids, ready to edit into a spec."""
+    from . import shade as shade_mod
+    frames, _ = sheet.read_frames(a.png)
+    order = spec_mod.KITS["person16x32"]["order"]
+    for n, fr in zip(order, frames):
+        print(f"  {n}: |")
+        for row in shade_mod.regions_of(fr):
+            print(f"    {row}")
+    return 0
+
+
 def cmd_review(a) -> int:
     """Batch review sheet against the vanilla sprites: python -m walker_sprite review out.png a.yaml b.yaml ..."""
     specs = [spec_mod.load(p) for p in a.specs]
@@ -237,6 +269,10 @@ def main(argv=None) -> int:
         sp.set_defaults(fn=fn)
     sub.add_parser("corpus").set_defaults(fn=cmd_corpus)
     sub.add_parser("parts").set_defaults(fn=cmd_parts)
+    sub.add_parser("shader").set_defaults(fn=cmd_shader)
+    rg = sub.add_parser("regions")
+    rg.add_argument("png")
+    rg.set_defaults(fn=cmd_regions)
     rp = sub.add_parser("review")
     rp.add_argument("out")
     rp.add_argument("specs", nargs="+")

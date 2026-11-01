@@ -265,3 +265,30 @@ def batch_review(specs: list, out: Path, emerald: Path, z: int = 6) -> None:
     im.paste(strip, (10, y))
     im.paste(strip.resize((strip.width * 3, strip.height * 3), Image.NEAREST), (10 + strip.width + 20, y))
     im.save(out)
+
+
+def shader_check(sheets: dict, emerald: Path, shade_mod, out: Path, z: int = 3, per: int = 10) -> None:
+    """Self-check for the learned shader: each vanilla facing-down frame (top) over the same
+    frame re-shaded from its material regions alone (bottom). If the bottom row reads as
+    Emerald art, the shader has learned the style; where it differs, the artist did something
+    the local rules cannot see."""
+    from .sheet import read_frames
+    names = list(sheets)
+    cols_n = min(per, len(names))
+    rows_n = (len(names) + per - 1) // per
+    cell_w, cell_h = 16 * z + 4, 2 * 32 * z + 12
+    im = Image.new("RGB", (cols_n * cell_w, rows_n * cell_h), (24, 24, 30))
+    table = shade_mod.load_table()
+    for i, name in enumerate(names):
+        frames, cols = read_frames(emerald / name)
+        fr = frames[0]
+        regs = shade_mod.regions_of(fr)
+        hard = {}
+        # keep white and black pixels as they are (they are not shaded)
+        re = shade_mod.shade(regs, table=table)
+        x0, y0 = (i % per) * cell_w, (i // per) * cell_h
+        for j, g in enumerate((fr, re)):
+            pic = Image.new("RGB", (16, 32), BG)
+            pic.paste(rgba_frame(g, cols), (0, 0), rgba_frame(g, cols))
+            im.paste(pic.resize((16 * z, 32 * z), Image.NEAREST), (x0, y0 + j * (32 * z + 4)))
+    im.save(out)

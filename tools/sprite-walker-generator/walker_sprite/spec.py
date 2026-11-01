@@ -115,7 +115,8 @@ class SpecError(ValueError):
     pass
 
 
-def _parse_rows(text: str, legend: dict[str, int], w: int, where: str) -> Grid:
+def _parse_rows(text: str, legend: dict[str, int], w: int, where: str, chars: bool = False) -> Grid:
+    """Grid text -> rows of palette indices (or of the raw characters in shade mode)."""
     lines = [ln.rstrip("\n") for ln in text.strip("\n").split("\n")]
     rows = []
     for i, ln in enumerate(lines):
@@ -123,7 +124,10 @@ def _parse_rows(text: str, legend: dict[str, int], w: int, where: str) -> Grid:
         if len(ln) != w:
             raise SpecError(f"{where}: line {i + 1} is {len(ln)} wide, expected {w}: {ln!r}")
         try:
-            rows.append([legend[ch] for ch in ln])
+            rows.append([(legend[ch] and ch) or (ch if chars else legend[ch]) if False else (ch if chars else legend[ch]) for ch in ln])
+            if chars:
+                for ch in ln:
+                    legend[ch]  # validates the letter
         except KeyError as e:
             raise SpecError(f"{where}: line {i + 1}: character {e} is not in the legend") from None
     return rows
@@ -222,7 +226,26 @@ def load(path: str | Path) -> Spec:
     if kit not in KITS:
         raise SpecError(f"unknown kit {kit!r}; known: {', '.join(KITS)}")
     w, h = KITS[kit]["frame"]
-    legend = {str(k): int(v) for k, v in d["legend"].items()}
+    # Shade mode (D13): grids are material letters; `materials:` maps letters to s/a/b/c/w/k and
+    # `legend:` holds only hard pixels (letter -> index) such as eyes. The learned shader picks
+    # every other tone. Transparent is always '.'.
+    shade_mode = bool(d.get("shade"))
+    materials = {str(k): str(v) for k, v in (d.get("materials") or {}).items()}
+    if shade_mode:
+        from .shade import MAT_TONES
+        legend = {".": 0}
+        legend.update({str(k): int(v) for k, v in (d.get("legend") or {}).items()})
+        for ch, m in materials.items():
+            m = m.rstrip("!")
+            ok = m in MAT_TONES or (m.startswith("w/") and m[2:] in ("s", "a", "b", "c")) \
+                or (m.startswith("skin-") and m[5:] in ("a", "b", "c"))
+            if not ok:
+                raise SpecError(f"materials {ch!r}: {m!r} is not one of {' '.join(MAT_TONES)}, w/<ramp> or skin-<ramp>")
+            legend.setdefault(ch, 0)  # presence only; the shader assigns the index
+        for m in MAT_TONES:
+            legend.setdefault(m, 0)
+    else:
+        legend = {str(k): int(v) for k, v in d["legend"].items()}
     for ch, idx in legend.items():
         if len(ch) != 1 or not 0 <= idx <= 15:
             raise SpecError(f"legend entry {ch!r}: {idx} must be one character -> index 0..15")
@@ -233,6 +256,14 @@ def load(path: str | Path) -> Spec:
     raw = d.get("frames") or {}
     frames: dict[str, Grid] = {}
     composed = compose(d, kit) if d.get("base_sheet") else {}
+    if shade_mode and composed:
+        # the vanilla base becomes material letters (its tones are re-shaded with everything
+        # else); `remap:` renames letters, e.g. {b: w} turns the shirt ramp into a white apron
+        from .shade import regions_of
+        remap = {str(k): str(v) for k, v in (d.get("remap") or {}).items()}
+        for ch in remap.values():
+            legend.setdefault(ch, 0)
+        composed = {n: [[remap.get(c, c) for c in row] for row in regions_of(g)] for n, g in composed.items()}
 
     def resolve(name: str, stack: tuple[str, ...] = ()) -> Grid:
         if name in frames:
@@ -249,13 +280,13 @@ def load(path: str | Path) -> Spec:
         if isinstance(f, dict) and name in composed and not ({"half", "mirror_of", "base"} & set(f)):
             g = [list(r) for r in composed[name]]
         elif isinstance(f, str):
-            g = _bottom_anchor(_parse_rows(f, legend, w, where), w, h, where)
+            g = _bottom_anchor(_parse_rows(f, legend, w, where, shade_mode), w, h, where)
         elif "half" in f:
             lines = [ln.rstrip() for ln in f["half"].strip("\n").split("\n")]
             half = w // 2
             if any(len(ln.strip()) > half for ln in lines):
                 raise SpecError(f"{where}: a `half` line is wider than {half}")
-            left = _parse_rows("\n".join(ln.strip().rjust(half, _transparent(legend)) for ln in lines), legend, half, where)
+            left = _parse_rows("\n".join(ln.strip().rjust(half, _transparent(legend)) for ln in lines), legend, half, where, shade_mode)
             # `mirror_shade` recolours the mirrored (right) half, e.g. "h:m m:d", so light
             # can come from the upper left even though the shape is mirrored.
             shade = {}
@@ -276,7 +307,7 @@ def load(path: str | Path) -> Spec:
                     g[y] = list(base[y - s])
             if "rows" in f:
                 py = int(f["patch_y"])
-                patch = _parse_rows(f["rows"], legend, w, where)
+                patch = _parse_rows(f["rows"], legend, w, where, shade_mode)
                 if py + len(patch) > h:
                     raise SpecError(f"{where}: patch runs past the bottom of the frame")
                 for i, row in enumerate(patch):
@@ -294,12 +325,19 @@ def load(path: str | Path) -> Spec:
                             raise SpecError(f"{where}: patch {i}: character {ch!r} is not in the legend")
                         if not (0 <= px + dx < w and 0 <= py + dy < h):
                             raise SpecError(f"{where}: patch {i} runs outside the frame at ({px + dx}, {py + dy})")
-                        g[py + dy][px + dx] = legend[ch]
+                        g[py + dy][px + dx] = ch if shade_mode else legend[ch]
         frames[name] = g
         return g
 
     for name in KITS[kit]["order"]:
         resolve(name)
+
+    if shade_mode:
+        from .shade import shade
+        hard = {ch: idx for ch, idx in legend.items() if idx}
+        for name, g in frames.items():
+            rows = ["".join("." if (c == 0 or c == ".") else str(c) for c in row) for row in g]
+            frames[name] = shade(rows, materials, hard)
 
     return Spec(
         name=d["name"],

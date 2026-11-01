@@ -1,161 +1,265 @@
-"""Batch 2: three aliens/droids drawn from scratch (no vanilla silhouette fits), one tile high,
-in Emerald's style (STYLE.md). Writes art/<name>.yaml. Run from the tool folder.
-
-Each spec `accept`s the human-face rules it cannot meet, with the reason.
+"""Batch 2 (v3): three non-humans, built the way D13 says: vanilla anatomy as material regions
+(a kid's body for Yoda, the fat man's body for Dexter), new heads and props drawn as regions,
+tones chosen by the learned shader. IG-88 has no vanilla body and is drawn as regions outright.
+Writes art/<name>.yaml. Run from the tool folder: python batches/batch2.py
 """
 import yaml
 
 P = "graphics/object_events/pics/people/"
-LEGEND = {".": 0, "1": 1, "2": 2, "3": 3, "4": 4, "5": 5, "6": 6, "7": 7, "8": 8, "9": 9,
-          "A": 10, "B": 11, "C": 12, "D": 13, "E": 14, "F": 15}
+STEPS = {"down": ("down_a", "down_b"), "up": ("up_a", "up_b"), "left": ("left_a", "left_b")}
 
 
-def spec(name, gi, pal, replaces, desc, note, frames, steps, accept):
-    for k, g in frames.items():
-        for r in g:
-            assert len(r) == 16, (name, k, len(r), r)
-    for k, (b, py, rows) in steps.items():
-        for r in rows:
-            assert len(r) == 16, (name, k, len(r), r)
-        assert py + len(rows) <= 32, (name, k)
+def block(x, y, text):
+    rows = text.strip("\n").split("\n")
+    assert len({len(r) for r in rows}) == 1, rows
+    assert x + len(rows[0]) <= 16, (x, rows[0])
+    return {"x": x, "y": y, "rows": "\n".join(rows)}
+
+
+def spec(name, gi, pal, replaces, desc, note, materials, legend, accept, base=None, remap=None,
+         patches=None, frames=None, steps=None):
     d = {"name": name, "description": desc, "kit": "person16x32", "replaces": P + replaces,
          "graphics_info": gi, "notes": note, "palette": pal, "palette_tag": f"OBJ_EVENT_PAL_TAG_{pal.upper()}",
-         "legend": dict(LEGEND), "accept": accept, "frames": {}}
-    for k in ("down", "up", "left"):
-        d["frames"][k] = "\n".join(frames[k]) + "\n"
-    for k, (b, py, rows) in steps.items():
-        d["frames"][k] = {"base": b, "shift": 1, "patch_y": py, "rows": "\n".join(rows) + "\n"}
+         "shade": True, "materials": materials, "legend": legend, "accept": accept}
+    if base:
+        d["base_sheet"] = P + base
+        if remap:
+            d["remap"] = remap
+    fr = {}
+    for stand, pts in (patches or {}).items():
+        fr[stand] = {"patches": pts}
+        for step in STEPS[stand]:
+            fr[step] = {"patches": [{**p, "y": p["y"] + 1} for p in pts]}
+    for k, g in (frames or {}).items():
+        for r in g:
+            assert len(r) == 16, (name, k, len(r), r)
+        fr[k] = "\n".join(g) + "\n"
+    for k, (b, py, rows) in (steps or {}).items():
+        for r in rows:
+            assert len(r) == 16, (name, k, len(r), r)
+        fr[k] = {"base": b, "shift": 1, "patch_y": py, "rows": "\n".join(rows) + "\n"}
+    d["frames"] = fr
     open(f"art/{name}.yaml", "w").write(yaml.safe_dump(d, sort_keys=False, width=200))
 
 
-def mirror(left8):
-    """A symmetric 16-wide row from its left half."""
-    assert len(left8) == 8, left8
-    return left8 + left8[::-1]
+# ------------------------------------------------------------------ YODA (replaces Juan)
+# Regions only: no vanilla body is 16 rows tall with a 16-wide head. Identity at 1x: green,
+# ears out to the frame edges at eye level, two white wisps, rust robe open on a cream tunic.
+# g = green hide (ramp b on NPC_3), c = robe (ramp c), w = tunic (white, edged in ramp c),
+# W = hard white wisps, k = hard black eyes.
+YODA = {
+    "down": [
+        "................", "................", "................", "................",
+        "................", "................", "................", "................",
+        "................", "................", "................", "................",
+        "................", "................", "................",
+        ".....GGGGGG.....",  # 15 crown (G: skull dome, its own volume)
+        "...WGGGGGGGGW...",  # 16 wisps
+        "..GGGGGGGGGGGG..",  # 17
+        "E.GGGGGGGGGGGG.E",  # 18 ear tips (E: ears)
+        "EEEgggggggggggEE",  # 19 ears, face starts
+        "EEEggkggggkggEEE",  # 20 eyes
+        ".EEggkggggkggEE.",  # 21
+        "..gggggggggggg..",  # 22
+        "...gggggggggg...",  # 23
+        "....gggggggg....",  # 24 chin
+        "...CccwwwwccC...",  # 25 sleeves C, tunic V
+        "..CCccwwwwccCC..",  # 26
+        ".gCCcccwwcccCCg.",  # 27 hands
+        "..cccccccccccc..",  # 28
+        "..cccccccccccc..",  # 29
+        "...gg......gg...",  # 30 toes
+        "................"],
+    "left": [
+        "................", "................", "................", "................",
+        "................", "................", "................", "................",
+        "................", "................", "................", "................",
+        "................", "................", "................",
+        "....GGGGGG......",  # 15
+        "..WGGGGGGGG.....",  # 16
+        "..GGGGGGGGGG....",  # 17
+        ".GGGGGGGGGGG..E.",  # 18 back ear tip
+        ".gggggggggGGEEEE",  # 19 back ear
+        ".ggkggggggggEEE.",  # 20 eye at the front
+        ".ggkggggggggEE..",  # 21
+        "..gggggggggg....",  # 22
+        "...ggggggggg....",  # 23
+        "....gggggggg....",  # 24
+        "...cwwcccccc....",  # 25 tunic at the chest
+        "..ccwwCCcccccc..",  # 26 near sleeve
+        "..ccwcCCccccc...",  # 27
+        "..ccccggcccccc..",  # 28 near hand
+        "..cccccccccccc..",  # 29
+        "....gg...gg.....",  # 30
+        "................"],
+}
+YODA["up"] = [r.replace("k", "g") for r in YODA["down"][:24]] + [
+    "...cccccccccc...",  # 24 hood collar
+    "..CCccccccccCC..",  # 25 sleeves
+    "..CCccccccccCC..",  # 26
+    ".gCCccccccccCCg.",  # 27 hands
+    "..cccccccccccc..",  # 28
+    "..cccccccccccc..",  # 29
+    "...gg......gg...",  # 30
+    "................"]
+spec("yoda", "Juan", "npc_3", "gym_leaders/juan.png",
+     "YODA: small green Jedi Master in a rust robe (replaces Juan).",
+     "D13 regions only: 16 rows tall by design (a small species), ears to the frame edges, wisps, robe open on a cream tunic. Toes and hem move in the step frames.",
+     materials={"g": "skin-b", "G": "b", "E": "b", "c": "c!", "C": "c!", "w": "w/c"}, legend={"k": 15, "W": 14},
+     accept={"height": "Yoda is a small species: 16 rows", "eye_row": "eyes sit high on a short bald head",
+             "hair_rows": "two wisps, no hair mass", "skin_tones": "green hide uses ramp B", "head_w": "16 wide ear to ear",
+             "step_change": "the robe hides the legs; the bob, the hem, the hands and the toes move"},
+     frames=YODA,
+     steps={
+         "down_a": ("down", 27, [".gCCccccccccCCg.", "..cccccccccccc..", "..cccccccccccc..", "...gg..........."]),
+         "down_b": ("down", 27, [".gCCccccccccCCg.", "..cccccccccccc..", "..cccccccccccc..", "...........gg..."]),
+         "up_a": ("up", 27, [".gCCccccccccCCg.", "..cccccccccccc..", "..cccccccccccc..", "...gg..........."]),
+         "up_b": ("up", 27, [".gCCccccccccCCg.", "..cccccccccccc..", "..cccccccccccc..", "...........gg..."]),
+         "left_a": ("left", 27, ["..ccccCCccccc...", "..cccccggccccc..", "..cccccccccccc..", "...gg..........."]),
+         "left_b": ("left", 27, ["..cCCccccccc....", "..cggccccccccc..", "..cccccccccccc..", ".........gg....."]),
+     })
 
+# ------------------------------------------------------------------ IG-88 (replaces Noland)
+# Regions only. Identity at 1x: a tall narrow cylinder head with a dark sensor band and three
+# lights, a thin neck, a boxy chest on a shoulder bar, pipe limbs with dark joints, 23 rows tall.
+# c = chassis (ramp c greys on NPC_4), d = dark steel band/joints (ramp a), p/P = hard pink
+# sensors (8, 9), W = hard white light, e = chest panel (ramp a as its own volume).
+IG = {
+    "down": [
+        "................", "................", "................", "................",
+        "................", "................", "................",
+        ".....cccccc.....",  # 7  dome top
+        "....cccccccc....",  # 8
+        "....cccccccc....",  # 9
+        "....ddpWWpdd....",  # 10 sensor band
+        "....dddddddd....",  # 11
+        "....cccccccc....",  # 12
+        "....ccdccdcc....",  # 13 slits
+        "....ccdccdcc....",  # 14
+        ".....cccccc.....",  # 15
+        "......dddd......",  # 16 neck
+        "......dddd......",  # 17
+        ".cccccccccccccc.",  # 18 shoulder bar
+        ".cc.cccccccc.cc.",  # 19
+        ".dd.cceeeecc.dd.",  # 20 arms / chest panel
+        ".dd.cceeeecc.dd.",  # 21
+        ".cc.cccccccc.cc.",  # 22
+        ".cc..dddddd..cc.",  # 23 waist
+        ".dd...dddd...dd.",  # 24
+        ".....cc..cc.....",  # 25 thighs
+        ".....cc..cc.....",  # 26
+        ".....dd..dd.....",  # 27 knees
+        ".....cc..cc.....",  # 28
+        ".....cc..cc.....",  # 29
+        "....ddd..ddd....",  # 30 feet
+        "................"],
+    "left": [
+        "................", "................", "................", "................",
+        "................", "................", "................",
+        ".....cccccc.....",  # 7
+        "....cccccccc....",  # 8
+        "....cccccccc....",  # 9
+        "....dpWdddd.....",  # 10 band wraps round
+        "....dddddddd....",  # 11
+        "....cccccccc....",  # 12
+        "....cdccdccc....",  # 13
+        "....cdccdccc....",  # 14
+        ".....cccccc.....",  # 15
+        "......dddd......",  # 16
+        "......dddd......",  # 17
+        "....cccccccc....",  # 18 shoulders (narrow from the side)
+        "....cccccccc....",  # 19
+        "...ddcccccc.....",  # 20 near arm in front
+        "...ddcccccc.....",  # 21
+        "...cccccccc.....",  # 22
+        "...cc.dddddd....",  # 23
+        "...dd..dddd.....",  # 24
+        "......cccc......",  # 25
+        "......cccc......",  # 26
+        "......dddd......",  # 27
+        "......cccc......",  # 28
+        "......cccc......",  # 29
+        ".....ddddd......",  # 30
+        "................"],
+}
+IG["up"] = [r.replace("p", "d").replace("W", "d").replace("e", "c") for r in IG["down"]]
+IG["up"][13] = IG["up"][14] = "....cccccccc...."
+spec("ig88", "Noland", "npc_4", "frontier_brains/noland.png",
+     "IG-88: tall assassin droid with a cylindrical sensor head (replaces Noland).",
+     "D13 regions only (no vanilla body is this shape). NPC_4 for the greys; 23 rows tall on purpose. Limbs swing in the step frames.",
+     materials={"c": "c", "d": "a", "e": "a"}, legend={"p": 9, "W": 14},
+     accept={"height": "23 rows: IG-88 towers over people", "head_w": "8 px cylinder head by design", "eye_row": "no eyes; a sensor band",
+             "hair_rows": "no hair; the dome is seen from above", "skin_tones": "a droid has no skin",
+             "orphans": "machined surfaces; the only specks are the sensor lights", "step_change": "thin limbs change few pixels although all four swing"},
+     frames=IG,
+     steps={
+         "down_a": ("down", 19, [".cc.cccccccc.dd.", ".dd.cceeeecc.dd.", ".dd.cceeeecc.cc.", ".cc.cccccccc.cc.", ".cc..dddddd.....", ".....ddddd...dd.",
+                                 ".....cc..cc.....", ".....cc..dd.....", ".....dd..cc.....", ".....cc..cc.....", "....ddd.........", "........ddd....."]),
+         "down_b": ("down", 19, [".dd.cccccccc.cc.", ".dd.cceeeecc.dd.", ".cc.cceeeecc.dd.", ".cc.cccccccc.cc.", "......dddddd.cc.", ".dd..ddddd......",
+                                 ".....cc..cc.....", ".....dd..cc.....", ".....cc..dd.....", ".....cc..cc.....", "........ddd.....", "....ddd........."]),
+         "up_a": ("up", 19, [".cc.cccccccc.dd.", ".dd.cccccccc.dd.", ".dd.cccccccc.cc.", ".cc.cccccccc.cc.", ".cc..dddddd.....", ".....ddddd...dd.",
+                             ".....cc..cc.....", ".....cc..dd.....", ".....dd..cc.....", ".....cc..cc.....", "....ddd.........", "........ddd....."]),
+         "up_b": ("up", 19, [".dd.cccccccc.cc.", ".dd.cccccccc.dd.", ".cc.cccccccc.dd.", ".cc.cccccccc.cc.", "......dddddd.cc.", ".dd..ddddd......",
+                             ".....cc..cc.....", ".....dd..cc.....", ".....cc..dd.....", ".....cc..cc.....", "........ddd.....", "....ddd........."]),
+         "left_a": ("left", 25, ["....cc..cc......", "....cc..cc......", "....dd..dd......", "....cc..cc......", "...ddd..ddd....."]),
+         "left_b": ("left", 25, ["......cccc......", "......cccc......", "......dddd......", "......cccc......", ".....ddddd......"]),
+     })
 
-# ---------------------------------------------------------------- YODA (replaces Juan, 16x32)
-# NPC_3: green ramp 8/9/A for the skin, lavender-grey 5/6/7 for the robe, red-brown B/C/D for the
-# gimer stick. Short (15 rows), wide head, ears out to the frame edge, wide-set eyes.
-yoda = spec(
-    "yoda", "Juan", "npc_3", "gym_leaders/juan.png",
-    "YODA: small green Jedi Master with a gimer stick (replaces Juan).",
-    "From scratch. Juan ships on NPC_4; Yoda moves to NPC_3 for the green ramp. 15 rows tall on purpose.",
-    frames={
-        "down": [
-            mirror("......AA"), mirror("....AA88"), mirror("..AA9888"), mirror(".A989888"),
-            "A9A9F888888F9A9A", ".AA9F888888F9AA.", mirror("...A9988"), mirror("....A999"),
-            mirror("...75566"), mirror("..756667"), mirror("..756667"), "..756679966657..",
-            mirror("..776667"), mirror("..777777"), "....A9A..A9A....", "................"],
-        "up": [
-            mirror("......AA"), "....AA8999AA....", mirror("..AA9999"), mirror(".A989999"),
-            mirror("A9A99999"), mirror(".AA99999"), mirror("...A9999"), mirror("....A999"),
-            mirror("...75666"), mirror("..756666"), mirror("..756666"), mirror("..756666"),
-            mirror("..776666"), mirror("..777777"), "....A9A..A9A....", "................"],
-        "left": [
-            "......AAAA......", "....AA8888AA....", "...A988888899A..", "..A988888899989A",
-            "..A9F8888999A...", "..AAF8888999AA..", "...A9988899A....", "..D.A99999A.....",
-            "..C.75666657....", "..C7566666657...", "..C7566666657...", "..C9966666657...",
-            "..C7766666677...", "..C777777777....", "..D.A9A.A9A.....", "................"],
-    },
-    steps={
-        "down_a": ("down", 28, ["..756699666657..", mirror("..776666"), mirror("..777777"), "....A9A...AA...."]),
-        "down_b": ("down", 28, ["..756666996657..", mirror("..776666"), mirror("..777777"), ".....AA..A9A...."]),
-        "up_a": ("up", 29, [mirror("..776666"), mirror("..777777"), "....A9A...AA...."]),
-        "up_b": ("up", 29, [mirror("..776666"), mirror("..777777"), ".....AA..A9A...."]),
-        "left_a": ("left", 29, ["..C7766666677...", "..C777777777....", ".D.A9A...A9A...."]),
-        "left_b": ("left", 29, ["..C7766666677...", "..C777777777....", "..D..A9AA9A....."]),
-    },
-    accept={"height": "15 rows: Yoda is a small species", "eye_row": "wide-set eyes sit high on a short bald head",
-            "hair_rows": "bald; the skull top is two rows of skin", "skin_tones": "green skin uses ramp B (8/9/A), not the human skin ramp",
-            "head_w": "head is 16 wide ear to ear, 12 without the ears", "step_change": "the robe hides the legs; hands, hem and toes move"},
-)
-
-# ---------------------------------------------------------------- IG-88 (replaces Noland, 16x32)
-# NPC_4: greys B/C/D for the chassis, navy 5/6/7 for the limbs, pink 8/9 for the sensor lights.
-# Tall (22 rows) and thin (6 wide head, 2 wide limbs), cylinder head seen from above.
-ig88 = spec(
-    "ig88", "Noland", "npc_4", "frontier_brains/noland.png",
-    "IG-88: tall assassin droid with a cylindrical head (replaces Noland).",
-    "From scratch. Noland ships on NPC_3; IG-88 moves to NPC_4 for the greys. 22 rows tall, 2 px limbs, on purpose.",
-    frames={
-        "down": [
-            "......DDDD......", ".....DBBBCD.....", ".....DCCCCD.....", ".....D8CC8D.....",
-            ".....DCCCCD.....", ".....D9CC9D.....", ".....DCCCCD.....", ".....DDCCDD.....",
-            "......D77D......", "....DDDCCDDD....", "...DCDDCCDDDCD..", "...D6DDBCCDD6D..",
-            "...D6D.DCCD.D6D.", "...D7D.D9CD.D7D.", "...DCD.DCCD.DCD.", "...DBD.DDDD.DBD.",
-            ".......D77D.....", "......D7DD7D....", "......D6D.D6D...", "......D6D.D6D...",
-            "......D7D.D7D...", ".....DCCD.DCCD..", "................"],
-        "up": [
-            "......DDDD......", ".....DBBBCD.....", ".....DCCCCD.....", ".....DCCCCD.....",
-            ".....DCDDCD.....", ".....DCCCCD.....", ".....DCCCCD.....", ".....DDCCDD.....",
-            "......D77D......", "....DDDCCDDD....", "...DCDDCCDDDCD..", "...D6DDCCCDD6D..",
-            "...D6D.DCCD.D6D.", "...D7D.DCCD.D7D.", "...DCD.DCCD.DCD.", "...DBD.DDDD.DBD.",
-            ".......D77D.....", "......D7DD7D....", "......D6D.D6D...", "......D6D.D6D...",
-            "......D7D.D7D...", ".....DCCD.DCCD..", "................"],
-        "left": [
-            "......DDDD......", ".....DBBBCD.....", ".....DCCCCD.....", ".....D8CCCD.....",
-            ".....DCCCCD.....", ".....D9CCCD.....", ".....DCCCCD.....", ".....DDCCDD.....",
-            "......D77D......", ".....DDCCDD.....", ".....DCCCCD.....", "....D6DBCCD.....",
-            "....D6DCCCD.....", "....D7D9CCD.....", "....DCDCCCD.....", "....DBDDDDD.....",
-            "......D77D......", "......D77D......", "......D66D......", "......D66D......",
-            "......D77D......", ".....DCCCD......", "................"],
-    },
-    steps={
-        "down_a": ("down", 21, ["...D6DDBCCDD6D..", "...D6D.DCCD.DCD.", "...D7D.D9CD.DBD.", "...DCD.DCCD.....", "...DBD.DDDD.....",
-                                ".......D77D.....", "......D7DD7D....", "......D6D.D6D...", "......D6D.D7D...", "......D7D.DCCD..", ".....DCCD......."]),
-        "down_b": ("down", 21, ["...D6DDBCCDD6D..", "...DCD.DCCD.D6D.", "...DBD.D9CD.D7D.", ".......DCCD.DCD.", ".......DDDD.DBD.",
-                                ".......D77D.....", "......D7DD7D....", "......D6D.D6D...", "......D7D.D6D...", "......DCCDD7D...", "..........DCCD.."]),
-        "up_a": ("up", 21, ["...D6DDCCCDD6D..", "...D6D.DCCD.DCD.", "...D7D.DCCD.DBD.", "...DCD.DCCD.....", "...DBD.DDDD.....",
-                            ".......D77D.....", "......D7DD7D....", "......D6D.D6D...", "......D6D.D7D...", "......D7D.DCCD..", ".....DCCD......."]),
-        "up_b": ("up", 21, ["...D6DDCCCDD6D..", "...DCD.DCCD.D6D.", "...DBD.DCCD.D7D.", ".......DCCD.DCD.", ".......DDDD.DBD.",
-                            ".......D77D.....", "......D7DD7D....", "......D6D.D6D...", "......D7D.D6D...", "......DCCDD7D...", "..........DCCD.."]),
-        "left_a": ("left", 28, ["......D66D......", ".....D6DD6D.....", ".....D7D.D7D....", "....DCCD.DCCD..."]),
-        "left_b": ("left", 28, ["......D66D......", "......D66D......", "......D77D......", ".....DCCCD......"]),
-    },
-    accept={"height": "22 rows: IG-88 towers over people", "head_w": "6 px cylinder head by design", "eye_row": "no eyes; pink sensors",
-            "hair_rows": "no hair; the cylinder top is seen from above", "skin_tones": "a droid has no skin",
-            "orphans": "machined surfaces: the only specks are the sensors and the hand highlights",
-            "step_change": "2 px limbs: both arms and both legs swing and the body bobs, but thin limbs change few pixels"},
-)
-
-# ---------------------------------------------------------------- DEXTER JETTSTER (replaces Brandon)
-# NPC_3: lavender-grey 5/6/7 as Besalisk hide, white apron (E), red-brown B/C/D trousers and crest.
-# Bulky: 16 wide, four arms (upper pair at the sides, lower pair folded over the apron), crest.
-dex = spec(
-    "dexter", "Brandon", "npc_3", "frontier_brains/brandon.png",
-    "DEXTER JETTSTER: four-armed Besalisk cook in an apron (replaces Brandon).",
-    "From scratch, stays on NPC_3. Hide uses ramp A (grey-lavender) with 7 as its outline; the second pair of arms is folded over the apron.",
-    frames={
-        "down": [
-            "....7CBBBC7.....", "...7755666577...", "..755666666657..", ".756EF6666FE657.",
-            ".7566F6666F6657.", ".75666666666657.", "..756777777657..", "..775666666577..",
-            "...77666666677..", ".7756EEEEEE6577.", "75667EEEEE676657", "75667E6EEEE76657",
-            "75667EEEEEE76657", "7566755555576657", ".77667555576677.", "..77EEEE6EEE77..",
-            "..7DCCCDDCCCD7..", "...DCCD..DCCD...", "...DDDD..DDDD...", "................"],
-        "up": [
-            ".....7CBBC7.....", "...7755666577...", "..755666666657..", ".75666666666657.",
-            ".75666666666657.", ".75666666666657.", "..756666666657..", "..775666666577..",
-            "...77666666677..", ".775666EE666577.", "7566766666676657", "7566766EE6676657",
-            "7566766666676657", "7566766666676657", ".77666666666677.", "..777777777777..",
-            "..7DCCCDDCCCD7..", "...DCCD..DCCD...", "...DDDD..DDDD...", "................"],
-        "left": [
-            "......7CBC7.....", "....775566677...", "...75566666657..", "..7F5666666657..",
-            "..7F6666666657..", "..766666666657..", "..77766666657...", "...7766666667...",
-            "....77666667....", "...75EEE66657...", "..756EEEE66657..", "..756EEEE66657..",
-            "..756EEEE66657..", "..755555666657..", "...7755566657...", "...77EEEE6677...",
-            "...7DCCCCCCD7...", "....DCCDDCCD....", "....DDDD.DDDD...", "................"],
-    },
-    steps={
-        "down_a": ("down", 26, ["7567555557666657", ".77675555766677.", "..77EEEE6EEE77..", "..7DCCCDDCCCD7..", "...DCCD..DDDD...", "...DDDD........."]),
-        "down_b": ("down", 26, ["7566675555576657", ".77666755557677.", "..77EEEE6EEE77..", "..7DCCCDDCCCD7..", "...DDDD..DCCD...", ".........DDDD..."]),
-        "up_a": ("up", 29, ["..7DCCCDDCCCD7..", "...DCCD..DDDD...", "...DDDD........."]),
-        "up_b": ("up", 29, ["..7DCCCDDCCCD7..", "...DDDD..DCCD...", ".........DDDD..."]),
-        "left_a": ("left", 29, ["...7DCCCCCCD7...", "...DCCD...DCCD..", "...DDDD........."]),
-        "left_b": ("left", 29, ["...7DCCCCCCD7...", ".....DCCDCCD....", "........DDDD...."]),
-    },
-    accept={"skin_tones": "Besalisk hide uses ramp A (5/6/7), not the human skin ramp", "eye_row": "eyes sit high on a crested, hairless head",
-            "hair_rows": "no hair: a short crest, then skull", "step_change": "the lower arms are folded and the apron hangs straight; the bob, the forearms, the apron hem and the feet move",
-            "orphans": "smooth hide and a plain apron; specks only on the apron and crest"},
-)
+# ------------------------------------------------------------------ DEXTER JETTSTER (replaces Brandon)
+# Body: fat_man's regions (shirt -> apron w, skin -> hide, trousers -> blue b). Head drawn new:
+# a wide bald dome with a crest ridge (r: ramp c as its own thin volume -> reads dark),
+# wide-set small eyes, a very wide mouth (m) with a wattle (j) under it. A second pair of arms
+# (H) folded across the apron. NPC_1: ramp c is olive hide, ramp b blue, white apron.
+DEX_HEAD_D = block(0, 9, """
+.......rr.......
+......rrrr......
+.....hhrrhh.....
+...hhhhrrhhhh...
+..hhhhhhhhhhhh..
+..hhhhhhhhhhhh..
+.hhkhhhhhhhhkhh.
+.hhkhhhhhhhhkhh.
+.hhhMMMMMMMMhhh.
+.hhjjjjjjjjjjhh.
+..hhjjjjjjjjhh..
+...hhhhhhhhhh...""")
+DEX_HEAD_U = block(0, 9, """
+.......rr.......
+......rrrr......
+.....hhrrhh.....
+...hhhhrrhhhh...
+..hhhhhrrhhhhh..
+..hhhhhhhhhhhh..
+.hhhhhhhhhhhhhh.
+.hhhhhhhhhhhhhh.
+.hhhhhhhhhhhhhh.
+.hhhhhhhhhhhhhh.
+..hhhhhhhhhhhh..
+...hhhhhhhhhh...""")
+DEX_HEAD_L = block(0, 9, """
+.......rr.......
+......rrrr......
+.....hhhrrh.....
+...hhhhhhrrhh...
+..hhhhhhhhhrhh..
+..hhhhhhhhhhhh..
+..hkhhhhhhhhhhh.
+..hkhhhhhhhhhhh.
+.MMMMMMMhhhhhhh.
+.jjjjjjjhhhhhhh.
+..jjjjjjhhhhhh..
+...hhhhhhhhhh...""")
+# second pair of arms: raised and spread, so the silhouette has four limbs
+UP_ARMS_D = [block(0, 19, "U.\nUU\nUU\n.U".replace("\\n", "\n")), block(14, 19, ".U\nUU\nUU\nU.".replace("\\n", "\n"))]
+UP_ARMS_L = [block(1, 19, "U.\nUU\n.U".replace("\\n", "\n"))]
+spec("dexter", "Brandon", "npc_3", "frontier_brains/brandon.png",
+     "DEXTER JETTSTER: four-armed Besalisk cook in an apron (replaces Brandon).",
+     "D13: fat_man's body as regions (shirt -> apron, skin -> olive hide, trousers -> blue), new crested head with a wide mouth and wattle, second pair of arms raised at the shoulders. Moves to NPC_1 for the olive ramp.",
+     materials={"h": "skin-a", "U": "a", "r": "a", "j": "skin-a", "w": "w/a!", "b": "c!"}, legend={"k": 15, "M": 7},
+     accept={"height": "22 rows: the crest adds 2 on top of fat_man's 20", "skin_tones": "Besalisk hide uses ramp A, not the human skin ramp", "eye_row": "small eyes high on a wide hairless head",
+             "hair_rows": "no hair: a short crest", "step_change": "the folded arms and apron hang still; the bob, hem and feet move"},
+     base="fat_man.png", remap={"s": "h", "b": "w", "c": "b", "a": "b"},
+     patches={"down": [DEX_HEAD_D, *UP_ARMS_D],
+              "up": [DEX_HEAD_U, *UP_ARMS_D],
+              "left": [DEX_HEAD_L, *UP_ARMS_L]})
 print("ok")

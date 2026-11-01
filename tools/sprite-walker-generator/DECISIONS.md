@@ -180,3 +180,53 @@ hardest. `corpus/parts.png` is the catalogue to pick from.
 Approved before the style rules existed; fails outline, skin and perspective rules (score 30).
 Suggest redrawing him under D9/D10 (compose from a vanilla body, keep the approved helmet
 silhouette, recolour outlines to the navy ramp) and re-approving.
+
+## D12. `accept:` — a rule may be waived, with a printed reason (2026-11-01)
+
+A spec can list style rules it knowingly breaks (`accept: {height: "Yoda is a small species"}`).
+The build still measures them and prints the reason next to the score, so a reviewer sees what
+was waived and why instead of a silent pass.
+
+## D13. Form shading is learned from Emerald, not hand-painted (2026-11-01)
+
+Batch 2 v1 was rejected ("elementary... don't follow the art style... can't tell who they are").
+Flat fills with a dark outline are what made them elementary: every vanilla walker shades each
+volume (light on top, mid, dark underneath, outline in the ramp's darkest tone) and the first
+drafts did none of that. Hand-placing tones for 9 frames x 15 colours is where the LLM kept
+failing, so the tool now does it.
+
+`walker_sprite/shade.py` learns a tone table from all 90 vanilla people sheets: for every opaque
+pixel it records a local key (its material's skin-ness, the distance to its region's edge in
+four directions capped at 3, and what lies beyond each edge: transparency, another material,
+or black) and the tone the artist used. Re-shading vanilla sheets from their regions alone
+gives the right tone 73% of the time (always-mid: 30%; held-out sheets: 64%), and
+`corpus/shader-check.png` shows the re-shaded sheets are hard to tell from the originals.
+
+A spec in shade mode (`shade: true`) draws *regions*, not colours: letters mapped by
+`materials:` to a ramp (`s a b c`), white or black; distinct letters are distinct volumes even
+on the same ramp (a sleeve against a torso); `legend:` holds only hard pixels (eyes, lights).
+A vanilla body can be used as regions (`base_sheet` + `remap`) and new heads or props patched
+in. `python -m walker_sprite shader` rebuilds the table; `regions <png>` prints any sheet as
+letters to start from.
+
+## D14. What the table cannot do, and the knobs added for it (2026-11-01)
+
+Tried and measured on the same vanilla set:
+
+- A purely rule-based volume shader (outline ring + top 40% light + bottom row dark) scores
+  51% against vanilla and over-outlines every volume boundary. Rejected as the default, kept
+  as an opt-in: a material written `c!` is shaded by the rules. Used for flat garments the
+  corpus has no local match for (Yoda's robe, Dexter's apron and trousers).
+- A hybrid (table outlines, positional interior) scores 60-63%. Rejected.
+- Minimum-support back-off in the table changes nothing on held-out sheets. Rejected.
+
+Knobs that did help the alien drafts: `skin-b` shades a ramp with the face statistics
+(bald green or grey heads were turning to mud under the hair/cloth statistics; the four face
+tones collapse onto three with shade folded into mid); `w/c` gives white an outline in ramp c's
+dark tone (vanilla white shirts are edged, a white region on its own is not); a despeckle pass
+removes single odd pixels the local keys leave next to eyes and corners.
+
+Where batch 2 v3 still falls short of vanilla: identity at 16 px rests on two or three
+silhouette cues per character, and a deep-cut character (Dexter) has none that survive. Big
+single-material heads are smooth now but featureless; vanilla heads get their structure from a
+hair/face split, which Yoda's dome/face volumes imitate. The owner judges the rest.

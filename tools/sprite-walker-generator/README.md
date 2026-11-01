@@ -105,6 +105,24 @@ passes before a human sees anything**.
 6. On approval: copy the PNG to `../../wiki/art/<game path>`, add the row to
    `../../wiki/mapping/art_ready.csv`, run `python3 ../../wiki/tools/mark_art_ready.py`.
 
+### Shade mode (D13): draw regions, let the tool pick the tones
+
+```yaml
+shade: true
+materials: {g: skin-b, G: b, c: "c!", w: w/c}   # letter -> ramp; distinct letters = distinct volumes
+legend: {k: 15, W: 14}                         # hard pixels only (eyes, lights, wisps)
+base_sheet: graphics/object_events/pics/people/fat_man.png   # optional: a vanilla body as regions
+remap: {s: h, b: w, c: b}                      # rename the vanilla body's letters
+frames: ...                                    # rows of letters; patches work the same way
+```
+
+Material forms: `s a b c` (3-tone ramp, shaded like vanilla cloth/hair; `s` like a face),
+`skin-b` (ramp b shaded like a face: bald alien heads), `w` / `k` (flat white / black),
+`w/c` (white edged in ramp c's dark tone), and a trailing `!` (`c!`) to shade that letter by the
+volume rules instead of the learned table (flat robes, aprons, plating). `python -m walker_sprite
+regions <sheet.png>` prints any sheet as letters; `shader` relearns the table from the game and
+writes `corpus/shader-check.png` (vanilla over re-shaded) to judge it by eye.
+
 ### Commands added for this loop
 
 ```bash
@@ -115,6 +133,7 @@ python -m walker_sprite lint <sheet.png>                        # style score of
 
 ## Drafting in batches
 
-A batch file in `batches/` writes `art/<name>.yaml` for five rows at a time from `base_sheet` +
-`recolor` + `parts` + patches (so the step-frame offsets are generated, not hand-copied). Run it
+A batch file in `batches/` writes `art/<name>.yaml` for a few rows at a time from `base_sheet` +
+`recolor` + `parts` + patches, or from regions in shade mode (so the step-frame offsets are
+generated, not hand-copied). Run it
 from this folder (`python batches/batch1.py`), build each spec, then `review`.
