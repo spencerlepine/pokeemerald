@@ -1,0 +1,57 @@
+{
+  "species": {
+    "stem": "kadabra",
+    "sw_name": "MISTWEAVER",
+    "sw_basis": "original",
+    "subject": "mistweaver",
+    "desc": "lean upright brown fox creature standing on two legs, tall ears, ruffled neck fur, holding a silver spoon, wisps of mist around its feet, whole body",
+    "types": [],
+    "colour": "brown and rust orange with silver",
+    "style": "gen3",
+    "pose": "three-quarter view facing left",
+    "negative": "",
+    "init": null,
+    "control": null,
+    "denoise": null,
+    "flip": false,
+    "frame2": "mouth wide open, roaring, lunging forward",
+    "shiny": {}
+  },
+  "view": "front",
+  "lora": {
+    "id": 273148,
+    "name": "v2.1-beta",
+    "baseModel": "SD 1.5",
+    "trainedWords": [],
+    "air": null,
+    "files": [
+      {
+        "name": "pksp768_V2-1.safetensors",
+        "sizeKB": 74235.9921875,
+        "sha256": "DF8494A9FF9AE96B53ECBCD327AA14626C59D3F573423892A650F9F6C21AB418"
+      }
+    ]
+  },
+  "checkpoint": "urn:air:sd1:checkpoint:civitai:4384@128713",
+  "step": "textToImage",
+  "params": {
+    "prompt": "gen3, (mistweaver:1.1), (lean upright brown fox creature standing on two legs tall ears ruffled neck fur holding a silver spoon wisps of mist around its feet whole body:1.2), pokemon, single creature, full body, three-quarter view facing left, (brown and rust orange with silver body:1.3), limited palette, muted natural colours, pixel art, game sprite, crisp dark outlines, white background, simple background",
+    "negativePrompt": "human, person, trainer, multiple creatures, two creatures, text, watermark, signature, frame, border, scenery, detailed background, gradient background, ground, shadow, cropped, cut off, blurry, 3d, photo, realistic, painting, smooth shading",
+    "scheduler": "EulerA",
+    "steps": 25,
+    "cfgScale": 7.0,
+    "width": 768,
+    "height": 768,
+    "seed": 759359827,
+    "clipSkip": 2
+  },
+  "refs": {},
+  "control": null,
+  "strength": 0.9,
+  "format": "jpeg",
+  "seed": 759359827,
+  "workflowId": "13596363-20261101181633059-u1dv",
+  "jobId": "ded0b36b-116f-496b-bf71-7f3dd8cf258f",
+  "cost": "3 green",
+  "generated": "20261101-181647"
+}
