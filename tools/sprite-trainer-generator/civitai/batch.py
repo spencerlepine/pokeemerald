@@ -61,6 +61,12 @@ def pending() -> list[dict]:
     return rows
 
 
+def all_rows() -> list[dict]:
+    with CSV.open(newline="") as f:
+        return [r for r in csv.DictReader(f) if (r["kind"] == "trainers" and r["subkind"] == "front_pics")
+                or r["path"] == "graphics/birch_speech/birch.png"]
+
+
 def stem_of(r: dict) -> str:
     return Path(r["path"]).stem
 
@@ -101,8 +107,14 @@ def judge(final: Path, log: str, pair: bool = False) -> tuple[bool, str]:
         return False, f"figure {fw}x{fh} too small"
     if opaque.sum() < 500 or colours < 8:
         return False, f"{opaque.sum()} px, {colours} colours"
-    if not pair and figures(final.with_name(final.stem + "_native.png")) >= 2:
-        return False, "two figures (duplicate or turnaround)"
+    nat = final.with_name(final.stem + "_native.png")
+    if figures(nat) >= (3 if pair else 2):
+        return False, "extra figures (duplicate or turnaround)"
+    na = np.array(Image.open(nat).convert("RGBA"))[..., 3] > 0
+    if na[0, 0] and na[0, -1] and na[-1, 0] and na[-1, -1]:
+        return False, "background box left"
+    if max(na[0].mean(), na[:, 0].mean(), na[:, -1].mean()) > 0.8:  # a solid bbox edge = a box
+        return False, "background box left"
     return True, f"figure {fw}x{fh}, {colours} colours"
 
 
@@ -159,9 +171,11 @@ def update_wiki(row: dict, notes: str, drawn: str):
     w = csv.DictWriter(buf, fieldnames=fields, lineterminator="\n")
     w.writeheader(); w.writerows(rows)
     CSV.write_text(buf.getvalue())
-    with ART_READY.open("a", newline="") as f:
-        csv.writer(f, lineterminator="\n").writerow(
-            [row["asset_id"], f"art/{row['path']}", drawn, notes.split("; ", 1)[1]])
+    lines = [l for l in ART_READY.read_text().splitlines(keepends=True)
+             if not l.startswith(row["asset_id"] + ",")]
+    buf = io.StringIO()
+    csv.writer(buf, lineterminator="\n").writerow([row["asset_id"], f"art/{row['path']}", drawn, notes.split("; ", 1)[1]])
+    ART_READY.write_text("".join(lines) + buf.getvalue())
 
 
 def git(*a, check=True):
@@ -208,10 +222,33 @@ def do(row: dict) -> str:
     return f"SKIP {stem}: {'; '.join(reasons)}"
 
 
+def refinish(row: dict) -> str:
+    """Re-run the (free) finisher on the picked raw of an auto-picked row and re-install it."""
+    stem = stem_of(row)
+    m = re.search(r"seed (\d+)", row["art_notes"])
+    raws = sorted((HERE / "runs" / stem / "raw").glob(f"*_s{m.group(1)}.png")) if m else []
+    if not raws:
+        return f"FAIL {stem}: raw not found"
+    theme = JOBS.get(stem, {}).get("theme", "factions")
+    r = subprocess.run([sys.executable, str(HERE / "civitai_trainer.py"), "finish", str(raws[-1]), "--theme", theme],
+                       capture_output=True, text=True, cwd=HERE)
+    log = r.stdout + r.stderr
+    final = raws[-1].parent.parent / "finished" / raws[-1].name
+    ok, note = judge(final, log, bool(JOBS.get(stem, {}).get("pair")))
+    if not ok:
+        return f"BAD {stem}: {note}"
+    files, notes, drawn = install(row, final, log, note)
+    with git_lock:
+        update_wiki(row, notes, drawn)
+    return f"OK {stem}: {note}"
+
+
 def main():
     global args
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("only", nargs="*", help="trainer stems (default: every pending row)")
+    ap.add_argument("--redo", action="store_true", help="regenerate the named trainers even if ART_READY")
+    ap.add_argument("--refinish", action="store_true", help="re-finish every auto-picked row from its raw (free), no commit")
     ap.add_argument("--list", action="store_true")
     ap.add_argument("--budget", type=int, default=0, help="max Buzz to spend this run (required)")
     ap.add_argument("--currency", default="green", help="Buzz account(s): green (bought), blue (earned), yellow")
@@ -219,6 +256,14 @@ def main():
     ap.add_argument("--no-push", dest="push", action="store_false")
     args = ap.parse_args()
     rows = [r for r in pending() if not args.only or stem_of(r) in args.only]
+    if args.redo:
+        rows = [r for r in all_rows() if stem_of(r) in args.only]
+    if args.refinish:
+        done = [r for r in all_rows() if "auto-picked" in r["art_notes"] and (not args.only or stem_of(r) in args.only)]
+        with cf.ThreadPoolExecutor(args.j) as ex:
+            for res in ex.map(refinish, done):
+                print(res, flush=True)
+        return
     if args.list or not args.budget:
         for r in rows:
             print(f"{stem_of(r):24} {r['sw_subject']}")

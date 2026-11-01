@@ -319,6 +319,8 @@ def knock_out_background(img: Image.Image, tol: int = 40) -> Image.Image:
     h, w, _ = a.shape
     bg = np.median(np.concatenate([a[0], a[-1], a[:, 0], a[:, -1]]), axis=0)
     near = np.abs(a - bg).sum(2) <= tol
+    # plus pale neutral greys (vignettes/gradients in the corners); dark outlines stop the fill
+    near |= (a.min(2) >= 200) & (a.max(2) - a.min(2) <= 16)
     seen = np.zeros((h, w), bool)
     dq = deque([(y, x) for y in range(h) for x in (0, w - 1)] + [(y, x) for x in range(w) for y in (0, h - 1)])
     while dq:
@@ -327,6 +329,31 @@ def knock_out_background(img: Image.Image, tol: int = 40) -> Image.Image:
             seen[y, x] = True
             dq.extend(((y + 1, x), (y - 1, x), (y, x + 1), (y, x - 1)))
     return Image.fromarray(np.dstack([a, np.where(seen, 0, 255)]).astype(np.uint8), "RGBA")
+
+
+def despeck(img: Image.Image, share: float = 0.04, light: int = 170) -> Image.Image:
+    """Drop small detached islands of light pixels (white/grey background scraps the flood fill missed)."""
+    a = np.array(img)
+    op = a[..., 3] > 0
+    h, w = op.shape
+    seen = np.zeros_like(op)
+    total = op.sum()
+    for y in range(h):
+        for x in range(w):
+            if op[y, x] and not seen[y, x]:
+                st, comp = [(y, x)], []
+                seen[y, x] = True
+                while st:
+                    cy, cx = st.pop(); comp.append((cy, cx))
+                    for dy in (-1, 0, 1):
+                        for dx in (-1, 0, 1):
+                            ny, nx = cy + dy, cx + dx
+                            if 0 <= ny < h and 0 <= nx < w and op[ny, nx] and not seen[ny, nx]:
+                                seen[ny, nx] = True; st.append((ny, nx))
+                ys, xs = zip(*comp)
+                if len(comp) < share * total and a[ys, xs, :3].min(1).mean() >= light:
+                    a[ys, xs, 3] = 0
+    return Image.fromarray(a, "RGBA")
 
 
 def _lab(rgb: np.ndarray) -> np.ndarray:
@@ -409,7 +436,7 @@ def finish(raw: Path, theme: str, fit: str, free: int) -> Path:
     stem = raw.stem
 
     nat, period = native(src)
-    fig = knock_out_background(nat)
+    fig = despeck(knock_out_background(nat))
     if fig.getbbox() is None:
         sys.exit(f"{raw.name}: nothing left after background removal")
     fig = quantise(fig.crop(fig.getbbox()))
