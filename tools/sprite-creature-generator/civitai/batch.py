@@ -141,8 +141,9 @@ def judge(out: Path, log: str, min_w: int = 24, min_h: int = 22, one_figure: boo
             return False, f"{view}: grid {period}px (blurry take)"
         if max(fw, fh) < 32 or min(fw, fh) < 12 or (fh < min_h and fw < min_w):  # flat fish / thin columns are fine
             return False, f"{view}: figure {fw}x{fh} too small"
-        a = np.array(Image.open(out / f"{view}.png").convert("RGBA"))
-        opaque = a[..., 3] > 0
+        im = Image.open(out / f"{view}.png")
+        a = np.array(im.convert("RGBA"))
+        opaque = (np.array(im) != 0) if im.mode == "P" else a[..., 3] > 0  # index 0 = transparent (no tRNS)
         colours = len(np.unique(a[opaque][:, :3], axis=0))
         if opaque.sum() < 400 or colours < 6:
             return False, f"{view}: {opaque.sum()} px, {colours} colours"
