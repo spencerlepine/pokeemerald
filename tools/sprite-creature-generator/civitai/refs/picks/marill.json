@@ -1,9 +1,10 @@
 {
   "init": "refs/marill_prep.png",
-  "init_source": "refs/sources/marill/marill_draw.png",
+  "init_source": "refs/sources/marill/blooprat_swamp_rat.png",
   "flip": false,
   "denoise": 0.55,
-  "desc": "side three-quarter view, whole body, small, centred, facing left: round blue water mouse, ball body, two round ears, cream belly, thin black tail ending in a blue ball float",
+  "desc": "side view, whole body, small, centred, facing left: lean wary alien swamp rat, long pointed snout with bared buck teeth, small beady red eyes, sharp swept-back ears, ridged hide with spiny back quills, sinewy clawed legs, thin dark tail ending in a blue ball float, alien fauna",
   "colour": "blue and cream",
-  "ref_note": "Hand-drawn clean shape ref (no usable art; Ash-rabbit line art came out mush); round 3"
+  "ref_note": "Hand-drawn lean swamp rat with float-ball tail (owner: round mouse too friendly)",
+  "negative": "cute, chibi, kawaii, big eyes, smiling, happy, cartoon mascot, plush, toy"
 }
