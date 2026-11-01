@@ -1,10 +1,10 @@
 {
   "init": "refs/shiftry_prep.png",
-  "init_source": "https://static.wikia.nocookie.net/starwars/images/5/51/Condor_dragon.jpg/revision/latest?cb=20220117082158",
+  "init_source": "/tmp/claude-0/-home-user/510f0079-9430-50be-b656-57ddf5b64e74/scratchpad/mask/r2_condor.png",
   "flip": false,
   "denoise": 0.5,
-  "desc": "tall winged forest spirit with huge leaf-fan wings and a long tail",
-  "colour": "dark brown and leaf green",
-  "negative": "signature, text",
-  "ref_note": "Endor condor dragon sketch; wings stand in for leaf fans"
+  "desc": "forest lord dragon with huge leaf-fan wings spread, hooked beak, long curled tail, clawed limbs, whole body",
+  "colour": "olive green body, orange-brown leaf-fan wings",
+  "negative": "text, background, signature",
+  "ref_note": "Ewoks (2024) #3 comic condor dragon, colour, purple sky and text masked by hand (r2_condor.png)"
 }
