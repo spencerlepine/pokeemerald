@@ -1,9 +1,10 @@
 {
   "init": "refs/swinub_prep.png",
-  "init_source": "https://static.wikia.nocookie.net/starwars/images/9/9c/Tauntaun-SWE.png/revision/latest?cb=20160914005551",
+  "init_source": "/tmp/claude-0/-home-user/510f0079-9430-50be-b656-57ddf5b64e74/scratchpad/mask/r2_taunkit.png",
   "flip": false,
   "denoise": 0.5,
-  "desc": "small fluffy tauntaun kit with stubby curled horn nubs and a round snout",
-  "colour": "cream white and tan",
-  "ref_note": "Tauntaun SWE render (front view); transparent; different image and pose from piloswine; width 26 because this tall figure is height-bound (gives ~44 px tall), keeps the kit small next to piloswine"
+  "desc": "small fluffy tauntaun kit in side view, shaggy mane, stubby curled horn nubs, round snout, long tail, whole body",
+  "colour": "cream white and pale brown fur, tan snout",
+  "ref_note": "young fluffy tauntaun cut out of Tauntaun_Species.jpg (Legends; same image as piloswine, different animal), grass masked locally, flipped",
+  "negative": "grass, background"
 }

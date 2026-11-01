@@ -1,10 +1,10 @@
 {
   "init": "refs/vaporeon_prep.png",
-  "init_source": "https://static.wikia.nocookie.net/starwars/images/e/e7/BetsyBauer-YJATookaConceptArt1.jpg/revision/latest/scale-to-width-down/1000?cb=20250426165340#crop=0.12,0.08,0.37,0.47",
+  "init_source": "/tmp/claude-0/-home-user/510f0079-9430-50be-b656-57ddf5b64e74/scratchpad/mask/r2_tookacat.png",
   "flip": false,
   "denoise": 0.5,
-  "desc": "sleek blue water tooka leaping with finned ears a frilled neck and a long mermaid tail",
-  "colour": "light blue blue white",
-  "negative": "grey, black and white, sketch",
-  "ref_note": "Canon tooka line art (Young Jedi Adventures, Betsy Bauer) leaping pose, head on the left, clean cut; greyscale so colour comes from args; jolteon uses another pose from the same sheet"
+  "desc": "sleek water tooka with big finned ears, striped fur, long curled tail, standing on thin legs, three-quarter view, whole body",
+  "colour": "light sea blue and teal fur, darker blue stripes, white ear tufts",
+  "negative": "grass, background, grey, sketch",
+  "ref_note": "The Bounty Hunter and the Thief tooka (colour render), grass masked by hand (r2_tookacat.png)"
 }

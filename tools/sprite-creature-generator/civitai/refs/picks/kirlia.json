@@ -2,9 +2,9 @@
   "init": "refs/kirlia_prep.png",
   "init_source": "https://static.wikia.nocookie.net/starwars/images/d/dd/Frost_sprite_full.jpg/revision/latest?cb=20120116154022",
   "flip": false,
-  "denoise": 0.5,
-  "desc": "slim dancing Force sprite with a short tutu skirt and twin head spikes",
+  "denoise": 0.55,
+  "desc": "slim dancing Force sprite with a short white tutu skirt and twin head spikes, pale glowing body, whole body",
   "colour": "white and pale green",
-  "negative": "dark clothing, human face, long gown",
-  "ref_note": "same Frost sprite as gardevoir (same line); smaller width and dancer desc"
+  "negative": "dark, black, dark clothing, human face, long gown",
+  "ref_note": "same Frost sprite as gardevoir (same line); denoise 0.55 and dark negative so the front is light and the back can match"
 }
