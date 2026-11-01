@@ -2,8 +2,9 @@
   "init": "refs/nidoran_f_prep.png",
   "init_source": "https://static.wikia.nocookie.net/starwars/images/7/7b/Ronto.png/revision/latest?cb=20200427003707",
   "flip": false,
-  "denoise": 0.5,
-  "desc": "small ronto calf with a long neck big floppy ears and soft wrinkled hide",
-  "colour": "dark brown",
-  "ref_note": "Ronto (official art, alpha), standing three-quarter left; small width for the calf"
+  "denoise": 0.55,
+  "desc": "small ronto calf standing, long neck, big floppy ears, soft wrinkled hide, three-quarter view, whole body, clear dark outline",
+  "colour": "light blue-grey with pale tan belly",
+  "ref_note": "kept Ronto (official art, alpha, whole body three-quarter left); lighter colour and denoise 0.55 to fix dark blur; concept-sheet ronto was cut by page edge",
+  "negative": "dark, blurry, shadow"
 }
