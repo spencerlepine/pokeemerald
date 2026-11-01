@@ -1,0 +1,46 @@
+{
+  "trainer": {
+    "stem": "steven",
+    "wiki_path": "graphics/trainers/front_pics/steven.png",
+    "sw_subject": "LEIA ORGANA",
+    "subject": "LEIA ORGANA",
+    "desc": "",
+    "theme": "factions",
+    "style": "",
+    "pose": "standing, facing left, three-quarter view",
+    "negative": ""
+  },
+  "lora": {
+    "id": 443092,
+    "name": "XL v1",
+    "baseModel": "SDXL 1.0",
+    "trainedWords": [],
+    "air": null,
+    "files": [
+      {
+        "name": "pk_trainer_xl_v1.safetensors",
+        "sizeKB": 445819.83984375,
+        "sha256": "078E09DA2A123964B7EB30DB23EC24D59FB082343F69C7FAF925C4C07E97023E"
+      }
+    ]
+  },
+  "checkpoint": "urn:air:sdxl:checkpoint:civitai:101055@128078",
+  "params": {
+    "prompt": "(back view:1.4), (seen from behind:1.3), (leia organa:1.2), young woman, white robe, two hair buns on the sides of her head, white boots, belt, back turned to the viewer, looking away, raising one arm to throw, full body character sprite, pixel art, game sprite, crisp dark outlines, solid white background, simple background",
+    "negativePrompt": "face, front view, facing viewer, eyes, poke ball, pokeball, baseball cap, generic pokemon trainer, scenery, detailed background, gradient background, floor, shadow, text, watermark, multiple characters, cropped, blurry, 3d, photo, realistic",
+    "scheduler": "EulerA",
+    "steps": 25,
+    "cfgScale": 7.0,
+    "width": 768,
+    "height": 768,
+    "seed": 303682211,
+    "clipSkip": 2
+  },
+  "strength": 0.75,
+  "format": "jpeg",
+  "seed": 303682211,
+  "workflowId": "13596363-20261101075239767-qbue",
+  "jobId": "d21eb350-2baf-4b89-9d42-5dd244a166de",
+  "cost": "3 blue",
+  "generated": "20261101-075312"
+}
