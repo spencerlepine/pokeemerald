@@ -33,7 +33,7 @@ name:ALIVIA,ALIVIA,ABXA,DONE,facility trainer
 name:ALIX,ALIX,AHIA,DONE,
 name:ALIYAH,ALIYAH,ATDO,DONE,contest opponent
 name:ALIZE,ALIZE,ARZETH,DONE,facility trainer
-name:ALLEN,ALLEN,AVLAN,DONE,
+name:ALLEN,ALLEN,WINDY,DONE,"lore cameo: Windy, Luke's friend from Tosche Station"
 name:ALLISON,ALLISON,AZVA,DONE,
 name:ALONDRA,ALONDRA,ALVINA,DONE,facility trainer
 name:ALONZO,ALONZO,ARRA,DONE,facility trainer
@@ -53,7 +53,7 @@ name:ANGELINA,ANGELINA,ASRI,DONE,
 name:ANGELO,ANGELO,ALO,DONE,
 name:ANIYA,ANIYA,ANELLE,DONE,facility trainer
 name:ANN,ANN,AMETH,DONE,facility trainer
-name:ANNA & MEG,ANNA & MEG,AINA & MEZ,DONE,pair (hand-named)
+name:ANNA & MEG,ANNA & MEG,AINA & R3,DONE,pair (hand-named); pilot & astromech pair
 name:ANNABELL,ANNABELL,ALEK,DONE,facility trainer
 name:ANNE,ANNE,AKNYS,DONE,facility trainer
 name:ANNIKA,ANNIKA,AZBELLE,DONE,
@@ -96,7 +96,7 @@ name:BEN,BEN,BULEN,DONE,
 name:BENJAMIN,BENJAMIN,BONNIR,DONE,
 name:BENJI,BENJI,BODARA,DONE,facility trainer
 name:BENNY,BENNY,BURKIK,DONE,
-name:BERKE,BERKE,BUSHAL,DONE,
+name:BERKE,BERKE,TIREE,DONE,"lore cameo: Dex Tiree, Gold Two at Yavin"
 name:BERNARD,BERNARD,BIMEK,DONE,facility trainer
 name:BERNIE,BERNIE,BAXEK,DONE,
 name:BETH,BETH,BARINA,DONE,
@@ -143,7 +143,7 @@ name:CAITLIN,CAITLIN,COLDETH,DONE,contest opponent
 name:CAITLYN,CAITLYN,CAISSA,DONE,facility trainer
 name:CALE,CALE,COXAR,DONE,
 name:CALLIE,CALLIE,CIKORA,DONE,
-name:CALVIN,CALVIN,COIR,DONE,
+name:CALVIN,CALVIN,DEAK,DONE,"lore cameo: Deak, Luke's friend from Tosche Station"
 name:CAMDEN,CAMDEN,CAUS,DONE,
 name:CAMERON,CAMERON,CAZAN,DONE,
 name:CAMILE,CAMILE,CORYS,DONE,contest opponent
@@ -217,7 +217,7 @@ name:CORSON,CORSON,COLDENA,DONE,facility trainer
 name:CORY,CORY,CIRROS,DONE,
 name:CRAIG,CRAIG,COVI,DONE,facility trainer
 name:CRISSY,CRISSY,CUINA,DONE,
-name:CRISTIAN,CRISTIAN,CIKEK,DONE,
+name:CRISTIAN,CRISTIAN,KITWARR,DONE,"lore cameo: Kitwarr, son of the Wookiee chieftain Wullffwarro (Rebels)"
 name:CRISTIN,CRISTIN,COMINA,DONE,
 name:CYBIL,CYBIL,CATHI,DONE,facility trainer
 name:CYNDY,CYNDY,CEKYS,DONE,
@@ -351,7 +351,7 @@ name:FRANKIE,FRANKIE,FAUS,DONE,contest opponent
 name:FRANKLIN,FRANKLIN,FARRO,DONE,
 name:FREDDY,FREDDY,FUILA,DONE,facility trainer
 name:FREDRICK,FREDRICK,FUKESH,DONE,
-name:GABBY & TY,GABBY & TY,GIRA & TOV,DONE,pair (hand-named)
+name:GABBY & TY,GABBY & TY,FODE&BEED,DONE,Fode and Beed (character:gabby-and-ty)
 name:GABRIEL,GABRIEL,GOXELLE,DONE,facility trainer
 name:GABRIELLE,GABRIELLE,GIRRENA,DONE,
 name:GAGE,GAGE,GAVYS,DONE,facility trainer
@@ -361,7 +361,7 @@ name:GARRETT,GARRETT,GARA,DONE,facility trainer
 name:GARRISON,GARRISON,GUAL,DONE,
 name:GAV,GAV,GANIR,DONE,facility trainer
 name:GAVIN,GAVIN,GUYS,DONE,facility trainer
-name:GEORGE,GEORGE,GOSSUS,DONE,
+name:GEORGE,GEORGE,DUTCH,DONE,"lore cameo: Jon 'Dutch' Vander, Gold Leader at Yavin"
 name:GEORGIA,GEORGIA,GASSILA,DONE,
 name:GERALD,GERALD,GIRIR,DONE,
 name:GERARD,GERARD,GOINA,DONE,facility trainer
@@ -389,7 +389,7 @@ name:GUSTAVO,GUSTAVO,GOLDENA,DONE,facility trainer
 name:GWEN,GWEN,GIRILA,DONE,
 name:HAILEY,HAILEY,HUXISSA,DONE,
 name:HAL,HAL,HUETH,DONE,facility trainer
-name:HALEY,HALEY,HULINA,DONE,
+name:HALEY,HALEY,SABE,DONE,"lore cameo: Sabe, Padme's handmaiden and decoy"
 name:HALLE,HALLE,HILDARA,DONE,
 name:HANK,HANK,HORA,DONE,facility trainer
 name:HANNAH,HANNAH,HIRKIA,DONE,
@@ -423,7 +423,7 @@ name:IMANI,IMANI,IMXARA,DONE,
 name:INGRID,INGRID,ILTISSA,DONE,facility trainer
 name:IRENE,IRENE,INENA,DONE,
 name:IRVIN,IRVIN,IHIA,DONE,facility trainer
-name:ISAAC,ISAAC,IKMUS,DONE,
+name:ISAAC,ISAAC,MALAKILI,DONE,"lore cameo: Malakili, Jabba's rancor keeper"
 name:ISABEL,ISABEL,IHGARA,DONE,
 name:ISABELLA,ISABELLA,IRINA,DONE,
 name:ISABELLE,ISABELLE,ILI,DONE,
@@ -437,7 +437,7 @@ name:JACK,JACK,JUO,DONE,
 name:JACKI,JACKI,JARKARA,DONE,
 name:JACKSON,JACKSON,JOSKOS,DONE,
 name:JACLYN,JACLYN,JENNETH,DONE,
-name:JACOB,JACOB,JASHOS,DONE,
+name:JACOB,JACOB,CLEGG,DONE,"lore cameo: Clegg Holdfast, Boonta Eve racer and journalist"
 name:JADA,JADA,JIENA,DONE,contest opponent
 name:JADE,JADE,JUVILA,DONE,contest opponent
 name:JADEN,JADEN,JOKISSA,DONE,facility trainer
@@ -468,7 +468,7 @@ name:JAZLYN,JAZLYN,JISSI,DONE,facility trainer
 name:JAZMIN,JAZMIN,JOGYS,DONE,facility trainer
 name:JAZMYN,JAZMYN,JOETH,DONE,
 name:JEFF,JEFF,JOAN,DONE,
-name:JEFFREY,JEFFREY,JOAL,DONE,
+name:JEFFREY,JEFFREY,LOGRAY,DONE,"lore cameo: Logray, Ewok shaman"
 name:JENNA,JENNA,JOENA,DONE,
 name:JENNIFER,JENNIFER,JOSSYS,DONE,
 name:JENNY,JENNY,JIVILA,DONE,
@@ -528,7 +528,7 @@ name:KAREN,KAREN,KANENA,DONE,
 name:KARINA,KARINA,KENNILA,DONE,contest opponent
 name:KARLA,KARLA,KALINA,DONE,contest opponent
 name:KARLEE,KARLEE,KERRILA,DONE,facility trainer
-name:KATE & JOY,KATE & JOY,KESS & JOA,DONE,pair (hand-named)
+name:KATE & JOY,KATE & JOY,KESS & R5,DONE,pair (hand-named); pilot & astromech pair
 name:KATELYN,KATELYN,KASHYS,DONE,
 name:KATELYNN,KATELYNN,KOLDENA,DONE,
 name:KATHLEEN,KATHLEEN,KORA,DONE,
@@ -559,7 +559,7 @@ name:KEON,KEON,KOLI,DONE,facility trainer
 name:KEVIN,KEVIN,KOSKUN,DONE,
 name:KIANNA,KIANNA,KIORA,DONE,facility trainer
 name:KIARA,KIARA,KOISSA,DONE,contest opponent
-name:KIM & IRIS,KIM & IRIS,KAI & ISRA,DONE,pair (hand-named)
+name:KIM & IRIS,KIM & IRIS,KAI & R4,DONE,pair (hand-named); pilot & astromech pair
 name:KIMBERLY,KIMBERLY,KOMISSA,DONE,facility trainer
 name:KINDRA,KINDRA,KETHARA,DONE,
 name:KIPP,KIPP,KURETH,DONE,facility trainer
@@ -589,7 +589,7 @@ name:LAWSON,LAWSON,LUSSETH,DONE,facility trainer
 name:LAYTON,LAYTON,LATENA,DONE,facility trainer
 name:LEA & JED,LEA & JED,LYA & JOSS,DONE,pair (hand-named)
 name:LEAF,LEAF,LIVI,DONE,
-name:LEAH,LEAH,LIVINA,DONE,
+name:LEAH,LEAH,MERRIN,DONE,"lore cameo: Merrin, Nightsister of Dathomir"
 name:LENNY,LENNY,LALESH,DONE,
 name:LEON,LEON,LAKELLE,DONE,facility trainer
 name:LEONARD,LEONARD,LADIK,DONE,
@@ -721,7 +721,7 @@ name:OWEN,OWEN,OTGAN,DONE,
 name:PABLO,PABLO,POLAR,DONE,
 name:PAIGE,PAIGE,PUENA,DONE,contest opponent
 name:PAMELA,PAMELA,PERELLE,DONE,facility trainer
-name:PARKER,PARKER,PUSSEL,DONE,
+name:PARKER,PARKER,DREIS,DONE,"lore cameo: Garven Dreis, Red Leader at Yavin"
 name:PAT,PAT,POETH,DONE,
 name:PATRICIA,PATRICIA,PENNELLE,DONE,
 name:PATRICK,PATRICK,PEINA,DONE,facility trainer
@@ -751,7 +751,7 @@ name:RAFAEL,RAFAEL,RAKINA,DONE,facility trainer
 name:RALPH,RALPH,RUDIR,DONE,contest opponent
 name:RAMIRO,RAMIRO,RARA,DONE,facility trainer
 name:RAMON,RAMON,RIVYS,DONE,facility trainer
-name:RANDALL,RANDALL,REMIR,DONE,
+name:RANDALL,RANDALL,PORKINS,DONE,"lore cameo: Jek Porkins, Rebel pilot, flying for Doran before Yavin"
 name:RAUL,RAUL,ROVESH,DONE,contest opponent
 name:RAYMOND,RAYMOND,RAMEL,DONE,contest opponent
 name:RAYNA,RAYNA,RAENA,DONE,facility trainer
@@ -770,7 +770,7 @@ name:RICARDO,RICARDO,REDINA,DONE,facility trainer
 name:RICH,RICH,RUTHARA,DONE,facility trainer
 name:RICHARD,RICHARD,RIOS,DONE,
 name:RICK,RICK,RIBIK,DONE,
-name:RICKY,RICKY,RUOS,DONE,
+name:RICKY,RICKY,LUMPY,DONE,"lore cameo: Lumpawarrump, Chewbacca's son"
 name:RILEY,RILEY,RITHIK,DONE,
 name:ROBBY,ROBBY,RAI,DONE,facility trainer
 name:ROBERT,ROBERT,RARKAN,DONE,
@@ -843,7 +843,7 @@ name:SUSIE,SUSIE,SOILA,DONE,
 name:SYDNEY,SYDNEY,SITARA,DONE,contest opponent
 name:SYLVIA,SYLVIA,SARKINA,DONE,
 name:TAKAO,TAKAO,TOBIR,DONE,
-name:TAKASHI,TAKASHI,TESHUN,DONE,
+name:TAKASHI,TAKASHI,PAPLOO,DONE,"lore cameo: Paploo, the Ewok who stole a speeder bike"
 name:TALIA,TALIA,TEGILA,DONE,
 name:TAMIA,TAMIA,TOISSA,DONE,facility trainer
 name:TAMMY,TAMMY,TERKETH,DONE,
@@ -859,7 +859,7 @@ name:TERRY,TERRY,TUBA,DONE,
 name:TESS,TESS,TAMRA,DONE,facility trainer
 name:THALIA,THALIA,TUSKELLE,DONE,
 name:THEO,THEO,TORKENA,DONE,facility trainer
-name:THOMAS,THOMAS,TESKEL,DONE,
+name:THOMAS,THOMAS,SIO BIBBLE,DONE,"lore cameo: Sio Bibble, Governor of Naboo, on the starliner"
 name:TIANA,TIANA,TUNNELLE,DONE,
 name:TIFFANY,TIFFANY,TAYS,DONE,
 name:TIMMY,TIMMY,TIESH,DONE,
@@ -883,7 +883,7 @@ name:TRISTAN,TRISTAN,TOYS,DONE,facility trainer
 name:TRISTON,TRISTON,TARRIA,DONE,facility trainer
 name:TYLER,TYLER,TERYS,DONE,facility trainer
 name:TYLOR,TYLOR,TUDISSA,DONE,contest opponent
-name:TYRA & IVY,TYRA & IVY,TARA & IVI,DONE,pair (hand-named)
+name:TYRA & IVY,TYRA & IVY,TARA & R7,DONE,pair (hand-named); pilot & astromech pair
 name:TYRON,TYRON,TETESH,DONE,
 name:TYSON,TYSON,TOBORA,DONE,facility trainer
 name:VALERIA,VALERIA,VOILA,DONE,facility trainer
@@ -907,7 +907,7 @@ name:WAYNE,WAYNE,WASHUS,DONE,
 name:WENDY,WENDY,WOSKILA,DONE,
 name:WESLEY,WESLEY,WALDETH,DONE,facility trainer
 name:WESTON,WESTON,WONNENA,DONE,facility trainer
-name:WILLIAM,WILLIAM,WEVAX,DONE,
+name:WILLIAM,WILLIAM,SAN TEKKA,DONE,"lore cameo: Lor San Tekka, Church of the Force pilgrim (Jedha)"
 name:WILLIE,WILLIE,WONNEL,DONE,contest opponent
 name:WILSON,WILSON,WOYS,DONE,facility trainer
 name:WILTON,WILTON,WOUS,DONE,
@@ -916,7 +916,7 @@ name:WYATT,WYATT,WORRAN,DONE,
 name:XANDER,XANDER,XORKYS,DONE,facility trainer
 name:XAVIER,XAVIER,XAENA,DONE,facility trainer
 name:YAHIR,YAHIR,YOGI,DONE,facility trainer
-name:YASU,YASU,YASSON,DONE,
+name:YASU,YASU,TEEBO,DONE,"lore cameo: Teebo, Ewok warrior"
 name:YAZMIN,YAZMIN,YOILA,DONE,facility trainer
 name:YOSHI,YOSHI,YASHYS,DONE,facility trainer
 name:YUJI,YUJI,YENUN,DONE,

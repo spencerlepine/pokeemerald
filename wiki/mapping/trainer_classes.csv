@@ -3,60 +3,60 @@ trainer-class:pkmn-trainer-1,TRAINER,HOTSWAP,DONE,PENDING_ART,,,
 trainer-class:pkmn-trainer-2,TRAINER,HOTSWAP,DONE,PENDING_ART,,,
 trainer-class:rival,TRAINER,HOTSWAP,DONE,PENDING_ART,,,
 trainer-class:rs-protag,TRAINER,HOTSWAP,DONE,PENDING_ART,,,
-trainer-class:hiker,PROSPECTOR,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:hiker,UGNAUGHT,HOTSWAP,DONE,PENDING_ART,databank:5-the-empire-strikes-back:species:ugnaught,"Ugnaught miners and haulers who work the canyons, caves and lava mines.",Recast from PROSPECTOR (a Pokemon-style hiker).
 trainer-class:team-aqua,CARTEL THUG,HOTSWAP,DONE,PENDING_ART,,,
-trainer-class:pkmn-breeder,BREEDER,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:pkmn-breeder,HANDLER,HOTSWAP,DONE,PENDING_ART,databank:6-return-of-the-jedi:characters:malakili,"Creature handlers who raise and drill companions, like Jabba's rancor keeper Malakili.",Recast from BREEDER.
 trainer-class:cooltrainer,VETERAN,HOTSWAP,DONE,PENDING_ART,,,
 trainer-class:cooltrainer-2,VETERAN,HOTSWAP,DONE,PENDING_ART,,,
 trainer-class:bird-keeper,AVIAN KEEPER,HOTSWAP,DONE,PENDING_ART,,,
-trainer-class:swimmer-m,,KEEP,DONE,PENDING_ART,,,Generic class name kept; trainer pics still redrawn.
-trainer-class:swimmer-f,,KEEP,DONE,PENDING_ART,,,Generic class name kept; trainer pics still redrawn.
+trainer-class:swimmer-m,MON CAL,HOTSWAP,DONE,PENDING_ART,databank:3-revenge-of-the-sith:species:mon-calamari,"Mon Calamari divers, at home in any sea.",Recast from Swimmer (m).
+trainer-class:swimmer-f,NAUTOLAN,HOTSWAP,DONE,PENDING_ART,databank:2-attack-of-the-clones:species:nautolan,"Nautolan divers with head-tails, fast in open water.",Recast from Swimmer (f).
 trainer-class:team-magma,STORMTROOPER,HOTSWAP,DONE,PENDING_ART,,,
 trainer-class:expert,,KEEP,DONE,PENDING_ART,,,Generic class name kept; trainer pics still redrawn.
 trainer-class:aqua-admin,BOUNTYHUNTER,HOTSWAP,DONE,PENDING_ART,,,
-trainer-class:black-belt,BRAWLER,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:black-belt,WOOKIEE,HOTSWAP,DONE,PENDING_ART,databank:1-the-phantom-menace:species:wookiee,Wookiee warriors with bandoliers who test their strength in Tarfful's arena and beyond.,Recast from BRAWLER. Wookiees speak Shyriiwook: lines read as translations.
 trainer-class:aqua-leader,CRIME LORD,HOTSWAP,DONE,PENDING_ART,,,
 trainer-class:hex-maniac,NIGHTSISTER,HOTSWAP,DONE,PENDING_ART,,,
-trainer-class:aroma-lady,HERBALIST,HOTSWAP,DONE,PENDING_ART,,,
-trainer-class:ruin-maniac,RELIC HUNTER,HOTSWAP,DONE,PENDING_ART,,,
-trainer-class:interviewer,HOLOREPORTER,HOTSWAP,DONE,PENDING_ART,,,
-trainer-class:tuber-f,PADDLER,HOTSWAP,DONE,PENDING_ART,,,
-trainer-class:tuber-m,PADDLER,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:aroma-lady,HERBALIST,HOTSWAP,DONE,PENDING_ART,databank:1-the-phantom-menace:species:ithorians,Ithorian herbalists who tend glowing flowers.,Name kept; pic recast as an Ithorian.
+trainer-class:ruin-maniac,RELIC HUNTER,HOTSWAP,DONE,PENDING_ART,databank:4-a-new-hope:species:duros,Duros relic hunters in long coats with glow-lamps.,Name kept; pic recast as a Duros.
+trainer-class:interviewer,ANNOUNCER,HOTSWAP,DONE,PENDING_ART,databank:1-the-phantom-menace:characters:fode-and-beed,"FODE AND BEED, the two-headed Troig podrace announcer, now a HoloNet interviewer.","Recast from HOLOREPORTER: the only trainers in this class are Gabby & Ty, who are Fode and Beed."
+trainer-class:tuber-f,WOOKIEE CUB,HOTSWAP,DONE,PENDING_ART,databank:1-the-phantom-menace:species:wookiee,Wookiee cubs who splash around the Kachirho lagoon on carved floats.,Recast from PADDLER. Cubs speak Shyriiwook: lines read as translations.
+trainer-class:tuber-m,WOOKIEE CUB,HOTSWAP,DONE,PENDING_ART,databank:1-the-phantom-menace:species:wookiee,Wookiee cubs who splash around the Kachirho lagoon on carved floats.,Recast from PADDLER. Cubs speak Shyriiwook: lines read as translations.
 trainer-class:lady,ARISTOCRAT,HOTSWAP,DONE,PENDING_ART,,,
 trainer-class:beauty,SOCIALITE,HOTSWAP,DONE,PENDING_ART,,,
 trainer-class:rich-boy,YOUNG NOBLE,HOTSWAP,DONE,PENDING_ART,,,
-trainer-class:pokemaniac,BEASTMANIAC,HOTSWAP,DONE,PENDING_ART,,,
-trainer-class:guitarist,MUSICIAN,HOTSWAP,DONE,PENDING_ART,,,
+trainer-class:pokemaniac,GAME HUNTER,HOTSWAP,DONE,PENDING_ART,databank:1-the-phantom-menace:species:rodian,Rodian game hunters obsessed with rare companions. Greedo is one (Mos Eisley Cantina).,Recast from BEASTMANIAC.
+trainer-class:guitarist,MUSICIAN,HOTSWAP,DONE,PENDING_ART,databank:4-a-new-hope:organizations:figrin-d-an-and-the-modal-nodes,"Bith musicians with kloo horns, cousins of the Modal Nodes.",Name kept; pic recast as a Bith.
 trainer-class:kindler,LAVA MINER,HOTSWAP,DONE,PENDING_ART,,,
 trainer-class:camper,FARMHAND,HOTSWAP,DONE,PENDING_ART,,,
 trainer-class:picnicker,HOMESTEADER,HOTSWAP,DONE,PENDING_ART,,,
-trainer-class:bug-maniac,,KEEP,DONE,PENDING_ART,,,Generic class name kept; trainer pics still redrawn.
+trainer-class:bug-maniac,SHAMAN,HOTSWAP,DONE,PENDING_ART,databank:6-return-of-the-jedi:characters:logray,"Ewok shamans with bone charms and swarms of forest bugs, like Logray.",Recast from Bug Maniac. Overworld: re-point these trainers to the new Ewok walker (net:walker-ewok).
 trainer-class:psychic,FORCE ADEPT,HOTSWAP,DONE,PENDING_ART,,,
 trainer-class:gentleman,DIPLOMAT,HOTSWAP,DONE,PENDING_ART,,,
 trainer-class:elite-four,VISION,HOTSWAP,DONE,PENDING_ART,,,
 trainer-class:leader,,KEEP,DONE,PENDING_ART,,,Generic class name kept; trainer pics still redrawn.
-trainer-class:school-kid,CADET,HOTSWAP,DONE,PENDING_ART,,,
-trainer-class:sr-and-jr,,KEEP,DONE,PENDING_ART,,,Generic class name kept; trainer pics still redrawn.
+trainer-class:school-kid,CADET,HOTSWAP,DONE,PENDING_ART,,Imperial Academy cadets with datapads.,Name kept; the girl's pic is recast (it was a school uniform).
+trainer-class:sr-and-jr,PILOT&DROID,HOTSWAP,DONE,PENDING_ART,databank:1-the-phantom-menace:driods:astromech-droid,"A young pilot and her astromech droid, battling as a pair.",Recast from Sr. and Jr.
 trainer-class:winstrate,DARKLIGHTER,HOTSWAP,DONE,PENDING_ART,,,
-trainer-class:pokefan,BEASTFAN,HOTSWAP,DONE,PENDING_ART,,,
-trainer-class:youngster,,KEEP,DONE,PENDING_ART,,,Generic class name kept; trainer pics still redrawn.
+trainer-class:pokefan,RACE FAN,HOTSWAP,DONE,PENDING_ART,databank:1-the-phantom-menace:organizations:boonta-eve-classic-podracer-pilots,Podrace fans in team colours who dote on their companions like prize racers.,Recast from BEASTFAN. The DARKLIGHTER family (winstrate) shares these pics.
+trainer-class:youngster,SCRAP KID,HOTSWAP,DONE,PENDING_ART,databank:1-the-phantom-menace:characters:kitster,Tatooine junkyard kids with goggles and hydrospanners who build their own droids and racers.,Recast from Youngster.
 trainer-class:champion,JEDI MASTER,HOTSWAP,DONE,PENDING_ART,,,
-trainer-class:fisherman,ANGLER,HOTSWAP,DONE,PENDING_ART,,,
-trainer-class:triathlete,SWOOP RACER,HOTSWAP,DONE,PENDING_ART,,,
-trainer-class:dragon-tamer,BEAST TAMER,HOTSWAP,DONE,PENDING_ART,,,
-trainer-class:ninja-boy,INFILTRATOR,HOTSWAP,DONE,PENDING_ART,,,
-trainer-class:battle-girl,WARRIOR,HOTSWAP,DONE,PENDING_ART,,,
-trainer-class:parasol-lady,,KEEP,DONE,PENDING_ART,,,Generic class name kept; trainer pics still redrawn.
-trainer-class:twins,,KEEP,DONE,PENDING_ART,,,Generic class name kept; trainer pics still redrawn.
+trainer-class:fisherman,ANGLER,HOTSWAP,DONE,PENDING_ART,databank:1-the-phantom-menace:species:quarren,Quarren anglers with long poles and creels.,Name kept; pic and walker recast as a Quarren.
+trainer-class:triathlete,SWOOP RACER,HOTSWAP,DONE,PENDING_ART,databank:1-the-phantom-menace:organizations:boonta-eve-classic-podracer-pilots,"Swoop racers: on hovering swoop bikes, on foot in racing leathers, and crossing water with an aquata breather.","Name kept; all six pics recast (the old bike pics had wheels, and the running and swimming pics looked like Earth athletes)."
+trainer-class:dragon-tamer,NIGHTBROTHER,HOTSWAP,DONE,PENDING_ART,databank:1-the-phantom-menace:species:dathomirian,Dathomirian Zabrak Nightbrothers who tame great beasts.,Recast from BEAST TAMER.
+trainer-class:ninja-boy,EWOK,HOTSWAP,DONE,PENDING_ART,databank:6-return-of-the-jedi:species:ewok,Ewok scouts who ambush from the tall grass with spears and slings.,Recast from INFILTRATOR. Overworld: re-point these trainers to net:walker-ewok; the ninja-boy sprite stays as a generic small kid for the houses.
+trainer-class:battle-girl,MANDALORIAN,HOTSWAP,DONE,PENDING_ART,canon:Mandalorian,"Mandalorian warrior women in painted armour, Clan Wren's sparring partners for Sabine.",Recast from WARRIOR.
+trainer-class:parasol-lady,MIRIALAN,HOTSWAP,DONE,PENDING_ART,databank:2-attack-of-the-clones:species:mirialan,"Mirialan ladies with geometric face tattoos, strolling under lace sunshades.",Recast from Parasol Lady.
+trainer-class:twins,TWINS,HOTSWAP,DONE,PENDING_ART,databank:1-the-phantom-menace:species:twi-lek,Twi'lek twin girls who battle as a pair.,Name kept; pic and walker recast as Twi'leks.
 trainer-class:sailor,SPACER,HOTSWAP,DONE,PENDING_ART,,,
 trainer-class:magma-admin,OFFICER,HOTSWAP,DONE,PENDING_ART,,,
-trainer-class:bug-catcher,,KEEP,DONE,PENDING_ART,,,Generic class name kept; trainer pics still redrawn.
+trainer-class:bug-catcher,JAWA,HOTSWAP,DONE,PENDING_ART,databank:1-the-phantom-menace:species:jawa,"Hooded Jawa scavengers who trade in scrap, droids and small critters.","Recast from Bug Catcher. Jawas speak Jawaese: their lines read as translations, KOTOR-style."
 trainer-class:pkmn-ranger,PATHFINDER,HOTSWAP,DONE,PENDING_ART,,,
 trainer-class:magma-leader,SITH LORD,HOTSWAP,DONE,PENDING_ART,,,
-trainer-class:lass,,KEEP,DONE,PENDING_ART,,,Generic class name kept; trainer pics still redrawn.
-trainer-class:young-couple,,KEEP,DONE,PENDING_ART,,,Generic class name kept; trainer pics still redrawn.
-trainer-class:old-couple,,KEEP,DONE,PENDING_ART,,,Generic class name kept; trainer pics still redrawn.
-trainer-class:sis-and-bro,,KEEP,DONE,PENDING_ART,,,Generic class name kept; trainer pics still redrawn.
+trainer-class:lass,HANDMAIDEN,HOTSWAP,DONE,PENDING_ART,databank:1-the-phantom-menace:organizations:naboo-royal-handmaidens,Naboo handmaidens and court girls travelling with noble retinues.,"Recast from Lass. The Naboo-dress pic and walker already fit, so no new art."
+trainer-class:young-couple,YOUNG COUPLE,HOTSWAP,DONE,PENDING_ART,original,A young spacer couple: a human smuggler and his Zabrak pilot partner.,Name kept; pic recast from a western homesteader couple.
+trainer-class:old-couple,OLD COUPLE,HOTSWAP,DONE,PENDING_ART,databank:6-return-of-the-jedi:species:sullustan,An old Sullustan couple in miner's coats.,Name kept; pic recast.
+trainer-class:sis-and-bro,NAUTOLANS,HOTSWAP,DONE,PENDING_ART,databank:2-attack-of-the-clones:species:nautolan,A Nautolan sister and brother who swim and battle together.,Recast from Sis and Bro.
 trainer-class:salon-maiden,TOWER ACE,HOTSWAP,DONE,PENDING_ART,,,
 trainer-class:dome-ace,DOME ACE,HOTSWAP,DONE,PENDING_ART,,,
 trainer-class:palace-maven,PALACE ACE,HOTSWAP,DONE,PENDING_ART,,,
@@ -64,4 +64,4 @@ trainer-class:arena-tycoon,ARENA ACE,HOTSWAP,DONE,PENDING_ART,,,
 trainer-class:factory-head,FACTORY ACE,HOTSWAP,DONE,PENDING_ART,,,
 trainer-class:pike-queen,PIKE ACE,HOTSWAP,DONE,PENDING_ART,,,
 trainer-class:pyramid-king,PYRAMID ACE,HOTSWAP,DONE,PENDING_ART,,,
-trainer-class:collector,,KEEP,DONE,PENDING_ART,,,Generic class name kept; trainer pics still redrawn.
+trainer-class:collector,JUNK DEALER,HOTSWAP,DONE,PENDING_ART,databank:1-the-phantom-menace:species:toydarian,Toydarian junk dealers hovering over crates of curios: Watto's rivals.,Recast from Collector.

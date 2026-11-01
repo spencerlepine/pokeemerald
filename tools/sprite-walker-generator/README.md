@@ -22,6 +22,7 @@ pip install -r requirements.txt     # pillow, pyyaml
 | --- | --- |
 | `walker_sprite/` | The Python package (`python -m walker_sprite ...`) |
 | `art/<name>.yaml` | Walker specs: what the LLM writes |
+| `art/retired/` | Specs of walkers whose character was recast (wiki/bible/RECAST.md). Kept for reuse only: their art was deleted from the wiki and the slots are PENDING_ART again, so never install these |
 | `output/<name>/` | Built game-ready PNG, `lint.txt`, `metrics.json`, `preview/` (zoom, walk.gif, scene, showcase) |
 | `palettes/` | Copies of Emerald's four shared NPC palettes (D6) |
 | `corpus/people16x32.json` | Style metrics measured on the 90 vanilla 16x32 walkers (`python -m walker_sprite corpus`) |

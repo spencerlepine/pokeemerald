@@ -13,24 +13,24 @@ aqua_grunt_f|CARTEL THUG (f): Weequay enforcer
 aqua_grunt_m|CARTEL THUG (m): Gamorrean-style brute
 aqua_leader_archie|JABBA THE HUTT on his repulsor sled
 arena_tycoon_greta|4-LOM, ARENA ACE
-aroma_lady|HERBALIST with a flower basket
-battle_girl|WARRIOR (f) in combat wraps
+aroma_lady|HERBALIST: Ithorian (hammerhead) in earth-coloured robes with a pot of glowing flowers
+battle_girl|MANDALORIAN (f): warrior woman in blue-grey painted armour, T-visor helmet under her arm
 beauty|SOCIALITE in a gown
 bird_keeper|AVIAN KEEPER with a bird on her glove
-black_belt|BRAWLER in a training wrap
+black_belt|WOOKIEE warrior with a bandolier and a bowcaster
 brendan|KAEL (rival/partner front pic)
 brendan_rs|KAEL (old Ruby/Sapphire front pic)
-bug_catcher|Bug-catcher kid with a net
-bug_maniac|Bug maniac in a hooded bug suit
+bug_catcher|JAWA scavenger: brown hooded robe, glowing yellow eyes, bandolier, ion blaster and a scrap sack
+bug_maniac|SHAMAN: Ewok shaman with a creature-skull headdress, staff of bones and feathers, glowing beetles
 camper|FARMHAND
 champion_wallace|OBI-WAN KENOBI, JEDI MASTER
-collector|Collector with a display case
+collector|JUNK DEALER: Toydarian with buzzing wings and a snout, over a crate of curios
 cooltrainer_f|VETERAN (f) in a flight suit
 cooltrainer_m|VETERAN (m) in a flight suit
-cycling_triathlete_f|SWOOP RACER (f) on a swoop
-cycling_triathlete_m|SWOOP RACER (m) on a swoop
+cycling_triathlete_f|SWOOP RACER (f) on a hovering swoop bike (no wheels)
+cycling_triathlete_m|SWOOP RACER (m) on a hovering swoop bike (no wheels)
 dome_ace_tucker|DENGAR, DOME ACE
-dragon_tamer|BEAST TAMER with a whip
+dragon_tamer|NIGHTBROTHER: Dathomirian Zabrak with black tattoos and a ring of horns, leather war kit and a beast-whip
 elite_four_drake|ANAKIN (Force vision)
 elite_four_glacia|KI-ADI-MUNDI (Force vision)
 elite_four_phoebe|QUI-GON JINN (Force spirit)
@@ -38,12 +38,12 @@ elite_four_sidney|DARTH MAUL (Force vision)
 expert_f|Veteran spacer (f)
 expert_m|Veteran spacer (m)
 factory_head_noland|IG-88, FACTORY ACE
-fisherman|ANGLER
+fisherman|ANGLER: Quarren with face tentacles, slicker coat, long pole and a creel
 gentleman|DIPLOMAT
-guitarist|MUSICIAN with a kloo horn
+guitarist|MUSICIAN: Bith (huge bald cranium, big black eyes) in a dark suit with a kloo horn
 hex_maniac|NIGHTSISTER
-hiker|PROSPECTOR
-interviewer|HOLOREPORTER with a camera droid
+hiker|UGNAUGHT miner: pig snout, white mutton-chop whiskers, blue overalls, hard hat with a lamp, pickaxe
+interviewer|FODE AND BEED: two-headed Troig announcer (one red head, one green head) with microphones and a camera droid
 kindler|LAVA MINER in a heat suit
 lady|ARISTOCRAT
 lass|Young woman in a Naboo dress
@@ -62,17 +62,17 @@ magma_grunt_m|STORMTROOPER (m)
 magma_leader_maxie|DARTH VADER, SITH LORD
 may|MIRA (rival/partner front pic)
 may_rs|MIRA (old Ruby/Sapphire front pic)
-ninja_boy|INFILTRATOR in a dark hooded suit
-old_couple|Old moisture-farmer couple
+ninja_boy|EWOK scout: small furry Ewok in a leather hood with a spear and a sling
+old_couple|OLD COUPLE: old Sullustan couple (jowls, big black eyes, round ears) in miner's coats
 palace_maven_spenser|ZUCKUSS, PALACE ACE
-parasol_lady|Lady with a sunshade
+parasol_lady|MIRIALAN lady with geometric face tattoos under a lace sunshade
 picnicker|HOMESTEADER
 pike_queen_lucy|GARDULLA THE HUTT, PIKE ACE
-pokefan_f|BEASTFAN (f)
-pokefan_m|BEASTFAN (m)
-pokemaniac|BEASTMANIAC in a creature costume
-pokemon_breeder_f|BREEDER (f)
-pokemon_breeder_m|BREEDER (m)
+pokefan_f|RACE FAN (f): Twi'lek podrace fan in a team scarf, waving a flag
+pokefan_m|RACE FAN (m): stout podrace fan in a striped team vest with a pennant and macrobinoculars
+pokemaniac|GAME HUNTER: Rodian hunter with a long rifle and a trophy-tooth necklace
+pokemon_breeder_f|HANDLER (f): Zabrak handler with small horns and face tattoos, feed sack and a long goad
+pokemon_breeder_m|HANDLER (m): burly bald creature handler in a leather harness with a goad and a feed bucket (Malakili style)
 pokemon_ranger_f|PATHFINDER (f) with a scout pack
 pokemon_ranger_m|PATHFINDER (m) with a scout pack
 psychic_f|FORCE ADEPT (f) in a hooded robe
@@ -80,23 +80,23 @@ psychic_m|FORCE ADEPT (m) in a hooded robe
 pyramid_king_brandon|DEXTER JETTSTER, PYRAMID ACE
 red|RED (FireRed leftover, kept)
 rich_boy|YOUNG NOBLE
-ruin_maniac|RELIC HUNTER with a lamp
-running_triathlete_f|SWOOP RACER (f) running
-running_triathlete_m|SWOOP RACER (m) running
+ruin_maniac|RELIC HUNTER: Duros (blue skin, red eyes, no nose) in a long coat with a glow-lamp
+running_triathlete_f|SWOOP RACER (f) on foot: padded racing leathers, helmet under her arm
+running_triathlete_m|SWOOP RACER (m) on foot: padded racing leathers, helmet under his arm
 sailor|SPACER
 salon_maiden_anabel|AURRA SING, TOWER ACE
-school_kid_f|CADET (f) with a datapad
+school_kid_f|CADET (f): Imperial Academy cadet in a grey-green tunic and cap with a datapad
 school_kid_m|CADET (m) with a datapad
-sis_and_bro|Sister and brother paddlers
-sr_and_jr|Old and young angler pair
+sis_and_bro|NAUTOLANS: Nautolan sister and brother in swim gear with aquata breathers
+sr_and_jr|PILOT & DROID: young pilot in an orange flight suit with her R2-series astromech droid
 steven|LEIA ORGANA
-swimmer_f|Swimmer (f) in a dive suit
-swimmer_m|Swimmer (m) in a dive suit
-swimming_triathlete_f|SWOOP RACER (f) swimming leg
-swimming_triathlete_m|SWOOP RACER (m) swimming leg
-tuber_f|PADDLER (f) with a flotation ring
-tuber_m|PADDLER (m) with a flotation ring
-twins|Twin kids
+swimmer_f|NAUTOLAN diver (f): green-skinned Nautolan with head-tails in a dive suit
+swimmer_m|MON CAL diver: Mon Calamari with a fish-like head and big side eyes in a dive suit
+swimming_triathlete_f|SWOOP RACER (f) crossing water: racing wetsuit and an aquata breather
+swimming_triathlete_m|SWOOP RACER (m) crossing water: racing wetsuit and an aquata breather
+tuber_f|WOOKIEE CUB (f): small Wookiee cub with bead braids, holding a carved float ring
+tuber_m|WOOKIEE CUB (m): small Wookiee cub hugging a carved log float
+twins|TWINS: Twi'lek twin girls with matching wrapped head-tails
 wally|LUKE SKYWALKER
-young_couple|Young homesteader couple
-youngster|Young farm boy
+young_couple|YOUNG COUPLE: human smuggler in a vest and his Zabrak pilot partner
+youngster|SCRAP KID: Tatooine junkyard kid with goggles, patched tunic and a hydrospanner

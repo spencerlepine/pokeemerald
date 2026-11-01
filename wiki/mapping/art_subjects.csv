@@ -324,7 +324,7 @@ graphics/object_events/pics/misc/submarine_shadow.png,Shadow of the Gungan sub u
 graphics/object_events/pics/misc/truck.png,Jawa sandcrawler (moving van)
 graphics/object_events/pics/people/artist.png,Holo-artist with a stylus and paint-stained smock
 graphics/object_events/pics/people/beauty.png,Core World socialite in a flowing gown
-graphics/object_events/pics/people/black_belt.png,Teräs Käsi brawler in a training wrap
+graphics/object_events/pics/people/black_belt.png,Wookiee warrior with a bandolier
 graphics/object_events/pics/people/boy_1.png,Moisture-farm kid in desert tunic and goggles
 graphics/object_events/pics/people/boy_2.png,Spaceport kid in a padded flight jacket
 graphics/object_events/pics/people/boy_3.png,Market-town kid with a toy blaster
@@ -338,7 +338,7 @@ graphics/object_events/pics/people/brendan/surfing.png,"KAEL (player, boy), ridi
 graphics/object_events/pics/people/brendan/underwater.png,"KAEL (player, boy), diving underwater"
 graphics/object_events/pics/people/brendan/walking.png,"KAEL (player, boy), walking"
 graphics/object_events/pics/people/brendan/watering.png,"KAEL (player, boy), watering fruit with the WATER CANTEEN"
-graphics/object_events/pics/people/bug_catcher.png,Kid with a bug net and specimen jar
+graphics/object_events/pics/people/bug_catcher.png,"Jawa: small brown hooded robe, glowing yellow eyes, bandolier"
 graphics/object_events/pics/people/cameraman.png,HOLONET camera operator with a holocam on his shoulder
 graphics/object_events/pics/people/camper.png,Farmhand in work overalls and a wide hat
 graphics/object_events/pics/people/contest_judge.png,Showcase judge in formal Cloud City robes
@@ -353,7 +353,7 @@ graphics/object_events/pics/people/elite_four/sidney.png,"MAUL (Force vision): b
 graphics/object_events/pics/people/expert_f.png,Veteran spacer woman with a cane
 graphics/object_events/pics/people/expert_m.png,Veteran spacer man in an old flight suit
 graphics/object_events/pics/people/fat_man.png,Portly merchant in a heavy coat
-graphics/object_events/pics/people/fisherman.png,Angler with a long rod and wide hat
+graphics/object_events/pics/people/fisherman.png,"Quarren angler: face tentacles, slicker coat, long pole"
 graphics/object_events/pics/people/frontier_brains/anabel.png,"AURRA SING: pale bounty hunter, long rifle, head antenna"
 graphics/object_events/pics/people/frontier_brains/brandon.png,DEXTER JETTSTER: four-armed Besalisk cook in an apron
 graphics/object_events/pics/people/frontier_brains/greta.png,4-LOM: insectoid protocol-turned-hunter droid in a long coat
@@ -376,10 +376,10 @@ graphics/object_events/pics/people/gym_leaders/tate.png,KANAN JARRUS: bearded Je
 graphics/object_events/pics/people/gym_leaders/wattson.png,WATTO: winged Toydarian junk dealer
 graphics/object_events/pics/people/gym_leaders/winona.png,CHIRPA: elder Ewok chief with a staff
 graphics/object_events/pics/people/hex_maniac.png,Nightsister in red robes
-graphics/object_events/pics/people/hiker.png,Prospector with a pickaxe and pack
+graphics/object_events/pics/people/hiker.png,"Ugnaught miner: pig snout, white whiskers, blue overalls, hard hat with a lamp"
 graphics/object_events/pics/people/hot_springs_old_woman.png,Old Sullustan woman in a towel
 graphics/object_events/pics/people/lass.png,Young woman in a Naboo dress
-graphics/object_events/pics/people/leaf.png,LEAF (FireRed/LeafGreen link leftover): not redrawn
+graphics/object_events/pics/people/leaf.png,"LEAF (FireRed leftover, kept)"
 graphics/object_events/pics/people/link_receptionist.png,HOLONET CLUB receptionist in a uniform
 graphics/object_events/pics/people/little_boy.png,Small boy in a tunic
 graphics/object_events/pics/people/little_girl.png,Small girl in a smock
@@ -388,7 +388,7 @@ graphics/object_events/pics/people/man_2.png,Spaceport worker in a jumpsuit
 graphics/object_events/pics/people/man_3.png,Middle-aged trader in a vest
 graphics/object_events/pics/people/man_4.png,Bearded spacer
 graphics/object_events/pics/people/man_5.png,Farmer with a hydrospanner
-graphics/object_events/pics/people/maniac.png,Beast maniac with a creature-print shirt
+graphics/object_events/pics/people/maniac.png,"Rodian (green skin, big black eyes, snout) in a hunter's vest"
 graphics/object_events/pics/people/mart_employee.png,Supply-depot clerk in a vest
 graphics/object_events/pics/people/mauville_old_man_1.png,Old storyteller (Mos Espa) with a long beard
 graphics/object_events/pics/people/mauville_old_man_2.png,"Old storyteller (Mos Espa), seated"
@@ -404,17 +404,17 @@ graphics/object_events/pics/people/may/walking.png,"MIRA (player, girl), walking
 graphics/object_events/pics/people/may/watering.png,"MIRA (player, girl), watering fruit with the WATER CANTEEN"
 graphics/object_events/pics/people/mom.png,"MOM: the player's mother, homesteader clothes"
 graphics/object_events/pics/people/mystery_event_deliveryman.png,Courier droid handler with a parcel
-graphics/object_events/pics/people/ninja_boy.png,Infiltrator in a dark hooded suit
+graphics/object_events/pics/people/ninja_boy.png,Small kid in a hooded desert poncho
 graphics/object_events/pics/people/nurse.png,2-1B surgical droid (Bacta Center)
 graphics/object_events/pics/people/old_man.png,Elderly desert man with a walking stick
 graphics/object_events/pics/people/old_woman.png,Elderly woman with a shawl
 graphics/object_events/pics/people/picnicker.png,Homesteader with a basket
-graphics/object_events/pics/people/pokefan_f.png,Beast fan (f) with a creature plush
-graphics/object_events/pics/people/pokefan_m.png,Beast fan (m) with a creature-print vest
+graphics/object_events/pics/people/pokefan_f.png,Twi'lek woman (two head-tails) in a racing-team scarf
+graphics/object_events/pics/people/pokefan_m.png,"Stout podrace fan in a striped team vest, goggles on his head"
 graphics/object_events/pics/people/prof_birch.png,PROF. KORR: field researcher with a datapad and dusty coat
 graphics/object_events/pics/people/psychic_m.png,Force adept in a hooded robe
 graphics/object_events/pics/people/quinty_plump.png,Plump Cloud City noble
-graphics/object_events/pics/people/red.png,RED (FireRed/LeafGreen link leftover): not redrawn
+graphics/object_events/pics/people/red.png,"RED (FireRed leftover, kept)"
 graphics/object_events/pics/people/reporter_f.png,HOLONET reporter (f) with a microphone
 graphics/object_events/pics/people/reporter_m.png,HOLONET reporter (m) with a microphone
 graphics/object_events/pics/people/rich_boy.png,Young noble in a fine tunic
@@ -432,8 +432,8 @@ graphics/object_events/pics/people/scientist_1.png,Researcher in a lab coat
 graphics/object_events/pics/people/scientist_2.png,Senior researcher with goggles
 graphics/object_events/pics/people/scott.png,"LANDO CALRISSIAN: cape, blue shirt, a smile"
 graphics/object_events/pics/people/steven.png,"LEIA ORGANA: white gown, side-bun hair"
-graphics/object_events/pics/people/swimmer_f.png,Swimmer (f) in a dive suit
-graphics/object_events/pics/people/swimmer_m.png,Swimmer (m) in a dive suit
+graphics/object_events/pics/people/swimmer_f.png,"Nautolan diver (f) swimming, head-tails trailing"
+graphics/object_events/pics/people/swimmer_m.png,"Mon Calamari diver swimming (fish head, big side eyes)"
 graphics/object_events/pics/people/teala.png,HOLONET CLUB attendant TEALA
 graphics/object_events/pics/people/team_aqua/aqua_member_f.png,Cartel thug (f): Weequay enforcer in scrappy armor
 graphics/object_events/pics/people/team_aqua/aqua_member_m.png,Cartel thug (m): Gamorrean-style brute in leathers
@@ -441,10 +441,10 @@ graphics/object_events/pics/people/team_aqua/archie.png,JABBA THE HUTT on a repu
 graphics/object_events/pics/people/team_magma/magma_member_f.png,Stormtrooper (f): white armor
 graphics/object_events/pics/people/team_magma/magma_member_m.png,Stormtrooper (m): white armor
 graphics/object_events/pics/people/team_magma/maxie.png,"DARTH VADER: black armor, cape, helmet"
-graphics/object_events/pics/people/tuber_f.png,Kid (f) with a flotation ring
-graphics/object_events/pics/people/tuber_m.png,Kid (m) with a flotation ring
-graphics/object_events/pics/people/tuber_m_swimming.png,Kid (m) paddling in a flotation ring
-graphics/object_events/pics/people/twin.png,Twin kid in matching tunics
+graphics/object_events/pics/people/tuber_f.png,Wookiee cub (f) with bead braids and a carved float
+graphics/object_events/pics/people/tuber_m.png,Wookiee cub (m) with a carved log float
+graphics/object_events/pics/people/tuber_m_swimming.png,Wookiee cub (m) paddling on a carved log float
+graphics/object_events/pics/people/twin.png,Twi'lek kid with short head-tails in a simple tunic
 graphics/object_events/pics/people/union_room_attendant.png,HOLONET CLUB attendant
 graphics/object_events/pics/people/unused_woman.png,Woman (unused sprite)
 graphics/object_events/pics/people/wallace.png,"OBI-WAN KENOBI: brown Jedi robes, beard"
@@ -454,7 +454,7 @@ graphics/object_events/pics/people/woman_2.png,Spaceport worker (f)
 graphics/object_events/pics/people/woman_3.png,Trader (f) with a satchel
 graphics/object_events/pics/people/woman_4.png,Mother with a shopping bag
 graphics/object_events/pics/people/woman_5.png,Elegant Naboo woman
-graphics/object_events/pics/people/youngster.png,Young farm boy in shorts and boots
+graphics/object_events/pics/people/youngster.png,"Scrap kid with goggles, patched tunic and a hydrospanner"
 graphics/object_events/pics/pokemon/azumarill.png,BLOOPHARE (overworld)
 graphics/object_events/pics/pokemon/azurill.png,BLOOPKIT (overworld)
 graphics/object_events/pics/pokemon/deoxys.png,SHIFTSTAR (overworld)
@@ -480,10 +480,10 @@ graphics/object_events/pics/pokemon/wingull.png,SHYYYOLET (overworld)
 graphics/object_events/pics/pokemon/zigzagoon.png,SCURRIER (overworld)
 graphics/trainers/back_pics/brendan.png,"KAEL (player, boy), back view throwing a CAPTURE POD"
 graphics/trainers/back_pics/brendan_rs.png,KAEL (old Ruby/Sapphire back pic)
-graphics/trainers/back_pics/leaf.png,LEAF (FireRed/LeafGreen link leftover): not redrawn
+graphics/trainers/back_pics/leaf.png,"LEAF (FireRed leftover, kept)"
 graphics/trainers/back_pics/may.png,"MIRA (player, girl), back view throwing a CAPTURE POD"
 graphics/trainers/back_pics/may_rs.png,MIRA (old Ruby/Sapphire back pic)
-graphics/trainers/back_pics/red.png,RED (FireRed/LeafGreen link leftover): not redrawn
+graphics/trainers/back_pics/red.png,"RED (FireRed leftover, kept)"
 graphics/trainers/back_pics/steven.png,"LEIA ORGANA, back view (multi battle partner)"
 graphics/trainers/back_pics/wally.png,"LUKE SKYWALKER, back view (catching tutorial)"
 graphics/trainers/front_pics/aqua_admin_f.png,BOUNTY HUNTER (f): armored hunter for the Cartel
@@ -492,24 +492,24 @@ graphics/trainers/front_pics/aqua_grunt_f.png,CARTEL THUG (f): Weequay enforcer
 graphics/trainers/front_pics/aqua_grunt_m.png,CARTEL THUG (m): Gamorrean-style brute
 graphics/trainers/front_pics/aqua_leader_archie.png,JABBA THE HUTT on his repulsor sled
 graphics/trainers/front_pics/arena_tycoon_greta.png,"4-LOM, ARENA ACE"
-graphics/trainers/front_pics/aroma_lady.png,HERBALIST with a flower basket
-graphics/trainers/front_pics/battle_girl.png,WARRIOR (f) in combat wraps
+graphics/trainers/front_pics/aroma_lady.png,HERBALIST: Ithorian (hammerhead) in earth-coloured robes with a pot of glowing flowers
+graphics/trainers/front_pics/battle_girl.png,"MANDALORIAN (f): warrior woman in blue-grey painted armour, T-visor helmet under her arm"
 graphics/trainers/front_pics/beauty.png,SOCIALITE in a gown
 graphics/trainers/front_pics/bird_keeper.png,AVIAN KEEPER with a bird on her glove
-graphics/trainers/front_pics/black_belt.png,BRAWLER in a training wrap
+graphics/trainers/front_pics/black_belt.png,WOOKIEE warrior with a bandolier and a bowcaster
 graphics/trainers/front_pics/brendan.png,KAEL (rival/partner front pic)
 graphics/trainers/front_pics/brendan_rs.png,KAEL (old Ruby/Sapphire front pic)
-graphics/trainers/front_pics/bug_catcher.png,Bug-catcher kid with a net
-graphics/trainers/front_pics/bug_maniac.png,Bug maniac in a hooded bug suit
+graphics/trainers/front_pics/bug_catcher.png,"JAWA scavenger: brown hooded robe, glowing yellow eyes, bandolier, ion blaster and a scrap sack"
+graphics/trainers/front_pics/bug_maniac.png,"SHAMAN: Ewok shaman with a creature-skull headdress, staff of bones and feathers, glowing beetles"
 graphics/trainers/front_pics/camper.png,FARMHAND
 graphics/trainers/front_pics/champion_wallace.png,"OBI-WAN KENOBI, JEDI MASTER"
-graphics/trainers/front_pics/collector.png,Collector with a display case
+graphics/trainers/front_pics/collector.png,"JUNK DEALER: Toydarian with buzzing wings and a snout, over a crate of curios"
 graphics/trainers/front_pics/cooltrainer_f.png,VETERAN (f) in a flight suit
 graphics/trainers/front_pics/cooltrainer_m.png,VETERAN (m) in a flight suit
-graphics/trainers/front_pics/cycling_triathlete_f.png,SWOOP RACER (f) on a swoop
-graphics/trainers/front_pics/cycling_triathlete_m.png,SWOOP RACER (m) on a swoop
+graphics/trainers/front_pics/cycling_triathlete_f.png,SWOOP RACER (f) on a hovering swoop bike (no wheels)
+graphics/trainers/front_pics/cycling_triathlete_m.png,SWOOP RACER (m) on a hovering swoop bike (no wheels)
 graphics/trainers/front_pics/dome_ace_tucker.png,"DENGAR, DOME ACE"
-graphics/trainers/front_pics/dragon_tamer.png,BEAST TAMER with a whip
+graphics/trainers/front_pics/dragon_tamer.png,"NIGHTBROTHER: Dathomirian Zabrak with black tattoos and a ring of horns, leather war kit and a beast-whip"
 graphics/trainers/front_pics/elite_four_drake.png,ANAKIN (Force vision)
 graphics/trainers/front_pics/elite_four_glacia.png,KI-ADI-MUNDI (Force vision)
 graphics/trainers/front_pics/elite_four_phoebe.png,QUI-GON JINN (Force spirit)
@@ -517,12 +517,12 @@ graphics/trainers/front_pics/elite_four_sidney.png,DARTH MAUL (Force vision)
 graphics/trainers/front_pics/expert_f.png,Veteran spacer (f)
 graphics/trainers/front_pics/expert_m.png,Veteran spacer (m)
 graphics/trainers/front_pics/factory_head_noland.png,"IG-88, FACTORY ACE"
-graphics/trainers/front_pics/fisherman.png,ANGLER
+graphics/trainers/front_pics/fisherman.png,"ANGLER: Quarren with face tentacles, slicker coat, long pole and a creel"
 graphics/trainers/front_pics/gentleman.png,DIPLOMAT
-graphics/trainers/front_pics/guitarist.png,MUSICIAN with a kloo horn
+graphics/trainers/front_pics/guitarist.png,"MUSICIAN: Bith (huge bald cranium, big black eyes) in a dark suit with a kloo horn"
 graphics/trainers/front_pics/hex_maniac.png,NIGHTSISTER
-graphics/trainers/front_pics/hiker.png,PROSPECTOR
-graphics/trainers/front_pics/interviewer.png,HOLOREPORTER with a camera droid
+graphics/trainers/front_pics/hiker.png,"UGNAUGHT miner: pig snout, white mutton-chop whiskers, blue overalls, hard hat with a lamp, pickaxe"
+graphics/trainers/front_pics/interviewer.png,"FODE AND BEED: two-headed Troig announcer (one red head, one green head) with microphones and a camera droid"
 graphics/trainers/front_pics/kindler.png,LAVA MINER in a heat suit
 graphics/trainers/front_pics/lady.png,ARISTOCRAT
 graphics/trainers/front_pics/lass.png,Young woman in a Naboo dress
@@ -534,48 +534,48 @@ graphics/trainers/front_pics/leader_roxanne.png,"BIGGS DARKLIGHTER, BESTINE AREN
 graphics/trainers/front_pics/leader_tate_and_liza.png,"KANAN JARRUS and EZRA BRIDGER, MASSASSI TEMPLE leaders"
 graphics/trainers/front_pics/leader_wattson.png,"WATTO, MOS ESPA ARENA leader"
 graphics/trainers/front_pics/leader_winona.png,"CHIRPA, BRIGHT TREE ARENA leader"
-graphics/trainers/front_pics/leaf.png,LEAF (FireRed/LeafGreen link leftover): not redrawn
+graphics/trainers/front_pics/leaf.png,"LEAF (FireRed leftover, kept)"
 graphics/trainers/front_pics/magma_admin.png,IMPERIAL OFFICER (VEERS and other admins)
 graphics/trainers/front_pics/magma_grunt_f.png,STORMTROOPER (f)
 graphics/trainers/front_pics/magma_grunt_m.png,STORMTROOPER (m)
 graphics/trainers/front_pics/magma_leader_maxie.png,"DARTH VADER, SITH LORD"
 graphics/trainers/front_pics/may.png,MIRA (rival/partner front pic)
 graphics/trainers/front_pics/may_rs.png,MIRA (old Ruby/Sapphire front pic)
-graphics/trainers/front_pics/ninja_boy.png,INFILTRATOR in a dark hooded suit
-graphics/trainers/front_pics/old_couple.png,Old moisture-farmer couple
+graphics/trainers/front_pics/ninja_boy.png,EWOK scout: small furry Ewok in a leather hood with a spear and a sling
+graphics/trainers/front_pics/old_couple.png,"OLD COUPLE: old Sullustan couple (jowls, big black eyes, round ears) in miner's coats"
 graphics/trainers/front_pics/palace_maven_spenser.png,"ZUCKUSS, PALACE ACE"
-graphics/trainers/front_pics/parasol_lady.png,Lady with a sunshade
+graphics/trainers/front_pics/parasol_lady.png,MIRIALAN lady with geometric face tattoos under a lace sunshade
 graphics/trainers/front_pics/picnicker.png,HOMESTEADER
 graphics/trainers/front_pics/pike_queen_lucy.png,"GARDULLA THE HUTT, PIKE ACE"
-graphics/trainers/front_pics/pokefan_f.png,BEASTFAN (f)
-graphics/trainers/front_pics/pokefan_m.png,BEASTFAN (m)
-graphics/trainers/front_pics/pokemaniac.png,BEASTMANIAC in a creature costume
-graphics/trainers/front_pics/pokemon_breeder_f.png,BREEDER (f)
-graphics/trainers/front_pics/pokemon_breeder_m.png,BREEDER (m)
+graphics/trainers/front_pics/pokefan_f.png,"RACE FAN (f): Twi'lek podrace fan in a team scarf, waving a flag"
+graphics/trainers/front_pics/pokefan_m.png,RACE FAN (m): stout podrace fan in a striped team vest with a pennant and macrobinoculars
+graphics/trainers/front_pics/pokemaniac.png,GAME HUNTER: Rodian hunter with a long rifle and a trophy-tooth necklace
+graphics/trainers/front_pics/pokemon_breeder_f.png,"HANDLER (f): Zabrak handler with small horns and face tattoos, feed sack and a long goad"
+graphics/trainers/front_pics/pokemon_breeder_m.png,HANDLER (m): burly bald creature handler in a leather harness with a goad and a feed bucket (Malakili style)
 graphics/trainers/front_pics/pokemon_ranger_f.png,PATHFINDER (f) with a scout pack
 graphics/trainers/front_pics/pokemon_ranger_m.png,PATHFINDER (m) with a scout pack
 graphics/trainers/front_pics/psychic_f.png,FORCE ADEPT (f) in a hooded robe
 graphics/trainers/front_pics/psychic_m.png,FORCE ADEPT (m) in a hooded robe
 graphics/trainers/front_pics/pyramid_king_brandon.png,"DEXTER JETTSTER, PYRAMID ACE"
-graphics/trainers/front_pics/red.png,RED (FireRed/LeafGreen link leftover): not redrawn
+graphics/trainers/front_pics/red.png,"RED (FireRed leftover, kept)"
 graphics/trainers/front_pics/rich_boy.png,YOUNG NOBLE
-graphics/trainers/front_pics/ruin_maniac.png,RELIC HUNTER with a lamp
-graphics/trainers/front_pics/running_triathlete_f.png,SWOOP RACER (f) running
-graphics/trainers/front_pics/running_triathlete_m.png,SWOOP RACER (m) running
+graphics/trainers/front_pics/ruin_maniac.png,"RELIC HUNTER: Duros (blue skin, red eyes, no nose) in a long coat with a glow-lamp"
+graphics/trainers/front_pics/running_triathlete_f.png,"SWOOP RACER (f) on foot: padded racing leathers, helmet under her arm"
+graphics/trainers/front_pics/running_triathlete_m.png,"SWOOP RACER (m) on foot: padded racing leathers, helmet under his arm"
 graphics/trainers/front_pics/sailor.png,SPACER
 graphics/trainers/front_pics/salon_maiden_anabel.png,"AURRA SING, TOWER ACE"
-graphics/trainers/front_pics/school_kid_f.png,CADET (f) with a datapad
+graphics/trainers/front_pics/school_kid_f.png,CADET (f): Imperial Academy cadet in a grey-green tunic and cap with a datapad
 graphics/trainers/front_pics/school_kid_m.png,CADET (m) with a datapad
-graphics/trainers/front_pics/sis_and_bro.png,Sister and brother paddlers
-graphics/trainers/front_pics/sr_and_jr.png,Old and young angler pair
+graphics/trainers/front_pics/sis_and_bro.png,NAUTOLANS: Nautolan sister and brother in swim gear with aquata breathers
+graphics/trainers/front_pics/sr_and_jr.png,PILOT & DROID: young pilot in an orange flight suit with her R2-series astromech droid
 graphics/trainers/front_pics/steven.png,LEIA ORGANA
-graphics/trainers/front_pics/swimmer_f.png,Swimmer (f) in a dive suit
-graphics/trainers/front_pics/swimmer_m.png,Swimmer (m) in a dive suit
-graphics/trainers/front_pics/swimming_triathlete_f.png,SWOOP RACER (f) swimming leg
-graphics/trainers/front_pics/swimming_triathlete_m.png,SWOOP RACER (m) swimming leg
-graphics/trainers/front_pics/tuber_f.png,PADDLER (f) with a flotation ring
-graphics/trainers/front_pics/tuber_m.png,PADDLER (m) with a flotation ring
-graphics/trainers/front_pics/twins.png,Twin kids
+graphics/trainers/front_pics/swimmer_f.png,NAUTOLAN diver (f): green-skinned Nautolan with head-tails in a dive suit
+graphics/trainers/front_pics/swimmer_m.png,MON CAL diver: Mon Calamari with a fish-like head and big side eyes in a dive suit
+graphics/trainers/front_pics/swimming_triathlete_f.png,SWOOP RACER (f) crossing water: racing wetsuit and an aquata breather
+graphics/trainers/front_pics/swimming_triathlete_m.png,SWOOP RACER (m) crossing water: racing wetsuit and an aquata breather
+graphics/trainers/front_pics/tuber_f.png,"WOOKIEE CUB (f): small Wookiee cub with bead braids, holding a carved float ring"
+graphics/trainers/front_pics/tuber_m.png,WOOKIEE CUB (m): small Wookiee cub hugging a carved log float
+graphics/trainers/front_pics/twins.png,TWINS: Twi'lek twin girls with matching wrapped head-tails
 graphics/trainers/front_pics/wally.png,LUKE SKYWALKER
-graphics/trainers/front_pics/young_couple.png,Young homesteader couple
-graphics/trainers/front_pics/youngster.png,Young farm boy
+graphics/trainers/front_pics/young_couple.png,YOUNG COUPLE: human smuggler in a vest and his Zabrak pilot partner
+graphics/trainers/front_pics/youngster.png,"SCRAP KID: Tatooine junkyard kid with goggles, patched tunic and a hydrospanner"
