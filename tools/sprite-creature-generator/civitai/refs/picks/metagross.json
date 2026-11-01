@@ -1,0 +1,9 @@
+{
+  "init": "refs/metagross_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/9/91/R2unit-NEGTD.png/revision/latest?cb=20221029043619",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "classic domed R2 astromech droid with blue panels on a round body and two strong legs",
+  "colour": "white and violet blue",
+  "ref_note": "R2 unit render (New Essential Guide to Droids, transparent): generic R2 rather than R2-D2; flipped so the front faces left"
+}

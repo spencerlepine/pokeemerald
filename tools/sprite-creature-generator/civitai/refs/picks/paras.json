@@ -1,0 +1,9 @@
+{
+  "init": "refs/paras_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/1/10/Gelagrub-Databank.png/revision/latest?cb=20221224060041#crop=0,0.3,1,1",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small fat grub with stubby legs a wide mouth and two little fungus caps sprouting from its back",
+  "colour": "dark teal and blue",
+  "ref_note": "canon Gelagrub databank render (transparent), cropped below the clone rider; head left, no flip"
+}

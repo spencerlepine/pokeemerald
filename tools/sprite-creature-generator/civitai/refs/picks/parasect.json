@@ -1,0 +1,9 @@
+{
+  "init": "refs/parasect_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/1/10/Gelagrub-Databank.png/revision/latest?cb=20221224060041#crop=0,0.3,1,1",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "large hunched grub almost covered by a huge red fungus canopy growing over its back",
+  "colour": "dark teal and blue",
+  "ref_note": "canon Gelagrub databank render, same crop as paras (only clean gelagrub art); bigger with a fungus canopy desc"
+}

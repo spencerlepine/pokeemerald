@@ -1,0 +1,9 @@
+{
+  "init": "refs/metang_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/6/66/R4unit-NEGTD.png/revision/latest/scale-to-width-down/1000?cb=20221029044615",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "conical domed R4 astromech droid on two sturdy legs with a third center leg",
+  "colour": "white and dark gray",
+  "ref_note": "R4 unit render (New Essential Guide to Droids, transparent): three-quarter view toward the left"
+}

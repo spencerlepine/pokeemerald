@@ -1,0 +1,10 @@
+{
+  "init": "refs/igglybuff_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/1/15/Buboicullaar-VE.png/revision/latest?cb=20220505135426",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small round puffball creature with tiny limbs and big sleepy eyes",
+  "colour": "sandy tan and olive",
+  "negative": "teeth, fangs",
+  "ref_note": "Bubo frog-dog of Tatooine used for the squat round body"
+}

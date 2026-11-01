@@ -1,0 +1,9 @@
+{
+  "init": "refs/beldum_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/2/22/R1series-NEGTD.png/revision/latest?cb=20221029043408",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "old tall cylindrical R1 astromech droid with a small dark dome and exposed brass machinery",
+  "colour": "dark navy and brass",
+  "ref_note": "R1-series render (New Essential Guide to Droids, transparent): tall old astromech; tall shape so the prep is height-limited"
+}
