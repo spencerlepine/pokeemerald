@@ -3,12 +3,12 @@
  "replaces": "graphics/battle_anims/sprites/sw/saber_blade_red.png",
  "png": "saber_blade_red.png",
  "size": [
-  16,
-  128
+  32,
+  256
  ],
  "frame": [
-  16,
-  32
+  32,
+  64
  ],
  "slots": [
   0,

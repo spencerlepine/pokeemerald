@@ -3,15 +3,18 @@
 #include "battle_anim.h"
 #include "sprite.h"
 #include "constants/battle_anim.h"
+#include "battle.h"
+#include "task.h"
+#include "trig.h"
 
 static const union AnimCmd sAnim_SaberBlade_0[] =
 {
     ANIMCMD_FRAME(0, 2),
-    ANIMCMD_FRAME(8, 3),
-    ANIMCMD_FRAME(16, 3),
-    ANIMCMD_FRAME(24, 44),
-    ANIMCMD_FRAME(16, 3),
-    ANIMCMD_FRAME(8, 3),
+    ANIMCMD_FRAME(32, 3),
+    ANIMCMD_FRAME(64, 3),
+    ANIMCMD_FRAME(96, 44),
+    ANIMCMD_FRAME(64, 3),
+    ANIMCMD_FRAME(32, 3),
     ANIMCMD_FRAME(0, 3),
     ANIMCMD_END,
 };
@@ -25,7 +28,7 @@ const struct SpriteTemplate gSaberBladeSpriteTemplate =
 {
     .tileTag = ANIM_TAG_SW_SABER_BLADE,
     .paletteTag = ANIM_TAG_SW_SABER_BLADE,
-    .oam = &gOamData_AffineOff_ObjNormal_16x32,
+    .oam = &gOamData_AffineOff_ObjNormal_32x64,
     .anims = sAnimTable_SaberBlade,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
@@ -35,11 +38,11 @@ const struct SpriteTemplate gSaberBladeSpriteTemplate =
 static const union AnimCmd sAnim_SaberBladeRed_0[] =
 {
     ANIMCMD_FRAME(0, 2),
-    ANIMCMD_FRAME(8, 3),
-    ANIMCMD_FRAME(16, 3),
-    ANIMCMD_FRAME(24, 44),
-    ANIMCMD_FRAME(16, 3),
-    ANIMCMD_FRAME(8, 3),
+    ANIMCMD_FRAME(32, 3),
+    ANIMCMD_FRAME(64, 3),
+    ANIMCMD_FRAME(96, 44),
+    ANIMCMD_FRAME(64, 3),
+    ANIMCMD_FRAME(32, 3),
     ANIMCMD_FRAME(0, 3),
     ANIMCMD_END,
 };
@@ -53,7 +56,7 @@ const struct SpriteTemplate gSaberBladeRedSpriteTemplate =
 {
     .tileTag = ANIM_TAG_SW_SABER_BLADE_RED,
     .paletteTag = ANIM_TAG_SW_SABER_BLADE_RED,
-    .oam = &gOamData_AffineOff_ObjNormal_16x32,
+    .oam = &gOamData_AffineOff_ObjNormal_32x64,
     .anims = sAnimTable_SaberBladeRed,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,

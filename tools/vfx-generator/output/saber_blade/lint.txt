@@ -1,15 +1,15 @@
 # saber_blade: SABER SLASH blade (blue)
 new sheet: graphics/battle_anims/sprites/sw/saber_blade.png
-sheet 16x128, frame 16x32, slots drawn [0, 1, 2, 3], game uses [0, 1, 2, 3]
+sheet 32x256, frame 32x64, slots drawn [0, 1, 2, 3], game uses [0, 1, 2, 3]
 palette gate: PASS
-  OK   /home/user/pokeemerald/tools/vfx-generator/output/saber_blade/saber_blade.png  (bpp 4, colours 7/15, on-theme 3/7)
-    warn:  4 of 7 colours are off-theme: [2] #A0A8B0 (nearest #7880A0, dE 20), [3] #586068 (nearest #7880A0, dE 19), [6] #A8D8F8 (nearest #58C8F8, dE 17), [7] #4898F8 (nearest #58C8F8, dE 36)
-STYLE SCORE 100/100 (group new)
+  OK   /home/user/pokeemerald/tools/vfx-generator/output/saber_blade/saber_blade.png  (bpp 4, colours 8/15, on-theme 3/8)
+    warn:  5 of 8 colours are off-theme: [2] #A0A8B0 (nearest #7880A0, dE 20), [3] #586068 (nearest #7880A0, dE 19), [6] #A8D8F8 (nearest #58C8F8, dE 17), [7] #4898F8 (nearest #58C8F8, dE 36), [8] #1850C0 (nearest #7880A0, dE 53)
+STYLE SCORE 95/100 (group new)
   ok    tiny_colours 0.00 (vanilla band 0.00..1.00)
   ok    lone 0.00 (vanilla band 0.00..0.02)
   ok    checker 0.00 (vanilla band 0.00..0.15)
-  ok    dark_edge 0.12 (vanilla band 0.00..0.68)
-  ok    core_bright 39.08 (vanilla band -18.79..96.63)
+  ok    dark_edge 0.09 (vanilla band 0.00..0.68)
+  ok    core_bright 33.28 (vanilla band -18.79..96.63)
   ok    luma_range 207.09 (vanilla band 0.00..222.28)
-  ok    coverage 0.15 (vanilla band 0.09..0.75)
+  WARN  coverage 0.07 (vanilla band 0.09..0.75): frame fill is outside what vanilla effects use (too empty or too packed).
   ok    border 0.00 (vanilla band 0.00..0.27)
