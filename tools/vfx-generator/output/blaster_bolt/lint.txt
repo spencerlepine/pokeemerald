@@ -1,0 +1,14 @@
+# blaster_bolt: BLASTER SHOT bolt
+new sheet: graphics/battle_anims/sprites/sw/blaster_bolt.png
+sheet 32x64, frame 32x32, slots drawn [0, 1], game uses [0, 1]
+palette gate: PASS
+  OK   /home/user/pokeemerald/tools/vfx-generator/output/blaster_bolt/blaster_bolt.png  (bpp 4, colours 4/15)
+STYLE SCORE 100/100 (group new)
+  ok    tiny_colours 0.00 (vanilla band 0.00..1.00)
+  ok    lone 0.00 (vanilla band 0.00..0.02)
+  ok    checker 0.00 (vanilla band 0.00..0.15)
+  ok    dark_edge 0.00 (vanilla band 0.00..0.68)
+  ok    core_bright 96.37 (vanilla band -18.79..96.63)
+  ok    luma_range 183.25 (vanilla band 0.00..222.28)
+  ok    coverage 0.09 (vanilla band 0.09..0.75)
+  ok    border 0.00 (vanilla band 0.00..0.27)

@@ -1,0 +1,27 @@
+# BLASTER SHOT kit, sheet 1 of 3 (owns the kit palette). A red blaster bolt drawn pointing UP (the
+# engine's projectile convention: the callback rotates "up" onto the firing line). 32x32 frame so the
+# rotated bolt never clips; slot 1 is the same bolt with the core one pixel forward (flicker).
+name: blaster_bolt
+title: BLASTER SHOT bolt
+row: net:vfx-blaster-shot
+bucket: NEW
+new:
+  path: graphics/battle_anims/sprites/sw/blaster_bolt.png
+  size: [32, 64]
+  frame: [32, 32]
+brief: >
+  A short fat red energy bolt, white-hot head at the top, red sheath, tail tapering darker to the bottom.
+  Hard bands, no outline. Reads as a Star Wars blaster bolt, not a laser line.
+palette:
+  mode: new
+  transparent: "#000000"
+  ramps:
+    bolt:  ["#FFFFFF", "#FFC8B8", "#FF4830", "#B01418"]
+    flash: ["#FFFFFF", "#FFF0A0", "#FFB040", "#D06010"]
+    hud:   ["#D0FFD0", "#38D860"]
+    smoke: ["#C8C0B8", "#888078", "#48403C"]
+ops:
+  - beam: {x0: 16, y0: "=6 - i", x1: 16, y1: 26, r0: 2.6, r1: 1.2, ramp: bolt, bands: [0.75, 0.45, 0.2], falloff: 1.2}
+  - beam: {x0: 16, y0: "=7 - i", x1: 16, y1: 17, r0: 1.1, r1: 0.6, ramp: bolt, bands: [0.5, 0.0], offset: 0}
+preview: {scene: none}
+lint_allow: [lone, core_bright, luma_range, coverage]

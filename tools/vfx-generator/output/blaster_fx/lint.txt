@@ -1,0 +1,14 @@
+# blaster_fx: BLASTER SHOT flash, impact, HUD
+new sheet: graphics/battle_anims/sprites/sw/blaster_fx.png
+sheet 16x112, frame 16x16, slots drawn [0, 1, 2, 3, 4, 5, 6], game uses [0, 1, 2, 3, 4, 5, 6]
+palette gate: PASS
+  OK   /home/user/pokeemerald/tools/vfx-generator/output/blaster_fx/blaster_fx.png  (bpp 4, colours 9/15)
+STYLE SCORE 100/100 (group new)
+  ok    tiny_colours 0.00 (vanilla band 0.00..1.00)
+  ok    lone 0.13 (vanilla band 0.00..0.02) - allowed by spec
+  ok    checker 0.05 (vanilla band 0.00..0.15)
+  ok    dark_edge 0.00 (vanilla band 0.00..0.68)
+  ok    core_bright 39.39 (vanilla band -18.79..96.63)
+  ok    luma_range 183.25 (vanilla band 0.00..222.28)
+  ok    coverage 0.16 (vanilla band 0.09..0.75)
+  ok    border 0.15 (vanilla band 0.00..0.27)

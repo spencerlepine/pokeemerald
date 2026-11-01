@@ -48,10 +48,10 @@ script: |
   simple_palette_blend selector=F_PAL_BG, delay=2, initial_blend_y=0, target_blend_y=6, color=RGB_BLACK
   createvisualtask AnimTask_IsTargetPlayerSide, 2
   jumprettrue SaberSlashRedBlade
-  createsprite gSaberBladeSpriteTemplate, ANIM_ATTACKER, 2, 14, -6, 0, 0
+  createsprite gSaberBladeSpriteTemplate, ANIM_ATTACKER, 2, 18, -16, 0, 0
   goto SaberSlashIgnite
   SaberSlashRedBlade:
-  createsprite gSaberBladeRedSpriteTemplate, ANIM_ATTACKER, 2, 14, -6, 0, 0
+  createsprite gSaberBladeRedSpriteTemplate, ANIM_ATTACKER, 2, 18, -16, 0, 0
   SaberSlashIgnite:
   playsewithpan SE_SABER_IGNITE, SOUND_PAN_ATTACKER
   delay 10

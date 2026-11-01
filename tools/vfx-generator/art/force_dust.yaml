@@ -1,0 +1,27 @@
+# FORCE PUSH kit, sheet 2 of 2 (kit palette). Dust kicked up at the target's feet as it is shoved back.
+name: force_dust
+title: FORCE PUSH dust
+row: net:vfx-force-push
+bucket: NEW
+new:
+  path: graphics/battle_anims/sprites/sw/force_dust.png
+  size: [16, 48]
+  frame: [16, 16]
+brief: A low sandy dust cloud, lit from the top-left; 0 a tight burst, 1 spread, 2 thin and broken.
+palette:
+  mode: kit
+preview: {scene: none}
+lint_allow: [lone, core_bright, luma_range, coverage, dark_edge]
+frame_ops:
+  0:
+    - ellipse: {cx: 8, cy: 11, rx: 4.5, ry: 3.0, light: [-0.6, -0.6], ramp: dust}
+    - disc: {cx: 6, cy: 9, r: 2.2, light: [-0.6, -0.6], ramp: dust}
+  1:
+    - ellipse: {cx: 8, cy: 10, rx: 6.5, ry: 4.0, light: [-0.6, -0.6], ramp: dust}
+    - disc: {cx: 4, cy: 8, r: 2.6, light: [-0.6, -0.6], ramp: dust}
+    - disc: {cx: 11, cy: 7, r: 2.4, light: [-0.6, -0.6], ramp: dust}
+  2:
+    - disc: {cx: 4, cy: 8, r: 2.6, light: [-0.6, -0.6], ramp: dust, offset: 1}
+    - disc: {cx: 12, cy: 7, r: 2.4, light: [-0.6, -0.6], ramp: dust, offset: 1}
+    - disc: {cx: 8, cy: 11, r: 2.4, light: [-0.6, -0.6], ramp: dust, offset: 1}
+    - sparks: {x: 1, y: 3, w: 14, h: 11, n: 5, shape: dot, ramp: dust, offset: 2, seed: 4, mode: under}

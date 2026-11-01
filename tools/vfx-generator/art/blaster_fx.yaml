@@ -1,0 +1,77 @@
+# BLASTER SHOT kit, sheet 2 of 3 (kit palette). Slots: 0-1 muzzle flash, 2-4 impact spark,
+# 5-6 targeting bracket (HUD green).
+name: blaster_fx
+title: BLASTER SHOT flash, impact, HUD
+row: net:vfx-blaster-shot
+bucket: NEW
+new:
+  path: graphics/battle_anims/sprites/sw/blaster_fx.png
+  size: [16, 112]
+  frame: [16, 16]
+brief: >
+  0 a small hot star muzzle flash, 1 the flash wider and thinner; 2-4 an impact: white burst, red-orange
+  spray, fading specks; 5 four corner brackets, 6 the brackets pulled tight with a centre dot.
+palette:
+  mode: kit
+preview: {scene: none}
+lint_allow: [lone, core_bright, luma_range, coverage, dark_edge]
+frame_ops:
+  0:
+    - star: {cx: 8, cy: 8, r_in: 2.0, r_out: 6.5, points: 4, rot: 0, ramp: flash}
+    - disc: {cx: 8, cy: 8, r: 2.4, ramp: flash, bands: [0.3, 0.0]}
+  1:
+    - star: {cx: 8, cy: 8, r_in: 1.4, r_out: 7.5, points: 8, rot: 22, ramp: flash, offset: 1}
+    - disc: {cx: 8, cy: 8, r: 1.6, ramp: flash, bands: [0.0]}
+  2:
+    - disc: {cx: 8, cy: 8, r: 5.0, ramp: flash, bands: [0.6, 0.3, 0.1]}
+    - star: {cx: 8, cy: 8, r_in: 3.0, r_out: 7.5, points: 6, rot: 10, ramp: bolt, mode: under, offset: 1}
+  3:
+    - ring: {cx: 8, cy: 8, r: 5.5, thick: 1.6, ramp: bolt, offset: 1}
+    - sparks: {cx: 8, cy: 8, r: 6.5, n: 6, shape: plus, ramp: flash, seed: 3}
+  4:
+    - sparks: {cx: 8, cy: 8, r: 7, n: 5, shape: dot, ramp: bolt, offset: 2, seed: 7}
+    - sparks: {cx: 8, cy: 8, r: 4, n: 3, shape: dot, ramp: smoke, offset: 1, seed: 9}
+  5:
+    - grid:
+        x: 0
+        y: 0
+        rows:
+          - "hhhh........hhhh"
+          - "h..............h"
+          - "h..............h"
+          - "h..............h"
+          - "................"
+          - "................"
+          - "................"
+          - "................"
+          - "................"
+          - "................"
+          - "................"
+          - "................"
+          - "h..............h"
+          - "h..............h"
+          - "h..............h"
+          - "hhhh........hhhh"
+        legend: {h: hud.1}
+  6:
+    - grid:
+        x: 0
+        y: 0
+        rows:
+          - "................"
+          - "................"
+          - "..hhh......hhh.."
+          - "..h..........h.."
+          - "..h..........h.."
+          - "................"
+          - "................"
+          - ".......cc......."
+          - ".......cc......."
+          - "................"
+          - "................"
+          - "..h..........h.."
+          - "..h..........h.."
+          - "..hhh......hhh.."
+          - "................"
+          - "................"
+        legend: {h: hud.0, c: bolt.2}

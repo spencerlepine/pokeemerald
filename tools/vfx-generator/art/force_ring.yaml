@@ -1,0 +1,27 @@
+# FORCE PUSH kit, sheet 1 of 2 (owns the kit palette). A cold shock ring that widens and thins as it
+# travels: slots 0-3, radius 5 -> 14. Alpha-blended in game (ObjBlend).
+name: force_ring
+title: FORCE PUSH shock ring
+row: net:vfx-force-push
+bucket: NEW
+new:
+  path: graphics/battle_anims/sprites/sw/force_ring.png
+  size: [32, 128]
+  frame: [32, 32]
+brief: >
+  A pressure wave: a pale blue-white ring with a white leading edge, widening and thinning over four
+  slots, a faint inner echo ring on the bigger slots. No fill, no outline.
+palette:
+  mode: new
+  transparent: "#000000"
+  ramps:
+    ring: ["#FFFFFF", "#D8E8FF", "#90B0FF", "#5060D0"]
+    dust: ["#E8D8B0", "#B09868", "#706040"]
+vars:
+  r: "=[5, 8, 11, 14][i]"
+  t: "=[3.0, 2.6, 2.2, 1.6][i]"
+ops:
+  - ring: {cx: 16, cy: 16, r: "=r", thick: "=t", ramp: ring, bright: outer, offset: "=0 if i < 3 else 1"}
+  - ring: {when: "=i >= 2", cx: 16, cy: 16, r: "=r - 4", thick: 1.0, ramp: ring, offset: 2, mode: under}
+preview: {scene: none}
+lint_allow: [lone, core_bright, luma_range, coverage]

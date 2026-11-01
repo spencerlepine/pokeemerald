@@ -1,0 +1,27 @@
+# BLASTER SHOT kit, sheet 3 of 3 (kit palette). A smoke puff that swells and thins as it rises.
+name: blaster_smoke
+title: BLASTER SHOT smoke
+row: net:vfx-blaster-shot
+bucket: NEW
+new:
+  path: graphics/battle_anims/sprites/sw/blaster_smoke.png
+  size: [16, 48]
+  frame: [16, 16]
+brief: A grey puff, lit from the top-left; 0 small and dense, 1 bigger, 2 big and broken up.
+palette:
+  mode: kit
+preview: {scene: none}
+lint_allow: [lone, core_bright, luma_range, coverage, dark_edge]
+frame_ops:
+  0:
+    - disc: {cx: 8, cy: 9, r: 3.6, light: [-0.6, -0.6], ramp: smoke}
+    - disc: {cx: 6, cy: 8, r: 2.4, light: [-0.6, -0.6], ramp: smoke}
+  1:
+    - disc: {cx: 8, cy: 9, r: 5.0, light: [-0.6, -0.6], ramp: smoke}
+    - disc: {cx: 5, cy: 7, r: 3.2, light: [-0.6, -0.6], ramp: smoke}
+    - disc: {cx: 11, cy: 6, r: 2.8, light: [-0.6, -0.6], ramp: smoke}
+  2:
+    - disc: {cx: 5, cy: 6, r: 3.6, light: [-0.6, -0.6], ramp: smoke, offset: 1}
+    - disc: {cx: 11, cy: 7, r: 3.2, light: [-0.6, -0.6], ramp: smoke, offset: 1}
+    - disc: {cx: 8, cy: 11, r: 3.0, light: [-0.6, -0.6], ramp: smoke, offset: 1}
+    - sparks: {x: 1, y: 1, w: 14, h: 14, n: 5, shape: dot, ramp: smoke, offset: 2, seed: 5, mode: under}

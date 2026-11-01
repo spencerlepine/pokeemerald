@@ -1,0 +1,145 @@
+# BLASTER SHOT (net-new, clone of SWIFT, Normal 60, never misses). Storyboard S2 in wiki/bible/MOVE_EFFECTS.md.
+# Prototyped on Move_SWIFT until the net-new move exists. Lock on, five fanned bolts with muzzle flashes,
+# five impacts with shakes, smoke rising off the target.
+name: blaster_shot
+title: BLASTER SHOT
+doc: S2
+host: Move_SWIFT
+romtest: {move: MOVE_SWIFT}
+kit:
+  - blaster_bolt           # owns the palette
+  - blaster_fx             # kit palette
+  - blaster_smoke          # kit palette
+templates:
+  gBlasterBoltSpriteTemplate:
+    sheet: blaster_bolt
+    affine: normal
+    callback: AnimSW_BlasterBolt       # args: x0, y0 (from attacker), x1, y1 (on target), frames
+    anim: [[0, 2], [1, 2]]
+    loop: true
+  gBlasterFlashSpriteTemplate:
+    sheet: blaster_fx
+    callback: AnimSpriteOnMonPos
+    anim: [[0, 2], [1, 3]]
+  gBlasterImpactSpriteTemplate:
+    sheet: blaster_fx
+    callback: AnimSpriteOnMonPos
+    anim: [[2, 2], [3, 3], [4, 4]]
+  gBlasterLockSpriteTemplate:
+    sheet: blaster_fx
+    callback: AnimSpriteOnMonPos
+    anim: [[5, 4], [6, 3], [5, 3], [6, 8]]
+  gBlasterSmokeSpriteTemplate:
+    sheet: blaster_smoke
+    blend: true
+    callback: AnimSW_RisingPuff        # args: x, y (on target), x drift per 8 frames
+    anim: [[0, 8], [1, 10], [2, 12]]
+code: |
+  // A bolt from the attacker to a point on the target, rotated onto its line (sprite art points up).
+  static void AnimSW_BlasterBolt(struct Sprite *sprite)
+  {
+      s16 x, y;
+      u16 rot;
+
+      if (GetBattlerSide(gBattleAnimAttacker) != B_SIDE_PLAYER)
+      {
+          gBattleAnimArgs[2] = -gBattleAnimArgs[2];
+          gBattleAnimArgs[1] = -gBattleAnimArgs[1];
+          gBattleAnimArgs[3] = -gBattleAnimArgs[3];
+      }
+      InitSpritePosToAnimAttacker(sprite, TRUE);
+      x = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_X_2) + gBattleAnimArgs[2];
+      y = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_Y_PIC_OFFSET) + gBattleAnimArgs[3];
+      rot = ArcTan2Neg(x - sprite->x, y - sprite->y);
+      rot -= 0x4000;
+      TrySetSpriteRotScale(sprite, FALSE, 0x100, 0x100, rot);
+      sprite->data[0] = gBattleAnimArgs[4];
+      sprite->data[2] = x;
+      sprite->data[4] = y;
+      sprite->callback = StartAnimLinearTranslation;
+      StoreSpriteCallbackInData6(sprite, DestroyAnimSprite);
+  }
+
+  static void AnimSW_RisingPuff_Step(struct Sprite *sprite)
+  {
+      sprite->data[1]++;
+      if (!(sprite->data[1] & 1))
+          sprite->y2--;
+      if (!(sprite->data[1] & 7))
+          sprite->x2 += sprite->data[2];
+      if (sprite->animEnded)
+          DestroyAnimSprite(sprite);
+  }
+
+  // A puff on the target that rises one pixel every two frames and drifts sideways.
+  static void AnimSW_RisingPuff(struct Sprite *sprite)
+  {
+      InitSpritePosToAnimTarget(sprite, TRUE);
+      sprite->data[1] = 0;
+      sprite->data[2] = gBattleAnimArgs[2];
+      sprite->callback = AnimSW_RisingPuff_Step;
+  }
+script: |
+  loadspritegfx ANIM_TAG_SW_BLASTER_BOLT
+  loadspritegfx ANIM_TAG_SW_BLASTER_FX
+  loadspritegfx ANIM_TAG_SW_BLASTER_SMOKE
+  monbg ANIM_DEF_PARTNER
+  setalpha 12, 8
+  @ aim: the targeting bracket blinks on the target
+  createsprite gBlasterLockSpriteTemplate, ANIM_TARGET, 4, 0, 0, 1, 0
+  playsewithpan SE_TARGET_LOCK, SOUND_PAN_TARGET
+  delay 16
+  @ fire x5, fanned
+  @ bolt 1
+  createsprite gBlasterFlashSpriteTemplate, ANIM_ATTACKER, 3, 22, -6, 0, 0
+  createsprite gBlasterBoltSpriteTemplate, ANIM_TARGET, 3, 20, -6, -4, -6, 10
+  playsewithpan SE_BLASTER_BOLT, SOUND_PAN_ATTACKER
+  delay 10
+  createsprite gBlasterImpactSpriteTemplate, ANIM_TARGET, 4, -4, -6, 1, 0
+  playsewithpan SE_BLASTER_IMPACT, SOUND_PAN_TARGET
+  createvisualtask AnimTask_ShakeMon, 5, ANIM_TARGET, 2, 0, 4, 1
+  @ bolt 2
+  createsprite gBlasterFlashSpriteTemplate, ANIM_ATTACKER, 3, 22, -6, 0, 0
+  createsprite gBlasterBoltSpriteTemplate, ANIM_TARGET, 3, 20, -6, 6, 2, 10
+  playsewithpan SE_BLASTER_BOLT, SOUND_PAN_ATTACKER
+  delay 10
+  createsprite gBlasterImpactSpriteTemplate, ANIM_TARGET, 4, 6, 2, 1, 0
+  playsewithpan SE_BLASTER_IMPACT, SOUND_PAN_TARGET
+  createvisualtask AnimTask_ShakeMon, 5, ANIM_TARGET, 2, 0, 4, 1
+  @ bolt 3
+  createsprite gBlasterFlashSpriteTemplate, ANIM_ATTACKER, 3, 22, -10, 0, 0
+  createsprite gBlasterBoltSpriteTemplate, ANIM_TARGET, 3, 20, -10, -2, 6, 10
+  playsewithpan SE_BLASTER_BOLT, SOUND_PAN_ATTACKER
+  delay 10
+  createsprite gBlasterImpactSpriteTemplate, ANIM_TARGET, 4, -2, 6, 1, 0
+  playsewithpan SE_BLASTER_IMPACT, SOUND_PAN_TARGET
+  createvisualtask AnimTask_ShakeMon, 5, ANIM_TARGET, 2, 0, 4, 1
+  @ bolt 4
+  createsprite gBlasterFlashSpriteTemplate, ANIM_ATTACKER, 3, 22, -4, 0, 0
+  createsprite gBlasterBoltSpriteTemplate, ANIM_TARGET, 3, 20, -4, 8, -4, 10
+  playsewithpan SE_BLASTER_BOLT, SOUND_PAN_ATTACKER
+  delay 10
+  createsprite gBlasterImpactSpriteTemplate, ANIM_TARGET, 4, 8, -4, 1, 0
+  playsewithpan SE_BLASTER_IMPACT, SOUND_PAN_TARGET
+  createvisualtask AnimTask_ShakeMon, 5, ANIM_TARGET, 2, 0, 4, 1
+  @ bolt 5
+  createsprite gBlasterFlashSpriteTemplate, ANIM_ATTACKER, 3, 22, -8, 0, 0
+  createsprite gBlasterBoltSpriteTemplate, ANIM_TARGET, 3, 20, -8, 0, 0, 10
+  playsewithpan SE_BLASTER_BOLT, SOUND_PAN_ATTACKER
+  delay 10
+  createsprite gBlasterImpactSpriteTemplate, ANIM_TARGET, 4, 0, 0, 1, 0
+  playsewithpan SE_BLASTER_IMPACT, SOUND_PAN_TARGET
+  createvisualtask AnimTask_ShakeMon, 5, ANIM_TARGET, 6, 0, 10, 1
+  @ aftermath: smoke rises, the target darkens a moment
+  simple_palette_blend selector=F_PAL_TARGET, delay=1, initial_blend_y=0, target_blend_y=5, color=RGB_BLACK
+  createsprite gBlasterSmokeSpriteTemplate, ANIM_TARGET, 2, -8, 4, -1
+  delay 4
+  createsprite gBlasterSmokeSpriteTemplate, ANIM_TARGET, 2, 6, 0, 1
+  delay 4
+  createsprite gBlasterSmokeSpriteTemplate, ANIM_TARGET, 2, 0, 8, 0
+  delay 12
+  simple_palette_blend selector=F_PAL_TARGET, delay=1, initial_blend_y=5, target_blend_y=0, color=RGB_BLACK
+  waitforvisualfinish
+  clearmonbg ANIM_DEF_PARTNER
+  blendoff
+  end
