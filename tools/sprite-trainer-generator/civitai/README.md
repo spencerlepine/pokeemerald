@@ -8,6 +8,25 @@ trainer LoRA [Pokémon Trainer Sprite PixelArt](https://civitai.com/models/15933
 (`magma_leader_maxie`), stored in the wiki at `wiki/art/graphics/trainers/front_pics/` and marked
 ART_READY; not copied into `game/` yet. Runs are kept in `runs/<trainer>/`.
 
+## Batch (all trainers)
+
+`batch.py` ran every pending trainer front pic on 2026-11-01 with no human review: 92 pics
+(91 front pics + Prof. Korr's `birch_speech/birch.png`) are in `wiki/art/` as ART_READY, about 375
+green Buzz in total. Each trainer gets one 1-image take; a take that fails the automatic checks
+(palette `check`, grid found, size, colour count, no duplicate/turnaround figures, no leftover
+background box, pair pics show two people) gets one retry. Each pick is committed on its own.
+
+```bash
+python batch.py --list                         # still pending
+python batch.py --budget 300 -j 4              # run all pending, stop before 300 Buzz
+python batch.py --redo --budget 20 may sailor  # regenerate named trainers even if ART_READY
+python batch.py --refinish                     # re-run the free finisher on every auto-picked raw
+```
+
+Brendan, May, their R/S pics, Wally and Leia (steven) share their palette with the back pic: the
+new `.pal` is in `wiki/art/graphics/trainers/palettes/`, and the back pics must adopt it.
+Nothing is in `game/` yet.
+
 ## Setup
 
 1. Make a key: civitai.com, **Account settings, API Keys, Add API key**.
