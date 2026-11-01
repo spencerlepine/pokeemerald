@@ -3,29 +3,27 @@ description: 'SANDO: the greatest of the sando aqua monsters (replaces Kyogre).'
 kit: frames32x32_4
 replaces: graphics/object_events/pics/pokemon/kyogre.png
 graphics_info: gObjectEventGraphicsInfo_KyogreFront
-notes: 'Mockup: front and side, each with a breathing bob; blue-grey hide, dark ridged back, webbed claws, white fangs jutting from the underbite.'
+notes: 'Mockup v2 (forms): front and side, each with a breathing bob; dark ridged back over blue-grey hide, broad head, underslung jaw with fangs, webbed flippers, finned tail.'
 palette: sw_kyogre
 palette_tag: OBJ_EVENT_PAL_TAG_KYOGRE
 shade: true
-materials:
-  K: a
-  d: a
-  H: s@
-  J: s@
-  B: b
-  A: s!
-  f: a
-  T: a
-  R: c
-  G: a
-  c: b
-  F: s!
+materials: {}
 legend:
-  k: 15
+  '1': 1
+  '2': 2
+  '3': 3
+  '4': 4
+  '5': 5
+  '6': 6
+  '7': 7
+  '8': 8
+  '9': 9
+  a: 10
+  b: 11
+  c: 12
+  d: 13
   e: 14
-  t: 14
-  o: 4
-  n: 15
+  f: 15
 accept:
   hair_rows: 'a sea beast: its ridged back, not hair, sits above the face'
 frames:
@@ -33,63 +31,63 @@ frames:
 
     ................................
 
-    ..........f..........f..........
+    ...............77...............
 
-    .........fff........fff.........
+    ..........77..7557..77..........
 
-    .........ffffTTTTTTffff.........
+    .........7557.7667.7557.........
 
-    ..........ffTTTTTTTTff..........
+    .........75577766777557.........
 
-    ........KKKKKKddddKKKKKK........
+    ......77776676777767667777......
 
-    ......KKKKKKKKKKKKKKKKKKKK......
+    .....7576766765775676676757.....
 
-    ....KKKKKKKKKKddddKKKKKKKKKK....
+    ....7555777775ee555777775557....
 
-    ...KKKKKKKKKKKKKKKKKKKKKKKKKK...
+    ...77666777755555555777766677...
 
-    ..KKKKKKKKKKKKddddKKKKKKKKKKKK..
+    ...77767766666666666666776777...
 
-    .KKKKKKKKKKKKKKKKKKKKKKKKKKKKKK.
+    ..7777776666666666666666777777..
 
-    .KKKKKKKKHHHHHHHHHHHHHHKKKKKKKK.
+    ..7677766644444444444466677767..
 
-    KKKKKKKHHHHHHHHHHHHHHHHHHKKKKKKK
+    ..7776664414411111144144666777..
 
-    AAKKKKHHGGGHHHHHHHHHHGGGHHKKKKAA
+    ..7776641441111111111441466777..
 
-    AAAKKoHkkGHHHHHHHHHHHHGkkHoKKAAA
+    ..77764111fef1ee111fef11146777..
 
-    AAAAKoHekHHHHHHHHHHHHHHkeHoKAAAA
+    ..77764222ffe222222eff22246777..
 
-    AAAAKoHHHHHHHHHHHHHHHHHHHHoKAAAA
+    ...76423322222222222222332467...
 
-    AAAAAKoHHHHHHHHHHHHHHHHHHoKAAAAA
+    ...44343332222222222223334344...
 
-    .AAAAKoHHHHHnHHHHHHnHHHHHoKAAAA.
+    ..44124332222f2222f22223342144..
 
-    .AAAAAKoHHHHHHHHHHHHHHHHoKAAAAA.
+    .4411133e32e22e22e22e23e3311144.
 
-    ..AAAAKotHHHHHHHHHHHHHHtoKAAAA..
+    .4111113e22e44e44e44e22e3111114.
 
-    ..AAAAKotooooRRttRRooootoKAAAA..
+    .424222feffeffeffeffeffef222424.
 
-    ..AAAAAoJJJJJJJJJJJJJJJJoAAAAA..
+    .44222241ec1ec1bb1ce1ce14222244.
 
-    ..AAAAAoJJJJJJJJJJJJJJJJoAAAAA..
+    .422224222222222222222222422224.
 
-    ...AAAAoJJJJJJJJJJJJJJJJoAAAA...
+    .422223433333333333333334322224.
 
-    ...AAAAAoJJJJJJJJJJJJJJoAAAAA...
+    .433222344433333333334443222334.
 
-    ..AAAAAAoBBBBBBBBBBBBBBoAAAAAA..
+    .4333332aaa4444444444aaa2333334.
 
-    .AAAAAAA.oBBBBBBBBBBBBo.AAAAAAA.
+    ..433334.a9aaaaaaaaaa9a.433334..
 
-    .AcAcAcA..ooBBBBBBBBoo..AcAcAcA.
+    ..a4444...a9aaaaaaaa9a...4444a..
 
-    ..c.c.c.....oooooooo.....c.c.c..
+    ..aa.a.a...aaaaaaaaaa...a.a.aa..
 
     ................................
 
@@ -100,61 +98,61 @@ frames:
 
     ................................
 
-    ..........f..........f..........
+    ...............77...............
 
-    .........fff........fff.........
+    ..........77..7557..77..........
 
-    .........ffffTTTTTTffff.........
+    .........7557.7667.7557.........
 
-    ..........ffTTTTTTTTff..........
+    .........75577766777557.........
 
-    ........KKKKKKddddKKKKKK........
+    ......77776676777767667777......
 
-    ......KKKKKKKKKKKKKKKKKKKK......
+    .....7576766765775676676757.....
 
-    ....KKKKKKKKKKddddKKKKKKKKKK....
+    ....7555777775ee555777775557....
 
-    ...KKKKKKKKKKKKKKKKKKKKKKKKKK...
+    ...77666777755555555777766677...
 
-    ..KKKKKKKKKKKKddddKKKKKKKKKKKK..
+    ...77767766666666666666776777...
 
-    .KKKKKKKKKKKKKKKKKKKKKKKKKKKKKK.
+    ..7777776666666666666666777777..
 
-    .KKKKKKKKHHHHHHHHHHHHHHKKKKKKKK.
+    ..7677766644444444444466677767..
 
-    KKKKKKKHHHHHHHHHHHHHHHHHHKKKKKKK
+    ..7776664414411111144144666777..
 
-    AAKKKKHHGGGHHHHHHHHHHGGGHHKKKKAA
+    ..7776641441111111111441466777..
 
-    AAAKKoHkkGHHHHHHHHHHHHGkkHoKKAAA
+    ..77764111fef1ee111fef11146777..
 
-    AAAAKoHekHHHHHHHHHHHHHHkeHoKAAAA
+    ..77764222ffe222222eff22246777..
 
-    AAAAKoHHHHHHHHHHHHHHHHHHHHoKAAAA
+    ...76423322222222222222332467...
 
-    AAAAAKoHHHHHHHHHHHHHHHHHHoKAAAAA
+    ...44343332222222222223334344...
 
-    .AAAAKoHHHHHnHHHHHHnHHHHHoKAAAA.
+    ..44124332222f2222f22223342144..
 
-    .AAAAAKoHHHHHHHHHHHHHHHHoKAAAAA.
+    .4411133e32e22e22e22e23e3311144.
 
-    ..AAAAKotHHHHHHHHHHHHHHtoKAAAA..
+    .4111113e22e44e44e44e22e3111114.
 
-    ..AAAAKotooooRRttRRooootoKAAAA..
+    .424222feffeffeffeffeffef222424.
 
-    ..AAAAAoJJJJJJJJJJJJJJJJoAAAAA..
+    .44222241ec1ec1bb1ce1ce14222244.
 
-    ..AAAAAoJJJJJJJJJJJJJJJJoAAAAA..
+    .422224222222222222222222422224.
 
-    ...AAAAoJJJJJJJJJJJJJJJJoAAAA...
+    .433223433333333333333334322334.
 
-    ...AAAAAoJJJJJJJJJJJJJJoAAAAA...
+    .433333344433333333334443333334.
 
-    ..AAAAAAoBBBBBBBBBBBBBBoAAAAAA..
+    .4333332aaa4444444444aaa2333334.
 
-    .AcAcAcA..ooBBBBBBBBoo..AcAcAcA.
+    ..444444.aaaaaaaaaaaaaa.444444..
 
-    ..c.c.c.....oooooooo.....c.c.c..
+    ..aa.a.a...aaaaaaaaaa...a.a.aa..
 
     ................................
 
@@ -171,57 +169,57 @@ frames:
 
     ................................
 
-    ..........dd.dd.................
+    ................................
 
-    ........KKKKKKKdd...............
+    ................................
 
-    ......KKKKKKKKKKKdd.............
+    ...............77...............
 
-    ....KKKKKKKKKKKKKKKdd...........
+    ........47777.7567..77........77
 
-    ...HHHHKKKKKKKKKKKKKKKd.........
+    ...444441444446667.7567......777
 
-    ..HHHHHHHKKKKKKKKKKKKKKKK.......
+    ..4111111122224667.7667.777..777
 
-    .HHHGGGHHHKKKKKKKKKKKKKKKKK.....
+    44444441112222344777667.757.7777
 
-    .HHHkkGHHHHKKKKKKKKKKKKKKKKKK...
+    422fef22222222334657777766677677
 
-    HHHHekHHHHHKKKKKKKKKKKKKKKKKKTff
+    422ffe22222222334655775776777777
 
-    HnHHHHHHHHHHKKKKKKKKKKKKKKKKTTff
+    422222222222223346ee555677767777
 
-    HHHHHHHHHHHHKKKKKKKKKKKKKKKKTfff
+    43322222333222334777666677766767
 
-    RtRRtoHHHHHHKKKKKKKKKKKKKKKK.fff
+    4e32e22e223333344667776666666767
 
-    otJJtoHHHHHHKKKKKKKKKKKKKKK...ff
+    .e44e44e22333347766666666666677.
 
-    JJJJJJoHHHHKKKKKKKKKKKKKKK......
+    feffeffefff4447666666666666777..
 
-    JJJJJJJoKAAAAKKKKKKKKKKKKK......
+    41ec1ec2b347774444444476666777..
 
-    BBBBBBBoAAAAAAoBBBBBBBBBB.......
+    422222222344442111122244446677..
 
-    .BBBBBBoAAAAAAoBBBBBBBBB........
+    .4422222443277721112223277777...
 
-    ..ooBBoAAAAAAoBBBBBBBBB.........
+    ...44444332755572222222765567...
 
-    ....oooAAAAAAooooooooo..........
+    .......4444465567222444446567...
 
-    .......AAAAAA...................
+    ......41112246667444111224667...
 
-    ......AAAAAA....................
+    .....411112234677241111223467...
 
-    .....AAAAAA.....................
+    .....422222234674442222223467...
 
-    .....AAAAAA.....................
+    .....4333333347...4333333347....
 
-    ....AAAAAAA.....................
+    ......4333334......4333334......
 
-    ....AcAcAcA.....................
+    .......44444........44444.......
 
-    ....c.c.c.......................
+    .......a.a.a.a.....a.a.a.a......
 
     '
   f3: '................................
@@ -238,54 +236,54 @@ frames:
 
     ................................
 
-    ..........dd.dd.................
+    ................................
 
-    ........KKKKKKKdd...............
+    ................................
 
-    ......KKKKKKKKKKKdd.............
+    ...............77...............
 
-    ....KKKKKKKKKKKKKKKdd...........
+    ........47777.7567..77........77
 
-    ...HHHHKKKKKKKKKKKKKKKd.........
+    ...444441444446667.7567......777
 
-    ..HHHHHHHKKKKKKKKKKKKKKKK.......
+    ..4111111122224667.7667.777..777
 
-    .HHHGGGHHHKKKKKKKKKKKKKKKKK.....
+    44444441112222344777667.757.7777
 
-    .HHHkkGHHHHKKKKKKKKKKKKKKKKKK...
+    422fef22222222334657777766677677
 
-    HHHHekHHHHHKKKKKKKKKKKKKKKKKKTff
+    422ffe22222222334655775776777777
 
-    HnHHHHHHHHHHKKKKKKKKKKKKKKKKTTff
+    422222222222223346ee555677767777
 
-    HHHHHHHHHHHHKKKKKKKKKKKKKKKKTfff
+    43322222333222334777666677766767
 
-    RtRRtoHHHHHHKKKKKKKKKKKKKKKK.fff
+    4e32e22e223333344667776666666767
 
-    otJJtoHHHHHHKKKKKKKKKKKKKKK...ff
+    .e44e44e22333347766666666666677.
 
-    JJJJJJoHHHHKKKKKKKKKKKKKKK......
+    feffeffefff4447666666666666777..
 
-    JJJJJJJoKAAAAKKKKKKKKKKKKK......
+    41ec1ec2b347774444444476666777..
 
-    BBBBBBBoAAAAAAoBBBBBBBBBB.......
+    422222222344442111122244446677..
 
-    .BBBBBBoAAAAAAoBBBBBBBBB........
+    .4422222443277721112223277777...
 
-    ..ooBBoAAAAAAoBBBBBBBBB.........
+    ...44444332755572222222765567...
 
-    ....oooAAAAAAooooooooo..........
+    .......4444465567222444446567...
 
-    .......AAAAAA...................
+    ......41112246667444111224667...
 
-    ......AAAAAA....................
+    .....411112234667241111223467...
 
-    .....AAAAAA.....................
+    .....422222234774442222223477...
 
-    ....AAAAAAA.....................
+    ......4222224......4222224......
 
-    ....AcAcAcA.....................
+    .......44444........44444.......
 
-    ....c.c.c.......................
+    .......a.a.a.a.....a.a.a.a......
 
     '

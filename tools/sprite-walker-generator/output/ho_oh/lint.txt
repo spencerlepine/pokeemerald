@@ -1,33 +1,33 @@
-warning down: feet on row 28, Emerald stands on row 30 (shadow and grass overlap assume it)
+warning down: feet on row 31, Emerald stands on row 30 (shadow and grass overlap assume it)
 
 STYLE SCORE 100/100  (ship to the owner at >= 90 with no FAIL; 1 rule(s) accepted by the spec, each with its reason below; see STYLE.md)
   ok   edge_black = 0.0 (want <= 0.393; Emerald median 0.182): outline every material in its own dark ramp tone; black only on eyes, soles, creases (STYLE.md 1)
-  ok   inner_black = 0.005 (want <= 0.232; Emerald median 0.037): too much black inside the figure
+  ok   inner_black = 0.012 (want <= 0.232; Emerald median 0.037): too much black inside the figure
   ok   skin_tones = 4 (want >= 4; Emerald median 4): use all four skin tones: 1 light above the eyes, 2 base, 3 shade under the chin, 4 outline (STYLE.md 4)
   ok   colours_used = 15 (want >= 12; Emerald median 13): use the palette: vanilla walkers use 12-15 of the 15 colours in one frame; give every material its full ramp, add a white highlight, put details (belts, trims, straps) on unused ramps (STYLE.md 2)
   ok   ramp_tones_min = 3 (want >= 2; Emerald median 3): every ramp you use needs its light, mid and dark tone (STYLE.md 2)
-  ok   ramp_dark_share = 0.455 (want >= 0.165; Emerald median 0.3): shade from above: the dark tone should carry ~40% of each ramp, at the bottom of every shape (STYLE.md 2)
-  ok   hair_rows = 6: accepted, a bird: its halo crest, not hair, sits above the face
+  ok   ramp_dark_share = 0.564 (want >= 0.165; Emerald median 0.3): shade from above: the dark tone should carry ~40% of each ramp, at the bottom of every shape (STYLE.md 2)
+  ok   hair_rows = 7: accepted, a bird: its halo crest, not hair, sits above the face
 
 metric            this  Emerald p5  median     p95
-top                  1          10      11      13
-feet                28          29      30      30
-height              28          18      20      21
-width               32          14      15      16
-area               502         194     226     252
-dark_outline     0.396       0.846     1.0     1.0
-orphans          0.131       0.098   0.152   0.233
+top                  0          10      11      13
+feet                31          29      30      30
+height              32          18      20      21
+width               30          14      15      16
+area               666         194     226     252
+dark_outline       0.4       0.846     1.0     1.0
+orphans          0.096       0.098   0.152   0.233
 colours             15          10      14      15
 step_change        n/a
 colours_used        15          10      13      15
 edge_black         0.0         0.0   0.182   0.609
-inner_black      0.005         0.0   0.037   0.232
+inner_black      0.012         0.0   0.037   0.232
 skin_tones           4           4       4       4
 ramp_tones_min       3           1       3       3
-ramp_dark_share   0.455         0.0     0.3   0.538
-hair_rows            6           2       5       8
-eye_row              9          -1       7      10
-head_w              28          14      14      16
-body_w              30          12      14      16
+ramp_dark_share   0.564         0.0     0.3   0.538
+hair_rows            7           2       5       8
+eye_row             11          -1       7      10
+head_w              26          14      14      16
+body_w              28          12      14      16
 
 vanilla graphics/object_events/pics/pokemon/ho_oh.png: style score 88/100, colours_used 13 (match or beat it; a FAIL it shares is inherited, not new)

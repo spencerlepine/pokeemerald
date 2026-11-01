@@ -3,25 +3,29 @@ description: 'ROCKWARDEN / ICEWARDEN / DURAWARDEN: ancient sentinel sealed behin
 kit: frames32x32_1
 replaces: graphics/object_events/pics/pokemon/regi.png
 graphics_info: Regirock / Regice / Registeel
-notes: 'Group lg2: one sentinel for all three palette tags; body on ramp a, glowing T-visor and Aurebesh glyph plate on ramp b.'
+notes: 'Group lg2b: one sentinel for all three palette tags; hood dome, shoulder boulders, fists and legs on ramp a, glowing T-visor and Aurebesh glyph strip on ramp b, cracks in ramp c dark.'
 palette: npc_2
 palette_tag: OBJ_EVENT_PAL_TAG_NPC_2
 shade: true
 materials:
-  H: a!
-  P: a!
-  B: a!
-  R: a!
-  F: a!
-  L: a!
-  V: b!
-  C: c!
+  A: a%
+  C: a%
+  D: a%
+  E: a%
+  F: a%
+  G: a%
+  H: a%
+  I: a%
 legend:
   g: 8
   h: 9
-  G: 10
+  B: 10
   x: 13
+  w: 12
+  u: 11
+  e: 4
   X: 14
+  k: 15
 accept:
   skin_tones: 'creature: no human skin'
   hair_rows: 'creature: no hair'
@@ -35,60 +39,60 @@ frames:
 
     ................................
 
-    ...........HHHHHHHHHH...........
+    .............AAAAAA.............
 
-    .........HHHHXXHHHHHHHH.........
+    ...........AAXXAAAAAx...........
 
-    ........HHHHHHHHHHHHHHHH........
+    ..........AxAAAAAAAxAA..........
 
-    ........HHHHHHHHHHHHHHHH........
+    .........AAAxAAAAAAAAAA.........
 
-    .......HHHHHVVVVVVVVHHHHH.......
+    ........AAAAxAAAAAAAAAAA........
 
-    .......HHHHHVVVVVVVVHHHHH.......
+    ........AAABBBBBBBBBBAAA........
 
-    ..PPPP.HHHHHHHHVVHHHHHHHH.PPPP..
+    ...DDDDDAAABXgggggggBxAAEEEEE...
 
-    .PPXPPPPHHHHHHHVVHHHHHHHPPXPPPP.
+    .DDXDDDDDDABBBggggBBBAxEEEEEXEE.
 
-    PPPPPPPPHHHHHHHVVHHHHHHHPPPPPPPP
+    .DDxDuDDDDA...BghB...AEEEEuExEE.
 
-    PPPPPxPPPBBBBBBBBBBBBBBPPPPPPPPP
+    DDDxDDDDDDD...BBBB...EEEEEExEEEE
 
-    PPPPxPPPPBBBBBBBBBBBBBBPPPxPPPPP
+    DDDDeDDDDDDAAAAAAAAAAEEEEEEeEEEE
 
-    PPPxPPPPBBBBBBBBBBBxxBBBPPPxxPPP
+    DDDDDDDDDDDAAAwxAAAAAEEEEEEEEEEE
 
-    .RRRRRRBBBBBBBBBBBBBBBBBBRRRRRR.
+    .DDDDDDDDDAACCCwCxCCAAEEEEEEEEE.
 
-    .RRRRRRBGGGGGGGGGGGGGGGGBRRRRRR.
+    .DDDDDDDDDCCCCCCCwuCCCEEEEEEEEE.
 
-    .RRRRRRBGGggghGghgGhggGGBRRRRRR.
+    ..FFFDDDCCCCCCCCCCCCCCCCEEEGGG..
 
-    .RRRRRRBGGhgGGGgggGGghGGBRRRRRR.
+    .FFFFF.CCCCCCCCCCCCCCCCCC.GGGGG.
 
-    .RRRRRRBGGggGGGhGgGGhgGGBRRRRRR.
+    FFxFFFFCCxxxxxxxxxxxxxxCCGGGGxGG
 
-    .RRRRRRBGGGGGGGGGGGGGGGGBRRRRRR.
+    FFFxFFFCCxghgxgghxhgghxCCGGGxGGG
 
-    .CCCCCCBBBBBBBBBBBBBBBBBBCCCCCC.
+    FFFFFFFCCxgxgxgxhxgxgxxCCGGGGGGG
 
-    CCCCCCCBBBBBBBBBBBBBBBBBBCCCCCCC
+    FFFFFFFCCxghgxhggxgghgxCCGGGGGGG
 
-    FFFFFFFFBBBBBBBBBBBBBBBBFFFFFFFF
+    FFFFxFFCHxxxxxxxxxxxxxxICGGxGGGG
 
-    FFFFFFFF.LLLLLLLLLLLLLL.FFFxxFFF
+    .FFFFF.HXHHHHCCCCCCIIIIXI.GGGGG.
 
-    FFFxFFFF.LLLLL....LLLLL.FFFFFxFF
+    ..FFF.HHxxHHHHCCCCIIIIxxII.GGG..
 
-    .FxFFFF.LLLLLL....LLLLLL.FFFFFF.
+    ......HHHHxHHHCCCCIIIxIIII......
 
-    ..FFFF..LLLLLL....LLLLLL..FFFF..
+    ......HHHHHHHH....IIIIIIII......
 
-    ........LLLLLL....LLLLLL........
+    .......HHxHxH......IxIxII.......
 
-    .......LLLLLLL....LLLLLLL.......
+    ........HHHH........IIII........
 
-    ................................
+    .........kk..........kk.........
 
     '
