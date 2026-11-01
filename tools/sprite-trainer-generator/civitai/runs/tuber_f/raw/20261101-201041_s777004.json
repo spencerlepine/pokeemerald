@@ -1,0 +1,48 @@
+{
+  "trainer": {
+    "stem": "tuber_f",
+    "wiki_path": "graphics/trainers/front_pics/tuber_f.png",
+    "sw_subject": "WOOKIEE CUB (f): small Wookiee cub with bead braids, holding a carved float ring",
+    "subject": "Wookiee child",
+    "desc": "small Wookiee child (cub), half the height of an adult, big round head, short arms and legs, round fluffy body, soft light brown and ginger fur with darker shading under the arms and lighter tips, face fully furred, small black nose, bright dark eyes, two bead braids, holding a carved wooden float ring",
+    "theme": "factions",
+    "style": "",
+    "pose": "standing, facing left, three-quarter view",
+    "negative": "adult, tall, bandolier, weapon, human face, human skin, costume, mask, bear, doll, hair",
+    "pair": false,
+    "strength": 0.6
+  },
+  "lora": {
+    "id": 443092,
+    "name": "XL v1",
+    "baseModel": "SDXL 1.0",
+    "trainedWords": [],
+    "air": null,
+    "files": [
+      {
+        "name": "pk_trainer_xl_v1.safetensors",
+        "sizeKB": 445819.83984375,
+        "sha256": "078E09DA2A123964B7EB30DB23EC24D59FB082343F69C7FAF925C4C07E97023E"
+      }
+    ]
+  },
+  "checkpoint": "urn:air:sdxl:checkpoint:civitai:101055@128078",
+  "params": {
+    "prompt": "solo, (single character:1.2), (wookiee child:1.3), small Wookiee child (cub), half the height of an adult, big round head, short arms and legs, round fluffy body, soft light brown and ginger fur with darker shading under the arms and lighter tips, face fully furred, small black nose, bright dark eyes, two bead braids, holding a carved wooden float ring, full body character sprite, standing, facing left, three-quarter view, pixel art, game sprite, crisp dark outlines, solid white background, simple background",
+    "negativePrompt": "adult, tall, bandolier, weapon, human face, human skin, costume, mask, bear, doll, hair, poke ball, pokeball, holding ball, baseball cap, generic pokemon trainer, anime boy, scenery, detailed background, gradient background, floor, shadow, text, watermark, signature, frame, border, multiple characters, multiple views, character sheet, turnaround, duplicate, cropped, cut off feet, blurry, 3d, photo, realistic, painting, smooth shading",
+    "scheduler": "EulerA",
+    "steps": 25,
+    "cfgScale": 7.0,
+    "width": 768,
+    "height": 768,
+    "seed": 777004,
+    "clipSkip": 2
+  },
+  "strength": 0.7,
+  "format": "jpeg",
+  "seed": 777004,
+  "workflowId": "13596363-20261101201015375-961w",
+  "jobId": "11993a0c-526f-42fb-be80-531660873c76",
+  "cost": "3 green",
+  "generated": "20261101-201041"
+}

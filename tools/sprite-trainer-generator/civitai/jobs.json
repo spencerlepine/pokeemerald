@@ -659,18 +659,18 @@
   "style": ""
  },
  "tuber_f": {
-  "subject": "Wookiee child",
-  "desc": "small Wookiee child (cub), half the height of an adult, big round head, short arms and legs, round fluffy body, soft light brown and ginger fur with darker shading under the arms and lighter tips, face fully furred, small black nose, bright dark eyes, two bead braids, holding a carved wooden float ring",
-  "negative": "adult, tall, bandolier, weapon, human face, human skin, costume, mask, bear, doll, hair",
+  "subject": "Wookiee",
+  "desc": "a young Wookiee cub, like a small Chewbacca: short and stocky, child proportions with a big round furry head, body completely covered in long shaggy light caramel brown fur shaded with darker roots and lighter tips, face fully furred, short dark muzzle with a black nose, small deep-set eyes, no clothes, holding a carved wooden swim ring",
+  "negative": "adult, tall, bandolier, weapon, human face, human skin, bare skin, bare chest, clothes, robe, belt, caveman, beard, costume, mask, bear, doll, hair",
   "theme": "factions",
   "style": "",
   "strength": 0.6,
   "tolerance": 0
  },
  "tuber_m": {
-  "subject": "Wookiee child",
-  "desc": "small Wookiee child (cub), half the height of an adult, big round head, short arms and legs, round fluffy body, soft reddish brown fur with darker shading under the arms and lighter tips, face fully furred, small black nose, bright dark eyes, two bead braids, hugging a small carved wooden log float",
-  "negative": "adult, tall, bandolier, weapon, human face, human skin, costume, mask, bear, doll, hair",
+  "subject": "Wookiee",
+  "desc": "a young Wookiee cub, like a small Chewbacca: short and stocky, child proportions with a big round furry head, body completely covered in long shaggy reddish brown fur shaded with darker roots and lighter tips, face fully furred, short dark muzzle with a black nose, small deep-set eyes, no clothes, hugging a carved wooden log float",
+  "negative": "adult, tall, bandolier, weapon, human face, human skin, bare skin, bare chest, clothes, robe, belt, caveman, beard, costume, mask, bear, doll, hair",
   "theme": "factions",
   "style": "",
   "strength": 0.6,
