@@ -1,0 +1,111 @@
+name: little_boy
+description: Tatooine farm kid with podracer goggles and a wrapped tunic (replaces Little Boy).
+kit: person16x16
+replaces: graphics/object_events/pics/people/little_boy.png
+graphics_info: LittleBoy
+notes: 'Group 8, B style: Little Boy''s own body as regions (shirt -> pale wrapped tunic T, hair H), podracer goggles pushed up on the hair, grey wrap belt with a pouch.'
+palette: npc_4
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_4
+shade: true
+materials:
+  H: a
+  T: w/c
+  B: c
+  P: b
+legend:
+  k: 15
+  W: 14
+  L: 14
+  M: 9
+  g: 13
+accept: {}
+base_sheet: graphics/object_events/pics/people/little_boy.png
+remap:
+  a: H
+  c: T
+  b: T
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 2
+      rows: '....gLg__gLg....
+
+        ...gMMggggMMg...'
+    - x: 0
+      y: 11
+      rows: '...sBBBPBBBBs...'
+  up:
+    patches:
+    - x: 0
+      y: 3
+      rows: '...gggggggggg...'
+    - x: 0
+      y: 11
+      rows: '...sBBBBBBBBs...'
+  left:
+    patches:
+    - x: 0
+      y: 2
+      rows: '....gLg_______..
+
+        ....MMggggggg...'
+    - x: 0
+      y: 11
+      rows: '....BPBBBBBB....'
+  down_a:
+    patches:
+    - x: 0
+      y: 3
+      rows: '....gLg__gLg....
+
+        ...gMMggggMMg...'
+    - x: 0
+      y: 12
+      rows: '...sBBBPBBBBs...'
+  down_b:
+    patches:
+    - x: 0
+      y: 3
+      rows: '....gLg__gLg....
+
+        ...gMMggggMMg...'
+    - x: 0
+      y: 12
+      rows: '...sBBBPBBBBs...'
+  up_a:
+    patches:
+    - x: 0
+      y: 4
+      rows: '...gggggggggg...'
+    - x: 0
+      y: 12
+      rows: '...sBBBBBBBBs...'
+  up_b:
+    patches:
+    - x: 0
+      y: 4
+      rows: '...gggggggggg...'
+    - x: 0
+      y: 12
+      rows: '...sBBBBBBBBs...'
+  left_a:
+    patches:
+    - x: 0
+      y: 3
+      rows: '....gLg_______..
+
+        ....MMggggggg...'
+    - x: 0
+      y: 12
+      rows: '....BPBBBBBB....'
+  left_b:
+    patches:
+    - x: 0
+      y: 3
+      rows: '....gLg_______..
+
+        ....MMggggggg...'
+    - x: 0
+      y: 12
+      rows: '....BPBBBBBB....'

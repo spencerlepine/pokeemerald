@@ -1,0 +1,85 @@
+name: tuber_m_swimming
+description: Lake-country boy paddling in a yellow float-droid ring (replaces Tuber M swimming).
+kit: person16x16
+replaces: graphics/object_events/pics/people/tuber_m_swimming.png
+graphics_info: TuberMSwimming
+notes: 'Group 8, B style: TuberMSwimming''s own body as regions (hair and ring kept), red swim goggles pushed up on the hair, the ring turned into an inflatable float droid with a red sensor eye and a light.'
+palette: npc_2
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_2
+shade: true
+materials:
+  R: a
+  g: b
+legend:
+  k: 15
+  E: 15
+  W: 14
+  G: 14
+accept: {}
+base_sheet: graphics/object_events/pics/people/tuber_m_swimming.png
+remap:
+  a: R
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 3
+      rows: '...gGGggggGGg...'
+    - x: 7
+      y: 12
+      rows: EW
+  up:
+    patches:
+    - x: 0
+      y: 3
+      rows: '...gggggggggg...'
+  left:
+    patches:
+    - x: 0
+      y: 3
+      rows: '...GGgggggggg...'
+    - x: 0
+      y: 11
+      rows: .EW_____________
+  down_a:
+    patches:
+    - x: 0
+      y: 4
+      rows: '...gGGggggGGg...'
+    - x: 7
+      y: 13
+      rows: EW
+  down_b:
+    patches:
+    - x: 0
+      y: 4
+      rows: '...gGGggggGGg...'
+    - x: 7
+      y: 13
+      rows: EW
+  up_a:
+    patches:
+    - x: 0
+      y: 4
+      rows: '...gggggggggg...'
+  up_b:
+    patches:
+    - x: 0
+      y: 4
+      rows: '...gggggggggg...'
+  left_a:
+    patches:
+    - x: 0
+      y: 4
+      rows: '...GGgggggggg...'
+    - x: 0
+      y: 12
+      rows: .EW_____________
+  left_b:
+    patches:
+    - x: 0
+      y: 4
+      rows: '...GGgggggggg...'
+    - x: 0
+      y: 12
+      rows: .EW_____________

@@ -1,0 +1,220 @@
+name: little_girl
+description: Naboo girl with Leia-style side buns and a red smock (replaces Little Girl).
+kit: person16x16
+replaces: graphics/object_events/pics/people/little_girl.png
+graphics_info: LittleGirl
+notes: 'Group 8, B style: Little Girl''s own body as regions (smock -> red Naboo dress D, collar -> gold G), her pigtails become two round side buns with a gold circlet.'
+palette: npc_2
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_2
+shade: true
+materials:
+  H: c@
+  N: c@
+  Y: a
+  D: b
+  G: a
+legend:
+  k: 15
+  W: 14
+accept: {}
+base_sheet: graphics/object_events/pics/people/little_girl.png
+remap:
+  c: H
+  b: D
+  a: G
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 1
+      rows: '________________
+
+        ________________
+
+        ___HYYYYYYYYH___
+
+        ________________
+
+        .NN__________NN.
+
+        NNN__________NNN
+
+        .NN__________NN.
+
+        ....________....'
+    - x: 0
+      y: 13
+      rows: ____GDDDDDDG____
+  up:
+    patches:
+    - x: 0
+      y: 1
+      rows: '________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        .NN__________NN.
+
+        NNN__________NNN
+
+        .NN__________NN.
+
+        ....________....'
+    - x: 0
+      y: 13
+      rows: ____GDDDDDDG____
+  left:
+    patches:
+    - x: 0
+      y: 1
+      rows: '......HHHHH.....
+
+        .....HHHHHHH....
+
+        ....YYYHHHHHH...
+
+        ...YHHHHHHHHHN..
+
+        ______HHHHHHNNN.
+
+        _______HHHHHNNN.
+
+        ________HHHHNNN.
+
+        _________HHHHN..
+
+        _________HHH....'
+  down_a:
+    patches:
+    - x: 0
+      y: 2
+      rows: '________________
+
+        ________________
+
+        ___HYYYYYYYYH___
+
+        ________________
+
+        .NN__________NN.
+
+        NNN__________NNN
+
+        .NN__________NN.
+
+        ....________....'
+    - x: 0
+      y: 14
+      rows: ____GDDDDDDG____
+  down_b:
+    patches:
+    - x: 0
+      y: 2
+      rows: '________________
+
+        ________________
+
+        ___HYYYYYYYYH___
+
+        ________________
+
+        .NN__________NN.
+
+        NNN__________NNN
+
+        .NN__________NN.
+
+        ....________....'
+    - x: 0
+      y: 14
+      rows: ____GDDDDDDG____
+  up_a:
+    patches:
+    - x: 0
+      y: 2
+      rows: '________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        .NN__________NN.
+
+        NNN__________NNN
+
+        .NN__________NN.
+
+        ....________....'
+    - x: 0
+      y: 14
+      rows: ____GDDDDDDG____
+  up_b:
+    patches:
+    - x: 0
+      y: 2
+      rows: '________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        .NN__________NN.
+
+        NNN__________NNN
+
+        .NN__________NN.
+
+        ....________....'
+    - x: 0
+      y: 14
+      rows: ____GDDDDDDG____
+  left_a:
+    patches:
+    - x: 0
+      y: 2
+      rows: '......HHHHH.....
+
+        .....HHHHHHH....
+
+        ....YYYHHHHHH...
+
+        ...YHHHHHHHHHN..
+
+        ______HHHHHHNNN.
+
+        _______HHHHHNNN.
+
+        ________HHHHNNN.
+
+        _________HHHHN..
+
+        _________HHH....'
+  left_b:
+    patches:
+    - x: 0
+      y: 2
+      rows: '......HHHHH.....
+
+        .....HHHHHHH....
+
+        ....YYYHHHHHH...
+
+        ...YHHHHHHHHHN..
+
+        ______HHHHHHNNN.
+
+        _______HHHHHNNN.
+
+        ________HHHHNNN.
+
+        _________HHHHN..
+
+        _________HHH....'

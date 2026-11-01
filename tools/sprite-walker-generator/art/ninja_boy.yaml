@@ -1,0 +1,228 @@
+name: ninja_boy
+description: Infiltrator in a dark hooded suit with a glowing visor slit (replaces Ninja Boy).
+kit: person16x16
+replaces: graphics/object_events/pics/people/ninja_boy.png
+graphics_info: NinjaBoy
+notes: 'Group 8, B style: Ninja Boy''s own body as regions (suit -> grey bodysuit S, sash -> magenta belt B), new navy hood and mantle over a grey mask with a glowing magenta visor slit.'
+palette: npc_4
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_4
+shade: true
+materials:
+  H: a@
+  M: c
+  S: c
+  B: b
+legend:
+  k: 15
+  v: 9
+  V: 8
+  W: 14
+  x: 15
+accept:
+  hair_rows: 'no hair: a hood'
+  eye_row: a visor slit instead of eyes
+  skin_tones: 'face masked: only the small hands show skin'
+base_sheet: graphics/object_events/pics/people/ninja_boy.png
+remap:
+  a: H
+  c: S
+  b: B
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 1
+      rows: '.....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ...HHHMMMMHHH...
+
+        ..HHHMMMMMMHHH..
+
+        ..HHMvVWVvvMHH..
+
+        ...HMMMMMMMMH...
+
+        ....HMMMMMMH....
+
+        ...HHSSSSSSHH...'
+    - x: 4
+      y: 11
+      rows: BBBxBBBB
+  up:
+    patches:
+    - x: 0
+      y: 1
+      rows: '.....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ...HHHHHHHHHH...
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...'
+  left:
+    patches:
+    - x: 0
+      y: 1
+      rows: '......HHHHH.....
+
+        .....HHHHHHH....
+
+        ....HHHHHHHHH...
+
+        ...MMMHHHHHHHH..
+
+        ...MMMMMHHHHHH..
+
+        ...WVvMMHHHHHH..
+
+        ...MMMMMHHHHHH..
+
+        ....MMMMHHHHH...
+
+        .....MMMHHHH....'
+  down_a:
+    patches:
+    - x: 0
+      y: 2
+      rows: '.....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ...HHHMMMMHHH...
+
+        ..HHHMMMMMMHHH..
+
+        ..HHMvVWVvvMHH..
+
+        ...HMMMMMMMMH...
+
+        ....HMMMMMMH....
+
+        ...HHSSSSSSHH...'
+    - x: 4
+      y: 12
+      rows: BBBxBBBB
+  down_b:
+    patches:
+    - x: 0
+      y: 2
+      rows: '.....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ...HHHMMMMHHH...
+
+        ..HHHMMMMMMHHH..
+
+        ..HHMvVWVvvMHH..
+
+        ...HMMMMMMMMH...
+
+        ....HMMMMMMH....
+
+        ...HHSSSSSSHH...'
+    - x: 4
+      y: 12
+      rows: BBBxBBBB
+  up_a:
+    patches:
+    - x: 0
+      y: 2
+      rows: '.....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ...HHHHHHHHHH...
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...'
+  up_b:
+    patches:
+    - x: 0
+      y: 2
+      rows: '.....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ...HHHHHHHHHH...
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...'
+  left_a:
+    patches:
+    - x: 0
+      y: 2
+      rows: '......HHHHH.....
+
+        .....HHHHHHH....
+
+        ....HHHHHHHHH...
+
+        ...MMMHHHHHHHH..
+
+        ...MMMMMHHHHHH..
+
+        ...WVvMMHHHHHH..
+
+        ...MMMMMHHHHHH..
+
+        ....MMMMHHHHH...
+
+        .....MMMHHHH....'
+  left_b:
+    patches:
+    - x: 0
+      y: 2
+      rows: '......HHHHH.....
+
+        .....HHHHHHH....
+
+        ....HHHHHHHHH...
+
+        ...MMMHHHHHHHH..
+
+        ...MMMMMHHHHHH..
+
+        ...WVvMMHHHHHH..
+
+        ...MMMMMHHHHHH..
+
+        ....MMMMHHHHH...
+
+        .....MMMHHHH....'

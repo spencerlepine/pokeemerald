@@ -1,0 +1,216 @@
+name: rs_little_boy
+description: Kid in a toy X-wing pilot helmet and orange flight suit (replaces the R/S Little Boy).
+kit: person16x16
+replaces: graphics/object_events/pics/people/rs_little_boy.png
+graphics_info: RubySapphireLittleBoy
+notes: 'Group 8, B style: the R/S Little Boy''s own body as regions (shirt and legs -> orange flight suit O, shorts -> brown harness G), new white Rebel pilot helmet with a red crest stripe, visor band
+  and cheek guards, white chest box.'
+palette: npc_2
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_2
+shade: true
+materials:
+  W: w/c
+  R: b
+  V: c
+  O: a
+  X: w/c
+  G: c
+legend:
+  k: 15
+accept:
+  hair_rows: 'no hair: a pilot helmet'
+base_sheet: graphics/object_events/pics/people/rs_little_boy.png
+remap:
+  b: O
+  c: G
+  w: s
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 1
+      rows: '.....WWWWWW.....
+
+        ....WWWRRWWW....
+
+        ...WWWWRRWWWW...
+
+        ...WWWWRRWWWW...
+
+        ..WWVVVVVVVVWW..
+
+        ..WWssksskssWW..
+
+        ...WssksskssW...
+
+        ....ssssssss....
+
+        ...sOOOXXOOOs...'
+  up:
+    patches:
+    - x: 0
+      y: 1
+      rows: '.....WWWWWW.....
+
+        ....WWWRRWWW....
+
+        ...WWWWRRWWWW...
+
+        ...WWWWRRWWWW...
+
+        ..WWWWWRRWWWWW..
+
+        ..WWWWWRRWWWWW..
+
+        ...WWWWWWWWWW...
+
+        ....WWWWWWWW....
+
+        ...sOOOOOOOOs...'
+  left:
+    patches:
+    - x: 0
+      y: 1
+      rows: '.....WWWWWW.....
+
+        ....WWWWWRRW....
+
+        ...WWWWWWWRRW...
+
+        ...WWWWWWWWRW...
+
+        ...VVVVWWWWWW...
+
+        ...sksWWWWWWW...
+
+        ...sksWWWWWW....
+
+        ....ssssssW.....
+
+        .....OOssOO.....'
+  down_a:
+    patches:
+    - x: 0
+      y: 2
+      rows: '.....WWWWWW.....
+
+        ....WWWRRWWW....
+
+        ...WWWWRRWWWW...
+
+        ...WWWWRRWWWW...
+
+        ..WWVVVVVVVVWW..
+
+        ..WWssksskssWW..
+
+        ...WssksskssW...
+
+        ....ssssssss....
+
+        ...sOOOXXOOOs...'
+  down_b:
+    patches:
+    - x: 0
+      y: 2
+      rows: '.....WWWWWW.....
+
+        ....WWWRRWWW....
+
+        ...WWWWRRWWWW...
+
+        ...WWWWRRWWWW...
+
+        ..WWVVVVVVVVWW..
+
+        ..WWssksskssWW..
+
+        ...WssksskssW...
+
+        ....ssssssss....
+
+        ...sOOOXXOOOs...'
+  up_a:
+    patches:
+    - x: 0
+      y: 2
+      rows: '.....WWWWWW.....
+
+        ....WWWRRWWW....
+
+        ...WWWWRRWWWW...
+
+        ...WWWWRRWWWW...
+
+        ..WWWWWRRWWWWW..
+
+        ..WWWWWRRWWWWW..
+
+        ...WWWWWWWWWW...
+
+        ....WWWWWWWW....
+
+        ...sOOOOOOOOs...'
+  up_b:
+    patches:
+    - x: 0
+      y: 2
+      rows: '.....WWWWWW.....
+
+        ....WWWRRWWW....
+
+        ...WWWWRRWWWW...
+
+        ...WWWWRRWWWW...
+
+        ..WWWWWRRWWWWW..
+
+        ..WWWWWRRWWWWW..
+
+        ...WWWWWWWWWW...
+
+        ....WWWWWWWW....
+
+        ...sOOOOOOOOs...'
+  left_a:
+    patches:
+    - x: 0
+      y: 2
+      rows: '.....WWWWWW.....
+
+        ....WWWWWRRW....
+
+        ...WWWWWWWRRW...
+
+        ...WWWWWWWWRW...
+
+        ...VVVVWWWWWW...
+
+        ...sksWWWWWWW...
+
+        ...sksWWWWWW....
+
+        ....ssssssW.....
+
+        .....OOssOO.....'
+  left_b:
+    patches:
+    - x: 0
+      y: 2
+      rows: '.....WWWWWW.....
+
+        ....WWWWWRRW....
+
+        ...WWWWWWWRRW...
+
+        ...WWWWWWWWRW...
+
+        ...VVVVWWWWWW...
+
+        ...sksWWWWWWW...
+
+        ...sksWWWWWW....
+
+        ....ssssssW.....
+
+        .....OOssOO.....'

@@ -1,0 +1,86 @@
+name: tuber_f
+description: Lake-country girl with swim goggles in a pink float-droid ring (replaces Tuber F).
+kit: person16x16
+replaces: graphics/object_events/pics/people/tuber_f.png
+graphics_info: TuberF
+notes: 'Group 8, B style: Tuber F''s own body as regions (hair, bows and ring kept), blue swim goggles pushed up on the hair, the ring turned into an inflatable float droid with a blue sensor eye and a
+  light.'
+palette: npc_1
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_1
+shade: true
+materials:
+  R: a
+legend:
+  k: 15
+  E: 15
+  W: 14
+  G: 8
+  g: 10
+accept: {}
+base_sheet: graphics/object_events/pics/people/tuber_f.png
+remap:
+  a: R
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 3
+      rows: .c.gGGggggGGg.c.
+    - x: 7
+      y: 12
+      rows: EW
+  up:
+    patches:
+    - x: 0
+      y: 3
+      rows: .c.gggggggggg.c.
+  left:
+    patches:
+    - x: 0
+      y: 3
+      rows: '....GGgggggg.c..'
+    - x: 0
+      y: 11
+      rows: .EW_____________
+  down_a:
+    patches:
+    - x: 0
+      y: 4
+      rows: .c.gGGggggGGg.c.
+    - x: 7
+      y: 13
+      rows: EW
+  down_b:
+    patches:
+    - x: 0
+      y: 4
+      rows: .c.gGGggggGGg.c.
+    - x: 7
+      y: 13
+      rows: EW
+  up_a:
+    patches:
+    - x: 0
+      y: 4
+      rows: .c.gggggggggg.c.
+  up_b:
+    patches:
+    - x: 0
+      y: 4
+      rows: .c.gggggggggg.c.
+  left_a:
+    patches:
+    - x: 0
+      y: 4
+      rows: '....GGgggggg.c..'
+    - x: 0
+      y: 12
+      rows: .EW_____________
+  left_b:
+    patches:
+    - x: 0
+      y: 4
+      rows: '....GGgggggg.c..'
+    - x: 0
+      y: 12
+      rows: .EW_____________
