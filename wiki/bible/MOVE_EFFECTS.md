@@ -329,46 +329,47 @@ milk jug, macrobinoculars and stylus are scrapped (their specs move to `art/reje
 ## 7. Sound audit (every effect's sounds, with their wiki rows)
 
 Generated from `mapping/moves.csv` (the `SE:` list in each note) and `mapping/audio.csv`. **Vanilla** = an Emerald SE that
-already exists and is kept; **net-new** = a `net:se-*` row in `mapping/audio.csv` for `sfx-generator` to make (status in
-`database/pending_audio.csv`). No effect uses a sound that is not in one of these two columns.
+already exists and is kept (a hot-swapped one is shown with its Emerald row); **net-new** = a `net:se-*` row in
+`mapping/audio.csv` for `sfx-generator` to make (status in `database/pending_audio.csv`). No effect uses a sound outside
+these two columns.
 
 | Move | Vanilla SEs (kept) | Net-new SEs (wiki row) |
 |---|---|---|
 | AGILITY | – | SE_FORCE_HUM (`net:se-force-hum`) |
 | AMNESIA | – | SE_FORCE_HUM (`net:se-force-hum`) |
-| ASHLA MIST | SE_M_HAZE | SE_FORCE_HUM (`net:se-force-hum`), SE_M_HAZE (`audio:SE_M_HAZE`) |
-| AURA SIGHT | SE_M_DETECT | SE_HOLOSCAN (`net:se-holoscan`), SE_M_DETECT (`audio:SE_M_DETECT`) |
+| ASHLA MIST | SE_M_HAZE | SE_FORCE_HUM (`net:se-force-hum`) |
+| AURA SIGHT | SE_M_DETECT | SE_HOLOSCAN (`net:se-holoscan`) |
 | BARRIER | – | SE_FORCE_HUM (`net:se-force-hum`) |
-| BATON PASS | SE_M_BATON_PASS | SE_POD_THROW (`audio:SE_BALL_THROW`), SE_M_BATON_PASS (`audio:SE_M_BATON_PASS`) |
+| BATON PASS | SE_POD_THROW (`audio:SE_BALL_THROW`), SE_M_BATON_PASS | – |
 | BLASTER SHOT | – | SE_TARGET_LOCK (`net:se-target-lock`), SE_BLASTER_BOLT (`net:se-blaster-bolt`), SE_BLASTER_IMPACT (`net:se-blaster-impact`) |
-| BOGAN PURGE | SE_M_PSYBEAM | SE_FORCE_HUM (`net:se-force-hum`), SE_M_PSYBEAM (`audio:SE_M_PSYBEAM`) |
+| BOGAN PURGE | SE_M_PSYBEAM | SE_FORCE_HUM (`net:se-force-hum`) |
 | CALM MIND | – | SE_FORCE_HUM (`net:se-force-hum`) |
-| CHARGE | SE_M_CHARGE | SE_M_CHARGE (`audio:SE_M_CHARGE`) |
+| CHARGE | SE_M_CHARGE | – |
 | COSMIC POWER | – | SE_FORCE_HUM (`net:se-force-hum`) |
 | COUNTERCODE | – | SE_HOLOSCAN (`net:se-holoscan`), SE_ASTROMECH_CHATTER (`net:se-astromech`) |
-| CREDIT TOSS | SE_M_RAZOR_WIND2, SE_M_PAY_DAY | SE_M_RAZOR_WIND2 (`audio:SE_M_RAZOR_WIND2`), SE_M_PAY_DAY (`audio:SE_M_PAY_DAY`) |
-| DETONATE | SE_M_EXPLOSION | SE_DETONATOR_BEEP (`net:se-detonator-beep`), SE_M_EXPLOSION (`audio:SE_M_EXPLOSION`) |
+| CREDIT TOSS | SE_M_RAZOR_WIND2, SE_M_PAY_DAY | – |
+| DETONATE | SE_M_EXPLOSION | SE_DETONATOR_BEEP (`net:se-detonator-beep`) |
 | DREAM EATER | – | SE_FORCE_HUM (`net:se-force-hum`) |
-| FORCE BOLT | SE_M_CHARGE, SE_M_TRI_ATTACK2 | SE_FORCE_LIGHTNING (`net:se-force-lightning`), SE_M_CHARGE (`audio:SE_M_CHARGE`), SE_M_TRI_ATTACK2 (`audio:SE_M_TRI_ATTACK2`) |
-| FORCE CHOKE | SE_M_BIND, SE_M_TAKE_DOWN | SE_FORCE_CHOKE (`net:se-force-choke`), SE_M_BIND (`audio:SE_M_BIND`), SE_M_TAKE_DOWN (`audio:SE_M_TAKE_DOWN`) |
+| FORCE BOLT | SE_M_CHARGE, SE_M_TRI_ATTACK2 | SE_FORCE_LIGHTNING (`net:se-force-lightning`) |
+| FORCE CHOKE | SE_M_BIND, SE_M_TAKE_DOWN | SE_FORCE_CHOKE (`net:se-force-choke`) |
 | FORCE FOCUS | – | SE_FORCE_HUM (`net:se-force-hum`) |
 | FORCE PULSE | – | SE_FORCE_HUM (`net:se-force-hum`) |
-| FORCE PUSH | SE_M_CHARGE, SE_M_TAKE_DOWN | SE_FORCE_PUSH (`net:se-force-push`), SE_M_CHARGE (`audio:SE_M_CHARGE`), SE_M_TAKE_DOWN (`audio:SE_M_TAKE_DOWN`) |
+| FORCE PUSH | SE_M_CHARGE, SE_M_TAKE_DOWN | SE_FORCE_PUSH (`net:se-force-push`) |
 | FORCE SENSE | – | SE_FORCE_HUM (`net:se-force-hum`) |
-| FORCE STORM | SE_M_EXPLOSION, SE_M_TAKE_DOWN | SE_FORCE_STORM (`net:se-force-storm`), SE_M_EXPLOSION (`audio:SE_M_EXPLOSION`), SE_M_TAKE_DOWN (`audio:SE_M_TAKE_DOWN`) |
+| FORCE STORM | SE_M_EXPLOSION, SE_M_TAKE_DOWN | SE_FORCE_STORM (`net:se-force-storm`) |
 | FORCE VISION | – | SE_FORCE_HUM (`net:se-force-hum`) |
-| FORCE WAVE | SE_M_PSYBEAM | SE_FORCE_HUM (`net:se-force-hum`), SE_M_PSYBEAM (`audio:SE_M_PSYBEAM`) |
-| GRAZE | SE_M_BITE, SE_M_MILK_DRINK | SE_M_BITE (`audio:SE_M_BITE`), SE_M_MILK_DRINK (`audio:SE_M_MILK_DRINK`) |
+| FORCE WAVE | SE_M_PSYBEAM | SE_FORCE_HUM (`net:se-force-hum`) |
+| GRAZE | SE_M_BITE, SE_M_MILK_DRINK | – |
 | HOLOSCAN | – | SE_HOLOSCAN (`net:se-holoscan`), SE_ASTROMECH_CHATTER (`net:se-astromech`) |
 | HYPNOSIS | – | SE_FORCE_HUM (`net:se-force-hum`) |
 | IMPRISON | – | SE_FORCE_HUM (`net:se-force-hum`) |
-| ION CANNON | SE_M_THUNDER_WAVE, SE_M_THUNDERBOLT2 | SE_ION_CANNON (`net:se-ion-cannon`), SE_M_THUNDER_WAVE (`audio:SE_M_THUNDER_WAVE`), SE_M_THUNDERBOLT2 (`audio:SE_M_THUNDERBOLT2`) |
+| ION CANNON | SE_M_THUNDER_WAVE, SE_M_THUNDERBOLT2 | SE_ION_CANNON (`net:se-ion-cannon`) |
 | LIGHT SCREEN | – | SE_FORCE_HUM (`net:se-force-hum`) |
 | MAGIC COAT | – | SE_FORCE_HUM (`net:se-force-hum`) |
 | MEDITATE | – | SE_FORCE_HUM (`net:se-force-hum`) |
-| METRONOME | SE_M_METRONOME | SE_M_METRONOME (`audio:SE_M_METRONOME`) |
-| MIND READER | SE_M_LOCK_ON | SE_TARGET_LOCK (`net:se-target-lock`), SE_M_LOCK_ON (`audio:SE_M_LOCK_ON`) |
-| MIND TRICK | SE_M_CONFUSE_RAY, SE_M_SUPERSONIC | SE_FORCE_HUM (`net:se-force-hum`), SE_M_CONFUSE_RAY (`audio:SE_M_CONFUSE_RAY`), SE_M_SUPERSONIC (`audio:SE_M_SUPERSONIC`) |
+| METRONOME | SE_M_METRONOME | – |
+| MIND READER | SE_M_LOCK_ON | SE_TARGET_LOCK (`net:se-target-lock`) |
+| MIND TRICK | SE_M_CONFUSE_RAY, SE_M_SUPERSONIC | SE_FORCE_HUM (`net:se-force-hum`) |
 | MIRROR COAT | – | SE_FORCE_HUM (`net:se-force-hum`) |
 | NIGHTMARE | – | SE_FORCE_HUM (`net:se-force-hum`) |
 | RECONFIGURE | – | SE_HOLOSCAN (`net:se-holoscan`), SE_ASTROMECH_CHATTER (`net:se-astromech`) |
@@ -376,21 +377,21 @@ already exists and is kept; **net-new** = a `net:se-*` row in `mapping/audio.csv
 | REFLECT | – | SE_FORCE_HUM (`net:se-force-hum`) |
 | REST | – | SE_FORCE_HUM (`net:se-force-hum`) |
 | ROLE PLAY | – | SE_FORCE_HUM (`net:se-force-hum`) |
-| SABER SLASH | SE_M_RAZOR_WIND | SE_SABER_IGNITE (`net:se-saber-ignite`), SE_SABER_HUM (`net:se-saber-hum`), SE_SABER_SWING (`net:se-saber-swing`), SE_M_RAZOR_WIND (`audio:SE_M_RAZOR_WIND`), SE_SABER_RETRACT (`net:se-saber-retract`) |
-| SEED BOMB | SE_M_TAIL_WHIP, SE_M_SELF_DESTRUCT | SE_M_TAIL_WHIP (`audio:SE_M_TAIL_WHIP`), SE_M_SELF_DESTRUCT (`audio:SE_M_SELF_DESTRUCT`) |
-| SELF DESTRUCT | SE_M_SELF_DESTRUCT | SE_DETONATOR_BEEP (`net:se-detonator-beep`), SE_M_SELF_DESTRUCT (`audio:SE_M_SELF_DESTRUCT`) |
-| SELF REPAIR | SE_M_MILK_DRINK | SE_ASTROMECH_CHATTER (`net:se-astromech`), SE_WELD_SPARK (`net:se-weld-spark`), SE_M_MILK_DRINK (`audio:SE_M_MILK_DRINK`) |
+| SABER SLASH | SE_M_RAZOR_WIND | SE_SABER_IGNITE (`net:se-saber-ignite`), SE_SABER_HUM (`net:se-saber-hum`), SE_SABER_SWING (`net:se-saber-swing`), SE_SABER_RETRACT (`net:se-saber-retract`) |
+| SEED BOMB | SE_M_TAIL_WHIP, SE_M_SELF_DESTRUCT | – |
+| SELF DESTRUCT | SE_M_SELF_DESTRUCT | SE_DETONATOR_BEEP (`net:se-detonator-beep`) |
+| SELF REPAIR | SE_M_MILK_DRINK | SE_ASTROMECH_CHATTER (`net:se-astromech`), SE_WELD_SPARK (`net:se-weld-spark`) |
 | SKILL SWAP | – | SE_FORCE_HUM (`net:se-force-hum`) |
-| SONIC BLAST | SE_M_SUPERSONIC | SE_M_SUPERSONIC (`audio:SE_M_SUPERSONIC`) |
+| SONIC BLAST | SE_M_SUPERSONIC | – |
 | SUBSTITUTE | – | SE_HOLO_FLICKER (`net:se-holo-flicker`) |
-| TARGET LOCK | SE_M_LOCK_ON | SE_TARGET_LOCK (`net:se-target-lock`), SE_M_LOCK_ON (`audio:SE_M_LOCK_ON`) |
+| TARGET LOCK | SE_M_LOCK_ON | SE_TARGET_LOCK (`net:se-target-lock`) |
 | TELEKINESIS | – | SE_FORCE_HUM (`net:se-force-hum`) |
-| TELEPORT | SE_M_TELEPORT | SE_HYPERSPACE_JUMP (`net:se-hyperspace-jump`), SE_M_TELEPORT (`audio:SE_M_TELEPORT`) |
+| TELEPORT | SE_M_TELEPORT | SE_HYPERSPACE_JUMP (`net:se-hyperspace-jump`) |
 | TRICK | – | SE_FORCE_HUM (`net:se-force-hum`) |
-| TURBOLASER | SE_M_EXPLOSION | SE_TURBOLASER_CHARGE (`net:se-turbolaser-charge`), SE_TURBOLASER (`net:se-turbolaser`), SE_M_EXPLOSION (`audio:SE_M_EXPLOSION`) |
+| TURBOLASER | SE_M_EXPLOSION | SE_TURBOLASER_CHARGE (`net:se-turbolaser-charge`), SE_TURBOLASER (`net:se-turbolaser`) |
 | VIBROBLADE | – | SE_VIBROBLADE (`net:se-vibroblade`) |
 
-27 net-new SE rows in total (`net:se-*`), of which 6 are already made and installed by `sfx-generator`
-(SE_ASTROMECH_CHATTER, SE_BLASTER_BOLT, SE_HYPERSPACE_JUMP, SE_SABER_HUM, SE_SABER_IGNITE, SE_VADER_BREATH) and the rest
-are `NEEDS_PLACEHOLDER` for the follow-up sound task. Overworld-only sounds (TIE flyby, alarm, slicer spike, saber clash)
-are listed there too but are not move effects.
+27 net-new SE rows in total (`net:se-*`): 6 are already made and installed by `sfx-generator` (SE_ASTROMECH_CHATTER,
+SE_BLASTER_BOLT, SE_HYPERSPACE_JUMP, SE_SABER_HUM, SE_SABER_IGNITE, SE_VADER_BREATH); the rest are `NEEDS_PLACEHOLDER` for the
+follow-up sound task. Overworld-only sounds (TIE flyby, alarm, slicer spike, saber clash) are in the same table but are not
+move effects.
