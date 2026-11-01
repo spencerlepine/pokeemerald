@@ -1,6 +1,9 @@
 {
   "flip": false,
-  "desc": "small round fuzzy bear cub standing on hind legs, side view facing left, whole body, small, centred, big round ears, stubby paws, pale crescent mark on chest",
-  "colour": "brown and tan",
-  "ref_note": "text only: gorax art is front view, Braga bear prep kept a dark background"
+  "desc": "small round fuzzy gorax cub with big pointed ears and stubby arms, slight three-quarter view, whole body",
+  "colour": "dark brown and tan",
+  "ref_note": "back to the Gorax Bestiary render (same as ursaring); text-only try was a frontal orange blob",
+  "init": "refs/teddiursa_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/c/cb/Gorax-Bestiary.png/revision/latest?cb=20241109212224#crop=0.2,0.0,1.0,1.0",
+  "denoise": 0.45
 }
