@@ -9,6 +9,7 @@ import gba_title as g, sw_logo, bg_round as b
 
 LOGO, GRADIENT, CREATURE, CLOUDS = "black-outline", "deep-space", "double-coil", "1-emerald-shapes-grey"
 TS = g.TS
+HERE = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(g.GAME, "src", "title_screen.c")
 
 
@@ -143,6 +144,22 @@ def main():
     write_jasc(os.path.join(TS, "rayquaza_and_clouds.pal"), [g.gba(c) for c in pal])
     ship_code(bxy)
     print("banner top-left", bxy)
+    gate()
+
+
+def gate():
+    """tools/PALETTES.md: the shipped pieces must pass the shared palette check (hardware errors
+    fail; colours outside Kyber Gold are listed as warnings)."""
+    import sys
+    sys.path.insert(0, os.path.join(HERE, "..", "palette-enforcer"))
+    from gba_palette import check, themes
+    theme = themes.resolve(["kyber-gold"])
+    reps = [check.check_png(os.path.join(TS, f), theme=theme) for f in ("pokemon_logo.png", "emerald_version.png", "rayquaza.png")]
+    reps += [check.check_pal(os.path.join(TS, f)) for f in ("pokemon_logo.pal", "rayquaza_and_clouds.pal")]
+    for r in reps:
+        print("\n".join(r.lines()))
+    if not all(r.ok for r in reps):
+        raise SystemExit("palette gate failed (tools/PALETTES.md)")
 
 
 if __name__ == "__main__":
