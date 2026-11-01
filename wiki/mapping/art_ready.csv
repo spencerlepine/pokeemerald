@@ -1,4 +1,2 @@
 asset_id,art_file,drawn_by,notes
 graphics/object_events/pics/people/team_magma/maxie.png,art/graphics/object_events/pics/people/team_magma/maxie.png,sprite-walker-generator (art/vader.yaml),"Darth Vader, helmet variant A; moves to OBJ_EVENT_PAL_TAG_NPC_4 (palette_tag in the spec)"
-graphics/object_events/pics/people/artist.png,art/graphics/object_events/pics/people/artist.png,sprite-walker-generator (art/artist.yaml),"Holo-artist: pink holo-visor, paint-stained smock, stylus; stays on NPC_4"
-graphics/object_events/pics/people/beauty.png,art/graphics/object_events/pics/people/beauty.png,sprite-walker-generator (art/beauty.yaml),"Core World socialite: auburn updo, pearls, lavender gown; stays on NPC_3"
