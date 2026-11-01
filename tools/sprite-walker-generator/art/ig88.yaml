@@ -1,0 +1,309 @@
+name: ig88
+description: 'IG-88: tall assassin droid with a cylindrical head (replaces Noland).'
+kit: person16x32
+replaces: graphics/object_events/pics/people/frontier_brains/noland.png
+graphics_info: Noland
+notes: From scratch. Noland ships on NPC_3; IG-88 moves to NPC_4 for the greys. 22 rows tall, 2 px limbs, on purpose.
+palette: npc_4
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_4
+legend:
+  .: 0
+  '1': 1
+  '2': 2
+  '3': 3
+  '4': 4
+  '5': 5
+  '6': 6
+  '7': 7
+  '8': 8
+  '9': 9
+  A: 10
+  B: 11
+  C: 12
+  D: 13
+  E: 14
+  F: 15
+accept:
+  height: '22 rows: IG-88 towers over people'
+  head_w: 6 px cylinder head by design
+  eye_row: no eyes; pink sensors
+  hair_rows: no hair; the cylinder top is seen from above
+  skin_tones: a droid has no skin
+  orphans: 'machined surfaces: the only specks are the sensors and the hand highlights'
+  step_change: '2 px limbs: both arms and both legs swing and the body bobs, but thin limbs change few pixels'
+frames:
+  down: '......DDDD......
+
+    .....DBBBCD.....
+
+    .....DCCCCD.....
+
+    .....D8CC8D.....
+
+    .....DCCCCD.....
+
+    .....D9CC9D.....
+
+    .....DCCCCD.....
+
+    .....DDCCDD.....
+
+    ......D77D......
+
+    ....DDDCCDDD....
+
+    ...DCDDCCDDDCD..
+
+    ...D6DDBCCDD6D..
+
+    ...D6D.DCCD.D6D.
+
+    ...D7D.D9CD.D7D.
+
+    ...DCD.DCCD.DCD.
+
+    ...DBD.DDDD.DBD.
+
+    .......D77D.....
+
+    ......D7DD7D....
+
+    ......D6D.D6D...
+
+    ......D6D.D6D...
+
+    ......D7D.D7D...
+
+    .....DCCD.DCCD..
+
+    ................
+
+    '
+  up: '......DDDD......
+
+    .....DBBBCD.....
+
+    .....DCCCCD.....
+
+    .....DCCCCD.....
+
+    .....DCDDCD.....
+
+    .....DCCCCD.....
+
+    .....DCCCCD.....
+
+    .....DDCCDD.....
+
+    ......D77D......
+
+    ....DDDCCDDD....
+
+    ...DCDDCCDDDCD..
+
+    ...D6DDCCCDD6D..
+
+    ...D6D.DCCD.D6D.
+
+    ...D7D.DCCD.D7D.
+
+    ...DCD.DCCD.DCD.
+
+    ...DBD.DDDD.DBD.
+
+    .......D77D.....
+
+    ......D7DD7D....
+
+    ......D6D.D6D...
+
+    ......D6D.D6D...
+
+    ......D7D.D7D...
+
+    .....DCCD.DCCD..
+
+    ................
+
+    '
+  left: '......DDDD......
+
+    .....DBBBCD.....
+
+    .....DCCCCD.....
+
+    .....D8CCCD.....
+
+    .....DCCCCD.....
+
+    .....D9CCCD.....
+
+    .....DCCCCD.....
+
+    .....DDCCDD.....
+
+    ......D77D......
+
+    .....DDCCDD.....
+
+    .....DCCCCD.....
+
+    ....D6DBCCD.....
+
+    ....D6DCCCD.....
+
+    ....D7D9CCD.....
+
+    ....DCDCCCD.....
+
+    ....DBDDDDD.....
+
+    ......D77D......
+
+    ......D77D......
+
+    ......D66D......
+
+    ......D66D......
+
+    ......D77D......
+
+    .....DCCCD......
+
+    ................
+
+    '
+  down_a:
+    base: down
+    shift: 1
+    patch_y: 21
+    rows: '...D6DDBCCDD6D..
+
+      ...D6D.DCCD.DCD.
+
+      ...D7D.D9CD.DBD.
+
+      ...DCD.DCCD.....
+
+      ...DBD.DDDD.....
+
+      .......D77D.....
+
+      ......D7DD7D....
+
+      ......D6D.D6D...
+
+      ......D6D.D7D...
+
+      ......D7D.DCCD..
+
+      .....DCCD.......
+
+      '
+  down_b:
+    base: down
+    shift: 1
+    patch_y: 21
+    rows: '...D6DDBCCDD6D..
+
+      ...DCD.DCCD.D6D.
+
+      ...DBD.D9CD.D7D.
+
+      .......DCCD.DCD.
+
+      .......DDDD.DBD.
+
+      .......D77D.....
+
+      ......D7DD7D....
+
+      ......D6D.D6D...
+
+      ......D7D.D6D...
+
+      ......DCCDD7D...
+
+      ..........DCCD..
+
+      '
+  up_a:
+    base: up
+    shift: 1
+    patch_y: 21
+    rows: '...D6DDCCCDD6D..
+
+      ...D6D.DCCD.DCD.
+
+      ...D7D.DCCD.DBD.
+
+      ...DCD.DCCD.....
+
+      ...DBD.DDDD.....
+
+      .......D77D.....
+
+      ......D7DD7D....
+
+      ......D6D.D6D...
+
+      ......D6D.D7D...
+
+      ......D7D.DCCD..
+
+      .....DCCD.......
+
+      '
+  up_b:
+    base: up
+    shift: 1
+    patch_y: 21
+    rows: '...D6DDCCCDD6D..
+
+      ...DCD.DCCD.D6D.
+
+      ...DBD.DCCD.D7D.
+
+      .......DCCD.DCD.
+
+      .......DDDD.DBD.
+
+      .......D77D.....
+
+      ......D7DD7D....
+
+      ......D6D.D6D...
+
+      ......D7D.D6D...
+
+      ......DCCDD7D...
+
+      ..........DCCD..
+
+      '
+  left_a:
+    base: left
+    shift: 1
+    patch_y: 28
+    rows: '......D66D......
+
+      .....D6DD6D.....
+
+      .....D7D.D7D....
+
+      ....DCCD.DCCD...
+
+      '
+  left_b:
+    base: left
+    shift: 1
+    patch_y: 28
+    rows: '......D66D......
+
+      ......D66D......
+
+      ......D77D......
+
+      .....DCCCD......
+
+      '

@@ -1,0 +1,202 @@
+name: yoda
+description: 'YODA: small green Jedi Master with a gimer stick (replaces Juan).'
+kit: person16x32
+replaces: graphics/object_events/pics/people/gym_leaders/juan.png
+graphics_info: Juan
+notes: From scratch. Juan ships on NPC_4; Yoda moves to NPC_3 for the green ramp. 15 rows tall on purpose.
+palette: npc_3
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_3
+legend:
+  .: 0
+  '1': 1
+  '2': 2
+  '3': 3
+  '4': 4
+  '5': 5
+  '6': 6
+  '7': 7
+  '8': 8
+  '9': 9
+  A: 10
+  B: 11
+  C: 12
+  D: 13
+  E: 14
+  F: 15
+accept:
+  height: '15 rows: Yoda is a small species'
+  eye_row: wide-set eyes sit high on a short bald head
+  hair_rows: bald; the skull top is two rows of skin
+  skin_tones: green skin uses ramp B (8/9/A), not the human skin ramp
+  head_w: head is 16 wide ear to ear, 12 without the ears
+  step_change: the robe hides the legs; hands, hem and toes move
+frames:
+  down: '......AAAA......
+
+    ....AA8888AA....
+
+    ..AA98888889AA..
+
+    .A989888888989A.
+
+    A9A9F888888F9A9A
+
+    .AA9F888888F9AA.
+
+    ...A99888899A...
+
+    ....A999999A....
+
+    ...7556666557...
+
+    ..756667766657..
+
+    ..756667766657..
+
+    ..756679966657..
+
+    ..776667766677..
+
+    ..777777777777..
+
+    ....A9A..A9A....
+
+    ................
+
+    '
+  up: '......AAAA......
+
+    ....AA8999AA....
+
+    ..AA99999999AA..
+
+    .A989999999989A.
+
+    A9A9999999999A9A
+
+    .AA9999999999AA.
+
+    ...A99999999A...
+
+    ....A999999A....
+
+    ...7566666657...
+
+    ..756666666657..
+
+    ..756666666657..
+
+    ..756666666657..
+
+    ..776666666677..
+
+    ..777777777777..
+
+    ....A9A..A9A....
+
+    ................
+
+    '
+  left: '......AAAA......
+
+    ....AA8888AA....
+
+    ...A988888899A..
+
+    ..A988888899989A
+
+    ..A9F8888999A...
+
+    ..AAF8888999AA..
+
+    ...A9988899A....
+
+    ..D.A99999A.....
+
+    ..C.75666657....
+
+    ..C7566666657...
+
+    ..C7566666657...
+
+    ..C9966666657...
+
+    ..C7766666677...
+
+    ..C777777777....
+
+    ..D.A9A.A9A.....
+
+    ................
+
+    '
+  down_a:
+    base: down
+    shift: 1
+    patch_y: 28
+    rows: '..756699666657..
+
+      ..776666666677..
+
+      ..777777777777..
+
+      ....A9A...AA....
+
+      '
+  down_b:
+    base: down
+    shift: 1
+    patch_y: 28
+    rows: '..756666996657..
+
+      ..776666666677..
+
+      ..777777777777..
+
+      .....AA..A9A....
+
+      '
+  up_a:
+    base: up
+    shift: 1
+    patch_y: 29
+    rows: '..776666666677..
+
+      ..777777777777..
+
+      ....A9A...AA....
+
+      '
+  up_b:
+    base: up
+    shift: 1
+    patch_y: 29
+    rows: '..776666666677..
+
+      ..777777777777..
+
+      .....AA..A9A....
+
+      '
+  left_a:
+    base: left
+    shift: 1
+    patch_y: 29
+    rows: '..C7766666677...
+
+      ..C777777777....
+
+      .D.A9A...A9A....
+
+      '
+  left_b:
+    base: left
+    shift: 1
+    patch_y: 29
+    rows: '..C7766666677...
+
+      ..C777777777....
+
+      ..D..A9AA9A.....
+
+      '

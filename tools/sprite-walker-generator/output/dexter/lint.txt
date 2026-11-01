@@ -1,0 +1,40 @@
+warning style: orphans = 0.067 is outside Emerald's p5-p95 range [0.098, 0.233]
+warning style: colours = 8 is outside Emerald's p5-p95 range [10, 15]
+warning style: step_change = 0.441 is outside Emerald's p5-p95 range [0.615, 0.805]
+warning style: skin_tones = 0 is outside Emerald's p5-p95 range [4, 4]
+warning style: hair_rows = 0 is outside Emerald's p5-p95 range [2, 8]
+
+STYLE SCORE 100/100  (ship to the owner at >= 90 with no FAIL; 5 rule(s) accepted by the spec, each with its reason below; see STYLE.md)
+  ok   edge_black = 0.0 (want <= 0.393; Emerald median 0.182): outline every material in its own dark ramp tone; black only on eyes, soles, creases (STYLE.md 1)
+  ok   inner_black = 0.022 (want <= 0.232; Emerald median 0.037): too much black inside the figure
+  ok   skin_tones = 0: accepted, Besalisk hide uses ramp A (5/6/7), not the human skin ramp
+  ok   ramp_tones_min = 3 (want >= 2; Emerald median 3): every ramp you use needs its light, mid and dark tone (STYLE.md 2)
+  ok   ramp_dark_share = 0.36 (want >= 0.165; Emerald median 0.3): shade from above: the dark tone should carry ~40% of each ramp, at the bottom of every shape (STYLE.md 2)
+  ok   hair_rows = 0: accepted, no hair: a short crest, then skull
+  ok   eye_row = -1: accepted, eyes sit high on a crested, hairless head
+  ok   head_w = 14 (want 14..16; Emerald median 14): head should be ~14 wide (STYLE.md 3)
+  ok   height = 19 (want 18..21; Emerald median 20): 18-21 rows tall, feet on row 30 (STYLE.md 3)
+  ok   step_change = 0.441: accepted, the lower arms are folded and the apron hangs straight; the bob, the forearms, the apron hem and the feet move
+  ok   orphans = 0.067: accepted, smooth hide and a plain apron; specks only on the apron and crest
+
+metric            this  Emerald p5  median     p95
+top                 12          10      11      13
+feet                30          29      30      30
+height              19          18      20      21
+width               16          14      15      16
+area               237         194     226     252
+dark_outline     0.964       0.846     1.0     1.0
+orphans          0.067       0.098   0.152   0.233
+colours              8          10      14      15
+step_change      0.441       0.615   0.698   0.805
+edge_black         0.0         0.0   0.182   0.609
+inner_black      0.022         0.0   0.037   0.232
+skin_tones           0           4       4       4
+ramp_tones_min       3           1       3       3
+ramp_dark_share    0.36         0.0     0.3   0.538
+hair_rows            0           2       5       8
+eye_row             -1          -1       7      10
+head_w              14          14      14      16
+body_w              16          12      14      16
+
+vanilla graphics/object_events/pics/people/frontier_brains/brandon.png: style score 100/100 (match or beat it; a FAIL it shares is inherited, not new)

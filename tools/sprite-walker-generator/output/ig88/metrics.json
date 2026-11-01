@@ -1,0 +1,51 @@
+{
+ "stand": {
+  "down": {
+   "top": 9,
+   "feet": 30,
+   "height": 22,
+   "width": 12,
+   "area": 156,
+   "dark_outline": 0.915,
+   "orphans": 0.147
+  },
+  "up": {
+   "top": 9,
+   "feet": 30,
+   "height": 22,
+   "width": 12,
+   "area": 156,
+   "dark_outline": 0.915,
+   "orphans": 0.109
+  },
+  "left": {
+   "top": 9,
+   "feet": 30,
+   "height": 22,
+   "width": 7,
+   "area": 122,
+   "dark_outline": 0.92,
+   "orphans": 0.066
+  }
+ },
+ "summary": {
+  "top": 9,
+  "feet": 30,
+  "height": 22,
+  "width": 12,
+  "area": 156,
+  "dark_outline": 0.915,
+  "orphans": 0.109,
+  "colours": 7,
+  "step_change": 0.481,
+  "edge_black": 0.0,
+  "inner_black": 0.0,
+  "skin_tones": 0,
+  "ramp_tones_min": 2,
+  "ramp_dark_share": 0.556,
+  "hair_rows": 0,
+  "eye_row": -1,
+  "head_w": 6,
+  "body_w": 11
+ }
+}

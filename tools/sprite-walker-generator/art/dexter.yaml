@@ -1,0 +1,233 @@
+name: dexter
+description: 'DEXTER JETTSTER: four-armed Besalisk cook in an apron (replaces Brandon).'
+kit: person16x32
+replaces: graphics/object_events/pics/people/frontier_brains/brandon.png
+graphics_info: Brandon
+notes: From scratch, stays on NPC_3. Hide uses ramp A (grey-lavender) with 7 as its outline; the second pair of arms is folded over the apron.
+palette: npc_3
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_3
+legend:
+  .: 0
+  '1': 1
+  '2': 2
+  '3': 3
+  '4': 4
+  '5': 5
+  '6': 6
+  '7': 7
+  '8': 8
+  '9': 9
+  A: 10
+  B: 11
+  C: 12
+  D: 13
+  E: 14
+  F: 15
+accept:
+  skin_tones: Besalisk hide uses ramp A (5/6/7), not the human skin ramp
+  eye_row: eyes sit high on a crested, hairless head
+  hair_rows: 'no hair: a short crest, then skull'
+  step_change: the lower arms are folded and the apron hangs straight; the bob, the forearms, the apron hem and the feet move
+  orphans: smooth hide and a plain apron; specks only on the apron and crest
+frames:
+  down: '....7CBBBC7.....
+
+    ...7755666577...
+
+    ..755666666657..
+
+    .756EF6666FE657.
+
+    .7566F6666F6657.
+
+    .75666666666657.
+
+    ..756777777657..
+
+    ..775666666577..
+
+    ...77666666677..
+
+    .7756EEEEEE6577.
+
+    75667EEEEE676657
+
+    75667E6EEEE76657
+
+    75667EEEEEE76657
+
+    7566755555576657
+
+    .77667555576677.
+
+    ..77EEEE6EEE77..
+
+    ..7DCCCDDCCCD7..
+
+    ...DCCD..DCCD...
+
+    ...DDDD..DDDD...
+
+    ................
+
+    '
+  up: '.....7CBBC7.....
+
+    ...7755666577...
+
+    ..755666666657..
+
+    .75666666666657.
+
+    .75666666666657.
+
+    .75666666666657.
+
+    ..756666666657..
+
+    ..775666666577..
+
+    ...77666666677..
+
+    .775666EE666577.
+
+    7566766666676657
+
+    7566766EE6676657
+
+    7566766666676657
+
+    7566766666676657
+
+    .77666666666677.
+
+    ..777777777777..
+
+    ..7DCCCDDCCCD7..
+
+    ...DCCD..DCCD...
+
+    ...DDDD..DDDD...
+
+    ................
+
+    '
+  left: '......7CBC7.....
+
+    ....775566677...
+
+    ...75566666657..
+
+    ..7F5666666657..
+
+    ..7F6666666657..
+
+    ..766666666657..
+
+    ..77766666657...
+
+    ...7766666667...
+
+    ....77666667....
+
+    ...75EEE66657...
+
+    ..756EEEE66657..
+
+    ..756EEEE66657..
+
+    ..756EEEE66657..
+
+    ..755555666657..
+
+    ...7755566657...
+
+    ...77EEEE6677...
+
+    ...7DCCCCCCD7...
+
+    ....DCCDDCCD....
+
+    ....DDDD.DDDD...
+
+    ................
+
+    '
+  down_a:
+    base: down
+    shift: 1
+    patch_y: 26
+    rows: '7567555557666657
+
+      .77675555766677.
+
+      ..77EEEE6EEE77..
+
+      ..7DCCCDDCCCD7..
+
+      ...DCCD..DDDD...
+
+      ...DDDD.........
+
+      '
+  down_b:
+    base: down
+    shift: 1
+    patch_y: 26
+    rows: '7566675555576657
+
+      .77666755557677.
+
+      ..77EEEE6EEE77..
+
+      ..7DCCCDDCCCD7..
+
+      ...DDDD..DCCD...
+
+      .........DDDD...
+
+      '
+  up_a:
+    base: up
+    shift: 1
+    patch_y: 29
+    rows: '..7DCCCDDCCCD7..
+
+      ...DCCD..DDDD...
+
+      ...DDDD.........
+
+      '
+  up_b:
+    base: up
+    shift: 1
+    patch_y: 29
+    rows: '..7DCCCDDCCCD7..
+
+      ...DDDD..DCCD...
+
+      .........DDDD...
+
+      '
+  left_a:
+    base: left
+    shift: 1
+    patch_y: 29
+    rows: '...7DCCCCCCD7...
+
+      ...DCCD...DCCD..
+
+      ...DDDD.........
+
+      '
+  left_b:
+    base: left
+    shift: 1
+    patch_y: 29
+    rows: '...7DCCCCCCD7...
+
+      .....DCCDCCD....
+
+      ........DDDD....
+
+      '
