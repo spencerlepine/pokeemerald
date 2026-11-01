@@ -99,6 +99,7 @@ frames:
           shapes:
             - {ellipse: hands, r: [3.0, 2.2]}
     finish: {pixel_perfect: true, strays: true, outline: K}
+    details:
+      - {name: face, shape: part, part: face_a, at: [25, 11], paint: {"89": "hi", "s": "c", "t": "d", "W": "W"}}
     patches:
-      - {x: 25, y: 10, rows: "ee__ee\n______\n_K__KK\n_K__Ki"}
-      - {x: 25, y: 15, rows: "c\n_\n__cc"}
+      - {x: 25, y: 10, rows: "ee___ee"}

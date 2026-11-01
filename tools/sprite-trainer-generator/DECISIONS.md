@@ -243,3 +243,21 @@ helmet, camo poncho), Bounty Hunter F (hunter's helmet, hair cut to a short cape
 Saboteur F (Flannery's hair turned teal and orange, goggles), Mystic (raised hood, energy
 blade), Doran (white armour plates). Sheets `output/round3-fronts.png` and
 `output/round3-parts.png`.
+
+## D14. Sculpt mode: draw the figure from the ground up (2026-11-01)
+
+Owner on round 3: commando, Doran and the saboteur "look okay"; the rest "look like patchwork...
+they look exactly the same as the original Pokemon sprites. You can't just slap on a helmet...
+draw a little more organically... work from the ground up". No handheld objects (a capture
+ball at most); characters only, with their own poses, clothes, armour and hair; exotic poses
+(sitting) are welcome. This reverses D9 for a new mode, `sculpt:` (trainer_sprite/sculpt.py):
+- a gesture skeleton, then soft volumes in groups that melt together (smooth union);
+- a surface normal per pixel from each group's volume, one light (upper left), shading
+  posterised into each material's ramp, a lit rim and a core shadow one pixel inside the
+  outline, a short cast shadow from a group onto what is behind it;
+- black silhouette outline, a line where a group passes in front of another, fold creases
+  with a lit lip;
+- `details:` (rig layers after the finisher) for faces from `parts/face_*`.
+D9's rig drawings failed because each shape was outlined and shaded on its own; here the whole
+figure is shaded as one. Round 4 (`art/sculpt/`, `output/round4-fronts.png`): scout, brawler,
+sitting hermit, guard, mechanic, noble, ace, kid.

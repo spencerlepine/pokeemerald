@@ -114,6 +114,7 @@ frames:
             - {limb: [sh_near, el_near, wr_near], r: [3.2, 2.6, 2.2]}
             - {ellipse: [39, 38], r: [2.6, 2.2]}
     finish: {pixel_perfect: true, strays: true, outline: K}
+    details:
+      - {name: face, shape: part, part: face_grin, at: [25, 10], paint: {"89": "ef", "s": "c", "t": "d", "W": "i"}}
     patches:
-      - {x: 25, y: 9, rows: "ff__ff\n______\n_K__KK\n_K__Kf"}
-      - {x: 25, y: 14, rows: "c\n_\n__dd"}
+      - {x: 25, y: 9, rows: "ff___ff"}

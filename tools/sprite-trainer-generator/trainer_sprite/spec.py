@@ -235,6 +235,12 @@ def load(path: str | Path) -> Spec:
             cols = [tuple(int(v) for v in c) for c in d["palette"]] + [(0, 0, 0)] * 16
             for line in finish_mod.apply(g, f["finish"], legend, cols, w, h):
                 print(f"finish: {line}")
+        if isinstance(f, dict) and f.get("details"):
+            # rig layers placed after the finisher (faces, catchlights), so it cannot clean them away
+            try:
+                g = rig_mod.render({"layers": f["details"]}, legend, w, h, where + " details", base=g, load_pic=_load_pic)
+            except rig_mod.RigError as e:
+                raise SpecError(str(e)) from None
         if isinstance(f, dict):
             for i, pt in enumerate(f.get("patches") or []):
                 px, py = int(pt["x"]), int(pt["y"])

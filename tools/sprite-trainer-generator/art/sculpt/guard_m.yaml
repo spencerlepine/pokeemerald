@@ -82,10 +82,17 @@ frames:
             - {poly: [sh_far, [32, 21], sh_near, [42, 31], [39, 43], [25, 43], [23, 31]], soft: 1.5}
           paint:
             - {mat: skin, shape: {limb: [[31, 17], [32, 21]], r: [3.0, 3.0]}}
-            - {mat: steel, shape: {poly: [[23, 24], [41, 23], [41, 32], [37, 38], [27, 38], [23, 32]], soft: 0.5}}
             - {mat: suit, shape: {limb: [[24, 39], [40, 39]], r: [1.4, 1.4]}}
+        - name: chest plate
+          mat: steel
+          round: 4
+          line: dark
+          shapes:
+            - {poly: [[24, 23], [40, 22], [41, 31], [37, 38], [27, 38], [24, 31]], soft: 0.8}
           creases:
-            - {pts: [[32, 26], [32, 36]], tone: 0}
+            - {pts: [[33, 24], [32, 36]], tone: 0}
+            - {pts: [[26, 33], [30, 36]], tone: 0}
+            - {pts: [[39, 32], [35, 36]], tone: 0}
         - name: far pauldron
           mat: steel
           round: 3
@@ -102,8 +109,11 @@ frames:
           round: 3
           line: dark
           shapes:
-            - {blob: [[33, 6, 5.0], [37, 9, 4.0], [27, 5, 3.0]], k: 3}
-            - {curve: [[28, 4], [25, 5], [24, 8]], r: [2.0, 0.8]}
+            - {blob: [[33, 6, 4.8], [37, 9, 3.8], [28, 5, 2.8]], k: 3}
+            - {curve: [[29, 3], [25, 4], [23, 7]], r: [2.2, 0.7]}
+            - {curve: [[32, 4], [29, 6], [28, 8]], r: [1.8, 0.6]}
+            - {curve: [[36, 3], [40, 3], [42, 6]], r: [1.8, 0.6]}
+            - {curve: [[39, 8], [42, 10], [41, 14]], r: [1.8, 0.6]}
         - name: near arm
           mat: suit
           round: 3
@@ -121,6 +131,5 @@ frames:
           creases:
             - {pts: [[39, 27], [45, 28]], tone: 0}
     finish: {pixel_perfect: true, strays: true, outline: K}
-    patches:
-      - {x: 24, y: 8, rows: "ee__ee\n______\n_K__KK\n_K__Kf"}
-      - {x: 24, y: 13, rows: "c\n_\n__dd"}
+    details:
+      - {name: face, shape: part, part: face_stern, at: [24, 8], paint: {"89": "ef", "s": "c", "t": "d", "W": "a"}}

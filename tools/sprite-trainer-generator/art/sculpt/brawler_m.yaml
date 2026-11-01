@@ -109,6 +109,5 @@ frames:
             - {mat: vest, shape: {ellipse: sh_near, r: [4.4, 4.4]}}
             - {mat: wrap, shape: {limb: [[44, 31], wr_near], r: [2.8, 2.8]}}
     finish: {pixel_perfect: true, strays: true, outline: K}
-    patches:
-      - {x: 24, y: 9, rows: "ee__ee\n______\n_K__KK\n_K__Kf"}
-      - {x: 24, y: 14, rows: "c\n_\n__dd"}
+    details:
+      - {name: face, shape: part, part: face_stern, at: [24, 9], paint: {"89": "ef", "s": "c", "t": "d", "W": "a"}}

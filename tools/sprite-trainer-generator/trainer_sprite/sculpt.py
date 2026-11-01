@@ -41,7 +41,7 @@ Faces, eyes, emblems and the sheen pixels stay hand-placed with `patches:`.
             paint:                       # sub-regions of the group in another material
               - {mat: skin, shape: {ellipse: [..], r: [..]}}
             creases:                     # fold lines, drawn in the group's dark tone
-              - {pts: [[x, y], ...], tone: 0}
+              - {pts: [[x, y], ...], tone: 0}   # tone 0 folds get a lit lip (pair: false)
 """
 from __future__ import annotations
 
@@ -177,7 +177,7 @@ def _height(d, R):
     return np.sqrt(np.maximum(0, 2 * R * t - t * t))
 
 
-TONES = {2: [0.30], 3: [0.18, 0.62], 4: [0.02, 0.30, 0.80]}
+TONES = {2: [0.30], 3: [0.22, 0.66], 4: [0.05, 0.36, 0.78]}
 
 
 def render(sc: dict, legend: dict[str, int], w: int, h: int, where: str):
@@ -189,7 +189,7 @@ def render(sc: dict, legend: dict[str, int], w: int, h: int, where: str):
             raise SculptError(f"{where}: material {name}: ramp must be 2-4 legend characters")
         mats[name] = [legend[c] for c in ramp]
     K = legend.get(str(sc.get("outline", "K")))
-    L = np.array(sc.get("light", [-0.55, -0.7, 0.55]), float)
+    L = np.array(sc.get("light", [-0.72, -0.5, 0.48]), float)
     L /= np.linalg.norm(L)
     tones = sc.get("tones") or {}
 
@@ -236,6 +236,19 @@ def render(sc: dict, legend: dict[str, int], w: int, h: int, where: str):
             ramp = mats[mat[y, x]]
             th = tones.get(len(ramp)) or TONES[len(ramp)]
             t = sum(1 for v in th if shade[y, x] >= v)
+            gi_ = gid[y, x]
+            rim = info[gi_].get("rim", sc.get("rim", True))
+            if rim:
+                def other(xx, yy):
+                    return not (0 <= xx < w and 0 <= yy < h) or gid[yy, xx] != gi_
+                # lit rim on the light side, a core shadow on the far side: the crisp edge
+                # shading every Emerald pic has
+                # (one pixel in: the edge pixel itself becomes the outline)
+                if (other(x - 2, y) or other(x, y - 2) or other(x - 1, y - 1)) and t >= len(ramp) - 2 \
+                        and not (other(x + 2, y) or other(x, y + 2)):
+                    t = len(ramp) - 1
+                elif (other(x + 2, y) or other(x, y + 2)) and not (other(x - 2, y) or other(x, y - 2)):
+                    t = max(0, min(t, len(ramp) - 3) if len(ramp) >= 3 else t - 1)
             # cast shadow: a group in front, up and to the light side, darkens this pixel
             for dx, dy in ((-1, -1), (-1, 0), (0, -1)):
                 xx, yy = x + dx, y + dy
@@ -265,6 +278,8 @@ def render(sc: dict, legend: dict[str, int], w: int, h: int, where: str):
             pts = [_pt(p, joints, where) for p in c["pts"]]
             mname = c.get("mat", gr["mat"])
             col = mats[mname][int(c.get("tone", 0))] if "char" not in c else legend[c["char"]]
+            hi = mats[mname][-1]
+            pair = bool(c.get("pair", True)) and "char" not in c and int(c.get("tone", 0)) == 0
             for i in range(len(pts) - 1):
                 (x0, y0), (x1, y1) = pts[i], pts[i + 1]
                 n = int(max(abs(x1 - x0), abs(y1 - y0))) or 1
@@ -273,6 +288,10 @@ def render(sc: dict, legend: dict[str, int], w: int, h: int, where: str):
                     y = int(round(y0 + (y1 - y0) * k / n))
                     if 0 <= x < w and 0 <= y < h and gid[y, x] == gi:
                         g[y][x] = col
+                        # a fold has a lit lip on the light side (upper left)
+                        if pair and 0 <= x - 1 < w and gid[y, x - 1] == gi and g[y][x - 1] not in (col, K) \
+                                and tone[y, x - 1] >= 1:
+                            g[y][x - 1] = hi
     # the silhouette outline
     for y in range(h):
         for x in range(w):

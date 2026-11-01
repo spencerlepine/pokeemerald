@@ -117,6 +117,7 @@ frames:
           paint:
             - {mat: skin, shape: {limb: [[43, 35], wr_near, [39, 38]], r: [2.2, 2.4, 2.4]}}
     finish: {pixel_perfect: true, strays: true, outline: K}
+    details:
+      - {name: face, shape: part, part: face_a, at: [25, 11], paint: {"89": "ef", "s": "c", "t": "d", "W": "a"}}
     patches:
-      - {x: 24, y: 10, rows: "ff__ff\n______\n_K__KK\n_K__Ke"}
-      - {x: 24, y: 15, rows: "c\n_\n__dd"}
+      - {x: 25, y: 10, rows: "ff___ff"}

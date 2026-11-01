@@ -103,6 +103,7 @@ frames:
           shapes:
             - {ellipse: [44, 52], r: [3.0, 2.4]}
     finish: {pixel_perfect: true, strays: true, outline: K}
+    details:
+      - {name: face, shape: part, part: face_closed, at: [24, 16], paint: {"s": "c", "t": "d"}}
     patches:
-      - {x: 23, y: 16, rows: "ff__ff\n______\n_K__KK\n_c__cc"}
-      - {x: 23, y: 21, rows: "c"}
+      - {x: 24, y: 14, rows: "ff___ff"}
