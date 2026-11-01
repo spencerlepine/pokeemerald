@@ -1,0 +1,10 @@
+# Prototype: Star Destroyer interior (crew quarters, corridors) from the Abandoned Ship kit (gTileset_InsideShip).
+# The ship kit's shapes already read as a vessel (cabins, bunks, portholes, corridor rails). The wood panels
+# become Imperial grey wall panels and the carpets become dark deck. Exact per-index overrides, because the
+# wood and carpet ramps overlap in hue and a hue rule can't separate them.
+name: star-destroyer
+notes: Star Destroyer interior. Wood panels -> pale Imperial grey panels; carpet -> dark deck with a lighter dot; olive corridor walls -> mid grey; bunks keep green blankets; lifebuoy red kept as an accent.
+rules: []
+overrides:
+  "inside_ship:7": {5: "#686870", 6: "#9090a0", 7: "#c0c0c8", 8: "#484850", 9: "#202028", 10: "#303038", 11: "#383840", 12: "#505058"}
+  "inside_ship:9": {5: "#686870", 6: "#9090a0", 7: "#c0c0c8", 10: "#282830", 11: "#383840", 12: "#505058"}
