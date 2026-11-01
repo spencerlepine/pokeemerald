@@ -217,6 +217,12 @@ def load(path: str | Path) -> Spec:
                     g[py + i] = row
         else:
             raise SpecError(f"{where}: give a grid or a `repaint:` (D8)")
+        if isinstance(f, dict) and f.get("finish"):
+            from . import finish as finish_mod
+
+            cols = [tuple(int(v) for v in c) for c in d["palette"]] + [(0, 0, 0)] * 16
+            for line in finish_mod.apply(g, f["finish"], legend, cols, w, h):
+                print(f"finish: {line}")
         if isinstance(f, dict):
             for i, pt in enumerate(f.get("patches") or []):
                 px, py = int(pt["x"]), int(pt["y"])

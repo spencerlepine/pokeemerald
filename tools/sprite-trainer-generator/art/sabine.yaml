@@ -1,0 +1,37 @@
+name: sabine
+kit: trainer64
+replaces: graphics/trainers/front_pics/leader_flannery.png
+# SABINE WREN, Pirin arena leader (replaces Flannery). Repaint of Flannery: the same fiery,
+# leaning-in pose. Her big hair -> gone under a painted Mandalorian helmet (parts/mando_helmet,
+# purple with orange flashes), black top and bare midriff -> orange chest armour, jeans ->
+# grey flight suit.
+palette:
+  - [115, 197, 164]  # 0 transparent
+  - [248, 224, 200] # a skin light
+  - [240, 184, 144] # b skin base
+  - [200, 144, 112] # c skin shadow
+  - [112, 80, 72]   # d skin edge
+  - [176, 176, 192] # e suit light
+  - [128, 128, 144] # f suit base
+  - [88, 88, 104]   # g suit shadow
+  - [48, 48, 64]    # h suit dark
+  - [216, 216, 224] # i pale
+  - [80, 48, 112]   # j purple dark
+  - [248, 176, 96]  # k orange light
+  - [144, 96, 184]  # m purple
+  - [232, 112, 48]  # n orange
+  - [248, 248, 248] # W white
+  - [16, 16, 24]    # K outline
+legend: {'.': 0, a: 1, b: 2, c: 3, d: 4, e: 5, f: 6, g: 7, h: 8, i: 9, j: 10, k: 11, m: 12, n: 13, W: 14, K: 15}
+frames:
+  front:
+    repaint:
+      pic: graphics/trainers/front_pics/leader_flannery.png
+      # leader_flannery: 1-4 skin, 5-8 blue jeans light->dark, 10/12/13 red hair and belt, 11 grey, 14 white, 15 outline
+      remap: {1: a, 2: b, 3: c, 4: d, 5: e, 6: f, 7: g, 8: h, 9: i, 10: j, 11: k, 12: m, 13: n, 14: W, 15: K}
+    rig:
+      layers:
+        - {name: hair and head, shape: poly, pts: [[12, 0], [54, 0], [54, 27], [40, 27], [40, 23], [22, 23], [22, 20], [12, 20]], erase: true}
+        - {name: helmet, shape: part, part: mando_helmet, at: [25, 4], paint: {"1234": "jmmW", "567": "hgf", "9": "k"}}
+        - {name: helmet flashes, shape: pixels, x: 27, y: 9, rows: "_nk\n__n\n\n\n\n\n\n\n_____n\n____nk\n___nk"}
+        - {name: chest armour, shape: poly, pts: [[24, 19], [40, 19], [40, 29], [24, 29]], recolour: "a:k b:n c:n d:j"}

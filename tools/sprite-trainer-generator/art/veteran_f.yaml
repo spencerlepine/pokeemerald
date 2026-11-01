@@ -1,9 +1,10 @@
 name: veteran_f
 kit: trainer64
 replaces: graphics/trainers/front_pics/cooltrainer_f.png
-# VETERAN (f) in a flight suit (replaces Cooltrainer F). Repaint of Cooltrainer F herself: a
-# confident pose, ball tossed in the air. Green hair -> black, orange top -> Rebel pilot orange,
-# green shorts -> olive flight trousers.
+# VETERAN (f), a Rebel pilot in her flight suit (replaces Cooltrainer F). Repaint of Cooltrainer
+# F herself: a confident pose, a capture pod tossed in the air. Green hair -> black, falling from
+# under a Rebel X-wing pilot helmet (parts/xwing_helmet, orange squadron band, visor up), orange
+# top -> flight orange, shorts -> charcoal.
 palette:
   - [115, 197, 164]  # 0 transparent
   - [248, 224, 200] # a skin light
@@ -32,3 +33,7 @@ frames:
       layers:
         # the tossed ball -> a capture pod (durasteel grey and white)
         - {name: pod, shape: poly, pts: [[14, 15], [21, 15], [21, 22], [14, 22]], recolour: "e:n f:n h:K"}
+        # the X-wing helmet over the crown, face open below the raised visor
+        - {name: crown, shape: poly, pts: [[27, 2], [48, 2], [48, 10], [27, 10]], erase: true}
+        - {name: helmet, shape: part, part: xwing_helmet, at: [28, 1], flip: true, paint: {"1234": "inmW", "567": "hfe", "89": "kW"}}
+    finish: {outline: K, box: [22, 0, 30, 22], pixel_perfect: true}

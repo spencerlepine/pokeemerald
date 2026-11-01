@@ -231,6 +231,44 @@ def cmd_compare(a) -> int:
     return 0
 
 
+def cmd_cutpart(a) -> int:
+    """Cut a part out of a built (approved) pic: python -m trainer_sprite cutpart
+    output/boba/boba.png 26 1 17 22 --roles "1:K 2:1 3:2 4:3" > parts/x.yaml rows."""
+    from . import parts as parts_mod
+
+    roles = {int(k): v for k, v in (p.split(":") for p in a.roles.split())}
+    for r in parts_mod.cut(Path(a.png), [a.x, a.y, a.w, a.h], roles):
+        print("  " + r)
+    return 0
+
+
+def cmd_parts(a) -> int:
+    """Contact sheet of every part in parts/, in a neutral test palette."""
+    from PIL import Image, ImageDraw
+
+    from . import parts as parts_mod
+
+    test = {".": None, "K": (16, 16, 24), "1": (96, 104, 128), "2": (152, 160, 184), "3": (208, 216, 232), "4": (248, 248, 248),
+            "5": (152, 64, 48), "6": (216, 104, 72), "7": (248, 168, 120), "8": (40, 48, 72), "9": (96, 168, 232),
+            "W": (255, 255, 255), "s": (200, 136, 104), "t": (232, 176, 144), "u": (248, 224, 200)}
+    names = sorted(p.stem for p in parts_mod.PARTS.glob("*.yaml"))
+    z, cell = 8, 26
+    im = Image.new("RGB", (len(names) * (cell * z + 8) + 8, cell * z + 24), (24, 24, 30))
+    d = ImageDraw.Draw(im)
+    for i, n in enumerate(names):
+        p = parts_mod.load(n)
+        x0 = 8 + i * (cell * z + 8)
+        d.rectangle([x0, 18, x0 + cell * z - 1, 18 + cell * z - 1], fill=(115, 197, 164))
+        d.text((x0, 3), n, fill=(230, 230, 230))
+        for y, row in enumerate(p["rows"]):
+            for x, ch in enumerate(row):
+                if test.get(ch):
+                    d.rectangle([x0 + x * z, 18 + y * z, x0 + x * z + z - 1, 18 + y * z + z - 1], fill=test[ch])
+    im.save(a.out)
+    print(f"wrote {a.out} ({len(names)} parts)")
+    return 0
+
+
 def cmd_inspect(a) -> int:
     """Material map of an indexed PNG: each palette index in a false colour with its number, so
     a repaint `remap:` can be written (which index is skin, hair, coat, outline...)."""
@@ -280,6 +318,16 @@ def main(argv=None) -> int:
         sp.set_defaults(fn=fn)
     sub.add_parser("corpus").set_defaults(fn=cmd_corpus)
     sub.add_parser("status").set_defaults(fn=cmd_status)
+    cu = sub.add_parser("cutpart")
+    for k in ("png",):
+        cu.add_argument(k)
+    for k in ("x", "y", "w", "h"):
+        cu.add_argument(k, type=int)
+    cu.add_argument("--roles", required=True)
+    cu.set_defaults(fn=cmd_cutpart)
+    pp = sub.add_parser("parts")
+    pp.add_argument("out")
+    pp.set_defaults(fn=cmd_parts)
     shp = sub.add_parser("sheet")
     shp.add_argument("out")
     shp.add_argument("specs", nargs="*")

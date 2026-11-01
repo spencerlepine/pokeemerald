@@ -3,7 +3,8 @@ kit: trainer64
 replaces: graphics/trainers/front_pics/leader_roxanne.png
 # BIGGS DARKLIGHTER, Bestine arena leader (replaces Roxanne). Repaint of Cooltrainer M: a cocky
 # young man in a one-piece suit with a stripe, which is an X-wing pilot's orange flight suit.
-# Green hair -> dark brown, suit -> flight orange, yellow stripe -> the white flak vest straps.
+# Hair -> under a Rebel X-wing pilot helmet (parts/xwing_helmet, red-orange squadron band, visor
+# up), moustache, suit -> flight orange, yellow stripe -> the white flak vest straps and chest box.
 palette:
   - [115, 197, 164]  # 0 transparent
   - [248, 224, 200] # a skin light
@@ -33,5 +34,9 @@ frames:
         # the ball -> a capture pod (durasteel grey and white)
         - {name: pod, shape: poly, pts: [[36, 16], [43, 16], [43, 21], [36, 21]], recolour: "f:n h:K e:m"}
         # moustache, and the rebel pilot's chest life-support box on the flight vest
-        - {name: moustache, shape: pixels, x: 28, y: 16, rows: "kik"}
+        - {name: moustache, shape: pixels, x: 28, y: 16, rows: "iii"}
+        # hair goes; the X-wing helmet sits on the brow, face open below the raised visor
+        - {name: hair, shape: poly, pts: [[16, 2], [40, 2], [40, 10], [27, 10], [27, 19], [16, 19]], erase: true}
+        - {name: helmet, shape: part, part: xwing_helmet, at: [20, 2], flip: true, paint: {"1234": "jnmW", "567": "hgf", "89": "iW"}}
         - {name: chest box, shape: pixels, x: 27, y: 23, rows: "KKKK\nKnmK\nKiiK\nKKKK"}
+    finish: {outline: K, box: [14, 0, 30, 24], pixel_perfect: true}

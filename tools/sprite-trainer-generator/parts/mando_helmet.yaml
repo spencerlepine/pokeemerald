@@ -1,0 +1,26 @@
+name: mando_helmet
+# Mandalorian helmet, 3/4 view facing the viewer's left: dome with a dent, T-visor (black,
+# a glint at the stem), ear cap on the near side, rangefinder stalk. Cut from the approved
+# Boba Fett (art/boba.yaml, round 5), jetpack removed. 15 x 20: covers the whole head, so
+# erase the old head first. 1-4 armour paint ramp, 5-7 ear cap metal, 9 visor glint.
+rows: |
+  .............K.
+  .............K.
+  .............K.
+  ..KKKKKKKK...K.
+  ..K44433K2KK.K.
+  .K3422222K21KK.
+  K333222222211K.
+  K332222222211K.
+  KKKKKKKKKK211K.
+  KKKKKKKKKK211K.
+  K32KKK22222KKK.
+  K32KKK22222K77K
+  K32K9K22222K75K
+  K32KKK22222KKK.
+  K32KKK2222211K.
+  K322K22222211K.
+  K322222222111K.
+  K311111111111K.
+  KK11111111111K.
+  .KKKKKKKKKKKK..

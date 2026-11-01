@@ -52,6 +52,10 @@ Silhouette ops (reshape the repainted base; all pixel-exact, nothing is resample
 - `shape: cols` does the same sideways: `{shape: cols, at: x, add: n, y: [y0, y1]}` repeats
   column `x`, pushing everything right of it further right. Broader shoulders, a bulkier alien.
 
+Parts: `shape: part` places a hand-pixelled helmet, hood, armour piece or prop from `parts/`
+in this pic's colours (`trainer_sprite/parts.py`): `{shape: part, part: xwing_helmet, at: [x, y],
+paint: {"1234": "nmlW", ...}, flip: false, behind: false}`.
+
 Shapes: `pixels` (x, y, rows: hand-placed pixels, `_` keeps; use it for details that must sit
 *under* a later layer, e.g. a face the lightsaber passes in front of), `capsule` (from, to, r: [r_from, r_to]), `ellipse` (at, r: [rx, ry], angle: degrees
 clockwise), `poly` (pts).
@@ -235,6 +239,13 @@ def render(rig: dict, legend: dict[str, int], w: int, h: int, where: str, base=N
     for i, layer in enumerate(rig.get("layers", [])):
         lw = f"{where}: layer {i} ({layer.get('name', layer.get('shape'))})"
         op = layer.get("shape")
+        if op == "part":  # a hand-pixelled part from parts/ (D13)
+            from . import parts as parts_mod
+            try:
+                parts_mod.place(g, layer, legend, w, h, lw)
+            except parts_mod.PartError as e:
+                raise RigError(str(e)) from None
+            continue
         if op == "fringe":
             on = {legend[c] for c in str(layer["chars"]) if c in legend}
             bx, by, bw, bh = _box(layer, lw) if "box" in layer else (0, 0, w, h)

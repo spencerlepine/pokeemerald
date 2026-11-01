@@ -1,3 +1,4 @@
+warning palette[12] and palette[14] are the same colour on the GBA
 
 metric            this  Emerald p5  median     p95
 top                  1           1       5      17
@@ -5,7 +6,7 @@ feet                63          62      62      63
 height              63          46      58      63
 width               34          29      41      57
 area              1078         718    1075    1534
-dark_outline     0.964       0.611   0.877   0.974
-orphans          0.123        0.11   0.168   0.226
-colours             14          13      15      15
-symmetry         0.267       0.062   0.148    0.33
+dark_outline     0.919       0.611   0.877   0.974
+orphans          0.128        0.11   0.168   0.226
+colours             15          13      15      15
+symmetry         0.256       0.062   0.148    0.33

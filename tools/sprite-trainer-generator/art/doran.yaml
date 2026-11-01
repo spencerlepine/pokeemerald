@@ -2,23 +2,24 @@ name: doran
 kit: trainer64
 replaces: graphics/trainers/front_pics/leader_norman.png
 # DORAN, Mos Entha arena leader, the player's dad (replaces Norman). Repaint of Norman himself:
-# an ex-Republic veteran in the same calm stance. Red shirt -> a faded clone-veteran olive tunic,
-# blue-grey trousers -> brown, hair stays dark with grey at the temples.
+# the same calm, ready stance. An ex-Republic clone-wars veteran who still wears his old armour:
+# red jacket -> white clone trooper plates with the 212th's orange markings, the blue-grey
+# trousers -> black body glove, hair stays dark grey.
 palette:
   - [115, 197, 164]  # 0 transparent
   - [248, 224, 200] # a skin light
-  - [240, 200, 152] # b skin base
-  - [200, 152, 112] # c skin shadow
-  - [112, 80, 64]   # d skin edge
-  - [0, 0, 0]       # e unused
-  - [176, 152, 120] # f trousers light
-  - [128, 104, 80]  # g trousers base
-  - [80, 64, 56]    # h trousers dark
-  - [216, 216, 224] # i white
-  - [72, 80, 48]    # j tunic dark
-  - [120, 120, 120] # k grey
-  - [168, 168, 104] # m tunic light
-  - [120, 128, 72]  # n tunic base
+  - [240, 184, 144] # b skin base
+  - [200, 144, 112] # c skin shadow
+  - [112, 80, 72]   # d skin edge
+  - [232, 128, 48]  # e 212th orange
+  - [96, 104, 120]  # f hair light
+  - [56, 64, 80]    # g glove base
+  - [32, 40, 48]    # h glove dark
+  - [216, 216, 224] # i pale
+  - [136, 144, 160] # j armour shadow
+  - [96, 96, 104]   # k grey
+  - [248, 248, 248] # m armour light
+  - [208, 208, 216] # n armour base
   - [248, 248, 248] # W white
   - [16, 16, 24]    # K outline
 legend: {'.': 0, a: 1, b: 2, c: 3, d: 4, e: 5, f: 6, g: 7, h: 8, i: 9, j: 10, k: 11, m: 12, n: 13, W: 14, K: 15}
@@ -26,5 +27,9 @@ frames:
   front:
     repaint:
       pic: graphics/trainers/front_pics/leader_norman.png
-      # norman: 1-4 skin, 6-8 blue-grey trousers and hair, 9 white, 10/13/12 red shirt dark->light, 11 grey, 14 white, 15 outline
+      # norman: 1-4 skin, 6-8 blue-grey trousers and hair, 9 white, 10/13/12 red jacket dark->light, 11 grey, 14 white, 15 outline
       remap: {1: a, 2: b, 3: c, 4: d, 5: e, 6: f, 7: g, 8: h, 9: i, 10: j, 11: k, 12: m, 13: n, 14: W, 15: K}
+    rig:
+      layers:
+        - {name: markings, shape: pixels, x: 25, y: 22, rows: "_e\nee\nee\n\n\n\n\n\n_____e\n____e\n___e"}
+        - {name: pauldron stripe, shape: pixels, x: 36, y: 20, rows: "eee\n_eee"}
