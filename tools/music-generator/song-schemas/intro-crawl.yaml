@@ -1,0 +1,132 @@
+# Opening crawl (net:mus-intro-crawl, MUS_INTRO_CRAWL): plays once, new game only, from the moment the logo
+# starts receding on the title screen (title_screen.c StartTitleScreenCrawlOut) through the crawl
+# (intro_crawl.c) until the fade into the main menu, about 77 s. ARRANGE of the 1977 main title as it plays
+# under the original crawl (wiki ref concept:intro-crawl-1977, the owner's recording; also
+# soundtrack:new-hope:01): Bb major, ~101 bpm in the film, 102 here.
+#   bars 1-4   fanfare blast while the logo recedes
+#   bars 5-20  the main theme: A, A, B, A (crawl text starts during bar 2)
+#   bars 21-28 softer: theme on flute over harp, the B strain on strings
+#   bars 29-32 the crawl's ending: high strings settling, as the film pans down into space
+#   bars 33-36 coda: a quiet loop, so a long pause on the "Skip intro?" box never ends in silence
+# The scene fades the music out (FadeOutBGM) around bar 33, so the full arrangement is longer than the scene.
+name: intro-crawl
+constant: MUS_INTRO_CRAWL
+form: CUE
+voicegroup: title             # trumpet 56, horn 60, strings 48, timpani 47, harp 46, flute 73, glock 9, squares, wave
+master_volume: 90
+tempo: 102
+steps_per_beat: 12            # triplet eighths (4) and dotted eighth + sixteenth (9 + 3) on one grid
+time_signature: [4, 4]
+seed: 77
+
+parts:
+  trumpet: {program: 56, channel: 0, volume: 108, pan: 4,   range: [F4, Bb5], gate: 0.92, humanize: {vel: 3}}
+  horn:    {program: 60, channel: 1, volume: 96,  pan: -12, range: [Bb2, F4], gate: 0.95, transpose: -12}
+  strings: {program: 48, channel: 2, volume: 76,  pan: -26, range: [C4, F5], gate: 1.0}
+  flute:   {program: 73, channel: 3, volume: 92,  pan: 14,  range: [F4, Bb5], gate: 0.95, lfo_speed: 30, lfo_delay: 24, mod: 4}
+  harp:    {program: 46, channel: 4, volume: 78,  pan: 28,  octave: 4, range: [Bb3, F5], gate: 0.9}
+  timpani: {program: 47, channel: 5, volume: 100, pan: 0,   range: [F2, Bb2], gate: 1.0}
+  cymbal:  {program: 0,  channel: 6, volume: 80,  pan: 20, role: drums, kit: {crash: 57}}
+  bass:    {program: 82, channel: 7, volume: 104, pan: 0,   octave: 1, range: [F1, F2], gate: 0.85, role: bass}
+  sq1:     {program: 80, channel: 8, volume: 52,  pan: 34,  octave: 4, range: [Bb3, F5], gate: 0.6, mono: true}
+  sq2:     {program: 81, channel: 9, volume: 46,  pan: -34, octave: 4, range: [F3, D5], gate: 0.6, mono: true}
+
+progressions:
+  blast:   "Bb | Bb | Bb | F"
+  theme:   "Bb | Eb:12 Bb:36 | Eb:12 Bb:36 | Cm:12 F:36"
+  theme_end: "Bb | Eb:12 Bb:36 | Eb:12 Bb:36 | Cm:12 Bb:36"
+  strain:  "Gm:24 Eb:24 | Bb:24 F:24 | Gm:24 Eb:24 | F"
+  settle:  "Bb | Gm | Eb | F:24 Fsus4:24"
+  space:   "Eb | Bb | Eb | Bb"
+
+phrases:
+  # trumpet
+  fanfare: |
+    Bb4:48 | F4:4 F4:4 F4:4 Bb4:12 F4:4 F4:4 F4:4 Bb4:12 |
+    F4:4 F4:4 F4:4 Bb4:12 D5:12 F5:12 | F5:36 F4:4 F4:4 F4:4
+  theme_head: |
+    Bb4:24 F5:24 | Eb5:4 D5:4 C5:4 Bb5:24 F5:12 | Eb5:4 D5:4 C5:4 Bb5:24 F5:12
+  theme_a:   [theme_head, "Eb5:4 D5:4 Eb5:4 C5:24 F4:4 F4:4 F4:4"]
+  theme_a2:  [theme_head, "Eb5:4 D5:4 Eb5:4 C5:24 F4:9 F4:3"]
+  theme_fin: [theme_head, "Eb5:4 D5:4 C5:4 Bb4:36"]
+  strain_b: |
+    G4:18 G4:6 Eb5:6 D5:6 C5:6 Bb4:6 | Bb4:6 C5:6 D5:6 C5:6 G4:6 A4:6 F4:9 F4:3 |
+    G4:18 G4:6 Eb5:6 D5:6 C5:6 Bb4:6 | F5:24 C5:12 F4:4 F4:4 F4:4
+  strain_soft: |
+    G4:18 G4:6 Eb5:6 D5:6 C5:6 Bb4:6 | Bb4:6 C5:6 D5:6 C5:6 G4:6 A4:6 F4:12 |
+    G4:18 G4:6 Eb5:6 D5:6 C5:6 Bb4:6 | F5:24 C5:24
+  # horn (sounds an octave below what is written)
+  horn_blast: "D5:48 | r:12 F4:12 r:12 F4:12 | r:12 F4:12 Bb4:12 D5:12 | C5:36 r:12"
+  horn_pad_a: "D5:48 | Eb5:12 D5:36 | Eb5:12 D5:36 | Eb5:12 C5:36"
+  horn_pad_b: "D5:24 Eb5:24 | D5:24 C5:24 | D5:24 Eb5:24 | C5:48"
+  horn_settle: "F4:48 | D4:48 | Eb4:24 r:24 | r:48"
+  # strings
+  str_blast: "F4:48 | F4:48 | F4:48 | A4:48"
+  str_a: "F4:48 | G4:12 F4:36 | G4:12 F4:36 | G4:12 A4:36"
+  str_b: "Bb4:24 Bb4:24 | F4:24 A4:24 | Bb4:24 G4:24 | A4:48"
+  str_settle: "D5:48 | D5:24 C5:24 | Bb4:48 | C5:24 Bb4:24"
+  str_space: "G4:48 | F4:48 | G4:48 | F4:48"
+  # harp, accompaniment, bass, timpani
+  arp: "^1:6 ^2:6 ^3:6 ^4:6 ^5:6 ^4:6 ^3:6 ^2:6"
+  arp_slow: "^1:12 ^2:12 ^3:12 ^4:12"
+  trip: "^3:4 ^3:4 ^3:4 ^2:12 ^3:4 ^3:4 ^3:4 ^2:12"
+  trip_lo: "^1:4 ^1:4 ^1:4 ^1:12 ^1:4 ^1:4 ^1:4 ^1:12"
+  bass_march: "^1:18 ^1:6 ^1:12 ^1:12"
+  bass_long: "^1:48"
+  timp_phrase: "Bb2:12 r:36 | r:48 | r:48 | F2:12 r:24 F2:4 F2:4 F2:4"
+  timp_blast: "Bb2:12 r:36 | r:48 | Bb2:12 r:24 Bb2:12 | F2:12 r:24 F2:4 F2:4 F2:4"
+  sq_blast1: "D5:48 | D5:4 D5:4 D5:4 F5:12 D5:4 D5:4 D5:4 F5:12 | D5:4 D5:4 D5:4 F5:12 r:24 | C5:36 r:12"
+  sq_blast2: "Bb4:48 | Bb3:4 Bb3:4 Bb3:4 D4:12 Bb3:4 Bb3:4 Bb3:4 D4:12 | Bb3:4 Bb3:4 Bb3:4 D4:12 r:24 | A3:36 r:12"
+
+grooves:
+  crash_1: {crash: "x...............................................|................................................|................................................|................................................"}
+
+sections:
+  blast:
+    bars: 4
+    chords: blast
+    parts: {trumpet: fanfare, horn: horn_blast, strings: str_blast, timpani: timp_blast, cymbal: crash_1,
+            bass: "Bb1:48 | Bb1:12 r:12 Bb1:12 r:12 | Bb1:12 r:12 Bb1:12 r:12 | F1:36 F1:4 F1:4 F1:4",
+            sq1: sq_blast1, sq2: sq_blast2}
+  a:
+    bars: 4
+    chords: theme
+    parts: {trumpet: theme_a, horn: theme_a, strings: str_a, timpani: timp_phrase, cymbal: crash_1,
+            bass: bass_march, sq1: trip, sq2: trip_lo}
+  a2:
+    bars: 4
+    chords: theme
+    parts: {trumpet: theme_a2, horn: horn_pad_a, strings: str_a, timpani: timp_phrase, bass: bass_march, sq1: trip, sq2: trip_lo}
+  b:
+    bars: 4
+    chords: strain
+    parts: {trumpet: strain_b, horn: horn_pad_b, strings: str_b, bass: bass_march, sq1: trip, sq2: trip_lo,
+            timpani: "G2:12 r:36 | r:48 | G2:12 r:36 | F2:12 r:24 F2:4 F2:4 F2:4"}
+  a3:
+    bars: 4
+    chords: theme_end
+    parts: {trumpet: theme_fin, horn: theme_fin, strings: str_a, cymbal: crash_1, bass: bass_march, sq1: trip, sq2: trip_lo,
+            timpani: "Bb2:12 r:36 | r:48 | r:48 | r:12 F2:12 Bb2:24"}
+  soft_a:
+    bars: 4
+    chords: theme
+    gain: {horn: -24}
+    parts: {flute: theme_a2, harp: arp, strings: str_a, horn: horn_pad_a, bass: bass_long}
+  soft_b:
+    bars: 4
+    chords: strain
+    gain: {horn: -24, harp: -10}
+    parts: {strings: strain_soft, harp: arp, horn: horn_pad_b, bass: bass_long}
+  settle:
+    bars: 4
+    chords: settle
+    ramp: {strings: [0, -26], harp: [-8, -30], horn: [-20, -40], bass: [-10, -30]}
+    parts: {strings: str_settle, harp: arp_slow, horn: horn_settle, bass: "^1:48 | ^1:48 | ^1:48 | ^1:24 ^1:24"}
+  space:
+    bars: 4
+    chords: space
+    gain: {strings: -26, harp: -30, bass: -30}
+    parts: {strings: str_space, harp: arp_slow, bass: bass_long}
+
+arrangement: [blast, a, a2, b, a3, soft_a, soft_b, settle, space]
+loop_start: space

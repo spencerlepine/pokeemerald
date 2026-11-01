@@ -601,7 +601,8 @@ def apply_art_ready(art):
 def apply_audio_done(audio):
     """mapping/audio_done.csv: sounds the owner approved and a tool installed into ../game (cry-generator,
     sfx-generator). audio_status becomes DONE; game_status is DONE when the row's call sites already play it
-    (hot-swaps). Net-new SEs get their song id but stay NOT_STARTED until something in ../game calls them."""
+    (hot-swaps), or a net-new sound whose `called_by` names the code that plays it. Other net-new sounds get
+    their song id but stay NOT_STARTED until something in ../game calls them."""
     path = MAPPING / "audio_done.csv"
     if not path.exists():
         return
@@ -615,7 +616,7 @@ def apply_audio_done(audio):
             warn(f"mapping/audio_done.csv: ../game/{d['game_file']} missing")
         a.update(audio_status="DONE", made_by=d.get("made_by", ""),
                  notes="; ".join(x for x in (f"in game: {d['game_file']}", d.get("notes", "")) if x))
-        a["game_status"] = "DONE" if a["swap_kind"] == "HOTSWAP" else "NOT_STARTED"
+        a["game_status"] = "DONE" if a["swap_kind"] == "HOTSWAP" or d.get("called_by") else "NOT_STARTED"
 
 
 def net_new_art(net):

@@ -4,8 +4,8 @@
 Each row of mapping/audio_done.csv is a sound the owner approved that a tool (cry-generator, sfx-generator)
 installed into ../game at `game_file`. In pending_audio.csv the row becomes `audio_status` DONE with
 `made_by` set. Hot-swaps already play from their old call sites, so their `game_status` is DONE too (here
-and in game_port.csv). Net-new SEs have their song id but nothing calls them yet, so they stay NOT_STARTED
-until the port wires them in. build.py applies the same file, so a full rebuild gives the same result.
+and in game_port.csv). Net-new sounds are DONE when `called_by` names the code that plays them; otherwise they have
+their song id but nothing calls them yet, so they stay NOT_STARTED until the port wires them in. build.py applies the same file, so a full rebuild gives the same result.
 Standard library only.
 """
 import csv
@@ -43,7 +43,7 @@ def main():
             print(f"error: {d['asset_id']} is not in pending_audio.csv"); bad += 1; continue
         if not (GAME / d["game_file"]).exists():
             print(f"error: ../game/{d['game_file']} missing"); bad += 1; continue
-        gs = "DONE" if a["swap_kind"] == "HOTSWAP" else "NOT_STARTED"
+        gs = "DONE" if a["swap_kind"] == "HOTSWAP" or d.get("called_by") else "NOT_STARTED"
         a.update(audio_status="DONE", made_by=d.get("made_by", ""), game_status=gs,
                  notes="; ".join(x for x in (f"in game: {d['game_file']}", d.get("notes", "")) if x))
         p = port_by.get(d["asset_id"])

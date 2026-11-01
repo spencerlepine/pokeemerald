@@ -1,6 +1,6 @@
 # music-generator
 
-**Status:** DONE. Approved by the owner on 2026-11-01. Two prototypes, no song installed. Every song in `../../wiki/database/music.csv` is still
+**Status:** DONE. Approved by the owner on 2026-11-01. One song installed: `MUS_INTRO_CRAWL` (the opening crawl theme). Every song in `../../wiki/database/music.csv` is still
 `rewrite_status` TODO; composing them is a separate pass that uses this tool.
 
 Turns a song model (`song-schemas/<name>.yaml`, the z-day ai-music notation) into an Emerald song: a MIDI file
@@ -128,6 +128,12 @@ tones (`+`/`-` octave), `ch` the whole chord, `>` accent, `_` soft, `'` staccato
 
 Both render with no errors or warnings and pass the loop check. Neither is installed in `../../game`; both rows
 stay TODO.
+
+## Installed
+
+| Model | Row | Notes |
+| --- | --- | --- |
+| [`intro-crawl.yaml`](song-schemas/intro-crawl.yaml) | `net:mus-intro-crawl` (MUS_INTRO_CRAWL, id 610) | ARRANGE of the 1977 main title from the owner's recording of the original crawl (`wiki/music/concept/intro-crawl-1977.mp3`). Starts as the logo recedes on the title screen (`IntroCrawl_StartMusic`), 75 s of fanfare, theme and ending, then a quiet 4-bar loop; the crawl fades it out at about 77 s. 10 tracks, 2 KB |
 
 ## Files
 

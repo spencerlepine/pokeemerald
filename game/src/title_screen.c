@@ -785,8 +785,9 @@ static void Task_TitleScreenPhase3(u8 taskId)
 {
     if ((JOY_NEW(A_BUTTON) || JOY_NEW(START_BUTTON)) && IntroCrawl_ShouldPlay())
     {
-        // First boot with no save: send the logo off into space, then the opening crawl
-        FadeOutBGM(4);
+        // First boot with no save: send the logo off into space, then the opening crawl.
+        // The crawl theme starts now, on the logo, like the film's main title.
+        IntroCrawl_StartMusic();
         StartTitleScreenCrawlOut(taskId);
     }
     else if (JOY_NEW(A_BUTTON) || JOY_NEW(START_BUTTON))

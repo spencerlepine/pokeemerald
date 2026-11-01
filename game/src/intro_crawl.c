@@ -36,8 +36,11 @@
 #include "title_screen.h"
 #include "util.h"
 
-// Set to a song constant once the crawl theme exists. MUS_NONE plays nothing.
-#define CRAWL_MUSIC MUS_NONE
+// The crawl theme (tools/music-generator/song-schemas/intro-crawl.yaml). It starts on the title screen
+// when the logo begins to recede (IntroCrawl_StartMusic), runs under the whole crawl, and is faded out
+// with the screen. The song is longer than the scene and ends in a quiet loop, so pausing on
+// "Skip intro?" never leaves silence. MUS_NONE plays nothing.
+#define CRAWL_MUSIC MUS_INTRO_CRAWL
 
 // Screen layout
 #define CRAWL_TOP           60   // first scanline the crawl is drawn on (WIN0 hides BG2 above this)
@@ -306,13 +309,20 @@ void CB2_InitIntroCrawl(void)
         SetHBlankCallback(HBlankCB_IntroCrawl);
         EnableInterrupts(INTR_FLAG_VBLANK | INTR_FLAG_HBLANK);
         SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_MODE_1 | DISPCNT_BG0_ON | DISPCNT_BG1_ON | DISPCNT_BG2_ON | DISPCNT_WIN0_ON);
-        if (CRAWL_MUSIC != MUS_NONE)
-            PlayBGM(CRAWL_MUSIC);
+        // The music is already playing: IntroCrawl_StartMusic started it on the title screen
         CreateTask(Task_IntroCrawl, 0);
         gMain.state = 0;
         SetMainCallback2(CB2_IntroCrawl);
         break;
     }
+}
+
+void IntroCrawl_StartMusic(void)
+{
+    if (CRAWL_MUSIC != MUS_NONE)
+        PlayBGM(CRAWL_MUSIC);
+    else
+        FadeOutBGM(4);
 }
 
 static void CB2_IntroCrawl(void)

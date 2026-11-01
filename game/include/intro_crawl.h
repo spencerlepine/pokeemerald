@@ -5,6 +5,8 @@
 // and it has not played since power-on.
 bool8 IntroCrawl_ShouldPlay(void);
 void CB2_InitIntroCrawl(void);
+// Starts the crawl theme (replacing the title music) as the title screen sends the logo off
+void IntroCrawl_StartMusic(void);
 
 // "A long time ago in a galaxy far, far away...." between the intro movie and the title screen
 void CB2_InitGalaxyFarAway(void);
