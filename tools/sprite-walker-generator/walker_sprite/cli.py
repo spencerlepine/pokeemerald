@@ -80,6 +80,21 @@ def report(errors, warnings, m, corpus=None, kit="person16x32", accept=None) -> 
     return "\n".join(lines)
 
 
+def palette_gate(s, png: Path):
+    """tools/PALETTES.md gate (shared palette-enforcer): 4bpp, indices and colours match the locked
+    NPC palette (or, for an inline palette, every colour on a GBA step), and the spec's optional
+    `theme:` (a wiki/bible/PALETTE.md theme id or group, or a list of them) checked as warnings."""
+    sys.path.insert(0, str(TOOL.parent / "palette-enforcer"))
+    from gba_palette import check, core, themes
+
+    locked = core.load_jasc(sheet.PALETTE_DIR / f"{s.palette}.pal") if isinstance(s.palette, str) else None
+    th = s.meta.get("theme")
+    theme = themes.resolve([th] if isinstance(th, str) else th) if th else None
+    # Locked palettes are vanilla's (or derived from them) and kept verbatim, so their off-step
+    # values are only warnings; an inline palette is new art and must be on GBA steps.
+    return check.check_png(png, bpp=4, pal=locked, theme=theme, strict_step=locked is None)
+
+
 def cmd_build(a) -> int:
     s = spec_mod.load(a.spec)
     out = out_dir(s)
@@ -97,6 +112,9 @@ def cmd_build(a) -> int:
     else:
         print(f"note: no pokeemerald at {em}; skipped scene.png (set EMERALD_DIR)")
     preview.showcase(out / "preview")
+    gate = palette_gate(s, png)
+    errors += gate.errors
+    warnings += gate.warnings
     text = report(errors, warnings, m, kit=s.kit, accept=s.meta.get("accept"))
     if s.replaces and (em / s.replaces).exists():
         vf, vc = sheet.read_frames(em / s.replaces, spec_mod.KITS[s.kit]["frame"])
@@ -175,6 +193,11 @@ def cmd_install(a) -> int:
         print("spec has no `replaces:`")
         return 1
     em = emerald_dir()
+    gate = palette_gate(s, out_dir(s) / f"{s.name}.png")
+    if not gate.ok:
+        print("\n".join(gate.lines()))
+        print("palette gate failed (tools/PALETTES.md); not installing")
+        return 1
     shutil.copyfile(out_dir(s) / f"{s.name}.png", em / s.replaces)
     print(f"copied -> {em / s.replaces}")
     if s.palette_tag:

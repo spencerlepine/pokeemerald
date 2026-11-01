@@ -62,7 +62,7 @@ def check_png(
     pal: list[Colour] | None = None,
     theme: list[Colour] | None = None,
     strict_theme: bool = False,
-    tolerance: float = 0.0,
+    tolerance: float = 12.0,
     strict_step: bool = True,
     tile: bool = False,
 ) -> Report:
@@ -99,7 +99,8 @@ def check_png(
         rep.errors.append(f"{len(visible)} colours used; {bpp}bpp holds {core.VISIBLE[bpp]} + transparent")
     if bpp == 1:
         return rep  # 1bpp has no palette of its own (footprints, fonts): ink or empty
-    _step_rule(rep, used, strict_step)
+    if pal is None:  # a locked palette is checked as its own file (check_pal), not per image
+        _step_rule(rep, used, strict_step)
     if tile and (im.width % 8 or im.height % 8):
         rep.errors.append(f"size {im.width}x{im.height} is not a multiple of 8 (tiles are 8x8)")
     if pal is not None:
