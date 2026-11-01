@@ -195,7 +195,7 @@ def head_box(f, who):
     return min(xs), max(xs), min(ys), max(ys), hat
 
 
-def convert(f, who, vehicle=None, zone_top=None):
+def convert(f, who, vehicle=None, zone_top=None, view=None):
     global EYE_ROWS
     hx0, hx1, ht, hb, hat = head_box(f, who)
     EYE_ROWS = (hb + who.eyes[0], hb + who.eyes[1])
@@ -229,9 +229,103 @@ def convert(f, who, vehicle=None, zone_top=None):
             y = ny + 1 + i
             if 0 <= x < 32 and 0 <= y < 32 and g[y][x] in (5, 6, 7, 14):
                 g[y][x] = 9 if g[y][x] != 7 else 10
-    if vehicle:
+    if vehicle and view:
+        hover_bike(g, f, who, vehicle, view, hb + who.hub)
+    elif vehicle:
         draw_vehicle(g, f, who, vehicle, zone_top if zone_top is not None else hb + who.zone, hb + who.hub)
     return g
+
+
+# ---------------------------------------------------------------- approved hover bikes
+# The owner-approved art lives in batches/bike_mockups.py (B, L, SEAT); its top half is data and
+# is read here without running the mockup renderer. Mach Bike = Swoop C, Acro Bike = Speeder C.
+def _mockups():
+    src = open("batches/bike_mockups.py").read()
+    ns = {}
+    exec(src[:src.index("def grid")], ns)
+    a = src.index("SEAT = {")
+    b = src.index("\n}\n", a) + 3
+    exec(src[a:b], ns)
+    return ns["B"], ns["L"], ns["SEAT"]
+
+
+BIKES, BL, SEAT = _mockups()
+DESIGN = {"swoop": "swoop_C", "speeder": "speeder_C"}
+# frame index -> view, per sheet (vanilla pic-table order)
+VIEWS = {
+    "mach_bike": {0: "front", 1: "back", 2: "side", 3: "front", 4: "front", 5: "back", 6: "back", 7: "side", 8: "side"},
+    "acro_bike": {**{i: "front" for i in (0, 3, 4, 9, 10, 11, 12, 21, 22)},
+                  **{i: "back" for i in (1, 5, 6, 13, 14, 15, 16, 23, 24)},
+                  **{i: "side" for i in (2, 7, 8, 17, 18, 19, 20, 25, 26)}},
+}
+REF_HUBS = ((7.0, 28.0), (22.0, 28.0))  # the upright side frame's wheel hubs
+
+
+def _grid(t):
+    return t.strip("\n").split("\n")
+
+
+def hover_bike(g, f, who, kind, view, hub_top):
+    """Draw the approved bike as frame_with_bike() does, following this frame's pose."""
+    design = BIKES[DESIGN[kind]]
+    rows = _grid(design[view])
+    _, bottom = opaque_rows(f)
+    if view in ("front", "back"):
+        lift = bottom - 31  # hop frames: the vanilla bike leaves the ground
+        clear = (26 if view == "front" else 29) + lift
+        for y in range(max(0, clear), 32):
+            g[y] = [0] * 32
+        y0 = bottom + 1 - len(rows)
+        for j, r in enumerate(rows):
+            for i, ch in enumerate(r):
+                if ch != ".":
+                    g[y0 + j][9 + i] = BL[ch]
+        return
+    hs = sorted(clusters(holes(f, hub_top)))
+    (xf, yf), (xb, yb) = (hs[0], hs[-1]) if len(hs) >= 2 else REF_HUBS
+    slope = (yb - yf) / (xb - xf)
+    dx = round((xf + xb) / 2 - (REF_HUBS[0][0] + REF_HUBS[1][0]) / 2)
+
+    def line(x):  # the hub line at column x, in this frame
+        return yf + (x - xf) * slope
+
+    def off(x):  # vertical shear: how far column x moves against the upright bike
+        return round(line(x) - REF_HUBS[0][1])
+
+    # lowest point of the sheared bike must sit where the vanilla bike's lowest pixel did
+    low = max(32 - len(rows) + j + off(3 + i + dx) for j, r in enumerate(rows) for i, ch in enumerate(r) if ch != ".")
+    lift = bottom - low
+    # clear the vanilla bike (everything below the wheel tops along the hub line), seat the rider
+    old = [r[:] for r in g]
+    for x in range(32):
+        for y in range(32):
+            if y >= line(x) - 3:
+                old[y][x] = 0
+    new = [[0] * 32 for _ in range(32)]
+    for y in range(32):
+        for x in range(32):
+            if old[y][x] and y + 2 < 32:
+                new[y + 2][x] = old[y][x]  # drop the rider 2 px onto the hull
+    y0 = 32 - len(rows)
+
+    def put(y, x, v):
+        if 0 <= x < 32 and 0 <= y < 32:
+            new[y][x] = v
+
+    for j, r in enumerate(rows):
+        for i, ch in enumerate(r):
+            if ch != ".":
+                x = 3 + i + dx
+                put(y0 + j + off(x) + lift, x, BL[ch])
+    o, m = (10, 9) if who is Kael else (13, 12)  # boots: Kael brown, Mira chestnut
+    leg = {(26, 9): o, (26, 10): o, (27, 9): o, (27, 10): m, (27, 11): o,
+           (28, 8): o, (28, 9): m, (28, 10): m, (28, 11): o, (29, 8): o, (29, 9): o, (29, 10): o}
+    for (yy, xx), v in list(leg.items()) + list(SEAT[DESIGN[kind]].items()):
+        x = xx + dx
+        put(yy + off(x) + lift, x, v)
+    for y in range(32):
+        g[y] = new[y]
+
 
 
 WALK = {}
@@ -427,7 +521,7 @@ def main(only=None):
                 if stem == "underwater":
                     g = underwater(f, who)
                 else:
-                    g = convert(f, who, veh, ZONE.get((name, i)))
+                    g = convert(f, who, veh, ZONE.get((name, i)), VIEWS.get(stem, {}).get(i))
                 frames[n] = "\n".join("".join(HEX[v] for v in r) for r in g) + "\n"
             char = "KAEL" if who is Kael else "MIRA"
             if stem == "underwater":
