@@ -70,4 +70,5 @@ Next, in order:
    screenshot). The vanilla savestates do not load into a rebuilt ROM, hence the mash.
 2. Stage 2: sand patch edges, ledges, tall grass / scrub tuft redraws, more planets (Endor, Dagobah, Kamino).
 3. Stage 6: water / shoreline animation frames that keep `tileset_anims.c` ranges.
-4. Stage 5: interior floor and wall kits (2D).
+4. ~~Stage 5: interior floor and wall kits (2D)~~ shipped as ART_READY (Brendan/May house, Pokémon Center).
+5. ~~Stage 8: battle backgrounds~~ recipe `battle:` rules; Tatooine tall grass checked in the ROM with `scripts/rom-battle.sh`.

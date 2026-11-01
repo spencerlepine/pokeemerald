@@ -42,6 +42,7 @@ python -m tilegen build recipes/tatooine.yaml --layouts LittlerootTown_Layout Ro
 python -m tilegen install recipes/tatooine.yaml --layout LittlerootTown_Layout   # copies into game/ (gate enforced)
 (cd ../../game && make -j8 && cp pokeemerald.gba /some/test.gba && git checkout -- data/tilesets src/data/tilesets/graphics.h)
 scripts/rom-shots.sh /some/test.gba out/rom 0:9:10:9:littleroot 0:0:15:12:petalburg 0:16:10:10:route101
+scripts/rom-battle.sh /some/test.gba out/rom   # wild battle in Route 101 grass, screenshots the battle background
 ```
 
 Until the owner approves a planet, installs are for test ROMs only: restore `game/` and never commit it.
