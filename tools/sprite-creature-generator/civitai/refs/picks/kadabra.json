@@ -1,6 +1,9 @@
 {
   "flip": false,
-  "desc": "lean upright brown fox creature standing on two legs, tall ears, ruffled neck fur, holding a silver spoon, wisps of mist around its feet, whole body",
+  "desc": "lean upright fox creature standing on two legs, tall ears, ruffled neck fur, big bushy tail, one paw raised holding a silver spoon, wisps of mist at its feet, three-quarter view facing left, whole body",
   "colour": "brown and rust orange with silver",
-  "ref_note": "text only: the tinted ink cutout came out mush"
+  "ref_note": "Amaran (Legends) clean coloured full-body art on white, same line as alakazam; flipped; replaces text-only",
+  "init": "refs/kadabra_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/9/9b/Amaran.jpg/revision/latest?cb=20110705214307",
+  "denoise": 0.55
 }
