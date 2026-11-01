@@ -1,0 +1,9 @@
+{
+  "init": "refs/aron_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/2/27/DwarfSpiderDroid-SWCTP.png/revision/latest/scale-to-width-down/1000?cb=20230910234537",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "Small dome-bodied spider droid on four jointed legs with red sensor eyes and a nose blaster",
+  "colour": "dark gunmetal grey",
+  "ref_note": "DSD1 dwarf spider droid Card Trader render; alpha, three-quarter facing left; smallest of the droid line"
+}
