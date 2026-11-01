@@ -1,0 +1,47 @@
+{
+  "trainer": {
+    "stem": "guitarist",
+    "wiki_path": "graphics/trainers/front_pics/guitarist.png",
+    "sw_subject": "MUSICIAN: Bith (huge bald cranium, big black eyes) in a dark suit with a kloo horn",
+    "subject": "Bith musician",
+    "desc": "Bith: alien with a huge bald bulging cranium, large black eyes, small puckered mouth, pale pink skin, dark suit, playing a long clarinet-like kloo horn",
+    "theme": "factions",
+    "style": "",
+    "pose": "standing, facing left, three-quarter view",
+    "negative": "hair, human face",
+    "pair": false
+  },
+  "lora": {
+    "id": 443092,
+    "name": "XL v1",
+    "baseModel": "SDXL 1.0",
+    "trainedWords": [],
+    "air": null,
+    "files": [
+      {
+        "name": "pk_trainer_xl_v1.safetensors",
+        "sizeKB": 445819.83984375,
+        "sha256": "078E09DA2A123964B7EB30DB23EC24D59FB082343F69C7FAF925C4C07E97023E"
+      }
+    ]
+  },
+  "checkpoint": "urn:air:sdxl:checkpoint:civitai:101055@128078",
+  "params": {
+    "prompt": "solo, (single character:1.2), (bith musician:1.3), Bith: alien with a huge bald bulging cranium, large black eyes, small puckered mouth, pale pink skin, dark suit, playing a long clarinet-like kloo horn, full body character sprite, standing, facing left, three-quarter view, pixel art, game sprite, crisp dark outlines, solid white background, simple background",
+    "negativePrompt": "hair, human face, poke ball, pokeball, holding ball, baseball cap, generic pokemon trainer, anime boy, scenery, detailed background, gradient background, floor, shadow, text, watermark, signature, frame, border, multiple characters, multiple views, character sheet, turnaround, duplicate, cropped, cut off feet, blurry, 3d, photo, realistic, painting, smooth shading",
+    "scheduler": "EulerA",
+    "steps": 25,
+    "cfgScale": 7.0,
+    "width": 768,
+    "height": 768,
+    "seed": 947466151,
+    "clipSkip": 2
+  },
+  "strength": 0.75,
+  "format": "jpeg",
+  "seed": 947466151,
+  "workflowId": "13596363-20261101192300038-lsy2",
+  "jobId": "c69c08ed-ffb4-437e-856f-1cc30ebe3cc6",
+  "cost": "3 green",
+  "generated": "20261101-192329"
+}
