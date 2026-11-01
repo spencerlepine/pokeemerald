@@ -14,9 +14,9 @@ After a take, `finish` is re-run on it with `--frame2 lunge --shiny`, so each sp
 front.png, anim_front.png (64x128), back.png, normal.pal and shiny.pal, all on one palette.
 
 Automatic checks (front and back): palette-enforcer `check` PASS; the 8 px grid was found (6-10);
-figure at least 22 px tall and 24 px wide; at least 6 colours and 400 opaque pixels in the cell; the
+figure at least 32 px on its long side and 12 on its short side; at least 6 colours and 400 opaque pixels in the cell; the
 front is one figure (not a duplicate or a turnaround sheet); the back's colours stay close to the
-front's (drift <= 0.75).
+front's (drift <= 0.85).
 
     python batch.py abra absol --backs-only --budget 30   # new back for already installed species
                                                           # (keeps the installed front; 3 Buzz a try)
@@ -116,7 +116,7 @@ def figures(png: Path, share: float = 0.2) -> int:
     return sum(1 for n in sizes if n >= share * a.sum())
 
 
-DRIFT = 0.75  # back vs front coarse colour histogram (L1); denoise 0.55 backs ~0.5, the red-skitty 0.7 back 0.91
+DRIFT = 0.85  # back vs front coarse colour histogram (L1); denoise 0.55 backs ~0.5; 0.8-0.95 still looked fine on review (cacnea, loudred); the red-skitty 0.7 back was 0.91
 
 
 def drift(out: Path) -> float:
@@ -139,7 +139,7 @@ def judge(out: Path, log: str, min_w: int = 24, min_h: int = 22, one_figure: boo
             return False, f"{view}: check failed"
         if not 6 <= period <= 10:
             return False, f"{view}: grid {period}px (blurry take)"
-        if fh < min_h or fw < min_w:
+        if max(fw, fh) < 32 or min(fw, fh) < 12 or (fh < min_h and fw < min_w):  # flat fish / thin columns are fine
             return False, f"{view}: figure {fw}x{fh} too small"
         a = np.array(Image.open(out / f"{view}.png").convert("RGBA"))
         opaque = a[..., 3] > 0
