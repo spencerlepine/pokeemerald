@@ -1,10 +1,10 @@
 {
   "flip": false,
-  "desc": "chunky swamp crocodile standing upright, three-quarter view, whole body, wide toothy jaws, spiky back ridge, thick tail",
-  "colour": "blue with cream belly and red spikes",
-  "ref_note": "Ghest line art, same as totodile and feraligatr for line consistency; strong colour, denoise 0.6",
+  "desc": "stout swamp crocodile standing upright, wide toothy open jaws, stubby clawed arms, thick tail, cream belly, three-quarter view facing left, whole body, small, centred",
+  "colour": "blue with cream belly",
+  "ref_note": "Ghest line art tinted blue with cream belly by hand (totodile cut + belly), plain desc to avoid busy spikes",
   "init": "refs/croconaw_prep.png",
-  "init_source": "https://static.wikia.nocookie.net/starwars/images/8/81/Ghest.jpg/revision/latest?cb=20060714222754",
-  "denoise": 0.6,
+  "init_source": "refs/sources/croconaw/croco_cut.png",
+  "denoise": 0.55,
   "negative": "white, sketch, line art"
 }
