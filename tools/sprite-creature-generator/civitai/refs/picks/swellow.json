@@ -1,9 +1,9 @@
 {
   "init": "refs/swellow_prep.png",
-  "init_source": "https://static.wikia.nocookie.net/starwars/images/c/cd/Hawkbat.jpg/revision/latest?cb=20071205212047",
+  "init_source": "/tmp/claude-0/-home-user/510f0079-9430-50be-b656-57ddf5b64e74/scratchpad/r2/swellow_cut.png",
   "flip": false,
   "denoise": 0.5,
-  "desc": "sleek diving hawk-bat with long swept-back wings and red throat",
-  "colour": "dark blue and grey",
-  "ref_note": "Hawkbat.jpg diving pose; head lower left"
+  "desc": "sleek hawk-bat gliding to the left, head forward with a red throat, long swept-back leathery wings, long thin tail, side view, whole body",
+  "colour": "dark blue and grey with a red throat",
+  "ref_note": "Hawkbat.jpg cut out locally (cream bg masked) and rotated so the dive becomes a left-facing glide; whole body with margin"
 }
