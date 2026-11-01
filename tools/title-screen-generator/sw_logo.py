@@ -181,6 +181,12 @@ def layout(top, sub_img, bottom, y_top=5, gap=3):
     sy = y_top + top.size[1] - 4 + gap
     by = sy + (sb[3] - sb[1]) - 2 + gap
     bg.paste(bottom, ((240 - bottom.size[0]) // 2, by), bottom)
+    # centre the subtitle in the empty rows between STAR and WARS (owner, 2026-11-01)
+    alpha = bg.split()[3]
+    filled = [y for y in range(160) if alpha.crop((0, y, 240, y + 1)).getbbox()]
+    gap = [y for y in range(filled[0], filled[-1]) if y not in filled]
+    if gap:
+        sy = gap[0] + (len(gap) - (sb[3] - sb[1]) + 1) // 2
     return bg, (56, sy - sb[1]), by + bottom.size[1]
 
 

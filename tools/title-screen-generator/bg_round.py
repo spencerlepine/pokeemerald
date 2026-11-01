@@ -16,14 +16,15 @@ from backdrop import worm_path, maw, reduce, canvas, S
 from logo import hexc
 
 W, H = 240, 160
+REF = os.path.join(os.path.dirname(os.path.abspath(__file__)), "emerald_ref")  # Emerald's original BG0/BG1 files
 
 
 # ---------- gradient ----------
 
 def vanilla_gradient_indices():
     """240x160 index map of Emerald's sky gradient: the left-most (pure gradient) tile of each tile row."""
-    d = open(os.path.join(g.TS, "rayquaza.bin"), "rb").read()
-    tiles = g.tiles_of(Image.open(os.path.join(g.TS, "rayquaza.png")))
+    d = open(os.path.join(REF, "rayquaza.bin"), "rb").read()
+    tiles = g.tiles_of(Image.open(os.path.join(REF, "rayquaza.png")))
     out = Image.new("P", (W, H), 0)
     px = out.load()
     for row in range(H // 8):
@@ -111,8 +112,8 @@ def bg0(grad_name, creature_name):
 # ---------- clouds / nebula (256x256, wraps vertically) ----------
 
 def vanilla_clouds_indices():
-    d = open(os.path.join(g.TS, "clouds.bin"), "rb").read()
-    tiles = g.tiles_of(Image.open(os.path.join(g.TS, "clouds.png")))
+    d = open(os.path.join(REF, "clouds.bin"), "rb").read()
+    tiles = g.tiles_of(Image.open(os.path.join(REF, "clouds.png")))
     out = Image.new("P", (256, 256), 0); px = out.load()
     for i in range(1024):
         e = struct.unpack_from("<H", d, i * 2)[0]
