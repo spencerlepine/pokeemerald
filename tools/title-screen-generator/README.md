@@ -17,3 +17,8 @@ defines in src/title_screen.c; clouds.png/.bin stay Emerald's (recoloured by the
 Palette: the pieces are in `kyber-gold` (`../../wiki/bible/PALETTE.md`); `ship.py` ends by running the shared palette gate
 (`../palette-enforcer`, rules in `../PALETTES.md`) on everything it wrote and exits non-zero on a hardware error.
 Round 1 (`mockups.py`, `logo.py`, `banner.py`, `backdrop.py`) was rejected but kept for reference.
+
+Boot copyright screen: `python3 boot_copyright.py [--preview OUT.png]` rewrites `game/graphics/intro/copyright.png/.bin`.
+It keeps the vanilla ©Pokémon and ©Nintendo rows, drops Creatures and GAME FREAK, and adds `©1977-2005 STAR WARS` and
+`©&™ 2005 Lucasfilm Ltd.` in the vanilla thin font (glyphs copied from the Creatures/GAME FREAK lines; missing letters
+drawn to match). Text is set by the constants at the top. Idempotent.
