@@ -14,6 +14,16 @@ node ../../bin/pxl.js build intro_bike.px.js      # out/game/graphics/... + prev
 ../../scripts/rom-preview.sh out 1300 1950 10       # build a scratch ROM, screenshot the scene in mGBA
 ```
 
+Once a scene is copied into `../../game` and built, record it for review at the game's real speed:
+
+```sh
+scripts/rom-capture.sh /tmp/cap 1280 2240 3 sIntroCharacterGender=1   # MIRA's version of scene 2
+# -> capture.gif (every 3rd frame at 20 fps = true speed, ~0.8 MB for 16 s at 1x) + sheet.png (stills)
+```
+
+Emulator frames count from power-on, so they run ahead of `gIntroFrameCounter` (scene 2's 1026-1946 is
+about 1290-2210 in mGBA). `SYM=VALUE` pokes a u16 EWRAM variable every frame to force a branch.
+
 ## Palettes are ordered, and written by index
 
 A GBA palette is 16 colors and **index 0 is transparent**. Code sometimes touches palette entries

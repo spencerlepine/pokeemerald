@@ -343,7 +343,7 @@ struct RaiderSpawn
     u8 groundY;    // near: y of the rock's base. far: unused (they stand on the horizon)
     u8 stay;       // far: frames spent up before ducking (255 = until the fade). near: unused
 };
-#define RAIDER_FAR_Y 93 // far raider center when up; its feet hide behind the dune lip
+#define RAIDER_FAR_Y 86 // far raider center when up; its feet hide behind the dune lip
 static const struct RaiderSpawn sRaiderSpawns[] =
 {
     {1060, TRUE,   56,   0, 120},
