@@ -1,9 +1,10 @@
 {
   "init": "refs/slowpoke_prep.png",
-  "init_source": "https://static.wikia.nocookie.net/starwars/images/0/02/Giant_Swamp_Slug.jpg/revision/latest/scale-to-width-down/1000?cb=20251130130045#crop=0.3,0.0,1.0,1.0",
+  "init_source": "/tmp/claude-0/-home-user/510f0079-9430-50be-b656-57ddf5b64e74/scratchpad/mask/r2_slug.png",
   "flip": false,
   "denoise": 0.5,
-  "desc": "dopey swamp slug with a raised blunt head small eyestalks and a thick wrinkled body",
-  "colour": "pale pink and cream",
-  "ref_note": "Giant swamp slug painting on white, cropped to the raised head and front body; flipped to face left; slowbro uses the full rearing image"
+  "desc": "dopey swamp slug with a raised blunt head, small eyestalks and a long thick wrinkled tail body lying low, side view, whole body",
+  "colour": "pale pink and tan skin, darker brown wrinkles",
+  "ref_note": "Galaxy Atlas swamp slug, whole body, foliage masked by hand (r2_slug.png), flipped",
+  "negative": "plants, background, text"
 }
