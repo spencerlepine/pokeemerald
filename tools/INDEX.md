@@ -37,7 +37,6 @@ work (which file becomes which Star Wars subject) stays in the wiki. Update this
 | [`tile-generator/`](tile-generator/) | TODO | Overworld tilesets per planet and building, their tile animations, metatiles, and battle backgrounds. | D1, D2, E1 | `pending_art.csv` kinds `tileset` and `battle_environment`; 247 PNGs plus their .pal, metatiles.bin and tilemaps |
 | [`vfx-generator/`](vfx-generator/) | TODO | Animated effects: field effects (grass, sand, ash, ripples, emotes), doors, field objects, weather, move-animation particles, battle transitions, and the VFX rows (status/general/special battle animations, net-new VFX like hyperspace and lightsabers). | D3, D4, D5, D6, E3, E4 | `pending_art.csv` kinds `field_effects`, `door_anims`, `weather`, `battle_anims`, `battle_transitions`, `rotating_gates`, `battle_animation` and every `vfx_*` kind; 513 PNGs + 170 VFX rows |
 | [`ui-skin-generator/`](ui-skin-generator/) | TODO | Tile-based screens: text windows, map popups, region map, battle HUD, menus, Datapad, comlink, PC, trainer card, minigames, Grand Arena screens. | D7, D8, E2, F1, F3-F10, H1-H5 | `pending_art.csv` UI kinds (`text_window`, `map_popup`, `battle_interface`, `pokedex`, `pokenav`, `pokemon_storage`, ...); 488 PNGs. Mostly kept: only re-skin what reads as Pokémon |
-| [`font-generator/`](font-generator/) | TODO | Bitmap fonts and glyph sheets, only if a Star Wars font style is wanted. | F2 | `pending_art.csv` kind `fonts`; 17 PNGs |
 | [`title-screen-generator/`](title-screen-generator/) | DONE (shipped 2026-11-01; `ship.py` writes the picks into ../game) | Title screen logo, KYBER VERSION banner, Exogorth, sky, copyright lines. | - | `branding.csv` title_screen and intro copyright rows |
 | [`cutscene-generator/`](cutscene-generator/) | READY (pxl + GBA output, style guide, ROM preview; draft intro scene 2 in `scenes/intro_bike/`: backgrounds approved, characters need work, not imported) | Title screen, intro movie, credits, the titan/EXOGORTH scene, evolution, trade and shuttle-ride scenes. | G1, G2, G3, G4 | `pending_art.csv` kinds `title_screen`, `intro`, `credits`, `rayquaza_scene`, `evolution_scene`, `trade`, `cable_car`; 83 PNGs |
 | [`music-generator/`](music-generator/) | TODO | Background music, battle music and fanfares, from the briefs in the wiki. | audio: music | `pending_audio.csv` category `music`: 140 HOTSWAP + 5 NET_NEW (70 ghost rows are deletions, nothing to make) |
@@ -58,7 +57,6 @@ These were built in the prototype repo. When a tool moves into this repo, start 
 | `tile-generator/` | `tileset` | TODO | Do one biome end to end first (e.g. a desert secondary tileset for Tatooine) with palettes, metatiles and animations; then battle backgrounds. |
 | `vfx-generator/` | `obj-anim` | TODO | |
 | `ui-skin-generator/` | `ui-skin` | TODO | Text windows and map popups first (seen constantly), then menus, battle HUD, minigames. |
-| `font-generator/` | `font` | TODO | Only if a Star Wars font style is wanted; otherwise keep vanilla. |
 | `cutscene-generator/` | `cutscene` | TODO | Title screen, intro, legendary scene first. |
 
 Paths in the Notes column are in the prototype repo unless linked.
@@ -75,9 +73,8 @@ Work one tool at a time: build it, show the owner samples, iterate, mark it READ
 6. `tile-generator`: one biome first, then the rest and battle backgrounds.
 7. `vfx-generator`: field effects, doors, field objects, weather, move particles, transitions, VFX rows.
 8. `ui-skin-generator`: text windows and map popups first.
-9. `font-generator` (optional).
-10. `cutscene-generator`: title screen, intro, legendary scene.
-11. Audio (`music-generator`, `sfx-generator`, `cry-generator`) can run in parallel with any of the above.
+9. `cutscene-generator`: title screen, intro, legendary scene.
+10. Audio (`music-generator`, `sfx-generator`, `cry-generator`) can run in parallel with any of the above.
 
 ## Art categories
 
@@ -143,7 +140,7 @@ tool that edits that screen.
 | # | Category | Where it shows | Format | PNGs | .pal | Tool |
 |---|---|---|---|---|---|---|
 | F1 | Text windows and frames | Every dialogue/menu box (20 player-selectable frames) | 24x24 frame tiles + palette | 21 | 4 | `ui-skin-generator` |
-| F2 | Fonts | All text | glyph sheets 1-2bpp, Latin + Japanese + Braille | 17 | | `font-generator` |
+| F2 | Fonts | All text | glyph sheets 1-2bpp, Latin + Japanese + Braille | 17 | | none: kept vanilla; the Braille sheet is replaced by hand |
 | F3 | Shared interface pieces | Cursors, scroll arrows, status icons, markings, menu info | small OBJ/BG tiles | 18 | 11 | `ui-skin-generator` |
 | F4 | Bag, party and summary screens | Start menu screens | full-screen tiles + tilemap; bag pictures 64x64 x 6 pockets | 17 | 8 | `ui-skin-generator` |
 | F5 | Datapad (Pokédex) screens | Datapad | tiles + tilemaps | 9 | 5 | `ui-skin-generator` |
