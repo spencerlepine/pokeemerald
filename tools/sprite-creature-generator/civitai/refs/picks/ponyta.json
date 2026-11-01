@@ -1,9 +1,9 @@
 {
   "init": "refs/ponyta_prep.png",
-  "init_source": "https://static.wikia.nocookie.net/starwars/images/8/8b/Eopie_NEGAS.jpg/revision/latest?cb=20120731050101#crop=0.0,0.0,0.92,0.74",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/8/8b/Eopie_NEGAS.jpg/revision/latest?cb=20120731050101#crop=0.0,0.0,0.97,0.93",
   "flip": false,
   "denoise": 0.5,
-  "desc": "sun-baked eopie with a long drooping snout humped back and long knobbly legs",
-  "colour": "sandy tan and cream",
-  "ref_note": "New Essential Guide eopie painting on white, cropped above the sand and dust so the gap under the belly cuts out (lower shins trimmed); faces left"
+  "desc": "sun-baked eopie in side view with a long drooping snout, humped back and long knobbly legs, whole body with hooves",
+  "colour": "pale tan and sandy beige skin, darker brown joints",
+  "ref_note": "NEGAS painting, full crop now including the feet"
 }
