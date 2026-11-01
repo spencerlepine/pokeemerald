@@ -1,0 +1,64 @@
+name: mira_back
+kit: trainerback64x4
+replaces: graphics/trainers/back_pics/may.png
+front: ../../sprite-trainer-generator/output/mira/mira.png
+# MIRA (player, girl), back view throwing a capture pod. Repaint of May's own back pic, the
+# walker look: green bandana -> rust-red headwrap (its bow becomes the wrap's tails), a round
+# bun wrapped in rust cloth on each side of the head, May's brown hair -> chestnut, red top ->
+# rust tabard, white gloves -> white arm wraps, green shorts -> chestnut sash.
+# Palette shared index for index with the front pic (graphics/trainers/palettes/may.pal).
+palette:
+  - [115, 197, 164]  # 0 transparent
+  - [248, 224, 208]  # a skin light
+  - [224, 168, 144]  # b skin base
+  - [200, 128, 112]  # c skin shadow
+  - [128, 80, 64]    # d hair shadow, skin edge
+  - [128, 48, 40]    # x rust dark
+  - [56, 40, 48]     # k soft outline
+  - [176, 104, 72]   # h chestnut hair
+  - [80, 48, 48]     # j hair darkest
+  - [216, 200, 168]  # e cream shadow
+  - [232, 120, 88]   # r rust light
+  - [184, 72, 56]    # R rust base
+  - [248, 240, 216]  # E cream light
+  - [144, 96, 56]    # S sash / leather
+  - [248, 248, 248]  # W white
+  - [16, 16, 24]     # K outline
+legend: {'.': 0, a: 1, b: 2, c: 3, d: 4, x: 5, k: 6, h: 7, j: 8, e: 9, r: 10, R: 11, E: 12, S: 13, W: 14, K: 15}
+repaint:
+  pic: graphics/trainers/back_pics/may.png
+  # may: 1-3 skin, 4 hair shadow, 5 grey trim, 6 slate outline, 7 brown hair, 8 hair darkest,
+  # 9 light grey, 10/11 green bandana and shorts, 12/13 red top, 14 white, 15 black
+  remap: {1: a, 2: b, 3: c, 4: d, 5: x, 6: k, 7: h, 8: j, 9: e, 10: r, 11: R, 12: r, 13: R, 14: W, 15: K}
+# The head is the same drawing on every frame, moved: frame 1 (+6, 0), 2 (-8, +2), 3 (+1, -1).
+layers:
+  # May's dark gloves -> Mira's white arm wraps
+  - {name: wraps 0, frames: [0], shape: poly, pts: [[0, 37], [16, 37], [16, 60], [0, 60]], recolour: "x:e k:d"}
+  - {name: wraps 1, frames: [1], shape: poly, pts: [[2, 22], [20, 22], [20, 42], [2, 42]], recolour: "x:e k:d"}
+  - {name: wraps 2, frames: [2], shape: poly, pts: [[40, 22], [62, 22], [62, 38], [40, 38]], recolour: "x:e k:d"}
+  - {name: wraps low, frames: [1, 2], shape: poly, pts: [[0, 48], [64, 48], [64, 64], [0, 64]], recolour: "x:e k:d"}
+  # two buns wrapped in rust cloth: May's bandana bow at the back of the head becomes the near
+  # bun (its wrap tails hang below), the far one peeks over the top behind the head
+  - {name: bow, shape: poly, pts: [[6, 19], [19, 19], [19, 27], [17, 27], [17, 35], [6, 35]], erase: true, shift: {1: [6, 0], 2: [-8, 2], 3: [1, -1]}}
+  - {name: far bun, shape: ellipse, at: [37, 16], r: [3.2, 3.2], ramp: xRr, shadow: 1, behind: true, shift: {1: [6, 0], 2: [-8, 2], 3: [1, -1]}}
+  - {name: near bun, shape: ellipse, at: [16, 23], r: [5.2, 5.0], ramp: xRr, shadow: 1, shift: {1: [6, 0], 2: [-8, 2], 3: [1, -1]}}
+  - name: bun wrap and tails
+    shape: pixels
+    x: 11
+    y: 19
+    rows: |
+      ___________
+      ____rr_____
+      ___r__R____
+      __R____x___
+      _______x___
+      ___xx_x____
+      __________
+      __________
+      ___________
+      ____KK_____
+      ___KRxK____
+      ___KrRxK___
+      ____KrRK___
+      _____KKK___
+    shift: {1: [6, 0], 2: [-8, 2], 3: [1, -1]}

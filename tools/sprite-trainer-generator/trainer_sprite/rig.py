@@ -37,6 +37,10 @@ Silhouette ops (reshape the repainted base; all pixel-exact, nothing is resample
 - `shape: rows` inserts or removes rows: `{shape: rows, at: y, add: n, x: [x0, x1]}` repeats row
   `y` n times, pushing everything above it up (feet stay put); a negative `add` deletes rows and
   pulls the part above down. `x` limits it to a column range. Taller, shorter, a longer coat.
+- `shape: trim` erases everything inside `box` that is *outside* a keep shape:
+  `{shape: trim, box: [x, y, w, h], keep: {shape: ellipse, at: [x, y], r: [rx, ry]}}` (keep may
+  be any ellipse / poly / capsule). Cut a big hairdo or a hat down to a smaller head, then
+  re-outline it with `shape: edge`.
 - `shape: cols` does the same sideways: `{shape: cols, at: x, add: n, y: [y0, y1]}` repeats
   column `x`, pushing everything right of it further right. Broader shoulders, a bulkier alien.
 
@@ -223,6 +227,14 @@ def render(rig: dict, legend: dict[str, int], w: int, h: int, where: str, base=N
     for i, layer in enumerate(rig.get("layers", [])):
         lw = f"{where}: layer {i} ({layer.get('name', layer.get('shape'))})"
         op = layer.get("shape")
+        if op == "trim":
+            keep = _mask(layer["keep"], joints, w, h, lw)
+            bx, by, bw, bh = _box(layer, lw)
+            for y in range(max(by, 0), min(by + bh, h)):
+                for x in range(max(bx, 0), min(bx + bw, w)):
+                    if (x, y) not in keep:
+                        g[y][x] = 0
+            continue
         if op in ("graft", "move", "rows", "cols"):
             try:
                 if op == "graft":

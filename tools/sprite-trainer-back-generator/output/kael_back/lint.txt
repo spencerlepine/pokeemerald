@@ -1,0 +1,9 @@
+warning frame 0: style: area = 1714 is outside Emerald's p5-p95 range [1098, 1675]
+
+metric              f0      f1      f2      f3      p5  median     p95
+top                 13      14      15      12       5    15.0      19
+height              51      50      49      52      45    49.0      59
+width               64      47      64      49      41    52.0      64
+area              1714    1443    1456    1393    1098  1408.5    1675
+dark_outline     0.723   0.746    0.74   0.728   0.617   0.847   0.914
+orphans          0.106   0.087   0.126   0.101   0.082   0.125   0.166

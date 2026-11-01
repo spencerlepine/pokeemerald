@@ -1,0 +1,57 @@
+name: mira
+kit: trainer64
+replaces: graphics/trainers/front_pics/may.png
+# MIRA (player / rival front pic). Repaint of May's own front pic, same recipe and the SAME
+# palette index for index as the back pic (sprite-trainer-back-generator art/mira_back.yaml;
+# the game loads graphics/trainers/palettes/may.pal for both). Green bandana -> rust headwrap,
+# its bow -> a rust-wrapped bun, plus the second bun on the other side; brown hair ->
+# chestnut; red top -> rust tabard with a cream placket; green belt -> chestnut sash; black
+# bike shorts -> cream tunic hem; gloves -> white arm wraps; socks and shoes -> chestnut boots;
+# the ball -> a capture pod.
+palette:
+  - [115, 197, 164]  # 0 transparent
+  - [248, 224, 208]  # a skin light
+  - [224, 168, 144]  # b skin base
+  - [200, 128, 112]  # c skin shadow
+  - [128, 80, 64]    # d hair shadow, skin edge
+  - [128, 48, 40]    # x rust dark
+  - [56, 40, 48]     # k soft outline
+  - [176, 104, 72]   # h chestnut hair
+  - [80, 48, 48]     # j hair darkest
+  - [216, 200, 168]  # e cream shadow
+  - [232, 120, 88]   # r rust light
+  - [184, 72, 56]    # R rust base
+  - [248, 240, 216]  # E cream light
+  - [144, 96, 56]    # S sash / leather
+  - [248, 248, 248]  # W white
+  - [16, 16, 24]     # K outline
+legend: {'.': 0, a: 1, b: 2, c: 3, d: 4, x: 5, k: 6, h: 7, j: 8, e: 9, r: 10, R: 11, E: 12, S: 13, W: 14, K: 15}
+frames:
+  front:
+    repaint:
+      pic: graphics/trainers/front_pics/may.png
+      remap: {1: a, 2: b, 3: c, 4: d, 5: x, 6: k, 7: h, 8: j, 9: e, 10: r, 11: R, 12: r, 13: R, 14: W, 15: K}
+    rig:
+      layers:
+        - {name: sash, shape: poly, pts: [[20, 33], [42, 33], [42, 36], [20, 36]], recolour: "r:h R:S"}
+        - {name: placket, shape: poly, pts: [[22, 25], [40, 25], [40, 40], [22, 40]], recolour: "W:E e:e"}
+        - {name: hem, shape: poly, pts: [[20, 39], [40, 39], [40, 44], [20, 44]], recolour: "x:E k:e"}
+        - {name: glove, shape: poly, pts: [[36, 34], [48, 34], [48, 41], [36, 41]], recolour: "x:e k:d"}
+        - {name: boots, shape: poly, pts: [[16, 52], [44, 52], [44, 64], [16, 64]], recolour: "x:S k:d r:S R:d W:h e:S"}
+        # second bun, top right (the bandana bow on the left is the first)
+        - {name: far bun, shape: ellipse, at: [34, 9], r: [3.0, 3.0], ramp: xRr, shadow: 1, behind: true}
+        - {name: bun crease, shape: pixels, x: 15, y: 11, rows: "__x\n_x\n"}
+        # the ball -> a capture pod: durasteel shell (cream), rust band
+        - {name: ball, shape: poly, pts: [[9, 27], [16, 27], [16, 34], [9, 34]], erase: true}
+        - name: pod
+          shape: pixels
+          x: 9
+          y: 27
+          rows: |
+            __KKK__
+            _KWEeK_
+            KWEEedK
+            KrRRRxK
+            KEeeedK
+            _KeedK_
+            __KKK__
