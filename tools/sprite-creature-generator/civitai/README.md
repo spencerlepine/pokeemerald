@@ -5,8 +5,8 @@ so no rented GPU is needed. A mirror of [`../../sprite-trainer-generator/civitai
 set up for the creature LoRA [Pokemon Sprite PixelArt 768](https://civitai.com/models/161280/pokemon-sprite-pixelart-768)
 (model 161280, SD 1.5, version **v2.1-beta** `273148` by default) on DreamShaper 8, paid for in Buzz.
 
-**Status:** first creature shipped 2026-11-01: MASSIFF (`poochyena`), round 2 pick A (denoise 0.40), approved by
-the owner. `front.png`, `anim_front.png`, `back.png`, `normal.pal` and `shiny.pal` are in the wiki at
+**Status:** first creature shipped 2026-11-01: MASSIFF (`poochyena`), round 2 option 4 (denoise 0.55, open jaws),
+picked by the owner over pick A and finished at 12 colours for readability. `front.png`, `anim_front.png`, `back.png`, `normal.pal` and `shiny.pal` are in the wiki at
 `wiki/art/graphics/pokemon/poochyena/` and marked ART_READY; not copied into `game/` yet. Battle placement
 data (README rows 6-8) is still to build.
 
@@ -109,6 +109,14 @@ Defaults now: denoise 0.45 and CFG 5 when there is an input image, back denoise 
   near-black outlines and the most saturated accents (eyes, mouth) kept. jobs.json `shiny`
   (`hue` degrees, `sat`, `val`); default hue 180. MASSIFF uses hue 30, saturation 1.4: a sand-gold desert
   variant. `shiny_compare_4x.png` shows normal and shiny side by side.
+
+## Readability pass (2026-11-01)
+
+Owner: Gen 3 sprites are detailed up close but read from far away; 15 colours of model texture was too
+much detail. `finish` now defaults to `--colours 12 --despeckle 1`: k-means to 12, repaint lone pixels
+with their most common neighbour, re-quantise. The front's `normal.pal` then has 12 colours + transparent.
+Two more fronts at denoise 0.50 (between pick A and option 4) were weaker than option 4 itself (8 Buzz
+with the new back), so option 4 was shipped.
 
 ## Not done yet
 

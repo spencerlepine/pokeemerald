@@ -495,6 +495,35 @@ def place(sprite: Image.Image, size: int = 64) -> Image.Image:
     return cell
 
 
+# Readability: Gen 3 sprites are detailed up close but read from across the room: big flat
+# colour areas, few lone pixels. The owner found 15 colours of model texture "too detailed"
+# (MASSIFF, 2026-11-01), so the finisher defaults to 12 colours plus one despeckle pass.
+# Set from the CLI (--colours, --despeckle).
+SIMPLIFY = {"colours": 12, "despeckle": 1}
+
+
+def despeckle(rgba: Image.Image, passes: int = 1) -> Image.Image:
+    """Repaint lone pixels (no 4-neighbour of the same colour, at least 3 opaque neighbours) with
+    their most common neighbour colour. Outlines and the silhouette are left alone."""
+    a = np.array(rgba)
+    h, w, _ = a.shape
+    for _ in range(passes):
+        b = a.copy()
+        for y in range(1, h - 1):
+            for x in range(1, w - 1):
+                if a[y, x, 3] == 0:
+                    continue
+                nb = [a[y + dy, x + dx] for dy, dx in ((-1, 0), (1, 0), (0, -1), (0, 1))]
+                if any((n == a[y, x]).all() for n in nb):
+                    continue
+                op = np.array([n for n in nb if n[3] > 0])
+                if len(op) >= 3:
+                    vals, cnt = np.unique(op, axis=0, return_counts=True)
+                    b[y, x] = vals[cnt.argmax()]
+        a = b
+    return Image.fromarray(a, "RGBA")
+
+
 def prepare(raw: Path, fit: str, period: int | None) -> tuple[Image.Image, Image.Image, str]:
     """raw 768 -> (64x64 RGBA cell, native figure, log line)."""
     nat, p = native(Image.open(raw).convert("RGB"), period)
@@ -502,7 +531,10 @@ def prepare(raw: Path, fit: str, period: int | None) -> tuple[Image.Image, Image
     if fig.getbbox() is None:
         sys.exit(f"{raw.name}: nothing left after background removal")
     fig = keep_main_blob(fig)
-    fig = quantise(fig.crop(fig.getbbox()))
+    k = SIMPLIFY["colours"]
+    fig = quantise(fig.crop(fig.getbbox()), k)
+    if SIMPLIFY["despeckle"]:
+        fig = quantise(despeckle(fig, SIMPLIFY["despeckle"]), k)
     sprite, how = fit64(fig, fit)
     return place(sprite), fig, f"grid {p}px -> native {nat.width}, figure {fig.width}x{fig.height}, {how}"
 
@@ -510,7 +542,7 @@ def prepare(raw: Path, fit: str, period: int | None) -> tuple[Image.Image, Image
 def _enforce(rgba: Path, final: Path, pal: Path, own: bool) -> int:
     if own:  # the front owns the bank: 15 colours + transparent
         _run([sys.executable, "-m", "gba_palette", "enforce", str(rgba), str(final), "--bpp", "4",
-              "--colours", "15", "--write-pal", str(pal)])
+              "--colours", str(SIMPLIFY["colours"]), "--write-pal", str(pal)])
     else:  # back and frame 2 use the same bank (one palette per species in the game)
         _run([sys.executable, "-m", "gba_palette", "enforce", str(rgba), str(final), "--bpp", "4",
               "--pal", str(pal)])
@@ -850,6 +882,8 @@ def main():
         p.add_argument("--fit", choices=["auto", "trim", "shrink"], default="auto",
                        help="auto: 1:1 if it fits, trim if only a thin edge sticks out, else shrink")
         p.add_argument("--period", type=int, help="force the pixel grid (the LoRA's is 8)")
+        p.add_argument("--colours", type=int, default=12, help="sprite colours (max 15; default 12 for readability)")
+        p.add_argument("--despeckle", type=int, default=1, help="lone-pixel cleanup passes (0 = off)")
 
     pp = sub.add_parser("prep", help="reference/concept image -> pixelated start image for --init")
     pp.add_argument("species"); pp.add_argument("reference", help="URL or file (movie still, concept art)")
@@ -875,6 +909,8 @@ def main():
                    help="back from the mirrored front: 0..1, higher redraws more (default 0.7)")
     r.add_argument("--back-text-only", action="store_true", help="back from the prompt alone, not the front"); r.set_defaults(fn=cmd_run)
     args = ap.parse_args()
+    if hasattr(args, "colours") and args.cmd != "prep":
+        SIMPLIFY.update(colours=min(15, args.colours), despeckle=args.despeckle)
     args.fn(args)
 
 
