@@ -95,6 +95,13 @@ POKE = dict(fill=("fff6a0", "ffe838", "ffd800", "f8c800", "f0b400", "e0a000"), h
             outline="3a64d8", extrude="2848a8", rim="0c1a50")
 
 
+# Kyber Gold (wiki/bible/PALETTE.md): black and yellow
+KYBER_GOLD = dict(fill=("f8f0a0", "f8e050", "f8d000", "f8d000", "e0b000", "b88800"), hi="f8f8f0", lo="b88800",
+                  outline="080808", outline_top="383838", extrude="604000", rim="080808")
+KYBER_GOLD_B = dict(fill=("f8f0a0", "f8e050", "f8d000", "f8d000", "e0b000", "b88800"), hi="f8f8f0", lo="b88800",
+                    outline="604000", outline_top="b88800", extrude="080808", rim="080808")
+
+
 def style(m, c=POKE, depth=3):
     """Pokémon-logo treatment: banded yellow fill, 2px blue outline, blue extrusion down-right, navy rim."""
     m = pad(m, 4 + depth)
@@ -106,7 +113,7 @@ def style(m, c=POKE, depth=3):
     paint(out, dilate(ext, 1), hexc(c["rim"]))
     paint(out, ext, hexc(c["extrude"]))
     paint(out, o, hexc(c["outline"]))
-    paint(out, sub(o, shift(o, 0, 1)), hexc("7898f0"))        # light top edge on the outline
+    paint(out, sub(o, shift(o, 0, 1)), hexc(c.get("outline_top", "7898f0")))  # light top edge on the outline
     gradient_fill(out, m, [hexc(v) for v in c["fill"]])
     paint(out, edge(m, 0, -1), hexc(c["hi"]))
     paint(out, edge(m, 0, 1), hexc(c["lo"]))
@@ -133,6 +140,22 @@ def version_mask(xs=2):
     return m.resize((m.size[0] * xs, m.size[1]), Image.NEAREST)
 
 
+def kyber_version_line():
+    """One line, black and white like Emerald's EMERALD VERSION banner: white-to-grey fill, black outline and shadow."""
+    m = big_mask("KYBER VERSION", 3, 4)
+    m = m.resize((m.size[0] // 2, m.size[1] // 2), Image.BOX).point(lambda v: 255 if v >= 128 else 0)
+    m = pad(m, 2)
+    out = Image.new("RGBA", m.size, (0, 0, 0, 0))
+    paint(out, shift(dilate(m, 1), 1, 1), hexc("080808"))
+    paint(out, dilate(m, 1), hexc("080808"))
+    gradient_fill(out, m, [hexc(c) for c in ("f8f8f8", "f8f8f8", "d8d8d8", "a8a8a8")])
+    paint(out, edge(m, 0, -1), hexc("ffffff"))
+    out = out.crop(out.getbbox())
+    img = Image.new("RGBA", (128, 32), (0, 0, 0, 0))
+    img.paste(out, ((128 - out.size[0]) // 2, (32 - out.size[1]) // 2), out)
+    return img
+
+
 def subtitle(kind):
     img = Image.new("RGBA", (128, 32), (0, 0, 0, 0))
     if kind == "green":
@@ -149,7 +172,7 @@ def subtitle(kind):
     return img
 
 
-def layout(top, sub_img, bottom, y_top=1, gap=0):
+def layout(top, sub_img, bottom, y_top=5, gap=0):
     y_top = min(y_top, 104 - 2 - (top.size[1] + sub_img.getbbox()[3] - sub_img.getbbox()[1] + bottom.size[1] - 6))
     """Logo layer (240x160 RGBA) with STAR on top, the subtitle sprite and WARS below. Returns (bg2, banner_xy)."""
     bg = Image.new("RGBA", (240, 160), (0, 0, 0, 0))
@@ -161,8 +184,14 @@ def layout(top, sub_img, bottom, y_top=1, gap=0):
     return bg, (56, sy - sb[1]), by + bottom.size[1]
 
 
-VARIANTS = {
+VARIANTS_R2 = {
     "flat-green": lambda: (style(star()), subtitle("green"), style(wars())),
     "flat-silver": lambda: (style(star()), subtitle("silver"), style(wars())),
     "arched-white": lambda: (style(arch(star(), 3, up=True)), subtitle("white"), style(arch(wars(), 3, up=False))),
+}
+
+
+VARIANTS = {
+    "black-outline": lambda: (style(star(), KYBER_GOLD), kyber_version_line(), style(wars(), KYBER_GOLD)),
+    "gold-outline": lambda: (style(star(), KYBER_GOLD_B), kyber_version_line(), style(wars(), KYBER_GOLD_B)),
 }
