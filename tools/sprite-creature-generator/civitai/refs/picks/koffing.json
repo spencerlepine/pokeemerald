@@ -1,10 +1,10 @@
 {
   "init": "refs/koffing_prep.png",
-  "init_source": "https://static.wikia.nocookie.net/starwars/images/6/64/Beldons_SWGA.jpg/revision/latest?cb=20161122193734#crop=0,0.5,0.45,0.9",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/6/64/Beldons_SWGA.jpg/revision/latest?cb=20161122193734#crop=0,0.52,0.3,0.95",
   "flip": false,
   "denoise": 0.5,
-  "desc": "small round purple floating gas-bag calf with a sleepy face and trailing tentacles",
+  "desc": "small round purple floating gas-bag calf with a sleepy face and short trailing tentacles, whole round body",
   "colour": "purple violet",
   "negative": "yellow background",
-  "ref_note": "Canon Beldon art (Galactic Atlas): one purple beldon cut from the herd, faces left; halftone yellow specks may remain"
+  "ref_note": "Canon Beldon (Galactic Atlas): tight crop of the front beldon's round body, faces left"
 }

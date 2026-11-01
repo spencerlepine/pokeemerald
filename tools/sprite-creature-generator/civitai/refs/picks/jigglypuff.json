@@ -1,9 +1,6 @@
 {
-  "init": "refs/jigglypuff_prep.png",
-  "init_source": "https://static.wikia.nocookie.net/starwars/images/4/44/Hoojibs-TheHoojibMenace.png/revision/latest?cb=20211202134839#crop=0.27,0.42,0.72,1",
   "flip": false,
-  "denoise": 0.5,
-  "desc": "small round pink puffball with huge floppy ears and big round eyes",
+  "desc": "round pink balloon puffball creature with two huge floppy ears, big round eyes, tiny stub feet, whole body, compact cute",
   "colour": "pale pink and white",
-  "ref_note": "original; borrows Hoojib (canon, unclaimed) comic art from The Hoojib Menace, front sitting hoojib cropped; round body and long ears fit a singing puffball"
+  "ref_note": "text only: hoojib art is sketchy comic scenes; H00jib.jpg used by wigglytuff"
 }

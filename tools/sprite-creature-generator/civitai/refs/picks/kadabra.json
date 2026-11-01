@@ -1,9 +1,6 @@
 {
-  "init": "refs/kadabra_prep.png",
-  "init_source": "/tmp/claude-0/-home-user/510f0079-9430-50be-b656-57ddf5b64e74/scratchpad/mask/kadabra_tint.png",
   "flip": false,
-  "denoise": 0.5,
-  "desc": "lean upright mist fox with tall ears a ruffled collar holding a tall carved staff",
-  "colour": "rust orange and brown",
-  "ref_note": "RE-PICK (was Vulptex): Amaran beast charmer ink drawing cut out and tinted rust orange into a scratchpad PNG; flipped so the snout points left; source https://static.wikia.nocookie.net/starwars/images/8/89/Amaran_beast_charmer.jpg crop 0.08,0,1,0.97"
+  "desc": "lean upright brown fox creature standing on two legs, tall ears, ruffled neck fur, holding a silver spoon, wisps of mist around its feet, whole body",
+  "colour": "brown and rust orange with silver",
+  "ref_note": "text only: the tinted ink cutout came out mush"
 }

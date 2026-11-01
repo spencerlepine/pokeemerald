@@ -1,9 +1,9 @@
 {
   "init": "refs/kingdra_prep.png",
-  "init_source": "https://static.wikia.nocookie.net/starwars/images/f/f9/KamoradonSketch-Bestiary.png/revision/latest?cb=20241202162522",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/6/68/KamoradonConceptArt-EpisodeGuide.jpg/revision/latest?cb=20241202174130#crop=0.05,0.0,0.82,0.3",
   "flip": false,
   "denoise": 0.55,
-  "desc": "regal sea dragon with a broad crested head fanged jaws and long swept-back flipper fins",
+  "desc": "regal long sea dragon swimming in side view, crested head with fanged jaws, broad flipper fins, dark shell on back, whole body",
   "colour": "teal blue and grey",
-  "ref_note": "Kamoradon sea dragon (Kamino) pencil sketch from the Bestiary, front view; clean cutout; pencil art so colour comes from the prompt (denoise 0.55), colour kept in line with horsea/seadra teal. Kamoradon-Bestiary render is taken by wartortle; the full Mon Cala eel (horsea/seadra source) is too thin at 64 px"
+  "ref_note": "Kamoradon concept art (Episode Guide): side view top figure, faces left, whole body on plain grey"
 }
