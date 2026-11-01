@@ -1,0 +1,47 @@
+{
+  "trainer": {
+    "stem": "elite_four_phoebe",
+    "wiki_path": "graphics/trainers/front_pics/elite_four_phoebe.png",
+    "sw_subject": "QUI-GON JINN (Force spirit)",
+    "subject": "Qui-Gon Jinn",
+    "desc": "tall Jedi master, long brown hair, beard, spectral translucent blue Jedi robes, glowing blue Force ghost",
+    "theme": "alliance-dawn",
+    "style": "",
+    "pose": "standing, facing left, three-quarter view",
+    "negative": "",
+    "pair": false
+  },
+  "lora": {
+    "id": 443092,
+    "name": "XL v1",
+    "baseModel": "SDXL 1.0",
+    "trainedWords": [],
+    "air": null,
+    "files": [
+      {
+        "name": "pk_trainer_xl_v1.safetensors",
+        "sizeKB": 445819.83984375,
+        "sha256": "078E09DA2A123964B7EB30DB23EC24D59FB082343F69C7FAF925C4C07E97023E"
+      }
+    ]
+  },
+  "checkpoint": "urn:air:sdxl:checkpoint:civitai:101055@128078",
+  "params": {
+    "prompt": "(qui-gon jinn:1.3), tall Jedi master, long brown hair, beard, spectral translucent blue Jedi robes, glowing blue Force ghost, full body character sprite, standing, facing left, three-quarter view, pixel art, game sprite, crisp dark outlines, solid white background, simple background, orange, white and blue",
+    "negativePrompt": "poke ball, pokeball, holding ball, baseball cap, generic pokemon trainer, anime boy, scenery, detailed background, gradient background, floor, shadow, text, watermark, signature, frame, border, multiple characters, multiple views, character sheet, turnaround, duplicate, cropped, cut off feet, blurry, 3d, photo, realistic, painting, smooth shading",
+    "scheduler": "EulerA",
+    "steps": 25,
+    "cfgScale": 7.0,
+    "width": 768,
+    "height": 768,
+    "seed": 712485418,
+    "clipSkip": 2
+  },
+  "strength": 0.75,
+  "format": "jpeg",
+  "seed": 712485418,
+  "workflowId": "13596363-20261101091413413-t6xh",
+  "jobId": "852e9819-c5fb-4696-9894-9a898ecd1f9d",
+  "cost": "3 green",
+  "generated": "20261101-091442"
+}
