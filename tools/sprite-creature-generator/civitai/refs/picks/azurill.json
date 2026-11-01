@@ -1,0 +1,9 @@
+{
+  "init": "refs/azurill_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/4/41/Tooke.jpg/revision/latest/scale-to-width-down/1000?cb=20060716103720",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "Tiny round swamp rodent kit with huge dark eyes long whiskers and a long tufted bouncing tail",
+  "colour": "blue and white",
+  "ref_note": "Tooke field-guide art (small big-eyed rodent with tufted tail) as body plan for the original Naboo kit; flipped to face left"
+}
