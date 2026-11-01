@@ -91,7 +91,7 @@ def figures(png: Path, share: float = 0.2) -> int:
     return sum(1 for n in sizes if n >= share * a.sum())
 
 
-def judge(out: Path, log: str) -> tuple[bool, str]:
+def judge(out: Path, log: str, min_w: int = 24, min_h: int = 28, one_figure: bool = True) -> tuple[bool, str]:
     notes = []
     for view in ("front", "back"):
         m = re.search(rf"^{view}\s+\S+: grid (\d+)px -> native (\d+), figure (\d+)x(\d+).*?; (PASS|FAIL)", log, re.M)
@@ -103,7 +103,7 @@ def judge(out: Path, log: str) -> tuple[bool, str]:
             return False, f"{view}: check failed"
         if not 6 <= period <= 10:
             return False, f"{view}: grid {period}px (blurry take)"
-        if fh < 28 or fw < 24:
+        if fh < min_h or fw < min_w:
             return False, f"{view}: figure {fw}x{fh} too small"
         a = np.array(Image.open(out / f"{view}.png").convert("RGBA"))
         opaque = a[..., 3] > 0
@@ -111,7 +111,7 @@ def judge(out: Path, log: str) -> tuple[bool, str]:
         if opaque.sum() < 400 or colours < 6:
             return False, f"{view}: {opaque.sum()} px, {colours} colours"
         notes.append(f"{view} {fw}x{fh}")
-    if figures(out / "front_native.png") >= 2:
+    if one_figure and figures(out / "front_native.png") >= 2:
         return False, "front: two figures (duplicate or turnaround)"
     if "FAIL" in log.split("--frame2 pass--")[-1]:
         return False, "frame2/anim/shiny check failed"

@@ -1,0 +1,10 @@
+{
+  "init": "refs/castform_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/0/09/TrainingRemote-SW100Objects.png/revision/latest/scale-to-width-down/1000?cb=20230419233541",
+  "flip": false,
+  "denoise": 0.5,
+  "subject": "climadroid",
+  "desc": "small round floating weather probe droid",
+  "colour": "white and red",
+  "ref_note": "Marksman-H training remote: a small floating sphere droid, the base for every weather form"
+}

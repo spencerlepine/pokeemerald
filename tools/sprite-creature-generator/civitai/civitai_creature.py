@@ -641,10 +641,12 @@ def _with_pal(png: Path, pal: Path) -> Image.Image:
 
 
 def finish(front_raw: Path, back_raw: Path | None, fit: str, period: int | None, out: Path | None,
-           frame2_raw: Path | None = None, shiny: dict | None = None) -> Path:
+           frame2_raw: Path | None = None, shiny: dict | None = None, shared_pal: Path | None = None) -> Path:
     out_dir = out or front_raw.parent.parent / "finished" / f"{front_raw.stem}"
     out_dir.mkdir(parents=True, exist_ok=True)
     pal = out_dir / "normal.pal"
+    if shared_pal:  # forms that share one bank (Unown's letters): map the front onto it too
+        pal.write_text(Path(shared_pal).read_text())
     results, cells = {}, {}
     use_lunge = str(frame2_raw) == "lunge"
     for view, raw in (("front", front_raw), ("back", back_raw), ("frame2", None if use_lunge else frame2_raw)):
@@ -659,7 +661,7 @@ def finish(front_raw: Path, back_raw: Path | None, fit: str, period: int | None,
         rgba = out_dir / f"{view}_rgba.png"
         cell.save(rgba)
         final = out_dir / f"{view}.png"
-        ok = _enforce(rgba, final, pal, own=view == "front")
+        ok = _enforce(rgba, final, pal, own=view == "front" and not shared_pal)
         Image.open(final).convert("RGBA").resize((256, 256), Image.NEAREST).save(out_dir / f"{view}_4x.png")
         results[view] = final
         print(f"{view:<6} {raw.name}: {how}; {'PASS' if ok == 0 else 'FAIL'} -> {rel(final)}")
@@ -825,7 +827,7 @@ def cmd_finish(args):
     finish(Path(args.front).resolve(), Path(args.back).resolve() if args.back else None,
            args.fit, args.period, Path(args.out).resolve() if args.out else None,
            (args.frame2 if args.frame2 == "lunge" else Path(args.frame2).resolve()) if args.frame2 else None,
-           shiny)
+           shiny, Path(args.pal).resolve() if args.pal else None)
 
 
 def cmd_run(args):
@@ -907,6 +909,7 @@ def main():
     f.add_argument("front", help="raw front .png"); f.add_argument("back", nargs="?", help="raw back .png")
     f.add_argument("--out", help="output folder (default runs/<species>/finished/<front stem>/)")
     f.add_argument("--frame2", help="'lunge' (front leans forward, no Buzz) or a raw frame-2 .png from gen --view frame2; writes anim_front.png")
+    f.add_argument("--pal", help="use this existing normal.pal for the front too (forms sharing one bank, e.g. Unown)")
     f.add_argument("--shiny", action="store_true", help="write shiny.pal (settings from jobs.json via --species)")
     f.add_argument("--species", dest="shiny_species", help="species for jobs.json shiny settings")
     f.add_argument("--shiny-hue", type=float, help="shiny hue rotation in degrees (default 180)")
