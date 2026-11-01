@@ -35,7 +35,11 @@ them; specks of 3 px or fewer are dropped. `"keep_pockets": true` in `jobs.json`
 clearing off for characters whose white or pale parts look like background (stormtroopers, Aurra
 Sing's rifle, Tarfful's belt, the diver's breather, the brawler's belt). `"clear_pockets": [[y, x]]`
 clears a pocket the rule misses (ringed by a rope or a basket handle, not outline): hiker, dragon
-tamer, bug catcher.
+tamer, bug catcher and others. `"keep_regions": [[y, x, y0, x0, y1, x1]]` puts back armour the fill
+took through an outline gap (inside the box, up to outline: stormtroopers, Yoda's hair);
+`"erase_spots": [[y, x]]` removes a stray light patch that is not the background colour (Maul's hand,
+the Bith's coat streak). Seeds are in the 96x96 native grid. Pale vignette patches under 12 px are
+no longer removed (they were bits of the figure, e.g. Biggs).
 
 ## Setup
 

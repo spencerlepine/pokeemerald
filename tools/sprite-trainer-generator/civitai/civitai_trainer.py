@@ -336,7 +336,8 @@ def _components(mask: np.ndarray) -> list[list[tuple[int, int]]]:
 
 def knock_out_background(img: Image.Image, tol: int = 30, step: int = 24, pockets: bool = True,
                          ptol: int = 18, pmin: int = 4, pmax: int = 200, dark: int = 110,
-                         ring: float = 0.75, touch: float = 0.4, clear: list | None = None) -> Image.Image:
+                         ring: float = 0.75, touch: float = 0.4, clear: list | None = None,
+                         keep: list | None = None, erase: list | None = None) -> Image.Image:
     """Background -> transparent.
 
     1. Flood-fill from the border through pixels near the border's median colour. Pale neutral grey
@@ -348,6 +349,10 @@ def knock_out_background(img: Image.Image, tol: int = 30, step: int = 24, pocket
        Jobs with white armour that looks like background (stormtroopers) set "keep_pockets".
     3. `clear`: [y, x] native seeds (jobs.json "clear_pockets") of pockets the rule misses, e.g. a
        hole ringed by a rope or a basket handle rather than dark outline.
+    4. `keep`: [y, x, y0, x0, y1, x1] (jobs.json "keep_regions"): put back what the fill removed
+       from the seed outward, inside the box and up to dark outline (white armour behind a gap).
+    5. `erase`: [y, x] (jobs.json "erase_spots"): remove the same-coloured patch at the seed, for a
+       stray light patch that is not the background colour (a glare blob, a light streak).
     """
     a = np.array(img.convert("RGB")).astype(int)
     h, w, _ = a.shape
@@ -371,7 +376,7 @@ def knock_out_background(img: Image.Image, tol: int = 30, step: int = 24, pocket
         cs = set(comp)
         around = {(y + dy, x + dx) for y, x in comp for dy, dx in ((1, 0), (-1, 0), (0, 1), (0, -1))
                   if 0 <= y + dy < h and 0 <= x + dx < w and (y + dy, x + dx) not in cs}
-        if around and np.mean([seen[p] for p in around]) >= touch:
+        if len(comp) >= 12 and around and np.mean([seen[p] for p in around]) >= touch:
             for p in comp:
                 seen[p] = True
     if pockets:
@@ -386,6 +391,24 @@ def knock_out_background(img: Image.Image, tol: int = 30, step: int = 24, pocket
             if around and np.mean([isdark[p] for p in around]) >= ring:
                 for p in comp:
                     seen[p] = True
+    if keep:
+        for y, x, y0, x0, y1, x1 in keep:
+            st = [(y, x)] if seen[y, x] else []
+            while st:
+                cy, cx = st.pop()
+                if not (y0 <= cy <= y1 and x0 <= cx <= x1) or not seen[cy, cx] or a[cy, cx].max() < dark:
+                    continue
+                seen[cy, cx] = False
+                st.extend(((cy + 1, cx), (cy - 1, cx), (cy, cx + 1), (cy, cx - 1)))
+    if erase:
+        for y, x in erase:
+            ref, st, n = a[y, x].copy(), [(y, x)], 0
+            while st and n < 60:
+                cy, cx = st.pop()
+                if not (0 <= cy < h and 0 <= cx < w) or seen[cy, cx] or np.abs(a[cy, cx] - ref).sum() > 40:
+                    continue
+                seen[cy, cx] = True; n += 1
+                st.extend(((cy + 1, cx), (cy - 1, cx), (cy, cx + 1), (cy, cx - 1)))
     if clear:
         cand = (diff <= ptol) & ~seen
         for comp in _components(cand):
@@ -497,13 +520,14 @@ def finish(raw: Path, theme: str, fit: str, free: int) -> Path:
     jobs = json.loads(JOBS_FILE.read_text()) if JOBS_FILE.exists() else {}
     job = jobs.get(raw.parent.parent.name, {})
     pockets, clear = not job.get("keep_pockets"), job.get("clear_pockets")
+    keep, erase = job.get("keep_regions"), job.get("erase_spots")
     src = Image.open(raw).convert("RGB")
     out_dir = raw.parent.parent / ("finished" if fit == "auto" else f"finished_{fit}")
     out_dir.mkdir(parents=True, exist_ok=True)
     stem = raw.stem
 
     nat, period = native(src)
-    fig = despeck(knock_out_background(nat, pockets=pockets, clear=clear))
+    fig = despeck(knock_out_background(nat, pockets=pockets, clear=clear, keep=keep, erase=erase))
     if fig.getbbox() is None:
         sys.exit(f"{raw.name}: nothing left after background removal")
     fig = quantise(fig.crop(fig.getbbox()))

@@ -16,7 +16,8 @@
     "subject": "teenage boy",
     "desc": "Tatooine farm kid, tousled brown hair, kyber-blue headband with knot tails, sand-coloured wrap tunic over a white crossover shirt, white arm wraps, brown belt, satchel, brown boots",
     "theme": "alliance-dawn",
-    "style": ""
+    "style": "",
+    "keep_pockets": true
   },
   "brendan_rs": {
     "subject": "teenage boy",
@@ -40,7 +41,8 @@
     "subject": "Luke Skywalker",
     "desc": "young man, sandy-blond mop of hair, white crossover farm-boy tunic, tan trousers, dark boots, dark belt with white buckle, lightsaber hilt at the hip",
     "theme": "alliance-dawn",
-    "style": ""
+    "style": "",
+    "keep_pockets": true
   },
   "birch": {
     "subject": "Prof. Korr",
@@ -163,7 +165,13 @@
     "subject": "female Rebel pilot",
     "desc": "young woman, orange flight suit, white vest, black gloves, helmet under her arm, brown ponytail",
     "theme": "alliance-dawn",
-    "style": ""
+    "style": "",
+    "clear_pockets": [
+      [
+        41,
+        41
+      ]
+    ]
   },
   "cooltrainer_m": {
     "subject": "male Rebel pilot",
@@ -181,7 +189,25 @@
     "subject": "male swoop racer",
     "desc": "young man in a red racing suit and goggles, sitting on a small hover swoop bike",
     "theme": "factions",
-    "style": ""
+    "style": "",
+    "clear_pockets": [
+      [
+        40,
+        68
+      ],
+      [
+        72,
+        78
+      ],
+      [
+        76,
+        77
+      ],
+      [
+        80,
+        74
+      ]
+    ]
   },
   "dome_ace_tucker": {
     "subject": "Dengar",
@@ -212,7 +238,8 @@
     "subject": "Ki-Adi-Mundi",
     "desc": "Jedi master with a tall elongated cone-shaped head, white beard, tan Jedi robes over a frost-blue tunic, blue lightsaber",
     "theme": "alliance-dawn",
-    "style": ""
+    "style": "",
+    "keep_pockets": true
   },
   "elite_four_phoebe": {
     "subject": "Qui-Gon Jinn",
@@ -225,7 +252,13 @@
     "desc": "Zabrak Sith, red face with black tattoos, small horns on a bald head, black robes, double-bladed red lightsaber",
     "theme": "imperial-order",
     "style": "",
-    "negative": "hair"
+    "negative": "hair",
+    "erase_spots": [
+      [
+        45,
+        29
+      ]
+    ]
   },
   "expert_f": {
     "subject": "old spacer woman",
@@ -263,7 +296,13 @@
     "desc": "Bith alien musician with a big bald domed head and large black eyes, dark suit, playing a long kloo horn",
     "theme": "factions",
     "style": "",
-    "negative": "hair"
+    "negative": "hair",
+    "erase_spots": [
+      [
+        42,
+        54
+      ]
+    ]
   },
   "hex_maniac": {
     "subject": "Nightsister witch",
@@ -325,7 +364,17 @@
     "subject": "Yoda",
     "desc": "small green Jedi master, long pointy ears, wrinkled face, white wispy hair, rust-brown robe, gimer stick cane",
     "theme": "alliance-dawn",
-    "style": ""
+    "style": "",
+    "keep_regions": [
+      [
+        19,
+        46,
+        14,
+        38,
+        22,
+        58
+      ]
+    ]
   },
   "leader_norman": {
     "subject": "veteran pilot father",
@@ -372,7 +421,17 @@
     "theme": "imperial-order",
     "style": "",
     "negative": "visible face, skin, hair",
-    "keep_pockets": true
+    "keep_pockets": true,
+    "keep_regions": [
+      [
+        12,
+        55,
+        8,
+        48,
+        16,
+        60
+      ]
+    ]
   },
   "magma_grunt_m": {
     "subject": "stormtrooper",
@@ -380,7 +439,41 @@
     "theme": "imperial-order",
     "style": "",
     "negative": "visible face, skin, hair",
-    "keep_pockets": true
+    "keep_pockets": true,
+    "keep_regions": [
+      [
+        51,
+        48,
+        50,
+        45,
+        53,
+        52
+      ],
+      [
+        55,
+        47,
+        54,
+        43,
+        57,
+        52
+      ],
+      [
+        59,
+        46,
+        58,
+        41,
+        61,
+        52
+      ],
+      [
+        63,
+        45,
+        62,
+        40,
+        66,
+        52
+      ]
+    ]
   },
   "ninja_boy": {
     "subject": "young infiltrator",
@@ -425,7 +518,13 @@
     "subject": "creature fan girl",
     "desc": "young woman with side buns, red top and yellow skirt, hugging a plush creature toy",
     "theme": "factions",
-    "style": ""
+    "style": "",
+    "clear_pockets": [
+      [
+        27,
+        55
+      ]
+    ]
   },
   "pokefan_m": {
     "subject": "creature fan man",
@@ -492,13 +591,29 @@
     "subject": "relic hunter",
     "desc": "bearded explorer, wide hat, khaki explorer outfit, backpack, holding a glowing lamp",
     "theme": "factions",
-    "style": ""
+    "style": "",
+    "clear_pockets": [
+      [
+        31,
+        36
+      ],
+      [
+        25,
+        34
+      ]
+    ]
   },
   "running_triathlete_f": {
     "subject": "female swoop racer running",
     "desc": "athletic young woman jogging, red and yellow racing suit, goggles on her head",
     "theme": "factions",
-    "style": ""
+    "style": "",
+    "clear_pockets": [
+      [
+        41,
+        54
+      ]
+    ]
   },
   "running_triathlete_m": {
     "subject": "male swoop racer running",
@@ -517,7 +632,13 @@
     "desc": "tall pale bald woman bounty hunter, red topknot, head antenna, dark red bodysuit, long sniper rifle",
     "theme": "factions",
     "style": "",
-    "keep_pockets": true
+    "keep_pockets": true,
+    "clear_pockets": [
+      [
+        43,
+        54
+      ]
+    ]
   },
   "school_kid_f": {
     "subject": "female academy cadet",
@@ -536,7 +657,13 @@
     "desc": "two kids side by side: a girl and a younger boy with swim goggles holding inflatable flotation rings",
     "theme": "factions",
     "style": "",
-    "pair": true
+    "pair": true,
+    "clear_pockets": [
+      [
+        28,
+        51
+      ]
+    ]
   },
   "sr_and_jr": {
     "subject": "old and young anglers",
@@ -556,7 +683,13 @@
     "subject": "male diver",
     "desc": "young man in a blue dive suit with a dive hood, mask and small breather",
     "theme": "factions",
-    "style": ""
+    "style": "",
+    "clear_pockets": [
+      [
+        42,
+        57
+      ]
+    ]
   },
   "swimming_triathlete_f": {
     "subject": "female swimmer",
@@ -568,7 +701,17 @@
     "subject": "male swimmer",
     "desc": "athletic young man in red swim trunks with swim goggles",
     "theme": "factions",
-    "style": ""
+    "style": "",
+    "clear_pockets": [
+      [
+        40,
+        43
+      ],
+      [
+        41,
+        46
+      ]
+    ]
   },
   "tuber_f": {
     "subject": "young girl",
@@ -594,7 +737,13 @@
     "desc": "two people side by side: a young man and a young woman in desert farm clothes holding hands",
     "theme": "factions",
     "style": "",
-    "pair": true
+    "pair": true,
+    "clear_pockets": [
+      [
+        44,
+        68
+      ]
+    ]
   },
   "youngster": {
     "subject": "young farm boy",
