@@ -1,10 +1,10 @@
 {
   "init": "refs/glalie_prep.png",
-  "init_source": "https://static.wikia.nocookie.net/starwars/images/3/37/Wampa-woswfg.jpg/revision/latest/scale-to-width-down/1000?cb=20070122225112#crop=0,0.1,1,0.98",
+  "init_source": "/tmp/claude-0/-home-user/510f0079-9430-50be-b656-57ddf5b64e74/scratchpad/mask/r2_wampa.png",
   "flip": false,
   "denoise": 0.5,
-  "desc": "hulking white furred wampa prowling on all fours, whole body, long clawed arms and curled horns",
-  "colour": "white and pale gray",
-  "ref_note": "Wampa field-guide painting (woswfg), whole body side view, flipped",
-  "negative": "snow, sky"
+  "desc": "hulking white furred wampa prowling on all fours in side view, whole body, long clawed arms, curled horns, small and centred",
+  "colour": "white and pale gray fur, dark gray claws and horns",
+  "ref_note": "Wampa field-guide painting (woswfg), sky masked out by hand (scratchpad/mask/r2_wampa.png), flipped",
+  "negative": "snow, sky, background"
 }
