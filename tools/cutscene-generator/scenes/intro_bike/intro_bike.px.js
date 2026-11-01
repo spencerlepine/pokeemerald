@@ -201,11 +201,14 @@ scene("bg1", { w: 256, h: 256 }, (c) => {
 
 use(BG)
 // Emerald's trees_small.png: 64x32, three cells (32x32, then two 16x32 at tile 16 and 24).
+// Draw them side by side; cells: makes gba() write the game's 1D tile order.
+const SMALL_CELLS = [[32, 32], [16, 32], [16, 32]]
 // They scroll as sprites between BG2 and the ground. Here: a far vaporator pair and two rocks.
 sprite("scenery_small", { w: 64, h: 32 }, (c) => {
-  vaporator(c, 10, 31, 22, true); vaporator(c, 22, 31, 14, true)
-  c.poly([34, 31, 37, 24, 42, 22, 46, 26, 47, 31], 8); c.line(35, 30, 38, 24, 7)
-  c.poly([50, 31, 53, 27, 58, 26, 61, 31], 8); c.line(51, 30, 53, 27, 7)
+  // Emerald's small pines are two-tone (lit left, mid body) like the big ones: same here.
+  vaporator(c, 9, 32, 28, false); dome(c, 23, 32, 8, 7)
+  vaporator(c, 39, 32, 20, false)
+  c.poly([48, 32, 50, 26, 54, 23, 59, 24, 63, 29, 63, 32], 11); c.poly([50, 26, 54, 23, 59, 24, 57, 27, 52, 28], 13)
 })
 
 // ------------------------------------------------------------------ OBJ: KAEL on the speeder bike
@@ -299,8 +302,10 @@ for (let f = 0; f < 4; f++) {
 
 gba(D + "trees.png", { bg: ["bg3", "bg2"], map: D + "trees_map.bin", pal: BG })
 gba(D + "grass.png", { bg: ["bg1"], map: D + "grass_map.bin", pal: GROUND, palSlot: 15 })
-gba(D + "trees_small.png", { image: "scenery_small", pal: BG })
+gba(D + "trees_small.png", { image: "scenery_small", pal: BG, cells: SMALL_CELLS })
 gba(D + "brendan.png", { obj: ["kael_0", "kael_1", "kael_2", "kael_3"], pal: PLAYER })
+// The intro picks Brendan or May at random; until MIRA is drawn, both show KAEL.
+gba(D + "may.png", { obj: ["kael_0", "kael_1", "kael_2", "kael_3"], pal: PLAYER })
 gba(D + "bicycle.png", { obj: ["speeder_0", "speeder_1", "speeder_2", "speeder_3"], pal: PLAYER })
 gba(D + "player.pal", { pal: PLAYER })
 
@@ -321,6 +326,7 @@ gbaScreen("screen_new", {
 ref("v_bg3", D + "trees.png", { map: D + "trees_map.bin", screen: 0 })
 ref("v_bg2", D + "trees.png", { map: D + "trees_map.bin", screen: 1 })
 ref("v_bg1", D + "grass.png", { map: D + "grass_map.bin" })
+ref("v_scenery_small", D + "trees_small.png", { cells: SMALL_CELLS })
 for (let f = 0; f < 4; f++) {
   ref("v_may_" + f, D + "may.png", { frame: [64, 64, f], pal: D + "player.pal" })
   ref("v_bike_" + f, D + "bicycle.png", { frame: [64, 32, f], pal: D + "player.pal" })

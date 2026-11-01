@@ -1,6 +1,8 @@
 # cutscene-generator
 
-**Status:** TODO. Not built yet; this file marks the scope.
+**Status:** IN-REVIEW. The tool is pxl (vendored from crsolver/claude-pxl, MIT) plus GBA output; one prototype
+scene (intro scene 2, the bike ride, as KAEL's speeder ride on Tatooine) builds into a working ROM.
+Start with [GBA.md](GBA.md) (how art becomes game files) and [STYLE.md](STYLE.md) (what to match).
 
 Title screen, intro movie, credits, the titan/EXOGORTH scene, evolution, trade and shuttle-ride scenes.
 

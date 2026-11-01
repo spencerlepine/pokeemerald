@@ -221,3 +221,36 @@ export function readMap(buf: Buffer): Uint16Array {
 
 /** Valid OBJ sizes (shape x size). */
 export const OBJ_SIZES = ["8x8", "16x16", "32x32", "64x64", "16x8", "32x8", "32x16", "64x32", "8x16", "8x32", "16x32", "32x64"];
+
+/**
+ * OBJ cells and 1D mapping. gbagfx reads a sheet's tiles row-major over the whole PNG, and a
+ * w x h sprite uses that many consecutive tiles. When a sheet holds sprites narrower than the PNG
+ * (Emerald's trees_small.png: a 32x32 at tile 0, 16x32s at tiles 16 and 24) the PNG looks
+ * scrambled. Cells are given left to right as [w, h]; `packCells` turns a readable strip into the
+ * game's layout and `unpackCells` turns the game's layout back into a readable strip.
+ */
+export function packCells(im: Indexed, cells: number[][]): Indexed {
+  const tiles: Tile[] = [];
+  let x0 = 0;
+  for (const [w, h] of cells) {
+    for (let ty = 0; ty < h / 8; ty++) for (let tx = 0; tx < w / 8; tx++) tiles.push(tileAt(im, x0 / 8 + tx, ty));
+    x0 += w;
+  }
+  const out = tilesImage(tiles, im.w / 8);
+  if (out.h < im.h) { const full = new Uint8Array(im.w * im.h); full.set(out.idx); return { w: im.w, h: im.h, idx: full }; }
+  return out;
+}
+
+export function unpackCells(im: Indexed, cells: number[][]): Indexed {
+  const tiles = imageTiles(im), h = Math.max(...cells.map((c) => c[1])), w = cells.reduce((a, c) => a + c[0], 0);
+  const out: Indexed = { w, h, idx: new Uint8Array(w * h) };
+  let n = 0, x0 = 0;
+  for (const [cw, ch] of cells) {
+    for (let ty = 0; ty < ch / 8; ty++) for (let tx = 0; tx < cw / 8; tx++) {
+      const t = tiles[n++];
+      if (t) for (let y = 0; y < 8; y++) for (let x = 0; x < 8; x++) out.idx[(ty * 8 + y) * w + x0 + tx * 8 + x] = t[y * 8 + x];
+    }
+    x0 += cw;
+  }
+  return out;
+}

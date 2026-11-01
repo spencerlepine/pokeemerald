@@ -129,8 +129,8 @@ export interface GbaTarget {
   loc?: string;
 }
 
-const GBA_OPTS = ["bg", "map", "obj", "image", "pal", "palSlot", "cols", "flips", "tiles", "blank"];
-const REF_OPTS = ["map", "screen", "pal", "palSlot", "palFile", "frame", "transparent"];
+const GBA_OPTS = ["bg", "map", "obj", "image", "pal", "palSlot", "cols", "flips", "tiles", "blank", "cells"];
+const REF_OPTS = ["map", "screen", "pal", "palSlot", "palFile", "frame", "transparent", "cells"];
 
 export interface ProjectOptions {
   /** Record painting traces for seed-0 builds (live viewer). */

@@ -1,3 +1,7 @@
+> **In this repo (pokeemerald `tools/cutscene-generator`):** pxl plus GBA output for the game's
+> cutscenes. Read [GBA.md](GBA.md) for `gba()` / `ref()` / `gbaScreen()`, [STYLE.md](STYLE.md) for the
+> Emerald look, and [scenes/intro_bike/](scenes/intro_bike/) for a worked scene. Everything below is upstream's README.
+
 # pxl
 
 **Pixel art as code.** Write a compact `.px.js` file; get PNGs, sprite sheets with JSON, animated

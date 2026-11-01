@@ -11,6 +11,9 @@ parts, primitives, brushes and tilemaps. Needs Node ≥ 22.18. No install step.
 
 `PXL` below means `node <this skill's directory>/bin/pxl.js`.
 
+For Pokémon Emerald game files (4bpp tiles, tilemaps, palettes, OBJ sheets) read [GBA.md](GBA.md) and
+[STYLE.md](STYLE.md) first.
+
 ## Workflow
 
 1. Write `art.px.js` (start from the template below; examples in `examples/`).

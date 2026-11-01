@@ -8,7 +8,7 @@ import { PxError, wrap } from "../core/errors.ts";
 import { Img } from "../core/image.ts";
 import type { GbaTarget, Project } from "../core/project.ts";
 import {
-  encodeIndexed4, gbaColor, type Indexed, imageTiles, indexImage, mapBytes, newTileset, OBJ_SIZES, parsePal, readJasc,
+  encodeIndexed4, gbaColor, packCells, unpackCells, type Indexed, imageTiles, indexImage, mapBytes, newTileset, OBJ_SIZES, parsePal, readJasc,
   readMap, renderIndexed, renderScreen, tileScreen, tilesImage, writeJasc,
 } from "./gba.ts";
 import { decodePng } from "./pngread.ts";
@@ -37,6 +37,7 @@ export function readPalette(gameDir: string, path: string): Color[] {
  * - pal: a .pal / .png path to color with instead of the PNG's own palette (e.g. the sunset palette);
  *   palSlot: the BG palette number the map's entries use for that palette (others fall back to it).
  * - frame: [w, h, n] cut frame n out of a vertical strip (OBJ sheets).
+ * - cells: [[w, h], ...] the sheet holds several sprites in 1D tile order (see packCells).
  * - transparent: false keeps index 0 opaque.
  */
 export function loadRef(gameDir: string, path: string, opts: Record<string, unknown>): Img {
@@ -46,7 +47,8 @@ export function loadRef(gameDir: string, path: string, opts: Record<string, unkn
   if (!d.idx || !d.plte) return new Img(d.w, d.h, d.rgba);
   const pal = typeof opts.pal === "string" ? readPalette(gameDir, opts.pal) : d.plte.slice(0, 16);
   while (pal.length < 16) pal.push(0);
-  const im: Indexed = { w: d.w, h: d.h, idx: d.idx.map((v) => v & 15) };
+  let im: Indexed = { w: d.w, h: d.h, idx: d.idx.map((v) => v & 15) };
+  if (Array.isArray(opts.cells)) im = unpackCells(im, opts.cells as number[][]);
   let img: Img;
   if (typeof opts.map === "string") {
     const map = readMap(readFileSync(resolve(gameDir, opts.map)));
@@ -150,7 +152,8 @@ function runTarget(p: Project, t: GbaTarget, put: (path: string, d: Buffer | str
     if (fw % 8 || fh % 8) throw new PxError(`${what}: size must be a multiple of 8, got ${fw}x${fh}`);
     const sheet = new Img(fw, fh * frames.length);
     frames.forEach((f, i) => sheet.blit(f, 0, i * fh));
-    const idx = indexImage(sheet, pal, what);
+    let idx = indexImage(sheet, pal, what);
+    if (Array.isArray(o.cells)) idx = packCells({ w: sheet.w, h: sheet.h, idx }, o.cells as number[][]).idx;
     put(t.path, encodeIndexed4({ w: sheet.w, h: sheet.h, idx }, pal));
     const tiles = new Set(imageTiles({ w: sheet.w, h: sheet.h, idx }).map((x) => Buffer.from(x).toString("latin1")));
     return `${t.path}  ${o.obj !== undefined ? "OBJ" : "image"} ${fw}x${fh} x ${frames.length} frame(s), ${used([idx])} colors, ${tiles.size} unique tiles`;
