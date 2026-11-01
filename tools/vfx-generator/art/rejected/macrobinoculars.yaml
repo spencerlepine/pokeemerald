@@ -1,3 +1,4 @@
+# REJECTED by the owner (2026-11-01): a prop swap, not an effect. See ../../../../wiki/bible/MOVE_EFFECTS.md.
 # FORESIGHT: Emerald's magnifying glass becomes a pair of macrobinoculars.
 # Only FORESIGHT loads ANIM_TAG_MAGNIFYING_GLASS. One 32x32 frame; AnimForesightMagnifyingGlass
 # sweeps it across the target, so it is drawn face on (lenses toward the viewer).

@@ -1,3 +1,4 @@
+# REJECTED by the owner (2026-11-01): a prop swap, not an effect. See ../../../../wiki/bible/MOVE_EFFECTS.md.
 # MILK DRINK: Emerald's Moomoo Milk bottle becomes a jug of Tatooine blue milk.
 # Only MILK DRINK loads ANIM_TAG_MILK_BOTTLE. One 32x32 frame; AnimMilkBottle places it above the
 # target and tips it back and forth with the affine unit, so the jug must read at any small tilt.

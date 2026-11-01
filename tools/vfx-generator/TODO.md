@@ -184,7 +184,7 @@ Tatooine's Dune Sea. Recolor per planet only if a map looks off.
 | Batch | Effects | Status |
 |---|---|---|
 | 1 | ION CANNON orb, CREDIT TOSS chips, TURBOLASER (new sheet, needs a tag wired), ~~Fly shuttle~~ | APPROVED (shuttle rejected: keep `bird.png`) |
-| 2 | blue milk jug (`milk_bottle.png`), macrobinoculars (`magnifying_glass.png`), datapad stylus (`pencil.png`) | IN-REVIEW, all 3 filmed in the ROM |
+| 2 | blue milk jug, macrobinoculars, datapad stylus | REJECTED: prop swaps, not effects. Direction reset: [`../../wiki/bible/MOVE_EFFECTS.md`](../../wiki/bible/MOVE_EFFECTS.md) (storyboards first, then script + art + sound per move) |
 
 ## To build
 

@@ -1,3 +1,4 @@
+# REJECTED by the owner (2026-11-01): a prop swap, not an effect. See ../../../../wiki/bible/MOVE_EFFECTS.md.
 # SKETCH: Emerald's pencil becomes a datapad stylus with a glowing tip.
 # Only SKETCH loads ANIM_TAG_PENCIL. One 32x32 frame; AnimPencil scribbles it over the target with
 # the tip at the bottom right, so the diagonal and the tip position follow the vanilla pencil.
