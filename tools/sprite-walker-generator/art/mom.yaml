@@ -1,0 +1,267 @@
+name: mom
+description: 'MOM: the player''s mother as a moisture-farm homesteader (replaces Mom).'
+kit: person16x32
+replaces: graphics/object_events/pics/people/mom.png
+graphics_info: Mom
+notes: 'Group 3, B style: Mom''s own body as regions (shirt -> cream homespun tunic T, skirt -> ochre wrap K, belt Y red), new brown hair swept back into a low bun.'
+palette: npc_2
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_2
+shade: true
+materials:
+  H: c
+  N: c
+  T: w/c
+  K: a
+  Y: b
+legend:
+  k: 15
+accept: {}
+base_sheet: graphics/object_events/pics/people/mom.png
+remap:
+  b: T
+  a: K
+  c: Y
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHssssssHHH..
+
+        .HHHssssssssHHH.
+
+        .HHssskssksssHH.
+
+        .HHssskssksssHH.
+
+        .HHssssssssssHH.
+
+        .HHHssssssssHHH.
+
+        ..HH________HH..'
+  down_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHssssssHHH..
+
+        .HHHssssssssHHH.
+
+        .HHssskssksssHH.
+
+        .HHssskssksssHH.
+
+        .HHssssssssssHH.
+
+        .HHHssssssssHHH.
+
+        ..HH________HH..'
+  down_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHssssssHHH..
+
+        .HHHssssssssHHH.
+
+        .HHssskssksssHH.
+
+        .HHssskssksssHH.
+
+        .HHssssssssssHH.
+
+        .HHHssssssssHHH.
+
+        ..HH________HH..'
+  up:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHNNHHHHH..
+
+        ..HHHHHNNHHHHH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        ..HHHHHHHHHHHH..'
+  up_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHNNHHHHH..
+
+        ..HHHHHNNHHHHH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        ..HHHHHHHHHHHH..'
+  up_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHNNHHHHH..
+
+        ..HHHHHNNHHHHH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        ..HHHHHHHHHHHH..'
+  left:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......HHHHH.....
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..sHHHHHHHHHHH..
+
+        ..ssssHHHHHHHH..
+
+        ..sssksHHHHHHHN.
+
+        ..sssksssHHHHNN.
+
+        ...ssssssHHHHNN.
+
+        ....ssssssHHHH..
+
+        .....ss__HHHH...'
+  left_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......HHHHH.....
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..sHHHHHHHHHHH..
+
+        ..ssssHHHHHHHH..
+
+        ..sssksHHHHHHHN.
+
+        ..sssksssHHHHNN.
+
+        ...ssssssHHHHNN.
+
+        ....ssssssHHHH..
+
+        .....ss__HHHH...'
+  left_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......HHHHH.....
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..sHHHHHHHHHHH..
+
+        ..ssssHHHHHHHH..
+
+        ..sssksHHHHHHHN.
+
+        ..sssksssHHHHNN.
+
+        ...ssssssHHHHNN.
+
+        ....ssssssHHHH..
+
+        .....ss__HHHH...'

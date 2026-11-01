@@ -1,0 +1,247 @@
+name: man_4
+description: Bearded spacer with flight goggles on his forehead (replaces Man 4).
+kit: person16x32
+replaces: graphics/object_events/pics/people/man_4.png
+graphics_info: Man4
+notes: 'Group 3, B style: Man 4''s own body as regions (jacket -> grey spacer jacket J, shirt -> green V, trousers T), auburn hair with a full beard and moustache, goggles with green lenses pushed up on
+  the forehead.'
+palette: npc_3
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_3
+shade: true
+materials:
+  H: c
+  B: c
+  T: c
+  J: a
+  V: b
+  G: a
+legend:
+  k: 15
+  L: 9
+  W: 14
+accept: {}
+base_sheet: graphics/object_events/pics/people/man_4.png
+remap:
+  a: T
+  c: J
+  b: V
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HGGGGHHGGGGH..
+
+        .HHGLWGHHGLWGHH.
+
+        ________________
+
+        ________________
+
+        ___B__k__k__B___
+
+        ...BBsBBBBsBB...
+
+        ____BBBBBBBB____
+
+        ____BBBBBBBB____
+
+        ______BBBB______'
+  down_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HGGGGHHGGGGH..
+
+        .HHGLWGHHGLWGHH.
+
+        ________________
+
+        ________________
+
+        ___B__k__k__B___
+
+        ...BBsBBBBsBB...
+
+        ____BBBBBBBB____
+
+        ____BBBBBBBB____
+
+        ______BBBB______'
+  down_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HGGGGHHGGGGH..
+
+        .HHGLWGHHGLWGHH.
+
+        ________________
+
+        ________________
+
+        ___B__k__k__B___
+
+        ...BBsBBBBsBB...
+
+        ____BBBBBBBB____
+
+        ____BBBBBBBB____
+
+        ______BBBB______'
+  up:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..GGGGGGGGGGGG..
+
+        .HHHHHHHHHHHHHH.'
+  up_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..GGGGGGGGGGGG..
+
+        .HHHHHHHHHHHHHH.'
+  up_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..GGGGGGGGGGGG..
+
+        .HHHHHHHHHHHHHH.'
+  left:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......HHHHH.....
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..GLWGGGGGGGGG..
+
+        ..GGGHHHHHHHHH..
+
+        ________________
+
+        ________________
+
+        ________________
+
+        __BBBBBBB_______
+
+        ____BBBBBB______
+
+        _____BBBB_______
+
+        _____BBB________'
+  left_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......HHHHH.....
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..GLWGGGGGGGGG..
+
+        ..GGGHHHHHHHHH..
+
+        ________________
+
+        ________________
+
+        ________________
+
+        __BBBBBBB_______
+
+        ____BBBBBB______
+
+        _____BBBB_______
+
+        _____BBB________'
+  left_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......HHHHH.....
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..GLWGGGGGGGGG..
+
+        ..GGGHHHHHHHHH..
+
+        ________________
+
+        ________________
+
+        ________________
+
+        __BBBBBBB_______
+
+        ____BBBBBB______
+
+        _____BBBB_______
+
+        _____BBB________'

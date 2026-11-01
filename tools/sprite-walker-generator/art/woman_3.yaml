@@ -1,0 +1,178 @@
+name: woman_3
+description: Desert trader with a neck scarf and a satchel on a shoulder strap (replaces Woman 3).
+kit: person16x32
+replaces: graphics/object_events/pics/people/woman_3.png
+graphics_info: Woman3
+notes: 'Group 3, B style: Woman 3''s own body as regions (sleeves -> red T, vest + skirt -> brown leather K), long brown hair, a sand scarf at the neck, leather strap across the chest to a canvas satchel
+  on the hip.'
+palette: npc_2
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_2
+shade: true
+materials:
+  H: c
+  T: b
+  K: c
+  Y: w/c
+  W: a
+  S: c
+  P: a@
+legend:
+  k: 15
+accept: {}
+base_sheet: graphics/object_events/pics/people/woman_3.png
+remap:
+  c: H
+  a: T
+  b: K
+  w: Y
+frames:
+  down:
+    patches:
+    - x: 3
+      y: 22
+      rows: '_WWWWWWWW_
+
+        ___WWWW___'
+    - x: 4
+      y: 23
+      rows: 'S________
+
+        _S_______
+
+        __SS_____
+
+        ____SPPPP
+
+        _____PPPP
+
+        _____PPPP'
+  down_a:
+    patches:
+    - x: 3
+      y: 23
+      rows: '_WWWWWWWW_
+
+        ___WWWW___'
+    - x: 4
+      y: 24
+      rows: 'S________
+
+        _S_______
+
+        __SS_____
+
+        ____SPPPP
+
+        _____PPPP
+
+        _____PPPP'
+  down_b:
+    patches:
+    - x: 3
+      y: 23
+      rows: '_WWWWWWWW_
+
+        ___WWWW___'
+    - x: 4
+      y: 24
+      rows: 'S________
+
+        _S_______
+
+        __SS_____
+
+        ____SPPPP
+
+        _____PPPP
+
+        _____PPPP'
+  up:
+    patches:
+    - x: 3
+      y: 22
+      rows: _WWWWWWWW_
+    - x: 2
+      y: 23
+      rows: '_________S
+
+        _______SS_
+
+        _____SS___
+
+        PPPPS_____
+
+        PPPP______
+
+        PPPP______'
+  up_a:
+    patches:
+    - x: 3
+      y: 23
+      rows: _WWWWWWWW_
+    - x: 2
+      y: 24
+      rows: '_________S
+
+        _______SS_
+
+        _____SS___
+
+        PPPPS_____
+
+        PPPP______
+
+        PPPP______'
+  up_b:
+    patches:
+    - x: 3
+      y: 23
+      rows: _WWWWWWWW_
+    - x: 2
+      y: 24
+      rows: '_________S
+
+        _______SS_
+
+        _____SS___
+
+        PPPPS_____
+
+        PPPP______
+
+        PPPP______'
+  left:
+    patches:
+    - x: 4
+      y: 22
+      rows: _WWWWWW
+    - x: 6
+      y: 25
+      rows: 'PPPP
+
+        PPPP
+
+        PPPP'
+  left_a:
+    patches:
+    - x: 4
+      y: 23
+      rows: _WWWWWW
+    - x: 6
+      y: 26
+      rows: 'PPPP
+
+        PPPP
+
+        PPPP'
+  left_b:
+    patches:
+    - x: 4
+      y: 23
+      rows: _WWWWWW
+    - x: 6
+      y: 26
+      rows: 'PPPP
+
+        PPPP
+
+        PPPP'

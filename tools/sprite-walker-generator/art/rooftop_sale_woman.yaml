@@ -1,0 +1,144 @@
+name: rooftop_sale_woman
+description: Cloud City sales clerk in a Bespin pillbox cap and blue uniform (replaces the Rooftop Sale Woman).
+kit: person16x32
+replaces: graphics/object_events/pics/people/rooftop_sale_woman.png
+graphics_info: RooftopSaleWoman
+notes: 'Group 3, B style: her own body as regions (uniform -> Bespin blue U, trim -> gold Y, apron -> white tabard W), olive bob kept, new blue pillbox cap with a gold band and a white badge.'
+palette: npc_1
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_1
+shade: true
+materials:
+  H: c
+  U: b
+  Y: c
+  W: w/b
+  C: b@
+  y: c
+legend:
+  k: 15
+  W: 14
+accept: {}
+base_sheet: graphics/object_events/pics/people/rooftop_sale_woman.png
+remap:
+  c: H
+  b: U
+  a: Y
+  w: W
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 9
+      rows: '................
+
+        .....CCCCCC.....
+
+        ....CCCCCCCC....
+
+        ....CCCWWCCC....
+
+        ...yyyyyyyyyy...'
+  down_a:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        .....CCCCCC.....
+
+        ....CCCCCCCC....
+
+        ....CCCWWCCC....
+
+        ...yyyyyyyyyy...'
+  down_b:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        .....CCCCCC.....
+
+        ....CCCCCCCC....
+
+        ....CCCWWCCC....
+
+        ...yyyyyyyyyy...'
+  up:
+    patches:
+    - x: 0
+      y: 9
+      rows: '................
+
+        .....CCCCCC.....
+
+        ....CCCCCCCC....
+
+        ....CCCCCCCC....
+
+        ...yyyyyyyyyy...'
+  up_a:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        .....CCCCCC.....
+
+        ....CCCCCCCC....
+
+        ....CCCCCCCC....
+
+        ...yyyyyyyyyy...'
+  up_b:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        .....CCCCCC.....
+
+        ....CCCCCCCC....
+
+        ....CCCCCCCC....
+
+        ...yyyyyyyyyy...'
+  left:
+    patches:
+    - x: 0
+      y: 9
+      rows: '................
+
+        ......CCCCCC....
+
+        .....CCCCCCCC...
+
+        ....WCCCCCCCC...
+
+        ..yyyyyyyyyyy...'
+  left_a:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        ......CCCCCC....
+
+        .....CCCCCCCC...
+
+        ....WCCCCCCCC...
+
+        ..yyyyyyyyyyy...'
+  left_b:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        ......CCCCCC....
+
+        .....CCCCCCCC...
+
+        ....WCCCCCCCC...
+
+        ..yyyyyyyyyyy...'

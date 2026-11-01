@@ -1,0 +1,289 @@
+name: cameraman
+description: HOLONET camera operator with a holocam on his shoulder and a headset (replaces the Cameraman).
+kit: person16x32
+replaces: graphics/object_events/pics/people/cameraman.png
+graphics_info: Cameraman
+notes: 'Group 3, B style: the Cameraman''s own body as regions (jacket and camera panels -> grey Q, shirt -> magenta crew vest V, trousers T), new dark hair under a black headset with an ear cup and mic,
+  the shoulder camera redrawn as a grey holocam with a blue lens, glint and red REC light.'
+palette: npc_4
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_4
+shade: true
+materials:
+  H: a
+  Q: c
+  V: b
+  T: a
+legend:
+  k: 15
+  e: 15
+  L: 5
+  W: 14
+  r: 9
+accept: {}
+base_sheet: graphics/object_events/pics/people/cameraman.png
+remap:
+  c: Q
+  b: V
+  a: T
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 11
+      rows: '.....HHHHHH.....
+
+        ...HHHHHHHHHH...
+
+        ..eeeeeeeeeeee..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHH_________
+
+        .eHHHH__________
+
+        _ee_____________
+
+        ________________
+
+        ________________
+
+        ___e____________
+
+        ____e___________'
+    - x: 7
+      y: 15
+      rows: 'QQQQQQQ.
+
+        QQQQQQQQ
+
+        QQQQQQrQ
+
+        QQQQQQQQ
+
+        QQQQQQQ_
+
+        QeeeeeQ_
+
+        _eLLWeQ_
+
+        _eLLLeQ_
+
+        __eee___'
+  down_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.....HHHHHH.....
+
+        ...HHHHHHHHHH...
+
+        ..eeeeeeeeeeee..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHH_________
+
+        .eHHHH__________
+
+        _ee_____________
+
+        ________________
+
+        ________________
+
+        ___e____________
+
+        ____e___________'
+    - x: 7
+      y: 16
+      rows: 'QQQQQQQ.
+
+        QQQQQQQQ
+
+        QQQQQQrQ
+
+        QQQQQQQQ
+
+        QQQQQQQ_
+
+        QeeeeeQ_
+
+        _eLLWeQ_
+
+        _eLLLeQ_
+
+        __eee___'
+  down_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.....HHHHHH.....
+
+        ...HHHHHHHHHH...
+
+        ..eeeeeeeeeeee..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHH_________
+
+        .eHHHH__________
+
+        _ee_____________
+
+        ________________
+
+        ________________
+
+        ___e____________
+
+        ____e___________'
+    - x: 7
+      y: 16
+      rows: 'QQQQQQQ.
+
+        QQQQQQQQ
+
+        QQQQQQrQ
+
+        QQQQQQQQ
+
+        QQQQQQQ_
+
+        QeeeeeQ_
+
+        _eLLWeQ_
+
+        _eLLLeQ_
+
+        __eee___'
+  up:
+    patches:
+    - x: 0
+      y: 11
+      rows: '.....HHHHHH.....
+
+        ...HHHHHHHHHH...
+
+        ..eeeeeeeeeeee..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        .eHHHHHHHHHHHHe.
+
+        ___HHHHHHHHHH___'
+  up_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.....HHHHHH.....
+
+        ...HHHHHHHHHH...
+
+        ..eeeeeeeeeeee..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        .eHHHHHHHHHHHHe.
+
+        ___HHHHHHHHHH___'
+  up_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.....HHHHHH.....
+
+        ...HHHHHHHHHH...
+
+        ..eeeeeeeeeeee..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        .eHHHHHHHHHHHHe.
+
+        ___HHHHHHHHHH___'
+  left:
+    patches:
+    - x: 0
+      y: 11
+      rows: '.....HHHHHH.....
+
+        ...HHHHHeHHHH...
+
+        ..HHHHHHeHHHHH..
+
+        ..HHHHHHeHHHHH..
+
+        ..HHHHHeeeHHHH..
+
+        ___HHHHeeeHHH___'
+    - x: 0
+      y: 16
+      rows: '..HHQQQQQQQQH___
+
+        eeeQQQQQQQrQ____
+
+        eLWQQQQQQQQQ____
+
+        eLLQQQQQQQQQ____
+
+        eeeQssQQQQQ_____'
+  left_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.....HHHHHH.....
+
+        ...HHHHHeHHHH...
+
+        ..HHHHHHeHHHHH..
+
+        ..HHHHHHeHHHHH..
+
+        ..HHHHHeeeHHHH..
+
+        ___HHHHeeeHHH___'
+    - x: 0
+      y: 17
+      rows: '..HHQQQQQQQQH___
+
+        eeeQQQQQQQrQ____
+
+        eLWQQQQQQQQQ____
+
+        eLLQQQQQQQQQ____
+
+        eeeQssQQQQQ_____'
+  left_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.....HHHHHH.....
+
+        ...HHHHHeHHHH...
+
+        ..HHHHHHeHHHHH..
+
+        ..HHHHHHeHHHHH..
+
+        ..HHHHHeeeHHHH..
+
+        ___HHHHeeeHHH___'
+    - x: 0
+      y: 17
+      rows: '..HHQQQQQQQQH___
+
+        eeeQQQQQQQrQ____
+
+        eLWQQQQQQQQQ____
+
+        eLLQQQQQQQQQ____
+
+        eeeQssQQQQQ_____'

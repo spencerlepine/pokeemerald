@@ -1,0 +1,129 @@
+name: union_room_attendant
+description: HOLONET CLUB attendant with a headset and a glowing holo badge (replaces the Union Room attendant).
+kit: person16x32_still
+replaces: graphics/object_events/pics/people/union_room_attendant.png
+graphics_info: UnionRoomAttendant
+notes: 'Group 3, B style (stand-only): the attendant''s own body as regions (uniform -> lavender-grey U, white trim -> green HoloNet trim T), nurse cap replaced by auburn hair under a black headset with
+  an ear cup and a green-tipped mic, a glowing green holo badge on the chest.'
+palette: npc_3
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_3
+shade: true
+materials:
+  H: c
+  U: a
+  T: b
+  O: a
+legend:
+  k: 15
+  e: 15
+  q: 15
+  g: 8
+  G: 9
+  W: 14
+accept: {}
+base_sheet: graphics/object_events/pics/people/union_room_attendant.png
+remap:
+  b: H
+  a: U
+  w: T
+  k: O
+frames:
+  down:
+    patches:
+    - x: 1
+      y: 18
+      rows: 'H____e__e____H
+
+        H__H_e__e_H__H
+
+        H__H________H_
+
+        H____________H
+
+        _H__________H_'
+    - x: 0
+      y: 10
+      rows: '................
+
+        ......HHHH......
+
+        ....HHHHHHHH....
+
+        ...eeeeeeeeee...'
+    - x: 0
+      y: 17
+      rows: 'ee___
+
+        eee__
+
+        eeq__
+
+        __q__
+
+        ___q_
+
+        ____g'
+    - x: 4
+      y: 24
+      rows: 'gG
+
+        GW'
+  up:
+    patches:
+    - x: 1
+      y: 18
+      rows: 'H____________H
+
+        H____________H
+
+        H____________H
+
+        _H__________H_
+
+        _H__________H_'
+    - x: 0
+      y: 10
+      rows: '................
+
+        ......HHHH......
+
+        ....HHHHHHHH....
+
+        ...eeeeeeeeee...'
+  left:
+    patches:
+    - x: 5
+      y: 18
+      rows: 'e________H
+
+        e________H
+
+        ___H_____H
+
+        ___H_____H
+
+        ___H____H_'
+    - x: 0
+      y: 9
+      rows: '................
+
+        ................
+
+        .....HHHHH......
+
+        ...HHHHHHHHH....
+
+        ...HHHHHeHHHH...'
+    - x: 4
+      y: 17
+      rows: '____ee
+
+        ____ee
+
+        ____ee
+
+        ___q__
+
+        _qq___
+
+        g_____'

@@ -1,0 +1,339 @@
+name: hot_springs_old_woman
+description: Old Sullustan woman soaking in a hot spring with a towel on her head (replaces the Hot Springs Old Woman).
+kit: person16x32
+replaces: graphics/object_events/pics/people/hot_springs_old_woman.png
+graphics_info: HotSpringsOldWoman
+notes: 'Group 3, B style: the vanilla bather''s head-above-water layout, redrawn as a Sullustan: light grey towel with a pink stripe, round ears, big glossy black eyes, a wide jowled face.'
+palette: npc_4
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_4
+shade: true
+materials:
+  T: c
+  S: b
+  E: s@
+  s: s@
+legend:
+  O: 15
+  W: 14
+  m: 4
+accept:
+  height: only the head shows above the hot-spring water, as in vanilla
+base_sheet: graphics/object_events/pics/people/hot_springs_old_woman.png
+remap:
+  c: T
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 8
+      rows: '................
+
+        ......TTTT......
+
+        ....TTTTTTTT....
+
+        ...TTTTTTTTTT...
+
+        ..TTTTTTTTTTTT..
+
+        ..SSSSSSSSSSSS..
+
+        .ETTTTTTTTTTTTE.
+
+        EEEssssssssssEEE
+
+        EEssssssssssssEE
+
+        .sOWOssssssOWOs.
+
+        .sOOOssssssOOOs.
+
+        .sOOOssssssOOOs.
+
+        ssssssssssssssss
+
+        ssssssmmmmssssss
+
+        .ssssssssssssss.
+
+        ..ssssssssssss..'
+  down_a:
+    patches:
+    - x: 0
+      y: 9
+      rows: '................
+
+        ......TTTT......
+
+        ....TTTTTTTT....
+
+        ...TTTTTTTTTT...
+
+        ..TTTTTTTTTTTT..
+
+        ..SSSSSSSSSSSS..
+
+        .ETTTTTTTTTTTTE.
+
+        EEEssssssssssEEE
+
+        EEssssssssssssEE
+
+        .sOWOssssssOWOs.
+
+        .sOOOssssssOOOs.
+
+        .sOOOssssssOOOs.
+
+        ssssssssssssssss
+
+        ssssssmmmmssssss
+
+        .ssssssssssssss.
+
+        ..ssssssssssss..'
+  down_b:
+    patches:
+    - x: 0
+      y: 9
+      rows: '................
+
+        ......TTTT......
+
+        ....TTTTTTTT....
+
+        ...TTTTTTTTTT...
+
+        ..TTTTTTTTTTTT..
+
+        ..SSSSSSSSSSSS..
+
+        .ETTTTTTTTTTTTE.
+
+        EEEssssssssssEEE
+
+        EEssssssssssssEE
+
+        .sOWOssssssOWOs.
+
+        .sOOOssssssOOOs.
+
+        .sOOOssssssOOOs.
+
+        ssssssssssssssss
+
+        ssssssmmmmssssss
+
+        .ssssssssssssss.
+
+        ..ssssssssssss..'
+  up:
+    patches:
+    - x: 0
+      y: 8
+      rows: '................
+
+        ......TTTT......
+
+        ....TTTTTTTT....
+
+        ...TTTTTTTTTT...
+
+        ..TTTTTTTTTTTT..
+
+        ..SSSSSSSSSSSS..
+
+        .ETTTTTTTTTTTTE.
+
+        EEETTTTTTTTTTEEE
+
+        EETTTTTTTTTTTTEE
+
+        .TTTTTTTTTTTTTT.
+
+        .sTTTTTTTTTTTTs.
+
+        .ssTTTTTTTTTTss.
+
+        ssssssssssssssss
+
+        ssssssssssssssss
+
+        .ssssssssssssss.
+
+        ..ssssssssssss..'
+  up_a:
+    patches:
+    - x: 0
+      y: 9
+      rows: '................
+
+        ......TTTT......
+
+        ....TTTTTTTT....
+
+        ...TTTTTTTTTT...
+
+        ..TTTTTTTTTTTT..
+
+        ..SSSSSSSSSSSS..
+
+        .ETTTTTTTTTTTTE.
+
+        EEETTTTTTTTTTEEE
+
+        EETTTTTTTTTTTTEE
+
+        .TTTTTTTTTTTTTT.
+
+        .sTTTTTTTTTTTTs.
+
+        .ssTTTTTTTTTTss.
+
+        ssssssssssssssss
+
+        ssssssssssssssss
+
+        .ssssssssssssss.
+
+        ..ssssssssssss..'
+  up_b:
+    patches:
+    - x: 0
+      y: 9
+      rows: '................
+
+        ......TTTT......
+
+        ....TTTTTTTT....
+
+        ...TTTTTTTTTT...
+
+        ..TTTTTTTTTTTT..
+
+        ..SSSSSSSSSSSS..
+
+        .ETTTTTTTTTTTTE.
+
+        EEETTTTTTTTTTEEE
+
+        EETTTTTTTTTTTTEE
+
+        .TTTTTTTTTTTTTT.
+
+        .sTTTTTTTTTTTTs.
+
+        .ssTTTTTTTTTTss.
+
+        ssssssssssssssss
+
+        ssssssssssssssss
+
+        .ssssssssssssss.
+
+        ..ssssssssssss..'
+  left:
+    patches:
+    - x: 0
+      y: 8
+      rows: '................
+
+        .......TTTT.....
+
+        .....TTTTTTTT...
+
+        ....TTTTTTTTTT..
+
+        ...TTTTTTTTTTT..
+
+        ...SSSSSSSSSSS..
+
+        ...TTTTTTTTTTT..
+
+        ..sssssssTTTTT..
+
+        .ssssssEEETTTT..
+
+        .ssssssEEEETTs..
+
+        OWOssssssEEEss..
+
+        OOOsssssssssss..
+
+        OOOsssssssssss..
+
+        ssssssssssssss..
+
+        mmsssssssssss...
+
+        ..ssssssssss....'
+  left_a:
+    patches:
+    - x: 0
+      y: 9
+      rows: '................
+
+        .......TTTT.....
+
+        .....TTTTTTTT...
+
+        ....TTTTTTTTTT..
+
+        ...TTTTTTTTTTT..
+
+        ...SSSSSSSSSSS..
+
+        ...TTTTTTTTTTT..
+
+        ..sssssssTTTTT..
+
+        .ssssssEEETTTT..
+
+        .ssssssEEEETTs..
+
+        OWOssssssEEEss..
+
+        OOOsssssssssss..
+
+        OOOsssssssssss..
+
+        ssssssssssssss..
+
+        mmsssssssssss...
+
+        ..ssssssssss....'
+  left_b:
+    patches:
+    - x: 0
+      y: 9
+      rows: '................
+
+        .......TTTT.....
+
+        .....TTTTTTTT...
+
+        ....TTTTTTTTTT..
+
+        ...TTTTTTTTTTT..
+
+        ...SSSSSSSSSSS..
+
+        ...TTTTTTTTTTT..
+
+        ..sssssssTTTTT..
+
+        .ssssssEEETTTT..
+
+        .ssssssEEEETTs..
+
+        OWOssssssEEEss..
+
+        OOOsssssssssss..
+
+        OOOsssssssssss..
+
+        ssssssssssssss..
+
+        mmsssssssssss...
+
+        ..ssssssssss....'

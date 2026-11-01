@@ -1,0 +1,242 @@
+name: pokefan_m
+description: Beast fan (m) in a bantha-horn headband and a creature-print vest (replaces Pokefan M).
+kit: person16x32
+replaces: graphics/object_events/pics/people/pokefan_m.png
+graphics_info: PokefanM
+notes: 'Group 3, B style: Pokefan M''s own body as regions (shirt S, belt Y), a red headband with two curled bantha horns, a sand vest with dark creature spots open over the shirt.'
+palette: npc_2
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_2
+shade: true
+materials:
+  H: c
+  S: b
+  Y: a
+  B: b
+  N: w/c
+  V: a
+legend:
+  k: 15
+  p: 13
+accept: {}
+base_sheet: graphics/object_events/pics/people/pokefan_m.png
+remap:
+  c: H
+  b: S
+  a: Y
+frames:
+  down:
+    patches:
+    - x: 1
+      y: 21
+      rows: '_VV________VV_
+
+        __VVV____VVV__
+
+        ___VpVV__VpV__
+
+        ___VVVp_VVVV__
+
+        __VpVVV_VVpVV_'
+    - x: 0
+      y: 12
+      rows: '_NN__________NN_
+
+        NNNBBBBBBBBBBNNN
+
+        N_N__________N_N
+
+        NNN__________NNN
+
+        _N____________N_'
+  down_a:
+    patches:
+    - x: 1
+      y: 22
+      rows: '_VV________VV_
+
+        __VVV____VVV__
+
+        ___VpVV__VpV__
+
+        ___VVVp_VVVV__
+
+        __VpVVV_VVpVV_'
+    - x: 0
+      y: 13
+      rows: '_NN__________NN_
+
+        NNNBBBBBBBBBBNNN
+
+        N_N__________N_N
+
+        NNN__________NNN
+
+        _N____________N_'
+  down_b:
+    patches:
+    - x: 1
+      y: 22
+      rows: '_VV________VV_
+
+        __VVV____VVV__
+
+        ___VpVV__VpV__
+
+        ___VVVp_VVVV__
+
+        __VpVVV_VVpVV_'
+    - x: 0
+      y: 13
+      rows: '_NN__________NN_
+
+        NNNBBBBBBBBBBNNN
+
+        N_N__________N_N
+
+        NNN__________NNN
+
+        _N____________N_'
+  up:
+    patches:
+    - x: 1
+      y: 21
+      rows: '_VVVVVVVVVVVV_
+
+        __VVVVVVVVVV__
+
+        __VpVVVVVpVV__
+
+        __VVVpVVVVVV__
+
+        __VpVVVVVVpV__'
+    - x: 0
+      y: 12
+      rows: '_NN__________NN_
+
+        NNNBBBBBBBBBBNNN
+
+        N_N__________N_N
+
+        NNN__________NNN
+
+        _N____________N_'
+  up_a:
+    patches:
+    - x: 1
+      y: 22
+      rows: '_VVVVVVVVVVVV_
+
+        __VVVVVVVVVV__
+
+        __VpVVVVVpVV__
+
+        __VVVpVVVVVV__
+
+        __VpVVVVVVpV__'
+    - x: 0
+      y: 13
+      rows: '_NN__________NN_
+
+        NNNBBBBBBBBBBNNN
+
+        N_N__________N_N
+
+        NNN__________NNN
+
+        _N____________N_'
+  up_b:
+    patches:
+    - x: 1
+      y: 22
+      rows: '_VVVVVVVVVVVV_
+
+        __VVVVVVVVVV__
+
+        __VpVVVVVpVV__
+
+        __VVVpVVVVVV__
+
+        __VpVVVVVVpV__'
+    - x: 0
+      y: 13
+      rows: '_NN__________NN_
+
+        NNNBBBBBBBBBBNNN
+
+        N_N__________N_N
+
+        NNN__________NNN
+
+        _N____________N_'
+  left:
+    patches:
+    - x: 4
+      y: 22
+      rows: 'VVVVVV
+
+        VpVVVV
+
+        VVVpVV
+
+        VVVVpV'
+    - x: 0
+      y: 12
+      rows: '________________
+
+        ____BBBBBBBBB___
+
+        _______NNNN_____
+
+        ______NN__NN____
+
+        __________NN____
+
+        _________NN_____'
+  left_a:
+    patches:
+    - x: 4
+      y: 23
+      rows: 'VVVVVV
+
+        VpVVVV
+
+        VVVpVV
+
+        VVVVpV'
+    - x: 0
+      y: 13
+      rows: '________________
+
+        ____BBBBBBBBB___
+
+        _______NNNN_____
+
+        ______NN__NN____
+
+        __________NN____
+
+        _________NN_____'
+  left_b:
+    patches:
+    - x: 4
+      y: 23
+      rows: 'VVVVVV
+
+        VpVVVV
+
+        VVVpVV
+
+        VVVVpV'
+    - x: 0
+      y: 13
+      rows: '________________
+
+        ____BBBBBBBBB___
+
+        _______NNNN_____
+
+        ______NN__NN____
+
+        __________NN____
+
+        _________NN_____'

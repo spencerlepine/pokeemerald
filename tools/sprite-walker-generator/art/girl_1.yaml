@@ -1,0 +1,280 @@
+name: girl_1
+description: Moisture-farm girl in a white desert headwrap and wrap skirt (replaces Girl 1).
+kit: person16x32
+replaces: graphics/object_events/pics/people/girl_1.png
+graphics_info: Girl1
+notes: 'Group 3, B style: Girl 1''s own body as regions (top + sleeves + shoes -> faded red tunic T, skirt -> brown wrap K), new white headwrap with a sand band and a knot at the back, hanging to the shoulders,
+  brown fringe.'
+palette: npc_2
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_2
+shade: true
+materials:
+  H: c
+  T: b
+  K: c
+  W: w/c
+  R: a
+legend:
+  k: 15
+accept: {}
+base_sheet: graphics/object_events/pics/people/girl_1.png
+remap:
+  c: H
+  b: T
+  a: K
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        ......WWWW......
+
+        ....WWWWWWWW....
+
+        ...WWWWWWWWWW...
+
+        ..WWWWWWWWWWWW..
+
+        ..RRRRRRRRRRRR..
+
+        .WWWHHHHHHHHWWW.
+
+        .WWHH______HHWW.
+
+        .WW__________WW.
+
+        .WW___k__k___WW.
+
+        .WW___k__k___WW.
+
+        ..W__________W..'
+  down_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        ......WWWW......
+
+        ....WWWWWWWW....
+
+        ...WWWWWWWWWW...
+
+        ..WWWWWWWWWWWW..
+
+        ..RRRRRRRRRRRR..
+
+        .WWWHHHHHHHHWWW.
+
+        .WWHH______HHWW.
+
+        .WW__________WW.
+
+        .WW___k__k___WW.
+
+        .WW___k__k___WW.
+
+        ..W__________W..'
+  down_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        ......WWWW......
+
+        ....WWWWWWWW....
+
+        ...WWWWWWWWWW...
+
+        ..WWWWWWWWWWWW..
+
+        ..RRRRRRRRRRRR..
+
+        .WWWHHHHHHHHWWW.
+
+        .WWHH______HHWW.
+
+        .WW__________WW.
+
+        .WW___k__k___WW.
+
+        .WW___k__k___WW.
+
+        ..W__________W..'
+  up:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        ......WWWW......
+
+        ....WWWWWWWW....
+
+        ...WWWWWWWWWW...
+
+        ..WWWWWWWWWWWW..
+
+        ..RRRRRRRRRRRR..
+
+        .WWWWWWWWWWWWWW.
+
+        .WWWWWWRRWWWWWW.
+
+        .WWWWWRRRRWWWWW.
+
+        .WWWWWWRRWWWWWW.
+
+        .WWWWWWWWWWWWWW.
+
+        ._WWWWWWWWWWWW_.
+
+        ..__WWWWWWWW__..'
+  up_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        ......WWWW......
+
+        ....WWWWWWWW....
+
+        ...WWWWWWWWWW...
+
+        ..WWWWWWWWWWWW..
+
+        ..RRRRRRRRRRRR..
+
+        .WWWWWWWWWWWWWW.
+
+        .WWWWWWRRWWWWWW.
+
+        .WWWWWRRRRWWWWW.
+
+        .WWWWWWRRWWWWWW.
+
+        .WWWWWWWWWWWWWW.
+
+        ._WWWWWWWWWWWW_.
+
+        ..__WWWWWWWW__..'
+  up_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        ......WWWW......
+
+        ....WWWWWWWW....
+
+        ...WWWWWWWWWW...
+
+        ..WWWWWWWWWWWW..
+
+        ..RRRRRRRRRRRR..
+
+        .WWWWWWWWWWWWWW.
+
+        .WWWWWWRRWWWWWW.
+
+        .WWWWWRRRRWWWWW.
+
+        .WWWWWWRRWWWWWW.
+
+        .WWWWWWWWWWWWWW.
+
+        ._WWWWWWWWWWWW_.
+
+        ..__WWWWWWWW__..'
+  left:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        ......WWWWW.....
+
+        ....WWWWWWWW....
+
+        ...WWWWWWWWWW...
+
+        ..WWWWWWWWWWWW..
+
+        ..RRRRRRRRRRRR..
+
+        ..HHHWWWWWWWWW..
+
+        ..HH_HHWWWWWWWW.
+
+        ..____HWWWWWWWW.
+
+        ..___k__WWWWWWW.
+
+        ..___k_____WWWW.
+
+        ..._________WWW.
+
+        ....______WWWW..'
+  left_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        ......WWWWW.....
+
+        ....WWWWWWWW....
+
+        ...WWWWWWWWWW...
+
+        ..WWWWWWWWWWWW..
+
+        ..RRRRRRRRRRRR..
+
+        ..HHHWWWWWWWWW..
+
+        ..HH_HHWWWWWWWW.
+
+        ..____HWWWWWWWW.
+
+        ..___k__WWWWWWW.
+
+        ..___k_____WWWW.
+
+        ..._________WWW.
+
+        ....______WWWW..'
+  left_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        ......WWWWW.....
+
+        ....WWWWWWWW....
+
+        ...WWWWWWWWWW...
+
+        ..WWWWWWWWWWWW..
+
+        ..RRRRRRRRRRRR..
+
+        ..HHHWWWWWWWWW..
+
+        ..HH_HHWWWWWWWW.
+
+        ..____HWWWWWWWW.
+
+        ..___k__WWWWWWW.
+
+        ..___k_____WWWW.
+
+        ..._________WWW.
+
+        ....______WWWW..'

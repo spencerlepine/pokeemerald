@@ -1,0 +1,179 @@
+name: roxanne
+description: 'BIGGS DARKLIGHTER: young Rebel pilot in an orange flight suit and white vest, with a datapad (replaces Roxanne).'
+kit: person16x32_still
+replaces: graphics/object_events/pics/people/gym_leaders/roxanne.png
+graphics_info: Roxanne
+notes: 'Group 3, B style (stand-only, figure redrawn over Roxanne''s frame): short dark-brown hair with a side part and a thin moustache, orange flight suit under a white pilot vest with a chest box, red
+  collar, a datapad with a lit screen in his hand.'
+palette: npc_2
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_2
+shade: true
+materials:
+  H: c
+  F: a
+  V: w/c
+  C: b
+  Y: c
+  K: c
+legend:
+  k: 15
+  D: 15
+  E: 8
+  Z: 12
+  X: 15
+  r: 9
+  e: 15
+  '1': 1
+  '2': 2
+  '3': 3
+  '4': 4
+accept: {}
+base_sheet: graphics/object_events/pics/people/gym_leaders/roxanne.png
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        .4HHH11111HHHH4.
+
+        .42111111111124.
+
+        .42221e11e12224.
+
+        ..4322e22e2234..
+
+        ..4332ZZZZ2334..
+
+        ...4333333334...
+
+        ..FFVVCssCVVFF..
+
+        .FFFVVVXXVVVFFF.
+
+        .FFFVVVXrVVVFFF.
+
+        .ssFYYYYYYYYFss.
+
+        ...FFFFFFFFFF...
+
+        ...FFFFFFFFFF...
+
+        ...FFFF..FFFF...
+
+        ....KKK..KKK....
+
+        ................'
+    - x: 12
+      y: 25
+      rows: 'DDD
+
+        DED
+
+        DDD'
+  up:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        .sHHHHHHHHHHHHs.
+
+        .sHHHHHHHHHHHHs.
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ...HHHHHHHHHH...
+
+        ....ssssssss....
+
+        ..FFCCCCCCCCFF..
+
+        .FFFVVVVVVVVFFF.
+
+        .FFFVVVVVVVVFFF.
+
+        .ssFYYYYYYYYFss.
+
+        ...FFFFFFFFFF...
+
+        ...FFFFFFFFFF...
+
+        ...FFFF..FFFF...
+
+        ....KKK..KKK....
+
+        ................'
+  left:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......HHHHH.....
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..1HHHHHHHHHHH..
+
+        ..1111HHHHHHH...
+
+        ..21e112HHHHH...
+
+        ..32e22224HHH...
+
+        ..Z3333324H.....
+
+        ...44333344.....
+
+        ....CVVVFFF.....
+
+        ....VVVFFFFF....
+
+        ....VXVFFFFF....
+
+        ....YYYYFssF....
+
+        .....FFFFFF.....
+
+        .....FFFFF......
+
+        .....FFFFF......
+
+        .....KKKK.......
+
+        ................'
+    - x: 9
+      y: 26
+      rows: 'DDD
+
+        DED'

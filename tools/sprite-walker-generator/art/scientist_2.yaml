@@ -1,0 +1,234 @@
+name: scientist_2
+description: Senior researcher in big brass lab goggles and a white lab coat (replaces Scientist 2).
+kit: person16x32
+replaces: graphics/object_events/pics/people/scientist_2.png
+graphics_info: Scientist2
+notes: 'Group 3, B style: Scientist 2''s own body as regions (coat -> white lab coat L, shirt -> blue S, tie kept pink), dark hair with a grey streak, big brass goggles with blue lenses worn over the eyes
+  on a strap.'
+palette: npc_1
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_1
+shade: true
+materials:
+  H: c
+  L: w/b
+  S: b
+  G: c
+  s: s
+legend:
+  k: 15
+  E: 8
+  W: 14
+accept: {}
+base_sheet: graphics/object_events/pics/people/scientist_2.png
+remap:
+  c: H
+  b: L
+  w: S
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......HHHH......
+
+        ....HWWHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHssssHHHH..
+
+        ..HHHssssssHHH..
+
+        .sGGGGGssGGGGGs.
+
+        .sGEEWGGGGEEWGs.
+
+        .sGEkEGssGEkEGs.
+
+        ..sGGGssssGGGs..'
+  down_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......HHHH......
+
+        ....HWWHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHssssHHHH..
+
+        ..HHHssssssHHH..
+
+        .sGGGGGssGGGGGs.
+
+        .sGEEWGGGGEEWGs.
+
+        .sGEkEGssGEkEGs.
+
+        ..sGGGssssGGGs..'
+  down_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......HHHH......
+
+        ....HWWHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHssssHHHH..
+
+        ..HHHssssssHHH..
+
+        .sGGGGGssGGGGGs.
+
+        .sGEEWGGGGEEWGs.
+
+        .sGEkEGssGEkEGs.
+
+        ..sGGGssssGGGs..'
+  up:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......HHHH......
+
+        ....HWWHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        .GGGGGGGGGGGGGG.
+
+        .sHHHHHHHHHHHHs.
+
+        ..sHHHHHHHHHHs..
+
+        ...SSSSSSSSSS...'
+  up_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......HHHH......
+
+        ....HWWHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        .GGGGGGGGGGGGGG.
+
+        .sHHHHHHHHHHHHs.
+
+        ..sHHHHHHHHHHs..
+
+        ...SSSSSSSSSS...'
+  up_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......HHHH......
+
+        ....HWWHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        .GGGGGGGGGGGGGG.
+
+        .sHHHHHHHHHHHHs.
+
+        ..sHHHHHHHHHHs..
+
+        ...SSSSSSSSSS...'
+  left:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......HHHH......
+
+        ....HWWHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..sssHHHHHHHHH..
+
+        ..sssssHHHHHHH..
+
+        .GGGGGGGGGGGGG..
+
+        .GEEWG__HHHHHH__
+
+        .GEkEG___HHHHH__
+
+        ..GGG_____HHH___'
+  left_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......HHHH......
+
+        ....HWWHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..sssHHHHHHHHH..
+
+        ..sssssHHHHHHH..
+
+        .GGGGGGGGGGGGG..
+
+        .GEEWG__HHHHHH__
+
+        .GEkEG___HHHHH__
+
+        ..GGG_____HHH___'
+  left_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......HHHH......
+
+        ....HWWHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..sssHHHHHHHHH..
+
+        ..sssssHHHHHHH..
+
+        .GGGGGGGGGGGGG..
+
+        .GEEWG__HHHHHH__
+
+        .GEkEG___HHHHH__
+
+        ..GGG_____HHH___'

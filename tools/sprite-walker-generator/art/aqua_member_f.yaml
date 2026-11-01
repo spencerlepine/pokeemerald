@@ -1,0 +1,357 @@
+name: aqua_member_f
+description: 'Cartel thug (f): Weequay enforcer with a topknot and braids, a wrinkled leathery face and scrap armour (replaces the Aqua Grunt F).'
+kit: person16x32
+replaces: graphics/object_events/pics/people/team_aqua/aqua_member_f.png
+graphics_info: AquaMemberF
+notes: 'Group 3, B style: the grunt''s own body as regions (top and skirt -> drab green tunic L, boots -> brown D), new Weequay head: bald leathery tan scalp with forehead, brow and mouth wrinkles, dark
+  red-brown braids and a topknot; scrap-metal shoulder plates and a chest plate.'
+palette: npc_3
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_3
+shade: true
+materials:
+  H: c
+  L: b
+  D: c
+  M: a
+legend:
+  k: 15
+  '4': 4
+accept:
+  hair_rows: 'Weequay: a bald wrinkled scalp with a topknot and braids'
+base_sheet: graphics/object_events/pics/people/team_aqua/aqua_member_f.png
+remap:
+  a: L
+  b: D
+  c: L
+  w: L
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 10
+      rows: '......HHH.......
+
+        .....HHHHH......
+
+        ....ssHHHss.....
+
+        ...ssssssssss...
+
+        ..ssssssssssss..
+
+        ..s4s4ss4s4sss..
+
+        .HssssssssssssH.
+
+        .Hsss44ss44sssH.
+
+        .HssssksskssssH.
+
+        .HssssksskssssH.
+
+        HHs4ssssssss4sHH
+
+        HH.4ss4444ss4.HH
+
+        HH____4ssss4__HH
+
+        HH____________HH'
+    - x: 0
+      y: 22
+      rows: '________________
+
+        _MMM________MMM_
+
+        MMMM_MMMMMM_MMMM'
+  down_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......HHH.......
+
+        .....HHHHH......
+
+        ....ssHHHss.....
+
+        ...ssssssssss...
+
+        ..ssssssssssss..
+
+        ..s4s4ss4s4sss..
+
+        .HssssssssssssH.
+
+        .Hsss44ss44sssH.
+
+        .HssssksskssssH.
+
+        .HssssksskssssH.
+
+        HHs4ssssssss4sHH
+
+        HH.4ss4444ss4.HH
+
+        HH____4ssss4__HH
+
+        HH____________HH'
+    - x: 0
+      y: 23
+      rows: '________________
+
+        _MMM________MMM_
+
+        MMMM_MMMMMM_MMMM'
+  down_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......HHH.......
+
+        .....HHHHH......
+
+        ....ssHHHss.....
+
+        ...ssssssssss...
+
+        ..ssssssssssss..
+
+        ..s4s4ss4s4sss..
+
+        .HssssssssssssH.
+
+        .Hsss44ss44sssH.
+
+        .HssssksskssssH.
+
+        .HssssksskssssH.
+
+        HHs4ssssssss4sHH
+
+        HH.4ss4444ss4.HH
+
+        HH____4ssss4__HH
+
+        HH____________HH'
+    - x: 0
+      y: 23
+      rows: '________________
+
+        _MMM________MMM_
+
+        MMMM_MMMMMM_MMMM'
+  up:
+    patches:
+    - x: 0
+      y: 10
+      rows: '......HHH.......
+
+        .....HHHHH......
+
+        ....ssHHHss.....
+
+        ...sssHHHssss...
+
+        ..sssssHHsssss..
+
+        ..sssssHHsssss..
+
+        .HsssssHHssssH..
+
+        .HsssssHHssssHs.
+
+        .HsssssHHsssssH.
+
+        .HsssssHHsssssH.
+
+        HHssssHHssssssHH
+
+        HH.ssssHHssss.HH
+
+        HH_____HH_____HH
+
+        HH_____HH_____HH'
+    - x: 0
+      y: 22
+      rows: '________________
+
+        _MMM________MMM_
+
+        MMMM________MMMM'
+  up_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......HHH.......
+
+        .....HHHHH......
+
+        ....ssHHHss.....
+
+        ...sssHHHssss...
+
+        ..sssssHHsssss..
+
+        ..sssssHHsssss..
+
+        .HsssssHHssssH..
+
+        .HsssssHHssssHs.
+
+        .HsssssHHsssssH.
+
+        .HsssssHHsssssH.
+
+        HHssssHHssssssHH
+
+        HH.ssssHHssss.HH
+
+        HH_____HH_____HH
+
+        HH_____HH_____HH'
+    - x: 0
+      y: 23
+      rows: '________________
+
+        _MMM________MMM_
+
+        MMMM________MMMM'
+  up_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......HHH.......
+
+        .....HHHHH......
+
+        ....ssHHHss.....
+
+        ...sssHHHssss...
+
+        ..sssssHHsssss..
+
+        ..sssssHHsssss..
+
+        .HsssssHHssssH..
+
+        .HsssssHHssssHs.
+
+        .HsssssHHsssssH.
+
+        .HsssssHHsssssH.
+
+        HHssssHHssssssHH
+
+        HH.ssssHHssss.HH
+
+        HH_____HH_____HH
+
+        HH_____HH_____HH'
+    - x: 0
+      y: 23
+      rows: '________________
+
+        _MMM________MMM_
+
+        MMMM________MMMM'
+  left:
+    patches:
+    - x: 0
+      y: 10
+      rows: '.......HHH......
+
+        ......HHHHH.....
+
+        .....sHHHHs.....
+
+        ...sssssssHss...
+
+        ..sssssssssHss..
+
+        ..4s4ssssssHss..
+
+        ..sssssssssHHs..
+
+        ..44sssssssssHH.
+
+        ..ssksssssssssH.
+
+        ..ssksssssssssH.
+
+        ..4sssssssssssHH
+
+        ...44ssssssssHHH
+
+        ....4sssss__HHH.
+
+        .....____HHHH...'
+    - x: 5
+      y: 23
+      rows: MMMM
+  left_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '.......HHH......
+
+        ......HHHHH.....
+
+        .....sHHHHs.....
+
+        ...sssssssHss...
+
+        ..sssssssssHss..
+
+        ..4s4ssssssHss..
+
+        ..sssssssssHHs..
+
+        ..44sssssssssHH.
+
+        ..ssksssssssssH.
+
+        ..ssksssssssssH.
+
+        ..4sssssssssssHH
+
+        ...44ssssssssHHH
+
+        ....4sssss__HHH.
+
+        .....____HHHH...'
+    - x: 5
+      y: 24
+      rows: MMMM
+  left_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '.......HHH......
+
+        ......HHHHH.....
+
+        .....sHHHHs.....
+
+        ...sssssssHss...
+
+        ..sssssssssHss..
+
+        ..4s4ssssssHss..
+
+        ..sssssssssHHs..
+
+        ..44sssssssssHH.
+
+        ..ssksssssssssH.
+
+        ..ssksssssssssH.
+
+        ..4sssssssssssHH
+
+        ...44ssssssssHHH
+
+        ....4sssss__HHH.
+
+        .....____HHHH...'
+    - x: 5
+      y: 24
+      rows: MMMM
