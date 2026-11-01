@@ -61,7 +61,7 @@ move:blizzard,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:psybeam,FORCE WAVE,HOTSWAP,DONE,PENDING_ART,,A blue Force pulse train.,"Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md Tier A (the Force). SE: SE_FORCE_HUM, SE_M_PSYBEAM."
 move:bubble-beam,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:aurora-beam,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:hyper-beam,TURBOLASER,HOTSWAP,DONE,PENDING_ART,,A green capital-ship turbolaser beam.,"Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md storyboard S7. SE: SE_TURBOLASER_CHARGE, SE_TURBOLASER, SE_M_EXPLOSION."
+move:hyper-beam,TURBOLASER,HOTSWAP,DONE,ART_READY,,A green capital-ship turbolaser beam.,"Same stats, type and effect. New animation shipped in ../game (Move_HYPER_BEAM, storyboard S7, tools/vfx-generator art/moves/turbolaser.yaml). SE: SE_TURBOLASER_CHARGE, SE_TURBOLASER (placeholders SE_M_CHARGE, SE_M_HYPER_BEAM until made), SE_M_EXPLOSION."
 move:peck,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:drill-peck,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:submission,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
@@ -349,7 +349,7 @@ move:calm-mind,,KEEP,DONE,PENDING_ART,,"Force status move: BG_FORCE backdrop, si
 move:leaf-blade,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:dragon-dance,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:rock-blast,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:shock-wave,FORCE BOLT,HOTSWAP,DONE,PENDING_ART,,Force lightning from the fingertips.,"Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md storyboard S5. SE: SE_FORCE_LIGHTNING, SE_M_CHARGE, SE_M_TRI_ATTACK2."
+move:shock-wave,FORCE BOLT,HOTSWAP,DONE,ART_READY,,Force lightning from the fingertips.,"Same stats, type and effect. New animation shipped in ../game (Move_SHOCK_WAVE, storyboard S5, tools/vfx-generator art/moves/force_bolt.yaml) on BG_FORCE_DARK. SE: SE_FORCE_LIGHTNING (placeholder SE_M_THUNDERBOLT until made), SE_M_CHARGE, SE_M_TRI_ATTACK2."
 move:water-pulse,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:doom-desire,WHILL'S DOOM,HOTSWAP,DONE,KEEP_ANIM,,,"Same stats, type and effect; rename only. Reuses the existing animation."
 move:psycho-boost,FORCE STORM,HOTSWAP,DONE,PENDING_ART,,The attacker rises and unleashes a Force storm; the recoil drops it.,"Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md storyboard S6. SE: SE_FORCE_STORM, SE_M_EXPLOSION, SE_M_TAKE_DOWN."
