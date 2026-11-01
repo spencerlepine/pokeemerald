@@ -45,9 +45,9 @@ def sources(sp: str) -> tuple[Path, Path] | None:
     cands = sorted((p for p in raw.glob("*_back_*.png") if p.stem > front.stem), key=lambda p: p.stem)
     seed = front.stem.split("_s")[-1]
     cands.sort(key=lambda p: (not p.stem.endswith(f"_s{seed}"), p.stem))  # same-seed back first
-    for b in cands:
+    for b, (c, d) in ((b, cd) for b in cands for cd in (("12", "1"), ("15", "0"))):  # batch settings before/after 2026-11-01 18:40
         with tempfile.TemporaryDirectory() as t:
-            finish(sp, front, b, Path(t), [])
+            finish(sp, front, b, Path(t), ["--colours", c, "--despeckle", d])
             if (Path(t) / "back.png").exists() and (Path(t) / "back.png").read_bytes() == want:
                 sj.write_text(json.dumps({"front": str(front.relative_to(HERE)), "back": str(b.relative_to(HERE))}, indent=1) + "\n")
                 return front, b

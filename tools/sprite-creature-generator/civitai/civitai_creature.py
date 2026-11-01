@@ -547,7 +547,7 @@ def place(sprite: Image.Image, size: int = 64) -> Image.Image:
 # colour areas, few lone pixels. The owner found 15 colours of model texture "too detailed"
 # (MASSIFF, 2026-11-01), so the finisher defaults to 12 colours plus one despeckle pass.
 # Set from the CLI (--colours, --despeckle).
-SIMPLIFY = {"colours": 12, "despeckle": 1}
+SIMPLIFY = {"colours": 15, "despeckle": 0}  # 12 + despeckle 1 until 2026-11-01: too flat (user review)
 
 
 def despeckle(rgba: Image.Image, passes: int = 1) -> Image.Image:
@@ -932,8 +932,8 @@ def main():
         p.add_argument("--fit", choices=["auto", "trim", "shrink"], default="auto",
                        help="auto: 1:1 if it fits, trim if only a thin edge sticks out, else shrink")
         p.add_argument("--period", type=int, help="force the pixel grid (the LoRA's is 8)")
-        p.add_argument("--colours", type=int, default=12, help="sprite colours (max 15; default 12 for readability)")
-        p.add_argument("--despeckle", type=int, default=1, help="lone-pixel cleanup passes (0 = off)")
+        p.add_argument("--colours", type=int, default=15, help="sprite colours (max 15)")
+        p.add_argument("--despeckle", type=int, default=0, help="lone-pixel cleanup passes (0 = off)")
 
     pp = sub.add_parser("prep", help="reference/concept image -> pixelated start image for --init")
     pp.add_argument("species"); pp.add_argument("reference", help="URL or file (movie still, concept art)")
