@@ -247,8 +247,9 @@ def cmd_regions(a) -> int:
     from . import shade as shade_mod
     from PIL import Image
     h = Image.open(a.png).height
-    frames, _ = sheet.read_frames(a.png, (16, h))
     kit = a.kit or {16: "person16x16", 32: "person16x32"}[h]
+    fw = spec_mod.KITS[kit]["frame"][0]
+    frames, _ = sheet.read_frames(a.png, (fw, h))
     order = spec_mod.KITS[kit]["order"]
     if len(order) != len(frames):
         order = [f"frame{i}" for i in range(len(frames))]

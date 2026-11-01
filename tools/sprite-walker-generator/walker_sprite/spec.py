@@ -319,7 +319,7 @@ def load(path: str | Path) -> Spec:
         legend = {".": 0}
         legend.update({str(k): int(v) for k, v in (d.get("legend") or {}).items()})
         for ch, m in materials.items():
-            m = m.replace("@", "").rstrip("!")
+            m = m.replace("@", "").replace("%", "").rstrip("!")
             ok = m in MAT_TONES or (m.startswith("w/") and m[2:] in ("s", "a", "b", "c")) \
                 or (m.startswith("skin-") and m[5:] in ("a", "b", "c"))
             if not ok:

@@ -133,12 +133,15 @@ def shade(regions: list[str], materials: dict[str, str] | None = None, hard: dic
     h, w = len(regions), len(regions[0])
     # letters whose material ends in "!" are shaded by the volume rules (D14) instead of the
     # table: flat garments the corpus has no local match for (robes, aprons, droid plating)
-    round_ = {ch for ch, m in materials.items() if m.rstrip("!").endswith("@")}
-    materials = {ch: m.replace("@", "") for ch, m in materials.items()}
+    round_ = {ch for ch, m in materials.items() if m.rstrip("!").endswith(("@", "%"))}
+    # "%" = a form: round shading bounded by its OWN volume (other letters count as outside), so
+    # overlapping forms each get an outline and a lit top inside the silhouette (D17, big sprites)
+    form_ = {ch for ch, m in materials.items() if m.rstrip("!").endswith("%")}
+    materials = {ch: m.replace("@", "").replace("%", "") for ch, m in materials.items()}
     ruled = {ch for ch, m in materials.items() if m.endswith("!")}
     materials = {ch: m.rstrip("!") for ch, m in materials.items()}
     by_rules = shade_rules(regions, materials, hard) if ruled else None
-    by_round = shade_round(regions, materials, hard, round_, facing) if round_ else None
+    by_round = shade_round(regions, materials, hard, round_, facing, form_) if round_ else None
     # per-pixel volume id: the letter itself (so A and a are different volumes), with hard
     # pixels marked by what they look like to their neighbours
     vol = []
@@ -372,11 +375,31 @@ def shade_rules(regions: list[str], materials: dict[str, str] | None = None,
 # volume. Hard pixels (eyes, tattoos) count as part of the volume for distances, so eyes do not
 # get outlined. `facing` = "left" shifts the core toward the front (left) and darkens the back.
 
-def shade_round(regions, materials, hard, letters, facing=None):
+def shade_round(regions, materials, hard, letters, facing=None, forms=frozenset()):
     h, w = len(regions), len(regions[0])
     out = [[0] * w for _ in range(h)]
     vol = [["." if ch == "." else ("#" + ch if ch in hard else ch) for ch in row] for row in regions]
     lab, info = _volumes(vol)
+    if forms:
+        # forms measure their distance from anything that is not the same volume
+        fdist = [[99] * w for _ in range(h)]
+        q = []
+        for y in range(h):
+            for x in range(w):
+                if vol[y][x] == "." or vol[y][x] not in forms:
+                    continue
+                if any(not (0 <= x + dx < w and 0 <= y + dy < h) or lab[y + dy][x + dx] != lab[y][x]
+                       for dx, dy in ((0, 1), (0, -1), (1, 0), (-1, 0))):
+                    fdist[y][x] = 1
+                    q.append((x, y))
+        i = 0
+        while i < len(q):
+            x, y = q[i]; i += 1
+            for dx, dy in ((0, 1), (0, -1), (1, 0), (-1, 0)):
+                X, Y = x + dx, y + dy
+                if 0 <= X < w and 0 <= Y < h and lab[Y][X] == lab[y][x] and fdist[Y][X] > fdist[y][x] + 1:
+                    fdist[Y][X] = fdist[y][x] + 1
+                    q.append((X, Y))
     # distance from transparency / the frame edge, through every opaque pixel (4-connected BFS)
     INF = 99
     dist = [[INF] * w for _ in range(h)]
@@ -419,8 +442,9 @@ def shade_round(regions, materials, hard, letters, facing=None):
         ys = [c[1] for c in cells]
         xs = [c[0] for c in cells]
         top, bot, lft, rgt = min(ys), max(ys), min(xs), max(xs)
+        is_form = ch in forms
         for x, y in cells:
-            d = dist[y][x]
+            d = fdist[y][x] if is_form else dist[y][x]
             f = (y - top) / max(1, bot - top)
             fx = (x - lft) / max(1, rgt - lft)
             # side view: the core leans toward the face (left); only the far back darkens
@@ -430,6 +454,16 @@ def shade_round(regions, materials, hard, letters, facing=None):
             resting = below not in (".", ch) and not below.startswith("#") and lab[y + 1][x] != L
             if d <= 1:
                 t = OUT
+            elif is_form:
+                tall = (bot - top) >= 6
+                if d == 2:
+                    t = SHADE if (f > 0.5 or far_back) else (LIGHT if f < 0.2 else BASE)
+                elif f > 0.72 and tall:
+                    t = SHADE if d == 3 else BASE
+                elif f < 0.55 and not back:
+                    t = LIGHT
+                else:
+                    t = BASE
             elif resting:
                 t = SHADE if four else OUT
             elif d == 2:

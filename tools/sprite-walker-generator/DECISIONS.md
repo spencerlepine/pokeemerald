@@ -253,3 +253,16 @@ the body does not use (Yoda's cord on ramp a and tunic on the skin ramp, Maul's 
 light/outline and a yellow belt, Zuckuss's tunic on the skin ramp, Tarfful's studded steel
 bandolier in all three ramp-a tones plus a tan pouch, Dexter's wattle on the skin ramp).
 All five re-shipped at 12-14 colours.
+
+## D17. Forms: `%` material flag for big sprites
+
+Emerald's 32x32 and 64x64 sprites (legendaries, Vigoroth, the player's bikes) are stacks of
+overlapping forms: crown, snout, jaw, shoulders, back, belly, each leg, wing tiers. Each form has its
+own 1 px outline in its ramp's darkest tone, is lit on its top and shaded along its bottom, and the
+form behind darkens where the one in front overlaps it. The `@` shader bands from the outer silhouette
+only, so a big body came out as one flat fill with an outline (the first large mockups).
+
+`%` (e.g. `c%`, `skin-a%`) shades a letter as a form: its distance is measured from anything that is
+not its own volume, so touching forms each get an outline and a lit top inside the silhouette; forms
+6 px or taller also darken their bottom third (lit from above and in front, the top-down camera).
+`@` is unchanged, so every shipped 16x32 sprite rebuilds identically.
