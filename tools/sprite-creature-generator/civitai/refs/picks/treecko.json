@@ -2,7 +2,7 @@
   "init": "refs/treecko_prep.png",
   "init_source": "https://static.wikia.nocookie.net/starwars/images/b/b8/Onegizka.jpg/revision/latest/scale-to-width-down/1000?cb=20091107051814",
   "flip": false,
-  "denoise": 0.5,
+  "denoise": 0.45,
   "desc": "small big-eyed tree gecko kit crouched on springy legs with green speckled skin",
   "colour": "tan and leaf green speckles",
   "ref_note": "No usable katarn art (only Legends paintings wrapped round trees); gizka render as small lizard starter base, faces left, white bg"
