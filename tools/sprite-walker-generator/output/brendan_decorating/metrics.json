@@ -1,0 +1,34 @@
+{
+ "stand": {
+  "down": {
+   "top": 11,
+   "feet": 30,
+   "height": 20,
+   "width": 16,
+   "area": 211,
+   "dark_outline": 0.755,
+   "orphans": 0.109
+  }
+ },
+ "summary": {
+  "top": 11,
+  "feet": 30,
+  "height": 20,
+  "width": 16,
+  "area": 211,
+  "dark_outline": 0.755,
+  "orphans": 0.109,
+  "colours": 14,
+  "step_change": null,
+  "colours_used": 14,
+  "edge_black": 0.0,
+  "inner_black": 0.013,
+  "skin_tones": 4,
+  "ramp_tones_min": 2,
+  "ramp_dark_share": 0.48,
+  "hair_rows": 6,
+  "eye_row": 8,
+  "head_w": 14,
+  "body_w": 14
+ }
+}

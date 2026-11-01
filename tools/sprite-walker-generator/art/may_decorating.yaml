@@ -1,0 +1,94 @@
+name: may_decorating
+description: 'MIRA, the player (girl), decorating a secret base: carries a supply crate (replaces May).'
+kit: person16x32_single
+replaces: graphics/object_events/pics/people/may/decorating.png
+graphics_info: MayDecorating
+notes: 'Group 7: MIRA decorating, May''s decorating frame as regions. Chestnut hair with two round buns wrapped in rust-red cloth and a matching headwrap, cream wrap tunic with a rust-red tabard, white
+  arm wraps, chestnut sash, pack and boots, holding a white supply crate; moves to the new mira.pal (install replaces may.pal and its reflection; the bike, surf and field-move sheets still use the old layout
+  until they are redrawn).'
+palette: mira
+palette_tag: OBJ_EVENT_PAL_TAG_MAY
+shade: true
+materials:
+  s: s
+  H: c
+  U: c@
+  R: b
+  T: a
+  V: b
+  G: w/a
+  L: c
+  D: a
+  K: c
+  S: c
+  O: w/c
+legend:
+  e: 15
+accept:
+  head_w: the one decorating frame faces left, as vanilla's does; the side view is 13 wide
+frames:
+  down: '................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ..........UUU...
+
+    ......HHHURRRU..
+
+    ....HHHHHUUUUU..
+
+    ...HHHHHHHHHHH..
+
+    ..HHHHHHHHHHHH..
+
+    ..RRRRRRRRRRRRR.
+
+    ..sHHHHHHHHHHRR.
+
+    ..ssssHHHHHHHHR.
+
+    ..ssessHsHHHHH..
+
+    ..ssessssHHHHH..
+
+    OOOsssssssHHH...
+
+    OOOHsssssHHH....
+
+    .OOTHTTHHHH.....
+
+    OOOTssVTTH......
+
+    OOOTssVVVTTT....
+
+    .OO.TTVVTTTST...
+
+    .....TGGGGSST...
+
+    .....DDDDDDD....
+
+    ....KKKKKKK.....
+
+    .....KKKKK......
+
+    ................
+
+    '
