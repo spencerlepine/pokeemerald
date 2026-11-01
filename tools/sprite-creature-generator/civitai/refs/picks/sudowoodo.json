@@ -1,10 +1,10 @@
 {
   "init": "refs/sudowoodo_prep.png",
-  "init_source": "https://static.wikia.nocookie.net/starwars/images/4/47/Gnarltree-woswfg.jpg/revision/latest?cb=20070124000556#crop=0.08,0.3,0.92,1",
+  "init_source": "refs/sources/sudowoodo/sudowoodo_cut.png",
   "flip": false,
   "denoise": 0.5,
-  "desc": "stubby gnarltree creature with a thick knotted trunk body, short broken branches on top and many root legs, whole body, small, centred",
-  "colour": "pale grey and brown",
+  "desc": "small walking gnarltree creature, knobbly trunk body with bare twig branches raised like arms on top, many curling root legs below, whole body, small, centred",
+  "colour": "warm brown and tan",
   "negative": "birds",
-  "ref_note": "Gnarltree WOSWFG painting, cropped to trunk and roots (no birds, square so it fits the frame)"
+  "ref_note": "Gnarltree WOSWFG painting: whole tree cut out of background by hand, birds painted out, tinted brown; source https://static.wikia.nocookie.net/starwars/images/4/47/Gnarltree-woswfg.jpg"
 }
