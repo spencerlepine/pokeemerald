@@ -8,7 +8,7 @@
 | --- | --- |
 | [`game/`](game/) | C game source code (decompiled by [pret/pokeemerald](https://github.com/pret/pokeemerald)). The wiki and tools never import it; content is ported in by hand. |
 | [`wiki/`](wiki/) | The Star Wars adaptation as `.csv` tables: every creature, character, planet, item, move, line of dialogue, story event, image, VFX, song, sound effect and cry, mapped to its Star Wars version and pointing back at `game/`. Start at [`wiki/README.md`](wiki/README.md). |
-| [`tools/`](tools/) | One tool per asset group for generating new game assets, indexed in [`tools/INDEX.md`](tools/INDEX.md). |
+| [`tools/`](tools/) | One tool per asset group for generating new game assets, indexed in [`tools/README.md`](tools/README.md). |
 | [`.github/`](.github/) | CI workflows to build/test/lint |
 
 ## Wiki: where to look
@@ -39,4 +39,4 @@
 | [`tools/sprite-creature-generator/`](tools/sprite-creature-generator/TODO.md), [`sprite-icon-generator/`](tools/sprite-icon-generator/TODO.md), [`tile-generator/`](tools/tile-generator/TODO.md), [`vfx-generator/`](tools/vfx-generator/TODO.md), [`ui-skin-generator/`](tools/ui-skin-generator/TODO.md) | TODO |
 | [`tools/music-generator/`](tools/music-generator/TODO.md), [`sfx-generator/`](tools/sfx-generator/TODO.md), [`cry-generator/`](tools/cry-generator/TODO.md) | TODO |
 
-Statuses, scope, art categories and order of work: [`tools/INDEX.md`](tools/INDEX.md).
+Statuses, scope, art categories and order of work: [`tools/README.md`](tools/README.md).
