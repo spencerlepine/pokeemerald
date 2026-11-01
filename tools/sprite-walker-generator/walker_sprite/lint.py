@@ -136,10 +136,10 @@ def lint(frames: dict, colours, kit="person16x32") -> tuple[list[str], list[str]
             continue
         if s["feet"] != h - 2:
             warnings.append(f"{n}: feet on row {s['feet']}, Emerald stands on row {h - 2} (shadow and grass overlap assume it)")
-        if s["top"] < 8:
+        if s["top"] < 8 and kit == "person16x32":
             warnings.append(f"{n}: art starts on row {s['top']}; vanilla people start on rows 10-15 (taller reads as a giant)")
     corpus = load_corpus()
-    if corpus:
+    if corpus and kit == "person16x32":
         for key, v in m["summary"].items():
             if key not in corpus["p5"]:
                 continue
@@ -166,15 +166,31 @@ STYLE_RULES = [
 ]
 
 
-def score(summary: dict, corpus: dict | None = None) -> tuple[int, list[tuple[str, bool, str]]]:
-    """0-100 style score and the per-rule verdicts (name, passed, message)."""
+# Rules about pixel sizes only hold for the 16x32 people kit the corpus was measured on; the
+# index-based rules (outline colour, ramps, shading, perspective) hold at any frame size.
+SIZE_RULES = {"head_w", "height", "eye_row", "orphans"}
+
+
+# Rules that assume a bare human face; a spec declares `accept:` with a reason to skip them
+# (helmets, masks, droids, aliens without skin tones). Every accepted rule is printed, so a
+# reviewer sees the claim.
+FACE_RULES = {"skin_tones", "hair_rows", "eye_row"}
+
+
+def score(summary: dict, corpus: dict | None = None, kit: str = "person16x32", accept: dict | None = None) -> tuple[int, list[tuple[str, bool, str]]]:
+    """0-100 style score and the per-rule verdicts (name, passed, message). `accept` maps a rule
+    name to the reason it does not apply to this character (e.g. no face under a helmet)."""
     corpus = corpus or load_corpus()
+    accept = accept or {}
     if not corpus or "edge_black" not in corpus["p5"]:
         return 0, [("corpus", False, "run `python -m walker_sprite corpus` first")]
     got, total, verdicts = 0, 0, []
     for key, mode, weight, fix in STYLE_RULES:
         v = summary.get(key)
-        if v is None:
+        if v is None or (kit != "person16x32" and key in SIZE_RULES):
+            continue
+        if key in accept:
+            verdicts.append((key, True, f"{key} = {v}: accepted, {accept[key]}"))
             continue
         lo, hi = corpus["p5"][key], corpus["p95"][key]
         q1, q3 = corpus.get("p25", corpus["p5"])[key], corpus.get("p75", corpus["p95"])[key]

@@ -57,12 +57,14 @@ def emerald_dir() -> Path:
     return (TOOL.parent / "pokeemerald").resolve()
 
 
-def report(errors, warnings, m, corpus=None) -> str:
+def report(errors, warnings, m, corpus=None, kit="person16x32", accept=None) -> str:
     lines = [f"ERROR   {e}" for e in errors] + [f"warning {w}" for w in warnings]
     corpus = corpus if corpus is not None else lint_mod.load_corpus()
-    sc, verdicts = lint_mod.score(m["summary"], corpus)
+    sc, verdicts = lint_mod.score(m["summary"], corpus, kit, accept)
     lines.append("")
-    lines.append(f"STYLE SCORE {sc}/100  (ship to the owner at >= 90 with no FAIL; see STYLE.md)")
+    n_acc = sum(1 for _, ok, msg in verdicts if ok and ": accepted, " in msg)
+    acc = f"; {n_acc} rule(s) accepted by the spec, each with its reason below" if n_acc else ""
+    lines.append(f"STYLE SCORE {sc}/100  (ship to the owner at >= 90 with no FAIL{acc}; see STYLE.md)")
     for key, ok, msg in verdicts:
         lines.append(f"  {'ok  ' if ok else 'FAIL'} {msg}")
     lines.append("")
@@ -92,8 +94,8 @@ def cmd_build(a) -> int:
     else:
         print(f"note: no pokeemerald at {em}; skipped scene.png (set EMERALD_DIR)")
     preview.showcase(out / "preview")
-    text = report(errors, warnings, m)
-    if s.replaces and (em / s.replaces).exists():
+    text = report(errors, warnings, m, kit=s.kit, accept=s.meta.get("accept"))
+    if s.replaces and (em / s.replaces).exists() and s.kit == "person16x32":
         vf, vc = sheet.read_frames(em / s.replaces)
         vm = lint_mod.sheet_metrics(dict(zip(spec_mod.KITS[s.kit]["order"], vf)), vc, s.kit)
         vs, _ = lint_mod.score(vm["summary"])
@@ -180,6 +182,19 @@ def cmd_install(a) -> int:
             return 1
         gi.write_text(new)
         print(f"set gObjectEventGraphicsInfo_{sym}.paletteTag = {s.palette_tag}, paletteSlot = {slot}")
+    kit = spec_mod.KITS[s.kit]
+    if kit["oam"] != "16x32" and "graphics_info" in s.meta:
+        gi = em / "src/data/object_events/object_event_graphics_info.h"
+        src = gi.read_text()
+        sym = s.meta["graphics_info"]
+        w, h = kit["frame"]
+        pat = re.compile(rf"(gObjectEventGraphicsInfo_{sym} = \{{.*?\.size = )\d+(,\s*\.width = )\d+(,\s*\.height = )\d+(.*?\.oam = &gObjectEventBaseOam_)\w+(,\s*\.subspriteTables = sOamTables_)\w+", re.S)
+        new, n = pat.subn(rf"\g<1>{kit['size']}\g<2>{w}\g<3>{h}\g<4>{kit['oam']}\g<5>{kit['oam']}", src)
+        if n != 1:
+            print(f"could not set size/oam for gObjectEventGraphicsInfo_{sym}; edit it by hand: .size = {kit['size']}, {w}x{h}, Oam/sOamTables_{kit['oam']}")
+        else:
+            gi.write_text(new)
+            print(f"set gObjectEventGraphicsInfo_{sym}: .size = {kit['size']}, {w}x{h}, oam {kit['oam']}")
     return 0
 
 

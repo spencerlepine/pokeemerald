@@ -23,9 +23,9 @@
    "feet": 30,
    "height": 19,
    "width": 12,
-   "area": 168,
+   "area": 170,
    "dark_outline": 1.0,
-   "orphans": 0.196
+   "orphans": 0.188
   }
  },
  "summary": {
@@ -37,12 +37,12 @@
   "dark_outline": 1.0,
   "orphans": 0.174,
   "colours": 13,
-  "step_change": 0.695,
-  "edge_black": 0.04,
-  "inner_black": 0.095,
+  "step_change": 0.684,
+  "edge_black": 0.0,
+  "inner_black": 0.036,
   "skin_tones": 4,
   "ramp_tones_min": 2,
-  "ramp_dark_share": 0.368,
+  "ramp_dark_share": 0.345,
   "hair_rows": 5,
   "eye_row": 7,
   "head_w": 14,

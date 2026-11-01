@@ -3,7 +3,7 @@ description: Moisture-farm kid in a desert tunic and goggles (replaces the Emera
 kit: person16x32
 replaces: graphics/object_events/pics/people/boy_1.png
 graphics_info: Boy1
-notes: Composed from boy_1.png plus goggles on the brow (rows 15-16).
+notes: boy_1.png plus goggles on the brow (rows 15-16) and a tunic hem over the shorts (rows 27-28).
 palette: npc_3
 palette_tag: OBJ_EVENT_PAL_TAG_NPC_3
 base_sheet: graphics/object_events/pics/people/boy_1.png
@@ -33,6 +33,11 @@ frames:
     - x: 2
       y: 16
       rows: _D777_777D__
+    - x: 3
+      y: 27
+      rows: '7666666667
+
+        7766666677'
   down_a:
     patches:
     - x: 2
@@ -41,6 +46,11 @@ frames:
     - x: 2
       y: 17
       rows: _D777_777D__
+    - x: 3
+      y: 28
+      rows: '7666666667
+
+        7766666677'
   down_b:
     patches:
     - x: 2
@@ -49,6 +59,11 @@ frames:
     - x: 2
       y: 17
       rows: _D777_777D__
+    - x: 3
+      y: 28
+      rows: '7666666667
+
+        7766666677'
   left:
     patches:
     - x: 2
@@ -57,6 +72,11 @@ frames:
     - x: 3
       y: 16
       rows: D777D
+    - x: 4
+      y: 27
+      rows: '7666667
+
+        7766677'
   left_a:
     patches:
     - x: 2
@@ -65,6 +85,11 @@ frames:
     - x: 3
       y: 17
       rows: D777D
+    - x: 4
+      y: 28
+      rows: '7666667
+
+        7766677'
   left_b:
     patches:
     - x: 2
@@ -73,18 +98,38 @@ frames:
     - x: 3
       y: 17
       rows: D777D
+    - x: 4
+      y: 28
+      rows: '7666667
+
+        7766677'
   up:
     patches:
     - x: 2
       y: 15
       rows: D7777777777D
+    - x: 3
+      y: 27
+      rows: '7666666667
+
+        7766666677'
   up_a:
     patches:
     - x: 2
       y: 16
       rows: D7777777777D
+    - x: 3
+      y: 28
+      rows: '7666666667
+
+        7766666677'
   up_b:
     patches:
     - x: 2
       y: 16
       rows: D7777777777D
+    - x: 3
+      y: 28
+      rows: '7666666667
+
+        7766666677'

@@ -1,0 +1,296 @@
+name: vader
+description: 'Darth Vader walker, v2 (replaces Maxie). Drawn from the ground up in Emerald''s style: coloured outlines in the navy ramp, the dome lit from above, lenses and grill in greys, cape flaring
+  past the shoulders, chest box lights in pink.'
+kit: person16x32
+replaces: graphics/object_events/pics/people/team_magma/maxie.png
+graphics_info: Maxie
+notes: 'v1 (approved, then scrapped) was outlined 100% in black and scored 30/100. v2 follows STYLE.md: 7 (8 16 32) outlines, 6 base, 5 highlight; black only on lenses, boots and the cape''s deepest folds.
+  Taller than any NPC on purpose (top row 9).'
+palette: npc_4
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_4
+legend:
+  .: 0
+  F: 15
+  '7': 7
+  '6': 6
+  '5': 5
+  D: 13
+  C: 12
+  B: 11
+  '8': 8
+  '9': 9
+frames:
+  down: '......7777......
+
+    ....77556677....
+
+    ...7555666667...
+
+    ..755666656667..
+
+    ..756666666667..
+
+    .77666666666677.
+
+    .7F5555665555F7.
+
+    7F5DFFD55DFFD5F7
+
+    7F55DD5CC5DD55F7
+
+    7765D6CBBC6D5677
+
+    .7F6DCBCCBCD6F7.
+
+    ..7FFCCCCCCFF7..
+
+    .75567CBBC76667.
+
+    75567C8B9BC76667
+
+    75667CCCCCC76667
+
+    75667FBBBBF76667
+
+    7566777777776667
+
+    .76677766777667.
+
+    .76577766777667.
+
+    756677F66F776657
+
+    .7777FF77FF7777.
+
+    ...7FF7..7FF7...
+
+    ................
+
+    '
+  up: '......7777......
+
+    ....77556677....
+
+    ...7555666667...
+
+    ..755666656667..
+
+    ..756666666667..
+
+    .77666666666677.
+
+    .7F5666666665F7.
+
+    7F556666666665F7
+
+    7F566666666665F7
+
+    7766666666666677
+
+    .7F6666666666F7.
+
+    ..7FFFFFFFFFF7..
+
+    .75567666676667.
+
+    7556766666676667
+
+    7566766556676667
+
+    7566766666676667
+
+    7566766666676667
+
+    .76676666667667.
+
+    .76576666667667.
+
+    7566776666776657
+
+    .7777FF77FF7777.
+
+    ...7FF7..7FF7...
+
+    ................
+
+    '
+  left: '.....7777.......
+
+    ...77556677.....
+
+    ..7555666667....
+
+    .755666656667...
+
+    .756666666667...
+
+    .77666666666677.
+
+    .7555566666667..
+
+    .5FFD5566666667.
+
+    .75DD5566666667.
+
+    .7C5D5566666667.
+
+    .7BCD6666666667.
+
+    ..7FFF7777777...
+
+    ..7CC6775566667.
+
+    ..7C9C775666667.
+
+    ..7CCC775666667.
+
+    ..7FBF775666667.
+
+    ..7777775666667.
+
+    ..7657775666667.
+
+    ..7667775666667.
+
+    ..7F6F775666667.
+
+    ..7FF777FF77777.
+
+    ...7FF7.7FF7....
+
+    ................
+
+    '
+  down_a:
+    base: down
+    shift: 1
+    patch_y: 22
+    rows: '.75567CBBC76667.
+
+      75567C8B9BC76667
+
+      75667CCCCCC76667
+
+      75667FBBBBF76667
+
+      7566777777776667
+
+      .76677766777667.
+
+      755677766777667.
+
+      756677F66F77667.
+
+      ...7FF7...777...
+
+      ...7FF7.........
+
+      '
+  down_b:
+    base: down
+    shift: 1
+    patch_y: 22
+    rows: '.75567CBBC76667.
+
+      75567C8B9BC76667
+
+      75667CCCCCC76667
+
+      75667FBBBBF76667
+
+      7566777777776667
+
+      .76677766777667.
+
+      .766777667776557
+
+      .76677F66F776657
+
+      ...777...7FF7...
+
+      .........7FF7...
+
+      '
+  up_a:
+    base: up
+    shift: 1
+    patch_y: 22
+    rows: '.75567666676667.
+
+      7556766666676667
+
+      7566765566676667
+
+      7566766666676667
+
+      7566766666676667
+
+      .76676666667667.
+
+      756676666667667.
+
+      756677666677667.
+
+      ...7FF7...777...
+
+      ...7FF7.........
+
+      '
+  up_b:
+    base: up
+    shift: 1
+    patch_y: 22
+    rows: '.75567666676667.
+
+      7556766666676667
+
+      7566766655676667
+
+      7566766666676667
+
+      7566766666676667
+
+      .76676666667667.
+
+      .766766666676657
+
+      .766776666776657
+
+      ...777...7FF7...
+
+      .........7FF7...
+
+      '
+  left_a:
+    base: left
+    shift: 1
+    patch_y: 28
+    rows: '..7F6F775666667.
+
+      .7FF777F7FF77777
+
+      7FF7.....7FF7...
+
+      7777.....7777...
+
+      '
+  left_b:
+    base: left
+    shift: 1
+    patch_y: 28
+    rows: '..7F6F775666667.
+
+      ..7FF77FF777....
+
+      ...7FFF77.......
+
+      ...77777........
+
+      '
+accept:
+  skin_tones: no skin shows under the armour
+  hair_rows: helmet, no hair; the dome takes rows 9-14 above the lenses
+  eye_row: lenses are on row 7 from the top but are not black-on-skin eyes
+  height: '22 rows: Vader stands a head over every NPC on purpose'
+  step_change: the floor-length cape hides arms and legs; the bob, the swaying hem and the boots are what moves (Emerald's hex maniac robe is 0.597)
+  orphans: armour is smooth by design; specks are on the dome, cheeks, chest box and cape edge only

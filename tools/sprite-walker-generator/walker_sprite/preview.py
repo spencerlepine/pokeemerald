@@ -122,15 +122,16 @@ def scene(frames: dict, colours, kit: str, out: Path, emerald: Path, neighbours:
         cast.append(rgba_frame(fr[0], cols))
     # layout: vanilla walkers first, then ours (down, left, up), one metatile apart
     cast += [rgba_frame(frames[n], colours) for n in ("down", "left", "up")]
+    fw, fh = KITS[kit]["frame"]
     cols_n = len(cast) + 2
     rows = []
     for gname, gtile in ground.items():
-        strip = Image.new("RGB", (cols_n * 16, 48))
-        for x in range(cols_n):
-            for y in range(3):
-                strip.paste(gtile, (x * 16, y * 16))
+        strip = Image.new("RGB", (cols_n * fw, 16 + fh))
+        for x in range(0, strip.width, 16):
+            for y in range(0, strip.height, 16):
+                strip.paste(gtile, (x, y))
         for i, fr in enumerate(cast):
-            strip.paste(fr, ((i + 1) * 16, 16), fr)  # frame bottom = bottom tile edge, as in game
+            strip.paste(fr, ((i + 1) * fw + (fw - fr.width) // 2, 16 + fh - fr.height), fr)  # feet on the tile edge
         rows.append(strip)
     base = Image.new("RGB", (rows[0].width, 48 * len(rows)))
     for i, r in enumerate(rows):
@@ -213,15 +214,21 @@ def batch_review(specs: list, out: Path, emerald: Path, z: int = 6) -> None:
     ground = _metatile_renderer(emerald)(1)
     def stands(fr_by_name, cols):
         return [rgba_frame(fr_by_name[n], cols) for n in ("down", "left", "up")]
-    names = ("down", "up", "left")
     rows, old_line, new_line = [], [], []
+    w, h = specs[0].w, specs[0].h
     for s in specs:
-        fr, cols = read_frames(emerald / s.replaces)
-        old = stands(dict(zip(("down", "up", "left"), fr[:3])), cols)
+        old = []
+        if s.replaces and (emerald / s.replaces).exists():
+            try:
+                fr, cols = read_frames(emerald / s.replaces, (w, h))
+                old = stands(dict(zip(("down", "up", "left"), fr[:3])), cols)
+            except ValueError:
+                pass
+        if not old:
+            old = [Image.new("RGBA", (w, h), (0, 0, 0, 0))] * 3
         new = stands(s.frames, spec_palette(s))
         old_line.append(old[0]); new_line.append(new[0])
         rows.append((s.name, old, new))
-    w, h = 16, 32
     cell = w * z + 6
     lab = 130
     def panel(frs):
@@ -232,14 +239,14 @@ def batch_review(specs: list, out: Path, emerald: Path, z: int = 6) -> None:
         return p
     # lineup strip: vanilla front frames, a gap, then the new ones
     n = len(specs)
-    strip = Image.new("RGB", ((2 * n + 3) * 16, 48))
+    strip = Image.new("RGB", ((2 * n + 3) * w, 16 + h))
     for x in range(0, strip.width, 16):
-        for y in range(0, 48, 16):
+        for y in range(0, strip.height, 16):
             strip.paste(ground, (x, y))
     for i, f in enumerate(old_line):
-        strip.paste(f, ((i + 1) * 16, 16), f)
+        strip.paste(f, ((i + 1) * w, 16), f)
     for i, f in enumerate(new_line):
-        strip.paste(f, ((n + 2 + i) * 16, 16), f)
+        strip.paste(f, ((n + 2 + i) * w, 16), f)
     W = lab + 2 * 3 * cell + 30
     H = 24 + len(rows) * (h * z + 10) + 20 + strip.height * 6 + 20
     W = max(W, strip.width * 6 + 20)

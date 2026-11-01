@@ -3,8 +3,7 @@ description: Kid with a bug net and specimen jar (replaces the Emerald BUG CATCH
 kit: person16x32
 replaces: graphics/object_events/pics/people/bug_catcher.png
 graphics_info: BugCatcher
-notes: Composed from bug_catcher.png plus a bug net on a pole (right side facing down, left side facing
-  up/left).
+notes: 'bug_catcher.png plus a short-handled net held at the hip (down: right side; up/left: left side).'
 palette: npc_1
 palette_tag: OBJ_EVENT_PAL_TAG_NPC_1
 base_sheet: graphics/object_events/pics/people/bug_catcher.png
@@ -28,467 +27,118 @@ legend:
 frames:
   down:
     patches:
-    - x: 12
-      y: 11
-      rows: '_AA_
-
-        AE8A
-
-        A8EA
-
-        AE8A
-
-        _AA_'
-    - x: 13
-      y: 16
-      rows: D
-    - x: 13
-      y: 17
-      rows: D
-    - x: 13
-      y: 18
-      rows: D
-    - x: 13
-      y: 19
-      rows: D
-    - x: 13
-      y: 20
-      rows: D
-    - x: 13
-      y: 21
-      rows: D
-    - x: 13
-      y: 22
-      rows: D
     - x: 13
       y: 23
-      rows: D
+      rows: '_AA
+
+        AE8
+
+        A8E
+
+        _AA'
     - x: 13
-      y: 24
-      rows: D
-    - x: 13
-      y: 25
-      rows: D
-    - x: 13
-      y: 26
-      rows: D
-    - x: 13
-      y: 27
-      rows: D
-    - x: 13
-      y: 28
-      rows: D
-    - x: 13
-      y: 29
-      rows: D
-    - x: 13
-      y: 30
+      y: 22
       rows: D
   down_a:
     patches:
-    - x: 12
-      y: 12
-      rows: '_AA_
-
-        AE8A
-
-        A8EA
-
-        AE8A
-
-        _AA_'
-    - x: 13
-      y: 17
-      rows: D
-    - x: 13
-      y: 18
-      rows: D
-    - x: 13
-      y: 19
-      rows: D
-    - x: 13
-      y: 20
-      rows: D
-    - x: 13
-      y: 21
-      rows: D
-    - x: 13
-      y: 22
-      rows: D
-    - x: 13
-      y: 23
-      rows: D
     - x: 13
       y: 24
-      rows: D
+      rows: '_AA
+
+        AE8
+
+        A8E
+
+        _AA'
     - x: 13
-      y: 25
-      rows: D
-    - x: 13
-      y: 26
-      rows: D
-    - x: 13
-      y: 27
-      rows: D
-    - x: 13
-      y: 28
-      rows: D
-    - x: 13
-      y: 29
-      rows: D
-    - x: 13
-      y: 30
-      rows: D
-    - x: 13
-      y: 31
+      y: 23
       rows: D
   down_b:
     patches:
-    - x: 12
-      y: 12
-      rows: '_AA_
-
-        AE8A
-
-        A8EA
-
-        AE8A
-
-        _AA_'
-    - x: 13
-      y: 17
-      rows: D
-    - x: 13
-      y: 18
-      rows: D
-    - x: 13
-      y: 19
-      rows: D
-    - x: 13
-      y: 20
-      rows: D
-    - x: 13
-      y: 21
-      rows: D
-    - x: 13
-      y: 22
-      rows: D
-    - x: 13
-      y: 23
-      rows: D
     - x: 13
       y: 24
-      rows: D
+      rows: '_AA
+
+        AE8
+
+        A8E
+
+        _AA'
     - x: 13
-      y: 25
-      rows: D
-    - x: 13
-      y: 26
-      rows: D
-    - x: 13
-      y: 27
-      rows: D
-    - x: 13
-      y: 28
-      rows: D
-    - x: 13
-      y: 29
-      rows: D
-    - x: 13
-      y: 30
-      rows: D
-    - x: 13
-      y: 31
+      y: 23
       rows: D
   up:
-    patches: &id001
+    patches:
     - x: 0
-      y: 11
-      rows: '_AA_
+      y: 23
+      rows: '_AA
 
-        AE8A
+        AE8
 
-        A8EA
+        A8E
 
-        AE8A
-
-        _AA_'
-    - x: 2
-      y: 16
-      rows: D
-    - x: 2
-      y: 17
-      rows: D
-    - x: 2
-      y: 18
-      rows: D
-    - x: 2
-      y: 19
-      rows: D
-    - x: 2
-      y: 20
-      rows: D
-    - x: 2
-      y: 21
-      rows: D
+        _AA'
     - x: 2
       y: 22
-      rows: D
-    - x: 2
-      y: 23
-      rows: D
-    - x: 2
-      y: 24
-      rows: D
-    - x: 2
-      y: 25
-      rows: D
-    - x: 2
-      y: 26
-      rows: D
-    - x: 2
-      y: 27
-      rows: D
-    - x: 2
-      y: 28
-      rows: D
-    - x: 2
-      y: 29
-      rows: D
-    - x: 2
-      y: 30
       rows: D
   up_a:
     patches:
     - x: 0
-      y: 12
-      rows: '_AA_
+      y: 24
+      rows: '_AA
 
-        AE8A
+        AE8
 
-        A8EA
+        A8E
 
-        AE8A
-
-        _AA_'
-    - x: 2
-      y: 17
-      rows: D
-    - x: 2
-      y: 18
-      rows: D
-    - x: 2
-      y: 19
-      rows: D
-    - x: 2
-      y: 20
-      rows: D
-    - x: 2
-      y: 21
-      rows: D
-    - x: 2
-      y: 22
-      rows: D
+        _AA'
     - x: 2
       y: 23
-      rows: D
-    - x: 2
-      y: 24
-      rows: D
-    - x: 2
-      y: 25
-      rows: D
-    - x: 2
-      y: 26
-      rows: D
-    - x: 2
-      y: 27
-      rows: D
-    - x: 2
-      y: 28
-      rows: D
-    - x: 2
-      y: 29
-      rows: D
-    - x: 2
-      y: 30
-      rows: D
-    - x: 2
-      y: 31
       rows: D
   up_b:
     patches:
     - x: 0
-      y: 12
-      rows: '_AA_
+      y: 24
+      rows: '_AA
 
-        AE8A
+        AE8
 
-        A8EA
+        A8E
 
-        AE8A
-
-        _AA_'
-    - x: 2
-      y: 17
-      rows: D
-    - x: 2
-      y: 18
-      rows: D
-    - x: 2
-      y: 19
-      rows: D
-    - x: 2
-      y: 20
-      rows: D
-    - x: 2
-      y: 21
-      rows: D
-    - x: 2
-      y: 22
-      rows: D
+        _AA'
     - x: 2
       y: 23
       rows: D
-    - x: 2
-      y: 24
-      rows: D
-    - x: 2
-      y: 25
-      rows: D
-    - x: 2
-      y: 26
-      rows: D
-    - x: 2
-      y: 27
-      rows: D
-    - x: 2
-      y: 28
-      rows: D
-    - x: 2
-      y: 29
-      rows: D
-    - x: 2
-      y: 30
-      rows: D
-    - x: 2
-      y: 31
-      rows: D
   left:
-    patches: *id001
+    patches:
+    - x: 0
+      y: 24
+      rows: '_AA_
+
+        AE8D
+
+        A8EA
+
+        _AA_'
   left_a:
     patches:
     - x: 0
-      y: 12
+      y: 25
       rows: '_AA_
 
-        AE8A
+        AE8D
 
         A8EA
 
-        AE8A
-
         _AA_'
-    - x: 2
-      y: 17
-      rows: D
-    - x: 2
-      y: 18
-      rows: D
-    - x: 2
-      y: 19
-      rows: D
-    - x: 2
-      y: 20
-      rows: D
-    - x: 2
-      y: 21
-      rows: D
-    - x: 2
-      y: 22
-      rows: D
-    - x: 2
-      y: 23
-      rows: D
-    - x: 2
-      y: 24
-      rows: D
-    - x: 2
-      y: 25
-      rows: D
-    - x: 2
-      y: 26
-      rows: D
-    - x: 2
-      y: 27
-      rows: D
-    - x: 2
-      y: 28
-      rows: D
-    - x: 2
-      y: 29
-      rows: D
-    - x: 2
-      y: 30
-      rows: D
-    - x: 2
-      y: 31
-      rows: D
   left_b:
     patches:
     - x: 0
-      y: 12
+      y: 25
       rows: '_AA_
 
-        AE8A
+        AE8D
 
         A8EA
 
-        AE8A
-
         _AA_'
-    - x: 2
-      y: 17
-      rows: D
-    - x: 2
-      y: 18
-      rows: D
-    - x: 2
-      y: 19
-      rows: D
-    - x: 2
-      y: 20
-      rows: D
-    - x: 2
-      y: 21
-      rows: D
-    - x: 2
-      y: 22
-      rows: D
-    - x: 2
-      y: 23
-      rows: D
-    - x: 2
-      y: 24
-      rows: D
-    - x: 2
-      y: 25
-      rows: D
-    - x: 2
-      y: 26
-      rows: D
-    - x: 2
-      y: 27
-      rows: D
-    - x: 2
-      y: 28
-      rows: D
-    - x: 2
-      y: 29
-      rows: D
-    - x: 2
-      y: 30
-      rows: D
-    - x: 2
-      y: 31
-      rows: D

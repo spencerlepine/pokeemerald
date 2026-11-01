@@ -3,7 +3,8 @@ description: Teras Kasi brawler in a training wrap (replaces the Emerald BLACK B
 kit: person16x32
 replaces: graphics/object_events/pics/people/black_belt.png
 graphics_info: BlackBelt
-notes: 'Composed from black_belt.png: ramps rotated (wrap green, belt red-brown, hair grey).'
+notes: black_belt.png with ramps rotated (wrap green, belt red-brown, hair grey) and a shaved head with
+  a topknot drawn over the hair rows.
 palette: npc_3
 palette_tag: OBJ_EVENT_PAL_TAG_NPC_3
 base_sheet: graphics/object_events/pics/people/black_belt.png
@@ -34,3 +35,159 @@ recolor:
   11: 5
   12: 6
   13: 7
+accept:
+  hair_rows: 'shaved head: skin starts one row under the topknot'
+frames:
+  down:
+    patches:
+    - x: 2
+      y: 10
+      rows: '....656.....
+
+        ...47674....
+
+        ..41122224..
+
+        .41112222234
+
+        411122222334
+
+        7EE111122EE7
+
+        75EE1111EE57'
+  down_a:
+    patches:
+    - x: 2
+      y: 11
+      rows: '....656.....
+
+        ...47674....
+
+        ..41122224..
+
+        .41112222234
+
+        411122222334
+
+        7EE111122EE7
+
+        75EE1111EE57'
+  down_b:
+    patches:
+    - x: 2
+      y: 11
+      rows: '....656.....
+
+        ...47674....
+
+        ..41122224..
+
+        .41112222234
+
+        411122222334
+
+        7EE111122EE7
+
+        75EE1111EE57'
+  up:
+    patches:
+    - x: 2
+      y: 10
+      rows: '....656.....
+
+        ...47674....
+
+        ..41122224..
+
+        .41112222234
+
+        411122222334
+
+        7EE222233EE7
+
+        75EE2233EE57'
+  up_a:
+    patches:
+    - x: 2
+      y: 11
+      rows: '....656.....
+
+        ...47674....
+
+        ..41122224..
+
+        .41112222234
+
+        411122222334
+
+        7EE222233EE7
+
+        75EE2233EE57'
+  up_b:
+    patches:
+    - x: 2
+      y: 11
+      rows: '....656.....
+
+        ...47674....
+
+        ..41122224..
+
+        .41112222234
+
+        411122222334
+
+        7EE222233EE7
+
+        75EE2233EE57'
+  left:
+    patches:
+    - x: 2
+      y: 10
+      rows: '....656.....
+
+        ...47674....
+
+        ..41122224..
+
+        .41112222234
+
+        411122222334
+
+        7EE111223EE7
+
+        75EE1123EE57'
+  left_a:
+    patches:
+    - x: 2
+      y: 11
+      rows: '....656.....
+
+        ...47674....
+
+        ..41122224..
+
+        .41112222234
+
+        411122222334
+
+        7EE111223EE7
+
+        75EE1123EE57'
+  left_b:
+    patches:
+    - x: 2
+      y: 11
+      rows: '....656.....
+
+        ...47674....
+
+        ..41122224..
+
+        .41112222234
+
+        411122222334
+
+        7EE111223EE7
+
+        75EE1123EE57'

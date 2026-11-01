@@ -3,7 +3,8 @@ description: Market-town kid with a toy blaster (replaces the Emerald BOY 3 walk
 kit: person16x32
 replaces: graphics/object_events/pics/people/boy_3.png
 graphics_info: Boy3
-notes: 'Composed from boy_3.png: shirt to ramp C (grey); pink toy blaster patched into the hand.'
+notes: 'boy_3.png: cap with a brim over the hair (ramp B pink), shirt to ramp C grey with vest edges,
+  toy blaster in the hand.'
 palette: npc_4
 palette_tag: OBJ_EVENT_PAL_TAG_NPC_4
 base_sheet: graphics/object_events/pics/people/boy_3.png
@@ -31,6 +32,24 @@ recolor:
 frames:
   down:
     patches:
+    - x: 2
+      y: 12
+      rows: '....AAAA....
+
+        ..AA9999AA..
+
+        .A99988999A.
+
+        A9999999999A
+
+        AAAAAAAAAAAA'
+    - x: 5
+      y: 23
+      rows: 'D____D
+
+        D____D
+
+        D____D'
     - x: 12
       y: 24
       rows: '_A9A
@@ -40,6 +59,24 @@ frames:
         __A_'
   down_a:
     patches:
+    - x: 2
+      y: 13
+      rows: '....AAAA....
+
+        ..AA9999AA..
+
+        .A99988999A.
+
+        A9999999999A
+
+        AAAAAAAAAAAA'
+    - x: 5
+      y: 24
+      rows: 'D____D
+
+        D____D
+
+        D____D'
     - x: 12
       y: 25
       rows: '_A9A
@@ -49,6 +86,24 @@ frames:
         __A_'
   down_b:
     patches:
+    - x: 2
+      y: 13
+      rows: '....AAAA....
+
+        ..AA9999AA..
+
+        .A99988999A.
+
+        A9999999999A
+
+        AAAAAAAAAAAA'
+    - x: 5
+      y: 24
+      rows: 'D____D
+
+        D____D
+
+        D____D'
     - x: 12
       y: 25
       rows: '_A9A
@@ -56,8 +111,58 @@ frames:
         _A8A
 
         __A_'
+  up:
+    patches:
+    - x: 2
+      y: 12
+      rows: '....AAAA....
+
+        ..AA9999AA..
+
+        .A99999999A.
+
+        A9999999999A
+
+        AAAAAAAAAAAA'
+  up_a:
+    patches:
+    - x: 2
+      y: 13
+      rows: '....AAAA....
+
+        ..AA9999AA..
+
+        .A99999999A.
+
+        A9999999999A
+
+        AAAAAAAAAAAA'
+  up_b:
+    patches:
+    - x: 2
+      y: 13
+      rows: '....AAAA....
+
+        ..AA9999AA..
+
+        .A99999999A.
+
+        A9999999999A
+
+        AAAAAAAAAAAA'
   left:
     patches:
+    - x: 2
+      y: 12
+      rows: '....AAAA....
+
+        ..AA9999AA..
+
+        .A99988999A.
+
+        A9999999999A
+
+        AAAAAAAAAAA_'
     - x: 9
       y: 24
       rows: 'AA98A
@@ -65,6 +170,17 @@ frames:
         _A9A_'
   left_a:
     patches:
+    - x: 2
+      y: 13
+      rows: '....AAAA....
+
+        ..AA9999AA..
+
+        .A99988999A.
+
+        A9999999999A
+
+        AAAAAAAAAAA_'
     - x: 9
       y: 25
       rows: 'AA98A
@@ -72,6 +188,17 @@ frames:
         _A9A_'
   left_b:
     patches:
+    - x: 2
+      y: 13
+      rows: '....AAAA....
+
+        ..AA9999AA..
+
+        .A99988999A.
+
+        A9999999999A
+
+        AAAAAAAAAAA_'
     - x: 9
       y: 25
       rows: 'AA98A

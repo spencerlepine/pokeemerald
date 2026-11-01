@@ -3,7 +3,8 @@ description: Spaceport kid in a padded flight jacket (replaces the Emerald BOY 2
 kit: person16x32
 replaces: graphics/object_events/pics/people/boy_2.png
 graphics_info: Boy2
-notes: 'boy_2.png moved from NPC_1 to NPC_2: orange jacket, red shorts, brown hair; collar seams stay.'
+notes: boy_2.png on NPC_2 (orange jacket, red shorts) with a brown flight cap with ear flaps over the
+  hair and wider shoulders.
 palette: npc_2
 palette_tag: OBJ_EVENT_PAL_TAG_NPC_2
 base_sheet: graphics/object_events/pics/people/boy_2.png
@@ -24,3 +25,157 @@ legend:
   D: 13
   E: 14
   F: 15
+frames:
+  down:
+    patches:
+    - x: 3
+      y: 12
+      rows: '..DDDDDD..
+
+        .DDCCCCDD.
+
+        DCBCCCCCBD
+
+        DCCCCCCCCD
+
+        DDCCCCCCDD
+
+        D2DCCCCD2D'
+    - x: 1
+      y: 22
+      rows: AA9944334499AA
+  down_a:
+    patches:
+    - x: 3
+      y: 13
+      rows: '..DDDDDD..
+
+        .DDCCCCDD.
+
+        DCBCCCCCBD
+
+        DCCCCCCCCD
+
+        DDCCCCCCDD
+
+        D2DCCCCD2D'
+    - x: 1
+      y: 23
+      rows: AA9944334499AA
+  down_b:
+    patches:
+    - x: 3
+      y: 13
+      rows: '..DDDDDD..
+
+        .DDCCCCDD.
+
+        DCBCCCCCBD
+
+        DCCCCCCCCD
+
+        DDCCCCCCDD
+
+        D2DCCCCD2D'
+    - x: 1
+      y: 23
+      rows: AA9944334499AA
+  up:
+    patches:
+    - x: 3
+      y: 12
+      rows: '..DDDDDD..
+
+        .DDCCCCDD.
+
+        DCBCCCCCBD
+
+        DCCCCCCCCD
+
+        DDCCCCCCDD
+
+        DCDCCCCDCD'
+    - x: 1
+      y: 22
+      rows: AA8FFDDDDFF8AA
+  up_a:
+    patches:
+    - x: 3
+      y: 13
+      rows: '..DDDDDD..
+
+        .DDCCCCDD.
+
+        DCBCCCCCBD
+
+        DCCCCCCCCD
+
+        DDCCCCCCDD
+
+        DCDCCCCDCD'
+    - x: 1
+      y: 23
+      rows: AA8FFDDDDFF8AA
+  up_b:
+    patches:
+    - x: 3
+      y: 13
+      rows: '..DDDDDD..
+
+        .DDCCCCDD.
+
+        DCBCCCCCBD
+
+        DCCCCCCCCD
+
+        DDCCCCCCDD
+
+        DCDCCCCDCD'
+    - x: 1
+      y: 23
+      rows: AA8FFDDDDFF8AA
+  left:
+    patches:
+    - x: 3
+      y: 12
+      rows: '..DDDDD...
+
+        .DDCCCCDD.
+
+        DCCCCCCCBD
+
+        DCCCCCCCCD
+
+        DDCCCCCCDD
+
+        D1DDCCCCDD'
+  left_a:
+    patches:
+    - x: 3
+      y: 13
+      rows: '..DDDDD...
+
+        .DDCCCCDD.
+
+        DCCCCCCCBD
+
+        DCCCCCCCCD
+
+        DDCCCCCCDD
+
+        D1DDCCCCDD'
+  left_b:
+    patches:
+    - x: 3
+      y: 13
+      rows: '..DDDDD...
+
+        .DDCCCCDD.
+
+        DCCCCCCCBD
+
+        DCCCCCCCCD
+
+        DDCCCCCCDD
+
+        D1DDCCCCDD'

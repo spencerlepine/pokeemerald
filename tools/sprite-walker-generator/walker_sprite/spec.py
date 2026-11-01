@@ -66,6 +66,23 @@ KITS = {
             "up": ["up_a", "up", "up_b", "up"],
             "left": ["left_a", "left", "left_b", "left"],
         },
+        "size": 256,  # .size in ObjectEventGraphicsInfo (bytes per frame at 4bpp)
+        "oam": "16x32",
+    },
+    # Multi-tile walkers: same nine frames, 32x32 each (sheet 288x32), as the Mach/Acro bike
+    # sheets and the 32x32 legendaries use. graphics_info needs .size = 512, .width/.height = 32,
+    # .oam = &gObjectEventBaseOam_32x32, .subspriteTables = sOamTables_32x32.
+    "person32x32": {
+        "frame": (32, 32),
+        "order": ["down", "up", "left", "down_a", "down_b", "up_a", "up_b", "left_a", "left_b"],
+        "stand": ["down", "up", "left"],
+        "walk": {
+            "down": ["down_a", "down", "down_b", "down"],
+            "up": ["up_a", "up", "up_b", "up"],
+            "left": ["left_a", "left", "left_b", "left"],
+        },
+        "size": 512,
+        "oam": "32x32",
     },
 }
 
