@@ -12,6 +12,47 @@ front/back `y_offset` 0 and size 64x48 in `front_pic_coordinates.h` / `back_pic_
 puts the feet on the bottom row; vanilla centres the sprite and offsets it). Icon, footprint and overworld
 walker belong to other tools and are still pending.
 
+## Batch for every species (2026-11-01): how to pick it up
+
+**Status:** paused by the owner after the first group. Read this section, then run the steps below.
+
+Pipeline, no human review (the owner asked for a fully automatic run):
+
+1. **Reference per species (free).** `refs.py` searches Wookieepedia, builds a compare sheet of 3-8
+   candidates (`refs/candidates/<species>/sheet.png`, git-ignored), and `pick` writes
+   `refs/picks/<species>.json` (init URL, flip, width, denoise, desc, colour, negative, note) and
+   `refs/<species>_prep.png`. Picks are merged over `jobs.json` by `civitai_creature.py brief()`.
+   Rules the pickers followed: whole body, one creature, facing left, transparent PNG preferred; width
+   by size class and evolution stage (small 40-46, medium 48-54, large 56-62); canon species keep their
+   own canon art; originals borrow the closest canon creature but **never an image another species
+   outside their evolution line uses** (`python refs_dupes.py` lists shared images; same-line sharing
+   is fine). `python refs.py status --missing` lists species with no pick yet.
+2. **Generate (paid).** `python batch.py --list` shows pending species and which have a pick.
+   `python batch.py --budget N -j 6` runs every pending species that has a pick: front (image to image
+   from the prep), back (from the mirrored front, denoise 0.7), finish with `--frame2 lunge --shiny`,
+   automatic checks, one retry with a new seed, then installs to `wiki/art/graphics/pokemon/<species>/`
+   (front, anim_front, back, normal.pal, shiny.pal), sets the three `pending_art.csv` rows to ART_READY,
+   appends `art_ready.csv`, and commits + pushes **one species per commit** (rebases first).
+   About 6 Buzz per take (3 front + 3 back, jpeg), so roughly 6-8 Buzz per species with retries. Pay
+   with `--currency green`; check the balance with
+   `curl -s -H "Authorization: Bearer $CIVITAI_API_TOKEN" https://civitai.com/api/trpc/buzz.getBuzzAccount`.
+   Skipped species are printed as `SKIP <species>: <reason>`; re-run them later (they stay PENDING_ART).
+3. **Forms.** `forms.py` did AUREBESH (unown, 28 letters on one shared `unown/normal.pal`; starts cut
+   from Wookieepedia's Aurebesh chart into `refs/unown/`; backs are the mirrored front with the eye
+   painted over, `refs/unown/make_backs.py`) and CLIMADROID (castform, 4 weathers from the
+   training-remote reference; backs are mirrored fronts). Both are DONE (ART_READY).
+4. **Not done by this batch:** installing into `game/` (coords, elevation, anim presets: README rows
+   6-8), icons, footprints. Only MASSIFF (poochyena) is installed in `game/`.
+
+Prompt changes from the pilot (abra, charmander, absol, rattata, 2026-11-01, ~40 Buzz): the
+description and body colour are weighted, "muted natural colours" is added, and the LoRA's type tags
+are only used when jobs.json/picks ask (they caused rainbow colours and humanoids). Text-only takes
+read as generic Pokemon; reference starts read as the real creature.
+
+Background clean-up fix (2026-11-01): `knock_out_background` now also cuts **enclosed** background
+pockets (between legs, inside jaws) when they are background-flat and walled by outline, and keeps
+white body parts; MASSIFF was re-finished from its raws without the white patch between its legs.
+
 ## Setup
 
 Same as the trainer tool: `CIVITAI_API_TOKEN` in the environment, or a git-ignored `.env` here with
