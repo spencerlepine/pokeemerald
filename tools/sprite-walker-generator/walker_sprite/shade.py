@@ -114,7 +114,7 @@ def load_table() -> dict:
 
 
 def shade(regions: list[str], materials: dict[str, str] | None = None, hard: dict[str, int] | None = None,
-          table: dict | None = None) -> list[list[int]]:
+          table: dict | None = None, facing: str | None = None) -> list[list[int]]:
     """Material-letter rows -> palette indices.
 
     materials: letter -> material (s a b c w k); default: the letter is the material.
@@ -133,9 +133,12 @@ def shade(regions: list[str], materials: dict[str, str] | None = None, hard: dic
     h, w = len(regions), len(regions[0])
     # letters whose material ends in "!" are shaded by the volume rules (D14) instead of the
     # table: flat garments the corpus has no local match for (robes, aprons, droid plating)
+    round_ = {ch for ch, m in materials.items() if m.rstrip("!").endswith("@")}
+    materials = {ch: m.replace("@", "") for ch, m in materials.items()}
     ruled = {ch for ch, m in materials.items() if m.endswith("!")}
     materials = {ch: m.rstrip("!") for ch, m in materials.items()}
     by_rules = shade_rules(regions, materials, hard) if ruled else None
+    by_round = shade_round(regions, materials, hard, round_, facing) if round_ else None
     # per-pixel volume id: the letter itself (so A and a are different volumes), with hard
     # pixels marked by what they look like to their neighbours
     vol = []
@@ -159,6 +162,9 @@ def shade(regions: list[str], materials: dict[str, str] | None = None, hard: dic
                 continue
             if ch in hard:
                 out[y][x] = hard[ch]
+                continue
+            if ch in round_:
+                out[y][x] = by_round[y][x]
                 continue
             if ch in ruled:
                 out[y][x] = by_rules[y][x]
@@ -190,11 +196,11 @@ def shade(regions: list[str], materials: dict[str, str] | None = None, hard: dic
             if skinlike:  # 4 face tones onto 3: light, base+shade -> mid, outline -> dark
                 tone = {0: 0, 1: 1, 2: 1, 3: 2}[tone]
             out[y][x] = tones[min(tone, len(tones) - 1)]
-    _despeckle(out, vol)
+    _despeckle(out, vol, keep=round_)
     return out
 
 
-def _despeckle(out, vol) -> None:
+def _despeckle(out, vol, keep=()) -> None:
     """A pixel with 3+ same-volume neighbours whose tone differs from all of them takes the
     tone two of them agree on. Vanilla interiors are flat; the table's local keys can leave
     single odd pixels next to eyes and corners."""
@@ -202,7 +208,7 @@ def _despeckle(out, vol) -> None:
     for y in range(1, h - 1):
         for x in range(1, w - 1):
             v = vol[y][x]
-            if v == "." or v.startswith("#") or v == "k":
+            if v == "." or v.startswith("#") or v == "k" or v in keep:
                 continue
             nb = [(j, i) for j, i in ((y - 1, x), (y + 1, x), (y, x - 1), (y, x + 1)) if vol[j][i] == v]
             if len(nb) < 3:
@@ -346,4 +352,93 @@ def shade_rules(regions: list[str], materials: dict[str, str] | None = None,
                     else:
                         t = mid
                 out[y][x] = t
+    return out
+
+
+# ---- Round volumes: cel shading for heads, domes and bellies (owner: "how come it's not using
+# cel shading on rounded heads?") -----------------------------------------------------------
+# Measured on vanilla bald heads (Spenser, Sidney, the Gentleman, the Fat Man): tones are
+# concentric bands from the silhouette inwards, with the light core pushed up (light from above)
+# and, in the side view, toward the face (light from the front):
+#
+#     ......4444......      d=1 against transparency: outline (skin 4 / ramp dark)
+#     ....43211234....      d=2: base (2 / mid); in the lower half of the volume: shade (3 / dark)
+#     ...4211EE1124...      inside: light core (1 / light) in the upper ~60%,
+#     ..422211112224..             base below it, 1-px rim of base at d=3
+#     ..43EEE33EEE34..
+#     ..433311113334..      the row resting on another material (chin on collar): shade
+#
+# A material written with "@" (s@, skin-a@, c@, skin-b!@ ...) is shaded this way per 4-connected
+# volume. Hard pixels (eyes, tattoos) count as part of the volume for distances, so eyes do not
+# get outlined. `facing` = "left" shifts the core toward the front (left) and darkens the back.
+
+def shade_round(regions, materials, hard, letters, facing=None):
+    h, w = len(regions), len(regions[0])
+    out = [[0] * w for _ in range(h)]
+    vol = [["." if ch == "." else ("#" + ch if ch in hard else ch) for ch in row] for row in regions]
+    lab, info = _volumes(vol)
+    # distance from transparency / the frame edge, through every opaque pixel (4-connected BFS)
+    INF = 99
+    dist = [[INF] * w for _ in range(h)]
+    q = []
+    for y in range(h):
+        for x in range(w):
+            if vol[y][x] == ".":
+                continue
+            if any(not (0 <= x + dx < w and 0 <= y + dy < h) or vol[y + dy][x + dx] == "."
+                   for dx, dy in ((0, 1), (0, -1), (1, 0), (-1, 0))):
+                dist[y][x] = 1
+                q.append((x, y))
+    i = 0
+    while i < len(q):
+        x, y = q[i]; i += 1
+        for dx, dy in ((0, 1), (0, -1), (1, 0), (-1, 0)):
+            X, Y = x + dx, y + dy
+            if 0 <= X < w and 0 <= Y < h and vol[Y][X] != "." and dist[Y][X] > dist[y][x] + 1:
+                dist[Y][X] = dist[y][x] + 1
+                q.append((X, Y))
+    for L, v in info.items():
+        ch = v["ch"]
+        if ch.startswith("#") or ch not in letters:
+            continue
+        m = materials.get(ch, ch).rstrip("!")
+        skinlike = m.startswith("skin-")
+        if skinlike:
+            m = m[5:]
+        if m not in SHADED:
+            raise ValueError(f"letter {ch!r}: round shading needs a ramp (s a b c), not {m!r}")
+        tones = MAT_TONES[m]
+        four = len(tones) == 4
+        # light, base, shade, outline as indices into this ramp
+        LIGHT, BASE = tones[0], tones[1]
+        SHADE = tones[2] if four else tones[2]
+        OUT = tones[3] if four else tones[2]
+        if not four:  # a 3-tone ramp: light, mid, dark; the shade band uses mid, the outline dark
+            SHADE = tones[1]
+        cells = v["cells"]
+        ys = [c[1] for c in cells]
+        xs = [c[0] for c in cells]
+        top, bot, lft, rgt = min(ys), max(ys), min(xs), max(xs)
+        for x, y in cells:
+            d = dist[y][x]
+            f = (y - top) / max(1, bot - top)
+            fx = (x - lft) / max(1, rgt - lft)
+            # side view: the core leans toward the face (left); only the far back darkens
+            back = facing == "left" and fx > 0.65
+            far_back = facing == "left" and fx > 0.8
+            below = vol[y + 1][x] if y + 1 < h else "."
+            resting = below not in (".", ch) and not below.startswith("#") and lab[y + 1][x] != L
+            if d <= 1:
+                t = OUT
+            elif resting:
+                t = SHADE if four else OUT
+            elif d == 2:
+                t = SHADE if (f > 0.55 or far_back) else BASE
+            elif f < 0.6 and not back:
+                t = LIGHT
+            elif d == 3:
+                t = BASE
+            else:
+                t = BASE if back else LIGHT
+            out[y][x] = t
     return out

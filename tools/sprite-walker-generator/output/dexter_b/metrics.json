@@ -6,8 +6,8 @@
    "height": 20,
    "width": 16,
    "area": 260,
-   "dark_outline": 0.87,
-   "orphans": 0.073
+   "dark_outline": 1.0,
+   "orphans": 0.085
   },
   "up": {
    "top": 11,
@@ -15,8 +15,8 @@
    "height": 20,
    "width": 16,
    "area": 260,
-   "dark_outline": 0.944,
-   "orphans": 0.085
+   "dark_outline": 1.0,
+   "orphans": 0.077
   },
   "left": {
    "top": 11,
@@ -24,8 +24,8 @@
    "height": 20,
    "width": 15,
    "area": 227,
-   "dark_outline": 0.979,
-   "orphans": 0.062
+   "dark_outline": 1.0,
+   "orphans": 0.079
   }
  },
  "summary": {
@@ -34,10 +34,10 @@
   "height": 20,
   "width": 16,
   "area": 260,
-  "dark_outline": 0.944,
-  "orphans": 0.073,
+  "dark_outline": 1.0,
+  "orphans": 0.079,
   "colours": 8,
-  "step_change": 0.568,
+  "step_change": 0.569,
   "edge_black": 0.074,
   "inner_black": 0.019,
   "skin_tones": 0,

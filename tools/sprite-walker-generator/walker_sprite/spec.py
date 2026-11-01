@@ -247,7 +247,7 @@ def load(path: str | Path) -> Spec:
         legend = {".": 0}
         legend.update({str(k): int(v) for k, v in (d.get("legend") or {}).items()})
         for ch, m in materials.items():
-            m = m.rstrip("!")
+            m = m.replace("@", "").rstrip("!")
             ok = m in MAT_TONES or (m.startswith("w/") and m[2:] in ("s", "a", "b", "c")) \
                 or (m.startswith("skin-") and m[5:] in ("a", "b", "c"))
             if not ok:
@@ -348,7 +348,7 @@ def load(path: str | Path) -> Spec:
         hard = {ch: idx for ch, idx in legend.items() if idx}
         for name, g in frames.items():
             rows = ["".join("." if (c == 0 or c == ".") else str(c) for c in row) for row in g]
-            frames[name] = shade(rows, materials, hard)
+            frames[name] = shade(rows, materials, hard, facing=name.split("_")[0])
 
     return Spec(
         name=d["name"],

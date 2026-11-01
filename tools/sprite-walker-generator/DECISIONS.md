@@ -230,3 +230,14 @@ Where batch 2 v3 still falls short of vanilla: identity at 16 px rests on two or
 silhouette cues per character, and a deep-cut character (Dexter) has none that survive. Big
 single-material heads are smooth now but featureless; vanilla heads get their structure from a
 hair/face split, which Yoda's dome/face volumes imitate. The owner judges the rest.
+
+## D15. Round volumes are cel-shaded in concentric bands (2026-11-01)
+
+Owner: "how come it's not using cel shading on rounded heads?" The learned table only sees 3 px
+around each pixel, so on a big head it returns mid almost everywhere: a flat disc with an
+outline. Vanilla bald heads (Spenser, Sidney, the Gentleman) are shaded in bands from the
+silhouette inwards: outline, a base ring that turns to shade on the lower half, and a light
+core pushed up toward the light; in the side view the core leans to the face and the far back
+darkens. A material written with `@` (`s@`, `skin-a@`, `c@`) is shaded that way
+(`shade.shade_round`); eyes and tattoos inside the head do not break the bands. Applied to the
+shipped Yoda, Dexter, Maul, Zuckuss and Tarfful heads, which were re-shipped.

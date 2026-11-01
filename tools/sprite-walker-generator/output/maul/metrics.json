@@ -6,8 +6,8 @@
    "height": 21,
    "width": 16,
    "area": 244,
-   "dark_outline": 0.879,
-   "orphans": 0.045
+   "dark_outline": 0.931,
+   "orphans": 0.094
   },
   "up": {
    "top": 10,
@@ -15,8 +15,8 @@
    "height": 21,
    "width": 16,
    "area": 244,
-   "dark_outline": 0.879,
-   "orphans": 0.061
+   "dark_outline": 0.931,
+   "orphans": 0.082
   },
   "left": {
    "top": 10,
@@ -24,8 +24,8 @@
    "height": 21,
    "width": 13,
    "area": 185,
-   "dark_outline": 0.88,
-   "orphans": 0.092
+   "dark_outline": 0.9,
+   "orphans": 0.135
   }
  },
  "summary": {
@@ -34,15 +34,15 @@
   "height": 21,
   "width": 16,
   "area": 244,
-  "dark_outline": 0.879,
-  "orphans": 0.061,
+  "dark_outline": 0.931,
+  "orphans": 0.094,
   "colours": 9,
   "step_change": null,
   "edge_black": 0.0,
   "inner_black": 0.14,
   "skin_tones": 1,
   "ramp_tones_min": 3,
-  "ramp_dark_share": 0.4,
+  "ramp_dark_share": 0.333,
   "hair_rows": 0,
   "eye_row": 2,
   "head_w": 14,

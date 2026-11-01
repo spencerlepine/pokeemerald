@@ -8,8 +8,8 @@ palette: npc_3
 palette_tag: OBJ_EVENT_PAL_TAG_NPC_3
 shade: true
 materials:
-  g: skin-b
-  G: b
+  g: skin-b@
+  G: b@
   E: b
   c: c!
   C: c!

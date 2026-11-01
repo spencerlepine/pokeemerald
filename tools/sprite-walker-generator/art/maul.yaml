@@ -9,7 +9,7 @@ palette: npc_2
 palette_tag: OBJ_EVENT_PAL_TAG_NPC_2
 shade: true
 materials:
-  R: skin-b
+  R: skin-b@
   P: c
   O: c
   D: c

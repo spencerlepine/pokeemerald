@@ -98,7 +98,7 @@ YB_HEAD_L = block(0, 12, """
 spec("yoda_b", "Juan", "npc_3", "gym_leaders/juan.png",
      "YODA (B): vanilla kid proportions, robe with sleeves, legs under the hem.",
      "Batch 3 B. Hypothesis: vanilla proportions (10-row head, 20 rows tall) read as Emerald where the squat A does not. boy_1 body as regions.",
-     materials={"g": "skin-b", "G": "b", "E": "b", "c": "c!", "C": "c!", "w": "w/c"}, legend={"k": 15, "W": 14},
+     materials={"g": "skin-b@", "G": "b@", "E": "b", "c": "c!", "C": "c!", "w": "w/c"}, legend={"k": 15, "W": 14},
      accept={"hair_rows": "two wisps, no hair mass", "skin_tones": "green hide uses ramp B", "head_w": "16 wide ear to ear",
              "eye_row": "eyes are on row 18-19; the detector looks for them beside human skin tones", "step_change": "a robe body changes fewer pixels than a shirt with bare arms"},
      base="boy_1.png", remap={"s": "g", "a": "c", "k": "c", "b": "g", "c": "G"},
@@ -334,7 +334,7 @@ hLLLLLLRRRRRRh""")
 DB_ARMS_L = block(2, 24, """
 LLLLLLLLhh
 LLLLLLLLhh""")
-DB_MATS = {"h": "skin-a", "j": "skin-a", "L": "a", "R": "a", "w": "w/a!", "b": "c!"}
+DB_MATS = {"h": "skin-a@", "j": "skin-a@", "L": "a", "R": "a", "w": "w/a!", "b": "c!"}
 DB_ACCEPT = {"skin_tones": "Besalisk hide uses ramp A, not the human skin ramp", "eye_row": "small eyes high on a wide hairless head",
              "hair_rows": "no hair: a short crest", "step_change": "the folded arms and apron hang still; the bob, hem and feet move"}
 spec("dexter_b", "Brandon", "npc_3", "frontier_brains/brandon.png",

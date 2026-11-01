@@ -7,7 +7,7 @@
    "width": 16,
    "area": 250,
    "dark_outline": 1.0,
-   "orphans": 0.072
+   "orphans": 0.076
   },
   "up": {
    "top": 10,
@@ -35,14 +35,14 @@
   "width": 16,
   "area": 250,
   "dark_outline": 1.0,
-  "orphans": 0.072,
+  "orphans": 0.076,
   "colours": 8,
   "step_change": null,
   "edge_black": 0.185,
   "inner_black": 0.051,
   "skin_tones": 1,
   "ramp_tones_min": 3,
-  "ramp_dark_share": 0.523,
+  "ramp_dark_share": 0.398,
   "hair_rows": 7,
   "eye_row": 8,
   "head_w": 14,
