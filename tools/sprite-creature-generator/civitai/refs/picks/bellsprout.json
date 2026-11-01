@@ -1,9 +1,6 @@
 {
-  "init": "refs/bellsprout_prep.png",
-  "init_source": "https://static.wikia.nocookie.net/starwars/images/7/74/Jaw_plant_concept_art.jpg/revision/latest/scale-to-width-down/1000?cb=20200629162858#crop=0.70,0.1,0.96,0.85",
   "flip": false,
-  "denoise": 0.4,
-  "desc": "small snapping flytrap bud with spiky toothed jaws on a short curled vine stem with two ivy leaves",
-  "colour": "green and dark red",
-  "ref_note": "Jaw plant concept art (Jedi Fallen Order), right-hand closed bud cropped clear of the logos; near-symmetric"
+  "desc": "Small snapping flytrap bud on a thin curved green vine stem, closed bud head with little spiky teeth tilted to the left, two ivy leaves on the stem, short root feet, simple clean shape",
+  "colour": "green stem and leaves, dark red bud",
+  "ref_note": "text only: jaw plant concept art gave noisy specks; JFO render used by weepinbell"
 }
