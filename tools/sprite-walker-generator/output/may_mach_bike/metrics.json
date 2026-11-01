@@ -1,22 +1,22 @@
 {
  "stand": {
   "down": {
-   "top": 9,
+   "top": 10,
    "feet": 31,
-   "height": 23,
+   "height": 22,
    "width": 14,
-   "area": 230,
-   "dark_outline": 0.774,
-   "orphans": 0.287
+   "area": 224,
+   "dark_outline": 0.712,
+   "orphans": 0.201
   },
   "up": {
    "top": 10,
    "feet": 31,
    "height": 22,
    "width": 14,
-   "area": 212,
-   "dark_outline": 0.862,
-   "orphans": 0.203
+   "area": 210,
+   "dark_outline": 0.828,
+   "orphans": 0.205
   },
   "left": {
    "top": 10,
@@ -24,8 +24,8 @@
    "height": 21,
    "width": 23,
    "area": 298,
-   "dark_outline": 0.859,
-   "orphans": 0.111
+   "dark_outline": 0.8,
+   "orphans": 0.091
   }
  },
  "summary": {
@@ -33,19 +33,19 @@
   "feet": 31,
   "height": 22,
   "width": 14,
-  "area": 230,
-  "dark_outline": 0.859,
-  "orphans": 0.203,
+  "area": 224,
+  "dark_outline": 0.8,
+  "orphans": 0.201,
   "colours": 15,
-  "step_change": 0.528,
+  "step_change": 0.461,
   "colours_used": 15,
-  "edge_black": 0.032,
-  "inner_black": 0.03,
+  "edge_black": 0.03,
+  "inner_black": 0.025,
   "skin_tones": 4,
   "ramp_tones_min": 3,
-  "ramp_dark_share": 0.214,
-  "hair_rows": 7,
-  "eye_row": 9,
+  "ramp_dark_share": 0.304,
+  "hair_rows": 6,
+  "eye_row": 8,
   "head_w": 14,
   "body_w": 14
  }

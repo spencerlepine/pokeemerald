@@ -25,7 +25,8 @@ sys.path.insert(0, "batches")
 sys.path.insert(0, ".")
 from helpers import P  # noqa: E402
 from walker_sprite.sheet import read_frames  # noqa: E402
-from walker_sprite.spec import KITS, game_dir  # noqa: E402
+from walker_sprite.spec import KITS, game_dir, load  # noqa: E402
+import r_g7  # noqa: E402  (the hand-drawn walking heads)
 
 SKIN = (1, 2, 3, 4)
 HEX = ".123456789ABCDEF"
@@ -157,7 +158,7 @@ class Mira:
             return v
         if v == 15:
             return 7 if edge(f, x, y) else 6
-        return {12: 9, 13: 10, 5: 5, 6: 6, 9: 5, 14: 14, 10: 11, 11: 12, 7: 12, 8: 13}[v]
+        return {12: 9, 13: 10, 5: 5, 6: 6, 9: 14, 14: 14, 10: 11, 11: 12, 7: 12, 8: 13}[v]
 
     @staticmethod
     def legs(f, x, y, v, boot):
@@ -202,6 +203,8 @@ def convert(f, who, vehicle=None, zone_top=None):
     torso_bot = head_bot + who.torso_rows
     _, bottom = opaque_rows(f)
     g = [[0] * 32 for _ in range(32)]
+    owned = set()
+    cx = (hx0 + hx1) / 2
     for y in range(32):
         for x in range(32):
             v = f[y][x]
@@ -209,13 +212,97 @@ def convert(f, who, vehicle=None, zone_top=None):
                 continue
             if (x, y) in hat or (y <= head_bot and hx0 - 1 <= x <= hx1 + 1):
                 g[y][x] = who.head(f, x, y, v)
+                owned.add((x, y))
             elif y <= torso_bot:
                 g[y][x] = who.torso(f, x, y, v)
+                if who is Mira and g[y][x] in (9, 10) and abs(x - cx) > 2.5:
+                    g[y][x] = 5 if g[y][x] == 9 else 6  # narrower tabard, as on the walking sheet
             else:
                 g[y][x] = who.legs(f, x, y, v, y >= bottom - 1)
+    pasted = paste_head(g, f, who, ht, owned, hat)
+    if pasted and who is Kael and pasted[0] in ("down", "up"):
+        # satchel strap across the chest (down) or back (up), on tunic pixels only
+        fc, dx, dy = pasted
+        ny = 22 + dy
+        for i in range(5):
+            x = (3 + i + dx) if fc == "down" else (12 - i + dx)
+            y = ny + 1 + i
+            if 0 <= x < 32 and 0 <= y < 32 and g[y][x] in (5, 6, 7, 14):
+                g[y][x] = 9 if g[y][x] != 7 else 10
     if vehicle:
         draw_vehicle(g, f, who, vehicle, zone_top if zone_top is not None else hb + who.zone, hb + who.hub)
     return g
+
+
+WALK = {}
+MATCH = 0.58
+
+
+def labels(f, who, x0, y0, w):
+    """Head pixels as (dx, dy, class) relative to (x0, y0): hat/hair, skin or other."""
+    return {(x - x0, y - y0, "h" if f[y][x] in who.hat else ("s" if f[y][x] in SKIN else "o"))
+            for y in range(y0, min(32, y0 + 12)) for x in range(w) if f[y][x]}
+
+
+def walk_heads(who):
+    """The walking sheet's three stand heads: built frame (the pixels to paste), the r_g7 head
+    block (which pixels it owns), the vanilla head's anchor (hat top row, hat centre x, doubled)
+    and its labelled pixels (to recognise the same upright head in an action frame)."""
+    if who in WALK:
+        return WALK[who]
+    person = "brendan" if who is Kael else "may"
+    van, _ = read_frames(game_dir() / (P + f"{person}/walking.png"), (16, 32))
+    built = load(f"art/{person}_walking.yaml").frames
+    blocks = r_g7.K_HEADS if who is Kael else r_g7.M_HEADS
+    d = {}
+    for i, fc in enumerate(("down", "up", "left")):
+        v = van[i]
+        t = next(y for y, r in enumerate(v) if any(r))
+        xs = [x for y in range(t, t + 8) for x in range(16) if v[y][x] in who.hat]
+        cx = (min(xs) + max(xs)) // 2
+        d[fc] = (built[fc], blocks[fc], cx, t, labels(v, who, cx, t, 16), v)
+    WALK[who] = d
+    return d
+
+
+def paste_head(g, f, who, ht, owned, hat=()):
+    """Paste the hand-drawn walking head where the vanilla head is the upright walking one
+    (labelled head pixels overlap >= MATCH at the best small shift); None for tilted poses."""
+    xs = [x for y in range(ht, min(32, ht + 8)) for x in range(32) if f[y][x] in who.hat]
+    cx = (min(xs) + max(xs)) // 2
+    best, pick = 0, None
+    for fc, (_, _, wcx, wt, wl, _) in walk_heads(who).items():
+        for sx in (-2, -1, 0, 1, 2):
+            for sy in (-1, 0, 1):
+                L = labels(f, who, cx + sx, ht + sy, 32)
+                iou = len(L & wl) / max(1, len(L | wl))
+                if iou > best:
+                    best, pick = iou, (fc, cx + sx - wcx, ht + sy - wt)
+    if best < (0.7 if pick and pick[0] == "left" else MATCH):  # side heads must match closely
+        return None
+    fc, dx, dy = pick
+    built, (by, rows), _, _, _, wv = walk_heads(who)[fc]
+    rows = rows.strip("\n").split("\n")
+    for j, ln in enumerate(rows):
+        for i, ch in enumerate(ln):
+            x, y = i + dx, by + j + dy
+            if ch == "_" or not (0 <= x < 32 and 0 <= y < 32):
+                continue
+            if ch == ".":
+                # clear the old head only where the walking head had pixels (keeps rods, hands)
+                if (x, y) in owned and (wv[by + j][i] or f[y][x] in who.hat):
+                    g[y][x] = 0
+            else:
+                g[y][x] = built[by + j][i]
+    end = by + len(rows) - 1 + dy
+    for (x, y) in hat:  # old hat/hair left outside the pasted block (side poses)
+        if not (dx <= x < dx + 16 and by + dy <= y <= end):
+            g[y][x] = 0
+    # old head-zone pixels under the new head are body again
+    for (x, y) in owned:
+        if y > end and f[y][x]:
+            g[y][x] = who.torso(f, x, y, f[y][x])
+    return fc, dx, dy
 
 
 def draw_vehicle(g, f, who, kind, zt, hub_top):
@@ -249,11 +336,13 @@ def draw_vehicle(g, f, who, kind, zt, hub_top):
                     col = {yc - 1: c["g"], yc: c["g"], yc + 1: c["g"]}
             else:
                 col = {yc - 2: c["o"], yc - 1: c["l"], yc: c["t"], yc + 1: c["m"], yc + 2: c["k"] if speeder else c["o"]}
-                if speeder:
-                    col[yc - 2] = c["o"] if x % 5 else c["l"]
             for y, v in col.items():
                 if 0 <= y < 32:
                     g[y][x] = v
+            if who is Kael and nose <= x <= tail:  # legs on the hull become brown boots
+                for y in range(max(0, yc - 6), max(0, yc - 2)):
+                    if g[y][x] in (5, 6, 7):
+                        g[y][x] = 10 if g[y][x] == 7 or not g[y + 1][x] or not g[y][x - 1] or not g[y][x + 1] else 9
     else:  # front or back view: hull end-on under the handlebars
         pts = [(x, y) for y in range(zt, 32) for x in range(32) if f[y][x]]
         if not pts:
@@ -263,7 +352,7 @@ def draw_vehicle(g, f, who, kind, zt, hub_top):
         for x, y in pts:
             g[y][x] = 0
         if kind == "speeder":
-            rows = ["..oooo..", "oolllloo", "oltggtlo", ".ommmmo.", "..okko.."]
+            rows = ["...oooo...", "..ollllo..", "oootggtooo", "ol.ommo.lo", "oo..kk..oo"]
         else:
             rows = ["..oooo..", ".ollllo.", "oltggtlo", ".ommmmo.", "..okko.."]
         n = max(3, min(5, yb - zt + 1))
@@ -271,7 +360,7 @@ def draw_vehicle(g, f, who, kind, zt, hub_top):
             rows = [rows[0], rows[2], rows[4]] if n == 3 else [rows[0], rows[1], rows[2], rows[4]]
         for dy, r in enumerate(rows):
             for dx, ch in enumerate(r):
-                x = cx - 3 + dx
+                x = cx - (len(r) // 2 - 1) + dx
                 if ch != "." and 0 <= x < 32 and zt + dy < 32:
                     g[zt + dy][x] = c[ch]
 
