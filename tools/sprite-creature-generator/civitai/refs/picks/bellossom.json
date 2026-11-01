@@ -1,0 +1,10 @@
+{
+  "init": "refs/bellossom_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/7/71/Nebula_orchid.jpg/revision/latest?cb=20220105000521#crop=0.08,0.22,0.92,0.95",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small dancing flower creature with a ring of wide striped petals like a skirt",
+  "colour": "salmon pink and green",
+  "negative": "grass, background, tree trunk",
+  "ref_note": "Nebula orchid render cropped; scene background so cutout is rough"
+}

@@ -1,0 +1,10 @@
+{
+  "init": "refs/sunkern_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/7/77/Flowering_Cacti-SWG.jpg/revision/latest?cb=20111011230442#crop=0.2,0.05,0.8,0.8",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small round seed bud creature with pointed leaf tips and a tiny sprout",
+  "colour": "olive green and tan",
+  "negative": "sand, ground",
+  "ref_note": "SWG flowering cactus bud cropped; sand background cuts out rough"
+}

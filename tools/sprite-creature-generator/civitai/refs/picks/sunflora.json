@@ -1,0 +1,10 @@
+{
+  "init": "refs/sunflora_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/2/21/PitDroid-AG.png/revision/latest?cb=20260117175435",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "thin walking flower creature with a wide flat petal face and leafy arms",
+  "colour": "rust brown and tan",
+  "negative": "machine, metal, robot",
+  "ref_note": "Pit droid used for its flat round head on a thin body; Tatooine"
+}
