@@ -69,6 +69,17 @@ KITS = {
         "size": 256,  # .size in ObjectEventGraphicsInfo (bytes per frame at 4bpp)
         "oam": "16x32",
     },
+    # Stand-only people: gym leaders, Elite Four and other NPCs that never walk ship a 48x32 sheet
+    # (down, up, left); their pic table points every step frame at a stand frame.
+    "person16x32_still": {
+        "frame": (16, 32),
+        "order": ["down", "up", "left"],
+        "stand": ["down", "up", "left"],
+        "walk": {"down": ["down"] * 4, "up": ["up"] * 4, "left": ["left"] * 4},
+        "size": 256,
+        "oam": "16x32",
+        "still": True,
+    },
     # Multi-tile walkers: same nine frames, 32x32 each (sheet 288x32), as the Mach/Acro bike
     # sheets and the 32x32 legendaries use. graphics_info needs .size = 512, .width/.height = 32,
     # .oam = &gObjectEventBaseOam_32x32, .subspriteTables = sOamTables_32x32.

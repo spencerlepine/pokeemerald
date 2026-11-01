@@ -17,8 +17,8 @@ def block(x, y, text):
 
 
 def spec(name, gi, pal, replaces, desc, note, materials, legend, accept, base=None, remap=None,
-         patches=None, frames=None, steps=None):
-    d = {"name": name, "description": desc, "kit": "person16x32", "replaces": P + replaces,
+         patches=None, frames=None, steps=None, kit="person16x32"):
+    d = {"name": name, "description": desc, "kit": kit, "replaces": P + replaces,
          "graphics_info": gi, "notes": note, "palette": pal, "palette_tag": f"OBJ_EVENT_PAL_TAG_{pal.upper()}",
          "shade": True, "materials": materials, "legend": legend, "accept": accept}
     if base:
@@ -28,7 +28,7 @@ def spec(name, gi, pal, replaces, desc, note, materials, legend, accept, base=No
     fr = {}
     for stand, pts in (patches or {}).items():
         fr[stand] = {"patches": pts}
-        for step in STEPS[stand]:
+        for step in (() if kit.endswith("_still") else STEPS[stand]):
             fr[step] = {"patches": [{**p, "y": p["y"] + 1} for p in pts]}
     for k, g in (frames or {}).items():
         for r in g:

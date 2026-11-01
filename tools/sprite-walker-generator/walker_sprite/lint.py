@@ -106,11 +106,12 @@ def sheet_metrics(frames: dict, colours, kit="person16x32") -> dict:
     stand = {n: frame_metrics(frames[n], colours) for n in k["stand"]}
     used = {v for g in frames.values() for row in g for v in row} - {0}
     steps = []
-    for seq in k["walk"].values():
-        steps += [step_change(frames[seq[1]], frames[seq[0]]), step_change(frames[seq[1]], frames[seq[2]])]
+    if not k.get("still"):
+        for seq in k["walk"].values():
+            steps += [step_change(frames[seq[1]], frames[seq[0]]), step_change(frames[seq[1]], frames[seq[2]])]
     agg = {m: round(st.median(s[m] for s in stand.values()), 3) for m in ("top", "feet", "height", "width", "area", "dark_outline", "orphans")}
     agg["colours"] = len(used)
-    agg["step_change"] = round(st.median(steps), 3)
+    agg["step_change"] = round(st.median(steps), 3) if steps else None
     # style conventions are judged on the facing-down frame (the one players see most)
     agg.update(style_metrics(frames[k["stand"][0]]))
     return {"stand": stand, "summary": agg}
@@ -136,12 +137,12 @@ def lint(frames: dict, colours, kit="person16x32") -> tuple[list[str], list[str]
             continue
         if s["feet"] != h - 2:
             warnings.append(f"{n}: feet on row {s['feet']}, Emerald stands on row {h - 2} (shadow and grass overlap assume it)")
-        if s["top"] < 8 and kit == "person16x32":
+        if s["top"] < 8 and KITS[kit]["frame"] == (16, 32):
             warnings.append(f"{n}: art starts on row {s['top']}; vanilla people start on rows 10-15 (taller reads as a giant)")
     corpus = load_corpus()
-    if corpus and kit == "person16x32":
+    if corpus and KITS[kit]["frame"] == (16, 32):
         for key, v in m["summary"].items():
-            if key not in corpus["p5"]:
+            if key not in corpus["p5"] or v is None:
                 continue
             lo, hi = corpus["p5"][key], corpus["p95"][key]
             if not lo <= v <= hi:
@@ -187,7 +188,7 @@ def score(summary: dict, corpus: dict | None = None, kit: str = "person16x32", a
     got, total, verdicts = 0, 0, []
     for key, mode, weight, fix in STYLE_RULES:
         v = summary.get(key)
-        if v is None or (kit != "person16x32" and key in SIZE_RULES):
+        if v is None or (KITS[kit]["frame"] != (16, 32) and key in SIZE_RULES):
             continue
         if key in accept:
             verdicts.append((key, True, f"{key} = {v}: accepted, {accept[key]}"))

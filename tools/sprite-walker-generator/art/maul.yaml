@@ -1,0 +1,108 @@
+name: maul
+description: 'MAUL (Force vision): black robes, red-and-black tattoos, horns (replaces Sidney).'
+kit: person16x32_still
+replaces: graphics/object_events/pics/people/elite_four/sidney.png
+graphics_info: Sidney
+notes: 'Batch 4, B style: Sidney''s own body as regions (vest + arms -> robe P, shirt + trousers -> tunic O, shoes -> boots D), new bald Zabrak head on NPC_2''s red ramp with black tattoo bands, a horn
+  ring and yellow eyes.'
+palette: npc_2
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_2
+shade: true
+materials:
+  R: skin-b
+  P: c
+  O: c
+  D: c
+legend:
+  k: 15
+  h: 3
+  e: 5
+accept:
+  skin_tones: Zabrak skin is the red ramp
+  hair_rows: bald; a ring of horns instead of hair
+  edge_black: the tattoos are black by design
+  inner_black: the tattoos are black by design
+  eye_row: yellow eyes inside a black tattoo mask
+base_sheet: graphics/object_events/pics/people/elite_four/sidney.png
+remap:
+  b: P
+  s: P
+  k: O
+  a: O
+  c: D
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 10
+      rows: '....h.h..h.h....
+
+        ...RRRRRRRRRR...
+
+        ..RRRRkRRkRRRR..
+
+        ..RRRRkRRkRRRR..
+
+        .RRRRRRRRRRRRRR.
+
+        .RkkkRRRRRRkkkR.
+
+        .RkekkRRRRkkekR.
+
+        ..RkkRRRRRRkkR..
+
+        ..RRRRkRRkRRRR..
+
+        ...RRRkkkkRRR...
+
+        ....RRRRRRRR....'
+  up:
+    patches:
+    - x: 0
+      y: 10
+      rows: '....h.h..h.h....
+
+        ...RRRRRRRRRR...
+
+        ..RRRRkRRkRRRR..
+
+        ..RRRRkRRkRRRR..
+
+        .RRRRRRRRRRRRRR.
+
+        .RRRRRRRRRRRRRR.
+
+        .RRRRRRRRRRRRRR.
+
+        ..RRRRRRRRRRRR..
+
+        ..RRRRRRRRRRRR..
+
+        ...RRRRRRRRRR...
+
+        ....OOOOOOOO....'
+  left:
+    patches:
+    - x: 0
+      y: 10
+      rows: '.....h.h.h.h....
+
+        ....RRRRRRRRR...
+
+        ...RRRkRRkRRRR..
+
+        ..RRRRkRRkRRRR..
+
+        ..RRRRRRRRRRRR..
+
+        .RkkRRRRRRRRRR..
+
+        .ekkRRRRRRRRRR..
+
+        ..kRRRRRRRRRR...
+
+        ..RRRRRRRRRRR...
+
+        ..kkkRRRRRRR....
+
+        ...RRRRRRRR.....'

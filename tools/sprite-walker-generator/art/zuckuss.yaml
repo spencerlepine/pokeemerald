@@ -1,0 +1,276 @@
+name: zuckuss
+description: 'ZUCKUSS: insectoid Gand findsman with breathing tubes (replaces Spenser).'
+kit: person16x32
+replaces: graphics/object_events/pics/people/frontier_brains/spenser.png
+graphics_info: Spenser
+notes: 'Batch 4, B style: Spenser''s own body as regions (sleeves S, coat C, inner tunic V, cane kept), new Gand head: grey dome, two big compound eyes with glints, breathing tubes to the chest. Stays on
+  NPC_3 (grey ramp a, dark green ramp b, brown ramp c).'
+palette: npc_3
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_3
+shade: true
+materials:
+  G: skin-a!
+  E: b
+  T: a
+  S: c
+  C: c
+  V: b
+  a: a
+legend:
+  k: 15
+  W: 14
+accept:
+  skin_tones: Gand carapace is the grey ramp
+  hair_rows: 'no hair: a domed carapace'
+  eye_row: compound eyes, not eye bars
+  head_w: 16 wide across the eyes
+base_sheet: graphics/object_events/pics/people/frontier_brains/spenser.png
+remap:
+  s: S
+  b: C
+  c: C
+  w: V
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 11
+      rows: '.....GGGGGG.....
+
+        ...GGGGGGGGGG...
+
+        ..GGGGGGGGGGGG..
+
+        ..GGGGGGGGGGGG..
+
+        .EEEEGGGGGGEEEE.
+
+        EEWEEEGGGGEEWEEE
+
+        EEEEEEGGGGEEEEEE
+
+        .EEEEGGGGGGEEEE.
+
+        ..GGGTTGGTTGGG..
+
+        ..GGTTGGGGTTGG..
+
+        ...TT.GGGG.TT...
+
+        ..TT..GGGG..TT..'
+  down_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.....GGGGGG.....
+
+        ...GGGGGGGGGG...
+
+        ..GGGGGGGGGGGG..
+
+        ..GGGGGGGGGGGG..
+
+        .EEEEGGGGGGEEEE.
+
+        EEWEEEGGGGEEWEEE
+
+        EEEEEEGGGGEEEEEE
+
+        .EEEEGGGGGGEEEE.
+
+        ..GGGTTGGTTGGG..
+
+        ..GGTTGGGGTTGG..
+
+        ...TT.GGGG.TT...
+
+        ..TT..GGGG..TT..'
+  down_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.....GGGGGG.....
+
+        ...GGGGGGGGGG...
+
+        ..GGGGGGGGGGGG..
+
+        ..GGGGGGGGGGGG..
+
+        .EEEEGGGGGGEEEE.
+
+        EEWEEEGGGGEEWEEE
+
+        EEEEEEGGGGEEEEEE
+
+        .EEEEGGGGGGEEEE.
+
+        ..GGGTTGGTTGGG..
+
+        ..GGTTGGGGTTGG..
+
+        ...TT.GGGG.TT...
+
+        ..TT..GGGG..TT..'
+  up:
+    patches:
+    - x: 0
+      y: 11
+      rows: '.....GGGGGG.....
+
+        ...GGGGGGGGGG...
+
+        ..GGGGGGGGGGGG..
+
+        ..GGGGGGGGGGGG..
+
+        .EGGGGGGGGGGGGE.
+
+        EEGGGGGGGGGGGGEE
+
+        EEGGGGGGGGGGGGEE
+
+        .GGGGGGGGGGGGGG.
+
+        ..GGGGGGGGGGGG..
+
+        ..TGGGGGGGGGGT..
+
+        ...TGGGGGGGGT...
+
+        ....CCCCCCCC....'
+  up_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.....GGGGGG.....
+
+        ...GGGGGGGGGG...
+
+        ..GGGGGGGGGGGG..
+
+        ..GGGGGGGGGGGG..
+
+        .EGGGGGGGGGGGGE.
+
+        EEGGGGGGGGGGGGEE
+
+        EEGGGGGGGGGGGGEE
+
+        .GGGGGGGGGGGGGG.
+
+        ..GGGGGGGGGGGG..
+
+        ..TGGGGGGGGGGT..
+
+        ...TGGGGGGGGT...
+
+        ....CCCCCCCC....'
+  up_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.....GGGGGG.....
+
+        ...GGGGGGGGGG...
+
+        ..GGGGGGGGGGGG..
+
+        ..GGGGGGGGGGGG..
+
+        .EGGGGGGGGGGGGE.
+
+        EEGGGGGGGGGGGGEE
+
+        EEGGGGGGGGGGGGEE
+
+        .GGGGGGGGGGGGGG.
+
+        ..GGGGGGGGGGGG..
+
+        ..TGGGGGGGGGGT..
+
+        ...TGGGGGGGGT...
+
+        ....CCCCCCCC....'
+  left:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......GGGGG.....
+
+        ....GGGGGGGGG...
+
+        ...GGGGGGGGGGG..
+
+        ..GGGGGGGGGGGG..
+
+        .EEEEGGGGGGGGG..
+
+        EEWEEEGGGGGGGG..
+
+        EEEEEEGGGGGGGG..
+
+        .EEEEGGGGGGGG...
+
+        .TTGGGGGGGGGG...
+
+        TT.GGGGGGGGG....
+
+        T...GGGGGGG.....
+
+        T....GGGGG......'
+  left_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......GGGGG.....
+
+        ....GGGGGGGGG...
+
+        ...GGGGGGGGGGG..
+
+        ..GGGGGGGGGGGG..
+
+        .EEEEGGGGGGGGG..
+
+        EEWEEEGGGGGGGG..
+
+        EEEEEEGGGGGGGG..
+
+        .EEEEGGGGGGGG...
+
+        .TTGGGGGGGGGG...
+
+        TT.GGGGGGGGG....
+
+        T...GGGGGGG.....
+
+        T....GGGGG......'
+  left_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......GGGGG.....
+
+        ....GGGGGGGGG...
+
+        ...GGGGGGGGGGG..
+
+        ..GGGGGGGGGGGG..
+
+        .EEEEGGGGGGGGG..
+
+        EEWEEEGGGGGGGG..
+
+        EEEEEEGGGGGGGG..
+
+        .EEEEGGGGGGGG...
+
+        .TTGGGGGGGGGG...
+
+        TT.GGGGGGGGG....
+
+        T...GGGGGGG.....
+
+        T....GGGGG......'

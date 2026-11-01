@@ -1,0 +1,134 @@
+name: tarfful
+description: 'TARFFUL: Wookiee chieftain with a bandolier (replaces Brawly).'
+kit: person16x32_still
+replaces: graphics/object_events/pics/people/gym_leaders/brawly.png
+graphics_info: Brawly
+notes: 'Batch 4, B style: Brawly''s own body as regions (limbs -> fur F, torso -> fur G, shorts -> belt l), new Wookiee head with a tan muzzle, steel bandolier across the chest. Stays on NPC_3 (orange-brown
+  fur = ramp c).'
+palette: npc_3
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_3
+shade: true
+materials:
+  H: c
+  F: c
+  G: c
+  l: a
+legend:
+  k: 15
+  M: 3
+accept:
+  skin_tones: 'fur, not skin: the muzzle uses the skin ramp''s mid tones only'
+  hair_rows: the whole head is fur
+  eye_row: eyes under a fur brow
+base_sheet: graphics/object_events/pics/people/gym_leaders/brawly.png
+remap:
+  s: F
+  a: G
+  c: l
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 10
+      rows: '.....HHHHHH.....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHkHHHHkHHHH.
+
+        .HHHHkHHHHkHHHH.
+
+        .HHHHMMMMMMHHHH.
+
+        ..HHHMMkkMMHHH..
+
+        ..HHHMMMMMMHHH..
+
+        ...HHHMkkMHHH...
+
+        ...HHHHHHHHHH...'
+    - x: 0
+      y: 22
+      rows: '____ll__________
+
+        _____ll_________
+
+        ______ll________
+
+        _______ll_______
+
+        ________ll______'
+  up:
+    patches:
+    - x: 0
+      y: 10
+      rows: '.....HHHHHH.....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ...HHHHHHHHHH...
+
+        ...HHHHHHHHHH...'
+    - x: 0
+      y: 22
+      rows: '__________ll____
+
+        _________ll_____
+
+        ________ll______
+
+        _______ll_______
+
+        ______ll________'
+  left:
+    patches:
+    - x: 0
+      y: 10
+      rows: '......HHHHH.....
+
+        ....HHHHHHHHH...
+
+        ...HHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        .HHkHHHHHHHHHH..
+
+        .HHkHHHHHHHHHH..
+
+        MMMMHHHHHHHHH...
+
+        MkMMHHHHHHHHH...
+
+        .MMMHHHHHHHH....
+
+        .kkHHHHHHHHH....
+
+        ...HHHHHHHH.....'
+    - x: 0
+      y: 22
+      rows: ____________....

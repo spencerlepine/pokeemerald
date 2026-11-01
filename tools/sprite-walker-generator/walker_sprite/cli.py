@@ -70,6 +70,9 @@ def report(errors, warnings, m, corpus=None, kit="person16x32", accept=None) -> 
     lines.append("")
     lines.append(f"{'metric':<14}{'this':>8}{'Emerald p5':>12}{'median':>8}{'p95':>8}")
     for k, v in m["summary"].items():
+        if v is None:
+            lines.append(f"{k:<14}{'n/a':>8}")
+            continue
         if corpus and k in corpus["median"]:
             lines.append(f"{k:<14}{v:>8}{corpus['p5'][k]:>12}{corpus['median'][k]:>8}{corpus['p95'][k]:>8}")
         else:
@@ -95,10 +98,10 @@ def cmd_build(a) -> int:
         print(f"note: no pokeemerald at {em}; skipped scene.png (set EMERALD_DIR)")
     preview.showcase(out / "preview")
     text = report(errors, warnings, m, kit=s.kit, accept=s.meta.get("accept"))
-    if s.replaces and (em / s.replaces).exists() and s.kit == "person16x32":
+    if s.replaces and (em / s.replaces).exists() and spec_mod.KITS[s.kit]["frame"] == (16, 32):
         vf, vc = sheet.read_frames(em / s.replaces)
         vm = lint_mod.sheet_metrics(dict(zip(spec_mod.KITS[s.kit]["order"], vf)), vc, s.kit)
-        vs, _ = lint_mod.score(vm["summary"])
+        vs, _ = lint_mod.score(vm["summary"], kit=s.kit)
         text += f"\n\nvanilla {s.replaces}: style score {vs}/100 (match or beat it; a FAIL it shares is inherited, not new)"
     (out / "lint.txt").write_text(text + "\n")
     (out / "metrics.json").write_text(json.dumps(m, indent=1))
@@ -150,8 +153,9 @@ def cmd_verify(a) -> int:
         b_frames, _ = sheet.read_frames(back)
         size = bpp.stat().st_size
     ok = a_frames == b_frames
-    expect = 9 * 256
-    print(f"gbagfx: {png.name} -> {size} bytes of 4bpp (expect {expect} = 9 frames x .size 256); round-trip {'identical' if ok else 'DIFFERS'}")
+    nfr, fsize = len(spec_mod.KITS[s.kit]["order"]), spec_mod.KITS[s.kit]["size"]
+    expect = nfr * fsize
+    print(f"gbagfx: {png.name} -> {size} bytes of 4bpp (expect {expect} = {nfr} frames x .size {fsize}); round-trip {'identical' if ok else 'DIFFERS'}")
     return 0 if ok and size == expect else 1
 
 
