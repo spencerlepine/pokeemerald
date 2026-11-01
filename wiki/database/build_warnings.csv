@@ -1,5 +1,1 @@
-warning
-"mapping/vfx.csv: graphics/intro/scene_2/manectric.png replaced_by graphics/intro/scene_2/raider_near.png; graphics/intro/scene_2/raider_far.png is not a known asset, entity, flag or net-new id"
-"mapping/vfx.csv: graphics/intro/scene_2/torchic.png replaced_by graphics/intro/scene_2/raider_near.png; graphics/intro/scene_2/raider_far.png is not a known asset, entity, flag or net-new id"
-"mapping/vfx.csv: graphics/intro/scene_2/volbeat.png replaced_by graphics/intro/scene_2/raider_near.png; graphics/intro/scene_2/raider_far.png is not a known asset, entity, flag or net-new id"
-"mapping/vfx.csv: graphics/title_screen/pokemon_logo.png placeholder_from  don't copy the Lucasfilm logo). Redo pokemon_logo.pal and pokemon_logo.bin with it. is not a known asset, entity, flag or net-new id"
+

@@ -692,11 +692,19 @@ def pending_audio(rows, entities, inv, decisions, known):
     """One row per music track, sound effect, phoneme and cry in ../game, plus net-new and ghost audio."""
     folder_map = {e["map_folder"]: e["id"] for e in entities if e["entity_type"] == "map" and e.get("map_folder")}
     trainers_by_music = Counter(e["encounter_music"] for e in entities if e["entity_type"] == "trainer")
+    # A net-new sound installed into ../game (e.g. SE_BLASTER_BOLT by sfx-generator) shows up in the inventory
+    # under its new constant. Its decision stays on the net:* row, which takes the inventory row's source info.
+    net_by_const = {d["sw_constant"]: aid for aid, d in decisions.items()
+                    if aid.startswith("net:") and d.get("sw_constant")}
+    installed = {}
     out = []
     for aid, r in inv.items():
         if r["category"] not in ("music", "sfx", "cry"):
             continue
         d = decisions.get(aid)
+        if not d and r["emerald_constant"] in net_by_const:
+            installed[net_by_const[r["emerald_constant"]]] = r
+            continue
         used = []
         for u in filter(None, r["used_by"].split("|")):
             if u.startswith("map_folder:"):
@@ -762,6 +770,9 @@ def pending_audio(rows, entities, inv, decisions, known):
         _refs_ok(d, "mapping/audio.csv", known)
         ph = inv.get(d.get("placeholder_from", ""), {})
         cat = ph.get("category") or ("music" if d.get("sw_constant", "").startswith("MUS_") else "sfx")
+        slot = installed.get(aid)
+        if slot:
+            cat = slot["category"]
         out.append({"asset_id": aid, "category": cat, "kind": "net_new", "swap_kind": "NET_NEW",
                     "map_status": d["map_status"], "audio_status": d["audio_status"], "priority": d.get("priority", ""),
                     "sw_constant": d.get("sw_constant", ""), "sw_subject": d.get("sw_subject", ""),
@@ -770,6 +781,9 @@ def pending_audio(rows, entities, inv, decisions, known):
                     "suggested_path": f"sound/songs/midi/{d.get('sw_constant', '').lower()}.mid" if d.get("sw_constant") else "",
                     "made_by": "", "notes": d.get("notes", "") or (
                         f"placeholder: copy {ph.get('asset_file') or d.get('placeholder_from')} under the new name first")})
+        if slot:
+            out[-1].update({c: slot[c] for c in ("source_file", "source_line", "asset_file",
+                                                  "ref_count", "refs")}, used_by=slot["used_by"])
     for r in out:
         for c in AUDIO_COLS:
             r.setdefault(c, "")
