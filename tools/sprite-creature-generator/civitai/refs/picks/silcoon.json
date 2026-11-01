@@ -1,6 +1,10 @@
 {
-  "desc": "glowing pale silk cocoon wrapped in shimmering threads with two small eyes peeking out",
-  "colour": "white and pale gold",
-  "ref_note": "text only: no art exists (owner confirmed 2026-11-01)",
-  "negative": "human, leaves"
+  "desc": "side view, whole body, small, centred: one smooth oval silk cocoon lying sideways, wrapped in fine golden threads, two small dark eyes peeking out at the left end, soft glow",
+  "colour": "pearl white and pale gold",
+  "ref_note": "no art exists (owner confirmed): simple hand-drawn oval cocoon shape (PIL) as a clean starting silhouette",
+  "negative": "human, leaves",
+  "init": "refs/silcoon_prep.png",
+  "init_source": "refs/sources/silcoon/silcoon_draw.png",
+  "flip": false,
+  "denoise": 0.6
 }
