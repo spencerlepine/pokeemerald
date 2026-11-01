@@ -1,10 +1,10 @@
 {
-  "desc": "side view, whole body, small, centred: one smooth oval silk cocoon lying sideways, wrapped in fine golden threads, two small dark eyes peeking out at the left end, soft glow",
+  "desc": "side view, whole body, small, centred, facing left: one plump silk cocoon tilted slightly upward, a distinct rounded head cap at the left end with two big dark eyes and small mandibles, body wrapped in fine golden silk threads, short silk wisp at the right end",
   "colour": "pearl white and pale gold",
-  "ref_note": "no art exists (owner confirmed): simple hand-drawn oval cocoon shape (PIL) as a clean starting silhouette",
+  "ref_note": "no art exists (owner confirmed): PIL drawing of a plump tilted cocoon with a rounded head cap (two dark eyes, mandibles) at the left so the head end is obvious",
   "negative": "human, leaves",
   "init": "refs/silcoon_prep.png",
-  "init_source": "refs/sources/silcoon/silcoon_draw.png",
+  "init_source": "refs/sources/silcoon/silcoon_head.png",
   "flip": false,
-  "denoise": 0.6
+  "denoise": 0.55
 }
