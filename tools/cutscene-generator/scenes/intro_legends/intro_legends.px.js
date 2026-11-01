@@ -17,6 +17,7 @@
 // Build: node ../../bin/pxl.js build intro_legends.px.js   (game files land in out/game/)
 
 include("../../gba/screen.px.js")
+include("sculpt.px.js")
 const D = "graphics/intro/scene_3/"
 
 // ------------------------------------------------------------------ palettes (GBA steps of 8)
@@ -26,8 +27,9 @@ const D = "graphics/intro/scene_3/"
 const V = (s) => s.split(" ").map((h) => "#" + h)
 const BANKS = {
   0: V("000000 000000 000000 000000 000000 000000 000000 000000 000000 000000 000000 000000 000000 000000 000000 000000"),
-  // 1  GREATKRAYT: 1 body black, 2 hide rim, 3 hide plate, 14 eye, 15 the glow (pulsed by the game)
-  1: V("8890f8 000000 302830 484048 702028 e88000 e88800 e89000 e89800 e8a000 e8a800 e8b000 e8b800 e8c000 f8f8f8 0020c8"),
+  // 1  GREATKRAYT: 1 outline, 2-7 hide (dark -> lit), 8-10 mouth, 11-12 horn and claw, 13 eye, 14 teeth,
+  //    15 the glow (the game pulses it blue -> red, as Groudon's veins)
+  1: V("8890f8 100810 282020 403030 605048 807068 a09080 c0b0a0 401018 802030 b84858 585050 a8a098 181818 f0e8d8 0020c8"),
   2: V("8890f8 000000 0000f8 0810f8 1828f8 2838f8 3850f8 4860f8 5878f8 6890f8 000000 000000 000000 000000 f8f8f8 b00000"),
   // 3  sand: 1 deep shade .. 6 lit crest, 7-8 pebbles
   3: V("000000 603820 905830 b07840 c89050 d8a860 e8c070 f8d888 784828 a87048 000000 000000 000000 000000 000000 000000"),
@@ -77,79 +79,86 @@ scene("pod", { w: 256, h: 256 }, (c) => {
 
 // ------------------------------------------------------------------ GREATKRAYT
 
+// The greater krayt dragon of the Jundland Wastes, side view facing left: a huge blunt head with a
+// maw full of teeth, swept-back horns, a ridged back, stubby clawed legs, the tail diving into the
+// sand. Sculpted from ellipsoids (sculpt.px.js) and shaded by one light from the upper left; the body
+// is the same in every pose so the three poses share tiles (an affine BG holds 256).
 use(BANKS[1])
-// The body is a chain of discs along a spine; plates, spikes, horns and the glow follow the spine.
-function spinePts(pts, step = 1) {
-  const out = []
-  for (let i = 0; i + 1 < pts.length; i++) {
-    const [x0, y0, r0] = pts[i], [x1, y1, r1] = pts[i + 1]
-    const n = Math.max(1, Math.ceil(Math.hypot(x1 - x0, y1 - y0) / step))
-    for (let k = 0; k < n; k++) { const t = k / n; out.push([x0 + (x1 - x0) * t, y0 + (y1 - y0) * t, r0 + (r1 - r0) * t]) }
+const HIDE = ["2", "3", "4", "5", "6", "7"], HORN = ["b", "b", "b", "c", "c", "c"], MOUTH = ["8", "8", "9", "9", "a", "a"]
+const DARKER = { 7: "6", 6: "5", 5: "4", 4: "3", 3: "2", 2: "2", c: "b", b: "b" }
+function kraytBody(ox, oy) {
+  const B = []
+  // the trunk: neck base to the tail, which dives under the sand at the bottom right
+  B.push(...chain([[76 + ox, 48 + oy, 24], [92 + ox, 50 + oy, 28], [112 + ox, 56 + oy, 25], [132 + ox, 62 + oy, 20], [150 + ox, 70 + oy, 14], [164 + ox, 80 + oy, 9], [176 + ox, 92 + oy, 5]], HIDE, 3, 0.9))
+  // dorsal ridge plates, leaning back
+  for (const [x, y, w, h, rot] of [[86, 18, 4, 13, -22], [100, 18, 4, 14, -24], [114, 26, 4, 13, -26], [128, 34, 4, 12, -28], [142, 44, 3.5, 10, -30], [156, 56, 3, 8, -34]])
+    B.push({ cx: x + ox, cy: y + oy, rx: w, ry: h, rz: 5, rot, ramp: HORN, z: 4 })
+  // stubby legs with the knee bent forward
+  for (const [x, y] of [[82, 76], [108, 82], [134, 86]]) {
+    B.push({ cx: x + ox, cy: y + oy, rx: 9, ry: 11, rz: 10, ramp: HIDE, z: 6, rot: 20 })      // upper leg
+    B.push({ cx: x - 6 + ox, cy: y + 12 + oy, rx: 10, ry: 5, rz: 7, ramp: HIDE, z: 8, rot: -10 }) // foot
   }
-  out.push(pts[pts.length - 1])
-  return out
+  return B
 }
-function krayt(c, ox, oy, pose) {
-  const BODY = [[60, 58, 20], [82, 62, 23], [104, 60, 20], [124, 54, 16], [142, 45, 11], [156, 33, 7], [165, 20, 4], [170, 10, 1]]
-  const P = {
-    // the neck (spine start, [x, y, radius]) and head differ per pose; the body and tail are shared
-    // so the three poses share tiles (an affine BG holds 256)
-    A: { neck: [[28, 26, 12], [44, 44, 16]], head: [14, 16], jaw: 0.25, tilt: 0.15 },
-    B: { neck: [[32, 18, 12], [42, 38, 16]], head: [24, 6], jaw: 0.9, tilt: -0.45 },
-    C: { neck: [[26, 48, 12], [42, 56, 16]], head: [10, 44], jaw: 0.1, tilt: 0.35 },
-  }[pose]
-  const at = (list) => spinePts(list.map(([x, y, r]) => [x + ox, y + oy, r]))
-  const body = at(BODY), neck = at([...P.neck, BODY[0]])
-  const disc = (pts) => { for (const [x, y, r] of pts) c.circ(Math.round(x), Math.round(y), Math.max(1, Math.round(r)), 1) }
-  // legs first (behind): thick clawed forelimbs planted in the sand (shared)
-  for (const [lx, ly] of [[52, 72], [78, 80]]) {
-    const x = ox + lx, y = oy + ly
-    c.line(x, y - 12, x - 7, y + 3, 1, 6); c.line(x - 7, y + 3, x - 15, y + 5, 1, 4)
-    for (const d of [-18, -13, -8]) c.line(x - 11, y + 5, x + d, y + 8, 1, 1)
+function kraytHead(ox, oy, pose) {
+  // the jaw swings open from a hinge below the eye; the skull stays put so the poses share tiles
+  const jaw = { A: 4, B: 16, C: 2 }[pose], hy = oy
+  const ang = (-jaw * 1.6 * Math.PI) / 180, hx = 50 + ox, hyy = 46 + hy    // hinge; negative = the jaw drops
+  const J = (dx, dy) => ({ cx: hx + dx * Math.cos(ang) - dy * Math.sin(ang), cy: hyy + dx * Math.sin(ang) + dy * Math.cos(ang) })
+  const B = []
+  B.push({ cx: 52 + ox, cy: 38 + hy, rx: 38, ry: 22, rz: 26, ramp: HIDE, z: 2 })               // skull, long and low
+  B.push({ cx: 44 + ox, cy: 22 + hy, rx: 26, ry: 8, rz: 9, ramp: HIDE, z: 8, rot: -4 })         // brow ridge
+  B.push({ cx: 22 + ox, cy: 36 + hy, rx: 28, ry: 8, rz: 12, ramp: HIDE, z: 4, rot: -3 })         // snout / upper jaw
+  B.push({ cx: 60 + ox, cy: 44 + hy, rx: 14, ry: 8, rz: 9, ramp: HIDE, z: 9, rot: -20 })         // cheek crest
+  { const j = J(-28, 12); B.push({ ...j, rx: 28, ry: 7, rz: 9, ramp: HIDE, z: 3, rot: -jaw * 1.6 + 2 }) } // lower jaw
+  { const j = J(-6, 16); B.push({ ...j, rx: 16, ry: 9, rz: 10, ramp: HIDE, z: 2, rot: -jaw * 1.2 }) }       // throat
+  // horns swept back from the skull, a big one and a small one, and cheek spikes
+  B.push({ cx: 86 + ox, cy: 12 + hy, rx: 26, ry: 3.5, rz: 5, ramp: HORN, z: 12, rot: -32 })
+  B.push({ cx: 84 + ox, cy: 24 + hy, rx: 20, ry: 3, rz: 4, ramp: HORN, z: 12, rot: -18 })
+  B.push({ cx: 80 + ox, cy: 36 + hy, rx: 14, ry: 2.5, rz: 4, ramp: HORN, z: 12, rot: -4 })
+  return { B, hy, jaw, J }
+}
+function kraytPose(c, ox, oy, pose) {
+  const head = kraytHead(ox, oy, pose), hy = head.hy, jaw = head.jaw, J = head.J
+  // the mouth cavity, drawn first: the jaws cover its edges, the gap between them stays
+  const lo = J(-52, 6), lo2 = J(-10, 8)
+  c.poly([0 + ox, 42 + hy, 48 + ox, 40 + hy, 54 + ox, 50 + hy, Math.round(lo2.cx), Math.round(lo2.cy), Math.round(lo.cx), Math.round(lo.cy)], "8")
+  c.poly([8 + ox, 44 + hy, 44 + ox, 43 + hy, 46 + ox, 48 + hy, Math.round(lo2.cx) - 6, Math.round(lo2.cy) - 2, Math.round(lo.cx) + 10, Math.round(lo.cy) - 2], "9")
+  { const t = J(-30, 4); c.ellipse(Math.round(t.cx), Math.round(t.cy), 12, 3, "a") }
+  const S = sculpt(c, [...kraytBody(ox, oy), ...head.B])
+  // teeth: along the upper jaw's lower edge (pointing down) and the lower jaw's top (pointing up)
+  for (let i = 0; i < 7; i++) {
+    const x = 2 + ox + i * 6
+    let y = 40 + hy; while (S.inside(x, y) && y < 58 + hy) y++
+    if (c.is(x, y, "89a")) c.poly([x - 1, y - 1, x + 3, y - 1, x + 1, y + 4 + (i % 2)], "e")
+    const t = J(-50 + i * 6, 6); let y2 = Math.round(t.cy) + 6, x2 = Math.round(t.cx)
+    while (S.inside(x2, y2) && y2 > 40 + hy) y2--
+    if (c.is(x2, y2, "89a")) c.poly([x2 - 1, y2 + 1, x2 + 3, y2 + 1, x2 + 1, y2 - 4 - (i % 2)], "e")
   }
-  disc(body); disc(neck)
-  // dorsal spikes along the top of the spine, biggest over the shoulders
-  const spikes = (pts, every, size) => {
-    for (let i = every; i < pts.length - 4; i += every) {
-      const [x, y, r] = pts[i], [x2, y2] = pts[Math.min(pts.length - 1, i + 3)]
-      let ux = -(y2 - y), uy = x2 - x; const nl = Math.hypot(ux, uy) || 1; ux /= nl; uy /= nl
-      if (uy > 0) { ux = -ux; uy = -uy }
-      const h = size + r * 0.35, bx = x + ux * (r - 1), by = y + uy * (r - 1)
-      c.poly([Math.round(bx - 3), Math.round(by + 1), Math.round(bx + 3), Math.round(by + 1), Math.round(bx + ux * h + 3), Math.round(by + uy * h)], 1)
-    }
+  // eye: small, dark, under the brow, a glint and the glow round it
+  c.circ(58 + ox, 30 + hy, 2, "d"); c.px(57 + ox, 29 + hy, "e")
+  for (const [dx, dy] of [[-3, 0], [3, 0], [0, -3], [0, 3], [-2, -2], [2, -2], [-2, 2], [2, 2]]) c.px(58 + ox + dx, 30 + hy + dy, "f")
+  // nostril and skull plates
+  c.px(6 + ox, 36 + hy, "2"); c.px(7 + ox, 36 + hy, "2"); c.px(7 + ox, 37 + hy, "3")
+  for (const [x, y] of [[30, 30], [40, 28], [48, 26]]) c.line(x + ox, y + hy, x + 4 + ox, y - 2 + hy, "4")
+  // claws
+  for (const [x, y] of [[82, 76], [108, 82], [134, 86]]) for (const d of [-15, -10, -5]) c.poly([x + d + ox, y + 14 + oy, x + d + 4 + ox, y + 13 + oy, x + d - 2 + ox, y + 19 + oy], "b")
+  // segment grooves across the trunk, following the shading
+  for (const gx of [92, 108, 124, 140, 154]) for (let y = 0; y < 100; y++) {
+    const x = gx + ox + Math.round((y - 50) * 0.12), yy = y + oy
+    if (S.who(x, yy) >= 0 && S.who(x, yy) < 60 && c.is(x, yy, "234567")) c.px(x, yy, DARKER[c.key(x, yy)])
   }
-  spikes(body, 8, 3); spikes(neck, 8, 2)
-  // hide: a rim of lighter hide along the back, segment plates across the body
-  for (let i = 0; i < body.length; i += 2) { const [x, y, r] = body[i]; if (r > 5) c.px(Math.round(x), Math.round(y - r + 2), 2) }
-  for (let i = 12; i < body.length - 6; i += 14) { const [x, y, r] = body[i]; c.line(Math.round(x - 3), Math.round(y - r + 3), Math.round(x + 1), Math.round(y + r - 4), 3) }
-  // the glow: a vein down the flank with branches toward the plates (index 15 pulses in game)
-  const vein = body.filter((_, i) => i % 2 === 0 && i < body.length - 14).map(([x, y, r]) => [Math.round(x), Math.round(y + r * 0.3)])
-  for (let i = 0; i + 1 < vein.length; i++) c.line(vein[i][0], vein[i][1], vein[i + 1][0], vein[i + 1][1], 15)
-  for (let i = 4; i < vein.length - 2; i += 8) { const [x, y] = vein[i]; c.line(x, y, x + 5, y - 9, 15); c.line(x, y, x - 3, y + 7, 15) }
-  // head: long armoured skull facing left, horns swept back, jaws open by `jaw`
-  const [hx0, hy0] = P.head, hx = ox + hx0, hy = oy + hy0, t = P.tilt, j = P.jaw, S = 1.4
-  const R = (dx, dy) => [Math.round(hx + S * (dx * Math.cos(t) - dy * Math.sin(t))), Math.round(hy + S * (dx * Math.sin(t) + dy * Math.cos(t)))]
-  const poly = (list, k) => c.poly(list.flatMap(([dx, dy]) => R(dx, dy)), k)
-  poly([[-16, -4], [-6, -9], [8, -10], [18, -6], [20, 6], [6, 4], [-14, 2]], 1)                       // skull + upper jaw
-  poly([[-14, 4 + j * 10], [-4, 3 + j * 4], [12, 4], [18, 8], [6, 9 + j * 6], [-10, 7 + j * 11]], 1)    // lower jaw
-  poly([[8, -9], [20, -16], [32, -18], [22, -12], [16, -5]], 1)                                         // great horn
-  poly([[12, -5], [24, -8], [30, -3], [20, -1]], 1)                                                     // second horn
-  poly([[-4, -8], [0, -14], [4, -9]], 1)                                                                // brow spike
-  if (j > 0.2) {
-    const m = [[-13, 3 + j * 1.5], [-2, 3.5 + j * 2], [8, 4], [8, 4 + j * 5], [-2, 6 + j * 7], [-12, 6 + j * 9]]
-    poly(m, 4)                                                                                          // the mouth
-    for (let k = 0; k < 4; k++) { const [x, y] = R(-11 + k * 5, 3 + j * 1.7); c.px(x, y, 14); const [x2, y2] = R(-9 + k * 5, 6 + j * 7.5); c.px(x2, y2, 14) }
-  }
-  // eye with the glow round it, plates on the skull
-  { const [ex, ey] = R(2, -5); c.px(ex, ey, 14); c.px(ex - 1, ey, 14); c.px(ex + 1, ey - 1, 15); c.px(ex - 2, ey + 1, 15); c.px(ex + 2, ey - 1, 15) }
-  { const [a, b] = R(-12, -2), [d, e] = R(10, -8); c.line(a, b, d, e, 3) }
-  { const [a, b] = R(14, -7), [d, e] = R(26, -14); c.line(a, b, d, e, 15) }
+  // glowing veins (index 15) on the flank, 2 px wide so they read at 1x
+  const vein = [[82, 54], [94, 60], [106, 62], [118, 66], [130, 68], [142, 72], [152, 78]]
+  for (let i = 0; i + 1 < vein.length; i++) { c.line(vein[i][0] + ox, vein[i][1] + oy, vein[i + 1][0] + ox, vein[i + 1][1] + oy, "f"); c.line(vein[i][0] + ox, vein[i][1] + 1 + oy, vein[i + 1][0] + ox, vein[i + 1][1] + 1 + oy, "f") }
+  for (const [x, y] of [[94, 60], [118, 66], [142, 72]]) { c.line(x + ox, y + oy, x + 6 + ox, y - 9 + oy, "f"); c.line(x + ox, y + 1 + oy, x - 4 + ox, y + 8 + oy, "f") }
 }
 scene("krayt", { w: 512, h: 512 }, (c) => {
-  // anchors within 2 px of Groudon's, all congruent mod 8 so the shared body cuts into the same tiles
-  krayt(c, 293, 1, "A")
-  krayt(c, 117, 121, "B")
-  krayt(c, 37, 353, "C")
+  // anchors within 2 px of Groudon's and congruent mod 8, so the shared body cuts into the same tiles
+  kraytPose(c, 293, 1, "A")
+  kraytPose(c, 117, 121, "B")
+  kraytPose(c, 37, 353, "A")
+  outlineAll(c, "1")
 })
 
 // ------------------------------------------------------------------ the ground behind them (legend_bg.png)

@@ -1,5 +1,16 @@
 # intro_legends review captures (intro scene 3)
 
+## Round 2, chunk 3a (2026-11-01): awaiting review
+
+Owner on round 1: "those monster sprites are just horrible ... draw way better art". Generated references
+were not reachable from this session (image hosts blocked, Civitai blocked), so GREATKRAYT is redrawn by
+hand with a new volume sculptor (`sculpt.px.js`: ellipsoids, one light from the upper left, creases,
+outline): a long armoured skull, a jaw that drops open on a hinge with two rows of teeth, swept horns,
+dorsal plates, elbowed clawed legs, segment grooves and the glowing flank veins the game pulses.
+
+- `round2_krayt_rom.gif`: the real ROM, frames 2380-2560 (true speed).
+- `round2_krayt_stills.png`, `round2_krayt_closeup.png` (pose A at 4x).
+
 ## Round 1, chunk 3a (2026-11-01): awaiting review
 
 The capture pod (pokeball.png) and GREATKRAYT (groudon.png, three poses) on desert sand (legend_bg.png bank 3).
