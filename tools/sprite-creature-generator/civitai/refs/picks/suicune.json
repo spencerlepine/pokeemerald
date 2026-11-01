@@ -2,7 +2,7 @@
   "init": "refs/suicune_prep.png",
   "init_source": "https://static.wikia.nocookie.net/starwars/images/b/bc/Tukata-BoS.png/revision/latest/scale-to-width-down/1000?cb=20241010034229#crop=0,0,0.72,1",
   "flip": false,
-  "denoise": 0.5,
+  "denoise": 0.45,
   "desc": "sleek aurora hound beast with flowing pale blue mane tendrils and a whip tail",
   "colour": "grey green and pale blue",
   "ref_note": "Re-pick (Loth-wolf art belongs to absol): Tuk'ata (Book of Sith) cutout, side view facing left, tail trimmed; blue tendril mane reads as aurora ribbons"
