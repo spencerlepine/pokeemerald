@@ -17,6 +17,9 @@ Spec keys (all optional):
     move: MOVE_ZAP_CANNON        # the move to use (default: the first user of the sheet)
     species: 280                 # the party member's species id (default Ralts)
     capture: 900                 # frames to film after the battle starts
+    hp: 0.5                      # start the party member at this share of its HP (healing moves fail at full HP)
+    tap_until: 660               # keep tapping A until this battle frame (raise it for a second turn, e.g. SKETCH
+                                 # fails on turn 1 because the foe has not moved yet)
 """
 from __future__ import annotations
 
@@ -109,6 +112,7 @@ callbacks:add("frame", function()
     end
     if phase == "party" and f == 30 then
       E.writeMon(0, {{species={species}, level=10, exp=560, moves={{{move},0,0,0}}, pp={{20,0,0,0}}, base={{90,90,90,90,90,90}}, nick="TEST", personality=7}})
+      if {hpf} < 1 then local a = E.ADDR.gPlayerParty; emu:write16(a + 0x56, math.max(1, math.floor(emu:read16(a + 0x58) * {hpf}))) end
       E.setFlag(0x860, true); E.teleport(0, 16, 3, 4); phase = "walk"; f = 0; log("teleported"); return
     end
     if phase == "walk" then
@@ -120,9 +124,7 @@ callbacks:add("frame", function()
     if phase == "battle" then
       n = n + 1
       -- A taps: dismiss the intro text, FIGHT, the move (extra taps are ignored during the animation)
-      local tapAt = {{240, 300, 360, 420, 480, 540, 600, 660}}
-      local press = false
-      for _, t in ipairs(tapAt) do if n >= t and n < t + 4 then press = true end end
+      local press = n >= 240 and n <= {tap_until} + 3 and (n - 240) % 60 < 4
       emu:setKeys(press and 1 or 0)
       if n >= 200 and n % 2 == 0 and n < 200 + {capture} then emu:screenshot(string.format("{out}/f%05d.png", n)) end
       if n == 200 + {capture} then local h = io.open("{out}/DONE","w"); h:write("ok"); h:close(); phase = "done" end
@@ -133,12 +135,13 @@ end)
 '''
 
 
-def _film(rom: Path, out: Path, move_id: int, species: int, capture: int, ow: int, battle: int) -> bool:
+def _film(rom: Path, out: Path, move_id: int, species: int, capture: int, ow: int, battle: int,
+          hpf: float = 1.0, tap_until: int = 660) -> bool:
     shutil.rmtree(out, ignore_errors=True)
     out.mkdir(parents=True)
     lua = out / "film.lua"
     lua.write_text(LUA.format(out=out, pt=PT, ow=hex(ow | 1), battle=hex(battle | 1), species=species, move=move_id,
-                              capture=capture))
+                              capture=capture, hpf=hpf, tap_until=tap_until))
     env = dict(os.environ, QT_QPA_PLATFORM="xcb", SDL_AUDIODRIVER="dummy", LIBGL_ALWAYS_SOFTWARE="1",
                QT_X11_NO_MITSHM="1", LD_LIBRARY_PATH=str(MGBA.parent.parent / "lib"))
     p = subprocess.Popen(["timeout", "900", "xvfb-run", "-a", str(MGBA), "--script", str(lua), "-l", "0", str(rom)],
@@ -168,8 +171,9 @@ def run(a):
             mv = "MOVE_" + users[0][5:] if users else None
         if not mv:
             raise SystemExit(f"{s['name']}: no move uses this sheet; set romtest.move")
-        moves.append((s, mv, int(rt.get("species", 280)), int(rt.get("capture", 900))))
-    for s, mv, species, capture in moves:
+        moves.append((s, mv, int(rt.get("species", 280)), int(rt.get("capture", 900)),
+                      float(rt.get("hp", 1.0)), int(rt.get("tap_until", 660))))
+    for s, mv, species, capture, hpf, tap_until in moves:
         print(f"== {s['name']}: {mv}")
         gv = _prepare("vanilla", {}, mv, a.fresh)
         gn = _prepare("new", {k: v for k, v in installs.items()}, mv, a.fresh)
@@ -180,7 +184,8 @@ def run(a):
         res = {}
         for which, g in (("vanilla", gv), ("new", gn)):
             out = WORK / which / "film"
-            ok = _film(g / "pokeemerald.gba", out, mid, species, capture, _sym(g, "CB2_Overworld"), _sym(g, "BattleMainCB2"))
+            ok = _film(g / "pokeemerald.gba", out, mid, species, capture, _sym(g, "CB2_Overworld"), _sym(g, "BattleMainCB2"),
+                       hpf, tap_until)
             print(f"  film {which}: {'ok' if ok else 'FAILED'} ({(out / 'lua.log').read_text().strip().splitlines()[-1:] if (out / 'lua.log').exists() else ''})")
             res[which] = out if ok else None
         if not all(res.values()):

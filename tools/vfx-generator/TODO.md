@@ -101,7 +101,7 @@ Overworld and transitions:
 
 | Sheet | Effect | Redraw as |
 |---|---|---|
-| `bird.png` | Fly mount | starship / shuttle silhouette (pairs with the hyperspace jump) |
+| ~~`bird.png`~~ | Fly mount | **KEEP (owner, 2026-11-01):** the drawn shuttle was rejected; Emerald's bird stays as is. |
 | `pokeball_glow.png` | Center heal | bacta vial glow |
 | `pokecenter_monitor/0.png`, `1.png` | Center heal monitor | Bacta Center / 2-1B station screen |
 | `spotlight.png` | Rayquaza descends | beam over Dagobah for EXOGORTH |
@@ -178,6 +178,13 @@ Tatooine's Dune Sea. Recolor per planet only if a map looks off.
 5. **Psychic-themed moves were renamed to Force moves but kept the pink psychic look.** 17 of the 22 renamed
    moves reuse vanilla art (see `wiki/mapping/moves.csv`); the `psychic.png` recolor in section 4 covers most
    of them at once.
+
+## Batches (owner approves 3 at a time)
+
+| Batch | Effects | Status |
+|---|---|---|
+| 1 | ION CANNON orb, CREDIT TOSS chips, TURBOLASER (new sheet, needs a tag wired), ~~Fly shuttle~~ | APPROVED (shuttle rejected: keep `bird.png`) |
+| 2 | blue milk jug (`milk_bottle.png`), macrobinoculars (`magnifying_glass.png`), datapad stylus (`pencil.png`) | IN-REVIEW, all 3 filmed in the ROM |
 
 ## To build
 

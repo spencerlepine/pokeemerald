@@ -56,3 +56,4 @@ preview:
   length: 44
 romtest:
   move: MOVE_MILK_DRINK
+  hp: 0.5                        # MILK DRINK fails (no animation) at full HP

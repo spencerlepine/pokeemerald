@@ -2,7 +2,7 @@
 
 **Status: IN-REVIEW** (2026-11-01). The tool works end to end: catalog, drawing, palette gate, style
 score, battle/overworld previews, gbagfx round trip and a real-ROM check. Four prototypes are with the
-owner: ION CANNON, CREDIT TOSS chips, TURBOLASER, the Fly shuttle. The audit of what needs drawing is in
+owner: ION CANNON, CREDIT TOSS chips, TURBOLASER (batch 1, approved; the Fly shuttle was rejected and moved to `art/rejected/`), then blue milk, macrobinoculars and the datapad stylus (batch 2). The audit of what needs drawing is in
 [`TODO.md`](TODO.md); the measured style is in [`STYLE.md`](STYLE.md).
 
 Pure Python (pillow, numpy, pyyaml) plus the shared [`palette-enforcer`](../palette-enforcer/). No model,
@@ -79,7 +79,7 @@ preview:
   env: tall_grass                      # battle environment; attacker/target species
   motion: {kind: projectile, frames: 30, arc: 0, spin: 0, count: 1, dim: 0}
   # kinds: projectile, stream (HYPER BEAM), burst, at_target, at_attacker, still; overworld: fly_in, fly_across, still
-romtest: {move: MOVE_ZAP_CANNON, species: 280, capture: 900}
+romtest: {move: MOVE_ZAP_CANNON, species: 280, capture: 900, hp: 0.5, tap_until: 660}   # hp: healing moves fail at full HP; tap_until: film a 2nd turn (SKETCH)
 lint_allow: [lone]                     # style rules this effect breaks on purpose
 ```
 

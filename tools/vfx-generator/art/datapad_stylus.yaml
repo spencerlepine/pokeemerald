@@ -31,3 +31,5 @@ preview:
   length: 44
 romtest:
   move: MOVE_SKETCH
+  tap_until: 2100                # SKETCH fails on turn 1 (the foe has no last move yet): film turn 2 too
+  capture: 2600
