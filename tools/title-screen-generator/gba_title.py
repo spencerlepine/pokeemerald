@@ -14,7 +14,19 @@ GAME = os.path.join(os.path.dirname(__file__), "..", "..", "game")
 TS = os.path.join(GAME, "graphics", "title_screen")
 W, H = 240, 160
 LOGO_X, LOGO_Y = 29, 0
-BANNER_XY = (66, 50)
+
+
+def _define(name, default):
+    import re
+    try:
+        src = open(os.path.join(GAME, "src", "title_screen.c")).read()
+        return int(re.search(r"#define %s (-?\d+)" % name, src).group(1))
+    except Exception:
+        return default
+
+
+# the banner is two 64x32 sprites centred at LEFT_X / RIGHT_X, resting at Y_GOAL
+BANNER_XY = (_define("VERSION_BANNER_LEFT_X", 98) - 32, _define("VERSION_BANNER_Y_GOAL", 66) - 16)
 PRESS_START_Y, COPYRIGHT_Y = 104, 144
 
 

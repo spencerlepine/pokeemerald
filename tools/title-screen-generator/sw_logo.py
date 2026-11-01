@@ -172,7 +172,7 @@ def subtitle(kind):
     return img
 
 
-def layout(top, sub_img, bottom, y_top=5, gap=0):
+def layout(top, sub_img, bottom, y_top=5, gap=3):
     y_top = min(y_top, 104 - 2 - (top.size[1] + sub_img.getbbox()[3] - sub_img.getbbox()[1] + bottom.size[1] - 6))
     """Logo layer (240x160 RGBA) with STAR on top, the subtitle sprite and WARS below. Returns (bg2, banner_xy)."""
     bg = Image.new("RGBA", (240, 160), (0, 0, 0, 0))

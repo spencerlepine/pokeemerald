@@ -1,7 +1,7 @@
 # title-screen-generator
 
 Mockups for the STAR WARS: KYBER title screen (wiki rows `graphics/title_screen/*`, `graphics/intro/copyright.png`,
-all `HUMAN-TODO` in `wiki/mapping/branding.csv`). Status: **IN-REVIEW** (owner picks one variant per piece).
+all `HUMAN-TODO` in `wiki/mapping/branding.csv`). Status: **DONE**. Shipped 2026-11-01 with `python3 ship.py` (picks listed at the top of ship.py).
 
     python3 mockups.py OUT_DIR
 
@@ -10,6 +10,8 @@ all `HUMAN-TODO` in `wiki/mapping/branding.csv`). Status: **IN-REVIEW** (owner p
 - `glyphs.py` original block lettering (logo, banner) and a 6px caps font (copyright lines).
 - `logo.py`, `banner.py`, `backdrop.py`, `copyright.py`: three variants each.
 
-Not done yet (after the pick): convert the chosen pieces to game format (logo 8bpp tiles + `pokemon_logo.bin` + `.pal`,
-creature/sky 4bpp tiles + `rayquaza.bin`/`clouds.bin` sharing one 16-colour palette, banner 16 colours, copyright strips),
-and move the logo's BG2X offset in `src/title_screen.c` so the wider wordmark is centred.
+Final pieces: `sw_logo.py` (stacked STAR / WARS, Kyber Gold from wiki/bible/PALETTE.md, one-line KYBER VERSION banner),
+`bg_round.py` (Emerald's gradient bands recoloured, Exogorth silhouettes, cloud/nebula layers). `ship.py` writes
+pokemon_logo.png/.bin/.pal, emerald_version.png, rayquaza.png/.bin, rayquaza_and_clouds.pal and the banner position
+defines in src/title_screen.c; clouds.png/.bin stay Emerald's (recoloured by the palette). Review scripts: `round3.py`, `bg_review.py`.
+Round 1 (`mockups.py`, `logo.py`, `banner.py`, `backdrop.py`) was rejected but kept for reference.
