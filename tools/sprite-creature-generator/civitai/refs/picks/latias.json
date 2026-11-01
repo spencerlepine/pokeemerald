@@ -1,0 +1,9 @@
+{
+  "init": "refs/latias_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/7/76/Arkanian_dragon.png/revision/latest?cb=20221109230314",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "graceful light side Force dragon with wide bat wings raised and a long curling tail",
+  "colour": "white and pale gray",
+  "ref_note": "Arkanian dragon ink art (transparent): elegant winged dragon, front view with head turned left; Ashla page has no creature art"
+}

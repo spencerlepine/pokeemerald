@@ -1,0 +1,9 @@
+{
+  "init": "refs/registeel_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/7/79/Xims-war-robot_negtd.png/revision/latest/scale-to-width-down/1000?cb=20220320213645",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "heavy ancient durasteel war robot with thick armored limbs and a domed head",
+  "colour": "dark steel blue and silver",
+  "ref_note": "Xim the Despot's war robot render (NEGTD, transparent): ancient durasteel war robot, front view"
+}

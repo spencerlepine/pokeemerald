@@ -1,0 +1,9 @@
+{
+  "init": "refs/jumpluff_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/a/a8/Rugger.png/revision/latest/scale-to-width-down/1000?cb=20211211124334",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "drifting creature covered in big fluffy cotton puffs with a long wispy tail",
+  "colour": "cream and grey green",
+  "ref_note": "Rugger concept art; fluffy drifting body"
+}

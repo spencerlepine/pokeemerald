@@ -1,0 +1,9 @@
+{
+  "init": "refs/slakoth_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/5/5b/Sand_Sloth.jpg/revision/latest?cb=20080510154600",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "drowsy shaggy swamp sloth lying low with heavy-lidded eyes",
+  "colour": "brown and tan",
+  "ref_note": "Sand sloth art on white; round lazy body"
+}

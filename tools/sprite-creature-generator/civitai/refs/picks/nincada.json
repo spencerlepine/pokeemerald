@@ -1,0 +1,9 @@
+{
+  "init": "refs/nincada_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/d/d2/Drutash.jpg/revision/latest?cb=20090419165219#crop=0.6,0.0,1,0.45",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "pale segmented hive grub with small claws and tiny eyes",
+  "colour": "grey and pale tan",
+  "ref_note": "Drutash grub ink art; top-right grub cropped"
+}

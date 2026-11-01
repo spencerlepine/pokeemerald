@@ -1,0 +1,9 @@
+{
+  "init": "refs/azumarill_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/b/bc/Ash-rabbit.png/revision/latest?cb=20160501175038",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "plump long eared water hare with a round belly and long upright ears",
+  "colour": "white and grey",
+  "ref_note": "Ash-rabbit line art; shared with marill"
+}

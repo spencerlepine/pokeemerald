@@ -1,0 +1,9 @@
+{
+  "init": "refs/masquerain_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/d/dd/Bogwing-TVE.png/revision/latest?cb=20170923090657",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "bat-winged swamp flyer with long thin legs and a beaked head",
+  "colour": "dark teal and tan",
+  "ref_note": "canon Bogwing TVE render with alpha"
+}

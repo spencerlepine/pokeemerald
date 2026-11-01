@@ -1,0 +1,9 @@
+{
+  "init": "refs/groudon_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/a/a0/GreaterKrayt-WOSW.jpg/revision/latest/scale-to-width-down/1000?cb=20090611230707",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "colossal ancient greater krayt dragon with a horned head and massive clawed body and long tail",
+  "colour": "gray and pale white",
+  "ref_note": "Greater krayt dragon art (Wildlife of Star Wars, white bg) from the canon page's Legends twin: head on the left; long serpentine body"
+}

@@ -1,0 +1,9 @@
+{
+  "init": "refs/kyogre_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/f/f4/SandoAquaMonster.png/revision/latest/scale-to-width-down/1000?cb=20160913234539",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "colossal sando aqua monster titan with a huge toothy jaw and webbed clawed limbs and a finned tail",
+  "colour": "tan brown and dusky gray",
+  "ref_note": "Sando aqua monster render (transparent): whole creature; flipped so the head faces left"
+}

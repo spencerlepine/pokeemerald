@@ -1,0 +1,9 @@
+{
+  "init": "refs/deoxys_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/9/9b/Bendu_TVE.png/revision/latest/scale-to-width-down/1000?cb=20241124181040",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "massive horned Force being of Atollon crouching with rocky shoulder plates and a stone carapace",
+  "colour": "tan gold and rust red",
+  "ref_note": "Bendu render (Rebels, transparent): Atollon's shape-shifting Force entity, full body front view"
+}

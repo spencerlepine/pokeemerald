@@ -1,0 +1,9 @@
+{
+  "init": "refs/latios_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/b/b5/SonGargoyle-TCWS3BR3.png/revision/latest?cb=20220909175849",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "dark side Force dragon gargoyle with ragged leathery wings and a horned head swooping",
+  "colour": "dusky mauve and dark purple",
+  "ref_note": "The Son's gargoyle form on Mortis (TCW render, transparent), facing left; Bogan page has no creature art. Daughter griffin is already lugia's"
+}

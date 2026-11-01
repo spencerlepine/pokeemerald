@@ -1,0 +1,9 @@
+{
+  "init": "refs/surskit_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/2/25/Pondcritter.jpg/revision/latest?cb=20180825193621",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "flat round pond-skating bug with four long jointed legs",
+  "colour": "blue and pale yellow",
+  "ref_note": "Dagobah flat-bodied pond creature art on white"
+}

@@ -1,0 +1,10 @@
+{
+  "init": "refs/hoppip_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/2/25/SenateCamDroid-FFp34.png/revision/latest?cb=20260319023413",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small round floating seed creature with two leaf sprouts on top and tiny feet",
+  "colour": "gold tan and black",
+  "negative": "machine, metal, camera lens",
+  "ref_note": "Senate cam droid used only for the round floating body"
+}

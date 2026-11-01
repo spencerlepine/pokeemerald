@@ -1,0 +1,9 @@
+{
+  "init": "refs/regice_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/4/4b/JuggernautWarDroid-NEGTD.png/revision/latest?cb=20221026050956",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "tall ancient sentinel with a smooth pale icy shell and a domed head with a dark eye band",
+  "colour": "white and pale silver",
+  "ref_note": "Juggernaut war droid render (NEGTD, transparent): pale white-silver sentinel standing, facing left; stands in for the ice sentinel"
+}

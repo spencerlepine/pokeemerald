@@ -1,0 +1,10 @@
+{
+  "init": "refs/vigoroth_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/a/aa/Spot-Light_Sloth.jpg/revision/latest?cb=20090713023217",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "lean restless ape-sloth with long claws and a shaggy red crest",
+  "colour": "white and red",
+  "negative": "glowing spots, flowers",
+  "ref_note": "same Spot-Light sloth as slaking (same line); smaller and leaner desc"
+}

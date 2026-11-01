@@ -1,0 +1,9 @@
+{
+  "init": "refs/regirock_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/8/8d/ZardossaStoneGuardians.png/revision/latest?cb=20191013223835",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "massive ancient stone sentinel golem built of carved rock blocks with glowing glyph lights",
+  "colour": "slate blue gray and amber",
+  "ref_note": "Zardossa stone guardian render (transparent): blocky carved-stone golem, front three-quarter view"
+}

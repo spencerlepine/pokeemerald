@@ -1,0 +1,9 @@
+{
+  "init": "refs/rayquaza_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/4/4a/SpaceSlug.jpg/revision/latest?cb=20071029030754",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "giant exogorth space slug coiling out of an asteroid with a long gaping toothed head",
+  "colour": "pale gray and rust brown",
+  "ref_note": "Space slug art (white bg): exogorth emerging from its asteroid, head lower left; rock chunks stay as part of the shape"
+}
