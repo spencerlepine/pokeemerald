@@ -1,326 +1,625 @@
 name: sw_ewok
-description: 'NEW WALKER (net:walker-ewok): Ewok scout: brown fur, ochre leather hood with the ears poking through, big black eyes, tan muzzle, a small spear (placeholder: Ninja Boy). Used by the EWOK and
-  SHAMAN trainers.'
-kit: person16x16
-replaces: graphics/object_events/pics/people/ninja_boy.png
+description: 'NEW WALKER (net:walker-ewok): Ewok scout: brown multi-tone fur, ochre leather hood with round fur ears poking through, big glinting black eyes, tan muzzle, hide strap and pouch, a small stone-tipped
+  spear (placeholder: Boy 1). Used by the EWOK and SHAMAN trainers.'
+kit: person16x32
+replaces: graphics/object_events/pics/people/boy_1.png
 graphics_info: SwEwok
-notes: 'Recast group d, shade mode, 16x16 kit on Ninja Boy''s body as regions (suit -> fur B, sash -> leather strap L, hood drape -> hood H). New head: brown fur face, tan muzzle, big glinting eyes, ochre
-  hood with the round fur ears through it and a red crown bead; spear with a red binding and a white stone tip. Brown, hornless and small, unlike grey horn-hooded Chirpa (winona).'
+notes: 'Recast group d2 (redraw of the 16x16 r_rcd.py version, rejected as too squished): 16x32 kit, 19 rows tall, shade mode on Boy 1''s kid body as regions (shirt -> torso fur T, arms/legs -> fur B, shorts
+  and shoes -> lower fur D). Hand-toned head: brown fur face lit on brow and cheeks, tan muzzle with a black nose, big eyes with white glints, ochre hood framing the face with a back drape and a red crown
+  bead, round fur ears through it. Hide strap to a tan hip pouch; spear (dark shaft, red binding, white stone tip). Brown and hornless, unlike grey horn-hooded Chirpa (winona).'
 palette: npc_2
 palette_tag: OBJ_EVENT_PAL_TAG_NPC_2
 shade: true
 materials:
-  H: a
-  E: c
-  B: c@
-  L: a
-  M: s
+  T: c@
+  B: c
+  D: c
 legend:
   k: 15
   W: 14
-  p: 7
-  r: 9
+  n: 15
   f: 11
   g: 12
+  d: 13
+  Y: 5
+  O: 6
+  h: 7
+  q: 1
+  M: 2
+  m: 3
+  t: 4
+  U: 2
+  p: 7
+  A: 7
+  y: 6
+  r: 9
 accept:
-  skin_tones: Ewok fur is the brown ramp; only the muzzle uses the skin ramp
+  skin_tones: Ewok fur is the brown ramp; only the muzzle and pouch use the skin ramp
   hair_rows: a leather hood over fur
   eye_row: big Ewok eyes inside the fur face
 frames:
-  down: '..gg........ggW.
+  down: '................
 
-    ..gfHHHHHHHHfgW.
+    ................
 
-    .HHHHHHrrHHHHHr.
+    ................
 
-    .HHHHHHHHHHHHHp.
+    ................
 
-    .HHgffffffffgHp.
+    ................
 
-    .HgWkffffffWkgp.
+    ................
 
-    .HgkkfMMMMfkkgp.
+    ................
 
-    ..HggMMkkMMggHp.
+    ................
 
-    ...gggMMMMggg.p.
+    ................
 
-    ...EEBEEEEBEE.p.
+    ................
 
-    ..EEBBBBBBBBEEp.
+    ................
 
-    ...EBBLBBLBBE.p.
+    ................
 
-    ....BBBBBBBB..p.
+    ..dd........dd.t
 
-    .....BBBBBB...p.
+    .dfgd.hhhh.dgfdW
 
-    ......B..B......
+    .dggdhOYYOhdggdW
+
+    ..dhOOYYOrOOhd.r
+
+    .hOOOYOOOOOOOOhp
+
+    .hOOhhhhhhhhOOhp
+
+    .hOhdggggggdhOhp
+
+    .hOgWkffffWkgOhp
+
+    .hhgkkgffgkkghhp
+
+    .hhggfqMMqfgghhp
+
+    ..hdgMMnnMMgdh.p
+
+    ..BhdgmMMmgdhB.p
+
+    .BByATTTTTTTBBBp
+
+    .BBBByATTTTBBBBp
+
+    ..BBDTTyATTDBB.p
+
+    ..hOOYOOOOAhh..p
+
+    ...DDBBDhUUhD..p
+
+    ...DDDDDDttDD..p
+
+    ....DDD..DDD....
 
     ................
 
     '
-  up: '.Wgg........gg..
+  up: '................
 
-    .WgfHHHHHHHHfg..
+    ................
 
-    .rHHHHHrrHHHHH..
+    ................
 
-    .pHHHHHHHHHHHHH.
+    ................
 
-    .pHHHHHHHHHHHHH.
+    ................
 
-    .pHHHHHHHHHHHHH.
+    ................
 
-    .pHHHHHHHHHHHHH.
+    ................
 
-    .pHHHHHHHHHHHH..
+    ................
 
-    .p.HHHHHHHHHH...
+    ................
 
-    .p.EEHHHHHHEE...
+    ................
 
-    .pEEBBBBBBBBEE..
+    ................
 
-    .p.EBBLBBLBBE...
+    ................
 
-    .p..BBBBBBBB....
+    t.dd........dd..
 
-    .p...BBBBBB.....
+    Wdfgd.hhhh.dgfd.
 
-    ......B..B......
+    WdggdhOYYOhdggd.
+
+    r.dhOOYYOrOOhd..
+
+    phOOYOOhhOOOOOh.
+
+    phOOOOhOOhOOOOh.
+
+    phOOOOhOOhOOOOh.
+
+    phOOOOhOOhOOOOh.
+
+    phhOOOhOOhOOOhh.
+
+    pdhhOOhOOhOOhhd.
+
+    pgdhhhOOOOhhhdg.
+
+    p.dgdhhOOhhdgd..
+
+    pBBBThhhhhAyBBB.
+
+    pBBBBTTTAyTBBBB.
+
+    p.BBDTAyTTTDBB..
+
+    p.hhAOOYOOOOh...
+
+    p..DDBBDDBBDD...
+
+    p..DDDDDDDDDD...
+
+    ....DDD..DDD....
 
     ................
 
     '
-  left: '........ggW.....
+  left: '................
 
-    ......HHgfWH....
+    ................
 
-    ....HHHHHHrHH...
+    ................
 
-    ...HHHHHHHpHHH..
+    ................
 
-    ..HHfffHHHpHHH..
+    ................
 
-    ..fWkffgHHpHHH..
+    ................
 
-    .MfkkffgHHpHHH..
+    ................
 
-    kMMMffggHHpHH...
+    ................
 
-    MMMMgggHHHpH....
+    ................
 
-    .....EEEEHpH....
+    ................
 
-    ....BBBEEEpB....
+    ................
 
-    ....BLBEEEpB....
+    ................
 
-    ....BBBBEEpB....
+    ......dd...dd..t
 
-    .....BBBBBp.....
+    .....dfgd.dfgd.W
 
-    .......BBB......
+    ....hdggdhdggdhW
+
+    ...hOOddOYOddOhr
+
+    ..hOOOOYYOOOrOhp
+
+    ..hOOOOOOhOOOOhp
+
+    .hhhhhOOOhOOOOhp
+
+    .dggghhOOhOOOOhp
+
+    .gWkfghOOhOOOOhp
+
+    qgkkgghOOhOOOh.p
+
+    nMMggghOhhOOhh.p
+
+    .MmgdhhhOOOhh..p
+
+    ....TTyABBTT...p
+
+    ....TTBByATT...p
+
+    ...hOYOOOOhD...p
+
+    .....DDhUUhD...p
+
+    .....BBBttD....p
+
+    ....DDDDDDD....p
+
+    .....DDDDD......
 
     ................
 
     '
-  down_a: '..............W.
+  down_a: '................
 
-    ..gg........ggW.
+    ................
 
-    ..gfHHHHHHHHfgr.
+    ................
 
-    .HHHHHHrrHHHHHp.
+    ................
 
-    .HHHHHHHHHHHHHp.
+    ................
 
-    .HHgffffffffgHp.
+    ................
 
-    .HgWkffffffWkgp.
+    ................
 
-    .HgkkfMMMMfkkgp.
+    ................
 
-    ..HggMMkkMMggHp.
+    ................
 
-    ...gggMMMMggg.p.
+    ................
 
-    ...EEBEEEEBEE.p.
+    ................
 
-    ..EEBBBBBBBBEEp.
+    ................
 
-    ...EBBLBBLBBE.p.
+    ...............t
 
-    .....BBBBBB...p.
+    .dd........dd..W
 
-    ......BBBB......
+    dfgd.hhhh.dgfd.W
 
-    .......B........
+    dggdhOYYOhdggd.r
+
+    .dhOOYYOrOOhd..p
+
+    hOOOYOOOOOOOOh.p
+
+    hOOhhhhhhhhOOh.p
+
+    hOhdggggggdhOh.p
+
+    hOgWkffffWkgOh.p
+
+    hhgkkgffgkkghh.p
+
+    hhggfqMMqfgghh.p
+
+    .hdgMMnnMMgdh..p
+
+    .BhdgmMMmgdhB..p
+
+    ..yATTTTTTTBB..p
+
+    ...DyATTTTBBBB.p
+
+    ...DDTyATTBBBB.p
+
+    .hOOYOOOOAhhB..p
+
+    ....DDBhUUh....p
+
+    ....DDDDtt......
+
+    .....DDD........
 
     '
   down_b: '................
 
-    ..gg........gg..
+    ................
 
-    ..gfHHHHHHHHfg.W
+    ................
 
-    .HHHHHHrrHHHHHHW
+    ................
 
-    .HHHHHHHHHHHHHHr
+    ................
 
-    .HHgffffffffgHHp
+    ................
 
-    .HgWkffffffWkgHp
+    ................
 
-    .HgkkfMMMMfkkgHp
+    ................
 
-    ..HggMMkkMMggH.p
+    ................
 
-    ...gggMMMMggg..p
+    ................
 
-    ...EEBEEEEBEE..p
+    ................
 
-    ..EEBBBBBBBBEE.p
+    ................
 
-    ...EBBLBBLBBE..p
+    ................
 
-    .....BBBBBB....p
+    ...dd........dd.
 
-    ......BBBB.....p
+    ..dfgd.hhhh.dgfd
 
-    ........B......p
+    ..dggdhOYYOhdggd
+
+    ...dhOOYYOrOOhdW
+
+    ..hOOOYOOOOOOOOh
+
+    ..hOOhhhhhhhhOOh
+
+    ..hOhdggggggdhOh
+
+    ..hOgWkffffWkgOh
+
+    ..hhgkkgffgkkghh
+
+    ..hhggfqMMqfgghh
+
+    ...hdgMMnnMMgdhp
+
+    ...BhdgmMMmgdhBp
+
+    ...ByATTTTTTBB.p
+
+    ..BBBByATTTTD..p
+
+    ..BBBBTTyATDD..p
+
+    ...hOOYOOOOAhh.p
+
+    ......DDBhUUh..p
+
+    .......DDDtt...p
+
+    ........DDD....p
 
     '
   up_a: '................
 
-    ..gg........gg..
+    ................
 
-    W.gfHHHHHHHHfg..
+    ................
 
-    W.HHHHHrrHHHHH..
+    ................
 
-    rHHHHHHHHHHHHHH.
+    ................
 
-    pHHHHHHHHHHHHHH.
+    ................
 
-    pHHHHHHHHHHHHHH.
+    ................
 
-    pHHHHHHHHHHHHHH.
+    ................
 
-    p.HHHHHHHHHHHH..
+    ................
 
-    p..HHHHHHHHHH...
+    ................
 
-    p..EEHHHHHHEE...
+    ................
 
-    p.EEBBBBBBBBEE..
+    ................
 
-    p..EBBLBBLBBE...
+    t...............
 
-    p...BBBBBBB.....
+    W..dd........dd.
 
-    p....BBBBB......
+    W.dfgd.hhhh.dgfd
 
-    p......B........
+    r.dggdhOYYOhdggd
+
+    p..dhOOYYOrOOhd.
+
+    p.hOOYOOhhOOOOOh
+
+    p.hOOOOhOOhOOOOh
+
+    p.hOOOOhOOhOOOOh
+
+    p.hOOOOhOOhOOOOh
+
+    p.hhOOOhOOhOOOhh
+
+    p.dhhOOhOOhOOhhd
+
+    p.gdhhhOOOOhhhdg
+
+    pBBdgdhhOOhhdgd.
+
+    p.BBTThhhhhAy...
+
+    p..DTTTTTAyBBB..
+
+    p..DDTTAyTBBBB..
+
+    p..hhAOOYOOOOh..
+
+    p...DDBBDD......
+
+    ....DDDDD.......
+
+    .....DDD........
 
     '
-  up_b: '.W..............
+  up_b: '................
 
-    .Wgg........gg..
+    ................
 
-    .rgfHHHHHHHHfg..
+    ................
 
-    .pHHHHHrrHHHHH..
+    ................
 
-    .pHHHHHHHHHHHHH.
+    ................
 
-    .pHHHHHHHHHHHHH.
+    ................
 
-    .pHHHHHHHHHHHHH.
+    ................
 
-    .pHHHHHHHHHHHHH.
+    ................
 
-    .pHHHHHHHHHHHH..
+    ................
 
-    .p.HHHHHHHHHH...
+    ................
 
-    .p.EEHHHHHHEE...
+    ................
 
-    .pEEBBBBBBBBEE..
+    ................
 
-    .p.EBBLBBLBBE...
+    ................
 
-    .p...BBBBBBB....
+    .dd........dd...
 
-    ......BBBBB.....
+    dfgd.hhhh.dgfd..
 
-    ........B.......
+    dggdhOYYOhdggd..
+
+    WdhOOYYOrOOhd...
+
+    hOOYOOhhOOOOOh..
+
+    hOOOOhOOhOOOOh..
+
+    hOOOOhOOhOOOOh..
+
+    hOOOOhOOhOOOOh..
+
+    hhOOOhOOhOOOhh..
+
+    dhhOOhOOhOOhhd..
+
+    gdhhhOOOOhhhdg..
+
+    pdgdhhOOhhdgdBB.
+
+    p..BhhhhhAyTBB..
+
+    p.BBBBTAyTTTD...
+
+    p.BBBAyTTTTDD...
+
+    phhAOOYOOOOhD...
+
+    p.....DDBBDD....
+
+    p......DDDDD....
+
+    p.......DDD.....
 
     '
   left_a: '................
 
-    ........gW......
+    ................
 
-    ......HHgWHH....
+    ................
 
-    ....HHHHHrrHH...
+    ................
 
-    ...HHHHHHpHHHH..
+    ................
 
-    ..HHfffHHpHHHH..
+    ................
 
-    ..fWkffgHpHHHH..
+    ................
 
-    .MfkkffgHpHHHH..
+    ................
 
-    kMMMffggHpHHH...
+    ................
 
-    MMMMgggHHpHH....
+    ................
 
-    .....EEEEpHH....
+    ................
 
-    ....BBBEEpBB....
+    ................
 
-    ....BLBEEpEB....
+    ...............t
 
-    ....BBBBEpBBB...
+    ......dd...dd..W
 
-    ...BBBBBBpBBB...
+    .....dfgd.dfgd.W
 
-    ....BB...BBB....
+    ....hdggdhdggdhr
+
+    ...hOOddOYOddOhp
+
+    ..hOOOOYYOOOrOhp
+
+    ..hOOOOOOhOOOOhp
+
+    .hhhhhOOOhOOOOhp
+
+    .dggghhOOhOOOOhp
+
+    .gWkfghOOhOOOOhp
+
+    qgkkgghOOhOOOh.p
+
+    nMMggghOhhOOhh.p
+
+    .MmgdhhhOOOhh..p
+
+    ....TTyABBTT...p
+
+    ....TTTByABT...p
+
+    ...hOYOOOOhDD..p
+
+    ...DBBDhUUhBD..p
+
+    ...DDDBDttBDD..p
+
+    ....DDDD..DD....
+
+    .....DD.........
 
     '
   left_b: '................
 
-    ........gg.W....
+    ................
 
-    ......HHgfHW....
+    ................
 
-    ....HHHHHHrrH...
+    ................
 
-    ...HHHHHHHHpHH..
+    ................
 
-    ..HHfffHHHHpHH..
+    ................
 
-    ..fWkffgHHHpHH..
+    ................
 
-    .MfkkffgHHHpHH..
+    ................
 
-    kMMMffggHHHpH...
+    ................
 
-    MMMMgggHHHHp....
+    ................
 
-    .....EEEEHHp....
+    ................
 
-    ....BBBEEEBp....
+    ................
 
-    ....BLBEEEEp....
+    ................
 
-    ....BBBBEEBp....
+    ......dd...dd...
 
-    ...BBBBBBBBp....
+    .....dfgd.dfgd.t
 
-    ....BBB...BB....
+    ....hdggdhdggdhW
+
+    ...hOOddOYOddOhW
+
+    ..hOOOOYYOOOrOhr
+
+    ..hOOOOOOhOOOOhp
+
+    .hhhhhOOOhOOOOhp
+
+    .dggghhOOhOOOOhp
+
+    .gWkfghOOhOOOOhp
+
+    qgkkgghOOhOOOh.p
+
+    nMMggghOhhOOhh.p
+
+    .MmgdhhhOOOhh..p
+
+    ....TTyABBTT...p
+
+    ....TBBByATT...p
+
+    ...hOYOOOOhD...p
+
+    ...DBDBhUUhBB..p
+
+    ...DDBDDttBBD..p
+
+    ....DDD.DDDDD..p
+
+    .........DDD...p
 
     '
