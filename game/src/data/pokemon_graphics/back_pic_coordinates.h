@@ -290,7 +290,7 @@ const struct MonCoords gMonBackPicCoords[] =
     [SPECIES_MUDKIP]      = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  5 },
     [SPECIES_MARSHTOMP]   = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  4 },
     [SPECIES_SWAMPERT]    = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  5 },
-    [SPECIES_POOCHYENA]   = { .size = MON_COORDS_SIZE(56, 48), .y_offset =  9 },
+    [SPECIES_POOCHYENA]   = { .size = MON_COORDS_SIZE(64, 48), .y_offset =  0 },  // MASSIFF (sprite-creature-generator: 60x44, feet on row 63)
     [SPECIES_MIGHTYENA]   = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  4 },
     [SPECIES_ZIGZAGOON]   = { .size = MON_COORDS_SIZE(56, 48), .y_offset = 11 },
     [SPECIES_LINOONE]     = { .size = MON_COORDS_SIZE(64, 40), .y_offset = 15 },

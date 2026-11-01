@@ -7,8 +7,10 @@ set up for the creature LoRA [Pokemon Sprite PixelArt 768](https://civitai.com/m
 
 **Status:** first creature shipped 2026-11-01: MASSIFF (`poochyena`), round 2 option 4 (denoise 0.55, open jaws),
 picked by the owner over pick A and finished at 12 colours for readability. `front.png`, `anim_front.png`, `back.png`, `normal.pal` and `shiny.pal` are in the wiki at
-`wiki/art/graphics/pokemon/poochyena/` and marked ART_READY; not copied into `game/` yet. Battle placement
-data (README rows 6-8) is still to build.
+`wiki/art/graphics/pokemon/poochyena/` (ART_READY) and **installed in `game/`** (game_status DONE), with
+front/back `y_offset` 0 and size 64x48 in `front_pic_coordinates.h` / `back_pic_coordinates.h` (the finisher
+puts the feet on the bottom row; vanilla centres the sprite and offsets it). Icon, footprint and overworld
+walker belong to other tools and are still pending.
 
 ## Setup
 
