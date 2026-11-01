@@ -1,6 +1,6 @@
 # sprite-trainer-generator
 
-**Status:** PENDING. Approach chosen; the tool is not built yet. The build waits on a rented GPU.
+**Status:** DONE for front pics via the hosted Civitai pipeline in [`civitai/`](civitai/) (shipped 2026-11-01, no GPU needed). The rented-GPU plan below is kept for reference.
 The earlier repaint/sculpt tool in this folder was scrapped (it did not work) and deleted; it is
 in git history if anything needs recovering.
 

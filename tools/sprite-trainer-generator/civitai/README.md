@@ -4,8 +4,9 @@ Trainer front pics made with Civitai's **hosted** generator, so no rented GPU is
 trainer LoRA [Pokémon Trainer Sprite PixelArt](https://civitai.com/models/159333/pokemon-trainer-sprite-pixelart)
 (model 159333, SDXL version by default) on the SDXL 1.0 base checkpoint, paid for in Buzz.
 
-**Status:** working end to end (first run 2026-11-01: 4 Vader candidates for 10 blue Buzz, all passed
-`palette-enforcer check`). Runs are kept in `runs/<trainer>/`.
+**Status:** DONE. Approved by the owner on 2026-11-01. First shipped sprite: Darth Vader
+(`magma_leader_maxie`), stored in the wiki at `wiki/art/graphics/trainers/front_pics/` and marked
+ART_READY; not copied into `game/` yet. Runs are kept in `runs/<trainer>/`.
 
 ## Setup
 
