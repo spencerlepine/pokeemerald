@@ -1,0 +1,108 @@
+name: hermit
+kit: trainer64
+replaces: graphics/trainers/front_pics/expert_m.png
+# HERMIT (m), sculpted (D14): an old desert sage sitting cross-legged on the ground, hands
+# resting on his knees, 3/4 view facing the viewer's left. Bald crown, white side hair and a
+# long white beard, moss-green robe with a tan sash, bare feet.
+palette:
+  - [115, 197, 164]  # 0 transparent
+  - [24, 16, 24]     # K outline
+  - [112, 64, 48]    # d skin edge
+  - [184, 120, 88]   # c skin shadow
+  - [224, 168, 128]  # b skin base
+  - [248, 208, 168]  # a skin light
+  - [136, 136, 152]  # e beard shadow
+  - [200, 200, 208]  # f beard base
+  - [248, 248, 248]  # W beard light
+  - [40, 64, 48]     # g robe dark
+  - [72, 104, 72]    # h robe base
+  - [120, 152, 104]  # i robe light
+  - [144, 104, 64]   # j sash shadow
+  - [208, 168, 112]  # k sash
+legend: {'.': 0, K: 1, d: 2, c: 3, b: 4, a: 5, e: 6, f: 7, W: 8, g: 9, h: 10, i: 11, j: 12, k: 13}
+frames:
+  front:
+    sculpt:
+      materials: {skin: dcba, beard: efW, robe: ghi, sash: jk}
+      joints:
+        sh_far: [24, 33]
+        sh_near: [39, 33]
+        el_far: [18, 42]
+        wr_far: [17, 50]
+        el_near: [45, 42]
+        wr_near: [44, 50]
+      groups:
+        - name: lap
+          mat: robe
+          round: 4
+          shapes:
+            - {ellipse: [32, 55], r: [18, 6.5]}
+            - {limb: [[16, 55], [48, 56]], r: [5, 5.5]}
+          creases:
+            - {pts: [[22, 52], [30, 56], [40, 58]], tone: 0}
+            - {pts: [[42, 52], [36, 55]], tone: 0}
+        - name: far arm
+          mat: robe
+          round: 3
+          shapes:
+            - {limb: [sh_far, el_far, wr_far], r: [3.8, 3.6, 3.4]}
+            - {ellipse: [17, 52], r: [2.8, 2.4]}
+          paint:
+            - {mat: skin, shape: {ellipse: [17, 52], r: [3.0, 2.6]}}
+        - name: torso
+          mat: robe
+          round: 5
+          shapes:
+            - {poly: [sh_far, [31, 29], sh_near, [42, 40], [41, 52], [23, 52], [22, 40]], soft: 1.5}
+            - {limb: [[30, 26], [31, 31]], r: [3.0, 3.4]}
+          paint:
+            - {mat: skin, shape: {limb: [[30, 26], [31, 31]], r: [3.0, 3.4]}}
+            - {mat: sash, shape: {limb: [[22, 46], [42, 46]], r: [1.8, 1.8]}}
+          creases:
+            - {pts: [[29, 34], [31, 44]], tone: 0}
+            - {pts: [[36, 36], [38, 44]], tone: 0}
+        - name: feet
+          mat: skin
+          round: 2
+          shapes:
+            - {ellipse: [25, 59], r: [4.2, 2.2], angle: -10}
+            - {ellipse: [41, 59], r: [3.8, 2.0], angle: 10}
+        - name: head
+          mat: skin
+          round: 6
+          shapes:
+            - {ellipse: [30, 18], r: [7.0, 7.4]}
+            - {ellipse: [27, 23], r: [3.6, 2.8], blend: 2.5}
+        - name: side hair
+          mat: beard
+          round: 2.5
+          line: dark
+          shapes:
+            - {blob: [[37, 18, 3.4], [36, 22, 2.6]], k: 2}
+        - name: beard
+          mat: beard
+          round: 3
+          line: dark
+          shapes:
+            - {poly: [[23, 22], [34, 22], [33, 30], [30, 40], [26, 33]], soft: 1.2}
+            - {curve: [[33, 23], [34, 30], [31, 38]], r: [2, 0.8]}
+          creases:
+            - {pts: [[28, 26], [29, 34]], tone: 1}
+            - {pts: [[31, 26], [31, 32]], tone: 1}
+        - name: near arm
+          mat: robe
+          round: 3
+          shapes:
+            - {limb: [sh_near, el_near, wr_near], r: [4.0, 3.8, 3.6]}
+          paint:
+            - {mat: skin, shape: {ellipse: [44, 52], r: [3.0, 2.6]}}
+            - {mat: sash, shape: {limb: [[43, 48], [46, 48]], r: [1.2, 1.2]}}
+        - name: near hand
+          mat: skin
+          round: 2
+          shapes:
+            - {ellipse: [44, 52], r: [3.0, 2.4]}
+    finish: {pixel_perfect: true, strays: true, outline: K}
+    patches:
+      - {x: 23, y: 16, rows: "ff__ff\n______\n_K__KK\n_c__cc"}
+      - {x: 23, y: 21, rows: "c"}

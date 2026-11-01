@@ -1,0 +1,112 @@
+name: ace_m
+kit: trainer64
+replaces: graphics/trainers/front_pics/cooltrainer_m.png
+# ACE (m), sculpted (D14): a cool veteran in a long coat, 3/4 view facing the viewer's left,
+# both hands in his pockets, leaning back on his rear leg. Swept silver hair, charcoal long coat
+# with a teal lining, black turtleneck, dark trousers and boots.
+palette:
+  - [115, 197, 164]  # 0 transparent
+  - [24, 16, 24]     # K outline
+  - [112, 64, 48]    # d skin edge
+  - [192, 128, 96]   # c skin shadow
+  - [232, 176, 136]  # b skin base
+  - [248, 216, 184]  # a skin light
+  - [120, 128, 152]  # e hair dark
+  - [184, 192, 208]  # f hair base
+  - [240, 240, 248]  # g hair light
+  - [40, 40, 56]     # h coat dark
+  - [72, 72, 96]     # i coat base
+  - [112, 112, 144]  # j coat light
+  - [24, 88, 96]     # k lining dark
+  - [48, 144, 144]   # m lining
+  - [32, 32, 40]     # n trousers dark
+  - [64, 64, 80]     # p trousers
+legend: {'.': 0, K: 1, d: 2, c: 3, b: 4, a: 5, e: 6, f: 7, g: 8, h: 9, i: 10, j: 11, k: 12, m: 13, n: 14, p: 15}
+frames:
+  front:
+    sculpt:
+      materials: {skin: dcba, hair: efg, coat: hij, lining: km, pants: np, boot: Kn}
+      joints:
+        sh_far: [25, 23]
+        sh_near: [39, 23]
+        el_far: [22, 32]
+        el_near: [43, 32]
+        pk_far: [26, 40]
+        pk_near: [39, 40]
+        hip_far: [29, 40]
+        hip_near: [36, 40]
+        kn_far: [27, 50]
+        kn_near: [39, 50]
+        an_far: [24, 58]
+        an_near: [42, 58]
+      groups:
+        - name: coat back
+          mat: lining
+          round: 3
+          shapes:
+            - {poly: [[22, 36], [44, 36], [48, 51], [18, 51]], soft: 1}
+        - name: far leg
+          mat: pants
+          round: 3
+          shapes:
+            - {limb: [hip_far, kn_far, an_far], r: [4.0, 3.4, 3.0]}
+            - {limb: [an_far, [19, 61]], r: [3.0, 2.6]}
+          paint:
+            - {mat: boot, shape: {limb: [[25, 56], an_far, [19, 61]], r: [3.2, 3.2, 2.8]}}
+        - name: near leg
+          mat: pants
+          round: 3
+          shapes:
+            - {limb: [hip_near, kn_near, an_near], r: [4.2, 3.6, 3.2]}
+            - {limb: [an_near, [37, 61]], r: [3.2, 2.8]}
+          paint:
+            - {mat: boot, shape: {limb: [[41, 56], an_near, [37, 61]], r: [3.4, 3.4, 3.0]}}
+        - name: coat
+          mat: coat
+          round: 5
+          flat: 0.9
+          shapes:
+            - {limb: [[31, 16], [32, 21]], r: [3.0, 3.6]}
+            - {poly: [sh_far, [32, 19], sh_near, [42, 32], [41, 42], [44, 50], [37, 49], [33, 43], [29, 49], [21, 50], [23, 42], [22, 32]], soft: 1.2}
+          paint:
+            - {mat: skin, shape: {limb: [[31, 16], [32, 19]], r: [3.0, 3.0]}}
+            - {mat: pants, shape: {poly: [[29, 20], [35, 20], [33, 30], [31, 30]]}}
+            - {mat: lining, shape: {poly: [[33, 43], [37, 49], [35, 50], [33, 46], [31, 50], [29, 49]]}}
+          creases:
+            - {pts: [[35, 21], [33, 31], [33, 44]], tone: 0}
+            - {pts: [[29, 21], [31, 31]], tone: 2}
+            - {pts: [[24, 44], [22, 52]], tone: 0}
+            - {pts: [[40, 44], [42, 51]], tone: 0}
+        - name: far arm
+          mat: coat
+          round: 3
+          shapes:
+            - {limb: [sh_far, el_far, pk_far], r: [3.6, 3.2, 3.0]}
+          creases:
+            - {pts: [[22, 31], [24, 33]], tone: 0}
+        - name: head
+          mat: skin
+          round: 6
+          shapes:
+            - {ellipse: [30, 11], r: [6.8, 7.0]}
+            - {ellipse: [27, 16], r: [3.6, 2.8], blend: 2.5}
+        - name: hair
+          mat: hair
+          round: 3
+          line: dark
+          shapes:
+            - {blob: [[33, 6, 5.0], [37, 9, 4.2]], k: 3}
+            - {curve: [[34, 3], [27, 1], [22, 6]], r: [2.6, 0.8]}
+            - {curve: [[33, 5], [28, 5], [25, 9]], r: [2.0, 0.8]}
+            - {curve: [[39, 8], [43, 9], [44, 13]], r: [2.0, 0.6]}
+        - name: near arm
+          mat: coat
+          round: 3
+          shapes:
+            - {limb: [sh_near, el_near, pk_near], r: [3.8, 3.4, 3.2]}
+          creases:
+            - {pts: [[43, 31], [41, 34]], tone: 0}
+    finish: {pixel_perfect: true, strays: true, outline: K}
+    patches:
+      - {x: 24, y: 8, rows: "ee__ee\n______\n_K__KK\n_K__Km"}
+      - {x: 24, y: 13, rows: "c\n_\n__dd"}

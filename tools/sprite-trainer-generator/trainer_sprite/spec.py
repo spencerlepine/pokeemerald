@@ -199,6 +199,18 @@ def load(path: str | Path) -> Spec:
                     g = rig_mod.render(f["rig"], legend, w, h, where, base=g, load_pic=_load_pic)
                 except rig_mod.RigError as e:
                     raise SpecError(str(e)) from None
+        elif "sculpt" in f:
+            from . import sculpt as sculpt_mod
+
+            try:
+                g = sculpt_mod.render(f["sculpt"], legend, w, h, where)
+            except sculpt_mod.SculptError as e:
+                raise SpecError(str(e)) from None
+            if "rig" in f:
+                try:
+                    g = rig_mod.render(f["rig"], legend, w, h, where, base=g, load_pic=_load_pic)
+                except rig_mod.RigError as e:
+                    raise SpecError(str(e)) from None
         elif "mirror_of" in f:
             g = [row[::-1] for row in resolve(f["mirror_of"], stack + (name,))]
         elif "base" in f:

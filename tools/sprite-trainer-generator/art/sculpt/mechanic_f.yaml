@@ -1,0 +1,119 @@
+name: mechanic_f
+kit: trainer64
+replaces: graphics/trainers/front_pics/battle_girl.png
+# MECHANIC (f), sculpted (D14): a cheerful hangar mechanic, 3/4 view facing the viewer's left,
+# far hand behind her head, near hand on her hip. Black ponytail, white tank top, orange
+# jumpsuit with the sleeves tied round her waist, dark work boots.
+palette:
+  - [115, 197, 164]  # 0 transparent
+  - [24, 16, 24]     # K outline
+  - [112, 64, 48]    # d skin edge
+  - [200, 128, 96]   # c skin shadow
+  - [240, 176, 136]  # b skin base
+  - [248, 216, 184]  # a skin light
+  - [32, 24, 48]     # e hair dark
+  - [64, 56, 96]     # f hair base
+  - [112, 104, 144]  # g hair light
+  - [176, 184, 200]  # h top shadow
+  - [248, 248, 248]  # i top light
+  - [168, 72, 32]    # j suit dark
+  - [224, 120, 48]   # k suit base
+  - [248, 176, 96]   # m suit light
+  - [48, 40, 40]     # n boot dark
+  - [96, 80, 72]     # p boot light
+legend: {'.': 0, K: 1, d: 2, c: 3, b: 4, a: 5, e: 6, f: 7, g: 8, h: 9, i: 10, j: 11, k: 12, m: 13, n: 14, p: 15}
+frames:
+  front:
+    sculpt:
+      materials: {skin: dcba, hair: efg, top: hi, suit: jkm, boot: np}
+      joints:
+        sh_far: [26, 25]
+        sh_near: [39, 25]
+        el_far: [21, 15]
+        wr_far: [28, 9]
+        el_near: [46, 32]
+        wr_near: [40, 37]
+        hip_far: [29, 40]
+        hip_near: [36, 40]
+        kn_far: [27, 50]
+        kn_near: [37, 50]
+        an_far: [26, 58]
+        an_near: [39, 58]
+      groups:
+        - name: ponytail
+          mat: hair
+          round: 3
+          shapes:
+            - {curve: [[37, 9], [46, 10], [45, 22]], r: [3.4, 1.2]}
+          creases:
+            - {pts: [[42, 11], [44, 17]], tone: 0}
+        - name: far arm
+          mat: skin
+          round: 2.6
+          shapes:
+            - {limb: [sh_far, el_far, wr_far], r: [3.0, 2.6, 2.2]}
+        - name: far leg
+          mat: suit
+          round: 3
+          shapes:
+            - {limb: [hip_far, kn_far, an_far], r: [4.2, 3.6, 3.2]}
+            - {limb: [an_far, [21, 61]], r: [3.2, 2.8]}
+          paint:
+            - {mat: boot, shape: {limb: [[26, 55], an_far, [21, 61]], r: [3.4, 3.4, 2.8]}}
+        - name: near leg
+          mat: suit
+          round: 3
+          shapes:
+            - {limb: [hip_near, kn_near, an_near], r: [4.4, 3.8, 3.4]}
+            - {limb: [an_near, [35, 61]], r: [3.4, 3.0]}
+          paint:
+            - {mat: boot, shape: {limb: [[38, 55], an_near, [35, 61]], r: [3.6, 3.6, 3.0]}}
+          creases:
+            - {pts: [[35, 44], [37, 49]], tone: 0}
+        - name: torso
+          mat: top
+          round: 5
+          shapes:
+            - {limb: [[32, 18], [32, 23]], r: [2.8, 3.2]}
+            - {poly: [sh_far, [32, 22], sh_near, [40, 30], [37, 36], [39, 42], [26, 42], [28, 36], [25, 30]], soft: 1.2}
+          paint:
+            - {mat: skin, shape: {poly: [[26, 18], [38, 18], [36, 24], [32, 26], [28, 24]]}}
+            - {mat: suit, shape: {poly: [[20, 37], [44, 37], [44, 46], [20, 46]]}}
+          creases:
+            - {pts: [[27, 38], [38, 38]], tone: 0}
+        - name: tied sleeve
+          mat: suit
+          round: 2
+          shapes:
+            - {curve: [[29, 38], [27, 42], [29, 47]], r: [2.2, 1.6]}
+            - {ellipse: [31, 39], r: [2.2, 1.8]}
+        - name: head
+          mat: skin
+          round: 6
+          shapes:
+            - {ellipse: [31, 12], r: [6.8, 7.0]}
+            - {ellipse: [28, 17], r: [3.6, 2.8], blend: 2.5}
+        - name: hair
+          mat: hair
+          round: 3
+          line: dark
+          shapes:
+            - {blob: [[33, 7, 5.2], [37, 10, 3.8], [27, 6, 3.2]], k: 3}
+            - {curve: [[29, 5], [25, 7], [25, 11]], r: [2.2, 0.8]}
+            - {curve: [[33, 7], [31, 9], [30, 11]], r: [1.8, 0.6]}
+        - name: far hand
+          mat: skin
+          round: 2
+          behind: true
+          shapes:
+            - {ellipse: [28, 8], r: [2.4, 2.4]}
+        - name: near arm
+          mat: skin
+          round: 2.6
+          shapes:
+            - {limb: [sh_near, el_near, wr_near], r: [3.2, 2.6, 2.2]}
+            - {ellipse: [39, 38], r: [2.6, 2.2]}
+    finish: {pixel_perfect: true, strays: true, outline: K}
+    patches:
+      - {x: 25, y: 9, rows: "ff__ff\n______\n_K__KK\n_K__Kf"}
+      - {x: 25, y: 14, rows: "c\n_\n__dd"}
