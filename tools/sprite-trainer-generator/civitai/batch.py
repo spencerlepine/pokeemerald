@@ -90,7 +90,7 @@ def generate(stem: str) -> tuple[Path | None, str]:
             stop.set()
             return None, "budget reached"
         spent += COST
-    r = subprocess.run([sys.executable, str(HERE / "civitai_trainer.py"), "run", stem, "-n", "1"],
+    r = subprocess.run([sys.executable, str(HERE / "civitai_trainer.py"), "run", stem, "-n", "1", "--currency", args.currency],
                        capture_output=True, text=True, cwd=HERE)
     log = r.stdout + r.stderr
     if "Insufficient" in log or "insufficientBuzz" in log:
@@ -190,6 +190,7 @@ def main():
     ap.add_argument("only", nargs="*", help="trainer stems (default: every pending row)")
     ap.add_argument("--list", action="store_true")
     ap.add_argument("--budget", type=int, default=0, help="max Buzz to spend this run (required)")
+    ap.add_argument("--currency", default="green", help="Buzz account(s): green (bought), blue (earned), yellow")
     ap.add_argument("-j", type=int, default=4, help="parallel jobs")
     ap.add_argument("--no-push", dest="push", action="store_false")
     args = ap.parse_args()
