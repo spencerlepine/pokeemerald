@@ -833,20 +833,21 @@ static void Task_TitleScreenPhase3(u8 taskId)
 
 // ---------------------------------------------------------------------------------------------
 // Hand-off to the opening crawl (intro_crawl.c), first boot only.
-// The logo (BG2, affine) and the KYBER VERSION banner (OBJ) shrink away into the distance and
-// darken, the clouds (BG1) blend out, then BG1 is pointed at a cloudless copy of the gradient and
-// cross-faded over BG0 so the creature melts away. What is left is the bare deep-space gradient,
-// which the crawl keeps on screen.
+// First the clouds (BG1) blend out, then BG1 is pointed at a cloudless copy of the gradient and
+// cross-faded over BG0 so the creature melts away. Only then do the logo (BG2, affine) and the
+// KYBER VERSION banner (OBJ) shrink away into the distance and darken. What is left is the bare
+// deep-space gradient, which the crawl keeps on screen.
 // ---------------------------------------------------------------------------------------------
 
-#define CRAWL_OUT_FRAMES        180
+#define CRAWL_OUT_LOGO_FRAMES   180  // logo shrink, after the creature and clouds are gone
 #define CRAWL_OUT_CENTER_X      120  // screen point the logo shrinks towards
 #define CRAWL_OUT_CENTER_Y      56
 #define CRAWL_OUT_LOGO_TEX_X    (-29) // BG2X the title screen draws the logo with
 #define CRAWL_OUT_RECEDE        15   // 1/scale grows by this/256 per frame (logo is ~1/11 size at the end)
-#define CRAWL_OUT_LOGO_FADE_AT  100  // frame the logo starts darkening
-#define CRAWL_OUT_CLOUDS_END    48   // clouds fully blended out by this frame
-#define CRAWL_OUT_CREATURE_END  112  // creature fully gone by this frame
+#define CRAWL_OUT_LOGO_FADE_AT  100  // logo frame the logo starts darkening
+#define CRAWL_OUT_CLOUDS_END    12   // clouds fully blended out by this frame
+#define CRAWL_OUT_CREATURE_END  40   // creature fully gone by this frame; the logo starts shrinking here
+#define CRAWL_OUT_FRAMES        (CRAWL_OUT_CREATURE_END + CRAWL_OUT_LOGO_FRAMES)
 #define CRAWL_OUT_SKY_SCREEN    28   // screen block for the cloudless gradient map (intro_crawl.c uses it too)
 #define CRAWL_OUT_SKY_CHARBASE  2    // BG0's tiles (the gradient + creature)
 
@@ -900,7 +901,8 @@ static void StartTitleScreenCrawlOut(u8 taskId)
 static void Task_TitleScreenCrawlOut(u8 taskId)
 {
     s32 frame = gTasks[taskId].tOutFrame;
-    s32 invScale = 0x100 + frame * CRAWL_OUT_RECEDE; // texture px per screen px, 8.8
+    s32 logoFrame = (frame > CRAWL_OUT_CREATURE_END) ? frame - CRAWL_OUT_CREATURE_END : 0;
+    s32 invScale = 0x100 + logoFrame * CRAWL_OUT_RECEDE; // texture px per screen px, 8.8
     s32 bgX, bgY;
     u16 i;
 
@@ -927,9 +929,9 @@ static void Task_TitleScreenCrawlOut(u8 taskId)
     }
 
     // Darken the logo (BG palettes 0-13, skipping the backdrop colour) and the banner (OBJ palette 0)
-    if (frame >= CRAWL_OUT_LOGO_FADE_AT)
+    if (logoFrame >= CRAWL_OUT_LOGO_FADE_AT)
     {
-        u8 coeff = ((frame - CRAWL_OUT_LOGO_FADE_AT) * 16) / (CRAWL_OUT_FRAMES - CRAWL_OUT_LOGO_FADE_AT);
+        u8 coeff = ((logoFrame - CRAWL_OUT_LOGO_FADE_AT) * 16) / (CRAWL_OUT_LOGO_FRAMES - CRAWL_OUT_LOGO_FADE_AT);
         BlendPalette(BG_PLTT_ID(0) + 1, 14 * 16 - 1, coeff, RGB_BLACK);
         BlendPalette(OBJ_PLTT_ID(0), 16, coeff, RGB_BLACK);
     }
