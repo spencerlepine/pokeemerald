@@ -1,10 +1,7 @@
 {
-  "init": "refs/lombre_prep.png",
-  "init_source": "https://static.wikia.nocookie.net/starwars/images/d/dd/EarlyBoglingConcept.jpg/revision/latest/scale-to-width-down/1000?cb=20230603184506#crop=0.5,0.0,1,0.92",
   "flip": false,
-  "denoise": 0.5,
-  "desc": "lanky upright frog imp with a reed leaf cap and long thin limbs",
-  "colour": "olive green and tan",
+  "desc": "Lanky mischievous frog imp standing upright, wide grin, big round eyes, a flat lily-pad reed leaf on its head like a cap, long thin arms and legs, crouched playful pose facing left, three-quarter view, simple clean shape",
+  "colour": "olive green body, bright green leaf cap, tan belly",
   "negative": "grey gradient background, banding",
-  "ref_note": "early JFO bogling concept tall form used as Naboo reed creature base"
+  "ref_note": "text only: bogling concept kept a grey striped background; other bogling art cluttered"
 }
