@@ -1,6 +1,12 @@
 # intro_bike review captures
 
-## Round 2 (2026-11-01): in the game, waiting for the owner's approval
+## Round 3 (2026-11-01): APPROVED, shipped
+
+Detailed riders: tunic folds, wrapped forearms and shins, ragged hem, a short cloak streaming in the wind.
+`round3_riders_before_after.png` (round 2 left, round 3 right) and `round3_scene2_{kael,mira}_realspeed.gif`.
+Owner: "perfect! approved, ship that chunk". Still Emerald's: the credits ride (brendan_credits / may_credits, Flygon).
+
+## Round 2 (2026-11-01)
 
 Intro scene 2 is now in `../../../../game`: KAEL or MIRA (random each boot, as in Emerald) on the speeder, Tusken
 raiders instead of Manectric, Torchic, Volbeat and Flygon.
