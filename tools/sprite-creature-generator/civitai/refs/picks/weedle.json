@@ -1,9 +1,9 @@
 {
   "init": "refs/weedle_prep.png",
-  "init_source": "https://static.wikia.nocookie.net/starwars/images/e/e0/Leviathan_grub.png/revision/latest?cb=20160926171006#crop=0.01,0.05,0.97,0.9",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/2/26/Larveae.jpg/revision/latest?cb=20090419200043",
   "flip": false,
-  "denoise": 0.5,
-  "desc": "segmented larva with a dark head small horn and a stinger on its tail",
+  "denoise": 0.6,
+  "desc": "segmented horned larva crawling, dark head with a small poison horn, stinger on its tail, side view, whole body",
   "colour": "cream and brown",
-  "ref_note": "Leviathan grub (map illustration) cropped, head on the left; re-picked off Duracrete worm (onix/steelix Duracrete slug page)"
+  "ref_note": "Larveae line art (Legends) on white: clean cutout with no map fragments; flipped so head is left; strong colour"
 }
