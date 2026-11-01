@@ -2,9 +2,9 @@
   "init": "refs/snorunt_prep.png",
   "init_source": "refs/sources/snorunt/r2_wampcub.png",
   "flip": false,
-  "denoise": 0.5,
-  "desc": "small round wampa cub with thick shaggy white fur, stubby horn nubs, dark eyes, standing hunched, three-quarter view, whole body",
+  "denoise": 0.55,
+  "desc": "small round wampa cub, three-quarter view turned to face left, whole body, thick shaggy fur, stubby horn nubs, dark eyes, one clawed arm raised, small and centred",
   "colour": "white and pale blue-gray fur, black eyes and claws",
-  "ref_note": "Tales from the Rancor's Pit comic baby wampa, 3/4 view, background masked by hand (r2_wampcub.png)",
+  "ref_note": "Tales from the Rancor's Pit comic baby wampa (most turned of the three), background masked by hand (r2_wampcub.png)",
   "negative": "snow, sky, background"
 }

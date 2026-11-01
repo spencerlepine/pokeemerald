@@ -1,9 +1,9 @@
 {
   "init": "refs/numel_prep.png",
-  "init_source": "https://static.wikia.nocookie.net/starwars/images/4/42/Bantha_AaA.png/revision/latest?cb=20190417032609#crop=0,0.0,1,0.92",
+  "init_source": "refs/sources/numel/r3_bantha.png",
   "flip": false,
   "denoise": 0.5,
-  "desc": "young shaggy bantha calf in side view standing on four stubby legs, small curled horns, droopy snout, long tufted tail, whole body, small and centred",
-  "colour": "warm brown and tan fur, cream horns",
-  "ref_note": "Alien Archive bantha, flipped to face left, narrower prep for margin"
+  "desc": "small young shaggy bantha calf, three-quarter view facing left, whole body on four stubby legs, curled horns, long tufted tail, small and centred",
+  "colour": "warm brown and tan fur, pale olive-cream ringed horns",
+  "ref_note": "Alien Archive bantha, sand and rock cut by hand, brightened, flipped (r3_bantha.png)"
 }

@@ -1,10 +1,10 @@
 {
   "init": "refs/glalie_prep.png",
-  "init_source": "refs/sources/glalie/r2_wampa.png",
+  "init_source": "refs/sources/glalie/r3_wampa.png",
   "flip": false,
-  "denoise": 0.5,
-  "desc": "hulking white furred wampa prowling on all fours in side view, whole body, long clawed arms, curled horns, small and centred",
-  "colour": "white and pale gray fur, dark gray claws and horns",
-  "ref_note": "Wampa field-guide painting (woswfg), sky masked out by hand (scratchpad/mask/r2_wampa.png), flipped",
+  "denoise": 0.55,
+  "desc": "hulking wampa yeti prowling on all fours, side view facing left, whole body, shaggy fur with gray shading, curled ram horns, long arms with black claws, dark face, small and centred",
+  "colour": "off-white fur with cool gray shading, dark gray face, brown horns, black claws",
+  "ref_note": "Wampa field-guide painting (woswfg), sky cut by colour mask, fur darkened for contrast, flipped (r3_wampa.png)",
   "negative": "snow, sky, background"
 }

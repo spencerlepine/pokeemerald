@@ -1,10 +1,10 @@
 {
   "init": "refs/shiftry_prep.png",
-  "init_source": "refs/sources/shiftry/r2_condor.png",
+  "init_source": "refs/sources/shiftry/r3_condor.png",
   "flip": false,
   "denoise": 0.5,
-  "desc": "forest lord dragon with huge leaf-fan wings spread, hooked beak, long curled tail, clawed limbs, whole body",
-  "colour": "olive green body, orange-brown leaf-fan wings",
+  "desc": "forest lord dragon in three-quarter view facing left, whole body, two broad orange leaf-fan wings raised, hooked pale beak, curled tail, clawed limbs, small and centred",
+  "colour": "olive green body, orange leaf-fan wings with green edges, pale beak",
   "negative": "text, background, signature",
-  "ref_note": "Ewoks (2024) #3 comic condor dragon, colour, purple sky and text masked by hand (r2_condor.png)"
+  "ref_note": "Ewoks (2024) #3 condor dragon, sky, text, tree and skull cut by hand (r3_condor.png)"
 }
