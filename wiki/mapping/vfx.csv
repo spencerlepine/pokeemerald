@@ -17,16 +17,16 @@ vfx:General_Sandstorm,KEEP,DRAFT,KEEP_ANIM,Keep the animation; its sprites are r
 vfx:General_SmokeballEscape,KEEP,DRAFT,KEEP_ANIM,Keep the animation; its sprites are redrawn through pending_art (battle_anims).,,,,
 vfx:General_SnatchMove,KEEP,DRAFT,KEEP_ANIM,Keep the animation; its sprites are redrawn through pending_art (battle_anims).,,,,
 vfx:General_StatsChange,KEEP,DRAFT,KEEP_ANIM,Keep the animation; its sprites are redrawn through pending_art (battle_anims).,,,,
-vfx:General_SubstituteAppear,KEEP,DRAFT,KEEP_ANIM,Keep the animation; its sprites are redrawn through pending_art (battle_anims).,,,,
-vfx:General_SubstituteFade,KEEP,DRAFT,KEEP_ANIM,Keep the animation; its sprites are redrawn through pending_art (battle_anims).,,,,
+vfx:General_SubstituteAppear,HOTSWAP,DRAFT,PENDING_ART,HOLO-DECOY: the substitute doll becomes a flickering blue hologram on a projector disc (substitute.png front and back). SE: SE_HOLO_FLICKER.,,,,bible/MOVE_EFFECTS.md Tier C.
+vfx:General_SubstituteFade,HOTSWAP,DRAFT,PENDING_ART,HOLO-DECOY: the substitute doll becomes a flickering blue hologram on a projector disc (substitute.png front and back). SE: SE_HOLO_FLICKER.,,,,bible/MOVE_EFFECTS.md Tier C.
 vfx:General_Sun,KEEP,DRAFT,KEEP_ANIM,Keep the animation; its sprites are redrawn through pending_art (battle_anims).,,,,
 vfx:General_TurnTrap,KEEP,DRAFT,KEEP_ANIM,Keep the animation; its sprites are redrawn through pending_art (battle_anims).,,,,
 vfx:General_WishHeal,KEEP,DRAFT,KEEP_ANIM,Keep the animation; its sprites are redrawn through pending_art (battle_anims).,,,,
 vfx:Special_BallThrow,KEEP,DRAFT,KEEP_ANIM,Keep the animation; its sprites are redrawn through pending_art (battle_anims).,,,,
 vfx:Special_BallThrowWithTrainer,KEEP,DRAFT,KEEP_ANIM,Keep the animation; its sprites are redrawn through pending_art (battle_anims).,,,,
 vfx:Special_LevelUp,KEEP,DRAFT,KEEP_ANIM,Keep the animation; its sprites are redrawn through pending_art (battle_anims).,,,,
-vfx:Special_MonToSubstitute,KEEP,DRAFT,KEEP_ANIM,Keep the animation; its sprites are redrawn through pending_art (battle_anims).,,,,
-vfx:Special_SubstituteToMon,KEEP,DRAFT,KEEP_ANIM,Keep the animation; its sprites are redrawn through pending_art (battle_anims).,,,,
+vfx:Special_MonToSubstitute,HOTSWAP,DRAFT,PENDING_ART,HOLO-DECOY: the substitute doll becomes a flickering blue hologram on a projector disc (substitute.png front and back). SE: SE_HOLO_FLICKER.,,,,bible/MOVE_EFFECTS.md Tier C.
+vfx:Special_SubstituteToMon,HOTSWAP,DRAFT,PENDING_ART,HOLO-DECOY: the substitute doll becomes a flickering blue hologram on a projector disc (substitute.png front and back). SE: SE_HOLO_FLICKER.,,,,bible/MOVE_EFFECTS.md Tier C.
 vfx:Special_SwitchOutOpponentMon,KEEP,DRAFT,KEEP_ANIM,Keep the animation; its sprites are redrawn through pending_art (battle_anims).,,,,
 vfx:Special_SwitchOutPlayerMon,KEEP,DRAFT,KEEP_ANIM,Keep the animation; its sprites are redrawn through pending_art (battle_anims).,,,,
 vfx:Status_Burn,KEEP,DRAFT,KEEP_ANIM,Keep the animation; its sprites are redrawn through pending_art (battle_anims).,,,,
@@ -166,9 +166,9 @@ net:vfx-transition-vader,NET_NEW,DRAFT,NEEDS_PLACEHOLDER,Battle transition for D
 net:vfx-transition-boba-fett,NET_NEW,DRAFT,NEEDS_PLACEHOLDER,"Battle transition for Boba Fett: targeting reticle locks on, Mandalorian T-visor wipe.",vfx:B_TRANSITION_AQUA,,net:boba-fett-hunt,
 net:vfx-saber-ignite,NET_NEW,DRAFT,NEEDS_PLACEHOLDER,"Overworld lightsaber ignition: blade extends from a character's hand and glows (Vader, Obi-Wan, Luke cutscenes).",vfx:FLDEFF_SPARKLE,,,
 net:vfx-force-push-field,NET_NEW,DRAFT,NEEDS_PLACEHOLDER,Overworld Force push: ripple that shoves a boulder or NPC (optional flavour for STRENGTH).,vfx:FLDEFF_USE_STRENGTH,,,
-net:vfx-blaster-bolt,NET_NEW,DRAFT,NEEDS_PLACEHOLDER,Blaster bolt sprite and impact spark for BLASTER SHOT and raid cutscenes.,anim:Move_SWIFT,,net:move-blaster-shot,
-net:vfx-saber-slash,NET_NEW,DRAFT,NEEDS_PLACEHOLDER,SABER SLASH move animation: glowing blade arc and scorch mark.,anim:Move_SLASH,,net:move-saber-slash,
-net:vfx-force-choke,NET_NEW,DRAFT,NEEDS_PLACEHOLDER,"FORCE CHOKE move animation: the target lifts and shakes, no contact.",anim:Move_CRUNCH,,net:move-force-choke,
+net:vfx-blaster-bolt,NET_NEW,DRAFT,NEEDS_PLACEHOLDER,"BLASTER SHOT: HUD bracket, five red bolts with muzzle flashes, impact sparks, smoke. Bolt reused by raid cutscenes. SE: SE_BLASTER_BOLT, SE_BLASTER_IMPACT.",anim:Move_SWIFT,,net:move-blaster-shot,bible/MOVE_EFFECTS.md S2.
+net:vfx-saber-slash,NET_NEW,DRAFT,NEEDS_PLACEHOLDER,"SABER SLASH move animation: blade ignites (blue on the player side, red on the opponent), lunge, crossing glow arcs, scorch mark. SE: SE_SABER_IGNITE, SE_SABER_HUM, SE_SABER_SWING, SE_SABER_RETRACT.",anim:Move_SLASH,,net:move-saber-slash,bible/MOVE_EFFECTS.md S1.
+net:vfx-force-choke,NET_NEW,DRAFT,NEEDS_PLACEHOLDER,"FORCE CHOKE: dark-side backdrop, the target lifts, a red grip ring pulses, it drops. SE: SE_FORCE_CHOKE, SE_M_BIND, SE_M_TAKE_DOWN.",anim:Move_CRUNCH,,net:move-force-choke,bible/MOVE_EFFECTS.md S4.
 graphics/unused/old_battle_interface_1.png,CUT,DRAFT,NO_ART,"Ghost: unused vanilla art, never shown.",,,,"Not referenced anywhere in src/. Delete, do not redraw."
 graphics/unused/old_battle_interface_2.png,CUT,DRAFT,NO_ART,"Ghost: unused vanilla art, never shown.",,,,"Not referenced anywhere in src/. Delete, do not redraw."
 graphics/unused/old_battle_interface_3.png,CUT,DRAFT,NO_ART,"Ghost: unused vanilla art, never shown.",,,,"Not referenced anywhere in src/. Delete, do not redraw."
@@ -186,3 +186,4 @@ graphics/trainers/back_pics/red.png,KEEP,DRAFT,KEEP_ART,RED (FireRed/LeafGreen l
 graphics/trainers/back_pics/leaf.png,KEEP,DRAFT,KEEP_ART,LEAF (FireRed/LeafGreen link leftover): not redrawn,,,,"Only shown when linking with a FireRed/LeafGreen cartridge, which this game never does. Keep the vanilla file (the code still references it); do not redraw."
 graphics/trainers/front_pics/red.png,KEEP,DRAFT,KEEP_ART,RED (FireRed/LeafGreen link leftover): not redrawn,,,,"Only shown when linking with a FireRed/LeafGreen cartridge, which this game never does. Keep the vanilla file (the code still references it); do not redraw."
 graphics/trainers/front_pics/leaf.png,KEEP,DRAFT,KEEP_ART,LEAF (FireRed/LeafGreen link leftover): not redrawn,,,,"Only shown when linking with a FireRed/LeafGreen cartridge, which this game never does. Keep the vanilla file (the code still references it); do not redraw."
+net:vfx-bg-force,NET_NEW,DRAFT,NEEDS_PLACEHOLDER,"BG_FORCE battle backdrop: deep indigo with a slow radial ripple scroll, blue-tinted for light-side moves and red-black for dark-side ones. Replaces BG_PSYCHIC for the 17 Force moves (every SetPsychicBackground caller plus LUSTER PURGE and PSYCHO BOOST). One tileset + palette + gBattleAnimBackgroundTable entry, same plumbing as BG_THUNDER.",graphics/battle_anims/backgrounds/psychic.png,,move:psychic,bible/MOVE_EFFECTS.md S3 and Tier A.

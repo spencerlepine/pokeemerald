@@ -5645,7 +5645,7 @@ gText_Hypnosis,,data/text/contest_strings.inc,205,,script,contest_strings,HYPNOS
 gText_Softboiled,,data/text/contest_strings.inc,208,,script,contest_strings,SOFTBOILED$,SELF REPAIR$,CURATED,SOFTBOILED,,,reviewed AUTO draft,NOT_STARTED
 gText_HornAttack,,data/text/contest_strings.inc,211,,script,contest_strings,HORN ATTACK$,HORN ATTACK$,CURATED,,,,"reviewed, no change needed",NOT_STARTED
 gText_SwordsDance,,data/text/contest_strings.inc,214,,script,contest_strings,SWORDS DANCE$,SWORDS DANCE$,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-gText_Conversion,,data/text/contest_strings.inc,217,,script,contest_strings,CONVERSION$,CONVERSION$,CURATED,,,,"reviewed, no change needed",NOT_STARTED
+gText_Conversion,,data/text/contest_strings.inc,217,,script,contest_strings,CONVERSION$,CONVERSION$,CURATED,CONVERSION,,,"reviewed, no change needed",NOT_STARTED
 gText_SunnyDay,,data/text/contest_strings.inc,220,,script,contest_strings,SUNNY DAY$,SUNNY DAY$,CURATED,,,,"reviewed, no change needed",NOT_STARTED
 gText_Rest2,,data/text/contest_strings.inc,223,,script,contest_strings,REST$,REST$,CURATED,,,,"reviewed, no change needed",NOT_STARTED
 gText_Vicegrip,,data/text/contest_strings.inc,226,,script,contest_strings,VICEGRIP$,VICEGRIP$,CURATED,,,,"reviewed, no change needed",NOT_STARTED
@@ -8556,7 +8556,7 @@ sText_TransmittingPleaseWait,,src/berry_fix_program.c,51,,c,berry_fix_program,Tr
 sText_PleaseFollowInstructionsOnScreen,,src/berry_fix_program.c,54,,c,berry_fix_program,Please follow the instructions on your\nPOKéMON Ruby/Sapphire screen.,Please follow the instructions on your\nCOMPANION Ruby/Sapphire screen.,CURATED,POKéMON,,,reviewed AUTO draft,NOT_STARTED
 sText_TransmissionFailureTryAgain,,src/berry_fix_program.c,56,,c,berry_fix_program,Transmission failure.\n{COLOR RED}{SHADOW LIGHT_RED}Please try again.,Transmission failure.\n{COLOR RED}{SHADOW LIGHT_RED}Please try again.,CURATED,,,,"reviewed, no change needed",NOT_STARTED
 sCreditsText_EmptyString,,src/data/credits.h,65,,c,credits,,,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-sCreditsText_PkmnEmeraldVersion,,src/data/credits.h,66,,c,credits,POKéMON EMERALD VERSION,EMERALD SW VERSION,CURATED,POKéMON,,,title line; the staff credits keep the real names,NOT_STARTED
+sCreditsText_PkmnEmeraldVersion,,src/data/credits.h,66,,c,credits,POKéMON EMERALD VERSION,STAR WARS: KYBER VERSION,CURATED,POKéMON,,,title line; the staff credits keep the real names,NOT_STARTED
 sCreditsText_Credits,,src/data/credits.h,67,,c,credits,Credits,Credits,CURATED,,,,"reviewed, no change needed",NOT_STARTED
 sCreditsText_ExecutiveDirector,,src/data/credits.h,68,,c,credits,Executive Director,Executive Director,CURATED,,,,"reviewed, no change needed",NOT_STARTED
 sCreditsText_Director,,src/data/credits.h,69,,c,credits,Director,Director,CURATED,,,,"reviewed, no change needed",NOT_STARTED
@@ -10902,7 +10902,7 @@ gJPText_Sama,,src/strings.c,1537,,c,ui_string,さま,さま,CURATED,,,,"reviewed
 gText_DexHoenn,,src/strings.c,1538,,c,ui_string,HOENN,OUTER RIM,CURATED,HOENN,,21,reviewed AUTO draft,NOT_STARTED
 gText_DexNational,,src/strings.c,1539,,c,ui_string,NATIONAL,NATIONAL,CURATED,,,,"reviewed, no change needed",NOT_STARTED
 gText_PokedexDiploma,,src/strings.c,1540,,c,ui_string,PLAYER: {CLEAR 16}{COLOR RED}{SHADOW LIGHT_RED}{PLAYER}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}\n\nThis document certifies\nthat you have successfully\ncompleted your\n{STR_VAR_1} POKéDEX.\n\n{CLEAR_TO 66}{COLOR RED}{SHADOW LIGHT_RED}GAME FREAK,PLAYER: {CLEAR 16}{COLOR RED}{SHADOW LIGHT_RED}{PLAYER}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}\n\nThis document certifies\nthat you have successfully\ncompleted your\n{STR_VAR_1} DATAPAD.\n\n{CLEAR_TO 66}{COLOR RED}{SHADOW LIGHT_RED}FAN PROJECT,CURATED,POKéDEX,,,reviewed AUTO draft,NOT_STARTED
-gJPText_GameFreak,,src/strings.c,1541,,c,ui_string,{COLOR RED}{SHADOW LIGHT_RED}ゲ-ムフリ-ク,{COLOR RED}{SHADOW LIGHT_RED}FAN PROJECT,CURATED,,,,"reviewed, no change needed",NOT_STARTED
+gJPText_GameFreak,,src/strings.c,1541,,c,ui_string,{COLOR RED}{SHADOW LIGHT_RED}ゲ-ムフリ-ク,{COLOR RED}{SHADOW LIGHT_RED}FAN PROJECT,CURATED,,,31,"GAME FREAK -> FAN PROJECT (owner, 2026-11-01); unused in game",NOT_STARTED
 gText_DiplomaEmpty,,src/strings.c,1542,,c,ui_string,{COLOR RED}{SHADOW LIGHT_RED},{COLOR RED}{SHADOW LIGHT_RED},CURATED,,,,"reviewed, no change needed",NOT_STARTED
 gText_Hoenn,,src/strings.c,1543,,c,ui_string,HOENN,OUTER RIM,CURATED,HOENN,,21,reviewed AUTO draft,NOT_STARTED
 gText_OhABite,,src/strings.c,1544,,c,ui_string,Oh! A bite!,Oh! A bite!,CURATED,,,,"reviewed, no change needed",NOT_STARTED

@@ -4,7 +4,7 @@ move:karate-chop,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused
 move:double-slap,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:comet-punch,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:mega-punch,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:pay-day,CREDIT TOSS,HOTSWAP,DONE,KEEP_ANIM,,,"Same stats, type and effect; rename only. Reuses the existing animation."
+move:pay-day,CREDIT TOSS,HOTSWAP,DONE,PENDING_ART,,Three credit chips fanned at the target; a credit-counter chime.,"Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md Tier B. SE: SE_M_RAZOR_WIND2, SE_M_PAY_DAY."
 move:fire-punch,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:ice-punch,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:thunder-punch,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
@@ -13,7 +13,7 @@ move:vice-grip,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:guillotine,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:razor-wind,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:swords-dance,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:cut,VIBROBLADE,HOTSWAP,DONE,PENDING_ART,,,"Same stats, type and effect; rename only. Wants a new Star Wars VFX."
+move:cut,VIBROBLADE,HOTSWAP,DONE,PENDING_ART,,Two buzzing vibroblade strokes.,"Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md storyboard S12. SE: SE_VIBROBLADE."
 move:gust,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:wing-attack,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:whirlwind,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
@@ -47,7 +47,7 @@ move:growl,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:roar,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:sing,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:supersonic,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:sonic-boom,SONIC BLAST,HOTSWAP,DONE,KEEP_ANIM,,,"Same stats, type and effect; rename only. Reuses the existing animation."
+move:sonic-boom,SONIC BLAST,HOTSWAP,DONE,PENDING_ART,,Vanilla rings plus an arena shake.,"Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md Tier C. SE: SE_M_SUPERSONIC."
 move:disable,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:acid,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:ember,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
@@ -58,10 +58,10 @@ move:hydro-pump,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:surf,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:ice-beam,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:blizzard,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:psybeam,FORCE WAVE,HOTSWAP,DONE,KEEP_ANIM,,,"Same stats, type and effect; rename only. Reuses the existing animation."
+move:psybeam,FORCE WAVE,HOTSWAP,DONE,PENDING_ART,,A blue Force pulse train.,"Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md Tier A (the Force). SE: SE_FORCE_HUM, SE_M_PSYBEAM."
 move:bubble-beam,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:aurora-beam,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:hyper-beam,TURBOLASER,HOTSWAP,DONE,PENDING_ART,,,"Same stats, type and effect; rename only. Wants a new Star Wars VFX."
+move:hyper-beam,TURBOLASER,HOTSWAP,DONE,PENDING_ART,,A green capital-ship turbolaser beam.,"Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md storyboard S7. SE: SE_TURBOLASER_CHARGE, SE_TURBOLASER, SE_M_EXPLOSION."
 move:peck,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:drill-peck,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:submission,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
@@ -91,14 +91,14 @@ move:earthquake,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:fissure,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:dig,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:toxic,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:confusion,MIND TRICK,HOTSWAP,DONE,KEEP_ANIM,,,"Same stats, type and effect; rename only. Reuses the existing animation."
-move:psychic,FORCE PUSH,HOTSWAP,DONE,PENDING_ART,,,"Same stats, type and effect; rename only. Wants a new Star Wars VFX."
-move:hypnosis,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:meditate,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:agility,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
+move:confusion,MIND TRICK,HOTSWAP,DONE,PENDING_ART,,A Jedi mind trick: the target sees doubles of itself.,"Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md storyboard S9. SE: SE_FORCE_HUM, SE_M_CONFUSE_RAY, SE_M_SUPERSONIC."
+move:psychic,FORCE PUSH,HOTSWAP,DONE,PENDING_ART,,Force push: a shockwave of rings shoves the target back.,"Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md storyboard S3. SE: SE_FORCE_PUSH, SE_M_CHARGE, SE_M_TAKE_DOWN."
+move:hypnosis,,KEEP,DONE,PENDING_ART,,"Force status move: BG_FORCE backdrop, side tint and the Force hum; the vanilla sprites stay.","Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md Tier A (the Force). SE: SE_FORCE_HUM."
+move:meditate,,KEEP,DONE,PENDING_ART,,"Force status move: BG_FORCE backdrop, side tint and the Force hum; the vanilla sprites stay.","Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md Tier A (the Force). SE: SE_FORCE_HUM."
+move:agility,,KEEP,DONE,PENDING_ART,,"Force status move: BG_FORCE backdrop, side tint and the Force hum; the vanilla sprites stay.","Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md Tier A (the Force). SE: SE_FORCE_HUM."
 move:quick-attack,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:rage,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:teleport,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
+move:teleport,,KEEP,DONE,PENDING_ART,,A micro-jump: one-frame screen invert and a short hyperspace sound.,"Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md Tier A (the Force). SE: SE_HYPERSPACE_JUMP, SE_M_TELEPORT."
 move:night-shade,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:mimic,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:screech,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
@@ -110,16 +110,16 @@ move:smokescreen,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused
 move:confuse-ray,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:withdraw,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:defense-curl,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:barrier,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:light-screen,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
+move:barrier,,KEEP,DONE,PENDING_ART,,"Force status move: BG_FORCE backdrop, side tint and the Force hum; the vanilla sprites stay.","Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md Tier A (the Force). SE: SE_FORCE_HUM."
+move:light-screen,,KEEP,DONE,PENDING_ART,,"Force status move: BG_FORCE backdrop, side tint and the Force hum; the vanilla sprites stay.","Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md Tier A (the Force). SE: SE_FORCE_HUM."
 move:haze,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:reflect,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
+move:reflect,,KEEP,DONE,PENDING_ART,,"Force status move: BG_FORCE backdrop, side tint and the Force hum; the vanilla sprites stay.","Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md Tier A (the Force). SE: SE_FORCE_HUM."
 move:focus-energy,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:bide,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:metronome,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
+move:metronome,,KEEP,DONE,PENDING_ART,,A spinning sabacc dial instead of the finger wag.,"Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md Tier B. SE: SE_M_METRONOME."
 move:mirror-move,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:self-destruct,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:egg-bomb,SEED BOMB,HOTSWAP,DONE,KEEP_ANIM,,,"Same stats, type and effect; rename only. Reuses the existing animation."
+move:self-destruct,,KEEP,DONE,PENDING_ART,,A short-fused thermal detonator.,"Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md storyboard S10. SE: SE_DETONATOR_BEEP, SE_M_SELF_DESTRUCT."
+move:egg-bomb,SEED BOMB,HOTSWAP,DONE,PENDING_ART,,A seed pod lobbed in a high arc that bursts on the target.,"Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md Tier B. SE: SE_M_TAIL_WHIP, SE_M_SELF_DESTRUCT."
 move:lick,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:smog,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:sludge,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
@@ -131,12 +131,12 @@ move:swift,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:skull-bash,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:spike-cannon,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:constrict,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:amnesia,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:kinesis,TELEKINESIS,HOTSWAP,DONE,KEEP_ANIM,,,"Same stats, type and effect; rename only. Reuses the existing animation."
-move:soft-boiled,SELF REPAIR,HOTSWAP,DONE,KEEP_ANIM,,,"Same stats, type and effect; rename only. Reuses the existing animation."
+move:amnesia,,KEEP,DONE,PENDING_ART,,"Force status move: BG_FORCE backdrop, side tint and the Force hum; the vanilla sprites stay.","Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md Tier A (the Force). SE: SE_FORCE_HUM."
+move:kinesis,TELEKINESIS,HOTSWAP,DONE,PENDING_ART,,"The target is lifted by the Force, wobbles and drops. No object.","Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md Tier A (the Force). SE: SE_FORCE_HUM."
+move:soft-boiled,SELF REPAIR,HOTSWAP,DONE,PENDING_ART,,"Droid self-repair: a welding arm, sparks, power back on.","Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md storyboard S12. SE: SE_ASTROMECH_CHATTER, SE_WELD_SPARK, SE_M_MILK_DRINK."
 move:hi-jump-kick,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:glare,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:dream-eater,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
+move:dream-eater,,KEEP,DONE,PENDING_ART,,"Force status move: BG_FORCE backdrop, side tint and the Force hum; the vanilla sprites stay.","Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md Tier A (the Force). SE: SE_FORCE_HUM."
 move:poison-gas,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:barrage,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:leech-life,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
@@ -147,34 +147,34 @@ move:bubble,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:dizzy-punch,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:spore,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:flash,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:psywave,FORCE PULSE,HOTSWAP,DONE,KEEP_ANIM,,,"Same stats, type and effect; rename only. Reuses the existing animation."
+move:psywave,FORCE PULSE,HOTSWAP,DONE,PENDING_ART,,Afterimages of the attacker fan out and collapse into the target.,"Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md Tier A (the Force). SE: SE_FORCE_HUM."
 move:splash,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:acid-armor,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:crabhammer,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:explosion,DETONATE,HOTSWAP,DONE,KEEP_ANIM,,,"Same stats, type and effect; rename only. Reuses the existing animation."
+move:explosion,DETONATE,HOTSWAP,DONE,PENDING_ART,,"A thermal detonator is armed, beeps faster, and blows.","Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md storyboard S10. SE: SE_DETONATOR_BEEP, SE_M_EXPLOSION."
 move:fury-swipes,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:bonemerang,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:rest,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
+move:rest,,KEEP,DONE,PENDING_ART,,"Force status move: BG_FORCE backdrop, side tint and the Force hum; the vanilla sprites stay.","Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md Tier A (the Force). SE: SE_FORCE_HUM."
 move:rock-slide,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:hyper-fang,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:sharpen,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:conversion,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
+move:conversion,RECONFIGURE,HOTSWAP,DONE,PENDING_ART,,The droid reconfigures its own type: data glyphs run down it.,"Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md Tier B. SE: SE_HOLOSCAN, SE_ASTROMECH_CHATTER."
 move:tri-attack,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:super-fang,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:slash,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:substitute,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
+move:substitute,,KEEP,DONE,PENDING_ART,,A hologram decoy on a projector disc replaces the attacker.,"Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md Tier C. SE: SE_HOLO_FLICKER."
 move:struggle,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:sketch,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
+move:sketch,HOLOSCAN,HOTSWAP,DONE,PENDING_ART,,A holoscan copies the target's last move into memory.,"Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md Tier B. SE: SE_HOLOSCAN, SE_ASTROMECH_CHATTER."
 move:triple-kick,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:thief,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:spider-web,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:mind-reader,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:nightmare,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
+move:mind-reader,,KEEP,DONE,PENDING_ART,,Same targeting-computer lock as TARGET LOCK.,"Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md storyboard S11. SE: SE_TARGET_LOCK, SE_M_LOCK_ON."
+move:nightmare,,KEEP,DONE,PENDING_ART,,"Force status move: BG_FORCE backdrop, side tint and the Force hum; the vanilla sprites stay.","Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md Tier A (the Force). SE: SE_FORCE_HUM."
 move:flame-wheel,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:snore,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:curse,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:flail,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:conversion-2,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
+move:conversion-2,COUNTERCODE,HOTSWAP,DONE,PENDING_ART,,The droid counter-codes against the last move that hit it.,"Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md Tier B. SE: SE_HOLOSCAN, SE_ASTROMECH_CHATTER."
 move:aeroblast,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:cotton-spore,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:reversal,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
@@ -190,14 +190,14 @@ move:sludge-bomb,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused
 move:mud-slap,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:octazooka,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:spikes,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:zap-cannon,ION CANNON,HOTSWAP,DONE,PENDING_ART,,,"Same stats, type and effect; rename only. Wants a new Star Wars VFX."
-move:foresight,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
+move:zap-cannon,ION CANNON,HOTSWAP,DONE,PENDING_ART,,An ion bolt that ionises the target blue-white.,"Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md storyboard S8. SE: SE_ION_CANNON, SE_M_THUNDER_WAVE, SE_M_THUNDERBOLT2."
+move:foresight,AURA SIGHT,HOTSWAP,DONE,PENDING_ART,,A scan line reveals the target's true aura; Spirits can be hit.,"Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md Tier B. SE: SE_HOLOSCAN, SE_M_DETECT."
 move:destiny-bond,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:perish-song,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:icy-wind,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:detect,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:bone-rush,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:lock-on,TARGET LOCK,HOTSWAP,DONE,KEEP_ANIM,,,"Same stats, type and effect; rename only. Reuses the existing animation."
+move:lock-on,TARGET LOCK,HOTSWAP,DONE,PENDING_ART,,A targeting computer brackets and locks the target.,"Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md storyboard S11. SE: SE_TARGET_LOCK, SE_M_LOCK_ON."
 move:outrage,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:sandstorm,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:giga-drain,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
@@ -206,7 +206,7 @@ move:charm,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:rollout,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:false-swipe,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:swagger,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:milk-drink,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
+move:milk-drink,GRAZE,HOTSWAP,DONE,PENDING_ART,,"The shaak grazes and recovers. (Owner alternative: BLUE MILK, same staging, no jug.)","Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md Tier B. SE: SE_M_BITE, SE_M_MILK_DRINK."
 move:spark,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:fury-cutter,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:steel-wing,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
@@ -224,7 +224,7 @@ move:magnitude,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:dynamic-punch,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:megahorn,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:dragon-breath,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:baton-pass,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
+move:baton-pass,,KEEP,DONE,PENDING_ART,,The capture-pod recall beam draws the attacker up.,"Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md Tier B. SE: SE_POD_THROW, SE_M_BATON_PASS."
 move:encore,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:pursuit,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:rapid-spin,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
@@ -241,12 +241,12 @@ move:twister,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:rain-dance,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:sunny-day,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:crunch,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:mirror-coat,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:psych-up,FORCE FOCUS,HOTSWAP,DONE,KEEP_ANIM,,,"Same stats, type and effect; rename only. Reuses the existing animation."
+move:mirror-coat,,KEEP,DONE,PENDING_ART,,"Force status move: BG_FORCE backdrop, side tint and the Force hum; the vanilla sprites stay.","Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md Tier A (the Force). SE: SE_FORCE_HUM."
+move:psych-up,FORCE FOCUS,HOTSWAP,DONE,PENDING_ART,,"The attacker rises, afterimage, blue ring.","Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md Tier A (the Force). SE: SE_FORCE_HUM."
 move:extreme-speed,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:ancient-power,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:shadow-ball,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:future-sight,FORCE VISION,HOTSWAP,DONE,KEEP_ANIM,,,"Same stats, type and effect; rename only. Reuses the existing animation."
+move:future-sight,FORCE VISION,HOTSWAP,DONE,PENDING_ART,,"A Force vision of the target hangs above it, then snaps down when the hit lands.","Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md Tier A (the Force). SE: SE_FORCE_HUM."
 move:rock-smash,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:whirlpool,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:beat-up,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
@@ -266,25 +266,25 @@ move:focus-punch,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused
 move:smelling-salt,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:follow-me,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:nature-power,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:charge,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
+move:charge,,KEEP,DONE,PENDING_ART,,Vanilla charge particles with a capacitor whine and a final screen invert.,"Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md Tier C. SE: SE_M_CHARGE."
 move:taunt,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:helping-hand,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:trick,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:role-play,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
+move:trick,,KEEP,DONE,PENDING_ART,,"Force status move: BG_FORCE backdrop, side tint and the Force hum; the vanilla sprites stay.","Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md Tier A (the Force). SE: SE_FORCE_HUM."
+move:role-play,,KEEP,DONE,PENDING_ART,,"Force status move: BG_FORCE backdrop, side tint and the Force hum; the vanilla sprites stay.","Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md Tier A (the Force). SE: SE_FORCE_HUM."
 move:wish,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:assist,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:ingrain,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:superpower,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:magic-coat,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:recycle,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
+move:magic-coat,,KEEP,DONE,PENDING_ART,,"Force status move: BG_FORCE backdrop, side tint and the Force hum; the vanilla sprites stay.","Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md Tier A (the Force). SE: SE_FORCE_HUM."
+move:recycle,,KEEP,DONE,PENDING_ART,,A spark and a green OK tick on the HUD.,"Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md Tier C. SE: SE_ASTROMECH_CHATTER."
 move:revenge,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:brick-break,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:yawn,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:knock-off,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:endeavor,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:eruption,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:skill-swap,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:imprison,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
+move:skill-swap,,KEEP,DONE,PENDING_ART,,"Force status move: BG_FORCE backdrop, side tint and the Force hum; the vanilla sprites stay.","Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md Tier A (the Force). SE: SE_FORCE_HUM."
+move:imprison,,KEEP,DONE,PENDING_ART,,"Force status move: BG_FORCE backdrop, side tint and the Force hum; the vanilla sprites stay.","Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md Tier A (the Force). SE: SE_FORCE_HUM."
 move:refresh,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:grudge,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:snatch,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
@@ -293,8 +293,8 @@ move:dive,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:arm-thrust,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:camouflage,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:tail-glow,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:luster-purge,BOGAN PURGE,HOTSWAP,DONE,KEEP_ANIM,,,"Same stats, type and effect; rename only. Reuses the existing animation."
-move:mist-ball,ASHLA MIST,HOTSWAP,DONE,KEEP_ANIM,,,"Same stats, type and effect; rename only. Reuses the existing animation."
+move:luster-purge,BOGAN PURGE,HOTSWAP,DONE,PENDING_ART,,"BOGAN's dark-side purge: red-violet, black vignette.","Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md Tier A (the Force). SE: SE_FORCE_HUM, SE_M_PSYBEAM."
+move:mist-ball,ASHLA MIST,HOTSWAP,DONE,PENDING_ART,,"ASHLA's light-side mist: blue, cold ring.","Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md Tier A (the Force). SE: SE_FORCE_HUM, SE_M_HAZE."
 move:feather-dance,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:teeter-dance,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:blaze-kick,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
@@ -320,11 +320,11 @@ move:silver-wind,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused
 move:metal-sound,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:grass-whistle,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:tickle,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:cosmic-power,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
+move:cosmic-power,,KEEP,DONE,PENDING_ART,,"Force status move: BG_FORCE backdrop, side tint and the Force hum; the vanilla sprites stay.","Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md Tier A (the Force). SE: SE_FORCE_HUM."
 move:water-spout,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:signal-beam,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:shadow-punch,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:extrasensory,FORCE SENSE,HOTSWAP,DONE,KEEP_ANIM,,,"Same stats, type and effect; rename only. Reuses the existing animation."
+move:extrasensory,FORCE SENSE,HOTSWAP,DONE,PENDING_ART,,"The Force sense distortion, blue, with the flinch shake.","Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md Tier A (the Force). SE: SE_FORCE_HUM."
 move:sky-uppercut,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:sand-tomb,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:sheer-cold,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
@@ -345,11 +345,11 @@ move:covet,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:volt-tackle,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:magical-leaf,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:water-sport,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:calm-mind,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
+move:calm-mind,,KEEP,DONE,PENDING_ART,,"Force status move: BG_FORCE backdrop, side tint and the Force hum; the vanilla sprites stay.","Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md Tier A (the Force). SE: SE_FORCE_HUM."
 move:leaf-blade,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:dragon-dance,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:rock-blast,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
-move:shock-wave,FORCE BOLT,HOTSWAP,DONE,PENDING_ART,,,"Same stats, type and effect; rename only. Wants a new Star Wars VFX."
+move:shock-wave,FORCE BOLT,HOTSWAP,DONE,PENDING_ART,,Force lightning from the fingertips.,"Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md storyboard S5. SE: SE_FORCE_LIGHTNING, SE_M_CHARGE, SE_M_TRI_ATTACK2."
 move:water-pulse,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:doom-desire,WHILL'S DOOM,HOTSWAP,DONE,KEEP_ANIM,,,"Same stats, type and effect; rename only. Reuses the existing animation."
-move:psycho-boost,FORCE STORM,HOTSWAP,DONE,KEEP_ANIM,,,"Same stats, type and effect; rename only. Reuses the existing animation."
+move:psycho-boost,FORCE STORM,HOTSWAP,DONE,PENDING_ART,,The attacker rises and unleashes a Force storm; the recoil drops it.,"Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md storyboard S6. SE: SE_FORCE_STORM, SE_M_EXPLOSION, SE_M_TAKE_DOWN."
