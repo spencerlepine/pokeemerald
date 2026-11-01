@@ -43,6 +43,36 @@ def cmd_render_tileset(a):
     print(f"{a.out}: {ts.name} {ts.n_metatiles} metatiles, {len(ts.tiles)} tiles")
 
 
+def cmd_recolour(a):
+    from . import recolour, review
+    rec = recolour.Recipe.load(a.recipe)
+    L = gba.layouts()
+    out = Path(a.out)
+    out.mkdir(parents=True, exist_ok=True)
+    log: list[str] = []
+    panels = []
+    pairs: dict[tuple[str, str], tuple[gba.TilesetPair, gba.TilesetPair]] = {}
+    for name in a.layouts:
+        lay = L[name]
+        key = (lay.primary, lay.secondary)
+        if key not in pairs:
+            van = gba.TilesetPair(gba.load_tileset_by_header(lay.primary), gba.load_tileset_by_header(lay.secondary))
+            pairs[key] = (van, recolour.recolour_pair(van, rec, log))
+        van, new = pairs[key]
+        panels.append(review.side_by_side([(f"{lay.name} vanilla", gba.render_layout(lay, pair=van)),
+                                           (f"{lay.name} {rec.name}", gba.render_layout(lay, pair=new))], zoom_factor=a.zoom))
+    sw_rows = []
+    for (p, s), (van, new) in pairs.items():
+        for ts_v, ts_n, rng in ((van.primary, new.primary, range(0, 6)), (van.secondary, new.secondary, range(6, 13))):
+            for b in rng:
+                if any(c != ts_v.palettes[b][0] for c in ts_v.palettes[b]):
+                    sw_rows.append((f"{ts_v.name}:{b}", ts_v.palettes[b], ts_n.palettes[b]))
+            recolour.write_palettes(ts_n, out / "palettes" / ts_n.name)
+    review.stack(panels + [review.swatches(sw_rows)]).save(out / f"review_{rec.name}.png")
+    (out / f"log_{rec.name}.txt").write_text("\n".join(log) + "\n")
+    print(f"{out}/review_{rec.name}.png, palettes under {out}/palettes/<tileset>/NN.pal")
+
+
 def cmd_list_layouts(a):
     for name, l in sorted(gba.layouts().items()):
         if name.startswith("LAYOUT_"):
@@ -66,6 +96,10 @@ def main(argv=None):
     s = sub.add_parser("render-tileset"); s.add_argument("tileset"); s.add_argument("out")
     s.add_argument("--with", dest="with_"); s.add_argument("--cols", type=int, default=16); s.add_argument("--zoom", type=int, default=1)
     s.set_defaults(fn=cmd_render_tileset)
+    s = sub.add_parser("recolour", help="stage 1: re-theme a tileset pair by palette, render vanilla vs new")
+    s.add_argument("recipe"); s.add_argument("--layouts", nargs="+", default=["LittlerootTown_Layout", "Route101_Layout"])
+    s.add_argument("--out", default="out/recolour"); s.add_argument("--zoom", type=int, default=2)
+    s.set_defaults(fn=cmd_recolour)
     s = sub.add_parser("list-layouts"); s.add_argument("filter", nargs="?"); s.set_defaults(fn=cmd_list_layouts)
     s = sub.add_parser("list-tilesets"); s.set_defaults(fn=cmd_list_tilesets)
 

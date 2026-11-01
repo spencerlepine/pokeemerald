@@ -1,0 +1,28 @@
+# Stage 1 prototype: Tatooine homestead town (Littleroot -> Mos Pelgo). Palette only, pixels untouched.
+# Matches are on the vanilla colour in CIELCh (L lightness 0-100, C chroma, H hue degrees).
+name: tatooine
+notes: >
+  Ground green -> Tatooine sand; canopies -> dusty scrub olive; roof reds and peaches -> adobe clay;
+  dirt -> warm sand-brown; sand yellows and water kept; cool outline greys kept.
+rules:
+  - name: ground-sand                 # #73c5a4 teal ground, #41b483 tufts, #a4d5c5 pale ground
+    match: {hue: [148, 182], chroma_min: 15}
+    set:   {hue: 85, chroma: 30, light: +4}
+  - name: canopy-scrub                # bright tree greens
+    match: {hue: [112, 147], chroma_min: 30}
+    set:   {hue: 96, chroma_scale: 0.55, light: +3}
+  - name: pale-grass                  # petalburg's pale green path/lawn tiles
+    match: {hue: [100, 147], chroma_min: 12, chroma_max: 30}
+    set:   {hue: 88, chroma_scale: 0.95, light: +2}
+  - name: roof-clay                   # reds, oranges, peaches with real chroma
+    match: {hue: [10, 70], chroma_min: 38}
+    set:   {hue: 52, chroma_scale: 0.72, light: +2}
+  - name: dirt-sandbrown              # low-chroma browns (paths, trunks)
+    match: {hue: [10, 80], chroma_min: 20, chroma_max: 38, light_max: 72}
+    set:   {hue: 66, chroma_scale: 0.95, light: +4}
+  - name: wall-adobe                  # yellow walls and wood -> sandstone (vanilla sand yellows too, slightly muted)
+    match: {hue: [70, 110], chroma_min: 30, light_min: 60}
+    set:   {hue: 78, chroma_scale: 0.85}
+  - name: water-dusty                 # keep water, a touch greener and calmer
+    match: {hue: [245, 300], chroma_min: 30}
+    set:   {hue_shift: -12, chroma_scale: 0.9}
