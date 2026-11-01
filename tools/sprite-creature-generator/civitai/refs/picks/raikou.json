@@ -1,10 +1,9 @@
 {
   "init": "refs/raikou_prep.png",
-  "init_source": "https://static.wikia.nocookie.net/starwars/images/a/a8/EdanTiger-IAG.jpg/revision/latest?cb=20100817144210#crop=0.03,0.12,0.69,0.98",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/8/8a/Ralltiir_tiger.jpg/revision/latest?cb=20060715134736",
   "flip": false,
-  "denoise": 0.45,
-  "desc": "legendary storm tiger prowling, three-quarter view, whole body with margin, small, centred, long striped tail, clean shape",
-  "colour": "golden yellow with black stripes and white belly",
-  "ref_note": "Edan tiger colour art, three-quarter left; width 46 so the body fits",
-  "negative": "snow, grass, background, purple, noise"
+  "denoise": 0.5,
+  "desc": "powerful striped storm tiger roaring with bristling cheek fur and a long ringed tail",
+  "colour": "white and black stripes",
+  "ref_note": "Re-pick (Nexu art belongs to zangoose): Ralltiir tiger line art on white, full body three-quarter roaring, flipped to face left; uncoloured ink so colour comes from the prompt"
 }
