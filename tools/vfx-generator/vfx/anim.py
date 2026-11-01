@@ -234,7 +234,14 @@ def build_kit(st: dict, run_pipeline=True) -> Storyboard:
 def _oam(ks: KitSheet, t: dict) -> str:
     affine = {"off": "AffineOff", "normal": "AffineNormal", "double": "AffineDouble"}[t.get("affine", "off")]
     obj = "ObjBlend" if t.get("blend") else "ObjNormal"
-    return f"gOamData_{affine}_{obj}_{ks.frame[0]}x{ks.frame[1]}"
+    name = f"gOamData_{affine}_{obj}_{ks.frame[0]}x{ks.frame[1]}"
+    if name not in _oam_names():
+        raise ValueError(f"{ks.name}: {name} does not exist in include/battle_anim.h; pick another affine/blend combination")
+    return name
+
+
+def _oam_names() -> set[str]:
+    return set(re.findall(r"\b(gOamData_\w+)\b", (GAME / "include/battle_anim.h").read_text()))
 
 
 def _anim_cmds(ks: KitSheet, anim: list, loop: bool) -> list[str]:

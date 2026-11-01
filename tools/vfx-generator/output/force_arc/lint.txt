@@ -1,0 +1,14 @@
+# force_arc: FORCE BOLT forked arc
+new sheet: graphics/battle_anims/sprites/sw/force_arc.png
+sheet 64x96, frame 64x32, slots drawn [0, 1, 2], game uses [0, 1, 2]
+palette gate: PASS
+  OK   /home/user/pokeemerald/tools/vfx-generator/output/force_arc/force_arc.png  (bpp 4, colours 4/15)
+STYLE SCORE 100/100 (group new)
+  ok    tiny_colours 0.00 (vanilla band 0.00..1.00)
+  ok    lone 0.00 (vanilla band 0.00..0.02)
+  ok    checker 0.10 (vanilla band 0.00..0.15)
+  ok    dark_edge 0.00 (vanilla band 0.00..0.68)
+  ok    core_bright 51.27 (vanilla band -18.79..96.63)
+  ok    luma_range 156.37 (vanilla band 0.00..222.28)
+  ok    coverage 0.11 (vanilla band 0.09..0.75)
+  ok    border 0.02 (vanilla band 0.00..0.27)

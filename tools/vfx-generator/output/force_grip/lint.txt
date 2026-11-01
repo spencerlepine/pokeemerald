@@ -1,0 +1,14 @@
+# force_grip: FORCE CHOKE grip ring
+new sheet: graphics/battle_anims/sprites/sw/force_grip.png
+sheet 32x32, frame 32x16, slots drawn [0, 1], game uses [0, 1]
+palette gate: PASS
+  OK   /home/user/pokeemerald/tools/vfx-generator/output/force_grip/force_grip.png  (bpp 4, colours 4/15)
+STYLE SCORE 100/100 (group new)
+  ok    tiny_colours 0.00 (vanilla band 0.00..1.00)
+  ok    lone 0.00 (vanilla band 0.00..0.02)
+  ok    checker 0.00 (vanilla band 0.00..0.15)
+  ok    dark_edge 0.64 (vanilla band 0.00..0.68)
+  ok    core_bright -2.17 (vanilla band -18.79..96.63)
+  ok    luma_range 203.30 (vanilla band 0.00..222.28)
+  ok    coverage 0.23 (vanilla band 0.09..0.75)
+  ok    border 0.00 (vanilla band 0.00..0.27)

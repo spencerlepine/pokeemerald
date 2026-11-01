@@ -1,0 +1,23 @@
+# FORCE BOLT kit (owns its palette). Force lightning: a forked blue-white arc drawn lying flat (left to right);
+# the callback stretches it from the attacker to the target and rotates it onto that line. Three slots with
+# different forks so the arc crawls when the slots cycle.
+name: force_arc
+title: FORCE BOLT forked arc
+row: net:vfx-force-bolt
+bucket: NEW
+new:
+  path: graphics/battle_anims/sprites/sw/force_arc.png
+  size: [64, 96]
+  frame: [64, 32]
+brief: >
+  A jagged lightning arc running the full width of the frame, white core, pale blue sheath, violet-blue
+  rim, two or three short forks. Each slot a different zigzag. Hard bands, no outline.
+palette:
+  mode: new
+  transparent: "#000000"
+  ramps:
+    arc: ["#FFFFFF", "#D0E0FF", "#80A0FF", "#4050E0"]
+ops:
+  - bolt: {x0: 0, y0: 16, x1: 63, y1: 16, segments: 9, amp: 5, seed: "=11 + i * 7", r0: 1.6, r1: 1.2, branches: 3, branch_len: 7, branch_r: 0.9, branch_r1: 0.6, ramp: arc, bands: [0.7, 0.4, 0.15], falloff: 1.2}
+preview: {scene: none}
+lint_allow: [lone, core_bright, luma_range, coverage]

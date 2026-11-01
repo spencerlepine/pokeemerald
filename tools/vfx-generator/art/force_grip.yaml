@@ -1,0 +1,24 @@
+# FORCE CHOKE kit (owns its palette). The invisible hand made visible: a faint red grip ring that hovers
+# at the target's throat. Slot 1 is the ring clenched (thicker, knuckle notches brighter).
+name: force_grip
+title: FORCE CHOKE grip ring
+row: net:vfx-force-choke
+bucket: NEW
+new:
+  path: graphics/battle_anims/sprites/sw/force_grip.png
+  size: [32, 32]
+  frame: [32, 16]
+brief: >
+  A flat red ellipse ring (seen edge-on, like a collar) with four brighter knuckle notches on the front
+  edge. Dark-side reds, a white-hot glint on each knuckle, no outline. Alpha-blended in game.
+palette:
+  mode: new
+  transparent: "#000000"
+  ramps:
+    grip: ["#FFFFFF", "#FF9090", "#E02020", "#701010"]
+ops:
+  - ellipse: {cx: 16, cy: 8, rx: 12, ry: 5, ramp: grip, offset: "=1 if i == 0 else 0", bands: [0.6, 0.3, 0.1]}
+  - ellipse: {cx: 16, cy: 8, rx: "=9.5 if i == 0 else 9", ry: "=2.6 if i == 0 else 2.2", ramp: grip, mode: erase}
+  - sparks: {x: 7, y: 10, w: 18, h: 2, n: 4, shape: dot, ramp: grip, offset: 0, seed: 2}
+preview: {scene: none}
+lint_allow: [lone, core_bright, luma_range, coverage, dark_edge]

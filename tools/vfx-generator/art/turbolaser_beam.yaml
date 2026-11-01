@@ -1,0 +1,36 @@
+# TURBOLASER kit (owns its palette). Heavy green turbolaser fire, drawn pointing UP (the callback rotates
+# each segment onto the attacker -> target line). 0-1 beam segment (two flicker states, white core),
+# 2-3 the charge orb gathering at the attacker (small, big). Replaces the vanilla orb stream, whose
+# orbs.png is shared by 12 moves. Supersedes the art/turbolaser.yaml previewer prototype.
+name: turbolaser_beam
+title: TURBOLASER beam and charge
+row: net:vfx-turbolaser
+bucket: NEW
+new:
+  path: graphics/battle_anims/sprites/sw/turbolaser_beam.png
+  size: [32, 128]
+  frame: [32, 32]
+brief: >
+  0-1: a thick green bolt segment the full frame height with a long white-hot core, pale green sheath,
+  saturated green rim (two flicker states). 2-3: a green energy orb with a white heart, small then big,
+  with a few specks being drawn in.
+palette:
+  mode: new
+  transparent: "#000000"
+  ramps:
+    bolt: ["#F8F8F8", "#C8F8C0", "#60E070", "#209838", "#105020"]
+frame_ops:
+  0:
+    - beam: {x0: 16, y0: 30, x1: 16, y1: 2, r0: 3.4, r1: 3.4, ramp: bolt, bands: [0.62, 0.38, 0.18, 0.05]}
+    - beam: {x0: 16, y0: 29, x1: 16, y1: 3, r0: 1.2, r1: 1.2, ramp: bolt, bands: [0.0]}
+  1:
+    - beam: {x0: 16, y0: 31, x1: 16, y1: 1, r0: 2.8, r1: 2.8, ramp: bolt, bands: [0.55, 0.3, 0.12, 0.0]}
+    - beam: {x0: 16, y0: 30, x1: 16, y1: 2, r0: 0.8, r1: 0.8, ramp: bolt, bands: [0.0]}
+  2:
+    - disc: {cx: 16, cy: 16, r: 5, ramp: bolt, bands: [0.7, 0.45, 0.2, 0.05]}
+    - sparks: {cx: 16, cy: 16, r: 11, n: 5, shape: plus, ramp: bolt, offset: 1, seed: 3}
+  3:
+    - disc: {cx: 16, cy: 16, r: 9, ramp: bolt, bands: [0.75, 0.5, 0.28, 0.1]}
+    - sparks: {cx: 16, cy: 16, r: 14, n: 6, shape: dot, ramp: bolt, offset: 1, seed: 8}
+preview: {scene: none}
+lint_allow: [lone, core_bright, luma_range, coverage]

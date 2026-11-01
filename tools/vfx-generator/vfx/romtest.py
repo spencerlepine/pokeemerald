@@ -51,12 +51,35 @@ def _move_id(name: str) -> int:
     return int(m.group(1))
 
 
+def _sync(src: Path, dst: Path):
+    """Copy files that are new or changed (size or mtime) from src to dst; never deletes. Skips build/,
+    tools/agbcc/ and .git."""
+    skip = {"build", ".git"}
+    for root, dirs, files in os.walk(src):
+        rel = Path(root).relative_to(src)
+        dirs[:] = [d for d in dirs if not (rel == Path(".") and d in skip) and not (str(rel) == "tools" and d == "agbcc")]
+        for f in files:
+            a = Path(root) / f
+            b = dst / rel / f
+            sa = a.lstat()
+            if b.exists():
+                sb = b.stat()
+                if sb.st_size == sa.st_size and int(sb.st_mtime) == int(sa.st_mtime):
+                    continue
+            b.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(a, b, follow_symlinks=False)
+
+
 def _prepare(which: str, installs: dict[str, Path], move: str, fresh: bool) -> Path:
     g = WORK / which / "game"
     if fresh or not g.exists():
         shutil.rmtree(g, ignore_errors=True)
         g.parent.mkdir(parents=True, exist_ok=True)
         shutil.copytree(GAME, g, symlinks=True)
+    else:
+        # bring in source added or changed in ../game since the scratch copy was made (no deletes, so the
+        # scratch tree's build products stay and make only rebuilds what changed)
+        _sync(GAME, g)
     # restore anything a previous run installed, then install this run's sheets
     man = g.parent / "installed.json"
     prev = json.loads(man.read_text()) if man.exists() else []

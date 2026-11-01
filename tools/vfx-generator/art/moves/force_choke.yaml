@@ -1,0 +1,124 @@
+# FORCE CHOKE (net-new, clone of CRUNCH, Dark 80). Storyboard S4 in wiki/bible/MOVE_EFFECTS.md.
+# Prototyped on Move_CRUNCH, shipped as Move_FORCE_CHOKE. The arena turns dark-side red, the attacker
+# leans in, the target is lifted off the ground, a grip ring squeezes three times, then it is dropped.
+# Also defines BG_FORCE_DARK (the red-black Force backdrop every dark-side move uses).
+name: force_choke
+title: FORCE CHOKE
+doc: S4
+host: Move_CRUNCH
+ship_label: Move_FORCE_CHOKE
+romtest: {move: MOVE_CRUNCH}
+kit:
+  - force_grip
+bgs:
+  BG_FORCE_DARK:
+    name: force_dark
+    path: graphics/battle_anims/backgrounds/sw/force_dark
+    gen:
+      kind: ripple
+      cx: 128
+      cy: 80
+      spacing: 8
+      wobble: 0.6
+      petals: 4
+      colors: ["#080002", "#180408", "#200810", "#2C0C14", "#381018", "#481420", "#682030", "#A03040",
+               "#F0A0A0", "#C04050", "#601828", "#300C14", "#100408", "#000000", "#000000", "#000000"]
+templates:
+  gForceGripSpriteTemplate:
+    sheet: force_grip
+    affine: double
+    callback: AnimSpriteOnMonPos
+    anim: [[0, 30], [1, 4], [0, 4], [0, 8], [1, 4], [0, 4], [0, 8], [1, 4], [0, 4], [0, 8]]
+    affine_anims:
+      - [[0, 0, 0, 30], [-12, -12, 0, 4], [12, 12, 0, 4], [0, 0, 0, 8], [-12, -12, 0, 4], [12, 12, 0, 4],
+         [0, 0, 0, 8], [-12, -12, 0, 4], [12, 12, 0, 4], [0, 0, 0, 8]]
+code: |
+  static void AnimTask_SW_Lift_Step(u8 taskId)
+  {
+      struct Task *task = &gTasks[taskId];
+      struct Sprite *mon = &gSprites[task->data[0]];
+      s16 t = task->data[5]++;
+      s16 up = task->data[2], hold = task->data[3], down = task->data[4];
+
+      if (t < up)
+          mon->y2 = -task->data[1] * (t + 1) / up;
+      else if (t < up + hold)
+          mon->y2 = -task->data[1];
+      else if (t < up + hold + down)
+          mon->y2 = -task->data[1] * (up + hold + down - t - 1) / down;
+      else
+      {
+          mon->y2 = 0;
+          DestroyAnimVisualTask(taskId);
+      }
+  }
+
+  // Lift a battler off the ground, hold it, drop it.
+  // args: battler, height (px), up frames, hold frames, drop frames
+  void AnimTask_SW_Lift(u8 taskId)
+  {
+      struct Task *task = &gTasks[taskId];
+
+      task->data[0] = GetAnimBattlerSpriteId(gBattleAnimArgs[0]);
+      task->data[1] = gBattleAnimArgs[1];
+      task->data[2] = gBattleAnimArgs[2];
+      task->data[3] = gBattleAnimArgs[3];
+      task->data[4] = gBattleAnimArgs[4];
+      task->data[5] = 0;
+      task->func = AnimTask_SW_Lift_Step;
+  }
+script: |
+  loadspritegfx ANIM_TAG_SW_FORCE_GRIP
+  loadspritegfx ANIM_TAG_SW_FORCE_DUST
+  monbg ANIM_TARGET
+  setalpha 12, 8
+  @ reach: the arena falls to the dark side, the attacker leans in
+  fadetobg BG_FORCE_DARK
+  waitbgfadeout
+  createvisualtask AnimTask_SetPsychicBackground, 5
+  waitbgfadein
+  loopsewithpan SE_FORCE_CHOKE, SOUND_PAN_TARGET, 16, 6
+  createvisualtask AnimTask_SW_Knockback, 5, ANIM_ATTACKER, -6, 8, 86, 10
+  delay 10
+  @ lift: the target rises off the ground and leans back
+  createvisualtask AnimTask_SW_Lift, 5, ANIM_TARGET, 14, 30, 64, 4
+  createvisualtask AnimTask_RotateMonSpriteToSide, 2, 8, -256, ANIM_TARGET, 0
+  delay 20
+  createsprite gForceGripSpriteTemplate, ANIM_TARGET, 4, -8, -12, 1, 0
+  delay 20
+  @ squeeze: shaking in the air, darkening, the grip clenches three times
+  createvisualtask AnimTask_ShakeMonInPlace, 2, ANIM_TARGET, 2, 0, 24, 1
+  simple_palette_blend selector=F_PAL_TARGET, delay=2, initial_blend_y=0, target_blend_y=7, color=RGB_BLACK
+  delay 10
+  playsewithpan SE_M_BIND, SOUND_PAN_TARGET
+  invert_screen_color scenery=TRUE, attacker=TRUE, target=TRUE
+  delay 1
+  invert_screen_color scenery=TRUE, attacker=TRUE, target=TRUE
+  delay 15
+  playsewithpan SE_M_BIND, SOUND_PAN_TARGET
+  invert_screen_color scenery=TRUE, attacker=TRUE, target=TRUE
+  delay 1
+  invert_screen_color scenery=TRUE, attacker=TRUE, target=TRUE
+  delay 15
+  playsewithpan SE_M_BIND, SOUND_PAN_TARGET
+  invert_screen_color scenery=TRUE, attacker=TRUE, target=TRUE
+  delay 1
+  invert_screen_color scenery=TRUE, attacker=TRUE, target=TRUE
+  delay 12
+  @ drop: it falls, hits the floor, dust
+  playsewithpan SE_M_TAKE_DOWN, SOUND_PAN_TARGET
+  createvisualtask AnimTask_RotateMonSpriteToSide, 2, 8, -256, ANIM_TARGET, 1
+  delay 4
+  createvisualtask AnimTask_ShakeMon, 5, ANIM_TARGET, 0, 4, 6, 1
+  createsprite gForceDustSpriteTemplate, ANIM_TARGET, 2, -14, 18, 1, 0
+  createsprite gForceDustSpriteTemplate, ANIM_TARGET, 2, 12, 20, 1, 0
+  simple_palette_blend selector=F_PAL_TARGET, delay=2, initial_blend_y=7, target_blend_y=0, color=RGB_BLACK
+  waitforvisualfinish
+  clearmonbg ANIM_TARGET
+  blendoff
+  delay 1
+  restorebg
+  waitbgfadeout
+  setarg 7, 0xFFFF
+  waitbgfadein
+  end

@@ -1,0 +1,19 @@
+{
+ "metrics": {
+  "colours": 5,
+  "frames": 4,
+  "tiny_colours": 0,
+  "coverage": 0.196533203125,
+  "border": 0.027721774193548387,
+  "core_bright": 89.20007710176931,
+  "dark_edge": 0.4384057971014493,
+  "lone": 0.0057251908396946565,
+  "checker": 0.004032258064516129,
+  "clusters": 3.5,
+  "luma_range": 192.608,
+  "saturation": 0.4430556053527928,
+  "frame_delta": 0.17610677083333334
+ },
+ "vanilla": null,
+ "score": 100
+}

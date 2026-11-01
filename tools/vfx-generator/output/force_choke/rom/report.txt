@@ -1,0 +1,4 @@
+# force_choke in the ROM
+frames filmed: 450 (every 2nd game frame)
+frames where the new art is on screen: 160
+first f00780.png, last f01098.png (320 game frames)
