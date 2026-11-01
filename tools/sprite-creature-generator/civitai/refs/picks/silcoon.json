@@ -1,10 +1,10 @@
 {
-  "desc": "side view, whole body, small, centred, facing left: one plump silk cocoon tilted slightly upward, a distinct rounded head cap at the left end with two big dark eyes and small mandibles, body wrapped in fine golden silk threads, short silk wisp at the right end",
-  "colour": "pearl white and pale gold",
-  "ref_note": "no art exists (owner confirmed): PIL drawing of a plump tilted cocoon with a rounded head cap (two dark eyes, mandibles) at the left so the head end is obvious",
-  "negative": "human, leaves",
+  "desc": "side view, whole body, small, centred, facing left: alien insect pupa, a hard ridged pearl silk cocoon hanging diagonally under a dark brown twig, subtle segment bands and silk strands, at the left end a black chitinous insect face with two small glinting amber eyes and mandibles peeking out of a slit in the silk",
+  "colour": "pearl white and pale gold silk, black chitin, dark brown twig",
+  "ref_note": "no art exists: PIL drawing of a ridged cocoon hanging from a twig with a chitin face in a slit at the left end",
+  "negative": "cute, chibi, big eyes, cartoon, smiling, face on front, plush, red, pink, magenta",
   "init": "refs/silcoon_prep.png",
-  "init_source": "refs/sources/silcoon/silcoon_head.png",
+  "init_source": "refs/sources/silcoon/silkpod_twig.png",
   "flip": false,
-  "denoise": 0.55
+  "denoise": 0.45
 }
