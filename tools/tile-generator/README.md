@@ -35,6 +35,17 @@ python -m tilegen render-tileset gTileset_Petalburg out.png --cols 16 # every me
 layout and compared with the vanilla render side by side, so the owner judges it in context and not as
 a sheet of squares.
 
+## Build, gate and check in the ROM
+
+```bash
+python -m tilegen build recipes/tatooine.yaml --layouts LittlerootTown_Layout Route101_Layout   # out/tatooine/ + review.png
+python -m tilegen install recipes/tatooine.yaml --layout LittlerootTown_Layout   # copies into game/ (gate enforced)
+(cd ../../game && make -j8 && cp pokeemerald.gba /some/test.gba && git checkout -- data/tilesets src/data/tilesets/graphics.h)
+scripts/rom-shots.sh /some/test.gba out/rom 0:9:10:9:littleroot 0:0:15:12:petalburg 0:16:10:10:route101
+```
+
+Until the owner approves a planet, installs are for test ROMs only: restore `game/` and never commit it.
+
 ## Format (what the game needs)
 
 | Fact | Value | Source |

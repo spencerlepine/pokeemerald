@@ -66,9 +66,8 @@ tiles.png, .pal, metatiles.bin, attributes, palette gate passes). A test ROM wit
 generated trees; 3D objects and buildings wait for the owner's guidance. Work the 2D categories first.
 
 Next, in order:
-1. ROM screenshot of the Tatooine pair (headless mGBA one-shot lua: load `play-tester/savestates/littleroot-after-teleport.ss0`,
-   `E.teleport`, `emu:screenshot`). The live MCP session timed out on start in this container; the one-shot
-   path still needs debugging (no screenshot written yet).
+1. ~~ROM screenshot of the Tatooine pair~~ done: `scripts/rom-shots.sh` (mash New Game in lua, teleport,
+   screenshot). The vanilla savestates do not load into a rebuilt ROM, hence the mash.
 2. Stage 2: sand patch edges, ledges, tall grass / scrub tuft redraws, more planets (Endor, Dagobah, Kamino).
 3. Stage 6: water / shoreline animation frames that keep `tileset_anims.c` ranges.
 4. Stage 5: interior floor and wall kits (2D).
