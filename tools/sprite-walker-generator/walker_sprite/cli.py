@@ -250,7 +250,10 @@ def cmd_regions(a) -> int:
 def cmd_review(a) -> int:
     """Batch review sheet against the vanilla sprites: python -m walker_sprite review out.png a.yaml b.yaml ..."""
     specs = [spec_mod.load(p) for p in a.specs]
-    preview.batch_review(specs, Path(a.out), emerald_dir())
+    if a.variants:
+        preview.variants_review(specs, Path(a.out), emerald_dir())
+    else:
+        preview.batch_review(specs, Path(a.out), emerald_dir())
     print(f"wrote {a.out}")
     return 0
 
@@ -276,6 +279,7 @@ def main(argv=None) -> int:
     rp = sub.add_parser("review")
     rp.add_argument("out")
     rp.add_argument("specs", nargs="+")
+    rp.add_argument("--variants", action="store_true", help="group specs that replace the same sheet on one row")
     rp.set_defaults(fn=cmd_review)
     cp = sub.add_parser("compare")
     cp.add_argument("out")

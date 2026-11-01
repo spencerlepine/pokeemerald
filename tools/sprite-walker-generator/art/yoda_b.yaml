@@ -1,0 +1,348 @@
+name: yoda_b
+description: 'YODA (B): vanilla kid proportions, robe with sleeves, legs under the hem.'
+kit: person16x32
+replaces: graphics/object_events/pics/people/gym_leaders/juan.png
+graphics_info: Juan
+notes: 'Batch 3 B. Hypothesis: vanilla proportions (10-row head, 20 rows tall) read as Emerald where the squat A does not. boy_1 body as regions.'
+palette: npc_3
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_3
+shade: true
+materials:
+  g: skin-b
+  G: b
+  E: b
+  c: c!
+  C: c!
+  w: w/c
+legend:
+  k: 15
+  W: 14
+accept:
+  hair_rows: two wisps, no hair mass
+  skin_tones: green hide uses ramp B
+  head_w: 16 wide ear to ear
+  eye_row: eyes are on row 18-19; the detector looks for them beside human skin tones
+  step_change: a robe body changes fewer pixels than a shirt with bare arms
+base_sheet: graphics/object_events/pics/people/boy_1.png
+remap:
+  s: g
+  a: c
+  k: c
+  b: g
+  c: G
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.....GGGGGG.....
+
+        ...WGGGGGGGGW...
+
+        ..GGGGGGGGGGGG..
+
+        ..GGGGGGGGGGGG..
+
+        E.GGGGGGGGGGGG.E
+
+        EEEgggggggggggEE
+
+        EEEggkggggkggEEE
+
+        .EEggkggggkggEE.
+
+        ..gggggggggggg..
+
+        ...gggggggggg...
+
+        ..CCccwwwwccCC..
+
+        .CCCccwwwwccCCC.
+
+        .gCCcccwwcccCCg.
+
+        ..CCccccccccCC..
+
+        ..cccccccccccc..
+
+        ...cccccccccc...'
+  down_a:
+    patches:
+    - x: 0
+      y: 13
+      rows: '.....GGGGGG.....
+
+        ...WGGGGGGGGW...
+
+        ..GGGGGGGGGGGG..
+
+        ..GGGGGGGGGGGG..
+
+        E.GGGGGGGGGGGG.E
+
+        EEEgggggggggggEE
+
+        EEEggkggggkggEEE
+
+        .EEggkggggkggEE.
+
+        ..gggggggggggg..
+
+        ...gggggggggg...
+
+        ..CCccwwwwccCC..
+
+        .CCCccwwwwccCCC.
+
+        .gCCcccwwcccCCg.
+
+        ..CCccccccccCC..
+
+        ..cccccccccccc..
+
+        ...cccccccccc...'
+  down_b:
+    patches:
+    - x: 0
+      y: 13
+      rows: '.....GGGGGG.....
+
+        ...WGGGGGGGGW...
+
+        ..GGGGGGGGGGGG..
+
+        ..GGGGGGGGGGGG..
+
+        E.GGGGGGGGGGGG.E
+
+        EEEgggggggggggEE
+
+        EEEggkggggkggEEE
+
+        .EEggkggggkggEE.
+
+        ..gggggggggggg..
+
+        ...gggggggggg...
+
+        ..CCccwwwwccCC..
+
+        .CCCccwwwwccCCC.
+
+        .gCCcccwwcccCCg.
+
+        ..CCccccccccCC..
+
+        ..cccccccccccc..
+
+        ...cccccccccc...'
+  up:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.....GGGGGG.....
+
+        ...WGGGGGGGGW...
+
+        ..GGGGGGGGGGGG..
+
+        ..GGGGGGGGGGGG..
+
+        E.GGGGGGGGGGGG.E
+
+        EEEGGGGGGGGGGGEE
+
+        EEEGGGGGGGGGGEEE
+
+        .EEGGGGGGGGGGEE.
+
+        ..GGGGGGGGGGGG..
+
+        ...cccccccccc...
+
+        ..CCccccccccCC..
+
+        .CCCccccccccCCC.
+
+        .gCCccccccccCCg.
+
+        ..CCccccccccCC..
+
+        ..cccccccccccc..
+
+        ...cccccccccc...'
+  up_a:
+    patches:
+    - x: 0
+      y: 13
+      rows: '.....GGGGGG.....
+
+        ...WGGGGGGGGW...
+
+        ..GGGGGGGGGGGG..
+
+        ..GGGGGGGGGGGG..
+
+        E.GGGGGGGGGGGG.E
+
+        EEEGGGGGGGGGGGEE
+
+        EEEGGGGGGGGGGEEE
+
+        .EEGGGGGGGGGGEE.
+
+        ..GGGGGGGGGGGG..
+
+        ...cccccccccc...
+
+        ..CCccccccccCC..
+
+        .CCCccccccccCCC.
+
+        .gCCccccccccCCg.
+
+        ..CCccccccccCC..
+
+        ..cccccccccccc..
+
+        ...cccccccccc...'
+  up_b:
+    patches:
+    - x: 0
+      y: 13
+      rows: '.....GGGGGG.....
+
+        ...WGGGGGGGGW...
+
+        ..GGGGGGGGGGGG..
+
+        ..GGGGGGGGGGGG..
+
+        E.GGGGGGGGGGGG.E
+
+        EEEGGGGGGGGGGGEE
+
+        EEEGGGGGGGGGGEEE
+
+        .EEGGGGGGGGGGEE.
+
+        ..GGGGGGGGGGGG..
+
+        ...cccccccccc...
+
+        ..CCccccccccCC..
+
+        .CCCccccccccCCC.
+
+        .gCCccccccccCCg.
+
+        ..CCccccccccCC..
+
+        ..cccccccccccc..
+
+        ...cccccccccc...'
+  left:
+    patches:
+    - x: 0
+      y: 12
+      rows: '....GGGGGG......
+
+        ..WGGGGGGGG.....
+
+        ..GGGGGGGGGG....
+
+        .GGGGGGGGGGG....
+
+        .GGGGGGGGGGG..E.
+
+        .gggggggggGGEEEE
+
+        .ggkggggggggEEE.
+
+        .ggkggggggggEE..
+
+        ..gggggggggg....
+
+        ...ggggggggg....
+
+        ....cwwccccc....
+
+        ...ccwwCCcccc...
+
+        ...ccwcCCcccc...
+
+        ...ccccggcccc...
+
+        ...cccccccccc...
+
+        ....cccccccc....'
+  left_a:
+    patches:
+    - x: 0
+      y: 13
+      rows: '....GGGGGG......
+
+        ..WGGGGGGGG.....
+
+        ..GGGGGGGGGG....
+
+        .GGGGGGGGGGG....
+
+        .GGGGGGGGGGG..E.
+
+        .gggggggggGGEEEE
+
+        .ggkggggggggEEE.
+
+        .ggkggggggggEE..
+
+        ..gggggggggg....
+
+        ...ggggggggg....
+
+        ....cwwccccc....
+
+        ...ccwwCCcccc...
+
+        ...ccwcCCcccc...
+
+        ...ccccggcccc...
+
+        ...cccccccccc...
+
+        ....cccccccc....'
+  left_b:
+    patches:
+    - x: 0
+      y: 13
+      rows: '....GGGGGG......
+
+        ..WGGGGGGGG.....
+
+        ..GGGGGGGGGG....
+
+        .GGGGGGGGGGG....
+
+        .GGGGGGGGGGG..E.
+
+        .gggggggggGGEEEE
+
+        .ggkggggggggEEE.
+
+        .ggkggggggggEE..
+
+        ..gggggggggg....
+
+        ...ggggggggg....
+
+        ....cwwccccc....
+
+        ...ccwwCCcccc...
+
+        ...ccwcCCcccc...
+
+        ...ccccggcccc...
+
+        ...cccccccccc...
+
+        ....cccccccc....'

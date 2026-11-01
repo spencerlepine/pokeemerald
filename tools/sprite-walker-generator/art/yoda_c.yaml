@@ -1,0 +1,346 @@
+name: yoda_c
+description: 'YODA (C): hood up, ears out of the hood, vanilla proportions.'
+kit: person16x32
+replaces: graphics/object_events/pics/people/gym_leaders/juan.png
+graphics_info: Juan
+notes: 'Batch 3 C. Hypothesis: the hood is the Jedi silhouette and frames the green face. boy_1 body as regions, hood (H) as its own volume over the face.'
+palette: npc_3
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_3
+shade: true
+materials:
+  g: skin-b
+  E: b
+  H: c
+  c: c!
+  C: c!
+  w: w/c
+legend:
+  k: 15
+accept:
+  hair_rows: a hood, not hair
+  skin_tones: green hide uses ramp B
+  head_w: 16 wide ear to ear
+  eye_row: the face sits low inside the hood
+base_sheet: graphics/object_events/pics/people/boy_1.png
+remap:
+  s: g
+  a: c
+  k: c
+  b: g
+  c: H
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.......HH.......
+
+        ......HHHH......
+
+        .....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ...HHggggggHH...
+
+        E..HHgkggkgHH..E
+
+        EEEHHgkggkgHHEEE
+
+        .EEHHggggggHHEE.
+
+        ...HHHHggHHHH...
+
+        ..CCHHHwwHHHCC..
+
+        .CCCccwwwwccCCC.
+
+        .gCCcccwwcccCCg.
+
+        ..CCccccccccCC..
+
+        ..cccccccccccc..
+
+        ...cccccccccc...'
+  down_a:
+    patches:
+    - x: 0
+      y: 13
+      rows: '.......HH.......
+
+        ......HHHH......
+
+        .....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ...HHggggggHH...
+
+        E..HHgkggkgHH..E
+
+        EEEHHgkggkgHHEEE
+
+        .EEHHggggggHHEE.
+
+        ...HHHHggHHHH...
+
+        ..CCHHHwwHHHCC..
+
+        .CCCccwwwwccCCC.
+
+        .gCCcccwwcccCCg.
+
+        ..CCccccccccCC..
+
+        ..cccccccccccc..
+
+        ...cccccccccc...'
+  down_b:
+    patches:
+    - x: 0
+      y: 13
+      rows: '.......HH.......
+
+        ......HHHH......
+
+        .....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ...HHggggggHH...
+
+        E..HHgkggkgHH..E
+
+        EEEHHgkggkgHHEEE
+
+        .EEHHggggggHHEE.
+
+        ...HHHHggHHHH...
+
+        ..CCHHHwwHHHCC..
+
+        .CCCccwwwwccCCC.
+
+        .gCCcccwwcccCCg.
+
+        ..CCccccccccCC..
+
+        ..cccccccccccc..
+
+        ...cccccccccc...'
+  up:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.......HH.......
+
+        ......HHHH......
+
+        .....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ...HHHHHHHHHH...
+
+        E..HHHHHHHHHH..E
+
+        EEEHHHHHHHHHHEEE
+
+        .EEHHHHHHHHHHEE.
+
+        ...HHHHHHHHHH...
+
+        ..CCHHHHHHHHCC..
+
+        .CCCccccccccCCC.
+
+        .gCCccccccccCCg.
+
+        ..CCccccccccCC..
+
+        ..cccccccccccc..
+
+        ...cccccccccc...'
+  up_a:
+    patches:
+    - x: 0
+      y: 13
+      rows: '.......HH.......
+
+        ......HHHH......
+
+        .....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ...HHHHHHHHHH...
+
+        E..HHHHHHHHHH..E
+
+        EEEHHHHHHHHHHEEE
+
+        .EEHHHHHHHHHHEE.
+
+        ...HHHHHHHHHH...
+
+        ..CCHHHHHHHHCC..
+
+        .CCCccccccccCCC.
+
+        .gCCccccccccCCg.
+
+        ..CCccccccccCC..
+
+        ..cccccccccccc..
+
+        ...cccccccccc...'
+  up_b:
+    patches:
+    - x: 0
+      y: 13
+      rows: '.......HH.......
+
+        ......HHHH......
+
+        .....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ...HHHHHHHHHH...
+
+        E..HHHHHHHHHH..E
+
+        EEEHHHHHHHHHHEEE
+
+        .EEHHHHHHHHHHEE.
+
+        ...HHHHHHHHHH...
+
+        ..CCHHHHHHHHCC..
+
+        .CCCccccccccCCC.
+
+        .gCCccccccccCCg.
+
+        ..CCccccccccCC..
+
+        ..cccccccccccc..
+
+        ...cccccccccc...'
+  left:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......HH........
+
+        .....HHHH.......
+
+        ....HHHHHH......
+
+        ...HHHHHHHH.....
+
+        ..HHHHHHHHHH....
+
+        ..HgggggHHHH..E.
+
+        ..HgkgggHHHHEEEE
+
+        ..HgkgggHHHHEEE.
+
+        ..HgggggHHHHEE..
+
+        ...HHggHHHHH....
+
+        ....HwwHHHHH....
+
+        ...ccwwCCcccc...
+
+        ...ccwcCCcccc...
+
+        ...ccccggcccc...
+
+        ...cccccccccc...
+
+        ....cccccccc....'
+  left_a:
+    patches:
+    - x: 0
+      y: 13
+      rows: '......HH........
+
+        .....HHHH.......
+
+        ....HHHHHH......
+
+        ...HHHHHHHH.....
+
+        ..HHHHHHHHHH....
+
+        ..HgggggHHHH..E.
+
+        ..HgkgggHHHHEEEE
+
+        ..HgkgggHHHHEEE.
+
+        ..HgggggHHHHEE..
+
+        ...HHggHHHHH....
+
+        ....HwwHHHHH....
+
+        ...ccwwCCcccc...
+
+        ...ccwcCCcccc...
+
+        ...ccccggcccc...
+
+        ...cccccccccc...
+
+        ....cccccccc....'
+  left_b:
+    patches:
+    - x: 0
+      y: 13
+      rows: '......HH........
+
+        .....HHHH.......
+
+        ....HHHHHH......
+
+        ...HHHHHHHH.....
+
+        ..HHHHHHHHHH....
+
+        ..HgggggHHHH..E.
+
+        ..HgkgggHHHHEEEE
+
+        ..HgkgggHHHHEEE.
+
+        ..HgggggHHHHEE..
+
+        ...HHggHHHHH....
+
+        ....HwwHHHHH....
+
+        ...ccwwCCcccc...
+
+        ...ccwcCCcccc...
+
+        ...ccccggcccc...
+
+        ...cccccccccc...
+
+        ....cccccccc....'

@@ -1,0 +1,269 @@
+name: dexter_b
+description: 'DEXTER (B): wide jowled head, crest fin, forearms folded across the apron.'
+kit: person16x32
+replaces: graphics/object_events/pics/people/frontier_brains/brandon.png
+graphics_info: Brandon
+notes: 'Batch 3 B. Hypothesis: jowls under a wide mouth and two folded forearms (L, R as separate volumes) are the Besalisk cues; fat_man body.'
+palette: npc_3
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_3
+shade: true
+materials:
+  h: skin-a
+  j: skin-a
+  L: a
+  R: a
+  w: w/a!
+  b: c!
+legend:
+  k: 15
+  M: 7
+  r: 7
+accept:
+  skin_tones: Besalisk hide uses ramp A, not the human skin ramp
+  eye_row: small eyes high on a wide hairless head
+  hair_rows: 'no hair: a short crest'
+  step_change: the folded arms and apron hang still; the bob, hem and feet move
+base_sheet: graphics/object_events/pics/people/fat_man.png
+remap:
+  s: h
+  b: w
+  c: b
+  a: b
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 11
+      rows: '.......rr.......
+
+        ....hhhrrhhh....
+
+        ..hhhhhhhhhhhh..
+
+        .hhhhhhhhhhhhhh.
+
+        .hhkhhhhhhhhkhh.
+
+        .hhkhhhhhhhhkhh.
+
+        hhhhMMMMMMMMhhhh
+
+        hjjjjjjjjjjjjjjh
+
+        .jjjjjjjjjjjjjj.
+
+        ..jjjjjjjjjjjj..'
+    - x: 1
+      y: 24
+      rows: 'hLLLLLLRRRRRRh
+
+        hLLLLLLRRRRRRh'
+  down_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.......rr.......
+
+        ....hhhrrhhh....
+
+        ..hhhhhhhhhhhh..
+
+        .hhhhhhhhhhhhhh.
+
+        .hhkhhhhhhhhkhh.
+
+        .hhkhhhhhhhhkhh.
+
+        hhhhMMMMMMMMhhhh
+
+        hjjjjjjjjjjjjjjh
+
+        .jjjjjjjjjjjjjj.
+
+        ..jjjjjjjjjjjj..'
+    - x: 1
+      y: 25
+      rows: 'hLLLLLLRRRRRRh
+
+        hLLLLLLRRRRRRh'
+  down_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.......rr.......
+
+        ....hhhrrhhh....
+
+        ..hhhhhhhhhhhh..
+
+        .hhhhhhhhhhhhhh.
+
+        .hhkhhhhhhhhkhh.
+
+        .hhkhhhhhhhhkhh.
+
+        hhhhMMMMMMMMhhhh
+
+        hjjjjjjjjjjjjjjh
+
+        .jjjjjjjjjjjjjj.
+
+        ..jjjjjjjjjjjj..'
+    - x: 1
+      y: 25
+      rows: 'hLLLLLLRRRRRRh
+
+        hLLLLLLRRRRRRh'
+  up:
+    patches:
+    - x: 0
+      y: 11
+      rows: '.......rr.......
+
+        ....hhhrrhhh....
+
+        ..hhhhhrrhhhhh..
+
+        .hhhhhhhhhhhhhh.
+
+        .hhhhhhhhhhhhhh.
+
+        .hhhhhhhhhhhhhh.
+
+        hhhhhhhhhhhhhhhh
+
+        hhhhhhhhhhhhhhhh
+
+        .hhhhhhhhhhhhhh.
+
+        ..hhhhhhhhhhhh..'
+  up_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.......rr.......
+
+        ....hhhrrhhh....
+
+        ..hhhhhrrhhhhh..
+
+        .hhhhhhhhhhhhhh.
+
+        .hhhhhhhhhhhhhh.
+
+        .hhhhhhhhhhhhhh.
+
+        hhhhhhhhhhhhhhhh
+
+        hhhhhhhhhhhhhhhh
+
+        .hhhhhhhhhhhhhh.
+
+        ..hhhhhhhhhhhh..'
+  up_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.......rr.......
+
+        ....hhhrrhhh....
+
+        ..hhhhhrrhhhhh..
+
+        .hhhhhhhhhhhhhh.
+
+        .hhhhhhhhhhhhhh.
+
+        .hhhhhhhhhhhhhh.
+
+        hhhhhhhhhhhhhhhh
+
+        hhhhhhhhhhhhhhhh
+
+        .hhhhhhhhhhhhhh.
+
+        ..hhhhhhhhhhhh..'
+  left:
+    patches:
+    - x: 0
+      y: 11
+      rows: '.......rr.......
+
+        .....hhhrrh.....
+
+        ...hhhhhhhrhh...
+
+        ..hhhhhhhhhhhh..
+
+        ..hkhhhhhhhhhhh.
+
+        ..hkhhhhhhhhhhh.
+
+        .MMMMMMMhhhhhhhh
+
+        .jjjjjjjjhhhhhhh
+
+        ..jjjjjjjhhhhhh.
+
+        ...jjjjjjhhhhh..'
+    - x: 2
+      y: 24
+      rows: 'LLLLLLLLhh
+
+        LLLLLLLLhh'
+  left_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.......rr.......
+
+        .....hhhrrh.....
+
+        ...hhhhhhhrhh...
+
+        ..hhhhhhhhhhhh..
+
+        ..hkhhhhhhhhhhh.
+
+        ..hkhhhhhhhhhhh.
+
+        .MMMMMMMhhhhhhhh
+
+        .jjjjjjjjhhhhhhh
+
+        ..jjjjjjjhhhhhh.
+
+        ...jjjjjjhhhhh..'
+    - x: 2
+      y: 25
+      rows: 'LLLLLLLLhh
+
+        LLLLLLLLhh'
+  left_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.......rr.......
+
+        .....hhhrrh.....
+
+        ...hhhhhhhrhh...
+
+        ..hhhhhhhhhhhh..
+
+        ..hkhhhhhhhhhhh.
+
+        ..hkhhhhhhhhhhh.
+
+        .MMMMMMMhhhhhhhh
+
+        .jjjjjjjjhhhhhhh
+
+        ..jjjjjjjhhhhhh.
+
+        ...jjjjjjhhhhh..'
+    - x: 2
+      y: 25
+      rows: 'LLLLLLLLhh
+
+        LLLLLLLLhh'

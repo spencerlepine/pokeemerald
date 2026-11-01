@@ -1,0 +1,300 @@
+name: yoda
+description: 'YODA: small green Jedi Master in a rust robe (replaces Juan).'
+kit: person16x32
+replaces: graphics/object_events/pics/people/gym_leaders/juan.png
+graphics_info: Juan
+notes: 'D13 regions only: 16 rows tall by design (a small species), ears to the frame edges, wisps, robe open on a cream tunic. Toes and hem move in the step frames.'
+palette: npc_3
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_3
+shade: true
+materials:
+  g: skin-b
+  G: b
+  E: b
+  c: c!
+  C: c!
+  w: w/c
+legend:
+  k: 15
+  W: 14
+accept:
+  height: 'Yoda is a small species: 16 rows'
+  eye_row: eyes sit high on a short bald head
+  hair_rows: two wisps, no hair mass
+  skin_tones: green hide uses ramp B
+  head_w: 16 wide ear to ear
+  step_change: the robe hides the legs; the bob, the hem, the hands and the toes move
+frames:
+  down: '................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    .....GGGGGG.....
+
+    ...WGGGGGGGGW...
+
+    ..GGGGGGGGGGGG..
+
+    E.GGGGGGGGGGGG.E
+
+    EEEgggggggggggEE
+
+    EEEggkggggkggEEE
+
+    .EEggkggggkggEE.
+
+    ..gggggggggggg..
+
+    ...gggggggggg...
+
+    ....gggggggg....
+
+    ...CccwwwwccC...
+
+    ..CCccwwwwccCC..
+
+    .gCCcccwwcccCCg.
+
+    ..cccccccccccc..
+
+    ..cccccccccccc..
+
+    ...gg......gg...
+
+    ................
+
+    '
+  left: '................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ....GGGGGG......
+
+    ..WGGGGGGGG.....
+
+    ..GGGGGGGGGG....
+
+    .GGGGGGGGGGG..E.
+
+    .gggggggggGGEEEE
+
+    .ggkggggggggEEE.
+
+    .ggkggggggggEE..
+
+    ..gggggggggg....
+
+    ...ggggggggg....
+
+    ....gggggggg....
+
+    ...cwwcccccc....
+
+    ..ccwwCCcccccc..
+
+    ..ccwcCCccccc...
+
+    ..ccccggcccccc..
+
+    ..cccccccccccc..
+
+    ....gg...gg.....
+
+    ................
+
+    '
+  up: '................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    .....GGGGGG.....
+
+    ...WGGGGGGGGW...
+
+    ..GGGGGGGGGGGG..
+
+    E.GGGGGGGGGGGG.E
+
+    EEEgggggggggggEE
+
+    EEEggggggggggEEE
+
+    .EEggggggggggEE.
+
+    ..gggggggggggg..
+
+    ...gggggggggg...
+
+    ...cccccccccc...
+
+    ..CCccccccccCC..
+
+    ..CCccccccccCC..
+
+    .gCCccccccccCCg.
+
+    ..cccccccccccc..
+
+    ..cccccccccccc..
+
+    ...gg......gg...
+
+    ................
+
+    '
+  down_a:
+    base: down
+    shift: 1
+    patch_y: 27
+    rows: '.gCCccccccccCCg.
+
+      ..cccccccccccc..
+
+      ..cccccccccccc..
+
+      ...gg...........
+
+      '
+  down_b:
+    base: down
+    shift: 1
+    patch_y: 27
+    rows: '.gCCccccccccCCg.
+
+      ..cccccccccccc..
+
+      ..cccccccccccc..
+
+      ...........gg...
+
+      '
+  up_a:
+    base: up
+    shift: 1
+    patch_y: 27
+    rows: '.gCCccccccccCCg.
+
+      ..cccccccccccc..
+
+      ..cccccccccccc..
+
+      ...gg...........
+
+      '
+  up_b:
+    base: up
+    shift: 1
+    patch_y: 27
+    rows: '.gCCccccccccCCg.
+
+      ..cccccccccccc..
+
+      ..cccccccccccc..
+
+      ...........gg...
+
+      '
+  left_a:
+    base: left
+    shift: 1
+    patch_y: 27
+    rows: '..ccccCCccccc...
+
+      ..cccccggccccc..
+
+      ..cccccccccccc..
+
+      ...gg...........
+
+      '
+  left_b:
+    base: left
+    shift: 1
+    patch_y: 27
+    rows: '..cCCccccccc....
+
+      ..cggccccccccc..
+
+      ..cccccccccccc..
+
+      .........gg.....
+
+      '

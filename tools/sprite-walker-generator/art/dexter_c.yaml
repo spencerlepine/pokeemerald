@@ -1,0 +1,458 @@
+name: dexter_c
+description: 'DEXTER (C): olive-tan hide, open mouth, long apron, bare legs, upper arms raised.'
+kit: person16x32
+replaces: graphics/object_events/pics/people/frontier_brains/brandon.png
+graphics_info: Brandon
+notes: 'Batch 3 C. Hypothesis: colour (olive-tan on NPC_1''s ramp C lit like a face; NPC_2''s brown was too dark) and a long-apron silhouette with four arms visible.'
+palette: npc_1
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_1
+shade: true
+materials:
+  h: skin-c
+  j: skin-c
+  U: c
+  L: c
+  R: c
+  w: w/c!
+  b: c!
+legend:
+  k: 15
+  K: 15
+  r: 13
+accept:
+  skin_tones: Besalisk hide uses ramp C (tan), not the human skin ramp
+  eye_row: small eyes high on a wide hairless head
+  hair_rows: 'no hair: a short crest'
+  step_change: the folded arms and apron hang still; the bob, hem and feet move
+  height: '22 rows: head sits higher with the raised arms'
+base_sheet: graphics/object_events/pics/people/fat_man.png
+remap:
+  s: h
+  b: w
+  c: w
+  a: w
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 11
+      rows: '.......rr.......
+
+        ....hhhrrhhh....
+
+        ..hhhhhhhhhhhh..
+
+        .hhhhhhhhhhhhhh.
+
+        .hhkhhhhhhhhkhh.
+
+        .hhkhhhhhhhhkhh.
+
+        hhhhKKKKKKKKhhhh
+
+        hjjjjjjjjjjjjjjh
+
+        .jjjjjjjjjjjjjj.
+
+        ..jjjjjjjjjjjj..'
+    - x: 1
+      y: 24
+      rows: 'hLLLLLLRRRRRRh
+
+        hLLLLLLRRRRRRh'
+    - &id001
+      x: 0
+      y: 19
+      rows: 'U.
+
+        UU
+
+        UU
+
+        .U'
+    - &id002
+      x: 14
+      y: 19
+      rows: '.U
+
+        UU
+
+        UU
+
+        U.'
+    - &id003
+      x: 0
+      y: 27
+      rows: '.wwwwwwwwwwwwww.
+
+        ..hhhhhhhhhhhh..
+
+        ..hhhhh..hhhhh..
+
+        ...kkk....kkk...'
+  down_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.......rr.......
+
+        ....hhhrrhhh....
+
+        ..hhhhhhhhhhhh..
+
+        .hhhhhhhhhhhhhh.
+
+        .hhkhhhhhhhhkhh.
+
+        .hhkhhhhhhhhkhh.
+
+        hhhhKKKKKKKKhhhh
+
+        hjjjjjjjjjjjjjjh
+
+        .jjjjjjjjjjjjjj.
+
+        ..jjjjjjjjjjjj..'
+    - x: 1
+      y: 25
+      rows: 'hLLLLLLRRRRRRh
+
+        hLLLLLLRRRRRRh'
+    - x: 0
+      y: 20
+      rows: 'U.
+
+        UU
+
+        UU
+
+        .U'
+    - x: 14
+      y: 20
+      rows: '.U
+
+        UU
+
+        UU
+
+        U.'
+    - x: 0
+      y: 28
+      rows: '.wwwwwwwwwwwwww.
+
+        ..hhhhhhhhhhhh..
+
+        ..hhhhh..hhhhh..
+
+        ...kkk....kkk...'
+  down_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.......rr.......
+
+        ....hhhrrhhh....
+
+        ..hhhhhhhhhhhh..
+
+        .hhhhhhhhhhhhhh.
+
+        .hhkhhhhhhhhkhh.
+
+        .hhkhhhhhhhhkhh.
+
+        hhhhKKKKKKKKhhhh
+
+        hjjjjjjjjjjjjjjh
+
+        .jjjjjjjjjjjjjj.
+
+        ..jjjjjjjjjjjj..'
+    - x: 1
+      y: 25
+      rows: 'hLLLLLLRRRRRRh
+
+        hLLLLLLRRRRRRh'
+    - x: 0
+      y: 20
+      rows: 'U.
+
+        UU
+
+        UU
+
+        .U'
+    - x: 14
+      y: 20
+      rows: '.U
+
+        UU
+
+        UU
+
+        U.'
+    - x: 0
+      y: 28
+      rows: '.wwwwwwwwwwwwww.
+
+        ..hhhhhhhhhhhh..
+
+        ..hhhhh..hhhhh..
+
+        ...kkk....kkk...'
+  up:
+    patches:
+    - x: 0
+      y: 11
+      rows: '.......rr.......
+
+        ....hhhrrhhh....
+
+        ..hhhhhrrhhhhh..
+
+        .hhhhhhhhhhhhhh.
+
+        .hhhhhhhhhhhhhh.
+
+        .hhhhhhhhhhhhhh.
+
+        hhhhhhhhhhhhhhhh
+
+        hhhhhhhhhhhhhhhh
+
+        .hhhhhhhhhhhhhh.
+
+        ..hhhhhhhhhhhh..'
+    - *id001
+    - *id002
+    - *id003
+  up_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.......rr.......
+
+        ....hhhrrhhh....
+
+        ..hhhhhrrhhhhh..
+
+        .hhhhhhhhhhhhhh.
+
+        .hhhhhhhhhhhhhh.
+
+        .hhhhhhhhhhhhhh.
+
+        hhhhhhhhhhhhhhhh
+
+        hhhhhhhhhhhhhhhh
+
+        .hhhhhhhhhhhhhh.
+
+        ..hhhhhhhhhhhh..'
+    - x: 0
+      y: 20
+      rows: 'U.
+
+        UU
+
+        UU
+
+        .U'
+    - x: 14
+      y: 20
+      rows: '.U
+
+        UU
+
+        UU
+
+        U.'
+    - x: 0
+      y: 28
+      rows: '.wwwwwwwwwwwwww.
+
+        ..hhhhhhhhhhhh..
+
+        ..hhhhh..hhhhh..
+
+        ...kkk....kkk...'
+  up_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.......rr.......
+
+        ....hhhrrhhh....
+
+        ..hhhhhrrhhhhh..
+
+        .hhhhhhhhhhhhhh.
+
+        .hhhhhhhhhhhhhh.
+
+        .hhhhhhhhhhhhhh.
+
+        hhhhhhhhhhhhhhhh
+
+        hhhhhhhhhhhhhhhh
+
+        .hhhhhhhhhhhhhh.
+
+        ..hhhhhhhhhhhh..'
+    - x: 0
+      y: 20
+      rows: 'U.
+
+        UU
+
+        UU
+
+        .U'
+    - x: 14
+      y: 20
+      rows: '.U
+
+        UU
+
+        UU
+
+        U.'
+    - x: 0
+      y: 28
+      rows: '.wwwwwwwwwwwwww.
+
+        ..hhhhhhhhhhhh..
+
+        ..hhhhh..hhhhh..
+
+        ...kkk....kkk...'
+  left:
+    patches:
+    - x: 0
+      y: 11
+      rows: '.......rr.......
+
+        .....hhhrrh.....
+
+        ...hhhhhhhrhh...
+
+        ..hhhhhhhhhhhh..
+
+        ..hkhhhhhhhhhhh.
+
+        ..hkhhhhhhhhhhh.
+
+        .KKKKKKKhhhhhhhh
+
+        .jjjjjjjjhhhhhhh
+
+        ..jjjjjjjhhhhhh.
+
+        ...jjjjjjhhhhh..'
+    - x: 2
+      y: 24
+      rows: 'LLLLLLLLhh
+
+        LLLLLLLLhh'
+    - *id001
+    - x: 0
+      y: 27
+      rows: '..wwwwwwwwwww...
+
+        ...hhhhhhhhh....
+
+        ....hhh.hhh.....
+
+        .....kk..kk.....'
+  left_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.......rr.......
+
+        .....hhhrrh.....
+
+        ...hhhhhhhrhh...
+
+        ..hhhhhhhhhhhh..
+
+        ..hkhhhhhhhhhhh.
+
+        ..hkhhhhhhhhhhh.
+
+        .KKKKKKKhhhhhhhh
+
+        .jjjjjjjjhhhhhhh
+
+        ..jjjjjjjhhhhhh.
+
+        ...jjjjjjhhhhh..'
+    - x: 2
+      y: 25
+      rows: 'LLLLLLLLhh
+
+        LLLLLLLLhh'
+    - x: 0
+      y: 20
+      rows: 'U.
+
+        UU
+
+        UU
+
+        .U'
+    - x: 0
+      y: 28
+      rows: '..wwwwwwwwwww...
+
+        ...hhhhhhhhh....
+
+        ....hhh.hhh.....
+
+        .....kk..kk.....'
+  left_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.......rr.......
+
+        .....hhhrrh.....
+
+        ...hhhhhhhrhh...
+
+        ..hhhhhhhhhhhh..
+
+        ..hkhhhhhhhhhhh.
+
+        ..hkhhhhhhhhhhh.
+
+        .KKKKKKKhhhhhhhh
+
+        .jjjjjjjjhhhhhhh
+
+        ..jjjjjjjhhhhhh.
+
+        ...jjjjjjhhhhh..'
+    - x: 2
+      y: 25
+      rows: 'LLLLLLLLhh
+
+        LLLLLLLLhh'
+    - x: 0
+      y: 20
+      rows: 'U.
+
+        UU
+
+        UU
+
+        .U'
+    - x: 0
+      y: 28
+      rows: '..wwwwwwwwwww...
+
+        ...hhhhhhhhh....
+
+        ....hhh.hhh.....
+
+        .....kk..kk.....'

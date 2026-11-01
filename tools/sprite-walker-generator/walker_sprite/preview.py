@@ -292,3 +292,60 @@ def shader_check(sheets: dict, emerald: Path, shade_mod, out: Path, z: int = 3, 
             pic.paste(rgba_frame(g, cols), (0, 0), rgba_frame(g, cols))
             im.paste(pic.resize((16 * z, 32 * z), Image.NEAREST), (x0, y0 + j * (32 * z + 4)))
     im.save(out)
+
+
+def variants_review(specs: list, out: Path, emerald: Path, z: int = 5) -> None:
+    """Variation review: specs that replace the same vanilla sheet share a row, vanilla first,
+    then each variation (stand frames at z); under each row the same four on Emerald grass at
+    1x and 3x. For the owner to say which variation is getting closer."""
+    from .sheet import spec_palette
+
+    groups: dict[str, list] = {}
+    for s in specs:
+        groups.setdefault(s.replaces or s.name, []).append(s)
+    ground = _metatile_renderer(emerald)(1)
+    w, h = specs[0].w, specs[0].h
+    cell = w * z + 4
+    pw = 3 * cell + 8
+    ncols = 1 + max(len(g) for g in groups.values())
+    lab = 90
+    strip_h = (16 + h) * 3
+    row_h = 16 + h * z + 8 + strip_h + 16
+    im = Image.new("RGB", (lab + ncols * (pw + 12), 10 + len(groups) * row_h), (24, 24, 30))
+    d = ImageDraw.Draw(im)
+
+    def stands(frames, cols):
+        return [rgba_frame(frames[n], cols) for n in ("down", "left", "up")]
+
+    def panel(frs):
+        p = Image.new("RGB", (pw, h * z), BG)
+        for i, f in enumerate(frs):
+            b = f.resize((w * z, h * z), Image.NEAREST)
+            p.paste(b, (4 + i * cell, 0), b)
+        return p
+
+    y = 10
+    for rep, group in groups.items():
+        cols_list = []
+        try:
+            fr, cols = read_frames(emerald / rep, (w, h))
+            cols_list.append(("vanilla", stands(dict(zip(("down", "up", "left"), fr[:3])), cols)))
+        except Exception:
+            cols_list.append(("vanilla", [Image.new("RGBA", (w, h), (0, 0, 0, 0))] * 3))
+        for s in group:
+            cols_list.append((s.name, stands(s.frames, spec_palette(s))))
+        d.text((6, y + 16), Path(rep).stem, fill=(230, 230, 230))
+        strip = Image.new("RGB", ((len(cols_list) + 1) * (w + 4), 16 + h))
+        for sx in range(0, strip.width, 16):
+            for sy in range(0, strip.height, 16):
+                strip.paste(ground, (sx, sy))
+        for i, (name, frs) in enumerate(cols_list):
+            x = lab + i * (pw + 12)
+            d.text((x, y), name, fill=(200, 200, 200))
+            im.paste(panel(frs), (x, y + 16))
+            strip.paste(frs[0], ((i + 1) * (w + 4) - 2, 16), frs[0])
+        yy = y + 16 + h * z + 8
+        im.paste(strip, (lab, yy))
+        im.paste(strip.resize((strip.width * 3, strip.height * 3), Image.NEAREST), (lab + strip.width + 16, yy))
+        y += row_h
+    im.save(out)

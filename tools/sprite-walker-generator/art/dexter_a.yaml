@@ -1,0 +1,391 @@
+name: dexter
+description: 'DEXTER JETTSTER: four-armed Besalisk cook in an apron (replaces Brandon).'
+kit: person16x32
+replaces: graphics/object_events/pics/people/frontier_brains/brandon.png
+graphics_info: Brandon
+notes: 'D13: fat_man''s body as regions (shirt -> apron, skin -> olive hide, trousers -> blue), new crested head with a wide mouth and wattle, second pair of arms raised at the shoulders. Moves to NPC_1
+  for the olive ramp.'
+palette: npc_3
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_3
+shade: true
+materials:
+  h: skin-a
+  U: a
+  r: a
+  j: skin-a
+  w: w/a!
+  b: c!
+legend:
+  k: 15
+  M: 7
+accept:
+  height: '22 rows: the crest adds 2 on top of fat_man''s 20'
+  skin_tones: Besalisk hide uses ramp A, not the human skin ramp
+  eye_row: small eyes high on a wide hairless head
+  hair_rows: 'no hair: a short crest'
+  step_change: the folded arms and apron hang still; the bob, hem and feet move
+base_sheet: graphics/object_events/pics/people/fat_man.png
+remap:
+  s: h
+  b: w
+  c: b
+  a: b
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 9
+      rows: '.......rr.......
+
+        ......rrrr......
+
+        .....hhrrhh.....
+
+        ...hhhhrrhhhh...
+
+        ..hhhhhhhhhhhh..
+
+        ..hhhhhhhhhhhh..
+
+        .hhkhhhhhhhhkhh.
+
+        .hhkhhhhhhhhkhh.
+
+        .hhhMMMMMMMMhhh.
+
+        .hhjjjjjjjjjjhh.
+
+        ..hhjjjjjjjjhh..
+
+        ...hhhhhhhhhh...'
+    - &id001
+      x: 0
+      y: 19
+      rows: 'U.
+
+        UU
+
+        UU
+
+        .U'
+    - &id002
+      x: 14
+      y: 19
+      rows: '.U
+
+        UU
+
+        UU
+
+        U.'
+  down_a:
+    patches:
+    - x: 0
+      y: 10
+      rows: '.......rr.......
+
+        ......rrrr......
+
+        .....hhrrhh.....
+
+        ...hhhhrrhhhh...
+
+        ..hhhhhhhhhhhh..
+
+        ..hhhhhhhhhhhh..
+
+        .hhkhhhhhhhhkhh.
+
+        .hhkhhhhhhhhkhh.
+
+        .hhhMMMMMMMMhhh.
+
+        .hhjjjjjjjjjjhh.
+
+        ..hhjjjjjjjjhh..
+
+        ...hhhhhhhhhh...'
+    - x: 0
+      y: 20
+      rows: 'U.
+
+        UU
+
+        UU
+
+        .U'
+    - x: 14
+      y: 20
+      rows: '.U
+
+        UU
+
+        UU
+
+        U.'
+  down_b:
+    patches:
+    - x: 0
+      y: 10
+      rows: '.......rr.......
+
+        ......rrrr......
+
+        .....hhrrhh.....
+
+        ...hhhhrrhhhh...
+
+        ..hhhhhhhhhhhh..
+
+        ..hhhhhhhhhhhh..
+
+        .hhkhhhhhhhhkhh.
+
+        .hhkhhhhhhhhkhh.
+
+        .hhhMMMMMMMMhhh.
+
+        .hhjjjjjjjjjjhh.
+
+        ..hhjjjjjjjjhh..
+
+        ...hhhhhhhhhh...'
+    - x: 0
+      y: 20
+      rows: 'U.
+
+        UU
+
+        UU
+
+        .U'
+    - x: 14
+      y: 20
+      rows: '.U
+
+        UU
+
+        UU
+
+        U.'
+  up:
+    patches:
+    - x: 0
+      y: 9
+      rows: '.......rr.......
+
+        ......rrrr......
+
+        .....hhrrhh.....
+
+        ...hhhhrrhhhh...
+
+        ..hhhhhrrhhhhh..
+
+        ..hhhhhhhhhhhh..
+
+        .hhhhhhhhhhhhhh.
+
+        .hhhhhhhhhhhhhh.
+
+        .hhhhhhhhhhhhhh.
+
+        .hhhhhhhhhhhhhh.
+
+        ..hhhhhhhhhhhh..
+
+        ...hhhhhhhhhh...'
+    - *id001
+    - *id002
+  up_a:
+    patches:
+    - x: 0
+      y: 10
+      rows: '.......rr.......
+
+        ......rrrr......
+
+        .....hhrrhh.....
+
+        ...hhhhrrhhhh...
+
+        ..hhhhhrrhhhhh..
+
+        ..hhhhhhhhhhhh..
+
+        .hhhhhhhhhhhhhh.
+
+        .hhhhhhhhhhhhhh.
+
+        .hhhhhhhhhhhhhh.
+
+        .hhhhhhhhhhhhhh.
+
+        ..hhhhhhhhhhhh..
+
+        ...hhhhhhhhhh...'
+    - x: 0
+      y: 20
+      rows: 'U.
+
+        UU
+
+        UU
+
+        .U'
+    - x: 14
+      y: 20
+      rows: '.U
+
+        UU
+
+        UU
+
+        U.'
+  up_b:
+    patches:
+    - x: 0
+      y: 10
+      rows: '.......rr.......
+
+        ......rrrr......
+
+        .....hhrrhh.....
+
+        ...hhhhrrhhhh...
+
+        ..hhhhhrrhhhhh..
+
+        ..hhhhhhhhhhhh..
+
+        .hhhhhhhhhhhhhh.
+
+        .hhhhhhhhhhhhhh.
+
+        .hhhhhhhhhhhhhh.
+
+        .hhhhhhhhhhhhhh.
+
+        ..hhhhhhhhhhhh..
+
+        ...hhhhhhhhhh...'
+    - x: 0
+      y: 20
+      rows: 'U.
+
+        UU
+
+        UU
+
+        .U'
+    - x: 14
+      y: 20
+      rows: '.U
+
+        UU
+
+        UU
+
+        U.'
+  left:
+    patches:
+    - x: 0
+      y: 9
+      rows: '.......rr.......
+
+        ......rrrr......
+
+        .....hhhrrh.....
+
+        ...hhhhhhrrhh...
+
+        ..hhhhhhhhhrhh..
+
+        ..hhhhhhhhhhhh..
+
+        ..hkhhhhhhhhhhh.
+
+        ..hkhhhhhhhhhhh.
+
+        .MMMMMMMhhhhhhh.
+
+        .jjjjjjjhhhhhhh.
+
+        ..jjjjjjhhhhhh..
+
+        ...hhhhhhhhhh...'
+    - x: 1
+      y: 19
+      rows: 'U.
+
+        UU
+
+        .U'
+  left_a:
+    patches:
+    - x: 0
+      y: 10
+      rows: '.......rr.......
+
+        ......rrrr......
+
+        .....hhhrrh.....
+
+        ...hhhhhhrrhh...
+
+        ..hhhhhhhhhrhh..
+
+        ..hhhhhhhhhhhh..
+
+        ..hkhhhhhhhhhhh.
+
+        ..hkhhhhhhhhhhh.
+
+        .MMMMMMMhhhhhhh.
+
+        .jjjjjjjhhhhhhh.
+
+        ..jjjjjjhhhhhh..
+
+        ...hhhhhhhhhh...'
+    - x: 1
+      y: 20
+      rows: 'U.
+
+        UU
+
+        .U'
+  left_b:
+    patches:
+    - x: 0
+      y: 10
+      rows: '.......rr.......
+
+        ......rrrr......
+
+        .....hhhrrh.....
+
+        ...hhhhhhrrhh...
+
+        ..hhhhhhhhhrhh..
+
+        ..hhhhhhhhhhhh..
+
+        ..hkhhhhhhhhhhh.
+
+        ..hkhhhhhhhhhhh.
+
+        .MMMMMMMhhhhhhh.
+
+        .jjjjjjjhhhhhhh.
+
+        ..jjjjjjhhhhhh..
+
+        ...hhhhhhhhhh...'
+    - x: 1
+      y: 20
+      rows: 'U.
+
+        UU
+
+        .U'
