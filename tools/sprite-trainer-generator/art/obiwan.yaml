@@ -1,0 +1,43 @@
+name: obiwan
+kit: trainer64
+replaces: graphics/trainers/front_pics/champion_wallace.png
+# Old Ben Kenobi replaces Wallace (wiki swap_map: character:wallace -> OBI-WAN,
+# "Hermit 'Ben'"). Repaint of Expert M (old master, robe, raised open hand), which already has
+# Ben's age, beard, robe and gesture. Changes: white gi -> beige tunic, blue hakama -> brown
+# Jedi robe, hair/beard -> silver-grey, the Poke Ball in his hand -> a lit blue saber.
+palette:
+  - [115, 197, 164]  # 0 transparent
+  - [16, 8, 8]       # K outline
+  - [248, 216, 200]  # a skin highlight
+  - [232, 176, 144]  # b skin base
+  - [192, 136, 104]  # c skin shadow
+  - [96, 64, 48]     # d deep brown (skin outline, robe darkest)
+  - [232, 216, 176]  # e tunic light
+  - [200, 176, 128]  # f tunic base
+  - [152, 128, 88]   # g tunic shadow
+  - [144, 96, 56]    # h robe base
+  - [104, 72, 40]    # i robe shadow
+  - [216, 216, 216]  # j hair light
+  - [152, 152, 160]  # k hair shadow
+  - [128, 128, 136]  # m hilt
+  - [88, 152, 248]   # n blade glow
+  - [232, 248, 248]  # o blade core
+legend: {'.': 0, K: 1, a: 2, b: 3, c: 4, d: 5, e: 6, f: 7, g: 8, h: 9, i: 10, j: 11, k: 12, m: 13, n: 14, o: 15}
+frames:
+  front:
+    repaint:
+      pic: graphics/trainers/front_pics/expert_m.png
+      # expert_m: 1-4 skin, 9/14 white gi + hair, 5/10 grey gi shadows + hair shadow,
+      # 6/7 blue hakama, 8 dark grey, 12/13 ball red, 15 outline
+      remap: {1: a, 2: b, 3: c, 4: d, 5: k, 6: h, 7: i, 8: d, 9: k, 10: k, 12: f, 13: g, 14: j, 15: K}
+    rig:
+      layers:
+        # below the beard: the gi becomes a beige tunic (hair keeps the silver-grey)
+        - {name: tunic, shape: poly, pts: [[14, 21], [52, 21], [52, 40], [14, 40]], recolour: "j:e k:f"}
+        - {name: tunic hands, shape: poly, pts: [[18, 17], [26, 17], [26, 21], [18, 21]], recolour: "j:e k:f"}
+        - {name: tunic shadow side, shape: poly, pts: [[40, 22], [52, 22], [52, 40], [40, 40]], recolour: "f:g e:f"}
+        # the ball in his hand becomes the saber hilt; blade raised up and out to the right
+        - {name: hilt, shape: capsule, from: [40, 33], to: [44, 29], r: [1.2, 1.2], ramp: m}
+        - {name: blade, shape: capsule, from: [45, 28], to: [60, 9], r: [1.5, 1.5], ramp: o, outline: n}
+        # light hair/tunic edges against the background get a dark selective outline
+        - {name: selout, shape: edge, chars: "jke", to: d}

@@ -1,0 +1,49 @@
+name: boba
+kit: trainer64
+replaces: graphics/trainers/front_pics/aqua_admin_m.png
+# Boba Fett replaces Matt (Aqua Admin M) (wiki swap_map: character:matt -> BOBA FETT).
+# Repaint of Pyramid King Brandon (military fatigues, wide stance, fist thrust at the player,
+# other hand on the hip), whose pose is already a bounty hunter's. Changes: shirt green ->
+# Mandalorian chest armour, sleeves and trousers -> grey flight suit, skin -> brown gloves,
+# head -> T-visor helmet with the rangefinder up on the near side, jetpack behind the shoulder.
+palette:
+  - [115, 197, 164]  # 0 transparent
+  - [16, 16, 24]     # K outline
+  - [40, 64, 40]     # a armour shadow
+  - [72, 104, 56]    # b armour base
+  - [112, 144, 80]   # c armour light
+  - [168, 192, 120]  # l armour highlight
+  - [64, 64, 72]     # n suit shadow
+  - [104, 104, 112]  # o suit base
+  - [144, 144, 152]  # q suit light
+  - [200, 200, 208]  # p metal / suit highlight
+  - [80, 48, 32]     # u leather dark
+  - [128, 88, 48]    # v leather base
+  - [176, 128, 72]   # w leather light
+  - [216, 176, 112]  # x leather highlight
+  - [200, 48, 40]    # r red
+legend: {'.': 0, K: 1, a: 2, b: 3, c: 4, l: 5, n: 6, o: 7, q: 8, p: 9, u: 10, v: 11, w: 12, x: 13, r: 14}
+frames:
+  front:
+    repaint:
+      pic: graphics/trainers/front_pics/pyramid_king_brandon.png
+      # brandon: 1/2/3 skin, 4/10/12 hair and boots, 5-8 fatigues, 9/11 grey, 13 collar, 15 outline
+      remap: {1: x, 2: w, 3: v, 4: u, 5: l, 6: c, 7: b, 8: a, 9: p, 10: v, 11: o, 12: u, 13: v, 14: p, 15: K}
+    rig:
+      layers:
+        # flight suit: sleeves and trousers grey, the torso stays green as chest armour
+        - {name: near sleeve, shape: poly, pts: [[17, 18], [29, 19], [30, 27], [27, 31], [19, 25]], recolour: "a:n b:o c:q l:p"}
+        - {name: far sleeve, shape: poly, pts: [[41, 21], [54, 24], [54, 33], [47, 39], [43, 34], [42, 28]], recolour: "a:n b:o c:q l:p"}
+        - {name: trousers, shape: poly, pts: [[18, 36], [50, 36], [50, 55], [18, 55]], recolour: "a:n b:o c:q l:p"}
+        # head -> helmet
+        - {name: old head, shape: poly, pts: [[21, 1], [44, 1], [44, 20], [36, 21], [28, 21], [26, 14], [21, 13]], erase: true}
+        - {name: rocket tip, shape: ellipse, at: [44, 12], r: [1.5, 1.5], ramp: r, behind: true}
+        - {name: jetpack, shape: capsule, from: [44, 21], to: [44, 16], r: [2.2, 2], ramp: noq, behind: true}
+        - {name: helmet, shape: poly, pts: [[29, 4], [37, 4], [40, 6], [41, 9], [41, 18], [39, 21], [30, 21], [27, 19], [27, 7]], ramp: abc}
+        - {name: visor, shape: pixels, x: 27, y: 9, rows: "KKKKKKKKKK\n_KKKKKKKKK\n___KKK____\n___KKK____\n___KoK____\n___KKK____\n___KKK____\n____K_____"}
+        - {name: helmet sheen, shape: pixels, x: 30, y: 5, rows: "lll\nl__"}
+        - {name: dent, shape: pixels, x: 35, y: 5, rows: "Kb\n_K"}
+        - {name: ear, shape: pixels, x: 38, y: 11, rows: "KKK\nKpqK\nKqnK\nKKK_"}
+        - {name: rangefinder, shape: capsule, from: [40, 11], to: [41, 1], r: [0.6, 0.6], ramp: p}
+        # chest armour plates and the gauntlet on the thrust fist
+        - {name: chest plates, shape: pixels, x: 30, y: 24, rows: "aaa_a\n_____a\n___a__\n__a___"}

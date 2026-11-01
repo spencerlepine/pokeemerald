@@ -1,0 +1,49 @@
+name: leia
+kit: trainer64
+replaces: graphics/trainers/front_pics/steven.png
+# Leia replaces Steven (wiki swap_map: character:steven-stone -> LEIA).
+# Repaint of Elite Four Glacia (long gown with a belt, white sleeves, lunging 3/4 with one arm
+# thrust out), which is already Leia's A New Hope gown in an action pose. Changes: purple gown
+# -> white, blonde hair -> brown with the two side buns, gold belt -> silver, the held ball ->
+# her blaster.
+palette:
+  - [115, 197, 164]  # 0 transparent
+  - [16, 16, 24]     # K outline
+  - [248, 224, 200]  # a skin light
+  - [232, 176, 144]  # b skin base
+  - [192, 136, 104]  # c skin shadow
+  - [64, 32, 24]     # d hair outline
+  - [168, 112, 64]   # h hair light
+  - [120, 72, 40]    # i hair base
+  - [88, 48, 32]     # j hair shadow
+  - [232, 232, 240]  # w gown light
+  - [200, 200, 216]  # x gown base
+  - [144, 144, 168]  # y gown shadow
+  - [248, 248, 248]  # W white
+  - [64, 64, 80]     # g metal dark
+  - [104, 104, 120]  # G metal
+legend: {'.': 0, K: 1, a: 2, b: 3, c: 4, d: 5, h: 6, i: 7, j: 8, w: 9, x: 10, y: 11, W: 12, g: 13, G: 14}
+frames:
+  front:
+    repaint:
+      pic: graphics/trainers/front_pics/elite_four_glacia.png
+      # glacia: 1-3 skin, 4 hair outline, 9-11 blonde (also the belt), 6-8 purple gown,
+      # 12/13/5 white sleeves, 14 white, 15 outline
+      remap: {1: a, 2: b, 3: c, 4: d, 5: y, 6: w, 7: x, 8: y, 9: h, 10: i, 11: j, 12: w, 13: x, 14: W, 15: K}
+    rig:
+      layers:
+        # the belt was drawn with the hair colours: make it silver
+        - {name: belt, shape: poly, pts: [[17, 30], [31, 30], [31, 35], [17, 35]], recolour: "h:W i:x j:G"}
+        # the belt sash hanging down the far side, also in hair colours
+        - {name: sash, shape: poly, pts: [[12, 35], [22, 35], [22, 50], [12, 50]], recolour: "h:x i:y j:G"}
+        # eyes and lips were drawn with the gown purples: give them back dark and rose tones
+        - {name: face, shape: poly, pts: [[22, 6], [32, 6], [32, 19], [22, 19]], recolour: "y:K x:c w:b"}
+        # side buns over the curls, far one first
+        - {name: far bun, shape: ellipse, at: [17, 13], r: [3.5, 4], ramp: jih}
+        - {name: near bun, shape: ellipse, at: [34, 14], r: [2.8, 3.8], ramp: jih}
+        - {name: bun coils, shape: pixels, x: 16, y: 11, rows: "_j\nj_j\n_j"}
+        - {name: near coil, shape: pixels, x: 33, y: 12, rows: "_j\nj_j\n_j"}
+        - {name: eyes, shape: pixels, x: 22, y: 11, rows: "_dd____dd\n_KW____KK\n_________\n_________\n___c_____"}
+        # ball -> blaster, barrel pointed out past the hand
+        - {name: ball, shape: poly, pts: [[47, 22], [56, 22], [56, 27], [47, 27]], erase: true}
+        - {name: blaster, shape: pixels, x: 45, y: 23, rows: "__KKKKKKKKK\n_KgGGGGGGGK\n_KgggKKKKK_\n__KgK______"}
