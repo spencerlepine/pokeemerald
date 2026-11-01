@@ -2,7 +2,7 @@
   "init": "refs/politoed_prep.png",
   "init_source": "https://static.wikia.nocookie.net/starwars/images/e/e0/Worrt-SoT2024.png/revision/latest?cb=20251201030012",
   "flip": false,
-  "denoise": 0.45,
+  "denoise": 0.4,
   "desc": "squat crowned worrt with a curled antenna crest and broad splayed arms",
   "colour": "reddish brown and tan",
   "ref_note": "Worrt SoT2024 render; poliwag line uses other worrt images"
