@@ -1,0 +1,2614 @@
+{
+ "count": 269,
+ "seconds": {
+  "p5": 0.15,
+  "p25": 0.3,
+  "p50": 0.545,
+  "p75": 1.0,
+  "p95": 3.2,
+  "max": 8.0
+ },
+ "se": {
+  "se_a": {
+   "seconds": 1.0,
+   "programs": [
+    122
+   ],
+   "notes": 1,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V095 -P4"
+  },
+  "se_applause": {
+   "seconds": 4.8,
+   "programs": [
+    60
+   ],
+   "notes": 1,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V100 -P5"
+  },
+  "se_arena_timeup1": {
+   "seconds": 0.9782595,
+   "programs": [
+    116,
+    117
+   ],
+   "notes": 2,
+   "voicegroup": "_frlg_sfx",
+   "opts": "-E -R50 -G_frlg_sfx -P5"
+  },
+  "se_arena_timeup2": {
+   "seconds": 1.304346,
+   "programs": [
+    10,
+    116,
+    117
+   ],
+   "notes": 6,
+   "voicegroup": "_frlg_sfx",
+   "opts": "-E -R50 -G_frlg_sfx -P5"
+  },
+  "se_ball": {
+   "seconds": 0.1171875,
+   "programs": [
+    7,
+    8
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -V070 -P4"
+  },
+  "se_ball_bounce_1": {
+   "seconds": 0.2,
+   "programs": [
+    16,
+    17
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V100 -P4"
+  },
+  "se_ball_bounce_2": {
+   "seconds": 0.2,
+   "programs": [
+    16,
+    17
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V100 -P4"
+  },
+  "se_ball_bounce_3": {
+   "seconds": 0.2,
+   "programs": [
+    16,
+    17
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V100 -P4"
+  },
+  "se_ball_bounce_4": {
+   "seconds": 0.2,
+   "programs": [
+    16,
+    17
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V100 -P4"
+  },
+  "se_ball_open": {
+   "seconds": 0.41666625,
+   "programs": [
+    0,
+    86,
+    124
+   ],
+   "notes": 9,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -V100 -P5"
+  },
+  "se_ball_throw": {
+   "seconds": 0.4,
+   "programs": [
+    22
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V120 -P5"
+  },
+  "se_ball_trade": {
+   "seconds": 0.25,
+   "programs": [
+    13,
+    123
+   ],
+   "notes": 4,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -V100 -P5"
+  },
+  "se_ball_tray_ball": {
+   "seconds": 0.1,
+   "programs": [
+    16
+   ],
+   "notes": 1,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V110 -P5"
+  },
+  "se_ball_tray_enter": {
+   "seconds": 0.2,
+   "programs": [
+    36,
+    71
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V110 -P5"
+  },
+  "se_ball_tray_exit": {
+   "seconds": 0.05,
+   "programs": [
+    119
+   ],
+   "notes": 1,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -V100 -P5"
+  },
+  "se_balloon_blue": {
+   "seconds": 0.1875,
+   "programs": [
+    2,
+    23
+   ],
+   "notes": 5,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V105 -P4"
+  },
+  "se_balloon_red": {
+   "seconds": 0.25,
+   "programs": [
+    2,
+    23
+   ],
+   "notes": 6,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V105 -P4"
+  },
+  "se_balloon_yellow": {
+   "seconds": 0.1875,
+   "programs": [
+    2,
+    23
+   ],
+   "notes": 9,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V105 -P4"
+  },
+  "se_bang": {
+   "seconds": 0.75,
+   "programs": [
+    2
+   ],
+   "notes": 4,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V110 -P4"
+  },
+  "se_berry_blender": {
+   "seconds": 4.8,
+   "programs": [
+    15
+   ],
+   "notes": 1,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V090 -P4"
+  },
+  "se_bike_bell": {
+   "seconds": 2.0,
+   "programs": [
+    0
+   ],
+   "notes": 1,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V090 -P4"
+  },
+  "se_bike_hop": {
+   "seconds": 0.08333325,
+   "programs": [
+    85,
+    86
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -V090 -P4"
+  },
+  "se_boo": {
+   "seconds": 0.3,
+   "programs": [
+    5
+   ],
+   "notes": 3,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -V110 -P4"
+  },
+  "se_breakable_door": {
+   "seconds": 0.3125,
+   "programs": [
+    41
+   ],
+   "notes": 3,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V110 -P4"
+  },
+  "se_bridge_walk": {
+   "seconds": 0.15,
+   "programs": [
+    26
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V095 -P4"
+  },
+  "se_card": {
+   "seconds": 0.4999995,
+   "programs": [
+    2
+   ],
+   "notes": 3,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -V100 -P4"
+  },
+  "se_click": {
+   "seconds": 0.15,
+   "programs": [
+    126
+   ],
+   "notes": 3,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -V110 -P4"
+  },
+  "se_contest_condition_lose": {
+   "seconds": 0.15,
+   "programs": [
+    126
+   ],
+   "notes": 4,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -V110 -P4"
+  },
+  "se_contest_curtain_fall": {
+   "seconds": 0.2,
+   "programs": [
+    15,
+    25
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V070 -P5"
+  },
+  "se_contest_curtain_rise": {
+   "seconds": 0.2,
+   "programs": [
+    15,
+    25
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V070 -P5"
+  },
+  "se_contest_heart": {
+   "seconds": 0.2,
+   "programs": [
+    14
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V090 -P5"
+  },
+  "se_contest_icon_change": {
+   "seconds": 0.1,
+   "programs": [
+    2
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V110 -P5"
+  },
+  "se_contest_icon_clear": {
+   "seconds": 0.1,
+   "programs": [
+    36
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V090 -P5"
+  },
+  "se_contest_mons_turn": {
+   "seconds": 0.4,
+   "programs": [
+    14
+   ],
+   "notes": 6,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V090 -P5"
+  },
+  "se_contest_place": {
+   "seconds": 0.624999,
+   "programs": [
+    47,
+    48,
+    80,
+    81
+   ],
+   "notes": 11,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -V110 -P4"
+  },
+  "se_dex_page": {
+   "seconds": 0.225,
+   "programs": [
+    4
+   ],
+   "notes": 6,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -P5"
+  },
+  "se_dex_scroll": {
+   "seconds": 0.075,
+   "programs": [
+    4
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -P5"
+  },
+  "se_dex_search": {
+   "seconds": 1.249998,
+   "programs": [
+    4,
+    14
+   ],
+   "notes": 78,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -v100 -P5"
+  },
+  "se_ding_dong": {
+   "seconds": 1.05,
+   "programs": [
+    14,
+    15
+   ],
+   "notes": 4,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -V090 -P5"
+  },
+  "se_door": {
+   "seconds": 0.545454,
+   "programs": [
+    127
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -V080 -P5"
+  },
+  "se_downpour": {
+   "seconds": 0.818181,
+   "programs": [
+    36
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V100 -P2"
+  },
+  "se_downpour_stop": {
+   "seconds": 0.545454,
+   "programs": [
+    36
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V100 -P2"
+  },
+  "se_e": {
+   "seconds": 1.0,
+   "programs": [
+    125
+   ],
+   "notes": 1,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V120 -P4"
+  },
+  "se_effective": {
+   "seconds": 1.1666655,
+   "programs": [
+    0,
+    125
+   ],
+   "notes": 4,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -V110 -P5"
+  },
+  "se_egg_hatch": {
+   "seconds": 0.4,
+   "programs": [
+    18,
+    21,
+    36,
+    46
+   ],
+   "notes": 11,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V120 -P5"
+  },
+  "se_elevator": {
+   "seconds": 3.6,
+   "programs": [
+    27,
+    38
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V100 -P4"
+  },
+  "se_escalator": {
+   "seconds": 2.0,
+   "programs": [
+    38
+   ],
+   "notes": 1,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V100 -P4"
+  },
+  "se_exit": {
+   "seconds": 0.625,
+   "programs": [
+    126
+   ],
+   "notes": 8,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -V120 -P5"
+  },
+  "se_exp": {
+   "seconds": 1.625,
+   "programs": [
+    19
+   ],
+   "notes": 1,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -V080 -P5"
+  },
+  "se_exp_max": {
+   "seconds": 0.3,
+   "programs": [
+    46,
+    53
+   ],
+   "notes": 4,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V094 -P5"
+  },
+  "se_failure": {
+   "seconds": 0.34375,
+   "programs": [
+    92
+   ],
+   "notes": 4,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -V120 -P4"
+  },
+  "se_faint": {
+   "seconds": 0.8333325,
+   "programs": [
+    0,
+    90,
+    124
+   ],
+   "notes": 5,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -V110 -P5"
+  },
+  "se_fall": {
+   "seconds": 0.705882,
+   "programs": [
+    22
+   ],
+   "notes": 1,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V110 -P4"
+  },
+  "se_field_poison": {
+   "seconds": 0.4,
+   "programs": [
+    16
+   ],
+   "notes": 5,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -V110 -P5"
+  },
+  "se_flee": {
+   "seconds": 0.65,
+   "programs": [
+    126
+   ],
+   "notes": 13,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -V090 -P5"
+  },
+  "se_fu_zaku": {
+   "seconds": 0.4,
+   "programs": [
+    126
+   ],
+   "notes": 8,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -V120 -P4"
+  },
+  "se_glass_flute": {
+   "seconds": 0.375,
+   "programs": [
+    28
+   ],
+   "notes": 4,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V105 -P5"
+  },
+  "se_i": {
+   "seconds": 1.0,
+   "programs": [
+    123
+   ],
+   "notes": 1,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V120 -P4"
+  },
+  "se_ice_break": {
+   "seconds": 0.3125,
+   "programs": [
+    3,
+    4
+   ],
+   "notes": 10,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V100 -P4"
+  },
+  "se_ice_crack": {
+   "seconds": 0.15,
+   "programs": [
+    9,
+    122,
+    123
+   ],
+   "notes": 7,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -V100 -P4"
+  },
+  "se_ice_stairs": {
+   "seconds": 0.3,
+   "programs": [
+    3,
+    4
+   ],
+   "notes": 4,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V090 -P4"
+  },
+  "se_intro_blast": {
+   "seconds": 2.999997,
+   "programs": [
+    123
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -V100 -P5"
+  },
+  "se_itemfinder": {
+   "seconds": 0.5859375,
+   "programs": [
+    6,
+    14,
+    89
+   ],
+   "notes": 7,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -V090 -P5"
+  },
+  "se_lavaridge_fall_warp": {
+   "seconds": 1.125,
+   "programs": [
+    126
+   ],
+   "notes": 10,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -P4"
+  },
+  "se_ledge": {
+   "seconds": 0.1875,
+   "programs": [
+    85,
+    86
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -V100 -P4"
+  },
+  "se_low_health": {
+   "seconds": 0.6,
+   "programs": [
+    15
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -V100 -P3"
+  },
+  "se_m_absorb": {
+   "seconds": 0.2,
+   "programs": [
+    24,
+    38
+   ],
+   "notes": 3,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_absorb_2": {
+   "seconds": 0.85,
+   "programs": [
+    46,
+    53
+   ],
+   "notes": 40,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_acid_armor": {
+   "seconds": 1.2,
+   "programs": [
+    23,
+    31
+   ],
+   "notes": 26,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_attract": {
+   "seconds": 0.82142775,
+   "programs": [
+    46,
+    53
+   ],
+   "notes": 19,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_attract2": {
+   "seconds": 3.6,
+   "programs": [
+    61,
+    62
+   ],
+   "notes": 12,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_barrier": {
+   "seconds": 0.9,
+   "programs": [
+    19,
+    53
+   ],
+   "notes": 16,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_baton_pass": {
+   "seconds": 0.9375,
+   "programs": [
+    19,
+    45,
+    57
+   ],
+   "notes": 9,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_belly_drum": {
+   "seconds": 0.4,
+   "programs": [
+    6
+   ],
+   "notes": 1,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_bind": {
+   "seconds": 0.4,
+   "programs": [
+    38
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V100 -P4"
+  },
+  "se_m_bite": {
+   "seconds": 0.272727,
+   "programs": [
+    21,
+    26,
+    27
+   ],
+   "notes": 15,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_blizzard": {
+   "seconds": 1.2,
+   "programs": [
+    22
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_blizzard2": {
+   "seconds": 0.8,
+   "programs": [
+    22
+   ],
+   "notes": 1,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_bonemerang": {
+   "seconds": 0.2,
+   "programs": [
+    24
+   ],
+   "notes": 6,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_brick_break": {
+   "seconds": 0.6,
+   "programs": [
+    3,
+    4,
+    41
+   ],
+   "notes": 16,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_bubble": {
+   "seconds": 0.272727,
+   "programs": [
+    23
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_bubble2": {
+   "seconds": 0.272727,
+   "programs": [
+    4,
+    24
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_bubble3": {
+   "seconds": 0.272727,
+   "programs": [
+    23
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_bubble_beam": {
+   "seconds": 1.3,
+   "programs": [
+    9
+   ],
+   "notes": 1,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_bubble_beam2": {
+   "seconds": 0.6,
+   "programs": [
+    9
+   ],
+   "notes": 3,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_charge": {
+   "seconds": 1.2,
+   "programs": [
+    18
+   ],
+   "notes": 1,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_charm": {
+   "seconds": 0.3,
+   "programs": [
+    37
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_comet_punch": {
+   "seconds": 0.4,
+   "programs": [
+    5,
+    6
+   ],
+   "notes": 4,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V120 -P4"
+  },
+  "se_m_confuse_ray": {
+   "seconds": 0.545454,
+   "programs": [
+    52
+   ],
+   "notes": 6,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_cosmic_power": {
+   "seconds": 3.3,
+   "programs": [
+    46,
+    53
+   ],
+   "notes": 40,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_crabhammer": {
+   "seconds": 0.4,
+   "programs": [
+    23
+   ],
+   "notes": 3,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_cut": {
+   "seconds": 0.545454,
+   "programs": [
+    2,
+    5,
+    18,
+    22
+   ],
+   "notes": 6,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V120 -P4"
+  },
+  "se_m_detect": {
+   "seconds": 0.47727225,
+   "programs": [
+    54
+   ],
+   "notes": 8,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_dig": {
+   "seconds": 0.25,
+   "programs": [
+    26,
+    36
+   ],
+   "notes": 5,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_dive": {
+   "seconds": 0.8,
+   "programs": [
+    25,
+    36
+   ],
+   "notes": 10,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_dizzy_punch": {
+   "seconds": 0.4,
+   "programs": [
+    19
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_double_slap": {
+   "seconds": 0.4,
+   "programs": [
+    2,
+    18
+   ],
+   "notes": 4,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V110 -P4"
+  },
+  "se_m_double_team": {
+   "seconds": 0.4,
+   "programs": [
+    2,
+    22
+   ],
+   "notes": 1,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_dragon_rage": {
+   "seconds": 1.6,
+   "programs": [
+    29
+   ],
+   "notes": 6,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_earthquake": {
+   "seconds": 3.4,
+   "programs": [
+    5,
+    26,
+    27
+   ],
+   "notes": 92,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_ember": {
+   "seconds": 0.4,
+   "programs": [
+    29
+   ],
+   "notes": 1,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_encore": {
+   "seconds": 0.2,
+   "programs": [
+    59
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_encore2": {
+   "seconds": 2.4,
+   "programs": [
+    60
+   ],
+   "notes": 1,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_explosion": {
+   "seconds": 1.2,
+   "programs": [
+    4,
+    41
+   ],
+   "notes": 8,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_faint_attack": {
+   "seconds": 0.5,
+   "programs": [
+    45
+   ],
+   "notes": 5,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_fire_punch": {
+   "seconds": 0.818181,
+   "programs": [
+    5,
+    6,
+    29
+   ],
+   "notes": 7,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V110 -P4"
+  },
+  "se_m_flame_wheel": {
+   "seconds": 0.55,
+   "programs": [
+    27,
+    29
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_flame_wheel2": {
+   "seconds": 0.8,
+   "programs": [
+    27,
+    29
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_flamethrower": {
+   "seconds": 3.2,
+   "programs": [
+    27,
+    29
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_flatter": {
+   "seconds": 0.2,
+   "programs": [
+    41
+   ],
+   "notes": 3,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_fly": {
+   "seconds": 0.545454,
+   "programs": [
+    2,
+    25
+   ],
+   "notes": 15,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V110 -P4"
+  },
+  "se_m_giga_drain": {
+   "seconds": 0.4,
+   "programs": [
+    23,
+    36
+   ],
+   "notes": 7,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_grasswhistle": {
+   "seconds": 3.3,
+   "programs": [
+    64
+   ],
+   "notes": 8,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_gust": {
+   "seconds": 1.2,
+   "programs": [
+    22
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V110 -P4"
+  },
+  "se_m_gust2": {
+   "seconds": 0.8,
+   "programs": [
+    22
+   ],
+   "notes": 1,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V110 -P4"
+  },
+  "se_m_hail": {
+   "seconds": 0.5,
+   "programs": [
+    3,
+    4
+   ],
+   "notes": 17,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_harden": {
+   "seconds": 0.4,
+   "programs": [
+    4,
+    28
+   ],
+   "notes": 4,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_haze": {
+   "seconds": 2.76315375,
+   "programs": [
+    45,
+    70
+   ],
+   "notes": 10,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_headbutt": {
+   "seconds": 0.4,
+   "programs": [
+    2
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V110 -P4"
+  },
+  "se_m_heal_bell": {
+   "seconds": 0.4,
+   "programs": [
+    51
+   ],
+   "notes": 3,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_heat_wave": {
+   "seconds": 2.2,
+   "programs": [
+    27,
+    29
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_horn_attack": {
+   "seconds": 0.4,
+   "programs": [
+    18,
+    21,
+    36
+   ],
+   "notes": 3,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V110 -P4"
+  },
+  "se_m_hydro_pump": {
+   "seconds": 2.0,
+   "programs": [
+    25,
+    36
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_hyper_beam": {
+   "seconds": 0.4,
+   "programs": [
+    5,
+    18
+   ],
+   "notes": 16,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_hyper_beam2": {
+   "seconds": 0.4,
+   "programs": [
+    5,
+    45
+   ],
+   "notes": 16,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_icy_wind": {
+   "seconds": 0.2,
+   "programs": [
+    3,
+    5
+   ],
+   "notes": 7,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_jump_kick": {
+   "seconds": 0.333333,
+   "programs": [
+    2,
+    22
+   ],
+   "notes": 1,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V110 -P4"
+  },
+  "se_m_leer": {
+   "seconds": 1.0,
+   "programs": [
+    5,
+    18
+   ],
+   "notes": 15,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V110 -P4"
+  },
+  "se_m_lick": {
+   "seconds": 0.6,
+   "programs": [
+    31
+   ],
+   "notes": 1,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_lock_on": {
+   "seconds": 0.3,
+   "programs": [
+    40
+   ],
+   "notes": 8,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_mega_kick": {
+   "seconds": 1.2,
+   "programs": [
+    22
+   ],
+   "notes": 1,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V090 -P4"
+  },
+  "se_m_mega_kick2": {
+   "seconds": 0.545454,
+   "programs": [
+    5,
+    6,
+    27
+   ],
+   "notes": 8,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V110 -P4"
+  },
+  "se_m_metronome": {
+   "seconds": 0.4,
+   "programs": [
+    37
+   ],
+   "notes": 1,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_milk_drink": {
+   "seconds": 0.41666625,
+   "programs": [
+    16,
+    53
+   ],
+   "notes": 8,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_minimize": {
+   "seconds": 0.9,
+   "programs": [
+    45
+   ],
+   "notes": 9,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_mist": {
+   "seconds": 0.4,
+   "programs": [
+    36
+   ],
+   "notes": 1,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_moonlight": {
+   "seconds": 4.8,
+   "programs": [
+    46,
+    55
+   ],
+   "notes": 84,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_morning_sun": {
+   "seconds": 1.25,
+   "programs": [
+    46,
+    53
+   ],
+   "notes": 24,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P5"
+  },
+  "se_m_nightmare": {
+   "seconds": 1.090908,
+   "programs": [
+    3,
+    20
+   ],
+   "notes": 26,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_pay_day": {
+   "seconds": 0.6,
+   "programs": [
+    39
+   ],
+   "notes": 6,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V095 -P4"
+  },
+  "se_m_perish_song": {
+   "seconds": 3.15,
+   "programs": [
+    73
+   ],
+   "notes": 4,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_petal_dance": {
+   "seconds": 2.25,
+   "programs": [
+    46,
+    53
+   ],
+   "notes": 44,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_poison_powder": {
+   "seconds": 0.4,
+   "programs": [
+    18,
+    36
+   ],
+   "notes": 4,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_psybeam": {
+   "seconds": 0.55263075,
+   "programs": [
+    45,
+    47
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_psybeam2": {
+   "seconds": 0.7894725,
+   "programs": [
+    37,
+    45
+   ],
+   "notes": 8,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_rain_dance": {
+   "seconds": 1.909089,
+   "programs": [
+    36
+   ],
+   "notes": 1,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_razor_wind": {
+   "seconds": 0.545454,
+   "programs": [
+    2,
+    5,
+    18
+   ],
+   "notes": 4,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V110 -P4"
+  },
+  "se_m_razor_wind2": {
+   "seconds": 0.24,
+   "programs": [
+    22
+   ],
+   "notes": 1,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V090 -P4"
+  },
+  "se_m_reflect": {
+   "seconds": 0.9,
+   "programs": [
+    19,
+    53
+   ],
+   "notes": 16,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_reversal": {
+   "seconds": 1.1,
+   "programs": [
+    17,
+    19,
+    22
+   ],
+   "notes": 37,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_rock_throw": {
+   "seconds": 0.8,
+   "programs": [
+    26
+   ],
+   "notes": 5,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_sacred_fire": {
+   "seconds": 0.4,
+   "programs": [
+    27,
+    29
+   ],
+   "notes": 5,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_sacred_fire2": {
+   "seconds": 1.6,
+   "programs": [
+    27,
+    29
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_sand_attack": {
+   "seconds": 0.4,
+   "programs": [
+    25,
+    26,
+    36
+   ],
+   "notes": 5,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V110 -P4"
+  },
+  "se_m_sand_tomb": {
+   "seconds": 1.6,
+   "programs": [
+    22,
+    57
+   ],
+   "notes": 28,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_sandstorm": {
+   "seconds": 2.4,
+   "programs": [
+    2,
+    57
+   ],
+   "notes": 54,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_scratch": {
+   "seconds": 0.272727,
+   "programs": [
+    18,
+    21
+   ],
+   "notes": 4,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V110 -P4"
+  },
+  "se_m_screech": {
+   "seconds": 0.4,
+   "programs": [
+    42,
+    44
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V110 -P4"
+  },
+  "se_m_self_destruct": {
+   "seconds": 0.8,
+   "programs": [
+    41
+   ],
+   "notes": 3,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_sing": {
+   "seconds": 4.35,
+   "programs": [
+    73
+   ],
+   "notes": 8,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_sketch": {
+   "seconds": 0.1666665,
+   "programs": [
+    31,
+    38
+   ],
+   "notes": 3,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_sky_uppercut": {
+   "seconds": 0.4090905,
+   "programs": [
+    4,
+    22,
+    41
+   ],
+   "notes": 7,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_snore": {
+   "seconds": 0.34090875,
+   "programs": [
+    27,
+    36,
+    38
+   ],
+   "notes": 13,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V120 -P4"
+  },
+  "se_m_solar_beam": {
+   "seconds": 3.2,
+   "programs": [
+    36
+   ],
+   "notes": 1,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_spit_up": {
+   "seconds": 0.25,
+   "programs": [
+    57,
+    65
+   ],
+   "notes": 6,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_stat_decrease": {
+   "seconds": 1.14705825,
+   "programs": [
+    55,
+    67
+   ],
+   "notes": 48,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_stat_increase": {
+   "seconds": 1.14705825,
+   "programs": [
+    55,
+    67
+   ],
+   "notes": 48,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_strength": {
+   "seconds": 0.4,
+   "programs": [
+    5,
+    26
+   ],
+   "notes": 14,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_string_shot": {
+   "seconds": 0.48,
+   "programs": [
+    22
+   ],
+   "notes": 1,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_string_shot2": {
+   "seconds": 0.96,
+   "programs": [
+    5,
+    10
+   ],
+   "notes": 16,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_supersonic": {
+   "seconds": 0.7,
+   "programs": [
+    43
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_surf": {
+   "seconds": 1.6,
+   "programs": [
+    36
+   ],
+   "notes": 1,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_swagger": {
+   "seconds": 0.23684175,
+   "programs": [
+    2
+   ],
+   "notes": 1,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_swagger2": {
+   "seconds": 0.2,
+   "programs": [
+    56
+   ],
+   "notes": 6,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_sweet_scent": {
+   "seconds": 2.8,
+   "programs": [
+    22,
+    61
+   ],
+   "notes": 5,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_swift": {
+   "seconds": 0.24999975,
+   "programs": [
+    16,
+    53
+   ],
+   "notes": 5,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_swords_dance": {
+   "seconds": 1.0,
+   "programs": [
+    22,
+    25,
+    28
+   ],
+   "notes": 10,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V100 -P4"
+  },
+  "se_m_tail_whip": {
+   "seconds": 0.4,
+   "programs": [
+    15
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V110 -P4"
+  },
+  "se_m_take_down": {
+   "seconds": 0.8,
+   "programs": [
+    2
+   ],
+   "notes": 3,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V105 -P4"
+  },
+  "se_m_teeter_dance": {
+   "seconds": 0.8823525,
+   "programs": [
+    37,
+    47
+   ],
+   "notes": 24,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_teleport": {
+   "seconds": 0.9,
+   "programs": [
+    45
+   ],
+   "notes": 9,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_thunder_wave": {
+   "seconds": 0.8,
+   "programs": [
+    5,
+    18
+   ],
+   "notes": 10,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_thunderbolt": {
+   "seconds": 0.545454,
+   "programs": [
+    5,
+    18
+   ],
+   "notes": 8,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_thunderbolt2": {
+   "seconds": 0.545454,
+   "programs": [
+    5,
+    18
+   ],
+   "notes": 12,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_toxic": {
+   "seconds": 0.4,
+   "programs": [
+    23,
+    31
+   ],
+   "notes": 10,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_tri_attack": {
+   "seconds": 0.272727,
+   "programs": [
+    4,
+    58
+   ],
+   "notes": 8,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_tri_attack2": {
+   "seconds": 1.090908,
+   "programs": [
+    4,
+    18
+   ],
+   "notes": 6,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_twister": {
+   "seconds": 2.8,
+   "programs": [
+    22,
+    25
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_uproar": {
+   "seconds": 0.4,
+   "programs": [
+    60
+   ],
+   "notes": 1,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_vicegrip": {
+   "seconds": 0.272727,
+   "programs": [
+    8,
+    18,
+    27
+   ],
+   "notes": 4,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V110 -P4"
+  },
+  "se_m_vital_throw": {
+   "seconds": 0.272727,
+   "programs": [
+    4,
+    21,
+    22
+   ],
+   "notes": 5,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_vital_throw2": {
+   "seconds": 0.272727,
+   "programs": [
+    5,
+    6
+   ],
+   "notes": 6,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_waterfall": {
+   "seconds": 1.0,
+   "programs": [
+    25,
+    36
+   ],
+   "notes": 11,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_whirlpool": {
+   "seconds": 2.0,
+   "programs": [
+    36
+   ],
+   "notes": 1,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_m_wing_attack": {
+   "seconds": 0.272727,
+   "programs": [
+    2,
+    25,
+    27
+   ],
+   "notes": 4,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V105 -P4"
+  },
+  "se_m_yawn": {
+   "seconds": 0.8,
+   "programs": [
+    61,
+    66
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V110 -P4"
+  },
+  "se_mud_ball": {
+   "seconds": 0.15,
+   "programs": [
+    26,
+    36
+   ],
+   "notes": 3,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V110 -P4"
+  },
+  "se_mugshot": {
+   "seconds": 2.454543,
+   "programs": [
+    2,
+    66
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V090 -P5"
+  },
+  "se_n": {
+   "seconds": 1.0,
+   "programs": [
+    127
+   ],
+   "notes": 1,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_not_effective": {
+   "seconds": 0.24999975,
+   "programs": [
+    0,
+    127
+   ],
+   "notes": 3,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -V110 -P5"
+  },
+  "se_note_a": {
+   "seconds": 0.3,
+   "programs": [
+    17,
+    48
+   ],
+   "notes": 4,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V110 -P4"
+  },
+  "se_note_b": {
+   "seconds": 0.3,
+   "programs": [
+    17,
+    48
+   ],
+   "notes": 4,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V110 -P4"
+  },
+  "se_note_c": {
+   "seconds": 0.3,
+   "programs": [
+    17,
+    48
+   ],
+   "notes": 4,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V110 -P4"
+  },
+  "se_note_c_high": {
+   "seconds": 0.3,
+   "programs": [
+    17,
+    48
+   ],
+   "notes": 4,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V110 -P4"
+  },
+  "se_note_d": {
+   "seconds": 0.3,
+   "programs": [
+    17,
+    48
+   ],
+   "notes": 4,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V110 -P4"
+  },
+  "se_note_e": {
+   "seconds": 0.3,
+   "programs": [
+    17,
+    48
+   ],
+   "notes": 4,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V110 -P4"
+  },
+  "se_note_f": {
+   "seconds": 0.3,
+   "programs": [
+    17,
+    48
+   ],
+   "notes": 4,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V110 -P4"
+  },
+  "se_note_g": {
+   "seconds": 0.3,
+   "programs": [
+    17,
+    48
+   ],
+   "notes": 4,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V110 -P4"
+  },
+  "se_o": {
+   "seconds": 1.0,
+   "programs": [
+    126
+   ],
+   "notes": 1,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V120 -P4"
+  },
+  "se_orb": {
+   "seconds": 3.6818145,
+   "programs": [
+    15,
+    25
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V100 -P5"
+  },
+  "se_pc_login": {
+   "seconds": 0.416666,
+   "programs": [
+    4
+   ],
+   "notes": 4,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -V100 -P5"
+  },
+  "se_pc_off": {
+   "seconds": 0.375,
+   "programs": [
+    6
+   ],
+   "notes": 4,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -V100 -P5"
+  },
+  "se_pc_on": {
+   "seconds": 0.98958175,
+   "programs": [
+    4
+   ],
+   "notes": 9,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -V100 -P5"
+  },
+  "se_pike_curtain_close": {
+   "seconds": 1.7633919166666665,
+   "programs": [
+    38,
+    100,
+    125
+   ],
+   "notes": 19,
+   "voicegroup": "_frlg_sfx",
+   "opts": "-E -R50 -G_frlg_sfx -P5"
+  },
+  "se_pike_curtain_open": {
+   "seconds": 1.836732,
+   "programs": [
+    38,
+    100,
+    125
+   ],
+   "notes": 19,
+   "voicegroup": "_frlg_sfx",
+   "opts": "-E -R50 -G_frlg_sfx -P5"
+  },
+  "se_pin": {
+   "seconds": 0.375,
+   "programs": [
+    5
+   ],
+   "notes": 5,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -V060 -P4"
+  },
+  "se_pokenav_call": {
+   "seconds": 0.441176,
+   "programs": [
+    13,
+    80
+   ],
+   "notes": 40,
+   "voicegroup": "_frlg_sfx",
+   "opts": "-E -R50 -G_frlg_sfx -V120 -P5"
+  },
+  "se_pokenav_hang_up": {
+   "seconds": 0.625,
+   "programs": [
+    10,
+    82
+   ],
+   "notes": 10,
+   "voicegroup": "_frlg_sfx",
+   "opts": "-E -R50 -G_frlg_sfx -V110 -P5"
+  },
+  "se_pokenav_off": {
+   "seconds": 0.3124995,
+   "programs": [
+    4,
+    14
+   ],
+   "notes": 16,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -V100 -P5"
+  },
+  "se_pokenav_on": {
+   "seconds": 0.3124995,
+   "programs": [
+    4,
+    14
+   ],
+   "notes": 16,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -V100 -P5"
+  },
+  "se_puddle": {
+   "seconds": 0.2,
+   "programs": [
+    23
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V020 -P4"
+  },
+  "se_rain": {
+   "seconds": 1.090908,
+   "programs": [
+    36
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V080 -P2"
+  },
+  "se_rain_stop": {
+   "seconds": 0.545454,
+   "programs": [
+    36
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V080 -P2"
+  },
+  "se_repel": {
+   "seconds": 0.4090905,
+   "programs": [
+    123
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -V090 -P4"
+  },
+  "se_rg_bag_cursor": {
+   "seconds": 0.0725805,
+   "programs": [
+    10,
+    124
+   ],
+   "notes": 3,
+   "voicegroup": "_frlg_sfx",
+   "opts": "-E -R50 -G_frlg_sfx -P5"
+  },
+  "se_rg_bag_pocket": {
+   "seconds": 0.035545,
+   "programs": [
+    2,
+    80
+   ],
+   "notes": 4,
+   "voicegroup": "_frlg_sfx",
+   "opts": "-E -R50 -G_frlg_sfx -P5"
+  },
+  "se_rg_ball_click": {
+   "seconds": 0.1693545,
+   "programs": [
+    3,
+    126
+   ],
+   "notes": 3,
+   "voicegroup": "_frlg_sfx",
+   "opts": "-E -R50 -G_frlg_sfx -V100 -P5"
+  },
+  "se_rg_card_flip": {
+   "seconds": 0.65934,
+   "programs": [
+    124,
+    125
+   ],
+   "notes": 2,
+   "voicegroup": "_frlg_sfx",
+   "opts": "-E -R50 -G_frlg_sfx -P5"
+  },
+  "se_rg_card_flipping": {
+   "seconds": 1.64835,
+   "programs": [
+    125
+   ],
+   "notes": 1,
+   "voicegroup": "_frlg_sfx",
+   "opts": "-E -R50 -G_frlg_sfx -P5"
+  },
+  "se_rg_card_open": {
+   "seconds": 1.724135,
+   "programs": [
+    46,
+    124
+   ],
+   "notes": 11,
+   "voicegroup": "_frlg_sfx",
+   "opts": "-E -R50 -G_frlg_sfx -V112 -P5"
+  },
+  "se_rg_deoxys_move": {
+   "seconds": 1.832056,
+   "programs": [
+    31,
+    50,
+    123
+   ],
+   "notes": 26,
+   "voicegroup": "_frlg_sfx",
+   "opts": "-E -R50 -G_frlg_sfx -V080 -P5"
+  },
+  "se_rg_door": {
+   "seconds": 0.545454,
+   "programs": [
+    92,
+    127
+   ],
+   "notes": 4,
+   "voicegroup": "_frlg_sfx",
+   "opts": "-E -R50 -G_frlg_sfx -V100 -P5"
+  },
+  "se_rg_help_close": {
+   "seconds": 0.571428,
+   "programs": [
+    24
+   ],
+   "notes": 14,
+   "voicegroup": "_frlg_sfx",
+   "opts": "-E -R50 -G_frlg_sfx -V095 -P5"
+  },
+  "se_rg_help_error": {
+   "seconds": 0.285714,
+   "programs": [
+    24,
+    92
+   ],
+   "notes": 7,
+   "voicegroup": "_frlg_sfx",
+   "opts": "-E -R50 -G_frlg_sfx -V125 -P5"
+  },
+  "se_rg_help_open": {
+   "seconds": 0.571428,
+   "programs": [
+    24
+   ],
+   "notes": 14,
+   "voicegroup": "_frlg_sfx",
+   "opts": "-E -R50 -G_frlg_sfx -V096 -P5"
+  },
+  "se_rg_poke_jump_failure": {
+   "seconds": 0.34375,
+   "programs": [
+    92
+   ],
+   "notes": 4,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -P5"
+  },
+  "se_rg_poke_jump_success": {
+   "seconds": 0.85,
+   "programs": [
+    46,
+    53
+   ],
+   "notes": 40,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V110 -P5"
+  },
+  "se_rg_shop": {
+   "seconds": 0.6048375,
+   "programs": [
+    8
+   ],
+   "notes": 1,
+   "voicegroup": "_frlg_sfx",
+   "opts": "-E -R50 -G_frlg_sfx -V080 -P5"
+  },
+  "se_rg_ss_anne_horn": {
+   "seconds": 3.65853,
+   "programs": [
+    9,
+    81
+   ],
+   "notes": 6,
+   "voicegroup": "_frlg_sfx",
+   "opts": "-E -R50 -G_frlg_sfx -V096 -P5"
+  },
+  "se_rotating_gate": {
+   "seconds": 0.34090875,
+   "programs": [
+    9
+   ],
+   "notes": 4,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V090 -P4"
+  },
+  "se_roulette_ball": {
+   "seconds": 8.0,
+   "programs": [
+    63
+   ],
+   "notes": 1,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V110 -P2"
+  },
+  "se_roulette_ball2": {
+   "seconds": 1.2,
+   "programs": [
+    63
+   ],
+   "notes": 1,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V110 -P2"
+  },
+  "se_save": {
+   "seconds": 0.7,
+   "programs": [
+    14,
+    17
+   ],
+   "notes": 12,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V080 -P5"
+  },
+  "se_select": {
+   "seconds": 0.15,
+   "programs": [
+    87,
+    88
+   ],
+   "notes": 5,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -V080 -P5"
+  },
+  "se_shiny": {
+   "seconds": 0.545454,
+   "programs": [
+    46
+   ],
+   "notes": 10,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V095 -P5"
+  },
+  "se_ship": {
+   "seconds": 1.909089,
+   "programs": [
+    123
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -V075 -P4"
+  },
+  "se_shop": {
+   "seconds": 0.46875,
+   "programs": [
+    6,
+    14
+   ],
+   "notes": 5,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -V090 -P5"
+  },
+  "se_sliding_door": {
+   "seconds": 0.25,
+   "programs": [
+    1
+   ],
+   "notes": 1,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V095 -P4"
+  },
+  "se_success": {
+   "seconds": 0.25,
+   "programs": [
+    5
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -V080 -P4"
+  },
+  "se_sudowoodo_shake": {
+   "seconds": 1.2,
+   "programs": [
+    127
+   ],
+   "notes": 8,
+   "voicegroup": "_frlg_sfx",
+   "opts": "-E -R50 -G_frlg_sfx -V077 -P5"
+  },
+  "se_super_effective": {
+   "seconds": 1.41666525,
+   "programs": [
+    0,
+    125
+   ],
+   "notes": 24,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -V110 -P5"
+  },
+  "se_switch": {
+   "seconds": 0.15,
+   "programs": [
+    122,
+    126
+   ],
+   "notes": 3,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -V100 -P4"
+  },
+  "se_taillow_wing_flap": {
+   "seconds": 0.545454,
+   "programs": [
+    2,
+    25,
+    27
+   ],
+   "notes": 4,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V105 -P5"
+  },
+  "se_thunder": {
+   "seconds": 1.636362,
+   "programs": [
+    18
+   ],
+   "notes": 4,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V110 -P3"
+  },
+  "se_thunder2": {
+   "seconds": 1.363635,
+   "programs": [
+    18
+   ],
+   "notes": 1,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V110 -P3"
+  },
+  "se_thunderstorm": {
+   "seconds": 1.090908,
+   "programs": [
+    36
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V080 -P2"
+  },
+  "se_thunderstorm_stop": {
+   "seconds": 0.545454,
+   "programs": [
+    36
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V080 -P2"
+  },
+  "se_truck_door": {
+   "seconds": 0.2,
+   "programs": [
+    4,
+    8
+   ],
+   "notes": 6,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V110 -P4"
+  },
+  "se_truck_move": {
+   "seconds": 6.4,
+   "programs": [
+    10,
+    11
+   ],
+   "notes": 28,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_truck_stop": {
+   "seconds": 2.4,
+   "programs": [
+    10,
+    12,
+    13
+   ],
+   "notes": 5,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_truck_unload": {
+   "seconds": 0.45,
+   "programs": [
+    120
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -P4"
+  },
+  "se_u": {
+   "seconds": 1.0,
+   "programs": [
+    124
+   ],
+   "notes": 1,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -P4"
+  },
+  "se_unlock": {
+   "seconds": 0.4,
+   "programs": [
+    4,
+    8
+   ],
+   "notes": 6,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V100 -P4"
+  },
+  "se_use_item": {
+   "seconds": 0.454545,
+   "programs": [
+    90,
+    91
+   ],
+   "notes": 3,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -V100 -P5"
+  },
+  "se_vend": {
+   "seconds": 0.2,
+   "programs": [
+    8
+   ],
+   "notes": 3,
+   "voicegroup": "_rs_sfx_2",
+   "opts": "-E -R50 -G_rs_sfx_2 -V110 -P4"
+  },
+  "se_wall_hit": {
+   "seconds": 0.272727,
+   "programs": [
+    89
+   ],
+   "notes": 1,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -P2"
+  },
+  "se_warp_in": {
+   "seconds": 0.74999925,
+   "programs": [
+    90
+   ],
+   "notes": 7,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -V090 -P4"
+  },
+  "se_warp_out": {
+   "seconds": 0.818181,
+   "programs": [
+    93
+   ],
+   "notes": 8,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -V090 -P4"
+  },
+  "se_win_open": {
+   "seconds": 0.272727,
+   "programs": [
+    127
+   ],
+   "notes": 2,
+   "voicegroup": "_rs_sfx_1",
+   "opts": "-E -R50 -G_rs_sfx_1 -P5"
+  }
+ }
+}

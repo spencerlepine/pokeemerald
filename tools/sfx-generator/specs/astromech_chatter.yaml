@@ -1,0 +1,18 @@
+name: astromech_chatter
+constant: SE_ASTROMECH_CHATTER
+brief: "Astromech beeps and whistles for droid NPCs (2-1B, QUIZ DROIDS, R1 UNIT) when they talk."
+seed: 9
+layers:
+  # A burst of fast pitched blips on the wave channel (sine table), then a whistle that bends up and
+  # down: a little droid talking, original phrase, chip-built.
+  - type: wave
+    table: sine
+    pitch: [[0, 1760], [0.045, 1760], [0.046, 2349], [0.09, 2349], [0.091, 1568], [0.13, 1568], [0.131, 2637], [0.17, 2637], [0.171, 1976], [0.22, 1976]]
+    env: [[0, 1], [0.04, 1], [0.042, 0.4], [0.046, 1], [0.088, 1], [0.09, 0.4], [0.092, 1], [0.13, 1], [0.132, 0.4], [0.134, 1], [0.22, 1], [0.225, 0]]
+  - type: square
+    at: 0.27
+    duty: 1
+    pitch: [[0, 1200], [0.12, 2900], [0.22, 2500], [0.34, 1400]]
+    vibrato: {rate: 22, depth: 0.7}
+    env: [[0, 0], [0.02, 0.8], [0.3, 0.7], [0.34, 0]]
+    gain: 0.6

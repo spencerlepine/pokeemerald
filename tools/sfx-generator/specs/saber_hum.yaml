@@ -1,0 +1,24 @@
+name: saber_hum
+constant: SE_SABER_HUM
+brief: "Idle lightsaber hum loop for overworld cutscenes."
+seed: 5
+loop: {start: 0.25, end: 1.55, crossfade: 0.12}
+layers:
+  # Two detuned buzzy saws a few cents apart beat slowly against each other; a resonant low-pass keeps
+  # it warm; a slow wobble in the filter gives the "alive" waver of an idling blade.
+  - type: pcm
+    osc: saw
+    unison: [-6, 0, 7]
+    pitch: 98
+    vibrato: {rate: 0.7, depth: 0.05}
+    filter: {type: lp, cutoff: [[0, 950], [0.5, 1200], [0.9, 850], [1.3, 1150], [1.6, 950]], q: 2.2}
+    am: {rate: 3.3, depth: 0.12}
+    env: [[0, 1], [1.6, 1]]
+    drive: 1.8
+    gain: 1.0
+  - type: pcm
+    osc: noise
+    filter: {type: bp, cutoff: 2400, q: 1.5}
+    env: [[0, 0.08], [1.6, 0.08]]
+    normalize: false
+    gain: 0.05

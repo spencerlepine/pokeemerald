@@ -186,9 +186,9 @@ def cmd_install(a):
     ok, *_ = check(x, r, spec['slot'], verbose=False)
     if not ok:
         sys.exit('check failed; not installing')
-    dst = CRIES / f"{spec['slot']}.wav"
+    dst = pathlib.Path(a.game) / 'sound/direct_sound_samples/cries' / f"{spec['slot']}.wav"
     dst.write_bytes(src.read_bytes())
-    print(f'installed {src.name} -> {dst.relative_to(GAME.parent)} (same table slot; rename + data/cry_tables edits are a separate port step)')
+    print(f'installed {src.name} -> {dst} (same table slot; renaming the file/label is a separate port step)')
 
 
 def main():
@@ -198,7 +198,7 @@ def main():
     m = s.add_parser('make'); m.add_argument('spec', nargs='+')
     c = s.add_parser('check'); c.add_argument('wav'); c.add_argument('--slot')
     o = s.add_parser('modes'); o.add_argument('wav')
-    i = s.add_parser('install'); i.add_argument('spec')
+    i = s.add_parser('install'); i.add_argument('spec'); i.add_argument('--game', default=str(GAME))
     a = p.parse_args()
     if a.cmd == 'make':
         okall = True

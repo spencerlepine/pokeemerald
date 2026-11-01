@@ -1,0 +1,24 @@
+name: comlink_call
+replaces: SE_POKENAV_CALL
+constant: SE_COMLINK_CALL
+brief: "Incoming comlink call: classic comms beep."
+seed: 8
+layers:
+  # A two-tone comms chirp, twice: high-low-high, squared off like old military radio gear.
+  - type: square
+    pitch: [[0, 1320], [0.07, 1320], [0.071, 990], [0.14, 990], [0.141, 1760], [0.2, 1760]]
+    duty: 2
+    env: [[0, 1], [0.2, 1], [0.205, 0]]
+    gain: 0.5
+  - type: square
+    at: 0.32
+    pitch: [[0, 1320], [0.07, 1320], [0.071, 990], [0.14, 990], [0.141, 1760], [0.2, 1760]]
+    duty: 2
+    env: [[0, 1], [0.2, 1], [0.205, 0]]
+    gain: 0.5
+  # Static bed under the beeps (7-bit "short" LFSR = the crunchy radio texture).
+  - type: noise
+    clock: 32768
+    short: true
+    env: [[0, 0.25], [0.55, 0.2], [0.6, 0]]
+    gain: 0.12

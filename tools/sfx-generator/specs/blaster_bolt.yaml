@@ -1,0 +1,25 @@
+name: blaster_bolt
+constant: SE_BLASTER_BOLT
+brief: "Blaster bolt: the classic pew, for BLASTER SHOT and stormtrooper scenes."
+seed: 2
+layers:
+  # The pew is a dispersive chirp (the sound a struck tension wire makes): very high, falling fast.
+  # Chip: square 1 with the hardware sweep falling (negate) - the GB's own laser.
+  - type: square
+    pitch: 1800
+    duty: 1
+    sweep: [1, true, 2]
+    hw_env: {start: 15, step: 2, dir: -1}
+    length: 0.22
+    gain: 0.45
+  # PCM: a sine chirp 3.2 kHz -> 180 Hz with a little FM for the metallic "spring" ring.
+  - type: pcm
+    osc: sine
+    pitch: [[0, 3200], [0.04, 1200], [0.12, 420], [0.26, 180]]
+    fm: {ratio: 1.41, index: [[0, 0.6], [0.2, 0.1]]}
+    env: [[0, 0], [0.003, 1], [0.06, 0.7], [0.26, 0]]
+    gain: 0.8
+  - type: noise
+    clock: [[0, 120000], [0.03, 40000]]
+    env: [[0, 1], [0.02, 0.6], [0.045, 0]]
+    gain: 0.35

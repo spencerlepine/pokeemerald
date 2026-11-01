@@ -1,0 +1,40 @@
+name: vader_breath
+constant: SE_VADER_BREATH
+brief: "Vader's respirator: plays as he enters a scene."
+seed: 12
+layers:
+  # One respirator cycle: a valve click, a hissing inhale that rises through a tight resonance,
+  # a held beat, a second click and a lower, longer exhale. Original synthesis, not a recording.
+  - type: noise
+    nr43: [1, 4]
+    env: [[0, 0.8], [0.018, 0]]
+    gain: 0.4
+  - type: pcm
+    osc: noise
+    filter: {type: bp, cutoff: [[0, 900], [0.75, 1500]], q: 8, stages: 2}
+    env: [[0, 0], [0.15, 0.8], [0.6, 1], [0.8, 0]]
+    am: {rate: 38, depth: 0.25}
+    gain: 0.7
+  - type: pcm
+    osc: noise
+    filter: {type: bp, cutoff: [[0, 2600], [0.75, 3400]], q: 4, stages: 2}
+    env: [[0, 0], [0.2, 0.35], [0.8, 0]]
+    gain: 0.12
+  - type: noise
+    at: 1.0
+    nr43: [1, 5]
+    env: [[0, 0.8], [0.018, 0]]
+    gain: 0.4
+  - type: pcm
+    at: 1.0
+    osc: noise
+    filter: {type: bp, cutoff: [[0, 750], [1.1, 520]], q: 8, stages: 2}
+    env: [[0, 0], [0.1, 1], [0.8, 0.7], [1.15, 0]]
+    am: {rate: 31, depth: 0.3}
+    gain: 0.8
+  - type: pcm
+    at: 1.0
+    osc: noise
+    filter: {type: bp, cutoff: [[0, 1900], [1.1, 1500]], q: 4, stages: 2}
+    env: [[0, 0], [0.15, 0.3], [1.15, 0]]
+    gain: 0.1

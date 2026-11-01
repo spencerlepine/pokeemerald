@@ -1,0 +1,34 @@
+name: hyperspace_jump
+constant: SE_HYPERSPACE_JUMP
+brief: "Jump to hyperspace: rising whine then boom, for planet-to-planet travel."
+seed: 10
+layers:
+  # Engines spool: a saw whine climbing two and a half octaves while its filter opens.
+  - type: pcm
+    osc: saw
+    unison: [-12, 12]
+    pitch: [[0, 140], [1.1, 900]]
+    filter: {type: lp, cutoff: [[0, 400], [1.1, 5000]], q: 3}
+    env: [[0, 0], [0.4, 0.5], [1.1, 1], [1.13, 0]]
+    gain: 0.6
+  # Chip shimmer riding the whine: square with the hardware sweep climbing.
+  - type: square
+    at: 0.55
+    pitch: 600
+    duty: 0
+    sweep: [3, false, 4]
+    env: [[0, 0], [0.3, 0.4], [0.55, 0.6], [0.58, 0]]
+    gain: 0.3
+  # The jump: a deep thump falling under a burst of dark noise.
+  - type: pcm
+    at: 1.1
+    osc: sine
+    pitch: [[0, 120], [0.4, 32]]
+    env: [[0, 0], [0.005, 1], [0.15, 0.6], [0.6, 0]]
+    drive: 2.5
+    gain: 1.0
+  - type: noise
+    at: 1.1
+    clock: [[0, 65536], [0.5, 4096]]
+    env: [[0, 1], [0.1, 0.6], [0.55, 0]]
+    gain: 0.4
