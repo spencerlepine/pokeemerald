@@ -1,0 +1,275 @@
+name: kirlia
+description: 'AURADANCER: Dagobah Force sprite that dances when its trainer is happy (replaces Kirlia).'
+kit: person16x32
+replaces: graphics/object_events/pics/pokemon/kirlia.png
+graphics_info: Kirlia
+notes: 'Group 9: Kirlia''s own body as regions; new glowing pale-lavender sprite head with two fine antennae tipped with amber light, two big green leaf ears, big dark eyes with glints, pink cheeks, and
+  a green leaf skirt on brown stems.'
+palette: npc_3
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_3
+shade: true
+materials:
+  F: skin-a@
+  L: b
+  P: b
+  S: c
+legend:
+  k: 15
+  W: 14
+  o: 11
+  A: 6
+  p: 3
+accept:
+  skin_tones: 'creature: no human skin'
+  hair_rows: 'creature: no hair'
+  eye_row: creature eyes, not a human face
+base_sheet: graphics/object_events/pics/pokemon/kirlia.png
+remap:
+  a: P
+  b: S
+  c: S
+  w: W
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 15
+      rows: '....o......o....
+
+        .....A....A.....
+
+        .....FFFFFF.....
+
+        ....FFFFFFFF....
+
+        LL.FFFFFFFFFF.LL
+
+        LLLFFFFFFFFFFLLL
+
+        .LLLFFFFFFFFLLL.
+
+        ..LLFkkFFkkFLL..
+
+        ...FFkWFFkWFF...
+
+        ...FFpFFFFpFF...
+
+        ....FFFFFFFF....
+
+        .....FFFFFF.....'
+  up:
+    patches:
+    - x: 0
+      y: 15
+      rows: '....o......o....
+
+        .....A....A.....
+
+        .....FFFFFF.....
+
+        ....FFFFFFFF....
+
+        LL.FFFFFFFFFF.LL
+
+        LLLFFFFFFFFFFLLL
+
+        .LLLFFFFFFFFLLL.
+
+        ..LLFFFFFFFFLL..
+
+        ...FFFFFFFFFF...
+
+        ...FFFFFFFFFF...
+
+        ....FFFFFFFF....
+
+        .....FFFFFF.....'
+  left:
+    patches:
+    - x: 0
+      y: 15
+      rows: '........o..o....
+
+        .........AA.....
+
+        .....FFFFFF.....
+
+        ....FFFFFFFF....
+
+        ...FFFFFFFFFLL..
+
+        ..FFFFFFFFFLLLL.
+
+        ..FFFFFFFFFFLLL.
+
+        .FkkFFFFFFFF.L..
+
+        .FWkFFFFFFFF....
+
+        ..FpFFFFFFFF....
+
+        ...FFFFFFFF.....
+
+        ....FFFFFF......'
+  down_a:
+    patches:
+    - x: 0
+      y: 16
+      rows: '....o......o....
+
+        .....A....A.....
+
+        .....FFFFFF.....
+
+        ....FFFFFFFF....
+
+        LL.FFFFFFFFFF.LL
+
+        LLLFFFFFFFFFFLLL
+
+        .LLLFFFFFFFFLLL.
+
+        ..LLFkkFFkkFLL..
+
+        ...FFkWFFkWFF...
+
+        ...FFpFFFFpFF...
+
+        ....FFFFFFFF....
+
+        .....FFFFFF.....'
+  down_b:
+    patches:
+    - x: 0
+      y: 16
+      rows: '....o......o....
+
+        .....A....A.....
+
+        .....FFFFFF.....
+
+        ....FFFFFFFF....
+
+        LL.FFFFFFFFFF.LL
+
+        LLLFFFFFFFFFFLLL
+
+        .LLLFFFFFFFFLLL.
+
+        ..LLFkkFFkkFLL..
+
+        ...FFkWFFkWFF...
+
+        ...FFpFFFFpFF...
+
+        ....FFFFFFFF....
+
+        .....FFFFFF.....'
+  up_a:
+    patches:
+    - x: 0
+      y: 16
+      rows: '....o......o....
+
+        .....A....A.....
+
+        .....FFFFFF.....
+
+        ....FFFFFFFF....
+
+        LL.FFFFFFFFFF.LL
+
+        LLLFFFFFFFFFFLLL
+
+        .LLLFFFFFFFFLLL.
+
+        ..LLFFFFFFFFLL..
+
+        ...FFFFFFFFFF...
+
+        ...FFFFFFFFFF...
+
+        ....FFFFFFFF....
+
+        .....FFFFFF.....'
+  up_b:
+    patches:
+    - x: 0
+      y: 16
+      rows: '....o......o....
+
+        .....A....A.....
+
+        .....FFFFFF.....
+
+        ....FFFFFFFF....
+
+        LL.FFFFFFFFFF.LL
+
+        LLLFFFFFFFFFFLLL
+
+        .LLLFFFFFFFFLLL.
+
+        ..LLFFFFFFFFLL..
+
+        ...FFFFFFFFFF...
+
+        ...FFFFFFFFFF...
+
+        ....FFFFFFFF....
+
+        .....FFFFFF.....'
+  left_a:
+    patches:
+    - x: 0
+      y: 16
+      rows: '........o..o....
+
+        .........AA.....
+
+        .....FFFFFF.....
+
+        ....FFFFFFFF....
+
+        ...FFFFFFFFFLL..
+
+        ..FFFFFFFFFLLLL.
+
+        ..FFFFFFFFFFLLL.
+
+        .FkkFFFFFFFF.L..
+
+        .FWkFFFFFFFF....
+
+        ..FpFFFFFFFF....
+
+        ...FFFFFFFF.....
+
+        ....FFFFFF......'
+  left_b:
+    patches:
+    - x: 0
+      y: 16
+      rows: '........o..o....
+
+        .........AA.....
+
+        .....FFFFFF.....
+
+        ....FFFFFFFF....
+
+        ...FFFFFFFFFLL..
+
+        ..FFFFFFFFFLLLL.
+
+        ..FFFFFFFFFFLLL.
+
+        .FkkFFFFFFFF.L..
+
+        .FWkFFFFFFFF....
+
+        ..FpFFFFFFFF....
+
+        ...FFFFFFFF.....
+
+        ....FFFFFF......'

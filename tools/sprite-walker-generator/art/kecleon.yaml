@@ -1,0 +1,124 @@
+name: kecleon
+description: 'TAOZIN: Endor creature invisible to sight and to the Force (replaces Kecleon).'
+kit: person16x16_still
+replaces: graphics/object_events/pics/pokemon/kecleon.png
+graphics_info: Kecleon
+notes: 'Group 9: drawn on Kecleon''s footprint; pale shimmering lavender hide dotted with white, green spine crest, orange turret eyes and a green belly band.'
+palette: npc_3
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_3
+shade: true
+materials:
+  H: a@
+  B: a
+  s: b
+  E: c
+  z: b
+  f: a
+legend:
+  k: 15
+  W: 14
+  m: 4
+accept:
+  skin_tones: 'creature: no human skin'
+  hair_rows: 'creature: no hair'
+  eye_row: creature eyes, not a human face
+frames:
+  down: '....ss....ss....
+
+    ...sHHs..sHHs...
+
+    ..HHHHHHHHHHHH..
+
+    .HHHWHHHHHHWHHH.
+
+    .HEEEHHHHHHEEEH.
+
+    .HEkEHHHHHHEkEH.
+
+    .HHEEHHHHHHEEHH.
+
+    ..HHHHmmmmHHHH..
+
+    .sBBBBBBBBBBBBs.
+
+    ssBBWBBBBBBWBBss
+
+    .sBBBzzzzzzBBBs.
+
+    ..BBBBzzzzBBBB..
+
+    ...BBBBBBBBBB...
+
+    ...ff.BBBB.ff...
+
+    ...ff......ff...
+
+    ................
+
+    '
+  up: '....ss....ss....
+
+    ...sHHs..sHHs...
+
+    ..HHHHssssHHHH..
+
+    .HHHWHHssHHWHHH.
+
+    .HHHHHHssHHHHHH.
+
+    .HHHHHHssHHHHHH.
+
+    .HHHHHHHHHHHHHH.
+
+    ..HHHHHssHHHHH..
+
+    .sBBBBBssBBBBBs.
+
+    ssBBWBBssBBWBBss
+
+    .sBBBBBssBBBBBs.
+
+    ..BBBBBssBBBBB..
+
+    ...BBBBBBBBBB...
+
+    ...ff.BBBB.ff...
+
+    ...ff......ff...
+
+    ................
+
+    '
+  left: '.........ss.....
+
+    .......ssHHs....
+
+    .....HHHHHHHs...
+
+    ...HHHHHWHHHHs..
+
+    ..EEEHHHHHHHHs..
+
+    .EkEEHHHHHHHs...
+
+    .EEEHHHHHHHHs...
+
+    mHHHHHHHHHHHss..
+
+    .HHHBBBBBBBBBs..
+
+    ..BBBBBBWBBBBBs.
+
+    ..zzzzBBBBBBBBs.
+
+    ...zzzBBBBBBBB..
+
+    ....ffBBBBBff...
+
+    ....ff.....ff...
+
+    ................
+
+    ................
+
+    '

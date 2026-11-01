@@ -1,0 +1,126 @@
+name: skitty
+description: 'LOTHKIT: playful Lothal loth-cat kitten (replaces Skitty).'
+kit: person16x16_still
+replaces: graphics/object_events/pics/pokemon/skitty.png
+graphics_info: Skitty
+notes: 'Group 9: drawn on Skitty''s footprint; cream fur, tall orange-banded ears with black tufts, orange forehead stripes, big yellow slit eyes, red nose and a ringed tail.'
+palette: npc_2
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_2
+shade: true
+materials:
+  H: s@
+  B: s
+  E: a
+  i: s
+  r: a
+  T: s
+  f: c
+legend:
+  k: 15
+  W: 14
+  y: 5
+  n: 9
+  t: 13
+accept:
+  hair_rows: 'creature: no hair'
+  eye_row: creature eyes, not a human face
+frames:
+  down: '..t..........t..
+
+    ..EE........EE..
+
+    ..EiE......EiE..
+
+    ..EiiEHHHHEiiE..
+
+    ..EiHHHrrHHHiE..
+
+    ..HHHHrHHrHHHH..
+
+    .HHHHHHHHHHHHHH.
+
+    .HHyyHHHHHHyyHH.
+
+    .HHykHHHHHHkyHH.
+
+    ..HHHHHnnHHHHH..
+
+    ...HHHHHHHHHH...
+
+    ...BBrrBBrrBB...
+
+    ...BBBBBBBBBB...
+
+    ...BBBBBBBBBB...
+
+    ....ff....ff....
+
+    ................
+
+    '
+  up: '..t..........t..
+
+    ..EE........EE..
+
+    ..EEE......EEE..
+
+    ..EEEEHHHHEEEE..
+
+    ..EEHHHrrHHHEE..
+
+    ..HHHHrHHrHHHH..
+
+    .HHHHHrHHrHHHHH.
+
+    .HHHHHHHHHHHHHH.
+
+    .HHHHHHHHHHHHHH.
+
+    ..HHHHHTTHHHHH..
+
+    ...HHHrTTrHHH...
+
+    ...BBBBrrBBBB...
+
+    ...BBBBTTBBBB...
+
+    ...BBBBBBBBBB...
+
+    ....ff....ff....
+
+    ................
+
+    '
+  left: '......t.........
+
+    .....EE.........
+
+    .....EiE........
+
+    .....EiiE.......
+
+    ....HEiiEH..TT..
+
+    ...HHHrHHH..rT..
+
+    ..HHHHHrHHH.TT..
+
+    .HyyHHHHHHH..r..
+
+    .HykHHHHHHHBTT..
+
+    nHHHHHHHBBBBBr..
+
+    .HHHHHHBBBBBBB..
+
+    ..HHHrrBBrrBBB..
+
+    ....BBBBBBBBBB..
+
+    ....BBBBBBBBB...
+
+    .....ff...ff....
+
+    ................
+
+    '

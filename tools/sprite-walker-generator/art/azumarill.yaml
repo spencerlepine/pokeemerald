@@ -1,0 +1,126 @@
+name: azumarill
+description: 'BLOOPHARE: long-eared Naboo water rodent (replaces Azumarill).'
+kit: person16x16_still
+replaces: graphics/object_events/pics/pokemon/azumarill.png
+graphics_info: Azumarill
+notes: 'Group 9: drawn on Azumarill''s footprint; tall hare ears with pink insides, round blue head and body, white belly, olive webbed feet and reed-tuft tail.'
+palette: npc_1
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_1
+shade: true
+materials:
+  H: b@
+  B: b
+  E: b
+  S: a
+  w: w/c
+  f: c
+  t: c
+legend:
+  k: 15
+  W: 14
+  p: 5
+  n: 4
+accept:
+  skin_tones: 'creature: no human skin'
+  hair_rows: 'creature: no hair'
+  eye_row: creature eyes, not a human face
+frames:
+  down: '..EEE....EEE....
+
+    ..ESE....ESE....
+
+    ..ESE....ESE....
+
+    ..ESEHHHHESE....
+
+    ..HHHHHHHHHHH...
+
+    .HHHHHHHHHHHHH..
+
+    .HHWkHHHHWkHHH..
+
+    .HHpkHHnHHkpHH..
+
+    BBHHHHHHHHHHHBB.
+
+    BBBBwwwwwwwBBBB.
+
+    BBBwwwwwwwwwBBB.
+
+    .BBwwwwwwwwwBBtt
+
+    ..BBwwwwwwwBBttt
+
+    ...BBBBBBBBBB.t.
+
+    ...ff.....ff....
+
+    ................
+
+    '
+  up: '..EEE....EEE....
+
+    ..EEE....EEE....
+
+    ..EEE....EEE....
+
+    ..EEEHHHHEEE....
+
+    ..HHHHHHHHHHH...
+
+    .HHHHHHHHHHHHH..
+
+    .HHHHHHHHHHHHH..
+
+    .HHHHHHHHHHHHH..
+
+    BBHHHHHHHHHHHBB.
+
+    BBBBBBBBBBBBBBB.
+
+    BBBBBBBBBBBBBBB.
+
+    .BBBBBBttBBBBB..
+
+    ..BBBBtttBBBB...
+
+    ...BBBBtBBBBB...
+
+    ...ff.....ff....
+
+    ................
+
+    '
+  left: '......EEE.......
+
+    .....ESSE.......
+
+    .....ESSE.......
+
+    ....HHESE.......
+
+    ..HHHHHEE.......
+
+    .HHHHHHHHH......
+
+    .HWkHHHHHH......
+
+    nHpkHHHHHH......
+
+    .HHHHHHHHBBB....
+
+    ..wwwBBBBBBBB...
+
+    .wwwwBBBBBBBB...
+
+    .wwwwBBBBBBBBtt.
+
+    ..wwwBBBBBBBttt.
+
+    ...BBBBBBBBB.t..
+
+    ....ff....ff....
+
+    ................
+
+    '

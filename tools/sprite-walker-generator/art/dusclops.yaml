@@ -1,0 +1,349 @@
+name: dusclops
+description: 'SITHWRAITH: dark-side wraith with one burning eye (replaces Dusclops).'
+kit: person16x32
+replaces: graphics/object_events/pics/pokemon/dusclops.png
+graphics_info: Dusclops
+notes: 'Group 9: a hooded maroon Sith wraith on Dusclops'' footprint and walk; a void face with one burning yellow-orange-red eye, wide sleeves, a red Sith sash and bone-pale claws.'
+palette: npc_2
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_2
+shade: true
+materials:
+  H: c@
+  R: c
+  D: b
+legend:
+  k: 15
+  W: 14
+  y: 5
+  o: 6
+  r: 9
+  v: 15
+  h: 1
+  j: 3
+accept:
+  skin_tones: 'creature: no human skin'
+  hair_rows: 'creature: no hair'
+  eye_row: creature eyes, not a human face
+base_sheet: graphics/object_events/pics/pokemon/dusclops.png
+remap:
+  c: R
+  a: R
+  w: R
+  s: R
+  b: R
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 11
+      rows: '.......HH.......
+
+        ......HHHH......
+
+        .....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ....HHvvvvHH....
+
+        ...HHvvrrvvHH...
+
+        ...HHvrWyrvHH...
+
+        ..HHHvroorvHHH..
+
+        ..HHHHvrrvHHHH..
+
+        ..RRHHvvvvHHRR..
+
+        .RRRRRHHHHRRRRR.
+
+        .RRRRRRRRRRRRRR.
+
+        RRRRRRDDDDRRRRRR
+
+        RRRRRDDDDDDRRRRR
+
+        hhRRRRRDDRRRRRhh
+
+        jhjRRRRRRRRRRjhj'
+  up:
+    patches:
+    - x: 0
+      y: 11
+      rows: '.......HH.......
+
+        ......HHHH......
+
+        .....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..RRHHHHHHHHRR..
+
+        .RRRRRRRRRRRRRR.
+
+        .RRRRRRRRRRRRRR.
+
+        RRRRRRRRRRRRRRRR
+
+        RRRRRDDDDDDRRRRR
+
+        RRRRRRDDDDRRRRRR
+
+        .RRRRRRDDRRRRRR.'
+  left:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......HH........
+
+        .....HHHH.......
+
+        .....HHHHH......
+
+        ....HHHHHHH.....
+
+        ...vvHHHHHHH....
+
+        ..vrrvHHHHHH....
+
+        ..rooyHHHHHHH...
+
+        ..vrrvHHHHHHH...
+
+        .HvvHHHHHHHHH...
+
+        .RHHHHHHHHHHRR..
+
+        RRRRRRRRRRRRRR..
+
+        RRRRRRRRRRRRRRR.
+
+        RRRRRRRRDDRRRRR.
+
+        .RRRRRRRDDRRRRR.
+
+        ..hhRRRRDDRRRRR.
+
+        ..jhjRRRRRRRRRRR'
+  down_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.......HH.......
+
+        ......HHHH......
+
+        .....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ....HHvvvvHH....
+
+        ...HHvvrrvvHH...
+
+        ...HHvrWyrvHH...
+
+        ..HHHvroorvHHH..
+
+        ..HHHHvrrvHHHH..
+
+        ..RRHHvvvvHHRR..
+
+        .RRRRRHHHHRRRRR.
+
+        .RRRRRRRRRRRRRR.
+
+        RRRRRRDDDDRRRRRR
+
+        RRRRRDDDDDDRRRRR
+
+        hhRRRRRDDRRRRRhh
+
+        jhjRRRRRRRRRRjhj'
+  down_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.......HH.......
+
+        ......HHHH......
+
+        .....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ....HHvvvvHH....
+
+        ...HHvvrrvvHH...
+
+        ...HHvrWyrvHH...
+
+        ..HHHvroorvHHH..
+
+        ..HHHHvrrvHHHH..
+
+        ..RRHHvvvvHHRR..
+
+        .RRRRRHHHHRRRRR.
+
+        .RRRRRRRRRRRRRR.
+
+        RRRRRRDDDDRRRRRR
+
+        RRRRRDDDDDDRRRRR
+
+        hhRRRRRDDRRRRRhh
+
+        jhjRRRRRRRRRRjhj'
+  up_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.......HH.......
+
+        ......HHHH......
+
+        .....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..RRHHHHHHHHRR..
+
+        .RRRRRRRRRRRRRR.
+
+        .RRRRRRRRRRRRRR.
+
+        RRRRRRRRRRRRRRRR
+
+        RRRRRDDDDDDRRRRR
+
+        RRRRRRDDDDRRRRRR
+
+        .RRRRRRDDRRRRRR.'
+  up_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.......HH.......
+
+        ......HHHH......
+
+        .....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..RRHHHHHHHHRR..
+
+        .RRRRRRRRRRRRRR.
+
+        .RRRRRRRRRRRRRR.
+
+        RRRRRRRRRRRRRRRR
+
+        RRRRRDDDDDDRRRRR
+
+        RRRRRRDDDDRRRRRR
+
+        .RRRRRRDDRRRRRR.'
+  left_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......HH........
+
+        .....HHHH.......
+
+        .....HHHHH......
+
+        ....HHHHHHH.....
+
+        ...vvHHHHHHH....
+
+        ..vrrvHHHHHH....
+
+        ..rooyHHHHHHH...
+
+        ..vrrvHHHHHHH...
+
+        .HvvHHHHHHHHH...
+
+        .RHHHHHHHHHHRR..
+
+        RRRRRRRRRRRRRR..
+
+        RRRRRRRRRRRRRRR.
+
+        RRRRRRRRDDRRRRR.
+
+        .RRRRRRRDDRRRRR.
+
+        ..hhRRRRDDRRRRR.
+
+        ..jhjRRRRRRRRRRR'
+  left_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......HH........
+
+        .....HHHH.......
+
+        .....HHHHH......
+
+        ....HHHHHHH.....
+
+        ...vvHHHHHHH....
+
+        ..vrrvHHHHHH....
+
+        ..rooyHHHHHHH...
+
+        ..vrrvHHHHHHH...
+
+        .HvvHHHHHHHHH...
+
+        .RHHHHHHHHHHRR..
+
+        RRRRRRRRRRRRRR..
+
+        RRRRRRRRRRRRRRR.
+
+        RRRRRRRRDDRRRRR.
+
+        .RRRRRRRDDRRRRR.
+
+        ..hhRRRRDDRRRRR.
+
+        ..jhjRRRRRRRRRRR'

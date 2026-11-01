@@ -1,0 +1,87 @@
+name: sudowoodo
+description: 'GNARLTREE: Dagobah creature that pretends to be a gnarltree (replaces Sudowoodo).'
+kit: person16x32_still
+replaces: graphics/object_events/pics/pokemon/sudowoodo.png
+graphics_info: Sudowoodo
+notes: 'Group 9: Sudowoodo''s three poses as regions turned into a twisted bark trunk with spreading roots and shelf fungus, mossy green boughs hung with pale lavender Dagobah moss, and two small glowing
+  eyes on the knot.'
+palette: npc_3
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_3
+shade: true
+materials:
+  T: c
+  M: b@
+  m: a
+legend:
+  k: 15
+  W: 14
+  e: 11
+  f: 2
+  F: 3
+accept:
+  skin_tones: 'creature: no human skin'
+  hair_rows: 'creature: no hair'
+  eye_row: creature eyes, not a human face
+base_sheet: graphics/object_events/pics/pokemon/sudowoodo.png
+remap:
+  s: T
+  c: T
+  b: M
+frames:
+  down:
+    patches:
+    - x: 6
+      y: 14
+      rows: e__e
+    - &id001
+      x: 10
+      y: 24
+      rows: fF
+    - &id002
+      x: 4
+      y: 25
+      rows: Ff
+    - x: 2
+      y: 21
+      rows: 'm_m
+
+        m__'
+    - x: 11
+      y: 21
+      rows: 'm_m
+
+        __m'
+  up:
+    patches:
+    - x: 6
+      y: 15
+      rows: e__e
+    - *id001
+    - *id002
+    - x: 2
+      y: 21
+      rows: 'm_m
+
+        m__'
+    - x: 11
+      y: 23
+      rows: 'm_m
+
+        __m'
+  left:
+    patches:
+    - x: 6
+      y: 15
+      rows: e__e
+    - *id001
+    - *id002
+    - x: 2
+      y: 23
+      rows: 'm_m
+
+        m__'
+    - x: 11
+      y: 21
+      rows: 'm_m
+
+        __m'

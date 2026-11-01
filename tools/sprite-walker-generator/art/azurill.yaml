@@ -1,0 +1,127 @@
+name: azurill
+description: 'BLOOPKIT: bouncy Naboo swamp rodent kit (replaces Azurill).'
+kit: person16x16_still
+replaces: graphics/object_events/pics/pokemon/azurill.png
+graphics_info: Azurill
+notes: 'Group 9: drawn on Azurill''s footprint; short round pink-lined ears, round blue body, white belly and a coiled tail ending in an olive swamp-float bulb.'
+palette: npc_1
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_1
+shade: true
+materials:
+  H: b@
+  B: b
+  E: b
+  S: a
+  w: w/c
+  f: c
+  t: c
+  O: c@
+legend:
+  k: 15
+  W: 14
+  p: 5
+  n: 4
+accept:
+  skin_tones: 'creature: no human skin'
+  hair_rows: 'creature: no hair'
+  eye_row: creature eyes, not a human face
+frames:
+  down: '................
+
+    ................
+
+    ................
+
+    ..EE.......EE...
+
+    .ESSE.....ESSE..
+
+    .ESEHHHHHHHESE..
+
+    ..HHHHHHHHHHH...
+
+    .HHWkHHHHWkHHH..
+
+    .HHpkHHnHHkpHH.t
+
+    ..HHHHHHHHHHH.tO
+
+    ..BBBwwwwwBBBOOO
+
+    ..BBwwwwwwwBBOOO
+
+    ...BBwwwwwBB.OO.
+
+    ...BBBBBBBBB....
+
+    ....ff...ff.....
+
+    ................
+
+    '
+  up: '................
+
+    ................
+
+    ................
+
+    ...EE.......EE..
+
+    ..EEEE.....EEEE.
+
+    ..EEEHHHHHHHEEE.
+
+    ...HHHHHHHHHHH..
+
+    ..HHHHHHHHHHHH..
+
+    ..HHHHHHHHHHHH..
+
+    ...HHHHHHHHHHH..
+
+    ..tBBBBBBBBBBB..
+
+    OOtBBBBBBBBBB...
+
+    OOOBBBBBBBBBB...
+
+    OOOBBBBBBBBB....
+
+    .OO.ff...ff.....
+
+    ................
+
+    '
+  left: '................
+
+    ................
+
+    .......EE.......
+
+    ......ESSE......
+
+    .....EESSE......
+
+    ...HHHHEE.......
+
+    ..HHHHHHHH......
+
+    .HWkHHHHHHH.....
+
+    nHpkHHHHHHHBB...
+
+    .HHHHHHHHBBBBB..
+
+    ..wwwBBBBBBBBt..
+
+    .wwwwBBBBBBBBtOO
+
+    ..wwwBBBBBBBBOOO
+
+    ...BBBBBBBBB.OOO
+
+    ....ff...ff..OO.
+
+    ................
+
+    '

@@ -1,0 +1,127 @@
+name: pikachu
+description: 'IONRAT: Felucian rodent that discharges ion bolts (replaces Pikachu).'
+kit: person16x16_still
+replaces: graphics/object_events/pics/pokemon/pikachu.png
+graphics_info: Pikachu
+notes: 'Group 9: drawn on Pikachu''s footprint; round mouse ears with pink insides, yellow fur, glowing red ion glands on the cheeks, brown back stripes and a thin zigzag tail crackling with a white spark.'
+palette: npc_2
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_2
+shade: true
+materials:
+  H: a@
+  B: a
+  E: a
+  S: s
+  c: c
+  T: c
+  P: s
+legend:
+  k: 15
+  W: 14
+  n: 4
+  g: 8
+  G: 9
+accept:
+  skin_tones: 'creature: no human skin'
+  hair_rows: 'creature: no hair'
+  eye_row: creature eyes, not a human face
+frames:
+  down: '................
+
+    .EEE.......EEE..
+
+    ESSSE.....ESSSE.
+
+    ESSSEHHHHHESSSE.
+
+    .EEHHHHHHHHHEE..
+
+    ..HHHHHHHHHHH...
+
+    .HHHkHHHHHkHHH..
+
+    .HHWkHHHHWkHHH..
+
+    .HgGHHHnHHHgGH.W
+
+    ..HHHHHHHHHHH.T.
+
+    ..HHHHHHHHHHHTT.
+
+    .HHHHHHHHHHHHT..
+
+    .HHHHHHHHHHHHH..
+
+    ..HHHHHHHHHHH...
+
+    ...PP.....PP....
+
+    ................
+
+    '
+  up: '...............W
+
+    .EEE.......EEETT
+
+    EEEEE.....EEEET.
+
+    EEEEEHHHHHEEEET.
+
+    .EEHHHHHHHHHEET.
+
+    ..HHHHHHHHHHHT..
+
+    .HHHHHHHHHHHHT..
+
+    .HHHHHHHHHHHTH..
+
+    .HHHHHHHHHHHTH..
+
+    ..HHHHHHHHHHH...
+
+    ..HHcHHHHHcHHH..
+
+    .HHHcHHHHHcHHH..
+
+    .HHHHcHHHcHHHH..
+
+    ..HHHHHHHHHHH...
+
+    ...PP.....PP....
+
+    ................
+
+    '
+  left: '................
+
+    .......EEE......
+
+    ......ESSSE.....
+
+    .....EESSSE...W.
+
+    ...HHHHEEE...TT.
+
+    ..HHHHHHHHH...T.
+
+    .HHkHHHHHHHH.TT.
+
+    .HWkHHHHHHHH.T..
+
+    nHHHgGHHHHHH.T..
+
+    .HHHHHHHHHHHTT..
+
+    ..HHHHHHHHHHT...
+
+    ...HHHHHHcHHHH..
+
+    ...HHHHHHHcHHH..
+
+    ...HHHHHHHHHH...
+
+    ....PP....PP....
+
+    ................
+
+    '
