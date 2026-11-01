@@ -1,5 +1,10 @@
 {
-  "desc": "purple silk cocoon wrapped in thick threads with one narrow eye peeking out",
-  "colour": "purple",
-  "ref_note": "No free cocoon art on Wookieepedia; text-only, mirror of silcoon in purple"
+  "desc": "lumpy poison cocoon of a sandgrub with a small head poking out",
+  "colour": "dark purple",
+  "ref_note": "egg-sac body of Karina the Great (Geonosian queen), cropped to the sac; broad web search found no cocoon art",
+  "init": "refs/cascoon_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/3/32/KarinaTheGreat-TCWs2BR1.png/revision/latest/scale-to-width-down/1000?cb=20220908172459#crop=0.35,0.2,1,1",
+  "flip": false,
+  "denoise": 0.5,
+  "negative": "humanoid, arms, insect queen"
 }

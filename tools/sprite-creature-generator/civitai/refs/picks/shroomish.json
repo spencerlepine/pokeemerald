@@ -1,5 +1,9 @@
 {
-  "desc": "small round mushroom sprout with a spotted cap and tiny feet",
-  "colour": "tan and green",
-  "ref_note": "no canon Felucia fungus creature art found"
+  "desc": "small round fungal sprout creature with a mushroom cap and stubby feet",
+  "colour": "pink and lavender",
+  "ref_note": "Wookieepedia's Felucia-style flora illustration; no canon fungus creature art exists",
+  "init": "refs/shroomish_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/7/76/Flora-stub.png/revision/latest?cb=20200517191513",
+  "flip": false,
+  "denoise": 0.5
 }
