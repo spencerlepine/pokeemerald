@@ -317,7 +317,7 @@
   },
   "leader_tate_and_liza": {
     "subject": "Kanan Jarrus and Ezra Bridger",
-    "desc": "two people side by side: a bearded Jedi man with a ponytail and green pauldron, and a teenage boy Padawan with spiky dark blue hair in an orange jacket, both with blue lightsabers",
+    "desc": "(two people:1.3) side by side, on the left a tall bearded Jedi man with a ponytail and green pauldron, on the right a shorter teenage boy with spiky dark blue hair in an orange jacket, both holding blue lightsabers",
     "theme": "alliance-dawn",
     "style": "",
     "pair": true
@@ -330,11 +330,11 @@
     "negative": "human, hair, legs"
   },
   "leader_winona": {
-    "subject": "Chief Chirpa",
-    "desc": "elder Ewok, small furry grey bear-like creature, horned leather hood, holding a wooden staff",
+    "subject": "Ewok chief",
+    "desc": "short furry teddy-bear creature, round bear face, grey-brown fur all over, leather hood with small horns, holding a wooden staff, no clothes besides the hood",
     "theme": "factions",
     "style": "",
-    "negative": "human face, skin"
+    "negative": "human, human face, beard, tall, goat"
   },
   "magma_admin": {
     "subject": "General Veers",

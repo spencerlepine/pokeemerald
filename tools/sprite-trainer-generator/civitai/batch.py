@@ -110,6 +110,8 @@ def judge(final: Path, log: str, pair: bool = False) -> tuple[bool, str]:
     nat = final.with_name(final.stem + "_native.png")
     if figures(nat) >= (3 if pair else 2):
         return False, "extra figures (duplicate or turnaround)"
+    if pair and figures(nat, 0.15) < 2:
+        return False, "pair pic with one figure"
     na = np.array(Image.open(nat).convert("RGBA"))[..., 3] > 0
     if na[0, 0] and na[0, -1] and na[-1, 0] and na[-1, -1]:
         return False, "background box left"

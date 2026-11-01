@@ -198,6 +198,8 @@ def cmd_gen(args) -> list[Path]:
     v = pick_version(args.version)
     fam = family(v)
     prompt = args.prompt or build_prompt(b, v)
+    if not b["pair"] and not args.prompt and args.view == "front":
+        prompt = "solo, (single character:1.2), " + prompt  # the model likes turnarounds and duplicates
     base_neg = NEGATIVE.replace("multiple characters, ", "").replace("duplicate, ", "") if b["pair"] else NEGATIVE  # two-person pics
     negative = args.negative or ", ".join(x for x in (b["negative"], base_neg) if x)
     if args.view == "back":  # concept art for sprite-trainer-back-generator (full body, from behind)
