@@ -80,7 +80,7 @@ def pl(*olds):
 
 
 FIX = {
-"sCreditsText_PkmnEmeraldVersion": r"EMERALD SW VERSION",
+"sCreditsText_PkmnEmeraldVersion": r"STAR WARS: KYBER VERSION",
 "sCreditsText_JapanBrailleLibrary": [],
 # --- Mauville storyteller ---
 M+"BikeTradesTitle": r"The Speeder-Loving TRAINER$",
