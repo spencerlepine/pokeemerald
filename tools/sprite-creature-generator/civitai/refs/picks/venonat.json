@@ -1,0 +1,9 @@
+{
+  "init": "refs/venonat_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/5/5b/Ya-YaFly-Databank-Outlaws.png/revision/latest?cb=20240907202822",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "fuzzy purple swamp gnat with big compound eyes long legs and buzzing wings",
+  "colour": "purple and lavender",
+  "ref_note": "original; borrows Ya-ya fly (Outlaws databank render, transparent, unused), purple insect with head left"
+}
