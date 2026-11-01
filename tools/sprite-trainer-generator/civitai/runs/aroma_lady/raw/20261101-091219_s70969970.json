@@ -1,0 +1,47 @@
+{
+  "trainer": {
+    "stem": "aroma_lady",
+    "wiki_path": "graphics/trainers/front_pics/aroma_lady.png",
+    "sw_subject": "HERBALIST with a flower basket",
+    "subject": "herbalist woman",
+    "desc": "young woman, long hair with a flower, flowing green and cream dress, carrying a wicker basket of alien flowers",
+    "theme": "factions",
+    "style": "",
+    "pose": "standing, facing left, three-quarter view",
+    "negative": "",
+    "pair": false
+  },
+  "lora": {
+    "id": 443092,
+    "name": "XL v1",
+    "baseModel": "SDXL 1.0",
+    "trainedWords": [],
+    "air": null,
+    "files": [
+      {
+        "name": "pk_trainer_xl_v1.safetensors",
+        "sizeKB": 445819.83984375,
+        "sha256": "078E09DA2A123964B7EB30DB23EC24D59FB082343F69C7FAF925C4C07E97023E"
+      }
+    ]
+  },
+  "checkpoint": "urn:air:sdxl:checkpoint:civitai:101055@128078",
+  "params": {
+    "prompt": "(herbalist woman:1.3), young woman, long hair with a flower, flowing green and cream dress, carrying a wicker basket of alien flowers, full body character sprite, standing, facing left, three-quarter view, pixel art, game sprite, crisp dark outlines, solid white background, simple background",
+    "negativePrompt": "poke ball, pokeball, holding ball, baseball cap, generic pokemon trainer, anime boy, scenery, detailed background, gradient background, floor, shadow, text, watermark, signature, frame, border, multiple characters, cropped, cut off feet, blurry, 3d, photo, realistic, painting, smooth shading",
+    "scheduler": "EulerA",
+    "steps": 25,
+    "cfgScale": 7.0,
+    "width": 768,
+    "height": 768,
+    "seed": 70969970,
+    "clipSkip": 2
+  },
+  "strength": 0.75,
+  "format": "jpeg",
+  "seed": 70969970,
+  "workflowId": "13596363-20261101091149855-8sol",
+  "jobId": "5fa89064-3334-41d7-991b-7ec9dfbbfae0",
+  "cost": "3 green",
+  "generated": "20261101-091219"
+}
