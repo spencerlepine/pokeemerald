@@ -93,7 +93,15 @@ export class Palette {
   resolve(spec: unknown): Resolved {
     if (spec === "." ) return null;
     if (spec === "_") return TRANSPARENT;
-    if (typeof spec === "number") return spec >>> 0;
+    // Small integers are palette indices (GBA art is written by index); larger ones are packed colors.
+    if (typeof spec === "number") {
+      if (Number.isInteger(spec) && spec >= 0 && spec < 256) {
+        const c = this.list[spec];
+        if (c === undefined) throw new PxError(`palette index ${spec} is out of range (palette has ${this.list.length} colors)`);
+        return c;
+      }
+      return spec >>> 0;
+    }
     if (typeof spec !== "string" || spec === "") throw new PxError(`color must be a palette key or "#hex", got ${JSON.stringify(spec)}`);
     if (spec.startsWith("#")) {
       const c = parseHex(spec);

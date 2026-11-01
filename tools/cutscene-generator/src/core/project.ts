@@ -87,7 +87,7 @@ function checkArgs(name: string, args: unknown[]): void {
     };
     switch (type) {
       case "n": if (typeof v !== "number" || !Number.isFinite(v)) bad("a number"); break;
-      case "c": if (typeof v !== "string") bad('a color key or "#hex"'); break;
+      case "c": if (typeof v !== "string" && !(Number.isInteger(v) && (v as number) >= 0)) bad('a color key, "#hex" or a palette index'); break;
       case "s": if (typeof v !== "string") bad("a string"); break;
       case "t": if (typeof v !== "string" && typeof v !== "number") bad("text"); break;
       case "S": if (typeof v !== "string" && !Array.isArray(v)) bad('colors like "abc" or ["a","b"]'); break;
