@@ -5,6 +5,6 @@
   "negative": "sketch lines, text, paper",
   "ref_note": "Kouhun concept art (Legends), paper bg, caption and second kouhun masked out locally; flipped; tail end cut in the source",
   "init": "refs/seviper_prep.png",
-  "init_source": "/tmp/claude-0/-home-user/510f0079-9430-50be-b656-57ddf5b64e74/scratchpad/r2/sev_cut2.png",
+  "init_source": "refs/sources/seviper/sev_cut2.png",
   "denoise": 0.5
 }

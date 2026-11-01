@@ -4,7 +4,7 @@
   "colour": "pale lavender-pink segments with orange stripes, rust-brown head, teal eye",
   "ref_note": "Taozin.jpg (Legends), upper C-curve cut out by hand with cords and frame removed, tail tip tapered (r2_taozin.png)",
   "init": "refs/kecleon_prep.png",
-  "init_source": "/tmp/claude-0/-home-user/510f0079-9430-50be-b656-57ddf5b64e74/scratchpad/mask/r2_taozin.png",
+  "init_source": "refs/sources/kecleon/r2_taozin.png",
   "denoise": 0.5,
   "negative": "ropes, sticks, frame, background"
 }

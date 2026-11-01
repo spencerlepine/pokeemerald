@@ -1,6 +1,6 @@
 {
   "init": "refs/slowpoke_prep.png",
-  "init_source": "/tmp/claude-0/-home-user/510f0079-9430-50be-b656-57ddf5b64e74/scratchpad/mask/r2_slug.png",
+  "init_source": "refs/sources/slowpoke/r2_slug.png",
   "flip": false,
   "denoise": 0.5,
   "desc": "dopey swamp slug with a raised blunt head, small eyestalks and a long thick wrinkled tail body lying low, side view, whole body",

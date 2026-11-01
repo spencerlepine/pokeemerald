@@ -1,6 +1,6 @@
 {
   "init": "refs/swellow_prep.png",
-  "init_source": "/tmp/claude-0/-home-user/510f0079-9430-50be-b656-57ddf5b64e74/scratchpad/r2/swellow_cut.png",
+  "init_source": "refs/sources/swellow/swellow_cut.png",
   "flip": false,
   "denoise": 0.5,
   "desc": "sleek hawk-bat gliding to the left, head forward with a red throat, long swept-back leathery wings, long thin tail, side view, whole body",

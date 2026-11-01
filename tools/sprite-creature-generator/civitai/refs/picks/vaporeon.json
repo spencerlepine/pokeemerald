@@ -1,6 +1,6 @@
 {
   "init": "refs/vaporeon_prep.png",
-  "init_source": "/tmp/claude-0/-home-user/510f0079-9430-50be-b656-57ddf5b64e74/scratchpad/mask/r2_tookacat.png",
+  "init_source": "refs/sources/vaporeon/r2_tookacat.png",
   "flip": false,
   "denoise": 0.5,
   "desc": "sleek water tooka with big finned ears, striped fur, long curled tail, standing on thin legs, three-quarter view, whole body",

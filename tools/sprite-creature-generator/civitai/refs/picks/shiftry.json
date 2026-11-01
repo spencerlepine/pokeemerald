@@ -1,6 +1,6 @@
 {
   "init": "refs/shiftry_prep.png",
-  "init_source": "/tmp/claude-0/-home-user/510f0079-9430-50be-b656-57ddf5b64e74/scratchpad/mask/r2_condor.png",
+  "init_source": "refs/sources/shiftry/r2_condor.png",
   "flip": false,
   "denoise": 0.5,
   "desc": "forest lord dragon with huge leaf-fan wings spread, hooked beak, long curled tail, clawed limbs, whole body",

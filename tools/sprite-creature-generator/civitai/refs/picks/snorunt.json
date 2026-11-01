@@ -1,6 +1,6 @@
 {
   "init": "refs/snorunt_prep.png",
-  "init_source": "/tmp/claude-0/-home-user/510f0079-9430-50be-b656-57ddf5b64e74/scratchpad/mask/r2_wampcub.png",
+  "init_source": "refs/sources/snorunt/r2_wampcub.png",
   "flip": false,
   "denoise": 0.5,
   "desc": "small round wampa cub with thick shaggy white fur, stubby horn nubs, dark eyes, standing hunched, three-quarter view, whole body",

@@ -1,6 +1,6 @@
 {
   "init": "refs/haunter_prep.png",
-  "init_source": "/tmp/claude-0/-home-user/510f0079-9430-50be-b656-57ddf5b64e74/scratchpad/mask/haunter_tint.png",
+  "init_source": "refs/sources/haunter/haunter_tint.png",
   "flip": false,
   "denoise": 0.5,
   "desc": "hooded floating specter with long trailing wisps and reaching claws",

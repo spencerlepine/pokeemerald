@@ -1,6 +1,6 @@
 {
   "init": "refs/cloyster_prep.png",
-  "init_source": "/tmp/claude-0/-home-user/510f0079-9430-50be-b656-57ddf5b64e74/scratchpad/mask/seafah_tint.png",
+  "init_source": "refs/sources/cloyster/seafah_tint.png",
   "flip": false,
   "denoise": 0.5,
   "desc": "big fortress-shelled clam with a heavy spiked shell and a dark face in the opening",

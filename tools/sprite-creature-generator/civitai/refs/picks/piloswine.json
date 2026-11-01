@@ -1,6 +1,6 @@
 {
   "init": "refs/piloswine_prep.png",
-  "init_source": "/tmp/claude-0/-home-user/510f0079-9430-50be-b656-57ddf5b64e74/scratchpad/r2/pilo_cut.png",
+  "init_source": "refs/sources/piloswine/pilo_cut.png",
   "flip": false,
   "denoise": 0.5,
   "desc": "stocky shaggy tauntaun leaning forward on strong hind legs, head forward, curled horns, long tail, side view, whole body",

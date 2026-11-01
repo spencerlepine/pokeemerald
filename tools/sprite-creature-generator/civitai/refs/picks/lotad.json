@@ -5,6 +5,6 @@
   "negative": "background, rocks, grass",
   "ref_note": "Bogling-JFO render, dark background masked by hand (r2_bogjfo.png); lily pad from the desc",
   "init": "refs/lotad_prep.png",
-  "init_source": "/tmp/claude-0/-home-user/510f0079-9430-50be-b656-57ddf5b64e74/scratchpad/mask/r2_bogjfo.png",
+  "init_source": "refs/sources/lotad/r2_bogjfo.png",
   "denoise": 0.55
 }

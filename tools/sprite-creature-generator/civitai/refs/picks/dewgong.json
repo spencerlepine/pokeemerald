@@ -1,6 +1,6 @@
 {
   "init": "refs/dewgong_prep.png",
-  "init_source": "/tmp/claude-0/-home-user/510f0079-9430-50be-b656-57ddf5b64e74/scratchpad/mask/thala_cut.png",
+  "init_source": "refs/sources/dewgong/thala_cut.png",
   "flip": false,
   "denoise": 0.5,
   "desc": "sleek thala-siren lounging with a long curved neck a droopy snout and a long flippered tail",

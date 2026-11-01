@@ -4,7 +4,7 @@
   "colour": "dark brown and ember orange",
   "ref_note": "Sabercat (TUR) full figure, rock masked out and recoloured purple->brown locally; flipped",
   "init": "refs/entei_prep.png",
-  "init_source": "/tmp/claude-0/-home-user/510f0079-9430-50be-b656-57ddf5b64e74/scratchpad/r2/entei_cut.png",
+  "init_source": "refs/sources/entei/entei_cut.png",
   "denoise": 0.5,
   "negative": "rock, cliff"
 }

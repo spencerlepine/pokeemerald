@@ -1,6 +1,6 @@
 {
   "init": "refs/totodile_prep.png",
-  "init_source": "/tmp/claude-0/-home-user/510f0079-9430-50be-b656-57ddf5b64e74/scratchpad/r2/toto_cut.png",
+  "init_source": "refs/sources/totodile/toto_cut.png",
   "flip": false,
   "denoise": 0.55,
   "desc": "small stout swamp croc hatchling standing upright, big toothy open jaw, stubby clawed arms, thick tail, cream belly, three-quarter view facing left, whole body, small, centred",
