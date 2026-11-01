@@ -1,9 +1,6 @@
 {
-  "init": "refs/marill_prep.png",
-  "init_source": "https://static.wikia.nocookie.net/starwars/images/b/bc/Ash-rabbit.png/revision/latest?cb=20160501175038#crop=0.0,0.0,1.0,0.86",
   "flip": false,
-  "denoise": 0.5,
-  "desc": "small round water rodent with short round ears and a ball tipped tail",
-  "colour": "white and grey",
-  "ref_note": "Ash-rabbit line art cropped above the rock; shared with azumarill"
+  "desc": "small round water mouse sitting, chubby round body, two round ears, thin tail ending in a round float ball, side view facing left, whole body, small, centred",
+  "colour": "blue with cream belly",
+  "ref_note": "text only: Ash-rabbit line art gave mush; no clean round rodent art"
 }
