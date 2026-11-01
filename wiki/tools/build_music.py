@@ -16,6 +16,11 @@ database/music.csv has one row per song: every MUS_* track in ../game plus every
   - player / voicegroup / volume / reverb / priority come from sound/songs/midi/midi.cfg and
     sound/song_table.inc; midi_tracks / tempo_bpm / length_s / loops are read from the .mid itself.
 
+Reference cues (mapping/music.csv ref_use / ref_tracks / ref_notes, see music/README.md): which film soundtrack
+track(s) in music/soundtrack/ each song is made from. ARRANGE = a chiptune arrangement of that cue, STYLE = an
+original song in that cue's style (tempo, colour, instrumentation), SCRATCH = written from scratch. ref_titles and
+ref_files are filled from music/soundtrack_tracks.csv.
+
 database/music_by_map.csv lists every map with the song it plays, its planet and map type, so each planet's
 music can be read in one place. `planned_music` is the net-new song that takes the map over (mapping/music.csv
 `maps`), e.g. a per-planet split of a song Emerald shares across planets.
@@ -34,6 +39,7 @@ ROOT = Path(__file__).resolve().parent.parent
 GAME = Path(os.environ.get("GAME_DIR", ROOT.parent / "game"))
 MAPPING = ROOT / "mapping"
 DB = ROOT / "database"
+SOUNDTRACK = ROOT / "music"
 
 CATEGORIES = {"TOWN", "ROUTE", "TRAVEL", "DUNGEON", "BUILDING", "FACILITY", "MINIGAME", "BATTLE", "VICTORY",
               "ENCOUNTER", "FANFARE", "EVENT", "FRONT_END", "SYSTEM", "UNUSED"}
@@ -42,7 +48,9 @@ FORMS = {"LOOP", "AMBIENT", "CUE", "JINGLE", "SILENT", "NONE"}
 COLS = ["asset_id", "wiki_title", "music_category", "music_form", "rewrite_status", "audio_status", "swap_kind",
         "priority", "emerald_constant", "sw_constant", "sw_title", "planets", "map_count", "used_in", "sw_subject",
         "placeholder_from", "depends_on", "asset_file", "suggested_path", "player", "voicegroup", "volume",
-        "reverb", "song_priority", "midi_tracks", "tempo_bpm", "length_s", "loops", "tech_notes", "notes"]
+        "reverb", "song_priority", "midi_tracks", "tempo_bpm", "length_s", "loops", "ref_use", "ref_tracks", "ref_titles",
+        "ref_files", "ref_notes", "tech_notes", "notes"]
+REF_USES = {"ARRANGE", "STYLE", "SCRATCH"}
 MAP_COLS = ["map_id", "sw_map_title", "map_title", "planet", "map_type", "music", "wiki_title", "music_category",
             "music_form", "planned_music"]
 
@@ -163,6 +171,8 @@ def main() -> list[str]:
     labels = {r["asset_id"]: r for r in read(MAPPING / "music.csv")}
     maps = {r["map_id"]: r for r in read(DB / "area_progression.csv")} if (DB / "area_progression.csv").exists() else {}
     cfg, players = midi_cfg(), song_players()
+    tracks = {r["track_id"]: r for r in read(SOUNDTRACK / "soundtrack_tracks.csv")} \
+        if (SOUNDTRACK / "soundtrack_tracks.csv").exists() else {}
     out, by_map, planned_by = [], {}, {}
     for a in audio:
         aid = a["asset_id"]
@@ -196,6 +206,26 @@ def main() -> list[str]:
         r.update(wiki_title=sw_title or a["emerald_constant"] or a["sw_constant"], music_category=cat,
                  music_form=form, sw_title=sw_title, rewrite_status="SKIP" if skip else "TODO",
                  planets="|".join(sorted(planets)), map_count=str(len(map_ids)), tech_notes=lab.get("tech_notes", ""))
+        use, refs = lab.get("ref_use", ""), [t for t in lab.get("ref_tracks", "").split("|") if t]
+        if use and use not in REF_USES:
+            warn(f"mapping/music.csv: {aid} bad ref_use {use!r}")
+        if not skip and not use:
+            warn(f"mapping/music.csv: {aid} has no ref_use")
+        if use in ("ARRANGE", "STYLE") and not refs:
+            warn(f"mapping/music.csv: {aid} is {use} but has no ref_tracks")
+        if use == "SCRATCH" and refs:
+            warn(f"mapping/music.csv: {aid} is SCRATCH but lists ref_tracks")
+        files = []
+        for t in refs:
+            tr = tracks.get(t)
+            if not tr:
+                warn(f"mapping/music.csv: {aid} ref track {t} is not in music/soundtrack_tracks.csv")
+                continue
+            files.append("music/" + tr["audio_path"])
+            if not (SOUNDTRACK / tr["audio_path"]).exists():
+                warn(f"{aid}: music/{tr['audio_path']} missing")
+        r.update(ref_use=use, ref_tracks="|".join(refs), ref_notes=lab.get("ref_notes", ""),
+                 ref_titles="|".join(tracks[t]["title"] for t in refs if t in tracks), ref_files="|".join(files))
         if a.get("game_status") == "DONE" and not skip:
             r["rewrite_status"] = "DONE"
         f = a["asset_file"]
