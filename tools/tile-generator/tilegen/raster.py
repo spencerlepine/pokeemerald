@@ -291,9 +291,9 @@ def render(meshes: Sequence[Mesh], width: int, height: int, origin=(0.0, 0.0), b
                 continue
             l1 = ((pb[0] - X) * (pc[1] - Y) - (pc[0] - X) * (pb[1] - Y)) / det
             l2 = ((pc[0] - X) * (pa[1] - Y) - (pa[0] - X) * (pc[1] - Y)) / det
-            l0 = 1 - l1 - l2
-            # note: with det sign, l's are (wa, wb, wc) in order a,b,c
-            wa, wb, wc = l0, l1, l2
+            # l1 is the weight of a (sub-triangle opposite a), l2 of b, the rest is c
+            wa, wb = l1, l2
+            wc = 1 - l1 - l2
             inside = (wa >= -1e-6) & (wb >= -1e-6) & (wc >= -1e-6)
             if not inside.any():
                 continue
@@ -390,6 +390,14 @@ def texture(r: Render) -> None:
             x = (xs + (row % 2) * (bw // 2)) % bw
             mortar = (ys % bh == bh - 1) | (x == bw - 1)
             t = np.where(mortar, np.minimum(t + 1, n - 1), t)
+        elif mat.texture == "rooftile":
+            # staggered 8x4 roof tiles: light top edge, dark bottom seam, dark vertical joint
+            bw, bh = 8, 4
+            row = ys // bh
+            x = (xs + (row % 2) * (bw // 2)) % bw
+            y = ys % bh
+            t = np.where((y == 0) & (x < bw - 1), np.maximum(t - 1, 0), t)
+            t = np.where((y == bh - 1) | (x == bw - 1), np.minimum(t + 1, n - 1), t)
         elif mat.texture == "plank":
             t = np.where((ys % 4 == 3), np.minimum(t + 1, n - 1), t)
         r.tone[sel] = t[sel]
