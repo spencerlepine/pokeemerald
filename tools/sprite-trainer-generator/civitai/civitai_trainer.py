@@ -178,7 +178,7 @@ def brief(trainer: str) -> dict:
     return {"stem": stem, "wiki_path": row.get("path"), "sw_subject": row.get("sw_subject"),
             "subject": subject, "desc": job.get("desc", ""), "theme": job.get("theme", "factions"),
             "style": job.get("style", ""), "pose": job.get("pose", POSE),
-            "negative": job.get("negative", "")}
+            "negative": job.get("negative", ""), "pair": bool(job.get("pair"))}
 
 
 def build_prompt(b: dict, v: dict) -> str:
@@ -198,7 +198,8 @@ def cmd_gen(args) -> list[Path]:
     v = pick_version(args.version)
     fam = family(v)
     prompt = args.prompt or build_prompt(b, v)
-    negative = args.negative or ", ".join(x for x in (b["negative"], NEGATIVE) if x)
+    base_neg = NEGATIVE.replace("multiple characters, ", "") if b["pair"] else NEGATIVE  # two-person pics
+    negative = args.negative or ", ".join(x for x in (b["negative"], base_neg) if x)
     if args.view == "back":  # concept art for sprite-trainer-back-generator (full body, from behind)
         prompt = BACK_PROMPT + prompt.replace(POSE, "standing, raising one arm to throw")
         negative = BACK_NEGATIVE + negative

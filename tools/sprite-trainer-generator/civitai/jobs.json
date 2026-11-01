@@ -41,5 +41,537 @@
     "desc": "young man, sandy-blond mop of hair, white crossover farm-boy tunic, tan trousers, dark boots, dark belt with white buckle, lightsaber hilt at the hip",
     "theme": "alliance-dawn",
     "style": ""
+  },
+  "birch": {
+    "subject": "Prof. Korr",
+    "desc": "grey-haired middle-aged man, xenobiologist field researcher, short grey hair and stubble, dusty brown duster coat over a cream shirt, utility belt, holding a glowing datapad",
+    "theme": "factions",
+    "style": ""
+  },
+  "aqua_admin_f": {
+    "subject": "female bounty hunter",
+    "desc": "armoured woman, dented olive and tan armour plates over a dark flight suit, T-visor helmet tucked under one arm, short dark hair, blaster rifle, utility belt",
+    "theme": "swamp-throne",
+    "style": ""
+  },
+  "aqua_admin_m": {
+    "subject": "Bossk",
+    "desc": "tall reptilian Trandoshan, green scaly lizard head, yellow flight suit, clawed hands, heavy blaster rifle",
+    "theme": "swamp-throne",
+    "style": "",
+    "negative": "human face, hair"
+  },
+  "aqua_grunt_f": {
+    "subject": "Weequay female thug",
+    "desc": "wrinkled leathery brown skin, dark topknot with braids, scrap armour and leather straps, vibro-axe",
+    "theme": "swamp-throne",
+    "style": ""
+  },
+  "aqua_grunt_m": {
+    "subject": "Gamorrean guard",
+    "desc": "fat green pig-faced brute with tusks and small horns, leather harness and fur loincloth, big axe",
+    "theme": "swamp-throne",
+    "style": "",
+    "negative": "human face, hair"
+  },
+  "aqua_leader_archie": {
+    "subject": "Jabba the Hutt",
+    "desc": "enormous fat slug-like Hutt, tan-green skin, wide toad mouth, orange eyes, thick tail, lounging on a floating repulsor sled",
+    "theme": "swamp-throne",
+    "style": "",
+    "negative": "human, legs, hair"
+  },
+  "arena_tycoon_greta": {
+    "subject": "4-LOM",
+    "desc": "tall thin droid bounty hunter, insect-like bug-eyed metal head, long brown trench coat, blaster carbine",
+    "theme": "factions",
+    "style": "",
+    "negative": "human face, skin, hair"
+  },
+  "aroma_lady": {
+    "subject": "herbalist woman",
+    "desc": "young woman, long hair with a flower, flowing green and cream dress, carrying a wicker basket of alien flowers",
+    "theme": "factions",
+    "style": ""
+  },
+  "battle_girl": {
+    "subject": "female martial artist",
+    "desc": "athletic young woman, dark hair in a short ponytail, sleeveless wrap top, hand wraps, loose trousers, fighting stance",
+    "theme": "factions",
+    "style": ""
+  },
+  "beauty": {
+    "subject": "Core World socialite",
+    "desc": "tall elegant woman, auburn updo with a silver diadem, floor-length lavender gown with a green sash",
+    "theme": "factions",
+    "style": ""
+  },
+  "bird_keeper": {
+    "subject": "falconer woman",
+    "desc": "young woman in a hooded tan desert cloak, leather glove, small winged alien bird perched on her raised glove",
+    "theme": "factions",
+    "style": ""
+  },
+  "black_belt": {
+    "subject": "Teras Kasi brawler",
+    "desc": "muscular man, shaved head with a topknot, green training wrap gi, red-brown belt, bare feet, fists raised",
+    "theme": "factions",
+    "style": ""
+  },
+  "bug_catcher": {
+    "subject": "young boy",
+    "desc": "kid in a desert tunic and shorts, holding a big bug net and a specimen jar",
+    "theme": "factions",
+    "style": ""
+  },
+  "bug_maniac": {
+    "subject": "bug collector",
+    "desc": "young man in a full green hooded insect suit with antenna and goggle eyes, holding a specimen jar",
+    "theme": "factions",
+    "style": ""
+  },
+  "camper": {
+    "subject": "moisture farm hand",
+    "desc": "young man in tan overalls, wide-brimmed sun hat, work gloves, holding a hydrospanner",
+    "theme": "factions",
+    "style": ""
+  },
+  "champion_wallace": {
+    "subject": "Obi-Wan Kenobi",
+    "desc": "Jedi master, white hair and short white beard, brown Jedi robe over a cream tunic, holding a blue lightsaber",
+    "theme": "alliance-dawn",
+    "style": ""
+  },
+  "collector": {
+    "subject": "rich collector",
+    "desc": "chubby man in a fancy waistcoat and cravat, holding a glass display case",
+    "theme": "factions",
+    "style": ""
+  },
+  "cooltrainer_f": {
+    "subject": "female Rebel pilot",
+    "desc": "young woman, orange flight suit, white vest, black gloves, helmet under her arm, brown ponytail",
+    "theme": "alliance-dawn",
+    "style": ""
+  },
+  "cooltrainer_m": {
+    "subject": "male Rebel pilot",
+    "desc": "young man, orange flight suit, white vest, black gloves, white flight helmet under his arm",
+    "theme": "alliance-dawn",
+    "style": ""
+  },
+  "cycling_triathlete_f": {
+    "subject": "female swoop racer",
+    "desc": "young woman in a red and yellow racing suit and goggles, sitting on a small hover swoop bike",
+    "theme": "factions",
+    "style": ""
+  },
+  "cycling_triathlete_m": {
+    "subject": "male swoop racer",
+    "desc": "young man in a red racing suit and goggles, sitting on a small hover swoop bike",
+    "theme": "factions",
+    "style": ""
+  },
+  "dome_ace_tucker": {
+    "subject": "Dengar",
+    "desc": "grim bounty hunter, head wrapped in grey bandages and a headband, heavy grey padded armour, long blaster rifle",
+    "theme": "factions",
+    "style": "",
+    "negative": "hair"
+  },
+  "dragon_tamer": {
+    "subject": "beast tamer",
+    "desc": "rugged man, wild hair, fur cape over bare shoulders, leather armour, coiled whip in hand",
+    "theme": "factions",
+    "style": ""
+  },
+  "elite_four_drake": {
+    "subject": "Anakin Skywalker",
+    "desc": "young man, shoulder-length brown hair, scar over one eye, dark brown Jedi robe over a black tunic, blue lightsaber, ghostly blue glow",
+    "theme": "alliance-dawn",
+    "style": ""
+  },
+  "elite_four_glacia": {
+    "subject": "Ki-Adi-Mundi",
+    "desc": "Jedi master with a tall elongated cone-shaped head, white beard, tan Jedi robes over a frost-blue tunic, blue lightsaber",
+    "theme": "alliance-dawn",
+    "style": ""
+  },
+  "elite_four_phoebe": {
+    "subject": "Qui-Gon Jinn",
+    "desc": "tall Jedi master, long brown hair, beard, spectral translucent blue Jedi robes, glowing blue Force ghost",
+    "theme": "alliance-dawn",
+    "style": ""
+  },
+  "elite_four_sidney": {
+    "subject": "Darth Maul",
+    "desc": "Zabrak Sith, red face with black tattoos, small horns on a bald head, black robes, double-bladed red lightsaber",
+    "theme": "imperial-order",
+    "style": "",
+    "negative": "hair"
+  },
+  "expert_f": {
+    "subject": "old spacer woman",
+    "desc": "elderly woman, grey hair, old flight goggles on her head, worn spacer jacket, walking cane",
+    "theme": "factions",
+    "style": ""
+  },
+  "expert_m": {
+    "subject": "old spacer man",
+    "desc": "elderly man, grey beard, old faded orange flight suit, goggles on his forehead",
+    "theme": "factions",
+    "style": ""
+  },
+  "factory_head_noland": {
+    "subject": "IG-88",
+    "desc": "tall thin assassin droid, cylindrical sensor head, skeletal grey metal body, bandolier, blaster rifle",
+    "theme": "factions",
+    "style": "",
+    "negative": "human face, skin, hair"
+  },
+  "fisherman": {
+    "subject": "angler",
+    "desc": "man in a wide floppy brimmed hat with a yellow band, red jacket, tackle pouch, holding a fishing rod",
+    "theme": "factions",
+    "style": ""
+  },
+  "gentleman": {
+    "subject": "Senate diplomat",
+    "desc": "older man, grey hair, crimson robe with a maroon mantle and a gold stole",
+    "theme": "factions",
+    "style": ""
+  },
+  "guitarist": {
+    "subject": "cantina musician",
+    "desc": "Bith alien musician with a big bald domed head and large black eyes, dark suit, playing a long kloo horn",
+    "theme": "factions",
+    "style": "",
+    "negative": "hair"
+  },
+  "hex_maniac": {
+    "subject": "Nightsister witch",
+    "desc": "pale woman with white skin, crimson hooded robe with gold trim, dark lips, glowing green hand",
+    "theme": "factions",
+    "style": ""
+  },
+  "hiker": {
+    "subject": "prospector",
+    "desc": "burly man, tan mining helmet with a headlamp, bushy white beard, blue work shirt, canvas backpack with bedroll, pickaxe",
+    "theme": "factions",
+    "style": ""
+  },
+  "interviewer": {
+    "subject": "HoloNet reporter",
+    "desc": "woman reporter in a smart jacket holding a microphone, small floating camera droid beside her",
+    "theme": "factions",
+    "style": ""
+  },
+  "kindler": {
+    "subject": "lava miner",
+    "desc": "man in a silver-orange heat suit with a visor hood, heavy gloves, mining tool",
+    "theme": "factions",
+    "style": ""
+  },
+  "lady": {
+    "subject": "young aristocrat girl",
+    "desc": "rich girl, blonde hair, frilly Naboo dress, parasol",
+    "theme": "factions",
+    "style": ""
+  },
+  "lass": {
+    "subject": "Naboo girl",
+    "desc": "young woman, hair in an updo with a headband, pretty Naboo gown",
+    "theme": "factions",
+    "style": ""
+  },
+  "leader_brawly": {
+    "subject": "Tarfful",
+    "desc": "huge Wookiee chieftain, long brown fur all over, leather bandolier across the chest, big fists",
+    "theme": "alliance-dawn",
+    "style": "",
+    "negative": "human face, skin"
+  },
+  "leader_flannery": {
+    "subject": "Sabine Wren",
+    "desc": "Mandalorian girl, short dyed purple and orange hair, colourful painted Mandalorian armour, two blaster pistols",
+    "theme": "alliance-dawn",
+    "style": ""
+  },
+  "leader_juan": {
+    "subject": "Yoda",
+    "desc": "small green Jedi master, long pointy ears, wrinkled face, white wispy hair, rust-brown robe, gimer stick cane",
+    "theme": "alliance-dawn",
+    "style": ""
+  },
+  "leader_norman": {
+    "subject": "veteran pilot father",
+    "desc": "middle-aged man, greying hair, flight goggles pushed up, rust-brown leather coat with fleece lapels over an olive flight suit",
+    "theme": "alliance-dawn",
+    "style": ""
+  },
+  "leader_roxanne": {
+    "subject": "Biggs Darklighter",
+    "desc": "young man, moustache, orange Rebel flight suit, white vest, holding a datapad",
+    "theme": "alliance-dawn",
+    "style": ""
+  },
+  "leader_tate_and_liza": {
+    "subject": "Kanan Jarrus and Ezra Bridger",
+    "desc": "two people side by side: a bearded Jedi man with a ponytail and green pauldron, and a teenage boy Padawan with spiky dark blue hair in an orange jacket, both with blue lightsabers",
+    "theme": "alliance-dawn",
+    "style": "",
+    "pair": true
+  },
+  "leader_wattson": {
+    "subject": "Watto",
+    "desc": "Toydarian, small blue pot-bellied alien with fast hummingbird wings, long trunk nose, tusks, vest, hovering",
+    "theme": "factions",
+    "style": "",
+    "negative": "human, hair, legs"
+  },
+  "leader_winona": {
+    "subject": "Chief Chirpa",
+    "desc": "elder Ewok, small furry grey bear-like creature, horned leather hood, holding a wooden staff",
+    "theme": "factions",
+    "style": "",
+    "negative": "human face, skin"
+  },
+  "magma_admin": {
+    "subject": "General Veers",
+    "desc": "Imperial officer, grey-green Imperial uniform with a rank plaque, black officer cap, black boots, gloves",
+    "theme": "imperial-order",
+    "style": ""
+  },
+  "magma_grunt_f": {
+    "subject": "stormtrooper",
+    "desc": "white plastoid stormtrooper armour, white helmet with black visor eyes, black bodyglove, blaster rifle, slim build",
+    "theme": "imperial-order",
+    "style": "",
+    "negative": "visible face, skin, hair"
+  },
+  "magma_grunt_m": {
+    "subject": "stormtrooper",
+    "desc": "white plastoid stormtrooper armour, white helmet with black visor eyes, black bodyglove, E-11 blaster rifle",
+    "theme": "imperial-order",
+    "style": "",
+    "negative": "visible face, skin, hair"
+  },
+  "ninja_boy": {
+    "subject": "young infiltrator",
+    "desc": "kid in a dark hooded stealth suit with a glowing visor slit, crouching",
+    "theme": "factions",
+    "style": ""
+  },
+  "old_couple": {
+    "subject": "old moisture farmer couple",
+    "desc": "two people side by side: an elderly man with a white beard in a hooded poncho and an elderly woman in a desert shawl",
+    "theme": "factions",
+    "style": "",
+    "pair": true
+  },
+  "palace_maven_spenser": {
+    "subject": "Zuckuss",
+    "desc": "insectoid Gand bounty hunter, big bug eyes, breathing tubes, long brown robe and armour, blaster",
+    "theme": "factions",
+    "style": "",
+    "negative": "human face, skin, hair"
+  },
+  "parasol_lady": {
+    "subject": "lady with a sunshade",
+    "desc": "elegant woman, sun hat, long pale dress, holding a parasol",
+    "theme": "factions",
+    "style": ""
+  },
+  "picnicker": {
+    "subject": "homesteader girl",
+    "desc": "young woman, hair in a bun, desert farm dress, carrying a basket of produce",
+    "theme": "factions",
+    "style": ""
+  },
+  "pike_queen_lucy": {
+    "subject": "Gardulla the Hutt",
+    "desc": "fat brown slug-like female Hutt with gold jewellery and necklaces, thick tail",
+    "theme": "swamp-throne",
+    "style": "",
+    "negative": "human, legs, hair"
+  },
+  "pokefan_f": {
+    "subject": "creature fan girl",
+    "desc": "young woman with side buns, red top and yellow skirt, hugging a plush creature toy",
+    "theme": "factions",
+    "style": ""
+  },
+  "pokefan_m": {
+    "subject": "creature fan man",
+    "desc": "chubby man in a creature-print vest and a bantha-horn headband, waving",
+    "theme": "factions",
+    "style": ""
+  },
+  "pokemaniac": {
+    "subject": "creature costume fan",
+    "desc": "young man in a fuzzy creature costume with a hood shaped like a monster head",
+    "theme": "factions",
+    "style": ""
+  },
+  "pokemon_breeder_f": {
+    "subject": "female creature breeder",
+    "desc": "young woman in a green apron over a farm dress, holding a small furry creature",
+    "theme": "factions",
+    "style": ""
+  },
+  "pokemon_breeder_m": {
+    "subject": "male creature breeder",
+    "desc": "young man in a green apron and work clothes, holding a small furry creature",
+    "theme": "factions",
+    "style": ""
+  },
+  "pokemon_ranger_f": {
+    "subject": "female pathfinder",
+    "desc": "young woman scout, camouflage green poncho, big scout backpack, binoculars",
+    "theme": "factions",
+    "style": ""
+  },
+  "pokemon_ranger_m": {
+    "subject": "male pathfinder",
+    "desc": "young man scout, camouflage green poncho, big scout backpack, binoculars",
+    "theme": "factions",
+    "style": ""
+  },
+  "psychic_f": {
+    "subject": "female Force adept",
+    "desc": "young woman in a deep hooded dark purple robe, glowing hands",
+    "theme": "factions",
+    "style": ""
+  },
+  "psychic_m": {
+    "subject": "male Force adept",
+    "desc": "young man in a deep hooded dark blue robe, glowing hands",
+    "theme": "factions",
+    "style": ""
+  },
+  "pyramid_king_brandon": {
+    "subject": "Dexter Jettster",
+    "desc": "huge fat four-armed Besalisk alien, bald with a wattle chin, stained apron over a vest",
+    "theme": "factions",
+    "style": "",
+    "negative": "hair"
+  },
+  "rich_boy": {
+    "subject": "young noble",
+    "desc": "boy, neat hair with a silver circlet, green tunic with a high white collar, short lavender-grey cape",
+    "theme": "factions",
+    "style": ""
+  },
+  "ruin_maniac": {
+    "subject": "relic hunter",
+    "desc": "bearded explorer, wide hat, khaki explorer outfit, backpack, holding a glowing lamp",
+    "theme": "factions",
+    "style": ""
+  },
+  "running_triathlete_f": {
+    "subject": "female swoop racer running",
+    "desc": "athletic young woman jogging, red and yellow racing suit, goggles on her head",
+    "theme": "factions",
+    "style": ""
+  },
+  "running_triathlete_m": {
+    "subject": "male swoop racer running",
+    "desc": "athletic young man jogging, red racing suit, goggles on his head",
+    "theme": "factions",
+    "style": ""
+  },
+  "sailor": {
+    "subject": "deck spacer",
+    "desc": "burly man in a blue jumpsuit with harness straps and a visored deck cap",
+    "theme": "factions",
+    "style": ""
+  },
+  "salon_maiden_anabel": {
+    "subject": "Aurra Sing",
+    "desc": "tall pale bald woman bounty hunter, red topknot, head antenna, dark red bodysuit, long sniper rifle",
+    "theme": "factions",
+    "style": ""
+  },
+  "school_kid_f": {
+    "subject": "female academy cadet",
+    "desc": "girl in a khaki cadet tunic and skirt, holding a datapad",
+    "theme": "factions",
+    "style": ""
+  },
+  "school_kid_m": {
+    "subject": "male academy cadet",
+    "desc": "boy in a khaki cadet tunic and peaked cap, satchel, holding a datapad",
+    "theme": "factions",
+    "style": ""
+  },
+  "sis_and_bro": {
+    "subject": "sister and brother",
+    "desc": "two kids side by side: a girl and a younger boy with swim goggles holding inflatable flotation rings",
+    "theme": "factions",
+    "style": "",
+    "pair": true
+  },
+  "sr_and_jr": {
+    "subject": "old and young anglers",
+    "desc": "two people side by side: an old man in a fishing hat with a rod and a small boy with a rod",
+    "theme": "factions",
+    "style": "",
+    "pair": true
+  },
+  "swimmer_f": {
+    "subject": "female diver",
+    "desc": "young woman in a blue dive suit with a dive hood, mask and small breather",
+    "theme": "factions",
+    "style": ""
+  },
+  "swimmer_m": {
+    "subject": "male diver",
+    "desc": "young man in a blue dive suit with a dive hood, mask and small breather",
+    "theme": "factions",
+    "style": ""
+  },
+  "swimming_triathlete_f": {
+    "subject": "female swimmer",
+    "desc": "athletic young woman in a red and yellow swimsuit with swim goggles",
+    "theme": "factions",
+    "style": ""
+  },
+  "swimming_triathlete_m": {
+    "subject": "male swimmer",
+    "desc": "athletic young man in red swim trunks with swim goggles",
+    "theme": "factions",
+    "style": ""
+  },
+  "tuber_f": {
+    "subject": "little girl with swim ring",
+    "desc": "small girl with swim goggles wearing a pink inflatable ring around her waist",
+    "theme": "factions",
+    "style": ""
+  },
+  "tuber_m": {
+    "subject": "little boy with swim ring",
+    "desc": "small boy with swim goggles wearing a yellow inflatable ring around his waist",
+    "theme": "factions",
+    "style": ""
+  },
+  "twins": {
+    "subject": "twin kids",
+    "desc": "two identical kids side by side, top-knots tied with red bands, cream wrap tunics, brown belts and boots",
+    "theme": "factions",
+    "style": "",
+    "pair": true
+  },
+  "young_couple": {
+    "subject": "young homesteader couple",
+    "desc": "two people side by side: a young man and a young woman in desert farm clothes holding hands",
+    "theme": "factions",
+    "style": "",
+    "pair": true
+  },
+  "youngster": {
+    "subject": "young farm boy",
+    "desc": "boy in a wrap tunic, shorts and boots, racing goggles on his head",
+    "theme": "factions",
+    "style": ""
   }
 }
