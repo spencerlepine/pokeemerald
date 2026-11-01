@@ -1,0 +1,351 @@
+name: sw_aqualish
+description: 'NEW WALKER (net:walker-aqualish): PONDA BABA, Aqualish thug: walrus face with two down-turned tusks, small eyes, brown leather jacket, holstered blaster (placeholder: Man 4).'
+kit: person16x32
+replaces: graphics/object_events/pics/people/man_4.png
+graphics_info: Aqualish
+notes: 'Recast group e, shade mode: Man 4''s own body as regions (jacket -> rust-brown leather J, shirt -> dark green V, trousers -> tan on the skin ramp, arms -> grey Aqualish hands), new grey Aqualish
+  dome (forehead creases, a few scalp tufts) with tiny wide-set eyes, a broad muzzle and two white tusks hanging over the jacket; black blaster in a brown hip holster.'
+palette: npc_3
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_3
+shade: true
+materials:
+  F: skin-a@
+  M: a
+  J: c
+  V: b
+  G: a
+  P: s
+legend:
+  k: 15
+  W: 14
+  d: 13
+  h: 4
+  o: 3
+  z: 7
+  t: 15
+accept:
+  skin_tones: Aqualish skin is the grey ramp a; no human skin on him
+  hair_rows: bald Aqualish dome, no hair
+  eye_row: tiny wide-set Aqualish eyes on a tall dome above the muzzle
+base_sheet: graphics/object_events/pics/people/man_4.png
+remap:
+  a: P
+  c: J
+  b: V
+  s: G
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        .....FtFFtF.....
+
+        ...FFFFFFFFFF...
+
+        ..FFFzzFFzzFFF..
+
+        ..FFFFFzzFFFFF..
+
+        .FFFkFFFFFFkFFF.
+
+        .FFFkFFFFFFkFFF.
+
+        .FFFFFFFFFFFFFF.
+
+        FFFMMMMMMMMMMFFF
+
+        FFMMMMMMMMMMMMFF
+
+        .FMWMddddddMWMF.
+
+        ..MWMMMMMMMMWM..
+
+        __JW________WJ__
+
+        __J__________J__'
+    - x: 11
+      y: 25
+      rows: '_ho__
+
+        _hk__
+
+        _hk__'
+  up:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        .....FtFFtF.....
+
+        ...FFFFFFFFFF...
+
+        ..FFFFFFFFFFFF..
+
+        ..FFFzFFFFzFFF..
+
+        .FFFFzFFFFzFFFF.
+
+        .FFFFFFFFFFFFFF.
+
+        .FFFFFFFFFFFFFF.
+
+        FFFFFFFFFFFFFFFF
+
+        FFFFFFFFFFFFFFFF
+
+        .WFFFFFFFFFFFFW.
+
+        ..WFFFFFFFFFFW..
+
+        __JJJJJJJJJJJJ__
+
+        __JJJJJJJJJJJJ__'
+    - x: 0
+      y: 25
+      rows: '__h__
+
+        __k__'
+  left:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        ......FtFFt.....
+
+        ....FFFFFFFF....
+
+        ...FzzFFFFFFF...
+
+        ..FFFFzFFFFzFF..
+
+        ..FkFFFFFFFFFF..
+
+        ..FkFFFFFFFFFF..
+
+        .MFFFFFFFFFFFF..
+
+        MMMMMFFFFFFFF...
+
+        MMMMMMFFFFFFF...
+
+        ddMMMMFFFFFF....
+
+        .WMMMMFFFFF.....
+
+        .W__JJJJJJJ_____
+
+        _W______________'
+  down_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        .....FtFFtF.....
+
+        ...FFFFFFFFFF...
+
+        ..FFFzzFFzzFFF..
+
+        ..FFFFFzzFFFFF..
+
+        .FFFkFFFFFFkFFF.
+
+        .FFFkFFFFFFkFFF.
+
+        .FFFFFFFFFFFFFF.
+
+        FFFMMMMMMMMMMFFF
+
+        FFMMMMMMMMMMMMFF
+
+        .FMWMddddddMWMF.
+
+        ..MWMMMMMMMMWM..
+
+        __JW________WJ__
+
+        __J__________J__'
+    - x: 11
+      y: 26
+      rows: '_ho__
+
+        _hk__
+
+        _hk__'
+  down_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        .....FtFFtF.....
+
+        ...FFFFFFFFFF...
+
+        ..FFFzzFFzzFFF..
+
+        ..FFFFFzzFFFFF..
+
+        .FFFkFFFFFFkFFF.
+
+        .FFFkFFFFFFkFFF.
+
+        .FFFFFFFFFFFFFF.
+
+        FFFMMMMMMMMMMFFF
+
+        FFMMMMMMMMMMMMFF
+
+        .FMWMddddddMWMF.
+
+        ..MWMMMMMMMMWM..
+
+        __JW________WJ__
+
+        __J__________J__'
+    - x: 11
+      y: 26
+      rows: '_ho__
+
+        _hk__
+
+        _hk__'
+  up_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        .....FtFFtF.....
+
+        ...FFFFFFFFFF...
+
+        ..FFFFFFFFFFFF..
+
+        ..FFFzFFFFzFFF..
+
+        .FFFFzFFFFzFFFF.
+
+        .FFFFFFFFFFFFFF.
+
+        .FFFFFFFFFFFFFF.
+
+        FFFFFFFFFFFFFFFF
+
+        FFFFFFFFFFFFFFFF
+
+        .WFFFFFFFFFFFFW.
+
+        ..WFFFFFFFFFFW..
+
+        __JJJJJJJJJJJJ__
+
+        __JJJJJJJJJJJJ__'
+    - x: 0
+      y: 26
+      rows: '__h__
+
+        __k__'
+  up_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        .....FtFFtF.....
+
+        ...FFFFFFFFFF...
+
+        ..FFFFFFFFFFFF..
+
+        ..FFFzFFFFzFFF..
+
+        .FFFFzFFFFzFFFF.
+
+        .FFFFFFFFFFFFFF.
+
+        .FFFFFFFFFFFFFF.
+
+        FFFFFFFFFFFFFFFF
+
+        FFFFFFFFFFFFFFFF
+
+        .WFFFFFFFFFFFFW.
+
+        ..WFFFFFFFFFFW..
+
+        __JJJJJJJJJJJJ__
+
+        __JJJJJJJJJJJJ__'
+    - x: 0
+      y: 26
+      rows: '__h__
+
+        __k__'
+  left_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        ......FtFFt.....
+
+        ....FFFFFFFF....
+
+        ...FzzFFFFFFF...
+
+        ..FFFFzFFFFzFF..
+
+        ..FkFFFFFFFFFF..
+
+        ..FkFFFFFFFFFF..
+
+        .MFFFFFFFFFFFF..
+
+        MMMMMFFFFFFFF...
+
+        MMMMMMFFFFFFF...
+
+        ddMMMMFFFFFF....
+
+        .WMMMMFFFFF.....
+
+        .W__JJJJJJJ_____
+
+        _W______________'
+  left_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        ......FtFFt.....
+
+        ....FFFFFFFF....
+
+        ...FzzFFFFFFF...
+
+        ..FFFFzFFFFzFF..
+
+        ..FkFFFFFFFFFF..
+
+        ..FkFFFFFFFFFF..
+
+        .MFFFFFFFFFFFF..
+
+        MMMMMFFFFFFFF...
+
+        MMMMMMFFFFFFF...
+
+        ddMMMMFFFFFF....
+
+        .WMMMMFFFFF.....
+
+        .W__JJJJJJJ_____
+
+        _W______________'

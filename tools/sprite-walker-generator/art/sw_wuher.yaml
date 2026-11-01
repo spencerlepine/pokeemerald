@@ -1,0 +1,223 @@
+name: sw_wuher
+description: 'NEW WALKER (net:walker-wuher): WUHER, the Mos Eisley cantina bartender: stocky, scowling, dark hair, grey apron over a brown shirt (placeholder: Man 4).'
+kit: person16x32_still
+replaces: graphics/object_events/pics/people/man_4.png
+graphics_info: Wuher
+notes: 'Recast group e, shade mode, drawn whole on a stocky fat-man-width body (still kit: he stands behind the round bar). Cues: wide stocky build, scowl (brows slanting to the nose, downturned mouth),
+  grey bib apron over a rust-brown shirt, a white bar rag over one shoulder.'
+palette: npc_3
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_3
+shade: true
+materials:
+  T: c
+  R: c
+  A: a
+  Y: a
+  P: b
+  K: b
+  w: w/c
+legend:
+  k: 15
+  W: 14
+  m: 4
+  h: 13
+  i: 12
+  b: 13
+  p: 7
+accept: {}
+frames:
+  down: '................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    .....hhhhhh.....
+
+    ...hhhiiiihhh...
+
+    ..hhiihiihiihh..
+
+    .hhhihhihhihhhh.
+
+    .hhhssshhssshhh.
+
+    .hhsbssssssbshh.
+
+    .hsssbksskbsssh.
+
+    .ssssskssksssss.
+
+    ..ssssksskssss..
+
+    ..ssssmmmmssss..
+
+    ...ssmssssmsss..
+
+    .TTTTAssssATTTT.
+
+    RRTTTAAAAAATwwRR
+
+    RRRTAAAWAAAAwwRR
+
+    RRRTYYYYYYYYTwRR
+
+    ssRTAAAAAAAATRss
+
+    ss.TApppAAAAT.ss
+
+    ...PApAAAAAAP...
+
+    ...PPAAAAAAPP...
+
+    ...KKK....KKK...
+
+    ................
+
+    '
+  up: '................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    .....hhhhhh.....
+
+    ...hhhiiiihhh...
+
+    ..hhiihiihiihh..
+
+    .hhhihhihhihhhh.
+
+    .hhhhihhihhihhh.
+
+    .hhhhhhhhhhhhhh.
+
+    .hhhhhhhhhhhhhh.
+
+    .shhhhhhhhhhhhs.
+
+    ..shhhhhhhhhhs..
+
+    ..sshhhhhhhhss..
+
+    ...TssssssssT...
+
+    .TTTTATTTTATTTT.
+
+    RRwwTTATTATTTTRR
+
+    RRwwTTTAATTTTRRR
+
+    RRRTYYYYYYYYTRRR
+
+    ssRTTTTYYTTTTRss
+
+    ss.TTTYTTYTTT.ss
+
+    ...PPPPPPPPPP...
+
+    ...PPPPPPPPPP...
+
+    ...KKK....KKK...
+
+    ................
+
+    '
+  left: '................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ......hhhhhh....
+
+    ....hhhiiiihhh..
+
+    ...hhiihiihiihh.
+
+    ..hhhhihhihhihh.
+
+    ..hssshhhhhhhhh.
+
+    ..ssbbbsshhhhhh.
+
+    .ssssbsssshhhhh.
+
+    .ssssksssssshhh.
+
+    ..sssksssssshh..
+
+    ..mmssssssshh...
+
+    ...sssssssss....
+
+    ...ATTTTTTTTT...
+
+    ...AATTRRRTTTT..
+
+    ...AAATRRRTTTT..
+
+    ...YYYYRRRYYYY..
+
+    ...AApTRRRTTTT..
+
+    ...AAAAsssTTT...
+
+    ....AAAAPPPP....
+
+    ....AAAPPPPP....
+
+    .....KKKKKK.....
+
+    ................
+
+    '

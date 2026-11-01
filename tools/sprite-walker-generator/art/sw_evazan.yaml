@@ -1,0 +1,313 @@
+name: sw_evazan
+description: 'NEW WALKER (net:walker-evazan): DR. CORNELIUS EVAZAN: scarred, twisted face, dark hair, reddish-brown jacket with a high collar (placeholder: Man 3).'
+kit: person16x32
+replaces: graphics/object_events/pics/people/man_3.png
+graphics_info: Evazan
+notes: 'Recast group e, shade mode: Man 3''s own body as regions (jacket -> reddish-brown J, shirt -> crimson waistcoat V with a crimson cravat, trousers P), new head: slicked-back dark brown hair with
+  a widow''s peak, lopsided eyes, a red scar across the right side of the face, a crooked mouth, and a tall stand-up collar flaring beside the jaw. Slim against Wuher''s stocky build; reddish-brown jacket,
+  hair near-black with a widow''s peak, against Wuher''s grey apron and combed-back brown hair.'
+palette: npc_2
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_2
+shade: true
+materials:
+  J: c
+  Q: c
+  V: b!
+  P: c
+legend:
+  k: 15
+  W: 14
+  r: 9
+  m: 4
+  h: 13
+  i: 12
+  x: 9
+  X: 10
+  y: 6
+accept: {}
+base_sheet: graphics/object_events/pics/people/man_3.png
+remap:
+  a: H
+  b: J
+  w: V
+  c: P
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        .....hhhhhh.....
+
+        ...hhhiWiihhh...
+
+        ..hihhiihiihih..
+
+        ..hhihhihhihhh..
+
+        ..hihhihhihhih..
+
+        .hhssshhhssshhh.
+
+        .hssssssssssrsh.
+
+        .hsssskssssrssh.
+
+        .sssssksskrssss.
+
+        ..sssssssskrss..
+
+        .QsssmmmsssssQ..
+
+        .QQQssssssssQQQ.
+
+        __QQQyxxxxyQQQ__
+
+        ______xXXx______
+
+        _______XX_______'
+  up:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        .....hhhhhh.....
+
+        ...hhhiWiihhh...
+
+        ..hihhiihiihih..
+
+        ..hhihhihhihhh..
+
+        ..hihhihhihhih..
+
+        .hhhihhihhihhhh.
+
+        .hihhihhihhihhh.
+
+        .shhhhhhhhhhhhs.
+
+        ..shhhhhhhhhhs..
+
+        ..sshhhhhhhhss..
+
+        .QQQQssssssQQQQ.
+
+        .QQQQQQQQQQQQQQ.'
+  left:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        ......hhhhh.....
+
+        ....hhhiWiihh...
+
+        ...hhiihiihihh..
+
+        ..hihhihhihhhh..
+
+        ..hhihhihhihhh..
+
+        ..sshhhhhhhhhh..
+
+        ..ssssshhhhhhh..
+
+        .ssskrsshhhhhh..
+
+        ..sskrssshhhhh..
+
+        ..sssrsssshhQ...
+
+        ..mmsssssssQQ...
+
+        ____ssssQQQQ____'
+  down_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        .....hhhhhh.....
+
+        ...hhhiWiihhh...
+
+        ..hihhiihiihih..
+
+        ..hhihhihhihhh..
+
+        ..hihhihhihhih..
+
+        .hhssshhhssshhh.
+
+        .hssssssssssrsh.
+
+        .hsssskssssrssh.
+
+        .sssssksskrssss.
+
+        ..sssssssskrss..
+
+        .QsssmmmsssssQ..
+
+        .QQQssssssssQQQ.
+
+        __QQQyxxxxyQQQ__
+
+        ______xXXx______
+
+        _______XX_______'
+  down_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        .....hhhhhh.....
+
+        ...hhhiWiihhh...
+
+        ..hihhiihiihih..
+
+        ..hhihhihhihhh..
+
+        ..hihhihhihhih..
+
+        .hhssshhhssshhh.
+
+        .hssssssssssrsh.
+
+        .hsssskssssrssh.
+
+        .sssssksskrssss.
+
+        ..sssssssskrss..
+
+        .QsssmmmsssssQ..
+
+        .QQQssssssssQQQ.
+
+        __QQQyxxxxyQQQ__
+
+        ______xXXx______
+
+        _______XX_______'
+  up_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        .....hhhhhh.....
+
+        ...hhhiWiihhh...
+
+        ..hihhiihiihih..
+
+        ..hhihhihhihhh..
+
+        ..hihhihhihhih..
+
+        .hhhihhihhihhhh.
+
+        .hihhihhihhihhh.
+
+        .shhhhhhhhhhhhs.
+
+        ..shhhhhhhhhhs..
+
+        ..sshhhhhhhhss..
+
+        .QQQQssssssQQQQ.
+
+        .QQQQQQQQQQQQQQ.'
+  up_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        .....hhhhhh.....
+
+        ...hhhiWiihhh...
+
+        ..hihhiihiihih..
+
+        ..hhihhihhihhh..
+
+        ..hihhihhihhih..
+
+        .hhhihhihhihhhh.
+
+        .hihhihhihhihhh.
+
+        .shhhhhhhhhhhhs.
+
+        ..shhhhhhhhhhs..
+
+        ..sshhhhhhhhss..
+
+        .QQQQssssssQQQQ.
+
+        .QQQQQQQQQQQQQQ.'
+  left_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        ......hhhhh.....
+
+        ....hhhiWiihh...
+
+        ...hhiihiihihh..
+
+        ..hihhihhihhhh..
+
+        ..hhihhihhihhh..
+
+        ..sshhhhhhhhhh..
+
+        ..ssssshhhhhhh..
+
+        .ssskrsshhhhhh..
+
+        ..sskrssshhhhh..
+
+        ..sssrsssshhQ...
+
+        ..mmsssssssQQ...
+
+        ____ssssQQQQ____'
+  left_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        ......hhhhh.....
+
+        ....hhhiWiihh...
+
+        ...hhiihiihihh..
+
+        ..hihhihhihhhh..
+
+        ..hhihhihhihhh..
+
+        ..sshhhhhhhhhh..
+
+        ..ssssshhhhhhh..
+
+        .ssskrsshhhhhh..
+
+        ..sskrssshhhhh..
+
+        ..sssrsssshhQ...
+
+        ..mmsssssssQQ...
+
+        ____ssssQQQQ____'
