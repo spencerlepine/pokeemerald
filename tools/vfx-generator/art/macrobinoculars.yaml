@@ -1,0 +1,49 @@
+# FORESIGHT: Emerald's magnifying glass becomes a pair of macrobinoculars.
+# Only FORESIGHT loads ANIM_TAG_MAGNIFYING_GLASS. One 32x32 frame; AnimForesightMagnifyingGlass
+# sweeps it across the target, so it is drawn face on (lenses toward the viewer).
+name: macrobinoculars
+title: FORESIGHT macrobinoculars
+row: graphics/battle_anims/sprites/magnifying_glass.png
+bucket: RESKIN
+replaces: graphics/battle_anims/sprites/magnifying_glass.png
+brief: >
+  Luke's macrobinoculars seen from the front: a boxy grey housing, two round blue lenses with a
+  glint, red rangefinder strips on top. Rimmed in its own dark grey, no black outline.
+palette:
+  mode: new
+  transparent: "#000000"         # vanilla key colour
+  ramps:
+    body: ["#E8E8E0", "#B8B8B0", "#888880", "#585858", "#303038"]
+    lens: ["#C8F0F8", "#58A8D8", "#2868A8", "#183868"]
+    red:  ["#F85838", "#A82818"]
+frames: [0]
+ops:
+  - grid:
+      x: 3
+      y: 9
+      light: [-1, -1]
+      depth: 3
+      rows:
+        - "....bbbbbbbbbbbbbbbbbb...."
+        - "....bbrrrrbbbbbbrrrrbb...."
+        - ".bbbbbbbbbbbssbbbbbbbbbbb."
+        - "bbbbbbbbbbbbssbbbbbbbbbbbb"
+        - "bbbbbkkkkbbbbbbbbkkkkbbbbb"
+        - "bbbbkWWllkbbbbbbkWWllkbbbb"
+        - "bbbkWlllllkbbbbkWlllllkbbb"
+        - "bbbkllllllkbbbbkllllllkbbb"
+        - "bbbkllllllkbbbbkllllllkbbb"
+        - "bbbbkllllkbbbbbbkllllkbbbb"
+        - "bbbbbkkkkbbbbbbbbkkkkbbbbb"
+        - "bbbbbbbbbbbbddbbbbbbbbbbbb"
+        - ".bbbbbbbbbbbddbbbbbbbbbbb."
+        - "..bbbbbbbbbbbbbbbbbbbbbb.."
+      shade: {b: body, l: lens}
+      legend: {k: body.4, W: lens.0, r: red.0, s: body.3, d: body.3}
+  - selout: {light: [-1, -1]}
+preview:
+  scene: battle
+  motion: {kind: at_target, frames: 40, wobble: 6}
+  length: 44
+romtest:
+  move: MOVE_FORESIGHT

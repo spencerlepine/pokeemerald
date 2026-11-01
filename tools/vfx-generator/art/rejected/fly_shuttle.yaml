@@ -1,3 +1,5 @@
+# REJECTED by the owner (2026-11-01): keep Emerald's bird.png as is. Kept only as an example of a
+# player-bank (code-set palette) spec; do not build or install.
 # Fly mount: Emerald's bird becomes an Imperial-style shuttle (pairs with the hyperspace jump).
 # The bird has paletteTag TAG_NONE and CreateFlyBirdSprite sets oam.paletteNum = 0: it is drawn with the
 # PLAYER's bank, which is different for the boy and the girl. So this spec draws with indices only and

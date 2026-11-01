@@ -1,0 +1,14 @@
+# datapad_stylus: SKETCH datapad stylus
+replaces: graphics/battle_anims/sprites/pencil.png
+sheet 32x32, frame 32x32, slots drawn [0], game uses [0]
+palette gate: PASS
+  OK   /home/user/pokeemerald/tools/vfx-generator/output/datapad_stylus/pencil.png  (bpp 4, colours 12/15)
+STYLE SCORE 100/100 (group battle_anim_sprite)
+  ok    tiny_colours 0.00 (vanilla band 0.00..1.00, replaced sheet 0.00)
+  ok    lone 0.00 (vanilla band 0.00..0.02, replaced sheet 0.00)
+  ok    checker 0.07 (vanilla band 0.00..0.15, replaced sheet 0.02)
+  ok    dark_edge 0.10 (vanilla band 0.00..0.68, replaced sheet 0.13)
+  ok    core_bright 17.88 (vanilla band -18.79..96.63, replaced sheet 22.04)
+  ok    luma_range 206.18 (vanilla band 0.00..222.28, replaced sheet 237.96)
+  ok    coverage 0.24 (vanilla band 0.09..0.75, replaced sheet 0.24)
+  ok    border 0.00 (vanilla band 0.00..0.27, replaced sheet 0.01)

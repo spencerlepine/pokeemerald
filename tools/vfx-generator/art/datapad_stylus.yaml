@@ -1,0 +1,33 @@
+# SKETCH: Emerald's pencil becomes a datapad stylus with a glowing tip.
+# Only SKETCH loads ANIM_TAG_PENCIL. One 32x32 frame; AnimPencil scribbles it over the target with
+# the tip at the bottom right, so the diagonal and the tip position follow the vanilla pencil.
+name: datapad_stylus
+title: SKETCH datapad stylus
+row: graphics/battle_anims/sprites/pencil.png
+bucket: RESKIN
+replaces: graphics/battle_anims/sprites/pencil.png
+brief: >
+  A slim durasteel stylus lying on the same diagonal as the pencil: a dark grip band, a cap with a
+  small status light at the top left, and a glowing cyan tip at the bottom right.
+palette:
+  mode: new
+  transparent: "#000000"         # vanilla key colour
+  ramps:
+    steel: ["#F0F0F0", "#C0C8D0", "#8890A0", "#586070", "#303848"]
+    grip:  ["#70708A", "#484860", "#282838"]
+    glow:  ["#F8F8F8", "#A8F0F8", "#40C0E8"]
+    lamp:  ["#F8D000"]
+frames: [0]
+ops:
+  - beam: {x0: 6.5, y0: 6.5, x1: 22, y1: 22, r0: 3.6, ramp: steel, bands: [0.82, 0.6, 0.38, 0.15]}
+  - beam: {x0: 15.5, y0: 15.5, x1: 19, y1: 19, r0: 3.7, ramp: grip, bands: [0.7, 0.35]}
+  - polygon: {points: [[20.5, 25.5], [25.5, 20.5], [28.5, 28.5]], ramp: steel, light: [-0.7, -0.7]}
+  - disc: {cx: 27.6, cy: 27.6, r: 2.3, ramp: glow, light: [-0.4, -0.4]}
+  - rect: {x: 6, y: 6, w: 3, h: 3, index: lamp.0}
+  - selout: {light: [-1, -1]}
+preview:
+  scene: battle
+  motion: {kind: at_target, frames: 40, wobble: 6}
+  length: 44
+romtest:
+  move: MOVE_SKETCH

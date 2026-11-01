@@ -1,0 +1,58 @@
+# MILK DRINK: Emerald's Moomoo Milk bottle becomes a jug of Tatooine blue milk.
+# Only MILK DRINK loads ANIM_TAG_MILK_BOTTLE. One 32x32 frame; AnimMilkBottle places it above the
+# target and tips it back and forth with the affine unit, so the jug must read at any small tilt.
+name: blue_milk
+title: MILK DRINK blue milk jug
+row: graphics/battle_anims/sprites/milk_bottle.png
+bucket: RESKIN
+replaces: graphics/battle_anims/sprites/milk_bottle.png
+brief: >
+  A squat glass farm jug with a loop handle, two thirds full of pale blue milk. Glass is pale
+  grey-green like the vanilla bottle; the milk is the only strong colour.
+palette:
+  mode: new
+  transparent: "#000000"         # vanilla key colour
+  ramps:
+    glass: ["#F8F8F8", "#C8E0D8", "#90B0B0", "#587880", "#283840"]
+    milk:  ["#E8F8FF", "#98D0F8", "#5898E0", "#3060B0", "#203070"]
+frames: [0]
+ops:
+  - grid:
+      x: 6
+      y: 3
+      light: [-1, -1]
+      depth: 3
+      rows:
+        - "...gggggggggg......."
+        - "..gwwggggggggg......"
+        - "...gggggggggg......."
+        - "....gwggggggg......."
+        - "....gwggggggg......."
+        - "....gwggggggg......."
+        - "...gwgggggggggggg..."
+        - "..gwggggggggggggggg."
+        - ".gwgggggggggggg..gg."
+        - ".gwgggggggggggg...gg"
+        - "gwmmmmmmmmmmmmmg..gg"
+        - "gwmWWmmmmmmmmmmg..gg"
+        - "gwmWmmmmmmmmmmmg..gg"
+        - "gmmmmmmmmmmmmmmg..gg"
+        - "gmmmmmmmmmmmmmmg..gg"
+        - "gmmmmmmmmmmmmmmg.gg."
+        - "gmmmmmmmmmmmmmmgggg."
+        - "gmmmmmmmmmmmmmmgg..."
+        - "gmmmmmmmmmmmmmmg...."
+        - "gmmmmmmmmmmmmmmg...."
+        - ".gmmmmmmmmmmmmg....."
+        - ".gmmmmmmmmmmmmg....."
+        - "..ggmmmmmmmmgg......"
+        - "....gggggggg........"
+      shade: {g: glass, m: milk}
+      legend: {w: glass.0, W: milk.0}
+  - selout: {light: [-1, -1]}
+preview:
+  scene: battle
+  motion: {kind: at_attacker, frames: 40, wobble: 2, offset: [0, -24]}
+  length: 44
+romtest:
+  move: MOVE_MILK_DRINK
