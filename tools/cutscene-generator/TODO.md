@@ -4,8 +4,9 @@
 (the bike ride) is in the game as KAEL/MIRA's speeder ride on Tatooine with Tusken raiders (round 3, APPROVED and
 shipped 2026-11-01; review files in `scenes/intro_bike/review/`). Intro scene 1 (`scenes/intro_drops`: canyon drip at dawn,
 pan up to the twin suns, ship flyover, no logo) is in the game, round 1 APPROVED and shipped 2026-11-01 (`scenes/intro_drops/review/`).
-Intro scene 3 (`scenes/intro_legends`) is in progress: chunk 3a (capture pod + GREATKRAYT on sand) AWAITING REVIEW;
-next SANDO (Kyogre), then the EXOGORTH (Rayquaza), then the credits ride. The affine 8bpp BG target is in GBA.md.
+Intro scene 3 (`scenes/intro_legends`) is in the game: capture pod, sand and sea backgrounds shipped 2026-11-01. The three
+titans (GREATKRAYT, SANDO, EXOGORTH) are PLACEHOLDERS, parked as a follow-up task: see
+`../../wiki/art/graphics/intro/scene_3/README.md`. Next: the credits ride.
 Start with [GBA.md](GBA.md) (how art becomes game files) and [STYLE.md](STYLE.md) (what to match).
 
 Title screen, intro movie, credits, the titan/EXOGORTH scene, evolution, trade and shuttle-ride scenes.

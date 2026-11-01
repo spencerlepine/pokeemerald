@@ -1,6 +1,13 @@
 # intro_legends review captures (intro scene 3)
 
-## Round 2, chunk 3a (2026-11-01): awaiting review
+## Shipped (2026-11-01)
+
+Owner on round 2: "too detailed and too shaded ... the monsters themselves are not ready". The capture pod and
+the sand and sea backgrounds ship; the titans are the project placeholder sprite until a follow-up task draws
+them (`../../../../../wiki/art/graphics/intro/scene_3/README.md`). `placeholders_scene3_rom.gif`: the scene
+as it plays now (game frames 2280-3000, true speed).
+
+## Round 2, chunk 3a (2026-11-01): rejected
 
 Owner on round 1: "those monster sprites are just horrible ... draw way better art". Generated references
 were not reachable from this session (image hosts blocked, Civitai blocked), so GREATKRAYT is redrawn by
@@ -11,7 +18,7 @@ dorsal plates, elbowed clawed legs, segment grooves and the glowing flank veins 
 - `round2_krayt_rom.gif`: the real ROM, frames 2380-2560 (true speed).
 - `round2_krayt_stills.png`, `round2_krayt_closeup.png` (pose A at 4x).
 
-## Round 1, chunk 3a (2026-11-01): awaiting review
+## Round 1, chunk 3a (2026-11-01): pod kept, krayt rejected
 
 The capture pod (pokeball.png) and GREATKRAYT (groudon.png, three poses) on desert sand (legend_bg.png bank 3).
 The sea behind Kyogre is redrawn too (it shares legend_bg.png); Kyogre, the clouds and Rayquaza are still Emerald's.
