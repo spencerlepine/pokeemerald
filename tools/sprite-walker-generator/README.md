@@ -97,3 +97,11 @@ and arms).
    `python -m walker_sprite compare output/<name>-variants.png a.yaml b.yaml ...`.
 7. Commit the spec with `output/<name>/`. Show the owner `showcase.png` and record
    feedback in `DECISIONS.md`.
+
+## Drafting in batches
+
+`walker_sprite/template.py` holds a generic human body (head, torso, legs, step frames; kid or
+`adult: True`, which adds a torso and a leg row). A batch file in `batches/` lists characters as a
+legend (template letter -> palette index) plus per-row `edit`s by absolute row, and writes
+`art/<name>.yaml`. Run it from this folder (`python batches/batch1.py`), build each spec, then
+`python -m walker_sprite compare output/batchN.png art/a.yaml ...` for one review sheet.
