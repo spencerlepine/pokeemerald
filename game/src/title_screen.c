@@ -29,6 +29,7 @@ enum {
     TAG_VERSION = 1000,
     TAG_PRESS_START_COPYRIGHT,
     TAG_LOGO_SHINE,
+    TAG_COLLAGE_FIRST, // one tag per collage figure from here on (src/data/title_screen_collage.h)
 };
 
 #define VERSION_BANNER_RIGHT_TILEOFFSET 64
@@ -60,6 +61,7 @@ static void SpriteCB_VersionBannerLeft(struct Sprite *sprite);
 static void SpriteCB_VersionBannerRight(struct Sprite *sprite);
 static void SpriteCB_PressStartCopyrightBanner(struct Sprite *sprite);
 static void SpriteCB_PokemonLogoShine(struct Sprite *sprite);
+static void SpriteCB_CollageFigure(struct Sprite *sprite);
 
 // const rom data
 static const u16 sUnusedUnknownPal[] = INCGFX_U16("graphics/title_screen/unused.pal", ".gbapal");
@@ -68,6 +70,22 @@ static const u32 sTitleScreenRayquazaGfx[] = INCGFX_U32("graphics/title_screen/r
 static const u32 sTitleScreenRayquazaTilemap[] = INCGFX_U32("graphics/title_screen/rayquaza.bin", ".lz");
 static const u32 sTitleScreenLogoShineGfx[] = INCGFX_U32("graphics/title_screen/logo_shine.png", ".4bpp.lz");
 static const u32 sTitleScreenCloudsGfx[] = INCGFX_U32("graphics/title_screen/clouds.png", ".4bpp.lz");
+
+// Character collage (tools/title-screen-generator/collage): Rebels on the left, the Empire on the right, standing
+// behind the logo (BG2) and the foreground ridge (BG0, rayquaza.png), in front of the clouds. Each figure is one
+// Sprite drawn as subsprites, with its own OBJ palette (slots 1-7), and slides in from its side of the screen.
+static const struct OamData sOamData_CollageFigure =
+{
+    .y = 0,
+    .affineMode = ST_OAM_AFFINE_OFF,
+    .objMode = ST_OAM_OBJ_NORMAL,
+    .bpp = ST_OAM_4BPP,
+    .shape = SPRITE_SHAPE(8x8),
+    .size = SPRITE_SIZE(8x8),
+    .priority = 2,
+};
+
+#include "data/title_screen_collage.h"
 
 
 
@@ -456,6 +474,74 @@ static void CreateCopyrightBanner(s16 x, s16 y)
 #undef sAnimate
 #undef sTimer
 
+// Collage figures: see sOamData_CollageFigure and src/data/title_screen_collage.h
+#define sCollageTimer   data[0]
+#define sCollageLeaving data[1]
+#define sCollageFigure  data[2]
+
+static void LoadCollageGraphics(void)
+{
+    u32 i;
+
+    for (i = 0; i < COLLAGE_FIGURE_COUNT; i++)
+    {
+        LoadCompressedSpriteSheet(&sCollageFigures[i].sheet);
+        LoadPalette(sCollageFigures[i].pal, OBJ_PLTT_ID(sCollageFigures[i].palSlot), PLTT_SIZE_4BPP);
+    }
+}
+
+static void CreateCollageFigures(void)
+{
+    u32 i;
+
+    for (i = 0; i < COLLAGE_FIGURE_COUNT; i++)
+    {
+        const struct CollageFigure *fig = &sCollageFigures[i];
+        u8 spriteId = CreateSprite(&sCollageSpriteTemplates[i], fig->x, fig->y, fig->subpriority);
+        struct Sprite *sprite;
+
+        if (spriteId == MAX_SPRITES)
+            continue;
+        sprite = &gSprites[spriteId];
+        sprite->oam.paletteNum = fig->palSlot;
+        SetSubspriteTables(sprite, fig->subsprites);
+        sprite->subspriteMode = SUBSPRITES_IGNORE_PRIORITY; // every piece takes the figure's OBJ priority (2)
+        sprite->sCollageFigure = i;
+        sprite->sCollageTimer = 0;
+        sprite->sCollageLeaving = FALSE;
+        sprite->x2 = fig->dir * sCollageSlide[0];
+    }
+}
+
+// Slide in from the figure's side (back row first, ease-out), and back out when the title screen
+// hands over to the opening crawl (accelerating, off screen in 16 frames).
+static void SpriteCB_CollageFigure(struct Sprite *sprite)
+{
+    const struct CollageFigure *fig = &sCollageFigures[sprite->sCollageFigure];
+    s32 k;
+
+    if (!sprite->sCollageLeaving)
+    {
+        k = sprite->sCollageTimer - fig->delay;
+        if (k < 0)
+            k = 0;
+        if (k >= COLLAGE_SLIDE_FRAMES)
+            k = COLLAGE_SLIDE_FRAMES;
+        else
+            sprite->sCollageTimer++;
+        sprite->x2 = fig->dir * sCollageSlide[k];
+    }
+    else if (sprite->sCollageTimer < 16)
+    {
+        sprite->sCollageTimer++;
+        sprite->x2 = fig->dir * ((sprite->sCollageTimer * sprite->sCollageTimer * 15) / 16);
+    }
+    else
+    {
+        sprite->invisible = TRUE;
+    }
+}
+
 // Defines for SpriteCB_PokemonLogoShine
 enum {
     SHINE_MODE_SINGLE_NO_BG_COLOR,
@@ -603,7 +689,7 @@ void CB2_InitTitleScreen(void)
         LZ77UnCompVram(gTitleScreenPokemonLogoGfx, (void *)(BG_CHAR_ADDR(0)));
         LZ77UnCompVram(gTitleScreenPokemonLogoTilemap, (void *)(BG_SCREEN_ADDR(9)));
         LoadPalette(gTitleScreenBgPalettes, BG_PLTT_ID(0), 15 * PLTT_SIZE_4BPP);
-        // bg3
+        // bg0: the foreground ridge the collage figures stand behind (was Rayquaza)
         LZ77UnCompVram(sTitleScreenRayquazaGfx, (void *)(BG_CHAR_ADDR(2)));
         LZ77UnCompVram(sTitleScreenRayquazaTilemap, (void *)(BG_SCREEN_ADDR(26)));
         // bg1
@@ -619,6 +705,7 @@ void CB2_InitTitleScreen(void)
         LoadCompressedSpriteSheet(&sPokemonLogoShineSpriteSheet[0]);
         LoadPalette(gTitleScreenEmeraldVersionPal, OBJ_PLTT_ID(0), PLTT_SIZE_4BPP);
         LoadSpritePalette(&sSpritePalette_PressStart[0]);
+        LoadCollageGraphics();
         gMain.state = 2;
         break;
     case 2:
@@ -652,7 +739,8 @@ void CB2_InitTitleScreen(void)
         SetGpuReg(REG_OFFSET_BLDCNT, BLDCNT_TGT1_BG2 | BLDCNT_EFFECT_LIGHTEN);
         SetGpuReg(REG_OFFSET_BLDALPHA, 0);
         SetGpuReg(REG_OFFSET_BLDY, 12);
-        SetGpuReg(REG_OFFSET_BG0CNT, BGCNT_PRIORITY(3) | BGCNT_CHARBASE(2) | BGCNT_SCREENBASE(26) | BGCNT_16COLOR | BGCNT_TXT256x256);
+        // BG0 (ridge) is priority 1 like the logo, so it covers the collage figures (OBJ priority 2)
+        SetGpuReg(REG_OFFSET_BG0CNT, BGCNT_PRIORITY(1) | BGCNT_CHARBASE(2) | BGCNT_SCREENBASE(26) | BGCNT_16COLOR | BGCNT_TXT256x256);
         SetGpuReg(REG_OFFSET_BG1CNT, BGCNT_PRIORITY(2) | BGCNT_CHARBASE(3) | BGCNT_SCREENBASE(27) | BGCNT_16COLOR | BGCNT_TXT256x256);
         SetGpuReg(REG_OFFSET_BG2CNT, BGCNT_PRIORITY(1) | BGCNT_CHARBASE(0) | BGCNT_SCREENBASE(9) | BGCNT_256COLOR | BGCNT_AFF256x256);
         EnableInterrupts(INTR_FLAG_VBLANK);
@@ -762,6 +850,7 @@ static void Task_TitleScreenPhase2(u8 taskId)
                                     | DISPCNT_OBJ_ON);
         CreatePressStartBanner(START_BANNER_X, 108);
         CreateCopyrightBanner(START_BANNER_X, 148);
+        CreateCollageFigures();
         gTasks[taskId].tBg1Y = 0;
         gTasks[taskId].func = Task_TitleScreenPhase3;
     }
@@ -780,7 +869,7 @@ static void Task_TitleScreenPhase2(u8 taskId)
     gTasks[taskId].data[6] = 6;  // Unused
 }
 
-// Show Rayquaza silhouette and process main title screen input
+// Clouds, ridge and the character collage are up; process main title screen input
 static void Task_TitleScreenPhase3(u8 taskId)
 {
     if ((JOY_NEW(A_BUTTON) || JOY_NEW(START_BUTTON)) && IntroCrawl_ShouldPlay())
@@ -834,10 +923,13 @@ static void Task_TitleScreenPhase3(u8 taskId)
 
 // ---------------------------------------------------------------------------------------------
 // Hand-off to the opening crawl (intro_crawl.c), first boot only.
-// First the clouds (BG1) blend out, then BG1 is pointed at a cloudless copy of the gradient and
-// cross-faded over BG0 so the creature melts away. Only then do the logo (BG2, affine) and the
-// KYBER VERSION banner (OBJ) shrink away into the distance and darken. What is left is the bare
-// deep-space gradient, which the crawl keeps on screen.
+// The character collage slides back out to the sides while the clouds (BG1) blend out, then the
+// foreground ridge (BG0) sinks below the bottom edge. Only then do the logo (BG2, affine) and the
+// KYBER VERSION banner (OBJ) shrink away into the distance and darken. What is left is the night
+// backdrop, which the crawl keeps on screen.
+// BG1 is still pointed at screen 28 (intro_crawl.c keeps showing it): it is built from BG0's plain
+// sky tiles, and since BG0 now holds only the ridge (no gradient), every row falls back to BG0's
+// blank tile 0, so the crawl starts on the flat backdrop the title screen shows.
 // ---------------------------------------------------------------------------------------------
 
 #define CRAWL_OUT_LOGO_FRAMES   180  // logo shrink, after the creature and clouds are gone
@@ -847,10 +939,11 @@ static void Task_TitleScreenPhase3(u8 taskId)
 #define CRAWL_OUT_RECEDE        15   // 1/scale grows by this/256 per frame (logo is ~1/11 size at the end)
 #define CRAWL_OUT_LOGO_FADE_AT  100  // logo frame the logo starts darkening
 #define CRAWL_OUT_CLOUDS_END    12   // clouds fully blended out by this frame
-#define CRAWL_OUT_CREATURE_END  40   // creature fully gone by this frame; the logo starts shrinking here
+#define CRAWL_OUT_CREATURE_END  40   // ridge (and collage) gone by this frame; the logo starts shrinking here
 #define CRAWL_OUT_FRAMES        (CRAWL_OUT_CREATURE_END + CRAWL_OUT_LOGO_FRAMES)
 #define CRAWL_OUT_SKY_SCREEN    28   // screen block for the cloudless gradient map (intro_crawl.c uses it too)
-#define CRAWL_OUT_SKY_CHARBASE  2    // BG0's tiles (the gradient + creature)
+#define CRAWL_OUT_SKY_CHARBASE  2    // BG0's tiles (the ridge; tile 0 is blank)
+#define CRAWL_OUT_RIDGE_DROP    24   // px the ridge sinks while the collage leaves
 
 #define tOutFrame data[5]
 
@@ -885,6 +978,12 @@ static void StartTitleScreenCrawlOut(u8 taskId)
             // "Press Start" and copyright go straight away
             sprite->callback = SpriteCallbackDummy;
             sprite->invisible = TRUE;
+        }
+        else if (sprite->callback == SpriteCB_CollageFigure)
+        {
+            // The collage slides back out to the sides
+            sprite->sCollageLeaving = TRUE;
+            sprite->sCollageTimer = 0;
         }
         else if (sprite->template == &sVersionBannerLeftSpriteTemplate
               || sprite->template == &sVersionBannerRightSpriteTemplate)
@@ -980,13 +1079,16 @@ static void Task_TitleScreenCrawlOut(u8 taskId)
     }
     else if (frame <= CRAWL_OUT_CREATURE_END)
     {
-        // Cross-fade the cloudless gradient (BG1) over the gradient + creature (BG0)
+        // The ridge (BG0) sinks below the bottom edge
+        SetGpuReg(REG_OFFSET_BG0VOFS, -(((frame - CRAWL_OUT_CLOUDS_END) * CRAWL_OUT_RIDGE_DROP) / (CRAWL_OUT_CREATURE_END - CRAWL_OUT_CLOUDS_END)));
+        // Cross-fade the (now blank) sky screen (BG1) over BG0; the ridge sinks meanwhile
         u8 eva = ((frame - CRAWL_OUT_CLOUDS_END) * 16) / (CRAWL_OUT_CREATURE_END - CRAWL_OUT_CLOUDS_END);
         SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(eva, 16 - eva));
         if (frame == CRAWL_OUT_CREATURE_END)
         {
             SetGpuReg(REG_OFFSET_BLDCNT, 0);
             SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_MODE_1 | DISPCNT_OBJ_1D_MAP | DISPCNT_BG1_ON | DISPCNT_BG2_ON | DISPCNT_OBJ_ON);
+            SetGpuReg(REG_OFFSET_BG0VOFS, 0);
         }
     }
 

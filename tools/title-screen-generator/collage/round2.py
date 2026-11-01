@@ -74,8 +74,8 @@ def cast(creatures):
     return out + creatures
 
 
-RIDGE = (16, 16, 32)       # one step above the backdrop: reads as ground, not a hole
-RIDGE_LIT = (48, 48, 72)   # 1 px lit lip (STYLE.md 1: BGs have no outline, the ground's top edge is the one line)
+RIDGE = (16, 16, 32)       # one step above the backdrop (= palette 14 index 9): reads as ground, not a hole
+RIDGE_LIT = (48, 56, 72)   # 1 px lit lip, = BG palette 14 index 4 (rayquaza_and_clouds.pal) (STYLE.md 1: BGs have no outline, the ground's top edge is the one line)
 
 
 def ridge_y(x):
