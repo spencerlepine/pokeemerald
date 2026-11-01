@@ -7,7 +7,7 @@ import shutil
 import sys
 
 sys.path.insert(0, "batches")
-from batch2 import block, spec  # noqa: E402  (same helpers; batch2 also re-writes its own specs on import)
+from helpers import block, spec  # noqa: E402  (same helpers; batch2 also re-writes its own specs on import)
 
 P = "graphics/object_events/pics/people/"
 

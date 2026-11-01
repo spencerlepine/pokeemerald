@@ -983,10 +983,13 @@ def main() -> None:
              | set(inv) | set(audio_dec) | set(vfx_dec) | {a["asset_id"] for a in art})
     art += vfx_art(inv, vfx_dec, art, known)
     apply_art_ready(art)
+    import frame_sizes  # tools/frame_sizes.py: frame_size + size_class from ../game
+    frame_sizes.apply(art)
     for a in art:
         a["game_status"] = "NOT_STARTED"
     art_cols = list(art[0].keys())
     art_cols = [c for c in art_cols if c not in ART_EXTRA_COLS + ["game_status"]] + ART_EXTRA_COLS + ["game_status"]
+    art_cols = frame_sizes.order_cols(art_cols)
     write("pending_art.csv", art, art_cols)
     audio = pending_audio(rows, entities, inv, audio_dec, known)
     write("pending_audio.csv", audio, AUDIO_COLS + ["game_status"])

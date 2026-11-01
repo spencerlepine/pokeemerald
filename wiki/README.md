@@ -47,6 +47,13 @@ hotswaps, following [`bible/NET_NEW_DESIGNS.md`](bible/NET_NEW_DESIGNS.md).
 | | `KEEP_AUDIO` / `NO_AUDIO` | Reuse the Emerald sound as is, or nothing to make. |
 | `game_status` | `NOT_STARTED` / `DONE` | Whether the row has landed in `../game`. For a `CUT` row, `DONE` means deleted. |
 
+Object-event rows (overworld sprites) also carry **`frame_size`** (pixels per frame, e.g. `16x32`, read from
+the `-mwidth/-mheight` conversion flags in `../game/src/data/object_events/object_event_graphics.h`) and
+**`size_class`**: `SMALL` is one map tile wide (16x16 and 16x32 frames: people, berry trees, small Pokémon), `LARGE`
+is wider (32x32 and up: bikes, big Pokémon, legendaries). `python3 tools/frame_sizes.py` refreshes both without a
+full rebuild. The walker generator's people kit covers `frame_size` `16x32`.
+Query: `grep ',16x32,SMALL,' database/pending_art.csv`.
+
 `todo` is **`HUMAN-TODO`** on art rows a person replaces by hand, with no generator tool: the game logo, the
 title screen, the intro and credits, story cutscenes, and every menu image with Pokémon branding baked in (POKéDEX /
 POKéNAV / HOENN text, Poké Ball icons, the Pikachu diploma, type labels, wallpapers with Pokémon). Their decisions

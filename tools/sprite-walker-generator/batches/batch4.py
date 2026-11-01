@@ -6,7 +6,7 @@ Writes art/<name>.yaml. Run from the tool folder: python batches/batch4.py
 import sys
 
 sys.path.insert(0, "batches")
-from batch2 import block, spec  # noqa: E402
+from helpers import block, spec  # noqa: E402
 
 # ====================================================================== TARFFUL (replaces Brawly)
 # Wookiee: fur everywhere (head H, limbs F, torso G as three volumes of the orange-brown ramp),
