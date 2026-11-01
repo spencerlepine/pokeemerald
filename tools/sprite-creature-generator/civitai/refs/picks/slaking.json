@@ -1,10 +1,10 @@
 {
   "init": "refs/slaking_prep.png",
-  "init_source": "https://static.wikia.nocookie.net/starwars/images/a/aa/Spot-Light_Sloth.jpg/revision/latest?cb=20090713023217",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/5/5b/Sand_Sloth.jpg/revision/latest?cb=20080510154600",
   "flip": false,
   "denoise": 0.5,
-  "desc": "enormous hulking ape-sloth with a heavy chest plate and huge claws",
+  "desc": "enormous heavy shaggy swamp sloth beast, side three-quarter view, whole body, thick mane and curved horns, big claws",
   "colour": "brown and tan",
   "negative": "flowers",
-  "ref_note": "Spot-Light sloth art on white"
+  "ref_note": "Sand sloth colour art (same as slakoth, same line), three-quarter left on white; replaces front-view Spot-Light sloth"
 }
