@@ -1,0 +1,48 @@
+# Creature sprites still below the bar (2026-11-01 review)
+
+Installed and ART_READY, but the reviewers flagged them. Most need a better reference (refs.py) and a --redo.
+
+- altaria: cut off at bottom, mushy
+- croconaw: text-only, inconsistent
+- entei: mushy, cropped, purple not brown
+- glalie: top cut off / dome
+- hitmonlee: back white panel persists; needs new ref
+- jolteon: white sketchy even with new ref
+- kadabra: text-only now; fills frame, faces forward
+- kecleon: text-only, flat blob stray white piece
+- kingler: claw blue-grey on back
+- kirlia: back colours do not match dark front after 2 back re-runs
+- krabby: faces camera, yellow ground band
+- lotad: text-only, mush wrong colours
+- magmar: ref cropped with stray fragments, front cut off at bottom
+- marill: rough cropped line-art ref, mush
+- meowth: ref cropped and seen from behind, stray tail fragment
+- misdreavus: ref cropped at bottom, body cut off
+- nidoqueen: cluttered noisy ref, mush
+- nidoran_f: dark blurry ref, no outline
+- nidorino: ref cropped, white holes, cut off
+- numel: cut off at bottom, mushy
+- omastar: grey sketchy line-art ref, noisy
+- pelipper: ref cropped at bottom, body cut off
+- piloswine: front reads facing right/up in rearing pose after flip + 2 redos
+- ponyta: ref crop trims lower legs, cut off
+- primeape: cluttered ref with rocks, mush cut off
+- raikou: sketchy b/w line-art ref, cut off, back colours wrong
+- seviper: text-only frontal blob, not a centipede
+- shiftry: sketchy line-drawing ref, wrong colours, stray bits
+- silcoon: text-only, noisy mush cut off (sprites restored to first re-run; CSV notes point at the later take)
+- slaking: front-view ref, faces straight ahead
+- slowbro: ref cropped on the right
+- slowpoke: ref cropped on the right
+- slugma: sketchy line-art ref
+- smeargle: back broken with holes, front green/yellow noise
+- sneasel: cluttered white fragments in ref
+- snorunt: front-view ref, faces straight ahead
+- sudowoodo: ref cropped, runs off frame
+- surskit: busy top-down ref, mush
+- swellow: sketchy ref, cut off at top
+- swinub: front-view ref, faces straight ahead
+- taillow: ref cropped, runs off frame
+- teddiursa: front-view ref, faces straight ahead
+- totodile: sketchy white line-art ref, blob
+- vaporeon: sketchy greyscale line-art ref, noisy mush
