@@ -1,0 +1,99 @@
+name: devon_employee
+description: HOUSE ORGANA engineer in a grey jumpsuit with work goggles (replaces the Devon employee).
+kit: person16x32
+replaces: graphics/object_events/pics/people/devon_employee.png
+graphics_info: DevonEmployee
+notes: 'Group 1, B style: the Devon employee''s own body as regions (shirt and trousers -> grey jumpsuit J, tie -> zip Z), navy-black hair, work goggles pushed up on the forehead, maroon tool belt, white
+  chest flash.'
+palette: npc_4
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_4
+shade: true
+materials:
+  H: a
+  J: c
+  Z: a
+  G: b
+legend:
+  k: 15
+  W: 14
+  L: 5
+accept: {}
+base_sheet: graphics/object_events/pics/people/devon_employee.png
+remap:
+  c: H
+  b: J
+  w: J
+  a: Z
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 14
+      rows: ___GLWGGGGLWG___
+    - x: 0
+      y: 26
+      rows: ___GGGGWWGGGG___
+    - x: 4
+      y: 23
+      rows: W
+  down_a:
+    patches:
+    - x: 0
+      y: 15
+      rows: ___GLWGGGGLWG___
+    - x: 0
+      y: 27
+      rows: ___GGGGWWGGGG___
+    - x: 4
+      y: 24
+      rows: W
+  down_b:
+    patches:
+    - x: 0
+      y: 15
+      rows: ___GLWGGGGLWG___
+    - x: 0
+      y: 27
+      rows: ___GGGGWWGGGG___
+    - x: 4
+      y: 24
+      rows: W
+  up:
+    patches:
+    - x: 0
+      y: 14
+      rows: __GGGGGGGGGGGG__
+    - x: 0
+      y: 26
+      rows: ___GGGGGGGGGG___
+  up_a:
+    patches:
+    - x: 0
+      y: 15
+      rows: __GGGGGGGGGGGG__
+    - x: 0
+      y: 27
+      rows: ___GGGGGGGGGG___
+  up_b:
+    patches:
+    - x: 0
+      y: 15
+      rows: __GGGGGGGGGGGG__
+    - x: 0
+      y: 27
+      rows: ___GGGGGGGGGG___
+  left:
+    patches:
+    - x: 0
+      y: 14
+      rows: ___GLWGGGGGGG___
+  left_a:
+    patches:
+    - x: 0
+      y: 15
+      rows: ___GLWGGGGGGG___
+  left_b:
+    patches:
+    - x: 0
+      y: 15
+      rows: ___GLWGGGGGGG___

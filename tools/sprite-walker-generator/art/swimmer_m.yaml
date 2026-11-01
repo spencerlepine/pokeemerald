@@ -1,0 +1,176 @@
+name: swimmer_m
+description: Diver (m) in a dive hood and mask with an A99-style breather (replaces the male swimmer).
+kit: person16x32
+replaces: graphics/object_events/pics/people/swimmer_m.png
+graphics_info: SwimmerM
+notes: 'Group 1, B style: the swimmer''s own body, goggles and surf as regions, the cap pulled down into a navy dive hood, a dive suit over the shoulders and a brass breather at the mouth.'
+palette: npc_1
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_1
+shade: true
+materials:
+  B: b
+  D: b
+  C: c
+legend:
+  k: 15
+  W: 14
+  L: 8
+accept:
+  height: 'swimming: only the head and shoulders show above the surf (vanilla shares it)'
+base_sheet: graphics/object_events/pics/people/swimmer_m.png
+remap:
+  b: B
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 21
+      rows: '.B____________B.
+
+        .B____________B.
+
+        ________________
+
+        __wD__CCCC__Dw__
+
+        .wDDDDDDDDDDDDw.
+
+        .DDDD______DDDD.
+
+        .DDDD______DDDD.
+
+        __DD________DD__'
+  down_a:
+    patches:
+    - x: 0
+      y: 22
+      rows: '.B____________B.
+
+        .B____________B.
+
+        ________________
+
+        __wD__CCCC__Dw__
+
+        .wDDDDDDDDDDDDw.
+
+        .DDDD______DDDD.
+
+        .DDDD______DDDD.
+
+        __DD________DD__'
+  down_b:
+    patches:
+    - x: 0
+      y: 22
+      rows: '.B____________B.
+
+        .B____________B.
+
+        ________________
+
+        __wD__CCCC__Dw__
+
+        .wDDDDDDDDDDDDw.
+
+        .DDDD______DDDD.
+
+        .DDDD______DDDD.
+
+        __DD________DD__'
+  up:
+    patches:
+    - x: 0
+      y: 21
+      rows: '.B____________B.
+
+        .B____________B.
+
+        ________________
+
+        __wDDDDDDDDDDw__
+
+        .wDDDDDDDDDDDDw.
+
+        .DDDD______DDDD.
+
+        .DDDD______DDDD.
+
+        __DD________DD__'
+  up_a:
+    patches:
+    - x: 0
+      y: 22
+      rows: '.B____________B.
+
+        .B____________B.
+
+        ________________
+
+        __wDDDDDDDDDDw__
+
+        .wDDDDDDDDDDDDw.
+
+        .DDDD______DDDD.
+
+        .DDDD______DDDD.
+
+        __DD________DD__'
+  up_b:
+    patches:
+    - x: 0
+      y: 22
+      rows: '.B____________B.
+
+        .B____________B.
+
+        ________________
+
+        __wDDDDDDDDDDw__
+
+        .wDDDDDDDDDDDDw.
+
+        .DDDD______DDDD.
+
+        .DDDD______DDDD.
+
+        __DD________DD__'
+  left:
+    patches:
+    - x: 0
+      y: 20
+      rows: '________________
+
+        __BB____________
+
+        __BBB___________
+
+        ___BB___________
+
+        _CC_____________'
+  left_a:
+    patches:
+    - x: 0
+      y: 21
+      rows: '________________
+
+        __BB____________
+
+        __BBB___________
+
+        ___BB___________
+
+        _CC_____________'
+  left_b:
+    patches:
+    - x: 0
+      y: 21
+      rows: '________________
+
+        __BB____________
+
+        __BBB___________
+
+        ___BB___________
+
+        _CC_____________'

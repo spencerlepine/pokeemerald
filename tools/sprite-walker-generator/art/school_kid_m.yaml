@@ -1,0 +1,333 @@
+name: school_kid_m
+description: Academy cadet in a khaki tunic and peaked cap with a satchel (replaces the schoolboy).
+kit: person16x32
+replaces: graphics/object_events/pics/people/school_kid_m.png
+graphics_info: SchoolKidM
+notes: 'Group 1, B style: the schoolboy''s own body as regions (shirt -> khaki cadet tunic T, shorts -> navy trousers P), new peaked cadet cap with a white badge over dark blue hair (glasses dropped), a
+  maroon satchel on a strap across the chest.'
+palette: npc_1
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_1
+shade: true
+materials:
+  Q: c
+  V: c
+  H: b
+  T: c
+  P: b
+  A: a
+legend:
+  k: 15
+  W: 14
+accept: {}
+base_sheet: graphics/object_events/pics/people/school_kid_m.png
+remap:
+  b: T
+  w: T
+  c: P
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 11
+      rows: '....QQQQQQQQ....
+
+        ...QQQQQQQQQQ...
+
+        ...QQQQWWQQQQ...
+
+        ..VVVVVVVVVVVV..
+
+        ..HHHssssssHHH..
+
+        ..HssssssssssH..
+
+        .sHssssssssssHs.
+
+        .sHssskssksssHs.
+
+        ..sssskssksss...
+
+        ...ssssssssss...'
+    - x: 0
+      y: 22
+      rows: '___TTTTTTTTA____
+
+        __TTTTTTTTATTT__
+
+        ___TTTTTTATT____
+
+        ____TTTTATTT____
+
+        _AAAA___________
+
+        _AAAA___________'
+  down_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '....QQQQQQQQ....
+
+        ...QQQQQQQQQQ...
+
+        ...QQQQWWQQQQ...
+
+        ..VVVVVVVVVVVV..
+
+        ..HHHssssssHHH..
+
+        ..HssssssssssH..
+
+        .sHssssssssssHs.
+
+        .sHssskssksssHs.
+
+        ..sssskssksss...
+
+        ...ssssssssss...'
+    - x: 0
+      y: 23
+      rows: '___TTTTTTTTA____
+
+        __TTTTTTTTATTT__
+
+        ___TTTTTTATT____
+
+        ____TTTTATTT____
+
+        _AAAA___________
+
+        _AAAA___________'
+  down_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '....QQQQQQQQ....
+
+        ...QQQQQQQQQQ...
+
+        ...QQQQWWQQQQ...
+
+        ..VVVVVVVVVVVV..
+
+        ..HHHssssssHHH..
+
+        ..HssssssssssH..
+
+        .sHssssssssssHs.
+
+        .sHssskssksssHs.
+
+        ..sssskssksss...
+
+        ...ssssssssss...'
+    - x: 0
+      y: 23
+      rows: '___TTTTTTTTA____
+
+        __TTTTTTTTATTT__
+
+        ___TTTTTTATT____
+
+        ____TTTTATTT____
+
+        _AAAA___________
+
+        _AAAA___________'
+  up:
+    patches:
+    - x: 0
+      y: 11
+      rows: '....QQQQQQQQ....
+
+        ...QQQQQQQQQQ...
+
+        ...QQQQQQQQQQ...
+
+        ..VVVVVVVVVVVV..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        ..HHHHHHHHHHHH..
+
+        ...HHHHHHHHHH...'
+    - x: 0
+      y: 22
+      rows: '____ATTTTTTT____
+
+        ___TTATTTTTTT___
+
+        ____TTATTTTT____
+
+        _____TTATTTT____
+
+        ___________AAAA_
+
+        ___________AAAA_'
+  up_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '....QQQQQQQQ....
+
+        ...QQQQQQQQQQ...
+
+        ...QQQQQQQQQQ...
+
+        ..VVVVVVVVVVVV..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        ..HHHHHHHHHHHH..
+
+        ...HHHHHHHHHH...'
+    - x: 0
+      y: 23
+      rows: '____ATTTTTTT____
+
+        ___TTATTTTTTT___
+
+        ____TTATTTTT____
+
+        _____TTATTTT____
+
+        ___________AAAA_
+
+        ___________AAAA_'
+  up_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '....QQQQQQQQ....
+
+        ...QQQQQQQQQQ...
+
+        ...QQQQQQQQQQ...
+
+        ..VVVVVVVVVVVV..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        ..HHHHHHHHHHHH..
+
+        ...HHHHHHHHHH...'
+    - x: 0
+      y: 23
+      rows: '____ATTTTTTT____
+
+        ___TTATTTTTTT___
+
+        ____TTATTTTT____
+
+        _____TTATTTT____
+
+        ___________AAAA_
+
+        ___________AAAA_'
+  left:
+    patches:
+    - x: 0
+      y: 11
+      rows: '.....QQQQQQQ....
+
+        ....QQQQQQQQQ...
+
+        ...QQQQQQQQQQ...
+
+        .VVVVVVVVVVVV...
+
+        ..HsssHHHHHHH...
+
+        ..sssssHHHHHH...
+
+        ..ssssssHHHHH...
+
+        ..sskssHHHHH....
+
+        ..sskssssHHH....
+
+        ...sssssssss....'
+    - x: 0
+      y: 22
+      rows: '____TTTTTTT_____
+
+        ____AAAAA_______
+
+        ____AAAAA_______'
+  left_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.....QQQQQQQ....
+
+        ....QQQQQQQQQ...
+
+        ...QQQQQQQQQQ...
+
+        .VVVVVVVVVVVV...
+
+        ..HsssHHHHHHH...
+
+        ..sssssHHHHHH...
+
+        ..ssssssHHHHH...
+
+        ..sskssHHHHH....
+
+        ..sskssssHHH....
+
+        ...sssssssss....'
+    - x: 0
+      y: 23
+      rows: '____TTTTTTT_____
+
+        ____AAAAA_______
+
+        ____AAAAA_______'
+  left_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.....QQQQQQQ....
+
+        ....QQQQQQQQQ...
+
+        ...QQQQQQQQQQ...
+
+        .VVVVVVVVVVVV...
+
+        ..HsssHHHHHHH...
+
+        ..sssssHHHHHH...
+
+        ..ssssssHHHHH...
+
+        ..sskssHHHHH....
+
+        ..sskssssHHH....
+
+        ...sssssssss....'
+    - x: 0
+      y: 23
+      rows: '____TTTTTTT_____
+
+        ____AAAAA_______
+
+        ____AAAAA_______'

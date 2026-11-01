@@ -1,0 +1,276 @@
+name: hex_maniac
+description: NIGHTSISTER in crimson hooded robes with a gold trim (replaces the Hex Maniac).
+kit: person16x32
+replaces: graphics/object_events/pics/people/hex_maniac.png
+graphics_info: HexManiac
+notes: 'Group 1, B style: the Hex Maniac''s own body as regions (robe O on the red ramp, sash Y gold), new peaked crimson hood with a gold trim and dark inner lining framing a face with black chin tattoos.'
+palette: npc_2
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_2
+shade: true
+materials:
+  R: b
+  O: b
+  Y: a
+legend:
+  k: 15
+  W: 14
+  I: 13
+  J: 12
+  r: 10
+accept: {}
+base_sheet: graphics/object_events/pics/people/hex_maniac.png
+remap:
+  k: O
+  c: O
+  b: O
+  a: Y
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 10
+      rows: '......RRRR......
+
+        .....RRRRRR.....
+
+        ....RRRRRRRR....
+
+        ...RRRRRRRRRR...
+
+        ..RRRRRRRRRRRR..
+
+        ..RRYYYYYYYYRR..
+
+        .RRRJJJJJJJJRRR.
+
+        .RRIssssssssIRR.
+
+        .RRIssksskssIRR.
+
+        .RRIssksskssIRR.
+
+        .RRRRssssssRRRR.
+
+        .RRRRRRYYRRRRRR.'
+  down_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......RRRR......
+
+        .....RRRRRR.....
+
+        ....RRRRRRRR....
+
+        ...RRRRRRRRRR...
+
+        ..RRRRRRRRRRRR..
+
+        ..RRYYYYYYYYRR..
+
+        .RRRJJJJJJJJRRR.
+
+        .RRIssssssssIRR.
+
+        .RRIssksskssIRR.
+
+        .RRIssksskssIRR.
+
+        .RRRRssssssRRRR.
+
+        .RRRRRRYYRRRRRR.'
+  down_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......RRRR......
+
+        .....RRRRRR.....
+
+        ....RRRRRRRR....
+
+        ...RRRRRRRRRR...
+
+        ..RRRRRRRRRRRR..
+
+        ..RRYYYYYYYYRR..
+
+        .RRRJJJJJJJJRRR.
+
+        .RRIssssssssIRR.
+
+        .RRIssksskssIRR.
+
+        .RRIssksskssIRR.
+
+        .RRRRssssssRRRR.
+
+        .RRRRRRYYRRRRRR.'
+  up:
+    patches:
+    - x: 0
+      y: 10
+      rows: '......RRRR......
+
+        .....RRRRRR.....
+
+        ....RRRRRRRR....
+
+        ...RRRRRRRRRR...
+
+        ..RRRRRRRRRRRR..
+
+        ..RRRRRRRRRRRR..
+
+        .RRRRRRRRRRRRRR.
+
+        .RRRRRRRRRRRRRR.
+
+        .RRRRRRRRRRRRRR.
+
+        .RRRRRRRRRRRRRR.
+
+        .RRRRRRRRRRRRRR.
+
+        .RRRRRRRRRRRRRR.
+
+        RRRRRRRRRRRRRRRR'
+  up_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......RRRR......
+
+        .....RRRRRR.....
+
+        ....RRRRRRRR....
+
+        ...RRRRRRRRRR...
+
+        ..RRRRRRRRRRRR..
+
+        ..RRRRRRRRRRRR..
+
+        .RRRRRRRRRRRRRR.
+
+        .RRRRRRRRRRRRRR.
+
+        .RRRRRRRRRRRRRR.
+
+        .RRRRRRRRRRRRRR.
+
+        .RRRRRRRRRRRRRR.
+
+        .RRRRRRRRRRRRRR.
+
+        RRRRRRRRRRRRRRRR'
+  up_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......RRRR......
+
+        .....RRRRRR.....
+
+        ....RRRRRRRR....
+
+        ...RRRRRRRRRR...
+
+        ..RRRRRRRRRRRR..
+
+        ..RRRRRRRRRRRR..
+
+        .RRRRRRRRRRRRRR.
+
+        .RRRRRRRRRRRRRR.
+
+        .RRRRRRRRRRRRRR.
+
+        .RRRRRRRRRRRRRR.
+
+        .RRRRRRRRRRRRRR.
+
+        .RRRRRRRRRRRRRR.
+
+        RRRRRRRRRRRRRRRR'
+  left:
+    patches:
+    - x: 0
+      y: 10
+      rows: '.......RRRR.....
+
+        ......RRRRRR....
+
+        .....RRRRRRRR...
+
+        ....RRRRRRRRRR..
+
+        ...RRRRRRRRRRR..
+
+        ..YYRRRRRRRRRRR.
+
+        .IIIIRRRRRRRRRR.
+
+        .sssssRRRRRRRRR.
+
+        .skssssRRRRRRRR.
+
+        .skssssRRRRRRRR.
+
+        ..sssssRRRRRRRR.
+
+        ...YYYRRRRRRRRR.'
+  left_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '.......RRRR.....
+
+        ......RRRRRR....
+
+        .....RRRRRRRR...
+
+        ....RRRRRRRRRR..
+
+        ...RRRRRRRRRRR..
+
+        ..YYRRRRRRRRRRR.
+
+        .IIIIRRRRRRRRRR.
+
+        .sssssRRRRRRRRR.
+
+        .skssssRRRRRRRR.
+
+        .skssssRRRRRRRR.
+
+        ..sssssRRRRRRRR.
+
+        ...YYYRRRRRRRRR.'
+  left_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '.......RRRR.....
+
+        ......RRRRRR....
+
+        .....RRRRRRRR...
+
+        ....RRRRRRRRRR..
+
+        ...RRRRRRRRRRR..
+
+        ..YYRRRRRRRRRRR.
+
+        .IIIIRRRRRRRRRR.
+
+        .sssssRRRRRRRRR.
+
+        .skssssRRRRRRRR.
+
+        .skssssRRRRRRRR.
+
+        ..sssssRRRRRRRR.
+
+        ...YYYRRRRRRRRR.'

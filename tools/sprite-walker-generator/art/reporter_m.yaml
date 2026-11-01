@@ -1,0 +1,311 @@
+name: reporter_m
+description: HOLONET reporter with a microphone and a hovering holocam droid (replaces the male reporter).
+kit: person16x32
+replaces: graphics/object_events/pics/people/reporter_m.png
+graphics_info: ReporterM
+notes: 'Group 1, B style: the reporter''s own body as regions (grey suit S, white shirt, magenta tie and his microphone kept), new slick navy-black hair with a side part, a small round grey holocam droid
+  with a magenta lens hovering at his shoulder.'
+palette: npc_4
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_4
+shade: true
+materials:
+  H: a
+  S: c
+  D: c@
+legend:
+  k: 15
+  W: 14
+  L: 9
+accept: {}
+base_sheet: graphics/object_events/pics/people/reporter_m.png
+remap:
+  c: S
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHsHH..
+
+        ..HHsssssssHHH..
+
+        .sHssssssssssHs.
+
+        .sHssskssksssHs.
+
+        ..sssskssksss...
+
+        ...ssssssssss...'
+    - x: 12
+      y: 17
+      rows: '.DD.
+
+        DLWD
+
+        DDDD
+
+        .DD.'
+  down_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHsHH..
+
+        ..HHsssssssHHH..
+
+        .sHssssssssssHs.
+
+        .sHssskssksssHs.
+
+        ..sssskssksss...
+
+        ...ssssssssss...'
+    - x: 12
+      y: 18
+      rows: '.DD.
+
+        DLWD
+
+        DDDD
+
+        .DD.'
+  down_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHsHH..
+
+        ..HHsssssssHHH..
+
+        .sHssssssssssHs.
+
+        .sHssskssksssHs.
+
+        ..sssskssksss...
+
+        ...ssssssssss...'
+    - x: 12
+      y: 18
+      rows: '.DD.
+
+        DLWD
+
+        DDDD
+
+        .DD.'
+  up:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        .sHHHHHHHHHHHHs.
+
+        .sHHHHHHHHHHHHs.
+
+        ..HHHHHHHHHHHH..
+
+        ...HHHHHHHHHH...'
+    - x: 0
+      y: 17
+      rows: '.DD.
+
+        DDDD
+
+        DDDD
+
+        .DD.'
+  up_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        .sHHHHHHHHHHHHs.
+
+        .sHHHHHHHHHHHHs.
+
+        ..HHHHHHHHHHHH..
+
+        ...HHHHHHHHHH...'
+    - x: 0
+      y: 18
+      rows: '.DD.
+
+        DDDD
+
+        DDDD
+
+        .DD.'
+  up_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        .sHHHHHHHHHHHHs.
+
+        .sHHHHHHHHHHHHs.
+
+        ..HHHHHHHHHHHH..
+
+        ...HHHHHHHHHH...'
+    - x: 0
+      y: 18
+      rows: '.DD.
+
+        DDDD
+
+        DDDD
+
+        .DD.'
+  left:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..sHHHHHHHHHHH..
+
+        ..sssssHHHHHHH..
+
+        ..ssssssHHHHHH..
+
+        ..sskssssHHHHH..
+
+        ..sskssssHHHH...
+
+        ..ssssssssHH....'
+    - x: 12
+      y: 16
+      rows: '.DD.
+
+        DDDD
+
+        DDLD
+
+        .DD.'
+  left_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..sHHHHHHHHHHH..
+
+        ..sssssHHHHHHH..
+
+        ..ssssssHHHHHH..
+
+        ..sskssssHHHHH..
+
+        ..sskssssHHHH...
+
+        ..ssssssssHH....'
+    - x: 12
+      y: 17
+      rows: '.DD.
+
+        DDDD
+
+        DDLD
+
+        .DD.'
+  left_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..sHHHHHHHHHHH..
+
+        ..sssssHHHHHHH..
+
+        ..ssssssHHHHHH..
+
+        ..sskssssHHHHH..
+
+        ..sskssssHHHH...
+
+        ..ssssssssHH....'
+    - x: 12
+      y: 17
+      rows: '.DD.
+
+        DDDD
+
+        DDLD
+
+        .DD.'

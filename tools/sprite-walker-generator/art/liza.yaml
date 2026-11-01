@@ -1,0 +1,164 @@
+name: liza
+description: 'EZRA BRIDGER: teenage Padawan with spiky dark hair in an orange jacket (replaces Liza).'
+kit: person16x32_still
+replaces: graphics/object_events/pics/people/gym_leaders/liza.png
+graphics_info: Liza
+notes: 'Group 1, B style: Liza''s own outline as the frame, a new spiky dark head and an orange jacket open over a white shirt, red belt, dark trousers.'
+palette: npc_2
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_2
+shade: true
+materials:
+  J: a
+  S: w/c
+  R: b
+  P: c
+legend:
+  k: 15
+  W: 14
+  h: 13
+  g: 12
+  '1': 1
+  '2': 2
+  '3': 3
+  '4': 4
+accept: {}
+base_sheet: graphics/object_events/pics/people/gym_leaders/liza.png
+remap:
+  b: J
+  a: R
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 10
+      rows: '....h...h...h...
+
+        ...hgh.hgh.hgh..
+
+        ..hghhhghhhghhh.
+
+        .hhghhhghhhghhhh
+
+        .hhhhhhhhhhhhhhh
+
+        .hhhhhhhhhhhhhhh
+
+        .hhhh11hhh11hhhh
+
+        ..h2111111112h..
+
+        .42111k11k11124.
+
+        ..4322k11k2234..
+
+        ...4322222234...
+
+        ....43333334....
+
+        ...JJSSSSSSJJ...
+
+        ..JJJJSSSSJJJJ..
+
+        ..JJJJJSSJJJJJ..
+
+        ..JJJJJSSJJJJJ..
+
+        ..sJJJJSSJJJJs..
+
+        ...PRRRRRRRRP...
+
+        ....PPPPPPPP....
+
+        ....kPPkkPPk....
+
+        .....kk..kk.....'
+  up:
+    patches:
+    - x: 0
+      y: 10
+      rows: '....h...h...h...
+
+        ...hgh.hgh.hgh..
+
+        ..hghhhghhhghhh.
+
+        .hhghhhghhhghhhh
+
+        .hhhhhhhhhhhhhhh
+
+        .hhhhhhhhhhhhhhh
+
+        .hhhhhhhhhhhhhhh
+
+        ..hhhhhhhhhhhh..
+
+        .skhhhhhhhhhhks.
+
+        ..hhhhhhhhhhhh..
+
+        ...khhhhhhhhk...
+
+        ....JJJJJJJJ....
+
+        ...JJJJJJJJJJ...
+
+        ..JJJJJJJJJJJJ..
+
+        ..JJJJJJJJJJJJ..
+
+        ..JJJJJJJJJJJJ..
+
+        ..sJJJJJJJJJJs..
+
+        ...PRRRRRRRRP...
+
+        ....PPPPPPPP....
+
+        ....kPPkkPPk....
+
+        .....kk..kk.....'
+  left:
+    patches:
+    - x: 0
+      y: 10
+      rows: '......h...h.....
+
+        .....hgh.hgh.h..
+
+        ....hghhhghhhgh.
+
+        ...hhghhhghhhghh
+
+        ..hhhhhhhhhhhhhh
+
+        ..hhhhhhhhhhhhhh
+
+        ..h1hhhhhhhhhhhh
+
+        ..11112hhhhhhhh.
+
+        ..21k12hhhhhhh..
+
+        ..32k2223hhhh...
+
+        ...432223hhhh...
+
+        ....4333334.....
+
+        .....SJJJJJ.....
+
+        ....JJJJJJJ.....
+
+        ....JJJJJJJ.....
+
+        ....JsssJJJ.....
+
+        ....JsssJJJ.....
+
+        .....RRRRRR.....
+
+        .....PPPPPP.....
+
+        .....kPPPPk.....
+
+        ......kkkk......'

@@ -1,0 +1,375 @@
+name: magma_member_m
+description: 'STORMTROOPER (m): white armour and helmet over a black bodyglove (replaces the Magma grunt).'
+kit: person16x32
+replaces: graphics/object_events/pics/people/team_magma/magma_member_m.png
+graphics_info: MagmaMemberM
+notes: 'Group 1, B style: the Magma grunt''s body as regions (uniform -> white armour A, black -> bodyglove U), new stormtrooper helmet with slanted black lenses, a grey frown vent and blue-grey ear discs;
+  chest plate, black abdomen and a white belt with grey boxes.'
+palette: npc_4
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_4
+shade: true
+materials:
+  A: w/c
+legend:
+  k: 15
+  W: 14
+  l: 11
+  m: 12
+  d: 13
+  U: 7
+  u: 6
+  e: 5
+accept:
+  skin_tones: 'no skin: full armour and helmet'
+  hair_rows: 'no hair: helmet'
+  eye_row: black helmet lenses, not eye bars
+  ramp_tones_min: armour is white with hand-placed greys; the bodyglove is flat near-black
+base_sheet: graphics/object_events/pics/people/team_magma/magma_member_m.png
+remap:
+  b: A
+  s: A
+  k: U
+  c: A
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 11
+      rows: '.....AAAAAA.....
+
+        ....AAAAAAAA....
+
+        ...AAAAAAAAAA...
+
+        ..AAAAAAAAAAAA..
+
+        ..AlllAAAAlllA..
+
+        .AAkkkAAAAkkkAA.
+
+        .eAlkkAAAAkklAe.
+
+        .eAAAAAmmAAAAAe.
+
+        ..lAAmkmmkmAAl..
+
+        ...lAAkddkAAl...
+
+        ....UUUUUUUU....'
+    - x: 3
+      y: 21
+      rows: 'UUAAAAAAUU
+
+        _AAAAAAAA_
+
+        _AmAAAAmA_
+
+        _lAAAAAAl_
+
+        _UuUUUUuU_
+
+        _AAmAAmAA_'
+  down_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.....AAAAAA.....
+
+        ....AAAAAAAA....
+
+        ...AAAAAAAAAA...
+
+        ..AAAAAAAAAAAA..
+
+        ..AlllAAAAlllA..
+
+        .AAkkkAAAAkkkAA.
+
+        .eAlkkAAAAkklAe.
+
+        .eAAAAAmmAAAAAe.
+
+        ..lAAmkmmkmAAl..
+
+        ...lAAkddkAAl...
+
+        ....UUUUUUUU....'
+    - x: 3
+      y: 22
+      rows: 'UUAAAAAAUU
+
+        _AAAAAAAA_
+
+        _AmAAAAmA_
+
+        _lAAAAAAl_
+
+        _UuUUUUuU_
+
+        _AAmAAmAA_'
+  down_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.....AAAAAA.....
+
+        ....AAAAAAAA....
+
+        ...AAAAAAAAAA...
+
+        ..AAAAAAAAAAAA..
+
+        ..AlllAAAAlllA..
+
+        .AAkkkAAAAkkkAA.
+
+        .eAlkkAAAAkklAe.
+
+        .eAAAAAmmAAAAAe.
+
+        ..lAAmkmmkmAAl..
+
+        ...lAAkddkAAl...
+
+        ....UUUUUUUU....'
+    - x: 3
+      y: 22
+      rows: 'UUAAAAAAUU
+
+        _AAAAAAAA_
+
+        _AmAAAAmA_
+
+        _lAAAAAAl_
+
+        _UuUUUUuU_
+
+        _AAmAAmAA_'
+  up:
+    patches:
+    - x: 0
+      y: 11
+      rows: '.....AAAAAA.....
+
+        ....AAAAAAAA....
+
+        ...AAAAAAAAAA...
+
+        ..AAAAAAAAAAAA..
+
+        ..AAAAAAAAAAAA..
+
+        .AAAAAAAAAAAAAA.
+
+        .eeeeeeeeeeeeee.
+
+        .lAAAAAAAAAAAAl.
+
+        ..lAmAAmAAmAAl..
+
+        ...llAAAAAAll...
+
+        ....UUUUUUUU....'
+    - x: 3
+      y: 21
+      rows: 'UUAAAAAAUU
+
+        _AAAAAAAA_
+
+        _AAAAAAAA_
+
+        _lAAAAAAl_
+
+        _UuUUUUuU_
+
+        _AmAAAAmA_'
+  up_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.....AAAAAA.....
+
+        ....AAAAAAAA....
+
+        ...AAAAAAAAAA...
+
+        ..AAAAAAAAAAAA..
+
+        ..AAAAAAAAAAAA..
+
+        .AAAAAAAAAAAAAA.
+
+        .eeeeeeeeeeeeee.
+
+        .lAAAAAAAAAAAAl.
+
+        ..lAmAAmAAmAAl..
+
+        ...llAAAAAAll...
+
+        ....UUUUUUUU....'
+    - x: 3
+      y: 22
+      rows: 'UUAAAAAAUU
+
+        _AAAAAAAA_
+
+        _AAAAAAAA_
+
+        _lAAAAAAl_
+
+        _UuUUUUuU_
+
+        _AmAAAAmA_'
+  up_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.....AAAAAA.....
+
+        ....AAAAAAAA....
+
+        ...AAAAAAAAAA...
+
+        ..AAAAAAAAAAAA..
+
+        ..AAAAAAAAAAAA..
+
+        .AAAAAAAAAAAAAA.
+
+        .eeeeeeeeeeeeee.
+
+        .lAAAAAAAAAAAAl.
+
+        ..lAmAAmAAmAAl..
+
+        ...llAAAAAAll...
+
+        ....UUUUUUUU....'
+    - x: 3
+      y: 22
+      rows: 'UUAAAAAAUU
+
+        _AAAAAAAA_
+
+        _AAAAAAAA_
+
+        _lAAAAAAl_
+
+        _UuUUUUuU_
+
+        _AmAAAAmA_'
+  left:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......AAAAA.....
+
+        ....AAAAAAAAA...
+
+        ...AAAAAAAAAAA..
+
+        ..AAAAAAAAAAAA..
+
+        .AAAAAAAAAAAAA..
+
+        .AkkAAAAAAAAAA..
+
+        .kkkAAAmeemAAA..
+
+        .AlAAAAmeemAAA..
+
+        .mkmlAAAmmAAAl..
+
+        ..mklAAAAAAAl...
+
+        ...lllAAAAll....'
+    - x: 5
+      y: 22
+      rows: 'UAAAAAAU
+
+        AAAAAAAA
+
+        UAAlAAAA
+
+        UUAAUUUU
+
+        AmAAAAmA
+
+        _UUUUUU_'
+  left_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......AAAAA.....
+
+        ....AAAAAAAAA...
+
+        ...AAAAAAAAAAA..
+
+        ..AAAAAAAAAAAA..
+
+        .AAAAAAAAAAAAA..
+
+        .AkkAAAAAAAAAA..
+
+        .kkkAAAmeemAAA..
+
+        .AlAAAAmeemAAA..
+
+        .mkmlAAAmmAAAl..
+
+        ..mklAAAAAAAl...
+
+        ...lllAAAAll....'
+    - x: 5
+      y: 23
+      rows: 'UAAAAAAU
+
+        AAAAAAAA
+
+        UAAlAAAA
+
+        UUAAUUUU
+
+        AmAAAAmA
+
+        _UUUUUU_'
+  left_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......AAAAA.....
+
+        ....AAAAAAAAA...
+
+        ...AAAAAAAAAAA..
+
+        ..AAAAAAAAAAAA..
+
+        .AAAAAAAAAAAAA..
+
+        .AkkAAAAAAAAAA..
+
+        .kkkAAAmeemAAA..
+
+        .AlAAAAmeemAAA..
+
+        .mkmlAAAmmAAAl..
+
+        ..mklAAAAAAAl...
+
+        ...lllAAAAll....'
+    - x: 5
+      y: 23
+      rows: 'UAAAAAAU
+
+        AAAAAAAA
+
+        UAAlAAAA
+
+        UUAAUUUU
+
+        AmAAAAmA
+
+        _UUUUUU_'

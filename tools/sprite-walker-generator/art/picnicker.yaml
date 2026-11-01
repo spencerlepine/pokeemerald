@@ -1,0 +1,368 @@
+name: picnicker
+description: Moisture-farm homesteader with her hair in a bun, carrying a basket of produce (replaces the Picnicker).
+kit: person16x32
+replaces: graphics/object_events/pics/people/picnicker.png
+graphics_info: Picnicker
+notes: 'Group 1, B style: the Picnicker''s own body as regions (dress -> grey work dress D, trims -> white), new brown hair in a homesteader''s bun, a woven basket of green produce on the arm.'
+palette: npc_3
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_3
+shade: true
+materials:
+  H: c
+  N: c
+  D: a
+  P: a
+  K: c
+  V: b
+legend:
+  k: 15
+  W: 14
+accept: {}
+base_sheet: graphics/object_events/pics/people/picnicker.png
+remap:
+  b: D
+  c: H
+  a: P
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 9
+      rows: '................
+
+        ......NNNN......
+
+        .....NNNNNN.....
+
+        ....HNNNNNNH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHssHHssHHHH.
+
+        .HHHssssssssHHH.
+
+        .HHsssksskssHHH.
+
+        ..HssksskssssH..
+
+        ...ssssssssss...'
+    - x: 11
+      y: 23
+      rows: '_KKK_
+
+        K___K
+
+        VVVVV
+
+        KKKKK
+
+        _KKK_'
+  down_a:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        ......NNNN......
+
+        .....NNNNNN.....
+
+        ....HNNNNNNH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHssHHssHHHH.
+
+        .HHHssssssssHHH.
+
+        .HHsssksskssHHH.
+
+        ..HssksskssssH..
+
+        ...ssssssssss...'
+    - x: 11
+      y: 24
+      rows: '_KKK_
+
+        K___K
+
+        VVVVV
+
+        KKKKK
+
+        _KKK_'
+  down_b:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        ......NNNN......
+
+        .....NNNNNN.....
+
+        ....HNNNNNNH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHssHHssHHHH.
+
+        .HHHssssssssHHH.
+
+        .HHsssksskssHHH.
+
+        ..HssksskssssH..
+
+        ...ssssssssss...'
+    - x: 11
+      y: 24
+      rows: '_KKK_
+
+        K___K
+
+        VVVVV
+
+        KKKKK
+
+        _KKK_'
+  up:
+    patches:
+    - x: 0
+      y: 9
+      rows: '................
+
+        ......NNNN......
+
+        .....NNNNNN.....
+
+        ....HNNNNNNH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        ..HHHHHHHHHHHH..
+
+        ...HHHHHHHHHH...'
+    - x: 0
+      y: 23
+      rows: '_KKK____________
+
+        K___K___________
+
+        VVVVV___________
+
+        KKKKK___________
+
+        _KKK____________'
+  up_a:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        ......NNNN......
+
+        .....NNNNNN.....
+
+        ....HNNNNNNH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        ..HHHHHHHHHHHH..
+
+        ...HHHHHHHHHH...'
+    - x: 0
+      y: 24
+      rows: '_KKK____________
+
+        K___K___________
+
+        VVVVV___________
+
+        KKKKK___________
+
+        _KKK____________'
+  up_b:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        ......NNNN......
+
+        .....NNNNNN.....
+
+        ....HNNNNNNH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        ..HHHHHHHHHHHH..
+
+        ...HHHHHHHHHH...'
+    - x: 0
+      y: 24
+      rows: '_KKK____________
+
+        K___K___________
+
+        VVVVV___________
+
+        KKKKK___________
+
+        _KKK____________'
+  left:
+    patches:
+    - x: 0
+      y: 9
+      rows: '................
+
+        .......NNNN.....
+
+        ......NNNNNN....
+
+        ....HHNNNNNN....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHsHHHHHHHHH..
+
+        ..sssssHHHHHHH..
+
+        ..sskssHHHHHH...
+
+        ..sskssHHHHHH...
+
+        ...sssssHHHH....'
+    - x: 3
+      y: 23
+      rows: '_KKK_
+
+        K___K
+
+        VVVVV
+
+        KKKKK
+
+        _KKK_'
+  left_a:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        .......NNNN.....
+
+        ......NNNNNN....
+
+        ....HHNNNNNN....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHsHHHHHHHHH..
+
+        ..sssssHHHHHHH..
+
+        ..sskssHHHHHH...
+
+        ..sskssHHHHHH...
+
+        ...sssssHHHH....'
+    - x: 3
+      y: 24
+      rows: '_KKK_
+
+        K___K
+
+        VVVVV
+
+        KKKKK
+
+        _KKK_'
+  left_b:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        .......NNNN.....
+
+        ......NNNNNN....
+
+        ....HHNNNNNN....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHsHHHHHHHHH..
+
+        ..sssssHHHHHHH..
+
+        ..sskssHHHHHH...
+
+        ..sskssHHHHHH...
+
+        ...sssssHHHH....'
+    - x: 3
+      y: 24
+      rows: '_KKK_
+
+        K___K
+
+        VVVVV
+
+        KKKKK
+
+        _KKK_'

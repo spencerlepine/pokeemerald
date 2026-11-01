@@ -1,0 +1,286 @@
+name: woman_1
+description: Desert townswoman in a sand headscarf (replaces Woman 1).
+kit: person16x32
+replaces: graphics/object_events/pics/people/woman_1.png
+graphics_info: Woman1
+notes: 'Group 1, B style: Woman 1''s own body as regions (dress B, apron -> dusty-rose sash A), new sand-coloured headscarf with a rose hem framing the face, a cowl wrapped round the neck and a tail over
+  the shoulder.'
+palette: npc_1
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_1
+shade: true
+materials:
+  C: c
+  R: c
+  B: b
+  A: a
+legend:
+  k: 15
+  W: 14
+accept: {}
+base_sheet: graphics/object_events/pics/people/woman_1.png
+remap:
+  c: C
+  b: B
+  a: A
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......CCCC......
+
+        ....CCCCCCCC....
+
+        ...CCCCCCCCCC...
+
+        ..CCCCCCCCCCCC..
+
+        ..CCCCCCCCCCCC..
+
+        .CCCCAAAAAACCCC.
+
+        .CCC________CCC.
+
+        .CCC__k__k__CCC.
+
+        .CCC__k__k__CCC.
+
+        ..CCC______CCC..
+
+        ..CCC______CCC..
+
+        ..CC________CC..'
+  down_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......CCCC......
+
+        ....CCCCCCCC....
+
+        ...CCCCCCCCCC...
+
+        ..CCCCCCCCCCCC..
+
+        ..CCCCCCCCCCCC..
+
+        .CCCCAAAAAACCCC.
+
+        .CCC________CCC.
+
+        .CCC__k__k__CCC.
+
+        .CCC__k__k__CCC.
+
+        ..CCC______CCC..
+
+        ..CCC______CCC..
+
+        ..CC________CC..'
+  down_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......CCCC......
+
+        ....CCCCCCCC....
+
+        ...CCCCCCCCCC...
+
+        ..CCCCCCCCCCCC..
+
+        ..CCCCCCCCCCCC..
+
+        .CCCCAAAAAACCCC.
+
+        .CCC________CCC.
+
+        .CCC__k__k__CCC.
+
+        .CCC__k__k__CCC.
+
+        ..CCC______CCC..
+
+        ..CCC______CCC..
+
+        ..CC________CC..'
+  up:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......CCCC......
+
+        ....CCCCCCCC....
+
+        ...CCCCCCCCCC...
+
+        ..CCCCCCCCCCCC..
+
+        ..CCCCCCCCCCCC..
+
+        .CCCCCCCCCCCCCC.
+
+        .CCCCCCCCCCCCCC.
+
+        .CCCCCCCCCCCCCC.
+
+        .CCCCCCCCCCCCCC.
+
+        ..CCCCCCCCCCCC..
+
+        ..CCCCCCCCCCCC..
+
+        __BBBCCCCCCBBB__
+
+        _____CCCCCC_____
+
+        ______CCCC______'
+  up_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......CCCC......
+
+        ....CCCCCCCC....
+
+        ...CCCCCCCCCC...
+
+        ..CCCCCCCCCCCC..
+
+        ..CCCCCCCCCCCC..
+
+        .CCCCCCCCCCCCCC.
+
+        .CCCCCCCCCCCCCC.
+
+        .CCCCCCCCCCCCCC.
+
+        .CCCCCCCCCCCCCC.
+
+        ..CCCCCCCCCCCC..
+
+        ..CCCCCCCCCCCC..
+
+        __BBBCCCCCCBBB__
+
+        _____CCCCCC_____
+
+        ______CCCC______'
+  up_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......CCCC......
+
+        ....CCCCCCCC....
+
+        ...CCCCCCCCCC...
+
+        ..CCCCCCCCCCCC..
+
+        ..CCCCCCCCCCCC..
+
+        .CCCCCCCCCCCCCC.
+
+        .CCCCCCCCCCCCCC.
+
+        .CCCCCCCCCCCCCC.
+
+        .CCCCCCCCCCCCCC.
+
+        ..CCCCCCCCCCCC..
+
+        ..CCCCCCCCCCCC..
+
+        __BBBCCCCCCBBB__
+
+        _____CCCCCC_____
+
+        ______CCCC______'
+  left:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......CCCCC.....
+
+        ....CCCCCCCCC...
+
+        ...CCCCCCCCCCC..
+
+        ..CCCCCCCCCCCC..
+
+        ..CCCCCCCCCCCC..
+
+        .CAAAAACCCCCCCC.
+
+        ..______CCCCCCC.
+
+        ..___k__CCCCCC..
+
+        ..___k__CCCCCC..
+
+        ...______CCCCC..
+
+        ....____CCCCC...
+
+        ______CCCCC_____
+
+        _______CCC______'
+  left_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......CCCCC.....
+
+        ....CCCCCCCCC...
+
+        ...CCCCCCCCCCC..
+
+        ..CCCCCCCCCCCC..
+
+        ..CCCCCCCCCCCC..
+
+        .CAAAAACCCCCCCC.
+
+        ..______CCCCCCC.
+
+        ..___k__CCCCCC..
+
+        ..___k__CCCCCC..
+
+        ...______CCCCC..
+
+        ....____CCCCC...
+
+        ______CCCCC_____
+
+        _______CCC______'
+  left_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......CCCCC.....
+
+        ....CCCCCCCCC...
+
+        ...CCCCCCCCCCC..
+
+        ..CCCCCCCCCCCC..
+
+        ..CCCCCCCCCCCC..
+
+        .CAAAAACCCCCCCC.
+
+        ..______CCCCCCC.
+
+        ..___k__CCCCCC..
+
+        ..___k__CCCCCC..
+
+        ...______CCCCC..
+
+        ....____CCCCC...
+
+        ______CCCCC_____
+
+        _______CCC______'

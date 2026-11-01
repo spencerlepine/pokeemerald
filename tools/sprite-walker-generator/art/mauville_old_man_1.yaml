@@ -1,0 +1,407 @@
+name: mauville_old_man_1
+description: Old Mos Espa storyteller in a sand hood with a long white beard (replaces the Mauville old man / Bard).
+kit: person16x32
+replaces: graphics/object_events/pics/people/mauville_old_man_1.png
+graphics_info: Bard
+notes: 'Group 1, B style: the old man''s own body as regions (shirt and trousers -> khaki robe R, hands and belt -> blue sash and holo-scroll B), new sand hood framing bushy white brows and a long white
+  beard to the chest.'
+palette: npc_1
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_1
+shade: true
+materials:
+  C: c
+  R: c
+  Y: w/c
+  B: b
+  A: a
+legend:
+  k: 15
+  W: 14
+  f: 13
+accept:
+  step_change: the long beard and robe hang still; the bob, hem and feet move
+base_sheet: graphics/object_events/pics/people/mauville_old_man_1.png
+remap:
+  b: R
+  c: R
+  a: B
+  w: R
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 10
+      rows: '......CCCC......
+
+        ....CCCffCCC....
+
+        ...CCCCffCCCC...
+
+        ..CCCCCCCCCCCC..
+
+        ..CCCssssssCCC..
+
+        .CCCssssssssCCC.
+
+        .CCCYYYssYYYCCC.
+
+        .CCCssksskssCCC.
+
+        .CCCssksskssCCC.
+
+        .CCCYYssssYYCCC.
+
+        ..CCYYYYYYYYCC..
+
+        ..CCYYYYYYYYCC..
+
+        ..CCCYYYYYYCCC..
+
+        ...CCCYYYYCCC...
+
+        ______YY________'
+    - x: 0
+      y: 25
+      rows: '___BBBBBBBBBB___
+
+        ___BBBBBBBBBB___'
+    - x: 1
+      y: 26
+      rows: 'AAA
+
+        AAA
+
+        AAA'
+  down_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......CCCC......
+
+        ....CCCffCCC....
+
+        ...CCCCffCCCC...
+
+        ..CCCCCCCCCCCC..
+
+        ..CCCssssssCCC..
+
+        .CCCssssssssCCC.
+
+        .CCCYYYssYYYCCC.
+
+        .CCCssksskssCCC.
+
+        .CCCssksskssCCC.
+
+        .CCCYYssssYYCCC.
+
+        ..CCYYYYYYYYCC..
+
+        ..CCYYYYYYYYCC..
+
+        ..CCCYYYYYYCCC..
+
+        ...CCCYYYYCCC...
+
+        ______YY________'
+    - x: 0
+      y: 26
+      rows: '___BBBBBBBBBB___
+
+        ___BBBBBBBBBB___'
+    - x: 1
+      y: 27
+      rows: 'AAA
+
+        AAA
+
+        AAA'
+  down_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......CCCC......
+
+        ....CCCffCCC....
+
+        ...CCCCffCCCC...
+
+        ..CCCCCCCCCCCC..
+
+        ..CCCssssssCCC..
+
+        .CCCssssssssCCC.
+
+        .CCCYYYssYYYCCC.
+
+        .CCCssksskssCCC.
+
+        .CCCssksskssCCC.
+
+        .CCCYYssssYYCCC.
+
+        ..CCYYYYYYYYCC..
+
+        ..CCYYYYYYYYCC..
+
+        ..CCCYYYYYYCCC..
+
+        ...CCCYYYYCCC...
+
+        ______YY________'
+    - x: 0
+      y: 26
+      rows: '___BBBBBBBBBB___
+
+        ___BBBBBBBBBB___'
+    - x: 1
+      y: 27
+      rows: 'AAA
+
+        AAA
+
+        AAA'
+  up:
+    patches:
+    - x: 0
+      y: 10
+      rows: '......CCCC......
+
+        ....CCCffCCC....
+
+        ...CCCCffCCCC...
+
+        ..CCCCCffCCCCC..
+
+        ..CCCCCffCCCCC..
+
+        .CCCCCCffCCCCCC.
+
+        .CCCCCCffCCCCCC.
+
+        .CCCCCCCCCCCCCC.
+
+        .CCCCCCCCCCCCCC.
+
+        .CCCCCCCCCCCCCC.
+
+        ..CCCCCCCCCCCC..
+
+        ..CCCCCCCCCCCC..
+
+        ..CCCCCCCCCCCC..'
+    - x: 0
+      y: 25
+      rows: '___BBBBBBBBBB___
+
+        ___BBBBBBBBBB___'
+    - x: 12
+      y: 26
+      rows: 'AAA
+
+        AAA
+
+        AAA'
+  up_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......CCCC......
+
+        ....CCCffCCC....
+
+        ...CCCCffCCCC...
+
+        ..CCCCCffCCCCC..
+
+        ..CCCCCffCCCCC..
+
+        .CCCCCCffCCCCCC.
+
+        .CCCCCCffCCCCCC.
+
+        .CCCCCCCCCCCCCC.
+
+        .CCCCCCCCCCCCCC.
+
+        .CCCCCCCCCCCCCC.
+
+        ..CCCCCCCCCCCC..
+
+        ..CCCCCCCCCCCC..
+
+        ..CCCCCCCCCCCC..'
+    - x: 0
+      y: 26
+      rows: '___BBBBBBBBBB___
+
+        ___BBBBBBBBBB___'
+    - x: 12
+      y: 27
+      rows: 'AAA
+
+        AAA
+
+        AAA'
+  up_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......CCCC......
+
+        ....CCCffCCC....
+
+        ...CCCCffCCCC...
+
+        ..CCCCCffCCCCC..
+
+        ..CCCCCffCCCCC..
+
+        .CCCCCCffCCCCCC.
+
+        .CCCCCCffCCCCCC.
+
+        .CCCCCCCCCCCCCC.
+
+        .CCCCCCCCCCCCCC.
+
+        .CCCCCCCCCCCCCC.
+
+        ..CCCCCCCCCCCC..
+
+        ..CCCCCCCCCCCC..
+
+        ..CCCCCCCCCCCC..'
+    - x: 0
+      y: 26
+      rows: '___BBBBBBBBBB___
+
+        ___BBBBBBBBBB___'
+    - x: 12
+      y: 27
+      rows: 'AAA
+
+        AAA
+
+        AAA'
+  left:
+    patches:
+    - x: 0
+      y: 10
+      rows: '......CCCCC.....
+
+        ....CCCCCCCCC...
+
+        ...CCCCCCCCCCC..
+
+        ..CCCCCCCCCCCC..
+
+        ..CsssCCCCCCCC..
+
+        .CssssCCCCCCCCC.
+
+        .YYYsssCCCCCCCC.
+
+        ..skssCCCCCCCCC.
+
+        ..skssCCCCCCCCC.
+
+        .YYsssCCCCCCCCC.
+
+        .YYYYYsCCCCCCC..
+
+        .YYYYYCCCCCCC...
+
+        ..YYYYCCCCCC....
+
+        ...YYYCCCCC.....
+
+        ....YY__________'
+    - x: 9
+      y: 25
+      rows: 'AAA
+
+        AAA
+
+        AAA'
+  left_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......CCCCC.....
+
+        ....CCCCCCCCC...
+
+        ...CCCCCCCCCCC..
+
+        ..CCCCCCCCCCCC..
+
+        ..CsssCCCCCCCC..
+
+        .CssssCCCCCCCCC.
+
+        .YYYsssCCCCCCCC.
+
+        ..skssCCCCCCCCC.
+
+        ..skssCCCCCCCCC.
+
+        .YYsssCCCCCCCCC.
+
+        .YYYYYsCCCCCCC..
+
+        .YYYYYCCCCCCC...
+
+        ..YYYYCCCCCC....
+
+        ...YYYCCCCC.....
+
+        ....YY__________'
+    - x: 9
+      y: 26
+      rows: 'AAA
+
+        AAA
+
+        AAA'
+  left_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......CCCCC.....
+
+        ....CCCCCCCCC...
+
+        ...CCCCCCCCCCC..
+
+        ..CCCCCCCCCCCC..
+
+        ..CsssCCCCCCCC..
+
+        .CssssCCCCCCCCC.
+
+        .YYYsssCCCCCCCC.
+
+        ..skssCCCCCCCCC.
+
+        ..skssCCCCCCCCC.
+
+        .YYsssCCCCCCCCC.
+
+        .YYYYYsCCCCCCC..
+
+        .YYYYYCCCCCCC...
+
+        ..YYYYCCCCCC....
+
+        ...YYYCCCCC.....
+
+        ....YY__________'
+    - x: 9
+      y: 26
+      rows: 'AAA
+
+        AAA
+
+        AAA'

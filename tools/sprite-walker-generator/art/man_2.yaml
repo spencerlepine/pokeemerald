@@ -1,0 +1,222 @@
+name: man_2
+description: Spaceport ground-crew worker in an orange jumpsuit and headset cap (replaces Man 2).
+kit: person16x32
+replaces: graphics/object_events/pics/people/man_2.png
+graphics_info: Man2
+notes: 'Group 1, B style: Man 2''s own body as regions (shirt and trousers -> jumpsuit J, tie -> grey zip Z), new grey cap with ear-defender cups, green utility belt. Stays on NPC_3.'
+palette: npc_3
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_3
+shade: true
+materials:
+  Q: a
+  V: a
+  E: a
+  H: c
+  J: c
+  Z: a
+  G: b
+legend:
+  k: 15
+  W: 14
+accept: {}
+base_sheet: graphics/object_events/pics/people/man_2.png
+remap:
+  c: H
+  b: J
+  w: J
+  a: Z
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 11
+      rows: '....QQQQQQQQ....
+
+        ...QQQQQQQQQQ...
+
+        ..QQQQQWWQQQQQ..
+
+        ..QQQQQWWQQQQQ..
+
+        .VVVVVVVVVVVVVV.
+
+        .EH__________HE.
+
+        .EEH________HEE.
+
+        .EE__________EE.'
+    - &id001
+      x: 0
+      y: 26
+      rows: ___GGGGGGGGGG___
+  down_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '....QQQQQQQQ....
+
+        ...QQQQQQQQQQ...
+
+        ..QQQQQWWQQQQQ..
+
+        ..QQQQQWWQQQQQ..
+
+        .VVVVVVVVVVVVVV.
+
+        .EH__________HE.
+
+        .EEH________HEE.
+
+        .EE__________EE.'
+    - x: 0
+      y: 27
+      rows: ___GGGGGGGGGG___
+  down_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '....QQQQQQQQ....
+
+        ...QQQQQQQQQQ...
+
+        ..QQQQQWWQQQQQ..
+
+        ..QQQQQWWQQQQQ..
+
+        .VVVVVVVVVVVVVV.
+
+        .EH__________HE.
+
+        .EEH________HEE.
+
+        .EE__________EE.'
+    - x: 0
+      y: 27
+      rows: ___GGGGGGGGGG___
+  up:
+    patches:
+    - x: 0
+      y: 11
+      rows: '....QQQQQQQQ....
+
+        ...QQQQQQQQQQ...
+
+        ..QQQQQQQQQQQQ..
+
+        ..QQQQQQQQQQQQ..
+
+        ..QQQQQQQQQQQQ..
+
+        .E____________E.
+
+        .EE__________EE.
+
+        .EE__________EE.'
+    - *id001
+  up_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '....QQQQQQQQ....
+
+        ...QQQQQQQQQQ...
+
+        ..QQQQQQQQQQQQ..
+
+        ..QQQQQQQQQQQQ..
+
+        ..QQQQQQQQQQQQ..
+
+        .E____________E.
+
+        .EE__________EE.
+
+        .EE__________EE.'
+    - x: 0
+      y: 27
+      rows: ___GGGGGGGGGG___
+  up_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '....QQQQQQQQ....
+
+        ...QQQQQQQQQQ...
+
+        ..QQQQQQQQQQQQ..
+
+        ..QQQQQQQQQQQQ..
+
+        ..QQQQQQQQQQQQ..
+
+        .E____________E.
+
+        .EE__________EE.
+
+        .EE__________EE.'
+    - x: 0
+      y: 27
+      rows: ___GGGGGGGGGG___
+  left:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......QQQQQQQ...
+
+        ....QQQQQQQQQQ..
+
+        ...QQQQQQQQQQQ..
+
+        ..QQQQQQQQQQQQ..
+
+        VVVVVVVQQQQQQQ..
+
+        ________________
+
+        _________EE_____
+
+        _________EE_____
+
+        _________EE_____'
+  left_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......QQQQQQQ...
+
+        ....QQQQQQQQQQ..
+
+        ...QQQQQQQQQQQ..
+
+        ..QQQQQQQQQQQQ..
+
+        VVVVVVVQQQQQQQ..
+
+        ________________
+
+        _________EE_____
+
+        _________EE_____
+
+        _________EE_____'
+  left_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......QQQQQQQ...
+
+        ....QQQQQQQQQQ..
+
+        ...QQQQQQQQQQQ..
+
+        ..QQQQQQQQQQQQ..
+
+        VVVVVVVQQQQQQQ..
+
+        ________________
+
+        _________EE_____
+
+        _________EE_____
+
+        _________EE_____'

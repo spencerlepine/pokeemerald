@@ -1,0 +1,236 @@
+name: fat_man
+description: Portly spaceport merchant in a heavy fur-collared coat and a round cap (replaces the Fat Man).
+kit: person16x32
+replaces: graphics/object_events/pics/people/fat_man.png
+graphics_info: FatMan
+notes: 'Group 1, B style: the Fat Man''s own body as regions (shirt -> heavy brown coat K, trousers T), white fur collar, the coat open over a red tunic with gold buttons, gold sash, round red merchant''s
+  cap with a gold band.'
+palette: npc_2
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_2
+shade: true
+materials:
+  K: c
+  B: b
+  T: c
+  H: c
+  F: w/c
+  Q: b
+legend:
+  k: 15
+  W: 14
+  y: 6
+  z: 7
+  o: 5
+accept:
+  hair_rows: a low round cap over the brow, as vanilla's short hair (vanilla shares it)
+  eye_row: vanilla's own face rows, eyes at row 16 (vanilla shares it)
+base_sheet: graphics/object_events/pics/people/fat_man.png
+remap:
+  b: K
+  a: T
+  c: H
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 11
+      rows: '.....QQQQQQ.....
+
+        ...QQQQQQQQQQ...
+
+        ..yyyyyyyyyyyy..'
+    - x: 0
+      y: 20
+      rows: '.FFFFssssssFFFF.
+
+        _K____BBBB____K_
+
+        KK____BoBB____KK
+
+        KK____BBBB____KK
+
+        _K____BoBB____K_
+
+        __zzzzzoozzzzz__'
+  down_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.....QQQQQQ.....
+
+        ...QQQQQQQQQQ...
+
+        ..yyyyyyyyyyyy..'
+    - x: 0
+      y: 21
+      rows: '.FFFFssssssFFFF.
+
+        _K____BBBB____K_
+
+        KK____BoBB____KK
+
+        KK____BBBB____KK
+
+        _K____BoBB____K_
+
+        __zzzzzoozzzzz__'
+  down_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.....QQQQQQ.....
+
+        ...QQQQQQQQQQ...
+
+        ..yyyyyyyyyyyy..'
+    - x: 0
+      y: 21
+      rows: '.FFFFssssssFFFF.
+
+        _K____BBBB____K_
+
+        KK____BoBB____KK
+
+        KK____BBBB____KK
+
+        _K____BoBB____K_
+
+        __zzzzzoozzzzz__'
+  up:
+    patches:
+    - x: 0
+      y: 11
+      rows: '.....QQQQQQ.....
+
+        ...QQQQQQQQQQ...
+
+        ..QQQQQQQQQQQQ..
+
+        .yyyyyyyyyyyyyy.
+
+        .HHHHHHHHHHHHHH.
+
+        ..HHHHHHHHHHHH..
+
+        .sHHHHHHHHHHHHs.
+
+        .sHHHHHHHHHHHHs.
+
+        ..HHHHHHHHHHHH..'
+    - x: 0
+      y: 20
+      rows: '.FFFFFFFFFFFFFF.
+
+        _K____________K_
+
+        KK____________KK
+
+        KK____________KK
+
+        _K____________K_
+
+        __zzzzzzzzzzzz__'
+  up_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.....QQQQQQ.....
+
+        ...QQQQQQQQQQ...
+
+        ..QQQQQQQQQQQQ..
+
+        .yyyyyyyyyyyyyy.
+
+        .HHHHHHHHHHHHHH.
+
+        ..HHHHHHHHHHHH..
+
+        .sHHHHHHHHHHHHs.
+
+        .sHHHHHHHHHHHHs.
+
+        ..HHHHHHHHHHHH..'
+    - x: 0
+      y: 21
+      rows: '.FFFFFFFFFFFFFF.
+
+        _K____________K_
+
+        KK____________KK
+
+        KK____________KK
+
+        _K____________K_
+
+        __zzzzzzzzzzzz__'
+  up_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.....QQQQQQ.....
+
+        ...QQQQQQQQQQ...
+
+        ..QQQQQQQQQQQQ..
+
+        .yyyyyyyyyyyyyy.
+
+        .HHHHHHHHHHHHHH.
+
+        ..HHHHHHHHHHHH..
+
+        .sHHHHHHHHHHHHs.
+
+        .sHHHHHHHHHHHHs.
+
+        ..HHHHHHHHHHHH..'
+    - x: 0
+      y: 21
+      rows: '.FFFFFFFFFFFFFF.
+
+        _K____________K_
+
+        KK____________KK
+
+        KK____________KK
+
+        _K____________K_
+
+        __zzzzzzzzzzzz__'
+  left:
+    patches:
+    - x: 0
+      y: 11
+      rows: '.......QQQQQ....
+
+        .....QQQQQQQQQ..
+
+        ....yyyyyyyyyyy.'
+    - x: 0
+      y: 20
+      rows: '...FFFFFFFFFF...'
+  left_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.......QQQQQ....
+
+        .....QQQQQQQQQ..
+
+        ....yyyyyyyyyyy.'
+    - x: 0
+      y: 21
+      rows: '...FFFFFFFFFF...'
+  left_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.......QQQQQ....
+
+        .....QQQQQQQQQ..
+
+        ....yyyyyyyyyyy.'
+    - x: 0
+      y: 21
+      rows: '...FFFFFFFFFF...'

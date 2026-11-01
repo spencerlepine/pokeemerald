@@ -1,0 +1,341 @@
+name: artist
+description: Holo-artist in a paint-splashed smock with a beret and a holo-tablet (replaces the Artist).
+kit: person16x32
+replaces: graphics/object_events/pics/people/artist.png
+graphics_info: Artist
+notes: 'Group 1, B style: the Artist''s own body as regions (smock -> white M edged in grey, folds F), navy hair under a magenta beret, paint splashes in magenta, steel blue and peach, a glowing holo-tablet
+  in the side view.'
+palette: npc_4
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_4
+shade: true
+materials:
+  B: b
+  H: a
+  M: w/c
+  F: c
+  T: a
+legend:
+  k: 15
+  W: 14
+  p: 9
+  q: 8
+  v: 5
+  o: 2
+  L: 11
+accept: {}
+base_sheet: graphics/object_events/pics/people/artist.png
+remap:
+  b: B
+  c: M
+  w: F
+  a: T
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 10
+      rows: '....BBBBBBBB....
+
+        ...BBBBBBBBBBB..
+
+        ..BBBBBBBBBBBBB.
+
+        ..BBBBBBBBBBBB..
+
+        ..HHHHHHHHHHHH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHssHHssHHHH.
+
+        .sHssssssssssHs.
+
+        .sHssssssssssHs.
+
+        .HsssskssksssH..
+
+        ..HssssssssssH..
+
+        ..HssssssssssH..
+
+        ...HHssssssHH...'
+    - x: 0
+      y: 23
+      rows: '____pp__________
+
+        __q______oo_____
+
+        __qq______o_____
+
+        _____________pp_
+
+        ____vv________p_'
+  down_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '....BBBBBBBB....
+
+        ...BBBBBBBBBBB..
+
+        ..BBBBBBBBBBBBB.
+
+        ..BBBBBBBBBBBB..
+
+        ..HHHHHHHHHHHH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHssHHssHHHH.
+
+        .sHssssssssssHs.
+
+        .sHssssssssssHs.
+
+        .HsssskssksssH..
+
+        ..HssssssssssH..
+
+        ..HssssssssssH..
+
+        ...HHssssssHH...'
+    - x: 0
+      y: 24
+      rows: '____pp__________
+
+        __q______oo_____
+
+        __qq______o_____
+
+        _____________pp_
+
+        ____vv________p_'
+  down_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '....BBBBBBBB....
+
+        ...BBBBBBBBBBB..
+
+        ..BBBBBBBBBBBBB.
+
+        ..BBBBBBBBBBBB..
+
+        ..HHHHHHHHHHHH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHssHHssHHHH.
+
+        .sHssssssssssHs.
+
+        .sHssssssssssHs.
+
+        .HsssskssksssH..
+
+        ..HssssssssssH..
+
+        ..HssssssssssH..
+
+        ...HHssssssHH...'
+    - x: 0
+      y: 24
+      rows: '____pp__________
+
+        __q______oo_____
+
+        __qq______o_____
+
+        _____________pp_
+
+        ____vv________p_'
+  up:
+    patches:
+    - x: 0
+      y: 10
+      rows: '....BBBBBBBB....
+
+        ..BBBBBBBBBBB...
+
+        .BBBBBBBBBBBBB..
+
+        ..BBBBBBBBBBBB..
+
+        ..HHHHHHHHHHHH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .sHHHHHHHHHHHHs.
+
+        .sHHHHHHHHHHHHs.
+
+        .HHHHHHHHHHHHHH.
+
+        ..HHHHHHHHHHHH..
+
+        ..MHHHHHHHHHHM..'
+  up_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '....BBBBBBBB....
+
+        ..BBBBBBBBBBB...
+
+        .BBBBBBBBBBBBB..
+
+        ..BBBBBBBBBBBB..
+
+        ..HHHHHHHHHHHH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .sHHHHHHHHHHHHs.
+
+        .sHHHHHHHHHHHHs.
+
+        .HHHHHHHHHHHHHH.
+
+        ..HHHHHHHHHHHH..
+
+        ..MHHHHHHHHHHM..'
+  up_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '....BBBBBBBB....
+
+        ..BBBBBBBBBBB...
+
+        .BBBBBBBBBBBBB..
+
+        ..BBBBBBBBBBBB..
+
+        ..HHHHHHHHHHHH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .sHHHHHHHHHHHHs.
+
+        .sHHHHHHHHHHHHs.
+
+        .HHHHHHHHHHHHHH.
+
+        ..HHHHHHHHHHHH..
+
+        ..MHHHHHHHHHHM..'
+  left:
+    patches:
+    - x: 0
+      y: 10
+      rows: '....BBBBBBBB....
+
+        ..BBBBBBBBBBBB..
+
+        .BBBBBBBBBBBBB..
+
+        ..BBBBBBBBBBBB..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHHH.
+
+        ..ssHHHHHHHHHH..
+
+        ..ssssssHHHHHH..
+
+        ..ssssssHHHHHH..
+
+        ..sskssHHHHHHH..
+
+        ...sssssHHHHH...
+
+        ....sssssHHH....'
+    - x: 0
+      y: 23
+      rows: '____TTT_________
+
+        ___TLLWT________
+
+        ____TTT____p____
+
+        _______v________'
+  left_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '....BBBBBBBB....
+
+        ..BBBBBBBBBBBB..
+
+        .BBBBBBBBBBBBB..
+
+        ..BBBBBBBBBBBB..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHHH.
+
+        ..ssHHHHHHHHHH..
+
+        ..ssssssHHHHHH..
+
+        ..ssssssHHHHHH..
+
+        ..sskssHHHHHHH..
+
+        ...sssssHHHHH...
+
+        ....sssssHHH....'
+    - x: 0
+      y: 24
+      rows: '____TTT_________
+
+        ___TLLWT________
+
+        ____TTT____p____
+
+        _______v________'
+  left_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '....BBBBBBBB....
+
+        ..BBBBBBBBBBBB..
+
+        .BBBBBBBBBBBBB..
+
+        ..BBBBBBBBBBBB..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHHH.
+
+        ..ssHHHHHHHHHH..
+
+        ..ssssssHHHHHH..
+
+        ..ssssssHHHHHH..
+
+        ..sskssHHHHHHH..
+
+        ...sssssHHHHH...
+
+        ....sssssHHH....'
+    - x: 0
+      y: 24
+      rows: '____TTT_________
+
+        ___TLLWT________
+
+        ____TTT____p____
+
+        _______v________'
