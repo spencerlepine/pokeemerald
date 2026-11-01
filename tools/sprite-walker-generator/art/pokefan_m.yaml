@@ -1,0 +1,195 @@
+name: pokefan_m
+description: 'RACE FAN (m): stout podrace fan in a striped red-and-yellow team vest, racing goggles pushed up on his head (replaces Pokefan M).'
+kit: person16x32
+replaces: graphics/object_events/pics/people/pokefan_m.png
+graphics_info: PokefanM
+notes: 'Recast b, B style: Pokefan M''s own stout body as regions (shirt -> red team vest R, belt/shorts kept yellow), brown hair with black-strapped amber racing goggles pushed up on the forehead, two
+  yellow pinstripes down the vest. Stays on NPC_2.'
+palette: npc_2
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_2
+shade: true
+materials:
+  R: b
+legend:
+  k: 15
+  W: 14
+  L: 6
+  y: 5
+accept: {}
+base_sheet: graphics/object_events/pics/people/pokefan_m.png
+remap:
+  b: R
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......cccc......
+
+        ....cccccccc....
+
+        ...kWLkkkkLWk...
+
+        ..ckLLksskLLkc..'
+    - &id001
+      x: 0
+      y: 22
+      rows: '____y______y____
+
+        _____y____y_____
+
+        _____y____y_____
+
+        _____y____y_____'
+  up:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......cccc......
+
+        ....cccccccc....
+
+        ...cccccccccc...
+
+        ..kkkkkkkkkkkk..'
+    - *id001
+  left:
+    patches:
+    - x: 0
+      y: 11
+      rows: '.......cccc.....
+
+        .....ccccccc....
+
+        ....kWLkkkkkk...
+
+        ...kLLk_________'
+    - x: 0
+      y: 22
+      rows: '__________y_____
+
+        __________y_____
+
+        __________y_____
+
+        __________y_____'
+  down_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......cccc......
+
+        ....cccccccc....
+
+        ...kWLkkkkLWk...
+
+        ..ckLLksskLLkc..'
+    - x: 0
+      y: 23
+      rows: '____y______y____
+
+        _____y____y_____
+
+        _____y____y_____
+
+        _____y____y_____'
+  down_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......cccc......
+
+        ....cccccccc....
+
+        ...kWLkkkkLWk...
+
+        ..ckLLksskLLkc..'
+    - x: 0
+      y: 23
+      rows: '____y______y____
+
+        _____y____y_____
+
+        _____y____y_____
+
+        _____y____y_____'
+  up_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......cccc......
+
+        ....cccccccc....
+
+        ...cccccccccc...
+
+        ..kkkkkkkkkkkk..'
+    - x: 0
+      y: 23
+      rows: '____y______y____
+
+        _____y____y_____
+
+        _____y____y_____
+
+        _____y____y_____'
+  up_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......cccc......
+
+        ....cccccccc....
+
+        ...cccccccccc...
+
+        ..kkkkkkkkkkkk..'
+    - x: 0
+      y: 23
+      rows: '____y______y____
+
+        _____y____y_____
+
+        _____y____y_____
+
+        _____y____y_____'
+  left_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.......cccc.....
+
+        .....ccccccc....
+
+        ....kWLkkkkkk...
+
+        ...kLLk_________'
+    - x: 0
+      y: 23
+      rows: '__________y_____
+
+        __________y_____
+
+        __________y_____
+
+        __________y_____'
+  left_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.......cccc.....
+
+        .....ccccccc....
+
+        ....kWLkkkkkk...
+
+        ...kLLk_________'
+    - x: 0
+      y: 23
+      rows: '__________y_____
+
+        __________y_____
+
+        __________y_____
+
+        __________y_____'

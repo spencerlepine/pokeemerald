@@ -1,0 +1,288 @@
+name: ninja_boy
+description: Small kid in a brown desert hood and a sand-coloured poncho with a woven red-and-yellow band (replaces Ninja Boy; the EWOK trainers move to their own walker).
+kit: person16x16
+replaces: graphics/object_events/pics/people/ninja_boy.png
+graphics_info: NinjaBoy
+notes: 'Recast b, B style: Ninja Boy''s small body as regions (suit -> dark trousers L), new round brown hood framing the face and a wide sand-coloured poncho (on the skin ramp, the lightest sand tones
+  NPC_2 has) over the arms with a woven red/yellow band, Tatooine market colours. Moves to NPC_2 for the browns.'
+palette: npc_2
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_2
+shade: true
+materials:
+  H: c@
+  P: s
+  L: c
+legend:
+  k: 15
+  W: 14
+  y: 5
+  r: 9
+  R: 10
+accept: {}
+base_sheet: graphics/object_events/pics/people/ninja_boy.png
+remap:
+  a: H
+  c: L
+  b: L
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 0
+      rows: '................
+
+        .....HHHHHH.....
+
+        ....HHHWHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHssssssHHH..
+
+        ..HHssssssssHH..
+
+        ..HHssksskssHH..
+
+        ..HHHssssssHHH..
+
+        .PPPPPPPPPPPPPP.
+
+        .PPPPPPPPPPPPPP.
+
+        .PyrRryrRryrRrP.
+
+        ..PPPPPPPPPPPP..'
+  up:
+    patches:
+    - x: 0
+      y: 0
+      rows: '................
+
+        .....HHHHHH.....
+
+        ....HHHWHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ...HHHHHHHHHH...
+
+        .PPPPPHHHHPPPPP.
+
+        .PPPPPPHHPPPPPP.
+
+        .PyrRryrRryrRrP.
+
+        ..PPPPPPPPPPPP..'
+  left:
+    patches:
+    - x: 0
+      y: 0
+      rows: '................
+
+        ......HHHHH.....
+
+        .....HHWHHHH....
+
+        ....HHHHHHHHH...
+
+        ...HHHHHHHHHHH..
+
+        ..HHsssHHHHHHH..
+
+        ..HssssHHHHHHH..
+
+        ..HskssHHHHHHH..
+
+        ..HHsssHHHHHHH..
+
+        ..PPPPPPPPPPPP..
+
+        ..PPPPPPPPPPPP..
+
+        ..PyrRryrRryrP..
+
+        ...PPPPPPPPPP...'
+  down_a:
+    patches:
+    - x: 0
+      y: 1
+      rows: '................
+
+        .....HHHHHH.....
+
+        ....HHHWHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHssssssHHH..
+
+        ..HHssssssssHH..
+
+        ..HHssksskssHH..
+
+        ..HHHssssssHHH..
+
+        .PPPPPPPPPPPPPP.
+
+        .PPPPPPPPPPPPPP.
+
+        .PyrRryrRryrRrP.
+
+        ..PPPPPPPPPPPP..'
+  down_b:
+    patches:
+    - x: 0
+      y: 1
+      rows: '................
+
+        .....HHHHHH.....
+
+        ....HHHWHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHssssssHHH..
+
+        ..HHssssssssHH..
+
+        ..HHssksskssHH..
+
+        ..HHHssssssHHH..
+
+        .PPPPPPPPPPPPPP.
+
+        .PPPPPPPPPPPPPP.
+
+        .PyrRryrRryrRrP.
+
+        ..PPPPPPPPPPPP..'
+  up_a:
+    patches:
+    - x: 0
+      y: 1
+      rows: '................
+
+        .....HHHHHH.....
+
+        ....HHHWHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ...HHHHHHHHHH...
+
+        .PPPPPHHHHPPPPP.
+
+        .PPPPPPHHPPPPPP.
+
+        .PyrRryrRryrRrP.
+
+        ..PPPPPPPPPPPP..'
+  up_b:
+    patches:
+    - x: 0
+      y: 1
+      rows: '................
+
+        .....HHHHHH.....
+
+        ....HHHWHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ...HHHHHHHHHH...
+
+        .PPPPPHHHHPPPPP.
+
+        .PPPPPPHHPPPPPP.
+
+        .PyrRryrRryrRrP.
+
+        ..PPPPPPPPPPPP..'
+  left_a:
+    patches:
+    - x: 0
+      y: 1
+      rows: '................
+
+        ......HHHHH.....
+
+        .....HHWHHHH....
+
+        ....HHHHHHHHH...
+
+        ...HHHHHHHHHHH..
+
+        ..HHsssHHHHHHH..
+
+        ..HssssHHHHHHH..
+
+        ..HskssHHHHHHH..
+
+        ..HHsssHHHHHHH..
+
+        ..PPPPPPPPPPPP..
+
+        ..PPPPPPPPPPPP..
+
+        ..PyrRryrRryrP..
+
+        ...PPPPPPPPPP...'
+  left_b:
+    patches:
+    - x: 0
+      y: 1
+      rows: '................
+
+        ......HHHHH.....
+
+        .....HHWHHHH....
+
+        ....HHHHHHHHH...
+
+        ...HHHHHHHHHHH..
+
+        ..HHsssHHHHHHH..
+
+        ..HssssHHHHHHH..
+
+        ..HskssHHHHHHH..
+
+        ..HHsssHHHHHHH..
+
+        ..PPPPPPPPPPPP..
+
+        ..PPPPPPPPPPPP..
+
+        ..PyrRryrRryrP..
+
+        ...PPPPPPPPPP...'

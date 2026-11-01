@@ -1,0 +1,421 @@
+name: youngster
+description: 'SCRAP KID: Tatooine junkyard kid with shaggy hair, goggles pushed up, a patched dusty-grey tunic and a hydrospanner (replaces Youngster).'
+kit: person16x32
+replaces: graphics/object_events/pics/people/youngster.png
+graphics_info: Youngster
+notes: 'Recast b, B style: the youngster''s own body as regions (shirt -> dusty grey tunic T with a green patch, trim/shorts -> rust trousers S, shoes -> rust boots D), new shaggy auburn hair with steel-strapped
+  green-lensed goggles pushed up, a steel hydrospanner hanging from one hand. Moves to NPC_3 for steel greys and rust hair.'
+palette: npc_3
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_3
+shade: true
+materials:
+  H: c@
+  T: a
+  S: c
+  D: c
+legend:
+  k: 15
+  W: 14
+  L: 8
+  g: 7
+  p: 9
+  q: 10
+  d: 7
+  n: 5
+accept: {}
+base_sheet: graphics/object_events/pics/people/youngster.png
+remap:
+  w: T
+  b: S
+  c: D
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.....HHHHHH.....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..gLWggggggLWg..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHsHHsHHsHH..
+
+        .sHHssssssssHHs.
+
+        .ssHsskssksHHss.
+
+        ..sHsksskssHss..'
+    - x: 5
+      y: 22
+      rows: 'TTssTT
+
+        TTTTTT
+
+        TTTTTT
+
+        _TTTT_'
+    - x: 6
+      y: 24
+      rows: 'pq
+
+        qq'
+    - x: 0
+      y: 26
+      rows: 'dn.
+
+        dn.
+
+        dn.
+
+        nnn
+
+        d.d'
+  up:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.....HHHHHH.....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..gggggggggggg..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        .sHHHHHHHHHHHHs.
+
+        .ssHHHHHHHHHHss.
+
+        ..sHHHHHHHHHHs..'
+    - x: 3
+      y: 21
+      rows: 'TTTTTTTTTT
+
+        _TTTTTTTT_
+
+        _TTTTTTTT_
+
+        _TTTTTTTT_'
+    - x: 8
+      y: 23
+      rows: 'pq
+
+        qq'
+    - x: 13
+      y: 26
+      rows: '.nd
+
+        .nd
+
+        .nd
+
+        nnn
+
+        d.d'
+  left:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.....HHHHHH.....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..WLggggggHHHH..
+
+        ..LLHHHHHHHHHHH.
+
+        ..sHsHHHHHHHHHH.
+
+        ..sssssHHHHHHH..
+
+        ..ssskssHHHHHH..
+
+        ..sssksssHHHH...
+
+        ...ssssssssHH...
+
+        ....ssssssH.....
+
+        .....ssss.......'
+    - x: 2
+      y: 26
+      rows: '.dn
+
+        .dn
+
+        .dn
+
+        nnn
+
+        d.d'
+  down_a:
+    patches:
+    - x: 0
+      y: 13
+      rows: '.....HHHHHH.....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..gLWggggggLWg..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHsHHsHHsHH..
+
+        .sHHssssssssHHs.
+
+        .ssHsskssksHHss.
+
+        ..sHsksskssHss..'
+    - x: 5
+      y: 23
+      rows: 'TTssTT
+
+        TTTTTT
+
+        TTTTTT
+
+        _TTTT_'
+    - x: 6
+      y: 25
+      rows: 'pq
+
+        qq'
+    - x: 0
+      y: 27
+      rows: 'dn.
+
+        dn.
+
+        dn.
+
+        nnn
+
+        d.d'
+  down_b:
+    patches:
+    - x: 0
+      y: 13
+      rows: '.....HHHHHH.....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..gLWggggggLWg..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHsHHsHHsHH..
+
+        .sHHssssssssHHs.
+
+        .ssHsskssksHHss.
+
+        ..sHsksskssHss..'
+    - x: 5
+      y: 23
+      rows: 'TTssTT
+
+        TTTTTT
+
+        TTTTTT
+
+        _TTTT_'
+    - x: 6
+      y: 25
+      rows: 'pq
+
+        qq'
+    - x: 0
+      y: 27
+      rows: 'dn.
+
+        dn.
+
+        dn.
+
+        nnn
+
+        d.d'
+  up_a:
+    patches:
+    - x: 0
+      y: 13
+      rows: '.....HHHHHH.....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..gggggggggggg..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        .sHHHHHHHHHHHHs.
+
+        .ssHHHHHHHHHHss.
+
+        ..sHHHHHHHHHHs..'
+    - x: 3
+      y: 22
+      rows: 'TTTTTTTTTT
+
+        _TTTTTTTT_
+
+        _TTTTTTTT_
+
+        _TTTTTTTT_'
+    - x: 8
+      y: 24
+      rows: 'pq
+
+        qq'
+    - x: 13
+      y: 27
+      rows: '.nd
+
+        .nd
+
+        .nd
+
+        nnn
+
+        d.d'
+  up_b:
+    patches:
+    - x: 0
+      y: 13
+      rows: '.....HHHHHH.....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..gggggggggggg..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        .sHHHHHHHHHHHHs.
+
+        .ssHHHHHHHHHHss.
+
+        ..sHHHHHHHHHHs..'
+    - x: 3
+      y: 22
+      rows: 'TTTTTTTTTT
+
+        _TTTTTTTT_
+
+        _TTTTTTTT_
+
+        _TTTTTTTT_'
+    - x: 8
+      y: 24
+      rows: 'pq
+
+        qq'
+    - x: 13
+      y: 27
+      rows: '.nd
+
+        .nd
+
+        .nd
+
+        nnn
+
+        d.d'
+  left_a:
+    patches:
+    - x: 0
+      y: 13
+      rows: '.....HHHHHH.....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..WLggggggHHHH..
+
+        ..LLHHHHHHHHHHH.
+
+        ..sHsHHHHHHHHHH.
+
+        ..sssssHHHHHHH..
+
+        ..ssskssHHHHHH..
+
+        ..sssksssHHHH...
+
+        ...ssssssssHH...
+
+        ....ssssssH.....
+
+        .....ssss.......'
+    - x: 2
+      y: 27
+      rows: '.dn
+
+        .dn
+
+        .dn
+
+        nnn
+
+        d.d'
+  left_b:
+    patches:
+    - x: 0
+      y: 13
+      rows: '.....HHHHHH.....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..WLggggggHHHH..
+
+        ..LLHHHHHHHHHHH.
+
+        ..sHsHHHHHHHHHH.
+
+        ..sssssHHHHHHH..
+
+        ..ssskssHHHHHH..
+
+        ..sssksssHHHH...
+
+        ...ssssssssHH...
+
+        ....ssssssH.....
+
+        .....ssss.......'
+    - x: 2
+      y: 27
+      rows: '.dn
+
+        .dn
+
+        .dn
+
+        nnn
+
+        d.d'

@@ -1,0 +1,328 @@
+name: twin
+description: 'TWINS: blue Twi''lek kid with short pink head-tails, an olive headband and a simple orange tunic (replaces the Twins).'
+kit: person16x32
+replaces: graphics/object_events/pics/people/twin.png
+graphics_info: Twin
+notes: 'Recast b, B style: the Twin''s own small body as regions (dress -> orange tunic D on the skin ramp, bow/shoes -> olive boots B, arms -> blue skin), new bald round Twi''lek head on ramp b (blue,
+  after the TWINS front pic) with an olive headband and two short hand-toned pink head-tails hanging to the shoulders like pigtails, olive belt. Moves to NPC_1 for the blue skin and pink.'
+palette: npc_1
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_1
+shade: true
+materials:
+  F: skin-b@
+  P: c
+  D: s
+  C: c
+  B: c
+legend:
+  k: 15
+  W: 14
+  l: 5
+  m: 6
+  o: 7
+accept:
+  eye_row: 'Twi''lek: the face is on ramp b (blue skin), so the eye finder, which looks for black inside the human skin ramp, sees no eyes; the eyes sit where the vanilla Twin''s do'
+base_sheet: graphics/object_events/pics/people/twin.png
+remap:
+  s: F
+  a: D
+  w: D
+  b: B
+  c: F
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 14
+      rows: '................
+
+        ................
+
+        ......FFFF......
+
+        ....FFFFFFFF....
+
+        ...FFFWFFFFFF...
+
+        ..PPPPPPPPPPPP..
+
+        ..FFFFFFFFFFFF..
+
+        .lFFFFFFFFFFFFl.
+
+        .oFFFFkFFkFFFFo.
+
+        lmFFFFkFFkFFFFml
+
+        om..FFFFFFFF..mo
+
+        om____________mo
+
+        om____________mo
+
+        .o____________o.'
+    - &id001
+      x: 0
+      y: 28
+      rows: ____CCCCCCCC____
+  up:
+    patches:
+    - x: 0
+      y: 14
+      rows: '................
+
+        ................
+
+        ......FFFF......
+
+        ....FFFFFFFF....
+
+        ...FFFFWFFFFF...
+
+        ..PPPPPPPPPPPP..
+
+        ..FFFFFFFFFFFF..
+
+        .lFFFFFFFFFFFFl.
+
+        .oFFFFFFFFFFFFo.
+
+        lmFFFFFFFFFFFFml
+
+        om.FFFFFFFFFF.mo
+
+        om_FFDDDDDDFF_mo
+
+        om____________mo
+
+        .o____________o.'
+    - *id001
+  left:
+    patches:
+    - x: 0
+      y: 14
+      rows: '................
+
+        ................
+
+        .......FFFF.....
+
+        .....FFWFFFF....
+
+        ....FFFFFFFFF...
+
+        ...PPPPPPPPPPP..
+
+        ..FFFFFFFFFFFF..
+
+        ..FFFFFFFFFFFFl.
+
+        .FFFkFFFFFFFFlm.
+
+        .FFFkFFFFFFFFmm.
+
+        ..FFFFFFFFFF.mm.
+
+        .....FFFF....mm.
+
+        _____________om_
+
+        ______________o_'
+  down_a:
+    patches:
+    - x: 0
+      y: 15
+      rows: '................
+
+        ................
+
+        ......FFFF......
+
+        ....FFFFFFFF....
+
+        ...FFFWFFFFFF...
+
+        ..PPPPPPPPPPPP..
+
+        ..FFFFFFFFFFFF..
+
+        .lFFFFFFFFFFFFl.
+
+        .oFFFFkFFkFFFFo.
+
+        lmFFFFkFFkFFFFml
+
+        om..FFFFFFFF..mo
+
+        om____________mo
+
+        om____________mo
+
+        .o____________o.'
+    - x: 0
+      y: 29
+      rows: ____CCCCCCCC____
+  down_b:
+    patches:
+    - x: 0
+      y: 15
+      rows: '................
+
+        ................
+
+        ......FFFF......
+
+        ....FFFFFFFF....
+
+        ...FFFWFFFFFF...
+
+        ..PPPPPPPPPPPP..
+
+        ..FFFFFFFFFFFF..
+
+        .lFFFFFFFFFFFFl.
+
+        .oFFFFkFFkFFFFo.
+
+        lmFFFFkFFkFFFFml
+
+        om..FFFFFFFF..mo
+
+        om____________mo
+
+        om____________mo
+
+        .o____________o.'
+    - x: 0
+      y: 29
+      rows: ____CCCCCCCC____
+  up_a:
+    patches:
+    - x: 0
+      y: 15
+      rows: '................
+
+        ................
+
+        ......FFFF......
+
+        ....FFFFFFFF....
+
+        ...FFFFWFFFFF...
+
+        ..PPPPPPPPPPPP..
+
+        ..FFFFFFFFFFFF..
+
+        .lFFFFFFFFFFFFl.
+
+        .oFFFFFFFFFFFFo.
+
+        lmFFFFFFFFFFFFml
+
+        om.FFFFFFFFFF.mo
+
+        om_FFDDDDDDFF_mo
+
+        om____________mo
+
+        .o____________o.'
+    - x: 0
+      y: 29
+      rows: ____CCCCCCCC____
+  up_b:
+    patches:
+    - x: 0
+      y: 15
+      rows: '................
+
+        ................
+
+        ......FFFF......
+
+        ....FFFFFFFF....
+
+        ...FFFFWFFFFF...
+
+        ..PPPPPPPPPPPP..
+
+        ..FFFFFFFFFFFF..
+
+        .lFFFFFFFFFFFFl.
+
+        .oFFFFFFFFFFFFo.
+
+        lmFFFFFFFFFFFFml
+
+        om.FFFFFFFFFF.mo
+
+        om_FFDDDDDDFF_mo
+
+        om____________mo
+
+        .o____________o.'
+    - x: 0
+      y: 29
+      rows: ____CCCCCCCC____
+  left_a:
+    patches:
+    - x: 0
+      y: 15
+      rows: '................
+
+        ................
+
+        .......FFFF.....
+
+        .....FFWFFFF....
+
+        ....FFFFFFFFF...
+
+        ...PPPPPPPPPPP..
+
+        ..FFFFFFFFFFFF..
+
+        ..FFFFFFFFFFFFl.
+
+        .FFFkFFFFFFFFlm.
+
+        .FFFkFFFFFFFFmm.
+
+        ..FFFFFFFFFF.mm.
+
+        .....FFFF....mm.
+
+        _____________om_
+
+        ______________o_'
+  left_b:
+    patches:
+    - x: 0
+      y: 15
+      rows: '................
+
+        ................
+
+        .......FFFF.....
+
+        .....FFWFFFF....
+
+        ....FFFFFFFFF...
+
+        ...PPPPPPPPPPP..
+
+        ..FFFFFFFFFFFF..
+
+        ..FFFFFFFFFFFFl.
+
+        .FFFkFFFFFFFFlm.
+
+        .FFFkFFFFFFFFmm.
+
+        ..FFFFFFFFFF.mm.
+
+        .....FFFF....mm.
+
+        _____________om_
+
+        ______________o_'
