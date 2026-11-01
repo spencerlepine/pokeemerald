@@ -49,17 +49,17 @@ const PLAYER = [
   "#888878", // 2  metal shade
   "#c8c0e0", // 3  metal light (Emerald's lavender-white)
   "#f8f8f8", // 4  white
-  "#e86818", // 5  flight orange (scarf, stripe)
-  "#f8a848", // 6  orange light
+  "#d03830", // 5  red (MIRA's band, hull stripe)
+  "#f87050", // 6  red light
   "#303040", // 7  dark (seat, strap, grille)
   "#f8d898", // 8  skin light
   "#e0a088", // 9  skin shade
-  "#a86048", // 10 hair light / skin outline
+  "#a06840", // 10 hair, KAEL's legs, tan shade
   "#58c8f8", // 11 kyber blue (thruster, lens glint)
   "#3878c0", // 12 deep blue (lens, thruster rim)
-  "#e8d8b0", // 13 tunic light
+  "#f0e0b8", // 13 tunic light
   "#c0a070", // 14 tunic mid
-  "#785838", // 15 tunic dark, boots, hair
+  "#604028", // 15 hair dark
 ]
 
 // ------------------------------------------------------------------ BG3: sky, suns, mesas
@@ -232,8 +232,8 @@ sprite("_hull", { w: 62, h: 30, outline: 1 }, layer("hull", { y: VY + 8 },
   rect(46, 27, 9, 10, 2), vline(48, 28, 8, 7), vline(50, 28, 8, 7), vline(52, 28, 8, 7), hline(46, 27, 9, 3),
   // seat
   poly([33, 25, 44, 23, 46, 24, 46, 26, 33, 27], 7), hline(34, 24, 10, 2),
-  // grips
-  rect(22, 27, 4, 2, 7), line(25, 28, 28, 30, 2),
+  // handlebar stalk and grip, under the rider's hand
+  line(21, 29, 17, 24, 2), px(20, 28, 3), rect(14, 23, 4, 2, 7),
   // footrest
   rect(36, 40, 6, 2, 2),
 ))
@@ -250,53 +250,8 @@ for (let f = 0; f < 4; f++) {
   )
 }
 
-// The rider, outlined. Leaning forward, hands on the grips, scarf streaming back.
-// Keys: f/a hair dark/light, 8/9 skin, 1 eye, 7 goggle strap, c lens, b glint.
-sprite("_kael_body", { w: 62, h: 62 },
-  // back leg (far side) tucked behind
-  line(40, 41, 34, 46, 15, 2),
-  // torso, leaning forward
-  poly([28, 22, 36, 20, 42, 23, 44, 36, 34, 38, 30, 31], 14),
-  poly([28, 22, 36, 20, 38, 22, 33, 25, 31, 31, 30, 31], 13),
-  line(39, 24, 43, 34, 15),                       // back in shade
-  hline(33, 36, 11, 15), hline(34, 37, 10, 15),   // belt
-  // near leg: thigh forward to the knee, shin down to the footrest
-  poly([34, 36, 44, 35, 44, 39, 31, 42, 29, 40], 14), hline(33, 37, 10, 13), poly([29, 40, 32, 41, 35, 47, 31, 48], 14),
-  rect(30, 47, 7, 3, 15), hline(30, 47, 6, 10),   // boot
-  // arm reaching to the grip
-  line(31, 24, 24, 33, 13, 3), line(32, 26, 26, 33, 14, 1),
-  rect(21, 32, 4, 3, 7), px(21, 32, 2),           // glove
-  // head
-  grid(20, 6, `
-    ....ffffff....
-    ..ffaaaaaafff.
-    .faaaaaaaaaaff
-    .77777aaaaaaff
-    7cbc77aaaaaaff
-    7ccc7aaaaafff.
-    .7778aaaaaaff.
-    .88888aa8aaf..
-    888888888aff..
-    8818888889f...
-    .88188889ff...
-    ..88888999f...
-    ...899999.....
-    ....9999......`),
-)
-const SCARF = [
-  [35, 21, 44, 20, 50, 22, 54, 20, 52, 24, 45, 25, 38, 25],
-  [35, 21, 44, 21, 49, 19, 55, 22, 51, 24, 45, 24, 38, 25],
-  [35, 21, 43, 22, 49, 21, 54, 18, 53, 23, 46, 25, 38, 25],
-  [35, 21, 44, 20, 50, 23, 55, 21, 52, 25, 45, 25, 38, 25],
-]
-for (let f = 0; f < 4; f++) {
-  const bob = f === 1 || f === 2 ? 1 : 0
-  sprite("kael_" + f, { w: 62, h: 62, outline: 1 },
-    stamp("_kael_body", 0, bob),
-    poly(SCARF[f].map((v, i) => (i % 2 ? v + bob : v)), 5),
-    line(36, 22 + bob, 44, 22 + bob, 6),
-  )
-}
+include("riders.px.js")
+include("raiders.px.js")
 
 // ------------------------------------------------------------------ game files
 
@@ -304,10 +259,11 @@ gba(D + "trees.png", { bg: ["bg3", "bg2"], map: D + "trees_map.bin", pal: BG })
 gba(D + "grass.png", { bg: ["bg1"], map: D + "grass_map.bin", pal: GROUND, palSlot: 15 })
 gba(D + "trees_small.png", { image: "scenery_small", pal: BG, cells: SMALL_CELLS })
 gba(D + "brendan.png", { obj: ["kael_0", "kael_1", "kael_2", "kael_3"], pal: PLAYER })
-// The intro picks Brendan or May at random; until MIRA is drawn, both show KAEL.
-gba(D + "may.png", { obj: ["kael_0", "kael_1", "kael_2", "kael_3"], pal: PLAYER })
+gba(D + "may.png", { obj: ["mira_0", "mira_1", "mira_2", "mira_3"], pal: PLAYER })
 gba(D + "bicycle.png", { obj: ["speeder_0", "speeder_1", "speeder_2", "speeder_3"], pal: PLAYER })
 gba(D + "player.pal", { pal: PLAYER })
+gba(D + "raider_near.png", { obj: [0, 1, 2, 3, 4].map((i) => "raider_near_" + i), pal: RAIDERS })
+gba(D + "raider_far.png", { obj: [0, 1, 2].map((i) => "raider_far_" + i), pal: RAIDERS })
 
 // ------------------------------------------------------------------ previews: the screen as the GBA shows it
 

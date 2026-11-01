@@ -68,10 +68,8 @@ static void Task_Scene2_BikeRide(u8);
 static void Task_Scene2_End(u8);
 
 // Scene 2 supplemental functions
-static void SpriteCB_Torchic(struct Sprite *sprite);
-static void SpriteCB_Manectric(struct Sprite *sprite);
-static void SpriteCB_Volbeat(struct Sprite *sprite);
-static void SpriteCB_Flygon(struct Sprite *);
+static void SpriteCB_RaiderNear(struct Sprite *sprite);
+static void SpriteCB_RaiderFar(struct Sprite *sprite);
 static void SpriteCB_PlayerOnBicycle(struct Sprite *);
 
 // Scene 3 main tasks
@@ -118,9 +116,8 @@ enum {
     COPYRIGHT_START_INTRO,
 };
 
-#define TAG_VOLBEAT   1500
-#define TAG_TORCHIC   1501
-#define TAG_MANECTRIC 1502
+#define TAG_RAIDER     1500 // near raider tiles, and the palette both raider sheets share
+#define TAG_RAIDER_FAR 1501
 #define TAG_LIGHTNING 1503
 #define TAG_BUBBLES   1504
 #define TAG_SPARKLE   1505
@@ -157,17 +154,12 @@ enum {
 #define TIMER_END_PAN_UP                904
 #define TIMER_END_SCENE_1              1007
 #define TIMER_START_SCENE_2            1026
-#define TIMER_MANECTRIC_ENTER          1088
 #define TIMER_PLAYER_DRIFT_BACK        1109
-#define TIMER_MANECTRIC_RUN_CIRCULAR   1168
 #define TIMER_PLAYER_MOVE_FORWARD      1214
-#define TIMER_TORCHIC_ENTER            1224
-#define TIMER_FLYGON_ENTER             1394
 #define TIMER_PLAYER_MOVE_BACKWARD     1398
 #define TIMER_PLAYER_HOLD_POSITION     1576
 #define TIMER_PLAYER_EXIT              1727
-#define TIMER_TORCHIC_SPEED_UP         1735
-#define TIMER_TORCHIC_EXIT             1856
+#define TIMER_SCENERY_STOP             1856
 #define TIMER_END_SCENE_2              1946
 #define TIMER_START_SCENE_3            2068
 // timer is reset for scene 3
@@ -176,7 +168,6 @@ enum {
 
 static EWRAM_DATA u16 sIntroCharacterGender = 0;
 static EWRAM_DATA u16 UNUSED sUnusedVar = 0;
-static EWRAM_DATA u16 sFlygonYOffset = 0;
 
 COMMON_DATA u32 gIntroFrameCounter = 0;
 COMMON_DATA struct GcmbStruct gMultibootProgramStruct = {0};
@@ -271,154 +262,105 @@ static const u8 sSparkleCoords[][2] =
     {208, 38},
     {},
 };
-static const struct CompressedSpriteSheet sSpriteSheet_RunningPokemon[] =
+// Scene 2: Tusken raiders. The rock is drawn into every near frame, so a near raider pops up by
+// changing frames; a far raider sits behind the ground (OBJ priority 2) and pops up by rising.
+static const struct CompressedSpriteSheet sSpriteSheet_Raiders[] =
 {
-    {gIntroVolbeat_Gfx, 0x400, TAG_VOLBEAT},
-    {gIntroTorchic_Gfx, 0xC00, TAG_TORCHIC},
-    {gIntroManectric_Gfx, 0x2000, TAG_MANECTRIC},
+    {gIntroRaiderNear_Gfx, 0x1400, TAG_RAIDER},
+    {gIntroRaiderFar_Gfx, 0x300, TAG_RAIDER_FAR},
     {},
 };
-static const struct SpritePalette sSpritePalettes_RunningPokemon[] =
+static const struct SpritePalette sSpritePalettes_Raiders[] =
 {
-    {gIntroVolbeat_Pal, TAG_VOLBEAT},
-    {gIntroTorchic_Pal, TAG_TORCHIC},
-    {gIntroManectric_Pal, TAG_MANECTRIC},
+    {gIntroRaider_Pal, TAG_RAIDER},
     {},
 };
-static const struct OamData sOamData_Volbeat =
+static const struct OamData sOamData_RaiderNear =
 {
     .y = DISPLAY_HEIGHT,
     .affineMode = ST_OAM_AFFINE_OFF,
     .objMode = ST_OAM_OBJ_NORMAL,
-    .mosaic = FALSE,
     .bpp = ST_OAM_4BPP,
-    .shape = SPRITE_SHAPE(32x32),
-    .x = 0,
-    .matrixNum = 0,
-    .size = SPRITE_SIZE(32x32),
-    .tileNum = 0,
+    .shape = SPRITE_SHAPE(32x64),
+    .size = SPRITE_SIZE(32x64),
     .priority = 1,
-    .paletteNum = 0,
-    .affineParam = 0,
 };
-static const union AnimCmd sAnim_Volbeat[] =
-{
-    ANIMCMD_FRAME(0, 2),
-    ANIMCMD_FRAME(16, 2),
-    ANIMCMD_JUMP(0),
-};
-static const union AnimCmd *const sAnims_Volbeat[] =
-{
-    sAnim_Volbeat,
-};
-static const struct SpriteTemplate sSpriteTemplate_Volbeat =
-{
-    .tileTag = TAG_VOLBEAT,
-    .paletteTag = TAG_VOLBEAT,
-    .oam = &sOamData_Volbeat,
-    .anims = sAnims_Volbeat,
-    .images = NULL,
-    .affineAnims = gDummySpriteAffineAnimTable,
-    .callback = SpriteCB_Volbeat,
-};
-static const struct OamData sOamData_Torchic =
+static const struct OamData sOamData_RaiderFar =
 {
     .y = DISPLAY_HEIGHT,
     .affineMode = ST_OAM_AFFINE_OFF,
     .objMode = ST_OAM_OBJ_NORMAL,
-    .mosaic = FALSE,
     .bpp = ST_OAM_4BPP,
-    .shape = SPRITE_SHAPE(32x32),
-    .x = 0,
-    .matrixNum = 0,
-    .size = SPRITE_SIZE(32x32),
-    .tileNum = 0,
-    .priority = 1,
-    .paletteNum = 0,
-    .affineParam = 0,
+    .shape = SPRITE_SHAPE(16x32),
+    .size = SPRITE_SIZE(16x32),
+    .priority = 2, // behind the ground (BG1), in front of the homesteads (BG2)
 };
-static const union AnimCmd sAnim_Torchic_Walk[] =
+// Near frames: 0 hidden behind the rock, 1 peeking, 2 rising, 3 up with the gaffi stick, 4 shake
+static const union AnimCmd sAnim_RaiderNear0[] = {ANIMCMD_FRAME(0, 1), ANIMCMD_END};
+static const union AnimCmd sAnim_RaiderNear1[] = {ANIMCMD_FRAME(32, 1), ANIMCMD_END};
+static const union AnimCmd sAnim_RaiderNear2[] = {ANIMCMD_FRAME(64, 1), ANIMCMD_END};
+static const union AnimCmd sAnim_RaiderNear3[] = {ANIMCMD_FRAME(96, 1), ANIMCMD_END};
+static const union AnimCmd sAnim_RaiderNear4[] = {ANIMCMD_FRAME(128, 1), ANIMCMD_END};
+static const union AnimCmd *const sAnims_RaiderNear[] =
 {
-    ANIMCMD_FRAME(0, 5),
-    ANIMCMD_FRAME(16, 5),
-    ANIMCMD_FRAME(32, 5),
-    ANIMCMD_FRAME(16, 5),
-    ANIMCMD_JUMP(0),
+    sAnim_RaiderNear0, sAnim_RaiderNear1, sAnim_RaiderNear2, sAnim_RaiderNear3, sAnim_RaiderNear4,
 };
-static const union AnimCmd sAnim_Torchic_Run[] =
+// Far frames: 0 standing with the stick, 1 and 2 stick overhead (the shake)
+static const union AnimCmd sAnim_RaiderFar0[] = {ANIMCMD_FRAME(0, 1), ANIMCMD_END};
+static const union AnimCmd sAnim_RaiderFar1[] = {ANIMCMD_FRAME(8, 1), ANIMCMD_END};
+static const union AnimCmd sAnim_RaiderFar2[] = {ANIMCMD_FRAME(16, 1), ANIMCMD_END};
+static const union AnimCmd *const sAnims_RaiderFar[] =
 {
-    ANIMCMD_FRAME(0, 3),
-    ANIMCMD_FRAME(16, 3),
-    ANIMCMD_FRAME(32, 3),
-    ANIMCMD_FRAME(16, 3),
-    ANIMCMD_JUMP(0),
+    sAnim_RaiderFar0, sAnim_RaiderFar1, sAnim_RaiderFar2,
 };
-static const union AnimCmd sAnim_Torchic_Trip[] =
+static const struct SpriteTemplate sSpriteTemplate_RaiderNear =
 {
-    ANIMCMD_FRAME(48, 4),
-    ANIMCMD_FRAME(64, 6),
-    ANIMCMD_FRAME(80, 0),
-    ANIMCMD_END,
-};
-enum {
-    TORCHIC_ANIM_WALK,
-    TORCHIC_ANIM_RUN,
-    TORCHIC_ANIM_TRIP,
-};
-static const union AnimCmd *const sAnims_Torchic[] =
-{
-    [TORCHIC_ANIM_WALK] = sAnim_Torchic_Walk,
-    [TORCHIC_ANIM_RUN]  = sAnim_Torchic_Run,
-    [TORCHIC_ANIM_TRIP] = sAnim_Torchic_Trip,
-};
-static const struct SpriteTemplate sSpriteTemplate_Torchic =
-{
-    .tileTag = TAG_TORCHIC,
-    .paletteTag = TAG_TORCHIC,
-    .oam = &sOamData_Torchic,
-    .anims = sAnims_Torchic,
+    .tileTag = TAG_RAIDER,
+    .paletteTag = TAG_RAIDER,
+    .oam = &sOamData_RaiderNear,
+    .anims = sAnims_RaiderNear,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
-    .callback = SpriteCB_Torchic,
+    .callback = SpriteCB_RaiderNear,
 };
-static const struct OamData sOamData_Manectric =
+static const struct SpriteTemplate sSpriteTemplate_RaiderFar =
 {
-    .y = DISPLAY_HEIGHT,
-    .affineMode = ST_OAM_AFFINE_OFF,
-    .objMode = ST_OAM_OBJ_NORMAL,
-    .mosaic = FALSE,
-    .bpp = ST_OAM_4BPP,
-    .shape = SPRITE_SHAPE(64x64),
-    .x = 0,
-    .matrixNum = 0,
-    .size = SPRITE_SIZE(64x64),
-    .tileNum = 0,
-    .priority = 1,
-    .paletteNum = 0,
-    .affineParam = 0,
-};
-static const union AnimCmd sAnim_Manectric[] =
-{
-    ANIMCMD_FRAME(0, 4),
-    ANIMCMD_FRAME(64, 4),
-    ANIMCMD_FRAME(128, 4),
-    ANIMCMD_FRAME(192, 4),
-    ANIMCMD_JUMP(0),
-};
-static const union AnimCmd *const sAnims_Manectric[] =
-{
-    sAnim_Manectric,
-};
-static const struct SpriteTemplate sSpriteTemplate_Manectric =
-{
-    .tileTag = TAG_MANECTRIC,
-    .paletteTag = TAG_MANECTRIC,
-    .oam = &sOamData_Manectric,
-    .anims = sAnims_Manectric,
+    .tileTag = TAG_RAIDER_FAR,
+    .paletteTag = TAG_RAIDER,
+    .oam = &sOamData_RaiderFar,
+    .anims = sAnims_RaiderFar,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
-    .callback = SpriteCB_Manectric,
+    .callback = SpriteCB_RaiderFar,
 };
+// Who pops up when. The ground scrolls right 4 px a frame and the horizon 1/4 px, so near raiders
+// enter at the left edge and rush past the speeder; far ones drift slowly along the skyline.
+struct RaiderSpawn
+{
+    u16 frame;     // gIntroFrameCounter
+    bool8 far;
+    s16 x;         // sprite center x at spawn
+    u8 groundY;    // near: y of the rock's base. far: unused (they stand on the horizon)
+    u8 stay;       // far: frames spent up before ducking (255 = until the fade). near: unused
+};
+#define RAIDER_FAR_Y 93 // far raider center when up; its feet hide behind the dune lip
+static const struct RaiderSpawn sRaiderSpawns[] =
+{
+    {1060, TRUE,   56,   0, 120},
+    {1100, FALSE, -16, 124,   0},
+    {1250, TRUE,  120,   0,  90},
+    {1258, TRUE,  138,   0,  82},
+    {1310, FALSE, -16, 158,   0},
+    {1440, FALSE, -16, 122,   0},
+    {1470, TRUE,   30,   0, 100},
+    {1530, FALSE, -16, 156,   0},
+    {1610, TRUE,   40,   0, 110},
+    {1618, TRUE,   60,   0, 102},
+    {1626, TRUE,   80,   0,  94},
+    {1660, FALSE, -16, 124,   0},
+    {1780, TRUE,  168,   0, 255}, // the last one stays up, gaffi raised, until the fade
+};
+
 static const struct CompressedSpriteSheet sSpriteSheet_Lightning[] =
 {
     {gIntroLightning_Gfx, 0xC00, TAG_LIGHTNING},
@@ -1362,15 +1304,13 @@ static void Task_Scene2_Load(u8 taskId)
     FreeAllSpritePalettes();
     gIntroCredits_MovingSceneryVBase = 0;
     gIntroCredits_MovingSceneryVOffset = 0;
-    sFlygonYOffset = 0;
     LoadIntroPart2Graphics(1);
     gTasks[taskId].func = Task_Scene2_CreateSprites;
 }
 
 #define tBgAnimTaskId   data[0]
 #define tPlayerSpriteId data[1]
-#define tFlygonSpriteId data[2]
-#define tFlygonTimer    data[3]
+#define tNextRaider     data[2]
 
 static void Task_Scene2_CreateSprites(u8 taskId)
 {
@@ -1383,19 +1323,14 @@ static void Task_Scene2_CreateSprites(u8 taskId)
         LoadCompressedSpriteSheet(gSpriteSheet_IntroMay);
 
     LoadCompressedSpriteSheet(gSpriteSheet_IntroBicycle);
-    LoadCompressedSpriteSheet(gSpriteSheet_IntroFlygon);
+    for (spriteId = 0; spriteId < ARRAY_COUNT(sSpriteSheet_Raiders) - 1; spriteId++)
+        LoadCompressedSpriteSheet(&sSpriteSheet_Raiders[spriteId]);
 
     // Load sprite palettes
-    for (spriteId = 0; spriteId < ARRAY_COUNT(sSpriteSheet_RunningPokemon) - 1; spriteId++)
-        LoadCompressedSpriteSheet(&sSpriteSheet_RunningPokemon[spriteId]);
-
     LoadSpritePalettes(gSpritePalettes_IntroPlayerFlygon);
-    LoadSpritePalettes(sSpritePalettes_RunningPokemon);
+    LoadSpritePalettes(sSpritePalettes_Raiders);
 
-    // Create Pokémon and player sprites
-    CreateSprite(&sSpriteTemplate_Manectric, DISPLAY_WIDTH + 32, 128, 0);
-    CreateSprite(&sSpriteTemplate_Torchic, DISPLAY_WIDTH + 48, 110, 1);
-
+    // Create the player on the speeder. The raiders are created by Task_Scene2_BikeRide.
     if (sIntroCharacterGender == MALE)
         spriteId = CreateIntroBrendanSprite(DISPLAY_WIDTH + 32, 100);
     else
@@ -1404,12 +1339,9 @@ static void Task_Scene2_CreateSprites(u8 taskId)
     gSprites[spriteId].callback = SpriteCB_PlayerOnBicycle;
     gSprites[spriteId].anims = sAnims_PlayerBicycle;
     gTasks[taskId].tPlayerSpriteId = spriteId;
-    CreateSprite(&sSpriteTemplate_Volbeat, DISPLAY_WIDTH + 32, 80, 4);
-    spriteId = CreateIntroFlygonSprite(-64, 60);
-    gSprites[spriteId].callback = SpriteCB_Flygon;
-    gTasks[taskId].tFlygonSpriteId = spriteId;
+    gTasks[taskId].tNextRaider = 0;
 
-    // Fade in and start bike ride
+    // Fade in and start the ride
     BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_WHITEALPHA);
     SetVBlankCallback(VBlankCB_Intro);
     gTasks[taskId].tBgAnimTaskId = CreateBicycleBgAnimationTask(1, 0x4000, 0x400, 0x10);
@@ -1417,13 +1349,34 @@ static void Task_Scene2_CreateSprites(u8 taskId)
     gTasks[taskId].func = Task_Scene2_BikeRide;
 }
 
+#define sStay    data[1]
+#define sTimer   data[2]
+#define sSubX    data[3]
+
+static void SpawnRaider(const struct RaiderSpawn *spawn)
+{
+    u8 spriteId;
+
+    if (spawn->far)
+    {
+        // Starts hidden below the dune lip
+        spriteId = CreateSprite(&sSpriteTemplate_RaiderFar, spawn->x, RAIDER_FAR_Y + 16, 6);
+    }
+    else
+    {
+        // In front of the speeder (subpriority 0) when lower on screen than it, behind it otherwise
+        spriteId = CreateSprite(&sSpriteTemplate_RaiderNear, spawn->x, spawn->groundY - 32,
+                                spawn->groundY > 130 ? 0 : 5);
+    }
+    if (spriteId != MAX_SPRITES)
+        gSprites[spriteId].sStay = spawn->stay;
+}
+
 static void Task_Scene2_BikeRide(u8 taskId)
 {
-    u16 offset;
-
-    if (gIntroFrameCounter == TIMER_TORCHIC_EXIT)
+    if (gIntroFrameCounter == TIMER_SCENERY_STOP)
     {
-        // Stop the moving scenery/backgrounds, for when the camera fixes on Torchic
+        // Stop the moving scenery/backgrounds for the last shot
         gIntroCredits_MovingSceneryState = INTROCRED_SCENERY_FROZEN;
         DestroyTask(gTasks[taskId].tBgAnimTaskId);
     }
@@ -1435,14 +1388,16 @@ static void Task_Scene2_BikeRide(u8 taskId)
         gTasks[taskId].func = Task_Scene2_End;
     }
 
-    // Check for updates to player/flygon sprites
-    // These states are for SpriteCB_PlayerOnBicycle and SpriteCB_Flygon respectively
+    // Raiders
+    while (gTasks[taskId].tNextRaider < (s16)ARRAY_COUNT(sRaiderSpawns)
+        && sRaiderSpawns[gTasks[taskId].tNextRaider].frame <= gIntroFrameCounter)
+        SpawnRaider(&sRaiderSpawns[gTasks[taskId].tNextRaider++]);
+
+    // Check for updates to the player sprite (states for SpriteCB_PlayerOnBicycle)
     if (gIntroFrameCounter == TIMER_PLAYER_DRIFT_BACK)
         gSprites[gTasks[taskId].tPlayerSpriteId].sState = 1;
     if (gIntroFrameCounter == TIMER_PLAYER_MOVE_FORWARD)
         gSprites[gTasks[taskId].tPlayerSpriteId].sState = 0;
-    if (gIntroFrameCounter == TIMER_FLYGON_ENTER)
-        gSprites[gTasks[taskId].tFlygonSpriteId].sState = 1;
     if (gIntroFrameCounter == TIMER_PLAYER_MOVE_BACKWARD)
         gSprites[gTasks[taskId].tPlayerSpriteId].sState = 2;
     if (gIntroFrameCounter == TIMER_PLAYER_HOLD_POSITION)
@@ -1450,13 +1405,7 @@ static void Task_Scene2_BikeRide(u8 taskId)
     if (gIntroFrameCounter == TIMER_PLAYER_EXIT)
         gSprites[gTasks[taskId].tPlayerSpriteId].sState = 4;
 
-    // Handle flygon's y movement
-    offset = Sin(gTasks[taskId].tFlygonTimer >> 2 & 0x7F, 48);
-    sFlygonYOffset = offset;
-    if (gTasks[taskId].tFlygonTimer < 512)
-        gTasks[taskId].tFlygonTimer++;
-
-    // Alternate colors of the trees
+    // Blink the vaporator lights
     CycleSceneryPalette(0);
 }
 
@@ -1466,253 +1415,118 @@ static void Task_Scene2_End(u8 taskId)
         gTasks[taskId].func = Task_Scene3_Load;
 }
 
-#define sStateDelay data[1]
-#define sNextState  data[2]
-#define sCosYIdx    data[3]
-#define sSinXIdx    data[4]
-#define sSinYIdx    data[5]
-#define sFig8Loops  data[6]
-
 enum {
-    VOLBEAT_WAIT_ENTER,
-    VOLBEAT_ENTER,
-    VOLBEAT_ZIP_BACKWARD,
-    VOLBEAT_ZIP_DOWN,
-    VOLBEAT_ZIP_FORWARD,
-    VOLBEAT_INIT_FIGURE_8,
-    VOLBEAT_FIGURE_8,
-    VOLBEAT_EXIT,
-    VOLBEAT_WAIT_STATE
+    RAIDER_HIDDEN,
+    RAIDER_RISE,
+    RAIDER_UP,
+    RAIDER_DUCK,
+    RAIDER_GONE,
 };
 
-static void SpriteCB_Volbeat(struct Sprite *sprite)
+// Near raider: rides the ground (4 px a frame to the right). Pops up from behind its rock once on
+// screen, shakes the gaffi stick as the speeder goes by, ducks back down before leaving.
+static void SpriteCB_RaiderNear(struct Sprite *sprite)
 {
-    sprite->sCosYIdx += 4;
+    if (gIntroCredits_MovingSceneryState != INTROCRED_SCENERY_FROZEN)
+        sprite->x += 4;
+    if (sprite->x > DISPLAY_WIDTH + 32)
+    {
+        DestroySprite(sprite);
+        return;
+    }
+
+    sprite->sTimer++;
     switch (sprite->sState)
     {
-    case VOLBEAT_WAIT_ENTER:
-        if (++sprite->sStateDelay < 180)
-            break;
-        sprite->sState++;
-        // fallthrough
-    case VOLBEAT_ENTER:
-        sprite->x -= 4;
-        if (sprite->x == 60)
+    case RAIDER_HIDDEN:
+        StartSpriteAnimIfDifferent(sprite, 0);
+        if (sprite->x >= 24)
         {
-            sprite->sState = VOLBEAT_WAIT_STATE;
-            sprite->sStateDelay = 20;
-            sprite->sNextState = VOLBEAT_ZIP_BACKWARD;
+            sprite->sState = RAIDER_RISE;
+            sprite->sTimer = 0;
         }
         break;
-    case VOLBEAT_ZIP_BACKWARD:
-        sprite->x += 8;
-        sprite->y -= 2;
-        if (sprite->x == 124)
+    case RAIDER_RISE:
+        // 1 peek, 2 rising, 3 up: 3 game frames each
+        StartSpriteAnimIfDifferent(sprite, 1 + sprite->sTimer / 3);
+        if (sprite->sTimer >= 8)
         {
-            sprite->sState = VOLBEAT_WAIT_STATE;
-            sprite->sStateDelay = 20;
-            sprite->sNextState = VOLBEAT_ZIP_DOWN;
+            sprite->sState = RAIDER_UP;
+            sprite->sTimer = 0;
         }
         break;
-    case VOLBEAT_ZIP_DOWN:
-        sprite->y += 4;
-        if (sprite->y == 80)
+    case RAIDER_UP:
+        // shake: alternate frames 3 and 4
+        StartSpriteAnimIfDifferent(sprite, 3 + (sprite->sTimer / 4) % 2);
+        if (sprite->x >= 196)
         {
-            sprite->sState = VOLBEAT_WAIT_STATE;
-            sprite->sStateDelay = 10;
-            sprite->sNextState = VOLBEAT_ZIP_FORWARD;
+            sprite->sState = RAIDER_DUCK;
+            sprite->sTimer = 0;
         }
         break;
-    case VOLBEAT_ZIP_FORWARD:
-        sprite->x -= 8;
-        sprite->y -= 2;
-        if (sprite->x == 60)
+    case RAIDER_DUCK:
+        StartSpriteAnimIfDifferent(sprite, 2 - sprite->sTimer / 3);
+        if (sprite->sTimer >= 8)
+            sprite->sState = RAIDER_GONE;
+        break;
+    case RAIDER_GONE:
+        StartSpriteAnimIfDifferent(sprite, 0);
+        break;
+    }
+}
+
+// Far raider: drifts with the horizon (1/4 px a frame), rises from behind the dune lip, raises the
+// gaffi stick and shakes it, then sinks back down.
+static void SpriteCB_RaiderFar(struct Sprite *sprite)
+{
+    if (gIntroCredits_MovingSceneryState != INTROCRED_SCENERY_FROZEN && ++sprite->sSubX == 4)
+    {
+        sprite->x++;
+        sprite->sSubX = 0;
+    }
+
+    sprite->sTimer++;
+    switch (sprite->sState)
+    {
+    case RAIDER_HIDDEN:
+        StartSpriteAnimIfDifferent(sprite, 0);
+        sprite->sState = RAIDER_RISE;
+        sprite->sTimer = 0;
+        break;
+    case RAIDER_RISE:
+        if (sprite->sTimer % 2 == 0)
+            sprite->y--;
+        if (sprite->y <= RAIDER_FAR_Y)
         {
-            sprite->sState = VOLBEAT_WAIT_STATE;
-            sprite->sStateDelay = 10;
-            sprite->sNextState = VOLBEAT_INIT_FIGURE_8;
+            sprite->sState = RAIDER_UP;
+            sprite->sTimer = 0;
         }
         break;
-    case VOLBEAT_INIT_FIGURE_8:
-        sprite->x += 60;
-        sprite->sSinXIdx = 0xC0;
-        sprite->sSinYIdx = 0x80;
-        sprite->sFig8Loops = 3;
-        sprite->sState++;
-        // fallthrough
-    case VOLBEAT_FIGURE_8:
-        sprite->x2 = Sin((u8)sprite->sSinXIdx, 0x3C);
-        sprite->y2 = Sin((u8)sprite->sSinYIdx, 0x14);
-        sprite->sSinXIdx += 2;
-        sprite->sSinYIdx += 4;
-        if ((sprite->sSinXIdx & 0xFF) == 64)
+    case RAIDER_UP:
+        // stand for a moment, then shake the stick overhead
+        if (sprite->sTimer < 20)
+            StartSpriteAnimIfDifferent(sprite, 0);
+        else
+            StartSpriteAnimIfDifferent(sprite, 1 + (sprite->sTimer / 8) % 2);
+        if (sprite->sStay != 255 && sprite->sTimer >= sprite->sStay)
         {
-            sprite->hFlip = FALSE;
-            if (--sprite->sFig8Loops == 0)
-            {
-                sprite->x += sprite->x2;
-                sprite->x2 = 0;
-                sprite->sState++;
-            }
+            sprite->sState = RAIDER_DUCK;
+            sprite->sTimer = 0;
         }
         break;
-    case VOLBEAT_EXIT:
-        sprite->x -= 2;
-        sprite->y2 = Sin((u8)sprite->sSinYIdx, 0x14);
-        sprite->sSinYIdx += 4;
-        if (sprite->x < -16)
+    case RAIDER_DUCK:
+        StartSpriteAnimIfDifferent(sprite, 0);
+        if (sprite->sTimer % 2 == 0)
+            sprite->y++;
+        if (sprite->y >= RAIDER_FAR_Y + 16)
             DestroySprite(sprite);
         break;
-    case VOLBEAT_WAIT_STATE:
-        // Wait for state progression, fly idly until then
-        sprite->y2 = Cos((u8)sprite->sCosYIdx, 2);
-        if (!--sprite->sStateDelay)
-            sprite->sState = sprite->sNextState;
-        break;
     }
 }
 
-#undef sStateDelay
-#undef sNextState
-#undef sCosYIdx
-#undef sSinXIdx
-#undef sSinYIdx
-#undef sFig8Loops
-
-#define sMoveTimer data[1]
-#define sDelay     data[2]
-
-static void SpriteCB_Torchic(struct Sprite *sprite)
-{
-    switch (sprite->sState)
-    {
-    case 0:
-        if (gIntroFrameCounter == TIMER_TORCHIC_ENTER)
-        {
-            StartSpriteAnim(sprite, TORCHIC_ANIM_RUN);
-            sprite->sState++;
-        }
-        break;
-    case 1:
-        if (gIntroFrameCounter == TIMER_PLAYER_HOLD_POSITION)
-        {
-            StartSpriteAnim(sprite, TORCHIC_ANIM_WALK);
-            sprite->sState++;
-        }
-        else
-        {
-            sprite->sMoveTimer += 64;
-            if (sprite->sMoveTimer & 0xFF00)
-            {
-                sprite->x--;
-                sprite->sMoveTimer &= 0xFF;
-            }
-        }
-        break;
-    case 2:
-        if (gIntroFrameCounter != TIMER_TORCHIC_SPEED_UP)
-        {
-            sprite->sMoveTimer += 32;
-            if (sprite->sMoveTimer & 0xFF00)
-            {
-                sprite->x++;
-                sprite->sMoveTimer &= 0xFF;
-            }
-        }
-        else
-        {
-            StartSpriteAnim(sprite, TORCHIC_ANIM_RUN);
-            sprite->sState++;
-            sprite->sDelay = 80;
-        }
-        break;
-    case 3:
-        if (--sprite->sDelay)
-        {
-            sprite->sMoveTimer += 64;
-            if (sprite->sMoveTimer & 0xFF00)
-            {
-                sprite->x--;
-                sprite->sMoveTimer &= 0xFF;
-            }
-        }
-        else
-        {
-            StartSpriteAnim(sprite, TORCHIC_ANIM_TRIP);
-            sprite->sState++;
-        }
-        break;
-    case 4:
-        if (sprite->animEnded)
-            sprite->x += 4;
-
-        if (sprite->x > 336)
-        {
-            StartSpriteAnim(sprite, TORCHIC_ANIM_RUN);
-            sprite->sState++;
-        }
-        break;
-    case 5:
-        if (gIntroFrameCounter >= TIMER_TORCHIC_EXIT)
-            sprite->x -= 2;
-        break;
-    }
-}
-
-#undef sMoveTimer
-#undef sDelay
-
-#define sSinIdx data[1]
-#define sCosIdx data[2]
-
-static void SpriteCB_Manectric(struct Sprite *sprite)
-{
-    switch (sprite->sState)
-    {
-    case 0:
-        if (gIntroFrameCounter == TIMER_MANECTRIC_ENTER)
-            sprite->sState++;
-        break;
-    case 1:
-        sprite->x -= 2;
-        if (gIntroFrameCounter != TIMER_MANECTRIC_RUN_CIRCULAR)
-            break;
-
-        // Initialize circular pattern running
-        sprite->y -= 12;
-        sprite->sSinIdx = 0x80;
-        sprite->sCosIdx = 0;
-        sprite->sState++;
-        // fallthrough
-    case 2:
-        if (sprite->x + sprite->x2 <= -32)
-        {
-            // Manectric is offscreen now, destroy it
-            DestroySprite(sprite);
-        }
-        else
-        {
-            // Run in circular pattern
-            if ((sprite->sSinIdx & 0xFF) < 64)
-            {
-                sprite->x2 = Sin((u8)sprite->sSinIdx, 16);
-            }
-            else
-            {
-                if ((sprite->sSinIdx & 0xFF) == 64)
-                    sprite->x -= 48;
-                sprite->x2 = Sin((u8)sprite->sSinIdx, 64);
-            }
-            sprite->sSinIdx++;
-            sprite->y2 = Cos((u8)sprite->sCosIdx, 12);
-            sprite->sCosIdx++;
-        }
-        break;
-    }
-}
-
-#undef sSinIdx
-#undef sCosIdx
+#undef sStay
+#undef sTimer
+#undef sSubX
 
 #define tAlpha        data[0]
 #define tZoomDiv      data[1]
@@ -3132,37 +2946,6 @@ static void SpriteCB_PlayerOnBicycle(struct Sprite *sprite)
     }
 }
 
-#define sSinIdx data[1]
-
-// Movement is started by setting state to 1 in Task_Scene2_BikeRide
-static void SpriteCB_Flygon(struct Sprite *sprite)
-{
-    switch (sprite->sState)
-    {
-    case 0:
-        break;
-    case 1:
-        if (sprite->x2 + sprite->x < DISPLAY_WIDTH + 64)
-            sprite->x2 += 8;
-        else
-            sprite->sState = 2;
-        break;
-    case 2:
-        if (sprite->x2 + sprite->x > 120)
-            sprite->x2 -= 1;
-        else
-            sprite->sState = 3;
-        break;
-    case 3:
-        if (sprite->x2 > 0)
-            sprite->x2 -= 2;
-        break;
-    }
-    sprite->y2 = Sin((u8)sprite->sSinIdx, 8) - sFlygonYOffset;
-    sprite->sSinIdx += 4;
-}
-
-#undef sSinIdx
 
 #define sTimer      data[1]
 #define sLetterId   data[2]

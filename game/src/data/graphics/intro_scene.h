@@ -1,14 +1,11 @@
 const u16 gIntroGameFreakTextFade_Pal[] = INCGFX_U16("graphics/intro/scene_1/text.pal", ".gbapal"); // game freak text blue fade
 const u16 gIntroPlayer_Pal[] = INCGFX_U16("graphics/intro/scene_2/player.pal", ".gbapal");
 const u16 gIntro3Bg_Pal[16][16] = INCGFX_U16("graphics/intro/scene_3/bg.pal", ".gbapal");
-const u16 gIntroVolbeat_Pal[] = INCGFX_U16("graphics/intro/scene_2/volbeat.png", ".gbapal");
-const u16 gIntroTorchic_Pal[] = INCGFX_U16("graphics/intro/scene_2/torchic.png", ".gbapal");
-const u16 gIntroManectric_Pal[] = INCGFX_U16("graphics/intro/scene_2/manectric.png", ".gbapal");
+const u16 gIntroRaider_Pal[] = INCGFX_U16("graphics/intro/scene_2/raider_near.png", ".gbapal");
 const u16 gIntroFlygon_Pal[] = INCGFX_U16("graphics/intro/scene_2/flygon.png", ".gbapal");
 
-const u32 gIntroVolbeat_Gfx[] = INCGFX_U32("graphics/intro/scene_2/volbeat.png", ".4bpp.lz");
-const u32 gIntroTorchic_Gfx[] = INCGFX_U32("graphics/intro/scene_2/torchic.png", ".4bpp.lz");
-const u32 gIntroManectric_Gfx[] = INCGFX_U32("graphics/intro/scene_2/manectric.png", ".4bpp.lz");
+const u32 gIntroRaiderNear_Gfx[] = INCGFX_U32("graphics/intro/scene_2/raider_near.png", ".4bpp.lz");
+const u32 gIntroRaiderFar_Gfx[] = INCGFX_U32("graphics/intro/scene_2/raider_far.png", ".4bpp.lz");
 const u32 gIntroFlygon_Gfx[] = INCGFX_U32("graphics/intro/scene_2/flygon.png", ".4bpp.lz");
 const u32 gIntroBrendan_Gfx[] = INCGFX_U32("graphics/intro/scene_2/brendan.png", ".4bpp.lz");
 const u32 gIntroMay_Gfx[] = INCGFX_U32("graphics/intro/scene_2/may.png", ".4bpp.lz");
