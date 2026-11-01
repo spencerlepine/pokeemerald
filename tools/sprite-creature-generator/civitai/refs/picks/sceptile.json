@@ -2,9 +2,9 @@
   "init": "refs/sceptile_prep.png",
   "init_source": "https://static.wikia.nocookie.net/starwars/images/4/40/HornedRaptor.jpg/revision/latest?cb=20101221190944",
   "flip": false,
-  "denoise": 0.5,
+  "denoise": 0.45,
   "desc": "powerful adult katarn raptor with a spiny back crest and heavy clawed legs and leafy tail fronds",
   "colour": "dark red brown",
-  "ref_note": "Re-pick (varactyl art belongs to dragonite): horned raptor render on dark bg, bulkier bipedal hunter, flipped to face left; reddish so the desc pushes leafy katarn traits",
+  "ref_note": "Horned raptor render flipped to face left, denoise 0.45 for cleaner sprite",
   "negative": "saddle, harness, reins, rider, human"
 }
