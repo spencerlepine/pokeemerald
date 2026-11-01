@@ -1,135 +1,79 @@
 name: boy_3
-description: "Market-town kid with a toy blaster (replaces the Emerald BOY 3 walker)."
+description: Market-town kid with a toy blaster (replaces the Emerald BOY 3 walker).
 kit: person16x32
 replaces: graphics/object_events/pics/people/boy_3.png
 graphics_info: Boy3
-# NPC_4. Smallest kid: pink cap with a dark brim, grey vest over a white shirt, shorts, toy blaster (pink muzzle) in hand.
+notes: 'Composed from boy_3.png: shirt to ramp C (grey); pink toy blaster patched into the hand.'
 palette: npc_4
 palette_tag: OBJ_EVENT_PAL_TAG_NPC_4
-
+base_sheet: graphics/object_events/pics/people/boy_3.png
 legend:
-  ".": 0
-  "K": 15
-  "S": 1
-  "s": 2
-  "t": 3
-  "p": 8
-  "r": 9
-  "R": 10
-  "b": 6
-  "d": 7
-  "E": 14
-  "e": 11
-  "g": 12
-  "G": 13
-  "o": 13
-
+  .: 0
+  '1': 1
+  '2': 2
+  '3': 3
+  '4': 4
+  '5': 5
+  '6': 6
+  '7': 7
+  '8': 8
+  '9': 9
+  A: 10
+  B: 11
+  C: 12
+  D: 13
+  E: 14
+  F: 15
+recolor:
+  8: 11
+  9: 12
+  10: 13
 frames:
-  down: |
-    .....KKKKKK.....
-    ....KpprrrrK....
-    ...KpprrrrrrK...
-    ...KrrrrrrrRK...
-    ..KRRRRRRRRRRK..
-    ..KbSSSSSSSSbK..
-    ..KbSKSSSSKSbK..
-    ..KdSKSSSSKSdK..
-    ...KtsStSSstK...
-    ....KKttttKK....
-    ...KgEEEEEEgK...
-    ..KEKgEEEEgKeK..
-    ..KeKgEEEEgKeK..
-    ..KSKGeeeeGKSK..
-    ...KbbbKKbdKgK..
-    ...KSSK..KSSKpK.
-    ...KooK..KooK...
-    ...KKKK..KKKK...
-    ................
-  up: |
-    .....KKKKKK.....
-    ....KrrrrrrK....
-    ...KrrrrrrrrK...
-    ...KrrrKKrrRK...
-    ..KbbbbbbbbbbK..
-    ..KbbbbbbbbbbK..
-    ..KbbbbbbbbbdK..
-    ..KdbbbbbbbddK..
-    ...KddbbbbddK...
-    ....KKttttKK....
-    ...KgggggggGK...
-    ..KEKgggggGKeK..
-    ..KeKgggggGKeK..
-    ..KSKGGGGGGKSK..
-    ...KbbbKKbdK....
-    ...KSSK..KSSK...
-    ...KooK..KooK...
-    ...KKKK..KKKK...
-    ................
-  left: |
-    ......KKKKK.....
-    .....KpprrrK....
-    ....KpprrrrrK...
-    ....KrrrrrrRK...
-    .KRRRRRbbbbbK...
-    ..KSSSSbbbbbK...
-    ..KSKSSSbbbbK...
-    .KSSKSSSbbbdK...
-    ..KtsSStKddK....
-    ....KKttKKK.....
-    .KKKKKEEgK......
-    .KpggggSKgK.....
-    .KKKKGKSKgK.....
-    .....KeegK......
-    .....KbbdK......
-    .....KSSK.......
-    ....KoooK.......
-    ....KKKKK.......
-    ................
+  down:
+    patches:
+    - x: 12
+      y: 24
+      rows: '_A9A
+
+        _A8A
+
+        __A_'
   down_a:
-    base: down
-    shift: 1
-    patch_y: 29
-    rows: |
-      ...KSSK..KooK...
-      ...KooK..KKKK...
-      ...KKKK.........
+    patches:
+    - x: 12
+      y: 25
+      rows: '_A9A
+
+        _A8A
+
+        __A_'
   down_b:
-    base: down
-    shift: 1
-    patch_y: 29
-    rows: |
-      ...KooK..KSSK...
-      ...KKKK..KooK...
-      .........KKKK...
-  up_a:
-    base: up
-    shift: 1
-    patch_y: 29
-    rows: |
-      ...KSSK..KooK...
-      ...KooK..KKKK...
-      ...KKKK.........
-  up_b:
-    base: up
-    shift: 1
-    patch_y: 29
-    rows: |
-      ...KooK..KSSK...
-      ...KKKK..KooK...
-      .........KKKK...
+    patches:
+    - x: 12
+      y: 25
+      rows: '_A9A
+
+        _A8A
+
+        __A_'
+  left:
+    patches:
+    - x: 9
+      y: 24
+      rows: 'AA98A
+
+        _A9A_'
   left_a:
-    base: left
-    shift: 1
-    patch_y: 29
-    rows: |
-      ....KSSKSSK.....
-      ...KooK.KooK....
-      ...KKKK.KKKK....
+    patches:
+    - x: 9
+      y: 25
+      rows: 'AA98A
+
+        _A9A_'
   left_b:
-    base: left
-    shift: 1
-    patch_y: 29
-    rows: |
-      .....KSSK.......
-      ....KoooK.......
-      ....KKKKK.......
+    patches:
+    - x: 9
+      y: 25
+      rows: 'AA98A
+
+        _A9A_'

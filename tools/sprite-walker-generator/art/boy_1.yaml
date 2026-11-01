@@ -1,137 +1,90 @@
 name: boy_1
-description: "Moisture-farm kid in a desert tunic and goggles (replaces the Emerald BOY 1 walker)."
+description: Moisture-farm kid in a desert tunic and goggles (replaces the Emerald BOY 1 walker).
 kit: person16x32
 replaces: graphics/object_events/pics/people/boy_1.png
 graphics_info: Boy1
-# NPC_3. Small kid: spiky auburn hair, goggles on the brow, off-white tunic flaring to a hem, belt, boots.
+notes: Composed from boy_1.png plus goggles on the brow (rows 15-16).
 palette: npc_3
 palette_tag: OBJ_EVENT_PAL_TAG_NPC_3
-
+base_sheet: graphics/object_events/pics/people/boy_1.png
 legend:
-  ".": 0
-  "K": 15
-  "S": 1
-  "s": 2
-  "t": 3
-  "h": 11
-  "b": 12
-  "d": 13
-  "E": 14
-  "v": 7
-  "W": 5
-  "w": 6
-  "c": 12
-  "o": 13
-
+  .: 0
+  '1': 1
+  '2': 2
+  '3': 3
+  '4': 4
+  '5': 5
+  '6': 6
+  '7': 7
+  '8': 8
+  '9': 9
+  A: 10
+  B: 11
+  C: 12
+  D: 13
+  E: 14
+  F: 15
 frames:
-  down: |
-    .....K.KK.K.....
-    ....KhKhhKhK....
-    ...KhhbhhbbhbK..
-    ..KhbbbbbbbbbdK.
-    ..KvEEvvvvEEvdK.
-    ..KbvvSSSSvvbdK.
-    ..KbSKSSSSKSbdK.
-    ..KdSKSSSSKStdK.
-    ...KtsSSSSstK...
-    ....KKttttKK....
-    ...KWWWKKWWwK...
-    ..KWWwWWWWWwwK..
-    ..KWKWWWWWWKwK..
-    ..KWKccccccKwK..
-    ..KSKWWWWWwKSK..
-    .KWWWWWWWWWwwvK.
-    .KvvvvvvvvvvvvK.
-    ...KooK..KooK...
-    ...KKKK..KKKK...
-    ................
-  up: |
-    .....K.KK.K.....
-    ....KhKhhKhK....
-    ...KhhbhhbbhbK..
-    ..KhbbbbbbbbbdK.
-    ..KvvvvvvvvvvdK.
-    ..KbbbbbbbbbbdK.
-    ..KbhbbbbbbbbdK.
-    ..KdbbbbbbbbddK.
-    ...KddbbbbddK...
-    ....KKttttKK....
-    ...KWWWWWWWwK...
-    ..KWWWWWWWWwwK..
-    ..KWKWWWWWWKwK..
-    ..KWKccccccKwK..
-    ..KSKWWWWWwKSK..
-    .KWWWWWWWWWwwvK.
-    .KvvvvvvvvvvvvK.
-    ...KooK..KooK...
-    ...KKKK..KKKK...
-    ................
-  left: |
-    ......K.KK......
-    .....KhKhhK.....
-    ....KhhbhhbbK...
-    ...KhbbbbbbbbdK.
-    ..KEEvvvvbbbbdK.
-    ..KvvSSSbbbbbdK.
-    ..KSKSSSSbhbdK..
-    .KSSKSSStbbbdK..
-    ..KtsSSttbddK...
-    ...KKKttKKKK....
-    ....KWWWWwK.....
-    ....KWWWWwK.....
-    ....KWKWWwK.....
-    ....KcKccvK.....
-    ....KSSKWwK.....
-    ...KWWWWWWwvK...
-    ...KvvvvvvvvK...
-    ....KooKooK.....
-    ....KKKKKKK.....
-    ................
+  down:
+    patches:
+    - x: 2
+      y: 15
+      rows: D7565D565D7D
+    - x: 2
+      y: 16
+      rows: _D777_777D__
   down_a:
-    base: down
-    shift: 1
-    patch_y: 29
-    rows: |
-      .KvvvvvvvvvvvvK.
-      ...KooK..KKKK...
-      ...KKKK.........
+    patches:
+    - x: 2
+      y: 16
+      rows: D7565D565D7D
+    - x: 2
+      y: 17
+      rows: _D777_777D__
   down_b:
-    base: down
-    shift: 1
-    patch_y: 29
-    rows: |
-      .KvvvvvvvvvvvvK.
-      ...KKKK..KooK...
-      .........KKKK...
-  up_a:
-    base: up
-    shift: 1
-    patch_y: 29
-    rows: |
-      .KvvvvvvvvvvvvK.
-      ...KooK..KKKK...
-      ...KKKK.........
-  up_b:
-    base: up
-    shift: 1
-    patch_y: 29
-    rows: |
-      .KvvvvvvvvvvvvK.
-      ...KKKK..KooK...
-      .........KKKK...
+    patches:
+    - x: 2
+      y: 16
+      rows: D7565D565D7D
+    - x: 2
+      y: 17
+      rows: _D777_777D__
+  left:
+    patches:
+    - x: 2
+      y: 15
+      rows: D7565D
+    - x: 3
+      y: 16
+      rows: D777D
   left_a:
-    base: left
-    shift: 1
-    patch_y: 29
-    rows: |
-      ...KvvvvvvvvK...
-      ..KooK..KooK....
-      ..KKKK..KKKK....
+    patches:
+    - x: 2
+      y: 16
+      rows: D7565D
+    - x: 3
+      y: 17
+      rows: D777D
   left_b:
-    base: left
-    shift: 1
-    patch_y: 29
-    rows: |
-      ...KvvvvvvvvK...
-      .....KooK.......
-      .....KKKK.......
+    patches:
+    - x: 2
+      y: 16
+      rows: D7565D
+    - x: 3
+      y: 17
+      rows: D777D
+  up:
+    patches:
+    - x: 2
+      y: 15
+      rows: D7777777777D
+  up_a:
+    patches:
+    - x: 2
+      y: 16
+      rows: D7777777777D
+  up_b:
+    patches:
+    - x: 2
+      y: 16
+      rows: D7777777777D

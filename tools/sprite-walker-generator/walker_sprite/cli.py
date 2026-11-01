@@ -60,6 +60,11 @@ def emerald_dir() -> Path:
 def report(errors, warnings, m, corpus=None) -> str:
     lines = [f"ERROR   {e}" for e in errors] + [f"warning {w}" for w in warnings]
     corpus = corpus if corpus is not None else lint_mod.load_corpus()
+    sc, verdicts = lint_mod.score(m["summary"], corpus)
+    lines.append("")
+    lines.append(f"STYLE SCORE {sc}/100  (ship to the owner at >= 90 with no FAIL; see STYLE.md)")
+    for key, ok, msg in verdicts:
+        lines.append(f"  {'ok  ' if ok else 'FAIL'} {msg}")
     lines.append("")
     lines.append(f"{'metric':<14}{'this':>8}{'Emerald p5':>12}{'median':>8}{'p95':>8}")
     for k, v in m["summary"].items():
@@ -88,6 +93,11 @@ def cmd_build(a) -> int:
         print(f"note: no pokeemerald at {em}; skipped scene.png (set EMERALD_DIR)")
     preview.showcase(out / "preview")
     text = report(errors, warnings, m)
+    if s.replaces and (em / s.replaces).exists():
+        vf, vc = sheet.read_frames(em / s.replaces)
+        vm = lint_mod.sheet_metrics(dict(zip(spec_mod.KITS[s.kit]["order"], vf)), vc, s.kit)
+        vs, _ = lint_mod.score(vm["summary"])
+        text += f"\n\nvanilla {s.replaces}: style score {vs}/100 (match or beat it; a FAIL it shares is inherited, not new)"
     (out / "lint.txt").write_text(text + "\n")
     (out / "metrics.json").write_text(json.dumps(m, indent=1))
     print(f"wrote {png.relative_to(TOOL)} and previews in {(out / 'preview').relative_to(TOOL)}")
@@ -182,6 +192,14 @@ def cmd_compare(a) -> int:
     return 0
 
 
+def cmd_parts(a) -> int:
+    """Catalogue the vanilla walkers (palette, head rows) with a contact sheet: corpus/parts.{json,png}."""
+    from . import parts
+    out = parts.build(emerald_dir())
+    print(f"{len(out)} vanilla sheets -> corpus/parts.json, corpus/parts.png")
+    return 0
+
+
 def cmd_review(a) -> int:
     """Batch review sheet against the vanilla sprites: python -m walker_sprite review out.png a.yaml b.yaml ..."""
     specs = [spec_mod.load(p) for p in a.specs]
@@ -203,6 +221,7 @@ def main(argv=None) -> int:
         sp.add_argument(arg)
         sp.set_defaults(fn=fn)
     sub.add_parser("corpus").set_defaults(fn=cmd_corpus)
+    sub.add_parser("parts").set_defaults(fn=cmd_parts)
     rp = sub.add_parser("review")
     rp.add_argument("out")
     rp.add_argument("specs", nargs="+")

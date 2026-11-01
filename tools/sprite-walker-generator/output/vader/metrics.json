@@ -37,6 +37,15 @@
   "dark_outline": 1.0,
   "orphans": 0.082,
   "colours": 9,
-  "step_change": 0.391
+  "step_change": 0.391,
+  "edge_black": 1.0,
+  "inner_black": 0.294,
+  "skin_tones": 0,
+  "ramp_tones_min": 3,
+  "ramp_dark_share": 0.222,
+  "hair_rows": 0,
+  "eye_row": -1,
+  "head_w": 16,
+  "body_w": 16
  }
 }

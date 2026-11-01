@@ -1,144 +1,36 @@
 name: black_belt
-description: "Teras Kasi brawler in a training wrap (replaces the Emerald BLACK BELT walker)."
+description: Teras Kasi brawler in a training wrap (replaces the Emerald BLACK BELT walker).
 kit: person16x32
 replaces: graphics/object_events/pics/people/black_belt.png
 graphics_info: BlackBelt
-# NPC_3. Broad bare-armed brawler: shaved head with a topknot, green wrap top, white forearm wraps, wide stance.
+notes: 'Composed from black_belt.png: ramps rotated (wrap green, belt red-brown, hair grey).'
 palette: npc_3
 palette_tag: OBJ_EVENT_PAL_TAG_NPC_3
-
+base_sheet: graphics/object_events/pics/people/black_belt.png
 legend:
-  ".": 0
-  "K": 15
-  "S": 1
-  "s": 2
-  "t": 3
-  "o": 4
-  "H": 12
-  "D": 13
-  "A": 8
-  "a": 9
-  "c": 10
-  "P": 12
-  "p": 13
-  "E": 14
-  "w": 6
-
-frames:
-  down: |
-    ......KHDK......
-    .....KKDDKK.....
-    ....KSSSSSStK...
-    ...KSSSSSSSStK..
-    ...KStKKSKKSsK..
-    ...KSSKSSSKSsK..
-    ...KsSKSSSKStK..
-    ...KtsSStSSstK..
-    ....KtsoootK....
-    .....KtttttK....
-    ..KKKKttttKKKK..
-    .KSSKAAAAAaKSSK.
-    KSSsKAEAAAaKSstK
-    KSssKAAEAAaKsstK
-    KtssKcAAEAcKsttK
-    KEEEKPPPPPpKEEEK
-    KEwEKPPPPPpKEwEK
-    KSStKPPKKPpKSStK
-    .KKKKPPpKPPpKKK.
-    ....KPPpKPPpK...
-    ...KDDDK.KDDDK..
-    ................
-  up: |
-    ......KHDK......
-    .....KKDDKK.....
-    ....KSSSSSStK...
-    ...KSSSSSSSStK..
-    ...KSSSSSSSstK..
-    ...KSSSSSSSstK..
-    ...KsSSSSSSstK..
-    ...KtsSSSSsstK..
-    ....KtssssttK...
-    .....KtttttK....
-    ..KKKKttttKKKK..
-    .KSSKAAAAAaKSSK.
-    KSSsKAAAAEaKSstK
-    KSssKAAAEAaKsstK
-    KtssKcAEAAcKsttK
-    KEEEKPPPPPpKEEEK
-    KEwEKPPPPPpKEwEK
-    KSStKPPKKPpKSStK
-    .KKKKPPpKPPpKKK.
-    ....KPPpKPPpK...
-    ...KDDDK.KDDDK..
-    ................
-  left: |
-    .......KHDK.....
-    ......KKDDKK....
-    .....KSSSSSSK...
-    ....KSSSSSSSStK.
-    ...KSKKSSSSSStK.
-    ...KSKSSSSSSstK.
-    ..KSSKSSSSSSstK.
-    ...KSSSSSSSttK..
-    ...KooSSSSttK...
-    ....KttttttK....
-    .....KKttKKK....
-    ....KAAAAAAaK...
-    ....KASSsAAaK...
-    ....KASssAAaK...
-    ....KcSstAccK...
-    ....KPEEEPPpK...
-    ....KPEwEPPpK...
-    ....KPSStPPpK...
-    ....KPPpKPPpK...
-    ...KPPpK.KPPpK..
-    ..KDDDK...KDDDK.
-    ................
-  down_a:
-    base: down
-    shift: 1
-    patch_y: 29
-    rows: |
-      .KKKKPPpKPPpKKK.
-      ....KPPpKKDDDK..
-      ...KDDDK........
-  down_b:
-    base: down
-    shift: 1
-    patch_y: 29
-    rows: |
-      .KKKKPPpKPPpKKK.
-      ...KDDDKKPPpK...
-      .........KDDDK..
-  up_a:
-    base: up
-    shift: 1
-    patch_y: 29
-    rows: |
-      .KKKKPPpKPPpKKK.
-      ....KPPpKKDDDK..
-      ...KDDDK........
-  up_b:
-    base: up
-    shift: 1
-    patch_y: 29
-    rows: |
-      .KKKKPPpKPPpKKK.
-      ...KDDDKKPPpK...
-      .........KDDDK..
-  left_a:
-    base: left
-    shift: 1
-    patch_y: 29
-    rows: |
-      ...KPPpK.KPPpK..
-      ..KPPpK...KPPpK.
-      .KDDDK.....KDDDK
-  left_b:
-    base: left
-    shift: 1
-    patch_y: 29
-    rows: |
-      ....KPPpKPPpK...
-      .....KPPPpK.....
-      .....KDDDDK.....
+  .: 0
+  '1': 1
+  '2': 2
+  '3': 3
+  '4': 4
+  '5': 5
+  '6': 6
+  '7': 7
+  '8': 8
+  '9': 9
+  A: 10
+  B: 11
+  C: 12
+  D: 13
+  E: 14
+  F: 15
+recolor:
+  5: 8
+  6: 9
+  7: 10
+  8: 11
+  9: 12
+  10: 13
+  11: 5
+  12: 6
+  13: 7

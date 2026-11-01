@@ -141,3 +141,42 @@ decision log, the format facts (`README.md`), its corpus, `art/` and `output/`. 
 imported or read from outside it except a pokeemerald checkout (`EMERALD_DIR`). Code it has in
 common with other art tools (spec parsing, palette rules, gbagfx verify, metrics) is a copy
 trimmed to what this category uses, so this tool can be changed or rewritten on its own.
+
+## Owner review of batches 0-1 (2026-11-01): rejected
+
+Artist, Beauty and the first two passes of batch 1 (black belt, boys 1-3, bug catcher) were drawn
+from scratch as index grids. Owner: "horrible... when you compare them side-by-side they look
+nothing alike. The Pokémon one is way better." Also: cel shading and the top-down perspective
+matter and must be checked by the tool, and the LLM must iterate on its own work until it is
+close before asking for the last 5%. Artist and Beauty were un-marked in the wiki; Vader stays
+(approved earlier, but it would score 30/100 under the new rules; see D11).
+
+## D8. Style is measured and gated, not described (2026-11-01)
+
+`STYLE.md` records what the 90 vanilla sheets actually do, with numbers. The build prints a
+0-100 STYLE SCORE over 11 rules (coloured outlines, four skin tones, full ramps, shadow weight,
+hair rows above the eyes, eye row, head width, height, step change, orphans, inner black), each
+bound to the corpus quartiles. Nothing goes to the owner under 90 or with a FAIL the vanilla
+sheet does not share. The report also scores the vanilla sheet being replaced, because some
+vanilla sheets are outliers themselves (bug catcher's straw hat is drawn in skin tones).
+
+## D9. Coloured outlines (2026-11-01)
+
+The first drafts outlined everything in pure black. Vanilla outlines each material in the dark
+tone of its own ramp; black is 18% of outline pixels on the median sheet and goes on eyes, soles
+and creases. This was the biggest single reason the drafts looked like stickers.
+
+## D10. Compose from vanilla sheets first; draw from scratch last (2026-11-01)
+
+Emerald's artists reused bodies with new heads and palettes. The spec now supports
+`base_sheet`, `recolor`, `parts` (regions of another vanilla sheet, following each frame's bob)
+and per-frame patches. A generic NPC row (most of the 253 object_events rows) is a recolour,
+a palette move and a small prop; it scores 95-100 by construction and keeps the walk cycle.
+Hand-drawn grids remain for silhouettes no vanilla sheet has, and they are the ones to score
+hardest. `corpus/parts.png` is the catalogue to pick from.
+
+## D11. Vader is grandfathered, flagged for a redo (2026-11-01)
+
+Approved before the style rules existed; fails outline, skin and perspective rules (score 30).
+Suggest redrawing him under D9/D10 (compose from a vanilla body, keep the approved helmet
+silhouette, recolour outlines to the navy ramp) and re-approving.

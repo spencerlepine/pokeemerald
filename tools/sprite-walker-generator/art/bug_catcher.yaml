@@ -1,146 +1,494 @@
 name: bug_catcher
-description: "Kid with a bug net and specimen jar (replaces the Emerald BUG CATCHER walker)."
+description: Kid with a bug net and specimen jar (replaces the Emerald BUG CATCHER walker).
 kit: person16x32
 replaces: graphics/object_events/pics/people/bug_catcher.png
 graphics_info: BugCatcher
-# NPC_1. Wide straw-hat brim, net raised on a pole above the hat, specimen jar in the other hand, blue shirt, navy shorts.
+notes: Composed from bug_catcher.png plus a bug net on a pole (right side facing down, left side facing
+  up/left).
 palette: npc_1
 palette_tag: OBJ_EVENT_PAL_TAG_NPC_1
-
+base_sheet: graphics/object_events/pics/people/bug_catcher.png
 legend:
-  ".": 0
-  "K": 15
-  "S": 1
-  "s": 2
-  "t": 3
-  "h": 11
-  "b": 12
-  "d": 13
-  "H": 7
-  "A": 8
-  "a": 9
-  "c": 10
-  "n": 10
-  "N": 13
-  "o": 13
-  "E": 14
-  "e": 8
-
+  .: 0
+  '1': 1
+  '2': 2
+  '3': 3
+  '4': 4
+  '5': 5
+  '6': 6
+  '7': 7
+  '8': 8
+  '9': 9
+  A: 10
+  B: 11
+  C: 12
+  D: 13
+  E: 14
+  F: 15
 frames:
-  down: |
-    .............KKK
-    ............KEeK
-    ............KeEK
-    .....KKKKK...KbK
-    ....KhhhbbK..KbK
-    ...KhhbbbbbK.KbK
-    KhhhhhbbbbbbbbdK
-    .KKKKKKKKKKKKKbK
-    ..KHSSSSSSSHKKbK
-    ..KSKSSSSKSSKKbK
-    ..KsKSSSSKStKKbK
-    ...KtsSSSstK.KbK
-    ....KKttttKK.KbK
-    ...KAAAAAAaK.KbK
-    ..KAKAAAAAKaKKbK
-    .KKAKAAAAaKcKSSK
-    .KaEKAAAAaKcKKbK
-    .KEaKnnnnNK.KKK.
-    .KKKSSK.KSSK....
-    ...KooK.KooK....
-    ...KKKK.KKKK....
-    ................
-  up: |
-    .............KKK
-    ............KEeK
-    ............KeEK
-    .....KKKKK...KbK
-    ....KhhhbbK..KbK
-    ...KhhbbbbbK.KbK
-    KhhhhhbbbbbbbbdK
-    .KKKKKKKKKKKKKbK
-    ..KHHHHHHHHHKKbK
-    ..KHHHHHHHHHKKbK
-    ..KHHHHHHHHHKKbK
-    ...KHHHHHHHK.KbK
-    ....KKttttKK.KbK
-    ...KAAAAAAaK.KbK
-    ..KAKAAAAAKaKKbK
-    ..KAKAAAAaKcKSSK
-    ..KSKAAAAaKcKKbK
-    ..KKKnnnnNK.KKK.
-    ...KSSK.KSSK....
-    ...KooK.KooK....
-    ...KKKK.KKKK....
-    ................
-  left: |
-    KKK.............
-    KEeK............
-    KeEK............
-    KbK...KKKKK.....
-    KbK..KhhhbbK....
-    KbK.KhhbbbbbK...
-    KhhhhhbbbbbbbbdK
-    KbKKKKKKKKKKKKK.
-    KbK.KSSSHHHHHK..
-    KbKKSKSSHHHHHK..
-    KbKSSKSStHHHHK..
-    KbK.KtsSSHHHK...
-    KbK..KKttKKK....
-    KbK...KAAaK.....
-    KSSKKKAAAaK.....
-    KKK...KAKaK.....
-    ......KAAcK.....
-    ......KnnNK.....
-    ......KSSK......
-    ......KooK......
-    ......KKKK......
-    ................
+  down:
+    patches:
+    - x: 12
+      y: 11
+      rows: '_AA_
+
+        AE8A
+
+        A8EA
+
+        AE8A
+
+        _AA_'
+    - x: 13
+      y: 16
+      rows: D
+    - x: 13
+      y: 17
+      rows: D
+    - x: 13
+      y: 18
+      rows: D
+    - x: 13
+      y: 19
+      rows: D
+    - x: 13
+      y: 20
+      rows: D
+    - x: 13
+      y: 21
+      rows: D
+    - x: 13
+      y: 22
+      rows: D
+    - x: 13
+      y: 23
+      rows: D
+    - x: 13
+      y: 24
+      rows: D
+    - x: 13
+      y: 25
+      rows: D
+    - x: 13
+      y: 26
+      rows: D
+    - x: 13
+      y: 27
+      rows: D
+    - x: 13
+      y: 28
+      rows: D
+    - x: 13
+      y: 29
+      rows: D
+    - x: 13
+      y: 30
+      rows: D
   down_a:
-    base: down
-    shift: 1
-    patch_y: 29
-    rows: |
-      ...KSSK.KooK....
-      ...KooK.KKKK....
-      ...KKKK.........
+    patches:
+    - x: 12
+      y: 12
+      rows: '_AA_
+
+        AE8A
+
+        A8EA
+
+        AE8A
+
+        _AA_'
+    - x: 13
+      y: 17
+      rows: D
+    - x: 13
+      y: 18
+      rows: D
+    - x: 13
+      y: 19
+      rows: D
+    - x: 13
+      y: 20
+      rows: D
+    - x: 13
+      y: 21
+      rows: D
+    - x: 13
+      y: 22
+      rows: D
+    - x: 13
+      y: 23
+      rows: D
+    - x: 13
+      y: 24
+      rows: D
+    - x: 13
+      y: 25
+      rows: D
+    - x: 13
+      y: 26
+      rows: D
+    - x: 13
+      y: 27
+      rows: D
+    - x: 13
+      y: 28
+      rows: D
+    - x: 13
+      y: 29
+      rows: D
+    - x: 13
+      y: 30
+      rows: D
+    - x: 13
+      y: 31
+      rows: D
   down_b:
-    base: down
-    shift: 1
-    patch_y: 29
-    rows: |
-      ...KooK.KSSK....
-      ...KKKK.KooK....
-      ........KKKK....
+    patches:
+    - x: 12
+      y: 12
+      rows: '_AA_
+
+        AE8A
+
+        A8EA
+
+        AE8A
+
+        _AA_'
+    - x: 13
+      y: 17
+      rows: D
+    - x: 13
+      y: 18
+      rows: D
+    - x: 13
+      y: 19
+      rows: D
+    - x: 13
+      y: 20
+      rows: D
+    - x: 13
+      y: 21
+      rows: D
+    - x: 13
+      y: 22
+      rows: D
+    - x: 13
+      y: 23
+      rows: D
+    - x: 13
+      y: 24
+      rows: D
+    - x: 13
+      y: 25
+      rows: D
+    - x: 13
+      y: 26
+      rows: D
+    - x: 13
+      y: 27
+      rows: D
+    - x: 13
+      y: 28
+      rows: D
+    - x: 13
+      y: 29
+      rows: D
+    - x: 13
+      y: 30
+      rows: D
+    - x: 13
+      y: 31
+      rows: D
+  up:
+    patches: &id001
+    - x: 0
+      y: 11
+      rows: '_AA_
+
+        AE8A
+
+        A8EA
+
+        AE8A
+
+        _AA_'
+    - x: 2
+      y: 16
+      rows: D
+    - x: 2
+      y: 17
+      rows: D
+    - x: 2
+      y: 18
+      rows: D
+    - x: 2
+      y: 19
+      rows: D
+    - x: 2
+      y: 20
+      rows: D
+    - x: 2
+      y: 21
+      rows: D
+    - x: 2
+      y: 22
+      rows: D
+    - x: 2
+      y: 23
+      rows: D
+    - x: 2
+      y: 24
+      rows: D
+    - x: 2
+      y: 25
+      rows: D
+    - x: 2
+      y: 26
+      rows: D
+    - x: 2
+      y: 27
+      rows: D
+    - x: 2
+      y: 28
+      rows: D
+    - x: 2
+      y: 29
+      rows: D
+    - x: 2
+      y: 30
+      rows: D
   up_a:
-    base: up
-    shift: 1
-    patch_y: 29
-    rows: |
-      ...KSSK.KooK....
-      ...KooK.KKKK....
-      ...KKKK.........
+    patches:
+    - x: 0
+      y: 12
+      rows: '_AA_
+
+        AE8A
+
+        A8EA
+
+        AE8A
+
+        _AA_'
+    - x: 2
+      y: 17
+      rows: D
+    - x: 2
+      y: 18
+      rows: D
+    - x: 2
+      y: 19
+      rows: D
+    - x: 2
+      y: 20
+      rows: D
+    - x: 2
+      y: 21
+      rows: D
+    - x: 2
+      y: 22
+      rows: D
+    - x: 2
+      y: 23
+      rows: D
+    - x: 2
+      y: 24
+      rows: D
+    - x: 2
+      y: 25
+      rows: D
+    - x: 2
+      y: 26
+      rows: D
+    - x: 2
+      y: 27
+      rows: D
+    - x: 2
+      y: 28
+      rows: D
+    - x: 2
+      y: 29
+      rows: D
+    - x: 2
+      y: 30
+      rows: D
+    - x: 2
+      y: 31
+      rows: D
   up_b:
-    base: up
-    shift: 1
-    patch_y: 29
-    rows: |
-      ...KooK.KSSK....
-      ...KKKK.KooK....
-      ........KKKK....
+    patches:
+    - x: 0
+      y: 12
+      rows: '_AA_
+
+        AE8A
+
+        A8EA
+
+        AE8A
+
+        _AA_'
+    - x: 2
+      y: 17
+      rows: D
+    - x: 2
+      y: 18
+      rows: D
+    - x: 2
+      y: 19
+      rows: D
+    - x: 2
+      y: 20
+      rows: D
+    - x: 2
+      y: 21
+      rows: D
+    - x: 2
+      y: 22
+      rows: D
+    - x: 2
+      y: 23
+      rows: D
+    - x: 2
+      y: 24
+      rows: D
+    - x: 2
+      y: 25
+      rows: D
+    - x: 2
+      y: 26
+      rows: D
+    - x: 2
+      y: 27
+      rows: D
+    - x: 2
+      y: 28
+      rows: D
+    - x: 2
+      y: 29
+      rows: D
+    - x: 2
+      y: 30
+      rows: D
+    - x: 2
+      y: 31
+      rows: D
+  left:
+    patches: *id001
   left_a:
-    base: left
-    shift: 1
-    patch_y: 29
-    rows: |
-      ......KSSKSK....
-      .....KooKKooK...
-      .....KKKKKKKK...
+    patches:
+    - x: 0
+      y: 12
+      rows: '_AA_
+
+        AE8A
+
+        A8EA
+
+        AE8A
+
+        _AA_'
+    - x: 2
+      y: 17
+      rows: D
+    - x: 2
+      y: 18
+      rows: D
+    - x: 2
+      y: 19
+      rows: D
+    - x: 2
+      y: 20
+      rows: D
+    - x: 2
+      y: 21
+      rows: D
+    - x: 2
+      y: 22
+      rows: D
+    - x: 2
+      y: 23
+      rows: D
+    - x: 2
+      y: 24
+      rows: D
+    - x: 2
+      y: 25
+      rows: D
+    - x: 2
+      y: 26
+      rows: D
+    - x: 2
+      y: 27
+      rows: D
+    - x: 2
+      y: 28
+      rows: D
+    - x: 2
+      y: 29
+      rows: D
+    - x: 2
+      y: 30
+      rows: D
+    - x: 2
+      y: 31
+      rows: D
   left_b:
-    base: left
-    shift: 1
-    patch_y: 29
-    rows: |
-      ......KSSK......
-      ......KooK......
-      ......KKKK......
+    patches:
+    - x: 0
+      y: 12
+      rows: '_AA_
+
+        AE8A
+
+        A8EA
+
+        AE8A
+
+        _AA_'
+    - x: 2
+      y: 17
+      rows: D
+    - x: 2
+      y: 18
+      rows: D
+    - x: 2
+      y: 19
+      rows: D
+    - x: 2
+      y: 20
+      rows: D
+    - x: 2
+      y: 21
+      rows: D
+    - x: 2
+      y: 22
+      rows: D
+    - x: 2
+      y: 23
+      rows: D
+    - x: 2
+      y: 24
+      rows: D
+    - x: 2
+      y: 25
+      rows: D
+    - x: 2
+      y: 26
+      rows: D
+    - x: 2
+      y: 27
+      rows: D
+    - x: 2
+      y: 28
+      rows: D
+    - x: 2
+      y: 29
+      rows: D
+    - x: 2
+      y: 30
+      rows: D
+    - x: 2
+      y: 31
+      rows: D

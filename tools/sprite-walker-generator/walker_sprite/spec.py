@@ -28,6 +28,23 @@ Front-facing art is mostly symmetric, so a frame can be drawn as its left half a
         - {x: 20, y: 30, rows: "KK_K"}
 
 `palette:` is the name of a shared NPC palette file in palettes/; index 0 is transparent.
+
+Composing from vanilla art (STYLE.md section 6), the default way to make a generic NPC:
+
+    base_sheet: graphics/object_events/pics/people/youngster.png   # all 9 frames start here
+    recolor: {8: 11, 9: 12, 10: 13}        # index remap over the whole base sheet
+    parts:                                 # regions taken from other vanilla sheets, per frame
+      - sheet: graphics/object_events/pics/people/hiker.png
+        rows: [11, 20]                     # rows of that sheet's facing-down frame (inclusive);
+        recolor: {5: 8, 6: 9, 7: 10}       #   each frame's own bob is followed automatically
+        dx: 0                              # optional horizontal shift
+        frames: [down, down_a, down_b]     # optional: only these frames (default: all 9)
+    frames:                                # optional; a frame given only as `patches:` starts
+      down:                                #   from the composed frame
+        patches:
+          - {x: 3, y: 12, rows: "..KK.."}
+
+A patch character `_` keeps the pixel underneath.
 """
 from __future__ import annotations
 
@@ -118,6 +135,69 @@ def _bottom_anchor(rows: Grid, w: int, h: int, where: str) -> Grid:
     return [[0] * w for _ in range(h - len(rows))] + rows
 
 
+def game_dir() -> Path:
+    """The pokeemerald checkout vanilla sheets are read from (same rule as the CLI)."""
+    import os
+    env = os.environ.get("EMERALD_DIR")
+    if env:
+        return Path(env).resolve()
+    tool = Path(__file__).resolve().parents[1]
+    for d in tool.parents:
+        if (d / "game" / "graphics").is_dir():
+            return (d / "game").resolve()
+    return (tool.parent / "pokeemerald").resolve()
+
+
+def _top(g: Grid) -> int:
+    for y, row in enumerate(g):
+        if any(row):
+            return y
+    return len(g)
+
+
+def _recolor(g: Grid, m: dict[int, int]) -> Grid:
+    return [[m.get(v, v) for v in row] for row in g] if m else g
+
+
+def compose(d: dict, kit: str) -> dict[str, Grid]:
+    """Frames built from `base_sheet`, `recolor` and `parts` (vanilla sheets, index grids)."""
+    from .sheet import read_frames  # local import: sheet imports spec
+
+    order = KITS[kit]["order"]
+    w, h = KITS[kit]["frame"]
+    game = game_dir()
+    base, _ = read_frames(game / d["base_sheet"], (w, h))
+    if len(base) != len(order):
+        raise SpecError(f"base_sheet {d['base_sheet']}: {len(base)} frames, kit {kit} needs {len(order)}")
+    rec = {int(k): int(v) for k, v in (d.get("recolor") or {}).items()}
+    frames = {n: _recolor([list(r) for r in g], rec) for n, g in zip(order, base)}
+    for i, pt in enumerate(d.get("parts") or []):
+        where = f"parts[{i}]"
+        src, _ = read_frames(game / pt["sheet"], (w, h))
+        if len(src) != len(order):
+            raise SpecError(f"{where}: {pt['sheet']} has {len(src)} frames, need {len(order)}")
+        a, b = (int(v) for v in pt["rows"])
+        prec = {int(k): int(v) for k, v in (pt.get("recolor") or {}).items()}
+        dx = int(pt.get("dx", 0))
+        only = pt.get("frames") or order
+        src0_top, base0_top = _top(src[0]), _top(base[0])
+        for n in only:
+            k = order.index(n)
+            # follow each frame's own bob: a step frame sits 1 px lower than its stand frame
+            sy = a + (_top(src[k]) - src0_top)
+            ty = a + (_top(base[k]) - base0_top)
+            g = frames[n]
+            for r in range(b - a + 1):
+                if not (0 <= sy + r < h and 0 <= ty + r < h):
+                    continue
+                row = _recolor([src[k][sy + r]], prec)[0]
+                for x in range(w):
+                    tx = x + dx
+                    if 0 <= tx < w and (row[x] or pt.get("replace", True)):
+                        g[ty + r][tx] = row[x]
+    return frames
+
+
 def load(path: str | Path) -> Spec:
     path = Path(path)
     d = yaml.safe_load(path.read_text())
@@ -133,19 +213,25 @@ def load(path: str | Path) -> Spec:
     if isinstance(d["palette"], list):
         if not 2 <= len(d["palette"]) <= 16 or any(len(c) != 3 or not all(0 <= v <= 255 for v in c) for c in d["palette"]):
             raise SpecError("inline palette: 2-16 entries of [r, g, b], 0-255")
-    raw = d["frames"]
+    raw = d.get("frames") or {}
     frames: dict[str, Grid] = {}
+    composed = compose(d, kit) if d.get("base_sheet") else {}
 
     def resolve(name: str, stack: tuple[str, ...] = ()) -> Grid:
         if name in frames:
             return frames[name]
         if name in stack:
             raise SpecError(f"frame {name}: circular reference {' -> '.join(stack + (name,))}")
+        if name not in raw and name in composed:
+            frames[name] = composed[name]
+            return frames[name]
         if name not in raw:
             raise SpecError(f"frame {name} is required by kit {kit} but missing")
         f = raw[name]
         where = f"frame {name}"
-        if isinstance(f, str):
+        if isinstance(f, dict) and name in composed and not ({"half", "mirror_of", "base"} & set(f)):
+            g = [list(r) for r in composed[name]]
+        elif isinstance(f, str):
             g = _bottom_anchor(_parse_rows(f, legend, w, where), w, h, where)
         elif "half" in f:
             lines = [ln.rstrip() for ln in f["half"].strip("\n").split("\n")]

@@ -1,0 +1,542 @@
+{
+ "graphics/object_events/pics/people/artist.png": {
+  "palette": "npc_4",
+  "top": 10,
+  "chin": 21,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/beauty.png": {
+  "palette": "npc_3",
+  "top": 11,
+  "chin": 25,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/black_belt.png": {
+  "palette": "npc_3",
+  "top": 11,
+  "chin": 24,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/boy_1.png": {
+  "palette": "npc_3",
+  "top": 12,
+  "chin": 22,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/boy_2.png": {
+  "palette": "npc_1",
+  "top": 12,
+  "chin": 22,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/boy_3.png": {
+  "palette": "npc_4",
+  "top": 12,
+  "chin": 22,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/brendan/running.png": {
+  "palette": "?",
+  "top": 11,
+  "chin": 23,
+  "feet": 29
+ },
+ "graphics/object_events/pics/people/brendan/walking.png": {
+  "palette": "brendan",
+  "top": 10,
+  "chin": 24,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/bug_catcher.png": {
+  "palette": "npc_1",
+  "top": 11,
+  "chin": 22,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/cameraman.png": {
+  "palette": "npc_4",
+  "top": 11,
+  "chin": 24,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/camper.png": {
+  "palette": "npc_3",
+  "top": 11,
+  "chin": 21,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/contest_judge.png": {
+  "palette": "npc_3",
+  "top": 11,
+  "chin": 21,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/devon_employee.png": {
+  "palette": "npc_2",
+  "top": 11,
+  "chin": 21,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/expert_f.png": {
+  "palette": "npc_4",
+  "top": 13,
+  "chin": 24,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/expert_m.png": {
+  "palette": "npc_4",
+  "top": 12,
+  "chin": 22,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/fat_man.png": {
+  "palette": "npc_1",
+  "top": 11,
+  "chin": 20,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/fisherman.png": {
+  "palette": "npc_2",
+  "top": 11,
+  "chin": 21,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/frontier_brains/anabel.png": {
+  "palette": "npc_4",
+  "top": 12,
+  "chin": 22,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/frontier_brains/brandon.png": {
+  "palette": "npc_3",
+  "top": 11,
+  "chin": 21,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/frontier_brains/greta.png": {
+  "palette": "npc_1",
+  "top": 12,
+  "chin": 22,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/frontier_brains/lucy.png": {
+  "palette": "npc_4",
+  "top": 11,
+  "chin": 21,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/frontier_brains/noland.png": {
+  "palette": "npc_3",
+  "top": 11,
+  "chin": 23,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/frontier_brains/spenser.png": {
+  "palette": "npc_1",
+  "top": 12,
+  "chin": 24,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/frontier_brains/tucker.png": {
+  "palette": "npc_1",
+  "top": 11,
+  "chin": 25,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/gentleman.png": {
+  "palette": "npc_3",
+  "top": 10,
+  "chin": 19,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/girl_1.png": {
+  "palette": "npc_2",
+  "top": 12,
+  "chin": 25,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/girl_2.png": {
+  "palette": "npc_3",
+  "top": 12,
+  "chin": 25,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/girl_3.png": {
+  "palette": "npc_2",
+  "top": 11,
+  "chin": 22,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/gym_leaders/juan.png": {
+  "palette": "npc_4",
+  "top": 11,
+  "chin": 21,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/gym_leaders/norman.png": {
+  "palette": "npc_4",
+  "top": 11,
+  "chin": 21,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/hex_maniac.png": {
+  "palette": "npc_4",
+  "top": 11,
+  "chin": 21,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/hiker.png": {
+  "palette": "npc_1",
+  "top": 10,
+  "chin": 21,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/hot_springs_old_woman.png": {
+  "palette": "npc_4",
+  "top": 11,
+  "chin": 23,
+  "feet": 23
+ },
+ "graphics/object_events/pics/people/lass.png": {
+  "palette": "npc_4",
+  "top": 11,
+  "chin": 21,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/leaf.png": {
+  "palette": "red_leaf",
+  "top": 11,
+  "chin": 25,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/link_receptionist.png": {
+  "palette": "npc_3",
+  "top": 11,
+  "chin": 21,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/man_1.png": {
+  "palette": "npc_3",
+  "top": 11,
+  "chin": 21,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/man_2.png": {
+  "palette": "npc_3",
+  "top": 11,
+  "chin": 21,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/man_3.png": {
+  "palette": "npc_2",
+  "top": 11,
+  "chin": 21,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/man_4.png": {
+  "palette": "npc_4",
+  "top": 11,
+  "chin": 21,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/man_5.png": {
+  "palette": "npc_2",
+  "top": 11,
+  "chin": 21,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/maniac.png": {
+  "palette": "npc_4",
+  "top": 11,
+  "chin": 17,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/mart_employee.png": {
+  "palette": "npc_1",
+  "top": 11,
+  "chin": 21,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/mauville_old_man_1.png": {
+  "palette": "?",
+  "top": 10,
+  "chin": 21,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/mauville_old_man_2.png": {
+  "palette": "?",
+  "top": 10,
+  "chin": 21,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/may/running.png": {
+  "palette": "?",
+  "top": 11,
+  "chin": 23,
+  "feet": 29
+ },
+ "graphics/object_events/pics/people/may/walking.png": {
+  "palette": "may",
+  "top": 11,
+  "chin": 23,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/mom.png": {
+  "palette": "npc_4",
+  "top": 11,
+  "chin": 21,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/old_woman.png": {
+  "palette": "npc_3",
+  "top": 13,
+  "chin": 19,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/picnicker.png": {
+  "palette": "npc_3",
+  "top": 11,
+  "chin": 21,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/pokefan_f.png": {
+  "palette": "npc_2",
+  "top": 11,
+  "chin": 21,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/pokefan_m.png": {
+  "palette": "npc_2",
+  "top": 11,
+  "chin": 25,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/prof_birch.png": {
+  "palette": "npc_3",
+  "top": 11,
+  "chin": 21,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/psychic_m.png": {
+  "palette": "npc_4",
+  "top": 12,
+  "chin": 22,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/red.png": {
+  "palette": "red_leaf",
+  "top": 12,
+  "chin": 22,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/reporter_f.png": {
+  "palette": "npc_4",
+  "top": 11,
+  "chin": 20,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/reporter_m.png": {
+  "palette": "npc_4",
+  "top": 11,
+  "chin": 20,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/rich_boy.png": {
+  "palette": "npc_3",
+  "top": 11,
+  "chin": 21,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/rooftop_sale_woman.png": {
+  "palette": "npc_1",
+  "top": 11,
+  "chin": 21,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/ruby_sapphire_brendan/running.png": {
+  "palette": "?",
+  "top": 11,
+  "chin": 23,
+  "feet": 29
+ },
+ "graphics/object_events/pics/people/ruby_sapphire_brendan/walking.png": {
+  "palette": "?",
+  "top": 10,
+  "chin": 22,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/ruby_sapphire_may/running.png": {
+  "palette": "?",
+  "top": 11,
+  "chin": 23,
+  "feet": 29
+ },
+ "graphics/object_events/pics/people/ruby_sapphire_may/walking.png": {
+  "palette": "?",
+  "top": 11,
+  "chin": 22,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/running_triathlete_f.png": {
+  "palette": "npc_2",
+  "top": 11,
+  "chin": 26,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/running_triathlete_m.png": {
+  "palette": "npc_4",
+  "top": 11,
+  "chin": 25,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/sailor.png": {
+  "palette": "npc_1",
+  "top": 11,
+  "chin": 25,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/school_kid_m.png": {
+  "palette": "npc_1",
+  "top": 12,
+  "chin": 22,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/scientist_1.png": {
+  "palette": "npc_3",
+  "top": 11,
+  "chin": 21,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/scientist_2.png": {
+  "palette": "npc_1",
+  "top": 11,
+  "chin": 21,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/scott.png": {
+  "palette": "npc_1",
+  "top": 11,
+  "chin": 21,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/steven.png": {
+  "palette": "npc_4",
+  "top": 10,
+  "chin": 21,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/swimmer_f.png": {
+  "palette": "npc_2",
+  "top": 15,
+  "chin": 27,
+  "feet": 28
+ },
+ "graphics/object_events/pics/people/swimmer_m.png": {
+  "palette": "npc_1",
+  "top": 15,
+  "chin": 27,
+  "feet": 28
+ },
+ "graphics/object_events/pics/people/teala.png": {
+  "palette": "npc_1",
+  "top": 11,
+  "chin": 21,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/team_aqua/aqua_member_f.png": {
+  "palette": "npc_4",
+  "top": 11,
+  "chin": 21,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/team_aqua/aqua_member_m.png": {
+  "palette": "npc_4",
+  "top": 11,
+  "chin": 23,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/team_aqua/archie.png": {
+  "palette": "npc_1",
+  "top": 11,
+  "chin": 21,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/team_magma/magma_member_f.png": {
+  "palette": "npc_2",
+  "top": 11,
+  "chin": 21,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/team_magma/magma_member_m.png": {
+  "palette": "npc_2",
+  "top": 11,
+  "chin": 23,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/team_magma/maxie.png": {
+  "palette": "npc_2",
+  "top": 11,
+  "chin": 21,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/twin.png": {
+  "palette": "npc_2",
+  "top": 14,
+  "chin": 26,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/unused_woman.png": {
+  "palette": "?",
+  "top": 11,
+  "chin": 21,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/wallace.png": {
+  "palette": "npc_4",
+  "top": 10,
+  "chin": 21,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/wally.png": {
+  "palette": "npc_1",
+  "top": 12,
+  "chin": 22,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/woman_1.png": {
+  "palette": "npc_1",
+  "top": 11,
+  "chin": 21,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/woman_2.png": {
+  "palette": "npc_3",
+  "top": 11,
+  "chin": 21,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/woman_3.png": {
+  "palette": "npc_2",
+  "top": 11,
+  "chin": 21,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/woman_4.png": {
+  "palette": "npc_1",
+  "top": 11,
+  "chin": 21,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/woman_5.png": {
+  "palette": "npc_2",
+  "top": 11,
+  "chin": 21,
+  "feet": 30
+ },
+ "graphics/object_events/pics/people/youngster.png": {
+  "palette": "npc_1",
+  "top": 12,
+  "chin": 22,
+  "feet": 30
+ }
+}

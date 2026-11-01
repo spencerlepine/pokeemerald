@@ -76,35 +76,45 @@ and arms).
 - Sizes are multiples of 8 (tiles are 8x8).
 - Replacing a PNG at the same path needs no code change; a new asset needs C table entries.
 
-## Drawing a new 16x32 walker
+## Making a walker (read STYLE.md first)
 
-1. Find the asset in `../../wiki/database/pending_art.csv` (`kind = object_events`) to get
-   the vanilla file it replaces and the Star Wars character.
-2. Pick the NPC palette (`palettes/npc_1..4.pal`) that already holds the character's colours
-   (D6). Write `art/<name>.yaml`, copying `vader.yaml`'s structure: `replaces`,
-   `graphics_info`, `palette`, `palette_tag`, `legend`, frames.
-3. Draw `down`, `up`, `left` as 16-wide grids, bottom-anchored, feet on row 30 (empty last
-   line), top no higher than row 10. Pure black outline; clothes in a 3-step ramp
-   (shadow/base/highlight), light from the upper left (D7). Derive step frames with
-   `base/shift/patch_y/rows` (D4). For helmeted characters start from Vader's helmet language
-   (round dome, pinch at the temples, flare past the shoulders).
-4. `python -m walker_sprite build art/<name>.yaml`, then **look at**
-   `output/<name>/preview/zoom.png` and `scene.png` (the sprite next to vanilla walkers
-   at 1x-3x). Fix and rebuild until it reads at 1x. Address every lint warning or note in the
-   spec why it is accepted.
-5. `python -m walker_sprite verify art/<name>.yaml` must report an identical round trip.
-6. Uncertain part (helmet, hair, silhouette)? Draw 2-4 variants and make a review sheet with
-   `python -m walker_sprite compare output/<name>-variants.png a.yaml b.yaml ...`.
-7. Commit the spec with `output/<name>/`. Show the owner `showcase.png` and record
-   feedback in `DECISIONS.md`.
+The owner rejected the first hand-drawn batches: black outlines, flat ramps, no top-down
+perspective ("they look nothing alike, the Pokémon one is way better"). `STYLE.md` measures what
+Emerald does; the tool now scores every build against it and the LLM iterates **until the score
+passes before a human sees anything**.
+
+1. Find the row in `../../wiki/database/pending_art.csv` (`kind = object_events`): the vanilla
+   file it replaces and the Star Wars brief (`sw_subject`).
+2. **Compose, don't redraw.** Open `corpus/parts.png` (all 90 vanilla walkers with palette and
+   head rows; `python -m walker_sprite parts` rebuilds it). Start the spec from the vanilla sheet
+   the row replaces (`base_sheet:`), move it to the NPC palette whose ramps have the right colours
+   (`palette:` / `palette_tag:`), remap ramps (`recolor:`), borrow a head or body from another
+   vanilla sheet (`parts:`), and patch in only what is new (props, insignia, goggles) with
+   coloured outlines and full ramps (`frames.<name>.patches`, repeated one row lower on the two
+   step frames). `batches/batch1.py` is the worked example.
+3. Draw from scratch only when no vanilla silhouette fits (droids, Hutts, Yoda, Vader). Then
+   follow STYLE.md literally: outline each material in its dark ramp tone, all four skin tones,
+   hair/hat rows above the eyes, dark tone at the bottom of every shape.
+4. `python -m walker_sprite build art/<name>.yaml`. Read the **STYLE SCORE** block: every FAIL
+   names the rule and the fix. Also read `output/<name>/preview/showcase.png`. Fix, rebuild,
+   repeat. Gate: score >= 90, no FAIL that the vanilla sheet itself does not have (the report
+   prints the vanilla sheet's score), and the round trip in `verify` identical.
+5. `python -m walker_sprite review output/<batch>-review.png art/a.yaml ...` makes the sheet the
+   owner reviews: each new walker beside the vanilla sheet it replaces, plus an in-game lineup
+   (vanilla group vs new group) at 1x and 3x. Only then show the owner, in batches of five.
+6. On approval: copy the PNG to `../../wiki/art/<game path>`, add the row to
+   `../../wiki/mapping/art_ready.csv`, run `python3 ../../wiki/tools/mark_art_ready.py`.
+
+### Commands added for this loop
+
+```bash
+python -m walker_sprite parts                                   # corpus/parts.{json,png}: vanilla catalogue
+python -m walker_sprite review out.png art/a.yaml art/b.yaml    # owner review sheet vs vanilla
+python -m walker_sprite lint <sheet.png>                        # style score of any sheet (vanilla too)
+```
 
 ## Drafting in batches
 
-`walker_sprite/template.py` holds a generic human body (head, torso, legs, step frames; kid or
-`adult: True`, which adds a torso and a leg row). A batch file in `batches/` lists characters as a
-legend (template letter -> palette index) plus per-row `edit`s by absolute row, and writes
-`art/<name>.yaml`. Run it from this folder (`python batches/batch1.py`), build each spec, then
-`python -m walker_sprite review output/batchN-review.png art/a.yaml ...` for one review sheet: each
-new walker next to the vanilla sheet it replaces, plus an in-game lineup (vanilla group vs new group).
-Owner feedback on batch 1 v1: template bodies looked too alike and blocky. Give every character its
-own silhouette (build, headwear, held prop, stance) and draw it with `template.write_spec`.
+A batch file in `batches/` writes `art/<name>.yaml` for five rows at a time from `base_sheet` +
+`recolor` + `parts` + patches (so the step-frame offsets are generated, not hand-copied). Run it
+from this folder (`python batches/batch1.py`), build each spec, then `review`.
