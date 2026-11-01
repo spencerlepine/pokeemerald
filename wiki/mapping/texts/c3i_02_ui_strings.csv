@@ -1492,8 +1492,8 @@ gJPText_Player,プレイヤー,"reviewed, no change needed"
 gJPText_Sama,さま,"reviewed, no change needed"
 gText_DexHoenn,OUTER RIM,reviewed AUTO draft
 gText_DexNational,NATIONAL,"reviewed, no change needed"
-gText_PokedexDiploma,PLAYER: {CLEAR 16}{COLOR RED}{SHADOW LIGHT_RED}{PLAYER}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}\n\nThis document certifies\nthat you have successfully\ncompleted your\n{STR_VAR_1} DATAPAD.\n\n{CLEAR_TO 66}{COLOR RED}{SHADOW LIGHT_RED}GAME FREAK,reviewed AUTO draft
-gJPText_GameFreak,{COLOR RED}{SHADOW LIGHT_RED}ゲ-ムフリ-ク,"reviewed, no change needed"
+gText_PokedexDiploma,PLAYER: {CLEAR 16}{COLOR RED}{SHADOW LIGHT_RED}{PLAYER}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}\n\nThis document certifies\nthat you have successfully\ncompleted your\n{STR_VAR_1} DATAPAD.\n\n{CLEAR_TO 66}{COLOR RED}{SHADOW LIGHT_RED}FAN PROJECT,reviewed AUTO draft
+gJPText_GameFreak,{COLOR RED}{SHADOW LIGHT_RED}FAN PROJECT,"GAME FREAK -> FAN PROJECT (owner, 2026-11-01); unused in game"
 gText_DiplomaEmpty,{COLOR RED}{SHADOW LIGHT_RED},"reviewed, no change needed"
 gText_Hoenn,OUTER RIM,reviewed AUTO draft
 gText_OhABite,Oh! A bite!,"reviewed, no change needed"

@@ -35,6 +35,9 @@ FIX = {
 "gEasyChatGroupName_Pokemon2": r"COMPANIONS2",
 "gText_ProfBirchMatchCallDesc": r"COMPANION PROF.",
 "gText_NothingToCut": r"There's nothing to slice here.",
+# GAME FREAK -> FAN PROJECT everywhere in text (owner, 2026-11-01)
+"gText_PokedexDiploma": r"PLAYER: {CLEAR 16}{COLOR RED}{SHADOW LIGHT_RED}{PLAYER}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}\n\nThis document certifies\nthat you have successfully\ncompleted your\n{STR_VAR_1} DATAPAD.\n\n{CLEAR_TO 66}{COLOR RED}{SHADOW LIGHT_RED}FAN PROJECT",
+"gJPText_GameFreak": r"{COLOR RED}{SHADOW LIGHT_RED}FAN PROJECT",
 }
 NOTES = {
 "gText_SomeonesPC": "PC -> TERMINAL; the PC menu window sizes to its longest entry",
