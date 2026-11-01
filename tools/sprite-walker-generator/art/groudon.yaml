@@ -1,0 +1,293 @@
+name: groudon
+description: 'GREATKRAYT: the eldest greater krayt dragon (replaces Groudon).'
+kit: frames32x32_4
+replaces: graphics/object_events/pics/pokemon/groudon.png
+graphics_info: gObjectEventGraphicsInfo_GroudonFront
+notes: 'Mockup: front (eyes open / shut) and side (two breathing poses); sandy hide, brown bands, bone horn crown.'
+palette: sw_groudon
+palette_tag: OBJ_EVENT_PAL_TAG_GROUDON
+shade: true
+materials:
+  K: a
+  A: a
+  p: b
+  L: s!
+  H: s@
+  M: s@
+  B: a
+  h: b
+  R: c
+  c: b
+  T: s!
+legend:
+  k: 15
+  e: 14
+  n: 15
+  t: 14
+  x: 4
+  o: 4
+  z: 7
+  y: 3
+accept:
+  hair_rows: 'a creature: the horn crown, not hair, sits above the face'
+frames:
+  down: '................................
+
+    ...........h........h...........
+
+    .....h....hh........hh....h.....
+
+    .....hh...hhh......hhh...hh.....
+
+    ......hh..hhh..pp..hhh..hh......
+
+    ......hhh.hhhKKppKKhhh.hhh......
+
+    ..KKKKhhhhhhhKKKKKKhhhhhhhKKKK..
+
+    .hhKKKKhhhhhhHHHHHHhhhhhhKKKKhh.
+
+    .hhhhKKKhhhhHHHHHHHHhhhhKKKhhhh.
+
+    KKhhhhhKhhhHHHHHHHHHHhhhKhhhhhKK
+
+    KKKKhhhhhoHHHHHHHHHHHHohhhhhKKKK
+
+    KKKKKKKKoHHHHHHHHHHHHHHoKKKKKKKK
+
+    KKzKKKKKoBBBHHHHHHHHBBBoKKKKKzKK
+
+    KKKzKKKKkkBHHHyyyyHHHBkkKKKKzKKK
+
+    LKKKKKKKekHHHHHHHHHHHHkeKKKKKKKL
+
+    LLKKKKKKoHHHHHHHHHHHHHHoKKKKKKLL
+
+    LLLKKKKKKoHHHHyyyyHHHHoKKKKKKLLL
+
+    LLLLKKKKKoHHHHHHHHHHHHoKKKKKLLLL
+
+    LLLLLKKKKoMMMMMMMMMMMMoKKKKLLLLL
+
+    LLLLLLKKKKoMMMyyyyMMMoKKKKLLLLLL
+
+    LLLLLLLKKKoMMMMMMMMMMoKKKLLLLLLL
+
+    LyyLLLLLKKoMMMMMMMMMMoKKLLLLLyyL
+
+    LLLyyLLLKKoMMMyyyyMMMoKKLLLyyLLL
+
+    LLLLLLLLLKKoMMMMMMMMoKKLLLLLLLLL
+
+    .LLLLLLLLKKoMMnMMnMMoKKLLLLLLLL.
+
+    .LyyLLLLLLKoMMMMMMMMoKLLLLLLyyL.
+
+    .LLLyyLLLLKtRRRRRRRRtKLLLLyyLLL.
+
+    ..LLLLLLLLLoRtRRRRtRoLLLLLLLLL..
+
+    ..LLLLLLLL..oMMMMMMo..LLLLLLLL..
+
+    ..LLLLLLL....oooooo....LLLLLLL..
+
+    .cLcLcLc................cLcLcLc.
+
+    ................................
+
+    '
+  f1: '................................
+
+    ...........h........h...........
+
+    .....h....hh........hh....h.....
+
+    .....hh...hhh......hhh...hh.....
+
+    ......hh..hhh..pp..hhh..hh......
+
+    ......hhh.hhhKKppKKhhh.hhh......
+
+    ..KKKKhhhhhhhKKKKKKhhhhhhhKKKK..
+
+    .hhKKKKhhhhhhHHHHHHhhhhhhKKKKhh.
+
+    .hhhhKKKhhhhHHHHHHHHhhhhKKKhhhh.
+
+    KKhhhhhKhhhHHHHHHHHHHhhhKhhhhhKK
+
+    KKKKhhhhhoHHHHHHHHHHHHohhhhhKKKK
+
+    KKKKKKKKoHHHHHHHHHHHHHHoKKKKKKKK
+
+    KKzKKKKKoBBBHHHHHHHHBBBoKKKKKzKK
+
+    KKKzKKKKBBBHHHyyyyHHHBBBKKKKzKKK
+
+    LKKKKKKKxxHHHHHHHHHHHHxxKKKKKKKL
+
+    LLKKKKKKoHHHHHHHHHHHHHHoKKKKKKLL
+
+    LLLKKKKKKoHHHHyyyyHHHHoKKKKKKLLL
+
+    LLLLKKKKKoHHHHHHHHHHHHoKKKKKLLLL
+
+    LLLLLKKKKoMMMMMMMMMMMMoKKKKLLLLL
+
+    LLLLLLKKKKoMMMyyyyMMMoKKKKLLLLLL
+
+    LLLLLLLKKKoMMMMMMMMMMoKKKLLLLLLL
+
+    LyyLLLLLKKoMMMMMMMMMMoKKLLLLLyyL
+
+    LLLyyLLLKKoMMMyyyyMMMoKKLLLyyLLL
+
+    LLLLLLLLLKKoMMMMMMMMoKKLLLLLLLLL
+
+    .LLLLLLLLKKoMMnMMnMMoKKLLLLLLLL.
+
+    .LyyLLLLLLKoMMMMMMMMoKLLLLLLyyL.
+
+    .LLLyyLLLLKtRRRRRRRRtKLLLLyyLLL.
+
+    ..LLLLLLLLLoRtRRRRtRoLLLLLLLLL..
+
+    ..LLLLLLLL..oMMMMMMo..LLLLLLLL..
+
+    ..LLLLLLL....oooooo....LLLLLLL..
+
+    .cLcLcLc................cLcLcLc.
+
+    ................................
+
+    '
+  f2: '................................
+
+    ..............hh................
+
+    ...........h...hh...............
+
+    ...........hh...hhh....hh.......
+
+    ............hh...hhh.hhh........
+
+    .............hh..hhhhhh.........
+
+    .............hhhhhhhhh..........
+
+    ..........HHHHhhhhhhKKKKK.......
+
+    ........HHHHHHHhhhKKKzKKKKK.....
+
+    .......HHHHHHHHhKKKKzKKKKzKKK...
+
+    ......HHHHHHHHHoKKKKKzKKKKzKKK..
+
+    ....BBBBHHHHHHHoKKKKKKzKKKKzKKK.
+
+    ..MMMMBkkHHHHHHoKKKKKKKKKKKKKKK.
+
+    MMMMMMMekHHHHHoKKKKKKKKKKKKKKKKK
+
+    MnMMMMMMHHHHHHoKKKKKKKKKKKKKKKKK
+
+    MMMMMMMMMHHHHoKKKKKKKKKKKKKKKKKK
+
+    MMMMMMMMMMMHoKKKKKKKKKKKKKKKKKKK
+
+    tRtRtRtRMMMoKKKKKKKKKKKKKKKKKKKT
+
+    RRRRRRRRRooKKKKKKKKKKKKKKKKKKKTT
+
+    MMMMMMMMMoKKKKKKKKKKKKKKKKKKKKTT
+
+    .MMMMMMMoLLLLLKKKKKKKKKKKKKKKTTT
+
+    ..ooooo.LLLLLLKKKKKKKKKKKKKKTTT.
+
+    .......LLLLLLLLKKKKKKKKKLLLLTTT.
+
+    .......LLLLLLLLKKKKKKKKLLLLLTT..
+
+    .......LLLLLLLL.....KKLLLLLLTT..
+
+    ........LLLLLLL......LLLLLLLTTT.
+
+    ........LLLLLL.......LLLLLLL.TTT
+
+    .......LLLLLLL.......LLLLLL...TT
+
+    .......LLLLLLL......LLLLLLL.TTTT
+
+    .......LLLLLLL......LLLLLLLTTT..
+
+    ......cLcLcLc.......cLcLcLc.....
+
+    ................................
+
+    '
+  f3: '................................
+
+    ................................
+
+    ..............hh................
+
+    ...........h...hh...............
+
+    ...........hh...hhh....hh.......
+
+    ............hh...hhh.hhh........
+
+    .............hh..hhhhhh.........
+
+    .............hhhhhhhhh..........
+
+    ..........HHHHhhhhhhKKKKK.......
+
+    ........HHHHHHHhhhKKKzKKKKK.....
+
+    .......HHHHHHHHhKKKKzKKKKzKKK...
+
+    ......HHHHHHHHHoKKKKKzKKKKzKKK..
+
+    ....BBBBHHHHHHHoKKKKKKzKKKKzKKK.
+
+    ..MMMMBkkHHHHHHoKKKKKKKKKKKKKKK.
+
+    MMMMMMMekHHHHHoKKKKKKKKKKKKKKKKK
+
+    MnMMMMMMHHHHHHoKKKKKKKKKKKKKKKKK
+
+    MMMMMMMMMHHHHoKKKKKKKKKKKKKKKKKK
+
+    MMMMMMMMMMMHoKKKKKKKKKKKKKKKKKKK
+
+    tRtRtRtRMMMoKKKKKKKKKKKKKKKKKKKT
+
+    RRRRRRRRRooKKKKKKKKKKKKKKKKKKKTT
+
+    MMMMMMMMMoKKKKKKKKKKKKKKKKKKKKTT
+
+    .MMMMMMMoLLLLLKKKKKKKKKKKKKKKTTT
+
+    ..ooooo.LLLLLLKKKKKKKKKKKKKKTTT.
+
+    .......LLLLLLLLKKKKKKKKKLLLLTTT.
+
+    .......LLLLLLLL.....KKLLLLLLTT..
+
+    ........LLLLLLL......LLLLLLLTTT.
+
+    ........LLLLLL.......LLLLLLL.TTT
+
+    .......LLLLLLL.......LLLLLL...TT
+
+    .......LLLLLLL......LLLLLLL.TTTT
+
+    .......LLLLLLL......LLLLLLLTTT..
+
+    ......cLcLcLc.......cLcLcLc.....
+
+    ................................
+
+    '

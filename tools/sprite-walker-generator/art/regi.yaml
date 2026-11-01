@@ -1,0 +1,94 @@
+name: regi
+description: 'ROCKWARDEN / ICEWARDEN / DURAWARDEN: ancient sentinel sealed behind Aurebesh glyphs (replaces the Regi sheet).'
+kit: frames32x32_1
+replaces: graphics/object_events/pics/pokemon/regi.png
+graphics_info: Regirock / Regice / Registeel
+notes: 'Group lg2: one sentinel for all three palette tags; body on ramp a, glowing T-visor and Aurebesh glyph plate on ramp b.'
+palette: npc_2
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_2
+shade: true
+materials:
+  H: a!
+  P: a!
+  B: a!
+  R: a!
+  F: a!
+  L: a!
+  V: b!
+  C: c!
+legend:
+  g: 8
+  h: 9
+  G: 10
+  x: 13
+  X: 14
+accept:
+  skin_tones: 'creature: no human skin'
+  hair_rows: 'creature: no hair'
+  eye_row: creature eyes, not a human face
+frames:
+  down: '................................
+
+    ................................
+
+    ................................
+
+    ................................
+
+    ...........HHHHHHHHHH...........
+
+    .........HHHHXXHHHHHHHH.........
+
+    ........HHHHHHHHHHHHHHHH........
+
+    ........HHHHHHHHHHHHHHHH........
+
+    .......HHHHHVVVVVVVVHHHHH.......
+
+    .......HHHHHVVVVVVVVHHHHH.......
+
+    ..PPPP.HHHHHHHHVVHHHHHHHH.PPPP..
+
+    .PPXPPPPHHHHHHHVVHHHHHHHPPXPPPP.
+
+    PPPPPPPPHHHHHHHVVHHHHHHHPPPPPPPP
+
+    PPPPPxPPPBBBBBBBBBBBBBBPPPPPPPPP
+
+    PPPPxPPPPBBBBBBBBBBBBBBPPPxPPPPP
+
+    PPPxPPPPBBBBBBBBBBBxxBBBPPPxxPPP
+
+    .RRRRRRBBBBBBBBBBBBBBBBBBRRRRRR.
+
+    .RRRRRRBGGGGGGGGGGGGGGGGBRRRRRR.
+
+    .RRRRRRBGGggghGghgGhggGGBRRRRRR.
+
+    .RRRRRRBGGhgGGGgggGGghGGBRRRRRR.
+
+    .RRRRRRBGGggGGGhGgGGhgGGBRRRRRR.
+
+    .RRRRRRBGGGGGGGGGGGGGGGGBRRRRRR.
+
+    .CCCCCCBBBBBBBBBBBBBBBBBBCCCCCC.
+
+    CCCCCCCBBBBBBBBBBBBBBBBBBCCCCCCC
+
+    FFFFFFFFBBBBBBBBBBBBBBBBFFFFFFFF
+
+    FFFFFFFF.LLLLLLLLLLLLLL.FFFxxFFF
+
+    FFFxFFFF.LLLLL....LLLLL.FFFFFxFF
+
+    .FxFFFF.LLLLLL....LLLLLL.FFFFFF.
+
+    ..FFFF..LLLLLL....LLLLLL..FFFF..
+
+    ........LLLLLL....LLLLLL........
+
+    .......LLLLLLL....LLLLLLL.......
+
+    ................................
+
+    '

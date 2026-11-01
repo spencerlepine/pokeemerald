@@ -1,0 +1,291 @@
+name: kyogre
+description: 'SANDO: the greatest of the sando aqua monsters (replaces Kyogre).'
+kit: frames32x32_4
+replaces: graphics/object_events/pics/pokemon/kyogre.png
+graphics_info: gObjectEventGraphicsInfo_KyogreFront
+notes: 'Mockup: front and side, each with a breathing bob; blue-grey hide, dark ridged back, webbed claws, white fangs jutting from the underbite.'
+palette: sw_kyogre
+palette_tag: OBJ_EVENT_PAL_TAG_KYOGRE
+shade: true
+materials:
+  K: a
+  d: a
+  H: s@
+  J: s@
+  B: b
+  A: s!
+  f: a
+  T: a
+  R: c
+  G: a
+  c: b
+  F: s!
+legend:
+  k: 15
+  e: 14
+  t: 14
+  o: 4
+  n: 15
+accept:
+  hair_rows: 'a sea beast: its ridged back, not hair, sits above the face'
+frames:
+  down: '................................
+
+    ................................
+
+    ..........f..........f..........
+
+    .........fff........fff.........
+
+    .........ffffTTTTTTffff.........
+
+    ..........ffTTTTTTTTff..........
+
+    ........KKKKKKddddKKKKKK........
+
+    ......KKKKKKKKKKKKKKKKKKKK......
+
+    ....KKKKKKKKKKddddKKKKKKKKKK....
+
+    ...KKKKKKKKKKKKKKKKKKKKKKKKKK...
+
+    ..KKKKKKKKKKKKddddKKKKKKKKKKKK..
+
+    .KKKKKKKKKKKKKKKKKKKKKKKKKKKKKK.
+
+    .KKKKKKKKHHHHHHHHHHHHHHKKKKKKKK.
+
+    KKKKKKKHHHHHHHHHHHHHHHHHHKKKKKKK
+
+    AAKKKKHHGGGHHHHHHHHHHGGGHHKKKKAA
+
+    AAAKKoHkkGHHHHHHHHHHHHGkkHoKKAAA
+
+    AAAAKoHekHHHHHHHHHHHHHHkeHoKAAAA
+
+    AAAAKoHHHHHHHHHHHHHHHHHHHHoKAAAA
+
+    AAAAAKoHHHHHHHHHHHHHHHHHHoKAAAAA
+
+    .AAAAKoHHHHHnHHHHHHnHHHHHoKAAAA.
+
+    .AAAAAKoHHHHHHHHHHHHHHHHoKAAAAA.
+
+    ..AAAAKotHHHHHHHHHHHHHHtoKAAAA..
+
+    ..AAAAKotooooRRttRRooootoKAAAA..
+
+    ..AAAAAoJJJJJJJJJJJJJJJJoAAAAA..
+
+    ..AAAAAoJJJJJJJJJJJJJJJJoAAAAA..
+
+    ...AAAAoJJJJJJJJJJJJJJJJoAAAA...
+
+    ...AAAAAoJJJJJJJJJJJJJJoAAAAA...
+
+    ..AAAAAAoBBBBBBBBBBBBBBoAAAAAA..
+
+    .AAAAAAA.oBBBBBBBBBBBBo.AAAAAAA.
+
+    .AcAcAcA..ooBBBBBBBBoo..AcAcAcA.
+
+    ..c.c.c.....oooooooo.....c.c.c..
+
+    ................................
+
+    '
+  f1: '................................
+
+    ................................
+
+    ................................
+
+    ..........f..........f..........
+
+    .........fff........fff.........
+
+    .........ffffTTTTTTffff.........
+
+    ..........ffTTTTTTTTff..........
+
+    ........KKKKKKddddKKKKKK........
+
+    ......KKKKKKKKKKKKKKKKKKKK......
+
+    ....KKKKKKKKKKddddKKKKKKKKKK....
+
+    ...KKKKKKKKKKKKKKKKKKKKKKKKKK...
+
+    ..KKKKKKKKKKKKddddKKKKKKKKKKKK..
+
+    .KKKKKKKKKKKKKKKKKKKKKKKKKKKKKK.
+
+    .KKKKKKKKHHHHHHHHHHHHHHKKKKKKKK.
+
+    KKKKKKKHHHHHHHHHHHHHHHHHHKKKKKKK
+
+    AAKKKKHHGGGHHHHHHHHHHGGGHHKKKKAA
+
+    AAAKKoHkkGHHHHHHHHHHHHGkkHoKKAAA
+
+    AAAAKoHekHHHHHHHHHHHHHHkeHoKAAAA
+
+    AAAAKoHHHHHHHHHHHHHHHHHHHHoKAAAA
+
+    AAAAAKoHHHHHHHHHHHHHHHHHHoKAAAAA
+
+    .AAAAKoHHHHHnHHHHHHnHHHHHoKAAAA.
+
+    .AAAAAKoHHHHHHHHHHHHHHHHoKAAAAA.
+
+    ..AAAAKotHHHHHHHHHHHHHHtoKAAAA..
+
+    ..AAAAKotooooRRttRRooootoKAAAA..
+
+    ..AAAAAoJJJJJJJJJJJJJJJJoAAAAA..
+
+    ..AAAAAoJJJJJJJJJJJJJJJJoAAAAA..
+
+    ...AAAAoJJJJJJJJJJJJJJJJoAAAA...
+
+    ...AAAAAoJJJJJJJJJJJJJJoAAAAA...
+
+    ..AAAAAAoBBBBBBBBBBBBBBoAAAAAA..
+
+    .AcAcAcA..ooBBBBBBBBoo..AcAcAcA.
+
+    ..c.c.c.....oooooooo.....c.c.c..
+
+    ................................
+
+    '
+  f2: '................................
+
+    ................................
+
+    ................................
+
+    ................................
+
+    ................................
+
+    ................................
+
+    ..........dd.dd.................
+
+    ........KKKKKKKdd...............
+
+    ......KKKKKKKKKKKdd.............
+
+    ....KKKKKKKKKKKKKKKdd...........
+
+    ...HHHHKKKKKKKKKKKKKKKd.........
+
+    ..HHHHHHHKKKKKKKKKKKKKKKK.......
+
+    .HHHGGGHHHKKKKKKKKKKKKKKKKK.....
+
+    .HHHkkGHHHHKKKKKKKKKKKKKKKKKK...
+
+    HHHHekHHHHHKKKKKKKKKKKKKKKKKKTff
+
+    HnHHHHHHHHHHKKKKKKKKKKKKKKKKTTff
+
+    HHHHHHHHHHHHKKKKKKKKKKKKKKKKTfff
+
+    RtRRtoHHHHHHKKKKKKKKKKKKKKKK.fff
+
+    otJJtoHHHHHHKKKKKKKKKKKKKKK...ff
+
+    JJJJJJoHHHHKKKKKKKKKKKKKKK......
+
+    JJJJJJJoKAAAAKKKKKKKKKKKKK......
+
+    BBBBBBBoAAAAAAoBBBBBBBBBB.......
+
+    .BBBBBBoAAAAAAoBBBBBBBBB........
+
+    ..ooBBoAAAAAAoBBBBBBBBB.........
+
+    ....oooAAAAAAooooooooo..........
+
+    .......AAAAAA...................
+
+    ......AAAAAA....................
+
+    .....AAAAAA.....................
+
+    .....AAAAAA.....................
+
+    ....AAAAAAA.....................
+
+    ....AcAcAcA.....................
+
+    ....c.c.c.......................
+
+    '
+  f3: '................................
+
+    ................................
+
+    ................................
+
+    ................................
+
+    ................................
+
+    ................................
+
+    ................................
+
+    ..........dd.dd.................
+
+    ........KKKKKKKdd...............
+
+    ......KKKKKKKKKKKdd.............
+
+    ....KKKKKKKKKKKKKKKdd...........
+
+    ...HHHHKKKKKKKKKKKKKKKd.........
+
+    ..HHHHHHHKKKKKKKKKKKKKKKK.......
+
+    .HHHGGGHHHKKKKKKKKKKKKKKKKK.....
+
+    .HHHkkGHHHHKKKKKKKKKKKKKKKKKK...
+
+    HHHHekHHHHHKKKKKKKKKKKKKKKKKKTff
+
+    HnHHHHHHHHHHKKKKKKKKKKKKKKKKTTff
+
+    HHHHHHHHHHHHKKKKKKKKKKKKKKKKTfff
+
+    RtRRtoHHHHHHKKKKKKKKKKKKKKKK.fff
+
+    otJJtoHHHHHHKKKKKKKKKKKKKKK...ff
+
+    JJJJJJoHHHHKKKKKKKKKKKKKKK......
+
+    JJJJJJJoKAAAAKKKKKKKKKKKKK......
+
+    BBBBBBBoAAAAAAoBBBBBBBBBB.......
+
+    .BBBBBBoAAAAAAoBBBBBBBBB........
+
+    ..ooBBoAAAAAAoBBBBBBBBB.........
+
+    ....oooAAAAAAooooooooo..........
+
+    .......AAAAAA...................
+
+    ......AAAAAA....................
+
+    .....AAAAAA.....................
+
+    ....AAAAAAA.....................
+
+    ....AcAcAcA.....................
+
+    ....c.c.c.......................
+
+    '
