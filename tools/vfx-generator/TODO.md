@@ -1,6 +1,8 @@
 # vfx-generator
 
-**Status:** TODO. Not built yet; this file marks the scope.
+**Status:** READY. The tool is built; see [`README.md`](README.md) ("Where to pick up"). Move effects follow
+[`../../wiki/bible/MOVE_EFFECTS.md`](../../wiki/bible/MOVE_EFFECTS.md): 6 shipped (SABER SLASH, BLASTER SHOT, FORCE PUSH, FORCE CHOKE,
+FORCE BOLT, TURBOLASER); next is chunk 3 (ION CANNON, DETONATE, TARGET LOCK). The audit below is the sheet-level list.
 
 Animated effects: field effects (grass, sand, ash, ripples, emotes), doors, field objects, weather, move-animation particles, battle transitions, and the VFX rows (status/general/special battle animations, net-new VFX like hyperspace and lightsabers).
 
@@ -52,13 +54,13 @@ moves that keep their look, so overwriting them would change those moves too.
 | # | Effect | Row | Starts from (placeholder) | Notes |
 |---|---|---|---|---|
 | 1 | VIBROBLADE slash | `anim:Move_CUT` | `cut.png` | `cut.png` is shared by 6 moves (AERIAL ACE, FURY CUTTER...). New sheet. |
-| 2 | TURBOLASER bolt + beam | `anim:Move_HYPER_BEAM` | `orbs.png` | `orbs.png` is shared by 12 moves. New sheet, green bolt. |
-| 3 | FORCE PUSH shockwave | `anim:Move_PSYCHIC` | `backgrounds/psychic.png` | Psychic BG is shared by 17 moves. New ripple sprite or BG. |
-| 4 | FORCE BOLT (Force lightning) | `anim:Move_SHOCK_WAVE` | `lightning.png`, `electric_orbs.png` | Both shared with THUNDER / CHARGE. New blue-white arcs. |
+| 2 | TURBOLASER bolt + beam | `anim:Move_HYPER_BEAM` | `orbs.png` | `orbs.png` is shared by 12 moves. New sheet, green bolt. **SHIPPED (storyboard).** |
+| 3 | FORCE PUSH shockwave | `anim:Move_PSYCHIC` | `backgrounds/psychic.png` | Psychic BG is shared by 17 moves. New ripple sprite or BG. **SHIPPED (storyboard).** |
+| 4 | FORCE BOLT (Force lightning) | `anim:Move_SHOCK_WAVE` | `lightning.png`, `electric_orbs.png` | Both shared with THUNDER / CHARGE. New blue-white arcs. **SHIPPED (storyboard).** |
 | 5 | ION CANNON orb | `anim:Move_ZAP_CANNON` | `black_ball_2.png` | `black_ball_2.png` is only used by this move, so it can be **redrawn in place**. |
-| 6 | SABER SLASH arc + scorch | `net:vfx-saber-slash` | `slash.png` | Net-new move. `Saber Blue` / `Saber Red` themes. |
-| 7 | BLASTER SHOT bolt + impact spark | `net:vfx-blaster-bolt` | `yellow_star.png` (SWIFT) | Also reused by raid cutscenes. `Signal Red`. |
-| 8 | FORCE CHOKE grip | `net:vfx-force-choke` | CRUNCH (`sharp_teeth.png`) | Mostly motion (lift and shake); one small dark grip/glow sheet. |
+| 6 | SABER SLASH arc + scorch | `net:vfx-saber-slash` | `slash.png` | Net-new move. `Saber Blue` / `Saber Red` themes. **SHIPPED (storyboard).** |
+| 7 | BLASTER SHOT bolt + impact spark | `net:vfx-blaster-bolt` | `yellow_star.png` (SWIFT) | Also reused by raid cutscenes. `Signal Red`. **SHIPPED (storyboard).** |
+| 8 | FORCE CHOKE grip | `net:vfx-force-choke` | CRUNCH (`sharp_teeth.png`) | Mostly motion (lift and shake); one small dark grip/glow sheet. **SHIPPED (storyboard).** |
 
 Overworld and transitions:
 
@@ -185,8 +187,12 @@ Tatooine's Dune Sea. Recolor per planet only if a map looks off.
 |---|---|---|
 | 1 | ION CANNON orb, CREDIT TOSS chips, TURBOLASER (new sheet, needs a tag wired), ~~Fly shuttle~~ | APPROVED (shuttle rejected: keep `bird.png`) |
 | 2 | blue milk jug, macrobinoculars, datapad stylus | REJECTED: prop swaps, not effects. Direction reset: [`../../wiki/bible/MOVE_EFFECTS.md`](../../wiki/bible/MOVE_EFFECTS.md) (storyboards first, then script + art + sound per move) |
+| Chunk 1 | SABER SLASH, BLASTER SHOT, FORCE PUSH (storyboards S1-S3) | SHIPPED to `game/` 2026-11-01 |
+| Chunk 2 | FORCE CHOKE, FORCE BOLT, TURBOLASER (S4, S5, S7) | SHIPPED to `game/` 2026-11-01 (TURBOLASER storyboard replaces batch 1's previewer sheet) |
+| Chunk 3 | ION CANNON, DETONATE, TARGET LOCK (S8, S10, S11) | NEXT |
+| Chunk 4 | Tier A Force pass (BG_FORCE / BG_FORCE_DARK on all Force moves), Tier B renames | TODO |
 
-## To build
+## To build (original scope notes; the tool is built, see README "Where to pick up")
 
 1. Read the rows above in `../../wiki/database/` (filter by `kind` / `category`; skip `KEEP*`, `NO_ART` / `NO_AUDIO` and `CUT`).
 2. Build a tool that takes one row (its `sw_subject` is the brief, `path` / `asset_file` the Emerald original, `suggested_path` the new name) and generates the asset in the game's format.

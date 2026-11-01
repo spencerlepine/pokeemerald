@@ -323,6 +323,9 @@ needs: new sheets with new tags (saber), affine projectiles and multi-hit timing
 battler motion (push), three SEs, and the script layer itself. Chunk 2: FORCE CHOKE, FORCE BOLT, TURBOLASER.
 Chunk 3: ION CANNON, DETONATE, TARGET LOCK. Chunk 4: the Tier A pass and the Tier B renames.
 
+**Progress (2026-11-01):** chunks 1 and 2 are shipped to `game/` (S1-S5, S7; `BG_FORCE` and `BG_FORCE_DARK`
+exist). Chunk 3 is next. How to continue: `tools/vfx-generator/README.md`, "Where to pick up".
+
 Batch 1 and 2 art: the ion orb, credit chips and the capture pod stay as props inside their storyboards; the
 milk jug, macrobinoculars and stylus are scrapped (their specs move to `art/rejected/`).
 
