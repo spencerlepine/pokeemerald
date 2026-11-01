@@ -109,7 +109,8 @@ The prompt is a template (`PROMPT` in the script); a new character only needs a 
 - optional `pose` (default "standing, facing left, three-quarter view") and `style` (`gen1`/`gen2`).
 - The template never says "pokemon trainer", and the shared negatives exclude Poke Balls, caps and
   "generic pokemon trainer"; with those in, every subject came out as a kid in a cap.
-- LoRA strength defaults to 0.75 for the same reason.
+- LoRA strength defaults to 0.75 for the same reason. A job can set `strength` (e.g. 0.5) to pull an
+  alien or creature further from the LoRA's Pokémon-trainer look; `--strength` on the command line wins.
 
 ## Findings from the first run
 

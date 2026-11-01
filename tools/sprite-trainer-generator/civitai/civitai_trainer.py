@@ -178,7 +178,8 @@ def brief(trainer: str) -> dict:
     return {"stem": stem, "wiki_path": row.get("path"), "sw_subject": row.get("sw_subject"),
             "subject": subject, "desc": job.get("desc", ""), "theme": job.get("theme", "factions"),
             "style": job.get("style", ""), "pose": job.get("pose", POSE),
-            "negative": job.get("negative", ""), "pair": bool(job.get("pair"))}
+            "negative": job.get("negative", ""), "pair": bool(job.get("pair")),
+            "strength": job.get("strength")}
 
 
 def build_prompt(b: dict, v: dict) -> str:
@@ -195,6 +196,8 @@ def cmd_gen(args) -> list[Path]:
     b = brief(args.trainer)
     if args.style is not None:
         b["style"] = args.style
+    if b.get("strength") is not None and args.strength == 0.75:  # per-job LoRA weight unless --strength is given
+        args.strength = float(b["strength"])
     v = pick_version(args.version)
     fam = family(v)
     prompt = args.prompt or build_prompt(b, v)

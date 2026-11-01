@@ -116,18 +116,20 @@
   "style": ""
  },
  "black_belt": {
-  "subject": "Wookiee warrior",
-  "desc": "tall Wookiee covered in long brown fur, bandolier across the chest, holding a bowcaster, one fist raised, roaring",
-  "negative": "human, skin, bare chest",
+  "subject": "Wookiee",
+  "desc": "Wookiee warrior like Chewbacca: huge furry humanoid, entire face covered in long brown fur, Wookiee face with a furry muzzle and fanged mouth, small dark eyes, no human skin on the face, leather bandolier across the chest, holding a bowcaster, roaring",
+  "negative": "human face, human skin, beard, bald, dwarf, man",
   "theme": "factions",
-  "style": ""
+  "style": "",
+  "strength": 0.5
  },
  "bug_catcher": {
   "subject": "Jawa",
-  "desc": "small hooded figure in a rough brown robe, face hidden in darkness under the hood, two glowing yellow eyes, leather bandolier, holding an ion blaster, sack of scrap parts on its back",
+  "desc": "tiny Jawa, half the height of a man, whole body visible from hood to feet, rough brown hooded robe reaching the ground, face hidden in black shadow under the hood with two glowing yellow eyes, leather bandolier, holding a small ion blaster",
   "negative": "visible face, mouth, skin, hair",
   "theme": "factions",
-  "style": ""
+  "style": "",
+  "pose": "standing, facing left, three-quarter view, full body, small figure centered with empty space around it"
  },
  "bug_maniac": {
   "subject": "Ewok shaman",
@@ -267,10 +269,11 @@
  },
  "guitarist": {
   "subject": "Bith musician",
-  "desc": "Bith: alien with a huge bald bulging cranium, large black eyes, small puckered mouth, pale pink skin, dark suit, playing a long clarinet-like kloo horn",
-  "negative": "hair, human face",
+  "desc": "Bith from the Star Wars cantina band: huge bald domed head with skin folds, large black almond eyes, no nose, small puckered mouth, muted grey-beige skin, plain black suit, playing a long dark wooden kloo horn",
+  "negative": "pink, magenta, bright colours, hair, human face, trumpet, clown",
   "theme": "factions",
-  "style": ""
+  "style": "",
+  "strength": 0.55
  },
  "hex_maniac": {
   "subject": "Nightsister witch",
@@ -279,17 +282,20 @@
   "style": ""
  },
  "hiker": {
-  "subject": "Ugnaught miner",
-  "desc": "short stocky pig-snouted humanoid with pink skin, upturned snout, long white mutton-chop whiskers, blue work overalls with a tool belt, small hard hat with a headlamp, holding a pickaxe",
+  "subject": "Ugnaught",
+  "desc": "Ugnaught from Star Wars: short stout pig-faced alien, pink wrinkled skin, flat upturned pig snout, small eyes, long white mutton-chop whiskers and white hair tufts, blue work overalls, small tool belt with a hydrospanner",
   "theme": "factions",
-  "style": ""
+  "style": "",
+  "negative": "human face, human nose, pickaxe, shovel, large tools, captain hat, beard on chin",
+  "strength": 0.5
  },
  "interviewer": {
-  "subject": "two-headed alien announcer",
-  "desc": "Troig: one body with two heads on long necks, one head red and one head green, four arms, colourful announcer robes, holding microphones, small floating camera droid nearby",
-  "negative": "human face, hair",
+  "subject": "two-headed alien",
+  "desc": "Troig podrace announcer from Star Wars: ONE body with TWO separate heads side by side on two long necks, left head red-skinned with a crest, right head green-skinned, four arms, flowing orange-and-yellow announcer robes, holding a microphone",
+  "negative": "one head, single head, human face, hair, blonde",
   "theme": "factions",
-  "style": ""
+  "style": "",
+  "strength": 0.5
  },
  "kindler": {
   "subject": "lava miner",
@@ -480,17 +486,20 @@
   "negative": "human, legs, hair"
  },
  "pokefan_f": {
-  "subject": "Twi'lek woman",
-  "desc": "Twi'lek woman with blue skin and two long head-tails (lekku) instead of hair, racing-team scarf and short jacket, waving a small flag, cheering",
-  "negative": "hair",
+  "subject": "Twi'lek podrace fan",
+  "desc": "Twi'lek from Star Wars: woman with light blue skin and two long smooth head-tails (lekku) hanging down her back, no hair, simple sandy desert wrap and a team scarf, holding a small flag",
+  "negative": "hair, jester, hat, horns, anime, bright costume",
   "theme": "factions",
-  "style": ""
+  "style": "",
+  "strength": 0.55
  },
  "pokefan_m": {
-  "subject": "podrace fan",
-  "desc": "chubby cheerful man in a padded racing-team vest with stripes, goggles pushed up on his head, macrobinoculars around his neck, waving a triangular team pennant",
+  "subject": "podrace spectator",
+  "desc": "weathered Tatooine spectator from Star Wars Episode I: stocky man in sandy brown desert robes and a dusty racing-team sash, sun-worn face, scruffy beard, goggles on his head, macrobinoculars hanging from his neck, holding a small pennant",
   "theme": "factions",
-  "style": ""
+  "style": "",
+  "negative": "anime, bright colours, cap, cartoon, cheerful mascot",
+  "strength": 0.55
  },
  "pokemaniac": {
   "subject": "Rodian hunter",
@@ -549,11 +558,12 @@
   "style": ""
  },
  "ruin_maniac": {
-  "subject": "Duros relic hunter",
-  "desc": "Duros: bald blue-skinned alien with large red eyes and no nose, wide-brimmed hat, long brown coat, holding a glow-lamp and an ancient holocron",
-  "negative": "human face, hair, nose",
+  "subject": "Duros alien",
+  "desc": "Duros from Star Wars: completely bald smooth blue-green head, huge round red eyes with no pupils, no nose, thin lipless mouth, long grey-brown spacer duster coat, belt pouches, holding a small glow-lamp",
+  "negative": "human face, hair, nose, hat, eyebrows, pale skin, cowboy",
   "theme": "factions",
-  "style": ""
+  "style": "",
+  "strength": 0.5
  },
  "running_triathlete_f": {
   "subject": "female swoop racer on foot",
@@ -640,18 +650,20 @@
   "style": ""
  },
  "tuber_f": {
-  "subject": "Wookiee cub",
-  "desc": "small furry Wookiee child covered in shaggy brown fur, a few bead braids, holding a carved wooden float ring, happy",
-  "negative": "human, hair, skin",
+  "subject": "young Wookiee",
+  "desc": "small young Wookiee from Star Wars: whole body and face covered in shaggy light brown fur, Wookiee face with a furry muzzle, dark eyes deep in the fur, no human skin showing, two small bead braids in the fur, holding a carved wooden float ring",
+  "negative": "human face, human skin, costume, mask, hood, bear, doll, hair",
   "theme": "factions",
-  "style": ""
+  "style": "",
+  "strength": 0.5
  },
  "tuber_m": {
-  "subject": "Wookiee cub",
-  "desc": "small furry Wookiee child covered in shaggy reddish-brown fur, hugging a carved wooden float shaped like a log",
-  "negative": "human, hair, skin",
+  "subject": "young Wookiee",
+  "desc": "small young Wookiee from Star Wars: whole body and face covered in shaggy reddish-brown fur, Wookiee face with a furry muzzle, dark eyes deep in the fur, no human skin showing, hugging a carved wooden log float",
+  "negative": "human face, human skin, costume, mask, hood, bear, doll, hair",
   "theme": "factions",
-  "style": ""
+  "style": "",
+  "strength": 0.5
  },
  "twins": {
   "subject": "Twi'lek twin girls",
