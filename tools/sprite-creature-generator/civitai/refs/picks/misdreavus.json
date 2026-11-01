@@ -1,10 +1,10 @@
 {
   "init": "refs/misdreavus_prep.png",
-  "init_source": "https://static.wikia.nocookie.net/starwars/images/6/6b/NamelessTHR.png/revision/latest/scale-to-width-down/1000?cb=20210309163351#crop=0.08,0.0,0.6,0.75",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/a/a0/Nameless-CGSWG.png/revision/latest/scale-to-width-down/1000?cb=20250104194038",
   "flip": false,
   "denoise": 0.5,
-  "desc": "small floating grey wisp spirit with a skull-like face and a ragged spiky mane fading into mist",
-  "colour": "ash grey and dark grey",
-  "ref_note": "Nameless (Shrikarai) ghostly grey still, cropped to head and shoulders so it reads as a floating wisp; dark bg cut out",
+  "desc": "small ghostly grey-violet crouching wisp beast with a ragged spiky white mane, glowing red eye, thin tendril tail, whole body",
+  "colour": "ash grey and violet body, white mane, red glow",
+  "ref_note": "Nameless CGSWG card art, alpha cut, whole body, flipped to face left",
   "negative": "legs, feet, standing"
 }
