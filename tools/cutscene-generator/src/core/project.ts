@@ -129,7 +129,7 @@ export interface GbaTarget {
   loc?: string;
 }
 
-const GBA_OPTS = ["bg", "map", "obj", "image", "pal", "palSlot", "cols", "flips", "tiles", "blank", "cells"];
+const GBA_OPTS = ["bg", "map", "obj", "image", "pal", "palSlot", "cols", "flips", "tiles", "blank", "cells", "slots", "banks", "maps", "rows"];
 const REF_OPTS = ["map", "screen", "pal", "palSlot", "palFile", "frame", "transparent", "cells"];
 
 export interface ProjectOptions {

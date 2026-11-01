@@ -2,7 +2,9 @@
 
 **Status:** READY (owner, 2026-11-01: "ready to be used"). The tool is pxl (vendored from crsolver/claude-pxl, MIT) plus GBA output; intro scene 2
 (the bike ride) is in the game as KAEL/MIRA's speeder ride on Tatooine with Tusken raiders (round 3, APPROVED and
-shipped 2026-11-01; review files in `scenes/intro_bike/review/`). Next: intro scene 1, then scene 3, then the credits ride.
+shipped 2026-11-01; review files in `scenes/intro_bike/review/`). Intro scene 1 (`scenes/intro_drops`: canyon drip at dawn,
+pan up to the twin suns, ship flyover, no logo) is in the game, round 1 AWAITING REVIEW (`scenes/intro_drops/review/`).
+Next: scene 3, then the credits ride.
 Start with [GBA.md](GBA.md) (how art becomes game files) and [STYLE.md](STYLE.md) (what to match).
 
 Title screen, intro movie, credits, the titan/EXOGORTH scene, evolution, trade and shuttle-ride scenes.

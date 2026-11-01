@@ -213,6 +213,23 @@ export function encodeIndexed4(im: Indexed, pal: Color[]): Buffer {
   ]);
 }
 
+/** 8-bit indexed PNG holding several 16-color banks: pixel = bank * 16 + index (index 0 stays 0). */
+export function encodeIndexed8Banks(im: Indexed, tileBank: number[], cols: number, banks: Color[][]): Buffer {
+  const rowLen = im.w + 1, raw = Buffer.alloc(rowLen * im.h);
+  for (let y = 0; y < im.h; y++) for (let x = 0; x < im.w; x++) {
+    const v = im.idx[y * im.w + x] & 15, bank = tileBank[Math.floor(y / 8) * cols + Math.floor(x / 8)] ?? 0;
+    raw[y * rowLen + 1 + x] = v ? bank * 16 + v : 0;
+  }
+  const ihdr = Buffer.alloc(13);
+  ihdr.writeUInt32BE(im.w, 0); ihdr.writeUInt32BE(im.h, 4); ihdr[8] = 8; ihdr[9] = 3;
+  const plte = Buffer.alloc(768);
+  banks.forEach((b, n) => b.forEach((c, i) => { const [r, g, bl] = channels(c); plte.set([r, g, bl], (n * 16 + i) * 3); }));
+  return Buffer.concat([
+    Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]), chunk("IHDR", ihdr), chunk("PLTE", plte),
+    chunk("IDAT", deflateSync(raw, { level: 9 })), chunk("IEND", Buffer.alloc(0)),
+  ]);
+}
+
 export function mapBytes(map: Uint16Array): Buffer {
   const b = Buffer.alloc(map.length * 2);
   map.forEach((v, i) => b.writeUInt16LE(v, i * 2));

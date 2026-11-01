@@ -45,9 +45,6 @@ static void Task_Scene1_End(u8);
 
 // Scene 1 supplemental functions
 static void IntroResetGpuRegs(void);
-static u8 CreateGameFreakLogoSprites(s16, s16, s16);
-static void Task_BlendLogoIn(u8);
-static void Task_BlendLogoOut(u8);
 static void Task_CreateSparkles(u8);
 static u8 CreateWaterDrop(s16, s16, u16, u16, u16, u8);
 static void SpriteCB_WaterDrop(struct Sprite *sprite);
@@ -1143,7 +1140,6 @@ static void Task_Scene1_Load(u8 taskId)
     CpuCopy16(&gPlttBufferUnfaded[OBJ_PLTT_ID(0)], &gPlttBufferUnfaded[OBJ_PLTT_ID(11) + 4], PLTT_SIZEOF(16 - 4));
     CpuCopy16(&gPlttBufferUnfaded[OBJ_PLTT_ID(0)], &gPlttBufferUnfaded[OBJ_PLTT_ID(10) + 5], PLTT_SIZEOF(16 - 5));
     CpuCopy16(&gPlttBufferUnfaded[OBJ_PLTT_ID(0)], &gPlttBufferUnfaded[OBJ_PLTT_ID( 9) + 6], PLTT_SIZEOF(16 - 6));
-    CreateGameFreakLogoSprites(DISPLAY_WIDTH / 2, DISPLAY_HEIGHT / 2, 0);
     gTasks[taskId].sBigDropSpriteId = CreateWaterDrop(236, -14, 0x200, 1, 0x78, FALSE);
     gTasks[taskId].func = Task_Scene1_FadeIn;
 }
@@ -1172,20 +1168,14 @@ static void Task_Scene1_WaterDrops(u8 taskId)
     if (gIntroFrameCounter == TIMER_BIG_DROP_START)
         gSprites[gTasks[taskId].sBigDropSpriteId].sState = 1;
 
-    if (gIntroFrameCounter == TIMER_LOGO_APPEAR)
-        CreateTask(Task_BlendLogoIn, 0);
-
     if (gIntroFrameCounter == TIMER_BIG_DROP_FALLS)
         gSprites[gTasks[taskId].sBigDropSpriteId].sState = 2;
-
-    if (gIntroFrameCounter == TIMER_LOGO_BLEND_OUT)
-        CreateTask(Task_BlendLogoOut, 0);
 
     if (gIntroFrameCounter == TIMER_SMALL_DROP_1)
         CreateWaterDrop(48, 0, 0x400, 5, 0x70, TRUE);
 
     if (gIntroFrameCounter == TIMER_SMALL_DROP_2)
-        CreateWaterDrop(200, 60, 0x400, 9, 0x80, TRUE);
+        CreateWaterDrop(196, 10, 0x400, 9, 0x80, TRUE);
 
     if (gIntroFrameCounter == TIMER_SPARKLES)
         CreateTask(Task_CreateSparkles, 0);
@@ -2528,99 +2518,6 @@ static void IntroResetGpuRegs(void)
     SetGpuReg(REG_OFFSET_BLDY, 0);
 }
 
-static void Task_BlendLogoIn(u8 taskId)
-{
-    switch (gTasks[taskId].tState)
-    {
-    case 0:
-    default:
-        SetGpuReg(REG_OFFSET_BLDCNT, BLDCNT_EFFECT_BLEND
-                                   | BLDCNT_TGT2_BG0
-                                   | BLDCNT_TGT2_BG1
-                                   | BLDCNT_TGT2_BG2
-                                   | BLDCNT_TGT2_BG3
-                                   | BLDCNT_TGT2_OBJ
-                                   | BLDCNT_TGT2_BD);
-        SetGpuReg(REG_OFFSET_BLDALPHA, gTitleScreenAlphaBlend[31]);
-        SetGpuReg(REG_OFFSET_BLDY, 0);
-        gTasks[taskId].data[1] = ARRAY_COUNT(gTitleScreenAlphaBlend);
-        gTasks[taskId].tState++;
-        break;
-    case 1:
-        if (gTasks[taskId].data[1] != 0)
-        {
-            u8 tmp;
-
-            gTasks[taskId].data[1]--;
-            tmp = gTasks[taskId].data[1] / 2;
-            SetGpuReg(REG_OFFSET_BLDALPHA, gTitleScreenAlphaBlend[tmp]);
-        }
-        else
-        {
-            SetGpuReg(REG_OFFSET_BLDALPHA, gTitleScreenAlphaBlend[0]);
-            gTasks[taskId].data[1] = ARRAY_COUNT(gTitleScreenAlphaBlend) / 4;
-            gTasks[taskId].tState++;
-        }
-        break;
-    case 2:
-        SetGpuReg(REG_OFFSET_BLDCNT, 0);
-        SetGpuReg(REG_OFFSET_BLDALPHA, 0);
-        SetGpuReg(REG_OFFSET_BLDY, 0);
-        DestroyTask(taskId);
-        break;
-    }
-}
-
-static void Task_BlendLogoOut(u8 taskId)
-{
-    switch (gTasks[taskId].tState)
-    {
-    case 0:
-    default:
-        SetGpuReg(REG_OFFSET_BLDCNT, BLDCNT_EFFECT_BLEND
-                                   | BLDCNT_TGT2_BG0
-                                   | BLDCNT_TGT2_BG1
-                                   | BLDCNT_TGT2_BG2
-                                   | BLDCNT_TGT2_BG3
-                                   | BLDCNT_TGT2_OBJ
-                                   | BLDCNT_TGT2_BD);
-        SetGpuReg(REG_OFFSET_BLDALPHA, gTitleScreenAlphaBlend[0]);
-        SetGpuReg(REG_OFFSET_BLDY, 0);
-        gTasks[taskId].data[1] = 0;
-        gTasks[taskId].tState++;
-        break;
-    case 1:
-        if (gTasks[taskId].data[1] < (int)ARRAY_COUNT(gTitleScreenAlphaBlend) - 2)
-        {
-            u8 tmp;
-
-            gTasks[taskId].data[1]++;
-            tmp = gTasks[taskId].data[1] / 2;
-            SetGpuReg(REG_OFFSET_BLDALPHA, gTitleScreenAlphaBlend[tmp]);
-        }
-        else
-        {
-            SetGpuReg(REG_OFFSET_BLDALPHA, gTitleScreenAlphaBlend[31]);
-            gTasks[taskId].data[1] = ARRAY_COUNT(gTitleScreenAlphaBlend) / 4;
-            gTasks[taskId].tState++;
-        }
-        break;
-    case 2:
-        if (gTasks[taskId].data[1] != 0)
-        {
-            gTasks[taskId].data[1]--;
-        }
-        else
-        {
-            SetGpuReg(REG_OFFSET_BLDCNT, 0);
-            SetGpuReg(REG_OFFSET_BLDALPHA, 0);
-            SetGpuReg(REG_OFFSET_BLDY, 0);
-            DestroyTask(taskId);
-        }
-        break;
-    }
-}
-
 void PanFadeAndZoomScreen(u16 screenX, u16 screenY, u16 zoom, u16 alpha)
 {
     struct BgAffineSrcData src;
@@ -3078,34 +2975,6 @@ static void SpriteCB_GameFreakLogo(struct Sprite *sprite)
             DestroySprite(sprite);
         break;
     }
-}
-
-static u8 CreateGameFreakLogoSprites(s16 x, s16 y, s16 unused)
-{
-    u16 i;
-    u8 spriteId;
-
-    // Create "Game Freak" letters
-    for (i = 0; i < NUM_GF_LETTERS; i++)
-    {
-        spriteId = CreateSprite(&sSpriteTemplate_GameFreakLetter, sGameFreakLetterData[i][1] + x, y - 4, 0);
-        gSprites[spriteId].sState = 0;
-        gSprites[spriteId].sTimer = sGameFreakLetterStartDelays[i];
-        gSprites[spriteId].sLetterId = i;
-        gSprites[spriteId].invisible = TRUE;
-        gSprites[spriteId].oam.matrixNum = i + 12;
-        StartSpriteAnim(&gSprites[spriteId], sGameFreakLetterData[i][0]);
-        StartSpriteAffineAnim(&gSprites[spriteId], 0);
-    }
-
-    // Create Game Freak logo
-    spriteId = CreateSprite(&sSpriteTemplate_GameFreakLogo, 120, y - 6, 0);
-    gSprites[spriteId].sState = 0;
-    gSprites[spriteId].invisible = TRUE;
-    gSprites[spriteId].oam.matrixNum = i + 12;
-    StartSpriteAffineAnim(&gSprites[spriteId], 1);
-
-    return spriteId;
 }
 
 #undef sTimer

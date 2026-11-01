@@ -8,7 +8,7 @@ import { PxError, wrap } from "../core/errors.ts";
 import { Img } from "../core/image.ts";
 import type { GbaTarget, Project } from "../core/project.ts";
 import {
-  encodeIndexed4, gbaColor, packCells, unpackCells, type Indexed, imageTiles, indexImage, mapBytes, newTileset, OBJ_SIZES, parsePal, readJasc,
+  encodeIndexed4, encodeIndexed8Banks, gbaColor, packCells, unpackCells, type Indexed, imageTiles, indexImage, mapBytes, newTileset, OBJ_SIZES, parsePal, readJasc,
   readMap, renderIndexed, renderScreen, tileScreen, tilesImage, writeJasc,
 } from "./gba.ts";
 import { decodePng } from "./pngread.ts";
@@ -53,7 +53,13 @@ export function loadRef(gameDir: string, path: string, opts: Record<string, unkn
   if (typeof opts.map === "string") {
     const map = readMap(readFileSync(resolve(gameDir, opts.map)));
     const blocks = map.length / 1024, tiles = imageTiles(im);
-    const banks: Color[][] = Array.from({ length: 16 }, () => pal);
+    // A tileset PNG with a 256-entry PLTE carries all 16 BG palettes (intro scene 1's bg.png): each
+    // map entry then picks its own bank, as the hardware does. A pal: override colors every bank.
+    const full = typeof opts.pal !== "string" && d.plte.length > 16
+    const banks: Color[][] = Array.from({ length: 16 }, (_, n) => {
+      if (!full) return pal
+      const b = d.plte!.slice(n * 16, n * 16 + 16); while (b.length < 16) b.push(0); return b
+    });
     if (opts.screen === "all") img = renderScreen(tiles, map, banks, 1);
     else {
       const s = Number(opts.screen ?? 0);
@@ -105,12 +111,39 @@ function names(v: unknown): string[] {
 }
 
 function runTarget(p: Project, t: GbaTarget, put: (path: string, d: Buffer | string) => void): string {
-  const o = t.opts, pal = pal16(t), what = `gba '${t.path}'`;
+  const o = t.opts, what = `gba '${t.path}'`;
+  const pal = o.banks !== undefined && o.pal === undefined ? ([] as Color[]) : pal16(t);
   const used = (idx: Uint8Array[]) => { const s = new Set<number>(); for (const a of idx) for (const v of a) if (v) s.add(v); return s.size; };
 
   if (t.path.endsWith(".pal")) {
     put(t.path, writeJasc(pal));
     return `${t.path}  palette, ${pal.length} colors`;
+  }
+
+  if (o.bg !== undefined && o.banks !== undefined) {
+    // Several BG palettes (banks) and one map file per screen, sharing one tileset: intro scene 1's
+    // layout (bg.png + bg0..3_map.bin, BG0/BG1 in bank 3, BG2 in bank 2, BG3 in bank 5). The PNG is
+    // written as gbagfx expects a multi-bank tileset: 8-bit, 256-entry PLTE, pixel = bank * 16 + index.
+    const screens = names(o.bg), slots = (o.slots as number[]) ?? [], mapPaths = names(o.maps);
+    if (screens.length !== slots.length || screens.length !== mapPaths.length)
+      throw new PxError(`${what}: bg, slots and maps must list one entry per screen`);
+    const banks: Color[][] = Array.from({ length: 16 }, () => Array(16).fill(0));
+    for (const [k, v] of Object.entries(o.banks as Record<string, string[]>)) banks[Number(k)] = parsePal(v, `${what} bank ${k}`);
+    const ts = newTileset(o.blank !== false), tileBank: number[] = [0], idxs: Uint8Array[] = [];
+    screens.forEach((n, i) => {
+      const img = p.image(n), slot = Number(slots[i]);
+      const im = { w: img.w, h: img.h, idx: indexImage(img, banks[slot], `${what} screen '${n}' (bank ${slot})`) };
+      idxs.push(im.idx);
+      const before = ts.tiles.length, map = tileScreen(im, ts, slot, o.flips !== false);
+      for (let t = before; t < ts.tiles.length; t++) tileBank[t] = slot;
+      put(mapPaths[i], mapBytes(map));
+    });
+    const max = Number(o.tiles ?? 1024);
+    if (ts.tiles.length > max) throw new PxError(`${what}: ${ts.tiles.length} unique tiles, budget is ${max}`);
+    const cols = Number(o.cols ?? 16), tiles = tilesImage(ts.tiles, cols);
+    if (o.rows) { const h = Number(o.rows) * 8, full = new Uint8Array(tiles.w * h); full.set(tiles.idx.subarray(0, full.length)); tiles.h = h; tiles.idx = full; }
+    put(t.path, encodeIndexed8Banks(tiles, tileBank, cols, banks));
+    return `${t.path}  BG tiles: ${ts.tiles.length} unique 8x8 tiles in banks ${[...new Set(slots)].join("/")}, ${used(idxs)} colors; ${mapPaths.length} map(s)`;
   }
 
   if (o.bg !== undefined) {
