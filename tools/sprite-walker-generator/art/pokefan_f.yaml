@@ -1,0 +1,297 @@
+name: pokefan_f
+description: 'Beast fan (f): Leia-style side buns, red top and yellow skirt, hugging a porg plush (replaces the Pokefan F).'
+kit: person16x32
+replaces: graphics/object_events/pics/people/pokefan_f.png
+graphics_info: PokefanF
+notes: 'r_g2, B style: the Pokefan F''s own body as regions (top, skirt, arms, walk kept), new hair parted in the middle with two round side buns in Leia cosplay, a porg plush hugged to the chest (brown
+  cap, white face, black eyes, orange beak). Stays on NPC_2.'
+palette: npc_2
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_2
+shade: true
+materials:
+  H: c
+  B: c@
+  F: s
+  O: c
+  W: w/c
+  Y: a
+  R: b
+legend:
+  k: 15
+  d: 13
+  a: 6
+accept: {}
+base_sheet: graphics/object_events/pics/people/pokefan_f.png
+remap:
+  c: H
+  a: Y
+  b: R
+  w: Y
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......HHHH......
+
+        .....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ...HHHHddHHHH...
+
+        .BBHHHHddHHHHBB.
+
+        BBdBHHFFFFHHBdBB
+
+        BdBdHFFFFFFHdBdB
+
+        BBdBFFFFFFFFBdBB
+
+        .BBHFFkFFkFFHBB.
+
+        ..HFFFkFFkFFFH..'
+    - x: 5
+      y: 22
+      rows: '.OOOO.
+
+        OWWWWO
+
+        WkWWkW
+
+        WWaaWW
+
+        .WWWW.'
+  down_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......HHHH......
+
+        .....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ...HHHHddHHHH...
+
+        .BBHHHHddHHHHBB.
+
+        BBdBHHFFFFHHBdBB
+
+        BdBdHFFFFFFHdBdB
+
+        BBdBFFFFFFFFBdBB
+
+        .BBHFFkFFkFFHBB.
+
+        ..HFFFkFFkFFFH..'
+    - x: 5
+      y: 23
+      rows: '.OOOO.
+
+        OWWWWO
+
+        WkWWkW
+
+        WWaaWW
+
+        .WWWW.'
+  down_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......HHHH......
+
+        .....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ...HHHHddHHHH...
+
+        .BBHHHHddHHHHBB.
+
+        BBdBHHFFFFHHBdBB
+
+        BdBdHFFFFFFHdBdB
+
+        BBdBFFFFFFFFBdBB
+
+        .BBHFFkFFkFFHBB.
+
+        ..HFFFkFFkFFFH..'
+    - x: 5
+      y: 23
+      rows: '.OOOO.
+
+        OWWWWO
+
+        WkWWkW
+
+        WWaaWW
+
+        .WWWW.'
+  up:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......HHHH......
+
+        .....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ...HHHHddHHHH...
+
+        .BBHHHHddHHHHBB.
+
+        BBdBHHHddHHHBdBB
+
+        BdBdHHHddHHHdBdB
+
+        BBdBHHHHHHHHBdBB
+
+        .BBHHHHHHHHHHBB.
+
+        ..HHHHHHHHHHHH..'
+  up_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......HHHH......
+
+        .....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ...HHHHddHHHH...
+
+        .BBHHHHddHHHHBB.
+
+        BBdBHHHddHHHBdBB
+
+        BdBdHHHddHHHdBdB
+
+        BBdBHHHHHHHHBdBB
+
+        .BBHHHHHHHHHHBB.
+
+        ..HHHHHHHHHHHH..'
+  up_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......HHHH......
+
+        .....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ...HHHHddHHHH...
+
+        .BBHHHHddHHHHBB.
+
+        BBdBHHHddHHHBdBB
+
+        BdBdHHHddHHHdBdB
+
+        BBdBHHHHHHHHBdBB
+
+        .BBHHHHHHHHHHBB.
+
+        ..HHHHHHHHHHHH..'
+  left:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......HHHH......
+
+        ....HHHHHHH.....
+
+        ...HHHHHHHHH....
+
+        ..HHHHHHHHHHH...
+
+        ..HHHHHHHHHBB...
+
+        ..FFFHHHHHBdBB..
+
+        ..FFFFFHHBdBdB..
+
+        ..FFFFFFHBBdBB..
+
+        ..FkFFFFHHBBB...'
+    - x: 1
+      y: 23
+      rows: '.OOO.
+
+        OWWWO
+
+        kWWWW
+
+        aWWWW
+
+        .WWW.'
+  left_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......HHHH......
+
+        ....HHHHHHH.....
+
+        ...HHHHHHHHH....
+
+        ..HHHHHHHHHHH...
+
+        ..HHHHHHHHHBB...
+
+        ..FFFHHHHHBdBB..
+
+        ..FFFFFHHBdBdB..
+
+        ..FFFFFFHBBdBB..
+
+        ..FkFFFFHHBBB...'
+    - x: 1
+      y: 24
+      rows: '.OOO.
+
+        OWWWO
+
+        kWWWW
+
+        aWWWW
+
+        .WWW.'
+  left_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......HHHH......
+
+        ....HHHHHHH.....
+
+        ...HHHHHHHHH....
+
+        ..HHHHHHHHHHH...
+
+        ..HHHHHHHHHBB...
+
+        ..FFFHHHHHBdBB..
+
+        ..FFFFFHHBdBdB..
+
+        ..FFFFFFHBBdBB..
+
+        ..FkFFFFHHBBB...'
+    - x: 1
+      y: 24
+      rows: '.OOO.
+
+        OWWWO
+
+        kWWWW
+
+        aWWWW
+
+        .WWW.'

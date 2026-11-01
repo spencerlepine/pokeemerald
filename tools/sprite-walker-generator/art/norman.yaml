@@ -1,0 +1,347 @@
+name: norman
+description: 'DORAN: the player''s father, Mos Entha arena leader, as a veteran pilot: greying hair, flight goggles pushed up, rust-leather coat with fleece lapels over an olive flight suit (replaces Norman).'
+kit: person16x32
+replaces: graphics/object_events/pics/people/gym_leaders/norman.png
+graphics_info: Norman
+notes: 'r_g2, B style: Norman''s own body as regions (face, hair, arms, trousers, walk kept), hair greyed on ramp a, flight goggles on the forehead, jacket -> rust-leather pilot coat C with cream fleece
+  lapels L, shirt front -> olive flight suit U, white squadron badge. Moves to NPC_3 for the rust leather and olive suit.'
+palette: npc_3
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_3
+shade: true
+materials:
+  H: a
+  L: w/c
+  C: c
+  U: b
+legend:
+  k: 15
+  d: 13
+  g: 11
+  w: 14
+  p: 14
+accept: {}
+base_sheet: graphics/object_events/pics/people/gym_leaders/norman.png
+remap:
+  c: C
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 11
+      rows: '______HHHH______
+
+        ____HHHHHHHH____
+
+        ___HHHHHHHHHH___
+
+        __HHH_HHHH_HHH__
+
+        __HH__HHHH__HH__
+
+        ___H___HH___H___
+
+        ___H________H___
+
+        ___H________H___
+
+        ___H________H___
+
+        ____H______H____'
+    - x: 0
+      y: 13
+      rows: '___dggddddggd___
+
+        ___dgwd__dgwd___'
+    - x: 0
+      y: 21
+      rows: '__LLL______LLL__
+
+        __CCLLUUUULLCC__
+
+        ____CCUUUUCp____
+
+        ____CCUUUUCC____
+
+        ____CCUUUUCC____'
+  down_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '______HHHH______
+
+        ____HHHHHHHH____
+
+        ___HHHHHHHHHH___
+
+        __HHH_HHHH_HHH__
+
+        __HH__HHHH__HH__
+
+        ___H___HH___H___
+
+        ___H________H___
+
+        ___H________H___
+
+        ___H________H___
+
+        ____H______H____'
+    - x: 0
+      y: 14
+      rows: '___dggddddggd___
+
+        ___dgwd__dgwd___'
+    - x: 0
+      y: 22
+      rows: '__LLL______LLL__
+
+        __CCLLUUUULLCC__
+
+        ____CCUUUUCp____
+
+        ____CCUUUUCC____
+
+        ____CCUUUUCC____'
+  down_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '______HHHH______
+
+        ____HHHHHHHH____
+
+        ___HHHHHHHHHH___
+
+        __HHH_HHHH_HHH__
+
+        __HH__HHHH__HH__
+
+        ___H___HH___H___
+
+        ___H________H___
+
+        ___H________H___
+
+        ___H________H___
+
+        ____H______H____'
+    - x: 0
+      y: 14
+      rows: '___dggddddggd___
+
+        ___dgwd__dgwd___'
+    - x: 0
+      y: 22
+      rows: '__LLL______LLL__
+
+        __CCLLUUUULLCC__
+
+        ____CCUUUUCp____
+
+        ____CCUUUUCC____
+
+        ____CCUUUUCC____'
+  up:
+    patches:
+    - x: 0
+      y: 11
+      rows: '______HHHH______
+
+        ____HHHHHHHH____
+
+        ___HHHHHHHHHH___
+
+        __HHHHHHHHHHHH__
+
+        __HHHHHHHHHHHH__
+
+        ___HHHHHHHHHH___
+
+        ___HHHHHHHHHH___
+
+        ___HHHHHHHHHH___
+
+        ____HHHHHHHH____
+
+        ______HHHH______'
+    - x: 0
+      y: 13
+      rows: '________________
+
+        __dddddddddddd__'
+    - x: 0
+      y: 21
+      rows: ___LLLLLLLLLL___
+  up_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '______HHHH______
+
+        ____HHHHHHHH____
+
+        ___HHHHHHHHHH___
+
+        __HHHHHHHHHHHH__
+
+        __HHHHHHHHHHHH__
+
+        ___HHHHHHHHHH___
+
+        ___HHHHHHHHHH___
+
+        ___HHHHHHHHHH___
+
+        ____HHHHHHHH____
+
+        ______HHHH______'
+    - x: 0
+      y: 14
+      rows: '________________
+
+        __dddddddddddd__'
+    - x: 0
+      y: 22
+      rows: ___LLLLLLLLLL___
+  up_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '______HHHH______
+
+        ____HHHHHHHH____
+
+        ___HHHHHHHHHH___
+
+        __HHHHHHHHHHHH__
+
+        __HHHHHHHHHHHH__
+
+        ___HHHHHHHHHH___
+
+        ___HHHHHHHHHH___
+
+        ___HHHHHHHHHH___
+
+        ____HHHHHHHH____
+
+        ______HHHH______'
+    - x: 0
+      y: 14
+      rows: '________________
+
+        __dddddddddddd__'
+    - x: 0
+      y: 22
+      rows: ___LLLLLLLLLL___
+  left:
+    patches:
+    - x: 0
+      y: 11
+      rows: '_____HHHHHH_____
+
+        ____HHHHHHHH____
+
+        ___HHHHHHHHHH___
+
+        __HHHH__HHHHHH__
+
+        __HHH___HHHHHH__
+
+        __HH____HHHHHH__
+
+        ________HHHHH___
+
+        ________HHHH____
+
+        ________H_______
+
+        _______H________'
+    - x: 0
+      y: 13
+      rows: '___ddddddddd____
+
+        __gw____________'
+    - x: 0
+      y: 21
+      rows: '________LL______
+
+        _______LL_______
+
+        ____UUCCCCCC____
+
+        ____UUCCCCCC____'
+  left_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '_____HHHHHH_____
+
+        ____HHHHHHHH____
+
+        ___HHHHHHHHHH___
+
+        __HHHH__HHHHHH__
+
+        __HHH___HHHHHH__
+
+        __HH____HHHHHH__
+
+        ________HHHHH___
+
+        ________HHHH____
+
+        ________H_______
+
+        _______H________'
+    - x: 0
+      y: 14
+      rows: '___ddddddddd____
+
+        __gw____________'
+    - x: 0
+      y: 22
+      rows: '________LL______
+
+        _______LL_______
+
+        ____UUCCCCCC____
+
+        ____UUCCCCCC____'
+  left_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '_____HHHHHH_____
+
+        ____HHHHHHHH____
+
+        ___HHHHHHHHHH___
+
+        __HHHH__HHHHHH__
+
+        __HHH___HHHHHH__
+
+        __HH____HHHHHH__
+
+        ________HHHHH___
+
+        ________HHHH____
+
+        ________H_______
+
+        _______H________'
+    - x: 0
+      y: 14
+      rows: '___ddddddddd____
+
+        __gw____________'
+    - x: 0
+      y: 22
+      rows: '________LL______
+
+        _______LL_______
+
+        ____UUCCCCCC____
+
+        ____UUCCCCCC____'

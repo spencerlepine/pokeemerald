@@ -1,0 +1,127 @@
+name: scientist_1
+description: 'Researcher: scanner monocle over one eye, pale grey lab coat over a green shirt and tie, a glowing green datapad at the hip (replaces Scientist 1).'
+kit: person16x32
+replaces: graphics/object_events/pics/people/scientist_1.png
+graphics_info: Scientist1
+notes: 'r_g2, B style: the Scientist''s own body as regions (hair, arms, walk kept; lab coat C on ramp a, black hair outline and shoes re-lettered onto the brown hair ramp), the round glasses replaced by
+  a scanner monocle with a green lens, a datapad with a green screen at hip height. Stays on NPC_3.'
+palette: npc_3
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_3
+shade: true
+materials:
+  C: a
+  W: w/a
+  H: c
+legend:
+  k: 15
+  g: 8
+  w: 14
+accept: {}
+base_sheet: graphics/object_events/pics/people/scientist_1.png
+remap:
+  a: C
+  w: W
+  k: H
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 17
+      rows: '_sskssssskkkkss_
+
+        _sskssksskggkss_
+
+        __sssskssgwksss_'
+    - x: 10
+      y: 24
+      rows: 'kkkk
+
+        kggk
+
+        kkkk'
+  down_a:
+    patches:
+    - x: 0
+      y: 18
+      rows: '_sskssssskkkkss_
+
+        _sskssksskggkss_
+
+        __sssskssgwksss_'
+    - x: 10
+      y: 25
+      rows: 'kkkk
+
+        kggk
+
+        kkkk'
+  down_b:
+    patches:
+    - x: 0
+      y: 18
+      rows: '_sskssssskkkkss_
+
+        _sskssksskggkss_
+
+        __sssskssgwksss_'
+    - x: 10
+      y: 25
+      rows: 'kkkk
+
+        kggk
+
+        kkkk'
+  up:
+    patches: []
+  up_a:
+    patches: []
+  up_b:
+    patches: []
+  left:
+    patches:
+    - x: 0
+      y: 17
+      rows: '__kkkss_________
+
+        __kgwss_________
+
+        __kkkss_________'
+    - x: 2
+      y: 24
+      rows: 'kkk
+
+        gkk
+
+        kkk'
+  left_a:
+    patches:
+    - x: 0
+      y: 18
+      rows: '__kkkss_________
+
+        __kgwss_________
+
+        __kkkss_________'
+    - x: 2
+      y: 25
+      rows: 'kkk
+
+        gkk
+
+        kkk'
+  left_b:
+    patches:
+    - x: 0
+      y: 18
+      rows: '__kkkss_________
+
+        __kgwss_________
+
+        __kkkss_________'
+    - x: 2
+      y: 25
+      rows: 'kkk
+
+        gkk
+
+        kkk'

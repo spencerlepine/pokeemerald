@@ -1,0 +1,355 @@
+name: fisherman
+description: 'Angler: wide floppy brimmed hat with a yellow band, red jacket, tackle strap and pouch, a short rod at the hip (replaces the Fisherman).'
+kit: person16x32
+replaces: graphics/object_events/pics/people/fisherman.png
+graphics_info: Fisherman
+notes: 'r_g2, B style: the Fisherman''s own body as regions (jacket, trousers, boots kept), new wide floppy hat seen from above as a full-width ellipse with a yellow band, brown tackle strap and pouch,
+  a rod held upright at the hip (no higher than the hat) that points forward in the side view. Stays on NPC_2.'
+palette: npc_2
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_2
+shade: true
+materials:
+  H: c
+  Y: a
+  T: c
+  P: c
+  N: c
+  F: s
+legend:
+  k: 15
+  h: 11
+  r: 12
+  R: 14
+accept: {}
+base_sheet: graphics/object_events/pics/people/fisherman.png
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        .....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ...HHhHHHHhHH...
+
+        ...HYYYYYYYYH...
+
+        .HHHHHHHHHHHHHH.
+
+        HHHHHHHHHHHHHHHH
+
+        .HHHHHHHHHHHHHH.'
+    - x: 0
+      y: 21
+      rows: '_____T__________
+
+        ______T_________
+
+        _______T________
+
+        ________TPP____r
+
+        _________PP____r
+
+        _______________R
+
+        _______________r'
+  down_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        .....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ...HHhHHHHhHH...
+
+        ...HYYYYYYYYH...
+
+        .HHHHHHHHHHHHHH.
+
+        HHHHHHHHHHHHHHHH
+
+        .HHHHHHHHHHHHHH.'
+    - x: 0
+      y: 22
+      rows: '_____T__________
+
+        ______T_________
+
+        _______T________
+
+        ________TPP____r
+
+        _________PP____r
+
+        _______________R
+
+        _______________r'
+  down_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        .....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ...HHhHHHHhHH...
+
+        ...HYYYYYYYYH...
+
+        .HHHHHHHHHHHHHH.
+
+        HHHHHHHHHHHHHHHH
+
+        .HHHHHHHHHHHHHH.'
+    - x: 0
+      y: 22
+      rows: '_____T__________
+
+        ______T_________
+
+        _______T________
+
+        ________TPP____r
+
+        _________PP____r
+
+        _______________R
+
+        _______________r'
+  up:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        .....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ...HHHhHHhHHH...
+
+        ...HYYYYYYYYH...
+
+        .HHHHHHHHHHHHHH.
+
+        HHHHHHHHHHHHHHHH
+
+        .HHHHHHHHHHHHHH.
+
+        .FNNNNNNNNNNNNF.
+
+        ..NNNNNNNNNNNN..
+
+        ..NNNNNNNNNNNN..'
+    - x: 0
+      y: 18
+      rows: 'r_______________
+
+        r_______________
+
+        r_______________
+
+        r______________T
+
+        r_____________T_
+
+        r____________T__
+
+        R___________T___
+
+        r__________T____
+
+        r__________PP___
+
+        r__________PP___'
+  up_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        .....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ...HHHhHHhHHH...
+
+        ...HYYYYYYYYH...
+
+        .HHHHHHHHHHHHHH.
+
+        HHHHHHHHHHHHHHHH
+
+        .HHHHHHHHHHHHHH.
+
+        .FNNNNNNNNNNNNF.
+
+        ..NNNNNNNNNNNN..
+
+        ..NNNNNNNNNNNN..'
+    - x: 0
+      y: 19
+      rows: 'r_______________
+
+        r_______________
+
+        r_______________
+
+        r______________T
+
+        r_____________T_
+
+        r____________T__
+
+        R___________T___
+
+        r__________T____
+
+        r__________PP___
+
+        r__________PP___'
+  up_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        .....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ...HHHhHHhHHH...
+
+        ...HYYYYYYYYH...
+
+        .HHHHHHHHHHHHHH.
+
+        HHHHHHHHHHHHHHHH
+
+        .HHHHHHHHHHHHHH.
+
+        .FNNNNNNNNNNNNF.
+
+        ..NNNNNNNNNNNN..
+
+        ..NNNNNNNNNNNN..'
+    - x: 0
+      y: 19
+      rows: 'r_______________
+
+        r_______________
+
+        r_______________
+
+        r______________T
+
+        r_____________T_
+
+        r____________T__
+
+        R___________T___
+
+        r__________T____
+
+        r__________PP___
+
+        r__________PP___'
+  left:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        ......HHHHH.....
+
+        .....HHHHHHH....
+
+        ....HHhHHhHHH...
+
+        ....YYYYYYYYH...
+
+        .HHHHHHHHHHHHHH.
+
+        HHHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHH..'
+    - x: 0
+      y: 19
+      rows: 'r_______________
+
+        .r______________
+
+        ..r_____________
+
+        ...rr___________
+
+        .....R__________'
+  left_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        ......HHHHH.....
+
+        .....HHHHHHH....
+
+        ....HHhHHhHHH...
+
+        ....YYYYYYYYH...
+
+        .HHHHHHHHHHHHHH.
+
+        HHHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHH..'
+    - x: 0
+      y: 20
+      rows: 'r_______________
+
+        .r______________
+
+        ..r_____________
+
+        ...rr___________
+
+        .....R__________'
+  left_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        ......HHHHH.....
+
+        .....HHHHHHH....
+
+        ....HHhHHhHHH...
+
+        ....YYYYYYYYH...
+
+        .HHHHHHHHHHHHHH.
+
+        HHHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHH..'
+    - x: 0
+      y: 20
+      rows: 'r_______________
+
+        .r______________
+
+        ..r_____________
+
+        ...rr___________
+
+        .....R__________'

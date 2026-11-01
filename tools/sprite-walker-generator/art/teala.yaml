@@ -1,0 +1,179 @@
+name: teala
+description: 'TEALA, HOLONET CLUB attendant: long blue hair, comlink headset with a mic boom, pink uniform, a holo-projector showing a small hologram (replaces Teala).'
+kit: person16x32
+replaces: graphics/object_events/pics/people/teala.png
+graphics_info: Teala
+notes: 'r_g2, B style: Teala''s own body as regions (hair, pink uniform, clasped hands, walk kept), new comlink headset (olive earcups, dark mic boom), a projector puck in her hands throwing a small pale-blue
+  hologram. Stays on NPC_1.'
+palette: npc_1
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_1
+shade: true
+materials:
+  E: c
+legend:
+  k: 15
+  h: 8
+  W: 14
+  m: 13
+accept: {}
+base_sheet: graphics/object_events/pics/people/teala.png
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 16
+      rows: '_EE_____________
+
+        EEE_____________
+
+        EEE_____________
+
+        _m______________
+
+        __mmm___________'
+    - x: 0
+      y: 22
+      rows: '_______W________
+
+        ______hhh_______
+
+        _____hhhhh______
+
+        ______kkk_______'
+  down_a:
+    patches:
+    - x: 0
+      y: 17
+      rows: '_EE_____________
+
+        EEE_____________
+
+        EEE_____________
+
+        _m______________
+
+        __mmm___________'
+    - x: 0
+      y: 23
+      rows: '_______W________
+
+        ______hhh_______
+
+        _____hhhhh______
+
+        ______kkk_______'
+  down_b:
+    patches:
+    - x: 0
+      y: 17
+      rows: '_EE_____________
+
+        EEE_____________
+
+        EEE_____________
+
+        _m______________
+
+        __mmm___________'
+    - x: 0
+      y: 23
+      rows: '_______W________
+
+        ______hhh_______
+
+        _____hhhhh______
+
+        ______kkk_______'
+  up:
+    patches:
+    - x: 0
+      y: 16
+      rows: '_EE__________EE_
+
+        EEE__________EEE
+
+        EEE__________EEE'
+  up_a:
+    patches:
+    - x: 0
+      y: 17
+      rows: '_EE__________EE_
+
+        EEE__________EEE
+
+        EEE__________EEE'
+  up_b:
+    patches:
+    - x: 0
+      y: 17
+      rows: '_EE__________EE_
+
+        EEE__________EEE
+
+        EEE__________EEE'
+  left:
+    patches:
+    - x: 0
+      y: 16
+      rows: '______EEE_______
+
+        ______EEE_______
+
+        ______EEE_______
+
+        ____mm__________
+
+        __mm____________'
+    - x: 0
+      y: 22
+      rows: '__W_____________
+
+        _hhh____________
+
+        hhhhh___________
+
+        _kkk____________'
+  left_a:
+    patches:
+    - x: 0
+      y: 17
+      rows: '______EEE_______
+
+        ______EEE_______
+
+        ______EEE_______
+
+        ____mm__________
+
+        __mm____________'
+    - x: 0
+      y: 23
+      rows: '__W_____________
+
+        _hhh____________
+
+        hhhhh___________
+
+        _kkk____________'
+  left_b:
+    patches:
+    - x: 0
+      y: 17
+      rows: '______EEE_______
+
+        ______EEE_______
+
+        ______EEE_______
+
+        ____mm__________
+
+        __mm____________'
+    - x: 0
+      y: 23
+      rows: '__W_____________
+
+        _hhh____________
+
+        hhhhh___________
+
+        _kkk____________'

@@ -1,0 +1,190 @@
+name: rich_boy
+description: 'Young noble: neat hair with a silver circlet, green tunic with a high white collar, short lavender-grey cape, dark belt with a silver clasp (replaces the Rich Boy).'
+kit: person16x32
+replaces: graphics/object_events/pics/people/rich_boy.png
+graphics_info: RichBoy
+notes: 'r_g2, B style: the Rich Boy''s own body as regions (hair, green tunic, cravat, arms, walk kept), new silver circlet with a gem, high white collar, short lavender-grey cape over the shoulders and
+  down the back, dark belt with a clasp. Stays on NPC_3.'
+palette: npc_3
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_3
+shade: true
+materials:
+  D: a
+  L: w/a
+  K: a!
+  Y: c
+legend:
+  k: 15
+  e: 14
+  g: 5
+accept: {}
+base_sheet: graphics/object_events/pics/people/rich_boy.png
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 14
+      rows: __DDDDDeDDDDDD__
+    - x: 0
+      y: 21
+      rows: '__KLLL____LLLK__
+
+        _KK__________KK_'
+    - x: 0
+      y: 26
+      rows: ___YYYYgYYYYY___
+  down_a:
+    patches:
+    - x: 0
+      y: 15
+      rows: __DDDDDeDDDDDD__
+    - x: 0
+      y: 22
+      rows: '__KLLL____LLLK__
+
+        _KK__________KK_'
+    - x: 0
+      y: 27
+      rows: ___YYYYgYYYYY___
+  down_b:
+    patches:
+    - x: 0
+      y: 15
+      rows: __DDDDDeDDDDDD__
+    - x: 0
+      y: 22
+      rows: '__KLLL____LLLK__
+
+        _KK__________KK_'
+    - x: 0
+      y: 27
+      rows: ___YYYYgYYYYY___
+  up:
+    patches:
+    - x: 0
+      y: 14
+      rows: __DDDDDDDDDDDD__
+    - x: 0
+      y: 20
+      rows: '___LLLLLLLLLL___
+
+        __KKKKKKKKKKKK__
+
+        _KKKKKKKKKKKKKK_
+
+        _KKKKKKKKKKKKKK_
+
+        __KKKKKKKKKKKK__
+
+        __KKKKKKKKKKKK__
+
+        __KKKKKKKKKKKK__
+
+        ___KKKKKKKKKK___'
+  up_a:
+    patches:
+    - x: 0
+      y: 15
+      rows: __DDDDDDDDDDDD__
+    - x: 0
+      y: 21
+      rows: '___LLLLLLLLLL___
+
+        __KKKKKKKKKKKK__
+
+        _KKKKKKKKKKKKKK_
+
+        _KKKKKKKKKKKKKK_
+
+        __KKKKKKKKKKKK__
+
+        __KKKKKKKKKKKK__
+
+        __KKKKKKKKKKKK__
+
+        ___KKKKKKKKKK___'
+  up_b:
+    patches:
+    - x: 0
+      y: 15
+      rows: __DDDDDDDDDDDD__
+    - x: 0
+      y: 21
+      rows: '___LLLLLLLLLL___
+
+        __KKKKKKKKKKKK__
+
+        _KKKKKKKKKKKKKK_
+
+        _KKKKKKKKKKKKKK_
+
+        __KKKKKKKKKKKK__
+
+        __KKKKKKKKKKKK__
+
+        __KKKKKKKKKKKK__
+
+        ___KKKKKKKKKK___'
+  left:
+    patches:
+    - x: 0
+      y: 14
+      rows: __eDDDDDDDDDDD__
+    - x: 0
+      y: 21
+      rows: '______LLKKK_____
+
+        _______KKKKK____
+
+        ________KKKKK___
+
+        ________KKKKK___
+
+        _________KKKK___
+
+        _________KKKK___'
+    - x: 0
+      y: 26
+      rows: ____YYYY________
+  left_a:
+    patches:
+    - x: 0
+      y: 15
+      rows: __eDDDDDDDDDDD__
+    - x: 0
+      y: 22
+      rows: '______LLKKK_____
+
+        _______KKKKK____
+
+        ________KKKKK___
+
+        ________KKKKK___
+
+        _________KKKK___
+
+        _________KKKK___'
+    - x: 0
+      y: 27
+      rows: ____YYYY________
+  left_b:
+    patches:
+    - x: 0
+      y: 15
+      rows: __eDDDDDDDDDDD__
+    - x: 0
+      y: 22
+      rows: '______LLKKK_____
+
+        _______KKKKK____
+
+        ________KKKKK___
+
+        ________KKKKK___
+
+        _________KKKK___
+
+        _________KKKK___'
+    - x: 0
+      y: 27
+      rows: ____YYYY________

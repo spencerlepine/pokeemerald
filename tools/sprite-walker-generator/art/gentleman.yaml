@@ -1,0 +1,446 @@
+name: gentleman
+description: Senate diplomat in a crimson robe with a maroon mantle and gold stole (replaces the Gentleman).
+kit: person16x32
+replaces: graphics/object_events/pics/people/gentleman.png
+graphics_info: Gentleman
+notes: 'r_g2, B style: the Gentleman''s body as regions (coat -> robe R, arms kept), new head with swept dark hair and a trimmed beard, maroon mantle M, gold stole T, robe lengthened to the ankles. Moves
+  to NPC_2 for the red senate robe.'
+palette: npc_2
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_2
+shade: true
+materials:
+  H: c
+  F: s
+  B: c
+  R: b!
+  M: b
+  T: a
+legend:
+  k: 15
+  f: 10
+  h: 11
+  g: 5
+  r: 8
+accept:
+  step_change: the floor-length robe hides the legs; the bob, arms and hem still move
+base_sheet: graphics/object_events/pics/people/gentleman.png
+remap:
+  c: R
+  b: T
+  a: M
+  w: M
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        .....HHHHHH.....
+
+        ...HHhHHHhHHH...
+
+        ..HHHhHHHhHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHFFFFFFFFHH..
+
+        .FHFFFFFFFFFFHF.
+
+        .FFFFkFFFFkFFFF.
+
+        ..FFFkFFFFkFFF..
+
+        ..BFFFFFFFFFFB..
+
+        ...BBBFFFFBBB...'
+    - x: 0
+      y: 21
+      rows: '___MMMMTTMMMM___
+
+        __MMMMMTTMMMMM__
+
+        _MgMMRRTTRRMMgM_
+
+        ___RRRRTTRRRR___
+
+        ___RfRRTgRRfR___
+
+        ___RRrRgTRrRR___
+
+        __RRfRRTgRRfRR__
+
+        __RrRRRgTRRRrR__
+
+        __RRRRRRRRRRRR__'
+  down_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        .....HHHHHH.....
+
+        ...HHhHHHhHHH...
+
+        ..HHHhHHHhHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHFFFFFFFFHH..
+
+        .FHFFFFFFFFFFHF.
+
+        .FFFFkFFFFkFFFF.
+
+        ..FFFkFFFFkFFF..
+
+        ..BFFFFFFFFFFB..
+
+        ...BBBFFFFBBB...'
+    - x: 0
+      y: 22
+      rows: '___MMMMTTMMMM___
+
+        __MMMMMTTMMMMM__
+
+        _MgMMRRTTRRMMgM_
+
+        ___RRRRTTRRRR___
+
+        ___RfRRTgRRfR___
+
+        ___RRrRgTRrRR___
+
+        __RRfRRTgRRfRR__
+
+        __RrRRRgTRRRrR__
+
+        __RRRRRRRRRRRR__'
+  down_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        .....HHHHHH.....
+
+        ...HHhHHHhHHH...
+
+        ..HHHhHHHhHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHFFFFFFFFHH..
+
+        .FHFFFFFFFFFFHF.
+
+        .FFFFkFFFFkFFFF.
+
+        ..FFFkFFFFkFFF..
+
+        ..BFFFFFFFFFFB..
+
+        ...BBBFFFFBBB...'
+    - x: 0
+      y: 22
+      rows: '___MMMMTTMMMM___
+
+        __MMMMMTTMMMMM__
+
+        _MgMMRRTTRRMMgM_
+
+        ___RRRRTTRRRR___
+
+        ___RfRRTgRRfR___
+
+        ___RRrRgTRrRR___
+
+        __RRfRRTgRRfRR__
+
+        __RrRRRgTRRRrR__
+
+        __RRRRRRRRRRRR__'
+  up:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        .....HHHHHH.....
+
+        ...HHhHHHHhHH...
+
+        ..HHHHHhHHHHHH..
+
+        ..HhHHHHHHHhHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        .FHHHHHHHHHHHHF.
+
+        .FHHHHHHHHHHHHF.
+
+        ..HHHHHHHHHHHH..
+
+        ...HHHHHHHHHH...
+
+        ....HHHHHHHH....'
+    - x: 0
+      y: 21
+      rows: '___MMMMMMMMMM___
+
+        __MMMMMMMMMMMM__
+
+        _MMMMMMMMMMMMMM_
+
+        ___RRRRRRRRRR___
+
+        ___RRfRRRRfRR___
+
+        ___RrRRRrRRrR___
+
+        __RRRfRRRRfRRR__
+
+        __RRrRRRRRRrRR__
+
+        __RRRRRRRRRRRR__'
+  up_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        .....HHHHHH.....
+
+        ...HHhHHHHhHH...
+
+        ..HHHHHhHHHHHH..
+
+        ..HhHHHHHHHhHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        .FHHHHHHHHHHHHF.
+
+        .FHHHHHHHHHHHHF.
+
+        ..HHHHHHHHHHHH..
+
+        ...HHHHHHHHHH...
+
+        ....HHHHHHHH....'
+    - x: 0
+      y: 22
+      rows: '___MMMMMMMMMM___
+
+        __MMMMMMMMMMMM__
+
+        _MMMMMMMMMMMMMM_
+
+        ___RRRRRRRRRR___
+
+        ___RRfRRRRfRR___
+
+        ___RrRRRrRRrR___
+
+        __RRRfRRRRfRRR__
+
+        __RRrRRRRRRrRR__
+
+        __RRRRRRRRRRRR__'
+  up_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        .....HHHHHH.....
+
+        ...HHhHHHHhHH...
+
+        ..HHHHHhHHHHHH..
+
+        ..HhHHHHHHHhHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        .FHHHHHHHHHHHHF.
+
+        .FHHHHHHHHHHHHF.
+
+        ..HHHHHHHHHHHH..
+
+        ...HHHHHHHHHH...
+
+        ....HHHHHHHH....'
+    - x: 0
+      y: 22
+      rows: '___MMMMMMMMMM___
+
+        __MMMMMMMMMMMM__
+
+        _MMMMMMMMMMMMMM_
+
+        ___RRRRRRRRRR___
+
+        ___RRfRRRRfRR___
+
+        ___RrRRRrRRrR___
+
+        __RRRfRRRRfRRR__
+
+        __RRrRRRRRRrRR__
+
+        __RRRRRRRRRRRR__'
+  left:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        ......HHHHH.....
+
+        ....HHHhHHHHH...
+
+        ...HHhHHHHhHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..FFFFFHHHHHHH..
+
+        ..FFFFFFHHHHHH..
+
+        ..FkFFFFFHHHHH..
+
+        ..FkFFFFFFHHH...
+
+        ...BFFFFFFHH....
+
+        ...BBBFFFBB.....'
+    - x: 0
+      y: 21
+      rows: '____MMMMMM______
+
+        ____TTMMMMM_____
+
+        ____Tg__________
+
+        ____gT__________
+
+        ________________
+
+        ________________
+
+        _____RRRRRRR____
+
+        _____RrRfRRR____
+
+        _____RfRRrRR____'
+  left_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        ......HHHHH.....
+
+        ....HHHhHHHHH...
+
+        ...HHhHHHHhHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..FFFFFHHHHHHH..
+
+        ..FFFFFFHHHHHH..
+
+        ..FkFFFFFHHHHH..
+
+        ..FkFFFFFFHHH...
+
+        ...BFFFFFFHH....
+
+        ...BBBFFFBB.....'
+    - x: 0
+      y: 22
+      rows: '____MMMMMM______
+
+        ____TTMMMMM_____
+
+        ____Tg__________
+
+        ____gT__________
+
+        ________________
+
+        ________________
+
+        _____RRRRRRR____
+
+        _____RrRfRRR____
+
+        _____RfRRrRR____'
+  left_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        ......HHHHH.....
+
+        ....HHHhHHHHH...
+
+        ...HHhHHHHhHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..FFFFFHHHHHHH..
+
+        ..FFFFFFHHHHHH..
+
+        ..FkFFFFFHHHHH..
+
+        ..FkFFFFFFHHH...
+
+        ...BFFFFFFHH....
+
+        ...BBBFFFBB.....'
+    - x: 0
+      y: 22
+      rows: '____MMMMMM______
+
+        ____TTMMMMM_____
+
+        ____Tg__________
+
+        ____gT__________
+
+        ________________
+
+        ________________
+
+        _____RRRRRRR____
+
+        _____RrRfRRR____
+
+        _____RfRRrRR____'

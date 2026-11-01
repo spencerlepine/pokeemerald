@@ -1,0 +1,347 @@
+name: mauville_old_man_2
+description: 'Mos Espa storyteller: tan desert hood and cloak, long white beard, bushy white brows, blue-grey wrap tunic with a rose sash (replaces the Mauville old man).'
+kit: person16x32
+replaces: graphics/object_events/pics/people/mauville_old_man_2.png
+graphics_info: Storyteller
+notes: 'r_g2, B style: the old man''s own body as regions (coat -> tan cloak R, shirt and trousers -> blue-grey tunic T, clasped hands kept), new desert hood framing the face, long white beard over the
+  chest, white brows, rose sash. Stays on NPC_1.'
+palette: npc_1
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_1
+shade: true
+materials:
+  H: c@
+  F: s
+  W: w/c
+  R: c
+  T: b
+  P: a
+legend:
+  k: 15
+  e: 14
+  d: 13
+accept: {}
+base_sheet: graphics/object_events/pics/people/mauville_old_man_2.png
+remap:
+  a: R
+  b: T
+  c: T
+  w: W
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        ......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHFFFFFFHHH..
+
+        .HHHFFFFFFFFHHH.
+
+        .HHFFeeFFeeFFHH.
+
+        .HHFFFkFFkFFFHH.
+
+        .HHFFFkFFkFFFHH.
+
+        .HHFWWFFFFWWFHH.
+
+        ..HHWWWWWWWWHH..
+
+        ..RRHWWWWWWHRR..
+
+        ..RRRRWWWWRRRR..
+
+        __RRRRRWWRRRRR__'
+    - x: 0
+      y: 25
+      rows: ___PPPPPPPPPP___
+  down_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        ......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHFFFFFFHHH..
+
+        .HHHFFFFFFFFHHH.
+
+        .HHFFeeFFeeFFHH.
+
+        .HHFFFkFFkFFFHH.
+
+        .HHFFFkFFkFFFHH.
+
+        .HHFWWFFFFWWFHH.
+
+        ..HHWWWWWWWWHH..
+
+        ..RRHWWWWWWHRR..
+
+        ..RRRRWWWWRRRR..
+
+        __RRRRRWWRRRRR__'
+    - x: 0
+      y: 26
+      rows: ___PPPPPPPPPP___
+  down_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        ......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHFFFFFFHHH..
+
+        .HHHFFFFFFFFHHH.
+
+        .HHFFeeFFeeFFHH.
+
+        .HHFFFkFFkFFFHH.
+
+        .HHFFFkFFkFFFHH.
+
+        .HHFWWFFFFWWFHH.
+
+        ..HHWWWWWWWWHH..
+
+        ..RRHWWWWWWHRR..
+
+        ..RRRRWWWWRRRR..
+
+        __RRRRRWWRRRRR__'
+    - x: 0
+      y: 26
+      rows: ___PPPPPPPPPP___
+  up:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        ......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHdHHHHH..
+
+        .HHHHHHHdHHHHHH.
+
+        .HHHHHHHdHHHHHH.
+
+        .HHHHHHdHHHHHHH.
+
+        .HHHHHHdHHHHHHH.
+
+        .HHHHHHdHHHHHHH.
+
+        ..HHHHHHdHHHHH..
+
+        ..RRHHHHdHHHRR..
+
+        ..RRRRHHdHRRRR..'
+    - x: 0
+      y: 25
+      rows: ___PPPP__PPPP___
+  up_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        ......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHdHHHHH..
+
+        .HHHHHHHdHHHHHH.
+
+        .HHHHHHHdHHHHHH.
+
+        .HHHHHHdHHHHHHH.
+
+        .HHHHHHdHHHHHHH.
+
+        .HHHHHHdHHHHHHH.
+
+        ..HHHHHHdHHHHH..
+
+        ..RRHHHHdHHHRR..
+
+        ..RRRRHHdHRRRR..'
+    - x: 0
+      y: 26
+      rows: ___PPPP__PPPP___
+  up_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        ......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHdHHHHH..
+
+        .HHHHHHHdHHHHHH.
+
+        .HHHHHHHdHHHHHH.
+
+        .HHHHHHdHHHHHHH.
+
+        .HHHHHHdHHHHHHH.
+
+        .HHHHHHdHHHHHHH.
+
+        ..HHHHHHdHHHHH..
+
+        ..RRHHHHdHHHRR..
+
+        ..RRRRHHdHRRRR..'
+    - x: 0
+      y: 26
+      rows: ___PPPP__PPPP___
+  left:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        .......HHHH.....
+
+        .....HHHHHHHH...
+
+        ....HHHHHHHHHH..
+
+        ...HHHHHHHHHHH..
+
+        ..HFFFFHHHHHHHH.
+
+        ..FFFFFFHHHHHHH.
+
+        ..eeFFFFHHHHHHH.
+
+        ..FkFFFFHHHHHHH.
+
+        ..FkFFFFHHHHHHH.
+
+        ..WWFFFFHHHHHH..
+
+        ..WWWWFHHHHHH...
+
+        ...WWWWHHHHH....
+
+        ...WWWRRRRR.....
+
+        ____WW__________'
+    - x: 0
+      y: 25
+      rows: ___PPPPPPP______
+  left_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        .......HHHH.....
+
+        .....HHHHHHHH...
+
+        ....HHHHHHHHHH..
+
+        ...HHHHHHHHHHH..
+
+        ..HFFFFHHHHHHHH.
+
+        ..FFFFFFHHHHHHH.
+
+        ..eeFFFFHHHHHHH.
+
+        ..FkFFFFHHHHHHH.
+
+        ..FkFFFFHHHHHHH.
+
+        ..WWFFFFHHHHHH..
+
+        ..WWWWFHHHHHH...
+
+        ...WWWWHHHHH....
+
+        ...WWWRRRRR.....
+
+        ____WW__________'
+    - x: 0
+      y: 26
+      rows: ___PPPPPPP______
+  left_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        .......HHHH.....
+
+        .....HHHHHHHH...
+
+        ....HHHHHHHHHH..
+
+        ...HHHHHHHHHHH..
+
+        ..HFFFFHHHHHHHH.
+
+        ..FFFFFFHHHHHHH.
+
+        ..eeFFFFHHHHHHH.
+
+        ..FkFFFFHHHHHHH.
+
+        ..FkFFFFHHHHHHH.
+
+        ..WWFFFFHHHHHH..
+
+        ..WWWWFHHHHHH...
+
+        ...WWWWHHHHH....
+
+        ...WWWRRRRR.....
+
+        ____WW__________'
+    - x: 0
+      y: 26
+      rows: ___PPPPPPP______

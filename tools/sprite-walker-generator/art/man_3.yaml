@@ -1,0 +1,250 @@
+name: man_3
+description: 'Mos Eisley trader: cream desert head wrap, moustache, brown vest over a mustard shirt, red sash with a gold buckle (replaces Man 3).'
+kit: person16x32
+replaces: graphics/object_events/pics/people/man_3.png
+graphics_info: Man3
+notes: 'r_g2, B style: Man 3''s own body as regions (jacket -> brown vest V, shirt -> mustard Y, arms and walk kept), new cream head wrap with a hanging tail, dark sideburns and a moustache, red sash with
+  a buckle. Stays on NPC_2.'
+palette: npc_2
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_2
+shade: true
+materials:
+  W: w/c
+  H: c
+  M: c
+  V: c
+  Y: a
+  R: b
+legend:
+  k: 15
+  f: 11
+  g: 5
+accept: {}
+base_sheet: graphics/object_events/pics/people/man_3.png
+remap:
+  a: H
+  b: V
+  w: Y
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......WWWW......
+
+        ....WWWWWWWW....
+
+        ...ffWWWWWWff...
+
+        ..WWWffffffWWW..
+
+        ..WWWWWWWWWWWW..
+
+        .HffWWWWWWWWffH.
+
+        _sHssssssssssHs_'
+    - x: 0
+      y: 20
+      rows: ___sMMMMMMMMs___
+    - x: 0
+      y: 26
+      rows: __RRRRRgRRRRR___
+  down_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......WWWW......
+
+        ....WWWWWWWW....
+
+        ...ffWWWWWWff...
+
+        ..WWWffffffWWW..
+
+        ..WWWWWWWWWWWW..
+
+        .HffWWWWWWWWffH.
+
+        _sHssssssssssHs_'
+    - x: 0
+      y: 21
+      rows: ___sMMMMMMMMs___
+    - x: 0
+      y: 27
+      rows: __RRRRRgRRRRR___
+  down_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......WWWW......
+
+        ....WWWWWWWW....
+
+        ...ffWWWWWWff...
+
+        ..WWWffffffWWW..
+
+        ..WWWWWWWWWWWW..
+
+        .HffWWWWWWWWffH.
+
+        _sHssssssssssHs_'
+    - x: 0
+      y: 21
+      rows: ___sMMMMMMMMs___
+    - x: 0
+      y: 27
+      rows: __RRRRRgRRRRR___
+  up:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......WWWW......
+
+        ....WWWWWWWW....
+
+        ...ffWWWWWWff...
+
+        ..WWWffffffWWW..
+
+        ..WWWWWWWWWWWW..
+
+        .WffWWWWWWWWffW.
+
+        .sWWWffWWffWWWs.
+
+        .sHHHHWWWWHHHHs.
+
+        ..HHHHHWWHHHHH..
+
+        ...HHHHWWHHHH...'
+    - x: 0
+      y: 26
+      rows: __RRRRRRRRRRR___
+  up_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......WWWW......
+
+        ....WWWWWWWW....
+
+        ...ffWWWWWWff...
+
+        ..WWWffffffWWW..
+
+        ..WWWWWWWWWWWW..
+
+        .WffWWWWWWWWffW.
+
+        .sWWWffWWffWWWs.
+
+        .sHHHHWWWWHHHHs.
+
+        ..HHHHHWWHHHHH..
+
+        ...HHHHWWHHHH...'
+    - x: 0
+      y: 27
+      rows: __RRRRRRRRRRR___
+  up_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......WWWW......
+
+        ....WWWWWWWW....
+
+        ...ffWWWWWWff...
+
+        ..WWWffffffWWW..
+
+        ..WWWWWWWWWWWW..
+
+        .WffWWWWWWWWffW.
+
+        .sWWWffWWffWWWs.
+
+        .sHHHHWWWWHHHHs.
+
+        ..HHHHHWWHHHHH..
+
+        ...HHHHWWHHHH...'
+    - x: 0
+      y: 27
+      rows: __RRRRRRRRRRR___
+  left:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......WWWWW.....
+
+        ....WWWWWWWW....
+
+        ...fWWWWWWffW...
+
+        ..WWffffffWWWW..
+
+        ..WWWWWWWWWWWW..
+
+        ..WWWWWWWWWfWWWW
+
+        ..ssssHWWWfWWW.W
+
+        ..ssssHHHHHHHH.W'
+    - x: 0
+      y: 20
+      rows: ___MM___________
+    - x: 0
+      y: 26
+      rows: ____RRRRRRR_____
+  left_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......WWWWW.....
+
+        ....WWWWWWWW....
+
+        ...fWWWWWWffW...
+
+        ..WWffffffWWWW..
+
+        ..WWWWWWWWWWWW..
+
+        ..WWWWWWWWWfWWWW
+
+        ..ssssHWWWfWWW.W
+
+        ..ssssHHHHHHHH.W'
+    - x: 0
+      y: 21
+      rows: ___MM___________
+    - x: 0
+      y: 27
+      rows: ____RRRRRRR_____
+  left_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......WWWWW.....
+
+        ....WWWWWWWW....
+
+        ...fWWWWWWffW...
+
+        ..WWffffffWWWW..
+
+        ..WWWWWWWWWWWW..
+
+        ..WWWWWWWWWfWWWW
+
+        ..ssssHWWWfWWW.W
+
+        ..ssssHHHHHHHH.W'
+    - x: 0
+      y: 21
+      rows: ___MM___________
+    - x: 0
+      y: 27
+      rows: ____RRRRRRR_____

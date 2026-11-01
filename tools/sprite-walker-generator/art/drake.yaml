@@ -1,0 +1,171 @@
+name: drake
+description: 'ANAKIN (Force vision): shoulder-length hair, scarred eye, dark Jedi robe over a black tunic, lightsaber hilt, blue-white rim light (replaces Drake).'
+kit: person16x32_still
+replaces: graphics/object_events/pics/people/elite_four/drake.png
+graphics_info: Drake
+notes: 'r_g2, B style: Drake''s standing body as the frame (proportions, arms), new parted shoulder-length brown hair, the scar over his right eye, dark indigo robe (ramp a with dark folds, the vision''s
+  cold cast) open over a black tunic, belt with a lightsaber hilt, white and lavender rim light on the shoulders.'
+palette: npc_3
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_3
+shade: true
+materials:
+  H: c
+  F: s
+  O: a
+  T: k
+  L: c
+legend:
+  k: 15
+  x: 4
+  W: 14
+  g: 5
+  d: 13
+  o: 7
+  h: 6
+  l: 14
+accept:
+  hair_rows: parted hair falls to the jaw; the crown is short
+base_sheet: graphics/object_events/pics/people/elite_four/drake.png
+remap:
+  w: O
+  a: O
+  c: O
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        .....HHHHHH.....
+
+        ...HHHdHHdHHH...
+
+        ..HHHdHHHHdHHH..
+
+        ..HHdHHHHHHdHH..
+
+        .HHdHHHddHHHdHH.
+
+        .HHHHFFHHFFHHHH.
+
+        .HdFFFxFFFFFFdH.
+
+        .HdFFFkFFkFFFdH.
+
+        .HHFFFkFFkFFFHH.
+
+        ..HFFxFFFFFFFH..
+
+        ..HdFFFFFFFFdH..
+
+        ...OOOFFFFOOO...'
+    - x: 0
+      y: 23
+      rows: 'WgOOOOTkkTOOOOgW
+
+        FFoOoOTkkTOoOoFF
+
+        FFFooOLLLLOooFFF
+
+        .FFoOLlhLLOoFF..
+
+        ..goOTTTTTTogo..
+
+        ...ooTTTTTToo...
+
+        ...ooTTkkTToo...
+
+        ....kkk..kkk....'
+  up:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        .....HHHHHH.....
+
+        ...HHHHdHHHHH...
+
+        ..HHHHHdHHHHHH..
+
+        ..HHdHHdHHHdHH..
+
+        .HHdHHHHdHHHdHH.
+
+        .HHHHdHHdHHHHHH.
+
+        .HdHHdHHHHdHHdH.
+
+        .HdHHHHdHHHdHdH.
+
+        .HHHdHHdHHdHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        ..HdHHHHHHHHdH..
+
+        ...HHHHHHHHHH...'
+    - x: 0
+      y: 23
+      rows: 'WgOOOOOOOOOOOOgW
+
+        FFoOOOoOOoOOOoFF
+
+        FFFoOOoOOoOOoFFF
+
+        .FFooOoooooOoFF.
+
+        ..ogoooOOooogo..
+
+        ...oooooooooo...
+
+        ...oooooooooo...
+
+        ....kkk..kkk....'
+  left:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        ......HHHHH.....
+
+        ....HHHdHHHHH...
+
+        ...HHdHHHHdHHH..
+
+        ..HHdHHHdHHHdH..
+
+        ..HdHHHHHHdHHHH.
+
+        ..FFFHHHdHHHdHH.
+
+        ..FxFFFHHHHdHHH.
+
+        ..FkFFFFHHdHHHH.
+
+        ..FkFFFFHHHHdHH.
+
+        ..FFFFFFHHdHHH..
+
+        ...FFFFFHdHHHH..
+
+        ....FFFOHHHHH...'
+    - x: 0
+      y: 23
+      rows: '....TTOOOOOgW...
+
+        ....TTOOOoOOo...
+
+        ....LLOOOoOoo...
+
+        ....lhOFFooOo...
+
+        ....ooOFFoogo...
+
+        .....TTooooo....
+
+        ......TToooo....
+
+        ......kkkkk.....'

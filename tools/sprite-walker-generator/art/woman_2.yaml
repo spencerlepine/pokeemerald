@@ -1,0 +1,370 @@
+name: woman_2
+description: 'Spaceport worker (f): green work cap and ear defenders, baggy grey coveralls with a white reflective band, tool belt and boots (replaces Woman 2).'
+kit: person16x32
+replaces: graphics/object_events/pics/people/woman_2.png
+graphics_info: Woman2
+notes: 'r_g2, B style: Woman 2''s own body as regions (long hair, arms, walk kept; dress -> grey coveralls J split into two legs), new green work cap with a visor, green ear defenders, white reflective
+  band, brown tool belt with a tool, dark boots. Stays on NPC_3.'
+palette: npc_3
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_3
+shade: true
+materials:
+  C: b
+  V: b
+  E: b
+  J: a
+  R: w/a
+  B: c
+  O: c
+  H: c
+legend:
+  k: 15
+  h: 8
+  t: 14
+accept: {}
+base_sheet: graphics/object_events/pics/people/woman_2.png
+remap:
+  b: J
+  a: J
+  w: J
+  c: H
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......CCCC......
+
+        ....CCCCCCCC....
+
+        ...CCChCChCCC...
+
+        ..CCCCCCCCCCCC..
+
+        ..CCCCCCCCCCCC..
+
+        ...VVVVVVVVVV...'
+    - x: 0
+      y: 17
+      rows: 'EE____________EE
+
+        EE____________EE
+
+        EE____________EE'
+    - x: 0
+      y: 24
+      rows: '___BBBtBBBBBB___
+
+        ________________
+
+        ___RRRRRRRRRR___
+
+        ________________
+
+        _______.._______
+
+        ___JJJJ..JJJJ___
+
+        ____OOO..OOO____'
+  down_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......CCCC......
+
+        ....CCCCCCCC....
+
+        ...CCChCChCCC...
+
+        ..CCCCCCCCCCCC..
+
+        ..CCCCCCCCCCCC..
+
+        ...VVVVVVVVVV...'
+    - x: 0
+      y: 18
+      rows: 'EE____________EE
+
+        EE____________EE
+
+        EE____________EE'
+    - x: 0
+      y: 25
+      rows: '___BBBtBBBBBB___
+
+        ________________
+
+        ___RRRRRRRRRR___
+
+        ________________
+
+        _______.._______
+
+        ___JJJJ..JJJJ___
+
+        ____OOO..OOO____'
+  down_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......CCCC......
+
+        ....CCCCCCCC....
+
+        ...CCChCChCCC...
+
+        ..CCCCCCCCCCCC..
+
+        ..CCCCCCCCCCCC..
+
+        ...VVVVVVVVVV...'
+    - x: 0
+      y: 18
+      rows: 'EE____________EE
+
+        EE____________EE
+
+        EE____________EE'
+    - x: 0
+      y: 25
+      rows: '___BBBtBBBBBB___
+
+        ________________
+
+        ___RRRRRRRRRR___
+
+        ________________
+
+        _______.._______
+
+        ___JJJJ..JJJJ___
+
+        ____OOO..OOO____'
+  up:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......CCCC......
+
+        ....CCCCCCCC....
+
+        ...CCCCCCCCCC...
+
+        ..CCCCCCCCCCCC..
+
+        ..CCCCCCCCCCCC..
+
+        ..CCCCCHHCCCCC..
+
+        ......HHHH......'
+    - x: 0
+      y: 17
+      rows: 'EE____________EE
+
+        EE____________EE
+
+        EE____________EE'
+    - x: 0
+      y: 24
+      rows: '________________
+
+        ________________
+
+        ___RRRRRRRRRR___'
+    - x: 5
+      y: 17
+      rows: '_HHHH_
+
+        HHHHHH
+
+        _HHHH_'
+  up_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......CCCC......
+
+        ....CCCCCCCC....
+
+        ...CCCCCCCCCC...
+
+        ..CCCCCCCCCCCC..
+
+        ..CCCCCCCCCCCC..
+
+        ..CCCCCHHCCCCC..
+
+        ......HHHH......'
+    - x: 0
+      y: 18
+      rows: 'EE____________EE
+
+        EE____________EE
+
+        EE____________EE'
+    - x: 0
+      y: 25
+      rows: '________________
+
+        ________________
+
+        ___RRRRRRRRRR___'
+    - x: 5
+      y: 18
+      rows: '_HHHH_
+
+        HHHHHH
+
+        _HHHH_'
+  up_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......CCCC......
+
+        ....CCCCCCCC....
+
+        ...CCCCCCCCCC...
+
+        ..CCCCCCCCCCCC..
+
+        ..CCCCCCCCCCCC..
+
+        ..CCCCCHHCCCCC..
+
+        ......HHHH......'
+    - x: 0
+      y: 18
+      rows: 'EE____________EE
+
+        EE____________EE
+
+        EE____________EE'
+    - x: 0
+      y: 25
+      rows: '________________
+
+        ________________
+
+        ___RRRRRRRRRR___'
+    - x: 5
+      y: 18
+      rows: '_HHHH_
+
+        HHHHHH
+
+        _HHHH_'
+  left:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......CCCCC.....
+
+        ....CCCCCCCC....
+
+        ...CChCCChCCC...
+
+        ..CCCCCCCCCCCC..
+
+        .VVVCCCCCCCCCC..
+
+        VVVV____________'
+    - x: 0
+      y: 17
+      rows: '________EE______
+
+        ________EE______
+
+        _________E______'
+    - x: 0
+      y: 25
+      rows: '_____BtBBB______
+
+        ________________
+
+        ____RRRRRRRR____'
+    - x: 12
+      y: 15
+      rows: '_H_
+
+        HHH
+
+        HHH
+
+        _H_'
+  left_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......CCCCC.....
+
+        ....CCCCCCCC....
+
+        ...CChCCChCCC...
+
+        ..CCCCCCCCCCCC..
+
+        .VVVCCCCCCCCCC..
+
+        VVVV____________'
+    - x: 0
+      y: 18
+      rows: '________EE______
+
+        ________EE______
+
+        _________E______'
+    - x: 0
+      y: 26
+      rows: '_____BtBBB______
+
+        ________________
+
+        ____RRRRRRRR____'
+    - x: 12
+      y: 16
+      rows: '_H_
+
+        HHH
+
+        HHH
+
+        _H_'
+  left_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......CCCCC.....
+
+        ....CCCCCCCC....
+
+        ...CChCCChCCC...
+
+        ..CCCCCCCCCCCC..
+
+        .VVVCCCCCCCCCC..
+
+        VVVV____________'
+    - x: 0
+      y: 18
+      rows: '________EE______
+
+        ________EE______
+
+        _________E______'
+    - x: 0
+      y: 26
+      rows: '_____BtBBB______
+
+        ________________
+
+        ____RRRRRRRR____'
+    - x: 12
+      y: 16
+      rows: '_H_
+
+        HHH
+
+        HHH
+
+        _H_'

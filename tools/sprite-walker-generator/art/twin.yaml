@@ -1,0 +1,171 @@
+name: twin
+description: 'Twin kid (both twins): top-knot tied with a red band, cream wrap tunic with a crossover fold, brown belt and boots (replaces the Twins).'
+kit: person16x32
+replaces: graphics/object_events/pics/people/twin.png
+graphics_info: Twin
+notes: 'r_g2, B style: the Twin''s own small body as regions (face, hair, arms, walk kept), the big bow replaced by a top-knot with a red band, the dress turned into a cream Tatooine wrap tunic with a crossover
+  fold, belt with a buckle, brown boots. Stays on NPC_2.'
+palette: npc_2
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_2
+shade: true
+materials:
+  H: c
+  R: b
+  T: w/c
+  B: c
+  O: c
+legend:
+  k: 15
+  h: 11
+  d: 12
+  y: 5
+accept: {}
+base_sheet: graphics/object_events/pics/people/twin.png
+remap:
+  a: T
+  w: d
+  b: O
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 14
+      rows: '................
+
+        ......HHHH......
+
+        .....HHhHHH.....
+
+        ......RRRR......
+
+        ....HHHHHHHH....'
+    - &id001
+      x: 0
+      y: 28
+      rows: ____BBByBBBB____
+  down_a:
+    patches:
+    - x: 0
+      y: 15
+      rows: '................
+
+        ......HHHH......
+
+        .....HHhHHH.....
+
+        ......RRRR......
+
+        ....HHHHHHHH....'
+    - x: 0
+      y: 29
+      rows: ____BBByBBBB____
+  down_b:
+    patches:
+    - x: 0
+      y: 15
+      rows: '................
+
+        ......HHHH......
+
+        .....HHhHHH.....
+
+        ......RRRR......
+
+        ....HHHHHHHH....'
+    - x: 0
+      y: 29
+      rows: ____BBByBBBB____
+  up:
+    patches:
+    - x: 0
+      y: 14
+      rows: '................
+
+        ......HHHH......
+
+        .....HHHhHH.....
+
+        ......RRRR......
+
+        ....HHHHHHHH....'
+    - *id001
+  up_a:
+    patches:
+    - x: 0
+      y: 15
+      rows: '................
+
+        ......HHHH......
+
+        .....HHHhHH.....
+
+        ......RRRR......
+
+        ....HHHHHHHH....'
+    - x: 0
+      y: 29
+      rows: ____BBByBBBB____
+  up_b:
+    patches:
+    - x: 0
+      y: 15
+      rows: '................
+
+        ......HHHH......
+
+        .....HHHhHH.....
+
+        ......RRRR......
+
+        ....HHHHHHHH....'
+    - x: 0
+      y: 29
+      rows: ____BBByBBBB____
+  left:
+    patches:
+    - x: 0
+      y: 14
+      rows: '................
+
+        .........HHH....
+
+        ........HHhHH...
+
+        .........RRR....
+
+        .....HHHHHHHH...'
+    - x: 0
+      y: 28
+      rows: ____BByBBBB_____
+  left_a:
+    patches:
+    - x: 0
+      y: 15
+      rows: '................
+
+        .........HHH....
+
+        ........HHhHH...
+
+        .........RRR....
+
+        .....HHHHHHHH...'
+    - x: 0
+      y: 29
+      rows: ____BByBBBB_____
+  left_b:
+    patches:
+    - x: 0
+      y: 15
+      rows: '................
+
+        .........HHH....
+
+        ........HHhHH...
+
+        .........RRR....
+
+        .....HHHHHHHH...'
+    - x: 0
+      y: 29
+      rows: ____BByBBBB_____
