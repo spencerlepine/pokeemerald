@@ -53,11 +53,34 @@ Jobs go through the v2 workflows API (`/v2/consumer/workflows`) with `currencies
 
 jpeg is the default; the 8x block vote absorbs its noise. `--whatif` shows the price before spending.
 
+## Writing a job (reusable prompt)
+
+The prompt is a template (`PROMPT` in the script); a new character only needs a `jobs.json` entry:
+
+```json
+"magma_leader_maxie": {
+  "subject": "Darth Vader",
+  "desc": "tall imposing figure, black full-face helmet, ... red lightsaber",
+  "negative": "visible face, skin, hair, hat",
+  "theme": "imperial-order"
+}
+```
+
+- `subject` leads the prompt at weight 1.3, so the character wins over the LoRA's trainer look.
+- `desc` is the silhouette: body shape, height, headgear, clothes, held item. Write it for any body
+  (a Wookiee: "huge furry humanoid, long brown fur all over, bandolier across chest, bowcaster").
+- `negative` adds per-character exclusions (a masked character: "visible face, skin, hair").
+- optional `pose` (default "standing, facing left, three-quarter view") and `style` (`gen1`/`gen2`).
+- The template never says "pokemon trainer", and the shared negatives exclude Poke Balls, caps and
+  "generic pokemon trainer"; with those in, every subject came out as a kid in a cap.
+- LoRA strength defaults to 0.75 for the same reason.
+
 ## Findings from the first run
 
 - The checkpoint AIR `101055@128078` and LoRA `159333@443092` are accepted as is.
 - The LoRA has no trigger words. The `gen1`/`gen2` tags force the old Game Boy look (the first run used
   `gen2`: maroon, skin-toned, Crystal-like). Leave the tag off for the full-colour look of the model previews;
   `--style gen2` brings it back.
+- Round 3 (prompt template above, 1 image, 3 Buzz) gave a recognisable Vader: helmet, mask, cape, saber.
 - `--fit crop` keeps the native 8x pixel grid and reads crisper; `--fit scale` fills the 64 cell but
   re-votes at 7x or 9x and picks up stray pixels. Crop clips a figure wider than 64 (a lightsaber).

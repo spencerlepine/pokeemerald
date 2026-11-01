@@ -53,10 +53,14 @@ CHECKPOINTS = {
     "sd1": "urn:air:sd1:checkpoint:civitai:4384@128713",      # DreamShaper 8
 }
 
-PROMPT = ("{trigger}{style}, pokemon trainer sprite, pixel art, {subject}, {desc}, "
-          "full body, standing, facing left, three-quarter view, "
-          "solid white background, simple background, limited palette{palette}")
-NEGATIVE = ("scenery, detailed background, gradient background, floor, shadow, text, watermark, "
+# Reusable template: the subject leads (weighted) and the job's look notes describe the silhouette, so
+# the LoRA supplies only the art style. "pokemon trainer" is deliberately absent; it pulls every subject
+# toward a generic kid in a cap holding a Poke Ball. Per-job `pose` and `negative` extend it.
+PROMPT = ("{trigger}{style}, ({subject}:1.3), {desc}, full body character sprite, {pose}, "
+          "pixel art, game sprite, crisp dark outlines, solid white background, simple background{palette}")
+POSE = "standing, facing left, three-quarter view"
+NEGATIVE = ("poke ball, pokeball, holding ball, baseball cap, generic pokemon trainer, anime boy, "
+            "scenery, detailed background, gradient background, floor, shadow, text, watermark, "
             "signature, frame, border, multiple characters, cropped, cut off feet, blurry, 3d, "
             "photo, realistic, painting, smooth shading")
 
@@ -166,13 +170,14 @@ def brief(trainer: str) -> dict:
     subject = job.get("subject") or row.get("sw_subject") or stem.replace("_", " ")
     return {"stem": stem, "wiki_path": row.get("path"), "sw_subject": row.get("sw_subject"),
             "subject": subject, "desc": job.get("desc", ""), "theme": job.get("theme", "factions"),
-            "style": job.get("style", "")}
+            "style": job.get("style", ""), "pose": job.get("pose", POSE),
+            "negative": job.get("negative", "")}
 
 
 def build_prompt(b: dict, v: dict) -> str:
     trig = ", ".join(v.get("trainedWords") or [])
     p = PROMPT.format(trigger=(trig + ", ") if trig else "", style=b["style"],
-                      subject=b["subject"].lower(), desc=b["desc"],
+                      subject=b["subject"].lower(), desc=b["desc"], pose=b["pose"],
                       palette=(", " + THEME_WORDS[b["theme"]]) if b["theme"] in THEME_WORDS else "")
     return ", ".join(s.strip() for s in p.split(",") if s.strip())
 
@@ -188,7 +193,7 @@ def cmd_gen(args) -> list[Path]:
     prompt = args.prompt or build_prompt(b, v)
     seed = args.seed if args.seed is not None else random.randrange(1, 2**31 - 1)
     lora_air = v.get("air") or f"urn:air:{fam}:lora:civitai:{LORA_MODEL_ID}@{v['id']}"
-    params = {"prompt": prompt, "negativePrompt": args.negative or NEGATIVE,
+    params = {"prompt": prompt, "negativePrompt": args.negative or ", ".join(x for x in (b["negative"], NEGATIVE) if x),
               "scheduler": args.scheduler, "steps": args.steps, "cfgScale": args.cfg,
               "width": args.size, "height": args.size, "seed": seed, "clipSkip": 2}
     # v2 workflows API. The v1 /consumer/jobs endpoint only spends yellow (bought) Buzz and answers
@@ -342,7 +347,12 @@ def rel(p: Path) -> str:
 
 def _pad_white(img: Image.Image, cell: int) -> Image.Image:
     side = -(-max(img.width, img.height) // cell) * cell
-    c = Image.new("RGB", (side, side), (255, 255, 255))
+    # Pad with the figure crop's own border colour (the "white" background is often a light grey
+    # gradient), so the knock-out that follows sees one background colour, not white + grey.
+    a = np.array(img.convert("RGB"))
+    border = np.concatenate([a[0], a[-1], a[:, 0], a[:, -1]])
+    fill = tuple(int(x) for x in np.median(border, axis=0))
+    c = Image.new("RGB", (side, side), fill)
     c.paste(img, ((side - img.width) // 2, side - img.height))
     return c
 
@@ -382,7 +392,7 @@ def main():
         p.add_argument("--negative")
         p.add_argument("--seed", type=int)
         p.add_argument("-n", type=int, default=1, help="images in this request")
-        p.add_argument("--strength", type=float, default=1.0)
+        p.add_argument("--strength", type=float, default=0.75, help="LoRA weight; lower lets the subject through")
         p.add_argument("--steps", type=int, default=25)
         p.add_argument("--cfg", type=float, default=7.0)
         p.add_argument("--scheduler", default="EulerA")

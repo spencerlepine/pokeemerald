@@ -1,7 +1,8 @@
 {
   "magma_leader_maxie": {
     "subject": "Darth Vader",
-    "desc": "tall man in black armour, black helmet with mask, long black cape, chest control box, belt, red lightsaber in hand",
+    "desc": "tall imposing figure, black full-face helmet, black skull-like mask with triangular mouth grille, no visible face, glossy black armour, long flowing black cape, chest control panel with small coloured lights, belt with silver boxes, black gloves, red lightsaber",
+    "negative": "visible face, skin, hair, hat",
     "theme": "imperial-order",
     "style": ""
   }
