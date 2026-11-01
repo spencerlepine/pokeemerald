@@ -1,0 +1,9 @@
+{
+  "init": "refs/cacturne_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/1/1a/TuskenRaider-Chron.png/revision/latest/scale-to-width-down/1000?cb=20230829031827",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "Tall wrapped desert scarecrow with a hooded goggle face spiny cactus arms and tattered robes",
+  "colour": "dark green and sand tan",
+  "ref_note": "Tusken Raider Chronicles render (alpha) as scarecrow body plan for the original night hunter; whole body front view; gaffi stick across the body may read as a spiny arm"
+}
