@@ -28,3 +28,15 @@ git pull --rebase --autostash -q origin master && git push -q origin HEAD:master
 committed the pick; then the commit is a no-op).
 
 Final message, under 120 words: `FIXED: sp (new ref)` / `STILL WEAK: sp (why)` / `Buzz: about N`.
+
+## Lessons from round 1 (read before picking)
+- Text-only rarely beats real art: it often came out as a frontal blob that fills the frame. Prefer a real image;
+  go text-only only when no usable art exists, and then say "side view, whole body, small, centred" in the desc.
+- Sprites "cut off at the bottom/top" mostly come from a prep that is too big: use `--width 46-52` so the figure
+  has margin in the 96 px start, and make sure the crop has empty space around the whole creature.
+- A straight-on (front-view) reference gives a straight-on sprite; search for a side or three-quarter view
+  (galleries, card art, toy/figure photos, Legends pages).
+- Line art and greyscale sketches come out white and noisy; prefer coloured art. If only line art exists, give a
+  strong `--colour` and `--denoise 0.6`.
+- Look at the prep column on the sheet: it is exactly what the model starts from. If it is not a clean, whole,
+  left-facing creature, the sprite will not be either.
