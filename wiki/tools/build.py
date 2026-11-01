@@ -50,7 +50,7 @@ MAPPING_FILES = ["species", "characters", "items", "moves", "types", "abilities"
                  "trainer_classes", "locations", "world_objects"]
 SWAP_KINDS = {"HOTSWAP", "NET_NEW", "KEEP", "CUT"}
 MAP_STATUSES = {"TODO", "DRAFT", "DONE", "IDEA"}
-ART_STATUSES = {"PENDING_ART", "NEEDS_PLACEHOLDER", "KEEP_ANIM", "KEEP_ART", "NO_ART"}
+ART_STATUSES = {"PENDING_ART", "NEEDS_PLACEHOLDER", "KEEP_ANIM", "KEEP_ART", "NO_ART", "ART_READY"}
 AUDIO_STATUSES = {"PENDING_AUDIO", "NEEDS_PLACEHOLDER", "KEEP_AUDIO", "NO_AUDIO"}
 
 warnings: list[str] = []
@@ -550,6 +550,23 @@ def pending_art(rows):
     return out
 
 
+def apply_art_ready(art):
+    """mapping/art_ready.csv: new art the owner approved, stored in ../art/<path>, not yet copied into ../game."""
+    path = MAPPING / "art_ready.csv"
+    if not path.exists():
+        return
+    by_id = {a["asset_id"]: a for a in art}
+    for d in read(path):
+        a = by_id.get(d["asset_id"])
+        if not a:
+            warn(f"mapping/art_ready.csv: {d['asset_id']} is not in pending_art.csv")
+            continue
+        if not (ROOT / d["art_file"]).exists():
+            warn(f"mapping/art_ready.csv: {d['art_file']} missing")
+        a.update(art_status="ART_READY", drawn_by=d.get("drawn_by", ""),
+                 art_notes="; ".join(x for x in (f"art: {d['art_file']}", d.get("notes", "")) if x))
+
+
 def net_new_art(net):
     """NET_NEW rows that need new art have no Emerald asset; list them so the art list is complete."""
     out = []
@@ -832,7 +849,7 @@ def game_port(ents, net, texts, tl, art, audio):
             action = f"add it: copy {a['placeholder_from']} as a placeholder, swap in the new art once art_status is DONE"
             dep = a.get("depends_on", "")
         else:
-            action, dep = "copy the redrawn art into ../game once art_status is DONE", "art_status DONE in pending_art.csv"
+            action, dep = "copy the redrawn art into ../game once art_status is ART_READY", "art_status ART_READY in pending_art.csv"
         add(port_id=f"art|{a['asset_id']}", table="pending_art.csv", kind=f"art:{a['kind']}",
             wiki_id=a["asset_id"], swap_kind=sk, action=action, game_file=a["path"], game_line=a.get("source_line", ""),
             wiring=a["used_by"], depends_on=dep,
@@ -965,6 +982,7 @@ def main() -> None:
     known = (set(by_id) | {f["flag_id"] for f in read(EMERALD / "story_flags.csv")} | {n["id"] for n in net}
              | set(inv) | set(audio_dec) | set(vfx_dec) | {a["asset_id"] for a in art})
     art += vfx_art(inv, vfx_dec, art, known)
+    apply_art_ready(art)
     for a in art:
         a["game_status"] = "NOT_STARTED"
     art_cols = list(art[0].keys())

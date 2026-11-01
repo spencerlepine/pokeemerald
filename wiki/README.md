@@ -23,6 +23,9 @@ Three lists drive the work. All live in `database/` and can be browsed with `pyt
   - `notes`: things to check, such as a menu string wider than Emerald's (`ui_wider_px` in `texts.csv`) whose
     window must fit it.
 
+Approved new art lives in [`art/`](art) at the same path it has in `../game` (`art/graphics/...`), listed in
+`mapping/art_ready.csv`. `python3 tools/mark_art_ready.py` applies that list to `database/` (a full rebuild does too).
+
 When a row is in the game, set `game_status` to `DONE` in its source table (named in `table`) and rebuild.
 `game_port.csv` is generated from those tables. Net-new content (`NET_NEW` rows) is built after all
 hotswaps, following [`bible/NET_NEW_DESIGNS.md`](bible/NET_NEW_DESIGNS.md).
@@ -38,6 +41,7 @@ hotswaps, following [`bible/NET_NEW_DESIGNS.md`](bible/NET_NEW_DESIGNS.md).
 | `art_status` | `PENDING_ART` | Uses the renamed Emerald art until it is redrawn. |
 | | `NEEDS_PLACEHOLDER` | Net-new: copy the asset named in `placeholder_from` first. |
 | | `KEEP_ANIM` / `KEEP_ART` / `NO_ART` | Reuse the existing animation or art, or nothing to draw. |
+| | `ART_READY` | New art drawn and approved by the owner, stored in `art/<path>`; still to be copied into `../game` (`game_status` says when). |
 | `audio_status` | `PENDING_AUDIO` | Mapped: the Emerald sound plays as a placeholder until the Star Wars one replaces it (same song / cry id). |
 | | `NEEDS_PLACEHOLDER` | Net-new: copy the sound named in `placeholder_from` under the new name first. |
 | | `KEEP_AUDIO` / `NO_AUDIO` | Reuse the Emerald sound as is, or nothing to make. |
