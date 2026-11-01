@@ -1079,10 +1079,11 @@ static void Task_TitleScreenCrawlOut(u8 taskId)
     }
     else if (frame <= CRAWL_OUT_CREATURE_END)
     {
+        u8 eva;
         // The ridge (BG0) sinks below the bottom edge
         SetGpuReg(REG_OFFSET_BG0VOFS, -(((frame - CRAWL_OUT_CLOUDS_END) * CRAWL_OUT_RIDGE_DROP) / (CRAWL_OUT_CREATURE_END - CRAWL_OUT_CLOUDS_END)));
         // Cross-fade the (now blank) sky screen (BG1) over BG0; the ridge sinks meanwhile
-        u8 eva = ((frame - CRAWL_OUT_CLOUDS_END) * 16) / (CRAWL_OUT_CREATURE_END - CRAWL_OUT_CLOUDS_END);
+        eva = ((frame - CRAWL_OUT_CLOUDS_END) * 16) / (CRAWL_OUT_CREATURE_END - CRAWL_OUT_CLOUDS_END);
         SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(eva, 16 - eva));
         if (frame == CRAWL_OUT_CREATURE_END)
         {
