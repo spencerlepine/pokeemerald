@@ -1,0 +1,9 @@
+{
+  "init": "refs/oddish_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/e/ed/Fire_Plant-SuperSW-ESB.png/revision/latest?cb=20161121000719",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small walking root bulb with a tuft of leafy stalks tipped with buds",
+  "colour": "dark blue and green",
+  "ref_note": "original; borrows the Dagobah Fire Plant (Super Star Wars ESB sprite, transparent), pale bulb with leaf stalks; colour from prompt"
+}

@@ -1,0 +1,10 @@
+{
+  "init": "refs/shiftry_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/5/51/Condor_dragon.jpg/revision/latest?cb=20220117082158",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "tall winged forest spirit with huge leaf-fan wings and a long tail",
+  "colour": "dark brown and leaf green",
+  "negative": "signature, text",
+  "ref_note": "Endor condor dragon sketch; wings stand in for leaf fans"
+}

@@ -1,0 +1,9 @@
+{
+  "init": "refs/gloom_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/5/55/Skungus-JFO.png/revision/latest/scale-to-width-down/1000?cb=20241221201651",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "drooling swamp root pod with thick folded leaves and a wilted sprout on top",
+  "colour": "dark blue grey and olive",
+  "ref_note": "original; borrows Skungus (JFO render, transparent, unclaimed), bulbous plant pod"
+}

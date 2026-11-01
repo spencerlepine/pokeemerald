@@ -1,0 +1,9 @@
+{
+  "init": "refs/vileplume_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/0/09/JawPlant-JFO.png/revision/latest/scale-to-width-down/1000?cb=20241221201831",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "giant toxic swamp flower with huge spiked blooms on thick twisting stalks",
+  "colour": "tan orange and olive",
+  "ref_note": "original; borrows JFO jaw plant render (transparent, image unused). The bellsprout line borrows the jaw plant design from a different concept image"
+}
