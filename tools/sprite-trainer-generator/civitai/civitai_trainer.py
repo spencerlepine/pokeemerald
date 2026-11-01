@@ -210,8 +210,8 @@ def cmd_gen(args) -> list[Path]:
     b = brief(args.trainer)
     if args.style is not None:
         b["style"] = args.style
-    if b.get("strength") is not None and args.strength == 0.75:  # per-job LoRA weight unless --strength is given
-        args.strength = float(b["strength"])
+    if args.strength is None:  # --strength wins, then the job's own weight, then 0.75
+        args.strength = float(b["strength"]) if b.get("strength") is not None else 0.75
     v = pick_version(args.version)
     fam = family(v)
     prompt = args.prompt or build_prompt(b, v)
@@ -284,6 +284,9 @@ def cmd_gen(args) -> list[Path]:
         data.raise_for_status()
         sd = im.get("seed") or seed + i
         p = out / f"{stamp}_s{sd}.png"
+        k = 1
+        while p.exists():  # two runs of one seed finishing in the same second
+            p = out / f"{stamp}-{k}_s{sd}.png"; k += 1
         Image.open(__import__("io").BytesIO(data.content)).convert("RGB").save(p)
         meta = {"trainer": b, "lora": v, "checkpoint": workflow["steps"][0]["input"].get("model") or workflow["steps"][0]["input"].get("checkpointModel"),
                 "params": params, "strength": args.strength, "format": args.format, "seed": sd,
@@ -623,7 +626,7 @@ def main():
         p.add_argument("--init", help="image to image: start from this local image (a raw take or concept art)")
         p.add_argument("--denoise", type=float, default=0.45, help="with --init: 0..1, how far from the image")
         p.add_argument("-n", type=int, default=1, help="images in this request")
-        p.add_argument("--strength", type=float, default=0.75, help="LoRA weight; lower lets the subject through")
+        p.add_argument("--strength", type=float, default=None, help="LoRA weight (default: the job's strength, else 0.75); lower lets the subject through")
         p.add_argument("--steps", type=int, default=25)
         p.add_argument("--cfg", type=float, default=7.0)
         p.add_argument("--scheduler", default="EulerA")
