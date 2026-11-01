@@ -3,8 +3,8 @@ description: Spaceport kid in a padded flight jacket (replaces the Emerald BOY 2
 kit: person16x32
 replaces: graphics/object_events/pics/people/boy_2.png
 graphics_info: Boy2
-notes: boy_2.png on NPC_2 (orange jacket, red shorts) with a brown flight cap with ear flaps over the
-  hair and wider shoulders.
+notes: boy_2.png on NPC_2 (orange jacket, red shorts) with a red flight cap with ear flaps over the hair
+  and wider shoulders.
 palette: npc_2
 palette_tag: OBJ_EVENT_PAL_TAG_NPC_2
 base_sheet: graphics/object_events/pics/people/boy_2.png
@@ -30,17 +30,17 @@ frames:
     patches:
     - x: 3
       y: 12
-      rows: '..DDDDDD..
+      rows: '..AAAAAA..
 
-        .DDCCCCDD.
+        .AA9999AA.
 
-        DCBCCCCCBD
+        A98999998A
 
-        DCCCCCCCCD
+        A99999999A
 
-        DDCCCCCCDD
+        AA999999AA
 
-        D2DCCCCD2D'
+        A2A9999A2A'
     - x: 1
       y: 22
       rows: AA9944334499AA
@@ -48,17 +48,17 @@ frames:
     patches:
     - x: 3
       y: 13
-      rows: '..DDDDDD..
+      rows: '..AAAAAA..
 
-        .DDCCCCDD.
+        .AA9999AA.
 
-        DCBCCCCCBD
+        A98999998A
 
-        DCCCCCCCCD
+        A99999999A
 
-        DDCCCCCCDD
+        AA999999AA
 
-        D2DCCCCD2D'
+        A2A9999A2A'
     - x: 1
       y: 23
       rows: AA9944334499AA
@@ -66,17 +66,17 @@ frames:
     patches:
     - x: 3
       y: 13
-      rows: '..DDDDDD..
+      rows: '..AAAAAA..
 
-        .DDCCCCDD.
+        .AA9999AA.
 
-        DCBCCCCCBD
+        A98999998A
 
-        DCCCCCCCCD
+        A99999999A
 
-        DDCCCCCCDD
+        AA999999AA
 
-        D2DCCCCD2D'
+        A2A9999A2A'
     - x: 1
       y: 23
       rows: AA9944334499AA
@@ -84,17 +84,17 @@ frames:
     patches:
     - x: 3
       y: 12
-      rows: '..DDDDDD..
+      rows: '..AAAAAA..
 
-        .DDCCCCDD.
+        .AA9999AA.
 
-        DCBCCCCCBD
+        A98999998A
 
-        DCCCCCCCCD
+        A99999999A
 
-        DDCCCCCCDD
+        AA999999AA
 
-        DCDCCCCDCD'
+        A9A9999A9A'
     - x: 1
       y: 22
       rows: AA8FFDDDDFF8AA
@@ -102,17 +102,17 @@ frames:
     patches:
     - x: 3
       y: 13
-      rows: '..DDDDDD..
+      rows: '..AAAAAA..
 
-        .DDCCCCDD.
+        .AA9999AA.
 
-        DCBCCCCCBD
+        A98999998A
 
-        DCCCCCCCCD
+        A99999999A
 
-        DDCCCCCCDD
+        AA999999AA
 
-        DCDCCCCDCD'
+        A9A9999A9A'
     - x: 1
       y: 23
       rows: AA8FFDDDDFF8AA
@@ -120,17 +120,17 @@ frames:
     patches:
     - x: 3
       y: 13
-      rows: '..DDDDDD..
+      rows: '..AAAAAA..
 
-        .DDCCCCDD.
+        .AA9999AA.
 
-        DCBCCCCCBD
+        A98999998A
 
-        DCCCCCCCCD
+        A99999999A
 
-        DDCCCCCCDD
+        AA999999AA
 
-        DCDCCCCDCD'
+        A9A9999A9A'
     - x: 1
       y: 23
       rows: AA8FFDDDDFF8AA
@@ -138,44 +138,44 @@ frames:
     patches:
     - x: 3
       y: 12
-      rows: '..DDDDD...
+      rows: '..AAAAA...
 
-        .DDCCCCDD.
+        .AA9999AA.
 
-        DCCCCCCCBD
+        A99999998A
 
-        DCCCCCCCCD
+        A99999999A
 
-        DDCCCCCCDD
+        AA999999AA
 
-        D1DDCCCCDD'
+        A1AA9999AA'
   left_a:
     patches:
     - x: 3
       y: 13
-      rows: '..DDDDD...
+      rows: '..AAAAA...
 
-        .DDCCCCDD.
+        .AA9999AA.
 
-        DCCCCCCCBD
+        A99999998A
 
-        DCCCCCCCCD
+        A99999999A
 
-        DDCCCCCCDD
+        AA999999AA
 
-        D1DDCCCCDD'
+        A1AA9999AA'
   left_b:
     patches:
     - x: 3
       y: 13
-      rows: '..DDDDD...
+      rows: '..AAAAA...
 
-        .DDCCCCDD.
+        .AA9999AA.
 
-        DCCCCCCCBD
+        A99999998A
 
-        DCCCCCCCCD
+        A99999999A
 
-        DDCCCCCCDD
+        AA999999AA
 
-        D1DDCCCCDD'
+        A1AA9999AA'

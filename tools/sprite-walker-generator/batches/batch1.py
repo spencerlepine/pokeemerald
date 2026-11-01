@@ -88,21 +88,21 @@ spec("boy_1", "Boy1", "npc_3",
 
 # 3. Boy 2 -> spaceport kid: NPC_2 turns the shirt orange and the shorts red (a flight jacket), and a
 #    red leather flight cap with ear flaps replaces the hair (brown would vanish into the brown hair), with puffed shoulders on the jacket.
-9AP_AOWN = block(3, 12, """
+CAP_DOWN = block(3, 12, """
 ..AAAAAA..
 .AA9999AA.
 A98999998A
 A99999999A
 AA999999AA
 A2A9999A2A""")
-9AP_UP = block(3, 12, """
+CAP_UP = block(3, 12, """
 ..AAAAAA..
 .AA9999AA.
 A98999998A
 A99999999A
 AA999999AA
 A9A9999A9A""")
-9AP_LEFT = block(3, 12, """
+CAP_LEFT = block(3, 12, """
 ..AAAAA...
 .AA9999AA.
 A99999998A
