@@ -32,14 +32,18 @@
 
 | Tool | Status |
 | --- | --- |
+| [`tools/palette-enforcer/`](tools/palette-enforcer/README.md) | DONE: shared palette gate every art tool calls last |
 | [`tools/play-tester/`](tools/play-tester/README.md) | DONE: headless mGBA play-testing |
 | [`tools/title-screen-generator/`](tools/title-screen-generator/README.md) | DONE: title screen shipped into `game/` |
-| [`tools/cutscene-generator/`](tools/cutscene-generator/README.md) | READY: pxl + GBA output; draft intro scene not imported yet |
-| [`tools/sprite-walker-generator/`](tools/sprite-walker-generator/README.md) | IN-REVIEW: overworld walkers, 16x32 people kit only |
-| [`tools/sprite-creature-generator/`](tools/sprite-creature-generator/README.md), [`sprite-trainer-generator/`](tools/sprite-trainer-generator/README.md), [`sprite-trainer-back-generator/`](tools/sprite-trainer-back-generator/README.md) | PENDING: Stable Diffusion LoRAs chosen, waiting on a rented GPU |
-| [`tools/sprite-creature-icon-generator/`](tools/sprite-creature-icon-generator/TODO.md), [`sprite-creature-footprint-generator/`](tools/sprite-creature-footprint-generator/TODO.md), [`sprite-creature-extras-generator/`](tools/sprite-creature-extras-generator/TODO.md), [`sprite-icon-generator/`](tools/sprite-icon-generator/TODO.md), [`tile-generator/`](tools/tile-generator/TODO.md), [`ui-skin-generator/`](tools/ui-skin-generator/TODO.md) | TODO |
-| [`tools/vfx-generator/`](tools/vfx-generator/README.md) | READY: move effects as storyboards; 6 shipped into `game/` (SABER SLASH, BLASTER SHOT, FORCE PUSH, FORCE CHOKE, FORCE BOLT, TURBOLASER) |
 | [`tools/sfx-generator/`](tools/sfx-generator/README.md), [`cry-generator/`](tools/cry-generator/README.md) | DONE: GBA-accurate SFX and cries; first 8 SFX and 6 cries shipped into `game/` |
-| [`tools/music-generator/`](tools/music-generator/TODO.md) | TODO |
+| [`tools/music-generator/`](tools/music-generator/README.md) | DONE: song models to MIDI on the game's voicegroups, hardware and loop checks, ROM recorder |
+| [`tools/sprite-trainer-generator/`](tools/sprite-trainer-generator/README.md) | DONE: trainer front pics via the hosted Civitai pipeline; Darth Vader shipped to the wiki |
+| [`tools/vfx-generator/`](tools/vfx-generator/README.md) | READY: move effects as storyboards; 6 shipped into `game/` (SABER SLASH, BLASTER SHOT, FORCE PUSH, FORCE CHOKE, FORCE BOLT, TURBOLASER) |
+| [`tools/cutscene-generator/`](tools/cutscene-generator/README.md) | READY: pxl + GBA output; draft intro scene not imported yet |
+| [`tools/sprite-walker-generator/`](tools/sprite-walker-generator/README.md) | READY: overworld walkers, 16x32 people kit |
+| [`tools/sprite-creature-generator/`](tools/sprite-creature-generator/README.md) | IN PROGRESS: hosted Civitai pipeline, first fronts and backs |
+| [`tools/tile-generator/`](tools/tile-generator/README.md) | IN PROGRESS: stage 0 (foundation), nothing in `game/` yet |
+| [`tools/sprite-trainer-back-generator/`](tools/sprite-trainer-back-generator/README.md) | PENDING: plan and mockups only, tool not built |
+| [`tools/sprite-creature-icon-generator/`](tools/sprite-creature-icon-generator/TODO.md), [`sprite-creature-footprint-generator/`](tools/sprite-creature-footprint-generator/TODO.md), [`sprite-creature-extras-generator/`](tools/sprite-creature-extras-generator/TODO.md), [`sprite-icon-generator/`](tools/sprite-icon-generator/TODO.md), [`ui-skin-generator/`](tools/ui-skin-generator/TODO.md) | TODO: scope only (`TODO.md`) |
 
 Statuses, scope, art categories and order of work: [`tools/README.md`](tools/README.md).
