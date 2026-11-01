@@ -288,3 +288,9 @@ const u8 gTrainerBackPic_Steven[] = INCGFX_U8("graphics/trainers/back_pics/steve
 
 const u32 gTrainerBackPicPalette_Red[] = INCGFX_U32("graphics/trainers/back_pics/red.png", ".gbapal.lz");
 const u32 gTrainerBackPicPalette_Leaf[] = INCGFX_U32("graphics/trainers/back_pics/leaf.png", ".gbapal.lz");
+const u32 gTrainerBackPicPalette_Brendan[] = INCGFX_U32("graphics/trainers/back_pics/brendan.png", ".gbapal.lz");
+const u32 gTrainerBackPicPalette_May[] = INCGFX_U32("graphics/trainers/back_pics/may.png", ".gbapal.lz");
+const u32 gTrainerBackPicPalette_RubySapphireBrendan[] = INCGFX_U32("graphics/trainers/back_pics/brendan_rs.png", ".gbapal.lz");
+const u32 gTrainerBackPicPalette_RubySapphireMay[] = INCGFX_U32("graphics/trainers/back_pics/may_rs.png", ".gbapal.lz");
+const u32 gTrainerBackPicPalette_Wally[] = INCGFX_U32("graphics/trainers/back_pics/wally.png", ".gbapal.lz");
+const u32 gTrainerBackPicPalette_Steven[] = INCGFX_U32("graphics/trainers/back_pics/steven.png", ".gbapal.lz");

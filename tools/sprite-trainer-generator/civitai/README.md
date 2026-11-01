@@ -25,7 +25,9 @@ python batch.py --refinish                     # re-run the free finisher on eve
 
 Brendan, May, their R/S pics, Wally and Leia (steven) share their palette with the back pic: the
 new `.pal` is in `wiki/art/graphics/trainers/palettes/`, and the back pics must adopt it.
-Nothing is in `game/` yet.
+Shipped into `game/` on 2026-11-01 (wiki game_status DONE). The five shared palettes went to
+`game/graphics/trainers/palettes/`; the vanilla back pics (Brendan, May, R/S, Wally, Steven) now read their
+own palette from their PNG (`gTrainerBackPicPalette_*` in `back_pic_tables.h`) until they are redrawn.
 
 Background cut (fixed 2026-11-01 after review): the flood fill from the border only crosses pale
 greys only when 40% of their edge touches the background, so an outline gap can no longer eat

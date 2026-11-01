@@ -3067,6 +3067,12 @@ extern const u8 gTrainerBackPic_Wally[];
 extern const u8 gTrainerBackPic_Steven[];
 
 extern const u32 gTrainerBackPicPalette_Red[];
+extern const u32 gTrainerBackPicPalette_Brendan[];
+extern const u32 gTrainerBackPicPalette_May[];
+extern const u32 gTrainerBackPicPalette_RubySapphireBrendan[];
+extern const u32 gTrainerBackPicPalette_RubySapphireMay[];
+extern const u32 gTrainerBackPicPalette_Wally[];
+extern const u32 gTrainerBackPicPalette_Steven[];
 extern const u32 gTrainerBackPicPalette_Leaf[];
 
 // pokeblock
