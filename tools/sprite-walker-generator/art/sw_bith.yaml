@@ -1,0 +1,225 @@
+name: sw_bith
+description: 'NEW WALKER (net:walker-bith): Bith musician of the Modal Nodes: huge bald pale domed cranium, big black eyes, dark suit, silver kloo horn (placeholder: Psychic M). One sprite for FIGRIN D''AN
+  and DOIKK NA''TS.'
+kit: person16x32_still
+replaces: graphics/object_events/pics/people/psychic_m.png
+graphics_info: SwBith
+notes: 'Recast group d, shade mode, drawn whole (still kit: the band stands on the cantina stage). Cues: the huge round-shaded skin-ramp dome tapering to a small chin with skin-shade mouth folds and big
+  black eyes; dark slate suit on ramp a with a white shirt front; a hand-toned silver kloo horn (ramp c) from the mouth to the hands.'
+palette: npc_4
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_4
+shade: true
+materials:
+  h: s@
+  n: s
+  J: a
+  V: a
+  T: a
+  w: w/a
+legend:
+  k: 15
+  W: 14
+  f: 3
+  g: 11
+  G: 12
+  d: 13
+  K: 15
+accept:
+  hair_rows: 'Bith: a bald domed cranium, no hair'
+  height: 'the Bith cranium is taller than a human head: 22 rows'
+frames:
+  down: '................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    .....hhWWhh.....
+
+    ...hhhhhhhhhh...
+
+    ..hhhhhhhhhhhh..
+
+    .hhhhhhhhhhhhhh.
+
+    .hhhhhhhhhhhhhh.
+
+    .hhhhhhhhhhhhhh.
+
+    ..hhhhhhhhhhhh..
+
+    ..hkkhhhhhhkkh..
+
+    ...kkhhhhhhkk...
+
+    ...hhhffffhhh...
+
+    ....hfhhhhfh....
+
+    .....hffgfh.....
+
+    ...JJJwwwgJJJ...
+
+    ..JJJJwwwgJJJJ..
+
+    .JJJJJJwwJgJJJJ.
+
+    .VVJJJJJJJngJVV.
+
+    .VVJJJJJJJJngGV.
+
+    .nVJJJJJJJJJgGg.
+
+    ..nJJJJJJJJJddd.
+
+    ...TTTTTTTTTT...
+
+    ...TTTT..TTTT...
+
+    ...KKK....KKK...
+
+    ................
+
+    '
+  up: '................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    .....hhWWhh.....
+
+    ...hhhhhhhhhh...
+
+    ..hhhhhhhhhhhh..
+
+    .hhhhhhhhhhhhhh.
+
+    .hhhhhhhhhhhhhh.
+
+    .hhhhhhhhhhhhhh.
+
+    ..hhhhhhhhhhhh..
+
+    ..hhhhhhhhhhhh..
+
+    ...hhhhhhhhhh...
+
+    ....hhhhhhhh....
+
+    .....hhhhhh.....
+
+    ......hhhh......
+
+    ...JJJJJJJJJJ...
+
+    ..JJJJJJJJJJJJ..
+
+    .JJJJJJJJJJJJJJ.
+
+    .VVJJJJJJJJJJVV.
+
+    .VVJJJJJJJJJJVV.
+
+    .nVJJJJJJJJJJVn.
+
+    ..nJJJJJJJJJJn..
+
+    ...TTTTTTTTTT...
+
+    ...TTTT..TTTT...
+
+    ...KKK....KKK...
+
+    ................
+
+    '
+  left: '................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ......hhWWhh....
+
+    ....hhhhhhhhhh..
+
+    ...hhhhhhhhhhhh.
+
+    ..hhhhhhhhhhhhh.
+
+    ..hhhhhhhhhhhhh.
+
+    ..hhhhhhhhhhhhh.
+
+    ..hhhhhhhhhhhh..
+
+    ..hkkhhhhhhhhh..
+
+    ..hkkhhhhhhhh...
+
+    ..hhhhhhhhhhh...
+
+    .gffhhhhhhhh....
+
+    .Gfhhhhhhhh.....
+
+    .G...wJJJJJ.....
+
+    G...JwJJJJJJ....
+
+    G...JJJJJJJJ....
+
+    dd.nVVJJJJJJ....
+
+    ddnnVVJJJJJJ....
+
+    ....VVJJJJJJ....
+
+    ....nJJJJJJJ....
+
+    .....TTTTTT.....
+
+    .....TTTTT......
+
+    .....KKKK.......
+
+    ................
+
+    '

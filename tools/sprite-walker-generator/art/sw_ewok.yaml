@@ -1,0 +1,326 @@
+name: sw_ewok
+description: 'NEW WALKER (net:walker-ewok): Ewok scout: brown fur, ochre leather hood with the ears poking through, big black eyes, tan muzzle, a small spear (placeholder: Ninja Boy). Used by the EWOK and
+  SHAMAN trainers.'
+kit: person16x16
+replaces: graphics/object_events/pics/people/ninja_boy.png
+graphics_info: SwEwok
+notes: 'Recast group d, shade mode, 16x16 kit on Ninja Boy''s body as regions (suit -> fur B, sash -> leather strap L, hood drape -> hood H). New head: brown fur face, tan muzzle, big glinting eyes, ochre
+  hood with the round fur ears through it and a red crown bead; spear with a red binding and a white stone tip. Brown, hornless and small, unlike grey horn-hooded Chirpa (winona).'
+palette: npc_2
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_2
+shade: true
+materials:
+  H: a
+  E: c
+  B: c@
+  L: a
+  M: s
+legend:
+  k: 15
+  W: 14
+  p: 7
+  r: 9
+  f: 11
+  g: 12
+accept:
+  skin_tones: Ewok fur is the brown ramp; only the muzzle uses the skin ramp
+  hair_rows: a leather hood over fur
+  eye_row: big Ewok eyes inside the fur face
+frames:
+  down: '..gg........ggW.
+
+    ..gfHHHHHHHHfgW.
+
+    .HHHHHHrrHHHHHr.
+
+    .HHHHHHHHHHHHHp.
+
+    .HHgffffffffgHp.
+
+    .HgWkffffffWkgp.
+
+    .HgkkfMMMMfkkgp.
+
+    ..HggMMkkMMggHp.
+
+    ...gggMMMMggg.p.
+
+    ...EEBEEEEBEE.p.
+
+    ..EEBBBBBBBBEEp.
+
+    ...EBBLBBLBBE.p.
+
+    ....BBBBBBBB..p.
+
+    .....BBBBBB...p.
+
+    ......B..B......
+
+    ................
+
+    '
+  up: '.Wgg........gg..
+
+    .WgfHHHHHHHHfg..
+
+    .rHHHHHrrHHHHH..
+
+    .pHHHHHHHHHHHHH.
+
+    .pHHHHHHHHHHHHH.
+
+    .pHHHHHHHHHHHHH.
+
+    .pHHHHHHHHHHHHH.
+
+    .pHHHHHHHHHHHH..
+
+    .p.HHHHHHHHHH...
+
+    .p.EEHHHHHHEE...
+
+    .pEEBBBBBBBBEE..
+
+    .p.EBBLBBLBBE...
+
+    .p..BBBBBBBB....
+
+    .p...BBBBBB.....
+
+    ......B..B......
+
+    ................
+
+    '
+  left: '........ggW.....
+
+    ......HHgfWH....
+
+    ....HHHHHHrHH...
+
+    ...HHHHHHHpHHH..
+
+    ..HHfffHHHpHHH..
+
+    ..fWkffgHHpHHH..
+
+    .MfkkffgHHpHHH..
+
+    kMMMffggHHpHH...
+
+    MMMMgggHHHpH....
+
+    .....EEEEHpH....
+
+    ....BBBEEEpB....
+
+    ....BLBEEEpB....
+
+    ....BBBBEEpB....
+
+    .....BBBBBp.....
+
+    .......BBB......
+
+    ................
+
+    '
+  down_a: '..............W.
+
+    ..gg........ggW.
+
+    ..gfHHHHHHHHfgr.
+
+    .HHHHHHrrHHHHHp.
+
+    .HHHHHHHHHHHHHp.
+
+    .HHgffffffffgHp.
+
+    .HgWkffffffWkgp.
+
+    .HgkkfMMMMfkkgp.
+
+    ..HggMMkkMMggHp.
+
+    ...gggMMMMggg.p.
+
+    ...EEBEEEEBEE.p.
+
+    ..EEBBBBBBBBEEp.
+
+    ...EBBLBBLBBE.p.
+
+    .....BBBBBB...p.
+
+    ......BBBB......
+
+    .......B........
+
+    '
+  down_b: '................
+
+    ..gg........gg..
+
+    ..gfHHHHHHHHfg.W
+
+    .HHHHHHrrHHHHHHW
+
+    .HHHHHHHHHHHHHHr
+
+    .HHgffffffffgHHp
+
+    .HgWkffffffWkgHp
+
+    .HgkkfMMMMfkkgHp
+
+    ..HggMMkkMMggH.p
+
+    ...gggMMMMggg..p
+
+    ...EEBEEEEBEE..p
+
+    ..EEBBBBBBBBEE.p
+
+    ...EBBLBBLBBE..p
+
+    .....BBBBBB....p
+
+    ......BBBB.....p
+
+    ........B......p
+
+    '
+  up_a: '................
+
+    ..gg........gg..
+
+    W.gfHHHHHHHHfg..
+
+    W.HHHHHrrHHHHH..
+
+    rHHHHHHHHHHHHHH.
+
+    pHHHHHHHHHHHHHH.
+
+    pHHHHHHHHHHHHHH.
+
+    pHHHHHHHHHHHHHH.
+
+    p.HHHHHHHHHHHH..
+
+    p..HHHHHHHHHH...
+
+    p..EEHHHHHHEE...
+
+    p.EEBBBBBBBBEE..
+
+    p..EBBLBBLBBE...
+
+    p...BBBBBBB.....
+
+    p....BBBBB......
+
+    p......B........
+
+    '
+  up_b: '.W..............
+
+    .Wgg........gg..
+
+    .rgfHHHHHHHHfg..
+
+    .pHHHHHrrHHHHH..
+
+    .pHHHHHHHHHHHHH.
+
+    .pHHHHHHHHHHHHH.
+
+    .pHHHHHHHHHHHHH.
+
+    .pHHHHHHHHHHHHH.
+
+    .pHHHHHHHHHHHH..
+
+    .p.HHHHHHHHHH...
+
+    .p.EEHHHHHHEE...
+
+    .pEEBBBBBBBBEE..
+
+    .p.EBBLBBLBBE...
+
+    .p...BBBBBBB....
+
+    ......BBBBB.....
+
+    ........B.......
+
+    '
+  left_a: '................
+
+    ........gW......
+
+    ......HHgWHH....
+
+    ....HHHHHrrHH...
+
+    ...HHHHHHpHHHH..
+
+    ..HHfffHHpHHHH..
+
+    ..fWkffgHpHHHH..
+
+    .MfkkffgHpHHHH..
+
+    kMMMffggHpHHH...
+
+    MMMMgggHHpHH....
+
+    .....EEEEpHH....
+
+    ....BBBEEpBB....
+
+    ....BLBEEpEB....
+
+    ....BBBBEpBBB...
+
+    ...BBBBBBpBBB...
+
+    ....BB...BBB....
+
+    '
+  left_b: '................
+
+    ........gg.W....
+
+    ......HHgfHW....
+
+    ....HHHHHHrrH...
+
+    ...HHHHHHHHpHH..
+
+    ..HHfffHHHHpHH..
+
+    ..fWkffgHHHpHH..
+
+    .MfkkffgHHHpHH..
+
+    kMMMffggHHHpH...
+
+    MMMMgggHHHHp....
+
+    .....EEEEHHp....
+
+    ....BBBEEEBp....
+
+    ....BLBEEEEp....
+
+    ....BBBBEEBp....
+
+    ...BBBBBBBBp....
+
+    ....BBB...BB....
+
+    '
