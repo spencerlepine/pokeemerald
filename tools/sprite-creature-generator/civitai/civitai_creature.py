@@ -69,7 +69,7 @@ CHECKPOINTS = {
 PROMPT = ("{style}, {view}{types}({subject}:1.1), ({desc}:1.2), pokemon, single creature, full body, "
           "{pose}{colour}, limited palette, muted natural colours, pixel art, game sprite, "
           "crisp dark outlines, white background, simple background")
-POSE = "facing left"
+POSE = "three-quarter view facing left"
 BACK_TAGS = "backside, back view, "
 NEGATIVE = ("human, person, trainer, multiple creatures, two creatures, text, watermark, signature, "
             "frame, border, scenery, detailed background, gradient background, ground, shadow, "

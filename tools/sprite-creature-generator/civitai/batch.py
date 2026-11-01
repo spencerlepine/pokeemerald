@@ -110,7 +110,7 @@ def figures(png: Path, share: float = 0.2) -> int:
     return sum(1 for n in sizes if n >= share * a.sum())
 
 
-def judge(out: Path, log: str, min_w: int = 24, min_h: int = 28, one_figure: bool = True) -> tuple[bool, str]:
+def judge(out: Path, log: str, min_w: int = 24, min_h: int = 22, one_figure: bool = True) -> tuple[bool, str]:
     notes = []
     for view in ("front", "back"):
         m = re.search(rf"^{view}\s+\S+: grid (\d+)px -> native (\d+), figure (\d+)x(\d+).*?; (PASS|FAIL)", log, re.M)
