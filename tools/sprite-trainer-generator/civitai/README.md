@@ -4,8 +4,8 @@ Trainer front pics made with Civitai's **hosted** generator, so no rented GPU is
 trainer LoRA [Pokémon Trainer Sprite PixelArt](https://civitai.com/models/159333/pokemon-trainer-sprite-pixelart)
 (model 159333, SDXL version by default) on the SDXL 1.0 base checkpoint, paid for in Buzz.
 
-**Status:** script written and the finisher tested offline. Nothing has been generated yet: the cloud
-environment the agents run in has to allow `civitai.com` and `orchestration.civitai.com`, and hold the key.
+**Status:** working end to end (first run 2026-11-01: 4 Vader candidates for 10 blue Buzz, all passed
+`palette-enforcer check`). Runs are kept in `runs/<trainer>/`.
 
 ## Setup
 
@@ -41,13 +41,22 @@ Nothing is installed into `../../../game` by this script; the owner picks first.
 
 ## Cost
 
-About 4-6 Buzz per SDXL image plus a 10 Buzz surcharge per request for non-members, so batch
-candidates with `-n` in one request. `--whatif` shows the price before spending.
+Jobs go through the v2 workflows API (`/v2/consumer/workflows`) with `currencies: ["blue"]`, so earned
+(blue) Buzz pays. The v1 `/v1/consumer/jobs` endpoint only spends yellow Buzz and answered
+`403 Insufficient Buzz` on a blue-only account. Measured whatif prices for SDXL at 768x768, 25 steps:
 
-## Open questions (answer on the first real run)
+| -n | jpeg | png |
+|---|---|---|
+| 1 | 3 | 5 |
+| 2 | 5 | 9 |
+| 4 | 10 | 18 |
 
-- The checkpoint AIRs in `CHECKPOINTS` and the `/v1/consumer/jobs` request shape come from Civitai's
-  Python SDK and could not be checked from the agent container. If a request is refused, the script
-  prints the response body.
-- Which works better at 64x64: the 96 crop or the rescale from 768 (`--fit crop|scale`).
-- `gen1` vs `gen2` against the creature LoRA's `gen3` look.
+jpeg is the default; the 8x block vote absorbs its noise. `--whatif` shows the price before spending.
+
+## Findings from the first run
+
+- The checkpoint AIR `101055@128078` and LoRA `159333@443092` are accepted as is.
+- The LoRA has no trigger words. Its `gen2` look is strong: every figure came out maroon and skin-toned
+  with a visible face, not black armour, so `palette-enforcer` flags 6 colours per sprite as off-theme.
+- `--fit crop` keeps the native 8x pixel grid and reads crisper; `--fit scale` fills the 64 cell but
+  re-votes at 7x or 9x and picks up stray pixels. Crop clips a figure wider than 64 (a lightsaber).
