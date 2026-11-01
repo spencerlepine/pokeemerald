@@ -5,6 +5,7 @@ Source patches are tracked in <tree>/patched.json so a later run restores the or
 """
 from __future__ import annotations
 
+import hashlib
 import json
 import shutil
 from pathlib import Path
@@ -67,8 +68,18 @@ def run(a):
         species, capture = int(rt.get("species", 280)), int(rt.get("capture", 900))
         hpf, tap_until = float(rt.get("hp", 1.0)), int(rt.get("tap_until", 660))
         for which, g in (("vanilla", gv), ("new", gn)):
-            out = romtest.WORK / which / "film"
-            ok = romtest._film(g / "pokeemerald.gba", out, mid, species, capture, romtest._sym(g, "CB2_Overworld"),
+            rom = g / "pokeemerald.gba"
+            if which == "vanilla":
+                # the untouched game films the same every time: cache it by ROM + film settings
+                key = hashlib.sha1(rom.read_bytes() + f"{mid}/{species}/{capture}/{hpf}/{tap_until}".encode()).hexdigest()[:16]
+                out = romtest.WORK / "vanilla" / "film_cache" / key
+                if (out / "DONE").exists() and (out / "DONE").read_text() == "ok":
+                    print("  film vanilla: cached")
+                    res[which] = out
+                    continue
+            else:
+                out = romtest.WORK / which / "film"
+            ok = romtest._film(rom, out, mid, species, capture, romtest._sym(g, "CB2_Overworld"),
                                romtest._sym(g, "BattleMainCB2"), hpf, tap_until)
             print(f"  film {which}: {'ok' if ok else 'FAILED'}")
             res[which] = out if ok else None
