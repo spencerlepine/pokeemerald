@@ -1,7 +1,10 @@
 {
   "flip": false,
-  "desc": "small round shy green bog creature with big yellow eyes and tiny legs, a wide flat green lily pad leaf on its back, whole body, simple compact creature",
-  "colour": "green body, darker green lily pad",
-  "negative": "grass background, rocks",
-  "ref_note": "text only: canon Bogling art is a cluttered photo or used by lombre"
+  "desc": "small shy furry bogling with big round green eyes and tiny legs, a wide flat green lily pad leaf on its back, three-quarter view, whole body, small and centred",
+  "colour": "tan-brown fur, cream belly, big green eyes, green lily pad",
+  "negative": "background, rocks, grass",
+  "ref_note": "Bogling-JFO render, dark background masked by hand (r2_bogjfo.png); lily pad from the desc",
+  "init": "refs/lotad_prep.png",
+  "init_source": "/tmp/claude-0/-home-user/510f0079-9430-50be-b656-57ddf5b64e74/scratchpad/mask/r2_bogjfo.png",
+  "denoise": 0.55
 }
