@@ -1,0 +1,9 @@
+{
+  "init": "refs/aggron_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/7/73/Tank_droid_TCW.png/revision/latest/scale-to-width-down/1000?cb=20170703051940",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "Massive armoured wheel tank droid with a huge central tread side cannons and twin sensor stalks",
+  "colour": "olive grey and tan",
+  "ref_note": "Clone Wars NR-N99 Persuader render; alpha, three-quarter with cannons facing left; biggest of the droid line"
+}
