@@ -31,6 +31,7 @@ import io
 import json
 import os
 import random
+import re
 import subprocess
 import sys
 import time
@@ -63,9 +64,11 @@ CHECKPOINTS = {
 # The LoRA was trained on 96x96 sprites with BLIP captions plus tags: gen1..gen5 (style), backside,
 # shiny, type tags (grasstype, firetype, ...), mega, gmax. No trigger word. `gen3` is our target.
 # Unlike the trainer LoRA, "pokemon" is wanted here: it is what the captions call every subject.
-PROMPT = ("{style}, {view}{types}({subject}:1.2), {desc}, pokemon, single creature, full body, "
-          "{pose}, pixel art, game sprite, crisp dark outlines, white background, simple background"
-          "{colour}")
+# Pilot 2026-11-01 (abra, charmander): weighting the description and the body colour, and asking for
+# muted colours, turned "rainbow" text-only takes into the described animal in its own colour.
+PROMPT = ("{style}, {view}{types}({subject}:1.1), ({desc}:1.2), pokemon, single creature, full body, "
+          "{pose}{colour}, limited palette, muted natural colours, pixel art, game sprite, "
+          "crisp dark outlines, white background, simple background")
 POSE = "facing left"
 BACK_TAGS = "backside, back view, "
 NEGATIVE = ("human, person, trainer, multiple creatures, two creatures, text, watermark, signature, "
@@ -174,8 +177,13 @@ def brief(species: str) -> dict:
                     row = r
                     break
     jobs = json.loads(JOBS_FILE.read_text()) if JOBS_FILE.exists() else {}
-    job = jobs.get(stem, {})
-    types = job["types"] if "types" in job else [t for t in (row.get("type1"), row.get("type2")) if t]
+    job = dict(jobs.get(stem, {}))
+    pick = HERE / "refs" / "picks" / f"{stem}.json"  # refs.py pick (reference chosen per species)
+    if pick.exists():
+        job.update(json.loads(pick.read_text()))
+    # Type tags only when jobs.json asks: on their own they pulled MASSIFF into a humanoid and gave
+    # text-only takes rainbow colours.
+    types = job.get("types", [])
     return {"stem": stem, "sw_name": row.get("sw_name"), "sw_basis": row.get("sw_basis"),
             "subject": job.get("subject") or (row.get("sw_name") or stem).lower(),
             "desc": job.get("desc") or row.get("description", "").split(". ")[0],
@@ -190,10 +198,10 @@ def brief(species: str) -> dict:
 def build_prompt(b: dict, view: str) -> str:
     types = "".join(f"{t}type, " if t in LORA_TYPES else f"{t} type, " for t in b["types"])
     p = PROMPT.format(style=b["style"], view=BACK_TAGS if view == "back" else "", types=types,
-                      subject=b["subject"], desc=b["desc"].rstrip("."),
+                      subject=b["subject"], desc=re.sub(r"\s*\([^)]*\)", "", b["desc"]).rstrip(".").replace(",", ""),
                       pose="seen from behind" if view == "back" else
                       f"{b['pose']}, {b['frame2']}" if view == "frame2" else b["pose"],
-                      colour=f", mostly {b['colour']}" if b["colour"] else "")
+                      colour=f", ({b['colour']} body:1.3)" if b["colour"] else "")
     return ", ".join(s.strip() for s in p.split(",") if s.strip())
 
 
