@@ -12,3 +12,8 @@ overrides:
   "inside_ship:10": {3: "#808088", 4: "#a0a0a8"}
   "inside_ship:7": {3: "#808088", 4: "#a0a0a8", 5: "#686870", 6: "#9090a0", 7: "#c0c0c8", 8: "#484850", 9: "#202028", 10: "#303038", 11: "#383840", 12: "#505058"}
   "inside_ship:9": {3: "#808088", 4: "#a0a0a8", 5: "#686870", 6: "#9090a0", 7: "#c0c0c8", 10: "#282830", 11: "#383840", 12: "#505058"}
+layout_edits:                  # no life buoys on a Star Destroyer: swap the buoy wall cells for plain wall.
+  # 585 and 588 also hold half of a bunk label, so they become the label-only cells 627 and 629.
+  # The buoy tiles stay vanilla in the tileset (SS Tidal and any sailing ship keep them).
+  AbandonedShip_Rooms_1F_Layout:  {577: 551, 578: 551, 579: 551, 580: 551, 585: 627, 586: 559, 587: 559, 588: 629}
+  AbandonedShip_Rooms2_B1F_Layout: {577: 551, 578: 551, 579: 551, 580: 551, 585: 627, 586: 559, 587: 559, 588: 629}

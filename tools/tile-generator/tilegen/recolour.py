@@ -97,6 +97,7 @@ class Recipe:
     notes: str = ""
     retexture: list[dict] = field(default_factory=list)   # stage 2 ops, see __main__._build_pair
     battle_rules: list[Rule] = field(default_factory=list)  # tried first on battle backgrounds only
+    layout_edits: dict = field(default_factory=dict)        # layout name -> {metatile: metatile} swaps
 
     @staticmethod
     def load(path: Path) -> "Recipe":
@@ -119,12 +120,13 @@ class Recipe:
         ov = dict(base.overrides) if base else {}
         for bank, entries in (d.get("overrides") or {}).items():
             ov[bank] = {int(k): colour.hex_to_rgb(v) for k, v in entries.items()}
+        edits = {k: {int(a): int(b) for a, b in v.items()} for k, v in (d.get("layout_edits") or {}).items()}
         if base:
             return Recipe(d["name"], rules, ov, set(d.get("skip_banks") or []) | base.skip_banks,
                           d.get("notes", base.notes), d.get("retexture") or base.retexture,
-                          parse(d.get("battle")) + base.battle_rules)
+                          parse(d.get("battle")) + base.battle_rules, {**base.layout_edits, **edits})
         return Recipe(d["name"], rules, ov, set(d.get("skip_banks") or []), d.get("notes", ""), d.get("retexture") or [],
-                      parse(d.get("battle")))
+                      parse(d.get("battle")), edits)
 
     def for_battle(self) -> "Recipe":
         return Recipe(self.name, self.battle_rules + self.rules, self.overrides, self.skip_banks, self.notes)

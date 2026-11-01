@@ -52,6 +52,9 @@ scripts/rom-shots.sh /some/test.gba out/rom 0:9:10:9:littleroot 0:0:15:12:petalb
 scripts/rom-battle.sh /some/test.gba out/rom   # wild battle in Route 101 grass, screenshots the battle background
 ```
 
+A recipe's `layout_edits:` (metatile swaps per layout, e.g. no life buoys on a Star Destroyer) are applied to
+the review renders; `install` does not write map.bin yet, so they go in with the map work.
+
 Until the owner approves a planet, installs are for test ROMs only: restore `game/` and never commit it.
 
 ## Format (what the game needs)

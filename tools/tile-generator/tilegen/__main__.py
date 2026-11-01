@@ -127,7 +127,8 @@ def cmd_build(a):
         (d / "check.txt").write_text("\n".join(lines) + "\n")
         print(f"{'OK  ' if ok else 'FAIL'} {d}  ({len(ts.tiles)} tiles, {ts.n_metatiles} metatiles)")
     panels = [review.side_by_side([(f"{L[n].name} vanilla", gba.render_layout(L[n], pair=van)),
-                                   (f"{L[n].name} {rec.name}", gba.render_layout(L[n], pair=new))], zoom_factor=a.zoom)
+                                   (f"{L[n].name} {rec.name}", gba.render_layout(L[n].edited(rec.layout_edits.get(n, {})), pair=new))],
+                                  zoom_factor=a.zoom)
               for n in a.layouts if (L[n].primary, L[n].secondary) == (lay.primary, lay.secondary)]
     review.stack(panels).save(out / "review.png")
     print(f"review: {out / 'review.png'}")

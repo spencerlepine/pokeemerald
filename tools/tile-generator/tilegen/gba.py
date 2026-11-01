@@ -234,10 +234,18 @@ class Layout:
     secondary: str
     map_bin: Path
     border_bin: Path
+    replace: dict | None = None     # metatile id -> id, applied on read (recipe `layout_edits`)
 
     def cells(self) -> np.ndarray:
-        raw = np.frombuffer(self.map_bin.read_bytes(), dtype="<u2")
-        return raw.reshape(self.height, self.width)
+        raw = np.frombuffer(self.map_bin.read_bytes(), dtype="<u2").reshape(self.height, self.width).copy()
+        for a, b in (self.replace or {}).items():
+            hit = (raw & 0x3FF) == int(a)
+            raw[hit] = (raw[hit] & ~np.uint16(0x3FF)) | np.uint16(int(b))   # keeps collision/elevation bits
+        return raw
+
+    def edited(self, replace: dict) -> "Layout":
+        import dataclasses
+        return dataclasses.replace(self, replace=replace)
 
 
 def layouts(game: Path | None = None) -> dict[str, Layout]:
