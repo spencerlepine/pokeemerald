@@ -1,0 +1,368 @@
+name: black_belt
+description: 'WOOKIEE warrior: shaggy chocolate fur, black nose, silver-box bandolier, bowcaster slung on the back (replaces the Black Belt).'
+kit: person16x32
+replaces: graphics/object_events/pics/people/black_belt.png
+graphics_info: BlackBelt
+notes: 'Recast group a: the Black Belt''s body as fur regions (gi -> torso fur G, limbs -> fur F, belt -> lower fur D), new shaggy Wookiee head (c@) with tufts, deep-set eyes, a peach muzzle and black nose,
+  lighter fur streaks, a gold-brown bandolier with silver boxes, a bowcaster (dark red frame, white limb tips) across the back. Moves to NPC_2 so its chocolate fur reads apart from TARFFUL''s orange NPC_3
+  fur.'
+palette: npc_2
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_2
+shade: true
+materials:
+  H: c@
+  G: c@
+  F: c
+  M: s
+legend:
+  k: 15
+  n: 15
+  X: 14
+  W: 14
+  w: 5
+  j: 11
+  A: 7
+  Y: 7
+  y: 6
+accept:
+  hair_rows: the whole head is fur
+  eye_row: deep-set Wookiee eyes inside fur
+  skin_tones: 'fur, not skin: only the muzzle uses the skin ramp'
+base_sheet: graphics/object_events/pics/people/black_belt.png
+remap:
+  s: F
+  a: G
+  w: G
+  b: G
+  c: H
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 10
+      rows: '.....H.HH.H.....
+
+        ....HHHHHHHH..Ww
+
+        ...HHHjHHHjHHyY.
+
+        ..HHHHHHHHHHHHY.
+
+        ..HjHHHHHHHHjH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHkHHHHkHHHH.
+
+        .HHHHkMMMMkHHHH.
+
+        .HHHMMMnnMMMHHH.
+
+        .jHHHMMMMMMHHHj.
+
+        ..HHHHMMMMHHHH..'
+    - x: 0
+      y: 21
+      rows: '__AX____________
+
+        ___AA___________
+
+        ____XA__________
+
+        _____AA_________
+
+        ______XA________
+
+        _______AA_______'
+  up:
+    patches:
+    - x: 0
+      y: 10
+      rows: '.....H.HH.H.....
+
+        Ww..HHHHHHHH....
+
+        .YyHHHjHHHjHH...
+
+        .YHHHHHHHHHHHH..
+
+        ..HjHHHHHHHHjH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHjHHHHHHjHHH.
+
+        .jHHHHHHHHHHHHj.
+
+        ..HHHHHHHHHHHH..'
+    - x: 0
+      y: 21
+      rows: '____yY_______AA_
+
+        _____yY____AA___
+
+        ______yY_AA_____
+
+        _______yAA______
+
+        ______AAyY______
+
+        ____AA___yY_____'
+  left:
+    patches:
+    - x: 0
+      y: 10
+      rows: '......H.HH.H....
+
+        ....HHHHHHHH.wW.
+
+        ...HHHHHHjHHYy..
+
+        ..HHHHHHHHHHYH..
+
+        ..HHHHHHHjHHHH..
+
+        .HHHHHHHHHHHHH..
+
+        .HkHHHHHHHHHHH..
+
+        MkHHHHHHHHjHHH..
+
+        nMMHHHHHHHHHH...
+
+        MMMHHHHHHHHHH...
+
+        .MMHHHHHHHHH....'
+    - x: 0
+      y: 21
+      rows: '_______AA_______
+
+        ________XA______
+
+        ________AA______
+
+        _________XA_____'
+  down_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '.....H.HH.H.....
+
+        ....HHHHHHHH..Ww
+
+        ...HHHjHHHjHHyY.
+
+        ..HHHHHHHHHHHHY.
+
+        ..HjHHHHHHHHjH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHkHHHHkHHHH.
+
+        .HHHHkMMMMkHHHH.
+
+        .HHHMMMnnMMMHHH.
+
+        .jHHHMMMMMMHHHj.
+
+        ..HHHHMMMMHHHH..'
+    - x: 0
+      y: 22
+      rows: '__AX____________
+
+        ___AA___________
+
+        ____XA__________
+
+        _____AA_________
+
+        ______XA________
+
+        _______AA_______'
+  down_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '.....H.HH.H.....
+
+        ....HHHHHHHH..Ww
+
+        ...HHHjHHHjHHyY.
+
+        ..HHHHHHHHHHHHY.
+
+        ..HjHHHHHHHHjH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHkHHHHkHHHH.
+
+        .HHHHkMMMMkHHHH.
+
+        .HHHMMMnnMMMHHH.
+
+        .jHHHMMMMMMHHHj.
+
+        ..HHHHMMMMHHHH..'
+    - x: 0
+      y: 22
+      rows: '__AX____________
+
+        ___AA___________
+
+        ____XA__________
+
+        _____AA_________
+
+        ______XA________
+
+        _______AA_______'
+  up_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '.....H.HH.H.....
+
+        Ww..HHHHHHHH....
+
+        .YyHHHjHHHjHH...
+
+        .YHHHHHHHHHHHH..
+
+        ..HjHHHHHHHHjH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHjHHHHHHjHHH.
+
+        .jHHHHHHHHHHHHj.
+
+        ..HHHHHHHHHHHH..'
+    - x: 0
+      y: 22
+      rows: '____yY_______AA_
+
+        _____yY____AA___
+
+        ______yY_AA_____
+
+        _______yAA______
+
+        ______AAyY______
+
+        ____AA___yY_____'
+  up_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '.....H.HH.H.....
+
+        Ww..HHHHHHHH....
+
+        .YyHHHjHHHjHH...
+
+        .YHHHHHHHHHHHH..
+
+        ..HjHHHHHHHHjH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHjHHHHHHjHHH.
+
+        .jHHHHHHHHHHHHj.
+
+        ..HHHHHHHHHHHH..'
+    - x: 0
+      y: 22
+      rows: '____yY_______AA_
+
+        _____yY____AA___
+
+        ______yY_AA_____
+
+        _______yAA______
+
+        ______AAyY______
+
+        ____AA___yY_____'
+  left_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......H.HH.H....
+
+        ....HHHHHHHH.wW.
+
+        ...HHHHHHjHHYy..
+
+        ..HHHHHHHHHHYH..
+
+        ..HHHHHHHjHHHH..
+
+        .HHHHHHHHHHHHH..
+
+        .HkHHHHHHHHHHH..
+
+        MkHHHHHHHHjHHH..
+
+        nMMHHHHHHHHHH...
+
+        MMMHHHHHHHHHH...
+
+        .MMHHHHHHHHH....'
+    - x: 0
+      y: 22
+      rows: '_______AA_______
+
+        ________XA______
+
+        ________AA______
+
+        _________XA_____'
+  left_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......H.HH.H....
+
+        ....HHHHHHHH.wW.
+
+        ...HHHHHHjHHYy..
+
+        ..HHHHHHHHHHYH..
+
+        ..HHHHHHHjHHHH..
+
+        .HHHHHHHHHHHHH..
+
+        .HkHHHHHHHHHHH..
+
+        MkHHHHHHHHjHHH..
+
+        nMMHHHHHHHHHH...
+
+        MMMHHHHHHHHHH...
+
+        .MMHHHHHHHHH....'
+    - x: 0
+      y: 22
+      rows: '_______AA_______
+
+        ________XA______
+
+        ________AA______
+
+        _________XA_____'

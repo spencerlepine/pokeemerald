@@ -1,0 +1,613 @@
+name: fisherman
+description: 'QUARREN angler: squid-dome head with four face tentacles, khaki rain slicker, long fishing pole (replaces the Fisherman).'
+kit: person16x32
+replaces: graphics/object_events/pics/people/fisherman.png
+graphics_info: Fisherman
+notes: 'Recast group a: the Fisherman''s body as regions (jacket and its trims -> olive-khaki slicker J, sleeves and trousers -> blue O, boots kept), new tall banded squid-dome head with wide-set eyes and
+  a white glint, four rose face tentacles hanging over the collar, a long dark pole held upright at the hand (in the side view it stands behind the far shoulder). Moves from NPC_2 to NPC_1 (khaki slicker,
+  rose tentacles).'
+palette: npc_1
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_1
+shade: true
+materials:
+  S: skin-a@
+  J: c
+  O: b
+legend:
+  k: 15
+  W: 14
+  l: 14
+  r: 13
+  u: 5
+  T: 6
+  e: 7
+accept:
+  hair_rows: a bald squid dome, no hair
+  eye_row: wide-set Quarren eyes high on the dome
+  skin_tones: Quarren hide is the rose ramp; only the hands use the skin ramp
+frames:
+  down: '................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ......SSSS.....l
+
+    ....SSSWSSSS...r
+
+    ...SSSSWSSSSS..r
+
+    ...SSSSSSSSSS..r
+
+    ..SSSSSSSSSSSS.r
+
+    ..SSSSSSSSSSSS.r
+
+    .SkSSSSSSSSSSkSr
+
+    .SkSSSSSSSSSSkSr
+
+    ..SSSSSSSSSSSS.r
+
+    ...SSSSSSSSSS..r
+
+    ..uuJuuJJuuJuu.r
+
+    .OTTJTTJJTTJTTOr
+
+    .OTTJTTJJTTJTTOr
+
+    OeTJJTTJJTTJJTeO
+
+    ssJJJJeJJeJJJJsr
+
+    .sJJJJJJJJJJJJr.
+
+    ..OJJJJJJJJJJOr.
+
+    ..OOOJJccJJOOO..
+
+    ...kOOOccOOOk...
+
+    ...kkcckkcckk...
+
+    ....kkk..kkk....
+
+    ................
+
+    '
+  up: '................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    l.....SSSS......
+
+    r...SSSWSSSS....
+
+    r..SSSSWSSSSS...
+
+    r..SSSSSSSSSS...
+
+    r.SSSSSSSSSSSS..
+
+    r.SSSSSSSSSSSS..
+
+    rSSSSSSSSSSSSSS.
+
+    rSSSSSSSSSSSSSS.
+
+    r.SSSSSSSSSSSS..
+
+    r.TSSSSSSSSSST..
+
+    rJTJJJJJJJJJJTJ.
+
+    rJeJJJJJJJJJJeJ.
+
+    .OJJJJccccJJJJO.
+
+    OJJJJJJJJJJJJJJO
+
+    ssJJJJJJJJJJJJss
+
+    .sJJJJJJJJJJJJs.
+
+    ..OJJJJJJJJJJO..
+
+    ..OOOJJJJJJOOO..
+
+    ...kOOOccOOOk...
+
+    ...kkcckkcckk...
+
+    ....kkk..kkk....
+
+    ................
+
+    '
+  left: '................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    .......SSSS...l.
+
+    .....SSSWSSSS.r.
+
+    ....SSSSWSSSSSr.
+
+    ...SSSSSSSSSSSr.
+
+    ..SSSSSSSSSSSSr.
+
+    .SSSSSSSSSSSSSr.
+
+    .SkSSSSSSSSSSSr.
+
+    .SkSSSSSSSSSSSr.
+
+    .SSSSSSSSSSSSkr.
+
+    ..SSSSSSSSSSkkr.
+
+    uuJuuSSSSSSsk.r.
+
+    TTJTTJsssskk..r.
+
+    TTJTTssJJJJJ..r.
+
+    e..eTsJssJJJ..r.
+
+    ....eJssssJJ..r.
+
+    ....JJssssJJ..r.
+
+    ....JJJssJJJ....
+
+    .....OOJJJOc....
+
+    .....kOOOOc.....
+
+    ....kcckkkk.....
+
+    .....kkkkk......
+
+    ................
+
+    '
+  down_a: '................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ......SSSS.....l
+
+    ....SSSWSSSS...r
+
+    ...SSSSWSSSSS..r
+
+    ...SSSSSSSSSS..r
+
+    ..SSSSSSSSSSSS.r
+
+    ..SSSSSSSSSSSS.r
+
+    .SkSSSSSSSSSSkSr
+
+    .SkSSSSSSSSSSkSr
+
+    ..SSSSSSSSSSSS.r
+
+    ...SSSSSSSSSS..r
+
+    ssuuJuuJJuuJuu.r
+
+    .sTTJTTJJTTJTTOr
+
+    .sTTJTTJJTTJTTOr
+
+    e.TJJTTJJTTJJe..
+
+    ..JJJe.Je.Jssssr
+
+    ..JJJJJJJJJsssr.
+
+    ...OJJJJJJJJssr.
+
+    ...OOJJccJJOO...
+
+    ....kOOOckk.....
+
+    ....kkcck.......
+
+    .....kkk........
+
+    '
+  down_b: '................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ......SSSS.....l
+
+    ....SSSWSSSS...r
+
+    ...SSSSWSSSSS..r
+
+    ...SSSSSSSSSS..r
+
+    ..SSSSSSSSSSSS.r
+
+    ..SSSSSSSSSSSS.r
+
+    .SkSSSSSSSSSSkSr
+
+    .SkSSSSSSSSSSkSr
+
+    ..SSSSSSSSSSSS.r
+
+    ...SSSSSSSSSS..r
+
+    ..uuJuuJJuuJuusr
+
+    .OTTJTTJJTTJTTsr
+
+    .OTTJTTJJTTJTTsr
+
+    ..eJJTTJJTTJJT.e
+
+    .ssssJ.eJ.eJJJ.r
+
+    .ssssJJJJJJJJJr.
+
+    ..ssJJJJJJJJO.r.
+
+    ...OOJJccJJOO...
+
+    .....kkcOOOk....
+
+    .......kcckk....
+
+    ........kkk.....
+
+    '
+  up_a: '................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    l.....SSSS......
+
+    r...SSSWSSSS....
+
+    r..SSSSWSSSSS...
+
+    r..SSSSSSSSSS...
+
+    r.SSSSSSSSSSSS..
+
+    r.SSSSSSSSSSSS..
+
+    rSSSSSSSSSSSSSS.
+
+    rSSSSSSSSSSSSSS.
+
+    r.SSSSSSSSSSSS..
+
+    r.TSSSSSSSSSST..
+
+    rJTJJJJJJJJJJTJ.
+
+    reJJJJJJJJJJeJJ.
+
+    .sJJJJccccJJJJO.
+
+    ..JJJJJJJJJJssO.
+
+    ..JJJJJJJJJssss.
+
+    ..JJJJJJJJJssss.
+
+    ...JJJJJJJJJss..
+
+    ...OOJJJJJJOO...
+
+    ....kOOOckk.....
+
+    ....kkcck.......
+
+    .....kkk........
+
+    '
+  up_b: '................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    l.....SSSS......
+
+    r...SSSWSSSS....
+
+    r..SSSSWSSSSS...
+
+    r..SSSSSSSSSS...
+
+    r.SSSSSSSSSSSS..
+
+    r.SSSSSSSSSSSS..
+
+    rSSSSSSSSSSSSSS.
+
+    rSSSSSSSSSSSSSS.
+
+    r.SSSSSSSSSSSS..
+
+    r.TSSSSSSSSSST..
+
+    rJTJJJJJJJJJJTJs
+
+    rJJeJJJJJJJJJJe.
+
+    .OJJJJccccJJJJs.
+
+    .OssJJJJJJJJJJ..
+
+    .ssssJJJJJJJJJ..
+
+    .ssssJJJJJJJJJ..
+
+    ..ssJJJJJJJJJ...
+
+    ...OOJJJJJJOO...
+
+    .....kkcOOOk....
+
+    .......kcckk....
+
+    ........kkk.....
+
+    '
+  left_a: '................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    .......SSSS...l.
+
+    .....SSSWSSSS.r.
+
+    ....SSSSWSSSSSr.
+
+    ...SSSSSSSSSSSr.
+
+    ..SSSSSSSSSSSSr.
+
+    .SSSSSSSSSSSSSr.
+
+    .SkSSSSSSSSSSSr.
+
+    .SkSSSSSSSSSSSr.
+
+    .SSSSSSSSSSSSkr.
+
+    ..SSSSSSSSSSkkr.
+
+    uuJuuSSSSSSsk.r.
+
+    TTJTTJsssskk..r.
+
+    TTJTTssJJJJJ..r.
+
+    ..e.TsssJJJJ..r.
+
+    ...e.ssssJJJ..r.
+
+    ...kOssssJJJ..r.
+
+    ..kcJOssJJJJk...
+
+    ..kccOOJJJOOck..
+
+    ...kcckkkOOcck..
+
+    ....kk...kcckk..
+
+    ..........kkk...
+
+    '
+  left_b: '................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    ................
+
+    .......SSSS...l.
+
+    .....SSSWSSSS.r.
+
+    ....SSSSWSSSSSr.
+
+    ...SSSSSSSSSSSr.
+
+    ..SSSSSSSSSSSSr.
+
+    .SSSSSSSSSSSSSr.
+
+    .SkSSSSSSSSSSSr.
+
+    .SkSSSSSSSSSSSr.
+
+    .SSSSSSSSSSSSkr.
+
+    ..SSSSSSSSSSkkr.
+
+    uuJuuSSSSSSsk.r.
+
+    TTJTTJsssskk..r.
+
+    TTJTTssJJJJJ..r.
+
+    .e..esJJssJJ..r.
+
+    .....eJssssJ..r.
+
+    ....JJJssssJ..r.
+
+    ...kOJJJssJJk...
+
+    ..kccOOJJJOck...
+
+    ..kcccOkkkckk...
+
+    ...kcck...kk....
+
+    ....kk..........
+
+    '

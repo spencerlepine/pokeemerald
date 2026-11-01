@@ -1,0 +1,334 @@
+name: maniac
+description: 'RODIAN game hunter: green head, big black eyes, tapering snout, antennae and ear frills, hunter''s vest (replaces the Maniac).'
+kit: person16x32
+replaces: graphics/object_events/pics/people/maniac.png
+graphics_info: Maniac
+notes: 'Recast group a: the Maniac''s body as regions (skin -> green arms A, shirt -> orange-brown hunter''s vest V, trousers and boots kept), new round green Rodian head (skin-b@) with thin antennae, fan
+  ear frills, big black eyes with a white glint and a tapering snout with a dark mouth; a tan undershirt under the open vest, dark belt with a holster. Moves from NPC_2 to NPC_3 (green ramp).'
+palette: npc_3
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_3
+shade: true
+materials:
+  G: skin-b@
+  F: b
+  N: skin-b
+  A: skin-b
+  V: c
+  U: s
+legend:
+  k: 15
+  W: 14
+  q: 9
+  Q: 8
+  m: 10
+  L: 13
+  h: 12
+accept:
+  hair_rows: a bald Rodian head with antennae, no hair
+  eye_row: big Rodian eyes
+base_sheet: graphics/object_events/pics/people/maniac.png
+remap:
+  s: A
+  c: V
+  w: V
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 10
+      rows: '...Q........Q...
+
+        ....q......q....
+
+        .....GGGGGG.....
+
+        ...GGGGGGGGGG...
+
+        ..GGGGGGGGGGGG..
+
+        FFGGGGGGGGGGGGFF
+
+        FFGkkWGGGGWkkGFF
+
+        .FGkkkGGGGkkkGF.
+
+        ..GGkkGGGGkkGG..
+
+        ...GGGGNNGGGG...
+
+        ....GGNNNNGG....
+
+        _____NNNNNN_____
+
+        ______NmmN______'
+    - x: 0
+      y: 23
+      rows: '__VVVUUUUVVV____
+
+        __VVVUUUUVVV____
+
+        ___VVUUUUVV_____
+
+        __VVVVUUVVVVV___
+
+        ___LLLLLLLhL____'
+  up:
+    patches:
+    - x: 0
+      y: 10
+      rows: '...Q........Q...
+
+        ....q......q....
+
+        .....GGGGGG.....
+
+        ...GGGGGGGGGG...
+
+        ..GGGGGGGGGGGG..
+
+        FFGGGGGGGGGGGGFF
+
+        FFGGGGGGGGGGGGFF
+
+        .FGGGGGGGGGGGGF.
+
+        ..GGGGGGGGGGGG..
+
+        ...GGGGGGGGGG...
+
+        ....GGGGGGGG....
+
+        __VVVVVVVVVVVV__
+
+        __VVVVVVVVVVVV__'
+  left:
+    patches:
+    - x: 0
+      y: 10
+      rows: '.......Q........
+
+        ........q.......
+
+        ......GGGGGG....
+
+        ....GGGGGGGGG...
+
+        ...GGGGGGGGGGF..
+
+        ..GGGGGGGGGGGFF.
+
+        ..GkkWGGGGGGFFF.
+
+        .GGkkkGGGGGGGF..
+
+        NNGkkGGGGGGGG...
+
+        NNNGGGGGGGGG....
+
+        mNNNGGGGGGGG....
+
+        .mNN.GGGGGVVV...
+
+        _____UUVVVVV____
+
+        ___________V____'
+  down_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '...Q........Q...
+
+        ....q......q....
+
+        .....GGGGGG.....
+
+        ...GGGGGGGGGG...
+
+        ..GGGGGGGGGGGG..
+
+        FFGGGGGGGGGGGGFF
+
+        FFGkkWGGGGWkkGFF
+
+        .FGkkkGGGGkkkGF.
+
+        ..GGkkGGGGkkGG..
+
+        ...GGGGNNGGGG...
+
+        ....GGNNNNGG....
+
+        _____NNNNNN_____
+
+        ______NmmN______'
+    - x: 0
+      y: 24
+      rows: '__VVVUUUUVVV____
+
+        __VVVUUUUVVV____
+
+        ___VVUUUUVV_____
+
+        __VVVVUUVVVVV___
+
+        ___LLLLLLLhL____'
+  down_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '...Q........Q...
+
+        ....q......q....
+
+        .....GGGGGG.....
+
+        ...GGGGGGGGGG...
+
+        ..GGGGGGGGGGGG..
+
+        FFGGGGGGGGGGGGFF
+
+        FFGkkWGGGGWkkGFF
+
+        .FGkkkGGGGkkkGF.
+
+        ..GGkkGGGGkkGG..
+
+        ...GGGGNNGGGG...
+
+        ....GGNNNNGG....
+
+        _____NNNNNN_____
+
+        ______NmmN______'
+    - x: 0
+      y: 24
+      rows: '__VVVUUUUVVV____
+
+        __VVVUUUUVVV____
+
+        ___VVUUUUVV_____
+
+        __VVVVUUVVVVV___
+
+        ___LLLLLLLhL____'
+  up_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '...Q........Q...
+
+        ....q......q....
+
+        .....GGGGGG.....
+
+        ...GGGGGGGGGG...
+
+        ..GGGGGGGGGGGG..
+
+        FFGGGGGGGGGGGGFF
+
+        FFGGGGGGGGGGGGFF
+
+        .FGGGGGGGGGGGGF.
+
+        ..GGGGGGGGGGGG..
+
+        ...GGGGGGGGGG...
+
+        ....GGGGGGGG....
+
+        __VVVVVVVVVVVV__
+
+        __VVVVVVVVVVVV__'
+  up_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '...Q........Q...
+
+        ....q......q....
+
+        .....GGGGGG.....
+
+        ...GGGGGGGGGG...
+
+        ..GGGGGGGGGGGG..
+
+        FFGGGGGGGGGGGGFF
+
+        FFGGGGGGGGGGGGFF
+
+        .FGGGGGGGGGGGGF.
+
+        ..GGGGGGGGGGGG..
+
+        ...GGGGGGGGGG...
+
+        ....GGGGGGGG....
+
+        __VVVVVVVVVVVV__
+
+        __VVVVVVVVVVVV__'
+  left_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '.......Q........
+
+        ........q.......
+
+        ......GGGGGG....
+
+        ....GGGGGGGGG...
+
+        ...GGGGGGGGGGF..
+
+        ..GGGGGGGGGGGFF.
+
+        ..GkkWGGGGGGFFF.
+
+        .GGkkkGGGGGGGF..
+
+        NNGkkGGGGGGGG...
+
+        NNNGGGGGGGGG....
+
+        mNNNGGGGGGGG....
+
+        .mNN.GGGGGVVV...
+
+        _____UUVVVVV____
+
+        ___________V____'
+  left_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '.......Q........
+
+        ........q.......
+
+        ......GGGGGG....
+
+        ....GGGGGGGGG...
+
+        ...GGGGGGGGGGF..
+
+        ..GGGGGGGGGGGFF.
+
+        ..GkkWGGGGGGFFF.
+
+        .GGkkkGGGGGGGF..
+
+        NNGkkGGGGGGGG...
+
+        NNNGGGGGGGGG....
+
+        mNNNGGGGGGGG....
+
+        .mNN.GGGGGVVV...
+
+        _____UUVVVVV____
+
+        ___________V____'

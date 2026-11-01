@@ -1,0 +1,317 @@
+name: hiker
+description: 'UGNAUGHT miner: pig snout, white whiskers, blue overalls, hard hat with a lamp (replaces the Hiker).'
+kit: person16x32
+replaces: graphics/object_events/pics/people/hiker.png
+graphics_info: Hiker
+notes: 'Recast group a: the Hiker''s own stout body as regions (shirt -> blue overalls b, trousers -> overall legs O, arms kept), new tan hard hat with a white headlamp, peach face with a pink pig snout
+  (skin-a) and nostrils, white side whiskers flaring past the cheeks into a short beard, tan tool belt. Stays on NPC_1.'
+palette: npc_1
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_1
+shade: true
+materials:
+  H: c
+  B: c
+  W: w/c
+  O: b
+  G: c
+legend:
+  k: 15
+  L: 14
+  y: 13
+  n: 15
+  p: 5
+  q: 6
+  r: 7
+accept: {}
+base_sheet: graphics/object_events/pics/people/hiker.png
+remap:
+  a: H
+  c: O
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 10
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHyyHHHH...
+
+        ..HHHHyLLyHHHH..
+
+        .BBBBBBBBBBBBBB.
+
+        ..ssssssssssss..
+
+        .WssskssssksssW.
+
+        WWssskppppksssWW
+
+        WWWssqnppnqssWWW
+
+        .WWWssrrrrssWWW.
+
+        __WWWWWWWWWWWW__
+
+        _____WWWWWW_____
+
+        _____bbbbbb_____'
+    - &id001
+      x: 0
+      y: 26
+      rows: _GGGGGGGGGGGGGG_
+  up:
+    patches:
+    - x: 0
+      y: 10
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        .BBBBBBBBBBBBBB.
+
+        ..ssssssssssss..
+
+        .WssssssssssssW.
+
+        WWWssssssssssWWW
+
+        WWWWWWWWWWWWWWWW
+
+        .WWWWWWWWWWWWWW.
+
+        __WWbbbbbbbbWW__
+
+        _bbbbbbbbbbbbbb_
+
+        _bbbbbbbbbbbbbb_'
+    - *id001
+  left:
+    patches:
+    - x: 0
+      y: 10
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ..yLyHHHHHHHH...
+
+        ..yLyHHHHHHHHH..
+
+        BBBBBBBBBBBBBB..
+
+        ..ssssssssssss..
+
+        ..ssksssssWWWW..
+
+        ppsksssssWWWWW..
+
+        pnqssssWWWWWW...
+
+        rrrsWWWWWWWWW...
+
+        .WWWWWWWWWWWbb..
+
+        ___WWWWWWbbbb...
+
+        _____ssbbbbb____'
+    - x: 0
+      y: 26
+      rows: ___GGGGGGGGGG___
+  down_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHyyHHHH...
+
+        ..HHHHyLLyHHHH..
+
+        .BBBBBBBBBBBBBB.
+
+        ..ssssssssssss..
+
+        .WssskssssksssW.
+
+        WWssskppppksssWW
+
+        WWWssqnppnqssWWW
+
+        .WWWssrrrrssWWW.
+
+        __WWWWWWWWWWWW__
+
+        _____WWWWWW_____
+
+        _____bbbbbb_____'
+    - x: 0
+      y: 27
+      rows: _GGGGGGGGGGGGGG_
+  down_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHyyHHHH...
+
+        ..HHHHyLLyHHHH..
+
+        .BBBBBBBBBBBBBB.
+
+        ..ssssssssssss..
+
+        .WssskssssksssW.
+
+        WWssskppppksssWW
+
+        WWWssqnppnqssWWW
+
+        .WWWssrrrrssWWW.
+
+        __WWWWWWWWWWWW__
+
+        _____WWWWWW_____
+
+        _____bbbbbb_____'
+    - x: 0
+      y: 27
+      rows: _GGGGGGGGGGGGGG_
+  up_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        .BBBBBBBBBBBBBB.
+
+        ..ssssssssssss..
+
+        .WssssssssssssW.
+
+        WWWssssssssssWWW
+
+        WWWWWWWWWWWWWWWW
+
+        .WWWWWWWWWWWWWW.
+
+        __WWbbbbbbbbWW__
+
+        _bbbbbbbbbbbbbb_
+
+        _bbbbbbbbbbbbbb_'
+    - x: 0
+      y: 27
+      rows: _GGGGGGGGGGGGGG_
+  up_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        .BBBBBBBBBBBBBB.
+
+        ..ssssssssssss..
+
+        .WssssssssssssW.
+
+        WWWssssssssssWWW
+
+        WWWWWWWWWWWWWWWW
+
+        .WWWWWWWWWWWWWW.
+
+        __WWbbbbbbbbWW__
+
+        _bbbbbbbbbbbbbb_
+
+        _bbbbbbbbbbbbbb_'
+    - x: 0
+      y: 27
+      rows: _GGGGGGGGGGGGGG_
+  left_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ..yLyHHHHHHHH...
+
+        ..yLyHHHHHHHHH..
+
+        BBBBBBBBBBBBBB..
+
+        ..ssssssssssss..
+
+        ..ssksssssWWWW..
+
+        ppsksssssWWWWW..
+
+        pnqssssWWWWWW...
+
+        rrrsWWWWWWWWW...
+
+        .WWWWWWWWWWWbb..
+
+        ___WWWWWWbbbb...
+
+        _____ssbbbbb____'
+    - x: 0
+      y: 27
+      rows: ___GGGGGGGGGG___
+  left_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ..yLyHHHHHHHH...
+
+        ..yLyHHHHHHHHH..
+
+        BBBBBBBBBBBBBB..
+
+        ..ssssssssssss..
+
+        ..ssksssssWWWW..
+
+        ppsksssssWWWWW..
+
+        pnqssssWWWWWW...
+
+        rrrsWWWWWWWWW...
+
+        .WWWWWWWWWWWbb..
+
+        ___WWWWWWbbbb...
+
+        _____ssbbbbb____'
+    - x: 0
+      y: 27
+      rows: ___GGGGGGGGGG___
