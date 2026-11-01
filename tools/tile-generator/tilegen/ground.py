@@ -156,4 +156,16 @@ def grate(period: int = 4) -> np.ndarray:
     return p
 
 
-PATTERNS = {"deck_plate": deck_plate, "grate": grate}
+def grate_band() -> np.ndarray:
+    """A 16x8 floor grate band that repeats vertically (for kits that stack one tile row twice): lit bars
+    between dark slots, a slot break every 8 px so it reads as a grid, not stripes."""
+    p = np.ones((8, 16), np.uint8)
+    for y in (1, 5):
+        p[y, :] = 2
+        p[y + 1, :] = 0
+    p[:, 7] = 2; p[:, 15] = 2
+    p[:, 0] = np.where(p[:, 0] == 2, 2, 0); p[:, 8] = np.where(p[:, 8] == 2, 2, 0)
+    return p
+
+
+PATTERNS = {"deck_plate": deck_plate, "grate": grate, "grate_band": grate_band}

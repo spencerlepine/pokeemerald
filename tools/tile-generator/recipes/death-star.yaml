@@ -1,7 +1,8 @@
 # Prototype: Death Star interior (corridors, control rooms) from the Aqua/Magma hideout kit (gTileset_Facility).
 # The hideout already has the shapes (wall panels, consoles, grates, tanks, crates); the Death Star look is
 # palette: glossy near-black deck, cool neutral grey wall panels, black wall bases, red and green console lights.
-# Rules are limited to the Facility banks so the shared General primary is untouched.
+# Rules are limited to named banks. The General rules (rock, sand, water) re-skin the hideout's docks and
+# would become a Death Star copy of the primary at install time, never the shared outdoor General.
 name: death-star
 notes: Death Star deck. Floors -> glossy black-grey deck plates; wall panels -> cool neutral Imperial grey; hex floor -> dark gunmetal; console lights kept red/green; tank water -> cold blue coolant.
 rules:
@@ -20,6 +21,15 @@ rules:
   - name: panel-neutral
     match: {banks: ["facility:6"], chroma_max: 10, light_max: 84}
     set:   {hue: 280, chroma: 3, light: -6}
+  - name: trench-wall          # General cliff rock around the docks -> dark machined trench walls
+    match: {banks: ["general:3"], hue: [330, 70], chroma_min: 6}
+    set:   {hue: 270, chroma: 5, light: -12}
+  - name: dock-deck            # General sand -> pale hangar deck
+    match: {banks: ["general:5"], hue: [60, 110], chroma_min: 20}
+    set:   {hue: 270, chroma: 4, light: -18}
+  - name: coolant              # docking water -> dark cold coolant
+    match: {banks: ["general:4"], hue: [240, 300], chroma_min: 15}
+    set:   {hue: 245, chroma_scale: 0.55, light: -14}
 retexture:                     # the hideout's ribbed floor -> square glossy deck plates (lit and shadowed sets)
   - op: pattern
     tileset: secondary
@@ -31,3 +41,8 @@ retexture:                     # the hideout's ribbed floor -> square glossy dec
     pattern: deck_plate
     tiles: [[800, 801], [816, 817]]
     tones: [11, 12, 13]
+  - op: pattern                # the hex floor -> dark floor grate (one 16x8 band, stacked by the metatile)
+    tileset: secondary
+    pattern: grate_band
+    tiles: [[660, 661]]
+    tones: [6, 8, 9]
