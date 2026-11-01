@@ -1,6 +1,10 @@
 {
   "flip": false,
-  "desc": "small segmented green grub larva curled in a C shape, one insect head with small mandibles, one wavy rust stripe along its back, whole body, simple compact creature",
-  "colour": "pale green with a rust red stripe",
-  "ref_note": "text only: the only taozin art is a tall S-curve that cannot fit the frame"
+  "desc": "small segmented grub larva curled in a C shape, insect head with a big green compound eye and small mandibles, wavy stripe along its back, whole body, side view",
+  "colour": "pale lavender-pink segments with orange stripes, rust-brown head, teal eye",
+  "ref_note": "Taozin.jpg (Legends), upper C-curve cut out by hand with cords and frame removed, tail tip tapered (r2_taozin.png)",
+  "init": "refs/kecleon_prep.png",
+  "init_source": "/tmp/claude-0/-home-user/510f0079-9430-50be-b656-57ddf5b64e74/scratchpad/mask/r2_taozin.png",
+  "denoise": 0.5,
+  "negative": "ropes, sticks, frame, background"
 }
