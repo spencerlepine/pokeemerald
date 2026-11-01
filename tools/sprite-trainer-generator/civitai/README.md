@@ -28,7 +28,7 @@ python civitai_trainer.py finish runs/magma_leader_maxie/raw/<file>.png --theme 
 
 `<trainer>` is the front pic's file stem in `game/graphics/trainers/front_pics/`. The brief is that row's
 `sw_subject` in `wiki/database/pending_art.csv`; [`jobs.json`](jobs.json) adds per-trainer look notes,
-the faction theme and the style tag (`gen1` or `gen2`). Darth Vader is `magma_leader_maxie`.
+the faction theme and an optional style tag (`gen1` or `gen2`, off by default). Darth Vader is `magma_leader_maxie`.
 
 ## What it does
 
@@ -56,7 +56,8 @@ jpeg is the default; the 8x block vote absorbs its noise. `--whatif` shows the p
 ## Findings from the first run
 
 - The checkpoint AIR `101055@128078` and LoRA `159333@443092` are accepted as is.
-- The LoRA has no trigger words. Its `gen2` look is strong: every figure came out maroon and skin-toned
-  with a visible face, not black armour, so `palette-enforcer` flags 6 colours per sprite as off-theme.
+- The LoRA has no trigger words. The `gen1`/`gen2` tags force the old Game Boy look (the first run used
+  `gen2`: maroon, skin-toned, Crystal-like). Leave the tag off for the full-colour look of the model previews;
+  `--style gen2` brings it back.
 - `--fit crop` keeps the native 8x pixel grid and reads crisper; `--fit scale` fills the 64 cell but
   re-votes at 7x or 9x and picks up stray pixels. Crop clips a figure wider than 64 (a lightsaber).

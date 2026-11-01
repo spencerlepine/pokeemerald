@@ -166,7 +166,7 @@ def brief(trainer: str) -> dict:
     subject = job.get("subject") or row.get("sw_subject") or stem.replace("_", " ")
     return {"stem": stem, "wiki_path": row.get("path"), "sw_subject": row.get("sw_subject"),
             "subject": subject, "desc": job.get("desc", ""), "theme": job.get("theme", "factions"),
-            "style": job.get("style", "gen2")}
+            "style": job.get("style", "")}
 
 
 def build_prompt(b: dict, v: dict) -> str:
@@ -181,6 +181,8 @@ def build_prompt(b: dict, v: dict) -> str:
 
 def cmd_gen(args) -> list[Path]:
     b = brief(args.trainer)
+    if args.style is not None:
+        b["style"] = args.style
     v = pick_version(args.version)
     fam = family(v)
     prompt = args.prompt or build_prompt(b, v)
@@ -376,6 +378,7 @@ def main():
         p.add_argument("--version", help="LoRA version id, or a base-model word (sdxl, sd1); default sdxl")
         p.add_argument("--checkpoint", help="base checkpoint AIR (default per base model)")
         p.add_argument("--prompt", help="full prompt override")
+        p.add_argument("--style", help="gen1 or gen2 to force the old Game Boy look; default none (full colour, like the model previews)")
         p.add_argument("--negative")
         p.add_argument("--seed", type=int)
         p.add_argument("-n", type=int, default=1, help="images in this request")
