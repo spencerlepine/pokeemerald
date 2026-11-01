@@ -2,7 +2,7 @@
   "init": "refs/dustox_prep.png",
   "init_source": "https://static.wikia.nocookie.net/starwars/images/0/0e/Pilmoy.jpg/revision/latest?cb=20070122082511#crop=0.03,0.22,0.97,0.67",
   "flip": false,
-  "denoise": 0.5,
+  "denoise": 0.45,
   "desc": "night moth with huge rounded patterned wings and a furry body scattering toxic dust",
   "colour": "green and purple",
   "ref_note": "Alderaan woolly moth painting (Pilmoy) cropped below the antennae so the white gap between the wings knocks out; front view, wings spread"
