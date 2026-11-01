@@ -1,0 +1,16 @@
+# Prototype: Bacta Center interior (Pokémon Center -> Rebel medical bay). Palette only.
+name: bacta-center
+notes: Warm cream/orange clinic -> cool white with bacta teal accents; red/orange counter trim -> Alliance flight orange kept sparingly; yellow lamp -> kyber blue.
+rules:
+  - name: floor-white                   # cream/yellow floor and walls
+    match: {hue: [85, 115], chroma_min: 12}
+    set:   {hue: 215, chroma_scale: 0.3, light: +2}
+  - name: wood-orange-to-teal           # orange woodwork and floor pattern
+    match: {hue: [55, 85], chroma_min: 20}
+    set:   {hue: 185, chroma_scale: 0.75}
+  - name: trim-flight-orange            # reds keep a single warm accent
+    match: {hue: [30, 55], chroma_min: 40}
+    set:   {hue: 45, chroma_scale: 0.85}
+  - name: plant-bacta                   # potted plant greens -> bacta green-teal
+    match: {hue: [115, 160], chroma_min: 30}
+    set:   {hue: 170, chroma_scale: 0.8}

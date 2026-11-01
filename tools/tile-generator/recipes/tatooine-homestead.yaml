@@ -1,0 +1,16 @@
+# Prototype: the player's homestead interior (Brendan/May's house -> Lars-style adobe rooms). Palette only.
+name: tatooine-homestead
+notes: Yellow wood floors and walls -> sand adobe and tan plaster; purple/pink trims and rugs -> rust and rebel orange cloth; greens -> dusty olive; blues -> faded denim-grey.
+rules:
+  - name: wood-adobe                    # floors, walls, furniture wood
+    match: {hue: [75, 115], chroma_min: 12}
+    set:   {hue: 80, chroma_scale: 0.45, light: -2}
+  - name: violet-rust                   # purple/lilac trims, beds, curtains
+    match: {hue: [285, 350], chroma_min: 15}
+    set:   {hue: 42, chroma_scale: 0.9}
+  - name: green-olive
+    match: {hue: [115, 160], chroma_min: 30}
+    set:   {hue: 100, chroma_scale: 0.5, light: -6}
+  - name: blue-faded
+    match: {hue: [240, 285], chroma_min: 18}
+    set:   {hue: 235, chroma_scale: 0.55}
