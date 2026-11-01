@@ -18,11 +18,14 @@ deepest creases. Share of all outline pixels, corpus-wide:
 
 A sprite outlined 100% in black looks like a sticker. This is the single biggest difference.
 
-## 2. Every material is a full 3-tone ramp, shaded from above
+## 2. Every material is a full 3-tone ramp, shaded from above, and the palette is used
 
 The four NPC palettes have the same layout: 1-4 skin (light, base, shade, outline), 5-7 ramp A,
 8-10 ramp B, 11-13 ramp C (each light, mid, dark), 14 white, 15 black. Vanilla uses **all 4 skin
 tones** on every sheet and **all 3 tones** of every ramp it touches (median 3, p5 2).
+
+A facing-down frame uses a median of **13 of the 15 colours** (p25 12): every ramp the palette
+offers carries something, and bald heads carry a white (14) glint. Fewer than 12 reads as flat.
 
 Tone weights inside a ramp, averaged over the corpus: light 17-27%, mid 31-34%, **dark 41-52%**.
 Shadow dominates because the light comes from straight above (the camera is above and in front):

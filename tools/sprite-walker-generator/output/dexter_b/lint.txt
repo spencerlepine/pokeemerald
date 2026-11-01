@@ -1,22 +1,20 @@
 warning style: area = 260 is outside Emerald's p5-p95 range [194, 252]
-warning style: orphans = 0.079 is outside Emerald's p5-p95 range [0.098, 0.233]
-warning style: colours = 8 is outside Emerald's p5-p95 range [10, 15]
-warning style: step_change = 0.569 is outside Emerald's p5-p95 range [0.615, 0.805]
-warning style: skin_tones = 0 is outside Emerald's p5-p95 range [4, 4]
-warning style: hair_rows = 0 is outside Emerald's p5-p95 range [2, 8]
+warning style: orphans = 0.092 is outside Emerald's p5-p95 range [0.098, 0.233]
+warning style: step_change = 0.576 is outside Emerald's p5-p95 range [0.615, 0.805]
 
-STYLE SCORE 92/100  (ship to the owner at >= 90 with no FAIL; 4 rule(s) accepted by the spec, each with its reason below; see STYLE.md)
+STYLE SCORE 94/100  (ship to the owner at >= 90 with no FAIL; 4 rule(s) accepted by the spec, each with its reason below; see STYLE.md)
   ok   edge_black = 0.074 (want <= 0.393; Emerald median 0.182): outline every material in its own dark ramp tone; black only on eyes, soles, creases (STYLE.md 1)
   ok   inner_black = 0.019 (want <= 0.232; Emerald median 0.037): too much black inside the figure
-  ok   skin_tones = 0: accepted, Besalisk hide uses ramp A, not the human skin ramp
+  ok   skin_tones = 4: accepted, Besalisk hide uses ramp A, not the human skin ramp
+  ok   colours_used = 12 (want >= 12; Emerald median 13): use the palette: vanilla walkers use 12-15 of the 15 colours in one frame; give every material its full ramp, add a white highlight, put details (belts, trims, straps) on unused ramps (STYLE.md 2)
   ok   ramp_tones_min = 3 (want >= 2; Emerald median 3): every ramp you use needs its light, mid and dark tone (STYLE.md 2)
   ok   ramp_dark_share = 0.308 (want >= 0.165; Emerald median 0.3): shade from above: the dark tone should carry ~40% of each ramp, at the bottom of every shape (STYLE.md 2)
-  ok   hair_rows = 0: accepted, no hair: a short crest
+  ok   hair_rows = 7: accepted, no hair: a short crest
   ok   eye_row = -1: accepted, small eyes high on a wide hairless head
   ok   head_w = 16 (want 14..16; Emerald median 14): head should be ~14 wide (STYLE.md 3)
   ok   height = 20 (want 18..21; Emerald median 20): 18-21 rows tall, feet on row 30 (STYLE.md 3)
-  ok   step_change = 0.569: accepted, the folded arms and apron hang still; the bob, hem and feet move
-  FAIL orphans = 0.079 (want 0.098..0.233; Emerald median 0.152): add single-pixel highlights and creases; vanilla art is not flat
+  ok   step_change = 0.576: accepted, the folded arms and apron hang still; the bob, hem and feet move
+  FAIL orphans = 0.092 (want 0.098..0.233; Emerald median 0.152): add single-pixel highlights and creases; vanilla art is not flat
 
 metric            this  Emerald p5  median     p95
 top                 11          10      11      13
@@ -25,15 +23,16 @@ height              20          18      20      21
 width               16          14      15      16
 area               260         194     226     252
 dark_outline       1.0       0.846     1.0     1.0
-orphans          0.079       0.098   0.152   0.233
-colours              8          10      14      15
-step_change      0.569       0.615   0.698   0.805
+orphans          0.092       0.098   0.152   0.233
+colours             12          10      14      15
+step_change      0.576       0.615   0.698   0.805
+colours_used        12          10      13      15
 edge_black       0.074         0.0   0.182   0.609
 inner_black      0.019         0.0   0.037   0.232
-skin_tones           0           4       4       4
+skin_tones           4           4       4       4
 ramp_tones_min       3           1       3       3
 ramp_dark_share   0.308         0.0     0.3   0.538
-hair_rows            0           2       5       8
+hair_rows            7           2       5       8
 eye_row             -1          -1       7      10
 head_w              16          14      14      16
 body_w              16          12      14      16

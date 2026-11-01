@@ -441,4 +441,19 @@ def shade_round(regions, materials, hard, letters, facing=None):
             else:
                 t = BASE if back else LIGHT
             out[y][x] = t
+        # specular: vanilla bald heads carry a 1-2 px white glint on the crown (Spenser, Sidney,
+        # the Gentleman); faces and hides get one, cloth and fur do not
+        if skinlike or m == "s":
+            core = sorted((y, x) for x, y in cells if out[y][x] == LIGHT and dist[y][x] >= 3)
+            if core and (bot - top) >= 5:
+                y0 = core[0][0]
+                row = sorted(x for y, x in core if y == y0 + 1) or sorted(x for y, x in core if y == y0)
+                yy = y0 + 1 if any(y == y0 + 1 for y, _ in core) else y0
+                if facing == "left":
+                    xs_ = [row[0]]
+                else:
+                    mid = row[len(row) // 2]
+                    xs_ = [x for x in (mid - 2, mid - 1) if x in row] or [mid]
+                for x in xs_:
+                    out[yy][x] = 14
     return out

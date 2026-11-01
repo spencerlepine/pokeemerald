@@ -241,3 +241,15 @@ core pushed up toward the light; in the side view the core leans to the face and
 darkens. A material written with `@` (`s@`, `skin-a@`, `c@`) is shaded that way
 (`shade.shade_round`); eyes and tattoos inside the head do not break the bands. Applied to the
 shipped Yoda, Dexter, Maul, Zuckuss and Tarfful heads, which were re-shipped.
+
+## D16. Use the palette: a colour budget rule, glints and detail ramps (2026-11-01)
+
+Owner, comparing Maul and Zuckuss with vanilla Sidney and Spenser: "I don't think you actually
+use as many colours as you could have." Measured: vanilla walkers use a median of 13 of the 15
+colours in the facing-down frame (p25 12); the shipped drafts used 8-11. New style rule
+`colours_used` (min p25, weight 15). Ways to reach it without leaving the palette: round skin
+volumes get a 1-2 px white glint on the crown (as vanilla bald heads do); details go on ramps
+the body does not use (Yoda's cord on ramp a and tunic on the skin ramp, Maul's horns in skin
+light/outline and a yellow belt, Zuckuss's tunic on the skin ramp, Tarfful's studded steel
+bandolier in all three ramp-a tones plus a tan pouch, Dexter's wattle on the skin ramp).
+All five re-shipped at 12-14 colours.

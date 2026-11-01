@@ -22,7 +22,7 @@ T_HEAD_D = block(0, 10, """
 .HHHHMMMMMMHHHH.
 ..HHHMMkkMMHHH..
 ..HHHMMMMMMHHH..
-...HHHMkkMHHH...
+...HHHMkWMHHH...
 ...HHHHHHHHHH...""")
 T_HEAD_U = block(0, 10, """
 .....HHHHHH.....
@@ -51,24 +51,24 @@ MkMMHHHHHHHHH...
 .kkHHHHHHHHH....
 ...HHHHHHHH.....""")
 T_BAND_D = block(0, 22, """
-____ll__________
-_____ll_________
-______ll________
-_______ll_______
-________ll______""")
+____Lm__________
+_____lm_________
+______Lmppp_____
+_______lppp_____
+________Lm______""")
 T_BAND_U = block(0, 22, """
-__________ll____
-_________ll_____
-________ll______
-_______ll_______
-______ll________""")
+__________mL____
+_________ml_____
+________mL______
+_______ml_______
+______mL________""")
 spec("tarfful", "Brawly", "npc_3", "gym_leaders/brawly.png",
      "TARFFUL: Wookiee chieftain with a bandolier (replaces Brawly).",
      "Batch 4, B style: Brawly's own body as regions (limbs -> fur F, torso -> fur G, shorts -> belt l), new Wookiee head with a tan muzzle, steel bandolier across the chest. Stays on NPC_3 (orange-brown fur = ramp c).",
-     materials={"H": "c@", "F": "c", "G": "c", "l": "a"}, legend={"k": 15, "M": 3},
+     materials={"H": "c@", "F": "c", "G": "c", "l": "a", "M": "s", "B": "s", "p": "s"}, legend={"k": 15, "W": 14, "L": 5, "l": 6, "m": 7},
      accept={"skin_tones": "fur, not skin: the muzzle uses the skin ramp's mid tones only", "hair_rows": "the whole head is fur",
              "eye_row": "eyes under a fur brow"},
-     base="gym_leaders/brawly.png", remap={"s": "F", "a": "G", "c": "l"},
+     base="gym_leaders/brawly.png", remap={"s": "F", "a": "G", "c": "B"},
      patches={"down": [T_HEAD_D, T_BAND_D], "up": [T_HEAD_U, T_BAND_U], "left": [T_HEAD_L, block(0, 22, "____________....")]},
      kit="person16x32_still")
 
@@ -78,7 +78,7 @@ spec("tarfful", "Brawly", "npc_3", "gym_leaders/brawly.png",
 # robes: shoulders and sleeves P, tunic O, boots D (three volumes of the dark brown ramp c).
 M_HEAD_D = block(0, 10, """
 ....h.h..h.h....
-...RRRRRRRRRR...
+...RHRHRRHRHR...
 ..RRRRkRRkRRRR..
 ..RRRRkRRkRRRR..
 .RRRRRRRRRRRRRR.
@@ -90,7 +90,7 @@ M_HEAD_D = block(0, 10, """
 ....RRRRRRRR....""")
 M_HEAD_U = block(0, 10, """
 ....h.h..h.h....
-...RRRRRRRRRR...
+...RHRHRRHRHR...
 ..RRRRkRRkRRRR..
 ..RRRRkRRkRRRR..
 .RRRRRRRRRRRRRR.
@@ -102,7 +102,7 @@ M_HEAD_U = block(0, 10, """
 ....OOOOOOOO....""")
 M_HEAD_L = block(0, 10, """
 .....h.h.h.h....
-....RRRRRRRRR...
+....RHRHRHRHR...
 ...RRRkRRkRRRR..
 ..RRRRkRRkRRRR..
 ..RRRRRRRRRRRR..
@@ -115,12 +115,13 @@ M_HEAD_L = block(0, 10, """
 spec("maul", "Sidney", "npc_2", "elite_four/sidney.png",
      "MAUL (Force vision): black robes, red-and-black tattoos, horns (replaces Sidney).",
      "Batch 4, B style: Sidney's own body as regions (vest + arms -> robe P, shirt + trousers -> tunic O, shoes -> boots D), new bald Zabrak head on NPC_2's red ramp with black tattoo bands, a horn ring and yellow eyes.",
-     materials={"R": "skin-b@", "P": "c", "O": "c", "D": "c"}, legend={"k": 15, "h": 3, "e": 5},
+     materials={"R": "skin-b@", "P": "c", "O": "c", "D": "c", "Y": "a"}, legend={"k": 15, "h": 1, "H": 4, "e": 5},
      accept={"skin_tones": "Zabrak skin is the red ramp", "hair_rows": "bald; a ring of horns instead of hair",
              "edge_black": "the tattoos are black by design", "inner_black": "the tattoos are black by design",
              "eye_row": "yellow eyes inside a black tattoo mask"},
      base="elite_four/sidney.png", remap={"b": "P", "s": "P", "k": "O", "a": "O", "c": "D"},
-     patches={"down": [M_HEAD_D], "up": [M_HEAD_U], "left": [M_HEAD_L]},
+     patches={"down": [M_HEAD_D, block(3, 26, "YYYYYYYYYY\nYYYYYYYYYY")], "up": [M_HEAD_U, block(3, 26, "YYYYYYYYYY\nYYYYYYYYYY")],
+              "left": [M_HEAD_L, block(5, 26, "YYYYYYY\nYYYYYYY")]},
      kit="person16x32_still")
 
 # ====================================================================== ZUCKUSS (replaces Spenser)
@@ -170,7 +171,7 @@ T....GGGGG......""")
 spec("zuckuss", "Spenser", "npc_3", "frontier_brains/spenser.png",
      "ZUCKUSS: insectoid Gand findsman with breathing tubes (replaces Spenser).",
      "Batch 4, B style: Spenser's own body as regions (sleeves S, coat C, inner tunic V, cane kept), new Gand head: grey dome, two big compound eyes with glints, breathing tubes to the chest. Stays on NPC_3 (grey ramp a, dark green ramp b, brown ramp c).",
-     materials={"G": "skin-a@", "E": "b", "T": "a", "S": "c", "C": "c", "V": "b", "a": "a"}, legend={"k": 15, "W": 14},
+     materials={"G": "skin-a@", "E": "b", "T": "a", "S": "c", "C": "c", "V": "s", "a": "a"}, legend={"k": 15, "W": 14},
      accept={"skin_tones": "Gand carapace is the grey ramp", "hair_rows": "no hair: a domed carapace", "eye_row": "compound eyes, not eye bars",
              "head_w": "16 wide across the eyes"},
      base="frontier_brains/spenser.png", remap={"s": "S", "b": "C", "c": "C", "w": "V"},

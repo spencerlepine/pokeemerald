@@ -68,6 +68,7 @@ def style_metrics(g) -> dict:
     inner = [(x, y) for x, y in px if (x, y) not in set(edge)]
     used = {g[y][x] for x, y in px}
     m = {
+        "colours_used": len(used),
         "edge_black": round(sum(1 for x, y in edge if g[y][x] == 15) / len(edge), 3),
         "inner_black": round(sum(1 for x, y in inner if g[y][x] == 15) / max(1, len(inner)), 3),
         "skin_tones": len(used & set(SKIN)),
@@ -156,6 +157,7 @@ STYLE_RULES = [
     ("edge_black", "max_p75", 25, "outline every material in its own dark ramp tone; black only on eyes, soles, creases (STYLE.md 1)"),
     ("inner_black", "max_p95", 5, "too much black inside the figure"),
     ("skin_tones", "min_p5", 10, "use all four skin tones: 1 light above the eyes, 2 base, 3 shade under the chin, 4 outline (STYLE.md 4)"),
+    ("colours_used", "min_p25", 15, "use the palette: vanilla walkers use 12-15 of the 15 colours in one frame; give every material its full ramp, add a white highlight, put details (belts, trims, straps) on unused ramps (STYLE.md 2)"),
     ("ramp_tones_min", "min_p25", 10, "every ramp you use needs its light, mid and dark tone (STYLE.md 2)"),
     ("ramp_dark_share", "min_p25", 10, "shade from above: the dark tone should carry ~40% of each ramp, at the bottom of every shape (STYLE.md 2)"),
     ("hair_rows", "min_p25", 10, "top-down view: hair/hat occupies several rows above the face (STYLE.md 3)"),

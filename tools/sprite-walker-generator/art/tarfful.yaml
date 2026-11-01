@@ -13,9 +13,15 @@ materials:
   F: c
   G: c
   l: a
+  M: s
+  B: s
+  p: s
 legend:
   k: 15
-  M: 3
+  W: 14
+  L: 5
+  l: 6
+  m: 7
 accept:
   skin_tones: 'fur, not skin: the muzzle uses the skin ramp''s mid tones only'
   hair_rows: the whole head is fur
@@ -24,7 +30,7 @@ base_sheet: graphics/object_events/pics/people/gym_leaders/brawly.png
 remap:
   s: F
   a: G
-  c: l
+  c: B
 frames:
   down:
     patches:
@@ -50,20 +56,20 @@ frames:
 
         ..HHHMMMMMMHHH..
 
-        ...HHHMkkMHHH...
+        ...HHHMkWMHHH...
 
         ...HHHHHHHHHH...'
     - x: 0
       y: 22
-      rows: '____ll__________
+      rows: '____Lm__________
 
-        _____ll_________
+        _____lm_________
 
-        ______ll________
+        ______Lmppp_____
 
-        _______ll_______
+        _______lppp_____
 
-        ________ll______'
+        ________Lm______'
   up:
     patches:
     - x: 0
@@ -93,15 +99,15 @@ frames:
         ...HHHHHHHHHH...'
     - x: 0
       y: 22
-      rows: '__________ll____
+      rows: '__________mL____
 
-        _________ll_____
+        _________ml_____
 
-        ________ll______
+        ________mL______
 
-        _______ll_______
+        _______ml_______
 
-        ______ll________'
+        ______mL________'
   left:
     patches:
     - x: 0

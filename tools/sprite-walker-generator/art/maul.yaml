@@ -13,9 +13,11 @@ materials:
   P: c
   O: c
   D: c
+  Y: a
 legend:
   k: 15
-  h: 3
+  h: 1
+  H: 4
   e: 5
 accept:
   skin_tones: Zabrak skin is the red ramp
@@ -37,7 +39,7 @@ frames:
       y: 10
       rows: '....h.h..h.h....
 
-        ...RRRRRRRRRR...
+        ...RHRHRRHRHR...
 
         ..RRRRkRRkRRRR..
 
@@ -56,13 +58,18 @@ frames:
         ...RRRkkkkRRR...
 
         ....RRRRRRRR....'
+    - x: 3
+      y: 26
+      rows: 'YYYYYYYYYY
+
+        YYYYYYYYYY'
   up:
     patches:
     - x: 0
       y: 10
       rows: '....h.h..h.h....
 
-        ...RRRRRRRRRR...
+        ...RHRHRRHRHR...
 
         ..RRRRkRRkRRRR..
 
@@ -81,13 +88,18 @@ frames:
         ...RRRRRRRRRR...
 
         ....OOOOOOOO....'
+    - x: 3
+      y: 26
+      rows: 'YYYYYYYYYY
+
+        YYYYYYYYYY'
   left:
     patches:
     - x: 0
       y: 10
       rows: '.....h.h.h.h....
 
-        ....RRRRRRRRR...
+        ....RHRHRHRHR...
 
         ...RRRkRRkRRRR..
 
@@ -106,3 +118,8 @@ frames:
         ..kkkRRRRRRR....
 
         ...RRRRRRRR.....'
+    - x: 5
+      y: 26
+      rows: 'YYYYYYY
+
+        YYYYYYY'
