@@ -187,6 +187,9 @@ def frame_with_bike(who, pal, view, g):
     clear_from = {"front": 26, "back": 29, "side": 25}[view]
     for y in range(clear_from, 32):
         fr[y] = [0] * 32
+    if view == "side" and SEATED:
+        # sit the rider ON the bike: drop the body 2 px so the hips rest on the hull top (row 27)
+        fr = [[0] * 32 for _ in range(2)] + fr[:25] + [[0] * 32 for _ in range(5)]
     x0 = 3 if view == "side" else 9
     rows = grid(g)
     y0 = 32 - len(rows)
@@ -194,6 +197,14 @@ def frame_with_bike(who, pal, view, g):
         for i, ch in enumerate(r):
             if ch != ".":
                 fr[y0 + j][x0 + i] = L[ch]
+    if view == "side" and SEATED:
+        o, m = (10, 9) if who == "brendan" else (13, 12)   # boots: Kael brown, Mira chestnut
+        leg = {(26, 9): o, (26, 10): o, (27, 9): o, (27, 10): m, (27, 11): o,
+               (28, 8): o, (28, 9): m, (28, 10): m, (28, 11): o, (29, 8): o, (29, 9): o, (29, 10): o}
+        for (yy, xx), v in leg.items():
+            fr[yy][xx] = v
+        for (yy, xx), v in SEAT.get(BIKE, {}).items():   # seat back behind the rider
+            fr[yy][xx] = v
     out = Image.new("RGBA", (32, 32), (0, 0, 0, 0)); o = out.load()
     for y in range(32):
         for x in range(32):
@@ -211,9 +222,16 @@ def bike_only(pal, g, w):
     return out
 
 kael, mira = load_pal("kael"), load_pal("mira")
+SEATED = True
+BIKE = None
+# seat backs (row, x) -> index, drawn behind the dropped rider
+SEAT = {
+    "speeder_C": {(24, 22): 7, (25, 21): 7, (25, 22): 14, (25, 23): 7, (26, 21): 7, (26, 22): 6, (26, 23): 7},
+    "swoop_C": {(24, 22): 10, (25, 21): 10, (25, 22): 8, (25, 23): 10, (26, 21): 10, (26, 22): 9, (26, 23): 10},
+}
 GR = (115, 197, 164)
 Z = 4
-order = ["speeder_A", "speeder_B", "speeder_C", "swoop_A", "swoop_B", "swoop_C"]
+order = sys.argv[2].split(",") if len(sys.argv) > 2 else ["speeder_C", "swoop_C"]
 cellw = 32 * Z + 6
 rowh = 20 + 32 * Z + 8 + 8 * Z + 16
 W = 10 + 7 * cellw + 260
@@ -222,6 +240,7 @@ d.text((10, 8), "Hover bike mockups. Per concept: Kael down / up / left, Mira do
 y = 30
 for k in order:
     b = B[k]
+    BIKE = k
     for v in ("side", "front", "back"):
         rows = grid(b[v]); w = 26 if v == "side" else 14
         assert all(len(r) == w for r in rows), (k, v, [len(r) for r in rows])
