@@ -1,0 +1,47 @@
+{
+  "trainer": {
+    "stem": "battle_girl",
+    "wiki_path": "graphics/trainers/front_pics/battle_girl.png",
+    "sw_subject": "WARRIOR (f) in combat wraps",
+    "subject": "female martial artist",
+    "desc": "athletic young woman, dark hair in a short ponytail, sleeveless wrap top, hand wraps, loose trousers, fighting stance",
+    "theme": "factions",
+    "style": "",
+    "pose": "standing, facing left, three-quarter view",
+    "negative": "",
+    "pair": false
+  },
+  "lora": {
+    "id": 443092,
+    "name": "XL v1",
+    "baseModel": "SDXL 1.0",
+    "trainedWords": [],
+    "air": null,
+    "files": [
+      {
+        "name": "pk_trainer_xl_v1.safetensors",
+        "sizeKB": 445819.83984375,
+        "sha256": "078E09DA2A123964B7EB30DB23EC24D59FB082343F69C7FAF925C4C07E97023E"
+      }
+    ]
+  },
+  "checkpoint": "urn:air:sdxl:checkpoint:civitai:101055@128078",
+  "params": {
+    "prompt": "(female martial artist:1.3), athletic young woman, dark hair in a short ponytail, sleeveless wrap top, hand wraps, loose trousers, fighting stance, full body character sprite, standing, facing left, three-quarter view, pixel art, game sprite, crisp dark outlines, solid white background, simple background",
+    "negativePrompt": "poke ball, pokeball, holding ball, baseball cap, generic pokemon trainer, anime boy, scenery, detailed background, gradient background, floor, shadow, text, watermark, signature, frame, border, multiple characters, multiple views, character sheet, turnaround, duplicate, cropped, cut off feet, blurry, 3d, photo, realistic, painting, smooth shading",
+    "scheduler": "EulerA",
+    "steps": 25,
+    "cfgScale": 7.0,
+    "width": 768,
+    "height": 768,
+    "seed": 1295822406,
+    "clipSkip": 2
+  },
+  "strength": 0.75,
+  "format": "jpeg",
+  "seed": 1295822406,
+  "workflowId": "13596363-20261101091210466-j63x",
+  "jobId": "e9ebeb53-f813-4d7a-ba72-a2a02b2d9c88",
+  "cost": "3 green",
+  "generated": "20261101-091232"
+}
