@@ -1,9 +1,9 @@
 {
   "init": "refs/slowbro_prep.png",
-  "init_source": "refs/sources/slowbro/slowbro_cut.png",
+  "init_source": "refs/sources/slowbro/slug_bestiary_cut.png",
   "flip": false,
   "denoise": 0.45,
-  "desc": "big swamp slug rearing its head up high on the left, dopey face with eyestalks, long body trailing right with a grey spiral shell on the tail tip, side view, whole body",
-  "colour": "pale pink and cream",
-  "ref_note": "Swamp slug (SWGA) full body, foliage bg and caption masked out locally; flipped to face left; replaces right-cropped Giant_Swamp_Slug"
+  "desc": "big swamp slug sitting up, round head with two eyestalks and yellow eyes, open pink mouth, long body trailing back with a grey spiral shell on the tail tip, three-quarter view facing left, whole body, small, centred",
+  "colour": "pink with grey spiral shell",
+  "ref_note": "SwampSlug-BestiaryVol1, hand-masked, tinted pink, spiral shell drawn on the tail; clearer face than SWGA"
 }
