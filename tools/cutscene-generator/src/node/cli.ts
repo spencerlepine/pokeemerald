@@ -5,6 +5,7 @@ import { ascii } from "../core/render.ts";
 import { loadProject } from "./load.ts";
 import { writeOutputs } from "./output.ts";
 import { serve } from "./server.ts";
+import { writeGba } from "../gba/targets.ts";
 
 const USAGE = `pxl — pixel-art DSL
 
@@ -17,6 +18,11 @@ const USAGE = `pxl — pixel-art DSL
       Print an asset as palette keys with x/y rulers (anims: every frame).
   pxl list  <art.px.js>
       List assets, groups and sheets with their source locations.
+
+GBA (see GBA.md): when the art file declares gba("graphics/...") targets, build also writes them
+as game-ready files under <out>/game/ (4bpp PNGs, .bin tilemaps, JASC .pal), checked against
+the hardware limits. ref("name", "graphics/...") loads game art (default game dir ../../game,
+or $PXL_GAME_DIR) so scenes can sit next to the vanilla original.
 
 Art files may be .js or .ts. Default out dir: <art file dir>/out.`;
 
@@ -71,6 +77,12 @@ export async function main(argv: string[]): Promise<number> {
         const r = writeOutputs(p, outDir, { only: a.only, preview: a.preview, scale: a.scale });
         for (const l of r.lines) console.log(l);
         for (const e of r.errors) console.error("error: " + e.message);
+        if (p.gbaTargets.length && !a.only) {
+          const g = writeGba(p, join(outDir, "game"));
+          for (const l of g.lines) console.log("gba     " + l);
+          for (const e of g.errors) console.error("error: " + e.message);
+          r.errors.push(...g.errors);
+        }
         console.log(`-> ${outDir}${r.errors.length ? ` (${r.errors.length} error${r.errors.length > 1 ? "s" : ""})` : ""}`);
         return r.errors.length ? 1 : 0;
       }

@@ -6,6 +6,12 @@ import * as vm from "node:vm";
 import { stripTypeScriptTypes } from "node:module";
 import { PxError, wrap } from "../core/errors.ts";
 import { Project, type ProjectOptions } from "../core/project.ts";
+import { defaultGameDir, loadRef } from "../gba/targets.ts";
+
+/** Game root for ref()/gba() paths: $PXL_GAME_DIR, else ../../game next to this tool. */
+export function gameDir(): string {
+  return process.env.PXL_GAME_DIR ? resolve(process.env.PXL_GAME_DIR) : defaultGameDir();
+}
 
 function compile(code: string, file: string): string {
   // Type stripping keeps every line and column in place, so error locations stay exact.
@@ -34,6 +40,7 @@ export function loadProject(file: string, opts: ProjectOptions = {}): Project {
       stack.pop();
     }
   };
+  p.refHook = (path, o) => loadRef(gameDir(), path, o);
   p.includeHook = (path) => run(isAbsolute(path) ? path : resolve(dirname(stack[stack.length - 1]), path));
   run(file);
   return p;
@@ -42,6 +49,7 @@ export function loadProject(file: string, opts: ProjectOptions = {}): Project {
 /** Load art source from a string (tests, embedding). `name` appears in error locations. */
 export function loadSource(src: string, name = "art.px.js", opts: ProjectOptions = {}): Project {
   const p = new Project(opts);
+  p.refHook = (path, o) => loadRef(gameDir(), path, o);
   const ctx = vm.createContext({ ...p.env(), console });
   p.addFile(name);
   try {

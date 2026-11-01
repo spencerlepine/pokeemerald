@@ -122,6 +122,16 @@ function checkItems(where: string, items: unknown[], loc?: string): Item[] {
   return items as Item[];
 }
 
+/** A game file to write from art assets (see src/gba/targets.ts and GBA.md). */
+export interface GbaTarget {
+  path: string;
+  opts: Record<string, unknown>;
+  loc?: string;
+}
+
+const GBA_OPTS = ["bg", "map", "obj", "image", "pal", "palSlot", "cols", "flips", "tiles", "blank"];
+const REF_OPTS = ["map", "screen", "pal", "palSlot", "palFile", "frame", "transparent"];
+
 export interface ProjectOptions {
   /** Record painting traces for seed-0 builds (live viewer). */
   trace?: boolean;
@@ -137,6 +147,10 @@ export class Project implements BuildCtx {
   pal: Palette = Palette.builtin("pico8");
   /** Set by a loader to support include(). */
   includeHook?: (path: string) => void;
+  /** Set by a loader to support ref(): loads a game file as an image. */
+  refHook?: (path: string, opts: Record<string, unknown>) => Img;
+  /** Game files declared with gba(). */
+  readonly gbaTargets: GbaTarget[] = [];
 
   private cache = new Map<string, BuildOut>();
   /** Timelines gathered from animated assets placed by the builds in progress (innermost last). */
@@ -240,6 +254,23 @@ export class Project implements BuildCtx {
       this.includeHook(path);
     };
     env.rng = (seed?: number) => rng(seed);
+    env.gba = (path: unknown, opts: unknown) => {
+      const loc = this.callerLoc();
+      if (typeof path !== "string" || !isPlainObject(opts)) throw new PxError('gba("graphics/.../file.png", { bg | obj | image | pal, ... })', loc);
+      checkKeys(`gba '${path}'`, opts, GBA_OPTS, loc);
+      this.gbaTargets.push({ path, opts, loc });
+    };
+    env.ref = (name: unknown, path: unknown, opts: unknown = {}) => {
+      const loc = this.callerLoc();
+      if (typeof name !== "string" || typeof path !== "string" || !isPlainObject(opts))
+        throw new PxError('ref("name", "graphics/.../file.png", { map, screen, pal, frame })', loc);
+      checkKeys(`ref '${name}'`, opts, REF_OPTS, loc);
+      if (!this.refHook) throw new PxError("ref() is not available here (needs the node loader)", loc);
+      let img: Img;
+      try { img = this.refHook(path, opts); } catch (e) { throw wrap(e).within(`ref '${name}'`, loc); }
+      define("sprite", name, [{ w: img.w, h: img.h }, (c: { put(i: Img, x: number, y: number): void }) => c.put(img, 0, 0)]);
+      this.assets.get(name)!.loc = loc;
+    };
 
     for (const name of [...OPS, "clip", "lighting", "glow"]) {
       env[name] = (...args: unknown[]): Op => {
