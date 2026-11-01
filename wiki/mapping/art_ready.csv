@@ -1,1 +1,7 @@
 asset_id,art_file,drawn_by,notes
+graphics/object_events/pics/people/team_magma/maxie.png,art/graphics/object_events/pics/people/team_magma/maxie.png,sprite-walker-generator (art/vader.yaml),"Darth Vader v2; moves to OBJ_EVENT_PAL_TAG_NPC_4 (install sets paletteTag/paletteSlot)"
+graphics/object_events/pics/people/black_belt.png,art/graphics/object_events/pics/people/black_belt.png,sprite-walker-generator (art/black_belt.yaml),"Teras Kasi brawler: shaved head, topknot, green wrap; stays on NPC_3"
+graphics/object_events/pics/people/boy_1.png,art/graphics/object_events/pics/people/boy_1.png,sprite-walker-generator (art/boy_1.yaml),"Moisture-farm kid: goggles, tunic; stays on NPC_3"
+graphics/object_events/pics/people/boy_2.png,art/graphics/object_events/pics/people/boy_2.png,sprite-walker-generator (art/boy_2.yaml),"Spaceport kid: flight cap, orange jacket; moves to OBJ_EVENT_PAL_TAG_NPC_2 (install sets paletteTag/paletteSlot)"
+graphics/object_events/pics/people/boy_3.png,art/graphics/object_events/pics/people/boy_3.png,sprite-walker-generator (art/boy_3.yaml),"Market-town kid: cap, vest, toy blaster; stays on NPC_4"
+graphics/object_events/pics/people/bug_catcher.png,art/graphics/object_events/pics/people/bug_catcher.png,sprite-walker-generator (art/bug_catcher.yaml),"Kid with a short bug net; stays on NPC_1"
