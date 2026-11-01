@@ -1,6 +1,6 @@
 # intro_drops review captures (intro scene 1)
 
-## Round 1 (2026-11-01): awaiting review
+## Round 1 (2026-11-01): APPROVED, shipped ("perfect ship it!")
 
 Emerald's leaf drips, GAME FREAK logo and jungle pan become: condensation dripping off canyon rock into a
 shadowed pool before dawn, then the camera rises past the canyon walls, a boulder field and a dune crest to the
