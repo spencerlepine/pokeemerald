@@ -1,0 +1,47 @@
+{
+  "trainer": {
+    "stem": "pokemon_ranger_f",
+    "wiki_path": "graphics/trainers/front_pics/pokemon_ranger_f.png",
+    "sw_subject": "PATHFINDER (f) with a scout pack",
+    "subject": "female pathfinder",
+    "desc": "young woman scout, camouflage green poncho, big scout backpack, binoculars",
+    "theme": "factions",
+    "style": "",
+    "pose": "standing, facing left, three-quarter view",
+    "negative": "",
+    "pair": false
+  },
+  "lora": {
+    "id": 443092,
+    "name": "XL v1",
+    "baseModel": "SDXL 1.0",
+    "trainedWords": [],
+    "air": null,
+    "files": [
+      {
+        "name": "pk_trainer_xl_v1.safetensors",
+        "sizeKB": 445819.83984375,
+        "sha256": "078E09DA2A123964B7EB30DB23EC24D59FB082343F69C7FAF925C4C07E97023E"
+      }
+    ]
+  },
+  "checkpoint": "urn:air:sdxl:checkpoint:civitai:101055@128078",
+  "params": {
+    "prompt": "solo, (single character:1.2), (female pathfinder:1.3), young woman scout, camouflage green poncho, big scout backpack, binoculars, full body character sprite, standing, facing left, three-quarter view, pixel art, game sprite, crisp dark outlines, solid white background, simple background",
+    "negativePrompt": "poke ball, pokeball, holding ball, baseball cap, generic pokemon trainer, anime boy, scenery, detailed background, gradient background, floor, shadow, text, watermark, signature, frame, border, multiple characters, multiple views, character sheet, turnaround, duplicate, cropped, cut off feet, blurry, 3d, photo, realistic, painting, smooth shading",
+    "scheduler": "EulerA",
+    "steps": 25,
+    "cfgScale": 7.0,
+    "width": 768,
+    "height": 768,
+    "seed": 677759977,
+    "clipSkip": 2
+  },
+  "strength": 0.75,
+  "format": "jpeg",
+  "seed": 677759977,
+  "workflowId": "13596363-20261101093649192-k5p4",
+  "jobId": "1a9fe50f-88f1-4459-a36a-3c62a2ad27b7",
+  "cost": "3 green",
+  "generated": "20261101-093717"
+}
