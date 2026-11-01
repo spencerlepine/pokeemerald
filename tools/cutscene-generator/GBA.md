@@ -49,6 +49,8 @@ multiples, OBJ frames a legal sprite size, BG tile sets within budget.
 | `gba("graphics/.../trees.png", { bg: ["bg3", "bg2"], map: "graphics/.../trees_map.bin", pal })` | 4bpp tile sheet (128 px wide, deduplicated with flips, tile 0 blank) + text-mode tilemap with every listed 256x256 screen back to back | `palSlot` (BG palette number in the map entries, default 0), `tiles` (budget, default 512), `flips: false`, `blank: false`, `cols` |
 | `gba("graphics/.../brendan.png", { obj: ["kael_0", ...], pal })` | OBJ sheet: frames stacked vertically (an anim expands to its frames) | `cells` (below) |
 | `gba("graphics/intro/scene_1/bg.png", { bg: ["bg0", ...], slots: [3, ...], banks: { 3: B3, ... }, maps: ["…/bg0_map.bin", ...] })` | multi-palette BG: one shared tileset written as an 8-bit PNG (256-entry PLTE, pixel = bank * 16 + index, as gbagfx reads Emerald's scene 1 `bg.png`) + one map per screen, each screen drawn in its own bank | `tiles` (default 1024), `rows`, `flips`, `cols` |
+| `gba("graphics/intro/scene_3/groudon.png", { affine: "krayt", bank: 1, banks: B, map: "…/groudon.bin", mapBytes: 8192 })` | affine (rotate/zoom) BG: 8bpp tiles indexing the whole BG palette (pixel = bank * 16 + index), one-byte map entries, no flips, at most 256 tiles; the screen must be 128/256/512/1024 square | `pal` (the bank's colors), `tiles`, `rows`, `blank` |
+| `gba("graphics/intro/scene_3/bg.pal", { banks: B })` | a 256-color BG palette, 16 banks back to back (unlisted banks are black) | |
 | `gba("graphics/.../trees_small.png", { image: "scenery_small", pal })` | one image, any multiple of 8 | `cells` |
 | `gba("graphics/.../player.pal", { pal })` | JASC palette, CRLF, as the game's files | |
 

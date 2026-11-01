@@ -85,7 +85,7 @@ export interface Indexed { w: number; h: number; idx: Uint8Array }
 /** A 4bpp tile: 64 indices. */
 export type Tile = Uint8Array;
 
-function tileAt(im: Indexed, tx: number, ty: number): Tile {
+export function tileAt(im: Indexed, tx: number, ty: number): Tile {
   const t = new Uint8Array(64);
   for (let y = 0; y < 8; y++) for (let x = 0; x < 8; x++) t[y * 8 + x] = im.idx[(ty * 8 + y) * im.w + tx * 8 + x];
   return t;

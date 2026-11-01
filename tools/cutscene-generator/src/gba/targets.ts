@@ -9,7 +9,7 @@ import { Img } from "../core/image.ts";
 import type { GbaTarget, Project } from "../core/project.ts";
 import {
   encodeIndexed4, encodeIndexed8Banks, gbaColor, packCells, unpackCells, type Indexed, imageTiles, indexImage, mapBytes, newTileset, OBJ_SIZES, parsePal, readJasc,
-  readMap, renderIndexed, renderScreen, tileScreen, tilesImage, writeJasc,
+  readMap, renderIndexed, renderScreen, tileAt, tileScreen, tilesImage, writeJasc,
 } from "./gba.ts";
 import { decodePng } from "./pngread.ts";
 
@@ -113,7 +113,47 @@ function names(v: unknown): string[] {
 function runTarget(p: Project, t: GbaTarget, put: (path: string, d: Buffer | string) => void): string {
   const o = t.opts, what = `gba '${t.path}'`;
   const pal = o.banks !== undefined && o.pal === undefined ? ([] as Color[]) : pal16(t);
+  const bankList = (): Color[][] => {
+    const banks: Color[][] = Array.from({ length: 16 }, () => Array(16).fill(0));
+    for (const [k, v] of Object.entries((o.banks ?? {}) as Record<string, string[]>)) banks[Number(k)] = parsePal(v, `${what} bank ${k}`);
+    return banks;
+  };
   const used = (idx: Uint8Array[]) => { const s = new Set<number>(); for (const a of idx) for (const v of a) if (v) s.add(v); return s.size; };
+
+  if (t.path.endsWith(".pal") && o.banks !== undefined) {
+    // A full 256-color BG palette (16 banks back to back), e.g. intro scene 3's bg.pal.
+    const all = bankList().flat();
+    put(t.path, writeJasc(all));
+    return `${t.path}  palette, 256 colors (banks ${Object.keys(o.banks as object).join("/")})`;
+  }
+
+  if (o.affine !== undefined) {
+    // Affine (rotation/scaling) BG, 8bpp: tiles are 64 bytes and index the whole 256-color BG palette,
+    // the map is one byte per tile (no flips, no palette bits) and at most 256 tiles. The screen is
+    // drawn with one 16-color bank (`bank`, palette `pal` or `banks`); pixels are written as
+    // bank * 16 + index, the way Emerald's groudon.png / kyogre.png / pokeball.png hold them.
+    const n = names(o.affine)[0], img = p.image(n), slot = Number(o.bank ?? 0);
+    if (img.w !== img.h || ![128, 256, 512, 1024].includes(img.w)) throw new PxError(`${what}: an affine screen is 128, 256, 512 or 1024 square, got ${img.w}x${img.h}`);
+    const banks = bankList();
+    if (o.pal !== undefined) banks[slot] = pal;
+    const im = { w: img.w, h: img.h, idx: indexImage(img, banks[slot], `${what} screen '${n}' (bank ${slot})`) };
+    const ts = newTileset(o.blank !== false), side = img.w / 8;
+    const map = Buffer.alloc(Math.max(Number(o.mapBytes ?? 0), side * side));
+    for (let ty = 0; ty < side; ty++) for (let tx = 0; tx < side; tx++) {
+      const tile = tileAt(im, tx, ty), k = Buffer.from(tile).toString("latin1");
+      let i = ts.index.get(k);
+      if (i === undefined) { ts.tiles.push(tile); i = ts.tiles.length - 1; ts.index.set(k, i); }
+      map[ty * side + tx] = i;
+    }
+    const max = Number(o.tiles ?? 256);
+    if (ts.tiles.length > max) throw new PxError(`${what}: ${ts.tiles.length} unique tiles, an affine BG holds ${max}`);
+    const cols = 16, tiles = tilesImage(ts.tiles, cols);
+    const rows = Number(o.rows ?? 0);
+    if (rows) { const h = rows * 8, full = new Uint8Array(tiles.w * h); full.set(tiles.idx.subarray(0, Math.min(full.length, tiles.idx.length))); tiles.h = h; tiles.idx = full; }
+    put(t.path, encodeIndexed8Banks(tiles, Array(tiles.h / 8 * cols).fill(slot), cols, banks));
+    if (typeof o.map === "string") put(o.map, map);
+    return `${t.path}  affine 8bpp BG ${img.w}x${img.w}: ${ts.tiles.length} unique tiles in bank ${slot}, ${used([im.idx])} colors${typeof o.map === "string" ? `; map ${map.length} bytes` : ""}`;
+  }
 
   if (t.path.endsWith(".pal")) {
     put(t.path, writeJasc(pal));
