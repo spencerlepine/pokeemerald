@@ -1,13 +1,13 @@
 // Intro scene 1, redrawn for Star Wars: KYBER.
 // Emerald: water drops fall from jungle leaves into a dark pool, the GAME FREAK logo forms, then the
 //          camera pans up past bushes and tall grass to mountains, and a Flygon silhouette flies off.
-// Here:    condensation drips from a canyon overhang into a shadowed pool before dawn (no logo: the
-//          owner chose "just the drip"), then the camera rises past the canyon walls, boulders and a
+// Here:    dew drips off a desert succulent on the canyon rim into a shadowed spring pool before dawn (the GAME FREAK
+//          logo forms over it, as Emerald), then the camera rises past the canyon walls, boulders and a
 //          dune crest to the twin suns coming up over the Jundland flats, and a transport ship flies off.
 //
 // Layout follows the game exactly (src/intro.c, Task_Scene1_Load / Task_Scene1_PanUp):
 //   one tileset (bg.png, 8-bit PNG holding 16 BG palettes) + one map per BG, 256x256 each:
-//   BG0 bg0_map.bin bank 3  front: overhangs on top, dark floor rim at rows 175+   VOFS 40 -> -218 (0.75 px/frame)
+//   BG0 bg0_map.bin bank 4  front: the near rim and a desert succulent on top, dark floor rim at rows 175+   VOFS 40 -> -218 (0.75 px/frame)
 //   BG1 bg1_map.bin bank 3  canyon walls on top, the dark pool basin below row 110  VOFS 24 -> -148 (0.5 px/frame)
 //   BG2 bg2_map.bin bank 2  dune crest at rows 25-50, boulders below               VOFS 80 -> -49  (0.375 px/frame)
 //   BG3 bg3_map.bin bank 5  dawn sky, suns, mesas, the flats                         VOFS 0 (static)
@@ -281,27 +281,63 @@ scene("bg1", { w: 256, h: 256 }, (c) => {
   for (let x = 12; x < 244; x++) for (let y = 120; y < 152; y++) if (!shore(x, y) && shore(x, y + 1) && y < 140) { c.px(x, y, 7); c.px(x, y - 1, 5); break }
 })
 
-// ------------------------------------------------------------------ BG0: overhangs and the floor rim
+// ------------------------------------------------------------------ BG0: the near rim and a desert succulent (bank 4)
+// The drip comes from a tough agave-like plant growing on the canyon rim beside the spring: the night's dew
+// runs down its long leaf to the tip over the pool, as Emerald's leaf (owner's pick over a vaporator drain pipe,
+// 2026-11-01; the first version was a rock overhang that read as a brown leaf).
 
-const LOBE_L = [0, 6, 12, 1, 28, 4, 46, 0, 66, 5, 84, 11, 96, 19, 92, 26, 76, 30, 62, 33, 52, 37, 44, 35, 34, 40, 18, 46, 0, 52]
-// The right lobe's underside is the big drop's path (traced from the ROM: it slides from (236,-14) down
-// to hang at screen (120,41), i.e. bg0 row 81 at the start VOFS of 40), so the drop runs along the rock.
-const LOBE_R = [150, 12, 166, 3, 190, 0, 214, 4, 236, 0, 256, 2, 256, 30, 240, 33, 222, 39, 204, 45, 187, 49, 172, 51, 160, 53,
-  150, 56, 142, 59, 135, 62, 130, 65, 125, 70, 122, 76, 120, 80, 118, 76, 117, 68, 121, 58, 128, 48, 136, 38, 142, 28]
-scene("bg0", { w: 256, h: 256 }, (c) => {
-  const lobe = (x, y) => x >= 0 && x < 256 && y >= 0 && (inPoly(LOBE_L, x + 0.5, y + 0.5) || inPoly(LOBE_R, x + 0.5, y + 0.5))
-  shadeMass(c, 256, 100, lobe, [10, 8, 7, 6, 5, 5, 4, 4, 4, 4, 4], 3, 3)
-  // drip tips: short stone teeth at x 48 (row 40, drop 1) and x 196 (row 50, drop 2), wet highlights
-  for (const [x, y0, y1] of [[48, 34, 40], [196, 44, 50]]) {
-    for (let y = y0; y <= y1; y++) { c.px(x, y, 4); if (y < y1 - 3) c.px(x + 1, y, 3) }
-    c.px(x, y1 + 1, 13); c.px(x - 1, y0 + 2, 6)
+// The big drop's traced slide path in bg0 pixels (right to left), ending where it hangs at (120,81).
+const U = [[262, 28], [256, 30], [240, 33], [222, 39], [204, 45], [187, 49], [172, 51], [160, 53], [150, 56], [142, 59],
+  [135, 62], [130, 65], [125, 70], [122, 76], [120, 80]]
+// Resample a polyline every 0.5 px, with arc length and the unit normal pointing up-right (the object side).
+function samples(pts) {
+  const out = []; let s = 0
+  for (let i = 0; i + 1 < pts.length; i++) {
+    const [x0, y0] = pts[i], [x1, y1] = pts[i + 1], len = Math.hypot(x1 - x0, y1 - y0)
+    let nx = -(y1 - y0) / len, ny = (x1 - x0) / len
+    if (nx - ny < 0) { nx = -nx; ny = -ny }
+    for (let k = 0; k < len; k += 0.5) out.push({ x: x0 + (x1 - x0) * k / len, y: y0 + (y1 - y0) * k / len, nx, ny, s: s + k })
+    s += len
   }
-  // cracks and pits in the lobes
+  const [lx, ly] = pts[pts.length - 1], p = out[out.length - 1]
+  out.push({ x: lx, y: ly, nx: p.nx, ny: p.ny, s })
+  for (const q of out) q.t = q.s / s
+  return out
+}
+const LX = -0.6, LY = -0.8 // dawn light from the upper left
+// A body of varying width along a path: width(t) from base (t=0) to tip (t=1). side: 0 = centred on the
+// path, 1 = the path is the body's underside (it grows toward the up-right normal).
+// paint(x, y, u, v, q): u = lit amount -1..1 across the body, v = signed offset (-1 underside .. 1 top).
+function body(c, pts, width, side, paint, box = [0, 0, 256, 120]) {
+  const S = samples(pts).map((q) => {
+    const w = width(q.t), o = side ? w / 2 : 0
+    return { ...q, w, cx: q.x + q.nx * o, cy: q.y + q.ny * o }
+  })
+  for (let y = box[1]; y < box[3]; y++) for (let x = box[0]; x < box[2]; x++) {
+    let best = null, br = 1e9
+    for (const q of S) {
+      if (q.w <= 0.2) continue
+      const dx = x + 0.5 - q.cx, dy = y + 0.5 - q.cy, r = Math.hypot(dx, dy) / (q.w / 2)
+      if (r < br) { br = r; best = { q, dx, dy } }
+    }
+    if (!best || br > 1) continue
+    const { q, dx, dy } = best, h = q.w / 2
+    paint(x, y, (dx * LX + dy * LY) / h, (dx * q.nx + dy * q.ny) / h, q, br)
+  }
+}
+// rock shelves on the canyon's near rim: flat sunlit tops, dark undersides
+function shelf(c, poly, ramp, under) {
+  const m = (x, y) => x >= 0 && x < 256 && y >= 0 && inPoly(poly, x + 0.5, y + 0.5)
+  shadeMass(c, 256, 100, m, ramp, under, 7)
+  for (let x = 0; x < 256; x++) for (let y = 0; y < 100; y++) if (m(x, y) && !m(x, y - 1)) { c.px(x, y, (x % 7) ? 9 : 8); c.px(x, y + 1, 8); break }
+  return m
+}
+const SHELF_L = [0, 18, 20, 17, 40, 19, 54, 22, 62, 27, 58, 31, 52, 35, 44, 36, 34, 37, 20, 39, 8, 40, 0, 42]
+const SHELF_R = [184, 36, 189, 29, 198, 25, 212, 23, 226, 22, 242, 23, 256, 21, 256, 32, 244, 34, 230, 37, 216, 41, 204, 42, 193, 41]
+const ROCK = [9, 8, 7, 6, 6, 5, 5, 4, 4]
+
+function floorRim(c) {
   const r = c.rng(21)
-  for (let i = 0; i < 40; i++) {
-    const x = Math.floor(r() * 256), y = 4 + Math.floor(r() * 70)
-    if (lobe(x, y) && lobe(x + 2, y + 2) && c.is(x, y, "4567")) { c.px(x, y, 14); c.px(x + 1, y + 1, 14); if (r() < 0.5) c.px(x + 2, y + 1, 3) }
-  }
   // floor rim: a row of dark foreground rocks, rounded tops caught by the faintest light
   const lumps = []
   for (let x = -10; x < 270; x += 16 + Math.floor(r() * 18)) lumps.push([x, 12 + Math.floor(r() * 10), 186 + Math.floor(r() * 10)])
@@ -320,6 +356,48 @@ scene("bg0", { w: 256, h: 256 }, (c) => {
   }
   // seams between the lumps
   for (const [lx] of lumps) for (let y = floorTop(lx + 1); y < floorTop(lx + 1) + 10; y++) if (floor(lx, y)) c.px(lx, y, 1)
+}
+
+// Bank 4: 1-9 the canyon rock (= bank 3), 10-15 a dusty sage green.
+const PB = ["#000000", "#100818", "#181828", "#282038", "#383048", "#504058", "#705060", "#906068", "#b07870", "#d09880",
+  "#202820", "#384838", "#506048", "#688058", "#90a070", "#c0c890"]
+use(PB)
+scene("bg0", { w: 256, h: 256 }, (c) => {
+  // a thick fleshy leaf, agave-like: dark underside, lit top face, pale lit edge, small spines on the rim
+  const leaf = (x, y, u, v, q, r) => {
+    let k = r > 0.82 ? 10 : v < -0.4 ? (u > 0.3 ? 12 : 11) : u > 0.55 ? 15 : u > 0.15 ? 14 : u > -0.25 ? ((x + y) % 2 ? 14 : 13) : u > -0.6 ? 13 : 12
+    if (r > 0.82 && v > 0.3 && u > 0.2) k = 14
+    c.px(x, y, k)
+  }
+  // width along a leaf: full at the base, tapering to a solid 2 px point at the tip
+  const blade = (wmax, curve) => (t) => t > 0.995 ? 0 : Math.max(1.8, wmax * Math.pow(1 - t, curve) * Math.min(1, t * 5 + 0.45))
+  // agave teeth: small dark hooks along the top edge (never the underside, where the drop runs)
+  const spines = (pts, width, every) => {
+    for (const q of samples(pts)) {
+      if (q.t < 0.12 || q.t > 0.85 || Math.round(q.s * 2) % (every * 2)) continue
+      const w = width(q.t) + 0.6, x = Math.round(q.x + q.nx * w), y = Math.round(q.y + q.ny * w)
+      c.px(x, y, 10); c.px(Math.round(x + q.nx - 0.8), Math.round(y + q.ny), 10)
+    }
+  }
+  // the plant on the right rim: back leaves first, then the long leaf reaching over the pool
+  body(c, [[224, 25], [218, 12], [210, 2]], blade(11, 0.9), 0, leaf, [196, 0, 236, 32])
+  body(c, [[232, 25], [242, 13], [252, 4]], blade(11, 0.9), 0, leaf, [220, 0, 256, 32])
+  body(c, [[222, 27], [204, 18], [188, 14], [176, 15]], blade(11, 1), 0, leaf, [166, 6, 232, 36])
+  shelf(c, SHELF_R, ROCK, 3)
+  // the long leaf: its underside is the drop's path, from the rosette down to the tip at (120, 80)
+  const L = [[238, 24], [224, 31], ...U.slice(4)], LW = blade(16, 1.05)
+  body(c, L, LW, 1, leaf, [110, 8, 252, 84])
+  spines(L, LW, 11)
+  // drop 2 falls from a spine on the long leaf's edge at (196, 50)
+  for (let y = 46; y <= 49; y++) c.px(196, y, y < 48 ? 11 : 10)
+  c.px(196, 50, 15)
+  // a smaller plant on the left rim, one leaf drooping to (48, 40)
+  body(c, [[16, 21], [10, 9], [4, 2]], blade(9, 0.9), 0, leaf, [0, 0, 30, 30])
+  body(c, [[24, 21], [34, 9], [44, 3]], blade(9, 0.9), 0, leaf, [12, 0, 54, 30])
+  shelf(c, SHELF_L, ROCK, 3)
+  body(c, [[20, 25], [32, 26], [42, 31], [48, 40]], blade(10, 1), 1, leaf, [12, 14, 60, 46])
+  c.px(48, 41, 15)
+  floorRim(c)
 })
 
 // ------------------------------------------------------------------ OBJ: the ship (flygon.png)
@@ -363,7 +441,7 @@ sprite("ship", { w: 64, h: 32, mx: true }, `
 // ------------------------------------------------------------------ game files
 
 gba(D + "bg.png", {
-  bg: ["bg0", "bg1", "bg2", "bg3"], slots: [3, 3, 2, 5], banks: { 2: B2, 3: B3, 5: B5 },
+  bg: ["bg0", "bg1", "bg2", "bg3"], slots: [4, 3, 2, 5], banks: { 2: B2, 3: B3, 4: PB, 5: B5 },
   maps: [D + "bg0_map.bin", D + "bg1_map.bin", D + "bg2_map.bin", D + "bg3_map.bin"],
 })
 gba(D + "flygon.png", { image: "ship", pal: SHIP })

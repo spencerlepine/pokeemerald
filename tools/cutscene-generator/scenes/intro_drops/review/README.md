@@ -14,3 +14,16 @@ twin suns over the flats, and a transport ship flies off. No logo (owner's call:
 Code changes in `game/src/intro.c`: the GAME FREAK logo sprites and their blend tasks are gone; drop 2 now falls
 from the rock tooth at (196, 10) instead of (200, 60). The drops and ripples are recolored (drops.pal) from leaf
 green to clear blue. The big drop's slide path was traced from the ROM and the right overhang follows it.
+
+## Round 2 (2026-11-01): the drip source redrawn as a desert succulent
+
+Owner: the rock overhang read as a brown leaf, which makes no sense in a desert ("we need to actually draw
+something that makes logical sense"). Two mockups (`round2_mockups.png`): A, a moisture vaporator's drain pipe
+from a farm on the rim, and B, a desert succulent on the rim beside the spring. The owner picked B.
+
+- BG0 now uses its own palette bank 4 (canyon rock 1-9 as bank 3, sage greens 10-15): flat-topped rim ledges at
+  both edges, an agave-like plant on each, and the right plant's long leaf follows the big drop's traced path
+  down to the tip at (120, 80). Drop 1 falls from the left plant's drooping leaf at (48, 40), drop 2 from a
+  leaf tooth at (196, 50).
+- The GAME FREAK logo is back (owner: "restore the game freak logo during the transition, we should just keep it").
+- `round2_succulent_rom.gif` (frames 250-1300 every 3rd, real speed) and `round2_succulent_sheet.png`.
