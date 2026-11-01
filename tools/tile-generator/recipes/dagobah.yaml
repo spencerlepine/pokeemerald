@@ -1,0 +1,28 @@
+# Prototype: Dagobah swamp (Sootopolis basin, routes 126-130). Palette only.
+name: dagobah
+notes: Murky, low-contrast, grey-green. Ground -> bog moss; canopies -> gnarl-tree olive grey; dirt -> mud; stone -> mossy grey; water -> opaque swamp green.
+rules:
+  - name: ground-bog
+    match: {hue: [148, 182], chroma_min: 15}
+    set:   {hue: 120, chroma: 18, light: -20}
+  - name: canopy-gnarl
+    match: {hue: [112, 147], chroma_min: 30}
+    set:   {hue: 110, chroma_scale: 0.45, light: -14}
+  - name: pale-grass
+    match: {hue: [100, 147], chroma_min: 12, chroma_max: 30}
+    set:   {hue: 115, chroma_scale: 0.7, light: -14}
+  - name: dirt-mud
+    match: {hue: [10, 80], chroma_min: 20, chroma_max: 38, light_max: 72}
+    set:   {hue: 70, chroma_scale: 0.6, light: -16}
+  - name: sand-silt
+    match: {hue: [70, 110], chroma_min: 30, light_min: 60}
+    set:   {hue: 95, chroma_scale: 0.45, light: -18}
+  - name: rock-mud                     # pink cliff rock -> dark peat
+    match: {hue: [350, 60], chroma_min: 8}
+    set:   {hue: 75, chroma_scale: 0.55, light: -22}
+  - name: stone-moss                   # white Sootopolis stone -> mossy grey-green
+    match: {chroma_max: 12, light_min: 30}
+    set:   {hue: 120, chroma: 9, light_scale: 0.8, light: -14}
+  - name: water-swamp
+    match: {hue: [200, 300], chroma_min: 25}
+    set:   {hue: 150, chroma_scale: 0.5, light: -20}

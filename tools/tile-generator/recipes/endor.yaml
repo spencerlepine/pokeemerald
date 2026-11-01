@@ -1,0 +1,22 @@
+# Prototype: Endor forest moon (Fortree -> Bright Tree, routes 118-121). Palette only.
+name: endor
+notes: Deep cool forest. Ground -> dark moss; canopies -> deep blue-green; dirt -> rich redwood-brown loam; wood (fortree huts) -> redwood bark; water -> dark forest stream.
+rules:
+  - name: ground-moss
+    match: {hue: [148, 182], chroma_min: 15}
+    set:   {hue: 140, chroma: 28, light: -16}
+  - name: canopy-deep
+    match: {hue: [112, 147], chroma_min: 30}
+    set:   {hue: 150, chroma_scale: 0.8, light: -12}
+  - name: pale-grass
+    match: {hue: [100, 147], chroma_min: 12, chroma_max: 30}
+    set:   {hue: 135, chroma_scale: 1.0, light: -10}
+  - name: dirt-loam
+    match: {hue: [10, 80], chroma_min: 20, chroma_max: 38, light_max: 72}
+    set:   {hue: 40, chroma_scale: 1.05, light: -12}
+  - name: wood-redwood
+    match: {hue: [70, 110], chroma_min: 30, light_min: 60}
+    set:   {hue: 50, chroma_scale: 0.9, light: -14}
+  - name: water-stream
+    match: {hue: [245, 300], chroma_min: 30}
+    set:   {hue_shift: -40, chroma_scale: 0.6, light: -14}

@@ -1,0 +1,22 @@
+# Prototype: Kamino ocean world (Pacifidlog -> Tipoca City, routes 131-134). Palette only.
+name: kamino
+notes: Storm-grey ocean, white-grey platforms. Ground -> wet grey deck; canopies -> grey kelp; water -> dark slate storm sea; wood (log bridges) -> pale durasteel.
+rules:
+  - name: ground-deck
+    match: {hue: [148, 182], chroma_min: 15}
+    set:   {hue: 230, chroma: 6, light: -6}
+  - name: canopy-kelp
+    match: {hue: [112, 147], chroma_min: 30}
+    set:   {hue: 190, chroma_scale: 0.3, light: -10}
+  - name: pale-grass
+    match: {hue: [100, 147], chroma_min: 12, chroma_max: 30}
+    set:   {hue: 220, chroma_scale: 0.3}
+  - name: wood-durasteel
+    match: {hue: [70, 110], chroma_min: 20, light_min: 40}
+    set:   {hue: 235, chroma_scale: 0.2, light: +6}
+  - name: rock-slate                   # pink/brown cliff rock -> wet slate
+    match: {hue: [330, 70], chroma_min: 8}
+    set:   {hue: 235, chroma_scale: 0.2, light: +6}
+  - name: water-storm
+    match: {hue: [200, 300], chroma_min: 25}
+    set:   {hue: 240, chroma_scale: 0.4, light: -18}

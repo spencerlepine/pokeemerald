@@ -62,3 +62,14 @@ line under walls, plus the lit "mat" cell in front of doors.
 Everything a tile shows must come from one bank: a building uses the secondary tileset's banks (6-12),
 3-4 materials each; the ground primary (0-5) is shared by every town on the planet. A new planet gets its
 own primary recolour (stage 1 recipe) and each town a secondary.
+
+## 8. Lessons from the prototypes
+
+- **Hand-authored stamps lose to vanilla shapes.** Three tries at a new 16x16 tall-grass tuft for Tatooine
+  (sparse tufts, offset bushes, a dense grid) all read as noise or mushrooms next to the recoloured vanilla
+  tall grass, which already reads as dry scrub. Rule: keep vanilla's drawn shapes wherever the brief allows and
+  change them through the palette (and index remaps); only redraw what has no vanilla counterpart.
+- **Recipes need a stone rule.** Achromatic stone (Sootopolis white, cave greys) and low-chroma pink cliff rock
+  are untouched by hue rules; every planet recipe needs explicit `chroma_max` stone and `hue: [330, 70]` rock rules.
+- Recolouring the shared primary also recolours the Pokémon Center / Mart roofs that live in it. Those become
+  Bacta Center / supply depot assets later, so this is tolerated during prototyping.
