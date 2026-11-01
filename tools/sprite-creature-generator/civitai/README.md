@@ -6,8 +6,9 @@ set up for the creature LoRA [Pokemon Sprite PixelArt 768](https://civitai.com/m
 (model 161280, SD 1.5, version **v2.1-beta** `273148` by default) on DreamShaper 8, paid for in Buzz.
 
 **Status:** first creature shipped 2026-11-01: MASSIFF (`poochyena`), round 2 pick A (denoise 0.40), approved by
-the owner. Front, back and `normal.pal` are in the wiki at `wiki/art/graphics/pokemon/poochyena/` and marked
-ART_READY; not copied into `game/` yet. Frame 2 (`anim_front.png`) and `shiny.pal` are still to make.
+the owner. `front.png`, `anim_front.png`, `back.png`, `normal.pal` and `shiny.pal` are in the wiki at
+`wiki/art/graphics/pokemon/poochyena/` and marked ART_READY; not copied into `game/` yet. Battle placement
+data (README rows 6-8) is still to build.
 
 ## Setup
 
@@ -24,6 +25,8 @@ python civitai_creature.py run poochyena --whatif      # price front + back, spe
 python civitai_creature.py run poochyena               # front, then back from the mirrored front, then finish
 python civitai_creature.py gen poochyena --view back --init runs/poochyena/raw/<front>.png --flip --denoise 0.65
 python civitai_creature.py finish runs/poochyena/raw/<front>.png runs/poochyena/raw/<back>.png --out runs/poochyena/finished/pick1
+python civitai_creature.py finish <front raw> <back raw> --frame2 lunge --shiny --species poochyena --out runs/poochyena/finished/final
+python civitai_creature.py gen poochyena --view frame2 --init <front raw> --denoise 0.5   # model-drawn frame 2 (optional)
 ```
 
 `<species>` is the folder in `game/graphics/pokemon/`. The brief (Star Wars name, first sentence of the
@@ -93,7 +96,23 @@ creature. Round 2 started from `prep` of the Wookieepedia Massiff render instead
 All fronts read back 1:1 at 60x43 (the vanilla median is 48x48), 15 colours, and pass `check`.
 Defaults now: denoise 0.45 and CFG 5 when there is an input image, back denoise 0.7.
 
+## Frame 2 and shiny (2026-11-01, 5 Buzz)
+
+- `anim_front.png` is 64x128: frame 1 = `front.png`, frame 2 below it, one palette. `finish --frame2 lunge`
+  makes frame 2 from the front itself: the body above the hips leans forward (up to 3 px at the head)
+  and dips 1 px, legs stay planted. No Buzz, no shimmer. `--frame2 <raw>` takes a model-drawn frame
+  instead (`gen --view frame2 --init <front raw>`, jobs.json `frame2` adds the action to the prompt),
+  aligned to the front by best overlap. For MASSIFF two model frames at denoise 0.5 kept the pose and
+  redrew the texture (61-62% of pixels changed, mostly noise; one added red splotches), so they would
+  flicker in battle; the lunge was shipped.
+- `shiny.pal`: `finish --shiny` recolours `normal.pal` entry by entry (same indices): hue rotated, greys,
+  near-black outlines and the most saturated accents (eyes, mouth) kept. jobs.json `shiny`
+  (`hue` degrees, `sat`, `val`); default hue 180. MASSIFF uses hue 30, saturation 1.4: a sand-gold desert
+  variant. `shiny_compare_4x.png` shows normal and shiny side by side.
+
 ## Not done yet
+
+- Battle placement data (README rows 6-8): `y_offset`, elevation, front animation preset, Datapad scale.
 
 - A true from-behind back: neither text nor image to image from the front gives one yet. Options:
   a back reference image through `prep` (any rear-ish still), or ControlNet from a hand-made back

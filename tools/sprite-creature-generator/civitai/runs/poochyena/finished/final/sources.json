@@ -1,0 +1,9 @@
+{
+  "front": "tools/sprite-creature-generator/civitai/runs/poochyena/raw/20261101-081924_front_s1112.png",
+  "back": "tools/sprite-creature-generator/civitai/runs/poochyena/raw/20261101-082022_back_s2222.png",
+  "frame2": "lunge",
+  "shiny": {
+    "hue": 30,
+    "sat": 1.4
+  }
+}

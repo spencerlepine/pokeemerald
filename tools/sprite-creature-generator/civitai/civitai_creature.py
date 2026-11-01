@@ -72,6 +72,9 @@ NEGATIVE = ("human, person, trainer, multiple creatures, two creatures, text, wa
             "frame, border, scenery, detailed background, gradient background, ground, shadow, "
             "cropped, cut off, blurry, 3d, photo, realistic, painting, smooth shading")
 BACK_NEGATIVE = "face, eyes, front view, facing viewer, "
+# Frame 2 of anim_front.png: vanilla's changes a median 72% of pixels (a real pose change: mouth open,
+# limbs moved), so it is image to image from the picked front with an action added to the pose.
+FRAME2 = "mouth wide open, roaring, lunging forward"
 
 # The LoRA's own type tags (from the model page); other types fall back to plain words.
 LORA_TYPES = {"grass", "fire", "flying", "dark", "bug", "ghost", "water", "electric", "psychic",
@@ -180,14 +183,16 @@ def brief(species: str) -> dict:
             "style": job.get("style", "gen3"), "pose": job.get("pose", POSE),
             "negative": job.get("negative", ""), "init": job.get("init"),
             "control": job.get("control"), "denoise": job.get("denoise"),
-            "flip": job.get("flip", False)}
+            "flip": job.get("flip", False), "frame2": job.get("frame2", FRAME2),
+            "shiny": job.get("shiny", {})}
 
 
 def build_prompt(b: dict, view: str) -> str:
     types = "".join(f"{t}type, " if t in LORA_TYPES else f"{t} type, " for t in b["types"])
     p = PROMPT.format(style=b["style"], view=BACK_TAGS if view == "back" else "", types=types,
                       subject=b["subject"], desc=b["desc"].rstrip("."),
-                      pose="seen from behind" if view == "back" else b["pose"],
+                      pose="seen from behind" if view == "back" else
+                      f"{b['pose']}, {b['frame2']}" if view == "frame2" else b["pose"],
                       colour=f", mostly {b['colour']}" if b["colour"] else "")
     return ", ".join(s.strip() for s in p.split(",") if s.strip())
 
@@ -241,6 +246,8 @@ def cmd_gen(args) -> list[Path]:
     seed = args.seed if args.seed is not None else random.randrange(1, 2**31 - 1)
     lora_air = v.get("air") or f"urn:air:{fam}:lora:civitai:{LORA_MODEL_ID}@{v['id']}"
     init = args.init or (b["init"] if args.view == "front" else None)
+    if args.view == "frame2" and not init:
+        sys.exit("--view frame2 needs --init <the picked front's raw .png>")
     if args.cfg is None:
         args.cfg = 5.0 if init else 7.0
     params = {"prompt": prompt, "negativePrompt": negative,
@@ -500,32 +507,148 @@ def prepare(raw: Path, fit: str, period: int | None) -> tuple[Image.Image, Image
     return place(sprite), fig, f"grid {p}px -> native {nat.width}, figure {fig.width}x{fig.height}, {how}"
 
 
-def finish(front_raw: Path, back_raw: Path | None, fit: str, period: int | None, out: Path | None) -> Path:
-    stamp = front_raw.stem.split("_")[0]
+def _enforce(rgba: Path, final: Path, pal: Path, own: bool) -> int:
+    if own:  # the front owns the bank: 15 colours + transparent
+        _run([sys.executable, "-m", "gba_palette", "enforce", str(rgba), str(final), "--bpp", "4",
+              "--colours", "15", "--write-pal", str(pal)])
+    else:  # back and frame 2 use the same bank (one palette per species in the game)
+        _run([sys.executable, "-m", "gba_palette", "enforce", str(rgba), str(final), "--bpp", "4",
+              "--pal", str(pal)])
+    return _run([sys.executable, "-m", "gba_palette", "check", str(final), "--pal", str(pal)], check=False)
+
+
+def align_to(cell: Image.Image, ref: Image.Image, reach: int = 6) -> tuple[Image.Image, tuple[int, int]]:
+    """Shift frame 2 so its body sits where the front's does (best alpha overlap), as vanilla does."""
+    a, r = np.array(cell)[..., 3] > 0, np.array(ref)[..., 3] > 0
+    best, at = -1, (0, 0)
+    for dy in range(-reach, reach + 1):
+        for dx in range(-reach, reach + 1):
+            sh = np.roll(np.roll(a, dy, 0), dx, 1)
+            score = (sh & r).sum() - 0.5 * (sh ^ r).sum()
+            if score > best:
+                best, at = score, (dx, dy)
+    out = Image.new("RGBA", cell.size, (0, 0, 0, 0))
+    out.paste(cell, at, cell)  # paste clips negative offsets
+    return out, at
+
+
+def lunge(front: Path, dst: Path, reach: int = 3, hip: float = 0.62) -> Path:
+    """Frame 2 without a model: the body above the hips leans forward (towards the left, the way
+    fronts face) and dips 1 px, up to `reach` px at the head; legs and feet stay planted. Same
+    pixels and palette as the front, so the two frames alternate without shimmer. Owner pick for
+    MASSIFF (2026-11-01) over image-to-image frames, which redrew the texture and flickered."""
+    f = Image.open(front)
+    a = np.array(f)
+    ys = np.nonzero(a)[0]
+    top, bot = ys.min(), ys.max()
+    legs = top + int((bot - top) * hip)
+    out = np.zeros_like(a)
+    for y in range(a.shape[0]):
+        if y >= legs:
+            dx, dy = 0, 0
+        else:
+            dx, dy = -int(round(1 + (reach - 1) * (legs - y) / max(1, legs - top))), 1
+        if y + dy >= a.shape[0]:
+            continue
+        row = np.roll(a[y], dx)
+        if dx < 0:
+            row[dx:] = 0
+        out[y + dy][row > 0] = row[row > 0]
+    gy = np.arange(a.shape[0])[:, None]
+    seam = (out == 0) & (a > 0) & (gy >= legs - 1) & (gy <= legs + 1)  # close the hip seam
+    out[seam] = a[seam]
+    im = Image.fromarray(out, "P")
+    im.putpalette(f.getpalette())
+    im.save(dst)
+    return dst
+
+
+def stack_anim(front: Path, frame2: Path, dst: Path, pal: Path) -> int:
+    """anim_front.png: 64x128, frame 1 = front.png, frame 2 below, one indexed palette."""
+    f1, f2 = Image.open(front), Image.open(frame2)
+    a = np.vstack([np.array(f1), np.array(f2)])
+    im = Image.fromarray(a.astype(np.uint8), "P")
+    im.putpalette(f1.getpalette())
+    im.save(dst)
+    return _run([sys.executable, "-m", "gba_palette", "check", str(dst), "--pal", str(pal)], check=False)
+
+
+def write_shiny(normal: Path, dst: Path, hue: float = 180, sat: float = 1.0, val: float = 1.0,
+                keep_sat: float = 0.8) -> Path:
+    """shiny.pal: same indices as normal.pal, colours recoloured. Hue is rotated (degrees) on the body
+    colours; greys (s < 0.08), near-black outlines and the most saturated accents (eyes, mouth, s >=
+    keep_sat) keep their colour, as vanilla shinies keep eyes and outlines. Values snap to GBA steps."""
+    import colorsys
+    pal = _jasc(normal)
+    out = [pal[0]]
+    for r, g, b in pal[1:]:
+        h, s_, v = colorsys.rgb_to_hsv(r / 255, g / 255, b / 255)
+        if s_ < 0.08 or v < 0.12 or s_ >= keep_sat:
+            out.append((r, g, b))
+            continue
+        rgb = colorsys.hsv_to_rgb((h + hue / 360) % 1, min(1, s_ * sat), min(1, v * val))
+        out.append(tuple(min(248, int(round(c * 255 / 8)) * 8) for c in rgb))
+    dst.write_text("JASC-PAL\r\n0100\r\n16\r\n" + "".join(f"{r} {g} {b}\r\n" for r, g, b in out))
+    return dst
+
+
+def _with_pal(png: Path, pal: Path) -> Image.Image:
+    im = Image.open(png).copy()
+    im.putpalette([c for rgb in _jasc(pal) for c in rgb])
+    a = np.array(im.convert("RGBA"))
+    a[np.array(Image.open(png)) == 0, 3] = 0
+    return Image.fromarray(a, "RGBA")
+
+
+def finish(front_raw: Path, back_raw: Path | None, fit: str, period: int | None, out: Path | None,
+           frame2_raw: Path | None = None, shiny: dict | None = None) -> Path:
     out_dir = out or front_raw.parent.parent / "finished" / f"{front_raw.stem}"
     out_dir.mkdir(parents=True, exist_ok=True)
     pal = out_dir / "normal.pal"
-    results = {}
-    for view, raw in (("front", front_raw), ("back", back_raw)):
+    results, cells = {}, {}
+    use_lunge = str(frame2_raw) == "lunge"
+    for view, raw in (("front", front_raw), ("back", back_raw), ("frame2", None if use_lunge else frame2_raw)):
         if raw is None:
             continue
         cell, fig, how = prepare(raw, fit, period)
+        if view == "frame2":
+            cell, at = align_to(cell, cells["front"])
+            how += f", aligned to the front by {at}"
+        cells[view] = cell
         fig.save(out_dir / f"{view}_native.png")
         rgba = out_dir / f"{view}_rgba.png"
         cell.save(rgba)
         final = out_dir / f"{view}.png"
-        if view == "front":  # the front owns the bank: 15 colours + transparent
-            _run([sys.executable, "-m", "gba_palette", "enforce", str(rgba), str(final), "--bpp", "4",
-                  "--colours", "15", "--write-pal", str(pal)])
-        else:  # the back must use the same bank (one palette per species in the game)
-            _run([sys.executable, "-m", "gba_palette", "enforce", str(rgba), str(final), "--bpp", "4",
-                  "--pal", str(pal)])
-        ok = _run([sys.executable, "-m", "gba_palette", "check", str(final), "--pal", str(pal)], check=False)
+        ok = _enforce(rgba, final, pal, own=view == "front")
         Image.open(final).convert("RGBA").resize((256, 256), Image.NEAREST).save(out_dir / f"{view}_4x.png")
         results[view] = final
-        print(f"{view:<5} {raw.name}: {how}; {'PASS' if ok == 0 else 'FAIL'} -> {rel(final)}")
-    (out_dir / "sources.json").write_text(json.dumps(
-        {k: rel(v) for k, v in (("front", front_raw), ("back", back_raw)) if v}, indent=2) + "\n")
+        print(f"{view:<6} {raw.name}: {how}; {'PASS' if ok == 0 else 'FAIL'} -> {rel(final)}")
+    if use_lunge:
+        results["frame2"] = lunge(results["front"], out_dir / "frame2.png")
+        ok = _run([sys.executable, "-m", "gba_palette", "check", str(results["frame2"]), "--pal", str(pal)], check=False)
+        print(f"frame2 lunge from the front; {'PASS' if ok == 0 else 'FAIL'} -> {rel(results['frame2'])}")
+    if "frame2" in results:
+        anim = out_dir / "anim_front.png"
+        ok = stack_anim(results["front"], results["frame2"], anim, pal)
+        f1, f2 = np.array(Image.open(results["front"])), np.array(Image.open(results["frame2"]))
+        change = ((f1 != f2) & ((f1 > 0) | (f2 > 0))).sum() / max(1, ((f1 > 0) | (f2 > 0)).sum())
+        print(f"anim   frame 2 changes {change:.0%} of the figure (vanilla median 72%); "
+              f"{'PASS' if ok == 0 else 'FAIL'} -> {rel(anim)}")
+        frames = [Image.open(results[v]).convert("RGBA").resize((192, 192), Image.NEAREST) for v in ("front", "frame2")]
+        frames[0].save(out_dir / "anim_front_3x.gif", save_all=True, append_images=frames[1:],
+                       duration=[400, 400], loop=0, disposal=2)
+    if shiny is not None:
+        sp = write_shiny(pal, out_dir / "shiny.pal", **shiny)
+        ok = _run([sys.executable, "-m", "gba_palette", "check", str(sp)], check=False)
+        row = [_with_pal(results[v], p) for v in ("front", "back") if v in results for p in (pal, sp)]
+        sheet = Image.new("RGBA", (64 * len(row), 64), (255, 255, 255, 255))
+        for i, im in enumerate(row):
+            sheet.alpha_composite(im, (64 * i, 0))
+        sheet.resize((sheet.width * 4, 256), Image.NEAREST).save(out_dir / "shiny_compare_4x.png")
+        print(f"shiny  {shiny}; {'PASS' if ok == 0 else 'FAIL'} -> {rel(sp)}")
+    srcs = {k: rel(v) if isinstance(v, Path) else v
+            for k, v in (("front", front_raw), ("back", back_raw), ("frame2", frame2_raw)) if v}
+    (out_dir / "sources.json").write_text(json.dumps({**srcs, "shiny": shiny}, indent=2) + "\n")
     mock = battle_mockup(results.get("front"), results.get("back"), out_dir / "battle_mockup_3x.png")
     print(f"mockup -> {rel(mock)}")
     return out_dir
@@ -652,8 +775,17 @@ def _run(cmd, check=True) -> int:
 
 
 def cmd_finish(args):
+    shiny = None
+    if args.shiny or args.shiny_hue is not None:
+        shiny = dict(args.shiny_species and brief(args.shiny_species)["shiny"] or {})
+        if args.shiny_hue is not None:
+            shiny["hue"] = args.shiny_hue
+        if args.shiny_sat is not None:
+            shiny["sat"] = args.shiny_sat
     finish(Path(args.front).resolve(), Path(args.back).resolve() if args.back else None,
-           args.fit, args.period, Path(args.out).resolve() if args.out else None)
+           args.fit, args.period, Path(args.out).resolve() if args.out else None,
+           (args.frame2 if args.frame2 == "lunge" else Path(args.frame2).resolve()) if args.frame2 else None,
+           shiny)
 
 
 def cmd_run(args):
@@ -687,7 +819,7 @@ def main():
 
     def gen_args(p, both=False):
         p.add_argument("species", help="species folder in game/graphics/pokemon (e.g. poochyena)")
-        p.add_argument("--view", choices=["front", "back"] + (["both"] if both else []),
+        p.add_argument("--view", choices=["front", "back", "frame2"] + (["both"] if both else []),
                        default="both" if both else "front")
         p.add_argument("--version", help="LoRA version id, or a name word (v2, v1); default v2.1-beta")
         p.add_argument("--checkpoint", help="base checkpoint AIR (default: DreamShaper 8 for SD 1.5)")
@@ -732,6 +864,11 @@ def main():
     f = sub.add_parser("finish")
     f.add_argument("front", help="raw front .png"); f.add_argument("back", nargs="?", help="raw back .png")
     f.add_argument("--out", help="output folder (default runs/<species>/finished/<front stem>/)")
+    f.add_argument("--frame2", help="'lunge' (front leans forward, no Buzz) or a raw frame-2 .png from gen --view frame2; writes anim_front.png")
+    f.add_argument("--shiny", action="store_true", help="write shiny.pal (settings from jobs.json via --species)")
+    f.add_argument("--species", dest="shiny_species", help="species for jobs.json shiny settings")
+    f.add_argument("--shiny-hue", type=float, help="shiny hue rotation in degrees (default 180)")
+    f.add_argument("--shiny-sat", type=float, help="shiny saturation factor (default 1.0)")
     finish_args(f); f.set_defaults(fn=cmd_finish)
     r = sub.add_parser("run"); gen_args(r, both=True); finish_args(r)
     r.add_argument("--back-denoise", type=float, default=0.7,
