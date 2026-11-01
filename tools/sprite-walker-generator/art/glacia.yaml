@@ -1,0 +1,206 @@
+name: glacia
+description: 'KI-ADI-MUNDI (Force vision): tall Cerean cranium, white beard, Jedi robes over a frost-blue tunic (replaces Glacia).'
+kit: person16x32_still
+replaces: graphics/object_events/pics/people/elite_four/glacia.png
+graphics_info: Glacia
+notes: 'Group 3, B style (stand-only, figure redrawn over Glacia''s frame): tall egg-shaped Cerean cranium (its own round skin volume, cel bands and a glint) over a hand-shaded bearded face, white hair,
+  moustache and beard edged in frost blue, olive-tan Jedi robe open over a frost-blue tunic.'
+palette: npc_1
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_1
+shade: true
+materials:
+  K: s@
+  H: w/b
+  B: w/b
+  M: w/b
+  R: c!
+  Q: c
+  V: b
+  Y: c
+  D: c
+legend:
+  k: 15
+  q: 9
+  e: 15
+  '1': 1
+  '2': 2
+  '3': 3
+  '4': 4
+accept:
+  height: the Cerean cranium makes the figure 22 rows (Ki-Adi-Mundi's signature)
+  hair_rows: the tall bald cranium stands in for hair
+  head_w: the Cerean cranium is an egg narrower than a human head; hair and beard make the face 14 wide
+  eye_row: eyes sit low on the face under white brows, below the tall cranium
+base_sheet: graphics/object_events/pics/people/elite_four/glacia.png
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 5
+      rows: '................
+
+        ................
+
+        ................
+
+        ................
+
+        ......KKKK......
+
+        .....KKKKKK.....
+
+        ....KKKKKKKK....
+
+        ...KKKKKKKKKK...
+
+        ..KKKKKKKKKKKK..
+
+        ..KKKKKKKKKKKK..
+
+        .HKKKKKKKKKKKKH.
+
+        .HH2MM1111MM2HH.
+
+        .HH221e11e122HH.
+
+        .HH332e22e233HH.
+
+        .HH4333333334HH.
+
+        .HH4MMMMMMMM4HH.
+
+        ..HBBBBBBBBBBH..
+
+        ..RRBBBBBBBBRR..
+
+        .RRRRBBBBBBRRRR.
+
+        RRRRVVBBBBVVRRRR
+
+        RRRRVVVBBVVVRRRR
+
+        RssRVVVVVVVVRssR
+
+        .RRRYYYYYYYYRRR.
+
+        ..RRRVVVVVVRRR..
+
+        ..RRRVVVVVVRRR..
+
+        ...DDD....DDD...
+
+        ................'
+  up:
+    patches:
+    - x: 0
+      y: 5
+      rows: '................
+
+        ................
+
+        ................
+
+        ................
+
+        ......KKKK......
+
+        .....KKKKKK.....
+
+        ....KKKKKKKK....
+
+        ...KKKKKKKKKK...
+
+        ..KKKKKKKKKKKK..
+
+        ..KKKKKKKKKKKK..
+
+        .HKKKKKKKKKKKKH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        ..HHHHHHHHHHHH..
+
+        ..RRHHHHHHHHRR..
+
+        .RRRRRHHHHRRRRR.
+
+        RRRRRRRQQRRRRRRR
+
+        RRRRRRRQQRRRRRRR
+
+        RRRRRRRQQRRRRRRR
+
+        .RRRYYYYYYYYRRR.
+
+        ..RRRRRQQRRRRR..
+
+        ..RRRRRQQRRRRR..
+
+        ...DDD....DDD...
+
+        ................'
+  left:
+    patches:
+    - x: 0
+      y: 5
+      rows: '................
+
+        ................
+
+        ................
+
+        ................
+
+        ......KKKK......
+
+        .....KKKKKKK....
+
+        ....KKKKKKKKK...
+
+        ...KKKKKKKKKK...
+
+        ..KKKKKKKKKKKK..
+
+        ..KKKKKKKKKKKK..
+
+        ..KKKKKKKKKKHH..
+
+        ..MM11112HHHHH..
+
+        ..21e1122HHHHHH.
+
+        ..32e2223HHHHHH.
+
+        ..3333334HHHHHH.
+
+        .MMMM3344HHHHH..
+
+        .BBBBBsssHHHH...
+
+        .BBBBBRRRRHHR...
+
+        ..BBBRRRRRRRR...
+
+        ...RRRRRRRRRRR..
+
+        ...RVVsRRRRRRR..
+
+        ...RVVsRRRRRRR..
+
+        ...RYYYYYRRRRR..
+
+        ...RVVVRRRRRR...
+
+        ...RVVVRRRRRR...
+
+        ....DDD.DDD.....
+
+        ................'

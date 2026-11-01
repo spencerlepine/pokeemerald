@@ -1,0 +1,436 @@
+name: anabel
+description: 'AURRA SING: pale bald bounty hunter with a red topknot, head antenna and a long rifle on her back (replaces Anabel).'
+kit: person16x32
+replaces: graphics/object_events/pics/people/frontier_brains/anabel.png
+graphics_info: Anabel
+notes: 'Group 3, B style: Anabel''s own body as regions (suit -> maroon bodysuit U, arms -> navy gloves G, belt -> tan leather Y), new pale bald head cel-shaded as a round skin volume (bands and a glint),
+  dark-lidded eyes and red lips, red topknot and ponytail, a black cranial antenna, a long rifle slung across her back.'
+palette: npc_4
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_4
+shade: true
+materials:
+  P: s@
+  R: b
+  U: b
+  G: a
+  Y: s
+  B: a
+legend:
+  k: 15
+  n: 13
+  m: 9
+  d: 13
+  F: 15
+  f: 12
+accept:
+  hair_rows: 'bald: a topknot instead of hair'
+base_sheet: graphics/object_events/pics/people/frontier_brains/anabel.png
+remap:
+  b: U
+  s: G
+  c: U
+  a: B
+  w: U
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 10
+      rows: '.....RRRR..n....
+
+        .....RRRR..n....
+
+        ....PPRRPPPnP...
+
+        ...PPPPPPPPPPP..
+
+        ..PPPPPPPPPPPP..
+
+        .PPPPPPPPPPPPPP.
+
+        .PPPPPPPPPPPPPP.
+
+        .PPPPPPPPPPPPPP.
+
+        .PPPPddPPddPPPP.
+
+        .PPPPPkPPkPPPPP.
+
+        .PPPPPkPPkPPPPP.
+
+        ..PPPPPmmPPPPP..
+
+        ...PPPPPPPPPP...'
+    - x: 5
+      y: 26
+      rows: YYYYYY
+  down_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '.....RRRR..n....
+
+        .....RRRR..n....
+
+        ....PPRRPPPnP...
+
+        ...PPPPPPPPPPP..
+
+        ..PPPPPPPPPPPP..
+
+        .PPPPPPPPPPPPPP.
+
+        .PPPPPPPPPPPPPP.
+
+        .PPPPPPPPPPPPPP.
+
+        .PPPPddPPddPPPP.
+
+        .PPPPPkPPkPPPPP.
+
+        .PPPPPkPPkPPPPP.
+
+        ..PPPPPmmPPPPP..
+
+        ...PPPPPPPPPP...'
+    - x: 5
+      y: 27
+      rows: YYYYYY
+  down_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '.....RRRR..n....
+
+        .....RRRR..n....
+
+        ....PPRRPPPnP...
+
+        ...PPPPPPPPPPP..
+
+        ..PPPPPPPPPPPP..
+
+        .PPPPPPPPPPPPPP.
+
+        .PPPPPPPPPPPPPP.
+
+        .PPPPPPPPPPPPPP.
+
+        .PPPPddPPddPPPP.
+
+        .PPPPPkPPkPPPPP.
+
+        .PPPPPkPPkPPPPP.
+
+        ..PPPPPmmPPPPP..
+
+        ...PPPPPPPPPP...'
+    - x: 5
+      y: 27
+      rows: YYYYYY
+  up:
+    patches:
+    - x: 4
+      y: 21
+      rows: '_______FF
+
+        ______F__
+
+        _____F___
+
+        ____F____
+
+        ___f_____
+
+        __ff_____
+
+        _ff______
+
+        _f_______'
+    - x: 0
+      y: 10
+      rows: '.....RRRR..n....
+
+        .....RRRR..n....
+
+        ....PPRRPPPnP...
+
+        ...PPPPRRPPPPP..
+
+        ..PPPPPRRPPPPP..
+
+        .PPPPPPRRPPPPPP.
+
+        .PPPPPPRRPPPPPP.
+
+        .PPPPPPRRPPPPPP.
+
+        .PPPPPPRRPPPPPP.
+
+        .PPPPPPRRPPPPPP.
+
+        .PPPPPPRRPPPPPP.
+
+        ..PPPPPRRPPPPP..
+
+        ...PPPPRRPPPP...
+
+        _______RR_______
+
+        _______RR_______'
+    - x: 4
+      y: 26
+      rows: YYY__YYY
+  up_a:
+    patches:
+    - x: 4
+      y: 22
+      rows: '_______FF
+
+        ______F__
+
+        _____F___
+
+        ____F____
+
+        ___f_____
+
+        __ff_____
+
+        _ff______
+
+        _f_______'
+    - x: 0
+      y: 11
+      rows: '.....RRRR..n....
+
+        .....RRRR..n....
+
+        ....PPRRPPPnP...
+
+        ...PPPPRRPPPPP..
+
+        ..PPPPPRRPPPPP..
+
+        .PPPPPPRRPPPPPP.
+
+        .PPPPPPRRPPPPPP.
+
+        .PPPPPPRRPPPPPP.
+
+        .PPPPPPRRPPPPPP.
+
+        .PPPPPPRRPPPPPP.
+
+        .PPPPPPRRPPPPPP.
+
+        ..PPPPPRRPPPPP..
+
+        ...PPPPRRPPPP...
+
+        _______RR_______
+
+        _______RR_______'
+    - x: 4
+      y: 27
+      rows: YYY__YYY
+  up_b:
+    patches:
+    - x: 4
+      y: 22
+      rows: '_______FF
+
+        ______F__
+
+        _____F___
+
+        ____F____
+
+        ___f_____
+
+        __ff_____
+
+        _ff______
+
+        _f_______'
+    - x: 0
+      y: 11
+      rows: '.....RRRR..n....
+
+        .....RRRR..n....
+
+        ....PPRRPPPnP...
+
+        ...PPPPRRPPPPP..
+
+        ..PPPPPRRPPPPP..
+
+        .PPPPPPRRPPPPPP.
+
+        .PPPPPPRRPPPPPP.
+
+        .PPPPPPRRPPPPPP.
+
+        .PPPPPPRRPPPPPP.
+
+        .PPPPPPRRPPPPPP.
+
+        .PPPPPPRRPPPPPP.
+
+        ..PPPPPRRPPPPP..
+
+        ...PPPPRRPPPP...
+
+        _______RR_______
+
+        _______RR_______'
+    - x: 4
+      y: 27
+      rows: YYY__YYY
+  left:
+    patches:
+    - x: 10
+      y: 19
+      rows: '___F
+
+        ___F
+
+        __F_
+
+        __F_
+
+        _F__
+
+        _f__
+
+        ff__
+
+        f___'
+    - x: 0
+      y: 10
+      rows: '.........nRRRR..
+
+        .........nRRRR..
+
+        ......PPPnRRRP..
+
+        ....PPPPPPPPPP..
+
+        ...PPPPPPPPPPP..
+
+        ..PPPPPPPPPPPPR.
+
+        .PPPPPPPPPPPPPR.
+
+        .PPPPPPPPPPPPRR.
+
+        .PddPPPPPPPPPRR.
+
+        .PPkPPPPPPPPPR..
+
+        .PPkPPPPPPPPR...
+
+        ..mPPPPPPPPP....
+
+        ...PPPPPPPP_____'
+    - x: 5
+      y: 26
+      rows: YYYYY
+  left_a:
+    patches:
+    - x: 10
+      y: 20
+      rows: '___F
+
+        ___F
+
+        __F_
+
+        __F_
+
+        _F__
+
+        _f__
+
+        ff__
+
+        f___'
+    - x: 0
+      y: 11
+      rows: '.........nRRRR..
+
+        .........nRRRR..
+
+        ......PPPnRRRP..
+
+        ....PPPPPPPPPP..
+
+        ...PPPPPPPPPPP..
+
+        ..PPPPPPPPPPPPR.
+
+        .PPPPPPPPPPPPPR.
+
+        .PPPPPPPPPPPPRR.
+
+        .PddPPPPPPPPPRR.
+
+        .PPkPPPPPPPPPR..
+
+        .PPkPPPPPPPPR...
+
+        ..mPPPPPPPPP....
+
+        ...PPPPPPPP_____'
+    - x: 5
+      y: 27
+      rows: YYYYY
+  left_b:
+    patches:
+    - x: 10
+      y: 20
+      rows: '___F
+
+        ___F
+
+        __F_
+
+        __F_
+
+        _F__
+
+        _f__
+
+        ff__
+
+        f___'
+    - x: 0
+      y: 11
+      rows: '.........nRRRR..
+
+        .........nRRRR..
+
+        ......PPPnRRRP..
+
+        ....PPPPPPPPPP..
+
+        ...PPPPPPPPPPP..
+
+        ..PPPPPPPPPPPPR.
+
+        .PPPPPPPPPPPPPR.
+
+        .PPPPPPPPPPPPRR.
+
+        .PddPPPPPPPPPRR.
+
+        .PPkPPPPPPPPPR..
+
+        .PPkPPPPPPPPR...
+
+        ..mPPPPPPPPP....
+
+        ...PPPPPPPP_____'
+    - x: 5
+      y: 27
+      rows: YYYYY
