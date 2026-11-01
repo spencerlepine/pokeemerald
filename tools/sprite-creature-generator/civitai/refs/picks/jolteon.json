@@ -2,9 +2,9 @@
   "init": "refs/jolteon_prep.png",
   "init_source": "https://static.wikia.nocookie.net/starwars/images/e/e3/Tooka.png/revision/latest?cb=20240211000703",
   "flip": false,
-  "denoise": 0.6,
-  "desc": "static-charged tooka cat crouching, three-quarter view, whole body, tall pointed ears, spiky bristling fur, long tail, clean coloured sprite",
-  "colour": "bright yellow with white spiky tufts",
-  "negative": "grey, purple, black and white, sketch",
-  "ref_note": "Tooka (Legends) colour render, three-quarter left, whole body (eevee line image); replaces greyscale turnaround"
+  "denoise": 0.55,
+  "desc": "static-charged tooka cat crouching, three-quarter view, whole body, tall pointed ears, spiky bristling fur, long tail",
+  "colour": "bright lemon yellow body with white spiky tufts",
+  "negative": "black, dark, grey, purple, sketch",
+  "ref_note": "Tooka (Legends) colour render, three-quarter left (eevee line image); yellow forced by colour and negative"
 }
