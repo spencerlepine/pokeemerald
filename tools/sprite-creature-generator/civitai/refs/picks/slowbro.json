@@ -2,8 +2,8 @@
   "init": "refs/slowbro_prep.png",
   "init_source": "/tmp/claude-0/-home-user/510f0079-9430-50be-b656-57ddf5b64e74/scratchpad/r2/slowbro_cut.png",
   "flip": false,
-  "denoise": 0.5,
-  "desc": "big rearing swamp slug with a dopey open mouth, eyestalks, stubby arms, and a spiral shellfish clamped on its tail tip, whole body",
-  "colour": "pale pink and cream, grey spiral shell",
+  "denoise": 0.45,
+  "desc": "big swamp slug rearing its head up high on the left, dopey face with eyestalks, long body trailing right with a grey spiral shell on the tail tip, side view, whole body",
+  "colour": "pale pink and cream",
   "ref_note": "Swamp slug (SWGA) full body, foliage bg and caption masked out locally; flipped to face left; replaces right-cropped Giant_Swamp_Slug"
 }
