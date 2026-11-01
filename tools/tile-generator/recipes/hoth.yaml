@@ -1,0 +1,30 @@
+# Prototype: Hoth / Ilum snowfield on the shared outdoor kit. Palette + ground retexture only.
+name: hoth
+notes: Ground -> packed snow (cold white-blue); canopies -> frosted dark evergreen; dirt/sand -> trampled grey snow; rock -> blue-grey ice rock; roofs keep a warm accent so towns read.
+rules:
+  - name: ground-snow
+    match: {hue: [148, 182], chroma_min: 15}
+    set:   {hue: 240, chroma: 7, light: +16}
+  - name: canopy-frost
+    match: {hue: [112, 147], chroma_min: 30}
+    set:   {hue: 195, chroma_scale: 0.35, light: -4}
+  - name: pale-grass
+    match: {hue: [100, 147], chroma_min: 12, chroma_max: 30}
+    set:   {hue: 235, chroma_scale: 0.4, light: +8}
+  - name: dirt-slush
+    match: {hue: [10, 80], chroma_min: 20, chroma_max: 38, light_max: 72}
+    set:   {hue: 250, chroma_scale: 0.45}
+  - name: sand-trampled
+    match: {hue: [70, 110], chroma_min: 30, light_min: 60}
+    set:   {hue: 245, chroma_scale: 0.3, light: +4}
+  - name: water-ice
+    match: {hue: [245, 300], chroma_min: 30}
+    set:   {hue_shift: -25, chroma_scale: 0.55, light: +10}
+retexture:
+  - op: speckle
+    tileset: primary
+    metatiles: [1]
+    tones: {base: 13, light: 12, dark: 14}
+    seed: 3
+    light_blobs: 1
+    dark_dots: 2

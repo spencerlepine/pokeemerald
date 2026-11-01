@@ -1,0 +1,34 @@
+# Prototype: Sullust ash fields (Lavaridge/Fallarbor region). Palette + ground retexture only.
+name: sullust
+notes: Ground -> warm charcoal ash; canopies -> scorched dark olive; dirt -> rust-brown cinder; sand -> pale ash drifts; water -> sulphur-teal hot springs.
+rules:
+  - name: ground-ash
+    match: {hue: [148, 182], chroma_min: 15}
+    set:   {hue: 40, chroma: 8, light: -28}
+  - name: canopy-scorched
+    match: {hue: [112, 147], chroma_min: 30}
+    set:   {hue: 75, chroma_scale: 0.4, light: -18}
+  - name: pale-grass
+    match: {hue: [100, 147], chroma_min: 12, chroma_max: 30}
+    set:   {hue: 45, chroma_scale: 0.5, light: -14}
+  - name: dirt-cinder
+    match: {hue: [10, 80], chroma_min: 20, chroma_max: 38, light_max: 72}
+    set:   {hue: 32, chroma_scale: 1.1, light: -10}
+  - name: sand-ashdrift
+    match: {hue: [70, 110], chroma_min: 30, light_min: 60}
+    set:   {hue: 60, chroma_scale: 0.25, light: -8}
+  - name: roof-ember
+    match: {hue: [10, 70], chroma_min: 38}
+    set:   {hue: 30, chroma_scale: 1.0, light: -6}
+  - name: water-spring
+    match: {hue: [245, 300], chroma_min: 30}
+    set:   {hue: 195, chroma_scale: 0.8}
+retexture:
+  - op: speckle
+    tileset: primary
+    metatiles: [1]
+    tones: {base: 13, light: 12, dark: 14}
+    seed: 5
+    light_blobs: 1
+    dark_dots: 5
+    blob: 1
