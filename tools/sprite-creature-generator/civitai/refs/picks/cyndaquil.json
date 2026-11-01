@@ -1,9 +1,6 @@
 {
-  "init": "refs/cyndaquil_prep.png",
-  "init_source": "https://static.wikia.nocookie.net/starwars/images/a/a8/Fwit-UA.jpg/revision/latest?cb=20111109014143",
   "flip": false,
-  "denoise": 0.4,
-  "desc": "small round furry mole with a single plume of flame rising from its back, simple clean shape",
-  "colour": "sandy tan and olive",
-  "ref_note": "RE-PICK (womp rat art is rattata's canon). Original; fwit (Legends art on pale cream), small scruffy critter with a flame-like plume tail. Head already on the left. Line: fwit -> kittle -> dryax."
+  "desc": "Small round furry mole on four short legs with a long pointed snout, tiny closed eyes, and a single bright plume of flame rising from its back, simple clean shape, side view",
+  "colour": "dark blue-grey back, cream belly, orange flame",
+  "ref_note": "text only: fwit art cluttered; no clean mole art"
 }
