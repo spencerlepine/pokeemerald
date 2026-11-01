@@ -461,7 +461,6 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_UNUSED                  0x111A
 #define OBJ_EVENT_PAL_TAG_SUBMARINE_SHADOW        0x111B
 #define OBJ_EVENT_PAL_TAG_POOCHYENA               0x111C
-#define OBJ_EVENT_PAL_TAG_RED_LEAF                0x111D
 #define OBJ_EVENT_PAL_TAG_DEOXYS                  0x111E
 #define OBJ_EVENT_PAL_TAG_BIRTH_ISLAND_STONE      0x111F
 #define OBJ_EVENT_PAL_TAG_HO_OH                   0x1120
@@ -507,7 +506,6 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_GroudonReflection,     OBJ_EVENT_PAL_TAG_GROUDON_REFLECTION},
     {gObjectEventPal_SubmarineShadow,       OBJ_EVENT_PAL_TAG_SUBMARINE_SHADOW},
     {gObjectEventPal_Poochyena,             OBJ_EVENT_PAL_TAG_POOCHYENA},
-    {gObjectEventPal_RedLeaf,               OBJ_EVENT_PAL_TAG_RED_LEAF},
     {gObjectEventPal_Deoxys,                OBJ_EVENT_PAL_TAG_DEOXYS},
     {gObjectEventPal_BirthIslandStone,      OBJ_EVENT_PAL_TAG_BIRTH_ISLAND_STONE},
     {gObjectEventPal_HoOh,                  OBJ_EVENT_PAL_TAG_HO_OH},
@@ -620,13 +618,6 @@ static const u16 sReflectionPaletteTags_Npc3[] = { // Only used by the Route 120
     OBJ_EVENT_PAL_TAG_NPC_3_REFLECTION,
 };
 
-static const u16 sReflectionPaletteTags_RedLeaf[] = {
-    OBJ_EVENT_PAL_TAG_RED_LEAF,
-    OBJ_EVENT_PAL_TAG_RED_LEAF,
-    OBJ_EVENT_PAL_TAG_RED_LEAF,
-    OBJ_EVENT_PAL_TAG_RED_LEAF,
-};
-
 static const struct PairedPalettes sSpecialObjectReflectionPaletteSets[] = {
     {OBJ_EVENT_PAL_TAG_BRENDAN,          sReflectionPaletteTags_Brendan},
     {OBJ_EVENT_PAL_TAG_MAY,              sReflectionPaletteTags_May},
@@ -640,7 +631,6 @@ static const struct PairedPalettes sSpecialObjectReflectionPaletteSets[] = {
     {OBJ_EVENT_PAL_TAG_GROUDON,          sReflectionPaletteTags_Groudon},
     {OBJ_EVENT_PAL_TAG_NPC_3,            sReflectionPaletteTags_Npc3},
     {OBJ_EVENT_PAL_TAG_SUBMARINE_SHADOW, sReflectionPaletteTags_SubmarineShadow},
-    {OBJ_EVENT_PAL_TAG_RED_LEAF,         sReflectionPaletteTags_RedLeaf},
     {OBJ_EVENT_PAL_TAG_NONE,             NULL},
 };
 

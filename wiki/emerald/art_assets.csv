@@ -1768,7 +1768,6 @@ graphics/object_events/pics/people/hex_maniac.png,object_events,pics,graphics/ob
 graphics/object_events/pics/people/hiker.png,object_events,pics,graphics/object_events/pics/people/hiker.png,144,32,gObjectEventPic_Hiker,true,ORIGINAL
 graphics/object_events/pics/people/hot_springs_old_woman.png,object_events,pics,graphics/object_events/pics/people/hot_springs_old_woman.png,144,32,gObjectEventPic_HotSpringsOldWoman,true,ORIGINAL
 graphics/object_events/pics/people/lass.png,object_events,pics,graphics/object_events/pics/people/lass.png,144,32,gObjectEventPic_Lass,true,ORIGINAL
-graphics/object_events/pics/people/leaf.png,object_events,pics,graphics/object_events/pics/people/leaf.png,144,32,gObjectEventPic_Leaf,true,ORIGINAL
 graphics/object_events/pics/people/link_receptionist.png,object_events,pics,graphics/object_events/pics/people/link_receptionist.png,144,32,gObjectEventPic_LinkReceptionist,true,ORIGINAL
 graphics/object_events/pics/people/little_boy.png,object_events,pics,graphics/object_events/pics/people/little_boy.png,144,16,gObjectEventPic_LittleBoy,true,ORIGINAL
 graphics/object_events/pics/people/little_girl.png,object_events,pics,graphics/object_events/pics/people/little_girl.png,144,16,gObjectEventPic_LittleGirl,true,ORIGINAL
@@ -1803,7 +1802,6 @@ graphics/object_events/pics/people/pokefan_m.png,object_events,pics,graphics/obj
 graphics/object_events/pics/people/prof_birch.png,object_events,pics,graphics/object_events/pics/people/prof_birch.png,144,32,gObjectEventPic_ProfBirch,true,ORIGINAL
 graphics/object_events/pics/people/psychic_m.png,object_events,pics,graphics/object_events/pics/people/psychic_m.png,144,32,gObjectEventPic_PsychicM,true,ORIGINAL
 graphics/object_events/pics/people/quinty_plump.png,object_events,pics,graphics/object_events/pics/people/quinty_plump.png,224,32,gObjectEventPic_QuintyPlump,true,ORIGINAL
-graphics/object_events/pics/people/red.png,object_events,pics,graphics/object_events/pics/people/red.png,144,32,gObjectEventPic_Red,true,ORIGINAL
 graphics/object_events/pics/people/reporter_f.png,object_events,pics,graphics/object_events/pics/people/reporter_f.png,144,32,gObjectEventPic_ReporterF,true,ORIGINAL
 graphics/object_events/pics/people/reporter_m.png,object_events,pics,graphics/object_events/pics/people/reporter_m.png,144,32,gObjectEventPic_ReporterM,true,ORIGINAL
 graphics/object_events/pics/people/rich_boy.png,object_events,pics,graphics/object_events/pics/people/rich_boy.png,144,32,gObjectEventPic_RichBoy,true,ORIGINAL
@@ -4263,10 +4261,8 @@ graphics/trainer_card/tiles.png,trainer_card,,graphics/trainer_card/tiles.png,12
 graphics/trainer_hill/records_window.png,trainer_hill,,graphics/trainer_hill/records_window.png,24,16,sTrainerHillWindowPalette|sTrainerHillWindowTileset,true,ORIGINAL
 graphics/trainers/back_pics/brendan.png,trainers,back_pics,graphics/trainers/back_pics/brendan.png,64,256,gTrainerBackPic_Brendan,true,ORIGINAL
 graphics/trainers/back_pics/brendan_rs.png,trainers,back_pics,graphics/trainers/back_pics/brendan_rs.png,64,256,gTrainerBackPic_RubySapphireBrendan,true,ORIGINAL
-graphics/trainers/back_pics/leaf.png,trainers,back_pics,graphics/trainers/back_pics/leaf.png,64,320,gTrainerBackPicPalette_Leaf|gTrainerBackPic_Leaf,true,ORIGINAL
 graphics/trainers/back_pics/may.png,trainers,back_pics,graphics/trainers/back_pics/may.png,64,256,gTrainerBackPic_May,true,ORIGINAL
 graphics/trainers/back_pics/may_rs.png,trainers,back_pics,graphics/trainers/back_pics/may_rs.png,64,256,gTrainerBackPic_RubySapphireMay,true,ORIGINAL
-graphics/trainers/back_pics/red.png,trainers,back_pics,graphics/trainers/back_pics/red.png,64,320,gTrainerBackPicPalette_Red|gTrainerBackPic_Red,true,ORIGINAL
 graphics/trainers/back_pics/steven.png,trainers,back_pics,graphics/trainers/back_pics/steven.png,64,256,gTrainerBackPic_Steven,true,ORIGINAL
 graphics/trainers/back_pics/wally.png,trainers,back_pics,graphics/trainers/back_pics/wally.png,64,256,gTrainerBackPic_Wally,true,ORIGINAL
 graphics/trainers/front_pics/aqua_admin_f.png,trainers,front_pics,graphics/trainers/front_pics/aqua_admin_f.png,64,64,gTrainerFrontPic_AquaAdminF|gTrainerPalette_AquaAdminF,true,ORIGINAL
@@ -4317,7 +4313,6 @@ graphics/trainers/front_pics/leader_roxanne.png,trainers,front_pics,graphics/tra
 graphics/trainers/front_pics/leader_tate_and_liza.png,trainers,front_pics,graphics/trainers/front_pics/leader_tate_and_liza.png,64,64,gTrainerFrontPic_LeaderTateAndLiza|gTrainerPalette_LeaderTateAndLiza,true,ORIGINAL
 graphics/trainers/front_pics/leader_wattson.png,trainers,front_pics,graphics/trainers/front_pics/leader_wattson.png,64,64,gTrainerFrontPic_LeaderWattson|gTrainerPalette_LeaderWattson,true,ORIGINAL
 graphics/trainers/front_pics/leader_winona.png,trainers,front_pics,graphics/trainers/front_pics/leader_winona.png,64,64,gTrainerFrontPic_LeaderWinona|gTrainerPalette_LeaderWinona,true,ORIGINAL
-graphics/trainers/front_pics/leaf.png,trainers,front_pics,graphics/trainers/front_pics/leaf.png,64,64,gTrainerFrontPic_Leaf|gTrainerPalette_Leaf,true,ORIGINAL
 graphics/trainers/front_pics/magma_admin.png,trainers,front_pics,graphics/trainers/front_pics/magma_admin.png,64,64,gTrainerFrontPic_MagmaAdmin|gTrainerPalette_MagmaAdmin,true,ORIGINAL
 graphics/trainers/front_pics/magma_grunt_f.png,trainers,front_pics,graphics/trainers/front_pics/magma_grunt_f.png,64,64,gTrainerFrontPic_MagmaGruntF|gTrainerPalette_MagmaGruntF,true,ORIGINAL
 graphics/trainers/front_pics/magma_grunt_m.png,trainers,front_pics,graphics/trainers/front_pics/magma_grunt_m.png,64,64,gTrainerFrontPic_MagmaGruntM|gTrainerPalette_MagmaGruntM,true,ORIGINAL
@@ -4340,7 +4335,6 @@ graphics/trainers/front_pics/pokemon_ranger_m.png,trainers,front_pics,graphics/t
 graphics/trainers/front_pics/psychic_f.png,trainers,front_pics,graphics/trainers/front_pics/psychic_f.png,64,64,gTrainerFrontPic_PsychicF|gTrainerPalette_PsychicF,true,ORIGINAL
 graphics/trainers/front_pics/psychic_m.png,trainers,front_pics,graphics/trainers/front_pics/psychic_m.png,64,64,gTrainerFrontPic_PsychicM|gTrainerPalette_PsychicM,true,ORIGINAL
 graphics/trainers/front_pics/pyramid_king_brandon.png,trainers,front_pics,graphics/trainers/front_pics/pyramid_king_brandon.png,64,64,gTrainerFrontPic_PyramidKingBrandon|gTrainerPalette_PyramidKingBrandon,true,ORIGINAL
-graphics/trainers/front_pics/red.png,trainers,front_pics,graphics/trainers/front_pics/red.png,64,64,gTrainerFrontPic_Red|gTrainerPalette_Red,true,ORIGINAL
 graphics/trainers/front_pics/rich_boy.png,trainers,front_pics,graphics/trainers/front_pics/rich_boy.png,64,64,gTrainerFrontPic_RichBoy|gTrainerPalette_RichBoy,true,ORIGINAL
 graphics/trainers/front_pics/ruin_maniac.png,trainers,front_pics,graphics/trainers/front_pics/ruin_maniac.png,64,64,gTrainerFrontPic_RuinManiac|gTrainerPalette_RuinManiac,true,ORIGINAL
 graphics/trainers/front_pics/running_triathlete_f.png,trainers,front_pics,graphics/trainers/front_pics/running_triathlete_f.png,64,64,gTrainerFrontPic_RunningTriathleteF|gTrainerPalette_RunningTriathleteF,true,ORIGINAL

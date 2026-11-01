@@ -12403,22 +12403,6 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Everett[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Red[] = {
-    {
-    .iv = 0,
-    .lvl = 5,
-    .species = SPECIES_CHARMANDER,
-    }
-};
-
-static const struct TrainerMonNoItemDefaultMoves sParty_Leaf[] = {
-    {
-    .iv = 0,
-    .lvl = 5,
-    .species = SPECIES_BULBASAUR,
-    }
-};
-
 static const struct TrainerMonNoItemDefaultMoves sParty_BrendanLinkPlaceholder[] = {
     {
     .iv = 0,

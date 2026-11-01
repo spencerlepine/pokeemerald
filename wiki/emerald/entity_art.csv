@@ -760,8 +760,6 @@ trainer-pic:arena-tycoon-greta,graphics/trainers/front_pics/arena_tycoon_greta.p
 trainer-pic:factory-head-noland,graphics/trainers/front_pics/factory_head_noland.png,trainer_front_pic
 trainer-pic:pike-queen-lucy,graphics/trainers/front_pics/pike_queen_lucy.png,trainer_front_pic
 trainer-pic:pyramid-king-brandon,graphics/trainers/front_pics/pyramid_king_brandon.png,trainer_front_pic
-trainer-pic:red,graphics/trainers/front_pics/red.png,trainer_front_pic
-trainer-pic:leaf,graphics/trainers/front_pics/leaf.png,trainer_front_pic
 trainer-pic:rs-brendan,graphics/trainers/front_pics/brendan_rs.png,trainer_front_pic
 trainer-pic:rs-may,graphics/trainers/front_pics/may_rs.png,trainer_front_pic
 object-gfx:brendan-normal,graphics/object_events/pics/people/brendan/walking.png,overworld_sprite
@@ -997,8 +995,6 @@ object-gfx:dusclops,graphics/object_events/pics/pokemon/dusclops.png,overworld_s
 object-gfx:union-room-nurse,graphics/object_events/pics/people/union_room_attendant.png,overworld_sprite
 object-gfx:sudowoodo,graphics/object_events/pics/pokemon/sudowoodo.png,overworld_sprite
 object-gfx:mew,graphics/object_events/pics/pokemon/mew.png,overworld_sprite
-object-gfx:red,graphics/object_events/pics/people/red.png,overworld_sprite
-object-gfx:leaf,graphics/object_events/pics/people/leaf.png,overworld_sprite
 object-gfx:deoxys,graphics/object_events/pics/pokemon/deoxys.png,overworld_sprite
 object-gfx:deoxys-triangle,graphics/object_events/pics/misc/birth_island_stone.png,overworld_sprite
 object-gfx:brandon,graphics/object_events/pics/people/frontier_brains/brandon.png,overworld_sprite
@@ -3614,9 +3610,7 @@ species:unown-z,graphics/pokemon/unown/z/icon.png,menu_icon
 species:unown-emark,graphics/pokemon/unown/exclamation_mark/icon.png,menu_icon
 species:unown-qmark,graphics/pokemon/unown/question_mark/icon.png,menu_icon
 trainer-pic:back-brendan,graphics/trainers/back_pics/brendan.png,trainer_back_pic
-trainer-pic:back-leaf,graphics/trainers/back_pics/leaf.png,trainer_back_pic
 trainer-pic:back-may,graphics/trainers/back_pics/may.png,trainer_back_pic
-trainer-pic:back-red,graphics/trainers/back_pics/red.png,trainer_back_pic
 trainer-pic:back-ruby-sapphire-brendan,graphics/trainers/back_pics/brendan_rs.png,trainer_back_pic
 trainer-pic:back-ruby-sapphire-may,graphics/trainers/back_pics/may_rs.png,trainer_back_pic
 trainer-pic:back-steven,graphics/trainers/back_pics/steven.png,trainer_back_pic

@@ -265,11 +265,7 @@ const u32 gTrainerPalette_PikeQueenLucy[] = INCGFX_U32("graphics/trainers/front_
 const u32 gTrainerFrontPic_PyramidKingBrandon[] = INCGFX_U32("graphics/trainers/front_pics/pyramid_king_brandon.png", ".4bpp.lz");
 const u32 gTrainerPalette_PyramidKingBrandon[] = INCGFX_U32("graphics/trainers/front_pics/pyramid_king_brandon.png", ".gbapal.lz");
 
-const u32 gTrainerFrontPic_Red[] = INCGFX_U32("graphics/trainers/front_pics/red.png", ".4bpp.lz");
-const u32 gTrainerPalette_Red[] = INCGFX_U32("graphics/trainers/front_pics/red.png", ".gbapal.lz");
 
-const u32 gTrainerFrontPic_Leaf[] = INCGFX_U32("graphics/trainers/front_pics/leaf.png", ".4bpp.lz");
-const u32 gTrainerPalette_Leaf[] = INCGFX_U32("graphics/trainers/front_pics/leaf.png", ".gbapal.lz");
 
 const u32 gTrainerFrontPic_RubySapphireBrendan[] = INCGFX_U32("graphics/trainers/front_pics/brendan_rs.png", ".4bpp.lz");
 const u32 gTrainerPalette_RubySapphireBrendan[] = INCGFX_U32("graphics/trainers/palettes/brendan_rs.pal", ".gbapal.lz");
@@ -279,15 +275,11 @@ const u32 gTrainerPalette_RubySapphireMay[] = INCGFX_U32("graphics/trainers/pale
 
 const u8 gTrainerBackPic_Brendan[] = INCGFX_U8("graphics/trainers/back_pics/brendan.png", ".4bpp");
 const u8 gTrainerBackPic_May[] = INCGFX_U8("graphics/trainers/back_pics/may.png", ".4bpp");
-const u8 gTrainerBackPic_Red[] = INCGFX_U8("graphics/trainers/back_pics/red.png", ".4bpp");
-const u8 gTrainerBackPic_Leaf[] = INCGFX_U8("graphics/trainers/back_pics/leaf.png", ".4bpp");
 const u8 gTrainerBackPic_RubySapphireBrendan[] = INCGFX_U8("graphics/trainers/back_pics/brendan_rs.png", ".4bpp");
 const u8 gTrainerBackPic_RubySapphireMay[] = INCGFX_U8("graphics/trainers/back_pics/may_rs.png", ".4bpp");
 const u8 gTrainerBackPic_Wally[] = INCGFX_U8("graphics/trainers/back_pics/wally.png", ".4bpp");
 const u8 gTrainerBackPic_Steven[] = INCGFX_U8("graphics/trainers/back_pics/steven.png", ".4bpp");
 
-const u32 gTrainerBackPicPalette_Red[] = INCGFX_U32("graphics/trainers/back_pics/red.png", ".gbapal.lz");
-const u32 gTrainerBackPicPalette_Leaf[] = INCGFX_U32("graphics/trainers/back_pics/leaf.png", ".gbapal.lz");
 const u32 gTrainerBackPicPalette_Brendan[] = INCGFX_U32("graphics/trainers/back_pics/brendan.png", ".gbapal.lz");
 const u32 gTrainerBackPicPalette_May[] = INCGFX_U32("graphics/trainers/back_pics/may.png", ".gbapal.lz");
 const u32 gTrainerBackPicPalette_RubySapphireBrendan[] = INCGFX_U32("graphics/trainers/back_pics/brendan_rs.png", ".gbapal.lz");

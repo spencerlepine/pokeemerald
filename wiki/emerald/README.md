@@ -19,3 +19,7 @@ Source: `database/` of [spencerlepine/emerald-db](https://github.com/spencerlepi
 pokeemerald commit `731ad5bf` (the same files as `wiki/database` at commit `3ef77dfe` of this repo). The other
 emerald-db tables (dialogue, scripts, map events, parties, learnsets…) are not read by any tool here and are not copied.
 To use a different snapshot, set `EMERALD_DB_DIR` to its folder.
+
+Rows for Emerald assets that have been deleted from `../game` are deleted here too, so the wiki only lists what
+the game has. Deleted so far: the FireRed/LeafGreen link leftovers RED and LEAF (trainer front and back pics,
+overworld sprite, the `PKMN TRAINER RED` / `LEAF` trainers).

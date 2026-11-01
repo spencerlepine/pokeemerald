@@ -1123,12 +1123,7 @@ static void LinkPartnerHandleDrawTrainerPic(void)
         xPos = 80;
     }
 
-    if ((gLinkPlayers[GetBattlerMultiplayerId(gActiveBattler)].version & 0xFF) == VERSION_FIRE_RED
-        || (gLinkPlayers[GetBattlerMultiplayerId(gActiveBattler)].version & 0xFF) == VERSION_LEAF_GREEN)
-    {
-        trainerPicId = gLinkPlayers[GetBattlerMultiplayerId(gActiveBattler)].gender + TRAINER_BACK_PIC_RED;
-    }
-    else if ((gLinkPlayers[GetBattlerMultiplayerId(gActiveBattler)].version & 0xFF) == VERSION_RUBY
+    if ((gLinkPlayers[GetBattlerMultiplayerId(gActiveBattler)].version & 0xFF) == VERSION_RUBY
              || (gLinkPlayers[GetBattlerMultiplayerId(gActiveBattler)].version & 0xFF) == VERSION_SAPPHIRE)
     {
         trainerPicId = gLinkPlayers[GetBattlerMultiplayerId(gActiveBattler)].gender + TRAINER_BACK_PIC_RUBY_SAPPHIRE_BRENDAN;
@@ -1543,12 +1538,7 @@ static void LinkPartnerHandleIntroTrainerBallThrow(void)
 
     paletteNum = AllocSpritePalette(0xD6F9);
 
-    if ((gLinkPlayers[GetBattlerMultiplayerId(gActiveBattler)].version & 0xFF) == VERSION_FIRE_RED
-        || (gLinkPlayers[GetBattlerMultiplayerId(gActiveBattler)].version & 0xFF) == VERSION_LEAF_GREEN)
-    {
-        trainerPicId = gLinkPlayers[GetBattlerMultiplayerId(gActiveBattler)].gender + TRAINER_BACK_PIC_RED;
-    }
-    else if ((gLinkPlayers[GetBattlerMultiplayerId(gActiveBattler)].version & 0xFF) == VERSION_RUBY
+    if ((gLinkPlayers[GetBattlerMultiplayerId(gActiveBattler)].version & 0xFF) == VERSION_RUBY
              || (gLinkPlayers[GetBattlerMultiplayerId(gActiveBattler)].version & 0xFF) == VERSION_SAPPHIRE)
     {
         trainerPicId = gLinkPlayers[GetBattlerMultiplayerId(gActiveBattler)].gender + TRAINER_BACK_PIC_RUBY_SAPPHIRE_BRENDAN;

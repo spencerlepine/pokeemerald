@@ -3175,10 +3175,6 @@ static void CreateLinkPlayerSprite(u8 linkPlayerId, u8 gameVersion)
     {
         switch (gameVersion)
         {
-        case VERSION_FIRE_RED:
-        case VERSION_LEAF_GREEN:
-            objEvent->spriteId = CreateObjectGraphicsSprite(GetFRLGAvatarGraphicsIdByGender(linkGender(objEvent)), SpriteCB_LinkPlayer, 0, 0, 0);
-            break;
         case VERSION_RUBY:
         case VERSION_SAPPHIRE:
             objEvent->spriteId = CreateObjectGraphicsSprite(GetRSAvatarGraphicsIdByGender(linkGender(objEvent)), SpriteCB_LinkPlayer, 0, 0, 0);

@@ -14,15 +14,15 @@ that runs anywhere.
 
 | # | File | Size and format | Made by | Notes |
 |---|---|---|---|---|
-| 1 | `game/graphics/trainers/back_pics/<trainer>.png` (8 files) | 64x256 = 4 frames of 64x64 (`leaf`, `red`: 64x320 = 5 frames), 4bpp | Frame 1: **SD** (trainer LoRA, back view) + Python finisher. Frames 2-4: **SD img2img** from frame 1, or hand edit | Waist-up, seen from behind and to the left, larger than the front pic. Frames: holding the pod, wind-up, throw, arm down |
-| 2 | Palette | `game/graphics/trainers/palettes/<trainer>.pal` for Brendan, May, their R/S pics, Wally and Steven; `leaf` and `red` take theirs from the PNG | **Python** | Brendan, May, the R/S pics and Wally share this file with their **front** pic, so the back is quantised to the existing palette rather than a new one |
+| 1 | `game/graphics/trainers/back_pics/<trainer>.png` (6 files) | 64x256 = 4 frames of 64x64, 4bpp | Frame 1: **SD** (trainer LoRA, back view) + Python finisher. Frames 2-4: **SD img2img** from frame 1, or hand edit | Waist-up, seen from behind and to the left, larger than the front pic. Frames: holding the pod, wind-up, throw, arm down |
+| 2 | Palette | `game/graphics/trainers/palettes/<trainer>.pal` for Brendan, May, their R/S pics, Wally and Steven | **Python** | Brendan, May, the R/S pics and Wally share this file with their **front** pic, so the back is quantised to the existing palette rather than a new one |
 | 3 | Animation timing: `game/src/data/trainer_graphics/back_pic_anims.h` | frame order and durations | Kept vanilla | Only change it if the new frames need different timing |
 | 4 | Placement data: `gTrainerBackPicCoords` in `game/src/data/trainer_graphics/back_pic_tables.h` | `size`, `y_offset` | **Python** | |
 
 Who these are (from the wiki): `brendan` -> KAEL (player, boy), `may` -> MIRA (player, girl),
 `wally` -> LUKE SKYWALKER (catching tutorial), `steven` -> LEIA ORGANA (multi-battle partner),
-`brendan_rs` / `may_rs` (old Ruby/Sapphire pics of Kael and Mira). `red` / `leaf` are FireRed
-link leftovers marked KEEP_ART in the wiki: not redrawn.
+`brendan_rs` / `may_rs` (old Ruby/Sapphire pics of Kael and Mira). The FireRed link leftovers `red` /
+`leaf` were deleted from the game.
 
 ## Not made here
 
@@ -31,7 +31,7 @@ link leftovers marked KEEP_ART in the wiki: not redrawn.
 
 ## Wiki rows
 
-`pending_art.csv` kind `trainers`, subkind `back_pics`: 8 rows, 6 to draw (`red` and `leaf` are KEEP_ART). Each row's `sw_subject` is the
+`pending_art.csv` kind `trainers`, subkind `back_pics`: 6 rows, all to draw. Each row's `sw_subject` is the
 brief. Category: B2.
 
 ## Characters to do, and their mockups
@@ -91,8 +91,8 @@ the waist-up 64x64 and (b) 12x -> 64 directly, and compare.
 
 ## Palette (required: [`../PALETTES.md`](../PALETTES.md))
 
-- **Hardware (layer 1):** 4-5 frames of 64x64, 4bpp. The palette is **locked**: it is the file in
-  `game/graphics/trainers/palettes/` shared with the front pic (`leaf`, `red` take theirs from the PNG).
+- **Hardware (layer 1):** 4 frames of 64x64, 4bpp. The palette is **locked**: it is the file in
+  `game/graphics/trainers/palettes/` shared with the front pic.
 - **Theme (layer 2):** inherited from the front pic (the player is `alliance-dawn`).
 - **Post-processing:** `enforce raw.png back.png --bpp 4 --key auto --pal game/graphics/trainers/palettes/<name>.pal`
   for every frame, then `check back.png --pal ...`. Never write a new palette here: it would recolour the front.

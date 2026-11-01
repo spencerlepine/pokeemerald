@@ -1,12 +1,12 @@
 key,value
 emerald_db,wiki/emerald
 emerald_db_commit,731ad5bfd6e6f265508d0efcca0ba42f9dcf5881
-entities,6966
+entities,6960
 net_new,27
 texts_auto,0
 texts_curated,11229
 texts_unchanged,0
-art_rows,4622
+art_rows,4616
 audio_rows,984
 ghost_rows,103
 human_todo_rows,150

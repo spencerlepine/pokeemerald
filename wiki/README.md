@@ -116,7 +116,7 @@ in `../game`. Every `source_file` is a path relative to `../game`.
 `tools/scan_game_assets.py` walks `../game` and writes `mapping/asset_inventory.csv` (every song, sound effect, cry and
 VFX, with its source line and where the game uses it). The Star Wars decision for each is hand-written in
 `mapping/audio.csv` and `mapping/vfx.csv`; the build warns about any inventory row without a decision, so a new asset
-cannot be missed. Vanilla images are complete: all 4,076 Emerald PNGs under `graphics/` and `data/tilesets/` are
+cannot be missed. Vanilla images are complete: all 4,070 Emerald PNGs still in the game under `graphics/` and `data/tilesets/` are
 rows in `pending_art.csv`. PNGs added by the Star Wars tools (battle-anim kits under `graphics/battle_anims/*/sw/`,
 new intro sprites) are not scanned; they are tracked by the `net:vfx-*` / art rows that asked for them.
 

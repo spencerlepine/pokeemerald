@@ -10213,30 +10213,6 @@ const struct Trainer gTrainers[] = {
         .party = NO_ITEM_DEFAULT_MOVES(sParty_Everett),
     },
 
-    [TRAINER_RED] =
-    {
-        .trainerClass = TRAINER_CLASS_RIVAL,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_RED,
-        .trainerName = _("RED"),
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = 0,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_Red),
-    },
-
-    [TRAINER_LEAF] =
-    {
-        .trainerClass = TRAINER_CLASS_RIVAL,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_LEAF,
-        .trainerName = _("LEAF"),
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = 0,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_Leaf),
-    },
-
     [TRAINER_BRENDAN_PLACEHOLDER] =
     {
         .trainerClass = TRAINER_CLASS_RS_PROTAG,

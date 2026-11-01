@@ -62,24 +62,6 @@ const struct SpriteFrameImage gTrainerBackPicTable_May[] =
     {gTrainerBackPic_May + TRAINER_PIC_SIZE * 3, TRAINER_PIC_SIZE},
 };
 
-const struct SpriteFrameImage gTrainerBackPicTable_Red[] =
-{
-    {gTrainerBackPic_Red + TRAINER_PIC_SIZE * 0, TRAINER_PIC_SIZE},
-    {gTrainerBackPic_Red + TRAINER_PIC_SIZE * 1, TRAINER_PIC_SIZE},
-    {gTrainerBackPic_Red + TRAINER_PIC_SIZE * 2, TRAINER_PIC_SIZE},
-    {gTrainerBackPic_Red + TRAINER_PIC_SIZE * 3, TRAINER_PIC_SIZE},
-    {gTrainerBackPic_Red + TRAINER_PIC_SIZE * 4, TRAINER_PIC_SIZE},
-};
-
-const struct SpriteFrameImage gTrainerBackPicTable_Leaf[] =
-{
-    {gTrainerBackPic_Leaf + TRAINER_PIC_SIZE * 0, TRAINER_PIC_SIZE},
-    {gTrainerBackPic_Leaf + TRAINER_PIC_SIZE * 1, TRAINER_PIC_SIZE},
-    {gTrainerBackPic_Leaf + TRAINER_PIC_SIZE * 2, TRAINER_PIC_SIZE},
-    {gTrainerBackPic_Leaf + TRAINER_PIC_SIZE * 3, TRAINER_PIC_SIZE},
-    {gTrainerBackPic_Leaf + TRAINER_PIC_SIZE * 4, TRAINER_PIC_SIZE},
-};
-
 const struct SpriteFrameImage gTrainerBackPicTable_RubySapphireBrendan[] =
 {
     {gTrainerBackPic_RubySapphireBrendan + TRAINER_PIC_SIZE * 0, TRAINER_PIC_SIZE},
