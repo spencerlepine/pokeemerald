@@ -308,6 +308,15 @@
 // vfx:force_push:begin
 #define ANIM_TAG_SW_FORCE_RING              (ANIM_SPRITES_START + 296)
 #define ANIM_TAG_SW_FORCE_DUST              (ANIM_SPRITES_START + 297)
+// vfx:force_choke:begin
+#define ANIM_TAG_SW_FORCE_GRIP              (ANIM_SPRITES_START + 298)
+// vfx:force_bolt:begin
+#define ANIM_TAG_SW_FORCE_ARC               (ANIM_SPRITES_START + 299)
+// vfx:turbolaser:begin
+#define ANIM_TAG_SW_TURBOLASER_BEAM         (ANIM_SPRITES_START + 300)
+// vfx:turbolaser:end
+// vfx:force_bolt:end
+// vfx:force_choke:end
 // vfx:force_push:end
 // vfx:blaster_shot:end
 // vfx:saber_slash:end
@@ -369,6 +378,9 @@
 #define BG_SOLAR_BEAM_CONTESTS 26
 // vfx:force_push:bg:begin
 #define BG_FORCE 27
+// vfx:force_choke:bg:begin
+#define BG_FORCE_DARK 28
+// vfx:force_choke:bg:end
 // vfx:force_push:bg:end
 
 // table ids for general animations (gBattleAnims_General)

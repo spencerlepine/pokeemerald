@@ -1313,6 +1313,15 @@ const struct CompressedSpriteSheet gBattleAnimPicTable[] =
     {gBattleAnimSpriteGfx_SW_ForceRing, 0x0800, ANIM_TAG_SW_FORCE_RING},
     {gBattleAnimSpriteGfx_SW_ForceDust, 0x0180, ANIM_TAG_SW_FORCE_DUST},
 // vfx:force_push:end
+// vfx:force_choke:begin
+    {gBattleAnimSpriteGfx_SW_ForceGrip, 0x0200, ANIM_TAG_SW_FORCE_GRIP},
+// vfx:force_choke:end
+// vfx:force_bolt:begin
+    {gBattleAnimSpriteGfx_SW_ForceArc, 0x0C00, ANIM_TAG_SW_FORCE_ARC},
+// vfx:force_bolt:end
+// vfx:turbolaser:begin
+    {gBattleAnimSpriteGfx_SW_TurbolaserBeam, 0x0800, ANIM_TAG_SW_TURBOLASER_BEAM},
+// vfx:turbolaser:end
 };
 
 const struct CompressedSpritePalette gBattleAnimPaletteTable[] =
@@ -1621,6 +1630,15 @@ const struct CompressedSpritePalette gBattleAnimPaletteTable[] =
     {gBattleAnimSpritePal_SW_ForceRing, ANIM_TAG_SW_FORCE_RING},
     {gBattleAnimSpritePal_SW_ForceRing, ANIM_TAG_SW_FORCE_DUST},
 // vfx:force_push:pal:end
+// vfx:force_choke:pal:begin
+    {gBattleAnimSpritePal_SW_ForceGrip, ANIM_TAG_SW_FORCE_GRIP},
+// vfx:force_choke:pal:end
+// vfx:force_bolt:pal:begin
+    {gBattleAnimSpritePal_SW_ForceArc, ANIM_TAG_SW_FORCE_ARC},
+// vfx:force_bolt:pal:end
+// vfx:turbolaser:pal:begin
+    {gBattleAnimSpritePal_SW_TurbolaserBeam, ANIM_TAG_SW_TURBOLASER_BEAM},
+// vfx:turbolaser:pal:end
 };
 
 const struct BattleAnimBackground gBattleAnimBackgroundTable[] =
@@ -1655,4 +1673,7 @@ const struct BattleAnimBackground gBattleAnimBackgroundTable[] =
 // vfx:force_push:bg:begin
     [BG_FORCE] = {gBattleAnimBgImage_SW_Force, gBattleAnimBgPalette_SW_Force, gBattleAnimBgTilemap_SW_Force},
 // vfx:force_push:bg:end
+// vfx:force_choke:bg:begin
+    [BG_FORCE_DARK] = {gBattleAnimBgImage_SW_ForceDark, gBattleAnimBgPalette_SW_ForceDark, gBattleAnimBgTilemap_SW_ForceDark},
+// vfx:force_choke:bg:end
 };

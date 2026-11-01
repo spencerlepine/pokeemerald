@@ -5096,3 +5096,18 @@ extern const u32 gBattleAnimBgImage_SW_Force[];
 extern const u32 gBattleAnimBgPalette_SW_Force[];
 extern const u32 gBattleAnimBgTilemap_SW_Force[];
 // vfx:force_push:end
+// vfx:force_choke:begin
+extern const u32 gBattleAnimSpriteGfx_SW_ForceGrip[];
+extern const u32 gBattleAnimSpritePal_SW_ForceGrip[];
+extern const u32 gBattleAnimBgImage_SW_ForceDark[];
+extern const u32 gBattleAnimBgPalette_SW_ForceDark[];
+extern const u32 gBattleAnimBgTilemap_SW_ForceDark[];
+// vfx:force_choke:end
+// vfx:force_bolt:begin
+extern const u32 gBattleAnimSpriteGfx_SW_ForceArc[];
+extern const u32 gBattleAnimSpritePal_SW_ForceArc[];
+// vfx:force_bolt:end
+// vfx:turbolaser:begin
+extern const u32 gBattleAnimSpriteGfx_SW_TurbolaserBeam[];
+extern const u32 gBattleAnimSpritePal_SW_TurbolaserBeam[];
+// vfx:turbolaser:end

@@ -4669,35 +4669,63 @@ Move_DRAGON_DANCE:
 	delay 1
 	end
 
+@ vfx:force_bolt:begin
 Move_SHOCK_WAVE:
+	loadspritegfx ANIM_TAG_SW_FORCE_ARC
 	loadspritegfx ANIM_TAG_ELECTRIC_ORBS
-	loadspritegfx ANIM_TAG_CIRCLE_OF_LIGHT
-	loadspritegfx ANIM_TAG_SPARK
-	loadspritegfx ANIM_TAG_LIGHTNING
-	monbg ANIM_ATTACKER
+	loadspritegfx ANIM_TAG_SW_BLASTER_SMOKE
+	monbg ANIM_TARGET
 	setalpha 12, 8
-	simple_palette_blend selector=F_PAL_BG, delay=2, initial_blend_y=0, target_blend_y=4, color=RGB_BLACK
-	waitforvisualfinish
+	@ charge: dark-side backdrop, energy collapses into the attacker
+	fadetobg BG_FORCE_DARK
+	waitbgfadeout
+	createvisualtask AnimTask_SetPsychicBackground, 5
+	waitbgfadein
 	createvisualtask AnimTask_ElectricChargingParticles, 2, ANIM_ATTACKER, 20, 0, 2
 	playsewithpan SE_M_CHARGE, SOUND_PAN_ATTACKER
-	delay 12
-	createsprite gGrowingShockWaveOrbSpriteTemplate, ANIM_ATTACKER, 2
-	delay 30
-	createvisualtask AnimTask_ShockWaveProgressingBolt, 5
-	delay 12
-	waitforvisualfinish
-	createvisualtask AnimTask_ShockWaveLightning, 5
-	playsewithpan SE_M_TRI_ATTACK2, SOUND_PAN_TARGET
-	waitforvisualfinish
-	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 0, 6, 18, 1
-	createvisualtask AnimTask_BlendBattleAnimPal, 5, F_PAL_BG, 3, 16, 0, RGB_WHITE
-	createvisualtask AnimTask_BlendBattleAnimPal, 5, F_PAL_TARGET, 0, 16, 16, RGB_BLACK
+	createvisualtask AnimTask_BlendMonInAndOut, 5, ANIM_ATTACKER, RGB(20, 24, 31), 10, 2, 2
+	delay 24
+	@ arcs: three forked arcs crawl from the attacker to the target
+	loopsewithpan SE_M_THUNDERBOLT, SOUND_PAN_TARGET, 9, 4	@ placeholder for SE_FORCE_LIGHTNING (net:se-force-lightning)
+	createsprite gForceArcSpriteTemplate, ANIM_TARGET, 3, 0, 0, 36, 0
+	invert_screen_color scenery=TRUE, attacker=TRUE, target=TRUE
+	delay 1
+	invert_screen_color scenery=TRUE, attacker=TRUE, target=TRUE
+	createvisualtask AnimTask_ShakeMon, 5, ANIM_TARGET, 2, 0, 18, 1
+	delay 3
+	createsprite gForceArcSpriteTemplate, ANIM_TARGET, 3, -10, -8, 32, 1
 	delay 4
-	createvisualtask AnimTask_BlendBattleAnimPal, 5, F_PAL_TARGET, 0, 0, 0, RGB_BLACK
+	createsprite gForceArcSpriteTemplate, ANIM_TARGET, 3, 10, 6, 28, 2
+	delay 4
+	invert_screen_color scenery=TRUE, attacker=TRUE, target=TRUE
+	delay 1
+	invert_screen_color scenery=TRUE, attacker=TRUE, target=TRUE
+	delay 11
+	invert_screen_color scenery=TRUE, attacker=TRUE, target=TRUE
+	delay 1
+	invert_screen_color scenery=TRUE, attacker=TRUE, target=TRUE
+	delay 12
+	@ impact: white flashes, the pattern shake, a moment of black, smoke
+	playsewithpan SE_M_TRI_ATTACK2, SOUND_PAN_TARGET
+	createvisualtask AnimTask_BlendMonInAndOut, 5, ANIM_TARGET, RGB_WHITE, 12, 2, 1
+	createvisualtask AnimTask_ShakeTargetInPattern, 2, 30, 3, TRUE, 0
+	delay 8
+	simple_palette_blend selector=F_PAL_TARGET, delay=0, initial_blend_y=8, target_blend_y=8, color=RGB_BLACK
+	delay 12
+	simple_palette_blend selector=F_PAL_TARGET, delay=1, initial_blend_y=8, target_blend_y=0, color=RGB_BLACK
+	createsprite gBlasterSmokeSpriteTemplate, ANIM_TARGET, 2, -6, 2, -1
+	delay 6
+	createsprite gBlasterSmokeSpriteTemplate, ANIM_TARGET, 2, 6, 0, 1
 	waitforvisualfinish
-	clearmonbg ANIM_ATTACKER
+	clearmonbg ANIM_TARGET
 	blendoff
+	delay 1
+	restorebg
+	waitbgfadeout
+	setarg 7, 0xFFFF
+	waitbgfadein
 	end
+@ vfx:force_bolt:end
 
 Move_HARDEN:
 	loopsewithpan SE_M_HARDEN, SOUND_PAN_ATTACKER, 28, 2
@@ -5483,6 +5511,65 @@ Move_CRUNCH:
 	restorebg
 	waitbgfadein
 	end
+
+@ vfx:force_choke:begin
+Move_FORCE_CHOKE:
+	loadspritegfx ANIM_TAG_SW_FORCE_GRIP
+	loadspritegfx ANIM_TAG_SW_FORCE_DUST
+	monbg ANIM_TARGET
+	setalpha 12, 8
+	@ reach: the arena falls to the dark side, the attacker leans in
+	fadetobg BG_FORCE_DARK
+	waitbgfadeout
+	createvisualtask AnimTask_SetPsychicBackground, 5
+	waitbgfadein
+	loopsewithpan SE_M_BITE, SOUND_PAN_TARGET, 16, 6	@ placeholder for SE_FORCE_CHOKE (net:se-force-choke)
+	createvisualtask AnimTask_SW_Knockback, 5, ANIM_ATTACKER, -6, 8, 86, 10
+	delay 10
+	@ lift: the target rises off the ground and leans back
+	createvisualtask AnimTask_SW_Lift, 5, ANIM_TARGET, 14, 30, 64, 4
+	createvisualtask AnimTask_RotateMonSpriteToSide, 2, 8, -256, ANIM_TARGET, 0
+	delay 20
+	createsprite gForceGripSpriteTemplate, ANIM_TARGET, 4, -8, -12, 1, 0
+	delay 20
+	@ squeeze: shaking in the air, darkening, the grip clenches three times
+	createvisualtask AnimTask_ShakeMonInPlace, 2, ANIM_TARGET, 2, 0, 24, 1
+	simple_palette_blend selector=F_PAL_TARGET, delay=2, initial_blend_y=0, target_blend_y=7, color=RGB_BLACK
+	delay 10
+	playsewithpan SE_M_BIND, SOUND_PAN_TARGET
+	invert_screen_color scenery=TRUE, attacker=TRUE, target=TRUE
+	delay 1
+	invert_screen_color scenery=TRUE, attacker=TRUE, target=TRUE
+	delay 15
+	playsewithpan SE_M_BIND, SOUND_PAN_TARGET
+	invert_screen_color scenery=TRUE, attacker=TRUE, target=TRUE
+	delay 1
+	invert_screen_color scenery=TRUE, attacker=TRUE, target=TRUE
+	delay 15
+	playsewithpan SE_M_BIND, SOUND_PAN_TARGET
+	invert_screen_color scenery=TRUE, attacker=TRUE, target=TRUE
+	delay 1
+	invert_screen_color scenery=TRUE, attacker=TRUE, target=TRUE
+	delay 12
+	@ drop: it falls, hits the floor, dust
+	playsewithpan SE_M_TAKE_DOWN, SOUND_PAN_TARGET
+	createvisualtask AnimTask_RotateMonSpriteToSide, 2, 8, -256, ANIM_TARGET, 1
+	delay 4
+	createvisualtask AnimTask_ShakeMon, 5, ANIM_TARGET, 0, 4, 6, 1
+	createsprite gForceDustSpriteTemplate, ANIM_TARGET, 2, -14, 18, 1, 0
+	createsprite gForceDustSpriteTemplate, ANIM_TARGET, 2, 12, 20, 1, 0
+	simple_palette_blend selector=F_PAL_TARGET, delay=2, initial_blend_y=7, target_blend_y=0, color=RGB_BLACK
+	waitforvisualfinish
+	clearmonbg ANIM_TARGET
+	blendoff
+	delay 1
+	restorebg
+	waitbgfadeout
+	setarg 7, 0xFFFF
+	waitbgfadein
+	end
+@ vfx:force_choke:end
+
 
 Move_CLAMP:
 	loadspritegfx ANIM_TAG_CLAMP
@@ -8512,55 +8599,75 @@ SweetScentEffect:
 	delay 2
 	return
 
+@ vfx:turbolaser:begin
 Move_HYPER_BEAM:
-	loadspritegfx ANIM_TAG_ORBS
-	simple_palette_blend selector=F_PAL_BG, delay=4, initial_blend_y=0, target_blend_y=16, color=RGB_BLACK
+	loadspritegfx ANIM_TAG_SW_TURBOLASER_BEAM
+	loadspritegfx ANIM_TAG_EXPLOSION
+	loadspritegfx ANIM_TAG_SW_BLASTER_SMOKE
+	@ charge: lights out, green energy gathers at the attacker
+	simple_palette_blend selector=F_PAL_BG, delay=3, initial_blend_y=0, target_blend_y=16, color=RGB_BLACK
 	waitforvisualfinish
+	playsewithpan SE_M_CHARGE, SOUND_PAN_ATTACKER	@ placeholder for SE_TURBOLASER_CHARGE (net:se-turbolaser-charge)
+	createsprite gTurbolaserChargeSpriteTemplate, ANIM_ATTACKER, 3, 22, -4, 0, 0
+	createvisualtask AnimTask_BlendMonInAndOut, 5, ANIM_ATTACKER, RGB(8, 31, 10), 10, 3, 3
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_ATTACKER, 1, 0, 22, 1
+	delay 44
+	@ fire: the beam streams in, the arena shakes for the whole burst
+	createsoundtask SoundTask_LoopSEAdjustPanning, SE_M_HYPER_BEAM, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, 1, 15, 0, 5	@ placeholder for SE_TURBOLASER (net:se-turbolaser)
+	createvisualtask AnimTask_HorizontalShake, 5, MAX_BATTLERS_COUNT + 1, 3, 60
+	call TurbolaserBurst
+	call TurbolaserBurst
+	@ impact: the target blinds white and shakes; explosions pop on it
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 4, 0, 40, 1
+	createvisualtask AnimTask_BlendBattleAnimPal, 10, F_PAL_TARGET, 2, 0, 11, RGB(25, 31, 25)
+	playsewithpan SE_M_EXPLOSION, SOUND_PAN_TARGET
+	createsprite gExplosionSpriteTemplate, ANIM_ATTACKER, 3, 0, -4, 1, 1
+	call TurbolaserBurst
+	delay 2
+	playsewithpan SE_M_EXPLOSION, SOUND_PAN_TARGET
+	createsprite gExplosionSpriteTemplate, ANIM_ATTACKER, 3, 14, -14, 1, 1
+	call TurbolaserBurst
+	delay 2
+	playsewithpan SE_M_EXPLOSION, SOUND_PAN_TARGET
+	createsprite gExplosionSpriteTemplate, ANIM_ATTACKER, 3, -10, 6, 1, 1
+	call TurbolaserBurst
+	delay 2
+	playsewithpan SE_M_EXPLOSION, SOUND_PAN_TARGET
+	createsprite gExplosionSpriteTemplate, ANIM_ATTACKER, 3, 8, 10, 1, 1
+	call TurbolaserBurst
+	delay 2
+	playsewithpan SE_M_EXPLOSION, SOUND_PAN_TARGET
+	createsprite gExplosionSpriteTemplate, ANIM_ATTACKER, 3, -14, -12, 1, 1
+	call TurbolaserBurst
+	delay 2
+	playsewithpan SE_M_EXPLOSION, SOUND_PAN_TARGET
+	createsprite gExplosionSpriteTemplate, ANIM_ATTACKER, 3, 4, 0, 1, 1
+	call TurbolaserBurst
+	delay 2
+	call TurbolaserBurst
+	call TurbolaserBurst
+	createvisualtask AnimTask_BlendBattleAnimPal, 10, F_PAL_TARGET, 2, 11, 0, RGB(25, 31, 25)
+	@ recharge: the beam stops, smoke, lights up
 	delay 10
-	playsewithpan SE_M_HYPER_BEAM, SOUND_PAN_ATTACKER
-	createvisualtask AnimTask_ShakeMon2, 2, ANIM_ATTACKER, 1, 0, 4, 1
+	createsprite gBlasterSmokeSpriteTemplate, ANIM_TARGET, 2, -8, 2, -1
+	delay 4
+	createsprite gBlasterSmokeSpriteTemplate, ANIM_TARGET, 2, 6, -2, 1
 	waitforvisualfinish
-	delay 30
-	createsoundtask SoundTask_LoopSEAdjustPanning, SE_M_HYPER_BEAM2, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, 1, 15, 0, 5
-	createvisualtask AnimTask_ShakeMon, 2, ANIM_ATTACKER, 0, 4, 50, 1
-	flash_anim_tag_with_color tag=ANIM_TAG_ORBS, delay=1, num_blends=12, color1=RGB_RED, blend_y1=16, color2=RGB_BLACK, blend_y2=0
-	call HyperBeamOrbs
-	call HyperBeamOrbs
-	call HyperBeamOrbs
-	call HyperBeamOrbs
-	call HyperBeamOrbs
-	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 4, 0, 50, 1
-	createvisualtask AnimTask_BlendBattleAnimPal, 10, F_PAL_TARGET, 2, 0, 11, RGB(25, 25, 25)
-	call HyperBeamOrbs
-	call HyperBeamOrbs
-	call HyperBeamOrbs
-	call HyperBeamOrbs
-	call HyperBeamOrbs
-	call HyperBeamOrbs
-	call HyperBeamOrbs
-	call HyperBeamOrbs
-	call HyperBeamOrbs
-	call HyperBeamOrbs
-	call HyperBeamOrbs
-	call HyperBeamOrbs
-	call HyperBeamOrbs
-	call HyperBeamOrbs
-	call HyperBeamOrbs
-	call HyperBeamOrbs
-	call HyperBeamOrbs
-	call HyperBeamOrbs
-	call HyperBeamOrbs
-	call HyperBeamOrbs
-	call HyperBeamOrbs
-	createvisualtask AnimTask_BlendBattleAnimPal, 10, F_PAL_TARGET, 2, 11, 0, RGB(25, 25, 25)
+	simple_palette_blend selector=F_PAL_BG, delay=3, initial_blend_y=16, target_blend_y=0, color=RGB_BLACK
 	waitforvisualfinish
-	simple_palette_blend selector=F_PAL_BG, delay=4, initial_blend_y=16, target_blend_y=0, color=RGB_BLACK
 	end
-HyperBeamOrbs:
-	create_hyper_beam_orb_sprite ANIM_TARGET, 2
-	create_hyper_beam_orb_sprite ANIM_TARGET, 2
+TurbolaserBurst:
+	createsprite gTurbolaserSegmentSpriteTemplate, ANIM_TARGET, 2, 20, -4, 0, 0, 8
+	delay 1
+	createsprite gTurbolaserSegmentSpriteTemplate, ANIM_TARGET, 2, 20, -2, 2, 2, 8
+	delay 1
+	createsprite gTurbolaserSegmentSpriteTemplate, ANIM_TARGET, 2, 20, -4, -2, -1, 8
+	delay 1
+	createsprite gTurbolaserSegmentSpriteTemplate, ANIM_TARGET, 2, 20, -3, 1, -2, 8
 	delay 1
 	return
+	end
+@ vfx:turbolaser:end
 
 Move_FLATTER:
 	loadspritegfx ANIM_TAG_SPOTLIGHT

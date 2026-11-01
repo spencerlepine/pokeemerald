@@ -1557,3 +1557,18 @@ const u32 gBattleAnimBgImage_SW_Force[] = INCGFX_U32("graphics/battle_anims/back
 const u32 gBattleAnimBgPalette_SW_Force[] = INCGFX_U32("graphics/battle_anims/backgrounds/sw/force.png", ".gbapal.lz");
 const u32 gBattleAnimBgTilemap_SW_Force[] = INCGFX_U32("graphics/battle_anims/backgrounds/sw/force.bin", ".lz");
 // vfx:force_push:end
+// vfx:force_choke:begin
+const u32 gBattleAnimSpriteGfx_SW_ForceGrip[] = INCGFX_U32("graphics/battle_anims/sprites/sw/force_grip.png", ".4bpp.lz");
+const u32 gBattleAnimSpritePal_SW_ForceGrip[] = INCGFX_U32("graphics/battle_anims/sprites/sw/force_grip.png", ".gbapal.lz");
+const u32 gBattleAnimBgImage_SW_ForceDark[] = INCGFX_U32("graphics/battle_anims/backgrounds/sw/force_dark.png", ".4bpp.lz");
+const u32 gBattleAnimBgPalette_SW_ForceDark[] = INCGFX_U32("graphics/battle_anims/backgrounds/sw/force_dark.png", ".gbapal.lz");
+const u32 gBattleAnimBgTilemap_SW_ForceDark[] = INCGFX_U32("graphics/battle_anims/backgrounds/sw/force_dark.bin", ".lz");
+// vfx:force_choke:end
+// vfx:force_bolt:begin
+const u32 gBattleAnimSpriteGfx_SW_ForceArc[] = INCGFX_U32("graphics/battle_anims/sprites/sw/force_arc.png", ".4bpp.lz");
+const u32 gBattleAnimSpritePal_SW_ForceArc[] = INCGFX_U32("graphics/battle_anims/sprites/sw/force_arc.png", ".gbapal.lz");
+// vfx:force_bolt:end
+// vfx:turbolaser:begin
+const u32 gBattleAnimSpriteGfx_SW_TurbolaserBeam[] = INCGFX_U32("graphics/battle_anims/sprites/sw/turbolaser_beam.png", ".4bpp.lz");
+const u32 gBattleAnimSpritePal_SW_TurbolaserBeam[] = INCGFX_U32("graphics/battle_anims/sprites/sw/turbolaser_beam.png", ".gbapal.lz");
+// vfx:turbolaser:end
