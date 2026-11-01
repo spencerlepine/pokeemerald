@@ -115,8 +115,9 @@ in `../game`. Every `source_file` is a path relative to `../game`.
 `tools/scan_game_assets.py` walks `../game` and writes `mapping/asset_inventory.csv` (every song, sound effect, cry and
 VFX, with its source line and where the game uses it). The Star Wars decision for each is hand-written in
 `mapping/audio.csv` and `mapping/vfx.csv`; the build warns about any inventory row without a decision, so a new asset
-cannot be missed. Images were already complete: all 4,076 PNGs under `graphics/` and `data/tilesets/` are rows in
-`pending_art.csv` (check: every PNG path in `../game` is a `path` there).
+cannot be missed. Vanilla images are complete: all 4,076 Emerald PNGs under `graphics/` and `data/tilesets/` are
+rows in `pending_art.csv`. PNGs added by the Star Wars tools (battle-anim kits under `graphics/battle_anims/*/sw/`,
+new intro sprites) are not scanned; they are tracked by the `net:vfx-*` / art rows that asked for them.
 
 The current pass (all `DRAFT`, waiting for the owner's review):
 
@@ -125,12 +126,13 @@ The current pass (all `DRAFT`, waiting for the owner's review):
   Death Star site, hyperspace travel. Briefs ask for original music, never quotes of the film scores.
 - **Sound effects** (269 + 51 bard phonemes): 277 reused as is (UI, field, most move sounds, the phonemes),
   26 mapped (capture pods, comlink, blast doors, hover-bike, kyber hum, the opening freighter), 17 ghosts
-  (never played). 17 net-new: blaster bolt, lightsaber ignite / swing / clash / hum, Force push / choke / lightning,
+  (never played). 27 net-new (17 below plus the 10 new move-effect sounds listed in
+  `bible/MOVE_EFFECTS.md` section 7): blaster bolt, lightsaber ignite / swing / clash / hum, Force push / choke / lightning,
   turbolaser, ion cannon, vibroblade, slicer spike, hyperspace jump, astromech chatter, Imperial alarm, Vader's
   breathing, TIE flyby. Each new move sound replaces the old one only in that move's animation.
 - **Cries** (388): one per companion (droids get beeps and servos), derived from `mapping/species.csv`; 2 ghosts
   (unused slots).
-- **VFX** (162 + 8 net-new): most animations are kept and only their sprites are redrawn (already in
+- **VFX** (162 + 9 net-new): most animations are kept and only their sprites are redrawn (already in
   `pending_art.csv`). Mapped: transitions that draw Pokémon shapes or logos in code (capture pod, Cartel and Imperial
   crests, titans, Aurebesh instead of Braille, the Grand Arena logo), the Bacta Center heal, the EXOGORTH spotlight
   and the vault puzzle. Net-new: hyperspace jump, Vader and Boba Fett transitions, an overworld lightsaber, a field
