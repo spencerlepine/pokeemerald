@@ -25,7 +25,7 @@ Move_PSYCHIC:
 	@ impact: shoved back, squashed, dust at its feet, shaken; then it slides home
 	playsewithpan SE_M_TAKE_DOWN, SOUND_PAN_TARGET
 	createvisualtask AnimTask_SW_Knockback, 5, ANIM_TARGET, 20, 6, 14, 20
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, 24, -24, 8, ANIM_TARGET, 1
+	createvisualtask AnimTask_ScaleMonAndRestore, 5, -20, 20, 8, ANIM_TARGET, 1
 	createvisualtask AnimTask_BlendMonInAndOut, 5, ANIM_TARGET, RGB_WHITE, 12, 1, 1
 	createsprite gForceDustSpriteTemplate, ANIM_TARGET, 2, -14, 18, 1, 0
 	createsprite gForceDustSpriteTemplate, ANIM_TARGET, 2, 10, 20, 1, 0

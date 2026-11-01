@@ -1,0 +1,4 @@
+# force_push in the ROM
+frames filmed: 450 (every 2nd game frame)
+frames where the new art is on screen: 170
+first f00760.png, last f01098.png (340 game frames)
