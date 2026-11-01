@@ -1,0 +1,478 @@
+name: archie
+description: JABBA THE HUTT on his repulsor sled (replaces Archie).
+kit: person16x32
+replaces: graphics/object_events/pics/people/team_aqua/archie.png
+graphics_info: Archie
+notes: 'Group 5, B style (alien: drawn whole over Archie''s frames): olive Hutt slug with a tan belly, wide mouth, orange slit eyes and stubby arms, sitting on a blue-grey repulsor sled with red running
+  lights; the sled bobs and its glow alternates as he moves.'
+palette: npc_1
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_1
+shade: true
+materials:
+  H: c@
+  J: c
+  A: c
+  L: c
+  b: s@
+  S: b!
+  T: b
+legend:
+  k: 15
+  o: 3
+  M: 7
+  r: 6
+  g: 8
+  W: 14
+  f: 3
+  h: 1
+  u: 8
+  v: 9
+accept:
+  hair_rows: 'a Hutt: no hair'
+  eye_row: slit eyes in a slug head
+  step_change: 'he rides a hovering sled: no legs, the sled bobs and the glow alternates'
+  height: the sled adds rows
+  skin_tones: Hutt hide is ramp C; the belly uses the skin ramp
+base_sheet: graphics/object_events/pics/people/team_aqua/archie.png
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        ................
+
+        ................
+
+        .....HHHHHH.....
+
+        ...HHHWHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        .HHHokHHHHkoHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHMMMMMMMMMMHH.
+
+        ..HHHHHHHHHHHH..
+
+        .AJJJbhhhhbJJJA.
+
+        AAJJbbbbbbbbJJAA
+
+        .JJJffffffffJJJ.
+
+        JJJJbbbbbbbbJJJJ
+
+        JJJJbbbbbbbbJJJJ
+
+        JJJJJffffffJJJJJ
+
+        uuJJJJJJJJJJJJLL
+
+        vvvvvvvvvvvvvLLv
+
+        TTTTTTTTTTTTTTTT
+
+        TrTTTTTTTTTTTTrT
+
+        .TTTTTTTTTTTTTT.'
+  down_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        ................
+
+        ................
+
+        .....HHHHHH.....
+
+        ...HHHWHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        .HHHokHHHHkoHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHMMMMMMMMMMHH.
+
+        ..HHHHHHHHHHHH..
+
+        .AJJJbhhhhbJJJA.
+
+        AAJJbbbbbbbbJJAA
+
+        .JJJffffffffJJJ.
+
+        JJJJbbbbbbbbJJJJ
+
+        JJJJbbbbbbbbJJJJ
+
+        JJJJJffffffJJJJJ
+
+        uuJJJJJJJJJJJJLL
+
+        vvvvvvvvvvvvvLLv
+
+        TTTTTTTTTTTTTTTT
+
+        TrTTTTTTTTTTTTrT
+
+        .TTTTTTTTTTTTTT.'
+    - x: 2
+      y: 31
+      rows: gg__________
+    - x: 0
+      y: 19
+      rows: '_A
+
+        AA
+
+        _A
+
+        _.'
+  down_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        ................
+
+        ................
+
+        .....HHHHHH.....
+
+        ...HHHWHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        .HHHokHHHHkoHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHMMMMMMMMMMHH.
+
+        ..HHHHHHHHHHHH..
+
+        .AJJJbhhhhbJJJA.
+
+        AAJJbbbbbbbbJJAA
+
+        .JJJffffffffJJJ.
+
+        JJJJbbbbbbbbJJJJ
+
+        JJJJbbbbbbbbJJJJ
+
+        JJJJJffffffJJJJJ
+
+        uuJJJJJJJJJJJJLL
+
+        vvvvvvvvvvvvvLLv
+
+        TTTTTTTTTTTTTTTT
+
+        TrTTTTTTTTTTTTrT
+
+        .TTTTTTTTTTTTTT.'
+    - x: 2
+      y: 31
+      rows: __________gg
+    - x: 14
+      y: 19
+      rows: 'A_
+
+        AA
+
+        A_
+
+        ._'
+  up:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        ................
+
+        ................
+
+        .....HHHHHH.....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        ..HHHHHHHHHHHH..
+
+        .AHHHHHHHHHHHHA.
+
+        AAHHHHHHHHHHHHAA
+
+        .HHHHHHHHHHHHHH.
+
+        HHHHHHHHHHHHHHHH
+
+        HHHHHHHHHHHHHHHH
+
+        HHHHHHHHHHHHHHHH
+
+        uuHHHHHHHHHHHHuu
+
+        vvvvvvvvLLLLLLvv
+
+        TTTTTTTTTTTTTTTT
+
+        TrTTTTTTTTTTTTrT
+
+        .TTTTTTTTTTTTTT.'
+  up_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        ................
+
+        ................
+
+        .....HHHHHH.....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        ..HHHHHHHHHHHH..
+
+        .AHHHHHHHHHHHHA.
+
+        AAHHHHHHHHHHHHAA
+
+        .HHHHHHHHHHHHHH.
+
+        HHHHHHHHHHHHHHHH
+
+        HHHHHHHHHHHHHHHH
+
+        HHHHHHHHHHHHHHHH
+
+        uuHHHHHHHHHHHHuu
+
+        vvvvvvvvLLLLLLvv
+
+        TTTTTTTTTTTTTTTT
+
+        TrTTTTTTTTTTTTrT
+
+        .TTTTTTTTTTTTTT.'
+    - x: 2
+      y: 31
+      rows: gg__________
+  up_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        ................
+
+        ................
+
+        .....HHHHHH.....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        ..HHHHHHHHHHHH..
+
+        .AHHHHHHHHHHHHA.
+
+        AAHHHHHHHHHHHHAA
+
+        .HHHHHHHHHHHHHH.
+
+        HHHHHHHHHHHHHHHH
+
+        HHHHHHHHHHHHHHHH
+
+        HHHHHHHHHHHHHHHH
+
+        uuHHHHHHHHHHHHuu
+
+        vvvvvvvvLLLLLLvv
+
+        TTTTTTTTTTTTTTTT
+
+        TrTTTTTTTTTTTTrT
+
+        .TTTTTTTTTTTTTT.'
+    - x: 2
+      y: 31
+      rows: __________gg
+  left:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        ................
+
+        ................
+
+        ....HHHHHH......
+
+        ..HHHWHHHHHH....
+
+        .HHHHHHHHHHHH...
+
+        HokHHHHHHHHHH...
+
+        HHHHHHHHHHHHH...
+
+        MMMMMHHHHHHHH...
+
+        .HHHHHHHHHHHH...
+
+        ..hhbAAHHHHHHH..
+
+        ..bbbbAAHHHHHH..
+
+        .ffffffHHHHHHH..
+
+        .bbbbbbHHHHHHHH.
+
+        .bbbbbbHHHHHHHH.
+
+        ..ffffHHHHHHHHLL
+
+        uuuuuHHHHHHHHHLL
+
+        vvvvvvvvvvvvvLLv
+
+        TTTTTTTTTTTTTTTT
+
+        TrTTTTTTTTTTTTTT
+
+        .TTTTTTTTTTTTTT.'
+  left_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        ................
+
+        ................
+
+        ....HHHHHH......
+
+        ..HHHWHHHHHH....
+
+        .HHHHHHHHHHHH...
+
+        HokHHHHHHHHHH...
+
+        HHHHHHHHHHHHH...
+
+        MMMMMHHHHHHHH...
+
+        .HHHHHHHHHHHH...
+
+        ..hhbAAHHHHHHH..
+
+        ..bbbbAAHHHHHH..
+
+        .ffffffHHHHHHH..
+
+        .bbbbbbHHHHHHHH.
+
+        .bbbbbbHHHHHHHH.
+
+        ..ffffHHHHHHHHLL
+
+        uuuuuHHHHHHHHHLL
+
+        vvvvvvvvvvvvvLLv
+
+        TTTTTTTTTTTTTTTT
+
+        TrTTTTTTTTTTTTTT
+
+        .TTTTTTTTTTTTTT.'
+    - x: 2
+      y: 31
+      rows: gg__________
+  left_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        ................
+
+        ................
+
+        ....HHHHHH......
+
+        ..HHHWHHHHHH....
+
+        .HHHHHHHHHHHH...
+
+        HokHHHHHHHHHH...
+
+        HHHHHHHHHHHHH...
+
+        MMMMMHHHHHHHH...
+
+        .HHHHHHHHHHHH...
+
+        ..hhbAAHHHHHHH..
+
+        ..bbbbAAHHHHHH..
+
+        .ffffffHHHHHHH..
+
+        .bbbbbbHHHHHHHH.
+
+        .bbbbbbHHHHHHHH.
+
+        ..ffffHHHHHHHHLL
+
+        uuuuuHHHHHHHHHLL
+
+        vvvvvvvvvvvvvLLv
+
+        TTTTTTTTTTTTTTTT
+
+        TrTTTTTTTTTTTTTT
+
+        .TTTTTTTTTTTTTT.'
+    - x: 2
+      y: 31
+      rows: __________gg

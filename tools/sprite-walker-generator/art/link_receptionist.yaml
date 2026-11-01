@@ -1,0 +1,624 @@
+name: link_receptionist
+description: HOLONET CLUB receptionist in a sky-blue uniform with a comm headset (replaces the Link Receptionist).
+kit: person16x32
+replaces: graphics/object_events/pics/people/link_receptionist.png
+graphics_info: LinkReceptionist
+notes: 'Group 5, B style: her own bob and walk, the headband turned into a comm headset band, the dress into a sky-blue HoloNet uniform with a white collar, a rank plaque on the chest and a black belt.'
+palette: npc_1
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_1
+shade: true
+materials:
+  H: c
+  U: b
+  V: w/b
+legend:
+  k: 15
+  E: 10
+  P: 6
+  Q: 11
+accept: {}
+base_sheet: graphics/object_events/pics/people/link_receptionist.png
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 0
+      rows: '________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ______HHHH______
+
+        ____HHEEEEHH____
+
+        ___HEEEEEEEEH___
+
+        __HHEEHHHHEEHH__
+
+        _HHHHHHHHHHHHHH_
+
+        HHHHHHH____HHHHH
+
+        HHHHH_______HHHH
+
+        HHHH________HHHH
+
+        _HH__________HH_
+
+        __HH________HH__
+
+        ___UU______UU___
+
+        __UUUVV__VVUUU__
+
+        __UUUUVVVVUUUU__
+
+        ___U_PQUUUU_U___
+
+        ___kkkkkkkkkk___
+
+        __UUUUUUUUUUUU__
+
+        __UUUUUUUUUUUU__
+
+        ___UUUUUUUUUU___
+
+        ____UkkUUkkU____
+
+        ________________
+
+        ________________'
+  up:
+    patches:
+    - x: 0
+      y: 0
+      rows: '________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ______HHHH______
+
+        ____HHHHHHHH____
+
+        ___HHHHHHHHHH___
+
+        __HHHHHHHHHHHH__
+
+        _HHHHHHHHHHHHHH_
+
+        HHHHHHHHHHHHHHHH
+
+        HHHHHHHHHHHHHHHH
+
+        HHHHHHHHHHHHHHHH
+
+        _HHHHHHHHHHHHHH_
+
+        __HHHHHHHHHHHH__
+
+        ___UkkkkkkkkU___
+
+        __UUUUUUUUUUUU__
+
+        __UUUUUUUUUUUU__
+
+        ___U_UUUUUU_U___
+
+        ___UUUUUUUUUU___
+
+        __UUUUUUUUUUUU__
+
+        __UUUUUUUUUUUU__
+
+        ___UUUUUUUUUU___
+
+        ____UkkUUkkU____
+
+        ________________
+
+        ________________'
+  left:
+    patches:
+    - x: 0
+      y: 0
+      rows: '________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ______HHHH______
+
+        ____EEHHHHH_____
+
+        ___EEEEHHHHH____
+
+        ___HHEEEHHHHH___
+
+        __HHHHHHHHHHH___
+
+        ___HH__HHHHHHH__
+
+        _______HHHHHHH__
+
+        _______HHHHHHH__
+
+        _______HHHHHHH__
+
+        ________HHHHH___
+
+        _________kk_____
+
+        ____UVVVUU______
+
+        ___UUUUUUU______
+
+        ___UUUUUU_U_____
+
+        ____UU___kUU____
+
+        ___UUU___UUUU___
+
+        __UUUUU__UUUU___
+
+        ___UUUUUUUUU____
+
+        ____UUUkkUU_____
+
+        ________________
+
+        ________________'
+  down_a:
+    patches:
+    - x: 0
+      y: 0
+      rows: '________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ______HHHH______
+
+        ____HHEEEEHH____
+
+        ___HEEEEEEEEH___
+
+        __HHEEHHHHEEHH__
+
+        _HHHHHHHHHHHHHH_
+
+        HHHHHHH____HHHHH
+
+        HHHHH_______HHHH
+
+        HHHH________HHHH
+
+        _HH__________HH_
+
+        __HH________HH__
+
+        ___UU______U____
+
+        ___UUVV__VVUU___
+
+        ___UUUVVVVUUU___
+
+        ___U_UPQUUU_U___
+
+        ___UUkkkkkkk____
+
+        __UUUUUUUUUU____
+
+        __UUUUUUUUUUU___
+
+        ___UUUUUUUUUU___
+
+        ____UUkkUUU_____
+
+        ________________'
+  down_b:
+    patches:
+    - x: 0
+      y: 0
+      rows: '________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ______HHHH______
+
+        ____HHEEEEHH____
+
+        ___HEEEEEEEEH___
+
+        __HHEEHHHHEEHH__
+
+        _HHHHHHHHHHHHHH_
+
+        HHHHHHH____HHHHH
+
+        HHHHH_______HHHH
+
+        HHHH________HHHH
+
+        _HH__________HH_
+
+        __HH________HH__
+
+        ____U______UU___
+
+        ___UUVV__VVUU___
+
+        ___UUUVVVVUUU___
+
+        ___U_UUPQUU_U___
+
+        ____kkkkkkkUU___
+
+        ____UUUUUUUUUU__
+
+        ___UUUUUUUUUUU__
+
+        ___UUUUUUUUUU___
+
+        _____UUUkkUU____
+
+        ________________'
+  up_a:
+    patches:
+    - x: 0
+      y: 0
+      rows: '________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ______HHHH______
+
+        ____HHHHHHHH____
+
+        ___HHHHHHHHHH___
+
+        __HHHHHHHHHHHH__
+
+        _HHHHHHHHHHHHHH_
+
+        HHHHHHHHHHHHHHHH
+
+        HHHHHHHHHHHHHHHH
+
+        HHHHHHHHHHHHHHHH
+
+        _HHHHHHHHHHHHHH_
+
+        __HHHHHHHHHHHH__
+
+        ___Ukkkkkkkk____
+
+        __UUUUUUUUUUU___
+
+        ___UUUUUUUUUUU__
+
+        ___U_UUUUUU_UU__
+
+        ___UUUUUUUUU____
+
+        __UUUUUUUUUU____
+
+        __UUUUUUUUUUU___
+
+        ___UUUUUUUUUU___
+
+        ____UUkkUUU_____
+
+        ________________'
+  up_b:
+    patches:
+    - x: 0
+      y: 0
+      rows: '________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ______HHHH______
+
+        ____HHHHHHHH____
+
+        ___HHHHHHHHHH___
+
+        __HHHHHHHHHHHH__
+
+        _HHHHHHHHHHHHHH_
+
+        HHHHHHHHHHHHHHHH
+
+        HHHHHHHHHHHHHHHH
+
+        HHHHHHHHHHHHHHHH
+
+        _HHHHHHHHHHHHHH_
+
+        __HHHHHHHHHHHH__
+
+        ____kkkkkkkkU___
+
+        ___UUUUUUUUUUU__
+
+        __UUUUUUUUUUU___
+
+        __UU_UUUUUU_U___
+
+        ____UUUUUUUUU___
+
+        ____UUUUUUUUUU__
+
+        ___UUUUUUUUUUU__
+
+        ___UUUUUUUUUU___
+
+        _____UUUkkUU____
+
+        ________________'
+  left_a:
+    patches:
+    - x: 0
+      y: 0
+      rows: '________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ______HHHH______
+
+        ____EEHHHHH_____
+
+        ___EEEEHHHHH____
+
+        ___HHEEEHHHHH___
+
+        __HHHHHHHHHHH___
+
+        ___HH__HHHHHHH__
+
+        _______HHHHHHH__
+
+        _______HHHHHHH__
+
+        _______HHHHHHH__
+
+        ________HHHHH___
+
+        _________kk_____
+
+        ____UVVVUU______
+
+        ___UUUUUUU______
+
+        ___UUUUUU_U_____
+
+        ____U___kkUU____
+
+        ___UU___UUUUU___
+
+        __UUUU__UUUUU___
+
+        ____UUUUUUUU____
+
+        _____UUUUkk_____
+
+        ________________'
+  left_b:
+    patches:
+    - x: 0
+      y: 0
+      rows: '________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ______HHHH______
+
+        ____EEHHHHH_____
+
+        ___EEEEHHHHH____
+
+        ___HHEEEHHHHH___
+
+        __HHHHHHHHHHH___
+
+        ___HH__HHHHHHH__
+
+        _______HHHHHHH__
+
+        _______HHHHHHH__
+
+        _______HHHHHHH__
+
+        ________HHHHH___
+
+        _________kk_____
+
+        ____UVVVUU______
+
+        ___UUUUUUU______
+
+        ___UUUUUU_U_____
+
+        ____UU____UU____
+
+        ___UUUU___UUU___
+
+        __UUUUUU__UUU___
+
+        ___UUUUUUUU_____
+
+        ____kkUUU_______
+
+        ________________'

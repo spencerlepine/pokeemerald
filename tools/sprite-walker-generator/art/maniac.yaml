@@ -1,0 +1,624 @@
+name: maniac
+description: Beast maniac in a creature-print shirt and a fang necklace (replaces the Maniac).
+kit: person16x32
+replaces: graphics/object_events/pics/people/maniac.png
+graphics_info: Maniac
+notes: 'Group 5, B style: his own spiky hair and walk; red goggles, a yellow creature-print shirt with brown spots, a fang necklace, brown trousers.'
+palette: npc_2
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_2
+shade: true
+materials:
+  G: b
+  H: c
+  P: a
+  T: c
+legend:
+  k: 15
+  q: 7
+  W: 14
+accept: {}
+base_sheet: graphics/object_events/pics/people/maniac.png
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 0
+      rows: '________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ______HHHH______
+
+        ____HHHHHHHH____
+
+        ___HHHHHHHHHH___
+
+        __HHHHHHHHHHHH__
+
+        __HHHHH__HHHHH__
+
+        _HHHHH____HHHHH_
+
+        _HHH_GG__GG_HHH_
+
+        _HH_G_kGGk_G_HH_
+
+        _H___HH__HH___H_
+
+        _HH__________HH_
+
+        ___PPPW__WPPP___
+
+        __qPPP____qPPP__
+
+        __PPPPP__PPPPP__
+
+        ___PqPPPqPPPq___
+
+        ___PPPPPPPPPP___
+
+        ___TPPqPPPqPT___
+
+        __TTTTTTTTTTTT__
+
+        ___TTTTTTTTTT___
+
+        _____PPTTPP_____
+
+        ________________
+
+        ________________'
+  up:
+    patches:
+    - x: 0
+      y: 0
+      rows: '________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ______HHHH______
+
+        ____HHHHHHHH____
+
+        ___HHHHHHHHHH___
+
+        __HHHHHHHHHHHH__
+
+        __HHHHHHHHHHHH__
+
+        _HHHHHHHHHHHHHH_
+
+        _HHHHHHHHHHHHHH_
+
+        _HHHHHHHHHHHHHH_
+
+        _HHHHHHHHHHHHHH_
+
+        _HHHHHHHHHHHHHH_
+
+        ________________
+
+        __qP________PP__
+
+        __PPPPPPPPPPPP__
+
+        ___PqPPPqPPPq___
+
+        ___PPPPPPPPPP___
+
+        ___TPPqPPPqPT___
+
+        __TTTTTTTTTTTT__
+
+        ___TTTTTTTTTT___
+
+        _____PPTTPP_____
+
+        ________________
+
+        ________________'
+  left:
+    patches:
+    - x: 0
+      y: 0
+      rows: '________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ______HHHH______
+
+        ____HHHHHHHH____
+
+        ___HHHHHHHHHH___
+
+        __HHHHHHHHHHHH__
+
+        _____HHHHHHHHH__
+
+        ______HHHHHHHH__
+
+        ____GG_HHHHHHH__
+
+        ___G__G_HHHHHH__
+
+        ____HH__H__HHH__
+
+        ____________HH__
+
+        ________________
+
+        _______PPP______
+
+        ____PPPPPPP_____
+
+        ____qPPPqPPP____
+
+        ____PP___PPP____
+
+        ____TT___PqT____
+
+        _____TT__TTT____
+
+        _______TTTT_____
+
+        ______PPTTT_____
+
+        ________________
+
+        ________________'
+  down_a:
+    patches:
+    - x: 0
+      y: 0
+      rows: '________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ______HHHH______
+
+        ____HHHHHHHH____
+
+        ___HHHHHHHHHH___
+
+        __HHHHHHHHHHHH__
+
+        __HHHHH__HHHHH__
+
+        _HHHHH____HHHHH_
+
+        _HHH_GG__GG_HHH_
+
+        _HH_G_kGGk_G_HH_
+
+        _H___HH__HH___H_
+
+        _HH__________HH_
+
+        ___PPPW__WPPP___
+
+        ___PPP____qPP___
+
+        ___PPPP__PPPPP__
+
+        ___PqPPPqPPPqP__
+
+        ___PPPPPPPPP____
+
+        ___TPPqPPPqP____
+
+        ___TTTTTTTTT____
+
+        ____TTTTT_______
+
+        ______PP________
+
+        ________________'
+  down_b:
+    patches:
+    - x: 0
+      y: 0
+      rows: '________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ______HHHH______
+
+        ____HHHHHHHH____
+
+        ___HHHHHHHHHH___
+
+        __HHHHHHHHHHHH__
+
+        __HHHHH__HHHHH__
+
+        _HHHHH____HHHHH_
+
+        _HHH_GG__GG_HHH_
+
+        _HH_G_kGGk_G_HH_
+
+        _H___HH__HH___H_
+
+        _HH__________HH_
+
+        ___PPPW__WPPP___
+
+        ___PPP____qPP___
+
+        __PPPPP__PPPP___
+
+        __PPqPPPqPPPq___
+
+        ____PPPPPPPPP___
+
+        ____PPqPPPqPT___
+
+        ____TTTTTTTTT___
+
+        _______TTTTT____
+
+        ________PP______
+
+        ________________'
+  up_a:
+    patches:
+    - x: 0
+      y: 0
+      rows: '________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ______HHHH______
+
+        ____HHHHHHHH____
+
+        ___HHHHHHHHHH___
+
+        __HHHHHHHHHHHH__
+
+        __HHHHHHHHHHHH__
+
+        _HHHHHHHHHHHHHH_
+
+        _HHHHHHHHHHHHHH_
+
+        _HHHHHHHHHHHHHH_
+
+        _HHHHHHHHHHHHHH_
+
+        _HHHHHHHHHHHHHH_
+
+        ________________
+
+        ___P________P___
+
+        ___PPPPPPPPPPP__
+
+        ___PqPPPqPPPqP__
+
+        ___PPPPPPPPP____
+
+        ___TPPqPPPqP____
+
+        ___TTTTTTTTT____
+
+        ____TTTTT_______
+
+        ______PP________
+
+        ________________'
+  up_b:
+    patches:
+    - x: 0
+      y: 0
+      rows: '________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ______HHHH______
+
+        ____HHHHHHHH____
+
+        ___HHHHHHHHHH___
+
+        __HHHHHHHHHHHH__
+
+        __HHHHHHHHHHHH__
+
+        _HHHHHHHHHHHHHH_
+
+        _HHHHHHHHHHHHHH_
+
+        _HHHHHHHHHHHHHH_
+
+        _HHHHHHHHHHHHHH_
+
+        _HHHHHHHHHHHHHH_
+
+        ________________
+
+        ___P________P___
+
+        __PPPPPPPPPPP___
+
+        __PPqPPPqPPPq___
+
+        ____PPPPPPPPP___
+
+        ____PPqPPPqPT___
+
+        ____TTTTTTTTT___
+
+        _______TTTTT____
+
+        ________PP______
+
+        ________________'
+  left_a:
+    patches:
+    - x: 0
+      y: 0
+      rows: '________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ______HHHH______
+
+        ____HHHHHHHH____
+
+        ___HHHHHHHHHH___
+
+        __HHHHHHHHHHHH__
+
+        _____HHHHHHHHH__
+
+        ______HHHHHHHH__
+
+        ____GG_HHHHHHH__
+
+        ___G__G_HHHHHH__
+
+        ____HH__H__HHH__
+
+        ____________HH__
+
+        ________________
+
+        _______PPP______
+
+        ____PPPPPPP_____
+
+        ____qPPPqPPP____
+
+        ____P___PPPP____
+
+        ____T___PPqT____
+
+        _____T__TTTT____
+
+        _______TTTT_____
+
+        _________PP_____
+
+        ________________'
+  left_b:
+    patches:
+    - x: 0
+      y: 0
+      rows: '________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ______HHHH______
+
+        ____HHHHHHHH____
+
+        ___HHHHHHHHHH___
+
+        __HHHHHHHHHHHH__
+
+        _____HHHHHHHHH__
+
+        ______HHHHHHHH__
+
+        ____GG_HHHHHHH__
+
+        ___G__G_HHHHHH__
+
+        ____HH__H__HHH__
+
+        ____________HH__
+
+        ________________
+
+        _______PPP______
+
+        ____PPPPPPP_____
+
+        ____qPPPqPPP____
+
+        ____PPP___PP____
+
+        ____TTT___qT____
+
+        ____PTTT__TT____
+
+        _____P_TTTT_____
+
+        ________________
+
+        ________________'

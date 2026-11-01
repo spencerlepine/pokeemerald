@@ -1,0 +1,479 @@
+name: lucy
+description: 'GARDULLA THE HUTT: brown Hutt matriarch in gold jewelry (replaces Lucy).'
+kit: person16x32
+replaces: graphics/object_events/pics/people/frontier_brains/lucy.png
+graphics_info: Lucy
+notes: 'Group 5, B style (alien: drawn whole over Lucy''s frames): a tall brown Hutt with a tan belly, gold headband and necklace set with red gems, gold bracelets; the tail swings as she slithers.'
+palette: npc_2
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_2
+shade: true
+materials:
+  H: c@
+  J: c
+  A: c
+  L: c
+  b: s@
+  Y: a
+legend:
+  k: 15
+  o: 6
+  M: 10
+  r: 9
+  R: 8
+  W: 14
+  f: 3
+  h: 1
+accept:
+  hair_rows: 'a Hutt: no hair, a gold headband'
+  eye_row: slit eyes in a slug head
+  step_change: 'a Hutt slithers: the body bobs and the tail swings, no legs'
+  skin_tones: Hutt hide is ramp C; the belly uses the skin ramp
+base_sheet: graphics/object_events/pics/people/frontier_brains/lucy.png
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        ................
+
+        .....HHHHHH.....
+
+        ...HHHWHHHHHH...
+
+        ..HYYYYRrYYYYH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHokHHHHkoHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHMMMMMMMMHHH.
+
+        ..HHHHHHHHHHHH..
+
+        .AJYYYYRrYYYYJA.
+
+        .AJJJbhhhhbJJJA.
+
+        AAJJbbbbbbbbJJAA
+
+        .JJJffffffffJJJ.
+
+        .JJJbbbbbbbbJJJ.
+
+        JJJJbbbbbbbbJJJJ
+
+        JJJJJffffffJJJJJ
+
+        JJJJJJJJJJJJJJJJ
+
+        LJJJJJJJJJJJJJJ.
+
+        LLJJJJJJJJJJJJ..
+
+        .LLLJJJJJJJJJ...'
+  down_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        ................
+
+        .....HHHHHH.....
+
+        ...HHHWHHHHHH...
+
+        ..HYYYYRrYYYYH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHokHHHHkoHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHMMMMMMMMHHH.
+
+        ..HHHHHHHHHHHH..
+
+        .AJYYYYRrYYYYJA.
+
+        .AJJJbhhhhbJJJA.
+
+        AAJJbbbbbbbbJJAA
+
+        .JJJffffffffJJJ.
+
+        .JJJbbbbbbbbJJJ.
+
+        JJJJbbbbbbbbJJJJ
+
+        JJJJJffffffJJJJJ
+
+        JJJJJJJJJJJJJJJJ
+
+        LJJJJJJJJJJJJJJ.
+
+        LLJJJJJJJJJJJJ..
+
+        .LLLJJJJJJJJJ...'
+    - x: 0
+      y: 29
+      rows: 'LJJJJJJJJJJJJJJ.
+
+        LLJJJJJJJJJJJJ..
+
+        .LLLJJJJJJJJJ...'
+  down_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        ................
+
+        .....HHHHHH.....
+
+        ...HHHWHHHHHH...
+
+        ..HYYYYRrYYYYH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHokHHHHkoHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHMMMMMMMMHHH.
+
+        ..HHHHHHHHHHHH..
+
+        .AJYYYYRrYYYYJA.
+
+        .AJJJbhhhhbJJJA.
+
+        AAJJbbbbbbbbJJAA
+
+        .JJJffffffffJJJ.
+
+        .JJJbbbbbbbbJJJ.
+
+        JJJJbbbbbbbbJJJJ
+
+        JJJJJffffffJJJJJ
+
+        JJJJJJJJJJJJJJJJ
+
+        LJJJJJJJJJJJJJJ.
+
+        LLJJJJJJJJJJJJ..
+
+        .LLLJJJJJJJJJ...'
+    - x: 0
+      y: 29
+      rows: '.JJJJJJJJJJJJJJL
+
+        ..JJJJJJJJJJJJLL
+
+        ...JJJJJJJJJLLL.'
+  up:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        ................
+
+        .....HHHHHH.....
+
+        ...HHHHHHHHHH...
+
+        ..HYYYYYYYYYYH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        ..HHHHHHHHHHHH..
+
+        .AHYYYYYYYYYYHA.
+
+        .AHHHHHHHHHHHHA.
+
+        AAHHHHHHHHHHHHAA
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        HHHHHHHHHHHHHHHH
+
+        HHHHHHHHHHHHHHHH
+
+        HHHHHHLLLLHHHHHH
+
+        .HHHHLLLLLLHHHH.
+
+        ..HHHHLLLLHHHH..
+
+        .......LL.......'
+  up_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        ................
+
+        .....HHHHHH.....
+
+        ...HHHHHHHHHH...
+
+        ..HYYYYYYYYYYH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        ..HHHHHHHHHHHH..
+
+        .AHYYYYYYYYYYHA.
+
+        .AHHHHHHHHHHHHA.
+
+        AAHHHHHHHHHHHHAA
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        HHHHHHHHHHHHHHHH
+
+        HHHHHHHHHHHHHHHH
+
+        HHHHHHLLLLHHHHHH
+
+        .HHHHLLLLLLHHHH.
+
+        ..HHHHLLLLHHHH..
+
+        .......LL.......'
+    - x: 0
+      y: 29
+      rows: '.HHHHHLLLLHHHHH.
+
+        ..HHHLLLLHHHHH..
+
+        .....LL.........'
+  up_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        ................
+
+        .....HHHHHH.....
+
+        ...HHHHHHHHHH...
+
+        ..HYYYYYYYYYYH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        ..HHHHHHHHHHHH..
+
+        .AHYYYYYYYYYYHA.
+
+        .AHHHHHHHHHHHHA.
+
+        AAHHHHHHHHHHHHAA
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        HHHHHHHHHHHHHHHH
+
+        HHHHHHHHHHHHHHHH
+
+        HHHHHHLLLLHHHHHH
+
+        .HHHHLLLLLLHHHH.
+
+        ..HHHHLLLLHHHH..
+
+        .......LL.......'
+    - x: 0
+      y: 29
+      rows: '.HHHHHLLLLHHHHH.
+
+        ..HHHHHLLLLHHH..
+
+        .........LL.....'
+  left:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        ................
+
+        ....HHHHHH......
+
+        ..HHHWHHHHHH....
+
+        .YYYYYYYrYYHH...
+
+        HHHHHHHHHHHHH...
+
+        HokHHHHHHHHHH...
+
+        HHHHHHHHHHHHH...
+
+        MMMMHHHHHHHHH...
+
+        .HHHHHHHHHHHH...
+
+        ..YYrYYAHHHHHH..
+
+        ..hhbYAAHHHHHH..
+
+        .bbbbbAAHHHHHH..
+
+        .ffffffHHHHHHH..
+
+        .bbbbbbHHHHHHHH.
+
+        .bbbbbbHHHHHHHH.
+
+        ..ffffHHHHHHHHH.
+
+        ..HHHHHHHHHHHHHH
+
+        ...HHHHHHHHHLLLL
+
+        ....HHHHHHHLLLL.
+
+        .....HHHHH......'
+  left_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        ................
+
+        ....HHHHHH......
+
+        ..HHHWHHHHHH....
+
+        .YYYYYYYrYYHH...
+
+        HHHHHHHHHHHHH...
+
+        HokHHHHHHHHHH...
+
+        HHHHHHHHHHHHH...
+
+        MMMMHHHHHHHHH...
+
+        .HHHHHHHHHHHH...
+
+        ..YYrYYAHHHHHH..
+
+        ..hhbYAAHHHHHH..
+
+        .bbbbbAAHHHHHH..
+
+        .ffffffHHHHHHH..
+
+        .bbbbbbHHHHHHHH.
+
+        .bbbbbbHHHHHHHH.
+
+        ..ffffHHHHHHHHH.
+
+        ..HHHHHHHHHHHHHH
+
+        ...HHHHHHHHHLLLL
+
+        ....HHHHHHHLLLL.
+
+        .....HHHHH......'
+    - x: 0
+      y: 29
+      rows: '..HHHHHHHHHHHHHH
+
+        ...HHHHHHHHHHLLL
+
+        ....HHHHHHHHLLLL'
+  left_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        ................
+
+        ....HHHHHH......
+
+        ..HHHWHHHHHH....
+
+        .YYYYYYYrYYHH...
+
+        HHHHHHHHHHHHH...
+
+        HokHHHHHHHHHH...
+
+        HHHHHHHHHHHHH...
+
+        MMMMHHHHHHHHH...
+
+        .HHHHHHHHHHHH...
+
+        ..YYrYYAHHHHHH..
+
+        ..hhbYAAHHHHHH..
+
+        .bbbbbAAHHHHHH..
+
+        .ffffffHHHHHHH..
+
+        .bbbbbbHHHHHHHH.
+
+        .bbbbbbHHHHHHHH.
+
+        ..ffffHHHHHHHHH.
+
+        ..HHHHHHHHHHHHHH
+
+        ...HHHHHHHHHLLLL
+
+        ....HHHHHHHLLLL.
+
+        .....HHHHH......'
+    - x: 0
+      y: 29
+      rows: '..HHHHHHHHHHHLLL
+
+        ...HHHHHHHHHLLL.
+
+        ....HHHHHHHH....'

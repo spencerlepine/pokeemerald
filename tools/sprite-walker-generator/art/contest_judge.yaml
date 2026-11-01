@@ -1,0 +1,626 @@
+name: contest_judge
+description: Showcase judge in formal Cloud City robes (replaces the Contest Judge).
+kit: person16x32
+replaces: graphics/object_events/pics/people/contest_judge.png
+graphics_info: ContestJudge
+notes: 'Group 5, B style: the judge''s own head and walk, his suit repainted as a Bespin noble''s sky-blue robe with a white shirt front, gold belt and buckle, a tall white collar and a blue cape panel
+  at the back.'
+palette: npc_1
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_1
+shade: true
+materials:
+  G: c
+  J: b
+  T: c
+  C: w/b
+  V: w/b
+  K: b
+  w: w/a
+legend:
+  k: 15
+accept: {}
+base_sheet: graphics/object_events/pics/people/contest_judge.png
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 0
+      rows: '________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ______GGGG______
+
+        ____GGGGGGGG____
+
+        _GGGGGGG__GGG___
+
+        _GGGGGGG___GGG__
+
+        _GGGGGG_____GG__
+
+        __GGGG______GG__
+
+        ___G________G___
+
+        ___G________G___
+
+        ________________
+
+        ___C__G__G__C___
+
+        __JCCVV__VVCCJ__
+
+        __JJVVVVVVVVJJ__
+
+        _JJJVVVVVVVVJJJ_
+
+        _JJJJVVTTVVJJJJ_
+
+        ___TTTTTTTTTT___
+
+        ___JJJJJJJJJJ___
+
+        ___JJJJJJJJJJ___
+
+        ____JJJJJJJJ____
+
+        ____kkk__kkk____
+
+        ________________
+
+        ________________'
+  up:
+    patches:
+    - x: 0
+      y: 0
+      rows: '________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ______GGGG______
+
+        ____GGGGGGGG____
+
+        ___GGGGGGGGGGGG_
+
+        __GGGGGGGGGGGGG_
+
+        __GGGGGGGGGGGGG_
+
+        __GGGGGGGGGGGG__
+
+        __GGGGGGGGGGGG__
+
+        ___GGGGGGGGGG___
+
+        ___GGGGGGGGGG___
+
+        ____GGGGGGGG____
+
+        __JJCCGGGGCCJJ__
+
+        __JJJCCCCCCJJJ__
+
+        _JJJKKKKKKKKJJJ_
+
+        _JJJKKKKKKKKJJJ_
+
+        ___JKKKKKKKKJ___
+
+        ___JJKKKKKKJJ___
+
+        ___JJJKKKKJJJ___
+
+        ____JJJJJJJJ____
+
+        _____kk__kk_____
+
+        ________________
+
+        ________________'
+  left:
+    patches:
+    - x: 0
+      y: 0
+      rows: '________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ______GGGGG_____
+
+        ____GGGGGGGGGGG_
+
+        ___G_GGGGGGGGGG_
+
+        __G___GGGGGGGGG_
+
+        _______GGGGGGG__
+
+        ________GGGGGG__
+
+        ________GGGGGG__
+
+        ________GGGGGG__
+
+        ________G__GG___
+
+        _____G______CC__
+
+        ____VV____CCC___
+
+        ___VVVVJJ_______
+
+        ___VVVVJJJJJ____
+
+        ____VVJJJJJJ____
+
+        ____TT____JJ____
+
+        ____JJJ__JJJ____
+
+        _____JJJJJJ_____
+
+        _____JJJJJJ_____
+
+        _____kkkkk______
+
+        ________________
+
+        ________________'
+  down_a:
+    patches:
+    - x: 0
+      y: 0
+      rows: '________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ______GGGG______
+
+        ____GGGGGGGG____
+
+        _GGGGGGG__GGG___
+
+        _GGGGGGG___GGG__
+
+        _GGGGGG_____GG__
+
+        __GGGG______GG__
+
+        ___G________G___
+
+        ___G________G___
+
+        ________________
+
+        ___C__G__G__C___
+
+        __JCCVV__VVCC___
+
+        _JJJVVVVVVVVJJ__
+
+        ___JVVVVVVVVJJ__
+
+        ___JJVVTTVVJJJ__
+
+        ___JJTTTTTTTJ___
+
+        ___JJJJJJJJ_____
+
+        ____JJJJJJJ_____
+
+        _____JJJJ_______
+
+        _____kkk________
+
+        ________________'
+  down_b:
+    patches:
+    - x: 0
+      y: 0
+      rows: '________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ______GGGG______
+
+        ____GGGGGGGG____
+
+        _GGGGGGG__GGG___
+
+        _GGGGGGG___GGG__
+
+        _GGGGGG_____GG__
+
+        __GGGG______GG__
+
+        ___G________G___
+
+        ___G________G___
+
+        ________________
+
+        ___C__G__G__C___
+
+        ___CCVV__VVCCJ__
+
+        __JJVVVVVVVVJJJ_
+
+        __JJVVVVVVVVJ___
+
+        __JJJVVTTVVJJ___
+
+        ___JTTTTTTTJJ___
+
+        _____JJJJJJJJ___
+
+        _____JJJJJJJ____
+
+        _______JJJJ_____
+
+        ________kkk_____
+
+        ________________'
+  up_a:
+    patches:
+    - x: 0
+      y: 0
+      rows: '________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ______GGGG______
+
+        ____GGGGGGGG____
+
+        ___GGGGGGGGGGGG_
+
+        __GGGGGGGGGGGGG_
+
+        __GGGGGGGGGGGGG_
+
+        __GGGGGGGGGGGG__
+
+        __GGGGGGGGGGGG__
+
+        ___GGGGGGGGGG___
+
+        ___GGGGGGGGGG___
+
+        ____GGGGGGGG____
+
+        __JJCCGGGGCCJJ__
+
+        _JJJJCCCCCCJJJ__
+
+        ___JKKKKKKKJJJ__
+
+        ___JJKKKKKKJJJ__
+
+        ___JJJKKKKKJJ___
+
+        ___JJJKKKKK_____
+
+        ____JJJKKKJ_____
+
+        _____JJJJ_______
+
+        _____kkk________
+
+        ________________'
+  up_b:
+    patches:
+    - x: 0
+      y: 0
+      rows: '________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ______GGGG______
+
+        ____GGGGGGGG____
+
+        ___GGGGGGGGGGGG_
+
+        __GGGGGGGGGGGGG_
+
+        __GGGGGGGGGGGGG_
+
+        __GGGGGGGGGGGG__
+
+        __GGGGGGGGGGGG__
+
+        ___GGGGGGGGGG___
+
+        ___GGGGGGGGGG___
+
+        ____GGGGGGGG____
+
+        __JJCCGGGGCCJJ__
+
+        __JJJCCCCCCJJJJ_
+
+        __JJJKKKKKKKJ___
+
+        __JJJKKKKKKJJ___
+
+        ___JJKKKKKJJJ___
+
+        _____KKKKKJJJ___
+
+        _____JKKKJJJ____
+
+        _______JJJJ_____
+
+        ________kkk_____
+
+        ________________'
+  left_a:
+    patches:
+    - x: 0
+      y: 0
+      rows: '________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ______GGGGG_____
+
+        ____GGGGGGGGGGG_
+
+        ___G_GGGGGGGGGG_
+
+        __G___GGGGGGGGG_
+
+        _______GGGGGGG__
+
+        ________GGGGGG__
+
+        ________GGGGGG__
+
+        ________GGGGGG__
+
+        ________G__GG___
+
+        _____G______CC__
+
+        ____VV____CCC___
+
+        ___VVVVJJ_______
+
+        ___VVVVJJJJJ____
+
+        ____VVJJJJJJ____
+
+        ____TTT____JJ___
+
+        ____JJJJ__JJJJ__
+
+        ___kJJJJJJJJJ___
+
+        ___kkJJJJJJJ____
+
+        ____kkJ_________
+
+        ________________'
+  left_b:
+    patches:
+    - x: 0
+      y: 0
+      rows: '________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ______GGGGG_____
+
+        ____GGGGGGGGGGG_
+
+        ___G_GGGGGGGGGG_
+
+        __G___GGGGGGGGG_
+
+        _______GGGGGGG__
+
+        ________GGGGGG__
+
+        ________GGGGGG__
+
+        ________GGGGGG__
+
+        ________G__GG___
+
+        _____G______CC__
+
+        ____VV____CCC___
+
+        ___VVVVJJ_______
+
+        ___VVVVJJJJJ____
+
+        ____VVJJJJJJ____
+
+        ____J____TTJ____
+
+        ___TJJ__JJJJ____
+
+        ___kJJJJJJJJk___
+
+        ____kkJJJJJJk___
+
+        _________Jkk____
+
+        ________________'

@@ -1,0 +1,350 @@
+name: old_man
+description: Elderly desert man in a hood and poncho with a short walking stick (replaces the Old Man).
+kit: person16x32_still
+replaces: graphics/object_events/pics/people/old_man.png
+graphics_info: OldMan
+notes: 'Group 5, B style: his own bushy brows, white moustache and beard under a brown desert hood, his shirt turned into a sand-coloured poncho with a red sash knot, brown trousers, a short walking stick
+  in hand.'
+palette: npc_2
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_2
+shade: true
+materials:
+  O: c
+  P: a
+  S: b
+  T: c
+  w: w/c
+legend:
+  k: 15
+  n: 12
+accept:
+  hair_rows: a desert hood instead of hair
+base_sheet: graphics/object_events/pics/people/old_man.png
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        ......OOOO......
+
+        ....OOOOOOOO....
+
+        ...OOOOOOOOOO...
+
+        ..OOOOOOOOOOOO..
+
+        ..OOOssssssOOO..
+
+        .OOOssssssssOOO.
+
+        .OOssssssssssOO.
+
+        .OOssssssssssOO.
+
+        .OOsskksskkssOO.
+
+        .OOssswwwwsssOO.
+
+        ..OOswwwwwwsOO..
+
+        .PPOOwwwwwwOOPP.'
+    - x: 13
+      y: 23
+      rows: '_s_
+
+        _n_
+
+        _n_
+
+        _n_
+
+        _n_
+
+        _n_
+
+        _n_'
+    - x: 0
+      y: 0
+      rows: '________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        PPPPP______PPP_P
+
+        PPPPPPPSSPPPPP_P
+
+        PPPPPPPSSPPPPP_P
+
+        _PTPPPPPPPPPPT__
+
+        __TTPPPPPPPPTT__
+
+        __TTTTTTTTTTTT__
+
+        ___TkkkTTkkkT___
+
+        ____TTT__TTT____
+
+        ________________'
+  up:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        ......OOOO......
+
+        ....OOOOOOOO....
+
+        ...OOOOOOOOOO...
+
+        ..OOOOOOOOOOOO..
+
+        ..OOOOOOOOOOOO..
+
+        .OOOOOOOOOOOOOO.
+
+        .OOOOOOOOOOOOOO.
+
+        .OOOOOOOOOOOOOO.
+
+        .OOOOOOOOOOOOOO.
+
+        .OOOOOOOOOOOOOO.
+
+        ..OOOOOOOOOOOO..
+
+        .PPOOOOOOOOOOPP.'
+    - x: 0
+      y: 23
+      rows: '_s_
+
+        _n_
+
+        _n_
+
+        _n_
+
+        _n_
+
+        _n_
+
+        _n_'
+    - x: 0
+      y: 0
+      rows: '________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        P_PPPPPPPPPPPPPP
+
+        P_PP__PPPP__PPPP
+
+        P_P____PP____PPP
+
+        __P____PP____PP_
+
+        __TT__TTTT__TT__
+
+        __TTTTTTTTTTTT__
+
+        ___TkkkTTkkkT___
+
+        ____TTT__TTT____
+
+        ________________'
+  left:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        .......OOOO.....
+
+        .....OOOOOOOO...
+
+        ....OOOOOOOOOO..
+
+        ...OOOOOOOOOOOO.
+
+        ..OOssOOOOOOOOO.
+
+        ..ssssOOOOOOOOO.
+
+        .sssssOOOOOOOO..
+
+        .sssssOOOOOOOO..
+
+        .skkssOOOOOOO...
+
+        .wwssssOOOOOO...
+
+        .wwwwssOOOOO....
+
+        ..wwwwOOOO______'
+    - x: 1
+      y: 23
+      rows: 's
+
+        n
+
+        n
+
+        n
+
+        n
+
+        n
+
+        n'
+    - x: 0
+      y: 0
+      rows: '________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________PPPPPP__
+
+        _____TPPPPPP____
+
+        _____TPPPPP_____
+
+        _____PPPPPP_____
+
+        _____TPPPPPP____
+
+        ______TTTTTTTT__
+
+        _______TkkkkT___
+
+        ________TTTT____
+
+        ________________'

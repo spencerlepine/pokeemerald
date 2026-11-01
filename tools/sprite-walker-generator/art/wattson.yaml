@@ -1,0 +1,167 @@
+name: wattson
+description: 'WATTO: winged Toydarian junk dealer (replaces Wattson).'
+kit: person16x32_still
+replaces: graphics/object_events/pics/people/gym_leaders/wattson.png
+graphics_info: Wattson
+notes: 'Group 5, B style (alien: drawn whole over Wattson''s stand frames): blue-grey Toydarian head with a long trunk nose, tusks and a stubble tuft, pale fluttering wings, round blue belly, tan vest and
+  belt pouches, thin legs.'
+palette: npc_4
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_4
+shade: true
+materials:
+  H: skin-a@
+  B: skin-a@
+  W: c
+  V: s
+  Y: b
+  F: c
+legend:
+  k: 15
+  t: 14
+  h: 13
+  n: 5
+  m: 6
+  A: 5
+  L: 6
+accept:
+  skin_tones: Toydarian hide is the steel-blue ramp; the vest uses the skin ramp
+  hair_rows: bald with a stubble tuft
+  eye_row: small eyes over a long trunk nose
+  head_w: wings make the figure 16 wide
+base_sheet: graphics/object_events/pics/people/gym_leaders/wattson.png
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        ................
+
+        ................
+
+        .......hh.......
+
+        .....HHHHHH.....
+
+        ...HHHHHHHHHH...
+
+        .WWHHHHHHHHHHWW.
+
+        WWWHHkHHHHkHHWWW
+
+        WWWHHkHHHHkHHWWW
+
+        WWWHHHHnmHHHHWWW
+
+        .WWHHtHnmHtHHWW.
+
+        ..WWHHHnmHHHWW..
+
+        ...VVVVnmVVVV...
+
+        ..AVVVBnmBVVVA..
+
+        .AAVVBBBBBBVVAA.
+
+        .AA.VBBBBBBV.AA.
+
+        ....VBBBBBBV....
+
+        ....YYYYYYYY....
+
+        ....YYL..LYY....
+
+        .....LL..LL.....
+
+        ....FFF..FFF....'
+  up:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        ................
+
+        ................
+
+        .......hh.......
+
+        .....HHHHHH.....
+
+        ...HHHHHHHHHH...
+
+        .WWHHHHHHHHHHWW.
+
+        WWWWHHHHHHHHWWWW
+
+        WWWWWHHHHHHWWWWW
+
+        WWWWWHHHHHHWWWWW
+
+        .WWWWHHHHHHWWWW.
+
+        ..WWWHHHHHHWWW..
+
+        ...VVWWVVWWVV...
+
+        ..AVVVVVVVVVVA..
+
+        .AAVVVVVVVVVVAA.
+
+        .AA.VVVVVVVV.AA.
+
+        ....VVVVVVVV....
+
+        ....YYYYYYYY....
+
+        ....YYL..LYY....
+
+        .....LL..LL.....
+
+        ....FFF..FFF....'
+  left:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        ................
+
+        ................
+
+        ........hh......
+
+        ......HHHHH.....
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHWW..
+
+        ..HkHHHHHHHWWWW.
+
+        ..HkHHHHHHHWWWWW
+
+        nnHHHHHHHHHWWWWW
+
+        mmmtHHHHHHHWWWW.
+
+        m..HHHHHHH.WWW..
+
+        m...VVVVVVV.....
+
+        ...ABBVVVVV.....
+
+        ..AABBBVVVV.....
+
+        ..AABBBVVVV.....
+
+        ....BBBVVV......
+
+        ....YYYYYY......
+
+        ....YYL.LL......
+
+        .....LL.LL......
+
+        ....FFF.FF......'
