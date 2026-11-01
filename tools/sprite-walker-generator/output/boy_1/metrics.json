@@ -5,27 +5,27 @@
    "feet": 30,
    "height": 19,
    "width": 14,
-   "area": 212,
+   "area": 208,
    "dark_outline": 1.0,
-   "orphans": 0.09
+   "orphans": 0.13
   },
   "up": {
    "top": 12,
    "feet": 30,
    "height": 19,
    "width": 14,
-   "area": 212,
+   "area": 208,
    "dark_outline": 1.0,
-   "orphans": 0.071
+   "orphans": 0.096
   },
   "left": {
    "top": 12,
    "feet": 30,
    "height": 19,
    "width": 14,
-   "area": 174,
+   "area": 170,
    "dark_outline": 1.0,
-   "orphans": 0.063
+   "orphans": 0.112
   }
  },
  "summary": {
@@ -33,10 +33,10 @@
   "feet": 30,
   "height": 19,
   "width": 14,
-  "area": 212,
+  "area": 208,
   "dark_outline": 1.0,
-  "orphans": 0.071,
+  "orphans": 0.112,
   "colours": 11,
-  "step_change": 0.574
+  "step_change": 0.653
  }
 }

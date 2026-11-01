@@ -203,3 +203,58 @@ def compare(specs: list, out: Path, emerald: Path | None = None, z: int = 6) -> 
         im.paste(small, (x, y + small.height * 2 + 8))
         y += big.height + 10
     im.save(out)
+
+
+def batch_review(specs: list, out: Path, emerald: Path, z: int = 6) -> None:
+    """Batch review sheet: per spec, the vanilla sheet it replaces (left) next to the new one (right),
+    stand frames at z; then one lineup on Emerald grass, the vanilla walkers then the new ones, at 1x/2x/3x."""
+    from .sheet import spec_palette
+
+    ground = _metatile_renderer(emerald)(1)
+    def stands(fr_by_name, cols):
+        return [rgba_frame(fr_by_name[n], cols) for n in ("down", "left", "up")]
+    names = ("down", "up", "left")
+    rows, old_line, new_line = [], [], []
+    for s in specs:
+        fr, cols = read_frames(emerald / s.replaces)
+        old = stands(dict(zip(("down", "up", "left"), fr[:3])), cols)
+        new = stands(s.frames, spec_palette(s))
+        old_line.append(old[0]); new_line.append(new[0])
+        rows.append((s.name, old, new))
+    w, h = 16, 32
+    cell = w * z + 6
+    lab = 130
+    def panel(frs):
+        p = Image.new("RGB", (3 * cell, h * z), BG)
+        for i, f in enumerate(frs):
+            b = f.resize((w * z, h * z), Image.NEAREST)
+            p.paste(b, (i * cell, 0), b)
+        return p
+    # lineup strip: vanilla front frames, a gap, then the new ones
+    n = len(specs)
+    strip = Image.new("RGB", ((2 * n + 3) * 16, 48))
+    for x in range(0, strip.width, 16):
+        for y in range(0, 48, 16):
+            strip.paste(ground, (x, y))
+    for i, f in enumerate(old_line):
+        strip.paste(f, ((i + 1) * 16, 16), f)
+    for i, f in enumerate(new_line):
+        strip.paste(f, ((n + 2 + i) * 16, 16), f)
+    W = lab + 2 * 3 * cell + 30
+    H = 24 + len(rows) * (h * z + 10) + 20 + strip.height * 6 + 20
+    W = max(W, strip.width * 6 + 20)
+    im = Image.new("RGB", (W, H), (24, 24, 30))
+    d = ImageDraw.Draw(im)
+    d.text((lab, 6), "Emerald (vanilla)", fill=(200, 200, 200))
+    d.text((lab + 3 * cell + 30, 6), "New", fill=(200, 200, 200))
+    y = 24
+    for name, old, new in rows:
+        d.text((6, y + 6), name, fill=(230, 230, 230))
+        im.paste(panel(old), (lab, y))
+        im.paste(panel(new), (lab + 3 * cell + 30, y))
+        y += h * z + 10
+    d.text((6, y + 4), "In game, 1x / 3x: vanilla (left group) vs new (right group)", fill=(200, 200, 200))
+    y += 20
+    im.paste(strip, (10, y))
+    im.paste(strip.resize((strip.width * 3, strip.height * 3), Image.NEAREST), (10 + strip.width + 20, y))
+    im.save(out)

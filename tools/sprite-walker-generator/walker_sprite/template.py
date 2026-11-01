@@ -57,3 +57,35 @@ def build(c):
         else:
             out += f"  {k}:\n    base: {f['base']}\n    shift: 1\n    patch_y: {f['patch_y']}\n    rows: |\n" + "".join(f"      {r}\n" for r in f['rows'])
     open(f"art/{c['name']}.yaml", "w").write(out)
+
+
+def write_spec(c):
+    """Hand-drawn character: c['frames'] has full down/up/left grids; c['steps'] maps each step
+    frame to (base, patch_y, rows). Checks widths and legend, then writes art/<name>.yaml."""
+    frames = {}
+    for d in ('down', 'up', 'left'):
+        rows = c['frames'][d]
+        assert len(rows) <= 32, (c['name'], d, len(rows))
+        frames[d] = rows
+    for s, (b, py, rows) in c['steps'].items():
+        assert py + len(rows) <= 32, (c['name'], s)
+        frames[s] = {'base': b, 'shift': 1, 'patch_y': py, 'rows': rows}
+    bad = []
+    for k, f in frames.items():
+        rs = f if isinstance(f, list) else f['rows']
+        for i, r in enumerate(rs):
+            if len(r) != 16:
+                bad.append(f"{k} line {i}: {len(r)} '{r}'")
+        used = set(''.join(rs)) - {'.'}
+        assert used <= set(c['legend']), (c['name'], k, used - set(c['legend']))
+    assert not bad, (c['name'], bad)
+    out = f"name: {c['name']}\ndescription: \"{c['desc']}\"\nkit: person16x32\nreplaces: {c['replaces']}\n" \
+          f"graphics_info: {c['gi']}\n# {c['note']}\npalette: {c['pal']}\npalette_tag: OBJ_EVENT_PAL_TAG_{c['pal'].upper()}\n\nlegend:\n"
+    out += "".join(f"  \"{k}\": {v}\n" for k, v in c['legend'].items())
+    out += "\nframes:\n"
+    for k, f in frames.items():
+        if isinstance(f, list):
+            out += f"  {k}: |\n" + "".join(f"    {r}\n" for r in f)
+        else:
+            out += f"  {k}:\n    base: {f['base']}\n    shift: 1\n    patch_y: {f['patch_y']}\n    rows: |\n" + "".join(f"      {r}\n" for r in f['rows'])
+    open(f"art/{c['name']}.yaml", "w").write(out)

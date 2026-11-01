@@ -182,6 +182,14 @@ def cmd_compare(a) -> int:
     return 0
 
 
+def cmd_review(a) -> int:
+    """Batch review sheet against the vanilla sprites: python -m walker_sprite review out.png a.yaml b.yaml ..."""
+    specs = [spec_mod.load(p) for p in a.specs]
+    preview.batch_review(specs, Path(a.out), emerald_dir())
+    print(f"wrote {a.out}")
+    return 0
+
+
 def main(argv=None) -> int:
     p = argparse.ArgumentParser(prog="walker_sprite")
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -195,6 +203,10 @@ def main(argv=None) -> int:
         sp.add_argument(arg)
         sp.set_defaults(fn=fn)
     sub.add_parser("corpus").set_defaults(fn=cmd_corpus)
+    rp = sub.add_parser("review")
+    rp.add_argument("out")
+    rp.add_argument("specs", nargs="+")
+    rp.set_defaults(fn=cmd_review)
     cp = sub.add_parser("compare")
     cp.add_argument("out")
     cp.add_argument("specs", nargs="+")

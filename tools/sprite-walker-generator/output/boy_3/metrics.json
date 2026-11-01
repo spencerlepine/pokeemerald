@@ -1,42 +1,42 @@
 {
  "stand": {
   "down": {
-   "top": 12,
+   "top": 13,
    "feet": 30,
-   "height": 19,
-   "width": 14,
-   "area": 214,
-   "dark_outline": 0.982,
-   "orphans": 0.084
+   "height": 18,
+   "width": 13,
+   "area": 183,
+   "dark_outline": 0.981,
+   "orphans": 0.137
   },
   "up": {
-   "top": 12,
+   "top": 13,
    "feet": 30,
-   "height": 19,
-   "width": 14,
-   "area": 212,
-   "dark_outline": 1.0,
-   "orphans": 0.071
+   "height": 18,
+   "width": 12,
+   "area": 179,
+   "dark_outline": 0.981,
+   "orphans": 0.084
   },
   "left": {
-   "top": 12,
+   "top": 13,
    "feet": 30,
-   "height": 19,
-   "width": 14,
-   "area": 180,
-   "dark_outline": 1.0,
-   "orphans": 0.094
+   "height": 18,
+   "width": 12,
+   "area": 146,
+   "dark_outline": 0.98,
+   "orphans": 0.11
   }
  },
  "summary": {
-  "top": 12,
+  "top": 13,
   "feet": 30,
-  "height": 19,
-  "width": 14,
-  "area": 212,
-  "dark_outline": 1.0,
-  "orphans": 0.084,
+  "height": 18,
+  "width": 12,
+  "area": 179,
+  "dark_outline": 0.981,
+  "orphans": 0.11,
   "colours": 13,
-  "step_change": 0.524
+  "step_change": 0.624
  }
 }

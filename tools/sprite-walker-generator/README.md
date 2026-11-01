@@ -104,4 +104,7 @@ and arms).
 `adult: True`, which adds a torso and a leg row). A batch file in `batches/` lists characters as a
 legend (template letter -> palette index) plus per-row `edit`s by absolute row, and writes
 `art/<name>.yaml`. Run it from this folder (`python batches/batch1.py`), build each spec, then
-`python -m walker_sprite compare output/batchN.png art/a.yaml ...` for one review sheet.
+`python -m walker_sprite review output/batchN-review.png art/a.yaml ...` for one review sheet: each
+new walker next to the vanilla sheet it replaces, plus an in-game lineup (vanilla group vs new group).
+Owner feedback on batch 1 v1: template bodies looked too alike and blocky. Give every character its
+own silhouette (build, headwear, held prop, stance) and draw it with `template.write_spec`.
