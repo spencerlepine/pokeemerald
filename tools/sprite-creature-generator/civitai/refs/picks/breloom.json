@@ -1,10 +1,7 @@
 {
-  "init": "refs/breloom_prep.png",
-  "init_source": "https://static.wikia.nocookie.net/starwars/images/b/be/Pom_hopper3-woswfg.jpg/revision/latest?cb=20070124190012#crop=0.0,0.0,0.47,0.6",
   "flip": false,
-  "denoise": 0.4,
-  "desc": "springy two-legged jungle brawler with a fungus cap and armoured fists",
-  "colour": "green and tan",
+  "desc": "Upright two-legged jungle brawler with a big mushroom cap on its head, lean body, long stretchy arms ending in round boxing fists, thick tail, fighting stance facing left, three-quarter view, simple clean shape",
+  "colour": "green body, tan cap with red spots",
   "negative": "water, ground line",
-  "ref_note": "leaping pom-hopper as springy Felucia brawler base; low fit"
+  "ref_note": "text only: pom-hopper crop was low fit, tiny and noisy"
 }
