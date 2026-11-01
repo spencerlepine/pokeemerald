@@ -1,0 +1,47 @@
+{
+  "trainer": {
+    "stem": "dome_ace_tucker",
+    "wiki_path": "graphics/trainers/front_pics/dome_ace_tucker.png",
+    "sw_subject": "DENGAR, DOME ACE",
+    "subject": "Dengar",
+    "desc": "grim bounty hunter, head wrapped in grey bandages and a headband, heavy grey padded armour, long blaster rifle",
+    "theme": "factions",
+    "style": "",
+    "pose": "standing, facing left, three-quarter view",
+    "negative": "hair",
+    "pair": false
+  },
+  "lora": {
+    "id": 443092,
+    "name": "XL v1",
+    "baseModel": "SDXL 1.0",
+    "trainedWords": [],
+    "air": null,
+    "files": [
+      {
+        "name": "pk_trainer_xl_v1.safetensors",
+        "sizeKB": 445819.83984375,
+        "sha256": "078E09DA2A123964B7EB30DB23EC24D59FB082343F69C7FAF925C4C07E97023E"
+      }
+    ]
+  },
+  "checkpoint": "urn:air:sdxl:checkpoint:civitai:101055@128078",
+  "params": {
+    "prompt": "(dengar:1.3), grim bounty hunter, head wrapped in grey bandages and a headband, heavy grey padded armour, long blaster rifle, full body character sprite, standing, facing left, three-quarter view, pixel art, game sprite, crisp dark outlines, solid white background, simple background",
+    "negativePrompt": "hair, poke ball, pokeball, holding ball, baseball cap, generic pokemon trainer, anime boy, scenery, detailed background, gradient background, floor, shadow, text, watermark, signature, frame, border, multiple characters, multiple views, character sheet, turnaround, duplicate, cropped, cut off feet, blurry, 3d, photo, realistic, painting, smooth shading",
+    "scheduler": "EulerA",
+    "steps": 25,
+    "cfgScale": 7.0,
+    "width": 768,
+    "height": 768,
+    "seed": 669832367,
+    "clipSkip": 2
+  },
+  "strength": 0.75,
+  "format": "jpeg",
+  "seed": 669832367,
+  "workflowId": "13596363-20261101091350910-v38m",
+  "jobId": "2854cb64-832f-44ae-9867-7b77e9e3b54a",
+  "cost": "3 green",
+  "generated": "20261101-091358"
+}
