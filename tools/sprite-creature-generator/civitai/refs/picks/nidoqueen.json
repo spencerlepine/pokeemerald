@@ -1,9 +1,9 @@
 {
   "init": "refs/nidoqueen_prep.png",
-  "init_source": "https://static.wikia.nocookie.net/starwars/images/1/16/Ronto_NEGAS.jpg/revision/latest?cb=20100701001545",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/7/7b/Ronto.png/revision/latest?cb=20200427003707",
   "flip": false,
   "denoise": 0.5,
-  "desc": "towering gentle ronto pack beast with a thick long neck and a loaded pack harness",
-  "colour": "pale grey and brown",
-  "ref_note": "Ronto (New Essential Guide art, white bg), harnessed pack beast three-quarter left; tall so height cap sets size"
+  "desc": "towering gentle ronto pack beast with a long thick neck, floppy ears and stout legs, three-quarter view, whole body",
+  "colour": "blue grey and brown",
+  "ref_note": "Ronto.png render with alpha (nidoran_f line art): clean cutout instead of the cluttered NEGAS harness art"
 }
