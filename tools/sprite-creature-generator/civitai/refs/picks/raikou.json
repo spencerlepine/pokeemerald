@@ -1,9 +1,9 @@
 {
   "init": "refs/raikou_prep.png",
-  "init_source": "https://static.wikia.nocookie.net/starwars/images/8/8a/Ralltiir_tiger.jpg/revision/latest?cb=20060715134736",
+  "init_source": "refs/sources/raikou/raikou_cut.png",
   "flip": false,
   "denoise": 0.5,
-  "desc": "powerful striped storm tiger roaring with bristling cheek fur and a long ringed tail",
-  "colour": "white and black stripes",
-  "ref_note": "Re-pick (Nexu art belongs to zangoose): Ralltiir tiger line art on white, full body three-quarter roaring, flipped to face left; uncoloured ink so colour comes from the prompt"
+  "desc": "side three-quarter view, whole body, centred, facing left: powerful yellow storm tiger roaring, dark purple lightning stripes, bristling cheek mane, long ringed tail",
+  "colour": "golden yellow with dark purple stripes",
+  "ref_note": "Ralltiir tiger line art recoloured gold by hand, flipped, width 48 so it is not cut off; round 3"
 }
