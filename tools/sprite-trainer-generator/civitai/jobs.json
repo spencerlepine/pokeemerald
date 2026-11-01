@@ -117,12 +117,13 @@
  },
  "black_belt": {
   "subject": "Wookiee",
-  "desc": "Wookiee warrior like Chewbacca: huge furry humanoid, entire face covered in long brown fur, Wookiee face with a furry muzzle and fanged mouth, small dark eyes, no human skin on the face, leather bandolier across the chest, holding a bowcaster, roaring, richly shaded pixel art, layered shaggy fur with 4-tone shading: dark umber shadows, mid brown, warm tan highlights on the fur tips, rim light",
-  "negative": "human face, human skin, beard, bald, dwarf, man",
+  "desc": "Wookiee warrior (Chewbacca's species): very tall, broad hunched shoulders, long layered shaggy fur in several tones: dark grey-brown on the shoulders, arms and legs, lighter caramel and ginger fur around the face and chest, every lock of fur shaded with dark roots and light tips; face fully furred, short dark muzzle with a black nose, small deep-set blue eyes under a heavy furred brow, mouth open showing fangs; bandolier of rectangular silver ammunition boxes on a brown leather strap across the chest; holding a bowcaster (a crossbow-like energy rifle with curved bow arms) in both hands",
+  "negative": "human face, human skin, beard, bald, dwarf, man, cartoon face, chibi, no weapon",
   "theme": "factions",
   "style": "",
-  "strength": 0.5,
-  "tolerance": 0
+  "strength": 0.6,
+  "tolerance": 0,
+  "pose": "standing, facing left, three-quarter view, aiming a crossbow"
  },
  "bug_catcher": {
   "subject": "Jawa",
@@ -658,21 +659,21 @@
   "style": ""
  },
  "tuber_f": {
-  "subject": "young Wookiee",
-  "desc": "small young Wookiee from Star Wars: whole body and face covered in shaggy light brown fur, Wookiee face with a furry muzzle, dark eyes deep in the fur, no human skin showing, two small bead braids in the fur, holding a carved wooden float ring",
-  "negative": "human face, human skin, costume, mask, hood, bear, doll, hair",
+  "subject": "Wookiee child",
+  "desc": "small Wookiee child (cub), half the height of an adult, big round head, short arms and legs, round fluffy body, soft light brown and ginger fur with darker shading under the arms and lighter tips, face fully furred, small black nose, bright dark eyes, two bead braids, holding a carved wooden float ring",
+  "negative": "adult, tall, bandolier, weapon, human face, human skin, costume, mask, bear, doll, hair",
   "theme": "factions",
   "style": "",
-  "strength": 0.5,
+  "strength": 0.6,
   "tolerance": 0
  },
  "tuber_m": {
-  "subject": "young Wookiee",
-  "desc": "small young Wookiee from Star Wars: whole body and face covered in shaggy reddish-brown fur, Wookiee face with a furry muzzle, dark eyes deep in the fur, no human skin showing, hugging a carved wooden log float",
-  "negative": "human face, human skin, costume, mask, hood, bear, doll, hair",
+  "subject": "Wookiee child",
+  "desc": "small Wookiee child (cub), half the height of an adult, big round head, short arms and legs, round fluffy body, soft reddish brown fur with darker shading under the arms and lighter tips, face fully furred, small black nose, bright dark eyes, two bead braids, hugging a small carved wooden log float",
+  "negative": "adult, tall, bandolier, weapon, human face, human skin, costume, mask, bear, doll, hair",
   "theme": "factions",
   "style": "",
-  "strength": 0.5,
+  "strength": 0.6,
   "tolerance": 0
  },
  "twins": {
