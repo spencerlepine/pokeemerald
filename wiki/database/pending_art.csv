@@ -384,7 +384,6 @@ data/tilesets/primary/general/anim/waterfall/2.png,tileset,primary,data/tilesets
 data/tilesets/primary/general/anim/waterfall/3.png,tileset,primary,data/tilesets/primary/general/anim/waterfall/3.png,8,48,,,,,"Outdoors: Tatooine desert scrub, sand, rock and water edges shared by every planet (animation: waterfall)",,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 data/tilesets/primary/general/tiles.png,tileset,primary,data/tilesets/primary/general/tiles.png,128,256,,,,,"Outdoors: Tatooine desert scrub, sand, rock and water edges shared by every planet",,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 data/tilesets/primary/secret_base/tiles.png,tileset,primary,data/tilesets/primary/secret_base/tiles.png,128,256,,,,,HIDEOUT interior basics,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
-data/tilesets/primary/secret_base/unknown_tiles.png,tileset,primary,data/tilesets/primary/secret_base/unknown_tiles.png,128,256,,,,,HIDEOUT interior basics,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 data/tilesets/secondary/battle_arena/tiles.png,tileset,secondary,data/tilesets/secondary/battle_arena/tiles.png,128,136,,,,,GRAND ARENA: BATTLE ARENA (4-LOM's ring),,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 data/tilesets/secondary/battle_dome/tiles.png,tileset,secondary,data/tilesets/secondary/battle_dome/tiles.png,128,232,,,,,GRAND ARENA: BATTLE DOME (Dengar's stadium),,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 data/tilesets/secondary/battle_factory/tiles.png,tileset,secondary,data/tilesets/secondary/battle_factory/tiles.png,128,216,,,,,GRAND ARENA: BATTLE FACTORY (IG-88's droid works),,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
@@ -415,15 +414,10 @@ data/tilesets/secondary/bike_shop/anim/blinking_lights/1.png,tileset,secondary,d
 data/tilesets/secondary/bike_shop/tiles.png,tileset,secondary,data/tilesets/secondary/bike_shop/tiles.png,128,256,,,,,"Wald's speeder shop, Mos Espa",,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 data/tilesets/secondary/brendans_mays_house/tiles.png,tileset,secondary,data/tilesets/secondary/brendans_mays_house/tiles.png,128,240,,,,,"Player's homestead, Mos Pelgo (Tatooine dome house)",,ART_READY,tile-generator (recipes/tatooine-homestead.yaml),"art: art/data/tilesets/secondary/brendans_mays_house/tiles.png; palette-only recolour: pixels and metatiles unchanged, install = copy palettes/06-12.pal (tiles.png is index-identical to vanilla); v1, owner may revisit",HOTSWAP,,,,,,NOT_STARTED
 data/tilesets/secondary/cable_club/tiles.png,tileset,secondary,data/tilesets/secondary/cable_club/tiles.png,128,256,,,,,HOLONET CLUB upstairs at the Bacta Center,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
-data/tilesets/secondary/cable_club/unknown_tiles.png,tileset,secondary,data/tilesets/secondary/cable_club/unknown_tiles.png,128,64,,,,,HOLONET CLUB upstairs at the Bacta Center,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 data/tilesets/secondary/cave/anim/lava/0.png,tileset,secondary,data/tilesets/secondary/cave/anim/lava/0.png,16,16,,,,,"Caves: sandstone, Kashyyyk roots, Sullust lava tubes, Ilum ice (animation: lava)",,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 data/tilesets/secondary/cave/anim/lava/1.png,tileset,secondary,data/tilesets/secondary/cave/anim/lava/1.png,16,16,,,,,"Caves: sandstone, Kashyyyk roots, Sullust lava tubes, Ilum ice (animation: lava)",,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 data/tilesets/secondary/cave/anim/lava/2.png,tileset,secondary,data/tilesets/secondary/cave/anim/lava/2.png,16,16,,,,,"Caves: sandstone, Kashyyyk roots, Sullust lava tubes, Ilum ice (animation: lava)",,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 data/tilesets/secondary/cave/anim/lava/3.png,tileset,secondary,data/tilesets/secondary/cave/anim/lava/3.png,16,16,,,,,"Caves: sandstone, Kashyyyk roots, Sullust lava tubes, Ilum ice (animation: lava)",,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
-data/tilesets/secondary/cave/anim/lava/4.png,tileset,secondary,data/tilesets/secondary/cave/anim/lava/4.png,16,16,,,,,"Caves: sandstone, Kashyyyk roots, Sullust lava tubes, Ilum ice (animation: lava)",,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
-data/tilesets/secondary/cave/anim/lava/5.png,tileset,secondary,data/tilesets/secondary/cave/anim/lava/5.png,16,16,,,,,"Caves: sandstone, Kashyyyk roots, Sullust lava tubes, Ilum ice (animation: lava)",,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
-data/tilesets/secondary/cave/anim/lava/6.png,tileset,secondary,data/tilesets/secondary/cave/anim/lava/6.png,16,16,,,,,"Caves: sandstone, Kashyyyk roots, Sullust lava tubes, Ilum ice (animation: lava)",,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
-data/tilesets/secondary/cave/anim/lava/7.png,tileset,secondary,data/tilesets/secondary/cave/anim/lava/7.png,16,16,,,,,"Caves: sandstone, Kashyyyk roots, Sullust lava tubes, Ilum ice (animation: lava)",,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 data/tilesets/secondary/cave/tiles.png,tileset,secondary,data/tilesets/secondary/cave/tiles.png,128,216,,,,,"Caves: sandstone, Kashyyyk roots, Sullust lava tubes, Ilum ice",,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 data/tilesets/secondary/contest/tiles.png,tileset,secondary,data/tilesets/secondary/contest/tiles.png,128,216,,,,,Cloud City SHOWCASE hall,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 data/tilesets/secondary/dewford/anim/flag/0.png,tileset,secondary,data/tilesets/secondary/dewford/anim/flag/0.png,24,16,,,,,"KACHIRHO, Kashyyyk: wroshyr-root village on the lagoon (animation: flag)",,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
@@ -522,17 +516,11 @@ data/tilesets/secondary/rustboro_gym/tiles.png,tileset,secondary,data/tilesets/s
 data/tilesets/secondary/rusturf_tunnel/tiles.png,tileset,secondary,data/tilesets/secondary/rusturf_tunnel/tiles.png,128,72,,,,,BEGGAR'S CANYON tunnel,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 data/tilesets/secondary/seashore_house/tiles.png,tileset,secondary,data/tilesets/secondary/seashore_house/tiles.png,128,160,,,,,Seaside cantina (Kashyyyk shore),,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 data/tilesets/secondary/secret_base/blue_cave/tiles.png,tileset,secondary,data/tilesets/secondary/secret_base/blue_cave/tiles.png,128,48,,,,,HIDEOUT: ice cave (Hoth / Ilum),,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
-data/tilesets/secondary/secret_base/blue_cave/unused_tiles.png,tileset,secondary,data/tilesets/secondary/secret_base/blue_cave/unused_tiles.png,128,48,,,,,HIDEOUT: ice cave (Hoth / Ilum),,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 data/tilesets/secondary/secret_base/brown_cave/tiles.png,tileset,secondary,data/tilesets/secondary/secret_base/brown_cave/tiles.png,128,48,,,,,HIDEOUT: sandstone cave (Tatooine),,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
-data/tilesets/secondary/secret_base/brown_cave/unused_tiles.png,tileset,secondary,data/tilesets/secondary/secret_base/brown_cave/unused_tiles.png,128,48,,,,,HIDEOUT: sandstone cave (Tatooine),,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 data/tilesets/secondary/secret_base/red_cave/tiles.png,tileset,secondary,data/tilesets/secondary/secret_base/red_cave/tiles.png,128,48,,,,,HIDEOUT: lava cave (Sullust / Mustafar),,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
-data/tilesets/secondary/secret_base/red_cave/unused_tiles.png,tileset,secondary,data/tilesets/secondary/secret_base/red_cave/unused_tiles.png,128,48,,,,,HIDEOUT: lava cave (Sullust / Mustafar),,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 data/tilesets/secondary/secret_base/shrub/tiles.png,tileset,secondary,data/tilesets/secondary/secret_base/shrub/tiles.png,128,48,,,,,HIDEOUT: scrub den (Tatooine),,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
-data/tilesets/secondary/secret_base/shrub/unused_tiles.png,tileset,secondary,data/tilesets/secondary/secret_base/shrub/unused_tiles.png,128,48,,,,,HIDEOUT: scrub den (Tatooine),,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 data/tilesets/secondary/secret_base/tree/tiles.png,tileset,secondary,data/tilesets/secondary/secret_base/tree/tiles.png,128,48,,,,,HIDEOUT: wroshyr hollow (Kashyyyk / Endor),,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
-data/tilesets/secondary/secret_base/tree/unused_tiles.png,tileset,secondary,data/tilesets/secondary/secret_base/tree/unused_tiles.png,128,48,,,,,HIDEOUT: wroshyr hollow (Kashyyyk / Endor),,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 data/tilesets/secondary/secret_base/yellow_cave/tiles.png,tileset,secondary,data/tilesets/secondary/secret_base/yellow_cave/tiles.png,128,48,,,,,HIDEOUT: desert cave (Jundland),,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
-data/tilesets/secondary/secret_base/yellow_cave/unused_tiles.png,tileset,secondary,data/tilesets/secondary/secret_base/yellow_cave/unused_tiles.png,128,48,,,,,HIDEOUT: desert cave (Jundland),,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 data/tilesets/secondary/shop/tiles.png,tileset,secondary,data/tilesets/secondary/shop/tiles.png,128,256,,,,,Supply depot interior,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 data/tilesets/secondary/slateport/anim/balloons/0.png,tileset,secondary,data/tilesets/secondary/slateport/anim/balloons/0.png,16,16,,,,,"MOS EISLEY, Tatooine: spaceport, docking bays, market (animation: balloons)",,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 data/tilesets/secondary/slateport/anim/balloons/1.png,tileset,secondary,data/tilesets/secondary/slateport/anim/balloons/1.png,16,16,,,,,"MOS EISLEY, Tatooine: spaceport, docking bays, market (animation: balloons)",,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
@@ -571,13 +559,7 @@ data/tilesets/secondary/underwater/anim/seaweed/2.png,tileset,secondary,data/til
 data/tilesets/secondary/underwater/anim/seaweed/3.png,tileset,secondary,data/tilesets/secondary/underwater/anim/seaweed/3.png,16,16,,,,,"Underwater: seas of Kashyyyk, Yavin 4 and Dagobah (animation: seaweed)",,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 data/tilesets/secondary/underwater/tiles.png,tileset,secondary,data/tilesets/secondary/underwater/tiles.png,128,256,,,,,"Underwater: seas of Kashyyyk, Yavin 4 and Dagobah",,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 data/tilesets/secondary/union_room/tiles.png,tileset,secondary,data/tilesets/secondary/union_room/tiles.png,128,104,,,,,HOLONET CLUB union room,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
-data/tilesets/secondary/unused_1/0.png,tileset,secondary,data/tilesets/secondary/unused_1/0.png,16,256,,,,,Unused tileset (kept),,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
-data/tilesets/secondary/unused_1/1.png,tileset,secondary,data/tilesets/secondary/unused_1/1.png,16,256,,,,,Unused tileset (kept),,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
-data/tilesets/secondary/unused_1/2.png,tileset,secondary,data/tilesets/secondary/unused_1/2.png,16,256,,,,,Unused tileset (kept),,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
-data/tilesets/secondary/unused_1/3.png,tileset,secondary,data/tilesets/secondary/unused_1/3.png,16,256,,,,,Unused tileset (kept),,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 data/tilesets/secondary/unused_1/tiles.png,tileset,secondary,data/tilesets/secondary/unused_1/tiles.png,128,16,,,,,Unused tileset (kept),,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
-data/tilesets/secondary/unused_2/0.png,tileset,secondary,data/tilesets/secondary/unused_2/0.png,8,16,,,,,Unused tileset (kept),,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
-data/tilesets/secondary/unused_2/1.png,tileset,secondary,data/tilesets/secondary/unused_2/1.png,8,24,,,,,Unused tileset (kept),,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 data/tilesets/secondary/unused_2/tiles.png,tileset,secondary,data/tilesets/secondary/unused_2/tiles.png,128,80,,,,,Unused tileset (kept),,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/bag/bag_female.png,bag,,graphics/bag/bag_female.png,64,384,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
 graphics/bag/bag_male.png,bag,,graphics/bag/bag_male.png,64,384,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
@@ -903,16 +885,6 @@ graphics/battle_anims/sprites/yellow_unk.png,battle_anims,sprites,graphics/battl
 graphics/battle_anims/sprites/yellow_unk_2.png,battle_anims,sprites,graphics/battle_anims/sprites/yellow_unk_2.png,8,16,,,,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/battle_anims/sprites/z.png,battle_anims,sprites,graphics/battle_anims/sprites/z.png,16,32,,,,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/battle_anims/stat_change/tiles.png,battle_anims,stat_change,graphics/battle_anims/stat_change/tiles.png,128,32,,,,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
-graphics/battle_anims/unused/goosuto.png,battle_anims,unused,graphics/battle_anims/unused/goosuto.png,128,24,,,,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
-graphics/battle_anims/unused/lights.png,battle_anims,unused,graphics/battle_anims/unused/lights.png,24,8,,,,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
-graphics/battle_anims/unused/line_sketch.png,battle_anims,unused,graphics/battle_anims/unused/line_sketch.png,32,96,,,,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
-graphics/battle_anims/unused/line_sketch_2.png,battle_anims,unused,graphics/battle_anims/unused/line_sketch_2.png,24,24,,,,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
-graphics/battle_anims/unused/metronome_hand_small.png,battle_anims,unused,graphics/battle_anims/unused/metronome_hand_small.png,16,16,,,,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
-graphics/battle_anims/unused/music_notes.png,battle_anims,unused,graphics/battle_anims/unused/music_notes.png,16,128,,,,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
-graphics/battle_anims/unused/old_beatup.png,battle_anims,unused,graphics/battle_anims/unused/old_beatup.png,16,64,,,,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
-graphics/battle_anims/unused/spinning_ball.png,battle_anims,unused,graphics/battle_anims/unused/spinning_ball.png,40,8,,,,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
-graphics/battle_anims/unused/water_gfx.png,battle_anims,unused,graphics/battle_anims/unused/water_gfx.png,32,56,,,,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
-graphics/battle_anims/unused/water_splash.png,battle_anims,unused,graphics/battle_anims/unused/water_splash.png,128,16,,,,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/battle_environment/building/anim_tiles.png,battle_environment,building,graphics/battle_environment/building/anim_tiles.png,128,128,,,,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/battle_environment/building/tiles.png,battle_environment,building,graphics/battle_environment/building/tiles.png,128,128,,,,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/battle_environment/cave/anim_tiles.png,battle_environment,cave,graphics/battle_environment/cave/anim_tiles.png,128,128,,,,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
@@ -966,7 +938,6 @@ graphics/battle_interface/healthbox_singles_player.png,battle_interface,,graphic
 graphics/battle_interface/hpbar.png,battle_interface,,graphics/battle_interface/hpbar.png,96,8,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
 graphics/battle_interface/hpbar_anim.png,battle_interface,,graphics/battle_interface/hpbar_anim.png,144,8,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
 graphics/battle_interface/hpbar_anim_unused.png,battle_interface,,graphics/battle_interface/hpbar_anim_unused.png,144,8,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
-graphics/battle_interface/hpbar_unused.png,battle_interface,,graphics/battle_interface/hpbar_unused.png,96,8,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
 graphics/battle_interface/level_up_banner.png,battle_interface,,graphics/battle_interface/level_up_banner.png,96,24,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
 graphics/battle_interface/misc.png,battle_interface,,graphics/battle_interface/misc.png,88,8,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
 graphics/battle_interface/misc_frameend.png,battle_interface,,graphics/battle_interface/misc_frameend.png,8,8,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
@@ -977,12 +948,6 @@ graphics/battle_interface/status2.png,battle_interface,,graphics/battle_interfac
 graphics/battle_interface/status3.png,battle_interface,,graphics/battle_interface/status3.png,24,40,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
 graphics/battle_interface/status4.png,battle_interface,,graphics/battle_interface/status4.png,24,40,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
 graphics/battle_interface/textbox.png,battle_interface,,graphics/battle_interface/textbox.png,128,128,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
-graphics/battle_interface/unused_status_summary.png,battle_interface,,graphics/battle_interface/unused_status_summary.png,24,8,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
-graphics/battle_interface/unused_window.png,battle_interface,,graphics/battle_interface/unused_window.png,64,256,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
-graphics/battle_interface/unused_window2.png,battle_interface,,graphics/battle_interface/unused_window2.png,64,128,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
-graphics/battle_interface/unused_window2bar.png,battle_interface,,graphics/battle_interface/unused_window2bar.png,40,8,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
-graphics/battle_interface/unused_window3.png,battle_interface,,graphics/battle_interface/unused_window3.png,64,48,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
-graphics/battle_interface/unused_window4.png,battle_interface,,graphics/battle_interface/unused_window4.png,64,128,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
 graphics/battle_transitions/big_pokeball.png,battle_transitions,,graphics/battle_transitions/big_pokeball.png,32,88,,,,,Poké Ball wipe → capture pod.,,PENDING_ART,,Replace by hand; no generator tool.,HOTSWAP,HUMAN-TODO,,,,,NOT_STARTED
 graphics/battle_transitions/elite_four_bg.png,battle_transitions,,graphics/battle_transitions/elite_four_bg.png,120,8,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
 graphics/battle_transitions/frontier_logo.png,battle_transitions,,graphics/battle_transitions/frontier_logo.png,328,40,,,,,Battle Frontier logo wipe → Grand Arena logo.,,PENDING_ART,,Replace by hand; no generator tool.,HOTSWAP,HUMAN-TODO,,,,,NOT_STARTED
@@ -1050,7 +1015,6 @@ graphics/berries/watmel.png,berries,,graphics/berries/watmel.png,48,48,,,,,,,PEN
 graphics/berries/wepear.png,berries,,graphics/berries/wepear.png,48,48,,,,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/berries/wiki.png,berries,,graphics/berries/wiki.png,48,48,,,,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/berry_blender/arrow.png,berry_blender,,graphics/berry_blender/arrow.png,32,128,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
-graphics/berry_blender/arrow_old.png,berry_blender,,graphics/berry_blender/arrow_old.png,16,64,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
 graphics/berry_blender/center.png,berry_blender,,graphics/berry_blender/center.png,64,128,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
 graphics/berry_blender/countdown_numbers.png,berry_blender,,graphics/berry_blender/countdown_numbers.png,32,96,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
 graphics/berry_blender/outer.png,berry_blender,,graphics/berry_blender/outer.png,128,128,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
@@ -1070,7 +1034,6 @@ graphics/berry_fix/logo.png,berry_fix,,graphics/berry_fix/logo.png,176,88,,,,,Ge
 graphics/berry_fix/window.png,berry_fix,,graphics/berry_fix/window.png,664,16,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,Berry Fix link program screens (Game Boy branding); only seen when linking to Ruby/Sapphire.,KEEP,,,,,,NOT_STARTED
 graphics/birch_speech/birch.png,birch_speech,,graphics/birch_speech/birch.png,64,64,,,,,Prof. Korr's intro portrait (sprite-trainer-generator).,,ART_READY,sprite-trainer-generator/civitai (jobs.json birch),"art: art/graphics/birch_speech/birch.png; Prof. Korr front pic; Civitai LoRA 159333@443092 on SDXL base, seed 1239889137, figure 33x81, 16 colours, factions; palette from the PNG; auto-picked, no human review",HOTSWAP,,,,,,NOT_STARTED
 graphics/birch_speech/shadow.png,birch_speech,,graphics/birch_speech/shadow.png,128,24,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
-graphics/birch_speech/unused_beauty.png,birch_speech,,graphics/birch_speech/unused_beauty.png,128,416,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
 graphics/cable_car/bg.png,cable_car,,graphics/cable_car/bg.png,128,256,,,,,Mt. Chimney view from the cable car → Mustafar lava fields seen from the shuttle.,,PENDING_ART,,Replace by hand; no generator tool.,HOTSWAP,HUMAN-TODO,,,,,NOT_STARTED
 graphics/cable_car/cable.png,cable_car,,graphics/cable_car/cable.png,16,16,,,,,Cable → remove or turn into a landing beam (the shuttle has no cable).,,PENDING_ART,,Replace by hand; no generator tool.,HOTSWAP,HUMAN-TODO,,,,,NOT_STARTED
 graphics/cable_car/cable_car.png,cable_car,,graphics/cable_car/cable_car.png,64,64,,,,,Cable car → shuttle.,,PENDING_ART,,Replace by hand; no generator tool.,HOTSWAP,HUMAN-TODO,,,,,NOT_STARTED
@@ -1081,16 +1044,6 @@ graphics/contest/applause_meter.png,contest,,graphics/contest/applause_meter.png
 graphics/contest/audience.png,contest,,graphics/contest/audience.png,128,128,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,Showcase audience and judge; generic people.,KEEP,,,,,,NOT_STARTED
 graphics/contest/faces.png,contest,,graphics/contest/faces.png,16,48,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,Showcase audience and judge; generic people.,KEEP,,,,,,NOT_STARTED
 graphics/contest/interface.png,contest,,graphics/contest/interface.png,128,128,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,Showcase audience and judge; generic people.,KEEP,,,,,,NOT_STARTED
-graphics/contest/japanese/audience.png,contest,japanese,graphics/contest/japanese/audience.png,128,128,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,Showcase audience and judge; generic people.,KEEP,,,,,,NOT_STARTED
-graphics/contest/japanese/floor.png,contest,japanese,graphics/contest/japanese/floor.png,128,32,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,Showcase audience and judge; generic people.,KEEP,,,,,,NOT_STARTED
-graphics/contest/japanese/frame_1.png,contest,japanese,graphics/contest/japanese/frame_1.png,128,16,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,Showcase audience and judge; generic people.,KEEP,,,,,,NOT_STARTED
-graphics/contest/japanese/frame_2.png,contest,japanese,graphics/contest/japanese/frame_2.png,128,16,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,Showcase audience and judge; generic people.,KEEP,,,,,,NOT_STARTED
-graphics/contest/japanese/interface.png,contest,japanese,graphics/contest/japanese/interface.png,128,128,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,Showcase audience and judge; generic people.,KEEP,,,,,,NOT_STARTED
-graphics/contest/japanese/letters.png,contest,japanese,graphics/contest/japanese/letters.png,128,16,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,Showcase audience and judge; generic people.,KEEP,,,,,,NOT_STARTED
-graphics/contest/japanese/meter.png,contest,japanese,graphics/contest/japanese/meter.png,128,8,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,Showcase audience and judge; generic people.,KEEP,,,,,,NOT_STARTED
-graphics/contest/japanese/numbers.png,contest,japanese,graphics/contest/japanese/numbers.png,128,24,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,Showcase audience and judge; generic people.,KEEP,,,,,,NOT_STARTED
-graphics/contest/japanese/symbols.png,contest,japanese,graphics/contest/japanese/symbols.png,128,16,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,Showcase audience and judge; generic people.,KEEP,,,,,,NOT_STARTED
-graphics/contest/japanese/voltage.png,contest,japanese,graphics/contest/japanese/voltage.png,64,40,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,Showcase audience and judge; generic people.,KEEP,,,,,,NOT_STARTED
 graphics/contest/judge.png,contest,,graphics/contest/judge.png,64,64,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,Showcase audience and judge; generic people.,KEEP,,,,,,NOT_STARTED
 graphics/contest/judge_symbols.png,contest,,graphics/contest/judge_symbols.png,16,112,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,Showcase audience and judge; generic people.,KEEP,,,,,,NOT_STARTED
 graphics/contest/nextturn.png,contest,,graphics/contest/nextturn.png,64,8,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,Showcase audience and judge; generic people.,KEEP,,,,,,NOT_STARTED
@@ -1200,8 +1153,6 @@ graphics/door_anims/sootopolis_peaked_roof.png,door_anims,,graphics/door_anims/s
 graphics/door_anims/trainer_hill_lobby_elevator.png,door_anims,,graphics/door_anims/trainer_hill_lobby_elevator.png,16,96,,,,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/door_anims/trainer_hill_roof_elevator.png,door_anims,,graphics/door_anims/trainer_hill_roof_elevator.png,16,96,,,,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/door_anims/unused_battle_frontier.png,door_anims,,graphics/door_anims/unused_battle_frontier.png,16,96,,,,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
-graphics/door_anims/unused_bottom.png,door_anims,,graphics/door_anims/unused_bottom.png,16,24,,,,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
-graphics/door_anims/unused_top.png,door_anims,,graphics/door_anims/unused_top.png,16,24,,,,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/door_anims/verdanturf.png,door_anims,,graphics/door_anims/verdanturf.png,16,96,,,,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/easy_chat/button_window.png,easy_chat,,graphics/easy_chat/button_window.png,64,64,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
 graphics/easy_chat/interview_frame.png,easy_chat,,graphics/easy_chat/interview_frame.png,64,64,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
@@ -1269,7 +1220,6 @@ graphics/field_effects/pics/tall_grass.png,field_effects,pics,graphics/field_eff
 graphics/field_effects/pics/tree_disguise.png,field_effects,pics,graphics/field_effects/pics/tree_disguise.png,112,32,,,,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/field_effects/pics/unknown_17.png,field_effects,pics,graphics/field_effects/pics/unknown_17.png,128,16,,,,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/field_effects/pics/unused_grass_2.png,field_effects,pics,graphics/field_effects/pics/unused_grass_2.png,64,16,,,,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
-graphics/field_effects/pics/unused_grass_3.png,field_effects,pics,graphics/field_effects/pics/unused_grass_3.png,64,16,,,,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/field_effects/pics/unused_sand.png,field_effects,pics,graphics/field_effects/pics/unused_sand.png,64,16,,,,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/field_effects/pics/water_surfacing.png,field_effects,pics,graphics/field_effects/pics/water_surfacing.png,80,16,,,,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/fonts/braille.png,fonts,,graphics/fonts/braille.png,256,64,,,,,Braille font (Regi puzzles) → Aurebesh.,,PENDING_ART,,Replace by hand; no generator tool.,HOTSWAP,HUMAN-TODO,,,,,NOT_STARTED
@@ -1287,8 +1237,6 @@ graphics/fonts/latin_normal.png,fonts,,graphics/fonts/latin_normal.png,256,512,,
 graphics/fonts/latin_short.png,fonts,,graphics/fonts/latin_short.png,256,512,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
 graphics/fonts/latin_small.png,fonts,,graphics/fonts/latin_small.png,256,512,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
 graphics/fonts/latin_small_narrow.png,fonts,,graphics/fonts/latin_small_narrow.png,256,512,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
-graphics/fonts/unused_frlg_blanked_down_arrow.png,fonts,,graphics/fonts/unused_frlg_blanked_down_arrow.png,128,16,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
-graphics/fonts/unused_frlg_down_arrow.png,fonts,,graphics/fonts/unused_frlg_down_arrow.png,16,32,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
 graphics/frontier_pass/bg.png,frontier_pass,,graphics/frontier_pass/bg.png,128,256,,,,,"Frontier Pass: BATTLE FRONTIER / FRONTIER PASS text, map and symbols → ARENA PASS and the Grand Arena.",,PENDING_ART,,Replace by hand; no generator tool.,HOTSWAP,HUMAN-TODO,,,,,NOT_STARTED
 graphics/frontier_pass/cursor.png,frontier_pass,,graphics/frontier_pass/cursor.png,16,32,,,,,"Frontier Pass: BATTLE FRONTIER / FRONTIER PASS text, map and symbols → ARENA PASS and the Grand Arena.",,PENDING_ART,,Replace by hand; no generator tool.,HOTSWAP,HUMAN-TODO,,,,,NOT_STARTED
 graphics/frontier_pass/map_and_card.png,frontier_pass,,graphics/frontier_pass/map_and_card.png,128,112,,,,,"Frontier Pass: BATTLE FRONTIER / FRONTIER PASS text, map and symbols → ARENA PASS and the Grand Arena.",,PENDING_ART,,Replace by hand; no generator tool.,HOTSWAP,HUMAN-TODO,,,,,NOT_STARTED
@@ -1302,7 +1250,6 @@ graphics/interface/menu_info.png,interface,,graphics/interface/menu_info.png,128
 graphics/interface/mon_markings.png,interface,,graphics/interface/mon_markings.png,32,128,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
 graphics/interface/mon_markings_menu.png,interface,,graphics/interface/mon_markings_menu.png,200,8,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
 graphics/interface/mystery_gift_textbox_border.png,interface,,graphics/interface/mystery_gift_textbox_border.png,8,64,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
-graphics/interface/option_menu_equals_sign.png,interface,,graphics/interface/option_menu_equals_sign.png,8,16,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
 graphics/interface/outline_cursor.png,interface,,graphics/interface/outline_cursor.png,24,24,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
 graphics/interface/scroll_indicator.png,interface,,graphics/interface/scroll_indicator.png,16,32,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
 graphics/interface/status_icons.png,interface,,graphics/interface/status_icons.png,32,64,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
@@ -1312,7 +1259,6 @@ graphics/intro/copyright.png,intro,,graphics/intro/copyright.png,312,8,,,,,Boot 
 graphics/intro/scene_1/bg.png,intro,scene_1,graphics/intro/scene_1/bg.png,128,512,,,,,Opening scene 1 (Flygon and Latias fly past) → Star Wars companions / a ship over Tatooine.,,ART_READY,,"Shipped 2026-11-01 by tools/cutscene-generator (scenes/intro_drops): canyon drip at dawn, pan up to the twin suns, owner-approved.",HOTSWAP,,,,,,NOT_STARTED
 graphics/intro/scene_1/drops_logo.png,intro,scene_1,graphics/intro/scene_1/drops_logo.png,32,320,,,,,"GAME FREAK logo in the opening (water drops) → your studio logo, or cut the scene.",,ART_READY,,"Done 2026-11-01: owner keeps the GAME FREAK logo over the drip (it was cut at first, then restored in intro.c the same day). The drop frames stay, recolored to clear water via drops.pal (scenes/intro_drops).",HOTSWAP,,,,,,NOT_STARTED
 graphics/intro/scene_1/flygon.png,intro,scene_1,graphics/intro/scene_1/flygon.png,64,32,,,,,Opening scene 1 (Flygon and Latias fly past) → Star Wars companions / a ship over Tatooine.,,ART_READY,,"Shipped 2026-11-01 by tools/cutscene-generator (scenes/intro_drops): transport ship silhouette flying off, owner-approved.",HOTSWAP,,,,,,NOT_STARTED
-graphics/intro/scene_1/lati.png,intro,scene_1,graphics/intro/scene_1/lati.png,64,32,,,,,Opening scene 1 (Flygon and Latias fly past) → Star Wars companions / a ship over Tatooine.,,ART_READY,,Done 2026-11-01: unused by the game (sIntroLati_Gfx is never loaded); nothing to draw.,HOTSWAP,,,,,,NOT_STARTED
 graphics/intro/scene_1/sparkle.png,intro,scene_1,graphics/intro/scene_1/sparkle.png,16,128,,,,,Opening scene 1 (Flygon and Latias fly past) → Star Wars companions / a ship over Tatooine.,,ART_READY,,"Done 2026-11-01: plain water sparkle, kept as is in the new scene 1 (scenes/intro_drops), owner-approved.",HOTSWAP,,,,,,NOT_STARTED
 graphics/intro/scene_2/bicycle.png,intro,scene_2,graphics/intro/scene_2/bicycle.png,64,128,,,,,Bicycle → speeder bike.,,ART_READY,,"Shipped 2026-11-01 by tools/cutscene-generator (scenes/intro_bike): KAEL/MIRA on the speeder over Tatooine, owner-approved.",HOTSWAP,,,,,,NOT_STARTED
 graphics/intro/scene_2/brendan.png,intro,scene_2,graphics/intro/scene_2/brendan.png,64,256,,,,,Player on a bike in the opening → KAEL / MIRA on a speeder bike.,,ART_READY,,"Shipped 2026-11-01 by tools/cutscene-generator (scenes/intro_bike): KAEL/MIRA on the speeder over Tatooine, owner-approved.",HOTSWAP,,,,,,NOT_STARTED
@@ -1342,7 +1288,6 @@ graphics/intro/scene_3/misc.png,intro,scene_3,graphics/intro/scene_3/misc.png,64
 graphics/intro/scene_3/pokeball.png,intro,scene_3,graphics/intro/scene_3/pokeball.png,128,128,,,,,Poké Ball thrown in the opening battle → capture pod.,,ART_READY,,"Shipped 2026-11-01 by tools/cutscene-generator (scenes/intro_legends): the capture pod, spinning and zooming as Emerald's ball.",HOTSWAP,,,,,,NOT_STARTED
 graphics/intro/scene_3/rayquaza.png,intro,scene_3,graphics/intro/scene_3/rayquaza.png,128,128,,,,,"Legendaries in the opening → GREATKRAYT, SANDO, EXOGORTH.",,PENDING_ART,,"PLACEHOLDER in the game since 2026-11-01 (the magenta slash-circle placeholder, scaled up, where Rayquaza stood). Follow-up task: draw the titan. Primer, constraints and Emerald originals: wiki/art/graphics/intro/scene_3/README.md.",HOTSWAP,HUMAN-TODO,,,,,NOT_STARTED
 graphics/intro/scene_3/rayquaza_clouds.png,intro,scene_3,graphics/intro/scene_3/rayquaza_clouds.png,128,128,,,,,"Legendaries in the opening → GREATKRAYT, SANDO, EXOGORTH.",,PENDING_ART,,Replace by hand; no generator tool.,HOTSWAP,HUMAN-TODO,,,,,NOT_STARTED
-graphics/intro/scene_3/streaks.png,intro,scene_3,graphics/intro/scene_3/streaks.png,16,32,,,,,Opening battle effects and background → match the new titans scene.,,PENDING_ART,,Replace by hand; no generator tool.,HOTSWAP,HUMAN-TODO,,,,,NOT_STARTED
 graphics/items/icons/acro_bike.png,items,icons,graphics/items/icons/acro_bike.png,24,24,,,item:acro-bike:item_icon,SPEEDER BIKE,,graphics/items/icons/speeder_bike.png,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/items/icons/aguav_berry.png,items,icons,graphics/items/icons/aguav_berry.png,24,24,,,item:aguav-berry:item_icon,AGARA FRUIT,,graphics/items/icons/agara_fruit.png,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/items/icons/amulet_coin.png,items,icons,graphics/items/icons/amulet_coin.png,24,24,,,item:amulet-coin:item_icon,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
@@ -1565,7 +1510,6 @@ graphics/link/321start.png,link,,graphics/link/321start.png,64,112,,,,,Generic U
 graphics/link/321start_static.png,link,,graphics/link/321start_static.png,32,192,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
 graphics/link/comm_error_bg.png,link,,graphics/link/comm_error_bg.png,8,16,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
 graphics/link/minigame_digits.png,link,,graphics/link/minigame_digits.png,8,88,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
-graphics/link/minigame_digits2.png,link,,graphics/link/minigame_digits2.png,8,176,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
 graphics/link/test_digits.png,link,,graphics/link/test_digits.png,136,8,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
 graphics/link/wireless_display.png,link,,graphics/link/wireless_display.png,128,56,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
 graphics/link/wireless_icon.png,link,,graphics/link/wireless_icon.png,16,112,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
@@ -1885,14 +1829,12 @@ graphics/pokeblock/use_screen/updown.png,pokeblock,use_screen,graphics/pokeblock
 graphics/pokedex/area_glow.png,pokedex,,graphics/pokedex/area_glow.png,32,96,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
 graphics/pokedex/area_marker.png,pokedex,,graphics/pokedex/area_marker.png,16,16,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
 graphics/pokedex/area_unknown.png,pokedex,,graphics/pokedex/area_unknown.png,32,96,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
-graphics/pokedex/arrows.png,pokedex,,graphics/pokedex/arrows.png,8,96,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
 graphics/pokedex/caught_ball.png,pokedex,,graphics/pokedex/caught_ball.png,8,16,,,,,Poké Ball icon → CAPTURE POD icon.,,PENDING_ART,,Replace by hand; no generator tool.,HOTSWAP,HUMAN-TODO,,,,,NOT_STARTED
 graphics/pokedex/cry_meter.png,pokedex,,graphics/pokedex/cry_meter.png,80,64,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
 graphics/pokedex/cry_meter_needle.png,pokedex,,graphics/pokedex/cry_meter_needle.png,64,64,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
 graphics/pokedex/cry_screen_bg.png,pokedex,,graphics/pokedex/cry_screen_bg.png,8,8,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
 graphics/pokedex/interface.png,pokedex,,graphics/pokedex/interface.png,32,512,,,,,Baked-in text POKéDEX / HOENN / NATIONAL → DATAPAD / OUTER RIM / GALACTIC.,,PENDING_ART,,Replace by hand; no generator tool.,HOTSWAP,HUMAN-TODO,,,,,NOT_STARTED
 graphics/pokedex/menu.png,pokedex,,graphics/pokedex/menu.png,128,128,,,,,Baked-in text POKéDEX / HOENN / NATIONAL → DATAPAD / OUTER RIM / GALACTIC.,,PENDING_ART,,Replace by hand; no generator tool.,HOTSWAP,HUMAN-TODO,,,,,NOT_STARTED
-graphics/pokedex/noball_unused.png,pokedex,,graphics/pokedex/noball_unused.png,8,32,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
 graphics/pokedex/region_map.png,pokedex,,graphics/pokedex/region_map.png,128,120,,,,,Hoenn region map → Outer Rim galaxy map with the game's planets.,,PENDING_ART,,Replace by hand; no generator tool.,HOTSWAP,HUMAN-TODO,,,,,NOT_STARTED
 graphics/pokedex/region_map_affine.png,pokedex,,graphics/pokedex/region_map_affine.png,128,120,,,,,Hoenn region map → Outer Rim galaxy map with the game's planets.,,PENDING_ART,,Replace by hand; no generator tool.,HOTSWAP,HUMAN-TODO,,,,,NOT_STARTED
 graphics/pokedex/search_menu.png,pokedex,,graphics/pokedex/search_menu.png,128,64,,,,,Baked-in text POKéDEX / HOENN / NATIONAL → DATAPAD / OUTER RIM / GALACTIC.,,PENDING_ART,,Replace by hand; no generator tool.,HOTSWAP,HUMAN-TODO,,,,,NOT_STARTED
@@ -2235,8 +2177,6 @@ graphics/pokemon/deoxys/back.png,pokemon,deoxys,graphics/pokemon/deoxys/back.png
 graphics/pokemon/deoxys/footprint.png,pokemon,deoxys,graphics/pokemon/deoxys/footprint.png,16,16,,,species:deoxys:footprint,SHIFTSTAR,,graphics/pokemon/shiftstar/footprint.png,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/pokemon/deoxys/front.png,pokemon,deoxys,graphics/pokemon/deoxys/front.png,64,64,,,,,,,ART_READY,"sprite-creature-generator/civitai (batch.py, refs/picks/deoxys.json)","art: art/graphics/pokemon/deoxys/front.png; SHIFTSTAR battle front, re-finished free from the saved downloads, 15 colours, despeckle 0; Civitai LoRA 161280@273148 on DreamShaper 8, seed 420602673; image to image from https://static.wikia.nocookie.net/starwars/images/9/9b/Bendu_TVE.png/revision/latest/scale-to-width-down/1000?cb=20241124181040 (refs.py pick, denoise 0.5); 12 colours + despeckle; auto-picked, no human review; palette art/graphics/pokemon/deoxys/normal.pal, shiny.pal next to it",HOTSWAP,,,,,,NOT_STARTED
 graphics/pokemon/deoxys/icon.png,pokemon,deoxys,graphics/pokemon/deoxys/icon.png,32,64,,,species:deoxys:menu_icon,SHIFTSTAR,,graphics/pokemon/shiftstar/icon.png,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
-graphics/pokemon/deoxys/icon_speed.png,pokemon,deoxys,graphics/pokemon/deoxys/icon_speed.png,32,64,,,,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
-graphics/pokemon/deoxys/icon_speed_wide.png,pokemon,deoxys,graphics/pokemon/deoxys/icon_speed_wide.png,128,64,,,,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/pokemon/dewgong/anim_front.png,pokemon,dewgong,graphics/pokemon/dewgong/anim_front.png,64,128,,,species:dewgong:front_pic,THALASIREN,,graphics/pokemon/thalasiren/anim_front.png,ART_READY,"sprite-creature-generator/civitai (batch.py, refs/picks/dewgong.json)","art: art/graphics/pokemon/dewgong/anim_front.png; THALASIREN front animation 64x128: frame 1 = front.png, frame 2 = lunge (finish --frame2 lunge); normal.pal",HOTSWAP,,,,,,NOT_STARTED
 graphics/pokemon/dewgong/back.png,pokemon,dewgong,graphics/pokemon/dewgong/back.png,64,64,,,species:dewgong:back_pic,THALASIREN,,graphics/pokemon/thalasiren/back.png,ART_READY,"sprite-creature-generator/civitai (batch.py, refs/picks/dewgong.json)","art: art/graphics/pokemon/dewgong/back.png; THALASIREN battle back, image to image from the mirrored front (backside, denoise 0.55), on the front's normal.pal",HOTSWAP,,,,,,NOT_STARTED
 graphics/pokemon/dewgong/footprint.png,pokemon,dewgong,graphics/pokemon/dewgong/footprint.png,16,16,,,species:dewgong:footprint,THALASIREN,,graphics/pokemon/thalasiren/footprint.png,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
@@ -4251,7 +4191,6 @@ graphics/trade/link_mon_glow.png,trade,,graphics/trade/link_mon_glow.png,32,32,,
 graphics/trade/link_mon_shadow.png,trade,,graphics/trade/link_mon_shadow.png,16,64,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,GBA link hardware drawing; generic.,KEEP,,,,,,NOT_STARTED
 graphics/trade/menu.png,trade,,graphics/trade/menu.png,296,32,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,GBA link hardware drawing; generic.,KEEP,,,,,,NOT_STARTED
 graphics/trade/pokeball.png,trade,,graphics/trade/pokeball.png,16,192,,,,,Poké Ball icon → CAPTURE POD icon.,,PENDING_ART,,Replace by hand; no generator tool.,HOTSWAP,HUMAN-TODO,,,,,NOT_STARTED
-graphics/trade/pokeball_symbol.png,trade,,graphics/trade/pokeball_symbol.png,64,104,,,,,Poké Ball icon → CAPTURE POD icon.,,PENDING_ART,,Replace by hand; no generator tool.,HOTSWAP,HUMAN-TODO,,,,,NOT_STARTED
 graphics/trade/wireless_signal.png,trade,,graphics/trade/wireless_signal.png,128,96,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,GBA link hardware drawing; generic.,KEEP,,,,,,NOT_STARTED
 graphics/trainer_card/badges.png,trainer_card,,graphics/trainer_card/badges.png,128,16,,,,,The 8 Hoenn badges → the 8 kyber shards.,,PENDING_ART,,Replace by hand; no generator tool.,HOTSWAP,HUMAN-TODO,,,,,NOT_STARTED
 graphics/trainer_card/frlg/badges.png,trainer_card,frlg,graphics/trainer_card/frlg/badges.png,128,16,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
@@ -4386,17 +4325,6 @@ graphics/union_room_chat/r_button.png,union_room_chat,,graphics/union_room_chat/
 graphics/union_room_chat/r_button_labels.png,union_room_chat,,graphics/union_room_chat/r_button_labels.png,32,64,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
 graphics/union_room_chat/text_entry_arrow.png,union_room_chat,,graphics/union_room_chat/text_entry_arrow.png,8,16,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
 graphics/union_room_chat/text_entry_cursor.png,union_room_chat,,graphics/union_room_chat/text_entry_cursor.png,8,16,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
-graphics/unused/basic_frame.png,unused,,graphics/unused/basic_frame.png,80,8,,,,,"Ghost: unused vanilla art, never shown.",,NO_ART,,"Compiled in (src/graphics.c) but never drawn; remove the INCBIN too. Delete, do not redraw.",CUT,,,,,,NOT_STARTED
-graphics/unused/cherry.png,unused,,graphics/unused/cherry.png,48,48,,,,,"Ghost: unused vanilla art, never shown.",,NO_ART,,"Compiled in (src/item_menu_icons.c) but never drawn; remove the INCBIN too. Delete, do not redraw.",CUT,,,,,,NOT_STARTED
-graphics/unused/color_frames.png,unused,,graphics/unused/color_frames.png,176,136,,,,,"Ghost: unused vanilla art, never shown.",,NO_ART,,"Compiled in (src/graphics.c) but never drawn; remove the INCBIN too. Delete, do not redraw.",CUT,,,,,,NOT_STARTED
-graphics/unused/old_battle_interface_1.png,unused,,graphics/unused/old_battle_interface_1.png,128,32,,,,,"Ghost: unused vanilla art, never shown.",,NO_ART,,"Not referenced anywhere in src/. Delete, do not redraw.",CUT,,,,,,NOT_STARTED
-graphics/unused/old_battle_interface_2.png,unused,,graphics/unused/old_battle_interface_2.png,128,8,,,,,"Ghost: unused vanilla art, never shown.",,NO_ART,,"Not referenced anywhere in src/. Delete, do not redraw.",CUT,,,,,,NOT_STARTED
-graphics/unused/old_battle_interface_3.png,unused,,graphics/unused/old_battle_interface_3.png,128,8,,,,,"Ghost: unused vanilla art, never shown.",,NO_ART,,"Not referenced anywhere in src/. Delete, do not redraw.",CUT,,,,,,NOT_STARTED
-graphics/unused/old_bulbasaur.png,unused,,graphics/unused/old_bulbasaur.png,32,96,,,,,"Ghost: unused vanilla art, never shown.",,NO_ART,,"Not referenced anywhere in src/. Delete, do not redraw.",CUT,,,,,,NOT_STARTED
-graphics/unused/old_bulbasaur2.png,unused,,graphics/unused/old_bulbasaur2.png,128,32,,,,,"Ghost: unused vanilla art, never shown.",,NO_ART,,"Not referenced anywhere in src/. Delete, do not redraw.",CUT,,,,,,NOT_STARTED
-graphics/unused/old_charizard.png,unused,,graphics/unused/old_charizard.png,32,32,,,,,"Ghost: unused vanilla art, never shown.",,NO_ART,,"Not referenced anywhere in src/. Delete, do not redraw.",CUT,,,,,,NOT_STARTED
-graphics/unused/old_charmap.png,unused,,graphics/unused/old_charmap.png,128,128,,,,,"Ghost: unused vanilla art, never shown.",,NO_ART,,"Compiled in (src/graphics.c) but never drawn; remove the INCBIN too. Delete, do not redraw.",CUT,,,,,,NOT_STARTED
-graphics/unused/shadow.png,unused,,graphics/unused/shadow.png,32,16,,,,,"Ghost: unused vanilla art, never shown.",,NO_ART,,"Compiled in (src/graphics.c) but never drawn; remove the INCBIN too. Delete, do not redraw.",CUT,,,,,,NOT_STARTED
 graphics/wallclock/clock.png,wallclock,,graphics/wallclock/clock.png,128,64,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
 graphics/wallclock/hand.png,wallclock,,graphics/wallclock/hand.png,64,144,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
 graphics/weather/ash.png,weather,,graphics/weather/ash.png,64,128,,,,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
@@ -4483,48 +4411,48 @@ vfx:Status_Nightmare,vfx_battle_anim,status,data/battle_anim_scripts.s,,,,,ANIM_
 vfx:Status_Paralysis,vfx_battle_anim,status,data/battle_anim_scripts.s,,,,,ANIM_TAG_SPARK_2,,Keep the animation; its sprites are redrawn through pending_art (battle_anims).,,KEEP_ANIM,,,KEEP,,10528,,,,NOT_STARTED
 vfx:Status_Poison,vfx_battle_anim,status,data/battle_anim_scripts.s,,,,,SE_M_TOXIC,,Keep the animation; its sprites are redrawn through pending_art (battle_anims).,,KEEP_ANIM,,,KEEP,,10484,,,,NOT_STARTED
 vfx:Status_Sleep,vfx_battle_anim,status,data/battle_anim_scripts.s,,,,,ANIM_TAG_LETTER_Z|SE_M_SNORE,,Keep the animation; its sprites are redrawn through pending_art (battle_anims).,,KEEP_ANIM,,,KEEP,,10520,,,,NOT_STARTED
-vfx:B_TRANSITION_ANGLED_WIPES,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,360,,,,NOT_STARTED
-vfx:B_TRANSITION_AQUA,vfx_battle_transition,,src/battle_transition.c,,,,,,,Hutt Cartel crest wipe (was the Team Aqua logo).,,PENDING_ART,,,HOTSWAP,,366,,,,NOT_STARTED
-vfx:B_TRANSITION_BIG_POKEBALL,vfx_battle_transition,,src/battle_transition.c,,,,,,,Big capture pod wipe: redraw the Poke Ball shape (tilemap + mask in battle_transition.c) as a capture pod.,,PENDING_ART,,,HOTSWAP,,352,,,,NOT_STARTED
-vfx:B_TRANSITION_BLACKHOLE,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,375,,,,NOT_STARTED
-vfx:B_TRANSITION_BLACKHOLE_PULSATE,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,376,,,,NOT_STARTED
-vfx:B_TRANSITION_BLUR,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,349,,,,NOT_STARTED
-vfx:B_TRANSITION_CHAMPION,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,365,,,,NOT_STARTED
-vfx:B_TRANSITION_CLOCKWISE_WIPE,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,354,,,,NOT_STARTED
-vfx:B_TRANSITION_DRAKE,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,364,,,,NOT_STARTED
-vfx:B_TRANSITION_FRONTIER_CIRCLES_ASYMMETRIC_SPIRAL,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,385,,,,NOT_STARTED
-vfx:B_TRANSITION_FRONTIER_CIRCLES_ASYMMETRIC_SPIRAL_IN_SEQ,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,389,,,,NOT_STARTED
-vfx:B_TRANSITION_FRONTIER_CIRCLES_CROSS,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,384,,,,NOT_STARTED
-vfx:B_TRANSITION_FRONTIER_CIRCLES_CROSS_IN_SEQ,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,388,,,,NOT_STARTED
-vfx:B_TRANSITION_FRONTIER_CIRCLES_MEET,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,383,,,,NOT_STARTED
-vfx:B_TRANSITION_FRONTIER_CIRCLES_MEET_IN_SEQ,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,387,,,,NOT_STARTED
-vfx:B_TRANSITION_FRONTIER_CIRCLES_SYMMETRIC_SPIRAL,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,386,,,,NOT_STARTED
-vfx:B_TRANSITION_FRONTIER_CIRCLES_SYMMETRIC_SPIRAL_IN_SEQ,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,390,,,,NOT_STARTED
-vfx:B_TRANSITION_FRONTIER_LOGO_WAVE,vfx_battle_transition,,src/battle_transition.c,,,,,,,Grand Arena logo wave (was the Battle Frontier logo).,,PENDING_ART,,,HOTSWAP,,379,,,,NOT_STARTED
-vfx:B_TRANSITION_FRONTIER_LOGO_WIGGLE,vfx_battle_transition,,src/battle_transition.c,,,,,,,Grand Arena logo wiggle (was the Battle Frontier logo).,,PENDING_ART,,,HOTSWAP,,378,,,,NOT_STARTED
-vfx:B_TRANSITION_FRONTIER_SQUARES,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,380,,,,NOT_STARTED
-vfx:B_TRANSITION_FRONTIER_SQUARES_SCROLL,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,381,,,,NOT_STARTED
-vfx:B_TRANSITION_FRONTIER_SQUARES_SPIRAL,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,382,,,,NOT_STARTED
-vfx:B_TRANSITION_GLACIA,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,363,,,,NOT_STARTED
-vfx:B_TRANSITION_GRID_SQUARES,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,359,,,,NOT_STARTED
-vfx:B_TRANSITION_GROUDON,vfx_battle_transition,,src/battle_transition.c,,,,,,,GREATKRAYT silhouette wipe (was Groudon's pattern).,,PENDING_ART,,,HOTSWAP,,372,,,,NOT_STARTED
-vfx:B_TRANSITION_KYOGRE,vfx_battle_transition,,src/battle_transition.c,,,,,,,SANDO silhouette wipe (was Kyogre's pattern).,,PENDING_ART,,,HOTSWAP,,371,,,,NOT_STARTED
-vfx:B_TRANSITION_MAGMA,vfx_battle_transition,,src/battle_transition.c,,,,,,,Imperial crest wipe (was the Team Magma logo).,,PENDING_ART,,,HOTSWAP,,367,,,,NOT_STARTED
-vfx:B_TRANSITION_PHOEBE,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,362,,,,NOT_STARTED
-vfx:B_TRANSITION_POKEBALLS_TRAIL,vfx_battle_transition,,src/battle_transition.c,,,,,,,Trail of capture pods across the screen instead of Poke Balls.,,PENDING_ART,,,HOTSWAP,,353,,,,NOT_STARTED
-vfx:B_TRANSITION_RAYQUAZA,vfx_battle_transition,,src/battle_transition.c,,,,,,,EXOGORTH coil wipe (was Rayquaza's pattern).,,PENDING_ART,,,HOTSWAP,,373,,,,NOT_STARTED
-vfx:B_TRANSITION_RECTANGULAR_SPIRAL,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,377,,,,NOT_STARTED
-vfx:B_TRANSITION_REGICE,vfx_battle_transition,,src/battle_transition.c,,,,,,,Warden vault wipe: swap the Braille dot pattern for Aurebesh glyphs.,,PENDING_ART,,,HOTSWAP,,368,,,,NOT_STARTED
-vfx:B_TRANSITION_REGIROCK,vfx_battle_transition,,src/battle_transition.c,,,,,,,Warden vault wipe: Aurebesh glyphs instead of Braille.,,PENDING_ART,,,HOTSWAP,,370,,,,NOT_STARTED
-vfx:B_TRANSITION_REGISTEEL,vfx_battle_transition,,src/battle_transition.c,,,,,,,Warden vault wipe: Aurebesh glyphs instead of Braille.,,PENDING_ART,,,HOTSWAP,,369,,,,NOT_STARTED
-vfx:B_TRANSITION_RIPPLE,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,355,,,,NOT_STARTED
-vfx:B_TRANSITION_SHRED_SPLIT,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,374,,,,NOT_STARTED
-vfx:B_TRANSITION_SHUFFLE,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,351,,,,NOT_STARTED
-vfx:B_TRANSITION_SIDNEY,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,361,,,,NOT_STARTED
-vfx:B_TRANSITION_SLICE,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,357,,,,NOT_STARTED
-vfx:B_TRANSITION_SWIRL,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,350,,,,NOT_STARTED
-vfx:B_TRANSITION_WAVE,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,356,,,,NOT_STARTED
-vfx:B_TRANSITION_WHITE_BARS_FADE,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,358,,,,NOT_STARTED
+vfx:B_TRANSITION_ANGLED_WIPES,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,359,,,,NOT_STARTED
+vfx:B_TRANSITION_AQUA,vfx_battle_transition,,src/battle_transition.c,,,,,,,Hutt Cartel crest wipe (was the Team Aqua logo).,,PENDING_ART,,,HOTSWAP,,365,,,,NOT_STARTED
+vfx:B_TRANSITION_BIG_POKEBALL,vfx_battle_transition,,src/battle_transition.c,,,,,,,Big capture pod wipe: redraw the Poke Ball shape (tilemap + mask in battle_transition.c) as a capture pod.,,PENDING_ART,,,HOTSWAP,,351,,,,NOT_STARTED
+vfx:B_TRANSITION_BLACKHOLE,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,374,,,,NOT_STARTED
+vfx:B_TRANSITION_BLACKHOLE_PULSATE,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,375,,,,NOT_STARTED
+vfx:B_TRANSITION_BLUR,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,348,,,,NOT_STARTED
+vfx:B_TRANSITION_CHAMPION,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,364,,,,NOT_STARTED
+vfx:B_TRANSITION_CLOCKWISE_WIPE,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,353,,,,NOT_STARTED
+vfx:B_TRANSITION_DRAKE,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,363,,,,NOT_STARTED
+vfx:B_TRANSITION_FRONTIER_CIRCLES_ASYMMETRIC_SPIRAL,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,384,,,,NOT_STARTED
+vfx:B_TRANSITION_FRONTIER_CIRCLES_ASYMMETRIC_SPIRAL_IN_SEQ,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,388,,,,NOT_STARTED
+vfx:B_TRANSITION_FRONTIER_CIRCLES_CROSS,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,383,,,,NOT_STARTED
+vfx:B_TRANSITION_FRONTIER_CIRCLES_CROSS_IN_SEQ,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,387,,,,NOT_STARTED
+vfx:B_TRANSITION_FRONTIER_CIRCLES_MEET,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,382,,,,NOT_STARTED
+vfx:B_TRANSITION_FRONTIER_CIRCLES_MEET_IN_SEQ,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,386,,,,NOT_STARTED
+vfx:B_TRANSITION_FRONTIER_CIRCLES_SYMMETRIC_SPIRAL,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,385,,,,NOT_STARTED
+vfx:B_TRANSITION_FRONTIER_CIRCLES_SYMMETRIC_SPIRAL_IN_SEQ,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,389,,,,NOT_STARTED
+vfx:B_TRANSITION_FRONTIER_LOGO_WAVE,vfx_battle_transition,,src/battle_transition.c,,,,,,,Grand Arena logo wave (was the Battle Frontier logo).,,PENDING_ART,,,HOTSWAP,,378,,,,NOT_STARTED
+vfx:B_TRANSITION_FRONTIER_LOGO_WIGGLE,vfx_battle_transition,,src/battle_transition.c,,,,,,,Grand Arena logo wiggle (was the Battle Frontier logo).,,PENDING_ART,,,HOTSWAP,,377,,,,NOT_STARTED
+vfx:B_TRANSITION_FRONTIER_SQUARES,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,379,,,,NOT_STARTED
+vfx:B_TRANSITION_FRONTIER_SQUARES_SCROLL,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,380,,,,NOT_STARTED
+vfx:B_TRANSITION_FRONTIER_SQUARES_SPIRAL,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,381,,,,NOT_STARTED
+vfx:B_TRANSITION_GLACIA,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,362,,,,NOT_STARTED
+vfx:B_TRANSITION_GRID_SQUARES,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,358,,,,NOT_STARTED
+vfx:B_TRANSITION_GROUDON,vfx_battle_transition,,src/battle_transition.c,,,,,,,GREATKRAYT silhouette wipe (was Groudon's pattern).,,PENDING_ART,,,HOTSWAP,,371,,,,NOT_STARTED
+vfx:B_TRANSITION_KYOGRE,vfx_battle_transition,,src/battle_transition.c,,,,,,,SANDO silhouette wipe (was Kyogre's pattern).,,PENDING_ART,,,HOTSWAP,,370,,,,NOT_STARTED
+vfx:B_TRANSITION_MAGMA,vfx_battle_transition,,src/battle_transition.c,,,,,,,Imperial crest wipe (was the Team Magma logo).,,PENDING_ART,,,HOTSWAP,,366,,,,NOT_STARTED
+vfx:B_TRANSITION_PHOEBE,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,361,,,,NOT_STARTED
+vfx:B_TRANSITION_POKEBALLS_TRAIL,vfx_battle_transition,,src/battle_transition.c,,,,,,,Trail of capture pods across the screen instead of Poke Balls.,,PENDING_ART,,,HOTSWAP,,352,,,,NOT_STARTED
+vfx:B_TRANSITION_RAYQUAZA,vfx_battle_transition,,src/battle_transition.c,,,,,,,EXOGORTH coil wipe (was Rayquaza's pattern).,,PENDING_ART,,,HOTSWAP,,372,,,,NOT_STARTED
+vfx:B_TRANSITION_RECTANGULAR_SPIRAL,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,376,,,,NOT_STARTED
+vfx:B_TRANSITION_REGICE,vfx_battle_transition,,src/battle_transition.c,,,,,,,Warden vault wipe: swap the Braille dot pattern for Aurebesh glyphs.,,PENDING_ART,,,HOTSWAP,,367,,,,NOT_STARTED
+vfx:B_TRANSITION_REGIROCK,vfx_battle_transition,,src/battle_transition.c,,,,,,,Warden vault wipe: Aurebesh glyphs instead of Braille.,,PENDING_ART,,,HOTSWAP,,369,,,,NOT_STARTED
+vfx:B_TRANSITION_REGISTEEL,vfx_battle_transition,,src/battle_transition.c,,,,,,,Warden vault wipe: Aurebesh glyphs instead of Braille.,,PENDING_ART,,,HOTSWAP,,368,,,,NOT_STARTED
+vfx:B_TRANSITION_RIPPLE,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,354,,,,NOT_STARTED
+vfx:B_TRANSITION_SHRED_SPLIT,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,373,,,,NOT_STARTED
+vfx:B_TRANSITION_SHUFFLE,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,350,,,,NOT_STARTED
+vfx:B_TRANSITION_SIDNEY,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,360,,,,NOT_STARTED
+vfx:B_TRANSITION_SLICE,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,356,,,,NOT_STARTED
+vfx:B_TRANSITION_SWIRL,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,349,,,,NOT_STARTED
+vfx:B_TRANSITION_WAVE,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,355,,,,NOT_STARTED
+vfx:B_TRANSITION_WHITE_BARS_FADE,vfx_battle_transition,,src/battle_transition.c,,,,,,,Keep the wipe; it draws no Pokemon-specific shape.,,KEEP_ANIM,,,KEEP,,357,,,,NOT_STARTED
 vfx:FLDEFF_ASH,vfx_field_effect,,data/field_effect_scripts.s,,,,,,,Keep the animation; its sprites are redrawn through pending_art (field_effects).,,KEEP_ANIM,,,KEEP,,104,,,,NOT_STARTED
 vfx:FLDEFF_ASH_LAUNCH,vfx_field_effect,,data/field_effect_scripts.s,,,,,,,Keep the animation; its sprites are redrawn through pending_art (field_effects).,,KEEP_ANIM,,,KEEP,,278,,,,NOT_STARTED
 vfx:FLDEFF_ASH_PUFF,vfx_field_effect,,data/field_effect_scripts.s,,,,,,,Keep the animation; its sprites are redrawn through pending_art (field_effects).,,KEEP_ANIM,,,KEEP,,274,,,,NOT_STARTED

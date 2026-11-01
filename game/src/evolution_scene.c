@@ -73,8 +73,6 @@ static const u32 sBgAnim_Inner_Tilemap[] = INCGFX_U32("graphics/evolution_scene/
 static const u32 sBgAnim_Outer_Tilemap[] = INCGFX_U32("graphics/evolution_scene/bg_outer.bin", ".lz");
 static const u16 sBgAnim_Intro_Pal[] = INCGFX_U16("graphics/evolution_scene/bg_anim_intro.pal", ".gbapal");
 static const u16 sUnusedPal2[] = INCGFX_U16("graphics/evolution_scene/unused_2.pal", ".gbapal");
-static const u16 sUnusedPal3[]  = INCGFX_U16("graphics/evolution_scene/unused_3.pal", ".gbapal");
-static const u16 sUnusedPal4[] = INCGFX_U16("graphics/evolution_scene/unused_4.pal", ".gbapal");
 static const u16 sBgAnim_Pal[] = INCGFX_U16("graphics/evolution_scene/bg_anim.pal", ".gbapal");
 
 static const u8 sText_ShedinjaJapaneseName[] = _("ヌケニン");

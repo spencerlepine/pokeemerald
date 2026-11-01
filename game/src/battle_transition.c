@@ -314,7 +314,6 @@ static const u16 sRegirock_Palette[] = INCGFX_U16("graphics/battle_transitions/r
 static const u32 sRegice_Tilemap[] = INCBIN_U32("graphics/battle_transitions/regice.bin");
 static const u32 sRegisteel_Tilemap[] = INCBIN_U32("graphics/battle_transitions/registeel.bin");
 static const u32 sRegirock_Tilemap[] = INCBIN_U32("graphics/battle_transitions/regirock.bin");
-static const u16 sUnused_Palette[] = INCGFX_U16("graphics/battle_transitions/unused.pal", ".gbapal");
 static const u32 sKyogre_Tileset[] = INCGFX_U32("graphics/battle_transitions/kyogre.png", ".4bpp.lz");
 static const u32 sKyogre_Tilemap[] = INCGFX_U32("graphics/battle_transitions/kyogre.bin", ".lz");
 static const u32 sGroudon_Tileset[] = INCGFX_U32("graphics/battle_transitions/groudon.png", ".4bpp.lz");

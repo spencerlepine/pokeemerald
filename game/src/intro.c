@@ -187,15 +187,10 @@ static const u32 sIntro1Bg_Gfx[]              = INCGFX_U32("graphics/intro/scene
 static const u16 sIntroPokeball_Pal[]         = INCGFX_U16("graphics/intro/scene_3/pokeball.png", ".gbapal");
 static const u32 sIntroPokeball_Tilemap[]     = INCGFX_U32("graphics/intro/scene_3/pokeball_map.bin", ".lz");
 static const u32 sIntroPokeball_Gfx[]         = INCGFX_U32("graphics/intro/scene_3/pokeball.png", ".8bpp.lz");
-static const u16 sIntroStreaks_Pal[]          = INCGFX_U16("graphics/intro/scene_3/streaks.png", ".gbapal"); // Unused
-static const u32 sIntroStreaks_Gfx[]          = INCGFX_U32("graphics/intro/scene_3/streaks.png", ".4bpp.lz"); // Unused
-static const u32 sIntroStreaks_Tilemap[]      = INCGFX_U32("graphics/intro/scene_3/streaks_map.bin", ".lz"); // Unused
 static const u16 sIntroRayquzaOrb_Pal[]       = INCGFX_U16("graphics/intro/scene_3/rayquaza_orb.pal", ".gbapal");
-static const u16 sIntroMisc_Pal[]             = INCGFX_U16("graphics/intro/scene_3/misc.pal", ".gbapal"); // Unused
 static const u32 sIntroMisc_Gfx[]             = INCGFX_U32("graphics/intro/scene_3/misc.png", ".4bpp.lz"); // Rayquza orb, and misc unused gfx
 static const u16 sIntroFlygonSilhouette_Pal[] = INCGFX_U16("graphics/intro/scene_1/flygon.png", ".gbapal"); // Lambda shuttle silhouette
 static const u32 sIntroTieAdvanced_Gfx[]      = INCGFX_U32("graphics/intro/scene_1/tie_advanced.png", ".4bpp.lz"); // its TIE advanced escort, same palette
-static const u32 sIntroLati_Gfx[]             = INCGFX_U32("graphics/intro/scene_1/lati.png", ".4bpp.lz"); // Unused
 static const u8 sUnusedData[] = {
     0x02, 0x03, 0x04, 0x05, 0x01, 0x01, 0x01, 0x06, 0x07, 0x08, 0x09, 0x0A, 0x0B, 0x0C, 0x02, 0x0D,
     0x0E, 0x0F, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16, 0x17, 0x18, 0x19, 0x02, 0x0D, 0x0E, 0x0F,

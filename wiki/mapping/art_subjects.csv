@@ -30,7 +30,6 @@ data/tilesets/primary/general/anim/waterfall/2.png,"Outdoors: Tatooine desert sc
 data/tilesets/primary/general/anim/waterfall/3.png,"Outdoors: Tatooine desert scrub, sand, rock and water edges shared by every planet (animation: waterfall)"
 data/tilesets/primary/general/tiles.png,"Outdoors: Tatooine desert scrub, sand, rock and water edges shared by every planet"
 data/tilesets/primary/secret_base/tiles.png,HIDEOUT interior basics
-data/tilesets/primary/secret_base/unknown_tiles.png,HIDEOUT interior basics
 data/tilesets/secondary/battle_arena/tiles.png,GRAND ARENA: BATTLE ARENA (4-LOM's ring)
 data/tilesets/secondary/battle_dome/tiles.png,GRAND ARENA: BATTLE DOME (Dengar's stadium)
 data/tilesets/secondary/battle_factory/tiles.png,GRAND ARENA: BATTLE FACTORY (IG-88's droid works)
@@ -61,15 +60,10 @@ data/tilesets/secondary/bike_shop/anim/blinking_lights/1.png,"Wald's speeder sho
 data/tilesets/secondary/bike_shop/tiles.png,"Wald's speeder shop, Mos Espa"
 data/tilesets/secondary/brendans_mays_house/tiles.png,"Player's homestead, Mos Pelgo (Tatooine dome house)"
 data/tilesets/secondary/cable_club/tiles.png,HOLONET CLUB upstairs at the Bacta Center
-data/tilesets/secondary/cable_club/unknown_tiles.png,HOLONET CLUB upstairs at the Bacta Center
 data/tilesets/secondary/cave/anim/lava/0.png,"Caves: sandstone, Kashyyyk roots, Sullust lava tubes, Ilum ice (animation: lava)"
 data/tilesets/secondary/cave/anim/lava/1.png,"Caves: sandstone, Kashyyyk roots, Sullust lava tubes, Ilum ice (animation: lava)"
 data/tilesets/secondary/cave/anim/lava/2.png,"Caves: sandstone, Kashyyyk roots, Sullust lava tubes, Ilum ice (animation: lava)"
 data/tilesets/secondary/cave/anim/lava/3.png,"Caves: sandstone, Kashyyyk roots, Sullust lava tubes, Ilum ice (animation: lava)"
-data/tilesets/secondary/cave/anim/lava/4.png,"Caves: sandstone, Kashyyyk roots, Sullust lava tubes, Ilum ice (animation: lava)"
-data/tilesets/secondary/cave/anim/lava/5.png,"Caves: sandstone, Kashyyyk roots, Sullust lava tubes, Ilum ice (animation: lava)"
-data/tilesets/secondary/cave/anim/lava/6.png,"Caves: sandstone, Kashyyyk roots, Sullust lava tubes, Ilum ice (animation: lava)"
-data/tilesets/secondary/cave/anim/lava/7.png,"Caves: sandstone, Kashyyyk roots, Sullust lava tubes, Ilum ice (animation: lava)"
 data/tilesets/secondary/cave/tiles.png,"Caves: sandstone, Kashyyyk roots, Sullust lava tubes, Ilum ice"
 data/tilesets/secondary/contest/tiles.png,Cloud City SHOWCASE hall
 data/tilesets/secondary/dewford/anim/flag/0.png,"KACHIRHO, Kashyyyk: wroshyr-root village on the lagoon (animation: flag)"
@@ -168,17 +162,11 @@ data/tilesets/secondary/rustboro_gym/tiles.png,BESTINE ARENA: sandstone halls
 data/tilesets/secondary/rusturf_tunnel/tiles.png,BEGGAR'S CANYON tunnel
 data/tilesets/secondary/seashore_house/tiles.png,Seaside cantina (Kashyyyk shore)
 data/tilesets/secondary/secret_base/blue_cave/tiles.png,HIDEOUT: ice cave (Hoth / Ilum)
-data/tilesets/secondary/secret_base/blue_cave/unused_tiles.png,HIDEOUT: ice cave (Hoth / Ilum)
 data/tilesets/secondary/secret_base/brown_cave/tiles.png,HIDEOUT: sandstone cave (Tatooine)
-data/tilesets/secondary/secret_base/brown_cave/unused_tiles.png,HIDEOUT: sandstone cave (Tatooine)
 data/tilesets/secondary/secret_base/red_cave/tiles.png,HIDEOUT: lava cave (Sullust / Mustafar)
-data/tilesets/secondary/secret_base/red_cave/unused_tiles.png,HIDEOUT: lava cave (Sullust / Mustafar)
 data/tilesets/secondary/secret_base/shrub/tiles.png,HIDEOUT: scrub den (Tatooine)
-data/tilesets/secondary/secret_base/shrub/unused_tiles.png,HIDEOUT: scrub den (Tatooine)
 data/tilesets/secondary/secret_base/tree/tiles.png,HIDEOUT: wroshyr hollow (Kashyyyk / Endor)
-data/tilesets/secondary/secret_base/tree/unused_tiles.png,HIDEOUT: wroshyr hollow (Kashyyyk / Endor)
 data/tilesets/secondary/secret_base/yellow_cave/tiles.png,HIDEOUT: desert cave (Jundland)
-data/tilesets/secondary/secret_base/yellow_cave/unused_tiles.png,HIDEOUT: desert cave (Jundland)
 data/tilesets/secondary/shop/tiles.png,Supply depot interior
 data/tilesets/secondary/slateport/anim/balloons/0.png,"MOS EISLEY, Tatooine: spaceport, docking bays, market (animation: balloons)"
 data/tilesets/secondary/slateport/anim/balloons/1.png,"MOS EISLEY, Tatooine: spaceport, docking bays, market (animation: balloons)"
@@ -217,13 +205,7 @@ data/tilesets/secondary/underwater/anim/seaweed/2.png,"Underwater: seas of Kashy
 data/tilesets/secondary/underwater/anim/seaweed/3.png,"Underwater: seas of Kashyyyk, Yavin 4 and Dagobah (animation: seaweed)"
 data/tilesets/secondary/underwater/tiles.png,"Underwater: seas of Kashyyyk, Yavin 4 and Dagobah"
 data/tilesets/secondary/union_room/tiles.png,HOLONET CLUB union room
-data/tilesets/secondary/unused_1/0.png,Unused tileset (kept)
-data/tilesets/secondary/unused_1/1.png,Unused tileset (kept)
-data/tilesets/secondary/unused_1/2.png,Unused tileset (kept)
-data/tilesets/secondary/unused_1/3.png,Unused tileset (kept)
 data/tilesets/secondary/unused_1/tiles.png,Unused tileset (kept)
-data/tilesets/secondary/unused_2/0.png,Unused tileset (kept)
-data/tilesets/secondary/unused_2/1.png,Unused tileset (kept)
 data/tilesets/secondary/unused_2/tiles.png,Unused tileset (kept)
 graphics/object_events/pics/berry_trees/aguav.png,AGARA FRUIT plant
 graphics/object_events/pics/berry_trees/aspear.png,BLBA FRUIT plant

@@ -70,7 +70,6 @@ static EWRAM_DATA struct PokedexCryMeterNeedle *sCryMeterNeedle = NULL;
 static const u16 sCryMeterNeedle_Pal[] = INCGFX_U16("graphics/pokedex/cry_meter_needle.png", ".gbapal");
 static const u8 sCryMeterNeedle_Gfx[] = INCGFX_U8("graphics/pokedex/cry_meter_needle.png", ".4bpp");
 
-static const u16 sCryMeter_Tilemap[] = INCBIN_U16("graphics/pokedex/cry_meter_map.bin"); // Unused
 static const u16 sCryMeter_Pal[] = INCGFX_U16("graphics/pokedex/cry_meter.png", ".gbapal");
 static const u8 sCryMeter_Gfx[] = INCGFX_U8("graphics/pokedex/cry_meter.png", ".4bpp.lz");
 

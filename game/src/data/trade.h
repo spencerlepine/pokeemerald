@@ -623,13 +623,10 @@ static const u8 sSelectedMonLevelGenderCoords[3][2] =
 
 static const u16 sPokeball_Pal[] = INCGFX_U16("graphics/trade/pokeball.png", ".gbapal");
 static const u8 sPokeball_Gfx[] = INCGFX_U8("graphics/trade/pokeball.png", ".4bpp");
-static const u8 sPokeballSymbol_Gfx[] = INCGFX_U8("graphics/trade/pokeball_symbol.png", ".8bpp"); // unused
 static const u16 sCableCloseup_Map[] = INCBIN_U16("graphics/trade/crossing_highlight_cable.bin");
-static const u16 sPokeballSymbol_Map[] = INCBIN_U16("graphics/trade/pokeball_symbol_map.bin"); // unused?
 static const u16 sUnusedPal1[] = INCGFX_U16("graphics/trade/unused1.pal", ".gbapal");
 static const u16 sGba_Pal[] = INCGFX_U16("graphics/trade/gba.pal", ".gbapal");
 static const u16 sUnusedPal2[] = INCGFX_U16("graphics/trade/unused2.pal", ".gbapal");
-static const u16 sWirelessSignalNone_Pal_Unused[] = INCGFX_U16("graphics/trade/wireless_signal_none.pal", ".gbapal");
 static const u16 sLinkMon_Pal[] = INCGFX_U16("graphics/trade/link_mon.pal", ".gbapal");
 static const u8 sLinkMonGlow_Gfx[] = INCGFX_U8("graphics/trade/link_mon_glow.png", ".4bpp");
 static const u8 sLinkMonShadow_Gfx[] = INCGFX_U8("graphics/trade/link_mon_shadow.png", ".4bpp");

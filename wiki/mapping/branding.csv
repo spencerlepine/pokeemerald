@@ -40,7 +40,6 @@ graphics/battle_interface/healthbox_singles_player.png,KEEP,DRAFT,KEEP_ART,,Gene
 graphics/battle_interface/hpbar.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/battle_interface/hpbar_anim.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/battle_interface/hpbar_anim_unused.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
-graphics/battle_interface/hpbar_unused.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/battle_interface/level_up_banner.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/battle_interface/misc.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/battle_interface/misc_frameend.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
@@ -51,12 +50,6 @@ graphics/battle_interface/status2.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene ar
 graphics/battle_interface/status3.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/battle_interface/status4.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/battle_interface/textbox.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
-graphics/battle_interface/unused_status_summary.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
-graphics/battle_interface/unused_window.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
-graphics/battle_interface/unused_window2.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
-graphics/battle_interface/unused_window2bar.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
-graphics/battle_interface/unused_window3.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
-graphics/battle_interface/unused_window4.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/battle_transitions/big_pokeball.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Poké Ball wipe → capture pod.,,,,,,Replace by hand; no generator tool.
 graphics/battle_transitions/elite_four_bg.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/battle_transitions/frontier_logo.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Battle Frontier logo wipe → Grand Arena logo.,,,,,,Replace by hand; no generator tool.
@@ -81,7 +74,6 @@ graphics/battle_transitions/unused_lass.png,KEEP,DRAFT,KEEP_ART,,Generic UI / sc
 graphics/battle_transitions/vs.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/battle_transitions/vs_frame.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/berry_blender/arrow.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
-graphics/berry_blender/arrow_old.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/berry_blender/center.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/berry_blender/countdown_numbers.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/berry_blender/outer.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
@@ -101,7 +93,6 @@ graphics/berry_fix/logo.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no 
 graphics/berry_fix/window.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Berry Fix link program screens (Game Boy branding); only seen when linking to Ruby/Sapphire.
 graphics/birch_speech/birch.png,HOTSWAP,DRAFT,PENDING_ART,,Prof. Korr's intro portrait (sprite-trainer-generator).,,,,,,
 graphics/birch_speech/shadow.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
-graphics/birch_speech/unused_beauty.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/cable_car/bg.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Mt. Chimney view from the cable car → Mustafar lava fields seen from the shuttle.,,,,,,Replace by hand; no generator tool.
 graphics/cable_car/cable.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Cable → remove or turn into a landing beam (the shuttle has no cable).,,,,,,Replace by hand; no generator tool.
 graphics/cable_car/cable_car.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Cable car → shuttle.,,,,,,Replace by hand; no generator tool.
@@ -112,16 +103,6 @@ graphics/contest/applause_meter.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art 
 graphics/contest/audience.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Showcase audience and judge; generic people.
 graphics/contest/faces.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Showcase audience and judge; generic people.
 graphics/contest/interface.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Showcase audience and judge; generic people.
-graphics/contest/japanese/audience.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Showcase audience and judge; generic people.
-graphics/contest/japanese/floor.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Showcase audience and judge; generic people.
-graphics/contest/japanese/frame_1.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Showcase audience and judge; generic people.
-graphics/contest/japanese/frame_2.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Showcase audience and judge; generic people.
-graphics/contest/japanese/interface.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Showcase audience and judge; generic people.
-graphics/contest/japanese/letters.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Showcase audience and judge; generic people.
-graphics/contest/japanese/meter.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Showcase audience and judge; generic people.
-graphics/contest/japanese/numbers.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Showcase audience and judge; generic people.
-graphics/contest/japanese/symbols.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Showcase audience and judge; generic people.
-graphics/contest/japanese/voltage.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Showcase audience and judge; generic people.
 graphics/contest/judge.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Showcase audience and judge; generic people.
 graphics/contest/judge_symbols.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Showcase audience and judge; generic people.
 graphics/contest/nextturn.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Showcase audience and judge; generic people.
@@ -163,8 +144,6 @@ graphics/fonts/latin_normal.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with
 graphics/fonts/latin_short.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/fonts/latin_small.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/fonts/latin_small_narrow.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
-graphics/fonts/unused_frlg_blanked_down_arrow.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
-graphics/fonts/unused_frlg_down_arrow.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/frontier_pass/bg.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Frontier Pass: BATTLE FRONTIER / FRONTIER PASS text, map and symbols → ARENA PASS and the Grand Arena.",,,,,,Replace by hand; no generator tool.
 graphics/frontier_pass/cursor.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Frontier Pass: BATTLE FRONTIER / FRONTIER PASS text, map and symbols → ARENA PASS and the Grand Arena.",,,,,,Replace by hand; no generator tool.
 graphics/frontier_pass/map_and_card.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Frontier Pass: BATTLE FRONTIER / FRONTIER PASS text, map and symbols → ARENA PASS and the Grand Arena.",,,,,,Replace by hand; no generator tool.
@@ -178,7 +157,6 @@ graphics/interface/menu_info.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Type labe
 graphics/interface/mon_markings.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/interface/mon_markings_menu.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/interface/mystery_gift_textbox_border.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
-graphics/interface/option_menu_equals_sign.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/interface/outline_cursor.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/interface/scroll_indicator.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/interface/status_icons.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
@@ -188,7 +166,6 @@ graphics/intro/copyright.png,HOTSWAP,DONE,ART_READY,,Boot copyright screen (©Ni
 graphics/intro/scene_1/bg.png,HOTSWAP,DRAFT,ART_READY,,Opening scene 1 (Flygon and Latias fly past) → Star Wars companions / a ship over Tatooine.,,,,,,"Shipped 2026-11-01 by tools/cutscene-generator (scenes/intro_drops): canyon drip at dawn, pan up to the twin suns, owner-approved."
 graphics/intro/scene_1/drops_logo.png,HOTSWAP,DRAFT,ART_READY,,"GAME FREAK logo in the opening (water drops) → your studio logo, or cut the scene.",,,,,,"Done 2026-11-01: owner keeps the GAME FREAK logo over the drip (it was cut at first, then restored in intro.c the same day). The drop frames stay, recolored to clear water via drops.pal (scenes/intro_drops)."
 graphics/intro/scene_1/flygon.png,HOTSWAP,DRAFT,ART_READY,,Opening scene 1 (Flygon and Latias fly past) → Star Wars companions / a ship over Tatooine.,,,,,,"Shipped 2026-11-01 by tools/cutscene-generator (scenes/intro_drops): transport ship silhouette flying off, owner-approved."
-graphics/intro/scene_1/lati.png,HOTSWAP,DRAFT,ART_READY,,Opening scene 1 (Flygon and Latias fly past) → Star Wars companions / a ship over Tatooine.,,,,,,Done 2026-11-01: unused by the game (sIntroLati_Gfx is never loaded); nothing to draw.
 graphics/intro/scene_1/sparkle.png,HOTSWAP,DRAFT,ART_READY,,Opening scene 1 (Flygon and Latias fly past) → Star Wars companions / a ship over Tatooine.,,,,,,"Done 2026-11-01: plain water sparkle, kept as is in the new scene 1 (scenes/intro_drops), owner-approved."
 graphics/intro/scene_2/bicycle.png,HOTSWAP,DRAFT,ART_READY,,Bicycle → speeder bike.,,,,,,"Shipped 2026-11-01 by tools/cutscene-generator (scenes/intro_bike): KAEL/MIRA on the speeder over Tatooine, owner-approved."
 graphics/intro/scene_2/brendan.png,HOTSWAP,DRAFT,ART_READY,,Player on a bike in the opening → KAEL / MIRA on a speeder bike.,,,,,,"Shipped 2026-11-01 by tools/cutscene-generator (scenes/intro_bike): KAEL/MIRA on the speeder over Tatooine, owner-approved."
@@ -218,12 +195,10 @@ graphics/intro/scene_3/misc.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Opening bat
 graphics/intro/scene_3/pokeball.png,HOTSWAP,DRAFT,ART_READY,,Poké Ball thrown in the opening battle → capture pod.,,,,,,"Shipped 2026-11-01 by tools/cutscene-generator (scenes/intro_legends): the capture pod, spinning and zooming as Emerald's ball."
 graphics/intro/scene_3/rayquaza.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Legendaries in the opening → GREATKRAYT, SANDO, EXOGORTH.",,,,,,"PLACEHOLDER in the game since 2026-11-01 (the magenta slash-circle placeholder, scaled up, where Rayquaza stood). Follow-up task: draw the titan. Primer, constraints and Emerald originals: wiki/art/graphics/intro/scene_3/README.md."
 graphics/intro/scene_3/rayquaza_clouds.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,"Legendaries in the opening → GREATKRAYT, SANDO, EXOGORTH.",,,,,,Replace by hand; no generator tool.
-graphics/intro/scene_3/streaks.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Opening battle effects and background → match the new titans scene.,,,,,,Replace by hand; no generator tool.
 graphics/link/321start.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/link/321start_static.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/link/comm_error_bg.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/link/minigame_digits.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
-graphics/link/minigame_digits2.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/link/test_digits.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/link/wireless_display.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/link/wireless_icon.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
@@ -292,14 +267,12 @@ graphics/pokeblock/use_screen/updown.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene
 graphics/pokedex/area_glow.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/pokedex/area_marker.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/pokedex/area_unknown.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
-graphics/pokedex/arrows.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/pokedex/caught_ball.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Poké Ball icon → CAPTURE POD icon.,,,,,,Replace by hand; no generator tool.
 graphics/pokedex/cry_meter.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/pokedex/cry_meter_needle.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/pokedex/cry_screen_bg.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/pokedex/interface.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Baked-in text POKéDEX / HOENN / NATIONAL → DATAPAD / OUTER RIM / GALACTIC.,,,,,,Replace by hand; no generator tool.
 graphics/pokedex/menu.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Baked-in text POKéDEX / HOENN / NATIONAL → DATAPAD / OUTER RIM / GALACTIC.,,,,,,Replace by hand; no generator tool.
-graphics/pokedex/noball_unused.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/pokedex/region_map.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Hoenn region map → Outer Rim galaxy map with the game's planets.,,,,,,Replace by hand; no generator tool.
 graphics/pokedex/region_map_affine.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Hoenn region map → Outer Rim galaxy map with the game's planets.,,,,,,Replace by hand; no generator tool.
 graphics/pokedex/search_menu.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Baked-in text POKéDEX / HOENN / NATIONAL → DATAPAD / OUTER RIM / GALACTIC.,,,,,,Replace by hand; no generator tool.
@@ -584,7 +557,6 @@ graphics/trade/link_mon_glow.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art wit
 graphics/trade/link_mon_shadow.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,GBA link hardware drawing; generic.
 graphics/trade/menu.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,GBA link hardware drawing; generic.
 graphics/trade/pokeball.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Poké Ball icon → CAPTURE POD icon.,,,,,,Replace by hand; no generator tool.
-graphics/trade/pokeball_symbol.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Poké Ball icon → CAPTURE POD icon.,,,,,,Replace by hand; no generator tool.
 graphics/trade/wireless_signal.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,GBA link hardware drawing; generic.
 graphics/trainer_card/badges.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,The 8 Hoenn badges → the 8 kyber shards.,,,,,,Replace by hand; no generator tool.
 graphics/trainer_card/frlg/badges.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,

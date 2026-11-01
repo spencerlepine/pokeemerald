@@ -153,7 +153,7 @@ Work one tool at a time: build it, show the owner samples, iterate, mark it READ
 
 ## Art categories
 
-Counts verified on 2026-10-31: 4,076 PNGs (4,070 since the 6 FireRed/LeafGreen RED and LEAF pics were deleted on 2026-11-01; the same number of image rows as `../wiki/database/pending_art.csv`), 4,064
+Counts verified on 2026-10-31: 4,076 PNGs (3,998 since the RED/LEAF leftovers and 72 never-loaded PNGs were deleted on 2026-11-01; the same number of image rows as `../wiki/database/pending_art.csv`), 4,064
 to draw across 48 categories plus 12 unused. 3 shared UI/misc `.pal` files sit outside any category; they belong to the
 tool that edits that screen.
 

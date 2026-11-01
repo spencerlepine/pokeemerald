@@ -2695,13 +2695,10 @@ const u32 gMonPalette_Deoxys[] = INCGFX_U32("graphics/pokemon/deoxys/normal.pal"
 const u32 gMonBackPic_Deoxys[] = INCGFX_U32("graphics/pokemon/deoxys/back.png", ".4bpp.lz");
 const u32 gMonShinyPalette_Deoxys[] = INCGFX_U32("graphics/pokemon/deoxys/shiny.pal", ".gbapal.lz");
 const u8 gMonIcon_Deoxys[] = INCGFX_U8("graphics/pokemon/deoxys/icon.png", ".4bpp");
-const u8 gMonIcon_DeoxysSpeed[] = INCGFX_U8("graphics/pokemon/deoxys/icon_speed.png", ".4bpp");
-const u8 gMonIcon_DeoxysSpeedWide[] = INCGFX_U8("graphics/pokemon/deoxys/icon_speed_wide.png", ".4bpp"); // Unused
 
 // Probably the leftover space from the other Deoxys forms
 static const u8 sEmpty[0x6800] = {0};
 
-const u16 gMonUnusedGarbage[] = INCBIN_U16("graphics/pokemon/unused_garbage.bin");
 
 const u8 gMonFootprint_Deoxys[] = INCGFX_U8("graphics/pokemon/deoxys/footprint.png", ".1bpp");
 

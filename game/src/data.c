@@ -10,7 +10,6 @@
 
 const u16 gMinigameDigits_Pal[] = INCGFX_U16("graphics/link/minigame_digits.png", ".gbapal");
 const u32 gMinigameDigits_Gfx[] = INCGFX_U32("graphics/link/minigame_digits.png", ".4bpp.lz");
-static const u32 sMinigameDigitsThin_Gfx[] = INCGFX_U32("graphics/link/minigame_digits2.png", ".4bpp.lz"); // Unused
 
 #define BATTLER_OFFSET(i) (gHeap + 0x8000 + MON_PIC_SIZE * (i))
 

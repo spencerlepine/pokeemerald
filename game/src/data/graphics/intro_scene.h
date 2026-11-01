@@ -31,8 +31,6 @@ const u16 gIntroLightning_Pal[] = INCGFX_U16("graphics/intro/scene_3/lightning.p
 const u32 gIntroRayquaza_Gfx[] = INCGFX_U32("graphics/intro/scene_3/rayquaza.png", ".4bpp.lz");
 const u32 gIntroRayquaza_Tilemap[] = INCGFX_U32("graphics/intro/scene_3/rayquaza.bin", ".lz");
 
-const u32 gIntroUnused1_Tilemap[] = INCGFX_U32("graphics/intro/scene_3/unused_1.bin", ".lz");
-const u32 gIntroUnused2_Tilemap[] = INCGFX_U32("graphics/intro/scene_3/unused_2.bin", ".lz");
 
 const u32 gIntroRayquazaClouds_Gfx[] = INCGFX_U32("graphics/intro/scene_3/rayquaza_clouds.png", ".4bpp.lz");
 const u32 gIntroRayquazaClouds_Tilemap[] = INCGFX_U32("graphics/intro/scene_3/rayquaza_clouds.bin", ".lz");

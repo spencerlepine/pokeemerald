@@ -148,7 +148,6 @@ static const u32 sWallpaperTiles_Plain[] = INCGFX_U32("graphics/pokemon_storage/
 static const u32 sWallpaperTilemap_Plain[] = INCGFX_U32("graphics/pokemon_storage/wallpapers/plain/tilemap.bin", ".lz");
 
 // 12x18 tilemap
-static const u32 sWallpaperTilemap_Unused[] = INCBIN_U32("graphics/pokemon_storage/wallpapers/unused.bin");
 
 // Shadow color, text color
 static const u16 sBoxTitleColors[WALLPAPER_COUNT][2] =

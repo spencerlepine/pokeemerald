@@ -70,8 +70,6 @@ static const u8 sFontHalfRowOffsets[] =
 
 static const u8 sDownArrowTiles[] = INCGFX_U8("graphics/fonts/down_arrow.png", ".4bpp");
 static const u8 sDarkDownArrowTiles[] = INCGFX_U8("graphics/fonts/down_arrow_alt.png", ".4bpp");
-static const u8 sUnusedFRLGBlankedDownArrow[] = INCGFX_U8("graphics/fonts/unused_frlg_blanked_down_arrow.png", ".4bpp");
-static const u8 sUnusedFRLGDownArrow[] = INCGFX_U8("graphics/fonts/unused_frlg_down_arrow.png", ".4bpp");
 static const u8 sDownArrowYCoords[] = { 0, 1, 2, 1 };
 static const u8 sWindowVerticalScrollSpeeds[] = {
     [OPTIONS_TEXT_SPEED_SLOW] = 1,

@@ -64,7 +64,6 @@ static void SpriteCB_PokemonLogoShine(struct Sprite *sprite);
 static void SpriteCB_CollageFigure(struct Sprite *sprite);
 
 // const rom data
-static const u16 sUnusedUnknownPal[] = INCGFX_U16("graphics/title_screen/unused.pal", ".gbapal");
 
 static const u32 sTitleScreenRayquazaGfx[] = INCGFX_U32("graphics/title_screen/rayquaza.png", ".4bpp.lz");
 static const u32 sTitleScreenRayquazaTilemap[] = INCGFX_U32("graphics/title_screen/rayquaza.bin", ".lz");

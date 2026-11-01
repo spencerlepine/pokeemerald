@@ -22,4 +22,5 @@ To use a different snapshot, set `EMERALD_DB_DIR` to its folder.
 
 Rows for Emerald assets that have been deleted from `../game` are deleted here too, so the wiki only lists what
 the game has. Deleted so far: the FireRed/LeafGreen link leftovers RED and LEAF (trainer front and back pics,
-overworld sprite, the `PKMN TRAINER RED` / `LEAF` trainers).
+overworld sprite, the `PKMN TRAINER RED` / `LEAF` trainers) and 72 never-loaded images (`graphics/unused/`, the Japanese
+contest screens, unused battle-anim, battle-interface, intro, door, tileset and trade art).
