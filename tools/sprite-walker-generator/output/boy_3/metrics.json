@@ -1,0 +1,42 @@
+{
+ "stand": {
+  "down": {
+   "top": 12,
+   "feet": 30,
+   "height": 19,
+   "width": 14,
+   "area": 214,
+   "dark_outline": 0.982,
+   "orphans": 0.084
+  },
+  "up": {
+   "top": 12,
+   "feet": 30,
+   "height": 19,
+   "width": 14,
+   "area": 212,
+   "dark_outline": 1.0,
+   "orphans": 0.071
+  },
+  "left": {
+   "top": 12,
+   "feet": 30,
+   "height": 19,
+   "width": 14,
+   "area": 180,
+   "dark_outline": 1.0,
+   "orphans": 0.094
+  }
+ },
+ "summary": {
+  "top": 12,
+  "feet": 30,
+  "height": 19,
+  "width": 14,
+  "area": 212,
+  "dark_outline": 1.0,
+  "orphans": 0.084,
+  "colours": 13,
+  "step_change": 0.524
+ }
+}
