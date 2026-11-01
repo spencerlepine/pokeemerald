@@ -1,10 +1,10 @@
 {
   "flip": false,
-  "desc": "hulking horned volcano cat crouched to pounce, single blade horn, long curling tail, whole body, no rock",
+  "desc": "hulking horned volcano cat crouched to pounce, single blade horn on its nose, long curling tail, whole body, three-quarter view",
   "colour": "dark brown and ember orange",
-  "ref_note": "Sabercat (TUR) cutout, crop now keeps the paws; flipped; recoloured brown",
+  "ref_note": "Sabercat (TUR) full figure, rock masked out and recoloured purple->brown locally; flipped",
   "init": "refs/entei_prep.png",
-  "init_source": "https://static.wikia.nocookie.net/starwars/images/d/db/Sabercat-TUR.png/revision/latest?cb=20230123145330#crop=0.08,0,1,0.97",
+  "init_source": "/tmp/claude-0/-home-user/510f0079-9430-50be-b656-57ddf5b64e74/scratchpad/r2/entei_cut.png",
   "denoise": 0.5,
   "negative": "rock, cliff"
 }
