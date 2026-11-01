@@ -5,6 +5,8 @@ finish settings, e.g. a looser palette, then reinstall and commit it.
     python refinish.py skitty --colours 15 --despeckle 0       # 15 colours (the GBA max), keep fine detail
     python refinish.py skitty aggron --colours 14 --no-push
     python refinish.py skitty --colours 15 --preview           # write runs/<sp>/refinish/ only, no install
+    python refinish.py kirlia --mirror-back                    # back = mirrored front download (free)
+    python refinish.py altaria --pair runs/altaria/raw/<front>.png runs/altaria/raw/<back>.png   # install a chosen take
 
 The raw 768x768 downloads live in runs/<species>/raw/ (front and back, with a .json of seed and prompt).
 This finds the pair behind the installed sprites (the front by its finished folder; the back by
@@ -62,12 +64,23 @@ def main():
     ap.add_argument("--despeckle", type=int, default=0, help="lone-pixel cleanup passes (batch used 1)")
     ap.add_argument("--fit", choices=["auto", "trim", "shrink"])
     ap.add_argument("--preview", action="store_true", help="only write runs/<sp>/refinish/<front>/, do not install")
+    ap.add_argument("--pair", nargs=2, metavar=("FRONT_RAW", "BACK_RAW"),
+                    help="install this take instead (one species): raw front + back .png from runs/<sp>/raw/")
+    ap.add_argument("--mirror-back", action="store_true",
+                    help="back = the front download mirrored (same colours and shape, free; for backs that keep drifting)")
     ap.add_argument("--no-push", dest="push", action="store_false")
     a = ap.parse_args()
+    if a.pair and len(a.species) != 1:
+        sys.exit("--pair takes one species")
     batch.args = a
     extra = ["--colours", str(a.colours), "--despeckle", str(a.despeckle)] + (["--fit", a.fit] if a.fit else [])
     for sp in a.species:
-        src = sources(sp)
+        src = tuple(Path(p).resolve() for p in a.pair) if a.pair else sources(sp)
+        if src and a.mirror_back:
+            from PIL import Image
+            m = src[0].with_name(src[0].stem + "_mirrorback.png")
+            Image.open(src[0]).transpose(Image.FLIP_LEFT_RIGHT).save(m)
+            src = (src[0], m)
         if not src:
             print(f"SKIP {sp}: could not find the downloads behind the installed sprites"); continue
         front, back = src
@@ -77,7 +90,11 @@ def main():
             print(f"SKIP {sp}: finish failed: {log.strip().splitlines()[-1][:200]}"); continue
         if a.preview:
             print(f"PREVIEW {sp}: {out.relative_to(batch.REPO)}"); continue
+        if a.pair or a.mirror_back:
+            (HERE / "runs" / sp / "sources.json").write_text(json.dumps({"front": str(front.relative_to(HERE)), "back": str(back.relative_to(HERE))}, indent=1) + "\n")
         files, notes, drawn = batch.install(sp, out, f"re-finished free from the saved downloads, {a.colours} colours, despeckle {a.despeckle}")
+        if a.mirror_back:
+            notes["back.png"] = notes["back.png"].split(",")[0] + ", the front download mirrored (generated backs kept drifting), same palette"
         batch.commit(sp, files, notes, drawn, out, msg=f"re-finished from the saved downloads ({a.colours} colours, despeckle {a.despeckle}), no Buzz")
         print(f"DONE {sp}: {a.colours} colours, despeckle {a.despeckle}")
 

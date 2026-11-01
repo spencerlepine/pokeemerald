@@ -40,3 +40,18 @@ Final message, under 120 words: `FIXED: sp (new ref)` / `STILL WEAK: sp (why)` /
   strong `--colour` and `--denoise 0.6`.
 - Look at the prep column on the sheet: it is exactly what the model starts from. If it is not a clean, whole,
   left-facing creature, the sprite will not be either.
+
+## Round 3: several takes, keep the best (the last 16)
+What worked best in round 2: a clean reference, cut out of its background by hand (PIL: crop, mask, paste on white)
+and saved under `refs/sources/<sp>/` (never /tmp: the pick must point inside the repo), then a pick at `--width 46-52`.
+1. Improve the pick if you can (as above). For text-only, write the desc as a sprite brief: "side view, whole body,
+   small, centred, facing left" plus 2-3 strong shapes and colours.
+2. Make up to 3 takes: `python3 civitai_creature.py run <sp> --currency green` (6 Buzz each; each is finished into
+   `runs/<sp>/finished/<front stem>/` but NOT installed). Run them in parallel in one shell line with `&` and `wait`.
+3. Compare: `python3 takes.py <sp> -n 4 --out /tmp/claude-0/takes_<sp>.png` and the installed one
+   (`python3 review.py <sp> --out ...`). Pick the best against the pass bar.
+4. Install the winner (free, commits and pushes): `python3 refinish.py <sp> --pair runs/<sp>/raw/<front>.png
+   runs/<sp>/raw/<back>.png`. If the winner's back is bad, add `--mirror-back` (back = mirrored front, same colours).
+   If nothing beats what is installed, leave it.
+5. Commit the pick and sources if they changed (the commit line above, `git add` only `refs/picks/<sp>.json
+   refs/<sp>_prep.png refs/sources/<sp>`), and `runs/<sp>` so every download is kept.
