@@ -2,7 +2,7 @@
   "init": "refs/abra_prep.png",
   "init_source": "/tmp/claude-0/-home-user/510f0079-9430-50be-b656-57ddf5b64e74/scratchpad/mask/abra_tint.png",
   "flip": false,
-  "denoise": 0.5,
+  "denoise": 0.45,
   "desc": "small sleepy fox kit crouched on its haunches with big pointed ears a hooded cloak and a bushy tail",
   "colour": "rust orange and brown",
   "ref_note": "RE-PICK (was Vulptex, canon art of vulpix/ninetales): Amaran (fox species) pencil concept sketch, crouching front figure cropped and cut out, then tinted rust orange into a scratchpad PNG so the model does not start grey; source https://static.wikia.nocookie.net/starwars/images/f/f1/Amaran_concept_art.jpg crop 0.15,0.17,0.43,0.72"
