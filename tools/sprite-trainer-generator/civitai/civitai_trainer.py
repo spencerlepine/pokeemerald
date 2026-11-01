@@ -66,8 +66,10 @@ NEGATIVE = ("poke ball, pokeball, holding ball, baseball cap, generic pokemon tr
 
 # --view back: tested 2026-11-01 (Leia, seed 303682211). The LoRA does draw a clean back view, but
 # full body and arms out, not the waist-up over-the-shoulder throw a back pic needs: concept only.
-BACK_PROMPT = "(back view:1.4), (seen from behind:1.3), back turned to the viewer, looking away, "
-BACK_NEGATIVE = "face, front view, facing viewer, eyes, "
+BACK_PROMPT = ("solo, single character, (back view:1.5), (from behind:1.4), (back of head:1.3), "
+               "back turned to the viewer, looking away, ")
+BACK_NEGATIVE = ("face, front view, facing viewer, eyes, side view, profile, multiple views, "
+                 "character sheet, turnaround, two people, ")
 
 # Faction theme -> words for the prompt (the prompt is a hint; enforce is the guarantee).
 THEME_WORDS = {

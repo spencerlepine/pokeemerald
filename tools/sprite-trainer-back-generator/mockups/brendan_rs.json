@@ -1,0 +1,46 @@
+{
+  "trainer": {
+    "stem": "brendan",
+    "wiki_path": "graphics/trainers/front_pics/brendan.png",
+    "sw_subject": "KAEL (rival/partner front pic)",
+    "subject": "teenage boy",
+    "desc": "Tatooine farm kid, tousled brown hair, kyber-blue headband with knot tails, sand-coloured wrap tunic over a white crossover shirt, white arm wraps, brown belt, satchel, brown boots",
+    "theme": "alliance-dawn",
+    "style": "",
+    "pose": "standing, facing left, three-quarter view",
+    "negative": ""
+  },
+  "lora": {
+    "id": 443092,
+    "name": "XL v1",
+    "baseModel": "SDXL 1.0",
+    "trainedWords": [],
+    "air": null,
+    "files": [
+      {
+        "name": "pk_trainer_xl_v1.safetensors",
+        "sizeKB": 445819.83984375,
+        "sha256": "078E09DA2A123964B7EB30DB23EC24D59FB082343F69C7FAF925C4C07E97023E"
+      }
+    ]
+  },
+  "checkpoint": "urn:air:sdxl:checkpoint:civitai:101055@128078",
+  "params": {
+    "prompt": "solo, single character, (back view:1.5), (from behind:1.4), (back of head:1.3), back turned to the viewer, looking away, (teenage boy:1.3), Tatooine farm kid, tousled brown hair, kyber-blue headband with knot tails, sand-coloured wrap tunic over a white crossover shirt, white arm wraps, brown belt, satchel, brown boots, full body character sprite, standing, raising one arm to throw, pixel art, game sprite, crisp dark outlines, solid white background, simple background, orange, white and blue",
+    "negativePrompt": "face, front view, facing viewer, eyes, side view, profile, multiple views, character sheet, turnaround, two people, poke ball, pokeball, holding ball, baseball cap, generic pokemon trainer, anime boy, scenery, detailed background, gradient background, floor, shadow, text, watermark, signature, frame, border, multiple characters, cropped, cut off feet, blurry, 3d, photo, realistic, painting, smooth shading",
+    "scheduler": "EulerA",
+    "steps": 25,
+    "cfgScale": 7.0,
+    "width": 768,
+    "height": 768,
+    "seed": 26338576,
+    "clipSkip": 2
+  },
+  "strength": 0.6,
+  "format": "jpeg",
+  "seed": 26338576,
+  "workflowId": "13596363-20261101080156977-5aee",
+  "jobId": "a56aed86-55ff-4c42-b4d5-02f3d6cac28b",
+  "cost": "5 blue",
+  "generated": "20261101-080222"
+}

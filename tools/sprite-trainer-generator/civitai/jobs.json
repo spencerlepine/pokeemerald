@@ -11,5 +11,35 @@
     "desc": "young woman, long white robe, two hair buns on the sides of her head, white boots, silver belt",
     "theme": "alliance-dawn",
     "style": ""
+  },
+  "brendan": {
+    "subject": "teenage boy",
+    "desc": "Tatooine farm kid, tousled brown hair, kyber-blue headband with knot tails, sand-coloured wrap tunic over a white crossover shirt, white arm wraps, brown belt, satchel, brown boots",
+    "theme": "alliance-dawn",
+    "style": ""
+  },
+  "brendan_rs": {
+    "subject": "teenage boy",
+    "desc": "Tatooine farm kid, tousled brown hair, kyber-blue headband with knot tails, sand-coloured wrap tunic over a white crossover shirt, white arm wraps, brown belt, satchel, brown boots",
+    "theme": "alliance-dawn",
+    "style": ""
+  },
+  "may": {
+    "subject": "teenage girl",
+    "desc": "Tatooine scavenger girl, chestnut hair with two round buns wrapped in rust-red cloth, rust-red headwrap, cream wrap tunic with a rust-red tabard, white arm wraps, chestnut sash, small pack, boots",
+    "theme": "alliance-dawn",
+    "style": ""
+  },
+  "may_rs": {
+    "subject": "teenage girl",
+    "desc": "Tatooine scavenger girl, chestnut hair with two round buns wrapped in rust-red cloth, rust-red headwrap, cream wrap tunic with a rust-red tabard, white arm wraps, chestnut sash, small pack, boots",
+    "theme": "alliance-dawn",
+    "style": ""
+  },
+  "wally": {
+    "subject": "Luke Skywalker",
+    "desc": "young man, sandy-blond mop of hair, white crossover farm-boy tunic, tan trousers, dark boots, dark belt with white buckle, lightsaber hilt at the hip",
+    "theme": "alliance-dawn",
+    "style": ""
   }
 }

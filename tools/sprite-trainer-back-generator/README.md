@@ -1,9 +1,8 @@
 # sprite-trainer-back-generator
 
-**Status:** PENDING (placeholder). Step 0, the concept, works today through the front-pic tool's
-Civitai pipeline (below); the refine-and-draw steps are not built yet. The earlier repaint tool in
-this folder was scrapped (it did not work) and deleted; it is in git history if anything needs
-recovering.
+**Status:** PENDING. The tool is not built yet, but every back pic has an approved-style **mockup**
+in [`mockups/`](mockups/) to work from. The earlier repaint tool in this folder was scrapped (it
+did not work) and deleted; it is in git history if anything needs recovering.
 
 Draws **trainer battle back pics**: the player and partners seen over the shoulder, throwing a
 capture pod when a battle starts.
@@ -22,8 +21,8 @@ that runs anywhere.
 
 Who these are (from the wiki): `brendan` -> KAEL (player, boy), `may` -> MIRA (player, girl),
 `wally` -> LUKE SKYWALKER (catching tutorial), `steven` -> LEIA ORGANA (multi-battle partner),
-`brendan_rs` / `may_rs` (old Ruby/Sapphire pics of Kael and Mira), `red` / `leaf` (FireRed
-leftovers).
+`brendan_rs` / `may_rs` (old Ruby/Sapphire pics of Kael and Mira). `red` / `leaf` are FireRed
+link leftovers marked KEEP_ART in the wiki: not redrawn.
 
 ## Not made here
 
@@ -32,37 +31,41 @@ leftovers).
 
 ## Wiki rows
 
-`pending_art.csv` kind `trainers`, subkind `back_pics`: 8 rows. Each row's `sw_subject` is the
+`pending_art.csv` kind `trainers`, subkind `back_pics`: 8 rows, 6 to draw (`red` and `leaf` are KEEP_ART). Each row's `sw_subject` is the
 brief. Category: B2.
 
-## Step 0 (prerequisite): back-view concept from the front-pic tool
+## Characters to do, and their mockups
 
-The Civitai trainer LoRA used by [`../sprite-trainer-generator/civitai/`](../sprite-trainer-generator/civitai/)
-can draw a character from behind. This tool uses that as **concept art** and refines from there; it
-does not ship the concept.
+Six back pics. Each has one concept mockup: a 768x768 image from the trainer LoRA (model 159333,
+SDXL version) with a back-view prompt, plus a `.json` beside it with the prompt, seed and settings.
+[`mockups/mockups_sheet.png`](mockups/mockups_sheet.png) shows all six.
 
-```bash
-cd ../sprite-trainer-generator/civitai
-python civitai_trainer.py run steven --view back -n 1          # ~3 Buzz; add a jobs.json entry per character
-# -> runs/steven_back/raw/<stamp>_s<seed>.png (768 original) and runs/steven_back/finished/ (64x64 fit)
-```
+| Back pic | Character | Mockup | Notes |
+|---|---|---|---|
+| `brendan.png` | KAEL (player, boy) | [`mockups/brendan.png`](mockups/brendan.png) | Over-the-shoulder three-quarter back, arm out: closest to the back-pic pose |
+| `may.png` | MIRA (player, girl) | [`mockups/may.png`](mockups/may.png) | Clean back view; buns read as one bun |
+| `brendan_rs.png` | KAEL (old Ruby/Sapphire pic, link battles) | [`mockups/brendan_rs.png`](mockups/brendan_rs.png) | Three-quarter, more side than back |
+| `may_rs.png` | MIRA (old Ruby/Sapphire pic, link battles) | [`mockups/may_rs.png`](mockups/may_rs.png) | Back view, hand on head |
+| `wally.png` | LUKE SKYWALKER (catching tutorial) | [`mockups/wally.png`](mockups/wally.png) | Three-quarter back, lightsaber |
+| `steven.png` | LEIA ORGANA (multi-battle partner) | [`mockups/steven.png`](mockups/steven.png) | Straight back view, arms out |
 
-`--view back` adds `(back view:1.4), (seen from behind:1.3), back turned to the viewer, looking away`
-and negatives `face, front view, facing viewer, eyes`, with the pose "standing, raising one arm to
-throw". The subject and look notes come from `jobs.json` as for the front pic.
+What the mockups are and are not: they fix each character's **back design** (hair from behind,
+clothes, colours) in the game's pixel style. They are not back pics: they are full-body and small,
+while a back pic is a large waist-up figure seen over the shoulder, in 4 throw frames, on the
+palette it shares with the front pic. Building that is the job of this tool (below).
 
-**Tested 2026-11-01** (Leia, seed 303682211, review sheet
-`trainers/civitai-vader/test_back_view_leia.png` in the project files): a clean back view in the
-right pixel style (buns, white robe, belt, boots), but **full body, small, arms out**. A back pic
-needs a large waist-up, over-the-shoulder figure and 4 throw frames. So the concept gives this tool
-the character's back design (hair, clothes, colours); steps 1-3 below turn it into the back pic.
+Back views from this LoRA work best for known characters (Leia, Luke came out first try); the
+generic player kids took a stronger prompt: `solo, single character, (back view:1.5),
+(from behind:1.4), (back of head:1.3), back turned to the viewer, looking away`, negatives `face,
+front view, facing viewer, eyes, side view, profile, multiple views, character sheet, turnaround,
+two people`, LoRA strength 0.6.
 
 ## Model gaps to test
 
 The model does **not** document a back-view tag (the creature LoRA has `backside`; this one does
 not), and it has no notion of animation frames.
 
-1. **Back view.** Answered: yes, see Step 0. The original plain prompt idea, kept for reference:
+1. **Back view.** Answered: yes (see the mockups). The original plain prompt idea, kept for reference:
 
 ```
 pokemon trainer sprite,
