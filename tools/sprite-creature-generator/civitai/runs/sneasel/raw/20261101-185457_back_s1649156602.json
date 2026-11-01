@@ -1,0 +1,60 @@
+{
+  "species": {
+    "stem": "sneasel",
+    "sw_name": "SCRABBLER",
+    "sw_basis": "canon:Ice scrabbler",
+    "subject": "scrabbler",
+    "desc": "sleek sneaky ice rodent crouching, long drooping ears, beaked snout, clawed paws, long thin tail, three-quarter view, whole body",
+    "types": [],
+    "colour": "dark charcoal grey and pale grey",
+    "style": "gen3",
+    "pose": "three-quarter view facing left",
+    "negative": "snow, background, ice blocks",
+    "init": "refs/sneasel_prep.png",
+    "control": null,
+    "denoise": 0.5,
+    "flip": false,
+    "frame2": "mouth wide open, roaring, lunging forward",
+    "shiny": {}
+  },
+  "view": "back",
+  "lora": {
+    "id": 273148,
+    "name": "v2.1-beta",
+    "baseModel": "SD 1.5",
+    "trainedWords": [],
+    "air": null,
+    "files": [
+      {
+        "name": "pksp768_V2-1.safetensors",
+        "sizeKB": 74235.9921875,
+        "sha256": "DF8494A9FF9AE96B53ECBCD327AA14626C59D3F573423892A650F9F6C21AB418"
+      }
+    ]
+  },
+  "checkpoint": "urn:air:sd1:checkpoint:civitai:4384@128713",
+  "step": "imageGen",
+  "params": {
+    "prompt": "gen3, backside, back view, (scrabbler:1.1), (sleek sneaky ice rodent crouching long drooping ears beaked snout clawed paws long thin tail three-quarter view whole body:1.2), pokemon, single creature, full body, seen from behind, (dark charcoal grey and pale grey body:1.3), limited palette, muted natural colours, pixel art, game sprite, crisp dark outlines, white background, simple background",
+    "negativePrompt": "face, eyes, front view, facing viewer, snow, background, ice blocks, human, person, trainer, multiple creatures, two creatures, text, watermark, signature, frame, border, scenery, detailed background, gradient background, ground, shadow, cropped, cut off, blurry, 3d, photo, realistic, painting, smooth shading",
+    "scheduler": "EulerA",
+    "steps": 25,
+    "cfgScale": 5.0,
+    "width": 768,
+    "height": 768,
+    "seed": 1649156602,
+    "clipSkip": 2,
+    "denoise": 0.55
+  },
+  "refs": {
+    "init": "(data URI)"
+  },
+  "control": null,
+  "strength": 0.9,
+  "format": "jpeg",
+  "seed": 1649156602,
+  "workflowId": "13596363-20261101185426936-cq2f",
+  "jobId": null,
+  "cost": "3 green",
+  "generated": "20261101-185457"
+}
