@@ -1,0 +1,47 @@
+{
+  "trainer": {
+    "stem": "collector",
+    "wiki_path": "graphics/trainers/front_pics/collector.png",
+    "sw_subject": "JUNK DEALER: Toydarian with buzzing wings and a snout, over a crate of curios",
+    "subject": "Toydarian junk dealer",
+    "desc": "Toydarian: small pot-bellied grey-green alien with a short trunk-like snout, small tusks, a cap, fast buzzing wings, hovering, holding a datapad over a crate of old droid parts",
+    "theme": "factions",
+    "style": "",
+    "pose": "standing, facing left, three-quarter view",
+    "negative": "human face, hair",
+    "pair": false
+  },
+  "lora": {
+    "id": 443092,
+    "name": "XL v1",
+    "baseModel": "SDXL 1.0",
+    "trainedWords": [],
+    "air": null,
+    "files": [
+      {
+        "name": "pk_trainer_xl_v1.safetensors",
+        "sizeKB": 445819.83984375,
+        "sha256": "078E09DA2A123964B7EB30DB23EC24D59FB082343F69C7FAF925C4C07E97023E"
+      }
+    ]
+  },
+  "checkpoint": "urn:air:sdxl:checkpoint:civitai:101055@128078",
+  "params": {
+    "prompt": "solo, (single character:1.2), (toydarian junk dealer:1.3), Toydarian: small pot-bellied grey-green alien with a short trunk-like snout, small tusks, a cap, fast buzzing wings, hovering, holding a datapad over a crate of old droid parts, full body character sprite, standing, facing left, three-quarter view, pixel art, game sprite, crisp dark outlines, solid white background, simple background",
+    "negativePrompt": "human face, hair, poke ball, pokeball, holding ball, baseball cap, generic pokemon trainer, anime boy, scenery, detailed background, gradient background, floor, shadow, text, watermark, signature, frame, border, multiple characters, multiple views, character sheet, turnaround, duplicate, cropped, cut off feet, blurry, 3d, photo, realistic, painting, smooth shading",
+    "scheduler": "EulerA",
+    "steps": 25,
+    "cfgScale": 7.0,
+    "width": 768,
+    "height": 768,
+    "seed": 1120418268,
+    "clipSkip": 2
+  },
+  "strength": 0.75,
+  "format": "jpeg",
+  "seed": 1120418268,
+  "workflowId": "13596363-20261101192217276-qva9",
+  "jobId": "e8f33f03-02a0-4853-96f1-93d21dca48d8",
+  "cost": "3 green",
+  "generated": "20261101-192248"
+}
