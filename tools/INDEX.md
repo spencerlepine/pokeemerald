@@ -31,8 +31,8 @@ work (which file becomes which Star Wars subject) stays in the wiki. Update this
 | [`play-tester/`](play-tester/) | DONE | Headless mGBA play-testing: scripts, Lua helpers, savestates | - | - |
 | [`sprite-creature-generator/`](sprite-creature-generator/) | TODO | Companion battle sprites: front (2-frame anim), back, normal and shiny palettes, egg/hatch and form extras. | A1, A2, A5 | `pending_art.csv` kind `pokemon` (front, anim_front, back, palettes) for each species; 1,262 PNGs |
 | [`sprite-icon-generator/`](sprite-icon-generator/) | TODO | Small fixed-size stills: item icons, fruit (berries), decoration icons, capture pods in battle, type labels, companion party icons and Datapad footprints. | A3, A4, C1, C2, C3, C5, C6 | `pending_art.csv` kinds `items`, `berries`, `decorations`, `balls`, `types`, plus `pokemon` icon/footprint files; 1,144 PNGs |
-| [`sprite-walker-generator/`](sprite-walker-generator/) | TODO | Overworld walking sprites: people (player, rivals, NPCs), overworld companions, placed dolls and cushions. | A6, B3, C4 | `pending_art.csv` kind `object_events`; 207 PNGs |
-| [`sprite-trainer-generator/`](sprite-trainer-generator/) | TODO | Trainer battle portraits and Prof. Korr's intro portrait. | B1, B4 | `pending_art.csv` kind `trainers` (front pics) and `birch_speech`; 95 PNGs |
+| [`sprite-walker-generator/`](sprite-walker-generator/) | READY (16x32 people kit; other kits TODO) | Overworld walking sprites: people (player, rivals, NPCs), overworld companions, placed dolls and cushions. | A6, B3, C4 | `pending_art.csv` kind `object_events`; 207 PNGs |
+| [`sprite-trainer-generator/`](sprite-trainer-generator/) | READY | Trainer battle portraits and Prof. Korr's intro portrait. | B1, B4 | `pending_art.csv` kind `trainers` (front pics) and `birch_speech`; 95 PNGs |
 | [`sprite-trainer-back-generator/`](sprite-trainer-back-generator/) | TODO | Player and partner battle back sprites (the capture-pod throw). | B2 | `pending_art.csv` kind `trainers` (back pics); 8 PNGs |
 | [`tile-generator/`](tile-generator/) | TODO | Overworld tilesets per planet and building, their tile animations, metatiles, and battle backgrounds. | D1, D2, E1 | `pending_art.csv` kinds `tileset` and `battle_environment`; 247 PNGs plus their .pal, metatiles.bin and tilemaps |
 | [`vfx-generator/`](vfx-generator/) | TODO | Animated effects: field effects (grass, sand, ash, ripples, emotes), doors, field objects, weather, move-animation particles, battle transitions, and the VFX rows (status/general/special battle animations, net-new VFX like hyperspace and lightsabers). | D3, D4, D5, D6, E3, E4 | `pending_art.csv` kinds `field_effects`, `door_anims`, `weather`, `battle_anims`, `battle_transitions`, `rotating_gates`, `battle_animation` and every `vfx_*` kind; 513 PNGs + 170 VFX rows |
@@ -45,14 +45,14 @@ work (which file becomes which Star Wars subject) stays in the wiki. Update this
 
 ### Prototype progress to carry over
 
-These were built in the prototype repo, not here. When a tool moves into this repo, start from its prototype.
+These were built in the prototype repo. When a tool moves into this repo, start from its prototype. Ported so far: `sprite-walker-generator/` and `sprite-trainer-generator/` (each folder is self-contained; follow its own `README.md`).
 
 | Tool here | Prototype tool | Prototype status | Notes |
 |---|---|---|---|
-| `sprite-walker-generator/` | `walker` | **READY** for the 16x32 nine-frame people kit (Vader approved, 1 drawn) | Other kits (32x32 big, 16x16 small, bike / surf / fish / field-move sheets, creature walkers) not built. Its `install` step writes the OBJ palette tag. Guide: `pipelines/walker/README.md`. |
-| `sprite-trainer-generator/` | `trainer-front` | **READY** (4 drawn: Vader, Boba Fett, Leia, Obi-Wan, approved "those are perfect" in round 5) | Rebuilt as a *repaint* tool (decision D13) after rig drawings were judged 70%. No image model needed. Guides: `pipelines/trainer-front/README.md`, `pipelines/trainer-front/STYLE-GUIDE.md`. |
+| `sprite-walker-generator/` | `walker` | **READY** for the 16x32 nine-frame people kit (Vader approved, 1 drawn). **Ported here.** | Other kits (32x32 big, 16x16 small, bike / surf / fish / field-move sheets, creature walkers) not built. Its `install` step writes the OBJ palette tag. Guide: [`sprite-walker-generator/README.md`](sprite-walker-generator/README.md). |
+| `sprite-trainer-generator/` | `trainer-front` | **READY** (4 drawn: Vader, Boba Fett, Leia, Obi-Wan, approved "those are perfect" in round 5; round 6 with 4 more in review). **Ported here.** | Rebuilt as a *repaint* tool after rig drawings were judged 70%. No image model needed. Guides: [`sprite-trainer-generator/README.md`](sprite-trainer-generator/README.md), [`STYLE-GUIDE.md`](sprite-trainer-generator/STYLE-GUIDE.md). |
 | `sprite-trainer-back-generator/` | `trainer-back` | TODO | Needs the player character's look decided first. |
-| `sprite-creature-generator/` | `creature` | **PENDING** (needs a GPU for an image model) | Research in `pipelines/creature/README.md`. |
+| `sprite-creature-generator/` | `creature` | **PENDING** (needs a GPU for an image model) | Research in the prototype's `tools/sprite-creature-generator/research/`. |
 | `sprite-icon-generator/` | `icon` | TODO | Item icons first (218), then fruit, decorations, capture pods, type labels. Derive party icons and footprints from the creature fronts. |
 | `tile-generator/` | `tileset` | TODO | Do one biome end to end first (e.g. a desert secondary tileset for Tatooine) with palettes, metatiles and animations; then battle backgrounds. |
 | `vfx-generator/` | `obj-anim` | TODO | |
@@ -60,13 +60,13 @@ These were built in the prototype repo, not here. When a tool moves into this re
 | `font-generator/` | `font` | TODO | Only if a Star Wars font style is wanted; otherwise keep vanilla. |
 | `cutscene-generator/` | `cutscene` | TODO | Title screen, intro, legendary scene first. |
 
-Paths in the Notes column are in the prototype repo.
+Paths in the Notes column are in the prototype repo unless linked.
 
 ## Order of work
 
 Work one tool at a time: build it, show the owner samples, iterate, mark it READY, then generate the whole group.
 
-1. `sprite-trainer-generator` and the 16x32 `sprite-walker-generator` kit: port from the prototype (already approved).
+1. ~~`sprite-trainer-generator` and the 16x32 `sprite-walker-generator` kit: port from the prototype~~ (ported, READY).
 2. `sprite-trainer-back-generator` (after the player character is decided).
 3. `sprite-creature-generator` (front 2 frames + back + shiny palette).
 4. `sprite-icon-generator`: item icons, then fruit, decorations, pods, type labels; party icons and footprints from creature fronts.
