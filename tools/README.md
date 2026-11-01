@@ -35,8 +35,8 @@ work (which file becomes which Star Wars subject) stays in the wiki. Update this
 | [`sprite-creature-extras-generator/`](sprite-creature-extras-generator/) | TODO | The Egg (pics, hatch and shard sheets), Spinda's spot masks, question-mark placeholder pics. | A5 | `pending_art.csv` kind `pokemon` subkinds `egg`, `question_mark`, `spinda` spots; 14 PNGs |
 | [`sprite-icon-generator/`](sprite-icon-generator/) | TODO | Small fixed-size stills: item icons, fruit (berries), decoration icons, capture pods in battle, type labels. | C1, C2, C3, C5, C6 | `pending_art.csv` kinds `items`, `berries`, `decorations`, `balls`, `types`; 340 PNGs |
 | [`sprite-walker-generator/`](sprite-walker-generator/) | IN-REVIEW (style gate and vanilla composition added after the owner rejected the first batches; 16x32 people kit only) | Overworld walking sprites: people (player, rivals, NPCs), overworld companions, placed dolls and cushions. | A6, B3, C4 | `pending_art.csv` kind `object_events`; 207 PNGs |
-| [`sprite-trainer-generator/`](sprite-trainer-generator/) | READY | Trainer battle portraits and Prof. Korr's intro portrait. | B1, B4 | `pending_art.csv` kind `trainers` (front pics) and `birch_speech`; 95 PNGs |
-| [`sprite-trainer-back-generator/`](sprite-trainer-back-generator/) | IN-REVIEW (4-frame throw repaints sharing the front pic's palette; Kael, Mira, Luke, Leia mockups in `output/`) | Player and partner battle back sprites (the capture-pod throw). | B2 | `pending_art.csv` kind `trainers` (back pics); 8 PNGs |
+| [`sprite-trainer-generator/`](sprite-trainer-generator/) | PENDING (old repaint tool scrapped; plan in its README: SD 1.5 trainer LoRA on a rented GPU) | Trainer battle portraits and Prof. Korr's intro portrait. | B1, B4 | `pending_art.csv` kind `trainers` (front pics) and `birch_speech`; 95 PNGs |
+| [`sprite-trainer-back-generator/`](sprite-trainer-back-generator/) | PENDING (old repaint tool scrapped; plan in its README: same trainer LoRA, back views untested) | Player and partner battle back sprites (the capture-pod throw). | B2 | `pending_art.csv` kind `trainers` (back pics); 8 PNGs |
 | [`tile-generator/`](tile-generator/) | TODO | Overworld tilesets per planet and building, their tile animations, metatiles, and battle backgrounds. | D1, D2, E1 | `pending_art.csv` kinds `tileset` and `battle_environment`; 247 PNGs plus their .pal, metatiles.bin and tilemaps |
 | [`vfx-generator/`](vfx-generator/) | TODO | Animated effects: field effects (grass, sand, ash, ripples, emotes), doors, field objects, weather, move-animation particles, battle transitions, and the VFX rows (status/general/special battle animations, net-new VFX like hyperspace and lightsabers). | D3, D4, D5, D6, E3, E4 | `pending_art.csv` kinds `field_effects`, `door_anims`, `weather`, `battle_anims`, `battle_transitions`, `rotating_gates`, `battle_animation` and every `vfx_*` kind; 513 PNGs + 170 VFX rows |
 | [`ui-skin-generator/`](ui-skin-generator/) | TODO | Tile-based screens: text windows, map popups, region map, battle HUD, menus, Datapad, comlink, PC, trainer card, minigames, Grand Arena screens. | D7, D8, E2, F1, F3-F10, H1-H5 | `pending_art.csv` UI kinds (`text_window`, `map_popup`, `battle_interface`, `pokedex`, `pokenav`, `pokemon_storage`, ...); 488 PNGs. Mostly kept: only re-skin what reads as Pokémon |
@@ -48,13 +48,13 @@ work (which file becomes which Star Wars subject) stays in the wiki. Update this
 
 ### Prototype progress to carry over
 
-These were built in the prototype repo. When a tool moves into this repo, start from its prototype. Ported so far: `sprite-walker-generator/` and `sprite-trainer-generator/` (each folder is self-contained; follow its own `README.md`).
+These were built in the prototype repo. When a tool moves into this repo, start from its prototype. Ported so far: `sprite-walker-generator/` (each folder is self-contained; follow its own `README.md`).
 
 | Tool here | Prototype tool | Prototype status | Notes |
 |---|---|---|---|
 | `sprite-walker-generator/` | `walker` | **READY** for the 16x32 nine-frame people kit (Vader approved, 1 drawn). **Ported here.** | Other kits (32x32 big, 16x16 small, bike / surf / fish / field-move sheets, creature walkers) not built. Its `install` step writes the OBJ palette tag. Guide: [`sprite-walker-generator/README.md`](sprite-walker-generator/README.md). |
-| `sprite-trainer-generator/` | `trainer-front` | **READY** (4 drawn: Vader, Boba Fett, Leia, Obi-Wan, approved "those are perfect" in round 5; round 6 with 4 more in review). **Ported here.** | Rebuilt as a *repaint* tool after rig drawings were judged 70%. No image model needed. Guides: [`sprite-trainer-generator/README.md`](sprite-trainer-generator/README.md), [`STYLE-GUIDE.md`](sprite-trainer-generator/STYLE-GUIDE.md). |
-| `sprite-trainer-back-generator/` | `trainer-back` | IN-REVIEW | Built here directly (not ported); mockups in review. [`README.md`](sprite-trainer-back-generator/README.md). |
+| `sprite-trainer-generator/` | `trainer-front` | Scrapped 2026-11-01 | The ported repaint tool did not work and was deleted (in git history). Replaced by an image-model plan: [`sprite-trainer-generator/README.md`](sprite-trainer-generator/README.md). |
+| `sprite-trainer-back-generator/` | `trainer-back` | Scrapped 2026-11-01 | Built here directly, did not work, deleted (in git history). Image-model plan: [`README.md`](sprite-trainer-back-generator/README.md). |
 | `sprite-creature-generator/` | `creature` | **PENDING** (needs a GPU for an image model) | Research in the prototype's `tools/sprite-creature-generator/research/`; model and GPU plan in [`sprite-creature-generator/README.md`](sprite-creature-generator/README.md). |
 | `sprite-icon-generator/` | `icon` | TODO | Item icons first (218), then fruit, decorations, capture pods, type labels. |
 | `tile-generator/` | `tileset` | TODO | Do one biome end to end first (e.g. a desert secondary tileset for Tatooine) with palettes, metatiles and animations; then battle backgrounds. |
@@ -129,8 +129,8 @@ alongside the PNGs.
 
 Work one tool at a time: build it, show the owner samples, iterate, mark it READY, then generate the whole group.
 
-1. ~~`sprite-trainer-generator` and the 16x32 `sprite-walker-generator` kit: port from the prototype~~ (ported, READY).
-2. `sprite-trainer-back-generator`: built, mockups in review.
+1. ~~The 16x32 `sprite-walker-generator` kit: port from the prototype~~ (ported, READY).
+2. `sprite-trainer-generator` and `sprite-trainer-back-generator`: rebuild on the trainer LoRA once a GPU is rented; test it side by side with the creature LoRA first.
 3. The creature set, one creature at a time once all four are built (see [One creature, every sprite](#one-creature-every-sprite)): `sprite-creature-generator` (front, frame 2, back, palettes), then `sprite-creature-icon-generator` and `sprite-creature-footprint-generator` from the approved front; `sprite-creature-extras-generator` once for the Egg and placeholders.
 4. `sprite-icon-generator`: item icons, then fruit, decorations, pods, type labels.
 5. `sprite-walker-generator` extra kits.

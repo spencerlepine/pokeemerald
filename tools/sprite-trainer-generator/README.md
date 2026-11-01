@@ -1,155 +1,157 @@
-# sprite-trainer-generator (trainer battle pics)
+# sprite-trainer-generator
 
-**Status: READY.** A repaint tool (D8): each pic starts from the vanilla pic closest in pose
-and costume, recoloured and kitbashed. Approved by the owner on round 5 (Vader, Boba Fett,
-Leia, Obi-Wan). Category B1 (93 pics) and B4 (professor portrait).
+**Status:** PENDING. Approach chosen; the tool is not built yet. The build waits on a rented GPU.
+The earlier repaint/sculpt tool in this folder was scrapped (it did not work) and deleted; it is
+in git history if anything needs recovering.
 
-**Read [STYLE-GUIDE.md](STYLE-GUIDE.md) first**: pose, perspective and pixel rules from the 93
-vanilla pics, a review checklist, and the owner's feedback log. Getting the pose right is the
-hard part of this category; the format is handled by the tool.
+Draws **trainer battle front pics**: the full-body portrait of every opposing trainer, the player
+and partners, plus the professor's intro portrait.
 
-Reference specs (repaints): `art/vader.yaml` (base Drake), `boba.yaml` (Pyramid King
-Brandon), `leia.yaml` (Glacia), `obiwan.yaml` (Expert M). Round 6 (fresh characters, in
-review): `stormtrooper.yaml` (base Magma grunt M), `maul.yaml` (Sidney), `luke.yaml` (Wally),
-`imperial_officer.yaml` (Gentleman), sheet `output/fresh-characters-r6.png`. Review sheets:
-`output/style-check-r5.png` and `repaint-bases-r5.png` (approved round), `style-check-r4.png` and `vader-poses-r*.png` (rig
-drawings, rejected, kept for comparison). Round 1 of the full roster (2026-11-01, in review):
-`kael.yaml` (Brendan), `mira.yaml` (May), `cadet_m.yaml` (School Kid M, a generic class),
-`tarfful.yaml` (the Sailor, a Wookiee with fur `fringe`), sheet `output/round1-fronts.png`.
-Back pics (category B2) are the sibling tool `../sprite-trainer-back-generator`.
+## What this tool makes
 
-## Setup
+"SD" means a Stable Diffusion model run on a rented GPU; "Python" means a deterministic script
+that runs anywhere.
 
-This folder is a self-contained tool: its own Python package, requirements, decision log,
-corpus, art and output. It needs nothing outside this folder except the game (this repo's `../../game`).
+| # | File | Size and format | Made by | Where it shows |
+|---|---|---|---|---|
+| 1 | `game/graphics/trainers/front_pics/<trainer>.png` (93 files) | 64x64, 1 frame, 4bpp; 15 colours + transparent | **SD** (trainer LoRA, front view) + Python finisher | Trainer battle intro, trainer card, Hall of Fame, Grand Arena (Battle Frontier) |
+| 2 | Its palette | Taken from the PNG for most trainers. Brendan, May, their old R/S pics and Wally use a file in `game/graphics/trainers/palettes/` instead, which their back pic shares | **Python** | |
+| 3 | `game/graphics/birch_speech/birch.png` | 64x64 still, palette from the PNG | **SD** + Python finisher | New-game intro (Prof. Korr) |
+| 4 | Placement data: `gTrainerFrontPicCoords` in `game/src/data/trainer_graphics/front_pic_tables.h` | `size`, `y_offset` | **Python** (measured from 1) | Keeps the trainer on the ground line |
 
-```bash
-# from this folder
-pip install -r requirements.txt     # pillow, pyyaml
-# the game is found automatically: this repo's game/ folder (pokeemerald/tools/<tool> ->
-# pokeemerald/game). Set EMERALD_DIR only to point at a different checkout.
-# export EMERALD_DIR=/path/to/pokeemerald/game
+Notes on the art:
+
+- Full body, standing, three-quarter facing the player's side (left), as in vanilla.
+- Six pics show **two people** in one 64x64 cell (`twins`, `sis_and_bro`, `sr_and_jr`,
+  `young_couple`, `old_couple`, `leader_tate_and_liza`); prompt and judge these as pairs.
+- `birch_speech/shadow.png` and `unused_beauty.png` are kept as they are.
+
+## Not made here
+
+- Back pics (the player's and partners' over-the-shoulder capture-pod throw): a different view, size and animation.
+- Overworld walking sprites of the same characters.
+
+## Wiki rows
+
+`pending_art.csv` kind `trainers`, subkind `front_pics` (93 rows), and kind `birch_speech`
+`birch.png`. Each row's `sw_subject` is the brief (for example `aqua_admin_m` -> its Star Wars
+trainer). Categories: B1, B4.
+
+## Size: 96x96 model output vs the 64x64 game
+
+The LoRA's native sprite is 96x96; Emerald's trainer pics are 64x64 and fill most of the cell.
+Unlike creatures, cropping a 96 canvas will not work if the model draws trainers edge to edge, so
+the finisher has to rescale (96 -> 64 is 1.5x, which breaks the pixel grid) and then clean up.
+**Test first**: generate a few at 768, try (a) 8x -> 96 then crop if the figure fits 64, and
+(b) 12x -> 64 directly; compare on one sheet.
+
+## Model gaps to test
+
+- **No documented `gen3` tag.** Try `gen2` and no tag; compare against the creature LoRA's `gen3`
+  creatures on the same sheet so trainers and creatures read as one game.
+- Starting prompt to try:
+
+```
+gen2, pokemon trainer sprite,
+male trainer, standing, front view,
+simple background
 ```
 
-| Path | What |
-| --- | --- |
-| `trainer_sprite/` | The Python package (`python -m trainer_sprite ...`) |
-| `art/<name>.yaml` | Trainer pic specs (repaints): what the LLM writes |
-| `output/<name>/` | Built game-ready PNG, `lint.txt`, `metrics.json`, `preview/` (zoom, battle, showcase) |
-| `output/*.png` | Review sheets shown to the owner (`compare`) |
-| `corpus/trainer64.json` | Style metrics measured on the 93 vanilla pics (`python -m trainer_sprite corpus`) |
-| `STYLE-GUIDE.md` | Pose, perspective and pixel rules, review checklist, owner feedback log |
+## To build
 
-`D1`, `D2`... are the decisions in this folder's [DECISIONS.md](DECISIONS.md): read it before changing
-the tool.
+1. Read the rows above in `../../wiki/database/` (filter by `kind`; skip `KEEP*` and `CUT`).
+2. Build a tool that takes one row (its `sw_subject` is the brief, `path` the Emerald original, `suggested_path` the new name) and generates rows 1-4 above.
+3. Show the owner a few samples, iterate, then generate the rest and set each row's status to `DONE`.
 
-## Commands
+---
 
-```bash
-python -m trainer_sprite build   art/<name>.yaml               # PNG + previews + lint
-python -m trainer_sprite verify  art/<name>.yaml               # round trip through pokeemerald's gbagfx
-python -m trainer_sprite install art/<name>.yaml               # copy over the vanilla pic it replaces
-python -m trainer_sprite inspect <vanilla.png> <out.png>       # which palette index is which material
-python -m trainer_sprite compare output/<x>.png a.yaml b.yaml  # review sheet in a battle scene
-python -m trainer_sprite corpus                                # re-measure the vanilla pics
-python -m trainer_sprite status                                # worklist: every wiki front pic, todo/spec/built
-python -m trainer_sprite sheet  out.png [a.yaml ...] [--cols 6] # contact sheet (default: every spec)
-python -m trainer_sprite parts  out.png                        # contact sheet of the parts library
-python -m trainer_sprite cutpart out.png x y w h --roles "15:K 5:1 ..."  # cut a box into part rows
+# Research: trainer sprite pipeline (one-pager)
+
+**Model:** Pokémon Trainer Sprite PixelArt by titansteng
+([Civitai model 159333](https://civitai.com/models/159333/pokemon-trainer-sprite-pixelart)).
+It is the trainer companion to the creature LoRA (Pokémon Sprite PixelArt 768) by the same
+creator. Not yet downloaded or tested.
+
+## 1. Overview
+
+Generate original Star Wars trainer sprites that match the look of Generation 3 (Ruby, Sapphire,
+Emerald) with a Stable Diffusion LoRA, run offline on a rented GPU. Generated sprites become
+ordinary game assets; nothing is generated while the game runs. Generated images are candidates,
+not approved assets: the owner picks.
+
+## 2. Model information
+
+| | |
+|---|---|
+| Model | Pokémon Trainer Sprite PixelArt |
+| Creator | titansteng |
+| Platform | Civitai (model 159333) |
+| Architecture | Stable Diffusion 1.5 LoRA. An SDXL version also exists |
+| File, size, SHA256 | Not recorded yet: write them here when the file is downloaded (Civitai was not reachable from the agent container) |
+| Native sprite size | 96x96 (generate at 768x768, downsample 8x) |
+
+**Compatibility:** load the SD 1.5 version only into an SD 1.5 pipeline, never SDXL. The SDXL
+version is a different file; switching architecture does not add Gen 3 or back-view support.
+
+### What the model supports (from its description)
+
+| Feature | Support |
+|---|---|
+| Front-facing trainers | Yes |
+| Generation 1 style (`gen1`) | Yes |
+| Generation 2 style (`gen2`) | Yes |
+| Generation 3 style | **Not documented** |
+| Back-facing trainers | **Not documented**: no `backside` tag, unlike the creature LoRA |
+| 96x96 native sprites | Yes |
+
+The creature LoRA documents `gen3`; this one stops at `gen2`. If the game's trainers and creatures
+must look like one set, **test both LoRAs side by side before committing** to this one (same
+prompt style, same finisher, one sheet).
+
+## 3. Infrastructure
+
+Same as the creature pipeline: a temporary rented GPU (RunPod first; an RTX 3090 or 4090 is
+enough for SD 1.5), ComfyUI as the inference interface, terminated as soon as outputs are
+downloaded and verified. AWS EC2 or a hosted API are alternatives only if the API can load this
+exact Civitai LoRA with strength, seed and resolution control. Cache the checkpoint and LoRA on
+persistent storage; never leave an idle GPU running.
+
+```
+START GPU -> LOAD SD 1.5 CHECKPOINT + LORA -> RUN JOB LIST -> DOWNLOAD OUTPUTS
+          -> VERIFY OUTPUTS AND METADATA -> TERMINATE GPU
 ```
 
-## Format (what the game needs)
+## 4. Jobs, batches and metadata
 
-- One 64x64 indexed PNG per pic in `graphics/trainers/front_pics/`, one frame.
-- **Own palette, stored in the PNG**: `src/data/graphics/trainers.h` builds both the tiles
-  (`.4bpp.lz`) and the palette (`.gbapal.lz`) from the same PNG. So the spec carries an inline
-  16-colour `palette:` list; index 0 is transparent. Use multiples of 8 per channel (the GBA
-  keeps 5 bits), and no two colours that collapse to the same GBA colour.
-- Shown at centre (176, 40) in battle, also on the trainer card, Hall of Fame and Frontier.
-- Replacing a PNG at the same path needs no code change.
-- **Exception, shared palettes**: Brendan, May and Wally's front pics take their palette from
-  `graphics/trainers/palettes/<name>.pal`, not the PNG, and Steven's front pic PNG also colours
-  his back pic. Each of these four shares its palette with a back pic, index for index: write
-  the front spec first; the back spec (`../sprite-trainer-back-generator`) copies its `palette`
-  and `legend`. `install` writes the `.pal` when the game reads one (it parses
-  `src/data/graphics/trainers.h`); `status` marks the four.
+Drive generation from a job list, not hand-written prompts. Each job: trainer id and wiki row,
+description (the row's `sw_subject`), style tag, view (front or back), positive and negative
+prompt, seed, LoRA strength, output name. Load the model once, run jobs in one queue, save every
+image separately, track failures and retry only those. Vary seeds for candidates; fix the seed
+when iterating on one trainer.
 
-Measured on the 93 vanilla pics (`corpus/trainer64.json`): full body, feet on row 62-63, head
-at row 1-17, 29-57 px wide, ~1,075 opaque pixels, 13-15 colours, near-black outline on most
-edges, plenty of single-pixel highlights (orphans 11-23%).
+Record for every output: model and LoRA file and SHA256, base checkpoint, prompts, seed, LoRA
+strength, sampler settings, resolution, finisher settings, timestamp. Keep the 768x768 originals
+so a sprite can be reprocessed without paying for another generation. Keep originals, processed
+images, approved sprites, metadata and saved ComfyUI workflows in separate folders.
 
-### Rules for all GBA 4bpp art
+## 5. Output processing (Python finisher)
 
-- The game builds from **indexed PNGs** (mode `P`) via pokeemerald's `tools/gbagfx`, which
-  reads pixel *indices*; the colours on screen come from the palette the game loads.
-- Max 16 colours per palette, index 0 is transparent.
-- GBA colour is 15-bit: each channel keeps 5 bits (`v >> 3 << 3`). Colours that differ only in
-  the low 3 bits look identical in game, so use multiples of 8.
-- Sizes are multiples of 8 (tiles are 8x8).
-- Replacing a PNG at the same path needs no code change; a new asset needs C table entries.
+1. Downsample 768 -> 96 (8x, nearest; test that pixel edges stay crisp).
+2. Fit into the game's 64x64 cell (see "Size" above).
+3. Remove the background as its own step (a white background is not transparency).
+4. Quantise to the game's palette rules (15 colours + transparent).
+5. Export indexed PNG (and `.pal` where the game uses one).
 
-## Drawing a new trainer pic (repaint)
+Review every sheet for silhouette, proportions, palette, alignment, pixel quality, background
+artifacts and framing before it is shown to the owner.
 
-1. Find the asset in `../../wiki/database/pending_art.csv` (`kind = trainers`) and the
-   Star Wars character in `../../wiki/database/swap_map.csv`.
-2. **Pick a base**: the vanilla pic in `graphics/trainers/front_pics/` whose pose *and* costume
-   cut are closest (long coat -> cape, gown -> gown, robe -> robe). Make a contact sheet
-   (STYLE-GUIDE, last section) and choose by silhouette, not by the character it replaces.
-   Bases used so far: see the reference specs above.
-3. `python -m trainer_sprite inspect $EMERALD_DIR/graphics/trainers/front_pics/<base>.png
-   /tmp/insp.png` and look at it: a false-colour map of which palette index is which material
-   (skin, hair, each cloth ramp, outline). Watch for one index used by two materials (Glacia's
-   belt shares the hair colours); fix those with a `recolour` region.
-4. Write `art/<name>.yaml` (copy `leia.yaml`): inline `palette` (index 0 transparent,
-   outline, then 3-4 step ramps), `legend`, and a frame with
-   `repaint: {pic: <base path>, remap: {<vanilla index>: <legend char>, ...}}` (every index the
-   base uses must be mapped; `flip: true` mirrors it). Map whole ramps to whole ramps so the
-   vanilla shading survives.
-5. Kitbash with `rig: layers:` on top of the base, in order:
-   - `erase: true` shapes remove what goes (old head, hat, held ball);
-   - `recolour: "a:b c:d"` shapes split one vanilla material into two of ours (sleeves grey,
-     chest green);
-   - shaded shapes (`poly`, `ellipse`, `capsule` with a `ramp`) build new parts (helmet, buns,
-     saber); `behind: true` paints only empty pixels, for parts behind the body (jetpack);
-   - `shape: pixels` places faces, visors, emblems by hand, before anything held in front;
-   - `shape: edge` with `chars`/`to` gives a light material a selective (non-black) outline.
-   - silhouette ops (D11) reshape the base without redrawing it: `graft` copies a box from
-     *another* vanilla pic with its own remap (a head, an arm, a prop, the base's own hand back
-     over a new prop), `move` shifts a box, `rows`/`cols` insert or delete rows/columns (taller,
-     broader), `trim` cuts a big hairdo or hat down to a kept shape, `fringe` roughens an edge
-     into fur or rags, `speckle` adds strands.
-   - `shape: part` places a hand-pixelled part from `parts/` (D13): `{shape: part, part:
-     visor_helmet, at: [x, y], flip: true, paint: {"1234": "bcde", "89": "fi"}}`. Parts are
-     drawn in roles (K outline, 1-4 main ramp, 5-7 second ramp, 8-9 visor or lens, W, s-u
-     skin) so they take any palette. Erase what they replace first. Library: visor_helmet,
-     hunter_helmet, pilot_helmet, field_helmet, mystic_hood, goggles, blaster_pistol.
-   - `finish:` (after the rig, before `patches`) enforces pixel-art rules on the edited area:
-     `{outline: K, selective: "gW", box: [x, y, w, h], pixel_perfect: true, strays: true}`
-     closes the silhouette with the outline colour, removes L-shaped outline doubles and
-     floating single pixels, and fills pinholes.
-6. `python -m trainer_sprite build art/<name>.yaml`, then **look at**
-   `output/<name>/preview/zoom.png` (8x with coordinates) and `showcase.png`
-   (in battle at 1x and 2x next to the pic it replaces). Fix until it reads at 1x.
-7. `python -m trainer_sprite verify art/<name>.yaml`: 2048 bytes of 4bpp, a 32-byte
-   palette, identical round trip. Then a `compare` sheet for the owner.
+## 6. Future extensibility
 
-There is no from-scratch mode: a frame made only of rig shapes is rejected (D9, the owner
-rated rig drawings "about 70%"). Rig layers are only for kitbashing a repaint; the layer
-reference is the docstring in `trainer_sprite/rig.py`.
+Keep the checkpoint, LoRA, strength, prompt templates, resolution, sampler and finisher swappable,
+so the creature LoRA, the SDXL trainer LoRA or a LoRA trained on Emerald's own trainer pics can be
+tried without rewriting the tool. No custom training is planned until this model is evaluated.
 
-## Mass generation
+## 7. Licensing
 
-`status` lists every front pic the wiki names (`../../wiki/mapping/art_subjects.csv`) with its
-brief and state (`todo`, `spec`, `built`, `keep`). A worker takes one `todo` row: brief ->
-pick a base by silhouette (contact sheet, STYLE-GUIDE) -> `inspect` -> spec -> build until it
-reads at 1x -> `verify`. `sheet` makes the batch review sheet.
-
-## Known gaps
-
-- Pose variety is limited to the 93 vanilla bases plus what kitbashing can change; each pic
-  is visibly derived from its base.
-- Lint flags slightly too few single-pixel highlights where large drawn parts (helmets)
-  replace hand-pixelled ones.
-- `symmetry` (share of pixels equal to their mirror) is linted against vanilla's 0.06-0.33;
-  a front-on mirrored figure scores ~0.65.
-- `install` copies the PNG only; nothing else is needed for an existing pic.
+Check the LoRA's licence and commercial-use terms before shipping its output. A public model does
+not grant rights to Pokémon or Star Wars characters, names or designs.
