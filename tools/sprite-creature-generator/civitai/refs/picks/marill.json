@@ -1,10 +1,10 @@
 {
   "init": "refs/marill_prep.png",
-  "init_source": "refs/sources/marill/blooprat_swamp_rat.png",
+  "init_source": "refs/sources/marill/womprat_aote_cut.png",
   "flip": false,
   "denoise": 0.55,
-  "desc": "side view, whole body, small, centred, facing left: lean wary alien swamp rat, long pointed snout with bared buck teeth, small beady red eyes, sharp swept-back ears, ridged hide with spiny back quills, sinewy clawed legs, thin dark tail ending in a blue ball float, alien fauna",
-  "colour": "blue and cream",
-  "ref_note": "Hand-drawn lean swamp rat with float-ball tail (owner: round mouse too friendly)",
-  "negative": "cute, chibi, kawaii, big eyes, smiling, happy, cartoon mascot, plush, toy"
+  "desc": "deep blue alien water rat, alien fauna, wild, not cute: side view, whole body, facing left, long snout with fangs, big bat ears, shaggy blue bristling back fur, sinewy clawed legs, long tail ending in a round blue float bulb",
+  "colour": "deep blue fur all over, pale blue skin, cream whiskers, no brown",
+  "ref_note": "Real womp rat art (WompRat-AotE painting) hand-cut from the canyon onto white (womprat_aote_cut.png), faces left; blue from colour/prompt",
+  "negative": "cute, chibi, kawaii, big eyes, smiling, cartoon mascot, plush, brown, tan"
 }
