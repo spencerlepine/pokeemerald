@@ -53,17 +53,20 @@ CAST = [
 ]
 
 
-def creature(species, idx=0):
-    """Creature takes: image-to-image from the wiki front pic at denoise 0.6 (new pose), finished to a 64-cell
-    (big natives are shrunk by the finisher's drop-lines fit) so a beast does not stand as tall as a person."""
-    dirs = sorted(glob.glob(os.path.join(CR_RUNS, species, "finished", "title_*")))
-    return os.path.join(dirs[idx], "front.png") if dirs else None
+def creature(species, idx=0, run="title2_"):
+    """Creature takes: image-to-image from the wiki front pic shrunk to ~38 px (creature_init.py) at denoise 0.6, so the
+    beast comes back compact (35-40 px) and in a new pose; the first round at 64 px stood as tall as the people."""
+    dirs = sorted(glob.glob(os.path.join(CR_RUNS, species, "finished", run + "*")))
+    return os.path.join(dirs[idx], "front_native.png") if dirs else None
 
 
 CREATURES = [
-    dict(name="sunchick", src=creature("torchic", 0), x=74, y=170, z=5, side="L", flip=True),
-    dict(name="katarnkit", src=creature("treecko", 0), x=120, y=176, z=5, side="L", flip=True),
-    dict(name="fyrnalpha", src=creature("houndoom", 1), x=150, y=176, z=5, side="R"),
+    dict(name="lothwolf", src=creature("absol", 1), x=22, y=168, z=5, side="L", flip=True),
+    dict(name="sunchick", src=creature("torchic", 0), x=64, y=166, z=5, side="L", flip=True),
+    dict(name="katarnkit", src=creature("treecko", 0), x=98, y=170, z=5, side="L", flip=True),
+    dict(name="marshlet", src=creature("mudkip", 0), x=120, y=172, z=5, side="L", flip=True),
+    dict(name="massiff", src=creature("poochyena", 1), x=152, y=172, z=5, side="R"),
+    dict(name="fyrnalpha", src=creature("houndoom", 1), x=192, y=168, z=5, side="R"),
 ]
 
 
