@@ -1,0 +1,468 @@
+name: unused_woman
+description: Tatooine villager woman in a desert head wrap and homespun robe (replaces the unused woman sheet).
+kit: person16x32
+replaces: graphics/object_events/pics/people/unused_woman.png
+graphics_info: ''
+notes: 'Group 4, B style: the unused woman''s own body as regions (ponytail and shawl -> the wrap''s tail S, dress -> brown homespun robe R to the ankles, white trims -> red sash Y), new head: an ochre
+  desert wrap framing the face with a wisp of brown hair; the sheet has no graphics_info, drawn for OBJ_EVENT_PAL_TAG_NPC_2.'
+palette: npc_2
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_2
+shade: true
+materials:
+  S: a@
+  D: a
+  H: c
+  R: c
+  Y: b
+legend:
+  k: 15
+  f: 7
+accept:
+  hair_rows: a desert head wrap, not hair
+base_sheet: graphics/object_events/pics/people/unused_woman.png
+remap:
+  c: D
+  a: R
+  w: Y
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 27
+      rows: '_____RRRRRR_____
+
+        ________________'
+    - x: 0
+      y: 23
+      rows: '__R__________R__
+
+        _R_R________R_R_
+
+        _R____________R_
+
+        __R__________R__
+
+        ___RR______RR___
+
+        ___RRRRRRRRRR___
+
+        ____R__RR__R____'
+    - x: 0
+      y: 10
+      rows: '.....SSSSSS.....
+
+        ...SSSSSSSSSS...
+
+        ..SSSSSSSSSSSS..
+
+        ..SSSSSSSSSSSS..
+
+        .DffSSSSSSSSffD.
+
+        .DDDHHssssHHDDD.
+
+        .DDHssssssssHDD.
+
+        .DDssssssssssDD.
+
+        .DDssskssksssDD.
+
+        .DDssskssksssDD.
+
+        .DDDssssssssDDD.
+
+        ..DDDssssssDDD..
+
+        .DDDDDDDDDDDDDD.'
+  down_a:
+    patches:
+    - x: 0
+      y: 28
+      rows: '_____RRRRRR_____
+
+        ________________'
+    - x: 0
+      y: 24
+      rows: '_R_R________R___
+
+        __R________RR___
+
+        __________R__R__
+
+        __________R__R__
+
+        ____R______RR___
+
+        ____RRRRRRR_____
+
+        _____R__R_______'
+    - x: 0
+      y: 11
+      rows: '.....SSSSSS.....
+
+        ...SSSSSSSSSS...
+
+        ..SSSSSSSSSSSS..
+
+        ..SSSSSSSSSSSS..
+
+        .DffSSSSSSSSffD.
+
+        .DDDHHssssHHDDD.
+
+        .DDHssssssssHDD.
+
+        .DDssssssssssDD.
+
+        .DDssskssksssDD.
+
+        .DDssskssksssDD.
+
+        .DDDssssssssDDD.
+
+        ..DDDssssssDDD..
+
+        .DDDDDDDDDDDDDD.'
+  down_b:
+    patches:
+    - x: 0
+      y: 28
+      rows: '_____RRRRRR_____
+
+        ________________'
+    - x: 0
+      y: 24
+      rows: '___R________R_R_
+
+        ___RR________R__
+
+        __R__R__________
+
+        __R__R__________
+
+        ___RR______R____
+
+        _____RRRRRRR____
+
+        _______R__R_____'
+    - x: 0
+      y: 11
+      rows: '.....SSSSSS.....
+
+        ...SSSSSSSSSS...
+
+        ..SSSSSSSSSSSS..
+
+        ..SSSSSSSSSSSS..
+
+        .DffSSSSSSSSffD.
+
+        .DDDHHssssHHDDD.
+
+        .DDHssssssssHDD.
+
+        .DDssssssssssDD.
+
+        .DDssskssksssDD.
+
+        .DDssskssksssDD.
+
+        .DDDssssssssDDD.
+
+        ..DDDssssssDDD..
+
+        .DDDDDDDDDDDDDD.'
+  up:
+    patches:
+    - x: 0
+      y: 27
+      rows: '_____RRRRRR_____
+
+        ________________'
+    - x: 0
+      y: 23
+      rows: '___R________R___
+
+        __R__________R__
+
+        _R____________R_
+
+        __R__________R__
+
+        ___RR______RR___
+
+        ___RRRRRRRRRR___
+
+        ____R__RR__R____'
+    - x: 0
+      y: 10
+      rows: '.....SSSSSS.....
+
+        ...SSSSSSSSSS...
+
+        ..SSSSSSSSSSSS..
+
+        ..SSSSSSSSSSSS..
+
+        .DffSSSSSSSSffD.
+
+        .DDDfSSSSSSfDDD.
+
+        .DDDDfSSSSfDDDD.
+
+        .DDDDDfSSfDDDDD.
+
+        .DDDDDDDDDDDDDD.
+
+        .DDDDDDDDDDDDDD.
+
+        .DDDDDDDDDDDDDD.
+
+        ..DDDDDDDDDDDD..
+
+        .DDDDDDDDDDDDDD.'
+  up_a:
+    patches:
+    - x: 0
+      y: 28
+      rows: '_____RRRRRR_____
+
+        ________________'
+    - x: 0
+      y: 24
+      rows: '___R________R___
+
+        __R_________RR__
+
+        ___________R_R__
+
+        ___________R_R__
+
+        ____R______RR___
+
+        ____RRRRRRR_____
+
+        _____R__R_______'
+    - x: 0
+      y: 11
+      rows: '.....SSSSSS.....
+
+        ...SSSSSSSSSS...
+
+        ..SSSSSSSSSSSS..
+
+        ..SSSSSSSSSSSS..
+
+        .DffSSSSSSSSffD.
+
+        .DDDfSSSSSSfDDD.
+
+        .DDDDfSSSSfDDDD.
+
+        .DDDDDfSSfDDDDD.
+
+        .DDDDDDDDDDDDDD.
+
+        .DDDDDDDDDDDDDD.
+
+        .DDDDDDDDDDDDDD.
+
+        ..DDDDDDDDDDDD..
+
+        .DDDDDDDDDDDDDD.'
+  up_b:
+    patches:
+    - x: 0
+      y: 28
+      rows: '_____RRRRRR_____
+
+        ________________'
+    - x: 0
+      y: 24
+      rows: '___R________R___
+
+        __RR_________R__
+
+        __R_R___________
+
+        __R_R___________
+
+        ___RR______R____
+
+        _____RRRRRRR____
+
+        _______R__R_____'
+    - x: 0
+      y: 11
+      rows: '.....SSSSSS.....
+
+        ...SSSSSSSSSS...
+
+        ..SSSSSSSSSSSS..
+
+        ..SSSSSSSSSSSS..
+
+        .DffSSSSSSSSffD.
+
+        .DDDfSSSSSSfDDD.
+
+        .DDDDfSSSSfDDDD.
+
+        .DDDDDfSSfDDDDD.
+
+        .DDDDDDDDDDDDDD.
+
+        .DDDDDDDDDDDDDD.
+
+        .DDDDDDDDDDDDDD.
+
+        ..DDDDDDDDDDDD..
+
+        .DDDDDDDDDDDDDD.'
+  left:
+    patches:
+    - x: 0
+      y: 27
+      rows: '______R__R______
+
+        ________________'
+    - x: 0
+      y: 23
+      rows: '________________
+
+        ___________RR__R
+
+        ______R__R__RRR_
+
+        ______R__R______
+
+        _______RR_R_____
+
+        ______RRRRR_____
+
+        _____R__RRR_____'
+    - x: 0
+      y: 10
+      rows: '.....SSSSSS.....
+
+        ...SSSSSSSSSS...
+
+        ..SSSSSSSSSSSS..
+
+        ..SSSSSSSSSSSS..
+
+        .SSSSSSSSSSffDD.
+
+        .SHHssSSSSfDDDD.
+
+        .SsssssSSfDDDDD.
+
+        .SssssssSDDDDDD.
+
+        .SsskssssDDDDDD.
+
+        .SsskssssDDDDDD.
+
+        ..sssssssDDDDD..
+
+        ...ssssssDDDD...
+
+        ....DDDDDDDDD...'
+  left_a:
+    patches:
+    - x: 0
+      y: 28
+      rows: '______RR__R_____
+
+        _______RR_______'
+    - x: 0
+      y: 24
+      rows: '________________
+
+        ___________RR__R
+
+        _______R__R_RRR_
+
+        ____RR_R__R_R___
+
+        ___R_R__RR_RRR__
+
+        ___R__R__RRRRR__
+
+        ____RRRR__RRR___'
+    - x: 0
+      y: 11
+      rows: '.....SSSSSS.....
+
+        ...SSSSSSSSSS...
+
+        ..SSSSSSSSSSSS..
+
+        ..SSSSSSSSSSSS..
+
+        .SSSSSSSSSSffDD.
+
+        .SHHssSSSSfDDDD.
+
+        .SsssssSSfDDDDD.
+
+        .SssssssSDDDDDD.
+
+        .SsskssssDDDDDD.
+
+        .SsskssssDDDDDD.
+
+        ..sssssssDDDDD..
+
+        ...ssssssDDDD...
+
+        ....DDDDDDDDD...'
+  left_b:
+    patches:
+    - x: 0
+      y: 28
+      rows: '__________R_____
+
+        ________RR______'
+    - x: 0
+      y: 24
+      rows: '________________
+
+        ___________RR__R
+
+        _____R__R___RRR_
+
+        ____RR__R___R___
+
+        ___RRRRR___RRR__
+
+        ___RRRRR__RR_R__
+
+        ____RRR__RR__R__'
+    - x: 0
+      y: 11
+      rows: '.....SSSSSS.....
+
+        ...SSSSSSSSSS...
+
+        ..SSSSSSSSSSSS..
+
+        ..SSSSSSSSSSSS..
+
+        .SSSSSSSSSSffDD.
+
+        .SHHssSSSSfDDDD.
+
+        .SsssssSSfDDDDD.
+
+        .SssssssSDDDDDD.
+
+        .SsskssssDDDDDD.
+
+        .SsskssssDDDDDD.
+
+        ..sssssssDDDDD..
+
+        ...ssssssDDDD...
+
+        ....DDDDDDDDD...'

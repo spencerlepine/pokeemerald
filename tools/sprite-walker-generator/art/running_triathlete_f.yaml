@@ -1,0 +1,363 @@
+name: running_triathlete_f
+description: 'Swoop racer (f) on a training run: racing goggles and a red-and-yellow racing suit (replaces the running Triathlete F).'
+kit: person16x32
+replaces: graphics/object_events/pics/people/running_triathlete_f.png
+graphics_info: RunningTriathleteF
+notes: 'Group 4, B style: the running Triathlete F''s own body and walk as regions (bare arms, midriff, shorts and legs -> red racing suit J, top -> yellow chest panel Y, shoes -> brown boots), her hair
+  kept, amber racing goggles with glints pushed up on the forehead. Stays on NPC_2.'
+palette: npc_2
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_2
+shade: true
+materials:
+  J: b
+  Y: a
+legend:
+  k: 15
+  g: 6
+  W: 14
+  q: 10
+accept: {}
+base_sheet: graphics/object_events/pics/people/running_triathlete_f.png
+remap:
+  b: Y
+  a: J
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 21
+      rows: '__JJ_JJJJJJ_JJ__
+
+        _JJJ__JJJJ__JJJ_
+
+        ___J___JJ___J___
+
+        JJJ__________JJJ
+
+        JJJJJ______JJJJJ
+
+        _JJ___JJJJ___JJ_
+
+        ________________
+
+        ___JJJJ__JJJJ___
+
+        _____JJ__JJ_____
+
+        ________________
+
+        ________________'
+    - x: 0
+      y: 28
+      rows: '________________
+
+        ___cc______cc___
+
+        ____c______c____
+
+        ________________'
+    - x: 2
+      y: 15
+      rows: qqgWqqqqgWqq
+    - x: 6
+      y: 18
+      rows: 'k__k
+
+        k__k'
+  down_a:
+    patches:
+    - x: 0
+      y: 22
+      rows: '_JJJ_JJJJJJ_JJ__
+
+        __JJ__JJJJ__JJJ_
+
+        ___J___JJ___JJJ_
+
+        ______________J_
+
+        ____J______JJJ__
+
+        ______JJJJ_JJJJ_
+
+        __________J_JJ__
+
+        _____JJJJJ______
+
+        ________________
+
+        ________________'
+    - x: 0
+      y: 29
+      rows: '________________
+
+        ____cc__________
+
+        _____c__________'
+    - x: 2
+      y: 16
+      rows: qqgWqqqqgWqq
+    - x: 6
+      y: 19
+      rows: 'k__k
+
+        k__k'
+  down_b:
+    patches:
+    - x: 0
+      y: 22
+      rows: '__JJ_JJJJJJ_JJJ_
+
+        _JJJ__JJJJ__JJ__
+
+        _JJJ___JJ___J___
+
+        _J______________
+
+        __JJJ______J____
+
+        _JJJJ_JJJJ______
+
+        __JJ_J__________
+
+        ______JJJJJ_____
+
+        ________________
+
+        ________________'
+    - x: 0
+      y: 29
+      rows: '________________
+
+        __________cc____
+
+        __________c_____'
+    - x: 2
+      y: 16
+      rows: qqgWqqqqgWqq
+    - x: 6
+      y: 19
+      rows: 'k__k
+
+        k__k'
+  up:
+    patches:
+    - x: 0
+      y: 21
+      rows: '__J_____________
+
+        _JJJ________JJJ_
+
+        ___J__JJJJ__J___
+
+        JJJ__________JJJ
+
+        JJJJJ______JJJJJ
+
+        _JJ___JJJJ___JJ_
+
+        ________________
+
+        ___JJJJ__JJJJ___
+
+        _____JJ__JJ_____
+
+        ________________
+
+        ________________'
+    - x: 0
+      y: 28
+      rows: '________________
+
+        ___cc______cc___
+
+        ____c______c____
+
+        ________________'
+    - x: 2
+      y: 15
+      rows: qqqqqqqqqqqq
+  up_a:
+    patches:
+    - x: 0
+      y: 22
+      rows: '_JJ__________J__
+
+        __JJ________JJJ_
+
+        ___J__JJJJ__JJJ_
+
+        ______________J_
+
+        ____J______JJJ__
+
+        ______JJJJ_JJJJ_
+
+        __________J_JJ__
+
+        _____JJJJJ______
+
+        ________________
+
+        ________________'
+    - x: 0
+      y: 29
+      rows: '________________
+
+        ____cc__________
+
+        _____c__________'
+    - x: 2
+      y: 16
+      rows: qqqqqqqqqqqq
+  up_b:
+    patches:
+    - x: 0
+      y: 22
+      rows: '__J__________J__
+
+        _JJJ________JJ__
+
+        _JJJ__JJJJ__J___
+
+        _J______________
+
+        __JJJ______J____
+
+        _JJJJ_JJJJ______
+
+        __JJ_J__________
+
+        ______JJJJJ_____
+
+        ________________
+
+        ________________'
+    - x: 0
+      y: 29
+      rows: '________________
+
+        __________cc____
+
+        __________c_____'
+    - x: 2
+      y: 16
+      rows: qqqqqqqqqqqq
+  left:
+    patches:
+    - x: 0
+      y: 21
+      rows: '____JJJJJJ______
+
+        _____JJJJ_______
+
+        _______JJJ______
+
+        _________J______
+
+        ______JJJ_JJ____
+
+        _____JJJJJ______
+
+        _______JJ_______
+
+        ______JJJJ______
+
+        ______JJ________
+
+        ________________
+
+        ________________'
+    - x: 0
+      y: 28
+      rows: '________________
+
+        ________c_______
+
+        _______c________
+
+        ________________'
+    - x: 2
+      y: 15
+      rows: gWgqqqqqqqqq
+    - x: 5
+      y: 18
+      rows: 'k
+
+        k'
+  left_a:
+    patches:
+    - x: 0
+      y: 22
+      rows: '____JJJJJJ______
+
+        _____JJJJ_______
+
+        _______JJJ______
+
+        ________________
+
+        ________JJJJ____
+
+        _______JJJJ_____
+
+        _____J__JJ_J____
+
+        ______JJ__J_____
+
+        _______J________
+
+        ________________'
+    - x: 0
+      y: 29
+      rows: '________________
+
+        _____cc_________
+
+        ________________'
+    - x: 2
+      y: 16
+      rows: gWgqqqqqqqqq
+    - x: 5
+      y: 19
+      rows: 'k
+
+        k'
+  left_b:
+    patches:
+    - x: 0
+      y: 22
+      rows: '____JJJJJJ______
+
+        _____JJJJ_______
+
+        _______JJJ______
+
+        ________JJ______
+
+        _____JJJ_JJJ____
+
+        _____JJJJ_______
+
+        ____J_JJ___J____
+
+        _____JJ___J_____
+
+        _________JJJ____
+
+        ________________'
+    - x: 0
+      y: 29
+      rows: '___________c____
+
+        ____________c___
+
+        ________________'
+    - x: 2
+      y: 16
+      rows: gWgqqqqqqqqq
+    - x: 5
+      y: 19
+      rows: 'k
+
+        k'

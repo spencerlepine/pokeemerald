@@ -1,0 +1,461 @@
+name: scott
+description: 'LANDO CALRISSIAN: moustache, a smile, blue shirt and the Bespin cape (replaces Scott).'
+kit: person16x32
+replaces: graphics/object_events/pics/people/scott.png
+graphics_info: Scott
+notes: 'Group 4, B style: Scott''s own body as regions (shirt -> blue shirt T with a white collar V, legs and shoes -> dark trousers and boots K), new head with short dark hair, a thin moustache and a white
+  smile (his sunglasses removed), and the blue Bespin cape with an olive-gold lining over his left shoulder. Stays on NPC_1.'
+palette: npc_1
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_1
+shade: true
+materials:
+  T: b
+  V: w/b
+  K: c
+  P: b!
+  Y: c
+legend:
+  k: 15
+  W: 14
+  M: 13
+  H: 13
+  h: 12
+  f: 10
+accept:
+  step_change: the cape hangs over the near arm and hides its swing; the bob, the free arm and the legs move
+base_sheet: graphics/object_events/pics/people/scott.png
+remap:
+  b: T
+  a: T
+  w: V
+  c: K
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 28
+      rows: '____KKK__KKK____
+
+        ________________
+
+        ________________
+
+        ________________'
+    - x: 0
+      y: 11
+      rows: '......HHHH......
+
+        ....HHhhhhHH....
+
+        ...HhhhhhhhhH...
+
+        ..HHhHHHhHHHhH..
+
+        ..HHHHhHHHHhHH..
+
+        ..HHssssssssHH..
+
+        .sHssssssssssHs.
+
+        .sHssskssksssHs.
+
+        ..ssssksskssss..
+
+        ...ssMMMMMMss...
+
+        ....sssWWsss....'
+    - x: 11
+      y: 22
+      rows: 'PPPP.
+
+        PPfPP
+
+        YPfPf
+
+        YPfPf
+
+        YPPfP
+
+        YfPfP
+
+        .YfPP'
+  down_a:
+    patches:
+    - x: 0
+      y: 29
+      rows: '_____KKK________
+
+        ________________
+
+        ________________'
+    - x: 0
+      y: 12
+      rows: '......HHHH......
+
+        ....HHhhhhHH....
+
+        ...HhhhhhhhhH...
+
+        ..HHhHHHhHHHhH..
+
+        ..HHHHhHHHHhHH..
+
+        ..HHssssssssHH..
+
+        .sHssssssssssHs.
+
+        .sHssskssksssHs.
+
+        ..ssssksskssss..
+
+        ...ssMMMMMMss...
+
+        ....sssWWsss....'
+    - x: 11
+      y: 23
+      rows: 'PPPP.
+
+        PPfPP
+
+        YPfPf
+
+        YPfPf
+
+        YPPfP
+
+        YfPfP
+
+        .YfPP'
+  down_b:
+    patches:
+    - x: 0
+      y: 29
+      rows: '________KKK_____
+
+        ________________
+
+        ________________'
+    - x: 0
+      y: 12
+      rows: '......HHHH......
+
+        ....HHhhhhHH....
+
+        ...HhhhhhhhhH...
+
+        ..HHhHHHhHHHhH..
+
+        ..HHHHhHHHHhHH..
+
+        ..HHssssssssHH..
+
+        .sHssssssssssHs.
+
+        .sHssskssksssHs.
+
+        ..ssssksskssss..
+
+        ...ssMMMMMMss...
+
+        ....sssWWsss....'
+    - x: 11
+      y: 23
+      rows: 'PPPP.
+
+        PPfPP
+
+        YPfPf
+
+        YPfPf
+
+        YPPfP
+
+        YfPfP
+
+        .YfPP'
+  up:
+    patches:
+    - x: 0
+      y: 28
+      rows: '_____KK__KK_____
+
+        ________________
+
+        ________________
+
+        ________________'
+    - x: 0
+      y: 11
+      rows: '......HHHH......
+
+        ....HHhhhhHH....
+
+        ...HhhhhhhhhH...
+
+        ..HHhHHHhHHHhH..
+
+        ..HHHHhHHHHhHH..
+
+        ..HhHHHHhHHHHH..
+
+        .sHHHHHHHHHhHHs.
+
+        .sHHHHHHHHHHHHs.
+
+        ..sHHHHHHHHHHs..
+
+        ...ssssssssss...
+
+        ....ssssssss....'
+    - x: 0
+      y: 22
+      rows: '.PPPP
+
+        PPfPP
+
+        fPfPP
+
+        fPfPf
+
+        PfPfP
+
+        PfPPf
+
+        PPfY.'
+  up_a:
+    patches:
+    - x: 0
+      y: 29
+      rows: '_____KKK________
+
+        ________________
+
+        ________________'
+    - x: 0
+      y: 12
+      rows: '......HHHH......
+
+        ....HHhhhhHH....
+
+        ...HhhhhhhhhH...
+
+        ..HHhHHHhHHHhH..
+
+        ..HHHHhHHHHhHH..
+
+        ..HhHHHHhHHHHH..
+
+        .sHHHHHHHHHhHHs.
+
+        .sHHHHHHHHHHHHs.
+
+        ..sHHHHHHHHHHs..
+
+        ...ssssssssss...
+
+        ....ssssssss....'
+    - x: 0
+      y: 23
+      rows: '.PPPP
+
+        PPfPP
+
+        fPfPP
+
+        fPfPf
+
+        PfPfP
+
+        PfPPf
+
+        PPfY.'
+  up_b:
+    patches:
+    - x: 0
+      y: 29
+      rows: '________KKK_____
+
+        ________________
+
+        ________________'
+    - x: 0
+      y: 12
+      rows: '......HHHH......
+
+        ....HHhhhhHH....
+
+        ...HhhhhhhhhH...
+
+        ..HHhHHHhHHHhH..
+
+        ..HHHHhHHHHhHH..
+
+        ..HhHHHHhHHHHH..
+
+        .sHHHHHHHHHhHHs.
+
+        .sHHHHHHHHHHHHs.
+
+        ..sHHHHHHHHHHs..
+
+        ...ssssssssss...
+
+        ....ssssssss....'
+    - x: 0
+      y: 23
+      rows: '.PPPP
+
+        PPfPP
+
+        fPfPP
+
+        fPfPf
+
+        PfPfP
+
+        PfPPf
+
+        PPfY.'
+  left:
+    patches:
+    - x: 0
+      y: 28
+      rows: '______KKKK______
+
+        ________________
+
+        ________________
+
+        ________________'
+    - x: 0
+      y: 11
+      rows: '.....HHHHHH.....
+
+        ....HHhhhhHH....
+
+        ...HhhhhhhhhH...
+
+        ..HHHhHHHhHHHH..
+
+        ..HHHHHhHHHhHH..
+
+        ..sssHHHHHHHHH..
+
+        ..sssssHHHHHHH..
+
+        ..ssksssssHHHH..
+
+        ..ssksssssHHH...
+
+        ..MMMssssssH....
+
+        ...Wssssss......'
+    - x: 3
+      y: 22
+      rows: '_PPPPPPP
+
+        YPPfPPfP
+
+        YPPfPPfP
+
+        YPfPPfPP
+
+        YPfPPfPP
+
+        _YfPPPfP
+
+        __YPPfP_'
+  left_a:
+    patches:
+    - x: 0
+      y: 29
+      rows: '___KKK___KKK____
+
+        _________KKK____
+
+        ________________'
+    - x: 0
+      y: 12
+      rows: '.....HHHHHH.....
+
+        ....HHhhhhHH....
+
+        ...HhhhhhhhhH...
+
+        ..HHHhHHHhHHHH..
+
+        ..HHHHHhHHHhHH..
+
+        ..sssHHHHHHHHH..
+
+        ..sssssHHHHHHH..
+
+        ..ssksssssHHHH..
+
+        ..ssksssssHHH...
+
+        ..MMMssssssH....
+
+        ...Wssssss......'
+    - x: 3
+      y: 23
+      rows: '_PPPPPPP
+
+        YPPfPPfP
+
+        YPPfPPfP
+
+        YPfPPfPP
+
+        YPfPPfPP
+
+        _YfPPPfP
+
+        __YPPfP_'
+  left_b:
+    patches:
+    - x: 0
+      y: 29
+      rows: '___KKKK__KK_____
+
+        ________________
+
+        ________________'
+    - x: 0
+      y: 12
+      rows: '.....HHHHHH.....
+
+        ....HHhhhhHH....
+
+        ...HhhhhhhhhH...
+
+        ..HHHhHHHhHHHH..
+
+        ..HHHHHhHHHhHH..
+
+        ..sssHHHHHHHHH..
+
+        ..sssssHHHHHHH..
+
+        ..ssksssssHHHH..
+
+        ..ssksssssHHH...
+
+        ..MMMssssssH....
+
+        ...Wssssss......'
+    - x: 3
+      y: 23
+      rows: '_PPPPPPP
+
+        YPPfPPfP
+
+        YPPfPPfP
+
+        YPfPPfPP
+
+        YPfPPfPP
+
+        _YfPPPfP
+
+        __YPPfP_'

@@ -1,0 +1,199 @@
+name: mystery_event_deliveryman
+description: Courier droid handler with a comlink headset and a parcel crate (replaces the Mystery Event deliveryman).
+kit: person16x32_still
+replaces: graphics/object_events/pics/people/mystery_event_deliveryman.png
+graphics_info: MysteryEventDeliveryman
+notes: 'Group 4, B style: stand-only, the deliveryman''s own cap and blue uniform as regions with a rose courier insignia on the cap, a black comlink headset with a mic, and a white parcel crate with an
+  olive tape band and a rose shipping label held in both hands. Stays on NPC_1.'
+palette: npc_1
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_1
+shade: true
+materials:
+  J: b
+  B: c
+  X: w/c
+  Y: c
+legend:
+  k: 15
+  W: 6
+  I: 5
+accept: {}
+base_sheet: graphics/object_events/pics/people/mystery_event_deliveryman.png
+remap:
+  b: J
+  c: B
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 14
+      rows: '_______II_______
+
+        _______II_______'
+    - x: 0
+      y: 11
+      rows: '________________
+
+        ___J________J___
+
+        ___J________J___
+
+        __J__________J__
+
+        _J____________J_
+
+        _JJ__________JJ_
+
+        __JJJ______JJJ__'
+    - x: 0
+      y: 21
+      rows: '________________
+
+        ________________
+
+        __J__________J__
+
+        __J__________J__
+
+        ___J________J___
+
+        ___JJ______JJ___
+
+        ___J___JJ___J___
+
+        ___J________J___'
+    - x: 0
+      y: 19
+      rows: ______k__k______
+    - x: 0
+      y: 14
+      rows: '______IW________
+
+        _______W________
+
+        ________________
+
+        ________________
+
+        _k______________
+
+        _kk_____________
+
+        __kkk___________'
+    - x: 0
+      y: 23
+      rows: '...XXXXXXXXXX...
+
+        ..sXXXXYYXXXXs..
+
+        ..sXWWXYYXXXXs..
+
+        ...XXXXYYXXXX...'
+  up:
+    patches:
+    - x: 0
+      y: 14
+      rows: '________________
+
+        ________________'
+    - x: 0
+      y: 11
+      rows: '________________
+
+        ___J________J___
+
+        ___J________J___
+
+        __J__________J__
+
+        _J____________J_
+
+        _JJ__________JJ_
+
+        __JJJJJJJJJJJJ__'
+    - x: 0
+      y: 21
+      rows: '____J______J____
+
+        _____JJJJJJ_____
+
+        __J__________J__
+
+        __J__________J__
+
+        ___J________J___
+
+        ___JJ______JJ___
+
+        ___J________J___
+
+        ___J________J___'
+    - x: 0
+      y: 19
+      rows: ________________
+  left:
+    patches:
+    - x: 0
+      y: 14
+      rows: '___I____________
+
+        ___I____________'
+    - x: 0
+      y: 11
+      rows: '________________
+
+        ___J________J___
+
+        ___J________J___
+
+        _____________J__
+
+        ______________J_
+
+        _____________JJ_
+
+        ____JJJJJJJJJJ__'
+    - x: 0
+      y: 21
+      rows: '__________JJ____
+
+        __________J_____
+
+        ____JJ___J______
+
+        _________J______
+
+        ________J_______
+
+        ______JJJJJJ____
+
+        _____J_____J____
+
+        ______J___J_____'
+    - x: 0
+      y: 19
+      rows: ________________
+    - x: 0
+      y: 14
+      rows: '_______________.
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________k_______
+
+        _______kk_______
+
+        ____kkk_________'
+    - x: 0
+      y: 22
+      rows: '.XXXXXX_________
+
+        .XXYYXXs________
+
+        .XXYYXXs________
+
+        .XWWXXX_________'

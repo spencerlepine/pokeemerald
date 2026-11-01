@@ -1,0 +1,323 @@
+name: aqua_member_m
+description: 'Cartel thug (m): Gamorrean-style brute in leathers (replaces the Aqua grunt m).'
+kit: person16x32
+replaces: graphics/object_events/pics/people/team_aqua/aqua_member_m.png
+graphics_info: AquaMemberM
+notes: 'Group 4, B style: the Aqua grunt''s own body as regions (arms -> green hide Z, shirt -> brown leather jerkin L with grey studs T, trousers -> grey armoured kilt K, black gauntlets kept), new Gamorrean
+  head: huge round green head, pink pig snout, small eyes, white tusks, iron cap with horns; moves to OBJ_EVENT_PAL_TAG_NPC_3 (install sets paletteTag/paletteSlot).'
+palette: npc_3
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_3
+shade: true
+materials:
+  G: b@
+  N: s
+  A: a
+  Z: b
+  L: c
+  T: a
+  K: a
+legend:
+  k: 15
+  W: 14
+  h: 14
+  '8': 8
+accept:
+  hair_rows: 'no hair: an iron cap over a bald green head'
+  head_w: '16 wide: a Gamorrean head is huge'
+  eye_row: small eyes set high under the iron cap, above the snout
+  step_change: the huge head is one smooth volume, so the 1 px bob changes few of its pixels; the body, arms and legs step as vanilla
+base_sheet: graphics/object_events/pics/people/team_aqua/aqua_member_m.png
+remap:
+  s: Z
+  c: L
+  w: T
+  a: K
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 10
+      rows: '.....AAAAAA.....
+
+        .hh.AAAAAAAA.hh.
+
+        ..hAAAAAAAAAAh..
+
+        ..GGGGGGGGGGGG..
+
+        .GGGGkGGGGkG8GG.
+
+        .GG8GkGGGGkGGGG.
+
+        .GGGGGGGGGGGGGG.
+
+        .GGGGGGGGGGGGGG.
+
+        GGGGGNNNNNNGGGGG
+
+        GGGGNNkNNkNNG8GG
+
+        .GGGNNNNNNNNGGG.
+
+        .GGWGGGGGGGGWGG.
+
+        ...GGGGGGGGGG...'
+    - x: 5
+      y: 24
+      rows: W____W
+  down_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '.....AAAAAA.....
+
+        .hh.AAAAAAAA.hh.
+
+        ..hAAAAAAAAAAh..
+
+        ..GGGGGGGGGGGG..
+
+        .GGGGkGGGGkG8GG.
+
+        .GG8GkGGGGkGGGG.
+
+        .GGGGGGGGGGGGGG.
+
+        .GGGGGGGGGGGGGG.
+
+        GGGGGNNNNNNGGGGG
+
+        GGGGNNkNNkNNG8GG
+
+        .GGGNNNNNNNNGGG.
+
+        .GGWGGGGGGGGWGG.
+
+        ...GGGGGGGGGG...'
+    - x: 5
+      y: 25
+      rows: W____W
+  down_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '.....AAAAAA.....
+
+        .hh.AAAAAAAA.hh.
+
+        ..hAAAAAAAAAAh..
+
+        ..GGGGGGGGGGGG..
+
+        .GGGGkGGGGkG8GG.
+
+        .GG8GkGGGGkGGGG.
+
+        .GGGGGGGGGGGGGG.
+
+        .GGGGGGGGGGGGGG.
+
+        GGGGGNNNNNNGGGGG
+
+        GGGGNNkNNkNNG8GG
+
+        .GGGNNNNNNNNGGG.
+
+        .GGWGGGGGGGGWGG.
+
+        ...GGGGGGGGGG...'
+    - x: 5
+      y: 25
+      rows: W____W
+  up:
+    patches:
+    - x: 0
+      y: 10
+      rows: '.....AAAAAA.....
+
+        .hh.AAAAAAAA.hh.
+
+        ..hAAAAAAAAAAh..
+
+        ..GGGGGGGGGGGG..
+
+        .GGGGGGGG8GGGGG.
+
+        .GG8GGGGGGGGGGG.
+
+        .GGGGGGGGGGGGGG.
+
+        .GGGGGGGGGGG8GG.
+
+        GGGGGGGGGGGGGGGG
+
+        GGGGG8GGGGGGGGGG
+
+        .GGGGGGGGGGGGGG.
+
+        ..GGGGGGGGGGGG..
+
+        ...GGGGGGGGGG...'
+    - x: 5
+      y: 25
+      rows: W____W
+  up_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '.....AAAAAA.....
+
+        .hh.AAAAAAAA.hh.
+
+        ..hAAAAAAAAAAh..
+
+        ..GGGGGGGGGGGG..
+
+        .GGGGGGGG8GGGGG.
+
+        .GG8GGGGGGGGGGG.
+
+        .GGGGGGGGGGGGGG.
+
+        .GGGGGGGGGGG8GG.
+
+        GGGGGGGGGGGGGGGG
+
+        GGGGG8GGGGGGGGGG
+
+        .GGGGGGGGGGGGGG.
+
+        ..GGGGGGGGGGGG..
+
+        ...GGGGGGGGGG...'
+    - x: 5
+      y: 26
+      rows: W____W
+  up_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '.....AAAAAA.....
+
+        .hh.AAAAAAAA.hh.
+
+        ..hAAAAAAAAAAh..
+
+        ..GGGGGGGGGGGG..
+
+        .GGGGGGGG8GGGGG.
+
+        .GG8GGGGGGGGGGG.
+
+        .GGGGGGGGGGGGGG.
+
+        .GGGGGGGGGGG8GG.
+
+        GGGGGGGGGGGGGGGG
+
+        GGGGG8GGGGGGGGGG
+
+        .GGGGGGGGGGGGGG.
+
+        ..GGGGGGGGGGGG..
+
+        ...GGGGGGGGGG...'
+    - x: 5
+      y: 26
+      rows: W____W
+  left:
+    patches:
+    - x: 0
+      y: 10
+      rows: '......AAAAA.....
+
+        ....AAAAAAAAhh..
+
+        ...AAAAAAAAAAh..
+
+        ..GGGGGGGGGGGG..
+
+        .GGkGGGGGG8GGGG.
+
+        .GGkGGGGGGGGGGG.
+
+        .GGGGGGGGGGGGGG.
+
+        .GGGGGGGGGGG8GG.
+
+        NNNGGGGGGGGGGGG.
+
+        NkNNGGGGGGGGGG..
+
+        NNNNGGGGG8GGGG..
+
+        .WGGGGGGGGGGG...
+
+        ..GGGGGGGGGG....'
+    - x: 7
+      y: 26
+      rows: W
+  left_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......AAAAA.....
+
+        ....AAAAAAAAhh..
+
+        ...AAAAAAAAAAh..
+
+        ..GGGGGGGGGGGG..
+
+        .GGkGGGGGG8GGGG.
+
+        .GGkGGGGGGGGGGG.
+
+        .GGGGGGGGGGGGGG.
+
+        .GGGGGGGGGGG8GG.
+
+        NNNGGGGGGGGGGGG.
+
+        NkNNGGGGGGGGGG..
+
+        NNNNGGGGG8GGGG..
+
+        .WGGGGGGGGGGG...
+
+        ..GGGGGGGGGG....'
+    - x: 7
+      y: 27
+      rows: W
+  left_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......AAAAA.....
+
+        ....AAAAAAAAhh..
+
+        ...AAAAAAAAAAh..
+
+        ..GGGGGGGGGGGG..
+
+        .GGkGGGGGG8GGGG.
+
+        .GGkGGGGGGGGGGG.
+
+        .GGGGGGGGGGGGGG.
+
+        .GGGGGGGGGGG8GG.
+
+        NNNGGGGGGGGGGGG.
+
+        NkNNGGGGGGGGGG..
+
+        NNNNGGGGG8GGGG..
+
+        .WGGGGGGGGGGG...
+
+        ..GGGGGGGGGG....'
+    - x: 7
+      y: 27
+      rows: W

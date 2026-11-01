@@ -1,0 +1,377 @@
+name: camper
+description: Moisture-farm hand in overalls and a wide hat (replaces Camper).
+kit: person16x32
+replaces: graphics/object_events/pics/people/camper.png
+graphics_info: Camper
+notes: 'Group 4, B style: Camper''s own body as regions (shirt -> green work shirt G, shoes -> boots B), wide tan hat (crown H, band h, brim R), grey-blue overalls O with straps and a wrench in the bib,
+  trousers over the bare legs. Stays on NPC_3.'
+palette: npc_3
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_3
+shade: true
+materials:
+  H: c@
+  h: c
+  R: c
+  G: b
+  B: c
+  O: a
+  L: c
+legend:
+  k: 15
+accept:
+  hair_rows: a wide hat brim, no hair
+base_sheet: graphics/object_events/pics/people/camper.png
+remap:
+  b: G
+  c: B
+  a: G
+  w: G
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 27
+      rows: '___OOOOOOOOOO___
+
+        ____OOOOOOOO____
+
+        _____OO__OO_____
+
+        ________________
+
+        ________________'
+    - &id001
+      x: 0
+      y: 10
+      rows: '.....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ...hhhhhhhhhh...
+
+        .RRRRRRRRRRRRRR.
+
+        RRRRRRRRRRRRRRRR
+
+        .RRRRRRRRRRRRRR.'
+    - x: 4
+      y: 22
+      rows: 'O______O
+
+        OOOOOOOO
+
+        _OOOOOO_
+
+        _OOLLOO_
+
+        _OOOOOO_'
+  down_a:
+    patches:
+    - x: 0
+      y: 28
+      rows: '___OOOOOOOOOO___
+
+        _____OOOO_______
+
+        ______OO________
+
+        ________________'
+    - x: 0
+      y: 11
+      rows: '.....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ...hhhhhhhhhh...
+
+        .RRRRRRRRRRRRRR.
+
+        RRRRRRRRRRRRRRRR
+
+        .RRRRRRRRRRRRRR.'
+    - x: 4
+      y: 23
+      rows: 'O______O
+
+        OOOOOOOO
+
+        _OOOOOO_
+
+        _OOLLOO_
+
+        _OOOOOO_'
+  down_b:
+    patches:
+    - x: 0
+      y: 28
+      rows: '___OOOOOOOOOO___
+
+        _______OOOO_____
+
+        ________OO______
+
+        ________________'
+    - x: 0
+      y: 11
+      rows: '.....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ...hhhhhhhhhh...
+
+        .RRRRRRRRRRRRRR.
+
+        RRRRRRRRRRRRRRRR
+
+        .RRRRRRRRRRRRRR.'
+    - x: 4
+      y: 23
+      rows: 'O______O
+
+        OOOOOOOO
+
+        _OOOOOO_
+
+        _OOLLOO_
+
+        _OOOOOO_'
+  up:
+    patches:
+    - x: 0
+      y: 27
+      rows: '___OOOOOOOOOO___
+
+        ____OOOOOOOO____
+
+        _____OO__OO_____
+
+        ________________
+
+        ________________'
+    - *id001
+    - x: 4
+      y: 22
+      rows: '_O____O_
+
+        __O__O__
+
+        ___OO___
+
+        __OOOO__
+
+        _OOOOOO_'
+  up_a:
+    patches:
+    - x: 0
+      y: 28
+      rows: '___OOOOOOOOOO___
+
+        _____OOOOO______
+
+        ______OO________
+
+        ________________'
+    - x: 0
+      y: 11
+      rows: '.....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ...hhhhhhhhhh...
+
+        .RRRRRRRRRRRRRR.
+
+        RRRRRRRRRRRRRRRR
+
+        .RRRRRRRRRRRRRR.'
+    - x: 4
+      y: 23
+      rows: '_O____O_
+
+        __O__O__
+
+        ___OO___
+
+        __OOOO__
+
+        _OOOOOO_'
+  up_b:
+    patches:
+    - x: 0
+      y: 28
+      rows: '___OOOOOOOOOO___
+
+        ______OOOOO_____
+
+        ________OO______
+
+        ________________'
+    - x: 0
+      y: 11
+      rows: '.....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ...hhhhhhhhhh...
+
+        .RRRRRRRRRRRRRR.
+
+        RRRRRRRRRRRRRRRR
+
+        .RRRRRRRRRRRRRR.'
+    - x: 4
+      y: 23
+      rows: '_O____O_
+
+        __O__O__
+
+        ___OO___
+
+        __OOOO__
+
+        _OOOOOO_'
+  left:
+    patches:
+    - x: 0
+      y: 27
+      rows: '_____OOOOO______
+
+        ______OOOOO_____
+
+        _____OO_________
+
+        ________________
+
+        ________________'
+    - x: 0
+      y: 10
+      rows: '.....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ...hhhhhhhhhh...
+
+        RRRRRRRRRRRRRR..
+
+        RRRRRRRRRRRRRRR.
+
+        .RRRRRRRRRRRRR..'
+    - x: 4
+      y: 22
+      rows: '_____O__
+
+        OO___O__
+
+        OO______
+
+        OO______
+
+        _OO__OO_
+
+        _OOOOO__'
+  left_a:
+    patches:
+    - x: 0
+      y: 28
+      rows: '___O_OOOOOOOO___
+
+        _______OOOOO____
+
+        _________OOO____
+
+        ________________'
+    - x: 0
+      y: 11
+      rows: '.....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ...hhhhhhhhhh...
+
+        RRRRRRRRRRRRRR..
+
+        RRRRRRRRRRRRRRR.
+
+        .RRRRRRRRRRRRR..'
+    - x: 4
+      y: 23
+      rows: '_____O__
+
+        OO___O__
+
+        OO______
+
+        OO______
+
+        _OO__OO_
+
+        _OOOOO__'
+  left_b:
+    patches:
+    - x: 0
+      y: 28
+      rows: '___OOOOOOOOOO___
+
+        ___O_OOOOOOO____
+
+        ________________
+
+        ________________'
+    - x: 0
+      y: 11
+      rows: '.....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ...hhhhhhhhhh...
+
+        RRRRRRRRRRRRRR..
+
+        RRRRRRRRRRRRRRR.
+
+        .RRRRRRRRRRRRR..'
+    - x: 4
+      y: 23
+      rows: '_____O__
+
+        OO___O__
+
+        OO______
+
+        OO______
+
+        _OO__OO_
+
+        _OOOOO__'

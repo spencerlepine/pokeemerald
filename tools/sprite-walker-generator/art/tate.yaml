@@ -1,0 +1,157 @@
+name: tate
+description: 'KANAN JARRUS: bearded Jedi with a ponytail and a green pauldron (replaces Tate).'
+kit: person16x32_still
+replaces: graphics/object_events/pics/people/gym_leaders/tate.png
+graphics_info: Tate
+notes: 'Group 4, B style: stand-only, drawn over Tate''s sheet: swept-back brown hair with a ponytail, short beard, round green armour pauldron on the left shoulder, grey tunic, brown belt, grey trousers,
+  black boots; moves to OBJ_EVENT_PAL_TAG_NPC_3 (install sets paletteTag/paletteSlot).'
+palette: npc_3
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_3
+shade: true
+materials:
+  H: c
+  D: c
+  P: b@
+  T: a
+  A: a
+  L: c
+  K: a
+legend:
+  k: 15
+  Q: 13
+  y: 9
+  h: 11
+  W: 14
+  u: 6
+accept: {}
+base_sheet: graphics/object_events/pics/people/gym_leaders/tate.png
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......HHHH......
+
+        ....HHhHHhHH....
+
+        ...HHhHHHHhHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHssssssHHH..
+
+        ..HssssssssssH..
+
+        .sHssskssksssHs.
+
+        .sHssskssksssHs.
+
+        ..HDssssssssDH..
+
+        ...DDDssssDDD...
+
+        ....DDDDDDDD...P
+
+        ..TTTTTDDTTPWPPP
+
+        .ATTTTTTTTPPPPPP
+
+        .ATTTTTTTTTPPPPA
+
+        .ATTLLLuLLLLTTA.
+
+        .ssKKKKKKKKKKss.
+
+        ...KKKKKKKKKK...
+
+        ...KKKK..KKKK...
+
+        ...kkkk..kkkk...'
+  up:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......HHHH......
+
+        ....HHhHHhHH....
+
+        ...HHhHHHHhHH...
+
+        ..HHhHHHHHHhHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        .sHHHHHyyHHHHHs.
+
+        .sHHHHHQQHHHHHs.
+
+        ..HHHHHQQHHHHH..
+
+        ...HHHHQQHHHH...
+
+        ....sssQQsss....
+
+        PPWPPTTQTTTTT...
+
+        PPPPPPTTTTTTTTA.
+
+        APPPPTTTTTTTTTA.
+
+        .ATTLLLuLLLLTTA.
+
+        .ssKKKKKKKKKKss.
+
+        ...KKKKKKKKKK...
+
+        ...KKKK..KKKK...
+
+        ...kkkk..kkkk...'
+  left:
+    patches:
+    - x: 0
+      y: 11
+      rows: '.....HHHHH......
+
+        ...HHhHHHHHH....
+
+        ..HHHHhhHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..sHHHHHHHHHHH..
+
+        ..ssssHHHHHHyy..
+
+        .sssssHHHHHHQQ..
+
+        .ssksssssHHHQQ..
+
+        .ssksssssHHH.Q..
+
+        .DDsssssDHHH.Q..
+
+        .DDDssDDDHH.....
+
+        ..DDDDDDD.......
+
+        ...PPWPTTTTT....
+
+        ..PPPPPPTTTT....
+
+        ..PPPPPPTTTT....
+
+        ...AAAATTTTT....
+
+        ...ssLuLLLLL....
+
+        ....KKKKKKK.....
+
+        ....KKK.KKK.....
+
+        ....kkk.kkk.....'

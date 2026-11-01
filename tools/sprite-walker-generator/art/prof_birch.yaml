@@ -1,0 +1,295 @@
+name: prof_birch
+description: 'PROF. KORR: grey-haired field researcher in a dusty brown duster with a datapad (replaces Prof. Birch).'
+kit: person16x32
+replaces: graphics/object_events/pics/people/prof_birch.png
+graphics_info: ProfBirch
+notes: 'Group 4, B style: Prof. Birch''s own body as regions (messy hair turned grey H, lab coat -> dusty rust-brown field duster C, shirt -> green G, shorts and boots grey K), a black datapad with a glowing
+  green screen held at the chest. Stays on NPC_3.'
+palette: npc_3
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_3
+shade: true
+materials:
+  H: a@
+  C: c
+  G: b
+  K: a
+legend:
+  k: 15
+  W: 14
+  '8': 8
+  '9': 9
+accept: {}
+base_sheet: graphics/object_events/pics/people/prof_birch.png
+remap:
+  c: K
+  a: C
+  w: C
+  b: G
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 10
+      rows: '________________
+
+        _____HHHHHH_____
+
+        ___HHHHHHHHHH___
+
+        __HHHHHHHHHHHH__
+
+        _HHHHHHHHHHHHHH_
+
+        __HHHHHHHHHHHH__
+
+        _HHHHH____HHHHH_
+
+        HH_H________H_HH
+
+        ___H________H___
+
+        ________________
+
+        ___H________H___'
+    - x: 6
+      y: 24
+      rows: 'kkkk
+
+        k89k
+
+        kkkW'
+  down_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '________________
+
+        _____HHHHHH_____
+
+        ___HHHHHHHHHH___
+
+        __HHHHHHHHHHHH__
+
+        _HHHHHHHHHHHHHH_
+
+        __HHHHHHHHHHHH__
+
+        _HHHHH____HHHHH_
+
+        HH_H________H_HH
+
+        ___H________H___
+
+        ________________
+
+        ___H________H___'
+    - x: 6
+      y: 25
+      rows: 'kkkk
+
+        k89k
+
+        kkkW'
+  down_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '________________
+
+        _____HHHHHH_____
+
+        ___HHHHHHHHHH___
+
+        __HHHHHHHHHHHH__
+
+        _HHHHHHHHHHHHHH_
+
+        __HHHHHHHHHHHH__
+
+        _HHHHH____HHHHH_
+
+        HH_H________H_HH
+
+        ___H________H___
+
+        ________________
+
+        ___H________H___'
+    - x: 6
+      y: 25
+      rows: 'kkkk
+
+        k89k
+
+        kkkW'
+  up:
+    patches:
+    - x: 0
+      y: 10
+      rows: '________________
+
+        _____HHHHHH_____
+
+        ___HHHHHHHHHH___
+
+        __HHHHHHHHHHHH__
+
+        _HHHHHHHHHHHHHH_
+
+        __HHHHHHHHHHHH__
+
+        _HHHHHHHHHHHHHH_
+
+        HHHHHHHHHHHHHHHH
+
+        _HHHHHHHHHHHHHH_
+
+        ___HHHHHHHHHH___
+
+        ____HHHHHHHH____'
+  up_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '________________
+
+        _____HHHHHH_____
+
+        ___HHHHHHHHHH___
+
+        __HHHHHHHHHHHH__
+
+        _HHHHHHHHHHHHHH_
+
+        __HHHHHHHHHHHH__
+
+        _HHHHHHHHHHHHHH_
+
+        HHHHHHHHHHHHHHHH
+
+        __HHHHHHHHHHHH__
+
+        ___HHHHHHHHHH___
+
+        ____HHHHHHHH____'
+  up_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '________________
+
+        _____HHHHHH_____
+
+        ___HHHHHHHHHH___
+
+        __HHHHHHHHHHHH__
+
+        _HHHHHHHHHHHHHH_
+
+        __HHHHHHHHHHHH__
+
+        _HHHHHHHHHHHHHH_
+
+        HHHHHHHHHHHHHHHH
+
+        __HHHHHHHHHHHH__
+
+        ___HHHHHHHHHH___
+
+        ____HHHHHHHH____'
+  left:
+    patches:
+    - x: 0
+      y: 10
+      rows: '________________
+
+        _____HHHHHH_____
+
+        ____HHHHHHHHH___
+
+        ___HHHHHHHHHHH__
+
+        __HHHHHHHHHHHHH_
+
+        __HHHHHHHHHHHH__
+
+        __H___HHHHHHHHH_
+
+        ________HHHHHHHH
+
+        ________HHHHHH__
+
+        ________H___H___
+
+        ________H_______'
+    - x: 3
+      y: 24
+      rows: 'kkkk
+
+        k89k
+
+        kkkk'
+  left_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '________________
+
+        _____HHHHHH_____
+
+        ____HHHHHHHHH___
+
+        ___HHHHHHHHHHH__
+
+        __HHHHHHHHHHHHH_
+
+        __HHHHHHHHHHHH__
+
+        __H___HHHHHHHHH_
+
+        ________HHHHHHHH
+
+        ________HHHHHH__
+
+        ________H___H___
+
+        ________H_______'
+    - x: 3
+      y: 25
+      rows: 'kkkk
+
+        k89k
+
+        kkkk'
+  left_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '________________
+
+        _____HHHHHH_____
+
+        ____HHHHHHHHH___
+
+        ___HHHHHHHHHHH__
+
+        __HHHHHHHHHHHHH_
+
+        __HHHHHHHHHHHH__
+
+        __H___HHHHHHHHH_
+
+        ________HHHHHHHH
+
+        ________HHHHHH__
+
+        ________H___H___
+
+        ________H_______'
+    - x: 3
+      y: 25
+      rows: 'kkkk
+
+        k89k
+
+        kkkk'

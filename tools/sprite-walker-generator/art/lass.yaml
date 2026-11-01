@@ -1,0 +1,555 @@
+name: lass
+description: Young woman in a Naboo gown with an updo and headband (replaces Lass).
+kit: person16x32
+replaces: graphics/object_events/pics/people/lass.png
+graphics_info: Lass
+notes: 'Group 4, B style: Lass''s own body as regions (skirt -> floor-length magenta gown G over the legs, bare arms -> long sleeves S, top -> silver N and white V bodice), new head: navy updo with a pearl-set
+  silver headband. Stays on NPC_4.'
+palette: npc_4
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_4
+shade: true
+materials:
+  H: a
+  C: c
+  G: b!
+  S: b
+  N: c
+  V: w/c
+legend:
+  k: 15
+  W: 14
+accept: {}
+base_sheet: graphics/object_events/pics/people/lass.png
+remap:
+  a: G
+  c: N
+  w: V
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 23
+      rows: '___S________S___
+
+        _SSS________SSS_
+
+        SSS__________SSS'
+    - x: 0
+      y: 27
+      rows: '___GGGG__GGGG___
+
+        ____GGGGGGGG____
+
+        _____GG__GG_____
+
+        ________________
+
+        ________________'
+    - x: 0
+      y: 22
+      rows: '________________
+
+        ________________
+
+        ________________
+
+        ________________'
+    - x: 0
+      y: 10
+      rows: '.....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ...CCWCCCCWCC...
+
+        ..HHHHHHHHHHHH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHssssHHHHH.
+
+        .HHHssssssssHHH.
+
+        ..HssssssssssH..
+
+        ..HssskssksssH..
+
+        ..HssskssksssH..
+
+        ..HssssssssssH..
+
+        ...ssssssssss...
+
+        ...__________...
+
+        ...__________...
+
+        ...__________...'
+  down_a:
+    patches:
+    - x: 0
+      y: 24
+      rows: '_SSS________SS__
+
+        __S_________SSS_
+
+        ____________SSS_'
+    - x: 0
+      y: 28
+      rows: '____GGGG_GGG_GG_
+
+        _____GGGG_______
+
+        ______GG________
+
+        ________________'
+    - x: 0
+      y: 23
+      rows: '________________
+
+        ________________
+
+        ________________
+
+        ________________'
+    - x: 0
+      y: 11
+      rows: '.....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ...CCWCCCCWCC...
+
+        ..HHHHHHHHHHHH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHssssHHHHH.
+
+        .HHHssssssssHHH.
+
+        ..HssssssssssH..
+
+        ..HssskssksssH..
+
+        ..HssskssksssH..
+
+        ..HssssssssssH..
+
+        ...ssssssssss...
+
+        ...__________...
+
+        ...__________...
+
+        ...__________...'
+  down_b:
+    patches:
+    - x: 0
+      y: 24
+      rows: '__SS________SSS_
+
+        _SSS_________S__
+
+        _SSS____________'
+    - x: 0
+      y: 28
+      rows: '_GG_GGG_GGGG____
+
+        _______GGGG_____
+
+        ________GG______
+
+        ________________'
+    - x: 0
+      y: 23
+      rows: '________________
+
+        ________________
+
+        ________________
+
+        ________________'
+    - x: 0
+      y: 11
+      rows: '.....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ...CCWCCCCWCC...
+
+        ..HHHHHHHHHHHH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHssssHHHHH.
+
+        .HHHssssssssHHH.
+
+        ..HssssssssssH..
+
+        ..HssskssksssH..
+
+        ..HssskssksssH..
+
+        ..HssssssssssH..
+
+        ...ssssssssss...
+
+        ...__________...
+
+        ...__________...
+
+        ...__________...'
+  up:
+    patches:
+    - x: 0
+      y: 23
+      rows: '___S________S___
+
+        _SSS________SSS_
+
+        SSS__________SSS'
+    - x: 0
+      y: 27
+      rows: '___GGGG__GGGG___
+
+        ____GGGGGGGG____
+
+        _____GG__GG_____
+
+        ________________
+
+        ________________'
+    - x: 0
+      y: 22
+      rows: '________________
+
+        _____NNNNNN_____
+
+        ______NNNN______
+
+        ________________'
+    - x: 0
+      y: 10
+      rows: '.....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ...CCCCCCCCCC...
+
+        ..HHHHHHHHHHHH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..sHHHHHHHHHHs..
+
+        ...HHHHHHHHHH...
+
+        ....ssssssss....
+
+        ..____________..
+
+        ..____________..
+
+        ..____________..'
+  up_a:
+    patches:
+    - x: 0
+      y: 24
+      rows: '_SSS________SS__
+
+        __S_________SSS_
+
+        ____________SSS_'
+    - x: 0
+      y: 28
+      rows: '____GGGG_GGG_GG_
+
+        _____GGGG_______
+
+        ______GG________
+
+        ________________'
+    - x: 0
+      y: 23
+      rows: '____N______N____
+
+        _____NNNNNN_____
+
+        ______NNNN______
+
+        ________________'
+    - x: 0
+      y: 11
+      rows: '.....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ...CCCCCCCCCC...
+
+        ..HHHHHHHHHHHH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..sHHHHHHHHHHs..
+
+        ...HHHHHHHHHH...
+
+        ....ssssssss....
+
+        ..____________..
+
+        ..____________..
+
+        ..____________..'
+  up_b:
+    patches:
+    - x: 0
+      y: 24
+      rows: '__SS________SSS_
+
+        _SSS_________S__
+
+        _SSS____________'
+    - x: 0
+      y: 28
+      rows: '_GG_GGG_GGGG____
+
+        _______GGGG_____
+
+        ________GG______
+
+        ________________'
+    - x: 0
+      y: 23
+      rows: '________________
+
+        _____NNNNNN_____
+
+        ______NNNN______
+
+        ________________'
+    - x: 0
+      y: 11
+      rows: '.....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ...CCCCCCCCCC...
+
+        ..HHHHHHHHHHHH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..sHHHHHHHHHHs..
+
+        ...HHHHHHHHHH...
+
+        ....ssssssss....
+
+        ..____________..
+
+        ..____________..
+
+        ..____________..'
+  left:
+    patches:
+    - x: 0
+      y: 23
+      rows: '________S_______
+
+        _______SSS______
+
+        ______SSSS______'
+    - x: 0
+      y: 27
+      rows: '______GGGGG_____
+
+        ______GGGG______
+
+        ______GGG_______
+
+        ________________
+
+        ________________'
+    - x: 0
+      y: 22
+      rows: '________________
+
+        ________________
+
+        ________________
+
+        ________________'
+    - x: 0
+      y: 10
+      rows: '.....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ...CWCCCCCCC....
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHHH.
+
+        ..sssHHHHHHHHHH.
+
+        ..sssssHHHHHHHH.
+
+        ..ssssssHHHHHH..
+
+        ..ssksssHHHHHH..
+
+        ..ssksssssHHH...
+
+        ..sssssssssH....
+
+        ...ssssssss.....
+
+        ....________....
+
+        ....________....
+
+        ....________....'
+  left_a:
+    patches:
+    - x: 0
+      y: 24
+      rows: '________SSSS____
+
+        ________SSSS____
+
+        ________SSSS____'
+    - x: 0
+      y: 28
+      rows: '____GGGGGGGGG___
+
+        _____GGGG_GG____
+
+        _______G________
+
+        ________________'
+    - x: 0
+      y: 23
+      rows: '________________
+
+        ________________
+
+        ________________
+
+        ________________'
+    - x: 0
+      y: 11
+      rows: '.....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ...CWCCCCCCC....
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHHH.
+
+        ..sssHHHHHHHHHH.
+
+        ..sssssHHHHHHHH.
+
+        ..ssssssHHHHHH..
+
+        ..ssksssHHHHHH..
+
+        ..ssksssssHHH...
+
+        ..sssssssssH....
+
+        ...ssssssss.....
+
+        ....________....
+
+        ....________....
+
+        ....________....'
+  left_b:
+    patches:
+    - x: 0
+      y: 24
+      rows: '____SSSS________
+
+        ____SSSS________
+
+        ____SSSS________'
+    - x: 0
+      y: 28
+      rows: '____GGGGGGGG____
+
+        _____GG_GGG_____
+
+        __________GG____
+
+        ________________'
+    - x: 0
+      y: 23
+      rows: '________________
+
+        ________________
+
+        ________________
+
+        ________________'
+    - x: 0
+      y: 11
+      rows: '.....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ...CWCCCCCCC....
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHHH.
+
+        ..sssHHHHHHHHHH.
+
+        ..sssssHHHHHHHH.
+
+        ..ssssssHHHHHH..
+
+        ..ssksssHHHHHH..
+
+        ..ssksssssHHH...
+
+        ..sssssssssH....
+
+        ...ssssssss.....
+
+        ....________....
+
+        ....________....
+
+        ....________....'

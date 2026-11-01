@@ -1,0 +1,370 @@
+name: girl_2
+description: Spaceport girl with long plaits and a flight jacket (replaces Girl 2).
+kit: person16x32
+replaces: graphics/object_events/pics/people/girl_2.png
+graphics_info: Girl2
+notes: 'Group 4, B style: Girl2''s own body as regions (bare arms and shoulders -> green flight jacket J over a white top T, skirt -> lavender skirt K), new hair: centre-parted fringe and two long plaits
+  with green ties, one plait down the back in the side view. Stays on NPC_3.'
+palette: npc_3
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_3
+shade: true
+materials:
+  H: c@
+  R: c
+  t: b
+  J: b
+  T: w/a
+  K: a
+  B: c
+legend:
+  k: 15
+  Q: 11
+accept: {}
+base_sheet: graphics/object_events/pics/people/girl_2.png
+remap:
+  a: K
+  b: B
+  c: H
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 23
+      rows: '__JJJTJJJJTJJJ__
+
+        _JJJJTTTTTTJJJJ_
+
+        _JJJJ______JJJJ_'
+    - x: 0
+      y: 12
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHssssHHHH..
+
+        .RHHssssssssHHR.
+
+        .QHssskssksssHQ.
+
+        .RQssskssksssQR.
+
+        .QRssssssssssRQ.
+
+        ..Q_ssssssss_Q..
+
+        .RQ__________QR.
+
+        .QR__________RQ.
+
+        .tt__________tt.'
+  down_a:
+    patches:
+    - x: 0
+      y: 24
+      rows: '__JJJTJJJJTJJ___
+
+        __JJ_TTTTTTJJ___
+
+        __________JJJJ__'
+    - x: 0
+      y: 13
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHssssHHHH..
+
+        .RHHssssssssHHR.
+
+        .QHssskssksssHQ.
+
+        .RQssskssksssQR.
+
+        .QRssssssssssRQ.
+
+        ..Q_ssssssss_Q..
+
+        .RQ__________QR.
+
+        .QR__________RQ.
+
+        .tt__________tt.'
+  down_b:
+    patches:
+    - x: 0
+      y: 24
+      rows: '___JJTJJJJTJJJ__
+
+        ___JJTTTTTT_JJ__
+
+        __JJJJ__________'
+    - x: 0
+      y: 13
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHssssHHHH..
+
+        .RHHssssssssHHR.
+
+        .QHssskssksssHQ.
+
+        .RQssskssksssQR.
+
+        .QRssssssssssRQ.
+
+        ..Q_ssssssss_Q..
+
+        .RQ__________QR.
+
+        .QR__________RQ.
+
+        .tt__________tt.'
+  up:
+    patches:
+    - x: 0
+      y: 23
+      rows: '________________
+
+        ________________
+
+        _JJ__________JJ_'
+    - x: 0
+      y: 12
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        .RHHHHHHHHHHHHR.
+
+        .QRHHHHHHHHHHRQ.
+
+        .RQHHHHHHHHHHQR.
+
+        .QRHHHHHHHHHHRQ.
+
+        ..QRHHHHHHHHRQ..
+
+        ..RQ________QR..
+
+        ..QR________RQ..
+
+        ..tt________tt..'
+  up_a:
+    patches:
+    - x: 0
+      y: 24
+      rows: '________________
+
+        ________________
+
+        ___________JJJ__'
+    - x: 0
+      y: 13
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        .RHHHHHHHHHHHHR.
+
+        .QRHHHHHHHHHHRQ.
+
+        .RQHHHHHHHHHHQR.
+
+        .QRHHHHHHHHHHRQ.
+
+        ..QRHHHHHHHHRQ..
+
+        ..RQ________QR..
+
+        ..QR________RQ..
+
+        ..tt________tt..'
+  up_b:
+    patches:
+    - x: 0
+      y: 24
+      rows: '________________
+
+        ________________
+
+        __JJJ___________'
+    - x: 0
+      y: 13
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        .RHHHHHHHHHHHHR.
+
+        .QRHHHHHHHHHHRQ.
+
+        .RQHHHHHHHHHHQR.
+
+        .QRHHHHHHHHHHRQ.
+
+        ..QRHHHHHHHHRQ..
+
+        ..RQ________QR..
+
+        ..QR________RQ..
+
+        ..tt________tt..'
+  left:
+    patches:
+    - x: 0
+      y: 23
+      rows: '_____JJTT_______
+
+        ____TTTJJT______
+
+        ____TTJJJJT_____'
+    - x: 0
+      y: 12
+      rows: '.....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..sssHHHHHHHHH..
+
+        ..sssssHHHHHHH..
+
+        ..ssksssHHHHHH..
+
+        ..ssksssHHHRQH..
+
+        ...sssssssHQR...
+
+        ....ssssssQR....
+
+        .....______RQ...
+
+        .....______QR...
+
+        .....______tt...'
+  left_a:
+    patches:
+    - x: 0
+      y: 24
+      rows: '_____JJTT_______
+
+        ____TTTTJJ______
+
+        ____TTTJJJJ_____'
+    - x: 0
+      y: 13
+      rows: '.....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..sssHHHHHHHHH..
+
+        ..sssssHHHHHHH..
+
+        ..ssksssHHHHHH..
+
+        ..ssksssHHHRQH..
+
+        ...sssssssHQR...
+
+        ....ssssssQR....
+
+        .....______RQ...
+
+        .....______QR...
+
+        .....______tt...'
+  left_b:
+    patches:
+    - x: 0
+      y: 24
+      rows: '_____JJTT_______
+
+        ____TTJJTT______
+
+        ____TJJJJTT_____'
+    - x: 0
+      y: 13
+      rows: '.....HHHHHH.....
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..sssHHHHHHHHH..
+
+        ..sssssHHHHHHH..
+
+        ..ssksssHHHHHH..
+
+        ..ssksssHHHRQH..
+
+        ...sssssssHQR...
+
+        ....ssssssQR....
+
+        .....______RQ...
+
+        .....______QR...
+
+        .....______tt...'

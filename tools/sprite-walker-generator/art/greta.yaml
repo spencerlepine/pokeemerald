@@ -1,0 +1,395 @@
+name: greta
+description: '4-LOM: insect-faced droid bounty hunter in a long coat (replaces Greta).'
+kit: person16x32
+replaces: graphics/object_events/pics/people/frontier_brains/greta.png
+graphics_info: Greta
+notes: 'Group 4, B style: Greta''s own body as regions (outfit -> olive long coat C with white lapels V, arms -> chrome droid arms A, details -> tan bandolier L), new insectoid droid head: chrome dome,
+  two big rose compound eyes with glints, mandible grille.'
+palette: npc_1
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_1
+shade: true
+materials:
+  G: skin-b@
+  E: a@
+  M: b
+  A: b
+  C: c
+  D: c
+  V: b
+legend:
+  k: 15
+  W: 14
+  L: 2
+  l: 4
+accept:
+  skin_tones: 'a droid: chrome is the blue ramp; the skin ramp is the tan bandolier'
+  hair_rows: 'no hair: a chrome dome'
+  eye_row: compound eyes, not eye bars
+  head_w: 15 wide across the compound eyes
+base_sheet: graphics/object_events/pics/people/frontier_brains/greta.png
+remap:
+  s: A
+  b: C
+  a: A
+  w: A
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......GGGG......
+
+        ....GGGGGGGG....
+
+        ...GGGGGGGGGG...
+
+        .EEEEGGGGGGEEEE.
+
+        EEWEEEGGGGEEEWEE
+
+        EEEEEEGGGGEEEEEE
+
+        .EEEEGGGGGGEEEE.
+
+        ...GGGMMMMGGG...
+
+        ....GMMkkMMG....
+
+        .....MMMMMM.....'
+    - x: 0
+      y: 21
+      rows: '...CCCCMMCCCC...
+
+        ..DCCCCCCCCCCD..
+
+        .DDCLlCCCCCCCDD.
+
+        .DDCCLlCCCCCCDD.
+
+        .DDCCCLlVVCCCDD.
+
+        .AACCCCLVVCCCAA.
+
+        ..CCCCCCVVCCCC..
+
+        ..CCCCCCVVCCCC..'
+  down_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......GGGG......
+
+        ....GGGGGGGG....
+
+        ...GGGGGGGGGG...
+
+        .EEEEGGGGGGEEEE.
+
+        EEWEEEGGGGEEEWEE
+
+        EEEEEEGGGGEEEEEE
+
+        .EEEEGGGGGGEEEE.
+
+        ...GGGMMMMGGG...
+
+        ....GMMkkMMG....
+
+        .....MMMMMM.....'
+    - x: 0
+      y: 22
+      rows: '...CCCCMMCCCC...
+
+        ..DCCCCCCCCCCD..
+
+        .DDCLlCCCCCCCDD.
+
+        .DDCCLlCCCCCCDD.
+
+        .DDCCCLlVVCCCDD.
+
+        .AACCCCLVVCCCAA.
+
+        ..CCCCCCVVCCCC..
+
+        ..CCCCCCVVCCCC..'
+  down_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......GGGG......
+
+        ....GGGGGGGG....
+
+        ...GGGGGGGGGG...
+
+        .EEEEGGGGGGEEEE.
+
+        EEWEEEGGGGEEEWEE
+
+        EEEEEEGGGGEEEEEE
+
+        .EEEEGGGGGGEEEE.
+
+        ...GGGMMMMGGG...
+
+        ....GMMkkMMG....
+
+        .....MMMMMM.....'
+    - x: 0
+      y: 22
+      rows: '...CCCCMMCCCC...
+
+        ..DCCCCCCCCCCD..
+
+        .DDCLlCCCCCCCDD.
+
+        .DDCCLlCCCCCCDD.
+
+        .DDCCCLlVVCCCDD.
+
+        .AACCCCLVVCCCAA.
+
+        ..CCCCCCVVCCCC..
+
+        ..CCCCCCVVCCCC..'
+  up:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......GGGG......
+
+        ....GGGGGGGG....
+
+        ...GGGGGGGGGG...
+
+        .EGGGGGGGGGGGGE.
+
+        EEGGGGGGGGGGGGEE
+
+        EEGGGGGGGGGGGGEE
+
+        .EGGGGGGGGGGGGE.
+
+        ...GGGGGGGGGG...
+
+        ....GGGGGGGG....
+
+        .....MMMMMM.....'
+    - x: 0
+      y: 21
+      rows: '...CCCCCCCCCC...
+
+        ..DCCCCCCCCCCD..
+
+        .DDCCCCCCCLlCDD.
+
+        .DDCCCCCCLlCCDD.
+
+        .DDCCCCCLlCCCDD.
+
+        .AACCCCLlCCCCAA.
+
+        ..CCCCCCCCCCCC..
+
+        ..CCCCCCCCCCCC..'
+  up_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......GGGG......
+
+        ....GGGGGGGG....
+
+        ...GGGGGGGGGG...
+
+        .EGGGGGGGGGGGGE.
+
+        EEGGGGGGGGGGGGEE
+
+        EEGGGGGGGGGGGGEE
+
+        .EGGGGGGGGGGGGE.
+
+        ...GGGGGGGGGG...
+
+        ....GGGGGGGG....
+
+        .....MMMMMM.....'
+    - x: 0
+      y: 22
+      rows: '...CCCCCCCCCC...
+
+        ..DCCCCCCCCCCD..
+
+        .DDCCCCCCCLlCDD.
+
+        .DDCCCCCCLlCCDD.
+
+        .DDCCCCCLlCCCDD.
+
+        .AACCCCLlCCCCAA.
+
+        ..CCCCCCCCCCCC..
+
+        ..CCCCCCCCCCCC..'
+  up_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......GGGG......
+
+        ....GGGGGGGG....
+
+        ...GGGGGGGGGG...
+
+        .EGGGGGGGGGGGGE.
+
+        EEGGGGGGGGGGGGEE
+
+        EEGGGGGGGGGGGGEE
+
+        .EGGGGGGGGGGGGE.
+
+        ...GGGGGGGGGG...
+
+        ....GGGGGGGG....
+
+        .....MMMMMM.....'
+    - x: 0
+      y: 22
+      rows: '...CCCCCCCCCC...
+
+        ..DCCCCCCCCCCD..
+
+        .DDCCCCCCCLlCDD.
+
+        .DDCCCCCCLlCCDD.
+
+        .DDCCCCCLlCCCDD.
+
+        .AACCCCLlCCCCAA.
+
+        ..CCCCCCCCCCCC..
+
+        ..CCCCCCCCCCCC..'
+  left:
+    patches:
+    - x: 0
+      y: 11
+      rows: '.....GGGGG......
+
+        ...GGGGGGGGG....
+
+        ..GGGGGGGGGGG...
+
+        .EEEEGGGGGGGG...
+
+        EEEEEEGGGGGGG...
+
+        EEWEEEGGGGGGG...
+
+        .EEEEGGGGGGGG...
+
+        MMMGGGGGGGGG....
+
+        MkMMGGGGGGG.....
+
+        .MMMMGGGGG......'
+    - x: 0
+      y: 21
+      rows: '....MMMCCCC.....
+
+        ....CCCCCCCC....
+
+        ....CDDDCCCC....
+
+        ...CCDDDCCCC....
+
+        ...CCDDDCCCC....
+
+        ...CCAACCCCC....
+
+        ...CCCCCCCCCC...
+
+        ....CCCCCCCCC...'
+  left_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.....GGGGG......
+
+        ...GGGGGGGGG....
+
+        ..GGGGGGGGGGG...
+
+        .EEEEGGGGGGGG...
+
+        EEEEEEGGGGGGG...
+
+        EEWEEEGGGGGGG...
+
+        .EEEEGGGGGGGG...
+
+        MMMGGGGGGGGG....
+
+        MkMMGGGGGGG.....
+
+        .MMMMGGGGG......'
+    - x: 0
+      y: 22
+      rows: '....MMMCCCC.....
+
+        ....CCCCCCCC....
+
+        ....CDDDCCCC....
+
+        ...CCDDDCCCC....
+
+        ...CCDDDCCCC....
+
+        ...CCAACCCCC....
+
+        ...CCCCCCCCCC...
+
+        ....CCCCCCCCC...'
+  left_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.....GGGGG......
+
+        ...GGGGGGGGG....
+
+        ..GGGGGGGGGGG...
+
+        .EEEEGGGGGGGG...
+
+        EEEEEEGGGGGGG...
+
+        EEWEEEGGGGGGG...
+
+        .EEEEGGGGGGGG...
+
+        MMMGGGGGGGGG....
+
+        MkMMGGGGGGG.....
+
+        .MMMMGGGGG......'
+    - x: 0
+      y: 22
+      rows: '....MMMCCCC.....
+
+        ....CCCCCCCC....
+
+        ....CDDDCCCC....
+
+        ...CCDDDCCCC....
+
+        ...CCDDDCCCC....
+
+        ...CCAACCCCC....
+
+        ...CCCCCCCCCC...
+
+        ....CCCCCCCCC...'
