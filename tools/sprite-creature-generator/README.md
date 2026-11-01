@@ -1,6 +1,6 @@
 # sprite-creature-generator
 
-**Status:** PENDING. Approach researched and decided; the tool is not built yet. The build waits
+**Status:** IN PROGRESS. Front + back now run on Civitai's hosted generator in [`civitai/`](civitai/) (first test 2026-11-01, no GPU needed). The rented-GPU plan below is kept for reference. Original note: the build waits
 on a rented GPU.
 
 Draws a companion's **battle sprites**: the front, the second animation frame, the back, and the

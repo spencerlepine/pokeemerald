@@ -237,23 +237,33 @@ def cmd_gen(args) -> list[Path]:
               "scheduler": args.scheduler, "steps": args.steps, "cfgScale": args.cfg,
               "width": args.size, "height": args.size, "seed": seed, "clipSkip": 2}
     extra, refs = {}, {}
-    init = args.init or (b["init"] if args.view == "front" else None)
-    if init:  # image to image: the textToImage step takes sourceImage + its denoise (API's spelling)
-        extra["sourceImage"] = image_ref(init, args.flip or b["flip"])
-        extra["sourceImageDenoiseStrenght"] = args.denoise or b["denoise"] or 0.6
-        refs["init"] = init
+    model = args.checkpoint or CHECKPOINTS[fam]
     control = args.control or (b["control"] if args.view == "front" else None)
     if control:  # ControlNet keeps the reference's outline/pose; the LoRA redraws the style
         extra["controlNets"] = [{"preprocessor": args.control_type, "weight": args.control_weight,
                                  "image": image_ref(control, args.flip or b["flip"])}]
         refs["control"] = control
-    workflow = {
-        "steps": [{"$type": "textToImage", "input": {
-            "model": args.checkpoint or CHECKPOINTS[fam],
-            "additionalNetworks": {lora_air: {"type": "Lora", "strength": args.strength}},
-            **params, **extra, "quantity": args.n, "outputFormat": args.format}}],
-        "currencies": args.currency.split(","),
-    }
+    init = args.init or (b["init"] if args.view == "front" else None)
+    if init:
+        # Image to image goes through the imageGen step (ComfyUI engine, createVariant). The older
+        # textToImage step stores a `sourceImage` but does not use it: on 2026-11-01 a back sent
+        # with one came back byte-identical to the same prompt + seed without it (served from cache).
+        refs["init"] = init if not init.startswith("data:") else "(data URI)"
+        denoise = args.denoise or b["denoise"] or 0.6
+        step = {"$type": "imageGen", "input": {
+            "engine": "comfy", "ecosystem": fam, "operation": "createVariant",
+            "checkpointModel": model, "loras": {lora_air: args.strength},
+            "image": image_ref(init, args.flip or b["flip"]), "denoiseStrength": denoise,
+            "prompt": prompt, "negativePrompt": negative, "sampler": "euler_ancestral",
+            "scheduler": "normal", "steps": args.steps, "cfgScale": args.cfg, "seed": seed,
+            "clipSkip": 2, "width": args.size, "height": args.size, "quantity": args.n,
+            "outputFormat": args.format, **extra}}
+        params["denoise"] = denoise
+    else:
+        step = {"$type": "textToImage", "input": {
+            "model": model, "additionalNetworks": {lora_air: {"type": "Lora", "strength": args.strength}},
+            **params, **extra, "quantity": args.n, "outputFormat": args.format}}
+    workflow = {"steps": [step], "currencies": args.currency.split(",")}
     print(f"species  {b['stem']}  ({b['sw_name']}, {args.view})\nlora     {v['name']} "
           f"[{v['baseModel']}] @{v['id']}\nprompt   {prompt}\nseed     {seed}  x{args.n}  ({args.format})"
           + (f"\nrefs     {refs}" if refs else ""))
@@ -292,8 +302,7 @@ def cmd_gen(args) -> list[Path]:
         p = out / f"{stamp}_{args.view}_s{sd}.png"
         Image.open(io.BytesIO(data.content)).convert("RGB").save(p)
         meta = {"species": b, "view": args.view, "lora": v,
-                "checkpoint": workflow["steps"][0]["input"]["model"], "params": params,
-                "refs": refs, "denoise": extra.get("sourceImageDenoiseStrenght"),
+                "checkpoint": model, "step": step["$type"], "params": params, "refs": refs,
                 "control": {"type": args.control_type, "weight": args.control_weight} if control else None,
                 "strength": args.strength, "format": args.format, "seed": sd,
                 "workflowId": wid, "jobId": im.get("jobId"), "cost": _cost(r), "generated": stamp}
@@ -595,16 +604,25 @@ def cmd_finish(args):
 
 
 def cmd_run(args):
+    """Front first; then each back starts from its own front, mirrored (image to image with the
+    `backside` tag), so the back keeps the front's body and colours. Text-only backs came out as a
+    different creature in the first test (Massiff, 2026-11-01)."""
     if args.seed is None:
         args.seed = random.randrange(1, 2**31 - 1)  # same seed for both views
     views = ["front", "back"] if args.view == "both" else [args.view]
-    got = {}
-    for view in views:
-        a = argparse.Namespace(**{**vars(args), "view": view})
-        got[view] = cmd_gen(a)
+    fronts, backs = [], []
+    if "front" in views:
+        fronts = cmd_gen(argparse.Namespace(**{**vars(args), "view": "front"}))
+    if "back" in views:
+        if fronts and not args.back_text_only:
+            for f in fronts:
+                a = {**vars(args), "view": "back", "n": 1, "init": image_ref(str(f), flip=True),
+                     "denoise": args.back_denoise, "control": None}
+                backs += cmd_gen(argparse.Namespace(**a))
+        else:
+            backs = cmd_gen(argparse.Namespace(**{**vars(args), "view": "back"}))
     if args.whatif:
         return
-    fronts, backs = got.get("front", []), got.get("back", [])
     for i, f in enumerate(fronts):
         finish(f, backs[i] if i < len(backs) else None, args.fit, args.period, None)
 
@@ -653,7 +671,10 @@ def main():
     f.add_argument("front", help="raw front .png"); f.add_argument("back", nargs="?", help="raw back .png")
     f.add_argument("--out", help="output folder (default runs/<species>/finished/<front stem>/)")
     finish_args(f); f.set_defaults(fn=cmd_finish)
-    r = sub.add_parser("run"); gen_args(r, both=True); finish_args(r); r.set_defaults(fn=cmd_run)
+    r = sub.add_parser("run"); gen_args(r, both=True); finish_args(r)
+    r.add_argument("--back-denoise", type=float, default=0.65,
+                   help="back from the mirrored front: 0..1, higher redraws more (default 0.65)")
+    r.add_argument("--back-text-only", action="store_true", help="back from the prompt alone, not the front"); r.set_defaults(fn=cmd_run)
     args = ap.parse_args()
     args.fn(args)
 
