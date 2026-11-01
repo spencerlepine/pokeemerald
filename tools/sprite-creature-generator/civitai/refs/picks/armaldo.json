@@ -2,7 +2,7 @@
   "init": "refs/armaldo_prep.png",
   "init_source": "https://static.wikia.nocookie.net/starwars/images/5/57/Skriton.png/revision/latest/scale-to-width-down/1000?cb=20230616101650",
   "flip": false,
-  "denoise": 0.5,
+  "denoise": 0.45,
   "desc": "armored ancient predator with plated shell and a raised segmented claw tail",
   "colour": "slate gray and dusty brown",
   "ref_note": "Skriton render (Jedi Survivor): armored clawed arthropod, transparent, jaws on the left; replaces Acklay (Scyther basis)"
