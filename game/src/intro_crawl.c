@@ -107,38 +107,47 @@ static void BuildLineRegs(void);
 static void DrawRingLine(u16 line);
 
 // ---------------------------------------------------------------------------------------------
-// Text. Placeholder until the real crawl is written. Each entry is one centred line, at most
-// 120px wide in FONT_NORMAL (about 20 characters). An empty string is a blank line.
+// Text. Each entry is one centred line, at most 120px wide in FONT_NORMAL (about 20 characters;
+// wrapped with the font's glyph widths). An empty string is a blank line. Set ~2 BBY, see
+// wiki/bible/STORY.md. No apostrophes: the charmap has none for the normal font.
 // ---------------------------------------------------------------------------------------------
 
 static const u8 sText_L00[] = _("EPISODE I");
 static const u8 sText_L01[] = _("");
-static const u8 sText_L02[] = _("LOREM IPSUM");
+static const u8 sText_L02[] = _("THE OUTER RIM");
 static const u8 sText_L03[] = _("");
-static const u8 sText_L04[] = _("Lorem ipsum dolor sit");
-static const u8 sText_L05[] = _("amet, consectetur");
-static const u8 sText_L06[] = _("adipiscing elit, sed");
-static const u8 sText_L07[] = _("do eiusmod tempor");
-static const u8 sText_L08[] = _("incididunt ut labore");
-static const u8 sText_L09[] = _("et dolore magna.");
-static const u8 sText_L10[] = _("");
-static const u8 sText_L11[] = _("Ut enim ad minim");
-static const u8 sText_L12[] = _("veniam, quis nostrud");
-static const u8 sText_L13[] = _("exercitation ullamco");
-static const u8 sText_L14[] = _("laboris nisi ut");
-static const u8 sText_L15[] = _("aliquip ex ea commodo.");
-static const u8 sText_L16[] = _("");
-static const u8 sText_L17[] = _("Duis aute irure dolor");
-static const u8 sText_L18[] = _("in reprehenderit in");
-static const u8 sText_L19[] = _("voluptate velit esse");
-static const u8 sText_L20[] = _("cillum dolore eu");
-static const u8 sText_L21[] = _("fugiat nulla....");
+static const u8 sText_L04[] = _("It is a time of fear.");
+static const u8 sText_L05[] = _("Seventeen years after");
+static const u8 sText_L06[] = _("the fall of the Jedi,");
+static const u8 sText_L07[] = _("the EMPIRE rules the");
+static const u8 sText_L08[] = _("Core worlds, and many");
+static const u8 sText_L09[] = _("families flee to the");
+static const u8 sText_L10[] = _("distant OUTER RIM.");
+static const u8 sText_L11[] = _("");
+static const u8 sText_L12[] = _("Far from the Emperor,");
+static const u8 sText_L13[] = _("the dark lord VADER");
+static const u8 sText_L14[] = _("and the crime lord");
+static const u8 sText_L15[] = _("JABBA are each");
+static const u8 sText_L16[] = _("hunting an ancient");
+static const u8 sText_L17[] = _("titan with the power");
+static const u8 sText_L18[] = _("to reshape whole");
+static const u8 sText_L19[] = _("planets.");
+static const u8 sText_L20[] = _("");
+static const u8 sText_L21[] = _("On the desert world of");
+static const u8 sText_L22[] = _("TATOOINE, a young");
+static const u8 sText_L23[] = _("newcomer steps off a");
+static const u8 sText_L24[] = _("cargo freighter,");
+static const u8 sText_L25[] = _("unaware that the");
+static const u8 sText_L26[] = _("Force has other");
+static const u8 sText_L27[] = _("plans....");
 
 static const u8 *const sCrawlLines[] =
 {
-    sText_L00, sText_L01, sText_L02, sText_L03, sText_L04, sText_L05, sText_L06, sText_L07,
-    sText_L08, sText_L09, sText_L10, sText_L11, sText_L12, sText_L13, sText_L14, sText_L15,
-    sText_L16, sText_L17, sText_L18, sText_L19, sText_L20, sText_L21,
+    sText_L00, sText_L01, sText_L02, sText_L03, sText_L04, sText_L05,
+    sText_L06, sText_L07, sText_L08, sText_L09, sText_L10, sText_L11,
+    sText_L12, sText_L13, sText_L14, sText_L15, sText_L16, sText_L17,
+    sText_L18, sText_L19, sText_L20, sText_L21, sText_L22, sText_L23,
+    sText_L24, sText_L25, sText_L26, sText_L27,
 };
 
 static const u8 sText_SkipIntro[] = _("Skip intro?");
