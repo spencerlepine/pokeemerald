@@ -1,0 +1,181 @@
+name: sailor
+description: Deck spacer in a jumpsuit with harness straps and a visored deck cap (replaces Sailor).
+kit: person16x32
+replaces: graphics/object_events/pics/people/sailor.png
+graphics_info: Sailor
+notes: 'Group 6, B style: the sailor''s own body as regions (shirt -> blue jumpsuit top J, collar stripes -> olive harness straps P, hair and trousers -> olive-brown N), new olive deck cap with a blue visor
+  and white crest, pink rank plaque on the chest.'
+palette: npc_1
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_1
+shade: true
+materials:
+  K: c@
+  V: b
+  J: b
+  P: c
+  N: c
+legend:
+  k: 15
+  W: 14
+  p: 6
+  q: 5
+accept: {}
+base_sheet: graphics/object_events/pics/people/sailor.png
+remap:
+  b: J
+  c: N
+  w: P
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        ....KKKKKKKK....
+
+        ...KKKKWKKKKK...
+
+        ___KKKKKKKKKK___
+
+        __KKKKKKKKKKKK__
+
+        __VVVVVVVVVVVV__'
+    - x: 0
+      y: 23
+      rows: ____pqp_________
+  down_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '................
+
+        ....KKKKKKKK....
+
+        ...KKKKWKKKKK...
+
+        ___KKKKKKKKKK___
+
+        __KKKKKKKKKKKK__
+
+        __VVVVVVVVVVVV__'
+    - x: 0
+      y: 24
+      rows: ____pqp_________
+  down_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '................
+
+        ....KKKKKKKK....
+
+        ...KKKKWKKKKK...
+
+        ___KKKKKKKKKK___
+
+        __KKKKKKKKKKKK__
+
+        __VVVVVVVVVVVV__'
+    - x: 0
+      y: 24
+      rows: ____pqp_________
+  up:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        ....KKKKKKKK....
+
+        ...KKKKKKKKKK...
+
+        ___KKKKKKKKKK___
+
+        __KKKKKKKKKKKK__
+
+        __KKKKKKKKKKKK__'
+  up_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '................
+
+        ....KKKKKKKK....
+
+        ...KKKKKKKKKK...
+
+        ___KKKKKKKKKK___
+
+        __KKKKKKKKKKKK__
+
+        __KKKKKKKKKKKK__'
+  up_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '................
+
+        ....KKKKKKKK....
+
+        ...KKKKKKKKKK...
+
+        ___KKKKKKKKKK___
+
+        __KKKKKKKKKKKK__
+
+        __KKKKKKKKKKKK__'
+  left:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        ....KKKKKKKK....
+
+        ...KKKKKKKKKK...
+
+        ___KKKKKKKKKK___
+
+        .VVVKKKKKKKKKK__
+
+        VVVV____________'
+    - x: 0
+      y: 24
+      rows: _______pq_______
+  left_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '................
+
+        ....KKKKKKKK....
+
+        ...KKKKKKKKKK...
+
+        ___KKKKKKKKKK___
+
+        .VVVKKKKKKKKKK__
+
+        VVVV____________'
+    - x: 0
+      y: 25
+      rows: _______pq_______
+  left_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '................
+
+        ....KKKKKKKK....
+
+        ...KKKKKKKKKK...
+
+        ___KKKKKKKKKK___
+
+        .VVVKKKKKKKKKK__
+
+        VVVV____________'
+    - x: 0
+      y: 25
+      rows: _______pq_______

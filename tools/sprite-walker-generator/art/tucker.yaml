@@ -1,0 +1,373 @@
+name: tucker
+description: 'DENGAR: bounty hunter with a bandaged head and heavy armour (replaces Tucker).'
+kit: person16x32
+replaces: graphics/object_events/pics/people/frontier_brains/tucker.png
+graphics_info: Tucker
+notes: 'Group 6, B style: Tucker''s own body as regions (shoulder pieces and plates -> grey armour P, dress -> brown suit U, bare arms -> brown sleeves A, trims -> green belt G), new head wrapped in white
+  bandages leaving a strip of face with the eyes.'
+palette: npc_3
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_3
+shade: true
+materials:
+  W: w/a
+  P: a
+  U: c
+  A: c
+  G: b
+  B: s
+legend:
+  k: 15
+  x: 6
+  c: 14
+accept:
+  hair_rows: head wrapped in bandages, no hair
+base_sheet: graphics/object_events/pics/people/frontier_brains/tucker.png
+remap:
+  w: P
+  a: U
+  s: A
+  b: G
+  c: B
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 10
+      rows: '......WWWW......
+
+        ....WWxxWWWW....
+
+        ...WWWWWxxWWW...
+
+        ..xxWWWWWWxxWW..
+
+        .WWWxxWWWWWWxxW.
+
+        .WWWWWxxxxWWWWW.
+
+        .WWWssssssssWWW.
+
+        .WWWskssssksWWW.
+
+        ..WWskssssksWW..
+
+        ..WWWssssssWWW..
+
+        ...xWWssssWWx...
+
+        ....WWxxxxWW....'
+    - x: 0
+      y: 22
+      rows: '___PPPPPPPPPP___
+
+        ___PPPPPPPPPP___
+
+        ___UPPPPPPPPU___
+
+        ___GGGGcGGGGG___
+
+        ___UUUUUUUUUU___'
+  down_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......WWWW......
+
+        ....WWxxWWWW....
+
+        ...WWWWWxxWWW...
+
+        ..xxWWWWWWxxWW..
+
+        .WWWxxWWWWWWxxW.
+
+        .WWWWWxxxxWWWWW.
+
+        .WWWssssssssWWW.
+
+        .WWWskssssksWWW.
+
+        ..WWskssssksWW..
+
+        ..WWWssssssWWW..
+
+        ...xWWssssWWx...
+
+        ....WWxxxxWW....'
+    - x: 0
+      y: 23
+      rows: '___PPPPPPPPPP___
+
+        ___PPPPPPPPPP___
+
+        ___UPPPPPPPPU___
+
+        ___GGGGcGGGGG___
+
+        ___UUUUUUUUUU___'
+  down_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......WWWW......
+
+        ....WWxxWWWW....
+
+        ...WWWWWxxWWW...
+
+        ..xxWWWWWWxxWW..
+
+        .WWWxxWWWWWWxxW.
+
+        .WWWWWxxxxWWWWW.
+
+        .WWWssssssssWWW.
+
+        .WWWskssssksWWW.
+
+        ..WWskssssksWW..
+
+        ..WWWssssssWWW..
+
+        ...xWWssssWWx...
+
+        ....WWxxxxWW....'
+    - x: 0
+      y: 23
+      rows: '___PPPPPPPPPP___
+
+        ___PPPPPPPPPP___
+
+        ___UPPPPPPPPU___
+
+        ___GGGGcGGGGG___
+
+        ___UUUUUUUUUU___'
+  up:
+    patches:
+    - x: 0
+      y: 10
+      rows: '......WWWW......
+
+        ....WWxxWWWW....
+
+        ...WWWWWxxWWW...
+
+        ..xxWWWWWWxxWW..
+
+        .WWWxxWWWWWWxxW.
+
+        .WWWWWxxxxWWWWW.
+
+        .WWxxWWWWWWxxWW.
+
+        .WWWWxxWWxxWWWW.
+
+        ..WWWWWxxWWWWW..
+
+        ..WWWWWWWWWWWW..
+
+        ...WWxxWWxxWW...
+
+        ....WWWWWWWW....'
+    - x: 0
+      y: 22
+      rows: '___PPPPPPPPPP___
+
+        ___PPPPPPPPPP___
+
+        ___UPPPPPPPPU___
+
+        ___GGGGGGGGGG___
+
+        ___UUUUUUUUUU___'
+  up_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......WWWW......
+
+        ....WWxxWWWW....
+
+        ...WWWWWxxWWW...
+
+        ..xxWWWWWWxxWW..
+
+        .WWWxxWWWWWWxxW.
+
+        .WWWWWxxxxWWWWW.
+
+        .WWxxWWWWWWxxWW.
+
+        .WWWWxxWWxxWWWW.
+
+        ..WWWWWxxWWWWW..
+
+        ..WWWWWWWWWWWW..
+
+        ...WWxxWWxxWW...
+
+        ....WWWWWWWW....'
+    - x: 0
+      y: 23
+      rows: '___PPPPPPPPPP___
+
+        ___PPPPPPPPPP___
+
+        ___UPPPPPPPPU___
+
+        ___GGGGGGGGGG___
+
+        ___UUUUUUUUUU___'
+  up_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......WWWW......
+
+        ....WWxxWWWW....
+
+        ...WWWWWxxWWW...
+
+        ..xxWWWWWWxxWW..
+
+        .WWWxxWWWWWWxxW.
+
+        .WWWWWxxxxWWWWW.
+
+        .WWxxWWWWWWxxWW.
+
+        .WWWWxxWWxxWWWW.
+
+        ..WWWWWxxWWWWW..
+
+        ..WWWWWWWWWWWW..
+
+        ...WWxxWWxxWW...
+
+        ....WWWWWWWW....'
+    - x: 0
+      y: 23
+      rows: '___PPPPPPPPPP___
+
+        ___PPPPPPPPPP___
+
+        ___UPPPPPPPPU___
+
+        ___GGGGGGGGGG___
+
+        ___UUUUUUUUUU___'
+  left:
+    patches:
+    - x: 0
+      y: 10
+      rows: '.......WWWW.....
+
+        .....WWxxWWWW...
+
+        ....WWWWWxxWWW..
+
+        ...xxWWWWWWxxW..
+
+        ..WWWxxWWWWWWWW.
+
+        ..WWWWWxxxWWWWW.
+
+        ..sssssWWWxxWWW.
+
+        ..skssssWWWWxxW.
+
+        ..skssssWWWWWW..
+
+        ..ssssssWxxWWW..
+
+        ...sssWWWWWxx...
+
+        ....WWxxxWWW....'
+    - x: 0
+      y: 22
+      rows: '_____PPPPPP_____
+
+        ____PPPPPPP_____
+
+        ____UPPPPPU_____
+
+        ____GGGGGGG_____
+
+        ____UUUUUUU_____'
+  left_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '.......WWWW.....
+
+        .....WWxxWWWW...
+
+        ....WWWWWxxWWW..
+
+        ...xxWWWWWWxxW..
+
+        ..WWWxxWWWWWWWW.
+
+        ..WWWWWxxxWWWWW.
+
+        ..sssssWWWxxWWW.
+
+        ..skssssWWWWxxW.
+
+        ..skssssWWWWWW..
+
+        ..ssssssWxxWWW..
+
+        ...sssWWWWWxx...
+
+        ....WWxxxWWW....'
+    - x: 0
+      y: 23
+      rows: '_____PPPPPP_____
+
+        ____PPPPPPP_____
+
+        ____UPPPPPU_____
+
+        ____GGGGGGG_____
+
+        ____UUUUUUU_____'
+  left_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '.......WWWW.....
+
+        .....WWxxWWWW...
+
+        ....WWWWWxxWWW..
+
+        ...xxWWWWWWxxW..
+
+        ..WWWxxWWWWWWWW.
+
+        ..WWWWWxxxWWWWW.
+
+        ..sssssWWWxxWWW.
+
+        ..skssssWWWWxxW.
+
+        ..skssssWWWWWW..
+
+        ..ssssssWxxWWW..
+
+        ...sssWWWWWxx...
+
+        ....WWxxxWWW....'
+    - x: 0
+      y: 23
+      rows: '_____PPPPPP_____
+
+        ____PPPPPPP_____
+
+        ____UPPPPPU_____
+
+        ____GGGGGGG_____
+
+        ____UUUUUUU_____'

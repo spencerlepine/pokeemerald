@@ -1,0 +1,370 @@
+name: wally
+description: 'LUKE SKYWALKER: farm-boy tunic, white wrappings, lightsaber at the hip (replaces Wally).'
+kit: person16x32
+replaces: graphics/object_events/pics/people/wally.png
+graphics_info: Wally
+notes: 'Group 6, B style: new head with a sandy-blond mop of hair, Wally''s own body as regions (shirt -> white crossover farm tunic T, trousers -> tan, shoes -> dark boots B), dark belt with a white buckle
+  and a lightsaber hilt at the hip.'
+palette: npc_1
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_1
+shade: true
+materials:
+  H: c
+  T: w/c
+  K: b
+  B: b
+legend:
+  k: 15
+  W: 14
+  h: 11
+  d: 13
+  g: 12
+accept: {}
+base_sheet: graphics/object_events/pics/people/wally.png
+remap:
+  c: H
+  w: T
+  b: B
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        .....HHHHHH.....
+
+        ...HHhHHHHhHH...
+
+        ..HHHHHhHHHHHH..
+
+        ..HhHHHHHHHhHH..
+
+        .HHHHhHHHdHHHHH.
+
+        .HHHHHHHsssHHHH.
+
+        .HHHssssssssHHH.
+
+        .HHssksssskssHH.
+
+        .HHssksssskssHH.
+
+        ..HssssssssssH..'
+    - x: 0
+      y: 22
+      rows: '____TTssssTT____
+
+        ____TgTsTTTT____
+
+        ____TTgTTTTT____
+
+        ____TTTgTTTT____
+
+        ____KKKWKKKKk___
+
+        ____TTTTTTTTW___'
+  down_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '................
+
+        .....HHHHHH.....
+
+        ...HHhHHHHhHH...
+
+        ..HHHHHhHHHHHH..
+
+        ..HhHHHHHHHhHH..
+
+        .HHHHhHHHdHHHHH.
+
+        .HHHHHHHsssHHHH.
+
+        .HHHssssssssHHH.
+
+        .HHssksssskssHH.
+
+        .HHssksssskssHH.
+
+        ..HssssssssssH..'
+    - x: 0
+      y: 23
+      rows: '____TTssssTT____
+
+        ____TgTsTTTT____
+
+        ____TTgTTTTT____
+
+        ____TTTgTTTT____
+
+        ____KKKWKKKKk___
+
+        ____TTTTTTTTW___'
+  down_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '................
+
+        .....HHHHHH.....
+
+        ...HHhHHHHhHH...
+
+        ..HHHHHhHHHHHH..
+
+        ..HhHHHHHHHhHH..
+
+        .HHHHhHHHdHHHHH.
+
+        .HHHHHHHsssHHHH.
+
+        .HHHssssssssHHH.
+
+        .HHssksssskssHH.
+
+        .HHssksssskssHH.
+
+        ..HssssssssssH..'
+    - x: 0
+      y: 23
+      rows: '____TTssssTT____
+
+        ____TgTsTTTT____
+
+        ____TTgTTTTT____
+
+        ____TTTgTTTT____
+
+        ____KKKWKKKKk___
+
+        ____TTTTTTTTW___'
+  up:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        .....HHHHHH.....
+
+        ...HHhHHHHhHH...
+
+        ..HHHHHhHHHHHH..
+
+        ..HhHHHHHHHhHH..
+
+        .HHHHhHHHHHHHHH.
+
+        .HHHHHHHHhHHHHH.
+
+        .HHhHHHHHHHHdHH.
+
+        .HHHHHHHHHHHHHH.
+
+        ..HHHHHHHHHHHH..
+
+        ...HHHHHHHHHH...'
+    - x: 0
+      y: 22
+      rows: '____TTTTTTTT____
+
+        ____TTTTTTTT____
+
+        ____TTTTTTTT____
+
+        ____TTTTTTTT____
+
+        ____KKKKKKKK____
+
+        ____TTTTTTTT____'
+  up_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '................
+
+        .....HHHHHH.....
+
+        ...HHhHHHHhHH...
+
+        ..HHHHHhHHHHHH..
+
+        ..HhHHHHHHHhHH..
+
+        .HHHHhHHHHHHHHH.
+
+        .HHHHHHHHhHHHHH.
+
+        .HHhHHHHHHHHdHH.
+
+        .HHHHHHHHHHHHHH.
+
+        ..HHHHHHHHHHHH..
+
+        ...HHHHHHHHHH...'
+    - x: 0
+      y: 23
+      rows: '____TTTTTTTT____
+
+        ____TTTTTTTT____
+
+        ____TTTTTTTT____
+
+        ____TTTTTTTT____
+
+        ____KKKKKKKK____
+
+        ____TTTTTTTT____'
+  up_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '................
+
+        .....HHHHHH.....
+
+        ...HHhHHHHhHH...
+
+        ..HHHHHhHHHHHH..
+
+        ..HhHHHHHHHhHH..
+
+        .HHHHhHHHHHHHHH.
+
+        .HHHHHHHHhHHHHH.
+
+        .HHhHHHHHHHHdHH.
+
+        .HHHHHHHHHHHHHH.
+
+        ..HHHHHHHHHHHH..
+
+        ...HHHHHHHHHH...'
+    - x: 0
+      y: 23
+      rows: '____TTTTTTTT____
+
+        ____TTTTTTTT____
+
+        ____TTTTTTTT____
+
+        ____TTTTTTTT____
+
+        ____KKKKKKKK____
+
+        ____TTTTTTTT____'
+  left:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        ......HHHHHH....
+
+        ....HHHhHHHHH...
+
+        ...HHHHHHhHHHH..
+
+        ..HhHHHHHHHHhH..
+
+        .HHHHHhHHHHHHH..
+
+        .sssHHHHHHHHHH..
+
+        .sssssHHHHHHHH..
+
+        .skssssHHHHHHH..
+
+        .skssssHHHHHH...
+
+        ..ssssssHHHH....'
+    - x: 0
+      y: 23
+      rows: '______TTTT______
+
+        _____TgTTTT_____
+
+        _____TTgTTT_____
+
+        _____KKKKKK_____
+
+        ____kTTTTTT_____
+
+        ____W___________'
+  left_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '................
+
+        ......HHHHHH....
+
+        ....HHHhHHHHH...
+
+        ...HHHHHHhHHHH..
+
+        ..HhHHHHHHHHhH..
+
+        .HHHHHhHHHHHHH..
+
+        .sssHHHHHHHHHH..
+
+        .sssssHHHHHHHH..
+
+        .skssssHHHHHHH..
+
+        .skssssHHHHHH...
+
+        ..ssssssHHHH....'
+    - x: 0
+      y: 24
+      rows: '______TTTT______
+
+        _____TgTTTT_____
+
+        _____TTgTTT_____
+
+        _____KKKKKK_____
+
+        ____kTTTTTT_____
+
+        ____W___________'
+  left_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '................
+
+        ......HHHHHH....
+
+        ....HHHhHHHHH...
+
+        ...HHHHHHhHHHH..
+
+        ..HhHHHHHHHHhH..
+
+        .HHHHHhHHHHHHH..
+
+        .sssHHHHHHHHHH..
+
+        .sssssHHHHHHHH..
+
+        .skssssHHHHHHH..
+
+        .skssssHHHHHH...
+
+        ..ssssssHHHH....'
+    - x: 0
+      y: 24
+      rows: '______TTTT______
+
+        _____TgTTTT_____
+
+        _____TTgTTT_____
+
+        _____KKKKKK_____
+
+        ____kTTTTTT_____
+
+        ____W___________'

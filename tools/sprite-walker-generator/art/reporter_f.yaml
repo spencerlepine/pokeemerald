@@ -1,0 +1,115 @@
+name: reporter_f
+description: HoloNet reporter (f) with a microphone and a floating holocam droid (replaces Reporter F).
+kit: person16x32
+replaces: graphics/object_events/pics/people/reporter_f.png
+graphics_info: ReporterF
+notes: 'Group 6, B style: the reporter''s own body, hair and microphone as regions, a small grey holocam droid with a magenta lens floating at her shoulder, a black comlink earpiece.'
+palette: npc_4
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_4
+shade: true
+materials:
+  D: c@
+  T: b!
+legend:
+  k: 15
+  W: 14
+  L: 9
+accept: {}
+base_sheet: graphics/object_events/pics/people/reporter_f.png
+remap:
+  b: T
+frames:
+  down:
+    patches:
+    - x: 12
+      y: 10
+      rows: '_DD_
+
+        DWLD
+
+        _DD_'
+    - x: 0
+      y: 17
+      rows: _k______________
+  down_a:
+    patches:
+    - x: 12
+      y: 11
+      rows: '_DD_
+
+        DWLD
+
+        _DD_'
+    - x: 0
+      y: 18
+      rows: _k______________
+  down_b:
+    patches:
+    - x: 12
+      y: 11
+      rows: '_DD_
+
+        DWLD
+
+        _DD_'
+    - x: 0
+      y: 18
+      rows: _k______________
+  up:
+    patches:
+    - &id001
+      x: 12
+      y: 10
+      rows: '_DD_
+
+        DDDD
+
+        _DD_'
+  up_a:
+    patches:
+    - x: 12
+      y: 11
+      rows: '_DD_
+
+        DDDD
+
+        _DD_'
+  up_b:
+    patches:
+    - x: 12
+      y: 11
+      rows: '_DD_
+
+        DDDD
+
+        _DD_'
+  left:
+    patches:
+    - *id001
+    - x: 0
+      y: 17
+      rows: _______k________
+  left_a:
+    patches:
+    - x: 12
+      y: 11
+      rows: '_DD_
+
+        DDDD
+
+        _DD_'
+    - x: 0
+      y: 18
+      rows: _______k________
+  left_b:
+    patches:
+    - x: 12
+      y: 11
+      rows: '_DD_
+
+        DDDD
+
+        _DD_'
+    - x: 0
+      y: 18
+      rows: _______k________

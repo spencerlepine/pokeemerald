@@ -1,0 +1,252 @@
+name: youngster
+description: Young Tatooine farm boy in a wrap tunic, shorts and boots, racing goggles on his head (replaces Youngster).
+kit: person16x32
+replaces: graphics/object_events/pics/people/youngster.png
+graphics_info: Youngster
+notes: 'Group 6, B style: new head with shaggy brown hair and pod-racing goggles pushed up (red strap, amber lenses), the youngster''s own body as regions (shirt -> off-white wrap tunic T, cap-coloured
+  shorts -> ochre S, shoes -> brown boots D).'
+palette: npc_2
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_2
+shade: true
+materials:
+  H: c@
+  G: b
+  T: w/c
+  S: a
+  D: c
+legend:
+  k: 15
+  W: 14
+  L: 5
+accept: {}
+base_sheet: graphics/object_events/pics/people/youngster.png
+remap:
+  w: T
+  b: S
+  c: D
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        .....HHHHHH.....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..GLWGGGGGGLWG..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHsHHHsHHHsHH.
+
+        .HHssssssssssHH.
+
+        .HHssksssskssHH.
+
+        .HHssksssskssHH.
+
+        ..HssssssssssH..'
+  down_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '................
+
+        .....HHHHHH.....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..GLWGGGGGGLWG..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHsHHHsHHHsHH.
+
+        .HHssssssssssHH.
+
+        .HHssksssskssHH.
+
+        .HHssksssskssHH.
+
+        ..HssssssssssH..'
+  down_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '................
+
+        .....HHHHHH.....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..GLWGGGGGGLWG..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHsHHHsHHHsHH.
+
+        .HHssssssssssHH.
+
+        .HHssksssskssHH.
+
+        .HHssksssskssHH.
+
+        ..HssssssssssH..'
+  up:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        .....HHHHHH.....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..GGGGGGGGGGGG..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        ..HHHHHHHHHHHH..
+
+        ...HHHHHHHHHH...'
+  up_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '................
+
+        .....HHHHHH.....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..GGGGGGGGGGGG..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        ..HHHHHHHHHHHH..
+
+        ...HHHHHHHHHH...'
+  up_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '................
+
+        .....HHHHHH.....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..GGGGGGGGGGGG..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        ..HHHHHHHHHHHH..
+
+        ...HHHHHHHHHH...'
+  left:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        ......HHHHHH....
+
+        ....HHHHHHHHH...
+
+        ...HHHHHHHHHHH..
+
+        ..LWGGGGGGGGGH..
+
+        .HHHHHHHHHHHHH..
+
+        .sHsHHHHHHHHHH..
+
+        .sssssHHHHHHHH..
+
+        .skssssHHHHHHH..
+
+        .skssssHHHHHH...
+
+        ..ssssssHHHH....'
+  left_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '................
+
+        ......HHHHHH....
+
+        ....HHHHHHHHH...
+
+        ...HHHHHHHHHHH..
+
+        ..LWGGGGGGGGGH..
+
+        .HHHHHHHHHHHHH..
+
+        .sHsHHHHHHHHHH..
+
+        .sssssHHHHHHHH..
+
+        .skssssHHHHHHH..
+
+        .skssssHHHHHH...
+
+        ..ssssssHHHH....'
+  left_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '................
+
+        ......HHHHHH....
+
+        ....HHHHHHHHH...
+
+        ...HHHHHHHHHHH..
+
+        ..LWGGGGGGGGGH..
+
+        .HHHHHHHHHHHHH..
+
+        .sHsHHHHHHHHHH..
+
+        .sssssHHHHHHHH..
+
+        .skssssHHHHHHH..
+
+        .skssssHHHHHH...
+
+        ..ssssssHHHH....'

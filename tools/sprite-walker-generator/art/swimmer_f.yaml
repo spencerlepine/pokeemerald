@@ -1,0 +1,244 @@
+name: swimmer_f
+description: Swimmer (f) in a dive hood and mask with a small breather (replaces Swimmer F).
+kit: person16x32
+replaces: graphics/object_events/pics/people/swimmer_f.png
+graphics_info: SwimmerF
+notes: 'Group 6, B style: the swimmer''s own arms and white splash as regions, new head: navy dive hood over the hair, grey dive mask with pale lenses, small grey A99-style breather with a magenta tip at
+  the mouth.'
+palette: npc_4
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_4
+shade: true
+materials:
+  H: a@
+  M: c
+  B: c
+  b: a
+legend:
+  k: 15
+  W: 14
+  L: 14
+  q: 9
+accept:
+  hair_rows: a dive hood, not hair
+  eye_row: eyes behind the dive mask, above the visible skin
+base_sheet: graphics/object_events/pics/people/swimmer_f.png
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 15
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        .HHHMMMMMMMMHHH.
+
+        .HHMLLLMMLLLMHH.
+
+        .HHMLkLMMLkLMHH.
+
+        ..HHMMMMMMMMHH..
+
+        ...HsssBBsssH...
+
+        ____ssssqsss____'
+  down_a:
+    patches:
+    - x: 0
+      y: 16
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        .HHHMMMMMMMMHHH.
+
+        .HHMLLLMMLLLMHH.
+
+        .HHMLkLMMLkLMHH.
+
+        ..HHMMMMMMMMHH..
+
+        ...HsssBBsssH...
+
+        ____ssssqsss____'
+  down_b:
+    patches:
+    - x: 0
+      y: 16
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        .HHHMMMMMMMMHHH.
+
+        .HHMLLLMMLLLMHH.
+
+        .HHMLkLMMLkLMHH.
+
+        ..HHMMMMMMMMHH..
+
+        ...HsssBBsssH...
+
+        ____ssssqsss____'
+  up:
+    patches:
+    - x: 0
+      y: 15
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        .HHHHHHHHHHHHHH.
+
+        .MMMMMMMMMMMMMM.
+
+        .HHHHHHHHHHHHHH.
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..'
+  up_a:
+    patches:
+    - x: 0
+      y: 16
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        .HHHHHHHHHHHHHH.
+
+        .MMMMMMMMMMMMMM.
+
+        .HHHHHHHHHHHHHH.
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..'
+  up_b:
+    patches:
+    - x: 0
+      y: 16
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        .HHHHHHHHHHHHHH.
+
+        .MMMMMMMMMMMMMM.
+
+        .HHHHHHHHHHHHHH.
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..'
+  left:
+    patches:
+    - x: 0
+      y: 15
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        .MMMMMMHHHHHHH..
+
+        .LLLMMMMMMMMMH..
+
+        .LkLMHHHHHHHHH..
+
+        .MMMMHHHHHHHH...
+
+        BBssssHHHHHHH...
+
+        q_sssssHHHHH____'
+  left_a:
+    patches:
+    - x: 0
+      y: 16
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        .MMMMMMHHHHHHH..
+
+        .LLLMMMMMMMMMH..
+
+        .LkLMHHHHHHHHH..
+
+        .MMMMHHHHHHHH...
+
+        BBssssHHHHHHH...
+
+        q_sssssHHHHH____'
+  left_b:
+    patches:
+    - x: 0
+      y: 16
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        .MMMMMMHHHHHHH..
+
+        .LLLMMMMMMMMMH..
+
+        .LkLMHHHHHHHHH..
+
+        .MMMMHHHHHHHH...
+
+        BBssssHHHHHHH...
+
+        q_sssssHHHHH____'

@@ -1,0 +1,163 @@
+name: flannery
+description: 'SABINE WREN: Mandalorian girl in painted armour with dyed hair (replaces Flannery).'
+kit: person16x32_still
+replaces: graphics/object_events/pics/people/gym_leaders/flannery.png
+graphics_info: Flannery
+notes: 'Group 6, B style (stand-only, so the figure is redrawn over Flannery''s frame): short blue bob with a pink-dyed fringe, white Mandalorian pauldrons and gauntlets, pink painted chest plate, olive
+  bodysuit, blue belt with black holsters.'
+palette: npc_1
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_1
+shade: true
+materials:
+  H: b
+  J: b
+  D: a
+  P: w/c
+  G: w/c
+  A: a
+  C: c
+  K: b
+  B: c
+legend:
+  k: 15
+  W: 14
+  h: 8
+  y: 6
+accept: {}
+base_sheet: graphics/object_events/pics/people/gym_leaders/flannery.png
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        .....HHHHHH.....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHhHHHH..
+
+        .HHhHHHhHHHHhHH.
+
+        .DHHHHHHHHHHHHH.
+
+        .DDHHHHHHHsssHH.
+
+        .DDHHHssssssHHH.
+
+        .DDHskssssksHHH.
+
+        .DDHskssssksHHH.
+
+        .DDHssssssssHHH.
+
+        ..DD.ssssss.HH..
+
+        ..PyPCssssCPyP..
+
+        .PPPPAAAAAAPPPP.
+
+        .CCCAAWkWAAACCC.
+
+        .GGCAAAAAAAACGG.
+
+        .GyCKWKKKKWKCyG.
+
+        ..kCCCCCCCCCCk..
+
+        ...CCCC..CCCC...
+
+        ...CWCC..CCWC...
+
+        ...BBBB..BBBB...'
+  up:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        .....JJJJJJ.....
+
+        ...JJJJJJJJJJ...
+
+        ..JJJJJJJJJJJJ..
+
+        .JJJJJJJJJJJJJJ.
+
+        .JJJJJJJJJJJJJD.
+
+        .JJJJJJJJJJJJDD.
+
+        .JJJJJJJJJJJJDD.
+
+        .JJJJJJJJJJJJDD.
+
+        .JJJJJJJJJJJJDD.
+
+        .JJJJJJJJJJJJDD.
+
+        ..JJ.JJJJ.JJDD..
+
+        ..PPPCCCCCCPPP..
+
+        .PPPPAAAAAAPPPP.
+
+        .CCCAAAAAAAACCC.
+
+        .GGCAAAAAAAACGG.
+
+        .GyCKWKKKKWKCyG.
+
+        ..kCCCCCCCCCCk..
+
+        ...CCCC..CCCC...
+
+        ...CWCC..CCWC...
+
+        ...BBBB..BBBB...'
+  left:
+    patches:
+    - x: 0
+      y: 10
+      rows: '................
+
+        ......HHHHHH....
+
+        ....HHHHHHHHHH..
+
+        ...HHHHHhHHHHHH.
+
+        ..HHHHHhHHHHhHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHsHHHHHHHHH.
+
+        .HsssssHHHHHHDD.
+
+        .HkssssHHHHHHDD.
+
+        .HkssssHHHHHDDD.
+
+        .HssssssHHHHDD..
+
+        ..sssssHH.HDD...
+
+        ....CssssPPP....
+
+        ....AAAAPPPPP...
+
+        ....AAWACPPPP...
+
+        ....AAAACGGGG...
+
+        ....KWKKKGyGk...
+
+        .....CCCCCCCk...
+
+        .....CCCCCCC....
+
+        ......CCWCC.....
+
+        ......BBBBB.....'

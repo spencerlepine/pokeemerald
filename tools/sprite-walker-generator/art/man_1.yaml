@@ -1,0 +1,314 @@
+name: man_1
+description: Desert townsman in a hooded robe (replaces Man 1).
+kit: person16x32
+replaces: graphics/object_events/pics/people/man_1.png
+graphics_info: Man1
+notes: 'Group 6, B style: man_1''s body as regions (shirt -> robe R, trousers -> grey leg wraps L, shoes -> boots D), new brown hood framing the face, grey neck scarf, green sash.'
+palette: npc_3
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_3
+shade: true
+materials:
+  H: c@
+  S: a
+  R: c
+  L: c
+  D: c
+  G: b
+legend:
+  k: 15
+accept:
+  hair_rows: hood up, no hair
+base_sheet: graphics/object_events/pics/people/man_1.png
+remap:
+  w: R
+  a: R
+  b: L
+  c: D
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 10
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHssssssHHH..
+
+        .HHHssssssssHHH.
+
+        .HHssssssssssHH.
+
+        .HHssksssskssHH.
+
+        .HHssksssskssHH.
+
+        .HHHssssssssHHH.
+
+        ..HHSSSSSSSSHH..
+
+        ___SSSSSSSSSS___'
+    - &id001
+      x: 0
+      y: 26
+      rows: ___GGGGGGGGGG___
+  down_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHssssssHHH..
+
+        .HHHssssssssHHH.
+
+        .HHssssssssssHH.
+
+        .HHssksssskssHH.
+
+        .HHssksssskssHH.
+
+        .HHHssssssssHHH.
+
+        ..HHSSSSSSSSHH..
+
+        ___SSSSSSSSSS___'
+    - x: 0
+      y: 27
+      rows: ___GGGGGGGGGG___
+  down_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHssssssHHH..
+
+        .HHHssssssssHHH.
+
+        .HHssssssssssHH.
+
+        .HHssksssskssHH.
+
+        .HHssksssskssHH.
+
+        .HHHssssssssHHH.
+
+        ..HHSSSSSSSSHH..
+
+        ___SSSSSSSSSS___'
+    - x: 0
+      y: 27
+      rows: ___GGGGGGGGGG___
+  up:
+    patches:
+    - x: 0
+      y: 10
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        ..HHHHHHHHHHHH..
+
+        ___HHHHHHHHHH___'
+    - *id001
+  up_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        ..HHHHHHHHHHHH..
+
+        ___HHHHHHHHHH___'
+    - x: 0
+      y: 27
+      rows: ___GGGGGGGGGG___
+  up_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        ..HHHHHHHHHHHH..
+
+        ___HHHHHHHHHH___'
+    - x: 0
+      y: 27
+      rows: ___GGGGGGGGGG___
+  left:
+    patches:
+    - x: 0
+      y: 10
+      rows: '......HHHHH.....
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HsssssHHHHHH..
+
+        ..ssssssHHHHHH..
+
+        ..sksssHHHHHHH..
+
+        ..sksssHHHHHHH..
+
+        ..sssssHHHHHHH..
+
+        ...sssHHHHHHH...
+
+        ...SSSSSSSSS....
+
+        _____SSSS_______'
+    - x: 0
+      y: 26
+      rows: ____GGGGGGG_____
+  left_a:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......HHHHH.....
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HsssssHHHHHH..
+
+        ..ssssssHHHHHH..
+
+        ..sksssHHHHHHH..
+
+        ..sksssHHHHHHH..
+
+        ..sssssHHHHHHH..
+
+        ...sssHHHHHHH...
+
+        ...SSSSSSSSS....
+
+        _____SSSS_______'
+    - x: 0
+      y: 27
+      rows: ____GGGGGGG_____
+  left_b:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......HHHHH.....
+
+        ....HHHHHHHH....
+
+        ...HHHHHHHHHH...
+
+        ..HHHHHHHHHHHH..
+
+        ..HHHHHHHHHHHH..
+
+        ..HsssssHHHHHH..
+
+        ..ssssssHHHHHH..
+
+        ..sksssHHHHHHH..
+
+        ..sksssHHHHHHH..
+
+        ..sssssHHHHHHH..
+
+        ...sssHHHHHHH...
+
+        ...SSSSSSSSS....
+
+        _____SSSS_______'
+    - x: 0
+      y: 27
+      rows: ____GGGGGGG_____

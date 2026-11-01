@@ -1,0 +1,128 @@
+name: cook
+description: Blue Twi'lek cantina cook in an apron (replaces Cook).
+kit: person16x32_still
+replaces: graphics/object_events/pics/people/cook.png
+graphics_info: Cook
+notes: 'Group 6, B style: the cook''s own body as regions (pink apron A, blue arms H, olive trousers P), new blue Twi''lek head: two head-tails over the shoulders with tan leather wraps, under a white cook''s
+  skullcap.'
+palette: npc_1
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_1
+shade: true
+materials:
+  T: skin-b@
+  L: b
+  H: b
+  W: w/c
+  A: a
+  B: s
+  P: c
+legend:
+  k: 15
+accept:
+  skin_tones: Twi'lek skin is the blue ramp; the skin ramp is the leather wraps
+  hair_rows: a skullcap over a bald Twi'lek head
+base_sheet: graphics/object_events/pics/people/cook.png
+remap:
+  s: H
+  a: A
+  w: A
+  c: P
+  b: P
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 10
+      rows: '.....WWWWWW.....
+
+        ...WWWWWWWWWW...
+
+        ..WWWWWWWWWWWW..
+
+        ..WWWWWWWWWWWW..
+
+        ..LTTTTTTTTTTL..
+
+        .LLTTTTTTTTTTLL.
+
+        .LLTTTTTTTTTTLL.
+
+        .LLTTkTTTTkTTLL.
+
+        .LLTTkTTTTkTTLL.
+
+        .LLLTTTTTTTTLLL.
+
+        .BBB_TTTTTT_BBB.
+
+        _LLL________LLL_
+
+        _LL__________LL_
+
+        _LL__________LL_'
+  up:
+    patches:
+    - x: 0
+      y: 10
+      rows: '.....WWWWWW.....
+
+        ...WWWWWWWWWW...
+
+        ..WWWWWWWWWWWW..
+
+        ..WWWWWWWWWWWW..
+
+        ..TTTTTTTTTTTT..
+
+        .TTTTTTTTTTTTTT.
+
+        .TTTTTTTTTTTTTT.
+
+        .TTTTTTTTTTTTTT.
+
+        .TTTTTTTTTTTTTT.
+
+        ..TTTTLTTLTTTT..
+
+        ____LLL__LLL____
+
+        ____LLL__LLL____
+
+        ____LLL__LLL____
+
+        _____LL__LL_____
+
+        _____LL__LL_____'
+  left:
+    patches:
+    - x: 0
+      y: 10
+      rows: '......WWWWW.....
+
+        ....WWWWWWWW....
+
+        ...WWWWWWWWWW...
+
+        ..WWWWWWWWWWW...
+
+        ..TTTTTTTTTTL...
+
+        ..TTTTTTTTTLLL..
+
+        ..TTTTTTTTTLLL..
+
+        ..TkTTTTTTTLLL..
+
+        ..TkTTTTTTLLLL..
+
+        ..TTTTTTTTLLLL..
+
+        ...TTTTTTTBBB...
+
+        ....TTTT__LLL...
+
+        __________LLL___
+
+        __________LLL___
+
+        ___________LL___'

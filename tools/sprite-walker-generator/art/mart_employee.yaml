@@ -1,0 +1,220 @@
+name: mart_employee
+description: Supply-depot clerk in a utility vest with a comlink headset and datapad (replaces Mart Employee).
+kit: person16x32
+replaces: graphics/object_events/pics/people/mart_employee.png
+graphics_info: MartEmployee
+notes: 'Group 6, B style: the clerk''s own head and body as regions (shirt and trousers -> blue jumpsuit J/T, apron -> pink utility vest V with pocket studs), black comlink headset, datapad with a lit screen
+  at the hip.'
+palette: npc_1
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_1
+shade: true
+materials:
+  H: c
+  J: b
+  T: b
+  V: a
+  S: c
+legend:
+  k: 15
+  W: 14
+  P: 8
+accept: {}
+base_sheet: graphics/object_events/pics/people/mart_employee.png
+remap:
+  c: H
+  b: J
+  w: V
+  a: S
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 12
+      rows: '....kkkkkkkk....
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        _k____________k_
+
+        _k____________k_'
+    - x: 0
+      y: 25
+      rows: '__________kkkk__
+
+        __________kWPk__'
+    - x: 0
+      y: 25
+      rows: _____W__W_______
+  down_a:
+    patches:
+    - x: 0
+      y: 13
+      rows: '....kkkkkkkk....
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        _k____________k_
+
+        _k____________k_'
+    - x: 0
+      y: 26
+      rows: '__________kkkk__
+
+        __________kWPk__'
+    - x: 0
+      y: 26
+      rows: _____W__W_______
+  down_b:
+    patches:
+    - x: 0
+      y: 13
+      rows: '....kkkkkkkk....
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        _k____________k_
+
+        _k____________k_'
+    - x: 0
+      y: 26
+      rows: '__________kkkk__
+
+        __________kWPk__'
+    - x: 0
+      y: 26
+      rows: _____W__W_______
+  up:
+    patches:
+    - x: 0
+      y: 12
+      rows: '....kkkkkkkk....
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        _k____________k_
+
+        _k____________k_'
+  up_a:
+    patches:
+    - x: 0
+      y: 13
+      rows: '....kkkkkkkk....
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        _k____________k_
+
+        _k____________k_'
+  up_b:
+    patches:
+    - x: 0
+      y: 13
+      rows: '....kkkkkkkk....
+
+        ________________
+
+        ________________
+
+        ________________
+
+        ________________
+
+        _k____________k_
+
+        _k____________k_'
+  left:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.....kkkkkk.....
+
+        ________________
+
+        ________________
+
+        ________________
+
+        _________k______
+
+        ________kk______
+
+        ________kk______'
+    - x: 0
+      y: 25
+      rows: '___kkkk_________
+
+        ___kWPk_________'
+  left_a:
+    patches:
+    - x: 0
+      y: 13
+      rows: '.....kkkkkk.....
+
+        ________________
+
+        ________________
+
+        ________________
+
+        _________k______
+
+        ________kk______
+
+        ________kk______'
+    - x: 0
+      y: 26
+      rows: '___kkkk_________
+
+        ___kWPk_________'
+  left_b:
+    patches:
+    - x: 0
+      y: 13
+      rows: '.....kkkkkk.....
+
+        ________________
+
+        ________________
+
+        ________________
+
+        _________k______
+
+        ________kk______
+
+        ________kk______'
+    - x: 0
+      y: 26
+      rows: '___kkkk_________
+
+        ___kWPk_________'

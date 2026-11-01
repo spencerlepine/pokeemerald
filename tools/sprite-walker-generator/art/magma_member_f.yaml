@@ -1,0 +1,361 @@
+name: magma_member_f
+description: Stormtrooper (f) in white armour with a squad pauldron (replaces Team Magma Grunt F).
+kit: person16x32
+replaces: graphics/object_events/pics/people/team_magma/magma_member_f.png
+graphics_info: MagmaMemberF
+notes: 'Group 6, B style: her body as regions (arms, legs and boots -> white armour over a black bodyglove), new stormtrooper helmet with green-tinted lenses, frowning grille and grey cheek tubes, white
+  chest plate, grey belt, orange squad pauldron.'
+palette: npc_3
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_3
+shade: true
+materials:
+  W: w/a
+  Q: a
+  U: w/a
+  L: w/a
+  P: w/a
+  B: a
+  O: c
+legend:
+  k: 15
+  E: 10
+  e: 9
+  g: 6
+  d: 7
+accept:
+  hair_rows: a helmet, no hair
+  skin_tones: 'full armour: no skin shows'
+  eye_row: black helmet lenses, no face
+  edge_black: the bodyglove between the plates is black by design
+  inner_black: the bodyglove between the plates is black by design
+  colours_used: 'a stormtrooper is white armour on a black bodyglove: white, black, the grey shading ramp, green-tinted lenses and the orange squad pauldron are every colour the costume has'
+base_sheet: graphics/object_events/pics/people/team_magma/magma_member_f.png
+remap:
+  s: U
+  b: L
+  c: P
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 11
+      rows: '.....WWWWWW.....
+
+        ...WWWWWWWWWW...
+
+        ..WWWWWWWWWWWW..
+
+        ..WWgWWWWWWgWW..
+
+        .QWWWWWggWWWWWQ.
+
+        .QWWeEWWWWEeWWQ.
+
+        .gWEEEWWWWEEEWg.
+
+        .QQWWWWggWWWWQQ.
+
+        .QgQWWggggWWQgQ.
+
+        ..QgQdgddgdQgQ..
+
+        ...QQQggggQQQ...'
+    - x: 0
+      y: 22
+      rows: '___kkkkkkkkkk___
+
+        _OOkPPPgPPPPkUU_
+
+        _OOkkkkkkkkkkUU_
+
+        ___kkPgPPgPkk___
+
+        ___BBBdBBdBBB___'
+  down_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.....WWWWWW.....
+
+        ...WWWWWWWWWW...
+
+        ..WWWWWWWWWWWW..
+
+        ..WWgWWWWWWgWW..
+
+        .QWWWWWggWWWWWQ.
+
+        .QWWeEWWWWEeWWQ.
+
+        .gWEEEWWWWEEEWg.
+
+        .QQWWWWggWWWWQQ.
+
+        .QgQWWggggWWQgQ.
+
+        ..QgQdgddgdQgQ..
+
+        ...QQQggggQQQ...'
+    - x: 0
+      y: 23
+      rows: '___kkkkkkkkkk___
+
+        _OOkPPPgPPPPkUU_
+
+        _OOkkkkkkkkkkUU_
+
+        ___kkPgPPgPkk___
+
+        ___BBBdBBdBBB___'
+  down_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.....WWWWWW.....
+
+        ...WWWWWWWWWW...
+
+        ..WWWWWWWWWWWW..
+
+        ..WWgWWWWWWgWW..
+
+        .QWWWWWggWWWWWQ.
+
+        .QWWeEWWWWEeWWQ.
+
+        .gWEEEWWWWEEEWg.
+
+        .QQWWWWggWWWWQQ.
+
+        .QgQWWggggWWQgQ.
+
+        ..QgQdgddgdQgQ..
+
+        ...QQQggggQQQ...'
+    - x: 0
+      y: 23
+      rows: '___kkkkkkkkkk___
+
+        _OOkPPPgPPPPkUU_
+
+        _OOkkkkkkkkkkUU_
+
+        ___kkPgPPgPkk___
+
+        ___BBBdBBdBBB___'
+  up:
+    patches:
+    - x: 0
+      y: 11
+      rows: '.....WWWWWW.....
+
+        ...WWWWWWWWWW...
+
+        ..WWWWWWWWWWWW..
+
+        ..WWgWWWWWWgWW..
+
+        .QWWWWWggWWWWWQ.
+
+        .gWWWWWWWWWWWWg.
+
+        .QgWgWgWgWgWgWQ.
+
+        .QQWWWWWWWWWWQQ.
+
+        .QQQWWWWWWWWQQQ.
+
+        ..QQQQWWWWQQQQ..
+
+        ...QQQQQQQQQQ...'
+    - x: 0
+      y: 22
+      rows: '___kkkkkkkkkk___
+
+        _UUkPPPPPPPPkOO_
+
+        _UUkkkkkkkkkkOO_
+
+        ___kkPPggPPkk___
+
+        ___BBBdBBdBBB___'
+  up_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.....WWWWWW.....
+
+        ...WWWWWWWWWW...
+
+        ..WWWWWWWWWWWW..
+
+        ..WWgWWWWWWgWW..
+
+        .QWWWWWggWWWWWQ.
+
+        .gWWWWWWWWWWWWg.
+
+        .QgWgWgWgWgWgWQ.
+
+        .QQWWWWWWWWWWQQ.
+
+        .QQQWWWWWWWWQQQ.
+
+        ..QQQQWWWWQQQQ..
+
+        ...QQQQQQQQQQ...'
+    - x: 0
+      y: 23
+      rows: '___kkkkkkkkkk___
+
+        _UUkPPPPPPPPkOO_
+
+        _UUkkkkkkkkkkOO_
+
+        ___kkPPggPPkk___
+
+        ___BBBdBBdBBB___'
+  up_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '.....WWWWWW.....
+
+        ...WWWWWWWWWW...
+
+        ..WWWWWWWWWWWW..
+
+        ..WWgWWWWWWgWW..
+
+        .QWWWWWggWWWWWQ.
+
+        .gWWWWWWWWWWWWg.
+
+        .QgWgWgWgWgWgWQ.
+
+        .QQWWWWWWWWWWQQ.
+
+        .QQQWWWWWWWWQQQ.
+
+        ..QQQQWWWWQQQQ..
+
+        ...QQQQQQQQQQ...'
+    - x: 0
+      y: 23
+      rows: '___kkkkkkkkkk___
+
+        _UUkPPPPPPPPkOO_
+
+        _UUkkkkkkkkkkOO_
+
+        ___kkPPggPPkk___
+
+        ___BBBdBBdBBB___'
+  left:
+    patches:
+    - x: 0
+      y: 11
+      rows: '......WWWWW.....
+
+        ....WWWWWWWWW...
+
+        ...WWWWWWWWWWW..
+
+        ..WWWWWWWgWWWW..
+
+        ..WWWWWWWWWWWWQ.
+
+        .EEEWWWWWWgWWWQ.
+
+        .WeEWWWWWWWWWQQ.
+
+        QWWWWgWWWWWWWQQ.
+
+        gdgQWgWWWWWWQQ..
+
+        .ggQQWWWWWWQQQ..
+
+        ..QQQQQQQQQQQ...'
+    - x: 0
+      y: 22
+      rows: '____kkkkkkk_____
+
+        ____PPPgPkk_____
+
+        ____kkkkkkk_____
+
+        ____kPPPPkk_____
+
+        ____BBdBBBB_____'
+  left_a:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......WWWWW.....
+
+        ....WWWWWWWWW...
+
+        ...WWWWWWWWWWW..
+
+        ..WWWWWWWgWWWW..
+
+        ..WWWWWWWWWWWWQ.
+
+        .EEEWWWWWWgWWWQ.
+
+        .WeEWWWWWWWWWQQ.
+
+        QWWWWgWWWWWWWQQ.
+
+        gdgQWgWWWWWWQQ..
+
+        .ggQQWWWWWWQQQ..
+
+        ..QQQQQQQQQQQ...'
+    - x: 0
+      y: 23
+      rows: '____kkkkkkk_____
+
+        ____PPPgPkk_____
+
+        ____kkkkkkk_____
+
+        ____kPPPPkk_____
+
+        ____BBdBBBB_____'
+  left_b:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......WWWWW.....
+
+        ....WWWWWWWWW...
+
+        ...WWWWWWWWWWW..
+
+        ..WWWWWWWgWWWW..
+
+        ..WWWWWWWWWWWWQ.
+
+        .EEEWWWWWWgWWWQ.
+
+        .WeEWWWWWWWWWQQ.
+
+        QWWWWgWWWWWWWQQ.
+
+        gdgQWgWWWWWWQQ..
+
+        .ggQQWWWWWWQQQ..
+
+        ..QQQQQQQQQQQ...'
+    - x: 0
+      y: 23
+      rows: '____kkkkkkk_____
+
+        ____PPPgPkk_____
+
+        ____kkkkkkk_____
+
+        ____kPPPPkk_____
+
+        ____BBdBBBB_____'

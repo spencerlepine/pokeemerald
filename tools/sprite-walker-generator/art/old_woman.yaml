@@ -1,0 +1,269 @@
+name: old_woman
+description: Elderly woman in a desert shawl drawn over her hair (replaces Old Woman).
+kit: person16x32
+replaces: graphics/object_events/pics/people/old_woman.png
+graphics_info: OldWoman
+notes: 'Group 6, B style: the old woman''s own body as regions (cardigan G, skirt K), new head: a brown desert shawl drawn up over the hair and falling over the shoulders, with a green woven stripe and
+  white tassels.'
+palette: npc_3
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_3
+shade: true
+materials:
+  H: c@
+  S: b
+  a: a
+  G: b
+  K: c
+legend:
+  k: 15
+  t: 14
+  W: 14
+accept: {}
+base_sheet: graphics/object_events/pics/people/old_woman.png
+remap:
+  b: G
+  c: K
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...SSSSSSSSSS...
+
+        ..HHHHHHHHHHHH..
+
+        .HHHaaaaaaaaHHH.
+
+        .HHaassssssaaHH.
+
+        .HHassssssssaHH.
+
+        .HHssksssskssHH.
+
+        .HHssksssskssHH.
+
+        .HHHssssssssHHH.
+
+        HHHHHssssssHHHHH
+
+        .tHtH______HtHt.'
+  down_a:
+    patches:
+    - x: 0
+      y: 13
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...SSSSSSSSSS...
+
+        ..HHHHHHHHHHHH..
+
+        .HHHaaaaaaaaHHH.
+
+        .HHaassssssaaHH.
+
+        .HHassssssssaHH.
+
+        .HHssksssskssHH.
+
+        .HHssksssskssHH.
+
+        .HHHssssssssHHH.
+
+        HHHHHssssssHHHHH
+
+        .tHtH______HtHt.'
+  down_b:
+    patches:
+    - x: 0
+      y: 13
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...SSSSSSSSSS...
+
+        ..HHHHHHHHHHHH..
+
+        .HHHaaaaaaaaHHH.
+
+        .HHaassssssaaHH.
+
+        .HHassssssssaHH.
+
+        .HHssksssskssHH.
+
+        .HHssksssskssHH.
+
+        .HHHssssssssHHH.
+
+        HHHHHssssssHHHHH
+
+        .tHtH______HtHt.'
+  up:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...SSSSSSSSSS...
+
+        ..HHHHHHHHHHHH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        HHHHHHHHHHHHHHHH
+
+        HHHHHHHHHHHHHHHH
+
+        HHHHHHHHHHHHHHHH
+
+        .HHHHHHHHHHHHHH.
+
+        .tHtHtHtHtHtHtH.'
+  up_a:
+    patches:
+    - x: 0
+      y: 13
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...SSSSSSSSSS...
+
+        ..HHHHHHHHHHHH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        HHHHHHHHHHHHHHHH
+
+        HHHHHHHHHHHHHHHH
+
+        HHHHHHHHHHHHHHHH
+
+        .HHHHHHHHHHHHHH.
+
+        .tHtHtHtHtHtHtH.'
+  up_b:
+    patches:
+    - x: 0
+      y: 13
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...SSSSSSSSSS...
+
+        ..HHHHHHHHHHHH..
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        .HHHHHHHHHHHHHH.
+
+        HHHHHHHHHHHHHHHH
+
+        HHHHHHHHHHHHHHHH
+
+        HHHHHHHHHHHHHHHH
+
+        .HHHHHHHHHHHHHH.
+
+        .tHtHtHtHtHtHtH.'
+  left:
+    patches:
+    - x: 0
+      y: 12
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...SSSSSSSSSS...
+
+        ..HHHHHHHHHHHH..
+
+        ..aaaaHHHHHHHH..
+
+        .aasssaHHHHHHH..
+
+        .sssssaHHHHHHH..
+
+        .skssssHHHHHHH..
+
+        .skssssHHHHHHH..
+
+        .ssssssHHHHHH...
+
+        ..sssssHHHHHH...
+
+        ...____HtHtH....'
+  left_a:
+    patches:
+    - x: 0
+      y: 13
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...SSSSSSSSSS...
+
+        ..HHHHHHHHHHHH..
+
+        ..aaaaHHHHHHHH..
+
+        .aasssaHHHHHHH..
+
+        .sssssaHHHHHHH..
+
+        .skssssHHHHHHH..
+
+        .skssssHHHHHHH..
+
+        .ssssssHHHHHH...
+
+        ..sssssHHHHHH...
+
+        ...____HtHtH....'
+  left_b:
+    patches:
+    - x: 0
+      y: 13
+      rows: '......HHHH......
+
+        ....HHHHHHHH....
+
+        ...SSSSSSSSSS...
+
+        ..HHHHHHHHHHHH..
+
+        ..aaaaHHHHHHHH..
+
+        .aasssaHHHHHHH..
+
+        .sssssaHHHHHHH..
+
+        .skssssHHHHHHH..
+
+        .skssssHHHHHHH..
+
+        .ssssssHHHHHH...
+
+        ..sssssHHHHHH...
+
+        ...____HtHtH....'

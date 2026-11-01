@@ -1,0 +1,157 @@
+name: winona
+description: 'CHIRPA: elder Ewok chief in a horned leather hood with a staff (replaces Winona).'
+kit: person16x32_still
+replaces: graphics/object_events/pics/people/gym_leaders/winona.png
+graphics_info: Winona
+notes: 'Group 6, B style (stand-only, so the figure is redrawn over Winona''s frame): grey-furred Ewok with big black eyes and a tan muzzle, brown leather hood with two bone horns, green leaf necklace,
+  short brown staff with a bone knob held at his side.'
+palette: npc_3
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_3
+shade: true
+materials:
+  C: c@
+  F: skin-a
+  U: a
+  A: a
+  M: s
+  L: b
+  S: c
+  D: c
+legend:
+  k: 15
+  W: 14
+  h: 14
+  K: 14
+accept:
+  skin_tones: Ewok fur is the grey ramp; only the muzzle uses the skin ramp
+  hair_rows: a leather hood over fur
+  eye_row: big Ewok eyes inside grey fur
+base_sheet: graphics/object_events/pics/people/gym_leaders/winona.png
+frames:
+  down:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        .h...CCCC...h..K
+
+        ..hCCCCCCCCh..SK
+
+        .CCCCCCCCCCCC.S.
+
+        CCCCCCCCCCCCCCS.
+
+        CCFFFFFFFFFFCCS.
+
+        CFFWkFFFFWkFFCS.
+
+        CFFkkFFFFkkFFCS.
+
+        CFFFFMMMMFFFFCS.
+
+        .CFFMMkkMMFFC.S.
+
+        ..FFFMMMMFFF..S.
+
+        ...LLLLLLLL...S.
+
+        .UUUUULLUUUUU.S.
+
+        AUUUUUUUUUUUUAS.
+
+        AUUUUUUUUUUUAAS.
+
+        AAUUUUUUUUUUAAS.
+
+        .AUUUUUUUUUUA.S.
+
+        ..UUUUUUUUUU..S.
+
+        ..UUUU..UUUU..S.
+
+        ..DDDD..DDDD..S.'
+  up:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        .h...CCCC...h..K
+
+        ..hCCCCCCCCh..SK
+
+        .CCCCCCCCCCCC.S.
+
+        CCCCCCCCCCCCCCS.
+
+        CCCCCCCCCCCCCCS.
+
+        CCCCCCCCCCCCCCS.
+
+        CCCCCCCCCCCCCCS.
+
+        CCCCCCCCCCCCCCS.
+
+        .CCCCCCCCCCCC.S.
+
+        ..CCCCCCCCCC..S.
+
+        ...LLLLLLLL...S.
+
+        .UUUUUUUUUUUU.S.
+
+        AUUUUUUUUUUUUAS.
+
+        AAUUUUUUUUUUAAS.
+
+        AAUUUUUUUUUUAAS.
+
+        .AUUUUUUUUUUA.S.
+
+        ..UUUUUUUUUU..S.
+
+        ..UUUU..UUUU..S.
+
+        ..DDDD..DDDD..S.'
+  left:
+    patches:
+    - x: 0
+      y: 11
+      rows: '................
+
+        .K......CCCC..h.
+
+        .KS...CCCCCCCh..
+
+        ..S..CCCCCCCCC..
+
+        ..S.CCCCCCCCCCC.
+
+        ..SCFFFFCCCCCCC.
+
+        ..SWkFFFFCCCCCC.
+
+        ..SkkFFFFCCCCCC.
+
+        .MMMFFFFFCCCCCC.
+
+        MkMMFFFFFCCCCC..
+
+        .MMMFFFFFCCCC...
+
+        ..SLLLLLLLLL....
+
+        ..AAUUUUUUUUU...
+
+        ..SAAUUUUUUUUU..
+
+        ..SAAUUUUUUUUU..
+
+        ..S.UUUUUUUUU...
+
+        ..S.UUUUUUUU....
+
+        ..S..UUUUUUU....
+
+        ..S..DDD.DDD....'
