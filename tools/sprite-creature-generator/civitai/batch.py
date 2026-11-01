@@ -52,7 +52,26 @@ AUTHOR = "spencerlepine <60903378+spencerlepine@users.noreply.github.com>"
 sys.path.insert(0, str(HERE))
 import civitai_creature as cc  # noqa: E402
 
-git_lock = threading.Lock()
+class RepoLock:
+    """Thread lock + a file lock, so batch.py and forms.py runs in parallel never interleave
+    their read-modify-write of pending_art.csv or their git commands."""
+    def __init__(self):
+        self.t = threading.Lock()
+
+    def __enter__(self):
+        import fcntl
+        self.t.acquire()
+        self.f = open(REPO / ".git" / "sprite-batch.lock", "w")
+        fcntl.flock(self.f, fcntl.LOCK_EX)
+
+    def __exit__(self, *exc):
+        import fcntl
+        fcntl.flock(self.f, fcntl.LOCK_UN)
+        self.f.close()
+        self.t.release()
+
+
+git_lock = RepoLock()
 spend_lock = threading.Lock()
 spent = 0
 stop = threading.Event()

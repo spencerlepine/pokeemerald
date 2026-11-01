@@ -381,12 +381,40 @@ def native(img: Image.Image, period: int | None = None) -> tuple[Image.Image, in
     return Image.fromarray(out, "RGB"), p
 
 
-def knock_out_background(img: Image.Image, tol: int = 40) -> Image.Image:
-    """Flood-fill from the border through pixels near the border's median colour -> transparent."""
+def _components(m: np.ndarray) -> list[np.ndarray]:
+    """4-connected components of a boolean mask, as (y, x) index arrays."""
+    lab = np.zeros(m.shape, int)
+    out, h, w = [], *m.shape
+    for y, x in zip(*np.nonzero(m)):
+        if lab[y, x]:
+            continue
+        lab[y, x] = len(out) + 1
+        dq, pts = deque([(y, x)]), []
+        while dq:
+            cy, cx = dq.popleft()
+            pts.append((cy, cx))
+            for ny, nx in ((cy + 1, cx), (cy - 1, cx), (cy, cx + 1), (cy, cx - 1)):
+                if 0 <= ny < h and 0 <= nx < w and m[ny, nx] and not lab[ny, nx]:
+                    lab[ny, nx] = len(out) + 1
+                    dq.append((ny, nx))
+        out.append(np.array(pts))
+    return out
+
+
+def knock_out_background(img: Image.Image, tol: int = 32, pockets: bool = True) -> Image.Image:
+    """Flood-fill from the border through pixels near the border's median colour -> transparent.
+
+    Then enclosed pockets of background (between legs and body, inside jaws, the hole of a ring):
+    a patch of the background colour that the border fill cannot reach. It is cut too when it is
+    background-flat (mean distance <= 16) and walled in by outline (>= 60% of its rim is near-black).
+    White *parts* of a creature (a belly, a white shell) touch shading colours, not only outline,
+    so they stay (measured 2026-11-01: real pockets 0.69-1.0 outline rim, white body parts 0-0.26).
+    tol 32 (was 40) so off-white body parts touching the background are not eaten."""
     a = np.array(img.convert("RGB")).astype(int)
     h, w, _ = a.shape
     bg = np.median(np.concatenate([a[0], a[-1], a[:, 0], a[:, -1]]), axis=0)
-    near = np.abs(a - bg).sum(2) <= tol
+    dist = np.abs(a - bg).sum(2)
+    near = dist <= tol
     seen = np.zeros((h, w), bool)
     dq = deque([(y, x) for y in range(h) for x in (0, w - 1)] + [(y, x) for x in range(w) for y in (0, h - 1)])
     while dq:
@@ -394,6 +422,18 @@ def knock_out_background(img: Image.Image, tol: int = 40) -> Image.Image:
         if 0 <= y < h and 0 <= x < w and not seen[y, x] and near[y, x]:
             seen[y, x] = True
             dq.extend(((y + 1, x), (y - 1, x), (y, x + 1), (y, x - 1)))
+    if pockets:
+        lum = a @ np.array([0.3, 0.59, 0.11])
+        for pts in _components(near & ~seen):
+            if len(pts) < 3 or dist[pts[:, 0], pts[:, 1]].mean() > 16:
+                continue
+            m = np.zeros((h, w), bool)
+            m[pts[:, 0], pts[:, 1]] = True
+            rim = np.zeros_like(m)
+            rim[1:] |= m[:-1]; rim[:-1] |= m[1:]; rim[:, 1:] |= m[:, :-1]; rim[:, :-1] |= m[:, 1:]
+            rim &= ~m & ~seen
+            if rim.any() and (lum[rim] < 55).mean() >= 0.6:
+                seen |= m
     return Image.fromarray(np.dstack([a, np.where(seen, 0, 255)]).astype(np.uint8), "RGBA")
 
 
