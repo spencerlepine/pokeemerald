@@ -2,7 +2,7 @@
   "init": "refs/dusclops_prep.png",
   "init_source": "https://static.wikia.nocookie.net/starwars/images/0/0e/Undead_Nightsister.png/revision/latest/scale-to-width-down/1000?cb=20250122063231",
   "flip": false,
-  "denoise": 0.5,
+  "denoise": 0.45,
   "desc": "hunched undead dark side wraith in ragged wrappings with one burning eye",
   "colour": "dark red and bone gray",
   "ref_note": "Undead Nightsister render: whole hunched skull-faced undead, transparent, head toward left"
