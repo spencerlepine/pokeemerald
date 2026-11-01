@@ -26,3 +26,11 @@ rules:
   - name: water-dusty                 # keep water, a touch greener and calmer
     match: {hue: [245, 300], chroma_min: 30}
     set:   {hue_shift: -12, chroma_scale: 0.9}
+retexture:                            # stage 2: regenerate ground pixels (indices inside the bank)
+  - op: speckle                       # General metatile 1 = the open ground cell (tiles 2 and 3, bank 2)
+    tileset: primary
+    metatiles: [1]
+    tones: {base: 13, light: 12, dark: 14}
+    seed: 7
+    light_blobs: 2
+    dark_dots: 4

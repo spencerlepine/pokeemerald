@@ -85,6 +85,7 @@ class Recipe:
     overrides: dict[str, dict[int, Colour]] = field(default_factory=dict)
     skip_banks: set[str] = field(default_factory=set)
     notes: str = ""
+    retexture: list[dict] = field(default_factory=list)   # stage 2 ops, see __main__._build_pair
 
     @staticmethod
     def load(path: Path) -> "Recipe":
@@ -99,13 +100,14 @@ class Recipe:
         ov = {}
         for bank, entries in (d.get("overrides") or {}).items():
             ov[bank] = {int(k): colour.hex_to_rgb(v) for k, v in entries.items()}
-        return Recipe(d["name"], rules, ov, set(d.get("skip_banks") or []), d.get("notes", ""))
+        return Recipe(d["name"], rules, ov, set(d.get("skip_banks") or []), d.get("notes", ""), d.get("retexture") or [])
 
 
 def recolour_bank(pal: list[Colour], recipe: Recipe, key: str, log: list[str] | None = None) -> list[Colour]:
     """One 16-entry bank -> new bank. Index 0 is kept (transparent / backdrop)."""
-    out: list[Colour] = [pal[0]]
-    seen = {colour.gba_snap(np.array(pal[0])).tobytes()}
+    trunc = lambda c: tuple((int(v) >> 3) << 3 for v in c)   # what gbagfx does to a vanilla value
+    out: list[Colour] = [trunc(pal[0])]
+    seen = {np.array(out[0], np.uint8).tobytes()}
     rgb = np.array(pal, dtype=np.float64)
     lch = colour.srgb_to_lch(rgb)
     overrides = recipe.overrides.get(key, {})
@@ -114,6 +116,7 @@ def recolour_bank(pal: list[Colour], recipe: Recipe, key: str, log: list[str] | 
         dup = next((j for j in range(1, i) if pal[j] == pal[i]), None)
         if dup is not None and i not in overrides:
             out.append(out[dup])
+            seen.add(np.array(out[-1], np.uint8).tobytes())
             if log is not None:
                 log.append(f"{key}[{i:2d}] {colour.rgb_to_hex(pal[i])} -> {colour.rgb_to_hex(out[-1])}  (same as {dup})")
             continue
@@ -129,7 +132,7 @@ def recolour_bank(pal: list[Colour], recipe: Recipe, key: str, log: list[str] | 
                         c = colour.lch_to_srgb(r.apply(lch[i]))
                         why = r.name
                         break
-        snapped = colour.gba_snap(c)
+        snapped = colour.gba_snap(c) if why != "kept" else np.array(trunc(c), np.uint8)
         # de-duplicate inside the bank by nudging lightness
         tries = 0
         while snapped.tobytes() in seen and tries < 6:

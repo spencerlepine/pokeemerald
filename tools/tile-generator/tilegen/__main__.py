@@ -73,6 +73,66 @@ def cmd_recolour(a):
     print(f"{out}/review_{rec.name}.png, palettes under {out}/palettes/<tileset>/NN.pal")
 
 
+def _build_pair(rec, primary: str, secondary: str):
+    """Recolour both tilesets of a pair and apply the recipe's `retexture:` ops to them."""
+    from . import recolour, edit, ground
+    import numpy as np
+    van = gba.TilesetPair(gba.load_tileset_by_header(primary), gba.load_tileset_by_header(secondary))
+    new = gba.TilesetPair(edit.copy_tileset(recolour.recolour_tileset(van.primary, rec)),
+                          edit.copy_tileset(recolour.recolour_tileset(van.secondary, rec)))
+    for op in rec.retexture:
+        ts = new.primary if op.get("tileset", "primary") == "primary" else new.secondary
+        if op["op"] == "speckle":
+            t = op["tones"]
+            A = ground.speckle(8, t["base"], t.get("light"), t.get("dark"), seed=op.get("seed", 0) * 2,
+                               light_blobs=op.get("light_blobs", 2), dark_dots=op.get("dark_dots", 4), blob=op.get("blob", 2))
+            B = ground.speckle(8, t["base"], t.get("light"), t.get("dark"), seed=op.get("seed", 0) * 2 + 1,
+                               light_blobs=op.get("light_blobs", 2), dark_dots=op.get("dark_dots", 4), blob=op.get("blob", 2))
+            for mid in op["metatiles"]:
+                edit.set_metatile_layer(ts, mid, op.get("layer", 0), np.block([[A, B], [B, A]]))
+        else:
+            raise SystemExit(f"unknown retexture op {op['op']}")
+    return van, new
+
+
+def cmd_build(a):
+    """recipe -> game-format tileset pair under out/<recipe>/, the palette gate, and a review sheet."""
+    from . import recolour, review, pack
+    rec = recolour.Recipe.load(a.recipe)
+    L = gba.layouts()
+    lay = L[a.layouts[0]]
+    van, new = _build_pair(rec, lay.primary, lay.secondary)
+    out = Path(a.out) / rec.name
+    ok_all = True
+    for ts in (new.primary, new.secondary):
+        d = pack.write_tileset(ts, out / ts.name)
+        ok, lines = pack.check_tileset(ts, d)
+        ok_all &= ok
+        (d / "check.txt").write_text("\n".join(lines) + "\n")
+        print(f"{'OK  ' if ok else 'FAIL'} {d}  ({len(ts.tiles)} tiles, {ts.n_metatiles} metatiles)")
+    panels = [review.side_by_side([(f"{L[n].name} vanilla", gba.render_layout(L[n], pair=van)),
+                                   (f"{L[n].name} {rec.name}", gba.render_layout(L[n], pair=new))], zoom_factor=a.zoom)
+              for n in a.layouts if (L[n].primary, L[n].secondary) == (lay.primary, lay.secondary)]
+    review.stack(panels).save(out / "review.png")
+    print(f"review: {out / 'review.png'}")
+    if not ok_all:
+        raise SystemExit("palette gate failed; see check.txt")
+
+
+def cmd_install(a):
+    """Copy a built pair into game/ (after the gate). Use --revert to put the vanilla files back (git)."""
+    from . import recolour, pack
+    import subprocess
+    rec = recolour.Recipe.load(a.recipe)
+    L = gba.layouts(); lay = L[a.layout]
+    van, new = _build_pair(rec, lay.primary, lay.secondary)
+    out = Path(a.out) / rec.name
+    for ts in (new.primary, new.secondary):
+        d = pack.write_tileset(ts, out / ts.name)
+        pack.install_tileset(ts, d)
+        print(f"installed {ts.path.relative_to(gba.game_dir())}")
+
+
 def cmd_list_layouts(a):
     for name, l in sorted(gba.layouts().items()):
         if name.startswith("LAYOUT_"):
@@ -100,6 +160,12 @@ def main(argv=None):
     s.add_argument("recipe"); s.add_argument("--layouts", nargs="+", default=["LittlerootTown_Layout", "Route101_Layout"])
     s.add_argument("--out", default="out/recolour"); s.add_argument("--zoom", type=int, default=2)
     s.set_defaults(fn=cmd_recolour)
+    s = sub.add_parser("build", help="recipe -> game-format tileset pair + palette gate + review")
+    s.add_argument("recipe"); s.add_argument("--layouts", nargs="+", default=["LittlerootTown_Layout", "Route101_Layout"])
+    s.add_argument("--out", default="out"); s.add_argument("--zoom", type=int, default=2); s.set_defaults(fn=cmd_build)
+    s = sub.add_parser("install", help="build and copy the pair a layout uses into game/ (gate enforced)")
+    s.add_argument("recipe"); s.add_argument("--layout", default="LittlerootTown_Layout"); s.add_argument("--out", default="out")
+    s.set_defaults(fn=cmd_install)
     s = sub.add_parser("list-layouts"); s.add_argument("filter", nargs="?"); s.set_defaults(fn=cmd_list_layouts)
     s = sub.add_parser("list-tilesets"); s.set_defaults(fn=cmd_list_tilesets)
 
