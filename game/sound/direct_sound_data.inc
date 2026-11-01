@@ -2173,3 +2173,35 @@ DirectSoundWaveData_sd90_classical_whistle::
 	.align 2
 DirectSoundWaveData_sd90_enhanced_delay_shaku::
 	.incbin "sound/direct_sound_samples/sd90_enhanced_delay_shaku.bin"
+
+	.align 2
+DirectSoundWaveData_sw_astromech_chatter::
+	.incbin "sound/direct_sound_samples/sw_sfx/astromech_chatter.bin"
+
+	.align 2
+DirectSoundWaveData_sw_blaster_bolt::
+	.incbin "sound/direct_sound_samples/sw_sfx/blaster_bolt.bin"
+
+	.align 2
+DirectSoundWaveData_sw_comlink_call::
+	.incbin "sound/direct_sound_samples/sw_sfx/comlink_call.bin"
+
+	.align 2
+DirectSoundWaveData_sw_hyperspace_jump::
+	.incbin "sound/direct_sound_samples/sw_sfx/hyperspace_jump.bin"
+
+	.align 2
+DirectSoundWaveData_sw_pod_throw::
+	.incbin "sound/direct_sound_samples/sw_sfx/pod_throw.bin"
+
+	.align 2
+DirectSoundWaveData_sw_saber_hum::
+	.incbin "sound/direct_sound_samples/sw_sfx/saber_hum.bin"
+
+	.align 2
+DirectSoundWaveData_sw_saber_ignite::
+	.incbin "sound/direct_sound_samples/sw_sfx/saber_ignite.bin"
+
+	.align 2
+DirectSoundWaveData_sw_vader_breath::
+	.incbin "sound/direct_sound_samples/sw_sfx/vader_breath.bin"

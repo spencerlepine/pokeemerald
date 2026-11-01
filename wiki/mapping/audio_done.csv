@@ -1,0 +1,15 @@
+asset_id,made_by,game_file,notes
+cry:torchic,cry-generator,sound/direct_sound_samples/cries/torchic.wav,SUNCHICK (tools/cry-generator/specs/sunchick.yaml); same cry slot and file name
+cry:poochyena,cry-generator,sound/direct_sound_samples/cries/poochyena.wav,MASSIFF (tools/cry-generator/specs/massiff.yaml); same cry slot and file name
+cry:zubat,cry-generator,sound/direct_sound_samples/cries/zubat.wav,MYNOCK (tools/cry-generator/specs/mynock.yaml); same cry slot and file name
+cry:rayquaza,cry-generator,sound/direct_sound_samples/cries/rayquaza.wav,EXOGORTH (tools/cry-generator/specs/exogorth.yaml); same cry slot and file name
+cry:aggron,cry-generator,sound/direct_sound_samples/cries/aggron.wav,PERSUADER (tools/cry-generator/specs/persuader.yaml); same cry slot and file name
+cry:metagross,cry-generator,sound/direct_sound_samples/cries/metagross.wav,R2 UNIT (tools/cry-generator/specs/r2_unit.yaml); same cry slot and file name
+audio:SE_BALL_THROW,sfx-generator,sound/direct_sound_samples/sw_sfx/pod_throw.wav,se_ball_throw.mid now plays voicegroup sw_pod_throw; same song id
+audio:SE_POKENAV_CALL,sfx-generator,sound/direct_sound_samples/sw_sfx/comlink_call.wav,se_pokenav_call.mid now plays voicegroup sw_comlink_call; same song id
+net:se-astromech,sfx-generator,sound/direct_sound_samples/sw_sfx/astromech_chatter.wav,song SE_ASTROMECH_CHATTER (270) installed; call sites still to wire
+net:se-blaster-bolt,sfx-generator,sound/direct_sound_samples/sw_sfx/blaster_bolt.wav,song SE_BLASTER_BOLT (271) installed; call sites still to wire
+net:se-hyperspace-jump,sfx-generator,sound/direct_sound_samples/sw_sfx/hyperspace_jump.wav,song SE_HYPERSPACE_JUMP (272) installed; call sites still to wire
+net:se-saber-hum,sfx-generator,sound/direct_sound_samples/sw_sfx/saber_hum.wav,song SE_SABER_HUM (273) installed (loops; stop it with m4aMPlayStop); call sites still to wire
+net:se-saber-ignite,sfx-generator,sound/direct_sound_samples/sw_sfx/saber_ignite.wav,song SE_SABER_IGNITE (274) installed; call sites still to wire
+net:se-vader-breath,sfx-generator,sound/direct_sound_samples/sw_sfx/vader_breath.wav,song SE_VADER_BREATH (275) installed; call sites still to wire

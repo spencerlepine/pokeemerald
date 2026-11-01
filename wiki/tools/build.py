@@ -51,7 +51,7 @@ MAPPING_FILES = ["species", "characters", "items", "moves", "types", "abilities"
 SWAP_KINDS = {"HOTSWAP", "NET_NEW", "KEEP", "CUT"}
 MAP_STATUSES = {"TODO", "DRAFT", "DONE", "IDEA"}
 ART_STATUSES = {"PENDING_ART", "NEEDS_PLACEHOLDER", "KEEP_ANIM", "KEEP_ART", "NO_ART", "ART_READY"}
-AUDIO_STATUSES = {"PENDING_AUDIO", "NEEDS_PLACEHOLDER", "KEEP_AUDIO", "NO_AUDIO"}
+AUDIO_STATUSES = {"PENDING_AUDIO", "NEEDS_PLACEHOLDER", "KEEP_AUDIO", "NO_AUDIO", "DONE"}
 
 warnings: list[str] = []
 
@@ -567,6 +567,26 @@ def apply_art_ready(art):
                  art_notes="; ".join(x for x in (f"art: {d['art_file']}", d.get("notes", "")) if x))
 
 
+def apply_audio_done(audio):
+    """mapping/audio_done.csv: sounds the owner approved and a tool installed into ../game (cry-generator,
+    sfx-generator). audio_status becomes DONE; game_status is DONE when the row's call sites already play it
+    (hot-swaps). Net-new SEs get their song id but stay NOT_STARTED until something in ../game calls them."""
+    path = MAPPING / "audio_done.csv"
+    if not path.exists():
+        return
+    by_id = {a["asset_id"]: a for a in audio}
+    for d in read(path):
+        a = by_id.get(d["asset_id"])
+        if not a:
+            warn(f"mapping/audio_done.csv: {d['asset_id']} is not in pending_audio.csv")
+            continue
+        if not (ROOT.parent / "game" / d["game_file"]).exists():
+            warn(f"mapping/audio_done.csv: ../game/{d['game_file']} missing")
+        a.update(audio_status="DONE", made_by=d.get("made_by", ""),
+                 notes="; ".join(x for x in (f"in game: {d['game_file']}", d.get("notes", "")) if x))
+        a["game_status"] = "DONE" if a["swap_kind"] == "HOTSWAP" else "NOT_STARTED"
+
+
 def net_new_art(net):
     """NET_NEW rows that need new art have no Emerald asset; list them so the art list is complete."""
     out = []
@@ -992,6 +1012,7 @@ def main() -> None:
     art_cols = frame_sizes.order_cols(art_cols)
     write("pending_art.csv", art, art_cols)
     audio = pending_audio(rows, entities, inv, audio_dec, known)
+    apply_audio_done(audio)
     write("pending_audio.csv", audio, AUDIO_COLS + ["game_status"])
 
     # area progression with planets

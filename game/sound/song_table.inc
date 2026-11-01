@@ -276,12 +276,12 @@ gSongTable::
 	song se_pike_curtain_close, MUSIC_PLAYER_SE1, 1
 	song se_pike_curtain_open, MUSIC_PLAYER_SE1, 1
 	song se_sudowoodo_shake, MUSIC_PLAYER_SE1, 1
-	song dummy_song_header, MUSIC_PLAYER_BGM, 0
-	song dummy_song_header, MUSIC_PLAYER_BGM, 0
-	song dummy_song_header, MUSIC_PLAYER_BGM, 0
-	song dummy_song_header, MUSIC_PLAYER_BGM, 0
-	song dummy_song_header, MUSIC_PLAYER_BGM, 0
-	song dummy_song_header, MUSIC_PLAYER_BGM, 0
+	song se_astromech_chatter, MUSIC_PLAYER_SE1, 1
+	song se_blaster_bolt, MUSIC_PLAYER_SE1, 1
+	song se_hyperspace_jump, MUSIC_PLAYER_SE1, 1
+	song se_saber_hum, MUSIC_PLAYER_SE1, 1
+	song se_saber_ignite, MUSIC_PLAYER_SE1, 1
+	song se_vader_breath, MUSIC_PLAYER_SE1, 1
 	song dummy_song_header, MUSIC_PLAYER_BGM, 0
 	song dummy_song_header, MUSIC_PLAYER_BGM, 0
 	song dummy_song_header, MUSIC_PLAYER_BGM, 0

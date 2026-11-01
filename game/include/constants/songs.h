@@ -277,6 +277,14 @@
 #define SE_PIKE_CURTAIN_OPEN        268 // SE_CURTAIN1
 #define SE_SUDOWOODO_SHAKE          269 // SE_USSOKI
 
+// Star Wars SFX (sfx-generator)
+#define SE_ASTROMECH_CHATTER        270
+#define SE_BLASTER_BOLT             271
+#define SE_HYPERSPACE_JUMP          272
+#define SE_SABER_HUM                273
+#define SE_SABER_IGNITE             274
+#define SE_VADER_BREATH             275
+
 // Music
 #define MUS_LITTLEROOT_TEST         350 // MUS_TETSUJI          // Unused, likely a test track.
 #define MUS_GSC_ROUTE38             351 // MUS_FIELD13          // Unused, likely a test track.

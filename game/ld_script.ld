@@ -974,6 +974,12 @@ SECTIONS {
         sound/songs/midi/se_pike_curtain_close.o(.rodata);
         sound/songs/midi/se_pike_curtain_open.o(.rodata);
         sound/songs/midi/se_sudowoodo_shake.o(.rodata);
+        sound/songs/midi/se_astromech_chatter.o(.rodata);
+        sound/songs/midi/se_blaster_bolt.o(.rodata);
+        sound/songs/midi/se_hyperspace_jump.o(.rodata);
+        sound/songs/midi/se_saber_hum.o(.rodata);
+        sound/songs/midi/se_saber_ignite.o(.rodata);
+        sound/songs/midi/se_vader_breath.o(.rodata);
         sound/songs/midi/mus_littleroot_test.o(.rodata);
         sound/songs/midi/mus_gsc_route38.o(.rodata);
         sound/songs/midi/mus_caught.o(.rodata);

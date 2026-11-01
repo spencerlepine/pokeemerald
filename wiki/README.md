@@ -25,6 +25,8 @@ Three lists drive the work. All live in `database/` and can be browsed with `pyt
 
 Approved new art lives in [`art/`](art) at the same path it has in `../game` (`art/graphics/...`), listed in
 `mapping/art_ready.csv`. `python3 tools/mark_art_ready.py` applies that list to `database/` (a full rebuild does too).
+Approved sounds installed into `../game` are listed in `mapping/audio_done.csv`; `python3 tools/mark_audio_done.py`
+applies it the same way.
 
 When a row is in the game, set `game_status` to `DONE` in its source table (named in `table`) and rebuild.
 `game_port.csv` is generated from those tables. Net-new content (`NET_NEW` rows) is built after all
@@ -45,6 +47,7 @@ hotswaps, following [`bible/NET_NEW_DESIGNS.md`](bible/NET_NEW_DESIGNS.md).
 | `audio_status` | `PENDING_AUDIO` | Mapped: the Emerald sound plays as a placeholder until the Star Wars one replaces it (same song / cry id). |
 | | `NEEDS_PLACEHOLDER` | Net-new: copy the sound named in `placeholder_from` under the new name first. |
 | | `KEEP_AUDIO` / `NO_AUDIO` | Reuse the Emerald sound as is, or nothing to make. |
+| | `DONE` | The new sound is approved and installed in `../game` by cry-generator or sfx-generator (`made_by`), listed in `mapping/audio_done.csv`. Net-new SEs keep `game_status` `NOT_STARTED` until something calls them. |
 | `game_status` | `NOT_STARTED` / `DONE` | Whether the row has landed in `../game`. For a `CUT` row, `DONE` means deleted. |
 
 Object-event rows (overworld sprites) also carry **`frame_size`** (pixels per frame, e.g. `16x32`, read from

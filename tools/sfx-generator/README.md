@@ -1,7 +1,9 @@
 # sfx-generator
 
-**Status:** IN-REVIEW. Works end to end (spec -> game-format sample + MIDI + voicegroup -> ROM). Eight draft
-SFX are with the owner.
+**Status:** DONE. Approved by the owner on 2026-11-01. The first eight SFX are in `../../game`: hot-swaps
+SE_BALL_THROW (pod throw) and SE_POKENAV_CALL (comlink call), and net-new SE_ASTROMECH_CHATTER (270),
+SE_BLASTER_BOLT (271), SE_HYPERSPACE_JUMP (272), SE_SABER_HUM (273, loops), SE_SABER_IGNITE (274) and
+SE_VADER_BREATH (275). The net-new ones have song ids but no callers yet (port work in `game_port.csv`).
 
 Sound effects: the 26 mapped hot-swaps (capture pods, comlink, doors, hover-bike, kyber, freighter) and the 17
 net-new (blaster, lightsabers, Force, turbolaser, hyperspace, astromech, Vader's breath...). Wiki rows:
@@ -37,7 +39,8 @@ python3 romtest.py specs/blaster_bolt.yaml    # scratch ROM, record from mGBA ->
    the sample in `sound/direct_sound_samples/sw_sfx/`, its label in `direct_sound_data.inc`, a one-voice
    voicegroup `sound/voicegroups/sw_<name>.inc`, the `se_*.mid` and its `midi.cfg` line (same `-E -R50` as
    vanilla), and for net-new SEs the song id in `songs.h`, `song_table.inc` and `ld_script.ld`. Calling a
-   net-new SE from scripts or battle animations is port work (`game_port.csv`).
+   net-new SE from scripts or battle animations is port work (`game_port.csv`). Then add the row to
+   `../../wiki/mapping/audio_done.csv` and run `python3 ../../wiki/tools/mark_audio_done.py`.
 
 ## Spec layers
 

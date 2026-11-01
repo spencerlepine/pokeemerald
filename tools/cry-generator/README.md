@@ -1,6 +1,7 @@
 # cry-generator
 
-**Status:** IN-REVIEW. Works end to end (spec -> game-format .wav -> ROM). Six draft cries are with the owner.
+**Status:** DONE. Approved by the owner on 2026-11-01. The first six cries (SUNCHICK, MASSIFF, MYNOCK, EXOGORTH,
+R2 UNIT, PERSUADER) are in `../../game`; the other 380 rows are made the same way, a spec at a time.
 
 One cry per companion: creature calls, droid beeps and servos. Wiki rows: `../../wiki/database/pending_audio.csv`,
 category `cry`, HOTSWAP (386 rows). Each row's `sw_subject` is the brief and `asset_file` the slot it replaces.
@@ -34,7 +35,8 @@ python3 romtest.py specs/sunchick.yaml    # build a scratch ROM and record it fr
 
 4. When the owner approves: `python3 cry.py install specs/sunchick.yaml` writes the .wav over the slot in
    `../../game` (same table slot, same file name; renaming the file and label is a separate port step), and the
-   row's status goes to `DONE`.
+   row is marked done: add it to `../../wiki/mapping/audio_done.csv` and run
+   `python3 ../../wiki/tools/mark_audio_done.py` (sets `audio_status` and `game_status` DONE in the wiki).
 
 `make` already fits the DPCM format: it tries more high-shelf cut and less loudness until the optimal DPCM
 path is clean (SNR >= 20 dB, accepting 16 then 12 for very bright voices, as vanilla does), and bakes that path
