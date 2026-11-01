@@ -4,12 +4,12 @@ sheet 16x16, frame 16x16, slots drawn [0], game uses [0]
 palette gate: PASS
   OK   /home/user/pokeemerald/tools/vfx-generator/output/ion_cannon/black_ball_2.png  (bpp 4, colours 5/15, on-theme 2/5)
     warn:  3 of 5 colours are off-theme: [2] #B8F0F8 (nearest #F8F8F0, dE 21), [4] #2878D8 (nearest #7880A0, dE 39), [5] #183888 (nearest #7880A0, dE 44)
-STYLE SCORE 95/100 (group battle_anim_sprite)
+STYLE SCORE 100/100 (group battle_anim_sprite)
   ok    tiny_colours 0.00 (vanilla band 0.00..1.00, replaced sheet 0.00)
   ok    lone 0.00 (vanilla band 0.00..0.02, replaced sheet 0.00)
-  ok    checker 0.00 (vanilla band 0.00..0.15, replaced sheet 0.00)
+  ok    checker 0.02 (vanilla band 0.00..0.15, replaced sheet 0.00)
   ok    dark_edge 0.34 (vanilla band 0.00..0.68, replaced sheet 0.77)
-  ok    core_bright 50.26 (vanilla band -18.79..96.63, replaced sheet -7.26)
+  ok    core_bright 39.71 (vanilla band -18.79..96.63, replaced sheet -7.26)
   ok    luma_range 192.45 (vanilla band 0.00..222.28, replaced sheet 255.00)
-  WARN  coverage 0.78 (vanilla band 0.09..0.75, replaced sheet 0.75): frame fill is outside what vanilla effects use (too empty or too packed).
+  ok    coverage 0.78 (vanilla band 0.09..0.75, replaced sheet 0.75)
   ok    border 0.08 (vanilla band 0.00..0.27, replaced sheet 0.09)

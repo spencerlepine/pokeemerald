@@ -5,13 +5,13 @@
   "tiny_colours": 0,
   "coverage": 0.78125,
   "border": 0.08,
-  "core_bright": 50.256979020979,
+  "core_bright": 39.709911421911386,
   "dark_edge": 0.3409090909090909,
   "lone": 0.0,
-  "checker": 0.0,
+  "checker": 0.01775147928994083,
   "clusters": 1.0,
   "luma_range": 192.44799999999998,
-  "saturation": 0.5205762878628154
+  "saturation": 0.6013324899852415
  },
  "vanilla": {
   "colours": 4,
@@ -27,5 +27,5 @@
   "luma_range": 255.0,
   "saturation": 0.0
  },
- "score": 95
+ "score": 100
 }

@@ -1,7 +1,7 @@
 """See the effect in the real game.
 
 Builds two scratch copies of ../../game (nothing in the repo is touched): `vanilla` and `new` (the built
-sheets installed at their game paths). In both, the test move's accuracy is set to "never misses" so the
+sheets installed at their game paths). In both, the test move's accuracy is set to 255 (0 means "always misses" in this engine) so the
 animation always plays. Each ROM boots headless in mGBA (play-tester setup), mashes through New Game,
 gets a party member that knows the move, walks into Route 101 grass, and uses the move in the first
 wild battle while every 2nd frame is screenshotted.
@@ -68,7 +68,7 @@ def _prepare(which: str, installs: dict[str, Path], move: str, fresh: bool) -> P
     # the test move never misses (scratch copy only)
     bm = GAME / "src/data/battle_moves.h"
     t = bm.read_text()
-    t2 = re.sub(r'(\[' + re.escape(move) + r'\]\s*=\s*\{[^}]*?\.accuracy\s*=\s*)\d+', r'\g<1>0', t, count=1)
+    t2 = re.sub(r'(\[' + re.escape(move) + r'\]\s*=\s*\{[^}]*?\.accuracy\s*=\s*)\d+', r'\g<1>255', t, count=1)
     dst = g / "src/data/battle_moves.h"
     if dst.read_text() != t2:
         dst.write_text(t2)
@@ -108,7 +108,7 @@ callbacks:add("frame", function()
       return
     end
     if phase == "party" and f == 30 then
-      E.writeMon(0, {{species={species}, level=30, exp=27000, moves={{{move},0,0,0}}, pp={{20,0,0,0}}, base={{90,90,90,90,90,90}}, nick="TEST", personality=7}})
+      E.writeMon(0, {{species={species}, level=10, exp=560, moves={{{move},0,0,0}}, pp={{20,0,0,0}}, base={{90,90,90,90,90,90}}, nick="TEST", personality=7}})
       E.setFlag(0x860, true); E.teleport(0, 16, 3, 4); phase = "walk"; f = 0; log("teleported"); return
     end
     if phase == "walk" then

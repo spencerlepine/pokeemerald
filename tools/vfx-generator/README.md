@@ -50,7 +50,7 @@ writes `output/<name>/`:
 | `rom/rom.gif`, `rom/rom_strip.png`, `rom/report.txt` | from `romtest`: vanilla ROM vs new ROM, frame-aligned |
 
 **`romtest`** copies the game twice to `/var/tmp/vfx-romtest` (vanilla, and with the sheets installed),
-makes the test move never miss (scratch copy only), boots each ROM headless in mGBA, gets a party member
+sets the test move's accuracy to 255 so it cannot miss (scratch copy only; 0 means always miss in this engine), boots each ROM headless in mGBA, gets a party member
 that knows the move, walks into Route 101 grass, uses the move and films every 2nd frame. Identical
 inputs make the runs frame-aligned, so the frames where they differ are exactly where the new art is on
 screen. Needs the play-tester setup (`../play-tester/scripts/setup-ubuntu.sh`).

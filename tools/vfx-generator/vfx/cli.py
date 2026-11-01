@@ -146,7 +146,10 @@ def cmd_verify(a):
         d = OUT / s["name"]
         info = json.loads((d / "build.json").read_text())
         png = d / info["png"]
-        e = catalog.find(info["replaces"]) if info.get("replaces") else None
+        try:
+            e = catalog.find(info["replaces"])
+        except KeyError:
+            e = None   # a NEW sheet: no vanilla contract
         opts = (e or {}).get("gfx_opts", "") or ""
         with tempfile.TemporaryDirectory() as td:
             t = Path(td)
@@ -158,7 +161,8 @@ def cmd_verify(a):
             p1, c1 = read_indexed(png)
             p2, c2 = read_indexed(t / "b.png")
             same = p1.shape == p2.shape and (p1 == p2).all()
-            pal_same = [tuple(x) for x in c1[:16]] == [tuple(x) for x in c2[:16]]
+            # gbagfx expands 5-bit colour back as (v << 3) | (v >> 2): compare the 15-bit values
+            pal_same = [tuple(v >> 3 for v in x) for x in c1[:16]] == [tuple(v >> 3 for v in x) for x in c2[:16]]
             nbytes = (t / "a.4bpp").stat().st_size
         exp = (e or {}).get("bytes")
         size_ok = exp is None or nbytes >= exp

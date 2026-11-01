@@ -165,7 +165,7 @@ def score(m: dict, group: str, vanilla: dict | None = None, allow: list[str] | N
         b = bands[key]
         v = m[key]
         van = vanilla.get(key) if vanilla else None
-        hi = max(b["p95"], van if van is not None else -1e9)
+        hi = max(b["p95"], (van * 1.1 if direction == "range" else van) if van is not None else -1e9)
         lo = min(b["p5"], van if van is not None else 1e9)
         bad = (direction == "max" and v > hi + 1e-9) or (direction == "min" and v < lo - 1e-9) or \
               (direction == "range" and (v > hi + 1e-9 or v < lo - 1e-9))

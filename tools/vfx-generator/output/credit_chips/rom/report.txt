@@ -1,0 +1,4 @@
+# credit_chips in the ROM
+frames filmed: 450 (every 2nd game frame)
+frames where the new art is on screen: 36
+first f00764.png, last f00834.png (72 game frames)

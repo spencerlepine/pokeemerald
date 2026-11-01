@@ -1,0 +1,4 @@
+# ion_cannon in the ROM
+frames filmed: 450 (every 2nd game frame)
+frames where the new art is on screen: 16
+first f00774.png, last f00804.png (32 game frames)
