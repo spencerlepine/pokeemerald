@@ -1,10 +1,10 @@
 {
   "init": "refs/primeape_prep.png",
-  "init_source": "https://static.wikia.nocookie.net/starwars/images/e/e7/Gundark_NEGAS.jpg/revision/latest?cb=20071119014301#crop=0.0,0.0,0.88,0.88",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/b/b1/Gundark-TCW.png/revision/latest?cb=20230709151351",
   "flip": false,
   "denoise": 0.5,
-  "desc": "hulking crouched gundark with a roaring fanged mouth big pointed ears and long clawed arms",
+  "desc": "hulking red gundark with big pointed ears, fanged roaring mouth and long clawed arms, one arm raised, whole body",
   "colour": "red and dark brown",
-  "ref_note": "New Essential Guide to Alien Species gundark painting, cropped to trim the dirt; head upper left; clearer than the TCW crouch render",
+  "ref_note": "TCW gundark render with alpha (same line as mankey): clean cutout, no rocks",
   "negative": "ground, dirt, dust cloud"
 }
