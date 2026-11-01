@@ -54,3 +54,21 @@ visibly needs it.
 - Stage 4: building vocabulary per planet (Tatooine domes/adobe, Imperial durasteel, Ewok platforms,
   Cloud City white curves, Kamino stilts, Dagobah huts).
 - Stage 9: which vanilla kits stay recoloured only (caves, generic rooms) and which are rebuilt.
+
+## Progress and next steps (2026-11-01)
+
+Done and pushed: stage 0 (reader/renderer), stage 1 (recolour recipes: tatooine, hoth, sullust), stage 2 first
+cut (ground `speckle` + recipe `retexture:` ops), stage 7 writer (`python -m tilegen build|install`, 4-bit
+tiles.png, .pal, metatiles.bin, attributes, palette gate passes). A test ROM with the Tatooine pair compiles
+(installed, built, then game/ restored; nothing committed in game/).
+
+**Owner direction:** the 3D path (stage 3 objects, stage 4 buildings) is **parked**. The owner rejected the
+generated trees; 3D objects and buildings wait for the owner's guidance. Work the 2D categories first.
+
+Next, in order:
+1. ROM screenshot of the Tatooine pair (headless mGBA one-shot lua: load `play-tester/savestates/littleroot-after-teleport.ss0`,
+   `E.teleport`, `emu:screenshot`). The live MCP session timed out on start in this container; the one-shot
+   path still needs debugging (no screenshot written yet).
+2. Stage 2: sand patch edges, ledges, tall grass / scrub tuft redraws, more planets (Endor, Dagobah, Kamino).
+3. Stage 6: water / shoreline animation frames that keep `tileset_anims.c` ranges.
+4. Stage 5: interior floor and wall kits (2D).
