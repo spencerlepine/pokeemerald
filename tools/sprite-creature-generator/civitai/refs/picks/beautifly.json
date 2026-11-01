@@ -2,7 +2,7 @@
   "init": "refs/beautifly_prep.png",
   "init_source": "https://static.wikia.nocookie.net/starwars/images/9/9c/AntareanButterfly-SW1977-48.png/revision/latest?cb=20250318193634#crop=0,0.1,0.95,1",
   "flip": false,
-  "denoise": 0.5,
+  "denoise": 0.45,
   "desc": "bright desert moth with broad sweeping wings and a fuzzy body and long curled antennae",
   "colour": "rose pink and tan",
   "ref_note": "Antarean butterfly (Marvel SW 1977 #48) on white, cropped to the big butterfly facing left; tiny background butterflies are separate specks the pipeline drops"
