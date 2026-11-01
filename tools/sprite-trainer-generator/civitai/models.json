@@ -1,0 +1,75 @@
+{
+  "model": "Pokemon Trainer Sprite PixelArt",
+  "creator": "titansteng",
+  "license": {
+    "allowCommercialUse": [
+      "Image",
+      "RentCivit",
+      "Rent",
+      "Sell",
+      "SellMerge"
+    ],
+    "allowDerivatives": true,
+    "allowNoCredit": true,
+    "allowDifferentLicense": true
+  },
+  "fetched": "2026-11-01T07:05:04+00:00",
+  "versions": [
+    {
+      "id": 443092,
+      "name": "XL v1",
+      "baseModel": "SDXL 1.0",
+      "trainedWords": [],
+      "air": null,
+      "files": [
+        {
+          "name": "pk_trainer_xl_v1.safetensors",
+          "sizeKB": 445819.83984375,
+          "sha256": "078E09DA2A123964B7EB30DB23EC24D59FB082343F69C7FAF925C4C07E97023E"
+        }
+      ]
+    },
+    {
+      "id": 779247,
+      "name": "Flux v1",
+      "baseModel": "Flux.1 D",
+      "trainedWords": [],
+      "air": null,
+      "files": [
+        {
+          "name": "pktrainer_F1-v1-0.safetensors",
+          "sizeKB": 149714.015625,
+          "sha256": "5B6F3325DFC49DDE90224E9372B77663106CEF44F0A2EC434DC19B4D0BFD4183"
+        }
+      ]
+    },
+    {
+      "id": 182857,
+      "name": "768 v1.0",
+      "baseModel": "SD 1.5",
+      "trainedWords": [],
+      "air": null,
+      "files": [
+        {
+          "name": "pk_trainer768_V1.safetensors",
+          "sizeKB": 73876.1015625,
+          "sha256": "03B91BFAD1F45A84404BEF011F1DC34B00AC1B917C66358FF94576AAE16B2C05"
+        }
+      ]
+    },
+    {
+      "id": 179161,
+      "name": "512 v1.0",
+      "baseModel": "SD 1.5",
+      "trainedWords": [],
+      "air": null,
+      "files": [
+        {
+          "name": "pksp_trainer_V1.safetensors",
+          "sizeKB": 73876.1328125,
+          "sha256": "C94615864E65DF08CA9EB145E9DF3D5806331A44970604C29A9D94D5ECBCE1C0"
+        }
+      ]
+    }
+  ]
+}
