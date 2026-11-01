@@ -1,0 +1,22 @@
+# Prototype: Death Star interior (corridors, control rooms) from the Aqua/Magma hideout kit (gTileset_Facility).
+# The hideout already has the shapes (wall panels, consoles, grates, tanks, crates); the Death Star look is
+# palette: glossy near-black deck, cool neutral grey wall panels, black wall bases, red and green console lights.
+# Rules are limited to the Facility banks so the shared General primary is untouched.
+name: death-star
+notes: Death Star deck. Floors -> glossy black-grey deck plates; wall panels -> cool neutral Imperial grey; hex floor -> dark gunmetal; console lights kept red/green; tank water -> cold blue coolant.
+rules:
+  - name: deck-plate
+    match: {banks: ["facility:7"], hue: [95, 135], chroma_min: 10, chroma_max: 40}
+    set:   {hue: 255, chroma: 4, light_scale: 1.1, light: -40}
+  - name: hex-deck
+    match: {banks: ["facility:8"], hue: [160, 190], chroma_min: 10, chroma_max: 25}
+    set:   {hue: 250, chroma: 7, light_scale: 1.2, light: -34}
+  - name: panel-grey
+    match: {banks: ["facility:6", "facility:8", "facility:9", "facility:10", "facility:11"], hue: [255, 300], chroma_min: 6, chroma_max: 30}
+    set:   {hue: 255, chroma: 4}
+  - name: panel-white
+    match: {banks: ["facility:6", "facility:8", "facility:9"], chroma_max: 14, light_min: 84}
+    set:   {hue: 255, chroma: 3, light: -10}
+  - name: panel-neutral
+    match: {banks: ["facility:6"], chroma_max: 10, light_max: 84}
+    set:   {hue: 255, chroma: 3, light: -6}
