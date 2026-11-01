@@ -28,11 +28,14 @@ new `.pal` is in `wiki/art/graphics/trainers/palettes/`, and the back pics must 
 Nothing is in `game/` yet.
 
 Background cut (fixed 2026-11-01 after review): the flood fill from the border only crosses pale
-greys in small steps, so an outline gap can no longer eat white armour or Yoda's hair; enclosed
+greys only when 40% of their edge touches the background, so an outline gap can no longer eat
+white armour, Ki-Adi-Mundi's head or Yoda's hair; enclosed
 pockets of the background colour (between an arm and the body) are cleared when dark outline rings
 them; specks of 3 px or fewer are dropped. `"keep_pockets": true` in `jobs.json` turns pocket
 clearing off for characters whose white or pale parts look like background (stormtroopers, Aurra
-Sing's rifle, Tarfful's belt, the diver's breather, the brawler's belt).
+Sing's rifle, Tarfful's belt, the diver's breather, the brawler's belt). `"clear_pockets": [[y, x]]`
+clears a pocket the rule misses (ringed by a rope or a basket handle, not outline): hiker, dragon
+tamer, bug catcher.
 
 ## Setup
 

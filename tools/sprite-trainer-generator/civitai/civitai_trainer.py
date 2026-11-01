@@ -336,16 +336,18 @@ def _components(mask: np.ndarray) -> list[list[tuple[int, int]]]:
 
 def knock_out_background(img: Image.Image, tol: int = 30, step: int = 24, pockets: bool = True,
                          ptol: int = 18, pmin: int = 4, pmax: int = 200, dark: int = 110,
-                         ring: float = 0.75) -> Image.Image:
+                         ring: float = 0.75, touch: float = 0.4, clear: list | None = None) -> Image.Image:
     """Background -> transparent.
 
-    1. Flood-fill from the border through pixels near the border's median colour, and through pale
-       neutral greys only in small steps from the pixel before (corner vignettes), so a gap in an
-       outline cannot leak the fill into white armour, a white robe or white hair.
+    1. Flood-fill from the border through pixels near the border's median colour. Pale neutral grey
+       areas (corner vignettes) are added only when at least 40% of their edge touches that
+       background, so a gap in an outline cannot leak the fill into white armour, robes or hair.
     2. Pockets: enclosed islands of the background colour (between an arm and the body, inside a
        whip loop) that the fill cannot reach. An island counts when it is 4-200 native pixels and
        at least 75% of the pixels around it are dark outline; eye whites (1-3 px) are left alone.
        Jobs with white armour that looks like background (stormtroopers) set "keep_pockets".
+    3. `clear`: [y, x] native seeds (jobs.json "clear_pockets") of pockets the rule misses, e.g. a
+       hole ringed by a rope or a basket handle rather than dark outline.
     """
     a = np.array(img.convert("RGB")).astype(int)
     h, w, _ = a.shape
@@ -356,14 +358,22 @@ def knock_out_background(img: Image.Image, tol: int = 30, step: int = 24, pocket
     seen = np.zeros((h, w), bool)
     dq = deque()
     for y, x in [(y, x) for y in range(h) for x in (0, w - 1)] + [(y, x) for x in range(w) for y in (0, h - 1)]:
-        if (near[y, x] or pale[y, x]) and not seen[y, x]:
+        if near[y, x] and not seen[y, x]:
             seen[y, x] = True; dq.append((y, x))
     while dq:
         y, x = dq.popleft()
         for ny, nx in ((y + 1, x), (y - 1, x), (y, x + 1), (y, x - 1)):
-            if 0 <= ny < h and 0 <= nx < w and not seen[ny, nx] and (
-                    near[ny, nx] or (pale[ny, nx] and np.abs(a[ny, nx] - a[y, x]).sum() <= step)):
+            if 0 <= ny < h and 0 <= nx < w and not seen[ny, nx] and near[ny, nx]:
                 seen[ny, nx] = True; dq.append((ny, nx))
+    # Pale grey areas next to the background (corner vignettes) go too, but only when much of their
+    # edge touches the background: hair or armour that meets it through a 1-2 px outline gap stays.
+    for comp in _components(pale & ~seen):
+        cs = set(comp)
+        around = {(y + dy, x + dx) for y, x in comp for dy, dx in ((1, 0), (-1, 0), (0, 1), (0, -1))
+                  if 0 <= y + dy < h and 0 <= x + dx < w and (y + dy, x + dx) not in cs}
+        if around and np.mean([seen[p] for p in around]) >= touch:
+            for p in comp:
+                seen[p] = True
     if pockets:
         isdark = a.max(2) < dark
         for comp in _components((diff <= ptol) & ~seen):
@@ -374,6 +384,12 @@ def knock_out_background(img: Image.Image, tol: int = 30, step: int = 24, pocket
                       if 0 <= y + dy < h and 0 <= x + dx < w and (y + dy, x + dx) not in cs}
             around = [p for p in around if not seen[p]]
             if around and np.mean([isdark[p] for p in around]) >= ring:
+                for p in comp:
+                    seen[p] = True
+    if clear:
+        cand = (diff <= ptol) & ~seen
+        for comp in _components(cand):
+            if any(tuple(p) in set(comp) for p in clear):
                 for p in comp:
                     seen[p] = True
     return Image.fromarray(np.dstack([a, np.where(seen, 0, 255)]).astype(np.uint8), "RGBA")
@@ -479,14 +495,15 @@ def place(sprite: Image.Image, size: int = 64) -> Image.Image:
 
 def finish(raw: Path, theme: str, fit: str, free: int) -> Path:
     jobs = json.loads(JOBS_FILE.read_text()) if JOBS_FILE.exists() else {}
-    pockets = not jobs.get(raw.parent.parent.name, {}).get("keep_pockets")
+    job = jobs.get(raw.parent.parent.name, {})
+    pockets, clear = not job.get("keep_pockets"), job.get("clear_pockets")
     src = Image.open(raw).convert("RGB")
     out_dir = raw.parent.parent / ("finished" if fit == "auto" else f"finished_{fit}")
     out_dir.mkdir(parents=True, exist_ok=True)
     stem = raw.stem
 
     nat, period = native(src)
-    fig = despeck(knock_out_background(nat, pockets=pockets))
+    fig = despeck(knock_out_background(nat, pockets=pockets, clear=clear))
     if fig.getbbox() is None:
         sys.exit(f"{raw.name}: nothing left after background removal")
     fig = quantise(fig.crop(fig.getbbox()))

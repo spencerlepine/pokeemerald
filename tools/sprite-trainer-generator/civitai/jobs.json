@@ -123,7 +123,17 @@
     "subject": "young boy",
     "desc": "kid in a desert tunic and shorts, holding a big bug net and a specimen jar",
     "theme": "factions",
-    "style": ""
+    "style": "",
+    "clear_pockets": [
+      [
+        48,
+        21
+      ],
+      [
+        57,
+        14
+      ]
+    ]
   },
   "bug_maniac": {
     "subject": "bug collector",
@@ -184,7 +194,13 @@
     "subject": "beast tamer",
     "desc": "rugged man, wild hair, fur cape over bare shoulders, leather armour, coiled whip in hand",
     "theme": "factions",
-    "style": ""
+    "style": "",
+    "clear_pockets": [
+      [
+        42,
+        58
+      ]
+    ]
   },
   "elite_four_drake": {
     "subject": "Anakin Skywalker",
@@ -259,7 +275,13 @@
     "subject": "prospector",
     "desc": "burly man, tan mining helmet with a headlamp, bushy white beard, blue work shirt, canvas backpack with bedroll, pickaxe",
     "theme": "factions",
-    "style": ""
+    "style": "",
+    "clear_pockets": [
+      [
+        19,
+        42
+      ]
+    ]
   },
   "interviewer": {
     "subject": "HoloNet reporter",
