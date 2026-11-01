@@ -1,10 +1,10 @@
 {
   "init": "refs/jolteon_prep.png",
-  "init_source": "https://static.wikia.nocookie.net/starwars/images/e/e7/BetsyBauer-YJATookaConceptArt1.jpg/revision/latest/scale-to-width-down/1000?cb=20250426165340#crop=0.52,0.48,0.715,0.885",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/6/65/BetsyBauer-YJATookaConceptArt3.jpg/revision/latest/scale-to-width-down/1000?cb=20250426165428#crop=0.33,0.03,0.63,0.97",
   "flip": false,
   "denoise": 0.5,
-  "desc": "spiky yellow static tooka with bristling fur tufts tall ears and a sly grin",
-  "colour": "yellow white",
+  "desc": "spiky yellow static tooka cat standing, huge tall striped ears, bristling needle fur tufts, curled tail, whole body",
+  "colour": "bright yellow and white",
   "negative": "grey, black and white, sketch",
-  "ref_note": "Canon tooka line art (Young Jedi Adventures, Betsy Bauer) crouching pose with fur tufts, a different crop from vaporeon; greyscale so colour comes from args"
+  "ref_note": "Canon tooka turnaround (Young Jedi Adventures, Betsy Bauer), clean side three-quarter standing pose, whole body on white; greyscale so colour from args"
 }
