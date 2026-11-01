@@ -146,6 +146,10 @@ def judge(out: Path, log: str, min_w: int = 24, min_h: int = 22, one_figure: boo
         colours = len(np.unique(a[opaque][:, :3], axis=0))
         if opaque.sum() < 400 or colours < 6:
             return False, f"{view}: {opaque.sum()} px, {colours} colours"
+        ys, xs = np.nonzero(opaque)
+        fill = opaque.sum() / ((np.ptp(ys) + 1) * (np.ptp(xs) + 1))
+        if fill > 0.9:  # the reference's background came through as a solid block (lombre, lotad)
+            return False, f"{view}: fills {fill:.0%} of its box (background kept)"
         notes.append(f"{view} {fw}x{fh}")
     d = drift(out)
     if d > DRIFT:
