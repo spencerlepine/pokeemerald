@@ -1,9 +1,12 @@
 # vfx-generator
 
-**Status: IN-REVIEW** (2026-11-01). The tool works end to end: catalog, drawing, palette gate, style
-score, battle/overworld previews, gbagfx round trip and a real-ROM check. Four prototypes are with the
-owner: ION CANNON, CREDIT TOSS chips, TURBOLASER (batch 1, approved; the Fly shuttle was rejected and moved to `art/rejected/`), then blue milk, macrobinoculars and the datapad stylus (batch 2). The audit of what needs drawing is in
-[`TODO.md`](TODO.md); the measured style is in [`STYLE.md`](STYLE.md).
+**Status: RESET (2026-11-01).** The drawing pipeline works end to end (catalog, drawing, palette gate, style
+score, previews, gbagfx round trip, real-ROM filming), but the owner rejected prop swaps: an effect is a
+storyboard (script + art + sound), not a sticker. The design is in
+[`../../wiki/bible/MOVE_EFFECTS.md`](../../wiki/bible/MOVE_EFFECTS.md); this tool grows a script layer next
+(section 5 there). Kept art: ION CANNON orb, CREDIT TOSS chips, TURBOLASER beam (`art/`). Rejected specs are in
+`art/rejected/`. The audit of what needs drawing is in [`TODO.md`](TODO.md); the measured style is in
+[`STYLE.md`](STYLE.md).
 
 Pure Python (pillow, numpy, pyyaml) plus the shared [`palette-enforcer`](../palette-enforcer/). No model,
 no GPU: effects are built from pixel-art primitives (glows, beams, bolts, slashes, starbursts, rings,
