@@ -1,0 +1,48 @@
+{
+  "trainer": {
+    "stem": "title_leia",
+    "wiki_path": null,
+    "sw_subject": null,
+    "subject": "Leia Organa",
+    "desc": "young woman, long white robe, two hair buns on the sides of her head, white boots, silver belt",
+    "theme": "alliance-dawn",
+    "style": "",
+    "pose": "determined pose, facing right, three-quarter view, holding a small blaster pistol at her side, white gown, side hair buns",
+    "negative": "",
+    "pair": false,
+    "strength": null
+  },
+  "lora": {
+    "id": 443092,
+    "name": "XL v1",
+    "baseModel": "SDXL 1.0",
+    "trainedWords": [],
+    "air": null,
+    "files": [
+      {
+        "name": "pk_trainer_xl_v1.safetensors",
+        "sizeKB": 445819.83984375,
+        "sha256": "078E09DA2A123964B7EB30DB23EC24D59FB082343F69C7FAF925C4C07E97023E"
+      }
+    ]
+  },
+  "checkpoint": "urn:air:sdxl:checkpoint:civitai:101055@128078",
+  "params": {
+    "prompt": "solo, (single character:1.2), (leia organa:1.3), young woman, long white robe, two hair buns on the sides of her head, white boots, silver belt, full body character sprite, determined pose, facing right, three-quarter view, holding a small blaster pistol at her side, white gown, side hair buns, pixel art, game sprite, crisp dark outlines, solid white background, simple background, orange, white and blue",
+    "negativePrompt": "poke ball, pokeball, holding ball, baseball cap, generic pokemon trainer, anime boy, scenery, detailed background, gradient background, floor, shadow, text, watermark, signature, frame, border, multiple characters, multiple views, character sheet, turnaround, duplicate, cropped, cut off feet, blurry, 3d, photo, realistic, painting, smooth shading",
+    "scheduler": "EulerA",
+    "steps": 25,
+    "cfgScale": 7.0,
+    "width": 768,
+    "height": 768,
+    "seed": 1125192905,
+    "clipSkip": 2
+  },
+  "strength": 0.75,
+  "format": "jpeg",
+  "seed": 1125192905,
+  "workflowId": "13596363-20261101215804249-a330",
+  "jobId": "ae7b567a-64fb-496c-b324-7f4d30403457",
+  "cost": "5 green",
+  "generated": "20261101-215829"
+}

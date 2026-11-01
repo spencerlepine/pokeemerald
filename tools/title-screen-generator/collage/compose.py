@@ -6,7 +6,7 @@ size, 15 colours, transparent background), never the in-game battle pics. Each f
 sliding OBJ later. Draw order: clouds, figures (back to front), logo + banner + text on top, so a figure can sit
 partly behind the lettering and the logo's black outline keeps it readable.
 
-    python3 compose.py OUT_DIR [--gif]
+    python3 compose.py OUT_DIR [--gif] [--no-creatures]
 """
 import os, sys, json, glob
 from PIL import Image
@@ -31,7 +31,12 @@ def take(run, idx=None, narrowest=False, root=TR_RUNS, sub="finished"):
 
 
 def load(path, flip=False):
-    im = Image.open(path).convert("RGBA")
+    im = Image.open(path)
+    if im.mode == "P":  # finished 64-cells: index 0 is transparent
+        a = im.point(lambda v: 0 if v == 0 else 255, "L")
+        im = im.convert("RGBA")
+        im.putalpha(a)
+    im = im.convert("RGBA")
     im = im.crop(im.getbbox())
     return im.transpose(Image.FLIP_LEFT_RIGHT) if flip else im
 
@@ -42,11 +47,24 @@ CAST = [
     dict(name="leia", src=take("title_leia", 1), x=66, y=170, z=2, side="L"),
     dict(name="mira", src=take("title_mira", 1), x=92, y=172, z=3, side="L"),
     dict(name="kael", src=take("title_kael", 1), x=42, y=172, z=4, side="L"),
-    dict(name="trooper", src=take("title_trooper", 0), x=168, y=172, z=2, side="R"),
-    dict(name="boba", src=take("title_boba", narrowest=True), x=224, y=168, z=1, side="R"),
-    dict(name="vader", src=take("title_vader", 1), x=200, y=172, z=4, side="R"),
+    dict(name="trooper", src=take("title_trooper", 0), x=172, y=170, z=2, side="R"),
+    dict(name="boba", src=take("title_boba", narrowest=True), x=232, y=168, z=1, side="R"),
+    dict(name="vader", src=take("title_vader", 3), x=208, y=174, z=4, side="R"),
 ]
-CREATURES = []  # filled in when the creature takes are picked
+
+
+def creature(species, idx=0):
+    """Creature takes: image-to-image from the wiki front pic at denoise 0.6 (new pose), finished to a 64-cell
+    (big natives are shrunk by the finisher's drop-lines fit) so a beast does not stand as tall as a person."""
+    dirs = sorted(glob.glob(os.path.join(CR_RUNS, species, "finished", "title_*")))
+    return os.path.join(dirs[idx], "front.png") if dirs else None
+
+
+CREATURES = [
+    dict(name="sunchick", src=creature("torchic", 0), x=74, y=170, z=5, side="L", flip=True),
+    dict(name="katarnkit", src=creature("treecko", 0), x=120, y=176, z=5, side="L", flip=True),
+    dict(name="fyrnalpha", src=creature("houndoom", 1), x=150, y=176, z=5, side="R"),
+]
 
 
 def render(cast, back, fg, offsets=None):
@@ -83,7 +101,7 @@ if __name__ == "__main__":
     out = sys.argv[1] if len(sys.argv) > 1 else "."
     os.makedirs(os.path.join(out, "layers"), exist_ok=True)
     back, fg = blocking.layers()
-    cast = CAST + CREATURES
+    cast = CAST + ([] if "--no-creatures" in sys.argv else CREATURES)
     img = render(cast, back, fg)
     img.convert("RGB").save(os.path.join(out, "collage_1x.png"))
     img.convert("RGB").resize((720, 480), Image.NEAREST).save(os.path.join(out, "collage_3x.png"))
