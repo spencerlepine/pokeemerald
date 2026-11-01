@@ -185,64 +185,70 @@ def cmd_gen(args) -> list[Path]:
     fam = family(v)
     prompt = args.prompt or build_prompt(b, v)
     seed = args.seed if args.seed is not None else random.randrange(1, 2**31 - 1)
-    job = {
-        "$type": "textToImage",
-        "baseModel": "SDXL" if fam == "sdxl" else "SD_1_5",
-        "model": args.checkpoint or CHECKPOINTS[fam],
-        "params": {"prompt": prompt, "negativePrompt": args.negative or NEGATIVE,
-                   "scheduler": args.scheduler, "steps": args.steps, "cfgScale": args.cfg,
-                   "width": args.size, "height": args.size, "seed": seed, "clipSkip": 2},
-        "additionalNetworks": {
-            v.get("air") or f"urn:air:{fam}:lora:civitai:{LORA_MODEL_ID}@{v['id']}":
-                {"type": "Lora", "strength": args.strength}},
-        "quantity": args.n,
+    lora_air = v.get("air") or f"urn:air:{fam}:lora:civitai:{LORA_MODEL_ID}@{v['id']}"
+    params = {"prompt": prompt, "negativePrompt": args.negative or NEGATIVE,
+              "scheduler": args.scheduler, "steps": args.steps, "cfgScale": args.cfg,
+              "width": args.size, "height": args.size, "seed": seed, "clipSkip": 2}
+    # v2 workflows API. The v1 /consumer/jobs endpoint only spends yellow (bought) Buzz and answers
+    # 403 "Insufficient Buzz" on an account that holds blue Buzz; v2 takes a `currencies` list.
+    workflow = {
+        "steps": [{"$type": "textToImage", "input": {
+            "model": args.checkpoint or CHECKPOINTS[fam],
+            "additionalNetworks": {lora_air: {"type": "Lora", "strength": args.strength}},
+            **params, "quantity": args.n, "outputFormat": args.format}}],
+        "currencies": args.currency.split(","),
     }
     print(f"trainer  {b['stem']}  ({b['sw_subject']})\nlora     {v['name']} [{v['baseModel']}] "
-          f"@{v['id']}\nprompt   {prompt}\nseed     {seed}  x{args.n}")
+          f"@{v['id']}\nprompt   {prompt}\nseed     {seed}  x{args.n}  ({args.format})")
 
+    url = f"{ORCHESTRATOR}/v2/consumer/workflows"
     if args.whatif:
-        r = http("POST", f"{ORCHESTRATOR}/v1/consumer/jobs", params={"whatif": "true"}, json=job)
-        print(json.dumps(r.json(), indent=2)[:3000])
+        r = http("POST", url, params={"whatif": "true"}, json=workflow).json()
+        print(f"whatif: {_cost(r)}  insufficientBuzz={r.get('transactions', {}).get('insufficientBuzz')}")
+        q = (r["steps"][0].get("queuePosition") or {}) if r.get("steps") else {}
+        if q:
+            print(f"queue:  {q}")
         return []
 
-    r = http("POST", f"{ORCHESTRATOR}/v1/consumer/jobs", json=job).json()
-    token = r.get("token")
-    print(f"submitted: {len(r.get('jobs', []))} job(s), cost "
-          f"{sum((j.get('cost') or 0) for j in r.get('jobs', []))} Buzz")
+    r = http("POST", url, json=workflow).json()
+    wid = r["id"]
+    print(f"submitted workflow {wid}, cost {_cost(r)}")
 
-    done: dict[str, dict] = {}
     t0 = time.time()
-    while time.time() - t0 < args.timeout:
-        s = http("GET", f"{ORCHESTRATOR}/v1/consumer/jobs", params={"token": token}).json()
-        jobs = s.get("jobs", [])
-        for j in jobs:
-            res = j.get("result")
-            res = res[0] if isinstance(res, list) and res else res
-            if isinstance(res, dict) and res.get("blobUrl") and res.get("available", True):
-                done[j["jobId"]] = {**j, "result": res}
-        if jobs and len(done) >= len(jobs):
+    while True:
+        s = http("GET", f"{url}/{wid}").json()
+        status = s.get("status")
+        imgs = (s.get("steps") or [{}])[0].get("output", {}).get("images", [])
+        if status in ("failed", "expired", "canceled"):
+            sys.exit(f"workflow {wid} {status}:\n{json.dumps(s)[:2000]}")
+        if status == "succeeded" and imgs and all(i.get("available") for i in imgs):
             break
+        if time.time() - t0 > args.timeout:
+            sys.exit(f"timed out after {args.timeout}s (status {status}); re-check workflow {wid}")
         time.sleep(3)
-    else:
-        sys.exit(f"timed out after {args.timeout}s; {len(done)} done. Re-check with token {token}")
 
     out = RUNS / b["stem"] / "raw"
     out.mkdir(parents=True, exist_ok=True)
     stamp = dt.datetime.now().strftime("%Y%m%d-%H%M%S")
     paths = []
-    for i, j in enumerate(done.values()):
-        img = requests.get(j["result"]["blobUrl"], timeout=120)
-        img.raise_for_status()
-        s = j["result"].get("seed", seed + i)
-        p = out / f"{stamp}_s{s}.png"
-        Image.open(__import__("io").BytesIO(img.content)).convert("RGB").save(p)
-        meta = {"trainer": b, "lora": v, "checkpoint": job["model"], "params": job["params"],
-                "strength": args.strength, "seed": s, "jobId": j["jobId"], "cost": j.get("cost"),
-                "token": token, "generated": stamp}
+    for i, im in enumerate(imgs):
+        data = requests.get(im["url"], timeout=120)
+        data.raise_for_status()
+        sd = im.get("seed") or seed + i
+        p = out / f"{stamp}_s{sd}.png"
+        Image.open(__import__("io").BytesIO(data.content)).convert("RGB").save(p)
+        meta = {"trainer": b, "lora": v, "checkpoint": workflow["steps"][0]["input"]["model"],
+                "params": params, "strength": args.strength, "format": args.format, "seed": sd,
+                "workflowId": wid, "jobId": im.get("jobId"), "cost": _cost(r), "generated": stamp}
         p.with_suffix(".json").write_text(json.dumps(meta, indent=2) + "\n")
         print(f"saved {rel(p)}")
         paths.append(p)
     return paths
+
+
+def _cost(r: dict) -> str:
+    tx = (r.get("transactions") or {}).get("list", [])
+    return ", ".join(f"{t['amount']} {t['accountType']}" for t in tx) or "?"
 
 
 # ----------------------------------------------------------------------------- finish
@@ -288,7 +294,7 @@ def place(sprite: Image.Image, size: int = 64) -> Image.Image:
 
 def finish(raw: Path, theme: str, fit: str, free: int) -> Path:
     src = Image.open(raw).convert("RGB")
-    out_dir = raw.parent.parent / "finished"
+    out_dir = raw.parent.parent / ("finished" if fit == "auto" else f"finished_{fit}")
     out_dir.mkdir(parents=True, exist_ok=True)
     stem = raw.stem
 
@@ -379,6 +385,10 @@ def main():
         p.add_argument("--scheduler", default="EulerA")
         p.add_argument("--size", type=int, default=768)
         p.add_argument("--timeout", type=int, default=600)
+        p.add_argument("--format", choices=["jpeg", "png"], default="jpeg",
+                       help="jpeg costs ~2.5 Buzz/image, png ~4.5 (block vote absorbs jpeg noise)")
+        p.add_argument("--currency", default="blue",
+                       help="Buzz account(s) to spend, comma list: blue (earned), yellow (bought)")
         p.add_argument("--whatif", action="store_true", help="price the job, spend nothing")
 
     def finish_args(p):
