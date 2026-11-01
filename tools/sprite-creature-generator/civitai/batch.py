@@ -264,7 +264,8 @@ def commit(sp: str, files: list[Path], notes: dict, drawn: str, out: Path, msg: 
 def installed_front_raw(sp: str) -> Path | None:
     """The raw front behind the installed front.png (its finished folder has the same front.png)."""
     want = (ART / "graphics" / "pokemon" / sp / "front.png").read_bytes()
-    for d in sorted((HERE / "runs" / sp / "finished").glob("*"), reverse=True):
+    for d in sorted([*(HERE / "runs" / sp / "finished").glob("*"), *(HERE / "runs" / sp / "refinished").glob("*")],
+                    key=lambda d: d.name, reverse=True):
         if (d / "front.png").exists() and (d / "front.png").read_bytes() == want:
             return HERE / "runs" / sp / "raw" / f"{d.name}.png"
     return None
