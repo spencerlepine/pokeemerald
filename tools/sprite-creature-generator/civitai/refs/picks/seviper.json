@@ -2,7 +2,7 @@
   "init": "refs/seviper_prep.png",
   "init_source": "https://static.wikia.nocookie.net/starwars/images/7/76/Kouhun_Concept.jpg/revision/latest?cb=20080621115803#crop=0.38,0,0.97,0.62",
   "flip": false,
-  "denoise": 0.5,
+  "denoise": 0.45,
   "desc": "Rearing venomous centipede with many curved legs and a long needle snout",
   "colour": "grey and dark red",
   "negative": "sketch lines, text, paper",
