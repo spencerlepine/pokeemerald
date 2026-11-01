@@ -266,3 +266,8 @@ only, so a big body came out as one flat fill with an outline (the first large m
 not its own volume, so touching forms each get an outline and a lit top inside the silhouette; forms
 6 px or taller also darken their bottom third (lit from above and in front, the top-down camera).
 `@` is unchanged, so every shipped 16x32 sprite rebuilds identically.
+
+Refined after the first large redraw: hard detail pixels inside a form belong to it (a 1 px crease or
+glint no longer grows a dark ring); where two forms touch, the one declared later in `materials` is in
+front and owns the outline, the one behind keeps its own tones to the boundary; and 3-tone ramps use
+their dark tone for the bottom band (the D13 table shader used the mid tone there).

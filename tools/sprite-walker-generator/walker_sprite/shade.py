@@ -381,15 +381,38 @@ def shade_round(regions, materials, hard, letters, facing=None, forms=frozenset(
     vol = [["." if ch == "." else ("#" + ch if ch in hard else ch) for ch in row] for row in regions]
     lab, info = _volumes(vol)
     if forms:
-        # forms measure their distance from anything that is not the same volume
+        # Forms measure their distance from anything that is not the same form. Hard detail pixels
+        # (creases, scales, glints) inside a form count as part of it, so a 1 px stroke does not
+        # grow a dark ring. Where two forms touch, the one declared LATER in `materials` is in front
+        # and owns the outline; the one behind keeps its own tones up to the boundary.
+        order = {ch: i for i, ch in enumerate(materials)}
+        def owner(y, x):  # the form letter a pixel belongs to, seeing through hard pixels
+            ch = vol[y][x]
+            if ch.startswith("#"):
+                near = [vol[y + dy][x + dx] for dx, dy in ((0, 1), (0, -1), (1, 0), (-1, 0))
+                        if 0 <= x + dx < w and 0 <= y + dy < h and not vol[y + dy][x + dx].startswith("#") and vol[y + dy][x + dx] != "."]
+                near = [c for c in near if c in forms]
+                return max(near, key=lambda c: order.get(c, 0)) if near else None
+            return ch if ch in forms else None
+        own = [[owner(y, x) for x in range(w)] for y in range(h)]
         fdist = [[99] * w for _ in range(h)]
         q = []
         for y in range(h):
             for x in range(w):
-                if vol[y][x] == "." or vol[y][x] not in forms:
+                me = own[y][x]
+                if me is None or vol[y][x].startswith("#"):
                     continue
-                if any(not (0 <= x + dx < w and 0 <= y + dy < h) or lab[y + dy][x + dx] != lab[y][x]
-                       for dx, dy in ((0, 1), (0, -1), (1, 0), (-1, 0))):
+                edge = False
+                for dx, dy in ((0, 1), (0, -1), (1, 0), (-1, 0)):
+                    X, Y = x + dx, y + dy
+                    if not (0 <= X < w and 0 <= Y < h) or vol[Y][X] == ".":
+                        edge = True
+                    elif own[Y][X] != me:
+                        other = own[Y][X]
+                        # a form behind another one does not outline itself against it
+                        if other is None or order.get(other, 0) < order.get(me, 0):
+                            edge = True
+                if edge:
                     fdist[y][x] = 1
                     q.append((x, y))
         i = 0
@@ -397,7 +420,7 @@ def shade_round(regions, materials, hard, letters, facing=None, forms=frozenset(
             x, y = q[i]; i += 1
             for dx, dy in ((0, 1), (0, -1), (1, 0), (-1, 0)):
                 X, Y = x + dx, y + dy
-                if 0 <= X < w and 0 <= Y < h and lab[Y][X] == lab[y][x] and fdist[Y][X] > fdist[y][x] + 1:
+                if 0 <= X < w and 0 <= Y < h and own[Y][X] == own[y][x] and fdist[Y][X] > fdist[y][x] + 1:
                     fdist[Y][X] = fdist[y][x] + 1
                     q.append((X, Y))
     # distance from transparency / the frame edge, through every opaque pixel (4-connected BFS)
@@ -456,14 +479,16 @@ def shade_round(regions, materials, hard, letters, facing=None, forms=frozenset(
                 t = OUT
             elif is_form:
                 tall = (bot - top) >= 6
+                DARK = tones[2] if four else tones[2]   # 3-tone ramps: the bottom band uses the dark tone
+                MID = tones[1]
                 if d == 2:
-                    t = SHADE if (f > 0.5 or far_back) else (LIGHT if f < 0.2 else BASE)
+                    t = DARK if (f > 0.6 or far_back) else (LIGHT if f < 0.2 else MID)
                 elif f > 0.72 and tall:
-                    t = SHADE if d == 3 else BASE
+                    t = DARK if d == 3 else MID
                 elif f < 0.55 and not back:
                     t = LIGHT
                 else:
-                    t = BASE
+                    t = MID
             elif resting:
                 t = SHADE if four else OUT
             elif d == 2:
