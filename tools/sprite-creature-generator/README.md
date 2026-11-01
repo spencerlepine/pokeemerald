@@ -55,11 +55,24 @@ rescaling, which keeps the pixel grid. **Test this first** on a few `gen3` rende
 content box fits 64x64 and the grid is 8 px); if it fails, fall back to the research plan's own
 LoRA trained on Emerald sprites at 12x or 16x.
 
+## Palette (required: [`../PALETTES.md`](../PALETTES.md))
+
+- **Hardware (layer 1):** one own 4bpp bank, 15 colours + transparent, shared by `front.png`, `anim_front.png`
+  and `back.png`. `shiny.pal` keeps the **same indices** as `normal.pal` (only the colours change). Values on GBA steps.
+- **Theme (layer 2):** none. Creatures keep their own colours; they must read on `battle-backdrop` and should
+  stay more saturated than the UI ("creatures pop, chrome recedes" in `../../wiki/bible/PALETTE.md`).
+- **Post-processing:** the finisher's last steps are
+  `enforce front_raw.png front.png --bpp 4 --key auto --colours 15 --write-pal normal.pal`, then
+  `enforce back_raw.png back.png --pal normal.pal` and the same for frame 2, then `check` on all three with
+  `--pal normal.pal`. The shiny palette is written by recolouring `normal.pal` entry by entry and checked with
+  `check shiny.pal`.
+
 ## To build
 
 1. Read the rows above in `../../wiki/database/` (filter by `kind` / `category`; skip `KEEP*`, `NO_ART` / `NO_AUDIO` and `CUT`).
 2. Build a tool that takes one row (its `sw_subject` is the brief, `path` / `asset_file` the Emerald original, `suggested_path` the new name) and generates rows 1-8 above.
 3. Show the owner a few samples, iterate, then generate the rest and set each row's status to `DONE`.
+4. Finish the pipeline with the palette step above (`palette-enforcer` `enforce`, then `check`); never install a file that fails `check`.
 
 ## Research
 
@@ -266,7 +279,8 @@ the 64x64 game" above for getting to 64x64). The output step should:
 3. Remove or replace the background where appropriate.
 4. Downsample to 96x96.
 5. Inspect the resulting pixel edges.
-6. Export to PNG.
+6. Palette step (`../palette-enforcer`, rules in `../PALETTES.md`): `enforce` to an indexed 4bpp PNG, 15 colours +
+   transparent on GBA steps (back and frame 2 locked to the front's `normal.pal`), then `check`.
 7. Save the final sprite in the project's asset directory.
 
 Background removal is a separate step. Do not assume that asking for a white background produces

@@ -30,8 +30,17 @@ day-care, mail and Union Room screens.
 | `gMonIconPaletteIndices[species]` (0, 1 or 2) | Python: the shared palette that fits the front best |
 | The 3 shared icon palettes | Kept vanilla unless too many new creatures fit none of them; changing one recolours every icon that uses it |
 
+## Palette (required: [`../PALETTES.md`](../PALETTES.md))
+
+- **Hardware (layer 1):** 32x64, 4bpp, and the palette is **locked** to one of the 3 shared icon banks.
+- **Theme (layer 2):** none (creature).
+- **Post-processing:** run `enforce front_small.png icon.png --pal icon_palette_N.pal` for N = 0, 1, 2, keep the N
+  with the lowest colour error (that is `gMonIconPaletteIndices[species]`), then `check icon.png --pal icon_palette_N.pal`.
+  Changing an icon bank is an owner decision: it recolours every icon that uses it.
+
 ## To build
 
 1. Read the rows above in `../../wiki/database/` (filter by `kind` / `category`; skip `KEEP*`, `NO_ART` / `NO_AUDIO` and `CUT`).
 2. Build a tool that takes one row (its `sw_subject` is the brief, `path` the Emerald original, `suggested_path` the new name) and the species' approved front, and writes the icon and its palette index.
 3. Show the owner a few samples, iterate, then generate the rest and set each row's status to `DONE`.
+4. Finish the pipeline with the palette step above (`palette-enforcer` `enforce`, then `check`); never install a file that fails `check`.

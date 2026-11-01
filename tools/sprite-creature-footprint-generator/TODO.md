@@ -20,8 +20,15 @@ Companion footprints: the print shown on the creature's Datapad (Pokédex) entry
 |---|---|
 | `footprint.png` | Python: pick a foot type from the brief (paw, hoof, claw, talon, webbed, tread, wheel, none), size it to the creature, stamp it; hand-touch if needed |
 
+## Palette (required: [`../PALETTES.md`](../PALETTES.md))
+
+- **Hardware (layer 1):** 16x16, **1bpp**: ink or empty, no palette.
+- **Theme (layer 2):** none.
+- **Post-processing:** `enforce stamp.png footprint.png --bpp 1 --key auto`, then `check footprint.png --bpp 1`.
+
 ## To build
 
 1. Read the rows above in `../../wiki/database/` (filter by `kind` / `category`; skip `KEEP*`, `NO_ART` / `NO_AUDIO` and `CUT`).
 2. Build a tool that takes one row (its `sw_subject` is the brief, `path` the Emerald original, `suggested_path` the new name) and writes the footprint.
 3. Show the owner a few samples, iterate, then generate the rest and set each row's status to `DONE`.
+4. Finish the pipeline with the palette step above (`palette-enforcer` `enforce`, then `check`); never install a file that fails `check`.

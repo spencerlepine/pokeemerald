@@ -8,6 +8,10 @@ Sound effects: the 26 mapped ones (capture pods, comlink, doors, hover-bike, kyb
 - **Wiki rows:** `pending_audio.csv` category `sfx`, swap_kind HOTSWAP or NET_NEW: 43 rows (277 KEEP rows need nothing)
 - **Format in the game:** MIDI-driven SE in sound/songs/midi/ (se_*.mid) using the existing voicegroups, or a new direct-sound sample
 
+## Palette (required: [`../PALETTES.md`](../PALETTES.md))
+
+Not applicable: audio, no art.
+
 ## To build
 
 1. Read the rows above in `../../wiki/database/` (filter by `kind` / `category`; skip `KEEP*`, `NO_ART` / `NO_AUDIO` and `CUT`).

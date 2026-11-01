@@ -64,11 +64,20 @@ simple background
 The LoRA's native sprite is 96x96; each back-pic frame is 64x64. Test (a) 8x -> 96 then crop to
 the waist-up 64x64 and (b) 12x -> 64 directly, and compare.
 
+## Palette (required: [`../PALETTES.md`](../PALETTES.md))
+
+- **Hardware (layer 1):** 4-5 frames of 64x64, 4bpp. The palette is **locked**: it is the file in
+  `game/graphics/trainers/palettes/` shared with the front pic (`leaf`, `red` take theirs from the PNG).
+- **Theme (layer 2):** inherited from the front pic (the player is `alliance-dawn`).
+- **Post-processing:** `enforce raw.png back.png --bpp 4 --key auto --pal game/graphics/trainers/palettes/<name>.pal`
+  for every frame, then `check back.png --pal ...`. Never write a new palette here: it would recolour the front.
+
 ## To build
 
 1. Read the rows above in `../../wiki/database/` (filter by `kind`; skip `KEEP*` and `CUT`).
 2. Build a tool that takes one row (its `sw_subject` is the brief, `path` the Emerald original, `suggested_path` the new name) and generates rows 1, 2 and 4 above.
 3. Show the owner a few samples, iterate, then generate the rest and set each row's status to `DONE`.
+4. Finish the pipeline with the palette step above (`palette-enforcer` `enforce`, then `check`); never install a file that fails `check`.
 
 ---
 
@@ -146,8 +155,9 @@ images, approved sprites, metadata and saved ComfyUI workflows in separate folde
 1. Downsample 768 -> 96 (8x, nearest; test that pixel edges stay crisp).
 2. Fit into the game's 64x64 cell (see "Size" above).
 3. Remove the background as its own step (a white background is not transparency).
-4. Quantise to the game's palette rules (15 colours + transparent).
-5. Export indexed PNG (and `.pal` where the game uses one).
+4. Palette step (`../palette-enforcer`, rules in `../PALETTES.md`): `enforce` to 4bpp, 15 colours + transparent, onto
+   the faction theme or the locked shared palette; it writes the indexed PNG (and `.pal` where the game uses one).
+5. `check` the result; a failure is not shown to the owner and not installed.
 
 Review every sheet for silhouette, proportions, palette, alignment, pixel quality, background
 artifacts and framing before it is shown to the owner.

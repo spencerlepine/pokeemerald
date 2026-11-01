@@ -146,3 +146,6 @@ Struct layouts come from `game/include/global.h`, `game/include/pokemon.h` and
 - Load addresses from `pokeemerald.sym` at startup so the tool survives source changes.
 - Force a wild/trainer battle, seed `gRngValue` (`0x03005d80`), set story vars after teleports.
 - Try headed mode on a real display, and macOS (needs an mGBA 0.11 nightly there too).
+
+Palettes ([`../PALETTES.md`](../PALETTES.md)): not applicable, this tool writes no art. Its screenshots are the way to
+see palettes in the real game (fades, weather tints and slot clashes do not show in a tool's preview).

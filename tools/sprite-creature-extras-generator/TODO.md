@@ -28,8 +28,18 @@ footprint files; they are not made here.
 If Spinda's replacement creature has no random markings, the spot masks can be left blank
 (one empty mask each) instead of redrawn.
 
+## Palette (required: [`../PALETTES.md`](../PALETTES.md))
+
+- **Hardware (layer 1):** the Egg and the `question_mark` pics are battle pics (own 4bpp bank, front/back/frame 2
+  share it, shiny same indices); `hatch.png` and `shard.png` use the Egg's bank (**locked** to `egg/normal.pal`);
+  Spinda's spots are **1bpp** masks.
+- **Theme (layer 2):** none (creature).
+- **Post-processing:** as `sprite-creature-generator` for the pics; `enforce ... --pal egg/normal.pal` for the
+  hatch and shard sheets; `enforce ... --bpp 1` for the spots; then `check`.
+
 ## To build
 
 1. Read the rows above in `../../wiki/database/` (filter by `kind` / `category`; skip `KEEP*`, `NO_ART` / `NO_AUDIO` and `CUT`).
 2. Build a tool that takes one row (its `sw_subject` is the brief, `path` the Emerald original, `suggested_path` the new name) and draws it to the vanilla layout.
 3. Show the owner a few samples, iterate, then set each row's status to `DONE`.
+4. Finish the pipeline with the palette step above (`palette-enforcer` `enforce`, then `check`); never install a file that fails `check`.

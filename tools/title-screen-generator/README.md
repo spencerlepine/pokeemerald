@@ -14,4 +14,6 @@ Final pieces: `sw_logo.py` (stacked STAR / WARS, Kyber Gold from wiki/bible/PALE
 `bg_round.py` (Emerald's gradient bands recoloured, Exogorth silhouettes, cloud/nebula layers). `ship.py` writes
 pokemon_logo.png/.bin/.pal, emerald_version.png, rayquaza.png/.bin, rayquaza_and_clouds.pal and the banner position
 defines in src/title_screen.c; clouds.png/.bin stay Emerald's (recoloured by the palette). Review scripts: `round3.py`, `bg_review.py`.
+Palette: the pieces are in `kyber-gold` (`../../wiki/bible/PALETTE.md`); `ship.py` ends by running the shared palette gate
+(`../palette-enforcer`, rules in `../PALETTES.md`) on everything it wrote and exits non-zero on a hardware error.
 Round 1 (`mockups.py`, `logo.py`, `banner.py`, `backdrop.py`) was rejected but kept for reference.

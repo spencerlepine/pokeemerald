@@ -13,6 +13,15 @@ exactly one. They were first audited in the prototype repo
 which is no longer maintained; everything useful from it is copied here. This file is the list of tools; the per-file
 work (which file becomes which Star Wars subject) stays in the wiki. Update this file in the same commit as the work.
 
+## Palettes (every art tool)
+
+Every tool that writes art follows [`PALETTES.md`](PALETTES.md): layer 1 is the GBA hardware (15-bit colour, 16-entry
+banks with index 0 transparent, shared and locked banks per asset), layer 2 the themes chosen inside it
+([`../wiki/bible/PALETTE.md`](../wiki/bible/PALETTE.md)). The shared [`palette-enforcer/`](palette-enforcer/) is the last
+post-processing step of every pipeline (diffusion, img2img, script or hand edit): `enforce` makes the pixels legal,
+`check` decides whether they install. A tool that is not built yet has a **Palette** section in its README/TODO
+saying which bank and theme it uses; building the tool includes wiring that step in.
+
 ## Status legend
 
 | Status | Meaning |
@@ -28,6 +37,7 @@ work (which file becomes which Star Wars subject) stays in the wiki. Update this
 
 | Tool | Status | Covers | Categories | Wiki rows |
 |---|---|---|---|---|
+| [`palette-enforcer/`](palette-enforcer/) | DONE | Shared palette gate and post-processor: GBA hardware rules plus the wiki themes ([`PALETTES.md`](PALETTES.md)). Every art tool calls it last. | all art | - |
 | [`play-tester/`](play-tester/) | DONE | Headless mGBA play-testing: scripts, Lua helpers, savestates | - | - |
 | [`sprite-creature-generator/`](sprite-creature-generator/) | PENDING (research in its README: SD 1.5 sprite LoRA on a rented GPU) | Companion battle sprites: front, second animation frame, back, normal and shiny palettes, battle placement data; Unown and Castform forms. | A1, A2 | `pending_art.csv` kind `pokemon` (front, anim_front, back) for each species and form; 1,248 PNGs |
 | [`sprite-creature-icon-generator/`](sprite-creature-icon-generator/) | TODO | Companion party and PC box icons (2-frame wiggle) and their shared-palette index. | A3 | `pending_art.csv` kind `pokemon` icon files; 417 PNGs |
@@ -245,7 +255,7 @@ Nothing draws these, but a tool has to write them so its art works in game.
 
 | Data | Where | Written by |
 |---|---|---|
-| Palettes (`.pal`, JASC) | next to most PNGs; shared NPC palettes in `graphics/object_events/palettes/` | each tool writes the palette its art uses (the `.pal` column above) |
+| Palettes (`.pal`, JASC) | next to most PNGs; shared NPC palettes in `graphics/object_events/palettes/` | each tool writes the palette its art uses (the `.pal` column above), through `palette-enforcer` ([`PALETTES.md`](PALETTES.md)) |
 | Tilemaps (`.bin`, 435 files) | screens, battle backgrounds, wallpapers, region map | `ui-skin-generator`, `tile-generator`, `cutscene-generator` (layout kept, tiles redrawn) |
 | Metatiles and attributes (`metatiles.bin`, `metatile_attributes.bin`) | `data/tilesets/**` | `tile-generator` |
 | Creature battle placement and motion (`front_pic_coordinates.h`, `back_pic_coordinates.h`, `enemy_mon_elevation.h`, `front_pic_anims.h`, `sMonFrontAnimIdsTable` / `sMonAnimationDelayTable` in `src/pokemon.c`, `sSpeciesToBackAnimSet` in `src/pokemon_animation.c`, `pokemonScale` / `pokemonOffset` in `pokedex_entries.h`) | `src/data/pokemon_graphics/`, `src/` | `sprite-creature-generator` |

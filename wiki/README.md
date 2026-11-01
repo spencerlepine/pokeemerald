@@ -94,7 +94,7 @@ in `../game`. Every `source_file` is a path relative to `../game`.
 - New flags and vars use only Emerald's unused slots (listed in `bible/NET_NEW_DESIGNS.md`).
 - Name limits: creature 10, move 12, item 14, ability 12, type 6, trainer class 12, trainer name 10, map name 16.
 - [`bible/STORY.md`](bible/STORY.md) is the story: planets, factions, cast, acts.
-- [`bible/PALETTE.md`](bible/PALETTE.md) is the loose color palette: title screen, factions, HUD and menus.
+- [`bible/PALETTE.md`](bible/PALETTE.md) is the chosen color themes (title screen, factions, HUD and menus), enforced by the art tools through `tools/palette-enforcer`; the hardware rules are in [`../tools/PALETTES.md`](../tools/PALETTES.md).
 
 ## Sound and visual effects
 

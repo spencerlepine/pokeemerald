@@ -5,7 +5,8 @@ the vanilla intro (`game/graphics/intro/`, screenshots of the real ROM in mGBA) 
 the scene-2 prototype in `scenes/intro_bike/`. Add a section when a new scene teaches something.
 
 Colors come from [`wiki/bible/PALETTE.md`](../../wiki/bible/PALETTE.md) where a theme fits; scene
-palettes like Tatooine's desert are new and follow the same rule (GBA steps of 8).
+palettes like Tatooine's desert are new and follow the same rule (GBA steps of 8). A new place's palette is
+added to the wiki as its own `## Planet: <name>` theme first, so every tool shares it ([`../PALETTES.md`](../PALETTES.md)).
 
 ## 1. Backgrounds have no outlines
 

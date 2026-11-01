@@ -57,11 +57,24 @@ male trainer, standing, front view,
 simple background
 ```
 
+## Palette (required: [`../PALETTES.md`](../PALETTES.md))
+
+- **Hardware (layer 1):** 64x64, 4bpp, 15 colours + transparent. Most trainers own their bank (taken from the
+  PNG); Brendan, May, their R/S pics and Wally use `game/graphics/trainers/palettes/*.pal`, shared with their back
+  pic, so those are **locked**. Values on GBA steps.
+- **Theme (layer 2):** the faction of the trainer class: `alliance-dawn` (Rebels, player, rivals),
+  `imperial-order` (Empire), `swamp-throne` (Hutt Cartel), `factions` for neutral crowds. Skin, hair and eyes are
+  not in any theme, so allow free slots.
+- **Post-processing:** after the 8x downsample and background removal,
+  `enforce raw.png front.png --bpp 4 --key auto --theme <faction> --free 6 --write-pal front.pal`
+  (shared-palette trainers: `--pal game/graphics/trainers/palettes/<name>.pal` instead), then `check`.
+
 ## To build
 
 1. Read the rows above in `../../wiki/database/` (filter by `kind`; skip `KEEP*` and `CUT`).
 2. Build a tool that takes one row (its `sw_subject` is the brief, `path` the Emerald original, `suggested_path` the new name) and generates rows 1-4 above.
 3. Show the owner a few samples, iterate, then generate the rest and set each row's status to `DONE`.
+4. Finish the pipeline with the palette step above (`palette-enforcer` `enforce`, then `check`); never install a file that fails `check`.
 
 ---
 
@@ -139,8 +152,9 @@ images, approved sprites, metadata and saved ComfyUI workflows in separate folde
 1. Downsample 768 -> 96 (8x, nearest; test that pixel edges stay crisp).
 2. Fit into the game's 64x64 cell (see "Size" above).
 3. Remove the background as its own step (a white background is not transparency).
-4. Quantise to the game's palette rules (15 colours + transparent).
-5. Export indexed PNG (and `.pal` where the game uses one).
+4. Palette step (`../palette-enforcer`, rules in `../PALETTES.md`): `enforce` to 4bpp, 15 colours + transparent, onto
+   the faction theme or the locked shared palette; it writes the indexed PNG (and `.pal` where the game uses one).
+5. `check` the result; a failure is not shown to the owner and not installed.
 
 Review every sheet for silhouette, proportions, palette, alignment, pixel quality, background
 artifacts and framing before it is shown to the owner.

@@ -93,6 +93,15 @@ and arms).
 - Sizes are multiples of 8 (tiles are 8x8).
 - Replacing a PNG at the same path needs no code change; a new asset needs C table entries.
 
+### Palette gate (required: [`../PALETTES.md`](../PALETTES.md))
+
+`build` runs the shared [`palette-enforcer`](../palette-enforcer/) check on the sheet and lists its errors and
+warnings in `lint.txt`; `install` refuses a sheet that fails it. The sheet must use the locked NPC/player bank
+named in `palette:` index for index (an inline `palette:` list is new art and must sit on GBA steps). Add
+`theme: <id>` (a theme or group from `../../wiki/bible/PALETTE.md`, e.g. `imperial-order`) to a spec to see how
+far the bank is from the character's faction; it is a warning only, because a shared bank cannot follow every
+faction. Giving a faction its own walker bank is an owner decision (a new palette tag).
+
 ## Making a walker (read STYLE.md first)
 
 The owner rejected the first hand-drawn batches: black outlines, flat ramps, no top-down

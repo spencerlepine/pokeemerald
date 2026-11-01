@@ -23,7 +23,10 @@ or with the keys `0-9a-f` (`"d"` is 13). Small integers are palette indices ever
 (this repo's change; larger numbers are still packed colors).
 
 Keep colors on GBA steps (each channel a multiple of 8, like `wiki/bible/PALETTE.md`). Two entries
-that are the same 15-bit color count as one.
+that are the same 15-bit color count as one. A `pal` hex color off a step is truncated the way the game
+would and printed as a warning, so fix the source value. The full rules (hardware and the wiki themes a
+scene should draw from) are in [`../PALETTES.md`](../PALETTES.md); `scripts/rom-preview.sh` runs the shared
+`palette-enforcer audit` on the scene output before building a ROM.
 
 ## `gba(path, opts)`: write a game file
 

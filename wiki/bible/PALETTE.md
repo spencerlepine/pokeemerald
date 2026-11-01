@@ -1,12 +1,19 @@
 # Color palette
 
-A loose color reference for the title screen, factions and menus. It is a starting point for art, not a strict contract,
-and nothing here is wired into `../game`. Preview with dummy components: [Kyber Palette Preview](https://claude.ai/artifact/TJKX2LyGSftXXA3TKymuBW).
+The chosen color themes for the title screen, factions and menus: layer 2 of the art rules in
+[`../../tools/PALETTES.md`](../../tools/PALETTES.md) (layer 1 is the GBA hardware). The art tools read this file directly
+through `tools/palette-enforcer` (`python -m gba_palette themes -v` lists the theme ids), so a change here is what they
+enforce on their next run. Themes are the default target: off-theme colours are warnings unless a tool locks a theme
+(menus use `hud` strictly). Preview with dummy components: [Kyber Palette Preview](https://claude.ai/artifact/TJKX2LyGSftXXA3TKymuBW).
+
+Format the tools rely on: one `##` section per theme (the theme id is its heading after the colon, slugged), a table
+whose rows hold the hex in backticks, and the role in the last column. New places get their own section,
+`## Planet: <name>`, before any tool draws them.
 
 Every hex value is GBA-safe (each channel is a multiple of 8, so it maps exactly to the GBA's 15-bit color).
 Roles: **primary** is the main color, **secondary** and **tertiary** support it, **accent** is used sparingly, **neutral** fills the rest.
 
-To extend: add a row to the right table (or a new `##` section for a new theme), keep values in steps of 8, and give it a role.
+To extend: add a row to the right table (or a new `##` section for a new theme), keep values in steps of 8, and give it a role. `python -m gba_palette themes` (in `tools/palette-enforcer`) fails if a value is off a step.
 
 ## Title screen and logo: Kyber Gold
 
