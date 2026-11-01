@@ -28,6 +28,7 @@ saying which bank and theme it uses; building the tool includes wiring that step
 |---|---|
 | **TODO** | No tool yet. The scope is mapped and counted only (`TODO.md` in the folder). |
 | **PENDING** | Approach decided and researched; the build waits on something outside this repo (e.g. a GPU for an image model). |
+| **IN PROGRESS** | Being built; parts work, not end to end yet. |
 | **IN-REVIEW** | Tool works end to end; samples are with the owner for feedback. |
 | **READY** | Owner approved the samples; agents can generate the group at scale by following the tool's guide. |
 | **DONE** | Finished. |
