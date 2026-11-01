@@ -192,6 +192,13 @@ def build_prompt(b: dict, view: str) -> str:
     return ", ".join(s.strip() for s in p.split(",") if s.strip())
 
 
+def _local(src: str) -> str:
+    """jobs.json paths are relative to this folder; URLs and data URIs pass through."""
+    if src.startswith(("http://", "https://", "data:")):
+        return src
+    return str(HERE / src) if (HERE / src).exists() else src
+
+
 def image_ref(src: str, flip: bool = False) -> str:
     """URL as is (unless flipping); a local file becomes a data URI (the orchestrator stores it as
     a blob). Local images are flattened on white, padded square and sized to 768 like the model's
@@ -233,6 +240,9 @@ def cmd_gen(args) -> list[Path]:
         negative = BACK_NEGATIVE + negative
     seed = args.seed if args.seed is not None else random.randrange(1, 2**31 - 1)
     lora_air = v.get("air") or f"urn:air:{fam}:lora:civitai:{LORA_MODEL_ID}@{v['id']}"
+    init = args.init or (b["init"] if args.view == "front" else None)
+    if args.cfg is None:
+        args.cfg = 5.0 if init else 7.0
     params = {"prompt": prompt, "negativePrompt": negative,
               "scheduler": args.scheduler, "steps": args.steps, "cfgScale": args.cfg,
               "width": args.size, "height": args.size, "seed": seed, "clipSkip": 2}
@@ -243,17 +253,16 @@ def cmd_gen(args) -> list[Path]:
         extra["controlNets"] = [{"preprocessor": args.control_type, "weight": args.control_weight,
                                  "image": image_ref(control, args.flip or b["flip"])}]
         refs["control"] = control
-    init = args.init or (b["init"] if args.view == "front" else None)
     if init:
         # Image to image goes through the imageGen step (ComfyUI engine, createVariant). The older
         # textToImage step stores a `sourceImage` but does not use it: on 2026-11-01 a back sent
         # with one came back byte-identical to the same prompt + seed without it (served from cache).
         refs["init"] = init if not init.startswith("data:") else "(data URI)"
-        denoise = args.denoise or b["denoise"] or 0.6
+        denoise = args.denoise or b["denoise"] or 0.45
         step = {"$type": "imageGen", "input": {
             "engine": "comfy", "ecosystem": fam, "operation": "createVariant",
             "checkpointModel": model, "loras": {lora_air: args.strength},
-            "image": image_ref(init, args.flip or b["flip"]), "denoiseStrength": denoise,
+            "image": image_ref(_local(init), args.flip or b["flip"]), "denoiseStrength": denoise,
             "prompt": prompt, "negativePrompt": negative, "sampler": "euler_ancestral",
             "scheduler": "normal", "steps": args.steps, "cfgScale": args.cfg, "seed": seed,
             "clipSkip": 2, "width": args.size, "height": args.size, "quantity": args.n,
@@ -582,6 +591,50 @@ def battle_mockup(front: Path | None, back: Path | None, dst: Path, scale: int =
     return dst
 
 
+# ----------------------------------------------------------------------------- prep (reference -> start image)
+
+def cmd_prep(args):
+    """Turn a concept/movie reference into a sprite-like start image for image to image: cut out,
+    face left, small contrast lift, scale to ~60 px wide (vanilla fronts are a median 48x48, max 64),
+    k-means to 12 colours, 1 px dark outline, centred on a white 96x96 canvas, then nearest-neighbour
+    up to 768 so the model sees its own 8 px grid. Low denoise (0.4-0.55) from this keeps the real
+    creature's shape and colours; the LoRA only redraws it as a sprite."""
+    from PIL import ImageEnhance
+    src = args.reference
+    if src.startswith(("http://", "https://")):
+        r = requests.get(src, timeout=60)
+        r.raise_for_status()
+        im = Image.open(io.BytesIO(r.content))
+    else:
+        im = Image.open(src)
+    im = im.convert("RGBA")
+    if not (np.array(im)[..., 3] < 255).any():  # no alpha: knock out the background colour
+        im = knock_out_background(im)
+    im = im.crop(im.getbbox())
+    if args.flip:
+        im = im.transpose(Image.FLIP_LEFT_RIGHT)
+    rgb = ImageEnhance.Contrast(im.convert("RGB")).enhance(args.contrast)
+    rgb = ImageEnhance.Color(rgb).enhance(args.saturation)
+    im = Image.merge("RGBA", (*rgb.split(), im.split()[3]))
+    k = min(args.width / im.width, 64 / im.height)
+    s = im.resize((max(1, round(im.width * k)), max(1, round(im.height * k))), Image.LANCZOS)
+    a = np.array(s)
+    a[..., 3] = np.where(a[..., 3] > 110, 255, 0)
+    s = quantise(Image.fromarray(a, "RGBA"), args.colours)
+    a = np.array(s)
+    m = a[..., 3] > 0
+    pad = np.pad(m, 1)
+    ring = ~m & (pad[:-2, 1:-1] | pad[2:, 1:-1] | pad[1:-1, :-2] | pad[1:-1, 2:])
+    a[ring] = (40, 32, 32, 255)
+    s = Image.fromarray(a, "RGBA")
+    canvas = Image.new("RGBA", (96, 96), (255, 255, 255, 255))
+    canvas.alpha_composite(s, ((96 - s.width) // 2, (96 - s.height) // 2 + 6))
+    out = Path(args.out) if args.out else HERE / "refs" / f"{Path(args.species).name}_prep.png"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    canvas.convert("RGB").resize((768, 768), Image.NEAREST).save(out)
+    print(f"prep {s.width}x{s.height} -> {rel(out)}  (use as jobs.json \"init\", denoise ~0.45)")
+
+
 # ----------------------------------------------------------------------------- utils, cli
 
 def rel(p: Path) -> str:
@@ -617,7 +670,7 @@ def cmd_run(args):
         if fronts and not args.back_text_only:
             for f in fronts:
                 a = {**vars(args), "view": "back", "n": 1, "init": image_ref(str(f), flip=True),
-                     "denoise": args.back_denoise, "control": None}
+                     "denoise": args.back_denoise, "control": None, "flip": False}
                 backs += cmd_gen(argparse.Namespace(**a))
         else:
             backs = cmd_gen(argparse.Namespace(**{**vars(args), "view": "back"}))
@@ -651,7 +704,7 @@ def main():
         p.add_argument("-n", type=int, default=1, help="images in this request (per view)")
         p.add_argument("--strength", type=float, default=0.9, help="LoRA weight")
         p.add_argument("--steps", type=int, default=25)
-        p.add_argument("--cfg", type=float, default=7.0)
+        p.add_argument("--cfg", type=float, help="CFG scale; default 5 with an input image, 7 without")
         p.add_argument("--scheduler", default="EulerA")
         p.add_argument("--size", type=int, default=768)
         p.add_argument("--timeout", type=int, default=600)
@@ -666,14 +719,23 @@ def main():
                        help="auto: 1:1 if it fits, trim if only a thin edge sticks out, else shrink")
         p.add_argument("--period", type=int, help="force the pixel grid (the LoRA's is 8)")
 
+    pp = sub.add_parser("prep", help="reference/concept image -> pixelated start image for --init")
+    pp.add_argument("species"); pp.add_argument("reference", help="URL or file (movie still, concept art)")
+    pp.add_argument("--flip", action="store_true", help="mirror (fronts face left)")
+    pp.add_argument("--width", type=int, default=60)
+    pp.add_argument("--colours", type=int, default=12)
+    pp.add_argument("--contrast", type=float, default=1.35)
+    pp.add_argument("--saturation", type=float, default=1.2)
+    pp.add_argument("--out")
+    pp.set_defaults(fn=cmd_prep)
     g = sub.add_parser("gen"); gen_args(g); g.set_defaults(fn=cmd_gen)
     f = sub.add_parser("finish")
     f.add_argument("front", help="raw front .png"); f.add_argument("back", nargs="?", help="raw back .png")
     f.add_argument("--out", help="output folder (default runs/<species>/finished/<front stem>/)")
     finish_args(f); f.set_defaults(fn=cmd_finish)
     r = sub.add_parser("run"); gen_args(r, both=True); finish_args(r)
-    r.add_argument("--back-denoise", type=float, default=0.65,
-                   help="back from the mirrored front: 0..1, higher redraws more (default 0.65)")
+    r.add_argument("--back-denoise", type=float, default=0.7,
+                   help="back from the mirrored front: 0..1, higher redraws more (default 0.7)")
     r.add_argument("--back-text-only", action="store_true", help="back from the prompt alone, not the front"); r.set_defaults(fn=cmd_run)
     args = ap.parse_args()
     args.fn(args)

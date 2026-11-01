@@ -5,7 +5,7 @@ so no rented GPU is needed. A mirror of [`../../sprite-trainer-generator/civitai
 set up for the creature LoRA [Pokemon Sprite PixelArt 768](https://civitai.com/models/161280/pokemon-sprite-pixelart-768)
 (model 161280, SD 1.5, version **v2.1-beta** `273148` by default) on DreamShaper 8, paid for in Buzz.
 
-**Status:** first test done 2026-11-01 (Massiff, in the `poochyena` slot). Not approved yet;
+**Status:** round 2 done 2026-11-01 (Massiff, in the `poochyena` slot): image to image from a prepped movie reference. Not approved yet;
 nothing is installed into `game/`.
 
 ## Setup
@@ -18,6 +18,7 @@ Same as the trainer tool: `CIVITAI_API_TOKEN` in the environment, or a git-ignor
 ```bash
 cd tools/sprite-creature-generator/civitai
 python civitai_creature.py models                      # LoRA versions (no key needed)
+python civitai_creature.py prep poochyena <movie still URL or file> --flip   # -> refs/poochyena_prep.png (free)
 python civitai_creature.py run poochyena --whatif      # price front + back, spend nothing (3 + 3 Buzz)
 python civitai_creature.py run poochyena               # front, then back from the mirrored front, then finish
 python civitai_creature.py gen poochyena --view back --init runs/poochyena/raw/<front>.png --flip --denoise 0.65
@@ -35,13 +36,19 @@ description, types, body colour) comes from [`../research/sw-creature-jobs.csv`]
   "types": [],
   "colour": "grey and brown",
   "negative": "humanoid, standing upright, arms, fur",
-  "init": "https://static.wikia.nocookie.net/starwars/images/b/ba/Massiff-Outlaws.png/...",
-  "flip": true,
-  "denoise": 0.7
+  "init": "refs/poochyena_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/b/ba/Massiff-Outlaws.png/...",
+  "flip": false,
+  "denoise": 0.45
 }
 ```
 
-- `init` (URL or local file) is a concept/reference image for the front: image to image. `flip`
+- **The recommended way:** find a movie still or concept art of the real creature (Wookieepedia),
+  run `prep` on it, and point `init` at the result. `prep` cuts it out, faces it left, scales it to
+  ~60 px, cuts it to 12 colours with a 1 px dark outline on the model's own 96 px / 8x grid. Image to
+  image at denoise 0.4-0.55 from that keeps the real creature's shape and colours, and the LoRA only
+  redraws it as a sprite. Text-only and raw-photo starts gave "rainbow Pokemon" colours.
+- `init` (URL or local file) is the start image for the front: image to image. `flip`
   mirrors it, since vanilla fronts face left and most concept art faces right. `denoise` 0..1: how far
   the model may move away from it.
 - `control` (URL or file) is the same through ControlNet (`--control-type canny`, `--control-weight 0.7`).
@@ -71,7 +78,26 @@ description, types, body colour) comes from [`../research/sw-creature-jobs.csv`]
 - The front came out 92 px wide at native size, so it was shrunk to 64x46 by dropping lines.
   Vanilla fronts are a median 48x48; adding "small" or "compact" to the prompt should help.
 
+## Round 2 (2026-11-01, 16 Buzz): image to image from a prepped reference
+
+Owner feedback on round 1: "a weird rainbow Pokemon with high contrast colours", not the movie
+creature. Round 2 started from `prep` of the Wookieepedia Massiff render instead, CFG 5:
+
+| denoise | result |
+|---|---|
+| 0.40 | Keeps the movie shape and the grey snout / brown hide; the LoRA adds sprite shading and outlines. Closest to the film |
+| 0.55 | More "game" detail (open red jaws, gold back plates), still clearly the same animal |
+| 0.70-0.75 (back, from the mirrored front) | Same colours and body; the pose turns a little but is still mostly a mirrored side view |
+
+All fronts read back 1:1 at 60x43 (the vanilla median is 48x48), 15 colours, and pass `check`.
+Defaults now: denoise 0.45 and CFG 5 when there is an input image, back denoise 0.7.
+
 ## Not done yet
+
+- A true from-behind back: neither text nor image to image from the front gives one yet. Options:
+  a back reference image through `prep` (any rear-ish still), or ControlNet from a hand-made back
+  silhouette. Vanilla backs are also larger than the front (median 1.22x area) and cut off by the
+  text box; ours are the front's size.
 
 Frame 2 (`anim_front.png`: image to image from the picked front), `shiny.pal`, and the placement data
 (`y_offset`, elevation) in the README's table rows 2, 5 and 6-8.

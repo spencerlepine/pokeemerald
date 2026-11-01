@@ -1,0 +1,58 @@
+{
+  "species": {
+    "stem": "poochyena",
+    "sw_name": "MASSIFF",
+    "sw_basis": "canon:Massiff",
+    "subject": "massiff",
+    "desc": "spiky reptile hound on four legs, long crocodile snout with open jaws and sharp teeth, row of long spines along its back, small dark eyes, thick scaly legs with claws, grey and brown scaly hide",
+    "types": [],
+    "colour": "grey and brown",
+    "style": "gen3",
+    "pose": "facing left",
+    "negative": "humanoid, standing upright, arms, fur, fluffy, dog ears",
+    "init": "refs/poochyena_prep.png",
+    "control": null,
+    "denoise": 0.45,
+    "flip": false
+  },
+  "view": "front",
+  "lora": {
+    "id": 273148,
+    "name": "v2.1-beta",
+    "baseModel": "SD 1.5",
+    "trainedWords": [],
+    "air": null,
+    "files": [
+      {
+        "name": "pksp768_V2-1.safetensors",
+        "sizeKB": 74235.9921875,
+        "sha256": "DF8494A9FF9AE96B53ECBCD327AA14626C59D3F573423892A650F9F6C21AB418"
+      }
+    ]
+  },
+  "checkpoint": "urn:air:sd1:checkpoint:civitai:4384@128713",
+  "step": "imageGen",
+  "params": {
+    "prompt": "gen3, (massiff:1.2), spiky reptile hound on four legs, long crocodile snout with open jaws and sharp teeth, row of long spines along its back, small dark eyes, thick scaly legs with claws, grey and brown scaly hide, pokemon, single creature, full body, facing left, pixel art, game sprite, crisp dark outlines, white background, simple background, mostly grey and brown",
+    "negativePrompt": "humanoid, standing upright, arms, fur, fluffy, dog ears, human, person, trainer, multiple creatures, two creatures, text, watermark, signature, frame, border, scenery, detailed background, gradient background, ground, shadow, cropped, cut off, blurry, 3d, photo, realistic, painting, smooth shading",
+    "scheduler": "EulerA",
+    "steps": 25,
+    "cfgScale": 5.0,
+    "width": 768,
+    "height": 768,
+    "seed": 1111,
+    "clipSkip": 2,
+    "denoise": 0.55
+  },
+  "refs": {
+    "init": "refs/poochyena_prep.png"
+  },
+  "control": null,
+  "strength": 0.9,
+  "format": "jpeg",
+  "seed": 1111,
+  "workflowId": "13596363-20261101081926594-m271",
+  "jobId": null,
+  "cost": "5 blue",
+  "generated": "20261101-081941"
+}
