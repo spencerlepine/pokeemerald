@@ -1,9 +1,9 @@
 {
   "init": "refs/taillow_prep.png",
-  "init_source": "refs/sources/taillow/taillow_cut.png",
+  "init_source": "refs/sources/taillow/taillow_head.png",
   "flip": false,
   "denoise": 0.5,
-  "desc": "small hawk-bat chick in a horizontal glide facing left, beaked head in front, swept-back leathery wings trailing behind, whole body, small, centred",
+  "desc": "small hawk-bat chick in a raised-wing glide facing left, side view, big beaked head at the left with one bright green eye, full rounded chest, leathery wings raised up behind, whole body, small, centred",
   "colour": "purple and golden yellow",
-  "ref_note": "WoSW hawk-bat render (alpha), rotated 72 degrees into a horizontal left-facing glide so it is not too tall; source https://static.wikia.nocookie.net/starwars/images/0/04/Hawkbat-WoSW.png"
+  "ref_note": "WoSW hawk-bat render (alpha) with the head enlarged 2.6x by PIL and rotated only 22 degrees, so the head reads and the raised wing makes the silhouette taller; source https://static.wikia.nocookie.net/starwars/images/0/04/Hawkbat-WoSW.png"
 }
