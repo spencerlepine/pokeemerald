@@ -1,9 +1,9 @@
 {
   "init": "refs/teddiursa_prep.png",
-  "init_source": "https://static.wikia.nocookie.net/starwars/images/c/cb/Gorax-Bestiary.png/revision/latest?cb=20241109212224#crop=0.2,0.0,1.0,1.0",
+  "init_source": "refs/sources/teddiursa/teddiursa_draw.png",
   "flip": false,
-  "denoise": 0.5,
-  "desc": "small round fuzzy gorax cub with big pointed ears and stubby arms",
-  "colour": "dark brown and tan",
-  "ref_note": "Same Gorax Bestiary render as ursaring (only clean gorax art; kangaskhan was told to move off it); width 28 because the tall figure is height-bound (gives ~46 px tall vs ursaring 64); cub traits in desc"
+  "denoise": 0.55,
+  "desc": "three-quarter view, whole body, small, centred, facing left: sitting brown gorax cub licking honey from its raised paw, round ears, tan muzzle, tan crescent on chest",
+  "colour": "brown and tan",
+  "ref_note": "Hand-drawn clean shape ref (all gorax art is front-on or scenes); round 3"
 }
