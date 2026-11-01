@@ -32,6 +32,9 @@
 #include "window.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
+#include "scanline_effect.h"
+#include "title_screen.h"
+#include "util.h"
 
 // Set to a song constant once the crawl theme exists. MUS_NONE plays nothing.
 #define CRAWL_MUSIC MUS_NONE
@@ -521,5 +524,199 @@ static void Task_IntroCrawlExit(u8 taskId)
         FreeAllWindowBuffers();
         DestroyTask(taskId);
         SetMainCallback2(CB2_InitMainMenu);
+    }
+}
+
+// ---------------------------------------------------------------------------------------------
+// "A long time ago in a galaxy far, far away...."
+// Played between the end of the intro movie (the white flash after the sun scene) and the title
+// screen. Not played when the intro is skipped: skipping goes straight to the title screen
+// (MainCB2_Intro in intro.c), and this screen itself takes no input.
+// White fades down to dark space, the blue text fades in, holds, fades out, then the title screen.
+// ---------------------------------------------------------------------------------------------
+
+#define GALAXY_BG_COLOR       RGB(1, 1, 3)
+#define GALAXY_TEXT_COLOR     RGB(9, 22, 30)    // the movie's pale blue
+#define GALAXY_SHADOW_COLOR   RGB(3, 9, 15)
+#define GALAXY_FROM_WHITE     2                 // palette fade delay: white -> space
+#define GALAXY_TEXT_FADE      32                // frames for the text to fade in / out
+#define GALAXY_TEXT_HOLD      200
+#define GALAXY_END_HOLD       30
+#define GALAXY_PAL            15
+
+static const u8 sText_GalaxyLine1[] = _("A long time ago in a galaxy far,");
+static const u8 sText_GalaxyLine2[] = _("far away....");
+
+static const struct BgTemplate sGalaxyBgTemplates[] =
+{
+    {
+        .bg = 0,
+        .charBaseIndex = 0,
+        .mapBaseIndex = 31,
+        .screenSize = 0,
+        .paletteMode = 0,
+        .priority = 0,
+        .baseTile = 0,
+    },
+};
+
+static const struct WindowTemplate sGalaxyWindowTemplates[] =
+{
+    {
+        .bg = 0,
+        .tilemapLeft = 1,
+        .tilemapTop = 7,
+        .width = 28,
+        .height = 5,
+        .paletteNum = GALAXY_PAL,
+        .baseBlock = 1,
+    },
+    DUMMY_WIN_TEMPLATE
+};
+
+// bg, fg, shadow in palette GALAXY_PAL
+static const u8 sGalaxyTextColors[] = {1, 2, 3};
+
+static void CB2_GalaxyFarAway(void);
+static void VBlankCB_GalaxyFarAway(void);
+static void Task_GalaxyFarAway(u8 taskId);
+
+void CB2_InitGalaxyFarAway(void)
+{
+    u16 pal[4];
+    s32 w1, w2, x;
+
+    SetVBlankCallback(NULL);
+    SetHBlankCallback(NULL);
+    SetGpuReg(REG_OFFSET_DISPCNT, 0);
+    SetGpuReg(REG_OFFSET_BG0HOFS, 0);
+    SetGpuReg(REG_OFFSET_BG0VOFS, 0);
+    SetGpuReg(REG_OFFSET_WININ, 0);
+    SetGpuReg(REG_OFFSET_WINOUT, 0);
+    SetGpuReg(REG_OFFSET_BLDCNT, 0);
+    SetGpuReg(REG_OFFSET_BLDALPHA, 0);
+    SetGpuReg(REG_OFFSET_BLDY, 0);
+    ScanlineEffect_Stop();
+    DmaFill16(3, 0, (void *)VRAM, VRAM_SIZE);
+    DmaFill32(3, 0, (void *)OAM, OAM_SIZE);
+    DmaFill16(3, 0, (void *)PLTT, PLTT_SIZE);
+    ResetPaletteFade();
+    ResetTasks();
+    ResetSpriteData();
+    FreeAllSpritePalettes();
+    ResetBgsAndClearDma3BusyFlags(0);
+    InitBgsFromTemplates(0, sGalaxyBgTemplates, ARRAY_COUNT(sGalaxyBgTemplates));
+    InitWindows(sGalaxyWindowTemplates);
+    DeactivateAllTextPrinters();
+
+    // The text starts in the background colour (invisible) and is blended in by the task.
+    pal[0] = GALAXY_BG_COLOR;
+    pal[1] = GALAXY_BG_COLOR;
+    pal[2] = GALAXY_BG_COLOR;
+    pal[3] = GALAXY_BG_COLOR;
+    LoadPalette(&pal[0], BG_PLTT_ID(0), sizeof(pal[0]));
+    LoadPalette(pal, BG_PLTT_ID(GALAXY_PAL), sizeof(pal));
+
+    // Two lines, left-aligned like the film, the block centred in the window
+    w1 = GetStringWidth(FONT_NORMAL, sText_GalaxyLine1, 0);
+    w2 = GetStringWidth(FONT_NORMAL, sText_GalaxyLine2, 0);
+    x = (28 * 8 - (w1 > w2 ? w1 : w2)) / 2;
+    if (x < 0)
+        x = 0;
+    FillWindowPixelBuffer(0, PIXEL_FILL(1));
+    AddTextPrinterParameterized3(0, FONT_NORMAL, x, 4, sGalaxyTextColors, TEXT_SKIP_DRAW, sText_GalaxyLine1);
+    AddTextPrinterParameterized3(0, FONT_NORMAL, x, 20, sGalaxyTextColors, TEXT_SKIP_DRAW, sText_GalaxyLine2);
+    PutWindowTilemap(0);
+    CopyWindowToVram(0, COPYWIN_FULL);
+
+    // Carry on from the intro's white flash
+    BlendPalettes(PALETTES_ALL, 16, RGB_WHITE);
+    BeginNormalPaletteFade(PALETTES_ALL, GALAXY_FROM_WHITE, 16, 0, RGB_WHITE);
+    FadeOutBGM(4);
+
+    SetGpuReg(REG_OFFSET_BG0CNT, BGCNT_PRIORITY(0) | BGCNT_CHARBASE(0) | BGCNT_SCREENBASE(31) | BGCNT_16COLOR | BGCNT_TXT256x256);
+    SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_MODE_0 | DISPCNT_BG0_ON);
+    EnableInterrupts(INTR_FLAG_VBLANK);
+    SetVBlankCallback(VBlankCB_GalaxyFarAway);
+    CreateTask(Task_GalaxyFarAway, 0);
+    SetMainCallback2(CB2_GalaxyFarAway);
+}
+
+static void CB2_GalaxyFarAway(void)
+{
+    RunTasks();
+    UpdatePaletteFade();
+    DoScheduledBgTilemapCopiesToVram();
+}
+
+static void VBlankCB_GalaxyFarAway(void)
+{
+    TransferPlttBuffer();
+}
+
+static u16 MixColor(u16 from, u16 to, u8 level)
+{
+    s32 r = GET_R(from) + ((GET_R(to) - GET_R(from)) * level) / 16;
+    s32 g = GET_G(from) + ((GET_G(to) - GET_G(from)) * level) / 16;
+    s32 b = GET_B(from) + ((GET_B(to) - GET_B(from)) * level) / 16;
+    return RGB(r, g, b);
+}
+
+// level 0 = text invisible (background colour), 16 = full blue
+static void SetGalaxyTextLevel(u8 level)
+{
+    u16 pal[2];
+    pal[0] = MixColor(GALAXY_BG_COLOR, GALAXY_TEXT_COLOR, level);
+    pal[1] = MixColor(GALAXY_BG_COLOR, GALAXY_SHADOW_COLOR, level);
+    LoadPalette(pal, BG_PLTT_ID(GALAXY_PAL) + 2, sizeof(pal));
+}
+
+static void Task_GalaxyFarAway(u8 taskId)
+{
+    s16 *timer = &gTasks[taskId].tTimer;
+
+    switch (gTasks[taskId].tState)
+    {
+    case 0: // white -> space
+        if (!gPaletteFade.active)
+        {
+            *timer = 0;
+            gTasks[taskId].tState++;
+        }
+        break;
+    case 1: // text fades in
+        ++*timer;
+        SetGalaxyTextLevel((*timer * 16) / GALAXY_TEXT_FADE);
+        if (*timer >= GALAXY_TEXT_FADE)
+        {
+            *timer = 0;
+            gTasks[taskId].tState++;
+        }
+        break;
+    case 2: // hold
+        if (++*timer >= GALAXY_TEXT_HOLD)
+        {
+            *timer = 0;
+            gTasks[taskId].tState++;
+        }
+        break;
+    case 3: // text fades out
+        ++*timer;
+        SetGalaxyTextLevel(16 - (*timer * 16) / GALAXY_TEXT_FADE);
+        if (*timer >= GALAXY_TEXT_FADE)
+        {
+            *timer = 0;
+            gTasks[taskId].tState++;
+        }
+        break;
+    case 4: // a beat of empty space, then the title screen
+        if (++*timer >= GALAXY_END_HOLD)
+        {
+            SetVBlankCallback(NULL);
+            FreeAllWindowBuffers();
+            DestroyTask(taskId);
+            SetMainCallback2(CB2_InitTitleScreen);
+        }
+        break;
     }
 }

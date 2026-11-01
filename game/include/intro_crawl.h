@@ -6,4 +6,7 @@
 bool8 IntroCrawl_ShouldPlay(void);
 void CB2_InitIntroCrawl(void);
 
+// "A long time ago in a galaxy far, far away...." between the intro movie and the title screen
+void CB2_InitGalaxyFarAway(void);
+
 #endif // GUARD_INTRO_CRAWL_H

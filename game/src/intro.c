@@ -19,6 +19,7 @@
 #include "intro_credits_graphics.h"
 #include "trig.h"
 #include "intro.h"
+#include "intro_crawl.h"
 #include "graphics.h"
 #include "sound.h"
 #include "util.h"
@@ -2412,10 +2413,18 @@ static void Task_Scene3_Rayquaza(u8 taskId)
 #undef tDelay
 #undef tTimer
 
+// The movie played to the end: "A long time ago in a galaxy far, far away...." before the title
+// screen (intro_crawl.c). A skipped intro goes straight to the title screen instead.
+static void CB2_EndIntroToGalaxyFarAway(void)
+{
+    if (!UpdatePaletteFade())
+        SetMainCallback2(CB2_InitGalaxyFarAway);
+}
+
 static void Task_EndIntroMovie(u8 taskId)
 {
     DestroyTask(taskId);
-    SetMainCallback2(MainCB2_EndIntro);
+    SetMainCallback2(CB2_EndIntroToGalaxyFarAway);
 }
 
 static void Task_RayquazaAttack(u8 taskId)
