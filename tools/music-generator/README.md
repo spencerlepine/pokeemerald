@@ -1,6 +1,6 @@
 # music-generator
 
-**Status:** tool built, two prototypes, no song installed. Every song in `../../wiki/database/music.csv` is still
+**Status:** DONE. Approved by the owner on 2026-11-01. Two prototypes, no song installed. Every song in `../../wiki/database/music.csv` is still
 `rewrite_status` TODO; composing them is a separate pass that uses this tool.
 
 Turns a song model (`song-schemas/<name>.yaml`, the z-day ai-music notation) into an Emerald song: a MIDI file
