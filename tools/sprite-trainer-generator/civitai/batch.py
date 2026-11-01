@@ -65,7 +65,29 @@ def stem_of(r: dict) -> str:
     return Path(r["path"]).stem
 
 
-def judge(final: Path, log: str) -> tuple[bool, str]:
+def figures(png: Path, share: float = 0.2) -> int:
+    """Opaque 8-connected blobs holding at least `share` of the opaque pixels (2+ = duplicated figure)."""
+    a = np.array(Image.open(png).convert("RGBA"))[..., 3] > 0
+    h, w = a.shape
+    seen = np.zeros_like(a)
+    sizes = []
+    for y in range(h):
+        for x in range(w):
+            if a[y, x] and not seen[y, x]:
+                st, n = [(y, x)], 0
+                seen[y, x] = True
+                while st:
+                    cy, cx = st.pop(); n += 1
+                    for dy in (-1, 0, 1):
+                        for dx in (-1, 0, 1):
+                            ny, nx = cy + dy, cx + dx
+                            if 0 <= ny < h and 0 <= nx < w and a[ny, nx] and not seen[ny, nx]:
+                                seen[ny, nx] = True; st.append((ny, nx))
+                sizes.append(n)
+    return sum(1 for n in sizes if n >= share * a.sum())
+
+
+def judge(final: Path, log: str, pair: bool = False) -> tuple[bool, str]:
     m = re.search(r"grid (\d+)px -> native (\d+), figure (\d+)x(\d+)", log)
     if "PASS" not in log or not m:
         return False, "check failed"
@@ -79,6 +101,8 @@ def judge(final: Path, log: str) -> tuple[bool, str]:
         return False, f"figure {fw}x{fh} too small"
     if opaque.sum() < 500 or colours < 8:
         return False, f"{opaque.sum()} px, {colours} colours"
+    if not pair and figures(final.with_name(final.stem + "_native.png")) >= 2:
+        return False, "two figures (duplicate or turnaround)"
     return True, f"figure {fw}x{fh}, {colours} colours"
 
 
@@ -175,7 +199,7 @@ def do(row: dict) -> str:
             if stop.is_set():
                 break
             continue
-        ok, note = judge(final, log)
+        ok, note = judge(final, log, bool(JOBS.get(stem, {}).get("pair")))
         if ok:
             files, notes, drawn = install(row, final, log, note)
             commit(row, files, notes, drawn)

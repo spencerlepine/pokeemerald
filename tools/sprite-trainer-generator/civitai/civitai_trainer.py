@@ -61,7 +61,7 @@ PROMPT = ("{trigger}{style}, ({subject}:1.3), {desc}, full body character sprite
 POSE = "standing, facing left, three-quarter view"
 NEGATIVE = ("poke ball, pokeball, holding ball, baseball cap, generic pokemon trainer, anime boy, "
             "scenery, detailed background, gradient background, floor, shadow, text, watermark, "
-            "signature, frame, border, multiple characters, cropped, cut off feet, blurry, 3d, "
+            "signature, frame, border, multiple characters, multiple views, character sheet, turnaround, duplicate, cropped, cut off feet, blurry, 3d, "
             "photo, realistic, painting, smooth shading")
 
 # --view back: tested 2026-11-01 (Leia, seed 303682211). The LoRA does draw a clean back view, but
@@ -198,7 +198,7 @@ def cmd_gen(args) -> list[Path]:
     v = pick_version(args.version)
     fam = family(v)
     prompt = args.prompt or build_prompt(b, v)
-    base_neg = NEGATIVE.replace("multiple characters, ", "") if b["pair"] else NEGATIVE  # two-person pics
+    base_neg = NEGATIVE.replace("multiple characters, ", "").replace("duplicate, ", "") if b["pair"] else NEGATIVE  # two-person pics
     negative = args.negative or ", ".join(x for x in (b["negative"], base_neg) if x)
     if args.view == "back":  # concept art for sprite-trainer-back-generator (full body, from behind)
         prompt = BACK_PROMPT + prompt.replace(POSE, "standing, raising one arm to throw")
