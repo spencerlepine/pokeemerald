@@ -1,0 +1,15 @@
+# saber_blade_red: SABER SLASH blade (red)
+new sheet: graphics/battle_anims/sprites/sw/saber_blade_red.png
+sheet 16x128, frame 16x32, slots drawn [0, 1, 2, 3], game uses [0, 1, 2, 3]
+palette gate: PASS
+  OK   /home/user/pokeemerald/tools/vfx-generator/output/saber_blade_red/saber_blade_red.png  (bpp 4, colours 7/15, on-theme 3/7)
+    warn:  4 of 7 colours are off-theme: [2] #A0A8B0 (nearest #7880A0, dE 20), [3] #586068 (nearest #7880A0, dE 19), [6] #F8B8B0 (nearest #F8F8F0, dE 30), [7] #F84040 (nearest #B88800, dE 64)
+STYLE SCORE 100/100 (group new)
+  ok    tiny_colours 0.00 (vanilla band 0.00..1.00)
+  ok    lone 0.00 (vanilla band 0.00..0.02)
+  ok    checker 0.00 (vanilla band 0.00..0.15)
+  ok    dark_edge 0.12 (vanilla band 0.00..0.68)
+  ok    core_bright 46.81 (vanilla band -18.79..96.63)
+  ok    luma_range 207.09 (vanilla band 0.00..222.28)
+  ok    coverage 0.15 (vanilla band 0.09..0.75)
+  ok    border 0.00 (vanilla band 0.00..0.27)

@@ -1,0 +1,17 @@
+# SABER SLASH kit: the scorch mark left on the target (alpha-blended, fades with the blend).
+name: saber_scorch
+title: SABER SLASH scorch
+row: net:vfx-saber-slash
+bucket: NEW
+new:
+  path: graphics/battle_anims/sprites/sw/saber_scorch.png
+  size: [32, 16]
+  frame: [32, 16]
+brief: A dark diagonal scorch streak with a faint ember line, kit palette (hilt greys and scorch darks).
+palette:
+  mode: kit
+preview: {scene: none}
+lint_allow: [lone, core_bright, luma_range, dark_edge, coverage]
+ops:
+  - beam: {x0: 4, y0: 12, x1: 28, y1: 4, r0: 2.4, r1: 1.6, ramp: scorch, bands: [0.5, 0.0], falloff: 0.8}
+  - beam: {x0: 7, y0: 11, x1: 25, y1: 5, r0: 0.7, r1: 0.5, ramp: blade, bands: [0.0, 0.0, 1.0, 0.0], mode: under}

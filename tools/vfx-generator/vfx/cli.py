@@ -205,6 +205,33 @@ def cmd_install(a):
                 print(f"  + {ready.name} row (run python3 ../../wiki/tools/mark_art_ready.py)")
 
 
+def cmd_story(a):
+    from . import anim
+    from .game import GAME
+    if a.action == "build":
+        syms = anim.GameSymbols(GAME)
+        kits = [anim.build_kit(anim.load_story(p), run_pipeline=not a.no_build) for p in a.story]
+        files, notes = anim.patches(GAME, kits, syms)
+        for sb in kits:
+            d = OUT / sb.name / "anim"
+            d.mkdir(parents=True, exist_ok=True)
+            (d / "script.s").write_text(anim.script_block(sb, syms, kits)[0])
+            (d / f"battle_anim_sw_{sb.name}.c").write_text(files[f"src/battle_anim_sw_{sb.name}.c"])
+            print(f"# {sb.name} on {sb.host}: {len(sb.sheets)} sheets, {len(sb.story.get('templates') or {})} templates")
+            for l in sb.notes:
+                print("  " + l)
+            print(f"  -> {d / 'script.s'}")
+        for n in notes:
+            print("  NOTE " + n)
+        print(f"patches {len(files)} game files: " + ", ".join(sorted(files)))
+    elif a.action == "romtest":
+        from .animtest import run as rt
+        rt(a)
+    elif a.action == "install":
+        from .animtest import install
+        install(a)
+
+
 def cmd_romtest(a):
     from .romtest import run as rt
     rt(a)
@@ -245,5 +272,11 @@ def main(argv=None):
     s.add_argument("spec", nargs="+")
     s.add_argument("--fresh", action="store_true")
     s.set_defaults(fn=cmd_romtest)
+    s = sp.add_parser("story", help="storyboards: build the kit + script, film it in a ROM, install into game/")
+    s.add_argument("action", choices=["build", "romtest", "install"])
+    s.add_argument("story", nargs="+", help="art/moves/<name>.yaml (or just the name)")
+    s.add_argument("--fresh", action="store_true")
+    s.add_argument("--no-build", action="store_true", help="reuse the sheets already in output/")
+    s.set_defaults(fn=cmd_story)
     a = ap.parse_args(argv)
     a.fn(a)

@@ -1,0 +1,48 @@
+# SABER SLASH kit, sheet 1 of 3 (owns the kit palette). A lightsaber held upright beside the attacker:
+# slot 0 hilt only, 1-3 the blade extending. The red sheet (saber_blade_red) has the same index layout.
+name: saber_blade
+title: SABER SLASH blade (blue)
+row: net:vfx-saber-slash
+bucket: NEW
+new:
+  path: graphics/battle_anims/sprites/sw/saber_blade.png
+  size: [16, 128]
+  frame: [16, 32]
+brief: >
+  A durasteel hilt with a dark grip at the bottom of the frame; a 4-px blade with a white core and a
+  blue glow rim extending upward over three slots. Hard core, soft one-pixel halo, no black outline.
+theme: [kyber-gold]
+palette:
+  mode: new
+  transparent: "#000000"
+  ramps:
+    hilt:   ["#F0F0F0", "#A0A8B0", "#585C68", "#282830"]
+    blade:  ["#FFFFFF", "#A8D8FF", "#4898FF", "#1850C0"]
+    scorch: ["#403830", "#181410"]
+vars:
+  top: "=[22, 15, 8, 2][i]"          # blade tip y per slot
+ops:
+  # hilt (slots 0-3): grip, emitter shroud, activation stud
+  - grid:
+      x: 5
+      y: 22
+      light: [-1, -1]
+      depth: 2
+      rows:
+        - ".hhhh."
+        - "hhhhhh"
+        - ".hhhh."
+        - ".gggg."
+        - ".gggg."
+        - ".gsgg."
+        - ".gggg."
+        - ".gggg."
+        - "..hh.."
+        - "......"
+      shade: {h: hilt}
+      legend: {g: hilt.2, s: hilt.0}
+  # blade: glow sheath then core, only when the slot has one
+  - beam: {when: "=i > 0", x0: 8, y0: 22, x1: 8, y1: "=top + 1", r0: 2.0, r1: 1.7, ramp: blade, bands: [0.7, 0.4, 0.15, 0.0], falloff: 1.3}
+  - beam: {when: "=i > 0", x0: 8, y0: 21, x1: 8, y1: "=top + 2", r0: 0.8, r1: 0.7, ramp: blade, bands: [1.0, 0.0], offset: 0}
+preview: {scene: none}
+lint_allow: [lone, core_bright, luma_range]
