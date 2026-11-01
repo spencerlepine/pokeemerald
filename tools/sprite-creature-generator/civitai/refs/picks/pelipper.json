@@ -1,9 +1,10 @@
 {
   "init": "refs/pelipper_prep.png",
-  "init_source": "refs/sources/pelipper/shyyyo_jfo_cut.png",
+  "init_source": "refs/sources/pelipper/shyyyo_alien.png",
   "flip": false,
-  "denoise": 0.5,
-  "desc": "tall crested shyyyo seabird standing, long neck, big dark hooked beak and crest, pale feathered body, folded wings, long thin tail, side view facing left, whole body, small, centred",
+  "denoise": 0.55,
+  "desc": "side view facing left, whole body, small, centred: gaunt predatory alien seabird, long dark serrated hooked beak with bared teeth, small beady red eye, ragged spiky crest and quills down the neck, ridged leathery folded wings, scrawny clawed legs, hunched menacing stance, alien fauna",
   "colour": "pale lavender grey with dark slate beak and crest",
-  "ref_note": "ShyyyoBird-JFO render, hand-masked from dark bg, dark translucent wing lifted to pale; replaces dark Amy Fry crop (wingull's)"
+  "ref_note": "ShyyyoBird-JFO render hand-masked; alien pass: PIL quills, serrated teeth, small red eye (owner: too friendly)",
+  "negative": "cute, chibi, kawaii, big eyes, smiling, happy, cartoon mascot, plush, toy"
 }
