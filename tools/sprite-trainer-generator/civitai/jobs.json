@@ -5,5 +5,11 @@
     "negative": "visible face, skin, hair, hat",
     "theme": "imperial-order",
     "style": ""
+  },
+  "steven": {
+    "subject": "Leia Organa",
+    "desc": "young woman, long white robe, two hair buns on the sides of her head, white boots, silver belt",
+    "theme": "alliance-dawn",
+    "style": ""
   }
 }

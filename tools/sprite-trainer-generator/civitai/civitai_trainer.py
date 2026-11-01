@@ -64,6 +64,11 @@ NEGATIVE = ("poke ball, pokeball, holding ball, baseball cap, generic pokemon tr
             "signature, frame, border, multiple characters, cropped, cut off feet, blurry, 3d, "
             "photo, realistic, painting, smooth shading")
 
+# --view back: tested 2026-11-01 (Leia, seed 303682211). The LoRA does draw a clean back view, but
+# full body and arms out, not the waist-up over-the-shoulder throw a back pic needs: concept only.
+BACK_PROMPT = "(back view:1.4), (seen from behind:1.3), back turned to the viewer, looking away, "
+BACK_NEGATIVE = "face, front view, facing viewer, eyes, "
+
 # Faction theme -> words for the prompt (the prompt is a hint; enforce is the guarantee).
 THEME_WORDS = {
     "imperial-order": "black, grey and red",
@@ -191,9 +196,13 @@ def cmd_gen(args) -> list[Path]:
     v = pick_version(args.version)
     fam = family(v)
     prompt = args.prompt or build_prompt(b, v)
+    negative = args.negative or ", ".join(x for x in (b["negative"], NEGATIVE) if x)
+    if args.view == "back":  # concept art for sprite-trainer-back-generator (full body, from behind)
+        prompt = BACK_PROMPT + prompt.replace(POSE, "standing, raising one arm to throw")
+        negative = BACK_NEGATIVE + negative
     seed = args.seed if args.seed is not None else random.randrange(1, 2**31 - 1)
     lora_air = v.get("air") or f"urn:air:{fam}:lora:civitai:{LORA_MODEL_ID}@{v['id']}"
-    params = {"prompt": prompt, "negativePrompt": args.negative or ", ".join(x for x in (b["negative"], NEGATIVE) if x),
+    params = {"prompt": prompt, "negativePrompt": negative,
               "scheduler": args.scheduler, "steps": args.steps, "cfgScale": args.cfg,
               "width": args.size, "height": args.size, "seed": seed, "clipSkip": 2}
     # v2 workflows API. The v1 /consumer/jobs endpoint only spends yellow (bought) Buzz and answers
@@ -234,7 +243,7 @@ def cmd_gen(args) -> list[Path]:
             sys.exit(f"timed out after {args.timeout}s (status {status}); re-check workflow {wid}")
         time.sleep(3)
 
-    out = RUNS / b["stem"] / "raw"
+    out = RUNS / (b["stem"] + ("_back" if args.view == "back" else "")) / "raw"
     out.mkdir(parents=True, exist_ok=True)
     stamp = dt.datetime.now().strftime("%Y%m%d-%H%M%S")
     paths = []
@@ -457,6 +466,8 @@ def main():
         p.add_argument("--version", help="LoRA version id, or a base-model word (sdxl, sd1); default sdxl")
         p.add_argument("--checkpoint", help="base checkpoint AIR (default per base model)")
         p.add_argument("--prompt", help="full prompt override")
+        p.add_argument("--view", choices=["front", "back"], default="front",
+                       help="back: full-body back-view concept for sprite-trainer-back-generator (runs/<trainer>_back/)")
         p.add_argument("--style", help="gen1 or gen2 to force the old Game Boy look; default none (full colour, like the model previews)")
         p.add_argument("--negative")
         p.add_argument("--seed", type=int)

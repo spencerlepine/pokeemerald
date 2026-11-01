@@ -1,8 +1,8 @@
 # sprite-trainer-back-generator
 
-**Status:** PENDING. Approach chosen; the tool is not built yet. The build waits on a rented GPU,
-and on a test of whether the model can draw back views at all. The earlier repaint tool in this
-folder was scrapped (it did not work) and deleted; it is in git history if anything needs
+**Status:** PENDING (placeholder). Step 0, the concept, works today through the front-pic tool's
+Civitai pipeline (below); the refine-and-draw steps are not built yet. The earlier repaint tool in
+this folder was scrapped (it did not work) and deleted; it is in git history if anything needs
 recovering.
 
 Draws **trainer battle back pics**: the player and partners seen over the shoulder, throwing a
@@ -35,12 +35,34 @@ leftovers).
 `pending_art.csv` kind `trainers`, subkind `back_pics`: 8 rows. Each row's `sw_subject` is the
 brief. Category: B2.
 
+## Step 0 (prerequisite): back-view concept from the front-pic tool
+
+The Civitai trainer LoRA used by [`../sprite-trainer-generator/civitai/`](../sprite-trainer-generator/civitai/)
+can draw a character from behind. This tool uses that as **concept art** and refines from there; it
+does not ship the concept.
+
+```bash
+cd ../sprite-trainer-generator/civitai
+python civitai_trainer.py run steven --view back -n 1          # ~3 Buzz; add a jobs.json entry per character
+# -> runs/steven_back/raw/<stamp>_s<seed>.png (768 original) and runs/steven_back/finished/ (64x64 fit)
+```
+
+`--view back` adds `(back view:1.4), (seen from behind:1.3), back turned to the viewer, looking away`
+and negatives `face, front view, facing viewer, eyes`, with the pose "standing, raising one arm to
+throw". The subject and look notes come from `jobs.json` as for the front pic.
+
+**Tested 2026-11-01** (Leia, seed 303682211, review sheet
+`trainers/civitai-vader/test_back_view_leia.png` in the project files): a clean back view in the
+right pixel style (buns, white robe, belt, boots), but **full body, small, arms out**. A back pic
+needs a large waist-up, over-the-shoulder figure and 4 throw frames. So the concept gives this tool
+the character's back design (hair, clothes, colours); steps 1-3 below turn it into the back pic.
+
 ## Model gaps to test
 
 The model does **not** document a back-view tag (the creature LoRA has `backside`; this one does
 not), and it has no notion of animation frames.
 
-1. **Back view.** Try a plain back-view prompt first:
+1. **Back view.** Answered: yes, see Step 0. The original plain prompt idea, kept for reference:
 
 ```
 pokemon trainer sprite,
