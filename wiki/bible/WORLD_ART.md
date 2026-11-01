@@ -39,7 +39,7 @@ The player must always see where they can walk.
 | `footprint` | Size in 16x16 cells, width x height on screen |
 | `vanilla_template` | The Emerald tiles it replaces or is built from (`(done)` = covered by a recipe already) |
 | `sw_refs` | `starwars-db` entity ids used as reference (github.com/spencerlepine/starwars-db) |
-| `reference_art` | Local reference images (`art/concept/...`): starwars-db databank images (`__db_`), web references (`__web_`, sources in `art/concept/SOURCES.csv`) and paintings generated in code where nothing usable was found (`__gen_`, made by `art/concept/_generated/paint.py`) |
+| `reference_art` | Local reference images (`art/concept/...`): starwars-db databank images (`__db_`), web references (`__web_`, sources in `art/concept/SOURCES.csv`) and paintings generated in code where nothing usable was found (`__gen_`, made by `art/concept/_generated/paint.py`; `__civ_`, SDXL paintings from Civitai made by `tools/tile-generator/scripts/civitai_concepts.py`) |
 | `concept_art` | Concept art made for this game (pixel mock-ups), once drawn |
 | `concept_status` | `NEEDS_CONCEPT` / `REFERENCE_READY` (references collected) / `CONCEPT_READY` (concept approved) |
 | `build_status` | `NOT_STARTED` / `IN_PROGRESS` / `ART_READY` / `DONE` (in `../game`) |
