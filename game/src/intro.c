@@ -129,6 +129,7 @@ enum {
 
 #define TAG_FLYGON_SILHOUETTE 2002
 #define TAG_RAYQUAZA_ORB      2003
+#define TAG_TIE_ADVANCED      2004
 
 #define COLOSSEUM_GAME_CODE 0x65366347 // "Gc6e" in ASCII
 
@@ -152,6 +153,7 @@ enum {
 #define TIMER_SMALL_DROP_2              384
 #define TIMER_SPARKLES                  560
 #define TIMER_FLYGON_SILHOUETTE_APPEAR  832
+#define TIMER_TIE_ADVANCED_APPEAR       856 // escort, a little behind the shuttle
 #define TIMER_END_PAN_UP                904
 #define TIMER_END_SCENE_1              1007
 #define TIMER_START_SCENE_2            1026
@@ -191,7 +193,8 @@ static const u32 sIntroStreaks_Tilemap[]      = INCGFX_U32("graphics/intro/scene
 static const u16 sIntroRayquzaOrb_Pal[]       = INCGFX_U16("graphics/intro/scene_3/rayquaza_orb.pal", ".gbapal");
 static const u16 sIntroMisc_Pal[]             = INCGFX_U16("graphics/intro/scene_3/misc.pal", ".gbapal"); // Unused
 static const u32 sIntroMisc_Gfx[]             = INCGFX_U32("graphics/intro/scene_3/misc.png", ".4bpp.lz"); // Rayquza orb, and misc unused gfx
-static const u16 sIntroFlygonSilhouette_Pal[] = INCGFX_U16("graphics/intro/scene_1/flygon.png", ".gbapal");
+static const u16 sIntroFlygonSilhouette_Pal[] = INCGFX_U16("graphics/intro/scene_1/flygon.png", ".gbapal"); // Lambda shuttle silhouette
+static const u32 sIntroTieAdvanced_Gfx[]      = INCGFX_U32("graphics/intro/scene_1/tie_advanced.png", ".4bpp.lz"); // its TIE advanced escort, same palette
 static const u32 sIntroLati_Gfx[]             = INCGFX_U32("graphics/intro/scene_1/lati.png", ".4bpp.lz"); // Unused
 static const u8 sUnusedData[] = {
     0x02, 0x03, 0x04, 0x05, 0x01, 0x01, 0x01, 0x06, 0x07, 0x08, 0x09, 0x0A, 0x0B, 0x0C, 0x02, 0x0D,
@@ -910,6 +913,16 @@ static const struct SpriteTemplate sSpriteTemplate_FlygonSilhouette =
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = SpriteCB_FlygonSilhouette,
 };
+static const struct SpriteTemplate sSpriteTemplate_TieAdvancedSilhouette =
+{
+    .tileTag = TAG_TIE_ADVANCED,
+    .paletteTag = TAG_FLYGON_SILHOUETTE,
+    .oam = &sOamData_FlygonSilhouette,
+    .anims = sAnims_FlygonSilhouette,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = SpriteCB_FlygonSilhouette,
+};
 static const struct CompressedSpriteSheet sSpriteSheet_WaterDropsAndLogo[] =
 {
     {sIntroDropsLogo_Gfx, 0x1400, GFXTAG_DROPS_LOGO},
@@ -918,6 +931,7 @@ static const struct CompressedSpriteSheet sSpriteSheet_WaterDropsAndLogo[] =
 static const struct CompressedSpriteSheet sSpriteSheet_FlygonSilhouette[] =
 {
     {gIntroFlygonSilhouette_Gfx, 0x400, TAG_FLYGON_SILHOUETTE},
+    {sIntroTieAdvanced_Gfx, 0x400, TAG_TIE_ADVANCED},
     {},
 };
 static const struct SpritePalette sSpritePalettes_Intro1[] =
@@ -1133,7 +1147,8 @@ static void Task_Scene1_Load(u8 taskId)
     SetGpuReg(REG_OFFSET_BG1CNT, BGCNT_PRIORITY(1) | BGCNT_CHARBASE(0) | BGCNT_SCREENBASE(18) | BGCNT_16COLOR | BGCNT_TXT256x512);
     SetGpuReg(REG_OFFSET_BG0CNT, BGCNT_PRIORITY(0) | BGCNT_CHARBASE(0) | BGCNT_SCREENBASE(16) | BGCNT_16COLOR | BGCNT_TXT256x512);
     LoadCompressedSpriteSheet(sSpriteSheet_WaterDropsAndLogo);
-    LoadCompressedSpriteSheet(sSpriteSheet_FlygonSilhouette);
+    LoadCompressedSpriteSheet(&sSpriteSheet_FlygonSilhouette[0]);
+    LoadCompressedSpriteSheet(&sSpriteSheet_FlygonSilhouette[1]);
     LoadSpritePalettes(sSpritePalettes_Intro1);
     LoadCompressedSpriteSheet(sSpriteSheet_Sparkle);
     LoadSpritePalettes(sSpritePalette_Sparkle);
@@ -1275,9 +1290,17 @@ static void Task_Scene1_PanUp(u8 taskId)
 
         if (gIntroFrameCounter == TIMER_FLYGON_SILHOUETTE_APPEAR)
         {
-            // Show Flygon silhouette
+            // Lambda shuttle silhouette flies past (Emerald's Flygon)
             u8 spriteId = CreateSprite(&sSpriteTemplate_FlygonSilhouette, 120, DISPLAY_HEIGHT, 10);
             gSprites[spriteId].invisible = TRUE;
+            gSprites[spriteId].data[4] = 1; // OAM matrix
+        }
+        else if (gIntroFrameCounter == TIMER_TIE_ADVANCED_APPEAR)
+        {
+            // ...followed by its TIE advanced escort on the same path
+            u8 spriteId = CreateSprite(&sSpriteTemplate_TieAdvancedSilhouette, 120, DISPLAY_HEIGHT, 10);
+            gSprites[spriteId].invisible = TRUE;
+            gSprites[spriteId].data[4] = 2; // OAM matrix
         }
     }
     else
@@ -3147,7 +3170,7 @@ static void SpriteCB_FlygonSilhouette(struct Sprite *sprite)
         b = Q_8_8_TO_INT( sin * sprite->sScale);
         a = Q_8_8_TO_INT( cos * sprite->sScale);
 
-        SetOamMatrix(1, a, b, c, d);
+        SetOamMatrix(sprite->data[4], a, b, c, d);
     }
 
     switch (sprite->sState)
@@ -3155,7 +3178,7 @@ static void SpriteCB_FlygonSilhouette(struct Sprite *sprite)
     case 0:
     default:
         sprite->oam.affineMode = ST_OAM_AFFINE_DOUBLE;
-        sprite->oam.matrixNum = 1;
+        sprite->oam.matrixNum = sprite->data[4];
         CalcCenterToCornerVec(sprite, SPRITE_SHAPE(64x32), SPRITE_SIZE(64x32), ST_OAM_AFFINE_DOUBLE);
         sprite->invisible = FALSE;
         sprite->sState = 1;
