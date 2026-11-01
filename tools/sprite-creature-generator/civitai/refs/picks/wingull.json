@@ -1,0 +1,9 @@
+{
+  "init": "refs/wingull_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/1/10/ShyyyoBird-ConceptArt-AmyFry.png/revision/latest/scale-to-width-down/1000?cb=20260622212644#crop=0.33,0.05,0.585,0.245",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "slender gliding sea bird with wide blue wings and a fan tail",
+  "colour": "white and blue grey",
+  "ref_note": "Amy Fry shyyyo concept; top-down glide pose"
+}

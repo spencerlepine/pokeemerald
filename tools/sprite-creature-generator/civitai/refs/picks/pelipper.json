@@ -1,0 +1,9 @@
+{
+  "init": "refs/pelipper_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/1/10/ShyyyoBird-ConceptArt-AmyFry.png/revision/latest/scale-to-width-down/1000?cb=20260622212644#crop=0.62,0.0,0.97,0.45",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "huge crested shyyyo bird with heavy hooked beak and broad wings",
+  "colour": "slate blue and yellow",
+  "ref_note": "Amy Fry shyyyo concept; large three-quarter bird"
+}
