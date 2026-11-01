@@ -32,3 +32,7 @@ retexture:
     light_blobs: 1
     dark_dots: 5
     blob: 1
+battle:                               # battle backgrounds: tint the near-white backdrop band (mid-tones keep outlines readable)
+  - name: backdrop-haze
+    match: {chroma_max: 12, light_min: 84}
+    set:   {hue: 70, chroma: 4, light: -14}

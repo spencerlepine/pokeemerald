@@ -58,6 +58,19 @@ class BattleEnv:
 
     def recoloured(self, rec: recolour.Recipe, log=None) -> "BattleEnv":
         pal = []
+        rb = rec.for_battle()
         for b in range(len(self.palette) // 16):
-            pal += recolour.recolour_bank(self.palette[b * 16:(b + 1) * 16], rec, f"battle:{self.name}:{b}", log)
+            pal += recolour.recolour_bank(self.palette[b * 16:(b + 1) * 16], rb, f"battle:{self.name}:{b}", log)
         return BattleEnv(self.name, self.path, self.tiles, pal, self.tilemap)
+
+
+def write(env: BattleEnv, out: Path) -> Path:
+    """palette.pal (48 colours) plus unchanged tiles.png/map.bin copies, ready for the gate."""
+    import shutil
+    out = Path(out); out.mkdir(parents=True, exist_ok=True)
+    txt = "JASC-PAL\n0100\n%d\n" % len(env.palette) + "\n".join(f"{r} {g} {b}" for r, g, b in env.palette) + "\n"
+    (out / "palette.pal").write_text(txt)
+    for f in ("tiles.png", "map.bin", "anim_tiles.png", "anim_map.bin"):
+        if (env.path / f).exists():
+            shutil.copy(env.path / f, out / f)
+    return out

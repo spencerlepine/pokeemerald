@@ -20,3 +20,7 @@ rules:
   - name: water-stream
     match: {hue: [245, 300], chroma_min: 30}
     set:   {hue_shift: -40, chroma_scale: 0.6, light: -14}
+battle:                               # battle backgrounds: tint the near-white backdrop band (mid-tones keep outlines readable)
+  - name: backdrop-haze
+    match: {chroma_max: 12, light_min: 84}
+    set:   {hue: 140, chroma: 14, light: -6}

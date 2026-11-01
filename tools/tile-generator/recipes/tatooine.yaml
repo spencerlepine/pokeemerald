@@ -34,3 +34,7 @@ retexture:                            # stage 2: regenerate ground pixels (indic
     seed: 7
     light_blobs: 2
     dark_dots: 4
+battle:                               # battle backgrounds: tint the near-white backdrop band (mid-tones keep outlines readable)
+  - name: backdrop-haze
+    match: {chroma_max: 12, light_min: 84}
+    set:   {hue: 80, chroma: 14, light: -2}

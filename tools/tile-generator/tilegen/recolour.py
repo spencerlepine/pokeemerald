@@ -86,21 +86,29 @@ class Recipe:
     skip_banks: set[str] = field(default_factory=set)
     notes: str = ""
     retexture: list[dict] = field(default_factory=list)   # stage 2 ops, see __main__._build_pair
+    battle_rules: list[Rule] = field(default_factory=list)  # tried first on battle backgrounds only
 
     @staticmethod
     def load(path: Path) -> "Recipe":
         import yaml
         d = yaml.safe_load(Path(path).read_text())
-        rules = []
-        for r in d.get("rules", []):
-            m = r.get("match", {})
-            rules.append(Rule(r.get("name", "?"), tuple(m["hue"]) if "hue" in m else None,
-                              m.get("chroma_min", 0.0), m.get("chroma_max", 1e9),
-                              m.get("light_min", -1.0), m.get("light_max", 101.0), r.get("set", {})))
+        def parse(lst):
+            out = []
+            for r in lst or []:
+                m = r.get("match", {})
+                out.append(Rule(r.get("name", "?"), tuple(m["hue"]) if "hue" in m else None,
+                                m.get("chroma_min", 0.0), m.get("chroma_max", 1e9),
+                                m.get("light_min", -1.0), m.get("light_max", 101.0), r.get("set", {})))
+            return out
+        rules = parse(d.get("rules"))
         ov = {}
         for bank, entries in (d.get("overrides") or {}).items():
             ov[bank] = {int(k): colour.hex_to_rgb(v) for k, v in entries.items()}
-        return Recipe(d["name"], rules, ov, set(d.get("skip_banks") or []), d.get("notes", ""), d.get("retexture") or [])
+        return Recipe(d["name"], rules, ov, set(d.get("skip_banks") or []), d.get("notes", ""), d.get("retexture") or [],
+                      parse(d.get("battle")))
+
+    def for_battle(self) -> "Recipe":
+        return Recipe(self.name, self.battle_rules + self.rules, self.overrides, self.skip_banks, self.notes)
 
 
 def recolour_bank(pal: list[Colour], recipe: Recipe, key: str, log: list[str] | None = None) -> list[Colour]:
