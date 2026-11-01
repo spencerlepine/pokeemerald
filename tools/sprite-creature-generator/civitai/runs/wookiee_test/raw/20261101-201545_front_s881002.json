@@ -1,0 +1,57 @@
+{
+  "species": {
+    "stem": "wookiee_test",
+    "sw_name": null,
+    "sw_basis": null,
+    "subject": "wookiee_test",
+    "desc": "",
+    "types": [],
+    "colour": "",
+    "style": "gen3",
+    "pose": "three-quarter view facing left",
+    "negative": "",
+    "init": null,
+    "control": null,
+    "denoise": null,
+    "flip": false,
+    "frame2": "mouth wide open, roaring, lunging forward",
+    "shiny": {}
+  },
+  "view": "front",
+  "lora": {
+    "id": 273148,
+    "name": "v2.1-beta",
+    "baseModel": "SD 1.5",
+    "trainedWords": [],
+    "air": null,
+    "files": [
+      {
+        "name": "pksp768_V2-1.safetensors",
+        "sizeKB": 74235.9921875,
+        "sha256": "DF8494A9FF9AE96B53ECBCD327AA14626C59D3F573423892A650F9F6C21AB418"
+      }
+    ]
+  },
+  "checkpoint": "urn:air:sd1:checkpoint:civitai:4384@128713",
+  "step": "textToImage",
+  "params": {
+    "prompt": "gen3, (wookiee warrior:1.2), (tall furry humanoid covered head to toe in long layered shaggy brown fur, darker grey-brown fur on shoulders and limbs, lighter caramel fur on face and chest, furred face with short dark muzzle and black nose, small deep-set eyes, open mouth with fangs, bandolier of silver boxes on a leather strap across the chest, holding a bowcaster crossbow in both hands:1.2), single character, full body, standing upright, three-quarter view facing left, limited palette, muted natural colours, pixel art, game sprite, crisp dark outlines, white background, simple background",
+    "negativePrompt": "human face, human skin, bare skin, cartoon, chibi, cute, big eyes, smiling, multiple characters, text, background, blurry, 3d, photo",
+    "scheduler": "EulerA",
+    "steps": 25,
+    "cfgScale": 7.0,
+    "width": 768,
+    "height": 768,
+    "seed": 881002,
+    "clipSkip": 2
+  },
+  "refs": {},
+  "control": null,
+  "strength": 0.9,
+  "format": "jpeg",
+  "seed": 881002,
+  "workflowId": "13596363-20261101201534111-xcax",
+  "jobId": "8e4bbf6f-0254-4872-a86c-51c241f36c6b",
+  "cost": "3 green",
+  "generated": "20261101-201545"
+}

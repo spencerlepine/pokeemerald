@@ -99,9 +99,10 @@ def http(method: str, url: str, *, auth: bool = True, **kw) -> requests.Response
     headers = kw.pop("headers", {})
     if auth:
         headers["Authorization"] = f"Bearer {api_token()}"
+    timeout = kw.pop("timeout", 60)
     for attempt in range(4):
         try:
-            r = requests.request(method, url, headers=headers, timeout=60, **kw)
+            r = requests.request(method, url, headers=headers, timeout=timeout, **kw)
         except requests.RequestException as e:
             if attempt == 3:
                 sys.exit(f"{method} {url}: {e}")
@@ -192,6 +193,19 @@ def build_prompt(b: dict, v: dict) -> str:
 
 # ----------------------------------------------------------------------------- generate
 
+def _image_ref(src: str) -> str:
+    """Local image -> 768x768 white-backed PNG data URI for an image-to-image start."""
+    import base64, io
+    from PIL import Image
+    im = Image.open(Path(src).expanduser().resolve()).convert("RGBA")
+    side = max(im.size)
+    sq = Image.new("RGBA", (side, side), (255, 255, 255, 255))
+    sq.alpha_composite(im, ((side - im.width) // 2, (side - im.height) // 2))
+    sq = sq.convert("RGB").resize((768, 768), Image.NEAREST if side < 512 else Image.LANCZOS)
+    buf = io.BytesIO(); sq.save(buf, "PNG")
+    return "data:image/png;base64," + base64.b64encode(buf.getvalue()).decode()
+
+
 def cmd_gen(args) -> list[Path]:
     b = brief(args.trainer)
     if args.style is not None:
@@ -215,13 +229,23 @@ def cmd_gen(args) -> list[Path]:
               "width": args.size, "height": args.size, "seed": seed, "clipSkip": 2}
     # v2 workflows API. The v1 /consumer/jobs endpoint only spends yellow (bought) Buzz and answers
     # 403 "Insufficient Buzz" on an account that holds blue Buzz; v2 takes a `currencies` list.
-    workflow = {
-        "steps": [{"$type": "textToImage", "input": {
-            "model": args.checkpoint or CHECKPOINTS[fam],
-            "additionalNetworks": {lora_air: {"type": "Lora", "strength": args.strength}},
-            **params, "quantity": args.n, "outputFormat": args.format}}],
-        "currencies": args.currency.split(","),
-    }
+    step = {"$type": "textToImage", "input": {
+        "model": args.checkpoint or CHECKPOINTS[fam],
+        "additionalNetworks": {lora_air: {"type": "Lora", "strength": args.strength}},
+        **params, "quantity": args.n, "outputFormat": args.format}}
+    if getattr(args, "init", None):
+        # Image to image (ported from sprite-creature-generator): textToImage ignores a source image,
+        # so this goes through the imageGen step (ComfyUI createVariant). Use it to refine a take whose
+        # shape is right (its raw .png, denoise ~0.45) or to start from concept art.
+        params["denoise"] = args.denoise
+        step = {"$type": "imageGen", "input": {
+            "engine": "comfy", "ecosystem": fam, "operation": "createVariant",
+            "checkpointModel": args.checkpoint or CHECKPOINTS[fam], "loras": {lora_air: args.strength},
+            "image": _image_ref(args.init), "denoiseStrength": args.denoise,
+            "prompt": prompt, "negativePrompt": negative, "sampler": "euler_ancestral", "scheduler": "normal",
+            "steps": args.steps, "cfgScale": args.cfg, "seed": seed, "clipSkip": 2,
+            "width": args.size, "height": args.size, "quantity": args.n, "outputFormat": args.format}}
+    workflow = {"steps": [step], "currencies": args.currency.split(",")}
     print(f"trainer  {b['stem']}  ({b['sw_subject']})\nlora     {v['name']} [{v['baseModel']}] "
           f"@{v['id']}\nprompt   {prompt}\nseed     {seed}  x{args.n}  ({args.format})")
 
@@ -234,7 +258,7 @@ def cmd_gen(args) -> list[Path]:
             print(f"queue:  {q}")
         return []
 
-    r = http("POST", url, json=workflow).json()
+    r = http("POST", url, json=workflow, timeout=240).json()
     wid = r["id"]
     print(f"submitted workflow {wid}, cost {_cost(r)}")
 
@@ -261,7 +285,7 @@ def cmd_gen(args) -> list[Path]:
         sd = im.get("seed") or seed + i
         p = out / f"{stamp}_s{sd}.png"
         Image.open(__import__("io").BytesIO(data.content)).convert("RGB").save(p)
-        meta = {"trainer": b, "lora": v, "checkpoint": workflow["steps"][0]["input"]["model"],
+        meta = {"trainer": b, "lora": v, "checkpoint": workflow["steps"][0]["input"].get("model") or workflow["steps"][0]["input"].get("checkpointModel"),
                 "params": params, "strength": args.strength, "format": args.format, "seed": sd,
                 "workflowId": wid, "jobId": im.get("jobId"), "cost": _cost(r), "generated": stamp}
         p.with_suffix(".json").write_text(json.dumps(meta, indent=2) + "\n")
@@ -596,6 +620,8 @@ def main():
         p.add_argument("--style", help="gen1 or gen2 to force the old Game Boy look; default none (full colour, like the model previews)")
         p.add_argument("--negative")
         p.add_argument("--seed", type=int)
+        p.add_argument("--init", help="image to image: start from this local image (a raw take or concept art)")
+        p.add_argument("--denoise", type=float, default=0.45, help="with --init: 0..1, how far from the image")
         p.add_argument("-n", type=int, default=1, help="images in this request")
         p.add_argument("--strength", type=float, default=0.75, help="LoRA weight; lower lets the subject through")
         p.add_argument("--steps", type=int, default=25)
