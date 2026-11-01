@@ -1,26 +1,76 @@
 # sprite-creature-generator
 
-**Status:** PENDING. Approach researched and decided (below); the tool is not built yet. The build
-waits on a rented GPU.
+**Status:** PENDING. Approach researched and decided; the tool is not built yet. The build waits
+on a rented GPU.
 
-Companion battle sprites: front (2-frame anim), back, normal and shiny palettes, egg/hatch and form extras.
+Draws a companion's **battle sprites**: the front, the second animation frame, the back, and the
+battle palette (normal and shiny) all three share. Everything this tool writes uses one palette,
+so it is drawn and quantised together in one pass. Anything that does not use that palette is
+not made here.
 
-## Scope in this repo
+## What this tool makes, per species
 
-- **Categories:** A1, A2, A5
-- **Wiki rows:** `pending_art.csv` kind `pokemon` (front, anim_front, back, palettes) for each species; 1,262 PNGs
-- **Format in the game:** 64x64 front + 64x128 anim_front, 64x64 back, one 16-colour palette per species plus shiny
+Files land in `game/graphics/pokemon/<species>/`. "SD" means a Stable Diffusion model run on a
+rented GPU; "Python" means a deterministic script that runs anywhere.
 
-> **Open question:** the model below is trained on 96x96 sprites (768x768 downsampled 8x), but
-> Emerald's battle sprites are 64x64 with a 16-colour palette. The output step must still get from
-> 96x96 to the game format (crop the padding or rescale, then quantise to 16 colours). Test this
-> before generating at scale.
+| # | File | Size and format | Made by | Notes |
+|---|---|---|---|---|
+| 1 | `front.png` | 64x64, 4bpp, 15 colours + transparent | **SD** (sprite LoRA, `gen3`) + Python finisher | The main sprite. Opponent side of a battle, Datapad, summary, trade, evolution, Hall of Fame all reuse it |
+| 2 | `anim_front.png` | 64x128: frame 1 (top) = `front.png`, frame 2 (bottom) = a second pose | **SD** img2img from the picked front + Python finisher | Vanilla's frame 2 changes a median 72% of pixels (mouth open, limbs moved), so it is a real redraw, not a bob. 339 of 385 vanilla species have frame 1 identical to `front.png` |
+| 3 | `back.png` | 64x64, 4bpp, a subset of the front palette | **SD** (`backside` tag) + Python finisher | Your side of a battle. Drawn larger than the front (median 1.22x area) |
+| 4 | `normal.pal` | JASC, 16 entries | **Python** | Shared by 1-3; the finisher maps the back and frame 2 onto the front's colours |
+| 5 | `shiny.pal` | JASC, 16 entries, same index order as `normal.pal` | **Python** (hue shift), optionally guided by an SD `shiny` render | Same pixels, different colours |
+| 6 | Battle placement data | `src/data/pokemon_graphics/front_pic_coordinates.h`, `back_pic_coordinates.h`, `enemy_mon_elevation.h` | **Python** (measured from 1 and 3) | `y_offset` so the sprite sits on the ground; elevation for floating creatures |
+| 7 | Front animation choice | `sMonFrontAnimIdsTable` and `sMonAnimationDelayTable` in `src/pokemon.c`, `sSpeciesToBackAnimSet` in `src/pokemon_animation.c`, frame timing in `src/data/pokemon_graphics/front_pic_anims.h` | **Python** (pick a preset by body type) | Code-driven motion presets, not art; picked so the motion suits the new creature |
+| 8 | Datapad size comparison | `pokemonScale` / `pokemonOffset` in `src/data/pokemon/pokedex_entries.h` | **Python** (from the front's content box and the creature's height) | |
 
-To build later:
+Special forms are the same files per form, so this tool covers them with a `form` field on the
+job: Unown's 28 letters (`unown/<letter>/`, one shared `normal.pal`) and Castform's 4 weathers
+(`castform/<form>/`, each with its own palettes). Deoxys has one battle form in Emerald.
+
+## Not made here
+
+These belong to a creature too, but they use a different palette, size or method, so each has
+its own tool (see the per-creature checklist in [`../README.md`](../README.md#one-creature-every-sprite)):
+
+- Party / PC box icon (`icon.png`, 32x64, one of 3 shared icon palettes), including Unown's per-letter icons and Deoxys's `icon_speed*.png`.
+- Datapad footprint (`footprint.png`, 16x16, 1 bit).
+- The Egg (`egg/`: front, anim_front, hatch and shard sheets, icon, palette), Spinda's spot masks (`spinda/spots/`) and the `question_mark/` placeholder pics.
+- The cry (audio).
+- Sprites only some species have: overworld walkers, placed dolls, minigame actors, cutscene actors, battle transitions.
+
+## Wiki rows
+
+`pending_art.csv` kind `pokemon`, subkind = species folder (not `egg` or `question_mark`): rows for `front.png`, `anim_front.png`
+and `back.png` (each species also has `icon.png` and `footprint.png` rows, which are not this
+tool's). The wiki has no rows for `normal.pal`, `shiny.pal` or the data in rows 6-8; this tool
+writes them anyway. Categories: A1, A2.
+
+## Size: 96x96 model output vs the 64x64 game
+
+The LoRA below is trained on 96x96 sprites (768x768 downsampled 8x); Emerald's battle sprites are
+64x64. Gen 3 sprites are 64x64, so its `gen3` training images were most likely 64x64 sprites
+padded to 96x96. If so, the finisher downsamples 8x to 96x96 and crops the central 64x64 with no
+rescaling, which keeps the pixel grid. **Test this first** on a few `gen3` renders (check the
+content box fits 64x64 and the grid is 8 px); if it fails, fall back to the research plan's own
+LoRA trained on Emerald sprites at 12x or 16x.
+
+## To build
 
 1. Read the rows above in `../../wiki/database/` (filter by `kind` / `category`; skip `KEEP*`, `NO_ART` / `NO_AUDIO` and `CUT`).
-2. Build a tool that takes one row (its `sw_subject` is the brief, `path` / `asset_file` the Emerald original, `suggested_path` the new name) and generates the asset in the game's format.
+2. Build a tool that takes one row (its `sw_subject` is the brief, `path` / `asset_file` the Emerald original, `suggested_path` the new name) and generates rows 1-8 above.
 3. Show the owner a few samples, iterate, then generate the rest and set each row's status to `DONE`.
+
+## Research
+
+- The one-pager below: the chosen model (an SD 1.5 sprite LoRA) and running it on a rented GPU.
+- [`research/`](research/): copied from the prototype repo (`emerald-art-pipeline-prototype`,
+  which is no longer maintained). Measured facts on all 384 vanilla species
+  ([`vanilla-stats.json`](research/vanilla-stats.json)), the Star Wars creature for every slot
+  ([`sw-creature-jobs.csv`](research/sw-creature-jobs.csv)), the fuller plan with the hard problems
+  (back views, frame 2) in [`EMERALD-PLAN.md`](research/EMERALD-PLAN.md), and web research with
+  sources. Where it mentions the `creature_sprite` package or `creature64` spec, that is the
+  prototype's hand-drawing tool, not ported here.
 
 ---
 
@@ -208,8 +258,8 @@ processes: a single GPU worker with a job queue is enough for the initial worklo
 
 ## 7. Output processing
 
-The model generates at 768x768; the intended sprite resolution is 96x96 (see the open question at
-the top about the game's 64x64 format). The output step should:
+The model generates at 768x768; the intended sprite resolution is 96x96 (see "Size: 96x96 model output vs
+the 64x64 game" above for getting to 64x64). The output step should:
 
 1. Receive the generated image.
 2. Crop or normalise the composition if needed.
@@ -350,7 +400,7 @@ rights to the underlying Pokémon IP.
 | Primary infrastructure | Temporary RunPod GPU instance |
 | Inference interface | ComfyUI |
 | Initial workload | About 100 sprites |
-| Final native resolution | 96x96 PNG (game format is 64x64, see top) |
+| Final native resolution | 96x96 PNG from the model; 64x64 in the game (see "Size" above) |
 
 **Architectural principle:** AI generation is an offline, development-time asset pipeline. The game
 only consumes approved, processed sprite assets.

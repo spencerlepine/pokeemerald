@@ -36,7 +36,7 @@
 | [`tools/cutscene-generator/`](tools/cutscene-generator/README.md) | READY: pxl + GBA output; draft intro scene not imported yet |
 | [`tools/sprite-walker-generator/`](tools/sprite-walker-generator/README.md) | IN-REVIEW: overworld walkers, 16x32 people kit only |
 | [`tools/sprite-trainer-back-generator/`](tools/sprite-trainer-back-generator/README.md) | IN-REVIEW: player battle back pics; Kael, Mira, Luke, Leia mockups with the owner |
-| [`tools/sprite-creature-generator/`](tools/sprite-creature-generator/README.md), [`sprite-icon-generator/`](tools/sprite-icon-generator/TODO.md), [`tile-generator/`](tools/tile-generator/TODO.md), [`vfx-generator/`](tools/vfx-generator/TODO.md), [`ui-skin-generator/`](tools/ui-skin-generator/TODO.md) | TODO |
+| [`tools/sprite-creature-generator/`](tools/sprite-creature-generator/README.md), [`sprite-creature-icon-generator/`](tools/sprite-creature-icon-generator/TODO.md), [`sprite-creature-footprint-generator/`](tools/sprite-creature-footprint-generator/TODO.md), [`sprite-creature-extras-generator/`](tools/sprite-creature-extras-generator/TODO.md), [`sprite-icon-generator/`](tools/sprite-icon-generator/TODO.md), [`tile-generator/`](tools/tile-generator/TODO.md), [`vfx-generator/`](tools/vfx-generator/TODO.md), [`ui-skin-generator/`](tools/ui-skin-generator/TODO.md) | TODO |
 | [`tools/music-generator/`](tools/music-generator/TODO.md), [`sfx-generator/`](tools/sfx-generator/TODO.md), [`cry-generator/`](tools/cry-generator/TODO.md) | TODO |
 
 Statuses, scope, art categories and order of work: [`tools/README.md`](tools/README.md).

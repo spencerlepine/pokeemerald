@@ -2,11 +2,11 @@
 
 **Status:** TODO. Not built yet; this file marks the scope.
 
-Small fixed-size stills: item icons, fruit (berries), decoration icons, capture pods in battle, type labels, companion party icons and Datapad footprints.
+Small fixed-size stills: item icons, fruit (berries), decoration icons, capture pods in battle and type labels. Creature icons and footprints are not made here.
 
-- **Categories:** A3, A4, C1, C2, C3, C5, C6
-- **Wiki rows:** `pending_art.csv` kinds `items`, `berries`, `decorations`, `balls`, `types`, plus `pokemon` icon/footprint files; 1,144 PNGs
-- **Format in the game:** 24x24 items, 48x48 fruit, 32x64 two-frame party icons, 16x16 footprints, 32x16 labels
+- **Categories:** C1, C2, C3, C5, C6
+- **Wiki rows:** `pending_art.csv` kinds `items`, `berries`, `decorations`, `balls`, `types`; 340 PNGs
+- **Format in the game:** 24x24 items, 48x48 fruit, 16x48 capture pods (3 frames), 32x16 labels
 
 ## To build
 
