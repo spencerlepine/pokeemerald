@@ -1,0 +1,47 @@
+{
+  "trainer": {
+    "stem": "psychic_f",
+    "wiki_path": "graphics/trainers/front_pics/psychic_f.png",
+    "sw_subject": "FORCE ADEPT (f) in a hooded robe",
+    "subject": "female Force adept",
+    "desc": "young woman in a deep hooded dark purple robe, glowing hands",
+    "theme": "factions",
+    "style": "",
+    "pose": "standing, facing left, three-quarter view",
+    "negative": "",
+    "pair": false
+  },
+  "lora": {
+    "id": 443092,
+    "name": "XL v1",
+    "baseModel": "SDXL 1.0",
+    "trainedWords": [],
+    "air": null,
+    "files": [
+      {
+        "name": "pk_trainer_xl_v1.safetensors",
+        "sizeKB": 445819.83984375,
+        "sha256": "078E09DA2A123964B7EB30DB23EC24D59FB082343F69C7FAF925C4C07E97023E"
+      }
+    ]
+  },
+  "checkpoint": "urn:air:sdxl:checkpoint:civitai:101055@128078",
+  "params": {
+    "prompt": "(female force adept:1.3), young woman in a deep hooded dark purple robe, glowing hands, full body character sprite, standing, facing left, three-quarter view, pixel art, game sprite, crisp dark outlines, solid white background, simple background",
+    "negativePrompt": "poke ball, pokeball, holding ball, baseball cap, generic pokemon trainer, anime boy, scenery, detailed background, gradient background, floor, shadow, text, watermark, signature, frame, border, multiple characters, multiple views, character sheet, turnaround, duplicate, cropped, cut off feet, blurry, 3d, photo, realistic, painting, smooth shading",
+    "scheduler": "EulerA",
+    "steps": 25,
+    "cfgScale": 7.0,
+    "width": 768,
+    "height": 768,
+    "seed": 193985062,
+    "clipSkip": 2
+  },
+  "strength": 0.75,
+  "format": "jpeg",
+  "seed": 193985062,
+  "workflowId": "13596363-20261101091911917-c3z1",
+  "jobId": "244e3de1-5965-409a-b7ba-524433cdb9b6",
+  "cost": "3 green",
+  "generated": "20261101-091937"
+}
