@@ -1,0 +1,329 @@
+name: tuber_m
+description: WOOKIEE CUB (m) hugging a carved log float (replaces Tuber M).
+kit: person16x16
+replaces: graphics/object_events/pics/people/tuber_m.png
+graphics_info: TuberM
+notes: 'Recast c: whole frames on TuberM''s 16x16 footprint; shaggy brown Wookiee cub (round-shaded fur head with highlight strands, body and arms as separate volumes, tan four-tone muzzle, black nose,
+  eye glints) hugging a golden carved log float with pale end grain and two red-painted glyph bands.'
+palette: npc_2
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_2
+shade: true
+materials:
+  H: c@
+  F: c
+  A: c
+  L: a
+legend:
+  k: 15
+  W: 14
+  N: 15
+  r: 9
+  R: 8
+  e: 1
+  o: 4
+  p: 1
+  q: 2
+  u: 3
+  h: 11
+accept:
+  skin_tones: 'fur, not skin: the muzzle uses the skin ramp only where it shows'
+  hair_rows: the whole head is fur
+  eye_row: eyes under a fur brow
+frames:
+  down: '................
+
+    .....HHHHHH.....
+
+    ...HHhHHHhHHH...
+
+    ..HHHHhHHHHhHH..
+
+    .HHhHHHHHhHHHHH.
+
+    .HHHHHHHHHHHHHH.
+
+    HHHHkWHHHHkWHHHH
+
+    .HHHkqppppqkHHH.
+
+    .HHHHqpNNpqHHHH.
+
+    AAHHHouqquoHHHAA
+
+    oLLLLLLLLLLLLLLo
+
+    eLLrRLLLLLLRrLLe
+
+    oLLLLLLLLLLLLLLo
+
+    ...FFFFFFFFFF...
+
+    ....FFF..FFF....
+
+    ................
+
+    '
+  up: '................
+
+    .....HHHHHH.....
+
+    ...HHhHHHhHHH...
+
+    ..HHHHhHHHHhHH..
+
+    .HHhHHHHHhHHHHH.
+
+    .HHHHHhHHHHhHHH.
+
+    HHHHHHHHHHHHHHHH
+
+    .HHHHHHHHHHHHHH.
+
+    .AHHHHHHHHHHHHA.
+
+    AAAFFFFFFFFFFAAA
+
+    oLAFFFFFFFFFFALo
+
+    eLLFFFFFFFFFFLLe
+
+    oLLFFFFFFFFFFLLo
+
+    ...FFFFFFFFFF...
+
+    ....FFF..FFF....
+
+    ................
+
+    '
+  left: '................
+
+    ......HHHHHH....
+
+    ....HHHhHHHhHH..
+
+    ...HHhHHHhHHHHH.
+
+    ..HHHHHhHHHHhHH.
+
+    ..HHHHHHHHHHHHHH
+
+    .HkWHHHHHHHHHHH.
+
+    qpqkHHHHHHHHHHH.
+
+    NppqHHHHHHHHHH..
+
+    .ouqHAAAFFFFFF..
+
+    oLLLLLLLLLLLLLL.
+
+    eLLrRLLLLLLRrLL.
+
+    oLLLLLLLLLLLLLL.
+
+    ....FFFFFFFFF...
+
+    ....FFF..FFF....
+
+    ................
+
+    '
+  down_a: '................
+
+    ................
+
+    .....HHHHHH.....
+
+    ...HHhHHHhHHH...
+
+    ..HHHHhHHHHhHH..
+
+    .HHhHHHHHhHHHHH.
+
+    .HHHHHHHHHHHHHH.
+
+    HHHHkWHHHHkWHHHH
+
+    .HHHkqppppqkHHH.
+
+    .HHHHqpNNpqHHHH.
+
+    AAHHHouqquoHHHAA
+
+    oLLLLLLLLLLLLLLo
+
+    eLLrRLLLLLLRrLLe
+
+    oLLLLLLLLLLLLLLo
+
+    ....FFFFFFFFF...
+
+    ....FFF.........
+
+    '
+  down_b: '................
+
+    ................
+
+    .....HHHHHH.....
+
+    ...HHhHHHhHHH...
+
+    ..HHHHhHHHHhHH..
+
+    .HHhHHHHHhHHHHH.
+
+    .HHHHHHHHHHHHHH.
+
+    HHHHkWHHHHkWHHHH
+
+    .HHHkqppppqkHHH.
+
+    .HHHHqpNNpqHHHH.
+
+    AAHHHouqquoHHHAA
+
+    oLLLLLLLLLLLLLLo
+
+    eLLrRLLLLLLRrLLe
+
+    oLLLLLLLLLLLLLLo
+
+    ...FFFFFFFFF....
+
+    .........FFF....
+
+    '
+  up_a: '................
+
+    ................
+
+    .....HHHHHH.....
+
+    ...HHhHHHhHHH...
+
+    ..HHHHhHHHHhHH..
+
+    .HHhHHHHHhHHHHH.
+
+    .HHHHHhHHHHhHHH.
+
+    HHHHHHHHHHHHHHHH
+
+    .HHHHHHHHHHHHHH.
+
+    .AHHHHHHHHHHHHA.
+
+    AAAFFFFFFFFFFAAA
+
+    oLAFFFFFFFFFFALo
+
+    eLLFFFFFFFFFFLLe
+
+    oLLFFFFFFFFFFLLo
+
+    ....FFFFFFFFF...
+
+    ....FFF.........
+
+    '
+  up_b: '................
+
+    ................
+
+    .....HHHHHH.....
+
+    ...HHhHHHhHHH...
+
+    ..HHHHhHHHHhHH..
+
+    .HHhHHHHHhHHHHH.
+
+    .HHHHHhHHHHhHHH.
+
+    HHHHHHHHHHHHHHHH
+
+    .HHHHHHHHHHHHHH.
+
+    .AHHHHHHHHHHHHA.
+
+    AAAFFFFFFFFFFAAA
+
+    oLAFFFFFFFFFFALo
+
+    eLLFFFFFFFFFFLLe
+
+    oLLFFFFFFFFFFLLo
+
+    ...FFFFFFFFF....
+
+    .........FFF....
+
+    '
+  left_a: '................
+
+    ................
+
+    ......HHHHHH....
+
+    ....HHHhHHHhHH..
+
+    ...HHhHHHhHHHHH.
+
+    ..HHHHHhHHHHhHH.
+
+    ..HHHHHHHHHHHHHH
+
+    .HkWHHHHHHHHHHH.
+
+    qpqkHHHHHHHHHHH.
+
+    NppqHHHHHHHHHH..
+
+    .ouqHAAAFFFFFF..
+
+    oLLLLLLLLLLLLLL.
+
+    eLLrRLLLLLLRrLL.
+
+    oLLLLLLLLLLLLLL.
+
+    ...FFFFFFFFFF...
+
+    ...FFF....FFF...
+
+    '
+  left_b: '................
+
+    ................
+
+    ......HHHHHH....
+
+    ....HHHhHHHhHH..
+
+    ...HHhHHHhHHHHH.
+
+    ..HHHHHhHHHHhHH.
+
+    ..HHHHHHHHHHHHHH
+
+    .HkWHHHHHHHHHHH.
+
+    qpqkHHHHHHHHHHH.
+
+    NppqHHHHHHHHHH..
+
+    .ouqHAAAFFFFFF..
+
+    oLLLLLLLLLLLLLL.
+
+    eLLrRLLLLLLRrLL.
+
+    oLLLLLLLLLLLLLL.
+
+    ....FFFFFFFFF...
+
+    .....FFF.FFF....
+
+    '

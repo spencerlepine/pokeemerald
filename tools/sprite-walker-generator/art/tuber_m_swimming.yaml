@@ -1,0 +1,330 @@
+name: tuber_m_swimming
+description: WOOKIEE CUB (m) paddling on a carved log float (replaces Tuber M swimming).
+kit: person16x16
+replaces: graphics/object_events/pics/people/tuber_m_swimming.png
+graphics_info: TuberMSwimming
+notes: 'Recast c: the tuber_m cub (same head, fur and golden log with red glyph bands) sitting in the lagoon up to the log; white surf below it, the vanilla splash dots on the steps.'
+palette: npc_2
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_2
+shade: true
+materials:
+  H: c@
+  F: c
+  A: c
+  L: a
+  w: w
+legend:
+  k: 15
+  W: 14
+  N: 15
+  r: 9
+  R: 8
+  e: 1
+  o: 4
+  p: 1
+  q: 2
+  u: 3
+  h: 11
+accept:
+  skin_tones: 'fur, not skin: the muzzle uses the skin ramp only where it shows'
+  hair_rows: the whole head is fur
+  eye_row: eyes under a fur brow
+  legs: 'swimming: no legs above the water (vanilla shares it)'
+frames:
+  down: '................
+
+    .....HHHHHH.....
+
+    ...HHhHHHhHHH...
+
+    ..HHHHhHHHHhHH..
+
+    .HHhHHHHHhHHHHH.
+
+    .HHHHHHHHHHHHHH.
+
+    HHHHkWHHHHkWHHHH
+
+    .HHHkqppppqkHHH.
+
+    .HHHHqpNNpqHHHH.
+
+    AAHHHouqquoHHHAA
+
+    oLLLLLLLLLLLLLLo
+
+    eLLrRLLLLLLRrLLe
+
+    wwwLLLLLLLLLLwww
+
+    ..wwwwwwwwwwww..
+
+    ................
+
+    ................
+
+    '
+  up: '................
+
+    .....HHHHHH.....
+
+    ...HHhHHHhHHH...
+
+    ..HHHHhHHHHhHH..
+
+    .HHhHHHHHhHHHHH.
+
+    .HHHHHhHHHHhHHH.
+
+    HHHHHHHHHHHHHHHH
+
+    .HHHHHHHHHHHHHH.
+
+    .AHHHHHHHHHHHHA.
+
+    AAAFFFFFFFFFFAAA
+
+    oLLFFFFFFFFFFLLo
+
+    eLLFFFFFFFFFFLLe
+
+    wwwLLLLLLLLLLwww
+
+    ..wwwwwwwwwwww..
+
+    ................
+
+    ................
+
+    '
+  left: '................
+
+    ......HHHHHH....
+
+    ....HHHhHHHhHH..
+
+    ...HHhHHHhHHHHH.
+
+    ..HHHHHhHHHHhHH.
+
+    ..HHHHHHHHHHHHHH
+
+    .HkWHHHHHHHHHHH.
+
+    qpqkHHHHHHHHHHH.
+
+    NppqHHHHHHHHHH..
+
+    .ouqHAAAFFFFFF..
+
+    oLLLLLLLLLLLLLL.
+
+    eLLrRLLLLLLRrLLw
+
+    wwwLLLLLLLLLLww.
+
+    ..wwwwwwwwwwww..
+
+    ................
+
+    ................
+
+    '
+  down_a: '................
+
+    ................
+
+    .....HHHHHH.....
+
+    ...HHhHHHhHHH...
+
+    ..HHHHhHHHHhHH..
+
+    .HHhHHHHHhHHHHH.
+
+    wHHHHHHHHHHHHHH.
+
+    HHHHkWHHHHkWHHHH
+
+    .HHHkqppppqkHHH.
+
+    .HHHHqpNNpqHHHH.
+
+    AAHHHouqquoHHHAA
+
+    oLLLLLLLLLLLLLLo
+
+    eLLrRLLLLLLRrLLe
+
+    wwwLLLLLLLLLLwww
+
+    ..wwwwwwwwwwww..
+
+    ................
+
+    '
+  down_b: '................
+
+    ................
+
+    .....HHHHHH.....
+
+    ...HHhHHHhHHH...
+
+    .wHHHHhHHHHhHH..
+
+    .HHhHHHHHhHHHHH.
+
+    .HHHHHHHHHHHHHHw
+
+    HHHHkWHHHHkWHHHH
+
+    wHHHkqppppqkHHH.
+
+    .HHHHqpNNpqHHHH.
+
+    AAHHHouqquoHHHAA
+
+    oLLLLLLLLLLLLLLo
+
+    eLLrRLLLLLLRrLLe
+
+    wwwLLLLLLLLLLwww
+
+    ..wwwwwwwwwwww..
+
+    ................
+
+    '
+  up_a: '................
+
+    ................
+
+    .....HHHHHH.....
+
+    ...HHhHHHhHHH...
+
+    ..HHHHhHHHHhHH..
+
+    .HHhHHHHHhHHHHH.
+
+    wHHHHHhHHHHhHHH.
+
+    HHHHHHHHHHHHHHHH
+
+    .HHHHHHHHHHHHHH.
+
+    .AHHHHHHHHHHHHA.
+
+    AAAFFFFFFFFFFAAA
+
+    oLLFFFFFFFFFFLLo
+
+    eLLFFFFFFFFFFLLe
+
+    wwwLLLLLLLLLLwww
+
+    ..wwwwwwwwwwww..
+
+    ................
+
+    '
+  up_b: '................
+
+    ................
+
+    .....HHHHHH.....
+
+    ...HHhHHHhHHH...
+
+    .wHHHHhHHHHhHH..
+
+    .HHhHHHHHhHHHHH.
+
+    .HHHHHhHHHHhHHHw
+
+    HHHHHHHHHHHHHHHH
+
+    wHHHHHHHHHHHHHH.
+
+    .AHHHHHHHHHHHHA.
+
+    AAAFFFFFFFFFFAAA
+
+    oLLFFFFFFFFFFLLo
+
+    eLLFFFFFFFFFFLLe
+
+    wwwLLLLLLLLLLwww
+
+    ..wwwwwwwwwwww..
+
+    ................
+
+    '
+  left_a: '................
+
+    ................
+
+    ......HHHHHH....
+
+    ....HHHhHHHhHH..
+
+    ...HHhHHHhHHHHH.
+
+    ..HHHHHhHHHHhHH.
+
+    ..HHHHHHHHHHHHHH
+
+    .HkWHHHHHHHHHHH.
+
+    qpqkHHHHHHHHHHH.
+
+    NppqHHHHHHHHHH..
+
+    .ouqHAAAFFFFFF..
+
+    oLLLLLLLLLLLLLLw
+
+    eLLrRLLLLLLRrLLw
+
+    wwwLLLLLLLLLLww.
+
+    ..wwwwwwwwwwww..
+
+    ..............w.
+
+    '
+  left_b: '................
+
+    ................
+
+    ......HHHHHH....
+
+    ....HHHhHHHhHH..
+
+    ...HHhHHHhHHHHH.
+
+    ..HHHHHhHHHHhHH.
+
+    ..HHHHHHHHHHHHHH
+
+    .HkWHHHHHHHHHHHw
+
+    qpqkHHHHHHHHHHH.
+
+    NppqHHHHHHHHHH..
+
+    .ouqHAAAFFFFFF..
+
+    oLLLLLLLLLLLLLLw
+
+    eLLrRLLLLLLRrLLw
+
+    wwwLLLLLLLLLLww.
+
+    ..wwwwwwwwwwww.w
+
+    ................
+
+    '

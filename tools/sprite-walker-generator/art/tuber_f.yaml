@@ -1,0 +1,332 @@
+name: tuber_f
+description: WOOKIEE CUB (f) with bead braids and a carved wooden float (replaces Tuber F).
+kit: person16x16
+replaces: graphics/object_events/pics/people/tuber_f.png
+graphics_info: TuberF
+notes: 'Recast c: whole frames on TuberF''s 16x16 footprint; brown Wookiee cub (round-shaded fur head with highlight strands, tan four-tone muzzle, eye glints) with two bead braids hanging beside her face
+  (red and white beads) and a red bead tuft, holding a carved golden wood ring float with carved notches and red inlay.'
+palette: npc_2
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_2
+shade: true
+materials:
+  H: c@
+  F: c
+  A: c
+  O: a
+legend:
+  k: 15
+  W: 14
+  N: 15
+  r: 9
+  R: 8
+  e: 1
+  o: 4
+  p: 1
+  q: 2
+  u: 3
+  h: 11
+  n: 13
+  B: 13
+  g: 9
+  y: 8
+  j: 9
+accept:
+  skin_tones: 'fur, not skin: the muzzle uses the skin ramp only where it shows'
+  hair_rows: the whole head is fur
+  eye_row: eyes under a fur brow
+frames:
+  down: '................
+
+    .....HHyyHH.....
+
+    ...HHhHHHhHHH...
+
+    ..HHHHhHHHHhHH..
+
+    .HHhHHHHHhHHHHH.
+
+    BHHHHHHHHHHHHHHB
+
+    gHHHkWHHHHkWHHHg
+
+    BHHHkqppppqkHHHB
+
+    WHHHHqpNNpqHHHHW
+
+    BAHHHouqquoHHHAB
+
+    gAOOOOOOOOOOOOAg
+
+    .OnOjOnOOnOjOnO.
+
+    ..OOOOOOOOOOOO..
+
+    ....OOOOOOOO....
+
+    .....FF..FF.....
+
+    ................
+
+    '
+  up: '................
+
+    .....HHyyHH.....
+
+    ...HHhHHHhHHH...
+
+    ..HHHHhHHHHhHH..
+
+    .HHhHHHHHhHHHHH.
+
+    BHHHHHhHHHHhHHHB
+
+    gHHHHHHHHHHHHHHg
+
+    BHHHHHHHHHHHHHHB
+
+    WAHHHHHHHHHHHHAW
+
+    BAAFFFFFFFFFFAAB
+
+    gOOOOOOOOOOOOOOg
+
+    ..OOOOOOOOOOOO..
+
+    ....OOOOOOOO....
+
+    .....FF..FF.....
+
+    ................
+
+    '
+  left: '................
+
+    ......HHyyHH....
+
+    ....HHHhHHHhHH..
+
+    ...HHhHHHhHHHHH.
+
+    ..HHHHHhHHHHhHH.
+
+    ..HHHHHHHHHHHHHB
+
+    .HkWHHHHHHHHHHHg
+
+    qpqkHHHHHHHHHHHB
+
+    NppqHHHHHHHHHH.W
+
+    .ouqHAAAFFFFFF.B
+
+    .OOOOOOAFFFOOOOg
+
+    .OnOjOnOOnOjOnO.
+
+    ..OOOOOOOOOOOO..
+
+    ....OOOOOOOO....
+
+    ......FFF.......
+
+    ................
+
+    '
+  down_a: '................
+
+    ................
+
+    .....HHyyHH.....
+
+    ...HHhHHHhHHH...
+
+    ..HHHHhHHHHhHH..
+
+    .HHhHHHHHhHHHHH.
+
+    BHHHHHHHHHHHHHHB
+
+    gHHHkWHHHHkWHHHg
+
+    BHHHkqppppqkHHHB
+
+    WHHHHqpNNpqHHHHW
+
+    BAHHHouqquoHHHAB
+
+    gAOOOOOOOOOOOOAg
+
+    .OnOjOnOOnOjOnO.
+
+    ..OOOOOOOOOOOO..
+
+    ....OOOOOOOO....
+
+    ....FF..........
+
+    '
+  down_b: '................
+
+    ................
+
+    .....HHyyHH.....
+
+    ...HHhHHHhHHH...
+
+    ..HHHHhHHHHhHH..
+
+    .HHhHHHHHhHHHHH.
+
+    BHHHHHHHHHHHHHHB
+
+    gHHHkWHHHHkWHHHg
+
+    BHHHkqppppqkHHHB
+
+    WHHHHqpNNpqHHHHW
+
+    BAHHHouqquoHHHAB
+
+    gAOOOOOOOOOOOOAg
+
+    .OnOjOnOOnOjOnO.
+
+    ..OOOOOOOOOOOO..
+
+    ....OOOOOOOO....
+
+    ..........FF....
+
+    '
+  up_a: '................
+
+    ................
+
+    .....HHyyHH.....
+
+    ...HHhHHHhHHH...
+
+    ..HHHHhHHHHhHH..
+
+    .HHhHHHHHhHHHHH.
+
+    BHHHHHhHHHHhHHHB
+
+    gHHHHHHHHHHHHHHg
+
+    BHHHHHHHHHHHHHHB
+
+    WAHHHHHHHHHHHHAW
+
+    BAAFFFFFFFFFFAAB
+
+    gOOOOOOOOOOOOOOg
+
+    ..OOOOOOOOOOOO..
+
+    ....OOOOOOOO....
+
+    ....OOOOOOOO....
+
+    ....FF..........
+
+    '
+  up_b: '................
+
+    ................
+
+    .....HHyyHH.....
+
+    ...HHhHHHhHHH...
+
+    ..HHHHhHHHHhHH..
+
+    .HHhHHHHHhHHHHH.
+
+    BHHHHHhHHHHhHHHB
+
+    gHHHHHHHHHHHHHHg
+
+    BHHHHHHHHHHHHHHB
+
+    WAHHHHHHHHHHHHAW
+
+    BAAFFFFFFFFFFAAB
+
+    gOOOOOOOOOOOOOOg
+
+    ..OOOOOOOOOOOO..
+
+    ....OOOOOOOO....
+
+    ....OOOOOOOO....
+
+    ..........FF....
+
+    '
+  left_a: '................
+
+    ................
+
+    ......HHyyHH....
+
+    ....HHHhHHHhHH..
+
+    ...HHhHHHhHHHHH.
+
+    ..HHHHHhHHHHhHH.
+
+    ..HHHHHHHHHHHHHB
+
+    .HkWHHHHHHHHHHHg
+
+    qpqkHHHHHHHHHHHB
+
+    NppqHHHHHHHHHH.W
+
+    .ouqHAAAFFFFFF.B
+
+    .OOOOOOAFFFOOOOg
+
+    .OnOjOnOOnOjOnO.
+
+    ..OOOOOOOOOOOO..
+
+    ...FFOOOOOOFF...
+
+    ....FFF...FF....
+
+    '
+  left_b: '................
+
+    ................
+
+    ......HHyyHH....
+
+    ....HHHhHHHhHH..
+
+    ...HHhHHHhHHHHH.
+
+    ..HHHHHhHHHHhHH.
+
+    ..HHHHHHHHHHHHHB
+
+    .HkWHHHHHHHHHHHg
+
+    qpqkHHHHHHHHHHHB
+
+    NppqHHHHHHHHHH.W
+
+    .ouqHAAAFFFFFF.B
+
+    .OOOOOOAFFFOOOOg
+
+    .OnOjOnOOnOjOnO.
+
+    ..OOOOOOOOOOOO..
+
+    ....OOOOOOOFF...
+
+    .....FF...FF....
+
+    '
