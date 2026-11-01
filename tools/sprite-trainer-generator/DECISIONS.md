@@ -209,3 +209,15 @@ Kael (Brendan) and Mira (May) to match the walker look, the first generic class 
 the School Kid, his book bag -> a datapad, the base's own hand grafted back over it) and the
 first big silhouette change (Tarfful from the Sailor: flexing strength pose, fur everywhere,
 `fringe` and `speckle`, a bandolier). Sheet `output/round1-fronts.png`. Awaiting review.
+
+## Round 2 of the roster: eight simple characters (2026-11-01)
+
+Owner on round 1: back pics "pretty decent, we don't need any improvements there"; fronts "not
+looking good... only two mockups... focus on ones that were possible to draw... get the basic
+ones fleshed out", complex ones (the Wookiee) later. Round 2 keeps each base's own palette
+indices (one legend character per vanilla index) and changes the colours, plus a few small
+recolour, trim and pixel layers. That is the round 5 recipe (a close base, ramps kept whole)
+at its simplest: Biggs (Cooltrainer M, flight-orange suit), Veteran F (Cooltrainer F), Doran
+(Norman), Prospector (Hiker), Angler (Fisherman), Farmhand (Camper), Homesteader (Picnicker),
+Nightsister (Hex Maniac, hat brim trimmed into a pointed hood). Balls become grey capture pods.
+Sheet `output/round2-fronts.png`.

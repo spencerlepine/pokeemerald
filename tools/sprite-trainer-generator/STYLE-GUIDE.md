@@ -151,6 +151,12 @@ built from rig shapes are not allowed (D9).
   (~14 px tall); a front-on face on a turned body reads as a mask. Sheet:
   `output/stormtrooper-helmet-r7.png`.
 
+- **2026-11-01, roster round 1** (Kael, Mira, Cadet M, Tarfful; back pics for Kael, Mira, Luke,
+  Leia): back pics approved as they are. Fronts: "not looking good... only two mockups... I can't
+  really tell if it's doing a good job." Complex ones (the Wookiee with fur) are deferred.
+  Lesson: show at least eight fronts per round, start with characters whose vanilla base is
+  already close, and keep the change mostly to the palette.
+
 ## Contact sheet of the vanilla pics
 
 ```python

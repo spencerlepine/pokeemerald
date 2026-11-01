@@ -1,0 +1,35 @@
+name: homesteader
+kit: trainer64
+replaces: graphics/trainers/front_pics/picnicker.png
+# HOMESTEADER (replaces Picnicker). Repaint of the Picnicker: a Tatooine farm girl. Teal outfit ->
+# cream tunic, orange -> rust scarf, blue hair -> brown, cap -> pale desert cap.
+palette:
+  - [115, 197, 164]  # 0 transparent
+  - [248, 224, 200] # a skin light
+  - [240, 200, 152] # b skin base
+  - [200, 152, 112] # c skin shadow
+  - [112, 80, 64]   # d skin edge
+  - [248, 232, 200] # e tunic light
+  - [216, 192, 152] # f tunic base
+  - [200, 200, 216] # g pale
+  - [144, 112, 80]  # h tunic dark
+  - [64, 40, 32]    # i hair dark
+  - [168, 112, 72]  # j hair light
+  - [120, 72, 48]   # k hair base
+  - [216, 96, 64]   # m rust light
+  - [152, 64, 48]   # n rust
+  - [248, 248, 248] # W white
+  - [16, 16, 24]    # K outline
+legend: {'.': 0, a: 1, b: 2, c: 3, d: 4, e: 5, f: 6, g: 7, h: 8, i: 9, j: 10, k: 11, m: 12, n: 13, W: 14, K: 15}
+frames:
+  front:
+    repaint:
+      pic: graphics/trainers/front_pics/picnicker.png
+      # picnicker: 1-4 skin, 5/6/8 teal outfit, 7 pale blue, 9-11 blue hair and shoes, 12/13 orange, 14 white, 15 outline
+      remap: {1: a, 2: b, 3: c, 4: d, 5: e, 6: f, 7: g, 8: h, 9: i, 10: j, 11: k, 12: m, 13: n, 14: W, 15: K}
+    rig:
+      layers:
+        # cap badge goes: a plain desert cap
+        - {name: cap badge, shape: poly, pts: [[28, 12], [37, 12], [37, 16], [28, 16]], recolour: "n:e m:e"}
+        # the ball -> a capture pod (durasteel grey)
+        - {name: pod, shape: poly, pts: [[41, 16], [48, 16], [48, 21], [41, 21]], recolour: "m:g"}

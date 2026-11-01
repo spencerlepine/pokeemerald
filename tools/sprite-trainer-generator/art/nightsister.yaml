@@ -1,0 +1,40 @@
+name: nightsister
+kit: trainer64
+replaces: graphics/trainers/front_pics/hex_maniac.png
+# NIGHTSISTER (replaces Hex Maniac). Repaint of the Hex Maniac: robed, hunched, a glowing orb in
+# her hands. Purple robe and hat -> Dathomir crimson robe and tall hood, skin -> chalk white with
+# the Nightsister's dark lips, red hair -> black, the orb -> green magick.
+palette:
+  - [115, 197, 164]  # 0 transparent
+  - [248, 248, 248] # a chalk light
+  - [224, 224, 232] # b chalk base
+  - [176, 176, 192] # c chalk shadow
+  - [96, 88, 104]   # d chalk edge
+  - [208, 72, 72]   # e robe light
+  - [168, 40, 48]   # f robe base
+  - [120, 24, 40]   # g robe shadow
+  - [72, 16, 32]    # h robe dark
+  - [176, 248, 168] # i magick light
+  - [96, 216, 112]  # j magick
+  - [0, 0, 0]       # k unused
+  - [32, 24, 32]    # m hair dark
+  - [64, 48, 64]    # n hair
+  - [248, 248, 248] # W white
+  - [16, 8, 16]     # K outline
+legend: {'.': 0, a: 1, b: 2, c: 3, d: 4, e: 5, f: 6, g: 7, h: 8, i: 9, j: 10, k: 11, m: 12, n: 13, W: 14, K: 15}
+frames:
+  front:
+    repaint:
+      pic: graphics/trainers/front_pics/hex_maniac.png
+      # hex_maniac: 1-4 skin, 5-8 purple robe light->dark, 9/10 orb, 12/13 red hair, 14 white, 15 outline
+      remap: {1: a, 2: b, 3: c, 4: d, 5: e, 6: f, 7: g, 8: h, 9: i, 10: j, 11: k, 12: m, 13: n, 14: W, 15: K}
+    rig:
+      layers:
+        # the witch hat's brim is cut away: a tall pointed Nightsister hood around the head
+        - name: hood
+          shape: trim
+          box: [16, 0, 34, 19]
+          keep: {shape: poly, pts: [[32, 1], [40, 1], [45, 6], [42, 12], [42, 19], [26, 19], [27, 12], [28, 7]]}
+        - {name: hood edge, shape: edge, chars: "efg", to: h}
+        # her black hair, under and around the hood -> the hood's crimson falling to the shoulders
+        - {name: hood fall, shape: poly, pts: [[12, 14], [54, 14], [54, 44], [12, 44]], recolour: "m:h n:g"}

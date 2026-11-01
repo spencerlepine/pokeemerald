@@ -1,0 +1,34 @@
+name: veteran_f
+kit: trainer64
+replaces: graphics/trainers/front_pics/cooltrainer_f.png
+# VETERAN (f) in a flight suit (replaces Cooltrainer F). Repaint of Cooltrainer F herself: a
+# confident pose, ball tossed in the air. Green hair -> black, orange top -> Rebel pilot orange,
+# green shorts -> olive flight trousers.
+palette:
+  - [115, 197, 164]  # 0 transparent
+  - [248, 224, 200] # a skin light
+  - [240, 200, 152] # b skin base
+  - [200, 152, 112] # c skin shadow
+  - [112, 80, 64]   # d skin edge
+  - [248, 168, 96]  # e suit light
+  - [224, 104, 48]  # f suit base
+  - [248, 248, 248] # g spark
+  - [120, 40, 24]   # h suit dark
+  - [96, 88, 96]    # i hair light
+  - [56, 48, 56]    # j hair base
+  - [32, 24, 32]    # k hair dark
+  - [248, 248, 240] # m white
+  - [200, 192, 176] # n white shadow
+  - [248, 248, 248] # W white
+  - [16, 16, 24]    # K outline
+legend: {'.': 0, a: 1, b: 2, c: 3, d: 4, e: 5, f: 6, g: 7, h: 8, i: 9, j: 10, k: 11, m: 12, n: 13, W: 14, K: 15}
+frames:
+  front:
+    repaint:
+      pic: graphics/trainers/front_pics/cooltrainer_f.png
+      # cooltrainer_f: 1-4 skin, 5/6/8 orange top, 7 cyan, 9-11 green hair and shorts, 12/13 cream, 14 white, 15 outline
+      remap: {1: a, 2: b, 3: c, 4: d, 5: e, 6: f, 7: g, 8: h, 9: i, 10: j, 11: k, 12: m, 13: n, 14: W, 15: K}
+    rig:
+      layers:
+        # the tossed ball -> a capture pod (durasteel grey and white)
+        - {name: pod, shape: poly, pts: [[14, 15], [21, 15], [21, 22], [14, 22]], recolour: "e:n f:n h:K"}
