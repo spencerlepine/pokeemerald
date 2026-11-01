@@ -15,6 +15,9 @@ Three lists drive the work. All live in `database/` and can be browsed with `pyt
   `art_status` says what to draw.
 - **Audio:** `pending_audio.csv`, one row per music track, sound effect and companion cry in `../game`, plus net-new
   sounds. `audio_status` says what to compose or record; `sw_subject` is the brief and `priority` the order.
+- **Music:** `music.csv`, one row per song (every `MUS_*` track in `../game` plus net-new songs), labelled by
+  `music_category` and `music_form`, with `rewrite_status` (TODO for every song the player hears) and tech notes
+  read from the MIDI files. `music_by_map.csv` lists the song each map plays, by planet.
 - **Game port:** `game_port.csv`, one row per thing to change in `../game`: every entity, line of text,
   story event and art file.
   - `game_file` / `game_line`: where it lives in `../game`.
@@ -81,6 +84,8 @@ and field-effect ids are table indexes, so deleting a ghost keeps its slot (poin
 | `text_terms.csv` | Term dictionary (glossary + every mapped name). |
 | `pending_art.csv` | Every art asset and visual effect, who uses it, its Star Wars subject, a `suggested_path`, its `art_status` and `swap_kind`. VFX rows (`kind` `vfx_*`) point at `path:source_line` in `../game`. |
 | `pending_audio.csv` | Every music track, sound effect, phoneme and cry: `emerald_constant` → `sw_constant`, the brief (`sw_subject`), where it plays (`used_in`, `used_by`), `source_file:source_line`, `asset_file`, `suggested_path`, `refs`, `priority`, `audio_status`, `swap_kind`. |
+| `music.csv` | Every song, for `tools/music-generator`: `wiki_title` (the Star Wars title once named; the Emerald constant until then), `music_category`, `music_form`, `rewrite_status` (TODO / DONE / SKIP), `planets`, `map_count`, the brief, placeholder, `asset_file` → `suggested_path`, and tech notes from `../game` (`player`, `voicegroup`, `volume`, `reverb`, `midi_tracks`, `tempo_bpm`, `length_s`, `loops`, `tech_notes`). Built by `tools/build_music.py`. |
+| `music_by_map.csv` | Every map with the song it plays (`MUS_NONE` = silent or set by a script), its planet and map type. |
 | `timeline_events.csv` | The 45 story events, rewritten. |
 | `net_new.csv` | Net-new content with placeholder, dependencies and balance notes. |
 | `area_progression.csv` | Emerald's balance table (levels, badges, gating) with planet and new map titles. |

@@ -22,6 +22,7 @@
 | [`wiki/database/texts.csv`](wiki/database/texts.csv) | Every line of game text with its Star Wars version. |
 | [`wiki/database/pending_art.csv`](wiki/database/pending_art.csv) | Every image, animation and VFX with its Star Wars subject and status. `todo` `HUMAN-TODO` marks what you replace by hand (logo, title screen, cutscenes, branded menus). |
 | [`wiki/database/pending_audio.csv`](wiki/database/pending_audio.csv) | Every song, sound effect and cry with its brief and status. |
+| [`wiki/database/music.csv`](wiki/database/music.csv) | Every song, labelled by category (town, route, battle, fanfare…) and form (loop, ambient, cue, jingle), with its rewrite status and tech notes for the music generator. |
 | [`wiki/database/`](wiki/database/) | The other generated tables (entities, timeline, net-new, area progression, habitats). |
 | [`wiki/mapping/`](wiki/mapping/) | The hand-written decisions the database is built from ([`mapping/README.md`](wiki/mapping/README.md)). |
 | [`wiki/tools/`](wiki/tools/) | `build.py` (mapping → database) and `scan_game_assets.py` (inventory of `game/` sound and VFX). |
