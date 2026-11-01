@@ -114,7 +114,7 @@ def run(canvas, ops, ctx, built=None):
             draw.outline(canvas, canvas.pal.index(a["index"]), inner=a.get("inner", False), diag=a.get("diag", False))
             continue
         elif name == "selout":
-            draw.selout(canvas, diag=a.get("diag", False))
+            draw.selout(canvas, diag=a.get("diag", False), light=tuple(a["light"]) if a.get("light") else None)
             continue
         elif name == "despeckle":
             keep = {canvas.pal.index(k) for k in a.get("keep", [])}
@@ -157,8 +157,9 @@ def _xform(pix, a):
         pix = np.rot90(pix, -int(a["rot90"]))
     if a.get("rotate"):
         pix = draw.rotate_nn(pix, a["rotate"], a.get("cx"), a.get("cy"))
-    if a.get("scale"):
-        pix = draw.scale_nn(pix, a["scale"], a.get("cx"), a.get("cy"))
+    if a.get("scale") or a.get("scalex") or a.get("scaley"):
+        f = a.get("scale", 1.0)
+        pix = draw.scale_nn(pix, a.get("scalex", f), a.get("cx"), a.get("cy"), a.get("scaley", f))
     if a.get("dx") or a.get("dy"):
         pix = draw.shift(pix, int(round(a.get("dx", 0))), int(round(a.get("dy", 0))))
     return np.ascontiguousarray(pix)
@@ -206,11 +207,14 @@ def _grid(canvas, a):
     for y, r in enumerate(rows):
         for x, ch in enumerate(r):
             chars[y, x] = ch
+    # one volume for the whole object: light and shadow follow the silhouette, not each material
+    union = np.isin(chars, list(shade.keys())) | (np.isin(chars, list(legend.keys())) & a.get("solid_legend", True))
+    union &= (chars != " ") & (chars != ".")
+    vol = draw.shade_mask(union, light=tuple(a.get("light", (-1, -1))), depth=int(a.get("depth", 3)))
     for ch, ramp in shade.items():
         m = chars == ch
-        v = draw.shade_mask(m, light=tuple(a.get("light", (-1, -1))), depth=int(a.get("depth", 3)))
         idx = canvas.pal.ramp(ramp)
-        step = draw.quantise(v, len(idx), a.get("bands"))
+        step = np.clip(draw.quantise(vol, len(idx), a.get("bands")) + int(a.get("offset", 0)), 0, len(idx) - 1)
         for y, x in zip(*np.nonzero(m)):
             px, py = x0 + x, y0 + y
             if 0 <= px < canvas.w and 0 <= py < canvas.h:

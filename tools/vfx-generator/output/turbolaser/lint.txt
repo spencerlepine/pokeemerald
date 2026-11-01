@@ -1,0 +1,15 @@
+# turbolaser: TURBOLASER bolt
+new sheet: graphics/battle_anims/sprites/turbolaser.png
+sheet 32x64, frame 32x16, slots drawn [0, 1, 2, 3], game uses [0, 1, 2, 3]
+palette gate: PASS
+  OK   /home/user/pokeemerald/tools/vfx-generator/output/turbolaser/turbolaser.png  (bpp 4, colours 5/15, on-theme 1/5)
+    warn:  4 of 5 colours are off-theme: [2] #C8F8C0 (nearest #60B070, dE 31), [3] #60E070 (nearest #60B070, dE 31), [4] #209838 (nearest #60B070, dE 23), [5] #105020 (nearest #60B070, dE 37)
+STYLE SCORE 100/100 (group new)
+  ok    tiny_colours 0.00 (vanilla band 0.00..1.00)
+  ok    lone 0.00 (vanilla band 0.00..0.02)
+  ok    checker 0.00 (vanilla band 0.00..0.15)
+  ok    dark_edge 0.12 (vanilla band 0.00..0.68)
+  ok    core_bright 53.05 (vanilla band -18.79..96.63)
+  ok    luma_range 192.61 (vanilla band 0.00..222.28)
+  ok    coverage 0.19 (vanilla band 0.09..0.75)
+  ok    border 0.00 (vanilla band 0.00..0.27)

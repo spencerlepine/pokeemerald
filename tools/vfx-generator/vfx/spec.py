@@ -109,17 +109,23 @@ def build(spec: dict, out_root: Path = OUT) -> Built:
                 # vanilla pixels on a different palette would show wrong colours: clear the slack instead
                 base_pix = np.zeros_like(bp) if not spec.get("keep_vanilla_pixels") else bp
 
-    built_frames: list[np.ndarray] = []
+    built_frames: list[np.ndarray] = [None] * n   # by drawing position k; `copy: {frame: k}` reads these
     by_slot: dict[int, np.ndarray] = {}
     per_frame = spec.get("frame_ops") or {}
-    for k, slot in enumerate(slots):
+
+    def _copies(k):
+        fo = per_frame.get(k) or per_frame.get(str(k)) or []
+        return [int(next(iter(o.values())).get("frame", 0)) for o in fo if isinstance(o, dict) and "copy" in o]
+    order = spec.get("draw_order") or sorted(range(n), key=lambda k: (len(_copies(k)) > 0, k))
+    for k in order:
+        slot = slots[k]
         cv = Canvas(frame[0], frame[1], pal)
         ctx = {"t": k / (n - 1) if n > 1 else 0.0, "i": k, "n": n, "slot": slot, "seed": spec.get("seed", 0),
                "W": frame[0], "H": frame[1], "cx": frame[0] / 2, "cy": frame[1] / 2}
         ctx.update(ops.ev(spec.get("vars") or {}, ctx))
         ops.run(cv, spec.get("ops"), ctx, built_frames)
         ops.run(cv, per_frame.get(k) or per_frame.get(str(k)), ctx, built_frames)
-        built_frames.append(cv.pix)
+        built_frames[k] = cv.pix
         by_slot[slot] = cv.pix
 
     # place frames into their slots, through the tile order

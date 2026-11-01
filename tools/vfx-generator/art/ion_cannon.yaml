@@ -1,0 +1,26 @@
+# ION CANNON (was ZAP CANNON): the ball the move fires. Zap Cannon is the only move that loads
+# ANIM_TAG_BLACK_BALL_2, so this sheet is redrawn in place and no code changes.
+name: ion_cannon
+title: ION CANNON orb
+row: anim:Move_ZAP_CANNON
+bucket: NEW
+replaces: graphics/battle_anims/sprites/black_ball_2.png
+brief: >
+  A ball of blue-white ion energy (the Hoth ion cannon blast): white-hot core up and to the left,
+  pale cyan and kyber blue rings, a deep navy rim, with two thin crackles across the surface.
+theme: [kyber-gold]           # warnings only: Kyber Blue + Star White
+palette:
+  mode: new                   # own palette (gbapal comes from this PNG), nothing else uses it
+  transparent: "#A09088"      # the vanilla key colour, so diffs stay readable
+  ramps:
+    ion: ["#F8F8F8", "#B8F0F8", "#58C8F8", "#2878D8", "#183888"]
+ops:
+  - disc: {cx: 8, cy: 8, r: 7.9, ramp: ion, light: [-0.38, -0.38], falloff: 1.15, bands: [0.86, 0.66, 0.42, 0.16]}
+  - bolt: {x0: 3.5, y0: 10.5, x1: 9.5, y1: 4.5, segments: 4, amp: 1.4, seed: 3, r0: 0.55, ramp: ion, mode: lighten, bands: [0.0]}
+  - bolt: {x0: 7.5, y0: 13.0, x1: 13.0, y1: 7.5, segments: 4, amp: 1.2, seed: 11, r0: 0.5, ramp: [2], mode: lighten}
+preview:
+  scene: battle
+  motion: {kind: projectile, frames: 30}   # createsprite gZapCannonBallSpriteTemplate ... 30 = frames to the target
+  length: 40
+romtest:
+  move: MOVE_ZAP_CANNON

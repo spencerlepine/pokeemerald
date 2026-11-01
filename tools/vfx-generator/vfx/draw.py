@@ -320,19 +320,29 @@ def outline(canvas: Canvas, index: int, *, inner: bool = False, diag: bool = Fal
         canvas.pix[ring_ & (canvas.pix == 0)] = index
 
 
-def selout(canvas: Canvas, *, ramp_of: dict[int, list[int]] | None = None, diag=False):
-    """Selective outline: each edge pixel takes the darkest step of its own ramp (Emerald objects)."""
+def selout(canvas: Canvas, *, ramp_of: dict[int, list[int]] | None = None, diag=False, light=None):
+    """Selective outline: each edge pixel takes a dark step of its own ramp (Emerald objects are rimmed
+    in their own colour, never pure black). With `light` (e.g. [-1, -1]) the edges facing the light take
+    the second-darkest step and the rest the darkest, as on the vanilla coin and Poke Ball."""
     pal = canvas.pal
-    lookup = {}
+    dark, mid = {}, {}
     for r in pal.ramps.values():
         for i in r:
-            lookup.setdefault(i, r[-1])
+            dark.setdefault(i, r[-1])
+            mid.setdefault(i, r[-2] if len(r) > 1 else r[-1])
     if ramp_of:
-        lookup.update({k: v[-1] for k, v in ramp_of.items()})
-    e = edge(canvas.opaque, diag)
+        dark.update({k: v[-1] for k, v in ramp_of.items()})
+    o = canvas.opaque
+    e = edge(o, diag)
+    lit = np.zeros_like(e)
+    if light:
+        lx, ly = int(np.sign(light[0])), int(np.sign(light[1]))
+        lit = e & ~shift(o.astype(np.uint8), -lx, 0).astype(bool) | e & ~shift(o.astype(np.uint8), 0, -ly).astype(bool)
+        lit &= e
     ys, xs = np.nonzero(e)
     for y, x in zip(ys, xs):
-        canvas.pix[y, x] = lookup.get(int(canvas.pix[y, x]), canvas.pix[y, x])
+        v = int(canvas.pix[y, x])
+        canvas.pix[y, x] = (mid if lit[y, x] else dark).get(v, v)
 
 
 def shade_mask(mask: np.ndarray, *, light=(-1, -1), rim: int = 1, depth: int = 3) -> np.ndarray:
@@ -395,13 +405,15 @@ def rotate_nn(pix: np.ndarray, deg: float, cx: float | None = None, cy: float | 
     return out
 
 
-def scale_nn(pix: np.ndarray, f: float, cx=None, cy=None) -> np.ndarray:
+def scale_nn(pix: np.ndarray, f: float, cx=None, cy=None, fy: float | None = None) -> np.ndarray:
+    """Nearest-neighbour scale about (cx, cy); fy scales y separately (a coin turning edge-on)."""
     h, w = pix.shape
+    fy = f if fy is None else fy
     cx = (w - 1) / 2 if cx is None else cx
     cy = (h - 1) / 2 if cy is None else cy
     ys, xs = np.mgrid[0:h, 0:w]
     sx = np.round((xs - cx) / f + cx).astype(int)
-    sy = np.round((ys - cy) / f + cy).astype(int)
+    sy = np.round((ys - cy) / fy + cy).astype(int)
     ok = (sx >= 0) & (sx < w) & (sy >= 0) & (sy < h)
     out = np.zeros_like(pix)
     out[ok] = pix[sy[ok], sx[ok]]

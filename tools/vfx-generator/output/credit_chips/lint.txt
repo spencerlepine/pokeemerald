@@ -1,0 +1,14 @@
+# credit_chips: CREDIT TOSS chip
+replaces: graphics/battle_anims/sprites/coin.png
+sheet 16x64, frame 16x16, slots drawn [0, 1, 2, 3], game uses [2]
+palette gate: PASS
+  OK   /home/user/pokeemerald/tools/vfx-generator/output/credit_chips/coin.png  (bpp 4, colours 7/15, on-theme 7/7)
+STYLE SCORE 100/100 (group battle_anim_sprite)
+  ok    tiny_colours 0.00 (vanilla band 0.00..1.00, replaced sheet 0.00)
+  ok    lone 0.00 (vanilla band 0.00..0.02, replaced sheet 0.00)
+  ok    checker 0.00 (vanilla band 0.00..0.15, replaced sheet 0.02)
+  ok    dark_edge 0.25 (vanilla band 0.00..0.68, replaced sheet 0.00)
+  ok    core_bright 52.21 (vanilla band -18.79..96.63, replaced sheet 25.90)
+  ok    luma_range 184.57 (vanilla band 0.00..222.28, replaced sheet 137.75)
+  ok    coverage 0.28 (vanilla band 0.09..0.75, replaced sheet 0.30)
+  ok    border 0.00 (vanilla band 0.00..0.27, replaced sheet 0.00)

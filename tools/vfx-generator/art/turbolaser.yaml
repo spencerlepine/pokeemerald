@@ -1,0 +1,42 @@
+# TURBOLASER (was HYPER BEAM). Hyper Beam streams ANIM_TAG_ORBS, which 11 other moves share (Absorb,
+# Solar Beam, Recover...), so the bolt is a NEW sheet with its own tag. Porting it needs a new
+# ANIM_TAG + pic/palette table rows and Move_HYPER_BEAM pointing at it (see README "Porting a NEW sheet");
+# until then this is judged in the previewer.
+name: turbolaser
+title: TURBOLASER bolt
+row: anim:Move_HYPER_BEAM
+bucket: NEW
+new:
+  path: graphics/battle_anims/sprites/turbolaser.png
+  size: [32, 64]
+  frame: [32, 16]
+brief: >
+  Heavy green turbolaser bolts: a long white-hot core in a pale green sheath with a saturated green
+  rim, angled from the player's side up toward the foe (the battle's attack line, about 17 degrees).
+  Slots: 0-1 the bolt (two flicker states), 2-3 the impact flash on the target.
+theme: [imperial-order]       # Console Green family
+palette:
+  mode: new
+  transparent: "#000000"
+  ramps:
+    bolt: ["#F8F8F8", "#C8F8C0", "#60E070", "#209838", "#105020"]
+vars:
+  ang: -17
+frame_ops:
+  0:
+    - beam: {x0: 3, y0: 11.5, x1: 28.5, y1: 3.8, r0: 2.4, r1: 2.0, ramp: bolt, bands: [0.62, 0.38, 0.18, 0.05]}
+  1:
+    - beam: {x0: 3, y0: 11.5, x1: 28.5, y1: 3.8, r0: 2.0, r1: 1.7, ramp: bolt, bands: [0.55, 0.3, 0.12, 0.0]}
+    - beam: {x0: 6, y0: 11.5, x1: 25, y1: 5.8, r0: 0.6, ramp: bolt, offset: 3, mode: under}
+  2:
+    - star: {cx: 16, cy: 8, r_in: 3, r_out: 7.5, points: 6, rot: 10, ramp: bolt, jitter: 0.15, seed: 4}
+    - disc: {cx: 16, cy: 8, r: 3.2, ramp: bolt}
+  3:
+    - ring: {cx: 16, cy: 8, r: 6, thick: 2, ramp: bolt, offset: 1}
+    - sparks: {cx: 16, cy: 8, r: 7.5, n: 5, seed: 9, ramp: bolt, shape: dot, offset: 1}
+preview:
+  scene: battle
+  # the script blends the background to black first (simple_palette_blend F_PAL_BG ... 16)
+  motion: {kind: stream, dim: 1.0, frames: 14, every: 3, spawn_until: 50, anim: [[0, 2], [1, 2]], offset: [8, -8]}
+  length: 70
+lint_allow: [lone]

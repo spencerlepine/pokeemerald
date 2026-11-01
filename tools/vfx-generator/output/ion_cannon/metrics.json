@@ -1,0 +1,31 @@
+{
+ "metrics": {
+  "colours": 5,
+  "frames": 1,
+  "tiny_colours": 0,
+  "coverage": 0.78125,
+  "border": 0.08,
+  "core_bright": 50.256979020979,
+  "dark_edge": 0.3409090909090909,
+  "lone": 0.0,
+  "checker": 0.0,
+  "clusters": 1.0,
+  "luma_range": 192.44799999999998,
+  "saturation": 0.5205762878628154
+ },
+ "vanilla": {
+  "colours": 4,
+  "frames": 1,
+  "tiny_colours": 0,
+  "coverage": 0.75390625,
+  "border": 0.08808290155440414,
+  "core_bright": -7.262965222696765,
+  "dark_edge": 0.7727272727272727,
+  "lone": 0.0,
+  "checker": 0.0,
+  "clusters": 1.0,
+  "luma_range": 255.0,
+  "saturation": 0.0
+ },
+ "score": 95
+}

@@ -1,0 +1,54 @@
+# Fly mount: Emerald's bird becomes an Imperial-style shuttle (pairs with the hyperspace jump).
+# The bird has paletteTag TAG_NONE and CreateFlyBirdSprite sets oam.paletteNum = 0: it is drawn with the
+# PLAYER's bank, which is different for the boy and the girl. So this spec draws with indices only and
+# uses the entries that are (nearly) the same in both: 14 white, 9 pale grey, 5/6 dark blue-grey,
+# 15 black, 12/13 red. The preview renders it under both player palettes.
+name: fly_shuttle
+title: Fly shuttle
+row: graphics/field_effects/pics/bird.png
+bucket: RESKIN
+replaces: graphics/field_effects/pics/bird.png
+brief: >
+  A small T-shaped shuttle seen from the side, flying left like the bird: cockpit nose, tall dorsal
+  fin, folded lower wing, a red engine glow at the back. Outlined in black like the vanilla bird.
+palette:
+  mode: locked
+  source: graphics/object_events/palettes/brendan.pal
+  ramps:
+    hull: [14, 9, 5, 6]
+    glow: [14, 12, 13]
+ops:
+  - grid:
+      x: 0
+      y: 2
+      rows:
+        - "..............KK.............."
+        - ".............KlmK............."
+        - ".............KlmK............."
+        - "............KllmdK............"
+        - "............KlmmdK............"
+        - "...........KllmmdK............"
+        - "...........KlmmmdK............"
+        - "..........KllmmddK............"
+        - "..........KlmmmdK............."
+        - ".........KllmmmdK............."
+        - ".....KKKKKlmmmmdKKKKKKKK......"
+        - "...KKwwlllllllllllllllmdKK...."
+        - "..KdKwlllllllllllllllmmmdKKKK."
+        - ".KdddKKlllllllllllllmmmmmdKrrK"
+        - "KmmmmmKmmmmmmmmmmmmmmmmmmdKwrK"
+        - "KddddddddddddddddddddddddddKRK."
+        - ".KKKKKKKKddddddddddddddddKKKK.."
+        - "........KKmmmmmmmmmmmmdKK....."
+        - "..........KKlmmmmmdddKK......."
+        - "............KKlmmddKK........."
+        - "..............KKmdK..........."
+        - "................KK............"
+      legend: {K: 15, d: 6, m: 5, l: 9, w: 14, r: 12, R: 13}
+preview:
+  scene: overworld
+  layout: LAYOUT_LITTLEROOT_TOWN
+  at: [10, 9]
+  motion: {kind: fly_in}
+  length: 70
+lint_allow: [dark_edge, core_bright]   # an object with a black outline, like the bird it replaces
