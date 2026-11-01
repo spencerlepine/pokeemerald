@@ -16,64 +16,66 @@ def g(text):
 NOSKIN = {"skin_tones": "creature: no human skin", "hair_rows": "creature: no hair", "eye_row": "creature eyes, not a human face"}
 
 # ====================================================================== IONRAT (replaces Pikachu)
-# Felucia rodent: round mouse ears with pink insides, yellow fur (round head H, body B), red ion
-# glands on the cheeks, brown back stripes, a zigzag brown tail ending in a white ion spark.
-spec("pikachu", "Pikachu", "npc_2", "pikachu.png",
+# Felucian rat, redrawn on Pikachu's footprint with a rat's silhouette: round pink-lined ears, a
+# pointed pink snout, grey fur (round head H, body B) with green ion stripes (y), glowing
+# green ion glands on the cheeks (g), red-orange eyes, and a long thin pink rat tail (T) ending in a white-hot
+# ion spark (Y, W). The thin tail is hard pixels so the shader cannot break it.
+spec("pikachu", "Pikachu", "npc_3", "pikachu.png",
      "IONRAT: Felucian rodent that discharges ion bolts (replaces Pikachu).",
-     "Group 9: drawn on Pikachu's footprint; round mouse ears with pink insides, yellow fur, glowing red ion glands on the cheeks, brown back stripes and a thin zigzag tail crackling with a white spark.",
-     materials={"H": "a@", "B": "a", "E": "a", "S": "s", "c": "c", "T": "c", "P": "s"},
-     legend={"k": 15, "W": 14, "n": 4, "g": 8, "G": 9},
+     "Group 9: a rat drawn on Pikachu's footprint: round pink-lined ears, pointed pink snout, grey fur with glowing green ion stripes and cheek glands, red-orange eyes and a long thin pink tail ending in a white-hot ion spark.",
+     materials={"H": "a@", "E": "a"},
+     legend={"k": 15, "W": 14, "y": 8, "g": 8, "Y": 9, "T": 3, "n": 4, "e": 11, "i": 2, "S": 2, "f": 3},
      accept=NOSKIN, kit="person16x16_still", root=PK,
      frames={"down": g("""
 ................
-.EEE.......EEE..
-ESSSE.....ESSSE.
-ESSSEHHHHHESSSE.
-.EEHHHHHHHHHEE..
-..HHHHHHHHHHH...
-.HHHkHHHHHkHHH..
-.HHWkHHHHWkHHH..
-.HgGHHHnHHHgGH.W
-..HHHHHHHHHHH.T.
-..HHHHHHHHHHHTT.
-.HHHHHHHHHHHHT..
-.HHHHHHHHHHHHH..
-..HHHHHHHHHHH...
-...PP.....PP....
+.EEE.....EEE....
+EiiiEHHHEiiiE...
+EiiEHHHHHEiiE...
+.EEHHyHyHHEE....
+..HHHyHyHHH.....
+..HHkHHHkHH.....
+..gHeHHHeHg.....
+.HHHHSSSHHHH...W
+HHHHHSSSHHHHH..Y
+HHHHHHnHHHHHH.TT
+HHyHHHHHHHyHH.T.
+.HHyHHHHHyHH.T..
+..HHHHHHHHHTT...
+..ff.....ff.....
 ................"""),
              "up": g("""
-...............W
-.EEE.......EEETT
-EEEEE.....EEEET.
-EEEEEHHHHHEEEET.
-.EEHHHHHHHHHEET.
-..HHHHHHHHHHHT..
-.HHHHHHHHHHHHT..
-.HHHHHHHHHHHTH..
-.HHHHHHHHHHHTH..
-..HHHHHHHHHHH...
-..HHcHHHHHcHHH..
-.HHHcHHHHHcHHH..
-.HHHHcHHHcHHHH..
-..HHHHHHHHHHH...
-...PP.....PP....
+................
+.EEE.....EEE....
+EEEEEHHHEEEEE...
+EEEEHHHHHEEEE...
+.EEHHHHHHHEE....
+..HHHyHyHHH.....
+..HHHyHyHHH.....
+..HHHHHHHHH.....
+.HHHHHHHHHHH...W
+HHHyHHHyHHHyH..Y
+HHHyHHHyHHHyH..T
+HHHHHHHHHHHHH.T.
+.HHHHHHHHHHH.T..
+..HHHHHHHHHTT...
+..ff.....ff.....
 ................"""),
              "left": g("""
 ................
-.......EEE......
-......ESSSE.....
-.....EESSSE...W.
-...HHHHEEE...TT.
-..HHHHHHHHH...T.
-.HHkHHHHHHHH.TT.
-.HWkHHHHHHHH.T..
-nHHHgGHHHHHH.T..
-.HHHHHHHHHHHTT..
-..HHHHHHHHHHT...
-...HHHHHHcHHHH..
-...HHHHHHHcHHH..
-...HHHHHHHHHH...
-....PP....PP....
+....EEE.........
+...EiiiE........
+...EiiE.........
+..HHEEHHH.......
+.HHHHHyHHH......
+.HkHHHHyHHHH...W
+SHegHHHHHHHHH..Y
+nSSHHHHHHHHyHH.T
+..SHHHHHHHHyHH.T
+...HHHHHHyHHHHT.
+...HHHHHHHHHHT..
+....HHHHHHHHH...
+....HHHHHHHH....
+....ff...ff.....
 ................""")})
 
 # ====================================================================== BLOOPHARE (replaces Azumarill)
@@ -491,42 +493,104 @@ spec("kirlia", "Kirlia", "npc_3", "kirlia.png",
      base="kirlia.png", remap={"a": "P", "b": "S", "c": "S", "w": "W"},
      patches={"down": [KH_D], "up": [KH_U], "left": [KH_L]})
 # ====================================================================== PRIMORDIAL (replaces Mew)
-# Mew's floating pose and swinging tail are kept pixel for pixel, but the region shader turns
-# its thin tail and limbs to mud (tried: two region passes), so this one is a hand recolour of
-# the vanilla tones written as hard pixels: a pale glowing lavender body (skin tones -> ramp A,
-# white kept as the glow), warm skin-ramp ears, green Wellspring eyes, a green life-mark on the
-# brow and a tail that ends in a green leaf-bud of light.
+# A small floating Mortis creature, drawn from scratch on Mew's 9-frame footprint: a round glowing
+# lavender body (H) with tall ears (E, pink insides i) tipped with green life-buds (G, g), a
+# green Wellspring mark on the brow and back, big amber-ringed eyes, a pink nose (n) and warm paws (P),
+# a two-strand wisp tail (w, T) and a ring of light (o, p, q) on the ground under it.
+# Step frames bob the body (a: down 1, b: up 1, as Mew floats) over a fixed aura ring.
 NPC1 = "../../game/graphics/object_events/palettes/npc_1.pal"
-MEW_MAP = {1: 5, 2: 5, 3: 6, 4: 7, 7: 7, 14: 14, 9: 9, 6: 3}
 HEX = ".123456789ABCDEF"
+PR_TAIL = """
+......wTTw......
+...oo..TT..oo...
+..p...WggW...p..
+...qqqqqqqqqq..."""
+PR_D = """
+....g......g....
+....GE....EG....
+....EE....EE....
+...EiE....EiE...
+...EiEHHHHEiE...
+...EEHHHHHHEE...
+..HHHHHHHHHHHH..
+..HHHHHggHHHHH..
+.HHHHHHHHHHHHHH.
+.HHekHHHHHHkeHH.
+.HHWkHHHHHHkWHH.
+.HHHHHHnnHHHHHH.
+..HHHHHHHHHHHH..
+..PHHHHHHHHHHP..
+...HHHHHHHHHH...
+....HHHHHHHH....
+.....HHHHHH.....""" + PR_TAIL
+PR_U = """
+....g......g....
+....GE....EG....
+....EE....EE....
+...EEE....EEE...
+...EEEHHHHEEE...
+...EEHHHHHHEE...
+..HHHHHHHHHHHH..
+..HHHHHHHHHHHH..
+.HHHHHHggHHHHHH.
+.HHHHHHgGHHHHHH.
+.HHHHHHGgHHHHHH.
+.HHHHHHHHHHHHHH.
+..HHHHHHHHHHHH..
+..PHHHHHHHHHHP..
+...HHHHHHHHHH...
+....HHHHHHHH....
+.....HHHHHH.....""" + PR_TAIL
+PR_L = """
+......g...g.....
+......GE..EG....
+......EE..EE....
+.....EiE..EEE...
+.....EiEHHEEE...
+....HEEHHHHEE...
+...HHHHHHHHHHH..
+..HHHHHHHHHHHH..
+.HHHHHHHHHHHHH..
+.HekHHHHHHHHHH..
+.HWkHHHHHHHHHH..
+nHHHHHHHHHHHHH..
+.HHHHHHHHHHHHH..
+..PHHHHHHHHHHw..
+...HHHHHHHHHTw..
+....HHHHHHHTT.w.
+.....HHHHHT..W..
+.......wT.......
+...oo.......oo..
+..p..........p..
+...qqqqqqqqqq..."""
 
 
-def _mew_frames():
-    from PIL import Image
-    pal = [tuple(map(int, ln.split())) for ln in open(NPC1).read().split("\n")[3:19]]
-    im = Image.open("../../game/" + PK + "mew.png").convert("RGB")
-    names = ["down", "up", "left", "down_a", "down_b", "up_a", "up_b", "left_a", "left_b"]
+def _float_frames():
     out = {}
-    for i, n in enumerate(names):
-        idx = [[pal.index(im.getpixel((i * 16 + x, y))) for x in range(16)] for y in range(32)]
-        top = next(y for y in range(32) if any(idx[y]))
-        g2 = [[MEW_MAP.get(v, v) if v else 0 for v in row] for row in idx]
-        for y in range(top, top + 2):                      # tail tip -> green bud of light
-            for x in range(16):
-                if idx[y][x]:
-                    g2[y][x] = 10 if idx[y][x] == 7 else (8 if y == top + 1 else 9)
-        out[n] = ["".join(HEX[v] for v in row) for row in g2]
-    for n, dy in (("down", 0), ("down_a", 1), ("down_b", -1), ("up", 0), ("up_a", 1), ("up_b", -1)):  # life-mark
-        r = list(out[n][17 + dy]); r[7] = r[8] = HEX[8]; out[n][17 + dy] = "".join(r)
-        r = list(out[n][16 + dy]); r[7] = r[8] = HEX[9]; out[n][16 + dy] = "".join(r)
+    for n, art in (("down", PR_D), ("up", PR_U), ("left", PR_L)):
+        rows = ["." * 16] * (31 - 21) + g(art)            # 21 drawn rows end on row 30
+        rows += ["." * 16] * (32 - len(rows))
+        out[n] = rows
+        for suf, dy in (("_a", 1), ("_b", -1)):
+            body = [r if y < 28 else "." * 16 for y, r in enumerate(rows)]
+            moved = ["." * 16] * 32
+            for y in range(32):
+                if 0 <= y - dy < 32:
+                    moved[y] = body[y - dy]
+            ring = rows[28:31]
+            for k, r in enumerate(ring):                  # the aura ring stays on the ground
+                y = 28 + k
+                moved[y] = "".join(m if m != "." else c for m, c in zip(moved[y], r))
+            out[n + suf] = moved
     return out
 
 
 spec("mew", "Mew", "npc_3", "mew.png",
      "PRIMORDIAL: the first creature, born in the Wellspring of Life on Mortis (replaces Mew).",
-     "Group 9: Mew's floating pose and swinging tail kept as a hand recolour: pale glowing lavender body with white glow, warm ears, green Wellspring eyes, a green life-mark on the brow and crown, and a tail ending in a green leaf-bud of light.",
-     materials={}, legend={c: i for i, c in enumerate(HEX) if i},
-     accept=NOSKIN, kit="person16x32", root=PK, frames=_mew_frames())
+     "Group 9: a small floating Mortis creature on Mew's footprint: round glowing lavender body, tall pink-lined ears tipped with green life-buds, a green Wellspring mark on brow and back, amber-ringed eyes, pink nose, warm paws, a two-strand wisp tail and a ring of light under it.",
+     materials={"H": "a@", "E": "a"},
+     legend={"k": 15, "W": 14, "e": 11, "n": 3, "P": 2, "i": 1, "g": 8, "G": 10, "T": 9, "w": 5, "o": 14, "p": 5, "q": 6},
+     accept=NOSKIN, kit="person16x32", root=PK, frames=_float_frames())
 
 # ====================================================================== GNARLTREE (replaces Sudowoodo)
 # Sudowoodo's three still poses (stand, left bough up, right bough up) as regions: a twisted bark

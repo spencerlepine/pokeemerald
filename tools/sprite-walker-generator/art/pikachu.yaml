@@ -3,24 +3,26 @@ description: 'IONRAT: Felucian rodent that discharges ion bolts (replaces Pikach
 kit: person16x16_still
 replaces: graphics/object_events/pics/pokemon/pikachu.png
 graphics_info: Pikachu
-notes: 'Group 9: drawn on Pikachu''s footprint; round mouse ears with pink insides, yellow fur, glowing red ion glands on the cheeks, brown back stripes and a thin zigzag tail crackling with a white spark.'
-palette: npc_2
-palette_tag: OBJ_EVENT_PAL_TAG_NPC_2
+notes: 'Group 9: a rat drawn on Pikachu''s footprint: round pink-lined ears, pointed pink snout, grey fur with glowing green ion stripes and cheek glands, red-orange eyes and a long thin pink tail ending
+  in a white-hot ion spark.'
+palette: npc_3
+palette_tag: OBJ_EVENT_PAL_TAG_NPC_3
 shade: true
 materials:
   H: a@
-  B: a
   E: a
-  S: s
-  c: c
-  T: c
-  P: s
 legend:
   k: 15
   W: 14
-  n: 4
+  y: 8
   g: 8
-  G: 9
+  Y: 9
+  T: 3
+  n: 4
+  e: 11
+  i: 2
+  S: 2
+  f: 3
 accept:
   skin_tones: 'creature: no human skin'
   hair_rows: 'creature: no hair'
@@ -28,99 +30,99 @@ accept:
 frames:
   down: '................
 
-    .EEE.......EEE..
+    .EEE.....EEE....
 
-    ESSSE.....ESSSE.
+    EiiiEHHHEiiiE...
 
-    ESSSEHHHHHESSSE.
+    EiiEHHHHHEiiE...
 
-    .EEHHHHHHHHHEE..
+    .EEHHyHyHHEE....
 
-    ..HHHHHHHHHHH...
+    ..HHHyHyHHH.....
 
-    .HHHkHHHHHkHHH..
+    ..HHkHHHkHH.....
 
-    .HHWkHHHHWkHHH..
+    ..gHeHHHeHg.....
 
-    .HgGHHHnHHHgGH.W
+    .HHHHSSSHHHH...W
 
-    ..HHHHHHHHHHH.T.
+    HHHHHSSSHHHHH..Y
 
-    ..HHHHHHHHHHHTT.
+    HHHHHHnHHHHHH.TT
 
-    .HHHHHHHHHHHHT..
+    HHyHHHHHHHyHH.T.
 
-    .HHHHHHHHHHHHH..
+    .HHyHHHHHyHH.T..
 
-    ..HHHHHHHHHHH...
+    ..HHHHHHHHHTT...
 
-    ...PP.....PP....
+    ..ff.....ff.....
 
     ................
 
     '
-  up: '...............W
+  up: '................
 
-    .EEE.......EEETT
+    .EEE.....EEE....
 
-    EEEEE.....EEEET.
+    EEEEEHHHEEEEE...
 
-    EEEEEHHHHHEEEET.
+    EEEEHHHHHEEEE...
 
-    .EEHHHHHHHHHEET.
+    .EEHHHHHHHEE....
 
-    ..HHHHHHHHHHHT..
+    ..HHHyHyHHH.....
 
-    .HHHHHHHHHHHHT..
+    ..HHHyHyHHH.....
 
-    .HHHHHHHHHHHTH..
+    ..HHHHHHHHH.....
 
-    .HHHHHHHHHHHTH..
+    .HHHHHHHHHHH...W
 
-    ..HHHHHHHHHHH...
+    HHHyHHHyHHHyH..Y
 
-    ..HHcHHHHHcHHH..
+    HHHyHHHyHHHyH..T
 
-    .HHHcHHHHHcHHH..
+    HHHHHHHHHHHHH.T.
 
-    .HHHHcHHHcHHHH..
+    .HHHHHHHHHHH.T..
 
-    ..HHHHHHHHHHH...
+    ..HHHHHHHHHTT...
 
-    ...PP.....PP....
+    ..ff.....ff.....
 
     ................
 
     '
   left: '................
 
-    .......EEE......
+    ....EEE.........
 
-    ......ESSSE.....
+    ...EiiiE........
 
-    .....EESSSE...W.
+    ...EiiE.........
 
-    ...HHHHEEE...TT.
+    ..HHEEHHH.......
 
-    ..HHHHHHHHH...T.
+    .HHHHHyHHH......
 
-    .HHkHHHHHHHH.TT.
+    .HkHHHHyHHHH...W
 
-    .HWkHHHHHHHH.T..
+    SHegHHHHHHHHH..Y
 
-    nHHHgGHHHHHH.T..
+    nSSHHHHHHHHyHH.T
 
-    .HHHHHHHHHHHTT..
+    ..SHHHHHHHHyHH.T
 
-    ..HHHHHHHHHHT...
+    ...HHHHHHyHHHHT.
 
-    ...HHHHHHcHHHH..
+    ...HHHHHHHHHHT..
 
-    ...HHHHHHHcHHH..
+    ....HHHHHHHHH...
 
-    ...HHHHHHHHHH...
+    ....HHHHHHHH....
 
-    ....PP....PP....
+    ....ff...ff.....
 
     ................
 
