@@ -173,11 +173,16 @@ def update_wiki(row: dict, notes: str, drawn: str):
     w = csv.DictWriter(buf, fieldnames=fields, lineterminator="\n")
     w.writeheader(); w.writerows(rows)
     CSV.write_text(buf.getvalue())
-    lines = [l for l in ART_READY.read_text().splitlines(keepends=True)
-             if not l.startswith(row["asset_id"] + ",")]
     buf = io.StringIO()
     csv.writer(buf, lineterminator="\n").writerow([row["asset_id"], f"art/{row['path']}", drawn, notes.split("; ", 1)[1]])
-    ART_READY.write_text("".join(lines) + buf.getvalue())
+    lines, hit = [], False  # replace the row in place (keeps diffs small for other writers)
+    for l in ART_READY.read_text().splitlines(keepends=True):
+        if l.startswith(row["asset_id"] + ","):
+            if not hit:
+                lines.append(buf.getvalue()); hit = True
+            continue
+        lines.append(l)
+    ART_READY.write_text("".join(lines) + ("" if hit else buf.getvalue()))
 
 
 def git(*a, check=True):
