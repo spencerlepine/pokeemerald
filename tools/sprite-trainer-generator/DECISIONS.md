@@ -184,3 +184,28 @@ decision log, the format facts (`README.md`), its corpus, `art/` and `output/`. 
 imported or read from outside it except a pokeemerald checkout (`EMERALD_DIR`). Code it has in
 common with other art tools (spec parsing, palette rules, gbagfx verify, metrics) is a copy
 trimmed to what this category uses, so this tool can be changed or rewritten on its own.
+
+## D11. Silhouette ops: reshape a repaint instead of redrawing it (2026-11-01)
+
+Owner, starting the full roster: "repainting it and modifying the silhouette... we stay within
+the pixel art constraints, but we can create a whole array of new art". Repaint alone limits a
+character to a vanilla silhouette. New rig ops change the silhouette with vanilla's own pixels,
+so nothing is drawn by shape (D9 holds): `graft` (a box of another vanilla pic, own remap),
+`move`, `rows`/`cols` (insert or delete rows/columns: taller, broader), `trim` (cut down to a
+kept shape, then `edge`), `fringe` (deterministic 1 px tufts along an edge: fur, feathers,
+rags) and `speckle` (strands). All are exact pixel operations, nothing is resampled.
+
+## D12. Four front pics share their palette with a back pic (2026-11-01)
+
+`src/data/graphics/trainers.h` builds Brendan, May and Wally's front palettes from
+`graphics/trainers/palettes/*.pal`, not from the PNG, and the back pics use those palettes (and
+Steven's front PNG palette). Before this, `install` of `luke.yaml` would have shown Luke in
+Wally's old colours. `install` now writes the `.pal` too, and the back tool checks that the
+back spec's palette equals the front's.
+
+## Round 1 of the roster (2026-11-01)
+
+Kael (Brendan) and Mira (May) to match the walker look, the first generic class (Cadet M from
+the School Kid, his book bag -> a datapad, the base's own hand grafted back over it) and the
+first big silhouette change (Tarfful from the Sailor: flexing strength pose, fur everywhere,
+`fringe` and `speckle`, a bandolier). Sheet `output/round1-fronts.png`. Awaiting review.

@@ -151,8 +151,10 @@ def shift_layer(layer: dict, dx: int, dy: int) -> dict:
         L["at"] = int(L["at"]) + dx
         if "y" in L:
             L["y"] = [L["y"][0] + dy, L["y"][1] + dy]
-    elif op == "edge":
-        pass
+    elif op in ("edge", "fringe", "speckle"):
+        if "box" in L:
+            b = list(L["box"])
+            L["box"] = [b[0] + dx, b[1] + dy, b[2], b[3]]
     elif op == "trim":
         b = list(L["box"])
         L["box"] = [b[0] + dx, b[1] + dy, b[2], b[3]]

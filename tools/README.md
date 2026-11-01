@@ -51,7 +51,7 @@ These were built in the prototype repo. When a tool moves into this repo, start 
 |---|---|---|---|
 | `sprite-walker-generator/` | `walker` | **READY** for the 16x32 nine-frame people kit (Vader approved, 1 drawn). **Ported here.** | Other kits (32x32 big, 16x16 small, bike / surf / fish / field-move sheets, creature walkers) not built. Its `install` step writes the OBJ palette tag. Guide: [`sprite-walker-generator/README.md`](sprite-walker-generator/README.md). |
 | `sprite-trainer-generator/` | `trainer-front` | **READY** (4 drawn: Vader, Boba Fett, Leia, Obi-Wan, approved "those are perfect" in round 5; round 6 with 4 more in review). **Ported here.** | Rebuilt as a *repaint* tool after rig drawings were judged 70%. No image model needed. Guides: [`sprite-trainer-generator/README.md`](sprite-trainer-generator/README.md), [`STYLE-GUIDE.md`](sprite-trainer-generator/STYLE-GUIDE.md). |
-| `sprite-trainer-back-generator/` | `trainer-back` | TODO | Built here directly (not ported); mockups in review. |
+| `sprite-trainer-back-generator/` | `trainer-back` | IN-REVIEW | Built here directly (not ported); mockups in review. [`README.md`](sprite-trainer-back-generator/README.md). |
 | `sprite-creature-generator/` | `creature` | **PENDING** (needs a GPU for an image model) | Research in the prototype's `tools/sprite-creature-generator/research/`. |
 | `sprite-icon-generator/` | `icon` | TODO | Item icons first (218), then fruit, decorations, capture pods, type labels. Derive party icons and footprints from the creature fronts. |
 | `tile-generator/` | `tileset` | TODO | Do one biome end to end first (e.g. a desert secondary tileset for Tatooine) with palettes, metatiles and animations; then battle backgrounds. |

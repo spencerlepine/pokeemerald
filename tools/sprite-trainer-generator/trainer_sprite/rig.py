@@ -41,6 +41,14 @@ Silhouette ops (reshape the repainted base; all pixel-exact, nothing is resample
   `{shape: trim, box: [x, y, w, h], keep: {shape: ellipse, at: [x, y], r: [rx, ry]}}` (keep may
   be any ellipse / poly / capsule). Cut a big hairdo or a hat down to a smaller head, then
   re-outline it with `shape: edge`.
+- `shape: fringe` roughens a silhouette into fur, feathers or rags: wherever an edge pixel
+  (black or selective outline) backs onto a pixel of `chars`, every `every`-th spot along the
+  edge (deterministic) the edge pixel is pushed one pixel out and the gap filled with the inner
+  colour:
+  `{shape: fringe, chars: "lmn", every: 3, box: [x, y, w, h]}` (box optional, default all).
+- `shape: speckle` scatters strands or texture: inside `box`, every `every`-th pixel of `chars`
+  (a diagonal lattice, deterministic) becomes `to`: `{shape: speckle, box: [...], chars: "m",
+  to: "n", every: 7}`.
 - `shape: cols` does the same sideways: `{shape: cols, at: x, add: n, y: [y0, y1]}` repeats
   column `x`, pushing everything right of it further right. Broader shoulders, a bulkier alien.
 
@@ -227,6 +235,33 @@ def render(rig: dict, legend: dict[str, int], w: int, h: int, where: str, base=N
     for i, layer in enumerate(rig.get("layers", [])):
         lw = f"{where}: layer {i} ({layer.get('name', layer.get('shape'))})"
         op = layer.get("shape")
+        if op == "fringe":
+            on = {legend[c] for c in str(layer["chars"]) if c in legend}
+            bx, by, bw, bh = _box(layer, lw) if "box" in layer else (0, 0, w, h)
+            every = max(1, int(layer.get("every", 3)))
+            src = [list(r) for r in g]
+            for y in range(max(by, 0), min(by + bh, h)):
+                for x in range(max(bx, 0), min(bx + bw, w)):
+                    if src[y][x] != 0:
+                        continue
+                    for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+                        qx, qy, rx, ry = x + dx, y + dy, x + 2 * dx, y + 2 * dy
+                        if 0 <= rx < w and 0 <= ry < h and src[qy][qx] != 0 and src[ry][rx] in on:
+                            if (x * 5 + y * 3) % every == 0:  # push the edge pixel out one
+                                g[y][x] = src[qy][qx]
+                                g[qy][qx] = src[ry][rx]
+                            break
+            continue
+        if op == "speckle":
+            on = {legend[c] for c in str(layer["chars"]) if c in legend}
+            to = legend[str(layer["to"])]
+            bx, by, bw, bh = _box(layer, lw) if "box" in layer else (0, 0, w, h)
+            every = max(2, int(layer.get("every", 7)))
+            for y in range(max(by, 0), min(by + bh, h)):
+                for x in range(max(bx, 0), min(bx + bw, w)):
+                    if g[y][x] in on and (x * 3 + y * 2) % every == 0:
+                        g[y][x] = to
+            continue
         if op == "trim":
             keep = _mask(layer["keep"], joints, w, h, lw)
             bx, by, bw, bh = _box(layer, lw)

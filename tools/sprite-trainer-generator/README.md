@@ -13,7 +13,10 @@ Brandon), `leia.yaml` (Glacia), `obiwan.yaml` (Expert M). Round 6 (fresh charact
 review): `stormtrooper.yaml` (base Magma grunt M), `maul.yaml` (Sidney), `luke.yaml` (Wally),
 `imperial_officer.yaml` (Gentleman), sheet `output/fresh-characters-r6.png`. Review sheets:
 `output/style-check-r5.png` and `repaint-bases-r5.png` (approved round), `style-check-r4.png` and `vader-poses-r*.png` (rig
-drawings, rejected, kept for comparison). Back pics (category B2) are out of scope for this tool.
+drawings, rejected, kept for comparison). Round 1 of the full roster (2026-11-01, in review):
+`kael.yaml` (Brendan), `mira.yaml` (May), `cadet_m.yaml` (School Kid M, a generic class),
+`tarfful.yaml` (the Sailor, a Wookiee with fur `fringe`), sheet `output/round1-fronts.png`.
+Back pics (category B2) are the sibling tool `../sprite-trainer-back-generator`.
 
 ## Setup
 
@@ -49,6 +52,8 @@ python -m trainer_sprite install art/<name>.yaml               # copy over the v
 python -m trainer_sprite inspect <vanilla.png> <out.png>       # which palette index is which material
 python -m trainer_sprite compare output/<x>.png a.yaml b.yaml  # review sheet in a battle scene
 python -m trainer_sprite corpus                                # re-measure the vanilla pics
+python -m trainer_sprite status                                # worklist: every wiki front pic, todo/spec/built
+python -m trainer_sprite sheet  out.png [a.yaml ...] [--cols 6] # contact sheet (default: every spec)
 ```
 
 ## Format (what the game needs)
@@ -60,6 +65,12 @@ python -m trainer_sprite corpus                                # re-measure the 
   keeps 5 bits), and no two colours that collapse to the same GBA colour.
 - Shown at centre (176, 40) in battle, also on the trainer card, Hall of Fame and Frontier.
 - Replacing a PNG at the same path needs no code change.
+- **Exception, shared palettes**: Brendan, May and Wally's front pics take their palette from
+  `graphics/trainers/palettes/<name>.pal`, not the PNG, and Steven's front pic PNG also colours
+  his back pic. Each of these four shares its palette with a back pic, index for index: write
+  the front spec first; the back spec (`../sprite-trainer-back-generator`) copies its `palette`
+  and `legend`. `install` writes the `.pal` when the game reads one (it parses
+  `src/data/graphics/trainers.h`); `status` marks the four.
 
 Measured on the 93 vanilla pics (`corpus/trainer64.json`): full body, feet on row 62-63, head
 at row 1-17, 29-57 px wide, ~1,075 opaque pixels, 13-15 colours, near-black outline on most
@@ -100,6 +111,11 @@ edges, plenty of single-pixel highlights (orphans 11-23%).
      saber); `behind: true` paints only empty pixels, for parts behind the body (jetpack);
    - `shape: pixels` places faces, visors, emblems by hand, before anything held in front;
    - `shape: edge` with `chars`/`to` gives a light material a selective (non-black) outline.
+   - silhouette ops (D11) reshape the base without redrawing it: `graft` copies a box from
+     *another* vanilla pic with its own remap (a head, an arm, a prop, the base's own hand back
+     over a new prop), `move` shifts a box, `rows`/`cols` insert or delete rows/columns (taller,
+     broader), `trim` cuts a big hairdo or hat down to a kept shape, `fringe` roughens an edge
+     into fur or rags, `speckle` adds strands.
 6. `python -m trainer_sprite build art/<name>.yaml`, then **look at**
    `output/<name>/preview/zoom.png` (8x with coordinates) and `showcase.png`
    (in battle at 1x and 2x next to the pic it replaces). Fix until it reads at 1x.
@@ -109,6 +125,13 @@ edges, plenty of single-pixel highlights (orphans 11-23%).
 There is no from-scratch mode: a frame made only of rig shapes is rejected (D9, the owner
 rated rig drawings "about 70%"). Rig layers are only for kitbashing a repaint; the layer
 reference is the docstring in `trainer_sprite/rig.py`.
+
+## Mass generation
+
+`status` lists every front pic the wiki names (`../../wiki/mapping/art_subjects.csv`) with its
+brief and state (`todo`, `spec`, `built`, `keep`). A worker takes one `todo` row: brief ->
+pick a base by silhouette (contact sheet, STYLE-GUIDE) -> `inspect` -> spec -> build until it
+reads at 1x -> `verify`. `sheet` makes the batch review sheet.
 
 ## Known gaps
 
