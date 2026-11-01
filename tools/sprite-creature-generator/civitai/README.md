@@ -5,8 +5,9 @@ so no rented GPU is needed. A mirror of [`../../sprite-trainer-generator/civitai
 set up for the creature LoRA [Pokemon Sprite PixelArt 768](https://civitai.com/models/161280/pokemon-sprite-pixelart-768)
 (model 161280, SD 1.5, version **v2.1-beta** `273148` by default) on DreamShaper 8, paid for in Buzz.
 
-**Status:** round 2 done 2026-11-01 (Massiff, in the `poochyena` slot): image to image from a prepped movie reference. Not approved yet;
-nothing is installed into `game/`.
+**Status:** first creature shipped 2026-11-01: MASSIFF (`poochyena`), round 2 pick A (denoise 0.40), approved by
+the owner. Front, back and `normal.pal` are in the wiki at `wiki/art/graphics/pokemon/poochyena/` and marked
+ART_READY; not copied into `game/` yet. Frame 2 (`anim_front.png`) and `shiny.pal` are still to make.
 
 ## Setup
 

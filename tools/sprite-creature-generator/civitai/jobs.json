@@ -6,7 +6,7 @@
     "colour": "grey and brown",
     "negative": "humanoid, standing upright, arms, fur, fluffy, dog ears",
     "flip": false,
-    "denoise": 0.45,
+    "denoise": 0.4,
     "init_source": "https://static.wikia.nocookie.net/starwars/images/b/ba/Massiff-Outlaws.png/revision/latest?cb=20250126054829",
     "init": "refs/poochyena_prep.png"
   }
