@@ -6,6 +6,7 @@ title: SABER SLASH
 doc: S1
 host: Move_SLASH
 romtest: {move: MOVE_SLASH}
+ship_label: Move_SABER_SLASH       # net-new move; Slash keeps its vanilla animation
 kit:
   - saber_blade            # owns the palette (blue)
   - saber_blade_red        # own palette (red), same index layout

@@ -92,7 +92,7 @@ move:fissure,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:dig,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:toxic,,KEEP,DONE,KEEP_ANIM,,,Generic move name kept; animation reused.
 move:confusion,MIND TRICK,HOTSWAP,DONE,PENDING_ART,,A Jedi mind trick: the target sees doubles of itself.,"Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md storyboard S9. SE: SE_FORCE_HUM, SE_M_CONFUSE_RAY, SE_M_SUPERSONIC."
-move:psychic,FORCE PUSH,HOTSWAP,DONE,PENDING_ART,,Force push: a shockwave of rings shoves the target back.,"Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md storyboard S3. SE: SE_FORCE_PUSH, SE_M_CHARGE, SE_M_TAKE_DOWN."
+move:psychic,FORCE PUSH,HOTSWAP,DONE,ART_READY,,Force push: a shockwave of rings shoves the target back.,"Same stats, type and effect. New animation shipped in ../game (Move_PSYCHIC, storyboard S3, tools/vfx-generator art/moves/force_push.yaml). SE: SE_FORCE_PUSH (placeholder SE_M_SUPERSONIC until made), SE_M_CHARGE, SE_M_TAKE_DOWN."
 move:hypnosis,,KEEP,DONE,PENDING_ART,,"Force status move: BG_FORCE backdrop, side tint and the Force hum; the vanilla sprites stay.","Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md Tier A (the Force). SE: SE_FORCE_HUM."
 move:meditate,,KEEP,DONE,PENDING_ART,,"Force status move: BG_FORCE backdrop, side tint and the Force hum; the vanilla sprites stay.","Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md Tier A (the Force). SE: SE_FORCE_HUM."
 move:agility,,KEEP,DONE,PENDING_ART,,"Force status move: BG_FORCE backdrop, side tint and the Force hum; the vanilla sprites stay.","Same stats, type and effect. New animation: bible/MOVE_EFFECTS.md Tier A (the Force). SE: SE_FORCE_HUM."

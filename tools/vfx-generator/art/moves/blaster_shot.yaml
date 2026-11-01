@@ -6,6 +6,7 @@ title: BLASTER SHOT
 doc: S2
 host: Move_SWIFT
 romtest: {move: MOVE_SWIFT}
+ship_label: Move_BLASTER_SHOT      # net-new move; Swift keeps its vanilla animation
 kit:
   - blaster_bolt           # owns the palette
   - blaster_fx             # kit palette

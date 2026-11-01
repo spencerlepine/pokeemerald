@@ -1298,6 +1298,21 @@ const struct CompressedSpriteSheet gBattleAnimPicTable[] =
     {gBattleAnimSpriteGfx_Slash, 0x0800, ANIM_TAG_SLASH_2},
     {gBattleAnimSpriteGfx_SlamHit, 0x1000, ANIM_TAG_WHIP_HIT},
     {gBattleAnimSpriteGfx_GoldRing, 0x0100, ANIM_TAG_BLUE_RING_2},
+// vfx:saber_slash:begin
+    {gBattleAnimSpriteGfx_SW_SaberBlade, 0x1000, ANIM_TAG_SW_SABER_BLADE},
+    {gBattleAnimSpriteGfx_SW_SaberBladeRed, 0x1000, ANIM_TAG_SW_SABER_BLADE_RED},
+    {gBattleAnimSpriteGfx_SW_SaberArc, 0x0800, ANIM_TAG_SW_SABER_ARC},
+    {gBattleAnimSpriteGfx_SW_SaberScorch, 0x0100, ANIM_TAG_SW_SABER_SCORCH},
+// vfx:saber_slash:end
+// vfx:blaster_shot:begin
+    {gBattleAnimSpriteGfx_SW_BlasterBolt, 0x0400, ANIM_TAG_SW_BLASTER_BOLT},
+    {gBattleAnimSpriteGfx_SW_BlasterFx, 0x0380, ANIM_TAG_SW_BLASTER_FX},
+    {gBattleAnimSpriteGfx_SW_BlasterSmoke, 0x0180, ANIM_TAG_SW_BLASTER_SMOKE},
+// vfx:blaster_shot:end
+// vfx:force_push:begin
+    {gBattleAnimSpriteGfx_SW_ForceRing, 0x0800, ANIM_TAG_SW_FORCE_RING},
+    {gBattleAnimSpriteGfx_SW_ForceDust, 0x0180, ANIM_TAG_SW_FORCE_DUST},
+// vfx:force_push:end
 };
 
 const struct CompressedSpritePalette gBattleAnimPaletteTable[] =
@@ -1591,6 +1606,21 @@ const struct CompressedSpritePalette gBattleAnimPaletteTable[] =
     {gBattleAnimSpritePal_Slash2, ANIM_TAG_SLASH_2},
     {gBattleAnimSpritePal_WhipHit, ANIM_TAG_WHIP_HIT},
     {gBattleAnimSpritePal_BlueRing2, ANIM_TAG_BLUE_RING_2},
+// vfx:saber_slash:pal:begin
+    {gBattleAnimSpritePal_SW_SaberBlade, ANIM_TAG_SW_SABER_BLADE},
+    {gBattleAnimSpritePal_SW_SaberBladeRed, ANIM_TAG_SW_SABER_BLADE_RED},
+    {gBattleAnimSpritePal_SW_SaberBlade, ANIM_TAG_SW_SABER_ARC},
+    {gBattleAnimSpritePal_SW_SaberBlade, ANIM_TAG_SW_SABER_SCORCH},
+// vfx:saber_slash:pal:end
+// vfx:blaster_shot:pal:begin
+    {gBattleAnimSpritePal_SW_BlasterBolt, ANIM_TAG_SW_BLASTER_BOLT},
+    {gBattleAnimSpritePal_SW_BlasterBolt, ANIM_TAG_SW_BLASTER_FX},
+    {gBattleAnimSpritePal_SW_BlasterBolt, ANIM_TAG_SW_BLASTER_SMOKE},
+// vfx:blaster_shot:pal:end
+// vfx:force_push:pal:begin
+    {gBattleAnimSpritePal_SW_ForceRing, ANIM_TAG_SW_FORCE_RING},
+    {gBattleAnimSpritePal_SW_ForceRing, ANIM_TAG_SW_FORCE_DUST},
+// vfx:force_push:pal:end
 };
 
 const struct BattleAnimBackground gBattleAnimBackgroundTable[] =
@@ -1622,4 +1652,7 @@ const struct BattleAnimBackground gBattleAnimBackgroundTable[] =
     [BG_SOLAR_BEAM_OPPONENT] = {gBattleAnimBgImage_Impact,     gBattleAnimBgPalette_SolarBeam,  gBattleAnimBgTilemap_ImpactOpponent},
     [BG_SOLAR_BEAM_PLAYER]   = {gBattleAnimBgImage_Impact,     gBattleAnimBgPalette_SolarBeam,  gBattleAnimBgTilemap_ImpactPlayer},
     [BG_SOLAR_BEAM_CONTESTS] = {gBattleAnimBgImage_Impact,     gBattleAnimBgPalette_SolarBeam,  gBattleAnimBgTilemap_ImpactContests},
+// vfx:force_push:bg:begin
+    [BG_FORCE] = {gBattleAnimBgImage_SW_Force, gBattleAnimBgPalette_SW_Force, gBattleAnimBgTilemap_SW_Force},
+// vfx:force_push:bg:end
 };

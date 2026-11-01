@@ -1,7 +1,10 @@
 """Storyboards: a move effect as script + sprite kit + sound, patched into the game.
 
 A storyboard (art/moves/<name>.yaml) names:
-  host:      the `Move_X:` label in data/battle_anim_scripts.s whose block it replaces
+  host:      the `Move_X:` label in data/battle_anim_scripts.s whose block it replaces (romtest, and install
+             for a re-staged existing move)
+  ship_label: for a net-new move, the label `story install` writes the block under instead (after the
+             host block, which keeps its vanilla animation) until the move itself is added
   kit:       art specs (art/<sheet>.yaml, `new:` sheets) that become ANIM_TAGs; the first sheet owns the
              palette, the others say `palette: {mode: kit}` and are locked to it (one palette per move)
   templates: sprite templates generated into src/battle_anim_sw_<name>.c (OAM shape from the sheet's
@@ -409,7 +412,8 @@ def replace_block(script: str, host: str, block: str, name: str) -> str:
     return script[:m.start()] + marked + "\n" + script[end:]
 
 
-def patches(game: Path, kits: list[Storyboard], syms: GameSymbols | None = None) -> tuple[dict[str, str], list[str]]:
+def patches(game: Path, kits: list[Storyboard], syms: GameSymbols | None = None,
+            ship: bool = False) -> tuple[dict[str, str], list[str]]:
     """{relative path: new file text} for all kits together (tags are numbered in order)."""
     syms = syms or GameSymbols(game)
     files: dict[str, str] = {}
@@ -476,8 +480,24 @@ def patches(game: Path, kits: list[Storyboard], syms: GameSymbols | None = None)
         s = get("data/battle_anim_scripts.s")
         if f"@ vfx:{n}:begin" in s:
             raise ValueError(f"{n}: the script already has this storyboard applied; start from a clean tree")
-        files["data/battle_anim_scripts.s"] = replace_block(s, sb.host, block, n)
+        label = sb.story.get("ship_label") if ship else None
+        if label:
+            # net-new move: its own label after the host block; the host keeps its vanilla animation
+            block = re.sub(r"^" + re.escape(sb.host) + r":", label + ":", block, count=1)
+            files["data/battle_anim_scripts.s"] = insert_after_block(s, sb.host, block, n)
+        else:
+            files["data/battle_anim_scripts.s"] = replace_block(s, sb.host, block, n)
     return files, notes
+
+
+def insert_after_block(script: str, host: str, block: str, name: str) -> str:
+    """Put a marked block right after the host's block (used to ship a net-new move's own label)."""
+    m = re.search(r"^" + re.escape(host) + r":\n", script, re.M)
+    if not m:
+        raise ValueError(f"script label {host} not found")
+    nxt = re.search(r"^(?:Move|General|Status|Special)_\w+:\n", script[m.end():], re.M)
+    end = m.end() + (nxt.start() if nxt else len(script) - m.end())
+    return script[:end] + _marked(name, "s", block) + "\n\n" + script[end:]
 
 
 def installs(kits: list[Storyboard]) -> dict[str, Path]:

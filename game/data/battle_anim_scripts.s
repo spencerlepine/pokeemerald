@@ -554,6 +554,74 @@ Move_SWIFT:
 	blendoff
 	end
 
+@ vfx:blaster_shot:begin
+Move_BLASTER_SHOT:
+	loadspritegfx ANIM_TAG_SW_BLASTER_BOLT
+	loadspritegfx ANIM_TAG_SW_BLASTER_FX
+	loadspritegfx ANIM_TAG_SW_BLASTER_SMOKE
+	monbg ANIM_DEF_PARTNER
+	setalpha 12, 8
+	@ aim: the targeting bracket blinks on the target
+	createsprite gBlasterLockSpriteTemplate, ANIM_TARGET, 4, 0, 0, 1, 0
+	playsewithpan SE_M_LOCK_ON, SOUND_PAN_TARGET	@ placeholder for SE_TARGET_LOCK (net:se-target-lock)
+	delay 16
+	@ fire x5, fanned
+	@ bolt 1
+	createsprite gBlasterFlashSpriteTemplate, ANIM_ATTACKER, 3, 22, -6, 0, 0
+	createsprite gBlasterBoltSpriteTemplate, ANIM_TARGET, 3, 20, -6, -4, -6, 10
+	playsewithpan SE_BLASTER_BOLT, SOUND_PAN_ATTACKER
+	delay 10
+	createsprite gBlasterImpactSpriteTemplate, ANIM_TARGET, 4, -4, -6, 1, 0
+	playsewithpan SE_M_SWIFT, SOUND_PAN_TARGET	@ placeholder for SE_BLASTER_IMPACT (net:se-blaster-impact)
+	createvisualtask AnimTask_ShakeMon, 5, ANIM_TARGET, 2, 0, 4, 1
+	@ bolt 2
+	createsprite gBlasterFlashSpriteTemplate, ANIM_ATTACKER, 3, 22, -6, 0, 0
+	createsprite gBlasterBoltSpriteTemplate, ANIM_TARGET, 3, 20, -6, 6, 2, 10
+	playsewithpan SE_BLASTER_BOLT, SOUND_PAN_ATTACKER
+	delay 10
+	createsprite gBlasterImpactSpriteTemplate, ANIM_TARGET, 4, 6, 2, 1, 0
+	playsewithpan SE_M_SWIFT, SOUND_PAN_TARGET	@ placeholder for SE_BLASTER_IMPACT (net:se-blaster-impact)
+	createvisualtask AnimTask_ShakeMon, 5, ANIM_TARGET, 2, 0, 4, 1
+	@ bolt 3
+	createsprite gBlasterFlashSpriteTemplate, ANIM_ATTACKER, 3, 22, -10, 0, 0
+	createsprite gBlasterBoltSpriteTemplate, ANIM_TARGET, 3, 20, -10, -2, 6, 10
+	playsewithpan SE_BLASTER_BOLT, SOUND_PAN_ATTACKER
+	delay 10
+	createsprite gBlasterImpactSpriteTemplate, ANIM_TARGET, 4, -2, 6, 1, 0
+	playsewithpan SE_M_SWIFT, SOUND_PAN_TARGET	@ placeholder for SE_BLASTER_IMPACT (net:se-blaster-impact)
+	createvisualtask AnimTask_ShakeMon, 5, ANIM_TARGET, 2, 0, 4, 1
+	@ bolt 4
+	createsprite gBlasterFlashSpriteTemplate, ANIM_ATTACKER, 3, 22, -4, 0, 0
+	createsprite gBlasterBoltSpriteTemplate, ANIM_TARGET, 3, 20, -4, 8, -4, 10
+	playsewithpan SE_BLASTER_BOLT, SOUND_PAN_ATTACKER
+	delay 10
+	createsprite gBlasterImpactSpriteTemplate, ANIM_TARGET, 4, 8, -4, 1, 0
+	playsewithpan SE_M_SWIFT, SOUND_PAN_TARGET	@ placeholder for SE_BLASTER_IMPACT (net:se-blaster-impact)
+	createvisualtask AnimTask_ShakeMon, 5, ANIM_TARGET, 2, 0, 4, 1
+	@ bolt 5
+	createsprite gBlasterFlashSpriteTemplate, ANIM_ATTACKER, 3, 22, -8, 0, 0
+	createsprite gBlasterBoltSpriteTemplate, ANIM_TARGET, 3, 20, -8, 0, 0, 10
+	playsewithpan SE_BLASTER_BOLT, SOUND_PAN_ATTACKER
+	delay 10
+	createsprite gBlasterImpactSpriteTemplate, ANIM_TARGET, 4, 0, 0, 1, 0
+	playsewithpan SE_M_SWIFT, SOUND_PAN_TARGET	@ placeholder for SE_BLASTER_IMPACT (net:se-blaster-impact)
+	createvisualtask AnimTask_ShakeMon, 5, ANIM_TARGET, 6, 0, 10, 1
+	@ aftermath: smoke rises, the target darkens a moment
+	simple_palette_blend selector=F_PAL_TARGET, delay=1, initial_blend_y=0, target_blend_y=5, color=RGB_BLACK
+	createsprite gBlasterSmokeSpriteTemplate, ANIM_TARGET, 2, -8, 4, -1
+	delay 4
+	createsprite gBlasterSmokeSpriteTemplate, ANIM_TARGET, 2, 6, 0, 1
+	delay 4
+	createsprite gBlasterSmokeSpriteTemplate, ANIM_TARGET, 2, 0, 8, 0
+	delay 12
+	simple_palette_blend selector=F_PAL_TARGET, delay=1, initial_blend_y=5, target_blend_y=0, color=RGB_BLACK
+	waitforvisualfinish
+	clearmonbg ANIM_DEF_PARTNER
+	blendoff
+	end
+@ vfx:blaster_shot:end
+
+
 Move_STRENGTH:
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_DEF_PARTNER
@@ -3042,6 +3110,61 @@ Move_SLASH:
 	waitforvisualfinish
 	end
 
+@ vfx:saber_slash:begin
+Move_SABER_SLASH:
+	loadspritegfx ANIM_TAG_SW_SABER_BLADE
+	loadspritegfx ANIM_TAG_SW_SABER_BLADE_RED
+	loadspritegfx ANIM_TAG_SW_SABER_ARC
+	loadspritegfx ANIM_TAG_SW_SABER_SCORCH
+	loadspritegfx ANIM_TAG_IMPACT
+	monbg ANIM_TARGET
+	setalpha 12, 8
+	@ ignite: the arena dims, the blade snaps out beside the attacker
+	simple_palette_blend selector=F_PAL_BG, delay=2, initial_blend_y=0, target_blend_y=6, color=RGB_BLACK
+	createvisualtask AnimTask_IsTargetPlayerSide, 2
+	jumprettrue SaberSlashRedBlade
+	createsprite gSaberBladeSpriteTemplate, ANIM_ATTACKER, 2, 18, -16, 0, 0
+	goto SaberSlashIgnite
+SaberSlashRedBlade:
+	createsprite gSaberBladeRedSpriteTemplate, ANIM_ATTACKER, 2, 18, -16, 0, 0
+SaberSlashIgnite:
+	playsewithpan SE_SABER_IGNITE, SOUND_PAN_ATTACKER
+	delay 10
+	loopsewithpan SE_SABER_HUM, SOUND_PAN_ATTACKER, 12, 4
+	@ lunge
+	createvisualtask AnimTask_WindUpLunge, 2, ANIM_ATTACKER, -8, 0, 8, 6, 14, 6
+	delay 16
+	@ slash: crossing arcs over the target, a one-frame flash
+	playsewithpan SE_M_RAZOR_WIND, SOUND_PAN_TARGET	@ placeholder for SE_SABER_SWING (net:se-saber-swing)
+	createvisualtask AnimTask_IsTargetPlayerSide, 2
+	jumprettrue SaberSlashRedArc
+	createsprite gSaberArcSpriteTemplate, ANIM_TARGET, 3, 0, -4, 1, 0
+	goto SaberSlashImpact
+SaberSlashRedArc:
+	createsprite gSaberArcRedSpriteTemplate, ANIM_TARGET, 3, 0, -4, 1, 0
+SaberSlashImpact:
+	delay 3
+	invert_screen_color scenery=TRUE, attacker=TRUE, target=TRUE
+	delay 1
+	invert_screen_color scenery=TRUE, attacker=TRUE, target=TRUE
+	@ impact: white flash, hard shake, hitsplat, scorch mark
+	createvisualtask AnimTask_BlendMonInAndOut, 5, ANIM_TARGET, RGB_WHITE, 12, 2, 1
+	createvisualtask AnimTask_ShakeMon, 5, ANIM_TARGET, 0, 8, 12, 1
+	playsewithpan SE_M_RAZOR_WIND, SOUND_PAN_TARGET
+	create_basic_hitsplat_sprite ANIM_ATTACKER, 2, x=0, y=-2, relative_to=ANIM_TARGET, animation=1
+	createsprite gSaberScorchSpriteTemplate, ANIM_TARGET, 4, 2, 6, 1, 0
+	delay 26
+	@ retract (the blade anim plays its last frames), lights up
+	playsewithpan SE_M_SWORDS_DANCE, SOUND_PAN_ATTACKER	@ placeholder for SE_SABER_RETRACT (net:se-saber-retract)
+	waitforvisualfinish
+	clearmonbg ANIM_TARGET
+	blendoff
+	simple_palette_blend selector=F_PAL_BG, delay=2, initial_blend_y=6, target_blend_y=0, color=RGB_BLACK
+	waitforvisualfinish
+	end
+@ vfx:saber_slash:end
+
+
 Move_STRUGGLE:
 	loadspritegfx ANIM_TAG_IMPACT
 	loadspritegfx ANIM_TAG_MOVEMENT_WAVES
@@ -4730,22 +4853,52 @@ Move_CONFUSION:
 	call UnsetPsychicBackground
 	end
 
+@ vfx:force_push:begin
 Move_PSYCHIC:
+	loadspritegfx ANIM_TAG_SW_FORCE_RING
+	loadspritegfx ANIM_TAG_SW_FORCE_DUST
 	monbg ANIM_DEF_PARTNER
-	call SetPsychicBackground
 	setalpha 8, 8
-	createvisualtask AnimTask_ShakeMon2, 2, ANIM_ATTACKER, 1, 0, 10, 1
-	blend_color_cycle priority=2, selector=F_PAL_ATTACKER, delay=0, num_blends=2, initial_blend_y=0, target_blend_y=8, color=RGB(31, 23, 0)
+	@ gather: the arena falls into the Force, the attacker rears, a ring closes on it
+	fadetobg BG_FORCE
+	waitbgfadeout
+	createvisualtask AnimTask_SetPsychicBackground, 5
+	waitbgfadein
+	playsewithpan SE_M_CHARGE, SOUND_PAN_ATTACKER
+	createvisualtask AnimTask_RotateMonSpriteToSide, 2, 8, -256, ANIM_ATTACKER, 0
+	createsprite gForceGatherRingSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 0, 0
+	createvisualtask AnimTask_BlendMonInAndOut, 5, ANIM_ATTACKER, RGB(20, 24, 31), 10, 1, 1
+	delay 22
+	@ push: three rings leave the attacker, the arena shudders
+	playsewithpan SE_M_SUPERSONIC, SOUND_PAN_ATTACKER	@ placeholder for SE_FORCE_PUSH (net:se-force-push)
+	createsprite gForceRingSpriteTemplate, ANIM_TARGET, 3, 16, 0, 0, 0, 14, 0
+	createvisualtask AnimTask_HorizontalShake, 5, MAX_BATTLERS_COUNT + 1, 2, 16
+	delay 5
+	createsprite gForceRingSpriteTemplate, ANIM_TARGET, 3, 16, 0, 0, 0, 14, 0
+	delay 5
+	createsprite gForceRingSpriteTemplate, ANIM_TARGET, 3, 16, 0, 0, 0, 14, 0
+	delay 6
+	@ impact: shoved back, squashed, dust at its feet, shaken; then it slides home
+	playsewithpan SE_M_TAKE_DOWN, SOUND_PAN_TARGET
+	createvisualtask AnimTask_SW_Knockback, 5, ANIM_TARGET, 20, 6, 14, 20
+	createvisualtask AnimTask_ScaleMonAndRestore, 5, -20, 20, 8, ANIM_TARGET, 1
+	createvisualtask AnimTask_BlendMonInAndOut, 5, ANIM_TARGET, RGB_WHITE, 12, 1, 1
+	createsprite gForceDustSpriteTemplate, ANIM_TARGET, 2, -14, 18, 1, 0
+	createsprite gForceDustSpriteTemplate, ANIM_TARGET, 2, 10, 20, 1, 0
+	delay 6
+	createvisualtask AnimTask_ShakeMon, 5, ANIM_TARGET, 0, 3, 10, 1
+	createvisualtask AnimTask_RotateMonSpriteToSide, 2, 8, -256, ANIM_ATTACKER, 1
 	waitforvisualfinish
-	loopsewithpan SE_M_SUPERSONIC, SOUND_PAN_TARGET, 10, 3
-	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 5, 0, 15, 1
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -6, -6, 15, ANIM_TARGET, 1
-	waitforvisualfinish
+	@ settle
 	clearmonbg ANIM_DEF_PARTNER
 	blendoff
 	delay 1
-	call UnsetPsychicBackground
+	restorebg
+	waitbgfadeout
+	setarg 7, 0xFFFF
+	waitbgfadein
 	end
+@ vfx:force_push:end
 
 Move_FUTURE_SIGHT:
 	goto FutureSight

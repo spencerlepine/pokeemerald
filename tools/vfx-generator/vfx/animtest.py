@@ -80,7 +80,7 @@ def install(a):
     """Apply the kits to ../../game (the real tree). Only after the owner approved the ROM film."""
     kits = [anim.build_kit(anim.load_story(p), run_pipeline=not a.no_build) for p in a.story]
     syms = anim.GameSymbols(GAME)
-    files, notes = anim.patches(GAME, kits, syms)
+    files, notes = anim.patches(GAME, kits, syms, ship=True)
     for n in notes:
         print("  NOTE " + n)
     for rel, text in files.items():

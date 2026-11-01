@@ -5074,3 +5074,25 @@ extern const u8 gMonMarkingsMenu_Gfx[];
 extern const u16 gMonMarkingsMenu_Pal[];
 
 #endif //GUARD_GRAPHICS_H
+// vfx:saber_slash:begin
+extern const u32 gBattleAnimSpriteGfx_SW_SaberBlade[];
+extern const u32 gBattleAnimSpriteGfx_SW_SaberBladeRed[];
+extern const u32 gBattleAnimSpriteGfx_SW_SaberArc[];
+extern const u32 gBattleAnimSpriteGfx_SW_SaberScorch[];
+extern const u32 gBattleAnimSpritePal_SW_SaberBlade[];
+extern const u32 gBattleAnimSpritePal_SW_SaberBladeRed[];
+// vfx:saber_slash:end
+// vfx:blaster_shot:begin
+extern const u32 gBattleAnimSpriteGfx_SW_BlasterBolt[];
+extern const u32 gBattleAnimSpriteGfx_SW_BlasterFx[];
+extern const u32 gBattleAnimSpriteGfx_SW_BlasterSmoke[];
+extern const u32 gBattleAnimSpritePal_SW_BlasterBolt[];
+// vfx:blaster_shot:end
+// vfx:force_push:begin
+extern const u32 gBattleAnimSpriteGfx_SW_ForceRing[];
+extern const u32 gBattleAnimSpriteGfx_SW_ForceDust[];
+extern const u32 gBattleAnimSpritePal_SW_ForceRing[];
+extern const u32 gBattleAnimBgImage_SW_Force[];
+extern const u32 gBattleAnimBgPalette_SW_Force[];
+extern const u32 gBattleAnimBgTilemap_SW_Force[];
+// vfx:force_push:end

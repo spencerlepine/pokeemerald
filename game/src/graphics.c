@@ -1535,3 +1535,25 @@ static const u8 sUnused2[]       = {0x02};
 static const u8 sEmpty5[0x3242]  = {0};
 static const u8 sUnused3[]       = {0x40};
 static const u8 sEmpty6[0x13]    = {0};
+// vfx:saber_slash:begin
+const u32 gBattleAnimSpriteGfx_SW_SaberBlade[] = INCGFX_U32("graphics/battle_anims/sprites/sw/saber_blade.png", ".4bpp.lz");
+const u32 gBattleAnimSpriteGfx_SW_SaberBladeRed[] = INCGFX_U32("graphics/battle_anims/sprites/sw/saber_blade_red.png", ".4bpp.lz");
+const u32 gBattleAnimSpriteGfx_SW_SaberArc[] = INCGFX_U32("graphics/battle_anims/sprites/sw/saber_arc.png", ".4bpp.lz");
+const u32 gBattleAnimSpriteGfx_SW_SaberScorch[] = INCGFX_U32("graphics/battle_anims/sprites/sw/saber_scorch.png", ".4bpp.lz");
+const u32 gBattleAnimSpritePal_SW_SaberBlade[] = INCGFX_U32("graphics/battle_anims/sprites/sw/saber_blade.png", ".gbapal.lz");
+const u32 gBattleAnimSpritePal_SW_SaberBladeRed[] = INCGFX_U32("graphics/battle_anims/sprites/sw/saber_blade_red.png", ".gbapal.lz");
+// vfx:saber_slash:end
+// vfx:blaster_shot:begin
+const u32 gBattleAnimSpriteGfx_SW_BlasterBolt[] = INCGFX_U32("graphics/battle_anims/sprites/sw/blaster_bolt.png", ".4bpp.lz");
+const u32 gBattleAnimSpriteGfx_SW_BlasterFx[] = INCGFX_U32("graphics/battle_anims/sprites/sw/blaster_fx.png", ".4bpp.lz");
+const u32 gBattleAnimSpriteGfx_SW_BlasterSmoke[] = INCGFX_U32("graphics/battle_anims/sprites/sw/blaster_smoke.png", ".4bpp.lz");
+const u32 gBattleAnimSpritePal_SW_BlasterBolt[] = INCGFX_U32("graphics/battle_anims/sprites/sw/blaster_bolt.png", ".gbapal.lz");
+// vfx:blaster_shot:end
+// vfx:force_push:begin
+const u32 gBattleAnimSpriteGfx_SW_ForceRing[] = INCGFX_U32("graphics/battle_anims/sprites/sw/force_ring.png", ".4bpp.lz");
+const u32 gBattleAnimSpriteGfx_SW_ForceDust[] = INCGFX_U32("graphics/battle_anims/sprites/sw/force_dust.png", ".4bpp.lz");
+const u32 gBattleAnimSpritePal_SW_ForceRing[] = INCGFX_U32("graphics/battle_anims/sprites/sw/force_ring.png", ".gbapal.lz");
+const u32 gBattleAnimBgImage_SW_Force[] = INCGFX_U32("graphics/battle_anims/backgrounds/sw/force.png", ".4bpp.lz");
+const u32 gBattleAnimBgPalette_SW_Force[] = INCGFX_U32("graphics/battle_anims/backgrounds/sw/force.png", ".gbapal.lz");
+const u32 gBattleAnimBgTilemap_SW_Force[] = INCGFX_U32("graphics/battle_anims/backgrounds/sw/force.bin", ".lz");
+// vfx:force_push:end

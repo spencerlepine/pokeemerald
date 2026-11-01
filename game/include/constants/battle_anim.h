@@ -296,6 +296,21 @@
 #define ANIM_TAG_SLASH_2                    (ANIM_SPRITES_START + 286)
 #define ANIM_TAG_WHIP_HIT                   (ANIM_SPRITES_START + 287)
 #define ANIM_TAG_BLUE_RING_2                (ANIM_SPRITES_START + 288)
+// vfx:saber_slash:begin
+#define ANIM_TAG_SW_SABER_BLADE             (ANIM_SPRITES_START + 289)
+#define ANIM_TAG_SW_SABER_BLADE_RED         (ANIM_SPRITES_START + 290)
+#define ANIM_TAG_SW_SABER_ARC               (ANIM_SPRITES_START + 291)
+#define ANIM_TAG_SW_SABER_SCORCH            (ANIM_SPRITES_START + 292)
+// vfx:blaster_shot:begin
+#define ANIM_TAG_SW_BLASTER_BOLT            (ANIM_SPRITES_START + 293)
+#define ANIM_TAG_SW_BLASTER_FX              (ANIM_SPRITES_START + 294)
+#define ANIM_TAG_SW_BLASTER_SMOKE           (ANIM_SPRITES_START + 295)
+// vfx:force_push:begin
+#define ANIM_TAG_SW_FORCE_RING              (ANIM_SPRITES_START + 296)
+#define ANIM_TAG_SW_FORCE_DUST              (ANIM_SPRITES_START + 297)
+// vfx:force_push:end
+// vfx:blaster_shot:end
+// vfx:saber_slash:end
 
 // battlers
 #define ANIM_ATTACKER         0
@@ -352,6 +367,9 @@
 #define BG_SOLAR_BEAM_OPPONENT 24
 #define BG_SOLAR_BEAM_PLAYER 25
 #define BG_SOLAR_BEAM_CONTESTS 26
+// vfx:force_push:bg:begin
+#define BG_FORCE 27
+// vfx:force_push:bg:end
 
 // table ids for general animations (gBattleAnims_General)
 #define B_ANIM_CASTFORM_CHANGE          0
