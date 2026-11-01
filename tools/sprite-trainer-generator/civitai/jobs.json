@@ -696,5 +696,100 @@
   "desc": "young boy in a patched sand-coloured tunic and wrapped trousers, flight goggles on his forehead, holding a hydrospanner wrench, droid parts in a belt pouch",
   "theme": "factions",
   "style": ""
+ },
+ "title_vader": {
+  "subject": "Darth Vader",
+  "desc": "tall imposing figure, black full-face helmet, black skull-like mask with triangular mouth grille, no visible face, glossy black armour, long flowing black cape, chest control panel with small coloured lights, belt with silver boxes, black gloves, red lightsaber",
+  "negative": "visible face, skin, hair, hat",
+  "theme": "imperial-order",
+  "style": "",
+  "pose": "dynamic heroic pose, facing left, three-quarter view, red lightsaber raised high, cape flowing",
+  "note": "title-screen collage (tools/title-screen-generator/collage): pose concept only, drawn new there"
+ },
+ "title_kael": {
+  "subject": "teenage boy",
+  "desc": "Tatooine farm kid, tousled brown hair, kyber-blue headband with knot tails, sand-coloured wrap tunic over a white crossover shirt, white arm wraps, brown belt, satchel, brown boots",
+  "theme": "alliance-dawn",
+  "style": "",
+  "keep_pockets": true,
+  "pose": "dynamic heroic pose, facing right, three-quarter view, one fist forward, confident stance, cloak flowing",
+  "note": "title-screen collage: pose concept only"
+ },
+ "title_obiwan": {
+  "subject": "Obi-Wan Kenobi",
+  "desc": "Jedi master, white hair and short white beard, brown Jedi robe over a cream tunic, holding a blue lightsaber",
+  "theme": "alliance-dawn",
+  "style": "",
+  "pose": "dynamic pose, facing right, three-quarter view, blue lightsaber held low in a guard stance, hooded robe pushed back",
+  "note": "title-screen collage: pose concept only"
+ },
+ "title_leia": {
+  "subject": "Leia Organa",
+  "desc": "young woman, long white robe, two hair buns on the sides of her head, white boots, silver belt",
+  "theme": "alliance-dawn",
+  "style": "",
+  "pose": "determined pose, facing right, three-quarter view, holding a small blaster pistol at her side, white gown, side hair buns",
+  "note": "title-screen collage: pose concept only"
+ },
+ "title_mira": {
+  "subject": "teenage girl",
+  "desc": "Tatooine scavenger girl, chestnut hair with two round buns wrapped in rust-red cloth, rust-red headwrap, cream wrap tunic with a rust-red tabard, white arm wraps, chestnut sash, small pack, boots",
+  "theme": "alliance-dawn",
+  "style": "",
+  "pose": "dynamic pose, facing right, three-quarter view, pointing forward, red hooded cloak flowing",
+  "note": "title-screen collage: pose concept only"
+ },
+ "title_boba": {
+  "subject": "Dengar",
+  "desc": "grim bounty hunter, head wrapped in grey bandages and a headband, heavy grey padded armour, long blaster rifle",
+  "theme": "factions",
+  "style": "",
+  "negative": "hair",
+  "pose": "menacing pose, facing left, three-quarter view, blaster rifle raised and aimed, jetpack, cape",
+  "note": "title-screen collage: pose concept only"
+ },
+ "title_trooper": {
+  "subject": "stormtrooper",
+  "desc": "white plastoid stormtrooper armour, white helmet with black visor eyes, black bodyglove, E-11 blaster rifle",
+  "theme": "imperial-order",
+  "style": "",
+  "negative": "visible face, skin, hair",
+  "keep_pockets": true,
+  "keep_regions": [
+   [
+    51,
+    48,
+    50,
+    45,
+    53,
+    52
+   ],
+   [
+    55,
+    47,
+    54,
+    43,
+    57,
+    52
+   ],
+   [
+    59,
+    46,
+    58,
+    41,
+    61,
+    52
+   ],
+   [
+    63,
+    45,
+    62,
+    40,
+    66,
+    52
+   ]
+  ],
+  "pose": "action pose, facing left, three-quarter view, blaster rifle held across the chest, white armour",
+  "note": "title-screen collage: pose concept only"
  }
 }
