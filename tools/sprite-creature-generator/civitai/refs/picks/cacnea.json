@@ -1,0 +1,9 @@
+{
+  "init": "refs/cacnea_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/d/d0/Yerdua_poison-spitter.png/revision/latest?cb=20250806095633",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "Round spiny desert flower bulb on stubby root legs with a funnel mouth and needle spines",
+  "colour": "pale sage green and red",
+  "ref_note": "Yerdua poison-spitter render (walking plant on root legs, alpha); Funnel flower has no art on Wookieepedia; mouth faces left"
+}
