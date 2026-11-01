@@ -1,0 +1,10 @@
+{
+  "init": "refs/cleffa_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/0/06/Grogu-BoBFBox.png/revision/latest?cb=20251105060853",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "tiny round baby creature with big pointed ears and a stubby star shaped body",
+  "colour": "pale green and tan",
+  "negative": "robe, clothing, human",
+  "ref_note": "Grogu art used only for the big eared baby body plan"
+}

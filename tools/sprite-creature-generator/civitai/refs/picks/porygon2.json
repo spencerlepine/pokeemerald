@@ -5,5 +5,5 @@
   "denoise": 0.5,
   "desc": "slim TC-series protocol droid with a round chest plate wide eyes and raised hands",
   "colour": "copper red and rose",
-  "ref_note": "TC-70 (TCW video game) render; transparent; front view; tall so height-capped"
+  "ref_note": "TC-70 (TCW video game) render; transparent; front view; width 32 because the tall figure is height-bound (gives ~50 px tall, small class)"
 }

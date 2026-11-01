@@ -1,0 +1,59 @@
+{
+  "species": {
+    "stem": "abra",
+    "sw_name": "MISTKIN",
+    "sw_basis": "original",
+    "subject": "mistkin",
+    "desc": "Dathomir fox kit that vanishes in a puff of green mist (Teleport).",
+    "types": [
+      "psychic"
+    ],
+    "colour": "brown",
+    "style": "gen3",
+    "pose": "facing left",
+    "negative": "",
+    "init": null,
+    "control": null,
+    "denoise": null,
+    "flip": false,
+    "frame2": "mouth wide open, roaring, lunging forward",
+    "shiny": {}
+  },
+  "view": "front",
+  "lora": {
+    "id": 273148,
+    "name": "v2.1-beta",
+    "baseModel": "SD 1.5",
+    "trainedWords": [],
+    "air": null,
+    "files": [
+      {
+        "name": "pksp768_V2-1.safetensors",
+        "sizeKB": 74235.9921875,
+        "sha256": "DF8494A9FF9AE96B53ECBCD327AA14626C59D3F573423892A650F9F6C21AB418"
+      }
+    ]
+  },
+  "checkpoint": "urn:air:sd1:checkpoint:civitai:4384@128713",
+  "step": "textToImage",
+  "params": {
+    "prompt": "gen3, psychictype, (mistkin:1.2), Dathomir fox kit that vanishes in a puff of green mist (Teleport), pokemon, single creature, full body, facing left, pixel art, game sprite, crisp dark outlines, white background, simple background, mostly brown",
+    "negativePrompt": "human, person, trainer, multiple creatures, two creatures, text, watermark, signature, frame, border, scenery, detailed background, gradient background, ground, shadow, cropped, cut off, blurry, 3d, photo, realistic, painting, smooth shading",
+    "scheduler": "EulerA",
+    "steps": 25,
+    "cfgScale": 7.0,
+    "width": 768,
+    "height": 768,
+    "seed": 1123002022,
+    "clipSkip": 2
+  },
+  "refs": {},
+  "control": null,
+  "strength": 0.9,
+  "format": "jpeg",
+  "seed": 1123002022,
+  "workflowId": "13596363-20261101092614809-4dt4",
+  "jobId": "3f868293-195b-4ded-a57b-4175d449d8e6",
+  "cost": "3 green",
+  "generated": "20261101-092629"
+}
