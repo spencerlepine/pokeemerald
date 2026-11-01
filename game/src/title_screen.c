@@ -852,6 +852,23 @@ static void Task_TitleScreenPhase3(u8 taskId)
 
 #define tOutFrame data[5]
 
+// BG0 tile (map entry) drawn only in the gradient's colours (palette 14 indices 4-10, see
+// tools/title-screen-generator/bg_round.py), so it holds no part of the creature.
+static bool8 IsPlainSkyTile(u16 entry)
+{
+    const u8 *tile = (const u8 *)(BG_CHAR_ADDR(CRAWL_OUT_SKY_CHARBASE) + (entry & 0x3FF) * 32);
+    u16 i;
+
+    for (i = 0; i < 32; i++)
+    {
+        u8 lo = tile[i] & 0xF;
+        u8 hi = tile[i] >> 4;
+        if (lo < 4 || lo > 10 || hi < 4 || hi > 10)
+            return FALSE;
+    }
+    return TRUE;
+}
+
 static void StartTitleScreenCrawlOut(u8 taskId)
 {
     u16 i;
@@ -930,15 +947,28 @@ static void Task_TitleScreenCrawlOut(u8 taskId)
     else if (frame == CRAWL_OUT_CLOUDS_END)
     {
         // Clouds are invisible now. Point BG1 at the gradient with the creature taken out:
-        // every column copies column 31 of BG0's map, which is always plain gradient (off screen).
+        // each tile row of BG0 is filled with one of its own plain-gradient tiles.
         u16 *src = (u16 *)BG_SCREEN_ADDR(26);
         u16 *dst = (u16 *)BG_SCREEN_ADDR(CRAWL_OUT_SKY_SCREEN);
-        u16 x, y;
+        u16 x, y, sky = src[0];
 
         ScanlineEffect_Stop();
         for (y = 0; y < 32; y++)
+        {
+            if (y < DISPLAY_HEIGHT / 8)
+            {
+                for (x = 0; x < 32; x++)
+                {
+                    if (IsPlainSkyTile(src[y * 32 + x]))
+                    {
+                        sky = src[y * 32 + x];
+                        break;
+                    }
+                }
+            }
             for (x = 0; x < 32; x++)
-                dst[y * 32 + x] = src[y * 32 + 31];
+                dst[y * 32 + x] = sky;
+        }
         gBattle_BG1_X = 0;
         gBattle_BG1_Y = 0;
         SetGpuReg(REG_OFFSET_BG1HOFS, 0);
