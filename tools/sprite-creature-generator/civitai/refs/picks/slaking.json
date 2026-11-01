@@ -2,9 +2,9 @@
   "init": "refs/slaking_prep.png",
   "init_source": "https://static.wikia.nocookie.net/starwars/images/5/5b/Sand_Sloth.jpg/revision/latest?cb=20080510154600",
   "flip": false,
-  "denoise": 0.5,
-  "desc": "enormous heavy shaggy swamp sloth beast, side three-quarter view, whole body, thick mane and curved horns, big claws",
-  "colour": "brown and tan",
+  "denoise": 0.45,
+  "desc": "huge shaggy swamp sloth beast on four thick legs, heavy head with curved horns and long mane, side three-quarter view facing left, whole body, small, centred",
+  "colour": "reddish brown fur with tan mane",
   "negative": "flowers",
-  "ref_note": "Sand sloth colour art (same as slakoth, same line), three-quarter left on white; replaces front-view Spot-Light sloth"
+  "ref_note": "Sand sloth colour art, now flipped to face left, smaller and lower denoise to keep legs and horns"
 }
