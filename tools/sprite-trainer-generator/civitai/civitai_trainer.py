@@ -28,7 +28,7 @@ import random
 import subprocess
 import sys
 import time
-from collections import Counter, deque
+from collections import deque
 from pathlib import Path
 
 import numpy as np
@@ -259,43 +259,134 @@ def _cost(r: dict) -> str:
 
 
 # ----------------------------------------------------------------------------- finish
+#
+# The LoRA draws real pixel art on an 8 px grid (768 = 96 x 8, grid aligned to 0), at about the
+# scale of the vanilla front pics (figures 41 wide x 58 tall median, 13-15 colours). So the finisher
+# reads the art back at its own resolution instead of re-drawing it:
+#   1. find the grid (period + phase) and take each cell's majority colour from its centre,
+#      ignoring the cell borders where JPEG ringing lives          -> the native ~96 px sprite
+#   2. flood-fill the background off from the border
+#   3. k-means to 15 colours in CIELAB, seeded farthest-first so small but distinct areas (skin,
+#      eyes, a saber, chest lights) keep a colour instead of being merged into the big darks
+#   4. fit 64x64: 1:1 if it fits; trim a few thin edge columns (a saber tip); otherwise delete the
+#      rows/columns that most nearly duplicate a neighbour, which keeps 1 px outlines and faces
+#   5. palette-enforcer: snap to GBA steps, pull colours onto the theme only within Delta E 12
 
-def block_vote(img: Image.Image, cell: int, colours: int = 48) -> Image.Image:
-    """Downscale by `cell` taking each block's most common colour (after a coarse quantise),
-    so pixel edges stay crisp instead of being averaged into new in-between colours."""
-    q = img.convert("RGB").quantize(colours, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.NONE)
-    pal = np.array(q.getpalette()[: colours * 3], dtype=np.uint8).reshape(-1, 3)
-    a = np.array(q)
-    h, w = a.shape[0] // cell, a.shape[1] // cell
-    a = a[: h * cell, : w * cell].reshape(h, cell, w, cell).transpose(0, 2, 1, 3).reshape(h, w, -1)
-    idx = np.apply_along_axis(lambda v: np.bincount(v, minlength=colours).argmax(), 2, a)
-    return Image.fromarray(pal[idx].astype(np.uint8), "RGB")
+def find_grid(a: np.ndarray) -> tuple[int, int, int]:
+    """(period, x phase, y phase) of the pixel-art grid, from edge-strength autocorrelation."""
+    res = []
+    for axis in (1, 0):
+        d = np.abs(np.diff(a.astype(int), axis=axis)).sum(2).sum(1 - axis).astype(float)
+        d -= d.mean()
+        ac = np.array([(d[:-k] * d[k:]).mean() for k in range(4, 17)])
+        period = 4 + int(np.argmax(ac >= 0.8 * ac.max()))  # smallest strong period, not a harmonic
+        ph = [d[(np.arange(len(d)) % period) == r].sum() for r in range(period)]
+        res.append((period, (int(np.argmax(ph)) + 1) % period))
+    return res[0][0], res[0][1], res[1][1]
+
+
+def native(img: Image.Image) -> tuple[Image.Image, int]:
+    a = np.asarray(img.convert("RGB"))
+    period, px, py = find_grid(a)
+    g = a >> 3  # GBA 5-bit steps, so JPEG noise inside a cell collapses to one value
+    m = 1 if period >= 6 else 0
+    h, w = (a.shape[0] - py) // period, (a.shape[1] - px) // period
+    out = np.zeros((h, w, 3), np.uint8)
+    for y in range(h):
+        for x in range(w):
+            c = g[py + y * period + m: py + (y + 1) * period - m,
+                  px + x * period + m: px + (x + 1) * period - m].reshape(-1, 3)
+            v, n = np.unique(c, axis=0, return_counts=True)
+            out[y, x] = v[n.argmax()] * 8
+    return Image.fromarray(out, "RGB"), period
 
 
 def knock_out_background(img: Image.Image, tol: int = 40) -> Image.Image:
-    """Flood-fill from the border through pixels near the border's dominant colour -> transparent."""
+    """Flood-fill from the border through pixels near the border's median colour -> transparent."""
     a = np.array(img.convert("RGB")).astype(int)
     h, w, _ = a.shape
-    border = np.concatenate([a[0], a[-1], a[:, 0], a[:, -1]])
-    bg = np.array(Counter(map(tuple, border)).most_common(1)[0][0])
+    bg = np.median(np.concatenate([a[0], a[-1], a[:, 0], a[:, -1]]), axis=0)
     near = np.abs(a - bg).sum(2) <= tol
     seen = np.zeros((h, w), bool)
-    dq = deque((y, x) for y in range(h) for x in (0, w - 1)) + deque((y, x) for x in range(w) for y in (0, h - 1))
+    dq = deque([(y, x) for y in range(h) for x in (0, w - 1)] + [(y, x) for x in range(w) for y in (0, h - 1)])
     while dq:
         y, x = dq.popleft()
         if 0 <= y < h and 0 <= x < w and not seen[y, x] and near[y, x]:
             seen[y, x] = True
             dq.extend(((y + 1, x), (y - 1, x), (y, x + 1), (y, x - 1)))
-    rgba = np.dstack([a, np.where(seen, 0, 255)]).astype(np.uint8)
-    return Image.fromarray(rgba, "RGBA")
+    return Image.fromarray(np.dstack([a, np.where(seen, 0, 255)]).astype(np.uint8), "RGBA")
+
+
+def _lab(rgb: np.ndarray) -> np.ndarray:
+    c = rgb / 255.0
+    c = np.where(c > 0.04045, ((c + 0.055) / 1.055) ** 2.4, c / 12.92)
+    m = np.array([[0.4124, 0.3576, 0.1805], [0.2126, 0.7152, 0.0722], [0.0193, 0.1192, 0.9505]])
+    xyz = c @ m.T / np.array([0.95047, 1, 1.08883])
+    f = np.where(xyz > 0.008856, np.cbrt(xyz), 7.787 * xyz + 16 / 116)
+    return np.stack([116 * f[..., 1] - 16, 500 * (f[..., 0] - f[..., 1]), 200 * (f[..., 1] - f[..., 2])], -1)
+
+
+def quantise(rgba: Image.Image, k: int = 15, iters: int = 30) -> Image.Image:
+    a = np.array(rgba)
+    m = a[..., 3] > 0
+    u, inv, cnt = np.unique(a[m][:, :3].astype(float), axis=0, return_inverse=True, return_counts=True)
+    if len(u) <= k:
+        return rgba
+    lab, wt = _lab(u), np.sqrt(cnt)
+    cen = [lab[np.argmax(cnt)]]
+    for _ in range(k - 1):  # farthest-first seeds: rare but distinct colours get a centre
+        d = np.min(((lab[:, None] - np.array(cen)[None]) ** 2).sum(2), 1) * wt
+        cen.append(lab[np.argmax(d)])
+    cen = np.array(cen)
+    for _ in range(iters):
+        lbl = np.argmin(((lab[:, None] - cen[None]) ** 2).sum(2), 1)
+        for j in range(k):
+            s = lbl == j
+            if s.any():
+                cen[j] = (lab[s] * cnt[s, None]).sum(0) / cnt[s].sum()
+    lbl = np.argmin(((lab[:, None] - cen[None]) ** 2).sum(2), 1)
+    rep = np.zeros((k, 3))
+    for j in range(k):
+        s = lbl == j
+        if s.any():
+            rep[j] = np.round((u[s] * cnt[s, None]).sum(0) / cnt[s].sum() / 8) * 8
+    a[m, :3] = np.minimum(rep[lbl[inv.reshape(-1)]], 248).astype(np.uint8)
+    return Image.fromarray(a, "RGBA")
+
+
+def drop_lines(rgba: Image.Image, w: int, h: int) -> Image.Image:
+    """Shrink pixel art by deleting the rows/columns that most nearly repeat their neighbour."""
+    a = np.array(rgba).astype(int)
+    for axis, target in ((0, h), (1, w)):
+        while a.shape[axis] > target:
+            d = np.abs(np.diff(a, axis=axis)).sum(2).sum(1 - axis)
+            a = np.delete(a, int(np.argmin(d)) + 1, axis=axis)
+    return Image.fromarray(a.astype(np.uint8), "RGBA")
+
+
+def fit64(s: Image.Image, fit: str, size: int = 64, max_trim: int = 8) -> tuple[Image.Image, str]:
+    s = s.crop(s.getbbox())
+    if s.width <= size and s.height <= size:
+        return s, "1:1"
+    al = np.array(s)[..., 3] > 0
+    if fit == "trim" or (fit == "auto" and s.height <= size and s.width - size <= max_trim):
+        l, r = 0, s.width
+        while r - l > size:  # shave the emptier edge column (thin protrusions go first)
+            if al[:, l].sum() <= al[:, r - 1].sum():
+                l += 1
+            else:
+                r -= 1
+        top = max(0, s.height - size)  # never the feet
+        return s.crop((l, top, r, s.height)), f"1:1, trimmed {s.width - (r - l)}x{top}"
+    k = size / max(s.width, s.height)
+    w, h = min(size, round(s.width * k)), min(size, round(s.height * k))
+    return drop_lines(s, w, h), f"{s.width}x{s.height} -> {w}x{h} by dropping repeated lines"
 
 
 def place(sprite: Image.Image, size: int = 64) -> Image.Image:
-    """Bottom-centre the opaque bbox in a size x size cell (vanilla trainers stand on the bottom row)."""
-    bb = sprite.getbbox()
-    s = sprite.crop(bb)
+    """Bottom-centre in a size x size cell (vanilla trainers stand on the bottom row)."""
     cell = Image.new("RGBA", (size, size), (0, 0, 0, 0))
-    cell.paste(s, ((size - s.width) // 2, size - s.height), s)
+    cell.paste(sprite, ((size - sprite.width) // 2, size - sprite.height), sprite)
     return cell
 
 
@@ -305,26 +396,15 @@ def finish(raw: Path, theme: str, fit: str, free: int) -> Path:
     out_dir.mkdir(parents=True, exist_ok=True)
     stem = raw.stem
 
-    s96 = knock_out_background(block_vote(src, src.width // 96))
-    bb = s96.getbbox()
-    if bb is None:
+    nat, period = native(src)
+    fig = knock_out_background(nat)
+    if fig.getbbox() is None:
         sys.exit(f"{raw.name}: nothing left after background removal")
-    fits = (bb[2] - bb[0]) <= 64 and (bb[3] - bb[1]) <= 64
-    if fit == "crop" or (fit == "auto" and fits):
-        if not fits:
-            print(f"warning: figure is {bb[2]-bb[0]}x{bb[3]-bb[1]} at 96, cropping to 64")
-        cell = place(s96.crop(bb).crop((0, 0, min(64, bb[2]-bb[0]), min(64, bb[3]-bb[1]))))
-        how = "8x -> 96, crop"
-    else:
-        # Re-sample from the 768 original: crop to the figure, then block-vote to fit 64.
-        k = src.width // 96
-        box = (bb[0] * k, bb[1] * k, bb[2] * k, bb[3] * k)
-        fig = src.crop(box)
-        cellpx = max(1, -(-max(fig.width, fig.height) // 64))  # ceil
-        small = knock_out_background(block_vote(_pad_white(fig, cellpx), cellpx))
-        cell = place(small)
-        how = f"crop figure, {cellpx}x -> 64"
+    fig = quantise(fig.crop(fig.getbbox()))
+    sprite, how = fit64(fig, fit)
+    cell = place(sprite)
 
+    fig.save(out_dir / f"{stem}_native.png")
     rgba = out_dir / f"{stem}_rgba.png"
     cell.save(rgba)
     final = out_dir / f"{stem}.png"
@@ -334,7 +414,8 @@ def finish(raw: Path, theme: str, fit: str, free: int) -> Path:
     _run(cmd)
     ok = _run([sys.executable, "-m", "gba_palette", "check", str(final), "--theme", theme], check=False)
     Image.open(final).convert("RGBA").resize((256, 256), Image.NEAREST).save(out_dir / f"{stem}_4x.png")
-    print(f"{raw.name}: {how}; {'PASS' if ok == 0 else 'FAIL'} -> {rel(final)}")
+    print(f"{raw.name}: grid {period}px -> native {nat.width}, figure {fig.width}x{fig.height}, {how}; "
+          f"{'PASS' if ok == 0 else 'FAIL'} -> {rel(final)}")
     return final
 
 
@@ -345,20 +426,8 @@ def rel(p: Path) -> str:
         return str(p)
 
 
-def _pad_white(img: Image.Image, cell: int) -> Image.Image:
-    side = -(-max(img.width, img.height) // cell) * cell
-    # Pad with the figure crop's own border colour (the "white" background is often a light grey
-    # gradient), so the knock-out that follows sees one background colour, not white + grey.
-    a = np.array(img.convert("RGB"))
-    border = np.concatenate([a[0], a[-1], a[:, 0], a[:, -1]])
-    fill = tuple(int(x) for x in np.median(border, axis=0))
-    c = Image.new("RGB", (side, side), fill)
-    c.paste(img, ((side - img.width) // 2, side - img.height))
-    return c
-
-
 def _run(cmd, check=True) -> int:
-    r = subprocess.run(cmd, cwd=ENFORCER)
+    r = subprocess.run(cmd, cwd=ENFORCER, stdout=subprocess.DEVNULL if not check else None)
     if check and r.returncode:
         sys.exit(f"failed: {' '.join(cmd)}")
     return r.returncode
@@ -406,9 +475,10 @@ def main():
 
     def finish_args(p):
         p.add_argument("--theme", help="palette theme id (default: jobs.json, else factions)")
-        p.add_argument("--fit", choices=["auto", "crop", "scale"], default="auto",
-                       help="auto: crop the 96 render if the figure fits 64, else rescale from 768")
-        p.add_argument("--free", type=int, default=6, help="off-theme colours allowed (skin, hair, eyes)")
+        p.add_argument("--fit", choices=["auto", "trim", "shrink"], default="auto",
+                       help="auto: 1:1 if it fits, trim if only a thin edge sticks out, else shrink")
+        p.add_argument("--free", type=int, default=15,
+                       help="colours allowed to stay off-theme (beyond Delta E 12); 15 keeps all shading")
 
     g = sub.add_parser("gen"); gen_args(g); g.set_defaults(fn=cmd_gen)
     f = sub.add_parser("finish"); f.add_argument("raw", nargs="+"); finish_args(f); f.set_defaults(fn=cmd_finish)

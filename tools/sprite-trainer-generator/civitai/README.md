@@ -23,7 +23,7 @@ cd tools/sprite-trainer-generator/civitai
 python civitai_trainer.py models                              # list LoRA versions + trigger words (no key needed)
 python civitai_trainer.py gen magma_leader_maxie --whatif     # price the job, spend nothing
 python civitai_trainer.py run magma_leader_maxie -n 2         # generate 2 and finish them
-python civitai_trainer.py finish runs/magma_leader_maxie/raw/<file>.png --theme imperial-order
+python civitai_trainer.py finish runs/magma_leader_maxie/raw/<file>.png --theme imperial-order  # --fit auto|trim|shrink
 ```
 
 `<trainer>` is the front pic's file stem in `game/graphics/trainers/front_pics/`. The brief is that row's
@@ -35,7 +35,7 @@ the faction theme and an optional style tag (`gen1` or `gen2`, off by default). 
 | Step | Detail |
 |---|---|
 | `gen` | Builds the prompt (LoRA trigger words, style tag, subject, look notes, "solid white background", theme colours), posts a `textToImage` job at 768x768 to the orchestrator, polls, downloads each image to `runs/<trainer>/raw/` with a `.json` of every setting (LoRA version and SHA256, checkpoint, prompt, seed, cost). |
-| `finish` | 768 -> 96 by 8x8 block vote (most common colour per block, so edges stay crisp). Flood-fills the background off from the border. If the figure fits 64x64 it is bottom-centred as is; otherwise it is cropped from the 768 original and re-voted down to fit 64. Then `palette-enforcer enforce --bpp 4 --theme <faction> --free 6 --write-pal`, then `check`. Output in `runs/<trainer>/finished/`: indexed PNG, `.pal`, a 4x preview. |
+| `finish` | Reads the art back at its own resolution instead of re-drawing it. Finds the pixel grid (8 px, so 96x96 native), takes each cell's majority colour from its centre (skipping JPEG ringing at the cell edges), flood-fills the background off, then k-means to 15 colours in CIELAB with farthest-first seeds so small distinct areas (skin, eyes, saber, chest lights) keep a colour. Fit to 64x64: 1:1 if it fits; shave up to 8 thin edge columns (a saber tip); otherwise delete the rows and columns that most nearly repeat a neighbour, which keeps 1 px outlines and faces. Then `palette-enforcer enforce --bpp 4 --theme <faction>` (colours pulled onto the theme only within Delta E 12) and `check`. Output in `runs/<trainer>/finished/`: indexed PNG, `.pal`, the native-resolution figure, a 4x preview. |
 
 Nothing is installed into `../../../game` by this script; the owner picks first.
 
@@ -82,5 +82,7 @@ The prompt is a template (`PROMPT` in the script); a new character only needs a 
   `gen2`: maroon, skin-toned, Crystal-like). Leave the tag off for the full-colour look of the model previews;
   `--style gen2` brings it back.
 - Round 3 (prompt template above, 1 image, 3 Buzz) gave a recognisable Vader: helmet, mask, cape, saber.
-- `--fit crop` keeps the native 8x pixel grid and reads crisper; `--fit scale` fills the 64 cell but
-  re-votes at 7x or 9x and picks up stray pixels. Crop clips a figure wider than 64 (a lightsaber).
+- Downscaling: the first finisher block-voted the 768 down at a grid that did not always match the
+  art (7x, 9x), quantised to 48 colours, then let the theme pull merge shades, so sprites ended with
+  7-10 colours and lost faces and small details. Vanilla front pics use 13-15 colours with the figure
+  about 41x58. The rewrite above keeps the art's own pixels (13-14 colours, Vader is 1:1).
