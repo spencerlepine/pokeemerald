@@ -1,0 +1,9 @@
+{
+  "init": "refs/mareep_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/b/b9/Nerf-Alien_Archive.png/revision/latest?cb=20240331104509",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small fluffy nerf lamb with a thick woolly coat and tiny nub horns",
+  "colour": "dark brown",
+  "ref_note": "Nerf Alien Archive art; smallest stage"
+}

@@ -1,0 +1,9 @@
+{
+  "init": "refs/ampharos_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/b/b9/Nerf-Alien_Archive.png/revision/latest?cb=20240331104509",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "big shaggy nerf with heavy curled horns and a glowing beacon tip on its tail",
+  "colour": "dark brown and yellow",
+  "ref_note": "Nerf Alien Archive art; final stage adds glowing tail"
+}

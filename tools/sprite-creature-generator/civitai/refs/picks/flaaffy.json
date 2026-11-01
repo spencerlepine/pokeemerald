@@ -1,0 +1,9 @@
+{
+  "init": "refs/flaaffy_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/b/b9/Nerf-Alien_Archive.png/revision/latest?cb=20240331104509",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "young nerf with a shaggy mane and curling horns",
+  "colour": "dark brown",
+  "ref_note": "Nerf Alien Archive art; middle stage"
+}
