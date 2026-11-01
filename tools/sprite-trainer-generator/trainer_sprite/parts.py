@@ -3,7 +3,7 @@
 A part is drawn once, in *roles* instead of palette characters, so it takes any character's
 colours. `parts/<name>.yaml`:
 
-    name: xwing_helmet
+    name: pilot_helmet
     # brief: what it is, which way it faces (3/4 toward the viewer's left), where it sits
     rows: |                 # `.` empty, `K` outline, roles below
       ....KKKKK....
@@ -20,7 +20,7 @@ Roles (dark -> light inside a group, light from the upper left, as every Emerald
 
 Placing it (a rig layer):
 
-    - {shape: part, part: xwing_helmet, at: [24, 2], flip: false, behind: false,
+    - {shape: part, part: pilot_helmet, at: [24, 2], flip: false, behind: false,
        paint: {"1234": "nmlW", "567": "fed", "89": "Kj", W: W}}
 
 `paint` maps role groups (a string of roles -> a string of legend characters, same length) or

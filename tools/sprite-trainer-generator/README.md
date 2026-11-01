@@ -54,6 +54,8 @@ python -m trainer_sprite compare output/<x>.png a.yaml b.yaml  # review sheet in
 python -m trainer_sprite corpus                                # re-measure the vanilla pics
 python -m trainer_sprite status                                # worklist: every wiki front pic, todo/spec/built
 python -m trainer_sprite sheet  out.png [a.yaml ...] [--cols 6] # contact sheet (default: every spec)
+python -m trainer_sprite parts  out.png                        # contact sheet of the parts library
+python -m trainer_sprite cutpart out.png x y w h --roles "15:K 5:1 ..."  # cut a box into part rows
 ```
 
 ## Format (what the game needs)
@@ -116,6 +118,15 @@ edges, plenty of single-pixel highlights (orphans 11-23%).
      over a new prop), `move` shifts a box, `rows`/`cols` insert or delete rows/columns (taller,
      broader), `trim` cuts a big hairdo or hat down to a kept shape, `fringe` roughens an edge
      into fur or rags, `speckle` adds strands.
+   - `shape: part` places a hand-pixelled part from `parts/` (D13): `{shape: part, part:
+     visor_helmet, at: [x, y], flip: true, paint: {"1234": "bcde", "89": "fi"}}`. Parts are
+     drawn in roles (K outline, 1-4 main ramp, 5-7 second ramp, 8-9 visor or lens, W, s-u
+     skin) so they take any palette. Erase what they replace first. Library: visor_helmet,
+     hunter_helmet, pilot_helmet, field_helmet, mystic_hood, goggles, blaster_pistol.
+   - `finish:` (after the rig, before `patches`) enforces pixel-art rules on the edited area:
+     `{outline: K, selective: "gW", box: [x, y, w, h], pixel_perfect: true, strays: true}`
+     closes the silhouette with the outline colour, removes L-shaped outline doubles and
+     floating single pixels, and fills pinholes.
 6. `python -m trainer_sprite build art/<name>.yaml`, then **look at**
    `output/<name>/preview/zoom.png` (8x with coordinates) and `showcase.png`
    (in battle at 1x and 2x next to the pic it replaces). Fix until it reads at 1x.

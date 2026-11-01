@@ -221,3 +221,25 @@ at its simplest: Biggs (Cooltrainer M, flight-orange suit), Veteran F (Cooltrain
 (Norman), Prospector (Hiker), Angler (Fisherman), Farmhand (Camper), Homesteader (Picnicker),
 Nightsister (Hex Maniac, hat brim trimmed into a pointed hood). Balls become grey capture pods.
 Sheet `output/round2-fronts.png`.
+
+## D13. Parts library and a pixel-art finisher (2026-11-01)
+
+Owner on round 2: the art is fine but the characters "still look very close to the Pokemon...
+be brave... add things like helmets or change the silhouettes... build a powerful tool... post
+processing to enforce the pixel art". Two additions:
+- `parts/`: helmets, hoods, goggles and props pixelled once, in roles instead of palette
+  characters, placed with `shape: part` and painted into each spec's own palette. A helmet
+  replaces the whole head, which changes a pic's identity far more than a recolour can.
+- `finish:` cleans up after bold kitbashing: closes the outline on the edited area, removes
+  L-corner doubles and stray pixels, fills pinholes. Deterministic, palette-only.
+All parts and characters are original designs for this setting (armoured troopers, hunters,
+pilots, mystics); the tool does not copy specific characters from films or other games.
+
+## Round 3 of the roster: bold silhouettes (2026-11-01)
+
+Eight fronts where a part or a cut changes the head or outline: Ace Pilot M and Veteran F
+(pilot helmets), Trooper F (full visor helmet, white armour, blaster), Pathfinder (field
+helmet, camo poncho), Bounty Hunter F (hunter's helmet, hair cut to a short cape, blaster),
+Saboteur F (Flannery's hair turned teal and orange, goggles), Mystic (raised hood, energy
+blade), Doran (white armour plates). Sheets `output/round3-fronts.png` and
+`output/round3-parts.png`.

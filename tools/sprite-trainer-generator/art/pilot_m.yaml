@@ -1,0 +1,42 @@
+name: pilot_m
+kit: trainer64
+replaces: graphics/trainers/front_pics/leader_roxanne.png
+# ACE PILOT (m), arena leader (replaces Roxanne). Repaint of Cooltrainer M: a cocky young man
+# in a one-piece suit with a stripe, which becomes an orange starfighter flight suit. Hair ->
+# under a domed pilot helmet (parts/pilot_helmet, painted flight orange with a white band, visor up), moustache,
+# suit -> flight orange, yellow stripe -> white flak vest straps and a chest control box.
+palette:
+  - [115, 197, 164]  # 0 transparent
+  - [248, 224, 200] # a skin light
+  - [240, 200, 152] # b skin base
+  - [200, 152, 112] # c skin shadow
+  - [112, 80, 64]   # d skin edge
+  - [248, 168, 96]  # e suit light
+  - [232, 112, 48]  # f suit base
+  - [184, 72, 32]   # g suit shadow
+  - [112, 40, 24]   # h suit dark
+  - [40, 32, 32]    # i hair dark
+  - [120, 80, 56]   # j hair light
+  - [80, 56, 40]    # k hair base
+  - [248, 248, 240] # m vest white
+  - [192, 192, 200] # n vest shadow
+  - [248, 248, 248] # W white
+  - [16, 16, 24]    # K outline
+legend: {'.': 0, a: 1, b: 2, c: 3, d: 4, e: 5, f: 6, g: 7, h: 8, i: 9, j: 10, k: 11, m: 12, n: 13, W: 14, K: 15}
+frames:
+  front:
+    repaint:
+      pic: graphics/trainers/front_pics/cooltrainer_m.png
+      # cooltrainer_m: 1-4 skin, 5-8 suit light->dark, 9-11 green hair, 12/13 yellow stripe, 14 white, 15 outline
+      remap: {1: a, 2: b, 3: c, 4: d, 5: e, 6: f, 7: g, 8: h, 9: i, 10: j, 11: k, 12: m, 13: n, 14: W, 15: K}
+    rig:
+      layers:
+        # the ball -> a capture pod (durasteel grey and white)
+        - {name: pod, shape: poly, pts: [[36, 16], [43, 16], [43, 21], [36, 21]], recolour: "f:n h:K e:m"}
+        # moustache, and the rebel pilot's chest life-support box on the flight vest
+        - {name: moustache, shape: pixels, x: 28, y: 16, rows: "iii"}
+        # hair goes; the pilot helmet sits on the brow, face open below the raised visor
+        - {name: hair, shape: poly, pts: [[16, 2], [40, 2], [40, 10], [27, 10], [27, 19], [16, 19]], erase: true}
+        - {name: helmet, shape: part, part: pilot_helmet, at: [20, 2], flip: true, paint: {"1234": "hgfe", "567": "nmW", "89": "iW"}}
+        - {name: chest box, shape: pixels, x: 27, y: 23, rows: "KKKK\nKnmK\nKiiK\nKKKK"}
+    finish: {outline: K, box: [14, 0, 30, 24], pixel_perfect: true}

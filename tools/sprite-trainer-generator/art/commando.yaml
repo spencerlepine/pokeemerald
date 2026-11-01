@@ -1,10 +1,10 @@
 name: commando
 kit: trainer64
 replaces: graphics/trainers/front_pics/pokemon_ranger_m.png
-# PATHFINDER (m), an Endor Rebel commando (replaces Pokemon Ranger M). Repaint of the Ranger
-# himself: a field scout with a pack, mid-stride. Cap -> a Rebel commando helmet with a camo cover
-# (parts/rebel_helmet), red jacket -> mottled green camo poncho (speckle), grey trousers -> khaki
-# fatigues, boots -> brown.
+# PATHFINDER (m), a forest commando (replaces Pokemon Ranger M). Repaint of the Ranger himself:
+# a field scout with a pack, mid-stride. Cap -> a brimmed field helmet with a camo cover
+# (parts/field_helmet), red jacket -> mottled green camo poncho (speckle), grey trousers ->
+# khaki fatigues, boots -> brown.
 palette:
   - [115, 197, 164]  # 0 transparent
   - [248, 224, 200] # a skin light
@@ -32,7 +32,7 @@ frames:
     rig:
       layers:
         - {name: cap, shape: poly, pts: [[23, 5], [44, 5], [44, 14], [23, 14]], erase: true}
-        - {name: helmet, shape: part, part: rebel_helmet, at: [26, 8], paint: {"1234": "nmkk", "56": "hg"}}
+        - {name: helmet, shape: part, part: field_helmet, at: [26, 8], paint: {"1234": "nmkk", "56": "hg"}}
         - {name: helmet camo, shape: speckle, box: [26, 8, 15, 6], chars: "mk", to: j, every: 5}
         - {name: poncho camo, shape: speckle, box: [10, 20, 44, 20], chars: "m", to: n, every: 5}
         - {name: poncho camo 2, shape: speckle, box: [10, 20, 44, 20], chars: "k", to: j, every: 6}

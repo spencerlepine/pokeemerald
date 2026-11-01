@@ -1,0 +1,48 @@
+name: trooper_f
+kit: trainer64
+replaces: graphics/trainers/front_pics/magma_grunt_f.png
+# TROOPER (f), an armoured foot soldier (replaces the Team Magma grunt F). Repaint of the grunt
+# herself: one arm raised, the other on her hip. Hood and face -> a full helmet with one
+# wraparound visor (parts/visor_helmet), hoodie, skirt, legs and boots -> white armour with
+# blue-grey shadows, hands -> black body glove, hem -> a black utility belt, the ball -> a
+# blaster pistol (parts/blaster_pistol).
+palette:
+  - [115, 197, 164]  # 0 transparent
+  - [16, 16, 24]     # K outline
+  - [48, 48, 64]     # a body glove light
+  - [96, 104, 128]   # b armour deep shadow
+  - [152, 160, 184]  # c armour shadow
+  - [208, 216, 232]  # d armour base
+  - [248, 248, 248]  # e armour highlight
+  - [32, 32, 40]     # f body glove
+  - [72, 72, 80]     # g blaster metal
+  - [128, 128, 136]  # h blaster light
+  - [64, 96, 168]    # i blue tube
+legend: {'.': 0, K: 1, a: 2, b: 3, c: 4, d: 5, e: 6, f: 7, g: 8, h: 9, i: 10}
+frames:
+  front:
+    repaint:
+      pic: graphics/trainers/front_pics/magma_grunt_f.png
+      # magma_grunt_f: 1-4 skin, 5/6/8 grey skirt, 7/9 navy trim, 10/13/12 red hoodie and boots
+      # dark->light, 11 light grey, 14 white, 15 outline
+      remap: {1: e, 2: d, 3: c, 4: b, 5: d, 6: c, 7: c, 8: b, 9: d, 10: b, 11: d, 12: d, 13: c, 14: e, 15: K}
+    rig:
+      layers:
+        # hood and face -> the trooper helmet
+        - {name: old head, shape: poly, pts: [[24, 1], [49, 1], [49, 20], [43, 20], [43, 24], [27, 24], [24, 19]], erase: true}
+        - {name: neck, shape: capsule, from: [31, 22], to: [38, 23], r: [2.5, 2.5], ramp: fa, behind: true}
+        - {name: helmet, shape: part, part: visor_helmet, at: [27, 4], paint: {"1234": "bcde", "89": "fi"}}
+        # raised hand: the ball goes, the glove holds a blaster pistol pointed up and out
+        - {name: ball, shape: poly, pts: [[8, 12], [18, 12], [18, 23], [8, 23]], erase: true}
+        - {name: raised glove, shape: poly, pts: [[13, 15], [21, 15], [21, 24], [13, 24]], recolour: "e:a d:a c:f b:f"}
+        - {name: blaster, shape: part, part: blaster_pistol, at: [8, 15], paint: {"123": "ghh", "5": "f"}}
+        # the hand on her hip: black glove
+        - {name: hip glove, shape: poly, pts: [[48, 30], [57, 30], [57, 38], [48, 38]], recolour: "e:a d:a c:f b:f"}
+        # the hood's collar -> chest plate (the finisher redraws the outer outline)
+        - {name: chest, shape: poly, pts: [[27, 24], [44, 24], [44, 29], [27, 29]], recolour: "K:c"}
+        # hoodie hem -> black utility belt with a white buckle
+        - {name: belt, shape: poly, pts: [[29, 29], [44, 29], [44, 31], [29, 31]], recolour: "e:f d:f c:f b:f"}
+        - {name: buckle, shape: pixels, x: 34, y: 29, rows: "dd\ncc"}
+        # black body glove at the knees, between the thigh and shin plates
+        - {name: knees, shape: poly, pts: [[22, 49], [48, 49], [48, 51], [22, 51]], recolour: "e:a d:a c:f b:f"}
+    finish: {outline: K, box: [4, 0, 54, 34], pixel_perfect: true}

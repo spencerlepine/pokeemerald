@@ -53,7 +53,7 @@ Silhouette ops (reshape the repainted base; all pixel-exact, nothing is resample
   column `x`, pushing everything right of it further right. Broader shoulders, a bulkier alien.
 
 Parts: `shape: part` places a hand-pixelled helmet, hood, armour piece or prop from `parts/`
-in this pic's colours (`trainer_sprite/parts.py`): `{shape: part, part: xwing_helmet, at: [x, y],
+in this pic's colours (`trainer_sprite/parts.py`): `{shape: part, part: pilot_helmet, at: [x, y],
 paint: {"1234": "nmlW", ...}, flip: false, behind: false}`.
 
 Shapes: `pixels` (x, y, rows: hand-placed pixels, `_` keeps; use it for details that must sit

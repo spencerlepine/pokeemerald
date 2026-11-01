@@ -157,6 +157,12 @@ built from rig shapes are not allowed (D9).
   Lesson: show at least eight fronts per round, start with characters whose vanilla base is
   already close, and keep the change mostly to the palette.
 
+- **2026-11-01, roster round 2** (eight palette-only recolours): "you're drawing good art and
+  the output is fine, but these don't look like [setting] characters at all... still look very
+  close to the Pokemon... be brave... add things like helmets or change the silhouettes".
+  Lesson: a recolour keeps the base's identity. Change the head (helmet, hood, goggles from
+  `parts/`) or the outline (trim, graft) on every character, then run `finish:`.
+
 ## Contact sheet of the vanilla pics
 
 ```python

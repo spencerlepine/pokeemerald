@@ -1,17 +1,17 @@
 name: doran
 kit: trainer64
 replaces: graphics/trainers/front_pics/leader_norman.png
-# DORAN, Mos Entha arena leader, the player's dad (replaces Norman). Repaint of Norman himself:
-# the same calm, ready stance. An ex-Republic clone-wars veteran who still wears his old armour:
-# red jacket -> white clone trooper plates with the 212th's orange markings, the blue-grey
-# trousers -> black body glove, hair stays dark grey.
+# DORAN, arena leader, the player's dad (replaces Norman). Repaint of Norman himself: the same
+# calm, ready stance. An old war veteran who still wears his armour: red jacket -> white
+# armour plates with his unit's orange markings, blue-grey trousers -> black body glove, hair
+# stays dark grey.
 palette:
   - [115, 197, 164]  # 0 transparent
   - [248, 224, 200] # a skin light
   - [240, 184, 144] # b skin base
   - [200, 144, 112] # c skin shadow
   - [112, 80, 72]   # d skin edge
-  - [232, 128, 48]  # e 212th orange
+  - [232, 128, 48]  # e unit orange
   - [96, 104, 120]  # f hair light
   - [56, 64, 80]    # g glove base
   - [32, 40, 48]    # h glove dark
