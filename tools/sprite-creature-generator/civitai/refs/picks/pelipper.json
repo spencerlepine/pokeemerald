@@ -1,10 +1,10 @@
 {
   "init": "refs/pelipper_prep.png",
-  "init_source": "refs/sources/pelipper/shyyyo_alien.png",
+  "init_source": "refs/sources/pelipper/shyyyo_jfo_clean.png",
   "flip": false,
-  "denoise": 0.55,
-  "desc": "side view facing left, whole body, small, centred: gaunt predatory alien seabird, long dark serrated hooked beak with bared teeth, small beady red eye, ragged spiky crest and quills down the neck, ridged leathery folded wings, scrawny clawed legs, hunched menacing stance, alien fauna",
-  "colour": "pale lavender grey with dark slate beak and crest",
-  "ref_note": "ShyyyoBird-JFO render hand-masked; alien pass: PIL quills, serrated teeth, small red eye (owner: too friendly)",
-  "negative": "cute, chibi, kawaii, big eyes, smiling, happy, cartoon mascot, plush, toy"
+  "denoise": 0.45,
+  "desc": "side view facing left, whole body, small, centred: a large Kashyyyk seabird, alien fauna, wild, true to the art: head held high on a long pale ribbed neck, dark hooded head with heavy hooked bill and swept-back antler crest, shaggy feathered shoulders, long translucent folded wings, thin dark stilt legs, long thin curling tail, muted natural colours",
+  "colour": "muted pale lavender grey body, dusky grey-violet wings, dark slate head and legs, no red",
+  "ref_note": "ShyyyoBird-JFO render (Wookieepedia), fresh hand cut-out on white, original pixels with a global gamma lift only, no painted features",
+  "negative": "cute, chibi, big eyes, cartoon mascot, plush"
 }
