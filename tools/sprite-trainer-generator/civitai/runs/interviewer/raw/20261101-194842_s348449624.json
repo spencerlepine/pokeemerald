@@ -1,0 +1,48 @@
+{
+  "trainer": {
+    "stem": "interviewer",
+    "wiki_path": "graphics/trainers/front_pics/interviewer.png",
+    "sw_subject": "FODE AND BEED: two-headed Troig announcer (one red head, one green head) with microphones and a camera droid",
+    "subject": "two-headed alien",
+    "desc": "Troig podrace announcer from Star Wars: ONE body with TWO separate heads side by side on two long necks, left head red-skinned with a crest, right head green-skinned, four arms, flowing orange-and-yellow announcer robes, holding a microphone",
+    "theme": "factions",
+    "style": "",
+    "pose": "standing, facing left, three-quarter view",
+    "negative": "one head, single head, human face, hair, blonde",
+    "pair": false,
+    "strength": 0.5
+  },
+  "lora": {
+    "id": 443092,
+    "name": "XL v1",
+    "baseModel": "SDXL 1.0",
+    "trainedWords": [],
+    "air": null,
+    "files": [
+      {
+        "name": "pk_trainer_xl_v1.safetensors",
+        "sizeKB": 445819.83984375,
+        "sha256": "078E09DA2A123964B7EB30DB23EC24D59FB082343F69C7FAF925C4C07E97023E"
+      }
+    ]
+  },
+  "checkpoint": "urn:air:sdxl:checkpoint:civitai:101055@128078",
+  "params": {
+    "prompt": "solo, (single character:1.2), (two-headed alien:1.3), Troig podrace announcer from Star Wars: ONE body with TWO separate heads side by side on two long necks, left head red-skinned with a crest, right head green-skinned, four arms, flowing orange-and-yellow announcer robes, holding a microphone, full body character sprite, standing, facing left, three-quarter view, pixel art, game sprite, crisp dark outlines, solid white background, simple background",
+    "negativePrompt": "one head, single head, human face, hair, blonde, poke ball, pokeball, holding ball, baseball cap, generic pokemon trainer, anime boy, scenery, detailed background, gradient background, floor, shadow, text, watermark, signature, frame, border, multiple characters, multiple views, character sheet, turnaround, duplicate, cropped, cut off feet, blurry, 3d, photo, realistic, painting, smooth shading",
+    "scheduler": "EulerA",
+    "steps": 25,
+    "cfgScale": 7.0,
+    "width": 768,
+    "height": 768,
+    "seed": 348449624,
+    "clipSkip": 2
+  },
+  "strength": 0.5,
+  "format": "jpeg",
+  "seed": 348449624,
+  "workflowId": "13596363-20261101194819732-7ts9",
+  "jobId": "a4e55e48-30c5-4c1d-8a46-63aa48eecf70",
+  "cost": "3 green",
+  "generated": "20261101-194842"
+}
