@@ -1,0 +1,60 @@
+{
+  "species": {
+    "stem": "machamp",
+    "sw_name": "BX DROID",
+    "sw_basis": "canon:BX-series droid commando",
+    "subject": "bx droid",
+    "desc": "lean BX commando droid in a low combat crouch aiming a blaster with a round visor head",
+    "types": [],
+    "colour": "dark brown grey and orange",
+    "style": "gen3",
+    "pose": "three-quarter view facing left",
+    "negative": "",
+    "init": "refs/machamp_prep.png",
+    "control": null,
+    "denoise": 0.5,
+    "flip": false,
+    "frame2": "mouth wide open, roaring, lunging forward",
+    "shiny": {}
+  },
+  "view": "front",
+  "lora": {
+    "id": 273148,
+    "name": "v2.1-beta",
+    "baseModel": "SD 1.5",
+    "trainedWords": [],
+    "air": null,
+    "files": [
+      {
+        "name": "pksp768_V2-1.safetensors",
+        "sizeKB": 74235.9921875,
+        "sha256": "DF8494A9FF9AE96B53ECBCD327AA14626C59D3F573423892A650F9F6C21AB418"
+      }
+    ]
+  },
+  "checkpoint": "urn:air:sd1:checkpoint:civitai:4384@128713",
+  "step": "imageGen",
+  "params": {
+    "prompt": "gen3, (bx droid:1.1), (lean BX commando droid in a low combat crouch aiming a blaster with a round visor head:1.2), pokemon, single creature, full body, three-quarter view facing left, (dark brown grey and orange body:1.3), limited palette, muted natural colours, pixel art, game sprite, crisp dark outlines, white background, simple background",
+    "negativePrompt": "human, person, trainer, multiple creatures, two creatures, text, watermark, signature, frame, border, scenery, detailed background, gradient background, ground, shadow, cropped, cut off, blurry, 3d, photo, realistic, painting, smooth shading",
+    "scheduler": "EulerA",
+    "steps": 25,
+    "cfgScale": 5.0,
+    "width": 768,
+    "height": 768,
+    "seed": 1716007114,
+    "clipSkip": 2,
+    "denoise": 0.5
+  },
+  "refs": {
+    "init": "refs/machamp_prep.png"
+  },
+  "control": null,
+  "strength": 0.9,
+  "format": "jpeg",
+  "seed": 1716007114,
+  "workflowId": "13596363-20261101174714711-w07t",
+  "jobId": null,
+  "cost": "3 green",
+  "generated": "20261101-174746"
+}
