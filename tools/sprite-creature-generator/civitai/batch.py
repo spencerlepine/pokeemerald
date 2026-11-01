@@ -14,8 +14,12 @@ After a take, `finish` is re-run on it with `--frame2 lunge --shiny`, so each sp
 front.png, anim_front.png (64x128), back.png, normal.pal and shiny.pal, all on one palette.
 
 Automatic checks (front and back): palette-enforcer `check` PASS; the 8 px grid was found (6-10);
-figure at least 28 px tall and 24 px wide; at least 6 colours and 400 opaque pixels in the cell; the
-front is one figure (not a duplicate or a turnaround sheet).
+figure at least 22 px tall and 24 px wide; at least 6 colours and 400 opaque pixels in the cell; the
+front is one figure (not a duplicate or a turnaround sheet); the back's colours stay close to the
+front's (drift <= 0.75).
+
+    python batch.py abra absol --backs-only --budget 30   # new back for already installed species
+                                                          # (keeps the installed front; 3 Buzz a try)
 
 A picked take is copied to wiki/art/graphics/pokemon/<species>/, its three pending_art.csv rows go to
 ART_READY, rows are added to wiki/mapping/art_ready.csv, and that one species is committed and pushed
@@ -77,12 +81,14 @@ spent = 0
 stop = threading.Event()
 
 
-def pending() -> list[str]:
+def pending(redo: bool = False) -> list[str]:
+    """Species whose front.png row is PENDING_ART (with redo: also ART_READY, for review re-runs)."""
     out = []
+    ok = {"PENDING_ART", "ART_READY"} if redo else {"PENDING_ART"}
     with CSV.open(newline="") as f:
         for r in csv.DictReader(f):
             parts = r["path"].split("/")
-            if (r["kind"] == "pokemon" and r["art_status"] == "PENDING_ART" and parts[-1] == "front.png"
+            if (r["kind"] == "pokemon" and r["art_status"] in ok and parts[-1] == "front.png"
                     and len(parts) == 4 and parts[2] not in SPECIAL | {"egg", "question_mark"}):
                 out.append(parts[2])
     return out
@@ -110,6 +116,17 @@ def figures(png: Path, share: float = 0.2) -> int:
     return sum(1 for n in sizes if n >= share * a.sum())
 
 
+DRIFT = 0.75  # back vs front coarse colour histogram (L1); denoise 0.55 backs ~0.5, the red-skitty 0.7 back 0.91
+
+
+def drift(out: Path) -> float:
+    def h(p):
+        im = Image.open(p)
+        c = np.array(im.convert("RGB")).astype(int)[np.array(im) != 0] // 86
+        return np.bincount(c[:, 0] * 9 + c[:, 1] * 3 + c[:, 2], minlength=27) / max(len(c), 1)
+    return float(np.abs(h(out / "front.png") - h(out / "back.png")).sum())
+
+
 def judge(out: Path, log: str, min_w: int = 24, min_h: int = 22, one_figure: bool = True) -> tuple[bool, str]:
     notes = []
     for view in ("front", "back"):
@@ -130,6 +147,9 @@ def judge(out: Path, log: str, min_w: int = 24, min_h: int = 22, one_figure: boo
         if opaque.sum() < 400 or colours < 6:
             return False, f"{view}: {opaque.sum()} px, {colours} colours"
         notes.append(f"{view} {fw}x{fh}")
+    d = drift(out)
+    if d > DRIFT:
+        return False, f"back: colours drift from the front ({d:.2f})"
     if one_figure and figures(out / "front_native.png") >= 2:
         return False, "front: two figures (duplicate or turnaround)"
     if "FAIL" in log.split("--frame2 pass--")[-1]:
@@ -181,7 +201,7 @@ def install(sp: str, out: Path, note: str) -> tuple[list[Path], dict, str]:
             f"12 colours + despeckle; auto-picked, no human review")
     notes = {
         "front.png": f"{b['sw_name']} battle front, {note}; {base}; palette art/graphics/pokemon/{sp}/normal.pal, shiny.pal next to it",
-        "back.png": f"{b['sw_name']} battle back, image to image from the mirrored front (backside, denoise 0.7), on the front's normal.pal",
+        "back.png": f"{b['sw_name']} battle back, image to image from the mirrored front (backside, denoise 0.55), on the front's normal.pal",
         "anim_front.png": f"{b['sw_name']} front animation 64x128: frame 1 = front.png, frame 2 = lunge (finish --frame2 lunge); normal.pal",
     }
     return files, notes, f"sprite-creature-generator/civitai (batch.py, refs/picks/{sp}.json)"
@@ -200,6 +220,9 @@ def update_wiki(sp: str, notes: dict, drawn: str):
     w = csv.DictWriter(buf, fieldnames=fields, lineterminator="\n")
     w.writeheader(); w.writerows(rows)
     CSV.write_text(buf.getvalue())
+    ids = {f"graphics/pokemon/{sp}/{name}" for name in FILES}
+    kept = [l for l in ART_READY.read_text().splitlines(keepends=True) if l.split(",", 1)[0] not in ids]
+    ART_READY.write_text("".join(kept))  # a re-run replaces the species' earlier rows
     with ART_READY.open("a", newline="") as f:
         wr = csv.writer(f, lineterminator="\n")
         for name in FILES:
@@ -210,7 +233,7 @@ def git(*a, check=True):
     return subprocess.run(["git", *a], cwd=REPO, capture_output=True, text=True, check=check)
 
 
-def commit(sp: str, files: list[Path], notes: dict, drawn: str, out: Path):
+def commit(sp: str, files: list[Path], notes: dict, drawn: str, out: Path, msg: str = ""):
     with git_lock:
         if args.push:
             git("pull", "--rebase", "--autostash", "-q", "origin", "master")
@@ -225,12 +248,58 @@ def commit(sp: str, files: list[Path], notes: dict, drawn: str, out: Path):
         name = cc.brief(sp)["sw_name"]
         git("-c", "user.name=spencerlepine", "-c", "user.email=60903378+spencerlepine@users.noreply.github.com",
             "commit", "-q", f"--author={AUTHOR}", "-m",
-            f"sprite-creature-generator: {name} ({sp}) battle sprites to wiki/art, ART_READY (auto-picked)")
+            f"sprite-creature-generator: {name} ({sp}) " + (msg or "battle sprites to wiki/art, ART_READY (auto-picked)"))
         if args.push:
             for _ in range(4):
                 if git("push", "-q", "origin", "HEAD:master", check=False).returncode == 0:
                     break
                 git("pull", "--rebase", "--autostash", "-q", "origin", "master")
+
+
+def installed_front_raw(sp: str) -> Path | None:
+    """The raw front behind the installed front.png (its finished folder has the same front.png)."""
+    want = (ART / "graphics" / "pokemon" / sp / "front.png").read_bytes()
+    for d in sorted((HERE / "runs" / sp / "finished").glob("*"), reverse=True):
+        if (d / "front.png").exists() and (d / "front.png").read_bytes() == want:
+            return HERE / "runs" / sp / "raw" / f"{d.name}.png"
+    return None
+
+
+def do_back(sp: str) -> str:
+    global spent
+    front = installed_front_raw(sp)
+    if not front or not front.exists():
+        return f"SKIP {sp}: installed front's raw not found"
+    reasons = []
+    for _ in range(1 + args.retries):
+        with spend_lock:
+            if stop.is_set() or spent + 3 > args.budget:
+                stop.set()
+                return f"SKIP {sp}: budget reached"
+            spent += 3
+        r = subprocess.run([sys.executable, str(HERE / "civitai_creature.py"), "gen", sp, "--view", "back",
+                            "--init", str(front), "--flip", "--denoise", "0.55", "--currency", args.currency],
+                           capture_output=True, text=True, cwd=HERE)
+        log = r.stdout + r.stderr
+        if "Insufficient" in log or "insufficientBuzz" in log:
+            stop.set()
+            return f"SKIP {sp}: insufficient Buzz"
+        raws = re.findall(r"^saved (tools/\S+\.png)", log, re.M)
+        if not raws:
+            reasons.append(log.strip().splitlines()[-1][:200] if log.strip() else "gen failed"); continue
+        back = REPO / raws[0]
+        out = HERE / "runs" / sp / "finished" / front.stem
+        r2 = subprocess.run([sys.executable, str(HERE / "civitai_creature.py"), "finish", str(front), str(back),
+                             "--frame2", "lunge", "--shiny", "--species", sp, "--out", str(out)],
+                            capture_output=True, text=True, cwd=HERE)
+        flog = r2.stdout + r2.stderr
+        ok, note = judge(out, flog + "\n--frame2 pass--\n" + flog) if not r2.returncode else (False, "finish failed")
+        if ok:
+            files, notes, drawn = install(sp, out, note)
+            commit(sp, files, notes, drawn, out, msg="new back (denoise 0.55, colours kept)")
+            return f"DONE {sp}: back {note}"
+        reasons.append(note)
+    return f"SKIP {sp}: {'; '.join(reasons)}"
 
 
 def do(sp: str) -> str:
@@ -260,18 +329,22 @@ def main():
     ap.add_argument("--currency", default="green", help="Buzz account(s): green (bought), blue (earned), yellow")
     ap.add_argument("-j", type=int, default=6, help="parallel species")
     ap.add_argument("--retries", type=int, default=1)
+    ap.add_argument("--redo", action="store_true", help="with named species: re-run even if already ART_READY (review fixes)")
+    ap.add_argument("--backs-only", action="store_true", help="with named species: new back only, keep the installed front")
     ap.add_argument("--allow-nopick", action="store_true", help="also run species with no refs.py pick")
     ap.add_argument("--no-push", dest="push", action="store_false")
     args = ap.parse_args()
-    todo = [s for s in pending() if not args.only or s in args.only]
+    todo = [s for s in pending(args.redo and bool(args.only)) if not args.only or s in args.only]
     picked = [s for s in todo if (PICKS / f"{s}.json").exists() or args.allow_nopick]
     if args.list or not args.budget:
         for s in todo:
             print(f"{s:16} {'pick' if (PICKS / f'{s}.json').exists() else '-'}")
         print(f"{len(todo)} pending, {len(picked)} runnable, about {len(picked) * COST} Buzz for one take each")
         return
+    if args.backs_only:
+        picked = list(args.only)
     with cf.ThreadPoolExecutor(args.j) as ex:
-        for res in ex.map(do, picked):
+        for res in ex.map(do_back if args.backs_only else do, picked):
             print(res, flush=True)
     print(f"spent about {spent} Buzz")
 

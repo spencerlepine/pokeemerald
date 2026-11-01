@@ -956,7 +956,7 @@ def main():
     f.add_argument("--shiny-sat", type=float, help="shiny saturation factor (default 1.0)")
     finish_args(f); f.set_defaults(fn=cmd_finish)
     r = sub.add_parser("run"); gen_args(r, both=True); finish_args(r)
-    r.add_argument("--back-denoise", type=float, default=0.7,
+    r.add_argument("--back-denoise", type=float, default=0.55,
                    help="back from the mirrored front: 0..1, higher redraws more (default 0.7)")
     r.add_argument("--back-text-only", action="store_true", help="back from the prompt alone, not the front"); r.set_defaults(fn=cmd_run)
     args = ap.parse_args()
