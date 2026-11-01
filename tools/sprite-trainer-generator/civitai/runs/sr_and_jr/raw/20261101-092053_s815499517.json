@@ -1,0 +1,47 @@
+{
+  "trainer": {
+    "stem": "sr_and_jr",
+    "wiki_path": "graphics/trainers/front_pics/sr_and_jr.png",
+    "sw_subject": "Old and young angler pair",
+    "subject": "old and young anglers",
+    "desc": "two people side by side: an old man in a fishing hat with a rod and a small boy with a rod",
+    "theme": "factions",
+    "style": "",
+    "pose": "standing, facing left, three-quarter view",
+    "negative": "",
+    "pair": true
+  },
+  "lora": {
+    "id": 443092,
+    "name": "XL v1",
+    "baseModel": "SDXL 1.0",
+    "trainedWords": [],
+    "air": null,
+    "files": [
+      {
+        "name": "pk_trainer_xl_v1.safetensors",
+        "sizeKB": 445819.83984375,
+        "sha256": "078E09DA2A123964B7EB30DB23EC24D59FB082343F69C7FAF925C4C07E97023E"
+      }
+    ]
+  },
+  "checkpoint": "urn:air:sdxl:checkpoint:civitai:101055@128078",
+  "params": {
+    "prompt": "(old and young anglers:1.3), two people side by side: an old man in a fishing hat with a rod and a small boy with a rod, full body character sprite, standing, facing left, three-quarter view, pixel art, game sprite, crisp dark outlines, solid white background, simple background",
+    "negativePrompt": "poke ball, pokeball, holding ball, baseball cap, generic pokemon trainer, anime boy, scenery, detailed background, gradient background, floor, shadow, text, watermark, signature, frame, border, multiple views, character sheet, turnaround, cropped, cut off feet, blurry, 3d, photo, realistic, painting, smooth shading",
+    "scheduler": "EulerA",
+    "steps": 25,
+    "cfgScale": 7.0,
+    "width": 768,
+    "height": 768,
+    "seed": 815499517,
+    "clipSkip": 2
+  },
+  "strength": 0.75,
+  "format": "jpeg",
+  "seed": 815499517,
+  "workflowId": "13596363-20261101092030499-ttxp",
+  "jobId": "8bf9965b-6327-402f-ac09-691fdfb85dc8",
+  "cost": "3 green",
+  "generated": "20261101-092053"
+}
