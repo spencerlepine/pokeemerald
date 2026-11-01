@@ -1,0 +1,48 @@
+{
+  "trainer": {
+    "stem": "hiker",
+    "wiki_path": "graphics/trainers/front_pics/hiker.png",
+    "sw_subject": "UGNAUGHT miner: pig snout, white mutton-chop whiskers, blue overalls, hard hat with a lamp, pickaxe",
+    "subject": "Ugnaught",
+    "desc": "Ugnaught from Star Wars: short stout pig-faced alien, pink wrinkled skin, flat upturned pig snout, small eyes, long white mutton-chop whiskers and white hair tufts, blue work overalls, small tool belt with a hydrospanner",
+    "theme": "factions",
+    "style": "",
+    "pose": "standing, facing left, three-quarter view",
+    "negative": "human face, human nose, pickaxe, shovel, large tools, captain hat, beard on chin",
+    "pair": false,
+    "strength": 0.5
+  },
+  "lora": {
+    "id": 443092,
+    "name": "XL v1",
+    "baseModel": "SDXL 1.0",
+    "trainedWords": [],
+    "air": null,
+    "files": [
+      {
+        "name": "pk_trainer_xl_v1.safetensors",
+        "sizeKB": 445819.83984375,
+        "sha256": "078E09DA2A123964B7EB30DB23EC24D59FB082343F69C7FAF925C4C07E97023E"
+      }
+    ]
+  },
+  "checkpoint": "urn:air:sdxl:checkpoint:civitai:101055@128078",
+  "params": {
+    "prompt": "solo, (single character:1.2), (ugnaught:1.3), Ugnaught from Star Wars: short stout pig-faced alien, pink wrinkled skin, flat upturned pig snout, small eyes, long white mutton-chop whiskers and white hair tufts, blue work overalls, small tool belt with a hydrospanner, full body character sprite, standing, facing left, three-quarter view, pixel art, game sprite, crisp dark outlines, solid white background, simple background",
+    "negativePrompt": "human face, human nose, pickaxe, shovel, large tools, captain hat, beard on chin, poke ball, pokeball, holding ball, baseball cap, generic pokemon trainer, anime boy, scenery, detailed background, gradient background, floor, shadow, text, watermark, signature, frame, border, multiple characters, multiple views, character sheet, turnaround, duplicate, cropped, cut off feet, blurry, 3d, photo, realistic, painting, smooth shading",
+    "scheduler": "EulerA",
+    "steps": 25,
+    "cfgScale": 7.0,
+    "width": 768,
+    "height": 768,
+    "seed": 186682397,
+    "clipSkip": 2
+  },
+  "strength": 0.5,
+  "format": "jpeg",
+  "seed": 186682397,
+  "workflowId": "13596363-20261101194750714-fklg",
+  "jobId": "41eaa13d-fac5-4561-8e4a-8d8812cfe7c4",
+  "cost": "3 green",
+  "generated": "20261101-194820"
+}
