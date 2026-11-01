@@ -1,10 +1,10 @@
 {
   "init": "refs/magmar_prep.png",
-  "init_source": "https://static.wikia.nocookie.net/starwars/images/d/de/LavaNymphs-2020DarthVader8.png/revision/latest/scale-to-width-down/1000?cb=20210316025923#crop=0.125,0.01,0.34,0.19",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/d/de/LavaNymphs-2020DarthVader8.png/revision/latest/scale-to-width-down/1000?cb=20210316025923#crop=0.115,0.0,0.35,0.183",
   "flip": false,
   "denoise": 0.5,
-  "desc": "small glowing orange lava sprite with buzzing wings and a mouth dripping molten rock",
+  "desc": "small glowing orange lava sprite with buzzing wings and a mouth dripping molten rock, whole body, small, centred",
   "colour": "orange yellow red",
   "negative": "brown background, rocks",
-  "ref_note": "Canon Mustafar lava nymph (Darth Vader 2020 comic), one nymph cropped from a swarm; matches 'spits molten rock'; some brown bg specks remain"
+  "ref_note": "Lava nymph (Darth Vader 2020), crop trimmed above the rocks; smaller prep"
 }
