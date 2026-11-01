@@ -1,6 +1,10 @@
 {
   "flip": false,
-  "desc": "Chunky cartoon crocodile standing upright on two thick legs, head on the left with long snout and white teeth, short ridge of spikes on its back, cream belly, thick tail, simple clean shape, three-quarter view",
-  "colour": "blue and cream",
-  "ref_note": "text only: ghest art is uncoloured line art or cluttered comic"
+  "desc": "chunky swamp crocodile standing upright, three-quarter view, whole body, wide toothy jaws, spiky back ridge, thick tail",
+  "colour": "blue with cream belly and red spikes",
+  "ref_note": "Ghest line art, same as totodile and feraligatr for line consistency; strong colour, denoise 0.6",
+  "init": "refs/croconaw_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/8/81/Ghest.jpg/revision/latest?cb=20060714222754",
+  "denoise": 0.6,
+  "negative": "white, sketch, line art"
 }
