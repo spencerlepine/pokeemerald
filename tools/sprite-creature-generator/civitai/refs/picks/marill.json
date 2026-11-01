@@ -1,6 +1,10 @@
 {
   "flip": false,
-  "desc": "small round water mouse sitting, chubby round body, two round ears, thin tail ending in a round float ball, side view facing left, whole body, small, centred",
-  "colour": "blue with cream belly",
-  "ref_note": "text only: Ash-rabbit line art gave mush; no clean round rodent art"
+  "desc": "small round water mouse, chubby round body, round ears, thin tail with a ball tip, three-quarter view, whole body",
+  "colour": "bright blue with cream belly",
+  "ref_note": "Ash-rabbit (same as azumarill), full image with margin, strong colour and denoise 0.6; text-only try was a frame-filling blob",
+  "init": "refs/marill_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/b/bc/Ash-rabbit.png/revision/latest?cb=20160501175038",
+  "denoise": 0.6,
+  "negative": "white, sketch, rock"
 }
