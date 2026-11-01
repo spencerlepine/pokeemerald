@@ -315,26 +315,72 @@ def native(img: Image.Image) -> tuple[Image.Image, int]:
     return Image.fromarray(out, "RGB"), period
 
 
-def knock_out_background(img: Image.Image, tol: int = 40) -> Image.Image:
-    """Flood-fill from the border through pixels near the border's median colour -> transparent."""
+def _components(mask: np.ndarray) -> list[list[tuple[int, int]]]:
+    """4-connected components of a boolean mask, as lists of (y, x)."""
+    h, w = mask.shape
+    seen = np.zeros((h, w), bool)
+    out = []
+    for y0 in range(h):
+        for x0 in range(w):
+            if mask[y0, x0] and not seen[y0, x0]:
+                st, comp = [(y0, x0)], []
+                seen[y0, x0] = True
+                while st:
+                    y, x = st.pop(); comp.append((y, x))
+                    for ny, nx in ((y + 1, x), (y - 1, x), (y, x + 1), (y, x - 1)):
+                        if 0 <= ny < h and 0 <= nx < w and mask[ny, nx] and not seen[ny, nx]:
+                            seen[ny, nx] = True; st.append((ny, nx))
+                out.append(comp)
+    return out
+
+
+def knock_out_background(img: Image.Image, tol: int = 30, step: int = 24, pockets: bool = True,
+                         ptol: int = 18, pmin: int = 4, pmax: int = 200, dark: int = 110,
+                         ring: float = 0.75) -> Image.Image:
+    """Background -> transparent.
+
+    1. Flood-fill from the border through pixels near the border's median colour, and through pale
+       neutral greys only in small steps from the pixel before (corner vignettes), so a gap in an
+       outline cannot leak the fill into white armour, a white robe or white hair.
+    2. Pockets: enclosed islands of the background colour (between an arm and the body, inside a
+       whip loop) that the fill cannot reach. An island counts when it is 4-200 native pixels and
+       at least 75% of the pixels around it are dark outline; eye whites (1-3 px) are left alone.
+       Jobs with white armour that looks like background (stormtroopers) set "keep_pockets".
+    """
     a = np.array(img.convert("RGB")).astype(int)
     h, w, _ = a.shape
     bg = np.median(np.concatenate([a[0], a[-1], a[:, 0], a[:, -1]]), axis=0)
-    near = np.abs(a - bg).sum(2) <= tol
-    # plus pale neutral greys (vignettes/gradients in the corners); dark outlines stop the fill
-    near |= (a.min(2) >= 200) & (a.max(2) - a.min(2) <= 16)
+    diff = np.abs(a - bg).sum(2)
+    near = diff <= tol
+    pale = (a.min(2) >= 190) & (a.max(2) - a.min(2) <= 16)
     seen = np.zeros((h, w), bool)
-    dq = deque([(y, x) for y in range(h) for x in (0, w - 1)] + [(y, x) for x in range(w) for y in (0, h - 1)])
+    dq = deque()
+    for y, x in [(y, x) for y in range(h) for x in (0, w - 1)] + [(y, x) for x in range(w) for y in (0, h - 1)]:
+        if (near[y, x] or pale[y, x]) and not seen[y, x]:
+            seen[y, x] = True; dq.append((y, x))
     while dq:
         y, x = dq.popleft()
-        if 0 <= y < h and 0 <= x < w and not seen[y, x] and near[y, x]:
-            seen[y, x] = True
-            dq.extend(((y + 1, x), (y - 1, x), (y, x + 1), (y, x - 1)))
+        for ny, nx in ((y + 1, x), (y - 1, x), (y, x + 1), (y, x - 1)):
+            if 0 <= ny < h and 0 <= nx < w and not seen[ny, nx] and (
+                    near[ny, nx] or (pale[ny, nx] and np.abs(a[ny, nx] - a[y, x]).sum() <= step)):
+                seen[ny, nx] = True; dq.append((ny, nx))
+    if pockets:
+        isdark = a.max(2) < dark
+        for comp in _components((diff <= ptol) & ~seen):
+            if not pmin <= len(comp) <= pmax:
+                continue
+            cs = set(comp)
+            around = {(y + dy, x + dx) for y, x in comp for dy in (-1, 0, 1) for dx in (-1, 0, 1)
+                      if 0 <= y + dy < h and 0 <= x + dx < w and (y + dy, x + dx) not in cs}
+            around = [p for p in around if not seen[p]]
+            if around and np.mean([isdark[p] for p in around]) >= ring:
+                for p in comp:
+                    seen[p] = True
     return Image.fromarray(np.dstack([a, np.where(seen, 0, 255)]).astype(np.uint8), "RGBA")
 
 
 def despeck(img: Image.Image, share: float = 0.04, light: int = 170) -> Image.Image:
-    """Drop small detached islands of light pixels (white/grey background scraps the flood fill missed)."""
+    """Drop detached specks (3 px or fewer) and small detached islands of light pixels (background scraps)."""
     a = np.array(img)
     op = a[..., 3] > 0
     h, w = op.shape
@@ -353,7 +399,7 @@ def despeck(img: Image.Image, share: float = 0.04, light: int = 170) -> Image.Im
                             if 0 <= ny < h and 0 <= nx < w and op[ny, nx] and not seen[ny, nx]:
                                 seen[ny, nx] = True; st.append((ny, nx))
                 ys, xs = zip(*comp)
-                if len(comp) < share * total and a[ys, xs, :3].min(1).mean() >= light:
+                if len(comp) <= 3 or (len(comp) < share * total and a[ys, xs, :3].min(1).mean() >= light):
                     a[ys, xs, 3] = 0
     return Image.fromarray(a, "RGBA")
 
@@ -432,13 +478,15 @@ def place(sprite: Image.Image, size: int = 64) -> Image.Image:
 
 
 def finish(raw: Path, theme: str, fit: str, free: int) -> Path:
+    jobs = json.loads(JOBS_FILE.read_text()) if JOBS_FILE.exists() else {}
+    pockets = not jobs.get(raw.parent.parent.name, {}).get("keep_pockets")
     src = Image.open(raw).convert("RGB")
     out_dir = raw.parent.parent / ("finished" if fit == "auto" else f"finished_{fit}")
     out_dir.mkdir(parents=True, exist_ok=True)
     stem = raw.stem
 
     nat, period = native(src)
-    fig = despeck(knock_out_background(nat))
+    fig = despeck(knock_out_background(nat, pockets=pockets))
     if fig.getbbox() is None:
         sys.exit(f"{raw.name}: nothing left after background removal")
     fig = quantise(fig.crop(fig.getbbox()))

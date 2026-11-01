@@ -27,6 +27,13 @@ Brendan, May, their R/S pics, Wally and Leia (steven) share their palette with t
 new `.pal` is in `wiki/art/graphics/trainers/palettes/`, and the back pics must adopt it.
 Nothing is in `game/` yet.
 
+Background cut (fixed 2026-11-01 after review): the flood fill from the border only crosses pale
+greys in small steps, so an outline gap can no longer eat white armour or Yoda's hair; enclosed
+pockets of the background colour (between an arm and the body) are cleared when dark outline rings
+them; specks of 3 px or fewer are dropped. `"keep_pockets": true` in `jobs.json` turns pocket
+clearing off for characters whose white or pale parts look like background (stormtroopers, Aurra
+Sing's rifle, Tarfful's belt, the diver's breather, the brawler's belt).
+
 ## Setup
 
 1. Make a key: civitai.com, **Account settings, API Keys, Add API key**.

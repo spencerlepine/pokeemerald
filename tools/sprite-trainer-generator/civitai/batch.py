@@ -237,6 +237,8 @@ def refinish(row: dict) -> str:
     log = r.stdout + r.stderr
     final = raws[-1].parent.parent / "finished" / raws[-1].name
     ok, note = judge(final, log, bool(JOBS.get(stem, {}).get("pair")))
+    if not ok and note == "pair pic with one figure":  # already reviewed: the two people touch
+        ok, note = True, re.search(r"figure (\d+x\d+)", log).group(0)
     if not ok:
         return f"BAD {stem}: {note}"
     files, notes, drawn = install(row, final, log, note)

@@ -116,7 +116,8 @@
     "subject": "Teras Kasi brawler",
     "desc": "muscular man, shaved head with a topknot, green training wrap gi, red-brown belt, bare feet, fists raised",
     "theme": "factions",
-    "style": ""
+    "style": "",
+    "keep_pockets": true
   },
   "bug_catcher": {
     "subject": "young boy",
@@ -289,7 +290,8 @@
     "desc": "huge Wookiee chieftain, long brown fur all over, leather bandolier across the chest, big fists",
     "theme": "alliance-dawn",
     "style": "",
-    "negative": "human face, skin"
+    "negative": "human face, skin",
+    "keep_pockets": true
   },
   "leader_flannery": {
     "subject": "Sabine Wren",
@@ -347,14 +349,16 @@
     "desc": "white plastoid stormtrooper armour, white helmet with black visor eyes, black bodyglove, blaster rifle, slim build",
     "theme": "imperial-order",
     "style": "",
-    "negative": "visible face, skin, hair"
+    "negative": "visible face, skin, hair",
+    "keep_pockets": true
   },
   "magma_grunt_m": {
     "subject": "stormtrooper",
     "desc": "white plastoid stormtrooper armour, white helmet with black visor eyes, black bodyglove, E-11 blaster rifle",
     "theme": "imperial-order",
     "style": "",
-    "negative": "visible face, skin, hair"
+    "negative": "visible face, skin, hair",
+    "keep_pockets": true
   },
   "ninja_boy": {
     "subject": "young infiltrator",
@@ -490,7 +494,8 @@
     "subject": "Aurra Sing",
     "desc": "tall pale bald woman bounty hunter, red topknot, head antenna, dark red bodysuit, long sniper rifle",
     "theme": "factions",
-    "style": ""
+    "style": "",
+    "keep_pockets": true
   },
   "school_kid_f": {
     "subject": "female academy cadet",
@@ -522,7 +527,8 @@
     "subject": "female diver",
     "desc": "young woman in a blue dive suit with a dive hood, mask and small breather",
     "theme": "factions",
-    "style": ""
+    "style": "",
+    "keep_pockets": true
   },
   "swimmer_m": {
     "subject": "male diver",
