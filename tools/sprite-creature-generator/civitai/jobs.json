@@ -1,0 +1,12 @@
+{
+  "poochyena": {
+    "subject": "massiff",
+    "desc": "spiky reptile hound on four legs, long crocodile snout with open jaws and sharp teeth, row of long spines along its back, small dark eyes, thick scaly legs with claws, grey and brown scaly hide",
+    "types": [],
+    "colour": "grey and brown",
+    "negative": "humanoid, standing upright, arms, fur, fluffy, dog ears",
+    "init": "https://static.wikia.nocookie.net/starwars/images/b/ba/Massiff-Outlaws.png/revision/latest?cb=20250126054829",
+    "flip": true,
+    "denoise": 0.7
+  }
+}
