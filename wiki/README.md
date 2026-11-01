@@ -149,14 +149,17 @@ The current pass (all `DRAFT`, waiting for the owner's review):
 ## Rebuilding
 
 `tools/build.py` regenerates `database/` from `mapping/` (hand-written rows, see
-[`mapping/README.md`](mapping/README.md)) plus the emerald-db and starwars-db databases:
+[`mapping/README.md`](mapping/README.md)) plus [`emerald/`](emerald/README.md), the read-only Emerald tables it
+needs, copied into this repo. Nothing outside the repo is needed; starwars-db is optional (it only validates
+`sw_basis` ids).
 
 ```sh
 python3 tools/scan_game_assets.py   # mapping/asset_inventory.csv from ../game (re-run after the game changes)
-EMERALD_DB_DIR=/path/to/emerald-db/database STARWARS_DB_DIR=/path/to/starwars-db/database python3 tools/build.py
+python3 tools/build.py              # optional: STARWARS_DB_DIR=/path/to/starwars-db/database
 python3 tools/habitats.py   # species_habitats.csv
 python3 wiki/server.py      # browse at http://127.0.0.1:8000
 ```
 
-The emerald-db database is the `wiki/database` folder of pokeemerald commit `3ef77dfe` (before this wiki
-replaced it). The history of how the mapping was built (checklists, notes, coverage reports) is in git history.
+A rebuild keeps every `game_status` DONE already in `database/` (ship tools write it there once an asset is in
+`../game`), so it never un-ships anything. The Emerald tables in `emerald/` match the `wiki/database` folder of
+commit `3ef77dfe` (before this wiki replaced it). The history of how the mapping was built (checklists, notes, coverage reports) is in git history.

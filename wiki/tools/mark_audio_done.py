@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Apply mapping/audio_done.csv to database/ without a full rebuild (build.py needs emerald-db).
+"""Apply mapping/audio_done.csv to database/ without a full rebuild (tools/build.py).
 
 Each row of mapping/audio_done.csv is a sound the owner approved that a tool (cry-generator, sfx-generator)
 installed into ../game at `game_file`. In pending_audio.csv the row becomes `audio_status` DONE with

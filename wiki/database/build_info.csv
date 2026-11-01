@@ -1,13 +1,13 @@
 key,value
-emerald_db,/home/user/spencerlepine/emerald-db/database
+emerald_db,wiki/emerald
 emerald_db_commit,731ad5bfd6e6f265508d0efcca0ba42f9dcf5881
 entities,6966
-net_new,26
+net_new,27
 texts_auto,0
 texts_curated,11229
 texts_unchanged,0
 art_rows,4622
-audio_rows,951
+audio_rows,984
 ghost_rows,103
 human_todo_rows,148
 warnings,4

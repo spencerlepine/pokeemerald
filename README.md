@@ -25,6 +25,7 @@
 | [`wiki/database/music.csv`](wiki/database/music.csv) | Every song, labelled by category (town, route, battle, fanfare…) and form (loop, ambient, cue, jingle), with its rewrite status and tech notes for the music generator. |
 | [`wiki/database/`](wiki/database/) | The other generated tables (entities, timeline, net-new, area progression, habitats). |
 | [`wiki/mapping/`](wiki/mapping/) | The hand-written decisions the database is built from ([`mapping/README.md`](wiki/mapping/README.md)). |
+| [`wiki/emerald/`](wiki/emerald/README.md) | Read-only Emerald tables the build reads, so `wiki/tools/build.py` runs with nothing outside this repo. |
 | [`wiki/tools/`](wiki/tools/) | `build.py` (mapping → database) and `scan_game_assets.py` (inventory of `game/` sound and VFX). |
 
 ## Tools

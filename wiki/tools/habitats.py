@@ -17,7 +17,7 @@ import os
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-EMERALD = Path(os.environ.get("EMERALD_DB_DIR", ROOT.parent / "emerald-db" / "database"))
+EMERALD = Path(os.environ.get("EMERALD_DB_DIR", ROOT / "emerald"))
 
 
 def read(p):

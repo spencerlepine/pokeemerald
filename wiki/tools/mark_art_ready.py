@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Apply mapping/art_ready.csv to database/ without a full rebuild (build.py needs emerald-db).
+"""Apply mapping/art_ready.csv to database/ without a full rebuild (tools/build.py).
 
 Each row of mapping/art_ready.csv is art the owner approved: the image is stored in the wiki at
 `art_file` (art/<game path>), and the row becomes `art_status` ART_READY in pending_art.csv. It is

@@ -1,10 +1,11 @@
-"""Build database/ from emerald-db (read-only) + mapping/ (hand-written Star Wars rows).
+"""Build database/ from emerald/ (read-only Emerald snapshot) + mapping/ (hand-written Star Wars rows).
 
     python3 tools/build.py
 
 Inputs
-  ../emerald-db/database/*.csv   (or EMERALD_DB_DIR)   every Emerald row, never edited
-  ../starwars-db/database/       (or STARWARS_DB_DIR)  used to validate sw_basis ids
+  emerald/*.csv                  (or EMERALD_DB_DIR)   every Emerald row, never edited: the tables this build
+                                                        reads, copied from emerald-db (see emerald/README.md)
+  ../starwars-db/database/       (or STARWARS_DB_DIR)  optional: validates sw_basis ids when present
   mapping/*.csv                                         the Star Wars rewrite, by emerald id
   mapping/texts/*.csv                                   curated dialogue rewrites (optional)
 
@@ -33,7 +34,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 MAPPING = ROOT / "mapping"
 OUT = ROOT / "database"
-EMERALD = Path(os.environ.get("EMERALD_DB_DIR", ROOT.parent / "emerald-db" / "database"))
+EMERALD = Path(os.environ.get("EMERALD_DB_DIR", ROOT / "emerald"))
 STARWARS = Path(os.environ.get("STARWARS_DB_DIR", ROOT.parent / "starwars-db" / "database"))
 
 csv.field_size_limit(sys.maxsize)
@@ -83,7 +84,33 @@ def read(path: Path) -> list[dict]:
         return list(csv.DictReader(f))
 
 
+# Ship tools (e.g. tools/sprite-creature-generator/civitai/ship.py) mark rows game_status DONE straight in
+# database/ once the asset is in ../game. The build has no other record of that, so a rebuild keeps every DONE
+# it finds in the previous file (same key), plus the port note the ship tool wrote. A rebuild never un-ships.
+KEEP_DONE = {"pending_art.csv": ("asset_id", ["game_status"]), "pending_audio.csv": ("asset_id", ["game_status"]),
+             "game_port.csv": ("port_id", ["game_status", "action"]), "net_new.csv": ("id", ["game_status"]),
+             "entities.csv": ("id", ["game_status"]), "texts.csv": ("text_id", ["game_status"]),
+             "timeline_events.csv": ("id", ["game_status"])}
+
+
+def keep_done(name: str, rows: list[dict]) -> None:
+    key, cols = KEEP_DONE.get(name, (None, None))
+    path = OUT / name
+    if not key or not path.exists():
+        return
+    done = {r[key]: r for r in read(path) if r.get("game_status") == "DONE" and r.get(key)}
+    n = 0
+    for r in rows:
+        old = done.get(r.get(key))
+        if old and r.get("game_status") != "DONE":
+            r.update({c: old[c] for c in cols if c in old})
+            n += 1
+    if n:
+        print(f"  database/{name}: kept {n} DONE rows from the previous build")
+
+
 def write(name: str, rows: list[dict], cols: list[str] | None = None) -> None:
+    keep_done(name, rows)
     if cols is None:
         cols = []
         for r in rows:
@@ -114,14 +141,14 @@ def slug(name: str) -> str:
 
 def load_inputs():
     if not EMERALD.exists():
-        sys.exit(f"emerald-db not found at {EMERALD}; clone it next to this repo or set EMERALD_DB_DIR")
+        sys.exit(f"Emerald snapshot not found at {EMERALD} (wiki/emerald/, or set EMERALD_DB_DIR)")
     entities = read(EMERALD / "entities.csv")
     by_id = {e["id"]: e for e in entities}
     sw_ids = set()
     if (STARWARS / "entities.csv").exists():
         sw_ids = {r["id"] for r in read(STARWARS / "entities.csv")}
     else:
-        warn(f"starwars-db not found at {STARWARS}; sw_basis ids not validated")
+        print(f"  note: starwars-db not found at {STARWARS}; sw_basis ids not validated (optional)")
 
     mapping: dict[str, dict] = {}
     for name in MAPPING_FILES:
@@ -870,7 +897,7 @@ def game_port(ents, net, texts, tl, art, audio):
         elif a["art_status"] in ("KEEP_ANIM", "KEEP_ART", "NO_ART"):
             action, dep = "keep as is; rename only if suggested_path is set", ""
         elif a["art_status"] == "NEEDS_PLACEHOLDER" and a.get("placeholder_from"):
-            action = f"add it: copy {a['placeholder_from']} as a placeholder, swap in the new art once art_status is DONE"
+            action = f"add it: copy {a['placeholder_from']} as a placeholder, swap in the new art once art_status is ART_READY"
             dep = a.get("depends_on", "")
         else:
             action, dep = "copy the redrawn art into ../game once art_status is ART_READY", "art_status ART_READY in pending_art.csv"
@@ -1058,7 +1085,8 @@ def main() -> None:
     port = game_port(ent_out, net, texts, tl, art, audio)
     write("game_port.csv", port, PORT_COLS)
 
-    info = [{"key": "emerald_db", "value": str(EMERALD)},
+    emerald = str(EMERALD.relative_to(ROOT.parent)) if EMERALD.is_relative_to(ROOT.parent) else str(EMERALD)
+    info = [{"key": "emerald_db", "value": emerald},
             {"key": "emerald_db_commit", "value": next((r["value"] for r in read(EMERALD / "build_info.csv")
                                                        if r.get("key") == "pokeemerald_commit"), "")},
             {"key": "entities", "value": str(len(entities))},
