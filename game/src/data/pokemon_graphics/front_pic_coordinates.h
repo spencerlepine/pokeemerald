@@ -5,257 +5,257 @@
 const struct MonCoords gMonFrontPicCoords[] =
 {
     [SPECIES_NONE]        = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
-    [SPECIES_BULBASAUR]   = { .size = MON_COORDS_SIZE(32, 40), .y_offset = 14 },
-    [SPECIES_IVYSAUR]     = { .size = MON_COORDS_SIZE(40, 48), .y_offset = 10 },
-    [SPECIES_VENUSAUR]    = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  3 },
-    [SPECIES_CHARMANDER]  = { .size = MON_COORDS_SIZE(40, 40), .y_offset = 12 },
-    [SPECIES_CHARMELEON]  = { .size = MON_COORDS_SIZE(48, 48), .y_offset =  9 },
-    [SPECIES_CHARIZARD]   = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  1 },
-    [SPECIES_SQUIRTLE]    = { .size = MON_COORDS_SIZE(48, 40), .y_offset = 13 },
-    [SPECIES_WARTORTLE]   = { .size = MON_COORDS_SIZE(48, 48), .y_offset =  8 },
-    [SPECIES_BLASTOISE]   = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
-    [SPECIES_CATERPIE]    = { .size = MON_COORDS_SIZE(32, 40), .y_offset = 16 },
-    [SPECIES_METAPOD]     = { .size = MON_COORDS_SIZE(40, 32), .y_offset = 20 },
-    [SPECIES_BUTTERFREE]  = { .size = MON_COORDS_SIZE(56, 48), .y_offset =  9 },
-    [SPECIES_WEEDLE]      = { .size = MON_COORDS_SIZE(40, 32), .y_offset = 18 },
-    [SPECIES_KAKUNA]      = { .size = MON_COORDS_SIZE(32, 40), .y_offset = 14 },
-    [SPECIES_BEEDRILL]    = { .size = MON_COORDS_SIZE(64, 48), .y_offset =  9 },
-    [SPECIES_PIDGEY]      = { .size = MON_COORDS_SIZE(48, 40), .y_offset = 13 },
-    [SPECIES_PIDGEOTTO]   = { .size = MON_COORDS_SIZE(48, 56), .y_offset = 11 },
-    [SPECIES_PIDGEOT]     = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  1 },
-    [SPECIES_RATTATA]     = { .size = MON_COORDS_SIZE(32, 32), .y_offset = 16 },
-    [SPECIES_RATICATE]    = { .size = MON_COORDS_SIZE(48, 48), .y_offset = 11 },
-    [SPECIES_SPEAROW]     = { .size = MON_COORDS_SIZE(32, 40), .y_offset = 15 },
-    [SPECIES_FEAROW]      = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },
-    [SPECIES_EKANS]       = { .size = MON_COORDS_SIZE(48, 40), .y_offset = 12 },
-    [SPECIES_ARBOK]       = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  2 },
-    [SPECIES_PIKACHU]     = { .size = MON_COORDS_SIZE(48, 56), .y_offset =  9 },
-    [SPECIES_RAICHU]      = { .size = MON_COORDS_SIZE(48, 56), .y_offset =  4 },
-    [SPECIES_SANDSHREW]   = { .size = MON_COORDS_SIZE(40, 40), .y_offset = 14 },
-    [SPECIES_SANDSLASH]   = { .size = MON_COORDS_SIZE(56, 48), .y_offset =  9 },
-    [SPECIES_NIDORAN_F]   = { .size = MON_COORDS_SIZE(32, 40), .y_offset = 15 },
-    [SPECIES_NIDORINA]    = { .size = MON_COORDS_SIZE(48, 48), .y_offset = 11 },
-    [SPECIES_NIDOQUEEN]   = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  3 },
-    [SPECIES_NIDORAN_M]   = { .size = MON_COORDS_SIZE(40, 40), .y_offset = 12 },
-    [SPECIES_NIDORINO]    = { .size = MON_COORDS_SIZE(48, 48), .y_offset =  9 },
-    [SPECIES_NIDOKING]    = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  2 },
-    [SPECIES_CLEFAIRY]    = { .size = MON_COORDS_SIZE(40, 40), .y_offset = 16 },
-    [SPECIES_CLEFABLE]    = { .size = MON_COORDS_SIZE(48, 48), .y_offset =  8 },
-    [SPECIES_VULPIX]      = { .size = MON_COORDS_SIZE(48, 40), .y_offset = 12 },
-    [SPECIES_NINETALES]   = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  3 },
-    [SPECIES_JIGGLYPUFF]  = { .size = MON_COORDS_SIZE(32, 40), .y_offset = 16 },
-    [SPECIES_WIGGLYTUFF]  = { .size = MON_COORDS_SIZE(48, 56), .y_offset =  8 },
-    [SPECIES_ZUBAT]       = { .size = MON_COORDS_SIZE(48, 56), .y_offset =  6 },
-    [SPECIES_GOLBAT]      = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  3 },
-    [SPECIES_ODDISH]      = { .size = MON_COORDS_SIZE(32, 40), .y_offset = 15 },
-    [SPECIES_GLOOM]       = { .size = MON_COORDS_SIZE(48, 48), .y_offset = 10 },
-    [SPECIES_VILEPLUME]   = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  6 },
-    [SPECIES_PARAS]       = { .size = MON_COORDS_SIZE(40, 40), .y_offset = 15 },
-    [SPECIES_PARASECT]    = { .size = MON_COORDS_SIZE(64, 48), .y_offset =  8 },
-    [SPECIES_VENONAT]     = { .size = MON_COORDS_SIZE(48, 48), .y_offset =  8 },
-    [SPECIES_VENOMOTH]    = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  2 },
-    [SPECIES_DIGLETT]     = { .size = MON_COORDS_SIZE(40, 32), .y_offset = 18 },
-    [SPECIES_DUGTRIO]     = { .size = MON_COORDS_SIZE(56, 40), .y_offset = 13 },
-    [SPECIES_MEOWTH]      = { .size = MON_COORDS_SIZE(40, 40), .y_offset = 12 },
-    [SPECIES_PERSIAN]     = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  7 },
-    [SPECIES_PSYDUCK]     = { .size = MON_COORDS_SIZE(40, 48), .y_offset =  9 },
-    [SPECIES_GOLDUCK]     = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  2 },
-    [SPECIES_MANKEY]      = { .size = MON_COORDS_SIZE(48, 40), .y_offset = 14 },
-    [SPECIES_PRIMEAPE]    = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  7 },
-    [SPECIES_GROWLITHE]   = { .size = MON_COORDS_SIZE(48, 48), .y_offset = 11 },
-    [SPECIES_ARCANINE]    = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  2 },
-    [SPECIES_POLIWAG]     = { .size = MON_COORDS_SIZE(56, 32), .y_offset = 19 },
-    [SPECIES_POLIWHIRL]   = { .size = MON_COORDS_SIZE(56, 48), .y_offset = 10 },
-    [SPECIES_POLIWRATH]   = { .size = MON_COORDS_SIZE(56, 48), .y_offset =  8 },
-    [SPECIES_ABRA]        = { .size = MON_COORDS_SIZE(48, 48), .y_offset = 11 },
-    [SPECIES_KADABRA]     = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  5 },
-    [SPECIES_ALAKAZAM]    = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  4 },
-    [SPECIES_MACHOP]      = { .size = MON_COORDS_SIZE(40, 48), .y_offset = 11 },
-    [SPECIES_MACHOKE]     = { .size = MON_COORDS_SIZE(48, 56), .y_offset =  6 },
-    [SPECIES_MACHAMP]     = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  1 },
-    [SPECIES_BELLSPROUT]  = { .size = MON_COORDS_SIZE(48, 40), .y_offset = 15 },
-    [SPECIES_WEEPINBELL]  = { .size = MON_COORDS_SIZE(48, 48), .y_offset = 11 },
-    [SPECIES_VICTREEBEL]  = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  5 },
-    [SPECIES_TENTACOOL]   = { .size = MON_COORDS_SIZE(32, 48), .y_offset =  9 },
-    [SPECIES_TENTACRUEL]  = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  4 },
-    [SPECIES_GEODUDE]     = { .size = MON_COORDS_SIZE(40, 32), .y_offset = 18 },
-    [SPECIES_GRAVELER]    = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  4 },
-    [SPECIES_GOLEM]       = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  5 },
-    [SPECIES_PONYTA]      = { .size = MON_COORDS_SIZE(48, 48), .y_offset =  8 },
-    [SPECIES_RAPIDASH]    = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  1 },
-    [SPECIES_SLOWPOKE]    = { .size = MON_COORDS_SIZE(48, 48), .y_offset = 11 },
-    [SPECIES_SLOWBRO]     = { .size = MON_COORDS_SIZE(64, 48), .y_offset =  8 },
-    [SPECIES_MAGNEMITE]   = { .size = MON_COORDS_SIZE(32, 24), .y_offset = 21 },
-    [SPECIES_MAGNETON]    = { .size = MON_COORDS_SIZE(56, 48), .y_offset =  8 },
-    [SPECIES_FARFETCHD]   = { .size = MON_COORDS_SIZE(48, 48), .y_offset =  9 },
-    [SPECIES_DODUO]       = { .size = MON_COORDS_SIZE(40, 56), .y_offset =  5 },
-    [SPECIES_DODRIO]      = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
-    [SPECIES_SEEL]        = { .size = MON_COORDS_SIZE(56, 48), .y_offset = 10 },
-    [SPECIES_DEWGONG]     = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  7 },
-    [SPECIES_GRIMER]      = { .size = MON_COORDS_SIZE(48, 40), .y_offset = 12 },
-    [SPECIES_MUK]         = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  4 },
-    [SPECIES_SHELLDER]    = { .size = MON_COORDS_SIZE(40, 40), .y_offset = 16 },
-    [SPECIES_CLOYSTER]    = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  5 },
-    [SPECIES_GASTLY]      = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  6 },
-    [SPECIES_HAUNTER]     = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  5 },
-    [SPECIES_GENGAR]      = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  5 },
-    [SPECIES_ONIX]        = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  2 },
-    [SPECIES_DROWZEE]     = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  7 },
-    [SPECIES_HYPNO]       = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  4 },
-    [SPECIES_KRABBY]      = { .size = MON_COORDS_SIZE(48, 40), .y_offset = 13 },
-    [SPECIES_KINGLER]     = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  3 },
-    [SPECIES_VOLTORB]     = { .size = MON_COORDS_SIZE(32, 32), .y_offset = 19 },
-    [SPECIES_ELECTRODE]   = { .size = MON_COORDS_SIZE(40, 40), .y_offset = 14 },
-    [SPECIES_EXEGGCUTE]   = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  7 },
-    [SPECIES_EXEGGUTOR]   = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
-    [SPECIES_CUBONE]      = { .size = MON_COORDS_SIZE(40, 40), .y_offset = 15 },
-    [SPECIES_MAROWAK]     = { .size = MON_COORDS_SIZE(56, 48), .y_offset = 11 },
-    [SPECIES_HITMONLEE]   = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  4 },
-    [SPECIES_HITMONCHAN]  = { .size = MON_COORDS_SIZE(48, 56), .y_offset =  4 },
-    [SPECIES_LICKITUNG]   = { .size = MON_COORDS_SIZE(64, 48), .y_offset =  8 },
-    [SPECIES_KOFFING]     = { .size = MON_COORDS_SIZE(48, 48), .y_offset =  8 },
-    [SPECIES_WEEZING]     = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  2 },
-    [SPECIES_RHYHORN]     = { .size = MON_COORDS_SIZE(56, 48), .y_offset =  9 },
-    [SPECIES_RHYDON]      = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  2 },
-    [SPECIES_CHANSEY]     = { .size = MON_COORDS_SIZE(56, 48), .y_offset =  9 },
-    [SPECIES_TANGELA]     = { .size = MON_COORDS_SIZE(48, 56), .y_offset =  7 },
-    [SPECIES_KANGASKHAN]  = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
-    [SPECIES_HORSEA]      = { .size = MON_COORDS_SIZE(32, 40), .y_offset = 15 },
-    [SPECIES_SEADRA]      = { .size = MON_COORDS_SIZE(48, 56), .y_offset =  7 },
-    [SPECIES_GOLDEEN]     = { .size = MON_COORDS_SIZE(48, 48), .y_offset = 10 },
-    [SPECIES_SEAKING]     = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  4 },
-    [SPECIES_STARYU]      = { .size = MON_COORDS_SIZE(48, 48), .y_offset = 10 },
-    [SPECIES_STARMIE]     = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  6 },
-    [SPECIES_MR_MIME]     = { .size = MON_COORDS_SIZE(48, 48), .y_offset =  8 },
-    [SPECIES_SCYTHER]     = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
-    [SPECIES_JYNX]        = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  4 },
-    [SPECIES_ELECTABUZZ]  = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  2 },
-    [SPECIES_MAGMAR]      = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  4 },
-    [SPECIES_PINSIR]      = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  4 },
-    [SPECIES_TAUROS]      = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },
-    [SPECIES_MAGIKARP]    = { .size = MON_COORDS_SIZE(48, 56), .y_offset =  6 },
-    [SPECIES_GYARADOS]    = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  8 },
-    [SPECIES_LAPRAS]      = { .size = MON_COORDS_SIZE(64, 40), .y_offset = 13 },
-    [SPECIES_DITTO]       = { .size = MON_COORDS_SIZE(40, 32), .y_offset = 17 },
-    [SPECIES_EEVEE]       = { .size = MON_COORDS_SIZE(40, 48), .y_offset =  9 },
-    [SPECIES_VAPOREON]    = { .size = MON_COORDS_SIZE(48, 56), .y_offset =  6 },
-    [SPECIES_JOLTEON]     = { .size = MON_COORDS_SIZE(56, 48), .y_offset =  9 },
-    [SPECIES_FLAREON]     = { .size = MON_COORDS_SIZE(48, 48), .y_offset = 10 },
-    [SPECIES_PORYGON]     = { .size = MON_COORDS_SIZE(40, 40), .y_offset = 13 },
-    [SPECIES_OMANYTE]     = { .size = MON_COORDS_SIZE(32, 40), .y_offset = 15 },
-    [SPECIES_OMASTAR]     = { .size = MON_COORDS_SIZE(48, 56), .y_offset =  7 },
-    [SPECIES_KABUTO]      = { .size = MON_COORDS_SIZE(40, 32), .y_offset = 17 },
-    [SPECIES_KABUTOPS]    = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  3 },
-    [SPECIES_AERODACTYL]  = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  1 },
-    [SPECIES_SNORLAX]     = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  5 },
-    [SPECIES_ARTICUNO]    = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  3 },
-    [SPECIES_ZAPDOS]      = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  4 },
-    [SPECIES_MOLTRES]     = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
-    [SPECIES_DRATINI]     = { .size = MON_COORDS_SIZE(56, 40), .y_offset = 14 },
-    [SPECIES_DRAGONAIR]   = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  6 },
-    [SPECIES_DRAGONITE]   = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
-    [SPECIES_MEWTWO]      = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
-    [SPECIES_MEW]         = { .size = MON_COORDS_SIZE(40, 40), .y_offset = 13 },
-    [SPECIES_CHIKORITA]   = { .size = MON_COORDS_SIZE(56, 40), .y_offset = 13 },
-    [SPECIES_BAYLEEF]     = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  4 },
-    [SPECIES_MEGANIUM]    = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
-    [SPECIES_CYNDAQUIL]   = { .size = MON_COORDS_SIZE(40, 40), .y_offset = 14 },
-    [SPECIES_QUILAVA]     = { .size = MON_COORDS_SIZE(56, 48), .y_offset =  8 },
-    [SPECIES_TYPHLOSION]  = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },
-    [SPECIES_TOTODILE]    = { .size = MON_COORDS_SIZE(40, 40), .y_offset = 15 },
-    [SPECIES_CROCONAW]    = { .size = MON_COORDS_SIZE(48, 56), .y_offset =  6 },
-    [SPECIES_FERALIGATR]  = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
-    [SPECIES_SENTRET]     = { .size = MON_COORDS_SIZE(32, 56), .y_offset =  4 },
-    [SPECIES_FURRET]      = { .size = MON_COORDS_SIZE(48, 56), .y_offset =  7 },
-    [SPECIES_HOOTHOOT]    = { .size = MON_COORDS_SIZE(40, 40), .y_offset = 13 },
-    [SPECIES_NOCTOWL]     = { .size = MON_COORDS_SIZE(40, 64), .y_offset =  3 },
-    [SPECIES_LEDYBA]      = { .size = MON_COORDS_SIZE(40, 48), .y_offset = 12 },
-    [SPECIES_LEDIAN]      = { .size = MON_COORDS_SIZE(48, 56), .y_offset =  4 },
-    [SPECIES_SPINARAK]    = { .size = MON_COORDS_SIZE(40, 32), .y_offset = 19 },
-    [SPECIES_ARIADOS]     = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  5 },
-    [SPECIES_CROBAT]      = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
-    [SPECIES_CHINCHOU]    = { .size = MON_COORDS_SIZE(56, 40), .y_offset = 16 },
-    [SPECIES_LANTURN]     = { .size = MON_COORDS_SIZE(64, 56), .y_offset = 11 },
-    [SPECIES_PICHU]       = { .size = MON_COORDS_SIZE(32, 40), .y_offset = 12 },
-    [SPECIES_CLEFFA]      = { .size = MON_COORDS_SIZE(32, 32), .y_offset = 20 },
-    [SPECIES_IGGLYBUFF]   = { .size = MON_COORDS_SIZE(32, 32), .y_offset = 18 },
-    [SPECIES_TOGEPI]      = { .size = MON_COORDS_SIZE(24, 32), .y_offset = 20 },
-    [SPECIES_TOGETIC]     = { .size = MON_COORDS_SIZE(32, 48), .y_offset =  9 },
-    [SPECIES_NATU]        = { .size = MON_COORDS_SIZE(32, 32), .y_offset = 20 },
-    [SPECIES_XATU]        = { .size = MON_COORDS_SIZE(32, 56), .y_offset =  7 },
-    [SPECIES_MAREEP]      = { .size = MON_COORDS_SIZE(40, 40), .y_offset = 16 },
-    [SPECIES_FLAAFFY]     = { .size = MON_COORDS_SIZE(40, 48), .y_offset = 10 },
-    [SPECIES_AMPHAROS]    = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  5 },
-    [SPECIES_BELLOSSOM]   = { .size = MON_COORDS_SIZE(32, 40), .y_offset = 14 },
-    [SPECIES_MARILL]      = { .size = MON_COORDS_SIZE(48, 40), .y_offset = 14 },
-    [SPECIES_AZUMARILL]   = { .size = MON_COORDS_SIZE(56, 48), .y_offset =  9 },
-    [SPECIES_SUDOWOODO]   = { .size = MON_COORDS_SIZE(48, 56), .y_offset =  6 },
-    [SPECIES_POLITOED]    = { .size = MON_COORDS_SIZE(48, 56), .y_offset =  6 },
-    [SPECIES_HOPPIP]      = { .size = MON_COORDS_SIZE(48, 48), .y_offset = 10 },
-    [SPECIES_SKIPLOOM]    = { .size = MON_COORDS_SIZE(40, 40), .y_offset = 15 },
-    [SPECIES_JUMPLUFF]    = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  7 },
-    [SPECIES_AIPOM]       = { .size = MON_COORDS_SIZE(40, 64), .y_offset =  3 },
-    [SPECIES_SUNKERN]     = { .size = MON_COORDS_SIZE(32, 32), .y_offset = 16 },
-    [SPECIES_SUNFLORA]    = { .size = MON_COORDS_SIZE(40, 48), .y_offset =  8 },
-    [SPECIES_YANMA]       = { .size = MON_COORDS_SIZE(64, 48), .y_offset = 10 },
-    [SPECIES_WOOPER]      = { .size = MON_COORDS_SIZE(40, 32), .y_offset = 16 },
-    [SPECIES_QUAGSIRE]    = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  7 },
-    [SPECIES_ESPEON]      = { .size = MON_COORDS_SIZE(48, 48), .y_offset =  8 },
-    [SPECIES_UMBREON]     = { .size = MON_COORDS_SIZE(48, 56), .y_offset =  8 },
-    [SPECIES_MURKROW]     = { .size = MON_COORDS_SIZE(48, 48), .y_offset = 11 },
-    [SPECIES_SLOWKING]    = { .size = MON_COORDS_SIZE(40, 64), .y_offset =  1 },
-    [SPECIES_MISDREAVUS]  = { .size = MON_COORDS_SIZE(40, 40), .y_offset = 12 },
-    [SPECIES_UNOWN]       = { .size = MON_COORDS_SIZE(24, 40), .y_offset = 15 },
-    [SPECIES_WOBBUFFET]   = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  6 },
-    [SPECIES_GIRAFARIG]   = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  3 },
-    [SPECIES_PINECO]      = { .size = MON_COORDS_SIZE(40, 48), .y_offset = 10 },
-    [SPECIES_FORRETRESS]  = { .size = MON_COORDS_SIZE(56, 48), .y_offset =  9 },
-    [SPECIES_DUNSPARCE]   = { .size = MON_COORDS_SIZE(56, 32), .y_offset = 17 },
-    [SPECIES_GLIGAR]      = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  3 },
-    [SPECIES_STEELIX]     = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
-    [SPECIES_SNUBBULL]    = { .size = MON_COORDS_SIZE(40, 40), .y_offset = 13 },
-    [SPECIES_GRANBULL]    = { .size = MON_COORDS_SIZE(40, 56), .y_offset =  6 },
-    [SPECIES_QWILFISH]    = { .size = MON_COORDS_SIZE(40, 48), .y_offset = 10 },
-    [SPECIES_SCIZOR]      = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
-    [SPECIES_SHUCKLE]     = { .size = MON_COORDS_SIZE(48, 48), .y_offset =  9 },
-    [SPECIES_HERACROSS]   = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  3 },
-    [SPECIES_SNEASEL]     = { .size = MON_COORDS_SIZE(48, 56), .y_offset =  5 },
-    [SPECIES_TEDDIURSA]   = { .size = MON_COORDS_SIZE(32, 40), .y_offset = 13 },
-    [SPECIES_URSARING]    = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  1 },
-    [SPECIES_SLUGMA]      = { .size = MON_COORDS_SIZE(32, 40), .y_offset = 13 },
-    [SPECIES_MAGCARGO]    = { .size = MON_COORDS_SIZE(40, 56), .y_offset = 13 },
-    [SPECIES_SWINUB]      = { .size = MON_COORDS_SIZE(32, 24), .y_offset = 20 },
-    [SPECIES_PILOSWINE]   = { .size = MON_COORDS_SIZE(48, 48), .y_offset =  8 },
-    [SPECIES_CORSOLA]     = { .size = MON_COORDS_SIZE(48, 40), .y_offset = 12 },
-    [SPECIES_REMORAID]    = { .size = MON_COORDS_SIZE(40, 40), .y_offset = 14 },
-    [SPECIES_OCTILLERY]   = { .size = MON_COORDS_SIZE(48, 48), .y_offset = 10 },
-    [SPECIES_DELIBIRD]    = { .size = MON_COORDS_SIZE(40, 48), .y_offset =  8 },
-    [SPECIES_MANTINE]     = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  1 },
-    [SPECIES_SKARMORY]    = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
-    [SPECIES_HOUNDOUR]    = { .size = MON_COORDS_SIZE(40, 48), .y_offset = 11 },
-    [SPECIES_HOUNDOOM]    = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  5 },
-    [SPECIES_KINGDRA]     = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  4 },
-    [SPECIES_PHANPY]      = { .size = MON_COORDS_SIZE(40, 32), .y_offset = 16 },
-    [SPECIES_DONPHAN]     = { .size = MON_COORDS_SIZE(64, 48), .y_offset =  8 },
-    [SPECIES_PORYGON2]    = { .size = MON_COORDS_SIZE(40, 40), .y_offset = 15 },
-    [SPECIES_STANTLER]    = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
-    [SPECIES_SMEARGLE]    = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  6 },
-    [SPECIES_TYROGUE]     = { .size = MON_COORDS_SIZE(32, 48), .y_offset =  9 },
-    [SPECIES_HITMONTOP]   = { .size = MON_COORDS_SIZE(48, 56), .y_offset =  5 },
-    [SPECIES_SMOOCHUM]    = { .size = MON_COORDS_SIZE(24, 40), .y_offset = 15 },
-    [SPECIES_ELEKID]      = { .size = MON_COORDS_SIZE(56, 48), .y_offset = 10 },
-    [SPECIES_MAGBY]       = { .size = MON_COORDS_SIZE(32, 40), .y_offset = 13 },
-    [SPECIES_MILTANK]     = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  4 },
-    [SPECIES_BLISSEY]     = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  6 },
-    [SPECIES_RAIKOU]      = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
-    [SPECIES_ENTEI]       = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
-    [SPECIES_SUICUNE]     = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
-    [SPECIES_LARVITAR]    = { .size = MON_COORDS_SIZE(32, 48), .y_offset =  9 },
-    [SPECIES_PUPITAR]     = { .size = MON_COORDS_SIZE(40, 48), .y_offset =  9 },
-    [SPECIES_TYRANITAR]   = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
-    [SPECIES_LUGIA]       = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
-    [SPECIES_HO_OH]       = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
-    [SPECIES_CELEBI]      = { .size = MON_COORDS_SIZE(40, 40), .y_offset = 14 },
+    [SPECIES_BULBASAUR]   = { .size = MON_COORDS_SIZE(48, 48), .y_offset =  0 },  // SPROUTLIZ (sprite-creature-generator)
+    [SPECIES_IVYSAUR]     = { .size = MON_COORDS_SIZE(56, 48), .y_offset =  0 },  // BUDLIZARD (sprite-creature-generator)
+    [SPECIES_VENUSAUR]    = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },  // BLOOMBEAST (sprite-creature-generator)
+    [SPECIES_CHARMANDER]  = { .size = MON_COORDS_SIZE(48, 40), .y_offset =  0 },  // EMBERLIZ (sprite-creature-generator)
+    [SPECIES_CHARMELEON]  = { .size = MON_COORDS_SIZE(56, 48), .y_offset =  0 },  // MAGMANDER (sprite-creature-generator)
+    [SPECIES_CHARIZARD]   = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  0 },  // LAVADRAGON (sprite-creature-generator)
+    [SPECIES_SQUIRTLE]    = { .size = MON_COORDS_SIZE(48, 40), .y_offset =  0 },  // SHELLPUP (sprite-creature-generator)
+    [SPECIES_WARTORTLE]   = { .size = MON_COORDS_SIZE(56, 32), .y_offset =  0 },  // SHELLWARD (sprite-creature-generator)
+    [SPECIES_BLASTOISE]   = { .size = MON_COORDS_SIZE(64, 48), .y_offset =  0 },  // TORPEDTURT (sprite-creature-generator)
+    [SPECIES_CATERPIE]    = { .size = MON_COORDS_SIZE(48, 56), .y_offset =  0 },  // NEEDLEWORM (sprite-creature-generator)
+    [SPECIES_METAPOD]     = { .size = MON_COORDS_SIZE(48, 32), .y_offset =  0 },  // HUSKPOD (sprite-creature-generator)
+    [SPECIES_BUTTERFREE]  = { .size = MON_COORDS_SIZE(56, 32), .y_offset =  0 },  // SKYMOTH (sprite-creature-generator)
+    [SPECIES_WEEDLE]      = { .size = MON_COORDS_SIZE(56, 48), .y_offset =  0 },  // STINGWORM (sprite-creature-generator)
+    [SPECIES_KAKUNA]      = { .size = MON_COORDS_SIZE(40, 64), .y_offset =  0 },  // STINGPOD (sprite-creature-generator)
+    [SPECIES_BEEDRILL]    = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },  // STINGWASP (sprite-creature-generator)
+    [SPECIES_PIDGEY]      = { .size = MON_COORDS_SIZE(32, 48), .y_offset =  0 },  // PORGLET (sprite-creature-generator)
+    [SPECIES_PIDGEOTTO]   = { .size = MON_COORDS_SIZE(40, 64), .y_offset =  0 },  // PORG (sprite-creature-generator)
+    [SPECIES_PIDGEOT]     = { .size = MON_COORDS_SIZE(64, 40), .y_offset =  0 },  // PORGMAJOR (sprite-creature-generator)
+    [SPECIES_RATTATA]     = { .size = MON_COORDS_SIZE(48, 40), .y_offset =  0 },  // WOMPRAT (sprite-creature-generator)
+    [SPECIES_RATICATE]    = { .size = MON_COORDS_SIZE(56, 32), .y_offset =  0 },  // WOMPMAW (sprite-creature-generator)
+    [SPECIES_SPEAROW]     = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // SANDHAWK (sprite-creature-generator)
+    [SPECIES_FEAROW]      = { .size = MON_COORDS_SIZE(64, 40), .y_offset =  0 },  // DUNECONDOR (sprite-creature-generator)
+    [SPECIES_EKANS]       = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  0 },  // SANDASP (sprite-creature-generator)
+    [SPECIES_ARBOK]       = { .size = MON_COORDS_SIZE(40, 64), .y_offset =  0 },  // DUNECOBRA (sprite-creature-generator)
+    [SPECIES_PIKACHU]     = { .size = MON_COORDS_SIZE(48, 48), .y_offset =  0 },  // IONRAT (sprite-creature-generator)
+    [SPECIES_RAICHU]      = { .size = MON_COORDS_SIZE(64, 40), .y_offset =  0 },  // IONLORD (sprite-creature-generator)
+    [SPECIES_SANDSHREW]   = { .size = MON_COORDS_SIZE(48, 24), .y_offset =  0 },  // DEWLING (sprite-creature-generator)
+    [SPECIES_SANDSLASH]   = { .size = MON_COORDS_SIZE(56, 48), .y_offset =  0 },  // DEWBACK (sprite-creature-generator)
+    [SPECIES_NIDORAN_F]   = { .size = MON_COORDS_SIZE(40, 64), .y_offset =  0 },  // RONTOCALF (sprite-creature-generator)
+    [SPECIES_NIDORINA]    = { .size = MON_COORDS_SIZE(40, 64), .y_offset =  0 },  // RONTOLING (sprite-creature-generator)
+    [SPECIES_NIDOQUEEN]   = { .size = MON_COORDS_SIZE(32, 64), .y_offset =  0 },  // RONTO (sprite-creature-generator)
+    [SPECIES_NIDORAN_M]   = { .size = MON_COORDS_SIZE(48, 40), .y_offset =  0 },  // REEKCALF (sprite-creature-generator)
+    [SPECIES_NIDORINO]    = { .size = MON_COORDS_SIZE(56, 40), .y_offset =  0 },  // REEKHORN (sprite-creature-generator)
+    [SPECIES_NIDOKING]    = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  0 },  // REEK (sprite-creature-generator)
+    [SPECIES_CLEFAIRY]    = { .size = MON_COORDS_SIZE(32, 64), .y_offset =  0 },  // MOONLET (sprite-creature-generator)
+    [SPECIES_CLEFABLE]    = { .size = MON_COORDS_SIZE(56, 48), .y_offset =  0 },  // MOONDANCER (sprite-creature-generator)
+    [SPECIES_VULPIX]      = { .size = MON_COORDS_SIZE(40, 64), .y_offset =  0 },  // VULPTEX (sprite-creature-generator)
+    [SPECIES_NINETALES]   = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  0 },  // VULPTEXA (sprite-creature-generator)
+    [SPECIES_JIGGLYPUFF]  = { .size = MON_COORDS_SIZE(32, 40), .y_offset =  0 },  // LULLAPUFF (sprite-creature-generator)
+    [SPECIES_WIGGLYTUFF]  = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  0 },  // LULLADIVA (sprite-creature-generator)
+    [SPECIES_ZUBAT]       = { .size = MON_COORDS_SIZE(48, 40), .y_offset =  0 },  // MYNOCK (sprite-creature-generator)
+    [SPECIES_GOLBAT]      = { .size = MON_COORDS_SIZE(64, 24), .y_offset =  0 },  // MYNOCKMAW (sprite-creature-generator)
+    [SPECIES_ODDISH]      = { .size = MON_COORDS_SIZE(40, 64), .y_offset =  0 },  // GNARLSPAWN (sprite-creature-generator)
+    [SPECIES_GLOOM]       = { .size = MON_COORDS_SIZE(48, 48), .y_offset =  0 },  // STINKROOT (sprite-creature-generator)
+    [SPECIES_VILEPLUME]   = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },  // STINKBLOOM (sprite-creature-generator)
+    [SPECIES_PARAS]       = { .size = MON_COORDS_SIZE(48, 32), .y_offset =  0 },  // GELAGRUB (sprite-creature-generator)
+    [SPECIES_PARASECT]    = { .size = MON_COORDS_SIZE(64, 40), .y_offset =  0 },  // GELASPORE (sprite-creature-generator)
+    [SPECIES_VENONAT]     = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // GNATLING (sprite-creature-generator)
+    [SPECIES_VENOMOTH]    = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // GNATMOTH (sprite-creature-generator)
+    [SPECIES_DIGLETT]     = { .size = MON_COORDS_SIZE(48, 48), .y_offset =  0 },  // BURROWNUB (sprite-creature-generator)
+    [SPECIES_DUGTRIO]     = { .size = MON_COORDS_SIZE(56, 48), .y_offset =  0 },  // BURROWTRIO (sprite-creature-generator)
+    [SPECIES_MEOWTH]      = { .size = MON_COORDS_SIZE(56, 32), .y_offset =  0 },  // TUSKCAT (sprite-creature-generator)
+    [SPECIES_PERSIAN]     = { .size = MON_COORDS_SIZE(56, 40), .y_offset =  0 },  // TUSKLYNX (sprite-creature-generator)
+    [SPECIES_PSYDUCK]     = { .size = MON_COORDS_SIZE(48, 40), .y_offset =  0 },  // BOGDUCK (sprite-creature-generator)
+    [SPECIES_GOLDUCK]     = { .size = MON_COORDS_SIZE(64, 48), .y_offset =  0 },  // BOGDRAKE (sprite-creature-generator)
+    [SPECIES_MANKEY]      = { .size = MON_COORDS_SIZE(40, 64), .y_offset =  0 },  // GUNDARKLET (sprite-creature-generator)
+    [SPECIES_PRIMEAPE]    = { .size = MON_COORDS_SIZE(40, 64), .y_offset =  0 },  // GUNDARK (sprite-creature-generator)
+    [SPECIES_GROWLITHE]   = { .size = MON_COORDS_SIZE(56, 32), .y_offset =  0 },  // AKKPUP (sprite-creature-generator)
+    [SPECIES_ARCANINE]    = { .size = MON_COORDS_SIZE(64, 24), .y_offset =  0 },  // AKKDOG (sprite-creature-generator)
+    [SPECIES_POLIWAG]     = { .size = MON_COORDS_SIZE(48, 40), .y_offset =  0 },  // WORRTLET (sprite-creature-generator)
+    [SPECIES_POLIWHIRL]   = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  0 },  // WORRT (sprite-creature-generator)
+    [SPECIES_POLIWRATH]   = { .size = MON_COORDS_SIZE(56, 48), .y_offset =  0 },  // WORRTBRUTE (sprite-creature-generator)
+    [SPECIES_ABRA]        = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // MISTKIN (sprite-creature-generator)
+    [SPECIES_KADABRA]     = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // MISTWEAVER (sprite-creature-generator)
+    [SPECIES_ALAKAZAM]    = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },  // MISTSAGE (sprite-creature-generator)
+    [SPECIES_MACHOP]      = { .size = MON_COORDS_SIZE(32, 64), .y_offset =  0 },  // B1 DROID (sprite-creature-generator)
+    [SPECIES_MACHOKE]     = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  0 },  // B2 DROID (sprite-creature-generator)
+    [SPECIES_MACHAMP]     = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  0 },  // BX DROID (sprite-creature-generator)
+    [SPECIES_BELLSPROUT]  = { .size = MON_COORDS_SIZE(40, 48), .y_offset =  0 },  // SNAPBUD (sprite-creature-generator)
+    [SPECIES_WEEPINBELL]  = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // SNAPTRAP (sprite-creature-generator)
+    [SPECIES_VICTREEBEL]  = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },  // MAWFLOWER (sprite-creature-generator)
+    [SPECIES_TENTACOOL]   = { .size = MON_COORDS_SIZE(32, 64), .y_offset =  0 },  // DIANOGLET (sprite-creature-generator)
+    [SPECIES_TENTACRUEL]  = { .size = MON_COORDS_SIZE(40, 64), .y_offset =  0 },  // DIANOGA (sprite-creature-generator)
+    [SPECIES_GEODUDE]     = { .size = MON_COORDS_SIZE(48, 48), .y_offset =  0 },  // ROCKWART (sprite-creature-generator)
+    [SPECIES_GRAVELER]    = { .size = MON_COORDS_SIZE(64, 32), .y_offset =  0 },  // BOULDWART (sprite-creature-generator)
+    [SPECIES_GOLEM]       = { .size = MON_COORDS_SIZE(64, 32), .y_offset =  0 },  // MEGAWART (sprite-creature-generator)
+    [SPECIES_PONYTA]      = { .size = MON_COORDS_SIZE(56, 48), .y_offset =  0 },  // EOPIE (sprite-creature-generator)
+    [SPECIES_RAPIDASH]    = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },  // FATHIER (sprite-creature-generator)
+    [SPECIES_SLOWPOKE]    = { .size = MON_COORDS_SIZE(56, 40), .y_offset =  0 },  // SWAMPSLUG (sprite-creature-generator)
+    [SPECIES_SLOWBRO]     = { .size = MON_COORDS_SIZE(56, 40), .y_offset =  0 },  // SLUGSHELL (sprite-creature-generator)
+    [SPECIES_MAGNEMITE]   = { .size = MON_COORDS_SIZE(48, 48), .y_offset =  0 },  // MOUSEDROID (sprite-creature-generator)
+    [SPECIES_MAGNETON]    = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },  // MOUSESWARM (sprite-creature-generator)
+    [SPECIES_FARFETCHD]   = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  0 },  // NUNA (sprite-creature-generator)
+    [SPECIES_DODUO]       = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // KAADU (sprite-creature-generator)
+    [SPECIES_DODRIO]      = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  0 },  // KAADULORD (sprite-creature-generator)
+    [SPECIES_SEEL]        = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // SIRENPUP (sprite-creature-generator)
+    [SPECIES_DEWGONG]     = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // THALASIREN (sprite-creature-generator)
+    [SPECIES_GRIMER]      = { .size = MON_COORDS_SIZE(56, 48), .y_offset =  0 },  // MUCKLING (sprite-creature-generator)
+    [SPECIES_MUK]         = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },  // MUCKMOUND (sprite-creature-generator)
+    [SPECIES_SHELLDER]    = { .size = MON_COORDS_SIZE(48, 48), .y_offset =  0 },  // SPIKECLAM (sprite-creature-generator)
+    [SPECIES_CLOYSTER]    = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },  // FORTCLAM (sprite-creature-generator)
+    [SPECIES_GASTLY]      = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  0 },  // SITHWISP (sprite-creature-generator)
+    [SPECIES_HAUNTER]     = { .size = MON_COORDS_SIZE(56, 48), .y_offset =  0 },  // SITHSHADE (sprite-creature-generator)
+    [SPECIES_GENGAR]      = { .size = MON_COORDS_SIZE(56, 48), .y_offset =  0 },  // SITHSPECTR (sprite-creature-generator)
+    [SPECIES_ONIX]        = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },  // DURASLUG (sprite-creature-generator)
+    [SPECIES_DROWZEE]     = { .size = MON_COORDS_SIZE(48, 56), .y_offset =  0 },  // MINDPROBE (sprite-creature-generator)
+    [SPECIES_HYPNO]       = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },  // INTERROGTR (sprite-creature-generator)
+    [SPECIES_KRABBY]      = { .size = MON_COORDS_SIZE(48, 48), .y_offset =  0 },  // SANDCRAB (sprite-creature-generator)
+    [SPECIES_KINGLER]     = { .size = MON_COORDS_SIZE(56, 48), .y_offset =  0 },  // KINGCRAB (sprite-creature-generator)
+    [SPECIES_VOLTORB]     = { .size = MON_COORDS_SIZE(48, 48), .y_offset =  0 },  // REMOTE (sprite-creature-generator)
+    [SPECIES_ELECTRODE]   = { .size = MON_COORDS_SIZE(48, 48), .y_offset =  0 },  // SEEKERBALL (sprite-creature-generator)
+    [SPECIES_EXEGGCUTE]   = { .size = MON_COORDS_SIZE(56, 32), .y_offset =  0 },  // WROSEED (sprite-creature-generator)
+    [SPECIES_EXEGGUTOR]   = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },  // WROSHYR (sprite-creature-generator)
+    [SPECIES_CUBONE]      = { .size = MON_COORDS_SIZE(48, 56), .y_offset =  0 },  // SKULLKIT (sprite-creature-generator)
+    [SPECIES_MAROWAK]     = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },  // BONELORD (sprite-creature-generator)
+    [SPECIES_HITMONLEE]   = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // KICKDROID (sprite-creature-generator)
+    [SPECIES_HITMONCHAN]  = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // PUNCHDROID (sprite-creature-generator)
+    [SPECIES_LICKITUNG]   = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  0 },  // LAPLIZARD (sprite-creature-generator)
+    [SPECIES_KOFFING]     = { .size = MON_COORDS_SIZE(48, 48), .y_offset =  0 },  // BELDONLET (sprite-creature-generator)
+    [SPECIES_WEEZING]     = { .size = MON_COORDS_SIZE(64, 48), .y_offset =  0 },  // BELDON (sprite-creature-generator)
+    [SPECIES_RHYHORN]     = { .size = MON_COORDS_SIZE(48, 40), .y_offset =  0 },  // RANCORPUP (sprite-creature-generator)
+    [SPECIES_RHYDON]      = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },  // RANCOR (sprite-creature-generator)
+    [SPECIES_CHANSEY]     = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },  // FX-6 UNIT (sprite-creature-generator)
+    [SPECIES_TANGELA]     = { .size = MON_COORDS_SIZE(56, 40), .y_offset =  0 },  // RATHTAR (sprite-creature-generator)
+    [SPECIES_KANGASKHAN]  = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  0 },  // BROODBEAST (sprite-creature-generator)
+    [SPECIES_HORSEA]      = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // SEASTEED (sprite-creature-generator)
+    [SPECIES_SEADRA]      = { .size = MON_COORDS_SIZE(32, 64), .y_offset =  0 },  // SPINESTEED (sprite-creature-generator)
+    [SPECIES_GOLDEEN]     = { .size = MON_COORDS_SIZE(48, 40), .y_offset =  0 },  // HORNFIN (sprite-creature-generator)
+    [SPECIES_SEAKING]     = { .size = MON_COORDS_SIZE(56, 40), .y_offset =  0 },  // KINGFIN (sprite-creature-generator)
+    [SPECIES_STARYU]      = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // STARCORAL (sprite-creature-generator)
+    [SPECIES_STARMIE]     = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },  // NOVACORAL (sprite-creature-generator)
+    [SPECIES_MR_MIME]     = { .size = MON_COORDS_SIZE(24, 64), .y_offset =  0 },  // WALLMIMIC (sprite-creature-generator)
+    [SPECIES_SCYTHER]     = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },  // ACKLAY (sprite-creature-generator)
+    [SPECIES_JYNX]        = { .size = MON_COORDS_SIZE(64, 48), .y_offset =  0 },  // NARGLATCH (sprite-creature-generator)
+    [SPECIES_ELECTABUZZ]  = { .size = MON_COORDS_SIZE(32, 64), .y_offset =  0 },  // IG UNIT (sprite-creature-generator)
+    [SPECIES_MAGMAR]      = { .size = MON_COORDS_SIZE(48, 24), .y_offset =  0 },  // LAVASPITTR (sprite-creature-generator)
+    [SPECIES_PINSIR]      = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },  // KILLIK (sprite-creature-generator)
+    [SPECIES_TAUROS]      = { .size = MON_COORDS_SIZE(64, 48), .y_offset =  0 },  // ORRAY (sprite-creature-generator)
+    [SPECIES_MAGIKARP]    = { .size = MON_COORDS_SIZE(56, 16), .y_offset =  0 },  // COLOFRY (sprite-creature-generator)
+    [SPECIES_GYARADOS]    = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },  // COLOCLAW (sprite-creature-generator)
+    [SPECIES_LAPRAS]      = { .size = MON_COORDS_SIZE(64, 40), .y_offset =  0 },  // PURRGIL (sprite-creature-generator)
+    [SPECIES_DITTO]       = { .size = MON_COORDS_SIZE(48, 32), .y_offset =  0 },  // SHIFTBLOB (sprite-creature-generator)
+    [SPECIES_EEVEE]       = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },  // TOOKA (sprite-creature-generator)
+    [SPECIES_VAPOREON]    = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  0 },  // TIDETOOKA (sprite-creature-generator)
+    [SPECIES_JOLTEON]     = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },  // VOLTTOOKA (sprite-creature-generator)
+    [SPECIES_FLAREON]     = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // FLARETOOKA (sprite-creature-generator)
+    [SPECIES_PORYGON]     = { .size = MON_COORDS_SIZE(32, 64), .y_offset =  0 },  // 3PO UNIT (sprite-creature-generator)
+    [SPECIES_OMANYTE]     = { .size = MON_COORDS_SIZE(48, 48), .y_offset =  0 },  // SPIRALITH (sprite-creature-generator)
+    [SPECIES_OMASTAR]     = { .size = MON_COORDS_SIZE(56, 40), .y_offset =  0 },  // SPIRALORD (sprite-creature-generator)
+    [SPECIES_KABUTO]      = { .size = MON_COORDS_SIZE(48, 32), .y_offset =  0 },  // DOMESHELL (sprite-creature-generator)
+    [SPECIES_KABUTOPS]    = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  0 },  // SCYTHESHEL (sprite-creature-generator)
+    [SPECIES_AERODACTYL]  = { .size = MON_COORDS_SIZE(64, 32), .y_offset =  0 },  // FOSSILWING (sprite-creature-generator)
+    [SPECIES_SNORLAX]     = { .size = MON_COORDS_SIZE(64, 40), .y_offset =  0 },  // HAPPABORE (sprite-creature-generator)
+    [SPECIES_ARTICUNO]    = { .size = MON_COORDS_SIZE(64, 32), .y_offset =  0 },  // FROSTHAWK (sprite-creature-generator)
+    [SPECIES_ZAPDOS]      = { .size = MON_COORDS_SIZE(64, 48), .y_offset =  0 },  // STORMHAWK (sprite-creature-generator)
+    [SPECIES_MOLTRES]     = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  0 },  // EMBERHAWK (sprite-creature-generator)
+    [SPECIES_DRATINI]     = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // WYRMLING (sprite-creature-generator)
+    [SPECIES_DRAGONAIR]   = { .size = MON_COORDS_SIZE(64, 40), .y_offset =  0 },  // DRAGNSNAKE (sprite-creature-generator)
+    [SPECIES_DRAGONITE]   = { .size = MON_COORDS_SIZE(64, 40), .y_offset =  0 },  // VARACTYL (sprite-creature-generator)
+    [SPECIES_MEWTWO]      = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // PROTOCLONE (sprite-creature-generator)
+    [SPECIES_MEW]         = { .size = MON_COORDS_SIZE(48, 56), .y_offset =  0 },  // PRIMORDIAL (sprite-creature-generator)
+    [SPECIES_CHIKORITA]   = { .size = MON_COORDS_SIZE(48, 24), .y_offset =  0 },  // LEAFKIT (sprite-creature-generator)
+    [SPECIES_BAYLEEF]     = { .size = MON_COORDS_SIZE(56, 32), .y_offset =  0 },  // BUDFAWN (sprite-creature-generator)
+    [SPECIES_MEGANIUM]    = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // BLOOMSTAG (sprite-creature-generator)
+    [SPECIES_CYNDAQUIL]   = { .size = MON_COORDS_SIZE(48, 40), .y_offset =  0 },  // CINDERMOLE (sprite-creature-generator)
+    [SPECIES_QUILAVA]     = { .size = MON_COORDS_SIZE(56, 40), .y_offset =  0 },  // FLAMEMOLE (sprite-creature-generator)
+    [SPECIES_TYPHLOSION]  = { .size = MON_COORDS_SIZE(64, 48), .y_offset =  0 },  // BLAZEMOLE (sprite-creature-generator)
+    [SPECIES_TOTODILE]    = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // SNAPPER (sprite-creature-generator)
+    [SPECIES_CROCONAW]    = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // BOGCROC (sprite-creature-generator)
+    [SPECIES_FERALIGATR]  = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },  // SWAMPJAW (sprite-creature-generator)
+    [SPECIES_SENTRET]     = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // SANDMEER (sprite-creature-generator)
+    [SPECIES_FURRET]      = { .size = MON_COORDS_SIZE(56, 24), .y_offset =  0 },  // DUNEFERRET (sprite-creature-generator)
+    [SPECIES_HOOTHOOT]    = { .size = MON_COORDS_SIZE(48, 48), .y_offset =  0 },  // DUSKOWL (sprite-creature-generator)
+    [SPECIES_NOCTOWL]     = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // NIGHTOWL (sprite-creature-generator)
+    [SPECIES_LEDYBA]      = { .size = MON_COORDS_SIZE(56, 40), .y_offset =  0 },  // DOTBUG (sprite-creature-generator)
+    [SPECIES_LEDIAN]      = { .size = MON_COORDS_SIZE(56, 48), .y_offset =  0 },  // DOTFLYER (sprite-creature-generator)
+    [SPECIES_SPINARAK]    = { .size = MON_COORDS_SIZE(48, 40), .y_offset =  0 },  // KRYKLING (sprite-creature-generator)
+    [SPECIES_ARIADOS]     = { .size = MON_COORDS_SIZE(64, 48), .y_offset =  0 },  // KRYKNA (sprite-creature-generator)
+    [SPECIES_CROBAT]      = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  0 },  // VOIDMYNOCK (sprite-creature-generator)
+    [SPECIES_CHINCHOU]    = { .size = MON_COORDS_SIZE(48, 32), .y_offset =  0 },  // LUMIRAY (sprite-creature-generator)
+    [SPECIES_LANTURN]     = { .size = MON_COORDS_SIZE(64, 40), .y_offset =  0 },  // LUMIDEEP (sprite-creature-generator)
+    [SPECIES_PICHU]       = { .size = MON_COORDS_SIZE(48, 48), .y_offset =  0 },  // IONKIT (sprite-creature-generator)
+    [SPECIES_CLEFFA]      = { .size = MON_COORDS_SIZE(48, 48), .y_offset =  0 },  // MOONSPECK (sprite-creature-generator)
+    [SPECIES_IGGLYBUFF]   = { .size = MON_COORDS_SIZE(48, 32), .y_offset =  0 },  // LULLAKIT (sprite-creature-generator)
+    [SPECIES_TOGEPI]      = { .size = MON_COORDS_SIZE(40, 56), .y_offset =  0 },  // LUCKEGG (sprite-creature-generator)
+    [SPECIES_TOGETIC]     = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // LUCKWING (sprite-creature-generator)
+    [SPECIES_NATU]        = { .size = MON_COORDS_SIZE(40, 64), .y_offset =  0 },  // CONVORLET (sprite-creature-generator)
+    [SPECIES_XATU]        = { .size = MON_COORDS_SIZE(56, 40), .y_offset =  0 },  // CONVOR (sprite-creature-generator)
+    [SPECIES_MAREEP]      = { .size = MON_COORDS_SIZE(48, 32), .y_offset =  0 },  // NERFLET (sprite-creature-generator)
+    [SPECIES_FLAAFFY]     = { .size = MON_COORDS_SIZE(56, 40), .y_offset =  0 },  // NERF (sprite-creature-generator)
+    [SPECIES_AMPHAROS]    = { .size = MON_COORDS_SIZE(56, 48), .y_offset =  0 },  // NERFBEACON (sprite-creature-generator)
+    [SPECIES_BELLOSSOM]   = { .size = MON_COORDS_SIZE(48, 48), .y_offset =  0 },  // SUNBLOOM (sprite-creature-generator)
+    [SPECIES_MARILL]      = { .size = MON_COORDS_SIZE(56, 48), .y_offset =  0 },  // BLOOPRAT (sprite-creature-generator)
+    [SPECIES_AZUMARILL]   = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // BLOOPHARE (sprite-creature-generator)
+    [SPECIES_SUDOWOODO]   = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // GNARLTREE (sprite-creature-generator)
+    [SPECIES_POLITOED]    = { .size = MON_COORDS_SIZE(64, 48), .y_offset =  0 },  // WORRTKING (sprite-creature-generator)
+    [SPECIES_HOPPIP]      = { .size = MON_COORDS_SIZE(48, 56), .y_offset =  0 },  // PUFFSEED (sprite-creature-generator)
+    [SPECIES_SKIPLOOM]    = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },  // PUFFBLOOM (sprite-creature-generator)
+    [SPECIES_JUMPLUFF]    = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },  // PUFFCLOUD (sprite-creature-generator)
+    [SPECIES_AIPOM]       = { .size = MON_COORDS_SIZE(32, 64), .y_offset =  0 },  // TAILMONK (sprite-creature-generator)
+    [SPECIES_SUNKERN]     = { .size = MON_COORDS_SIZE(48, 40), .y_offset =  0 },  // SUNSEED (sprite-creature-generator)
+    [SPECIES_SUNFLORA]    = { .size = MON_COORDS_SIZE(24, 56), .y_offset =  0 },  // TWINSUNFLR (sprite-creature-generator)
+    [SPECIES_YANMA]       = { .size = MON_COORDS_SIZE(64, 48), .y_offset =  0 },  // GNATWING (sprite-creature-generator)
+    [SPECIES_WOOPER]      = { .size = MON_COORDS_SIZE(48, 32), .y_offset =  0 },  // OGGDOLET (sprite-creature-generator)
+    [SPECIES_QUAGSIRE]    = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  0 },  // OGGDO (sprite-creature-generator)
+    [SPECIES_ESPEON]      = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },  // JEDITOOKA (sprite-creature-generator)
+    [SPECIES_UMBREON]     = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },  // SITHTOOKA (sprite-creature-generator)
+    [SPECIES_MURKROW]     = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },  // RAWKA (sprite-creature-generator)
+    [SPECIES_SLOWKING]    = { .size = MON_COORDS_SIZE(64, 40), .y_offset =  0 },  // SLUGSAGE (sprite-creature-generator)
+    [SPECIES_MISDREAVUS]  = { .size = MON_COORDS_SIZE(48, 40), .y_offset =  0 },  // WAILWISP (sprite-creature-generator)
+    [SPECIES_UNOWN]       = { .size = MON_COORDS_SIZE(48, 32), .y_offset =  0 },  // AUREBESH a (sprite-creature-generator)
+    [SPECIES_WOBBUFFET]   = { .size = MON_COORDS_SIZE(48, 40), .y_offset =  0 },  // YSALAMIRI (sprite-creature-generator)
+    [SPECIES_GIRAFARIG]   = { .size = MON_COORDS_SIZE(64, 48), .y_offset =  0 },  // FALUMPASET (sprite-creature-generator)
+    [SPECIES_PINECO]      = { .size = MON_COORDS_SIZE(48, 48), .y_offset =  0 },  // DEKALET (sprite-creature-generator)
+    [SPECIES_FORRETRESS]  = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },  // DROIDEKA (sprite-creature-generator)
+    [SPECIES_DUNSPARCE]   = { .size = MON_COORDS_SIZE(56, 24), .y_offset =  0 },  // DUNEWORM (sprite-creature-generator)
+    [SPECIES_GLIGAR]      = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },  // SCORPWING (sprite-creature-generator)
+    [SPECIES_STEELIX]     = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },  // STEELSLUG (sprite-creature-generator)
+    [SPECIES_SNUBBULL]    = { .size = MON_COORDS_SIZE(48, 40), .y_offset =  0 },  // ANOOBLET (sprite-creature-generator)
+    [SPECIES_GRANBULL]    = { .size = MON_COORDS_SIZE(56, 48), .y_offset =  0 },  // ANOOBA (sprite-creature-generator)
+    [SPECIES_QWILFISH]    = { .size = MON_COORDS_SIZE(56, 40), .y_offset =  0 },  // SPINEPUFF (sprite-creature-generator)
+    [SPECIES_SCIZOR]      = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  0 },  // MAGNAGUARD (sprite-creature-generator)
+    [SPECIES_SHUCKLE]     = { .size = MON_COORDS_SIZE(56, 40), .y_offset =  0 },  // SHELLSAP (sprite-creature-generator)
+    [SPECIES_HERACROSS]   = { .size = MON_COORDS_SIZE(56, 40), .y_offset =  0 },  // HORNBEETLE (sprite-creature-generator)
+    [SPECIES_SNEASEL]     = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // SCRABBLER (sprite-creature-generator)
+    [SPECIES_TEDDIURSA]   = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // GORAXCUB (sprite-creature-generator)
+    [SPECIES_URSARING]    = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // GORAX (sprite-creature-generator)
+    [SPECIES_SLUGMA]      = { .size = MON_COORDS_SIZE(56, 40), .y_offset =  0 },  // LAVAGRUB (sprite-creature-generator)
+    [SPECIES_MAGCARGO]    = { .size = MON_COORDS_SIZE(64, 48), .y_offset =  0 },  // LAVAFLEA (sprite-creature-generator)
+    [SPECIES_SWINUB]      = { .size = MON_COORDS_SIZE(48, 48), .y_offset =  0 },  // TAUNKIT (sprite-creature-generator)
+    [SPECIES_PILOSWINE]   = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },  // TAUNTAUN (sprite-creature-generator)
+    [SPECIES_CORSOLA]     = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },  // CORALITH (sprite-creature-generator)
+    [SPECIES_REMORAID]    = { .size = MON_COORDS_SIZE(48, 48), .y_offset =  0 },  // JETSQUID (sprite-creature-generator)
+    [SPECIES_OCTILLERY]   = { .size = MON_COORDS_SIZE(56, 48), .y_offset =  0 },  // OCTOCANNON (sprite-creature-generator)
+    [SPECIES_DELIBIRD]    = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // LIFEDAY (sprite-creature-generator)
+    [SPECIES_MANTINE]     = { .size = MON_COORDS_SIZE(64, 32), .y_offset =  0 },  // NEEBRAY (sprite-creature-generator)
+    [SPECIES_SKARMORY]    = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  0 },  // VULTURE (sprite-creature-generator)
+    [SPECIES_HOUNDOUR]    = { .size = MON_COORDS_SIZE(48, 56), .y_offset =  0 },  // FYRNOCK (sprite-creature-generator)
+    [SPECIES_HOUNDOOM]    = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },  // FYRNALPHA (sprite-creature-generator)
+    [SPECIES_KINGDRA]     = { .size = MON_COORDS_SIZE(64, 24), .y_offset =  0 },  // STORMSTEED (sprite-creature-generator)
+    [SPECIES_PHANPY]      = { .size = MON_COORDS_SIZE(48, 24), .y_offset =  0 },  // MUDHORNLET (sprite-creature-generator)
+    [SPECIES_DONPHAN]     = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  0 },  // MUDHORN (sprite-creature-generator)
+    [SPECIES_PORYGON2]    = { .size = MON_COORDS_SIZE(40, 56), .y_offset =  0 },  // TC UNIT (sprite-creature-generator)
+    [SPECIES_STANTLER]    = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // IKOPI (sprite-creature-generator)
+    [SPECIES_SMEARGLE]    = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  0 },  // PAINTKIT (sprite-creature-generator)
+    [SPECIES_TYROGUE]     = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // TRAINDROID (sprite-creature-generator)
+    [SPECIES_HITMONTOP]   = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // SPINDROID (sprite-creature-generator)
+    [SPECIES_SMOOCHUM]    = { .size = MON_COORDS_SIZE(48, 32), .y_offset =  0 },  // NARGLET (sprite-creature-generator)
+    [SPECIES_ELEKID]      = { .size = MON_COORDS_SIZE(24, 64), .y_offset =  0 },  // IG-RM (sprite-creature-generator)
+    [SPECIES_MAGBY]       = { .size = MON_COORDS_SIZE(48, 40), .y_offset =  0 },  // COALKIT (sprite-creature-generator)
+    [SPECIES_MILTANK]     = { .size = MON_COORDS_SIZE(56, 40), .y_offset =  0 },  // SHAAK (sprite-creature-generator)
+    [SPECIES_BLISSEY]     = { .size = MON_COORDS_SIZE(32, 64), .y_offset =  0 },  // 2-1B UNIT (sprite-creature-generator)
+    [SPECIES_RAIKOU]      = { .size = MON_COORDS_SIZE(48, 56), .y_offset =  0 },  // STORMCAT (sprite-creature-generator)
+    [SPECIES_ENTEI]       = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },  // MAGMACAT (sprite-creature-generator)
+    [SPECIES_SUICUNE]     = { .size = MON_COORDS_SIZE(64, 48), .y_offset =  0 },  // TIDECAT (sprite-creature-generator)
+    [SPECIES_LARVITAR]    = { .size = MON_COORDS_SIZE(48, 32), .y_offset =  0 },  // ZILLOPUP (sprite-creature-generator)
+    [SPECIES_PUPITAR]     = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },  // ZILLOSHELL (sprite-creature-generator)
+    [SPECIES_TYRANITAR]   = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },  // ZILLOBEAST (sprite-creature-generator)
+    [SPECIES_LUGIA]       = { .size = MON_COORDS_SIZE(64, 40), .y_offset =  0 },  // TIDEWING (sprite-creature-generator)
+    [SPECIES_HO_OH]       = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // DAWNWING (sprite-creature-generator)
+    [SPECIES_CELEBI]      = { .size = MON_COORDS_SIZE(40, 56), .y_offset =  0 },  // TIMEWISP (sprite-creature-generator)
     [SPECIES_OLD_UNOWN_B] = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  4 },
     [SPECIES_OLD_UNOWN_C] = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  4 },
     [SPECIES_OLD_UNOWN_D] = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  4 },
@@ -281,167 +281,167 @@ const struct MonCoords gMonFrontPicCoords[] =
     [SPECIES_OLD_UNOWN_X] = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  4 },
     [SPECIES_OLD_UNOWN_Y] = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  4 },
     [SPECIES_OLD_UNOWN_Z] = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  4 },
-    [SPECIES_TREECKO]     = { .size = MON_COORDS_SIZE(48, 48), .y_offset =  8 },
-    [SPECIES_GROVYLE]     = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  4 },
-    [SPECIES_SCEPTILE]    = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
-    [SPECIES_TORCHIC]     = { .size = MON_COORDS_SIZE(40, 48), .y_offset =  8 },
-    [SPECIES_COMBUSKEN]   = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  1 },
-    [SPECIES_BLAZIKEN]    = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
-    [SPECIES_MUDKIP]      = { .size = MON_COORDS_SIZE(40, 48), .y_offset = 12 },
-    [SPECIES_MARSHTOMP]   = { .size = MON_COORDS_SIZE(48, 56), .y_offset =  6 },
-    [SPECIES_SWAMPERT]    = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
+    [SPECIES_TREECKO]     = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  0 },  // KATARNKIT (sprite-creature-generator)
+    [SPECIES_GROVYLE]     = { .size = MON_COORDS_SIZE(64, 32), .y_offset =  0 },  // KATARNJAW (sprite-creature-generator)
+    [SPECIES_SCEPTILE]    = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  0 },  // KATARN (sprite-creature-generator)
+    [SPECIES_TORCHIC]     = { .size = MON_COORDS_SIZE(48, 32), .y_offset =  0 },  // SUNCHICK (sprite-creature-generator)
+    [SPECIES_COMBUSKEN]   = { .size = MON_COORDS_SIZE(56, 40), .y_offset =  0 },  // SUNSTRIDER (sprite-creature-generator)
+    [SPECIES_BLAZIKEN]    = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // SUNBLAZER (sprite-creature-generator)
+    [SPECIES_MUDKIP]      = { .size = MON_COORDS_SIZE(48, 32), .y_offset =  0 },  // MARSHLET (sprite-creature-generator)
+    [SPECIES_MARSHTOMP]   = { .size = MON_COORDS_SIZE(56, 32), .y_offset =  0 },  // MARSHRUNNR (sprite-creature-generator)
+    [SPECIES_SWAMPERT]    = { .size = MON_COORDS_SIZE(64, 40), .y_offset =  0 },  // MARSHTITAN (sprite-creature-generator)
     [SPECIES_POOCHYENA]   = { .size = MON_COORDS_SIZE(64, 48), .y_offset =  0 },  // MASSIFF (sprite-creature-generator: 60x44, feet on row 63)
-    [SPECIES_MIGHTYENA]   = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  4 },
-    [SPECIES_ZIGZAGOON]   = { .size = MON_COORDS_SIZE(64, 40), .y_offset = 15 },
-    [SPECIES_LINOONE]     = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  3 },
-    [SPECIES_WURMPLE]     = { .size = MON_COORDS_SIZE(32, 40), .y_offset = 14 },
-    [SPECIES_SILCOON]     = { .size = MON_COORDS_SIZE(56, 40), .y_offset = 17 },
-    [SPECIES_BEAUTIFLY]   = { .size = MON_COORDS_SIZE(64, 48), .y_offset =  9 },
-    [SPECIES_CASCOON]     = { .size = MON_COORDS_SIZE(56, 32), .y_offset = 16 },
-    [SPECIES_DUSTOX]      = { .size = MON_COORDS_SIZE(64, 48), .y_offset = 15 },
-    [SPECIES_LOTAD]       = { .size = MON_COORDS_SIZE(48, 40), .y_offset = 14 },
-    [SPECIES_LOMBRE]      = { .size = MON_COORDS_SIZE(48, 48), .y_offset =  9 },
-    [SPECIES_LUDICOLO]    = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
-    [SPECIES_SEEDOT]      = { .size = MON_COORDS_SIZE(32, 48), .y_offset = 16 },
-    [SPECIES_NUZLEAF]     = { .size = MON_COORDS_SIZE(40, 48), .y_offset =  8 },
-    [SPECIES_SHIFTRY]     = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  2 },
-    [SPECIES_NINCADA]     = { .size = MON_COORDS_SIZE(56, 32), .y_offset = 18 },
-    [SPECIES_NINJASK]     = { .size = MON_COORDS_SIZE(64, 48), .y_offset = 10 },
-    [SPECIES_SHEDINJA]    = { .size = MON_COORDS_SIZE(48, 48), .y_offset = 10 },
-    [SPECIES_TAILLOW]     = { .size = MON_COORDS_SIZE(48, 32), .y_offset = 16 },
-    [SPECIES_SWELLOW]     = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  6 },
-    [SPECIES_SHROOMISH]   = { .size = MON_COORDS_SIZE(40, 32), .y_offset = 16 },
-    [SPECIES_BRELOOM]     = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  4 },
-    [SPECIES_SPINDA]      = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  8 },
-    [SPECIES_WINGULL]     = { .size = MON_COORDS_SIZE(64, 32), .y_offset = 24 },
-    [SPECIES_PELIPPER]    = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  4 },
-    [SPECIES_SURSKIT]     = { .size = MON_COORDS_SIZE(48, 40), .y_offset = 15 },
-    [SPECIES_MASQUERAIN]  = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  1 },
-    [SPECIES_WAILMER]     = { .size = MON_COORDS_SIZE(56, 40), .y_offset = 15 },
-    [SPECIES_WAILORD]     = { .size = MON_COORDS_SIZE(64, 56), .y_offset = 10 },
-    [SPECIES_SKITTY]      = { .size = MON_COORDS_SIZE(48, 48), .y_offset = 11 },
-    [SPECIES_DELCATTY]    = { .size = MON_COORDS_SIZE(48, 48), .y_offset =  8 },
-    [SPECIES_KECLEON]     = { .size = MON_COORDS_SIZE(48, 56), .y_offset =  7 },
-    [SPECIES_BALTOY]      = { .size = MON_COORDS_SIZE(40, 40), .y_offset = 16 },
-    [SPECIES_CLAYDOL]     = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  6 },
-    [SPECIES_NOSEPASS]    = { .size = MON_COORDS_SIZE(40, 48), .y_offset = 12 },
-    [SPECIES_TORKOAL]     = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  2 },
-    [SPECIES_SABLEYE]     = { .size = MON_COORDS_SIZE(48, 48), .y_offset =  9 },
-    [SPECIES_BARBOACH]    = { .size = MON_COORDS_SIZE(32, 48), .y_offset = 11 },
-    [SPECIES_WHISCASH]    = { .size = MON_COORDS_SIZE(56, 48), .y_offset =  9 },
-    [SPECIES_LUVDISC]     = { .size = MON_COORDS_SIZE(32, 48), .y_offset = 24 },
-    [SPECIES_CORPHISH]    = { .size = MON_COORDS_SIZE(48, 48), .y_offset = 12 },
-    [SPECIES_CRAWDAUNT]   = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  1 },
-    [SPECIES_FEEBAS]      = { .size = MON_COORDS_SIZE(32, 48), .y_offset = 13 },
-    [SPECIES_MILOTIC]     = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
-    [SPECIES_CARVANHA]    = { .size = MON_COORDS_SIZE(48, 56), .y_offset =  6 },
-    [SPECIES_SHARPEDO]    = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  3 },
-    [SPECIES_TRAPINCH]    = { .size = MON_COORDS_SIZE(40, 32), .y_offset = 16 },
-    [SPECIES_VIBRAVA]     = { .size = MON_COORDS_SIZE(64, 48), .y_offset = 12 },
-    [SPECIES_FLYGON]      = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  1 },
-    [SPECIES_MAKUHITA]    = { .size = MON_COORDS_SIZE(48, 40), .y_offset = 12 },
-    [SPECIES_HARIYAMA]    = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  1 },
-    [SPECIES_ELECTRIKE]   = { .size = MON_COORDS_SIZE(48, 32), .y_offset = 18 },
-    [SPECIES_MANECTRIC]   = { .size = MON_COORDS_SIZE(48, 56), .y_offset =  4 },
-    [SPECIES_NUMEL]       = { .size = MON_COORDS_SIZE(48, 40), .y_offset = 15 },
-    [SPECIES_CAMERUPT]    = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  9 },
-    [SPECIES_SPHEAL]      = { .size = MON_COORDS_SIZE(48, 40), .y_offset = 16 },
-    [SPECIES_SEALEO]      = { .size = MON_COORDS_SIZE(64, 48), .y_offset = 10 },
-    [SPECIES_WALREIN]     = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  1 },
-    [SPECIES_CACNEA]      = { .size = MON_COORDS_SIZE(56, 32), .y_offset = 16 },
-    [SPECIES_CACTURNE]    = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
-    [SPECIES_SNORUNT]     = { .size = MON_COORDS_SIZE(40, 48), .y_offset = 11 },
-    [SPECIES_GLALIE]      = { .size = MON_COORDS_SIZE(56, 48), .y_offset = 10 },
-    [SPECIES_LUNATONE]    = { .size = MON_COORDS_SIZE(48, 48), .y_offset =  9 },
-    [SPECIES_SOLROCK]     = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  1 },
-    [SPECIES_AZURILL]     = { .size = MON_COORDS_SIZE(40, 40), .y_offset = 15 },
-    [SPECIES_SPOINK]      = { .size = MON_COORDS_SIZE(32, 48), .y_offset =  9 },
-    [SPECIES_GRUMPIG]     = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  5 },
-    [SPECIES_PLUSLE]      = { .size = MON_COORDS_SIZE(40, 48), .y_offset = 14 },
-    [SPECIES_MINUN]       = { .size = MON_COORDS_SIZE(48, 48), .y_offset = 12 },
-    [SPECIES_MAWILE]      = { .size = MON_COORDS_SIZE(56, 48), .y_offset =  8 },
-    [SPECIES_MEDITITE]    = { .size = MON_COORDS_SIZE(48, 40), .y_offset = 12 },
-    [SPECIES_MEDICHAM]    = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  1 },
-    [SPECIES_SWABLU]      = { .size = MON_COORDS_SIZE(56, 48), .y_offset = 17 },
-    [SPECIES_ALTARIA]     = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  2 },
-    [SPECIES_WYNAUT]      = { .size = MON_COORDS_SIZE(40, 40), .y_offset = 12 },
-    [SPECIES_DUSKULL]     = { .size = MON_COORDS_SIZE(48, 48), .y_offset = 10 },
-    [SPECIES_DUSCLOPS]    = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  5 },
-    [SPECIES_ROSELIA]     = { .size = MON_COORDS_SIZE(56, 48), .y_offset =  8 },
-    [SPECIES_SLAKOTH]     = { .size = MON_COORDS_SIZE(56, 32), .y_offset = 18 },
-    [SPECIES_VIGOROTH]    = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },
-    [SPECIES_SLAKING]     = { .size = MON_COORDS_SIZE(64, 48), .y_offset =  8 },
-    [SPECIES_GULPIN]      = { .size = MON_COORDS_SIZE(40, 40), .y_offset = 18 },
-    [SPECIES_SWALOT]      = { .size = MON_COORDS_SIZE(48, 48), .y_offset =  8 },
-    [SPECIES_TROPIUS]     = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
-    [SPECIES_WHISMUR]     = { .size = MON_COORDS_SIZE(40, 40), .y_offset = 14 },
-    [SPECIES_LOUDRED]     = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  3 },
-    [SPECIES_EXPLOUD]     = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  1 },
-    [SPECIES_CLAMPERL]    = { .size = MON_COORDS_SIZE(40, 40), .y_offset = 14 },
-    [SPECIES_HUNTAIL]     = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  3 },
-    [SPECIES_GOREBYSS]    = { .size = MON_COORDS_SIZE(64, 48), .y_offset = 11 },
-    [SPECIES_ABSOL]       = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },
-    [SPECIES_SHUPPET]     = { .size = MON_COORDS_SIZE(40, 48), .y_offset = 14 },
-    [SPECIES_BANETTE]     = { .size = MON_COORDS_SIZE(40, 40), .y_offset = 12 },
-    [SPECIES_SEVIPER]     = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  8 },
-    [SPECIES_ZANGOOSE]    = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  5 },
-    [SPECIES_RELICANTH]   = { .size = MON_COORDS_SIZE(56, 56), .y_offset = 11 },
-    [SPECIES_ARON]        = { .size = MON_COORDS_SIZE(32, 24), .y_offset = 20 },
-    [SPECIES_LAIRON]      = { .size = MON_COORDS_SIZE(56, 40), .y_offset = 13 },
-    [SPECIES_AGGRON]      = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
-    [SPECIES_CASTFORM]    = { .size = MON_COORDS_SIZE(24, 32), .y_offset = 17 },
-    [SPECIES_VOLBEAT]     = { .size = MON_COORDS_SIZE(48, 48), .y_offset =  8 },
-    [SPECIES_ILLUMISE]    = { .size = MON_COORDS_SIZE(40, 48), .y_offset =  8 },
-    [SPECIES_LILEEP]      = { .size = MON_COORDS_SIZE(48, 56), .y_offset =  7 },
-    [SPECIES_CRADILY]     = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },
-    [SPECIES_ANORITH]     = { .size = MON_COORDS_SIZE(48, 48), .y_offset =  8 },
-    [SPECIES_ARMALDO]     = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
-    [SPECIES_RALTS]       = { .size = MON_COORDS_SIZE(24, 40), .y_offset = 15 },
-    [SPECIES_KIRLIA]      = { .size = MON_COORDS_SIZE(32, 56), .y_offset =  6 },
-    [SPECIES_GARDEVOIR]   = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  1 },
-    [SPECIES_BAGON]       = { .size = MON_COORDS_SIZE(40, 48), .y_offset = 11 },
-    [SPECIES_SHELGON]     = { .size = MON_COORDS_SIZE(48, 48), .y_offset =  9 },
-    [SPECIES_SALAMENCE]   = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  4 },
-    [SPECIES_BELDUM]      = { .size = MON_COORDS_SIZE(40, 40), .y_offset = 15 },
-    [SPECIES_METANG]      = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  7 },
-    [SPECIES_METAGROSS]   = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  6 },
-    [SPECIES_REGIROCK]    = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  4 },
-    [SPECIES_REGICE]      = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  2 },
-    [SPECIES_REGISTEEL]   = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  3 },
-    [SPECIES_KYOGRE]      = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  4 },
-    [SPECIES_GROUDON]     = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  1 },
-    [SPECIES_RAYQUAZA]    = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
-    [SPECIES_LATIAS]      = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  1 },
-    [SPECIES_LATIOS]      = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  2 },
-    [SPECIES_JIRACHI]     = { .size = MON_COORDS_SIZE(48, 48), .y_offset = 13 },
-    [SPECIES_DEOXYS]      = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  1 },
-    [SPECIES_CHIMECHO]    = { .size = MON_COORDS_SIZE(24, 56), .y_offset =  6 },
+    [SPECIES_MIGHTYENA]   = { .size = MON_COORDS_SIZE(64, 48), .y_offset =  0 },  // WARMASSIFF (sprite-creature-generator)
+    [SPECIES_ZIGZAGOON]   = { .size = MON_COORDS_SIZE(56, 40), .y_offset =  0 },  // SCURRIER (sprite-creature-generator)
+    [SPECIES_LINOONE]     = { .size = MON_COORDS_SIZE(64, 48), .y_offset =  0 },  // SCURRYDASH (sprite-creature-generator)
+    [SPECIES_WURMPLE]     = { .size = MON_COORDS_SIZE(48, 32), .y_offset =  0 },  // SANDGRUB (sprite-creature-generator)
+    [SPECIES_SILCOON]     = { .size = MON_COORDS_SIZE(56, 32), .y_offset =  0 },  // SILKPOD (sprite-creature-generator)
+    [SPECIES_BEAUTIFLY]   = { .size = MON_COORDS_SIZE(64, 32), .y_offset =  0 },  // SANDMOTH (sprite-creature-generator)
+    [SPECIES_CASCOON]     = { .size = MON_COORDS_SIZE(48, 40), .y_offset =  0 },  // VENOMPOD (sprite-creature-generator)
+    [SPECIES_DUSTOX]      = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  0 },  // DUSTMOTH (sprite-creature-generator)
+    [SPECIES_LOTAD]       = { .size = MON_COORDS_SIZE(48, 56), .y_offset =  0 },  // BOGLING (sprite-creature-generator)
+    [SPECIES_LOMBRE]      = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // BOGTROT (sprite-creature-generator)
+    [SPECIES_LUDICOLO]    = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },  // FAMBAA (sprite-creature-generator)
+    [SPECIES_SEEDOT]      = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // ACORNLET (sprite-creature-generator)
+    [SPECIES_NUZLEAF]     = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  0 },  // LEAFTRICK (sprite-creature-generator)
+    [SPECIES_SHIFTRY]     = { .size = MON_COORDS_SIZE(56, 48), .y_offset =  0 },  // GALELORD (sprite-creature-generator)
+    [SPECIES_NINCADA]     = { .size = MON_COORDS_SIZE(56, 48), .y_offset =  0 },  // HIVEGRUB (sprite-creature-generator)
+    [SPECIES_NINJASK]     = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },  // HIVEDART (sprite-creature-generator)
+    [SPECIES_SHEDINJA]    = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },  // GEOZOMBIE (sprite-creature-generator)
+    [SPECIES_TAILLOW]     = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  0 },  // HAWKBATKIT (sprite-creature-generator)
+    [SPECIES_SWELLOW]     = { .size = MON_COORDS_SIZE(56, 48), .y_offset =  0 },  // HAWKBAT (sprite-creature-generator)
+    [SPECIES_SHROOMISH]   = { .size = MON_COORDS_SIZE(48, 48), .y_offset =  0 },  // FELUSPORE (sprite-creature-generator)
+    [SPECIES_BRELOOM]     = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },  // SPOREFIST (sprite-creature-generator)
+    [SPECIES_SPINDA]      = { .size = MON_COORDS_SIZE(40, 64), .y_offset =  0 },  // WOBBLEKIT (sprite-creature-generator)
+    [SPECIES_WINGULL]     = { .size = MON_COORDS_SIZE(48, 56), .y_offset =  0 },  // SHYYYOLET (sprite-creature-generator)
+    [SPECIES_PELIPPER]    = { .size = MON_COORDS_SIZE(56, 40), .y_offset =  0 },  // SHYYYO (sprite-creature-generator)
+    [SPECIES_SURSKIT]     = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },  // SKIMBUG (sprite-creature-generator)
+    [SPECIES_MASQUERAIN]  = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  0 },  // BOGWING (sprite-creature-generator)
+    [SPECIES_WAILMER]     = { .size = MON_COORDS_SIZE(56, 32), .y_offset =  0 },  // AIWHALET (sprite-creature-generator)
+    [SPECIES_WAILORD]     = { .size = MON_COORDS_SIZE(64, 32), .y_offset =  0 },  // AIWHA (sprite-creature-generator)
+    [SPECIES_SKITTY]      = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  0 },  // LOTHKIT (sprite-creature-generator)
+    [SPECIES_DELCATTY]    = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  0 },  // LOTHCAT (sprite-creature-generator)
+    [SPECIES_KECLEON]     = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // TAOZIN (sprite-creature-generator)
+    [SPECIES_BALTOY]      = { .size = MON_COORDS_SIZE(48, 40), .y_offset =  0 },  // HOLOSHARD (sprite-creature-generator)
+    [SPECIES_CLAYDOL]     = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },  // HOLOCRON (sprite-creature-generator)
+    [SPECIES_NOSEPASS]    = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // LODESTAR (sprite-creature-generator)
+    [SPECIES_TORKOAL]     = { .size = MON_COORDS_SIZE(24, 64), .y_offset =  0 },  // SMELTER (sprite-creature-generator)
+    [SPECIES_SABLEYE]     = { .size = MON_COORDS_SIZE(32, 64), .y_offset =  0 },  // KYBERIMP (sprite-creature-generator)
+    [SPECIES_BARBOACH]    = { .size = MON_COORDS_SIZE(48, 16), .y_offset =  0 },  // BOGWHISKR (sprite-creature-generator)
+    [SPECIES_WHISCASH]    = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  0 },  // BOGTITAN (sprite-creature-generator)
+    [SPECIES_LUVDISC]     = { .size = MON_COORDS_SIZE(48, 32), .y_offset =  0 },  // HEARTFIN (sprite-creature-generator)
+    [SPECIES_CORPHISH]    = { .size = MON_COORDS_SIZE(56, 48), .y_offset =  0 },  // CRABDROID (sprite-creature-generator)
+    [SPECIES_CRAWDAUNT]   = { .size = MON_COORDS_SIZE(64, 40), .y_offset =  0 },  // MUCKRAKER (sprite-creature-generator)
+    [SPECIES_FEEBAS]      = { .size = MON_COORDS_SIZE(48, 48), .y_offset =  0 },  // DULLFIN (sprite-creature-generator)
+    [SPECIES_MILOTIC]     = { .size = MON_COORDS_SIZE(64, 32), .y_offset =  0 },  // SHIMMERFIN (sprite-creature-generator)
+    [SPECIES_CARVANHA]    = { .size = MON_COORDS_SIZE(56, 32), .y_offset =  0 },  // OPEEFRY (sprite-creature-generator)
+    [SPECIES_SHARPEDO]    = { .size = MON_COORDS_SIZE(64, 32), .y_offset =  0 },  // OPEEKILLER (sprite-creature-generator)
+    [SPECIES_TRAPINCH]    = { .size = MON_COORDS_SIZE(48, 24), .y_offset =  0 },  // KRAYTHATCH (sprite-creature-generator)
+    [SPECIES_VIBRAVA]     = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  0 },  // KRAYTLING (sprite-creature-generator)
+    [SPECIES_FLYGON]      = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  0 },  // KRAYT (sprite-creature-generator)
+    [SPECIES_MAKUHITA]    = { .size = MON_COORDS_SIZE(64, 48), .y_offset =  0 },  // MOGUCUB (sprite-creature-generator)
+    [SPECIES_HARIYAMA]    = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  0 },  // MOGU (sprite-creature-generator)
+    [SPECIES_ELECTRIKE]   = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },  // KATHPUP (sprite-creature-generator)
+    [SPECIES_MANECTRIC]   = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },  // KATHHOUND (sprite-creature-generator)
+    [SPECIES_NUMEL]       = { .size = MON_COORDS_SIZE(56, 40), .y_offset =  0 },  // BANTHACALF (sprite-creature-generator)
+    [SPECIES_CAMERUPT]    = { .size = MON_COORDS_SIZE(64, 48), .y_offset =  0 },  // BANTHA (sprite-creature-generator)
+    [SPECIES_SPHEAL]      = { .size = MON_COORDS_SIZE(48, 32), .y_offset =  0 },  // SNOWSEAL (sprite-creature-generator)
+    [SPECIES_SEALEO]      = { .size = MON_COORDS_SIZE(56, 32), .y_offset =  0 },  // ICESEAL (sprite-creature-generator)
+    [SPECIES_WALREIN]     = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  0 },  // TUSKWALRUS (sprite-creature-generator)
+    [SPECIES_CACNEA]      = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },  // FUNNELBUD (sprite-creature-generator)
+    [SPECIES_CACTURNE]    = { .size = MON_COORDS_SIZE(32, 64), .y_offset =  0 },  // DUNEHUSK (sprite-creature-generator)
+    [SPECIES_SNORUNT]     = { .size = MON_COORDS_SIZE(48, 56), .y_offset =  0 },  // WAMPLET (sprite-creature-generator)
+    [SPECIES_GLALIE]      = { .size = MON_COORDS_SIZE(56, 32), .y_offset =  0 },  // WAMPA (sprite-creature-generator)
+    [SPECIES_LUNATONE]    = { .size = MON_COORDS_SIZE(40, 64), .y_offset =  0 },  // KYBERMOON (sprite-creature-generator)
+    [SPECIES_SOLROCK]     = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // KYBERSUN (sprite-creature-generator)
+    [SPECIES_AZURILL]     = { .size = MON_COORDS_SIZE(48, 40), .y_offset =  0 },  // BLOOPKIT (sprite-creature-generator)
+    [SPECIES_SPOINK]      = { .size = MON_COORDS_SIZE(56, 32), .y_offset =  0 },  // PUFFERPIG (sprite-creature-generator)
+    [SPECIES_GRUMPIG]     = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },  // PUFFERBOAR (sprite-creature-generator)
+    [SPECIES_PLUSLE]      = { .size = MON_COORDS_SIZE(32, 64), .y_offset =  0 },  // PIT DROID (sprite-creature-generator)
+    [SPECIES_MINUN]       = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // GONK (sprite-creature-generator)
+    [SPECIES_MAWILE]      = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  0 },  // BUZZDROID (sprite-creature-generator)
+    [SPECIES_MEDITITE]    = { .size = MON_COORDS_SIZE(40, 64), .y_offset =  0 },  // ZENKIT (sprite-creature-generator)
+    [SPECIES_MEDICHAM]    = { .size = MON_COORDS_SIZE(40, 64), .y_offset =  0 },  // ZENAPE (sprite-creature-generator)
+    [SPECIES_SWABLU]      = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },  // VELKLET (sprite-creature-generator)
+    [SPECIES_ALTARIA]     = { .size = MON_COORDS_SIZE(56, 40), .y_offset =  0 },  // VELKER (sprite-creature-generator)
+    [SPECIES_WYNAUT]      = { .size = MON_COORDS_SIZE(48, 16), .y_offset =  0 },  // YSALAKIT (sprite-creature-generator)
+    [SPECIES_DUSKULL]     = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // WRAITHLET (sprite-creature-generator)
+    [SPECIES_DUSCLOPS]    = { .size = MON_COORDS_SIZE(40, 64), .y_offset =  0 },  // SITHWRAITH (sprite-creature-generator)
+    [SPECIES_ROSELIA]     = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },  // FELUROSE (sprite-creature-generator)
+    [SPECIES_SLAKOTH]     = { .size = MON_COORDS_SIZE(56, 48), .y_offset =  0 },  // SLOTHLET (sprite-creature-generator)
+    [SPECIES_VIGOROTH]    = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },  // SLOTHFURY (sprite-creature-generator)
+    [SPECIES_SLAKING]     = { .size = MON_COORDS_SIZE(56, 48), .y_offset =  0 },  // SLOTHKING (sprite-creature-generator)
+    [SPECIES_GULPIN]      = { .size = MON_COORDS_SIZE(48, 40), .y_offset =  0 },  // SARLACLET (sprite-creature-generator)
+    [SPECIES_SWALOT]      = { .size = MON_COORDS_SIZE(40, 64), .y_offset =  0 },  // SARLACC (sprite-creature-generator)
+    [SPECIES_TROPIUS]     = { .size = MON_COORDS_SIZE(64, 32), .y_offset =  0 },  // THRANTA (sprite-creature-generator)
+    [SPECIES_WHISMUR]     = { .size = MON_COORDS_SIZE(48, 40), .y_offset =  0 },  // KOWAKIAN (sprite-creature-generator)
+    [SPECIES_LOUDRED]     = { .size = MON_COORDS_SIZE(40, 64), .y_offset =  0 },  // CACKLER (sprite-creature-generator)
+    [SPECIES_EXPLOUD]     = { .size = MON_COORDS_SIZE(40, 64), .y_offset =  0 },  // BOOMCACKLE (sprite-creature-generator)
+    [SPECIES_CLAMPERL]    = { .size = MON_COORDS_SIZE(48, 56), .y_offset =  0 },  // PEARLCLAM (sprite-creature-generator)
+    [SPECIES_HUNTAIL]     = { .size = MON_COORDS_SIZE(64, 32), .y_offset =  0 },  // DEEPEEL (sprite-creature-generator)
+    [SPECIES_GOREBYSS]    = { .size = MON_COORDS_SIZE(64, 24), .y_offset =  0 },  // SILKEEL (sprite-creature-generator)
+    [SPECIES_ABSOL]       = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },  // LOTHWOLF (sprite-creature-generator)
+    [SPECIES_SHUPPET]     = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // ECHOWISP (sprite-creature-generator)
+    [SPECIES_BANETTE]     = { .size = MON_COORDS_SIZE(40, 64), .y_offset =  0 },  // HOLLOWDOLL (sprite-creature-generator)
+    [SPECIES_SEVIPER]     = { .size = MON_COORDS_SIZE(56, 40), .y_offset =  0 },  // KOUHUN (sprite-creature-generator)
+    [SPECIES_ZANGOOSE]    = { .size = MON_COORDS_SIZE(64, 32), .y_offset =  0 },  // NEXU (sprite-creature-generator)
+    [SPECIES_RELICANTH]   = { .size = MON_COORDS_SIZE(56, 24), .y_offset =  0 },  // RELICFISH (sprite-creature-generator)
+    [SPECIES_ARON]        = { .size = MON_COORDS_SIZE(48, 32), .y_offset =  0 },  // SPIDROID (sprite-creature-generator)
+    [SPECIES_LAIRON]      = { .size = MON_COORDS_SIZE(56, 40), .y_offset =  0 },  // OCTUPTARRA (sprite-creature-generator)
+    [SPECIES_AGGRON]      = { .size = MON_COORDS_SIZE(64, 48), .y_offset =  0 },  // PERSUADER (sprite-creature-generator)
+    [SPECIES_CASTFORM]    = { .size = MON_COORDS_SIZE(40, 40), .y_offset =  0 },  // CLIMADROID normal (sprite-creature-generator)
+    [SPECIES_VOLBEAT]     = { .size = MON_COORDS_SIZE(40, 64), .y_offset =  0 },  // GLOWFLY (sprite-creature-generator)
+    [SPECIES_ILLUMISE]    = { .size = MON_COORDS_SIZE(40, 64), .y_offset =  0 },  // LUMIFLY (sprite-creature-generator)
+    [SPECIES_LILEEP]      = { .size = MON_COORDS_SIZE(48, 40), .y_offset =  0 },  // SEAFROND (sprite-creature-generator)
+    [SPECIES_CRADILY]     = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },  // FRONDTITAN (sprite-creature-generator)
+    [SPECIES_ANORITH]     = { .size = MON_COORDS_SIZE(56, 40), .y_offset =  0 },  // SHELLHUSK (sprite-creature-generator)
+    [SPECIES_ARMALDO]     = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },  // ARMORCLAW (sprite-creature-generator)
+    [SPECIES_RALTS]       = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },  // AURALET (sprite-creature-generator)
+    [SPECIES_KIRLIA]      = { .size = MON_COORDS_SIZE(24, 64), .y_offset =  0 },  // AURADANCER (sprite-creature-generator)
+    [SPECIES_GARDEVOIR]   = { .size = MON_COORDS_SIZE(24, 64), .y_offset =  0 },  // AURAWARDEN (sprite-creature-generator)
+    [SPECIES_BAGON]       = { .size = MON_COORDS_SIZE(48, 24), .y_offset =  0 },  // DACTHATCH (sprite-creature-generator)
+    [SPECIES_SHELGON]     = { .size = MON_COORDS_SIZE(56, 48), .y_offset =  0 },  // DACTSHELL (sprite-creature-generator)
+    [SPECIES_SALAMENCE]   = { .size = MON_COORDS_SIZE(64, 24), .y_offset =  0 },  // DACTILLION (sprite-creature-generator)
+    [SPECIES_BELDUM]      = { .size = MON_COORDS_SIZE(24, 56), .y_offset =  0 },  // R1 UNIT (sprite-creature-generator)
+    [SPECIES_METANG]      = { .size = MON_COORDS_SIZE(40, 64), .y_offset =  0 },  // R4 UNIT (sprite-creature-generator)
+    [SPECIES_METAGROSS]   = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // R2 UNIT (sprite-creature-generator)
+    [SPECIES_REGIROCK]    = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // ROCKWARDEN (sprite-creature-generator)
+    [SPECIES_REGICE]      = { .size = MON_COORDS_SIZE(40, 64), .y_offset =  0 },  // ICEWARDEN (sprite-creature-generator)
+    [SPECIES_REGISTEEL]   = { .size = MON_COORDS_SIZE(32, 64), .y_offset =  0 },  // DURAWARDEN (sprite-creature-generator)
+    [SPECIES_KYOGRE]      = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },  // SANDO (sprite-creature-generator)
+    [SPECIES_GROUDON]     = { .size = MON_COORDS_SIZE(64, 40), .y_offset =  0 },  // GREATKRAYT (sprite-creature-generator)
+    [SPECIES_RAYQUAZA]    = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  0 },  // EXOGORTH (sprite-creature-generator)
+    [SPECIES_LATIAS]      = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // ASHLA (sprite-creature-generator)
+    [SPECIES_LATIOS]      = { .size = MON_COORDS_SIZE(64, 48), .y_offset =  0 },  // BOGAN (sprite-creature-generator)
+    [SPECIES_JIRACHI]     = { .size = MON_COORDS_SIZE(40, 40), .y_offset =  0 },  // WHILLSTAR (sprite-creature-generator)
+    [SPECIES_DEOXYS]      = { .size = MON_COORDS_SIZE(64, 48), .y_offset =  0 },  // SHIFTSTAR (sprite-creature-generator)
+    [SPECIES_CHIMECHO]    = { .size = MON_COORDS_SIZE(40, 56), .y_offset =  0 },  // TEMPLEBELL (sprite-creature-generator)
     [SPECIES_EGG]         = { .size = MON_COORDS_SIZE(24, 24), .y_offset = 20 },
-    [SPECIES_UNOWN_B]     = { .size = MON_COORDS_SIZE(24, 32), .y_offset = 16 },
-    [SPECIES_UNOWN_C]     = { .size = MON_COORDS_SIZE(32, 32), .y_offset = 16 },
-    [SPECIES_UNOWN_D]     = { .size = MON_COORDS_SIZE(32, 32), .y_offset = 16 },
-    [SPECIES_UNOWN_E]     = { .size = MON_COORDS_SIZE(32, 32), .y_offset = 17 },
-    [SPECIES_UNOWN_F]     = { .size = MON_COORDS_SIZE(32, 32), .y_offset = 17 },
-    [SPECIES_UNOWN_G]     = { .size = MON_COORDS_SIZE(24, 40), .y_offset = 14 },
-    [SPECIES_UNOWN_H]     = { .size = MON_COORDS_SIZE(32, 32), .y_offset = 16 },
-    [SPECIES_UNOWN_I]     = { .size = MON_COORDS_SIZE(24, 32), .y_offset = 16 },
-    [SPECIES_UNOWN_J]     = { .size = MON_COORDS_SIZE(24, 32), .y_offset = 17 },
-    [SPECIES_UNOWN_K]     = { .size = MON_COORDS_SIZE(32, 32), .y_offset = 17 },
-    [SPECIES_UNOWN_L]     = { .size = MON_COORDS_SIZE(24, 32), .y_offset = 19 },
-    [SPECIES_UNOWN_M]     = { .size = MON_COORDS_SIZE(32, 32), .y_offset = 19 },
-    [SPECIES_UNOWN_N]     = { .size = MON_COORDS_SIZE(32, 24), .y_offset = 20 },
-    [SPECIES_UNOWN_O]     = { .size = MON_COORDS_SIZE(32, 32), .y_offset = 16 },
-    [SPECIES_UNOWN_P]     = { .size = MON_COORDS_SIZE(24, 32), .y_offset = 19 },
-    [SPECIES_UNOWN_Q]     = { .size = MON_COORDS_SIZE(32, 24), .y_offset = 21 },
-    [SPECIES_UNOWN_R]     = { .size = MON_COORDS_SIZE(24, 32), .y_offset = 19 },
-    [SPECIES_UNOWN_S]     = { .size = MON_COORDS_SIZE(32, 40), .y_offset = 12 },
-    [SPECIES_UNOWN_T]     = { .size = MON_COORDS_SIZE(24, 32), .y_offset = 18 },
-    [SPECIES_UNOWN_U]     = { .size = MON_COORDS_SIZE(32, 32), .y_offset = 18 },
-    [SPECIES_UNOWN_V]     = { .size = MON_COORDS_SIZE(32, 32), .y_offset = 18 },
-    [SPECIES_UNOWN_W]     = { .size = MON_COORDS_SIZE(32, 32), .y_offset = 19 },
-    [SPECIES_UNOWN_X]     = { .size = MON_COORDS_SIZE(24, 24), .y_offset = 21 },
-    [SPECIES_UNOWN_Y]     = { .size = MON_COORDS_SIZE(24, 32), .y_offset = 17 },
-    [SPECIES_UNOWN_Z]     = { .size = MON_COORDS_SIZE(24, 32), .y_offset = 16 },
-    [SPECIES_UNOWN_EMARK] = { .size = MON_COORDS_SIZE(24, 40), .y_offset = 15 },
-    [SPECIES_UNOWN_QMARK] = { .size = MON_COORDS_SIZE(24, 40), .y_offset = 13 },
+    [SPECIES_UNOWN_B]     = { .size = MON_COORDS_SIZE(48, 32), .y_offset =  0 },  // AUREBESH b (sprite-creature-generator)
+    [SPECIES_UNOWN_C]     = { .size = MON_COORDS_SIZE(48, 56), .y_offset =  0 },  // AUREBESH c (sprite-creature-generator)
+    [SPECIES_UNOWN_D]     = { .size = MON_COORDS_SIZE(48, 40), .y_offset =  0 },  // AUREBESH d (sprite-creature-generator)
+    [SPECIES_UNOWN_E]     = { .size = MON_COORDS_SIZE(48, 40), .y_offset =  0 },  // AUREBESH e (sprite-creature-generator)
+    [SPECIES_UNOWN_F]     = { .size = MON_COORDS_SIZE(48, 40), .y_offset =  0 },  // AUREBESH f (sprite-creature-generator)
+    [SPECIES_UNOWN_G]     = { .size = MON_COORDS_SIZE(48, 40), .y_offset =  0 },  // AUREBESH g (sprite-creature-generator)
+    [SPECIES_UNOWN_H]     = { .size = MON_COORDS_SIZE(48, 32), .y_offset =  0 },  // AUREBESH h (sprite-creature-generator)
+    [SPECIES_UNOWN_I]     = { .size = MON_COORDS_SIZE(32, 56), .y_offset =  0 },  // AUREBESH i (sprite-creature-generator)
+    [SPECIES_UNOWN_J]     = { .size = MON_COORDS_SIZE(48, 40), .y_offset =  0 },  // AUREBESH j (sprite-creature-generator)
+    [SPECIES_UNOWN_K]     = { .size = MON_COORDS_SIZE(48, 40), .y_offset =  0 },  // AUREBESH k (sprite-creature-generator)
+    [SPECIES_UNOWN_L]     = { .size = MON_COORDS_SIZE(48, 56), .y_offset =  0 },  // AUREBESH l (sprite-creature-generator)
+    [SPECIES_UNOWN_M]     = { .size = MON_COORDS_SIZE(48, 56), .y_offset =  0 },  // AUREBESH m (sprite-creature-generator)
+    [SPECIES_UNOWN_N]     = { .size = MON_COORDS_SIZE(48, 32), .y_offset =  0 },  // AUREBESH n (sprite-creature-generator)
+    [SPECIES_UNOWN_O]     = { .size = MON_COORDS_SIZE(48, 40), .y_offset =  0 },  // AUREBESH o (sprite-creature-generator)
+    [SPECIES_UNOWN_P]     = { .size = MON_COORDS_SIZE(48, 56), .y_offset =  0 },  // AUREBESH p (sprite-creature-generator)
+    [SPECIES_UNOWN_Q]     = { .size = MON_COORDS_SIZE(48, 40), .y_offset =  0 },  // AUREBESH q (sprite-creature-generator)
+    [SPECIES_UNOWN_R]     = { .size = MON_COORDS_SIZE(48, 40), .y_offset =  0 },  // AUREBESH r (sprite-creature-generator)
+    [SPECIES_UNOWN_S]     = { .size = MON_COORDS_SIZE(48, 40), .y_offset =  0 },  // AUREBESH s (sprite-creature-generator)
+    [SPECIES_UNOWN_T]     = { .size = MON_COORDS_SIZE(48, 40), .y_offset =  0 },  // AUREBESH t (sprite-creature-generator)
+    [SPECIES_UNOWN_U]     = { .size = MON_COORDS_SIZE(48, 40), .y_offset =  0 },  // AUREBESH u (sprite-creature-generator)
+    [SPECIES_UNOWN_V]     = { .size = MON_COORDS_SIZE(48, 48), .y_offset =  0 },  // AUREBESH v (sprite-creature-generator)
+    [SPECIES_UNOWN_W]     = { .size = MON_COORDS_SIZE(48, 40), .y_offset =  0 },  // AUREBESH w (sprite-creature-generator)
+    [SPECIES_UNOWN_X]     = { .size = MON_COORDS_SIZE(48, 40), .y_offset =  0 },  // AUREBESH x (sprite-creature-generator)
+    [SPECIES_UNOWN_Y]     = { .size = MON_COORDS_SIZE(48, 40), .y_offset =  0 },  // AUREBESH y (sprite-creature-generator)
+    [SPECIES_UNOWN_Z]     = { .size = MON_COORDS_SIZE(48, 40), .y_offset =  0 },  // AUREBESH z (sprite-creature-generator)
+    [SPECIES_UNOWN_EMARK] = { .size = MON_COORDS_SIZE(24, 56), .y_offset =  0 },  // AUREBESH exclamation_mark (sprite-creature-generator)
+    [SPECIES_UNOWN_QMARK] = { .size = MON_COORDS_SIZE(32, 56), .y_offset =  0 },  // AUREBESH question_mark (sprite-creature-generator)
 };

@@ -54,10 +54,10 @@ static const struct UCoords8 sBattlerCoords[][MAX_BATTLERS_COUNT] =
 // One entry for each of the four Castform forms.
 const struct MonCoords gCastformFrontSpriteCoords[NUM_CASTFORM_FORMS] =
 {
-    [CASTFORM_NORMAL] = { .size = MON_COORDS_SIZE(32, 32), .y_offset = 17 },
-    [CASTFORM_FIRE]   = { .size = MON_COORDS_SIZE(48, 48), .y_offset =  9 },
-    [CASTFORM_WATER]  = { .size = MON_COORDS_SIZE(32, 48), .y_offset =  9 },
-    [CASTFORM_ICE]    = { .size = MON_COORDS_SIZE(64, 48), .y_offset =  8 },
+    [CASTFORM_NORMAL] = { .size = MON_COORDS_SIZE(40, 40), .y_offset =  0 },  // CLIMADROID normal (sprite-creature-generator)
+    [CASTFORM_FIRE]   = { .size = MON_COORDS_SIZE(40, 40), .y_offset =  0 },  // CLIMADROID sunny (sprite-creature-generator)
+    [CASTFORM_WATER]  = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  0 },  // CLIMADROID rainy (sprite-creature-generator)
+    [CASTFORM_ICE]    = { .size = MON_COORDS_SIZE(56, 48), .y_offset =  0 },  // CLIMADROID snowy (sprite-creature-generator)
 };
 
 static const u8 sCastformElevations[NUM_CASTFORM_FORMS] =
