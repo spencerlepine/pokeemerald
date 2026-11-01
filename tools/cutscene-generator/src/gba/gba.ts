@@ -36,12 +36,18 @@ export function writeJasc(colors: Color[]): string {
 
 export function parsePal(list: (string | number)[], what: string): Color[] {
   if (!Array.isArray(list) || list.length < 1 || list.length > 16) throw new PxError(`${what}: pal must list 1-16 colors (index 0 = transparent)`);
+  const offStep: string[] = [];
   const out = list.map((c) => {
     if (typeof c === "number") return c >>> 0;
     const h = c.startsWith("#") ? c.slice(1) : c;
     if (!/^[0-9a-fA-F]{6}$/.test(h)) throw new PxError(`${what}: bad palette color '${c}' (use "#rrggbb")`);
-    return pack(parseInt(h.slice(0, 2), 16), parseInt(h.slice(2, 4), 16), parseInt(h.slice(4, 6), 16));
+    const rgb = [parseInt(h.slice(0, 2), 16), parseInt(h.slice(2, 4), 16), parseInt(h.slice(4, 6), 16)];
+    // tools/PALETTES.md: every colour sits on a GBA step (multiple of 8). The game truncates the low
+    // 3 bits anyway, so truncating here keeps the .pal file and the preview identical to the game.
+    if (rgb.some((v) => v % 8)) offStep.push(`${c} -> ${toHex(pack(...(rgb.map((v) => (v >> 3) << 3) as [number, number, number])))}`);
+    return pack(...(rgb.map((v) => (v >> 3) << 3) as [number, number, number]));
   });
+  if (offStep.length) console.warn(`${what}: ${offStep.length} palette color(s) not on a GBA step, truncated as the game would: ${offStep.join(", ")}`);
   while (out.length < 16) out.push(pack(0, 0, 0));
   return out;
 }

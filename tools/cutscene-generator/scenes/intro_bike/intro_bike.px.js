@@ -34,11 +34,11 @@ const BG = [
   "#f8e8c8", // 12 adobe / metal lit
   "#d8c098", // 13 adobe / metal mid
   "#886858", // 14 doorways, metal dark
-  "#fff8e0", // 15 the twin suns
+  "#f8f8e0", // 15 the twin suns
 ]
 // BG palette slot 15 (grass.png). Same index roles as Emerald's grass: 1 edge line, 13-15 the ground.
 const GROUND = [
-  "#000000", "#886850", "#a88060", "#f8f0d8", "#ffffff",
+  "#000000", "#886850", "#a88060", "#f8f0d8", "#f8f8f8",
   "#000000", "#000000", "#000000", "#000000", "#000000", "#000000", "#000000", "#000000",
   "#d0a060", "#e8b878", "#f8d898",
 ]
@@ -48,11 +48,11 @@ const PLAYER = [
   "#483838", // 1  outline (warm dark, like Emerald's #524a4a)
   "#888878", // 2  metal shade
   "#c8c0e0", // 3  metal light (Emerald's lavender-white)
-  "#ffffff", // 4  white
+  "#f8f8f8", // 4  white
   "#e86818", // 5  flight orange (scarf, stripe)
   "#f8a848", // 6  orange light
   "#303040", // 7  dark (seat, strap, grille)
-  "#ffd898", // 8  skin light
+  "#f8d898", // 8  skin light
   "#e0a088", // 9  skin shade
   "#a86048", // 10 hair light / skin outline
   "#58c8f8", // 11 kyber blue (thruster, lens glint)

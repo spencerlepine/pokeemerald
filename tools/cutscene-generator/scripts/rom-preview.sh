@@ -18,6 +18,9 @@ FIRST="${2:-1300}" LAST="${3:-1950}" STEP="${4:-10}"
 SCRATCH="${PXL_ROM_SCRATCH:-${TMPDIR:-/tmp}/pxl-rom-preview}"
 
 [ -d "$OUT/game" ] || { echo "no $OUT/game: build the scene first (pxl build)"; exit 1; }
+# tools/PALETTES.md gate: every PNG and .pal the scene writes must pass the shared palette check.
+( cd "$REPO/tools/palette-enforcer" && python3 -m gba_palette audit "$OUT/game" ) \
+  || { echo "palette gate failed (tools/PALETTES.md): fix the scene's palettes before it goes near the ROM"; exit 1; }
 if [ ! -d "$SCRATCH/game" ]; then
   echo "== copying game to $SCRATCH (first run)"
   mkdir -p "$SCRATCH"; cp -a "$REPO/game" "$SCRATCH/game"
