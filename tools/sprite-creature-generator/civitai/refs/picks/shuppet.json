@@ -1,0 +1,9 @@
+{
+  "init": "refs/shuppet_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/b/b0/TookaDoll-TCW.png/revision/latest?cb=20230709160525",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small floating puppet wisp with two horn tips and glowing eyes",
+  "colour": "purple and tan",
+  "ref_note": "Tooka doll (TCW) render: simple plush puppet silhouette, transparent; pre-evo of banette's rag doll"
+}

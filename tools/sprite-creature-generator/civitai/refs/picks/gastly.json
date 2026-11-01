@@ -1,0 +1,9 @@
+{
+  "init": "refs/gastly_prep.png",
+  "init_source": "/tmp/claude-0/-home-user/510f0079-9430-50be-b656-57ddf5b64e74/scratchpad/mask/gastly_tint.png",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "round wisp of dark-side gas with a glaring ghostly face",
+  "colour": "dark purple and violet",
+  "ref_note": "cutout of https://static.wikia.nocookie.net/starwars/images/a/a3/Unidentified_Nightsister_spirit.png tinted purple"
+}

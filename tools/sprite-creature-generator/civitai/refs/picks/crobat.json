@@ -1,0 +1,9 @@
+{
+  "init": "refs/crobat_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/f/f7/Mynock-FF75.png/revision/latest/scale-to-width-down/1000?cb=20231002022735",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "large deep-space mynock with two pairs of wide leathery wings and a round sucker mouth",
+  "colour": "pale tan and grey",
+  "ref_note": "Mynock (Fact File art, transparent), wings fully spread, front view. Different image from Mynock-AA, which the zubat line is reported to use. No flip."
+}

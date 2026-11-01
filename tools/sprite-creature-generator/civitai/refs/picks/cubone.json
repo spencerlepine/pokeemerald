@@ -1,0 +1,9 @@
+{
+  "init": "refs/cubone_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/0/0a/SandBeast-CGSWG.png/revision/latest/scale-to-width-down/1000?cb=20241215071223",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small hunched brown desert cub wearing a pale krayt dragon skull as a helmet",
+  "colour": "brown tan grey",
+  "ref_note": "Re-pick (womp rat art belongs to rattata): shares the canon Tatooine sand beast render with its evolution marowak, at a smaller width with a cub desc; no other clean small Tatooine creature art was unclaimed"
+}

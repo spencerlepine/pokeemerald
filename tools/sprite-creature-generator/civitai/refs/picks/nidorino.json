@@ -1,0 +1,9 @@
+{
+  "init": "refs/nidorino_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/c/c5/Reek_NEGAS.jpg/revision/latest/scale-to-width-down/1000?cb=20090709063850#crop=0,0,1,0.93",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "young reek with a tall curved nose horn side tusks and bumpy hide",
+  "colour": "rusty brown",
+  "ref_note": "Reek (New Essential Guide art, white bg) cropped above the ground shadow, flipped to face left; different image for the middle stage"
+}

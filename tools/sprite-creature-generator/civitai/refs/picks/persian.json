@@ -1,0 +1,9 @@
+{
+  "init": "refs/persian_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/e/e8/Swampstalker.png/revision/latest?cb=20071128202108#crop=0.0,0.0,0.72,0.8",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "sleek proud tusk-cat with long saber tusks and a striped back ridge",
+  "colour": "tan and cream",
+  "ref_note": "Star Wars Galaxies tusk cat render cropped clear of the bush (tail cut); faces left; canon Galactic Atlas art too small and cut out green"
+}

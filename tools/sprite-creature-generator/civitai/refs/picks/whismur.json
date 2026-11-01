@@ -1,0 +1,9 @@
+{
+  "init": "refs/whismur_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/d/d2/Pilf_Mukmuk_Switch.png/revision/latest?cb=20241008035337",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "Small sitting monkey-lizard with big floppy ears a beak-like snout and a tufted tail",
+  "colour": "pink red and green",
+  "ref_note": "Pilf Mukmuk (Kowakian monkey-lizard) sitting render; alpha, three-quarter facing left; smallest stage"
+}

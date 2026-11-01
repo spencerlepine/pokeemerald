@@ -1,0 +1,9 @@
+{
+  "init": "refs/magikarp_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/8/8c/BabyColoClawFish-SWCT.png/revision/latest?cb=20251117040512",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small flopping golden colo claw fry with a blunt head and weak little fins",
+  "colour": "gold tan cream",
+  "ref_note": "Canon baby colo claw fish (Topps) render with alpha, side view; flipped to face left"
+}

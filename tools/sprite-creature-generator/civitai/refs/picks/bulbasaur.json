@@ -1,0 +1,9 @@
+{
+  "init": "refs/bulbasaur_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/3/3e/Venga-Databank-Outlaws.png/revision/latest?cb=20240907202046",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small green toad lizard with a back frill and a round seed bulb on its back",
+  "colour": "green",
+  "ref_note": "Venga (Outlaws databank render, alpha), squat green frog-lizard, flipped to face left; stage 1 of toad-lizard line"
+}

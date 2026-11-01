@@ -1,0 +1,9 @@
+{
+  "init": "refs/tropius_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/a/af/Thranta-TOR.png/revision/latest?cb=20221106155215",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "gentle gliding thranta with broad leaf shaped wings and a bunch of fruit hanging under its neck",
+  "colour": "dark slate green and pale tan",
+  "ref_note": "Thranta (SWTOR) render: whole creature side view, head on the left, transparent"
+}

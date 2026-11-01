@@ -1,0 +1,9 @@
+{
+  "init": "refs/metapod_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/4/49/Divvik_pupa.jpg/revision/latest?cb=20241007130019#crop=0,0,1,0.84",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "hard green chrysalis shell glowing faintly with a curled shape inside",
+  "colour": "pale green",
+  "ref_note": "Divvik pupa (comic art) cropped above the ground; glowing green pupa, literal chrysalis"
+}

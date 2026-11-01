@@ -1,0 +1,9 @@
+{
+  "init": "refs/linoone_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/4/4b/Scurrier_concept_art.jpg/revision/latest?cb=20160626142933#crop=0.66,0,0.995,0.31",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "sleek grown scurrier poised to dash with a pale body and a blue finned crest and long curling tail",
+  "colour": "white and pale blue",
+  "ref_note": "Scurrier concept painting, top-right white design with blue fin cropped from the same sheet as zigzagoon (same line, different design); faces left"
+}

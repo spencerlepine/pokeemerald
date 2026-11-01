@@ -1,0 +1,9 @@
+{
+  "init": "refs/corsola_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/c/cd/Dokma-SWCT.png/revision/latest?cb=20251028033217",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "round shelled reef creature on stubby legs with big stalk eyes and branching coral growing from its shell",
+  "colour": "cream and pale pink",
+  "ref_note": "Dokma (SWCT) render as the round shelled body plan; transparent; front view; no canon coral creature art found"
+}

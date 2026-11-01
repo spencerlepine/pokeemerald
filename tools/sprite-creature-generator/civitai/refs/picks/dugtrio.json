@@ -1,0 +1,9 @@
+{
+  "init": "refs/dugtrio_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/a/a3/BogRat-JFO.png/revision/latest/scale-to-width-down/1000?cb=20241221133824#crop=0.0,0.0,1.0,0.72",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "three burrowing mole heads poking up together from one hole at different heights",
+  "colour": "brown and tan",
+  "ref_note": "Bog rat pair (Jedi Fallen Order) cropped to a cluster of heads emerging; matches diglett's bog rat crop; faces left"
+}

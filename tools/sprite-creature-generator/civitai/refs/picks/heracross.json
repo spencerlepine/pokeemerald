@@ -1,0 +1,9 @@
+{
+  "init": "refs/heracross_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/7/7b/Horned_krevol_concept_art.jpg/revision/latest?cb=20220124081826#crop=0.08,0.0,1.0,1.0",
+  "flip": false,
+  "denoise": 0.55,
+  "desc": "armoured fighting beetle with one huge forward horn a glossy domed shell and long legs",
+  "colour": "deep blue and steel blue",
+  "ref_note": "Horned krevol concept line art (crop removes the handwritten label); clean silhouette; horn faces left; black-and-white so colour comes from the prompt (denoise 0.55). Krevol.png had grass noise"
+}

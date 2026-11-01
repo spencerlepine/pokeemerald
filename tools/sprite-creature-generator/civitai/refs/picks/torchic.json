@@ -1,0 +1,9 @@
+{
+  "init": "refs/torchic_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/5/58/Pharple_concept_art.jpg/revision/latest?cb=20220108193749#crop=0.12,0.08,1,0.86",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small round fluffy desert fowl chick scurrying on thin legs with a long beak and downy feathers",
+  "colour": "white and grey",
+  "ref_note": "Re-pick (Porg art belongs to the pidgey line): pharple 'vulture turkey' pencil concept, round fluffy chick body running left; uncoloured sketch so colour comes from the prompt"
+}

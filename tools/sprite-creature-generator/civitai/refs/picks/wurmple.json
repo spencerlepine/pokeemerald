@@ -1,0 +1,9 @@
+{
+  "init": "refs/wurmple_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/0/0e/Pilmoy.jpg/revision/latest?cb=20070122082511#crop=0.37,0.705,0.93,0.985",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small desert larva caterpillar rearing its head with stubby legs and spotted segments",
+  "colour": "orange and slate blue",
+  "ref_note": "Alderaan furry moth caterpillar painting (Pilmoy) cropped and flipped to face left; a pale glow from the moth above clings to its back; wurmple line shares this sheet with dustox"
+}

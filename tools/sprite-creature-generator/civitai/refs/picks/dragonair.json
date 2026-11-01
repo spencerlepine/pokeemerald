@@ -1,0 +1,9 @@
+{
+  "init": "refs/dragonair_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/0/0b/TwinsDragonsnake-TMaG-ILM.png/revision/latest/scale-to-width-down/1000?cb=20260716221130",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "huge coiled swamp serpent rearing its head with gaping fanged jaws",
+  "colour": "pale tan and grey",
+  "ref_note": "Dragonsnake, ILM render from The Mandalorian and Grogu (transparent), coiled and rearing; head already on the left."
+}

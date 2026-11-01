@@ -1,0 +1,9 @@
+{
+  "init": "refs/growlithe_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/9/90/AkkDog-TJP.png/revision/latest?cb=20241010041230#crop=0.0,0.0,0.66,1.0",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "stocky young akk dog pup with a short tail and small ridged armour bands",
+  "colour": "orange-red and tan",
+  "ref_note": "The Jedi Path akk dog cutout cropped before the long tail to read as a compact pup; faces left; only clean akk art available, arcanine uses the full body"
+}

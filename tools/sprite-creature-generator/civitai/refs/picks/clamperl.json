@@ -1,0 +1,9 @@
+{
+  "init": "refs/clamperl_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/3/3b/Scallops.jpg/revision/latest?cb=20151215211211#crop=0.0,0.0,0.5,0.52",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small ridged clam shell slightly open with a large glowing white pearl inside",
+  "colour": "cream and pale brown",
+  "ref_note": "Scallop shell photo (Wookieepedia Scallop page, white bg), one shell cropped: cleanest clam silhouette found; no canon pearl clam creature art exists"
+}

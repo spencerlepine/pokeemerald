@@ -1,0 +1,9 @@
+{
+  "init": "refs/forretress_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/9/9d/Droideka-SWE.png/revision/latest?cb=20240929174903",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "tall droideka destroyer droid unfolded on three claw legs with twin blaster arms raised",
+  "colour": "gunmetal grey and bronze red",
+  "ref_note": "Droideka-SWE render; transparent; arms toward left; shield-bubble art (Droideka-USC) read worse at sprite size"
+}

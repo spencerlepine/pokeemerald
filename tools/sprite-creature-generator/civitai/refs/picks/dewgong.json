@@ -1,0 +1,9 @@
+{
+  "init": "refs/dewgong_prep.png",
+  "init_source": "/tmp/claude-0/-home-user/510f0079-9430-50be-b656-57ddf5b64e74/scratchpad/mask/thala_cut.png",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "sleek thala-siren lounging with a long curved neck a droopy snout and a long flippered tail",
+  "colour": "grey and pinkish brown",
+  "ref_note": "Thala-siren (Dorling Kindersley, the only art on its page) hand-masked out of the rock scene into a scratchpad PNG, full body with tail and fin; source https://static.wikia.nocookie.net/starwars/images/5/5b/Thala-siren-DK.png; faces left"
+}

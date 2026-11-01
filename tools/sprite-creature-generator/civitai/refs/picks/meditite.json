@@ -1,0 +1,9 @@
+{
+  "init": "refs/meditite_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/1/15/Lurmen-SWE.png/revision/latest/scale-to-width-down/1000?cb=20240917053658#crop=0,0,0.41,1",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "Small calm lemur standing upright with a round cap big yellow eyes a simple tunic and a ringed tail",
+  "colour": "blue grey and yellow",
+  "ref_note": "Left Lurmen (yellow tunic) cut from the Star Wars Encyclopedia pair render as body plan for the original Ilum lemur; alpha, front view; right hand clipped by the crop"
+}

@@ -1,0 +1,9 @@
+{
+  "init": "refs/tyranitar_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/f/f6/ZilloBeast-TZB.jpg/revision/latest?cb=20100410044829",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "towering armoured zillo beast standing upright with long clawed arms and a heavy tail",
+  "colour": "olive green and rust brown",
+  "ref_note": "Zillo Beast (The Zillo Beast episode) upright standing render on white, flipped so the head faces left; largest stage"
+}

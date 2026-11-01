@@ -1,0 +1,10 @@
+{
+  "init": "refs/lugia_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/f/fa/DaughterGriffin_TCWs3BR3.png/revision/latest/scale-to-width-down/1000?cb=20200314180002",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "huge glowing white winged guardian beast with vast feathered wings and a pale green mane",
+  "colour": "white and pale green",
+  "negative": "human, rider, person carried",
+  "ref_note": "The Daughter's griffin form from the Mortis arc (TCW Altar of Mortis), wings spread, black background knocks out cleanly; tiny carried Obi-Wan below the chest reads as talons"
+}

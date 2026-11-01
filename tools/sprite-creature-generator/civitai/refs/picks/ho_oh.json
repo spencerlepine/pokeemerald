@@ -1,0 +1,9 @@
+{
+  "init": "refs/ho_oh_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/7/7c/Flutterplume-MPQ.png/revision/latest?cb=20160827043050",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "radiant phoenix bird with rainbow wings spread wide and a long flaming tail plume",
+  "colour": "red orange and green",
+  "ref_note": "Mantellian flutterplume cutout: rainbow-plumed bird with wings spread and long fiery tail, front view; very Ho-Oh-like"
+}

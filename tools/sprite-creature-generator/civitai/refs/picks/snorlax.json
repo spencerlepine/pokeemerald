@@ -1,0 +1,9 @@
+{
+  "init": "refs/snorlax_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/a/ac/Happabore.png/revision/latest/scale-to-width-down/1000?cb=20241130165446",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "huge lazy dark grey happabore slumped asleep with a broad snout and tusks",
+  "colour": "dark grey brown",
+  "ref_note": "Canon happabore render with alpha, asleep lying down facing left: matches 'asleep where it stands'"
+}

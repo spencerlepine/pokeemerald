@@ -1,0 +1,10 @@
+{
+  "init": "refs/jolteon_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/e/e7/BetsyBauer-YJATookaConceptArt1.jpg/revision/latest/scale-to-width-down/1000?cb=20250426165340#crop=0.52,0.48,0.715,0.885",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "spiky yellow static tooka with bristling fur tufts tall ears and a sly grin",
+  "colour": "yellow white",
+  "negative": "grey, black and white, sketch",
+  "ref_note": "Canon tooka line art (Young Jedi Adventures, Betsy Bauer) crouching pose with fur tufts, a different crop from vaporeon; greyscale so colour comes from args"
+}

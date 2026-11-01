@@ -1,0 +1,9 @@
+{
+  "init": "refs/sableye_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/9/97/Dulok_from_SWE.png/revision/latest?cb=20090222103226",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "Hunched skinny cave gremlin with pointed ears a sly grin long claws and glowing crystal eyes",
+  "colour": "dark purple and violet",
+  "ref_note": "Re-picked (Fyrnock is houndour's canon): Dulok illustration from the Star Wars Encyclopedia as goblin body plan; whole body on white, head turned left"
+}

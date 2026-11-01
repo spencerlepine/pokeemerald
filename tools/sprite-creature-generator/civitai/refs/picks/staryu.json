@@ -1,0 +1,9 @@
+{
+  "init": "refs/staryu_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/d/d7/Vuffi.jpg/revision/latest?cb=20060423050114",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small five-pointed brown star coral creature with one glowing red gem core",
+  "colour": "brown grey red",
+  "ref_note": "Vuffi Raa (five-limbed starfish droid) art on white: star body with red core; same art as starmie at smaller width (no other star-shaped canon art found)"
+}

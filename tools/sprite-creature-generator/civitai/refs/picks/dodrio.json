@@ -1,0 +1,10 @@
+{
+  "init": "refs/dodrio_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/6/6e/Kaadu-BF.jpg/revision/latest?cb=20090923144452",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "big kaadu herd leader with three tall head crests a long stretched neck and powerful legs",
+  "colour": "reddish brown and tan",
+  "negative": "saddle, reins, harness, rider",
+  "ref_note": "Battlefront kaadu render on white, full side view with head on the left; bigger and longer than doduo's upright pose"
+}

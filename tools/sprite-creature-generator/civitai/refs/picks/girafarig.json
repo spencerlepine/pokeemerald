@@ -1,0 +1,9 @@
+{
+  "init": "refs/girafarig_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/5/5e/Falumpaset_cg.jpg/revision/latest?cb=20070217154244",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "long-necked humped Naboo herd beast with a drooping head and spotted hide",
+  "colour": "sandy tan and brown",
+  "ref_note": "Falumpaset CG on plain bg; clean cutout; whole body facing left"
+}

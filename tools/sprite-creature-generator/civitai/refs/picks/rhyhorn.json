@@ -1,0 +1,9 @@
+{
+  "init": "refs/rhyhorn_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/b/b0/BobaFettsRancor-SWChrome2024.png/revision/latest/scale-to-width-down/1000?cb=20251222041551",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "squat young rancor pup with stubby clawed arms spread and a small toothy maw",
+  "colour": "grey brown",
+  "ref_note": "Canon rancor (Book of Boba Fett, Topps Chrome) render with alpha, low wide stance reads small next to rhydon's tall rancor"
+}

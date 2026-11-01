@@ -1,0 +1,10 @@
+{
+  "init": "refs/flareon_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/6/65/BetsyBauer-YJATookaConceptArt3.jpg/revision/latest/scale-to-width-down/1000?cb=20250426165428#crop=0.0,0.0,0.33,1.0",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "fiery orange tooka with a fluffy cream neck mane huge tufted ears and a bushy flame-like tail",
+  "colour": "orange red cream",
+  "negative": "grey, black and white, sketch",
+  "ref_note": "Canon tooka turnaround line art (Young Jedi Adventures), front view; espeon uses the side view of the same sheet; greyscale so colour comes from args; Kaiska and Aphra's tooka were orange but cut out as boxes"
+}

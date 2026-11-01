@@ -1,0 +1,9 @@
+{
+  "init": "refs/loudred_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/0/0d/KowakianMonkeyLizard-TGE.png/revision/latest/scale-to-width-down/1000?cb=20221111025309",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "Upright monkey-lizard with a thick blue fur collar curled horns and a wide grinning beak",
+  "colour": "blue and yellow",
+  "ref_note": "Galactic Explorer Kowakian monkey-lizard render; alpha, whole body, front view; middle stage"
+}

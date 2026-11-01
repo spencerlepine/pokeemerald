@@ -1,0 +1,9 @@
+{
+  "init": "refs/rattata_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/e/e2/Womprat-BOBFCE.png/revision/latest?cb=20250523005810",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small scruffy womp rat with big ears pink snout and a long bare tail",
+  "colour": "brown and pink",
+  "ref_note": "Womp rat (Book of Boba Fett render, alpha), sitting, facing left"
+}

@@ -1,0 +1,9 @@
+{
+  "init": "refs/delcatty_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/8/89/Loth-cat_SWRSotR.png/revision/latest?cb=20221105224752",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "Poised grown loth-cat sitting tall with long pointed ears a pale chest and a high curled tail",
+  "colour": "tan brown and cream",
+  "ref_note": "Rebels-style loth-cat render; alpha, three-quarter toward the left, clean lighting; chosen over the darker White Loth-cat render"
+}

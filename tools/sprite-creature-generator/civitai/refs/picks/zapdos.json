@@ -1,0 +1,9 @@
+{
+  "init": "refs/zapdos_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/1/19/Whisper_Bird-Alien_Archive.jpg/revision/latest/scale-to-width-down/1000?cb=20190927152454",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "legendary storm bird with huge raised spiky wings a dark crested head and hooked talons",
+  "colour": "brown with black wing bands",
+  "ref_note": "RE-PICK (Shyyyo bird art is wingull's canon). Original; whisper bird (Alien Archive art on white), wings raised like Zapdos, head on the left. Different image from moltres (BFII whisper bird render, gold side view). Head is small and dark."
+}

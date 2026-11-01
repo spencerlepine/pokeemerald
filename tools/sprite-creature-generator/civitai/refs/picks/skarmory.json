@@ -1,0 +1,9 @@
+{
+  "init": "refs/skarmory_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/a/a4/CISVultureDroidWalk-TCW.png/revision/latest/scale-to-width-down/1000?cb=20231010234254",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "wild vulture droid standing on its bladed wing-legs with a red-eyed sensor head",
+  "colour": "gunmetal grey and dark steel blue",
+  "ref_note": "Vulture droid walk-mode TCW render; transparent; front view; walk mode reads as a perched steel bird"
+}

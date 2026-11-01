@@ -1,0 +1,9 @@
+{
+  "init": "refs/weedle_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/e/e0/Leviathan_grub.png/revision/latest?cb=20160926171006#crop=0.01,0.05,0.97,0.9",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "segmented larva with a dark head small horn and a stinger on its tail",
+  "colour": "cream and brown",
+  "ref_note": "Leviathan grub (map illustration) cropped, head on the left; re-picked off Duracrete worm (onix/steelix Duracrete slug page)"
+}

@@ -1,0 +1,9 @@
+{
+  "init": "refs/zigzagoon_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/4/4b/Scurrier_concept_art.jpg/revision/latest?cb=20160626142933#crop=0.01,0,0.33,0.31",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small scrappy desert scurrier rearing on its hind legs with curled ram horns and a big curly tail",
+  "colour": "rust red and cream",
+  "ref_note": "Scurrier concept painting (ANH SE), top-left design cropped from the sheet on white; faces left; feet trimmed just above the drawn shadow"
+}

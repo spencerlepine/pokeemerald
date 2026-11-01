@@ -1,0 +1,9 @@
+{
+  "init": "refs/mankey_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/b/b1/Gundark-TCW.png/revision/latest?cb=20230709151351",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small wiry young gundark with big ears and a shaggy mane raising one clawed arm",
+  "colour": "red and dark brown",
+  "ref_note": "Clone Wars gundark cutout standing upright; front three-quarter; no young-gundark art exists"
+}

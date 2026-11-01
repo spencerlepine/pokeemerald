@@ -1,0 +1,10 @@
+{
+  "init": "refs/vibrava_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/8/8d/Canyon_krayt.jpg/revision/latest?cb=20070501202529",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "Lean young krayt with small leathery wing fins a spiny ridged back and a long whip tail",
+  "colour": "olive green and ochre",
+  "negative": "rock, ground, base",
+  "ref_note": "Canyon krayt dragon painting flipped to face left; a pale rock base remains under its feet; wings come from the desc"
+}

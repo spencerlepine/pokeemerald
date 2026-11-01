@@ -1,0 +1,10 @@
+{
+  "init": "refs/delibird_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/5/52/KillerPenguin-EaW.jpg/revision/latest?cb=20061117030324",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "plump penguin-like bird with a red beak hugging a bundled Life Day gift sack",
+  "colour": "black white and brown",
+  "negative": "gun, blaster, weapon, goggles",
+  "ref_note": "Killer penguin (Empire at War) render on black; clean cutout; penguin body plan; it holds a blaster (negative prompt asks for a gift sack instead); flipped. Kashyyyk birds (Kkryytch, Shyyyo) only had scene art"
+}

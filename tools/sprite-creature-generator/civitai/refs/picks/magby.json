@@ -1,0 +1,10 @@
+{
+  "init": "refs/magby_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/d/de/LavaNymphs-2020DarthVader8.png/revision/latest/scale-to-width-down/1000?cb=20210316025923#crop=0.82,0.4,0.995,0.6",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small round lava sprite with big eyes stubby limbs little wings and a glowing coal in its chest",
+  "colour": "orange yellow and ember red",
+  "negative": "background, rocks",
+  "ref_note": "Lava nymph (Darth Vader 2020 #8) cropped; same comic panel as magmar (its evolution) but a different nymph; comic bg similar to body so the cutout is a bit ragged; faces left"
+}

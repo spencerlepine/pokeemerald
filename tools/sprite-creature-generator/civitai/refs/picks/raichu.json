@@ -1,0 +1,9 @@
+{
+  "init": "refs/raichu_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/9/93/Gushiro-Databank-Outlaws.png/revision/latest?cb=20240907185704",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "large otter-like ion rodent with a long thick tail and crackling sparks",
+  "colour": "pinkish brown and tan",
+  "ref_note": "Gushiro (Outlaws databank render, alpha), sitting rodent flipped to face left; re-picked off Loth-cat (skitty/delcatty canon)"
+}

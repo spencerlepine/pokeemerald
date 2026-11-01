@@ -1,0 +1,9 @@
+{
+  "init": "refs/blissey_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/e/e7/2-1BseriesSurgicalDroid-TCWCEJtB.png/revision/latest?cb=20230708040216",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "tall thin surgical droid with a domed head and breathing tube and a clear torso cylinder and claw hands raised",
+  "colour": "teal grey and silver",
+  "ref_note": "TCW encyclopedia 2-1B cutout, full body front view with one claw raised; tall so height caps at 64"
+}

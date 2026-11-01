@@ -1,0 +1,9 @@
+{
+  "init": "refs/houndour_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/b/bf/Fyrnock_Card_Trader.png/revision/latest/scale-to-width-down/1000?cb=20241127060649",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "lean dark cave hound with a horned crest yellow glowing eyes and clawed legs",
+  "colour": "dark navy and violet",
+  "ref_note": "Fyrnock Card Trader render (only clean fyrnock art); transparent; flipped; smaller than houndoom"
+}

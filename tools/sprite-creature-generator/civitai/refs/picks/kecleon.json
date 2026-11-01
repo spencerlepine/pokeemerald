@@ -1,0 +1,9 @@
+{
+  "init": "refs/kecleon_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/1/19/Taozin.jpg/revision/latest?cb=20120612164506#crop=0.09,0.05,1.0,0.955",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "giant segmented taozin grub rearing in an S curve with insect head and a wavy stripe",
+  "colour": "pale green and rust red",
+  "ref_note": "Taozin art (only full-body canon art): cropped off frame bar and human scale figure; head top left"
+}

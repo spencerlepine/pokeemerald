@@ -1,0 +1,9 @@
+{
+  "init": "refs/ariados_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/e/e2/Krykna-CGSWG.png/revision/latest/scale-to-width-down/1000?cb=20241202020133",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "giant krykna spider with a huge pale abdomen and long arching legs",
+  "colour": "pale grey and white",
+  "ref_note": "Krykna (Creatures of the Galaxy render, transparent), wide-legged front view, bigger than spinarak. Front-facing, no flip."
+}

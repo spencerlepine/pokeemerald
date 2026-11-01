@@ -1,0 +1,9 @@
+{
+  "init": "refs/kakuna_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/8/84/Orbalisks.jpg/revision/latest?cb=20070626110256#crop=0.02,0,0.44,0.78",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "hard golden yellow venomous cocoon with a spike and armour segments",
+  "colour": "golden yellow",
+  "ref_note": "Orbalisk (painting, white bg) cropped to one shelled pod; hard spiked yellow shell"
+}

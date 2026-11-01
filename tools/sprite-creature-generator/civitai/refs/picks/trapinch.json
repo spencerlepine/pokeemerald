@@ -1,0 +1,9 @@
+{
+  "init": "refs/trapinch_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/3/3f/KraytDragon_NEGAS.jpg/revision/latest?cb=20090709062857",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "Squat krayt hatchling with an oversized horned head wide jaws and a stubby tail",
+  "colour": "olive tan and brown",
+  "ref_note": "NEGAS krayt dragon painting on white; crouched, head on the left; hatchling stage at the smallest width"
+}

@@ -1,0 +1,9 @@
+{
+  "init": "refs/horsea_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/2/21/MonCalaEel-TVE.png/revision/latest?cb=20220225135815#crop=0,0,1,0.3",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small upright blue sea-horse with a long tube snout and a curled tail spraying ink",
+  "colour": "teal grey blue",
+  "ref_note": "Canon Mon Cala eel render with alpha: short upright head-and-neck crop gives a small seahorse posture; flipped to face left; tail curl via desc"
+}

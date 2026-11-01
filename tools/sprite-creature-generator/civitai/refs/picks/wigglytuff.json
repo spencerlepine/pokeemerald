@@ -1,0 +1,9 @@
+{
+  "init": "refs/wigglytuff_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/c/c2/H00jib.jpg/revision/latest/scale-to-width-down/1000?cb=20070324080117#crop=0,0.02,1,0.98",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "tall plump pink balloon creature standing up with long swept-back ears and a soft round belly",
+  "colour": "pale pink and white",
+  "ref_note": "original; borrows Hoojib line art (unclaimed canon creature), standing with round belly facing left on clean white; colour comes from the prompt"
+}

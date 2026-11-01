@@ -1,0 +1,9 @@
+{
+  "init": "refs/quagsire_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/8/8a/Oggdo-JFO.png/revision/latest/scale-to-width-down/1000?cb=20241221120637",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "huge squat swamp frog beast with a gaping toothy mouth and long tongue",
+  "colour": "dark slate blue and pink",
+  "ref_note": "Oggdo JFO render; transparent; three-quarter left, mouth open"
+}

@@ -1,0 +1,9 @@
+{
+  "init": "refs/stantler_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/2/2e/Ikopi.jpg/revision/latest?cb=20060216210316",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "fleet plains antelope with large curling horns slender legs and a tufted tail",
+  "colour": "tan brown and cream",
+  "ref_note": "Ikopi CG on plain bg; clean cutout; flipped to face left; tall so height-capped"
+}

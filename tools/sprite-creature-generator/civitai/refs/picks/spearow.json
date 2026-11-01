@@ -1,0 +1,9 @@
+{
+  "init": "refs/spearow_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/a/a0/Corellian_banshee_bird_TofG.jpg/revision/latest?cb=20080607094634",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small fierce desert hawk diving with a hooked red beak and barred wings",
+  "colour": "grey brown and red",
+  "ref_note": "Corellian banshee bird (painting, white bg), diving hawk with head low left; re-picked off Convor (natu/xatu canon)"
+}

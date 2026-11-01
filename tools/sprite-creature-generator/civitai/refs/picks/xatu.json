@@ -1,0 +1,9 @@
+{
+  "init": "refs/xatu_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/2/27/Convor_SWCT.png/revision/latest/scale-to-width-down/1000?cb=20241206032929",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "mystic convor owl with broad wings a green crest and staring eyes",
+  "colour": "pale grey with green crest",
+  "ref_note": "Convor (Card Trader render of Morai's species, transparent), Ahsoka's Force-linked convor; in flight, head on the left."
+}

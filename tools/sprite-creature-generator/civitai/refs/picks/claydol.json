@@ -1,0 +1,9 @@
+{
+  "init": "refs/claydol_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/b/b3/SithHolocron-FFp25.png/revision/latest/scale-to-width-down/1000?cb=20241203000203",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "large ancient floating pyramid holocron with engraved dark panels and glowing glyphs",
+  "colour": "black and bronze",
+  "ref_note": "Sith holocron render (FFp25): clean transparent pyramid, dark panels fit black body; baltoy uses the smaller Malachor pyramid"
+}

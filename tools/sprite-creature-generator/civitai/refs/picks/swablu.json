@@ -1,0 +1,9 @@
+{
+  "init": "refs/swablu_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/3/33/Rawwk-SWGA.png/revision/latest?cb=20211004040508",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "Small fluffy cloud-flyer chick flapping big cottony wings with a round fuzzy body and an open beak",
+  "colour": "sky blue and cream",
+  "ref_note": "Rawwk (Bespin flyer) art, alpha, wings raised mid-flap; velker art only exists as two field-guide paintings so the chick takes a different Bespin flyer pose"
+}

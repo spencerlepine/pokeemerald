@@ -1,0 +1,9 @@
+{
+  "init": "refs/torkoal_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/b/b9/8D8-NEGTD.png/revision/latest?cb=20221023042311",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "Tall heat-scarred smelter droid with a furnace chest glowing coal eyes and long tong hands",
+  "colour": "rust brown tan and glowing yellow",
+  "ref_note": "8D smelter droid render (New Essential Guide to Droids); alpha, whole body three-quarter toward the left"
+}

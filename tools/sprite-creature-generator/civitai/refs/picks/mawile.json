@@ -1,0 +1,9 @@
+{
+  "init": "refs/mawile_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/4/4d/BuzzDroidDetail-SWE.png/revision/latest/scale-to-width-down/1000?cb=20241212235831",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "Small spider-legged buzz droid with two open dome shells red sensor eyes and saw arms",
+  "colour": "gunmetal grey and khaki",
+  "ref_note": "Star Wars Encyclopedia buzz droid detail render; alpha, whole droid with shells open like jaws"
+}

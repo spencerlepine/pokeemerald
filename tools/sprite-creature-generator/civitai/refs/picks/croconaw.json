@@ -1,0 +1,9 @@
+{
+  "init": "refs/croconaw_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/8/81/Ghest.jpg/revision/latest?cb=20060714222754",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "upright swamp crocodile with big fangs a spiked back ridge and a thick tail",
+  "colour": "blue and cream",
+  "ref_note": "RE-PICK (Oggdo is quagsire's canon). Original; same ghest drawing as totodile/feraligatr, middle size, fiercer desc. Uncoloured line art."
+}

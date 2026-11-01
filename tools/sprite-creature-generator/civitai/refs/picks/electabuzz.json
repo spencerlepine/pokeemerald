@@ -1,0 +1,9 @@
+{
+  "init": "refs/electabuzz_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/d/de/IG-11_Advanced_Graphics.png/revision/latest?cb=20260115061030",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "tall lanky brass IG assassin droid with a cylinder head crackling with yellow electric arcs",
+  "colour": "bronze yellow brown",
+  "ref_note": "Canon IG-series (IG-11) full-body render with alpha; brass tones closest to Electabuzz yellow; flipped so the rifle points left"
+}

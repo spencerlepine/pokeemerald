@@ -1,0 +1,9 @@
+{
+  "init": "refs/anorith_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/3/36/Splox-JFO.png/revision/latest/scale-to-width-down/1000?cb=20241221122721",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "fossil shrimp arthropod with a domed shell and spiked claw legs",
+  "colour": "slate gray and brown",
+  "ref_note": "Splox render (Fallen Order): shelled primitive arthropod with claws, transparent, front faces left"
+}

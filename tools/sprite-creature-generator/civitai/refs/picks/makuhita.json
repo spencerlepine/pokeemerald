@@ -1,0 +1,9 @@
+{
+  "init": "refs/makuhita_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/5/5c/Mogu.png/revision/latest/scale-to-width-down/1000?cb=20230611163411",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "Stocky shaggy mogu cub with small curled horns lunging forward on big fists",
+  "colour": "brown and tan",
+  "ref_note": "Jedi Survivor Mogu render; alpha, lunging three-quarter toward the left; cub stage gets the smaller width"
+}

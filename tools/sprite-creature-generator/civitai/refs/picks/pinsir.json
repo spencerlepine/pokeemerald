@@ -1,0 +1,10 @@
+{
+  "init": "refs/pinsir_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/0/0e/Killik_NEGAS.jpg/revision/latest/scale-to-width-down/1000?cb=20090709062626#crop=0,0,1,0.86",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "upright brown hive insect warrior with huge spiked crushing mandibles and four arms",
+  "colour": "brown tan",
+  "negative": "staff, spear, weapon, white patches",
+  "ref_note": "Killik art (New Essential Guide to Alien Species) on white, cropped above the ground shadow; only clean full-body Killik art; white bg stays between the legs and staff"
+}

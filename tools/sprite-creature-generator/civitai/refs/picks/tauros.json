@@ -1,0 +1,10 @@
+{
+  "init": "refs/tauros_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/f/fb/Orray-CVD.png/revision/latest/scale-to-width-down/1000?cb=20211217054333",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "stocky bad-tempered brown orray bull with a long snout and lumpy hide charging forward",
+  "colour": "brown tan olive",
+  "negative": "saddle, harness, reins, rider",
+  "ref_note": "Canon orray render with alpha (side view, no rider); flipped to face left; saddle and reins suppressed by negative"
+}

@@ -1,0 +1,9 @@
+{
+  "init": "refs/magnemite_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/1/18/Mouse-DroidTycoon.png/revision/latest?cb=20260515063534",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small boxy MSE mouse droid on little wheels with a raised manipulator arm",
+  "colour": "dark brown and grey",
+  "ref_note": "Droid Tycoon mouse droid cutout with a raised arm; flipped so the front faces left"
+}

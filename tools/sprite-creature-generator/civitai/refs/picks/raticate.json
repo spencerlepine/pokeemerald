@@ -1,0 +1,9 @@
+{
+  "init": "refs/raticate_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/1/1a/Womp_rat_Alien_Archive.jpg/revision/latest?cb=20190803000450#crop=0,0,1,0.88",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "huge spiny womp rat with long gnawing fangs and a scaly tail",
+  "colour": "dark grey and brown",
+  "ref_note": "Womp rat (Alien Archive painting) cropped above paper edge, flipped to face left; bigger spiky adult with fangs"
+}

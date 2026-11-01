@@ -1,0 +1,9 @@
+{
+  "init": "refs/graveler_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/4/41/SideRoad.jpg/revision/latest/scale-to-width-down/1000?cb=20180825193119#crop=0.04,0.12,0.95,0.97",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "boulder-sized rock wart with a segmented stony shell spines on its back and clawed legs",
+  "colour": "dark brown and tan",
+  "ref_note": "Rock wart drawing on white (SideRoad); flipped to face left; body with legs between geodude's head crop and golem's full prop"
+}

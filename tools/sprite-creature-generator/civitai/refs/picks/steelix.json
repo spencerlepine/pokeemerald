@@ -1,0 +1,9 @@
+{
+  "init": "refs/steelix_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/c/cb/DuracreteSlug-FFp48.png/revision/latest?cb=20231008181820",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "huge coiled armoured slug with a ridged durasteel-plated hide and feeler tendrils around its mouth",
+  "colour": "dusky mauve and steel grey",
+  "ref_note": "Duracrete slug (FF p48) render; transparent; head lower left"
+}

@@ -1,0 +1,9 @@
+{
+  "init": "refs/exeggutor_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/b/b2/AmyFry-FallenOrderSeeds-ArtStation.jpg/revision/latest?cb=20260305000330#crop=0.055,0.36,0.275,0.545",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "walking wroshyr sapling with a leafy green crown and a twisted pale trunk splitting into stubby legs",
+  "colour": "green cream brown",
+  "ref_note": "Kashyyyk bonsai-like tree from Jedi Fallen Order plant concept sheet; clean cutout; flipped so the crown leans left"
+}

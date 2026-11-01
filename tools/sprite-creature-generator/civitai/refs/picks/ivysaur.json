@@ -1,0 +1,9 @@
+{
+  "init": "refs/ivysaur_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/f/f7/Blurrg-TSWB.png/revision/latest/scale-to-width-down/1000?cb=20241114043748",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "stocky toothy lizard with a pink bud opening on its back",
+  "colour": "slate grey",
+  "ref_note": "Blurrg (Star Wars Book render, alpha), stocky quadruped lizard flipped to face left; re-picked off Spawn of Oggdo (wooper's canon art)"
+}

@@ -1,0 +1,9 @@
+{
+  "init": "refs/baltoy_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/7/74/MalachorSithHolocron-DVSWE.png/revision/latest?cb=20221122061118",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small spinning pyramid holocron shard with a glowing core",
+  "colour": "bronze brown and red",
+  "ref_note": "Malachor Sith holocron render: compact clean pyramid, brown frame; smaller simpler sibling of claydol's dark pyramid"
+}

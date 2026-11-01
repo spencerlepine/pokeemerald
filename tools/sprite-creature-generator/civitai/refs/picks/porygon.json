@@ -1,0 +1,9 @@
+{
+  "init": "refs/porygon_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/6/62/Red3PO.jpg/revision/latest?cb=20080313055123",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "pink-red 3PO protocol droid standing with hands on hips and glowing yellow eyes",
+  "colour": "pink red dark red",
+  "ref_note": "Red 3PO-series protocol droid (Legends page art) on white, whole body, front view; reddest 3PO art for Porygon pink; porygon2 uses a TC-series droid"
+}

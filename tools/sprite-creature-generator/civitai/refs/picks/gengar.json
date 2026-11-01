@@ -1,0 +1,9 @@
+{
+  "init": "refs/gengar_prep.png",
+  "init_source": "/tmp/claude-0/-home-user/510f0079-9430-50be-b656-57ddf5b64e74/scratchpad/mask/gengar_tint.png",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "hulking hunched shadow wraith with a wide grin and outstretched clawed arms",
+  "colour": "dark purple and black",
+  "ref_note": "polygon cutout of https://static.wikia.nocookie.net/starwars/images/f/f2/Shade_stalker.png tinted purple"
+}

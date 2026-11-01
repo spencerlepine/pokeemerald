@@ -1,0 +1,9 @@
+{
+  "init": "refs/larvitar_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/b/b1/ZilloBeast-SWE.png/revision/latest/scale-to-width-down/1000?cb=20211214024410",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small crouching zillo hatchling with a stubby armoured body and short clawed limbs",
+  "colour": "olive green and gold brown",
+  "ref_note": "Zillo Beast (SW Encyclopedia) cutout crouched low, flipped to face left; smallest stage"
+}

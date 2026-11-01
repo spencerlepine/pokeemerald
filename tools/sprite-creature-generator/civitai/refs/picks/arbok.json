@@ -1,0 +1,9 @@
+{
+  "init": "refs/arbok_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/c/c2/HugeSnake-SSW3.png/revision/latest?cb=20250722192827",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "huge hooded cobra rearing up from its coils with a spiny crest and patterned scales",
+  "colour": "green and orange",
+  "ref_note": "Unidentified Endor snake (Super Star Wars sprite art, alpha), rearing cobra in coils facing left; tall so height cap sets size"
+}

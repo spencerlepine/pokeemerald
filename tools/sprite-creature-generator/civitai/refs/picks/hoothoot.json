@@ -1,0 +1,9 @@
+{
+  "init": "refs/hoothoot_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/4/47/Jubba_Bird.jpg/revision/latest?cb=20060713164252#crop=0.0,0.0,1.0,0.55",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small round forest owl perched on one leg with big eyes and a little crest",
+  "colour": "violet and brown",
+  "ref_note": "RE-PICK (convoree is convor art, natu/xatu canon, and spearow uses it). Original; upper half of the jubba bird art (same as noctowl, sharing within the line), cropped to a rounder perched body."
+}

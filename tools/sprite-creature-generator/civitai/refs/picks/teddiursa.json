@@ -1,0 +1,9 @@
+{
+  "init": "refs/teddiursa_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/c/cb/Gorax-Bestiary.png/revision/latest?cb=20241109212224#crop=0.2,0.0,1.0,1.0",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small round fuzzy gorax cub with big pointed ears and stubby arms",
+  "colour": "dark brown and tan",
+  "ref_note": "Same Gorax Bestiary render as ursaring (only clean gorax art); width 34 because the tall figure is height-capped, so this keeps it visibly smaller; cub traits in desc"
+}

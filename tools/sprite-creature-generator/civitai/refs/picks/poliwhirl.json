@@ -1,0 +1,9 @@
+{
+  "init": "refs/poliwhirl_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/2/27/Worrt-SWJSurvivor.png/revision/latest/scale-to-width-down/1000?cb=20231129001827",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "round-bellied worrt with long antennae and splayed webbed hands",
+  "colour": "olive green and tan",
+  "ref_note": "Jedi Survivor worrt cutout, front view with round belly and arms out; symmetric so no flip"
+}

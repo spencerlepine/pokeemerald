@@ -1,0 +1,10 @@
+{
+  "init": "refs/pineco_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/d/dc/Destroyer_droid_sequence.png/revision/latest?cb=20130828155934#crop=0.0,0.0,0.2,1.0",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "droideka curled up into a round armoured wheel with a red core",
+  "colour": "gunmetal grey and dark bronze",
+  "negative": "legs, arms, standing",
+  "ref_note": "Wheel frame cropped from the Destroyer droid sequence (Legends); plain bg"
+}

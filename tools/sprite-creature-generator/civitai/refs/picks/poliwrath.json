@@ -1,0 +1,9 @@
+{
+  "init": "refs/poliwrath_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/b/bd/Worrt-TFAVD.png/revision/latest?cb=20211214045040",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "muscular brute worrt with a huge fanged maw and heavy clawed arms",
+  "colour": "dark brown and orange",
+  "ref_note": "The Force Awakens Visual Dictionary worrt cutout, front three-quarter with fanged maw"
+}

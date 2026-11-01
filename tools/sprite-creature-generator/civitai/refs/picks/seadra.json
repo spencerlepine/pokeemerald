@@ -1,0 +1,9 @@
+{
+  "init": "refs/seadra_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/2/21/MonCalaEel-TVE.png/revision/latest?cb=20220225135815#crop=0,0,1,0.52",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "tall upright sea-horse with a long snout and sharp spiny fins along its neck and back",
+  "colour": "teal grey blue",
+  "ref_note": "Canon Mon Cala eel render with alpha, longer upright crop than horsea (taller, more fins); flipped to face left; same source as horsea for line consistency"
+}

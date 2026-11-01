@@ -1,0 +1,10 @@
+{
+  "init": "refs/magcargo_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/a/a7/LavaFlea-CVDNE.png/revision/latest/scale-to-width-down/1000?cb=20230807044054#crop=0.0,0.27,1.0,1.0",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "giant armoured lava flea with a heavy segmented shell on long spindly legs glowing with heat",
+  "colour": "charcoal purple-grey and ember red",
+  "negative": "rider, person, saddle",
+  "ref_note": "Lava flea CVDNE render; transparent; cropped below the Mustafarian rider (shell top flattened by the crop); front view"
+}

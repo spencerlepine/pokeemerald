@@ -1,0 +1,9 @@
+{
+  "init": "refs/qwilfish_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/c/c2/Blowfish.png/revision/latest/scale-to-width-down/1000?cb=20210217204453",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "round puffed-up fish covered in sharp spines with a pouty face and spiky fins",
+  "colour": "sea green and teal",
+  "ref_note": "Blowfish (Legends) render; transparent; faces left"
+}

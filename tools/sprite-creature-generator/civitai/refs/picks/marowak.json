@@ -1,0 +1,9 @@
+{
+  "init": "refs/marowak_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/0/0a/SandBeast-CGSWG.png/revision/latest/scale-to-width-down/1000?cb=20241215071223",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "upright brown desert brute wearing a krayt skull helmet and gripping a bone club",
+  "colour": "brown grey tan",
+  "ref_note": "Canon Tatooine sand beast render with alpha: bipedal brawler body plan for the bone-club warrior; club and skull carried by desc"
+}

@@ -1,0 +1,9 @@
+{
+  "init": "refs/wooper_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/4/43/Spawn_of_Oggdo.png/revision/latest/scale-to-width-down/1000?cb=20230615192705",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small round young swamp frog with stubby legs and tongue out",
+  "colour": "green and teal",
+  "ref_note": "Spawn of Oggdo render (smaller lighter frog) to keep it distinct from quagsire; transparent; faces left"
+}

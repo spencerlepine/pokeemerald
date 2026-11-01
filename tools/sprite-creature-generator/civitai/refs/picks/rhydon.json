@@ -1,0 +1,9 @@
+{
+  "init": "refs/rhydon_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/8/8c/Rancor-SWE.png/revision/latest?cb=20160913053623",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "towering hunched adult rancor with huge clawed arms and a gaping fanged maw",
+  "colour": "grey purple brown",
+  "ref_note": "Canon rancor (Star Wars Encyclopedia) render with alpha, tall full-height pose; distinct from rhyhorn's squat render"
+}

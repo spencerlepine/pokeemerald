@@ -1,0 +1,10 @@
+{
+  "init": "refs/meganium_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/0/05/Morodin-AE.png/revision/latest?cb=20251230030116",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "big gentle long-necked forest beast with a large flower petal collar around its neck",
+  "colour": "pale grey and white",
+  "negative": "saddle, harness, straps, rider",
+  "ref_note": "RE-PICK (fambaa art is ludicolo's canon). Original; morodin (Legends ink art, transparent), long-necked sauropod body like Meganium, the biggest of the line. Black and white ink. Flipped so the head is on the left."
+}

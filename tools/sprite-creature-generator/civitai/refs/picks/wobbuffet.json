@@ -1,0 +1,9 @@
+{
+  "init": "refs/wobbuffet_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/7/73/Ysalamiri_ThroughImperialEyes.jpg/revision/latest?cb=20210124091506",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "stubby salamander lizard clinging to a metal nutrient frame with a wide toothy grin and curled tail",
+  "colour": "dark teal and slate blue",
+  "ref_note": "Ysalamiri (Through Imperial Eyes) render on dark bg, on its nutrient frame; only clean full-body ysalamiri art; flipped to face left"
+}

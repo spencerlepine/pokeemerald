@@ -1,0 +1,9 @@
+{
+  "init": "refs/plusle_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/d/dc/DUMpitdreoid-NEGTD.png/revision/latest/scale-to-width-down/1000?cb=20221023213939#crop=0,0,0.58,1",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "Spindly pit droid with a big round head shell and one eye raising a hand to cheer",
+  "colour": "orange and rust brown",
+  "ref_note": "New Essential Guide to Droids pit droid art cropped away from its crab droid and flipped; cheering raised hand"
+}

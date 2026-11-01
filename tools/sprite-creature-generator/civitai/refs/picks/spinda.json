@@ -1,0 +1,9 @@
+{
+  "init": "refs/spinda_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/a/a3/TeekDinghyDriver-LegacyEFX.png/revision/latest/scale-to-width-down/1000?cb=20250605054002",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "Small shaggy cub standing wobbly with big pointed ears dizzy swirly eyes and patchy spotted fur",
+  "colour": "brown and cream",
+  "ref_note": "Teek render (Legacy EFX, alpha) as body plan for the original dizzy spotted cub; whole body, near-front view; Ewok crops were too overlapped to use"
+}

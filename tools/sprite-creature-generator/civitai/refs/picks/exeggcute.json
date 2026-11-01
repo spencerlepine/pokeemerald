@@ -1,0 +1,9 @@
+{
+  "init": "refs/exeggcute_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/b/b2/AmyFry-FallenOrderSeeds-ArtStation.jpg/revision/latest?cb=20260305000330#crop=0.815,0.43,0.93,0.49",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "cluster of smooth pink wroshyr seed pods huddled together with tiny faces",
+  "colour": "pink peach brown",
+  "ref_note": "Kashyyyk seed pair from Jedi Fallen Order seed concept sheet; clean white-bg cutout, egg-like"
+}

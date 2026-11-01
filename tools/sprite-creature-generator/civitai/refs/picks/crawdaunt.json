@@ -1,0 +1,9 @@
+{
+  "init": "refs/crawdaunt_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/f/fe/LM432CrabDroid-SWCTP.png/revision/latest/scale-to-width-down/1000?cb=20241225014724",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "huge armored crab droid with heavy plated pincer legs and a red sensor eye",
+  "colour": "rust red and dark gray",
+  "ref_note": "LM432 crab droid card render: full body front three-quarter, transparent"
+}

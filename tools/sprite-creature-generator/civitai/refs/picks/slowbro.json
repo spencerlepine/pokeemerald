@@ -1,0 +1,9 @@
+{
+  "init": "refs/slowbro_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/0/02/Giant_Swamp_Slug.jpg/revision/latest/scale-to-width-down/1000?cb=20251130130045",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "big rearing swamp slug with a gaping mouth eyestalks and a spiral shellfish clamped on its tail",
+  "colour": "pale pink and cream",
+  "ref_note": "Giant swamp slug painting on white, full rearing pose; flipped to face left; only clean slug art, so slowbro is the taller full crop and the shell comes from the desc"
+}

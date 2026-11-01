@@ -1,0 +1,9 @@
+{
+  "init": "refs/wynaut_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/f/f0/JabarekLizard-Databank-Outlaws.png/revision/latest?cb=20240907191751",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small chubby ysalamiri hatchling salamander with a crested back and frilled tail",
+  "colour": "purple gray and yellow",
+  "ref_note": "Jabarek lizard (Outlaws) render as stand-in: all ysalamiri art is painted scenes that cut out badly and wobbuffet already uses the canon one; flipped to face left"
+}

@@ -1,0 +1,9 @@
+{
+  "init": "refs/carvanha_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/3/3d/Opee-Sea-Killer-SWCT.png/revision/latest/scale-to-width-down/1000?cb=20241208043455",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "Chunky young opee fish with a huge gaping jaw full of fangs and a short lure antenna",
+  "colour": "red orange and purple",
+  "ref_note": "Opee sea killer Card Trader render; alpha, gaping toothy mouth three-quarter, flipped to face left; fry stage"
+}

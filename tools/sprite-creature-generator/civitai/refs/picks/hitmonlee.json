@@ -1,0 +1,10 @@
+{
+  "init": "refs/hitmonlee_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/2/29/Sith_Training_Droid_TFU2.png/revision/latest?cb=20131122202133",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "lanky training droid with very long springy extending legs in a wide kicking stance",
+  "colour": "dark grey black yellow",
+  "negative": "sticks, staff, weapon",
+  "ref_note": "Re-pick (BX commando art belongs to machamp): Sith training droid (Force Unleashed II) on black, cut out cleanly; lanky long-legged wide stance; thin training rods suppressed by negative"
+}

@@ -1,0 +1,9 @@
+{
+  "init": "refs/ditto_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/6/6f/UmgullianBlob-FF103.png/revision/latest?cb=20231010052810",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small squishy purple shapeshifting blob with stretchy pseudopod arms and a simple dot face",
+  "colour": "purple violet",
+  "ref_note": "Canon Umgullian blob render with alpha: amorphous blob with pseudopods; art is green, colour arg pushes to Ditto purple"
+}

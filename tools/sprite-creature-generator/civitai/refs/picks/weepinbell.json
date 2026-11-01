@@ -1,0 +1,9 @@
+{
+  "init": "refs/weepinbell_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/7/74/Jaw_plant_concept_art.jpg/revision/latest/scale-to-width-down/1000?cb=20200629162858#crop=0.37,0.1,0.66,0.87",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "bulging carnivorous pitcher bulb fringed with long spines on a gnarled stalk with leaves",
+  "colour": "red and olive green",
+  "ref_note": "Jaw plant concept art (Jedi Fallen Order), middle bulb cropped; bigger fleshier head than bellsprout"
+}

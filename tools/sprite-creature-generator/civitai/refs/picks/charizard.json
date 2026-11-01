@@ -1,0 +1,9 @@
+{
+  "init": "refs/charizard_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/2/2d/Bilemaw.png/revision/latest/scale-to-width-down/1000?cb=20230616094856",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "huge orange lava dragon beast with armoured back plates tusks and glowing magma cracks",
+  "colour": "orange and red",
+  "ref_note": "Bilemaw (Jedi Survivor render, alpha), massive armoured beast facing left; winged dragon art found was scene-only or tan (krayt), so orange-red Bilemaw chosen"
+}

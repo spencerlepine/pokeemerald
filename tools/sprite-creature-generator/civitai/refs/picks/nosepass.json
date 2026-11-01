@@ -1,0 +1,9 @@
+{
+  "init": "refs/nosepass_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/8/8d/Geode-THRCharacterEncyclopedia.png/revision/latest?cb=20251026190648",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "Blocky living stone pillar with a jutting magnetic nose and stubby rock arms",
+  "colour": "grey",
+  "ref_note": "Geode (Vintian living-rock) encyclopedia render as the shape for the original magnetic rock; alpha, symmetric so no flip"
+}

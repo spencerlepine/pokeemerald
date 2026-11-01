@@ -1,0 +1,9 @@
+{
+  "init": "refs/spheal_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/d/d6/NobakiRat-OutlawsAVJ.png/revision/latest?cb=20260317025129",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "round plump blue gray ice seal pup with small flippers and a pink snout",
+  "colour": "blue gray and pale pink",
+  "ref_note": "Nobaki rat render (Kijimi, Outlaws, transparent): round plump blue-gray body facing left as the seal pup shape; no seal creature exists in canon"
+}

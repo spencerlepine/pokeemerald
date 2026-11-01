@@ -1,0 +1,10 @@
+{
+  "init": "refs/krabby_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/d/d2/Crab_monster.png/revision/latest?cb=20140125191005#crop=0,0,1,0.8",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small red shore crab with two raised spiky pincers and stalked eyes",
+  "colour": "red orange",
+  "negative": "ground, sand, background",
+  "ref_note": "Canon unidentified crab creature comic art, front view, red with raised pincers; cropped above the ground, faint cream band may remain at the feet"
+}

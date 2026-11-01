@@ -1,0 +1,9 @@
+{
+  "init": "refs/minun_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/0/08/EG6series-TGTB.png/revision/latest?cb=20251217183558",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "Boxy waddling power droid with a sensor panel face and two short accordion legs",
+  "colour": "olive grey and black",
+  "ref_note": "EG-6 power droid render (GNK family, Gonk body) from the Galactic Bestiary; alpha, flipped so the sensor face points left; cleanest Gonk-shaped cutout"
+}

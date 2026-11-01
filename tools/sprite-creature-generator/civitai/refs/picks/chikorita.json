@@ -1,0 +1,9 @@
+{
+  "init": "refs/chikorita_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/1/1e/ZalaacaFemale-TheWildlifeOfSW.jpg/revision/latest/scale-to-width-down/1000?cb=20061015150938",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small slender forest fawn with a leaf collar and a long tapering tail",
+  "colour": "slate blue with a pale belly",
+  "ref_note": "RE-PICK (fathier art is rapidash's canon). Original; zalaaca female (Wildlife of Star Wars art on white), slender quadruped, head already on the left. Line: zalaaca female -> zalaaca male -> morodin."
+}

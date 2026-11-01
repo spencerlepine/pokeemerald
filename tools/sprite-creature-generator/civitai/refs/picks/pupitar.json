@@ -1,0 +1,9 @@
+{
+  "init": "refs/pupitar_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/2/27/ZilloBeastDetail-SWE.png/revision/latest/scale-to-width-down/1000?cb=20241229011717",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "coiled young zillo beast wrapped in thick grey armour plates with limbs drawn in",
+  "colour": "grey and olive gold",
+  "ref_note": "No canon shell art exists; Zillo Beast detail cutout (upright coiled limbs, faces left) with desc carrying the armoured shell stage"
+}

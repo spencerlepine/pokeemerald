@@ -1,0 +1,9 @@
+{
+  "init": "refs/pichu_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/3/3c/KyumoRabbit-Outlaws.png/revision/latest?cb=20240902060730",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "tiny round rodent with pointed ears and static-charged fluffy fur",
+  "colour": "white and grey with a pink nose",
+  "ref_note": "Original; kyumo rabbit (Outlaws render, transparent), small round rodent with big ears. Flipped to face left."
+}

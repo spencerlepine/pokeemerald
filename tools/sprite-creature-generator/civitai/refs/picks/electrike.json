@@ -1,0 +1,9 @@
+{
+  "init": "refs/electrike_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/5/5b/HornedKathhound.jpg/revision/latest/scale-to-width-down/1000?cb=20091107052416",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "Young kath hound pup with two curved horn prongs bristly fur and a short tail",
+  "colour": "dark brown and bone yellow",
+  "ref_note": "Horned kath hound (KOTOR) render; whole body, three-quarter facing left; horns echo the pup's static prongs"
+}

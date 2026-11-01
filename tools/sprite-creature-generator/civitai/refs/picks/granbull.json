@@ -1,0 +1,9 @@
+{
+  "init": "refs/granbull_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/d/df/Anooba.png/revision/latest?cb=20200427003151",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "hulking striped desert hyena hound with long horn-like ears and big lower tusks",
+  "colour": "charcoal grey and tan stripes",
+  "ref_note": "Anooba.png render; transparent; flipped to face left"
+}

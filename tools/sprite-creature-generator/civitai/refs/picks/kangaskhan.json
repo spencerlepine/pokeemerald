@@ -1,0 +1,9 @@
+{
+  "init": "refs/kangaskhan_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/d/d0/Thune-SWG.png/revision/latest?cb=20221014060919",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "big grey-brown Dantooine mother beast with a heavy hide and a belly pouch carrying a small calf",
+  "colour": "grey brown",
+  "ref_note": "Re-pick (gorax art belongs to teddiursa/ursaring): Dantooine thune render with alpha, native to the brief's planet; flipped to face left; pouch and calf carried by desc"
+}

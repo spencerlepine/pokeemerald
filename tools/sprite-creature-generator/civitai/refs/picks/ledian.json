@@ -1,0 +1,9 @@
+{
+  "init": "refs/ledian_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/1/10/Junk_beetle.jpg/revision/latest?cb=20110812011306",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "tall red beetle with long jointed legs used as fists and green spiked shell",
+  "colour": "rust red with green spikes",
+  "ref_note": "Original; junk beetle (render on flat teal, cuts out cleanly), bigger and leggier than the ledyba kreetle. Killik art is pinsir's canon. Flipped to face left."
+}

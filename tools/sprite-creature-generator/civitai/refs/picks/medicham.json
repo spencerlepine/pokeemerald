@@ -1,0 +1,9 @@
+{
+  "init": "refs/medicham_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/a/a6/WagToo2-DB.png/revision/latest?cb=20230705053309",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "Lean lemur fighter in a low martial stance with a pointed red cap white ruff and a ringed tail",
+  "colour": "red grey and white",
+  "ref_note": "Wag Too (Lurmen) databank render in a crouched fighting stance; alpha, flipped to face left; red cap fits Medicham"
+}

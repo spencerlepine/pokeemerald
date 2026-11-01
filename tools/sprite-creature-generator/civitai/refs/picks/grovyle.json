@@ -1,0 +1,9 @@
+{
+  "init": "refs/grovyle_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/f/f5/Pikobis.png/revision/latest/scale-to-width-down/1000?cb=20220914024230#crop=0,0,0.7,1",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "lean young katarn raptor sprinting on two legs with leaf-like blades on its forearms and a long whip tail",
+  "colour": "olive green and tan",
+  "ref_note": "Pikobi (Naboo raptor) cutout: lean bipedal runner facing left, tail trimmed so the body fills the sprite; katarn art unusable"
+}

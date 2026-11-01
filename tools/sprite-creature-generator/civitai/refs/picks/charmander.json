@@ -1,0 +1,9 @@
+{
+  "init": "refs/charmander_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/0/09/FrilledNewt-SWJSurvivor.png/revision/latest/scale-to-width-down/1000?cb=20231128234553",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small red newt lizard with a back frill and a flame burning on its tail tip",
+  "colour": "pinkish red",
+  "ref_note": "Frilled newt (Jedi Survivor render, alpha), cute red lizard facing left"
+}

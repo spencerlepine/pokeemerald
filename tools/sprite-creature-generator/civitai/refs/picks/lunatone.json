@@ -1,0 +1,9 @@
+{
+  "init": "refs/lunatone_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/5/5f/LightsaberCrystal-SWE.png/revision/latest?cb=20160911062335",
+  "flip": false,
+  "denoise": 0.6,
+  "desc": "Floating crescent moon shaped living crystal with a glowing core",
+  "colour": "pale yellow",
+  "ref_note": "original; canon kyber crystal art as base shape, denoise 0.6 so text can shift colour and crescent shape"
+}

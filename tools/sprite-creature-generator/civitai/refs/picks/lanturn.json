@@ -1,0 +1,9 @@
+{
+  "init": "refs/lanturn_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/8/88/Bluefish.png/revision/latest/scale-to-width-down/1000?cb=20080302181131",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "big deep-sea lantern fish with a bright glowing lure bulb on each antenna and wide fins",
+  "colour": "slate grey and blue",
+  "ref_note": "Original; same bluefish render as chinchou at a larger width with a bigger-lure desc (sharing within the line). Andoan mineral-fish ink art was the alternative but came out as speckled mush."
+}

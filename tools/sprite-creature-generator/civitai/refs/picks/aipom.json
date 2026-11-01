@@ -1,0 +1,9 @@
+{
+  "init": "refs/aipom_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/7/7a/Woolamander.png/revision/latest?cb=20221014055256",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "playful jungle monkey with a long curling tail that ends in a grasping hand",
+  "colour": "olive green and cream with an orange face",
+  "ref_note": "RE-PICK (Kowakian art is whismur/loudred's databank canon). Original; woolamander render (transparent), standing jungle monkey, front view. Tail hand comes from the desc."
+}

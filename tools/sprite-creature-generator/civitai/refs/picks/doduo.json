@@ -1,0 +1,10 @@
+{
+  "init": "refs/doduo_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/5/53/Kaadu-SWCT.png/revision/latest?cb=20251120052044",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "fast two-legged swamp runner with a duckbill snout big eyes and long striding legs",
+  "colour": "orange and tan",
+  "negative": "saddle, reins, harness, rider",
+  "ref_note": "SW Character Encyclopedia kaadu cutout, upright three-quarter facing left; saddle and reins handled by the negative; this is kaadu canon art (combusken also uses it and should move)"
+}

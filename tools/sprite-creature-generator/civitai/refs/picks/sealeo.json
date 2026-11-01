@@ -1,0 +1,9 @@
+{
+  "init": "refs/sealeo_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/1/1d/HothHog-SSW2.png/revision/latest?cb=20250213110718",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "stocky blue and white ice seal with a broad blunt snout for balancing things and thick blubber",
+  "colour": "blue and white",
+  "ref_note": "Hoth hog sprite (Super Star Wars ESB, transparent): stocky blue-white Hoth beast facing left with a broad snout"
+}

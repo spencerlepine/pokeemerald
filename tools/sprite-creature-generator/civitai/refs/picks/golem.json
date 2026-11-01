@@ -1,0 +1,9 @@
+{
+  "init": "refs/golem_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/f/fd/Monster_book_rock_wart.png/revision/latest?cb=20221224061255",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "massive rolling rock wart with a craggy boulder shell big glossy eyes and stubby legs",
+  "colour": "rusty brown and olive",
+  "ref_note": "Rock wart prop (Monster book) full body cutout; faces left; widest of the line though vanilla size class says medium"
+}

@@ -1,0 +1,9 @@
+{
+  "init": "refs/meowth_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/3/32/NabooanTuskCat-GunganFrontierOrganism.jpg/revision/latest?cb=20260927224314#crop=0.15,0.26,0.395,0.80",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "scruffy young tusk-cat with small down-curved tusks and a striped tail",
+  "colour": "yellow and tan",
+  "ref_note": "Nabooan tusk cat from Gungan Frontier, cropped out of the in-game book page; flipped to face left"
+}

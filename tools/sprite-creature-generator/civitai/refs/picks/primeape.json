@@ -1,0 +1,10 @@
+{
+  "init": "refs/primeape_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/e/e7/Gundark_NEGAS.jpg/revision/latest?cb=20071119014301#crop=0.0,0.0,0.88,0.88",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "hulking crouched gundark with a roaring fanged mouth big pointed ears and long clawed arms",
+  "colour": "red and dark brown",
+  "ref_note": "New Essential Guide to Alien Species gundark painting, cropped to trim the dirt; head upper left; clearer than the TCW crouch render",
+  "negative": "ground, dirt, dust cloud"
+}

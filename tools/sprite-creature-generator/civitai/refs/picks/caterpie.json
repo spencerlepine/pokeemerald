@@ -1,0 +1,9 @@
+{
+  "init": "refs/caterpie_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/3/39/Ruurian-AlienArchive.png/revision/latest?cb=20231018135549",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small rearing caterpillar with red forked antennae and a spotted segmented body",
+  "colour": "blue and lime green",
+  "ref_note": "Ruurian (Alien Archive art, alpha), caterpillar species rearing up, three-quarter left"
+}

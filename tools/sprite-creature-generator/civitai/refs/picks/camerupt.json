@@ -1,0 +1,9 @@
+{
+  "init": "refs/camerupt_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/0/0d/Bantha-TMH-Photoroom.png/revision/latest/scale-to-width-down/1000?cb=20250528150430",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "Huge shaggy bantha with massive spiral horns a heavy fur mantle and a thick long tail",
+  "colour": "dark brown and tan",
+  "ref_note": "Bantha cutout (Photoroom, alpha); whole body three-quarter with head to the left; adult stage"
+}

@@ -1,0 +1,9 @@
+{
+  "init": "refs/swampert_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/a/af/Mott-TVE.png/revision/latest/scale-to-width-down/1000?cb=20221122051224",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "hulking swamp amphibian titan with a broad snout horn and thick striped legs",
+  "colour": "tan brown and orange stripes",
+  "ref_note": "Mott (Naboo amphibian, TVE cutout) side view flipped to face left; hulking towing beast"
+}

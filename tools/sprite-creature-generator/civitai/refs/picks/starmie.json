@@ -1,0 +1,9 @@
+{
+  "init": "refs/starmie_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/d/d7/Vuffi.jpg/revision/latest?cb=20060423050114",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "larger purple double-layered star coral with spiky points and a blazing red kyber crystal core",
+  "colour": "purple grey red",
+  "ref_note": "Vuffi Raa art on white, mirrored and larger than staryu; the canon Vuffi render (long brass legs) read like a table so not used"
+}

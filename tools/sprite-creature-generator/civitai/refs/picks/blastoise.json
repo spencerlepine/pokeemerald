@@ -1,0 +1,9 @@
+{
+  "init": "refs/blastoise_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/5/5b/AT-TE_turtle.jpg/revision/latest/scale-to-width-down/1000?cb=20160219120802",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "big blue armoured turtle with a proton torpedo cannon mounted on its shell",
+  "colour": "blue and dark blue",
+  "ref_note": "Turtle (AT-TE turtle art) with cannon on its back, clean white bg; literal match for torpedo-cannon turtle"
+}

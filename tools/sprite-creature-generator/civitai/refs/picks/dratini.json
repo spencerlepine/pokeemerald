@@ -1,0 +1,9 @@
+{
+  "init": "refs/dratini_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/1/17/RishiEel-SWCT.png/revision/latest?cb=20251120051333",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small curled swamp serpent hatchling with a gaping mouth and ribbed body",
+  "colour": "blue and purple",
+  "ref_note": "No canon dragonsnake hatchling art that cuts out; Rishi eel (Card Trader render, transparent) curled serpent reads as a young dragonsnake. Head already on the left."
+}

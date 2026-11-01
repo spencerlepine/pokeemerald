@@ -1,0 +1,9 @@
+{
+  "init": "refs/solrock_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/d/d8/Shard-AE.png/revision/latest?cb=20251230155641",
+  "flip": false,
+  "denoise": 0.6,
+  "desc": "Floating sun shaped living crystal with sharp shards radiating from its core",
+  "colour": "red and orange",
+  "ref_note": "original; Shard species crystal cluster as rayed base shape, denoise 0.6 for colour shift"
+}

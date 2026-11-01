@@ -1,0 +1,10 @@
+{
+  "init": "refs/shuckle_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/2/25/Snailc.jpg/revision/latest?cb=20090423142635",
+  "flip": false,
+  "denoise": 0.55,
+  "desc": "small shelled bug peeking out of a big round spiral shell with berry juice dripping from the shell",
+  "colour": "yellow and red",
+  "negative": "sand, ground",
+  "ref_note": "Carnivorous snail (Legends) line art on white; clean silhouette; head on left; black-and-white so colour comes from the prompt (denoise 0.55). Rock beetle game render cut out as a blob with ground attached"
+}

@@ -1,0 +1,9 @@
+{
+  "init": "refs/totodile_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/8/81/Ghest.jpg/revision/latest?cb=20060714222754",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small stout swamp croc hatchling standing upright with a wide toothy jaw and stubby arms",
+  "colour": "blue and cream",
+  "ref_note": "RE-PICK (spawn of Oggdo is wooper's canon). Original; ghest (Legends ink drawing on white), upright fat swamp predator with gaping jaws, Totodile body plan. Whole line shares this image at growing sizes (34/42/62 -> about 34x45, 42x55, 49x64) because width is height-capped for this tall drawing. Uncoloured line art, colour from prompt."
+}

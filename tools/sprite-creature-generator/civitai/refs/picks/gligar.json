@@ -1,0 +1,9 @@
+{
+  "init": "refs/gligar_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/6/6d/Scorpion-droid-SWA-10.png/revision/latest?cb=20190121055602",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "gliding scorpion with wide pincers a curled stinger tail and thin wing membranes along its sides",
+  "colour": "slate blue-grey and silver",
+  "ref_note": "Scorpion droid (Star Wars Adventures #10) art as scorpion body plan; transparent; three-quarter front. Mynock-AA rejected (zubat/golbat/crobat use mynock)"
+}

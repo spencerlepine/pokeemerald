@@ -1,0 +1,9 @@
+{
+  "init": "refs/tentacool_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/9/95/Dianoga_2_BF.png/revision/latest?cb=20230723045340",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "young dianoga with a single red eye on a stalk and a bundle of drooping tentacles",
+  "colour": "pinkish brown and grey",
+  "ref_note": "Battlefront dianoga cutout with tentacles hanging close; slimmer than tentacruel's spread pose; front view"
+}

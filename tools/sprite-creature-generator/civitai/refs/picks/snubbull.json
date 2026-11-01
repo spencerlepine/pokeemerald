@@ -1,0 +1,9 @@
+{
+  "init": "refs/snubbull_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/d/df/Anooba.png/revision/latest?cb=20200427003151",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small stocky anooba pup with oversized pointed ears a big head and a stubby underbite",
+  "colour": "charcoal grey and tan stripes",
+  "ref_note": "Anooba.png (only clean anooba art); flipped; smaller width than granbull, pup traits carried by desc; Bestiary art cut out badly"
+}

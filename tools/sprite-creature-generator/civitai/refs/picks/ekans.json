@@ -1,0 +1,9 @@
+{
+  "init": "refs/ekans_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/3/33/Arrak_snake.jpg/revision/latest?cb=20060716152953",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "desert snake coiled on the ground with its head raised and a spiky mane",
+  "colour": "white and grey",
+  "ref_note": "Arrak snake (line art, white bg), coiled with head raised, flipped to face left; uncoloured line art so colour relies on prompt"
+}

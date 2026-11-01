@@ -1,0 +1,10 @@
+{
+  "init": "refs/jynx_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/8/8c/Narglatch-TCW.png/revision/latest?cb=20220907040518",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "prowling blue ice-world feline beast with a mane of spiky quills and an eerie open-mouthed call",
+  "colour": "blue light blue",
+  "negative": "saddle, rider",
+  "ref_note": "Canon narglatch (Clone Wars) render with alpha, three-quarter with head on the left; small saddle on back suppressed by negative"
+}

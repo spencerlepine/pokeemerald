@@ -1,0 +1,10 @@
+{
+  "init": "refs/shellder_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/4/41/Hardshell-removebg-preview.png/revision/latest/scale-to-width-down/1000?cb=20230616095407",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small spiny clam with a craggy shell and one big glowing eye peeking out",
+  "colour": "dark slate and pale stone",
+  "negative": "crab legs, pincers",
+  "ref_note": "Hardshell (shelled creature) cutout, front view with a rocky shell and a big blue eye; legs suppressed via negative so it reads as a clam"
+}

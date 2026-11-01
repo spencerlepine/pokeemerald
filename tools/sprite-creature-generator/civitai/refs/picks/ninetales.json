@@ -1,0 +1,9 @@
+{
+  "init": "refs/ninetales_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/8/82/Vulptex_TCVDNE.png/revision/latest?cb=20211214222808",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "large regal crystal vixen standing tall with a long sweeping crystal tail and swept-back mane",
+  "colour": "silver blue and white",
+  "ref_note": "canon Vulptex TCVDNE render, full side view flipped to face left; larger standing adult pose"
+}

@@ -1,0 +1,9 @@
+{
+  "init": "refs/luvdisc_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/6/68/Tee_scalefish.png/revision/latest?cb=20220930162333",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small rounded pink reef fish with a broad fan fin and a heart shaped body",
+  "colour": "pink red and coral",
+  "ref_note": "Tee scalefish render (Mon Cala, transparent): compact pink fish with fan fin; flipped so the head faces left"
+}

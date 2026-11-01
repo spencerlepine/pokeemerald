@@ -1,0 +1,9 @@
+{
+  "init": "refs/sandshrew_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/7/7d/Dewback-CGSWG.png/revision/latest/scale-to-width-down/1000?cb=20241125073047",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small dewback hatchling with a blunt snout stubby legs and pebbly tan scales",
+  "colour": "sandy brown and tan",
+  "ref_note": "Dewback (CGSWG render, alpha), plain unsaddled dewback flipped to face left; small width for the hatchling"
+}

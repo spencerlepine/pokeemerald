@@ -1,0 +1,10 @@
+{
+  "init": "refs/wailord_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/3/30/Aiwha-MF44.png/revision/latest/scale-to-width-down/1000?cb=20260307044332",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "Gigantic aiwha with vast sweeping wing fins a long whale head and a ridged back",
+  "colour": "dark blue grey",
+  "ref_note": "Aiwha render (alpha) with wings fully spread, head lower left; tiny dark rider on its back reads as a dorsal ridge",
+  "negative": "rider, person, saddle"
+}

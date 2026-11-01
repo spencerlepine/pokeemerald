@@ -1,0 +1,9 @@
+{
+  "init": "refs/swinub_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/9/9c/Tauntaun-SWE.png/revision/latest?cb=20160914005551",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small fluffy tauntaun kit with stubby curled horn nubs and a round snout",
+  "colour": "cream white and tan",
+  "ref_note": "Tauntaun SWE render (front view); transparent; different image and pose from piloswine; width 32 because the tall figure is height-capped, keeps the kit visibly smaller"
+}

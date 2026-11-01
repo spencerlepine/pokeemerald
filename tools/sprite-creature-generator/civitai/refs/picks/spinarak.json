@@ -1,0 +1,9 @@
+{
+  "init": "refs/spinarak_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/f/f5/Krykna-SWCT.png/revision/latest/scale-to-width-down/1000?cb=20251028034814",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small krykna spiderling with a round pale abdomen and thin jointed legs",
+  "colour": "pale grey and white",
+  "ref_note": "Krykna (Card Trader render, transparent), front view, more compact of the two krykna renders. Front-facing, no flip."
+}

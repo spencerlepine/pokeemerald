@@ -1,0 +1,9 @@
+{
+  "init": "refs/relicanth_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/1/14/Doo_scalefish.png/revision/latest?cb=20230925002538",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "heavy armored living fossil fish with rocky plated scales and a blunt grumpy face",
+  "colour": "pale gray green and slate",
+  "ref_note": "Doo scalefish render (Mon Cala, transparent): chunky coelacanth-like fish already facing left"
+}

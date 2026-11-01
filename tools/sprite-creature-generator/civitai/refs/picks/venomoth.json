@@ -1,0 +1,9 @@
+{
+  "init": "refs/venomoth_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/2/2e/AponoMoth-Databank-Outlaws.png/revision/latest?cb=20240907180028",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "swamp moth with broad dusty veined wings and a long curved proboscis",
+  "colour": "purple and pink",
+  "ref_note": "Apono moth (Outlaws databank) cutout as body plan; already faces left"
+}

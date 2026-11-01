@@ -1,0 +1,9 @@
+{
+  "init": "refs/weezing_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/b/bc/Beldons-woswfg.jpg/revision/latest/scale-to-width-down/1000?cb=20070123191252#crop=0,0,1,0.78",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "giant floating gas-bag of many swollen bulbous lobes with a fin and dangling tendrils",
+  "colour": "orange cream brown",
+  "ref_note": "Legends beldon painting (Wildlife of Star Wars), clean white bg, many lobes read as Weezing's multiple heads; orange art vs koffing's purple"
+}

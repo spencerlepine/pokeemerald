@@ -1,0 +1,9 @@
+{
+  "init": "refs/corphish_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/c/c9/LM-432CrabDroid-TCW.png/revision/latest?cb=20230712034701",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small round crab droid raising one big pincer leg with a little sensor head",
+  "colour": "rust red and silver gray",
+  "ref_note": "TCW LM-432 render: three-quarter toward left with raised claw, transparent; distinct from crawdaunt's heavy front render"
+}

@@ -1,0 +1,9 @@
+{
+  "init": "refs/scyther_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/a/a8/Acklay-JTS.png/revision/latest?cb=20230811022049",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "green mantis-like arena beast rearing up with long scythe-bladed forelimbs",
+  "colour": "green pale green",
+  "ref_note": "Canon acklay render with alpha, rearing with a scythe limb raised, head on the left"
+}

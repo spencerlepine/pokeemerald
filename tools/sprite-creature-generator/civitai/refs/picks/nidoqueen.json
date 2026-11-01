@@ -1,0 +1,9 @@
+{
+  "init": "refs/nidoqueen_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/1/16/Ronto_NEGAS.jpg/revision/latest?cb=20100701001545",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "towering gentle ronto pack beast with a thick long neck and a loaded pack harness",
+  "colour": "pale grey and brown",
+  "ref_note": "Ronto (New Essential Guide art, white bg), harnessed pack beast three-quarter left; tall so height cap sets size"
+}

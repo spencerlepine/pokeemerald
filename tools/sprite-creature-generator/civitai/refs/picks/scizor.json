@@ -1,0 +1,9 @@
+{
+  "init": "refs/scizor_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/e/eb/MagnaGuard-SWCTP.png/revision/latest?cb=20240922000146",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "caped battle droid bodyguard lunging with an electrostaff crackling at both ends",
+  "colour": "gunmetal grey and violet",
+  "ref_note": "MagnaGuard SWCTP render; transparent; staff points left; three-quarter"
+}

@@ -1,0 +1,9 @@
+{
+  "init": "refs/barboach_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/8/83/Twinfin_hyacander.png/revision/latest?cb=20210201162857",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small slimy swamp catfish with long whisker barbels and a wide mouth",
+  "colour": "gray olive green",
+  "ref_note": "Twinfin hyacander render: catfish shape with barbel, transparent, already faces left"
+}

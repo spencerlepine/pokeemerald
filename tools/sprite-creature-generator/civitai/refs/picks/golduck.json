@@ -1,0 +1,9 @@
+{
+  "init": "refs/golduck_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/4/45/Pelikki_VD.jpg/revision/latest?cb=20141205041718",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "sleek long-necked swimming drake with a spiked crest and webbed feet",
+  "colour": "dark blue and tan",
+  "ref_note": "Pelikki painting (Visual Dictionary) on white; faces left; bigger and darker than psyduck's pelikki render"
+}

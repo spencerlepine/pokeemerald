@@ -1,0 +1,9 @@
+{
+  "init": "refs/mantine_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/5/51/Rugosa_neebray.png/revision/latest?cb=20170703055512",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "gliding space manta with broad translucent wing fins big yellow eyes and trailing tail fins",
+  "colour": "maroon red and pale blue",
+  "ref_note": "Rugosa neebray render; transparent; faces left"
+}

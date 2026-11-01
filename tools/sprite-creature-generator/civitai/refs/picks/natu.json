@@ -1,0 +1,9 @@
+{
+  "init": "refs/natu_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/6/6a/Convor.jpg/revision/latest?cb=20110402165259",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "tiny round convor owlet with big staring eyes perched on a spiral tail",
+  "colour": "yellow green and grey",
+  "ref_note": "Convor (Legends art on flat grey), small round owlet. Already faces left. Xatu uses the canon Morai-style convor render."
+}

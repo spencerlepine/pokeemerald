@@ -1,0 +1,9 @@
+{
+  "init": "refs/absol_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/a/a8/LothWolf-2025ToppsSWHyperspace.png/revision/latest?cb=20260220042829",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "huge pale Force wolf with tall pointed ears and a shaggy ruff",
+  "colour": "blue gray and white",
+  "ref_note": "Loth-wolf Topps render: only clean full-body transparent Loth-wolf art, flipped to face left. NOTE suicune.json uses this same image"
+}

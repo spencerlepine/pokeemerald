@@ -1,0 +1,9 @@
+{
+  "init": "refs/furret_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/8/86/DustRat-Databank-Outlaws.png/revision/latest?cb=20240907182257",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "long slender burrowing ferret with short legs and a long thin tail",
+  "colour": "grey brown and pink",
+  "ref_note": "Original; dust rat (Outlaws databank render, transparent), long low rodent body. Flipped to face left."
+}

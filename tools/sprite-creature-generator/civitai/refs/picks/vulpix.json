@@ -1,0 +1,9 @@
+{
+  "init": "refs/vulpix_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/8/80/Vulptex-Masterwork2018.png/revision/latest?cb=20251116215810",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small sitting crystal fox with tall pointed ears and a bristly crystal tail",
+  "colour": "pale blue grey and white",
+  "ref_note": "canon Vulptex Masterwork render, sitting front view head turned left; younger smaller pose than ninetales"
+}

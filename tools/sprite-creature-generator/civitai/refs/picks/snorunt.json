@@ -1,0 +1,9 @@
+{
+  "init": "refs/snorunt_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/0/0e/Wampastuffedanimal.jpg/revision/latest?cb=20100414211932",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small round wampa cub with thick shaggy fur sitting hunched in the snow",
+  "colour": "cream and tan",
+  "ref_note": "Wampa plush (SWG) render: chunky sitting cub shape, flat bg cuts cleanly; wampa cub comic art keeps its blue sky background"
+}

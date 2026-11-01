@@ -1,0 +1,10 @@
+{
+  "init": "refs/omastar_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/d/d6/Squid.jpg/revision/latest?cb=20080819151802",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "blue tentacled fossil cephalopod with a big spiked spiral shell and a sharp beak",
+  "colour": "blue light blue cream",
+  "negative": "black and white, sketch, bubbles",
+  "ref_note": "Giant squid line art (Legends page) on white: many-tentacled body for Omastar; flipped so the tentacles lead left; greyscale so colour comes from args, shell via desc"
+}

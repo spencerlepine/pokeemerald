@@ -1,0 +1,9 @@
+{
+  "init": "refs/eevee_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/4/4d/Koodie_the_Tooka.png/revision/latest/scale-to-width-down/1000?cb=20211218205632",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small brown tooka cat with tall pointed ears a fluffy tail and a cream face",
+  "colour": "brown tan cream",
+  "ref_note": "Canon tooka Koodie render with alpha: clean whole-body side view facing left; olive-grey fur so colour arg pushes brown"
+}

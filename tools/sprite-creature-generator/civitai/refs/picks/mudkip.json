@@ -1,0 +1,9 @@
+{
+  "init": "refs/mudkip_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/d/dd/Nix-CGSWG.png/revision/latest/scale-to-width-down/1000?cb=20250121020603#crop=0,0,0.7,1",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small smiling swamp axolotl hatchling with frilly gill fins on its head and a short tail",
+  "colour": "peach orange and slate grey",
+  "ref_note": "Nix the merqaal (Outlaws card art cutout): axolotl-like amphibian facing the viewer with head on the left; long tail trimmed so the body fills the sprite"
+}

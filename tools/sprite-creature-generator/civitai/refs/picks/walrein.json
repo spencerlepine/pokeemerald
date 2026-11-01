@@ -1,0 +1,9 @@
+{
+  "init": "refs/walrein_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/6/64/Henku-Databank-Outlaws.png/revision/latest?cb=20240907190345",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "huge shaggy blue gray ice walrus with curved tusks and a heavy blubbery body",
+  "colour": "blue gray and dark gray",
+  "ref_note": "Henku render (Kijimi, Outlaws, transparent): massive shaggy ice beast facing left; its curled horns stand in for the tusks"
+}

@@ -1,0 +1,9 @@
+{
+  "init": "refs/hitmontop_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/0/00/TrainingDroid-YJA.png/revision/latest?cb=20251224090311",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "round top-shaped training droid with a domed head and jointed arms swinging training sabers",
+  "colour": "white orange and light blue",
+  "ref_note": "YJA training droid render; transparent; front view; round body reads as a spinning top"
+}

@@ -1,0 +1,9 @@
+{
+  "init": "refs/volbeat_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/e/e7/Geonosian-CVD.png/revision/latest?cb=20221030162015",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "Upright firefly bug with folded veined wings long antennae and a glowing lantern tail",
+  "colour": "grey brown and glowing yellow",
+  "ref_note": "Geonosian warrior render (bipedal winged insect) as body plan for the original male firefly; alpha, turned left; no usable canon firefly art (Lightle bug only in scenes)"
+}

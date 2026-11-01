@@ -1,0 +1,9 @@
+{
+  "init": "refs/duskull_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/c/cf/Nihilus_mask.jpg/revision/latest?cb=20100115113224",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small floating dark side wraith that is only a skull mask with hollow eye holes",
+  "colour": "bone white and red",
+  "ref_note": "Darth Nihilus mask art (a wraith that is only a mask): skull-mask silhouette on black, knocks out cleanly"
+}

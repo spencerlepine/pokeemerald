@@ -1,0 +1,9 @@
+{
+  "init": "refs/roselia_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/d/de/Saava-JFO.png/revision/latest/scale-to-width-down/1000?cb=20241221201530",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "Small thorny flower creature with two big spiked poison blooms on curling dark stems",
+  "colour": "green and coral pink",
+  "ref_note": "Saava flower render (Jedi Fallen Order); alpha, two big blooms on dark stems; a small detached bloom floats top right"
+}

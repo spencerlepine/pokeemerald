@@ -1,0 +1,9 @@
+{
+  "init": "refs/shedinja_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/a/ac/GeonosianZombie-USCVV.png/revision/latest?cb=20241001050238",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "Hollow lurching Geonosian husk with torn wings and a long horned head",
+  "colour": "grey brown and rust orange",
+  "ref_note": "Ultimate Star Wars Geonosian zombie cutout; canon, whole body, lurches left"
+}

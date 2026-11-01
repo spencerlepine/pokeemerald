@@ -1,0 +1,9 @@
+{
+  "init": "refs/charmeleon_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/e/eb/FlyhornLizard-Databank-Outlaws.png/revision/latest?cb=20240907183133",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "fierce red lizard with a big flame-like frill and a burning tail",
+  "colour": "orange red and brown",
+  "ref_note": "Flyhorn lizard (Outlaws databank render, alpha), three-quarter left frilled lizard"
+}

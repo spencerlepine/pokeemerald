@@ -1,0 +1,9 @@
+{
+  "init": "refs/machoke_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/f/f5/B2SBD-SWE.png/revision/latest/scale-to-width-down/1000?cb=20240929230108",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "hulking B2 super battle droid with a broad armoured chest and wrist blaster arm raised",
+  "colour": "gunmetal grey and dark grey",
+  "ref_note": "Star Wars Encyclopedia B2 cutout, wide three-quarter stance with arm pointed left; bulkier read than front views"
+}

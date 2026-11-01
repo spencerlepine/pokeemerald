@@ -1,0 +1,9 @@
+{
+  "init": "refs/venusaur_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/9/9c/Gorger_TacticalGuide.png/revision/latest/scale-to-width-down/1000?cb=20230615193320",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "huge humped lizard carrying a giant pink wroshyr bloom on its back",
+  "colour": "olive green and slate grey",
+  "ref_note": "Gorger (Jedi Survivor guide render, alpha), huge three-quarter left lizard; hump carries the bloom. Alt: Oggdo Bogdo (darker)"
+}

@@ -1,0 +1,9 @@
+{
+  "init": "refs/murkrow_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/6/63/Rawka2.png/revision/latest/scale-to-width-down/1000?cb=20240227202413",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "hunched crow bird with a heavy hooked beak and a spiky iridescent blue-black crest",
+  "colour": "ash grey and blue-black",
+  "ref_note": "Rawka (Jedi Survivor) render; transparent; flipped to face left"
+}

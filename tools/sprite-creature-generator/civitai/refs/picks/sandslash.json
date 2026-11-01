@@ -1,0 +1,9 @@
+{
+  "init": "refs/sandslash_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/8/84/Dewback-SS.png/revision/latest/scale-to-width-down/1000?cb=20230920021049",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "big spiny dewback with a row of back spines and a sandtrooper saddle",
+  "colour": "olive green and tan",
+  "ref_note": "Dewback (SS render, alpha), saddled sandtrooper mount flipped to face left; different image from sandshrew"
+}

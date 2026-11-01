@@ -1,0 +1,10 @@
+{
+  "init": "refs/slowking_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/8/89/Dagobah_big-mouthed_creature.jpg/revision/latest?cb=20251125200929",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "rearing swamp slug sage with a crown-shaped head crest a pale ridged belly and a long trailing tail",
+  "colour": "lavender grey and pale cream",
+  "ref_note": "Dagobah big-mouthed creature (slug-like, crown-shaped crest) line art on white; whole body; faint mist halo left by the cutout; flipped. Giant_Swamp_Slug left to slowpoke/slowbro so the line stays distinct",
+  "negative": "mist, cloud, background"
+}

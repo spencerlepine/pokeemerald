@@ -1,0 +1,9 @@
+{
+  "init": "refs/ninjask_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/a/a0/Geonosian_NEGAS.png/revision/latest/scale-to-width-down/1000?cb=20170226060952",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "Swift winged hive insect hovering on blurred veined wings with a thin armoured body",
+  "colour": "yellow gold and black",
+  "ref_note": "Re-picked (Can-cell is yanma's): Geonosian NEGAS flying render, a winged Geonosis hive insect; alpha, wings spread"
+}

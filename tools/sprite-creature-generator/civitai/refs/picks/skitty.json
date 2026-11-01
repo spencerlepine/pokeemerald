@@ -1,0 +1,9 @@
+{
+  "init": "refs/skitty_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/5/5e/LothCat-AG.png/revision/latest/scale-to-width-down/1000?cb=20260116020048",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "Fluffy playful loth-cat kitten with tall pointed ears a wide grin and a big bushy tail",
+  "colour": "cream white and tan",
+  "ref_note": "Murley (Ahsoka) loth-cat render; alpha, standing three-quarter toward the left; kitten stage"
+}

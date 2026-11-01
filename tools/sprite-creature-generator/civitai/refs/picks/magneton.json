@@ -1,0 +1,9 @@
+{
+  "init": "refs/magneton_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/0/00/MSEseries-NEGTD.png/revision/latest/scale-to-width-down/1000?cb=20221028040540",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "three boxy mouse droids linked in a tight stack on small wheels with glowing sensor grilles",
+  "colour": "dusty grey and tan",
+  "ref_note": "New Essential Guide to Droids MSE cutout showing two droids nose to tail; flipped so the front faces left"
+}

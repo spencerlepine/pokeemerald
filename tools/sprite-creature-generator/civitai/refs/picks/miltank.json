@@ -1,0 +1,9 @@
+{
+  "init": "refs/miltank_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/c/c9/ShaakNEGAS.jpg/revision/latest?cb=20061126070858#crop=0.0,0.0,1.0,0.86",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "plump round-bodied grazing beast with a small drooping head and short sturdy legs",
+  "colour": "golden tan and cream",
+  "ref_note": "Shaak (NEGAS) art on white, cropped above the grass; clean; side view facing left. Shaak-TVE read as a blob at sprite size"
+}

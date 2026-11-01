@@ -1,0 +1,9 @@
+{
+  "init": "refs/clefairy_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/a/a9/Bilargg4.jpg/revision/latest?cb=20091203183539",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small chubby round-eared moon creature standing upright with big dark eyes and a tiny curled tail",
+  "colour": "white",
+  "ref_note": "Bilar (Galaxy Guide line art, white bg), chubby upright round-eared creature facing front; uncoloured line art so pink must come from the prompt"
+}

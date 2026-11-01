@@ -1,0 +1,9 @@
+{
+  "init": "refs/wartortle_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/d/d0/Kamoradon-Bestiary.png/revision/latest/scale-to-width-down/1000?cb=20250112062504#crop=0,0,0.76,1",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "blue sea turtle with a brown shell clawed flippers and feathery fin ears",
+  "colour": "teal blue and brown",
+  "ref_note": "Kamoradon sea dragon (Bestiary render, alpha), left-facing shelled sea creature, tail cropped"
+}

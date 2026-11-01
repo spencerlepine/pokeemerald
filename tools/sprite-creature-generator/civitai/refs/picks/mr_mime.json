@@ -1,0 +1,9 @@
+{
+  "init": "refs/mr_mime_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/d/dd/BD3000-BYOR2D2-60.png/revision/latest?cb=20241005194337",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "pink and white humanoid mime with a round pink torso and big white hands pressed on an invisible wall",
+  "colour": "pink white",
+  "ref_note": "Canon BD-3000 luxury droid (Clone Wars) render with alpha: pink-and-white humanoid with raised hand; mime traits via desc"
+}

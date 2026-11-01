@@ -1,0 +1,9 @@
+{
+  "init": "refs/lairon_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/8/86/OctuptarraDroid-SWCTP.png/revision/latest?cb=20230914014107",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "Three-eyed combat droid with a bulbous armoured sensor head on three long spindly legs",
+  "colour": "bronze grey and dark brown",
+  "ref_note": "Octuptarra combat tri-droid Card Trader render; alpha, whole droid, radially symmetric so no flip; middle stage"
+}

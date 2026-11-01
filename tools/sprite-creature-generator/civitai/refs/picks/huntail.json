@@ -1,0 +1,9 @@
+{
+  "init": "refs/huntail_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/1/1f/IonEel-SSW2.png/revision/latest?cb=20250213112738#crop=0.0,0.57,0.75,1.0",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "long deep sea eel with wide toothy jaws and a glowing fish shaped lure on its tail tip",
+  "colour": "green and yellow green",
+  "ref_note": "Ion eel sprite (Super Star Wars ESB, transparent), lower eel cropped: toothy serpent facing left; no clean blue deep-sea eel art exists that is not claimed (MonCala eel = horsea line, Rishi eel = dratini)"
+}

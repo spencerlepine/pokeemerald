@@ -1,0 +1,9 @@
+{
+  "init": "refs/milotic_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/2/2d/Laa_scalefish.png/revision/latest?cb=20220930160741",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "radiant long sea serpent fish with flowing fan fins and trailing feelers",
+  "colour": "teal cream and pink",
+  "ref_note": "Laa scalefish render (Survivor fish family, same as feebas' Faa): elegant flowing fins, transparent, flipped to face left; no canon pink serpent not already used"
+}

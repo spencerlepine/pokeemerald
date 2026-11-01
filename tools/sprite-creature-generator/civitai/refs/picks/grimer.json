@@ -1,0 +1,9 @@
+{
+  "init": "refs/grimer_prep.png",
+  "init_source": "/tmp/claude-0/-home-user/510f0079-9430-50be-b656-57ddf5b64e74/scratchpad/mask/blorp_cut.png",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small dripping sludge creature with two goopy arms raised round eyes and a bubbly body",
+  "colour": "toxic green",
+  "ref_note": "Tiny blorp (Star Wars Roll Out cartoon slime) colour-keyed out of its scene into a scratchpad PNG; source https://static.wikia.nocookie.net/starwars/images/6/66/Tiny_blorp.png; front view"
+}

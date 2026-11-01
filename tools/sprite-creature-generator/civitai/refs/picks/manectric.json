@@ -1,0 +1,9 @@
+{
+  "init": "refs/manectric_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/e/e2/Kathhound.jpg/revision/latest/scale-to-width-down/1000?cb=20091106175830",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "Lean snarling kath hound with a wild crackling mane long legs and a whip tail",
+  "colour": "rust red orange and pale grey",
+  "ref_note": "Kath hound (KOTOR) render with the orange mane; whole body, head toward the left; grown stage"
+}

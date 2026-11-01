@@ -1,0 +1,9 @@
+{
+  "init": "refs/donphan_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/7/76/Mudhorn-TMtAoDD.png/revision/latest/scale-to-width-down/1000?cb=20241206054848",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "massive shaggy armoured beast charging head-down with one huge forward horn",
+  "colour": "dark brown and bone grey",
+  "ref_note": "Mudhorn TMtAoDD render; transparent; three-quarter left"
+}

@@ -1,0 +1,9 @@
+{
+  "init": "refs/sentret_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/3/3c/Chikarri-AE.png/revision/latest?cb=20251229213732",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "alert desert meerkat standing upright on its hind legs with a bushy striped tail",
+  "colour": "brown and cream",
+  "ref_note": "RE-PICK (Kowakian art is loudred's databank canon). Original; chikarri (Legends ink art, transparent), a rodent standing upright on its hind legs like a sentry. Black and white ink, colour from prompt. Head already on the left."
+}

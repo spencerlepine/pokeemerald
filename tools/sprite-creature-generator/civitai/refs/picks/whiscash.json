@@ -1,0 +1,9 @@
+{
+  "init": "refs/whiscash_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/c/ca/Fantailed_Laa.png/revision/latest?cb=20230912221050",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "giant bulky swamp catfish with a huge wide mouth and long drooping whiskers",
+  "colour": "teal blue and pale tan",
+  "ref_note": "Fantailed Laa (Jedi Survivor) render: blue big-mouthed fish with dangling barbel, transparent, faces left"
+}

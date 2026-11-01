@@ -1,0 +1,9 @@
+{
+  "init": "refs/ledyba_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/2/23/Kreetle.jpg/revision/latest/scale-to-width-down/1000?cb=20060716101859",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "round shelled ladybug with a domed spotted red back and short legs",
+  "colour": "dark red and tan",
+  "ref_note": "Original; kreetle (Legends art on white), round red-shelled beetle reads as a ladybug. Head already on the left."
+}

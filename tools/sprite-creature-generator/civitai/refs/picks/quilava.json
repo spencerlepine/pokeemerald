@@ -1,0 +1,9 @@
+{
+  "init": "refs/quilava_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/b/b3/Kittle.png/revision/latest/scale-to-width-down/1000?cb=20210408060635",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "lean fire-backed burrower with a stocky head and a ridge of flames along its spine",
+  "colour": "golden yellow",
+  "ref_note": "RE-PICK (anooba art is snubbull's canon). Original; kittle render (transparent), lean yellow quadruped between the fwit and the dryax. Flipped to face left."
+}

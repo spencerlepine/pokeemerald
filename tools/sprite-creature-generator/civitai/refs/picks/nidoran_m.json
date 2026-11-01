@@ -1,0 +1,9 @@
+{
+  "init": "refs/nidoran_m_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/2/2a/Reek_SWCT.png/revision/latest/scale-to-width-down/1000?cb=20230405000022",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "stocky reek calf with a red face small horn nubs and pebbly hide",
+  "colour": "grey brown and red",
+  "ref_note": "Reek (SWCT render, alpha), flipped to face left; calf via small width and desc"
+}

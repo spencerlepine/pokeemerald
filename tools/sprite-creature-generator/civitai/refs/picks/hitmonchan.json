@@ -1,0 +1,9 @@
+{
+  "init": "refs/hitmonchan_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/f/fc/K05Dfull-SWE.png/revision/latest?cb=20160912040916",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "stocky sparring droid throwing a punch with one huge armoured fist",
+  "colour": "grey yellow brown",
+  "ref_note": "Canon K0-5D droid-boxing droid (Clone Wars) render with alpha, punching toward the left"
+}

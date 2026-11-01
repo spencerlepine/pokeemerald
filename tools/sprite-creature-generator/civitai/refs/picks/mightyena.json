@@ -1,0 +1,10 @@
+{
+  "init": "refs/mightyena_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/b/ba/Massiff-Outlaws.png/revision/latest/scale-to-width-down/1000?cb=20250126054829",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "big pack alpha massiff with a heavier body and a taller crest of long back spines and huge crocodile jaws",
+  "colour": "grey and brown",
+  "negative": "humanoid, standing upright, fur, dog ears",
+  "ref_note": "Same Outlaws massiff render as poochyena (same line) at the full 64 px width; desc carries the bigger alpha traits; other massiff art (BoBF, Grizzer, comics) only exists as scene shots that cut out poorly"
+}

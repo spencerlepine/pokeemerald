@@ -1,0 +1,9 @@
+{
+  "init": "refs/houndoom_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/b/bf/Fyrnock_Card_Trader.png/revision/latest/scale-to-width-down/1000?cb=20241127060649",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "hulking alpha cave hound with a huge swept-back horned crest bigger jaws and glowing yellow eyes",
+  "colour": "dark navy and violet",
+  "ref_note": "Same Fyrnock Card Trader render as houndour (other fyrnock art is dark scene stills that cut out badly); flipped; larger width and alpha traits in desc"
+}

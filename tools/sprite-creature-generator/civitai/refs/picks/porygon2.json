@@ -1,0 +1,9 @@
+{
+  "init": "refs/porygon2_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/e/e9/TC70-TCWVG.png/revision/latest?cb=20221227034137",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "slim TC-series protocol droid with a round chest plate wide eyes and raised hands",
+  "colour": "copper red and rose",
+  "ref_note": "TC-70 (TCW video game) render; transparent; front view; tall so height-capped"
+}

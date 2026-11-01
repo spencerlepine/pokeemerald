@@ -1,0 +1,9 @@
+{
+  "init": "refs/pidgeot_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/4/47/Porg_wings_Fathead.png/revision/latest/scale-to-width-down/1000?cb=20180830034728",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "majestic elder porg with huge brown wings spread and a long feather crest",
+  "colour": "white brown and orange",
+  "ref_note": "Porg wings spread (Fathead render, alpha); spread wings make the elder stage distinct"
+}

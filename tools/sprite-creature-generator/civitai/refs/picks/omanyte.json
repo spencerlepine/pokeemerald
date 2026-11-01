@@ -1,0 +1,9 @@
+{
+  "init": "refs/omanyte_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/a/a9/Slyyyg-JFO.png/revision/latest/scale-to-width-down/1000?cb=20241221134815",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small blue fossil mollusc in a spiral shell with curled horns and short tentacles",
+  "colour": "blue cream dark grey",
+  "ref_note": "Canon slyyyg (Jedi Fallen Order) render with alpha: spiral-horned shelled body; brown art so colour arg pushes blue"
+}

@@ -1,0 +1,9 @@
+{
+  "init": "refs/farfetchd_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/4/4d/Nuna-SWCT.png/revision/latest?cb=20251121042203",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "squat swamp turkey with a beaked open mouth stubby wings and thick taloned legs holding a reed stick",
+  "colour": "olive green and pinkish tan",
+  "ref_note": "SW Character Encyclopedia nuna cutout, three-quarter facing left, open beak; the reed stick comes from the desc"
+}

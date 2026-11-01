@@ -1,0 +1,9 @@
+{
+  "init": "refs/pidgeotto_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/2/2e/Porg.png/revision/latest?cb=20251213045455",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "wide-eyed porg seabird with an orange face and folded brown wings",
+  "colour": "white brown and orange",
+  "ref_note": "Porg (official render, alpha), front view; width kept low because the tall bird hits the 64 px height cap"
+}

@@ -1,0 +1,10 @@
+{
+  "init": "refs/goldeen_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/6/6c/Mee.png/revision/latest?cb=20220930160146",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small sleek striped river fish with one long brow horn and trailing fins",
+  "colour": "yellow orange white",
+  "ref_note": "Re-pick (opee art belongs to sharpedo): canon mee fish render with alpha, striped with a long horn-like spike; flipped to face left; shared with seaking at a smaller width",
+  "negative": "background, mud"
+}

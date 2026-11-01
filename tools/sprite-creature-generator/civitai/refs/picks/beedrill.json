@@ -1,0 +1,9 @@
+{
+  "init": "refs/beedrill_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/2/27/Fire_wasp.jpg/revision/latest/scale-to-width-down/1000?cb=20140105100228",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "big wasp with three stingers two on its forelegs and one on its tail",
+  "colour": "orange red and black",
+  "ref_note": "Fire wasp (painting, plain bg), wasp with stinger facing left"
+}

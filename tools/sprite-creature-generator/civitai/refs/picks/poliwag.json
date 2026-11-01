@@ -1,0 +1,9 @@
+{
+  "init": "refs/poliwag_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/8/83/Worrt-USCVV.png/revision/latest?cb=20230202145047",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small squat baby worrt with stubby eyestalks and a short tadpole tail",
+  "colour": "sandy brown and tan",
+  "ref_note": "Ultimate Star Wars worrt cutout, squat three-quarter view toward left; no worrt tadpole art exists"
+}

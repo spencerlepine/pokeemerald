@@ -1,0 +1,9 @@
+{
+  "init": "refs/marshtomp_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/0/0a/Merqaal-OutlawsVCG.png/revision/latest/scale-to-width-down/1000?cb=20240619013215#crop=0,0.45,1,1",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "mud-coated swamp amphibian crouched on strong legs with heavy gill frills and a thick tail",
+  "colour": "blue grey and orange",
+  "ref_note": "Adult merqaal (lower figure of Outlaws merqaal sheet) cropped and flipped to face left; bigger greyer stage of the nix base"
+}

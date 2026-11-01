@@ -1,0 +1,10 @@
+{
+  "init": "refs/seaking_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/6/6c/Mee.png/revision/latest?cb=20220930160146",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "big proud horned fish king with a humped crowned head bold black stripes and long sweeping fins",
+  "colour": "orange yellow black",
+  "ref_note": "Re-pick (opee art belongs to carvanha): same canon mee render as goldeen, larger width and kinglier desc; pierceskimmer and para fish cut out badly",
+  "negative": "water, waves, blue background, boat"
+}

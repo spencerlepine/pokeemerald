@@ -1,0 +1,9 @@
+{
+  "init": "refs/tangela_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/e/ee/Rathtar_VVUSC.png/revision/latest/scale-to-width-down/1000?cb=20241211052541#crop=0.22,0,0.78,1",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "round fleshy tangle of writhing tentacles around a gaping toothy maw",
+  "colour": "red brown pink",
+  "ref_note": "Canon rathtar render with alpha, front view; cropped to the body ball so tentacles bunch into a tangle"
+}

@@ -1,0 +1,9 @@
+{
+  "init": "refs/electrode_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/2/2f/Bladed_Training_Remote.png/revision/latest/scale-to-width-down/1000?cb=20210923151031",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "larger armoured combat remote sphere with a glowing blue equator band and crackling orange charge lines",
+  "colour": "grey orange blue",
+  "ref_note": "Bladed Training Remote (Vader Immortal) render with alpha; distinct from voltorb's cream remote, banded and battle-worn"
+}

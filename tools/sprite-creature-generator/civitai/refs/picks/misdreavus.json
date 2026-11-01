@@ -1,0 +1,10 @@
+{
+  "init": "refs/misdreavus_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/6/6b/NamelessTHR.png/revision/latest/scale-to-width-down/1000?cb=20210309163351#crop=0.08,0.0,0.6,0.75",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small floating grey wisp spirit with a skull-like face and a ragged spiky mane fading into mist",
+  "colour": "ash grey and dark grey",
+  "ref_note": "Nameless (Shrikarai) ghostly grey still, cropped to head and shoulders so it reads as a floating wisp; dark bg cut out",
+  "negative": "legs, feet, standing"
+}

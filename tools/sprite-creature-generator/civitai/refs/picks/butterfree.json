@@ -1,0 +1,9 @@
+{
+  "init": "refs/butterfree_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/a/a7/MoonMoth-FF97.png/revision/latest/scale-to-width-down/1000?cb=20231008183346",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "white powder-winged moth with big patterned wings and a furry body",
+  "colour": "white grey and black",
+  "ref_note": "Moon moth (FFG render, alpha), wings spread, front-facing like vanilla"
+}

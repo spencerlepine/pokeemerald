@@ -1,0 +1,9 @@
+{
+  "init": "refs/alakazam_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/9/9b/Amaran.jpg/revision/latest?cb=20110705214307",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "tall ancient upright mist fox with a long snout raised clawed hand and huge plumed tail",
+  "colour": "rust red and dark brown",
+  "ref_note": "RE-PICK (was Vulptex): coloured Amaran (fox species) full-body art; flipped so the raised hand and face are on the left"
+}

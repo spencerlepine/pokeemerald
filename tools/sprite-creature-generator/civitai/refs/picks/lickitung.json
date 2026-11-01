@@ -1,0 +1,9 @@
+{
+  "init": "refs/lickitung_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/f/f5/SpinedPuc.jpg/revision/latest?cb=20151201035831",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "plump pink warty lizard with a huge mouth and a long lolling tongue",
+  "colour": "pink mauve brown",
+  "ref_note": "Re-pick (worrt art belongs to the poliwag line): spined puc, a pinkish toad-lizard with clean light background, three-quarter view; flipped to face left"
+}

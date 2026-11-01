@@ -1,0 +1,9 @@
+{
+  "init": "refs/sharpedo_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/a/a5/OpeeSeaKillerTongue-SWE.png/revision/latest/scale-to-width-down/1000?cb=20230915015533",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "Long armoured opee sea killer with crab legs a lure antenna and a lashing sticky tongue",
+  "colour": "orange red and pink",
+  "ref_note": "Star Wars Encyclopedia opee render with tongue out; alpha, side view flipped to face left; adult stage"
+}

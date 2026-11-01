@@ -1,0 +1,9 @@
+{
+  "init": "refs/remoraid_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/f/f3/DeadSquid-2017DarthVader15.png/revision/latest?cb=20250323100320",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small squid with a pointed mantle and curling tentacles squirting a jet of water",
+  "colour": "olive green and cream",
+  "ref_note": "Squid from Darth Vader (2017) #15 on black; cut out with its water splash; tentacles lead to the left; squid line art (Squid.jpg) read as a tangle"
+}

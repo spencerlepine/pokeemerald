@@ -1,0 +1,9 @@
+{
+  "init": "refs/gulpin_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/2/26/Sarlacc_concept.jpg/revision/latest?cb=20130427175955#crop=0.1,0.5,0.75,0.9",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "Small round sarlacc blob with a huge toothy grin bulging eyes and a stubby tentacle",
+  "colour": "green and pale yellow",
+  "ref_note": "Sarlacc concept sketch (pencil, toothy blob) cropped to the lower head and flipped; grayscale so colour comes from the prompt; low-res source"
+}

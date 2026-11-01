@@ -1,0 +1,9 @@
+{
+  "init": "refs/dunsparce_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/f/f8/JKA_sandburrower.png/revision/latest/scale-to-width-down/1000?cb=20080528171006",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small segmented desert burrowing worm with a ringed toothy maw and stubby legs",
+  "colour": "sandy brown and red",
+  "ref_note": "Sand burrower (Jedi Academy) render on plain grey; clean cutout; flipped so the maw faces left"
+}

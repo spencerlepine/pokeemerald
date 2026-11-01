@@ -1,0 +1,9 @@
+{
+  "init": "refs/yanma_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/9/94/Can-cell.png/revision/latest/scale-to-width-down/1000?cb=20220914023816",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "big-eyed red swamp dragonfly with four long veined wings and a segmented tail",
+  "colour": "red brown and pale green",
+  "ref_note": "Can-cell (Legends) render as body plan; transparent bg; faces left"
+}

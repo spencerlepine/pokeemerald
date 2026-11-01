@@ -1,0 +1,9 @@
+{
+  "init": "refs/machop_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/c/cd/Battle_Droid.png/revision/latest?cb=20160910192832",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "spindly B1 battle droid with a long narrow head walking with a blaster rifle",
+  "colour": "tan and dark grey",
+  "ref_note": "Classic B1 battle droid cutout, three-quarter walking pose; flipped so head and rifle point left; height-limited so it stays slim"
+}

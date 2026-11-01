@@ -1,0 +1,9 @@
+{
+  "init": "refs/phanpy_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/d/d1/Mudhorn-TMH.png/revision/latest/scale-to-width-down/1000?cb=20230805221856",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small stocky mudhorn calf with a short stubby horn and shaggy fur",
+  "colour": "brown and bone grey",
+  "ref_note": "Mudhorn TMH render (side view); transparent; flipped; different image and pose from donphan"
+}

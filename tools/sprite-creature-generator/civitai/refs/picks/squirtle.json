@@ -1,0 +1,9 @@
+{
+  "init": "refs/squirtle_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/5/5b/AT-TE_turtle.jpg/revision/latest/scale-to-width-down/1000?cb=20160219120802#crop=0,0.28,1,1",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small blue turtle pup with a round dark blue shell and a curly tail",
+  "colour": "light blue and dark blue",
+  "ref_note": "Turtle (AT-TE turtle art, clean white bg) cropped below the cannon; same art as blastoise but without weapons"
+}

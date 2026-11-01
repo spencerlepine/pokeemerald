@@ -1,0 +1,9 @@
+{
+  "init": "refs/voltorb_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/f/f9/TrainingRemote-NEGWT.png/revision/latest?cb=20221022152632",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small hovering ball droid with red blaster emitter rings and grey panels",
+  "colour": "grey red silver",
+  "ref_note": "Re-pick (castform holds the SW100Objects remote render): canon Marksman-H training remote art (Essential Guide to Warfare) with alpha"
+}

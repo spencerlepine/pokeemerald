@@ -1,0 +1,9 @@
+{
+  "init": "refs/nidorina_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/6/65/Enraged_Ronto-Suns-of-Fortune.jpg/revision/latest?cb=20140218213706",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "young ronto rearing up with a long neck flappy ears and a small horn",
+  "colour": "olive green and tan",
+  "ref_note": "Ronto (Suns of Fortune art, white bg), rearing three-quarter left; distinct pose for the middle stage"
+}

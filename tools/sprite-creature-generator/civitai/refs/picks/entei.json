@@ -1,0 +1,9 @@
+{
+  "init": "refs/entei_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/d/db/Sabercat-TUR.png/revision/latest?cb=20230123145330#crop=0.12,0,1,0.86",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "hulking horned volcano cat crouched to pounce with a single blade horn and a long curling tail",
+  "colour": "purple and magenta",
+  "ref_note": "Re-pick (Anooba art belongs to snubbull/granbull): Sabercat (The Unknown Regions) cutout cropped off its rock, flipped to face left; colour is purple not brown"
+}

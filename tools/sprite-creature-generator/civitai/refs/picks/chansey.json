@@ -1,0 +1,9 @@
+{
+  "init": "refs/chansey_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/9/9e/FX-med_negtd.jpg/revision/latest/scale-to-width-down/1000?cb=20071012002804",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "round-shouldered cylindrical medical droid with many thin surgical arms and a glowing orange sensor band",
+  "colour": "dark grey black orange",
+  "ref_note": "FX-series medical droid art (Essential Guide to Droids) on white, arms spread and well lit; reads better than the darker canon FX-6 render"
+}

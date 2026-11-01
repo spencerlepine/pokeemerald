@@ -1,0 +1,9 @@
+{
+  "init": "refs/blaziken_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/5/5d/SithWarbird-BoS.png/revision/latest/scale-to-width-down/1000?cb=20241010035210",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "towering upright sunfowl fighter with a tall feather crest and powerful clawed arms and legs",
+  "colour": "yellow and lime green",
+  "ref_note": "Sith warbird (Book of Sith) cutout: upright bipedal bird beast with crest and clawed arms, faces left; yellow not red"
+}

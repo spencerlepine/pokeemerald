@@ -1,0 +1,9 @@
+{
+  "init": "refs/fearow_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/6/6a/JyykleVulture.jpg/revision/latest?cb=20051126084150",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "long-beaked desert condor with a bald head ruffled brown wings and strong talons",
+  "colour": "ochre brown and tan",
+  "ref_note": "Jyykle vulture (game render, plain blue bg knocked out), solid side-view vulture facing left"
+}

@@ -1,0 +1,9 @@
+{
+  "init": "refs/psyduck_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/b/b7/Pelikki-CVDNE.png/revision/latest?cb=20230807042238",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "plump dazed swamp duck with a long bill and a little head crest",
+  "colour": "yellow and tan",
+  "ref_note": "Pelikki (Naboo waterbird) cutout; faces left"
+}

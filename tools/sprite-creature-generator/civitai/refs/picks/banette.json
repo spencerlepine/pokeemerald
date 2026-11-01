@@ -1,0 +1,9 @@
+{
+  "init": "refs/banette_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/f/fa/DesertDemonDoll.png/revision/latest?cb=20250722162222",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "ragged discarded hooded rag doll come to life with button eyes and stitched seams",
+  "colour": "rust brown and tan",
+  "ref_note": "Desert demon doll render: whole hooded rag doll, transparent, front view"
+}

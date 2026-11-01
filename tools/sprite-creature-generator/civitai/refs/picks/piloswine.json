@@ -1,0 +1,9 @@
+{
+  "init": "refs/piloswine_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/6/6c/Tauntaun-NEGAS.png/revision/latest/scale-to-width-down/1000?cb=20230923191752",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "shaggy snow lizard mount rearing on strong hind legs with curled horns and a long tail",
+  "colour": "grey and pale grey",
+  "ref_note": "Tauntaun NEGAS render; transparent; flipped so the head faces left; tall so height-capped at 64"
+}

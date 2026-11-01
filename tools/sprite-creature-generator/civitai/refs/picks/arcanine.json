@@ -1,0 +1,9 @@
+{
+  "init": "refs/arcanine_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/9/90/AkkDog-TJP.png/revision/latest?cb=20241010041230",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "huge armoured akk dog with spiked ridged plates and a long curling tail",
+  "colour": "orange-red and tan",
+  "ref_note": "The Jedi Path akk dog cutout, full body and tail; faces left"
+}

@@ -1,0 +1,8 @@
+{
+  "init": "refs/zangoose_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/0/0a/Nexu2-SWE.png/revision/latest/scale-to-width-down/1000?cb=20250110025351",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "Crouched four-eyed clawed cat with a gaping fanged mouth and quills along its back",
+  "colour": "pale tan and orange"
+}

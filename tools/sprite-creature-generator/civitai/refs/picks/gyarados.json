@@ -1,0 +1,9 @@
+{
+  "init": "refs/gyarados_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/b/b2/Colo_claw_fish.png/revision/latest?cb=20200427012945",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "huge coiled serpentine colo claw fish rearing with gaping fanged jaws and glowing lures along its body",
+  "colour": "olive green blue grey",
+  "ref_note": "Canon colo claw fish render with alpha, coiled S-pose with open jaws facing left reads like Gyarados"
+}

@@ -1,0 +1,10 @@
+{
+  "init": "refs/kingler_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/1/11/Lizard_crab_canon.png/revision/latest?cb=20160927094844#crop=0.2,0.16,0.92,0.95",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "big armoured crab with one huge curled crushing claw and a heavy knobbly shell",
+  "colour": "orange red brown",
+  "negative": "green background, ground",
+  "ref_note": "Canon lizard crab comic art, faces left, big curled claw; green background stays inside the claw loop (negative set)"
+}

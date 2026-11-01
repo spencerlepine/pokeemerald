@@ -1,0 +1,9 @@
+{
+  "init": "refs/hariyama_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/6/69/MireTerror.png/revision/latest/scale-to-width-down/1000?cb=20230613133524",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "Massive horned mogu in a wide sumo stance with huge clawed palms",
+  "colour": "dark brown and tan",
+  "ref_note": "Mire Terror (giant Mogu variant) render; alpha, front sumo stance; left arm slightly cut by the source frame"
+}

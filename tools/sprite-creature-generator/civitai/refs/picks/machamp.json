@@ -1,0 +1,9 @@
+{
+  "init": "refs/machamp_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/c/cd/CommandoDroid-CGSWG.png/revision/latest/scale-to-width-down/1000?cb=20241214201829",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "lean BX commando droid in a low combat crouch aiming a blaster with a round visor head",
+  "colour": "dark brown grey and orange",
+  "ref_note": "Creatures of the Galaxy BX commando cutout, whole body crouched aiming left; wider than the standing renders"
+}

@@ -1,0 +1,9 @@
+{
+  "init": "refs/mewtwo_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/d/d9/Kaminoan.jpg/revision/latest?cb=20050513011214",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "tall slender long-necked clone humanoid with big dark eyes and a long tail",
+  "colour": "pale grey white and black",
+  "ref_note": "Original; Kaminoan full-body render (front, arms out) on flat grey, cuts out cleanly. Only canon art that is a whole standing humanoid from Kamino; front-facing, no flip. Thin silhouette, height-capped."
+}

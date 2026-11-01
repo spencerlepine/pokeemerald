@@ -1,0 +1,9 @@
+{
+  "init": "refs/diglett_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/a/a3/BogRat-JFO.png/revision/latest/scale-to-width-down/1000?cb=20241221133824#crop=0.36,0.0,0.85,0.42",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small burrowing mole head poking up from a hole with a big eye and whiskers",
+  "colour": "brown and tan",
+  "ref_note": "Bog rat (Jedi Fallen Order) head-and-neck crop: column body emerging from the ground; already faces left"
+}

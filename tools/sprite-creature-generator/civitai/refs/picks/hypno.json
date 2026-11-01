@@ -1,0 +1,9 @@
+{
+  "init": "refs/hypno_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/c/c8/InterrogationDroid-SW100Objects.png/revision/latest/scale-to-width-down/1000?cb=20230419002958",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "floating black sphere droid with syringe arms and a glowing red hypnotic light",
+  "colour": "black silver red",
+  "ref_note": "Canon IT-O studio render with alpha; arms and red eye kept; flipped so dome and eye face left"
+}

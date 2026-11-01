@@ -1,0 +1,9 @@
+{
+  "init": "refs/octillery_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/9/93/Demonsquid.jpg/revision/latest?cb=20060713172016",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "bulbous octopus with a tube-shaped cannon snout and long curling suckered tentacles",
+  "colour": "pale grey and white",
+  "ref_note": "Demonsquid (Legends) line art on white; clean cutout; head on left. Dianoga_BF rejected (tentacruel uses it)"
+}

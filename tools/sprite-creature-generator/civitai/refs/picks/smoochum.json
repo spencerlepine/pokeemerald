@@ -1,0 +1,9 @@
+{
+  "init": "refs/smoochum_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/7/7c/Narglatch_TVE.png/revision/latest/scale-to-width-down/1000?cb=20190604023058",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small narglatch cub with a fluffy spiky mane big round eyes stubby fangs and a long tufted tail",
+  "colour": "steel blue and dark blue",
+  "ref_note": "Narglatch TVE render (adult; the woswfg cub painting has two overlapping cubs that crop badly); transparent; flipped; jynx uses Narglatch-TCW so the images differ"
+}

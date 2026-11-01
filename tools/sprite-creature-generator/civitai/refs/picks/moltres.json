@@ -1,0 +1,9 @@
+{
+  "init": "refs/moltres_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/7/75/WhisperBird-BFII.png/revision/latest?cb=20260920153411",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "legendary fire bird with raised blazing wings and a long trailing flame tail",
+  "colour": "golden orange with a blue grey head",
+  "ref_note": "No canon Mustafar fire bird; whisper bird (Battlefront II render, transparent) in flight, golden plumage reads as fiery. Already faces left."
+}

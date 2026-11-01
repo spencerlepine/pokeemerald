@@ -1,0 +1,9 @@
+{
+  "init": "refs/pikachu_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/3/3c/KyumoRabbit-Outlaws.png/revision/latest?cb=20240902060730",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "small round rodent with tall ears a pink nose and crackling ion sparks",
+  "colour": "white and pale blue grey",
+  "ref_note": "Kyumo rabbit (Outlaws render, alpha), plump rodent flipped to face left; re-picked off Loth-cat (skitty/delcatty canon)"
+}

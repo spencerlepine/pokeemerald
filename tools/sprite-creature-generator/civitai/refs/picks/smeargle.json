@@ -1,0 +1,10 @@
+{
+  "init": "refs/smeargle_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/b/b9/CorellianHound-SoloTOG.png/revision/latest/scale-to-width-down/1000?cb=20241125055139",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "pale white dog-like painter creature with a long brush-tipped tail splashed with green paint",
+  "colour": "off-white and cream",
+  "negative": "harness, straps, collar",
+  "ref_note": "Corellian hound (Solo) render as a white canine body plan; transparent; head on left; no upright painter-like creature found (Kowakian/Teek/Squill taken or humanoid)"
+}

@@ -1,0 +1,10 @@
+{
+  "init": "refs/wailmer_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/f/fc/Aiwha_concepts.jpg/revision/latest/scale-to-width-down/1000?cb=20170427115812#crop=0,0,0.57,0.75",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "Plump young aiwha calf with short broad wing fins a rounded whale head and a thin tail",
+  "colour": "pale blue grey and lilac",
+  "ref_note": "Aiwha concept art (left panel) cropped; whole body three-quarter toward the left; a small rider figure sits on its back that the desc omits",
+  "negative": "rider, person, saddle"
+}

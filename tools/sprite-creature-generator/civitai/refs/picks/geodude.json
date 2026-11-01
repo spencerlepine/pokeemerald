@@ -1,0 +1,9 @@
+{
+  "init": "refs/geodude_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/f/fd/Monster_book_rock_wart.png/revision/latest?cb=20221224061255#crop=0.0,0.0,0.45,1.0",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "lumpy rock-like rock wart head with two big glossy eyes and small mandibles",
+  "colour": "rusty brown and olive",
+  "ref_note": "Rock wart prop (Monster book) cropped to the head so it reads as a living rock; faces left; width kept low because the square crop fills more canvas than the flat later stages"
+}

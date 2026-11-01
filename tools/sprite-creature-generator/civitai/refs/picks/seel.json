@@ -1,0 +1,9 @@
+{
+  "init": "refs/seel_prep.png",
+  "init_source": "/tmp/claude-0/-home-user/510f0079-9430-50be-b656-57ddf5b64e74/scratchpad/mask/thala_cut.png#crop=0.3,0.0,1.0,0.78",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "plump thala-siren pup with a curved neck and a droopy trunk-like snout",
+  "colour": "grey and pinkish brown",
+  "ref_note": "Thala-siren (Dorling Kindersley, the only art on its page) hand-masked out of the rock scene into a scratchpad PNG, cropped to the upper body for a compact pup; source https://static.wikia.nocookie.net/starwars/images/5/5b/Thala-siren-DK.png; faces left"
+}

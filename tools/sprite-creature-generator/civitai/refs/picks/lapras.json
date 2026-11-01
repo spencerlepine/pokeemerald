@@ -1,0 +1,9 @@
+{
+  "init": "refs/lapras_prep.png",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/1/1a/The_Purrgil_King_-_SW_Card_Trader.png/revision/latest?cb=20251028040933",
+  "flip": false,
+  "denoise": 0.5,
+  "desc": "gentle space whale with a big round head kind eyes and trailing tentacle whiskers",
+  "colour": "tan grey blue",
+  "ref_note": "Canon purrgil (Card Trader) render with alpha, three-quarter view facing left with face and tentacles readable; the side-view grey purrgil read as a flat hull"
+}
