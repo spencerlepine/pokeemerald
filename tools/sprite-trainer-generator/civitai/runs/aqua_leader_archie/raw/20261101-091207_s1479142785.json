@@ -1,0 +1,47 @@
+{
+  "trainer": {
+    "stem": "aqua_leader_archie",
+    "wiki_path": "graphics/trainers/front_pics/aqua_leader_archie.png",
+    "sw_subject": "JABBA THE HUTT on his repulsor sled",
+    "subject": "Jabba the Hutt",
+    "desc": "enormous fat slug-like Hutt, tan-green skin, wide toad mouth, orange eyes, thick tail, lounging on a floating repulsor sled",
+    "theme": "swamp-throne",
+    "style": "",
+    "pose": "standing, facing left, three-quarter view",
+    "negative": "human, legs, hair",
+    "pair": false
+  },
+  "lora": {
+    "id": 443092,
+    "name": "XL v1",
+    "baseModel": "SDXL 1.0",
+    "trainedWords": [],
+    "air": null,
+    "files": [
+      {
+        "name": "pk_trainer_xl_v1.safetensors",
+        "sizeKB": 445819.83984375,
+        "sha256": "078E09DA2A123964B7EB30DB23EC24D59FB082343F69C7FAF925C4C07E97023E"
+      }
+    ]
+  },
+  "checkpoint": "urn:air:sdxl:checkpoint:civitai:101055@128078",
+  "params": {
+    "prompt": "(jabba the hutt:1.3), enormous fat slug-like Hutt, tan-green skin, wide toad mouth, orange eyes, thick tail, lounging on a floating repulsor sled, full body character sprite, standing, facing left, three-quarter view, pixel art, game sprite, crisp dark outlines, solid white background, simple background, olive green, brown and gold",
+    "negativePrompt": "human, legs, hair, poke ball, pokeball, holding ball, baseball cap, generic pokemon trainer, anime boy, scenery, detailed background, gradient background, floor, shadow, text, watermark, signature, frame, border, multiple characters, cropped, cut off feet, blurry, 3d, photo, realistic, painting, smooth shading",
+    "scheduler": "EulerA",
+    "steps": 25,
+    "cfgScale": 7.0,
+    "width": 768,
+    "height": 768,
+    "seed": 1479142785,
+    "clipSkip": 2
+  },
+  "strength": 0.75,
+  "format": "jpeg",
+  "seed": 1479142785,
+  "workflowId": "13596363-20261101091144733-im0y",
+  "jobId": "6f75c1db-35f1-4cbe-8520-ee78ef41cbd8",
+  "cost": "3 green",
+  "generated": "20261101-091207"
+}
