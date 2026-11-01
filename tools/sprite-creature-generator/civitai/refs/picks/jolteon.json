@@ -1,10 +1,10 @@
 {
   "init": "refs/jolteon_prep.png",
-  "init_source": "https://static.wikia.nocookie.net/starwars/images/6/65/BetsyBauer-YJATookaConceptArt3.jpg/revision/latest/scale-to-width-down/1000?cb=20250426165428#crop=0.33,0.03,0.63,0.97",
+  "init_source": "https://static.wikia.nocookie.net/starwars/images/e/e3/Tooka.png/revision/latest?cb=20240211000703",
   "flip": false,
-  "denoise": 0.55,
-  "desc": "yellow-furred static tooka cat standing, solid bright yellow body, huge tall ears, bristling spiky fur tufts, curled tail, whole body",
-  "colour": "bright yellow with white tips",
-  "negative": "grey, black and white, sketch",
-  "ref_note": "Canon tooka turnaround (Young Jedi Adventures, Betsy Bauer), clean side pose, whole body; greyscale so colour from args, denoise 0.55"
+  "denoise": 0.6,
+  "desc": "static-charged tooka cat crouching, three-quarter view, whole body, tall pointed ears, spiky bristling fur, long tail, clean coloured sprite",
+  "colour": "bright yellow with white spiky tufts",
+  "negative": "grey, purple, black and white, sketch",
+  "ref_note": "Tooka (Legends) colour render, three-quarter left, whole body (eevee line image); replaces greyscale turnaround"
 }
