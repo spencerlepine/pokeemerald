@@ -1,7 +1,14 @@
 # music-generator
 
-**Status:** DONE. Approved by the owner on 2026-11-01. Installed: `MUS_INTRO_CRAWL` (the opening crawl theme), and `MUS_INTRO` (the boot cutscene, scored to picture; with the owner for review). Every song in `../../wiki/database/music.csv` is still
-`rewrite_status` TODO; composing them is a separate pass that uses this tool.
+**Status:** DONE. Approved by the owner on 2026-11-01. Installed: `MUS_INTRO_CRAWL` (the opening crawl theme), and `MUS_INTRO` (the boot cutscene, scored to picture; with the owner for review). Every other song the player hears (175) is composed in `song-schemas/` and shipped to the wiki
+(`python3 ../../wiki/tools/ship_audio.py song-schemas/<name>.yaml`): `rewrite_status` GENERATED in
+`../../wiki/database/music.csv`, the .mid in `../../wiki/audio/sound/songs/midi/`, an MP3 preview in
+`../../wiki/audio/previews/music/`. None of those are installed in `../../game` yet (`generate.py install`, after a ROM listen).
+
+Known quirks (worked around in the models, not fixed): a section `fill` goes to every drum part in the section,
+so two drum parts with different kits need their fills written into the groove; a part or phrase named `off`
+(or `on`, `yes`, `no`) is read by YAML as a boolean; `analyze_reference.py --song` takes a net-new row by its
+asset id (`net:mus-...`), not its constant.
 
 Turns a song model (`song-schemas/<name>.yaml`, the z-day ai-music notation) into an Emerald song: a MIDI file
 for `mid2agb`, played by the GBA m4a engine through one of the game's own voicegroups. Every limit of the
