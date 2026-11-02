@@ -1,10 +1,10 @@
 id: altering-cave
 name: ALTERING CAVE
-planet: GRAND ARENA
+planet: TATOOINE
 kind: dungeon
 replaces: AlteringCave
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Altering Cave: a small cave off Route 103 whose single species changes with events (vanilla Mystery Gift).'
 grid: |
   ################################
   ################################
@@ -39,4 +39,4 @@ warps:
 - name: Door
   at: [18, 22]
   to: route-103
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

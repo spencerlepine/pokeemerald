@@ -3,8 +3,8 @@ name: ASTEROID SPIRE 1F
 planet: ASTEROID FIELD
 kind: dungeon
 replaces: SkyPillar_1F
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Inside the Asteroid Spire: cracked floors (hover-bike speed) and falling rubble.'
 grid: |
   ##############
   ##########.###
@@ -35,4 +35,4 @@ warps:
 - name: Door
   at: [10, 1]
   to: asteroid-spire-2f
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

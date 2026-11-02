@@ -1,10 +1,10 @@
 id: atollon-exterior
 name: ATOLLON EXTERIOR
 planet: ATOLLON
-kind: interior
+kind: landmark
 replaces: BirthIsland_Exterior
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Atollon: a rocky moon where the BENDU sleeps on a stone dais. The triangle puzzle (vanilla Birth Island) wakes it.'
 grid: |
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -43,12 +43,12 @@ people:
 - name: Triangle
   at: [15, 12]
   role: npc
-- name: '0x0'
+- name: Event object
   at: [15, 3]
-  role: npc
+  role: object
 signs: []
 warps:
 - name: Door
   at: [15, 24]
   to: atollon-hangar
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Was filed as an interior; walked outdoors, so it is a landmark now.']

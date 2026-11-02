@@ -3,8 +3,9 @@ name: GRAND ARENA
 planet: GRAND ARENA
 kind: route
 replaces: BattleFrontier_OutsideWest
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'West half of Lando''s Grand Arena island: the Dome, Factory and Pike, Lando''s own villa, lounges and the supply depot. Ships dock at the reception gate in
+  the south.'
 pos: [0, 403]
 grid: |
   ~~~~~##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##~~~##~~~~~##~
@@ -28,14 +29,14 @@ grid: |
   ~##T#####T.....#.............#####~~#.TT.......#~~T##TTT
   ~########T...................#####~~#TTTT.....T#~~T##TTT
   ~##.#####T...................#####~~#TT.......T#~~T##TTT
-  ~##....##T...................#####~~#T...###..T#~~T##TTT
-  ~##....##########..........#######~~#T..#####.T#~~T##TTT
-  ~##....##########..........#######~~#...#####.T#~~T##TTT
-  ~##....##########..........#######~~#...#####.T#~~T##TTT
-  ~##.............................##~~#...#####.T#~~T##TTT
-  ~##.............................##~~#...#####.T#~~T##TTT
-  ~##...###########...............##~~#T...#.#..T#~~T##TTT
-  ~####################........##.##~~##...#.#..T#~~T#####
+  ~##....##T...................#####~~#T........T#~~T##TTT
+  ~##....##########..........#######~~#T........T#~~T##TTT
+  ~##....##########..........#######~~#.........T#~~T##TTT
+  ~##....##########..........#######~~#.........T#~~T##TTT
+  ~##.............................##~~#.........T#~~T##TTT
+  ~##.............................##~~#.........T#~~T##TTT
+  ~##...###########...............##~~#T........T#~~T##TTT
+  ~####################........##.##~~##........T#~~T#####
   ~#######~~~~~~~#########.....##..#~~##T.......T#~~T#####
   ~~~~~~~~~#####~~~~~#####.....##..#~~~#T......#T#~~~~~~~~
   ~~~~~#############~~~###.....##..#~~~#T.......##~~~~~~~~
@@ -49,16 +50,16 @@ grid: |
   ~#####...........#####~#......TTTTTTTTTTT...TTTTTTTTTTTT
   ~########.....########~#................................
   ~########.....########~#................................
-  ~########.....########~#....................######..###.
-  ~~~######.....#########....................T#######T###.
-  ~~~####....................................T#######T###.
+  ~########.....########~#................................
+  ~~~######.....#########....................T.......T....
+  ~~~####....................................T.......T....
   ~~~####..........#####.........##########...............
   ##~####..........#####.........##########...............
   ##~####..........#####.........##########...............
   ~~~####.................................................
-  ~~~####...........................................####..
-  ~~~####.................#...#....................T#####.
-  ~~~####################.......###############....T#####.
+  ~~~####.................................................
+  ~~~####.................#...#....................T......
+  ~~~####################.......###############....T......
   ##~###########.........#.....#...............#..........
   ##~#####################.....#################..........
   ~~~############.......##.....##....###########..........
@@ -81,17 +82,50 @@ grid: |
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##~~##~~##~~#
 exits:
 - edge: east
-  cells: [5, 6, 7, 8, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54]
+  cells: [0, 1, 2, 5, 6, 7, 8, 30, 31, 32, 33, 34, 35, 36, 37, 38, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 59, 60, 61, 62, 63, 64, 65, 66, 67,
+    68, 69]
   to: grand-arena-outside-east
-buildings: []
-props: []
+buildings:
+- name: Battle pike lobby
+  art: art:grand-arena:arena-facilities
+  at: [40, 21]
+  size: [5, 8]
+  door: 2
+  to: grand-arena-battle-pike-lobby
+- name: Lounge 2
+  art: art:grand-arena:arena-facilities
+  at: [44, 42]
+  size: [7, 3]
+  door: 1
+  to: grand-arena-lounge-2
+- name: Supply depot
+  art: art:grand-arena:arena-facilities
+  at: [50, 49]
+  size: [5, 3]
+  door: 1
+  to: grand-arena-supply-depot
+- name: Lounge 4
+  art: art:grand-arena:arena-facilities
+  at: [52, 42]
+  size: [3, 3]
+  door: 1
+  to: grand-arena-lounge-4
+props:
+- name: Arena holo-sign
+  art: art:shared:holo-sign
+  at: [22, 56]
+  size: [1, 1]
+- name: Cargo crates
+  art: art:shared:cargo-crates
+  at: [28, 66]
+  size: [2, 2]
 people:
 - name: Boy1
   at: [26, 38]
   role: npc
-- name: '0x0'
+- name: Event object
   at: [20, 70]
-  role: npc
+  role: object
 - name: Ferry Attendant
   at: [19, 68]
   role: npc
@@ -158,6 +192,18 @@ people:
 - name: Pokefan F
   at: [4, 26]
   role: npc
+- name: Gardulla the Hutt (Pike)
+  at: [43, 29]
+  role: story
+- name: Arena fan
+  at: [28, 40]
+  role: npc
+- name: Bounty hunter's droid
+  at: [20, 50]
+  role: npc
+- name: Gambler
+  at: [34, 30]
+  role: npc
 signs:
 - name: Sign
   at: [15, 18]
@@ -171,26 +217,14 @@ signs:
   at: [53, 51]
 warps:
 - name: Door
-  at: [42, 27]
-  to: grand-arena-battle-pike-lobby
-- name: Door
   at: [19, 17]
   to: grand-arena-battle-dome-lobby
 - name: Door
   at: [11, 38]
   to: grand-arena-battle-factory-lobby
 - name: Door
-  at: [45, 44]
-  to: grand-arena-lounge-2
-- name: Door
-  at: [51, 51]
-  to: grand-arena-supply-depot
-- name: Door
   at: [44, 5]
   to: grand-arena-scotts-house
-- name: Door
-  at: [53, 44]
-  to: grand-arena-lounge-4
 - name: Door
   at: [5, 20]
   to: grand-arena-lounge-7
@@ -203,4 +237,5 @@ warps:
 - name: Door
   at: [39, 55]
   to: artisan-cave-b1f
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'The reception gate (vanilla ferry dock) is the ship link: grand-arena-reception-gate becomes the
+    hangar.', 'Facility bosses (owner''s cast): Aurra Sing Tower, Dengar Dome, Zuckuss Palace, 4-LOM Arena, IG-88 Factory, Gardulla Pike, Dexter Jettster Pyramid.']

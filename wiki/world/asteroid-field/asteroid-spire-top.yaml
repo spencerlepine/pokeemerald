@@ -3,8 +3,8 @@ name: ASTEROID SPIRE
 planet: ASTEROID FIELD
 kind: route
 replaces: SkyPillar_Top
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Top of the Asteroid Spire, open to space: the EXOGORTH''s lair.'
 grid: |
   ...........................
   ...........................
@@ -34,9 +34,9 @@ exits: []
 buildings: []
 props: []
 people:
-- name: '0x0'
+- name: Event object
   at: [14, 7]
-  role: npc
+  role: object
 - name: Rayquaza
   at: [14, 6]
   role: npc
@@ -45,4 +45,4 @@ warps:
 - name: Door
   at: [16, 14]
   to: asteroid-spire-5f
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

@@ -1,10 +1,10 @@
 id: wellspring-interior
 name: WELLSPRING INTERIOR
 planet: MORTIS
-kind: interior
+kind: landmark
 replaces: FarawayIsland_Interior
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'The Wellspring''s heart: a clearing round the pool of life where the PRIMORDIAL plays hide and seek.'
 grid: |
   TTT....."......""......T"""TT
   TTT...TT"......."TTT...T"."TT
@@ -47,4 +47,4 @@ warps:
 - name: Door
   at: [13, 19]
   to: wellspring-entrance
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

@@ -119,6 +119,8 @@ people:
 signs:
 - name: Sign
   at: [11, 9]
-warps: []
-todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Planet border cut: door at [45, 6] to altering-cave; reached by ship instead.', '''~'' on Tatooine
-    is the planet''s surf medium: salt lake water here.']
+warps:
+- name: Door
+  at: [45, 6]
+  to: altering-cave
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', '''~'' on Tatooine is the planet''s surf medium: salt lake water here.']

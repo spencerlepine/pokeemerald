@@ -3,8 +3,8 @@ name: MORTIS GATE DOWN 02
 planet: MORTIS
 kind: dungeon
 replaces: NavelRock_Down02
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Mortis Gate: stairs up to the FATHER''s peak and down to the DAUGHTER''s hollow.'
 grid: |
   .........
   .#######.
@@ -26,4 +26,4 @@ warps:
 - name: Door
   at: [3, 3]
   to: mortis-gate-down-03
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

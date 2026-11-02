@@ -3,8 +3,8 @@ name: ASTEROID SPIRE
 planet: ASTEROID FIELD
 kind: route
 replaces: SkyPillar_Outside
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'The asteroid''s surface: a crumbling path to the spire''s base.'
 grid: |
   ~~~~~~~~~~~#########~~~~~~~~
   ~~~~~~~~~##.#######.###~~~~~
@@ -31,7 +31,11 @@ grid: |
   ~~~~~##~~~~~~.....~~######~~
 exits: []
 buildings: []
-props: []
+props:
+- name: Asteroid spire
+  art: art:grand-arena:asteroid-spire
+  at: [18, 7]
+  size: [2, 2]
 people:
 - name: Wallace
   at: [13, 7]
@@ -44,4 +48,4 @@ warps:
 - name: Door
   at: [14, 5]
   to: asteroid-spire-1f
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

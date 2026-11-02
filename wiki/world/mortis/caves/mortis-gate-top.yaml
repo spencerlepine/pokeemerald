@@ -3,8 +3,8 @@ name: MORTIS GATE TOP
 planet: MORTIS
 kind: dungeon
 replaces: NavelRock_Top
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Mortis Gate: stairs up to the FATHER''s peak and down to the DAUGHTER''s hollow.'
 grid: |
   #########################
   #########################
@@ -38,12 +38,12 @@ exits: []
 buildings: []
 props: []
 people:
-- name: '0x0'
+- name: Event object
   at: [12, 4]
-  role: npc
+  role: object
 signs: []
 warps:
 - name: Door
   at: [13, 20]
   to: mortis-gate-up-4
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

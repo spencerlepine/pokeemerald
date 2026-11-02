@@ -1,10 +1,10 @@
 id: mortis-gate-exterior
 name: MORTIS GATE EXTERIOR
 planet: MORTIS
-kind: interior
+kind: landmark
 replaces: NavelRock_Exterior
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Mortis Gate: a monolith in a strange sea; the doorway leads down into the realm of the FATHER and the DAUGHTER.'
 grid: |
   ~~~~~~~~~~~~~~~~~~~~~
   ~~##~~~~~~~~~~~~~~~~~
@@ -42,4 +42,4 @@ warps:
 - name: Door
   at: [10, 10]
   to: mortis-gate-entrance
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Was filed as an interior; walked outdoors, so it is a landmark now.']

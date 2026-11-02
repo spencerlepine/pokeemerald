@@ -3,8 +3,8 @@ name: TYTHON ISLE
 planet: TYTHON
 kind: route
 replaces: SouthernIsland_Interior
-status: TODO
-story: ''
+status: BLOCKOUT
+story: The standing-stone circle at the heart of the island, where ASHLA or BOGAN waits.
 grid: |
   TTTTTTTTTTTTTTTTTTTTTTTTTTT
   TTTTTTTTTTTTTTTTTTTTTTTTTTT
@@ -34,12 +34,12 @@ exits: []
 buildings: []
 props: []
 people:
-- name: '0x0'
+- name: Event object
   at: [13, 12]
-  role: npc
-- name: '0x0'
+  role: object
+- name: Event object
   at: [13, 2]
-  role: npc
+  role: object
 signs:
 - name: Sign
   at: [13, 11]
@@ -50,4 +50,4 @@ warps:
 - name: Door
   at: [14, 18]
   to: tython-isle-exterior
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: []

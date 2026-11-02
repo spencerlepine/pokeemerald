@@ -3,8 +3,8 @@ name: TYTHON ISLE
 planet: TYTHON
 kind: route
 replaces: SouthernIsland_Exterior
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Tython Isle: a small Force-sacred island. A path climbs from the landing pad to the standing stones where ASHLA or BOGAN appears.'
 grid: |
   ###TTTTTTTTTTTTTTTTTTTTTTTT.####~
   ###TTTTTTTTTTTTTTTTTTTTTTTT#####~
@@ -38,14 +38,18 @@ grid: |
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 exits: []
 buildings: []
-props: []
+props:
+- name: Tython standing stones
+  art: art:grand-arena:tython-standing-stones
+  at: [23, 8]
+  size: [2, 2]
 people:
 - name: Sailor
   at: [13, 23]
   role: npc
-- name: '0x0'
+- name: Event object
   at: [13, 25]
-  role: npc
+  role: object
 signs:
 - name: Sign
   at: [16, 7]
@@ -56,4 +60,7 @@ warps:
 - name: Door
   at: [15, 5]
   to: tython-isle-interior
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+- name: Landing pad (ships)
+  at: [14, 22]
+  to: tython-hangar
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'New interior: tython-hangar (vanilla Southern Island had only the ferry dock).']

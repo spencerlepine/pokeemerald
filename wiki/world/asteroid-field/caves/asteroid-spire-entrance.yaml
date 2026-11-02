@@ -3,8 +3,8 @@ name: ASTEROID SPIRE ENTRANCE
 planet: ASTEROID FIELD
 kind: dungeon
 replaces: SkyPillar_Entrance
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Docking hollow inside the asteroid: ships berth here and a tunnel climbs to the spire.'
 grid: |
   ##################
   ##################
@@ -31,9 +31,10 @@ people: []
 signs: []
 warps:
 - name: Door
-  at: [6, 16]
-  to: route-131
-- name: Door
   at: [14, 4]
   to: asteroid-spire-outside
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+- name: Ship berth
+  at: [6, 16]
+  to: asteroid-spire-hangar
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Planet border cut: door at [6, 16] to route-131; reached by ship instead.', 'Vanilla''s door to
+    Route 131 becomes the ship berth (new interior: asteroid-spire-hangar).']

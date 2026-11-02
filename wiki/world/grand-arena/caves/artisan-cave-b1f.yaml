@@ -3,8 +3,8 @@ name: ARTISAN CAVE B1F
 planet: GRAND ARENA
 kind: dungeon
 replaces: ArtisanCave_B1F
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Artisan Cave: a hidden cave under the Grand Arena cliffs, full of SMEARGLE''s Star Wars twin painting the walls.'
 grid: |
   .....#########################################
   .....#########################################
@@ -75,4 +75,4 @@ warps:
 - name: Door
   at: [38, 5]
   to: artisan-cave-1f
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

@@ -1,10 +1,10 @@
 id: wellspring-entrance
 name: WELLSPRING ENTRANCE
 planet: MORTIS
-kind: interior
+kind: landmark
 replaces: FarawayIsland_Entrance
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'The Wellspring: a jungle island on Mortis where the PRIMORDIAL hides in the long grass.'
 grid: |
   ~#####TTTTTTTTTTTTTTTTTTTTTTT####~
   ~#####TTT...TT......TTTTTTTTT####~
@@ -54,14 +54,18 @@ grid: |
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 exits: []
 buildings: []
-props: []
+props:
+- name: Wellspring pool
+  art: art:grand-arena:wellspring-pool
+  at: [11, 32]
+  size: [2, 2]
 people:
 - name: Sailor
   at: [13, 39]
   role: npc
-- name: '0x0'
+- name: Event object
   at: [13, 41]
-  role: npc
+  role: object
 signs:
 - name: Sign
   at: [3, 32]
@@ -72,4 +76,4 @@ warps:
 - name: Door
   at: [23, 7]
   to: wellspring-interior
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Was filed as an interior; walked outdoors, so it is a landmark now.']

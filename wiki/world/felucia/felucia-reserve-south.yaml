@@ -3,8 +3,8 @@ name: FELUCIA RESERVE
 planet: FELUCIA
 kind: route
 replaces: SafariZone_South
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Felucia Reserve, south: the gate where shuttles from Endor land, fungus groves and the first long grass.'
 pos: [178, 443]
 grid: |
   TTTTTTTT#TTTTTTTTTTTTTTTTTTTT..TTTTTT#TT
@@ -58,7 +58,15 @@ exits:
   cells: [16, 17]
   to: felucia-reserve-southeast
 buildings: []
-props: []
+props:
+- name: Giant fungus
+  art: art:felucia:giant-fungus
+  at: [20, 18]
+  size: [2, 2]
+- name: Spore-pod plants
+  art: art:felucia:spore-pod-plants
+  at: [9, 35]
+  size: [1, 1]
 people:
 - name: Exit Attendant
   at: [32, 34]
@@ -78,9 +86,13 @@ people:
 - name: Construction Worker2
   at: [36, 17]
   role: npc
+- name: Reserve ranger
+  at: [29, 29]
+  role: story
 signs: []
 warps:
-- name: Door
+- name: Reserve gate and shuttle (ships)
   at: [32, 33]
-  to: route-121-safari-zone-entrance
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+  to: felucia-hangar
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Planet border cut: door at [32, 33] to route-121-safari-zone-entrance; reached by ship instead.',
+  'Reserve rules as vanilla Safari Zone: limited steps, bait and rocks become spore pods and pebbles.']

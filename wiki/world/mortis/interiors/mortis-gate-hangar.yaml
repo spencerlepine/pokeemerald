@@ -3,8 +3,8 @@ name: MORTIS GATE HANGAR
 planet: MORTIS
 kind: interior
 replaces: NavelRock_Harbor
-status: TODO
-story: ''
+status: BLOCKOUT
+story: Mortis landing (vanilla Navel Rock harbor).
 grid: |
   #################
   #################
@@ -24,14 +24,14 @@ buildings: []
 props: []
 people:
 - name: Sailor
-  at: [8, 5]
+  at: [7, 4]
   role: npc
-- name: '0x0'
+- name: Event object
   at: [8, 7]
-  role: npc
+  role: object
 signs: []
 warps:
 - name: Door
   at: [8, 2]
   to: mortis-gate-exterior
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

@@ -1,41 +1,42 @@
 area,planet,kind,replaces,layout_status,piece_kind,piece,size,art,art_known,art_status
-asteroid-spire-outside,ASTEROID FIELD,route,SkyPillar_Outside,TODO,area,ASTEROID SPIRE,28x23,,,
-asteroid-spire-outside,ASTEROID FIELD,route,SkyPillar_Outside,TODO,person,Wallace,1x1,,,PLACEHOLDER
-asteroid-spire-outside,ASTEROID FIELD,route,SkyPillar_Outside,TODO,warp,Door,1x1,,,PLACEHOLDER
-asteroid-spire-outside,ASTEROID FIELD,route,SkyPillar_Outside,TODO,warp,Door,1x1,,,PLACEHOLDER
-asteroid-spire-top,ASTEROID FIELD,route,SkyPillar_Top,TODO,area,ASTEROID SPIRE,27x24,,,
-asteroid-spire-top,ASTEROID FIELD,route,SkyPillar_Top,TODO,person,0x0,1x1,,,PLACEHOLDER
-asteroid-spire-top,ASTEROID FIELD,route,SkyPillar_Top,TODO,person,Rayquaza,1x1,,,PLACEHOLDER
-asteroid-spire-top,ASTEROID FIELD,route,SkyPillar_Top,TODO,warp,Door,1x1,,,PLACEHOLDER
-asteroid-spire-1f,ASTEROID FIELD,dungeon,SkyPillar_1F,TODO,area,ASTEROID SPIRE 1F,14x14,,,
-asteroid-spire-1f,ASTEROID FIELD,dungeon,SkyPillar_1F,TODO,warp,Door,1x1,,,PLACEHOLDER
-asteroid-spire-1f,ASTEROID FIELD,dungeon,SkyPillar_1F,TODO,warp,Door,1x1,,,PLACEHOLDER
-asteroid-spire-1f,ASTEROID FIELD,dungeon,SkyPillar_1F,TODO,warp,Door,1x1,,,PLACEHOLDER
-asteroid-spire-2f,ASTEROID FIELD,dungeon,SkyPillar_2F,TODO,area,ASTEROID SPIRE 2F,14x14,,,
-asteroid-spire-2f,ASTEROID FIELD,dungeon,SkyPillar_2F,TODO,warp,Door,1x1,,,PLACEHOLDER
-asteroid-spire-2f,ASTEROID FIELD,dungeon,SkyPillar_2F,TODO,warp,Door,1x1,,,PLACEHOLDER
-asteroid-spire-3f,ASTEROID FIELD,dungeon,SkyPillar_3F,TODO,area,ASTEROID SPIRE 3F,14x14,,,
-asteroid-spire-3f,ASTEROID FIELD,dungeon,SkyPillar_3F,TODO,warp,Door,1x1,,,PLACEHOLDER
-asteroid-spire-3f,ASTEROID FIELD,dungeon,SkyPillar_3F,TODO,warp,Door,1x1,,,PLACEHOLDER
-asteroid-spire-3f,ASTEROID FIELD,dungeon,SkyPillar_3F,TODO,warp,Door,1x1,,,PLACEHOLDER
-asteroid-spire-4f,ASTEROID FIELD,dungeon,SkyPillar_4F,TODO,area,ASTEROID SPIRE 4F,14x14,,,
-asteroid-spire-4f,ASTEROID FIELD,dungeon,SkyPillar_4F,TODO,warp,Door,1x1,,,PLACEHOLDER
-asteroid-spire-4f,ASTEROID FIELD,dungeon,SkyPillar_4F,TODO,warp,Door,1x1,,,PLACEHOLDER
-asteroid-spire-4f,ASTEROID FIELD,dungeon,SkyPillar_4F,TODO,warp,Door,1x1,,,PLACEHOLDER
-asteroid-spire-5f,ASTEROID FIELD,dungeon,SkyPillar_5F,TODO,area,ASTEROID SPIRE 5F,14x14,,,
-asteroid-spire-5f,ASTEROID FIELD,dungeon,SkyPillar_5F,TODO,warp,Door,1x1,,,PLACEHOLDER
-asteroid-spire-5f,ASTEROID FIELD,dungeon,SkyPillar_5F,TODO,warp,Door,1x1,,,PLACEHOLDER
-asteroid-spire-entrance,ASTEROID FIELD,dungeon,SkyPillar_Entrance,TODO,area,ASTEROID SPIRE ENTRANCE,18x18,,,
-asteroid-spire-entrance,ASTEROID FIELD,dungeon,SkyPillar_Entrance,TODO,warp,Door,1x1,,,PLACEHOLDER
-asteroid-spire-entrance,ASTEROID FIELD,dungeon,SkyPillar_Entrance,TODO,warp,Door,1x1,,,PLACEHOLDER
-atollon-exterior,ATOLLON,interior,BirthIsland_Exterior,TODO,area,ATOLLON EXTERIOR,30x30,,,
-atollon-exterior,ATOLLON,interior,BirthIsland_Exterior,TODO,person,Triangle,1x1,,,PLACEHOLDER
-atollon-exterior,ATOLLON,interior,BirthIsland_Exterior,TODO,person,0x0,1x1,,,PLACEHOLDER
-atollon-exterior,ATOLLON,interior,BirthIsland_Exterior,TODO,warp,Door,1x1,,,PLACEHOLDER
-atollon-hangar,ATOLLON,interior,BirthIsland_Harbor,TODO,area,ATOLLON HANGAR,17x13,,,
-atollon-hangar,ATOLLON,interior,BirthIsland_Harbor,TODO,person,Sailor,1x1,,,PLACEHOLDER
-atollon-hangar,ATOLLON,interior,BirthIsland_Harbor,TODO,person,0x0,1x1,,,PLACEHOLDER
-atollon-hangar,ATOLLON,interior,BirthIsland_Harbor,TODO,warp,Door,1x1,,,PLACEHOLDER
+asteroid-spire-outside,ASTEROID FIELD,route,SkyPillar_Outside,BLOCKOUT,area,ASTEROID SPIRE,28x23,,,
+asteroid-spire-outside,ASTEROID FIELD,route,SkyPillar_Outside,BLOCKOUT,prop,Asteroid spire,2x2,art:grand-arena:asteroid-spire,yes,TODO
+asteroid-spire-outside,ASTEROID FIELD,route,SkyPillar_Outside,BLOCKOUT,person,Wallace,1x1,,,PLACEHOLDER
+asteroid-spire-outside,ASTEROID FIELD,route,SkyPillar_Outside,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+asteroid-spire-outside,ASTEROID FIELD,route,SkyPillar_Outside,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+asteroid-spire-top,ASTEROID FIELD,route,SkyPillar_Top,BLOCKOUT,area,ASTEROID SPIRE,27x24,,,
+asteroid-spire-top,ASTEROID FIELD,route,SkyPillar_Top,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+asteroid-spire-top,ASTEROID FIELD,route,SkyPillar_Top,BLOCKOUT,person,Rayquaza,1x1,,,PLACEHOLDER
+asteroid-spire-top,ASTEROID FIELD,route,SkyPillar_Top,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+asteroid-spire-1f,ASTEROID FIELD,dungeon,SkyPillar_1F,BLOCKOUT,area,ASTEROID SPIRE 1F,14x14,,,
+asteroid-spire-1f,ASTEROID FIELD,dungeon,SkyPillar_1F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+asteroid-spire-1f,ASTEROID FIELD,dungeon,SkyPillar_1F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+asteroid-spire-1f,ASTEROID FIELD,dungeon,SkyPillar_1F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+asteroid-spire-2f,ASTEROID FIELD,dungeon,SkyPillar_2F,BLOCKOUT,area,ASTEROID SPIRE 2F,14x14,,,
+asteroid-spire-2f,ASTEROID FIELD,dungeon,SkyPillar_2F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+asteroid-spire-2f,ASTEROID FIELD,dungeon,SkyPillar_2F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+asteroid-spire-3f,ASTEROID FIELD,dungeon,SkyPillar_3F,BLOCKOUT,area,ASTEROID SPIRE 3F,14x14,,,
+asteroid-spire-3f,ASTEROID FIELD,dungeon,SkyPillar_3F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+asteroid-spire-3f,ASTEROID FIELD,dungeon,SkyPillar_3F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+asteroid-spire-3f,ASTEROID FIELD,dungeon,SkyPillar_3F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+asteroid-spire-4f,ASTEROID FIELD,dungeon,SkyPillar_4F,BLOCKOUT,area,ASTEROID SPIRE 4F,14x14,,,
+asteroid-spire-4f,ASTEROID FIELD,dungeon,SkyPillar_4F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+asteroid-spire-4f,ASTEROID FIELD,dungeon,SkyPillar_4F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+asteroid-spire-4f,ASTEROID FIELD,dungeon,SkyPillar_4F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+asteroid-spire-5f,ASTEROID FIELD,dungeon,SkyPillar_5F,BLOCKOUT,area,ASTEROID SPIRE 5F,14x14,,,
+asteroid-spire-5f,ASTEROID FIELD,dungeon,SkyPillar_5F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+asteroid-spire-5f,ASTEROID FIELD,dungeon,SkyPillar_5F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+asteroid-spire-entrance,ASTEROID FIELD,dungeon,SkyPillar_Entrance,BLOCKOUT,area,ASTEROID SPIRE ENTRANCE,18x18,,,
+asteroid-spire-entrance,ASTEROID FIELD,dungeon,SkyPillar_Entrance,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+asteroid-spire-entrance,ASTEROID FIELD,dungeon,SkyPillar_Entrance,BLOCKOUT,warp,Ship berth,1x1,,,PLACEHOLDER
+atollon-exterior,ATOLLON,landmark,BirthIsland_Exterior,BLOCKOUT,area,ATOLLON EXTERIOR,30x30,,,
+atollon-exterior,ATOLLON,landmark,BirthIsland_Exterior,BLOCKOUT,person,Triangle,1x1,,,PLACEHOLDER
+atollon-exterior,ATOLLON,landmark,BirthIsland_Exterior,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+atollon-exterior,ATOLLON,landmark,BirthIsland_Exterior,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+atollon-hangar,ATOLLON,interior,BirthIsland_Harbor,BLOCKOUT,area,ATOLLON HANGAR,17x13,,,
+atollon-hangar,ATOLLON,interior,BirthIsland_Harbor,BLOCKOUT,person,Sailor,1x1,,,PLACEHOLDER
+atollon-hangar,ATOLLON,interior,BirthIsland_Harbor,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+atollon-hangar,ATOLLON,interior,BirthIsland_Harbor,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
 cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,area,CLOUD CITY,70x46,,,
 cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,building,Galleria (department store),8x6,art:bespin:department-store,yes,TODO
 cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,building,Museum,5x6,art:bespin:cloud-city-tower,yes,TODO
@@ -1085,154 +1086,177 @@ route-123,ENDOR,route,Route123,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
 route-123,ENDOR,route,Route123,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
 route-123,ENDOR,route,Route123,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
 route-123,ENDOR,route,Route123,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
-felucia-reserve-north,FELUCIA,route,SafariZone_North,TODO,area,FELUCIA RESERVE,40x40,,,
-felucia-reserve-north,FELUCIA,route,SafariZone_North,TODO,person,Fisherman,1x1,,,PLACEHOLDER
-felucia-reserve-north,FELUCIA,route,SafariZone_North,TODO,person,Man,1x1,,,PLACEHOLDER
-felucia-reserve-north,FELUCIA,route,SafariZone_North,TODO,person,Event Script_Rock Smash,1x1,,,PLACEHOLDER
-felucia-reserve-north,FELUCIA,route,SafariZone_North,TODO,person,Event Script_Rock Smash,1x1,,,PLACEHOLDER
-felucia-reserve-north,FELUCIA,route,SafariZone_North,TODO,person,Event Script_Rock Smash,1x1,,,PLACEHOLDER
-felucia-reserve-north,FELUCIA,route,SafariZone_North,TODO,person,Event Script_Rock Smash,1x1,,,PLACEHOLDER
-felucia-reserve-north,FELUCIA,route,SafariZone_North,TODO,person,Event Script_Rock Smash,1x1,,,PLACEHOLDER
-felucia-reserve-north,FELUCIA,route,SafariZone_North,TODO,person,Event Script_Rock Smash,1x1,,,PLACEHOLDER
-felucia-reserve-north,FELUCIA,route,SafariZone_North,TODO,person,Item,1x1,,,PLACEHOLDER
-felucia-reserve-northeast,FELUCIA,route,SafariZone_Northeast,TODO,area,FELUCIA RESERVE,40x40,,,
-felucia-reserve-northeast,FELUCIA,route,SafariZone_Northeast,TODO,person,Boy,1x1,,,PLACEHOLDER
-felucia-reserve-northeast,FELUCIA,route,SafariZone_Northeast,TODO,person,Girl,1x1,,,PLACEHOLDER
-felucia-reserve-northeast,FELUCIA,route,SafariZone_Northeast,TODO,person,Event Script_Rock Smash,1x1,,,PLACEHOLDER
-felucia-reserve-northeast,FELUCIA,route,SafariZone_Northeast,TODO,person,Woman,1x1,,,PLACEHOLDER
-felucia-reserve-northeast,FELUCIA,route,SafariZone_Northeast,TODO,person,Event Script_Rock Smash,1x1,,,PLACEHOLDER
-felucia-reserve-northeast,FELUCIA,route,SafariZone_Northeast,TODO,person,Event Script_Rock Smash,1x1,,,PLACEHOLDER
-felucia-reserve-northeast,FELUCIA,route,SafariZone_Northeast,TODO,person,Event Script_Rock Smash,1x1,,,PLACEHOLDER
-felucia-reserve-northeast,FELUCIA,route,SafariZone_Northeast,TODO,person,Event Script_Rock Smash,1x1,,,PLACEHOLDER
-felucia-reserve-northeast,FELUCIA,route,SafariZone_Northeast,TODO,person,Item,1x1,,,PLACEHOLDER
-felucia-reserve-northwest,FELUCIA,route,SafariZone_Northwest,TODO,area,FELUCIA RESERVE,40x40,,,
-felucia-reserve-northwest,FELUCIA,route,SafariZone_Northwest,TODO,person,Man,1x1,,,PLACEHOLDER
-felucia-reserve-northwest,FELUCIA,route,SafariZone_Northwest,TODO,person,Item,1x1,,,PLACEHOLDER
-felucia-reserve-south,FELUCIA,route,SafariZone_South,TODO,area,FELUCIA RESERVE,40x40,,,
-felucia-reserve-south,FELUCIA,route,SafariZone_South,TODO,person,Exit Attendant,1x1,,,PLACEHOLDER
-felucia-reserve-south,FELUCIA,route,SafariZone_South,TODO,person,Boy,1x1,,,PLACEHOLDER
-felucia-reserve-south,FELUCIA,route,SafariZone_South,TODO,person,Man,1x1,,,PLACEHOLDER
-felucia-reserve-south,FELUCIA,route,SafariZone_South,TODO,person,Youngster,1x1,,,PLACEHOLDER
-felucia-reserve-south,FELUCIA,route,SafariZone_South,TODO,person,Construction Worker1,1x1,,,PLACEHOLDER
-felucia-reserve-south,FELUCIA,route,SafariZone_South,TODO,person,Construction Worker2,1x1,,,PLACEHOLDER
-felucia-reserve-south,FELUCIA,route,SafariZone_South,TODO,warp,Door,1x1,,,PLACEHOLDER
-felucia-reserve-southeast,FELUCIA,route,SafariZone_Southeast,TODO,area,FELUCIA RESERVE,40x40,,,
-felucia-reserve-southeast,FELUCIA,route,SafariZone_Southeast,TODO,person,Rich Boy,1x1,,,PLACEHOLDER
-felucia-reserve-southeast,FELUCIA,route,SafariZone_Southeast,TODO,person,Fat Man,1x1,,,PLACEHOLDER
-felucia-reserve-southeast,FELUCIA,route,SafariZone_Southeast,TODO,person,Little Girl,1x1,,,PLACEHOLDER
-felucia-reserve-southeast,FELUCIA,route,SafariZone_Southeast,TODO,person,Expansion Zone Attendant,1x1,,,PLACEHOLDER
-felucia-reserve-southeast,FELUCIA,route,SafariZone_Southeast,TODO,person,Item,1x1,,,PLACEHOLDER
-felucia-reserve-southwest,FELUCIA,route,SafariZone_Southwest,TODO,area,FELUCIA RESERVE,40x40,,,
-felucia-reserve-southwest,FELUCIA,route,SafariZone_Southwest,TODO,person,Woman,1x1,,,PLACEHOLDER
-felucia-reserve-southwest,FELUCIA,route,SafariZone_Southwest,TODO,person,Item,1x1,,,PLACEHOLDER
-felucia-reserve-southwest,FELUCIA,route,SafariZone_Southwest,TODO,sign,Sign,1x1,,,PLACEHOLDER
-felucia-reserve-southwest,FELUCIA,route,SafariZone_Southwest,TODO,warp,Door,1x1,,,PLACEHOLDER
+felucia-reserve-north,FELUCIA,route,SafariZone_North,BLOCKOUT,area,FELUCIA RESERVE,40x40,,,
+felucia-reserve-north,FELUCIA,route,SafariZone_North,BLOCKOUT,prop,Giant fungus,2x2,art:felucia:giant-fungus,yes,TODO
+felucia-reserve-north,FELUCIA,route,SafariZone_North,BLOCKOUT,prop,Spore-pod plants,1x1,art:felucia:spore-pod-plants,yes,TODO
+felucia-reserve-north,FELUCIA,route,SafariZone_North,BLOCKOUT,person,Fisherman,1x1,,,PLACEHOLDER
+felucia-reserve-north,FELUCIA,route,SafariZone_North,BLOCKOUT,person,Man,1x1,,,PLACEHOLDER
+felucia-reserve-north,FELUCIA,route,SafariZone_North,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+felucia-reserve-north,FELUCIA,route,SafariZone_North,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+felucia-reserve-north,FELUCIA,route,SafariZone_North,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+felucia-reserve-north,FELUCIA,route,SafariZone_North,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+felucia-reserve-north,FELUCIA,route,SafariZone_North,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+felucia-reserve-north,FELUCIA,route,SafariZone_North,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+felucia-reserve-north,FELUCIA,route,SafariZone_North,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+felucia-reserve-northeast,FELUCIA,route,SafariZone_Northeast,BLOCKOUT,area,FELUCIA RESERVE,40x40,,,
+felucia-reserve-northeast,FELUCIA,route,SafariZone_Northeast,BLOCKOUT,prop,Giant fungus,2x2,art:felucia:giant-fungus,yes,TODO
+felucia-reserve-northeast,FELUCIA,route,SafariZone_Northeast,BLOCKOUT,prop,Spore-pod plants,1x1,art:felucia:spore-pod-plants,yes,TODO
+felucia-reserve-northeast,FELUCIA,route,SafariZone_Northeast,BLOCKOUT,person,Boy,1x1,,,PLACEHOLDER
+felucia-reserve-northeast,FELUCIA,route,SafariZone_Northeast,BLOCKOUT,person,Girl,1x1,,,PLACEHOLDER
+felucia-reserve-northeast,FELUCIA,route,SafariZone_Northeast,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+felucia-reserve-northeast,FELUCIA,route,SafariZone_Northeast,BLOCKOUT,person,Woman,1x1,,,PLACEHOLDER
+felucia-reserve-northeast,FELUCIA,route,SafariZone_Northeast,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+felucia-reserve-northeast,FELUCIA,route,SafariZone_Northeast,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+felucia-reserve-northeast,FELUCIA,route,SafariZone_Northeast,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+felucia-reserve-northeast,FELUCIA,route,SafariZone_Northeast,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+felucia-reserve-northeast,FELUCIA,route,SafariZone_Northeast,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+felucia-reserve-northwest,FELUCIA,route,SafariZone_Northwest,BLOCKOUT,area,FELUCIA RESERVE,40x40,,,
+felucia-reserve-northwest,FELUCIA,route,SafariZone_Northwest,BLOCKOUT,prop,Giant fungus,2x2,art:felucia:giant-fungus,yes,TODO
+felucia-reserve-northwest,FELUCIA,route,SafariZone_Northwest,BLOCKOUT,prop,Spore-pod plants,1x1,art:felucia:spore-pod-plants,yes,TODO
+felucia-reserve-northwest,FELUCIA,route,SafariZone_Northwest,BLOCKOUT,person,Man,1x1,,,PLACEHOLDER
+felucia-reserve-northwest,FELUCIA,route,SafariZone_Northwest,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+felucia-reserve-south,FELUCIA,route,SafariZone_South,BLOCKOUT,area,FELUCIA RESERVE,40x40,,,
+felucia-reserve-south,FELUCIA,route,SafariZone_South,BLOCKOUT,prop,Giant fungus,2x2,art:felucia:giant-fungus,yes,TODO
+felucia-reserve-south,FELUCIA,route,SafariZone_South,BLOCKOUT,prop,Spore-pod plants,1x1,art:felucia:spore-pod-plants,yes,TODO
+felucia-reserve-south,FELUCIA,route,SafariZone_South,BLOCKOUT,person,Exit Attendant,1x1,,,PLACEHOLDER
+felucia-reserve-south,FELUCIA,route,SafariZone_South,BLOCKOUT,person,Boy,1x1,,,PLACEHOLDER
+felucia-reserve-south,FELUCIA,route,SafariZone_South,BLOCKOUT,person,Man,1x1,,,PLACEHOLDER
+felucia-reserve-south,FELUCIA,route,SafariZone_South,BLOCKOUT,person,Youngster,1x1,,,PLACEHOLDER
+felucia-reserve-south,FELUCIA,route,SafariZone_South,BLOCKOUT,person,Construction Worker1,1x1,,,PLACEHOLDER
+felucia-reserve-south,FELUCIA,route,SafariZone_South,BLOCKOUT,person,Construction Worker2,1x1,,,PLACEHOLDER
+felucia-reserve-south,FELUCIA,route,SafariZone_South,BLOCKOUT,person,Reserve ranger,1x1,,,PLACEHOLDER
+felucia-reserve-south,FELUCIA,route,SafariZone_South,BLOCKOUT,warp,Reserve gate and shuttle (ships),1x1,,,PLACEHOLDER
+felucia-reserve-southeast,FELUCIA,route,SafariZone_Southeast,BLOCKOUT,area,FELUCIA RESERVE,40x40,,,
+felucia-reserve-southeast,FELUCIA,route,SafariZone_Southeast,BLOCKOUT,prop,Giant fungus,2x2,art:felucia:giant-fungus,yes,TODO
+felucia-reserve-southeast,FELUCIA,route,SafariZone_Southeast,BLOCKOUT,prop,Spore-pod plants,1x1,art:felucia:spore-pod-plants,yes,TODO
+felucia-reserve-southeast,FELUCIA,route,SafariZone_Southeast,BLOCKOUT,person,Rich Boy,1x1,,,PLACEHOLDER
+felucia-reserve-southeast,FELUCIA,route,SafariZone_Southeast,BLOCKOUT,person,Fat Man,1x1,,,PLACEHOLDER
+felucia-reserve-southeast,FELUCIA,route,SafariZone_Southeast,BLOCKOUT,person,Little Girl,1x1,,,PLACEHOLDER
+felucia-reserve-southeast,FELUCIA,route,SafariZone_Southeast,BLOCKOUT,person,Expansion Zone Attendant,1x1,,,PLACEHOLDER
+felucia-reserve-southeast,FELUCIA,route,SafariZone_Southeast,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+felucia-reserve-southwest,FELUCIA,route,SafariZone_Southwest,BLOCKOUT,area,FELUCIA RESERVE,40x40,,,
+felucia-reserve-southwest,FELUCIA,route,SafariZone_Southwest,BLOCKOUT,prop,Giant fungus,2x2,art:felucia:giant-fungus,yes,TODO
+felucia-reserve-southwest,FELUCIA,route,SafariZone_Southwest,BLOCKOUT,prop,Spore-pod plants,1x1,art:felucia:spore-pod-plants,yes,TODO
+felucia-reserve-southwest,FELUCIA,route,SafariZone_Southwest,BLOCKOUT,person,Woman,1x1,,,PLACEHOLDER
+felucia-reserve-southwest,FELUCIA,route,SafariZone_Southwest,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+felucia-reserve-southwest,FELUCIA,route,SafariZone_Southwest,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+felucia-reserve-southwest,FELUCIA,route,SafariZone_Southwest,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
 felucia-reserve-rest-house,FELUCIA,interior,SafariZone_RestHouse,TODO,area,FELUCIA RESERVE REST HOUSE,10x9,,,
 felucia-reserve-rest-house,FELUCIA,interior,SafariZone_RestHouse,TODO,person,Youngster,1x1,,,PLACEHOLDER
 felucia-reserve-rest-house,FELUCIA,interior,SafariZone_RestHouse,TODO,person,Psychic M,1x1,,,PLACEHOLDER
 felucia-reserve-rest-house,FELUCIA,interior,SafariZone_RestHouse,TODO,person,Fat Man,1x1,,,PLACEHOLDER
 felucia-reserve-rest-house,FELUCIA,interior,SafariZone_RestHouse,TODO,warp,Door,1x1,,,PLACEHOLDER
 felucia-reserve-rest-house,FELUCIA,interior,SafariZone_RestHouse,TODO,warp,Door,1x1,,,PLACEHOLDER
-altering-cave,GRAND ARENA,dungeon,AlteringCave,TODO,area,ALTERING CAVE,32x24,,,
-altering-cave,GRAND ARENA,dungeon,AlteringCave,TODO,warp,Door,1x1,,,PLACEHOLDER
-artisan-cave-1f,GRAND ARENA,dungeon,ArtisanCave_1F,TODO,area,ARTISAN CAVE 1F,21x22,,,
-artisan-cave-1f,GRAND ARENA,dungeon,ArtisanCave_1F,TODO,person,Item,1x1,,,PLACEHOLDER
-artisan-cave-1f,GRAND ARENA,dungeon,ArtisanCave_1F,TODO,warp,Door,1x1,,,PLACEHOLDER
-artisan-cave-1f,GRAND ARENA,dungeon,ArtisanCave_1F,TODO,warp,Door,1x1,,,PLACEHOLDER
-artisan-cave-b1f,GRAND ARENA,dungeon,ArtisanCave_B1F,TODO,area,ARTISAN CAVE B1F,46x54,,,
-artisan-cave-b1f,GRAND ARENA,dungeon,ArtisanCave_B1F,TODO,person,Item,1x1,,,PLACEHOLDER
-artisan-cave-b1f,GRAND ARENA,dungeon,ArtisanCave_B1F,TODO,warp,Door,1x1,,,PLACEHOLDER
-artisan-cave-b1f,GRAND ARENA,dungeon,ArtisanCave_B1F,TODO,warp,Door,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,area,GRAND ARENA,72x72,,,
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,person,Ninja Boy,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,person,Man1,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,person,Hiker,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,person,Hex Maniac,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,person,Black Belt1,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,person,Cook,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,person,Expert F,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,person,Triathlete M,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,person,Rich Boy,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,person,Triathlete F,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,person,Twin,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,person,Man2,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,person,Zigzagoon,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,person,Sudowoodo,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,person,Maniac1,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,person,Girl,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,person,Psychic M,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,person,Man3,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,person,Woman1,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,person,Woman2,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,person,Black Belt2,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,person,Maniac2,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,person,Woman3,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,person,Old Woman,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,person,Gentleman,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,person,Camper,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,sign,Sign,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,sign,Sign,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,sign,Sign,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,sign,Sign,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,sign,Sign,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,sign,Sign,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,sign,Sign,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,sign,Sign,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,warp,Door,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,warp,Door,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,warp,Door,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,warp,Door,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,warp,Door,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,warp,Door,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,warp,Door,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,warp,Door,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,warp,Door,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,warp,Door,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,warp,Door,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,warp,Door,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,warp,Door,1x1,,,PLACEHOLDER
-grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,TODO,warp,Door,1x1,,,PLACEHOLDER
-grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,TODO,area,GRAND ARENA,56x72,,,
-grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,TODO,person,Boy1,1x1,,,PLACEHOLDER
-grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,TODO,person,0x0,1x1,,,PLACEHOLDER
-grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,TODO,person,Ferry Attendant,1x1,,,PLACEHOLDER
-grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,TODO,person,Expert M,1x1,,,PLACEHOLDER
-grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,TODO,person,Man1,1x1,,,PLACEHOLDER
-grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,TODO,person,Woman1,1x1,,,PLACEHOLDER
-grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,TODO,person,Fat Man1,1x1,,,PLACEHOLDER
-grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,TODO,person,Gentleman,1x1,,,PLACEHOLDER
-grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,TODO,person,Maniac1,1x1,,,PLACEHOLDER
-grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,TODO,person,Maniac2,1x1,,,PLACEHOLDER
-grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,TODO,person,Man2,1x1,,,PLACEHOLDER
-grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,TODO,person,Girl,1x1,,,PLACEHOLDER
-grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,TODO,person,Woman2,1x1,,,PLACEHOLDER
-grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,TODO,person,Camper,1x1,,,PLACEHOLDER
-grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,TODO,person,Lass,1x1,,,PLACEHOLDER
-grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,TODO,person,Man3,1x1,,,PLACEHOLDER
-grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,TODO,person,Fisherman1,1x1,,,PLACEHOLDER
-grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,TODO,person,Fisherman2,1x1,,,PLACEHOLDER
-grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,TODO,person,Fat Man2,1x1,,,PLACEHOLDER
-grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,TODO,person,Woman3,1x1,,,PLACEHOLDER
-grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,TODO,person,Boy2,1x1,,,PLACEHOLDER
-grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,TODO,person,Old Man,1x1,,,PLACEHOLDER
-grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,TODO,person,Man4,1x1,,,PLACEHOLDER
-grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,TODO,person,Pokefan F,1x1,,,PLACEHOLDER
-grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,TODO,sign,Sign,1x1,,,PLACEHOLDER
-grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,TODO,sign,Sign,1x1,,,PLACEHOLDER
-grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,TODO,sign,Sign,1x1,,,PLACEHOLDER
-grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,TODO,sign,Sign,1x1,,,PLACEHOLDER
-grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,TODO,sign,Sign,1x1,,,PLACEHOLDER
-grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,TODO,warp,Door,1x1,,,PLACEHOLDER
-grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,TODO,warp,Door,1x1,,,PLACEHOLDER
-grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,TODO,warp,Door,1x1,,,PLACEHOLDER
-grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,TODO,warp,Door,1x1,,,PLACEHOLDER
-grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,TODO,warp,Door,1x1,,,PLACEHOLDER
-grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,TODO,warp,Door,1x1,,,PLACEHOLDER
-grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,TODO,warp,Door,1x1,,,PLACEHOLDER
-grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,TODO,warp,Door,1x1,,,PLACEHOLDER
-grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,TODO,warp,Door,1x1,,,PLACEHOLDER
-grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,TODO,warp,Door,1x1,,,PLACEHOLDER
-grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,TODO,warp,Door,1x1,,,PLACEHOLDER
+artisan-cave-1f,GRAND ARENA,dungeon,ArtisanCave_1F,BLOCKOUT,area,ARTISAN CAVE 1F,21x22,,,
+artisan-cave-1f,GRAND ARENA,dungeon,ArtisanCave_1F,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+artisan-cave-1f,GRAND ARENA,dungeon,ArtisanCave_1F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+artisan-cave-1f,GRAND ARENA,dungeon,ArtisanCave_1F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+artisan-cave-b1f,GRAND ARENA,dungeon,ArtisanCave_B1F,BLOCKOUT,area,ARTISAN CAVE B1F,46x54,,,
+artisan-cave-b1f,GRAND ARENA,dungeon,ArtisanCave_B1F,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+artisan-cave-b1f,GRAND ARENA,dungeon,ArtisanCave_B1F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+artisan-cave-b1f,GRAND ARENA,dungeon,ArtisanCave_B1F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,area,GRAND ARENA,72x72,,,
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,building,Battle arena lobby,9x4,art:grand-arena:arena-facilities,yes,TODO
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,building,Battle palace lobby,11x6,art:grand-arena:arena-facilities,yes,TODO
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,building,Lounge 1,4x3,art:grand-arena:arena-facilities,yes,TODO
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,building,Lounge 5,6x3,art:grand-arena:arena-facilities,yes,TODO
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,building,Lounge 6,4x3,art:grand-arena:arena-facilities,yes,TODO
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,building,Lounge 3,3x3,art:grand-arena:arena-facilities,yes,TODO
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,building,Lounge 8,3x3,art:grand-arena:arena-facilities,yes,TODO
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,building,Lounge 9,9x3,art:grand-arena:arena-facilities,yes,TODO
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,building,Bacta center 1f,4x3,art:grand-arena:arena-facilities,yes,TODO
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,prop,Arena holo-sign,1x1,art:shared:holo-sign,yes,TODO
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,person,Ninja Boy,1x1,,,PLACEHOLDER
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,person,Man1,1x1,,,PLACEHOLDER
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,person,Hiker,1x1,,,PLACEHOLDER
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,person,Hex Maniac,1x1,,,PLACEHOLDER
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,person,Black Belt1,1x1,,,PLACEHOLDER
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,person,Cook,1x1,,,PLACEHOLDER
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,person,Expert F,1x1,,,PLACEHOLDER
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,person,Triathlete M,1x1,,,PLACEHOLDER
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,person,Rich Boy,1x1,,,PLACEHOLDER
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,person,Triathlete F,1x1,,,PLACEHOLDER
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,person,Twin,1x1,,,PLACEHOLDER
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,person,Man2,1x1,,,PLACEHOLDER
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,person,Zigzagoon,1x1,,,PLACEHOLDER
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,person,Sudowoodo,1x1,,,PLACEHOLDER
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,person,Maniac1,1x1,,,PLACEHOLDER
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,person,Girl,1x1,,,PLACEHOLDER
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,person,Psychic M,1x1,,,PLACEHOLDER
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,person,Man3,1x1,,,PLACEHOLDER
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,person,Woman1,1x1,,,PLACEHOLDER
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,person,Woman2,1x1,,,PLACEHOLDER
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,person,Black Belt2,1x1,,,PLACEHOLDER
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,person,Maniac2,1x1,,,PLACEHOLDER
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,person,Woman3,1x1,,,PLACEHOLDER
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,person,Old Woman,1x1,,,PLACEHOLDER
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,person,Gentleman,1x1,,,PLACEHOLDER
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,person,Camper,1x1,,,PLACEHOLDER
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,person,4-LOM (Arena),1x1,,,PLACEHOLDER
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,person,Zuckuss (Palace),1x1,,,PLACEHOLDER
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,person,Arena fan,1x1,,,PLACEHOLDER
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,person,Tourist,1x1,,,PLACEHOLDER
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,person,Ranking hall clerk,1x1,,,PLACEHOLDER
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+grand-arena-outside-east,GRAND ARENA,route,BattleFrontier_OutsideEast,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,area,GRAND ARENA,56x72,,,
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,building,Battle pike lobby,5x8,art:grand-arena:arena-facilities,yes,TODO
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,building,Lounge 2,7x3,art:grand-arena:arena-facilities,yes,TODO
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,building,Supply depot,5x3,art:grand-arena:arena-facilities,yes,TODO
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,building,Lounge 4,3x3,art:grand-arena:arena-facilities,yes,TODO
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,prop,Arena holo-sign,1x1,art:shared:holo-sign,yes,TODO
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,prop,Cargo crates,2x2,art:shared:cargo-crates,yes,TODO
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,person,Boy1,1x1,,,PLACEHOLDER
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,person,Ferry Attendant,1x1,,,PLACEHOLDER
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,person,Expert M,1x1,,,PLACEHOLDER
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,person,Man1,1x1,,,PLACEHOLDER
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,person,Woman1,1x1,,,PLACEHOLDER
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,person,Fat Man1,1x1,,,PLACEHOLDER
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,person,Gentleman,1x1,,,PLACEHOLDER
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,person,Maniac1,1x1,,,PLACEHOLDER
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,person,Maniac2,1x1,,,PLACEHOLDER
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,person,Man2,1x1,,,PLACEHOLDER
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,person,Girl,1x1,,,PLACEHOLDER
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,person,Woman2,1x1,,,PLACEHOLDER
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,person,Camper,1x1,,,PLACEHOLDER
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,person,Lass,1x1,,,PLACEHOLDER
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,person,Man3,1x1,,,PLACEHOLDER
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,person,Fisherman1,1x1,,,PLACEHOLDER
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,person,Fisherman2,1x1,,,PLACEHOLDER
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,person,Fat Man2,1x1,,,PLACEHOLDER
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,person,Woman3,1x1,,,PLACEHOLDER
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,person,Boy2,1x1,,,PLACEHOLDER
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,person,Old Man,1x1,,,PLACEHOLDER
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,person,Man4,1x1,,,PLACEHOLDER
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,person,Pokefan F,1x1,,,PLACEHOLDER
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,person,Gardulla the Hutt (Pike),1x1,,,PLACEHOLDER
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,person,Arena fan,1x1,,,PLACEHOLDER
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,person,Bounty hunter's droid,1x1,,,PLACEHOLDER
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,person,Gambler,1x1,,,PLACEHOLDER
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
 battle-pyramid-square-01,GRAND ARENA,interior,BattlePyramidSquare01,TODO,area,BATTLE PYRAMID SQUARE 01,8x8,,,
 battle-pyramid-square-01,GRAND ARENA,interior,BattlePyramidSquare01,TODO,person,Trainer BattlePyramid_TrainerBattle,1x1,,,PLACEHOLDER
 battle-pyramid-square-01,GRAND ARENA,interior,BattlePyramidSquare01,TODO,person,Trainer BattlePyramid_TrainerBattle,1x1,,,PLACEHOLDER
@@ -2490,84 +2514,85 @@ rwookrrorro,KASHYYYK,landmark,new,BLOCKOUT,person,Wookiee elder,1x1,,,PLACEHOLDE
 rwookrrorro,KASHYYYK,landmark,new,BLOCKOUT,person,Wookiee hunter,1x1,,,PLACEHOLDER
 rwookrrorro,KASHYYYK,landmark,new,BLOCKOUT,person,Wookiee hunter,1x1,,,PLACEHOLDER
 rwookrrorro,KASHYYYK,landmark,new,BLOCKOUT,person,Wookiee cub,1x1,,,PLACEHOLDER
-mortis-gate-b1f,MORTIS,dungeon,NavelRock_B1F,TODO,area,MORTIS GATE B1F,23x11,,,
-mortis-gate-b1f,MORTIS,dungeon,NavelRock_B1F,TODO,warp,Door,1x1,,,PLACEHOLDER
-mortis-gate-b1f,MORTIS,dungeon,NavelRock_B1F,TODO,warp,Door,1x1,,,PLACEHOLDER
-mortis-gate-bottom,MORTIS,dungeon,NavelRock_Bottom,TODO,area,MORTIS GATE BOTTOM,22x22,,,
-mortis-gate-bottom,MORTIS,dungeon,NavelRock_Bottom,TODO,person,Lugia,1x1,,,PLACEHOLDER
-mortis-gate-bottom,MORTIS,dungeon,NavelRock_Bottom,TODO,warp,Door,1x1,,,PLACEHOLDER
-mortis-gate-down-01,MORTIS,dungeon,NavelRock_Down01,TODO,area,MORTIS GATE DOWN 01,9x8,,,
-mortis-gate-down-01,MORTIS,dungeon,NavelRock_Down01,TODO,warp,Door,1x1,,,PLACEHOLDER
-mortis-gate-down-01,MORTIS,dungeon,NavelRock_Down01,TODO,warp,Door,1x1,,,PLACEHOLDER
-mortis-gate-down-02,MORTIS,dungeon,NavelRock_Down02,TODO,area,MORTIS GATE DOWN 02,9x8,,,
-mortis-gate-down-02,MORTIS,dungeon,NavelRock_Down02,TODO,warp,Door,1x1,,,PLACEHOLDER
-mortis-gate-down-02,MORTIS,dungeon,NavelRock_Down02,TODO,warp,Door,1x1,,,PLACEHOLDER
-mortis-gate-down-03,MORTIS,dungeon,NavelRock_Down03,TODO,area,MORTIS GATE DOWN 03,9x8,,,
-mortis-gate-down-03,MORTIS,dungeon,NavelRock_Down03,TODO,warp,Door,1x1,,,PLACEHOLDER
-mortis-gate-down-03,MORTIS,dungeon,NavelRock_Down03,TODO,warp,Door,1x1,,,PLACEHOLDER
-mortis-gate-down-04,MORTIS,dungeon,NavelRock_Down04,TODO,area,MORTIS GATE DOWN 04,9x8,,,
-mortis-gate-down-04,MORTIS,dungeon,NavelRock_Down04,TODO,warp,Door,1x1,,,PLACEHOLDER
-mortis-gate-down-04,MORTIS,dungeon,NavelRock_Down04,TODO,warp,Door,1x1,,,PLACEHOLDER
-mortis-gate-down-05,MORTIS,dungeon,NavelRock_Down05,TODO,area,MORTIS GATE DOWN 05,9x8,,,
-mortis-gate-down-05,MORTIS,dungeon,NavelRock_Down05,TODO,warp,Door,1x1,,,PLACEHOLDER
-mortis-gate-down-05,MORTIS,dungeon,NavelRock_Down05,TODO,warp,Door,1x1,,,PLACEHOLDER
-mortis-gate-down-06,MORTIS,dungeon,NavelRock_Down06,TODO,area,MORTIS GATE DOWN 06,9x8,,,
-mortis-gate-down-06,MORTIS,dungeon,NavelRock_Down06,TODO,warp,Door,1x1,,,PLACEHOLDER
-mortis-gate-down-06,MORTIS,dungeon,NavelRock_Down06,TODO,warp,Door,1x1,,,PLACEHOLDER
-mortis-gate-down-07,MORTIS,dungeon,NavelRock_Down07,TODO,area,MORTIS GATE DOWN 07,9x8,,,
-mortis-gate-down-07,MORTIS,dungeon,NavelRock_Down07,TODO,warp,Door,1x1,,,PLACEHOLDER
-mortis-gate-down-07,MORTIS,dungeon,NavelRock_Down07,TODO,warp,Door,1x1,,,PLACEHOLDER
-mortis-gate-down-08,MORTIS,dungeon,NavelRock_Down08,TODO,area,MORTIS GATE DOWN 08,9x8,,,
-mortis-gate-down-08,MORTIS,dungeon,NavelRock_Down08,TODO,warp,Door,1x1,,,PLACEHOLDER
-mortis-gate-down-08,MORTIS,dungeon,NavelRock_Down08,TODO,warp,Door,1x1,,,PLACEHOLDER
-mortis-gate-down-09,MORTIS,dungeon,NavelRock_Down09,TODO,area,MORTIS GATE DOWN 09,9x8,,,
-mortis-gate-down-09,MORTIS,dungeon,NavelRock_Down09,TODO,warp,Door,1x1,,,PLACEHOLDER
-mortis-gate-down-09,MORTIS,dungeon,NavelRock_Down09,TODO,warp,Door,1x1,,,PLACEHOLDER
-mortis-gate-down-10,MORTIS,dungeon,NavelRock_Down10,TODO,area,MORTIS GATE DOWN 10,9x8,,,
-mortis-gate-down-10,MORTIS,dungeon,NavelRock_Down10,TODO,warp,Door,1x1,,,PLACEHOLDER
-mortis-gate-down-10,MORTIS,dungeon,NavelRock_Down10,TODO,warp,Door,1x1,,,PLACEHOLDER
-mortis-gate-down-11,MORTIS,dungeon,NavelRock_Down11,TODO,area,MORTIS GATE DOWN 11,9x8,,,
-mortis-gate-down-11,MORTIS,dungeon,NavelRock_Down11,TODO,warp,Door,1x1,,,PLACEHOLDER
-mortis-gate-down-11,MORTIS,dungeon,NavelRock_Down11,TODO,warp,Door,1x1,,,PLACEHOLDER
-mortis-gate-entrance,MORTIS,dungeon,NavelRock_Entrance,TODO,area,MORTIS GATE ENTRANCE,21x32,,,
-mortis-gate-entrance,MORTIS,dungeon,NavelRock_Entrance,TODO,warp,Door,1x1,,,PLACEHOLDER
-mortis-gate-entrance,MORTIS,dungeon,NavelRock_Entrance,TODO,warp,Door,1x1,,,PLACEHOLDER
-mortis-gate-fork,MORTIS,dungeon,NavelRock_Fork,TODO,area,MORTIS GATE FORK,27x86,,,
-mortis-gate-fork,MORTIS,dungeon,NavelRock_Fork,TODO,warp,Door,1x1,,,PLACEHOLDER
-mortis-gate-fork,MORTIS,dungeon,NavelRock_Fork,TODO,warp,Door,1x1,,,PLACEHOLDER
-mortis-gate-fork,MORTIS,dungeon,NavelRock_Fork,TODO,warp,Door,1x1,,,PLACEHOLDER
-mortis-gate-top,MORTIS,dungeon,NavelRock_Top,TODO,area,MORTIS GATE TOP,25x28,,,
-mortis-gate-top,MORTIS,dungeon,NavelRock_Top,TODO,person,0x0,1x1,,,PLACEHOLDER
-mortis-gate-top,MORTIS,dungeon,NavelRock_Top,TODO,warp,Door,1x1,,,PLACEHOLDER
-mortis-gate-up-1,MORTIS,dungeon,NavelRock_Up1,TODO,area,MORTIS GATE UP 1,9x8,,,
-mortis-gate-up-1,MORTIS,dungeon,NavelRock_Up1,TODO,warp,Door,1x1,,,PLACEHOLDER
-mortis-gate-up-1,MORTIS,dungeon,NavelRock_Up1,TODO,warp,Door,1x1,,,PLACEHOLDER
-mortis-gate-up-2,MORTIS,dungeon,NavelRock_Up2,TODO,area,MORTIS GATE UP 2,9x8,,,
-mortis-gate-up-2,MORTIS,dungeon,NavelRock_Up2,TODO,warp,Door,1x1,,,PLACEHOLDER
-mortis-gate-up-2,MORTIS,dungeon,NavelRock_Up2,TODO,warp,Door,1x1,,,PLACEHOLDER
-mortis-gate-up-3,MORTIS,dungeon,NavelRock_Up3,TODO,area,MORTIS GATE UP 3,9x8,,,
-mortis-gate-up-3,MORTIS,dungeon,NavelRock_Up3,TODO,warp,Door,1x1,,,PLACEHOLDER
-mortis-gate-up-3,MORTIS,dungeon,NavelRock_Up3,TODO,warp,Door,1x1,,,PLACEHOLDER
-mortis-gate-up-4,MORTIS,dungeon,NavelRock_Up4,TODO,area,MORTIS GATE UP 4,9x8,,,
-mortis-gate-up-4,MORTIS,dungeon,NavelRock_Up4,TODO,warp,Door,1x1,,,PLACEHOLDER
-mortis-gate-up-4,MORTIS,dungeon,NavelRock_Up4,TODO,warp,Door,1x1,,,PLACEHOLDER
-mortis-gate-exterior,MORTIS,interior,NavelRock_Exterior,TODO,area,MORTIS GATE EXTERIOR,21x24,,,
-mortis-gate-exterior,MORTIS,interior,NavelRock_Exterior,TODO,warp,Door,1x1,,,PLACEHOLDER
-mortis-gate-exterior,MORTIS,interior,NavelRock_Exterior,TODO,warp,Door,1x1,,,PLACEHOLDER
-mortis-gate-hangar,MORTIS,interior,NavelRock_Harbor,TODO,area,MORTIS GATE HANGAR,17x13,,,
-mortis-gate-hangar,MORTIS,interior,NavelRock_Harbor,TODO,person,Sailor,1x1,,,PLACEHOLDER
-mortis-gate-hangar,MORTIS,interior,NavelRock_Harbor,TODO,person,0x0,1x1,,,PLACEHOLDER
-mortis-gate-hangar,MORTIS,interior,NavelRock_Harbor,TODO,warp,Door,1x1,,,PLACEHOLDER
-wellspring-entrance,MORTIS,interior,FarawayIsland_Entrance,TODO,area,WELLSPRING ENTRANCE,34x46,,,
-wellspring-entrance,MORTIS,interior,FarawayIsland_Entrance,TODO,person,Sailor,1x1,,,PLACEHOLDER
-wellspring-entrance,MORTIS,interior,FarawayIsland_Entrance,TODO,person,0x0,1x1,,,PLACEHOLDER
-wellspring-entrance,MORTIS,interior,FarawayIsland_Entrance,TODO,sign,Sign,1x1,,,PLACEHOLDER
-wellspring-entrance,MORTIS,interior,FarawayIsland_Entrance,TODO,warp,Door,1x1,,,PLACEHOLDER
-wellspring-entrance,MORTIS,interior,FarawayIsland_Entrance,TODO,warp,Door,1x1,,,PLACEHOLDER
-wellspring-interior,MORTIS,interior,FarawayIsland_Interior,TODO,area,WELLSPRING INTERIOR,29x26,,,
-wellspring-interior,MORTIS,interior,FarawayIsland_Interior,TODO,person,Mew,1x1,,,PLACEHOLDER
-wellspring-interior,MORTIS,interior,FarawayIsland_Interior,TODO,warp,Door,1x1,,,PLACEHOLDER
-wellspring-interior,MORTIS,interior,FarawayIsland_Interior,TODO,warp,Door,1x1,,,PLACEHOLDER
+mortis-gate-b1f,MORTIS,dungeon,NavelRock_B1F,BLOCKOUT,area,MORTIS GATE B1F,23x11,,,
+mortis-gate-b1f,MORTIS,dungeon,NavelRock_B1F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+mortis-gate-b1f,MORTIS,dungeon,NavelRock_B1F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+mortis-gate-bottom,MORTIS,dungeon,NavelRock_Bottom,BLOCKOUT,area,MORTIS GATE BOTTOM,22x22,,,
+mortis-gate-bottom,MORTIS,dungeon,NavelRock_Bottom,BLOCKOUT,person,Lugia,1x1,,,PLACEHOLDER
+mortis-gate-bottom,MORTIS,dungeon,NavelRock_Bottom,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+mortis-gate-down-01,MORTIS,dungeon,NavelRock_Down01,BLOCKOUT,area,MORTIS GATE DOWN 01,9x8,,,
+mortis-gate-down-01,MORTIS,dungeon,NavelRock_Down01,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+mortis-gate-down-01,MORTIS,dungeon,NavelRock_Down01,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+mortis-gate-down-02,MORTIS,dungeon,NavelRock_Down02,BLOCKOUT,area,MORTIS GATE DOWN 02,9x8,,,
+mortis-gate-down-02,MORTIS,dungeon,NavelRock_Down02,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+mortis-gate-down-02,MORTIS,dungeon,NavelRock_Down02,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+mortis-gate-down-03,MORTIS,dungeon,NavelRock_Down03,BLOCKOUT,area,MORTIS GATE DOWN 03,9x8,,,
+mortis-gate-down-03,MORTIS,dungeon,NavelRock_Down03,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+mortis-gate-down-03,MORTIS,dungeon,NavelRock_Down03,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+mortis-gate-down-04,MORTIS,dungeon,NavelRock_Down04,BLOCKOUT,area,MORTIS GATE DOWN 04,9x8,,,
+mortis-gate-down-04,MORTIS,dungeon,NavelRock_Down04,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+mortis-gate-down-04,MORTIS,dungeon,NavelRock_Down04,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+mortis-gate-down-05,MORTIS,dungeon,NavelRock_Down05,BLOCKOUT,area,MORTIS GATE DOWN 05,9x8,,,
+mortis-gate-down-05,MORTIS,dungeon,NavelRock_Down05,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+mortis-gate-down-05,MORTIS,dungeon,NavelRock_Down05,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+mortis-gate-down-06,MORTIS,dungeon,NavelRock_Down06,BLOCKOUT,area,MORTIS GATE DOWN 06,9x8,,,
+mortis-gate-down-06,MORTIS,dungeon,NavelRock_Down06,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+mortis-gate-down-06,MORTIS,dungeon,NavelRock_Down06,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+mortis-gate-down-07,MORTIS,dungeon,NavelRock_Down07,BLOCKOUT,area,MORTIS GATE DOWN 07,9x8,,,
+mortis-gate-down-07,MORTIS,dungeon,NavelRock_Down07,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+mortis-gate-down-07,MORTIS,dungeon,NavelRock_Down07,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+mortis-gate-down-08,MORTIS,dungeon,NavelRock_Down08,BLOCKOUT,area,MORTIS GATE DOWN 08,9x8,,,
+mortis-gate-down-08,MORTIS,dungeon,NavelRock_Down08,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+mortis-gate-down-08,MORTIS,dungeon,NavelRock_Down08,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+mortis-gate-down-09,MORTIS,dungeon,NavelRock_Down09,BLOCKOUT,area,MORTIS GATE DOWN 09,9x8,,,
+mortis-gate-down-09,MORTIS,dungeon,NavelRock_Down09,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+mortis-gate-down-09,MORTIS,dungeon,NavelRock_Down09,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+mortis-gate-down-10,MORTIS,dungeon,NavelRock_Down10,BLOCKOUT,area,MORTIS GATE DOWN 10,9x8,,,
+mortis-gate-down-10,MORTIS,dungeon,NavelRock_Down10,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+mortis-gate-down-10,MORTIS,dungeon,NavelRock_Down10,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+mortis-gate-down-11,MORTIS,dungeon,NavelRock_Down11,BLOCKOUT,area,MORTIS GATE DOWN 11,9x8,,,
+mortis-gate-down-11,MORTIS,dungeon,NavelRock_Down11,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+mortis-gate-down-11,MORTIS,dungeon,NavelRock_Down11,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+mortis-gate-entrance,MORTIS,dungeon,NavelRock_Entrance,BLOCKOUT,area,MORTIS GATE ENTRANCE,21x32,,,
+mortis-gate-entrance,MORTIS,dungeon,NavelRock_Entrance,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+mortis-gate-entrance,MORTIS,dungeon,NavelRock_Entrance,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+mortis-gate-fork,MORTIS,dungeon,NavelRock_Fork,BLOCKOUT,area,MORTIS GATE FORK,27x86,,,
+mortis-gate-fork,MORTIS,dungeon,NavelRock_Fork,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+mortis-gate-fork,MORTIS,dungeon,NavelRock_Fork,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+mortis-gate-fork,MORTIS,dungeon,NavelRock_Fork,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+mortis-gate-top,MORTIS,dungeon,NavelRock_Top,BLOCKOUT,area,MORTIS GATE TOP,25x28,,,
+mortis-gate-top,MORTIS,dungeon,NavelRock_Top,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+mortis-gate-top,MORTIS,dungeon,NavelRock_Top,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+mortis-gate-up-1,MORTIS,dungeon,NavelRock_Up1,BLOCKOUT,area,MORTIS GATE UP 1,9x8,,,
+mortis-gate-up-1,MORTIS,dungeon,NavelRock_Up1,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+mortis-gate-up-1,MORTIS,dungeon,NavelRock_Up1,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+mortis-gate-up-2,MORTIS,dungeon,NavelRock_Up2,BLOCKOUT,area,MORTIS GATE UP 2,9x8,,,
+mortis-gate-up-2,MORTIS,dungeon,NavelRock_Up2,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+mortis-gate-up-2,MORTIS,dungeon,NavelRock_Up2,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+mortis-gate-up-3,MORTIS,dungeon,NavelRock_Up3,BLOCKOUT,area,MORTIS GATE UP 3,9x8,,,
+mortis-gate-up-3,MORTIS,dungeon,NavelRock_Up3,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+mortis-gate-up-3,MORTIS,dungeon,NavelRock_Up3,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+mortis-gate-up-4,MORTIS,dungeon,NavelRock_Up4,BLOCKOUT,area,MORTIS GATE UP 4,9x8,,,
+mortis-gate-up-4,MORTIS,dungeon,NavelRock_Up4,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+mortis-gate-up-4,MORTIS,dungeon,NavelRock_Up4,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+mortis-gate-hangar,MORTIS,interior,NavelRock_Harbor,BLOCKOUT,area,MORTIS GATE HANGAR,17x13,,,
+mortis-gate-hangar,MORTIS,interior,NavelRock_Harbor,BLOCKOUT,person,Sailor,1x1,,,PLACEHOLDER
+mortis-gate-hangar,MORTIS,interior,NavelRock_Harbor,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+mortis-gate-hangar,MORTIS,interior,NavelRock_Harbor,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+mortis-gate-exterior,MORTIS,landmark,NavelRock_Exterior,BLOCKOUT,area,MORTIS GATE EXTERIOR,21x24,,,
+mortis-gate-exterior,MORTIS,landmark,NavelRock_Exterior,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+mortis-gate-exterior,MORTIS,landmark,NavelRock_Exterior,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+wellspring-entrance,MORTIS,landmark,FarawayIsland_Entrance,BLOCKOUT,area,WELLSPRING ENTRANCE,34x46,,,
+wellspring-entrance,MORTIS,landmark,FarawayIsland_Entrance,BLOCKOUT,prop,Wellspring pool,2x2,art:grand-arena:wellspring-pool,yes,TODO
+wellspring-entrance,MORTIS,landmark,FarawayIsland_Entrance,BLOCKOUT,person,Sailor,1x1,,,PLACEHOLDER
+wellspring-entrance,MORTIS,landmark,FarawayIsland_Entrance,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+wellspring-entrance,MORTIS,landmark,FarawayIsland_Entrance,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+wellspring-entrance,MORTIS,landmark,FarawayIsland_Entrance,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+wellspring-entrance,MORTIS,landmark,FarawayIsland_Entrance,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+wellspring-interior,MORTIS,landmark,FarawayIsland_Interior,BLOCKOUT,area,WELLSPRING INTERIOR,29x26,,,
+wellspring-interior,MORTIS,landmark,FarawayIsland_Interior,BLOCKOUT,person,Mew,1x1,,,PLACEHOLDER
+wellspring-interior,MORTIS,landmark,FarawayIsland_Interior,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+wellspring-interior,MORTIS,landmark,FarawayIsland_Interior,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
 ashen-pass,MUSTAFAR,route,JaggedPass,BLOCKOUT,area,ASHEN PASS,30x46,,,
 ashen-pass,MUSTAFAR,route,JaggedPass,BLOCKOUT,prop,Obsidian spire,2x3,art:mustafar:obsidian-spire,yes,TODO
 ashen-pass,MUSTAFAR,route,JaggedPass,BLOCKOUT,person,Trainer Eho,1x1,,,PLACEHOLDER
@@ -3177,6 +3202,8 @@ bestine,TATOOINE,town,RustboroCity,BLOCKOUT,sign,City holo-sign,1x1,,,PLACEHOLDE
 bestine,TATOOINE,town,RustboroCity,BLOCKOUT,sign,Arena sign,1x1,,,PLACEHOLDER
 bestine,TATOOINE,town,RustboroCity,BLOCKOUT,sign,Academy sign,1x1,,,PLACEHOLDER
 bestine,TATOOINE,town,RustboroCity,BLOCKOUT,sign,Organa tower sign,1x1,,,PLACEHOLDER
+altering-cave,TATOOINE,dungeon,AlteringCave,BLOCKOUT,area,ALTERING CAVE,32x24,,,
+altering-cave,TATOOINE,dungeon,AlteringCave,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
 beggars-canyon,TATOOINE,dungeon,RusturfTunnel,BLOCKOUT,area,BEGGARS CANYON,36x24,,,
 beggars-canyon,TATOOINE,dungeon,RusturfTunnel,BLOCKOUT,person,Wandas Boyfriend,1x1,,,PLACEHOLDER
 beggars-canyon,TATOOINE,dungeon,RusturfTunnel,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
@@ -4320,6 +4347,7 @@ route-103,TATOOINE,route,Route103,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
 route-103,TATOOINE,route,Route103,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
 route-103,TATOOINE,route,Route103,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
 route-103,TATOOINE,route,Route103,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+route-103,TATOOINE,route,Route103,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
 route-104,TATOOINE,route,Route104,BLOCKOUT,area,ROUTE 104,40x80,,,
 route-104,TATOOINE,route,Route104,BLOCKOUT,building,Flower shop,6x4,art:tatooine:homestead-dome,yes,TODO
 route-104,TATOOINE,route,Route104,BLOCKOUT,prop,Vaporator,1x2,art:tatooine:moisture-vaporator,yes,TODO
@@ -4645,18 +4673,20 @@ tosche-station,TATOOINE,town,OldaleTown,BLOCKOUT,person,Rival (first meeting),1x
 tosche-station,TATOOINE,town,OldaleTown,BLOCKOUT,person,Converter mechanic,1x1,,,PLACEHOLDER
 tosche-station,TATOOINE,town,OldaleTown,BLOCKOUT,sign,Tosche Station holo-sign,1x1,,,PLACEHOLDER
 tosche-station,TATOOINE,town,OldaleTown,BLOCKOUT,sign,Power station sign,1x1,,,PLACEHOLDER
-tython-isle-exterior,TYTHON,route,SouthernIsland_Exterior,TODO,area,TYTHON ISLE,33x30,,,
-tython-isle-exterior,TYTHON,route,SouthernIsland_Exterior,TODO,person,Sailor,1x1,,,PLACEHOLDER
-tython-isle-exterior,TYTHON,route,SouthernIsland_Exterior,TODO,person,0x0,1x1,,,PLACEHOLDER
-tython-isle-exterior,TYTHON,route,SouthernIsland_Exterior,TODO,sign,Sign,1x1,,,PLACEHOLDER
-tython-isle-exterior,TYTHON,route,SouthernIsland_Exterior,TODO,warp,Door,1x1,,,PLACEHOLDER
-tython-isle-exterior,TYTHON,route,SouthernIsland_Exterior,TODO,warp,Door,1x1,,,PLACEHOLDER
-tython-isle-interior,TYTHON,route,SouthernIsland_Interior,TODO,area,TYTHON ISLE,27x24,,,
-tython-isle-interior,TYTHON,route,SouthernIsland_Interior,TODO,person,0x0,1x1,,,PLACEHOLDER
-tython-isle-interior,TYTHON,route,SouthernIsland_Interior,TODO,person,0x0,1x1,,,PLACEHOLDER
-tython-isle-interior,TYTHON,route,SouthernIsland_Interior,TODO,sign,Sign,1x1,,,PLACEHOLDER
-tython-isle-interior,TYTHON,route,SouthernIsland_Interior,TODO,warp,Door,1x1,,,PLACEHOLDER
-tython-isle-interior,TYTHON,route,SouthernIsland_Interior,TODO,warp,Door,1x1,,,PLACEHOLDER
+tython-isle-exterior,TYTHON,route,SouthernIsland_Exterior,BLOCKOUT,area,TYTHON ISLE,33x30,,,
+tython-isle-exterior,TYTHON,route,SouthernIsland_Exterior,BLOCKOUT,prop,Tython standing stones,2x2,art:grand-arena:tython-standing-stones,yes,TODO
+tython-isle-exterior,TYTHON,route,SouthernIsland_Exterior,BLOCKOUT,person,Sailor,1x1,,,PLACEHOLDER
+tython-isle-exterior,TYTHON,route,SouthernIsland_Exterior,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+tython-isle-exterior,TYTHON,route,SouthernIsland_Exterior,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+tython-isle-exterior,TYTHON,route,SouthernIsland_Exterior,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+tython-isle-exterior,TYTHON,route,SouthernIsland_Exterior,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+tython-isle-exterior,TYTHON,route,SouthernIsland_Exterior,BLOCKOUT,warp,Landing pad (ships),1x1,,,PLACEHOLDER
+tython-isle-interior,TYTHON,route,SouthernIsland_Interior,BLOCKOUT,area,TYTHON ISLE,27x24,,,
+tython-isle-interior,TYTHON,route,SouthernIsland_Interior,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+tython-isle-interior,TYTHON,route,SouthernIsland_Interior,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+tython-isle-interior,TYTHON,route,SouthernIsland_Interior,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+tython-isle-interior,TYTHON,route,SouthernIsland_Interior,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+tython-isle-interior,TYTHON,route,SouthernIsland_Interior,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
 underwater-route-124,YAVIN 4,dungeon,Underwater_Route124,BLOCKOUT,area,UNDERWATER ROUTE 124,80x80,,,
 underwater-route-125,YAVIN 4,dungeon,Underwater_Route125,BLOCKOUT,area,UNDERWATER ROUTE 125,80x40,,,
 route-124-diving-treasure-hunters-house,YAVIN 4,interior,Route124_DivingTreasureHuntersHouse,TODO,area,ROUTE 124 DIVING TREASURE HUNTERS HOUSE,10x9,,,

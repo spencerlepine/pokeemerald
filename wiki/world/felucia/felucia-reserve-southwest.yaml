@@ -3,8 +3,8 @@ name: FELUCIA RESERVE
 planet: FELUCIA
 kind: route
 replaces: SafariZone_Southwest
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'South-west: spore marsh with the rest house.'
 pos: [138, 443]
 grid: |
   .TTTTTT....##TTTTTT.....TTTTTTTTTTTTTTTT
@@ -55,7 +55,15 @@ exits:
   cells: [6, 7, 20, 21, 36, 37]
   to: felucia-reserve-south
 buildings: []
-props: []
+props:
+- name: Giant fungus
+  art: art:felucia:giant-fungus
+  at: [24, 20]
+  size: [2, 2]
+- name: Spore-pod plants
+  art: art:felucia:spore-pod-plants
+  at: [12, 33]
+  size: [1, 1]
 people:
 - name: Woman
   at: [22, 9]
@@ -70,4 +78,4 @@ warps:
 - name: Door
   at: [29, 7]
   to: felucia-reserve-rest-house
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

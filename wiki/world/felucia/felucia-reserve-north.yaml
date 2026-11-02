@@ -3,8 +3,8 @@ name: FELUCIA RESERVE
 planet: FELUCIA
 kind: route
 replaces: SafariZone_North
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'North: tall spore plants and a viewing deck (vanilla Pokéblock feeders).'
 pos: [178, 403]
 grid: |
   .########...##################..........
@@ -58,7 +58,15 @@ exits:
   cells: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 15, 16, 17]
   to: felucia-reserve-northeast
 buildings: []
-props: []
+props:
+- name: Giant fungus
+  art: art:felucia:giant-fungus
+  at: [23, 19]
+  size: [2, 2]
+- name: Spore-pod plants
+  art: art:felucia:spore-pod-plants
+  at: [11, 30]
+  size: [1, 1]
 people:
 - name: Fisherman
   at: [22, 9]
@@ -66,27 +74,27 @@ people:
 - name: Man
   at: [6, 29]
   role: npc
-- name: Event Script_Rock Smash
+- name: Event object
   at: [25, 10]
-  role: npc
-- name: Event Script_Rock Smash
+  role: object
+- name: Event object
   at: [25, 13]
-  role: npc
-- name: Event Script_Rock Smash
+  role: object
+- name: Event object
   at: [28, 14]
-  role: npc
-- name: Event Script_Rock Smash
+  role: object
+- name: Event object
   at: [23, 6]
-  role: npc
-- name: Event Script_Rock Smash
+  role: object
+- name: Event object
   at: [20, 7]
-  role: npc
-- name: Event Script_Rock Smash
+  role: object
+- name: Event object
   at: [27, 7]
-  role: npc
+  role: object
 - name: Item
   at: [7, 6]
   role: item
 signs: []
 warps: []
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

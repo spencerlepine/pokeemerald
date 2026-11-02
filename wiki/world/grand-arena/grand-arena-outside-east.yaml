@@ -3,8 +3,9 @@ name: GRAND ARENA
 planet: GRAND ARENA
 kind: route
 replaces: BattleFrontier_OutsideEast
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'East half of the Grand Arena: the Tower, Arena, Palace and Pyramid, the ranking hall, the exchange corner, the Bacta Center and more lounges. Artisan Cave
+  opens in the cliffs.'
 pos: [56, 403]
 grid: |
   ~~~~~~~~##################~~##~~##~~################################~~##
@@ -13,9 +14,9 @@ grid: |
   TTTTTTTT#################TTTTTTTTTTT.#~~..~..~..~..~..~..~..~..~..~~##~~
   TTTTTTTT#################.T.........T##############################~~~~~
   .......T#################.##############..........................##~~~~
-  ...####T#################.##############................#####.....###~~~
-  ...T###T#################.##.############....##....#..#########..#####~~
-  ....###T#################T##..###########....###...####################~
+  .......T#################.##############................#####.....###~~~
+  .......T#################.##.############....##....#..#########..#####~~
+  .......T#################T##..###########....###...####################~
   .......T#################T##vv#T#####........###...####################~
   .......T#################T##...T#######......###...####################~
   .......T#################T##..TT#######......###...####################~
@@ -33,12 +34,12 @@ grid: |
   T.TTT#########......####...####~~.~#########~.~~~~####.........T..#####~
   TTTTT#T#######......####...###~~~#############~~~~####..##.##.....#####~
   TTTTT.T..###...............##~~~##...........##~~~####..##.##.....#####~
-  TTTTTTT#######.............##~~###.#########.###~~####........#########~
-  TTTTTTT#######.............##~~###.#########.###~~####........#########~
-  #####..#######.............##~~###.#########.###~~####.............T###~
-  #####..#...................##~~###.#########.###~~####........TT###T###~
-  ~~~##....................####~~###...........###~~~###........TT###T###~
-  ~~~##....................####~~#######...#######~~~###........TT###T###~
+  TTTTTTT#######.............##~~###...........###~~####........#########~
+  TTTTTTT#######.............##~~###...........###~~####........#########~
+  #####..#######.............##~~###...........###~~####.............T###~
+  #####..#...................##~~###...........###~~####........TT...T###~
+  ~~~##....................####~~###...........###~~~###........TT...T###~
+  ~~~##....................####~~#######...#######~~~###........TT...T###~
   ~~~##...................###~~~~#####.......#####~~~###........T....T###~
   ~~~##...................###~~~~##TT####.####TT##~~~###........T....T###~
   ~~~#########...#####...###~~~~~####.#.......####~~~###.............T###~
@@ -49,21 +50,21 @@ grid: |
   TTTTTTTTTT#....#####....#########TT.........TT#~~~~###......##T#TTTTT##~
   .................................T#T##...##T#T#######.......##T#TTTTT.#~
   ............................................................##T#TTTTTT#~
-  ...###......................................................##T#T######~
-  ..####T....#TT.#..#########.................................##T#T#~~~~~~
-  ..####.....T##TT..#########.................................##T#T#~##~~~
-  ...........#####..#########........TTTTTTTT.....TTTTTTTT....##T#T#~##~~~
+  ............................................................##T#T######~
+  ......T....#TT.#............................................##T#T#~~~~~~
+  ...........T##TT............................................##T#T#~##~~~
+  ...........#####...................TTTTTTTT.....TTTTTTTT....##T#T#~##~~~
   ..................................T~~~~~~~T.....T~~~~~~~T...##T#T#~~~##~
   ..................................T~~~~~~~TT...TT~~~~~~~T..#####T#~~~##~
   .................................TT~~~....T.....T...~~~~T..###..T#~##~~~
-  .T####T...TTT###..TTT######.....TTT~~.TTTT.......TTT..~~T.###.TTT#~##~~~
-  ..####....TTT###..TTT######.....T~~~~T..............TT~~~.###T####~~~##~
-  .T####T....TT###.....######....TT~~~~T..###########.TT~~~.##.T#~~~~####~
-  ...............................TT~##~T..###########..T~~~.##TT#~~~~##~~~
-  ..............................TTT~##~TT.###########..T~~~.......~~~~~##~
-  ..............................TTT~~~~TT.###########..T##~.TTTTTT#~~~~##~
-  ###############................TT....TT.....###......T##~...TTTT##~~~~~~
-  ############...#................TTTTTT.....##.#.....TT~~~.....TT###~~##~
+  .T....T...TTT.....TTT...........TTT~~.TTTT.......TTT..~~T.###.TTT#~##~~~
+  ..........TTT.....TTT...........T~~~~T..............TT~~~.###T####~~~##~
+  .T....T....TT..................TT~~~~T..............TT~~~.##.T#~~~~####~
+  ...............................TT~##~T...............T~~~.##TT#~~~~##~~~
+  ..............................TTT~##~TT..............T~~~.......~~~~~##~
+  ..............................TTT~~~~TT..............T##~.TTTTTT#~~~~##~
+  ###############................TT....TT..............T##~...TTTT##~~~~~~
+  ############...#................TTTTTT..............TT~~~.....TT###~~##~
   #########..#..T#................................TTTT~~~~~.T########~~##~
   #######.#.T#..T#..TTTTTTTTT.....................~~~~~~~~~.T##TTTT##~~~~~
   ~~~~~~#T#.T#..T#..................~~~~~~~~~~~~~~~~~~##....T##TTTT.#~~##~
@@ -81,10 +82,69 @@ grid: |
   #~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~~~~~~##~~~~~~
 exits:
 - edge: west
-  cells: [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54]
+  cells: [0, 1, 2, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 30, 31, 32, 33, 34, 35, 36, 37, 38, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 59, 60, 61,
+    62, 63, 64, 65, 66, 67, 68, 69]
   to: grand-arena-outside-west
-buildings: []
-props: []
+buildings:
+- name: Battle arena lobby
+  art: art:grand-arena:arena-facilities
+  at: [35, 26]
+  size: [9, 4]
+  door: 4
+  to: grand-arena-battle-arena-lobby
+- name: Battle palace lobby
+  art: art:grand-arena:arena-facilities
+  at: [40, 51]
+  size: [11, 6]
+  door: 5
+  to: grand-arena-battle-palace-lobby
+- name: Lounge 1
+  art: art:grand-arena:arena-facilities
+  at: [2, 42]
+  size: [4, 3]
+  door: 2
+  to: grand-arena-lounge-1
+- name: Lounge 5
+  art: art:grand-arena:arena-facilities
+  at: [21, 49]
+  size: [6, 3]
+  door: 1
+  to: grand-arena-lounge-5
+- name: Lounge 6
+  art: art:grand-arena:arena-facilities
+  at: [3, 6]
+  size: [4, 3]
+  door: 2
+  to: grand-arena-lounge-6
+- name: Lounge 3
+  art: art:grand-arena:arena-facilities
+  at: [64, 29]
+  size: [3, 3]
+  door: 1
+  to: grand-arena-lounge-3
+- name: Lounge 8
+  art: art:grand-arena:arena-facilities
+  at: [13, 49]
+  size: [3, 3]
+  door: 1
+  to: grand-arena-lounge-8
+- name: Lounge 9
+  art: art:grand-arena:arena-facilities
+  at: [18, 43]
+  size: [9, 3]
+  door: 3
+  to: grand-arena-lounge-9
+- name: Bacta center 1f
+  art: art:grand-arena:arena-facilities
+  at: [2, 49]
+  size: [4, 3]
+  door: 1
+  to: grand-arena-bacta-center-1f
+props:
+- name: Arena holo-sign
+  art: art:shared:holo-sign
+  at: [33, 36]
+  size: [1, 1]
 people:
 - name: Ninja Boy
   at: [20, 17]
@@ -102,7 +162,7 @@ people:
   at: [37, 32]
   role: npc
 - name: Cook
-  at: [41, 56]
+  at: [40, 57]
   role: npc
 - name: Expert F
   at: [8, 46]
@@ -123,7 +183,7 @@ people:
   at: [17, 40]
   role: npc
 - name: Zigzagoon
-  at: [40, 56]
+  at: [39, 55]
   role: npc
 - name: Sudowoodo
   at: [54, 62]
@@ -164,6 +224,21 @@ people:
 - name: Camper
   at: [29, 14]
   role: npc
+- name: 4-LOM (Arena)
+  at: [40, 30]
+  role: story
+- name: Zuckuss (Palace)
+  at: [46, 57]
+  role: story
+- name: Arena fan
+  at: [30, 30]
+  role: npc
+- name: Tourist
+  at: [40, 50]
+  role: npc
+- name: Ranking hall clerk
+  at: [19, 19]
+  role: npc
 signs:
 - name: Sign
   at: [13, 17]
@@ -186,42 +261,15 @@ warps:
   at: [16, 14]
   to: grand-arena-battle-tower-lobby
 - name: Door
-  at: [39, 29]
-  to: grand-arena-battle-arena-lobby
-- name: Door
-  at: [45, 56]
-  to: grand-arena-battle-palace-lobby
-- name: Door
   at: [58, 14]
   to: grand-arena-battle-pyramid-lobby
 - name: Door
   at: [35, 12]
   to: grand-arena-ranking-hall
 - name: Door
-  at: [4, 44]
-  to: grand-arena-lounge-1
-- name: Door
   at: [10, 28]
   to: grand-arena-exchange-service-corner
 - name: Door
-  at: [22, 51]
-  to: grand-arena-lounge-5
-- name: Door
-  at: [5, 8]
-  to: grand-arena-lounge-6
-- name: Door
-  at: [65, 31]
-  to: grand-arena-lounge-3
-- name: Door
-  at: [14, 51]
-  to: grand-arena-lounge-8
-- name: Door
-  at: [21, 45]
-  to: grand-arena-lounge-9
-- name: Door
-  at: [3, 51]
-  to: grand-arena-bacta-center-1f
-- name: Door
   at: [28, 7]
   to: artisan-cave-1f
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

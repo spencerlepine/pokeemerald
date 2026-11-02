@@ -26,6 +26,9 @@ SWAPS = [  # vanilla words in map names -> this game's words (applied to the keb
 ]
 KIND = {"MAP_TYPE_TOWN": "town", "MAP_TYPE_CITY": "town", "MAP_TYPE_ROUTE": "route", "MAP_TYPE_OCEAN_ROUTE": "route",
         "MAP_TYPE_UNDERGROUND": "dungeon", "MAP_TYPE_UNDERWATER": "dungeon", "MAP_TYPE_INDOOR": "interior"}
+# event islands whose vanilla map type is not an overworld type, but which are walked outdoors
+OUTDOOR = {"BirthIsland_Exterior": "landmark", "NavelRock_Exterior": "landmark",
+           "FarawayIsland_Entrance": "landmark", "FarawayIsland_Interior": "landmark"}
 FOLDER = {"town": "", "route": "", "landmark": "", "dungeon": "caves", "interior": "interiors"}
 
 
@@ -64,7 +67,7 @@ def maps():
         loc = locs.get(loc_id) or locs.get(loc_id.replace("route-", "route-")) or {}
         sw = loc.get("sw_name") or loc_id.replace("-", " ").upper()
         planet = loc.get("planet") or "UNSORTED"
-        kind = KIND.get(mt, "interior")
+        kind = OUTDOOR.get(name) or KIND.get(mt, "interior")
         base = kebab(sw)
         prefix, _, rest = name.partition("_")
         suffix = kebab(rest)
