@@ -1,0 +1,80 @@
+# Riding a companion across water (Surf): hot-swap of MUS_SURF (wiki audio:MUS_SURF). ARRANGE of "Jar Jar's
+# Introduction and The Swim to Otoh Gunga" (ref_tracks soundtrack:phantom-menace:04, ref_notes: the swim).
+# From the cue (analyze_reference: ~90 bpm, the swim's wonder passage at 181-217 s: F, Am7, the darkening Fm and
+# Ab, Dm7-Am, a C7 build turning through D7 to G): its harmony, tempo and texture (soaring horn and strings over
+# rippling harp, a bubbling high pulse), cut to a 24-bar loop. The melody is written on that harmony; a
+# lilting pizzicato bounce and soft kit keep it moving, buoyant rather than dreamy.
+# Vanilla: surf voicegroup, 82 bpm, 71.3 s; this is 90 bpm (the cue's), 24 bars, 64 s.
+# Brief (sw_subject): riding a companion across water, buoyant travel theme.
+name: skim
+replaces: MUS_SURF
+form: LOOP
+voicegroup: surf                      # horn 60, flute 73, strings 48, harp 46, pizzicato 45, tuba 58, kit 0, squares, wave
+master_volume: 82
+tempo: 90
+steps_per_beat: 4
+time_signature: [4, 4]
+seed: 90
+
+parts:
+  horn:    {program: 60, channel: 0, volume: 100, pan: -8,  range: [A3, F5], gate: 0.95, humanize: {vel: 4}}
+  flute:   {program: 73, channel: 1, volume: 92,  pan: 12,  range: [C5, C6], gate: 0.95, lfo_speed: 30, lfo_delay: 20, mod: 5}
+  strings: {program: 48, channel: 2, volume: 64,  pan: -22, octave: 4, range: [A3, C5], gate: 1.0}
+  pizz:    {program: 45, channel: 3, volume: 78,  pan: 24,  octave: 3, range: [C3, C5], gate: 0.8}
+  bass:    {program: 81, channel: 4, volume: 102, pan: 0,   octave: 2, range: [C2, C3], gate: 0.7, role: bass}
+  kit:     {program: 0,  channel: 5, volume: 58,  pan: 8,   role: drums, kit: {kick: 36, sn: 38, tamb: 54}}
+  bubble:  {program: 80, channel: 6, volume: 36,  pan: 34,  octave: 5, range: [C5, C7], gate: 0.4, mono: true}
+  echo:    {program: 82, channel: 7, volume: 34,  pan: -34, range: [A3, A5], gate: 0.85, mono: true}
+
+progressions:
+  intro: "C7 | C7"
+  a: "F | Am7 | F | F | Fm | Ab | Dm7 | Am"
+  b: "C | C7 | F | Fm | Dm7 | D7 | Gsus4 | G"
+  c: "F | Am7 | Bb | Ab | Dm7 | Am | C | C7"
+
+phrases:
+  tune_a: |
+    C4:4 F4:4 A4:6 G4:2 | E4:8 C4:4 E4:4 | F4:4 A4:4 C5:6 Bb4:2 | A4:12 r:4 |
+    Ab4:4 C5:4 F5:6 Eb5:2 | Eb5:8 C5:4 Ab4:4 | A4:4 C5:4 F4:4 D4:4 | E4:12 r:4
+  tune_b: |
+    E5:4 G5:4 C6:6 Bb5:2 | Bb5:8 G5:4 E5:4 | F5:4 A5:4 C6:6 A5:2 | Ab5:12 r:4 |
+    F5:4 A5:4 D5:4 F5:4 | F#5:8 C6:4 A5:4 | G5:4 D5:4 C5:4 D5:4 | B4:12 r:4
+  tune_c: |
+    A4:6 C5:2 F5:8 | E5:8 C5:4 A4:4 | D5:6 C5:2 Bb4:8 | C5:8 Eb5:8 |
+    D5:4 F5:4 A4:4 C5:4 | E5:12 A4:4 | G4:4 C5:4 E5:4 G5:4 | Bb5:12 r:4
+  pad: "^2:16"
+  bounce: "^1:2 r:2 ^3:2 ^5:2 r:2 ^3:2 ^5:2 r:2"
+  bass_a: "^1:4 r:2 ^1:2 ^5-:4 ^1:4"
+  bubbles: "^1:1 ^3:1 ^5:1 ^1+:1 r:4 ^5:1 ^1+:1 ^3+:1 r:5"
+  echo_a: |
+    r:16 | r:8 G4:4 A4:4 | r:16 | r:8 F4:4 C5:4 | r:16 | r:8 Ab4:4 C5:4 | r:16 | r:8 C5:4 B4:4
+
+grooves:
+  lilt:
+    kick: "x.........x....."
+    sn:   "....o.......x..."
+    tamb: "..x...x...x...xx"
+  lilt_soft:
+    tamb: "..o...o...o...o."
+
+sections:
+  intro:
+    bars: 2
+    chords: intro
+    parts: {pizz: bounce, bass: bass_a, bubble: bubbles, kit: lilt, strings: pad, horn: "G4:16 | E4:8 G4:4 Bb4:4"}
+  a:
+    bars: 8
+    chords: a
+    parts: {horn: tune_a, strings: pad, pizz: bounce, bass: bass_a, kit: lilt, bubble: bubbles, echo: echo_a}
+  b:
+    bars: 8
+    chords: b
+    parts: {flute: tune_b, horn: "^3:16", pizz: bounce, bass: bass_a, kit: lilt, bubble: bubbles}
+  c:
+    bars: 8
+    chords: c
+    gain: {strings: 4}
+    parts: {horn: tune_c, strings: pad, pizz: bounce, bass: bass_a, kit: lilt_soft, bubble: bubbles, echo: echo_a}
+
+arrangement: [intro, a, b, c]
+loop_start: a
