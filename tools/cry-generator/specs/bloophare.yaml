@@ -1,0 +1,29 @@
+name: bloophare
+slot: azumarill
+brief: "BLOOPHARE: creature call that fits its look and size. Long-eared water rodent."
+kind: creature
+size: 0.36
+seed: 66
+layers:
+  # Family voice (bloop rodents): the bubbly "bwoo-ip" glide grown up: deeper, rounder, with a
+  # long, warbling "bwooo-eep" that ends in a little splash of breath.
+  - type: voice
+    pitch: [[0, 400], [0.12, 640]]
+    source: {pulse: 0.6, pulse_width: 0.4, saw: 0.4, noise: 0.04}
+    vowels: [[0, u], [0.07, o], [0.14, i]]
+    env: [[0, 0], [0.012, 1], [0.12, 0.8], [0.15, 0]]
+    growl: 0.1
+  - type: voice
+    at: 0.19
+    pitch: [[0, 430], [0.14, 700], [0.4, 600], [0.5, 480]]
+    source: {pulse: 0.6, pulse_width: 0.4, saw: 0.4, noise: 0.04}
+    vowels: [[0, u], [0.09, o], [0.18, i], [0.5, e]]
+    env: [[0, 0], [0.012, 1], [0.38, 0.75], [0.52, 0]]
+    vibrato: {rate: 10, depth: 0.04}
+    growl: 0.12
+  - type: noise
+    at: 0.58
+    band: [[0, 2000], [0.1, 1300]]
+    q: 1.5
+    env: [[0, 0], [0.01, 0.4], [0.1, 0]]
+    gain: 0.25

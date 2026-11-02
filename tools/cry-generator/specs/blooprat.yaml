@@ -1,0 +1,23 @@
+name: blooprat
+slot: marill
+brief: "BLOOPRAT: creature call that fits its look and size. Water rodent that floats on its tail."
+kind: creature
+size: 0.22
+seed: 65
+layers:
+  # Family voice (bloop rodents): the bubbly upward "bwoo-ip" glide, a bit lower and rounder,
+  # two bounces and a floating, wobbly tail note.
+  - type: voice
+    pitch: [[0, 560], [0.1, 840]]
+    source: {pulse: 0.6, pulse_width: 0.4, saw: 0.3, noise: 0.03}
+    vowels: [[0, u], [0.06, o], [0.12, i]]
+    env: [[0, 0], [0.01, 1], [0.1, 0.8], [0.13, 0]]
+  - type: voice
+    at: 0.17
+    pitch: [[0, 600], [0.11, 920], [0.3, 760]]
+    source: {pulse: 0.6, pulse_width: 0.4, saw: 0.3, noise: 0.03}
+    vowels: [[0, u], [0.07, o], [0.14, i], [0.3, e]]
+    env: [[0, 0], [0.01, 1], [0.22, 0.75], [0.32, 0]]
+    vibrato: {rate: 12, depth: 0.04}
+master:
+  lowpass: 3600

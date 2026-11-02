@@ -1,0 +1,26 @@
+name: skymoth
+slot: butterfree
+brief: "SKYMOTH: creature call that fits its look and size. Powder-winged moth."
+kind: creature
+size: 0.42
+seed: 69
+layers:
+  # Family voice (Endor moths): the buzzy "chrr-ee" opened out into an airy, fluttering trill with
+  # wingbeat breath behind it.
+  - type: voice
+    pitch: [[0, 500], [0.06, 440], [0.16, 700], [0.38, 610]]
+    source: {pulse: 0.8, pulse_width: 0.18, saw: 0.3, noise: 0.1}
+    vowels: [[0, er], [0.08, i], [0.25, ee], [0.38, e]]
+    env: [[0, 0], [0.01, 1], [0.32, 0.8], [0.4, 0]]
+    growl: 0.3
+    growl_rate: 62
+    vibrato: {rate: 24, depth: 0.04}
+    jitter: 0.015
+  - type: noise
+    at: 0.04
+    band: [1500]
+    q: 1.0
+    env: [[0, 0], [0.05, 0.3], [0.3, 0.2], [0.36, 0]]
+    gain: 0.3
+master:
+  lowpass: 3500

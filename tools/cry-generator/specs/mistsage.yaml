@@ -1,0 +1,33 @@
+name: mistsage
+slot: alakazam
+brief: "MISTSAGE: creature call that fits its look and size. Ancient mist fox of terrible mental power."
+kind: creature
+size: 0.6
+seed: 63
+layers:
+  # Family voice (mist foxes): the breathy "hwee-yoo" with psychic vibrato, now deep, slow and commanding,
+  # doubled by a high eerie overtone voice, and a long hiss of mist at the end.
+  - type: voice
+    pitch: [[0, 360], [0.12, 520], [0.6, 480], [0.95, 320]]
+    source: {pulse: 0.7, saw: 0.5, pulse_width: 0.3, noise: 0.14}
+    vowels: [[0, i], [0.3, ee], [0.65, o], [0.95, u]]
+    env: [[0, 0], [0.02, 1], [0.7, 0.8], [0.98, 0]]
+    vibrato: {rate: 7, depth: 0.06}
+    growl: 0.2
+    growl_rate: 32
+    jitter: 0.012
+    drive: 1.5
+  - type: voice
+    at: 0.1
+    pitch: [[0, 1100], [0.4, 1250], [0.8, 900]]
+    source: {pulse: 0.5, pulse_width: 0.2, saw: 0.2, noise: 0.1}
+    vowels: [[0, ee], [0.8, i]]
+    env: [[0, 0], [0.2, 0.35], [0.7, 0.25], [0.85, 0]]
+    vibrato: {rate: 6, depth: 0.04}
+    gain: 0.35
+  - type: noise
+    at: 1.0
+    band: [[0, 2200], [0.3, 1000]]
+    q: 1.2
+    env: [[0, 0], [0.04, 0.55], [0.3, 0]]
+    gain: 0.35

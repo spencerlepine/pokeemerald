@@ -1,0 +1,22 @@
+name: huskpod
+slot: metapod
+brief: "HUSKPOD: creature call that fits its look and size. Hard green chrysalis."
+kind: creature
+size: 0.3
+seed: 68
+layers:
+  # Family voice (Endor moths): the buzzy "chrr-ee" muffled inside a hard shell: a stiff, low,
+  # creaking hum that barely moves, with dry shell creaks.
+  - type: voice
+    pitch: [[0, 380], [0.08, 330], [0.3, 420], [0.7, 360]]
+    pitch_step: 0.06
+    source: {pulse: 0.8, pulse_width: 0.15, saw: 0.3, noise: 0.08}
+    vowels: [[0, er], [0.2, m], [0.5, er], [0.7, m]]
+    env: [[0, 0], [0.01, 1], [0.6, 0.75], [0.74, 0]]
+    growl: 0.4
+    growl_rate: 70
+    jitter: 0.02
+    drive: 1.5
+  - type: click
+    times: [0.0, 0.32, 0.36]
+    gain: 0.4

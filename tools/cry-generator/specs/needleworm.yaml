@@ -1,0 +1,19 @@
+name: needleworm
+slot: caterpie
+brief: "NEEDLEWORM: creature call that fits its look and size. Green caterpillar."
+kind: creature
+size: 0.12
+seed: 67
+layers:
+  # Family voice (Endor moths): a thin, buzzy "chrr-ee" with a fast flutter. The larva is a
+  # tiny chittering squeak.
+  - type: voice
+    pitch: [[0, 640], [0.06, 560], [0.14, 760], [0.28, 690]]
+    source: {pulse: 0.8, pulse_width: 0.15, saw: 0.2, noise: 0.08}
+    vowels: [[0, er], [0.07, i], [0.2, ee]]
+    env: [[0, 0], [0.008, 1], [0.24, 0.8], [0.3, 0]]
+    growl: 0.3
+    growl_rate: 70
+    jitter: 0.02
+master:
+  lowpass: 3300
