@@ -1,0 +1,66 @@
+# Encounter: twins and pairs. Hot-swap of MUS_ENCOUNTER_TWINS (wiki audio:MUS_ENCOUNTER_TWINS): eye-contact music
+# for the 35 twin and pair trainers. SCRATCH (no film cue): an original bouncy D major duet, two 25% squares
+# moving together in parallel thirds (the "twins"), nylon guitar on the off-beats, flute holding soft notes, then
+# doubling the lead in the second phrase, synth bass and a light kit. Vanilla voicegroup and tempo. Brief (sw_subject): eye-contact
+# jingle, twins and pairs.
+name: encounter-twins
+replaces: MUS_ENCOUNTER_TWINS
+form: LOOP
+voicegroup: encounter_twins           # vanilla: squares 80/81, nylon guitar 24, flute 73, synth bass 38, kit 0, noise 127
+master_volume: 76
+tempo: 134
+steps_per_beat: 4
+time_signature: [4, 4]
+seed: 2
+
+parts:
+  twin1:   {program: 80, channel: 0, volume: 58,  pan: 22,  range: [A4, D6], gate: 0.7, mono: true}
+  twin2:   {program: 81, channel: 1, volume: 52,  pan: -22, range: [E4, B5], gate: 0.7, mono: true}
+  guitar:  {program: 24, channel: 2, volume: 84,  pan: -12, octave: 4, range: [D4, D5], gate: 0.5}
+  flute:   {program: 73, channel: 3, volume: 84,  pan: 10,  range: [D5, D6], gate: 0.9, lfo_speed: 30, lfo_delay: 16, mod: 3}
+  bass:    {program: 38, channel: 4, volume: 104, pan: 0,   octave: 2, range: [D2, D3], gate: 0.7, role: bass}
+  drums:   {program: 0,  channel: 5, volume: 82,  pan: 6,   role: drums, kit: {k: 36, s: 38}}
+  hat:     {program: 127, channel: 6, volume: 34, pan: 30,  gate: 0.25, mono: true}
+
+progressions:
+  verse: "D | G | D | A | Bm | G | Em:8 A:8 | D:8 A:8"
+
+phrases:
+  t1: |
+    F#5:2 A5:2 F#5:2 A5:2 D6:4 A5:4 | G5:2 B5:2 G5:2 B5:2 D6:4 B5:4 |
+    A5:2 F#5:2 D5:2 F#5:2 A5:4 F#5:2 E5:2 | E5:2 F#5:2 E5:2 C#5:2 A4:8 |
+    D5:2 F#5:2 B5:4 A5:2 F#5:2 D5:4 | G5:2 B5:2 D6:4 C#6:2 B5:2 G5:4 |
+    E5:2 G5:2 B5:4 A5:2 G5:2 E5:4 | D5:4 F#5:2 A5:2 C#5:4 E5:4
+  t2: |
+    D5:2 F#5:2 D5:2 F#5:2 F#5:4 F#5:4 | E5:2 G5:2 E5:2 G5:2 B5:4 G5:4 |
+    F#5:2 D5:2 B4:2 D5:2 F#5:4 D5:2 C#5:2 | C#5:2 D5:2 C#5:2 A4:2 E4:8 |
+    B4:2 D5:2 F#5:4 F#5:2 D5:2 B4:4 | E5:2 G5:2 B5:4 A5:2 G5:2 E5:4 |
+    C#5:2 E5:2 G5:4 F#5:2 E5:2 C#5:4 | A4:4 D5:2 F#5:2 A4:4 C#5:4
+  flute_line: |
+    _F#5:16 | _G5:16 | _F#5:12 _D5:4 | _E5:16 |
+    D5:2 F#5:2 B5:4 A5:2 F#5:2 D5:4 | G5:2 B5:2 D6:4 C#6:2 B5:2 G5:4 |
+    E5:2 G5:2 B5:4 A5:2 G5:2 E5:4 | D5:4 F#5:2 A5:2 C#5:4 E5:4
+  offbeat: "r:2 ^1:2 r:2 ^2:2 r:2 ^3:2 r:2 ^2:2"
+  bounce: "^1:4 ^3:2 ^1:2 ^1+:4 ^3:4"
+  hats: "C#6:2 _C#6:2 C#6:2 _C#6:2 C#6:2 _C#6:2 C#6:2 _C#6:2"
+
+grooves:
+  beat:
+    k: "x.......x.x....."
+    s: "....x.......x..."
+  pickup:
+    k: "x.......x......."
+    s: "........x.x.xxxx"
+
+sections:
+  intro:
+    bars: 1
+    chords: "A"
+    parts: {guitar: offbeat, bass: bounce, drums: pickup, hat: hats, twin1: "r:8 A5:2 A5:2 C#6:4", twin2: "r:8 E5:2 E5:2 A5:4"}
+  a:
+    bars: 8
+    chords: verse
+    parts: {twin1: t1, twin2: t2, flute: flute_line, guitar: offbeat, bass: bounce, drums: beat, hat: hats}
+
+arrangement: [intro, a]
+loop_start: a
