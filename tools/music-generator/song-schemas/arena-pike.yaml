@@ -1,0 +1,82 @@
+# Arena Pike (Grand Arena): hot-swap of MUS_B_PIKE (wiki audio:MUS_B_PIKE, FACILITY / LOOP). SCRATCH: no film cue,
+# written from the brief in the Star Wars idiom: D minor shot through with flat-second and diminished turns (Eb over
+# D, C#dim, A7 at the phrase ends), a coiling synth-bass ostinato, square arpeggios that twist back on themselves,
+# strings then organ on the line, a choir pad and a taiko/snare groove under it. 120 bpm like the vanilla song.
+# Brief (sw_subject): Battle Pike, twisting, uneasy.
+name: arena-pike
+replaces: MUS_B_PIKE
+form: LOOP
+voicegroup: b_pike                # vanilla: organ 17, synth bass 38, strings 48, choir 52, tubular bell 14, drumset 0, squares, noise
+master_volume: 92
+tempo: 120
+steps_per_beat: 4                 # 16th grid
+time_signature: [4, 4]
+seed: 7
+
+parts:
+  strings: {program: 48, channel: 0, volume: 92,  pan: 8,   range: [F4, B5], gate: 0.95, humanize: {vel: 4}}
+  organ:   {program: 17, channel: 1, volume: 78,  pan: -8,  range: [F4, B5], gate: 0.9}
+  bass:    {program: 38, channel: 2, volume: 100, pan: 0,   octave: 2, gate: 0.7, role: bass}
+  choir:   {program: 52, channel: 3, volume: 62,  pan: -26, octave: 4, gate: 1.0}
+  arp:     {program: 80, channel: 4, volume: 46,  pan: 30,  octave: 4, gate: 0.6, mono: true}
+  drums:   {program: 0,  channel: 5, volume: 82,  pan: 10,  role: drums, kit: {kick: 36, sn: 38, tom: 45, tomh: 48}}
+  hats:    {program: 126, channel: 6, volume: 38, pan: -12, role: drums, kit: {hh: C6}}
+  bell:    {program: 14, channel: 7, volume: 66,  pan: 22,  gate: 1.0}
+
+progressions:
+  verse:  "Dm | Eb | Dm | C#dim | Gm | Eb | A | A"
+  bridge: "Gm | Gm | Dm | Dm | Eb | Eb | A | A"
+  break:  "Dm | Eb | C#dim | A"
+  intro:  "Dm | A"
+
+phrases:
+  coil:  "^1:2 ^1:1 ^2:1 ^1:2 ^3:2 ^1:2 ^1:1 ^2:1 ^3:2 ^2:2"
+  twist: "^1:1 ^3:1 ^2:1 ^3:1 ^1+:1 ^3:1 ^2:1 ^3:1 ^1:1 ^3:1 ^2:1 ^3:1 ^1+:1 ^3:1 ^2:1 ^3:1"
+  pad:   "^3:16"
+  tune_a: |
+    D5:4 F5:2 E5:2 Eb5:4 D5:4 | Bb4:4 G5:4 F5:2 Eb5:2 D5:4 | A4:4 D5:2 F5:2 A5:6 G#5:2 | G5:8 E5:4 C#5:4 |
+    Bb4:4 D5:2 G5:2 F5:4 Eb5:4 | G5:6 F5:2 Eb5:2 D5:2 C5:2 Bb4:2 | A4:4 C#5:4 E5:4 G5:4 | F5:2 E5:2 Eb5:2 D5:2 C#5:8
+  tune_b: |
+    G4:4 Bb4:4 D5:4 C#5:4 | C5:4 Bb4:2 A4:2 G4:8 | F4:4 A4:4 D5:6 Eb5:2 | D5:4 C#5:4 D5:8 |
+    Eb5:4 G5:4 Bb5:6 A5:2 | Ab5:4 G5:4 Eb5:8 | E5:4 C#5:4 A4:4 G4:4 | F4:4 E4:4 C#4:4 E4:4
+  bells: "D5:16 | Eb5:16 | C#5:16 | A4:16"
+
+grooves:
+  creep:                          # 8 bars, the last one a tom fill
+    kick: "x.....x...x.....|x.....x...x.....|x.....x...x.....|x.....x...x.....|x.....x...x.....|x.....x...x.....|x.....x...x.....|x.....x........."
+    sn:   "....x.......x...|....x.......x...|....x.......x...|....x.......x...|....x.......x...|....x.......x...|....x.......x...|....x.......x.xx"
+    tom:  "................|................|................|................|................|................|................|..........x.x..."
+  toms:
+    tom:  "x.....x.....x..."
+    tomh: "...x.....x....x."
+  tick:
+    hh: "x.o.x.o.x.o.x.oo"
+  tick_soft:
+    hh: "o...o...o...o..."
+
+sections:
+  intro:
+    bars: 2
+    chords: intro
+    ramp: {drums: [-20, 0], choir: [-20, 0]}
+    parts: {bass: coil, arp: twist, hats: tick, drums: creep, choir: pad, strings: "r:16 | r:8 A4:2 C#5:2 E5:2 G5:2"}
+  a:
+    bars: 8
+    chords: verse
+    parts: {strings: tune_a, bass: coil, arp: twist, drums: creep, hats: tick}
+  b:
+    bars: 8
+    chords: bridge
+    parts: {organ: tune_b, choir: pad, bass: coil, arp: twist, drums: creep, hats: tick}
+  brk:
+    bars: 4
+    chords: break
+    gain: {arp: -10}
+    parts: {bell: bells, choir: pad, bass: coil, drums: toms, hats: tick_soft, arp: twist}
+  a2:
+    bars: 8
+    chords: verse
+    parts: {strings: tune_a, organ: tune_a, bass: coil, arp: twist, drums: creep, hats: tick}
+
+arrangement: [intro, a, b, brk, a2]
+loop_start: a
