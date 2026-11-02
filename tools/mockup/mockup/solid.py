@@ -167,6 +167,18 @@ def gable(x0, y0, x1, y1, z0, rise, col, **kw):
                   [*f, f @ np.array([0, y0, z0])], [*bk, bk @ np.array([0, y1, z0])]], col, col, **kw)
 
 
+def hip(x0, y0, x1, y1, z0, rise, col, **kw):
+    """A hip roof: four slopes meeting at a ridge (or a point on a square)."""
+    hw, hd = (x1 - x0) / 2, (y1 - y0) / 2
+    r = min(hw, hd)
+    planes = [[0, 0, -1, -z0]]
+    for nx, ny, px, py in ((0, -1, 0, y0), (0, 1, 0, y1), (-1, 0, x0, 0), (1, 0, x1, 0)):
+        n = np.array([nx * rise, ny * rise, r])
+        n /= np.linalg.norm(n)
+        planes.append([*n, n @ np.array([px, py, z0])])
+    return Solid(planes, col, col, **kw)
+
+
 def vault(x0, y0, x1, y1, z0, rise, col, n=12, **kw):
     """A barrel vault running north-south (a quonset hut): half-ellipse across x."""
     cx, a = (x0 + x1) / 2, (x1 - x0) / 2

@@ -1,0 +1,11 @@
+# Mockup-only giant border piece (phase 2). Phase 1 keeps these cells blocked.
+add:
+  buildings:
+  - name: Fortress rampart
+    art: art:giant:fortress-wall
+    at:
+    - 15
+    - 1
+    size:
+    - 13
+    - 10

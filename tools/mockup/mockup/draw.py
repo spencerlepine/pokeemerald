@@ -368,6 +368,7 @@ def area(doc, styles, labels=True, grey=False):
         st = styles.shape(o.get("art", ""), planet, kind, seed)
         if kind == "building" or st.get("build"):      # props with a `build` are 3D models too
             st["ground"] = pal["ground"]
+            st.setdefault("cliff", pal["cliff"])
             _build.building(img, o, st, seed, grey)
         else:
             prop(d, o, st)

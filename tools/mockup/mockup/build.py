@@ -13,6 +13,7 @@ from . import solid as S
 from .style import shade
 
 C = 16
+OVAL = 0.6        # depth / width of every round footprint: the game's top-down angle, kept the same everywhere
 
 
 class M:
@@ -34,7 +35,11 @@ class M:
         self.sc = S.Scene()
 
     def r(self, k, n):
-        return ((self.seed >> (k * 3)) & 0xFFFF) % n
+        h = (self.seed * 2654435761 + (k + 1) * 40503) & 0xFFFFFFFF
+        h ^= h >> 15
+        h = (h * 2246822519) & 0xFFFFFFFF
+        h ^= h >> 13
+        return h % n
 
     def wall_h(self, k=1.0):
         base = 16 if self.ch <= 4 else 24
@@ -164,7 +169,7 @@ def _round(m, h, cap, rise=None, z0=0, box=None):
     a = (x1 - x0) / 2
     rise = rise if rise is not None else {"dome": min(a * 0.55, 18), "cone": min(a * 0.8, 22)}.get(cap, 2)
     D = max(8, m.H - h - rise - z0)
-    b = min(D / 2, a * 0.75)
+    b = min(D / 2, a * OVAL)
     cx, cy = (x0 + x1) / 2, b
     m.add(S.cylinder(cx, cy, a, b, z0, z0 + h, m.wall, m.roof))
     if cap == "dome":
@@ -257,7 +262,8 @@ def m_buried(m):
     W = m.W
     rise = min(W * 0.32, m.H * 0.5)
     D = m.H - rise + 6
-    a, b = W / 2 - 1, min(D / 2, W * 0.4)
+    a = W / 2 - 1
+    b = min(D / 2, a * OVAL)
     cx, cy = W / 2, b
     m.add(S.prism(S.ring_pts(cx, cy, a, b), 0, 6, m.dirt, shade(m.ground, -0.04), taper=8))
     m.add(S.dome(cx, cy, a * 0.78, b * 0.78, -6, rise, m.roof))
@@ -291,7 +297,8 @@ def m_stilts(m, cap="pitched", round_=False):
     W = m.W
     if round_:
         D = m.H - L - h - rise
-        a, b = W / 2 - 2, min(D / 2 - 1, W * 0.35)
+        a = W / 2 - 2
+        b = min(D / 2 - 1, a * OVAL)
         cx, cy = W / 2, b + 2
         for f in (-0.6, -0.2, 0.2, 0.6):
             x = cx + a * f
@@ -359,7 +366,7 @@ def m_stepped(m, tiers=3):
         m.door(-1, h=min(11, h * 1.5))
 
 
-def _oval(m, x0, x1, k=0.62):
+def _oval(m, x0, x1, k=OVAL):
     """An oval footprint seen at the game's angle: depth about 0.6 of the width, front edge at y = 0."""
     a = (x1 - x0) / 2
     return (x0 + x1) / 2, a * k, a, a * k
@@ -381,8 +388,12 @@ def _H(m, cx, cy, s, z, col):
 
 def m_deck(m):
     """A raised round landing deck (Cloud City): a thick oval slab on struts, a landing ring painted on top."""
-    L = 11
+    L = 11 if m.ch >= 4 else 7
     cx, cy, a, b = _oval(m, 1, m.W - 1)
+    if 2 * b + L + 7 > m.H:          # a short box: a smaller deck rather than one cut off at the top
+        b = (m.H - L - 7) / 2
+        a = b / OVAL
+        cy = b
     leg = shade(m.wall, -0.25)
     for f in (-0.55, 0.0, 0.55):
         x = cx + a * f
@@ -396,7 +407,7 @@ def m_deck(m):
 
 def m_pad(m):
     """A landing pad at ground level: a low octagonal slab, a painted ring and an H."""
-    cx, cy, a, b = _oval(m, 1, m.W - 1, 0.65)
+    cx, cy, a, b = _oval(m, 1, m.W - 1)
     k = 0.42
     poly = [(cx - a, cy - b * k), (cx - a * k, cy - b), (cx + a * k, cy - b), (cx + a, cy - b * k),
             (cx + a, cy + b * k), (cx + a * k, cy + b), (cx - a * k, cy + b), (cx - a, cy + b * k)]
@@ -413,7 +424,7 @@ def m_bay(m):
     h = m.wall_h(0.75)
     W = m.W
     D = m.H - h - 1
-    a, b = W / 2 - 1, min(D / 2, (W / 2) * 0.8)
+    a, b = W / 2 - 1, min(D / 2, (W / 2 - 1) * OVAL)
     cx, cy = W / 2, b
     m.add(S.cylinder(cx, cy, a, b, 0, h, m.wall, m.roof))
     m.add(S.cylinder(cx, cy, a - 4, b - 4, 0.6, h + 1, shade(m.wall, -0.15), shade(m.ground, -0.12), subtract=True))
@@ -436,7 +447,7 @@ def m_dome_porch(m):
     a = (x1 - x0) / 2
     rise = min(a * 0.6, 20)
     D = m.H - h - rise
-    b = min((D - 6) / 2, a * 0.72)
+    b = min((D - 6) / 2, a * OVAL)
     cx = m.door_x if m.door_x is not None else m.W / 2
     cx = max(x0 + a, min(x1 - a, cx))
     cy = 6 + b
@@ -495,7 +506,7 @@ def m_glass_dome(m):
     h = 5
     a = m.W / 2 - 1
     rise = min(a * 0.6, m.H * 0.4)
-    b = min((m.H - h - rise) / 2, a * 0.72)
+    b = min((m.H - h - rise) / 2, a * OVAL)
     cx, cy = m.W / 2, b
     glass = (150, 170, 180) if m.grey else m.st.get("glass", (150, 200, 205))
     m.add(S.cylinder(cx, cy, a, b, 0, h, m.wall, m.roof))
@@ -525,36 +536,6 @@ def m_comm_tower(m):
     m.door(0, h=8, w=6)
 
 
-def m_shield_gen(m):
-    """A shield generator (Hoth): a big ball on a pillar inside a ring of fins."""
-    W = m.W
-    a = W / 2 - 2
-    b = a * 0.6
-    cx, cy = W / 2, b + 1
-    m.add(S.cylinder(cx, cy, a, b, 0, 6, m.wall, m.roof))
-    for f in (-0.75, -0.25, 0.25, 0.75):
-        x = cx + a * f
-        y = _yfront_ellipse(cx, cy, a, b, x) + 1
-        m.add(S.box(x - 1.5, y, 6, x + 1.5, y + 3, 14, m.trim))
-    pil = max(16, m.H - 2 * b - 2 * a * 0.45 - 6)
-    m.add(S.cylinder(cx, cy, a * 0.18, b * 0.18, 6, pil, m.trim))
-    m.add(S.dome(cx, cy, a * 0.45, b * 0.45, pil, a * 0.45, m.roof))
-
-
-def m_turret(m):
-    """A turbolaser emplacement: a round base, a turret housing, twin barrels pointing north."""
-    W = m.W
-    a = W / 2 - 2
-    b = a * 0.6
-    cx, cy = W / 2, b + 1
-    m.add(S.cylinder(cx, cy, a, b, 0, 8, m.wall, m.roof))
-    hw = a * 0.55
-    m.add(S.prism([(cx - hw, cy - b * 0.4), (cx + hw, cy - b * 0.4), (cx + hw * 0.7, cy + b * 0.6),
-                   (cx - hw * 0.7, cy + b * 0.6)], 8, 18, shade(m.wall, -0.05), m.roof, taper=2))
-    for dx in (-4, 4):
-        m.add(S.box(cx + dx - 1.2, cy, 12, cx + dx + 1.2, cy + b * 1.6, 14.5, m.trim))
-
-
 def m_cliff_door(m):
     """A hangar dug into a rock or ice face: the face fills the box, a framed blast door in it."""
     W = m.W
@@ -562,7 +543,9 @@ def m_cliff_door(m):
     h = m.H - 12
     m.add(S.prism([(0, 4), (W, 4), (W, 12), (0, 12)], 0, h, rock, shade(rock, 0.15), taper=4))
     m.add(S.box(0, 4, 0, W, 12, h * 0.3, rock))
-    if m.door_x is not None:
+    if m.door_x is None:
+        m.door_x = W / 2
+    if True:
         dw = min(W * 0.35, 26)
         m.add(S.box(m.door_x - dw / 2 - 3, 2, 0, m.door_x + dw / 2 + 3, 6, min(h * 0.7, 26), m.wall, m.roof))
         m.add(S.box(m.door_x - dw / 2, 1, 0, m.door_x + dw / 2, 8, min(h * 0.62, 22), m.door_col_rgb, subtract=True))
@@ -615,7 +598,8 @@ def m_arena(m):
     h = m.wall_h(0.8)
     W = m.W
     D = m.H - h - 2
-    a, b = W / 2 - 1, D / 2
+    a = W / 2 - 1
+    b = min(D / 2, a * OVAL)
     cx, cy = W / 2, b
     m.add(S.cylinder(cx, cy, a, b, 0, h, m.wall, m.roof))
     m.add(S.cylinder(cx, cy, a + 1, b + 1, h * 0.5, h * 0.5 + 2, m.trim))
@@ -623,6 +607,134 @@ def m_arena(m):
     m.add(S.cylinder(cx, cy, a * 0.8, b * 0.78, 3, h + 2, shade(m.wall, -0.18), field, subtract=True))
     _round_door(m, cx, cy, a, b, w=14, h=min(12, h * 0.55))
 
+
+
+# ------------------------------------------------------------------------------------------------ giants
+# Huge pieces for the edges of a map: cliff towns, city skylines, a crashed ship, hangar and fortress walls.
+# They are meant for big boxes (12+ cells wide) on blocked border cells; place them with mockup overrides.
+def m_hipped(m):
+    h = m.wall_h()
+    rise = min(14, m.H * 0.25)
+    D = m.H - h - rise
+    m.add(S.box(1, 0, 0, m.W - 1, D, h, m.wall, m.roof))
+    m.add(S.hip(-1, -2, m.W + 1, D + 1, h, rise, m.roof))
+    m.door(0)
+    m.windows(0, m.W, 0, h * 0.45)
+
+
+def m_cliff_town(m):
+    """Homes carved into a rock face: two stepped rock tiers, doorways, windows, balconies and ladders."""
+    W, H = m.W, m.H
+    rock = m.st.get("cliff") or shade(m.ground, -0.3)
+    D = max(16, H * 0.3)
+    h1 = (H - D) * 0.5
+    h2 = (H - D) - h1 - 2
+    m.add(S.prism([(0, 0), (W, 0), (W, D), (0, D)], 0, h1, rock, shade(rock, 0.12), taper=3))
+    m.add(S.prism([(0, D * 0.45), (W, D * 0.45), (W, D), (0, D)], h1 - 1, h1 + h2, shade(rock, -0.05),
+                  shade(rock, 0.1), taper=3))
+    dark = (30, 26, 24)
+    x = 10 + m.r(1, 8)
+    k = 0
+    while x < W - 14:
+        k += 1
+        if (k + m.r(2, 3)) % 3:
+            m.add(S.box(x, -1, 0, x + 7, 4, 11, dark, subtract=True),
+                  S.vault(x, -1, x + 7, 4, 11, 3, dark, subtract=True))
+        else:
+            m.add(S.box(x - 1, -2, h1 * 0.55, x + 9, 2, h1 * 0.55 + 1.5, shade(m.trim, 0.1)))     # a balcony
+        if k % 2:
+            m.add(S.box(x + 2, D * 0.45 + 2, h1 + h2 * 0.35, x + 6, D * 0.45 + 6, h1 + h2 * 0.35 + 5, dark,
+                        subtract=True))
+        x += 18 + m.r(k % 5 + 3, 10)
+    for lx in (W * 0.3, W * 0.72):
+        m.add(S.box(lx - 2, 1.5 - 0.5, 0, lx + 2, 2.3, h1 + 1, shade(m.trim, -0.1)))
+
+
+def m_city_edge(m):
+    """A city skyline wall: a row of roofed towers of different widths, heights and depths."""
+    W, H = m.W, m.H
+    x = 0
+    k = 0
+    while x < W - 8:
+        k += 1
+        w = 16 + 8 * m.r(k, 4)
+        w = min(w, W - x)
+        d = 16 + 8 * m.r(k + 7, 3)
+        hgt = min(H - d - 10, 24 + 12 * m.r(k + 3, 5))
+        y0 = 4 * m.r(k + 11, 3)
+        col = shade(m.wall, -0.06 * (k % 3))
+        m.add(S.box(x + 0.5, y0, 0, x + w - 0.5, y0 + d, hgt, col, m.roof))
+        roof = m.r(k + 5, 3)
+        if roof == 0 and hgt + 10 < H - d:
+            m.add(S.gable(x, y0 - 1, x + w, y0 + d + 1, hgt, 8, m.roof))
+        elif roof == 1 and hgt + 10 < H - d:
+            m.add(S.hip(x, y0 - 1, x + w, y0 + d + 1, hgt, 8, m.roof))
+        else:
+            m.add(S.box(x + w / 2 - 0.8, y0 + d / 2, hgt, x + w / 2 + 0.8, y0 + d / 2 + 1.6, hgt + 9, m.trim))
+        for z in range(8, int(hgt) - 4, 8):
+            for wx in range(int(x) + 4, int(x + w) - 4, 6):
+                m.add(S.box(wx, y0 - 1, z, wx + 2.5, y0 + 1, z + 3.5, m.glass, subtract=True))
+        x += w
+
+
+def m_ship_hull(m):
+    """A crashed capital ship: a long tapering wedge half sunk in the ground, a bridge tower, plating seams."""
+    W, H = m.W, m.H
+    left = m.r(3, 2)
+    hull = (150, 150, 150) if m.grey else m.st.get("hull", (158, 162, 168))
+    D = H * 0.45
+    tip, base = (2, W - 2) if left else (W - 2, 2)
+    poly = [(tip, D * 0.55), (base, 0), (base, D)] if left else [(base, 0), (tip, D * 0.55), (base, D)]
+    hgt = H - D - 4
+    m.add(S.prism(poly, -6, hgt * 0.6, hull, shade(hull, 0.08), taper=D * 0.18))
+    # superstructure near the wide end
+    bx = W * 0.62 if left else W * 0.18
+    m.add(S.box(bx, D * 0.25, hgt * 0.5, bx + W * 0.2, D * 0.8, hgt * 0.78, shade(hull, -0.05), m.roof))
+    m.add(S.box(bx + W * 0.04, D * 0.4, hgt * 0.78, bx + W * 0.16, D * 0.7, hgt, shade(hull, 0.05), m.roof))
+    for f in (0.35, 0.6, 0.85):            # plating seams: shallow grooves cut across the hull
+        x = tip + (base - tip) * f
+        m.add(S.box(x - 0.7, -10, -10, x + 0.7, D + 10, hgt, shade(hull, -0.3), subtract=True))
+    # a torn-open end
+    ex = base
+    m.add(S.box(ex - (8 if left else -8) - 6, D * 0.2, -2, ex - (8 if left else -8) + 6, D * 0.8, hgt * 0.62,
+                (35, 32, 30), subtract=True))
+
+
+def m_hangar_wall(m):
+    """A giant hangar front: a huge block with an open bay door, landing lights, a vaulted roof."""
+    W, H = m.W, m.H
+    h = H * 0.42
+    rise = min(16, H * 0.2)
+    D = H - h - rise
+    m.add(S.box(0, 0, 0, W, D, h, m.wall, m.roof), S.vault(0, 0, W, D, h, rise, m.roof))
+    dw = W * 0.5
+    x0 = (W - dw) / 2
+    m.add(S.box(x0, -1, 0, x0 + dw, D * 0.6, h * 0.8, (28, 30, 34), shade(m.ground, -0.3), subtract=True))
+    for x in range(int(x0) + 3, int(x0 + dw) - 2, 6):
+        m.add(S.box(x, -1.5, h * 0.8 + 1, x + 2, -0.5, h * 0.8 + 3, (250, 220, 120) if not m.grey else (220, 220, 220)))
+    m.add(S.box(x0 - 2, -1, 0, x0, 1, h * 0.85, m.trim), S.box(x0 + dw, -1, 0, x0 + dw + 2, 1, h * 0.85, m.trim))
+    m.windows(0, x0 - 4, 0, h * 0.5)
+    m.windows(x0 + dw + 4, W, 0, h * 0.5)
+
+
+def m_fortress_wall(m):
+    """A long fortress wall with buttress towers, crenellations and a central gate."""
+    W, H = m.W, m.H
+    h = H * 0.45
+    D = H - h - 14
+    m.add(S.box(0, D * 0.3, 0, W, D, h, m.wall, m.roof))
+    for x in range(2, int(W) - 4, 8):
+        m.add(S.box(x, D * 0.3, h, x + 4, D * 0.3 + 3, h + 3, m.wall, m.roof))
+    n = max(2, int(W // 64) + 1)
+    for i in range(n + 1):
+        x = 4 + (W - 24) * i / n
+        m.add(S.box(x, 0, 0, x + 16, D, h + 10, shade(m.wall, -0.06), m.roof))
+        m.add(S.hip(x - 1, -1, x + 17, D + 1, h + 10, 4, m.roof))
+    if m.door_x is not None:
+        m.door(D * 0.3, w=14, h=min(18, h * 0.6))
+
+
+GIANTS = ["cliff-town", "city-edge", "ship-hull", "hangar-wall", "fortress-wall", "cliff-door"]
 
 BUILDS = {
     "block": m_block, "box": m_block,
@@ -634,7 +746,9 @@ BUILDS = {
     "dome": m_dome, "domes2": m_domes2, "dome-block": m_dome_block, "store": m_store,
     "bunker": m_bunker, "buried": m_buried, "bay": m_bay, "pad": m_pad, "dome-porch": m_dome_porch,
     "spire": m_spire, "saucer": m_saucer, "glass-dome": m_glass_dome, "comm-tower": m_comm_tower,
-    "shield-gen": m_shield_gen, "turret": m_turret, "cliff-door": m_cliff_door, "obelisk": m_obelisk,
+    "hipped": m_hipped, "cliff-town": m_cliff_town, "city-edge": m_city_edge, "ship-hull": m_ship_hull,
+    "hangar-wall": m_hangar_wall, "fortress-wall": m_fortress_wall,
+    "cliff-door": m_cliff_door, "obelisk": m_obelisk,
     "quonset": m_quonset, "hangar": lambda m: m_quonset(m, wide=True),
     "stilts": m_stilts, "stilts-dome": lambda m: m_stilts(m, "dome", round_=True),
     "stilts-flat": lambda m: m_stilts(m, "flat"),
@@ -653,7 +767,7 @@ def sprite(b, st, seed, grey=False):
     name = st.get("build") or KIND_TO_BUILD.get(st.get("kind"), "block")
     name = KIND_TO_BUILD.get(name, name) if name not in BUILDS else name
     key = (name, tuple(b["size"]), b.get("door"), st["wall"], st["roof"], st["trim"], st.get("ground"),
-           st.get("height"), st.get("top"), st.get("fork"), seed & 0xFFFFFF, grey)
+           st.get("height"), st.get("top"), st.get("fork"), st.get("cliff"), seed & 0xFFFFFF, grey)
     if key not in _cache:
         m = M(b, st, seed, grey)
         BUILDS.get(name, m_block)(m)

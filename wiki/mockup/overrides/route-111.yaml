@@ -1,0 +1,11 @@
+# Mockup-only giant border piece (phase 2). Phase 1 keeps these cells blocked.
+add:
+  buildings:
+  - name: Crashed cruiser
+    art: art:giant:ship-hull
+    at:
+    - 0
+    - 96
+    size:
+    - 12
+    - 9

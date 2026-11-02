@@ -8,7 +8,8 @@
 #   building: `build` picks the composition, drawn in the game's top-down 3/4 view (see tools/mockup/mockup/build.py):
 #     block box L oct T notch court wings hall palace pitched barrel quonset hangar tower round-tower stepped
 #     dome domes2 dome-block dome-porch store cone glass-dome bunker buried stilts stilts-dome stilts-flat
-#     deck pad bay plant lab arena spire saucer comm-tower shield-gen turret cliff-door obelisk
+#     deck pad bay plant lab arena spire saucer comm-tower cliff-door obelisk hipped
+#     giants (border pieces): cliff-town city-edge ship-hull hangar-wall fortress-wall
 #   `variants: [{build: ...}, ...]` picks one per placed building (stable by position), so a town's homes vary.
 #   `height` scales the walls (1.0 = default). `field` is the pitch colour of an arena.
 #   `kind` is the first-pass name (box | dome | pitched | stepped | tower | hall | dish | platform), used when no `build`.
@@ -86,7 +87,7 @@ roles:      # people placeholders: still pink-family figures, told apart by role
 
 shapes:
   # ---------------------------------------------------------------- shared
-  art:shared:bacta-center:        {kind: dome, wall: "#f2f4f6", roof: "#5fb4d8", trim: "#2a6e96", label: Bacta, build: dome}
+  art:shared:bacta-center:        {kind: dome, wall: "#f2f4f6", roof: "#5fb4d8", trim: "#2a6e96", label: Bacta, build: hipped}
   art:shared:supply-depot:        {kind: box, wall: "#c8ccd2", roof: "#4f7fbf", trim: "#2a4a7a", label: Depot, build: quonset}
   art:shared:arena:               {kind: hall, wall: "#d8d0c0", roof: "#a03030", trim: "#5a2020", label: Arena, build: arena}
   art:shared:landing-pad:         {kind: disc, fill: "#9a9ea6", ring: "#f2c230", mark: H, wall: "#8a8e96", roof: "#9a9ea6", trim: "#f2c230", build: pad}
@@ -99,7 +100,7 @@ shapes:
   art:shared:bacta-center-interior: {kind: slab, fill: "#e8f2f6", trim: "#5fb4d8"}
   art:shared:supply-depot-interior: {kind: slab, fill: "#d8d0bc", trim: "#4f7fbf"}
   # ---------------------------------------------------------------- tatooine
-  art:tatooine:homestead-dome:    {kind: dome, build: dome, variants: [{build: dome-porch}, {build: domes2}, {build: dome-block}, {build: dome}, {build: buried}, {build: dome-porch}]}
+  art:tatooine:homestead-dome:    {kind: dome, build: dome-porch, variants: [{build: dome-porch}, {build: block}, {build: dome-block}, {build: L}, {build: notch}, {build: buried}]}
   art:tatooine:sunken-courtyard-home: {kind: dish, roof: "#c8a676", build: dome-porch}
   art:tatooine:lars-family-home:  {kind: dish, roof: "#c8a676", label: Lars, build: dome-porch}
   art:tatooine:prof-korr-s-lab:   {kind: box, roof: "#bfc4c8", label: Lab, build: lab}
@@ -112,7 +113,7 @@ shapes:
   art:tatooine:mos-entha-arena:   {kind: hall, roof: "#b08050", label: Arena, build: arena}
   art:tatooine:podrace-arena:     {kind: hall, roof: "#c8b088", label: Podrace, build: arena}
   art:tatooine:power-station:     {kind: box, roof: "#9a9a92", trim: "#5a5a52", label: Power, build: plant, variants: [{build: plant}, {build: spire}]}
-  art:tatooine:sabacc-den:        {kind: dome, roof: "#b88e66", build: dome-porch}
+  art:tatooine:sabacc-den:        {kind: dome, roof: "#b88e66", build: notch}
   art:tatooine:spacer-museum:     {kind: hall, roof: "#c4ccd2", label: Museum, build: oct}
   art:tatooine:watto-s-junk-shop: {kind: dome, roof: "#a88a64", label: Watto, build: dome-block}
   art:tatooine:adobe-wall:        {kind: slab, fill: "#d8bc8c", trim: "#8c6a46"}
@@ -145,7 +146,7 @@ shapes:
   # ---------------------------------------------------------------- sullust
   art:sullust:sullustan-home:     {kind: dome, build: buried, variants: [{build: buried}, {build: bunker}]}
   art:sullust:ash-farm:           {kind: box, roof: "#6e6a5a", build: glass-dome}
-  art:sullust:hot-spring-bathhouse: {kind: dome, roof: "#6a8a9a", build: domes2}
+  art:sullust:hot-spring-bathhouse: {kind: dome, roof: "#6a8a9a", build: hipped}
   art:sullust:sabine-s-arena:     {kind: hall, roof: "#c84a2a", label: Arena, build: arena}
   art:sullust:ash-greenhouse:     {kind: slab, fill: "#9ac0a0", trim: "#4a6a52"}
   art:sullust:basalt-column:      {kind: rock, fill: "#3e3a40", tall: true}
@@ -167,8 +168,8 @@ shapes:
   art:endor:log-trap:             {kind: slab, fill: "#7a5634", trim: "#3e2a18", form: log}
   art:endor:totem-and-drum:       {kind: pole, fill: "#9a6a3a", trim: "#4e3a24"}
   # ---------------------------------------------------------------- bespin
-  art:bespin:cloud-city-tower:    {kind: tower, wall: "#f0e4d8", roof: "#d89a7a", build: round-tower, variants: [{height: 1.0}, {build: saucer}, {height: 0.85, top: dome}, {height: 0.7}, {build: saucer}]}
-  art:bespin:department-store:    {kind: hall, wall: "#f4ece0", roof: "#c88a6a", label: Galleria, build: store}
+  art:bespin:cloud-city-tower:    {kind: tower, wall: "#f0e4d8", roof: "#d89a7a", build: round-tower, variants: [{build: tower}, {build: saucer}, {build: oct}, {height: 0.85}, {build: tower, height: 0.8}]}
+  art:bespin:department-store:    {kind: hall, wall: "#f4ece0", roof: "#c88a6a", label: Galleria, build: wings}
   art:bespin:landing-platform:    {kind: platform, wall: "#e0d0c0", roof: "#c0a090", label: Pad, build: deck}
   art:bespin:promenade-railing:   {kind: pole, fill: "#e8dccc", trim: "#9a7a6a"}
   art:bespin:carbon-freezing-chamber: {kind: disc, fill: "#3a3e46", ring: "#e8742c"}
@@ -195,7 +196,7 @@ shapes:
   art:dagobah:sunken-x-wing:      {kind: craft, fill: "#b8b8a8", trim: "#5a5a4a", form: xwing}
   art:dagobah:cave-of-evil-mouth: {kind: disc, fill: "#1e2418", ring: "#3a4a2e", mark: pit}
   # ---------------------------------------------------------------- kamino
-  art:kamino:stilt-dome:          {kind: dome, build: stilts-dome}
+  art:kamino:stilt-dome:          {kind: dome, build: stilts-flat, variants: [{build: stilts-flat}, {build: stilts-dome}]}
   art:kamino:cloning-hall:        {kind: hall, wall: "#eef0f4", roof: "#c4cbd6", label: Cloning, build: court}
   art:kamino:storm-sea:           {kind: disc, fill: "#4e6488", ring: "#dfe6ee"}
   art:kamino:stilt-walkway:       {kind: slab, fill: "#d2d7e1", trim: "#7a8494"}
@@ -241,3 +242,11 @@ shapes:
   art:new:wookiee-bed:            {kind: slab, fill: "#7a5a36", trim: "#c8b088"}
   art:new:wookiee-throne:         {kind: slab, fill: "#5a3e24", trim: "#c8a070"}
   art:new:hideout-pc:             {kind: slab, fill: "#4a5a6a", trim: "#5fd0ff"}
+
+  # giants: huge border pieces placed by mockup overrides on blocked edge cells (no door)
+  art:giant:city-edge:            {kind: box, build: city-edge}
+  art:giant:ship-hull:            {kind: box, build: ship-hull, roof: "#a8acb2"}
+  art:giant:cliff-door:           {kind: box, build: cliff-door, rock: "#b8c8da"}
+  art:giant:cliff-town:           {kind: box, build: cliff-town}
+  art:giant:fortress-wall:        {kind: box, build: fortress-wall}
+  art:giant:hangar-wall:          {kind: box, build: hangar-wall}

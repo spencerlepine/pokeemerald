@@ -13,8 +13,9 @@ phase 1, so the whole folder can be thrown away and redrawn.
 | `<planet>/_planet.png` | One planet's towns, routes and landmarks stitched together |
 | `<planet>/<area>.png`, `<planet>/caves/`, `<planet>/interiors/` | One area each, same folders as phase 1 |
 | [`_buildings.png`](_buildings.png), [`_buildings-grey.png`](_buildings-grey.png) | Every building type at three sizes, in colour and in pure grey (`python3 -m mockup builds [--grey]`) |
+| [`_giants.png`](_giants.png) | The giant border pieces (cliff towns, city skylines, a crashed ship, hangar and fortress walls) |
 | [`styles.yaml`](styles.yaml) | Colours per planet and one shape per building and prop type |
-| `overrides/<area>.yaml` | Mockup-only tweaks for one area (hide, move, add, restyle a piece) |
+| `overrides/<area>.yaml` | Mockup-only tweaks for one area (hide, move, add, restyle a piece). Giant border pieces are added here. |
 
 How to read a mockup:
 - Buildings are 3D greybox models ray-cast into pixels in the game's top-down 3/4 view (owner's call: model
