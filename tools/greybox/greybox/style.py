@@ -1,12 +1,15 @@
-"""The style catalogue (wiki/mockup/styles.yaml) and per-area overrides (wiki/mockup/overrides/<area>.yaml)."""
-import copy
+"""Palettes (tools/greybox/palettes.yaml), per-art colour overrides (tools/greybox/styles.yaml) and the asset list
+(wiki/mapping/world_art.csv), resolved into one style dict per piece."""
+import csv
 from pathlib import Path
 
 import yaml
 
 ROOT = Path(__file__).resolve().parents[3]
 WORLD = ROOT / "wiki" / "world"
-MOCK = ROOT / "wiki" / "mockup"
+HERE = Path(__file__).resolve().parents[1]
+OUT = WORLD / "greybox"
+ASSETS = ROOT / "wiki" / "mapping" / "world_art.csv"
 
 
 def hexrgb(h):
@@ -22,11 +25,11 @@ def shade(c, k):
 
 
 class Styles:
-    def __init__(self, path=MOCK / "styles.yaml"):
-        raw = yaml.safe_load(open(path))
-        self.raw = raw
-        self.shapes = raw.get("shapes") or {}
-        self.roles = raw.get("roles") or {}
+    def __init__(self):
+        self.raw = yaml.safe_load(open(HERE / "palettes.yaml"))
+        self.shapes = (yaml.safe_load(open(HERE / "styles.yaml")) or {}).get("shapes") or {}
+        self.roles = self.raw.get("roles") or {}
+        self.assets = {r["concept_id"]: r for r in csv.DictReader(open(ASSETS))}
 
     def terrain(self, planet):
         t = dict(self.raw["terrain"]["default"])
@@ -46,6 +49,12 @@ class Styles:
         mat = self.material(planet)
         if not s:
             s = {"kind": "box" if piece_kind == "building" else "slab", "unknown": True}
+        row = self.assets.get(art)
+        if row and row.get("build"):        # the wiki decides the model
+            s["build"] = row["build"]
+            s.pop("unknown", None)
+            if row.get("variants"):
+                s["variants"] = [{"build": row["build"]}] + [{"build": b} for b in row["variants"].split()]
         vs = s.pop("variants", None)
         if vs and seed is not None:
             s.update(vs[seed % len(vs)])
@@ -66,35 +75,3 @@ class Styles:
 
 def load_area(path):
     return yaml.safe_load(open(path))
-
-
-def apply_overrides(doc):
-    """Phase 2 changes for one area, kept beside phase 1 instead of in it:
-        hide:  [piece name, ...]            # drop pieces from the mockup only
-        move:  {piece name: [x, y]}         # move a piece in the mockup only
-        add:   {props: [...], buildings: [...], people: [...]}   # mockup-only extra dressing
-        restyle: {piece name: art id}       # draw a piece as another catalogue entry
-    """
-    p = MOCK / "overrides" / f"{doc['id']}.yaml"
-    doc = copy.deepcopy(doc)
-    if not p.exists():
-        return doc
-    ov = yaml.safe_load(open(p)) or {}
-    # a key is a piece name (every piece with that name) or "name#n" (the n-th one, counted from 1)
-    def hit(keys, o, n):
-        return next((keys[k] for k in (f"{o.get('name')}#{n}", o.get("name")) if k in keys), None)
-    hide = {k: True for k in ov.get("hide") or []}
-    for k in ("buildings", "props", "people", "signs", "warps"):
-        seen, items = {}, []
-        for o in doc.get(k) or []:
-            n = seen[o.get("name")] = seen.get(o.get("name"), 0) + 1
-            if hit(hide, o, n):
-                continue
-            mv, rs = hit(ov.get("move") or {}, o, n), hit(ov.get("restyle") or {}, o, n)
-            if mv:
-                o["at"] = list(mv)
-            if rs:
-                o["art"] = rs
-            items.append(o)
-        doc[k] = items + list((ov.get("add") or {}).get(k) or [])
-    return doc

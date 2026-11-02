@@ -1,21 +1,20 @@
-"""python3 -m mockup render [area-id ...] [--planet P] [--all]   -> wiki/mockup/<planet>/<area>.png
-python3 -m mockup world                                        -> wiki/mockup/<planet>/_planet.png and _world.png
-python3 -m mockup missing                                      -> art ids with no entry in styles.yaml
+"""python3 -m greybox piece <art-id|build> [--size WxH] [--seed N] [--planet P] [--grey]  -> wiki/world/greybox/<id>.png
+python3 -m greybox piece --all                 every art id in world_art.csv that has a build; fills its `greybox` column
+python3 -m greybox kit <category> [--grey]     one category, pieces side by side for review -> wiki/world/greybox/_kit-<category>.png
+python3 -m greybox sheet [--grey]              every building model at three sizes -> wiki/world/greybox/_sheet-buildings.png
+python3 -m greybox terrain <area-id> [--grey]  one area's terrain in relief with its pieces -> wiki/world/greybox/areas/<area>.png
 
-Phase 1 (wiki/world) is read, never written. Per-area tweaks go in wiki/mockup/overrides/<area>.yaml."""
+What to draw comes from the wiki: `python3 -m blockout todo --tool greybox` (in ../blockout). The model for an art
+id is its `build` column in wiki/mapping/world_art.csv; colours come from palettes.yaml and styles.yaml here."""
 import argparse
+import csv
 import glob
-import os
 import sys
-from pathlib import Path
 
 from PIL import Image, ImageDraw
 
 from . import draw
-from .style import MOCK, WORLD, Styles, apply_overrides, load_area
-
-ORDER = ["TATOOINE", "KASHYYYK", "SULLUST", "MUSTAFAR", "ENDOR", "BESPIN", "JEDHA", "YAVIN 4", "HOTH", "DAGOBAH",
-         "KAMINO", "ILUM", "GRAND ARENA", "FELUCIA", "TYTHON", "ATOLLON", "MORTIS", "ASTEROID FIELD", "DEATH STAR", "SHARED"]
+from .style import ASSETS, OUT, WORLD, Styles, load_area
 
 
 def _areas():
@@ -27,91 +26,76 @@ def _areas():
     return out
 
 
-def _out(doc):
-    rel = os.path.relpath(os.path.dirname(doc["_path"]), WORLD)
-    return MOCK / rel / f"{doc['id']}.png"
+def _style(st, planet, build, art=None, seed=1):
+    pal, _ = st.terrain(planet)
+    if art:
+        s = st.shape(art, planet, "building", seed)
+    else:
+        mat = st.material(planet)
+        s = dict(mat, fill=mat["wall"], ring=mat["trim"])
+    s = dict(s, build=build or s.get("build"), ground=pal["ground"])
+    s.setdefault("cliff", pal["cliff"])
+    return s, pal
 
 
-def cmd_render(a):
-    st = Styles()
-    docs = _areas()
-    if a.ids:
-        docs = [x for x in docs if x["id"] in a.ids]
-    elif a.planet:
-        docs = [x for x in docs if x.get("planet") == a.planet.upper()]
-    elif not a.all:
-        sys.exit("name areas, --planet P or --all")
-    for doc in docs:
-        img = draw.area(apply_overrides(doc), st, labels=not a.no_labels, grey=a.grey, relief=a.relief)
-        out = _out(doc)
-        if a.relief:
-            out = MOCK / "relief" / out.relative_to(MOCK)
-        if a.out:
-            out = Path(a.out) / out.name
-        out.parent.mkdir(parents=True, exist_ok=True)
-        img.save(out)
-    print(f"{len(docs)} areas rendered")
-
-
-def cmd_world(a):
-    st = Styles()
-    docs = _areas()
-    panels = []
-    for pl in ORDER + sorted({x.get("planet") for x in docs} - set(ORDER)):
-        mine = [x for x in docs if x.get("planet") == pl and x.get("kind") in ("town", "route", "landmark", "space")]
-        if not mine:
-            continue
-        if all(x.get("pos") is None for x in mine):
-            cx = 0
-            for x in mine:
-                w = max(len(r) for r in x["grid"].splitlines() if r)
-                x["pos"], cx = [cx, 0], cx + w + 4
-        placed = [x for x in mine if x.get("pos") is not None]
-        imgs = {x["id"]: draw.area(apply_overrides(x), st, labels=False) for x in placed}
-        x0 = min(x["pos"][0] for x in placed)
-        y0 = min(x["pos"][1] for x in placed)
-        x1 = max(x["pos"][0] + imgs[x["id"]].width // draw.C for x in placed)
-        y1 = max(x["pos"][1] + imgs[x["id"]].height // draw.C for x in placed)
-        k = a.cell
-        pad, head = 12, 30
-        sheet = Image.new("RGB", ((x1 - x0) * k + 2 * pad, (y1 - y0) * k + 2 * pad + head), (24, 24, 30))
-        dd = ImageDraw.Draw(sheet)
-        dd.text((pad, 8), pl, font=draw.F_BIG, fill=(255, 255, 255))
-        for x in placed:
-            im = imgs[x["id"]].resize((imgs[x["id"]].width * k // draw.C, imgs[x["id"]].height * k // draw.C), Image.LANCZOS)
-            sheet.paste(im, (pad + (x["pos"][0] - x0) * k, head + pad + (x["pos"][1] - y0) * k))
-        for x in placed:
-            w, h = imgs[x["id"]].width * k // draw.C, imgs[x["id"]].height * k // draw.C
-            cx, cy = pad + (x["pos"][0] - x0) * k + w / 2, head + pad + (x["pos"][1] - y0) * k + h / 2
-            draw.label(dd, x.get("name", x["id"]), cx, cy)
-        out = MOCK / pl.lower().replace(" ", "-") / "_planet.png"
-        out.parent.mkdir(parents=True, exist_ok=True)
-        sheet.save(out)
-        panels.append(sheet)
-        print(os.path.relpath(out, MOCK))
-    cols, gap = 4, 16
-    cw = max(p.width for p in panels)
-    rows = [panels[i:i + cols] for i in range(0, len(panels), cols)]
-    H = sum(max(p.height for p in r) for r in rows) + gap * (len(rows) + 1)
-    world = Image.new("RGB", (cols * cw + gap * (cols + 1), H), (24, 24, 30))
-    y = gap
-    for r in rows:
-        x = gap
-        for p in r:
-            world.paste(p, (x, y))
-            x += cw + gap
-        y += max(p.height for p in r) + gap
-    world.save(MOCK / "_world.png")
-    print("_world.png", world.size)
-
-
-def cmd_builds(a):
-    """One sheet with every building type at three sizes, in Tatooine colours: wiki/mockup/_buildings.png."""
+def _render_piece(st, name, planet, size, seed, grey):
+    """One sprite on transparent ground. `name` is an art id (looked up in the wiki) or a build name."""
     from . import build
+    art = name if name.startswith("art:") else None
+    row = st.assets.get(art) if art else None
+    if art and row is None:
+        sys.exit(f"{art} is not in {ASSETS}")
+    if art and not row.get("build"):
+        sys.exit(f"{art} has no build in world_art.csv (status {row.get('status')}); add one or pick a kit model")
+    if size is None:
+        fp = (row or {}).get("footprint") or "4x3"
+        size = tuple(int(v) for v in fp.lower().split("x"))
+    if planet is None:
+        planet = (row or {}).get("planet") or "TATOOINE"
+        if planet in ("SHARED", "NEW"):
+            planet = "TATOOINE"
+    s, pal = _style(st, planet, None if art else name, art, seed)
+    if s.get("build") not in build.BUILDS:
+        sys.exit(f"no model named {s.get('build')!r}; see `python3 -m greybox sheet` and kit.CATEGORIES")
+    b = {"at": [0, 0], "size": list(size), "door": size[0] // 2}
+    return build.sprite(b, s, seed, grey), planet
+
+
+def cmd_piece(a):
+    st = Styles()
+    OUT.mkdir(parents=True, exist_ok=True)
+    names = a.names
+    if a.all:
+        names = [k for k, r in st.assets.items() if r.get("build")]
+    done = []
+    for name in names:
+        size = tuple(int(v) for v in a.size.lower().split("x")) if a.size else None
+        sp, planet = _render_piece(st, name, a.planet and a.planet.upper(), size, a.seed, a.grey)
+        fn = name.replace("art:", "").replace(":", "_") + ("-grey" if a.grey else "") + ".png"
+        out = OUT / fn
+        sp.save(out)
+        done.append((name, fn))
+        if not a.all:
+            print(out, sp.size, planet)
+    if a.all:
+        rows = list(csv.DictReader(open(ASSETS)))
+        paths = dict(done)
+        for r in rows:
+            if r["concept_id"] in paths and not a.grey:
+                r["greybox"] = f"world/greybox/{paths[r['concept_id']]}"
+        with open(ASSETS, "w", newline="") as fh:
+            w = csv.DictWriter(fh, fieldnames=list(rows[0].keys()))
+            w.writeheader()
+            w.writerows(rows)
+        print(f"{len(done)} pieces -> {OUT}")
+
+
+def cmd_sheet(a):
+    """Every building model at three sizes, in Tatooine colours."""
+    from . import build, kit
     st = Styles()
     pal, _ = st.terrain("TATOOINE")
     mat = st.material("TATOOINE")
-    from . import kit
     kitn = {n for c in kit.CATEGORIES.values() for n in c}
     names = [n for n in dict.fromkeys(build.BUILDS) if n != "box" and n not in build.GIANTS and n not in kitn]
     sizes, cols, CW, CH = [(4, 3), (5, 4), (7, 5)], 6, 9, 7
@@ -126,14 +110,15 @@ def cmd_builds(a):
         style = dict(mat, fill=mat["wall"], ring=mat["trim"], ground=pal["ground"], cliff=pal["cliff"], build=n)
         build.building(img, b, style, 7919 * (i + 1), a.grey)
         d.text((gx * draw.C, (gy + CH - 2) * draw.C + 4), f"{n}  {w}x{h}", font=draw.F, fill=(40, 30, 20))
-    name = ("_giants" if a.giants else "_buildings") + ("-grey" if a.grey else "") + ".png"
-    img.save(MOCK / name)
-    print(name, img.size)
+    OUT.mkdir(parents=True, exist_ok=True)
+    out = OUT / (("_sheet-giants" if a.giants else "_sheet-buildings") + ("-grey" if a.grey else "") + ".png")
+    img.save(out)
+    print(out, img.size)
 
 
 def cmd_kit(a):
     """One category on plain ground (no trees): each piece at its sizes in three seeded variations, with a
-    person and a 4x3 house at the start of every row for scale. -> wiki/mockup/kit/<category>.png"""
+    person and a 4x3 house at the start of every row for scale."""
     from . import build, kit
     st = Styles()
     planet = a.planet.upper()
@@ -150,12 +135,11 @@ def cmd_kit(a):
     heights = [max(3, max(s[1] for s, _ in r)) + 2 + (1 if a.category in kit.SIGNED else 0) for _, r in rows]
     img = Image.new("RGB", (width * draw.C, (sum(heights) + 1) * draw.C), pal["ground"])
     d = ImageDraw.Draw(img, "RGBA")
-    roles = st.roles if hasattr(st, "roles") else {"npc": {"body": "#e86fa0", "ring": "#8a2a50"}}
     style = dict(mat, fill=mat["wall"], ring=mat["trim"], ground=pal["ground"], cliff=pal["cliff"])
     y = 1
     for (name, items), hh in zip(rows, heights):
         base = y + hh - 2
-        draw.person(d, {"at": [1, base - 1]}, roles)
+        draw.person(d, {"at": [1, base - 1]}, st.roles)
         build.building(img, {"at": [2, base - 3], "size": [4, 3], "door": 2}, dict(style, build="block"), 5, a.grey)
         x = ref_w + 1
         for (w, h), sd in items:
@@ -167,101 +151,49 @@ def cmd_kit(a):
         d.text((draw.C, ly * draw.C + 3), f"{name}   sizes " + ", ".join(f"{w}x{h}" for w, h in cat[name][1])
                + "   (3 seeded variations each)", font=draw.F, fill=(40, 30, 20))
         y += hh
-    out = MOCK / "kit"
-    out.mkdir(exist_ok=True)
-    fn = out / f"{a.category}{'-grey' if a.grey else ''}.png"
+    OUT.mkdir(parents=True, exist_ok=True)
+    fn = OUT / f"_kit-{a.category}{'-grey' if a.grey else ''}.png"
     img.save(fn)
-    print(fn.name, img.size)
+    print(fn, img.size)
 
 
-def cmd_scene(a):
-    """Compose a greybox area from a scene file: 3D terrain (layer 1), large structures (layer 2) and town
-    pieces (layer 3), drawn north to south so nearer things hide farther ones.
-    wiki/mockup/scenes/<name>.yaml -> wiki/mockup/scenes/<name>[-grey].png"""
-    import yaml
-    from . import build, kit, terrain
+def cmd_terrain(a):
+    """One area in relief: heights derived from its grid (rock runs become plateaus with cliff faces), 3D
+    nature by planet, and its placed pieces drawn with their greybox models."""
     st = Styles()
-    for name in a.names:
-        src = MOCK / "scenes" / f"{name}.yaml"
-        doc = yaml.safe_load(open(src))
-        planet = doc.get("planet", "TATOOINE")
-        pal, _ = st.terrain(planet)
-        mat = st.material(planet)
-        img, t = terrain.render(doc["heights"], doc["surface"], pal, a.grey)
-        d = ImageDraw.Draw(img, "RGBA")
-        pieces = [dict(p) for p in doc.get("pieces") or []]
-        nat = doc.get("nature")
-        if nat:
-            for y, row in enumerate(t.sf):
-                for x, ch in enumerate(row):
-                    if ch == "T":
-                        pieces.append({"build": nat.get("build", "pine"), "at": [x, y - 1], "size": [1, 2],
-                                       "material": nat.get("material", "nature")})
-        rows = {}
-        for i, p in enumerate(pieces):
-            if "build" in p:
-                rows.setdefault(p["at"][1] + p["size"][1] - 1, []).append((i, p))
-        for y in range(t.H):
-            t.draw_row(img, d, y)
-            for i, p in sorted(rows.get(y, []), key=lambda ip: ip[1]["at"][0]):
-                x0, w = p["at"][0], p["size"][0]
-                lv = max(t.level(x, y) for x in range(x0, x0 + w))
-                m = dict(mat, **kit.MATERIAL.get(p.get("material"), {}))
-                for k in ("wall", "roof", "trim"):
-                    if k in p:
-                        m[k] = tuple(int(p[k][j:j + 2], 16) for j in (1, 3, 5))
-                style = dict(m, fill=m["wall"], ring=m["trim"], ground=pal["ground"], cliff=pal["cliff"],
-                             build=p["build"], height=p.get("height"))
-                b = {"at": p["at"], "size": p["size"], "door": p.get("door")}
-                sp = build.sprite(b, style, p.get("seed", 101 * i + 7), a.grey)
-                img.paste(sp, (x0 * draw.C, t.cell_y(p["at"][1], lv)), sp)
-        for p in doc.get("people") or []:
-            x, y = p
-            lv = t.level(x, y)
-            q = Image.new("RGBA", (draw.C, draw.C), (0, 0, 0, 0))
-            draw.person(ImageDraw.Draw(q, "RGBA"), {"at": [0, 0]}, st.roles)
-            img.paste(q, (x * draw.C, t.cell_y(y, lv)), q)
-        out = MOCK / "scenes" / f"{name}{'-grey' if a.grey else ''}.png"
+    docs = [x for x in _areas() if x["id"] in a.ids]
+    missing = set(a.ids) - {x["id"] for x in docs}
+    if missing:
+        sys.exit(f"unknown areas: {sorted(missing)}")
+    out_dir = OUT / "areas"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    for doc in docs:
+        img = draw.area(doc, st, labels=not a.no_labels, grey=a.grey, relief=True)
+        out = out_dir / f"{doc['id']}{'-grey' if a.grey else ''}.png"
         img.save(out)
-        print(out.name, img.size)
-
-
-def cmd_missing(a):
-    st = Styles()
-    seen = set()
-    for doc in _areas():
-        for k in ("buildings", "props"):
-            for o in doc.get(k) or []:
-                if o.get("art") and o["art"] not in st.shapes:
-                    seen.add(o["art"])
-    for s in sorted(seen):
-        print(s)
-    print(f"{len(seen)} art ids without a shape")
+        print(out, img.size)
 
 
 def main(argv=None):
-    ap = argparse.ArgumentParser(prog="mockup")
+    ap = argparse.ArgumentParser(prog="greybox", description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
-    r = sub.add_parser("render")
-    r.add_argument("ids", nargs="*")
-    r.add_argument("--planet")
-    r.add_argument("--all", action="store_true")
-    r.add_argument("--no-labels", action="store_true")
-    r.add_argument("--grey", action="store_true", help="buildings in neutral grey (the greybox look)")
-    r.add_argument("--relief", action="store_true", help="terrain in relief: heights derived from the grid, 3D nature")
-    r.add_argument("--out", help="write here instead of wiki/mockup/<planet>/")
-    w = sub.add_parser("world")
-    w.add_argument("--cell", type=int, default=4, help="px per cell on the planet sheets")
-    sub.add_parser("missing")
-    bl = sub.add_parser("builds", help="sheet of every building type")
-    bl.add_argument("--grey", action="store_true")
-    bl.add_argument("--giants", action="store_true", help="the huge border pieces instead")
-    k = sub.add_parser("kit", help="one building category on plain ground, for review")
+    p = sub.add_parser("piece", help="one piece by art id or model name")
+    p.add_argument("names", nargs="*")
+    p.add_argument("--all", action="store_true", help="every art id with a build")
+    p.add_argument("--size", help="WxH in cells (default: the wiki footprint)")
+    p.add_argument("--seed", type=int, default=1)
+    p.add_argument("--planet", help="palette (default: the asset's planet)")
+    p.add_argument("--grey", action="store_true", help="pure greybox colours")
+    s = sub.add_parser("sheet", help="every building model at three sizes")
+    s.add_argument("--grey", action="store_true")
+    s.add_argument("--giants", action="store_true")
+    k = sub.add_parser("kit", help="one category side by side for review")
     k.add_argument("category")
     k.add_argument("--planet", default="TATOOINE")
     k.add_argument("--grey", action="store_true")
-    sc = sub.add_parser("scene", help="compose a greybox area: terrain, large structures, town")
-    sc.add_argument("names", nargs="+")
-    sc.add_argument("--grey", action="store_true")
+    t = sub.add_parser("terrain", help="one area in relief")
+    t.add_argument("ids", nargs="+")
+    t.add_argument("--no-labels", action="store_true")
+    t.add_argument("--grey", action="store_true")
     a = ap.parse_args(argv)
-    {"render": cmd_render, "world": cmd_world, "missing": cmd_missing, "builds": cmd_builds, "kit": cmd_kit, "scene": cmd_scene}[a.cmd](a)
+    {"piece": cmd_piece, "sheet": cmd_sheet, "kit": cmd_kit, "terrain": cmd_terrain}[a.cmd](a)

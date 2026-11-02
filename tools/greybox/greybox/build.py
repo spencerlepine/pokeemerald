@@ -476,7 +476,7 @@ def m_arena(m):
 
 # ------------------------------------------------------------------------------------------------ giants
 # Huge pieces for the edges of a map: cliff towns, city skylines, a crashed ship, hangar and fortress walls.
-# They are meant for big boxes (12+ cells wide) on blocked border cells; place them with mockup overrides.
+# They are meant for big boxes (12+ cells wide) on blocked border cells; place them on blocked border cells.
 def m_hipped(m):
     h = m.wall_h()
     rise = min(14, m.H * 0.25)

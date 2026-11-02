@@ -1,0 +1,50 @@
+# Planet palettes for the greybox tool: terrain colours, building materials and people roles.
+# Colour direction is not decided yet (owner); these are placeholders so pieces read on their planet.
+terrain:
+  default: {ground: '#cfc6b4', path: '#e6dcc6', wild: '#a9b07a', water: '#6f9cc4', bridge: '#b49a74', cliff: '#8a7d6a', nature: '#6d8a52', ladder: '#9a7d58', ledge: '#b3a68c', floor: '#d8ccb4', wall: '#6e6254',
+    blocked: '#9a9a9a'}
+  TATOOINE: {ground: '#dcc48c', path: '#ecd9ae', wild: '#c4ad72', water: '#cfe3e6', cliff: '#b07c4e', nature: '#b8875a', ledge: '#c9a774', bridge: '#a98a62', nature_kind: rock}
+  KASHYYYK: {ground: '#7fa05c', path: '#b39468', wild: '#5d8f45', water: '#4f86a8', cliff: '#7a6b5a', nature: '#2f5e2a', bridge: '#8c6a44', nature_kind: tree}
+  SULLUST: {ground: '#8a7e78', path: '#a99a8e', wild: '#6f6862', water: '#4e6f86', cliff: '#5a5052', nature: '#4a4248', nature_kind: rock}
+  MUSTAFAR: {ground: '#5e4a42', path: '#7e6252', wild: '#6e5044', water: '#e8742c', cliff: '#463634', nature: '#2e2a30', nature_kind: rock}
+  ENDOR: {ground: '#7e8f52', path: '#9c7f56', wild: '#4f7a40', water: '#4d7c96', cliff: '#6b6252', nature: '#3d5228', bridge: '#8a6440', nature_kind: tree}
+  BESPIN: {ground: '#e8d8c8', path: '#f4ebe0', wild: '#d8c2ae', water: '#f2c4a4', cliff: '#b8a090', nature: '#d0b4a0', bridge: '#cbb8a8', nature_kind: cloud}
+  JEDHA: {ground: '#c8b494', path: '#ddcdb2', wild: '#b29f78', water: '#6f97ac', cliff: '#8c7860', nature: '#9a8268', nature_kind: rock}
+  YAVIN 4: {ground: '#6f9a5c', path: '#a68f64', wild: '#4c8446', water: '#4f8a8c', cliff: '#6e6a56', nature: '#285c32', nature_kind: tree}
+  HOTH: {ground: '#eef2f6', path: '#d6dfe8', wild: '#dfe7f2', water: '#a8c8e2', cliff: '#9cb4cc', nature: '#bfd4e8', nature_kind: ice}
+  DAGOBAH: {ground: '#5f6e50', path: '#787154', wild: '#4a6440', water: '#4f7468', cliff: '#525444', nature: '#2d4128', bridge: '#6a5a3e', nature_kind: tree}
+  KAMINO: {ground: '#b4b9c3', path: '#c8cdd4', wild: '#969fab', water: '#3c506e', cliff: '#78808c', nature: '#646e7a', bridge: '#d2d7e1', nature_kind: rock}
+  ILUM: {ground: '#e6ebf5', path: '#cdd8ea', wild: '#d6def0', water: '#9cbfe0', cliff: '#8ea4c6', nature: '#b4c8e6', nature_kind: ice}
+  GRAND ARENA: {ground: '#c8c3a0', path: '#e1d7b4', wild: '#78a05a', water: '#508cbe', cliff: '#968264', nature: '#467846', nature_kind: tree}
+  FELUCIA: {ground: '#c896be', path: '#dcbeaa', wild: '#b464aa', water: '#5a96a0', cliff: '#825a78', nature: '#963c8c', nature_kind: fungus}
+  TYTHON: {ground: '#78a064', path: '#b4aa82', wild: '#5a8c50', water: '#508cb4', cliff: '#828270', nature: '#3c643c', nature_kind: tree}
+  ATOLLON: {ground: '#aa9678', path: '#c3b496', wild: '#968264', water: '#5a82aa', cliff: '#786450', nature: '#786450', nature_kind: rock}
+  MORTIS: {ground: '#9696b4', path: '#b4b4cd', wild: '#7878a0', water: '#6e6eaa', cliff: '#78708c', nature: '#5a5078', nature_kind: rock}
+  ASTEROID FIELD: {ground: '#78736e', path: '#96918c', wild: '#6a6560', water: '#14142a', cliff: '#5f5a55', nature: '#504b46', nature_kind: rock}
+  DEATH STAR: {floor: '#9aa0a8', wall: '#3c4048'}
+  SHARED: {}
+material:
+  default: {wall: '#c8bca8', roof: '#a89880', trim: '#6e6254'}
+  TATOOINE: {wall: '#e2cba0', roof: '#d4b482', trim: '#8c6a46'}
+  KASHYYYK: {wall: '#9c7a52', roof: '#6e5236', trim: '#4a3624'}
+  SULLUST: {wall: '#8c8890', roof: '#5e5a64', trim: '#3c3a42'}
+  MUSTAFAR: {wall: '#4a4650', roof: '#2e2c34', trim: '#e8742c'}
+  ENDOR: {wall: '#9a7a50', roof: '#7a8a4a', trim: '#4e3a24'}
+  BESPIN: {wall: '#f0e4d8', roof: '#d89a7a', trim: '#9a7a6a'}
+  JEDHA: {wall: '#d2c2a4', roof: '#a8906c', trim: '#6e5a44'}
+  YAVIN 4: {wall: '#8c8c74', roof: '#6a6e5a', trim: '#3e4234'}
+  HOTH: {wall: '#dfe6ee', roof: '#b8c6d6', trim: '#6e7e92'}
+  DAGOBAH: {wall: '#7a6a4a', roof: '#5a5a3a', trim: '#3a3424'}
+  KAMINO: {wall: '#e6e9ef', roof: '#c4cbd6', trim: '#7a8494'}
+  ILUM: {wall: '#d6dcea', roof: '#9eb0cc', trim: '#5a6a8a'}
+  GRAND ARENA: {wall: '#e6ddc0', roof: '#c0a46a', trim: '#7a6440'}
+  FELUCIA: {wall: '#dcc8b4', roof: '#b46496', trim: '#6e3c5a'}
+  DEATH STAR: {wall: '#6e747e', roof: '#4a4e56', trim: '#2a2c30'}
+roles:
+  story: {body: '#ff4fbf', ring: '#ffd700'}
+  trainer: {body: '#ff4fbf', ring: '#c0202a'}
+  npc: {body: '#ff8fd6', ring: '#8a2a6a'}
+  townsfolk: {body: '#ff8fd6', ring: '#8a2a6a'}
+  item: {ball: '#e8384f'}
+  berry: {ball: '#7a3fb8'}
+  object: {ball: '#a0a0a0'}

@@ -7,7 +7,7 @@ must pass the simplicity guardrail, so the kit stays as plain as the original ga
   - round shapes only through solid.py's primitives, which apply the 45° projection rule.
 Variation comes from the seed (heights, counts, which side a part sits on), never from detail.
 
-`python3 -m mockup kit <category> [--grey]` draws wiki/mockup/kit/<category>[-grey].png: every piece at
+`python3 -m greybox kit <category> [--grey]` draws wiki/world/greybox/_kit-<category>[-grey].png: every piece at
 its sizes in three seeded variations, on plain ground with a person and a house for scale.
 """
 from . import solid as S

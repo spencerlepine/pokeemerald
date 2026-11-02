@@ -12,7 +12,7 @@ stays the game grid, nothing is shifted):
   - ledges are one level: a lit lip on the drop side.
   - water sits a little below its banks.
   - nature cells become kit models: pine for forest planets, boulders for rock, shards for ice, fungus.
-`python3 -m mockup render ... --relief` draws areas this way. `heights(grid)` returns the derived levels.
+`python3 -m greybox terrain <area-id>` draws areas this way. `heights(grid)` returns the derived levels.
 """
 from .style import shade
 

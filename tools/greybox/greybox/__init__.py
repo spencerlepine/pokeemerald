@@ -1,2 +1,2 @@
-"""Phase 2 of the world: flat shapes and colours drawn on top of the phase 1 blockout (wiki/world).
-Reads phase 1 read-only; writes only to wiki/mockup/."""
+"""greybox: the greybox art tool. Draws every world piece as a simple 3D model ray-cast into pixels in the
+game's top-down view, from what the wiki says (wiki/mapping/world_art.csv for pieces, wiki/world for areas)."""

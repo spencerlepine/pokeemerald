@@ -1,4 +1,4 @@
-"""Draw one area as a flat shapes-and-colours mockup: planet-coloured terrain, simple 3/4-view buildings,
+"""Draw one area:  planet-coloured terrain, simple 3/4-view buildings,
 props as basic shapes, and pink-family figures for people. 16 px per map cell, like the game."""
 import math
 import zlib

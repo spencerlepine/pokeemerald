@@ -106,7 +106,8 @@ in `../game`. Every `source_file` is a path relative to `../game`.
 - New flags and vars use only Emerald's unused slots (listed in `bible/NET_NEW_DESIGNS.md`).
 - Name limits: creature 10, move 12, item 14, ability 12, type 6, trainer class 12, trainer name 10, map name 16.
 - [`bible/STORY.md`](bible/STORY.md) is the story: planets, factions, cast, acts.
-- **World art:** [`bible/WORLD_ART.md`](bible/WORLD_ART.md) and `mapping/world_art.csv` are the source of truth for
+- **World art:** [`bible/WORLD_ART.md`](bible/WORLD_ART.md) and `mapping/world_art.csv` (every piece with its `status`,
+  `build`, `tool` and `notes`; `python3 -m blockout todo` queries it with the areas) are the source of truth for
   the new buildings, interiors, objects and nature each planet and town gets (with signal/noise placement rules and
   reference images in `art/concept/`).
 - **World-building tools:** [`../tools/world-art/README.md`](../tools/world-art/README.md) draws new shapes from 3D models. Only owner-approved models live there (so far the Hoenn tree).
