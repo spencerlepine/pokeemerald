@@ -1,0 +1,74 @@
+# Cave of Origin, Sullust: net-new per-planet split of MUS_CAVE_OF_ORIGIN (wiki row
+# net:mus-cave-of-origin-sullust), for Starfall Cavern. SCRATCH: no film cue, written from the brief.
+# The Dagobah original is a dark-side vergence (whispering pads, heartbeat pulse); on Sullust the same dread sits
+# in a volcanic cave where meteor fire fell: E Phrygian (the E-F half step everywhere), a timpani lub-dub
+# heartbeat pedal on E, a tuba groaning under a single string line, a 50 % square ember melody first, then the
+# horn takes it into Bb (the tritone) before a 2-bar turn back. Tempo, voicegroup and loop length from the
+# vanilla song (MUS_CAVE_OF_ORIGIN: cave_of_origin, 100 bpm, 43.8 s AMBIENT loop).
+# Brief (sw_subject): Sullust version of MUS_CAVE_OF_ORIGIN, same role and mood family; theme to be decided.
+name: cave-of-origin-sullust
+constant: MUS_CAVE_OF_ORIGIN_SULLUST
+form: AMBIENT
+voicegroup: cave_of_origin        # vanilla's own: bell 14, harp 46, timpani 47, strings 48, tuba 58, horn 60, squares, waves
+master_volume: 80
+tempo: 100
+steps_per_beat: 2                 # eighth-note grid
+time_signature: [4, 4]
+seed: 8
+
+parts:
+  ember:   {program: 5,  channel: 0, volume: 56,  pan: 14,  gate: 0.9, mono: true}
+  horn:    {program: 60, channel: 1, volume: 90,  pan: -10, gate: 0.95, humanize: {vel: 4}}
+  strings: {program: 48, channel: 2, volume: 64,  pan: 24,  gate: 1.0}
+  tuba:    {program: 58, channel: 3, volume: 84,  pan: -20, gate: 0.95}
+  timpani: {program: 47, channel: 4, volume: 90,  pan: 6,   gate: 1.0}
+  bell:    {program: 14, channel: 5, volume: 60,  pan: -32, gate: 1.0}
+  bass:    {program: 81, channel: 6, volume: 76,  pan: 0,   octave: 2, role: bass, gate: 0.95}
+  flicker: {program: 80, channel: 7, volume: 36,  pan: 36,  octave: 4, gate: 0.5, mono: true}
+
+progressions:
+  intro: "Em | F"
+  a: "Em | F | Em | F | Dm | F | Em | Em"
+  b: "Am | F | Am | F | Dm | Bb | F | E"
+  turn: "F | E"
+
+phrases:
+  heart: "E2:1 E2:1 r:6"
+  heart_turn: "E2:1 E2:1 r:6 | E2:1 E2:1 E2:1 E2:1 E2:1 E2:1 E2:1 E2:1"
+  drone: "^1:8"
+  flick: "^3+:1 r:1 ^2:1 r:1 ^1+:1 r:1 ^2:1 r:1"
+  tuba_a: "E2:6 F2:2 | F2:8 | E2:6 F2:2 | F2:8 | D2:8 | F2:8 | E2:8 | E2:6 F2:2"
+  tuba_b: "A1:8 | F2:8 | A1:8 | F2:8 | D2:8 | Bb1:8 | F2:8 | E2:8"
+  str_a: "B3:8 | C4:8 | B3:8 | A3:8 | A3:8 | C4:8 | B3:8 | B3:8"
+  str_b: "E4:8 | F4:8 | E4:8 | C4:8 | D4:8 | D4:8 | C4:8 | B3:8"
+  ember_a: |
+    E4:3 F4:1 G4:4 | A4:2 G4:2 F4:4 | E4:3 F4:1 G4:2 B4:2 | C5:6 A4:2 |
+    D5:3 C5:1 A4:4 | C5:2 A4:2 F4:4 | G4:3 F4:1 E4:4 | E4:6 r:2
+  horn_b: |
+    A3:4 C4:2 E4:2 | F4:6 E4:2 | E4:4 C4:2 A3:2 | A3:8 |
+    D4:4 F4:2 A4:2 | Bb4:4 A4:2 F4:2 | A4:4 G4:2 F4:2 | G#4:8
+  bell_a: "E4:8 | r:8 | r:8 | r:8 | r:8 | r:8 | r:8 | r:8"
+  bell_turn: "r:8 | E4:8"
+
+sections:
+  intro:
+    bars: 2
+    chords: intro
+    parts: {timpani: heart, tuba: "E2:8 | F2:8", strings: "B3:8 | C4:8", bass: drone}
+  a:
+    bars: 8
+    chords: a
+    parts: {ember: ember_a, strings: str_a, tuba: tuba_a, timpani: heart, bell: bell_a, bass: drone}
+  b:
+    bars: 8
+    chords: b
+    gain: {ember: -14}
+    parts: {horn: horn_b, strings: str_b, tuba: tuba_b, timpani: heart, bass: drone, flicker: flick}
+  turn:
+    bars: 2
+    chords: turn
+    ramp: {timpani: [-6, 4]}
+    parts: {tuba: "F2:8 | E2:8", strings: "C4:8 | B3:8", timpani: heart_turn, bell: bell_turn, bass: drone, flicker: flick}
+
+arrangement: [intro, a, b, turn]
+loop_start: a
