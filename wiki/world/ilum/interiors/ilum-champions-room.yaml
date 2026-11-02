@@ -3,8 +3,8 @@ name: ILUM CHAMPIONS ROOM
 planet: ILUM
 kind: interior
 replaces: EverGrandeCity_ChampionsRoom
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Ilum Champions Room: vanilla room layout kept for the blockout.'
 grid: |
   #############
   #############
@@ -23,15 +23,15 @@ exits: []
 buildings: []
 props: []
 people:
-- name: '0x0'
+- name: Event object
   at: [6, 5]
-  role: npc
-- name: '0x0'
+  role: object
+- name: Event object
   at: [6, 12]
-  role: npc
-- name: '0x0'
+  role: object
+- name: Event object
   at: [6, 12]
-  role: npc
+  role: object
 signs: []
 warps:
 - name: Door
@@ -40,4 +40,4 @@ warps:
 - name: Door
   at: [6, 2]
   to: ilum-hall-of-fame
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

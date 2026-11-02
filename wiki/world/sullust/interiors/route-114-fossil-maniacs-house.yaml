@@ -3,8 +3,8 @@ name: ROUTE 114 FOSSIL MANIACS HOUSE
 planet: SULLUST
 kind: interior
 replaces: Route114_FossilManiacsHouse
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Route 114 Fossil Maniacs House: a home; residents keep vanilla''s spots and scripts.'
 grid: |
   ##########
   ####.#####
@@ -40,4 +40,4 @@ warps:
 - name: Door
   at: [4, 1]
   to: route-114-fossil-maniacs-tunnel
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

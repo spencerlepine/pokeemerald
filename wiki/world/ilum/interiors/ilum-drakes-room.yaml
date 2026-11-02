@@ -3,8 +3,8 @@ name: ILUM DRAKES ROOM
 planet: ILUM
 kind: interior
 replaces: EverGrandeCity_DrakesRoom
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Ilum Drakes Room: vanilla room layout kept for the blockout.'
 grid: |
   #############
   #############
@@ -35,4 +35,4 @@ warps:
 - name: Door
   at: [6, 2]
   to: ilum-hall-4
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

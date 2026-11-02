@@ -1,0 +1,39 @@
+id: bens-hut-interior
+name: Ben's hut
+planet: TATOOINE
+kind: interior
+replaces: new
+status: BLOCKOUT
+story: 'Obi-Wan''s hermit hut: a sleeping alcove, a work bench and the old chest.'
+grid: |
+  ||||||||||||||
+  ||||||||||||||
+  |____________|
+  |____________|
+  |____________|
+  |____________|
+  |____________|
+  |____________|
+  |____________|
+  |||||||_||||||
+exits: []
+buildings: []
+props:
+- name: Old chest
+  art: art:new:old-chest
+  at: [2, 2]
+  size: [2, 1]
+- name: Work bench
+  art: art:new:work-bench
+  at: [9, 2]
+  size: [3, 1]
+people:
+- name: Obi-Wan (Ben)
+  at: [6, 4]
+  role: story
+signs: []
+warps:
+- name: Door
+  at: [7, 9]
+  to: bens-hut
+todo: ['New interior (replaces: new); placeholder room, sized for its contents.']

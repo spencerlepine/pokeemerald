@@ -1,0 +1,49 @@
+id: hangar-tatooine-kashyyyk
+name: Millennium Falcon cabin
+planet: SHARED
+kind: interior
+replaces: new
+status: BLOCKOUT
+story: 'Ship link between mos-eisley and kachirho: the Millennium Falcon''s cabin. The pilot flies to the other end; each end''s door leads out on its planet.'
+grid: |
+  ||||||||||||||||||
+  ||||||||||||||||||
+  |________________|
+  |________________|
+  |________________|
+  |________________|
+  |________________|
+  |________________|
+  |________________|
+  |_________________
+  |________________|
+  |||||||||_||||||||
+exits: []
+buildings: []
+props:
+- name: Millennium Falcon cockpit
+  art: art:new:ship-cockpit
+  at: [6, 2]
+  size: [6, 2]
+- name: Dejarik table
+  art: art:new:dejarik-table
+  at: [2, 6]
+  size: [2, 2]
+- name: StarNAV flight console
+  art: art:new:starnav-console
+  at: [14, 3]
+  size: [1, 1]
+people:
+- name: Pilot
+  at: [9, 5]
+  role: story
+signs: []
+warps:
+- name: Door
+  at: [9, 11]
+  to: mos-eisley
+- name: Ramp (other end)
+  at: [17, 9]
+  to: kachirho
+todo: ['New interior (replaces: new); placeholder room, sized for its contents.', One cabin for both ends; the script swaps which ramp opens. See net_new.csv for
+    unlock flags.]

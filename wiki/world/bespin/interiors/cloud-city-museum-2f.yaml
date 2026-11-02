@@ -3,8 +3,8 @@ name: CLOUD CITY MUSEUM 2F
 planet: BESPIN
 kind: interior
 replaces: LilycoveCity_LilycoveMuseum_2F
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Cloud City Museum 2F: vanilla room layout kept for the blockout.'
 grid: |
   ####TTTTTTTTT#TTTT####
   TTTTTTTTTTTTT.TTTTTTTT
@@ -64,4 +64,4 @@ warps:
 - name: Door
   at: [13, 1]
   to: cloud-city-museum-1f
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

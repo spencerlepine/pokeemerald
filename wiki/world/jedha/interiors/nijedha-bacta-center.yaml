@@ -1,0 +1,35 @@
+id: nijedha-bacta-center
+name: NiJedha Bacta Center
+planet: JEDHA
+kind: interior
+replaces: new
+status: BLOCKOUT
+story: Bacta Center (shared kit).
+grid: |
+  ||||||||||||||
+  ||||||||||||||
+  |____________|
+  |____________|
+  |____________|
+  |____________|
+  |____________|
+  |____________|
+  |____________|
+  |||||||_||||||
+exits: []
+buildings: []
+props:
+- name: Bacta counter
+  art: art:shared:bacta-center-interior
+  at: [4, 2]
+  size: [6, 1]
+people:
+- name: Medic droid
+  at: [7, 3]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [7, 9]
+  to: nijedha
+todo: ['New interior (replaces: new); placeholder room, sized for its contents.']

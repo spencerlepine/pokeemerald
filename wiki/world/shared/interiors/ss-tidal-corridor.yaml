@@ -3,8 +3,8 @@ name: SS TIDAL CORRIDOR
 planet: SHARED
 kind: interior
 replaces: SSTidalCorridor
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Ss Tidal Corridor: vanilla room layout kept for the blockout.'
 grid: |
   ##################
   ##################
@@ -35,9 +35,9 @@ people:
 - name: Peeko
   at: [7, 2]
   role: npc
-- name: '0x0'
+- name: Event object
   at: [9, 10]
-  role: npc
+  role: object
 signs:
 - name: Sign
   at: [2, 1]
@@ -91,4 +91,4 @@ warps:
 - name: Door
   at: [16, 2]
   to: ss-tidal-lower-deck
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

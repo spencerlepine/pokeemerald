@@ -3,8 +3,8 @@ name: ROUTE 109 SEASHORE HOUSE
 planet: KASHYYYK
 kind: interior
 replaces: Route109_SeashoreHouse
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Route 109 Seashore House: a home; residents keep vanilla''s spots and scripts.'
 grid: |
   ###############
   ###############
@@ -40,4 +40,4 @@ warps:
 - name: Door
   at: [7, 9]
   to: route-109
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

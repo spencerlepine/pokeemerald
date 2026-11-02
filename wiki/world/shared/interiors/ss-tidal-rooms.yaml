@@ -3,8 +3,8 @@ name: SS TIDAL ROOMS
 planet: SHARED
 kind: interior
 replaces: SSTidalRooms
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Ss Tidal Rooms: vanilla room layout kept for the blockout.'
 grid: |
   ####################################
   ####################################
@@ -94,4 +94,4 @@ warps:
 - name: Door
   at: [31, 1]
   to: ss-tidal-corridor
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

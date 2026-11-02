@@ -3,8 +3,8 @@ name: ROUTE 114 FOSSIL MANIACS TUNNEL
 planet: SULLUST
 kind: interior
 replaces: Route114_FossilManiacsTunnel
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Route 114 Fossil Maniacs Tunnel: vanilla room layout kept for the blockout.'
 grid: |
   ..########...
   .#####.###...
@@ -47,7 +47,5 @@ warps:
 - name: Door
   at: [7, 25]
   to: route-114-fossil-maniacs-house
-- name: Door
-  at: [6, 2]
-  to: krayt-graveyard
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Planet border cut: door at [6, 2] to krayt-graveyard; reached by ship instead.', Vanilla layout
+    kept; dress with the planet's interior kit in the art phase.]

@@ -3,8 +3,8 @@ name: CLOUD CITY HANGAR
 planet: BESPIN
 kind: interior
 replaces: LilycoveCity_Harbor
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Cloud City Hangar: vanilla room layout kept for the blockout.'
 grid: |
   ........................
   ........................
@@ -28,18 +28,18 @@ people:
 - name: Ferry Attendant
   at: [8, 10]
   role: npc
-- name: '0x0'
+- name: Event object
   at: [8, 9]
-  role: npc
+  role: object
 - name: Sailor
   at: [3, 13]
   role: npc
-- name: '0x0'
+- name: Event object
   at: [8, 10]
-  role: npc
-- name: '0x0'
+  role: object
+- name: Event object
   at: [8, 10]
-  role: npc
+  role: object
 signs: []
 warps:
 - name: Door
@@ -48,4 +48,4 @@ warps:
 - name: Door
   at: [12, 14]
   to: cloud-city
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

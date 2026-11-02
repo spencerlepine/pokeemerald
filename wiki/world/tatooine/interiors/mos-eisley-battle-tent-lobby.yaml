@@ -3,8 +3,8 @@ name: MOS EISLEY BATTLE TENT LOBBY
 planet: TATOOINE
 kind: interior
 replaces: SlateportCity_BattleTentLobby
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Mos Eisley Battle Tent Lobby: vanilla room layout kept for the blockout.'
 grid: |
   #############
   ######.######
@@ -45,4 +45,4 @@ warps:
 - name: Door
   at: [7, 9]
   to: mos-eisley
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

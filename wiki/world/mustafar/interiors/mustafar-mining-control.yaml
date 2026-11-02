@@ -1,0 +1,46 @@
+id: mustafar-mining-control
+name: Mustafar mining control
+planet: MUSTAFAR
+kind: interior
+replaces: new
+status: BLOCKOUT
+story: Control room over the lava collectors; Imperial overseers and droid workers.
+grid: |
+  ||||||||||||||||||||
+  ||||||||||||||||||||
+  |__________________|
+  |__________________|
+  |__________________|
+  |__________________|
+  |__________________|
+  |__________________|
+  |__________________|
+  |__________________|
+  |__________________|
+  |__________________|
+  |__________________|
+  ||||||||||_|||||||||
+exits: []
+buildings: []
+props:
+- name: Control consoles
+  art: art:new:control-console
+  at: [4, 2]
+  size: [12, 2]
+- name: Lava viewport
+  art: art:new:lava-viewport
+  at: [2, 6]
+  size: [3, 3]
+people:
+- name: Imperial overseer
+  at: [10, 5]
+  role: trainer
+- name: Mining droid
+  at: [15, 9]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [10, 13]
+  to: mustafar-mining-facility
+todo: ['New interior (replaces: new); placeholder room, sized for its contents.']

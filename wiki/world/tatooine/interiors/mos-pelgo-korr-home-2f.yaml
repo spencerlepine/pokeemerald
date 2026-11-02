@@ -3,8 +3,8 @@ name: MOS PELGO KORR HOME 2F
 planet: TATOOINE
 kind: interior
 replaces: LittlerootTown_MaysHouse_2F
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Mos Pelgo Korr Home 2F: a home; residents keep vanilla''s spots and scripts.'
 grid: |
   #########
   #.#######
@@ -21,48 +21,48 @@ people:
 - name: Rival
   at: [1, 1]
   role: npc
-- name: '0x0'
+- name: Event object
   at: [0, 6]
-  role: npc
-- name: '0x0'
+  role: object
+- name: Event object
   at: [1, 6]
-  role: npc
-- name: '0x0'
+  role: object
+- name: Event object
   at: [2, 6]
-  role: npc
-- name: '0x0'
+  role: object
+- name: Event object
   at: [3, 6]
-  role: npc
-- name: '0x0'
+  role: object
+- name: Event object
   at: [4, 6]
-  role: npc
-- name: '0x0'
+  role: object
+- name: Event object
   at: [5, 6]
-  role: npc
-- name: '0x0'
+  role: object
+- name: Event object
   at: [0, 7]
-  role: npc
-- name: '0x0'
+  role: object
+- name: Event object
   at: [1, 7]
-  role: npc
-- name: '0x0'
+  role: object
+- name: Event object
   at: [2, 7]
-  role: npc
-- name: '0x0'
+  role: object
+- name: Event object
   at: [3, 7]
-  role: npc
-- name: '0x0'
+  role: object
+- name: Event object
   at: [4, 7]
-  role: npc
-- name: '0x0'
+  role: object
+- name: Event object
   at: [5, 7]
-  role: npc
-- name: '0x0'
+  role: object
+- name: Event object
   at: [1, 1]
-  role: npc
-- name: '0x0'
+  role: object
+- name: Event object
   at: [3, 4]
-  role: npc
+  role: object
 - name: Item
   at: [5, 4]
   role: item
@@ -79,4 +79,4 @@ warps:
 - name: Door
   at: [1, 1]
   to: mos-pelgo-korr-home-1f
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

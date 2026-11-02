@@ -3,8 +3,8 @@ name: GRAND ARENA RECEPTION GATE
 planet: GRAND ARENA
 kind: interior
 replaces: BattleFrontier_ReceptionGate
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Grand Arena Reception Gate: vanilla room layout kept for the blockout.'
 grid: |
   #########
   ####.####
@@ -33,9 +33,9 @@ people:
 - name: Rules Guide
   at: [8, 4]
   role: npc
-- name: '0x0'
+- name: Event object
   at: [4, 5]
-  role: npc
+  role: object
 - name: Frontier Pass Guide
   at: [0, 4]
   role: npc
@@ -47,4 +47,4 @@ warps:
 - name: Door
   at: [4, 1]
   to: grand-arena-outside-west
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

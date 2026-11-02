@@ -58,7 +58,7 @@ buildings:
   at: [4, 5]
   size: [6, 4]
   door: 2
-  to: mos-entha-lars-home
+  to: mos-entha-wallys-house
 - name: Bacta Center
   art: art:shared:bacta-center
   at: [26, 6]

@@ -3,8 +3,8 @@ name: YAVIN 4 LAUNCH TOWER 1F
 planet: YAVIN 4
 kind: interior
 replaces: MossdeepCity_SpaceCenter_1F
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Yavin 4 Launch Tower 1F: vanilla room layout kept for the blockout.'
 grid: |
   #..############.
   #############.##
@@ -48,7 +48,7 @@ people:
   at: [13, 2]
   role: trainer
 - name: Magma Note
-  at: [2, 5]
+  at: [2, 4]
   role: npc
 - name: Steven
   at: [1, 4]
@@ -64,4 +64,4 @@ warps:
 - name: Door
   at: [13, 1]
   to: yavin-4-launch-tower-2f
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

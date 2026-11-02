@@ -1,0 +1,37 @@
+id: hoth-tauntaun-shelter
+name: Tauntaun shelter
+planet: HOTH
+kind: interior
+replaces: new
+status: BLOCKOUT
+story: Stalls for the survey team's tauntauns.
+grid: |
+  ||||||||||||||||
+  ||||||||||||||||
+  |______________|
+  |______________|
+  |______________|
+  |______________|
+  |______________|
+  |______________|
+  |______________|
+  |______________|
+  |______________|
+  ||||||||_|||||||
+exits: []
+buildings: []
+props:
+- name: Tauntaun stalls
+  art: art:new:tauntaun-stall
+  at: [2, 2]
+  size: [12, 2]
+people:
+- name: Tauntaun handler
+  at: [8, 6]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [8, 11]
+  to: hoth-tundra
+todo: ['New interior (replaces: new); placeholder room, sized for its contents.']

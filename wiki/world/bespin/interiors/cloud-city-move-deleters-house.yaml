@@ -3,8 +3,8 @@ name: CLOUD CITY MOVE DELETERS HOUSE
 planet: BESPIN
 kind: interior
 replaces: LilycoveCity_MoveDeletersHouse
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Cloud City Move Deleters House: a home; residents keep vanilla''s spots and scripts.'
 grid: |
   ###########
   ###########
@@ -29,4 +29,4 @@ warps:
 - name: Door
   at: [4, 7]
   to: cloud-city
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

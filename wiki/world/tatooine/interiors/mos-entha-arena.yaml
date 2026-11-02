@@ -3,8 +3,8 @@ name: MOS ENTHA ARENA
 planet: TATOOINE
 kind: interior
 replaces: PetalburgCity_Gym
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Doran, the player''s father (Normal)''s arena: puzzle floor and arena trainers kept from vanilla.'
 grid: |
   #########
   #########
@@ -149,12 +149,12 @@ people:
 - name: Gym Guide
   at: [3, 109]
   role: npc
-- name: '0x0'
+- name: Event object
   at: [4, 111]
-  role: npc
-- name: '0x0'
+  role: object
+- name: Event object
   at: [1, 7]
-  role: npc
+  role: object
 signs:
 - name: Sign
   at: [1, 105]
@@ -299,4 +299,4 @@ warps:
 - name: Door
   at: [6, 7]
   to: mos-entha-arena
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

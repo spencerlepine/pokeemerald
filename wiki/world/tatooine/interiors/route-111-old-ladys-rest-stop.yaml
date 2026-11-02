@@ -3,8 +3,8 @@ name: ROUTE 111 OLD LADYS REST STOP
 planet: TATOOINE
 kind: interior
 replaces: Route111_OldLadysRestStop
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Route 111 Old Ladys Rest Stop: vanilla room layout kept for the blockout.'
 grid: |
   ##########
   ########T#
@@ -29,4 +29,4 @@ warps:
 - name: Door
   at: [4, 7]
   to: route-111
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

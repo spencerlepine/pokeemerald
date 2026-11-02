@@ -3,8 +3,8 @@ name: ROUTE 119 HOUSE
 planet: ENDOR
 kind: interior
 replaces: Route119_House
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Route 119 House: a home; residents keep vanilla''s spots and scripts.'
 grid: |
   ##########
   ########..
@@ -48,4 +48,4 @@ warps:
 - name: Door
   at: [4, 8]
   to: route-119
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

@@ -3,8 +3,8 @@ name: GRAND ARENA BATTLE ARENA LOBBY
 planet: GRAND ARENA
 kind: interior
 replaces: BattleFrontier_BattleArenaLobby
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Grand Arena Battle Arena Lobby: vanilla room layout kept for the blockout.'
 grid: |
   ################
   ################
@@ -24,7 +24,7 @@ buildings: []
 props: []
 people:
 - name: Attendant
-  at: [7, 7]
+  at: [6, 8]
   role: npc
 - name: Woman
   at: [2, 10]
@@ -47,4 +47,4 @@ warps:
 - name: Door
   at: [7, 12]
   to: grand-arena-outside-east
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

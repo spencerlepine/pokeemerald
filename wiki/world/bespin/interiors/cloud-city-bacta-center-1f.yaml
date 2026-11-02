@@ -3,8 +3,8 @@ name: CLOUD CITY BACTA CENTER 1F
 planet: BESPIN
 kind: interior
 replaces: LilycoveCity_PokemonCenter_1F
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Bacta Center: heal counter with the medic droid and the StarNAV terminal (shared kit).'
 grid: |
   ##############
   ##############
@@ -45,4 +45,4 @@ warps:
 - name: Door
   at: [1, 6]
   to: cloud-city-bacta-center-2f
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

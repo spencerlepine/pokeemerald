@@ -3,8 +3,8 @@ name: GRAND ARENA SUPPLY DEPOT
 planet: GRAND ARENA
 kind: interior
 replaces: BattleFrontier_Mart
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Supply Depot: counter and shelves (shared kit).'
 grid: |
   ###TTT#####
   ###TTT#####
@@ -38,4 +38,4 @@ warps:
 - name: Door
   at: [4, 7]
   to: grand-arena-outside-west
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

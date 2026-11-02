@@ -3,8 +3,8 @@ name: MOS ESPA HOUSE 1
 planet: TATOOINE
 kind: interior
 replaces: MauvilleCity_House1
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Mos Espa House 1: a home; residents keep vanilla''s spots and scripts.'
 grid: |
   ###########
   ###########
@@ -18,9 +18,9 @@ exits: []
 buildings: []
 props: []
 people:
-- name: Rock Smash Dude
+- name: Rock to smash
   at: [4, 4]
-  role: npc
+  role: object
 signs: []
 warps:
 - name: Door
@@ -29,4 +29,4 @@ warps:
 - name: Door
   at: [4, 7]
   to: mos-espa
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

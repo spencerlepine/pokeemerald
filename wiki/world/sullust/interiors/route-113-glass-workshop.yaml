@@ -3,8 +3,8 @@ name: ROUTE 113 GLASS WORKSHOP
 planet: SULLUST
 kind: interior
 replaces: Route113_GlassWorkshop
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Route 113 Glass Workshop: vanilla room layout kept for the blockout.'
 grid: |
   ##########
   ##########
@@ -33,4 +33,4 @@ warps:
 - name: Door
   at: [4, 8]
   to: route-113
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

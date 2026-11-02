@@ -1,0 +1,44 @@
+id: tosche-station-power-station
+name: Tosche Station power room
+planet: TATOOINE
+kind: interior
+replaces: new
+status: BLOCKOUT
+story: 'Tosche Station''s power converter room: the converters Luke always wanted to pick up. Fixer tinkers here.'
+grid: |
+  ||||||||||||||||||
+  ||||||||||||||||||
+  |________________|
+  |________________|
+  |________________|
+  |________________|
+  |________________|
+  |________________|
+  |________________|
+  |________________|
+  |________________|
+  |||||||||_||||||||
+exits: []
+buildings: []
+props:
+- name: Power converters
+  art: art:new:power-converters
+  at: [2, 2]
+  size: [4, 2]
+- name: Generator
+  art: art:shared:fuel-tanks
+  at: [12, 2]
+  size: [3, 3]
+people:
+- name: Fixer
+  at: [8, 5]
+  role: npc
+- name: Station hand
+  at: [4, 8]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [9, 11]
+  to: tosche-station
+todo: ['New interior (replaces: new); placeholder room, sized for its contents.']

@@ -3,8 +3,8 @@ name: CLOUD CITY POKEMON TRAINER FAN CLUB
 planet: BESPIN
 kind: interior
 replaces: LilycoveCity_PokemonTrainerFanClub
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Cloud City Pokemon Trainer Fan Club: vanilla room layout kept for the blockout.'
 grid: |
   ############
   ##T#########
@@ -59,4 +59,4 @@ warps:
 - name: Door
   at: [5, 13]
   to: cloud-city
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

@@ -3,8 +3,8 @@ name: GRAND ARENA BATTLE DOME PRE BATTLE ROOM
 planet: GRAND ARENA
 kind: interior
 replaces: BattleFrontier_BattleDomePreBattleRoom
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Grand Arena Battle Dome Pre Battle Room: vanilla room layout kept for the blockout.'
 grid: |
   ##...#...
   ##...#...
@@ -18,15 +18,9 @@ exits: []
 buildings: []
 props: []
 people:
-- name: '0x0'
+- name: Event object
   at: [5, 2]
-  role: npc
+  role: object
 signs: []
-warps:
-- name: Door
-  at: [6, 8]
-  to: grand-arena-outside-west
-- name: Door
-  at: [7, 8]
-  to: grand-arena-outside-west
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+warps: []
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

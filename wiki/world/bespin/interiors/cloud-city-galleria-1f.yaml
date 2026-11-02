@@ -3,8 +3,8 @@ name: CLOUD CITY GALLERIA 1F
 planet: BESPIN
 kind: interior
 replaces: LilycoveCity_DepartmentStore_1F
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Cloud City Galleria 1F: vanilla room layout kept for the blockout.'
 grid: |
   ##################
   ################.#
@@ -36,9 +36,7 @@ people:
 - name: Azumarill
   at: [2, 6]
   role: npc
-signs:
-- name: Sign
-  at: [0, 8]
+signs: []
 warps:
 - name: Door
   at: [8, 7]
@@ -52,4 +50,4 @@ warps:
 - name: Door
   at: [2, 1]
   to: cloud-city-galleria-elevator
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

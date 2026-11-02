@@ -3,8 +3,8 @@ name: GRAND ARENA LOUNGE 5
 planet: GRAND ARENA
 kind: interior
 replaces: BattleFrontier_Lounge5
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Grand Arena Lounge 5: vanilla room layout kept for the blockout.'
 grid: |
   #############
   #TTTTT#TTTTT#
@@ -38,4 +38,4 @@ warps:
 - name: Door
   at: [2, 7]
   to: grand-arena-outside-east
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

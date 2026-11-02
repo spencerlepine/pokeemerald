@@ -61,7 +61,7 @@ buildings:
   at: [5, 16]
   size: [5, 4]
   door: 2
-  to: anchorhead-camies-home
+  to: anchorhead-wandas-house
 - name: Companion rater's home
   art: art:tatooine:homestead-dome
   at: [14, 17]

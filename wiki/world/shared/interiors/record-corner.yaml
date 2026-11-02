@@ -3,8 +3,8 @@ name: RECORD CORNER
 planet: SHARED
 kind: interior
 replaces: RecordCorner
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Record Corner: vanilla room layout kept for the blockout.'
 grid: |
   ####################
   #########TT#########
@@ -21,7 +21,7 @@ buildings: []
 props: []
 people:
 - name: Attendant
-  at: [10, 5]
+  at: [8, 3]
   role: npc
 signs: []
 warps:
@@ -37,4 +37,4 @@ warps:
 - name: Door
   at: [10, 9]
   to: MAP_DYNAMIC
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

@@ -1,0 +1,35 @@
+id: kachirho-supply-depot
+name: Kachirho supply depot
+planet: KASHYYYK
+kind: interior
+replaces: new
+status: BLOCKOUT
+story: Supply Depot in a Wookiee tree hall (shared kit).
+grid: |
+  ||||||||||||||
+  ||||||||||||||
+  |____________|
+  |____________|
+  |____________|
+  |____________|
+  |____________|
+  |____________|
+  |____________|
+  |||||||_||||||
+exits: []
+buildings: []
+props:
+- name: Counter
+  art: art:shared:supply-depot-interior
+  at: [2, 2]
+  size: [4, 1]
+people:
+- name: Wookiee clerk
+  at: [3, 3]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [7, 9]
+  to: kachirho
+todo: ['New interior (replaces: new); placeholder room, sized for its contents.']

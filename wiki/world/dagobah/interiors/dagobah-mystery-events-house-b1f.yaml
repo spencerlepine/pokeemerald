@@ -3,8 +3,8 @@ name: DAGOBAH MYSTERY EVENTS HOUSE B1F
 planet: DAGOBAH
 kind: interior
 replaces: SootopolisCity_MysteryEventsHouse_B1F
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Dagobah Mystery Events House B1F: a home; residents keep vanilla''s spots and scripts.'
 grid: |
   ############
   T##.#######T
@@ -19,12 +19,12 @@ exits: []
 buildings: []
 props: []
 people:
-- name: '0x0'
+- name: Event object
   at: [6, 5]
-  role: npc
+  role: object
 signs: []
 warps:
 - name: Door
   at: [3, 1]
   to: dagobah-mystery-events-house-1f
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

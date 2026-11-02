@@ -3,8 +3,8 @@ name: MOS ESPA SABACC DEN
 planet: TATOOINE
 kind: interior
 replaces: MauvilleCity_GameCorner
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Mos Espa Sabacc Den: vanilla room layout kept for the blockout.'
 grid: |
   ######################
   #####TTT##############
@@ -113,4 +113,4 @@ warps:
 - name: Door
   at: [12, 10]
   to: mos-espa
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

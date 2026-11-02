@@ -3,8 +3,8 @@ name: ROUTE 110 PUZZLE HOUSE PUZZLE 3
 planet: TATOOINE
 kind: interior
 replaces: Route110_TrickHousePuzzle3
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Route 110 Puzzle House Puzzle 3: a home; residents keep vanilla''s spots and scripts.'
 grid: |
   ###############
   ###############
@@ -41,12 +41,12 @@ people:
 - name: Trainer Anbar
   at: [10, 10]
   role: trainer
-- name: Event Script_Rock Smash
+- name: Event object
   at: [1, 20]
-  role: npc
-- name: Event Script_Rock Smash
+  role: object
+- name: Event object
   at: [2, 21]
-  role: npc
+  role: object
 - name: Item
   at: [1, 2]
   role: item
@@ -66,4 +66,4 @@ warps:
 - name: Door
   at: [13, 1]
   to: route-110-puzzle-house-end
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

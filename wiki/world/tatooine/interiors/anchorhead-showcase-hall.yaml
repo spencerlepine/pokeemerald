@@ -1,0 +1,49 @@
+id: anchorhead-showcase-hall
+name: Anchorhead farm co-op (Showcase hall)
+planet: TATOOINE
+kind: interior
+replaces: new
+status: BLOCKOUT
+story: Farm co-op where moisture farmers show off their companions (vanilla contest hall role).
+grid: |
+  ||||||||||||||||||||
+  ||||||||||||||||||||
+  |__________________|
+  |__________________|
+  |__________________|
+  |__________________|
+  |__________________|
+  |__________________|
+  |__________________|
+  |__________________|
+  |__________________|
+  |__________________|
+  |__________________|
+  ||||||||||_|||||||||
+exits: []
+buildings: []
+props:
+- name: Show stage
+  art: art:new:show-stage
+  at: [6, 2]
+  size: [8, 3]
+- name: Counter
+  art: art:new:counter
+  at: [2, 7]
+  size: [3, 1]
+people:
+- name: Co-op judge
+  at: [10, 6]
+  role: npc
+- name: Farmer
+  at: [4, 10]
+  role: npc
+- name: Farmer
+  at: [15, 10]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [10, 13]
+  to: anchorhead
+todo: ['New interior (replaces: new); placeholder room, sized for its contents.']

@@ -1,0 +1,46 @@
+id: tibanna-refinery-interior
+name: Tibanna refinery
+planet: BESPIN
+kind: interior
+replaces: new
+status: BLOCKOUT
+story: 'Gas processing hall: tanks, pipes and Ugnaught crews.'
+grid: |
+  ||||||||||||||||||||
+  ||||||||||||||||||||
+  |__________________|
+  |__________________|
+  |__________________|
+  |__________________|
+  |__________________|
+  |__________________|
+  |__________________|
+  |__________________|
+  |__________________|
+  |__________________|
+  |__________________|
+  ||||||||||_|||||||||
+exits: []
+buildings: []
+props:
+- name: Gas tanks
+  art: art:shared:fuel-tanks
+  at: [3, 2]
+  size: [3, 3]
+- name: Gas tanks
+  art: art:shared:fuel-tanks
+  at: [14, 2]
+  size: [3, 3]
+people:
+- name: Ugnaught
+  at: [9, 6]
+  role: npc
+- name: Cartel thug
+  at: [12, 10]
+  role: trainer
+signs: []
+warps:
+- name: Door
+  at: [10, 13]
+  to: tibanna-refinery
+todo: ['New interior (replaces: new); placeholder room, sized for its contents.']

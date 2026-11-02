@@ -3,8 +3,8 @@ name: CLOUD CITY GALLERIA 5F
 planet: BESPIN
 kind: interior
 replaces: LilycoveCity_DepartmentStore_5F
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Cloud City Galleria 5F: vanilla room layout kept for the blockout.'
 grid: |
   ##################
   #############.##.#
@@ -50,4 +50,4 @@ warps:
 - name: Door
   at: [16, 1]
   to: cloud-city-galleria-rooftop
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

@@ -1,0 +1,46 @@
+id: ilum-hangar
+name: Ilum landing hangar
+planet: ILUM
+kind: interior
+replaces: new
+status: BLOCKOUT
+story: 'Ilum landing hangar: the player''s ship waits in the bay. Talk to the pilot or use the StarNAV console to fly to another planet.'
+grid: |
+  ||||||||||||||||
+  ||||||||||||||||
+  |______________|
+  |______________|
+  |______________|
+  |______________|
+  |______________|
+  |______________|
+  |______________|
+  |______________|
+  |______________|
+  ||||||||_|||||||
+exits: []
+buildings: []
+props:
+- name: Player's ship
+  art: art:shared:landing-pad
+  at: [4, 2]
+  size: [8, 5]
+- name: StarNAV flight console
+  art: art:new:starnav-console
+  at: [13, 7]
+  size: [1, 1]
+- name: Cargo crates
+  art: art:shared:cargo-crates
+  at: [1, 7]
+  size: [2, 2]
+people:
+- name: Pilot
+  at: [8, 8]
+  role: story
+signs: []
+warps:
+- name: Door
+  at: [8, 11]
+  to: ilum
+todo: ['New interior (replaces: new); placeholder room, sized for its contents.', Ship travel menu = vanilla boat/ferry ticket script; the StarNAV console lists unlocked
+    planets.]

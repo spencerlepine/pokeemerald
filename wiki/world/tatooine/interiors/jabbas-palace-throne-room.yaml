@@ -1,0 +1,66 @@
+id: jabbas-palace-throne-room
+name: Jabba's throne room
+planet: TATOOINE
+kind: interior
+replaces: new
+status: BLOCKOUT
+story: 'Jabba''s throne room: the dais, the band, Bib Fortuna and a trapdoor over the rancor pit (optional battle below).'
+grid: |
+  ||||||||||||||||||||||||||
+  ||||||||||||||||||||||||||
+  |________________________|
+  |________________________|
+  |________________________|
+  |________________________|
+  |________________________|
+  |________________________|
+  |________________________|
+  |________________________|
+  |________________________|
+  |________________________|
+  |________________________|
+  |________________________|
+  |________________________|
+  |________________________|
+  |________________________|
+  |||||||||||||_||||||||||||
+exits: []
+buildings: []
+props:
+- name: Jabba's dais
+  art: art:new:jabba-dais
+  at: [10, 2]
+  size: [6, 3]
+- name: Rancor trapdoor grate
+  art: art:new:trapdoor-grate
+  at: [11, 8]
+  size: [4, 2]
+- name: Band stage
+  art: art:new:band-stage
+  at: [2, 3]
+  size: [4, 2]
+people:
+- name: Jabba
+  at: [12, 5]
+  role: story
+- name: Bib Fortuna
+  at: [9, 6]
+  role: npc
+- name: Gamorrean guard
+  at: [4, 10]
+  role: trainer
+- name: Gamorrean guard
+  at: [21, 10]
+  role: trainer
+- name: Salacious Crumb
+  at: [16, 5]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [13, 17]
+  to: jabbas-palace
+- name: Barge dock stairs
+  at: [24, 2]
+  to: jabbas-palace-barge-dock
+todo: ['New interior (replaces: new); placeholder room, sized for its contents.', New interior jabbas-palace-rancor-pit (optional battle) under the trapdoor.]

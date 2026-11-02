@@ -3,8 +3,8 @@ name: ROUTE 121 SAFARI ZONE ENTRANCE
 planet: ENDOR
 kind: interior
 replaces: Route121_SafariZoneEntrance
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Route 121 Safari Zone Entrance: vanilla room layout kept for the blockout.'
 grid: |
   ##################
   ##################
@@ -30,23 +30,18 @@ people:
 - name: Info Attendant
   at: [10, 2]
   role: npc
-- name: '0x0'
+- name: Event object
   at: [8, 2]
-  role: npc
+  role: object
 signs:
 - name: Sign
   at: [15, 1]
 warps:
-- name: Door
-  at: [2, 5]
-  to: felucia-reserve-south
-- name: Door
-  at: [3, 5]
-  to: felucia-reserve-south
 - name: Door
   at: [14, 13]
   to: route-121
 - name: Door
   at: [15, 13]
   to: route-121
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Planet border cut: door at [2, 5] to felucia-reserve-south; reached by ship instead.', 'Planet
+    border cut: door at [3, 5] to felucia-reserve-south; reached by ship instead.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

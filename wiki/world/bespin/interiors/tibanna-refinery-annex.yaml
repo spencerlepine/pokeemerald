@@ -1,0 +1,43 @@
+id: tibanna-refinery-annex
+name: Carbon-freezing annex
+planet: BESPIN
+kind: interior
+replaces: new
+status: BLOCKOUT
+story: 'The carbon-freezing chamber annex: the pit, the hoses and a frozen block nobody claims.'
+grid: |
+  ||||||||||||||||||
+  ||||||||||||||||||
+  |________________|
+  |________________|
+  |________________|
+  |________________|
+  |________________|
+  |________________|
+  |________________|
+  |________________|
+  |________________|
+  |________________|
+  |________________|
+  |||||||||_||||||||
+exits: []
+buildings: []
+props:
+- name: Carbon-freezing pit
+  art: art:bespin:carbon-freezing-chamber
+  at: [6, 3]
+  size: [6, 4]
+- name: Frozen block
+  art: art:new:carbonite-block
+  at: [14, 3]
+  size: [1, 2]
+people:
+- name: Ugnaught foreman
+  at: [4, 9]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [9, 13]
+  to: tibanna-refinery
+todo: ['New interior (replaces: new); placeholder room, sized for its contents.']

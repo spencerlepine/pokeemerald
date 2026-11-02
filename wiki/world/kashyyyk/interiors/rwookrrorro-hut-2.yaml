@@ -1,0 +1,35 @@
+id: rwookrrorro-hut-2
+name: Rwookrrorro hut 2
+planet: KASHYYYK
+kind: interior
+replaces: new
+status: BLOCKOUT
+story: A Wookiee family hut.
+grid: |
+  ||||||||||||
+  ||||||||||||
+  |__________|
+  |__________|
+  |__________|
+  |__________|
+  |__________|
+  |__________|
+  |__________|
+  ||||||_|||||
+exits: []
+buildings: []
+props:
+- name: Bed nest
+  art: art:new:wookiee-bed
+  at: [2, 2]
+  size: [3, 2]
+people:
+- name: Wookiee
+  at: [6, 5]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [6, 9]
+  to: rwookrrorro
+todo: ['New interior (replaces: new); placeholder room, sized for its contents.']

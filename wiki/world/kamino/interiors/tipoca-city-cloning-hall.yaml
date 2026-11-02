@@ -1,0 +1,63 @@
+id: tipoca-city-cloning-hall
+name: Tipoca cloning hall
+planet: KAMINO
+kind: interior
+replaces: new
+status: BLOCKOUT
+story: 'Optional: white halls of growth pods and Kaminoan scientists; a sealed lab tells PROTOCLONE''s story.'
+grid: |
+  ||||||||||||||||||||||||||
+  ||||||||||||||||||||||||||
+  |________________________|
+  |________________________|
+  |________________________|
+  |________________________|
+  |________________________|
+  |________________________|
+  |________________________|
+  |________________________|
+  |________________________|
+  |________________________|
+  |________________________|
+  |________________________|
+  |________________________|
+  |||||||||||||_||||||||||||
+exits: []
+buildings: []
+props:
+- name: Growth pods
+  art: art:new:growth-pods
+  at: [2, 2]
+  size: [9, 2]
+- name: Growth pods
+  art: art:new:growth-pods
+  at: [15, 2]
+  size: [9, 2]
+- name: Growth pods
+  art: art:new:growth-pods
+  at: [2, 7]
+  size: [8, 2]
+- name: Growth pods
+  art: art:new:growth-pods
+  at: [16, 7]
+  size: [8, 2]
+- name: Sealed lab door
+  art: art:new:blast-door
+  at: [12, 2]
+  size: [2, 1]
+people:
+- name: Kaminoan scientist
+  at: [12, 6]
+  role: story
+- name: Clone cadet
+  at: [6, 11]
+  role: trainer
+- name: Clone cadet
+  at: [19, 11]
+  role: trainer
+signs: []
+warps:
+- name: Door
+  at: [13, 15]
+  to: tipoca-city
+todo: ['New interior (replaces: new); placeholder room, sized for its contents.']

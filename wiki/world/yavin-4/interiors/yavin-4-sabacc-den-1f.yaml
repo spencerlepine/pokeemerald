@@ -3,8 +3,8 @@ name: YAVIN 4 SABACC DEN 1F
 planet: YAVIN 4
 kind: interior
 replaces: MossdeepCity_GameCorner_1F
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Yavin 4 Sabacc Den 1F: vanilla room layout kept for the blockout.'
 grid: |
   #####.####.#
   #####.######
@@ -21,10 +21,10 @@ buildings: []
 props: []
 people:
 - name: Old Man
-  at: [6, 2]
+  at: [5, 1]
   role: npc
 - name: Info Man
-  at: [4, 2]
+  at: [5, 2]
   role: npc
 signs:
 - name: Sign
@@ -43,4 +43,4 @@ warps:
 - name: Door
   at: [2, 0]
   to: yavin-4-sabacc-den-b1f
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

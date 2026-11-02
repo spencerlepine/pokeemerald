@@ -3,8 +3,8 @@ name: INYUSU TOR BATTLE TENT BATTLE ROOM
 planet: SULLUST
 kind: interior
 replaces: FallarborTown_BattleTentBattleRoom
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Inyusu Tor Battle Tent Battle Room: vanilla room layout kept for the blockout.'
 grid: |
   ..........
   ..........
@@ -19,15 +19,15 @@ exits: []
 buildings: []
 props: []
 people:
-- name: '0x0'
+- name: Event object
   at: [4, 8]
-  role: npc
-- name: '0x0'
+  role: object
+- name: Event object
   at: [3, 2]
-  role: npc
-- name: '0x0'
+  role: object
+- name: Event object
   at: [5, 1]
-  role: npc
+  role: object
 signs: []
 warps: []
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

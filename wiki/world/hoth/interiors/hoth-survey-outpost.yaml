@@ -1,0 +1,50 @@
+id: hoth-survey-outpost
+name: Rebel survey outpost
+planet: HOTH
+kind: interior
+replaces: new
+status: BLOCKOUT
+story: 'Prefab survey camp: a scanner table, heaters and bunks. The surveyor hands out a cold-weather item.'
+grid: |
+  ||||||||||||||||||||
+  ||||||||||||||||||||
+  |__________________|
+  |__________________|
+  |__________________|
+  |__________________|
+  |__________________|
+  |__________________|
+  |__________________|
+  |__________________|
+  |__________________|
+  |__________________|
+  |__________________|
+  ||||||||||_|||||||||
+exits: []
+buildings: []
+props:
+- name: Scanner table
+  art: art:new:scanner-table
+  at: [7, 3]
+  size: [5, 2]
+- name: Heater
+  art: art:new:heater
+  at: [2, 2]
+  size: [1, 1]
+- name: Bunks
+  art: art:new:bunks
+  at: [15, 2]
+  size: [3, 3]
+people:
+- name: Rebel surveyor
+  at: [9, 6]
+  role: story
+- name: Rebel technician
+  at: [4, 9]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [10, 13]
+  to: hoth-tundra
+todo: ['New interior (replaces: new); placeholder room, sized for its contents.']

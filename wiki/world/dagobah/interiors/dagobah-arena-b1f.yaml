@@ -3,8 +3,8 @@ name: DAGOBAH ARENA B1F
 planet: DAGOBAH
 kind: interior
 replaces: SootopolisCity_Gym_B1F
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Yoda (Water)''s arena: puzzle floor and arena trainers kept from vanilla.'
 grid: |
   #################
   #################
@@ -71,4 +71,4 @@ warps:
 - name: Door
   at: [11, 22]
   to: dagobah-arena-1f
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

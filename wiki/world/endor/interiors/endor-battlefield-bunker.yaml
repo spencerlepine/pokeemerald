@@ -1,0 +1,43 @@
+id: endor-battlefield-bunker
+name: Abandoned shield bunker
+planet: ENDOR
+kind: interior
+replaces: new
+status: BLOCKOUT
+story: 'The ruined shield-generator bunker: dead consoles, a locked blast door and a straggler holding out.'
+grid: |
+  ||||||||||||||||||||
+  ||||||||||||||||||||
+  |__________________|
+  |__________________|
+  |__________________|
+  |__________________|
+  |__________________|
+  |__________________|
+  |__________________|
+  |__________________|
+  |__________________|
+  |__________________|
+  |__________________|
+  ||||||||||_|||||||||
+exits: []
+buildings: []
+props:
+- name: Dead consoles
+  art: art:new:control-console
+  at: [3, 2]
+  size: [8, 2]
+- name: Blast door (locked)
+  art: art:new:blast-door
+  at: [15, 2]
+  size: [3, 2]
+people:
+- name: Stormtrooper straggler
+  at: [10, 7]
+  role: trainer
+signs: []
+warps:
+- name: Door
+  at: [10, 13]
+  to: endor-battlefield
+todo: ['New interior (replaces: new); placeholder room, sized for its contents.']

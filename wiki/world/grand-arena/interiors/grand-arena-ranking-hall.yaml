@@ -3,8 +3,8 @@ name: GRAND ARENA RANKING HALL
 planet: GRAND ARENA
 kind: interior
 replaces: BattleFrontier_RankingHall
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Grand Arena Ranking Hall: vanilla room layout kept for the blockout.'
 grid: |
   #####################################################
   #####################################################
@@ -66,4 +66,4 @@ warps:
 - name: Door
   at: [27, 14]
   to: grand-arena-outside-east
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

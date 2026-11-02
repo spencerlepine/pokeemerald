@@ -1,0 +1,40 @@
+id: rwookrrorro-chief-hut
+name: Rwookrrorro chief's hut
+planet: KASHYYYK
+kind: interior
+replaces: new
+status: BLOCKOUT
+story: The village chief's hall high in the wroshyr branches.
+grid: |
+  ||||||||||||||||
+  ||||||||||||||||
+  |______________|
+  |______________|
+  |______________|
+  |______________|
+  |______________|
+  |______________|
+  |______________|
+  |______________|
+  |______________|
+  ||||||||_|||||||
+exits: []
+buildings: []
+props:
+- name: Carved throne
+  art: art:new:wookiee-throne
+  at: [7, 2]
+  size: [2, 2]
+people:
+- name: Village chief
+  at: [8, 5]
+  role: story
+- name: Wookiee elder
+  at: [4, 7]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [8, 11]
+  to: rwookrrorro
+todo: ['New interior (replaces: new); placeholder room, sized for its contents.']

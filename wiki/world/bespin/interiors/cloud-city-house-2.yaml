@@ -3,8 +3,8 @@ name: CLOUD CITY HOUSE 2
 planet: BESPIN
 kind: interior
 replaces: LilycoveCity_House2
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Cloud City House 2: a home; residents keep vanilla''s spots and scripts.'
 grid: |
   ########
   ########
@@ -29,4 +29,4 @@ warps:
 - name: Door
   at: [3, 7]
   to: cloud-city
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

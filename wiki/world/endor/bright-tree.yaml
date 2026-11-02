@@ -28,36 +28,113 @@ grid: |
   T============TTT============TTT========T
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
 exits:
-- {edge: west, cells: [7, 8, 9, 10], to: route-119}
-- {edge: east, cells: [7, 8, 9, 10], to: route-120}
+- edge: west
+  cells: [7, 8, 9, 10]
+  to: route-119
+- edge: east
+  cells: [7, 8, 9, 10]
+  to: route-120
 buildings:
-- {name: Ewok hut, art: 'art:endor:ewok-hut', at: [4, 1], size: [3, 3], door: 1, to: ewok-hut-interior}
-- {name: Ewok hut, art: 'art:endor:ewok-hut', at: [15, 1], size: [3, 3], door: 1, to: ewok-hut-interior}
-- {name: Ewok hut, art: 'art:endor:ewok-hut', at: [26, 1], size: [3, 3], door: 1, to: ewok-hut-interior}
-- {name: Elder's hut, art: 'art:endor:ewok-hut', at: [35, 1], size: [3, 3], door: 1, to: ewok-hut-interior}
-- {name: Bacta Center, art: 'art:shared:bacta-center', at: [1, 12], size: [5, 4], door: 2, to: bacta-center-interior}
-- {name: Supply Depot, art: 'art:shared:supply-depot', at: [7, 12], size: [4, 4], door: 1, to: supply-depot-interior}
-- {name: Chief Chirpa's arena, art: 'art:shared:arena', at: [19, 12], size: [6, 5], door: 3, to: arena-interior}
-- {name: Ewok hut, art: 'art:endor:ewok-hut', at: [31, 13], size: [3, 3], door: 1, to: ewok-hut-interior}
-- {name: Trader's hut, art: 'art:endor:ewok-hut', at: [35, 13], size: [3, 3], door: 1, to: decoration-shop-interior}
+- name: Ewok hut
+  art: art:endor:ewok-hut
+  at: [4, 1]
+  size: [3, 3]
+  door: 1
+  to: bright-tree-house-1
+- name: Ewok hut
+  art: art:endor:ewok-hut
+  at: [15, 1]
+  size: [3, 3]
+  door: 1
+  to: bright-tree-house-2
+- name: Ewok hut
+  art: art:endor:ewok-hut
+  at: [26, 1]
+  size: [3, 3]
+  door: 1
+  to: bright-tree-house-3
+- name: Elder's hut
+  art: art:endor:ewok-hut
+  at: [35, 1]
+  size: [3, 3]
+  door: 1
+  to: bright-tree-house-4
+- name: Bacta Center
+  art: art:shared:bacta-center
+  at: [1, 12]
+  size: [5, 4]
+  door: 2
+  to: bright-tree-bacta-center-1f
+- name: Supply Depot
+  art: art:shared:supply-depot
+  at: [7, 12]
+  size: [4, 4]
+  door: 1
+  to: bright-tree-supply-depot
+- name: Chief Chirpa's arena
+  art: art:shared:arena
+  at: [19, 12]
+  size: [6, 5]
+  door: 3
+  to: bright-tree-arena
+- name: Ewok hut
+  art: art:endor:ewok-hut
+  at: [31, 13]
+  size: [3, 3]
+  door: 1
+  to: bright-tree-house-5
+- name: Trader's hut
+  art: art:endor:ewok-hut
+  at: [35, 13]
+  size: [3, 3]
+  door: 1
+  to: bright-tree-decoration-shop
 props:
-- {name: Totem and drum, art: 'art:endor:totem-and-drum', at: [26, 13], size: [1, 2]}
-- {name: Totem and drum, art: 'art:endor:totem-and-drum', at: [17, 13], size: [1, 2]}
-- {name: Ewok glider, art: 'art:endor:ewok-glider', at: [8, 1], size: [1, 2]}
-- {name: Log trap, art: 'art:endor:log-trap', at: [2, 18], size: [3, 1]}
-- {name: Crashed speeder bike, art: 'art:endor:crashed-speeder-bike', at: [22, 7], size: [2, 1]}
+- name: Totem and drum
+  art: art:endor:totem-and-drum
+  at: [26, 13]
+  size: [1, 2]
+- name: Totem and drum
+  art: art:endor:totem-and-drum
+  at: [17, 13]
+  size: [1, 2]
+- name: Ewok glider
+  art: art:endor:ewok-glider
+  at: [8, 1]
+  size: [1, 2]
+- name: Log trap
+  art: art:endor:log-trap
+  at: [2, 18]
+  size: [3, 1]
+- name: Crashed speeder bike
+  art: art:endor:crashed-speeder-bike
+  at: [22, 7]
+  size: [2, 1]
 people:
-- {name: Wicket, at: [14, 9], role: story}
-- {name: Ewok elder, at: [36, 4], role: townsfolk}
-- {name: Ewok hunter, at: [20, 4], role: townsfolk}
-- {name: Ewok weaver, at: [29, 17], role: townsfolk}
-- {name: Rebel scout, at: [31, 8], role: townsfolk}
-- {name: Ewok guard, at: [22, 18], role: townsfolk}
+- name: Wicket
+  at: [14, 9]
+  role: story
+- name: Ewok elder
+  at: [36, 4]
+  role: townsfolk
+- name: Ewok hunter
+  at: [20, 4]
+  role: townsfolk
+- name: Ewok weaver
+  at: [29, 17]
+  role: townsfolk
+- name: Rebel scout
+  at: [31, 8]
+  role: townsfolk
+- name: Ewok guard
+  at: [22, 18]
+  role: townsfolk
 signs:
-- {name: Village sign, at: [3, 7]}
-- {name: Arena sign, at: [25, 17]}
+- name: Village sign
+  at: [3, 7]
+- name: Arena sign
+  at: [25, 17]
 warps: []
-todo:
-- Same size, exits and 9 doors as Fortree; vanilla's houses become Ewok huts, the decoration shop is the trader's hut.
-- Platforms are one level above the trail; the ladders change level. Rope bridges are the row-3 and row-17 walkways.
-- The crashed speeder bike sits on the trail edge (row 7); check it never blocks the walk from west to east.
+todo: ['Same size, exits and 9 doors as Fortree; vanilla''s houses become Ewok huts, the decoration shop is the trader''s hut.', Platforms are one level above the
+    trail; the ladders change level. Rope bridges are the row-3 and row-17 walkways., The crashed speeder bike sits on the trail edge (row 7); check it never blocks
+    the walk from west to east.]

@@ -1,0 +1,40 @@
+id: jabbas-palace-barge-dock
+name: Jabba's barge dock
+planet: TATOOINE
+kind: interior
+replaces: new
+status: BLOCKOUT
+story: Dock under the palace where the sail barge is moored; skiff crews idle by the ramp.
+grid: |
+  ||||||||||||||||||||||
+  ||||||||||||||||||||||
+  |____________________|
+  |____________________|
+  |____________________|
+  |____________________|
+  |____________________|
+  |____________________|
+  |____________________|
+  |____________________|
+  |____________________|
+  |||||||||||_||||||||||
+exits: []
+buildings: []
+props:
+- name: Sail barge (moored)
+  art: art:new:sail-barge
+  at: [3, 2]
+  size: [12, 4]
+people:
+- name: Skiff guard
+  at: [17, 6]
+  role: trainer
+- name: Barge crewman
+  at: [6, 8]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [11, 11]
+  to: jabbas-palace-throne-room
+todo: ['New interior (replaces: new); placeholder room, sized for its contents.']

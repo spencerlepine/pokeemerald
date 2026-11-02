@@ -1,0 +1,36 @@
+id: nijedha-temple-of-the-kyber
+name: Temple of the Kyber
+planet: JEDHA
+kind: interior
+replaces: new
+status: BLOCKOUT
+story: Hall of the Guardians of the Whills, kyber lamps along the walls.
+grid: |
+  ||||||||||||||||||
+  ||||||||||||||||||
+  |________________|
+  |________________|
+  |________________|
+  |________________|
+  |________________|
+  |________________|
+  |________________|
+  |________________|
+  |________________|
+  |||||||||_||||||||
+exits: []
+buildings: []
+props: []
+people:
+- name: Chirrut Îmwe
+  at: [9, 5]
+  role: story
+- name: Baze Malbus
+  at: [12, 5]
+  role: story
+signs: []
+warps:
+- name: Door
+  at: [9, 11]
+  to: nijedha
+todo: ['New interior (replaces: new); placeholder room, sized for its contents.', Check Chirrut and Baze against characters.csv before writing their lines.]

@@ -3,8 +3,8 @@ name: CLOUD CITY SHOWCASE LOBBY
 planet: BESPIN
 kind: interior
 replaces: LilycoveCity_ContestLobby
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Cloud City Showcase Lobby: vanilla room layout kept for the blockout.'
 grid: |
   ###############################
   #########.###########.#########
@@ -31,9 +31,9 @@ people:
 - name: Blender2Man
   at: [26, 9]
   role: npc
-- name: '0x0'
+- name: Event object
   at: [9, 1]
-  role: npc
+  role: object
 - name: Black Belt
   at: [18, 8]
   role: npc
@@ -52,9 +52,9 @@ people:
 - name: Blender2Twin
   at: [28, 9]
   role: npc
-- name: '0x0'
+- name: Event object
   at: [21, 1]
-  role: npc
+  role: object
 - name: Fisherman
   at: [5, 6]
   role: npc
@@ -135,4 +135,4 @@ warps:
 - name: Door
   at: [21, 1]
   to: cloud-city-showcase-hall
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

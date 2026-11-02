@@ -3,8 +3,8 @@ name: ROUTE 119 ENDOR STATION 1F
 planet: ENDOR
 kind: interior
 replaces: Route119_WeatherInstitute_1F
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Route 119 Endor Station 1F: vanilla room layout kept for the blockout.'
 grid: |
   ####################
   #################.##
@@ -57,4 +57,4 @@ warps:
 - name: Door
   at: [17, 1]
   to: route-119-endor-station-2f
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

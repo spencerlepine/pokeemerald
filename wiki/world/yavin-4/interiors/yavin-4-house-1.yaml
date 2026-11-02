@@ -3,8 +3,8 @@ name: YAVIN 4 HOUSE 1
 planet: YAVIN 4
 kind: interior
 replaces: MossdeepCity_House1
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Yavin 4 House 1: a home; residents keep vanilla''s spots and scripts.'
 grid: |
   ###########
   ###########
@@ -32,4 +32,4 @@ warps:
 - name: Door
   at: [4, 7]
   to: yavin-4
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

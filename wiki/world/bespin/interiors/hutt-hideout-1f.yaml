@@ -3,8 +3,8 @@ name: HUTT HIDEOUT 1F
 planet: BESPIN
 kind: interior
 replaces: AquaHideout_1F
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Hutt Hideout 1F: a home; residents keep vanilla''s spots and scripts.'
 grid: |
   ############################
   ######################.#####
@@ -60,4 +60,4 @@ warps:
 - name: Door
   at: [22, 1]
   to: hutt-hideout-b1f
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

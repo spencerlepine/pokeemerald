@@ -1,0 +1,34 @@
+id: nijedha-hostel
+name: Pilgrim hostel
+planet: JEDHA
+kind: interior
+replaces: new
+status: BLOCKOUT
+story: Bunks for pilgrims crossing to the temple.
+grid: |
+  ||||||||||||||
+  ||||||||||||||
+  |____________|
+  |____________|
+  |____________|
+  |____________|
+  |____________|
+  |____________|
+  |____________|
+  |||||||_||||||
+exits: []
+buildings: []
+props: []
+people:
+- name: Pilgrim
+  at: [5, 5]
+  role: npc
+- name: Innkeeper
+  at: [9, 3]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [7, 9]
+  to: nijedha
+todo: ['New interior (replaces: new); placeholder room, sized for its contents.']

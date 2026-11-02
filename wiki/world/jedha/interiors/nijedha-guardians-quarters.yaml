@@ -1,0 +1,31 @@
+id: nijedha-guardians-quarters
+name: Guardians' quarters
+planet: JEDHA
+kind: interior
+replaces: new
+status: BLOCKOUT
+story: Plain rooms where the Guardians rest.
+grid: |
+  ||||||||||||||
+  ||||||||||||||
+  |____________|
+  |____________|
+  |____________|
+  |____________|
+  |____________|
+  |____________|
+  |____________|
+  |||||||_||||||
+exits: []
+buildings: []
+props: []
+people:
+- name: Guardian
+  at: [6, 5]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [7, 9]
+  to: nijedha
+todo: ['New interior (replaces: new); placeholder room, sized for its contents.']

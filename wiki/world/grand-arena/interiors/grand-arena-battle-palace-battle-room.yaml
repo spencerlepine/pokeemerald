@@ -3,8 +3,8 @@ name: GRAND ARENA BATTLE PALACE BATTLE ROOM
 planet: GRAND ARENA
 kind: interior
 replaces: BattleFrontier_BattlePalaceBattleRoom
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Grand Arena Battle Palace Battle Room: vanilla room layout kept for the blockout.'
 grid: |
   ..#..#..#..##.#
   ..#..#..#..##.#
@@ -20,21 +20,21 @@ exits: []
 buildings: []
 props: []
 people:
-- name: '0x0'
+- name: Event object
   at: [1, 9]
-  role: npc
-- name: '0x0'
+  role: object
+- name: Event object
   at: [13, 1]
-  role: npc
-- name: '0x0'
+  role: object
+- name: Event object
   at: [1, 4]
-  role: npc
-- name: '0x0'
+  role: object
+- name: Event object
   at: [13, 1]
-  role: npc
-- name: '0x0'
+  role: object
+- name: Event object
   at: [13, 1]
-  role: npc
+  role: object
 signs: []
 warps:
 - name: Door
@@ -43,4 +43,4 @@ warps:
 - name: Door
   at: [1, 9]
   to: grand-arena-battle-palace-corridor
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]
