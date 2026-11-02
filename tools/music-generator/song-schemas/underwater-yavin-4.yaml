@@ -1,0 +1,74 @@
+# Underwater, Yavin 4: net-new per-planet split of MUS_UNDERWATER (wiki row net:mus-underwater-yavin-4), for the
+# sea floor of Routes 124 and 125. SCRATCH: no film cue, written from the brief. The Dagobah original is muffled,
+# slow and floating; Yavin 4's water is warm jungle-moon water over drowned temple stone, so the float turns
+# lighter: D Lydian (the E major chord) in a slow 3/4 sway, a flute in a, glockenspiel light-rays in b, the flute
+# again with a 50 % square echo in a2, a low string line in c, over a quiet pizzicato ostinato, a string pad, a
+# wave-channel bass and the voicegroup's bubbles. Vanilla voicegroup and tempo (MUS_UNDERWATER: underwater,
+# 86 bpm, 86.5 s); 34 bars of 3/4 at 86 = 71.2 s, inside the AMBIENT loop range the checks use (35-77 s).
+# Brief (sw_subject): Yavin 4 version of MUS_UNDERWATER, same role and mood family; theme to be decided.
+name: underwater-yavin-4
+constant: MUS_UNDERWATER_YAVIN_4
+form: AMBIENT
+voicegroup: underwater            # vanilla's own: glock 9, bubbles 23, pizz 45, strings 48, flute 73, squares 80/92, wave 82
+master_volume: 94
+tempo: 86
+steps_per_beat: 2                 # eighth-note grid, 6 steps a bar
+time_signature: [3, 4]
+seed: 124
+
+parts:
+  flute:   {program: 73, channel: 0, volume: 90,  pan: 10,  gate: 0.96, lfo_speed: 22, lfo_delay: 24, mod: 6, humanize: {vel: 5}}
+  glock:   {program: 9,  channel: 1, volume: 60,  pan: 20,  gate: 0.9}
+  strings: {program: 48, channel: 2, volume: 72,  pan: -12, gate: 1.0, humanize: {vel: 4}}
+  pizz:    {program: 45, channel: 3, volume: 66,  pan: -24, octave: 3, gate: 0.8, humanize: {vel: 8}}
+  pad:     {program: 48, channel: 4, volume: 44,  pan: 28,  octave: 3, gate: 1.0}
+  bubbles: {program: 23, channel: 5, volume: 50,  pan: -30, gate: 1.0}
+  bass:    {program: 82, channel: 6, volume: 72,  pan: 0,   octave: 2, role: bass, gate: 0.95}
+  echo:    {program: 92, channel: 7, volume: 28,  pan: 36,  gate: 0.9, mono: true}
+
+progressions:
+  intro: "D | A"
+  a: "D | E | D | E | Bm | G | Em | A"
+  b: "G | A | F#m | Bm | G | A | E | A"
+  c: "Bm | G | D | A | Bm | G | E | E"
+  d: "G | A"
+
+phrases:
+  ost: "^1:2 ^3:2 ^2:2"
+  pad: "^3:6"
+  root: "^1:6"
+  bubble_rise: "r:6 | r:3 D4:3 | r:6 | r:6 | r:6 | r:1 F#4:3 r:2 | r:6 | r:6"
+  flute_a: "A4:4 D5:2 | G#5:4 F#5:2 | F#5:6 | E5:6 | D5:4 F#5:2 | B4:4 D5:2 | G5:4 E5:2 | C#5:6"
+  echo_a: "r:2 A4:4 | D5:2 G#5:4 | F#5:2 F#5:4 | ~:2 E5:4 | ~:2 D5:4 | F#5:2 B4:4 | D5:2 G5:4 | E5:2 C#5:4"
+  glock_b: "B5:4 D6:2 | C#6:4 A5:2 | A5:6 | F#5:6 | G5:4 B5:2 | A5:4 E5:2 | G#5:6 | A5:6"
+  strings_c: "F#4:6 | D4:6 | F#4:6 | E4:6 | D4:6 | B3:6 | B3:6 | G#3:6"
+
+sections:
+  intro:
+    bars: 2
+    chords: intro
+    parts: {pizz: ost, pad: pad, bass: root, bubbles: "r:3 D4:3 | r:6", flute: "r:6 | r:2 C#5:2 E5:2"}
+  a:
+    bars: 8
+    chords: a
+    parts: {flute: flute_a, pizz: ost, pad: pad, bass: root, bubbles: bubble_rise}
+  b:
+    bars: 8
+    chords: b
+    parts: {glock: glock_b, pizz: ost, pad: pad, bass: root, bubbles: bubble_rise}
+  a2:
+    bars: 8
+    chords: a
+    gain: {flute: -4}
+    parts: {flute: flute_a, echo: echo_a, pizz: ost, pad: pad, bass: root}
+  c:
+    bars: 8
+    chords: c
+    parts: {strings: strings_c, pizz: ost, pad: pad, bass: root, bubbles: bubble_rise}
+  d:
+    bars: 2
+    chords: d
+    parts: {pizz: ost, pad: pad, bass: root, flute: "B4:6 | r:2 C#5:2 E5:2"}
+
+arrangement: [intro, a, b, a2, c, d]
+loop_start: a
