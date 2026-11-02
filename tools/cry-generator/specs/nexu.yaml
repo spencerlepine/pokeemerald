@@ -1,0 +1,25 @@
+name: nexu
+slot: zangoose
+brief: "NEXU: creature call that fits its look and size. Clawed arena cat, sworn enemy of the kouhun."
+kind: creature
+size: 0.55
+seed: 1910
+layers:
+  # An arena nexu: a fierce, split-jawed screech-snarl ("rrRAAH"), harsh and catlike, cut off with a
+  # hissing spit.
+  - type: voice
+    pitch: [[0, 380], [0.06, 560], [0.2, 500], [0.36, 340]]
+    source: {saw: 0.9, pulse: 0.5, pulse_width: 0.2, noise: 0.15}
+    vowels: [[0, rr], [0.06, a], [0.2, ae], [0.36, er]]
+    env: [[0, 0], [0.006, 1], [0.05, 0.7], [0.2, 0.6], [0.37, 0]]
+    growl: 0.55
+    growl_rate: 38
+    jitter: 0.04
+    drive: 1.6
+    emphasis: 0.7
+  - type: noise
+    at: 0.3
+    band: [[0, 2800], [0.13, 2200]]
+    q: 1.5
+    env: [[0, 0], [0.01, 0.5], [0.13, 0]]
+    gain: 0.35

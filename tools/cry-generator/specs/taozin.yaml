@@ -1,0 +1,21 @@
+name: taozin
+slot: kecleon
+brief: "TAOZIN: creature call that fits its look and size. Creature invisible to sight and to the Force; the ORGANA SCOPE reveals it."
+kind: creature
+size: 0.4
+seed: 1903
+layers:
+  # An unseen thing: a soft clicking chirp out of nowhere, then a hollow "hwoo-hwoo" that bends
+  # sideways and fades as if it slipped away again.
+  - type: click
+    times: [0.0, 0.025, 0.05]
+    gain: 1.2
+  - type: voice
+    at: 0.04
+    pitch: [[0, 520], [0.1, 640], [0.3, 380]]
+    source: {pulse: 0.6, pulse_width: 0.4, saw: 0.3, noise: 0.06}
+    vowels: [[0, i], [0.1, o], [0.3, u]]
+    env: [[0, 0], [0.006, 1], [0.06, 0.3], [0.1, 0.05], [0.13, 0.85], [0.19, 0.35], [0.32, 0]]
+    vibrato: {rate: 13, depth: 0.05}
+    jitter: 0.02
+    emphasis: 0.5

@@ -1,0 +1,26 @@
+name: scorpwing
+slot: gligar
+brief: "SCORPWING: creature call that fits its look and size. Gliding scorpion."
+kind: creature
+size: 0.5
+seed: 1902
+layers:
+  # A gliding scorpion: a pincer snap, a chittering, rasping screech that swoops down like a glide, and
+  # a dry rattle of the tail.
+  - type: click
+    times: [0.0, 0.03]
+    gain: 0.7
+  - type: voice
+    at: 0.03
+    pitch: [[0, 700], [0.08, 900], [0.4, 520]]
+    source: {saw: 0.8, pulse: 0.5, pulse_width: 0.15, noise: 0.15}
+    vowels: [[0, ee], [0.15, ae], [0.4, er]]
+    env: [[0, 0], [0.01, 1], [0.25, 0.7], [0.42, 0]]
+    vibrato: {rate: 34, depth: 0.04}
+    growl: 0.35
+    growl_rate: 48
+    drive: 2
+    emphasis: 0.6
+  - type: click
+    times: [0.44, 0.47, 0.5, 0.53]
+    gain: 0.5

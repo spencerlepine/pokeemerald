@@ -1,0 +1,28 @@
+name: kybermoon
+slot: lunatone
+brief: "KYBERMOON: creature call that fits its look and size. Moon-shaped living kyber crystal."
+kind: creature
+size: 0.6
+seed: 1904
+layers:
+  # A living kyber crystal: a bright struck-crystal ping, then a resonant humming throat ("mmm-ooo")
+  # beating against a slow, glowing triangle tone, like a lightsaber hum sung by a stone.
+  - type: tone
+    wave: tri
+    pitch: [[0, 1500], [1.0, 1420]]
+    warble: {rate: 4, depth: 0.02}
+    env: [[0, 0], [0.004, 1], [0.08, 0.5], [0.9, 0.35], [1.08, 0]]
+  - type: voice
+    at: 0.03
+    pitch: [[0, 240], [0.3, 270], [0.75, 260], [1.05, 220]]
+    source: {saw: 0.6, pulse: 0.6, pulse_width: 0.3, noise: 0.03}
+    vowels: [[0, m], [0.35, o], [0.75, u], [1.05, m]]
+    env: [[0, 0], [0.05, 0.85], [0.8, 0.7], [1.07, 0]]
+    vibrato: {rate: 6, depth: 0.012}
+    formant_scale: 1.2
+  - type: tone
+    at: 0.05
+    wave: saw
+    pitch: [[0, 121], [1.0, 111]]
+    env: [[0, 0], [0.1, 0.4], [0.85, 0.4], [1.02, 0]]
+    gain: 0.4

@@ -1,0 +1,29 @@
+name: scrabbler
+slot: sneasel
+brief: "SCRABBLER: creature call that fits its look and size. Hoth ice scrabbler."
+kind: creature
+size: 0.38
+seed: 1908
+layers:
+  # A sly ice scrabbler: claw scratches on ice, a sharp, sneering hiss-screech ("kshee-eh"), and an
+  # icy breath.
+  - type: click
+    times: [0.0, 0.02, 0.04]
+    gain: 0.6
+  - type: voice
+    at: 0.04
+    pitch: [[0, 620], [0.06, 820], [0.3, 560]]
+    source: {saw: 0.8, pulse: 0.4, pulse_width: 0.2, noise: 0.2}
+    vowels: [[0, i], [0.08, ee], [0.3, e]]
+    env: [[0, 0], [0.008, 1], [0.15, 0.6], [0.31, 0]]
+    growl: 0.35
+    growl_rate: 50
+    jitter: 0.03
+    drive: 2
+    emphasis: 0.6
+  - type: noise
+    at: 0.22
+    band: [[0, 3200], [0.18, 2600]]
+    q: 2
+    env: [[0, 0], [0.03, 0.35], [0.18, 0]]
+    gain: 0.25
