@@ -1,0 +1,29 @@
+name: gelaspore
+slot: parasect
+brief: "GELASPORE: creature call that fits its look and size. Grub controlled by the fungus on its back."
+kind: creature
+size: 0.4
+seed: 112
+layers:
+  # Family voice (Felucia fungus grubs): the wet clicks and squelchy "gyu-gyu" gurgle, lower and
+  # vacant, as if the fungus does the talking, ending in a hissing puff of spores.
+  - type: click
+    times: [0.0, 0.06, 0.12]
+    gain: 0.6
+  - type: voice
+    at: 0.14
+    pitch: [[0, 340], [0.12, 400], [0.24, 350], [0.36, 420], [0.5, 370], [0.75, 330], [0.9, 260]]
+    pitch_step: 0.06
+    source: {saw: 0.7, pulse: 0.7, pulse_width: 0.25, noise: 0.14}
+    vowels: [[0, u], [0.12, i], [0.24, u], [0.36, i], [0.5, o], [0.9, u]]
+    env: [[0, 0], [0.008, 1], [0.1, 0.4], [0.12, 0.9], [0.22, 0.4], [0.24, 0.9], [0.34, 0.4], [0.36, 1], [0.8, 0.7], [0.92, 0]]
+    growl: 0.5
+    growl_rate: 30
+    jitter: 0.035
+    drive: 1.6
+  - type: noise
+    at: 0.95
+    band: [[0, 2600], [0.25, 1500]]
+    q: 1.2
+    env: [[0, 0], [0.02, 0.6], [0.25, 0]]
+    gain: 0.4

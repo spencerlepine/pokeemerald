@@ -1,0 +1,24 @@
+name: rancorpup
+slot: rhyhorn
+brief: "RANCORPUP: creature call that fits its look and size. Rancor pup."
+kind: creature
+size: 0.62
+seed: 113
+layers:
+  # Family voice (rancors): a gaping-jawed, gurgling bellow with a wet growl, rising and then sagging.
+  # The pup's is higher and yelpier, already heavy-chested.
+  - type: voice
+    pitch: [[0, 300], [0.1, 420], [0.4, 380], [0.7, 260]]
+    source: {saw: 0.9, pulse: 0.5, pulse_width: 0.3, noise: 0.14}
+    vowels: [[0, aw], [0.1, a], [0.45, aw], [0.7, rr]]
+    env: [[0, 0], [0.012, 1], [0.5, 0.8], [0.72, 0]]
+    growl: 0.55
+    growl_rate: 34
+    jitter: 0.03
+    drive: 2.4
+  - type: noise
+    at: 0.05
+    band: [[0, 1500], [0.6, 900]]
+    q: 1.2
+    env: [[0, 0], [0.05, 0.3], [0.55, 0.2], [0.65, 0]]
+    gain: 0.25

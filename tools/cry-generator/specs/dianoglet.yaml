@@ -1,0 +1,23 @@
+name: dianoglet
+slot: tentacool
+brief: "DIANOGLET: creature call that fits its look and size. Young dianoga, one eye on a stalk."
+kind: creature
+size: 0.45
+seed: 115
+layers:
+  # Family voice (dianogas): a wet, bubbling, sucking gurgle "glorrp" that rises to a thin warble,
+  # sewer water burbling around it. The young one is smaller and more curious.
+  - type: voice
+    pitch: [[0, 360], [0.15, 520], [0.35, 600], [0.55, 420]]
+    source: {saw: 0.6, pulse: 0.7, pulse_width: 0.3, noise: 0.12}
+    vowels: [[0, u], [0.12, o], [0.3, er], [0.45, i], [0.55, u]]
+    env: [[0, 0], [0.015, 1], [0.45, 0.8], [0.57, 0]]
+    vibrato: {rate: 16, depth: 0.07}
+    growl: 0.45
+    growl_rate: 20
+    jitter: 0.03
+  - type: noise
+    band: [[0, 900], [0.5, 1500]]
+    q: 2
+    env: [[0, 0], [0.05, 0.3], [0.45, 0.25], [0.55, 0]]
+    gain: 0.3

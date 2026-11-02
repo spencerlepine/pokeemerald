@@ -1,0 +1,35 @@
+name: rancor
+slot: rhydon
+brief: "RANCOR: creature call that fits its look and size. Rancor. Ask Jabba's keeper Malakili."
+kind: creature
+size: 0.92
+seed: 114
+layers:
+  # Family voice (rancors): the gaping, gurgling bellow with a wet growl, now the full beast: a deep,
+  # shuddering roar that rises, a slobbery rumble, and a long snarl down.
+  - type: voice
+    pitch: [[0, 160], [0.12, 250], [0.5, 220], [0.85, 130]]
+    pitch_step: 0.04
+    source: {saw: 0.9, pulse: 0.6, pulse_width: 0.3, noise: 0.15}
+    vowels: [[0, aw], [0.12, a], [0.55, aw], [0.85, rr]]
+    env: [[0, 0], [0.015, 1], [0.62, 0.85], [0.88, 0]]
+    growl: 0.7
+    growl_rate: 26
+    jitter: 0.03
+    drive: 2.8
+  - type: voice
+    at: 0.06
+    pitch: [[0, 480], [0.3, 640], [0.7, 400]]
+    source: {saw: 0.6, pulse: 0.6, pulse_width: 0.25, noise: 0.1}
+    vowels: [[0, a], [0.7, aw]]
+    env: [[0, 0], [0.1, 0.5], [0.55, 0.4], [0.72, 0]]
+    growl: 0.4
+    gain: 0.4
+  - type: noise
+    at: 0.05
+    band: [[0, 1300], [0.7, 800]]
+    q: 1.0
+    env: [[0, 0], [0.06, 0.35], [0.65, 0.2], [0.8, 0]]
+    gain: 0.3
+master:
+  tilt_db: 4
