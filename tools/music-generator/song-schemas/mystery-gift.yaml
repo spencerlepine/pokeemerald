@@ -1,0 +1,59 @@
+# Mystery Gift screen (MUS_RG_MYSTERY_GIFT, hot-swap): a short loop. STYLE of "Rebel Briefing" (wiki
+# soundtrack:return-jedi:08): an original tune, not a quote. Taken from the cue: its tempo (analyzer 123, 124 here,
+# which is also vanilla's), G minor, the steady march-like pulse under a briefing (soft military snare, a ticking
+# pulse) and a melody that lifts toward hope at the end of each phrase.
+# Kept the vanilla voicegroup (rg_mystery_gift: nylon guitar, two squares, wave, frlg kit, noise) and a loop close
+# to vanilla's 17.4 s: 8 bars, 15.5 s, plus a 1-bar count-in.
+# Brief (sw_subject): Mystery Gift screen.
+name: mystery-gift
+replaces: MUS_RG_MYSTERY_GIFT
+form: LOOP
+voicegroup: rg_mystery_gift       # kit 0, guitar 24, fretless 35, square1 80, square2 81, wave 83, noise 126/127
+master_volume: 92
+tempo: 124
+steps_per_beat: 4
+time_signature: [4, 4]
+seed: 8
+
+parts:
+  lead:   {program: 80, channel: 0, volume: 70, pan: 8,   range: [G4, A5], gate: 0.85, mono: true}
+  second: {program: 81, channel: 1, volume: 48, pan: -24, octave: 4, range: [D4, D5], gate: 0.9, mono: true}
+  guitar: {program: 24, channel: 2, volume: 92, pan: 20,  octave: 3, range: [G3, G4], gate: 0.9, humanize: {vel: 6}}
+  bass:   {program: 83, channel: 3, volume: 96, pan: 0,   octave: 2, range: [D2, D3], gate: 0.7, role: bass}
+  kit:    {program: 0,  channel: 4, volume: 78, pan: -6, role: drums, kit: {kick: 36, sn: 40}}
+  hat:    {program: 126, channel: 5, volume: 34, pan: 14, role: drums, kit: {t: A6}}
+
+progressions:
+  verse: "Gm | Eb | Cm | D | Gm | Bb | Eb:8 F:8 | D"
+  count: "Gm"
+
+phrases:
+  tune: |
+    G4:6 A4:2 Bb4:4 D5:4 | Eb5:8 D5:4 Bb4:4 | C5:6 D5:2 Eb5:4 G5:4 | F#5:8 D5:8 |
+    G5:6 F5:2 D5:4 Bb4:4 | F5:6 Eb5:2 D5:4 Bb4:4 | Eb5:4 D5:4 C5:4 F5:4 | D5:8 C5:2 Bb4:2 A4:4
+  second: "^3:8 ^2:8"
+  arp: "^1:2 ^2:2 ^3:2 ^2:2 ^1:2 ^2:2 ^3:2 ^4:2"
+  bass: "^1:4 r:2 ^1:2 ^3:4 ^1:4"
+  pick: "r:12 D4:4"
+
+grooves:
+  brief:
+    kick: "x.......x.......|x.......x.......|x.......x.......|x.......x...x.x."
+    sn:   "....o.......x...|....o.......x...|....o.......x...|....o.......xrrr"
+  tick:
+    t: "x.x.x.x.x.x.x.x."
+  count_in:
+    sn: "....o...o...xrrr"
+
+sections:
+  count:
+    bars: 1
+    chords: count
+    parts: {guitar: arp, bass: bass, kit: count_in}
+  a:
+    bars: 8
+    chords: verse
+    parts: {lead: tune, second: second, guitar: arp, bass: bass, kit: brief, hat: tick}
+
+arrangement: [count, a]
+loop_start: a
