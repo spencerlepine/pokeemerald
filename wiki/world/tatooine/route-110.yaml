@@ -3,9 +3,10 @@ name: ROUTE 110
 planet: TATOOINE
 kind: route
 replaces: Route110
-status: TODO
-story: ''
-pos: [200, 160]
+status: BLOCKOUT
+story: 'The Boonta Eve podrace course: the raised speeder road runs from Mos Espa south to Mos Eisley over the canyon, with the Trick House (Garindan''s) and side
+  paths underneath.'
+pos: [80, -128]
 grid: |
   TTTTTTTTTTTT.......TTTTTTTTT.TTTTTTT~~~~
   TTTTTTTTTTT#.......TTTTTTTTTTTTTTTTT~~~~
@@ -18,20 +19,20 @@ grid: |
   ~TTTTTTTTT.......T#==============#TTT~~~
   ~TTTTTTTTT.......T#==============#.TT~~~
   ~TTTTTTTTT.......T#==============#.TT~~~
-  ~TTT.###.........TT#~==~~~===~~=#T.TT~~~
-  ~TTT.............####==#.#===#.#..TTT~~~
-  ~TTT..........######T==T.T===TTTTTTTT..~
-  ~TTT..........#######..###===#T###TTTTT~
-  ~TTT..........#.##.#......===.....TTTTT~
-  ~TTT.........#######....TT===T...TTTTTT~
+  ~TTT.###.............==~~~===~~=#T.TT~~~
+  ~TTT.................==#.#===#.#..TTT~~~
+  ~TTT.................==T.T===TTTTTTTT..~
+  ~TTT...................###===#T###TTTTT~
+  ~TTT......................===.....TTTTT~
+  ~TTT....................TT===T...TTTTTT~
   ~TT#.............T.....TTT===TT..TTTTTT~
-  ~TT..............T....TTTT===TTTTTTT##T~
-  ~TT.....TT.T...TT######TT#===#TTTTT####~
-  ~~T...T~~~~~~~~~~~~~~~~~~=====~~~T#####~
-  ~~T...T~~~~~~~~~~~~~~~~~~=====~~~######~
-  ~~T.."T~~~~~~~~~~~~~~~~~~~===~~~~######~
-  ~~T...T~~~~~~~~~..~~~~~~~~===~~~~######~
-  ~~T"..T~~~~~~~~...~~~~~~~~===~~~~##.TT#~
+  ~TT..............T....TTTT===TTTT......~
+  ~TT.....TT.T...TT######TT#===#TTT......~
+  ~~T...T~~~~~~~~~~~~~~~~~~=====~~~......~
+  ~~T...T~~~~~~~~~~~~~~~~~~=====~~~......~
+  ~~T.."T~~~~~~~~~~~~~~~~~~~===~~~~......~
+  ~~T...T~~~~~~~~~..~~~~~~~~===~~~~......~
+  ~~T"..T~~~~~~~~...~~~~~~~~===~~~~......~
   ~~T.."T~~~~~~~~#TT~~~~~~~~===~~~~...TT.~
   ~~T...T~~~~~~~~...~~~~~~~~===~~~~...TTT~
   ~~T"."T~~~~~~~~~~~~~~~~~~~===~~~~...TTT~
@@ -68,12 +69,12 @@ grid: |
   ~~##~~~~=============~~##~~~~~~~T"".T~~~
   ####~~~~~~~=~~~~===~~~~##~~~~~~~T"."T~~~
   #####~~~~~~=~~~~===~~~~##~~~~~~~T...T~~~
-  ####..~~~~###~~~===~~~~##~~~~~~~T"."T~~~
-  ###.###..#####~~===~~~##~~~~~~~~T.".T~~~
-  #######TT#####~~===~~~##~~~~~~~~T"."T~~~
-  TTTTTTTTT#####~=====~##~~~~~~~~~T"".T~~~
-  TTTTTTTTT#####~=====~##~~~~~~~#T"""."T#~
-  TTTTTTTT.#####~~===~~~##~~~~~~T"".""""T~
+  ####..~~~.....~~===~~~~##~~~~~~~T"."T~~~
+  ###.###.......~~===~~~##~~~~~~~~T.".T~~~
+  #######TT.....~~===~~~##~~~~~~~~T"."T~~~
+  TTTTTTTTT.....~=====~##~~~~~~~~~T"".T~~~
+  TTTTTTTTT.....~=====~##~~~~~~~#T"""."T#~
+  TTTTTTTT......~~===~~~##~~~~~~T"".""""T~
   ....TTT.#....T~~===~~~##~~~~~~T"""""".T~
   ..............T#...#TTTTTT..TT""""""""T~
   ................===...."".""""."."."""T~
@@ -92,10 +93,10 @@ grid: |
   TTTTTTT....T~~~~~~~~~~~~~~~===~~~~~~~~##
   TTTTTTT....T~~~~~~~~~~~~~~=====~~~~~~~##
   TTTTTTT....T~~~~~~~~~~==============~~##
-  TTTTTTT....#########~~==============~.##
-  TTTTTTT........######================T~~
-  TTTTTTTT.......#.##.##==============#T~~
-  TTTTTTTT......########==============#T~~
+  TTTTTTT...............==============~.##
+  TTTTTTT...............===============T~~
+  TTTTTTTT..............==============#T~~
+  TTTTTTTT..............==============#T~~
   TTTTTTTT..........T..T#=~~~~==~~~~=#TT~~
   TTTTTTTT..........T....#...#==#...#..T~~
   TTTTTTTT..........T........T==TT..T.TT~~
@@ -117,8 +118,48 @@ exits:
 - edge: west
   cells: [67, 68, 69, 70, 71]
   to: route-103
-buildings: []
-props: []
+buildings:
+- name: Entrance
+  art: art:tatooine:homestead-dome
+  at: [33, 18]
+  size: [6, 7]
+  door: 2
+  to: espa-generator-entrance
+- name: Puzzle house entrance
+  art: art:tatooine:homestead-dome
+  at: [9, 61]
+  size: [5, 6]
+  door: 2
+  to: route-110-puzzle-house-entrance
+- name: Seaside cycling road north entrance
+  art: art:tatooine:homestead-dome
+  at: [13, 11]
+  size: [8, 6]
+  door: 2
+  to: route-110-seaside-cycling-road-north-entrance
+- name: Seaside cycling road south entrance
+  art: art:tatooine:homestead-dome
+  at: [11, 85]
+  size: [11, 4]
+  door: 5
+  to: route-110-seaside-cycling-road-south-entrance
+props:
+- name: Podrace course markers
+  art: art:tatooine:podrace-course-markers
+  at: [20, 40]
+  size: [1, 2]
+- name: Podrace course markers
+  art: art:tatooine:podrace-course-markers
+  at: [20, 69]
+  size: [1, 2]
+- name: Pod-race junk
+  art: art:tatooine:pod-race-junk
+  at: [15, 39]
+  size: [2, 2]
+- name: Vaporator
+  art: art:tatooine:moisture-vaporator
+  at: [35, 90]
+  size: [1, 2]
 people:
 - name: Boy2
   at: [17, 90]
@@ -180,18 +221,18 @@ people:
 - name: Aqua Grunt4
   at: [10, 83]
   role: npc
-- name: '0x0'
+- name: Event object
   at: [8, 82]
-  role: npc
+  role: object
 - name: Trainer Clegg
   at: [21, 78]
   role: trainer
-- name: '0x0'
+- name: Event object
   at: [34, 54]
-  role: npc
-- name: '0x0'
+  role: object
+- name: Event object
   at: [34, 54]
-  role: npc
+  role: object
 - name: Trainer Tiesh
   at: [33, 69]
   role: trainer
@@ -207,16 +248,16 @@ people:
 - name: Trainer Jixar
   at: [36, 40]
   role: trainer
-- name: '0x0'
+- name: Event object
   at: [9, 79]
-  role: npc
-- name: Berry tree
+  role: object
+- name: Berry plant
   at: [5, 11]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [6, 11]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [7, 11]
   role: berry
 - name: Item
@@ -253,21 +294,9 @@ signs:
   at: [13, 16]
 warps:
 - name: Door
-  at: [35, 24]
-  to: espa-generator-entrance
-- name: Door
-  at: [11, 66]
-  to: route-110-puzzle-house-entrance
-- name: Door
-  at: [15, 16]
-  to: route-110-seaside-cycling-road-north-entrance
-- name: Door
   at: [18, 16]
   to: route-110-seaside-cycling-road-north-entrance
 - name: Door
-  at: [16, 88]
-  to: route-110-seaside-cycling-road-south-entrance
-- name: Door
   at: [19, 88]
   to: route-110-seaside-cycling-road-south-entrance
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

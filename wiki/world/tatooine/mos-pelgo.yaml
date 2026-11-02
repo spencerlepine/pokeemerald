@@ -5,7 +5,7 @@ kind: town
 replaces: LittlerootTown
 status: BLOCKOUT
 story: The family's freighter lands at this tiny moisture farm. The player's homestead, the Korr family's home and Prof. Korr's lab. Route 101 leaves north.
-pos: [120, 280]
+pos: [0, 0]
 grid: |
   TTTTTTTTTT::TTTTTTTT
   TT........::......TT

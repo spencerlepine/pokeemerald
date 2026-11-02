@@ -173,6 +173,8 @@ def draw_map(area):
 
     for e in area.exits:
         cells = e["cells"]
+        if not cells:
+            continue
         a, b = min(cells), max(cells) + 1
         to = str(e.get("to", "?"))
         if e["edge"] in ("north", "south"):

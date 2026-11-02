@@ -106,9 +106,12 @@ class Area:
                 ch = self.cell(x, y)
                 if ch is None:
                     p.append(f"{kind} {o.get('name')} is off the map")
-                elif kind == "person" and (not walkable(ch) or (x, y) in solid):
+                elif kind == "person" and o.get("role") not in ("berry", "item", "object") \
+                        and ch != "~" and (not walkable(ch) or (x, y) in solid):
                     p.append(f"{kind} {o.get('name')} stands on a blocked cell [{x}, {y}]")
         for e in self.exits:
+            if not e.get("cells"):
+                p.append(f"exit {e['edge']} to {e.get('to')} has no cells")
             for c in e["cells"]:
                 x, y = {"north": (c, 0), "south": (c, self.h - 1), "west": (0, c), "east": (self.w - 1, c)}[e["edge"]]
                 if self.cell(x, y) is None or not walkable(self.cell(x, y)) or (x, y) in solid:

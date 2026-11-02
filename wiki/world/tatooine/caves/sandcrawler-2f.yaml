@@ -3,8 +3,8 @@ name: SANDCRAWLER 2F
 planet: TATOOINE
 kind: dungeon
 replaces: MirageTower_2F
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Sandcrawler, second deck: holes in the floor drop back to 1F.'
 grid: |
   #####################
   #####################
@@ -35,4 +35,4 @@ warps:
 - name: Door
   at: [15, 2]
   to: sandcrawler-1f
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

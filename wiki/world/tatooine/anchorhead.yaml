@@ -3,89 +3,133 @@ name: ANCHORHEAD
 planet: TATOOINE
 kind: town
 replaces: VerdanturfTown
-status: TODO
-story: ''
-pos: [120, 140]
+status: BLOCKOUT
+story: Quiet farm town with clean air. Camie and her father live here, the farm co-op doubles as a Showcase hall, and Luke's friends hang out by the skyhopper.
+pos: [-25, -143]
 grid: |
-  ####################
-  ########.###########
-  #######...T########.
-  T#######..T########T
-  T#####....T........T
-  T#####..............
-  T#####........#.....
-  TT###T..............
-  T#..................
-  ....................
-  ....................
-  ....................
-  TTTT####TTTTT.......
-  ####....#####...TTTT
-  ####...######...####
-  #...............####
-  #...................
-  ....................
-  T......TTTT....###.T
-  TTT...TTTTTTT.....TT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTT..TTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTT.................TTTTTTTTT
+  TTTTTTTT....................TTTTTT
+  TTTT.........................TTTTT
+  TTTT...........................TTT
+  TTTT............:..............TTT
+  TTTT............:........:.....TTT
+  TT....:.........:........:....TTTT
+  T.....:.....::::::::::...:....TTTT
+  T.....:.....::::::::::...:....TTTT
+  T..:::::::::::::::::::::::::::::::
+  T..:::::::::::::::::::::::::::::::
+  TT.....:....::::::::::...:........
+  TT.....:....::::::::::...:........
+  TT..............:........:.......T
+  TTT............................TTT
+  TTT..........................T.TTT
+  TTTTT.......................TTTTTT
+  TTT.TTT.TTT.................TTTTTT
+  TTT.TTTTTTTT................TTTTTT
+  TTTTTTTTTTTT................TTTTTT
+  TTTTTTTTTTTTT..............TTTTTTT
+  TTTTTTTTTTTTT...........TTTTTTTTTT
+  TTTTTTTTTTTTTTT....TTTTTTTTTTTTTTT
 exits:
-- edge: north
-  cells: []
-  to: route-116
 - edge: east
-  cells: [2, 5, 6, 7, 8, 9, 10, 11, 12, 16, 17]
+  cells: [12, 13]
   to: route-117
-buildings: []
-props: []
+buildings:
+- name: Farm co-op (Showcase hall)
+  art: art:tatooine:farm-co-op
+  at: [13, 3]
+  size: [6, 4]
+  door: 3
+  to: anchorhead-showcase-hall
+- name: Bacta Center
+  art: art:shared:bacta-center
+  at: [4, 5]
+  size: [5, 4]
+  door: 2
+  to: anchorhead-bacta-center-1f
+- name: Supply Depot
+  art: art:shared:supply-depot
+  at: [24, 4]
+  size: [4, 4]
+  door: 1
+  to: anchorhead-supply-depot
+- name: Camie's family home
+  art: art:tatooine:homestead-dome
+  at: [5, 16]
+  size: [5, 4]
+  door: 2
+  to: anchorhead-camies-home
+- name: Companion rater's home
+  art: art:tatooine:homestead-dome
+  at: [14, 17]
+  size: [5, 4]
+  door: 2
+  to: anchorhead-friendship-raters-house
+- name: Old farmer's home
+  art: art:tatooine:homestead-dome
+  at: [23, 17]
+  size: [5, 4]
+  door: 2
+  to: anchorhead-house
+props:
+- name: Vaporator
+  art: art:tatooine:moisture-vaporator
+  at: [2, 9]
+  size: [1, 2]
+- name: Vaporator
+  art: art:tatooine:moisture-vaporator
+  at: [11, 4]
+  size: [1, 2]
+- name: Vaporator
+  art: art:tatooine:moisture-vaporator
+  at: [29, 8]
+  size: [1, 2]
+- name: Vaporator
+  art: art:tatooine:moisture-vaporator
+  at: [30, 17]
+  size: [1, 2]
+- name: Vaporator
+  art: art:tatooine:moisture-vaporator
+  at: [3, 20]
+  size: [1, 2]
+- name: Vaporator
+  art: art:tatooine:moisture-vaporator
+  at: [21, 4]
+  size: [1, 2]
+- name: Tusken-proof wall
+  art: art:tatooine:adobe-wall
+  at: [29, 15]
+  size: [1, 1]
+- name: T-16 skyhopper (Luke's model)
+  art: art:shared:parked-landspeeder
+  at: [19, 9]
+  size: [2, 1]
 people:
-- name: Man
-  at: [4, 17]
+- name: Camie
+  at: [11, 18]
+  role: story
+- name: Camie's dad
+  at: [4, 14]
+  role: story
+- name: Farmhand
+  at: [22, 10]
   role: npc
-- name: Twin
-  at: [9, 2]
+- name: Kid playing with a model skyhopper
+  at: [18, 11]
   role: npc
-- name: Boy
-  at: [7, 11]
-  role: npc
-- name: Camper
-  at: [7, 6]
+- name: Water seller
+  at: [27, 14]
   role: npc
 signs:
-- name: Sign
-  at: [14, 3]
-- name: Sign
-  at: [14, 6]
-- name: Sign
-  at: [17, 3]
-- name: Sign
-  at: [7, 14]
-- name: Sign
-  at: [13, 3]
-- name: Sign
-  at: [18, 3]
-- name: Sign
-  at: [1, 8]
-- name: Sign
-  at: [7, 3]
+- name: Town holo-sign
+  at: [11, 10]
+- name: Co-op sign
+  at: [19, 8]
 warps:
-- name: Door
-  at: [3, 7]
-  to: anchorhead-battle-tent-lobby
-- name: Door
-  at: [12, 3]
-  to: anchorhead-supply-depot
-- name: Door
-  at: [16, 3]
-  to: anchorhead-bacta-center-1f
-- name: Door
-  at: [10, 14]
-  to: anchorhead-wandas-house
-- name: Door
-  at: [8, 1]
-  to: beggar-s-canyon
-- name: Door
-  at: [1, 14]
-  to: anchorhead-friendship-raters-house
-- name: Door
-  at: [17, 15]
-  to: anchorhead-house
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+- name: Beggar's Canyon tunnel mouth
+  at: [3, 12]
+  to: beggars-canyon
+todo: [Vanilla's Wanda's house becomes Camie's family home (interior id anchorhead-camies-home).]

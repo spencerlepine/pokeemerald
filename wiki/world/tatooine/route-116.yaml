@@ -3,9 +3,9 @@ name: ROUTE 116
 planet: TATOOINE
 kind: route
 replaces: Route116
-status: TODO
-story: ''
-pos: [40, 120]
+status: BLOCKOUT
+story: East road from Bestine to Beggar's Canyon, where Fixer is digging a tunnel by hand to Anchorhead. The tunnellers' rest house sits by the canyon mouth.
+pos: [-87, -164]
 grid: |
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT.###########################################################
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT.###########################################################
@@ -28,39 +28,48 @@ grid: |
   TTTTTTTTTTTT"."........"""."TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT############################
   TTTTTTTTTTTT........."""""""TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT############################
 exits:
-- edge: south
-  cells: []
-  to: anchorhead
 - edge: west
   cells: [8, 9, 10, 11, 12, 13]
   to: bestine
 buildings: []
-props: []
+props:
+- name: Vaporator
+  art: art:tatooine:moisture-vaporator
+  at: [41, 6]
+  size: [1, 2]
+- name: Tusken camp
+  art: art:tatooine:tusken-camp
+  at: [53, 16]
+  size: [3, 2]
+- name: Sandstone boulder
+  art: art:tatooine:sandstone-boulder
+  at: [71, 9]
+  size: [2, 2]
 people:
 - name: Trainer Jios
   at: [12, 7]
   role: trainer
-- name: Event Script_Cut Tree
+- name: Shrub to cut (Vibroblade)
   at: [21, 6]
-  role: npc
-- name: Event Script_Cut Tree
+  role: object
+- name: Shrub to cut (Vibroblade)
   at: [32, 10]
-  role: npc
+  role: object
 - name: Trainer Jiar
   at: [13, 17]
   role: trainer
 - name: Briney
   at: [46, 9]
   role: npc
-- name: Event Script_Cut Tree
+- name: Shrub to cut (Vibroblade)
   at: [28, 11]
-  role: npc
+  role: object
 - name: Trainer Cobax
   at: [36, 17]
   role: trainer
-- name: Event Script_Cut Tree
+- name: Shrub to cut (Vibroblade)
   at: [24, 9]
-  role: npc
+  role: object
 - name: Trainer Javila
   at: [26, 6]
   role: trainer
@@ -85,19 +94,19 @@ people:
 - name: Trainer Dessus
   at: [33, 5]
   role: trainer
-- name: Event Script_Cut Tree
+- name: Shrub to cut (Vibroblade)
   at: [30, 5]
-  role: npc
+  role: object
 - name: Trainer Javir
   at: [36, 13]
   role: trainer
 - name: Trainer Dedar
   at: [42, 13]
   role: trainer
-- name: Berry tree
+- name: Berry plant
   at: [18, 2]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [19, 2]
   role: berry
 - name: Item
@@ -106,10 +115,10 @@ people:
 - name: Item
   at: [10, 17]
   role: item
-- name: Berry tree
+- name: Berry plant
   at: [20, 2]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [21, 2]
   role: berry
 - name: Item
@@ -135,17 +144,17 @@ signs:
 warps:
 - name: Door
   at: [47, 8]
-  to: beggar-s-canyon
+  to: beggars-canyon
 - name: Door
   at: [38, 8]
   to: route-116-tunnelers-rest-house
 - name: Door
   at: [65, 10]
-  to: beggar-s-canyon
+  to: beggars-canyon
 - name: Door
   at: [59, 13]
   to: terra-cave-entrance
 - name: Door
   at: [79, 6]
   to: terra-cave-entrance
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

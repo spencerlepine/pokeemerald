@@ -3,8 +3,8 @@ name: KRAYT GRAVEYARD
 planet: TATOOINE
 kind: dungeon
 replaces: DesertUnderpass
-status: TODO
-story: ''
+status: BLOCKOUT
+story: Tunnels under the bones of dead krayt dragons, between the Dune Sea and Route 112. Fossil companions.
 grid: |
   ####################################################..###..################################################################################
   ###########################################################################################################################################
@@ -41,4 +41,4 @@ warps:
 - name: Door
   at: [10, 12]
   to: route-114-fossil-maniacs-tunnel
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

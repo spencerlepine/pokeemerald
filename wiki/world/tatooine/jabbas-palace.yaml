@@ -1,0 +1,115 @@
+id: jabbas-palace
+name: JABBA'S PALACE
+planet: TATOOINE
+kind: landmark
+replaces: new
+status: BLOCKOUT
+story: 'Optional: Jabba''s desert palace at the far edge of the Dune Sea. Cartel thugs guard the gate; inside, Jabba plots to catch the sea titan SANDO. A rematch
+  ladder of Cartel trainers and a rancor pit.'
+pos: [125, -263]
+grid: |
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTT......TTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTT................TTTTTTTTTTTTTTT
+  TTTTTTTTTTT....................TTTTTTTTTTTTT
+  TTTTTTTTTT.......................TTTTTTTTTTT
+  TTTTTTTTT..........................TTTTTTTTT
+  TTTTTTT.............................TTTTTTTT
+  TTTT..................................TTTTTT
+  TTTT..................................TTTTTT
+  TTTT...................................TTTTT
+  TTTT....................................TTTT
+  TTTT..................:.................TTTT
+  TTTT..................:..................TTT
+  TTT...................:...................TT
+  TTT...................:...................TT
+  TT....................:............:.......T
+  T.............:::::::::::::::::....:.......T
+  ::::::::::::::::::::::::::::::::::::.......T
+  :::::::::::::::::::::::::::::::............T
+  :::::::::::::::::::::::::::::::............T
+  T.............:::::::::::::::::...........TT
+  TT.......................................TTT
+  TTTTT....................................TTT
+  TTTTTTTT................................TTTT
+  TTTTTTTTT...............................TTTT
+  TTTTTTTTTT.............................TTTTT
+  TTTTTTTTTT............................TTTTTT
+  TTTTTTTTTTT..........................TTTTTTT
+  TTTTTTTTTTTT......................TTTTTTTTTT
+  TTTTTTTTTTTTTTTTT...............TTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTT............TTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTT..........TTTTTTTTTTTTTT
+exits:
+- edge: west
+  cells: [19, 20, 21]
+  to: route-111
+buildings:
+- name: Jabba's palace gate
+  art: art:tatooine:jabbas-palace
+  at: [15, 4]
+  size: [14, 9]
+  door: 7
+  to: jabbas-palace-throne-room
+- name: Sail barge dock shed
+  art: art:tatooine:docking-bay
+  at: [33, 13]
+  size: [6, 4]
+  door: 2
+  to: jabbas-palace-barge-dock
+props:
+- name: Khetanna sail barge (moored)
+  art: art:tatooine:sail-barge-wreck
+  at: [34, 22]
+  size: [6, 3]
+- name: Skiff
+  art: art:shared:parked-landspeeder
+  at: [30, 26]
+  size: [2, 1]
+- name: Rancor pit grate
+  art: art:tatooine:sarlacc-pit
+  at: [6, 15]
+  size: [4, 4]
+- name: Cargo crates
+  art: art:shared:cargo-crates
+  at: [8, 24]
+  size: [2, 2]
+- name: Krayt bones
+  art: art:tatooine:krayt-bones
+  at: [4, 9]
+  size: [4, 3]
+- name: Gonk droid
+  art: art:shared:gonk-droid
+  at: [13, 23]
+  size: [1, 1]
+people:
+- name: Cartel thug (gate guard)
+  at: [20, 14]
+  role: trainer
+- name: Cartel thug (gate guard)
+  at: [24, 14]
+  role: trainer
+- name: Cartel thug
+  at: [12, 20]
+  role: trainer
+- name: Cartel thug
+  at: [31, 21]
+  role: trainer
+- name: Bib Fortuna's errand droid
+  at: [26, 24]
+  role: npc
+- name: Jawa hoping to sell droids
+  at: [9, 22]
+  role: npc
+- name: Bounty hunter waiting for work
+  at: [37, 28]
+  role: npc
+signs:
+- name: Warning sign (in Huttese)
+  at: [6, 17]
+warps: []
+todo: ['New area: reached from a side track on Route 111''s east edge.', 'New concept rows needed: art:tatooine:jabbas-palace (14x9 landmark), rancor pit (uses sarlacc-pit
+    as a stand-in).', 'New interiors: jabbas-palace-throne-room, jabbas-palace-barge-dock.', 'Story check: Jabba is the Cartel boss after SANDO; this is a visit,
+    not where he is beaten (that stays at the Hutt Hideout).']

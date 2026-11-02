@@ -30,6 +30,7 @@ FOLDER = {"town": "", "route": "", "landmark": "", "dungeon": "caves", "interior
 
 
 def kebab(s):
+    s = s.replace("'", "")
     s = re.sub(r"([a-z0-9])([A-Z])", r"\1-\2", s)
     s = re.sub(r"([A-Za-z])(\d)", r"\1-\2", s)
     s = re.sub(r"([A-Z]+)([A-Z][a-z])", r"\1-\2", s)

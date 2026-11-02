@@ -3,9 +3,9 @@ name: ROUTE 104
 planet: TATOOINE
 kind: route
 replaces: Route104
-status: TODO
-story: ''
-pos: [0, 180]
+status: BLOCKOUT
+story: Coast road from Mos Entha north to Bestine past the Jundland Wastes. Han's hangar (vanilla Mr. Briney's cottage) is where the Falcon leaves for Kashyyyk.
+pos: [-133, -98]
 grid: |
   TTTTTTTTTT........................TTTTTT
   TTTTTTTTTTTT......................TTTTTT
@@ -22,10 +22,10 @@ grid: |
   TT."TTTTTTTTTTTT~~~~~~~~..~~~~~~~~~~~~TT
   TT..TTTTTTTTTT~~~~~~~~~~..~~~~~~~~~~~~TT
   TT..TTTTTTTTTT~~~~~~~~~~..~~~~~~~~~~~~TT
-  TT..#####TTTT~~~~~~~~~~~........~~~~~~..
-  TT.######TTTT~~~~~~~~~~~........~~~~~~..
-  TT.######TTTT~~~~~~~~~~~~~~~~~..~~~~~~TT
-  TT.##.#T#TTTT~~~~~~~~~~~~~~~~~..~~~~~~TT
+  TT.......TTTT~~~~~~~~~~~........~~~~~~..
+  TT.......TTTT~~~~~~~~~~~........~~~~~~..
+  TT.......TTTT~~~~~~~~~~~~~~~~~..~~~~~~TT
+  TT.......TTTT~~~~~~~~~~~~~~~~~..~~~~~~TT
   TT.........TT~~~~~~~~~~~~~~~~~..~~~~~~TT
   TT.....#...TT~~~~~~~~~~~~~~~~~..~~~~~~TT
   TT...........~~~~~~~~~~~~~~~~~..~~~~~~TT
@@ -91,14 +91,33 @@ exits:
 - edge: north
   cells: [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33]
   to: bestine
-- edge: south
-  cells: []
-  to: route-105
 - edge: east
   cells: [61, 62, 63]
   to: mos-entha
-buildings: []
-props: []
+buildings:
+- name: Flower shop
+  art: art:tatooine:homestead-dome
+  at: [3, 15]
+  size: [6, 4]
+  door: 2
+  to: route-104-flower-shop
+props:
+- name: Vaporator
+  art: art:tatooine:moisture-vaporator
+  at: [18, 55]
+  size: [1, 2]
+- name: Sandstone boulder
+  art: art:tatooine:sandstone-boulder
+  at: [18, 42]
+  size: [2, 2]
+- name: Tusken camp
+  art: art:tatooine:tusken-camp
+  at: [27, 25]
+  size: [3, 2]
+- name: Parked landspeeder
+  art: art:shared:parked-landspeeder
+  at: [24, 67]
+  size: [2, 1]
 people:
 - name: Bug Catcher
   at: [15, 60]
@@ -118,12 +137,12 @@ people:
 - name: Girl2
   at: [28, 74]
   role: npc
-- name: '0x0'
+- name: Event object
   at: [12, 54]
-  role: npc
-- name: '0x0'
+  role: object
+- name: Event object
   at: [12, 51]
-  role: npc
+  role: object
 - name: Trainer Iban
   at: [29, 8]
   role: trainer
@@ -148,9 +167,9 @@ people:
 - name: Trainer Benik
   at: [18, 67]
   role: trainer
-- name: Event Script_Cut Tree
+- name: Shrub to cut (Vibroblade)
   at: [35, 22]
-  role: npc
+  role: object
 - name: Boy2
   at: [5, 26]
   role: npc
@@ -160,34 +179,34 @@ people:
 - name: Rival
   at: [17, 50]
   role: npc
-- name: Berry tree
+- name: Berry plant
   at: [34, 6]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [35, 6]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [36, 6]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [22, 41]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [23, 41]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [24, 41]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [3, 22]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [3, 23]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [3, 24]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [3, 25]
   role: berry
 - name: Item
@@ -218,9 +237,6 @@ warps:
   at: [17, 50]
   to: route-104-han-hangar
 - name: Door
-  at: [5, 18]
-  to: route-104-flower-shop
-- name: Door
   at: [10, 30]
   to: jundland-wastes
 - name: Door
@@ -238,4 +254,4 @@ warps:
 - name: Door
   at: [33, 42]
   to: jundland-wastes
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Han''s hangar is the Tatooine/Kashyyyk planet border (net:hangar-tatooine-kashyyyk).']

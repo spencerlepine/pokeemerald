@@ -3,8 +3,9 @@ name: JUNDLAND WASTES
 planet: TATOOINE
 kind: route
 replaces: PetalburgWoods
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Rocky canyon badlands between the two halves of Route 104: Tusken territory, where the Organa engineer is robbed. A side path east climbs to Ben''s hut.'
+pos: [-135, 34]
 grid: |
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
@@ -26,8 +27,8 @@ grid: |
   TTTT"""""""......"""".......TTTTTTTTTTTTTT..""TT
   TTTT"""""""....."""""""""...TTTTTTTTTTTTTT..."TT
   TTTT."""""......""""""""""..TTTTTTTTTTTTTT....TT
-  TTTTTTTTTTTT....TTTTTTTTTT..TTTTTT..TTTTTTvvvvTT
-  TTTTTTTTTTTT....TTTTTTTTTT..TTTTTT..TTTTTT"...TT
+  TTTTTTTTTTTT....TTTTTTTTTT..TTTTTT..TTTTTTvvvv..
+  TTTTTTTTTTTT....TTTTTTTTTT..TTTTTT..TTTTTT".....
   TTTTTTTTTTTTvvvvTTTTTTTTTT..TTTT".....TTTT""..TT
   TTTTTTTTTTTT....TTTTTTTTTT..TTTT".....TTTT""".TT
   TTTTTT............""""""""..TTTT""......""""".TT
@@ -50,22 +51,41 @@ grid: |
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
-exits: []
+exits:
+- edge: east
+  cells: [20, 21]
+  to: bens-hut
 buildings: []
-props: []
+props:
+- name: Tusken camp
+  art: art:tatooine:tusken-camp
+  at: [11, 10]
+  size: [3, 2]
+- name: Rock spire
+  art: art:tatooine:rock-spire
+  at: [26, 25]
+  size: [2, 3]
+- name: Krayt bones
+  art: art:tatooine:krayt-bones
+  at: [12, 23]
+  size: [4, 3]
+- name: Sandstone boulder
+  art: art:tatooine:sandstone-boulder
+  at: [38, 10]
+  size: [2, 2]
 people:
-- name: Event Script_Cut Tree
+- name: Shrub to cut (Vibroblade)
   at: [19, 10]
-  role: npc
-- name: Event Script_Cut Tree
+  role: object
+- name: Shrub to cut (Vibroblade)
   at: [19, 11]
-  role: npc
-- name: '0x0'
+  role: object
+- name: Event object
   at: [26, 17]
-  role: npc
-- name: '0x0'
+  role: object
+- name: Event object
   at: [26, 20]
-  role: npc
+  role: object
 - name: Boy1
   at: [15, 19]
   role: npc
@@ -117,4 +137,4 @@ warps:
 - name: Door
   at: [37, 38]
   to: route-104
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

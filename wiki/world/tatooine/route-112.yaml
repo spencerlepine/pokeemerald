@@ -3,9 +3,9 @@ name: ROUTE 112
 planet: TATOOINE
 kind: route
 replaces: Route112
-status: TODO
-story: ''
-pos: [160, 20]
+status: BLOCKOUT
+story: Canyon road north of the Dune Sea. The shuttle station (vanilla cable car) flies up to Mustafar Peak; the north edge was Sullust and is now cut.
+pos: [45, -287]
 grid: |
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
@@ -30,11 +30,11 @@ grid: |
   #####################.T.#TTT########T###
   ####################.T.##TTTTT##########
   T###################.###.TTTTT...#######
-  T#####T#############.#..TT..##..T#.#####
-  ###T##T###########T#.#.....####..#######
-  ###T#####T########T#.#..#..######.######
-  #TTT#####T#.######T###..#..######T######
-  #TTT#T#####T#########.T...T#..###T######
+  T#####T#############.#..TT.......#.#####
+  ###T##T###########T#.#...........#######
+  ###T#####T########T#.#..#.........######
+  #TTT#####T#.######T###..#........T######
+  #TTT#T#####T#########.T...T......T######
   T####T#TT############T.TTT.......#######
   T######TT##TT######.#TTTT......TT#.#####
   ###########TT###..#T#TTT##..##TTT#######
@@ -54,13 +54,13 @@ grid: |
   TTTTTTTTTTTT>>.>.>.#....."""""""""TTTTTT
   TTTTTTTTTTTv#>.>.>......."""""""""..TTTT
   TTTTTT..TT>..>.>.>.....T######T"""......
-  .TTTTT..TT>..>.>.>.....########T........
-  ..TTT...TT>..>.>.>.......#######........
-  ....#....T>..>.>.>............##........
-  ..........>..>.>.>......................
-  ..........>..>.>.>......................
-  ..........>..>.>.>....................T#
-  ..........TTTTTTT>######TTTTTT#####T####
+  TTTTTT..TT>..>.>.>.....########T........
+  T.TTT...TT>..>.>.>.......#######........
+  T...#....T>..>.>.>............##........
+  T.........>..>.>.>......................
+  T.........>..>.>.>......................
+  T.........>..>.>.>....................T#
+  T.........TTTTTTT>######TTTTTT#####T####
   T........TTTTTTTTT......TTTTTTTTTTT#####
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT#####
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT#####
@@ -68,17 +68,29 @@ grid: |
   T#############TTTTTTTTTTT###############
   ################TTTTTTTT################
 exits:
-- edge: north
-  cells: []
-  to: route-113
-- edge: west
-  cells: [47, 48, 49, 50, 51, 52, 53]
-  to: pirin
 - edge: east
   cells: [8, 9, 10, 11, 46, 47, 48, 49, 50, 51]
   to: route-111
-buildings: []
-props: []
+buildings:
+- name: Shuttle station
+  art: art:tatooine:homestead-dome
+  at: [27, 23]
+  size: [6, 5]
+  door: 1
+  to: route-112-shuttle-station
+props:
+- name: Sandstone boulder
+  art: art:tatooine:sandstone-boulder
+  at: [22, 23]
+  size: [2, 2]
+- name: Rock spire
+  art: art:tatooine:rock-spire
+  at: [37, 9]
+  size: [2, 3]
+- name: Landing pad
+  art: art:shared:landing-pad
+  at: [17, 35]
+  size: [4, 4]
 people:
 - name: Magma Grunts
   at: [26, 30]
@@ -107,16 +119,16 @@ people:
 - name: Trainer Sinnora
   at: [31, 11]
   role: trainer
-- name: Berry tree
+- name: Berry plant
   at: [27, 6]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [28, 6]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [29, 6]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [30, 6]
   role: berry
 - name: Item
@@ -130,9 +142,6 @@ signs:
 - name: Sign
   at: [4, 49]
 warps:
-- name: Door
-  at: [28, 27]
-  to: route-112-shuttle-station
 - name: Door
   at: [29, 27]
   to: route-112-shuttle-station
@@ -148,4 +157,5 @@ warps:
 - name: Door
   at: [22, 10]
   to: magma-tunnels
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Planet border cut: west edge to pirin (SULLUST); reached by ship instead.', Route 112 north (Sullust)
+    and the shuttle to Mustafar become ship links; see net_new.csv borders.]

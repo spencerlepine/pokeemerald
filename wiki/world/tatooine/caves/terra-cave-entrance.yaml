@@ -3,8 +3,8 @@ name: TERRA CAVE ENTRANCE
 planet: TATOOINE
 kind: dungeon
 replaces: TerraCave_Entrance
-status: TODO
-story: ''
+status: BLOCKOUT
+story: Hidden cave that only opens in drought (vanilla Terra Cave).
 grid: |
   ####################
   ##############.#####
@@ -38,4 +38,4 @@ warps:
 - name: Door
   at: [14, 1]
   to: terra-cave-end
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

@@ -3,8 +3,8 @@ name: SANDCRAWLER 3F
 planet: TATOOINE
 kind: dungeon
 replaces: MirageTower_3F
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Sandcrawler, third deck: more cracked floor.'
 grid: |
   #####################
   #####################
@@ -27,12 +27,12 @@ exits: []
 buildings: []
 props: []
 people:
-- name: Event Script_Rock Smash
+- name: Event object
   at: [3, 7]
-  role: npc
-- name: Event Script_Rock Smash
+  role: object
+- name: Event object
   at: [4, 8]
-  role: npc
+  role: object
 signs: []
 warps:
 - name: Door
@@ -41,4 +41,4 @@ warps:
 - name: Door
   at: [2, 4]
   to: sandcrawler-4f
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

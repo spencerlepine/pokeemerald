@@ -3,8 +3,8 @@ name: ESPA GENERATOR ENTRANCE
 planet: TATOOINE
 kind: dungeon
 replaces: NewMauville_Entrance
-status: TODO
-story: ''
+status: BLOCKOUT
+story: Hatch and stairwell down from Mos Espa into the old Espa generator.
 grid: |
   #########
   ####.####
@@ -27,4 +27,4 @@ warps:
 - name: Door
   at: [4, 1]
   to: espa-generator-inside
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

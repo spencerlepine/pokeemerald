@@ -3,9 +3,10 @@ name: ROUTE 111
 planet: TATOOINE
 kind: route
 replaces: Route111
-status: TODO
-story: ''
-pos: [200, 0]
+status: BLOCKOUT
+story: 'The Dune Sea: open desert north of Mos Espa with sandstorms (SAND GOGGLES), the Krayt Graveyard tunnels, the Tusken Ruins and the wandering Sandcrawler. The
+  Pit of Carkoon and the sail barge wreck are optional side spots, and a track east leads to Jabba''s palace.'
+pos: [85, -304]
 grid: |
   ########################################
   ########################################
@@ -14,19 +15,19 @@ grid: |
   ###########################........#####
   #################.##..##.###.......#####
   ############.#...........####.###...####
-  ....#######...............###.###...####
-  ...............................##...####
-  ...............................##...####
-  ...............................##...####
+  T...#######...............###.###...####
+  T..............................##...####
+  T..............................##...####
+  T..............................##...####
   #####T...................T.....##...####
   #######T............>...TT.....##...####
   ########TTT...vvvvvv#...TTT....##...####
   ########TTTTTT..........TTT....###...###
-  ########TTTTTTT.........T##....###...###
-  ########TTTTTTTTvvvvv..TT####...##...###
-  ########TTTTTTTT.......TT####...##....##
-  #####...TTTTT..T.......TT####...##....##
-  ##...TTTTTTTTTTT..vvvvTTT#......##....##
+  ########TTTTTTT.........T......###...###
+  ########TTTTTTTTvvvvv..TT.......##...###
+  ########TTTTTTTT.......TT.......##....##
+  #####...TTTTT..T.......TT.......##....##
+  ##...TTTTTTTTTTT..vvvvTTT.......##....##
   ..TTTTTTTTT...........TTT.......##....##
   TTTTTTTTTT.....................T##...###
   TTTTTTTTT..............TTT.....##....###
@@ -67,9 +68,9 @@ grid: |
   ###########"""""""""""""".....""""""####
   ###########"""""""#.#.........""""""####
   ###########""""..............."""..."###
-  ###########"""................"""..."###
-  #########......####...""""...."""..."###
-  TTTTT####......####..."""".........."###
+  ..........."""................"""..."...
+  ......................""""...."""..."...
+  ......................"""".........."...
   TTTTT..........####..."""".........""###
   TTTTT..........####..."""""""""".."""###
   TTT............######."""""""""""""""###
@@ -91,10 +92,10 @@ grid: |
   #######......########"""""""""""""""".##
   #######T.....########""""##"""""##"""###
   #######......########""""##"""""##"""#.#
-  ######.#.....########"""""".###."""""###
-  ######.......#########"""".#####.""""###
-  ######..TT.....#######"##".#####."##"###
-  #####...##.....#######"##".##.##."##"###
+  ######.#.....########""""""....."""""###
+  ######.......#########"""".......""""###
+  ######..TT.....#######"##"......."##"###
+  #####...##.....#######"##"......."##"###
   #####TT.........######"""".......""""###
   ####..T.#.......######.""........."".###
   ####TTT........T#######..##.....##.#####
@@ -117,11 +118,11 @@ grid: |
   #####~~~~~~~~~TT.........#####TTT#######
   #####~~~~~....TTT......TT########.######
   ####~~~~~~.............T..####T#T#######
-  ####~~~~~~########TTT.....####T..#######
-  ####~~~~~~T#####.TTT....TT##############
-  ####~~~~~~T##.##.TTT....#######T########
-  ###..~~~~~T#####.TT.......#####.########
-  ###.~~~~~~###.####.....TTT.......#######
+  ####~~~~~~........TTT.....####T..#######
+  ####~~~~~~........TT....TT##############
+  ####~~~~~~........TT....#######T########
+  ###..~~~~~........T.......#####.########
+  ###.~~~~~~.............TTT.......#######
   ###T~~~~~~............TTTTT......#######
   ####~~~~~~TT...........T#T.......#######
   ####~~~~~~~T.......TT........T##########
@@ -152,26 +153,64 @@ exits:
   cells: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17, 18, 19, 21, 22, 38]
   to: mos-espa
 - edge: west
-  cells: [7, 8, 9, 10]
-  to: route-113
-- edge: west
   cells: [20, 28, 29, 30, 31, 66, 67, 68, 69, 70, 71]
   to: route-112
-buildings: []
-props: []
+- edge: east
+  cells: [60, 61, 62]
+  to: jabbas-palace
+buildings:
+- name: Winstrate familys house
+  art: art:tatooine:homestead-dome
+  at: [10, 110]
+  size: [8, 5]
+  door: 3
+  to: route-111-winstrate-familys-house
+- name: Ruins
+  art: art:tatooine:homestead-dome
+  at: [27, 84]
+  size: [5, 4]
+  door: 2
+  to: tusken-ruins
+- name: Old ladys rest stop
+  art: art:tatooine:homestead-dome
+  at: [25, 15]
+  size: [4, 5]
+  door: 1
+  to: route-111-old-ladys-rest-stop
+props:
+- name: Sarlacc pit (Pit of Carkoon)
+  art: art:tatooine:sarlacc-pit
+  at: [5, 60]
+  size: [4, 4]
+- name: Sail barge wreck
+  art: art:tatooine:sail-barge-wreck
+  at: [21, 58]
+  size: [6, 3]
+- name: Krayt bones
+  art: art:tatooine:krayt-bones
+  at: [14, 94]
+  size: [4, 3]
+- name: Dune ripples
+  art: art:tatooine:dune-ripple-ledges
+  at: [20, 36]
+  size: [1, 1]
+- name: Sandstone boulder
+  art: art:tatooine:sandstone-boulder
+  at: [35, 25]
+  size: [2, 2]
 people:
 - name: Victor
   at: [13, 114]
   role: npc
-- name: '0x0'
+- name: Event object
   at: [13, 113]
-  role: npc
-- name: '0x0'
+  role: object
+- name: Event object
   at: [13, 113]
-  role: npc
-- name: '0x0'
+  role: object
+- name: Event object
   at: [13, 113]
-  role: npc
+  role: object
 - name: Trainer Hielle
   at: [28, 51]
   role: trainer
@@ -196,12 +235,12 @@ people:
 - name: Gabby Battle1
   at: [13, 86]
   role: npc
-- name: Event Script_Rock Smash
+- name: Event object
   at: [18, 101]
-  role: npc
-- name: Event Script_Rock Smash
+  role: object
+- name: Event object
   at: [19, 100]
-  role: npc
+  role: object
 - name: Girl
   at: [23, 8]
   role: npc
@@ -217,9 +256,9 @@ people:
 - name: Ty Battle6
   at: [14, 86]
   role: npc
-- name: Event Script_Cut Tree
+- name: Shrub to cut (Vibroblade)
   at: [22, 21]
-  role: npc
+  role: object
 - name: Trainer Inena
   at: [10, 82]
   role: trainer
@@ -265,28 +304,28 @@ people:
 - name: Hiker
   at: [14, 56]
   role: npc
-- name: '0x0'
+- name: Event object
   at: [20, 53]
-  role: npc
-- name: '0x0'
+  role: object
+- name: Event object
   at: [19, 53]
-  role: npc
-- name: Rock Smash Tip Fat Man
+  role: object
+- name: Rock to smash
   at: [19, 101]
-  role: npc
-- name: Berry tree
+  role: object
+- name: Berry plant
   at: [22, 5]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [23, 5]
   role: berry
 - name: Item
   at: [33, 104]
   role: item
-- name: Berry tree
+- name: Berry plant
   at: [18, 5]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [19, 5]
   role: berry
 - name: Item
@@ -315,18 +354,10 @@ signs:
   at: [24, 116]
 warps:
 - name: Door
-  at: [13, 113]
-  to: route-111-winstrate-familys-house
-- name: Door
-  at: [29, 87]
-  to: tusken-ruins
-- name: Door
-  at: [26, 18]
-  to: route-111-old-ladys-rest-stop
-- name: Door
   at: [19, 58]
   to: sandcrawler-1f
 - name: Door
   at: [31, 113]
   to: trial-spire-entrance
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Planet border cut: west edge to route-113 (SULLUST); reached by ship instead.', The Sandcrawler
+    (vanilla Mirage Tower) appears in the Dune Sea only after a sandstorm.]

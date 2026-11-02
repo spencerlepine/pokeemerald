@@ -3,8 +3,8 @@ name: ESPA GENERATOR INSIDE
 planet: TATOOINE
 kind: dungeon
 replaces: NewMauville_Inside
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'The old power generator under Mos Espa: switch-floor puzzle, Watto''s errand to shut it down.'
 grid: |
   #########################################
   #########################################
@@ -96,4 +96,4 @@ warps:
 - name: Door
   at: [32, 33]
   to: espa-generator-entrance
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

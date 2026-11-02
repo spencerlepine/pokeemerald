@@ -3,8 +3,8 @@ name: TUSKEN RUINS
 planet: TATOOINE
 kind: dungeon
 replaces: DesertRuins
-status: TODO
-story: ''
+status: BLOCKOUT
+story: Ruined Tusken shrine in the Dune Sea; home of ROCKWARDEN. Braille-style puzzle becomes Tusken glyphs.
 grid: |
   .###############.
   .###############.
@@ -63,4 +63,4 @@ warps:
 - name: Door
   at: [8, 11]
   to: tusken-ruins
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

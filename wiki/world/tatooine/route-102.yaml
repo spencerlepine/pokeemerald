@@ -3,9 +3,9 @@ name: ROUTE 102
 planet: TATOOINE
 kind: route
 replaces: Route102
-status: TODO
-story: ''
-pos: [70, 240]
+status: BLOCKOUT
+story: 'Scrubland between Tosche Station and Mos Entha: first trainers, first wild scrub patches and a dry oasis pond.'
+pos: [-55, -44]
 grid: |
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
@@ -35,7 +35,27 @@ exits:
   cells: [10, 11]
   to: tosche-station
 buildings: []
-props: []
+props:
+- name: Vaporator
+  art: art:tatooine:moisture-vaporator
+  at: [11, 9]
+  size: [1, 2]
+- name: Vaporator
+  art: art:tatooine:moisture-vaporator
+  at: [30, 4]
+  size: [1, 2]
+- name: Sandstone boulder
+  art: art:tatooine:sandstone-boulder
+  at: [23, 12]
+  size: [2, 2]
+- name: Dead tree
+  art: art:tatooine:dead-tree
+  at: [46, 12]
+  size: [2, 2]
+- name: Bantha skeleton
+  art: art:tatooine:bantha-skeleton
+  at: [13, 7]
+  size: [1, 1]
 people:
 - name: Little Boy
   at: [18, 11]
@@ -58,10 +78,10 @@ people:
 - name: Item
   at: [11, 15]
   role: item
-- name: Berry tree
+- name: Berry plant
   at: [24, 2]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [25, 2]
   role: berry
 signs:
@@ -70,4 +90,4 @@ signs:
 - name: Sign
   at: [40, 9]
 warps: []
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

@@ -3,116 +3,194 @@ name: MOS ESPA
 planet: TATOOINE
 kind: town
 replaces: MauvilleCity
-status: TODO
-story: ''
-pos: [200, 140]
+status: BLOCKOUT
+story: Podracing city. Watto's junkyard holds the Electric arena, Wald rents speeder bikes, and the podrace stands overlook the east side. A hatch in the south-east
+  leads down into the old Espa generator.
+pos: [69, -164]
 grid: |
-  TT..........T.......TTTTTTTTTTTTTTTTTTTT
-  TT..........T.......T.TTTTTTTTTTTTTTTTTT
-  T....######.T.......TT##TTTTTTTTTT#####T
-  TT..T######.T.......T####T#TT.#TTT#####T
-  TTTTT######TT.......T####T#TT.#TTT#####T
-  T......###...........####T.......T#####T
-  T..........#.....................#.....T
-  ...................#....................
-  ........................................
-  ........................................
-  ........................................
-  T....#######............................
-  T....#######..TTTT########.....#########
-  T....#T#.#T#..T...########.....#########
-  TTTTTTT.......T...########.....#########
-  TT....T....#..T.....................####
-  TTTTT.T.......T....................TTT..
-  TTTTTTT.......T....................TTT..
-  TTTTTTTTTTTTTTT....TTTTTTTTTTTTTT..T~~~~
-  TTTTTTTTT.TT.......TTTTTTTT.......TT~~~~
+  TTTTTTTTTTTTTTTTTTTTTTTTTTT::TTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTT::TTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTT....::...TTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTT.....::........T........TTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTT.......::.................TTTTTTTTTT
+  TTTTTTTTT.....TTTT.........::.................TTTTTTTTTT
+  TTTT..TTT..................::..................TTTTTTTTT
+  TTTT..TTT..................::...................TTTTTTTT
+  TTTTTTTTT..................::.............:......TTTTTTT
+  TTTTTTTT...:...............::.............:.......TTTTTT
+  TTTTT......:.........:.....::....:........:........TTTTT
+  TTTTT......:.........:.....::....:........:..........TTT
+  TTTTTT.....:.........:.....::....:........:............T
+  TTTT.......:.........:.....::....:........:.............
+  TTT........:..........::::::::::::........:.............
+  TT.........:..........::::::::::::........:.............
+  T..........:..........::::::::::::........:.............
+  T.....................::::::::::::::::::::::::::::::::::
+  T.....................::::::::::::::::::::::::::::::::::
+  TT.........:..........::::::::::::...................TTT
+  TT.........:..........::::::::::::...................TTT
+  TTT........:..........::::::::::::..................TTTT
+  TTT..................:.....::......:........:.......TTTT
+  TTT........................::......:........:.......TTTT
+  TTTT.......................::.......................TTTT
+  TTT........................::......................TTTTT
+  TTT........................::.....................TTTTTT
+  TTTTT......................::...................TTTTTTTT
+  TTTTTTT....................::.................TTTTTTTTTT
+  :::::::::::::::::::::::::::::................TTTTTTTTTTT
+  :::::::::::::::::::::::::::::...........:...TTTTTTTTTTTT
+  TTTTTTTTTTTTTTTT...........::::::::::::::.TTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTT..........::............TTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTT.........::..........TTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTT.......::.TTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTT::TTTTTTTTTTTTTTTTTTTTTTTTTTT
 exits:
 - edge: north
-  cells: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17, 18, 19]
+  cells: [27, 28]
   to: route-111
 - edge: south
-  cells: [9, 12, 13, 14, 15, 16, 17, 18, 27, 28, 29, 30, 31, 32, 33]
+  cells: [27, 28]
   to: route-110
 - edge: west
-  cells: [7, 8, 9, 10]
+  cells: [29, 30]
   to: route-117
-- edge: east
-  cells: [7, 8, 9, 10, 11, 16, 17]
-  to: route-118
-buildings: []
-props: []
-people:
-- name: Boy
-  at: [29, 16]
-  role: npc
-- name: Rich Boy
-  at: [24, 10]
-  role: npc
-- name: Maniac
-  at: [14, 11]
-  role: npc
-- name: Woman
-  at: [18, 6]
-  role: npc
-- name: School Kid M
-  at: [17, 14]
-  role: npc
-- name: Wally
-  at: [8, 6]
-  role: npc
-- name: Wallys Uncle
-  at: [9, 6]
-  role: npc
-- name: Wattson
-  at: [29, 9]
-  role: npc
-- name: Rollout Tutor
-  at: [13, 7]
-  role: npc
-- name: '0x0'
-  at: [12, 14]
-  role: npc
-- name: Item
-  at: [28, 19]
-  role: item
-signs:
-- name: Sign
-  at: [23, 5]
-- name: Sign
-  at: [11, 6]
-- name: Sign
-  at: [24, 14]
-- name: Sign
-  at: [25, 14]
-- name: Sign
-  at: [24, 5]
-- name: Sign
-  at: [19, 7]
-- name: Sign
-  at: [33, 6]
-- name: Sign
-  at: [11, 15]
-warps:
-- name: Door
-  at: [8, 5]
+buildings:
+- name: Mos Espa Grand Arena (podrace stands)
+  art: art:tatooine:podrace-arena
+  at: [38, 3]
+  size: [8, 5]
+  door: 4
+  to: mos-espa-podrace-arena
+- name: Watto's junk shop (arena)
+  art: art:tatooine:watto-s-junk-shop
+  at: [9, 5]
+  size: [5, 4]
+  door: 2
   to: mos-espa-arena
-- name: Door
-  at: [22, 5]
+- name: Bacta Center
+  art: art:shared:bacta-center
+  at: [19, 6]
+  size: [5, 4]
+  door: 2
   to: mos-espa-bacta-center-1f
-- name: Door
-  at: [35, 5]
+- name: Wald's hover-bikes
+  art: art:tatooine:watto-s-junk-shop
+  at: [31, 6]
+  size: [5, 4]
+  door: 2
   to: mos-espa-speeder-shop
-- name: Door
-  at: [23, 14]
-  to: mos-espa-supply-depot
-- name: Door
-  at: [32, 14]
-  to: mos-espa-house-1
-- name: Door
-  at: [8, 13]
+- name: Sabacc den
+  art: art:tatooine:sabacc-den
+  at: [8, 22]
+  size: [6, 4]
+  door: 3
   to: mos-espa-sabacc-den
-- name: Door
-  at: [19, 14]
+- name: Supply Depot
+  art: art:shared:supply-depot
+  at: [20, 23]
+  size: [4, 4]
+  door: 1
+  to: mos-espa-supply-depot
+- name: Slave quarters row (Shmi's old home)
+  art: art:tatooine:homestead-dome
+  at: [33, 24]
+  size: [5, 4]
+  door: 2
+  to: mos-espa-house-1
+- name: Pit droid mechanic's home
+  art: art:tatooine:homestead-dome
+  at: [42, 24]
+  size: [5, 4]
+  door: 2
   to: mos-espa-house-2
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+- name: Espa generator hatch
+  art: art:tatooine:power-station
+  at: [38, 27]
+  size: [4, 3]
+  door: 2
+  to: espa-generator-entrance
+props:
+- name: Watto's junkyard
+  art: art:tatooine:pod-race-junk
+  at: [4, 6]
+  size: [2, 2]
+- name: Watto's junkyard
+  art: art:tatooine:pod-race-junk
+  at: [15, 6]
+  size: [2, 2]
+- name: Watto's junkyard
+  art: art:tatooine:pod-race-junk
+  at: [5, 10]
+  size: [2, 2]
+- name: Podracer on display
+  art: art:tatooine:podracer-on-display
+  at: [47, 13]
+  size: [4, 2]
+- name: Market stall
+  art: art:tatooine:market-stall
+  at: [23, 15]
+  size: [2, 2]
+- name: Market stall
+  art: art:tatooine:market-stall
+  at: [31, 15]
+  size: [2, 2]
+- name: Market stall
+  art: art:tatooine:market-stall
+  at: [23, 19]
+  size: [2, 2]
+- name: Market stall
+  art: art:tatooine:market-stall
+  at: [31, 19]
+  size: [2, 2]
+- name: Fuel tanks
+  art: art:shared:fuel-tanks
+  at: [50, 20]
+  size: [2, 2]
+- name: Cargo crates
+  art: art:shared:cargo-crates
+  at: [3, 25]
+  size: [2, 2]
+- name: Dewback trough
+  art: art:tatooine:dewback-trough
+  at: [16, 28]
+  size: [2, 1]
+people:
+- name: Watto (outside his shop)
+  at: [13, 10]
+  role: story
+- name: Wald
+  at: [35, 11]
+  role: story
+- name: Podrace fan
+  at: [40, 10]
+  role: npc
+- name: Podrace fan
+  at: [46, 9]
+  role: npc
+- name: Sabacc dealer's lookout
+  at: [14, 25]
+  role: npc
+- name: Jawa trader
+  at: [26, 20]
+  role: npc
+- name: Market trader
+  at: [30, 16]
+  role: npc
+- name: Pit droid
+  at: [49, 18]
+  role: npc
+- name: Generator worker
+  at: [43, 30]
+  role: npc
+signs:
+- name: City holo-sign
+  at: [25, 12]
+- name: Arena sign
+  at: [16, 9]
+- name: Grand Arena sign
+  at: [37, 8]
+- name: Sabacc den sign
+  at: [14, 21]
+warps: []
+todo: [Open-air now; vanilla Mauville's single roof is dropped., 'Vanilla''s east road to Route 118 is cut: Endor is reached by ship (planet border, see wiki/world/README.md).',
+  'New interior: mos-espa-podrace-arena (the stands; Boonta Eve race events).']

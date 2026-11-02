@@ -3,77 +3,134 @@ name: TOSCHE STATION
 planet: TATOOINE
 kind: town
 replaces: OldaleTown
-status: TODO
-story: ''
-pos: [120, 240]
+status: BLOCKOUT
+story: Crossroads trading post round the Tosche power station, where farm kids buy power converters. First Bacta Center and Supply Depot. Roads north, south and west.
+pos: [-5, -46]
 grid: |
-  TTTTTTTT....TTTTTTTT
-  TTTTTTTT....TTTTTTTT
-  TTTT............TTTT
-  TTTT............TTTT
-  TT...........####.TT
-  TT..####.....####.TT
-  TT..####.....####.TT
-  TT..####..........TT
-  TT..................
-  TT.........#........
-  ....................
-  ....................
-  TT................TT
-  TT................TT
-  TT...####.....####TT
-  TT...####.....####TT
-  TTTT.####.....####TT
-  TTTT..............TT
-  TTTT............TTTT
-  TTTT............TTTT
+  TTTTTTTTTTTTTT::TTTTTTTTTTTTTT
+  TTTTTTTTTTTTTT::TTTTTTTTTTTTTT
+  TTTTTTTTT.....::...TTTTTTTTTTT
+  TTTTTTTTT.....::........TTTTTT
+  TTTTT.........::........T.TTTT
+  TTTTT.........::........TTTTTT
+  TTTTT.........::..........TTTT
+  TTTTT.........::....:......TTT
+  TTTT...:......::....:......TTT
+  TTT....:......::....:......TTT
+  TTT....:..:::::::::::.......TT
+  TTTT...:..::::::::::.........T
+  ::::::::::::::::::::..........
+  ::::::::::::::::::::..........
+  TT........::::::::::..........
+  T.........::::::::::..........
+  T.............::............TT
+  TT............::...........TTT
+  TTTT..........::..........TTTT
+  TTTTTT:.......::.....:....TTTT
+  TTTTTT::::::::::::::::...TTTTT
+  TTTTTT........::........TTTTTT
+  TTTTTTT.......::.......TTTTTTT
+  TTTTTTTT..TT..::.......TTTTTTT
+  TTTTTTTTTTTTTT::...T.TTTTTTTTT
+  TTTTTTTTTTTTTT::.TTTTTTTTTTTTT
 exits:
 - edge: north
-  cells: [8, 9, 10, 11]
+  cells: [14, 15]
   to: route-103
 - edge: south
-  cells: [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+  cells: [14, 15]
   to: route-101
 - edge: west
-  cells: [10, 11]
+  cells: [12, 13]
   to: route-102
-buildings: []
-props: []
+buildings:
+- name: Tosche power station
+  art: art:tatooine:power-station
+  at: [18, 3]
+  size: [6, 4]
+  door: 2
+  to: tosche-station-power-station
+- name: Bacta Center
+  art: art:shared:bacta-center
+  at: [4, 15]
+  size: [5, 4]
+  door: 2
+  to: tosche-station-bacta-center-1f
+- name: Supply Depot
+  art: art:shared:supply-depot
+  at: [20, 15]
+  size: [4, 4]
+  door: 1
+  to: tosche-station-supply-depot
+- name: Converter dealer's home
+  art: art:tatooine:homestead-dome
+  at: [5, 4]
+  size: [5, 4]
+  door: 2
+  to: tosche-station-house-1
+- name: Station hand's home
+  art: art:tatooine:homestead-dome
+  at: [18, 20]
+  size: [5, 4]
+  door: 2
+  to: tosche-station-house-2
+props:
+- name: Power converters
+  art: art:tatooine:power-converters
+  at: [25, 4]
+  size: [1, 1]
+- name: Power converters
+  art: art:tatooine:power-converters
+  at: [25, 6]
+  size: [1, 1]
+- name: Power converters
+  art: art:tatooine:power-converters
+  at: [26, 8]
+  size: [1, 1]
+- name: Power converters
+  art: art:tatooine:power-converters
+  at: [17, 8]
+  size: [1, 1]
+- name: Fuel tanks
+  art: art:shared:fuel-tanks
+  at: [24, 9]
+  size: [2, 2]
+- name: Market stall
+  art: art:tatooine:market-stall
+  at: [10, 7]
+  size: [2, 2]
+- name: Parked landspeeder
+  art: art:shared:parked-landspeeder
+  at: [17, 10]
+  size: [2, 1]
+- name: Vaporator
+  art: art:tatooine:moisture-vaporator
+  at: [3, 9]
+  size: [1, 2]
+- name: Gonk droid
+  art: art:shared:gonk-droid
+  at: [19, 13]
+  size: [1, 1]
 people:
-- name: Girl
-  at: [16, 11]
+- name: Station girl
+  at: [22, 12]
   role: npc
-- name: Mart Employee
-  at: [13, 7]
+- name: Depot clerk on a break
+  at: [23, 20]
   role: npc
-- name: Footprints Man
-  at: [8, 9]
+- name: Spacer who walks in circles
+  at: [9, 11]
   role: npc
-- name: Rival
-  at: [11, 19]
+- name: Rival (first meeting)
+  at: [15, 23]
+  role: story
+- name: Converter mechanic
+  at: [22, 8]
   role: npc
 signs:
-- name: Sign
-  at: [11, 9]
-- name: Sign
-  at: [7, 16]
-- name: Sign
-  at: [15, 6]
-- name: Sign
-  at: [8, 16]
-- name: Sign
-  at: [16, 6]
-warps:
-- name: Door
-  at: [5, 7]
-  to: tosche-station-house-1
-- name: Door
-  at: [15, 16]
-  to: tosche-station-house-2
-- name: Door
-  at: [6, 16]
-  to: tosche-station-bacta-center-1f
-- name: Door
-  at: [14, 6]
-  to: tosche-station-supply-depot
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+- name: Tosche Station holo-sign
+  at: [12, 9]
+- name: Power station sign
+  at: [17, 7]
+warps: []
+todo: ['New interior: the power station (converters, a mechanic who trades parts).']

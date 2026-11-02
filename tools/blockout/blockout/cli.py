@@ -137,6 +137,112 @@ def cmd_render(a):
             print("   ", q)
 
 
+def layout_planet(areas, root=None):
+    """Set each overworld area's `pos` from its exits: a neighbour sits across the shared edge with
+    the two exits' centres lined up. Returns (positions, problems)."""
+    by_id = {x.id: x for x in areas}
+    ext = {x.id: x for x in areas if x.exits}
+    if not ext:
+        return {}, []
+    opposite = {"north": "south", "south": "north", "west": "east", "east": "west"}
+    probs = []
+    root = root if root in ext else sorted(ext, key=lambda i: (by_id[i].kind != "town", i))[0]
+    pos = {}
+    groups = []
+    for start in [root] + sorted(ext):
+        if start in pos:
+            continue
+        pos[start] = (0, 0)
+        groups.append(_grow(start, by_id, pos, probs, opposite))
+    # groups after the first (reached by doors, not by walking) go in a row below the main one
+    if len(groups) > 1:
+        def box(g):
+            return (min(pos[i][0] for i in g), min(pos[i][1] for i in g),
+                    max(pos[i][0] + by_id[i].w for i in g), max(pos[i][1] + by_id[i].h for i in g))
+        _, _, _, by1 = box(groups[0])
+        bx0, _, _, _ = box(groups[0])
+        cx = bx0
+        for g in groups[1:]:
+            x0, y0, x1, y1 = box(g)
+            for i in g:
+                pos[i] = (pos[i][0] - x0 + cx, pos[i][1] - y0 + by1 + 12)
+            cx += x1 - x0 + 12
+    return _overlaps(pos, by_id, probs)
+
+
+def _grow(root, by_id, pos, probs, opposite):
+    group = [root]
+    todo = [root]
+    while todo:
+        aid = todo.pop(0)
+        a = by_id[aid]
+        ax, ay = pos[aid]
+        for e in a.exits:
+            b = by_id.get(e.get("to"))
+            if b is None:
+                probs.append(f"{aid}: exit {e['edge']} goes to {e.get('to')}, which is not on this planet")
+                continue
+            back = [f for f in b.exits if f.get("to") == aid and f["edge"] == opposite[e["edge"]]]
+            if not back:
+                probs.append(f"{aid}: exit {e['edge']} to {b.id} has no matching {opposite[e['edge']]} exit back")
+                continue
+            ca = sum(e["cells"]) / len(e["cells"])
+            cb = sum(back[0]["cells"]) / len(back[0]["cells"])
+            if e["edge"] == "north":
+                p = (round(ax + ca - cb), ay - b.h)
+            elif e["edge"] == "south":
+                p = (round(ax + ca - cb), ay + a.h)
+            elif e["edge"] == "west":
+                p = (ax - b.w, round(ay + ca - cb))
+            else:
+                p = (ax + a.w, round(ay + ca - cb))
+            if b.id in pos:
+                if pos[b.id] != p:
+                    probs.append(f"{aid} -> {b.id}: loop does not close ({pos[b.id]} vs {p}); shift one of them")
+                continue
+            pos[b.id] = p
+            todo.append(b.id)
+            group.append(b.id)
+    return group
+
+
+def _overlaps(pos, by_id, probs):
+    ids = list(pos)
+    for i, m in enumerate(ids):
+        for n in ids[i + 1:]:
+            (mx, my), (nx, ny) = pos[m], pos[n]
+            A, B = by_id[m], by_id[n]
+            if mx < nx + B.w and nx < mx + A.w and my < ny + B.h and ny < my + A.h:
+                ox = min(mx + A.w, nx + B.w) - max(mx, nx)
+                oy = min(my + A.h, ny + B.h) - max(my, ny)
+                probs.append(f"{m} and {n} overlap by {ox}x{oy} cells")
+    return pos, probs
+
+
+def _write_pos(path, p):
+    import re as _re
+    s = open(path).read()
+    line = f"pos: [{p[0]}, {p[1]}]"
+    if _re.search(r"^pos: .*$", s, _re.M):
+        s = _re.sub(r"^pos: .*$", line, s, flags=_re.M)
+    else:
+        s = s.replace("\ngrid: |", f"\n{line}\ngrid: |", 1)
+    open(path, "w").write(s)
+
+
+def cmd_layout(a):
+    areas = [Area(p) for p in _all()]
+    for pl in a.planets:
+        mine = [x for x in areas if x.planet == pl and x.kind in ("town", "route", "landmark")]
+        pos, probs = layout_planet(mine, a.root)
+        for x in mine:
+            if x.id in pos:
+                _write_pos(x.path, pos[x.id])
+        print(f"{pl}: {len(pos)} areas placed")
+        for q in probs:
+            print("   ", q)
+
+
 def cmd_world(a):
     from PIL import Image
     from . import overview as O
@@ -206,8 +312,11 @@ def main(argv=None):
         s.add_argument("areas", nargs="*")
     sub.add_parser("index")
     sub.add_parser("world")
+    lo = sub.add_parser("layout")
+    lo.add_argument("planets", nargs="+")
+    lo.add_argument("--root")
     ia = sub.add_parser("import-all")
     ia.add_argument("--force", action="store_true")
     ia.add_argument("--only", nargs="*")
     a = ap.parse_args(argv)
-    {"new": cmd_new, "world": cmd_world, "import-all": cmd_import_all, "render": cmd_render, "check": cmd_check, "index": cmd_index}[a.cmd](a)
+    {"new": cmd_new, "world": cmd_world, "layout": cmd_layout, "import-all": cmd_import_all, "render": cmd_render, "check": cmd_check, "index": cmd_index}[a.cmd](a)

@@ -3,8 +3,8 @@ name: TERRA CAVE END
 planet: TATOOINE
 kind: dungeon
 replaces: TerraCave_End
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Terra Cave''s inner chamber: a titan''s resting place.'
 grid: |
   ###########################
   ###########################
@@ -40,12 +40,12 @@ exits: []
 buildings: []
 props: []
 people:
-- name: '0x0'
+- name: Event object
   at: [17, 22]
-  role: npc
+  role: object
 signs: []
 warps:
 - name: Door
   at: [5, 4]
   to: terra-cave-entrance
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

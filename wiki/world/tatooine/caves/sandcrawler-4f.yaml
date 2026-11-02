@@ -3,8 +3,8 @@ name: SANDCRAWLER 4F
 planet: TATOOINE
 kind: dungeon
 replaces: MirageTower_4F
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Sandcrawler, top deck: the two fossils; taking one makes the crawler collapse.'
 grid: |
   #############
   ###.......###
@@ -26,12 +26,12 @@ people:
 - name: Claw Fossil
   at: [7, 4]
   role: npc
-- name: Event Script_Rock Smash
+- name: Event object
   at: [6, 7]
-  role: npc
+  role: object
 signs: []
 warps:
 - name: Door
   at: [1, 4]
   to: sandcrawler-3f
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

@@ -3,9 +3,10 @@ name: ROUTE 103
 planet: TATOOINE
 kind: route
 replaces: Route103
-status: TODO
-story: ''
-pos: [120, 218]
+status: BLOCKOUT
+story: Road north from Tosche Station along the salt lake, where the rival waits. The east end opens onto the podrace course; the cave is Altering Cave's Tatooine
+  twin.
+pos: [0, -68]
 grid: |
   TTTTTTTTTTTTTTTTTTTTTTTTTT~~~~~~~~~~~~##########################################
   TTTTTTTTTTTTTTTTTTTTTTTTTT~##~~~~~~~~~##########################################
@@ -37,7 +38,23 @@ exits:
   cells: [7, 8, 9, 10, 11]
   to: route-110
 buildings: []
-props: []
+props:
+- name: Vaporator
+  art: art:tatooine:moisture-vaporator
+  at: [4, 2]
+  size: [1, 2]
+- name: Sandstone boulder
+  art: art:tatooine:sandstone-boulder
+  at: [19, 12]
+  size: [2, 2]
+- name: Krayt bones
+  art: art:tatooine:krayt-bones
+  at: [51, 10]
+  size: [4, 3]
+- name: Dead tree
+  art: art:tatooine:dead-tree
+  at: [77, 12]
+  size: [2, 2]
 people:
 - name: Man
   at: [49, 12]
@@ -60,18 +77,18 @@ people:
 - name: Boy
   at: [20, 10]
   role: npc
-- name: Rate Pokedex Or Register
+- name: Prof. Korr's aide
   at: [7, 3]
   role: npc
 - name: Trainer Mugos
   at: [56, 13]
   role: trainer
-- name: Event Script_Cut Tree
+- name: Shrub to cut (Vibroblade)
   at: [67, 7]
-  role: npc
-- name: Event Script_Cut Tree
+  role: object
+- name: Shrub to cut (Vibroblade)
   at: [72, 8]
-  role: npc
+  role: object
 - name: Trainer Reskir
   at: [67, 5]
   role: trainer
@@ -84,13 +101,13 @@ people:
 - name: Trainer Polesh
   at: [36, 13]
   role: trainer
-- name: Berry tree
+- name: Berry plant
   at: [58, 5]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [59, 5]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [60, 5]
   role: berry
 - name: Item
@@ -106,4 +123,4 @@ warps:
 - name: Door
   at: [45, 6]
   to: altering-cave
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', '''~'' on Tatooine is the planet''s surf medium: salt lake water here.']
