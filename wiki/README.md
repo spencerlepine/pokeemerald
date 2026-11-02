@@ -110,9 +110,12 @@ in `../game`. Every `source_file` is a path relative to `../game`.
   `build`, `tool` and `notes`; `python3 -m blockout todo` queries it with the areas) are the source of truth for
   the new buildings, interiors, objects and nature each planet and town gets (with signal/noise placement rules and
   reference images in `art/concept/`).
-- **Terrain tiles:** `mapping/terrain.csv` lists every terrain item (ground, grass, water, shores, ledges, cliffs,
-  cave and room floors and walls) of every tileset, with the planets and number of areas that use it and its
-  status; `mapping/terrain_areas.csv` links each area to its tileset pair, its greybox tile render and its items.
+- **Terrain tiles:** `mapping/terrain.csv` lists every terrain tile of every tileset, one row per item and role
+  (water, cliffs, walls and paths: fill, edges, corners, strips, tips; ledges: fill and end caps; grounds: fill),
+  with the vanilla metatile it uses (`use`; empty means the game has no such tile yet and the sheet shows the
+  placeholder), the planets and number of areas that use it and its status; `mapping/terrain_areas.csv` links
+  each area to its tileset pair, its greybox tile render, its rows and how many roles are missing. Real-size
+  sheets (128 px wide, 16x16 cells) are in `world/greybox/sheets/`, labelled ones in `world/greybox/terrain/`.
   Made by `python -m tilegen terrain run` in `tools/tile-generator/`.
 - **World-building tools:** [`../tools/world-art/README.md`](../tools/world-art/README.md) draws new shapes from 3D models. Only owner-approved models live there (so far the Hoenn tree).
 - **World blockout:** [`world/README.md`](world/README.md) lays out every area in placeholder tiles before any art; `world/INDEX.csv` is the to-do list.

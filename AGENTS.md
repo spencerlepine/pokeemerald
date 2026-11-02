@@ -21,7 +21,7 @@ alternate telling. Twelve planets plus a post-game; PokéNAV is called **StarNAV
 | `wiki/` | **The source of truth.** Every Emerald entity mapped to its Star Wars version ([`wiki/README.md`](wiki/README.md)), the story ([`wiki/bible/STORY.md`](wiki/bible/STORY.md)), and the world. |
 | `wiki/world/` | The world: all 528 areas as tile layouts, placed on one connected world map ([`wiki/world/README.md`](wiki/world/README.md)). Keep this map; sizes may grow later. |
 | `wiki/mapping/world_art.csv` | Every world piece (building, object, nature, landmark, interior kit) with its status, model and notes. |
-| `wiki/mapping/terrain.csv` | Every terrain item (ground, water, shores, ledges, cliffs, floors) per tileset, its planets, areas and status. `terrain_areas.csv` links areas to items. |
+| `wiki/mapping/terrain.csv` | Every terrain tile the game needs: one row per tileset, item and role (`terrain:general:cliff:ne`), with the vanilla metatile it uses (`use`, empty = missing, placeholder), planets, areas and status. Real-size sheets in `wiki/world/greybox/sheets/`. `terrain_areas.csv` links areas to rows. |
 | `tools/` | One tool per asset group, listed in [`tools/README.md`](tools/README.md); TODO marks the ones with work left. |
 
 ## Standing rules (from the owner)

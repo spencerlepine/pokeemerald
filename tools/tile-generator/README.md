@@ -9,28 +9,47 @@ Categories: D1 tilesets, D2 tileset animations, E1 battle backgrounds (`../READM
 
 ## Greybox terrain (phase 1 of the world art, 2026-11-02)
 
-Status: **READY** for greybox. Final colours wait for the palette; shapes are the game's own tiles.
+Status: **READY** for greybox. Final colours wait for the palette; shapes are the game's own tiles. Every tile
+the game needs is a row in the wiki; 13 rows have no tile yet and show the placeholder.
 
 ```bash
-python -m tilegen terrain run                       # catalog + item sheets + every area's tile render (about 30 s)
+python -m tilegen terrain run                       # catalog + sheets + every area's tile render (about 25 s)
 python -m tilegen terrain render --area mos-espa     # one area (or --planet HOTH)
-python -m tilegen terrain mark --status pending-final-art   # set every phase 1 item's status
+python -m tilegen terrain catalog                    # terrain.csv only
+python -m tilegen terrain mark --status pending-final-art   # set every phase 1 row that has a tile
 python -m tilegen terrain build --planet HOTH        # game-format greybox tilesets for a planet -> out/greybox/hoth/
 ```
 
-- **Items.** Every cell of every vanilla layout an area replaces is classed like blockout classes it (ground, wild
-  grass, water, ledge, bridge, blocked, tree) and its metatile is filed under an item of its tileset:
-  `terrain:general:ledge-south`, `terrain:general:water-shore`, `terrain:cave:cliff`, `terrain:lab:floor`. Phase 1
-  items (ground, grass, sand, snow, water, shores, ledges, bridges, cliffs, floors, walls) have the tool
-  `tilegen terrain`; trees and structures are phase 2 and only listed. Written to `wiki/mapping/terrain.csv`
-  with planets, area counts and status, plus `terrain_areas.csv` (area -> tileset pair, render, items).
+- **Vocabulary** (`tilegen/roles.py`). A terrain item is a fixed set of named tiles, the same for every tileset
+  and planet. Water, cliffs, walls and paths are blob sets: `fill`, edges `n e s w`, outer corners `ne nw se sw`,
+  inner corners `inner-*`, one-cell strips `strip-h strip-v`, tips `tip-*`, `single`; walls add `top` (the row
+  above a face, as Emerald draws a wall as top + face). Ledges: `fill`, end caps, `single`. Bridges: `h`, `v`.
+  Grounds, wild grass, sand, ice, trees, structures: `fill`.
+- **Catalog.** Every cell of every vanilla layout an area replaces is classed the way blockout classes it
+  (ground, wild grass, water, ledge, bridge, blocked, tree), named as an item of its tileset (`ground-grass`,
+  `ground-path` for Hoenn's dirt, `ground-stone` for stairs and stone, `water-pond`, `cliff`, `wall`, `floor`...)
+  and given its role from its neighbours. Its metatile is filed under `terrain:<tileset>:<item>:<role>` in
+  `wiki/mapping/terrain.csv`: `metatile_ids` (every vanilla metatile seen, the chosen one first), `use` (the one
+  the autotiler draws), `use_set` (`learned`, or `hand` when you set `use` yourself: a hand value is kept across
+  runs and wins), `cells`, `planets`, `areas`, `needed_by` (redesigned areas that need it), `status`, `sheet`
+  and `sheet_cell`. Phase 1 rows have the tool `tilegen terrain`; trees and structures are phase 2, listed only.
+  `terrain_areas.csv` links each area to its pair, render, items and `missing_roles`.
+- **Autotile.** 466 areas keep their vanilla layout and are drawn with it. 62 areas were redesigned or are
+  new; their grid is drawn from the vocabulary: each cell gets an item (the pair's usual ground, Hoenn's dirt for
+  `:`, its water, its wild grass; wall or cliff for blocked cells) and its role, then the tile vanilla uses for
+  that item and role in that tileset pair (voted by the number of layouts that use it, so one big map cannot win
+  alone; grounds take the shared primary tiles first, cliffs, walls and water the pair's own). A role vanilla
+  never drew in that pair has no tile: the cell shows the placeholder and the row is added as TODO
+  (`pending-mockup`) with the areas that need it. `PAIR_OVERRIDE` picks the pair for a redesigned area whose
+  vanilla pair is wrong for it (NiJedha: Rustboro's stone city, not Mt. Pyre).
+- **Sheets.** `wiki/world/greybox/sheets/<tileset>.png` is real size: 128 px wide, 16x16 cells, one per csv row
+  in csv order (`sheet_cell` = column,row), the placeholder where the tile is missing. The placeholder is z-day's
+  `16x16-placeholder-image-sprite.png` (magenta circle), copied to `tilegen/data/placeholder-16x16.png`.
+  `wiki/world/greybox/terrain/<tileset>.png` is the labelled sheet: every item as a strip of its roles at 2x,
+  missing roles named in magenta. Renders: `wiki/world/greybox/tiles/<area>.png`.
 - **Greybox.** Each planet's tilesets get its approved planet recipe (Tatooine, Hoth/Ilum, Sullust, Mustafar,
   Endor/Yavin/Kashyyyk, Dagobah, Kamino, Death Star) and are then desaturated (`GREY_CHROMA`). Shading and
   shapes stay; colour waits.
-- **Areas.** 466 areas keep their vanilla layout and are drawn with it. 62 areas were redesigned or are new;
-  their blockout grid is **autotiled**: each cell takes the metatile vanilla maps use most for the same cell
-  class with the same 8 neighbours (then 4, then none), so shores, cliff edges and ledge ends match the game.
-  Renders: `wiki/world/greybox/tiles/<area>.png`. Item sheets: `wiki/world/greybox/terrain/<tileset>.png`.
 - **Build.** `terrain build` writes the planet's greybox pairs in game format through the palette gate (all 19
   planets pass). Nothing is installed: the map work writes the autotiled map.bin later.
 

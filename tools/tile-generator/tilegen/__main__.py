@@ -193,13 +193,11 @@ def cmd_terrain(a):
     if a.action == "run":
         print(terrain.run(a.area or None, a.planet))
     elif a.action == "catalog":
-        items, _ = terrain.scan()
-        rows = terrain.write_catalog(items)
-        print(f"{terrain.CSV_OUT}: {len(rows)} items")
+        _, _, _, rows = terrain.catalog()
+        print(f"{terrain.CSV_OUT}: {len(rows)} rows, {sum(1 for r in rows if not r['use'])} without a tile")
     elif a.action == "sheets":
-        items, _ = terrain.scan()
-        rows = terrain.write_catalog(items)
-        for f in terrain.item_sheets(items, rows):
+        A, _, _, rows = terrain.catalog()
+        for f in terrain.real_sheets(rows, A) + terrain.item_sheets(rows, A):
             print(f)
     elif a.action == "render":
         print(terrain.run(a.area or None, a.planet, sheets=False))
