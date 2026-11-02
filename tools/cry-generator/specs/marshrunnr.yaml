@@ -1,0 +1,25 @@
+name: marshrunnr
+slot: marshtomp
+brief: "MARSHRUNNR: creature call that fits its look and size. Mud-coated amphibian, strong legs for land and lake."
+kind: creature
+size: 0.35
+seed: 142
+layers:
+  # Marsh line (croaky square+saw throat, frame-stepped ribbit, a -> u, wet gulp), grown: a two-step
+  # croak "mrr-ROOMP" with a muddy growl and a wet glug at the end.
+  - type: voice
+    pitch: [[0, 300], [0.12, 300], [0.13, 420], [0.45, 380], [0.65, 280]]
+    pitch_step: 0.04
+    source: {square: 0.6, saw: 0.6, noise: 0.08}
+    vowels: [[0, er], [0.13, a], [0.4, o], [0.65, u]]
+    env: [[0, 0], [0.012, 0.8], [0.11, 0.5], [0.13, 1], [0.5, 0.75], [0.66, 0]]
+    growl: 0.35
+    growl_rate: 36
+    jitter: 0.02
+    drive: 1.8
+  - type: noise
+    at: 0.6
+    band: [[0, 600], [0.12, 1100]]
+    q: 4
+    env: [[0, 0], [0.02, 0.5], [0.06, 0.1], [0.09, 0.4], [0.14, 0]]
+    gain: 0.3

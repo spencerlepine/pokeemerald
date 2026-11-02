@@ -1,0 +1,18 @@
+name: snowseal
+slot: spheal
+brief: "SNOWSEAL: creature call that fits its look and size. Round ice seal pup."
+kind: creature
+size: 0.32
+seed: 151
+layers:
+  # Family DNA (Hoth seal line): a honking pulse+sine throat on "o -> a", clapping flipper clicks.
+  # The pup: one short, round, happy "awp!".
+  - type: voice
+    pitch: [[0, 440], [0.04, 600], [0.2, 480]]
+    source: {pulse: 0.7, sine: 0.5, pulse_width: 0.3, noise: 0.04}
+    vowels: [[0, o], [0.08, a], [0.2, o]]
+    env: [[0, 0], [0.01, 1], [0.15, 0.75], [0.22, 0]]
+    vibrato: {rate: 8, depth: 0.02}
+  - type: click
+    times: [0.23, 0.28]
+    gain: 0.4

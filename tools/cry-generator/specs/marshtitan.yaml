@@ -1,0 +1,25 @@
+name: marshtitan
+slot: swampert
+brief: "MARSHTITAN: creature call that fits its look and size. Hulking swamp amphibian that can tow a bongo through the core."
+kind: creature
+size: 0.65
+seed: 143
+layers:
+  # Marsh line (croaky square+saw throat, frame-stepped ribbit, a -> u, wet gulp) at full bulk: a
+  # booming stepped croak-roar "GRRA-OOOMP" that swells and sinks into a deep, bubbling glug.
+  - type: voice
+    pitch: [[0, 200], [0.15, 200], [0.16, 300], [0.6, 280], [0.95, 180]]
+    pitch_step: 0.05
+    source: {square: 0.6, saw: 0.7, noise: 0.08}
+    vowels: [[0, aw], [0.16, a], [0.55, o], [0.95, u]]
+    env: [[0, 0], [0.02, 0.85], [0.14, 0.6], [0.16, 1], [0.7, 0.8], [0.97, 0]]
+    growl: 0.5
+    growl_rate: 28
+    jitter: 0.02
+    drive: 2.2
+  - type: noise
+    at: 0.85
+    band: [[0, 500], [0.15, 900]]
+    q: 4
+    env: [[0, 0], [0.02, 0.5], [0.06, 0.1], [0.1, 0.45], [0.18, 0]]
+    gain: 0.3

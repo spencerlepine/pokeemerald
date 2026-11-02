@@ -1,0 +1,23 @@
+name: marshlet
+slot: mudkip
+brief: "MARSHLET: creature call that fits its look and size. Swamp amphibian hatchling with a fin that senses currents. Starter."
+kind: creature
+size: 0.18
+seed: 141
+layers:
+  # Family DNA (marsh line): a croaky square+saw throat on "a -> u" with a ribbit-like pitch-step
+  # (frame-stepped) and a wet gulp. The hatchling: a quick, bright "mud-KIP" croak.
+  - type: voice
+    pitch: [[0, 420], [0.05, 420], [0.06, 560], [0.18, 520], [0.3, 440]]
+    pitch_step: 0.03
+    source: {square: 0.6, saw: 0.5, noise: 0.06}
+    vowels: [[0, o], [0.06, a], [0.2, i], [0.3, u]]
+    env: [[0, 0], [0.01, 1], [0.05, 0.6], [0.06, 1], [0.24, 0.7], [0.31, 0]]
+    growl: 0.15
+    growl_rate: 50
+    jitter: 0.015
+    drive: 1.4
+  - type: click
+    times: [0.0]
+    gain: 0.3
+master: {rms: 0.27}

@@ -1,0 +1,34 @@
+name: katarnkit
+slot: treecko
+brief: "KATARNKIT: creature call that fits its look and size. Katarn kit, a quick tree-climbing predator of Kashyyyk's canopy. Starter."
+kind: creature
+size: 0.22
+seed: 131
+layers:
+  # Family DNA (katarn line): a sharp saw+pulse throat on "ae -> i", a hissing tongue-flick before
+  # each call, and a rattling growl. The kit: a quick hiss and a cheeky, clipped "kekeh!".
+  - type: noise
+    band: [[0, 3200], [0.06, 2400]]
+    q: 1.5
+    env: [[0, 0], [0.01, 0.5], [0.07, 0]]
+    gain: 0.35
+  - type: voice
+    at: 0.07
+    pitch: [[0, 560], [0.04, 780], [0.11, 640]]
+    source: {saw: 0.7, pulse: 0.6, pulse_width: 0.2, noise: 0.08}
+    vowels: [[0, ae], [0.11, i]]
+    env: [[0, 0], [0.008, 1], [0.09, 0.7], [0.12, 0]]
+    growl: 0.2
+    growl_rate: 48
+    jitter: 0.02
+    drive: 1.8
+  - type: voice
+    at: 0.22
+    pitch: [[0, 600], [0.04, 840], [0.2, 620], [0.3, 500]]
+    source: {saw: 0.7, pulse: 0.6, pulse_width: 0.2, noise: 0.08}
+    vowels: [[0, ae], [0.12, i], [0.3, e]]
+    env: [[0, 0], [0.008, 1], [0.2, 0.7], [0.31, 0]]
+    growl: 0.2
+    growl_rate: 48
+    jitter: 0.02
+    drive: 1.8

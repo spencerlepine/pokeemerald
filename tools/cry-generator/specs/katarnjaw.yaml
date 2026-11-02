@@ -1,0 +1,42 @@
+name: katarnjaw
+slot: grovyle
+brief: "KATARNJAW: creature call that fits its look and size. Young katarn, leaf-bladed arms, lightning fast in the canopy."
+kind: creature
+size: 0.38
+seed: 132
+layers:
+  # Katarn line (tongue-flick hiss, saw+pulse throat on "ae -> i", rattling growl), adolescent: a
+  # hiss, two quick slashing barks and a longer rattling screech that whips upward.
+  - type: noise
+    band: [[0, 3000], [0.07, 2200]]
+    q: 1.5
+    env: [[0, 0], [0.01, 0.5], [0.08, 0]]
+    gain: 0.35
+  - type: voice
+    at: 0.08
+    pitch: [[0, 440], [0.04, 640], [0.1, 520]]
+    source: {saw: 0.7, pulse: 0.6, pulse_width: 0.2, noise: 0.1}
+    vowels: [[0, ae], [0.1, e]]
+    env: [[0, 0], [0.008, 1], [0.08, 0.7], [0.11, 0]]
+    growl: 0.3
+    growl_rate: 44
+    drive: 2
+  - type: voice
+    at: 0.21
+    pitch: [[0, 460], [0.04, 660], [0.1, 540]]
+    source: {saw: 0.7, pulse: 0.6, pulse_width: 0.2, noise: 0.1}
+    vowels: [[0, ae], [0.1, e]]
+    env: [[0, 0], [0.008, 1], [0.08, 0.7], [0.11, 0]]
+    growl: 0.3
+    growl_rate: 44
+    drive: 2
+  - type: voice
+    at: 0.36
+    pitch: [[0, 420], [0.12, 720], [0.4, 640], [0.58, 440]]
+    source: {saw: 0.7, pulse: 0.6, pulse_width: 0.2, noise: 0.1}
+    vowels: [[0, ae], [0.15, i], [0.45, ae], [0.58, er]]
+    env: [[0, 0], [0.01, 1], [0.42, 0.75], [0.6, 0]]
+    growl: 0.35
+    growl_rate: 44
+    jitter: 0.025
+    drive: 2

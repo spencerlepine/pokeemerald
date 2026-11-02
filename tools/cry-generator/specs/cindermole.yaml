@@ -21,7 +21,6 @@ layers:
     jitter: 0.02
     drive: 1.5
   - type: click
-    at: 0.12
-    times: [0.0, 0.05, 0.09, 0.14]
+    times: [0.12, 0.17, 0.21, 0.26]
     gain: 0.3
 master: {rms: 0.27}

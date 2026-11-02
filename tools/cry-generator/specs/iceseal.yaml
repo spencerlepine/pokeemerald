@@ -1,0 +1,27 @@
+name: iceseal
+slot: sealeo
+brief: "ICESEAL: creature call that fits its look and size. Ice seal that balances things on its nose."
+kind: creature
+size: 0.5
+seed: 152
+layers:
+  # Hoth seal line (honking pulse+sine throat on "o -> a", flipper claps), grown: a jolly double
+  # honk "ar-AWP" and two flipper claps.
+  - type: voice
+    pitch: [[0, 320], [0.04, 420], [0.12, 360]]
+    source: {pulse: 0.7, sine: 0.5, pulse_width: 0.3, noise: 0.05}
+    vowels: [[0, o], [0.12, a]]
+    env: [[0, 0], [0.01, 1], [0.1, 0.7], [0.13, 0]]
+    growl: 0.15
+    growl_rate: 32
+  - type: voice
+    at: 0.16
+    pitch: [[0, 340], [0.05, 480], [0.25, 380]]
+    source: {pulse: 0.7, sine: 0.5, pulse_width: 0.3, noise: 0.05}
+    vowels: [[0, o], [0.08, a], [0.25, o]]
+    env: [[0, 0], [0.01, 1], [0.2, 0.75], [0.27, 0]]
+    growl: 0.15
+    growl_rate: 32
+  - type: click
+    times: [0.45, 0.51]
+    gain: 0.4

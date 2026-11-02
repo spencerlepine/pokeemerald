@@ -1,0 +1,31 @@
+name: katarn
+slot: sceptile
+brief: "KATARN: creature call that fits its look and size. Adult katarn, the apex hunter of the wroshyr forests."
+kind: creature
+size: 0.65
+seed: 133
+layers:
+  # Katarn line (tongue-flick hiss, saw+pulse throat on "ae -> i", rattling growl), apex adult: a long
+  # threatening hiss, then a deep, rattling hunting screech that rises and drags into a growl.
+  - type: noise
+    band: [[0, 2600], [0.12, 1800]]
+    q: 1.5
+    env: [[0, 0], [0.015, 0.55], [0.13, 0]]
+    gain: 0.4
+  - type: voice
+    at: 0.1
+    pitch: [[0, 260], [0.15, 470], [0.6, 420], [1.1, 240]]
+    pitch_step: 0.04
+    source: {saw: 0.8, pulse: 0.6, pulse_width: 0.2, noise: 0.1}
+    vowels: [[0, ae], [0.2, i], [0.6, ae], [1.1, rr]]
+    env: [[0, 0], [0.02, 1], [0.75, 0.8], [1.12, 0]]
+    growl: 0.55
+    growl_rate: 40
+    jitter: 0.025
+    drive: 2.4
+  - type: noise
+    at: 0.85
+    band: [[0, 1800], [0.3, 1200]]
+    q: 1.5
+    env: [[0, 0], [0.05, 0.3], [0.3, 0]]
+    gain: 0.25
