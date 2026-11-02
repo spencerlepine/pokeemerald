@@ -1,0 +1,23 @@
+name: timewisp
+slot: celebi
+brief: "TIMEWISP: creature call that fits its look and size. Spirit that walks the World Between Worlds."
+kind: creature
+size: 0.2
+seed: 241
+layers:
+  # An ethereal spirit from the World Between Worlds: a soft sine-and-tri voice that sings a
+  # rising "liii-ooo" with slow vibrato, wrapped in a chiming, stepped shimmer.
+  - type: voice
+    pitch: [[0, 600], [0.15, 880], [0.4, 820], [0.62, 640]]
+    source: {sine: 0.8, tri: 0.5, pulse: 0.2, pulse_width: 0.4}
+    vowels: [[0, i], [0.2, e], [0.45, o], [0.62, u]]
+    formant_scale: 0.75
+    env: [[0, 0], [0.02, 1], [0.45, 0.8], [0.64, 0]]
+    vibrato: {rate: 7, depth: 0.03}
+  - type: tone
+    at: 0.05
+    wave: sine
+    pitch: [[0, 1760], [0.12, 1760], [0.121, 2350], [0.24, 2350], [0.241, 2640], [0.36, 2640], [0.361, 2090], [0.55, 2090]]
+    env: [[0, 0], [0.01, 0.5], [0.5, 0.35], [0.56, 0]]
+    warble: {rate: 12, depth: 0.02}
+    gain: 0.4

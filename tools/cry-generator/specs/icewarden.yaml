@@ -1,0 +1,37 @@
+name: icewarden
+slot: regice
+brief: "ICEWARDEN: creature call that fits its look and size. Ancient ice sentinel."
+kind: creature
+size: 0.75
+seed: 301
+master: {tilt_db: -3, rms: 0.27}
+layers:
+  # An ancient ice sentinel: a cold, frame-stepped sequence of crystalline square chimes (its
+  # glyph-code), over a low, hollow, icy drone and a frosty hiss.
+  - type: voice
+    pitch: [[0, 170], [0.5, 200], [1.1, 180], [1.35, 150]]
+    pitch_step: 0.06
+    source: {square: 0.6, tri: 0.5, noise: 0.05}
+    vowels: [[0, u], [0.5, o], [1.35, u]]
+    env: [[0, 0], [0.05, 0.8], [1.1, 0.7], [1.38, 0]]
+    growl: 0.3
+    growl_rate: 16
+    drive: 2
+  - type: tone
+    wave: square
+    pitch: [[0, 1320], [0.11, 1320], [0.111, 990], [0.22, 990], [0.221, 1760], [0.33, 1760], [0.331, 1480], [0.5, 1480], [0.501, 1100], [0.62, 1100], [0.621, 1980], [0.8, 1980]]
+    env: [[0, 0], [0.005, 1], [0.1, 0.6], [0.11, 0.1], [0.115, 1], [0.21, 0.6], [0.22, 0.1], [0.225, 1], [0.32, 0.6], [0.33, 0.1], [0.335, 1], [0.48, 0.6], [0.5, 0.1], [0.505, 1], [0.61, 0.6], [0.62, 0.1], [0.625, 1], [0.8, 0]]
+    gain: 0.6
+  - type: tone
+    at: 0.82
+    wave: tri
+    pitch: [[0, 1980], [0.5, 1320]]
+    warble: {rate: 10, depth: 0.03}
+    env: [[0, 0], [0.02, 0.6], [0.45, 0.3], [0.55, 0]]
+    gain: 0.4
+  - type: noise
+    at: 0.6
+    band: [2600]
+    q: 1.5
+    env: [[0, 0], [0.2, 0.25], [0.6, 0.15], [0.78, 0]]
+    gain: 0.2

@@ -1,0 +1,36 @@
+name: magmacat
+slot: entei
+brief: "MAGMACAT: creature call that fits its look and size. Legendary volcano beast."
+kind: creature
+size: 0.85
+seed: 251
+layers:
+  # A legendary volcano beast: a deep big-cat roar with a hard snarling growl, layered with a
+  # higher raking voice and the crackle and hiss of fire.
+  - type: voice
+    pitch: [[0, 180], [0.1, 280], [0.5, 250], [0.85, 160]]
+    source: {saw: 0.9, pulse: 0.4, pulse_width: 0.3, noise: 0.2}
+    vowels: [[0, aw], [0.1, a], [0.5, aw], [0.85, rr]]
+    env: [[0, 0], [0.012, 1], [0.55, 0.85], [0.88, 0]]
+    growl: 0.65
+    growl_rate: 26
+    jitter: 0.035
+    drive: 2.8
+  - type: voice
+    at: 0.03
+    pitch: [[0, 520], [0.1, 760], [0.5, 680], [0.8, 460]]
+    source: {saw: 0.8, pulse: 0.5, pulse_width: 0.25, noise: 0.15}
+    vowels: [[0, a], [0.4, ae], [0.8, rr]]
+    env: [[0, 0], [0.03, 0.75], [0.5, 0.55], [0.82, 0]]
+    growl: 0.35
+    growl_rate: 32
+    gain: 0.6
+  - type: noise
+    at: 0.1
+    band: [[0, 1800], [0.8, 1200]]
+    q: 1
+    env: [[0, 0], [0.1, 0.3], [0.7, 0.25], [0.85, 0]]
+    gain: 0.3
+  - type: click
+    times: [0.2, 0.33, 0.41, 0.57, 0.66, 0.79]
+    gain: 0.3

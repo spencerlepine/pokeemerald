@@ -1,0 +1,26 @@
+name: ikopi
+slot: stantler
+brief: "IKOPI: creature call that fits its look and size. Fleet ikopi antelope of Naboo's plains with mesmerizing horns."
+kind: creature
+size: 0.5
+seed: 321
+master: {tilt_db: -3}
+layers:
+  # A fleet ikopi antelope: a sharp nasal deer bleat "eee-yah" that rises to a short bugle and
+  # wavers, then a soft snort.
+  - type: voice
+    pitch: [[0, 440], [0.1, 700], [0.35, 760], [0.6, 640], [0.8, 480]]
+    source: {pulse: 0.7, saw: 0.4, tri: 0.4, pulse_width: 0.28, noise: 0.06}
+    vowels: [[0, i], [0.15, ee], [0.4, ae], [0.6, a], [0.8, aw]]
+    formant_scale: 0.85
+    env: [[0, 0], [0.015, 1], [0.55, 0.8], [0.82, 0]]
+    vibrato: {rate: 7, depth: 0.03}
+    growl: 0.2
+    growl_rate: 40
+    jitter: 0.02
+  - type: noise
+    at: 0.86
+    band: [1300]
+    q: 1
+    env: [[0, 0], [0.01, 0.6], [0.16, 0]]
+    gain: 0.4

@@ -1,0 +1,29 @@
+name: aurebesh
+slot: unown
+brief: "AUREBESH: creature call that fits its look and size. Living Aurebesh glyphs (each form is a letter)."
+kind: creature
+size: 0.2
+seed: 331
+layers:
+  # A living Aurebesh glyph: an eerie, whispering, frame-stepped tone-voice that hops between
+  # odd intervals with a warble, like a symbol speaking its own letter.
+  - type: noise
+    band: [2000]
+    q: 2
+    env: [[0, 0], [0.05, 0.3], [0.5, 0.2], [0.6, 0]]
+    gain: 0.25
+  - type: voice
+    pitch: [[0, 500], [0.1, 500], [0.101, 740], [0.2, 740], [0.201, 590], [0.3, 590], [0.301, 880], [0.45, 880], [0.451, 660], [0.6, 620]]
+    pitch_step: 0.02
+    source: {square: 0.6, tri: 0.5, noise: 0.1}
+    vowels: [[0, u], [0.2, i], [0.4, o], [0.6, e]]
+    formant_scale: 0.7
+    env: [[0, 0], [0.01, 1], [0.5, 0.8], [0.6, 0]]
+    vibrato: {rate: 20, depth: 0.03}
+  - type: tone
+    at: 0.02
+    wave: sine
+    pitch: [[0, 1500], [0.55, 1200]]
+    warble: {rate: 18, depth: 0.15, shape: square}
+    env: [[0, 0], [0.02, 0.4], [0.5, 0.3], [0.56, 0]]
+    gain: 0.35

@@ -1,0 +1,29 @@
+name: fossilwing
+slot: aerodactyl
+brief: "FOSSILWING: creature call that fits its look and size. Ancient flying predator."
+kind: creature
+size: 0.6
+seed: 231
+master: {tilt_db: -3}
+layers:
+  # A raspy, ancient pterosaur screech: a beak clack, a harsh rising shriek with growl and a
+  # leathery wing-beat, diving down into a rattling caw.
+  - type: click
+    times: [0, 0.03]
+    gain: 0.5
+  - type: voice
+    at: 0.02
+    pitch: [[0, 420], [0.12, 760], [0.45, 680], [0.8, 420], [1.05, 320]]
+    source: {saw: 0.9, pulse: 0.4, pulse_width: 0.2, noise: 0.25}
+    vowels: [[0, aw], [0.12, ae], [0.45, ee], [0.8, a], [1.05, rr]]
+    env: [[0, 0], [0.01, 1], [0.5, 0.85], [0.85, 0.6], [1.08, 0]]
+    growl: 0.5
+    growl_rate: 34
+    jitter: 0.04
+    drive: 2.6
+  - type: noise
+    at: 0.5
+    band: [1100]
+    q: 1.2
+    env: [[0, 0], [0.02, 0.5], [0.08, 0.1], [0.12, 0.5], [0.2, 0]]
+    gain: 0.35

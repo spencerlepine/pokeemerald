@@ -1,0 +1,33 @@
+name: bogan
+slot: latios
+brief: "BOGAN: creature call that fits its look and size. Dark-side Force dragon, named for Tython's dark moon."
+kind: creature
+size: 0.6
+seed: 271
+layers:
+  # A dark-side Force dragon: an ominous low growl-drone with a jet-like rising whoosh, splitting
+  # into a keening, swooping cry that falls away.
+  - type: noise
+    band: [[0, 600], [0.4, 2400], [0.9, 900]]
+    q: 1.5
+    env: [[0, 0], [0.15, 0.5], [0.6, 0.35], [0.95, 0]]
+    gain: 0.35
+  - type: voice
+    pitch: [[0, 140], [0.2, 190], [0.7, 170], [1, 120]]
+    pitch_step: 0.05
+    source: {saw: 0.8, square: 0.4, noise: 0.1}
+    vowels: [[0, u], [0.3, o], [0.7, aw], [1, u]]
+    env: [[0, 0], [0.04, 0.9], [0.7, 0.7], [1, 0]]
+    growl: 0.5
+    growl_rate: 20
+    drive: 2.2
+  - type: voice
+    at: 0.08
+    pitch: [[0, 420], [0.25, 820], [0.5, 760], [0.85, 400]]
+    source: {saw: 0.6, pulse: 0.6, pulse_width: 0.25}
+    vowels: [[0, o], [0.25, ae], [0.55, ee], [0.85, aw]]
+    env: [[0, 0], [0.06, 0.9], [0.55, 0.75], [0.88, 0]]
+    vibrato: {rate: 6, depth: 0.04}
+    growl: 0.2
+    growl_rate: 36
+    gain: 0.8
