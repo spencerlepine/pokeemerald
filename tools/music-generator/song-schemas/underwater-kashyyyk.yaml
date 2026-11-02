@@ -1,0 +1,76 @@
+# Underwater, Kashyyyk: net-new per-planet split of MUS_UNDERWATER (wiki row net:mus-underwater-kashyyyk), for
+# the Republic Wreck's flooded holds and Route 105's sea floor. SCRATCH: no film cue, written from the brief.
+# The Dagobah original is muffled, slow and floating; here the diver drifts past a sunken Republic cruiser, so
+# the float carries some old heroism and loss: C minor with Eb / Bb brightness and a G major dominant, a slow
+# flute in a, strings in b, glockenspiel glints in c, harp arpeggios all through, the voicegroup's own bubbles
+# sample rising now and then, a wave-channel bass (rounder than the fretless when muffled), and a 50 % square
+# far in the back. Vanilla voicegroup and tempo (MUS_UNDERWATER: underwater, 86 bpm, 86.5 s); 26 bars at 86 =
+# 72.6 s, inside the AMBIENT loop range the checks use (35-77 s).
+# Brief (sw_subject): Kashyyyk version of MUS_UNDERWATER, same role and mood family; theme to be decided.
+name: underwater-kashyyyk
+constant: MUS_UNDERWATER_KASHYYYK
+form: AMBIENT
+voicegroup: underwater            # vanilla's own: glock 9, bubbles 23, harp 46, timpani 47, strings 48, flute 73, squares 80/92, wave 82
+master_volume: 94
+tempo: 86
+steps_per_beat: 2                 # eighth-note grid
+time_signature: [4, 4]
+seed: 105
+
+parts:
+  flute:   {program: 73, channel: 0, volume: 90,  pan: 10,  gate: 0.96, lfo_speed: 22, lfo_delay: 24, mod: 6, humanize: {vel: 5}}
+  strings: {program: 48, channel: 1, volume: 76,  pan: -10, gate: 1.0, humanize: {vel: 4}}
+  glock:   {program: 9,  channel: 2, volume: 58,  pan: 20,  gate: 0.9}
+  harp:    {program: 46, channel: 3, volume: 68,  pan: -24, octave: 3, gate: 0.9, humanize: {vel: 8}}
+  pad:     {program: 48, channel: 4, volume: 46,  pan: 28,  octave: 3, gate: 1.0}
+  bubbles: {program: 23, channel: 5, volume: 52,  pan: -30, gate: 1.0}
+  timpani: {program: 47, channel: 6, volume: 70,  pan: 10,  gate: 1.0}
+  bass:    {program: 82, channel: 7, volume: 74,  pan: 0,   octave: 2, role: bass, gate: 0.95}
+  far:     {program: 92, channel: 8, volume: 26,  pan: 36,  gate: 0.95, mono: true}
+
+progressions:
+  intro: "Cm | G"
+  a: "Cm | Ab | Eb | Bb | Cm | Ab | Fm | G"
+  b: "Ab | Bb | Gm | Cm | Ab | Bb | Eb | G"
+  c: "Cm | Cm | Ab | Ab | Fm | Fm | G | G"
+  d: "Ab | G"
+
+phrases:
+  harp8: "^1:1 ^2:1 ^3:1 ^1+:1 ^2+:1 ^1+:1 ^3:1 ^2:1"
+  pad: "^3:8"
+  root: "^1:8"
+  bubble_rise: "r:8 | r:5 C4:3 | r:8 | r:8 | r:2 E4:3 r:3 | r:8 | r:8 | r:8"
+  flute_a: |
+    G4:4 Eb5:4 | C5:6 Ab4:2 | G4:4 Bb4:2 Eb5:2 | D5:8 |
+    G4:4 Eb5:4 | F5:4 Eb5:2 C5:2 | Ab4:4 C5:2 F5:2 | D5:6 B4:2
+  strings_b: |
+    C5:6 Eb5:2 | D5:8 | Bb4:4 D5:2 G5:2 | G5:6 Eb5:2 |
+    Eb5:4 C5:4 | F5:4 D5:4 | G5:4 Eb5:2 Bb4:2 | B4:8
+  glock_c: "G5:2 r:2 Eb6:2 r:2 | C6:8 | Ab5:2 r:2 Eb6:2 r:2 | C6:8 | F5:2 r:2 C6:2 r:2 | Ab5:8 | B5:2 r:2 D6:2 r:2 | G5:8"
+  far_c: "C4:8 | Eb4:8 | C4:8 | Ab3:8 | C4:8 | F4:8 | D4:8 | B3:8"
+  timp_d: "Ab2:2 r:6 | G2:2 r:6"
+
+sections:
+  intro:
+    bars: 2
+    chords: intro
+    parts: {harp: harp8, pad: pad, bass: root, bubbles: "r:5 C4:3 | r:8", flute: "r:8 | r:4 B4:2 D5:2"}
+  a:
+    bars: 8
+    chords: a
+    parts: {flute: flute_a, harp: harp8, pad: pad, bass: root, bubbles: bubble_rise}
+  b:
+    bars: 8
+    chords: b
+    parts: {strings: strings_b, harp: harp8, pad: pad, bass: root, bubbles: bubble_rise}
+  c:
+    bars: 8
+    chords: c
+    parts: {glock: glock_c, far: far_c, harp: harp8, pad: pad, bass: root, bubbles: bubble_rise}
+  d:
+    bars: 2
+    chords: d
+    parts: {timpani: timp_d, harp: harp8, pad: pad, bass: root, flute: "r:8 | r:4 B4:2 D5:2"}
+
+arrangement: [intro, a, b, c, d]
+loop_start: a
