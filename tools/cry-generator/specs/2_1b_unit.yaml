@@ -1,0 +1,28 @@
+name: 2_1b_unit
+slot: blissey
+brief: "2-1B UNIT: electronic droid voice: beeps, whistles and servo whirs. 2-1B surgical droid."
+kind: droid
+size: 0.6
+seed: 172
+layers:
+  # Medical-droid family (soft sine monitor beeps in a major third, gentle servo, soothing glide), the
+  # senior surgeon: a lower, slower servo, a measured two-tone diagnostic chime and a calm vocoder hum.
+  - type: servo
+    pitch: [[0, 110], [0.2, 260], [0.35, 240]]
+    harmonics: [1.0, 0.6, 0.4, 0.2, 0.1]
+    env: [[0, 0], [0.06, 0.6], [0.3, 0.5], [0.38, 0]]
+    grit: 0.3
+    gain: 0.55
+  - type: tone
+    at: 0.12
+    wave: sine
+    pitch: [[0, 990], [0.12, 990], [0.121, 1250], [0.26, 1250]]
+    env: [[0, 0], [0.006, 1], [0.11, 1], [0.12, 0.2], [0.126, 1], [0.24, 0.8], [0.26, 0]]
+  - type: voice
+    at: 0.42
+    pitch: [[0, 220], [0.15, 250], [0.38, 200]]
+    pitch_step: 0.04
+    source: {square: 0.6, pulse: 0.4, pulse_width: 0.4}
+    vowels: [[0, o], [0.2, e], [0.38, m]]
+    env: [[0, 0], [0.03, 0.7], [0.3, 0.6], [0.4, 0]]
+    gain: 0.6

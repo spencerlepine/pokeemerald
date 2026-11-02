@@ -1,0 +1,34 @@
+name: muckraker
+slot: crawdaunt
+brief: "MUCKRAKER: electronic droid voice: beeps, whistles and servo whirs. LM-432 Muckraker crab droid."
+kind: droid
+size: 0.5
+seed: 182
+layers:
+  # Utapau crab-droid family (clacking leg servos, gritty pulse claw-snap chirps stepping down,
+  # scuttle), the LM-432 war model: heavy stomps, a grinding servo, then a harsh stepped warning call.
+  - type: click
+    times: [0.0, 0.06, 0.12, 0.18, 0.95, 1.0]
+    gain: 0.6
+  - type: servo
+    pitch: [[0, 120], [0.25, 300], [0.9, 260], [1.1, 110]]
+    harmonics: [1.0, 0.8, 0.6, 0.4, 0.3]
+    env: [[0, 0], [0.06, 0.7], [0.95, 0.55], [1.12, 0]]
+    grit: 0.8
+    drive: 2.5
+    gain: 0.7
+  - type: tone
+    at: 0.22
+    wave: pulse
+    width: 0.2
+    pitch: [[0, 880], [0.12, 880], [0.121, 660], [0.24, 660], [0.241, 500], [0.45, 440]]
+    env: [[0, 0], [0.005, 1], [0.11, 0.9], [0.12, 0.2], [0.126, 1], [0.23, 0.9], [0.24, 0.2], [0.246, 1], [0.42, 0.7], [0.46, 0]]
+    drive: 2
+    gain: 0.8
+  - type: tone
+    at: 0.72
+    wave: pulse
+    width: 0.2
+    pitch: [[0, 1100], [0.08, 1100], [0.081, 820], [0.18, 820]]
+    env: [[0, 0], [0.004, 1], [0.07, 0.8], [0.08, 0], [0.086, 1], [0.17, 0.6], [0.18, 0]]
+    gain: 0.6

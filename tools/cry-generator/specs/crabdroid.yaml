@@ -1,0 +1,33 @@
+name: crabdroid
+slot: corphish
+brief: "CRABDROID: electronic droid voice: beeps, whistles and servo whirs. Small crab droid scuttling through mud."
+kind: droid
+size: 0.28
+seed: 181
+layers:
+  # Family DNA (Utapau crab droids): clacking leg servos, gritty pulse "claw-snap" chirps that
+  # pitch-step down, and a scuttling patter. The small one: a busy scuttle and two snappy chirps.
+  - type: click
+    times: [0.0, 0.03, 0.06, 0.09, 0.12, 0.15]
+    gain: 0.5
+  - type: servo
+    pitch: [[0, 300], [0.15, 520], [0.2, 480]]
+    harmonics: [1.0, 0.7, 0.4, 0.3]
+    env: [[0, 0], [0.02, 0.5], [0.18, 0.4], [0.21, 0]]
+    grit: 0.6
+    gain: 0.5
+  - type: tone
+    at: 0.2
+    wave: pulse
+    width: 0.2
+    pitch: [[0, 1400], [0.06, 1400], [0.061, 1050], [0.12, 1050]]
+    env: [[0, 0], [0.004, 1], [0.05, 0.8], [0.06, 0], [0.066, 1], [0.11, 0.8], [0.12, 0]]
+    gain: 0.8
+  - type: tone
+    at: 0.36
+    wave: pulse
+    width: 0.2
+    pitch: [[0, 1250], [0.1, 1250], [0.101, 880], [0.18, 880]]
+    env: [[0, 0], [0.004, 1], [0.09, 0.8], [0.1, 0], [0.106, 1], [0.17, 0.7], [0.18, 0]]
+    gain: 0.8
+master: {rms: 0.27}

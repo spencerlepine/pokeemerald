@@ -1,0 +1,28 @@
+name: kaadu
+slot: doduo
+brief: "KAADU: creature call that fits its look and size. Fast two-legged swamp runner ridden by Gungans."
+kind: creature
+size: 0.5
+seed: 191
+layers:
+  # Family DNA (kaadu line): a duck-billed honk, a nasal pulse throat on "ae -> a" with a quick upward
+  # flip, repeated in a run-rhythm. The kaadu: two honks, "hwonk-hwonk!", the second longer.
+  - type: voice
+    pitch: [[0, 340], [0.04, 480], [0.18, 420]]
+    source: {pulse: 0.9, saw: 0.4, pulse_width: 0.12, noise: 0.06}
+    vowels: [[0, ae], [0.18, a]]
+    env: [[0, 0], [0.01, 1], [0.15, 0.8], [0.19, 0]]
+    formant_scale: 1.2
+    jitter: 0.015
+    drive: 1.6
+  - type: voice
+    at: 0.26
+    pitch: [[0, 360], [0.05, 520], [0.4, 440], [0.6, 340]]
+    source: {pulse: 0.9, saw: 0.4, pulse_width: 0.12, noise: 0.06}
+    vowels: [[0, ae], [0.2, a], [0.6, aw]]
+    env: [[0, 0], [0.01, 1], [0.45, 0.8], [0.62, 0]]
+    formant_scale: 1.2
+    growl: 0.15
+    growl_rate: 34
+    jitter: 0.015
+    drive: 1.6

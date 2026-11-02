@@ -1,0 +1,28 @@
+name: krykna
+slot: ariados
+brief: "KRYKNA: creature call that fits its look and size. Giant krykna spider."
+kind: creature
+size: 0.45
+seed: 162
+layers:
+  # Krykna line (leg-tap clicks, raspy noise-heavy saw throat on "ee -> rr", chattering growl, hiss),
+  # full grown: heavy taps, a menacing chattering screech that drops, and a long venomous hiss.
+  - type: click
+    times: [0.0, 0.05, 0.09]
+    gain: 0.6
+  - type: voice
+    at: 0.08
+    pitch: [[0, 380], [0.08, 560], [0.3, 460], [0.42, 320]]
+    source: {saw: 0.8, pulse: 0.4, pulse_width: 0.15, noise: 0.3}
+    vowels: [[0, ee], [0.15, ae], [0.42, rr]]
+    env: [[0, 0], [0.012, 1], [0.3, 0.75], [0.44, 0]]
+    growl: 0.55
+    growl_rate: 54
+    jitter: 0.035
+    drive: 2.4
+  - type: noise
+    at: 0.42
+    band: [[0, 3000], [0.25, 2200]]
+    q: 1.4
+    env: [[0, 0], [0.03, 0.45], [0.26, 0]]
+    gain: 0.35

@@ -1,0 +1,29 @@
+name: krykling
+slot: spinarak
+brief: "KRYKLING: creature call that fits its look and size. Krykna spiderling."
+kind: creature
+size: 0.22
+seed: 161
+layers:
+  # Family DNA (krykna line): leg-tap clicks, a dry, raspy noise-heavy saw throat on "ee -> rr" with a
+  # rapid chattering growl, and a hiss. The spiderling: skittering taps and a thin, chittering hiss.
+  - type: click
+    times: [0.0, 0.04, 0.07, 0.11, 0.14]
+    gain: 0.45
+  - type: voice
+    at: 0.12
+    pitch: [[0, 600], [0.08, 820], [0.3, 700], [0.48, 540]]
+    source: {saw: 0.7, pulse: 0.4, pulse_width: 0.15, noise: 0.18}
+    vowels: [[0, ee], [0.2, i], [0.48, rr]]
+    env: [[0, 0], [0.012, 1], [0.32, 0.7], [0.5, 0]]
+    growl: 0.4
+    growl_rate: 62
+    jitter: 0.03
+    drive: 2
+  - type: noise
+    at: 0.4
+    band: [[0, 3400], [0.2, 2600]]
+    q: 1.5
+    env: [[0, 0], [0.03, 0.4], [0.22, 0]]
+    gain: 0.3
+master: {rms: 0.27, lowpass: 3800}

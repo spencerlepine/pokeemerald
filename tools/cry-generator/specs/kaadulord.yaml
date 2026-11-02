@@ -1,0 +1,40 @@
+name: kaadulord
+slot: dodrio
+brief: "KAADULORD: creature call that fits its look and size. Three-crested kaadu herd leader."
+kind: creature
+size: 0.7
+seed: 192
+layers:
+  # Kaadu line (nasal duck-billed pulse honk on "ae -> a", upward flip, run rhythm), the herd leader:
+  # three overlapping honks for three crests, lower and rougher, the last a long commanding blare.
+  - type: voice
+    pitch: [[0, 260], [0.04, 380], [0.14, 330]]
+    source: {pulse: 0.9, saw: 0.5, pulse_width: 0.12, noise: 0.07}
+    vowels: [[0, ae], [0.14, a]]
+    env: [[0, 0], [0.01, 1], [0.12, 0.8], [0.15, 0]]
+    formant_scale: 1.2
+    growl: 0.25
+    growl_rate: 30
+    drive: 1.8
+  - type: voice
+    at: 0.17
+    pitch: [[0, 300], [0.04, 430], [0.14, 370]]
+    source: {pulse: 0.9, saw: 0.5, pulse_width: 0.12, noise: 0.07}
+    vowels: [[0, ae], [0.14, a]]
+    env: [[0, 0], [0.01, 1], [0.12, 0.8], [0.15, 0]]
+    formant_scale: 1.2
+    growl: 0.25
+    growl_rate: 30
+    drive: 1.8
+  - type: voice
+    at: 0.34
+    pitch: [[0, 270], [0.06, 410], [0.5, 360], [0.75, 250]]
+    pitch_step: 0.04
+    source: {pulse: 0.9, saw: 0.5, pulse_width: 0.12, noise: 0.07}
+    vowels: [[0, ae], [0.2, a], [0.75, aw]]
+    env: [[0, 0], [0.012, 1], [0.55, 0.8], [0.77, 0]]
+    formant_scale: 1.2
+    growl: 0.35
+    growl_rate: 28
+    jitter: 0.02
+    drive: 2
