@@ -1,0 +1,60 @@
+# THE END card (MUS_END, hot-swap). ARRANGE of the last bars of "Finale" from The Empire Strikes Back
+# (wiki audio:MUS_END, ref soundtrack:empire-strikes-back:17, 300-383 s): the cue closes on the Force theme's
+# cadence and a long E major chord (analyzer: 103.4 bpm, E major, bars 22-34 all E). Kept: the tempo (104),
+# the key, the Force theme's last phrase on harp and guitar in E minor turning to E major, then the held chord.
+# Vanilla MUS_END is two quiet tracks on the `end` voicegroup (nylon guitar, harp, two squares) looping for 102 s;
+# this keeps those four voices and loops a calm 16-bar shimmer on the closing chord.
+# Brief (sw_subject): THE END card: closing chord.
+name: the-end
+replaces: MUS_END
+form: LOOP
+voicegroup: end                   # guitar 24, harp 46, square1 80, square2 81 (both 50%)
+master_volume: 56
+tempo: 104
+steps_per_beat: 2
+time_signature: [4, 4]
+seed: 3
+
+parts:
+  harp:    {program: 46, channel: 0, volume: 100, pan: -14, octave: 3, range: [E3, E5], gate: 1.0, humanize: {vel: 5}}
+  guitar:  {program: 24, channel: 1, volume: 92,  pan: 16,  octave: 2, range: [E2, B3], gate: 1.0}
+  lead:    {program: 80, channel: 2, volume: 52,  pan: 6,   range: [B3, E5], gate: 0.95, mono: true}
+  echo:    {program: 81, channel: 3, volume: 36,  pan: -30, range: [E4, B5], gate: 0.5, mono: true}
+
+progressions:
+  coda:  "Em | C | Am | B7 | Em | C | B7 | E"
+  hold:  "E | E | A/E | E | E | Esus4 | E | E"
+
+phrases:
+  # the Force theme's closing phrase (in E minor), then the turn to the major
+  force: |
+    r:6 B3:2 | E4:6 F#4:2 | G4:3 A4:1 G4:2 B3:2 | E4:6 B3:2 |
+    E4:2 B4:6 | A4:3 G4:1 F#4:2 E4:2 | F#4:4 D#4:4 | E4:8
+  arp: "^1:1 ^2:1 ^3:1 ^4:1 ^5:1 ^4:1 ^3:1 ^2:1"
+  arp_slow: "^1:2 ^2:2 ^3:2 ^5:2"
+  root: "^1:8"
+  root5: "^1:4 ^3:4"
+  shimmer: |
+    G#4:2 B4:2 E5:4 | r:8 | A4:2 C#5:2 E5:4 | r:8 |
+    G#4:2 B4:2 E5:4 | r:4 A4:4 | G#4:8 | r:8
+  bell: |
+    r:8 | B4:8 | r:8 | E5:8 | r:8 | A4:4 G#4:4 | r:8 | B4:8
+
+sections:
+  coda:
+    bars: 8
+    chords: coda
+    parts: {lead: force, harp: arp, guitar: root5}
+  hold:
+    bars: 8
+    chords: hold
+    gain: {harp: -10}
+    parts: {harp: arp_slow, guitar: root, lead: shimmer, echo: bell}
+  hold2:
+    bars: 8
+    chords: hold
+    gain: {harp: -16, lead: -10}
+    parts: {harp: arp_slow, guitar: root, echo: bell}
+
+arrangement: [coda, hold, hold2]
+loop_start: hold

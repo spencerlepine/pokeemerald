@@ -1,4 +1,5 @@
 asset_id,made_by,audio_file,preview_file,spec,notes
+audio:MUS_END,music-generator,audio/sound/songs/midi/mus_end.mid,audio/previews/music/the-end.mp3,tools/music-generator/song-schemas/the-end.yaml,"the-end; generated, gates passed; install with the spec"
 audio:MUS_FALLARBOR,music-generator,audio/sound/songs/midi/mus_fallarbor.mid,audio/previews/music/fallarbor-inyusu-tor.mp3,tools/music-generator/song-schemas/fallarbor-inyusu-tor.yaml,"fallarbor-inyusu-tor; generated, gates passed; install with the spec"
 audio:MUS_MOVE_DELETED,music-generator,audio/sound/songs/midi/mus_move_deleted.mid,audio/previews/music/move-forgotten.mp3,tools/music-generator/song-schemas/move-forgotten.yaml,"move-forgotten; generated, gates passed; install with the spec"
 audio:SE_BALL,sfx-generator,audio/sound/direct_sound_samples/sw_sfx/pod.wav,audio/previews/sfx/pod.wav,tools/sfx-generator/specs/pod.yaml,"Capture pod click / handing pods to the nurse droid; generated, gates passed; install with the spec"
@@ -406,6 +407,7 @@ cry:zangoose,cry-generator,audio/sound/direct_sound_samples/cries/zangoose.wav,a
 cry:zapdos,cry-generator,audio/sound/direct_sound_samples/cries/zapdos.wav,audio/previews/cries/stormhawk.wav,tools/cry-generator/specs/stormhawk.yaml,"STORMHAWK; generated, gates passed; install with the spec"
 cry:zigzagoon,cry-generator,audio/sound/direct_sound_samples/cries/zigzagoon.wav,audio/previews/cries/scurrier.wav,tools/cry-generator/specs/scurrier.yaml,"SCURRIER; generated, gates passed; install with the spec"
 net:mus-fortress-vader,music-generator,audio/sound/songs/midi/mus_fortress_vader.mid,audio/previews/music/fortress-vader.mp3,tools/music-generator/song-schemas/fortress-vader.yaml,"fortress-vader; generated, gates passed; install with the spec"
+net:mus-route119-dagobah,music-generator,audio/sound/songs/midi/mus_route119_dagobah.mid,audio/previews/music/route119-dagobah.mp3,tools/music-generator/song-schemas/route119-dagobah.yaml,"route119-dagobah; generated, gates passed; install with the spec"
 net:se-blaster-impact,sfx-generator,audio/sound/direct_sound_samples/sw_sfx/blaster_impact.wav,audio/previews/sfx/blaster_impact.wav,tools/sfx-generator/specs/blaster_impact.yaml,"Blaster bolt impact; generated, gates passed; install with the spec"
 net:se-detonator-beep,sfx-generator,audio/sound/direct_sound_samples/sw_sfx/detonator_beep.wav,audio/previews/sfx/detonator_beep.wav,tools/sfx-generator/specs/detonator_beep.yaml,"Thermal detonator arming beep; generated, gates passed; install with the spec"
 net:se-force-choke,sfx-generator,audio/sound/direct_sound_samples/sw_sfx/force_choke.wav,audio/previews/sfx/force_choke.wav,tools/sfx-generator/specs/force_choke.yaml,"Force choke; generated, gates passed; install with the spec"
