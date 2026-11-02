@@ -1,0 +1,70 @@
+# Encounter: Mira (the rival). Hot-swap of MUS_ENCOUNTER_MAY (wiki audio:MUS_ENCOUNTER_MAY): the rival's theme
+# when the player is KAEL. STYLE of "Princess Leia's Theme" (soundtrack:new-hope:03): an original tune, not a
+# quote. Taken from the cue: D major with its chromatic-mediant lift (D to Bb), a lyrical flute line that leaps a
+# sixth and falls by step, harp-like broken chords (square arpeggio) and a horn-like second strain (trumpet).
+# Kept at the vanilla 128 bpm with a light backbeat so it still works as an encounter. Brief (sw_subject): rival
+# theme (MIRA when the player is KAEL).
+name: encounter-mira
+replaces: MUS_ENCOUNTER_MAY
+form: LOOP
+voicegroup: encounter_may             # vanilla: flute 73, trumpet 56, slap bass 36, kit 0, squares 80/81, wave 83, noise 127
+master_volume: 78
+tempo: 128
+steps_per_beat: 4
+time_signature: [4, 4]
+seed: 3
+
+parts:
+  flute:   {program: 73, channel: 0, volume: 100, pan: 10,  range: [A4, A5], gate: 0.94, lfo_speed: 30, lfo_delay: 20, mod: 4, humanize: {vel: 5}}
+  trumpet: {program: 56, channel: 1, volume: 96,  pan: -6,  range: [G4, G5], gate: 0.9}
+  bass:    {program: 36, channel: 2, volume: 104, pan: 0,   octave: 1, range: [E1, E2], gate: 0.75, role: bass}
+  drums:   {program: 0,  channel: 3, volume: 80,  pan: 8,   role: drums, kit: {k: 36, s: 38}}
+  hat:     {program: 127, channel: 4, volume: 40, pan: -18, gate: 0.3, mono: true}
+  arp:     {program: 80, channel: 5, volume: 46,  pan: 30,  octave: 4, range: [D4, D5], gate: 0.55, mono: true}
+  wave:    {program: 83, channel: 6, volume: 44,  pan: -28, octave: 4, range: [D4, D5], gate: 0.95, mono: true}
+
+progressions:
+  a: "D | Bm | G | Em7 | D | Bb | G:8 A:8 | A"
+  b: "Bm | G | D | A | Bm | G | Em | A"
+
+phrases:
+  tune_a: |
+    A4:4 D5:8 E5:2 F#5:2 | F#5:6 E5:2 D5:4 B4:4 | B4:4 G5:8 F#5:2 E5:2 | D5:8 E5:4 B4:4 |
+    A4:4 D5:6 F#5:2 A5:4 | F5:6 D5:2 Bb4:4 D5:4 | B4:4 D5:4 C#5:4 E5:4 | E5:12 r:4
+  tune_b: |
+    B4:4 F#5:4 E5:2 D5:2 C#5:2 D5:2 | B4:12 G4:4 | A4:4 F#5:4 E5:2 D5:2 E5:2 F#5:2 | E5:12 C#5:4 |
+    D5:4 B4:2 C#5:2 D5:4 F#5:4 | G5:8 F#5:4 E5:4 | E5:4 G5:4 F#5:2 E5:2 D5:2 B4:2 | C#5:8 E5:4 A4:4
+  descant: "_^3:16"
+  walk: "^1:6 ^1:2 ^3:4 ^1+:4"
+  harp: "^1:2 ^2:2 ^3:2 ^1+:2 ^2+:2 ^1+:2 ^3:2 ^2:2"
+  hold: "^2:16"
+  hats: "r:2 F#5:2 r:2 F#5:2 r:2 F#5:2 r:2 _F#5:1 F#5:1"
+
+grooves:
+  soft:
+    k: "x.......x.x....."
+    s: "....x.......x..."
+  turn:
+    k: "x.......x.x....."
+    s: "....x.......x.xx"
+  lead_in:
+    k: "x...............|x.......x......."
+    s: "................|....x...x.x.xxxx"
+
+sections:
+  intro:
+    bars: 2
+    chords: "D | A"
+    parts: {arp: harp, wave: hold, bass: walk, drums: lead_in, flute: "r:16 | r:8 E5:4 F#5:2 E5:2"}
+  a:
+    bars: 8
+    chords: a
+    parts: {flute: tune_a, arp: harp, wave: hold, bass: walk, drums: soft, hat: hats}
+  b:
+    bars: 8
+    chords: b
+    fill: turn
+    parts: {trumpet: tune_b, flute: descant, arp: harp, wave: hold, bass: walk, drums: soft, hat: hats}
+
+arrangement: [intro, a, b]
+loop_start: a
