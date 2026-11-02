@@ -34,9 +34,9 @@ python3 -m mockup missing                 # art ids that have no shape in styles
     the screen. A footprint W x D px with walls h px fills exactly D + h rows of the phase-1 cell box. Only
     top and south faces show. Round footprints are ovals because they fill the box's footprint rows.
   - `mockup/solid.py`: solids, ray casting, shading. `mockup/build.py`: the models in `BUILDS`: block, L,
-    oct, T, notch, court, wings, hall, palace, pitched, barrel, quonset, hangar, tower, round-tower, stepped,
+    oct, T, notch, court, wings, hall, palace, pitched, barrel, tower, round-tower, stepped,
     dome, domes2, dome-block, dome-porch, store, cone, glass-dome, bunker, buried, stilts, stilts-dome,
-    stilts-flat, deck, pad, bay, plant, lab, arena, and hipped. A prop whose style has a `build` (the landing pad) is a 3D
+    stilts-flat, pad, plant, lab, arena, and hipped. A prop whose style has a `build` (the landing pad) is a 3D
     model too. Sunken courtyards were dropped (owner: doors can't sit at the bottom of a pit like that). `python3 -m mockup builds [--grey]` draws them all.
   - **Giants** (`GIANTS` in build.py) are huge pieces for the edges of a map, modelled at true scale and
     only partly drawn: the sprite is clipped to its box, so a wall or a city runs off the map and the player
@@ -72,6 +72,13 @@ python3 -m mockup missing                 # art ids that have no shape in styles
     4. `nature`: pine, boulder, shard (ice or crystal), fungus. Broadleaf trees are parked until the end (hard to get right). What a `T` cell becomes, and
        only where a planet has it.
     5. `landform`: mesa, spire, arch, boulders, ridge, crater. Large natural borders instead of a ring of trees.
+    6. `hangars`: hex-hangar, bay-hex (open walled bay on a chamfered plan), shipyard (hex pad between
+       two docking towers). Angular sci-fi shapes; the round quonset, hangar, bay and deck were scrapped
+       (owner: no tube or cylinder shapes for hangars and shipyards).
+    7. `gyms`: gym-palace, gym-temple, gym-hex, gym-fortress, gym-court. Boss houses, each a different
+       Star Wars seat of power; all share one bold doorway (`portal`: a tall framed opening with a lit
+       lintel), and the game's sign out front marks it as a gym. The round colosseum `arena` is kept only
+       for the podrace arena. The kit sheet draws the sign in front of each gym (`kit.SIGNED`).
   - **Scrapped (owner, 2026-11-02):** tree, bush, the checkpoint barrier gate and the power pole. They read as
     human-made, z-day-style objects. Design from Star Wars sci-fi, not from z-day or Earth.
   - **Relief for every phase-1 area** (`mockup/relief.py`): heights derived from the grid, no hand-written

@@ -127,7 +127,7 @@ pieces:
   - 3
   - 3
   door: 1
-- build: quonset
+- build: hex-hangar
   at:
   - 19
   - 14

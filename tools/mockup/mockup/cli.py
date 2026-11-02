@@ -147,7 +147,7 @@ def cmd_kit(a):
     ref_w = 1 + 4 + 1
     gap = 1
     width = max(ref_w + sum(s[0] + gap for s, _ in r) for _, r in rows) + 1
-    heights = [max(3, max(s[1] for s, _ in r)) + 2 for _, r in rows]
+    heights = [max(3, max(s[1] for s, _ in r)) + 2 + (1 if a.category in kit.SIGNED else 0) for _, r in rows]
     img = Image.new("RGB", (width * draw.C, (sum(heights) + 1) * draw.C), pal["ground"])
     d = ImageDraw.Draw(img, "RGBA")
     roles = st.roles if hasattr(st, "roles") else {"npc": {"body": "#e86fa0", "ring": "#8a2a50"}}
@@ -160,8 +160,11 @@ def cmd_kit(a):
         x = ref_w + 1
         for (w, h), sd in items:
             build.building(img, {"at": [x, base - h], "size": [w, h]}, dict(style, build=name), sd, a.grey)
+            if a.category in kit.SIGNED:          # the game's sign out front
+                draw.sign(d, {"at": [x + w // 2 + 2, base]})
             x += w + gap
-        d.text((draw.C, base * draw.C + 3), f"{name}   sizes " + ", ".join(f"{w}x{h}" for w, h in cat[name][1])
+        ly = base + (1 if a.category in kit.SIGNED else 0)
+        d.text((draw.C, ly * draw.C + 3), f"{name}   sizes " + ", ".join(f"{w}x{h}" for w, h in cat[name][1])
                + "   (3 seeded variations each)", font=draw.F, fill=(40, 30, 20))
         y += hh
     out = MOCK / "kit"

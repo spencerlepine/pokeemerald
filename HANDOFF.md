@@ -71,6 +71,10 @@ The owner split the remaining work into phases on 2026-11-02.
    parked until the end; pine is good). Owner: the checkpoint gate and power pole were cut as human-made z-day copies.
    Design from Star Wars sci-fi, never copy z-day objects. Reference art and planet facts:
    https://github.com/spencerlepine/starwars-db/tree/main/wiki
+   Round hangars, bays, quonsets and decks scrapped (owner: cylinders don't look good); replaced by angular kit
+   categories `hangars` (hex-hangar, bay-hex, shipyard) and `gyms` (palace, temple, hex, fortress, court: varied
+   boss houses sharing one bold doorway, plus the sign out front). Only the podrace arena keeps the round arena.
+   The owner paused here after this fix (2026-11-02): wait for their review before the next step.
    **Breadth pass (owner, 2026-11-02):** build tools to greybox a whole planet in three layers before more depth:
    (1) terrain, nature, ledges, berms, water, waterfalls; (2) large structures and natural borders (cliffs,
    ridges, mesas), so areas need not be ringed by trees and can have more height around the edges (towns stay

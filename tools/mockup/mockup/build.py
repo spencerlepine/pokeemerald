@@ -287,22 +287,6 @@ def m_buried(m):
         m.door(0, h=9)
 
 
-def m_quonset(m, wide=False):
-    """A barrel-vault hangar: the vault runs north-south, its arched end faces south with a big door."""
-    W = m.W
-    rise = min(W / 2 - 1, m.H * 0.45)
-    D = m.H - rise
-    m.add(S.vault(1, 0, W - 1, D, 0, rise, m.roof))
-    # ribs over the vault, and the arched front frame in the wall colour
-    for y in range(8, int(D) - 4, 12):
-        m.add(S.vault(0.5, y, W - 0.5, y + 2, 0, rise + 0.6, shade(m.roof, -0.12)))
-    m.add(S.vault(0.5, -0.5, W - 0.5, 2, 0, rise + 0.6, m.wall))
-    if m.door_x is not None:
-        dw = 18 if wide or m.cw >= 6 else 9
-        dh = min(rise * (0.75 if wide else 0.6), 18)
-        m.add(S.vault(m.door_x - dw / 2, -1, m.door_x + dw / 2, 4, 0, dh, m.door_col_rgb, subtract=True))
-
-
 def m_stilts(m, cap="pitched", round_=False):
     L = max(8, int(m.H * 0.18))
     h = m.wall_h(0.7)
@@ -400,26 +384,6 @@ def _H(m, cx, cy, s, z, col):
           S.box(cx - s, cy - 1, z, cx + s, cy + 1.2, z + 0.5, col))
 
 
-def m_deck(m):
-    """A raised round landing deck (Cloud City): a thick oval slab on struts, a landing ring painted on top."""
-    L = 11 if m.ch >= 4 else 7
-    cx, cy, a, b = _oval(m, 1, m.W - 1)
-    if 2 * b + L + 7 > m.H:          # a short box: a smaller deck rather than one cut off at the top
-        b = (m.H - L - 7) / 2
-        a = b / OVAL
-        cx = m.W / 2
-        cy = b
-    leg = shade(m.wall, -0.25)
-    for f in (-0.55, 0.0, 0.55):
-        x = cx + a * f
-        y = _yfront_ellipse(cx, cy, a, b, x) + 2
-        m.add(S.box(x - 2, y, 0, x + 2, y + 3, L, leg))
-    m.add(S.cylinder(cx, cy, a, b, L, L + 5, m.wall, m.roof))
-    mark = (210, 210, 210) if m.grey else m.trim
-    _rings(m, cx, cy, a, b, L + 5, mark, (0.82,))
-    _H(m, cx, cy, min(a * 0.25, 10), L + 5, mark)
-
-
 def m_pad(m):
     """A landing pad at ground level: a low octagonal slab, a painted ring and an H."""
     cx, cy, a, b = _oval(m, 1, m.W - 1)
@@ -432,28 +396,6 @@ def m_pad(m):
     _H(m, cx, cy, min(a * 0.28, 11), 3, mark)
     for f in (-1, 1):         # edge lights
         m.add(S.box(cx + f * a * 0.92 - 1, cy - 1, 3, cx + f * a * 0.92 + 1, cy + 1, 5, mark))
-
-
-def m_bay(m):
-    """A docking bay: a round wall open to the sky, the ship floor at ground level, an arched gate."""
-    h = m.wall_h(0.75)
-    W = m.W
-    D = m.H - h - 1
-    a = fit_round(W - 2, m.H - 1, h, 0)
-    b = a * OVAL
-    cx, cy = W / 2, b
-    m.add(S.cylinder(cx, cy, a, b, 0, h, m.wall, m.roof))
-    m.add(S.cylinder(cx, cy, a - 4, b - 4, 0.6, h + 1, shade(m.wall, -0.15), shade(m.ground, -0.12), subtract=True))
-    for f in (-0.45, 0.45):     # doors in the far inner wall
-        x = cx + (a - 4) * f
-        yb = cy + (a - 4) * OVAL * math.sqrt(1 - f * f) - 1
-        m.add(S.box(x - 3, yb - 1, 0.6, x + 3, yb + 3, 9, m.door_col_rgb, subtract=True))
-    mark = (205, 205, 205) if m.grey else shade(m.trim, 0.2)
-    m.add(S.cylinder(cx, cy + 2, (a - 4) * 0.55, (b - 4) * 0.55, 0.6, 1.0, mark))
-    m.add(S.cylinder(cx, cy + 2, (a - 4) * 0.48, (b - 4) * 0.48, 0.6, 1.2, shade(m.ground, -0.12)))
-    if m.door_x is not None:
-        yf = _yfront_ellipse(cx, cy, a, b, m.door_x)
-        m.add(S.vault(m.door_x - 6, yf - 1, m.door_x + 6, yf + 6, 0, min(11, h - 2), m.door_col_rgb, subtract=True))
 
 
 def m_dome_porch(m):
@@ -581,23 +523,22 @@ BUILDS = {
     "court": m_court, "wings": m_wings, "palace": lambda m: m_wings(m, towers=True),
     "hall": lambda m: m_wings(m, dome_mid=True),
     "dome": m_dome, "domes2": m_domes2, "dome-block": m_dome_block, "store": m_store,
-    "bunker": m_bunker, "buried": m_buried, "bay": m_bay, "pad": m_pad, "dome-porch": m_dome_porch,
+    "bunker": m_bunker, "buried": m_buried, "pad": m_pad, "dome-porch": m_dome_porch,
     "glass-dome": m_glass_dome, 
     "hipped": m_hipped,
       
     "trench-wall": m_trench_wall,
-    "quonset": m_quonset, "hangar": lambda m: m_quonset(m, wide=True),
     "stilts": m_stilts, "stilts-dome": lambda m: m_stilts(m, "dome", round_=True),
     "stilts-flat": lambda m: m_stilts(m, "flat"),
     "cone": m_cone, "tower": m_tower, "round-tower": m_round_tower, "stepped": m_stepped,
-    "deck": m_deck, "plant": m_plant, "lab": m_lab, "arena": m_arena,
+    "plant": m_plant, "lab": m_lab, "arena": m_arena,
 }
 from . import kit as _kit  # noqa: E402  (categories register their pieces here)
 _kit.register(BUILDS)
 
 # the first-pass `kind` names, so an old catalogue entry still draws
 KIND_TO_BUILD = {"box": "block", "dome": "dome", "pitched": "pitched", "stepped": "stepped", "tower": "tower",
-                 "hall": "hall", "dish": "bay", "platform": "deck",
+                 "hall": "hall", "dish": "bay-hex", "platform": "pad",
                  "sunken": "dome-porch", "sunken-dome": "dome-porch"}
 
 _cache = {}

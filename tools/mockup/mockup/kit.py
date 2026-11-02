@@ -715,13 +715,210 @@ LANDFORM = {
     "crater": (l_crater, [(4, 3), (6, 4)]),
 }
 
+
+# --------------------------------------------------------------------------- category 6: hangars and bays
+# Angular sci-fi shapes, no tubes or round walls (owner, 2026-11-02): hexagons, chamfers, sloped walls.
+
+
+def _chamfer(x0, y0, x1, y1, k):
+    return [(x0 + k, y0), (x1 - k, y0), (x1, y0 + k * K), (x1, y1 - k * K), (x1 - k, y1), (x0 + k, y1),
+            (x0, y1 - k * K), (x0, y0 + k * K)]
+
+
+def _hex(x0, y0, x1, y1, k):
+    """An elongated hexagon: points east and west."""
+    ym = (y0 + y1) / 2
+    return [(x0 + k, y0), (x1 - k, y0), (x1, ym), (x1 - k, y1), (x0 + k, y1), (x0, ym)]
+
+
+def _door_x(m):
+    return m.door_x if m.door_x is not None else m.W / 2
+
+
+def h_hangar(m):
+    """Hex hangar: an elongated hexagonal hall with sloped walls, a framed hangar door and a roof spine."""
+    p = palette(m)
+    W = m.W
+    h = m.wall_h(1.25)
+    D = m.H - h - 6
+    k = min(W * 0.16, 16)
+    poly = _hex(1, 0, W - 1, D, k)
+    m.add(S.prism(poly, 0, h, p["wall"], p["roof"], taper=3))
+    dw = min(W - 2 * k - 6, W * 0.5)
+    x = W / 2
+    m.add(S.box(x - dw / 2 - 2, -0.5, 0, x + dw / 2 + 2, 1.5, h * 0.8 + 2, p["trim"]),
+          S.box(x - dw / 2, -1, 0, x + dw / 2, 4, h * 0.8, p["dark"], subtract=True),
+          S.box(x - dw / 2, 1, h * 0.8 - 3, x + dw / 2, 2, h * 0.8 - 1.5, p["light"]))
+    m.add(S.prism(_hex(W * 0.25, D * 0.35, W * 0.75, D * 0.65, 4), h, h + 3, p["trim"], p["roof"], taper=1))
+
+
+def h_bay(m):
+    """Docking bay: an open-topped walled bay on a chamfered plan, a pad marked on its floor, a gate south."""
+    p = palette(m)
+    W = m.W
+    h = m.wall_h(0.9)
+    D = m.H - h - 2
+    k = min(W, D) * 0.22
+    t = 4
+    m.add(S.prism(_chamfer(1, 0, W - 1, D, k), 0, h, p["wall"], p["roof"]),
+          S.prism(_chamfer(1 + t, t, W - 1 - t, D - t, k * 0.8), 0.5, h + 1, p["wall"], p["roof"], subtract=True))
+    gw = min(16, W * 0.3)
+    x = _door_x(m)
+    m.add(S.box(x - gw / 2, -1, 0.5, x + gw / 2, t + 1, h + 1, p["wall"], p["roof"], subtract=True),
+          S.box(x - gw / 2 - 2, -0.5, 0, x - gw / 2, t, h + 3, p["trim"]),
+          S.box(x + gw / 2, -0.5, 0, x + gw / 2 + 2, t, h + 3, p["trim"]))
+
+
+def h_shipyard(m):
+    """Shipyard: a hex landing pad between two docking towers, each reaching a clamp arm over the pad."""
+    p = palette(m)
+    W = m.W
+    h = m.H * 0.5
+    D = m.H - h - 4
+    m.add(S.prism(_hex(1, 0, W - 1, D, min(14, W * 0.15)), 0, 3, p["trim"], p["roof"]))
+    cx, cy = W / 2, D / 2
+    s = min(W * 0.3, D * 0.4 / K)
+    m.add(S.prism(_hex(cx - s, cy - s * K, cx + s, cy + s * K, s * 0.5), 3, 3.6, p["light"], p["light"]),
+          S.prism(_hex(cx - s + 2, cy - s * K + 1.5, cx + s - 2, cy + s * K - 1.5, s * 0.5 - 1), 3, 3.8,
+                  p["roof"], p["roof"]))
+    g = 11
+    yb = D * 0.5
+    for x in (5, W - 5 - g):
+        m.add(S.prism([(x, yb), (x + g, yb), (x + g, yb + g * K), (x, yb + g * K)], 3, h, p["trim"], p["roof"],
+                      taper=2),
+              S.box(x + 1, yb - 0.5, h * 0.6, x + g - 1, yb + 0.5, h * 0.6 + 2, p["dark"], subtract=True))
+    reach = W * 0.18
+    m.add(S.box(5 + g, yb + 1, h - 8, 5 + g + reach, yb + g * K - 1, h - 4, p["trim"], p["roof"]),
+          S.box(W - 5 - g - reach, yb + 1, h - 8, W - 5 - g, yb + g * K - 1, h - 4, p["trim"], p["roof"]),
+          S.box(5 + g + reach - 2, yb + 1.5, h - 7, 5 + g + reach, yb + g * K - 1.5, h - 5, p["light"]),
+          S.box(W - 5 - g - reach, yb + 1.5, h - 7, W - 3 - g - reach, yb + g * K - 1.5, h - 5, p["light"]))
+
+
+HANGARS = {
+    "hex-hangar": (h_hangar, [(5, 4), (7, 5)]),
+    "bay-hex": (h_bay, [(5, 4), (7, 5)]),
+    "shipyard": (h_shipyard, [(6, 5), (8, 6)]),
+}
+
+
+# --------------------------------------------------------------------------- category 7: gyms (boss houses)
+# Each gym is a different Star Wars seat of power: a palace, a temple, a sci-fi hall, a fortress. What they
+# share is one bold doorway (a tall framed portal with a lit lintel); the game's sign out front does the rest.
+
+
+def portal(m, x, yf, w=18, h=24, z0=0):
+    """The gym's bold doorway: a tall dark opening in a heavy stepped frame that stands proud of the wall,
+    with a lit lintel. Every gym has one; it is the shared mark, the sign out front is the other."""
+    p = palette(m)
+    return [S.box(x - w / 2 - 5, yf - 3, z0, x + w / 2 + 5, yf + 1, z0 + h + 7, p["trim"], p["roof"]),
+            S.box(x - w / 2 - 2, yf - 4, z0, x + w / 2 + 2, yf + 1, z0 + h + 3, p["roof"], p["roof"]),
+            S.box(x - w / 2, yf - 5, z0, x + w / 2, yf + 4, z0 + h, p["dark"], subtract=True),
+            S.box(x - w / 2 - 2, yf - 4.5, z0 + h + 3.5, x + w / 2 + 2, yf - 3, z0 + h + 6, p["light"])]
+
+
+def g_palace(m):
+    """Palace gym: a heavy main block, a square tower at a back corner, a lower side wing."""
+    p = palette(m)
+    W = m.W
+    h = m.wall_h(1.5)
+    tw = W * 0.22
+    D = m.H - h - 26
+    right = m.r(1, 2)
+    m.add(S.prism([(1, 0), (W - 1, 0), (W - 1, D), (1, D)], 0, h, p["wall"], p["roof"], taper=2))
+    tx = W - 1 - tw if right else 1
+    m.add(S.prism([(tx, D * 0.45), (tx + tw, D * 0.45), (tx + tw, D), (tx, D)], 0, h + 24, p["wall"], p["roof"],
+                  taper=2),
+          S.box(tx + 2, D * 0.45 - 1, h + 14, tx + tw - 2, D * 0.45 + 1, h + 17, p["dark"], subtract=True))
+    m.add(S.box(W * 0.3, D * 0.3, h, W * 0.7, D * 0.8, h + 4, p["roof"], p["roof"]))
+    m.add(*portal(m, _door_x(m), 0, 18, min(26, h - 6)))
+
+
+def g_temple(m):
+    """Temple gym: three stepped stone tiers, a shrine on top, the portal at the foot."""
+    p = palette(m)
+    W = m.W
+    tiers = 3
+    hz = (m.H * 0.55) / tiers
+    D = m.H - hz * tiers - 10
+    z = 0
+    for i in range(tiers):
+        k = i * W * 0.13
+        y1 = D - i * D * 0.12
+        m.add(S.prism([(1 + k, i * 3), (W - 1 - k, i * 3), (W - 1 - k, y1), (1 + k, y1)], z, z + hz, p["wall"],
+                      p["roof"], taper=2))
+        z += hz
+    s = W * 0.12
+    m.add(S.box(W / 2 - s, D * 0.45, z, W / 2 + s, D * 0.75, z + 8, p["trim"], p["roof"]))
+    m.add(*portal(m, W / 2, 0, 18, min(24, hz * 1.7)))
+
+
+def g_hex(m):
+    """Hex hall gym: a sloped hexagonal hall with a raised hex crown and a lit band, sci-fi."""
+    p = palette(m)
+    W = m.W
+    h = m.wall_h(1.4)
+    D = m.H - h - 14
+    k = W * 0.2
+    m.add(S.prism(_hex(1, 0, W - 1, D, k), 0, h, p["wall"], p["roof"], taper=3),
+          S.prism(_hex(1, 0, W - 1, D, k), h * 0.62, h * 0.62 + 2, p["light"], taper=0))
+    m.add(S.prism(_hex(W * 0.25, D * 0.25, W * 0.75, D * 0.85, k * 0.45), h, h + 10, p["wall"], p["roof"],
+                  taper=2))
+    m.add(*portal(m, W / 2, 0, 18, min(24, h * 0.6)))
+
+
+def g_fortress(m):
+    """Fortress gym: a wide dark block with two angled pylons flanking the portal, a slab roof."""
+    p = palette(m)
+    W = m.W
+    h = m.wall_h(1.4)
+    D = m.H - h - 20
+    m.add(S.prism([(4, 2), (W - 4, 2), (W - 4, D), (4, D)], 0, h, p["wall"], p["roof"], taper=4))
+    pw = W * 0.16
+    x = _door_x(m)
+    for px in (x - 15 - pw, x + 15):
+        m.add(S.prism([(px, 0), (px + pw, 0), (px + pw, pw * K + 4), (px, pw * K + 4)], 0, h + 18, p["trim"],
+                      p["roof"], taper=pw * 0.35))
+    m.add(S.box(2, 1, h, W - 2, D + 1, h + 3, p["roof"], p["roof"]))
+    m.add(*portal(m, x, 2, 18, min(26, h - 6)))
+
+
+def g_court(m):
+    """Court gym: a long colonnaded hall, two end pavilions with pitched roofs, the portal in the middle."""
+    p = palette(m)
+    W = m.W
+    h = m.wall_h(1.2)
+    D = m.H - h - 16
+    m.add(S.box(1, 4, 0, W - 1, D, h, p["wall"], p["roof"]))
+    pw = W * 0.24
+    for x0 in (1, W - 1 - pw):
+        m.add(S.box(x0, 0, 0, x0 + pw, D, h + 6, p["wall"], p["roof"]),
+              S.hip(x0 - 1, -1, x0 + pw + 1, D + 1, h + 6, 10, p["roof"]))
+    n = 3 + m.r(1, 2)
+    for i in range(n):
+        x = 1 + pw + 4 + i * (W - 2 * pw - 10) / max(1, n - 1)
+        if abs(x - W / 2) > 12:
+            m.add(S.box(x - 1.5, 2, 0, x + 1.5, 4, h, p["trim"]))
+    m.add(*portal(m, W / 2, 4, 18, min(24, h - 4)))
+
+
+GYMS = {
+    "gym-palace": (g_palace, [(6, 6), (8, 7)]),
+    "gym-temple": (g_temple, [(6, 6), (8, 7)]),
+    "gym-hex": (g_hex, [(6, 5), (8, 6)]),
+    "gym-fortress": (g_fortress, [(6, 5), (8, 6)]),
+    "gym-court": (g_court, [(7, 5), (9, 6)]),
+}
+
+# Categories whose kit sheet shows the game's sign in front of each piece.
+SIGNED = {"gyms"}
+
 # Colours a category is shown in when its look belongs to a faction, not a planet.
 MATERIAL = {"imperial": {"wall": (150, 156, 164), "roof": (98, 104, 112), "trim": (52, 54, 60)},
             "nature": {"wall": (120, 92, 64), "roof": (96, 140, 72), "trim": (70, 60, 50)},
             "landform": {"wall": (176, 124, 78), "roof": (214, 176, 126), "trim": (110, 80, 54)}}
 
 CATEGORIES = {"doorless": DOORLESS, "sunken": SUNKEN, "imperial": IMPERIAL, "nature": NATURE,
-              "landform": LANDFORM}
+              "landform": LANDFORM, "hangars": HANGARS, "gyms": GYMS}
 
 
 def register(builds):
