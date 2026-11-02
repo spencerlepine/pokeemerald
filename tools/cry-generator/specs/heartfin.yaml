@@ -1,0 +1,20 @@
+name: heartfin
+slot: luvdisc
+brief: "HEARTFIN: creature call that fits its look and size. Heart-shaped reef fish."
+kind: creature
+size: 0.25
+seed: 321
+layers:
+  # A tiny reef fish's kiss: a bubbly, sweet sine+pulse "bloop-ip" on "u -> i" with one bubble pop.
+  - type: voice
+    pitch: [[0, 420], [0.05, 560], [0.2, 600], [0.26, 520]]
+    source: {sine: 0.7, pulse: 0.5, pulse_width: 0.3, noise: 0.03}
+    vowels: [[0, u], [0.08, o], [0.18, e]]
+    env: [[0, 0], [0.01, 1], [0.18, 0.75], [0.27, 0]]
+    vibrato: {rate: 16, depth: 0.03}
+  - type: noise
+    at: 0.22
+    band: [[0, 900], [0.06, 1600]]
+    q: 3
+    env: [[0, 0], [0.01, 0.5], [0.06, 0]]
+    gain: 0.3

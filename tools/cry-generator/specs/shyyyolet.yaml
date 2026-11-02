@@ -1,0 +1,21 @@
+name: shyyyolet
+slot: wingull
+brief: "SHYYYOLET: creature call that fits its look and size. Shyyyo chick that glides on the sea winds of Kashyyyk."
+kind: creature
+size: 0.28
+seed: 251
+layers:
+  # Family DNA (shyyyo line): a gull-like pulse throat on "ee -> a" with a falling, keening glide
+  # and a breathy wind layer. The chick: a light, gliding "kee-yaa" over a puff of wind.
+  - type: voice
+    pitch: [[0, 700], [0.06, 920], [0.3, 760], [0.55, 560]]
+    source: {pulse: 0.8, saw: 0.4, pulse_width: 0.22, noise: 0.06}
+    vowels: [[0, ee], [0.15, ae], [0.4, a], [0.55, er]]
+    env: [[0, 0], [0.012, 1], [0.38, 0.75], [0.57, 0]]
+    vibrato: {rate: 16, depth: 0.03}
+    jitter: 0.012
+  - type: noise
+    band: [[0, 1400], [0.5, 900]]
+    q: 1.2
+    env: [[0, 0], [0.1, 0.25], [0.45, 0.15], [0.55, 0]]
+    gain: 0.2

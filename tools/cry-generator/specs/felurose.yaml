@@ -1,0 +1,21 @@
+name: felurose
+slot: roselia
+brief: "FELUROSE: creature call that fits its look and size. Felucian thorn flower with poison blooms."
+kind: creature
+size: 0.12
+seed: 351
+layers:
+  # A Felucian flower spirit: a sweet, airy sine+pulse "fee-rooo" on "ee -> u" that sways (slow
+  # vibrato), ending in a soft poisonous hiss of pollen.
+  - type: voice
+    pitch: [[0, 640], [0.06, 820], [0.25, 720], [0.4, 560]]
+    source: {sine: 0.6, pulse: 0.6, pulse_width: 0.25, noise: 0.08}
+    vowels: [[0, ee], [0.12, i], [0.28, o], [0.4, u]]
+    env: [[0, 0], [0.015, 1], [0.28, 0.75], [0.42, 0]]
+    vibrato: {rate: 10, depth: 0.04}
+  - type: noise
+    at: 0.32
+    band: [[0, 3200], [0.15, 2600]]
+    q: 1.5
+    env: [[0, 0], [0.03, 0.35], [0.16, 0]]
+    gain: 0.3

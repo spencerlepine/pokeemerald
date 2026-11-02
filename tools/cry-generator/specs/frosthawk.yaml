@@ -1,0 +1,31 @@
+name: frosthawk
+slot: articuno
+brief: "FROSTHAWK: creature call that fits its look and size. Legendary ice bird."
+kind: creature
+size: 0.65
+seed: 281
+layers:
+  # A crystalline legendary cry: a clear, high-formant pulse throat on "ee -> i" that soars and
+  # holds in frame-steps, with a glassy tri overtone and icy wind shimmering behind it.
+  - type: voice
+    pitch: [[0, 420], [0.12, 640], [0.6, 600], [0.9, 560], [1.1, 420]]
+    pitch_step: 0.05
+    source: {pulse: 0.8, saw: 0.4, pulse_width: 0.2, noise: 0.04}
+    vowels: [[0, e], [0.15, ee], [0.7, i], [1.1, e]]
+    env: [[0, 0], [0.02, 1], [0.8, 0.8], [1.12, 0]]
+    vibrato: {rate: 9, depth: 0.025}
+    jitter: 0.01
+    drive: 1.4
+  - type: tone
+    at: 0.1
+    wave: tri
+    pitch: [[0, 1900], [0.5, 2100], [0.95, 1700]]
+    warble: {rate: 7, depth: 0.02}
+    env: [[0, 0], [0.1, 0.3], [0.8, 0.2], [0.95, 0]]
+    gain: 0.3
+  - type: noise
+    at: 0.3
+    band: [[0, 3200], [0.8, 2400]]
+    q: 2
+    env: [[0, 0], [0.2, 0.2], [0.6, 0.15], [0.8, 0]]
+    gain: 0.2

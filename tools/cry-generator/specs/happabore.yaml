@@ -1,0 +1,24 @@
+name: happabore
+slot: snorlax
+brief: "HAPPABORE: creature call that fits its look and size. Huge, lazy happabore, asleep where it stands."
+kind: creature
+size: 0.9
+seed: 361
+layers:
+  # A huge, lazy, short grunt: one deep, snorting "hrumph" from a sleepy saw throat on "u -> m" with a
+  # nasal snort of noise. Short to match its slot.
+  - type: noise
+    band: [[0, 900], [0.08, 600]]
+    q: 1.5
+    env: [[0, 0], [0.01, 0.6], [0.08, 0]]
+    gain: 0.45
+  - type: voice
+    at: 0.03
+    pitch: [[0, 140], [0.06, 190], [0.2, 130]]
+    source: {saw: 0.9, pulse: 0.5, pulse_width: 0.35, noise: 0.08}
+    vowels: [[0, ae], [0.08, a], [0.2, aw]]
+    env: [[0, 0], [0.012, 1], [0.15, 0.7], [0.22, 0]]
+    growl: 0.55
+    growl_rate: 22
+    drive: 2.4
+master: {tilt_db: 9}

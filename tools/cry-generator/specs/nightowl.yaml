@@ -27,3 +27,4 @@ layers:
     vibrato: {rate: 7, depth: 0.025}
     growl: 0.1
     growl_rate: 25
+master: {rms: 0.27}

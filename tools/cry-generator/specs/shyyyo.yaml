@@ -1,0 +1,25 @@
+name: shyyyo
+slot: pelipper
+brief: "SHYYYO: creature call that fits its look and size. Huge shyyyo bird that carries riders and cargo over Kashyyyk."
+kind: creature
+size: 0.45
+seed: 252
+layers:
+  # Shyyyo line (gull pulse throat on "ee -> a", falling keening glide, wind), grown into a huge
+  # carrier: a broad, lower "KRAAH-aa" with a rough edge and a heavy wingbeat whoosh.
+  - type: voice
+    pitch: [[0, 420], [0.05, 600], [0.28, 520], [0.52, 360]]
+    source: {pulse: 0.8, saw: 0.5, pulse_width: 0.22, noise: 0.08}
+    vowels: [[0, ae], [0.12, a], [0.35, aw], [0.52, er]]
+    env: [[0, 0], [0.01, 1], [0.35, 0.8], [0.54, 0]]
+    vibrato: {rate: 14, depth: 0.03}
+    growl: 0.3
+    growl_rate: 30
+    jitter: 0.02
+    drive: 1.8
+  - type: noise
+    at: 0.3
+    band: [[0, 700], [0.25, 450]]
+    q: 1.0
+    env: [[0, 0], [0.06, 0.4], [0.25, 0]]
+    gain: 0.3

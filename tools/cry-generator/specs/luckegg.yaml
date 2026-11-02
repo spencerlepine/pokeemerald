@@ -1,0 +1,26 @@
+name: luckegg
+slot: togepi
+brief: "LUCKEGG: creature call that fits its look and size. Egg-shelled creature that brings luck."
+kind: creature
+size: 0.12
+seed: 271
+layers:
+  # Family DNA (luck line): a sweet sine+pulse throat on "i -> ee" with a happy trill and a shell tap.
+  # The egg: a tiny, innocent "pree-pree!" and a little shell tap.
+  - type: click
+    times: [0.0]
+    gain: 0.35
+  - type: voice
+    at: 0.02
+    pitch: [[0, 700], [0.05, 880], [0.14, 820]]
+    source: {sine: 0.6, pulse: 0.6, pulse_width: 0.3, noise: 0.03}
+    vowels: [[0, i], [0.14, ee]]
+    env: [[0, 0], [0.01, 1], [0.11, 0.7], [0.15, 0]]
+    vibrato: {rate: 24, depth: 0.03}
+  - type: voice
+    at: 0.2
+    pitch: [[0, 740], [0.06, 960], [0.2, 880], [0.3, 760]]
+    source: {sine: 0.6, pulse: 0.6, pulse_width: 0.3, noise: 0.03}
+    vowels: [[0, i], [0.15, ee], [0.3, i]]
+    env: [[0, 0], [0.01, 1], [0.2, 0.75], [0.31, 0]]
+    vibrato: {rate: 24, depth: 0.04}

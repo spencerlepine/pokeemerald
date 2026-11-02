@@ -1,0 +1,33 @@
+name: dewling
+slot: sandshrew
+brief: "DEWLING: creature call that fits its look and size. Dewback hatchling that rolls up in the sand."
+kind: creature
+size: 0.28
+seed: 261
+layers:
+  # Family DNA (dewback line): a reptilian, throaty saw throat on "aw -> rr" with a croaking growl and a
+  # sandy hiss. The hatchling: a little croaky "grrk-ik" and a puff of sand as it rolls up.
+  - type: voice
+    pitch: [[0, 380], [0.04, 520], [0.12, 440]]
+    source: {saw: 0.9, pulse: 0.3, pulse_width: 0.3, noise: 0.1}
+    vowels: [[0, aw], [0.12, er]]
+    env: [[0, 0], [0.01, 1], [0.1, 0.7], [0.13, 0]]
+    growl: 0.35
+    growl_rate: 40
+    jitter: 0.02
+    drive: 1.8
+  - type: voice
+    at: 0.16
+    pitch: [[0, 460], [0.04, 620], [0.14, 520]]
+    source: {saw: 0.9, pulse: 0.3, pulse_width: 0.3, noise: 0.1}
+    vowels: [[0, e], [0.14, rr]]
+    env: [[0, 0], [0.01, 1], [0.11, 0.7], [0.15, 0]]
+    growl: 0.35
+    growl_rate: 40
+    drive: 1.8
+  - type: noise
+    at: 0.3
+    band: [[0, 2800], [0.15, 1800]]
+    q: 1.0
+    env: [[0, 0], [0.03, 0.35], [0.16, 0]]
+    gain: 0.3

@@ -1,0 +1,16 @@
+name: luckwing
+slot: togetic
+brief: "LUCKWING: creature call that fits its look and size. Winged luck creature."
+kind: creature
+size: 0.28
+seed: 272
+layers:
+  # Luck line (sweet sine+pulse throat on "i -> ee", happy trill), now winged: one quick, joyful
+  # "tee-REE!" that leaps up a step, a touch lower and fuller than the egg.
+  - type: voice
+    pitch: [[0, 560], [0.07, 560], [0.08, 760], [0.26, 720], [0.36, 600]]
+    pitch_step: 0.02
+    source: {sine: 0.5, pulse: 0.7, pulse_width: 0.3, noise: 0.04}
+    vowels: [[0, e], [0.08, i], [0.25, ee], [0.36, i]]
+    env: [[0, 0], [0.01, 0.8], [0.07, 0.6], [0.08, 1], [0.28, 0.75], [0.37, 0]]
+    vibrato: {rate: 22, depth: 0.04}

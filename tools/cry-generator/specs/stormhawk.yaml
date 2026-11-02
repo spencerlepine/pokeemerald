@@ -1,0 +1,30 @@
+name: stormhawk
+slot: zapdos
+brief: "STORMHAWK: creature call that fits its look and size. Legendary storm bird."
+kind: creature
+size: 0.62
+seed: 282
+layers:
+  # An electric legendary screech: a harsh, crackling saw+pulse throat on "ae -> a" with fast
+  # buzzing growl, cracked by static clicks and a sizzling square-wave arc.
+  - type: click
+    times: [0.0, 0.03, 0.2, 0.45, 0.6]
+    gain: 0.5
+  - type: voice
+    at: 0.01
+    pitch: [[0, 380], [0.06, 620], [0.4, 560], [0.72, 380]]
+    source: {saw: 0.8, pulse: 0.6, pulse_width: 0.15, noise: 0.15}
+    vowels: [[0, ae], [0.15, a], [0.5, ae], [0.72, er]]
+    env: [[0, 0], [0.01, 1], [0.5, 0.8], [0.74, 0]]
+    growl: 0.45
+    growl_rate: 70
+    jitter: 0.03
+    drive: 2.5
+  - type: tone
+    at: 0.05
+    wave: square
+    pitch: [[0, 1800], [0.5, 1500]]
+    warble: {rate: 60, depth: 0.2, shape: square}
+    env: [[0, 0], [0.02, 0.3], [0.4, 0.2], [0.55, 0]]
+    gain: 0.3
+master: {rms: 0.27}

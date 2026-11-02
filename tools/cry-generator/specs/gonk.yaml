@@ -1,0 +1,40 @@
+name: gonk
+slot: minun
+brief: "GONK: electronic droid voice: beeps, whistles and servo whirs. GNK power droid that shares its charge."
+kind: droid
+size: 0.2
+seed: 331
+layers:
+  # The power droid's trademark low, honking "gonk... gonk": two stepped square-wave voice honks over
+  # a power-cell hum, with a charge-up whine between them and a shuffle-step click.
+  - type: click
+    times: [0.0, 0.33]
+    gain: 0.4
+  - type: voice
+    at: 0.01
+    pitch: [[0, 150], [0.2, 140]]
+    pitch_step: 0.05
+    source: {square: 0.8, pulse: 0.4, pulse_width: 0.35}
+    vowels: [[0, o], [0.1, aw], [0.2, m]]
+    env: [[0, 0], [0.01, 1], [0.17, 0.85], [0.22, 0]]
+    drive: 2
+  - type: servo
+    at: 0.22
+    pitch: [[0, 300], [0.12, 520]]
+    harmonics: [1.0, 0.5, 0.3]
+    env: [[0, 0], [0.03, 0.4], [0.1, 0.35], [0.12, 0]]
+    grit: 0.3
+    gain: 0.4
+  - type: voice
+    at: 0.36
+    pitch: [[0, 140], [0.3, 125]]
+    pitch_step: 0.05
+    source: {square: 0.8, pulse: 0.4, pulse_width: 0.35}
+    vowels: [[0, o], [0.12, aw], [0.3, m]]
+    env: [[0, 0], [0.01, 1], [0.25, 0.85], [0.32, 0]]
+    drive: 2
+  - type: tone
+    wave: square
+    pitch: [[0, 120], [0.7, 120]]
+    env: [[0, 0], [0.02, 0.25], [0.65, 0.25], [0.7, 0]]
+    gain: 0.25

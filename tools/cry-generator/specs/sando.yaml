@@ -1,0 +1,34 @@
+name: sando
+slot: kyogre
+brief: "SANDO: creature call that fits its look and size. Titan of the seas, the greatest of the sando aqua monsters."
+kind: creature
+size: 1.0
+seed: 311
+layers:
+  # A whale-like titan's call from the core: a vast, slowly gliding sine+saw moan on "u -> o -> a"
+  # that swells like a wave, with a deep rumble and a churning, bubbling undertow.
+  - type: voice
+    pitch: [[0, 130], [0.3, 190], [0.8, 260], [1.2, 230], [1.55, 140]]
+    pitch_step: 0.05
+    source: {saw: 0.7, sine: 0.6, pulse: 0.4, pulse_width: 0.35, noise: 0.05}
+    vowels: [[0, u], [0.4, o], [0.9, a], [1.55, u]]
+    env: [[0, 0], [0.1, 1], [1.1, 0.85], [1.58, 0]]
+    vibrato: {rate: 4, depth: 0.03}
+    growl: 0.45
+    growl_rate: 18
+    jitter: 0.015
+    drive: 2.2
+  - type: voice
+    at: 0.3
+    pitch: [[0, 420], [0.5, 560], [1.0, 480]]
+    pitch_step: 0.05
+    source: {sine: 0.7, pulse: 0.5, pulse_width: 0.3}
+    vowels: [[0, o], [0.5, u], [1.0, o]]
+    env: [[0, 0], [0.25, 0.5], [0.8, 0.4], [1.05, 0]]
+    gain: 0.45
+  - type: noise
+    at: 0.1
+    band: [[0, 700], [1.3, 450]]
+    q: 3
+    env: [[0, 0], [0.1, 0.3], [0.15, 0.1], [0.25, 0.35], [0.35, 0.1], [0.5, 0.3], [0.7, 0.1], [0.9, 0.3], [1.3, 0]]
+    gain: 0.25

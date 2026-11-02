@@ -1,0 +1,33 @@
+name: greatkrayt
+slot: groudon
+brief: "GREATKRAYT: creature call that fits its look and size. Titan of the land, the eldest greater krayt dragon."
+kind: creature
+size: 0.98
+seed: 301
+layers:
+  # The krayt's famous echoing desert roar: a ground-shaking, growling saw throat that bellows up,
+  # holds in chip-era frame-steps, and breaks into a hollow, rising howl, over a rumble of sand.
+  - type: voice
+    pitch: [[0, 120], [0.2, 200], [0.7, 185], [1.1, 230], [1.4, 210], [1.6, 110]]
+    pitch_step: 0.05
+    source: {saw: 0.9, pulse: 0.5, pulse_width: 0.3, noise: 0.08}
+    vowels: [[0, aw], [0.3, a], [0.9, o], [1.2, a], [1.6, u]]
+    env: [[0, 0], [0.06, 1], [1.2, 0.85], [1.62, 0]]
+    growl: 0.65
+    growl_rate: 20
+    jitter: 0.02
+    drive: 2.6
+  - type: voice
+    at: 0.9
+    pitch: [[0, 380], [0.3, 620], [0.55, 560], [0.7, 380]]
+    pitch_step: 0.05
+    source: {saw: 0.5, pulse: 0.7, pulse_width: 0.25}
+    vowels: [[0, o], [0.3, a], [0.7, o]]
+    env: [[0, 0], [0.15, 0.6], [0.5, 0.5], [0.72, 0]]
+    gain: 0.5
+  - type: noise
+    band: [[0, 500], [1.5, 350]]
+    q: 0.8
+    env: [[0, 0], [0.2, 0.35], [1.3, 0.25], [1.6, 0]]
+    gain: 0.25
+master: {tilt_db: 6}
