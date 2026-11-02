@@ -228,6 +228,8 @@ def main() -> list[str]:
                  ref_titles="|".join(tracks[t]["title"] for t in refs if t in tracks), ref_files="|".join(files))
         if a.get("game_status") == "DONE" and not skip:
             r["rewrite_status"] = "DONE"
+        elif a.get("audio_status") == "AUDIO_READY" and not skip:
+            r["rewrite_status"] = "GENERATED"  # composed by tools/music-generator, stored in wiki/audio, not installed
         f = a["asset_file"]
         if f:
             name = Path(f).name

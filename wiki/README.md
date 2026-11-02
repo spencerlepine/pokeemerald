@@ -53,7 +53,7 @@ hotswaps, following [`bible/NET_NEW_DESIGNS.md`](bible/NET_NEW_DESIGNS.md).
 | `audio_status` | `PENDING_AUDIO` | Mapped: the Emerald sound plays as a placeholder until the Star Wars one replaces it (same song / cry id). |
 | | `NEEDS_PLACEHOLDER` | Net-new: copy the sound named in `placeholder_from` under the new name first. |
 | | `KEEP_AUDIO` / `NO_AUDIO` | Reuse the Emerald sound as is, or nothing to make. |
-| | `AUDIO_READY` | The new sound is generated (cry-generator / sfx-generator, every gate passed) and stored in the wiki at `audio/<game path>` with a listening copy in `audio/previews/`, listed in `mapping/audio_ready.csv`; still to be installed into `../game` with the tool's `install` (`game_status` says when). |
+| | `AUDIO_READY` | The new sound is generated (cry-generator / sfx-generator / music-generator, every gate passed) and stored in the wiki at `audio/<game path>` with a listening copy in `audio/previews/`, listed in `mapping/audio_ready.csv`; still to be installed into `../game` with the tool's `install` (`game_status` says when). |
 | | `DONE` | The new sound is approved and installed in `../game` by cry-generator or sfx-generator (`made_by`), listed in `mapping/audio_done.csv`. Net-new SEs keep `game_status` `NOT_STARTED` until something calls them. |
 | `game_status` | `NOT_STARTED` / `DONE` | Whether the row has landed in `../game`. For a `CUT` row, `DONE` means deleted. |
 

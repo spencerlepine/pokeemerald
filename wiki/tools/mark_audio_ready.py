@@ -40,16 +40,23 @@ def collect(audio):
     sys.path.insert(0, str(Path(__file__).resolve().parent))
     from ship_audio import wiki_paths
     by_const = {a["sw_constant"]: a for a in audio if a["category"] == "sfx"}
+    by_song = {a["sw_constant"]: a for a in audio if a["category"] == "music"}
+    by_song.update({a["emerald_constant"]: a for a in audio if a["category"] == "music" and a["emerald_constant"]})
     _, done = read(ROOT / "mapping" / "audio_done.csv")
     done_ids = {d["asset_id"] for d in done}
     rows, bad = [], 0
-    for kind, tool in (("cry", "cry-generator"), ("sfx", "sfx-generator")):
-        for p in sorted((REPO / "tools" / tool / "specs").glob("*.yaml")):
+    for kind, tool in (("cry", "cry-generator"), ("sfx", "sfx-generator"), ("music", "music-generator")):
+        for p in sorted((REPO / "tools" / tool / ("song-schemas" if kind == "music" else "specs")).glob("*.yaml")):
             spec = yaml.safe_load(p.read_text())
             af, pf = wiki_paths(kind, spec)
             if not (ROOT / af).exists():
                 continue
-            if kind == "cry":
+            if kind == "music":
+                a = by_song.get(spec.get("replaces") or spec.get("constant", ""))
+                if not a:
+                    print(f"error: {p.name}: {spec.get('replaces') or spec.get('constant')} matches no music row"); bad += 1; continue
+                aid = a["asset_id"]
+            elif kind == "cry":
                 aid = f"cry:{spec['slot']}"
             elif spec.get("replaces"):
                 aid = f"audio:{spec['replaces']}"
@@ -60,9 +67,9 @@ def collect(audio):
                 aid = a["asset_id"]
             if aid in done_ids:
                 continue
-            title = spec.get("brief", "").split(":")[0].strip()
+            title = spec.get("brief", "").split(":")[0].strip() or spec.get("title", "") or spec["name"]
             rows.append({"asset_id": aid, "made_by": tool, "audio_file": af, "preview_file": pf,
-                         "spec": f"tools/{tool}/specs/{p.name}",
+                         "spec": f"tools/{tool}/{'song-schemas' if kind == 'music' else 'specs'}/{p.name}",
                          "notes": f"{title}; generated, gates passed; install with the spec"})
     seen = {}
     for r in rows:
@@ -98,6 +105,18 @@ def main():
         sys.exit(1)
     write(DB / "pending_audio.csv", cols, audio)
     print(f"AUDIO_READY  {n} rows")
+    # database/music.csv mirrors pending_audio's audio_status; a generated song is rewrite_status GENERATED
+    # (composed and rendered, not installed in ../game yet). build_music.py does the same on a full rebuild.
+    mcols, music = read(DB / "music.csv")
+    by_id = {a["asset_id"]: a for a in audio}
+    g = 0
+    for m in music:
+        a = by_id.get(m["asset_id"])
+        if a and a["audio_status"] == "AUDIO_READY" and m["rewrite_status"] in ("TODO", "GENERATED"):
+            m.update(audio_status="AUDIO_READY", rewrite_status="GENERATED")
+            g += 1
+    write(DB / "music.csv", mcols, music)
+    print(f"music.csv  {g} songs GENERATED")
 
 
 if __name__ == "__main__":

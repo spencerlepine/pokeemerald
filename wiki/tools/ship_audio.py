@@ -2,13 +2,17 @@
 """Render sounds with cry-generator / sfx-generator and store them in the wiki as AUDIO_READY.
 
     python3 wiki/tools/ship_audio.py tools/cry-generator/specs/mistkin.yaml [more specs...]
-    python3 wiki/tools/ship_audio.py --all          # every spec in both tools not shipped or installed yet
+    python3 wiki/tools/ship_audio.py tools/music-generator/song-schemas/fortress-vader.yaml
+    python3 wiki/tools/ship_audio.py --all          # every spec in the three tools not shipped or installed yet
 
 For each spec: runs the tool's `make` (which fails unless every hard gate passes), then copies
   out/<name>.wav          -> wiki/audio/<game path>   (the exact file `install` would put in ../game)
   out/<name>_preview.wav  -> wiki/audio/previews/{cries,sfx}/<name>.wav   (44.1 kHz, as heard, for listening)
 Cries land at sound/direct_sound_samples/cries/<slot>.wav (same slot and file name as the vanilla cry);
 SEs at sound/direct_sound_samples/sw_sfx/<name>.wav (where `sfx.py install` puts them).
+Songs (music-generator `song-schemas/<name>.yaml`): `generate.py render` must finish with no errors and a passing
+loop check; the .mid lands at sound/songs/midi/<mus_x>.mid (what `generate.py install` writes) and the preview
+(intro + 3 loops, as the m4a engine plays it) as a 96 kbps MP3 at audio/previews/music/<name>.mp3.
 
 Nothing in ../game is touched. Run `python3 wiki/tools/mark_audio_ready.py` afterwards to list the shipped
 files in mapping/audio_ready.csv and set audio_status AUDIO_READY in database/pending_audio.csv.
@@ -23,7 +27,10 @@ import yaml
 
 WIKI = Path(__file__).resolve().parent.parent
 REPO = WIKI.parent
-TOOLS = {"cry": REPO / "tools" / "cry-generator", "sfx": REPO / "tools" / "sfx-generator"}
+TOOLS = {"cry": REPO / "tools" / "cry-generator", "sfx": REPO / "tools" / "sfx-generator",
+         "music": REPO / "tools" / "music-generator"}
+# Songs a music-generator model owns but that are worked on (or installed) elsewhere: never shipped by --all.
+MUSIC_SKIP = {"intro-boot", "title-throne", "intro-crawl"}
 
 
 def kind_of(spec_path):
@@ -31,12 +38,20 @@ def kind_of(spec_path):
     for k, d in TOOLS.items():
         if d in p.parents:
             return k
-    sys.exit(f"{spec_path}: not a spec under tools/cry-generator or tools/sfx-generator")
+    sys.exit(f"{spec_path}: not a spec under tools/cry-generator, tools/sfx-generator or tools/music-generator")
+
+
+def music_stem(spec):
+    """The .mid name the song gets in ../game (generate.py midi_name_for): mus_x for MUS_X."""
+    return (spec.get("replaces") or spec["constant"]).lower()
 
 
 def wiki_paths(kind, spec):
     name = spec["name"]
-    if kind == "cry":
+    if kind == "music":
+        game = f"sound/songs/midi/{music_stem(spec)}.mid"
+        prev = f"audio/previews/music/{name}.mp3"
+    elif kind == "cry":
         game = f"sound/direct_sound_samples/cries/{spec['slot']}.wav"
         prev = f"audio/previews/cries/{name}.wav"
     else:
@@ -45,9 +60,41 @@ def wiki_paths(kind, spec):
     return f"audio/{game}", prev
 
 
+def ship_music(spec_path, spec):
+    """generate.py render (errors, warnings, loop check), then the .mid and an MP3 of the preview."""
+    tool = TOOLS["music"]
+    r = subprocess.run([sys.executable, "generate.py", "render", str(Path(spec_path).resolve())], cwd=tool,
+                       capture_output=True, text=True)
+    name = spec["name"]
+    rep_path = tool / "out" / name / "report.json"
+    if r.returncode != 0 or not rep_path.exists():
+        print(f"FAIL  {spec_path}\n{r.stdout[-2500:]}{r.stderr[-1500:]}")
+        return False
+    import json
+    rep = json.loads(rep_path.read_text())
+    loop = rep.get("loop_check") or {}
+    if rep.get("errors") or loop.get("passed") is False:
+        print(f"FAIL  {spec_path}: errors {rep.get('errors')} / loop check failed\n{r.stdout[-1500:]}")
+        return False
+    audio, prev = wiki_paths("music", spec)
+    stem = music_stem(spec)
+    (WIKI / audio).parent.mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(tool / "out" / name / f"{stem}.mid", WIKI / audio)
+    (WIKI / prev).parent.mkdir(parents=True, exist_ok=True)
+    e = subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(tool / "out" / name / f"{name}_preview.wav"),
+                        "-codec:a", "libmp3lame", "-b:a", "96k", str(WIKI / prev)], capture_output=True, text=True)
+    if e.returncode != 0:
+        print(f"FAIL  {spec_path}: ffmpeg {e.stderr[-500:]}")
+        return False
+    print(f"SHIPPED  {spec_path}  ->  wiki/{audio}")
+    return True
+
+
 def ship(spec_path, quiet=False):
     kind = kind_of(spec_path)
     spec = yaml.safe_load(Path(spec_path).read_text())
+    if kind == "music":
+        return ship_music(spec_path, spec)
     tool = TOOLS[kind]
     cli = "cry.py" if kind == "cry" else "sfx.py"
     r = subprocess.run([sys.executable, cli, "make", str(Path(spec_path).resolve())], cwd=tool,
@@ -75,8 +122,10 @@ def main():
         with (WIKI / "mapping" / "audio_done.csv").open(encoding="utf-8") as f:
             installed = {Path(r["game_file"]).name for r in csv.DictReader(f)}
         for k, d in TOOLS.items():
-            for p in sorted((d / "specs").glob("*.yaml")):
+            for p in sorted((d / ("song-schemas" if k == "music" else "specs")).glob("*.yaml")):
                 spec = yaml.safe_load(p.read_text())
+                if k == "music" and spec["name"] in MUSIC_SKIP:
+                    continue
                 af = wiki_paths(k, spec)[0]
                 if Path(af).name not in installed and not (WIKI / af).exists():
                     specs.append(str(p))
