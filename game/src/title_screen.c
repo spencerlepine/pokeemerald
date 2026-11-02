@@ -42,6 +42,17 @@ enum {
 // shines play while the logo still sits 32px low (tBg2Y starts at -32). The 64px-tall shine then covers both words.
 #define LOGO_SHINE_Y (42 + 32)
 
+// The shine lights only the gold faces of the letters. The shine sprites draw nothing themselves (no colour
+// effect in their OBJ window any more); instead every face pixel of the logo has a palette entry for its
+// diagonal band (u = 2x + y in screen pixels with the logo in place, the slope of the stripes in
+// logo_shine.png), and UpdateLogoShine brightens the bands the stripes cover. Written by ship_logo_stacked.py.
+#define LOGO_SHINE_FACE_BASE   4   // first face entry in the logo palette (band 0)
+#define LOGO_SHINE_FACE_COLORS 6   // face colours per band
+#define LOGO_SHINE_BANDS       34
+#define LOGO_SHINE_BAND_W      9   // u units per band
+#define LOGO_SHINE_U0          133   // u of band 0's first column
+#define LOGO_SHINE_STRENGTH    12  // blend towards white where a stripe fully covers a band (BLDY 12 in Emerald)
+
 #define CLEAR_SAVE_BUTTON_COMBO (B_BUTTON | SELECT_BUTTON | DPAD_UP)
 #define RESET_RTC_BUTTON_COMBO (B_BUTTON | SELECT_BUTTON | DPAD_LEFT)
 #define BERRY_UPDATE_BUTTON_COMBO (B_BUTTON | SELECT_BUTTON)
@@ -614,6 +625,58 @@ static void SpriteCB_PokemonLogoShine_Fast(struct Sprite *sprite)
         DestroySprite(sprite);
 }
 
+// Stripes of logo_shine.png in u = 2 * x + y, relative to the sprite's top-left corner
+static const u8 sLogoShineStripes[][2] = { {76, 82}, {94, 112} };
+
+static EWRAM_DATA bool8 sLogoShineLit = FALSE;
+
+// Brighten the face colours of each logo band by how much of it the shine stripes cover. bg2Y is the logo's
+// texture offset (BG2Y in pixels): screen row y shows logo row y + bg2Y.
+static void UpdateLogoShine(s16 bg2Y)
+{
+    u16 cover[LOGO_SHINE_BANDS];
+    bool8 lit = FALSE;
+    u16 i, b;
+
+    if (gPaletteFade.active)
+        return;
+    for (b = 0; b < LOGO_SHINE_BANDS; b++)
+        cover[b] = 0;
+    for (i = 0; i < MAX_SPRITES; i++)
+    {
+        struct Sprite *sprite = &gSprites[i];
+        s32 corner, s;
+
+        if (!sprite->inUse || sprite->invisible || sprite->template != &sPokemonLogoShineSpriteTemplate)
+            continue;
+        corner = 2 * (sprite->x - 32) + (sprite->y - 32) + bg2Y - LOGO_SHINE_U0;
+        for (s = 0; s < (s32)ARRAY_COUNT(sLogoShineStripes); s++)
+        {
+            s32 lo = corner + sLogoShineStripes[s][0];
+            s32 hi = corner + sLogoShineStripes[s][1];
+            for (b = 0; b < LOGO_SHINE_BANDS; b++)
+            {
+                s32 b0 = b * LOGO_SHINE_BAND_W, b1 = b0 + LOGO_SHINE_BAND_W;
+                s32 o0 = (lo > b0) ? lo : b0, o1 = (hi < b1) ? hi : b1;
+                if (o1 > o0)
+                {
+                    cover[b] += o1 - o0;
+                    lit = TRUE;
+                }
+            }
+        }
+    }
+    if (!lit && !sLogoShineLit)
+        return;
+    sLogoShineLit = lit;
+    for (b = 0; b < LOGO_SHINE_BANDS; b++)
+    {
+        u16 c = cover[b] > LOGO_SHINE_BAND_W ? LOGO_SHINE_BAND_W : cover[b];
+        BlendPalette(BG_PLTT_ID(0) + LOGO_SHINE_FACE_BASE + b * LOGO_SHINE_FACE_COLORS, LOGO_SHINE_FACE_COLORS,
+                     (c * LOGO_SHINE_STRENGTH) / LOGO_SHINE_BAND_W, RGB_WHITE);
+    }
+}
+
 static void StartPokemonLogoShine(u8 mode)
 {
     u8 spriteId;
@@ -740,7 +803,7 @@ void CB2_InitTitleScreen(void)
         SetGpuReg(REG_OFFSET_WINOUT, WINOUT_WIN01_BG_ALL | WINOUT_WIN01_OBJ | WINOUT_WINOBJ_ALL);
         SetGpuReg(REG_OFFSET_BLDCNT, BLDCNT_TGT1_BG2 | BLDCNT_EFFECT_LIGHTEN);
         SetGpuReg(REG_OFFSET_BLDALPHA, 0);
-        SetGpuReg(REG_OFFSET_BLDY, 12);
+        SetGpuReg(REG_OFFSET_BLDY, 0); // no lighten in the shine's window: UpdateLogoShine lights the letter faces
         // BG0 (ridge) is priority 1 like the logo, so it covers the collage figures (OBJ priority 2)
         SetGpuReg(REG_OFFSET_BG0CNT, BGCNT_PRIORITY(1) | BGCNT_CHARBASE(2) | BGCNT_SCREENBASE(26) | BGCNT_16COLOR | BGCNT_TXT256x256);
         SetGpuReg(REG_OFFSET_BG1CNT, BGCNT_PRIORITY(2) | BGCNT_CHARBASE(3) | BGCNT_SCREENBASE(27) | BGCNT_16COLOR | BGCNT_TXT256x256);
@@ -777,6 +840,8 @@ static void MainCB2(void)
 // Shine the Pokémon logo two more times, and fade in the version banner
 static void Task_TitleScreenPhase1(u8 taskId)
 {
+    UpdateLogoShine(gTasks[taskId].tBg2Y);
+
     // Skip to next phase when A, B, Start, or Select is pressed
     if (JOY_NEW(A_B_START_SELECT) || gTasks[taskId].tSkipToNext)
     {
@@ -827,6 +892,7 @@ static void Task_TitleScreenPhase2(u8 taskId)
 {
     u32 yPos;
 
+    UpdateLogoShine(gTasks[taskId].tBg2Y);
     // Skip to next phase when A, B, Start, or Select is pressed
     if (JOY_NEW(A_B_START_SELECT) || gTasks[taskId].tSkipToNext)
     {
@@ -874,6 +940,8 @@ static void Task_TitleScreenPhase2(u8 taskId)
 // Clouds, ridge and the character collage are up; process main title screen input
 static void Task_TitleScreenPhase3(u8 taskId)
 {
+    UpdateLogoShine(gTasks[taskId].tBg2Y);
+
     if ((JOY_NEW(A_BUTTON) || JOY_NEW(START_BUTTON)) && IntroCrawl_ShouldPlay())
     {
         // First boot with no save: send the logo off into space, then the opening crawl.
