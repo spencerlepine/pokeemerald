@@ -52,7 +52,7 @@ MAPPING_FILES = ["species", "characters", "items", "moves", "types", "abilities"
 SWAP_KINDS = {"HOTSWAP", "NET_NEW", "KEEP", "CUT"}
 MAP_STATUSES = {"TODO", "DRAFT", "DONE", "IDEA"}
 ART_STATUSES = {"PENDING_ART", "NEEDS_PLACEHOLDER", "KEEP_ANIM", "KEEP_ART", "NO_ART", "ART_READY"}
-AUDIO_STATUSES = {"PENDING_AUDIO", "NEEDS_PLACEHOLDER", "KEEP_AUDIO", "NO_AUDIO", "DONE"}
+AUDIO_STATUSES = {"PENDING_AUDIO", "NEEDS_PLACEHOLDER", "KEEP_AUDIO", "NO_AUDIO", "AUDIO_READY", "DONE"}
 
 warnings: list[str] = []
 
@@ -598,6 +598,26 @@ def apply_art_ready(art):
                  art_notes="; ".join(x for x in (f"art: {d['art_file']}", d.get("notes", "")) if x))
 
 
+def apply_audio_ready(audio):
+    """mapping/audio_ready.csv: sounds a tool generated (gates passed) and tools/ship_audio.py stored in
+    ../audio/<game path>, not yet installed into ../game. audio_status becomes AUDIO_READY; game_status stays
+    NOT_STARTED. apply_audio_done runs after and wins for rows that are installed."""
+    path = MAPPING / "audio_ready.csv"
+    if not path.exists():
+        return
+    by_id = {a["asset_id"]: a for a in audio}
+    for d in read(path):
+        a = by_id.get(d["asset_id"])
+        if not a:
+            warn(f"mapping/audio_ready.csv: {d['asset_id']} is not in pending_audio.csv")
+            continue
+        if not (ROOT / d["audio_file"]).exists():
+            warn(f"mapping/audio_ready.csv: {d['audio_file']} missing")
+        old = [x for x in a["notes"].split("; ") if x and not x.startswith("generated: ")]
+        a.update(audio_status="AUDIO_READY", made_by=d.get("made_by", ""),
+                 notes="; ".join([f"generated: wiki/{d['audio_file']} ({d['spec']})"] + old))
+
+
 def apply_audio_done(audio):
     """mapping/audio_done.csv: sounds the owner approved and a tool installed into ../game (cry-generator,
     sfx-generator). audio_status becomes DONE; game_status is DONE when the row's call sites already play it
@@ -1058,6 +1078,7 @@ def main() -> None:
     art_cols = frame_sizes.order_cols(art_cols)
     write("pending_art.csv", art, art_cols)
     audio = pending_audio(rows, entities, inv, audio_dec, known)
+    apply_audio_ready(audio)
     apply_audio_done(audio)
     write("pending_audio.csv", audio, AUDIO_COLS + ["game_status"])
 

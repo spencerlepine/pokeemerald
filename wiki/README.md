@@ -29,7 +29,9 @@ Three lists drive the work. All live in `database/` and can be browsed with `pyt
 
 Approved new art lives in [`art/`](art) at the same path it has in `../game` (`art/graphics/...`), listed in
 `mapping/art_ready.csv`. `python3 tools/mark_art_ready.py` applies that list to `database/` (a full rebuild does too).
-Approved sounds installed into `../game` are listed in `mapping/audio_done.csv`; `python3 tools/mark_audio_done.py`
+Generated sounds not yet in the game live in [`audio/`](audio) the same way (`audio/sound/...`), listed in
+`mapping/audio_ready.csv`; `python3 tools/ship_audio.py <spec>` renders and stores one and
+`python3 tools/mark_audio_ready.py` lists and applies them. Approved sounds installed into `../game` are listed in `mapping/audio_done.csv`; `python3 tools/mark_audio_done.py`
 applies it the same way.
 
 When a row is in the game, set `game_status` to `DONE` in its source table (named in `table`) and rebuild.
@@ -51,6 +53,7 @@ hotswaps, following [`bible/NET_NEW_DESIGNS.md`](bible/NET_NEW_DESIGNS.md).
 | `audio_status` | `PENDING_AUDIO` | Mapped: the Emerald sound plays as a placeholder until the Star Wars one replaces it (same song / cry id). |
 | | `NEEDS_PLACEHOLDER` | Net-new: copy the sound named in `placeholder_from` under the new name first. |
 | | `KEEP_AUDIO` / `NO_AUDIO` | Reuse the Emerald sound as is, or nothing to make. |
+| | `AUDIO_READY` | The new sound is generated (cry-generator / sfx-generator, every gate passed) and stored in the wiki at `audio/<game path>` with a listening copy in `audio/previews/`, listed in `mapping/audio_ready.csv`; still to be installed into `../game` with the tool's `install` (`game_status` says when). |
 | | `DONE` | The new sound is approved and installed in `../game` by cry-generator or sfx-generator (`made_by`), listed in `mapping/audio_done.csv`. Net-new SEs keep `game_status` `NOT_STARTED` until something calls them. |
 | `game_status` | `NOT_STARTED` / `DONE` | Whether the row has landed in `../game`. For a `CUT` row, `DONE` means deleted. |
 
