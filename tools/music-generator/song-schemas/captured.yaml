@@ -1,0 +1,62 @@
+# Captured: hot-swap of MUS_CAUGHT (wiki audio:MUS_CAUGHT, EVENT / LOOP). SCRATCH (no film cue): an original
+# Star Wars style brass victory loop. Brief (sw_subject): after a capture pod locks, short victory loop.
+# Bb major at the vanilla 140 bpm: a 2-bar trumpet pickup fanfare, then an 8-bar loop (13.7 s, vanilla 13.9 s):
+# trumpet tune, tuba bass, timpani on the downbeats, snare march, square arpeggio and off-beat chords, wave counter.
+name: captured
+replaces: MUS_CAUGHT
+form: LOOP
+voicegroup: victory_wild              # timpani 47, trumpet 56, tuba 58, flute 73, sq2 80, wave 81, sq1 82, sq2 83, kit 0
+master_volume: 80
+tempo: 140
+steps_per_beat: 4
+time_signature: [4, 4]
+seed: 3
+
+parts:
+  trumpet: {program: 56, channel: 0, volume: 108, pan: 4,   range: [F4, Bb5], gate: 0.88, humanize: {vel: 3}}
+  tuba:    {program: 58, channel: 1, volume: 96,  pan: -6,  octave: 2, gate: 0.7, role: bass}
+  timpani: {program: 47, channel: 2, volume: 92,  pan: 14,  gate: 1.0}
+  drums:   {program: 0,  channel: 3, volume: 84,  pan: -12, role: drums, kit: {kick: 36, sn: 38, crash: 57}}
+  arp:     {program: 82, channel: 4, volume: 44,  pan: -30, octave: 4, gate: 0.6, mono: true}
+  offbeat: {program: 83, channel: 5, volume: 40,  pan: 30,  octave: 4, gate: 0.5, mono: true}
+  counter: {program: 81, channel: 6, volume: 56,  pan: 20,  octave: 4, gate: 0.8, mono: true}
+
+progressions:
+  fanfare: "Bb | F"
+  victory: "Bb | Gm | Eb | F | Bb | Eb | Cm:8 F:8 | Eb:8 F:8"
+
+phrases:
+  fan_tpt: "F4:1 F4:1 F4:1 r:1 Bb4:4 D5:4 F5:4 | Eb5:2 D5:2 C5:2 Eb5:2 D5:6 C5:2"
+  tune: |
+    D5:4 F5:2 D5:2 Bb4:4 F4:4 | G4:2 Bb4:2 D5:2 G5:2 F5:6 D5:2 | Eb5:4 G5:4 Bb4:4 Eb5:4 | C5:6 D5:2 C5:4 A4:4 |
+    Bb4:2 D5:2 F5:4 Bb5:6 A5:2 | G5:4 F5:2 Eb5:2 G5:4 Bb4:4 | C5:4 Eb5:4 D5:4 C5:4 | G5:4 Eb5:4 F5:4 C5:4
+  bass: "^1:4 ^3:4 ^1+:4 ^3:4"
+  bass_split: "^1:4 ^3:4 ^1:4 ^3:4"
+  arp16: "^1:1 ^2:1 ^3:1 ^2:1 ^1:1 ^2:1 ^3:1 ^2:1 ^1:1 ^2:1 ^3:1 ^2:1 ^1:1 ^2:1 ^3:1 ^2:1"
+  offs: "r:2 ^2:2 r:2 ^2:2 r:2 ^2:2 r:2 ^2:2"
+  counter: |
+    F4:8 Bb4:8 | D5:8 Bb4:8 | G4:8 Bb4:8 | A4:8 F4:8 |
+    F4:8 D5:8 | Eb5:8 Bb4:8 | G4:8 A4:8 | Bb4:8 C5:8
+  timp: "Bb2:4 r:12 | G2:4 r:12 | Eb2:4 r:12 | F2:4 r:8 F2:1 F2:1 F2:1 F2:1 | Bb2:4 r:12 | Eb2:4 r:12 | C3:4 r:4 F2:4 r:4 | Eb2:4 r:4 F2:4 r:4"
+  timp_fan: "F2:4 r:4 Bb2:4 r:4 | F2:1 F2:1 F2:1 F2:1 F2:1 F2:1 F2:1 F2:1 F2:4 r:4"
+
+grooves:
+  march:
+    kick:  "x.......x.......|x.......x.......|x.......x.......|x.......x.......|x.......x.......|x.......x.......|x.......x.......|x.......x......."
+    sn:    "....x.......x.x.|....x.......x...|....x.......x.x.|....x.......x...|....x.......x.x.|....x.......x...|....x.......x.x.|....x.......x.x."
+    crash: "X...............|................|................|................|X...............|................|................|................"
+  pickup:
+    sn:    "x.x.x...x...x...|rrrrrrrrRRRRX..."
+
+sections:
+  intro:
+    bars: 2
+    chords: fanfare
+    parts: {trumpet: fan_tpt, tuba: "Bb1:8 Bb1:8 | F1:8 F1:8", timpani: timp_fan, drums: pickup, arp: arp16, counter: "D5:16 | C5:16"}
+  a:
+    bars: 8
+    chords: victory
+    parts: {trumpet: tune, tuba: bass, timpani: timp, drums: march, arp: arp16, offbeat: offs, counter: counter}
+
+arrangement: [intro, a]
+loop_start: a
