@@ -1,0 +1,86 @@
+# Victory in a Trial: hot-swap of MUS_VICTORY_LEAGUE (wiki audio:MUS_VICTORY_LEAGUE). STYLE of "Ewok Celebration
+# and Finale" (wiki ref_tracks soundtrack:return-jedi:11): an original tune, not a quote of Yub Nub. Taken from
+# the cue: a bouncing folk-dance pulse around 140 bpm, a sing-along chant tune with call and answer, the
+# Mixolydian flat-seven (Bb in C), hand drums and tambourine, flute on top and bells at the climax.
+# Brief (sw_subject): "Passed a Trial / beat Obi-Wan." A village-celebration victory: 2-bar drum-and-bell pickup,
+# then a 20-bar dance loop (flute chant, brass answer, bell-and-tutti tag ending on G7 back into the chant).
+# 144 bpm (vanilla 140; 144 makes the loop frame-exact), 20-bar loop (33.3 s; vanilla 34.9 s), vanilla
+# victory_league voicegroup.
+name: victory-trials
+replaces: MUS_VICTORY_LEAGUE
+form: LOOP
+voicegroup: victory_league        # kit 0 (congas, tambourine), tubular bell 14, pizzicato 45, timpani 47, trumpet 56, horn 60, flute 73, squares 12/80, wave 81
+master_volume: 80
+tempo: 144
+steps_per_beat: 2                 # eighth-note grid
+time_signature: [4, 4]
+seed: 121
+
+parts:
+  flute:   {program: 73, channel: 0, volume: 100, pan: 10,  range: [C5, D6], gate: 0.9, lfo_speed: 30, lfo_delay: 20, mod: 4, humanize: {vel: 5}}
+  trumpet: {program: 56, channel: 1, volume: 100, pan: -6,  range: [A4, A5], gate: 0.85}
+  horn:    {program: 60, channel: 2, volume: 84,  pan: -18, range: [E3, E4], gate: 0.9}
+  pizz:    {program: 45, channel: 3, volume: 78,  pan: 24,  octave: 4, range: [C4, C5], gate: 0.5}
+  bass:    {program: 81, channel: 4, volume: 96,  pan: 0,   octave: 2, range: [C1, C3], gate: 0.7, role: bass}
+  upbeat:     {program: 12, channel: 5, volume: 42,  pan: 30,  octave: 4, range: [C4, C6], gate: 0.45, mono: true}
+  bell:    {program: 14, channel: 6, volume: 62,  pan: -24, range: [C5, G5], gate: 1.0}
+  drums:   {program: 0,  channel: 7, volume: 84,  pan: 0, role: drums, kit: {kick: 36, hi: 62, lo: 64, tamb: 54}}
+  echo:    {program: 80, channel: 8, volume: 34,  pan: -34, octave: 5, range: [C5, C7], gate: 0.4, mono: true}
+
+progressions:
+  intro: "C | G7"
+  chant: "C | C | F | C | C | Bb | F:4 G:4 | C"
+  answer: "F | C | F | C | Am | Bb | F:4 G:4 | C"
+  tag: "C | Bb | F | G7"
+
+phrases:
+  chant: |
+    G5:2 E5:1 G5:1 C6:2 G5:2 | A5:1 G5:1 E5:1 G5:1 E5:2 C5:2 | F5:2 A5:1 F5:1 C6:2 A5:2 | G5:6 r:2 |
+    G5:2 E5:1 G5:1 C6:2 G5:2 | Bb5:1 A5:1 G5:1 F5:1 D5:2 Bb4:2 | C5:2 F5:2 D5:2 G5:2 | E5:6 r:2
+  answer: |
+    C5:2 C5:1 C5:1 F5:2 C5:2 | E5:2 E5:1 E5:1 G5:2 E5:2 | F5:1 E5:1 F5:1 G5:1 A5:2 F5:2 | G5:6 r:2 |
+    A5:2 G5:1 E5:1 C5:2 E5:2 | D5:2 F5:1 D5:1 Bb4:2 D5:2 | C5:2 A4:2 B4:2 D5:2 | C5:6 r:2
+  # the flute answers the brass chant from above
+  flute_answer: "r:6 F5:1 G5:1 | r:6 G5:1 A5:1 | r:6 C6:1 Bb5:1 | A5:1 G5:1 E5:1 D5:1 C5:2 r:2 | r:6 C6:1 B5:1 | r:6 F5:1 G5:1 | r:8 | r:6 D5:1 F5:1"
+  horn_chant: "E4:8 | E4:8 | F4:8 | E4:8 | E4:8 | D4:8 | C4:4 B3:4 | C4:6 r:2"
+  bounce: "^1:2 ^3-:2 ^1:2 ^3-:2"
+  bounce2: "^1:1 ^1:1 ^3-:2 ^1:2 ^3-:1 ^1:1"
+  strum: "r:2 ^2':2 r:2 ^3':2"
+  offbeat: "r:1 ^2:1 r:1 ^3:1 r:1 ^2:1 r:1 ^3:1"
+  echo_a: "r:2 ^1+:1 r:3 ^3:1 r:1"
+  intro_bell: "C5:4 G5:4 | G5:4 F5:4"
+
+grooves:
+  dance:
+    kick: "x...x...|x...x..."
+    hi:   ".x...x..|.x...x.x"
+    lo:   "...x...x|...x...."
+    tamb: "..x...x."
+  intro_kit:
+    lo:   "x..x....|x..x.x.x"
+    tamb: "..x...x."
+
+sections:
+  intro:
+    bars: 2
+    chords: intro
+    parts: {bell: intro_bell, drums: intro_kit, bass: bounce, upbeat: offbeat}
+  a:
+    bars: 8
+    chords: chant
+    parts: {flute: chant, horn: horn_chant, pizz: strum, bass: bounce, upbeat: offbeat, drums: dance}
+  b:
+    bars: 8
+    chords: answer
+    parts: {trumpet: answer, flute: flute_answer, pizz: strum, bass: bounce2, upbeat: offbeat, echo: echo_a, drums: dance}
+  c:
+    bars: 2
+    chords: "C | Bb"
+    parts: {flute: "G5:2 C6:2 G5:2 E5:2 | F5:2 Bb5:2 F5:2 D5:2", trumpet: "E5:4 G5:4 | D5:4 F5:4", bell: "C5:8 | Bb4:8", bass: bounce, upbeat: offbeat, drums: dance}
+  c2:
+    bars: 2
+    chords: "F | G7"
+    parts: {flute: "A5:2 C6:2 A5:2 F5:2 | G5:2 B5:2 D6:2 B5:2", trumpet: "C5:4 A5:4 | B4:4 D5:2 F5:2", bell: "C5:8 | G5:8", bass: bounce, upbeat: offbeat, drums: dance}
+
+arrangement: [intro, a, b, c, c2]
+loop_start: a
