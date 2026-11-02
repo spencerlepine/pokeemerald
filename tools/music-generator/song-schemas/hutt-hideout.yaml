@@ -1,0 +1,69 @@
+# Hutt Hideout under Cloud City (and Fortress Vader until net:mus-fortress-vader lands): hot-swap of
+# MUS_AQUA_MAGMA_HIDEOUT (wiki audio:MUS_AQUA_MAGMA_HIDEOUT). ARRANGE of "Han Solo Returns (At the Court of
+# Jabba the Hutt)" (ref_tracks soundtrack:return-jedi:05). From the cue (analyze_reference: a 67/136 bpm pulse,
+# G minor against D, the chromatic E / Ab side-slips and Asus4 hangs, the low lumbering line that opens it):
+# its slow two-feel at 68 bpm, the G minor court harmony with the bII/III side-steps, a heavy chromatic
+# bass line for the Hutt (slap bass, doubled by the wave an octave down), muted trumpet stabs, an organ
+# smear for the palace, swung noise hats and a soft kit. 16-bar loop, 56.5 s (vanilla 118 bpm, 40.7 s).
+# Brief (sw_subject): menacing, slinking bass, gangster swagger.
+name: hutt-hideout
+replaces: MUS_AQUA_MAGMA_HIDEOUT
+form: LOOP
+voicegroup: aqua_magma_hideout        # organ 17, fretless 35, slap 36, trumpet 56, kit 0, squares 80/81/84, wave 82/83, noise 126/127
+master_volume: 84
+tempo: 68
+steps_per_beat: 4
+time_signature: [4, 4]
+swing: 0.33
+swing_unit: 1
+seed: 6
+
+parts:
+  slap:    {program: 36, channel: 0, volume: 104, pan: 0,   range: [D2, D3], gate: 0.85, humanize: {vel: 6}}
+  trumpet: {program: 56, channel: 1, volume: 88,  pan: 14,  range: [D4, D5], gate: 0.6}
+  organ:   {program: 17, channel: 2, volume: 56,  pan: -20, octave: 4, range: [G3, D5], gate: 1.0}
+  kit:     {program: 0,  channel: 3, volume: 70,  pan: 8,   role: drums, kit: {kick: 36, sn: 38, clap: 39}}
+  wave:    {program: 83, channel: 4, volume: 76,  pan: 0,   range: [D1, D2], gate: 0.8}
+  hats:    {program: 127, channel: 5, volume: 36, pan: -16, gate: 0.4, mono: true}
+  lead:    {program: 80, channel: 6, volume: 38,  pan: 30,  range: [D4, D6], gate: 0.85, mono: true, lfo_speed: 40, mod: 8}
+  sneak:   {program: 84, channel: 7, volume: 28,  pan: -30, range: [D4, D5], gate: 0.3, mono: true}
+
+phrases:
+  hutt: |
+    G2:4 r:2 Bb2:2 A2:2 Ab2:2 G2:4 | D2:4 r:2 F2:2 E2:2 Eb2:2 D2:4 |
+    Eb2:4 r:2 G2:2 Bb2:4 Db3:4 | D3:4 r:2 C3:2 A2:2 F#2:2 D2:4 |
+    G2:4 r:2 Bb2:2 A2:2 Ab2:2 G2:4 | E2:4 r:2 G#2:2 B2:2 D3:2 F3:4 |
+    A2:4 r:2 D3:2 C#3:4 A2:4 | D2:4 F#2:4 A2:2 C3:2 Eb3:4
+  hutt_lo: |
+    G1:4 r:12 | D1:4 r:12 | Eb1:4 r:12 | D1:4 r:12 | G1:4 r:12 | E1:4 r:12 | A1:4 r:12 | D1:4 r:8 D1:4
+  stabs: |
+    r:4 Bb4':2 r:6 Bb4':2 r:2 | r:4 A4':2 r:6 F#4':2 r:2 | r:4 G4':2 r:6 Db5':2 r:2 | r:4 C5':2 r:6 A4':2 r:2 |
+    r:4 Bb4':2 r:6 D5':2 r:2 | r:4 G#4':2 r:6 D5':2 r:2 | r:4 D5':2 r:6 C#5':2 r:2 | r:4 C5':2 A4':2 F#4':2 D4':2 r:4
+  smear: |
+    r:8 Bb4:8 | r:8 A4:8 | r:8 G4:8 | r:8 F#4:8 | r:8 Bb4:8 | r:8 G#4:8 | r:8 A4:8 | r:8 C5:8
+  sly: |
+    D5:6 Eb5:2 D5:4 Bb4:4 | A4:8 r:8 | G5:6 F5:2 Eb5:4 Db5:4 | C5:8 A4:8 |
+    D5:6 Eb5:2 D5:4 Bb4:4 | B4:4 D5:4 F5:4 E5:4 | E5:6 D5:2 C#5:8 | D5:8 r:8
+  ticks: "C6:2 _C6:2 C6:2 _C6:2 C6:2 _C6:2 C6:2 _C6:2"
+  tiptoe: |
+    r:16 | r:16 | r:16 | r:16 | G4:1 r:1 A4:1 r:1 Bb4:1 r:1 B4:1 r:1 C5:1 r:1 C#5:1 r:1 D5:1 r:3 | r:16 | r:16 | r:16
+
+grooves:
+  swagger:
+    kick: "x.......x.....x.|x.......x......."
+    sn:   "....x.......x...|....x.......x.o."
+  swagger_lite:
+    kick: "x.......x......."
+    clap: "....o.......o..."
+
+sections:
+  a:
+    bars: 8
+    parts: {slap: hutt, wave: hutt_lo, trumpet: stabs, organ: smear, kit: swagger_lite, hats: ticks, sneak: tiptoe}
+  b:
+    bars: 8
+    gain: {trumpet: -10}
+    parts: {slap: hutt, wave: hutt_lo, lead: sly, trumpet: stabs, organ: smear, kit: swagger, hats: ticks}
+
+arrangement: [a, b]
+loop_start: a
