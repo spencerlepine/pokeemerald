@@ -5,102 +5,99 @@ kind: town
 replaces: FallarborTown
 status: BLOCKOUT
 art_status: pending-final-art
-story: 'Ash-covered farm town: greenhouses grow crops in volcanic ash. Dr. Tien, the astronomer whose meteorite the Empire steals, lives in the observatory.'
-notes: 'inyusu-tor (town, 40x28): ash farm town, greenhouses, Dr. Tien''s observatory with a dome, ash falling like snow · need: greenhouses (glass boxes, have glass-dome),
-  observatory dome with a slit, ash drifts.'
 pos: [0, 0]
+story: 'Ash-covered farm town: greenhouses grow crops in volcanic ash. Dr. Tien, the astronomer whose meteorite the Empire steals, lives in the observatory.'
+notes: 'inyusu-tor (town, 32x24): ash farm town on the road between Route 114 and Route 113: one road through, the Showcase hall farm, Bacta Center and depot on the
+  north side, the observatory and the tutor''s home on the south, two greenhouses, a basalt column in the corner.'
 grid: |
-  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
-  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
-  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
-  TTTTTTTTTTT.....................TTTTTTTT
-  TTTTTT............................TTTTTT
-  TTTTTT.............................TTTTT
-  TTTTTT.............................TTTTT
-  TTTTTT..............................TTTT
-  TTTTTTT..:.........:........:.......TTTT
-  TTTTTTT..:.........:........:.......TTTT
-  TTTTTT...:.........:........:........TTT
-  TTTTT....:.........:........:........TTT
-  TTTT.....:.........:........:........TTT
-  ::::::::::::::::::::::::::::::::::::::::
-  ::::::::::::::::::::::::::::::::::::::::
-  TTT.......:.................:..........T
-  TTT.......:.................:..........T
-  TTTT...................................T
-  TTTTT..................................T
-  TTTTT..................................T
-  TTTTT.................................TT
-  TTTTT..............................TTTTT
-  TTTTT..........................TTTTTTTTT
-  TTTTT........................TTTTTTTTTTT
-  TTTTT.......................TTTTTTTTTTTT
-  TTTTTT...........TTTTTT..TTTTTTTTTTTTTTT
-  TTTTTTT......TTTTTTTTTTTTTTTTTTTTTTTTTTT
-  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  ################################
+  ################################
+  #..............::..............#
+  #..............::..............#
+  #..............::..............#
+  #..............::..............#
+  #..............::..............#
+  #..............::..............#
+  #..............::..............#
+  #..............::..............#
+  #..............::..............#
+  ::::::::::::::::::::::::::::::::
+  ::::::::::::::::::::::::::::::::
+  #..............................#
+  #..............................#
+  #..............................#
+  #..............................#
+  #..............................#
+  #..............................#
+  #..............................#
+  #..............................#
+  #..............................#
+  ################################
+  ################################
 exits:
 - edge: west
-  cells: [13, 14]
+  cells: [11, 12]
   to: route-114
 - edge: east
-  cells: [13, 14]
+  cells: [11, 12]
   to: route-113
 buildings:
 - name: Ash farm (Showcase hall)
   art: art:sullust:ash-farm
-  at: [6, 4]
+  at: [3, 4]
   size: [6, 4]
   door: 3
   to: inyusu-tor-battle-tent-lobby
 - name: Bacta Center
   art: art:shared:bacta-center
-  at: [17, 4]
+  at: [18, 4]
   size: [5, 4]
   door: 2
   to: inyusu-tor-bacta-center-1f
 - name: Supply Depot
   art: art:shared:supply-depot
-  at: [27, 4]
+  at: [25, 4]
   size: [4, 4]
   door: 1
   to: inyusu-tor-supply-depot
 - name: Dr. Tien's observatory
   art: art:sullust:sullustan-home
-  at: [8, 17]
+  at: [5, 15]
   size: [5, 4]
   door: 2
   to: inyusu-tor-cozmos-house
 - name: Move tutor's home
   art: art:sullust:sullustan-home
-  at: [26, 17]
+  at: [23, 15]
   size: [5, 4]
   door: 2
   to: inyusu-tor-move-relearners-house
 props:
 - name: Ash greenhouse
   art: art:sullust:ash-greenhouse
-  at: [16, 18]
+  at: [12, 16]
   size: [3, 3]
 - name: Ash greenhouse
   art: art:sullust:ash-greenhouse
-  at: [20, 18]
+  at: [16, 16]
   size: [3, 3]
 - name: Basalt column
   art: art:sullust:basalt-column
-  at: [34, 18]
+  at: [28, 19]
   size: [2, 2]
 people:
 - name: Dr. Tien
-  at: [13, 20]
+  at: [9, 19]
   role: story
 - name: Ash farmer
-  at: [23, 16]
+  at: [15, 20]
   role: npc
 - name: Showcase fan
-  at: [13, 10]
+  at: [12, 9]
   role: npc
 signs:
 - name: Town sign
-  at: [4, 12]
+  at: [3, 13]
 warps: []
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+travel: []
+todo: ['Compact town (template kachirho): was 40x28.']

@@ -7,7 +7,7 @@ status: BLOCKOUT
 art_status: pending-final-art
 story: Strong currents west of Tipoca City push the player along (vanilla current tiles).
 notes: 'Storm sea: endless rain, grey waves, white domes on stilts, rocky stacks.'
-pos: [-80, -2]
+pos: [-80, -4]
 grid: |
   ~~##~~~####~~##~##~##~~~~~~~~~~~~~~~~####~~~~~~##~~##~~~~~~~##~##~~~~###########
   ####~~~#########..#####~~~~~~##~~##~~######~~########~#~##~~###..#~~~###########

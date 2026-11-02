@@ -9,7 +9,7 @@ story: Ash fields east of Inyusu Tor where ash falls like snow; the glassblower 
   at the east end; the ash road on east to Pirin is closed by a warden until the meteorite is taken at Starfall Cavern (event:meteor-falls-meteorite), so Sabine's
   arena comes after Mustafar, as in Emerald.
 notes: 'route-113 (route, 100x20): ash fields, the glassblower''s hut, ash drifts, Magma Tunnel mouths · need: ash as a ground kind, drifts as berms.'
-pos: [40, 4]
+pos: [32, 2]
 grid: |
   ###########.###<#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T###T#T#T#T##############
   ###########.###<##T###T#T#T###T#T#T#T#T#T###################T#T#T#########T#..T###T#T#.#############

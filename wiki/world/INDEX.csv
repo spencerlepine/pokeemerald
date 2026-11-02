@@ -2153,7 +2153,7 @@ jedha-temple-summit,JEDHA,route,MtPyre_Summit,BLOCKOUT,person,Event object,1x1,,
 jedha-temple-summit,JEDHA,route,MtPyre_Summit,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 jedha-temple-summit,JEDHA,route,MtPyre_Summit,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 jedha-temple-summit,JEDHA,route,MtPyre_Summit,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
-nijedha,JEDHA,town,new,BLOCKOUT,area,NIJEDHA,44x34,,,pending-final-art,greybox terrain
+nijedha,JEDHA,town,new,BLOCKOUT,area,NIJEDHA,32x28,,,pending-final-art,greybox terrain
 nijedha,JEDHA,town,new,BLOCKOUT,building,Temple of the Kyber,8x6,art:jedha:temple-of-the-kyber,yes,pending-final-art,greybox piece
 nijedha,JEDHA,town,new,BLOCKOUT,building,Bacta Center,5x4,art:shared:bacta-center,yes,pending-final-art,greybox piece
 nijedha,JEDHA,town,new,BLOCKOUT,building,Supply Depot,4x4,art:shared:supply-depot,yes,pending-final-art,greybox piece
@@ -2328,16 +2328,16 @@ route-134,KAMINO,route,Route134,BLOCKOUT,person,Trainer Rielle,1x1,,,PLACEHOLDER
 route-134,KAMINO,route,Route134,BLOCKOUT,person,Trainer Hual,1x1,,,PLACEHOLDER,
 route-134,KAMINO,route,Route134,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER,
 route-134,KAMINO,route,Route134,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER,
-tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,area,TIPOCA CITY,50x36,,,pending-final-art,greybox terrain
+tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,area,TIPOCA CITY,36x30,,,pending-final-art,greybox terrain
 tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,building,Cloning hall,12x6,art:kamino:cloning-hall,yes,pending-final-art,greybox room
 tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,building,Landing platform (ships),6x4,art:shared:landing-pad,yes,pending-final-art,greybox piece
 tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,building,Kaminoan dwelling,5x4,art:kamino:stilt-dome,yes,pending-final-art,greybox piece
+tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,building,Storm watcher's dome,4x4,art:kamino:stilt-dome,yes,pending-final-art,greybox piece
 tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,building,Bacta Center,5x4,art:shared:bacta-center,yes,pending-final-art,greybox piece
 tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,building,Clone trainer's quarters,5x4,art:kamino:stilt-dome,yes,pending-final-art,greybox piece
 tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,building,Kaminoan dwelling,5x4,art:kamino:stilt-dome,yes,pending-final-art,greybox piece
 tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,building,Supply Depot,4x4,art:shared:supply-depot,yes,pending-final-art,greybox piece
 tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,building,Fisher's dome,4x4,art:kamino:stilt-dome,yes,pending-final-art,greybox piece
-tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,building,Storm watcher's dome,4x4,art:kamino:stilt-dome,yes,pending-final-art,greybox piece
 tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,prop,Cargo crates,2x2,art:shared:cargo-crates,yes,pending-final-art,greybox piece
 tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,prop,Storm swell,3x1,art:kamino:storm-sea,yes,pending-final-art,greybox terrain
 tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,prop,Storm swell,3x1,art:kamino:storm-sea,yes,pending-final-art,greybox terrain
@@ -3240,7 +3240,7 @@ route-114-lanettes-house,SULLUST,interior,Route114_LanettesHouse,BLOCKOUT,sign,S
 route-114-lanettes-house,SULLUST,interior,Route114_LanettesHouse,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
 route-114-lanettes-house,SULLUST,interior,Route114_LanettesHouse,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 route-114-lanettes-house,SULLUST,interior,Route114_LanettesHouse,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
-inyusu-tor,SULLUST,town,FallarborTown,BLOCKOUT,area,INYUSU TOR,40x28,,,pending-final-art,greybox terrain
+inyusu-tor,SULLUST,town,FallarborTown,BLOCKOUT,area,INYUSU TOR,32x24,,,pending-final-art,greybox terrain
 inyusu-tor,SULLUST,town,FallarborTown,BLOCKOUT,building,Ash farm (Showcase hall),6x4,art:sullust:ash-farm,yes,pending-final-art,greybox piece
 inyusu-tor,SULLUST,town,FallarborTown,BLOCKOUT,building,Bacta Center,5x4,art:shared:bacta-center,yes,pending-final-art,greybox piece
 inyusu-tor,SULLUST,town,FallarborTown,BLOCKOUT,building,Supply Depot,4x4,art:shared:supply-depot,yes,pending-final-art,greybox piece
@@ -3253,11 +3253,11 @@ inyusu-tor,SULLUST,town,FallarborTown,BLOCKOUT,person,Dr. Tien,1x1,,,PLACEHOLDER
 inyusu-tor,SULLUST,town,FallarborTown,BLOCKOUT,person,Ash farmer,1x1,,,PLACEHOLDER,
 inyusu-tor,SULLUST,town,FallarborTown,BLOCKOUT,person,Showcase fan,1x1,,,PLACEHOLDER,
 inyusu-tor,SULLUST,town,FallarborTown,BLOCKOUT,sign,Town sign,1x1,,,PLACEHOLDER,
-pirin,SULLUST,town,LavaridgeTown,BLOCKOUT,area,PIRIN,42x34,,,pending-final-art,greybox terrain
+pirin,SULLUST,town,LavaridgeTown,BLOCKOUT,area,PIRIN,32x28,,,pending-final-art,greybox terrain
 pirin,SULLUST,town,LavaridgeTown,BLOCKOUT,building,Sabine's arena,7x5,art:sullust:sabine-s-arena,yes,pending-final-art,greybox piece
-pirin,SULLUST,town,LavaridgeTown,BLOCKOUT,building,Hot-spring bathhouse,6x4,art:sullust:hot-spring-bathhouse,yes,pending-final-art,greybox piece
 pirin,SULLUST,town,LavaridgeTown,BLOCKOUT,building,Bacta Center,5x4,art:shared:bacta-center,yes,pending-final-art,greybox piece
 pirin,SULLUST,town,LavaridgeTown,BLOCKOUT,building,Supply Depot,4x4,art:shared:supply-depot,yes,pending-final-art,greybox piece
+pirin,SULLUST,town,LavaridgeTown,BLOCKOUT,building,Hot-spring bathhouse,6x4,art:sullust:hot-spring-bathhouse,yes,pending-final-art,greybox piece
 pirin,SULLUST,town,LavaridgeTown,BLOCKOUT,building,Sullustan home,5x4,art:sullust:sullustan-home,yes,pending-final-art,greybox piece
 pirin,SULLUST,town,LavaridgeTown,BLOCKOUT,prop,Steam vent,1x1,art:sullust:steam-vent,yes,pending-mockup,greybox piece
 pirin,SULLUST,town,LavaridgeTown,BLOCKOUT,prop,Steam vent,1x1,art:sullust:steam-vent,yes,pending-mockup,greybox piece
@@ -4462,11 +4462,11 @@ mos-entha,TATOOINE,town,PetalburgCity,BLOCKOUT,person,Spacer admiring the starfi
 mos-entha,TATOOINE,town,PetalburgCity,BLOCKOUT,sign,Town holo-sign,1x1,,,PLACEHOLDER,
 mos-entha,TATOOINE,town,PetalburgCity,BLOCKOUT,sign,Arena sign,1x1,,,PLACEHOLDER,
 mos-entha,TATOOINE,town,PetalburgCity,BLOCKOUT,sign,Lars homestead sign,1x1,,,PLACEHOLDER,
-mos-espa,TATOOINE,town,MauvilleCity,BLOCKOUT,area,MOS ESPA,56x36,,,pending-final-art,greybox terrain
-mos-espa,TATOOINE,town,MauvilleCity,BLOCKOUT,building,Mos Espa Grand Arena (podrace stands),8x5,art:tatooine:podrace-arena,yes,pending-final-art,greybox piece
+mos-espa,TATOOINE,town,MauvilleCity,BLOCKOUT,area,MOS ESPA,48x28,,,pending-final-art,greybox terrain
 mos-espa,TATOOINE,town,MauvilleCity,BLOCKOUT,building,Watto's junk shop (arena),5x4,art:tatooine:watto-s-junk-shop,yes,pending-final-art,greybox piece
 mos-espa,TATOOINE,town,MauvilleCity,BLOCKOUT,building,Bacta Center,5x4,art:shared:bacta-center,yes,pending-final-art,greybox piece
 mos-espa,TATOOINE,town,MauvilleCity,BLOCKOUT,building,Wald's hover-bikes,5x4,art:tatooine:watto-s-junk-shop,yes,pending-final-art,greybox piece
+mos-espa,TATOOINE,town,MauvilleCity,BLOCKOUT,building,Mos Espa Grand Arena (podrace stands),8x5,art:tatooine:podrace-arena,yes,pending-final-art,greybox piece
 mos-espa,TATOOINE,town,MauvilleCity,BLOCKOUT,building,Sabacc den,6x4,art:tatooine:sabacc-den,yes,pending-final-art,greybox piece
 mos-espa,TATOOINE,town,MauvilleCity,BLOCKOUT,building,Supply Depot,4x4,art:shared:supply-depot,yes,pending-final-art,greybox piece
 mos-espa,TATOOINE,town,MauvilleCity,BLOCKOUT,building,Slave quarters row (Shmi's old home),5x4,art:tatooine:homestead-dome,yes,pending-final-art,greybox piece

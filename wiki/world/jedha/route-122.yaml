@@ -8,7 +8,7 @@ art_status: pending-final-art
 story: Holy waters round the island of the Jedha Temple. Pilgrim ships land on the north-west pad; a causeway east leads to NiJedha. The pilgrim shuttle lands on
   the rock above the causeway; the temple is reached by surfing.
 notes: 'route-122 (route, 40x40): holy waters around the Temple island, the pilgrim pad, a causeway · need: sea mode, a causeway over water.'
-pos: [-40, -1]
+pos: [-40, -6]
 grid: |
   ~~~~~##~~~~~~~~~~~~~~######~~~~~~~~~~~~~
   ~~~~~##~~~~~~~~~~~~~~########~~~~~~~~~~~

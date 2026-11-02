@@ -7,7 +7,7 @@ status: BLOCKOUT
 art_status: pending-final-art
 story: Boba Fett's home waters. The Sealed Vault's dive spot is here, and Boba waits for the third rematch.
 notes: 'Storm sea: endless rain, grey waves, white domes on stilts, rocky stacks.'
-pos: [-240, -2]
+pos: [-240, -4]
 grid: |
   ~~~~~~~~~~~~~~~~~~~~~~~##~~~~##~~~~~~####~~~~~~~####~~##~~~########~~##~~~~~~~##
   ~~~~~~~~~~##~~####~~#~~##~~######~~########~~##~########~################~~##~##

@@ -67,7 +67,7 @@ Overview: [sullust/_planet.png](sullust/_planet.png). 4 overworld areas, 6 cave 
 | Area | Kind | Built from | Connects to | What it is |
 |---|---|---|---|---|
 | [INYUSU TOR](sullust/inyusu-tor.yaml) | town | FallarborTown | route-113, route-114 | Ash-covered farm town: greenhouses grow crops in volcanic ash. Dr. Tien, the astronomer whose meteorite the Empire steals, lives in the observatory. |
-| [PIRIN](sullust/pirin.yaml) | town | LavaridgeTown | route-113 | Sullustan hot-spring town in a volcanic bowl. The ash road from Route 113 enters through the west gap in the rim; Sabine's Fire arena, the bathhouse and the hot spring pool. The Magma Tunnels lead north. |
+| [PIRIN](sullust/pirin.yaml) | town | LavaridgeTown | route-113 | Sullustan hot-spring town in a volcanic bowl. The ash road from Route 113 enters through the west gap in the rim; Sabine's Fire arena, the bathhouse and the hot spring pool. The Magma Tunnels mouth is in the north wall. |
 | [ROUTE 113](sullust/route-113.yaml) | route | Route113 | inyusu-tor, pirin | Ash fields east of Inyusu Tor where ash falls like snow; the glassblower collects it. The Magma Tunnels open on the south side. The Tatooine transport lands at the east end; the ash road on east to Pirin is closed by a warden until the meteorite is taken at Starfall Cavern (event:meteor-falls-meteorite), so Sabine's arena comes after Mustafar, as in Emerald. |
 | [ROUTE 114](sullust/route-114.yaml) | route | Route114 | inyusu-tor | Rocky road west of Inyusu Tor down to Starfall Cavern, with Tess's workshop (the companion storage system) and the fossil collector's home. |
 
@@ -193,7 +193,7 @@ Overview: [kamino/_planet.png](kamino/_planet.png). 5 overworld areas, 4 cave ro
 
 | Area | Kind | Built from | Connects to | What it is |
 |---|---|---|---|---|
-| [TIPOCA CITY](kamino/tipoca-city.yaml) | town | PacifidlogTown | route-131, route-132 | Tipoca City on Kamino's storm sea: domes on stilts joined by walkways round the great cloning hall. Ships land on the north-east platform; the walkway runs west to Route 132 and east to Route 131. |
+| [TIPOCA CITY](kamino/tipoca-city.yaml) | town | PacifidlogTown | route-131, route-132 | Tipoca City on Kamino's storm sea: domes on stilts joined by walkways round the great cloning hall. Ships land on the east platform; the main walkway runs west to Route 132 and east to Route 131. |
 | [ROUTE 131](kamino/route-131.yaml) | route | Route131 | tipoca-city | Storm sea east of Tipoca City; rain never stops. Swimmers and clone cadets on training rigs. |
 | [ROUTE 132](kamino/route-132.yaml) | route | Route132 | route-133, tipoca-city | Strong currents west of Tipoca City push the player along (vanilla current tiles). |
 | [ROUTE 133](kamino/route-133.yaml) | route | Route133 | route-132, route-134 | Currents and rocky stacks; DIANOGA lurk in the deep water. |

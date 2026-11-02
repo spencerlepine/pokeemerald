@@ -5,204 +5,197 @@ kind: town
 replaces: MauvilleCity
 status: BLOCKOUT
 art_status: pending-final-art
+pos: [94, -14]
 story: Podracing city. Watto's junkyard holds the Electric arena, Wald rents speeder bikes, and the podrace stands overlook the east side. A hatch in the south-east
   leads down into the old Espa generator. The east road ends at the Rebel shuttle pad, the flight to Endor.
-notes: 'mos-espa (town, 56x36): podracing city. Watto''s junk shop with the Electric gym, Wald''s speeder-bike rental, the podrace grandstand on the east side, a
-  hatch down to the generator · bordered by rock and the grandstand · need: grandstand (tiered seating facing the course), speeder bikes, podracer engines on display,
-  junk piles.'
-pos: [76, -164]
+notes: 'mos-espa (town, 48x28): podracing city on a crossroads: the north-south road between Route 111 and Route 110, the west road from Route 117 running east to
+  the Rebel shuttle pad, two streets of buildings (Watto''s arena, Bacta Center, Wald''s hover-bikes and the Grand Arena stands on the north; the Sabacc den, depot,
+  slave quarters, mechanic and the generator hatch on the south), market stalls round the crossroads, junk at the edges.'
 grid: |
-  TTTTTTTTTTTTTTTTTTTTTTTTTTT::TTTTTTTTTTTTTTTTTTTTTTTTTTT
-  TTTTTTTTTTTTTTTTTTTTTTTTTTT::TTTTTTTTTTTTTTTTTTTTTTTTTTT
-  TTTTTTTTTTTTTTTTTTTTTTT....::...TTTTTTTTTTTTTTTTTTTTTTTT
-  TTTTTTTTTTTTTTTTTTTTTT.....::........T........TTTTTTTTTT
-  TTTTTTTTTTTTTTTTTTTT.......::.................TTTTTTTTTT
-  TTTTTTTTT.....TTTT.........::.................TTTTTTTTTT
-  TTTT..TTT..................::..................TTTTTTTTT
-  TTTT..TTT..................::...................TTTTTTTT
-  TTTTTTTTT..................::.............:......TTTTTTT
-  TTTTTTTT...:...............::.............:.......TTTTTT
-  TTTTT......:.........:.....::....:........:........TTTTT
-  TTTTT......:.........:.....::....:........:..........TTT
-  TTTTTT.....:.........:.....::....:........:............T
-  TTTT.......:.........:.....::....:........:.............
-  TTT........:..........::::::::::::........:.............
-  TT.........:..........::::::::::::........:.............
-  T..........:..........::::::::::::........:.............
-  T.....................::::::::::::::::::::::::::::::::::
-  T.....................::::::::::::::::::::::::::::::::::
-  TT.........:..........::::::::::::...................TTT
-  TT.........:..........::::::::::::...................TTT
-  TTT........:..........::::::::::::..................TTTT
-  TTT..................:.....::......:........:.......TTTT
-  TTT........................::......:........:.......TTTT
-  TTTT.......................::.......................TTTT
-  TTT........................::......................TTTTT
-  TTT........................::.....................TTTTTT
-  TTTTT......................::...................TTTTTTTT
-  TTTTTTT....................::.................TTTTTTTTTT
-  :::::::::::::::::::::::::::::................TTTTTTTTTTT
-  :::::::::::::::::::::::::::::...........:...TTTTTTTTTTTT
-  TTTTTTTTTTTTTTTT...........::::::::::::::.TTTTTTTTTTTTTT
-  TTTTTTTTTTTTTTTTT..........::............TTTTTTTTTTTTTTT
-  TTTTTTTTTTTTTTTTTT.........::..........TTTTTTTTTTTTTTTTT
-  TTTTTTTTTTTTTTTTTTTT.......::.TTTTTTTTTTTTTTTTTTTTTTTTTT
-  TTTTTTTTTTTTTTTTTTTTTTTTTTT::TTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTT::TTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTT::TTTTTTTTTTTTTTTTTTTTTTT
+  T......................::......................T
+  T......................::......................T
+  T......................::......................T
+  T......................::......................T
+  T......................::......................T
+  T......................::......................T
+  T...:::::::::::::::::::::::::::::::::::::::::..T
+  T...:::::::::::::::::::::::::::::::::::::::::..T
+  T......................::......................T
+  T......................::......................T
+  T......................::......................T
+  T......................::......................T
+  T...::::::::::::::::::::::::::::::::::::::::::::
+  T...::::::::::::::::::::::::::::::::::::::::::::
+  T......................::......................T
+  T......................::......................T
+  T......................::......................T
+  T......................::......................T
+  T......................::......................T
+  T......................::......................T
+  :::::::::::::::::::::::::::::::::::::::::::::..T
+  :::::::::::::::::::::::::::::::::::::::::::::..T
+  T......................::......................T
+  T......................::......................T
+  TTTTTTTTTTTTTTTTTTTTTTT::TTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTT::TTTTTTTTTTTTTTTTTTTTTTT
 exits:
 - edge: north
-  cells: [27, 28]
+  cells: [23, 24]
   to: route-111
 - edge: south
-  cells: [27, 28]
+  cells: [23, 24]
   to: route-110
 - edge: west
-  cells: [29, 30]
+  cells: [22, 23]
   to: route-117
 buildings:
-- name: Mos Espa Grand Arena (podrace stands)
-  art: art:tatooine:podrace-arena
-  at: [38, 3]
-  size: [8, 5]
-  door: 4
-  to: mos-espa-podrace-arena
 - name: Watto's junk shop (arena)
   art: art:tatooine:watto-s-junk-shop
-  at: [9, 5]
+  at: [4, 4]
   size: [5, 4]
   door: 2
   to: mos-espa-arena
 - name: Bacta Center
   art: art:shared:bacta-center
-  at: [19, 6]
+  at: [12, 4]
   size: [5, 4]
   door: 2
   to: mos-espa-bacta-center-1f
 - name: Wald's hover-bikes
   art: art:tatooine:watto-s-junk-shop
-  at: [31, 6]
+  at: [29, 4]
   size: [5, 4]
   door: 2
   to: mos-espa-speeder-shop
+- name: Mos Espa Grand Arena (podrace stands)
+  art: art:tatooine:podrace-arena
+  at: [36, 3]
+  size: [8, 5]
+  door: 4
+  to: mos-espa-podrace-arena
 - name: Sabacc den
   art: art:tatooine:sabacc-den
-  at: [8, 22]
+  at: [4, 18]
   size: [6, 4]
   door: 3
   to: mos-espa-sabacc-den
 - name: Supply Depot
   art: art:shared:supply-depot
-  at: [20, 23]
+  at: [13, 18]
   size: [4, 4]
   door: 1
   to: mos-espa-supply-depot
 - name: Slave quarters row (Shmi's old home)
   art: art:tatooine:homestead-dome
-  at: [33, 24]
+  at: [29, 18]
   size: [5, 4]
   door: 2
   to: mos-espa-house-1
 - name: Pit droid mechanic's home
   art: art:tatooine:homestead-dome
-  at: [42, 24]
+  at: [36, 18]
   size: [5, 4]
   door: 2
   to: mos-espa-house-2
 - name: Espa generator hatch
   art: art:tatooine:power-station
-  at: [38, 27]
+  at: [42, 19]
   size: [4, 3]
   door: 2
   to: espa-generator-entrance
 - name: Rebel shuttle pad (to Endor)
   art: art:shared:landing-pad
-  at: [48, 12]
+  at: [40, 10]
   size: [7, 4]
   door: 3
   to: hangar-tatooine-endor
 props:
 - name: Watto's junkyard
   art: art:tatooine:pod-race-junk
-  at: [4, 6]
+  at: [1, 4]
   size: [2, 2]
 - name: Watto's junkyard
   art: art:tatooine:pod-race-junk
-  at: [15, 6]
+  at: [10, 4]
   size: [2, 2]
 - name: Watto's junkyard
   art: art:tatooine:pod-race-junk
-  at: [5, 10]
+  at: [1, 10]
   size: [2, 2]
 - name: Podracer on display
   art: art:tatooine:podracer-on-display
-  at: [43, 10]
+  at: [36, 10]
   size: [4, 2]
 - name: Market stall
   art: art:tatooine:market-stall
-  at: [23, 15]
+  at: [18, 11]
   size: [2, 2]
 - name: Market stall
   art: art:tatooine:market-stall
-  at: [31, 15]
+  at: [27, 11]
   size: [2, 2]
 - name: Market stall
   art: art:tatooine:market-stall
-  at: [23, 19]
+  at: [18, 17]
   size: [2, 2]
 - name: Market stall
   art: art:tatooine:market-stall
-  at: [31, 19]
+  at: [27, 17]
   size: [2, 2]
 - name: Fuel tanks
   art: art:shared:fuel-tanks
-  at: [50, 20]
+  at: [45, 16]
   size: [2, 2]
 - name: Cargo crates
   art: art:shared:cargo-crates
-  at: [3, 25]
+  at: [1, 24]
   size: [2, 2]
 - name: Dewback trough
   art: art:tatooine:dewback-trough
-  at: [16, 28]
+  at: [10, 25]
   size: [2, 1]
 people:
 - name: Watto (outside his shop)
-  at: [13, 10]
+  at: [9, 10]
   role: story
 - name: Wald
-  at: [35, 11]
+  at: [33, 10]
   role: story
 - name: Podrace fan
-  at: [40, 10]
+  at: [35, 12]
   role: npc
 - name: Podrace fan
-  at: [46, 9]
+  at: [38, 12]
   role: npc
 - name: Sabacc dealer's lookout
-  at: [14, 25]
+  at: [10, 24]
   role: npc
 - name: Jawa trader
-  at: [26, 20]
+  at: [21, 13]
   role: npc
 - name: Market trader
-  at: [30, 16]
+  at: [26, 16]
   role: npc
 - name: Pit droid
-  at: [49, 18]
+  at: [39, 13]
   role: npc
 - name: Generator worker
-  at: [43, 30]
+  at: [44, 24]
   role: npc
 signs:
 - name: City holo-sign
-  at: [25, 12]
+  at: [21, 16]
 - name: Arena sign
-  at: [16, 9]
+  at: [9, 11]
 - name: Grand Arena sign
-  at: [37, 8]
+  at: [42, 10]
 - name: Sabacc den sign
-  at: [14, 21]
+  at: [9, 25]
 - name: Shuttle pad sign
-  at: [49, 16]
+  at: [45, 13]
 warps: []
-todo: [Open-air now; vanilla Mauville's single roof is dropped., 'Vanilla''s east road to Route 118 is cut: Endor is reached by ship (planet border, see wiki/world/README.md).',
-  'New interior: mos-espa-podrace-arena (the stands; Boonta Eve race events).']
+travel: []
+todo: [Open-air now; vanilla Mauville's single roof is dropped., 'Vanilla''s east road to Route 118 is cut: the Rebel shuttle pad at the end of the east street flies
+    to Endor (mapping/hyperlanes.csv).', 'New interior: mos-espa-podrace-arena (the stands; Boonta Eve race events).', 'Compact town (template kachirho): was 56x36.']

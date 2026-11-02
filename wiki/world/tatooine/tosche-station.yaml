@@ -8,7 +8,7 @@ art_status: pending-final-art
 story: Crossroads trading post round the Tosche power station, where farm kids buy power converters. First Bacta Center and Supply Depot. Roads north, south and west.
 notes: 'tosche-station (town, 30x26): crossroads trading post. Power station with stacks and tanks, first bacta center and supply depot, a few homes, power converters
   stacked outside · bordered by rock and scrub · have all.'
-pos: [-5, -46]
+pos: [9, 96]
 grid: |
   TTTTTTTTTTTTTT::TTTTTTTTTTTTTT
   TTTTTTTTTTTTTT::TTTTTTTTTTTTTT

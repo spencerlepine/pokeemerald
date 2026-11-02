@@ -8,7 +8,7 @@ art_status: pending-final-art
 story: 'Optional: a hermit''s hut on the edge of the Jundland Wastes. Obi-Wan, as old Ben, tells the player about the Force and the Cave of Evil long before he is
   needed. Trainers: levels 7-9.'
 notes: 'bens-hut (landmark, 26x20): a hermit''s hut on a ridge over the wastes · have (dome-porch) · unique: nothing else nearby, so the border is all rock and sky.'
-pos: [-87, 45]
+pos: [-73, 187]
 grid: |
   TTTTTTTTTTTTTTTTTTTTTTTTTT
   TTTTTTTTTTTT..TTTTTTTTTTTT

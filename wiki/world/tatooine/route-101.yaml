@@ -7,7 +7,7 @@ status: BLOCKOUT
 art_status: pending-final-art
 story: Short desert track from Mos Pelgo up to Tosche Station, where Prof. Korr is cornered by a wild companion and the player picks a starter from his dropped bag.
 notes: 'route-101 (route, 20x20): short track, scrub patches, a ledge · rock spires · have.'
-pos: [0, -20]
+pos: [14, 122]
 grid: |
   TTTTTTTT....TTTTTTTT
   TTTTTTTT....TTTTTTTT

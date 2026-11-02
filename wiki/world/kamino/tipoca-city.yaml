@@ -5,150 +5,145 @@ kind: town
 replaces: PacifidlogTown
 status: BLOCKOUT
 art_status: pending-final-art
-story: 'Tipoca City on Kamino''s storm sea: domes on stilts joined by walkways round the great cloning hall. Ships land on the north-east platform; the walkway runs
-  west to Route 132 and east to Route 131.'
-notes: 'tipoca-city (town, 50x36): domes on stilts joined by walkways round the great cloning hall; nothing but sea around it · unique: the whole town is a raised-walkway
-  layer over water · need: sea mode with rain (streaks), stilt platforms (have stilts-flat, stilt-dome), walkways between them, the cloning hall as a landmark set
-  piece (a huge dome cluster, partly seen), the landing platform.'
 pos: [0, 0]
+story: 'Tipoca City on Kamino''s storm sea: domes on stilts joined by walkways round the great cloning hall. Ships land on the east platform; the main walkway runs
+  west to Route 132 and east to Route 131.'
+notes: 'tipoca-city (town, 36x30): stilt city on the storm sea: one main walkway between the two routes, a spine up to the cloning hall and down to the south walkway,
+  every dome on its own pad, the landing platform off the main walkway, storm swells at the edges.'
 grid: |
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~==========~~
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~==========~~
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~==========~~
-  ~~~=========~~~~~~~~~~~~~~~~~~~~~~~~~~==========~~
-  ~~~=========~~~~~~~~~~~~~~~~~~~~~~~~~~==========~~
-  ~~~=========~~======================~~==========~~
-  ~~~=========~~======================~~==========~~
-  ~~~=========~~======================~~==========~~
-  ~~~=========~~======================~~~~~~==~~~~~~
-  ~~~=========~~======================~~~~~~==~~~~~~
-  ~~~=========~~======================~~~~~~==~~~~~~
-  ~~~~~~~=~~~~~~======================~~~~~~==~~~~~~
-  ~~~~~~~=~~~~~~======================~~~~~~==~~~~~~
-  ~~~~~~~=~~~~~~======================~~~~~~==~~~~~~
-  ==================================================
-  ==================================================
-  ~~~~~~~=~~~~~~======================~~~~~~=~~~~~~~
-  ~~~~~~~=~~~~~~======================~~~~~~=~~~~~~~
-  ~~~~~~~=~~~~~~~~~~~~=~~~~~~~~~~=~~~~~============~
-  ~~~==========~~=====================~============~
-  ~~~==========~~=====================~============~
-  ~~~==========~~=====================~============~
-  ~~~==========~~=====================~============~
-  ~~~==========~~=====================~============~
-  ~~~==========~~=====================~============~
-  ~~~==========~~=====================~============~
-  ~~~==========~~=====================~============~
-  ~~~==========~~=====================~============~
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~~~~~~~~~~~==============~~~~~~~~~~~
+  ~~~~~~~~~~~==============~~~~~~~~~~~
+  ~~~~~~~~~~~==============~~~~~~~~~~~
+  ~~~~~~~~~~~==============~~~~~~~~~~~
+  ~~~~~~~~~~~==============~~~~~~~~~~~
+  ~~=======~~==============~========~~
+  ~~=======~~=======================~~
+  ~~=======~~=======================~~
+  ~~=======~~~~~~~~==~===============~
+  ~~=======~~~~~~~~==~===============~
+  ~~=======~~~~~~~~==~==============~~
+  ~~~~~==~~~~~~~~~~==~======~~~~==~~~~
+  ~~~~~==~~~~~~~~~~==~~==~~~~~~~==~~~~
+  ====================================
+  ====================================
+  ~~=============~~==~================
+  ~~=============~~==~================
+  ~~=============~~==~================
+  ~~=============~~==~================
+  ~~=============~~==~================
+  ~~==================================
+  ~~================================~~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 exits:
 - edge: west
-  cells: [17, 18]
+  cells: [15, 16]
   to: route-132
 - edge: east
-  cells: [17, 18]
+  cells: [15, 16]
   to: route-131
 buildings:
 - name: Cloning hall
   art: art:kamino:cloning-hall
-  at: [19, 9]
+  at: [12, 3]
   size: [12, 6]
   door: 6
   to: tipoca-city-cloning-hall
 - name: Landing platform (ships)
   art: art:shared:landing-pad
-  at: [40, 4]
+  at: [27, 8]
   size: [6, 4]
   door: 3
   to: tipoca-city-hangar
 - name: Kaminoan dwelling
   art: art:kamino:stilt-dome
-  at: [5, 7]
+  at: [3, 8]
   size: [5, 4]
   door: 2
   to: tipoca-city-house-4
+- name: Storm watcher's dome
+  art: art:kamino:stilt-dome
+  at: [21, 9]
+  size: [4, 4]
+  door: 1
+  to: tipoca-city-house-5
 - name: Bacta Center
   art: art:shared:bacta-center
-  at: [5, 23]
+  at: [3, 18]
   size: [5, 4]
   door: 2
   to: tipoca-city-bacta-center-1f
 - name: Clone trainer's quarters
   art: art:kamino:stilt-dome
-  at: [16, 23]
+  at: [9, 18]
   size: [5, 4]
   door: 2
   to: tipoca-city-house-1
 - name: Kaminoan dwelling
   art: art:kamino:stilt-dome
-  at: [23, 23]
+  at: [21, 18]
   size: [5, 4]
   door: 2
   to: tipoca-city-house-2
 - name: Supply Depot
   art: art:shared:supply-depot
-  at: [30, 23]
+  at: [27, 18]
   size: [4, 4]
   door: 1
   to: tipoca-city-supply-depot
 - name: Fisher's dome
   art: art:kamino:stilt-dome
-  at: [38, 22]
+  at: [31, 18]
   size: [4, 4]
   door: 1
   to: tipoca-city-house-3
-- name: Storm watcher's dome
-  art: art:kamino:stilt-dome
-  at: [43, 22]
-  size: [4, 4]
-  door: 1
-  to: tipoca-city-house-5
 props:
 - name: Cargo crates
   art: art:shared:cargo-crates
-  at: [46, 8]
+  at: [33, 10]
   size: [2, 2]
 - name: Storm swell
   art: art:kamino:storm-sea
-  at: [4, 33]
+  at: [2, 27]
   size: [3, 1]
 - name: Storm swell
   art: art:kamino:storm-sea
-  at: [40, 33]
+  at: [30, 27]
   size: [3, 1]
 people:
 - name: Kaminoan aide
-  at: [26, 16]
+  at: [18, 11]
   role: story
 - name: Clone cadet
-  at: [10, 17]
+  at: [8, 15]
   role: trainer
 - name: Clone cadet
-  at: [36, 18]
+  at: [28, 16]
   role: trainer
 - name: Kaminoan scientist
-  at: [18, 29]
+  at: [14, 23]
   role: npc
 - name: Stilt fisher
-  at: [45, 29]
+  at: [33, 23]
   role: npc
 - name: Dock worker
-  at: [39, 9]
+  at: [31, 13]
   role: npc
 signs:
 - name: City holo-sign
   at: [14, 16]
 - name: Cloning hall sign
-  at: [32, 15]
+  at: [19, 10]
 - name: Hangar sign (Rebel transport)
-  at: [45, 8]
+  at: [30, 14]
 warps: []
-todo: [Grown from Pacifidlog (20x40) to 50x36; the 5 house and Bacta Center interiors keep their ids., 'New interiors: tipoca-city-cloning-hall (PROTOCLONE lore,
-    optional), tipoca-city-supply-depot, tipoca-city-hangar.', '''~'' is the open storm sea (Surf); ''='' are the stilt walkways and platforms.']
+travel: []
+todo: [Grown from Pacifidlog (20x40) to 36x30; the 5 house and Bacta Center interiors keep their ids., 'New interiors: tipoca-city-cloning-hall (PROTOCLONE lore,
+    optional), tipoca-city-supply-depot, tipoca-city-hangar.', '''~'' is the open storm sea (Surf); ''='' are the stilt walkways and platforms.', 'Compact town (template
+    kachirho): was 50x36.']
