@@ -1,5 +1,8 @@
 """Ship the approved title-screen collage (round 2, v6: no creatures, back-row depth, foreground ridge; Kael's cape
 recoloured tan by hand in final/kael.png) into ../../../game. Owner picked it on 2026-11-01.
+NOTE (2026-11-02): Mira was then hand-edited in the game files themselves (graphics/title_screen/collage/mira.png/.pal:
+red cloak -> tan, white top and trousers, dark brown sash, brighter skin; owner-approved). Re-running this script
+rewrites those files from the Civitai source and undoes that: back them up and restore them afterwards.
 
     python3 ship_collage.py [PREVIEW_DIR]
 
