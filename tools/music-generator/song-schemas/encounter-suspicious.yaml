@@ -1,0 +1,63 @@
+# Encounter: suspicious trainers. Hot-swap of MUS_ENCOUNTER_SUSPICIOUS (wiki audio:MUS_ENCOUNTER_SUSPICIOUS):
+# eye-contact music for the 50 smugglers and cultists. SCRATCH (no film cue): an original creeping tune in E minor
+# with the Phrygian F and chromatic slips, in the sneaking-Jawa idiom: staccato pizzicato ostinato, low flute
+# on tiptoe, a nasal 12.5% square answering in the second strain, hand-drum congas and a noise shaker. Vanilla
+# voicegroup and tempo. Brief (sw_subject): eye-contact jingle, suspicious trainers (smugglers, cultists).
+name: encounter-suspicious
+replaces: MUS_ENCOUNTER_SUSPICIOUS
+form: LOOP
+voicegroup: encounter_suspicious      # vanilla: pizzicato 45, flute 73, fretless 35, kit 0 (congas), square 80, wave 83, noise 126
+master_volume: 80
+tempo: 122
+steps_per_beat: 4
+time_signature: [4, 4]
+seed: 13
+
+parts:
+  flute:   {program: 73, channel: 0, volume: 96,  pan: 10,  range: [A4, B5], gate: 0.85, lfo_speed: 30, lfo_delay: 20, mod: 4, humanize: {vel: 6}}
+  pizz:    {program: 45, channel: 1, volume: 92,  pan: -20, octave: 3, range: [E3, E4], gate: 0.6}
+  bass:    {program: 35, channel: 2, volume: 104, pan: 0,   octave: 2, range: [E1, E2], gate: 0.8, role: bass}
+  congas:  {program: 0,  channel: 3, volume: 84,  pan: 18,  role: drums, kit: {hi: 62, lo: 64}}
+  shaker:  {program: 126, channel: 4, volume: 36, pan: -26, gate: 0.25, mono: true}
+  lead:    {program: 80, channel: 5, volume: 50,  pan: 24,  range: [G4, A5], gate: 0.8, mono: true}
+  wave:    {program: 83, channel: 6, volume: 40,  pan: -10, octave: 4, range: [E4, E5], gate: 1.0, mono: true}
+
+progressions:
+  a: "Em | F | Em | B7 | Em | F | Am | B7"
+  b: "C | B7 | C | B7"
+
+phrases:
+  tune_a: |
+    E5:2 r:2 G5:2 r:2 F#5:2 E5:2 B4:4 | C5:2 r:2 F5:2 r:2 E5:2 C5:2 A4:4 |
+    B4:2 E5:2 G5:2 B5:2 Bb5:4 A5:4 | F#5:8 D#5:4 B4:4 |
+    E5:2 r:2 G5:2 r:2 F#5:2 E5:2 B4:4 | C5:2 r:2 F5:2 r:2 A5:4 G5:2 F5:2 |
+    E5:4 C5:2 A4:2 C5:2 E5:2 A5:4 | F#5:4 A5:2 F#5:2 D#5:4 B4:4
+  tune_b: |
+    E5:4 G5:4 E5:4 C5:4 | D#5:4 F#5:4 A5:4 F#5:4 | G5:4 E5:2 C5:2 G4:4 C5:4 | B4:8 D#5:4 F#5:4
+  flute_b: "_E4:16 | _D#4:16 | _E4:16 | _F#4:16"
+  creep: "^1:2 r:2 ^2:2 r:2 ^1:2 ^3:2 r:2 ^2:2"
+  walk: "^1:6 ^1:2 r:4 ^1:4"
+  shake: "F5:2 _F5:1 _F5:1 F5:2 _F5:1 _F5:1 F5:2 _F5:1 _F5:1 F5:2 _F5:1 _F5:1"
+  hold: "_^2:16"
+
+grooves:
+  hand:
+    hi: "x..x......x.x..."
+    lo: "......x.........|......x.....x.x."
+
+sections:
+  intro:
+    bars: 1
+    chords: "B7"
+    parts: {flute: "B4:4 r:4 B4:2 C5:2 B4:2 A#4:2", pizz: creep, bass: walk, congas: hand, shaker: shake, wave: hold}
+  a:
+    bars: 8
+    chords: a
+    parts: {flute: tune_a, pizz: creep, bass: walk, congas: hand, shaker: shake}
+  b:
+    bars: 4
+    chords: b
+    parts: {lead: tune_b, flute: flute_b, pizz: creep, bass: walk, congas: hand, shaker: shake, wave: hold}
+
+arrangement: [intro, a, b]
+loop_start: a
