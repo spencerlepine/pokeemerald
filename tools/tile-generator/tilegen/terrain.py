@@ -338,8 +338,16 @@ def grid_items(grid: list[str], prim: str, sec: str, indoor: bool, kind: str) ->
     return out
 
 
+THIN = {"strip-h", "strip-v", "tip-n", "tip-e", "tip-s", "tip-w", "single"}
+FILL_FALLBACK = {"ground-path"}        # items whose thin roles vanilla draws with the plain fill tile
+
+
 def lookup(prim: str, sec: str, item: str, role: str, stats: dict, p: gba.TilesetPair):
-    """The metatile for an item role in this pair: hand-set `use` first, then the learned one. None if missing."""
+    """The metatile for an item role in this pair: hand-set `use` first, then the learned one. None if missing.
+    A thin path (one-cell strips, tips, singles) is the plain path: vanilla has no pieces for it, and what it
+    learns there is whatever corner sat next to a ledge."""
+    if item in FILL_FALLBACK and role in THIN and not any((ts, item, role) in USE_OVERRIDE for ts in (p.secondary.name, p.primary.name)):
+        role = "fill"
     for ts in (p.secondary.name, p.primary.name):
         o = USE_OVERRIDE.get((ts, item, role))
         if o is not None:
@@ -454,6 +462,12 @@ def write_catalog(items: dict, needs_by_area: dict, all_areas: list[dict]) -> li
         o = old.get(tid, {})
         hand = o.get("use_set") == "hand" and o.get("use")
         use = o["use"] if hand else (f"{metas[0]:03x}" if metas else "")
+        fallback = not hand and name in FILL_FALLBACK and role in THIN
+        if fallback:                                     # drawn with the fill tile (see lookup)
+            fr = rows_d.get((ts, name, "fill")) or rows_d.get(("general", name, "fill"))   # a secondary without its own fill draws the primary's
+            fuse = (old.get(f"terrain:{ts}:{name}:fill", {}).get("use") if old.get(f"terrain:{ts}:{name}:fill", {}).get("use_set") == "hand" else None) \
+                or (f"{max(fr['metas'], key=lambda m: (fr['votes'][m], fr['metas'][m])):03x}" if fr and fr["metas"] else "")
+            use = fuse or use
         status = o.get("status") or ""
         if not use:                                   # no tile: TODO, whatever it said before
             status = "pending-mockup"
@@ -470,7 +484,7 @@ def write_catalog(items: dict, needs_by_area: dict, all_areas: list[dict]) -> li
         rows.append({
             "terrain_id": tid, "tileset": ts, "item": name, "role": role, "phase": phase(name),
             "metatiles": len(metas), "metatile_ids": " ".join(f"{m:03x}" for m in sorted(metas)),
-            "use": use, "use_set": "hand" if hand else ("learned" if use else ""),
+            "use": use, "use_set": "hand" if hand else ("fill" if fallback and use else "learned" if use else ""),
             "cells": it["cells"], "planets": " | ".join(sorted(it["planets"])),
             "areas": len(it["areas"] | it["needed_by"]), "needed_by": len(it["needed_by"]),
             "tool": "tilegen terrain" if phase(name) == 1 else "",

@@ -31,7 +31,7 @@ python -m tilegen terrain build --planet HOTH        # game-format greybox tiles
   and given its role from its neighbours. Its metatile is filed under `terrain:<tileset>:<item>:<role>` in
   `wiki/mapping/terrain.csv`: `metatile_ids` (every vanilla metatile seen, the chosen one first), `use` (the one
   the autotiler draws), `use_set` (`learned`, or `hand` when you set `use` yourself: a hand value is kept across
-  runs and wins), `cells`, `planets`, `areas`, `needed_by` (redesigned areas that need it), `status`, `sheet`
+  runs and wins; `fill` for a thin path drawn with the plain path tile), `cells`, `planets`, `areas`, `needed_by` (redesigned areas that need it), `status`, `sheet`
   and `sheet_cell`. Phase 1 rows have the tool `tilegen terrain`; trees and structures are phase 2, listed only.
   `terrain_areas.csv` links each area to its pair, render, items and `missing_roles`.
 - **Autotile.** 466 areas keep their vanilla layout and are drawn with it. 62 areas were redesigned or are
