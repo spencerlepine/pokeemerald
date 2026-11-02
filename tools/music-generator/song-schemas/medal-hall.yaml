@@ -1,0 +1,51 @@
+# Medal hall (Ilum): hot-swap of MUS_HALL_OF_FAME_ROOM (wiki audio:MUS_HALL_OF_FAME_ROOM). STYLE of "The Birth
+# of the Twins and Padme's Destiny" (wiki ref_tracks soundtrack:revenge-sith:14): an original melody, not a quote.
+# Taken from the cue: a slow minor-key elegy, a lone horn then flute singing over harp arpeggios and a soft string
+# bed, harmony moving by step through the flat side (Dm Bb Gm A).
+# Brief (sw_subject): walk into the medal hall, hushed, expectant. D minor, 108 bpm (a touch under the vanilla 114,
+# to reach the AMBIENT loop range), no drums: horn phrase, then flute answering with the horn held under it, harp, strings, wave bass, a high square glint.
+# AMBIENT, 16-bar loop, 35.6 s (vanilla 34.2 s).
+name: medal-hall
+replaces: MUS_HALL_OF_FAME_ROOM
+form: AMBIENT
+voicegroup: hall_of_fame_room       # vanilla: harp 46, strings 48, horn 60, flute 73, squares 80/81, wave 82
+master_volume: 80
+tempo: 108
+steps_per_beat: 2
+time_signature: [4, 4]
+seed: 51
+
+parts:
+  horn:    {program: 60, channel: 0, volume: 92, pan: -8,  octave: 3, gate: 0.96, humanize: {vel: 4}}
+  flute:   {program: 73, channel: 1, volume: 90, pan: 10,  gate: 0.96, lfo_speed: 30, lfo_delay: 24, mod: 5}
+  harp:    {program: 46, channel: 2, volume: 70, pan: -24, octave: 3, gate: 0.9, humanize: {vel: 8}}
+  strings: {program: 48, channel: 3, volume: 54, pan: 22,  octave: 4, gate: 1.0}
+  bass:    {program: 82, channel: 4, volume: 80, pan: 0,   octave: 2, gate: 0.95, role: bass, mono: true}
+  glint:   {program: 80, channel: 5, volume: 30, pan: 36,  octave: 5, gate: 0.4, mono: true}
+
+progressions:
+  a: "Dm | Bb | Gm | A | Dm | F | Gm | A"
+  b: "Bb | C | Am | Dm | Bb | Gm | Asus4 | A"
+
+phrases:
+  horn_a: "D4:4 A4:4 | D5:6 C5:2 | Bb4:8 | A4:4 C#5:4 | D5:4 F5:4 | E5:2 F5:2 C5:4 | D5:8 | C#5:8"
+  flute_b: "F5:4 D5:4 | E5:4 G5:4 | A5:6 G5:1 E5:1 | F5:8 | D5:4 F5:2 Bb5:2 | A5:4 G5:2 D5:2 | D5:8 | C#5:4 E5:4"
+  hold: "^1:8"
+  harp: "^1:1 ^2:1 ^3:1 ^1+:1 ^3:1 ^2:1 ^1:1 r:1"
+  pad: "^2:8"
+  bass: "^1:8"
+  glint: "r:6 ^3+:2 | r:8"
+
+sections:
+  a:
+    bars: 8
+    chords: a
+    parts: {horn: horn_a, harp: harp, strings: pad, bass: bass, glint: glint}
+  b:
+    bars: 8
+    chords: b
+    gain: {horn: -26}
+    parts: {flute: flute_b, horn: hold, harp: harp, strings: pad, bass: bass, glint: glint}
+
+arrangement: [a, b]
+loop_start: a
