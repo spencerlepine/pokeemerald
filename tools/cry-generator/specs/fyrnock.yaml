@@ -1,0 +1,27 @@
+name: fyrnock
+slot: houndour
+brief: "FYRNOCK: creature call that fits its look and size. Dark-cave hound."
+kind: creature
+size: 0.25
+seed: 831
+layers:
+  # A raspy cave hiss that snaps into a short, eerie yelp-howl ("hsss-AROO"), echoing in the dark.
+  # Family DNA (fyrnock line): hiss noise lead-in, saw+noise throat, er -> a -> u howl, growl, cave echo hiss.
+  - type: noise
+    band: [[0, 2400], [0.12, 2000]]
+    q: 1.4
+    env: [[0, 0], [0.02, 0.6], [0.12, 0.3], [0.14, 0]]
+    gain: 0.4
+  - type: voice
+    at: 0.12
+    pitch: [[0, 420], [0.06, 600], [0.25, 560], [0.44, 380]]
+    pitch_step: 0.03
+    source: {saw: 0.9, pulse: 0.3, pulse_width: 0.3, noise: 0.18}
+    vowels: [[0, er], [0.06, a], [0.25, o], [0.44, u]]
+    env: [[0, 0], [0.012, 1], [0.3, 0.8], [0.45, 0]]
+    vibrato: {rate: 8, depth: 0.03}
+    growl: 0.35
+    growl_rate: 42
+    jitter: 0.025
+    drive: 2.2
+master: {lowpass: 3800}

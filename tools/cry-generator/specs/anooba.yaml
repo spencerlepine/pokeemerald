@@ -1,0 +1,35 @@
+name: anooba
+slot: granbull
+brief: "ANOOBA: creature call that fits its look and size. Anooba, the bulldog of the desert."
+kind: creature
+size: 0.5
+seed: 822
+layers:
+  # A bulldog's deep "RRUFF", then the full hyena whoop rising twice ("whoo-OOP, whoo-OOP") into a cackle.
+  # Family DNA (anooba line): saw throat, er -> o -> a whoop, hyena-like rising whoop motif, gruff growl.
+  - type: voice
+    pitch: [[0, 240], [0.05, 320], [0.18, 230]]
+    source: {saw: 0.9, pulse: 0.3, pulse_width: 0.3, noise: 0.12}
+    vowels: [[0, er], [0.05, a], [0.18, rr]]
+    env: [[0, 0], [0.01, 1], [0.13, 0.75], [0.19, 0]]
+    growl: 0.6
+    growl_rate: 32
+    jitter: 0.02
+    drive: 2.6
+  - type: voice
+    at: 0.26
+    pitch: [[0, 300], [0.18, 560], [0.26, 520]]
+    source: {saw: 0.9, pulse: 0.3, pulse_width: 0.3, noise: 0.08}
+    vowels: [[0, u], [0.1, o], [0.26, a]]
+    env: [[0, 0], [0.02, 0.9], [0.22, 0.8], [0.27, 0]]
+    jitter: 0.02
+    drive: 1.9
+  - type: voice
+    at: 0.56
+    pitch: [[0, 320], [0.2, 620], [0.32, 580], [0.5, 420]]
+    source: {saw: 0.9, pulse: 0.3, pulse_width: 0.3, noise: 0.08}
+    vowels: [[0, u], [0.1, o], [0.28, a], [0.5, o]]
+    env: [[0, 0], [0.02, 1], [0.35, 0.8], [0.52, 0]]
+    vibrato: {rate: 10, depth: 0.04}
+    jitter: 0.02
+    drive: 1.9

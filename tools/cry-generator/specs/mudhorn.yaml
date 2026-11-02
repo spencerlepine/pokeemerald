@@ -1,0 +1,28 @@
+name: mudhorn
+slot: donphan
+brief: "MUDHORN: creature call that fits its look and size. Armored horned charger."
+kind: creature
+size: 0.6
+seed: 802
+layers:
+  # A hard snort, a pawing stamp, then a deep, rumbling charge bellow ("HHRRMMWAAH") from an armored beast.
+  # Family DNA (mudhorn line): nasal snort noise, saw+pulse throat, aw -> o -> u vowels, heavy growl.
+  - type: noise
+    band: [[0, 800], [0.1, 500]]
+    q: 1.2
+    env: [[0, 0], [0.015, 0.8], [0.1, 0]]
+    gain: 0.5
+  - type: click
+    times: [0.11, 0.15]
+    gain: 0.6
+  - type: voice
+    at: 0.13
+    pitch: [[0, 200], [0.1, 300], [0.4, 280], [0.66, 170]]
+    pitch_step: 0.04
+    source: {saw: 0.9, pulse: 0.5, pulse_width: 0.3, noise: 0.12}
+    vowels: [[0, m], [0.05, aw], [0.35, o], [0.66, u]]
+    env: [[0, 0], [0.02, 1], [0.45, 0.85], [0.68, 0]]
+    growl: 0.6
+    growl_rate: 28
+    jitter: 0.025
+    drive: 2.6

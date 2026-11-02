@@ -1,0 +1,33 @@
+name: fyrnalpha
+slot: houndoom
+brief: "FYRNALPHA: creature call that fits its look and size. Fyrnock pack alpha."
+kind: creature
+size: 0.5
+seed: 832
+layers:
+  # The alpha's long hiss, then a deep, commanding howl that calls the pack and fades into the cave.
+  # Family DNA (fyrnock line): hiss noise lead-in, saw+noise throat, er -> a -> u howl, growl, cave echo hiss.
+  - type: noise
+    band: [[0, 2200], [0.16, 1700]]
+    q: 1.4
+    env: [[0, 0], [0.02, 0.6], [0.15, 0.3], [0.17, 0]]
+    gain: 0.4
+  - type: voice
+    at: 0.13
+    pitch: [[0, 280], [0.1, 420], [0.45, 400], [0.78, 240]]
+    pitch_step: 0.035
+    source: {saw: 0.9, pulse: 0.3, pulse_width: 0.3, noise: 0.18}
+    vowels: [[0, er], [0.1, a], [0.4, o], [0.78, u]]
+    env: [[0, 0], [0.015, 1], [0.55, 0.85], [0.8, 0]]
+    vibrato: {rate: 6, depth: 0.035}
+    growl: 0.5
+    growl_rate: 32
+    jitter: 0.025
+    drive: 2.4
+  - type: noise
+    at: 0.6
+    band: [[0, 1400], [0.3, 900]]
+    q: 1.2
+    env: [[0, 0], [0.08, 0.25], [0.32, 0]]
+    gain: 0.2
+master: {lowpass: 3800}

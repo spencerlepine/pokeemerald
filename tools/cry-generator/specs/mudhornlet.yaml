@@ -1,0 +1,26 @@
+name: mudhornlet
+slot: phanpy
+brief: "MUDHORNLET: creature call that fits its look and size. Mudhorn calf."
+kind: creature
+size: 0.3
+seed: 801
+layers:
+  # A snuffling snort and a stubby calf bellow ("hnff-MWAH"), eager and a bit clumsy.
+  # Family DNA (mudhorn line): nasal snort noise, saw+pulse throat, aw -> o -> u vowels, heavy growl.
+  - type: noise
+    band: [[0, 900], [0.08, 600]]
+    q: 1.2
+    env: [[0, 0], [0.015, 0.7], [0.08, 0]]
+    gain: 0.45
+  - type: voice
+    at: 0.1
+    pitch: [[0, 340], [0.06, 460], [0.25, 420], [0.4, 300]]
+    pitch_step: 0.03
+    source: {saw: 0.8, pulse: 0.5, pulse_width: 0.3, noise: 0.1}
+    vowels: [[0, m], [0.04, aw], [0.2, o], [0.4, u]]
+    env: [[0, 0], [0.015, 1], [0.28, 0.8], [0.42, 0]]
+    growl: 0.35
+    growl_rate: 36
+    jitter: 0.02
+    drive: 2
+master: {rms: 0.27}

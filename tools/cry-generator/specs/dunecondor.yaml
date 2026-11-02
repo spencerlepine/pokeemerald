@@ -1,0 +1,31 @@
+name: dunecondor
+slot: fearow
+brief: "DUNECONDOR: creature call that fits its look and size. Long-beaked desert condor."
+kind: creature
+size: 0.45
+seed: 812
+layers:
+  # A beak clack, then one long, raspy, descending condor scream ("KREEEAAAhh") over the dunes.
+  # Family DNA (raptor line): narrow pulse + saw throat, ee -> ae vowels, rasp, screech motif, lower and longer.
+  - type: click
+    times: [0.0, 0.03]
+    gain: 0.6
+  - type: voice
+    at: 0.04
+    pitch: [[0, 520], [0.08, 760], [0.4, 640], [0.8, 400]]
+    pitch_step: 0.03
+    source: {pulse: 0.8, pulse_width: 0.2, saw: 0.6, noise: 0.15}
+    vowels: [[0, ee], [0.25, ae], [0.55, a], [0.8, aw]]
+    env: [[0, 0], [0.01, 1], [0.5, 0.8], [0.82, 0]]
+    vibrato: {rate: 20, depth: 0.03}
+    growl: 0.4
+    growl_rate: 45
+    jitter: 0.035
+    drive: 2.4
+  - type: noise
+    at: 0.5
+    band: [[0, 1800], [0.35, 1200]]
+    q: 1.5
+    env: [[0, 0], [0.05, 0.3], [0.36, 0]]
+    gain: 0.2
+master: {lowpass: 3800, rms: 0.29}
