@@ -42,8 +42,24 @@ FAMILIES = {
     ('graphics/summary_screen/tiles.png', 'ui', banks(0, 1, 2, 3, 4, 5)),
     ('graphics/summary_screen/move_select.png', 'ui', ALL),
   ],
+  '3_bag_pokeblock': [
+    # scroll arrows, outline cursor and arrow cursor of every list menu (src/list_menu.c)
+    ('graphics/interface/red.pal', 'ui', [1, 2]),
+    # bag backdrop, stripes, list panel and pocket dots. Bank 1 is the bag's window palette: 1-11 and
+    # 14-15 are text colours (kept); 12-13 repeat the backdrop stripes behind the pocket dots.
+    ('graphics/bag/menu_male.pal', 'ui', banks(0) + [28, 29]),
+    ('graphics/bag/menu_female.pal', 'ui', banks(0) + [28, 29]),
+    ('graphics/bag/menu_pyramid.pal', 'ui', banks(0)),
+    # Pokéblock case: backdrop and frames. 12-14 of every bank are the Pokéblock colour swatches (kept)
+    ('graphics/pokeblock/menu.pal', 'ui', [1, 2, 3, 5, 7, 8]),
+    # condition screen (also StarNAV condition): header and panels. graph.png 6-15 are the contest
+    # colour circles, which the striped backdrop shares, so they stay vanilla.
+    ('graphics/pokeblock/use_screen/mon_frame_pal.bin', 'ui', ALL),
+    ('graphics/pokeblock/use_screen/graph.png', 'ui', [3, 4]),
+    ('graphics/pokeblock/use_screen/condition.png', 'ui', [8, 9, 10, 11]),
+  ],
 }
-DONE = ['1_text_windows', '2_party_summary']
+DONE = ['1_text_windows', '2_party_summary', '3_bag_pokeblock']
 
 RGB_RE = re.compile(r'RGB\((\d+), *(\d+), *(\d+)\)')
 def tx_rgb5(m, fam):
@@ -92,13 +108,22 @@ def write_png_pal(data, cols):
             chunk = struct.pack('>I', len(new)) + b'PLTE' + new + struct.pack('>I', zlib.crc32(b'PLTE' + new) & 0xffffffff)
             return data[:off] + chunk + data[off + 12 + len(body):]
 
+def read_bin_pal(data):   # raw little-endian BGR555, as INCBIN'd palettes
+    return [(((v) & 31) << 3, ((v >> 5) & 31) << 3, ((v >> 10) & 31) << 3)
+            for v in struct.unpack('<%dH' % (len(data) // 2), data)]
+
+def write_bin_pal(data, cols):
+    old = struct.unpack('<%dH' % (len(data) // 2), data)
+    return struct.pack('<%dH' % len(old), *[(o & 0x8000) | (r >> 3) | ((g >> 3) << 5) | ((b >> 3) << 10)
+                                             for o, (r, g, b) in zip(old, cols)])
+
 def render(path, fam, idx):
     data = vanilla(path)
-    png = path.endswith('.png')
-    cols = (read_png_pal if png else read_pal)(data)
+    kind = path.rsplit('.', 1)[1]
+    cols = {'png': read_png_pal, 'pal': read_pal, 'bin': read_bin_pal}[kind](data)
     # magenta slots are unused placeholders in vanilla files: leave them alone
     new = [tuple(tx(c, fam)) if i in idx and c not in MAGENTA else c for i, c in enumerate(cols)]
-    return (write_png_pal if png else write_pal)(data, new), cols, new
+    return {'png': write_png_pal, 'pal': write_pal, 'bin': write_bin_pal}[kind](data, new), cols, new
 
 def main():
     mode = sys.argv[1] if len(sys.argv) > 1 else ''

@@ -38,4 +38,18 @@ s10() { party; shot 10_party_menu; k A; w 0.7; shot 11_party_action;
         k B; w 0.5; k B; w 1.5; k B; w 0.3; k B; w 1.5; s17; }
 s17() { party; k A DOWN A; w 0.8; k DOWN; w 0.5; shot 17_party_switch; k B B; w 0.5; k B; w 1.5; k B; w; }
 
+# ---------- family 3: bag, Pokéblock case ----------
+bag() {   # bag() POCKET [ROW]: open the bag on a pocket with the cursor on ROW
+  town; lua "emu:write8(0x0203ce59, $1); for i=0,4 do emu:write16(0x0203ce5c+i*2,0); emu:write16(0x0203ce66+i*2,0) end; emu:write8(0x0203760e, 0); return 1"
+  k START; w 0.3; k DOWN DOWN; w 0.3; k A; w 2.5; for ((i=0;i<${2:-0};i++)); do k DOWN; done; w 0.3; }
+unbag() { k B B; w 2; k B; w 0.5; }
+s30() { bag 0; shot 30_bag_items; k A; w 0.7; shot 35_bag_item_menu; k B; w 0.3;
+        for i in 1 2 3 4 5; do k DOWN; done; w 0.3; k A; w 0.7; shot 36_bag_mail_menu; k B; w 0.3; unbag
+        s31; }
+s31() { bag 1; shot 31_bag_balls; unbag; bag 2; shot 32_bag_tmhm; unbag; bag 3; shot 33_bag_berries; unbag
+        bag 4; shot 34_bag_keyitems; unbag; }
+s61() { bag 4 9; k A; w 0.7; k A; w 3; shot 61_pokeblock_case; k A; w 0.7; shot 62_pokeblock_menu;
+        k A; w 3; shot 63_pokeblock_party; k A; w 1; k A; w 4; shot 64_pokeblock_feed; w 3; shot 65_pokeblock_feed2;
+        w 4; shot 66_pokeblock_condition_after; k B B B; w 2; k B B B; w 2; k B B; w 1; }
+
 for s in "$@"; do "$s" 2>/dev/null || "s$s"; done
