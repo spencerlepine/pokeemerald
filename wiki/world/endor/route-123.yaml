@@ -16,14 +16,14 @@ grid: |
   TTTTTTTTTTT##.##.##T......TTTTTTTTTTTT......#.##############TTTT..""""""TT""""<......TTTTTTTTTTTTTTT~~~~~~~~~~~~~~~~~~T..T~~~~~~~~~~~~~~~~~~
   TTTTTTTTTTT........T......TTTTTTTT~~~~~~~~......<..""#######TTT..."""""""T""""<.......TTTTTTTTTTTTTTT~~~~~~~~~~~~~~~~~T..T~~~~~~~~~~~~~~~~~~
   TTTTTTTTTTT##.##.##T......TTTTTTTT~~~~~~~~......<.""""####TTTTTvvvvvvv.""...""<....""........TTTTTTTTT~~~~~~~~~~~~~~~~T..T~~~~~~~~~~~~~~~~~~
-  TTTTTTTT.TT........T......TTTTTT..~~~~~~~~......<"""""vT..TTTTT.......T"......<..."""""TTTTT.TTTTTTTTTTT~~~~~~~~~~~~~~T..T~~~~~~~~~~~~~~~~~~
-  TTTTTT...TT##....##T#.....TT.<#...~~~~~~~~......<""""""<...TTT.......TT.......<.."""""""TTTT.TTTTTTTTTTTTT~~~~~~~~~~~~T..T~~~~~~~~~~~~~~~TTT
-  TTTT.....T................T..<....~~~~~~~~......<""""""<...TT........TTT.#.....TT"""""""TTTT.TTTTTTTTTTTTTT~~~~~~~~~~~T..T~~~~~~~~~~~~~TTTTT
-  T........TTT..............T..<...............#...TT""""<...Tvvvvvv."""TTT.....TTTT"""""""TTT.TTTTTTTTTTTTTTTT~~~~~~~~~T..T~~~~~~~~~~TTTTTTTT
-  .........TT...............T..<.................TTTTT"".<.T........T"""TTTT....TTTTT""""""TTT..........TTTTTTTTTTTTTTT#....TTTTTTTTTTTTTTTTTT
-  .........###########....##T..#vvTTT.vvvvvvT...TTTTTT...<TT........TT""""TTvvvvvTTTTT..."""TT.TTTTTTTT.TTTTTTTTTTTT.#.......#.TTTTTTTTTTTTTTT
-  ..........#.....................TTTT......<TTTTTTTTT....TT.......TTT"""""......TTTT............"""TTT.TTTTTTTTTTT.............TTT..........T
-  TTTT.............................TTT......<TTTTTTTT....TTvvvvvvvTTTTT""""........<..#........"""""TTT.TTTTTT.###..............TTT.TTTTTTTTTT
+  TTTTTTTT.TT........T......TTTTTT..~~~~~~~~......<"""""vT..TTTTT.......T"......<..."""""TTTTT.TTTTTTTTTTT~~~~~~~~~~~~~~T:.T~~~~~~~~~~~~~~~~~~
+  TTTTTT...TT##....##T#.....TT.<#...~~~~~~~~......<""""""<...TTT.......TT.......<.."""""""TTTT.TTTTTTTTTTTTT~~~~~~~~~~~~T:.T~~~~~~~~~~~~~~~TTT
+  TTTT.....T................T..<....~~~~~~~~......<""""""<...TT........TTT.#.....TT"""""""TTTT.TTTTTTTTTTTTTT~~~~~~~~~~~T:.T~~~~~~~~~~~~~TTTTT
+  T........TTT..............T..<...............#...TT""""<...Tvvvvvv."""TTT.....TTTT"""""""TTT.TTTTTTTTTTTTTTTT~~~~~~~~~T:.T~~~~~~~~~~TTTTTTTT
+  .........TT...............T..<.................TTTTT"".<.T........T"""TTTT....TTTTT""""""TTT..........TTTTTTTTTTTTTTT#.:..TTTTTTTTTTTTTTTTTT
+  .........###########....##T..#vvTTT.vvvvvvT...TTTTTT...<TT........TT""""TTvvvvvTTTTT..."""TT.TTTTTTTT.TTTTTTTTTTTT.#...:...#.TTTTTTTTTTTTTTT
+  ..........#.....................TTTT......<TTTTTTTTT....TT.......TTT"""""......TTTT............"""TTT.TTTTTTTTTTT......:......TTT..........T
+  TTTT.............................TTT......<TTTTTTTT....TTvvvvvvvTTTTT""""........<..#........"""""TTT.TTTTTT.###.......:......TTT.TTTTTTTTTT
   TTTTTT....................................<.TTTTTTvvvvvvT.......TTTTTTT".........<..........."""""""...TTTT.......................TTTTTTTT.T
   TTTTTTT...................................<...TTTT......<.........TTTT.<.........<.........#.""""""".....................#..TTTTT...........
   TTTTTTTT..................................<.............<..............<.........<..........""""""""......................TTTTTTT.TTTTTTTT.T

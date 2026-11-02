@@ -39,25 +39,25 @@ grid: |
   ###T#####T########T#.#..#.........######
   #TTT#####T#.######T###..#........T######
   #TTT#T#####T#########.T...T......T######
-  T####T#TT############T.TTT.......#######
-  T######TT##TT######.#TTTT......TT#.#####
-  ###########TT###..#T#TTT##..##TTT#######
-  ####TT###TT#####TT#T#TT.......T#T##.####
-  TTT#TT###TT#####TT###TT......TT#T##T####
-  TTT#TTTT############.T......T###T#.#####
-  TTTTTTTT#######.####........T#######T###
-  TTTTTT#T###.#####..........TT###TT#.####
-  TTTTTT#T###.###............TT###TT.T####
-  TTTTTTTTT.............#....TT###TTT#####
-  TTTTTTTTT.................TT####TTT#####
-  TTTTTTTTTTT...............######TTT#####
-  TTTTTTTTTTTT#..........#########TTT#####
-  TTTTTTTTTTTT########..#######TT#TTT.####
-  TTTTTTTTTTTTT#######..#######TT.TTTT#TTT
-  TTTTTTTTTTTT>>.Tv###..####"""""TTTTT.TTT
-  TTTTTTTTTTTT>>.>.>.#....."""""""""TTTTTT
-  TTTTTTTTTTTv#>.>.>......."""""""""..TTTT
-  TTTTTT..TT>..>.>.>.....T######T"""......
+  T####T#TT############T.TTT:::....#######
+  T######TT##TT######.#TTTT.:....TT#.#####
+  ###########TT###..#T#TTT##:.##TTT#######
+  ####TT###TT#####TT#T#TT::::...T#T##.####
+  TTT#TT###TT#####TT###TT:.....TT#T##T####
+  TTT#TTTT############.T::....T###T#.#####
+  TTTTTTTT#######.####.::.....T#######T###
+  TTTTTT#T###.#####....:.....TT###TT#.####
+  TTTTTT#T###.###......:.....TT###TT.T####
+  TTTTTTTTT............:#....TT###TTT#####
+  TTTTTTTTT............:....TT####TTT#####
+  TTTTTTTTTTT.......::::....######TTT#####
+  TTTTTTTTTTTT#........:.#########TTT#####
+  TTTTTTTTTTTT########.:#######TT#TTT.####
+  TTTTTTTTTTTTT#######.:#######TT.TTTT#TTT
+  TTTTTTTTTTTT>>.Tv###.:####"""""TTTTT.TTT
+  TTTTTTTTTTTT>>.>.>.#.::::"""""""""TTTTTT
+  TTTTTTTTTTTv#>.>.>......."""""""""::TTTT
+  TTTTTT..TT>..>.>.>.....T######T""".:::::
   TTTTTT..TT>..>.>.>.....########T........
   T.TTT...TT>..>.>.>.......#######........
   T...#....T>..>.>.>............##........
