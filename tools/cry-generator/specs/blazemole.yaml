@@ -1,0 +1,35 @@
+name: blazemole
+slot: typhlosion
+brief: "BLAZEMOLE: creature call that fits its look and size. Volcanic burrower."
+kind: creature
+size: 0.65
+seed: 123
+layers:
+  # Sullust mole line (snuffle, pulse throat on "ee -> a", flame crackle) at full size: a deep snort,
+  # then a long volcanic roar that rises, wavers in frame-steps and rumbles out under roaring flames.
+  - type: noise
+    band: [1400]
+    q: 2
+    env: [[0, 0], [0.015, 0.6], [0.06, 0], [0.07, 0.6], [0.12, 0]]
+    gain: 0.45
+  - type: voice
+    at: 0.12
+    pitch: [[0, 260], [0.15, 400], [0.7, 370], [1.2, 300], [1.5, 190]]
+    pitch_step: 0.05
+    source: {pulse: 0.9, saw: 0.5, pulse_width: 0.25, noise: 0.1}
+    vowels: [[0, ae], [0.2, a], [0.8, aw], [1.5, er]]
+    env: [[0, 0], [0.03, 1], [1.0, 0.8], [1.52, 0]]
+    growl: 0.5
+    growl_rate: 30
+    jitter: 0.02
+    drive: 2.2
+  - type: noise
+    at: 0.3
+    band: [[0, 2000], [1.0, 1100]]
+    q: 1.0
+    env: [[0, 0], [0.15, 0.35], [0.9, 0.25], [1.2, 0]]
+    gain: 0.3
+  - type: click
+    at: 0.2
+    times: [0.0, 0.08, 0.15, 0.3, 0.42, 0.6, 0.75, 0.95]
+    gain: 0.3

@@ -1,0 +1,28 @@
+name: silkpod
+slot: silcoon
+brief: "SILKPOD: creature call that fits its look and size. Silk cocoon of a sandgrub."
+kind: creature
+size: 0.3
+seed: 102
+layers:
+  # Sandgrub-line throat (pulse + chitter trill, i -> er) muffled inside a silk shell: a soft, creaking
+  # hum that swells and settles, with a dry rustle of silk behind it.
+  - type: click
+    times: [0.0, 0.05]
+    gain: 0.3
+  - type: voice
+    at: 0.01
+    pitch: [[0, 380], [0.15, 470], [0.45, 430], [0.72, 330]]
+    pitch_step: 0.04
+    source: {pulse: 0.8, saw: 0.3, pulse_width: 0.2, noise: 0.15}
+    vowels: [[0, er], [0.2, o], [0.5, u], [0.72, er]]
+    env: [[0, 0], [0.02, 1], [0.4, 0.75], [0.74, 0]]
+    vibrato: {rate: 30, depth: 0.04}
+    jitter: 0.02
+    drive: 1.4
+  - type: noise
+    at: 0.1
+    band: [[0, 2600], [0.5, 1800]]
+    q: 1.3
+    env: [[0, 0], [0.1, 0.35], [0.45, 0.25], [0.6, 0]]
+    gain: 0.3

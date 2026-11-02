@@ -1,0 +1,30 @@
+name: venompod
+slot: cascoon
+brief: "VENOMPOD: creature call that fits its look and size. Poison cocoon of a sandgrub."
+kind: creature
+size: 0.32
+seed: 103
+layers:
+  # Sandgrub-line throat (pulse + chitter trill, i -> er) sealed in a poison shell: a grumbling,
+  # growling creak that ends in a wet, venomous hiss.
+  - type: click
+    times: [0.0, 0.04]
+    gain: 0.35
+  - type: voice
+    at: 0.01
+    pitch: [[0, 340], [0.12, 440], [0.4, 400], [0.62, 300]]
+    pitch_step: 0.04
+    source: {pulse: 0.8, saw: 0.4, pulse_width: 0.2, noise: 0.15}
+    vowels: [[0, er], [0.18, aw], [0.45, er], [0.62, rr]]
+    env: [[0, 0], [0.02, 1], [0.4, 0.8], [0.64, 0]]
+    vibrato: {rate: 30, depth: 0.04}
+    growl: 0.45
+    growl_rate: 28
+    jitter: 0.03
+    drive: 2
+  - type: noise
+    at: 0.5
+    band: [[0, 3000], [0.25, 2200]]
+    q: 1.6
+    env: [[0, 0], [0.03, 0.5], [0.2, 0.25], [0.28, 0]]
+    gain: 0.4

@@ -1,0 +1,31 @@
+name: dustmoth
+slot: dustox
+brief: "DUSTMOTH: creature call that fits its look and size. Night moth that scatters toxic dust."
+kind: creature
+size: 0.45
+seed: 105
+layers:
+  # Sandgrub-line throat (pulse + chitter trill, i -> er), lower and rougher: a husky, fluttering night
+  # call that sinks into a powdery hiss of scattered dust.
+  - type: voice
+    pitch: [[0, 360], [0.1, 560], [0.4, 500], [0.62, 330]]
+    source: {pulse: 0.8, saw: 0.4, pulse_width: 0.2, noise: 0.15}
+    vowels: [[0, e], [0.15, ae], [0.4, er], [0.62, rr]]
+    env: [[0, 0], [0.015, 1], [0.45, 0.8], [0.64, 0]]
+    vibrato: {rate: 30, depth: 0.06}
+    growl: 0.25
+    growl_rate: 32
+    jitter: 0.025
+    drive: 1.8
+  - type: noise
+    band: [1300]
+    q: 2
+    env: [[0, 0], [0.02, 0.35], [0.07, 0.1], [0.12, 0.35], [0.17, 0.1], [0.22, 0.3], [0.3, 0]]
+    gain: 0.25
+  - type: noise
+    at: 0.45
+    band: [[0, 3200], [0.3, 2000]]
+    q: 1.0
+    env: [[0, 0], [0.05, 0.4], [0.3, 0]]
+    gain: 0.35
+master: {rms: 0.27}

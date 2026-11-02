@@ -1,0 +1,27 @@
+name: cindermole
+slot: cyndaquil
+brief: "CINDERMOLE: creature call that fits its look and size. Mole with a flaming back."
+kind: creature
+size: 0.22
+seed: 121
+layers:
+  # Family DNA (Sullust mole line): a snuffly pulse throat on "ee -> a" with a sniff before it and a
+  # crackle of flame (noise bursts). The pup: a quick, squeaky "sniff-kyip!".
+  - type: noise
+    band: [2200]
+    q: 2
+    env: [[0, 0], [0.01, 0.5], [0.04, 0], [0.05, 0.5], [0.08, 0]]
+    gain: 0.4
+  - type: voice
+    at: 0.09
+    pitch: [[0, 620], [0.04, 900], [0.2, 700]]
+    source: {pulse: 0.9, saw: 0.3, pulse_width: 0.25, noise: 0.08}
+    vowels: [[0, ee], [0.08, ae], [0.2, a]]
+    env: [[0, 0], [0.01, 1], [0.15, 0.7], [0.21, 0]]
+    jitter: 0.02
+    drive: 1.5
+  - type: click
+    at: 0.12
+    times: [0.0, 0.05, 0.09, 0.14]
+    gain: 0.3
+master: {rms: 0.27}

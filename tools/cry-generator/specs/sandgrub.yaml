@@ -1,0 +1,30 @@
+name: sandgrub
+slot: wurmple
+brief: "SANDGRUB: creature call that fits its look and size. Desert larva that splits into two cocoon lines."
+kind: creature
+size: 0.15
+seed: 101
+layers:
+  # Family DNA (sandgrub line): a buzzy pulse throat with a fast chitter-trill on "i -> er", led by
+  # mandible clicks. The larva: two tiny, dry chirrups.
+  - type: click
+    times: [0.0, 0.03]
+    gain: 0.4
+  - type: voice
+    at: 0.02
+    pitch: [[0, 520], [0.05, 720], [0.12, 600]]
+    source: {pulse: 0.8, saw: 0.3, pulse_width: 0.2, noise: 0.12}
+    vowels: [[0, i], [0.12, er]]
+    env: [[0, 0], [0.01, 1], [0.1, 0.7], [0.13, 0]]
+    vibrato: {rate: 34, depth: 0.05}
+    jitter: 0.02
+    drive: 1.5
+  - type: voice
+    at: 0.17
+    pitch: [[0, 560], [0.06, 780], [0.16, 640], [0.24, 480]]
+    source: {pulse: 0.8, saw: 0.3, pulse_width: 0.2, noise: 0.12}
+    vowels: [[0, i], [0.1, ee], [0.24, er]]
+    env: [[0, 0], [0.01, 1], [0.17, 0.75], [0.25, 0]]
+    vibrato: {rate: 34, depth: 0.05}
+    jitter: 0.02
+    drive: 1.5

@@ -1,0 +1,30 @@
+name: torpedturt
+slot: blastoise
+brief: "TORPEDTURT: creature call that fits its look and size. Turtle with proton-torpedo cannons."
+kind: creature
+size: 0.62
+seed: 113
+layers:
+  # Shell-line throat (bubbly saw+sine, u -> o -> a, watery wobble), now big and armoured: a deep,
+  # growling "BWOOAAR" with a cannon thump at the start and a hissing torpedo whoosh as it fades.
+  - type: click
+    times: [0.0]
+    gain: 0.7
+  - type: voice
+    at: 0.01
+    pitch: [[0, 220], [0.1, 330], [0.45, 300], [0.85, 200]]
+    pitch_step: 0.04
+    source: {saw: 0.8, sine: 0.4, pulse: 0.4, pulse_width: 0.35, noise: 0.06}
+    vowels: [[0, u], [0.12, o], [0.4, a], [0.85, o]]
+    env: [[0, 0], [0.02, 1], [0.6, 0.85], [0.88, 0]]
+    vibrato: {rate: 10, depth: 0.03}
+    growl: 0.45
+    growl_rate: 26
+    jitter: 0.015
+    drive: 2
+  - type: noise
+    at: 0.45
+    band: [[0, 2600], [0.4, 900]]
+    q: 1.2
+    env: [[0, 0], [0.05, 0.45], [0.4, 0]]
+    gain: 0.35

@@ -1,0 +1,22 @@
+name: shellpup
+slot: squirtle
+brief: "SHELLPUP: creature call that fits its look and size. Mon Cala turtle pup."
+kind: creature
+size: 0.22
+seed: 111
+layers:
+  # Family DNA (shell line): a round, bubbly saw+sine throat on "u -> o -> a" with a watery wobble
+  # (slow vibrato) and a burble of bubbles. The pup: a chirpy "pwo-oo!" with bubbles popping.
+  - type: voice
+    pitch: [[0, 480], [0.06, 680], [0.3, 620], [0.5, 460]]
+    source: {saw: 0.7, sine: 0.5, pulse: 0.3, pulse_width: 0.35, noise: 0.04}
+    vowels: [[0, u], [0.1, o], [0.3, a], [0.5, o]]
+    env: [[0, 0], [0.015, 1], [0.35, 0.8], [0.52, 0]]
+    vibrato: {rate: 12, depth: 0.04}
+    jitter: 0.01
+  - type: noise
+    at: 0.42
+    band: [[0, 900], [0.2, 1500]]
+    q: 4
+    env: [[0, 0], [0.02, 0.5], [0.05, 0.1], [0.08, 0.5], [0.11, 0.1], [0.14, 0.4], [0.2, 0]]
+    gain: 0.3

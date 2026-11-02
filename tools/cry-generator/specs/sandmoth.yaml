@@ -1,0 +1,22 @@
+name: sandmoth
+slot: beautifly
+brief: "SANDMOTH: creature call that fits its look and size. Bright moth that drinks from moisture vaporators."
+kind: creature
+size: 0.4
+seed: 104
+layers:
+  # Sandgrub-line throat (pulse + chitter trill, i -> er) grown wings: a bright, fluttering "trrreee"
+  # that climbs and sparkles, with a soft wingbeat flutter of noise under it.
+  - type: voice
+    pitch: [[0, 480], [0.08, 760], [0.3, 700], [0.48, 520]]
+    source: {pulse: 0.8, saw: 0.3, pulse_width: 0.2, noise: 0.08}
+    vowels: [[0, i], [0.15, ee], [0.35, i], [0.48, er]]
+    env: [[0, 0], [0.012, 1], [0.35, 0.8], [0.5, 0]]
+    vibrato: {rate: 34, depth: 0.06}
+    jitter: 0.015
+    drive: 1.4
+  - type: noise
+    band: [1600]
+    q: 2
+    env: [[0, 0], [0.02, 0.4], [0.06, 0.1], [0.1, 0.4], [0.14, 0.1], [0.18, 0.4], [0.22, 0.1], [0.26, 0.35], [0.32, 0]]
+    gain: 0.3
