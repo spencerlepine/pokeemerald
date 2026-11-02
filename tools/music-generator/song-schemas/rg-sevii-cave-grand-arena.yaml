@@ -1,0 +1,79 @@
+# Sevii Cave, Grand Arena: net-new per-planet split of MUS_RG_SEVII_CAVE (wiki row
+# net:mus-rg-sevii-cave-grand-arena), for Altering Cave. SCRATCH: no film cue (the Mortis original is SCRATCH
+# too), written from the brief. Same mood family as Mortis Depths, otherworldly and echoing, and a cave that
+# alters: A minor that keeps slipping by thirds (Am-Fm, Am-C#m, the A-C#-F augmented cycle in c), a piano line
+# with a 50 % square echoing it three eighths late, nylon guitar arpeggios, a two-voice string pad, a high
+# square line floating over c. On the vanilla rg_mt_moon voicegroup at its 110 bpm; 34 bars = 74.2 s, which is
+# shorter than the vanilla 92.1 s loop to stay inside the AMBIENT loop range the checks use (35-77 s).
+# Brief (sw_subject): Grand Arena version of MUS_RG_SEVII_CAVE, same role and mood family; theme to be decided.
+name: rg-sevii-cave-grand-arena
+constant: MUS_RG_SEVII_CAVE_GRAND_ARENA
+form: AMBIENT
+voicegroup: rg_mt_moon            # vanilla's own: piano 1, guitar 24, strings 48, squares 80/81, wave 83
+master_volume: 90
+tempo: 110
+steps_per_beat: 2                 # eighth-note grid
+time_signature: [4, 4]
+seed: 34
+
+parts:
+  piano:   {program: 1,  channel: 0, volume: 92,  pan: -10, gate: 0.95, humanize: {vel: 6}}
+  strings: {program: 48, channel: 1, volume: 80,  pan: 14,  gate: 1.0, humanize: {vel: 4}}
+  guitar:  {program: 24, channel: 2, volume: 74,  pan: -24, octave: 3, gate: 0.9, humanize: {vel: 8}}
+  str_hi:  {program: 48, channel: 3, volume: 54,  pan: 28,  octave: 3, gate: 1.0}
+  str_lo:  {program: 48, channel: 4, volume: 50,  pan: -28, octave: 3, gate: 1.0}
+  bass:    {program: 83, channel: 5, volume: 80,  pan: 0,   octave: 2, role: bass, gate: 0.95}
+  echo:    {program: 80, channel: 6, volume: 34,  pan: 36,  gate: 0.85, mono: true}
+  float:   {program: 81, channel: 7, volume: 38,  pan: -34, gate: 0.95, mono: true}
+
+progressions:
+  intro: "Am | E"
+  a: "Am | Fm | Am | C#m | Am | F | Dm | E"
+  b: "F | Ab | Db | E | F | Ab | Bm7b5 | E"
+  c: "Am | C#m | Fm | Am | Am | C#m | F | E"
+  turn: "Dm | E"
+
+phrases:
+  arp: "^1:1 ^2:1 ^3:1 ^1+:1 ^3:1 ^2:1 ^1:1 ^2:1"
+  pad_lo: "^1:8"
+  pad_hi: "^3:8"
+  root: "^1:8"
+  piano_a: |
+    E5:4 C5:2 A4:2 | Ab4:6 C5:2 | E5:4 B4:2 A4:2 | G#4:8 |
+    E5:4 C5:2 A4:2 | A4:4 C5:2 F5:2 | F5:4 D5:2 A4:2 | G#4:6 B4:2
+  echo_a: "r:1 B4:2 E5:4 C5:1 | ~:1 A4:2 Ab4:5 | ~:1 C5:2 E5:4 B4:1 | ~:1 A4:2 G#4:5 | ~:3 E5:4 C5:1 | ~:1 A4:2 A4:4 C5:1 | ~:1 F5:2 F5:4 D5:1 | ~:1 A4:2 G#4:5"
+  strings_b: |
+    A4:8 | C5:8 | Db5:6 F5:2 | E5:8 |
+    F5:4 C5:4 | Eb5:4 C5:4 | D5:4 F5:4 | E5:6 G#4:2
+  float_c: "A5:8 | G#5:8 | Ab5:8 | A5:8 | E5:8 | E5:8 | F5:8 | E5:8"
+
+sections:
+  intro:
+    bars: 2
+    chords: intro
+    parts: {guitar: arp, str_lo: pad_lo, str_hi: pad_hi, bass: root, piano: "A4:8 | r:4 B4:2 D5:2"}
+  a:
+    bars: 8
+    chords: a
+    parts: {piano: piano_a, echo: echo_a, str_lo: pad_lo, str_hi: pad_hi, bass: root}
+  b:
+    bars: 8
+    chords: b
+    parts: {strings: strings_b, guitar: arp, str_lo: pad_lo, bass: root}
+  a2:
+    bars: 8
+    chords: a
+    gain: {guitar: -8}
+    parts: {piano: piano_a, echo: echo_a, guitar: arp, str_lo: pad_lo, bass: root}
+  c:
+    bars: 8
+    chords: c
+    parts: {float: float_c, guitar: arp, str_lo: pad_lo, str_hi: pad_hi, bass: root}
+  turn:
+    bars: 2
+    chords: turn
+    ramp: {guitar: [0, -10]}
+    parts: {guitar: arp, str_lo: pad_lo, str_hi: pad_hi, bass: root, piano: "r:8 | r:4 B4:2 D5:2"}
+
+arrangement: [intro, a, b, a2, c, turn]
+loop_start: a
