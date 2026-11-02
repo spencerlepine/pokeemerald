@@ -1,0 +1,24 @@
+name: bonelord
+slot: marowak
+brief: 'BONELORD: creature call that fits its look and size. Bone-club warrior of the Krayt Graveyard.'
+kind: creature
+size: 0.49
+seed: 192
+layers:
+  # Bone-club warrior: a bone-club crack, then the family wail turned into a fierce, lower
+  # battle shout.
+  - type: click
+    times: [0.0, 0.025]
+    gain: 0.9
+  - type: voice
+    at: 0.04
+    pitch: [[0.0, 340.0], [0.128, 408.0], [0.32, 374.0], [0.352, 323.0], [0.64, 255.0]]
+    source: {saw: 0.7, pulse: 0.6, pulse_width: 0.3, noise: 0.08}
+    vowels: [[0.0, a], [0.32, o], [0.64, u]]
+    formant_scale: 0.8
+    env: [[0.0, 0], [0.024, 1], [0.304, 0.85], [0.344, 0.5], [0.368, 0.9], [0.64, 0]]
+    vibrato: {rate: 11, depth: 0.03}
+    growl: 0.4
+    growl_rate: 36
+    jitter: 0.02
+    drive: 2.0

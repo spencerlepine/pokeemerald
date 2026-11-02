@@ -1,0 +1,20 @@
+name: skullkit
+slot: cubone
+brief: 'SKULLKIT: creature call that fits its look and size. Lonely cub wearing a krayt skull.'
+kind: creature
+size: 0.23
+seed: 191
+layers:
+  # Lonely cub in a krayt skull: a hollow, sobbing two-step wail echoing inside the skull.
+  # Family voice (hollow a -> o -> u wail, sobbing break) shared with BONELORD.
+  - type: voice
+    pitch: [[0.0, 540.0], [0.14, 648.0], [0.35, 594.0], [0.385, 513.0], [0.7, 405.0]]
+    source: {saw: 0.7, pulse: 0.6, pulse_width: 0.3, noise: 0.08}
+    vowels: [[0.0, a], [0.35, o], [0.7, u]]
+    formant_scale: 0.8
+    env: [[0.0, 0], [0.0262, 1], [0.3325, 0.85], [0.3762, 0.5], [0.4025, 0.9], [0.7, 0]]
+    vibrato: {rate: 11, depth: 0.03}
+    growl: 0.08
+    growl_rate: 36
+    jitter: 0.02
+master: {rms: 0.3}

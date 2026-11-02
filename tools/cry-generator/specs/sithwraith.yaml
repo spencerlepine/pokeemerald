@@ -1,0 +1,25 @@
+name: sithwraith
+slot: dusclops
+brief: 'SITHWRAITH: creature call that fits its look and size. Dark-side wraith with one burning eye.'
+kind: creature
+size: 0.53
+seed: 202
+layers:
+  # Dark-side wraith: the family moan, deeper and growling, over a burning dark-side drone
+  # from its single eye.
+  - type: voice
+    pitch: [[0.0, 189.0], [0.192, 231.0], [0.448, 210.0], [0.6144, 147.0]]
+    source: {saw: 0.5, pulse: 0.5, pulse_width: 0.4, noise: 0.35}
+    vowels: [[0.0, u], [0.256, o], [0.6144, u]]
+    env: [[0.0, 0], [0.0768, 1], [0.448, 0.8], [0.6272, 0]]
+    vibrato: {rate: 6, depth: 0.05}
+    growl: 0.4
+    growl_rate: 28
+    jitter: 0.02
+  - type: tone
+    at: 0.02
+    wave: saw
+    pitch: [[0, 105], [0.6, 100]]
+    warble: {rate: 5, depth: 0.03}
+    env: [[0, 0], [0.08, 0.5], [0.5, 0.4], [0.62, 0]]
+    gain: 0.45

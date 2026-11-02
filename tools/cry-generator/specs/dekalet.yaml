@@ -1,0 +1,25 @@
+name: dekalet
+slot: pineco
+brief: 'DEKALET: electronic droid voice: beeps, whistles and servo whirs. Droideka in its rolled-up wheel form.'
+kind: droid
+size: 0.28
+seed: 211
+layers:
+  # Rolled-up droideka: a fast rolling wheel whir with ticks, braking into a three-note beep.
+  # Family voice (rolling servo + square beeps C-F-C) shared with DROIDEKA.
+  - type: servo
+    pitch: [[0, 260], [0.2, 480], [0.32, 300]]
+    harmonics: [1.0, 0.6, 0.4, 0.25]
+    env: [[0, 0], [0.03, 0.8], [0.28, 0.6], [0.34, 0]]
+    grit: 0.5
+    gain: 0.6
+  - type: click
+    times: [0.02, 0.07, 0.12, 0.17, 0.22, 0.27]
+    gain: 0.4
+  - type: tone
+    at: 0.36
+    wave: square
+    pitch: [[0, 1400], [0.06, 1400], [0.061, 1870], [0.13, 1870], [0.131, 1400], [0.26, 1400]]
+    env: [[0, 0], [0.005, 0.8], [0.055, 0.8], [0.06, 0.1], [0.065, 0.8], [0.125, 0.8], [0.13, 0.1], [0.135, 0.8], [0.25, 0.7],
+      [0.27, 0]]
+    gain: 0.6

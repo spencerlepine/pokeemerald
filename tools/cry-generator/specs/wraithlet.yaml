@@ -1,0 +1,24 @@
+name: wraithlet
+slot: duskull
+brief: 'WRAITHLET: creature call that fits its look and size. Small dark-side wraith that drifts among the tombs.'
+kind: creature
+size: 0.37
+seed: 201
+layers:
+  # Small tomb wraith: a breathy, swelling "ooo-oh" moan drifting through the tombs.
+  # Family voice (noisy u -> o -> u moan, slow vibrato) shared with SITHWRAITH.
+  - type: voice
+    pitch: [[0.0, 297.0], [0.15, 363.0], [0.35, 330.0], [0.48, 231.0]]
+    source: {saw: 0.5, pulse: 0.5, pulse_width: 0.4, noise: 0.35}
+    vowels: [[0.0, u], [0.2, o], [0.48, u]]
+    env: [[0.0, 0], [0.06, 1], [0.35, 0.8], [0.49, 0]]
+    vibrato: {rate: 6, depth: 0.05}
+    growl: 0.1
+    growl_rate: 28
+    jitter: 0.02
+  - type: noise
+    at: 0.05
+    band: [[0, 1200], [0.4, 800]]
+    q: 2
+    env: [[0, 0], [0.1, 0.3], [0.4, 0]]
+    gain: 0.25

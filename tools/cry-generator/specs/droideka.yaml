@@ -1,0 +1,34 @@
+name: droideka
+slot: forretress
+brief: 'DROIDEKA: electronic droid voice: beeps, whistles and servo whirs. Droideka destroyer droid with shields up.'
+kind: droid
+size: 0.57
+seed: 212
+layers:
+  # Droideka with shields up: unfurling servo clanks, the deflector shield humming on, and the
+  # family three-note beep lower and harsher.
+  - type: click
+    times: [0.0, 0.08, 0.16]
+    gain: 0.7
+  - type: servo
+    pitch: [[0, 90], [0.25, 220], [0.4, 180]]
+    harmonics: [1.0, 0.8, 0.5, 0.4, 0.3]
+    env: [[0, 0], [0.04, 0.8], [0.35, 0.6], [0.42, 0]]
+    grit: 0.7
+    drive: 2.2
+    gain: 0.7
+  - type: tone
+    at: 0.25
+    wave: saw
+    pitch: [[0, 160], [0.68, 170]]
+    warble: {rate: 18, depth: 0.04}
+    env: [[0, 0], [0.12, 0.6], [0.6, 0.5], [0.69, 0]]
+    gain: 0.5
+  - type: tone
+    at: 0.45
+    wave: square
+    pitch: [[0, 900], [0.08, 900], [0.081, 1200], [0.17, 1200], [0.171, 900], [0.45, 900]]
+    env: [[0, 0], [0.005, 0.8], [0.075, 0.8], [0.08, 0.1], [0.085, 0.8], [0.165, 0.8], [0.17, 0.1], [0.175, 0.8], [0.44, 0.6],
+      [0.46, 0]]
+    drive: 1.5
+    gain: 0.6
