@@ -24,6 +24,7 @@ ALL = list(range(1, 16))
 TEXT = list(range(1, 10))           # text colour slots
 def but(*skip): return [i for i in ALL if i not in skip]
 def rng(a, b): return list(range(a, b + 1))
+def banks(*ns): return [16 * n + i for n in ns for i in range(16)]   # whole 16-colour palettes of a multi-palette PNG
 
 # family -> [(path under game/, colour family for tx, indices to recolour)]
 FAMILIES = {
@@ -33,8 +34,16 @@ FAMILIES = {
     *[(f'graphics/text_window/text_pal{n}.pal', 'ui', rng(10, 15)) for n in range(1, 5)],
     ('src/option_menu.c', 'ui', ['sOptionMenuBg_Pal[] = {RGB(17, 18, 31)}']),            # options backdrop
   ],
+  '2_party_summary': [
+    # party menu: 11 palettes; the slot colours are picked at runtime by id (src/data/party_menu.h).
+    # HP bar green/yellow/red (57-58, 73-74, 89-90) and gender blue/red (59-60, 75-76) stay vanilla.
+    ('graphics/party_menu/bg.png', 'ui', [i for i in banks(*range(11)) if i not in (57, 58, 59, 60, 73, 74, 75, 76, 89, 90)]),
+    # summary screen: palettes 0-5 are panels and headers, 6-7 are text colours (kept)
+    ('graphics/summary_screen/tiles.png', 'ui', banks(0, 1, 2, 3, 4, 5)),
+    ('graphics/summary_screen/move_select.png', 'ui', ALL),
+  ],
 }
-DONE = ['1_text_windows']
+DONE = ['1_text_windows', '2_party_summary']
 
 RGB_RE = re.compile(r'RGB\((\d+), *(\d+), *(\d+)\)')
 def tx_rgb5(m, fam):

@@ -30,4 +30,12 @@ s42() { menu0; k START DOWN DOWN DOWN DOWN DOWN DOWN A; w 1.5; shot 42_options;
         k DOWN DOWN DOWN DOWN DOWN; w 0.5; shot 42b_options_frame; k B; w 1; k B; w; }
 s43() { town; menu0; k START DOWN DOWN DOWN DOWN DOWN A; w 1.5; shot 43_save_prompt; k B; w 0.5; k B B; w; }
 
+# ---------- family 2: party menu and summary ----------
+party() { town; menu0; k START DOWN A; w 1.5; }
+s10() { party; shot 10_party_menu; k A; w 0.7; shot 11_party_action;
+        k A; w 1.5; shot 12_summary_info; k RIGHT; w 0.8; shot 13_summary_p2; k RIGHT; w 0.8; shot 14_summary_p3;
+        k RIGHT; w 0.8; shot 15_summary_p4; k LEFT; w 0.8; k DOWN; w 1; k A; w 0.8; shot 16_summary_move_detail;
+        k B; w 0.5; k B; w 1.5; k B; w 0.3; k B; w 1.5; s17; }
+s17() { party; k A DOWN A; w 0.8; k DOWN; w 0.5; shot 17_party_switch; k B B; w 0.5; k B; w 1.5; k B; w; }
+
 for s in "$@"; do "$s" 2>/dev/null || "s$s"; done
