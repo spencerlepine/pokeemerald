@@ -25,7 +25,7 @@ saying which bank and theme it uses; building the tool includes wiring that step
 
 ## Status
 
-The Tools table below marks only the tools with work left as **TODO** (not built, or built only in part; the
+The Tools table below marks the tools with work left as **TODO** and finished, installed ones as **DONE** (not built, or built only in part; the
 tool's own README or `TODO.md` says what is missing). A blank status means the tool works: follow its README.
 
 ## Tools
@@ -37,9 +37,9 @@ tool's own README or `TODO.md` says what is missing). A blank status means the t
 | [`palette-enforcer/`](palette-enforcer/) |  | Shared palette gate and post-processor: GBA hardware rules plus the wiki themes ([`PALETTES.md`](PALETTES.md)). Every art tool calls it last. | all art | - |
 | [`play-tester/`](play-tester/) |  | Headless mGBA play-testing: scripts, Lua helpers, savestates | - | - |
 | [`sprite-creature-generator/`](sprite-creature-generator/) |  | Companion battle sprites: front, second animation frame, back, normal and shiny palettes, battle placement data; Unown and Castform forms. | A1, A2 | `pending_art.csv` kind `pokemon` (front, anim_front, back) for each species and form; 1,248 PNGs |
-| [`sprite-creature-icon-generator/`](sprite-creature-icon-generator/) |  | Companion party and PC box icons (2-frame wiggle) and their shared-palette index. | A3 | `pending_art.csv` kind `pokemon` icon files; 417 PNGs |
-| [`sprite-creature-footprint-generator/`](sprite-creature-footprint-generator/) |  | Companion Datapad footprints. | A4 | `pending_art.csv` kind `pokemon` footprint files; 387 PNGs |
-| [`sprite-creature-extras-generator/`](sprite-creature-extras-generator/) |  | The Egg (pics, hatch and shard sheets), Spinda's spot masks, question-mark placeholder pics. | A5 | `pending_art.csv` kind `pokemon` subkinds `egg`, `question_mark`, `spinda` spots; 14 PNGs |
+| [`sprite-creature-icon-generator/`](sprite-creature-icon-generator/) |  | Companion party and PC box icons (2-frame wiggle) and their shared-palette index. All drawn (ART_READY); installed after the creatures are ported. | A3 | `pending_art.csv` kind `pokemon` icon files; 417 PNGs |
+| [`sprite-creature-footprint-generator/`](sprite-creature-footprint-generator/) |  | Companion Datapad footprints. All drawn (ART_READY); installed after the creatures are ported. | A4 | `pending_art.csv` kind `pokemon` footprint files; 387 PNGs |
+| [`sprite-creature-extras-generator/`](sprite-creature-extras-generator/) | DONE | The Egg (pics, hatch and shard sheets), Spinda's spot masks, question-mark placeholder pics. Installed in `../game` 2026-11-02 (the Egg and placeholder icons wait for the icon banks). | A5 | `pending_art.csv` kind `pokemon` subkinds `egg`, `question_mark`, `spinda` spots; 14 PNGs |
 | [`sprite-icon-generator/`](sprite-icon-generator/) | TODO | Small fixed-size stills: item icons, fruit (berries), decoration icons, capture pods in battle, type labels. | C1, C2, C3, C5, C6 | `pending_art.csv` kinds `items`, `berries`, `decorations`, `balls`, `types`; 340 PNGs |
 | [`sprite-walker-generator/`](sprite-walker-generator/) |  | Overworld walking sprites: people (player, rivals, NPCs), overworld companions, placed dolls and cushions. | A6, B3, C4 | `pending_art.csv` kind `object_events`; 207 PNGs |
 | [`sprite-trainer-generator/`](sprite-trainer-generator/) |  | Trainer battle portraits and Prof. Korr's intro portrait. | B1, B4 | `pending_art.csv` kind `trainers` (front pics) and `birch_speech`; 95 PNGs |

@@ -26,10 +26,17 @@ The `question_mark/footprint.png` placeholder print is kept vanilla. Every PNG g
 ## Outputs
 
 `out/graphics/pokemon/...` (git-ignored), copied to `../../wiki/art/` and listed in
-`../../wiki/mapping/art_ready.csv` (16 rows, ART_READY on 2026-11-02). The Egg and placeholder icon banks are in
+`../../wiki/mapping/art_ready.csv` (16 rows, ART_READY on 2026-11-02; 14 installed, see below). The Egg and placeholder icon banks are in
 `../sprite-creature-icon-generator/icon_palette_indices.csv`.
 
-## Install (not done yet)
+## Installed (2026-11-02)
 
-Copy the files into `../../game/graphics/pokemon/`. No code changes: `gMonIconPaletteIndices[SPECIES_EGG]` is
-already 1, the placeholders' entry 0. Then set `game_status` DONE.
+All 19 files are in `../../game/graphics/pokemon/` (`egg/`, `question_mark/circled/`, `question_mark/double/`,
+`spinda/spots/`); the 14 PNG rows are `game_status` DONE. The pixel indices of the Egg and placeholder sheets
+are unchanged, so only their palettes differ; the ROM builds (`make`), and the only symbols that changed size
+are the two compressed `DoubleQuestionMark` palettes. No code changed: `gMonIconPaletteIndices[SPECIES_EGG]`
+is 1 and the placeholders' entry 0.
+
+Not installed yet: `egg/icon.png` and `question_mark/icon.png`. They are drawn on the fitted icon banks, which go
+into the game together with every creature icon (`../sprite-creature-icon-generator`, after the creatures are
+ported).
