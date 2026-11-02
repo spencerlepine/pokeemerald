@@ -113,6 +113,7 @@ static EWRAM_DATA u16 sNextLine = 0;    // next text line to draw into the ring
 static EWRAM_DATA bool8 sPlayedThisBoot = FALSE;
 static EWRAM_DATA u16 sSpaceTimer = 0;  // frames since the crawl started, for the star fade-in
 static EWRAM_DATA u16 sBackdropColor = 0;
+static EWRAM_DATA bool8 sSpaceShown = FALSE; // the title screen already put the stars up (IntroCrawl_BuildSpace)
 
 static void CB2_IntroCrawl(void);
 static void VBlankCB_IntroCrawl(void);
@@ -124,7 +125,7 @@ static void Task_IntroCrawlFadeOut(u8 taskId);
 static void Task_IntroCrawlExit(u8 taskId);
 static void BuildLineRegs(void);
 static void DrawRingLine(u16 line);
-static void BuildSpace(void);
+static void BuildSpace(u8 palNum);
 static void UpdateSpaceFade(void);
 
 // Very dark purple-grey-blue, a step lighter per band going down the screen
@@ -264,9 +265,23 @@ void CB2_InitIntroCrawl(void)
         ResetTasks();
         ResetSpriteData();
         FreeAllSpritePalettes();
-        // BG1 only shows blank tile 0 (the backdrop) now, so hiding it while its tiles are
-        // rebuilt changes nothing on screen.
-        SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_MODE_1);
+        if (sSpaceShown)
+        {
+            // The title screen faded the stars in already (in BG palette 15, which the text
+            // window takes here): keep BG1 on and move it over to SPACE_PAL as it is.
+            map = (u16 *)BG_SCREEN_ADDR(CRAWL_BG1_SCREEN);
+            CpuCopy16(&gPlttBufferUnfaded[BG_PLTT_ID(TEXT_PAL)], &gPlttBufferUnfaded[BG_PLTT_ID(SPACE_PAL)], PLTT_SIZE_4BPP);
+            CpuCopy16(&gPlttBufferUnfaded[BG_PLTT_ID(SPACE_PAL)], &gPlttBufferFaded[BG_PLTT_ID(SPACE_PAL)], PLTT_SIZE_4BPP);
+            for (i = 0; i < 32 * 32; i++)
+                map[i] = (map[i] & 0x0FFF) | (SPACE_PAL << 12);
+            SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_MODE_1 | DISPCNT_BG1_ON);
+        }
+        else
+        {
+            // BG1 only shows blank tile 0 (the backdrop) now, so hiding it while its tiles are
+            // rebuilt changes nothing on screen.
+            SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_MODE_1);
+        }
         SetGpuReg(REG_OFFSET_BLDCNT, 0);
         SetGpuReg(REG_OFFSET_BLDALPHA, 0);
         SetGpuReg(REG_OFFSET_BLDY, 0);
@@ -278,7 +293,8 @@ void CB2_InitIntroCrawl(void)
         DmaFill16(3, 0, (void *)BG_CHAR_ADDR(CRAWL_BG2_CHARBASE), BG_CHAR_SIZE);
         DmaFill16(3, 0, (void *)BG_CHAR_ADDR(CRAWL_BG0_CHARBASE), BG_CHAR_SIZE);
         DmaFill16(3, 0, (void *)BG_SCREEN_ADDR(CRAWL_BG0_SCREEN), BG_SCREEN_SIZE);
-        BuildSpace();
+        if (!sSpaceShown)
+            BuildSpace(SPACE_PAL);
         gMain.state++;
         break;
     case 1:
@@ -315,9 +331,18 @@ void CB2_InitIntroCrawl(void)
         }
         // Deep space starts as the backdrop colour (invisible) and is faded in by the crawl task
         sBackdropColor = gPlttBufferUnfaded[0];
-        sSpaceTimer = 0;
-        LoadPalette(sSpacePalette, BG_PLTT_ID(SPACE_PAL), PLTT_SIZE_4BPP);
-        BlendPalette(BG_PLTT_ID(SPACE_PAL), 16, 16, sBackdropColor);
+        if (sSpaceShown)
+        {
+            // Already faded in by the title screen
+            sSpaceTimer = SPACE_STAR_DELAY + SPACE_STAR_FADE;
+            sSpaceShown = FALSE;
+        }
+        else
+        {
+            sSpaceTimer = 0;
+            LoadPalette(sSpacePalette, BG_PLTT_ID(SPACE_PAL), PLTT_SIZE_4BPP);
+            BlendPalette(BG_PLTT_ID(SPACE_PAL), 16, 16, sBackdropColor);
+        }
         gMain.state++;
         break;
     case 3:
@@ -470,7 +495,7 @@ static void SetTilePixel(u32 *tile, u8 x, u8 y, u8 color)
     tile[y] = (tile[y] & ~(0xFu << (x * 4))) | ((u32)color << (x * 4));
 }
 
-static void BuildSpace(void)
+static void BuildSpace(u8 palNum)
 {
     u32 *chars = (u32 *)BG_CHAR_ADDR(CRAWL_BG1_CHARBASE);
     u16 *map = (u16 *)BG_SCREEN_ADDR(CRAWL_BG1_SCREEN);
@@ -492,7 +517,7 @@ static void BuildSpace(void)
         u8 band = SpaceBand(y);
         for (x = 0; x < 32; x++)
         {
-            u16 entry = band | (SPACE_PAL << 12);
+            u16 entry = band | (palNum << 12);
 
             if (y < DISPLAY_HEIGHT / 8 && x < DISPLAY_WIDTH / 8
              && SpaceRandom() % 100 < SPACE_STAR_CHANCE && nextTile < SPACE_MAX_TILES)
@@ -535,11 +560,28 @@ static void BuildSpace(void)
                 }
 
                 CpuCopy32(tile, &chars[nextTile * 8], sizeof(tile));
-                entry = nextTile++ | (SPACE_PAL << 12);
+                entry = nextTile++ | (palNum << 12);
             }
             map[y * 32 + x] = entry;
         }
     }
+}
+
+// For the title screen (title_screen.c): the same sky in BG charblock 2 / screen 28, drawn in BG
+// palette palNum. crawlHandOff tells the crawl the stars are already up, so it keeps them as they
+// are instead of fading them in again.
+void IntroCrawl_BuildSpace(u8 palNum, bool8 crawlHandOff)
+{
+    BuildSpace(palNum);
+    sSpaceShown = crawlHandOff;
+}
+
+// level 0 = the plain backdrop colour, 16 = the sky at full strength
+void IntroCrawl_SetSpaceLevel(u8 palNum, u8 level)
+{
+    LoadPalette(sSpacePalette, BG_PLTT_ID(palNum), PLTT_SIZE_4BPP);
+    if (level < 16)
+        BlendPalette(BG_PLTT_ID(palNum), 16, 16 - level, gPlttBufferUnfaded[0]);
 }
 
 // Fade the gradient and stars in from the backdrop, a moment after the crawl starts. A screen fade

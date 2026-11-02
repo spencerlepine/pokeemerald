@@ -7,6 +7,9 @@ bool8 IntroCrawl_ShouldPlay(void);
 void CB2_InitIntroCrawl(void);
 // Starts the crawl theme (replacing the title music) as the title screen sends the logo off
 void IntroCrawl_StartMusic(void);
+// The crawl's starfield (BG charblock 2, screen 28) for the title screen, in BG palette palNum
+void IntroCrawl_BuildSpace(u8 palNum, bool8 crawlHandOff);
+void IntroCrawl_SetSpaceLevel(u8 palNum, u8 level);
 
 // "A long time ago in a galaxy far, far away...." between the intro movie and the title screen
 void CB2_InitGalaxyFarAway(void);

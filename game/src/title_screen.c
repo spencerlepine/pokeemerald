@@ -58,6 +58,14 @@ enum {
 #define BERRY_UPDATE_BUTTON_COMBO (B_BUTTON | SELECT_BUTTON)
 #define A_B_START_SELECT (A_BUTTON | B_BUTTON | START_BUTTON | SELECT_BUTTON)
 
+// The starfield behind the logo while it shines, and again while it shrinks away before the crawl:
+// the crawl's sky (IntroCrawl_BuildSpace) on BG1, in charblock 2 / screen 28 (the ridge's tiles,
+// which are not on screen at those times), in BG palette 15 (the title screen loads only 0-14).
+#define TITLE_STARS_PAL         15
+#define TITLE_STARS_CHARBASE    2
+#define TITLE_STARS_SCREEN      28
+#define TITLE_STARS_FADE_OUT    32  // frames the stars take to go, once the shines are over
+
 static void MainCB2(void);
 static void Task_TitleScreenPhase1(u8);
 static void Task_TitleScreenPhase2(u8);
@@ -571,48 +579,14 @@ static void SpriteCB_PokemonLogoShine(struct Sprite *sprite)
 {
     if (sprite->x < DISPLAY_WIDTH + 32)
     {
-        // In any mode except SHINE_MODE_SINGLE_NO_BG_COLOR the background
-        // color will change, in addition to the shine sprite moving.
-        if (sprite->sMode != SHINE_MODE_SINGLE_NO_BG_COLOR)
-        {
-            u16 backgroundColor;
-
-            if (sprite->x < DISPLAY_WIDTH / 2)
-            {
-                // Brighten background color
-                if (sprite->sBgColor < 31)
-                    sprite->sBgColor++;
-                if (sprite->sBgColor < 31)
-                    sprite->sBgColor++;
-            }
-            else
-            {
-                // Darken background color
-                if (sprite->sBgColor != 0)
-                    sprite->sBgColor--;
-                if (sprite->sBgColor != 0)
-                    sprite->sBgColor--;
-            }
-
-            backgroundColor = _RGB(sprite->sBgColor, sprite->sBgColor, sprite->sBgColor);
-
-            // Flash the background for 4 frames of movement: Kyber Blue #58C8F8, the title theme's accent
-            // (wiki/bible/PALETTE.md); Emerald flashed green here. Otherwise use the updating color.
-            if (sprite->x == DISPLAY_WIDTH / 2 + (3 * SHINE_SPEED)
-             || sprite->x == DISPLAY_WIDTH / 2 + (4 * SHINE_SPEED)
-             || sprite->x == DISPLAY_WIDTH / 2 + (5 * SHINE_SPEED)
-             || sprite->x == DISPLAY_WIDTH / 2 + (6 * SHINE_SPEED))
-                gPlttBufferFaded[0] = RGB(11, 25, 31);
-            else
-                gPlttBufferFaded[0] = backgroundColor;
-        }
-
+        // Emerald also flashed the whole background (white, then green) in
+        // SHINE_MODE_SINGLE and SHINE_MODE_DOUBLE. Here the logo sits on the starfield and
+        // the background never flashes: only the shine moves.
         sprite->x += SHINE_SPEED;
     }
     else
     {
         // Sprite has moved fully offscreen
-        gPlttBufferFaded[0] = RGB_BLACK;
         DestroySprite(sprite);
     }
 }
@@ -747,6 +721,8 @@ void CB2_InitTitleScreen(void)
         DmaFill32(3, 0, (void *)OAM, OAM_SIZE);
         DmaFill16(3, 0, (void *)(PLTT + 2), PLTT_SIZE - 2);
         ResetPaletteFade();
+        gBattle_BG1_X = 0;
+        gBattle_BG1_Y = 0;
         gMain.state = 1;
         break;
     case 1:
@@ -771,6 +747,9 @@ void CB2_InitTitleScreen(void)
         LoadPalette(gTitleScreenEmeraldVersionPal, OBJ_PLTT_ID(0), PLTT_SIZE_4BPP);
         LoadSpritePalette(&sSpritePalette_PressStart[0]);
         LoadCollageGraphics();
+        // Stars behind the logo. They take the ridge's tiles until Task_TitleScreenPhase2 puts it back.
+        IntroCrawl_BuildSpace(TITLE_STARS_PAL, FALSE);
+        IntroCrawl_SetSpaceLevel(TITLE_STARS_PAL, 16);
         gMain.state = 2;
         break;
     case 2:
@@ -785,7 +764,8 @@ void CB2_InitTitleScreen(void)
         break;
     }
     case 3:
-        BeginNormalPaletteFade(PALETTES_ALL, 1, 16, 0, RGB_WHITEALPHA);
+        // Fade in from the dark of "A long time ago..." (Emerald faded in from white)
+        BeginNormalPaletteFade(PALETTES_ALL, 1, 16, 0, RGB_BLACK);
         SetVBlankCallback(VBlankCB);
         gMain.state = 4;
         break;
@@ -806,11 +786,13 @@ void CB2_InitTitleScreen(void)
         SetGpuReg(REG_OFFSET_BLDY, 0); // no lighten in the shine's window: UpdateLogoShine lights the letter faces
         // BG0 (ridge) is priority 1 like the logo, so it covers the collage figures (OBJ priority 2)
         SetGpuReg(REG_OFFSET_BG0CNT, BGCNT_PRIORITY(1) | BGCNT_CHARBASE(2) | BGCNT_SCREENBASE(26) | BGCNT_16COLOR | BGCNT_TXT256x256);
-        SetGpuReg(REG_OFFSET_BG1CNT, BGCNT_PRIORITY(2) | BGCNT_CHARBASE(3) | BGCNT_SCREENBASE(27) | BGCNT_16COLOR | BGCNT_TXT256x256);
+        // BG1 starts on the stars; Task_TitleScreenPhase2 switches it to the clouds
+        SetGpuReg(REG_OFFSET_BG1CNT, BGCNT_PRIORITY(3) | BGCNT_CHARBASE(TITLE_STARS_CHARBASE) | BGCNT_SCREENBASE(TITLE_STARS_SCREEN) | BGCNT_16COLOR | BGCNT_TXT256x256);
         SetGpuReg(REG_OFFSET_BG2CNT, BGCNT_PRIORITY(1) | BGCNT_CHARBASE(0) | BGCNT_SCREENBASE(9) | BGCNT_256COLOR | BGCNT_AFF256x256);
         EnableInterrupts(INTR_FLAG_VBLANK);
         SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_MODE_1
                                     | DISPCNT_OBJ_1D_MAP
+                                    | DISPCNT_BG1_ON
                                     | DISPCNT_BG2_ON
                                     | DISPCNT_OBJ_ON
                                     | DISPCNT_WIN0_ON
@@ -822,7 +804,7 @@ void CB2_InitTitleScreen(void)
         if (!UpdatePaletteFade())
         {
             StartPokemonLogoShine(SHINE_MODE_SINGLE_NO_BG_COLOR);
-            ScanlineEffect_InitWave(0, DISPLAY_HEIGHT, 4, 4, 0, SCANLINE_EFFECT_REG_BG1HOFS, TRUE);
+            // The clouds' wave (BG1HOFS) starts with the clouds, in Task_TitleScreenPhase2
             SetMainCallback2(MainCB2);
         }
         break;
@@ -863,7 +845,7 @@ static void Task_TitleScreenPhase1(u8 taskId)
     {
         u8 spriteId;
 
-        SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_MODE_1 | DISPCNT_OBJ_1D_MAP | DISPCNT_BG2_ON | DISPCNT_OBJ_ON);
+        SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_MODE_1 | DISPCNT_OBJ_1D_MAP | DISPCNT_BG1_ON | DISPCNT_BG2_ON | DISPCNT_OBJ_ON);
         SetGpuReg(REG_OFFSET_WININ, 0);
         SetGpuReg(REG_OFFSET_WINOUT, 0);
         SetGpuReg(REG_OFFSET_BLDCNT, BLDCNT_TGT1_OBJ | BLDCNT_EFFECT_BLEND | BLDCNT_TGT2_ALL);
@@ -902,10 +884,19 @@ static void Task_TitleScreenPhase2(u8 taskId)
 
     if (gTasks[taskId].tCounter != 0)
     {
+        // The shines are over: the stars fade out while the version banner comes in
+        s32 gone = 144 - gTasks[taskId].tCounter;
+        if (gone <= TITLE_STARS_FADE_OUT)
+            IntroCrawl_SetSpaceLevel(TITLE_STARS_PAL, 16 - (gone * 16) / TITLE_STARS_FADE_OUT);
         gTasks[taskId].tCounter--;
     }
     else
     {
+        // Stars off, clouds and ridge back on BG1 and BG0 (the stars had the ridge's tiles)
+        SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_MODE_1 | DISPCNT_OBJ_1D_MAP | DISPCNT_BG2_ON | DISPCNT_OBJ_ON);
+        LZ77UnCompVram(sTitleScreenRayquazaGfx, (void *)(BG_CHAR_ADDR(2)));
+        SetGpuReg(REG_OFFSET_BG1CNT, BGCNT_PRIORITY(2) | BGCNT_CHARBASE(3) | BGCNT_SCREENBASE(27) | BGCNT_16COLOR | BGCNT_TXT256x256);
+        ScanlineEffect_InitWave(0, DISPLAY_HEIGHT, 4, 4, 0, SCANLINE_EFFECT_REG_BG1HOFS, TRUE);
         gTasks[taskId].tSkipToNext = TRUE;
         SetGpuReg(REG_OFFSET_BLDCNT, BLDCNT_TGT1_BG1 | BLDCNT_EFFECT_BLEND | BLDCNT_TGT2_BG0 | BLDCNT_TGT2_BD);
         SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(6, 15));
@@ -996,11 +987,8 @@ static void Task_TitleScreenPhase3(u8 taskId)
 // "Press Start", the copyright and the KYBER VERSION banner vanish at once. The character collage
 // slides back out to the sides while the clouds (BG1) blend out, then the foreground ridge (BG0)
 // sinks below the bottom edge. Only then does the STAR WARS wordmark (BG2, affine) shrink away into
-// the distance from where it stands, and darken. What is left is the night backdrop, which the crawl
-// keeps on screen.
-// BG1 is still pointed at screen 28 (intro_crawl.c keeps showing it): it is built from BG0's plain
-// sky tiles, and since BG0 now holds only the ridge (no gradient), every row falls back to BG0's
-// blank tile 0, so the crawl starts on the flat backdrop the title screen shows.
+// the distance from where it stands, and darken, while the crawl's stars fade in behind it on BG1
+// (screen 28). The crawl (intro_crawl.c) keeps those stars on screen as they are.
 // ---------------------------------------------------------------------------------------------
 
 #define CRAWL_OUT_LOGO_FRAMES   180  // logo shrink, after the creature and clouds are gone
@@ -1015,25 +1003,9 @@ static void Task_TitleScreenPhase3(u8 taskId)
 #define CRAWL_OUT_SKY_SCREEN    28   // screen block for the cloudless gradient map (intro_crawl.c uses it too)
 #define CRAWL_OUT_SKY_CHARBASE  2    // BG0's tiles (the ridge; tile 0 is blank)
 #define CRAWL_OUT_RIDGE_DROP    24   // px the ridge sinks while the collage leaves
+#define CRAWL_OUT_STARS_FADE    90   // logo frames the stars take to fade in (they start as the logo starts to shrink)
 
 #define tOutFrame data[5]
-
-// BG0 tile (map entry) drawn only in the gradient's colours (palette 14 indices 4-10, see
-// tools/title-screen-generator/bg_round.py), so it holds no part of the creature.
-static bool8 IsPlainSkyTile(u16 entry)
-{
-    const u8 *tile = (const u8 *)(BG_CHAR_ADDR(CRAWL_OUT_SKY_CHARBASE) + (entry & 0x3FF) * 32);
-    u16 i;
-
-    for (i = 0; i < 32; i++)
-    {
-        u8 lo = tile[i] & 0xF;
-        u8 hi = tile[i] >> 4;
-        if (lo < 4 || lo > 10 || hi < 4 || hi > 10)
-            return FALSE;
-    }
-    return TRUE;
-}
 
 static void StartTitleScreenCrawlOut(u8 taskId)
 {
@@ -1099,49 +1071,43 @@ static void Task_TitleScreenCrawlOut(u8 taskId)
     }
     else if (frame == CRAWL_OUT_CLOUDS_END)
     {
-        // Clouds are invisible now. Point BG1 at the gradient with the creature taken out:
-        // each tile row of BG0 is filled with one of its own plain-gradient tiles.
-        u16 *src = (u16 *)BG_SCREEN_ADDR(26);
-        u16 *dst = (u16 *)BG_SCREEN_ADDR(CRAWL_OUT_SKY_SCREEN);
-        u16 x, y, sky = src[0];
-
+        // Clouds are invisible now. Point BG1 at an empty screen (blank tile 0, the backdrop):
+        // the stars are built into it once the ridge's tiles are free. (This used to copy plain
+        // sky tiles out of the ridge's map, which left a band of the ridge's colour across the
+        // bottom of the screen until the crawl.)
         ScanlineEffect_Stop();
-        for (y = 0; y < 32; y++)
-        {
-            if (y < DISPLAY_HEIGHT / 8)
-            {
-                for (x = 0; x < 32; x++)
-                {
-                    if (IsPlainSkyTile(src[y * 32 + x]))
-                    {
-                        sky = src[y * 32 + x];
-                        break;
-                    }
-                }
-            }
-            for (x = 0; x < 32; x++)
-                dst[y * 32 + x] = sky;
-        }
+        DmaFill16(3, 0, (void *)BG_SCREEN_ADDR(CRAWL_OUT_SKY_SCREEN), BG_SCREEN_SIZE);
         gBattle_BG1_X = 0;
         gBattle_BG1_Y = 0;
         SetGpuReg(REG_OFFSET_BG1HOFS, 0);
-        SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(0, 16));
         SetGpuReg(REG_OFFSET_BG1CNT, BGCNT_PRIORITY(2) | BGCNT_CHARBASE(CRAWL_OUT_SKY_CHARBASE) | BGCNT_SCREENBASE(CRAWL_OUT_SKY_SCREEN) | BGCNT_16COLOR | BGCNT_TXT256x256);
+        // From here the ridge (BG0) fades into the backdrop
+        SetGpuReg(REG_OFFSET_BLDCNT, BLDCNT_TGT1_BG0 | BLDCNT_EFFECT_BLEND | BLDCNT_TGT2_BD);
+        SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(16, 0));
     }
     else if (frame <= CRAWL_OUT_CREATURE_END)
     {
         u8 eva;
         // The ridge (BG0) sinks below the bottom edge
         SetGpuReg(REG_OFFSET_BG0VOFS, -(((frame - CRAWL_OUT_CLOUDS_END) * CRAWL_OUT_RIDGE_DROP) / (CRAWL_OUT_CREATURE_END - CRAWL_OUT_CLOUDS_END)));
-        // Cross-fade the (now blank) sky screen (BG1) over BG0; the ridge sinks meanwhile
+        // Fade the ridge into the backdrop while it sinks
         eva = ((frame - CRAWL_OUT_CLOUDS_END) * 16) / (CRAWL_OUT_CREATURE_END - CRAWL_OUT_CLOUDS_END);
-        SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(eva, 16 - eva));
+        SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(16 - eva, eva));
         if (frame == CRAWL_OUT_CREATURE_END)
         {
             SetGpuReg(REG_OFFSET_BLDCNT, 0);
             SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_MODE_1 | DISPCNT_OBJ_1D_MAP | DISPCNT_BG1_ON | DISPCNT_BG2_ON | DISPCNT_OBJ_ON);
             SetGpuReg(REG_OFFSET_BG0VOFS, 0);
+            // The ridge's tiles are free: build the crawl's stars into BG1, invisible for now.
+            // The crawl takes them over as they are (no second fade-in there).
+            IntroCrawl_SetSpaceLevel(TITLE_STARS_PAL, 0);
+            IntroCrawl_BuildSpace(TITLE_STARS_PAL, TRUE);
         }
+    }
+    else if (logoFrame <= CRAWL_OUT_STARS_FADE)
+    {
+        // The stars fade in while the logo shrinks
+        IntroCrawl_SetSpaceLevel(TITLE_STARS_PAL, (logoFrame * 16) / CRAWL_OUT_STARS_FADE);
     }
 
     if (++gTasks[taskId].tOutFrame > CRAWL_OUT_FRAMES)
