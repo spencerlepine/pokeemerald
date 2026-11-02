@@ -1,0 +1,22 @@
+name: funnelbud
+slot: cacnea
+brief: "FUNNELBUD: creature call that fits its look and size. Spiny desert funnel flower."
+kind: creature
+size: 0.3
+seed: 801
+layers:
+  # Desert-husk family voice: a dry rattle of spine clicks over a raspy, noisy throat shaped er-a.
+  # The bud gives a quick rattle and a scratchy little squeak.
+  - type: click
+    times: [0.0, 0.03, 0.06, 0.09, 0.12]
+    gain: 0.7
+  - type: voice
+    at: 0.05
+    pitch: [[0, 480], [0.08, 620], [0.3, 460]]
+    source: {saw: 0.8, pulse: 0.4, pulse_width: 0.2, noise: 0.25}
+    vowels: [[0, er], [0.12, a], [0.3, er]]
+    env: [[0, 0], [0.01, 1], [0.18, 0.7], [0.32, 0]]
+    growl: 0.3
+    growl_rate: 50
+    jitter: 0.03
+    emphasis: 0.7

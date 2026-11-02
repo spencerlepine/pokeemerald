@@ -1,0 +1,33 @@
+name: holocron
+slot: claydol
+brief: "HOLOCRON: creature call that fits its look and size. Ancient floating holocron that speaks with the voices of the dead."
+kind: creature
+size: 0.7
+seed: 702
+layers:
+  # Holocron family voice ("m" hum + spinning triangle chime), full size: the chime rings slower and
+  # lower while two ghostly throats, a fifth apart and drifting, murmur "m-o-a-u" like distant voices.
+  - type: tone
+    wave: tri
+    pitch: [[0, 900], [0.3, 1150], [0.85, 950]]
+    pitch_step: 0.05
+    warble: {rate: 9, depth: 0.05}
+    env: [[0, 0], [0.01, 1], [0.4, 0.6], [0.88, 0]]
+  - type: voice
+    at: 0.02
+    pitch: [[0, 220], [0.35, 260], [0.85, 200]]
+    pitch_step: 0.05
+    source: {pulse: 0.8, pulse_width: 0.25, saw: 0.3, noise: 0.05}
+    vowels: [[0, m], [0.3, o], [0.6, a], [0.85, u]]
+    env: [[0, 0], [0.04, 0.8], [0.6, 0.6], [0.87, 0]]
+    vibrato: {rate: 5, depth: 0.025}
+    gain: 0.8
+  - type: voice
+    at: 0.1
+    pitch: [[0, 330], [0.35, 395], [0.75, 300]]
+    source: {pulse: 0.8, pulse_width: 0.25, saw: 0.3, noise: 0.05}
+    vowels: [[0, m], [0.3, a], [0.5, o], [0.75, m]]
+    env: [[0, 0], [0.1, 0.6], [0.55, 0.45], [0.77, 0]]
+    vibrato: {rate: 4, depth: 0.03}
+    jitter: 0.015
+    gain: 0.55

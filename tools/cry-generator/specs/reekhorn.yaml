@@ -1,0 +1,25 @@
+name: reekhorn
+slot: nidorino
+brief: "REEKHORN: creature call that fits its look and size. Horned young reek."
+kind: creature
+size: 0.35
+seed: 502
+layers:
+  # Reek family voice (snort + gruff aw-o-rr bellow), a young bull: a harder snort and a rougher,
+  # more aggressive bellow that jerks up before dropping.
+  - type: noise
+    band: [[0, 1200], [0.07, 800]]
+    q: 1.2
+    env: [[0, 0], [0.008, 0.9], [0.07, 0]]
+    gain: 0.6
+  - type: voice
+    at: 0.06
+    pitch: [[0, 320], [0.07, 440], [0.28, 370], [0.47, 260]]
+    source: {saw: 0.9, pulse: 0.3, pulse_width: 0.3, noise: 0.08}
+    vowels: [[0, aw], [0.17, o], [0.47, rr]]
+    env: [[0, 0], [0.015, 1], [0.22, 0.75], [0.48, 0]]
+    growl: 0.35
+    growl_rate: 36
+    jitter: 0.02
+    drive: 1.8
+    emphasis: 0.7

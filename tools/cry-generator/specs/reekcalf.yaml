@@ -1,0 +1,23 @@
+name: reekcalf
+slot: nidoran_m
+brief: "REEKCALF: creature call that fits its look and size. Reek calf."
+kind: creature
+size: 0.2
+seed: 501
+layers:
+  # Reek family voice: a nostril snort, then a gruff saw throat bellowing aw-o-rr. The calf's bleat is
+  # short and high, with just a little growl.
+  - type: noise
+    band: [[0, 1400], [0.06, 900]]
+    q: 1.2
+    env: [[0, 0], [0.008, 0.8], [0.06, 0]]
+    gain: 0.6
+  - type: voice
+    at: 0.05
+    pitch: [[0, 380], [0.08, 500], [0.25, 430], [0.4, 330]]
+    source: {saw: 0.9, pulse: 0.3, pulse_width: 0.3, noise: 0.08}
+    vowels: [[0, aw], [0.15, o], [0.4, rr]]
+    env: [[0, 0], [0.015, 1], [0.2, 0.75], [0.41, 0]]
+    growl: 0.2
+    growl_rate: 40
+    emphasis: 0.7

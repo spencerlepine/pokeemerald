@@ -1,0 +1,30 @@
+name: dunehusk
+slot: cacturne
+brief: "DUNEHUSK: creature call that fits its look and size. Desert scarecrow that hunts at night."
+kind: creature
+size: 0.6
+seed: 802
+layers:
+  # Desert-husk family voice (spine rattle + raspy er-a throat), grown into a night hunter: a dry
+  # rattle, then a slow, creeping, hollow moan that rises and sinks, with a husky wind-hiss and a
+  # final rattle.
+  - type: click
+    times: [0.0, 0.035, 0.07, 0.105, 0.14, 0.9, 0.93, 0.96]
+    gain: 0.7
+  - type: voice
+    at: 0.08
+    pitch: [[0, 260], [0.3, 360], [0.6, 320], [0.85, 220]]
+    source: {saw: 0.8, pulse: 0.4, pulse_width: 0.2, noise: 0.25}
+    vowels: [[0, er], [0.3, a], [0.6, o], [0.85, er]]
+    env: [[0, 0], [0.02, 1], [0.5, 0.75], [0.87, 0]]
+    vibrato: {rate: 5, depth: 0.03}
+    growl: 0.4
+    growl_rate: 32
+    jitter: 0.03
+    drive: 1.8
+  - type: noise
+    at: 0.3
+    band: [[0, 1600], [0.5, 1100]]
+    q: 1.2
+    env: [[0, 0], [0.15, 0.3], [0.6, 0]]
+    gain: 0.25

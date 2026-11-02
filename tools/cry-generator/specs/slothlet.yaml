@@ -1,0 +1,18 @@
+name: slothlet
+slot: slakoth
+brief: "SLOTHLET: creature call that fits its look and size. Swamp sloth that sleeps 20 hours a day (Truant)."
+kind: creature
+size: 0.35
+seed: 601
+layers:
+  # Swamp-sloth family voice: a hoarse, breathy saw throat shaped a-aw-o. The sleepy one gives a single
+  # lazy, sagging yawn-grunt ("haa-aww").
+  - type: voice
+    pitch: [[0, 330], [0.06, 380], [0.38, 240]]
+    source: {saw: 0.7, pulse: 0.5, pulse_width: 0.4, noise: 0.15}
+    vowels: [[0, a], [0.15, aw], [0.38, o]]
+    env: [[0, 0], [0.02, 1], [0.15, 0.85], [0.39, 0]]
+    vibrato: {rate: 5, depth: 0.015}
+    growl: 0.2
+    growl_rate: 30
+    emphasis: 0.7

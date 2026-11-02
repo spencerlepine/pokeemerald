@@ -1,0 +1,24 @@
+name: holoshard
+slot: baltoy
+brief: "HOLOSHARD: creature call that fits its look and size. Spinning shard of an ancient holocron."
+kind: creature
+size: 0.3
+seed: 701
+layers:
+  # Holocron family voice: a closed-mouth "m" hum through a pulse throat, under a crystalline triangle
+  # chime that wobbles as it spins. The shard spins fast and chirps in frame-steps.
+  - type: tone
+    wave: tri
+    pitch: [[0, 1300], [0.2, 1700], [0.55, 1400]]
+    pitch_step: 0.05
+    warble: {rate: 16, depth: 0.06}
+    env: [[0, 0], [0.01, 1], [0.3, 0.7], [0.56, 0]]
+  - type: voice
+    at: 0.02
+    pitch: [[0, 360], [0.25, 430], [0.5, 380]]
+    pitch_step: 0.05
+    source: {pulse: 0.8, pulse_width: 0.25, saw: 0.3}
+    vowels: [[0, m], [0.25, u], [0.5, m]]
+    env: [[0, 0], [0.03, 0.8], [0.4, 0.6], [0.52, 0]]
+    vibrato: {rate: 16, depth: 0.03}
+    gain: 0.8

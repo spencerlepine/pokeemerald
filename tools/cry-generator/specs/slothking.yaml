@@ -1,0 +1,26 @@
+name: slothking
+slot: slaking
+brief: "SLOTHKING: creature call that fits its look and size. Enormous, lazy, terrifyingly strong swamp sloth."
+kind: creature
+size: 0.8
+seed: 603
+layers:
+  # Swamp-sloth family voice (hoarse a-aw-o), enormous: one deep, unbothered, chest-heavy grunt that
+  # sags into a breathy huff. Lazy, but you feel the weight.
+  - type: voice
+    pitch: [[0, 190], [0.05, 240], [0.4, 140]]
+    pitch_step: 0.04
+    source: {saw: 0.7, pulse: 0.5, pulse_width: 0.4, noise: 0.15}
+    vowels: [[0, a], [0.15, aw], [0.4, o]]
+    env: [[0, 0], [0.015, 1], [0.2, 0.8], [0.42, 0]]
+    growl: 0.5
+    growl_rate: 25
+    jitter: 0.02
+    drive: 2.4
+    formant_scale: 1.3
+  - type: noise
+    at: 0.25
+    band: [[0, 900], [0.2, 600]]
+    q: 1
+    env: [[0, 0], [0.04, 0.4], [0.2, 0]]
+    gain: 0.35

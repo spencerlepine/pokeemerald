@@ -1,0 +1,31 @@
+name: reek
+slot: nidoking
+brief: "REEK: creature call that fits its look and size. Massive arena reek."
+kind: creature
+size: 0.62
+seed: 503
+layers:
+  # Reek family voice (snort + gruff aw-o-rr bellow), the full arena beast: a heavy snort, a long
+  # frame-stepped bellow with deep growl, and a second snort-huff as it lowers its horns.
+  - type: noise
+    band: [[0, 1000], [0.08, 650]]
+    q: 1.2
+    env: [[0, 0], [0.01, 1], [0.08, 0]]
+    gain: 0.6
+  - type: voice
+    at: 0.07
+    pitch: [[0, 230], [0.1, 330], [0.5, 290], [0.85, 180]]
+    pitch_step: 0.04
+    source: {saw: 0.9, pulse: 0.3, pulse_width: 0.3, noise: 0.08}
+    vowels: [[0, aw], [0.25, o], [0.6, aw], [0.85, rr]]
+    env: [[0, 0], [0.02, 1], [0.5, 0.8], [0.87, 0]]
+    growl: 0.5
+    growl_rate: 28
+    jitter: 0.02
+    drive: 2.2
+  - type: noise
+    at: 0.95
+    band: [[0, 900], [0.15, 600]]
+    q: 1.2
+    env: [[0, 0], [0.015, 0.6], [0.16, 0]]
+    gain: 0.4
