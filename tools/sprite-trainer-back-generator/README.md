@@ -1,108 +1,104 @@
 # sprite-trainer-back-generator
 
-**Status:** PENDING. The tool is not built yet, but every back pic has an approved-style **mockup**
-in [`mockups/`](mockups/) to work from. The earlier repaint tool in this folder was scrapped (it
-did not work) and deleted; it is in git history if anything needs recovering.
+**Status:** DONE (2026-11-02). `back.py` works end to end on Civitai's hosted generator (no GPU). All six
+back pics are owner-approved, stored in `wiki/art/graphics/trainers/back_pics/` (ART_READY) and installed in
+`game/graphics/trainers/back_pics/` (game_status DONE). The R/S slots are copies of Kael and Mira.
 
 Draws **trainer battle back pics**: the player and partners seen over the shoulder, throwing a
-capture pod when a battle starts.
+capture pod when a battle starts. Each is 4 frames of 64x64 (a 64x256 PNG, 4bpp) on the **front
+pic's palette**, so the back matches the shipped front.
 
-## What this tool makes
+| Back pic | Character |
+|---|---|
+| `brendan` | KAEL (player, boy) |
+| `may` | MIRA (player, girl) |
+| `brendan_rs` / `may_rs` | Kael and Mira, old Ruby/Sapphire pics (link battles) |
+| `wally` | LUKE SKYWALKER (catching tutorial) |
+| `steven` | LEIA ORGANA (multi-battle partner) |
 
-"SD" means a Stable Diffusion model run on a rented GPU; "Python" means a deterministic script
-that runs anywhere.
+## How it works
 
-| # | File | Size and format | Made by | Notes |
-|---|---|---|---|---|
-| 1 | `game/graphics/trainers/back_pics/<trainer>.png` (6 files) | 64x256 = 4 frames of 64x64, 4bpp | Frame 1: **SD** (trainer LoRA, back view) + Python finisher. Frames 2-4: **SD img2img** from frame 1, or hand edit | Waist-up, seen from behind and to the left, larger than the front pic. Frames: holding the pod, wind-up, throw, arm down |
-| 2 | Palette | `game/graphics/trainers/palettes/<trainer>.pal` for Brendan, May, their R/S pics, Wally and Steven | **Python** | Brendan, May, the R/S pics and Wally share this file with their **front** pic, so the back is quantised to the existing palette rather than a new one |
-| 3 | Animation timing: `game/src/data/trainer_graphics/back_pic_anims.h` | frame order and durations | Kept vanilla | Only change it if the new frames need different timing |
-| 4 | Placement data: `gTrainerBackPicCoords` in `game/src/data/trainer_graphics/back_pic_tables.h` | `size`, `y_offset` | **Python** | |
+1. **`prep` (free).** Start from the vanilla 4 throw frames, so pose, framing, size and frame order
+   are already right. Recolour them onto the front pic's palette with the `map` in [`jobs.json`](jobs.json)
+   (vanilla index -> front index). `regions` remap inside a box (a hat band -> hair), and `paint`
+   draws shapes (Leia's buns, Mira's hood, Mira R/S's scarf). Boxes are written in frame 3's
+   coordinates and moved to each frame by an automatic head match (`anchor` overrides it).
+   The 4 frames go in a 2x2 sheet: 128x128 native, 8x = 1024x1024, on the LoRA's own 8 px grid.
+2. **`gen` (paid).** Image to image from the prep: SDXL + trainer LoRA 159333 (the same as the
+   fronts), one 1024 image holds all four frames so they stay one character. Denoise 0.5 keeps the
+   pose; 0.65 starts turning the head to the front; 0.35 keeps the prep's flat colours.
+3. **`finish` (free).** Reads the 8 px grid back to 128x128, cuts the white off (the fill enters only
+   from the top and sides: the figure runs off the bottom), splits the frames, then
+   `palette-enforcer enforce --pal <front palette>` and `check`. Writes `<trainer>.png` (64x256),
+   `back_4x.png`, `throw.gif` (vanilla timing) and `battle_mockup_3x.png`.
 
-Who these are (from the wiki): `brendan` -> KAEL (player, boy), `may` -> MIRA (player, girl),
-`wally` -> LUKE SKYWALKER (catching tutorial), `steven` -> LEIA ORGANA (multi-battle partner),
-`brendan_rs` / `may_rs` (old Ruby/Sapphire pics of Kael and Mira). The FireRed link leftovers `red` /
-`leaf` were deleted from the game.
+```bash
+cd tools/sprite-trainer-back-generator
+python3 back.py prep may                               # refs/may_prep.png (free)
+python3 back.py sheet --prep may                       # look at it before spending
+python3 back.py gen may --whatif                       # price: 6 Buzz (png), 4 (jpeg)
+python3 back.py run may --denoise 0.5 --seed 1101      # gen + finish -> runs/may/finished/<take>/
+python3 back.py sheet --only -1459 --last 2            # compare takes
+```
 
-## Not made here
+The palette is the shared `game/graphics/trainers/palettes/<trainer>.pal` (Kael, Mira, R/S, Luke);
+Leia's `steven.pal` is still the vanilla colours, so her front PNG's own bank is used.
 
-- Front pics of the same characters (full-body portraits), including the front-pic half of the shared palettes.
-- Overworld walking sprites.
+## Round log (2026-11-02, 312 green Buzz)
+
+- Test, Kael, denoise 0.35 / 0.5 / 0.65: 0.5 is the default.
+- Round 1, all six, 2 seeds: Kael, Luke, Leia close. The vanilla hat band came out as a headband
+  (fixed in the prep); "throwing a small ball" drew Poke Balls (prompt changed).
+- Round 2: Luke and Leia picked. Mira's painted hood stayed a flat disc at 0.55-0.65.
+- Round 3: Mira at 0.75 (reads as a hooded cloak; 0.85 lost the pose), Kael and Mira R/S with the
+  face and collar cleaned up in the prep.
+
+- Owner review 1: Luke and Leia approved. Kael's tunic whitened after the fact (`post_remap` in
+  jobs.json: grey-blue shades -> white, free). Mira's hood scrapped: round 4 (24 Buzz) keeps the R/S
+  head, hair and pose with a brown cloak painted behind the arms (`"under"` paint ops). Mira's hood
+  settings are kept as `may_v1` in jobs.json.
+- The R/S slots (`brendan_rs`, `may_rs`) only show in link battles with real Ruby/Sapphire carts, so
+  they reuse the main Kael and Mira pics (front, back and palette) instead of their own art.
+
+- Owner review 2: Kael still showed bare forearms, Mira faced the camera. Round 5 (30 Buzz): Kael's
+  prep turns arm skin into white sleeves (`near` keeps the hands skin, per-frame `abs` boxes keep
+  the face); Mira's prep turns the face into hair, so the model draws the back of her head.
+
+- Owner review 3: Kael's take kept; `post_shade` puts form back on the whitened tunic, `post_edit`
+  hand-fixes the white blob on the raised arm (frame 2) and turns the skin-coloured neck patch brown
+  in frames 1, 3, 4. Mira restarted (rounds 6-7, 42 Buzz): `base` starts her prep from Kael's
+  finished throw instead of vanilla May, recoloured to her palette, with a painted back of the head
+  and a hood-down collar, at denoise 0.65-0.7.
+
+- Owner review 4: Kael's frame 2 arm redrawn by hand (`post_edit` clear + lines: one clean raised
+  sleeve). Mira's painted head did not turn and her arms broke where the cloak box cut them. Round 8
+  (24 Buzz): base is Kael's fixed throw with the whole tunic recoloured to her cloak and a small hair
+  tuft at the nape, so head turn and arms come from Kael's approved frames.
+
+- Owner review 5: Mira C picked, two white specks on her arms recoloured to the cloak. Kael's frame 2
+  goes back to the earlier arm and only the white block between arm and head is cleared.
+
+Shipped picks: brendan `20261102-151756_d50_s1101_v4`, may `20261102-153424_d55_s1101_v2`,
+wally `20261102-145726_d50_s1101`, steven `20261102-145729_d50_s1101`.
+
+## Installed (2026-11-02)
+
+- `game/graphics/trainers/back_pics/<trainer>.png` for all six; `brendan_rs` / `may_rs` are byte copies of
+  `brendan` / `may`. The R/S front pics and `palettes/brendan_rs.pal`, `may_rs.pal` are copies of the main
+  Kael and Mira ones too (owner: no separate R/S art), in `game/` and `wiki/art/`.
+- No code changed. `gTrainerBackPicPalette_*` reads each back pic's own PNG palette, and that palette is the
+  front pic's (enforced with `--pal`), so front and back match. `back_pic_anims.h` and
+  `gTrainerBackPicCoords` stay vanilla (same 4 frames, same 64x64 size).
+- The PNGs convert with the game's own `gbagfx` (`make graphics/trainers/back_pics/<trainer>.4bpp`). The full
+  ROM was not linked in the agent container (no ARM toolchain there).
 
 ## Wiki rows
 
-`pending_art.csv` kind `trainers`, subkind `back_pics`: 6 rows, all to draw. Each row's `sw_subject` is the
-brief. Category: B2.
+`pending_art.csv` kind `trainers`, subkind `back_pics`: 6 rows, all ART_READY and game_status DONE
+(listed in `wiki/mapping/art_ready.csv`). Each row's `sw_subject` is the brief.
 
-## Characters to do, and their mockups
-
-Six back pics. Each has one concept mockup: a 768x768 image from the trainer LoRA (model 159333,
-SDXL version) with a back-view prompt, plus a `.json` beside it with the prompt, seed and settings.
-[`mockups/mockups_sheet.png`](mockups/mockups_sheet.png) shows all six.
-
-| Back pic | Character | Mockup | Notes |
-|---|---|---|---|
-| `brendan.png` | KAEL (player, boy) | [`mockups/brendan.png`](mockups/brendan.png) | Over-the-shoulder three-quarter back, arm out: closest to the back-pic pose |
-| `may.png` | MIRA (player, girl) | [`mockups/may.png`](mockups/may.png) | Clean back view; buns read as one bun |
-| `brendan_rs.png` | KAEL (old Ruby/Sapphire pic, link battles) | [`mockups/brendan_rs.png`](mockups/brendan_rs.png) | Three-quarter, more side than back |
-| `may_rs.png` | MIRA (old Ruby/Sapphire pic, link battles) | [`mockups/may_rs.png`](mockups/may_rs.png) | Back view, hand on head |
-| `wally.png` | LUKE SKYWALKER (catching tutorial) | [`mockups/wally.png`](mockups/wally.png) | Three-quarter back, lightsaber |
-| `steven.png` | LEIA ORGANA (multi-battle partner) | [`mockups/steven.png`](mockups/steven.png) | Straight back view, arms out |
-
-What the mockups are and are not: they fix each character's **back design** (hair from behind,
-clothes, colours) in the game's pixel style. They are not back pics: they are full-body and small,
-while a back pic is a large waist-up figure seen over the shoulder, in 4 throw frames, on the
-palette it shares with the front pic. Building that is the job of this tool (below).
-
-Back views from this LoRA work best for known characters (Leia, Luke came out first try); the
-generic player kids took a stronger prompt: `solo, single character, (back view:1.5),
-(from behind:1.4), (back of head:1.3), back turned to the viewer, looking away`, negatives `face,
-front view, facing viewer, eyes, side view, profile, multiple views, character sheet, turnaround,
-two people`, LoRA strength 0.6.
-
-## Model gaps to test
-
-The model does **not** document a back-view tag (the creature LoRA has `backside`; this one does
-not), and it has no notion of animation frames.
-
-1. **Back view.** Answered: yes (see the mockups). The original plain prompt idea, kept for reference:
-
-```
-pokemon trainer sprite,
-male trainer, standing, back view,
-facing away from camera,
-simple background
-```
-
-   If it fails, fall back in order: img2img from the approved front pic with a back-view prompt;
-   an image-edit model ("turn around, view from behind"); hand-drawing frame 1.
-2. **Waist-up framing.** Vanilla back pics are cropped at the waist and drawn bigger than the
-   front. Prompt for upper body / over the shoulder, or crop and scale a full-body render.
-3. **The throw frames (2-4).** Not something the model can do in one call. Try img2img from
-   frame 1 with the same seed and a pose word (`arm raised`, `throwing`), then map onto frame 1's
-   palette; hand-fix as needed.
-4. **No documented `gen3` tag**, as for the front pics: compare on one sheet with the creature
-   LoRA's output before committing.
-
-## Size: 96x96 model output vs the 64x64 game
-
-The LoRA's native sprite is 96x96; each back-pic frame is 64x64. Test (a) 8x -> 96 then crop to
-the waist-up 64x64 and (b) 12x -> 64 directly, and compare.
-
-## Palette (required: [`../PALETTES.md`](../PALETTES.md))
-
-- **Hardware (layer 1):** 4 frames of 64x64, 4bpp. The palette is **locked**: it is the file in
-  `game/graphics/trainers/palettes/` shared with the front pic.
-- **Theme (layer 2):** inherited from the front pic (the player is `alliance-dawn`).
-- **Post-processing:** `enforce raw.png back.png --bpp 4 --key auto --pal game/graphics/trainers/palettes/<name>.pal`
-  for every frame, then `check back.png --pal ...`. Never write a new palette here: it would recolour the front.
-
-## To build
-
-1. Read the rows above in `../../wiki/database/` (filter by `kind`; skip `KEEP*` and `CUT`).
-2. Build a tool that takes one row (its `sw_subject` is the brief, `path` the Emerald original, `suggested_path` the new name) and generates rows 1, 2 and 4 above.
-3. Show the owner a few samples, iterate, then generate the rest and set each row's status to `DONE`.
-4. Finish the pipeline with the palette step above (`palette-enforcer` `enforce`, then `check`); never install a file that fails `check`.
+The concept mockups in [`mockups/`](mockups/) (full body, from the trainer LoRA) came before the
+fronts were shipped; the backs follow the shipped fronts instead.
 
 ---
 

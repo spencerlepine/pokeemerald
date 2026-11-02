@@ -1,0 +1,233 @@
+{
+  "trainer": {
+    "stem": "may",
+    "wiki_path": "graphics/trainers/back_pics/may.png",
+    "sw_subject": "MIRA (player, girl), back view throwing a CAPTURE POD",
+    "subject": "teenage girl",
+    "base": "runs/brendan/finished/20261102-151756_d50_s1101_v2/brendan.png",
+    "desc": "Tatooine scavenger girl, (seen from behind:1.4), (back of head:1.3), shoulder-length reddish-brown hair, hood down, tan brown desert cloak over her shoulders and back, white tunic sleeves, brown wrist wraps",
+    "negative": "face, eyes, mouth, looking at viewer, facing camera, front view, boy, bandana, headband, hat, scarf, red, orange, spiky hair",
+    "map": {
+      "1": 1,
+      "2": 3,
+      "3": 2,
+      "4": 7,
+      "5": 6,
+      "6": 4,
+      "7": 8,
+      "8": 13,
+      "9": 9,
+      "10": 12,
+      "11": 12,
+      "12": 13,
+      "13": 14,
+      "14": 15,
+      "15": 15
+    },
+    "paint": [
+      [
+        0,
+        "polygon",
+        [
+          22,
+          31,
+          44,
+          31,
+          46,
+          48,
+          20,
+          48
+        ],
+        9,
+        14
+      ],
+      [
+        0,
+        "ellipse",
+        18,
+        15,
+        46,
+        43,
+        9,
+        14
+      ],
+      [
+        0,
+        "ellipse",
+        22,
+        18,
+        38,
+        31,
+        8,
+        null
+      ],
+      [
+        1,
+        "polygon",
+        [
+          27,
+          32,
+          49,
+          32,
+          51,
+          49,
+          25,
+          49
+        ],
+        9,
+        14
+      ],
+      [
+        1,
+        "ellipse",
+        23,
+        16,
+        51,
+        44,
+        9,
+        14
+      ],
+      [
+        1,
+        "ellipse",
+        27,
+        19,
+        43,
+        32,
+        8,
+        null
+      ],
+      [
+        2,
+        "polygon",
+        [
+          16,
+          33,
+          34,
+          33,
+          34,
+          50,
+          14,
+          50
+        ],
+        9,
+        14
+      ],
+      [
+        2,
+        "ellipse",
+        12,
+        17,
+        36,
+        45,
+        9,
+        14
+      ],
+      [
+        2,
+        "ellipse",
+        16,
+        20,
+        32,
+        33,
+        8,
+        null
+      ],
+      [
+        3,
+        "polygon",
+        [
+          26,
+          30,
+          48,
+          30,
+          50,
+          47,
+          24,
+          47
+        ],
+        9,
+        14
+      ],
+      [
+        3,
+        "ellipse",
+        22,
+        14,
+        50,
+        42,
+        9,
+        14
+      ],
+      [
+        3,
+        "ellipse",
+        26,
+        17,
+        42,
+        30,
+        8,
+        null
+      ],
+      [
+        -1,
+        "polygon",
+        [
+          24,
+          43,
+          46,
+          43,
+          50,
+          49,
+          20,
+          49
+        ],
+        7,
+        12
+      ]
+    ],
+    "regions": [
+      {
+        "box": [
+          0,
+          46,
+          63,
+          63
+        ],
+        "map": {
+          "1": 7,
+          "3": 10,
+          "6": 11
+        }
+      }
+    ]
+  },
+  "lora": {
+    "id": 443092,
+    "name": "XL v1",
+    "baseModel": "SDXL 1.0",
+    "trainedWords": [],
+    "air": null,
+    "files": [
+      {
+        "name": "pk_trainer_xl_v1.safetensors",
+        "sizeKB": 445819.83984375,
+        "sha256": "078E09DA2A123964B7EB30DB23EC24D59FB082343F69C7FAF925C4C07E97023E"
+      }
+    ]
+  },
+  "checkpoint": "urn:air:sdxl:checkpoint:civitai:101055@128078",
+  "prompt": "solo, single character, pixel art sprite sheet of four frames, (teenage girl:1.3), Tatooine scavenger girl, (seen from behind:1.4), (back of head:1.3), shoulder-length reddish-brown hair, hood down, tan brown desert cloak over her shoulders and back, white tunic sleeves, brown wrist wraps, (back view:1.4), (from behind:1.3), over the shoulder, upper body, seen from behind and to the left, throwing pose, empty hand, back of head, looking away, pixel art, game sprite, crisp dark outlines, gen3 battle back sprite, solid white background, simple background",
+  "negative": "face, eyes, mouth, looking at viewer, facing camera, front view, boy, bandana, headband, hat, scarf, red, orange, spiky hair, face, eyes, open mouth, mouth, teeth, front view, facing viewer, poke ball, pokeball, ball in hand, red ball, baseball cap, hat, generic pokemon trainer, scenery, detailed background, gradient background, floor, shadow, text, watermark, signature, frame, border, blurry, 3d, photo, realistic, painting, smooth shading",
+  "seed": 1101,
+  "denoise": 0.7,
+  "strength": 0.75,
+  "steps": 25,
+  "cfg": 5.0,
+  "size": 1024,
+  "init": "tools/sprite-trainer-back-generator/refs/may_prepA2_8x.png",
+  "format": "png",
+  "workflowId": "13596363-20261102152728942-xpju",
+  "cost": "6 green",
+  "generated": "20261102-152748"
+}

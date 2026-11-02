@@ -1,0 +1,184 @@
+{
+  "trainer": {
+    "stem": "brendan",
+    "wiki_path": "graphics/trainers/back_pics/brendan.png",
+    "sw_subject": "KAEL (player, boy), back view throwing a CAPTURE POD",
+    "subject": "teenage boy",
+    "desc": "Tatooine farm kid seen from behind, messy spiky dark brown hair, white wrap tunic with long white sleeves down to the wrists, brown leather belt, brown wrist wraps",
+    "map": {
+      "1": 1,
+      "2": 1,
+      "3": 3,
+      "4": 6,
+      "5": 1,
+      "6": 3,
+      "7": 6,
+      "8": 13,
+      "9": 11,
+      "14": 9,
+      "10": 1,
+      "11": 3,
+      "12": 2,
+      "13": 5,
+      "15": 14
+    },
+    "regions": [
+      {
+        "box": [
+          0,
+          0,
+          63,
+          30
+        ],
+        "map": {
+          "5": 7,
+          "6": 9,
+          "7": 11,
+          "8": 13,
+          "9": 9,
+          "14": 7,
+          "10": 9,
+          "11": 11
+        }
+      },
+      {
+        "frames": [
+          0
+        ],
+        "abs": true,
+        "box": [
+          26,
+          23,
+          46,
+          42
+        ],
+        "map": {
+          "1": 2,
+          "2": 2,
+          "3": 5,
+          "4": 11
+        }
+      },
+      {
+        "frames": [
+          1
+        ],
+        "abs": true,
+        "box": [
+          31,
+          24,
+          51,
+          43
+        ],
+        "map": {
+          "1": 2,
+          "2": 2,
+          "3": 5,
+          "4": 11
+        }
+      },
+      {
+        "frames": [
+          2
+        ],
+        "abs": true,
+        "box": [
+          20,
+          25,
+          39,
+          44
+        ],
+        "map": {
+          "1": 2,
+          "2": 2,
+          "3": 5,
+          "4": 11
+        }
+      },
+      {
+        "frames": [
+          3
+        ],
+        "abs": true,
+        "box": [
+          30,
+          22,
+          50,
+          41
+        ],
+        "map": {
+          "1": 2,
+          "2": 2,
+          "3": 5,
+          "4": 11
+        }
+      }
+    ],
+    "anchor": {
+      "0": [
+        0,
+        0
+      ],
+      "1": [
+        0,
+        0
+      ],
+      "2": [
+        0,
+        0
+      ],
+      "3": [
+        0,
+        0
+      ]
+    },
+    "post_remap": {
+      "3": 1,
+      "6": 3
+    },
+    "negative": "bare arms, short sleeves, rolled up sleeves, skin on arms",
+    "near": [
+      {
+        "of": [
+          12,
+          13
+        ],
+        "grow": 3,
+        "map": {
+          "1": 2,
+          "2": 2,
+          "3": 5,
+          "4": 11
+        }
+      }
+    ]
+  },
+  "lora": {
+    "id": 443092,
+    "name": "XL v1",
+    "baseModel": "SDXL 1.0",
+    "trainedWords": [],
+    "air": null,
+    "files": [
+      {
+        "name": "pk_trainer_xl_v1.safetensors",
+        "sizeKB": 445819.83984375,
+        "sha256": "078E09DA2A123964B7EB30DB23EC24D59FB082343F69C7FAF925C4C07E97023E"
+      }
+    ]
+  },
+  "checkpoint": "urn:air:sdxl:checkpoint:civitai:101055@128078",
+  "prompt": "solo, single character, pixel art sprite sheet of four frames, (teenage boy:1.3), Tatooine farm kid seen from behind, messy spiky dark brown hair, white wrap tunic with long white sleeves down to the wrists, brown leather belt, brown wrist wraps, (back view:1.4), (from behind:1.3), over the shoulder, upper body, seen from behind and to the left, throwing pose, empty hand, back of head, looking away, pixel art, game sprite, crisp dark outlines, gen3 battle back sprite, solid white background, simple background",
+  "negative": "bare arms, short sleeves, rolled up sleeves, skin on arms, face, eyes, open mouth, mouth, teeth, front view, facing viewer, poke ball, pokeball, ball in hand, red ball, baseball cap, hat, generic pokemon trainer, scenery, detailed background, gradient background, floor, shadow, text, watermark, signature, frame, border, blurry, 3d, photo, realistic, painting, smooth shading",
+  "seed": 2202,
+  "denoise": 0.5,
+  "strength": 0.75,
+  "steps": 25,
+  "cfg": 5.0,
+  "size": 1024,
+  "init": "tools/sprite-trainer-back-generator/refs/brendan_prep_8x.png",
+  "format": "png",
+  "workflowId": "13596363-20261102151721463-1udo",
+  "cost": "6 green",
+  "generated": "20261102-151753"
+}

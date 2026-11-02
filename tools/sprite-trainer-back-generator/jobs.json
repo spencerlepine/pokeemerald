@@ -1,0 +1,841 @@
+{
+ "brendan": {
+  "subject": "teenage boy",
+  "desc": "Tatooine farm kid seen from behind, messy spiky dark brown hair, white wrap tunic with long white sleeves down to the wrists, brown leather belt, brown wrist wraps",
+  "map": {
+   "1": 1,
+   "2": 1,
+   "3": 3,
+   "4": 6,
+   "5": 1,
+   "6": 3,
+   "7": 6,
+   "8": 13,
+   "9": 11,
+   "14": 9,
+   "10": 1,
+   "11": 3,
+   "12": 2,
+   "13": 5,
+   "15": 14
+  },
+  "regions": [
+   {
+    "box": [
+     0,
+     0,
+     63,
+     30
+    ],
+    "map": {
+     "5": 7,
+     "6": 9,
+     "7": 11,
+     "8": 13,
+     "9": 9,
+     "14": 7,
+     "10": 9,
+     "11": 11
+    }
+   },
+   {
+    "frames": [
+     0
+    ],
+    "abs": true,
+    "box": [
+     26,
+     23,
+     46,
+     42
+    ],
+    "map": {
+     "1": 2,
+     "2": 2,
+     "3": 5,
+     "4": 11
+    }
+   },
+   {
+    "frames": [
+     1
+    ],
+    "abs": true,
+    "box": [
+     31,
+     24,
+     51,
+     43
+    ],
+    "map": {
+     "1": 2,
+     "2": 2,
+     "3": 5,
+     "4": 11
+    }
+   },
+   {
+    "frames": [
+     2
+    ],
+    "abs": true,
+    "box": [
+     20,
+     25,
+     39,
+     44
+    ],
+    "map": {
+     "1": 2,
+     "2": 2,
+     "3": 5,
+     "4": 11
+    }
+   },
+   {
+    "frames": [
+     3
+    ],
+    "abs": true,
+    "box": [
+     30,
+     22,
+     50,
+     41
+    ],
+    "map": {
+     "1": 2,
+     "2": 2,
+     "3": 5,
+     "4": 11
+    }
+   }
+  ],
+  "anchor": {
+   "0": [
+    0,
+    0
+   ],
+   "1": [
+    0,
+    0
+   ],
+   "2": [
+    0,
+    0
+   ],
+   "3": [
+    0,
+    0
+   ]
+  },
+  "negative": "bare arms, short sleeves, rolled up sleeves, skin on arms",
+  "near": [
+   {
+    "of": [
+     12,
+     13
+    ],
+    "grow": 3,
+    "map": {
+     "1": 2,
+     "2": 2,
+     "3": 5,
+     "4": 11
+    }
+   }
+  ],
+  "post_remap": {
+   "3": 1,
+   "6": 3
+  },
+  "post_shade": {
+   "light": 1,
+   "shade": 3,
+   "edge": [
+    11,
+    13,
+    14,
+    6,
+    10
+   ],
+   "width": 1
+  },
+  "post_edit": [
+   [
+    0,
+    "remap",
+    20,
+    43,
+    40,
+    50,
+    {
+     "2": 9,
+     "5": 11
+    }
+   ],
+   [
+    3,
+    "remap",
+    24,
+    42,
+    42,
+    48,
+    {
+     "2": 9,
+     "5": 11
+    }
+   ],
+   [
+    2,
+    "remap",
+    14,
+    44,
+    20,
+    45,
+    {
+     "2": 9,
+     "5": 11
+    }
+   ],
+   [
+    1,
+    "fill_light",
+    20,
+    48,
+    27,
+    50,
+    3
+   ],
+   [
+    1,
+    "line",
+    19,
+    39,
+    19,
+    50,
+    13
+   ],
+   [
+    1,
+    "line",
+    20,
+    51,
+    27,
+    51,
+    13
+   ],
+   [
+    1,
+    "clear",
+    19,
+    29,
+    32,
+    40,
+    [
+     1,
+     3,
+     6
+    ]
+   ],
+   [
+    1,
+    "line",
+    20,
+    41,
+    32,
+    41,
+    11
+   ],
+   [
+    1,
+    "line",
+    19,
+    30,
+    19,
+    40,
+    13
+   ]
+  ]
+ },
+ "brendan_rs": {
+  "subject": "teenage boy",
+  "desc": "Tatooine farm kid seen from behind, short ash-brown hair, plain white wrap tunic, white sleeves",
+  "map": {
+   "1": 3,
+   "2": 3,
+   "3": 7,
+   "4": 11,
+   "5": 1,
+   "6": 1,
+   "7": 1,
+   "8": 2,
+   "9": 8,
+   "14": 5,
+   "10": 1,
+   "11": 2,
+   "12": 3,
+   "13": 7,
+   "15": 15
+  },
+  "regions": [
+   {
+    "box": [
+     0,
+     0,
+     63,
+     30
+    ],
+    "map": {
+     "5": 5,
+     "6": 8,
+     "7": 11,
+     "8": 11,
+     "9": 8,
+     "14": 5,
+     "10": 5,
+     "11": 8
+    }
+   },
+   {
+    "box": [
+     20,
+     26,
+     40,
+     38
+    ],
+    "map": {
+     "15": 11,
+     "8": 11
+    }
+   },
+   {
+    "box": [
+     20,
+     39,
+     55,
+     50
+    ],
+    "map": {
+     "12": 1,
+     "13": 2
+    }
+   }
+  ],
+  "anchor": {
+   "0": [
+    0,
+    0
+   ],
+   "1": [
+    0,
+    0
+   ],
+   "2": [
+    0,
+    0
+   ],
+   "3": [
+    0,
+    0
+   ]
+  },
+  "negative": "bag, backpack, tan shirt, face, mouth"
+ },
+ "may": {
+  "subject": "teenage girl",
+  "base": "runs/brendan/finished/20261102-151756_d50_s1101_v3/brendan.png",
+  "desc": "Tatooine scavenger girl, (seen from behind:1.3), over the shoulder, reddish-brown hair tied back in a short ponytail at the nape, tan brown desert cloak with long sleeves and the hood down, brown wrist wraps, natural throwing pose",
+  "negative": "face, eyes, mouth, looking at viewer, facing camera, front view, boy, bandana, headband, hat, scarf, red, orange, spiky hair",
+  "map": {
+   "1": 7,
+   "2": 3,
+   "3": 10,
+   "4": 7,
+   "5": 6,
+   "6": 11,
+   "7": 8,
+   "8": 13,
+   "9": 9,
+   "10": 12,
+   "11": 12,
+   "12": 13,
+   "13": 14,
+   "14": 15,
+   "15": 15
+  },
+  "paint": [
+   [
+    -1,
+    "polygon",
+    [
+     27,
+     33,
+     35,
+     33,
+     36,
+     43,
+     29,
+     44
+    ],
+    9,
+    14
+   ]
+  ],
+  "regions": [],
+  "post_remap": {
+   "0": 0
+  },
+  "post_edit": [
+   [
+    0,
+    "remap",
+    44,
+    50,
+    52,
+    56,
+    {
+     "1": 10,
+     "2": 10
+    }
+   ],
+   [
+    1,
+    "remap",
+    15,
+    28,
+    26,
+    36,
+    {
+     "1": 10,
+     "2": 10
+    }
+   ]
+  ]
+ },
+ "may_rs": {
+  "subject": "teenage girl",
+  "desc": "Tatooine girl seen from behind, long chestnut brown hair down her back, cream tunic with long sleeves, orange scarf around the shoulders",
+  "map": {
+   "1": 3,
+   "2": 3,
+   "3": 6,
+   "4": 10,
+   "5": 8,
+   "6": 14,
+   "7": 7,
+   "8": 11,
+   "9": 3,
+   "10": 4,
+   "11": 4,
+   "12": 2,
+   "13": 1,
+   "14": 1,
+   "15": 14
+  },
+  "regions": [
+   {
+    "box": [
+     0,
+     0,
+     63,
+     39
+    ],
+    "map": {
+     "12": 7,
+     "13": 11,
+     "14": 7,
+     "10": 7,
+     "11": 10
+    }
+   }
+  ],
+  "anchor": {
+   "0": [
+    0,
+    1
+   ],
+   "1": [
+    0,
+    1
+   ],
+   "2": [
+    0,
+    3
+   ],
+   "3": [
+    0,
+    0
+   ]
+  },
+  "negative": "bandana, headband, hat",
+  "paint": [
+   [
+    -1,
+    "polygon",
+    [
+     40,
+     44,
+     48,
+     46,
+     50,
+     63,
+     42,
+     63
+    ],
+    5,
+    13
+   ],
+   [
+    -1,
+    "polygon",
+    [
+     24,
+     43,
+     40,
+     43,
+     46,
+     47,
+     20,
+     47
+    ],
+    5,
+    13
+   ]
+  ]
+ },
+ "wally": {
+  "subject": "Luke Skywalker",
+  "desc": "young man seen from behind, sandy-blond hair, white crossover farm-boy tunic",
+  "map": {
+   "1": 2,
+   "2": 2,
+   "3": 6,
+   "4": 10,
+   "5": 3,
+   "6": 5,
+   "7": 4,
+   "8": 4,
+   "10": 7,
+   "11": 11,
+   "9": 1,
+   "12": 8,
+   "13": 1,
+   "14": 1,
+   "15": 15
+  }
+ },
+ "steven": {
+  "subject": "Leia Organa",
+  "desc": "young woman seen from behind, smooth brown hair parted in the middle and pulled back, two round hair buns on the sides of her head, long white robe with wide sleeves",
+  "map": {
+   "1": 2,
+   "2": 2,
+   "3": 5,
+   "4": 9,
+   "7": 1,
+   "8": 3,
+   "9": 6,
+   "10": 6,
+   "11": 8,
+   "14": 1,
+   "15": 15
+  },
+  "paint": [
+   [
+    -1,
+    "ellipse",
+    6,
+    13,
+    18,
+    26,
+    8,
+    13
+   ],
+   [
+    -1,
+    "ellipse",
+    8,
+    15,
+    15,
+    21,
+    6,
+    null
+   ],
+   [
+    -1,
+    "ellipse",
+    43,
+    11,
+    54,
+    24,
+    8,
+    13
+   ],
+   [
+    -1,
+    "ellipse",
+    45,
+    13,
+    51,
+    18,
+    6,
+    null
+   ],
+   [
+    -1,
+    "ellipse",
+    17,
+    8,
+    45,
+    35,
+    8,
+    13
+   ],
+   [
+    -1,
+    "ellipse",
+    21,
+    10,
+    38,
+    24,
+    6,
+    null
+   ]
+  ],
+  "regions": [
+   {
+    "box": [
+     0,
+     0,
+     63,
+     13
+    ],
+    "map": {
+     "7": -1,
+     "8": -1,
+     "9": -1,
+     "10": -1,
+     "11": -1,
+     "15": -1,
+     "14": -1
+    }
+   }
+  ],
+  "negative": "spiky hair, short hair"
+ },
+ "may_v1": {
+  "subject": "teenage girl",
+  "desc": "Tatooine scavenger girl seen from behind, (hood up:1.3), tan hooded desert cloak covering her whole head and shoulders, no hair visible, white tunic sleeves",
+  "map": {
+   "1": 3,
+   "2": 3,
+   "3": 6,
+   "4": 11,
+   "5": 4,
+   "6": 12,
+   "7": 10,
+   "8": 11,
+   "9": 3,
+   "10": 7,
+   "11": 10,
+   "12": 7,
+   "13": 10,
+   "14": 1,
+   "15": 15
+  },
+  "regions": [
+   {
+    "box": [
+     0,
+     0,
+     63,
+     43
+    ],
+    "map": {
+     "10": 7,
+     "11": 10,
+     "7": 10,
+     "8": 11,
+     "4": 11,
+     "14": 7,
+     "5": 10,
+     "6": 12
+    }
+   },
+   {
+    "box": [
+     0,
+     17,
+     17,
+     35
+    ],
+    "map": {
+     "10": -1,
+     "11": -1
+    }
+   },
+   {
+    "box": [
+     0,
+     44,
+     63,
+     63
+    ],
+    "map": {
+     "1": 1,
+     "2": 2,
+     "3": 4
+    }
+   }
+  ],
+  "paint": [
+   [
+    -1,
+    "polygon",
+    [
+     16,
+     30,
+     48,
+     30,
+     56,
+     52,
+     10,
+     52
+    ],
+    10,
+    12
+   ],
+   [
+    -1,
+    "ellipse",
+    12,
+    13,
+    49,
+    46,
+    10,
+    12
+   ],
+   [
+    -1,
+    "ellipse",
+    17,
+    16,
+    40,
+    34,
+    7,
+    null
+   ]
+  ],
+  "negative": "pigtails, ponytail, bandana, hair, bare shoulders, sleeveless"
+ },
+ "may_v2": {
+  "subject": "teenage girl",
+  "desc": "Tatooine scavenger girl, (seen from directly behind:1.4), (back of head:1.4), shoulder-length reddish-brown hair covering the back of her head, hood down, tan brown desert cloak over her back, white tunic sleeves, brown wrist wraps",
+  "negative": "face, eyes, nose, mouth, looking at viewer, facing camera, front view, profile, bandana, headband, hat, scarf, red, orange, bare shoulders, sleeveless, hood up",
+  "map": {
+   "1": 3,
+   "2": 3,
+   "3": 6,
+   "4": 9,
+   "5": 4,
+   "6": 14,
+   "7": 8,
+   "8": 12,
+   "9": 3,
+   "10": 10,
+   "11": 11,
+   "12": 7,
+   "13": 10,
+   "14": 1,
+   "15": 15
+  },
+  "regions": [
+   {
+    "box": [
+     0,
+     0,
+     63,
+     40
+    ],
+    "map": {
+     "12": 8,
+     "13": 9,
+     "14": 8,
+     "10": 8,
+     "11": 9,
+     "1": 8,
+     "2": 9,
+     "3": 9,
+     "4": 12
+    }
+   },
+   {
+    "box": [
+     0,
+     44,
+     63,
+     63
+    ],
+    "map": {
+     "1": 1,
+     "2": 2,
+     "3": 4
+    }
+   }
+  ],
+  "anchor": {
+   "0": [
+    -1,
+    1
+   ],
+   "1": [
+    5,
+    1
+   ],
+   "2": [
+    -9,
+    3
+   ],
+   "3": [
+    0,
+    0
+   ]
+  },
+  "paint": [
+   [
+    "under",
+    -1,
+    "polygon",
+    [
+     19,
+     42,
+     45,
+     42,
+     52,
+     63,
+     12,
+     63
+    ],
+    10,
+    12
+   ],
+   [
+    -1,
+    "polygon",
+    [
+     22,
+     40,
+     42,
+     40,
+     47,
+     47,
+     17,
+     47
+    ],
+    7,
+    12
+   ]
+  ]
+ }
+}
