@@ -64,7 +64,6 @@ cloud-city-galleria-elevator,BESPIN,interior,MAP_DYNAMIC,,,warp,Door,no,
 cloud-city-galleria-rooftop,BESPIN,interior,cloud-city-galleria-5f,BESPIN,interior,warp,Door,yes,
 cloud-city-hangar,BESPIN,interior,cloud-city,BESPIN,town,warp,Door,yes,
 cloud-city-hangar,BESPIN,interior,cloud-city,BESPIN,town,warp,Door,yes,
-cloud-city-hangar,BESPIN,interior,starnav,,,ship,West landing platform,no,
 cloud-city-house-1,BESPIN,interior,cloud-city,BESPIN,town,warp,Door,yes,
 cloud-city-house-1,BESPIN,interior,cloud-city,BESPIN,town,warp,Door,yes,
 cloud-city-house-2,BESPIN,interior,cloud-city,BESPIN,town,warp,Door,yes,
@@ -293,6 +292,7 @@ bright-tree-house-5,ENDOR,interior,bright-tree,ENDOR,town,warp,Door,yes,
 bright-tree-supply-depot,ENDOR,interior,bright-tree,ENDOR,town,warp,Door,yes,
 bright-tree-supply-depot,ENDOR,interior,bright-tree,ENDOR,town,warp,Door,yes,
 endor-battlefield-bunker,ENDOR,interior,endor-battlefield,ENDOR,landmark,warp,Door,yes,
+endor-hangar,ENDOR,interior,route-121,ENDOR,route,warp,Door,yes,
 route-119-endor-station-1f,ENDOR,interior,route-119,ENDOR,route,warp,Door,yes,
 route-119-endor-station-1f,ENDOR,interior,route-119,ENDOR,route,warp,Door,yes,
 route-119-endor-station-1f,ENDOR,interior,route-119-endor-station-2f,ENDOR,interior,warp,Door,yes,
@@ -301,6 +301,7 @@ route-119-house,ENDOR,interior,route-119,ENDOR,route,warp,Door,yes,
 route-119-house,ENDOR,interior,route-119,ENDOR,route,warp,Door,yes,
 route-121-safari-zone-entrance,ENDOR,interior,route-121,ENDOR,route,warp,Door,yes,
 route-121-safari-zone-entrance,ENDOR,interior,route-121,ENDOR,route,warp,Door,yes,
+route-121-safari-zone-entrance,ENDOR,interior,felucia-hangar,FELUCIA,interior,warp,Shuttle ramp (to the Felucia Reserve),yes,yes
 route-123-berry-masters-house,ENDOR,interior,route-123,ENDOR,route,warp,Door,yes,
 route-123-berry-masters-house,ENDOR,interior,route-123,ENDOR,route,warp,Door,yes,
 route-118,ENDOR,route,route-119,ENDOR,route,exit north,,yes,
@@ -316,6 +317,7 @@ route-120,ENDOR,route,endor-battlefield,ENDOR,landmark,exit east,,yes,
 route-120,ENDOR,route,ancient-tomb,ENDOR,dungeon,warp,Door,yes,
 route-120,ENDOR,route,scorched-hollow,ENDOR,dungeon,warp,Door,yes,
 route-121,ENDOR,route,route-120,ENDOR,route,exit west,,yes,
+route-121,ENDOR,route,endor-hangar,ENDOR,interior,door,Cloud City shuttle pad (ships),yes,
 route-121,ENDOR,route,route-121-safari-zone-entrance,ENDOR,interior,warp,Door,yes,
 route-123,ENDOR,route,route-118,ENDOR,route,exit west,,yes,
 route-123,ENDOR,route,route-123-berry-masters-house,ENDOR,interior,door,Berry masters house,yes,
@@ -336,6 +338,7 @@ felucia-reserve-southwest,FELUCIA,route,felucia-reserve-northwest,FELUCIA,route,
 felucia-reserve-southwest,FELUCIA,route,felucia-reserve-south,FELUCIA,route,exit east,,yes,
 felucia-reserve-southwest,FELUCIA,route,felucia-reserve-rest-house,FELUCIA,interior,warp,Door,yes,
 felucia-hangar,FELUCIA,interior,felucia-reserve-south,FELUCIA,route,warp,Door,yes,
+felucia-hangar,FELUCIA,interior,route-121-safari-zone-entrance,ENDOR,interior,warp,Ramp (back to the Route 121 gate),yes,yes
 felucia-reserve-rest-house,FELUCIA,interior,felucia-reserve-southwest,FELUCIA,route,warp,Door,yes,
 felucia-reserve-rest-house,FELUCIA,interior,felucia-reserve-southwest,FELUCIA,route,warp,Door,yes,
 artisan-cave-1f,GRAND ARENA,dungeon,grand-arena-outside-east,GRAND ARENA,route,warp,Door,yes,
@@ -434,7 +437,6 @@ grand-arena-ranking-hall,GRAND ARENA,interior,grand-arena-outside-east,GRAND ARE
 grand-arena-ranking-hall,GRAND ARENA,interior,grand-arena-outside-east,GRAND ARENA,route,warp,Door,yes,
 grand-arena-reception-gate,GRAND ARENA,interior,grand-arena-outside-west,GRAND ARENA,route,warp,Door,yes,
 grand-arena-reception-gate,GRAND ARENA,interior,grand-arena-outside-west,GRAND ARENA,route,warp,Door,yes,
-grand-arena-reception-gate,GRAND ARENA,interior,starnav,,,ship,Arena dock,no,
 grand-arena-scotts-house,GRAND ARENA,interior,grand-arena-outside-west,GRAND ARENA,route,warp,Door,yes,
 grand-arena-scotts-house,GRAND ARENA,interior,grand-arena-outside-west,GRAND ARENA,route,warp,Door,yes,
 grand-arena-supply-depot,GRAND ARENA,interior,grand-arena-outside-west,GRAND ARENA,route,warp,Door,yes,
@@ -531,6 +533,7 @@ ilum-temple-1f,ILUM,interior,ilum-hall-5,ILUM,interior,warp,Door,yes,
 ilum-temple-1f,ILUM,interior,ilum-hall-5,ILUM,interior,warp,Door,yes,
 ilum-temple-1f,ILUM,interior,ilum-temple-2f,ILUM,interior,warp,Door,yes,
 ilum-temple-2f,ILUM,interior,ilum-temple-1f,ILUM,interior,warp,Door,yes,
+jedha-hangar,JEDHA,interior,route-122,JEDHA,route,warp,Door,yes,
 jedha-temple-1f,JEDHA,interior,route-122,JEDHA,route,warp,Door,yes,
 jedha-temple-1f,JEDHA,interior,jedha-temple-exterior,JEDHA,route,warp,Door,yes,
 jedha-temple-1f,JEDHA,interior,route-122,JEDHA,route,warp,Door,yes,
@@ -579,8 +582,8 @@ nijedha,JEDHA,town,nijedha-supply-depot,JEDHA,interior,door,Supply Depot,yes,
 nijedha,JEDHA,town,nijedha-guardians-quarters,JEDHA,interior,door,Guardians' quarters,yes,
 nijedha,JEDHA,town,nijedha-hostel,JEDHA,interior,door,Pilgrim hostel,yes,
 route-122,JEDHA,route,nijedha,JEDHA,town,exit east,,yes,
+route-122,JEDHA,route,jedha-hangar,JEDHA,interior,door,Pilgrim landing pad (ships),yes,
 route-122,JEDHA,route,jedha-temple-1f,JEDHA,interior,warp,Door,yes,
-route-122,JEDHA,route,starnav,,,ship,Pilgrim landing pad,no,
 sealed-vault-inner-room,KAMINO,dungeon,sealed-vault-outer-room,KAMINO,dungeon,warp,Door,yes,
 sealed-vault-outer-room,KAMINO,dungeon,sealed-vault-inner-room,KAMINO,dungeon,warp,Door,yes,
 underwater-route-134,KAMINO,dungeon,underwater-sealed-chamber,KAMINO,dungeon,warp,Door,yes,
@@ -838,11 +841,11 @@ battle-colosseum-4-p,SHARED,interior,MAP_DYNAMIC,,,warp,Door,no,
 battle-colosseum-4-p,SHARED,interior,MAP_DYNAMIC,,,warp,Door,no,
 battle-colosseum-4-p,SHARED,interior,MAP_DYNAMIC,,,warp,Door,no,
 battle-colosseum-4-p,SHARED,interior,MAP_DYNAMIC,,,warp,Door,no,
-hangar-tatooine-endor,SHARED,interior,mos-espa,TATOOINE,town,warp,Door,no,
+hangar-tatooine-endor,SHARED,interior,mos-espa,TATOOINE,town,warp,Door,yes,
 hangar-tatooine-endor,SHARED,interior,route-118,ENDOR,route,warp,Ramp (other end),yes,
 hangar-tatooine-kashyyyk,SHARED,interior,mos-eisley,TATOOINE,town,warp,Door,yes,
 hangar-tatooine-kashyyyk,SHARED,interior,kachirho,KASHYYYK,town,warp,Ramp (other end),yes,
-hangar-tatooine-sullust,SHARED,interior,mos-eisley,TATOOINE,town,warp,Door,no,
+hangar-tatooine-sullust,SHARED,interior,mos-eisley,TATOOINE,town,warp,Door,yes,
 hangar-tatooine-sullust,SHARED,interior,pirin,SULLUST,town,warp,Ramp (other end),yes,
 hideout-kit,SHARED,interior,MAP_DYNAMIC,,,warp,Entrance (back to the route),no,
 record-corner,SHARED,interior,MAP_DYNAMIC,,,warp,Door,no,
@@ -1315,6 +1318,7 @@ mos-eisley,TATOOINE,town,mos-eisley-supply-depot,TATOOINE,interior,door,Supply D
 mos-eisley,TATOOINE,town,mos-eisley-name-raters-house,TATOOINE,interior,door,Name-changer's home,yes,
 mos-eisley,TATOOINE,town,mos-eisley-house,TATOOINE,interior,door,Moisture trader's home,yes,
 mos-eisley,TATOOINE,town,mos-eisley-battle-tent-lobby,TATOOINE,interior,door,Battle tent,yes,
+mos-eisley,TATOOINE,town,hangar-tatooine-sullust,SHARED,interior,door,Docking Bay 35 (Sullust transport),yes,
 mos-entha,TATOOINE,town,route-104,TATOOINE,route,exit west,,yes,
 mos-entha,TATOOINE,town,route-102,TATOOINE,route,exit east,,yes,
 mos-entha,TATOOINE,town,mos-entha-arena,TATOOINE,interior,door,Mos Entha arena (Doran),yes,
@@ -1335,6 +1339,7 @@ mos-espa,TATOOINE,town,mos-espa-supply-depot,TATOOINE,interior,door,Supply Depot
 mos-espa,TATOOINE,town,mos-espa-house-1,TATOOINE,interior,door,Slave quarters row (Shmi's old home),yes,
 mos-espa,TATOOINE,town,mos-espa-house-2,TATOOINE,interior,door,Pit droid mechanic's home,yes,
 mos-espa,TATOOINE,town,espa-generator-entrance,TATOOINE,dungeon,door,Espa generator hatch,no,
+mos-espa,TATOOINE,town,hangar-tatooine-endor,SHARED,interior,door,Rebel shuttle pad (to Endor),yes,
 mos-pelgo,TATOOINE,town,route-101,TATOOINE,route,exit north,,yes,
 mos-pelgo,TATOOINE,town,mos-pelgo-player-home-1f,TATOOINE,interior,door,Player's homestead,yes,
 mos-pelgo,TATOOINE,town,mos-pelgo-korr-home-1f,TATOOINE,interior,door,Korr family home,yes,
@@ -1436,8 +1441,6 @@ yavin-4-house-4,YAVIN 4,interior,yavin-4,YAVIN 4,town,warp,Door,yes,
 yavin-4-launch-tower-1f,YAVIN 4,interior,yavin-4,YAVIN 4,town,warp,Door,yes,
 yavin-4-launch-tower-1f,YAVIN 4,interior,yavin-4,YAVIN 4,town,warp,Door,yes,
 yavin-4-launch-tower-1f,YAVIN 4,interior,yavin-4-launch-tower-2f,YAVIN 4,interior,warp,Door,yes,
-yavin-4-launch-tower-1f,YAVIN 4,interior,death-star-hangar,DEATH STAR,dungeon,shuttle,"Imperial shuttle (post-game, after the Hall of Fame)",yes,yes
-yavin-4-launch-tower-1f,YAVIN 4,interior,starnav,,,ship,Rebel hangar flight deck,no,
 yavin-4-launch-tower-2f,YAVIN 4,interior,yavin-4-launch-tower-1f,YAVIN 4,interior,warp,Door,yes,
 yavin-4-sabacc-den-1f,YAVIN 4,interior,yavin-4,YAVIN 4,town,warp,Door,yes,
 yavin-4-sabacc-den-1f,YAVIN 4,interior,yavin-4,YAVIN 4,town,warp,Door,yes,
@@ -1571,15 +1574,45 @@ grand-arena-battle-tower-multi-corridor,GRAND ARENA,interior,grand-arena-battle-
 grand-arena-battle-tower-multi-corridor,GRAND ARENA,interior,grand-arena-battle-tower-multi-battle-room,GRAND ARENA,interior,vanilla script,,no,
 route-121-safari-zone-entrance,ENDOR,interior,felucia-reserve-south,FELUCIA,route,vanilla script,,yes,yes
 kachirho,KASHYYYK,town,route-104-han-hangar,TATOOINE,interior,vanilla script,,no,yes
-asteroid-spire-hangar,ASTEROID FIELD,interior,starnav,,,StarNAV flight,ship to any unlocked planet,yes,yes
-dagobah-hangar,DAGOBAH,interior,starnav,,,StarNAV flight,ship to any unlocked planet,yes,yes
-felucia-hangar,FELUCIA,interior,starnav,,,StarNAV flight,ship to any unlocked planet,yes,yes
-hangar-tatooine-endor,SHARED,interior,starnav,,,StarNAV flight,ship to any unlocked planet,yes,yes
-hangar-tatooine-kashyyyk,SHARED,interior,starnav,,,StarNAV flight,ship to any unlocked planet,yes,yes
-hangar-tatooine-sullust,SHARED,interior,starnav,,,StarNAV flight,ship to any unlocked planet,yes,yes
-hoth-hangar,HOTH,interior,starnav,,,StarNAV flight,ship to any unlocked planet,yes,yes
-ilum-hangar,ILUM,interior,starnav,,,StarNAV flight,ship to any unlocked planet,yes,yes
-mos-eisley-hangar,TATOOINE,interior,starnav,,,StarNAV flight,ship to any unlocked planet,yes,yes
-route-104-han-hangar,TATOOINE,interior,starnav,,,StarNAV flight,ship to any unlocked planet,yes,yes
-tipoca-city-hangar,KAMINO,interior,starnav,,,StarNAV flight,ship to any unlocked planet,yes,yes
-tython-hangar,TYTHON,interior,starnav,,,StarNAV flight,ship to any unlocked planet,yes,yes
+route-104-han-hangar,TATOOINE,interior,hangar-tatooine-kashyyyk,SHARED,interior,hyperlane,Millennium Falcon (Han) (hl-tatooine-kashyyyk-han),yes,
+hangar-tatooine-kashyyyk,SHARED,interior,route-104-han-hangar,TATOOINE,interior,hyperlane,Millennium Falcon (Han) (hl-tatooine-kashyyyk-han),yes,
+hangar-tatooine-kashyyyk,SHARED,interior,hangar-tatooine-kashyyyk,SHARED,interior,hyperlane,Millennium Falcon (Han) (hl-kashyyyk-tatooine-eisley),yes,
+hangar-tatooine-kashyyyk,SHARED,interior,hangar-tatooine-kashyyyk,SHARED,interior,hyperlane,Millennium Falcon (Han) (hl-kashyyyk-tatooine-eisley),yes,
+hangar-tatooine-sullust,SHARED,interior,hangar-tatooine-sullust,SHARED,interior,hyperlane,Sullustan transport (hl-tatooine-sullust),yes,
+hangar-tatooine-sullust,SHARED,interior,hangar-tatooine-sullust,SHARED,interior,hyperlane,Sullustan transport (hl-tatooine-sullust),yes,
+route-112-shuttle-station,TATOOINE,interior,mustafar-peak-shuttle-station,MUSTAFAR,interior,hyperlane,Shuttle (cable car) (hl-tatooine-mustafar),yes,yes
+mustafar-peak-shuttle-station,MUSTAFAR,interior,route-112-shuttle-station,TATOOINE,interior,hyperlane,Shuttle (cable car) (hl-tatooine-mustafar),yes,yes
+hangar-tatooine-endor,SHARED,interior,hangar-tatooine-endor,SHARED,interior,hyperlane,Rebel shuttle (hl-tatooine-endor),yes,
+hangar-tatooine-endor,SHARED,interior,hangar-tatooine-endor,SHARED,interior,hyperlane,Rebel shuttle (hl-tatooine-endor),yes,
+endor-hangar,ENDOR,interior,cloud-city-hangar,BESPIN,interior,hyperlane,Cloud City shuttle (hl-endor-bespin),yes,yes
+cloud-city-hangar,BESPIN,interior,endor-hangar,ENDOR,interior,hyperlane,Cloud City shuttle (hl-endor-bespin),yes,yes
+route-121-safari-zone-entrance,ENDOR,interior,felucia-hangar,FELUCIA,interior,hyperlane,Reserve shuttle (hl-endor-felucia),yes,yes
+felucia-hangar,FELUCIA,interior,route-121-safari-zone-entrance,ENDOR,interior,hyperlane,Reserve shuttle (hl-endor-felucia),yes,yes
+cloud-city-hangar,BESPIN,interior,jedha-hangar,JEDHA,interior,hyperlane,Pilgrim shuttle (hl-bespin-jedha),yes,yes
+jedha-hangar,JEDHA,interior,cloud-city-hangar,BESPIN,interior,hyperlane,Pilgrim shuttle (hl-bespin-jedha),yes,yes
+cloud-city-hangar,BESPIN,interior,yavin-4-launch-tower-1f,YAVIN 4,interior,hyperlane,Rebel transport (hl-bespin-yavin),yes,yes
+yavin-4-launch-tower-1f,YAVIN 4,interior,cloud-city-hangar,BESPIN,interior,hyperlane,Rebel transport (hl-bespin-yavin),yes,yes
+yavin-4-launch-tower-1f,YAVIN 4,interior,hoth-hangar,HOTH,interior,hyperlane,Rebel survey shuttle (hl-yavin-hoth),yes,yes
+hoth-hangar,HOTH,interior,yavin-4-launch-tower-1f,YAVIN 4,interior,hyperlane,Rebel survey shuttle (hl-yavin-hoth),yes,yes
+yavin-4-launch-tower-1f,YAVIN 4,interior,tipoca-city-hangar,KAMINO,interior,hyperlane,Rebel transport (hl-yavin-kamino),yes,yes
+tipoca-city-hangar,KAMINO,interior,yavin-4-launch-tower-1f,YAVIN 4,interior,hyperlane,Rebel transport (hl-yavin-kamino),yes,yes
+yavin-4-launch-tower-1f,YAVIN 4,interior,dagobah-hangar,DAGOBAH,interior,hyperlane,Rebel transport (hl-yavin-dagobah),yes,yes
+dagobah-hangar,DAGOBAH,interior,yavin-4-launch-tower-1f,YAVIN 4,interior,hyperlane,Rebel transport (hl-yavin-dagobah),yes,yes
+dagobah-hangar,DAGOBAH,interior,asteroid-spire-hangar,ASTEROID FIELD,interior,hyperlane,Player's ship (hl-dagobah-asteroid),yes,yes
+asteroid-spire-hangar,ASTEROID FIELD,interior,dagobah-hangar,DAGOBAH,interior,hyperlane,Player's ship (hl-dagobah-asteroid),yes,yes
+dagobah-hangar,DAGOBAH,interior,ilum-hangar,ILUM,interior,hyperlane,Player's ship (hl-dagobah-ilum),yes,yes
+ilum-hangar,ILUM,interior,dagobah-hangar,DAGOBAH,interior,hyperlane,Player's ship (hl-dagobah-ilum),yes,yes
+yavin-4-launch-tower-1f,YAVIN 4,interior,death-star-hangar,DEATH STAR,dungeon,hyperlane,Captured Imperial shuttle (hl-yavin-death-star),yes,yes
+death-star-hangar,DEATH STAR,dungeon,yavin-4-launch-tower-1f,YAVIN 4,interior,hyperlane,Captured Imperial shuttle (hl-yavin-death-star),yes,yes
+cloud-city-hangar,BESPIN,interior,grand-arena-reception-gate,GRAND ARENA,interior,hyperlane,Star liner (S.S. Tidal) (hl-bespin-grand-arena),yes,yes
+grand-arena-reception-gate,GRAND ARENA,interior,cloud-city-hangar,BESPIN,interior,hyperlane,Star liner (S.S. Tidal) (hl-bespin-grand-arena),yes,yes
+mos-eisley-hangar,TATOOINE,interior,grand-arena-reception-gate,GRAND ARENA,interior,hyperlane,Star liner (S.S. Tidal) (hl-tatooine-grand-arena),yes,yes
+grand-arena-reception-gate,GRAND ARENA,interior,mos-eisley-hangar,TATOOINE,interior,hyperlane,Star liner (S.S. Tidal) (hl-tatooine-grand-arena),yes,yes
+cloud-city-hangar,BESPIN,interior,tython-hangar,TYTHON,interior,hyperlane,Charter ship (hl-bespin-tython),yes,yes
+tython-hangar,TYTHON,interior,cloud-city-hangar,BESPIN,interior,hyperlane,Charter ship (hl-bespin-tython),yes,yes
+cloud-city-hangar,BESPIN,interior,wellspring-entrance,MORTIS,landmark,hyperlane,Charter ship (hl-bespin-wellspring),yes,yes
+wellspring-entrance,MORTIS,landmark,cloud-city-hangar,BESPIN,interior,hyperlane,Charter ship (hl-bespin-wellspring),yes,yes
+cloud-city-hangar,BESPIN,interior,atollon-hangar,ATOLLON,interior,hyperlane,Charter ship (hl-bespin-atollon),yes,yes
+atollon-hangar,ATOLLON,interior,cloud-city-hangar,BESPIN,interior,hyperlane,Charter ship (hl-bespin-atollon),yes,yes
+cloud-city-hangar,BESPIN,interior,mortis-gate-hangar,MORTIS,interior,hyperlane,Charter ship (hl-bespin-mortis),yes,yes
+mortis-gate-hangar,MORTIS,interior,cloud-city-hangar,BESPIN,interior,hyperlane,Charter ship (hl-bespin-mortis),yes,yes

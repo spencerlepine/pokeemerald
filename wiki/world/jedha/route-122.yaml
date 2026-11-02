@@ -5,7 +5,8 @@ kind: route
 replaces: Route122
 status: BLOCKOUT
 art_status: pending-final-art
-story: Holy waters round the island of the Jedha Temple. Pilgrim ships land on the north-west pad; a causeway east leads to NiJedha.
+story: Holy waters round the island of the Jedha Temple. Pilgrim ships land on the north-west pad; a causeway east leads to NiJedha. The pilgrim shuttle lands on
+  the rock above the causeway; the temple is reached by surfing.
 notes: 'route-122 (route, 40x40): holy waters around the Temple island, the pilgrim pad, a causeway · need: sea mode, a causeway over water.'
 pos: [-40, -1]
 grid: |
@@ -54,18 +55,21 @@ exits:
   cells: [18, 19]
   to: nijedha
 buildings:
-- name: Pilgrim landing pad
+- name: Pilgrim landing pad (ships)
   art: art:shared:landing-pad
-  at: [2, 2]
-  size: [4, 4]
+  at: [8, 14]
+  size: [6, 4]
+  door: 3
+  to: jedha-hangar
 props: []
 people: []
-signs: []
+signs:
+- name: Landing pad sign
+  at: [13, 18]
 warps:
 - name: Door
   at: [22, 29]
   to: jedha-temple-1f
-travel:
-- {to: starnav, via: ship, name: Pilgrim landing pad}
+travel: []
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Planet border cut: north edge to route-121 (ENDOR); reached by ship instead.', 'Planet border
     cut: south edge to route-123 (ENDOR); reached by ship instead.', 'Could not fit: Toppled statue']

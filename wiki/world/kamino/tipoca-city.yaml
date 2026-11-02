@@ -147,6 +147,8 @@ signs:
   at: [14, 16]
 - name: Cloning hall sign
   at: [32, 15]
+- name: Hangar sign (Rebel transport)
+  at: [45, 8]
 warps: []
 todo: [Grown from Pacifidlog (20x40) to 50x36; the 5 house and Bacta Center interiors keep their ids., 'New interiors: tipoca-city-cloning-hall (PROTOCLONE lore,
     optional), tipoca-city-supply-depot, tipoca-city-hangar.', '''~'' is the open storm sea (Surf); ''='' are the stilt walkways and platforms.']

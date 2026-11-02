@@ -159,6 +159,8 @@ signs:
   at: [14, 6]
 - name: Sign
   at: [24, 37]
+- name: Hangar sign (Shuttle (cable car))
+  at: [19, 37]
 warps:
 - name: Door
   at: [17, 36]

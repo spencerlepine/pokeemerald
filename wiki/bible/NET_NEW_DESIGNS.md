@@ -22,7 +22,10 @@ The new flags and vars come only from slots that `emerald-db/database/story_flag
 
 ## Planet borders (`net:hangar-*`, `net:border-*`)
 
-These rows only change how a crossing looks and reads. Collision, warps and level bands stay as they are in Emerald.
+Decided 2026-11-02 (owner): every planet is its own map, so every walkable border is cut and replaced by a ship link.
+The planet graph is `mapping/hyperlanes.csv` (one row per edge, with the hangar at each end and the unlock), kept
+consistent by `python3 -m blockout check` and listed in `world/GUIDE.md`. The rows below are the original per-border
+notes; where they differ, `hyperlanes.csv` wins. Level bands stay as they are in Emerald.
 
 | Row | Emerald link | Step 4 change | Level band (both sides) | Placeholder |
 |---|---|---|---|---|

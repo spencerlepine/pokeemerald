@@ -6,7 +6,7 @@ replaces: SlateportCity
 status: BLOCKOUT
 art_status: pending-final-art
 story: Wretched hive of scum and villainy. The Cantina (home of the companion fan club), the Spacer Museum, Ric Olie's shipyard and two docking bays round a busy
-  bazaar. Docking Bay 86 is the hangar to Kashyyyk.
+  bazaar. Docking Bay 86 is the hangar to Kashyyyk. Docking Bay 35 is the Sullustan transport's berth (to Pirin).
 notes: 'mos-eisley (town, 50x50): spaceport. Cantina (two domes), Spacer Museum, Ric Olie''s shipyard, two docking bays, bazaar stalls, parked landspeeders, crates
   · bordered by rock · need: stalls, landspeeders (low wedge with a canopy), a freighter sitting in a docking bay.'
 pos: [81, -28]
@@ -126,6 +126,12 @@ buildings:
   size: [6, 5]
   door: 3
   to: mos-eisley-battle-tent-lobby
+- name: Docking Bay 35 (Sullust transport)
+  art: art:tatooine:docking-bay
+  at: [40, 26]
+  size: [8, 5]
+  door: 3
+  to: hangar-tatooine-sullust
 props:
 - name: Parked freighter
   art: art:tatooine:freighter-parked
@@ -165,7 +171,7 @@ props:
   size: [2, 2]
 - name: Escape pod (scrap)
   art: art:shared:escape-pod
-  at: [44, 27]
+  at: [33, 27]
   size: [2, 2]
 - name: Fuel tanks
   art: art:shared:fuel-tanks
@@ -213,6 +219,12 @@ signs:
   at: [33, 40]
 - name: Docking Bay 86 sign
   at: [14, 41]
+- name: Docking Bay 35 sign
+  at: [45, 31]
+- name: Hangar sign (Millennium Falcon (Han))
+  at: [12, 42]
+- name: Hangar sign (Star liner (S.S. Tidal))
+  at: [40, 41]
 warps: []
 todo: ['Vanilla''s sea routes south (109) are cut: Kashyyyk is reached from Docking Bay 86.', The fan club moves into the Cantina's back booth (no separate building);
     the cantina is built into the vanilla fan club room (mos-eisley-fan-club)., Battle tent stays as a building (vanilla Slateport has one).]

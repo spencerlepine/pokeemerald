@@ -219,6 +219,8 @@ signs:
   at: [52, 51]
 - name: Sign
   at: [53, 51]
+- name: Hangar sign (Star liner (S.S. Tidal))
+  at: [24, 66]
 warps:
 - name: Door
   at: [19, 17]

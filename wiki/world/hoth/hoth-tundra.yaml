@@ -6,7 +6,7 @@ replaces: new
 status: BLOCKOUT
 art_status: pending-final-art
 story: 'New area: Hoth''s only overworld. A survey shuttle lands on the tundra; a Rebel survey team is scouting the planet for a future base. The trail runs north
-  past the tauntaun shelter to the Wampa Cave; a frozen lake (Surf) and deep snow (wild encounters) fill the sides.'
+  past the tauntaun shelter to the Wampa Cave; a frozen lake (Surf) and deep snow (wild encounters) fill the sides. Trainers: levels 32-35.'
 notes: 'hoth-tundra (route, 48x40): the only overworld: the survey shuttle on the tundra, the Rebel survey outpost (hex hangar), the tauntaun shelter, the Wampa Cave
   mouth in an ice cliff, a frozen lake to walk or surf · need: snow as ground, frozen lake (ice with cracks, a water kind), ice cliffs (relief with ice colours),
   snowdrifts as berms.'
@@ -117,6 +117,8 @@ signs:
   at: [13, 23]
 - name: Cave warning sign
   at: [25, 5]
+- name: Hangar sign (Rebel survey shuttle)
+  at: [22, 36]
 warps:
 - name: Wampa Cave mouth
   at: [23, 3]

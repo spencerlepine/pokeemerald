@@ -17,7 +17,7 @@ grid: |
   |______________|
   |______________|
   |______________|
-  |______________|
+  |_______________
   |______________|
   ||||||||_|||||||
 exits: []
@@ -44,5 +44,8 @@ warps:
 - name: Door
   at: [8, 11]
   to: felucia-reserve-south
+- name: Ramp (back to the Route 121 gate)
+  at: [15, 9]
+  to: route-121-safari-zone-entrance
 todo: ['New interior (replaces: new); placeholder room, sized for its contents.', Ship travel menu = vanilla boat/ferry ticket script; the StarNAV console lists unlocked
     planets.]

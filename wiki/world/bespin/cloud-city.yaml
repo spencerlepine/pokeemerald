@@ -196,6 +196,8 @@ signs:
   at: [32, 8]
 - name: Galleria sign
   at: [25, 11]
+- name: Hangar sign (Cloud City shuttle)
+  at: [8, 20]
 warps: []
 todo: ['''~'' on Bespin is the open cloud sea, crossed by cloud car (Surf).', 'Vanilla''s roads west (Endor) and east (Yavin 4) are cut: the west landing platform
     is the ship link.', 'North platform: a cloud car stop to the Tibanna refinery (new optional area).']

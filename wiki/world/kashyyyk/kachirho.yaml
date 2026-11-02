@@ -164,6 +164,8 @@ signs:
   at: [20, 3]
 - name: Arena sign
   at: [38, 8]
+- name: Hangar sign (Millennium Falcon (Han))
+  at: [39, 27]
 warps: []
 todo: [Vanilla Dewford has no Supply Depot; one is added (new interior kachirho-supply-depot)., The tree platforms are one level up; ladders at the west and east
     trunks.]

@@ -52,6 +52,5 @@ warps:
 - name: Door
   at: [12, 14]
   to: cloud-city
-travel:
-- {to: starnav, via: ship, name: West landing platform}
+travel: []
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

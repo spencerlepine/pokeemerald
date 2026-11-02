@@ -231,6 +231,8 @@ signs:
   at: [12, 17]
 - name: Arena sign
   at: [25, 15]
+- name: Hangar sign (Rebel transport)
+  at: [41, 54]
 warps:
 - name: Cave of Evil
   at: [5, 7]

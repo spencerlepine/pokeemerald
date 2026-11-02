@@ -51,7 +51,12 @@ progress. The wiki is the one list: no separate to-do docs.
 ## Rules
 
 - **Each planet is its own map (owner, 2026-11-02).** Walkable borders between planets are cut; ships
-  link them (hangars, docking bays, shuttles). `blockout layout <PLANET>` fits a planet's towns, routes and
+  link them (hangars, docking bays, shuttles) along the planet graph in `../mapping/hyperlanes.csv`: one row
+  per edge, naming the overworld area and ship room at each end and the unlock. A hangar is a building
+  on the main road at the edge of the planet that faces the destination (where the vanilla road left the map),
+  with a sign beside its door, so the player walks straight into it. A ship room's StarNAV console lists
+  the unlocked edges from that room. `blockout check` fails if an edge lacks a door, a way back or a sign,
+  or a planet has no edge; `blockout guide` lists the graph and the badges held on first landing. `blockout layout <PLANET>` fits a planet's towns, routes and
   landmarks together from their exits and writes each area's `pos`; it reports exits with no way back,
   loops that do not close and overlaps.
 - Towns can be bigger and any shape (owner, 2026-11-02): GBA storage is no longer the limit, but walks

@@ -6,7 +6,7 @@ replaces: new
 status: BLOCKOUT
 art_status: pending-final-art
 story: 'Optional: a Tibanna gas refinery on a separate platform north of Cloud City, reached by cloud car or the north skybridge. Ugnaughts work the tanks; Cartel
-  thugs are smuggling gas.'
+  thugs are smuggling gas. Trainers: levels 32-34.'
 notes: 'tibanna-refinery (landmark, 40x26): a separate platform north, reached by cloud car or skybridge: gas tanks, pipes, Ugnaught work sheds · need: the platform
   mode, big tanks (have), pipe runs.'
 pos: [15, -26]

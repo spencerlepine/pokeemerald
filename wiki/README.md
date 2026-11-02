@@ -121,6 +121,7 @@ in `../game`. Every `source_file` is a path relative to `../game`.
   Made by `python -m tilegen terrain run` in `tools/tile-generator/`.
 - **World-building tools:** [`../tools/world-art/README.md`](../tools/world-art/README.md) draws new shapes from 3D models. Only owner-approved models live there (so far the Hoenn tree).
 - **World blockout:** [`world/README.md`](world/README.md) lays out every area in placeholder tiles before any art; `world/INDEX.csv` is the to-do list.
+- **Planet graph:** `mapping/hyperlanes.csv` is every ship link between planets (hangar at each end, unlock); `world/GUIDE.md` reports it with the badges held on first landing and the balance check of every net-new area.
 - **Tilesets:** [`bible/TILESET_INSTALL.md`](bible/TILESET_INSTALL.md) lists every approved tile-generator recipe and what
   its import must do beyond copying files (per-planet copies of the shared General primary, map edits such as
   removing life buoys from Star Destroyer rooms). Read it before porting any tileset.

@@ -10,7 +10,7 @@ cd tools/blockout && pip install -r requirements.txt
 python3 -m blockout new mos-pelgo --replaces LittlerootTown --planet TATOOINE --name "MOS PELGO"   # start from the vanilla map's collision
 python3 -m blockout new my-area --planet HOTH --size 30 20                                          # a brand-new area
 python3 -m blockout render            # every area -> wiki/world/<planet>/<area>.png (vanilla | blockout | legend)
-python3 -m blockout check             # layout problems (overlaps, blocked doors and exits, softlock pockets behind one-way ledges); exit 1 if any
+python3 -m blockout check             # layout problems (overlaps, blocked doors and exits, softlock pockets behind one-way ledges) and the planet graph (`../../wiki/mapping/hyperlanes.csv`: every edge's hangars, doors, ramps and signs; every planet linked); exit 1 if any
 python3 -m blockout index             # wiki/world/INDEX.csv
 python3 -m blockout layout TATOOINE   # place a planet's overworld areas from their exits (writes each area's pos)
 python3 -m blockout world             # <planet>/_planet.png and _world.png (one panel per planet)
@@ -21,6 +21,7 @@ python3 -m blockout guide             # wiki/world/GUIDE.md and CONNECTIONS.csv:
 - `drafts/`: the scripts that laid out every planet, with their run order ([`drafts/README.md`](drafts/README.md)).
 
 - `blockout/area.py`: the area file format (documented at the top of the file) and its checks.
+- `blockout/hyperlanes.py`: the planet graph (`wiki/mapping/hyperlanes.csv`), its checks, and the badge count on first landing per planet (documented at the top of the file).
 - `blockout/terrain.py`: the terrain legend, one character per cell.
 - `blockout/vanilla.py`: reads a vanilla map (collision, behaviours, doors, people, connections) via `../tile-generator`.
 - `blockout/render.py`: the review sheet.

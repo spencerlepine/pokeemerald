@@ -73,6 +73,7 @@ cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,person,Cloud car pilot,1x1,,,PLACEH
 cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,person,Blend master,1x1,,,PLACEHOLDER,
 cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,sign,City sign,1x1,,,PLACEHOLDER,
 cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,sign,Galleria sign,1x1,,,PLACEHOLDER,
+cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,sign,Hangar sign (Cloud City shuttle),1x1,,,PLACEHOLDER,
 cloud-city-bacta-center-1f,BESPIN,interior,LilycoveCity_PokemonCenter_1F,BLOCKOUT,area,CLOUD CITY BACTA CENTER 1F,14x9,,,pending-final-art,greybox room
 cloud-city-bacta-center-1f,BESPIN,interior,LilycoveCity_PokemonCenter_1F,BLOCKOUT,person,Nurse,1x1,,,PLACEHOLDER,
 cloud-city-bacta-center-1f,BESPIN,interior,LilycoveCity_PokemonCenter_1F,BLOCKOUT,person,Boy,1x1,,,PLACEHOLDER,
@@ -578,6 +579,7 @@ dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,person,Dagobah pilgrim,1x1,,,PLACEH
 dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,person,Smuggler stranded here,1x1,,,PLACEHOLDER,
 dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,sign,Hollow sign,1x1,,,PLACEHOLDER,
 dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,sign,Arena sign,1x1,,,PLACEHOLDER,
+dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,sign,Hangar sign (Rebel transport),1x1,,,PLACEHOLDER,
 dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,warp,Cave of Evil,1x1,,,PLACEHOLDER,
 dagobah-arena-1f,DAGOBAH,interior,SootopolisCity_Gym_1F,BLOCKOUT,area,DAGOBAH ARENA 1F,17x26,,,pending-final-art,greybox room
 dagobah-arena-1f,DAGOBAH,interior,SootopolisCity_Gym_1F,BLOCKOUT,person,Juan,1x1,,,PLACEHOLDER,
@@ -888,6 +890,12 @@ endor-battlefield-bunker,ENDOR,interior,new,BLOCKOUT,prop,Dead consoles,8x2,art:
 endor-battlefield-bunker,ENDOR,interior,new,BLOCKOUT,prop,Blast door (locked),3x2,art:new:blast-door,yes,pending-final-art,greybox piece
 endor-battlefield-bunker,ENDOR,interior,new,BLOCKOUT,person,Stormtrooper straggler,1x1,,,PLACEHOLDER,
 endor-battlefield-bunker,ENDOR,interior,new,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
+endor-hangar,ENDOR,interior,new,BLOCKOUT,area,Route 121 shuttle pad hangar,16x12,,,pending-final-art,greybox room
+endor-hangar,ENDOR,interior,new,BLOCKOUT,prop,Player's ship,8x5,art:shared:landing-pad,yes,pending-final-art,greybox piece
+endor-hangar,ENDOR,interior,new,BLOCKOUT,prop,StarNAV flight console,1x1,art:new:starnav-console,yes,pending-final-art,greybox piece
+endor-hangar,ENDOR,interior,new,BLOCKOUT,prop,Cargo crates,2x2,art:shared:cargo-crates,yes,pending-final-art,greybox piece
+endor-hangar,ENDOR,interior,new,BLOCKOUT,person,Pilot,1x1,,,PLACEHOLDER,
+endor-hangar,ENDOR,interior,new,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 route-119-endor-station-1f,ENDOR,interior,Route119_WeatherInstitute_1F,BLOCKOUT,area,ROUTE 119 ENDOR STATION 1F,20x13,,,pending-final-art,greybox room
 route-119-endor-station-1f,ENDOR,interior,Route119_WeatherInstitute_1F,BLOCKOUT,person,Trainer Roldarg,1x1,,,PLACEHOLDER,
 route-119-endor-station-1f,ENDOR,interior,Route119_WeatherInstitute_1F,BLOCKOUT,person,Trainer Roldarg,1x1,,,PLACEHOLDER,
@@ -928,6 +936,7 @@ route-121-safari-zone-entrance,ENDOR,interior,Route121_SafariZoneEntrance,BLOCKO
 route-121-safari-zone-entrance,ENDOR,interior,Route121_SafariZoneEntrance,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
 route-121-safari-zone-entrance,ENDOR,interior,Route121_SafariZoneEntrance,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 route-121-safari-zone-entrance,ENDOR,interior,Route121_SafariZoneEntrance,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
+route-121-safari-zone-entrance,ENDOR,interior,Route121_SafariZoneEntrance,BLOCKOUT,warp,Shuttle ramp (to the Felucia Reserve),1x1,,,PLACEHOLDER,
 route-123-berry-masters-house,ENDOR,interior,Route123_BerryMastersHouse,BLOCKOUT,area,ROUTE 123 BERRY MASTERS HOUSE,11x8,,,pending-final-art,greybox room
 route-123-berry-masters-house,ENDOR,interior,Route123_BerryMastersHouse,BLOCKOUT,person,Berry Master,1x1,,,PLACEHOLDER,
 route-123-berry-masters-house,ENDOR,interior,Route123_BerryMastersHouse,BLOCKOUT,person,Berry Masters Wife,1x1,,,PLACEHOLDER,
@@ -1067,6 +1076,7 @@ route-120,ENDOR,route,Route120,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
 route-120,ENDOR,route,Route120,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 route-120,ENDOR,route,Route120,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 route-121,ENDOR,route,Route121,BLOCKOUT,area,ROUTE 121,80x20,,,pending-final-art,greybox terrain
+route-121,ENDOR,route,Route121,BLOCKOUT,building,Cloud City shuttle pad (ships),5x4,art:shared:landing-pad,yes,pending-final-art,greybox piece
 route-121,ENDOR,route,Route121,BLOCKOUT,prop,Redwood trunk,3x3,art:endor:redwood-trunk,yes,pending-mockup,greybox piece
 route-121,ENDOR,route,Route121,BLOCKOUT,prop,Totem and drum,1x2,art:endor:totem-and-drum,yes,pending-final-art,greybox piece
 route-121,ENDOR,route,Route121,BLOCKOUT,person,Woman,1x1,,,PLACEHOLDER,
@@ -1100,6 +1110,9 @@ route-121,ENDOR,route,Route121,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER,
 route-121,ENDOR,route,Route121,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER,
 route-121,ENDOR,route,Route121,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
 route-121,ENDOR,route,Route121,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
+route-121,ENDOR,route,Route121,BLOCKOUT,sign,Shuttle pad sign,1x1,,,PLACEHOLDER,
+route-121,ENDOR,route,Route121,BLOCKOUT,sign,Reserve gate sign,1x1,,,PLACEHOLDER,
+route-121,ENDOR,route,Route121,BLOCKOUT,sign,Hangar sign (Cloud City shuttle),1x1,,,PLACEHOLDER,
 route-121,ENDOR,route,Route121,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 route-123,ENDOR,route,Route123,BLOCKOUT,area,ROUTE 123,140x20,,,pending-final-art,greybox terrain
 route-123,ENDOR,route,Route123,BLOCKOUT,building,Berry masters house,4x3,art:endor:ewok-hut,yes,pending-final-art,greybox piece
@@ -1190,6 +1203,7 @@ felucia-reserve-south,FELUCIA,route,SafariZone_South,BLOCKOUT,person,Youngster,1
 felucia-reserve-south,FELUCIA,route,SafariZone_South,BLOCKOUT,person,Construction Worker1,1x1,,,PLACEHOLDER,
 felucia-reserve-south,FELUCIA,route,SafariZone_South,BLOCKOUT,person,Construction Worker2,1x1,,,PLACEHOLDER,
 felucia-reserve-south,FELUCIA,route,SafariZone_South,BLOCKOUT,person,Reserve ranger,1x1,,,PLACEHOLDER,
+felucia-reserve-south,FELUCIA,route,SafariZone_South,BLOCKOUT,sign,Hangar sign (Reserve shuttle),1x1,,,PLACEHOLDER,
 felucia-reserve-south,FELUCIA,route,SafariZone_South,BLOCKOUT,warp,Reserve gate and shuttle (ships),1x1,,,PLACEHOLDER,
 felucia-reserve-southeast,FELUCIA,route,SafariZone_Southeast,BLOCKOUT,area,FELUCIA RESERVE,40x40,,,pending-final-art,greybox terrain
 felucia-reserve-southeast,FELUCIA,route,SafariZone_Southeast,BLOCKOUT,prop,Giant fungus,2x2,art:felucia:giant-fungus,yes,pending-final-art,greybox piece
@@ -1212,6 +1226,7 @@ felucia-hangar,FELUCIA,interior,new,BLOCKOUT,prop,StarNAV flight console,1x1,art
 felucia-hangar,FELUCIA,interior,new,BLOCKOUT,prop,Cargo crates,2x2,art:shared:cargo-crates,yes,pending-final-art,greybox piece
 felucia-hangar,FELUCIA,interior,new,BLOCKOUT,person,Pilot,1x1,,,PLACEHOLDER,
 felucia-hangar,FELUCIA,interior,new,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
+felucia-hangar,FELUCIA,interior,new,BLOCKOUT,warp,Ramp (back to the Route 121 gate),1x1,,,PLACEHOLDER,
 felucia-reserve-rest-house,FELUCIA,interior,SafariZone_RestHouse,BLOCKOUT,area,FELUCIA RESERVE REST HOUSE,10x9,,,pending-final-art,greybox room
 felucia-reserve-rest-house,FELUCIA,interior,SafariZone_RestHouse,BLOCKOUT,person,Youngster,1x1,,,PLACEHOLDER,
 felucia-reserve-rest-house,FELUCIA,interior,SafariZone_RestHouse,BLOCKOUT,person,Psychic M,1x1,,,PLACEHOLDER,
@@ -1321,6 +1336,7 @@ grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,s
 grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
 grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
 grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
+grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,sign,Hangar sign (Star liner (S.S. Tidal)),1x1,,,PLACEHOLDER,
 grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 grand-arena-outside-west,GRAND ARENA,route,BattleFrontier_OutsideWest,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
@@ -1840,6 +1856,7 @@ hoth-tundra,HOTH,route,new,BLOCKOUT,person,Ice trekker,1x1,,,PLACEHOLDER,
 hoth-tundra,HOTH,route,new,BLOCKOUT,person,Lost scout,1x1,,,PLACEHOLDER,
 hoth-tundra,HOTH,route,new,BLOCKOUT,sign,Outpost sign,1x1,,,PLACEHOLDER,
 hoth-tundra,HOTH,route,new,BLOCKOUT,sign,Cave warning sign,1x1,,,PLACEHOLDER,
+hoth-tundra,HOTH,route,new,BLOCKOUT,sign,Hangar sign (Rebel survey shuttle),1x1,,,PLACEHOLDER,
 hoth-tundra,HOTH,route,new,BLOCKOUT,warp,Wampa Cave mouth,1x1,,,PLACEHOLDER,
 hoth-hangar,HOTH,interior,new,BLOCKOUT,area,Hoth survey pad hangar,16x12,,,pending-final-art,greybox room
 hoth-hangar,HOTH,interior,new,BLOCKOUT,prop,Player's ship,8x5,art:shared:landing-pad,yes,pending-final-art,greybox piece
@@ -1933,6 +1950,7 @@ ilum,ILUM,town,EverGrandeCity,BLOCKOUT,person,Crystal hunter,1x1,,,PLACEHOLDER,
 ilum,ILUM,town,EverGrandeCity,BLOCKOUT,person,Rebel pilot,1x1,,,PLACEHOLDER,
 ilum,ILUM,town,EverGrandeCity,BLOCKOUT,sign,Temple sign,1x1,,,PLACEHOLDER,
 ilum,ILUM,town,EverGrandeCity,BLOCKOUT,sign,Crystal Caves sign,1x1,,,PLACEHOLDER,
+ilum,ILUM,town,EverGrandeCity,BLOCKOUT,sign,Hangar sign (Player's ship),1x1,,,PLACEHOLDER,
 ilum,ILUM,town,EverGrandeCity,BLOCKOUT,warp,Crystal Caves (north mouth),1x1,,,PLACEHOLDER,
 ilum,ILUM,town,EverGrandeCity,BLOCKOUT,warp,Crystal Caves (south mouth),1x1,,,PLACEHOLDER,
 ilum-bacta-center-1f,ILUM,interior,EverGrandeCity_PokemonCenter_1F,BLOCKOUT,area,ILUM BACTA CENTER 1F,14x9,,,pending-final-art,greybox room
@@ -2023,6 +2041,12 @@ ilum-temple-2f,ILUM,interior,EverGrandeCity_PokemonLeague_2F,BLOCKOUT,person,Wir
 ilum-temple-2f,ILUM,interior,EverGrandeCity_PokemonLeague_2F,BLOCKOUT,person,Direct Corner Attendant,1x1,,,PLACEHOLDER,
 ilum-temple-2f,ILUM,interior,EverGrandeCity_PokemonLeague_2F,BLOCKOUT,person,Mystery Gift Man,1x1,,,PLACEHOLDER,
 ilum-temple-2f,ILUM,interior,EverGrandeCity_PokemonLeague_2F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
+jedha-hangar,JEDHA,interior,new,BLOCKOUT,area,Pilgrim landing pad hangar,16x12,,,pending-final-art,greybox room
+jedha-hangar,JEDHA,interior,new,BLOCKOUT,prop,Player's ship,8x5,art:shared:landing-pad,yes,pending-final-art,greybox piece
+jedha-hangar,JEDHA,interior,new,BLOCKOUT,prop,StarNAV flight console,1x1,art:new:starnav-console,yes,pending-final-art,greybox piece
+jedha-hangar,JEDHA,interior,new,BLOCKOUT,prop,Cargo crates,2x2,art:shared:cargo-crates,yes,pending-final-art,greybox piece
+jedha-hangar,JEDHA,interior,new,BLOCKOUT,person,Pilot,1x1,,,PLACEHOLDER,
+jedha-hangar,JEDHA,interior,new,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 jedha-temple-1f,JEDHA,interior,MtPyre_1F,BLOCKOUT,area,JEDHA TEMPLE 1F,22x19,,,pending-final-art,greybox room
 jedha-temple-1f,JEDHA,interior,MtPyre_1F,BLOCKOUT,person,Cleanse Tag Woman,1x1,,,PLACEHOLDER,
 jedha-temple-1f,JEDHA,interior,MtPyre_1F,BLOCKOUT,person,Pokefan F,1x1,,,PLACEHOLDER,
@@ -2140,7 +2164,8 @@ nijedha,JEDHA,town,new,BLOCKOUT,person,Stormtrooper patrol,1x1,,,PLACEHOLDER,
 nijedha,JEDHA,town,new,BLOCKOUT,person,Kyber trader,1x1,,,PLACEHOLDER,
 nijedha,JEDHA,town,new,BLOCKOUT,sign,City sign,1x1,,,PLACEHOLDER,
 route-122,JEDHA,route,Route122,BLOCKOUT,area,ROUTE 122,40x40,,,pending-final-art,greybox terrain
-route-122,JEDHA,route,Route122,BLOCKOUT,building,Pilgrim landing pad,4x4,art:shared:landing-pad,yes,pending-final-art,greybox piece
+route-122,JEDHA,route,Route122,BLOCKOUT,building,Pilgrim landing pad (ships),6x4,art:shared:landing-pad,yes,pending-final-art,greybox piece
+route-122,JEDHA,route,Route122,BLOCKOUT,sign,Landing pad sign,1x1,,,PLACEHOLDER,
 route-122,JEDHA,route,Route122,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 sealed-vault-inner-room,KAMINO,dungeon,SealedChamber_InnerRoom,BLOCKOUT,area,SEALED VAULT INNER ROOM,21x23,,,pending-final-art,greybox terrain
 sealed-vault-inner-room,KAMINO,dungeon,SealedChamber_InnerRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
@@ -2316,6 +2341,7 @@ tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,person,Stilt fisher,1x1,,,PLACEH
 tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,person,Dock worker,1x1,,,PLACEHOLDER,
 tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,sign,City holo-sign,1x1,,,PLACEHOLDER,
 tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,sign,Cloning hall sign,1x1,,,PLACEHOLDER,
+tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,sign,Hangar sign (Rebel transport),1x1,,,PLACEHOLDER,
 ice-grotto,KASHYYYK,dungeon,IslandCave,BLOCKOUT,area,ICE GROTTO,17x33,,,pending-final-art,greybox terrain
 ice-grotto,KASHYYYK,dungeon,IslandCave,BLOCKOUT,person,Regice,1x1,,,PLACEHOLDER,
 ice-grotto,KASHYYYK,dungeon,IslandCave,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
@@ -2573,6 +2599,7 @@ kachirho,KASHYYYK,town,DewfordTown,BLOCKOUT,person,Trader from Mos Eisley,1x1,,,
 kachirho,KASHYYYK,town,DewfordTown,BLOCKOUT,person,Wookiee cub,1x1,,,PLACEHOLDER,
 kachirho,KASHYYYK,town,DewfordTown,BLOCKOUT,sign,Town sign,1x1,,,PLACEHOLDER,
 kachirho,KASHYYYK,town,DewfordTown,BLOCKOUT,sign,Arena sign,1x1,,,PLACEHOLDER,
+kachirho,KASHYYYK,town,DewfordTown,BLOCKOUT,sign,Hangar sign (Millennium Falcon (Han)),1x1,,,PLACEHOLDER,
 route-105,KASHYYYK,route,Route105,BLOCKOUT,area,ROUTE 105,40x80,,,pending-final-art,greybox terrain
 route-105,KASHYYYK,route,Route105,BLOCKOUT,prop,Beach rocks,1x1,art:kashyyyk:beach-rocks,yes,pending-final-art,greybox piece
 route-105,KASHYYYK,route,Route105,BLOCKOUT,person,Trainer Loal,1x1,,,PLACEHOLDER,
@@ -2856,6 +2883,7 @@ mustafar-peak,MUSTAFAR,route,MtChimney,BLOCKOUT,person,Trainer Roldarg,1x1,,,PLA
 mustafar-peak,MUSTAFAR,route,MtChimney,BLOCKOUT,person,Trainer Soesh,1x1,,,PLACEHOLDER,
 mustafar-peak,MUSTAFAR,route,MtChimney,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
 mustafar-peak,MUSTAFAR,route,MtChimney,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
+mustafar-peak,MUSTAFAR,route,MtChimney,BLOCKOUT,sign,Hangar sign (Shuttle (cable car)),1x1,,,PLACEHOLDER,
 mustafar-peak,MUSTAFAR,route,MtChimney,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 mustafar-peak,MUSTAFAR,route,MtChimney,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 mustafar-peak,MUSTAFAR,route,MtChimney,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
@@ -3239,6 +3267,7 @@ pirin,SULLUST,town,LavaridgeTown,BLOCKOUT,person,Sullustan miner,1x1,,,PLACEHOLD
 pirin,SULLUST,town,LavaridgeTown,BLOCKOUT,person,Pilot fresh off the shuttle,1x1,,,PLACEHOLDER,
 pirin,SULLUST,town,LavaridgeTown,BLOCKOUT,sign,Town sign,1x1,,,PLACEHOLDER,
 pirin,SULLUST,town,LavaridgeTown,BLOCKOUT,sign,Arena sign,1x1,,,PLACEHOLDER,
+pirin,SULLUST,town,LavaridgeTown,BLOCKOUT,sign,Hangar sign (Sullustan transport),1x1,,,PLACEHOLDER,
 pirin,SULLUST,town,LavaridgeTown,BLOCKOUT,warp,Magma Tunnels mouth,1x1,,,PLACEHOLDER,
 route-113,SULLUST,route,Route113,BLOCKOUT,area,ROUTE 113,100x20,,,pending-final-art,greybox terrain
 route-113,SULLUST,route,Route113,BLOCKOUT,prop,Basalt column,2x2,art:sullust:basalt-column,yes,pending-mockup,greybox piece
@@ -4373,6 +4402,7 @@ mos-eisley,TATOOINE,town,SlateportCity,BLOCKOUT,building,Supply Depot,4x4,art:sh
 mos-eisley,TATOOINE,town,SlateportCity,BLOCKOUT,building,Name-changer's home,5x4,art:tatooine:homestead-dome,yes,pending-final-art,greybox piece
 mos-eisley,TATOOINE,town,SlateportCity,BLOCKOUT,building,Moisture trader's home,5x4,art:tatooine:homestead-dome,yes,pending-final-art,greybox piece
 mos-eisley,TATOOINE,town,SlateportCity,BLOCKOUT,building,Battle tent,6x5,art:shared:arena,yes,pending-final-art,greybox piece
+mos-eisley,TATOOINE,town,SlateportCity,BLOCKOUT,building,Docking Bay 35 (Sullust transport),8x5,art:tatooine:docking-bay,yes,pending-final-art,greybox piece
 mos-eisley,TATOOINE,town,SlateportCity,BLOCKOUT,prop,Parked freighter,6x4,art:tatooine:freighter-parked,yes,pending-final-art,greybox piece
 mos-eisley,TATOOINE,town,SlateportCity,BLOCKOUT,prop,Market stall,2x2,art:tatooine:market-stall,yes,pending-final-art,greybox piece
 mos-eisley,TATOOINE,town,SlateportCity,BLOCKOUT,prop,Market stall,2x2,art:tatooine:market-stall,yes,pending-final-art,greybox piece
@@ -4399,6 +4429,9 @@ mos-eisley,TATOOINE,town,SlateportCity,BLOCKOUT,sign,Cantina sign,1x1,,,PLACEHOL
 mos-eisley,TATOOINE,town,SlateportCity,BLOCKOUT,sign,Museum sign,1x1,,,PLACEHOLDER,
 mos-eisley,TATOOINE,town,SlateportCity,BLOCKOUT,sign,Docking Bay 94 sign,1x1,,,PLACEHOLDER,
 mos-eisley,TATOOINE,town,SlateportCity,BLOCKOUT,sign,Docking Bay 86 sign,1x1,,,PLACEHOLDER,
+mos-eisley,TATOOINE,town,SlateportCity,BLOCKOUT,sign,Docking Bay 35 sign,1x1,,,PLACEHOLDER,
+mos-eisley,TATOOINE,town,SlateportCity,BLOCKOUT,sign,Hangar sign (Millennium Falcon (Han)),1x1,,,PLACEHOLDER,
+mos-eisley,TATOOINE,town,SlateportCity,BLOCKOUT,sign,Hangar sign (Star liner (S.S. Tidal)),1x1,,,PLACEHOLDER,
 mos-entha,TATOOINE,town,PetalburgCity,BLOCKOUT,area,MOS ENTHA,38x32,,,pending-final-art,greybox terrain
 mos-entha,TATOOINE,town,PetalburgCity,BLOCKOUT,building,Mos Entha arena (Doran),7x5,art:tatooine:mos-entha-arena,yes,pending-final-art,greybox piece
 mos-entha,TATOOINE,town,PetalburgCity,BLOCKOUT,building,Lars homestead (Owen and Luke),6x4,art:tatooine:lars-family-home,yes,pending-final-art,greybox piece
@@ -4435,6 +4468,7 @@ mos-espa,TATOOINE,town,MauvilleCity,BLOCKOUT,building,Supply Depot,4x4,art:share
 mos-espa,TATOOINE,town,MauvilleCity,BLOCKOUT,building,Slave quarters row (Shmi's old home),5x4,art:tatooine:homestead-dome,yes,pending-final-art,greybox piece
 mos-espa,TATOOINE,town,MauvilleCity,BLOCKOUT,building,Pit droid mechanic's home,5x4,art:tatooine:homestead-dome,yes,pending-final-art,greybox piece
 mos-espa,TATOOINE,town,MauvilleCity,BLOCKOUT,building,Espa generator hatch,4x3,art:tatooine:power-station,yes,pending-final-art,greybox piece
+mos-espa,TATOOINE,town,MauvilleCity,BLOCKOUT,building,Rebel shuttle pad (to Endor),7x4,art:shared:landing-pad,yes,pending-final-art,greybox piece
 mos-espa,TATOOINE,town,MauvilleCity,BLOCKOUT,prop,Watto's junkyard,2x2,art:tatooine:pod-race-junk,yes,pending-final-art,greybox piece
 mos-espa,TATOOINE,town,MauvilleCity,BLOCKOUT,prop,Watto's junkyard,2x2,art:tatooine:pod-race-junk,yes,pending-final-art,greybox piece
 mos-espa,TATOOINE,town,MauvilleCity,BLOCKOUT,prop,Watto's junkyard,2x2,art:tatooine:pod-race-junk,yes,pending-final-art,greybox piece
@@ -4459,6 +4493,7 @@ mos-espa,TATOOINE,town,MauvilleCity,BLOCKOUT,sign,City holo-sign,1x1,,,PLACEHOLD
 mos-espa,TATOOINE,town,MauvilleCity,BLOCKOUT,sign,Arena sign,1x1,,,PLACEHOLDER,
 mos-espa,TATOOINE,town,MauvilleCity,BLOCKOUT,sign,Grand Arena sign,1x1,,,PLACEHOLDER,
 mos-espa,TATOOINE,town,MauvilleCity,BLOCKOUT,sign,Sabacc den sign,1x1,,,PLACEHOLDER,
+mos-espa,TATOOINE,town,MauvilleCity,BLOCKOUT,sign,Shuttle pad sign,1x1,,,PLACEHOLDER,
 mos-pelgo,TATOOINE,town,LittlerootTown,BLOCKOUT,area,MOS PELGO,20x20,,,pending-final-art,greybox terrain
 mos-pelgo,TATOOINE,town,LittlerootTown,BLOCKOUT,building,Player's homestead,5x4,art:tatooine:homestead-dome,yes,pending-final-art,greybox piece
 mos-pelgo,TATOOINE,town,LittlerootTown,BLOCKOUT,building,Korr family home,6x6,art:tatooine:sunken-courtyard-home,yes,pending-final-art,greybox piece
@@ -4733,6 +4768,7 @@ route-112,TATOOINE,route,Route112,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER,
 route-112,TATOOINE,route,Route112,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
 route-112,TATOOINE,route,Route112,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
 route-112,TATOOINE,route,Route112,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
+route-112,TATOOINE,route,Route112,BLOCKOUT,sign,Hangar sign (Shuttle (cable car)),1x1,,,PLACEHOLDER,
 route-112,TATOOINE,route,Route112,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 route-115,TATOOINE,route,Route115,BLOCKOUT,area,ROUTE 115,40x80,,,pending-final-art,greybox terrain
 route-115,TATOOINE,route,Route115,BLOCKOUT,prop,Sandstone boulder,2x2,art:tatooine:sandstone-boulder,yes,pending-final-art,greybox piece
@@ -4873,6 +4909,7 @@ tython-isle-exterior,TYTHON,route,SouthernIsland_Exterior,BLOCKOUT,prop,Tython s
 tython-isle-exterior,TYTHON,route,SouthernIsland_Exterior,BLOCKOUT,person,Sailor,1x1,,,PLACEHOLDER,
 tython-isle-exterior,TYTHON,route,SouthernIsland_Exterior,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER,
 tython-isle-exterior,TYTHON,route,SouthernIsland_Exterior,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
+tython-isle-exterior,TYTHON,route,SouthernIsland_Exterior,BLOCKOUT,sign,Hangar sign (Charter ship),1x1,,,PLACEHOLDER,
 tython-isle-exterior,TYTHON,route,SouthernIsland_Exterior,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 tython-isle-exterior,TYTHON,route,SouthernIsland_Exterior,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 tython-isle-exterior,TYTHON,route,SouthernIsland_Exterior,BLOCKOUT,warp,Landing pad (ships),1x1,,,PLACEHOLDER,
@@ -5085,3 +5122,4 @@ yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,person,Rebel trooper,1x1,,,PLACEHOLDE
 yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,person,Launch tech,1x1,,,PLACEHOLDER,
 yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,sign,Base sign,1x1,,,PLACEHOLDER,
 yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,sign,Temple sign,1x1,,,PLACEHOLDER,
+yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,sign,Hangar sign (Rebel transport),1x1,,,PLACEHOLDER,

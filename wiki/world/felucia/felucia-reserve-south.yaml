@@ -93,7 +93,9 @@ people:
 - name: Reserve ranger
   at: [29, 29]
   role: story
-signs: []
+signs:
+- name: Hangar sign (Reserve shuttle)
+  at: [30, 34]
 warps:
 - name: Reserve gate and shuttle (ships)
   at: [32, 33]

@@ -179,5 +179,7 @@ signs:
   at: [4, 21]
 - name: Temple sign
   at: [25, 12]
+- name: Hangar sign (Rebel transport)
+  at: [54, 13]
 warps: []
 todo: ['Vanilla''s south sea (Route 127, Dagobah) is cut.', Vanilla Steven's house becomes Leia's quarters.]

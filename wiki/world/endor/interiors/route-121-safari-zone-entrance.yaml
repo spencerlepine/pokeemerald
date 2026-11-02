@@ -45,5 +45,8 @@ warps:
 - name: Door
   at: [15, 13]
   to: route-121
+- name: Shuttle ramp (to the Felucia Reserve)
+  at: [1, 2]
+  to: felucia-hangar
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Planet border cut: door at [2, 5] to felucia-reserve-south; reached by ship instead.', 'Planet
     border cut: door at [3, 5] to felucia-reserve-south; reached by ship instead.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

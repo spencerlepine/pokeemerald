@@ -6,7 +6,7 @@ replaces: MauvilleCity
 status: BLOCKOUT
 art_status: pending-final-art
 story: Podracing city. Watto's junkyard holds the Electric arena, Wald rents speeder bikes, and the podrace stands overlook the east side. A hatch in the south-east
-  leads down into the old Espa generator.
+  leads down into the old Espa generator. The east road ends at the Rebel shuttle pad, the flight to Endor.
 notes: 'mos-espa (town, 56x36): podracing city. Watto''s junk shop with the Electric gym, Wald''s speeder-bike rental, the podrace grandstand on the east side, a
   hatch down to the generator · bordered by rock and the grandstand · need: grandstand (tiered seating facing the course), speeder bikes, podracer engines on display,
   junk piles.'
@@ -113,6 +113,12 @@ buildings:
   size: [4, 3]
   door: 2
   to: espa-generator-entrance
+- name: Rebel shuttle pad (to Endor)
+  art: art:shared:landing-pad
+  at: [48, 12]
+  size: [7, 4]
+  door: 3
+  to: hangar-tatooine-endor
 props:
 - name: Watto's junkyard
   art: art:tatooine:pod-race-junk
@@ -128,7 +134,7 @@ props:
   size: [2, 2]
 - name: Podracer on display
   art: art:tatooine:podracer-on-display
-  at: [47, 13]
+  at: [43, 10]
   size: [4, 2]
 - name: Market stall
   art: art:tatooine:market-stall
@@ -195,6 +201,8 @@ signs:
   at: [37, 8]
 - name: Sabacc den sign
   at: [14, 21]
+- name: Shuttle pad sign
+  at: [49, 16]
 warps: []
 todo: [Open-air now; vanilla Mauville's single roof is dropped., 'Vanilla''s east road to Route 118 is cut: Endor is reached by ship (planet border, see wiki/world/README.md).',
   'New interior: mos-espa-podrace-arena (the stands; Boonta Eve race events).']

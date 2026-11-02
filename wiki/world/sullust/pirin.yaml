@@ -129,6 +129,8 @@ signs:
   at: [18, 30]
 - name: Arena sign
   at: [12, 10]
+- name: Hangar sign (Sullustan transport)
+  at: [31, 30]
 warps:
 - name: Magma Tunnels mouth
   at: [20, 2]

@@ -148,6 +148,8 @@ signs:
   at: [20, 12]
 - name: Crystal Caves sign
   at: [13, 40]
+- name: Hangar sign (Player's ship)
+  at: [31, 54]
 warps:
 - name: Crystal Caves (north mouth)
   at: [32, 27]
