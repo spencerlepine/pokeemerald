@@ -9,7 +9,8 @@
 #     block box L oct T notch court wings hall palace pitched barrel quonset hangar tower round-tower stepped
 #     dome domes2 dome-block dome-porch store cone glass-dome bunker buried stilts stilts-dome stilts-flat
 #     deck pad bay plant lab arena spire saucer comm-tower cliff-door obelisk hipped
-#     giants (border pieces): cliff-town city-edge ship-hull hangar-wall fortress-wall
+#     giants (border pieces, may run off the map): ship-hull debris palace-wall trench-wall stilt-city
+#       undercity-rim temple-stairs cliff-town city-edge hangar-wall fortress-wall cliff-door
 #   `variants: [{build: ...}, ...]` picks one per placed building (stable by position), so a town's homes vary.
 #   `height` scales the walls (1.0 = default). `field` is the pitch colour of an arena.
 #   `kind` is the first-pass name (box | dome | pitched | stepped | tower | hall | dish | platform), used when no `build`.
@@ -250,3 +251,9 @@ shapes:
   art:giant:cliff-town:           {kind: box, build: cliff-town}
   art:giant:fortress-wall:        {kind: box, build: fortress-wall}
   art:giant:hangar-wall:          {kind: box, build: hangar-wall}
+  art:giant:debris:               {kind: box, build: debris}
+  art:giant:palace-wall:          {kind: box, build: palace-wall}
+  art:giant:trench-wall:          {kind: box, build: trench-wall}
+  art:giant:stilt-city:           {kind: box, build: stilt-city, wall: "#d4d8e0", roof: "#aeb6c4", trim: "#5a6474"}
+  art:giant:undercity-rim:        {kind: box, build: undercity-rim, wall: "#e6d2c0", trim: "#9a6a52"}
+  art:giant:temple-stairs:        {kind: box, build: temple-stairs, wall: "#8e8a70", roof: "#7c8a5a"}

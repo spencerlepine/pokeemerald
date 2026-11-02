@@ -9,6 +9,8 @@ and the planet's ground; `--grey` renders the same models in neutral greys.
 """
 import math
 
+import numpy as np
+
 from . import solid as S
 from .style import shade
 
@@ -23,6 +25,7 @@ class M:
         (self.cw, self.ch) = b["size"]
         self.W, self.H = self.cw * C, self.ch * C
         self.st, self.seed = st, seed
+        self.b = b
         if grey:
             self.wall, self.roof, self.trim = (150, 150, 150), (182, 182, 182), (104, 104, 104)
         else:
@@ -677,27 +680,170 @@ def m_city_edge(m):
         x += w
 
 
+def _hull(m):
+    return (150, 150, 150) if m.grey else m.st.get("hull", (158, 162, 168))
+
+
 def m_ship_hull(m):
-    """A crashed capital ship: a long tapering wedge half sunk in the ground, a bridge tower, plating seams."""
+    """A crashed Star Destroyer at true scale: only its bow fits on the map. The wedge runs on past the box
+    edge and the top of the map, half buried in a sand berm, with plating grooves and a trench."""
     W, H = m.W, m.H
-    left = m.r(3, 2)
-    hull = (150, 150, 150) if m.grey else m.st.get("hull", (158, 162, 168))
-    D = H * 0.45
-    tip, base = (2, W - 2) if left else (W - 2, 2)
-    poly = [(tip, D * 0.55), (base, 0), (base, D)] if left else [(base, 0), (tip, D * 0.55), (base, D)]
-    hgt = H - D - 4
-    m.add(S.prism(poly, -6, hgt * 0.6, hull, shade(hull, 0.08), taper=D * 0.18))
-    # superstructure near the wide end
-    bx = W * 0.62 if left else W * 0.18
-    m.add(S.box(bx, D * 0.25, hgt * 0.5, bx + W * 0.2, D * 0.8, hgt * 0.78, shade(hull, -0.05), m.roof))
-    m.add(S.box(bx + W * 0.04, D * 0.4, hgt * 0.78, bx + W * 0.16, D * 0.7, hgt, shade(hull, 0.05), m.roof))
-    for f in (0.35, 0.6, 0.85):            # plating seams: shallow grooves cut across the hull
-        x = tip + (base - tip) * f
-        m.add(S.box(x - 0.7, -10, -10, x + 0.7, D + 10, hgt, shade(hull, -0.3), subtract=True))
-    # a torn-open end
-    ex = base
-    m.add(S.box(ex - (8 if left else -8) - 6, D * 0.2, -2, ex - (8 if left else -8) + 6, D * 0.8, hgt * 0.62,
-                (35, 32, 30), subtract=True))
+    hull = _hull(m)
+    east = m.b.get("facing", "east" if not m.r(3, 2) else "west") == "east"   # which way the bow points
+    L = W * 4.0                         # hull length, mostly off the map
+    tipx = W * 0.88 if east else W * 0.12
+    backx = tipx - L if east else tipx + L
+    yc = H * 0.62
+    half = L * 0.3
+    poly = [(tipx, yc), (backx, yc - half), (backx, yc + half)]
+    if not east:
+        poly = [poly[0], poly[2], poly[1]]
+    rise = L * 0.22
+    # stepped decks: each tier set back from the one below, the upper ones running off the top of the map
+    z, inset = -24, 0
+    for k, (top, step) in enumerate(((0.3, 0), (0.55, 18), (0.85, 40), (1.3, 66))):
+        p2 = S._inset2(poly, step) if step else poly
+        m.add(S.prism(p2, z, H * top, shade(hull, -0.12 + 0.03 * k), shade(hull, 0.08 + 0.03 * k), taper=3))
+        z = H * top - 1
+    # the bridge superstructure, far back on the deck (mostly off the map)
+    bx = tipx + (backx - tipx) * 0.45
+    m.add(S.box(bx - 40, yc - 30, H * 1.3, bx + 40, yc + 30, H * 2.0, shade(hull, -0.05), hull))
+    # plating grooves across the hull, and one long trench along it
+    for k in range(1, 14):
+        x = tipx + (backx - tipx) * k / 14
+        m.add(S.box(x - 0.8, -400, -30, x + 0.8, 800, 600, shade(hull, -0.35), subtract=True))
+
+
+def m_debris(m):
+    """A field of capital-ship wreckage: hull slabs stuck in the sand, a buried engine bell, a fin."""
+    W, H = m.W, m.H
+    hull = _hull(m)
+    sand = shade(m.ground, -0.08)
+    x = 4
+    k = 0
+    while x < W - 20:
+        k += 1
+        kind = m.r(k, 3)
+        w = 28 + 10 * m.r(k + 3, 4)
+        y = 6 + 6 * m.r(k + 9, 4)
+        if kind == 0:      # a slab of hull plating stuck in at an angle
+            hgt = 30 + 12 * m.r(k + 5, 4)
+            m.add(S.prism([(x, y), (x + w, y + 6), (x + w - 4, y + 14), (x + 2, y + 10)], -6, hgt, hull,
+                          shade(hull, 0.1), taper=5))
+        elif kind == 1:    # an engine bell lying on its side, half buried
+            r = w / 2
+            m.add(S.vault(x, y, x + w, y + 40, -r * 0.3, r, shade(hull, -0.05)))
+            m.add(S.vault(x + 5, y - 1, x + w - 5, y + 6, -r * 0.3, r - 5, (30, 30, 34), subtract=True))
+        else:              # a tall broken fin
+            hgt = 50 + 15 * m.r(k + 6, 4)
+            m.add(S.prism([(x, y + 4), (x + w * 0.6, y), (x + w * 0.7, y + 6), (x + 4, y + 10)], 0, hgt, hull,
+                          shade(hull, 0.1), taper=4))
+        m.add(S.cylinder(x + w / 2, y + 6, w * 0.65, 8, -2, 4, sand, shade(m.ground, -0.02), outline=False))
+        x += w + 10 + 6 * m.r(k + 2, 3)
+
+
+def m_palace_wall(m):
+    """Jabba's palace outer wall: an adobe wall too tall to fit, a round tower, a sealed blast gate."""
+    W, H = m.W, m.H
+    hgt = H * 3
+    m.add(S.prism([(-W, 6), (2 * W, 6), (2 * W, 400), (-W, 400)], 0, hgt, m.wall, m.roof, taper=6))
+    m.add(S.box(-W, 2, 0, 2 * W, 8, 6, shade(m.wall, -0.05), m.roof))       # footing
+    tx = W * (0.2 if m.r(2, 2) else 0.75)
+    m.add(S.cylinder(tx, 30, 26, 18, 0, hgt * 1.2, shade(m.wall, 0.04), m.roof))
+    m.add(S.cylinder(tx, 30, 27, 19, 22, 25, m.trim))
+    gx = W * 0.5
+    m.add(S.box(gx - 20, 0, 0, gx + 20, 9, 34, shade(m.wall, -0.08)))
+    m.add(S.box(gx - 16, -1, 0, gx + 16, 6, 28, shade(m.trim, -0.35), subtract=True))
+    for z in range(4, 28, 6):
+        m.add(S.box(gx - 16, 4, z, gx + 16, 5, z + 1, shade(m.trim, -0.15)))
+    for x in range(int(-W), int(2 * W), 22):
+        if abs(x - gx) > 30 and abs(x - tx) > 34:
+            m.add(S.box(x, -1, 30, x + 2, 9, 38, (30, 26, 22), subtract=True))
+
+
+def m_trench_wall(m):
+    """The Death Star trench: a sheer grey wall far taller than the map, covered in machinery."""
+    W, H = m.W, m.H
+    hull = _hull(m)
+    m.add(S.box(-40, 4, -20, W + 40, 600, H * 4, hull))
+    k = 0
+    for z in range(4, int(H * 1.5), 10):
+        for x in range(-8, int(W) + 8, 14):
+            k += 1
+            if m.r(k, 3) == 0:
+                continue
+            w = 6 + 4 * m.r(k + 1, 4)
+            hz = 4 + 3 * m.r(k + 2, 3)
+            dp = 2 + 2 * m.r(k + 3, 3)
+            col = shade(hull, (m.r(k + 4, 5) - 2) * 0.06)
+            m.add(S.box(x, 4 - dp, z, x + w, 4, z + hz, col))
+            if m.r(k + 5, 9) == 0:
+                m.add(S.box(x + 1, 4 - dp - 0.5, z + 1, x + 3, 4 - dp + 0.5, z + 2.5, (255, 236, 160)))
+    for z in (24, 60, 100):
+        m.add(S.box(-40, 0, z, W + 40, 4, z + 2.5, shade(hull, 0.15)))
+
+
+def m_stilt_city(m):
+    """Kamino's sea edge: giant domed platforms on clusters of tall pillars, rising off the top of the map."""
+    W, H = m.W, m.H
+    wall, roof = (m.wall, m.roof)
+    x = 30 if m.r(1, 2) else 70
+    while x < W + 60:
+        a, b = 52, 30
+        cy = b + 20
+        for f in (-0.6, -0.2, 0.2, 0.6):
+            px = x + a * f
+            m.add(S.cylinder(px, cy - b * 0.7, 4, 3, -6, 90, shade(wall, -0.15)))
+            m.add(S.cylinder(px, cy - b * 0.7, 5, 3.6, -6, -2, shade(wall, -0.3)))
+        m.add(S.cylinder(x, cy, a * 0.5, b * 0.5, 40, 90, shade(wall, -0.1)))
+        m.add(S.cylinder(x, cy, a, b, 90, 104, wall, roof))
+        m.add(S.dome(x, cy, a * 0.9, b * 0.9, 104, 22, roof))
+        x += 150
+
+
+def m_undercity_rim(m):
+    """Cloud City's edge seen from the plaza: the deck stays see-through, and below its oval rim the city's
+    side drops away into the clouds with bands, window rows and hanging vanes. `rim: [cx, cy, a, b]` in
+    cells, box-local (cy counted north from the box bottom)."""
+    cxc, cyc, ac, bc = m.b.get("rim", [m.cw / 2, m.ch * 0.8, m.cw * 0.45, m.ch * 0.6])
+    cx, cy, a, b = cxc * C, cyc * C, ac * C, bc * C
+    wall = m.wall
+    # the deck (see-through on top), its rim wall, then the underside sweeping back in toward a central stalk
+    rim = 34
+    m.add(S.cylinder(cx, cy, a, b, -rim, 0, wall, wall, hide_top=True, n=64, below=True))
+    t = b * 0.8
+    m.add(S.prism(S.ring_pts(cx, cy, a - t, b - t, 64), -rim - 160, -rim, shade(wall, -0.15), shade(wall, -0.15),
+                  taper=-t, below=True))
+    for z0, col, g in ((-4, m.trim, 1.5), (-15, m.glass, 0.8), (-26, m.trim, 1.5)):
+        m.add(S.cylinder(cx, cy, a + g, b + g, z0 - 3, z0, col, col, n=64, below=True))
+    m.add(S.cylinder(cx, cy, a * 0.12, b * 0.12, -900, -rim, shade(wall, -0.25), below=True))
+    for k in range(14):
+        th = math.pi * (0.1 + 0.8 * k / 13)
+        x = cx - a * math.cos(th)
+        y = cy - b * math.sin(th)
+        m.add(S.box(x - 1.5, y - 2, -rim - 60, x + 1.5, y + 2, -rim, shade(wall, -0.3), below=True))
+
+
+def m_temple_stairs(m):
+    """The base of a Massassi temple too big to fit: stone tiers stepping up off the top of the map, a
+    central stair climbing them."""
+    W, H = m.W, m.H
+    stone, top = shade(m.wall, -0.12), shade(m.roof, 0.18)
+    step, back = 9, 7
+    sx = W * (0.35 + 0.3 * m.r(1, 2))
+    for t in range(40):
+        y0 = 2 + t * back
+        m.add(S.box(-W, y0, t * step, 2 * W, y0 + 600, (t + 1) * step, shade(stone, -0.03 * (t % 2)), top))
+    k = step / back
+    n = np.array([0, -k, 1.0]) / math.hypot(k, 1)
+    m.add(S.Solid([[1, 0, 0, sx + 14], [-1, 0, 0, -(sx - 14)], [0, -1, 0, 0], [0, 0, -1, 0], [*n, n @ np.array([0, 0, 2])]],
+                  shade(stone, 0.12), shade(top, 0.12)))
+    for t in range(80):          # step lines on the stair
+        y = t * 3
+        m.add(S.box(sx - 14, y, y * k + 1.2, sx + 14, y + 0.9, y * k + 2.2, shade(stone, -0.18)))
+    for dx in (-16, 14):         # side ramps (balustrades)
+        m.add(S.Solid([[1, 0, 0, sx + dx + 2], [-1, 0, 0, -(sx + dx)], [0, -1, 0, 0], [0, 0, -1, 0],
+                       [*n, n @ np.array([0, 0, 6])]], shade(stone, -0.05), shade(top, 0.0)))
 
 
 def m_hangar_wall(m):
@@ -734,7 +880,8 @@ def m_fortress_wall(m):
         m.door(D * 0.3, w=14, h=min(18, h * 0.6))
 
 
-GIANTS = ["cliff-town", "city-edge", "ship-hull", "hangar-wall", "fortress-wall", "cliff-door"]
+GIANTS = ["ship-hull", "debris", "palace-wall", "trench-wall", "stilt-city", "undercity-rim", "temple-stairs",
+          "cliff-town", "city-edge", "hangar-wall", "fortress-wall", "cliff-door"]
 
 BUILDS = {
     "block": m_block, "box": m_block,
@@ -747,7 +894,9 @@ BUILDS = {
     "bunker": m_bunker, "buried": m_buried, "bay": m_bay, "pad": m_pad, "dome-porch": m_dome_porch,
     "spire": m_spire, "saucer": m_saucer, "glass-dome": m_glass_dome, "comm-tower": m_comm_tower,
     "hipped": m_hipped, "cliff-town": m_cliff_town, "city-edge": m_city_edge, "ship-hull": m_ship_hull,
-    "hangar-wall": m_hangar_wall, "fortress-wall": m_fortress_wall,
+    "hangar-wall": m_hangar_wall, "fortress-wall": m_fortress_wall, "debris": m_debris,
+    "palace-wall": m_palace_wall, "trench-wall": m_trench_wall, "stilt-city": m_stilt_city,
+    "undercity-rim": m_undercity_rim, "temple-stairs": m_temple_stairs,
     "cliff-door": m_cliff_door, "obelisk": m_obelisk,
     "quonset": m_quonset, "hangar": lambda m: m_quonset(m, wide=True),
     "stilts": m_stilts, "stilts-dome": lambda m: m_stilts(m, "dome", round_=True),
@@ -767,7 +916,7 @@ def sprite(b, st, seed, grey=False):
     name = st.get("build") or KIND_TO_BUILD.get(st.get("kind"), "block")
     name = KIND_TO_BUILD.get(name, name) if name not in BUILDS else name
     key = (name, tuple(b["size"]), b.get("door"), st["wall"], st["roof"], st["trim"], st.get("ground"),
-           st.get("height"), st.get("top"), st.get("fork"), st.get("cliff"), seed & 0xFFFFFF, grey)
+           st.get("height"), st.get("top"), st.get("fork"), st.get("cliff"), str(b.get("rim")), b.get("facing"), seed & 0xFFFFFF, grey)
     if key not in _cache:
         m = M(b, st, seed, grey)
         BUILDS.get(name, m_block)(m)

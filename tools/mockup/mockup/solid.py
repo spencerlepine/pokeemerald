@@ -24,12 +24,14 @@ LIGHT = LIGHT / np.linalg.norm(LIGHT)
 
 
 class Solid:
-    def __init__(self, planes, side, top=None, subtract=False, outline=True):
+    def __init__(self, planes, side, top=None, subtract=False, outline=True, hide_top=False, below=False):
         self.planes = np.asarray(planes, float)
         self.side = side                    # colour of steep faces
         self.top = top if top is not None else side   # colour of faces that look up
         self.subtract = subtract
         self.outline = outline              # False for ground slabs that should blend into the terrain
+        self.below = below                  # may be seen below ground level (a cliff edge dropping away)
+        self.hide_top = hide_top            # its top faces stay see-through (the terrain shows), but still hide what is behind
 
     def intersect(self, o, d):
         n, dist = self.planes[:, :3], self.planes[:, 3]
@@ -102,6 +104,28 @@ def box(x0, y0, z0, x1, y1, z1, side, top=None, **kw):
 def ring_pts(cx, cy, a, b, n=28):
     return [(cx + a * math.cos(2 * math.pi * (i + 0.5) / n), cy + b * math.sin(2 * math.pi * (i + 0.5) / n))
             for i in range(n)]
+
+
+def _inset2(poly, t):
+    """A convex polygon moved inward by t px (mitred corners)."""
+    cx = sum(p[0] for p in poly) / len(poly)
+    cy = sum(p[1] for p in poly) / len(poly)
+    lines = []
+    for i in range(len(poly)):
+        (ax, ay), (bx, by) = poly[i], poly[(i + 1) % len(poly)]
+        nx, ny = by - ay, -(bx - ax)
+        L = math.hypot(nx, ny) or 1
+        nx, ny = nx / L, ny / L
+        if nx * (cx - ax) + ny * (cy - ay) < 0:
+            nx, ny = -nx, -ny
+        lines.append((nx, ny, nx * ax + ny * ay + t))     # inward normal, n.p = d
+    out = []
+    for i in range(len(lines)):
+        a1, b1, c1 = lines[i - 1]
+        a2, b2, c2 = lines[i]
+        det = a1 * b2 - a2 * b1
+        out.append(((c1 * b2 - c2 * b1) / det, (a1 * c2 - a2 * c1) / det))
+    return out
 
 
 def prism(poly, z0, z1, side, top=None, taper=0.0, **kw):
@@ -221,6 +245,13 @@ def render(scene, W, H, margin=6):
     t, si, n = scene.cast(o, RAY)
     hit = np.isfinite(t) & (x < W)
     p = o + np.where(np.isfinite(t), t, 0)[:, None] * RAY
+    # the ground hides whatever is buried, unless the solid is allowed below ground
+    belowok = np.array([sol.below for sol in scene.solids] + [False])[si]
+    buried = hit & (p[:, 2] < -0.01) & ~belowok
+    hit &= ~buried
+    t = np.where(buried, np.inf, t)
+    si = np.where(buried, -1, si)
+    n = np.where(buried[:, None], np.array([0.0, 0.0, 1.0]), n)
     # open ground where nothing was hit: the z = 0 plane
     ground = ~hit
     p[ground] = np.column_stack([x[ground], s[ground], np.zeros(ground.sum())])
@@ -236,6 +267,9 @@ def render(scene, W, H, margin=6):
     base = np.where((n[:, 2] > 0.6)[:, None], tops[si], sides[si])
     k = np.round((ndl - 0.3) * 0.55 / 0.08) * 0.08 - np.where(shadow, 0.16, 0)
     out[:, :3] = _shade_arr(base, k)
+    hidet = np.array([sol.hide_top for sol in solids] + [False])[si] & (n[:, 2] > 0.6)
+    hit = hit & ~hidet
+    outl = outl & ~hidet
     out[:, 3] = np.where(hit, 255, 0)
     gs = ground & shadow
     out[gs] = (0, 0, 0, 60)

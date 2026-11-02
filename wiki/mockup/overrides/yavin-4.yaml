@@ -1,0 +1,11 @@
+# Mockup-only giant border piece (phase 2). Phase 1 keeps these cells blocked.
+add:
+  buildings:
+  - name: Great Temple steps
+    art: art:giant:temple-stairs
+    at:
+    - 38
+    - 0
+    size:
+    - 20
+    - 3

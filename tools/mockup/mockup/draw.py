@@ -380,6 +380,8 @@ def area(doc, styles, labels=True, grey=False):
         person(d, p, styles.roles)
     if labels:
         for b in doc.get("buildings") or []:
+            if b.get("art", "").startswith("art:giant:"):
+                continue
             st = styles.shape(b.get("art", ""), planet, "building")
             name = b.get("name") or st.get("label") or ""
             if len(name) > 18:
