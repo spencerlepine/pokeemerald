@@ -1,0 +1,32 @@
+id: hideout-kit
+name: HIDEOUT (KIT)
+planet: SHARED
+kind: interior
+replaces: new
+status: BLOCKOUT
+story: 'A player hideout: a hollow, tree or bush on a route that the player claims and furnishes (vanilla secret base). Decorations come from the Supply Depots.'
+grid: |
+  |||||||||||
+  |||||||||||
+  |_________|
+  |_________|
+  |_________|
+  |_________|
+  |_________|
+  |_________|
+  |||||_|||||
+exits: []
+buildings: []
+props:
+- name: Hideout PC
+  art: art:new:hideout-pc
+  at: [5, 2]
+  size: [1, 1]
+people: []
+signs: []
+warps:
+- name: Entrance (back to the route)
+  at: [5, 8]
+  to: MAP_DYNAMIC
+todo: ['Stands for all 28 vanilla secret base templates (4 sizes each of red, brown, blue and yellow caves, trees and shrubs).', 'Per-planet hideout spots (Tatooine
+    rock hollows, Endor tree hollows, Hoth ice caves) are picked in the art phase.']

@@ -41,7 +41,7 @@ Spire and the Death Star site. PokéNAV is called **StarNAV**; use that name in 
 The owner split the remaining work into phases on 2026-11-02.
 
 1. **World blockout: DONE, waiting for the owner's review.**
-   - Every area on every planet is laid out in grey placeholder tiles with pink people and signs. That is 526 areas, all `BLOCKOUT`, none `APPROVED`.
+   - Every area on every planet is laid out in grey placeholder tiles with pink people and signs. That is 528 areas, all `BLOCKOUT`, none `APPROVED`. A coverage audit (2026-11-02) matched every vanilla map, every location in `wiki/mapping/locations.csv` and every net-new area to an area file.
    - Buildings are sized.
    - Every piece is listed as a TODO in `INDEX.csv`.
 2. **Dumb shapes and colours: NEXT.** Flat coloured stand-ins for each building and prop, so each area reads as a place.

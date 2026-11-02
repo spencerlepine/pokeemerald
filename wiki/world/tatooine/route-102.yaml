@@ -90,4 +90,6 @@ signs:
 - name: Sign
   at: [40, 9]
 warps: []
+travel:
+- {to: hideout-kit, via: hideout, name: Any hideout spot on a route (first one the player can claim)}
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

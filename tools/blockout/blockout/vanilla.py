@@ -39,11 +39,11 @@ def map_json(map_name):
     return json.loads((GAME / "data/maps" / map_name / "map.json").read_text())
 
 
-def terrain_grid(map_name):
-    """Rows of terrain chars for a vanilla map."""
+def terrain_grid(map_name, layout=None):
+    """Rows of terrain chars for a vanilla map (or one of its alternate layouts, by layout id)."""
     gba = _gba()
     mj = map_json(map_name)
-    lay = gba.layouts()[mj["layout"]]
+    lay = gba.layouts()[layout or mj["layout"]]
     raw = lay.cells()
     mb = behaviours()
     inv = {v: k for k, v in mb.items()}

@@ -20,6 +20,7 @@ Run from anywhere, in this order (later scripts fix links that earlier ones cut)
 | 7 | `interiors.py` | New rooms, then kit notes on every vanilla interior still `TODO` |
 | 8 | `deathstar.py` | Death Star construction site (post-game, net:death-star-site) |
 | 9 | `links.py` | `travel:` links (ships, shuttles, tides, dives, scripted moves) and graph fixes |
+| 10 | `extras.py` | Places that are not their own vanilla map: Mirage Isle (Route 130 alternate layout), the hideout kit (secret bases) |
 
 Then, from `tools/blockout/`: `python3 -m blockout layout <PLANET>` for each planet (not FELUCIA: its six
 zones keep vanilla's positions), and `python3 -m blockout world`, `index`, `guide`, `check`.

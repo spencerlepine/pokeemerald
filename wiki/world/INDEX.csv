@@ -674,6 +674,8 @@ dagobah-supply-depot,DAGOBAH,interior,SootopolisCity_Mart,BLOCKOUT,person,Fat Ma
 dagobah-supply-depot,DAGOBAH,interior,SootopolisCity_Mart,BLOCKOUT,person,Gentleman,1x1,,,PLACEHOLDER
 dagobah-supply-depot,DAGOBAH,interior,SootopolisCity_Mart,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
 dagobah-supply-depot,DAGOBAH,interior,SootopolisCity_Mart,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+mirage-isle,DAGOBAH,landmark,Route130,BLOCKOUT,area,MIRAGE ISLE,80x40,,,
+mirage-isle,DAGOBAH,landmark,Route130,BLOCKOUT,prop,Mirage Isle berry tree,1x1,art:dagobah:gnarltree,yes,TODO
 route-126,DAGOBAH,route,Route126,BLOCKOUT,area,ROUTE 126,80x80,,,
 route-126,DAGOBAH,route,Route126,BLOCKOUT,person,Trainer Boesh,1x1,,,PLACEHOLDER
 route-126,DAGOBAH,route,Route126,BLOCKOUT,person,Trainer Daos,1x1,,,PLACEHOLDER
@@ -2888,6 +2890,9 @@ hangar-tatooine-sullust,SHARED,interior,new,BLOCKOUT,prop,StarNAV flight console
 hangar-tatooine-sullust,SHARED,interior,new,BLOCKOUT,person,Pilot,1x1,,,PLACEHOLDER
 hangar-tatooine-sullust,SHARED,interior,new,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
 hangar-tatooine-sullust,SHARED,interior,new,BLOCKOUT,warp,Ramp (other end),1x1,,,PLACEHOLDER
+hideout-kit,SHARED,interior,new,BLOCKOUT,area,HIDEOUT (KIT),11x9,,,
+hideout-kit,SHARED,interior,new,BLOCKOUT,prop,Hideout PC,1x1,art:new:hideout-pc,NEW,TODO
+hideout-kit,SHARED,interior,new,BLOCKOUT,warp,Entrance (back to the route),1x1,,,PLACEHOLDER
 record-corner,SHARED,interior,RecordCorner,BLOCKOUT,area,RECORD CORNER,20x10,,,
 record-corner,SHARED,interior,RecordCorner,BLOCKOUT,person,Attendant,1x1,,,PLACEHOLDER
 record-corner,SHARED,interior,RecordCorner,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER

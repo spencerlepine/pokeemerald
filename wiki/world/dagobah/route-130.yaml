@@ -72,5 +72,7 @@ people:
   role: berry
 signs: []
 warps: []
+travel:
+- {to: mirage-isle, via: mirage, name: Mirage Isle rises (some days)}
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Planet border cut: west edge to route-131 (KAMINO); reached by ship instead.', Vanilla's west
     edge to Route 131 (Kamino) is cut.]
