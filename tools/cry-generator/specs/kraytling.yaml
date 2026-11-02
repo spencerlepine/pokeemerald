@@ -1,0 +1,33 @@
+name: kraytling
+slot: vibrava
+brief: "KRAYTLING: creature call that fits its look and size. Young winged krayt."
+kind: creature
+size: 0.42
+seed: 732
+layers:
+  # A buzzing wing thrum under a rising-then-falling young krayt call ("hroo-AH-oo").
+  # Family DNA (krayt line): saw+pulse throat, o -> a -> u vowels, growl, falling bellow + low sand hiss.
+  - type: servo
+    pitch: [[0, 120], [0.3, 160], [0.62, 130]]
+    harmonics: [0.6, 1.0, 0.7, 0.5, 0.3]
+    grit: 0.6
+    env: [[0, 0], [0.04, 0.6], [0.55, 0.5], [0.63, 0]]
+    gain: 0.35
+  - type: voice
+    at: 0.02
+    pitch: [[0, 330], [0.15, 470], [0.35, 430], [0.6, 280]]
+    pitch_step: 0.03
+    source: {saw: 0.8, pulse: 0.5, pulse_width: 0.3, noise: 0.1}
+    vowels: [[0, o], [0.15, a], [0.6, u]]
+    env: [[0, 0], [0.015, 1], [0.4, 0.8], [0.62, 0]]
+    vibrato: {rate: 28, depth: 0.03}
+    growl: 0.35
+    growl_rate: 36
+    jitter: 0.02
+    drive: 2
+  - type: noise
+    at: 0.35
+    band: [[0, 1300], [0.25, 800]]
+    q: 1.2
+    env: [[0, 0], [0.05, 0.3], [0.28, 0]]
+    gain: 0.22

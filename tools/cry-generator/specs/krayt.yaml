@@ -1,0 +1,34 @@
+name: krayt
+slot: flygon
+brief: "KRAYT: creature call that fits its look and size. Krayt dragon of the Dune Sea."
+kind: creature
+size: 0.85
+seed: 733
+layers:
+  # The krayt's echoing desert boom: a rising, rasping "hrooOOAAH" that wavers and falls away into a long
+  # sand-hiss moan. Family DNA (krayt line): saw+pulse throat, o -> a -> u, growl, falling bellow, sand hiss.
+  - type: voice
+    pitch: [[0, 170], [0.2, 300], [0.55, 340], [0.9, 270], [1.18, 150]]
+    pitch_step: 0.045
+    source: {saw: 0.8, pulse: 0.5, pulse_width: 0.3, noise: 0.1}
+    vowels: [[0, o], [0.25, a], [0.75, aw], [1.18, u]]
+    env: [[0, 0], [0.05, 1], [0.8, 0.85], [1.2, 0]]
+    vibrato: {rate: 6, depth: 0.03}
+    growl: 0.5
+    growl_rate: 26
+    jitter: 0.025
+    drive: 2.4
+  - type: voice
+    at: 0.12
+    pitch: [[0, 560], [0.4, 760], [0.9, 520]]
+    pitch_step: 0.045
+    source: {pulse: 0.7, pulse_width: 0.25, saw: 0.3}
+    vowels: [[0, o], [0.4, a], [0.9, o]]
+    env: [[0, 0], [0.15, 0.6], [0.7, 0.45], [0.92, 0]]
+    gain: 0.4
+  - type: noise
+    at: 0.65
+    band: [[0, 1200], [0.55, 700]]
+    q: 1.1
+    env: [[0, 0], [0.15, 0.35], [0.56, 0]]
+    gain: 0.25

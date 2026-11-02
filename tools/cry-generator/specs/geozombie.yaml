@@ -1,0 +1,27 @@
+name: geozombie
+slot: shedinja
+brief: "GEOZOMBIE: creature call that fits its look and size. Empty Geonosian shell animated by a brain worm."
+kind: creature
+size: 0.3
+seed: 753
+layers:
+  # A hollow, airless rattle from an empty husk: dry chitin clicks and a breathy, drifting "hhiii-uuu" whisper.
+  # Family DNA (hive line): narrow-pulse throat, ee -> i vowels, insect tremolo, chitin clicks (here hollowed out).
+  - type: click
+    times: [0.0, 0.025, 0.05, 0.3, 0.33]
+    gain: 0.5
+  - type: voice
+    at: 0.03
+    pitch: [[0, 520], [0.1, 600], [0.32, 400]]
+    source: {pulse: 0.6, pulse_width: 0.15, noise: 0.25}
+    vowels: [[0, i], [0.12, e], [0.32, u]]
+    env: [[0, 0], [0.02, 1], [0.22, 0.7], [0.33, 0]]
+    vibrato: {rate: 30, depth: 0.04}
+    jitter: 0.05
+  - type: noise
+    at: 0.05
+    band: [[0, 1600], [0.28, 700]]
+    q: 1.5
+    env: [[0, 0], [0.04, 0.5], [0.28, 0]]
+    gain: 0.25
+master: {lowpass: 3400, rms: 0.25}

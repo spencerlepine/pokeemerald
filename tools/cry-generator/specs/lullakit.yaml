@@ -1,0 +1,17 @@
+name: lullakit
+slot: igglybuff
+brief: "LULLAKIT: creature call that fits its look and size. Round puff that sings in its sleep."
+kind: creature
+size: 0.1
+seed: 741
+layers:
+  # A sleepy two-note "pu-uuu" hum: the first two notes of the family's lullaby, soft and round.
+  # Family DNA (lulla line): tri+sine-ish pulse throat, u -> o -> a vowels, gentle vibrato, stepped lullaby notes.
+  - type: voice
+    pitch: [[0, 880], [0.09, 880], [0.1, 740], [0.27, 700]]
+    source: {pulse: 0.6, pulse_width: 0.45, saw: 0.3}
+    vowels: [[0, u], [0.1, o], [0.27, u]]
+    env: [[0, 0], [0.015, 1], [0.08, 0.8], [0.1, 0.5], [0.12, 0.9], [0.22, 0.7], [0.28, 0]]
+    vibrato: {rate: 7, depth: 0.03}
+    emphasis: 0.95
+master: {rms: 0.27}

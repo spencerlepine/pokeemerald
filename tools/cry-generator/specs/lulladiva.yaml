@@ -1,0 +1,25 @@
+name: lulladiva
+slot: wigglytuff
+brief: "LULLADIVA: creature call that fits its look and size. Balloon diva whose fur is the softest on Tatooine."
+kind: creature
+size: 0.38
+seed: 743
+layers:
+  # The diva's version: the lullaby's three notes sung lower and grander, ending on a held, wobbling "laaah".
+  # Family DNA (lulla line): round pulse throat, u -> o -> a vowels, gentle vibrato, stepped lullaby notes.
+  - type: voice
+    pitch: [[0, 560], [0.1, 560], [0.11, 470], [0.2, 470], [0.21, 620], [0.46, 590]]
+    source: {pulse: 0.6, pulse_width: 0.45, saw: 0.4}
+    vowels: [[0, u], [0.11, o], [0.21, a], [0.46, a]]
+    env: [[0, 0], [0.015, 1], [0.09, 0.8], [0.105, 0.5], [0.12, 0.95], [0.195, 0.75], [0.21, 0.5], [0.225, 1], [0.38, 0.8], [0.47, 0]]
+    vibrato: {rate: 6, depth: 0.04}
+    emphasis: 0.95
+  - type: voice
+    at: 0.21
+    pitch: [[0, 1240], [0.25, 1180]]
+    source: {pulse: 0.5, pulse_width: 0.45}
+    vowels: [[0, a], [0.25, o]]
+    env: [[0, 0], [0.03, 0.4], [0.2, 0.3], [0.26, 0]]
+    vibrato: {rate: 6, depth: 0.04}
+    gain: 0.35
+master: {rms: 0.27}

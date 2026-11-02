@@ -1,0 +1,28 @@
+name: hivedart
+slot: ninjask
+brief: "HIVEDART: creature call that fits its look and size. Winged hive insect, incredibly fast."
+kind: creature
+size: 0.3
+seed: 752
+layers:
+  # A whizzing fly-by: a high wing whine that dopplers up and down past you, with the hive chitter riding it.
+  # Family DNA (hive line): narrow-pulse throat, ee -> i vowels, fast insect tremolo, chitin clicks.
+  - type: servo
+    pitch: [[0, 180], [0.2, 320], [0.35, 300], [0.55, 150]]
+    harmonics: [0.5, 1.0, 0.8, 0.6, 0.4, 0.3]
+    grit: 0.5
+    env: [[0, 0], [0.05, 0.8], [0.4, 0.7], [0.56, 0]]
+    gain: 0.5
+  - type: voice
+    at: 0.03
+    pitch: [[0, 520], [0.15, 720], [0.3, 680], [0.5, 460]]
+    source: {pulse: 0.8, pulse_width: 0.15, noise: 0.2}
+    vowels: [[0, i], [0.2, e], [0.5, er]]
+    env: [[0, 0], [0.01, 1], [0.35, 0.75], [0.52, 0]]
+    vibrato: {rate: 40, depth: 0.05}
+    jitter: 0.03
+    drive: 2
+  - type: click
+    times: [0.0, 0.02, 0.04]
+    gain: 0.4
+master: {lowpass: 3400, rms: 0.26}

@@ -1,0 +1,17 @@
+name: lullapuff
+slot: jigglypuff
+brief: "LULLAPUFF: creature call that fits its look and size. Balloon creature whose song puts crowds to sleep."
+kind: creature
+size: 0.2
+seed: 742
+layers:
+  # Three sung lullaby notes ("pu-ri-luu"), a little lower and fuller than the kit, with a sleepy vibrato.
+  # Family DNA (lulla line): round pulse throat, u -> o -> a vowels, gentle vibrato, stepped lullaby notes.
+  - type: voice
+    pitch: [[0, 740], [0.1, 740], [0.11, 620], [0.2, 620], [0.21, 830], [0.35, 780]]
+    source: {pulse: 0.6, pulse_width: 0.45, saw: 0.35}
+    vowels: [[0, u], [0.11, o], [0.21, a], [0.35, u]]
+    env: [[0, 0], [0.015, 1], [0.09, 0.8], [0.105, 0.5], [0.12, 0.95], [0.195, 0.75], [0.21, 0.5], [0.225, 0.95], [0.3, 0.7], [0.36, 0]]
+    vibrato: {rate: 6.5, depth: 0.03}
+    emphasis: 0.95
+master: {rms: 0.27}

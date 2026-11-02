@@ -1,0 +1,22 @@
+name: hivegrub
+slot: nincada
+brief: "HIVEGRUB: creature call that fits its look and size. Wingless hive grub that lives underground."
+kind: creature
+size: 0.18
+seed: 751
+layers:
+  # A wet, clicking grub chitter: mandible ticks and a squeaky "tsik-tsik-tsiii" from underground.
+  # Family DNA (hive line): narrow-pulse throat, ee -> i vowels, fast insect tremolo, chitin clicks.
+  - type: click
+    times: [0.0, 0.03, 0.06, 0.1]
+    gain: 0.5
+  - type: voice
+    at: 0.02
+    pitch: [[0, 700], [0.05, 820], [0.06, 700], [0.11, 820], [0.12, 760], [0.26, 640]]
+    source: {pulse: 0.8, pulse_width: 0.15, noise: 0.2}
+    vowels: [[0, ee], [0.12, i], [0.26, e]]
+    env: [[0, 0], [0.008, 0.9], [0.05, 0.4], [0.06, 0.9], [0.11, 0.4], [0.12, 1], [0.2, 0.7], [0.27, 0]]
+    vibrato: {rate: 34, depth: 0.04}
+    jitter: 0.03
+    drive: 1.8
+master: {rms: 0.25}
