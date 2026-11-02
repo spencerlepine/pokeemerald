@@ -1,0 +1,37 @@
+name: emberliz
+slot: charmander
+brief: "EMBERLIZ: creature call that fits its look and size. Lizard with a flame on its tail."
+kind: creature
+size: 0.25
+seed: 721
+layers:
+  # A chirpy little lizard "chee-rrik" with a warm rasp, and a flicker of flame crackle and hiss behind it.
+  # Family DNA (fire lizard line): saw+pulse throat, i -> ae -> er vowels, flame hiss + crackle clicks.
+  - type: voice
+    pitch: [[0, 560], [0.06, 760], [0.2, 680], [0.3, 520]]
+    source: {saw: 0.7, pulse: 0.6, pulse_width: 0.3, noise: 0.08}
+    vowels: [[0, i], [0.12, ae], [0.3, er]]
+    env: [[0, 0], [0.01, 1], [0.22, 0.85], [0.31, 0]]
+    vibrato: {rate: 18, depth: 0.025}
+    growl: 0.15
+    growl_rate: 50
+    jitter: 0.02
+    drive: 1.6
+  - type: voice
+    at: 0.34
+    pitch: [[0, 640], [0.05, 820], [0.16, 600]]
+    source: {saw: 0.7, pulse: 0.6, pulse_width: 0.3, noise: 0.08}
+    vowels: [[0, i], [0.08, ae], [0.16, er]]
+    env: [[0, 0], [0.01, 0.8], [0.12, 0.6], [0.17, 0]]
+    jitter: 0.02
+    drive: 1.6
+  - type: noise
+    at: 0.1
+    band: [[0, 3200], [0.5, 2600]]
+    q: 1.0
+    env: [[0, 0], [0.05, 0.25], [0.45, 0.2], [0.55, 0]]
+    gain: 0.2
+  - type: click
+    times: [0.15, 0.27, 0.44, 0.6]
+    gain: 0.25
+master: {rms: 0.27}

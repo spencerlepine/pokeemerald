@@ -1,0 +1,26 @@
+name: dacthatch
+slot: bagon
+brief: "DACTHATCH: creature call that fits its look and size. Dactillion hatchling that dreams of flight."
+kind: creature
+size: 0.3
+seed: 711
+layers:
+  # A stubby hatchling's rising "krah-EE!" squawk, straining upward as if trying to take off, with a breathy rasp.
+  # Family DNA (dactillion line): saw+noise throat, aw -> a -> ee then rr, growl rasp, rising "kree" motif.
+  - type: voice
+    pitch: [[0, 380], [0.08, 520], [0.22, 760], [0.34, 620]]
+    pitch_step: 0.025
+    source: {saw: 0.9, pulse: 0.3, pulse_width: 0.3, noise: 0.15}
+    vowels: [[0, aw], [0.08, a], [0.22, ee], [0.34, rr]]
+    env: [[0, 0], [0.01, 1], [0.25, 0.85], [0.35, 0]]
+    growl: 0.3
+    growl_rate: 44
+    jitter: 0.025
+    drive: 2.2
+  - type: noise
+    at: 0.2
+    band: [[0, 2600], [0.15, 2000]]
+    q: 1.5
+    env: [[0, 0], [0.02, 0.4], [0.15, 0]]
+    gain: 0.25
+master: {rms: 0.27}

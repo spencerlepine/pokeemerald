@@ -1,0 +1,36 @@
+name: lavadragon
+slot: charizard
+brief: "LAVADRAGON: creature call that fits its look and size. Fire dragon of the lava rivers."
+kind: creature
+size: 0.7
+seed: 723
+layers:
+  # A deep dragon roar ("GRRAAAH-rr") that swells and drags, with a roaring flame hiss and crackle behind it.
+  # Family DNA (fire lizard line): saw+pulse throat, i -> ae -> er vowels, flame hiss + crackle clicks.
+  - type: voice
+    pitch: [[0, 220], [0.1, 330], [0.45, 300], [0.75, 250], [0.88, 180]]
+    pitch_step: 0.04
+    source: {saw: 0.9, pulse: 0.6, pulse_width: 0.3, noise: 0.12}
+    vowels: [[0, i], [0.1, ae], [0.4, a], [0.88, er]]
+    env: [[0, 0], [0.02, 1], [0.6, 0.85], [0.89, 0]]
+    growl: 0.55
+    growl_rate: 30
+    jitter: 0.03
+    drive: 2.6
+  - type: voice
+    at: 0.06
+    pitch: [[0, 520], [0.3, 660], [0.7, 480]]
+    pitch_step: 0.04
+    source: {pulse: 0.7, pulse_width: 0.25, saw: 0.3}
+    vowels: [[0, ae], [0.4, a], [0.7, er]]
+    env: [[0, 0], [0.1, 0.6], [0.55, 0.45], [0.72, 0]]
+    gain: 0.45
+  - type: noise
+    at: 0.15
+    band: [[0, 2600], [0.7, 1600]]
+    q: 0.9
+    env: [[0, 0], [0.1, 0.3], [0.6, 0.25], [0.74, 0]]
+    gain: 0.25
+  - type: click
+    times: [0.3, 0.48, 0.66, 0.8]
+    gain: 0.3

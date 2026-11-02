@@ -1,0 +1,36 @@
+name: dactillion
+slot: salamence
+brief: "DACTILLION: creature call that fits its look and size. Great flying dactillion of Utapau's sinkholes."
+kind: creature
+size: 0.68
+seed: 713
+layers:
+  # A big, ringing raptor-dragon cry: a rasping "krrah" that soars into the full "kree-aaah" and echoes down
+  # the sinkhole walls. Family DNA (dactillion line): saw+noise throat, aw -> a -> ee -> rr, growl, "kree" motif.
+  - type: voice
+    pitch: [[0, 260], [0.08, 360], [0.18, 300]]
+    source: {saw: 0.9, pulse: 0.3, pulse_width: 0.3, noise: 0.15}
+    vowels: [[0, aw], [0.1, a], [0.18, rr]]
+    env: [[0, 0], [0.01, 1], [0.15, 0.8], [0.19, 0]]
+    growl: 0.5
+    growl_rate: 30
+    jitter: 0.03
+    drive: 2.5
+  - type: voice
+    at: 0.2
+    pitch: [[0, 300], [0.12, 460], [0.35, 640], [0.7, 560], [0.95, 330]]
+    pitch_step: 0.035
+    source: {saw: 0.9, pulse: 0.3, pulse_width: 0.3, noise: 0.15}
+    vowels: [[0, aw], [0.12, a], [0.35, ee], [0.7, a], [0.95, rr]]
+    env: [[0, 0], [0.02, 1], [0.6, 0.85], [0.97, 0]]
+    vibrato: {rate: 7, depth: 0.025}
+    growl: 0.4
+    growl_rate: 30
+    jitter: 0.025
+    drive: 2.3
+  - type: noise
+    at: 0.5
+    band: [[0, 2200], [0.5, 1400]]
+    q: 1.2
+    env: [[0, 0], [0.1, 0.3], [0.6, 0]]
+    gain: 0.22
