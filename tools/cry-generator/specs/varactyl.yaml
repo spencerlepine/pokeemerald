@@ -1,0 +1,33 @@
+name: varactyl
+slot: dragonite
+brief: "VARACTYL: creature call that fits its look and size. Loyal varactyl (Obi-Wan's Boga was one)."
+kind: creature
+size: 0.85
+seed: 303
+layers:
+  # Dragonsnake family voice (hollow o-i-u "hoo-ee" glide + hiss), now a big riding lizard-bird: a short
+  # honk, then a deep trumpeting glide with growl and a breathy snort at the end. Loud but friendly.
+  - type: voice
+    pitch: [[0, 260], [0.05, 340], [0.12, 300]]
+    source: {pulse: 0.6, pulse_width: 0.45, saw: 0.5, noise: 0.08}
+    vowels: [[0, o], [0.1, a]]
+    env: [[0, 0], [0.01, 1], [0.1, 0.8], [0.13, 0]]
+    gain: 1.4
+    drive: 2
+  - type: voice
+    at: 0.16
+    pitch: [[0, 270], [0.25, 420], [0.5, 360]]
+    pitch_step: 0.04
+    source: {pulse: 0.6, pulse_width: 0.45, saw: 0.5, noise: 0.08}
+    vowels: [[0, o], [0.25, i], [0.5, u]]
+    env: [[0, 0], [0.02, 1], [0.3, 0.8], [0.52, 0]]
+    vibrato: {rate: 6, depth: 0.02}
+    growl: 0.35
+    growl_rate: 30
+    drive: 1.8
+  - type: noise
+    at: 0.62
+    band: [[0, 1800], [0.25, 1200]]
+    q: 1.2
+    env: [[0, 0], [0.03, 0.5], [0.25, 0]]
+    gain: 0.35

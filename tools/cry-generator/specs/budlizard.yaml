@@ -1,0 +1,33 @@
+name: budlizard
+slot: ivysaur
+brief: "BUDLIZARD: creature call that fits its look and size. Lizard whose bulb opens into a bud."
+kind: creature
+size: 0.42
+seed: 202
+layers:
+  # Bulb-lizard family voice (croaky a-o-er "bul-baaa"), a size up: lower and rougher, with more growl
+  # in the long syllable and a fuller leafy rustle.
+  - type: voice
+    pitch: [[0, 340], [0.05, 420], [0.13, 360]]
+    source: {saw: 0.8, pulse: 0.4, pulse_width: 0.35, noise: 0.1}
+    vowels: [[0, a], [0.12, u]]
+    env: [[0, 0], [0.012, 1], [0.1, 0.8], [0.14, 0]]
+    gain: 1.4
+    growl: 0.25
+    growl_rate: 36
+  - type: voice
+    at: 0.18
+    pitch: [[0, 370], [0.08, 450], [0.35, 380], [0.56, 280]]
+    source: {saw: 0.8, pulse: 0.4, pulse_width: 0.35, noise: 0.1}
+    vowels: [[0, a], [0.25, o], [0.56, er]]
+    env: [[0, 0], [0.02, 1], [0.2, 0.75], [0.4, 0.55], [0.58, 0]]
+    growl: 0.35
+    growl_rate: 34
+    jitter: 0.02
+    drive: 1.6
+  - type: noise
+    at: 0.48
+    band: [[0, 2600], [0.28, 1800]]
+    q: 1.3
+    env: [[0, 0], [0.04, 0.35], [0.28, 0]]
+    gain: 0.3

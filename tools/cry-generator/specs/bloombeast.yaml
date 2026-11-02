@@ -1,0 +1,35 @@
+name: bloombeast
+slot: venusaur
+brief: "BLOOMBEAST: creature call that fits its look and size. Huge lizard carrying a wroshyr bloom."
+kind: creature
+size: 0.78
+seed: 203
+layers:
+  # Bulb-lizard family voice (croaky a-o-er "bul-baaa"), full grown: a deep, driven bellow with heavy
+  # growl, and a big breathy rustle of the bloom shaking at the end.
+  - type: voice
+    pitch: [[0, 230], [0.06, 290], [0.15, 250]]
+    source: {saw: 0.8, pulse: 0.4, pulse_width: 0.35, noise: 0.1}
+    vowels: [[0, a], [0.14, u]]
+    env: [[0, 0], [0.015, 1], [0.12, 0.8], [0.16, 0]]
+    gain: 1.4
+    growl: 0.4
+    growl_rate: 30
+    drive: 2
+  - type: voice
+    at: 0.2
+    pitch: [[0, 260], [0.1, 320], [0.42, 270], [0.66, 180]]
+    pitch_step: 0.04
+    source: {saw: 0.8, pulse: 0.4, pulse_width: 0.35, noise: 0.1}
+    vowels: [[0, a], [0.3, o], [0.66, er]]
+    env: [[0, 0], [0.025, 1], [0.25, 0.75], [0.5, 0.55], [0.68, 0]]
+    growl: 0.55
+    growl_rate: 27
+    jitter: 0.02
+    drive: 2.2
+  - type: noise
+    at: 0.55
+    band: [[0, 2200], [0.33, 1300]]
+    q: 1.1
+    env: [[0, 0], [0.05, 0.4], [0.34, 0]]
+    gain: 0.3

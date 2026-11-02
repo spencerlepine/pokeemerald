@@ -1,0 +1,32 @@
+name: sproutliz
+slot: bulbasaur
+brief: "SPROUTLIZ: creature call that fits its look and size. Lizard with a seed bulb on its back."
+kind: creature
+size: 0.3
+seed: 201
+layers:
+  # Bulb-lizard family voice: a croaky saw throat shaped a-o-er. A short "bul" then a longer, falling
+  # "baaa-rr" with a dry leafy rustle at the end.
+  - type: voice
+    pitch: [[0, 420], [0.05, 520], [0.13, 440]]
+    source: {saw: 0.8, pulse: 0.4, pulse_width: 0.35, noise: 0.1}
+    vowels: [[0, a], [0.12, u]]
+    env: [[0, 0], [0.012, 1], [0.1, 0.8], [0.14, 0]]
+    gain: 1.4
+    growl: 0.15
+    growl_rate: 40
+  - type: voice
+    at: 0.18
+    pitch: [[0, 460], [0.08, 560], [0.35, 470], [0.55, 360]]
+    source: {saw: 0.8, pulse: 0.4, pulse_width: 0.35, noise: 0.1}
+    vowels: [[0, a], [0.25, o], [0.55, er]]
+    env: [[0, 0], [0.02, 1], [0.2, 0.75], [0.4, 0.55], [0.57, 0]]
+    growl: 0.2
+    growl_rate: 40
+    jitter: 0.015
+  - type: noise
+    at: 0.5
+    band: [[0, 3000], [0.25, 2200]]
+    q: 1.5
+    env: [[0, 0], [0.04, 0.3], [0.26, 0]]
+    gain: 0.25

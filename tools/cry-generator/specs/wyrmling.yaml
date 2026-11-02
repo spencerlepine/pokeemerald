@@ -1,0 +1,21 @@
+name: wyrmling
+slot: dratini
+brief: "WYRMLING: creature call that fits its look and size. Hatchling dragonsnake."
+kind: creature
+size: 0.3
+seed: 301
+layers:
+  # Dragonsnake family voice: a smooth, hollow pulse throat shaped o-i-u that glides up ("hoo-ee") and
+  # trails off in a thin serpent hiss. The hatchling is small and reedy.
+  - type: voice
+    pitch: [[0, 520], [0.18, 760], [0.38, 660]]
+    source: {pulse: 0.6, pulse_width: 0.45, saw: 0.3, noise: 0.08}
+    vowels: [[0, o], [0.18, i], [0.38, u]]
+    env: [[0, 0], [0.02, 1], [0.22, 0.85], [0.4, 0]]
+    vibrato: {rate: 10, depth: 0.02}
+  - type: noise
+    at: 0.3
+    band: [3400]
+    q: 2
+    env: [[0, 0], [0.03, 0.45], [0.22, 0]]
+    gain: 0.3

@@ -1,0 +1,33 @@
+name: puffseed
+slot: hoppip
+brief: "PUFFSEED: creature call that fits its look and size. Cotton seed riding the cloud winds."
+kind: creature
+size: 0.05
+seed: 401
+layers:
+  # Cotton-puff family voice: an airy, breathy pulse peep shaped i-u ("pyu") over a soft breeze.
+  # The seed is tiny: two quick, light peeps.
+  - type: voice
+    pitch: [[0, 700], [0.05, 860], [0.15, 760]]
+    source: {pulse: 0.6, pulse_width: 0.4, saw: 0.2, noise: 0.1}
+    vowels: [[0, i], [0.15, u]]
+    env: [[0, 0], [0.01, 1], [0.1, 0.7], [0.16, 0]]
+    vibrato: {rate: 18, depth: 0.02}
+    formant_scale: 0.6
+    emphasis: 0.4
+  - type: voice
+    at: 0.2
+    pitch: [[0, 740], [0.05, 880], [0.17, 700]]
+    source: {pulse: 0.6, pulse_width: 0.4, saw: 0.2, noise: 0.1}
+    vowels: [[0, i], [0.17, u]]
+    env: [[0, 0], [0.01, 0.8], [0.12, 0.55], [0.18, 0]]
+    vibrato: {rate: 18, depth: 0.02}
+    formant_scale: 0.6
+    emphasis: 0.4
+  - type: noise
+    band: [[0, 2000], [0.38, 1600]]
+    q: 1
+    env: [[0, 0], [0.05, 0.25], [0.3, 0.2], [0.38, 0]]
+    gain: 0.15
+master:
+  lowpass: 3600
