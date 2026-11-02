@@ -1,0 +1,116 @@
+# vs. Darth Vader: net-new boss battle (wiki net:mus-vs-vader, MUS_VS_VADER; tech notes from its placeholder
+# audio:MUS_VS_AQUA_MAGMA_LEADER: volume 80, priority 1, ~80 s loop). The row's ref_use is ARRANGE of "Enter Lord
+# Vader" and "The Imperial March" (soundtrack:revenge-sith:11 | empire-strikes-back:05), but its brief says
+# "Original composition; do not quote film themes", so the cues' harmony and groove are arranged and the tune is
+# new: G minor against E-flat minor over the G pedal (the March's own colour), the Fm -> E and Bb7 -> E tritone
+# swings from Enter Lord Vader (its draft bars 38-66), a relentless long-short triplet gallop in the low strings
+# and wave bass, choir and timpani on the strong beats, and a noise-channel snare.
+# Brief (sw_subject): "Boss battle against Darth Vader: relentless, operatic, choir hits."
+# Voicegroup rg_vs_champion instead of the placeholder's vs_aqua_magma_leader, for its choir (slot 53) next to
+# trumpet, horn, strings and timpani. 144 bpm (frame-exact), triplet grid, 2-bar intro, 48-bar loop (80 s).
+name: vs-vader
+constant: MUS_VS_VADER            # wiki sw_constant (net:mus-vs-vader)
+form: LOOP
+voicegroup: rg_vs_champion        # frlg kit 0, timpani 47, strings 48, choir 53, trumpet 56, horn 60, squares 80/81, wave 87, noise 126
+master_volume: 80
+song_priority: 1
+tempo: 144
+steps_per_beat: 6                 # triplet grid: the gallop is 4+2, eighth triplets are 2
+time_signature: [4, 4]
+seed: 91
+
+parts:
+  trumpet: {program: 56, channel: 0, volume: 106, pan: 6,   range: [G4, A5], gate: 0.92, humanize: {vel: 3}}
+  horn:    {program: 60, channel: 1, volume: 94,  pan: -12, range: [F3, D4], gate: 0.95}
+  strings: {program: 48, channel: 2, volume: 70,  pan: -24, octave: 4, range: [G3, G4], gate: 1.0}
+  choir:   {program: 53, channel: 3, volume: 92,  pan: 14,  octave: 4, range: [G3, D5], gate: 0.95}
+  bass:    {program: 87, channel: 4, volume: 100, pan: 0,   octave: 2, range: [D1, D3], gate: 0.8, role: bass}
+  gallop:  {program: 81, channel: 5, volume: 44,  pan: 32,  octave: 3, range: [G3, G4], gate: 0.6, mono: true}
+  timpani: {program: 47, channel: 6, volume: 98,  pan: 10,  range: [D2, G2], gate: 1.0}
+  snare:   {program: 126, channel: 7, volume: 58, pan: -16, role: drums, kit: {sn: C5}}
+  kit:     {program: 0,  channel: 8, volume: 84,  pan: 0, role: drums, kit: {kick: 36, crash: 57}}
+  echo:    {program: 80, channel: 9, volume: 38,  pan: -34, octave: 5, range: [G4, G6], gate: 0.5, mono: true}
+
+progressions:
+  intro: "Gm | D7"
+  march: "Gm | Ebm/G | Gm | Ebm/G | Cm | Ab | Ebm:12 D:12 | D7"
+  choir: "Gm | Gm | Fm | E | Gm | Gm | Bb7 | E"
+  brood: "Gm | Gm | Fm | Fm | Ebm | Ebm | D | D"
+  climax: "Cm | Ab | Gm | Eb | Cm | Ebm | D7 | D7"
+
+phrases:
+  tune_a: |
+    G4:6 G4:4 A4:2 Bb4:6 D5:6 | Eb5:9 Db5:3 Bb4:12 | D5:6 D5:4 Eb5:2 F5:6 G5:6 | Gb5:12 F5:4 Eb5:4 Db5:4 |
+    C5:9 Eb5:3 G5:12 | Ab5:9 G5:3 Eb5:12 | Gb5:6 F5:6 F#5:12 | A5:9 F#5:3 D5:6 r:6
+  tune_b: |
+    D5:12 Bb4:6 G4:6 | A4:6 Bb4:6 D5:6 G5:6 | Ab5:12 F5:6 C5:6 | B4:6 G#4:6 E4:12 |
+    G4:6 Bb4:6 D5:6 G5:6 | F#5:12 G5:6 A5:6 | Bb5:12 Ab5:6 F5:6 | G#5:12 E5:6 B4:6
+  tune_d: |
+    G5:12 Eb5:6 C5:6 | Ab5:12 Eb5:6 C5:6 | Bb5:12 G5:6 D5:6 | Bb5:9 G5:3 Eb5:12 |
+    C5:6 Eb5:6 G5:6 C6:6 | Gb5:12 Eb5:6 Bb4:6 | A5:12 F#5:6 D5:6 | A5:18 r:6
+  horn_a: "D4:24 | Db4:24 | D4:24 | Db4:24 | C4:24 | C4:24 | Bb3:12 A3:12 | A3:18 r:6"
+  horn_brood: |
+    G3:12 Bb3:6 A3:6 | G3:24 | Ab3:12 C4:6 Bb3:6 | Ab3:24 | Gb3:12 Bb3:6 Ab3:6 | Gb3:24 | F#3:12 A3:6 C4:6 | D4:24
+  horn_d: "Eb4:24 | Eb4:24 | D4:24 | Eb4:24 | Eb4:24 | Db4:24 | C4:12 A3:12 | A3:18 r:6"
+  # choir hits: short "aah" stabs on the strong beats, then a held chord tone
+  choir_hits: "^1:6 r:6 ^1:6 r:6 | ^3:24"
+  choir_hold: "^1:24"
+  choir_brood: "D4:24 | D4:24 | C4:24 | C4:24 | Bb3:24 | Bb3:24 | A3:24 | A3:24"
+  pad: "^2:24"
+  gallop: "^1:4 ^1:2 ^1:4 ^1:2 ^1:4 ^1:2 ^1:4 ^1:2"
+  gallop_up: "^1:4 ^1:2 ^1+:4 ^1:2 ^3:4 ^1:2 ^1+:4 ^1:2"
+  gallop_sq: "^1:4 ^1:2 ^2:4 ^1:2 ^3:4 ^1:2 ^2:4 ^1:2"
+  echo_b: "r:12 ^3:2 ^2:2 ^1:2 r:6"
+  timp_a: "G2:6 r:18 | r:24 | G2:6 r:18 | r:24 | r:24 | r:24 | r:24 | D2:2 D2:2 D2:2 D2:2 D2:2 D2:2 D2:12"
+  timp_hits: "G2:6 r:6 G2:6 r:6 | r:24"
+  timp_brood: "G2:6 r:18 | G2:6 r:18 | r:24 | r:24 | r:24 | r:24 | D2:6 r:18 | D2:2 D2:2 D2:2 D2:2 D2:2 D2:2 D2:2 D2:2 D2:2 D2:2 D2:2 D2:2"
+  intro_tpt: "r:24 | r:12 A4:4 C5:4 D5:4"
+  intro_timp: "G2:2 G2:2 G2:2 G2:2 G2:2 G2:2 G2:2 G2:2 G2:2 G2:2 G2:2 G2:2 | D2:6 r:6 D2:6 D2:6"
+
+grooves:
+  march:
+    sn: "x.....x.....x.....x.....|x.....x.....x.....x...x."
+  march_roll:
+    sn: "x.....x.....x.....x.....|x.....x.....x.....x...x.|x.....x.....x.....x.....|x.....x.....x.....x...x.|x.....x.....x.....x.....|x.....x.....x.....x...x.|x.....x.....x.....x.....|x.x.x.x.x.x.rrrrrrRRRRRR"
+  brood:
+    sn: "........................|............x...x...x.x."
+  intro_sn:
+    sn: "........................|rrrrrrrrrrrrRRRRRRRRRRRR"
+  hits:
+    kick:  "x.....x.................|........................"
+    crash: "x.......................|........................|........................|........................|........................|........................|........................|........................"
+  heavy:
+    kick:  "x...........x...........|x...........x.....x....."
+
+sections:
+  intro:
+    bars: 2
+    chords: intro
+    parts: {timpani: intro_timp, bass: gallop, snare: intro_sn, trumpet: intro_tpt, strings: pad}
+  a:
+    bars: 8
+    chords: march
+    parts: {trumpet: tune_a, horn: horn_a, bass: gallop, gallop: gallop_sq, strings: pad, timpani: timp_a, snare: march_roll, kit: heavy}
+  b:
+    bars: 8
+    chords: choir
+    parts: {trumpet: tune_b, choir: choir_hits, bass: gallop_up, gallop: gallop_sq, timpani: timp_hits, echo: echo_b, snare: march_roll, kit: hits}
+  c:
+    bars: 8
+    chords: brood
+    parts: {horn: horn_brood, choir: choir_brood, bass: gallop, gallop: gallop_sq, timpani: timp_brood, snare: brood}
+  a2:
+    bars: 8
+    chords: march
+    parts: {trumpet: tune_a, horn: horn_a, choir: choir_hold, bass: gallop, gallop: gallop_sq, timpani: timp_a, snare: march_roll, kit: heavy}
+  d:
+    bars: 8
+    chords: climax
+    parts: {trumpet: tune_d, horn: horn_d, strings: pad, bass: gallop_up, gallop: gallop_sq, echo: echo_b, snare: march_roll, kit: heavy}
+  b2:
+    bars: 8
+    chords: choir
+    parts: {trumpet: tune_b, choir: choir_hits, bass: gallop_up, gallop: gallop_sq, timpani: timp_hits, echo: echo_b, snare: march_roll, kit: hits}
+
+arrangement: [intro, a, b, c, a2, d, b2]
+loop_start: a
