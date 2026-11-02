@@ -173,16 +173,59 @@ def finish(sheet: np.ndarray, banks=None):
     return out, bank
 
 
+# Icons whose creature has forms: the icon is drawn from this form's front.
+FORM_SOURCE = {"castform": "castform/normal"}
+NOT_HERE = {"egg", "question_mark"}  # their fronts come from sprite-creature-extras-generator first
+
+
+def rows():
+    """Every icon row in the wiki: (species folder, icon path relative to graphics/pokemon)."""
+    import csv
+    with open(REPO / "wiki/database/pending_art.csv") as f:
+        for r in csv.DictReader(f):
+            p = r["path"]
+            if r["kind"] == "pokemon" and p.endswith("/icon.png") and r["swap_kind"] != "CUT":
+                sp = p[len("graphics/pokemon/"):-len("/icon.png")]
+                yield sp, p
+
+
+def build_all(out: Path, banks, only_missing_ok=True):
+    """Draw every icon row whose front exists; writes out/<path>, out/icon_palette_indices.csv."""
+    import csv
+    idx = []
+    for sp, path in rows():
+        src = ART / "graphics/pokemon" / FORM_SOURCE.get(sp, sp)
+        if not (src / "front.png").exists():
+            print("skip (no approved front yet):", sp)
+            continue
+        img, bank = finish(make_icon(src / "front.png", src / "anim_front.png"), banks)
+        dst = out / path
+        dst.parent.mkdir(parents=True, exist_ok=True)
+        enforce.save(img, dst, 4)
+        rep = check.check_png(dst, pal=banks[bank])
+        if not rep.ok:
+            raise SystemExit(f"{sp}: " + "\n".join(rep.lines()))
+        idx.append((sp, bank))
+    with open(out / "icon_palette_indices.csv", "w", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(["species", "bank"])
+        w.writerows(idx)
+    print(len(idx), "icons written to", out)
+
+
 def main(argv):
     import argparse
     ap = argparse.ArgumentParser()
-    ap.add_argument("species", nargs="+", help="folder under graphics/pokemon, e.g. treecko or unown/a")
+    ap.add_argument("species", nargs="*", help="folder under graphics/pokemon, e.g. treecko or unown/a")
+    ap.add_argument("--all", action="store_true", help="every icon row in the wiki")
     ap.add_argument("--out", default=str(HERE / "out"))
     ap.add_argument("--banks", default=None, help="folder with icon_palette_{0,1,2}.pal (default: vanilla)")
     a = ap.parse_args(argv)
     banks = [core.load_jasc(Path(a.banks) / f"icon_palette_{n}.pal") for n in range(3)] if a.banks else BANKS
+    if a.all:
+        return build_all(Path(a.out), banks)
     for sp in a.species:
-        d = ART / "graphics/pokemon" / sp
+        d = ART / "graphics/pokemon" / FORM_SOURCE.get(sp, sp)
         img, bank = finish(make_icon(d / "front.png", d / "anim_front.png"), banks)
         dst = Path(a.out) / sp / "icon.png"
         dst.parent.mkdir(parents=True, exist_ok=True)
