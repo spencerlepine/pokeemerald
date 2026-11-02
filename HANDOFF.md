@@ -108,6 +108,9 @@ Before pushing world changes, from `tools/blockout/` run:
 - **Vanilla interiors:** the 293 vanilla interiors keep their vanilla layout with a kit note. They are dressed per
   planet in phase 3.
 - **Balancing:** use `CONNECTIONS.csv` together with `wiki/database/area_progression.csv`.
+- **New-game intro (Prof. Korr speech): text and art ported into `game/`** (2026-11-02, owner asked for it). The
+  portrait, the BOGLING and the Kael/Mira pics were already in; the speech now uses the wiki text. Still vanilla:
+  `gText_Birch_AndYouAre`, `BoyOrGirl`, `WhatsYourName` and `SoItsPlayer` (wiki says keep them). Not yet checked in an emulator.
 - **Other open work** is outside the world blockout, in [`tools/README.md`](tools/README.md):
   - creature sprites are in progress;
   - the tile-generator is paused;
