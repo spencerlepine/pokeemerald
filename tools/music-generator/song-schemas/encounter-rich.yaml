@@ -1,0 +1,53 @@
+# Encounter: rich trainers. Hot-swap of MUS_ENCOUNTER_RICH (wiki audio:MUS_ENCOUNTER_RICH): eye-contact music for
+# the 17 nobles and gamblers. SCRATCH (no film cue): an original courtly waltz in Eb, the kind of string-and-flute
+# salon music a Star Wars palace or casino plays, with a sly V/V (F7) turn before the loop. Tuba oom on the
+# downbeat, piano and square on the pah-pah, flute on top, strings swelling into the last phrase. Kept on the
+# vanilla voicegroup and tempo. Brief (sw_subject): eye-contact jingle, rich trainers (nobles, gamblers).
+name: encounter-rich
+replaces: MUS_ENCOUNTER_RICH
+form: LOOP
+voicegroup: encounter_rich            # vanilla: piano 1, fretless 32, strings 48, tuba 58, flute 73, square 80
+master_volume: 90
+tempo: 128
+steps_per_beat: 4
+time_signature: [3, 4]
+seed: 17
+
+parts:
+  flute:   {program: 73, channel: 0, volume: 100, pan: 8,   range: [Bb4, C6], gate: 0.92, lfo_speed: 30, lfo_delay: 16, mod: 4, humanize: {vel: 5}}
+  piano:   {program: 1,  channel: 1, volume: 78,  pan: -16, octave: 4, range: [Bb3, Bb4], gate: 0.5}
+  tuba:    {program: 58, channel: 2, volume: 100, pan: 0,   octave: 1, range: [Eb1, Eb2], gate: 0.6, role: bass}
+  strings: {program: 48, channel: 3, volume: 64,  pan: -28, octave: 4, range: [G4, G5], gate: 1.0}
+  pah:     {program: 80, channel: 4, volume: 40,  pan: 28,  octave: 4, range: [G3, G4], gate: 0.4, mono: true}
+
+progressions:
+  a: "Eb | Cm | Ab | Bb7 | Eb | Gm | Ab | Bb7"
+  b: "Cm | Ab | F7 | Bb7"
+
+phrases:
+  tune_a: |
+    G5:6 F5:2 Eb5:4 | C5:4 Eb5:4 G5:4 | Ab5:6 G5:2 F5:4 | F5:8 D5:4 |
+    G5:6 F5:2 Eb5:4 | D5:4 G5:4 Bb5:4 | C6:6 Bb5:2 Ab5:4 | G5:4 F5:4 D5:4
+  tune_b: |
+    Eb5:6 D5:2 C5:4 | Eb5:4 Ab5:4 C6:4 | A5:6 G5:2 F5:4 | F5:4 D5:4 Bb4:4
+  oom: "^1:4 r:4 ^3:4"
+  pah_piano: "r:4 ^2:4 ^2:4"
+  pah_square: "r:4 ^3:4 ^3:4"
+  swell: "_^3:12"
+
+sections:
+  intro:
+    bars: 1
+    chords: "Bb7"
+    parts: {tuba: oom, piano: pah_piano, pah: pah_square, flute: "r:8 Bb4:2 D5:2"}
+  a:
+    bars: 8
+    chords: a
+    parts: {flute: tune_a, tuba: oom, piano: pah_piano, pah: pah_square}
+  b:
+    bars: 4
+    chords: b
+    parts: {flute: tune_b, tuba: oom, piano: pah_piano, pah: pah_square, strings: swell}
+
+arrangement: [intro, a, b]
+loop_start: a
