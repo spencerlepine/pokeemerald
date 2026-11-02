@@ -1,0 +1,63 @@
+# Encounter: HoloNet reporters. Hot-swap of MUS_ENCOUNTER_INTERVIEWER (wiki audio:MUS_ENCOUNTER_INTERVIEWER,
+# ENCOUNTER / LOOP). SCRATCH (no film cue): an original "breaking news" jingle for a galaxy-wide broadcast, in a
+# bright Star Wars brass idiom (the podrace announcers' world). Brief (sw_subject): Fode & Beed, HoloNet
+# reporters, stop you for an interview. 142 bpm (vanilla): a 2-bar trumpet headline fanfare, then a 4-bar loop
+# in F (6.8 s, vanilla 6.8 s): xylophone tune, trumpet hits, a square "news ticker" tapping C6 in 16ths, slap
+# bass, square off-beats, wave counter, kick/snare and noise hats.
+name: encounter-holonet
+replaces: MUS_ENCOUNTER_INTERVIEWER
+form: LOOP
+voicegroup: encounter_interviewer     # xylophone 13, slap bass 36, trumpet 56, sq1 80, wave 82, sq2 84, noise 126, kit 0
+master_volume: 62
+tempo: 142
+steps_per_beat: 4
+time_signature: [4, 4]
+seed: 121
+
+parts:
+  xylo:    {program: 13, channel: 0, volume: 108, pan: 8,   gate: 0.9, humanize: {vel: 4}}
+  trumpet: {program: 56, channel: 1, volume: 100, pan: -6,  octave: 4, gate: 0.85}
+  bass:    {program: 36, channel: 2, volume: 96,  pan: 0,   octave: 1, gate: 0.55, role: bass}
+  drums:   {program: 0,  channel: 3, volume: 78,  pan: 8,   role: drums, kit: {kick: 36, sn: 38}}
+  hat:     {program: 126, channel: 4, volume: 30, pan: -12, role: drums, kit: {h: C7}}
+  ticker:  {program: 80, channel: 5, volume: 32,  pan: -32, gate: 0.5, mono: true}
+  offbeat: {program: 84, channel: 6, volume: 36,  pan: 30,  octave: 4, gate: 0.4, mono: true}
+  wave:    {program: 82, channel: 7, volume: 46,  pan: 14,  octave: 3, gate: 0.85, mono: true}
+
+progressions:
+  headline: "F | C7"
+  news:     "F | Dm | Bb:8 C:8 | F:8 C7:8"
+
+phrases:
+  headline: "C5:2 C5:1 C5:1 F5:4 A5:4 C6:4 | Bb5:2 A5:2 G5:2 F5:2 E5:4 G5:4"
+  tune: |
+    A5:2 A5:1 A5:1 C6:2 A5:2 F5:4 C5:4 | D5:2 F5:2 A5:2 D6:2 C6:4 A5:4 |
+    Bb5:2 A5:2 G5:2 F5:2 G5:2 A5:2 Bb5:4 | A5:4 F5:4 G5:2 E5:2 C5:4
+  hits: "^3:2 r:6 ^3:2 r:2 ^3:2 r:2"
+  ticker: "C6:1 r:1 C6:1 C6:1 r:2 C6:1 r:1 C6:1 C6:1 C6:1 r:1 C6:1 r:3"
+  slap: "^1:2 r:2 ^1+:2 ^1:2 r:2 ^1:2 ^3:2 ^1+:2"
+  offs: "r:2 ^2:2 r:2 ^2:2 r:2 ^2:2 r:2 ^2:2"
+  counter: "^1+:4 ^3:4 ^2+:4 ^3:4"
+
+grooves:
+  headline:
+    kick: "x.......x.......|x.......x......."
+    sn:   "....x.......x...|....x...x.x.x..."
+  news:
+    kick: "x.....x...x.....|x.....x...x...x."
+    sn:   "....x.......x...|....x.......x..."
+  hats:
+    h:    "x.x.x.x.x.x.x.x."
+
+sections:
+  intro:
+    bars: 2
+    chords: headline
+    parts: {trumpet: headline, bass: slap, drums: headline, hat: hats, ticker: ticker, offbeat: offs, wave: counter}
+  a:
+    bars: 4
+    chords: news
+    parts: {xylo: tune, trumpet: hits, bass: slap, drums: news, hat: hats, ticker: ticker, offbeat: offs, wave: counter}
+
+arrangement: [intro, a]
+loop_start: a
