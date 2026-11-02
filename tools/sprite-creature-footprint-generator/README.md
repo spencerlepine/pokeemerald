@@ -27,7 +27,7 @@ python3 footprint.py --sheet types.png          # every foot type at 3 sizes, fo
 | claw | lizards, crocodiles, dragons, krayts, dewbacks, tauntauns |
 | talon | birds and fowl |
 | webbed | amphibians, swamp ducks, worrts, porgs |
-| hoof | banthas' cousins with split hooves: nerfs, shaaks, eopies, fawns, reeks |
+| hoof | split hooves: nerfs, shaaks, eopies, fawns, reeks |
 | round | heavy padded feet: banthas, rontos, turtles, sando |
 | foot | two-legged walkers with bare feet |
 | hand | knuckle-walkers: gundarks, rancors, mogus, monkey-lizards |
