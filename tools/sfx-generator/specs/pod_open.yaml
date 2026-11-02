@@ -1,0 +1,29 @@
+name: pod_open
+replaces: SE_BALL_OPEN
+constant: SE_POD_OPEN
+brief: "Capture pod opens and the companion beams out: hiss plus energy release."
+seed: 22
+layers:
+  # Seal breaks: a pressurised hiss (high band-passed noise sliding down), then the companion beams out on
+  # a rising, filter-opening saw shimmer with a climbing hardware-sweep square on top.
+  - type: pcm
+    osc: noise
+    filter: {type: bp, cutoff: [[0, 5000], [0.3, 2200]], q: 1.4}
+    env: [[0, 0], [0.008, 1], [0.12, 0.5], [0.32, 0]]
+    gain: 0.7
+  - type: pcm
+    at: 0.06
+    osc: saw
+    unison: [-10, 9]
+    pitch: [[0, 220], [0.3, 880]]
+    filter: {type: lp, cutoff: [[0, 600], [0.3, 4800]], q: 2.5}
+    am: {rate: 28, depth: 0.3}
+    env: [[0, 0], [0.08, 0.8], [0.26, 1], [0.36, 0]]
+    gain: 0.6
+  - type: square
+    at: 0.1
+    pitch: 700
+    duty: 0
+    sweep: [2, false, 5]
+    env: [[0, 0], [0.04, 0.5], [0.22, 0.4], [0.3, 0]]
+    gain: 0.3

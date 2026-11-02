@@ -1,0 +1,14 @@
+name: pod_tray_exit
+replaces: SE_BALL_TRAY_EXIT
+constant: SE_POD_TRAY_EXIT
+brief: "Pod tray slides out: servo."
+seed: 26
+layers:
+  # A very short servo blip falling in pitch (the reverse of the tray-enter whir), as brief as the vanilla SE.
+  - type: pcm
+    osc: saw
+    pitch: [[0, 300], [0.055, 180]]
+    filter: {type: bp, cutoff: [[0, 1600], [0.055, 900]], q: 2}
+    am: {rate: 55, depth: 0.3}
+    env: [[0, 0], [0.005, 1], [0.045, 0.8], [0.06, 0]]
+    gain: 0.9
