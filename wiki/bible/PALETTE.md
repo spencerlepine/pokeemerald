@@ -74,6 +74,34 @@ Swamp green, tarnished gold and rust, so it never reads as Rebel or Empire.
 | Smoke Brown | `#403830` | 64, 56, 48 | neutral |
 | Old Parchment | `#F0E0B0` | 240, 224, 176 | neutral |
 
+## HUD and menus: Dune (surfaces and frames) — chosen 2026-11-02
+
+The owner picked this over Hyperspace Console on 2026-11-02 (phase 2 vote, round 1): menus stay **light and
+bright** so creature sprites keep their contrast, with low-saturation sand and steel instead of Emerald's greens,
+blues and purples. Hyperspace Console stays below for reference only; the cursor, HP and EXP colours in
+"status and accents" still apply. Text keeps Emerald's three greys (fill, shadow, white box).
+
+| Color | Hex | RGB | Role |
+|---|---|---|---|
+| Paper | `#F8F0D0` | 248, 240, 208 | list and window fill |
+| Sand | `#D0A880` | 208, 168, 128 | screen background (party, summary) |
+| Sand Shade | `#B08860` | 176, 136, 96 | background shade, inactive tabs |
+| Rust | `#C07040` | 192, 112, 64 | dialogue and window frame |
+| Rust Dark | `#885038` | 136, 80, 56 | frame outline |
+| Steel | `#90B0C8` | 144, 176, 200 | former blues and purples: bag backdrop, selected row, keyboard |
+| Steel Shade | `#88A8C8` | 136, 168, 200 | steel ramp |
+| Steel Dark | `#283840` | 40, 56, 64 | dark chrome: Datapad body, PC side panel, summary headers |
+| Console Grey | `#808890` | 128, 136, 144 | battle message box (never brown, owner's rule) |
+| Console Grey Dark | `#606070` | 96, 96, 112 | battle message box border |
+| Cursor Gold | `#F0C038` | 240, 192, 56 | every former red button and highlight (CANCEL, tabs) |
+
+Rules: greens become Paper/Sand (light) or Rust (mid); anything darker than 30% lightness becomes Steel Dark;
+blues and purples become Steel; saturated red becomes Cursor Gold; HP bars keep HP Good/Warn/Critical; the battle
+message box is Console Grey. Icons (bag, pocket tabs, StarNAV buttons, markings, cry meter, money, badges) are not
+recoloured: they are `PENDING_ART` rows for the owner to redraw. Box wallpapers, the region map and map popups keep
+their textures for now. Mockups of every screen: `tools/ui-skin-generator/mockups/dune_v1/`
+(`mockup.py` regenerates them from `reference/v1/`).
+
 ## HUD and menus: Hyperspace Console (surfaces and text)
 
 Dark blue-grey menus instead of Emerald's white boxes. Greys lean slightly blue so they read as cockpit metal.
