@@ -1,0 +1,19 @@
+name: shiftblob
+slot: ditto
+brief: 'SHIFTBLOB: creature call that fits its look and size. Shapeshifting blob that copies any creature (Transform).'
+kind: creature
+size: 0.18
+seed: 291
+layers:
+  # Shapeshifting blob: a wobbly, gloopy voice whose vowels and pitch melt from one shape to
+  # another (copying), with a wet pop.
+  - type: voice
+    pitch: [[0, 380], [0.12, 560], [0.25, 420], [0.38, 640], [0.5, 470]]
+    source: {pulse: 0.7, saw: 0.5, pulse_width: 0.35, noise: 0.06}
+    vowels: [[0, u], [0.1, ae], [0.2, o], [0.32, i], [0.42, aw], [0.5, u]]
+    env: [[0, 0], [0.02, 1], [0.4, 0.8], [0.51, 0]]
+    vibrato: {rate: 13, depth: 0.06}
+    jitter: 0.02
+  - type: click
+    times: [0.0]
+    gain: 0.5

@@ -1,0 +1,24 @@
+name: hornbeetle
+slot: heracross
+brief: 'HORNBEETLE: creature call that fits its look and size. Single-horned fighting beetle.'
+kind: creature
+size: 0.56
+seed: 292
+layers:
+  # Horned fighting beetle: a fast buzzing wing whirr into a short, strong battle shout.
+  - type: servo
+    pitch: [[0, 160], [0.3, 200]]
+    harmonics: [1.0, 0.8, 0.6, 0.5, 0.4]
+    grit: 0.9
+    env: [[0, 0], [0.02, 0.7], [0.28, 0.6], [0.32, 0]]
+    gain: 0.6
+  - type: voice
+    at: 0.22
+    pitch: [[0, 340], [0.08, 480], [0.4, 420], [0.62, 290]]
+    source: {saw: 0.9, pulse: 0.4, pulse_width: 0.2, noise: 0.12}
+    vowels: [[0, er], [0.1, a], [0.62, aw]]
+    env: [[0, 0], [0.01, 1], [0.45, 0.8], [0.63, 0]]
+    growl: 0.35
+    growl_rate: 45
+    jitter: 0.03
+    drive: 2.2

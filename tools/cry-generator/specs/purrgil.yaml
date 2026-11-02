@@ -1,0 +1,26 @@
+name: purrgil
+slot: lapras
+brief: 'PURRGIL: creature call that fits its look and size. Gentle purrgil that carries travellers.'
+kind: creature
+size: 0.85
+seed: 293
+layers:
+  # Gentle purrgil: a deep, rounded space-whale song that swells and dips, with a purring
+  # undertone and a breath.
+  - type: voice
+    pitch: [[0, 210], [0.2, 300], [0.45, 330], [0.68, 240]]
+    pitch_step: 0.04
+    source: {saw: 0.6, pulse: 0.6, pulse_width: 0.4, noise: 0.05}
+    vowels: [[0, u], [0.25, o], [0.5, aw], [0.68, u]]
+    env: [[0, 0], [0.06, 1], [0.5, 0.85], [0.69, 0]]
+    vibrato: {rate: 5, depth: 0.02}
+    growl: 0.3
+    growl_rate: 18
+    jitter: 0.01
+  - type: voice
+    at: 0.05
+    pitch: [[0, 630], [0.4, 900], [0.6, 720]]
+    source: {pulse: 0.7, saw: 0.2, pulse_width: 0.45}
+    vowels: [[0, o], [0.6, u]]
+    env: [[0, 0], [0.1, 0.6], [0.5, 0.5], [0.62, 0]]
+    gain: 0.45

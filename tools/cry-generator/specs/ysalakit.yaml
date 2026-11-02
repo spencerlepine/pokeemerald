@@ -1,0 +1,19 @@
+name: ysalakit
+slot: wynaut
+brief: 'YSALAKIT: creature call that fits its look and size. Ysalamiri hatchling.'
+kind: creature
+size: 0.32
+seed: 281
+layers:
+  # Ysalamiri hatchling: a cheerful two-part chirp-croak, "wy-NAUT".
+  # Family voice (pulse croak, e -> a -> o, two-part motif) shared with YSALAMIRI.
+  - type: voice
+    pitch: [[0.0, 560.0], [0.117, 728.0], [0.156, 532.0], [0.39, 616.0], [0.624, 448.0]]
+    source: {pulse: 0.8, saw: 0.5, pulse_width: 0.3, noise: 0.08}
+    vowels: [[0.0, e], [0.1365, a], [0.624, o]]
+    env: [[0.0, 0], [0.0195, 1], [0.117, 0.8], [0.1462, 0.3], [0.1755, 1], [0.468, 0.8], [0.6435, 0]]
+    growl: 0.1
+    growl_rate: 40
+    jitter: 0.02
+    drive: 1.5
+master: {rms: 0.3}
