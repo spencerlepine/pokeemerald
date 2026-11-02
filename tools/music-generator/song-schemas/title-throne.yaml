@@ -1,0 +1,116 @@
+# Title screen (MUS_TITLE, hot-swap): a loop. ARRANGE of the Throne Room march from the A New Hope finale
+# ("The Throne Room and End Title", wiki soundtrack:new-hope:16, 0:00-0:50), so the title sounds like the film's
+# victory music and the opening crawl (MUS_INTRO_CRAWL, the main title) stays its own moment.
+# Transcribed from the soundtrack with a harmonic-salience pitch tracker on a 16th-note grid (melody) and
+# per-half-bar chroma (harmony); the cue runs at 119.3 bpm, 120 here, in F.
+#   intro      4 bars, once  the cue's opening fanfare cut down: C, Eb, G (Williams' chromatic mediants), C7 pickup
+#   loop       32 bars, 64 s, from a1:
+#     a1       8 bars  the march, trumpet, over the F pedal (C over the F pedal, Db, Csus4, Bb, Dm6, C7b9: the cue's major/minor mix)
+#     a2       8 bars  its second strain, horn joins on the tune
+#     soft     8 bars  the first strain again, quiet: flute over harp and strings
+#     big      8 bars  the second strain, full: trumpet and horn on the tune, high strings, timpani, cymbals;
+#                      it ends on a C pickup, the note the march starts from, so the seam is the tune's own
+# Vanilla MUS_TITLE plays once (about 100 s) and the title screen restarts the boot intro when it ends; this one
+# loops, so the title screen waits until a button is pressed.
+name: title-throne
+replaces: MUS_TITLE
+form: LOOP
+voicegroup: title             # trumpet 56, horn 60, strings 48, timpani 47, harp 46, flute 73, kit, squares, wave
+master_volume: 90
+tempo: 120
+steps_per_beat: 12            # 8ths, 16ths and the brass triplets on one grid
+time_signature: [4, 4]
+seed: 4
+
+parts:
+  trumpet: {program: 56, channel: 0, volume: 108, pan: 4,   range: [E4, G5], gate: 0.92, humanize: {vel: 3}}
+  horn:    {program: 60, channel: 1, volume: 94,  pan: -12, range: [C4, C5], gate: 0.95, transpose: -12}
+  strings: {program: 48, channel: 2, volume: 74,  pan: -26, range: [A3, F5], gate: 1.0}
+  flute:   {program: 73, channel: 3, volume: 92,  pan: 14,  range: [E4, F5], gate: 0.95, lfo_speed: 30, lfo_delay: 24, mod: 4}
+  harp:    {program: 46, channel: 4, volume: 78,  pan: 28,  octave: 4, range: [F3, F5], gate: 0.9}
+  timpani: {program: 47, channel: 5, volume: 100, pan: 0,   range: [C2, C3], gate: 1.0}
+  cymbal:  {program: 0,  channel: 6, volume: 80,  pan: 20, role: drums, kit: {crash: 57, snare: 40}}
+  bass:    {program: 82, channel: 7, volume: 104, pan: 0,   octave: 1, range: [C1, C2], gate: 0.85, role: bass}
+  sq1:     {program: 80, channel: 8, volume: 50,  pan: 34,  octave: 4, range: [A3, F5], gate: 0.6, mono: true}
+  sq2:     {program: 81, channel: 9, volume: 44,  pan: -34, octave: 4, range: [F3, C5], gate: 0.6, mono: true}
+
+progressions:
+  fanfare:  "C | Eb | G | C7"
+  strain_a: "C/F:24 C7b9:24 | Db:24 Csus4:24 | C/F:24 Db:24 | Bb:24 C7:24 | C/F:24 Db:24 | Dm6 | Dm7:24 C:24 | C/F"
+  strain_b: "F:24 C7:24 | Fm:24 C:24 | F:24 Fm:24 | Bb:24 C7:24 | Fm | Dm:24 Db:24 | Fm/C:24 C7:24 | F"
+
+phrases:
+  # the march (trumpet / flute), from the cue's 16th-note transcription
+  march_a: |
+    F4:24 G4:18 Ab4:6 | Ab4:30 F4:6 C5:12 | F4:18 G4:6 Ab4:6 F4:6 Ab4:6 C5:6 | Bb4:30 F4:6 C5:6 E4:6 |
+    F4:18 G4:6 Ab4:12 C5:12 | F5:36 E5:6 D5:6 | C5:48 | F4:36 G4:6 E4:6
+  march_b: |
+    F4:24 G4:18 Ab4:6 | Ab4:30 C5:6 G4:12 | F4:18 G4:6 Ab4:18 C5:6 | Bb4:36 G4:6 E4:6 |
+    F4:18 Ab4:18 C5:12 | F4:48 | C5:18 Ab4:6 C5:12 G4:12 | F4:24 r:12 C5:12
+  # the cue's opening, cut to four bars
+  fanfare_tpt: "E5:36 G5:12 | G5:24 Eb5:12 Bb4:12 | B4:36 D5:12 | C5:6 G4:6 C5:6 G4:6 E4:6 C5:18"
+  fanfare_hrn: "C5:48 | Bb4:48 | B4:24 G4:24 | G4:24 Bb4:24"
+  # horn under the first strain: the inner voice, moving by step (written an octave up, it sounds below)
+  horn_a: |
+    C5:24 Bb4:24 | Ab4:24 G4:24 | G4:24 F4:24 | F4:24 G4:24 |
+    G4:24 F4:24 | A4:48 | A4:24 G4:24 | E4:24 G4:24
+  horn_soft: |
+    G4:24 Bb4:24 | Ab4:24 G4:24 | G4:24 F4:24 | F4:24 E4:24 |
+    G4:24 F4:24 | A4:48 | A4:24 G4:24 | E4:24 G4:24
+  # high strings over the full second strain
+  str_high: |
+    C5:24 Bb4:24 | C5:24 E5:24 | F5:24 Eb5:24 | D5:24 E5:24 |
+    C5:48 | A4:24 Ab4:24 | Ab4:24 Bb4:24 | A4:24 r:12 E4:12
+  pad: "^2:24 ^2:24"
+  pad_whole: "^2:48"
+  arp: "^1:6 ^2:6 ^3:6 ^4:6 ^5:6 ^4:6 ^3:6 ^2:6"
+  # march accompaniment: bass on 1 and 3, chords on 2 and 4
+  bass_march: "^1:18 ^1:6 ^1:12 ^1:12"
+  bass_long: "^1:24 ^1:24"
+  after_1: "r:12 ^2:6 r:6 r:12 ^2:6 r:6"
+  after_2: "r:12 ^3:6 r:6 r:12 ^3:6 r:6"
+  trip_1: "^3:4 ^3:4 ^3:4 ^2:12 ^3:4 ^3:4 ^3:4 ^2:12"
+  trip_2: "^1:4 ^1:4 ^1:4 ^1:12 ^1:4 ^1:4 ^1:4 ^1:12"
+  timp_a: "F2:12 r:36 | r:48 | r:48 | r:24 C3:12 C3:12 | F2:12 r:36 | r:48 | r:48 | r:24 C3:3 C3:3 C3:3 C3:3 C3:12"
+  timp_big: "F2:12 r:36 | r:48 | F2:12 r:36 | r:24 C3:12 C3:12 | F2:12 r:36 | r:48 | C3:12 r:12 C3:12 r:12 | F2:12 r:12 C3:3 C3:3 C3:3 C3:3 C3:3 C3:3 C3:3 C3:3"
+  timp_fanfare: "C3:12 r:36 | r:48 | r:48 | C3:3 C3:3 C3:3 C3:3 C3:3 C3:3 C3:3 C3:3 C3:3 C3:3 C3:3 C3:3 C3:3 C3:3 C3:3 C3:3"
+
+grooves:
+  crash_1: {crash: "X...............................................|................................................|................................................|................................................|................................................|................................................|................................................|................................................"}
+  crash_4: {crash: "X...............................................|................................................|................................................|................................................"}
+  big_kit:
+    crash: "X...............................................|................................................|................................................|................................................|X...............................................|................................................|................................................|................................................"
+    snare: "................................................|................................................|................................................|....................................x..x..x..x..|................................................|................................................|................................................|........................x..x..x..x..x..x..x..x.."
+
+sections:
+  intro:
+    bars: 4
+    chords: fanfare
+    gain: {strings: -6}
+    parts: {trumpet: fanfare_tpt, horn: fanfare_hrn, strings: pad_whole, timpani: timp_fanfare, cymbal: crash_4,
+            bass: "C1:48 | Eb1:48 | G1:48 | C1:18 C1:6 C1:12 C1:12", sq1: trip_1, sq2: trip_2}
+  a1:
+    bars: 8
+    chords: strain_a
+    gain: {strings: -8}
+    parts: {trumpet: march_a, horn: horn_a, strings: pad, timpani: timp_a, cymbal: crash_1,
+            bass: bass_march, sq1: after_1, sq2: after_2}
+  a2:
+    bars: 8
+    chords: strain_b
+    gain: {strings: -8, horn: -4}
+    parts: {trumpet: march_b, horn: march_b, strings: pad, timpani: timp_a, bass: bass_march, sq1: after_1, sq2: after_2}
+  soft:
+    bars: 8
+    chords: strain_a
+    gain: {horn: -22, strings: -10, harp: -8, bass: -12}
+    parts: {flute: march_a, harp: arp, strings: pad, horn: horn_soft, bass: bass_long}
+  big:
+    bars: 8
+    chords: strain_b
+    gain: {strings: -4}
+    parts: {trumpet: march_b, horn: march_b, strings: str_high, timpani: timp_big, cymbal: big_kit,
+            bass: bass_march, sq1: trip_1, sq2: after_2}
+
+arrangement: [intro, a1, a2, soft, big]
+loop_start: a1
