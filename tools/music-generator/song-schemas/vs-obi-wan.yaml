@@ -1,0 +1,89 @@
+# Vs Obi-Wan. Hot-swap of MUS_VS_CHAMPION (wiki audio:MUS_VS_CHAMPION): the final battle against Obi-Wan Kenobi.
+# ARRANGE of "Battle of the Heroes" (soundtrack:revenge-sith:03), from analyze_reference over 0:00-1:15 (92 bpm,
+# D minor, the melody draft per bar) plus knowledge of the cue: the theme's pickup D, long F falling to E, D-C-E
+# and home to D, then the answer from A down through F and D; the climb at the climax where the line steps up a
+# key each bar (F minor, G minor) before falling back; all over the cue's driving sixteenth string ostinato,
+# eighth bass and pounding timpani. Kept at the cue's 92 bpm (sixteenth grid). Trumpet theme, horn standing in for
+# the choir, squares taking the ostinato when the strings rest. Vanilla voicegroup. Brief (sw_subject): final
+# battle against Obi-Wan Kenobi: noble and climactic.
+name: vs-obi-wan
+replaces: MUS_VS_CHAMPION
+form: LOOP
+voicegroup: vs_champion               # vanilla: trumpet 56, horn 60, strings 48, fingered bass 33, timpani 47, kit 0, squares 80/82, wave 81
+master_volume: 80
+song_priority: 1
+tempo: 92
+steps_per_beat: 4
+time_signature: [4, 4]
+seed: 19
+
+parts:
+  trumpet: {program: 56, channel: 0, volume: 108, pan: 6,   range: [A4, D6], gate: 0.92, humanize: {vel: 4}}
+  horn:    {program: 60, channel: 1, volume: 90,  pan: -14, octave: 3, range: [A3, A4], gate: 0.97}
+  strings: {program: 48, channel: 2, volume: 76,  pan: -26, octave: 4, range: [D4, D5], gate: 0.8}
+  bass:    {program: 33, channel: 3, volume: 110, pan: 0,   octave: 2, range: [D1, D3], gate: 0.7, role: bass}
+  timpani: {program: 47, channel: 4, volume: 100, pan: 16,  octave: 2, range: [D2, A2], gate: 1.0}
+  drums:   {program: 0,  channel: 5, volume: 86,  pan: 10,  role: drums, kit: {s: 38, crash: 57}}
+  ost:     {program: 80, channel: 6, volume: 40,  pan: 30,  octave: 4, range: [D4, D5], gate: 0.5, mono: true}
+  counter: {program: 82, channel: 7, volume: 38,  pan: -30, range: [A4, A5], gate: 0.8, mono: true}
+  wave:    {program: 81, channel: 8, volume: 46,  pan: -4,  octave: 2, range: [D2, D3], gate: 0.45, mono: true}
+
+progressions:
+  a:  "Dm | Bb | C | Dm | Dm | Dm | Bb | A"
+  a2: "Dm | Bb | C | Dm | Dm | Dm | Gm | A7"
+  b:  "Dm | Dm | A7 | A7 | Fm | Gm | Bb | A"
+
+phrases:
+  theme: |
+    r:12 D5:4 | F5:12 E5:4 | D5:6 C5:2 E5:8 | D5:12 r:4 |
+    A5:8 F5:2 D5:6 | F5:2 D5:10 A4:4 | F5:10 E5:6 | C#5:4 E5:12
+  theme2: |
+    r:12 D5:4 | F5:12 E5:4 | D5:6 C5:2 E5:8 | D5:12 r:4 |
+    A5:8 F5:2 D5:6 | F5:2 D5:10 A4:4 | F5:4 A5:4 G5:4 F5:4 | E5:8 C#5:8
+  climax: |
+    D5:10 F5:2 A5:4 | A5:4 D5:2 A4:2 F5:8 | A5:8 G5:2 E5:4 G5:2 | E5:6 F5:2 E5:8 |
+    F5:2 C6:6 Ab5:8 | G5:2 D6:6 Bb5:8 | F5:4 D6:8 Bb5:4 | A5:16
+  horn_a2: "D4:16 | D4:16 | E4:16 | F4:16 | F4:16 | A4:16 | G4:16 | E4:16"
+  horn_b: "F4:16 | A4:16 | G4:16 | E4:16 | Ab4:16 | Bb4:16 | D4:16 | C#4:16"
+  counter_a2: "A4:16 | Bb4:16 | G4:16 | A4:16 | A4:16 | F4:16 | G4:8 Bb4:8 | A4:8 C#5:8"
+  saw: "^1:1 ^1:1 ^2:1 ^1:1 ^3:1 ^1:1 ^2:1 ^1:1 ^1:1 ^1:1 ^2:1 ^1:1 ^3:1 ^2:1 ^1+:1 ^3:1"
+  drive: "^1:2 ^1:2 ^1+:2 ^1:2 ^1:2 ^1:2 ^1+:2 ^1:2"
+  wave8: "^1:2 r:2 ^1+:2 r:2 ^1:2 r:2 ^1+:2 r:2"
+  pound: "^1:2 ^1:2 r:6 ^1:2 r:4"
+  pound_b: "^1:4 r:4 ^1:2 ^1:2 r:4 | ^1:4 r:4 ^1:2 ^1:2 r:4 | ^1:4 r:4 ^1:2 ^1:2 r:4 | ^1:1 ^1:1 ^1:1 ^1:1 ^1:1 ^1:1 ^1:1 ^1:1 ^1:8 |
+           ^1:4 r:4 ^1:2 ^1:2 r:4 | ^1:4 r:4 ^1:2 ^1:2 r:4 | ^1:4 r:4 ^1:4 r:4 | ^1:4 r:4 ^1:1 ^1:1 ^1:1 ^1:1 ^1:4"
+
+grooves:
+  battle:
+    s: "....x.......x...|....x.......x.xx"
+  battle_crash:
+    crash: "X...............|................|................|................|................|................|................|................"
+    s: "....x.......x...|....x.......x.xx"
+  roll:
+    s: "....x...x.x.rrRR"
+  climax_sn:
+    crash: "................|................|................|................|X...............|X...............|................|................"
+    s: "....x.......x...|....x.......x...|....x.......x...|....x...x.x.xxxx|....x.......x...|....x.......x...|....x.......x...|....x...rrrrrrrr"
+
+sections:
+  intro:
+    bars: 2
+    chords: "Dm | A"
+    parts: {strings: saw, bass: drive, timpani: "^1:2 ^1:2 r:6 ^1:2 r:4 | ^1:1 ^1:1 ^1:1 ^1:1 ^1:1 ^1:1 ^1:1 ^1:1 ^1:8", wave: wave8, drums: roll}
+  a:
+    bars: 8
+    chords: a
+    fill: roll
+    parts: {trumpet: theme, horn: "D4:12 A3:4 | r:16 | r:16 | r:16 | r:16 | r:16 | r:16 | r:16", strings: saw, bass: drive, timpani: pound, drums: battle_crash, wave: wave8}
+  a2:
+    bars: 8
+    chords: a2
+    fill: roll
+    parts: {trumpet: theme2, horn: horn_a2, bass: drive, drums: battle, ost: saw, counter: counter_a2, wave: wave8}
+  b:
+    bars: 8
+    chords: b
+    parts: {trumpet: climax, horn: horn_b, bass: drive, timpani: pound_b, drums: climax_sn, ost: saw, wave: wave8}
+
+arrangement: [intro, a, a2, b]
+loop_start: a
