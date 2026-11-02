@@ -1,0 +1,30 @@
+name: smelter
+slot: torkoal
+brief: 'SMELTER: electronic droid voice: beeps, whistles and servo whirs. Coal-burning smelter droid.'
+kind: droid
+size: 0.4
+seed: 299
+layers:
+  # Coal-burning smelter droid: a furnace chuff of steam, a heavy grinding servo and two low
+  # warning beeps.
+  - type: noise
+    band: [[0, 900], [0.12, 500]]
+    q: 1.2
+    env: [[0, 0], [0.01, 0.8], [0.12, 0]]
+    gain: 0.5
+  - type: servo
+    at: 0.05
+    pitch: [[0, 70], [0.15, 150], [0.35, 110]]
+    harmonics: [1.0, 0.8, 0.6, 0.4, 0.3]
+    env: [[0, 0], [0.04, 0.8], [0.3, 0.6], [0.37, 0]]
+    grit: 0.9
+    drive: 2.5
+    gain: 0.7
+  - type: tone
+    at: 0.14
+    wave: pulse
+    width: 0.3
+    pitch: [[0, 520], [0.09, 520], [0.1, 390], [0.26, 390]]
+    env: [[0, 0], [0.005, 0.9], [0.085, 0.9], [0.095, 0.2], [0.105, 0.9], [0.25, 0.8], [0.27, 0]]
+    drive: 1.8
+    gain: 0.7

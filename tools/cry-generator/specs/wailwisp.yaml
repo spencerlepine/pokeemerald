@@ -1,0 +1,20 @@
+name: wailwisp
+slot: misdreavus
+brief: 'WAILWISP: creature call that fits its look and size. Screeching wisp.'
+kind: creature
+size: 0.21
+seed: 295
+layers:
+  # Screeching wisp: a thin, rising banshee screech with a fluttering shiver, fading into a
+  # ghostly sigh.
+  - type: voice
+    pitch: [[0, 700], [0.12, 1150], [0.35, 1050], [0.54, 650]]
+    source: {pulse: 0.7, saw: 0.5, pulse_width: 0.2, noise: 0.15}
+    vowels: [[0, i], [0.15, ee], [0.4, e], [0.54, u]]
+    env: [[0, 0], [0.02, 1], [0.35, 0.8], [0.55, 0]]
+    vibrato: {rate: 14, depth: 0.06}
+    growl: 0.15
+    growl_rate: 60
+    jitter: 0.02
+    drive: 2.0
+master: {rms: 0.32}

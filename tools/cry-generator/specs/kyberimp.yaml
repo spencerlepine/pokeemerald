@@ -1,0 +1,27 @@
+name: kyberimp
+slot: sableye
+brief: 'KYBERIMP: creature call that fits its look and size. Cave gremlin whose eyes are raw kyber crystals.'
+kind: creature
+size: 0.28
+seed: 297
+layers:
+  # Kyber-eyed cave gremlin: a sly, stepped cackle ("keh-heh-heh") and a glassy ring from its
+  # crystal eyes.
+  - type: voice
+    pitch: [[0, 560], [0.08, 680], [0.16, 620], [0.24, 720], [0.32, 560]]
+    pitch_step: 0.02
+    source: {saw: 0.7, pulse: 0.6, pulse_width: 0.2, noise: 0.12}
+    vowels: [[0, e], [0.32, ae]]
+    env: [[0, 0], [0.006, 1], [0.06, 0.7], [0.075, 0.1], [0.085, 1], [0.14, 0.7], [0.155, 0.1], [0.165, 1], [0.22, 0.7], [
+        0.235, 0.1], [0.245, 1], [0.32, 0.6], [0.33, 0]]
+    growl: 0.3
+    growl_rate: 50
+    jitter: 0.03
+    drive: 2.0
+  - type: tone
+    at: 0.3
+    wave: tri
+    pitch: [[0, 2400], [0.24, 2500]]
+    warble: {rate: 20, depth: 0.02}
+    env: [[0, 0], [0.005, 0.6], [0.2, 0.2], [0.25, 0]]
+    gain: 0.5
