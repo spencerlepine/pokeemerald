@@ -1,0 +1,77 @@
+<title>Dune UI Before and After</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400&display=swap">
+<style>
+/* Layout: one long reel of comparison rows, three game screens per row (v1, mockup, v2), sticky family index */
+:root {
+  --paper: #f6efd9; --panel: #ebe1c4; --ink: #2a3238; --muted: #6b6a5e;
+  --steel: #90b0c8; --rust: #b0653a; --gold: #c8961c; --line: #d6c9a3;
+  --display: "Chakra Petch", "Trebuchet MS", sans-serif;
+  --body: "IBM Plex Sans", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --paper: #1d2328; --panel: #262e34; --ink: #ece4cc; --muted: #a49e8a;
+  --steel: #90b0c8; --rust: #d98a5c; --gold: #f0c038; --line: #38434b; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --paper: #1d2328; --panel: #262e34; --ink: #ece4cc; --muted: #a49e8a;
+  --steel: #90b0c8; --rust: #d98a5c; --gold: #f0c038; --line: #38434b; color-scheme: dark }
+body { background: var(--paper); color: var(--ink); font: 15px/1.55 var(--body); }
+.wrap { max-width: 790px; margin: 0 auto; padding-block: 32px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+header h1 { font: 600 2.1rem/1.1 var(--display); letter-spacing: .01em; margin: 0 0 8px; text-wrap: balance; }
+header h1 em { font-style: normal; color: var(--rust); }
+header p { margin: 0 0 12px; max-width: 64ch; }
+.swatches { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 16px 0; font: 12px var(--mono); color: var(--muted); }
+.swatches span { display: inline-flex; align-items: center; gap: 6px; }
+.swatches i { width: 14px; height: 14px; border-radius: 2px; border: 1px solid var(--line); display: inline-block; }
+.kept { background: var(--panel); border-left: 3px solid var(--gold); padding: 12px 16px; margin: 20px 0; }
+.kept h2 { font: 600 .8rem var(--display); letter-spacing: .1em; text-transform: uppercase; margin: 0 0 6px; color: var(--muted); }
+.kept ul { margin: 0; padding-left: 18px; } .kept li { margin: 2px 0; }
+nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--paper); border-bottom: 1px solid var(--line);
+  display: flex; gap: 6px; overflow-x: auto; padding: 10px 0; scrollbar-width: thin; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--paper); }
+nav a { flex: none; font: 500 12px var(--body); color: var(--ink); text-decoration: none; padding: 4px 10px; border: 1px solid var(--line); border-radius: 3px; }
+nav a span { color: var(--muted); font-family: var(--mono); }
+nav a:hover, nav a:focus-visible { border-color: var(--rust); outline: none; }
+section { padding-top: 24px; scroll-margin-top: 56px; }
+section h2 { font: 600 1.3rem var(--display); margin: 0 0 6px; padding-bottom: 6px; border-bottom: 2px solid var(--steel); }
+article { padding: 14px 0; border-bottom: 1px solid var(--line); }
+article h3 { font: 500 .95rem var(--body); margin: 0 0 8px; text-transform: capitalize; }
+article h3 code { font: 12px var(--mono); color: var(--muted); text-transform: none; margin-right: 4px; }
+.trio { display: grid; grid-template-columns: repeat(3, 240px); gap: 12px; overflow-x: auto; padding-bottom: 4px; }
+figure { margin: 0; min-width: 0; }
+figure img, figure.none div { display: block; width: 240px; height: 160px; image-rendering: pixelated; background: #000; }
+figure.none div { background: var(--panel); color: var(--muted); display: grid; place-items: center; font: 12px var(--mono); }
+figcaption { font: 11px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
+figure:last-child figcaption { color: var(--rust); font-weight: 600; }
+@media (min-width: 780px) { .trio { overflow: visible; } }
+</style>
+
+<div class="wrap">
+<header>
+  <h1>Dune UI theme, <em>v1 / mockup / v2</em></h1>
+  <p>Every themed screen in the Star Wars Emerald build, captured three times: the vanilla look (v1), the approved Dune mockup, and the shipped palettes running in the ROM (v2). {{COUNT}} screens.</p>
+  <p>v2 is palette-only. Tiles, tilemaps and code paths are untouched, so every screen behaves exactly as before.</p>
+  <div class="swatches">
+    <span><i style="background:#f8f0d0"></i>paper #F8F0D0</span><span><i style="background:#d0a880"></i>sand #D0A880</span>
+    <span><i style="background:#c07040"></i>rust #C07040</span><span><i style="background:#90b0c8"></i>steel #90B0C8</span>
+    <span><i style="background:#283840"></i>steel dark #283840</span><span><i style="background:#f0c038"></i>cursor gold #F0C038</span>
+  </div>
+  <div class="kept">
+    <h2>Kept vanilla on purpose</h2>
+    <ul>
+      <li>Type chips and contest category labels (Dragon, Grass, Cool, Tough and so on).</li>
+      <li>Text colours, including red and green text the mockup had turned gold.</li>
+      <li>HP bars, gender colours, hearts and applause meters.</li>
+      <li>Creatures, items, maps, box wallpapers, mail, ribbons, the bag picture and pending-art icons.</li>
+      <li>Battle message box is grey, never brown.</li>
+      <li>Colour-coded game pieces: slot bet-line lamps, the roulette wheel and grid.</li>
+      <li>Condition screen stripes, which share palette slots with the contest colour circles.</li>
+    </ul>
+  </div>
+</header>
+<nav aria-label="Screen families">{{NAV}}</nav>
+{{SECTIONS}}
+</div>

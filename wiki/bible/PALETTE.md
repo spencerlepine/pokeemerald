@@ -102,6 +102,11 @@ recoloured: they are `PENDING_ART` rows for the owner to redraw. Box wallpapers,
 their textures for now. Mockups of every screen: `tools/ui-skin-generator/mockups/dune_v1/`
 (`mockup.py` regenerates them from `reference/v1/`).
 
+Shipped in the game on 2026-11-02 (`tools/ui-skin-generator/apply.py`, palette-only). Deviations from the mockups:
+text colours, type and contest-category chips, HP bars, gender colours and hearts stay vanilla everywhere; the
+condition-screen stripes stay vanilla (they share slots with the contest circles); colour-coded casino pieces stay.
+Side-by-side v1 / mockup / v2 shots: `tools/ui-skin-generator/after/v2/` and `gallery.py`.
+
 ## HUD and menus: Hyperspace Console (surfaces and text)
 
 Dark blue-grey menus instead of Emerald's white boxes. Greys lean slightly blue so they read as cockpit metal.

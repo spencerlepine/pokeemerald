@@ -1,6 +1,6 @@
 # ui-skin-generator
 
-**Status:** TODO. Not built yet; this file marks the scope.
+**Status:** the Dune palette pass is done (see README.md). Redrawing tiles and icons below is still TODO.
 
 Tile-based screens: text windows, map popups, region map, battle HUD, menus, Datapad, comlink, PC, trainer card, minigames, Grand Arena screens.
 
