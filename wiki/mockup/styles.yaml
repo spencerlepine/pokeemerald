@@ -1,0 +1,237 @@
+# Phase 2 style catalogue: flat colours and simple shapes for every terrain cell, building and prop.
+# Read by tools/mockup. Phase 1 (wiki/world) is never changed by this layer.
+#
+# terrain: one colour set per planet (default first). Keys are the blockout terrain names.
+# nature: how a 'T' cell is drawn on that planet (tree | pine | rock | ice | fungus | coral).
+# material: the default building colours on that planet (wall, roof, trim).
+# shapes: one entry per art id. `kind` picks the drawing routine:
+#   building: box (flat roof) | dome | pitched | stepped | tower | hall | dish | platform
+#   prop: tree | pine | rock | pole | stack | tank | craft | bones | slab | disc | wreck | plant | fungus | stones
+# Colours are hex. Anything not listed falls back to `default_building` / `default_prop` in the planet's material.
+
+terrain:
+  default:   {ground: "#cfc6b4", path: "#e6dcc6", wild: "#a9b07a", water: "#6f9cc4", bridge: "#b49a74", cliff: "#8a7d6a",
+              nature: "#6d8a52", ladder: "#9a7d58", ledge: "#b3a68c", floor: "#d8ccb4", wall: "#6e6254", blocked: "#9a9a9a"}
+  TATOOINE:  {ground: "#dcc48c", path: "#ecd9ae", wild: "#c4ad72", water: "#cfe3e6", cliff: "#b07c4e", nature: "#b8875a",
+              ledge: "#c9a774", bridge: "#a98a62", nature_kind: rock}
+  KASHYYYK:  {ground: "#7fa05c", path: "#b39468", wild: "#5d8f45", water: "#4f86a8", cliff: "#7a6b5a", nature: "#2f5e2a",
+              bridge: "#8c6a44", nature_kind: tree}
+  SULLUST:   {ground: "#8a7e78", path: "#a99a8e", wild: "#6f6862", water: "#4e6f86", cliff: "#5a5052", nature: "#4a4248",
+              nature_kind: rock}
+  MUSTAFAR:  {ground: "#5e4a42", path: "#7e6252", wild: "#6e5044", water: "#e8742c", cliff: "#463634", nature: "#2e2a30",
+              nature_kind: rock}
+  ENDOR:     {ground: "#7e8f52", path: "#9c7f56", wild: "#4f7a40", water: "#4d7c96", cliff: "#6b6252", nature: "#3d5228",
+              bridge: "#8a6440", nature_kind: tree}
+  BESPIN:    {ground: "#e8d8c8", path: "#f4ebe0", wild: "#d8c2ae", water: "#f2c4a4", cliff: "#b8a090", nature: "#d0b4a0",
+              bridge: "#cbb8a8", nature_kind: cloud}
+  JEDHA:     {ground: "#c8b494", path: "#ddcdb2", wild: "#b29f78", water: "#6f97ac", cliff: "#8c7860", nature: "#9a8268",
+              nature_kind: rock}
+  YAVIN 4:   {ground: "#6f9a5c", path: "#a68f64", wild: "#4c8446", water: "#4f8a8c", cliff: "#6e6a56", nature: "#285c32",
+              nature_kind: tree}
+  HOTH:      {ground: "#eef2f6", path: "#d6dfe8", wild: "#dfe7f2", water: "#a8c8e2", cliff: "#9cb4cc", nature: "#bfd4e8",
+              nature_kind: ice}
+  DAGOBAH:   {ground: "#5f6e50", path: "#787154", wild: "#4a6440", water: "#4f7468", cliff: "#525444", nature: "#2d4128",
+              bridge: "#6a5a3e", nature_kind: tree}
+  KAMINO:    {ground: "#b4b9c3", path: "#c8cdd4", wild: "#969fab", water: "#3c506e", cliff: "#78808c", nature: "#646e7a",
+              bridge: "#d2d7e1", nature_kind: rock}
+  ILUM:      {ground: "#e6ebf5", path: "#cdd8ea", wild: "#d6def0", water: "#9cbfe0", cliff: "#8ea4c6", nature: "#b4c8e6",
+              nature_kind: ice}
+  GRAND ARENA: {ground: "#c8c3a0", path: "#e1d7b4", wild: "#78a05a", water: "#508cbe", cliff: "#968264", nature: "#467846",
+              nature_kind: tree}
+  FELUCIA:   {ground: "#c896be", path: "#dcbeaa", wild: "#b464aa", water: "#5a96a0", cliff: "#825a78", nature: "#963c8c",
+              nature_kind: fungus}
+  TYTHON:    {ground: "#78a064", path: "#b4aa82", wild: "#5a8c50", water: "#508cb4", cliff: "#828270", nature: "#3c643c",
+              nature_kind: tree}
+  ATOLLON:   {ground: "#aa9678", path: "#c3b496", wild: "#968264", water: "#5a82aa", cliff: "#786450", nature: "#786450",
+              nature_kind: rock}
+  MORTIS:    {ground: "#9696b4", path: "#b4b4cd", wild: "#7878a0", water: "#6e6eaa", cliff: "#78708c", nature: "#5a5078",
+              nature_kind: rock}
+  ASTEROID FIELD: {ground: "#78736e", path: "#96918c", wild: "#6a6560", water: "#14142a", cliff: "#5f5a55", nature: "#504b46",
+              nature_kind: rock}
+  DEATH STAR: {floor: "#9aa0a8", wall: "#3c4048"}
+  SHARED:    {}
+
+material:
+  default:   {wall: "#c8bca8", roof: "#a89880", trim: "#6e6254"}
+  TATOOINE:  {wall: "#e2cba0", roof: "#d4b482", trim: "#8c6a46"}
+  KASHYYYK:  {wall: "#9c7a52", roof: "#6e5236", trim: "#4a3624"}
+  SULLUST:   {wall: "#8c8890", roof: "#5e5a64", trim: "#3c3a42"}
+  MUSTAFAR:  {wall: "#4a4650", roof: "#2e2c34", trim: "#e8742c"}
+  ENDOR:     {wall: "#9a7a50", roof: "#7a8a4a", trim: "#4e3a24"}
+  BESPIN:    {wall: "#f0e4d8", roof: "#d89a7a", trim: "#9a7a6a"}
+  JEDHA:     {wall: "#d2c2a4", roof: "#a8906c", trim: "#6e5a44"}
+  YAVIN 4:   {wall: "#8c8c74", roof: "#6a6e5a", trim: "#3e4234"}
+  HOTH:      {wall: "#dfe6ee", roof: "#b8c6d6", trim: "#6e7e92"}
+  DAGOBAH:   {wall: "#7a6a4a", roof: "#5a5a3a", trim: "#3a3424"}
+  KAMINO:    {wall: "#e6e9ef", roof: "#c4cbd6", trim: "#7a8494"}
+  ILUM:      {wall: "#d6dcea", roof: "#9eb0cc", trim: "#5a6a8a"}
+  GRAND ARENA: {wall: "#e6ddc0", roof: "#c0a46a", trim: "#7a6440"}
+  FELUCIA:   {wall: "#dcc8b4", roof: "#b46496", trim: "#6e3c5a"}
+  DEATH STAR: {wall: "#6e747e", roof: "#4a4e56", trim: "#2a2c30"}
+
+roles:      # people placeholders: still pink-family figures, told apart by role
+  story:   {body: "#ff4fbf", ring: "#ffd700"}
+  trainer: {body: "#ff4fbf", ring: "#c0202a"}
+  npc:     {body: "#ff8fd6", ring: "#8a2a6a"}
+  townsfolk: {body: "#ff8fd6", ring: "#8a2a6a"}
+  item:    {ball: "#e8384f"}
+  berry:   {ball: "#7a3fb8"}
+  object:  {ball: "#a0a0a0"}
+
+shapes:
+  # ---------------------------------------------------------------- shared
+  art:shared:bacta-center:        {kind: dome, wall: "#f2f4f6", roof: "#5fb4d8", trim: "#2a6e96", label: Bacta}
+  art:shared:supply-depot:        {kind: box, wall: "#c8ccd2", roof: "#4f7fbf", trim: "#2a4a7a", label: Depot}
+  art:shared:arena:               {kind: hall, wall: "#d8d0c0", roof: "#a03030", trim: "#5a2020", label: Arena}
+  art:shared:landing-pad:         {kind: disc, fill: "#9a9ea6", ring: "#f2c230", mark: H}
+  art:shared:cargo-crates:        {kind: stack, fill: "#b08a5a", trim: "#6e5232"}
+  art:shared:fuel-tanks:          {kind: tank, fill: "#d8dcdf", trim: "#7a8088"}
+  art:shared:parked-landspeeder:  {kind: craft, fill: "#d8cfb4", trim: "#7a6a4a", form: speeder}
+  art:shared:escape-pod:          {kind: craft, fill: "#d8d8d0", trim: "#6a6a6a", form: pod}
+  art:shared:gonk-droid:          {kind: stack, fill: "#7a7a72", trim: "#3a3a36", count: 1}
+  art:shared:holo-sign:           {kind: pole, fill: "#5fd0ff", trim: "#2a5a7a"}
+  art:shared:bacta-center-interior: {kind: slab, fill: "#e8f2f6", trim: "#5fb4d8"}
+  art:shared:supply-depot-interior: {kind: slab, fill: "#d8d0bc", trim: "#4f7fbf"}
+  # ---------------------------------------------------------------- tatooine
+  art:tatooine:homestead-dome:    {kind: dome}
+  art:tatooine:sunken-courtyard-home: {kind: dish, roof: "#c8a676"}
+  art:tatooine:lars-family-home:  {kind: dish, roof: "#c8a676", label: Lars}
+  art:tatooine:prof-korr-s-lab:   {kind: box, roof: "#bfc4c8", label: Lab}
+  art:tatooine:academy:           {kind: hall, roof: "#b8956a", label: Academy}
+  art:tatooine:cantina:           {kind: dome, roof: "#cdb088", label: Cantina}
+  art:tatooine:docking-bay:       {kind: dish, wall: "#d2b488", roof: "#c4a272", label: Bay}
+  art:tatooine:farm-co-op:        {kind: box, roof: "#c09a68"}
+  art:tatooine:house-organa-office-tower: {kind: tower, wall: "#e8e2d6", roof: "#9aa6b8", label: Organa}
+  art:tatooine:jabbas-palace:     {kind: hall, wall: "#c4a074", roof: "#a07a50", label: Jabba}
+  art:tatooine:mos-entha-arena:   {kind: hall, roof: "#b08050", label: Arena}
+  art:tatooine:podrace-arena:     {kind: hall, roof: "#c8b088", label: Podrace}
+  art:tatooine:power-station:     {kind: box, roof: "#9a9a92", trim: "#5a5a52", label: Power}
+  art:tatooine:sabacc-den:        {kind: dome, roof: "#b88e66"}
+  art:tatooine:spacer-museum:     {kind: hall, roof: "#c4ccd2", label: Museum}
+  art:tatooine:watto-s-junk-shop: {kind: dome, roof: "#a88a64", label: Watto}
+  art:tatooine:adobe-wall:        {kind: slab, fill: "#d8bc8c", trim: "#8c6a46"}
+  art:tatooine:bantha-skeleton:   {kind: bones, fill: "#f2ead8"}
+  art:tatooine:krayt-bones:       {kind: bones, fill: "#f4eee0"}
+  art:tatooine:dead-tree:         {kind: tree, fill: "#8a6a4a", trim: "#5a4430", form: bare}
+  art:tatooine:dewback-trough:    {kind: slab, fill: "#a88a62", trim: "#6e5236"}
+  art:tatooine:dune-ripple-ledges: {kind: slab, fill: "#cfb27a", trim: "#a88a52"}
+  art:tatooine:freighter-parked:  {kind: craft, fill: "#c8c4bc", trim: "#6a665e", form: freighter}
+  art:tatooine:market-stall:      {kind: slab, fill: "#c0583a", trim: "#7a3a26", form: awning}
+  art:tatooine:moisture-vaporator: {kind: pole, fill: "#d4d8dc", trim: "#6e747a"}
+  art:tatooine:pod-race-junk:     {kind: wreck, fill: "#8a8a86"}
+  art:tatooine:podrace-course-markers: {kind: pole, fill: "#e84a2a", trim: "#7a2a1a"}
+  art:tatooine:podracer-on-display: {kind: craft, fill: "#d8a040", trim: "#7a5a2a", form: podracer}
+  art:tatooine:power-converters:  {kind: stack, fill: "#9aa0a6", trim: "#4a5056"}
+  art:tatooine:rock-spire:        {kind: rock, fill: "#b07c4e", tall: true}
+  art:tatooine:sail-barge-wreck:  {kind: wreck, fill: "#8c7a62"}
+  art:tatooine:sandstone-boulder: {kind: rock, fill: "#c49464"}
+  art:tatooine:sarlacc-pit:       {kind: disc, fill: "#5a3e24", ring: "#c8a070", mark: pit}
+  art:tatooine:tusken-camp:       {kind: stones, fill: "#a88a6a", trim: "#6e5236", form: tents}
+  # ---------------------------------------------------------------- kashyyyk
+  art:kashyyyk:wookiee-hut:       {kind: pitched}
+  art:kashyyyk:arena-hall:        {kind: hall, roof: "#5a4028", label: Arena}
+  art:kashyyyk:wroshyr-tree:      {kind: tree, fill: "#2f6a2a", trim: "#5a3e24", big: true}
+  art:kashyyyk:fern-clump:        {kind: plant, fill: "#4f9a3c"}
+  art:kashyyyk:root-arch:         {kind: wreck, fill: "#6a4a2c"}
+  art:kashyyyk:beach-rocks:       {kind: rock, fill: "#8a8478"}
+  art:kashyyyk:bowcaster-rack:    {kind: slab, fill: "#7a5a36", trim: "#3a2a1a"}
+  art:kashyyyk:catamaran-dock:    {kind: slab, fill: "#9c7a52", trim: "#5a4028", form: dock}
+  # ---------------------------------------------------------------- sullust
+  art:sullust:sullustan-home:     {kind: dome}
+  art:sullust:ash-farm:           {kind: box, roof: "#6e6a5a"}
+  art:sullust:hot-spring-bathhouse: {kind: dome, roof: "#6a8a9a"}
+  art:sullust:sabine-s-arena:     {kind: hall, roof: "#c84a2a", label: Arena}
+  art:sullust:ash-greenhouse:     {kind: slab, fill: "#9ac0a0", trim: "#4a6a52"}
+  art:sullust:basalt-column:      {kind: rock, fill: "#3e3a40", tall: true}
+  art:sullust:fungus-stalks:      {kind: fungus, fill: "#a08acd", trim: "#e2d8f0"}
+  art:sullust:lava-flow:          {kind: disc, fill: "#e8742c", ring: "#ffcc5a"}
+  art:sullust:steam-vent:         {kind: disc, fill: "#5a5052", ring: "#e6e6e6"}
+  # ---------------------------------------------------------------- mustafar
+  art:mustafar:fortress-halls:    {kind: tower, wall: "#2e2c34", roof: "#1c1a20", trim: "#e8742c", label: Fortress}
+  art:mustafar:mining-collector:  {kind: tank, fill: "#4a4650", trim: "#e8742c"}
+  art:mustafar:obsidian-spire:    {kind: rock, fill: "#1e1c22", tall: true}
+  # ---------------------------------------------------------------- endor
+  art:endor:ewok-hut:             {kind: dome, wall: "#8a6a42", roof: "#a08a5a", trim: "#4e3a24"}
+  art:endor:imperial-bunker:      {kind: box, wall: "#8a8e92", roof: "#5e6266", trim: "#2e3236", label: Bunker}
+  art:endor:redwood-trunk:        {kind: tree, fill: "#3d5a28", trim: "#6a4024", big: true}
+  art:endor:at-st-wreck:          {kind: wreck, fill: "#7a7e82"}
+  art:endor:crashed-speeder-bike: {kind: wreck, fill: "#6e7276"}
+  art:endor:ewok-glider:          {kind: craft, fill: "#b89a6a", trim: "#5a4428", form: glider}
+  art:endor:fallen-log:           {kind: slab, fill: "#6a4a2c", trim: "#3e2a18", form: log}
+  art:endor:log-trap:             {kind: slab, fill: "#7a5634", trim: "#3e2a18", form: log}
+  art:endor:totem-and-drum:       {kind: pole, fill: "#9a6a3a", trim: "#4e3a24"}
+  # ---------------------------------------------------------------- bespin
+  art:bespin:cloud-city-tower:    {kind: tower, wall: "#f0e4d8", roof: "#d89a7a"}
+  art:bespin:department-store:    {kind: hall, wall: "#f4ece0", roof: "#c88a6a", label: Galleria}
+  art:bespin:landing-platform:    {kind: platform, wall: "#e0d0c0", roof: "#c0a090", label: Pad}
+  art:bespin:promenade-railing:   {kind: pole, fill: "#e8dccc", trim: "#9a7a6a"}
+  art:bespin:carbon-freezing-chamber: {kind: disc, fill: "#3a3e46", ring: "#e8742c"}
+  # ---------------------------------------------------------------- jedha
+  art:jedha:temple-of-the-kyber:  {kind: stepped, wall: "#d2c2a4", roof: "#8a7a64", label: Temple}
+  art:jedha:prayer-candles:       {kind: pole, fill: "#f2e0a0", trim: "#c08a3a"}
+  art:jedha:toppled-statue:       {kind: wreck, fill: "#b4a488"}
+  # ---------------------------------------------------------------- yavin 4
+  art:yavin-4:massassi-temple:    {kind: stepped, wall: "#9a9478", roof: "#7a745a", label: Massassi}
+  art:yavin-4:rebel-hangar:       {kind: platform, wall: "#7a7e6a", roof: "#5a5e4e", label: Hangar}
+  art:yavin-4:x-wing-parked:      {kind: craft, fill: "#e6e6e2", trim: "#c0302a", form: xwing}
+  art:yavin-4:massassi-jungle-tree: {kind: tree, fill: "#2f6e3a", trim: "#5a4428", big: true}
+  art:yavin-4:jungle-vines:       {kind: plant, fill: "#3e8a3e"}
+  # ---------------------------------------------------------------- hoth
+  art:hoth:echo-base-hangar-door: {kind: platform, wall: "#dfe6ee", roof: "#9cb4cc", label: Outpost}
+  art:hoth:tauntaun-shelter:      {kind: dome, wall: "#d6dde6", roof: "#a8b6c6"}
+  art:hoth:ice-stalagmites:       {kind: rock, fill: "#cfe2f2", tall: true}
+  art:hoth:snowspeeder:           {kind: craft, fill: "#e6e2d8", trim: "#d8642a", form: speeder}
+  # ---------------------------------------------------------------- dagobah
+  art:dagobah:yoda-s-hut:         {kind: dome, wall: "#6e5e40", roof: "#5a6a3a"}
+  art:dagobah:gnarltree:          {kind: tree, fill: "#3a5230", trim: "#4a3a26", form: gnarl}
+  art:dagobah:hanging-moss:       {kind: plant, fill: "#6a7a4a"}
+  art:dagobah:swamp-reeds:        {kind: plant, fill: "#5a7a3e"}
+  art:dagobah:sunken-x-wing:      {kind: craft, fill: "#b8b8a8", trim: "#5a5a4a", form: xwing}
+  art:dagobah:cave-of-evil-mouth: {kind: disc, fill: "#1e2418", ring: "#3a4a2e", mark: pit}
+  # ---------------------------------------------------------------- kamino
+  art:kamino:stilt-dome:          {kind: dome}
+  art:kamino:cloning-hall:        {kind: hall, wall: "#eef0f4", roof: "#c4cbd6", label: Cloning}
+  art:kamino:storm-sea:           {kind: disc, fill: "#4e6488", ring: "#dfe6ee"}
+  art:kamino:stilt-walkway:       {kind: slab, fill: "#d2d7e1", trim: "#7a8494"}
+  # ---------------------------------------------------------------- ilum
+  art:ilum:jedi-temple-gate:      {kind: stepped, wall: "#c8d0e0", roof: "#7a8cb0", label: Temple}
+  art:ilum:kyber-crystal-outcrop: {kind: rock, fill: "#7fd6ff", tall: true}
+  art:ilum:snow-pine:             {kind: pine, fill: "#3e6a5a", trim: "#f0f4f8"}
+  # ---------------------------------------------------------------- post-game
+  art:grand-arena:arena-facilities: {kind: hall, wall: "#e6ddc0", roof: "#c0a46a"}
+  art:grand-arena:asteroid-spire:   {kind: rock, fill: "#6a6560", tall: true}
+  art:grand-arena:tython-standing-stones: {kind: stones, fill: "#9a9a8a"}
+  art:grand-arena:wellspring-pool:  {kind: disc, fill: "#6ad0d0", ring: "#e6fff8"}
+  art:felucia:giant-fungus:       {kind: fungus, fill: "#c84aa8", trim: "#f0c8e8", big: true}
+  art:felucia:spore-pod-plants:   {kind: plant, fill: "#e07ac8"}
+  art:felucia:reserve-gate:       {kind: box, roof: "#9a5a8a", label: Gate}
+  # ---------------------------------------------------------------- new props in new rooms (art:new:...)
+  art:new:starnav-console:        {kind: slab, fill: "#3a4a5a", trim: "#5fd0ff"}
+  art:new:ship-cockpit:           {kind: slab, fill: "#c8ccd2", trim: "#3a4a5a"}
+  art:new:dejarik-table:          {kind: disc, fill: "#6a5a4a", ring: "#5fd0ff"}
+  art:new:cantina-bar:            {kind: disc, fill: "#8a6a4a", ring: "#3e2a18"}
+  art:new:cantina-booth:          {kind: slab, fill: "#a0784e", trim: "#5a4028"}
+  art:new:band-stage:             {kind: slab, fill: "#6a4a6a", trim: "#d8a0e0"}
+  art:new:imperial-shuttle:       {kind: craft, fill: "#e0e2e6", trim: "#4a4e56", form: shuttle}
+  art:new:tie-rack:               {kind: craft, fill: "#4a4e56", trim: "#1e2024", form: tie}
+  art:new:sail-barge:             {kind: craft, fill: "#b49a72", trim: "#6a5434", form: freighter}
+  art:new:growth-pods:            {kind: tank, fill: "#9adfe8", trim: "#e6f6f8"}
+  art:new:blast-door:             {kind: slab, fill: "#5a5e66", trim: "#e8c230"}
+  art:new:control-console:        {kind: slab, fill: "#4a4e56", trim: "#e84a3a"}
+  art:new:carbonite-block:        {kind: slab, fill: "#3a3e46", trim: "#8a8e96"}
+  art:new:podracer-engine:        {kind: tank, fill: "#d8a040", trim: "#7a5a2a"}
+  art:new:power-converters:       {kind: stack, fill: "#9aa0a6", trim: "#4a5056"}
+  art:new:jabba-dais:             {kind: slab, fill: "#8a6a42", trim: "#4a3420"}
+  art:new:trapdoor-grate:         {kind: slab, fill: "#4a4644", trim: "#2a2826", form: grate}
+  art:new:death-star-viewport:    {kind: slab, fill: "#14142a", trim: "#8a8e96"}
+  art:new:lava-viewport:          {kind: slab, fill: "#e8742c", trim: "#2e2c34"}
+  art:new:grandstand:             {kind: slab, fill: "#c8b088", trim: "#7a6440", form: steps}
+  art:new:scanner-table:          {kind: slab, fill: "#4a5a6a", trim: "#5fd0ff"}
+  art:new:old-chest:              {kind: slab, fill: "#8a6a42", trim: "#4a3420"}
+  art:new:work-bench:             {kind: slab, fill: "#9a7a52", trim: "#5a4028"}
+  art:new:bunks:                  {kind: slab, fill: "#7a8a6a", trim: "#3a4a2a"}
+  art:new:heater:                 {kind: tank, fill: "#c84a2a", trim: "#5a2010"}
+  art:new:tauntaun-stall:         {kind: slab, fill: "#b8a080", trim: "#6a5434"}
+  art:new:wookiee-bed:            {kind: slab, fill: "#7a5a36", trim: "#c8b088"}
+  art:new:wookiee-throne:         {kind: slab, fill: "#5a3e24", trim: "#c8a070"}
+  art:new:hideout-pc:             {kind: slab, fill: "#4a5a6a", trim: "#5fd0ff"}
