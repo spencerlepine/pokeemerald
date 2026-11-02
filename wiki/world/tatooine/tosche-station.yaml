@@ -5,51 +5,55 @@ kind: town
 replaces: OldaleTown
 status: BLOCKOUT
 art_status: pending-final-art
+pos: [4, 94]
 story: Crossroads trading post round the Tosche power station, where farm kids buy power converters. First Bacta Center and Supply Depot. Roads north, south and west.
-notes: 'tosche-station (town, 30x26): crossroads trading post. Power station with stacks and tanks, first bacta center and supply depot, a few homes, power converters
-  stacked outside · bordered by rock and scrub · have all.'
-pos: [9, 96]
+notes: 'tosche-station (town, 28x24): crossroads trading post: the north-south road between Route 103 and Route 101, the west road from Route 102, the power station
+  and the converter dealer on the north, Bacta Center, depot and the station hand''s home on the south, converters and a fuel tank stacked by the station.'
 grid: |
-  TTTTTTTTTTTTTT::TTTTTTTTTTTTTT
-  TTTTTTTTTTTTTT::TTTTTTTTTTTTTT
-  TTTTTTTTT.....::...TTTTTTTTTTT
-  TTTTTTTTT.....::........TTTTTT
-  TTTTT.........::........T.TTTT
-  TTTTT.........::........TTTTTT
-  TTTTT.........::..........TTTT
-  TTTTT.........::....:......TTT
-  TTTT...:......::....:......TTT
-  TTT....:......::....:......TTT
-  TTT....:..:::::::::::.......TT
-  TTTT...:..::::::::::.........T
-  ::::::::::::::::::::..........
-  ::::::::::::::::::::..........
-  TT........::::::::::..........
-  T.........::::::::::..........
-  T.............::............TT
-  TT............::...........TTT
-  TTTT..........::..........TTTT
-  TTTTTT:.......::.....:....TTTT
-  TTTTTT::::::::::::::::...TTTTT
-  TTTTTT........::........TTTTTT
-  TTTTTTT.......::.......TTTTTTT
-  TTTTTTTT..TT..::.......TTTTTTT
-  TTTTTTTTTTTTTT::.....TTTTTTTTT
-  TTTTTTTTTTTTTT::.TTTTTTTTTTTTT
+  TTTTTTTTTTTTT::TTTTTTTTTTTTT
+  TTTTTTTTTTTTT::TTTTTTTTTTTTT
+  T............::............T
+  T............::............T
+  T............::............T
+  T............::............T
+  T............::............T
+  T............::............T
+  T............::............T
+  T............::............T
+  T............::............T
+  :::::::::::::::::::::::::..T
+  :::::::::::::::::::::::::..T
+  T............::............T
+  T............::............T
+  T............::............T
+  T............::............T
+  T............::............T
+  T............::............T
+  T............::............T
+  T............::............T
+  T............::............T
+  TTTTTTTTTTTTT::TTTTTTTTTTTTT
+  TTTTTTTTTTTTT::TTTTTTTTTTTTT
 exits:
 - edge: north
-  cells: [14, 15]
+  cells: [13, 14]
   to: route-103
 - edge: south
-  cells: [14, 15]
+  cells: [13, 14]
   to: route-101
 - edge: west
-  cells: [12, 13]
+  cells: [11, 12]
   to: route-102
 buildings:
+- name: Converter dealer's home
+  art: art:tatooine:homestead-dome
+  at: [4, 4]
+  size: [5, 4]
+  door: 2
+  to: tosche-station-house-1
 - name: Tosche power station
   art: art:tatooine:power-station
-  at: [18, 3]
+  at: [17, 3]
   size: [6, 4]
   door: 2
   to: tosche-station-power-station
@@ -61,79 +65,70 @@ buildings:
   to: tosche-station-bacta-center-1f
 - name: Supply Depot
   art: art:shared:supply-depot
-  at: [20, 15]
+  at: [17, 15]
   size: [4, 4]
   door: 1
   to: tosche-station-supply-depot
-- name: Converter dealer's home
-  art: art:tatooine:homestead-dome
-  at: [5, 4]
-  size: [5, 4]
-  door: 2
-  to: tosche-station-house-1
 - name: Station hand's home
   art: art:tatooine:homestead-dome
-  at: [18, 20]
+  at: [22, 15]
   size: [5, 4]
   door: 2
   to: tosche-station-house-2
 props:
 - name: Power converters
   art: art:tatooine:power-converters
+  at: [24, 3]
+  size: [1, 1]
+- name: Power converters
+  art: art:tatooine:power-converters
   at: [25, 4]
   size: [1, 1]
 - name: Power converters
   art: art:tatooine:power-converters
-  at: [25, 6]
-  size: [1, 1]
-- name: Power converters
-  art: art:tatooine:power-converters
-  at: [26, 8]
-  size: [1, 1]
-- name: Power converters
-  art: art:tatooine:power-converters
-  at: [17, 8]
+  at: [24, 6]
   size: [1, 1]
 - name: Fuel tanks
   art: art:shared:fuel-tanks
-  at: [24, 9]
+  at: [25, 7]
   size: [2, 2]
 - name: Market stall
   art: art:tatooine:market-stall
-  at: [10, 7]
+  at: [9, 8]
   size: [2, 2]
 - name: Parked landspeeder
   art: art:shared:parked-landspeeder
-  at: [17, 10]
+  at: [16, 9]
   size: [2, 1]
 - name: Vaporator
   art: art:tatooine:moisture-vaporator
-  at: [3, 9]
+  at: [1, 20]
   size: [1, 2]
 - name: Gonk droid
   art: art:shared:gonk-droid
-  at: [19, 13]
+  at: [20, 8]
   size: [1, 1]
 people:
 - name: Station girl
-  at: [22, 12]
+  at: [21, 10]
   role: npc
 - name: Depot clerk on a break
-  at: [23, 20]
+  at: [20, 20]
   role: npc
 - name: Spacer who walks in circles
-  at: [9, 11]
+  at: [8, 14]
   role: npc
 - name: Rival (first meeting)
-  at: [15, 23]
+  at: [15, 20]
   role: story
 - name: Converter mechanic
   at: [22, 8]
   role: npc
 signs:
 - name: Tosche Station holo-sign
-  at: [12, 9]
+  at: [11, 13]
 - name: Power station sign
-  at: [17, 7]
+  at: [16, 8]
 warps: []
-todo: ['New interior: the power station (converters, a mechanic who trades parts).']
+travel: []
+todo: ['New interior: the power station (converters, a mechanic who trades parts).', 'Compact town (template kachirho): was 30x26.']

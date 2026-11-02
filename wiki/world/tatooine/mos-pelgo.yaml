@@ -8,7 +8,7 @@ art_status: pending-final-art
 story: The family's freighter lands at this tiny moisture farm. The player's homestead, the Korr family's home and Prof. Korr's lab. Route 101 leaves north.
 notes: 'mos-pelgo (town, 20x20): the starting moisture farm. Player''s homestead dome, Korr family home, Prof. Korr''s lab with a dish, the family freighter on a
   pad, vaporators · bordered by dune ridges and rock · unique: the freighter is a landed ship, wedge-shaped, needs the hull primitive. Have: domes, lab, pad, vaporator.'
-pos: [14, 142]
+pos: [8, 138]
 grid: |
   TTTTTTTTTT::TTTTTTTT
   TT........::......TT

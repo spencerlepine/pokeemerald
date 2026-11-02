@@ -3336,15 +3336,13 @@ route-114,SULLUST,route,Route114,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
 route-114,SULLUST,route,Route114,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
 route-114,SULLUST,route,Route114,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 route-114,SULLUST,route,Route114,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
-anchorhead,TATOOINE,town,VerdanturfTown,BLOCKOUT,area,ANCHORHEAD,34x26,,,pending-final-art,greybox terrain
-anchorhead,TATOOINE,town,VerdanturfTown,BLOCKOUT,building,Farm co-op (Showcase hall),6x4,art:tatooine:farm-co-op,yes,pending-final-art,greybox piece
+anchorhead,TATOOINE,town,VerdanturfTown,BLOCKOUT,area,ANCHORHEAD,28x22,,,pending-final-art,greybox terrain
 anchorhead,TATOOINE,town,VerdanturfTown,BLOCKOUT,building,Bacta Center,5x4,art:shared:bacta-center,yes,pending-final-art,greybox piece
+anchorhead,TATOOINE,town,VerdanturfTown,BLOCKOUT,building,Farm co-op (Showcase hall),6x4,art:tatooine:farm-co-op,yes,pending-final-art,greybox piece
 anchorhead,TATOOINE,town,VerdanturfTown,BLOCKOUT,building,Supply Depot,4x4,art:shared:supply-depot,yes,pending-final-art,greybox piece
 anchorhead,TATOOINE,town,VerdanturfTown,BLOCKOUT,building,Camie's family home,5x4,art:tatooine:homestead-dome,yes,pending-final-art,greybox piece
 anchorhead,TATOOINE,town,VerdanturfTown,BLOCKOUT,building,Companion rater's home,5x4,art:tatooine:homestead-dome,yes,pending-final-art,greybox piece
 anchorhead,TATOOINE,town,VerdanturfTown,BLOCKOUT,building,Old farmer's home,5x4,art:tatooine:homestead-dome,yes,pending-final-art,greybox piece
-anchorhead,TATOOINE,town,VerdanturfTown,BLOCKOUT,prop,Vaporator,1x2,art:tatooine:moisture-vaporator,yes,pending-final-art,greybox piece
-anchorhead,TATOOINE,town,VerdanturfTown,BLOCKOUT,prop,Vaporator,1x2,art:tatooine:moisture-vaporator,yes,pending-final-art,greybox piece
 anchorhead,TATOOINE,town,VerdanturfTown,BLOCKOUT,prop,Vaporator,1x2,art:tatooine:moisture-vaporator,yes,pending-final-art,greybox piece
 anchorhead,TATOOINE,town,VerdanturfTown,BLOCKOUT,prop,Vaporator,1x2,art:tatooine:moisture-vaporator,yes,pending-final-art,greybox piece
 anchorhead,TATOOINE,town,VerdanturfTown,BLOCKOUT,prop,Vaporator,1x2,art:tatooine:moisture-vaporator,yes,pending-final-art,greybox piece
@@ -4879,13 +4877,12 @@ route-117,TATOOINE,route,Route117,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER,
 route-117,TATOOINE,route,Route117,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
 route-117,TATOOINE,route,Route117,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
 route-117,TATOOINE,route,Route117,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
-tosche-station,TATOOINE,town,OldaleTown,BLOCKOUT,area,TOSCHE STATION,30x26,,,pending-final-art,greybox terrain
+tosche-station,TATOOINE,town,OldaleTown,BLOCKOUT,area,TOSCHE STATION,28x24,,,pending-final-art,greybox terrain
+tosche-station,TATOOINE,town,OldaleTown,BLOCKOUT,building,Converter dealer's home,5x4,art:tatooine:homestead-dome,yes,pending-final-art,greybox piece
 tosche-station,TATOOINE,town,OldaleTown,BLOCKOUT,building,Tosche power station,6x4,art:tatooine:power-station,yes,pending-final-art,greybox piece
 tosche-station,TATOOINE,town,OldaleTown,BLOCKOUT,building,Bacta Center,5x4,art:shared:bacta-center,yes,pending-final-art,greybox piece
 tosche-station,TATOOINE,town,OldaleTown,BLOCKOUT,building,Supply Depot,4x4,art:shared:supply-depot,yes,pending-final-art,greybox piece
-tosche-station,TATOOINE,town,OldaleTown,BLOCKOUT,building,Converter dealer's home,5x4,art:tatooine:homestead-dome,yes,pending-final-art,greybox piece
 tosche-station,TATOOINE,town,OldaleTown,BLOCKOUT,building,Station hand's home,5x4,art:tatooine:homestead-dome,yes,pending-final-art,greybox piece
-tosche-station,TATOOINE,town,OldaleTown,BLOCKOUT,prop,Power converters,1x1,art:tatooine:power-converters,yes,pending-final-art,greybox piece
 tosche-station,TATOOINE,town,OldaleTown,BLOCKOUT,prop,Power converters,1x1,art:tatooine:power-converters,yes,pending-final-art,greybox piece
 tosche-station,TATOOINE,town,OldaleTown,BLOCKOUT,prop,Power converters,1x1,art:tatooine:power-converters,yes,pending-final-art,greybox piece
 tosche-station,TATOOINE,town,OldaleTown,BLOCKOUT,prop,Power converters,1x1,art:tatooine:power-converters,yes,pending-final-art,greybox piece
