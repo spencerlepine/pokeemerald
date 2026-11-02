@@ -1,0 +1,19 @@
+name: cackler
+slot: loudred
+brief: "CACKLER: creature call that fits its look and size. Grown monkey-lizard whose laugh shakes walls."
+kind: creature
+size: 0.4
+seed: 72
+layers:
+  # Family voice (Kowakian cacklers): the nasal "ka-ka-ka" laugh, lower, rougher and louder, five
+  # syllables and a braying "haaa" at the end.
+  - type: voice
+    pitch: [[0, 440], [0.07, 500], [0.14, 470], [0.21, 540], [0.28, 500], [0.35, 600], [0.52, 460]]
+    pitch_step: 0.07
+    source: {saw: 0.8, pulse: 0.6, pulse_width: 0.25, noise: 0.08}
+    vowels: [[0, ae], [0.3, a], [0.52, aw]]
+    env: [[0, 0], [0.006, 1], [0.045, 0.3], [0.07, 0.05], [0.076, 1], [0.115, 0.3], [0.14, 0.05], [0.146, 1], [0.185, 0.3], [0.21, 0.05], [0.216, 1], [0.255, 0.3], [0.28, 0.05], [0.286, 1], [0.45, 0.75], [0.54, 0]]
+    growl: 0.25
+    growl_rate: 40
+    jitter: 0.025
+    drive: 2

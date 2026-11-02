@@ -1,0 +1,17 @@
+name: kowakian
+slot: whismur
+brief: "KOWAKIAN: creature call that fits its look and size. Monkey-lizard that cackles when startled."
+kind: creature
+size: 0.25
+seed: 71
+layers:
+  # Family voice (Kowakian cacklers): a nasal, frame-stepped "ka-ka-ka-kee" laugh, each syllable a
+  # quick pulse of an "ae" throat. The small one is a startled, squeaky giggle.
+  - type: voice
+    pitch: [[0, 640], [0.06, 720], [0.12, 680], [0.18, 780], [0.3, 860]]
+    pitch_step: 0.06
+    source: {saw: 0.7, pulse: 0.6, pulse_width: 0.25, noise: 0.06}
+    vowels: [[0, ae], [0.18, a], [0.24, ee]]
+    env: [[0, 0], [0.006, 1], [0.04, 0.3], [0.06, 0.05], [0.066, 1], [0.1, 0.3], [0.12, 0.05], [0.126, 1], [0.16, 0.3], [0.18, 0.05], [0.186, 1], [0.28, 0.7], [0.32, 0]]
+    jitter: 0.02
+    drive: 1.5

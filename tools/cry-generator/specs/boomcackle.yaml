@@ -1,0 +1,25 @@
+name: boomcackle
+slot: exploud
+brief: "BOOMCACKLE: creature call that fits its look and size. Huge monkey-lizard whose cackle is a weapon."
+kind: creature
+size: 0.65
+seed: 73
+layers:
+  # Family voice (Kowakian cacklers): the nasal "ka-ka-ka" laugh as a deep, booming barrage, with a
+  # roaring "HAAAA" that blasts out and a breath of noise behind it.
+  - type: voice
+    pitch: [[0, 300], [0.08, 340], [0.16, 320], [0.24, 370], [0.32, 340], [0.4, 400], [0.7, 380], [1.05, 260]]
+    pitch_step: 0.08
+    source: {saw: 0.9, pulse: 0.6, pulse_width: 0.25, noise: 0.1}
+    vowels: [[0, ae], [0.4, a], [0.8, aw], [1.05, o]]
+    env: [[0, 0], [0.006, 1], [0.05, 0.3], [0.08, 0.05], [0.086, 1], [0.13, 0.3], [0.16, 0.05], [0.166, 1], [0.21, 0.3], [0.24, 0.05], [0.246, 1], [0.29, 0.3], [0.32, 0.05], [0.326, 1], [0.8, 0.8], [1.08, 0]]
+    growl: 0.45
+    growl_rate: 30
+    jitter: 0.03
+    drive: 2.5
+  - type: noise
+    at: 0.33
+    band: [[0, 1600], [0.7, 900]]
+    q: 1.0
+    env: [[0, 0], [0.05, 0.5], [0.5, 0.3], [0.75, 0]]
+    gain: 0.3

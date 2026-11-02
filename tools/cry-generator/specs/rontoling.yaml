@@ -1,0 +1,23 @@
+name: rontoling
+slot: nidorina
+brief: "RONTOLING: creature call that fits its look and size. Young ronto."
+kind: creature
+size: 0.38
+seed: 78
+layers:
+  # Family voice (rontos): the gentle nasal "mmm-hroo" honk, lower and longer, with a little
+  # throat rumble and a second softer answer.
+  - type: voice
+    pitch: [[0, 300], [0.1, 420], [0.32, 360], [0.4, 290]]
+    source: {saw: 0.8, pulse: 0.4, pulse_width: 0.35, noise: 0.05}
+    vowels: [[0, m], [0.07, o], [0.24, a], [0.4, u]]
+    env: [[0, 0], [0.015, 1], [0.33, 0.8], [0.42, 0]]
+    vibrato: {rate: 6, depth: 0.03}
+    growl: 0.15
+  - type: voice
+    at: 0.42
+    pitch: [[0, 340], [0.12, 280]]
+    source: {saw: 0.8, pulse: 0.4, pulse_width: 0.35, noise: 0.05}
+    vowels: [[0, o], [0.12, u]]
+    env: [[0, 0], [0.02, 0.5], [0.13, 0]]
+    gain: 0.5

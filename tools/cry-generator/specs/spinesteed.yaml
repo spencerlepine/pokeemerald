@@ -1,0 +1,24 @@
+name: spinesteed
+slot: seadra
+brief: "SPINESTEED: creature call that fits its look and size. Spiny sea-horse."
+kind: creature
+size: 0.45
+seed: 75
+layers:
+  # Family voice (Kamino sea-steeds): the reedy "fwee-u" whinny with burbling flutter, lower and
+  # sharper with a spiky rasp, then the spray.
+  - type: voice
+    pitch: [[0, 520], [0.07, 760], [0.2, 640], [0.3, 470]]
+    source: {pulse: 0.8, pulse_width: 0.2, saw: 0.35, noise: 0.1}
+    vowels: [[0, ee], [0.12, i], [0.3, u]]
+    env: [[0, 0], [0.01, 1], [0.23, 0.8], [0.32, 0]]
+    vibrato: {rate: 18, depth: 0.05}
+    growl: 0.25
+    growl_rate: 48
+    drive: 1.6
+  - type: noise
+    at: 0.3
+    band: [[0, 2400], [0.07, 1600]]
+    q: 1.4
+    env: [[0, 0], [0.01, 0.6], [0.08, 0]]
+    gain: 0.4

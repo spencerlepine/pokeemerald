@@ -1,0 +1,24 @@
+name: stormsteed
+slot: kingdra
+brief: "STORMSTEED: creature call that fits its look and size. Sea dragon born in storms."
+kind: creature
+size: 0.75
+seed: 76
+layers:
+  # Family voice (Kamino sea-steeds): the "fwee-u" whinny grown into a dragon's call: deep, rolling,
+  # with the burbling flutter and a crash of storm spray behind it.
+  - type: voice
+    pitch: [[0, 340], [0.08, 520], [0.3, 460], [0.5, 300]]
+    source: {pulse: 0.8, pulse_width: 0.22, saw: 0.5, noise: 0.1}
+    vowels: [[0, ee], [0.15, i], [0.35, o], [0.5, u]]
+    env: [[0, 0], [0.012, 1], [0.38, 0.8], [0.52, 0]]
+    vibrato: {rate: 16, depth: 0.05}
+    growl: 0.35
+    growl_rate: 34
+    drive: 2
+  - type: noise
+    at: 0.3
+    band: [[0, 1800], [0.25, 900]]
+    q: 1.0
+    env: [[0, 0], [0.02, 0.6], [0.28, 0]]
+    gain: 0.35

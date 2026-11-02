@@ -1,0 +1,21 @@
+name: seasteed
+slot: horsea
+brief: "SEASTEED: creature call that fits its look and size. Small sea-horse that sprays ink."
+kind: creature
+size: 0.2
+seed: 74
+layers:
+  # Family voice (Kamino sea-steeds): a reedy, whinnying "fwee-u" whistle with a burbling flutter,
+  # then a squirt of spray. The small one is quick and piping.
+  - type: voice
+    pitch: [[0, 600], [0.07, 840], [0.2, 720], [0.28, 540]]
+    source: {pulse: 0.8, pulse_width: 0.2, saw: 0.2, noise: 0.08}
+    vowels: [[0, ee], [0.12, i], [0.28, u]]
+    env: [[0, 0], [0.01, 1], [0.22, 0.8], [0.3, 0]]
+    vibrato: {rate: 20, depth: 0.05}
+  - type: noise
+    at: 0.28
+    band: [[0, 2000], [0.06, 1400]]
+    q: 1.4
+    env: [[0, 0], [0.01, 0.6], [0.08, 0]]
+    gain: 0.4

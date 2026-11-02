@@ -1,0 +1,25 @@
+name: ronto
+slot: nidoqueen
+brief: "RONTO: creature call that fits its look and size. Towering, gentle ronto pack beast."
+kind: creature
+size: 0.75
+seed: 79
+layers:
+  # Family voice (rontos): the nasal "mmm-hroo" honk from a huge, gentle chest: a deep, mellow
+  # bellow with a soft rumble and a breathy snort at the end.
+  - type: voice
+    pitch: [[0, 190], [0.12, 280], [0.45, 250], [0.62, 180]]
+    pitch_step: 0.04
+    source: {saw: 0.8, pulse: 0.5, pulse_width: 0.35, noise: 0.06}
+    vowels: [[0, m], [0.08, o], [0.3, a], [0.62, u]]
+    env: [[0, 0], [0.02, 1], [0.5, 0.8], [0.64, 0]]
+    vibrato: {rate: 5, depth: 0.03}
+    growl: 0.3
+    growl_rate: 26
+    drive: 1.5
+  - type: noise
+    at: 0.62
+    band: [[0, 1400], [0.1, 900]]
+    q: 1.2
+    env: [[0, 0], [0.01, 0.5], [0.1, 0]]
+    gain: 0.3

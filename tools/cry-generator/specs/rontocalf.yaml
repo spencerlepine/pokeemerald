@@ -1,0 +1,15 @@
+name: rontocalf
+slot: nidoran_f
+brief: "RONTOCALF: creature call that fits its look and size. Ronto calf."
+kind: creature
+size: 0.2
+seed: 77
+layers:
+  # Family voice (rontos): a gentle, nasal "mmm-hroo" honk that starts hummed and opens to "o".
+  # The calf's is a small bleating hoot.
+  - type: voice
+    pitch: [[0, 420], [0.08, 560], [0.28, 470], [0.36, 380]]
+    source: {saw: 0.8, pulse: 0.4, pulse_width: 0.35, noise: 0.05}
+    vowels: [[0, m], [0.06, o], [0.2, a], [0.36, u]]
+    env: [[0, 0], [0.015, 1], [0.3, 0.8], [0.38, 0]]
+    vibrato: {rate: 7, depth: 0.03}
