@@ -109,7 +109,9 @@ def cmd_builds(a):
     st = Styles()
     pal, _ = st.terrain("TATOOINE")
     mat = st.material("TATOOINE")
-    names = [n for n in dict.fromkeys(build.BUILDS) if n != "box" and n not in build.GIANTS]
+    from . import kit
+    kitn = {n for c in kit.CATEGORIES.values() for n in c}
+    names = [n for n in dict.fromkeys(build.BUILDS) if n != "box" and n not in build.GIANTS and n not in kitn]
     sizes, cols, CW, CH = [(4, 3), (5, 4), (7, 5)], 6, 9, 7
     if a.giants:
         names, sizes, cols, CW, CH = build.GIANTS, [(14, 7), (20, 9)], 2, 22, 11
@@ -125,6 +127,46 @@ def cmd_builds(a):
     name = ("_giants" if a.giants else "_buildings") + ("-grey" if a.grey else "") + ".png"
     img.save(MOCK / name)
     print(name, img.size)
+
+
+def cmd_kit(a):
+    """One category on plain ground (no trees): each piece at its sizes in three seeded variations, with a
+    person and a 4x3 house at the start of every row for scale. -> wiki/mockup/kit/<category>.png"""
+    from . import build, kit
+    st = Styles()
+    planet = a.planet.upper()
+    pal, _ = st.terrain(planet)
+    mat = st.material(planet)
+    cat = kit.CATEGORIES[a.category]
+    seeds = [11, 23, 37]
+    rows = []
+    for name, (_, sizes) in cat.items():
+        rows.append((name, [(s, sd) for s in sizes for sd in seeds]))
+    ref_w = 1 + 4 + 1
+    gap = 1
+    width = max(ref_w + sum(s[0] + gap for s, _ in r) for _, r in rows) + 1
+    heights = [max(3, max(s[1] for s, _ in r)) + 2 for _, r in rows]
+    img = Image.new("RGB", (width * draw.C, (sum(heights) + 1) * draw.C), pal["ground"])
+    d = ImageDraw.Draw(img, "RGBA")
+    roles = st.roles if hasattr(st, "roles") else {"npc": {"body": "#e86fa0", "ring": "#8a2a50"}}
+    style = dict(mat, fill=mat["wall"], ring=mat["trim"], ground=pal["ground"], cliff=pal["cliff"])
+    y = 1
+    for (name, items), hh in zip(rows, heights):
+        base = y + hh - 2
+        draw.person(d, {"at": [1, base - 1]}, roles)
+        build.building(img, {"at": [2, base - 3], "size": [4, 3], "door": 2}, dict(style, build="block"), 5, a.grey)
+        x = ref_w + 1
+        for (w, h), sd in items:
+            build.building(img, {"at": [x, base - h], "size": [w, h]}, dict(style, build=name), sd, a.grey)
+            x += w + gap
+        d.text((draw.C, base * draw.C + 3), f"{name}   sizes " + ", ".join(f"{w}x{h}" for w, h in cat[name][1])
+               + "   (3 seeded variations each)", font=draw.F, fill=(40, 30, 20))
+        y += hh
+    out = MOCK / "kit"
+    out.mkdir(exist_ok=True)
+    fn = out / f"{a.category}{'-grey' if a.grey else ''}.png"
+    img.save(fn)
+    print(fn.name, img.size)
 
 
 def cmd_missing(a):
@@ -156,5 +198,9 @@ def main(argv=None):
     bl = sub.add_parser("builds", help="sheet of every building type")
     bl.add_argument("--grey", action="store_true")
     bl.add_argument("--giants", action="store_true", help="the huge border pieces instead")
+    k = sub.add_parser("kit", help="one building category on plain ground, for review")
+    k.add_argument("category")
+    k.add_argument("--planet", default="TATOOINE")
+    k.add_argument("--grey", action="store_true")
     a = ap.parse_args(argv)
-    {"render": cmd_render, "world": cmd_world, "missing": cmd_missing, "builds": cmd_builds}[a.cmd](a)
+    {"render": cmd_render, "world": cmd_world, "missing": cmd_missing, "builds": cmd_builds, "kit": cmd_kit}[a.cmd](a)

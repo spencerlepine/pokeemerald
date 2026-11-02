@@ -39,10 +39,8 @@ python3 -m mockup missing                 # art ids that have no shape in styles
     stilts-flat, deck, pad, bay, plant, lab, arena, and hipped. A prop whose style has a `build` (the landing pad) is a 3D
     model too. Sunken courtyards were dropped (owner: doors can't sit at the bottom of a pit like that). `python3 -m mockup builds [--grey]` draws them all.
   - **Giants** (`GIANTS` in build.py) are huge pieces for the edges of a map, modelled at true scale and
-    only partly drawn: the sprite is clipped to its box, so a Star Destroyer runs off the map and the player
-    sees just its bow. ship-hull (`facing: east|west`), trench-wall, stilt-city,
-    undercity-rim (`rim: [cx, cy, a, b]` in cells; its deck top is see-through and the city side drops
-    below ground level), city-edge. Giants draw first, behind every
+    only partly drawn: the sprite is clipped to its box, so a wall or a city runs off the map and the player
+    sees only its base. trench-wall, stilt-city, city-edge. Giants draw first, behind every
     building, so they never cover playable content.
     Solids are hidden below ground unless made with `below=True`. They sit on blocked border cells and are placed only by mockup
     overrides (`wiki/mockup/overrides/<area>.yaml`, `add: buildings`), never in phase 1.
@@ -54,7 +52,16 @@ python3 -m mockup missing                 # art ids that have no shape in styles
     never squashed (`fit_round` in build.py).
     The owner prefers roofed buildings; keep round ones for iconic places only.
   - **Cleaned up (owner, 2026-11-02):** scrapped as weak art: debris, cliff-town, hangar-wall, fortress-wall,
-    palace-wall, temple-stairs, cliff-door, comm-tower, obelisk, spire, saucer (and earlier shield-gen, turret, sunken). New buildings come **one category at a
+    palace-wall, temple-stairs, cliff-door, comm-tower, obelisk, spire, saucer, ship-hull, undercity-rim (and earlier shield-gen, turret). New buildings come **one category at a
     time**, small and high quality, each reviewed before the next. No batches.
+  - **Categories** (`mockup/kit.py`, owner 2026-11-02): new pieces live in `CATEGORIES` and register into
+    `BUILDS`. A **simplicity guardrail** runs on every piece: at most 16 solids, and colours only from the
+    piece palette (wall, roof, trim, glass, light, dark). Variation comes from the seed, not from detail.
+    `python3 -m mockup kit <category> [--grey] [--planet P]` draws `wiki/mockup/kit/<category>.png`: every
+    piece at its sizes in three seeded variations on plain ground (no trees), with a person and a 4x3 house
+    for scale. The owner reviews pieces side by side, not placed in towns.
+    1. `doorless`: utility and signal structures with no door: vaporator, mast, dish, beacon, tanks, stack,
+       pylon, relay, crates, core.
+    Sunken pieces are allowed again now that the projection rule is enforced (owner, 2026-11-02).
   - `render --grey` draws buildings in neutral grey (the pure greybox look); `--out DIR` writes elsewhere.
 - `mockup/draw.py`: terrain, props and people. `mockup/cli.py`: the commands.

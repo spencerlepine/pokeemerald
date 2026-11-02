@@ -576,36 +576,6 @@ def _hull(m):
     return (150, 150, 150) if m.grey else m.st.get("hull", (158, 162, 168))
 
 
-def m_ship_hull(m):
-    """A crashed Star Destroyer at true scale: only its bow fits on the map. The wedge runs on past the box
-    edge and the top of the map, half buried in a sand berm, with plating grooves and a trench."""
-    W, H = m.W, m.H
-    hull = _hull(m)
-    east = m.b.get("facing", "east" if not m.r(3, 2) else "west") == "east"   # which way the bow points
-    L = W * 4.0                         # hull length, mostly off the map
-    tipx = W * 0.88 if east else W * 0.12
-    backx = tipx - L if east else tipx + L
-    yc = H * 0.62
-    half = L * 0.3
-    poly = [(tipx, yc), (backx, yc - half), (backx, yc + half)]
-    if not east:
-        poly = [poly[0], poly[2], poly[1]]
-    rise = L * 0.22
-    # stepped decks: each tier set back from the one below, the upper ones running off the top of the map
-    z, inset = -24, 0
-    for k, (top, step) in enumerate(((0.3, 0), (0.55, 18), (0.85, 40), (1.3, 66))):
-        p2 = S._inset2(poly, step) if step else poly
-        m.add(S.prism(p2, z, H * top, shade(hull, -0.12 + 0.03 * k), shade(hull, 0.08 + 0.03 * k), taper=3))
-        z = H * top - 1
-    # the bridge superstructure, far back on the deck (mostly off the map)
-    bx = tipx + (backx - tipx) * 0.45
-    m.add(S.box(bx - 40, yc - 30, H * 1.3, bx + 40, yc + 30, H * 2.0, shade(hull, -0.05), hull))
-    # plating grooves across the hull, and one long trench along it
-    for k in range(1, 14):
-        x = tipx + (backx - tipx) * k / 14
-        m.add(S.box(x - 0.8, -400, -30, x + 0.8, 800, 600, shade(hull, -0.35), subtract=True))
-
-
 def m_trench_wall(m):
     """The Death Star trench: a sheer grey wall far taller than the map, covered in machinery."""
     W, H = m.W, m.H
@@ -646,30 +616,7 @@ def m_stilt_city(m):
         x += 150
 
 
-def m_undercity_rim(m):
-    """Cloud City's edge seen from the plaza: the deck stays see-through, and below its oval rim the city's
-    side drops away into the clouds with bands, window rows and hanging vanes. `rim: [cx, cy, a, b]` in
-    cells, box-local (cy counted north from the box bottom)."""
-    cxc, cyc, ac, bc = m.b.get("rim", [m.cw / 2, m.ch * 0.8, m.cw * 0.45, m.ch * 0.6])
-    cx, cy, a, b = cxc * C, cyc * C, ac * C, bc * C
-    wall = m.wall
-    # the deck (see-through on top), its rim wall, then the underside sweeping back in toward a central stalk
-    rim = 34
-    m.add(S.cylinder(cx, cy, a, b, -rim, 0, wall, wall, hide_top=True, n=64, below=True, exact=True))
-    t = b * 0.8
-    m.add(S.prism(S.ring_pts(cx, cy, a - t, b - t, 64), -rim - 160, -rim, shade(wall, -0.15), shade(wall, -0.15),
-                  taper=-t, below=True))
-    for z0, col, g in ((-4, m.trim, 1.5), (-15, m.glass, 0.8), (-26, m.trim, 1.5)):
-        m.add(S.cylinder(cx, cy, a + g, b + g, z0 - 3, z0, col, col, n=64, below=True, exact=True))
-    m.add(S.cylinder(cx, cy, a * 0.12, b * 0.12, -900, -rim, shade(wall, -0.25), below=True))
-    for k in range(14):
-        th = math.pi * (0.1 + 0.8 * k / 13)
-        x = cx - a * math.cos(th)
-        y = cy - b * math.sin(th)
-        m.add(S.box(x - 1.5, y - 2, -rim - 60, x + 1.5, y + 2, -rim, shade(wall, -0.3), below=True))
-
-
-GIANTS = ["ship-hull", "trench-wall", "stilt-city", "undercity-rim", "city-edge"]
+GIANTS = ["trench-wall", "stilt-city", "city-edge"]
 
 BUILDS = {
     "block": m_block, "box": m_block,
@@ -681,16 +628,18 @@ BUILDS = {
     "dome": m_dome, "domes2": m_domes2, "dome-block": m_dome_block, "store": m_store,
     "bunker": m_bunker, "buried": m_buried, "bay": m_bay, "pad": m_pad, "dome-porch": m_dome_porch,
     "glass-dome": m_glass_dome, 
-    "hipped": m_hipped,  "city-edge": m_city_edge, "ship-hull": m_ship_hull,
+    "hipped": m_hipped,  "city-edge": m_city_edge,
       
     "trench-wall": m_trench_wall, "stilt-city": m_stilt_city,
-    "undercity-rim": m_undercity_rim,
     "quonset": m_quonset, "hangar": lambda m: m_quonset(m, wide=True),
     "stilts": m_stilts, "stilts-dome": lambda m: m_stilts(m, "dome", round_=True),
     "stilts-flat": lambda m: m_stilts(m, "flat"),
     "cone": m_cone, "tower": m_tower, "round-tower": m_round_tower, "stepped": m_stepped,
     "deck": m_deck, "plant": m_plant, "lab": m_lab, "arena": m_arena,
 }
+from . import kit as _kit  # noqa: E402  (categories register their pieces here)
+_kit.register(BUILDS)
+
 # the first-pass `kind` names, so an old catalogue entry still draws
 KIND_TO_BUILD = {"box": "block", "dome": "dome", "pitched": "pitched", "stepped": "stepped", "tower": "tower",
                  "hall": "hall", "dish": "bay", "platform": "deck",
