@@ -1,0 +1,99 @@
+# Shuttle ride up to Mustafar: hot-swap of MUS_CABLE_CAR (wiki audio:MUS_CABLE_CAR, music_form CUE, loops no).
+# STYLE of "Enter Lord Vader" (ref_tracks soundtrack:revenge-sith:11): an original line, not the Imperial March.
+# Taken from the cue: C minor, low brass in Williams' dark-side colour (minor chords a tritone or a third apart:
+# Cm-F#m, Cm-Abm), a steady ominous pulse, rising trumpet stabs. The glide is a wave-channel ostinato under
+# square arpeggios; the horn carries the melody, tuba the floor. Plays once and ends on a held C minor chord.
+# Vanilla: cable_car voicegroup, 120 bpm, 66 s, no loop; this is 30 bars, 60 s.
+# Brief (sw_subject): gliding, ominous view of lava.
+name: shuttle-ride
+replaces: MUS_CABLE_CAR
+form: CUE
+loop: false
+voicegroup: cable_car                 # trumpet 56, tuba 58, horn 60, kit 0, squares 80/81, wave 83, noise 127
+master_volume: 80
+tempo: 120
+steps_per_beat: 4
+time_signature: [4, 4]
+seed: 66
+
+parts:
+  horn:    {program: 60, channel: 0, volume: 100, pan: -8,  range: [G3, C5], gate: 0.95, humanize: {vel: 4}}
+  trumpet: {program: 56, channel: 1, volume: 92,  pan: 10,  range: [C4, C6], gate: 0.85}
+  tuba:    {program: 58, channel: 2, volume: 96,  pan: -2,  octave: 2, range: [C2, C3], gate: 0.95, role: bass}
+  glide:   {program: 83, channel: 3, volume: 88,  pan: 0,   octave: 3, range: [C3, C4], gate: 0.6}
+  arp:     {program: 80, channel: 4, volume: 40,  pan: 30,  octave: 4, range: [C4, C6], gate: 0.5, mono: true}
+  arp2:    {program: 81, channel: 5, volume: 32,  pan: -30, octave: 4, range: [C4, C6], gate: 0.5, mono: true}
+  kit:     {program: 0,  channel: 6, volume: 70,  pan: 12,  role: drums, kit: {sn: 40, crash: 57, kick: 36}}
+  hiss:    {program: 127, channel: 7, volume: 40, pan: -12, role: drums, kit: {h: C5, sn: G4}}
+
+progressions:
+  intro: "Cm | Cm"
+  a:     "Cm | Abm/C | Cm | F#m/C | Cm | Abm/C | Fm:8 G:8 | Cm"
+  b:     "Ab | Fm | Db | Cm | Ab | F#m | Gsus4 | G"
+  end:   "Cm | Abm/C | Cm | Cm"
+
+phrases:
+  tune_a: |
+    G3:8 C4:6 D4:2 | Eb4:12 Cb4:4 | C4:8 G3:4 Eb4:4 | F#4:12 r:4 |
+    G3:8 C4:6 D4:2 | Eb4:6 F4:2 Gb4:8 | F4:6 Eb4:2 D4:4 B3:4 | C4:12 r:4
+  tune_b: |
+    C5:8 Eb5:6 C5:2 | Ab4:12 F4:4 | Db5:8 F5:6 Db5:2 | C5:12 r:4 |
+    Eb5:6 C5:2 Ab4:8 | A4:6 F#4:2 C#5:8 | C5:8 D5:8 | B4:12 r:4
+  stabs: |
+    r:12 C5:2 C5:2 | r:12 Eb5:2 Eb5:2 | r:12 G5:2 G5:2 | r:12 F#5:2 F#5:2 |
+    r:12 C5:2 C5:2 | r:12 Eb5:2 Eb5:2 | r:8 C5:2 C5:2 D5:4 | r:16
+  tuba_a: "^1:8 ^1:8"
+  tuba_b: "^1:16"
+  ostinato: "^1:2 ^1:2 ^5:2 ^1:2 ^3:2 ^1:2 ^5:2 ^1:2"
+  arp: "^1:2 ^3:2 ^5:2 ^1+:2 ^3+:2 ^1+:2 ^5:2 ^3:2"
+  arp_down: "r:1 ^3+:2 ^1+:2 ^5:2 ^3:2 ^1:2 ^5:2 ^3:2 ^1:1"
+
+grooves:
+  hats:
+    h:    "x.o.x.o.x.o.x.o."
+  hats_roll:
+    h:    "x.o.x.o........."
+  pulse:
+    kick: "x.......x......."
+  pulse_sn:
+    kick: "x.......x......."
+    sn:   "....x.......x..."
+  crash4:
+    crash: "X...............|................|................|................"
+    sn:    "....x.......x..."
+  roll:
+    sn:    "x...x...rrrrRRRR"
+  hit:
+    crash: "X..............."
+    kick:  "x..............."
+
+sections:
+  intro:
+    bars: 2
+    chords: intro
+    ramp: {glide: [-16, 0]}
+    parts: {glide: ostinato, tuba: tuba_b, hiss: hats}
+  a:
+    bars: 8
+    chords: a
+    fill: roll
+    parts: {horn: tune_a, tuba: tuba_a, glide: ostinato, arp: arp, kit: pulse, hiss: hats}
+  b:
+    bars: 8
+    chords: b
+    parts: {trumpet: tune_b, horn: "^1:16", tuba: tuba_b, glide: ostinato, arp2: arp_down, kit: crash4, hiss: hats}
+  a2:
+    bars: 8
+    chords: a
+    fill: roll
+    gain: {horn: 6}
+    parts: {horn: tune_a, trumpet: stabs, tuba: tuba_a, glide: ostinato, arp: arp, arp2: arp_down, kit: pulse_sn, hiss: hats}
+  end:
+    bars: 4
+    chords: end
+    ramp: {glide: [0, -30]}
+    parts: {horn: "G3:8 C4:6 D4:2 | Eb4:12 Cb4:4 | C4:16 | ~:16", trumpet: "r:16 | r:16 | G4:16 | ~:16",
+            tuba: "C2:16 | C2:16 | C2:16 | ~:16", glide: "^1:2 ^1:2 ^5:2 ^1:2 ^3:2 ^1:2 ^5:2 ^1:2 | ^1:2 ^1:2 ^5:2 ^1:2 ^3:2 ^1:2 ^5:2 ^1:2 | C3:16 | r:16",
+            kit: hit}
+
+arrangement: [intro, a, b, a2, end]
