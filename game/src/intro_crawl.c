@@ -1,9 +1,12 @@
 // One-time opening crawl, shown after the title screen when there is no save file.
 //
 // The title screen (title_screen.c) shrinks the logo away and fades out the creature and clouds,
-// leaving only the deep-space gradient on BG1. It then hands off to CB2_InitIntroCrawl, which:
+// leaving only the flat night backdrop. It then hands off to CB2_InitIntroCrawl, which:
 //   BG0  text BG    the "Skip intro? YES / NO" dialog (standard window frame + YES/NO menu)
-//   BG1  text BG    the deep-space gradient, left in VRAM by the title screen (charblock 2, screen 28)
+//   BG1  text BG    deep space: a very dark purple-blue gradient in 6 flat bands (darkest at the top)
+//                   with a static starfield drawn into it. Built here into charblock 2 and screen 28
+//                   (the title screen is done with both), and faded in from the backdrop once the
+//                   crawl has started, so the stars appear after the hand-off.
 //   BG2  affine     the crawl. 8bpp, 512x512 with wraparound. Every scanline gets its own affine
 //                   scale/offset through an HBlank DMA, which tilts the text back into the distance.
 //                   An HBlank IRQ darkens the far lines so the text fades out near the horizon.
@@ -69,7 +72,17 @@
 #define CRAWL_TEXT_COLOR    RGB(30, 25, 6)    // crawl yellow
 #define CRAWL_SHADOW_COLOR  RGB(17, 13, 2)
 #define FRAME_PAL           13
-#define TEXT_PAL            15                 // 14 is the gradient (title screen)
+#define TEXT_PAL            15
+#define SPACE_PAL           12                 // BG1: gradient bands and stars
+
+// Deep space (BG1). Palette SPACE_PAL: 1-6 are the gradient bands, top to bottom, 7-10 the stars.
+#define SPACE_BANDS         6
+#define SPACE_BAND_COLOR(i) (1 + (i))
+#define SPACE_STAR_COLOR(i) (1 + SPACE_BANDS + (i))  // 0 white ... 3 faintest
+#define SPACE_STAR_CHANCE   45                 // % of 8x8 cells holding a star
+#define SPACE_STAR_DELAY    16                 // frames after the crawl starts before the stars fade in
+#define SPACE_STAR_FADE     48                 // frames the stars and gradient take to fade in
+#define SPACE_MAX_TILES     512                 // 4bpp tiles in one charblock
 
 // BG0 tiles
 #define FRAME_TILE          2
@@ -97,6 +110,8 @@ static EWRAM_DATA s32 sDepth = 0;       // texture px between the bottom and top
 static EWRAM_DATA u8 sReadyBuffer = 0;  // buffer the next VBlank hands to the DMA
 static EWRAM_DATA u16 sNextLine = 0;    // next text line to draw into the ring
 static EWRAM_DATA bool8 sPlayedThisBoot = FALSE;
+static EWRAM_DATA u16 sSpaceTimer = 0;  // frames since the crawl started, for the star fade-in
+static EWRAM_DATA u16 sBackdropColor = 0;
 
 static void CB2_IntroCrawl(void);
 static void VBlankCB_IntroCrawl(void);
@@ -108,6 +123,24 @@ static void Task_IntroCrawlFadeOut(u8 taskId);
 static void Task_IntroCrawlExit(u8 taskId);
 static void BuildLineRegs(void);
 static void DrawRingLine(u16 line);
+static void BuildSpace(void);
+static void UpdateSpaceFade(void);
+
+// Very dark purple-grey-blue, a step lighter per band going down the screen
+static const u16 sSpacePalette[16] =
+{
+    [0]                     = RGB_BLACK,
+    [SPACE_BAND_COLOR(0)]   = RGB(1, 1, 3),
+    [SPACE_BAND_COLOR(1)]   = RGB(2, 1, 4),
+    [SPACE_BAND_COLOR(2)]   = RGB(2, 2, 5),
+    [SPACE_BAND_COLOR(3)]   = RGB(3, 2, 5),
+    [SPACE_BAND_COLOR(4)]   = RGB(3, 3, 6),
+    [SPACE_BAND_COLOR(5)]   = RGB(4, 3, 7),
+    [SPACE_STAR_COLOR(0)]   = RGB(31, 31, 31),
+    [SPACE_STAR_COLOR(1)]   = RGB(22, 22, 25),
+    [SPACE_STAR_COLOR(2)]   = RGB(14, 14, 18),
+    [SPACE_STAR_COLOR(3)]   = RGB(9, 9, 13),
+};
 
 // ---------------------------------------------------------------------------------------------
 // Text. Each entry is one centred line, at most 120px wide in FONT_NORMAL (about 20 characters;
@@ -230,7 +263,9 @@ void CB2_InitIntroCrawl(void)
         ResetTasks();
         ResetSpriteData();
         FreeAllSpritePalettes();
-        SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_MODE_1 | DISPCNT_BG1_ON);
+        // BG1 only shows blank tile 0 (the backdrop) now, so hiding it while its tiles are
+        // rebuilt changes nothing on screen.
+        SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_MODE_1);
         SetGpuReg(REG_OFFSET_BLDCNT, 0);
         SetGpuReg(REG_OFFSET_BLDALPHA, 0);
         SetGpuReg(REG_OFFSET_BLDY, 0);
@@ -242,6 +277,7 @@ void CB2_InitIntroCrawl(void)
         DmaFill16(3, 0, (void *)BG_CHAR_ADDR(CRAWL_BG2_CHARBASE), BG_CHAR_SIZE);
         DmaFill16(3, 0, (void *)BG_CHAR_ADDR(CRAWL_BG0_CHARBASE), BG_CHAR_SIZE);
         DmaFill16(3, 0, (void *)BG_SCREEN_ADDR(CRAWL_BG0_SCREEN), BG_SCREEN_SIZE);
+        BuildSpace();
         gMain.state++;
         break;
     case 1:
@@ -265,7 +301,6 @@ void CB2_InitIntroCrawl(void)
         break;
     case 2:
         ResetBgsAndClearDma3BusyFlags(0);
-        SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_MODE_1 | DISPCNT_BG1_ON); // ResetBgs hid every BG
         InitBgsFromTemplates(1, sBgTemplates, ARRAY_COUNT(sBgTemplates));
         InitWindows(sWindowTemplates);
         DeactivateAllTextPrinters();
@@ -277,6 +312,11 @@ void CB2_InitIntroCrawl(void)
             colors[1] = CRAWL_SHADOW_COLOR;
             LoadPalette(colors, BG_PLTT_ID(0) + 1, sizeof(colors));
         }
+        // Deep space starts as the backdrop colour (invisible) and is faded in by the crawl task
+        sBackdropColor = gPlttBufferUnfaded[0];
+        sSpaceTimer = 0;
+        LoadPalette(sSpacePalette, BG_PLTT_ID(SPACE_PAL), PLTT_SIZE_4BPP);
+        BlendPalette(BG_PLTT_ID(SPACE_PAL), 16, 16, sBackdropColor);
         gMain.state++;
         break;
     case 3:
@@ -399,6 +439,118 @@ static void UpdateLineRegs(void)
     sReadyBuffer = buf;
 }
 
+// ---------------------------------------------------------------------------------------------
+// Deep space on BG1: one plain tile per gradient band, plus one tile per 8x8 cell that holds a
+// star (the band's colour with the star drawn in). The stars are placed by a fixed-seed random
+// generator, so the sky is the same every time. They do not move: like the film, only the text does.
+// ---------------------------------------------------------------------------------------------
+
+static u32 sSpaceSeed;
+
+static u32 SpaceRandom(void)
+{
+    sSpaceSeed = sSpaceSeed * 1103515245 + 12345;
+    return sSpaceSeed >> 16;
+}
+
+// Band of a tile row: 20 visible rows in 6 bands of 3-4 rows
+static u8 SpaceBand(u16 row)
+{
+    if (row >= DISPLAY_HEIGHT / 8)
+        return SPACE_BANDS - 1;
+    return (row * SPACE_BANDS) / (DISPLAY_HEIGHT / 8);
+}
+
+static void SetTilePixel(u32 *tile, u8 x, u8 y, u8 color)
+{
+    tile[y] = (tile[y] & ~(0xFu << (x * 4))) | ((u32)color << (x * 4));
+}
+
+static void BuildSpace(void)
+{
+    u32 *chars = (u32 *)BG_CHAR_ADDR(CRAWL_BG1_CHARBASE);
+    u16 *map = (u16 *)BG_SCREEN_ADDR(CRAWL_BG1_SCREEN);
+    u32 tile[8];
+    u16 nextTile = SPACE_BANDS;
+    u16 x, y, i;
+
+    // Tiles 0-5: the plain bands
+    for (i = 0; i < SPACE_BANDS; i++)
+    {
+        u32 fill = SPACE_BAND_COLOR(i) * 0x11111111;
+        for (y = 0; y < 8; y++)
+            chars[i * 8 + y] = fill;
+    }
+
+    sSpaceSeed = 0x5EED1977;
+    for (y = 0; y < 32; y++)
+    {
+        u8 band = SpaceBand(y);
+        for (x = 0; x < 32; x++)
+        {
+            u16 entry = band | (SPACE_PAL << 12);
+
+            if (y < DISPLAY_HEIGHT / 8 && x < DISPLAY_WIDTH / 8
+             && SpaceRandom() % 100 < SPACE_STAR_CHANCE && nextTile < SPACE_MAX_TILES)
+            {
+                u32 roll = SpaceRandom() % 100;
+                u8 sx = SpaceRandom() % 8;
+                u8 sy = SpaceRandom() % 8;
+                u32 fill = SPACE_BAND_COLOR(band) * 0x11111111;
+
+                for (i = 0; i < 8; i++)
+                    tile[i] = fill;
+
+                if (roll < 4)
+                {
+                    // A rare bright star: a white centre with a dim cross around it
+                    sx = 1 + sx % 6;
+                    sy = 1 + sy % 6;
+                    SetTilePixel(tile, sx, sy, SPACE_STAR_COLOR(0));
+                    SetTilePixel(tile, sx - 1, sy, SPACE_STAR_COLOR(2));
+                    SetTilePixel(tile, sx + 1, sy, SPACE_STAR_COLOR(2));
+                    SetTilePixel(tile, sx, sy - 1, SPACE_STAR_COLOR(2));
+                    SetTilePixel(tile, sx, sy + 1, SPACE_STAR_COLOR(2));
+                }
+                else
+                {
+                    // Single pixels, mostly dim
+                    u8 shade;
+                    if (roll < 14)
+                        shade = 0;
+                    else if (roll < 38)
+                        shade = 1;
+                    else if (roll < 70)
+                        shade = 2;
+                    else
+                        shade = 3;
+                    SetTilePixel(tile, sx, sy, SPACE_STAR_COLOR(shade));
+                    // Now and then a second, faint one in the same cell
+                    if (SpaceRandom() % 100 < 15)
+                        SetTilePixel(tile, (sx + 3 + SpaceRandom() % 3) % 8, (sy + 2 + SpaceRandom() % 4) % 8, SPACE_STAR_COLOR(3));
+                }
+
+                CpuCopy32(tile, &chars[nextTile * 8], sizeof(tile));
+                entry = nextTile++ | (SPACE_PAL << 12);
+            }
+            map[y * 32 + x] = entry;
+        }
+    }
+}
+
+// Fade the gradient and stars in from the backdrop, a moment after the crawl starts. A screen fade
+// (skip or end) owns the palette, so the fade-in stops when one begins.
+static void UpdateSpaceFade(void)
+{
+    u16 t;
+
+    if (sSpaceTimer >= SPACE_STAR_DELAY + SPACE_STAR_FADE || gPaletteFade.active)
+        return;
+    t = ++sSpaceTimer;
+    if (t > SPACE_STAR_DELAY)
+        BlendPalette(BG_PLTT_ID(SPACE_PAL), 16, 16 - ((t - SPACE_STAR_DELAY) * 16) / SPACE_STAR_FADE, sBackdropColor);
+}
+
 // Print one text line with the normal font and copy it into its two ring rows as 8bpp tiles.
 static void DrawRingLine(u16 line)
 {
@@ -454,6 +606,7 @@ static bool8 CrawlFinished(void)
 
 static void AdvanceCrawl(u8 taskId)
 {
+    UpdateSpaceFade();
     if (!gTasks[taskId].tPaused)
         sScroll += CRAWL_SPEED;
     // Blank lines past the end keep the ring clean.
