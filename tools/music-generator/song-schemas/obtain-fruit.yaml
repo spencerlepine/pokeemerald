@@ -1,0 +1,40 @@
+# Obtain fruit (MUS_OBTAIN_BERRY, hot-swap): a one-shot sting. SCRATCH (wiki audio:MUS_OBTAIN_BERRY, no film cue).
+# Brief: "Picked fruit: light, organic sting." A forest-moon flavour (wood and breath, no brass): flute tune
+# skipping down the C major triad and up to A over C - F - C, harp arpeggios under it, a xylophone tap and a soft
+# wave bass, with a tambourine shake on the landing. 120 bpm (vanilla's), one 4/4 bar, 2 s like vanilla, on the
+# vanilla fanfare voicegroup.
+name: obtain-fruit
+replaces: MUS_OBTAIN_BERRY
+form: JINGLE
+loop: false
+player: SE2
+song_priority: 5
+voicegroup: fanfare           # flute 73, harp 46, xylophone 13, wave 87, kit 0
+master_volume: 90
+tempo: 120
+steps_per_beat: 4
+time_signature: [4, 4]
+seed: 12
+
+parts:
+  flute: {program: 73, channel: 0, volume: 104, pan: 8,   range: [C5, A5], gate: 0.9, lfo_speed: 30, lfo_delay: 12, mod: 3}
+  harp:  {program: 46, channel: 1, volume: 86,  pan: -20, range: [C4, F5], gate: 1.0}
+  xylo:  {program: 13, channel: 2, volume: 72,  pan: 24,  range: [C5, G6], gate: 0.7}
+  bass:  {program: 87, channel: 3, volume: 70,  pan: 0,   range: [F2, C3], gate: 0.7, mono: true}
+  kit:   {program: 0,  channel: 4, volume: 60,  pan: 16,  role: drums, kit: {tamb: 54}}
+
+grooves:
+  shake:
+    tamb: "........o...x..."
+
+sections:
+  sting:
+    bars: 1
+    parts:
+      flute: "G5:1 E5:1 C5:1 E5:1 F5:2 A5:2 G5:8"
+      harp:  "C4:1 E4:1 G4:1 C5:1 F4:1 A4:1 C5:1 F5:1 E4:1 G4:1 C5:1 E5:1 G5:4"
+      xylo:  "r:2 C6':1 r:1 r:2 A5':1 r:1 r:4 C6:1 E6:1 G6:2"
+      bass:  "C3':1 r:3 F2':1 r:3 C3:4 r:4"
+      kit:   shake
+
+arrangement: [sting]
