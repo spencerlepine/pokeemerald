@@ -1,0 +1,44 @@
+# Academy (Bestine flight academy classroom): hot-swap of MUS_SCHOOL (wiki audio:MUS_SCHOOL). STYLE of "Anakin's
+# Theme" (wiki ref_tracks soundtrack:phantom-menace:03): an original melody, not a quote. Taken from the cue: an
+# innocent, singing major-key line that climbs by arpeggio and settles by step, gentle flowing accompaniment, and
+# one borrowed minor chord (Bbm in F) as the cue's shadow before the cadence.
+# Brief (sw_subject): Bestine flight academy classroom, bright, studious. F major, 116 bpm (vanilla tempo), solo
+# piano like vanilla MUS_SCHOOL (its voicegroup has only the piano): right-hand tune, broken-chord middle voice,
+# left-hand bass. 16-bar loop, 33.1 s (vanilla 37.2 s).
+name: academy
+replaces: MUS_SCHOOL
+form: LOOP
+voicegroup: school                  # vanilla: piano 1 only
+master_volume: 96
+tempo: 116
+steps_per_beat: 2
+time_signature: [4, 4]
+seed: 111
+
+parts:
+  right:  {program: 1, channel: 0, volume: 104, pan: 8,   gate: 0.92, humanize: {vel: 6}}
+  middle: {program: 1, channel: 1, volume: 70,  pan: -6,  octave: 3, gate: 0.85, humanize: {vel: 8}}
+  left:   {program: 1, channel: 2, volume: 86,  pan: -14, octave: 2, gate: 0.95, role: bass}
+
+progressions:
+  a: "F | C/E | Dm | Bb | F | Gm | C | C"
+  b: "Bb | F/A | Gm | Dm | Bb | Bbm | F | C"
+
+phrases:
+  tune_a: "C5:2 F5:2 A5:3 G5:1 | G5:4 E5:2 C5:2 | D5:2 F5:2 A5:2 D6:2 | D6:4 C6:2 Bb5:2 | A5:2 G5:2 F5:2 C5:2 | Bb5:3 A5:1 G5:2 D5:2 | E5:2 G5:2 C6:2 Bb5:2 | G5:8"
+  tune_b: "F5:2 Bb5:2 D6:3 C6:1 | C6:4 A5:2 F5:2 | G5:2 Bb5:2 D6:2 Bb5:2 | A5:6 F5:2 | D5:2 F5:2 Bb5:4 | Db6:4 Bb5:2 F5:2 | A5:4 C6:2 A5:2 | G5:4 E5:2 C5:2"
+  broken: "^1:1 ^3:1 ^2+:1 ^3:1 ^1+:1 ^3:1 ^2+:1 ^3:1"
+  bass: "^1:4 ^3:4"
+
+sections:
+  a:
+    bars: 8
+    chords: a
+    parts: {right: tune_a, middle: broken, left: bass}
+  b:
+    bars: 8
+    chords: b
+    parts: {right: tune_b, middle: broken, left: bass}
+
+arrangement: [a, b]
+loop_start: a
