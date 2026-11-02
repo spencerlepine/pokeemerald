@@ -233,6 +233,8 @@ def apply_textures(obj, canvas, mats_px, nz):
         elif tex == "brick":
             off = ((yy // 4) & 1) * 4
             sel = m & (nz > 0.5) & ((yy % 4 == 3) | (((xx + off) % 8) == 7))
+        elif tex == "rows":     # thatch, tiles: a dark line every 4 rows on every face
+            sel = m & (tone >= 1) & (yy % 4 == 3)
         elif tex == "ridge":    # bark: a dark vertical line every 4 columns on the south face, broken every 6 rows
             sel = m & (nz < 0.5) & (xx % 4 == 3) & (((yy + xx // 4 * 2) % 6) != 0)
         elif tex == "speck":

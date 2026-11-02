@@ -1,0 +1,44 @@
+# art:endor:ewok-hut. An Ewok hut on a stilt platform: a round timber room with a conical thatch
+# roof, a dark round door on the south face, a lashed-pole deck on stilts. 3 cells wide; the bottom
+# row is the stilts (solid), the next row the hut's door wall (solid), the roof rows walk-behind.
+name: ewok-hut
+description: Ewok hut on stilts, conical thatch roof, round door; Bright Tree Village landmark.
+palette: endor
+cells: [3, 4]
+foot: [24, 62]
+box: [44, 30]
+footprint: 2
+shadow: {rx: 22, ry: 3}
+seed: 8
+render: {depth_jump: 0.2, ao: {strength: 0.6, threshold: 0.45}}
+
+materials:
+  timber: {ramp: ewok_timber, bands: [-0.1, 0.35, 0.75], texture: plank}
+  thatch: {ramp: thatch, bands: [-0.05, 0.4, 0.78], dither: true, texture: rows}
+  pole:   {ramp: log_wood, bands: [0.1, 0.6]}
+  dark:   {ramp: log_wood, bands: [0.5, 0.9]}
+
+groups:
+  deck: {k: 0.0}
+  hut: {k: 0.02}
+  roof: {k: 0.02}
+
+parts:
+  # stilts on the south edge (the foot is the southernmost ground point), a brace, the deck slab
+  - {name: stilt-w, group: deck, mat: pole, cylinder: {a: [-1.15, 0.0, 0.0], b: [-1.15, 0.0, 0.82], r1: 0.07, r2: 0.07}}
+  - {name: stilt-e, group: deck, mat: pole, cylinder: {a: [1.15, 0.0, 0.0], b: [1.15, 0.0, 0.82], r1: 0.07, r2: 0.07}}
+  - {name: stilt-m, group: deck, mat: pole, cylinder: {a: [0.0, 0.0, 0.0], b: [0.0, 0.0, 0.82], r1: 0.07, r2: 0.07}}
+  - {name: brace, group: deck, mat: pole, cylinder: {a: [-1.15, -0.01, 0.34], b: [1.15, -0.01, 0.34], r1: 0.04, r2: 0.04}}
+  - {name: deck, group: deck, mat: timber, box: {c: [0.0, 0.3, 0.8], half: [1.42, 0.4, 0.06]}}
+  - {name: rail, group: deck, mat: pole, cylinder: {a: [-1.4, -0.08, 1.06], b: [1.4, -0.08, 1.06], r1: 0.03, r2: 0.03}}
+  - {name: post-w, group: deck, mat: pole, cylinder: {a: [-1.38, -0.08, 0.86], b: [-1.38, -0.08, 1.08], r1: 0.035, r2: 0.035}}
+  - {name: post-e, group: deck, mat: pole, cylinder: {a: [1.38, -0.08, 0.86], b: [1.38, -0.08, 1.08], r1: 0.035, r2: 0.035}}
+  # the round hut (elliptical in plan so the roof stays compact on screen), a round door cut into the south wall
+  - {name: body, group: hut, mat: timber, cylinder: {a: [0.0, 0.5, 0.84], b: [0.0, 0.5, 2.0], r1: 0.86, r2: 0.84},
+     squash: {scale: [1, 0.56, 1], center: [0.0, 0.5, 1.2]}}
+  - {name: door, group: hut, mat: dark, op: subtract, ellipsoid: {c: [0.0, 0.0, 1.32], r: [0.27, 0.3, 0.44]}}
+  - {name: lintel, group: hut, mat: pole, cylinder: {a: [-0.3, 0.0, 1.8], b: [0.3, 0.0, 1.8], r1: 0.04, r2: 0.04}}
+  # the conical thatch roof, overhanging, with a tuft at the peak
+  - {name: roof, group: roof, mat: thatch, cylinder: {a: [0.0, 0.5, 1.96], b: [0.0, 0.5, 2.7], r1: 1.02, r2: 0.08},
+     squash: {scale: [1, 0.58, 1], center: [0.0, 0.5, 1.96]}, noise: {amp: 0.015, freq: 9, seed: 8}}
+  - {name: peak, group: roof, mat: thatch, ellipsoid: {c: [0.0, 0.5, 2.73], r: [0.14, 0.12, 0.12]}}

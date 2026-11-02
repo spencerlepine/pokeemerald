@@ -91,7 +91,7 @@ REGION_ENV = {"abs": np.abs, "sqrt": np.sqrt, "minimum": np.minimum, "maximum": 
 # ------------------------------------------------------------------ parts
 
 class Part:
-    KINDS = ("ellipsoid", "cone", "box")
+    KINDS = ("ellipsoid", "cone", "cylinder", "box")
 
     def __init__(self, spec, mat_names, where="part"):
         self.name = spec.get("name", where)
@@ -113,7 +113,7 @@ class Part:
         if self.kind == "ellipsoid":
             self.c, self.r = np.asarray(g["c"], float), np.asarray(g["r"], float)
             self.center, self.radius_bound = self.c, float(self.r.max())
-        elif self.kind == "cone":
+        elif self.kind in ("cone", "cylinder"):
             self.a, self.b = np.asarray(g["a"], float), np.asarray(g["b"], float)
             self.r1, self.r2 = float(g["r1"]), float(g.get("r2", g["r1"]))
             if np.linalg.norm(self.b - self.a) < 1e-6:
@@ -153,6 +153,8 @@ class Part:
             d = sdf.ellipsoid(c, self.c, self.r)
         elif self.kind == "cone":
             d = sdf.round_cone(c, self.a, self.b, self.r1, self.r2)
+        elif self.kind == "cylinder":
+            d = sdf.capped_cone(c, self.a, self.b, self.r1, self.r2)
         else:
             d = sdf.round_box(c, self.c, self.half, self.round)
         if self.noise is not None:
@@ -533,8 +535,12 @@ class Object:
             if "ramp" in spec:
                 ramp = spec["ramp"]
                 ramp = lib["ramps"][ramp] if isinstance(ramp, str) else ramp
-                m["idx"] = list(range(len(colors), len(colors) + len(ramp)))
-                colors += [snap(c) for c in ramp]
+                m["idx"] = []
+                for c in ramp:                      # materials sharing a colour share its index
+                    c = snap(c)
+                    if c not in colors[1:]:
+                        colors.append(c)
+                    m["idx"].append(colors.index(c, 1))
                 bands = spec.get("bands", DEFAULT_BANDS.get(len(ramp)))
                 if bands is None or len(bands) != len(ramp) - 1:
                     raise ValueError(f"material {name}: needs {len(ramp) - 1} band thresholds")
@@ -542,9 +548,11 @@ class Object:
             else:
                 col = spec["color"]
                 col = lib["singles"][col] if isinstance(col, str) else col
-                m["idx"] = [len(colors)]
+                col = snap(col)
+                if col not in colors[1:]:
+                    colors.append(col)
+                m["idx"] = [colors.index(col, 1)]
                 m["bands"] = []
-                colors.append(snap(col))
             self.mats[name] = m
         # the ground shadow is an opaque checker in one colour of the bank (a GBA tile has no alpha)
         self.shadow_idx = len(colors)

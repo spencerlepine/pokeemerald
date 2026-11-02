@@ -1,0 +1,22 @@
+# Bright Tree Village (Endor, vanilla Fortree City): the first end-to-end area. A mockup of the tools
+# together: a dirt path (signal) through moss, redwood trunks as the walls (edge), huts on stilts
+# joined by rope bridges (landmarks), a fallen log (edge). Nothing noisy stands in the path.
+name: bright-tree-village
+planet: endor
+size: [22, 12]
+ground: {base: [112, 152, 104], speck: [88, 128, 88], density: 0.06}
+paths:
+  - {rect: [0, 7, 22, 9], colour: [192, 112, 88]}
+  - {rect: [9, 2, 11, 7], colour: [192, 112, 88]}
+objects:
+  - {model: models/endor/redwood-trunk.yaml, at: [0, 0]}
+  - {model: models/endor/redwood-trunk.yaml, at: [3, 1]}
+  - {model: models/endor/redwood-trunk.yaml, at: [19, 0]}
+  - {model: models/endor/redwood-trunk.yaml, at: [16, 1]}
+  - {model: models/endor/redwood-trunk.yaml, at: [0, 9]}
+  - {model: models/endor/redwood-trunk.yaml, at: [19, 9]}
+  - {model: models/endor/ewok-hut.yaml, at: [6, 2]}
+  - {model: models/endor/ewok-hut.yaml, at: [12, 2]}
+  - {model: models/endor/rope-bridge.yaml, fill: [9, 4, 12, 5]}
+  - {model: models/endor/fallen-log.yaml, at: [5, 10]}
+  - {model: models/endor/fallen-log.yaml, at: [13, 10]}

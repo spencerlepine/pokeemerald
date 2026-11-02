@@ -1,0 +1,24 @@
+# art:endor:fern-undergrowth. The forest-floor "tall grass": a low clump of fern fronds in one cell,
+# walkable (the player wades through it, like vanilla tall grass). Low contrast against the moss so
+# the walkable ground stays readable (signal, not noise).
+name: fern-undergrowth
+description: Low fern fronds, the Endor tall-grass tile; walkable.
+palette: endor
+cells: [1, 1]
+foot: [8, 14]
+box: null
+footprint: 0
+seed: 4
+render: {depth_jump: 0.3, ao: {strength: 0.8, threshold: 0.4}, outline: true}
+
+materials:
+  frond: {ramp: fern_leaf, bands: [0.1, 0.6]}
+
+groups:
+  body: {k: 0.0}
+
+parts:
+  - branches: {start: [0.0, 0.0, 0.0], dir: [0, 0, 1], length: 0.3, radius: 0.045, depth: 1, split: [5, 5],
+               spread: [55, 75], shrink: [0.9, 1.1], taper: 0.5, side_start: [0.0, 0.1], continue_leader: false,
+               gravity: 0.35, min_radius: 0.03, seed: 4}
+    mat: frond

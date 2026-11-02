@@ -84,3 +84,23 @@ def value_noise(p, seed=0):
                     wz = t[:, 2] if dz else 1 - t[:, 2]
                     out += wx * wy * wz * _hash(i[:, 0] + dx, i[:, 1] + dy, i[:, 2] + dz, seed)
     return out * 2 - 1
+
+
+def capped_cone(p, a, b, ra, rb):
+    """Exact SDF of a tapered cylinder with FLAT ends: radius ra at a, rb at b (iq's sdCappedCone).
+    `round_cone` is a capsule (spheres at both ends); this is what walls, drums and roofs need."""
+    ba = b - a
+    baba = ba @ ba
+    pa = p - a
+    paba = (pa @ ba) / baba
+    papa = np.einsum("ij,ij->i", pa, pa)
+    x = np.sqrt(np.maximum(papa - paba * paba * baba, 0.0))
+    cax = np.maximum(0.0, x - np.where(paba < 0.5, ra, rb))
+    cay = np.abs(paba - 0.5) - 0.5
+    rba = rb - ra
+    k = rba * rba + baba
+    f = np.clip((rba * (x - ra) + paba * baba) / k, 0.0, 1.0)
+    cbx = x - ra - f * rba
+    cby = paba - f
+    s = np.where((cbx < 0.0) & (cay < 0.0), -1.0, 1.0)
+    return s * np.sqrt(np.minimum(cax * cax + cay * cay * baba, cbx * cbx + cby * cby * baba))
