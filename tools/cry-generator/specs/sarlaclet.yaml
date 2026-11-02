@@ -1,0 +1,28 @@
+name: sarlaclet
+slot: gulpin
+brief: "SARLACLET: creature call that fits its look and size. Young sarlacc that can swallow anything."
+kind: creature
+size: 0.2
+seed: 521
+layers:
+  # Family DNA (Tatooine sarlaccs): a wet gulping "glorp" on a closed "u -> m" throat with a bubbling growl, then a burp of noise.
+  # Sarlaclet: a small hungry "gulp-glorp".
+  - type: voice
+    pitch: [[0, 420], [0.06, 300]]
+    source: {pulse: 0.8, saw: 0.4, pulse_width: 0.3, noise: 0.06}
+    vowels: [[0, o], [0.06, u]]
+    env: [[0, 0], [0.008, 1], [0.05, 0.6], [0.07, 0]]
+    emphasis: 0.6
+  - type: voice
+    at: 0.1
+    pitch: [[0, 380], [0.08, 460], [0.25, 300]]
+    source: {pulse: 0.8, saw: 0.4, pulse_width: 0.3, noise: 0.08}
+    vowels: [[0, u], [0.1, o], [0.25, m]]
+    env: [[0, 0], [0.01, 1], [0.18, 0.7], [0.26, 0]]
+    vibrato: {rate: 18, depth: 0.06}
+    growl: 0.4
+    growl_rate: 30
+    emphasis: 0.6
+  - type: click
+    times: [0.0, 0.1]
+    gain: 0.4

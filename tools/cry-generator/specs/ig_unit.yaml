@@ -1,0 +1,41 @@
+name: ig_unit
+slot: electabuzz
+brief: "IG UNIT: electronic droid voice: beeps, whistles and servo whirs. IG-series assassin droid crackling with power."
+kind: droid
+size: 0.5
+seed: 502
+layers:
+  # Family DNA (IG-series droids): crackling electric buzz (square tone, fast square warble) over a servo, stepped two-tone vocoder bark.
+  # IG assassin: a head-rotation servo, a cold stepped three-tone vocoder phrase, and a long crackling power surge that sputters out.
+  - type: servo
+    pitch: [[0, 110], [0.2, 330], [0.35, 280], [0.42, 120]]
+    harmonics: [1.0, 0.8, 0.6, 0.4, 0.2]
+    env: [[0, 0], [0.04, 0.7], [0.36, 0.6], [0.44, 0]]
+    grit: 0.6
+    drive: 2
+    gain: 0.6
+  - type: tone
+    at: 0.08
+    wave: square
+    pitch: [[0, 330], [0.14, 330], [0.141, 440], [0.28, 440], [0.281, 370], [0.5, 330]]
+    pitch_step: 0.02
+    warble: {rate: 40, depth: 0.08, shape: square}
+    env: [[0, 0], [0.005, 1], [0.13, 0.9], [0.135, 0.2], [0.145, 1], [0.27, 0.9], [0.275, 0.2], [0.285, 1], [0.48, 0.7], [0.52, 0]]
+    drive: 2.5
+  - type: tone
+    at: 0.58
+    wave: square
+    pitch: [[0, 180], [0.3, 260], [0.8, 150]]
+    warble: {rate: 52, depth: 0.3, shape: square}
+    env: [[0, 0], [0.03, 0.8], [0.4, 0.7], [0.6, 0.4], [0.84, 0]]
+    drive: 3
+    gain: 0.8
+  - type: noise
+    at: 0.58
+    band: [[0, 2600], [0.8, 1600]]
+    q: 1.5
+    env: [[0, 0], [0.01, 0.6], [0.06, 0.1], [0.1, 0.6], [0.2, 0.2], [0.26, 0.6], [0.4, 0.15], [0.48, 0.5], [0.6, 0.1], [0.66, 0.4], [0.84, 0]]
+    gain: 0.4
+  - type: click
+    times: [0.0, 0.58, 0.68, 0.84, 1.06, 1.24]
+    gain: 0.5

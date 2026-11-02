@@ -1,0 +1,33 @@
+name: kingcrab
+slot: kingler
+brief: "KINGCRAB: creature call that fits its look and size. Crab with one huge claw."
+kind: creature
+size: 0.55
+seed: 532
+layers:
+  # Family DNA (Kamino shore crabs): pincer-clack clicks, frothy bubbling noise and a chittering "kr-kr-krrr" voice.
+  # Kingcrab: one huge, heavy claw-slam, a deeper rasping "KRRRAAH" and a long frothing bubble hiss.
+  - type: click
+    times: [0.0, 0.015]
+    gain: 0.9
+  - type: voice
+    at: 0.03
+    pitch: [[0, 260], [0.1, 340], [0.45, 300], [0.65, 220]]
+    pitch_step: 0.04
+    source: {pulse: 0.8, saw: 0.6, pulse_width: 0.25, noise: 0.2}
+    vowels: [[0, er], [0.15, a], [0.45, aw], [0.65, rr]]
+    env: [[0, 0], [0.008, 1], [0.45, 0.75], [0.67, 0]]
+    growl: 0.6
+    growl_rate: 44
+    jitter: 0.03
+    drive: 2.4
+  - type: noise
+    at: 0.55
+    band: [[0, 1800], [0.7, 1300]]
+    q: 2.5
+    env: [[0, 0], [0.04, 0.6], [0.12, 0.25], [0.16, 0.6], [0.28, 0.25], [0.34, 0.5], [0.5, 0.2], [0.56, 0.4], [0.74, 0]]
+    gain: 0.6
+  - type: click
+    at: 0.55
+    times: [0.1, 0.3, 0.5, 0.62]
+    gain: 0.6

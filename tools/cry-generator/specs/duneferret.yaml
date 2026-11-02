@@ -1,0 +1,31 @@
+name: duneferret
+slot: furret
+brief: "DUNEFERRET: creature call that fits its look and size. Long burrowing ferret."
+kind: creature
+size: 0.4
+seed: 512
+layers:
+  # Family DNA (Tatooine burrowers): quick alert chitter on a pulse throat, "e -> i", flicking upward.
+  # Duneferret: a lower, longer "chik-chik-chirrrr" dook that slides through its long body.
+  - type: voice
+    pitch: [[0, 520], [0.04, 660]]
+    source: {pulse: 0.8, saw: 0.4, pulse_width: 0.3, noise: 0.08}
+    vowels: [[0, e], [0.04, i]]
+    env: [[0, 0], [0.005, 1], [0.04, 0.6], [0.05, 0]]
+    emphasis: 0.6
+  - type: voice
+    at: 0.07
+    pitch: [[0, 540], [0.04, 680]]
+    source: {pulse: 0.8, saw: 0.4, pulse_width: 0.3, noise: 0.08}
+    vowels: [[0, e], [0.04, i]]
+    env: [[0, 0], [0.005, 1], [0.04, 0.6], [0.05, 0]]
+    emphasis: 0.6
+  - type: voice
+    at: 0.14
+    pitch: [[0, 560], [0.06, 720], [0.24, 500]]
+    source: {pulse: 0.8, saw: 0.4, pulse_width: 0.3, noise: 0.08}
+    vowels: [[0, e], [0.08, i], [0.24, er]]
+    env: [[0, 0], [0.006, 1], [0.18, 0.7], [0.25, 0]]
+    growl: 0.4
+    growl_rate: 46
+    emphasis: 0.6

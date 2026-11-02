@@ -1,0 +1,24 @@
+name: sandmeer
+slot: sentret
+brief: "SANDMEER: creature call that fits its look and size. Meerkat that stands on its tail."
+kind: creature
+size: 0.25
+seed: 511
+layers:
+  # Family DNA (Tatooine burrowers): a quick, alert chitter on a pulse throat, "e -> i", that flicks upward.
+  # Sandmeer: a single sharp alarm "chip-chirr!".
+  - type: voice
+    pitch: [[0, 640], [0.04, 820]]
+    source: {pulse: 0.8, saw: 0.4, pulse_width: 0.3, noise: 0.08}
+    vowels: [[0, e], [0.04, i]]
+    env: [[0, 0], [0.005, 1], [0.04, 0.6], [0.05, 0]]
+    emphasis: 0.6
+  - type: voice
+    at: 0.06
+    pitch: [[0, 700], [0.05, 900], [0.12, 760]]
+    source: {pulse: 0.8, saw: 0.4, pulse_width: 0.3, noise: 0.08}
+    vowels: [[0, e], [0.06, i], [0.12, er]]
+    env: [[0, 0], [0.006, 1], [0.09, 0.7], [0.13, 0]]
+    growl: 0.3
+    growl_rate: 60
+    emphasis: 0.6
