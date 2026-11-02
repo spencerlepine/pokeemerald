@@ -101,5 +101,11 @@ sh10() { town; lua 'emu:write8(0x0203760e, 4); return 1'; k START; w 0.5; k A; w
 s96() { party; w 2; k A; w 1.5; k DOWN; w 0.4; k DOWN; w 0.4; k A; w 1.5; k A; w 2.5; k DOWN DOWN DOWN DOWN DOWN; w 0.5; k A; w 2.5;   # give ORANGE MAIL -> Easy Chat
         shot 96_easychat_mail; k A; w 2; shot 97_easychat_categories; k A; w 2; shot 98_easychat_words;
         k B; w 1; k B; w 1; k B; w 1; k UP A; w 2.5; k B; w 2; k B; w 2.5; k B; w 1; }
+sh18() { bag 3; k A; w 1; k A; w 3.5; shot h18_berry_tag; k B; w 3; unbag; }
+sh29() { tp 1 1 5 2; k UP A; w 3; shot h29_wall_clock; k A; w 3; }
+sh14() { tp 13 4 23 10; k UP A; w 2; k A; w 2; local i; for i in 1 2 3 4 5 6 7 8 9 10 11; do k A; w 1.8;   # blender with 3 NPCs
+         case $i in 5) shot h14_blender_start;; 9) shot h15_blender_spin;; 10) shot h16_blender_ranking;; 11) shot h17_blender_results;; esac; done
+         }   # the blender cannot be left from the bag: run h14 last, then ./capture.sh boot
 
+if [ "${1:-}" = do ]; then shift; "$@"; exit; fi   # ./capture.sh do FUNC ARGS: run one helper with arguments
 for s in "$@"; do if declare -F "$s" >/dev/null; then "$s"; else "s$s"; fi; done

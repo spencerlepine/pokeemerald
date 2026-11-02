@@ -179,8 +179,23 @@ FAMILIES = {
     ('graphics/frontier_pass/cursor.png', 'ui', ALL),
     ('graphics/frontier_pass/map_cursor.png', 'ui', ALL),
   ],
+  '8c_berry_clock': [
+    # berry tag: bank 0 is the panel and the flavour circle sprite (red -> gold); bank 4 slots 12-13 are the
+    # blue backdrop stripes. Banks 1-3 (berry colour gradients) and the pink female stripes (bank 5) stay.
+    ('graphics/bag/check_berry.pal', 'ui', ALL + [76, 77]),
+    # berry blender: machine body, frame and the four player arrows (the red gems, one shared palette).
+    # Particles, score symbols and the player-name text stay.
+    ('graphics/berry_blender/center.png', 'ui', ALL),
+    ('graphics/berry_blender/outer.png', 'ui', ALL),
+    ('graphics/berry_blender/arrow.png', 'ui', ALL),
+    # wall clock: only the teal backdrop (slot 9) and the matching prompt fill; the blue / pink face is the
+    # player's gender colour and stays
+    ('graphics/wallclock/male.pal', 'ui', [9]),
+    ('graphics/wallclock/female.pal', 'ui', [9]),
+    ('graphics/wallclock/text_prompt.pal', 'ui', [1]),
+  ],
 }
-DONE = ['1_text_windows', '2_party_summary', '3_bag_pokeblock', '4_pokedex', '5_starnav', '6_pc_storage', '7_battle_naming', '8_card_shop', '8b_easychat_frontier']
+DONE = ['1_text_windows', '2_party_summary', '3_bag_pokeblock', '4_pokedex', '5_starnav', '6_pc_storage', '7_battle_naming', '8_card_shop', '8b_easychat_frontier', '8c_berry_clock']
 
 RGB_RE = re.compile(r'RGB\((\d+), *(\d+), *(\d+)\)')
 def tx_rgb5(m, fam):
