@@ -1,0 +1,77 @@
+# Arena Palace (Grand Arena): hot-swap of MUS_B_PALACE (wiki audio:MUS_B_PALACE, FACILITY / LOOP).
+# STYLE of "The High Council Meeting and Qui-Gon's Funeral" (soundtrack:phantom-menace:16): an original melody,
+# not a quote. Taken from the cue: E minor colour, the funeral's slow 76 bpm pulse (the cue's 152 halved), a
+# solemn line over a gently rocking accompaniment, a low drum like the pyre's procession, bells at the phrase ends.
+# Brief (sw_subject): Battle Palace, calm, meditative, temple-like.
+name: arena-palace
+replaces: MUS_B_PALACE
+form: LOOP
+voicegroup: b_palace              # vanilla: gamelan 10, nylon guitar 24, fretless 35, harp 46, drumset 0, squares, waves
+master_volume: 100
+tempo: 76
+steps_per_beat: 2                 # eighth-note grid
+time_signature: [4, 4]
+seed: 21
+
+parts:
+  gamelan: {program: 10, channel: 0, volume: 96,  pan: 6,   range: [E4, G5], gate: 0.95, humanize: {vel: 5}}
+  harp:    {program: 46, channel: 1, volume: 78,  pan: -22, octave: 3, gate: 0.9, humanize: {vel: 6}}
+  bass:    {program: 35, channel: 2, volume: 96,  pan: 0,   octave: 2, gate: 0.92, role: bass}
+  drums:   {program: 0,  channel: 3, volume: 70,  pan: 14,  role: drums, kit: {taiko: 50, tri: 80, gong: 61}}
+  wave:    {program: 87, channel: 4, volume: 44,  pan: -30, octave: 4, gate: 0.96, mono: true}
+  echo:    {program: 82, channel: 5, volume: 34,  pan: 34,  gate: 0.6, mono: true}
+
+progressions:
+  verse:  "Em | C | Am | Bm | Em | C | D | B"
+  bridge: "Am | Em | C | G | Am | Em | C:4 D:4 | B"
+  intro:  "Em | B"
+
+phrases:
+  rock:  "^1:1 ^2:1 ^3:1 ^2:1 ^1:1 ^2:1 ^3:1 ^2:1"
+  rock_up: "^1:1 ^2:1 ^3:1 ^4:1 ^3:1 ^2:1 ^3:1 ^2:1"
+  root:  "^1:6 ^3:2"
+  pad:   "^2:8"
+  tune_a: |
+    B4:4 E5:2 D5:2 | E5:3 D5:1 C5:2 B4:2 | A4:4 C5:2 E5:2 | D5:6 r:2 |
+    B4:2 G4:2 A4:2 B4:2 | C5:4 E5:2 G5:2 | F#5:3 E5:1 D5:2 A4:2 | B4:6 r:2
+  tune_b: |
+    C5:4 E5:4 | B4:3 A4:1 G4:2 E4:2 | G4:4 C5:2 E5:2 | D5:6 B4:2 |
+    C5:3 B4:1 A4:2 E5:2 | G5:4 F#5:2 E5:2 | E5:2 C5:2 D5:2 F#5:2 | D#5:6 r:2
+  echo_a: |
+    r:2 B4:4 E5:2 | r:2 E5:3 D5:1 C5:2 | r:2 A4:4 C5:2 | r:8 |
+    r:2 B4:2 G4:2 A4:2 | r:2 C5:4 E5:2 | r:2 F#5:3 E5:1 D5:2 | r:8
+
+grooves:
+  temple:
+    taiko: "x.......|....o...|x.......|........"
+    tri:   "........|........|........|....x..."
+  temple_end:
+    taiko: "x...o...|x.o.x.o."
+    gong:  "........|........"
+    tri:   "........|......x."
+  bell:
+    gong:  "x.......|........"
+
+sections:
+  intro:
+    bars: 2
+    chords: intro
+    ramp: {harp: [-16, 0]}
+    parts: {harp: rock, bass: root, drums: bell}
+  a:
+    bars: 8
+    chords: verse
+    parts: {gamelan: tune_a, harp: rock, bass: root, drums: temple}
+  b:
+    bars: 8
+    chords: bridge
+    parts: {gamelan: tune_b, harp: rock_up, bass: root, drums: temple, wave: pad}
+  a2:
+    bars: 8
+    chords: verse
+    fill: temple_end
+    gain: {gamelan: -6}
+    parts: {gamelan: tune_a, harp: rock, bass: root, drums: temple, echo: echo_a, wave: pad}
+
+arrangement: [intro, a, b, a2]
+loop_start: a
