@@ -39,6 +39,9 @@ def write(song: Song, path) -> None:
     us = round(60_000_000 / song.tempo)
     cond = [(0, 0, b"\xff\x51\x03" + us.to_bytes(3, "big")),
             (0, 1, b"\xff\x58\x04" + bytes([num, {1: 0, 2: 1, 4: 2, 8: 3, 16: 4}[den], 24, 8]))]
+    for tick, bpm in song.tempo_map:
+        if tick:
+            cond.append((tick, 4, b"\xff\x51\x03" + round(60_000_000 / bpm).to_bytes(3, "big")))
     looped = song.intro_clocks < song.total_clocks
     if looped:
         cond.append((song.intro_clocks, 2, _meta_text(gba.LOOP_BEGIN)))
@@ -57,9 +60,14 @@ def write(song: Song, path) -> None:
                 ev.append((0, 4, bytes([0xB0 | c, gba.MIDI_CC[cc], v])))
         if part.priority is not None:
             ev.append((0, 5, bytes([0xB0 | c, gba.MIDI_CC["priority"], int(part.priority)])))
+        cur = part.program
         for n in song.notes:
             if n.part != part.name:
                 continue
+            prog = part.program if n.program is None else n.program
+            if prog != cur:                    # section `programs:` override: a program change before the note
+                ev.append((n.tick, 15, bytes([0xC0 | c, prog])))
+                cur = prog
             ev.append((n.tick, 20, bytes([0x90 | c, n.key, n.vel])))
             ev.append((n.tick + n.dur, 10, bytes([0x80 | c, n.key, 0])))    # offs sort before ons at a tick
         tracks.append(_track(ev, song.total_clocks))

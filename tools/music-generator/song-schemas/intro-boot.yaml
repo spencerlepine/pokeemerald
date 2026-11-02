@@ -1,0 +1,249 @@
+# Boot cutscene (audio:MUS_INTRO, hot-swap): game/src/intro.c scenes 1 and 2, from the fade-in after the copyright
+# screen until scene 3 starts MUS_INTRO_BATTLE (intro frame 2069, about 34.6 s). Original music in the Star Wars
+# idiom (the wiki brief: "original composition; do not quote film themes"), scored to the picture like a film cue:
+# the tempo changes from section to section (as vanilla MUS_INTRO does, 8 times) so every scene change lands on
+# a bar line, and the hits inside a section sit on the 12-steps-per-beat grid at the frame of the event.
+# Every position below is checked against the frames in ../cues/intro-boot.yaml by `cuesync.py check` (engine
+# timing) and on the real ROM by `romsync.py` (frame log + recording).
+#
+#   bars 1-2   dawn, 108 -> 106 bpm  canyon before sunrise, D minor. Flute line rises as the big drop slides along
+#                                    the overhang (bar 1 beat 3.25 = frame 74); harp runs down as it falls
+#   bars 3-4   splash, 100 -> 98     bar 3 downbeat = the drop hits the pool (frame 269): low harp, timpani, strings
+#                                    move to Bb; the two small drops ping on 3:4.5 and 4:1 (harp + square glints)
+#   bars 5-7   rise, 126             the camera climbs the canyon: horn theme over harp and string arpeggios,
+#                                    sparkles on the downbeat. Bar 7 is the Empire: the Lambda shuttle on beat 2.5
+#                                    (Eb minor stab, frame 831), the TIE escort a triplet after beat 3 (D minor stab
+#                                    and a square shriek, frame 855)
+#   bar 8      suns, 114             the pan stops on the twin suns (frame 902): D major tutti, crash; cymbal swell
+#                                    under the fade to white. D major is also the dominant of the chase
+#   bars 9-17  chase, 156 (bar 17 160)  speeder vs Tusken raiders, G minor. Scene 2 lands on bar 9 (frame 1029, after
+#                                    the 3 lag frames of the scene load). String ostinato, tuba, square arpeggios;
+#                                    brass + timpani + snare stab on every near raider popping up, square shrieks
+#                                    for the far ones. Trumpet theme when the speeder surges (bar 11), sequence when
+#                                    it falls back (bar 13), held tension (15), run up as it races off (16:3.25)
+#   bars 18-19 finale, 136           the scrolling stops (frame 1857): G major hit, horn call under the fade to white
+name: intro-boot
+replaces: MUS_INTRO
+form: CUE
+loop: false
+voicegroup: intro             # vanilla mus_intro's own: strings, horn, trumpet, tuba, timpani, harp, flute, kit, squares
+master_volume: 90
+tempo: 108
+steps_per_beat: 12            # 16ths (3), triplet 8ths (4), 8ths (6) and the odd hit offsets on one grid
+time_signature: [4, 4]
+seed: 1977
+cues: ../cues/intro-boot.yaml
+
+parts:
+  strings: {program: 48, channel: 0, volume: 84,  pan: -20, range: [G2, C5], gate: 0.98}
+  horn:    {program: 60, channel: 1, volume: 92,  pan: -8,  range: [C3, D5], gate: 0.95}
+  trumpet: {program: 56, channel: 2, volume: 100, pan: 6,   range: [F4, A5], gate: 0.9, humanize: {vel: 3}}
+  tuba:    {program: 58, channel: 3, volume: 92,  pan: 0,   range: [C2, C3], gate: 0.85}
+  timpani: {program: 47, channel: 4, volume: 104, pan: 0,   range: [D2, Bb2], gate: 1.0}
+  harp:    {program: 46, channel: 5, volume: 84,  pan: 26,  range: [D2, D6], gate: 0.9}
+  flute:   {program: 73, channel: 6, volume: 88,  pan: 14,  range: [A4, A5], gate: 0.95, lfo_speed: 30, lfo_delay: 24, mod: 3}  # noise in the chase
+  drums:   {program: 0,  channel: 7, volume: 84,  pan: 16,  role: drums, kit: {crash: 57, swell: 60, snare: 40}}
+  sq1:     {program: 84, channel: 8, volume: 44,  pan: 30,  octave: 4, range: [G4, D7], gate: 0.6, mono: true}
+  sq2:     {program: 80, channel: 9, volume: 40,  pan: -30, range: [D4, Bb6], gate: 0.7, mono: true}
+
+phrases:
+  arp: "^1:6 ^3:6 ^1+:6 ^3:6 ^2:6 ^3:6 ^1+:6 ^3:6"
+  ost_g: "G3:3 A3:3 Bb3:3 A3:3 G3:3 A3:3 Bb3:3 A3:3 G3:3 A3:3 Bb3:3 A3:3 G3:3 A3:3 Bb3:3 A3:3"
+
+grooves:
+  dawn2:
+    swell: "................................................ | .......................................x........"
+  rise:
+    crash: "................................................ | ................................................ | ..................X............................."
+    snare: "................................................ | ................................................ | ............................X.......x.x.x.x.x.x."
+  suns:
+    crash: "X..............................................."
+    swell: "...........................x...................."
+  chase_a:
+    crash: "X............................................... | ................................................"
+  finale:
+    crash: "X............................................... | ................................................"
+
+sections:
+  dawn1:
+    bars: 2
+    tempo: 108
+    tempo_at: [[4, 106]]
+    chords: "Dm | Dm"
+    gain: {strings: -34, horn: -40, flute: -22, harp: -18, timpani: -30}
+    parts:
+      strings: "D3:48 | ~:48"
+      horn:    "r:48 | r:24 A3:24"
+      flute:   "r:27 D5:9 E5:6 F5:6 | A5:24 G5:6 F5:6 E5:12"
+      harp:    "D3:12 r:15 D6:3 A5:3 F5:3 D5:3 r:9 | r:39 _A5:3 _F5:2 _D5:2 _A4:2"
+      timpani: "D2:12 r:36 | r:48"
+  dawn2:
+    bars: 2
+    tempo: 100
+    tempo_at: [[4, 98]]
+    chords: "Bb | Gm:24 A:24"
+    gain: {strings: -28, horn: -36, flute: -18, harp: 0, timpani: 0, sq1: -10, sq2: -8, drums: -20}
+    ramp: {strings: [0, 18], horn: [0, 16]}
+    parts:
+      strings: "Bb2:48 | G2:24 A2:24"
+      horn:    "F3:48 | D3:24 r:24"
+      flute:   "D5:30 C5:6 A4:12 | Bb4:12 C5:12 D5:12 E5:12"
+      harp:    ">D2:6 A2:6 D3:6 F3:6 r:18 >A5:6 | >D6:6 r:6 G3:6 Bb3:6 D4:6 r:6 A3:6 C#4:6"
+      timpani: ">D2:12 r:36 | r:24 _A2:3 _A2:3 A2:3 A2:3 A2:3 A2:3 >A2:3 >A2:3"
+      sq1:     ">D6:3 r:39 >A6:3 r:3 | >D7:3 r:45"
+      sq2:     ">D5:3 r:39 >A5:3 r:3 | >D6:3 r:45"
+      drums:   dawn2
+  rise:
+    bars: 3
+    tempo: 126
+    chords: "Bb | C | Gm:18 Ebm:10 Dm:20"
+    gain: {strings: -16, harp: -10, sq1: -16, horn: -6, tuba: -14, timpani: -6, drums: -8}
+    ramp: {strings: [0, 16], horn: [0, 14]}
+    parts:
+      horn:    "D4:12 A4:18 G4:6 F4:6 G4:6 | A4:24 C5:12 Bb4:6 A4:6 | G4:18 >Gb4:10 >F4:20"
+      strings: "D4:6 F4:6 Bb4:6 F4:6 D4:6 F4:6 Bb4:6 F4:6 | E4:6 G4:6 C5:6 G4:6 E4:6 G4:6 C5:6 G4:6 | D4:6 G4:6 r:36"
+      harp:    ">Bb3:3 D4:3 F4:3 Bb4:3 D5:3 F5:3 Bb5:3 r:27 | C4:3 E4:3 G4:3 C5:3 E5:3 G5:3 C6:3 r:27 | r:48"
+      sq1:     ">Bb5:3 D6:3 F6:3 Bb6:3 r:6 F6:3 r:9 D6:3 r:9 Bb6:3 r:3 | r:12 C6:3 r:9 G6:3 r:9 E6:3 r:9 | r:48"
+      tuba:    "Bb2:48 | C3:48 | G2:18 >Eb2:10 >D2:20"
+      trumpet: "r:48 | r:48 | r:18 >Bb4:6 r:4 >A4:8 r:12"
+      sq2:     "r:48 | r:48 | r:28 >E6:2 D#6:2 D6:2 C#6:2 C6:2 B5:2 Bb5:2 A5:2 Ab5:2 G5:2"
+      timpani: "Bb2:12 r:36 | r:48 | r:18 >D2:10 r:8 A2:3 A2:3 A2:3 >A2:3"
+      drums:   rise
+  suns:
+    bars: 1
+    tempo: 114
+    chords: "D"
+    gain: {sq1: -10, sq2: -6, harp: -8, strings: -6}
+    parts:
+      trumpet: ">D5:18 A4:6 D5:6 E5:6 F#5:12"
+      horn:    ">F#4:24 A4:24"
+      strings: "r:24 D4:6 E4:6 F#4:6 A4:6"
+      timpani: ">D2:12 r:24 D2:3 D2:3 D2:3 >D2:3"
+      sq1:     "A5:12 F#5:12 D5:12 A4:12"
+      sq2:     "D4:24 F#4:24"
+      harp:    "r:3 D4:3 F#4:3 A4:3 D5:3 F#5:3 A5:3 D6:3 r:24"
+      drums:   suns
+  chase_a:
+    programs: {flute: 127}   # the flute's track turns into the noise snare (no Direct Sound voice)
+    bars: 2
+    tempo: 156
+    chords: "Gm | Eb:24 D:24"
+    gain: {strings: -12, tuba: -8, sq1: -24, timpani: -4, sq2: -8, drums: -6}
+    parts:
+      strings: [ost_g, "Eb3:3 F3:3 G3:3 F3:3 Eb3:3 F3:3 G3:3 F3:3 D3:3 E3:3 F#3:3 E3:3 D3:3 E3:3 F#3:3 E3:3"]
+      tuba:    "G2:9 G2:3 G2:6 G2:6 G2:9 G2:3 Bb2:6 C3:6 | Eb2:9 Eb2:3 Eb2:6 Eb2:6 D2:9 D2:3 D2:6 D2:6"
+      sq1:     arp
+      horn:    "r:44 >Bb4:4 | r:24 >A4:6 r:6 A4:6 A4:6"
+      trumpet: "r:44 >D5:4 | r:24 >F#4:6 r:6 F#4:6 F#4:6"
+      timpani: ">G2:12 r:32 >G2:4 | r:24 D2:6 r:6 D2:6 >D2:6"
+      flute:   "r:6 _C6:3 r:3 C6:3 r:3 _C6:3 r:9 _C6:3 r:3 C6:3 r:3 _C6:2 >C6:3 r:1 | r:6 _C6:3 r:3 C6:3 r:3 _C6:3 r:9 _C6:3 r:3 C6:3 r:3 _C6:3 C6:3"
+      sq2:     "r:20 >G6:2 F6:2 D6:2 r:22 | r:48"
+      drums:   chase_a
+  chase_b:
+    programs: {flute: 127}   # the flute's track turns into the noise snare (no Direct Sound voice)
+    bars: 2
+    chords: "Gm:24 F:24 | Eb:24 Cm:12 D:12"
+    gain: {strings: -14, tuba: -8, sq1: -26, timpani: -4, sq2: -8, horn: -10, drums: -6}
+    parts:
+      trumpet: ">G4:6 Bb4:6 D5:18 C5:6 D5:6 F5:6 | Eb5:12 D5:6 C5:6 Bb4:12 A4:12"
+      horn:    "D4:24 C4:24 | r:9 >G4:3 G4:12 Eb4:12 F#4:12"
+      strings: "G3:3 A3:3 Bb3:3 A3:3 G3:3 A3:3 Bb3:3 A3:3 F3:3 G3:3 A3:3 G3:3 F3:3 G3:3 A3:3 G3:3 | Eb3:3 F3:3 G3:3 F3:3 Eb3:3 F3:3 G3:3 F3:3 C3:3 D3:3 Eb3:3 D3:3 D3:3 E3:3 F#3:3 E3:3"
+      tuba:    "G2:9 G2:3 G2:6 G2:6 F2:9 F2:3 F2:6 F2:6 | Eb2:12 Eb2:6 Eb2:6 C2:9 C2:3 D2:6 D2:6"
+      sq1:     arp
+      sq2:     "r:24 >G6:2 F6:2 D6:2 r:18 | r:9 >Bb6:2 G6:2 r:35"
+      timpani: ">G2:12 r:36 | r:9 >G2:3 r:24 D2:6 D2:6"
+      flute:   ">C6:3 r:3 _C6:3 r:3 C6:3 r:3 _C6:3 r:9 _C6:3 r:3 C6:3 r:3 _C6:3 r:3 | r:6 _C6:3 >C6:3 C6:3 r:3 _C6:3 r:9 _C6:3 r:3 C6:3 r:3 _C6:3 r:3"
+  chase_c:
+    programs: {flute: 127}   # the flute's track turns into the noise snare (no Direct Sound voice)
+    bars: 2
+    tempo: 160
+    chords: "Cm:24 Bb:24 | Eb:12 Cm:12 D:24"
+    gain: {strings: -14, tuba: -8, sq1: -26, timpani: -4, sq2: -8, horn: -8, drums: -6}
+    parts:
+      trumpet: "C5:6 Eb5:6 G5:18 F5:6 Eb5:6 D5:6 | Eb5:12 D5:6 C5:6 D5:24"
+      horn:    "G3:24 r:4 >Eb4:4 D4:16 | Eb4:12 C4:12 r:4 >F#4:4 D4:16"
+      strings: "C3:3 D3:3 Eb3:3 D3:3 C3:3 D3:3 Eb3:3 D3:3 Bb2:3 C3:3 D3:3 C3:3 Bb2:3 C3:3 D3:3 C3:3 | Eb3:3 F3:3 G3:3 F3:3 C3:3 D3:3 Eb3:3 D3:3 D3:3 E3:3 F#3:3 E3:3 D3:3 E3:3 F#3:3 E3:3"
+      tuba:    "C3:9 C3:3 C3:6 C3:6 Bb2:9 Bb2:3 Bb2:6 Bb2:6 | Eb2:9 Eb2:3 C2:6 C2:6 D2:9 D2:3 D2:6 D2:6"
+      sq1:     arp
+      sq2:     "r:42 >G6:2 F6:2 D6:2 | r:48"
+      timpani: ">G2:12 r:16 >G2:4 r:16 | r:28 >D2:4 r:4 D2:6 D2:6"
+      flute:   ">C6:3 r:3 _C6:3 r:3 C6:3 r:3 _C6:3 r:7 >C6:2 _C6:3 r:3 C6:3 r:3 _C6:3 r:3 | r:6 _C6:3 r:3 C6:3 r:3 _C6:3 r:7 >C6:2 _C6:3 r:3 C6:3 r:3 _C6:3 r:3"
+  chase_d:
+    programs: {flute: 127}   # the flute's track turns into the noise snare (no Direct Sound voice)
+    bars: 2
+    tempo: 156
+    chords: "Gm | Eb:24 D:24"
+    gain: {sq1: -26, timpani: -4, sq2: -8, drums: -6, tuba: -8}
+    ramp: {horn: [-18, 4], strings: [-20, 0]}
+    parts:
+      horn:    "D4:24 Eb4:24 | >G4:6 r:24 >F#4:18"
+      strings: [ost_g, "Eb3:3 F3:3 G3:3 F3:3 Eb3:3 F3:3 G3:3 F3:3 Eb3:3 F3:3 D3:3 E3:3 F#3:3 G3:3 A3:3 C4:3"]
+      tuba:    "G2:6 G2:6 G2:6 G2:6 G2:6 G2:6 G2:6 G2:6 | >Eb2:6 r:6 Eb2:6 Eb2:6 Eb2:6 >D2:6 D2:6 D2:6"
+      trumpet: "r:48 | >Bb4:6 r:24 >A4:3 r:3 A4:3 Bb4:3 C5:3 C#5:3"
+      timpani: "G2:12 r:36 | >G2:6 r:24 >D2:3 r:3 D2:3 D2:3 D2:3 D2:3"
+      sq1:     arp
+      sq2:     "r:20 >G6:2 D6:2 >G6:2 D6:2 >Bb6:2 F6:2 r:16 | r:48"
+      flute:   "_C6:3 r:3 _C6:3 r:3 _C6:3 r:3 _C6:2 C6:3 r:1 C6:3 r:1 C6:2 _C6:3 r:3 _C6:3 r:3 _C6:3 r:3 | >C6:3 r:9 C6:3 r:15 >C6:3 r:3 C6:2 C6:2 C6:2 C6:2 C6:2 C6:2"
+  chase_e:
+    programs: {flute: 127}   # the flute's track turns into the noise snare (no Direct Sound voice)
+    bars: 1
+    chords: "D7"
+    gain: {sq1: -24, timpani: -4, sq2: -8, drums: -6, strings: -8, tuba: -8}
+    parts:
+      trumpet: ">D5:4 D5:4 D5:4 >G5:12 F#5:6 G5:6 A5:6 r:6"
+      horn:    "A4:12 C5:12 D5:18 r:6"
+      strings: "D3:3 F#3:3 A3:3 C4:3 D4:3 F#4:3 A4:3 C5:3 D5:3 C5:3 A4:3 F#4:3 D4:3 F#4:3 r:6"
+      tuba:    "D2:6 D2:6 D2:6 D2:6 D2:6 D2:6 D2:6 r:6"
+      timpani: "D2:12 r:24 D2:3 D2:3 r:6"
+      sq1:     "^1:6 ^3:6 ^1+:6 ^3:6 ^2:6 ^3:6 ^1+:6 r:6"
+      sq2:     "r:12 >A6:2 G6:2 E6:2 r:30"
+      flute:   "C6:3 r:3 C6:3 r:3 >C6:3 r:3 C6:3 r:3 C6:3 r:3 C6:3 r:3 C6:2 C6:2 C6:3 r:5"
+  finale:
+    bars: 2
+    tempo: 136
+    chords: "G | G"
+    gain: {sq1: -10, sq2: -10, harp: -14}
+    ramp: {trumpet: [0, -50], horn: [0, -46], strings: [0, -50], tuba: [0, -50], timpani: [0, -40], sq1: [0, -30], sq2: [0, -30], harp: [0, -30]}
+    parts:
+      trumpet: ">G5:36 r:12 | r:48"
+      horn:    ">D5:36 D4:6 G4:6 | B4:36 r:12"
+      tuba:    ">G2:36 r:12 | G2:36 r:12"
+      strings: "r:6 G3:42 | ~:36 r:12"
+      timpani: ">G2:12 r:12 G2:3 G2:3 G2:3 G2:3 G2:3 G2:3 G2:3 G2:3 | G2:12 r:36"
+      sq1:     "G5:12 D5:12 B4:12 G4:12 | G4:24 r:24"
+      sq2:     "B4:36 r:12 | D4:24 r:24"
+      harp:    "r:36 G4:3 B4:3 D5:3 G5:3 | B5:6 r:42"
+      drums:   finale
+
+arrangement: [dawn1, dawn2, rise, suns, chase_a, chase_b, chase_c, chase_d, chase_e, finale]
+
+# where each cue of ../cues/intro-boot.yaml lands: "bar:beat" (beat from 1; 3.3333 = a triplet 8th after beat 3)
+sync:
+  fade_in: "1:1"
+  drop_slide: "1:3.25"
+  drop_fall: "2:4.5"
+  drop_splash: "3:1"
+  small_splash_1: "3:4.5"
+  small_splash_2: "4:1"
+  pan_up: "5:1"
+  shuttle: "7:2.5"
+  tie_advanced: "7:3.3333"
+  twin_suns: "8:1"
+  fade_white: "8:4.25"
+  scene2: "9:1"
+  raider_far_1: "9:2.6667"
+  raider_near_1: "9:4.6667"
+  player_surge: "11:1"
+  raider_far_2: "11:3"
+  raider_near_2: "12:1.75"
+  player_fall: "13:1"
+  raider_near_3: "13:3.3333"
+  raider_far_3: "13:4.5"
+  raider_near_4: "14:3.3333"
+  player_hold: "15:1"
+  raider_trio: "15:2.6667"
+  raider_near_5: "16:1"
+  player_exit: "16:3.5"
+  last_raider: "17:2"
+  scenery_stop: "18:1"
+  fade_out: "18:4.5"

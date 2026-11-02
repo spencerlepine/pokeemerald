@@ -30,8 +30,8 @@ SPF = gba.SAMPLES_PER_FRAME
 
 
 def frame_of_tick(song: Song, tick: int) -> int:
-    """m4a: each frame adds tempo (bpm) to a counter; every 150 units plays one clock."""
-    return int(tick * 150 // song.tempo)
+    """m4a: each frame adds tempo (bpm) to a counter; every 150 units plays one clock (tempo changes: Song.frame_of)."""
+    return song.frame_of(tick)
 
 
 def _pcm_env(adsr, on_frames: int) -> np.ndarray:
@@ -254,7 +254,7 @@ def render(song: Song, loops: int = 2, master_volume: int = 100, only: set[str] 
     out = out[:n_out]
     stats["unresolved"] = sorted(stats["unresolved"])
     # the loop's true period is fractional in frames (the tempo counter carries over the jump)
-    stats["samples_per_loop"] = song.loop_clocks * 150 / song.tempo * SPF * OUT_RATE / gba.MIXER_RATE
+    stats["samples_per_loop"] = song.loop_clocks * 150 / song.tempo_at(song.intro_clocks) * SPF * OUT_RATE / gba.MIXER_RATE
     stats["intro_samples"] = int(frame_of_tick(song, song.intro_clocks) * SPF * OUT_RATE / gba.MIXER_RATE)
     return out.astype(np.float32), stats
 

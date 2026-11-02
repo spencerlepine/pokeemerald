@@ -64,7 +64,8 @@ def peaks(uses: list[Use]) -> dict:
 
 
 def song_events(song: Song):
-    return [(n.tick, n.dur, song.parts[n.part].program, n.key, n.part) for n in song.notes]
+    return [(n.tick, n.dur, song.parts[n.part].program if n.program is None else n.program, n.key, n.part)
+            for n in song.notes]
 
 
 def survey_ranges() -> dict:
@@ -92,8 +93,9 @@ def check(song: Song, asm: str | None = None, stats: dict | None = None) -> tupl
         if len(used) > gba.PLAYER_TRACKS[player]:
             E.append(f"{len(used)} parts with notes; the {player} player has {gba.PLAYER_TRACKS[player]} tracks "
                      f"(extra tracks are dropped)")
-    if song.tempo % 2 or not 2 <= song.tempo <= gba.MAX_TEMPO_BPM:
-        E.append(f"tempo {song.tempo}: must be even and 2..{gba.MAX_TEMPO_BPM} (m4a stores bpm / 2 in one byte)")
+    for _clock, bpm in song.tempo_map or [(0, song.tempo)]:
+        if bpm % 2 or not 2 <= bpm <= gba.MAX_TEMPO_BPM:
+            E.append(f"tempo {bpm}: must be even and 2..{gba.MAX_TEMPO_BPM} (m4a stores bpm / 2 in one byte)")
     vol = int(m.get("master_volume", 80))
     if not 0 < vol <= 127:
         E.append(f"master_volume {vol}: 1..127 (midi.cfg -V)")

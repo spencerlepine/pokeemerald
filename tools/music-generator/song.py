@@ -139,12 +139,55 @@ class Song:
     notes: list[Note] = field(default_factory=list)
     errors: list[str] = field(default_factory=list)
     warnings: list[str] = field(default_factory=list)
+    tempo_map: list[tuple[int, int]] = field(default_factory=list)   # (clock, bpm), sorted, first at clock 0
+    _frames: list[int] = field(default_factory=list, repr=False)
 
     @property
     def loop_clocks(self) -> int:
         return self.total_clocks - self.intro_clocks
 
+    @property
+    def tempo_changes(self) -> bool:
+        return len(self.tempo_map) > 1
+
+    def tempo_at(self, clock: int) -> int:
+        t = self.tempo
+        for c, bpm in self.tempo_map:
+            if c > clock:
+                break
+            t = bpm
+        return t
+
+    def frame_of(self, clock: int) -> int:
+        """VBlank frame (0 = the frame clock 0 plays) on which `clock` plays, for a song with tempo changes:
+        the m4a accumulator exactly (MPlayMain: tempoC += tempoI each frame, one clock per 150; a TEMPO command
+        sets tempoI for the next frame). Clocks past the end wrap through the loop (the counter carries over)."""
+        if not self.tempo_changes:
+            return int(clock * 150 // self.tempo)
+        if len(self._frames) <= clock:
+            changes = dict(self.tempo_map)
+            L = self.loop_clocks
+            frames = self._frames or []
+            if not frames:
+                self._acc = [0, 150, 0, -1]      # tempoC, tempoI, next clock, frame
+            c_acc, i_acc, k, f = self._acc
+            while len(frames) <= clock:
+                f += 1
+                c_acc += i_acc
+                while c_acc >= 150 and len(frames) <= clock:
+                    pos = k if k < self.total_clocks or not L else self.intro_clocks + (k - self.intro_clocks) % L
+                    if pos in changes:
+                        i_acc = changes[pos]
+                    frames.append(f)
+                    k += 1
+                    c_acc -= 150
+            self._frames = frames
+            self._acc = [c_acc, i_acc, k, f]
+        return self._frames[clock]
+
     def seconds(self, clocks: int) -> float:
+        if self.tempo_changes:
+            return self.frame_of(clocks) / gba.FRAME_HZ
         return clocks / gba.CLOCKS_PER_BEAT * 60 / self.tempo
 
 
@@ -221,10 +264,19 @@ def load(path: Path) -> Song:
             raise ModelError(f"arrangement references unknown section {name!r}")
         song.sections.append({"name": name, "start": tick, "bars": int(sec["bars"]),
                               "region": "intro" if i < li else "loop", **sec})
+        # tempo changes: `tempo` at the section start, `tempo_at` [[beats from the section start, bpm], ...]
+        if "tempo" in sec:
+            song.tempo_map.append((tick, int(sec["tempo"])))
+        for beat, bpm in sec.get("tempo_at") or []:
+            song.tempo_map.append((tick + int(round(float(beat) * gba.CLOCKS_PER_BEAT)), int(bpm)))
         if i == li:
             song.intro_clocks = tick
         tick += int(sec["bars"]) * song.clocks_per_bar
     song.total_clocks = tick
+    tm = dict([(0, tempo)] + song.tempo_map)
+    song.tempo_map = sorted(tm.items())
+    if len(song.tempo_map) > 1 and song.tempo_map[0][0] == 0:
+        song.tempo = song.tempo_map[0][1]
     if model.get("loop", True) is False:
         song.intro_clocks = song.total_clocks   # a one-shot (fanfare, cue): no loop markers
     build_notes(song)
@@ -331,7 +383,9 @@ def build_notes(song: Song) -> None:
                         g = 0.5 if mt["stac"] else part.gate
                         dur = max(1, int(round(d * song.clocks_per_step * g)))
                         v = VEL[mt["acc"]]
-                        last = [Note(t0, dur, k, vel_at(v, tick), pname, sec["name"], bi + 1) for k in keys]
+                        prog = (sec.get("programs") or {}).get(pname)     # a section can switch the track's program
+                        last = [Note(t0, dur, k, vel_at(v, tick), pname, sec["name"], bi + 1,
+                                     None if prog is None else int(prog)) for k in keys]
                         song.notes.extend(last)
                     tick += d * song.clocks_per_step
                     used += d
