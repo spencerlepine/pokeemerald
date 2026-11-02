@@ -82,4 +82,4 @@ Approved: planet recolours (tatooine, hoth, sullust, sullust-lava, endor, dagoba
 `death-star.yaml` (Facility kit: deck plates, grates, trench walls, hangar) and `star-destroyer.yaml`
 (InsideShip kit: grey panels and roofs, Imperial bunks, buoys removed via `layout_edits`).
 Open: `install` does not write edited map.bin yet; the Death Star General rules need a Death Star copy of the
-primary at install. **Next: calibrate the Fortree tree house in `tools/world-art` (STYLE.md 9).**
+primary at install. **Paused (owner, 2026-11-02):** art is on hold while the whole world is laid out in placeholder tiles first (`wiki/world/README.md`). When art resumes, the next step is calibrating the Fortree tree house in `tools/world-art` (STYLE.md 9).
