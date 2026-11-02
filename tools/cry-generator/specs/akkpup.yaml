@@ -1,0 +1,41 @@
+name: akkpup
+slot: growlithe
+brief: "AKKPUP: creature call that fits its look and size. Loyal armored akk dog pup."
+kind: creature
+size: 0.3
+seed: 111
+layers:
+  # Akk-dog DNA (saw+pulse bark aw->a->o, armor-plate clinks): a loyal pup's "yip-yip" and an
+  # eager "arf" with its little plates clinking.
+  - type: click
+    times: [0, 0.17, 0.35]
+    gain: 0.35
+  - type: voice
+    pitch: [[0, 620], [0.04, 820], [0.11, 640]]
+    source: {saw: 0.8, pulse: 0.5, pulse_width: 0.3, noise: 0.12}
+    vowels: [[0, aw], [0.04, a], [0.12, o]]
+    env: [[0, 0], [0.006, 1], [0.08, 0.8], [0.12, 0]]
+    growl: 0.2
+    growl_rate: 45
+    jitter: 0.02
+    drive: 2
+  - type: voice
+    at: 0.17
+    pitch: [[0, 640], [0.04, 860], [0.11, 660]]
+    source: {saw: 0.8, pulse: 0.5, pulse_width: 0.3, noise: 0.12}
+    vowels: [[0, aw], [0.04, a], [0.12, o]]
+    env: [[0, 0], [0.006, 1], [0.08, 0.8], [0.12, 0]]
+    growl: 0.2
+    growl_rate: 45
+    jitter: 0.02
+    drive: 2
+  - type: voice
+    at: 0.34
+    pitch: [[0, 560], [0.06, 760], [0.27, 520]]
+    source: {saw: 0.8, pulse: 0.5, pulse_width: 0.3, noise: 0.12}
+    vowels: [[0, aw], [0.06, a], [0.28, o]]
+    env: [[0, 0], [0.008, 1], [0.2, 0.75], [0.28, 0]]
+    growl: 0.25
+    growl_rate: 40
+    jitter: 0.02
+    drive: 2

@@ -1,0 +1,27 @@
+name: b2_droid
+slot: machoke
+brief: "B2 DROID: electronic droid voice: beeps, whistles and servo whirs. B2 super battle droid."
+kind: droid
+size: 0.55
+seed: 92
+layers:
+  # Battle-droid DNA, heavier: a B2's arm servo cranks up, a deep stepped vocoder grunt "hrr-mm" with
+  # two heavy clunks of its feet.
+  - type: click
+    times: [0, 0.32]
+    gain: 0.6
+  - type: servo
+    pitch: [[0, 90], [0.15, 240], [0.4, 220], [0.6, 100]]
+    harmonics: [1, 0.8, 0.5, 0.35, 0.2]
+    env: [[0, 0], [0.05, 0.7], [0.5, 0.6], [0.62, 0]]
+    grit: 0.7
+    drive: 2
+    gain: 0.6
+  - type: voice
+    at: 0.05
+    pitch: [[0, 150], [0.2, 170], [0.22, 140], [0.5, 120]]
+    pitch_step: 0.04
+    source: {pulse: 0.9, pulse_width: 0.15, saw: 0.3}
+    vowels: [[0, rr], [0.1, o], [0.22, er], [0.35, m], [0.5, m]]
+    env: [[0, 0], [0.01, 1], [0.19, 0.9], [0.21, 0.3], [0.23, 1], [0.45, 0.8], [0.52, 0]]
+    drive: 2.5

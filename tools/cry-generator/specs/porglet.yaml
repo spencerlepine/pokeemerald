@@ -1,0 +1,18 @@
+name: porglet
+slot: pidgey
+brief: "PORGLET: creature call that fits its look and size. Porg chick."
+kind: creature
+size: 0.08
+seed: 101
+layers:
+  # Porg DNA (trilled pulse+saw coo u->i->e, fast vibrato, rising "prrrip"): a chick's single tiny
+  # "prip".
+  - type: voice
+    pitch: [[0, 540], [0.05, 720], [0.16, 600]]
+    source: {tri: 0.8, pulse: 0.3, pulse_width: 0.35}
+    vowels: [[0, u], [0.05, i], [0.16, e]]
+    formant_scale: 0.55
+    emphasis: 0.5
+    env: [[0, 0], [0.01, 1], [0.12, 0.8], [0.17, 0]]
+    vibrato: {rate: 30, depth: 0.04}
+    jitter: 0.01

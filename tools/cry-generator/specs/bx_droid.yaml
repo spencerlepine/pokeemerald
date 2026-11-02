@@ -1,0 +1,31 @@
+name: bx_droid
+slot: machamp
+brief: "BX DROID: electronic droid voice: beeps, whistles and servo whirs. BX commando droid."
+kind: droid
+size: 0.6
+seed: 93
+layers:
+  # Battle-droid DNA, commando grade: a fast servo whip as the BX unfolds, a clipped stepped vocoder
+  # bark "hup-HUT", relay clicks and a servo wind-down.
+  - type: click
+    times: [0, 0.02, 0.4]
+    gain: 0.5
+  - type: servo
+    pitch: [[0, 200], [0.08, 900], [0.14, 700]]
+    env: [[0, 0], [0.02, 0.8], [0.12, 0.6], [0.16, 0]]
+    grit: 0.5
+    gain: 0.55
+  - type: voice
+    at: 0.14
+    pitch: [[0, 240], [0.08, 220], [0.12, 270], [0.24, 230]]
+    pitch_step: 0.03
+    source: {pulse: 0.9, pulse_width: 0.15, saw: 0.3}
+    vowels: [[0, rr], [0.03, u], [0.1, er], [0.14, a], [0.24, er]]
+    env: [[0, 0], [0.008, 1], [0.08, 0.8], [0.1, 0], [0.12, 0], [0.13, 1], [0.23, 0.8], [0.25, 0]]
+    drive: 2
+  - type: servo
+    at: 0.45
+    pitch: [[0, 700], [0.3, 160]]
+    env: [[0, 0], [0.02, 0.5], [0.25, 0.35], [0.32, 0]]
+    grit: 0.5
+    gain: 0.45

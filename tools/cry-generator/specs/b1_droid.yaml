@@ -1,0 +1,25 @@
+name: b1_droid
+slot: machop
+brief: "B1 DROID: electronic droid voice: beeps, whistles and servo whirs. B1 battle droid. Roger roger."
+kind: droid
+size: 0.3
+seed: 91
+layers:
+  # Battle-droid DNA (nasal frame-stepped vocoder voice, servo whir, relay click): a B1's thin,
+  # nasal "ro-ger, ro-ger" over a small arm servo.
+  - type: click
+    times: [0]
+    gain: 0.4
+  - type: servo
+    pitch: [[0, 180], [0.1, 420], [0.16, 380]]
+    env: [[0, 0], [0.03, 0.5], [0.12, 0.4], [0.17, 0]]
+    grit: 0.4
+    gain: 0.35
+  - type: voice
+    at: 0.02
+    pitch: [[0, 300], [0.12, 280], [0.14, 330], [0.26, 260], [0.33, 300], [0.45, 280], [0.47, 330], [0.6, 250]]
+    pitch_step: 0.03
+    source: {pulse: 0.9, pulse_width: 0.15, saw: 0.3}
+    formant_scale: 1.15
+    vowels: [[0, rr], [0.05, o], [0.13, er], [0.18, e], [0.26, er], [0.33, rr], [0.38, o], [0.46, er], [0.51, e], [0.6, er]]
+    env: [[0, 0], [0.01, 1], [0.11, 0.9], [0.13, 0.2], [0.15, 1], [0.25, 0.8], [0.27, 0], [0.32, 0], [0.34, 1], [0.44, 0.9], [0.46, 0.2], [0.48, 1], [0.58, 0.8], [0.61, 0]]

@@ -1,0 +1,26 @@
+name: r1_unit
+slot: beldum
+brief: "R1 UNIT: electronic droid voice: beeps, whistles and servo whirs. Old R1-series astromech. Leia gives you one."
+kind: droid
+size: 0.25
+seed: 121
+layers:
+  # Astromech DNA after r2_unit (servo spin-up, beep chatter, tri whistle), but an old R1: a gritty,
+  # sputtering servo, three crude square beeps and a short falling "bwoop".
+  - type: servo
+    pitch: [[0, 120], [0.12, 360], [0.2, 320]]
+    env: [[0, 0], [0.04, 0.6], [0.16, 0.5], [0.21, 0]]
+    grit: 0.7
+    gain: 0.55
+  - type: tone
+    at: 0.1
+    wave: square
+    pitch: [[0, 1600], [0.044, 1600], [0.045, 1100], [0.089, 1100], [0.09, 1800], [0.134, 1800]]
+    env: [[0, 0], [0.004, 1], [0.04, 1], [0.045, 0.15], [0.049, 1], [0.085, 1], [0.09, 0.15], [0.094, 1], [0.13, 1], [0.135, 0]]
+    gain: 0.7
+  - type: tone
+    at: 0.26
+    wave: tri
+    pitch: [[0, 1800], [0.18, 900]]
+    warble: {rate: 12, depth: 0.05}
+    env: [[0, 0], [0.015, 1], [0.13, 0.8], [0.18, 0]]

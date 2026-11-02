@@ -1,0 +1,30 @@
+name: porgmajor
+slot: pidgeot
+brief: "PORGMAJOR: creature call that fits its look and size. Majestic elder porg."
+kind: creature
+size: 0.5
+seed: 103
+layers:
+  # Porg DNA, elder and majestic: a lower, bolder honking "mrrp", then a long trilled call that
+  # rises in frame-steps and settles.
+  - type: voice
+    pitch: [[0, 380], [0.08, 520], [0.22, 440]]
+    source: {pulse: 0.7, saw: 0.5, pulse_width: 0.35, noise: 0.05}
+    vowels: [[0, u], [0.08, i], [0.22, e]]
+    env: [[0, 0], [0.01, 1], [0.17, 0.8], [0.23, 0]]
+    vibrato: {rate: 24, depth: 0.06}
+    growl: 0.3
+    growl_rate: 26
+    jitter: 0.015
+    drive: 1.8
+  - type: voice
+    at: 0.28
+    pitch: [[0, 400], [0.18, 640], [0.35, 600], [0.52, 460]]
+    pitch_step: 0.04
+    source: {pulse: 0.7, saw: 0.5, pulse_width: 0.35, noise: 0.05}
+    vowels: [[0, u], [0.14, i], [0.35, ae], [0.52, e]]
+    env: [[0, 0], [0.015, 1], [0.38, 0.85], [0.53, 0]]
+    vibrato: {rate: 22, depth: 0.05}
+    growl: 0.2
+    growl_rate: 26
+    jitter: 0.015

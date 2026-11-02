@@ -1,0 +1,30 @@
+name: r4_unit
+slot: metang
+brief: "R4 UNIT: electronic droid voice: beeps, whistles and servo whirs. R4-series astromech."
+kind: droid
+size: 0.55
+seed: 122
+layers:
+  # Astromech DNA after r2_unit, R4 build: a lower, heavier servo spin-up, four warbling beeps and a
+  # long rising-falling whistle, then a relay click.
+  - type: servo
+    pitch: [[0, 90], [0.18, 300], [0.3, 270]]
+    harmonics: [1, 0.6, 0.4, 0.25]
+    env: [[0, 0], [0.05, 0.7], [0.25, 0.6], [0.32, 0]]
+    grit: 0.45
+    gain: 0.6
+  - type: tone
+    at: 0.15
+    wave: sine
+    pitch: [[0, 1600], [0.049, 1600], [0.05, 1200], [0.099, 1200], [0.1, 2000], [0.149, 2000], [0.15, 1400], [0.199, 1400]]
+    warble: {rate: 30, depth: 0.07, shape: square}
+    env: [[0, 0], [0.004, 1], [0.045, 1], [0.05, 0.15], [0.054, 1], [0.095, 1], [0.1, 0.15], [0.104, 1], [0.145, 1], [0.15, 0.15], [0.154, 1], [0.195, 1], [0.2, 0]]
+  - type: tone
+    at: 0.42
+    wave: tri
+    pitch: [[0, 700], [0.16, 2400], [0.28, 1900], [0.44, 900]]
+    warble: {rate: 8, depth: 0.04}
+    env: [[0, 0], [0.02, 1], [0.36, 0.9], [0.44, 0]]
+  - type: click
+    times: [0.86]
+    gain: 0.3

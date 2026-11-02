@@ -1,0 +1,43 @@
+name: rockwart
+slot: geodude
+brief: "ROCKWART: creature call that fits its look and size. Living rock creature of Tatooine's canyons."
+kind: creature
+size: 0.3
+seed: 81
+layers:
+  # Rock-wart DNA (frame-stepped square+saw grumble m->o->rr, pebble clatter, gravel hiss): pebbles
+  # rattle, two gravelly grumbles "hm-HRRM", and a little scatter of stones.
+  - type: click
+    times: [0, 0.03, 0.07]
+    gain: 0.45
+  - type: voice
+    at: 0.02
+    pitch: [[0, 360], [0.08, 440], [0.25, 380]]
+    pitch_step: 0.04
+    source: {square: 0.6, saw: 0.5, noise: 0.35}
+    vowels: [[0, m], [0.1, o], [0.26, rr]]
+    env: [[0, 0], [0.01, 1], [0.2, 0.8], [0.27, 0]]
+    growl: 0.45
+    growl_rate: 32
+    jitter: 0.03
+    drive: 2.2
+  - type: voice
+    at: 0.38
+    pitch: [[0, 380], [0.12, 480], [0.45, 400], [0.65, 300]]
+    pitch_step: 0.04
+    source: {square: 0.6, saw: 0.5, noise: 0.35}
+    vowels: [[0, m], [0.12, o], [0.45, aw], [0.66, rr]]
+    env: [[0, 0], [0.015, 0.9], [0.45, 0.75], [0.68, 0]]
+    growl: 0.5
+    growl_rate: 30
+    jitter: 0.03
+    drive: 2.2
+  - type: noise
+    at: 0.8
+    band: [1200]
+    q: 1
+    env: [[0, 0], [0.03, 0.35], [0.3, 0]]
+    gain: 0.3
+  - type: click
+    times: [0.86, 0.92, 1]
+    gain: 0.3
