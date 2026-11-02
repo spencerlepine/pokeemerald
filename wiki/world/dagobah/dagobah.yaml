@@ -37,7 +37,7 @@ grid: |
   TT........::......................................::......TT
   TT........::......................................::......TT
   TT........::............~~~~~..~~~~~~.............::......TT
-  TTT.......::............~~~~~~~~~~~~~~~...........::....TTTT
+  TTT:::::::::............~~~~~~~~~~~~~~~...........::....TTTT
   TTTT......::...........~~~~~~~~~~~~~~~~~~.........::....TTTT
   TTTT......::......~~~~~~~~~~~~~~~~~~~~~~~.........::....TTTT
   TTTT......::.....~~~~~~~~~~~~~~~~~~~~~~~~.........::......TT
@@ -47,7 +47,7 @@ grid: |
   TT........::.......~~~~~~~~~~~~~~~~~~~~~~~~.......::......TT
   TT........::.......~~~~~~~~~~~~~~~~~~~~~~~~.......::......TT
   TT........::.......~~~~~~~~~~~~~~~~~~~~~~~........::......TT
-  TTT.......::.......~~~~~~~~~~~~~~~~~~~~~..........::.....TTT
+  TTT:::::::::.......~~~~~~~~~~~~~~~~~~~~~..........::.....TTT
   TTTTT.....::........~~~~~~~~~~~~~~~~~~~~..........::....TTTT
   TTTTTT....::..........~~~~~~~~~~~~~~~~~~..........::....TTTT
   TTTTTT....::...........~~~~~~~~~~~~~~~~~..........::...TTTTT
@@ -57,17 +57,17 @@ grid: |
   TT.....T."::""""""...........~~...................::TT....TT
   TT.....T""::""""""...........~~...................::TT....TT
   TT....."""::"""""............~~...................::....TTTT
-  TTTT..."""::""""""...........~~...................::TTTTTTTT
+  TTTT:::"""::""""""...........~~...................::TTTTTTTT
   TTTTTTT""":::::::::::::::::::==:::::::::::::::::::::TTTTTTTT
   TTTTTTTTTT:::::::::::::::::::==::::::::::::::::::::TTTTTTTTT
-  TTTTTTTTTTT"""...............~~...........:......TTTTTTTTTTT
-  TTTTTTTTTTTTT................~~...........:...""..TTTTTTTTTT
-  TTTTTTTTTTTTTT...............~~...........""""""".TTTTTTTTTT
-  TTTTTTTTTTTTTT...............~~...........""""""""""TTTTTTTT
-  TTTTTTTTTTTTTT...............~~..........""""""""""TTTTTTTTT
-  TTTTTTTTTTTTTTT..............~~..........."""""""""TTTTTTTTT
-  TTTTTTTTTTTTTTTTTTTTT.......T~~........:::""""""""TTTTTTTTTT
-  TTTTTTTTTTTTTTTTTTTTTT......T~~...........TTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTT"""....:.......:..~~...........:..:...TTTTTTTTTTT
+  TTTTTTTTTTTTT.....:.......:..~~...........:..:""..TTTTTTTTTT
+  TTTTTTTTTTTTTT....:.......:..~~...........""""""".TTTTTTTTTT
+  TTTTTTTTTTTTTT....:.......:..~~...........""""""""""TTTTTTTT
+  TTTTTTTTTTTTTT....:.......:..~~..........""""""""""TTTTTTTTT
+  TTTTTTTTTTTTTTT::::.......:..~~..........."""""""""TTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTT.....:.T~~........:::""""""""TTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTT:::::.T~~...........TTTTTTTTTTTTTTTTTT
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTT~~.....TTTTTTTTTTTTTTTTTTTTTTTT
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTT~~TTTTTTTTTTTTTTTTTTTTTTTTTTTTT
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTT~~TTTTTTTTTTTTTTTTTTTTTTTTTTTTT
