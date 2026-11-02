@@ -6,6 +6,8 @@
 # song frame (Song.frame_of: the frame a clock plays on): song frame = frame + the last shift at or below it.
 # Scene 3 (Task_Scene3_Load) starts MUS_INTRO_BATTLE at counter 2069, which cuts this song off.
 #   kind: hit      a visible event the music must land on (an accent within `tol` frames)
+#                  (the raider pops were hits in the first draft; the owner found a stab on every one choppy, so
+#                  they are soft now: the chase grooves through them)
 #         section  a structural change (scene cut, camera move): a bar line, within `tol`
 #         soft     a gesture that should start near it (the drop sliding, a fade)
 # `source` says where the frame comes from: a TIMER_* in intro.c, a sprite callback worked out from the code,
@@ -26,18 +28,18 @@ cues:
   - {name: fade_white,     frame: 1008, kind: soft,    tol: 6, source: "TIMER_END_SCENE_1: fade to white"}
   - {name: scene2,         frame: 1029, kind: section, tol: 3, source: "Task_Scene2_CreateSprites: speeder chase fades in from white"}
   - {name: raider_far_1,   frame: 1066, kind: soft,    tol: 6, source: "sRaiderSpawns 1060 (far, rises 1 px / 2 frames)"}
-  - {name: raider_near_1,  frame: 1112, kind: hit,     tol: 3, source: "sRaiderSpawns 1100 + 10 (x -16 -> 24) + rise"}
+  - {name: raider_near_1,  frame: 1112, kind: soft,     tol: 6, source: "sRaiderSpawns 1100 + 10 (x -16 -> 24) + rise"}
   - {name: player_back,    frame: 1109, kind: soft,    tol: 6, source: TIMER_PLAYER_DRIFT_BACK}
   - {name: player_surge,   frame: 1214, kind: section, tol: 3, source: "TIMER_PLAYER_MOVE_FORWARD: the speeder surges ahead"}
   - {name: raider_far_2,   frame: 1256, kind: soft,    tol: 6, source: "sRaiderSpawns 1250 and 1258"}
-  - {name: raider_near_2,  frame: 1322, kind: hit,     tol: 3, source: "sRaiderSpawns 1310 + rise"}
+  - {name: raider_near_2,  frame: 1322, kind: soft,     tol: 6, source: "sRaiderSpawns 1310 + rise"}
   - {name: player_fall,    frame: 1398, kind: section, tol: 3, source: "TIMER_PLAYER_MOVE_BACKWARD"}
-  - {name: raider_near_3,  frame: 1452, kind: hit,     tol: 3, source: "sRaiderSpawns 1440 + rise"}
+  - {name: raider_near_3,  frame: 1452, kind: soft,     tol: 6, source: "sRaiderSpawns 1440 + rise"}
   - {name: raider_far_3,   frame: 1476, kind: soft,    tol: 6, source: "sRaiderSpawns 1470"}
-  - {name: raider_near_4,  frame: 1542, kind: hit,     tol: 3, source: "sRaiderSpawns 1530 + rise"}
+  - {name: raider_near_4,  frame: 1542, kind: soft,     tol: 6, source: "sRaiderSpawns 1530 + rise"}
   - {name: player_hold,    frame: 1576, kind: soft,    tol: 6, source: TIMER_PLAYER_HOLD_POSITION}
   - {name: raider_trio,    frame: 1616, kind: soft,    tol: 6, source: "sRaiderSpawns 1610, 1618, 1626"}
-  - {name: raider_near_5,  frame: 1672, kind: hit,     tol: 3, source: "sRaiderSpawns 1660 + rise"}
+  - {name: raider_near_5,  frame: 1672, kind: soft,     tol: 6, source: "sRaiderSpawns 1660 + rise"}
   - {name: player_exit,    frame: 1727, kind: hit,     tol: 3, source: "TIMER_PLAYER_EXIT: the speeder races off screen"}
   - {name: last_raider,    frame: 1786, kind: soft,    tol: 6, source: "sRaiderSpawns 1780 (stays up, gaffi raised)"}
   - {name: scenery_stop,   frame: 1856, kind: hit,     tol: 3, source: "TIMER_SCENERY_STOP: the scrolling stops, last shot"}
