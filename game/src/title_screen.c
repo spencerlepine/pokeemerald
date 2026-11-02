@@ -35,9 +35,10 @@ enum {
 #define VERSION_BANNER_RIGHT_TILEOFFSET 64
 #define VERSION_BANNER_LEFT_X 88
 #define VERSION_BANNER_RIGHT_X 152
-#define VERSION_BANNER_Y 2
-#define VERSION_BANNER_Y_GOAL 56
+#define VERSION_BANNER_Y (VERSION_BANNER_Y_GOAL - 24) // starts tucked behind WARS (the banner is OBJ priority 2, under the logo) and slides down out of it
+#define VERSION_BANNER_Y_GOAL 87
 #define START_BANNER_X 128
+#define LOGO_SHINE_Y 42  // row the logo shine sweeps along (ship_logo_stacked.py: middle of STAR WARS)
 
 #define CLEAR_SAVE_BUTTON_COMBO (B_BUTTON | SELECT_BUTTON | DPAD_UP)
 #define RESET_RTC_BUTTON_COMBO (B_BUTTON | SELECT_BUTTON | DPAD_LEFT)
@@ -139,7 +140,7 @@ static const struct OamData sVersionBannerLeftOamData =
     .matrixNum = 0,
     .size = SPRITE_SIZE(64x32),
     .tileNum = 0,
-    .priority = 0,
+    .priority = 2,
     .paletteNum = 0,
     .affineParam = 0,
 };
@@ -156,7 +157,7 @@ static const struct OamData sVersionBannerRightOamData =
     .matrixNum = 0,
     .size = SPRITE_SIZE(64x32),
     .tileNum = 0,
-    .priority = 0,
+    .priority = 2,
     .paletteNum = 0,
     .affineParam = 0,
 };
@@ -621,23 +622,23 @@ static void StartPokemonLogoShine(u8 mode)
     case SHINE_MODE_SINGLE:
         // Create one regular shine sprite.
         // If mode is SHINE_MODE_SINGLE it will also change the background color.
-        spriteId = CreateSprite(&sPokemonLogoShineSpriteTemplate, 0, 68, 0);
+        spriteId = CreateSprite(&sPokemonLogoShineSpriteTemplate, 0, LOGO_SHINE_Y, 0);
         gSprites[spriteId].oam.objMode = ST_OAM_OBJ_WINDOW;
         gSprites[spriteId].sMode = mode;
         break;
     case SHINE_MODE_DOUBLE:
         // Create an invisible sprite with mode set to update the background color
-        spriteId = CreateSprite(&sPokemonLogoShineSpriteTemplate, 0, 68, 0);
+        spriteId = CreateSprite(&sPokemonLogoShineSpriteTemplate, 0, LOGO_SHINE_Y, 0);
         gSprites[spriteId].oam.objMode = ST_OAM_OBJ_WINDOW;
         gSprites[spriteId].sMode = mode;
         gSprites[spriteId].invisible = TRUE;
 
         // Create two faster shine sprites
-        spriteId = CreateSprite(&sPokemonLogoShineSpriteTemplate, 0, 68, 0);
+        spriteId = CreateSprite(&sPokemonLogoShineSpriteTemplate, 0, LOGO_SHINE_Y, 0);
         gSprites[spriteId].callback = SpriteCB_PokemonLogoShine_Fast;
         gSprites[spriteId].oam.objMode = ST_OAM_OBJ_WINDOW;
 
-        spriteId = CreateSprite(&sPokemonLogoShineSpriteTemplate, -80, 68, 0);
+        spriteId = CreateSprite(&sPokemonLogoShineSpriteTemplate, -80, LOGO_SHINE_Y, 0);
         gSprites[spriteId].callback = SpriteCB_PokemonLogoShine_Fast;
         gSprites[spriteId].oam.objMode = ST_OAM_OBJ_WINDOW;
         break;
@@ -922,10 +923,11 @@ static void Task_TitleScreenPhase3(u8 taskId)
 
 // ---------------------------------------------------------------------------------------------
 // Hand-off to the opening crawl (intro_crawl.c), first boot only.
-// The character collage slides back out to the sides while the clouds (BG1) blend out, then the
-// foreground ridge (BG0) sinks below the bottom edge. Only then do the logo (BG2, affine) and the
-// KYBER VERSION banner (OBJ) shrink away into the distance and darken. What is left is the night
-// backdrop, which the crawl keeps on screen.
+// "Press Start", the copyright and the KYBER VERSION banner vanish at once. The character collage
+// slides back out to the sides while the clouds (BG1) blend out, then the foreground ridge (BG0)
+// sinks below the bottom edge. Only then does the STAR WARS wordmark (BG2, affine) shrink away into
+// the distance from where it stands, and darken. What is left is the night backdrop, which the crawl
+// keeps on screen.
 // BG1 is still pointed at screen 28 (intro_crawl.c keeps showing it): it is built from BG0's plain
 // sky tiles, and since BG0 now holds only the ridge (no gradient), every row falls back to BG0's
 // blank tile 0, so the crawl starts on the flat backdrop the title screen shows.
@@ -933,7 +935,7 @@ static void Task_TitleScreenPhase3(u8 taskId)
 
 #define CRAWL_OUT_LOGO_FRAMES   180  // logo shrink, after the creature and clouds are gone
 #define CRAWL_OUT_CENTER_X      120  // screen point the logo shrinks towards
-#define CRAWL_OUT_CENTER_Y      56
+#define CRAWL_OUT_CENTER_Y      42   // middle of STAR WARS (ship_logo_stacked.py)
 #define CRAWL_OUT_LOGO_TEX_X    (-29) // BG2X the title screen draws the logo with
 #define CRAWL_OUT_RECEDE        15   // 1/scale grows by this/256 per frame (logo is ~1/11 size at the end)
 #define CRAWL_OUT_LOGO_FADE_AT  100  // logo frame the logo starts darkening
@@ -972,9 +974,11 @@ static void StartTitleScreenCrawlOut(u8 taskId)
         struct Sprite *sprite = &gSprites[i];
         if (!sprite->inUse)
             continue;
-        if (sprite->template == &sStartCopyrightBannerSpriteTemplate)
+        if (sprite->template == &sStartCopyrightBannerSpriteTemplate
+         || sprite->template == &sVersionBannerLeftSpriteTemplate
+         || sprite->template == &sVersionBannerRightSpriteTemplate)
         {
-            // "Press Start" and copyright go straight away
+            // "Press Start", the copyright and the KYBER VERSION banner go straight away
             sprite->callback = SpriteCallbackDummy;
             sprite->invisible = TRUE;
         }
@@ -984,15 +988,7 @@ static void StartTitleScreenCrawlOut(u8 taskId)
             sprite->sCollageLeaving = TRUE;
             sprite->sCollageTimer = 0;
         }
-        else if (sprite->template == &sVersionBannerLeftSpriteTemplate
-              || sprite->template == &sVersionBannerRightSpriteTemplate)
-        {
-            // The version banner shrinks with the logo
-            sprite->oam.affineMode = ST_OAM_AFFINE_NORMAL;
-            sprite->oam.matrixNum = 0;
-        }
     }
-    SetOamMatrix(0, 0x100, 0, 0, 0x100);
     gTasks[taskId].tOutFrame = 0;
     gTasks[taskId].func = Task_TitleScreenCrawlOut;
 }
@@ -1003,7 +999,6 @@ static void Task_TitleScreenCrawlOut(u8 taskId)
     s32 logoFrame = (frame > CRAWL_OUT_CREATURE_END) ? frame - CRAWL_OUT_CREATURE_END : 0;
     s32 invScale = 0x100 + logoFrame * CRAWL_OUT_RECEDE; // texture px per screen px, 8.8
     s32 bgX, bgY;
-    u16 i;
 
     // Logo: scale BG2 about CRAWL_OUT_CENTER
     bgX = ((CRAWL_OUT_CENTER_X + CRAWL_OUT_LOGO_TEX_X) << 8) - invScale * CRAWL_OUT_CENTER_X;
@@ -1015,24 +1010,11 @@ static void Task_TitleScreenCrawlOut(u8 taskId)
     SetGpuReg(REG_OFFSET_BG2Y_L, bgY);
     SetGpuReg(REG_OFFSET_BG2Y_H, bgY >> 16);
 
-    // Version banner: same scale, and slide each half towards the centre
-    SetOamMatrix(0, invScale, 0, 0, invScale);
-    for (i = 0; i < MAX_SPRITES; i++)
-    {
-        struct Sprite *sprite = &gSprites[i];
-        if (sprite->inUse && sprite->oam.affineMode == ST_OAM_AFFINE_NORMAL)
-        {
-            sprite->x2 = ((sprite->x - CRAWL_OUT_CENTER_X) * 0x100) / invScale - (sprite->x - CRAWL_OUT_CENTER_X);
-            sprite->y2 = ((sprite->y - CRAWL_OUT_CENTER_Y) * 0x100) / invScale - (sprite->y - CRAWL_OUT_CENTER_Y);
-        }
-    }
-
-    // Darken the logo (BG palettes 0-13, skipping the backdrop colour) and the banner (OBJ palette 0)
+    // Darken the logo (BG palettes 0-13, skipping the backdrop colour)
     if (logoFrame >= CRAWL_OUT_LOGO_FADE_AT)
     {
         u8 coeff = ((logoFrame - CRAWL_OUT_LOGO_FADE_AT) * 16) / (CRAWL_OUT_LOGO_FRAMES - CRAWL_OUT_LOGO_FADE_AT);
         BlendPalette(BG_PLTT_ID(0) + 1, 14 * 16 - 1, coeff, RGB_BLACK);
-        BlendPalette(OBJ_PLTT_ID(0), 16, coeff, RGB_BLACK);
     }
 
     // Clouds: keep drifting while BG1's blend weight drops from 6 to 0

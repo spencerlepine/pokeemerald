@@ -190,6 +190,20 @@ def layout(top, sub_img, bottom, y_top=5, gap=3):
     return bg, (56, sy - sb[1]), by + bottom.size[1]
 
 
+def layout_stacked(top, sub_img, bottom, top_y=9, face_gap=6, sub_gap=2):
+    """Round 3 layout (owner pick A, 2026-11-02): STAR and WARS as one tight block like the film logo, KYBER
+    VERSION right below it. top_y is STAR's topmost pixel row, face_gap the rows between the letter faces of
+    STAR and WARS; WARS is drawn over STAR's extrusion. Returns (bg2, banner_xy, logo_bottom)."""
+    tb, sb = top.getbbox(), sub_img.getbbox()
+    sy = top_y - tb[1]
+    wy = sy + LH + face_gap
+    bg = Image.new("RGBA", (240, 160), (0, 0, 0, 0))
+    bg.paste(top, ((240 - top.size[0]) // 2, sy), top)
+    bg.paste(bottom, ((240 - bottom.size[0]) // 2, wy), bottom)
+    logo_bottom = bg.getbbox()[3]
+    return bg, ((240 - sub_img.size[0]) // 2, logo_bottom + sub_gap - sb[1]), logo_bottom
+
+
 VARIANTS_R2 = {
     "flat-green": lambda: (style(star()), subtitle("green"), style(wars())),
     "flat-silver": lambda: (style(star()), subtitle("silver"), style(wars())),
