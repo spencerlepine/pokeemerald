@@ -19,3 +19,9 @@ scripts/live.sh up savestates/evergrande-party-badges-money.ss0
 # or inside a running session:
 scripts/live.sh lua 'return emu:loadStateFile("'$PWD'/savestates/truck-after-new-game.ss0")'
 ```
+
+`ui-audit.sav` is a battery save made for the UI skin work. It is the 8-badge save
+after `lua/examples/ui-audit-unlock.lua` ran: Pokédex, StarNAV, Match Call, ribbons and
+Frontier Pass unlocked, full dex, every item and decoration, Pokéblocks, 500 coins,
+12 boxed creatures and all wallpapers. Saved in the Battle Factory lobby (map 26,31).
+Copy it next to the ROM as `pokeemerald.sav` to boot to CONTINUE.
