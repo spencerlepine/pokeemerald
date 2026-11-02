@@ -1,0 +1,75 @@
+# Sealed Chamber, Endor: net-new per-planet split of MUS_SEALED_CHAMBER (wiki row net:mus-sealed-chamber-endor),
+# for the Ancient Tomb. SCRATCH: no film cue, written from the brief. The Tatooine original (Warden Vault) is an
+# eerie, sparse vault with Aurebesh puzzles; on Endor the vault is an old forest-moon tomb, so the same hush gets
+# a slow 3/4 sway and wooden colours: D Dorian (the B natural over G), a flute line in a, a low horn chant in b,
+# then c leaves only harp, bell, soft congas and a 25 % square, and d falls Dm-C-Bb-A over timpani to the loop.
+# Vanilla voicegroup and tempo (MUS_SEALED_CHAMBER: sealed_chamber, 140 bpm, 36.0 s): 28 bars of 3/4 at 140 = 36.0 s.
+# Brief (sw_subject): Endor version of MUS_SEALED_CHAMBER, same role and mood family; theme to be decided.
+name: sealed-chamber-endor
+constant: MUS_SEALED_CHAMBER_ENDOR
+form: AMBIENT
+voicegroup: sealed_chamber        # vanilla's own: bell 14, harp 46, timpani 47, strings 48, horn 60, flute 73, squares 80/81, wave 87, kit 0
+master_volume: 100
+tempo: 140
+steps_per_beat: 2                 # eighth-note grid, 6 steps a bar
+time_signature: [3, 4]
+seed: 9
+
+parts:
+  flute:   {program: 73, channel: 0, volume: 84,  pan: 10,  gate: 0.95, lfo_speed: 26, lfo_delay: 20, mod: 5, humanize: {vel: 5}}
+  horn:    {program: 60, channel: 1, volume: 80,  pan: -10, gate: 0.95, humanize: {vel: 4}}
+  harp:    {program: 46, channel: 2, volume: 74,  pan: -22, octave: 3, gate: 0.9, humanize: {vel: 8}}
+  strings: {program: 48, channel: 3, volume: 50,  pan: 24,  octave: 3, gate: 1.0}
+  bell:    {program: 14, channel: 4, volume: 56,  pan: -30, gate: 1.0}
+  timpani: {program: 47, channel: 5, volume: 72,  pan: 12,  gate: 1.0}
+  drums:   {program: 0,  channel: 6, volume: 52,  pan: 16,  role: drums, kit: {lo: 64, hi: 62}}
+  bass:    {program: 87, channel: 7, volume: 70,  pan: 0,   octave: 2, role: bass, gate: 0.9}
+  lead:    {program: 81, channel: 8, volume: 34,  pan: 34,  gate: 0.9, mono: true}
+
+progressions:
+  intro: "Dm | A"
+  a: "Dm | Dm | C | Dm | Dm | G | C | Am"
+  b: "Bb | C | Dm | Dm | Bb | C | A | A"
+  c: "Dm | Em | Dm | Em | F | G | Am | Am"
+  d: "Dm | C | Bb | A"
+
+phrases:
+  harp3: "^1:2 ^2:2 ^3:2"
+  pad: "^1:6"
+  root: "^1:6"
+  flute_a: "D5:4 E5:2 | F5:6 | E5:4 C5:2 | D5:6 | A4:4 C5:2 | B4:4 G4:2 | C5:4 E5:2 | A4:6"
+  horn_b: "D4:4 F4:2 | E4:6 | F4:4 A4:2 | D4:6 | D4:4 F4:2 | G4:4 E4:2 | C#4:6 | E4:6"
+  lead_c: "A4:6 | B4:6 | A4:6 | G4:6 | A4:6 | B4:6 | C5:6 | A4:6"
+  bell_c: "D5:6 | r:6 | r:6 | r:6 | F4:6 | r:6 | r:6 | r:6"
+  timp_d: "D2:2 r:4 | C2:2 r:4 | Bb1:2 r:4 | A1:1 A1:1 A1:1 A1:1 A1:2"
+
+grooves:
+  sway: {lo: "x.....|......", hi: "....o.|..o..o"}
+  sway_c: {lo: "x.....", hi: "..o.o."}
+
+sections:
+  intro:
+    bars: 2
+    chords: intro
+    parts: {harp: harp3, strings: pad, bass: root, drums: sway, flute: "r:6 | A4:2 C#5:4"}
+  a:
+    bars: 8
+    chords: a
+    parts: {flute: flute_a, harp: harp3, strings: pad, bass: root, drums: sway}
+  b:
+    bars: 8
+    chords: b
+    parts: {horn: horn_b, harp: harp3, strings: pad, bass: root, drums: sway}
+  c:
+    bars: 8
+    chords: c
+    gain: {harp: -6}
+    parts: {lead: lead_c, bell: bell_c, harp: harp3, strings: pad, bass: root, drums: sway_c}
+  d:
+    bars: 4
+    chords: d
+    gain: {flute: -6}
+    parts: {flute: "F5:6 | E5:6 | D5:6 | C#5:2 E5:4", timpani: timp_d, harp: harp3, strings: pad, bass: root}
+
+arrangement: [intro, a, b, c, d]
+loop_start: a
