@@ -1,0 +1,73 @@
+# Encounter: Obi-Wan. Hot-swap of MUS_ENCOUNTER_CHAMPION (wiki audio:MUS_ENCOUNTER_CHAMPION, ENCOUNTER / LOOP).
+# STYLE of "The Return Home" (wiki ref_tracks soundtrack:new-hope:12): an original melody, not the Force theme.
+# Taken from the cue: its slow, noble 66 bpm pulse (doubled to 132 here so it moves like an encounter), the
+# D minor / F major warmth with the Gm-A turn of the Force theme's harmony, a long-breathed brass line.
+# Brief (sw_subject): Obi-Wan greets the player in the temple.
+# 2-bar sting, then a 16-bar loop (29.1 s; vanilla 27.0 s): trumpet states the tune (Dm, Bb, F, C), the flute
+# answers higher (Bb, F, Gm, Dm, C) and turns on A back to the start. Nylon guitar arpeggios, organ pad, wave bass,
+# timpani on the downbeats, square counter-line and arpeggios, noise brush pattern.
+name: encounter-obi-wan
+replaces: MUS_ENCOUNTER_CHAMPION
+form: LOOP
+voicegroup: encounter_champion        # organ 17, nylon 24, timpani 47, trumpet 56, flute 73, sq1 80, sq2 82, wave 85, noise 127
+master_volume: 76
+tempo: 132
+steps_per_beat: 4
+time_signature: [4, 4]
+seed: 51
+
+parts:
+  trumpet: {program: 56, channel: 0, volume: 98,  pan: 4,   gate: 0.95, humanize: {vel: 3}}
+  flute:   {program: 73, channel: 1, volume: 102, pan: 10,  gate: 0.95, lfo_speed: 30, lfo_delay: 24, mod: 5, humanize: {vel: 3}}
+  guitar:  {program: 24, channel: 2, volume: 76,  pan: -24, octave: 3, gate: 0.95}
+  organ:   {program: 17, channel: 3, volume: 50,  pan: 20,  octave: 4, gate: 1.0}
+  timpani: {program: 47, channel: 4, volume: 86,  pan: -8,  octave: 2, gate: 1.0, role: bass}
+  bass:    {program: 85, channel: 5, volume: 84,  pan: 0,   octave: 2, gate: 0.8, role: bass, mono: true}
+  counter: {program: 82, channel: 6, volume: 38,  pan: 30,  octave: 4, gate: 0.95, mono: true}
+  arp:     {program: 80, channel: 7, volume: 32,  pan: -32, octave: 5, gate: 0.5, mono: true}
+  brush:   {program: 127, channel: 8, volume: 32, pan: -10, role: drums, kit: {s: C6, h: C7}}
+
+progressions:
+  sting:  "Dm | Gm:8 A:8"
+  tune:   "Dm | Bb | F | C | Dm | Bb | Gm:8 A:8 | Dm"
+  answer: "Bb | F | Gm | Dm | Bb | C | Bb:8 C:8 | A"
+
+phrases:
+  sting_tpt: "D4:2 D4:2 A4:4 D5:6 F5:2 | E5:8 C#5:8"
+  tune: |
+    D4:4 A4:12 | Bb4:6 C5:2 D5:4 F5:4 | C5:12 A4:4 | G4:6 A4:2 G4:4 E4:4 |
+    D4:4 A4:8 D5:4 | F5:8 D5:4 Bb4:4 | G4:4 Bb4:4 A4:4 C#5:4 | D5:12 r:4
+  answer: |
+    F5:6 G5:2 F5:4 D5:4 | C5:8 F5:8 | Bb5:6 A5:2 G5:4 D5:4 | F5:8 A4:8 |
+    D5:4 F5:4 Bb5:8 | A5:6 G5:2 E5:4 C5:4 | D5:4 Bb4:4 C5:4 E5:4 | E5:8 C#5:4 A4:4
+  pick: "^1:2 ^2:2 ^3:2 ^1+:2 ^2+:2 ^1+:2 ^3:2 ^2:2"
+  pad: "^3:16"
+  timp: "^1:4 r:12"
+  timp_turn: "^1:4 r:4 ^1:2 ^1:2 ^1:4"
+  walk: "^1:4 ^1:4 ^3:4 ^1+:4"
+  counter: "^2+:8 ^1+:8"
+  arp16: "^1:1 ^2:1 ^3:1 ^2:1 ^1:1 ^2:1 ^3:1 ^2:1 ^1:1 ^2:1 ^3:1 ^2:1 ^1:1 ^2:1 ^3:1 ^2:1"
+
+grooves:
+  brush:
+    h:    "x.o...o.x.o...o.|x.o...o.x.o...o."
+    s:    "....x.......x...|....x.......x..."
+  brush_sting:
+    s:    "x...x...x...x...|x.x.x.x.x.xxx..."
+
+sections:
+  intro:
+    bars: 2
+    chords: sting
+    parts: {trumpet: sting_tpt, timpani: timp_turn, bass: walk, organ: pad, brush: brush_sting}
+  a:
+    bars: 8
+    chords: tune
+    parts: {trumpet: tune, guitar: pick, organ: pad, timpani: timp, bass: walk, counter: counter, brush: brush}
+  b:
+    bars: 8
+    chords: answer
+    parts: {flute: answer, guitar: pick, organ: pad, timpani: timp, bass: walk, arp: arp16, brush: brush}
+
+arrangement: [intro, a, b]
+loop_start: a
