@@ -1,0 +1,78 @@
+# Encounter: Hutt Cartel thugs. Hot-swap of MUS_ENCOUNTER_AQUA (wiki audio:MUS_ENCOUNTER_AQUA, ENCOUNTER / LOOP).
+# STYLE of "Han Solo Returns (At the Court of Jabba the Hutt)" (wiki ref_tracks soundtrack:return-jedi:05): an
+# original tune, not a quote. Taken from the cue: its 136 bpm, the low, lurching palace swagger, chromatic
+# slides and flat-ninth bite. Brief (sw_subject): Hutt Cartel thugs appear, sleazy, threatening.
+# D minor shuffle: 2-bar sting (a chromatic trumpet slither onto A7), then a 16-bar loop (28.2 s; vanilla 27.4 s)
+# of two strains (Dm-Bb7-A7 / Gm-Dm-Eb7-A7). Trumpet tune, slap bass, organ drone, both squares as the 3rd and
+# 7th shell of each chord on the off-beats, wave doubling the trumpet an octave down in the second strain,
+# kick and snare, noise hats.
+name: encounter-cartel
+replaces: MUS_ENCOUNTER_AQUA
+form: LOOP
+voicegroup: encounter_aqua            # organ 17, slap bass 36, trumpet 56, sq1 85, sq2 86, wave 83, noise 126, kit 0
+master_volume: 86
+tempo: 136
+steps_per_beat: 4
+time_signature: [4, 4]
+swing: 0.33                           # shuffled eighths
+swing_unit: 2
+seed: 31
+
+parts:
+  trumpet: {program: 56, channel: 0, volume: 104, pan: 6,   gate: 0.85, humanize: {vel: 5}}
+  organ:   {program: 17, channel: 1, volume: 58,  pan: -20, octave: 3, gate: 1.0}
+  bass:    {program: 36, channel: 2, volume: 100, pan: 0,   octave: 1, gate: 0.6, role: bass}
+  drums:   {program: 0,  channel: 3, volume: 82,  pan: 8,   role: drums, kit: {kick: 36, sn: 38}}
+  hat:     {program: 126, channel: 4, volume: 36, pan: -14, role: drums, kit: {h: C7}}
+  shell3:  {program: 85, channel: 5, volume: 40,  pan: 28,  octave: 4, gate: 0.4, mono: true}
+  shell7:  {program: 86, channel: 6, volume: 36,  pan: -28, octave: 4, gate: 0.4, mono: true}
+  wave:    {program: 83, channel: 7, volume: 46,  pan: 16,  gate: 0.8, mono: true, transpose: -12}
+
+progressions:
+  sting:   "Dm | A7"
+  strain_a: "Dm | Dm | Bb7 | A7 | Dm | Gm | Eb7 | A7"
+  strain_b: "Gm | Gm | Dm | Dm | Eb7 | Bb7 | A7 | A7"
+
+phrases:
+  sting_tpt: "D5:2 r:2 C#5:2 r:2 C5:2 r:2 B4:2 Bb4:2 | A4:3 Bb4:1 A4:4 r:8"
+  tune_a: |
+    D4:2 r:2 F4:2 G#4:1 A4:3 r:2 C5:2 A4:2 | G4:2 F4:2 E4:2 F4:2 D4:8 |
+    r:2 Bb4:2 Ab4:2 F4:2 D4:2 F4:2 Ab4:4 | G4:3 F4:1 E4:4 C#4:8 |
+    D5:2 r:2 C5:2 A4:2 G#4:2 A4:2 F4:4 | G4:4 Bb4:2 D5:2 F5:4 E5:4 |
+    Eb5:3 Db5:1 Bb4:4 G4:4 Bb4:4 | A4:4 E5:4 C#5:4 A4:4
+  tune_b: |
+    Bb4:2 r:2 D5:2 C#5:1 D5:3 r:2 F5:2 D5:2 | C5:2 Bb4:2 A4:2 Bb4:2 G4:8 |
+    A4:2 r:2 F4:2 G#4:1 A4:3 r:2 D5:4 | C5:2 A4:2 F4:2 E4:2 D4:8 |
+    G4:2 Bb4:2 Db5:2 Eb5:2 Db5:4 Bb4:4 | Ab4:2 F4:2 D4:2 F4:2 Ab4:8 |
+    A4:4 G4:2 F4:2 E4:4 C#4:4 | E4:2 G4:2 Bb4:2 C#5:2 E5:4 r:4
+  drone: "^1+:16"
+  slap: "^1:2 r:1 ^1:1 ^1+:2 r:2 ^3:2 ^1:2 ^2:2 ^3:2"
+  sh3: "r:2 ^2:2 r:4 r:2 ^2:2 r:2 ^2:2"
+  sh7b: "r:2 ^4:2 r:4 r:2 ^4:2 r:2 ^4:2"
+
+grooves:
+  sting:
+    kick: "x.......x.......|x...x...x......."
+    sn:   "....x.......x...|..x.x.x.X......."
+  lurch:
+    kick: "x......x..x.....|x......x..x...x."
+    sn:   "....x.......x...|....x.......x.x."
+  hats:
+    h:    "x.x.x.x.x.x.x.x.|x.x.x.x.x.x.x.xx"
+
+sections:
+  intro:
+    bars: 2
+    chords: sting
+    parts: {trumpet: sting_tpt, bass: slap, drums: sting, organ: drone, shell3: sh3, shell7: sh7b}
+  a:
+    bars: 8
+    chords: strain_a
+    parts: {trumpet: tune_a, organ: drone, bass: slap, drums: lurch, hat: hats, shell3: sh3, shell7: sh7b}
+  b:
+    bars: 8
+    chords: strain_b
+    parts: {trumpet: tune_b, organ: drone, bass: slap, drums: lurch, hat: hats, shell3: sh3, shell7: sh7b, wave: tune_b}
+
+arrangement: [intro, a, b]
+loop_start: a
