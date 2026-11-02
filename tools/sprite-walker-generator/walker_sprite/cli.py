@@ -206,7 +206,11 @@ def cmd_install(a) -> int:
         sym = s.meta["graphics_info"]
         pat = re.compile(rf"(gObjectEventGraphicsInfo_{sym} = \{{.*?\.paletteTag = )(\w+)(,.*?\.paletteSlot = )(\w+)", re.S)
         slot = s.palette_tag.replace("OBJ_EVENT_PAL_TAG_", "PALSLOT_")
-        new, n = pat.subn(rf"\g<1>{s.palette_tag}\g<3>{slot}", src)
+        if not s.palette_tag.startswith("OBJ_EVENT_PAL_TAG_NPC_"):
+            # Player, underwater and other special tags have no PALSLOT_<same name>: keep the game's slot
+            new, n = pat.subn(rf"\g<1>{s.palette_tag}\g<3>\g<4>", src)
+        else:
+            new, n = pat.subn(rf"\g<1>{s.palette_tag}\g<3>{slot}", src)
         if n != 1:
             print(f"could not find gObjectEventGraphicsInfo_{sym} in {gi}")
             return 1
