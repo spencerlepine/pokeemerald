@@ -1,0 +1,62 @@
+# Victory over a wild creature: hot-swap of MUS_VICTORY_WILD (wiki audio:MUS_VICTORY_WILD). SCRATCH: no film cue,
+# written from the brief (sw_subject): "Won a wild battle: short victory loop."
+# Lighter than the trainer win: a 2-bar trumpet call in G, then an 8-bar loop where the flute sings a farm-boy
+# tune (wide, hopeful leaps in the Luke idiom) over tuba oom-pah, square arpeggios and a soft snare, with the
+# trumpet holding long harmony notes and a D7 turnaround back to the top.
+# 140 bpm like vanilla, 8-bar loop (13.7 s; vanilla 15.6 s), on the vanilla victory_wild voicegroup.
+name: victory-wild
+replaces: MUS_VICTORY_WILD
+form: LOOP
+voicegroup: victory_wild          # kit 0, timpani 47, trumpet 56, tuba 58, flute 73, squares 80/82, wave 81
+master_volume: 80
+tempo: 140
+steps_per_beat: 4                 # sixteenth-note grid
+time_signature: [4, 4]
+seed: 141
+
+parts:
+  flute:   {program: 73, channel: 0, volume: 100, pan: 10,  range: [D5, D6], gate: 0.92, lfo_speed: 30, lfo_delay: 20, mod: 4, humanize: {vel: 4}}
+  trumpet: {program: 56, channel: 1, volume: 92,  pan: -8,  range: [D4, B5], gate: 0.92}
+  tuba:    {program: 58, channel: 2, volume: 90,  pan: 0,   octave: 2, range: [G1, G2], gate: 0.6, role: bass}
+  arp:     {program: 80, channel: 3, volume: 44,  pan: 30,  octave: 4, range: [G4, G6], gate: 0.5, mono: true}
+  upbeat:  {program: 82, channel: 4, volume: 38,  pan: -30, octave: 4, range: [G3, G5], gate: 0.45, mono: true}
+  wave:    {program: 81, channel: 5, volume: 52,  pan: 0,   octave: 3, range: [G2, G4], gate: 0.5}
+  timpani: {program: 47, channel: 6, volume: 88,  pan: 12,  range: [D2, G2], gate: 1.0}
+  kit:     {program: 0,  channel: 7, volume: 70,  pan: 0, role: drums, kit: {kick: 36, snare: 38, crash: 57}}
+
+progressions:
+  call: "G | D7"
+  loop: "G | Em | C | D | G | Bm | C:8 D:8 | G:8 D7:8"
+
+phrases:
+  call_tpt: "D4:2 G4:2 B4:2 D5:6 r:2 D5:2 | C5:3 B4:1 A4:4 F#4:4 D4:4"
+  tune: |
+    B5:4 D6:4 B5:2 A5:2 G5:4 | E5:6 G5:2 B5:8 | C6:4 B5:2 A5:2 G5:4 E5:4 | F#5:12 D5:4 |
+    G5:4 B5:4 D6:6 C6:2 | B5:4 F#5:4 D5:8 | E5:4 G5:4 F#5:4 A5:4 | G5:8 r:4 D5:4
+  tpt_hold: "D5:16 | B4:16 | C5:16 | A4:16 | B4:16 | D5:16 | C5:8 A4:8 | B4:8 C5:8"
+  oompah: "^1:4 r:4 ^3-:4 r:4"
+  arp16: "^1:1 ^2:1 ^3:1 ^1+:1 ^2+:1 ^1+:1 ^3:1 ^2:1 ^1:1 ^2:1 ^3:1 ^1+:1 ^2+:1 ^1+:1 ^3:1 ^2:1"
+  offbeat: "r:2 ^2:2 r:2 ^3:2 r:2 ^2:2 r:2 ^3:2"
+  wave_line: "r:4 ^1:2 r:6 ^3:2 r:2"
+  timp_loop: "G2:4 r:12 | r:16 | r:16 | D2:4 r:12 | G2:4 r:12 | r:16 | r:16 | r:16"
+  timp_call: "G2:1 G2:1 G2:1 G2:1 G2:4 r:8 | D2:1 D2:1 D2:1 D2:1 D2:1 D2:1 D2:1 D2:1 D2:4 r:4"
+
+grooves:
+  call:
+    snare: "x...x...x...x...|rrrrrrrrRRRR...."
+  light:
+    kick:  "x.......x.......|x.......x.......|x.......x.......|x.......x.....x."
+    snare: "....x.......x...|....x.......x...|....x.......x...|....x.......x.xx"
+
+sections:
+  call:
+    bars: 2
+    chords: call
+    parts: {trumpet: call_tpt, flute: "D5:4 G5:4 B5:8 | A5:8 F#5:4 D5:4", tuba: "^1:4 r:4 ^3-:4 r:4 | ^1:4 r:4 ^3-:4 r:4", arp: arp16, upbeat: offbeat, wave: wave_line, timpani: timp_call, kit: call}
+  a:
+    bars: 8
+    chords: loop
+    parts: {flute: tune, trumpet: tpt_hold, tuba: oompah, arp: arp16, upbeat: offbeat, wave: wave_line, timpani: timp_loop, kit: light}
+
+arrangement: [call, a]
+loop_start: a
