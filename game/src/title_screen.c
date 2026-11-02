@@ -38,7 +38,9 @@ enum {
 #define VERSION_BANNER_Y (VERSION_BANNER_Y_GOAL - 24) // starts tucked behind WARS (the banner is OBJ priority 2, under the logo) and slides down out of it
 #define VERSION_BANNER_Y_GOAL 87
 #define START_BANNER_X 128
-#define LOGO_SHINE_Y 42  // row the logo shine sweeps along (ship_logo_stacked.py: middle of STAR WARS)
+// Row the logo shine sweeps along: the middle of STAR WARS (ship_logo_stacked.py) plus 32, because the
+// shines play while the logo still sits 32px low (tBg2Y starts at -32). The 64px-tall shine then covers both words.
+#define LOGO_SHINE_Y (42 + 32)
 
 #define CLEAR_SAVE_BUTTON_COMBO (B_BUTTON | SELECT_BUTTON | DPAD_UP)
 #define RESET_RTC_BUTTON_COMBO (B_BUTTON | SELECT_BUTTON | DPAD_LEFT)

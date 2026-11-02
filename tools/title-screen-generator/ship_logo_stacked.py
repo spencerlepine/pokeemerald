@@ -17,7 +17,8 @@ def ship_positions(bxy, logo_bottom):
     cy = (9 + logo_bottom) // 2
     src = re.sub(r"#define CRAWL_OUT_CENTER_Y\s+\d+", lambda m: m.group(0)[:-len(m.group(0).split()[-1])] + str(cy), src)
     # The logo shine (a 64x64 window sprite) sweeps across the middle of the wordmark
-    src = re.sub(r"#define LOGO_SHINE_Y\s+\d+", lambda m: m.group(0)[:-len(m.group(0).split()[-1])] + str(cy), src)
+    # (plus 32: the shines play before the logo has slid up from 32px low)
+    src = re.sub(r"#define LOGO_SHINE_Y \(\d+ \+ 32\)", f"#define LOGO_SHINE_Y ({cy} + 32)", src)
     open(SRC, "w").write(src)
     return cy
 
