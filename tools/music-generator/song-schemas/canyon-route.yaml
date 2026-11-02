@@ -1,0 +1,81 @@
+# Canyon Route (MUS_ROUTE104, hot-swap): the breezy coast and island routes (Tatooine's Route 104, 115-116).
+# ARRANGE of the "Kids at Play" half of "Watto's Deal and Kids at Play" (wiki audio:MUS_ROUTE104, ref
+# soundtrack:phantom-menace:11, ref_notes "the Kids at Play half"; analyze_reference --start 150 --end 280).
+# Taken from the cue: its tempo (99.4 bpm, 100 here), the skipping scherzo feel of the slave-quarters children
+# (light woodwind over plucked strings and hand percussion) and its harmony, A major with the cue's turn to
+# A minor and F. The analyzer's melody draft was too rough on the orchestra to use, so the tune is a jaunty line
+# written on that harmony:
+#   a  8 bars  A major: square "woodwind" over harp arpeggios, synth bass, a held string note and congas
+#   b  8 bars  the A minor / F turn, the square off-beat counter louder, ending on E7 back to a
+# Brief (sw_subject): breezy coast and island routes, plucked strings and wind. Loop 16 bars, 38.4 s (vanilla 37.5 s).
+name: canyon-route
+replaces: MUS_ROUTE104
+form: LOOP
+voicegroup: route104          # harp 46, strings 48, synth bass 38, squares 84/85, wave 81, noise 127, rs kit
+master_volume: 92
+tempo: 100
+steps_per_beat: 4
+time_signature: [4, 4]
+seed: 104
+
+parts:
+  lead:    {program: 84, channel: 0, volume: 70,  pan: 8,   gate: 0.8, mono: true, humanize: {vel: 5}}
+  harp:    {program: 46, channel: 1, volume: 82,  pan: -22, octave: 4, gate: 0.9, humanize: {vel: 8}}
+  bass:    {program: 38, channel: 2, volume: 86,  pan: 0,   octave: 2, gate: 0.55, role: bass}
+  strings: {program: 48, channel: 3, volume: 50,  pan: 26,  octave: 4, gate: 1.0}
+  wind:    {program: 81, channel: 4, volume: 52,  pan: -30, octave: 5, gate: 0.95, mono: true}
+  counter: {program: 85, channel: 5, volume: 40,  pan: 32,  octave: 5, gate: 0.5, mono: true}
+  drums:   {program: 0,  channel: 6, volume: 72,  pan: 10,  role: drums, kit: {kick: 36, hi: 62, lo: 64}}
+  hat:     {program: 127, channel: 7, volume: 34, pan: -12, role: drums, kit: {h: A5}}
+
+progressions:
+  verse:  "A | E | A | E | D | A | Bm:8 E:8 | A"
+  minor:  "Am | F | Am | E | Am | F | Dm:8 E:8 | E7"
+
+phrases:
+  tune_a: |
+    E5:2 C#5:1 E5:1 A5:4 G#5:2 F#5:2 E5:4 | D5:2 B4:1 D5:1 G#5:4 F#5:2 E5:2 D5:4 |
+    C#5:2 A4:1 C#5:1 E5:2 A5:2 C#6:4 B5:2 A5:2 | G#5:3 F#5:1 E5:2 D5:2 B4:8 |
+    D5:2 F#5:1 A5:1 D6:4 C#6:2 B5:2 A5:4 | C#5:2 E5:1 A5:1 C#6:4 B5:2 A5:2 E5:4 |
+    D5:2 F#5:2 B5:4 G#5:2 B5:2 E6:4 | A5:4 E5:2 C#5:2 A4:4 r:2 E5:1 F#5:1
+  tune_b: |
+    E5:3 E5:1 A5:2 E5:2 C5:2 B4:2 A4:4 | F5:3 F5:1 A5:2 F5:2 C5:2 A4:2 F4:4 |
+    E5:3 E5:1 A5:2 E5:2 C6:2 B5:2 A5:4 | G#5:2 B5:2 E5:2 G#5:2 B5:8 |
+    E5:3 E5:1 A5:2 E5:2 C5:2 B4:2 A4:4 | F5:3 F5:1 A5:2 F5:2 C6:4 A5:4 |
+    D5:2 F5:2 A5:2 F5:2 E5:2 G#5:2 B5:2 G#5:2 | E5:4 D5:2 C#5:2 B4:2 G#4:2 E4:2 E5:2
+  pluck: "^1:2 ^3:2 ^1+:2 ^3:2 ^2:2 ^3:2 ^1+:2 ^3:2"
+  bounce: "^1:2 r:2 ^3:2 r:2 ^1:2 r:2 ^3:2 ^1:2"
+  breeze: "^2:8 ^3:8"
+  hold: "^1:16"
+  stabs: "r:2 ^1+:2 r:2 ^2:2 r:2 ^3:2 r:2 ^2:2"
+
+grooves:
+  hand:
+    kick: "x.......x......."
+    hi:   "....x.......x.x."
+    lo:   "..x.......x....."
+  hand_end:
+    kick: "x.......x.......|x.......x.......|x.......x.......|x.......x.......|x.......x.......|x.......x.......|x.......x.......|x.......x.x.x.x."
+    hi:   "....x.......x.x.|....x.......x.x.|....x.......x.x.|....x.......x.x.|....x.......x.x.|....x.......x.x.|....x.......x.x.|....x........x.x"
+    lo:   "..x.......x.....|..x.......x.....|..x.......x.....|..x.......x.....|..x.......x.....|..x.......x.....|..x.......x.....|..x..x.........."
+  hats:
+    h: "x.o.x.o.x.o.x.o."
+
+sections:
+  intro:
+    bars: 1
+    chords: "A"
+    parts: {harp: pluck, bass: bounce, strings: hold, wind: breeze, drums: hand, hat: hats, lead: "r:14 E5:1 F#5:1"}
+  a:
+    bars: 8
+    chords: verse
+    gain: {counter: -10}
+    parts: {lead: tune_a, harp: pluck, bass: bounce, strings: hold, wind: breeze, counter: stabs, drums: hand, hat: hats}
+  b:
+    bars: 8
+    chords: minor
+    gain: {harp: -4}
+    parts: {lead: tune_b, harp: pluck, bass: bounce, strings: hold, wind: breeze, counter: stabs, drums: hand_end, hat: hats}
+
+arrangement: [intro, a, b]
+loop_start: a
