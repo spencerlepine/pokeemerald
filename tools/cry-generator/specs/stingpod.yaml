@@ -1,0 +1,34 @@
+name: stingpod
+slot: kakuna
+brief: "STINGPOD: creature call that fits its look and size. Venomous chrysalis."
+kind: creature
+size: 0.3
+seed: 412
+layers:
+  # Family DNA (Endor stingers): buzzy saw voice, fast insect flutter, "tsk" sting.
+  # Chrysalis: the same buzz muffled inside the shell (closed "m/u" mouth), with shell-tapping clicks and a hiss.
+  - type: click
+    times: [0.0, 0.06, 0.12]
+    gain: 0.6
+  - type: voice
+    at: 0.02
+    pitch: [[0, 520], [0.15, 600], [0.5, 520], [0.66, 430]]
+    pitch_step: 0.03
+    source: {saw: 0.7, pulse: 0.5, pulse_width: 0.2, noise: 0.1}
+    vowels: [[0, m], [0.25, u], [0.55, er], [0.66, m]]
+    env: [[0, 0], [0.02, 1], [0.5, 0.8], [0.68, 0]]
+    vibrato: {rate: 34, depth: 0.04}
+    growl: 0.35
+    growl_rate: 50
+    jitter: 0.02
+    drive: 2
+  - type: noise
+    at: 0.66
+    band: [[0, 3400], [0.18, 2800]]
+    q: 2
+    env: [[0, 0], [0.01, 0.6], [0.18, 0]]
+    gain: 0.4
+  - type: click
+    at: 0.7
+    times: [0.0, 0.05]
+    gain: 0.5

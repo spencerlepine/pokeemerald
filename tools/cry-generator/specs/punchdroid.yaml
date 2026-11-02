@@ -1,0 +1,35 @@
+name: punchdroid
+slot: hitmonchan
+brief: "PUNCHDROID: electronic droid voice: beeps, whistles and servo whirs. Training droid with heavy fists, punching specialist."
+kind: droid
+size: 0.5
+seed: 402
+layers:
+  # Family DNA (Kamino training droids): servo rev, stepped pulse "hup-HAH" bark, flourish.
+  # Punching model: lower, heavier servo, a driven "hup-HAH" with relay impacts, then a one-two jab of blips.
+  - type: servo
+    pitch: [[0, 120], [0.14, 400], [0.24, 340]]
+    harmonics: [1.0, 0.8, 0.5, 0.3, 0.2]
+    env: [[0, 0], [0.03, 0.8], [0.22, 0.6], [0.26, 0]]
+    grit: 0.6
+    drive: 2
+    gain: 0.6
+  - type: tone
+    at: 0.06
+    wave: pulse
+    width: 0.3
+    pitch: [[0, 880], [0.09, 880], [0.091, 1200], [0.24, 1100]]
+    warble: {rate: 26, depth: 0.06, shape: square}
+    env: [[0, 0], [0.005, 1], [0.08, 0.9], [0.085, 0.15], [0.095, 1], [0.22, 0.8], [0.25, 0]]
+    drive: 2.2
+  - type: tone
+    at: 0.42
+    wave: square
+    pitch: [[0, 700], [0.06, 560], [0.13, 560], [0.131, 900], [0.2, 720], [0.38, 640]]
+    pitch_step: 0.02
+    env: [[0, 0], [0.004, 1], [0.06, 0.5], [0.12, 0.05], [0.13, 1], [0.2, 0.7], [0.38, 0.4], [0.4, 0]]
+    drive: 1.8
+    gain: 0.8
+  - type: click
+    times: [0.0, 0.07, 0.42, 0.55]
+    gain: 0.7

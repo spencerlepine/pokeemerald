@@ -1,0 +1,33 @@
+name: traindroid
+slot: tyrogue
+brief: "TRAINDROID: electronic droid voice: beeps, whistles and servo whirs. Kamino training droid; reconfigures into a kicking, punching or spinning model."
+kind: droid
+size: 0.3
+seed: 401
+layers:
+  # Family DNA (Kamino training droids): a servo rev, a stepped two-note pulse "hup-HAH" bark, then a flourish.
+  # Smallest model: a quick, high servo, bright "hup-HAH" and a reconfiguring three-note ratchet whistle.
+  - type: servo
+    pitch: [[0, 200], [0.12, 560], [0.2, 480]]
+    harmonics: [1.0, 0.6, 0.4, 0.2]
+    env: [[0, 0], [0.03, 0.7], [0.18, 0.5], [0.22, 0]]
+    grit: 0.4
+    gain: 0.55
+  - type: tone
+    at: 0.06
+    wave: pulse
+    width: 0.3
+    pitch: [[0, 1250], [0.08, 1250], [0.081, 1700], [0.2, 1650]]
+    warble: {rate: 30, depth: 0.06, shape: square}
+    env: [[0, 0], [0.005, 1], [0.07, 0.9], [0.075, 0.15], [0.085, 1], [0.19, 0.8], [0.21, 0]]
+    drive: 1.5
+  - type: tone
+    at: 0.32
+    wave: tri
+    pitch: [[0, 1500], [0.1, 1500], [0.101, 2000], [0.2, 2000], [0.201, 2500], [0.42, 2200]]
+    warble: {rate: 12, depth: 0.03}
+    env: [[0, 0], [0.01, 0.9], [0.35, 0.7], [0.43, 0]]
+    gain: 0.75
+  - type: click
+    times: [0.0, 0.31, 0.42, 0.53]
+    gain: 0.4

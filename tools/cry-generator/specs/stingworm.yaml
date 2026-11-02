@@ -1,0 +1,31 @@
+name: stingworm
+slot: weedle
+brief: "STINGWORM: creature call that fits its look and size. Horned stinging larva."
+kind: creature
+size: 0.1
+seed: 411
+layers:
+  # Family DNA (Endor stingers): a buzzy saw voice on thin "ee/i" formants with a fast insect flutter, ending in a "tsk" sting.
+  # Larva: two thin squeaky chirps, then a wriggling trill and a tiny hiss.
+  - type: voice
+    pitch: [[0, 820], [0.05, 1000], [0.1, 880]]
+    source: {saw: 0.7, pulse: 0.5, pulse_width: 0.2, noise: 0.08}
+    vowels: [[0, i], [0.1, ee]]
+    env: [[0, 0], [0.01, 1], [0.08, 0.8], [0.11, 0]]
+    vibrato: {rate: 40, depth: 0.03}
+  - type: voice
+    at: 0.15
+    pitch: [[0, 880], [0.06, 1080], [0.35, 900], [0.48, 760]]
+    source: {saw: 0.7, pulse: 0.5, pulse_width: 0.2, noise: 0.08}
+    vowels: [[0, i], [0.2, ee], [0.48, e]]
+    env: [[0, 0], [0.012, 1], [0.35, 0.75], [0.5, 0]]
+    vibrato: {rate: 40, depth: 0.05}
+    growl: 0.2
+    growl_rate: 70
+    jitter: 0.02
+  - type: noise
+    at: 0.6
+    band: [[0, 3800], [0.15, 3200]]
+    q: 2
+    env: [[0, 0], [0.01, 0.6], [0.15, 0]]
+    gain: 0.35
