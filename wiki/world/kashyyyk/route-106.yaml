@@ -5,7 +5,7 @@ kind: route
 replaces: Route106
 status: BLOCKOUT
 story: Shore path west of Kachirho to the Shadowlands, the dark lower levels of the wroshyr forest.
-pos: [0, 340]
+pos: [-44, -20]
 grid: |
   ~~~~~~~~##~~~~~~~~~~~~~~~~~~~##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   ~~~~~~~~##~~~~~~~~~~~~~~~~~~~##~~~##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

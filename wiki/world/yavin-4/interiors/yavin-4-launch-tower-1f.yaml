@@ -64,4 +64,6 @@ warps:
 - name: Door
   at: [13, 1]
   to: yavin-4-launch-tower-2f
+travel:
+- {to: starnav, via: ship, name: Rebel hangar flight deck}
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

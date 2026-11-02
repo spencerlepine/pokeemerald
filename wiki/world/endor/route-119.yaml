@@ -5,7 +5,7 @@ kind: route
 replaces: Route119
 status: BLOCKOUT
 story: 'Treewalk forest: a long climb north through redwoods and ferns, with Endor Station (the Imperial research bunker the Cartel has taken) and Bossk inside.'
-pos: [280, 0]
+pos: [-40, 0]
 grid: |
   TTTTTTTTTTTTTTT####TTTTTTTTTTTTTTTTTTTTT
   TTTTTTTTTTTT#######TTTTTTTTTTTTTTTTTTTTT

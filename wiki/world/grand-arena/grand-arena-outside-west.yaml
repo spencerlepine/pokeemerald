@@ -6,7 +6,7 @@ replaces: BattleFrontier_OutsideWest
 status: BLOCKOUT
 story: 'West half of Lando''s Grand Arena island: the Dome, Factory and Pike, Lando''s own villa, lounges and the supply depot. Ships dock at the reception gate in
   the south.'
-pos: [0, 403]
+pos: [-56, -4]
 grid: |
   ~~~~~##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##~~~##~~~~~##~
   ##~~~##~~..~..~..~..~..~..~..~..~..~..~..##~~~##~~~~~##~

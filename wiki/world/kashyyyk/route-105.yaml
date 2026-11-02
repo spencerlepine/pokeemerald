@@ -5,7 +5,7 @@ kind: route
 replaces: Route105
 status: BLOCKOUT
 story: Open lagoon north of Kachirho between wroshyr islets. The Ice Grotto sits on a cold islet. Vanilla's north edge (Tatooine's Route 104) is cut.
-pos: [0, 260]
+pos: [-44, -100]
 grid: |
   ~~~~~~~##~~~~~~~~~~~~~~~~~##~~~#TTTTTTTT
   ~~~~~~~##~~~~~~~~~~~~~~~~~##~~~#TTTTTTTT

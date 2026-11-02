@@ -14,6 +14,10 @@ The owner's plan (2026-11-02): build the whole world conceptually first, then fi
 - `<planet>/<area>.yaml`: one area. The format is documented at the top of
   [`tools/blockout/blockout/area.py`](../../tools/blockout/blockout/area.py).
 - `<planet>/<area>.png`: its review sheet (vanilla map it replaces | blockout | numbered legend).
+- `CONNECTIONS.csv` and `GUIDE.md`: the area graph, computed by `python3 -m blockout guide` (never edited by hand).
+  Edges come from each area's exits, doors and warps, its `travel:` list (ships, shuttles, tides, dives and
+  scripted moves that are not on the map), and vanilla's dive connections and script warps. The guide also
+  checks that every area can be reached from Mos Pelgo.
 - `INDEX.csv`: every area and every placed piece. This is the to-do list. Each piece links to its
   concept in [`../mapping/world_art.csv`](../mapping/world_art.csv) by `art` id; `art_known = NEW` means
   the piece needs a new concept row.

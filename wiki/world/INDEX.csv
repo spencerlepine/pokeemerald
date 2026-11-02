@@ -2950,6 +2950,8 @@ magma-tunnels,SULLUST,dungeon,FieryPath,BLOCKOUT,person,Event object,1x1,,,PLACE
 magma-tunnels,SULLUST,dungeon,FieryPath,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
 magma-tunnels,SULLUST,dungeon,FieryPath,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
 magma-tunnels,SULLUST,dungeon,FieryPath,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+magma-tunnels,SULLUST,dungeon,FieryPath,BLOCKOUT,warp,Exit to Route 113,1x1,,,PLACEHOLDER
+magma-tunnels,SULLUST,dungeon,FieryPath,BLOCKOUT,warp,Exit to Pirin,1x1,,,PLACEHOLDER
 starfall-cavern-1f-1r,SULLUST,dungeon,MeteorFalls_1F_1R,BLOCKOUT,area,STARFALL CAVERN 1F 1R,30x42,,,
 starfall-cavern-1f-1r,SULLUST,dungeon,MeteorFalls_1F_1R,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
 starfall-cavern-1f-1r,SULLUST,dungeon,MeteorFalls_1F_1R,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
@@ -3357,7 +3359,7 @@ espa-generator-inside,TATOOINE,dungeon,NewMauville_Inside,BLOCKOUT,sign,Sign,1x1
 espa-generator-inside,TATOOINE,dungeon,NewMauville_Inside,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
 krayt-graveyard,TATOOINE,dungeon,DesertUnderpass,BLOCKOUT,area,KRAYT GRAVEYARD,139x23,,,
 krayt-graveyard,TATOOINE,dungeon,DesertUnderpass,BLOCKOUT,person,Fossil,1x1,,,PLACEHOLDER
-krayt-graveyard,TATOOINE,dungeon,DesertUnderpass,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+krayt-graveyard,TATOOINE,dungeon,DesertUnderpass,BLOCKOUT,warp,Tunnel to the Dune Sea,1x1,,,PLACEHOLDER
 sandcrawler-1f,TATOOINE,dungeon,MirageTower_1F,BLOCKOUT,area,SANDCRAWLER 1F,21x17,,,
 sandcrawler-1f,TATOOINE,dungeon,MirageTower_1F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
 sandcrawler-1f,TATOOINE,dungeon,MirageTower_1F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
@@ -3428,13 +3430,6 @@ anchorhead-house,TATOOINE,interior,VerdanturfTown_House,BLOCKOUT,person,Woman1,1
 anchorhead-house,TATOOINE,interior,VerdanturfTown_House,BLOCKOUT,person,Woman2,1x1,,,PLACEHOLDER
 anchorhead-house,TATOOINE,interior,VerdanturfTown_House,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
 anchorhead-house,TATOOINE,interior,VerdanturfTown_House,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
-anchorhead-showcase-hall,TATOOINE,interior,new,BLOCKOUT,area,Anchorhead farm co-op (Showcase hall),20x14,,,
-anchorhead-showcase-hall,TATOOINE,interior,new,BLOCKOUT,prop,Show stage,8x3,art:new:show-stage,NEW,TODO
-anchorhead-showcase-hall,TATOOINE,interior,new,BLOCKOUT,prop,Counter,3x1,art:new:counter,NEW,TODO
-anchorhead-showcase-hall,TATOOINE,interior,new,BLOCKOUT,person,Co-op judge,1x1,,,PLACEHOLDER
-anchorhead-showcase-hall,TATOOINE,interior,new,BLOCKOUT,person,Farmer,1x1,,,PLACEHOLDER
-anchorhead-showcase-hall,TATOOINE,interior,new,BLOCKOUT,person,Farmer,1x1,,,PLACEHOLDER
-anchorhead-showcase-hall,TATOOINE,interior,new,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
 anchorhead-supply-depot,TATOOINE,interior,VerdanturfTown_Mart,BLOCKOUT,area,ANCHORHEAD SUPPLY DEPOT,11x8,,,
 anchorhead-supply-depot,TATOOINE,interior,VerdanturfTown_Mart,BLOCKOUT,person,Clerk,1x1,,,PLACEHOLDER
 anchorhead-supply-depot,TATOOINE,interior,VerdanturfTown_Mart,BLOCKOUT,person,Boy,1x1,,,PLACEHOLDER
@@ -3634,30 +3629,18 @@ mos-eisley-battle-tent-lobby,TATOOINE,interior,SlateportCity_BattleTentLobby,BLO
 mos-eisley-battle-tent-lobby,TATOOINE,interior,SlateportCity_BattleTentLobby,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
 mos-eisley-battle-tent-lobby,TATOOINE,interior,SlateportCity_BattleTentLobby,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
 mos-eisley-battle-tent-lobby,TATOOINE,interior,SlateportCity_BattleTentLobby,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
-mos-eisley-cantina,TATOOINE,interior,new,BLOCKOUT,area,Mos Eisley Cantina,24x16,,,
-mos-eisley-cantina,TATOOINE,interior,new,BLOCKOUT,prop,Round bar,6x4,art:new:cantina-bar,NEW,TODO
-mos-eisley-cantina,TATOOINE,interior,new,BLOCKOUT,prop,Band stage,5x2,art:new:band-stage,NEW,TODO
-mos-eisley-cantina,TATOOINE,interior,new,BLOCKOUT,prop,Booth,3x2,art:new:cantina-booth,NEW,TODO
-mos-eisley-cantina,TATOOINE,interior,new,BLOCKOUT,prop,Booth,3x2,art:new:cantina-booth,NEW,TODO
-mos-eisley-cantina,TATOOINE,interior,new,BLOCKOUT,prop,Booth,3x2,art:new:cantina-booth,NEW,TODO
-mos-eisley-cantina,TATOOINE,interior,new,BLOCKOUT,person,Wuher,1x1,,,PLACEHOLDER
-mos-eisley-cantina,TATOOINE,interior,new,BLOCKOUT,person,Figrin D'an (band),1x1,,,PLACEHOLDER
-mos-eisley-cantina,TATOOINE,interior,new,BLOCKOUT,person,Ponda Baba,1x1,,,PLACEHOLDER
-mos-eisley-cantina,TATOOINE,interior,new,BLOCKOUT,person,Dr. Evazan,1x1,,,PLACEHOLDER
-mos-eisley-cantina,TATOOINE,interior,new,BLOCKOUT,person,Greedo,1x1,,,PLACEHOLDER
-mos-eisley-cantina,TATOOINE,interior,new,BLOCKOUT,person,Patron,1x1,,,PLACEHOLDER
-mos-eisley-cantina,TATOOINE,interior,new,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
-mos-eisley-fan-club,TATOOINE,interior,SlateportCity_PokemonFanClub,BLOCKOUT,area,MOS EISLEY FAN CLUB,14x11,,,
-mos-eisley-fan-club,TATOOINE,interior,SlateportCity_PokemonFanClub,BLOCKOUT,person,Man,1x1,,,PLACEHOLDER
-mos-eisley-fan-club,TATOOINE,interior,SlateportCity_PokemonFanClub,BLOCKOUT,person,Twin,1x1,,,PLACEHOLDER
-mos-eisley-fan-club,TATOOINE,interior,SlateportCity_PokemonFanClub,BLOCKOUT,person,Reporter,1x1,,,PLACEHOLDER
-mos-eisley-fan-club,TATOOINE,interior,SlateportCity_PokemonFanClub,BLOCKOUT,person,Soothe Bell Woman,1x1,,,PLACEHOLDER
-mos-eisley-fan-club,TATOOINE,interior,SlateportCity_PokemonFanClub,BLOCKOUT,person,Chairman,1x1,,,PLACEHOLDER
-mos-eisley-fan-club,TATOOINE,interior,SlateportCity_PokemonFanClub,BLOCKOUT,person,Zigzagoon,1x1,,,PLACEHOLDER
-mos-eisley-fan-club,TATOOINE,interior,SlateportCity_PokemonFanClub,BLOCKOUT,person,Skitty,1x1,,,PLACEHOLDER
-mos-eisley-fan-club,TATOOINE,interior,SlateportCity_PokemonFanClub,BLOCKOUT,person,Azumarill,1x1,,,PLACEHOLDER
-mos-eisley-fan-club,TATOOINE,interior,SlateportCity_PokemonFanClub,BLOCKOUT,person,Swagger Tutor,1x1,,,PLACEHOLDER
-mos-eisley-fan-club,TATOOINE,interior,SlateportCity_PokemonFanClub,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+mos-eisley-fan-club,TATOOINE,interior,SlateportCity_PokemonFanClub,BLOCKOUT,area,Mos Eisley Cantina,24x16,,,
+mos-eisley-fan-club,TATOOINE,interior,SlateportCity_PokemonFanClub,BLOCKOUT,prop,Round bar,6x4,art:new:cantina-bar,NEW,TODO
+mos-eisley-fan-club,TATOOINE,interior,SlateportCity_PokemonFanClub,BLOCKOUT,prop,Band stage,5x2,art:new:band-stage,NEW,TODO
+mos-eisley-fan-club,TATOOINE,interior,SlateportCity_PokemonFanClub,BLOCKOUT,prop,Booth,3x2,art:new:cantina-booth,NEW,TODO
+mos-eisley-fan-club,TATOOINE,interior,SlateportCity_PokemonFanClub,BLOCKOUT,prop,Booth,3x2,art:new:cantina-booth,NEW,TODO
+mos-eisley-fan-club,TATOOINE,interior,SlateportCity_PokemonFanClub,BLOCKOUT,prop,Booth,3x2,art:new:cantina-booth,NEW,TODO
+mos-eisley-fan-club,TATOOINE,interior,SlateportCity_PokemonFanClub,BLOCKOUT,person,Wuher,1x1,,,PLACEHOLDER
+mos-eisley-fan-club,TATOOINE,interior,SlateportCity_PokemonFanClub,BLOCKOUT,person,Figrin D'an (band),1x1,,,PLACEHOLDER
+mos-eisley-fan-club,TATOOINE,interior,SlateportCity_PokemonFanClub,BLOCKOUT,person,Ponda Baba,1x1,,,PLACEHOLDER
+mos-eisley-fan-club,TATOOINE,interior,SlateportCity_PokemonFanClub,BLOCKOUT,person,Dr. Evazan,1x1,,,PLACEHOLDER
+mos-eisley-fan-club,TATOOINE,interior,SlateportCity_PokemonFanClub,BLOCKOUT,person,Greedo,1x1,,,PLACEHOLDER
+mos-eisley-fan-club,TATOOINE,interior,SlateportCity_PokemonFanClub,BLOCKOUT,person,Patron,1x1,,,PLACEHOLDER
 mos-eisley-fan-club,TATOOINE,interior,SlateportCity_PokemonFanClub,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
 mos-eisley-hangar,TATOOINE,interior,SlateportCity_Harbor,BLOCKOUT,area,MOS EISLEY HANGAR,24x15,,,
 mos-eisley-hangar,TATOOINE,interior,SlateportCity_Harbor,BLOCKOUT,person,Ferry Attendant,1x1,,,PLACEHOLDER
@@ -4678,6 +4661,7 @@ route-111,TATOOINE,route,Route111,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
 route-111,TATOOINE,route,Route111,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
 route-111,TATOOINE,route,Route111,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
 route-111,TATOOINE,route,Route111,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+route-111,TATOOINE,route,Route111,BLOCKOUT,warp,Krayt Graveyard tunnel,1x1,,,PLACEHOLDER
 route-112,TATOOINE,route,Route112,BLOCKOUT,area,ROUTE 112,40x60,,,
 route-112,TATOOINE,route,Route112,BLOCKOUT,building,Shuttle station,6x5,art:tatooine:homestead-dome,yes,TODO
 route-112,TATOOINE,route,Route112,BLOCKOUT,prop,Sandstone boulder,2x2,art:tatooine:sandstone-boulder,yes,TODO
@@ -5032,6 +5016,7 @@ yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,building,Bacta Center,5x4,art:shared:
 yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,building,Supply Depot,4x4,art:shared:supply-depot,yes,TODO
 yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,building,Leia's quarters,8x5,art:yavin-4:rebel-hangar,yes,TODO
 yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,building,Pilots' barracks,5x4,art:tatooine:homestead-dome,yes,TODO
+yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,building,Sabacc den,5x4,art:tatooine:homestead-dome,yes,TODO
 yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,building,Mechanics' barracks,5x4,art:tatooine:homestead-dome,yes,TODO
 yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,building,Medic's hut,5x4,art:tatooine:homestead-dome,yes,TODO
 yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,building,Scout's hut,5x4,art:tatooine:homestead-dome,yes,TODO

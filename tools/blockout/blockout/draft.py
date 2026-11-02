@@ -191,7 +191,11 @@ class Draft:
     def save(self, render=True):
         self.doc["grid"] = self.text() + "\n"
         order = ["id", "name", "planet", "kind", "replaces", "status", "story", "pos", "grid", "exits", "buildings",
-                 "props", "people", "signs", "warps", "todo"]
+                 "props", "people", "signs", "warps", "travel", "todo"]
+        if not self.doc.get("travel") and os.path.exists(self.path):   # hand-written links survive a redraw
+            old = yaml.safe_load(open(self.path)) or {}
+            if old.get("travel"):
+                self.doc["travel"] = old["travel"]
         doc = {k: self.doc[k] for k in order if k in self.doc and self.doc[k] is not None}
         os.makedirs(os.path.dirname(self.path), exist_ok=True)
         with open(self.path, "w") as fh:

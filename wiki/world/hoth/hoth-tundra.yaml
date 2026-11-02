@@ -117,6 +117,8 @@ warps:
 - name: Wampa Cave mouth
   at: [23, 3]
   to: wampa-cave-low-tide-entrance-room
+travel:
+- {to: wampa-cave-high-tide-entrance-room, via: tide, name: Cave mouth when the meltwater is high}
 todo: ['New area (replaces: new): vanilla Shoal Cave was reached from Route 125, which is now Yavin 4.', 'New interiors: hoth-survey-outpost, hoth-tauntaun-shelter,
     hoth-hangar.', 'Vanilla''s tides become meltwater: the cave mouth leads to the low or high water entrance room by time of day.', Echo Base does not exist yet
     in 2 BBY; the outpost uses the Echo Base hangar-door art as a survey camp.]

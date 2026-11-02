@@ -36,4 +36,6 @@ warps:
 - name: Door
   at: [7, 11]
   to: route-112
+travel:
+- {to: mustafar-peak-shuttle-station, via: shuttle, name: Shuttle up to Mustafar Peak}
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

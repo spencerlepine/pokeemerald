@@ -21,6 +21,8 @@
       - {name: Town sign, at: [15, 13]}
     warps:                           # doorways that are not a building door (cave mouths, ladders, hatches)
       - {name: Cave, at: [4, 2], to: some-cave}
+    travel:                          # links that are not a door or an edge (ship, shuttle, dive, script)
+      - {to: starnav, via: ship, name: StarNAV flight console}
     todo:                            # open questions and work left on the layout
       - text
 
@@ -58,6 +60,7 @@ class Area:
         self.people = raw.get("people") or []
         self.signs = raw.get("signs") or []
         self.warps = raw.get("warps") or []
+        self.travel = raw.get("travel") or []   # links not on the map: ships, shuttles, dives
         self.todo = raw.get("todo") or []
 
     def cell(self, x, y):

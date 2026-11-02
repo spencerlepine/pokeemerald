@@ -5,7 +5,7 @@ kind: route
 replaces: Route121
 status: BLOCKOUT
 story: Forest road east of Route 120 past the reserve shuttle stop. Vanilla's east road to Cloud City and south road to Jedha are cut.
-pos: [400, 80]
+pos: [80, 82]
 grid: |
   TTTT##TTTTTTTTTTTTTTTTTTTTTTTTTTTTT#####TT.T##TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
   TTTT##TTTTTTTTTTTTTTTTTTTTTTTTTTTTT#####TT.T##TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT

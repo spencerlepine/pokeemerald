@@ -65,4 +65,6 @@ warps:
 - name: Door
   at: [7, 1]
   to: underwater-route-134
+travel:
+- {to: sealed-vault-outer-room, via: emerge, name: Surface inside the Sealed Vault}
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

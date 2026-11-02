@@ -5,7 +5,7 @@ kind: route
 replaces: Route123
 status: BLOCKOUT
 story: River valley in southern Endor with the berry grower's lodge.
-pos: [320, 140]
+pos: [0, 140]
 grid: |
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT~~~~~~~~~~~~~~~~~~~~~~~TTTT~~~~~~~~~~~~~~~~~~
   TTTTTTTTTTTT.........TTTTTTTTTTTTTTTTTTTTTTT..T############TTTTTTTT""""TTT".""<#.###.TTTTTTTTTT~~~~~~~~~~~~~~~~~~~~~~~T..T~~~~~~~~~~~~~~~~~~

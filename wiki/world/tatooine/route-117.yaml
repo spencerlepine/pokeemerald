@@ -5,7 +5,7 @@ kind: route
 replaces: Route117
 status: BLOCKOUT
 story: Farm road from Anchorhead east to Mos Espa past the Creature Nursery, a ranch with pens and a dewback trough.
-pos: [140, 140]
+pos: [16, -141]
 grid: |
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT...TT.."........"".........
   TTTTTTTT..""TTTTTT....~~~~~~~TTTT#.#.T...."....T."""".......

@@ -5,7 +5,7 @@ kind: route
 replaces: Route125
 status: BLOCKOUT
 story: Jungle lakes north of the base. Vanilla's Shoal Cave door (Hoth) is cut.
-pos: [640, 60]
+pos: [12, -40]
 grid: |
   ~~~~~~~~~~~~~~~~~~##~~~############~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   ~~~~~~~~~~~~~~~~~~##~~##############~~~~~##~~~~~~~##~~~~~~~##~~~~~~~~~~~~~~~~~~~

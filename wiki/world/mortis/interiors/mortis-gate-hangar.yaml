@@ -34,4 +34,6 @@ warps:
 - name: Door
   at: [8, 2]
   to: mortis-gate-exterior
+travel:
+- {to: starnav, via: ship, name: Mortis landing}
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

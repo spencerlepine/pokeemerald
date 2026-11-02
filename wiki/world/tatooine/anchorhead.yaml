@@ -5,7 +5,7 @@ kind: town
 replaces: VerdanturfTown
 status: BLOCKOUT
 story: Quiet farm town with clean air. Camie and her father live here, the farm co-op doubles as a Showcase hall, and Luke's friends hang out by the skyhopper.
-pos: [-25, -143]
+pos: [-18, -143]
 grid: |
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
@@ -43,7 +43,7 @@ buildings:
   at: [13, 3]
   size: [6, 4]
   door: 3
-  to: anchorhead-showcase-hall
+  to: anchorhead-battle-tent-lobby
 - name: Bacta Center
   art: art:shared:bacta-center
   at: [4, 5]

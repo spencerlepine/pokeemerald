@@ -5,7 +5,7 @@ kind: route
 replaces: Route115
 status: BLOCKOUT
 story: 'Coastal cliffs north of Bestine: a beach of wrecked pod parts, Starfall Cavern''s Tatooine mouth and long grass for training.'
-pos: [0, 40]
+pos: [-123, -240]
 grid: |
   ~#TTTTTTTTTTTTTT########################
   ~#TTTTTTTTTTTTTT########################

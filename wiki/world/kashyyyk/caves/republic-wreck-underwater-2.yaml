@@ -22,4 +22,6 @@ warps:
 - name: Door
   at: [3, 1]
   to: republic-wreck-underwater-1
+travel:
+- {to: republic-wreck-hidden-floor-corridors, via: emerge, name: Surface into the hidden floor}
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

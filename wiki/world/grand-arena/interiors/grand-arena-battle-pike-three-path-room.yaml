@@ -29,4 +29,8 @@ people:
   role: npc
 signs: []
 warps: []
+travel:
+- {to: grand-arena-battle-pike-room-final, via: script, name: Pike path}
+- {to: grand-arena-battle-pike-room-normal, via: script, name: Pike path}
+- {to: grand-arena-battle-pike-room-wild-mons, via: script, name: Pike path}
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

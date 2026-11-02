@@ -6,7 +6,7 @@ replaces: BattleFrontier_OutsideEast
 status: BLOCKOUT
 story: 'East half of the Grand Arena: the Tower, Arena, Palace and Pyramid, the ranking hall, the exchange corner, the Bacta Center and more lounges. Artisan Cave
   opens in the cliffs.'
-pos: [56, 403]
+pos: [0, 0]
 grid: |
   ~~~~~~~~##################~~##~~##~~################################~~##
   ~~~~~~~~#################~~~~~~~~~~~~~##~~##~~##~~##~~##~~##~~##~~##~~##

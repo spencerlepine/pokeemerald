@@ -34,4 +34,6 @@ warps:
 - name: Door
   at: [8, 2]
   to: atollon-exterior
+travel:
+- {to: starnav, via: ship, name: Atollon landing strip}
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

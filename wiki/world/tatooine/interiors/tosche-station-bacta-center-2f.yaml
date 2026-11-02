@@ -37,5 +37,11 @@ warps:
 - name: Door
   at: [1, 6]
   to: tosche-station-bacta-center-1f
+travel:
+- {to: battle-colosseum-2-p, via: link, name: Any Bacta Center upstairs (link lounge)}
+- {to: battle-colosseum-4-p, via: link, name: Any Bacta Center upstairs (link lounge)}
+- {to: trade-center, via: link, name: Any Bacta Center upstairs (link lounge)}
+- {to: union-room, via: link, name: Any Bacta Center upstairs (link lounge)}
+- {to: record-corner, via: link, name: Any Bacta Center upstairs (link lounge)}
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Planet border cut: door at [5, 1] to union-room; reached by ship instead.', 'Planet border cut:
     door at [9, 1] to trade-center; reached by ship instead.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

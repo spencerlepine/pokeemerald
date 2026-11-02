@@ -204,3 +204,26 @@ def render(map_name):
     gba = _gba()
     lay = gba.layouts()[map_json(map_name)["layout"]]
     return gba.render_layout(lay).convert("RGB")
+
+
+def vanilla_links():
+    """Links that are not doors or map edges: dive and emerge connections from each map.json, and
+    `warp...` commands in each map's own scripts.inc (ferries, cable cars, facility rooms).
+    Returns (from_map, to_map, via) with vanilla map folder names."""
+    import glob as _g
+    import re as _re
+    const_to_name, out = {}, []
+    for f in _g.glob(str(GAME / "data/maps/*/map.json")):
+        const_to_name[json.loads(Path(f).read_text())["id"]] = Path(f).parent.name
+    for f in _g.glob(str(GAME / "data/maps/*/map.json")):
+        mj = json.loads(Path(f).read_text())
+        name = Path(f).parent.name
+        for c in mj.get("connections") or []:
+            if c["direction"] in ("dive", "emerge") and c["map"] in const_to_name:
+                out.append((name, const_to_name[c["map"]], c["direction"]))
+        sc = Path(f).parent / "scripts.inc"
+        if sc.exists():
+            for m in sorted(set(_re.findall(r"^\s*warp\w*\s+(MAP_[A-Z0-9_]+)", sc.read_text(), _re.M))):
+                if m in const_to_name and const_to_name[m] != name:
+                    out.append((name, const_to_name[m], "script"))
+    return out

@@ -6,6 +6,7 @@ replaces: new
 status: BLOCKOUT
 story: 'Optional: a Tibanna gas refinery on a separate platform north of Cloud City, reached by cloud car or the north skybridge. Ugnaughts work the tanks; Cartel
   thugs are smuggling gas.'
+pos: [15, -26]
 grid: |
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

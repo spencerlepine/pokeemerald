@@ -6,7 +6,7 @@ replaces: SlateportCity
 status: BLOCKOUT
 story: Wretched hive of scum and villainy. The Cantina (home of the companion fan club), the Spacer Museum, Ric Olie's shipyard and two docking bays round a busy
   bazaar. Docking Bay 86 is the hangar to Kashyyyk.
-pos: [73, -28]
+pos: [81, -28]
 grid: |
   TTTTTTTTTTTTTTTTTTTTTTTT::TTTTTTTTTTTTTTTTTTTTTTTT
   TTTTTTTTTTTTTTTTTTTTTTTT::TTTTTTTTTTTTTTTTTTTTTTTT
@@ -80,7 +80,7 @@ buildings:
   at: [8, 12]
   size: [7, 5]
   door: 3
-  to: mos-eisley-cantina
+  to: mos-eisley-fan-club
 - name: Spacer Museum
   art: art:tatooine:spacer-museum
   at: [34, 8]
@@ -212,4 +212,4 @@ signs:
   at: [14, 41]
 warps: []
 todo: ['Vanilla''s sea routes south (109) are cut: Kashyyyk is reached from Docking Bay 86.', The fan club moves into the Cantina's back booth (no separate building);
-    new interior id mos-eisley-cantina., Battle tent stays as a building (vanilla Slateport has one).]
+    the cantina is built into the vanilla fan club room (mos-eisley-fan-club)., Battle tent stays as a building (vanilla Slateport has one).]

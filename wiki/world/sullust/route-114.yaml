@@ -5,7 +5,7 @@ kind: route
 replaces: Route114
 status: BLOCKOUT
 story: Rocky road west of Inyusu Tor down to Starfall Cavern, with Tess's workshop (the companion storage system) and the fossil collector's home.
-pos: [40, 0]
+pos: [-40, 4]
 grid: |
   #T#T#T#T#T#T#T#.#..##.###...............
   T#T#T###########.####.##.###############

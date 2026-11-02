@@ -93,5 +93,8 @@ people:
   role: item
 signs: []
 warps: []
+travel:
+- {to: underwater-sealed-chamber, via: dive, name: Dive spot over the vault}
+- {to: underwater-route-134, via: dive, name: Dive spot}
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Planet border cut: west edge to mos-eisley (TATOOINE); reached by ship instead.', 'Vanilla''s
     west edge to Slateport (now Mos Eisley, Tatooine) is cut; Route 134 ends in open sea.']

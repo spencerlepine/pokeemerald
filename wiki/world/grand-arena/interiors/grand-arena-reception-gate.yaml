@@ -47,4 +47,6 @@ warps:
 - name: Door
   at: [4, 1]
   to: grand-arena-outside-west
+travel:
+- {to: starnav, via: ship, name: Arena dock}
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

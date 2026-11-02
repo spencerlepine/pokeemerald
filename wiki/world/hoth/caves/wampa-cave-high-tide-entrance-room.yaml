@@ -50,4 +50,6 @@ warps:
 - name: Cave mouth
   at: [20, 30]
   to: hoth-tundra
+travel:
+- {to: wampa-cave-high-tide-inner-room, via: tide, name: Inner tunnels at high water}
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', The mouth now opens onto the Hoth tundra (was Route 125).]

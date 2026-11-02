@@ -5,7 +5,7 @@ kind: route
 replaces: Route104
 status: BLOCKOUT
 story: Coast road from Mos Entha north to Bestine past the Jundland Wastes. Han's hangar (vanilla Mr. Briney's cottage) is where the Falcon leaves for Kashyyyk.
-pos: [0, 180]
+pos: [-133, -98]
 grid: |
   TTTTTTTTTT........................TTTTTT
   TTTTTTTTTTTT......................TTTTTT

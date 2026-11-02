@@ -76,4 +76,6 @@ warps:
 - name: Door
   at: [23, 7]
   to: wellspring-interior
+travel:
+- {to: starnav, via: ship, name: Landing beach}
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Was filed as an interior; walked outdoors, so it is a landmark now.']

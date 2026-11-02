@@ -73,6 +73,11 @@ people:
   at: [7, 32]
   role: item
 signs: []
-warps: []
-todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Planet border cut: door at [26, 36] to route-112; reached by ship instead.', 'Planet border cut:
-    door at [26, 4] to route-112; reached by ship instead.']
+warps:
+- name: Exit to Route 113
+  at: [26, 4]
+  to: route-113
+- name: Exit to Pirin
+  at: [26, 36]
+  to: pirin
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

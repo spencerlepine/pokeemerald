@@ -3,7 +3,7 @@
 python3 -m blockout render [area.yaml ...]   -> <area>.png next to each file (default: every area)
 python3 -m blockout check  [area.yaml ...]   -> layout problems, exit 1 if any
 python3 -m blockout index                    -> wiki/world/INDEX.csv: every area and every placed piece
-python3 -m blockout guide                    -> wiki/world/GUIDE.md: planets, areas, connections, ship links"""
+python3 -m blockout guide                    -> wiki/world/GUIDE.md and CONNECTIONS.csv (the area graph)"""
 import argparse
 import csv
 import glob
@@ -90,6 +90,12 @@ def import_map(name, cat, pos, const_to_name, force=False):
            "todo": ["Imported from vanilla: '#' cells are vanilla buildings, cliffs and fences; replace them with this area's own buildings and props."]}
     if doc["pos"] is None:
         del doc["pos"]
+    if os.path.exists(out):   # hand-written travel links (ships, shuttles, dives) survive a re-import
+        old = yaml.safe_load(open(out)) or {}
+        if old.get("travel"):
+            doc["travel"] = old["travel"]
+        if old.get("pos") is not None:   # keep the planet layout (`blockout layout`) over vanilla's position
+            doc["pos"] = old["pos"]
     os.makedirs(os.path.dirname(out), exist_ok=True)
     with open(out, "w") as fh:
         yaml.dump(doc, fh, Dumper=_Dumper, sort_keys=False, width=160, allow_unicode=True, default_flow_style=None)
@@ -261,7 +267,32 @@ def cmd_world(a):
         path = WORLD / pl.lower().replace(" ", "-") / "_planet.png"
         out.save(path)
         print(os.path.relpath(path, V.ROOT))
-    img = O.stitch(areas, "The whole world, overworld areas (orange label = not laid out yet)", tint=True)
+    # each planet is its own map, so the world sheet is one panel per planet, in story order
+    panels = []
+    for pl in [p for p in ORDER if p in planets] + [p for p in planets if p not in ORDER]:
+        mine = [x for x in areas if x.planet == pl and x.kind in ("town", "route", "landmark", "space")]
+        if mine and all(x.pos is None for x in mine):   # door-linked islands: show them side by side
+            cx = 0
+            for x in mine:
+                x.pos, cx = [cx, 0], cx + x.w + 4
+        im = O.stitch(mine, pl, tint=True)
+        if im is not None:
+            panels.append(im)
+    cols, gap = 4, 16
+    cw = max(i.width for i in panels)
+    rows = [panels[k:k + cols] for k in range(0, len(panels), cols)]
+    H = sum(max(i.height for i in r) for r in rows) + gap * (len(rows) + 1) + 30
+    img = Image.new("RGB", (cols * cw + gap * (cols + 1), H), (28, 28, 32))
+    from PIL import ImageDraw
+    ImageDraw.Draw(img).text((gap, 8), "The whole world: one panel per planet (each planet is its own map; ships link them)",
+                             font=O.F_BIG, fill=(255, 255, 255))
+    y = 30 + gap
+    for r in rows:
+        x = gap
+        for i in r:
+            img.paste(i, (x, y))
+            x += cw + gap
+        y += max(i.height for i in r) + gap
     img.save(WORLD / "_world.png")
     print("wiki/world/_world.png", img.size)
 
@@ -341,6 +372,58 @@ def cmd_guide(a):
             L += ["New areas (not in vanilla): " + ", ".join(sorted(new)) + ".", ""]
         if caves:
             L += ["Caves: " + ", ".join(x.id for x in sorted(caves, key=lambda x: x.id)) + ".", ""]
+    # the connection graph: one row per exit, door and warp, plus StarNAV flights between ship rooms
+    edges = []
+    for x in areas:
+        for e in x.exits:
+            edges.append((x, e.get("to"), f"exit {e['edge']}", ""))
+        for b in x.buildings:
+            if b.get("to"):
+                edges.append((x, b["to"], "door", b.get("name", "")))
+        for w in x.warps:
+            if w.get("to"):
+                edges.append((x, w["to"], "warp", w.get("name", "")))
+        for t in x.travel:
+            edges.append((x, t["to"], t.get("via", "travel"), t.get("name", "")))
+    from . import catalog as K
+    area_of = {n: m["area"] for n, m in K.maps().items()}
+    for a_, b_, via in V.vanilla_links():
+        fa, tb = area_of.get(a_), area_of.get(b_)
+        if fa in by_id and tb in by_id:
+            edges.append((by_id[fa], tb, f"vanilla {via}", ""))
+    ship_rooms = sorted({x.id for x, t, _, _ in edges if t == "starnav"} |
+                        {x.id for x in areas if x.kind == "interior" and "hangar" in x.id})
+    links = {(x.id, t) for x, t, _, _ in edges}
+    with open(WORLD / "CONNECTIONS.csv", "w", newline="") as fh:
+        w = csv.writer(fh)
+        w.writerow(["from", "from_planet", "from_kind", "to", "to_planet", "to_kind", "via", "name", "two_way", "crosses_planet"])
+        for x, t, via, name in edges:
+            y = by_id.get(t)
+            w.writerow([x.id, x.planet, x.kind, t, y.planet if y else "", y.kind if y else "", via, name,
+                        "yes" if (t, x.id) in links else "no",
+                        "yes" if y and y.planet != x.planet and "SHARED" not in (x.planet, y.planet) else ""])
+        for r in [r for r in ship_rooms if not any(e[0].id == r and e[1] == "starnav" for e in edges)]:
+            w.writerow([r, by_id[r].planet, by_id[r].kind, "starnav", "", "", "StarNAV flight", "ship to any unlocked planet", "yes", "yes"])
+    # what the player can reach on foot, by door and by ship, starting at Mos Pelgo
+    adj = {}
+    for x, t, _, _ in edges:
+        adj.setdefault(x.id, set()).add(t)
+        adj.setdefault(t, set())
+    for r in ship_rooms:
+        adj.setdefault(r, set()).add("starnav")
+        adj.setdefault("starnav", set()).add(r)
+    seen, todo = {"mos-pelgo"}, ["mos-pelgo"]
+    while todo:
+        for n in adj.get(todo.pop(), ()):
+            if n not in seen:
+                seen.add(n)
+                todo.append(n)
+    lost = sorted(x.id for x in areas if x.id not in seen)
+    one_way = sum(1 for x, t, _, _ in edges if (t, x.id) not in links)
+    L[4:4] = [f"Connections: [CONNECTIONS.csv](CONNECTIONS.csv) has {len(edges)} links (exits, doors, warps) plus a StarNAV flight "
+              f"row for each of the {len(ship_rooms)} ship rooms; {one_way} links have no way straight back (ledges, holes, "
+              f"one-way warps, or a back door still missing). From Mos Pelgo, {len(seen & set(by_id))} of {len(areas)} areas can be reached."
+              + (f" Not reachable yet: {', '.join(lost)}." if lost else ""), ""]
     out = WORLD / "GUIDE.md"
     out.write_text("\n".join(L) + "\n")
     print(out)

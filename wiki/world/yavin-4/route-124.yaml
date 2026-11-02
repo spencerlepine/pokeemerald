@@ -5,7 +5,7 @@ kind: route
 replaces: Route124
 status: BLOCKOUT
 story: 'Jungle river delta west of the base: deep channels to dive in and the treasure divers'' hut.'
-pos: [560, 60]
+pos: [-80, -35]
 grid: |
   ~~~~~~~~~~~##~~~~~~~~~~~~~~~~~~~~~~~~~~~~##~~~~##~~~~~~~~~~~~~~~~~~~~##~~~~~~~~~
   ~~~~~~~######~~~~~~~~~~~~~~~~~~~~~~~~~~~~##########~~~~~~~~~~~~~~~~~~##~~~~~~~~~

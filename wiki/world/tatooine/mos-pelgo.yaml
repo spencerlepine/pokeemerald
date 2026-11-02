@@ -109,5 +109,7 @@ signs:
 - name: Lab sign
   at: [9, 16]
 warps: []
+travel:
+- {to: cargo-hold-inside-of-truck, via: intro, name: Opening scene in the freighter's hold}
 todo: [The freighter on the landing pad replaces vanilla's moving truck; the intro cutscene needs a new landing., 'Same size, exit and 3 doors as Littleroot, so it
     can be built into that map.']

@@ -135,4 +135,11 @@ warps:
 - name: Door
   at: [21, 1]
   to: cloud-city-showcase-hall
+travel:
+- {to: showcase-hall, via: script, name: Showcase entry}
+- {to: showcase-hall-beauty, via: script, name: Showcase entry}
+- {to: showcase-hall-cool, via: script, name: Showcase entry}
+- {to: showcase-hall-cute, via: script, name: Showcase entry}
+- {to: showcase-hall-smart, via: script, name: Showcase entry}
+- {to: showcase-hall-tough, via: script, name: Showcase entry}
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]

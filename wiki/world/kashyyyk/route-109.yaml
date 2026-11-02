@@ -5,7 +5,7 @@ kind: route
 replaces: Route109
 status: BLOCKOUT
 story: 'Kashyyyk''s southern beach and its seaside hut. Vanilla''s north edge to Mos Eisley is cut: Kashyyyk is reached by the Falcon.'
-pos: [200, 320]
+pos: [166, -36]
 grid: |
   ##~~~~~~TTTTTTTTTTTTTTTTTTTTTTTTTTTT~~##
   ##~~~~~~............................~~##

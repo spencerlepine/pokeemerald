@@ -6,7 +6,7 @@ replaces: Route111
 status: BLOCKOUT
 story: 'The Dune Sea: open desert north of Mos Espa with sandstorms (SAND GOGGLES), the Krayt Graveyard tunnels, the Tusken Ruins and the wandering Sandcrawler. The
   Pit of Carkoon and the sail barge wreck are optional side spots, and a track east leads to Jabba''s palace.'
-pos: [200, 0]
+pos: [92, -304]
 grid: |
   ########################################
   ########################################
@@ -359,5 +359,8 @@ warps:
 - name: Door
   at: [31, 113]
   to: trial-spire-entrance
+- name: Krayt Graveyard tunnel
+  at: [11, 93]
+  to: krayt-graveyard
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Planet border cut: west edge to route-113 (SULLUST); reached by ship instead.', The Sandcrawler
     (vanilla Mirage Tower) appears in the Dune Sea only after a sandstorm.]

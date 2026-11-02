@@ -29,4 +29,6 @@ warps:
 - name: Door
   at: [5, 7]
   to: republic-wreck-corridors-b1f
+travel:
+- {to: republic-wreck-underwater-1, via: dive, name: Dive into the flooded hold}
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

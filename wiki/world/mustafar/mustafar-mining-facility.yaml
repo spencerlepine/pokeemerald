@@ -6,6 +6,7 @@ replaces: new
 status: BLOCKOUT
 story: 'Optional: the old Separatist mining facility on a lava river below Ashen Pass, where Anakin fell. Veers runs Stormtrooper drills here; the control center
   holds rare items and an echo of the past for the Ilum trials.'
+pos: [-5, 46]
 grid: |
   ###################==###################
   ###################==###################

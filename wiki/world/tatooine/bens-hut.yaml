@@ -6,6 +6,7 @@ replaces: new
 status: BLOCKOUT
 story: 'Optional: a hermit''s hut on the edge of the Jundland Wastes. Obi-Wan, as old Ben, tells the player about the Force and the Cave of Evil long before he is
   needed.'
+pos: [-87, 45]
 grid: |
   TTTTTTTTTTTTTTTTTTTTTTTTTT
   TTTTTTTTTTTT..TTTTTTTTTTTT

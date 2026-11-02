@@ -68,4 +68,21 @@ people:
   role: object
 signs: []
 warps: []
+travel:
+- {to: battle-pyramid-square-01, via: script, name: Pyramid floor square}
+- {to: battle-pyramid-square-02, via: script, name: Pyramid floor square}
+- {to: battle-pyramid-square-03, via: script, name: Pyramid floor square}
+- {to: battle-pyramid-square-04, via: script, name: Pyramid floor square}
+- {to: battle-pyramid-square-05, via: script, name: Pyramid floor square}
+- {to: battle-pyramid-square-06, via: script, name: Pyramid floor square}
+- {to: battle-pyramid-square-07, via: script, name: Pyramid floor square}
+- {to: battle-pyramid-square-08, via: script, name: Pyramid floor square}
+- {to: battle-pyramid-square-09, via: script, name: Pyramid floor square}
+- {to: battle-pyramid-square-10, via: script, name: Pyramid floor square}
+- {to: battle-pyramid-square-11, via: script, name: Pyramid floor square}
+- {to: battle-pyramid-square-12, via: script, name: Pyramid floor square}
+- {to: battle-pyramid-square-13, via: script, name: Pyramid floor square}
+- {to: battle-pyramid-square-14, via: script, name: Pyramid floor square}
+- {to: battle-pyramid-square-15, via: script, name: Pyramid floor square}
+- {to: battle-pyramid-square-16, via: script, name: Pyramid floor square}
 todo: [Vanilla layout kept; dress with the planet's interior kit in the art phase.]

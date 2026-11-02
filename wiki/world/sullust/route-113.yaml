@@ -5,7 +5,7 @@ kind: route
 replaces: Route113
 status: BLOCKOUT
 story: Ash fields east of Inyusu Tor where ash falls like snow; the glassblower collects it. The Magma Tunnels open on the south side.
-pos: [100, 0]
+pos: [40, 4]
 grid: |
   ###########.###<#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T###T#T#T#T##############
   ###########.###<##T###T#T#T###T#T#T#T#T#T###################T#T#T#########T#..T###T#T#.#############

@@ -5,7 +5,7 @@ kind: route
 replaces: Route101
 status: BLOCKOUT
 story: Short desert track from Mos Pelgo up to Tosche Station, where Prof. Korr is cornered by a wild companion and the player picks a starter from his dropped bag.
-pos: [120, 260]
+pos: [0, -20]
 grid: |
   TTTTTTTT....TTTTTTTT
   TTTTTTTT....TTTTTTTT

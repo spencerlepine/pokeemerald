@@ -5,7 +5,7 @@ kind: route
 replaces: Route118
 status: BLOCKOUT
 story: Forest edge where Rebel shuttles from Tatooine set down. The road runs east along a river towards the redwoods; Route 119 climbs north.
-pos: [240, 140]
+pos: [-80, 140]
 grid: |
   TTTTT>###..###TTTTTT>.~~~~~..<TTTTTTTTT#################T...T###################
   TTTTT>###..###TTTTTT>.~~~~~..<TTTTTTTTT#################T...T###################

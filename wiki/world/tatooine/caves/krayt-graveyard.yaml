@@ -38,7 +38,8 @@ people:
   role: npc
 signs: []
 warps:
-- name: Door
+- name: Tunnel to the Dune Sea
   at: [10, 12]
-  to: route-114-fossil-maniacs-tunnel
-todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']
+  to: route-111
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla's far end was the fossil maniac's tunnel on Route 114 (Sullust); it now opens on Route
+    111.]

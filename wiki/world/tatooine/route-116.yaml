@@ -5,7 +5,7 @@ kind: route
 replaces: Route116
 status: BLOCKOUT
 story: East road from Bestine to Beggar's Canyon, where Fixer is digging a tunnel by hand to Anchorhead. The tunnellers' rest house sits by the canyon mouth.
-pos: [40, 120]
+pos: [-87, -164]
 grid: |
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT.###########################################################
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT.###########################################################

@@ -36,4 +36,6 @@ warps:
 - name: Door
   at: [6, 7]
   to: underwater-route-128
+travel:
+- {to: drowned-cavern-entrance, via: emerge, name: Surface inside the Drowned Cavern}
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

@@ -6,7 +6,7 @@ replaces: MauvilleCity
 status: BLOCKOUT
 story: Podracing city. Watto's junkyard holds the Electric arena, Wald rents speeder bikes, and the podrace stands overlook the east side. A hatch in the south-east
   leads down into the old Espa generator.
-pos: [69, -164]
+pos: [76, -164]
 grid: |
   TTTTTTTTTTTTTTTTTTTTTTTTTTT::TTTTTTTTTTTTTTTTTTTTTTTTTTT
   TTTTTTTTTTTTTTTTTTTTTTTTTTT::TTTTTTTTTTTTTTTTTTTTTTTTTTT

@@ -6,6 +6,7 @@ replaces: new
 status: BLOCKOUT
 story: 'New town: NiJedha, the holy city on Jedha''s moon, with the Temple of the Kyber where the Guardians of the Whills live. Pilgrims rest here before crossing
   the holy waters to the Jedha Temple.'
+pos: [0, 0]
 grid: |
   ############################################
   ############################################

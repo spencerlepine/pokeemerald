@@ -25,4 +25,6 @@ warps:
 - name: Door
   at: [9, 8]
   to: MAP_DYNAMIC
+travel:
+- {to: marine-cave-entrance, via: emerge, name: Surface inside the Marine Cave}
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

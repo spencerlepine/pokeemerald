@@ -142,4 +142,6 @@ people:
   role: item
 signs: []
 warps: []
+travel:
+- {to: underwater-marine-cave, via: dive, name: Roaming dive spot (Marine Cave)}
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Planet border cut: north edge to yavin-4 (YAVIN 4); reached by ship instead.']

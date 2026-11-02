@@ -96,6 +96,12 @@ buildings:
   size: [5, 4]
   door: 2
   to: yavin-4-house-1
+- name: Sabacc den
+  art: art:tatooine:homestead-dome
+  at: [28, 30]
+  size: [5, 4]
+  door: 2
+  to: yavin-4-sabacc-den-1f
 - name: Mechanics' barracks
   art: art:tatooine:homestead-dome
   at: [38, 30]

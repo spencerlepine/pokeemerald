@@ -6,6 +6,7 @@ replaces: new
 status: BLOCKOUT
 story: 'Optional: the forest clearing where the battle was fought: AT-ST wrecks, log traps, and an abandoned shield bunker. Stormtrooper stragglers still patrol;
   Ewok scouts keep watch.'
+pos: [80, 7]
 grid: |
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT

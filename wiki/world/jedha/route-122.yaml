@@ -5,7 +5,7 @@ kind: route
 replaces: Route122
 status: BLOCKOUT
 story: Holy waters round the island of the Jedha Temple. Pilgrim ships land on the north-west pad; a causeway east leads to NiJedha.
-pos: [420, 100]
+pos: [-40, -1]
 grid: |
   ~~~~~##~~~~~~~~~~~~~~######~~~~~~~~~~~~~
   ~~~~~##~~~~~~~~~~~~~~########~~~~~~~~~~~
@@ -63,5 +63,7 @@ warps:
 - name: Door
   at: [22, 29]
   to: jedha-temple-1f
+travel:
+- {to: starnav, via: ship, name: Pilgrim landing pad}
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Planet border cut: north edge to route-121 (ENDOR); reached by ship instead.', 'Planet border
     cut: south edge to route-123 (ENDOR); reached by ship instead.', 'Could not fit: Toppled statue']

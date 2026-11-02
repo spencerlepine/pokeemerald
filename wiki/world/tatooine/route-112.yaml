@@ -5,7 +5,7 @@ kind: route
 replaces: Route112
 status: BLOCKOUT
 story: Canyon road north of the Dune Sea. The shuttle station (vanilla cable car) flies up to Mustafar Peak; the north edge was Sullust and is now cut.
-pos: [160, 20]
+pos: [52, -287]
 grid: |
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
