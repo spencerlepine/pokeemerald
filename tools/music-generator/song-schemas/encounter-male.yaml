@@ -1,0 +1,65 @@
+# Encounter: male trainers. Hot-swap of MUS_ENCOUNTER_MALE (wiki audio:MUS_ENCOUNTER_MALE): the eye-contact
+# music for 142 generic male trainers. SCRATCH (no film cue): an original swaggering trumpet hook in Bb with the
+# Star Wars lean on the flat side (Ab, Eb, the bright V/V before the turn), slap bass and a tight backbeat, square
+# arpeggios and a square counter-line as the vanilla song does. Brief (sw_subject): eye-contact jingle, generic
+# male trainers.
+name: encounter-male
+replaces: MUS_ENCOUNTER_MALE
+form: LOOP
+voicegroup: encounter_male            # vanilla: trumpet 56, slap bass 36, kit 0, squares 2/80/82, wave 81
+master_volume: 80
+tempo: 138
+steps_per_beat: 4
+time_signature: [4, 4]
+seed: 8
+
+parts:
+  trumpet: {program: 56, channel: 0, volume: 108, pan: 6,   range: [F4, G5], gate: 0.86, humanize: {vel: 5}}
+  bass:    {program: 36, channel: 1, volume: 110, pan: 0,   octave: 1, range: [F1, F2], gate: 0.7, role: bass}
+  drums:   {program: 0,  channel: 2, volume: 92,  pan: 10,  role: drums, kit: {k: 36, s: 38, h: 42}}
+  arp:     {program: 80, channel: 3, volume: 46,  pan: 30,  octave: 4, range: [F3, F5], gate: 0.5, mono: true}
+  counter: {program: 2,  channel: 4, volume: 42,  pan: -30, octave: 4, range: [F3, F5], gate: 0.6, mono: true}
+  wave:    {program: 81, channel: 5, volume: 50,  pan: -8,  octave: 3, range: [F3, F4], gate: 0.4, mono: true}
+
+progressions:
+  a: "Bb | Ab | Bb | F"
+  b: "Gm | Eb | C | F"
+
+phrases:
+  tune_a: |
+    F4:2 Bb4:2 D5:4 C5:2 Bb4:2 C5:4 | Eb5:6 C5:2 Ab4:4 Eb5:4 |
+    D5:2 F5:2 D5:2 Bb4:2 F5:4 G5:2 F5:2 | C5:8 r:4 A4:2 C5:2
+  tune_b: |
+    D5:4 Bb4:2 G4:2 D5:4 G5:4 | G5:4 F5:2 Eb5:2 Bb4:8 |
+    C5:2 E5:2 G5:4 F5:2 E5:2 C5:4 | F5:6 Eb5:2 D5:4 C5:4
+  slap: "^1:3 ^1:1 ^1+:2 ^1:2 r:2 ^1:2 ^3:2 ^1+:2"
+  arp8: "^1:2 ^2:2 ^3:2 ^1+:2 ^3:2 ^2:2 ^1:2 ^2:2"
+  stabs: "r:2 ^3:2 r:2 ^3:2 r:2 ^3:2 r:2 ^3:2"
+  counter_b: "Bb4:8 D5:8 | G4:8 Bb4:8 | G4:8 E4:8 | A4:8 C5:8"
+  wave_off: "r:2 ^1:2 r:2 ^2:2 r:2 ^1:2 r:2 ^2:2"
+
+grooves:
+  beat:
+    k: "x.....x.x.......|x.....x.x.....x."
+    s: "....x.......x...|....x.......x.xx"
+    h: "x.x.x.x.x.x.x.x."
+  pickup:
+    k: "x...x...x...x..."
+    s: "............xxxx"
+
+sections:
+  intro:
+    bars: 1
+    chords: "F"
+    parts: {drums: pickup, bass: "F1:4 F1:4 F1:4 F1:2 A1:2", trumpet: "C5':2 C5':2 C5':2 C5':2 C5:4 F4:4"}
+  a:
+    bars: 4
+    chords: a
+    parts: {trumpet: tune_a, bass: slap, drums: beat, arp: arp8, counter: stabs, wave: wave_off}
+  b:
+    bars: 4
+    chords: b
+    parts: {trumpet: tune_b, bass: slap, drums: beat, arp: arp8, counter: counter_b, wave: wave_off}
+
+arrangement: [intro, a, b]
+loop_start: a
