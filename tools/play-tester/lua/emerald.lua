@@ -3,7 +3,7 @@ E = E or {}
 local ADDR = {
   gSaveBlock1Ptr = 0x03005d8c, gSaveBlock2Ptr = 0x03005d90,
   gPlayerPartyCount = 0x020244e9, gPlayerParty = 0x020244ec,
-  gMainCallback2 = 0x030022c4, CB2_LoadMap = 0x08085fcc,
+  gMainCallback2 = 0x030022c4, CB2_LoadMap = 0x08085e84,
 }
 E.ADDR = ADDR
 local function sb1() return emu:read32(ADDR.gSaveBlock1Ptr) end
@@ -153,7 +153,7 @@ end
 
 
 -- ---------- warp table lookups from ROM (gMapGroups) ----------
-E.ADDR.gMapGroups = 0x08486578
+E.ADDR.gMapGroups = 0x0847bc2c
 function E.mapHeader(group, num)
   local grp = emu:read32(E.ADDR.gMapGroups + group * 4)
   return emu:read32(grp + num * 4)
