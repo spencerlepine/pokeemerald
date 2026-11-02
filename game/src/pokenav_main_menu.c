@@ -134,32 +134,32 @@ static const struct CompressedSpriteSheet sMenuLeftHeaderSpriteSheets[] =
     [POKENAV_GFX_MAIN_MENU] = {
         .data = gPokenavLeftHeaderMainMenu_Gfx,
         .size = 0x20,
-        .tag = 3
+        .tag = 8
     },
     [POKENAV_GFX_CONDITION_MENU] = {
         .data = gPokenavLeftHeaderCondition_Gfx,
         .size = 0x20,
-        .tag = 1
+        .tag = 6
     },
     [POKENAV_GFX_RIBBONS_MENU] = {
         .data = gPokenavLeftHeaderRibbons_Gfx,
         .size = 0x20,
-        .tag = 2
+        .tag = 7
     },
     [POKENAV_GFX_MATCH_CALL_MENU] = {
         .data = gPokenavLeftHeaderMatchCall_Gfx,
         .size = 0x20,
-        .tag = 4
+        .tag = 9
     },
     [POKENAV_GFX_MAP_MENU_ZOOMED_OUT] = {
         .data = gPokenavLeftHeaderHoennMap_Gfx,
         .size = 0x20,
-        .tag = 0
+        .tag = 5
     },
     [POKENAV_GFX_MAP_MENU_ZOOMED_IN] = {
         .data = gPokenavLeftHeaderHoennMap_Gfx,
         .size = 0x40,
-        .tag = 0
+        .tag = 5
     }
 };
 
@@ -167,11 +167,11 @@ static const struct CompressedSpriteSheetNoSize sPokenavSubMenuLeftHeaderSpriteS
 {
     [POKENAV_GFX_PARTY_MENU - POKENAV_GFX_SUBMENUS_START] = {
         .data = gPokenavLeftHeaderParty_Gfx,
-        .tag = 1
+        .tag = 6
     },
     [POKENAV_GFX_SEARCH_MENU - POKENAV_GFX_SUBMENUS_START] = {
         .data = gPokenavLeftHeaderSearch_Gfx,
-        .tag = 1
+        .tag = 6
     },
     [POKENAV_GFX_COOL_MENU - POKENAV_GFX_SUBMENUS_START] = {
         .data = gPokenavLeftHeaderCool_Gfx,

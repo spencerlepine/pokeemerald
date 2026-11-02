@@ -26,6 +26,15 @@ def but(*skip): return [i for i in ALL if i not in skip]
 def rng(a, b): return list(range(a, b + 1))
 def banks(*ns): return [16 * n + i for n in ns for i in range(16)]   # whole 16-colour palettes of a multi-palette PNG
 
+class Append:
+    """Keep the file's vanilla colours and append Dune copies of the listed 16-colour banks (for palettes
+    shared by chrome and by labels that must stay vanilla; the C side points the chrome at the new banks)."""
+    def __init__(self, *bank_ids): self.banks = bank_ids
+
+class Replace:
+    """Exact text replacements in a C file (old must occur exactly once in the vanilla file)."""
+    def __init__(self, *pairs): self.pairs = pairs
+
 # family -> [(path under game/, colour family for tx, indices to recolour)]
 FAMILIES = {
   '1_text_windows': [
@@ -70,8 +79,52 @@ FAMILIES = {
     ('graphics/pokedex/area_unknown.png', 'ui', ALL),
     ('src/pokedex.c', 'ui', ['color = RGB(18, 28, 0);', 'color = RGB(15, 21, 0);']),   # cry play arrow
   ],
+  '5_starnav': [
+    ('graphics/pokenav/header.png', 'ui', ALL),            # top bar
+    ('graphics/pokenav/message.png', 'ui', ALL),           # bottom help box
+    ('graphics/pokenav/bg_dots.png', 'ui', ALL),           # dotted backdrop (all menu tints)
+    ('graphics/pokenav/list_arrows.png', 'ui', ALL),
+    # option bars: 4-6 are the bar fill shared by every option; 8-11 are each option's colour square,
+    # which doubles as the Cool/Beauty/Cute/Smart/Tough colour, so they stay vanilla
+    ('graphics/pokenav/options/options.pal', 'ui', [4, 5, 6, 20, 21, 22, 36, 37, 38, 52, 53, 54, 68, 69, 70]),
+    # left headers: banks 0-4 stay vanilla for the contest-category headers; Dune copies go in 5-9 and the
+    # menu headers (main, Hoenn map, condition, party, search, ribbons, match call) point at them
+    ('graphics/pokenav/left_headers/palette.pal', 'ui', Append(0, 1, 2, 3, 4)),
+    # condition graph (shares its striped backdrop colours with the contest circles, see pokeblock graph)
+    ('graphics/pokenav/condition/graph.png', 'ui', [3, 4]),
+    # condition search results, Match Call and ribbon lists: backdrops and frames; the list window
+    # palettes only change their fill (slot 1), their text and gender colours stay
+    ('graphics/pokenav/condition/search_results.png', 'ui', ALL),
+    ('graphics/pokenav/condition/search_results_list.pal', 'ui', [1]),
+    ('graphics/pokenav/match_call/ui.png', 'ui', ALL),
+    ('graphics/pokenav/match_call/window.png', 'ui', ALL),
+    ('graphics/pokenav/match_call/list_window.pal', 'ui', [1]),
+    ('graphics/pokenav/match_call/options_cursor.png', 'ui', ALL),
+    ('graphics/pokenav/ribbons/list_bg.png', 'ui', ALL),
+    ('graphics/pokenav/ribbons/list_ui.pal', 'ui', [1]),
+    ('graphics/pokenav/ribbons/mon_info.pal', 'ui', [1]),
+    ('graphics/pokenav/ribbons/summary_bg.png', 'ui', ALL),
+    ('src/pokenav_main_menu.c', 'ui', Replace(
+        ('    [POKENAV_GFX_MAIN_MENU] = {\n        .data = gPokenavLeftHeaderMainMenu_Gfx,\n        .size = 0x20,\n        .tag = 3\n',
+         '    [POKENAV_GFX_MAIN_MENU] = {\n        .data = gPokenavLeftHeaderMainMenu_Gfx,\n        .size = 0x20,\n        .tag = 8\n'),
+        ('    [POKENAV_GFX_CONDITION_MENU] = {\n        .data = gPokenavLeftHeaderCondition_Gfx,\n        .size = 0x20,\n        .tag = 1\n',
+         '    [POKENAV_GFX_CONDITION_MENU] = {\n        .data = gPokenavLeftHeaderCondition_Gfx,\n        .size = 0x20,\n        .tag = 6\n'),
+        ('    [POKENAV_GFX_RIBBONS_MENU] = {\n        .data = gPokenavLeftHeaderRibbons_Gfx,\n        .size = 0x20,\n        .tag = 2\n',
+         '    [POKENAV_GFX_RIBBONS_MENU] = {\n        .data = gPokenavLeftHeaderRibbons_Gfx,\n        .size = 0x20,\n        .tag = 7\n'),
+        ('    [POKENAV_GFX_MATCH_CALL_MENU] = {\n        .data = gPokenavLeftHeaderMatchCall_Gfx,\n        .size = 0x20,\n        .tag = 4\n',
+         '    [POKENAV_GFX_MATCH_CALL_MENU] = {\n        .data = gPokenavLeftHeaderMatchCall_Gfx,\n        .size = 0x20,\n        .tag = 9\n'),
+        ('    [POKENAV_GFX_MAP_MENU_ZOOMED_OUT] = {\n        .data = gPokenavLeftHeaderHoennMap_Gfx,\n        .size = 0x20,\n        .tag = 0\n',
+         '    [POKENAV_GFX_MAP_MENU_ZOOMED_OUT] = {\n        .data = gPokenavLeftHeaderHoennMap_Gfx,\n        .size = 0x20,\n        .tag = 5\n'),
+        ('    [POKENAV_GFX_MAP_MENU_ZOOMED_IN] = {\n        .data = gPokenavLeftHeaderHoennMap_Gfx,\n        .size = 0x40,\n        .tag = 0\n',
+         '    [POKENAV_GFX_MAP_MENU_ZOOMED_IN] = {\n        .data = gPokenavLeftHeaderHoennMap_Gfx,\n        .size = 0x40,\n        .tag = 5\n'),
+        ('    [POKENAV_GFX_PARTY_MENU - POKENAV_GFX_SUBMENUS_START] = {\n        .data = gPokenavLeftHeaderParty_Gfx,\n        .tag = 1\n',
+         '    [POKENAV_GFX_PARTY_MENU - POKENAV_GFX_SUBMENUS_START] = {\n        .data = gPokenavLeftHeaderParty_Gfx,\n        .tag = 6\n'),
+        ('    [POKENAV_GFX_SEARCH_MENU - POKENAV_GFX_SUBMENUS_START] = {\n        .data = gPokenavLeftHeaderSearch_Gfx,\n        .tag = 1\n',
+         '    [POKENAV_GFX_SEARCH_MENU - POKENAV_GFX_SUBMENUS_START] = {\n        .data = gPokenavLeftHeaderSearch_Gfx,\n        .tag = 6\n'),
+    )),
+  ],
 }
-DONE = ['1_text_windows', '2_party_summary', '3_bag_pokeblock', '4_pokedex']
+DONE = ['1_text_windows', '2_party_summary', '3_bag_pokeblock', '4_pokedex', '5_starnav']
 
 RGB_RE = re.compile(r'RGB\((\d+), *(\d+), *(\d+)\)')
 def tx_rgb5(m, fam):
@@ -129,7 +182,17 @@ def write_bin_pal(data, cols):
     return struct.pack('<%dH' % len(old), *[(o & 0x8000) | (r >> 3) | ((g >> 3) << 5) | ((b >> 3) << 10)
                                              for o, (r, g, b) in zip(old, cols)])
 
+def render_append(path, fam, spec):
+    data = vanilla(path); cols = read_pal(data)
+    new = cols + [tuple(tx(c, fam)) if 0 < i % 16 and c not in MAGENTA else c
+                  for b in spec.banks for i, c in enumerate(cols[16 * b:16 * b + 16])]
+    lines = data.decode().replace('\r\n', '\n').split('\n')
+    head, n = lines[:2], len(new)
+    body = ['%d %d %d' % c for c in new]
+    return '\r\n'.join(head + [str(n)] + body + ['']).encode(), cols, new
+
 def render(path, fam, idx):
+    if isinstance(idx, Append): return render_append(path, fam, idx)
     data = vanilla(path)
     kind = path.rsplit('.', 1)[1]
     cols = {'png': read_png_pal, 'pal': read_pal, 'bin': read_bin_pal}[kind](data)
@@ -143,17 +206,25 @@ def main():
     for fam_name in DONE if mode != '--list' else FAMILIES:
         for path, fam, idx in FAMILIES[fam_name]:
             dst = REPO / 'game' / path
-            if path.endswith('.c'):
+            if isinstance(idx, Replace):
+                text = vanilla(path).decode()
+                for a, b in idx.pairs:
+                    assert text.count(a) == 1, (path, a)
+                    text = text.replace(a, b)
+                out = text.encode(); old = new = []
+                if mode == '--list':
+                    print(f'{fam_name:18} {path:48} edits: ' + '; '.join(f'{a!r} -> {b!r}' for a, b in idx.pairs)); continue
+            elif path.endswith('.c'):
                 out = render_c(path, fam, idx); old = new = []
                 if mode == '--list':
                     print(f'{fam_name:18} {path:48} C colours: ' + '; '.join(
                         f'{s} -> {RGB_RE.sub(lambda m: tx_rgb5(m, fam), s)}' for s in idx)); continue
             else:
                 out, old, new = render(path, fam, idx)
-            changed = [i for i in range(len(old)) if old[i] != new[i]]
+            changed = [i for i in range(len(new)) if i >= len(old) or old[i] != new[i]]
             if mode == '--list':
                 print(f'{fam_name:18} {path:48} {len(changed):2} colours  ' +
-                      ' '.join('%d:%02x%02x%02x>%02x%02x%02x' % (i, *old[i], *new[i]) for i in changed))
+                      ' '.join('%d:%02x%02x%02x>%02x%02x%02x' % (i, *(old[i] if i < len(old) else (0, 0, 0)), *new[i]) for i in changed))
             elif mode == '--check':
                 if dst.read_bytes() != out: print('differs:', path); bad = 1
                 if path.endswith('.png'):   # pixel indices must match vanilla exactly

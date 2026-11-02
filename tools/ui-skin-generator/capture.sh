@@ -58,4 +58,15 @@ s20() { town; menu0; k START; w 0.4; k A; w 3; shot 20_dex_list; k A; w 2.5; sho
         k RIGHT A; w 3; shot 24_dex_size; k B; w 2.5; k B; w 2.5; k START; w 1; shot 25_dex_start_menu; k B; w 1; k SELECT; w 2.5; shot 26_dex_search;
         k DOWN A; w 1; shot 27_dex_search_options; k B; w 0.7; k B; w 2; k B; w 2.5; k B; w 1; }
 
+# ---------- family 5: StarNAV ----------
+nav() { town; lua 'emu:write8(0x0203760e, 3); return 1'; k START; w 0.4; k A; w 4; }
+unnav() { for i in 1 2 3 4 5 6; do k B; w 0.6; done; w 2; k B; w 1; }
+s50() { nav; shot 50_starnav_main; k A; w 3; shot 51_starnav_map; k A; w 2; shot 52_starnav_map_zoom; unnav; s54; }
+s54() { nav; k DOWN A; w 3; shot 54_starnav_condition_menu; k A; w 4; shot 55_starnav_condition_party; k B; w 3;
+        k DOWN A; w 3; shot 55b_starnav_condition_search_menu; k A; w 4; shot 55c_starnav_condition_search; unnav; }
+s56() { nav; k DOWN DOWN A; w 4; shot 56_starnav_matchcall; k A; w 1.5; shot 57_starnav_matchcall_menu;
+        k A; w 1.5; shot 57b_starnav_matchcall_calling; w 3; shot 57c_starnav_matchcall_talk; unnav; }
+s58() { nav; k DOWN DOWN DOWN A; w 4; shot 58_starnav_ribbons_list; k A; w 4; shot 59_starnav_ribbons_mon;
+        k A; w 1.5; shot 59b_starnav_ribbon_detail; unnav; }
+
 for s in "$@"; do "$s" 2>/dev/null || "s$s"; done
