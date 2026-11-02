@@ -3,6 +3,7 @@ python3 -m greybox piece --all                 every art id in world_art.csv tha
 python3 -m greybox kit <category> [--grey]     one category, pieces side by side for review -> wiki/world/greybox/_kit-<category>.png
 python3 -m greybox sheet [--grey]              every building model at three sizes -> wiki/world/greybox/_sheet-buildings.png
 python3 -m greybox terrain <area-id> [--grey]  one area's terrain in relief with its pieces -> wiki/world/greybox/areas/<area>.png
+python3 -m greybox room <area-id> [--grey]     one interior as a greybox room (walls, floor, blocks) -> wiki/world/greybox/rooms/<area>.png
 
 What to draw comes from the wiki: `python3 -m blockout todo --tool greybox` (in ../blockout). The model for an art
 id is its `build` column in wiki/mapping/world_art.csv; colours come from palettes.yaml and styles.yaml here."""
@@ -125,6 +126,10 @@ def cmd_kit(a):
     pal, _ = st.terrain(planet)
     mat = dict(st.material(planet), **kit.MATERIAL.get(a.category, {}))
     cat = kit.CATEGORIES[a.category]
+    if a.category == "interiors":                       # props sit on a room floor, not on ground
+        from . import room as _room
+        rc = _room.colours(st, planet, a.grey)
+        pal = dict(pal, ground=rc["floor"], cliff=rc["trim"])
     seeds = [11, 23, 37]
     rows = []
     for name, (_, sizes) in cat.items():
@@ -174,6 +179,26 @@ def cmd_terrain(a):
         print(out, img.size)
 
 
+def cmd_room(a):
+    """One interior area as a room: its vanilla walls and floor in the planet's interior colours, blocked cells
+    as low greybox slabs, doors, stairs and people."""
+    from . import room as _room
+    st = Styles()
+    docs = [x for x in _areas() if x["id"] in a.ids]
+    missing = set(a.ids) - {x["id"] for x in docs}
+    if missing:
+        sys.exit(f"unknown areas: {sorted(missing)}")
+    out_dir = OUT / "rooms"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    for doc in docs:
+        if doc.get("kind") != "interior":
+            sys.exit(f"{doc['id']} is a {doc.get('kind')}, not an interior; use `terrain`")
+        img = _room.room(doc, st, labels=not a.no_labels, grey=a.grey)
+        out = out_dir / f"{doc['id']}{'-grey' if a.grey else ''}.png"
+        img.save(out)
+        print(out, img.size)
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(prog="greybox", description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -195,5 +220,9 @@ def main(argv=None):
     t.add_argument("ids", nargs="+")
     t.add_argument("--no-labels", action="store_true")
     t.add_argument("--grey", action="store_true")
+    r = sub.add_parser("room", help="one interior as a greybox room")
+    r.add_argument("ids", nargs="+")
+    r.add_argument("--no-labels", action="store_true")
+    r.add_argument("--grey", action="store_true")
     a = ap.parse_args(argv)
-    {"piece": cmd_piece, "sheet": cmd_sheet, "kit": cmd_kit, "terrain": cmd_terrain}[a.cmd](a)
+    {"piece": cmd_piece, "sheet": cmd_sheet, "kit": cmd_kit, "terrain": cmd_terrain, "room": cmd_room}[a.cmd](a)

@@ -27,7 +27,7 @@ alternate telling. Twelve planets plus a post-game; PokéNAV is called **StarNAV
    [--kind K] [--tool T]`. Every area (`art_status` and `notes` in its yaml) and every art id (`status`,
    `build`, `tool`, `notes` in `world_art.csv`) is a row. Statuses: `pending-mockup` → `pending-final-art` →
    `art-complete` → `imported-in-game`.
-2. **Use the tool the row names.** `greybox piece` and `greybox terrain` are in [`tools/greybox/`](tools/greybox/README.md)
+2. **Use the tool the row names.** `greybox piece`, `greybox terrain` and `greybox room` are in [`tools/greybox/`](tools/greybox/README.md)
    (READY). A row with no tool needs a tool or a model that doesn't exist yet; its notes say what it needs.
    Nothing is documented or built ahead for those: they are open work, marked in the wiki.
 3. **Record progress:** `python3 -m blockout todo --set <id> <status>`, then `python3 -m blockout index`.

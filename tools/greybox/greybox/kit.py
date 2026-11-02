@@ -909,16 +909,139 @@ GYMS = {
     "gym-court": (g_court, [(7, 5), (9, 6)]),
 }
 
+
+# --------------------------------------------------------------------------- category 8: interiors (room props)
+# Furniture for the rooms behind every door. A prop fits inside its own cells like the game's furniture: the
+# top `hz` px of the sprite is the height, the rest is the footprint, so nothing spills into the cell behind.
+# Scene y runs from the front (y = 0, the south face) to the back (y = depth).
+def _floor(m, hz):
+    """(front y, back y, height) once `hz` px of height are reserved at the top of the box."""
+    hz = min(hz, m.H - 6)
+    return 0, m.H - hz, hz
+
+
+def r_block(m):
+    """Unknown furniture: the vanilla layout's blocked cells, as one low slab with a lip."""
+    p = palette(m)
+    y0, y1, hz = _floor(m, 6)
+    m.add(S.box(0, y0, 0, m.W, y1, hz, p["wall"], p["roof"]),
+          S.box(1, y0 + 1, hz, m.W - 1, y1 - 1, hz + 1, p["trim"]))
+
+
+def r_counter(m):
+    """Service counter: a long desk with a dark front band and a lit panel on the seed's side."""
+    p = palette(m)
+    y0, y1, hz = _floor(m, 10)
+    m.add(S.box(0, y0, 0, m.W, y1, hz, p["wall"], p["roof"]),
+          S.box(0, y0 - 1, 3, m.W, y0 + 1.5, hz - 3, p["trim"], subtract=True))
+    x = 3 if m.r(1, 2) else m.W - 9
+    m.add(S.box(x, y0 + 2, hz, x + 6, y1 - 2, hz + 1, p["light"]))
+
+
+def r_console(m):
+    """Control console: a low desk with a raised bank at the back and one to three screens on it."""
+    p = palette(m)
+    y0, y1, hz = _floor(m, 12)
+    m.add(S.box(0, y0, 0, m.W, y1, hz - 5, p["wall"], p["roof"]),
+          S.box(0, y1 - 5, hz - 5, m.W, y1, hz, p["trim"], p["dark"]))
+    n = 1 + m.r(1, 3)
+    for i in range(n):
+        x = (m.W / (n + 1)) * (i + 1)
+        m.add(S.box(x - 3, y1 - 6, hz - 4, x + 3, y1 - 4, hz, p["glass"]))
+
+
+def r_terminal(m):
+    """StarNAV terminal: a slim pedestal with an angled screen at the back."""
+    p = palette(m)
+    y0, y1, hz = _floor(m, 9)
+    cx = m.W / 2
+    m.add(S.box(cx - 3, y0 + 1, 0, cx + 3, y1 - 1, hz - 3, p["wall"], p["roof"]),
+          S.box(cx - 4, y1 - 4, hz - 3, cx + 4, y1, hz, p["trim"], p["dark"]),
+          S.box(cx - 3, y1 - 5, hz - 2.5, cx + 3, y1 - 3, hz - 0.5, p["glass"]))
+
+
+def r_bunk(m):
+    """Bunks: two or three stacked sleeping shelves between two posts."""
+    p = palette(m)
+    n = 2 + m.r(1, 2)
+    y0, y1, hz = _floor(m, 2 + n * 7)
+    step = (hz - 2) / n
+    for i in range(n):
+        z = 2 + i * step
+        m.add(S.box(2, y0, z, m.W - 2, y1, z + 3, p["wall"], p["roof"]))
+    m.add(S.box(0, y0, 0, 2, y1, hz, p["trim"], p["dark"]), S.box(m.W - 2, y0, 0, m.W, y1, hz, p["trim"], p["dark"]))
+
+
+def r_booth(m):
+    """Cantina booth: a U of seats around a low table, open to the front."""
+    p = palette(m)
+    y0, y1, hz = _floor(m, 8)
+    t = 4
+    m.add(S.box(0, y1 - t, 0, m.W, y1, hz, p["trim"], p["roof"]),
+          S.box(0, y0, 0, t, y1, hz, p["trim"], p["roof"]),
+          S.box(m.W - t, y0, 0, m.W, y1, hz, p["trim"], p["roof"]),
+          S.box(t + 1, y0 + 1, 0, m.W - t - 1, y1 - t - 1, hz - 2, p["wall"], p["light"]))
+
+
+def r_table(m):
+    """Round table (dejarik or a homestead table): a pedestal and a disc top."""
+    p = palette(m)
+    y0, y1, hz = _floor(m, 8)
+    a = min(m.W / 2 - 1, (y1 - y0) / (2 * K))
+    cx, cy = m.W / 2, (y0 + y1) / 2
+    m.add(S.cylinder(cx, cy, a * 0.3, 0, 0, hz - 2, p["trim"]),
+          S.cylinder(cx, cy, a, 0, hz - 2, hz, p["wall"], p["light"] if m.r(1, 2) else p["roof"]))
+
+
+def r_tank(m):
+    """Bacta tank: a glass column on a base, a cap, in a frame."""
+    p = palette(m)
+    y0, y1, hz = _floor(m, 22)
+    cx = m.W / 2
+    a = min(m.W / 2 - 1, (y1 - y0) / (2 * K))
+    cy = (y0 + y1) / 2
+    m.add(S.cylinder(cx, cy, a, 0, 0, 3, p["trim"], p["dark"]),
+          S.cylinder(cx, cy, a - 1, 0, 3, hz - 3, p["glass"], p["glass"]),
+          S.cylinder(cx, cy, a, 0, hz - 3, hz, p["trim"], p["roof"]))
+
+
+def r_shelf(m):
+    """Storage shelves: a rack with two or three tiers, each a row of boxes in one of two colours."""
+    p = palette(m)
+    n = 2 + m.r(1, 2)
+    y0, y1, hz = _floor(m, 2 + n * 6)
+    step = (hz - 2) / n
+    m.add(S.box(0, y0, 0, m.W, y1, hz, p["trim"], p["dark"]))
+    for i in range(n):
+        z = 2 + i * step
+        col = p["wall"] if m.r(i + 7, 2) else p["roof"]
+        m.add(S.box(2, y0 - 0.5, z, m.W - 2, y1, z + step - 2, col, p["roof"]),
+              S.box(m.W / 2 - 0.5, y0 - 1, z, m.W / 2 + 0.5, y1 + 1, z + step - 2, p["dark"], subtract=True))
+
+
+INTERIORS = {
+    "r-block": (r_block, [(2, 1), (3, 2)]),
+    "r-counter": (r_counter, [(4, 2), (6, 2)]),
+    "r-console": (r_console, [(4, 2), (8, 2)]),
+    "r-terminal": (r_terminal, [(1, 1)]),
+    "r-bunk": (r_bunk, [(3, 2), (3, 3)]),
+    "r-booth": (r_booth, [(3, 2)]),
+    "r-table": (r_table, [(2, 2)]),
+    "r-tank": (r_tank, [(1, 2)]),
+    "r-shelf": (r_shelf, [(3, 1), (5, 1)]),
+}
+
 # Categories whose kit sheet shows the game's sign in front of each piece.
 SIGNED = {"gyms"}
 
 # Colours a category is shown in when its look belongs to a faction, not a planet.
 MATERIAL = {"imperial": {"wall": (150, 156, 164), "roof": (98, 104, 112), "trim": (52, 54, 60)},
             "nature": {"wall": (120, 92, 64), "roof": (96, 140, 72), "trim": (70, 60, 50)},
-            "landform": {"wall": (176, 124, 78), "roof": (214, 176, 126), "trim": (110, 80, 54)}}
+            "landform": {"wall": (176, 124, 78), "roof": (214, 176, 126), "trim": (110, 80, 54)},
+            "interiors": {"wall": (196, 188, 172), "roof": (160, 150, 132), "trim": (84, 76, 66)}}
 
 CATEGORIES = {"doorless": DOORLESS, "sunken": SUNKEN, "imperial": IMPERIAL, "nature": NATURE,
-              "landform": LANDFORM, "hangars": HANGARS, "gyms": GYMS}
+              "landform": LANDFORM, "hangars": HANGARS, "gyms": GYMS, "interiors": INTERIORS}
 
 
 def register(builds):

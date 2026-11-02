@@ -323,7 +323,7 @@ def cmd_index(a):
         for p in _all():
             ar = Area(p)
             w.writerow([ar.id, ar.planet, ar.kind, ar.replaces, ar.status, "area", ar.name, f"{ar.w}x{ar.h}", "", "",
-                        ar.raw.get("art_status", "pending-mockup"), "" if ar.kind == "interior" else "greybox terrain"])
+                        ar.raw.get("art_status", "pending-mockup"), "greybox room" if ar.kind == "interior" else "greybox terrain"])
             for pc in ar.pieces():
                 aid = pc.get("art", "")
                 known = "yes" if aid in art else ("" if not aid else "NEW")
@@ -373,7 +373,7 @@ def cmd_todo(a):
         d = yaml.safe_load(open(p))
         rows.append({"id": d["id"], "kind": "area:" + d["kind"], "planet": d["planet"],
                      "status": d.get("art_status", "pending-mockup"),
-                     "tool": "" if d["kind"] == "interior" else "greybox terrain", "build": "",
+                     "tool": "greybox room" if d["kind"] == "interior" else "greybox terrain", "build": "",
                      "used_in": "", "notes": (d.get("notes") or "")[:90]})
     if a.status:
         rows = [r for r in rows if r["status"] == a.status]

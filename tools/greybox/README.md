@@ -1,8 +1,9 @@
 # greybox: world pieces as simple 3D models, rendered to pixels
 
 Status: **READY** for buildings and structures (the owner approved the kit categories on 2026-11-02). Terrain
-in relief works. Interiors, caves, sea, raised walkways, floating platforms, lava, swamp and ships have no model
-yet; they stay `pending-mockup` in the wiki until a model exists.
+in relief works. Interiors: `room` draws the room shell and the `interiors` kit has the first props (in review).
+Caves, sea, raised walkways, floating platforms, lava, swamp and ships have no model yet; they stay
+`pending-mockup` in the wiki until a model exists.
 
 Every piece is a small 3D model of convex solids (boxes, oval prisms, domes, cones, gables, cuts), ray-cast one
 pixel at a time in the game's top-down view and shaded, so round roofs come out as ovals, only south faces show,
@@ -37,6 +38,7 @@ python3 -m greybox piece --all                            # every art id with a 
 python3 -m greybox kit gyms [--grey]                      # one category side by side, for review
 python3 -m greybox sheet [--grey] [--giants]              # every building model at three sizes
 python3 -m greybox terrain hoth-tundra [--grey]           # one area in relief, with its pieces
+python3 -m greybox room mos-pelgo-lab [--grey]            # one interior as a room -> wiki/world/greybox/rooms/<area>.png
 ```
 
 `--grey` gives pure greybox colours; otherwise the planet palette from `palettes.yaml` is used.
@@ -56,13 +58,16 @@ python3 -m greybox terrain hoth-tundra [--grey]           # one area in relief, 
   bunker, buried, stilts, stilts-dome, stilts-flat, pad, plant, lab, arena, hipped) and the one giant,
   trench-wall. `sprite()` renders one piece; `building()` pastes it on a map.
 - `greybox/kit.py`: the categories added one at a time with the owner (`CATEGORIES`): doorless, sunken,
-  imperial, nature, landform, hangars, gyms. Each piece passes a **simplicity guardrail** when it renders: at
+  imperial, nature, landform, hangars, gyms, interiors. Each piece passes a **simplicity guardrail** when it renders: at
   most 16 solids, colours only from its six-colour palette. Variation comes from the seed, never from detail.
   `MATERIAL` gives a category its own colours (Imperial greys); `SIGNED` categories get the game's sign drawn in
   front on the kit sheet (gyms).
 - `greybox/relief.py`: heights for an area derived from its phase-1 grid. A rock run becomes a plateau with a
   cliff face on its south edge (1-2 cells: all face; 3-5: one level; 6+: two), rock sides get a lip and a shadow,
   water sits below its banks, and `T` cells become pine, boulder, shard or fungus by the planet's nature kind.
+- `greybox/room.py`: an interior as a room. The `#` cells joined to the top edge are walls (two face cells above
+  the floor, ceiling above that, a shadow on the floor below); every other `#` blob is furniture of unknown shape,
+  drawn as a low slab (`r-block`). Props listed on the area with an `art` id use their kit model.
 - `greybox/draw.py`: terrain, flat props (the ones with no model yet), people, signs, labels.
 
 ## Rules learned with the owner
