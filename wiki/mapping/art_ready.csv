@@ -1899,3 +1899,389 @@ graphics/pokemon/zangoose/icon.png,art/graphics/pokemon/zangoose/icon.png,sprite
 graphics/pokemon/zapdos/icon.png,art/graphics/pokemon/zapdos/icon.png,sprite-creature-icon-generator (icongen.py --all),shared icon bank 1 (art/graphics/pokemon/icon_palettes); gMonIconPaletteIndices from icon_palette_indices.csv
 graphics/pokemon/zigzagoon/icon.png,art/graphics/pokemon/zigzagoon/icon.png,sprite-creature-icon-generator (icongen.py --all),shared icon bank 1 (art/graphics/pokemon/icon_palettes); gMonIconPaletteIndices from icon_palette_indices.csv
 graphics/pokemon/zubat/icon.png,art/graphics/pokemon/zubat/icon.png,sprite-creature-icon-generator (icongen.py --all),shared icon bank 1 (art/graphics/pokemon/icon_palettes); gMonIconPaletteIndices from icon_palette_indices.csv
+graphics/pokemon/abra/footprint.png,art/graphics/pokemon/abra/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/absol/footprint.png,art/graphics/pokemon/absol/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/aerodactyl/footprint.png,art/graphics/pokemon/aerodactyl/footprint.png,sprite-creature-footprint-generator (footprint.py --all),talon print
+graphics/pokemon/aggron/footprint.png,art/graphics/pokemon/aggron/footprint.png,sprite-creature-footprint-generator (footprint.py --all),tread print
+graphics/pokemon/aipom/footprint.png,art/graphics/pokemon/aipom/footprint.png,sprite-creature-footprint-generator (footprint.py --all),hand print
+graphics/pokemon/alakazam/footprint.png,art/graphics/pokemon/alakazam/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/altaria/footprint.png,art/graphics/pokemon/altaria/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/ampharos/footprint.png,art/graphics/pokemon/ampharos/footprint.png,sprite-creature-footprint-generator (footprint.py --all),hoof print
+graphics/pokemon/anorith/footprint.png,art/graphics/pokemon/anorith/footprint.png,sprite-creature-footprint-generator (footprint.py --all),bug print
+graphics/pokemon/arbok/footprint.png,art/graphics/pokemon/arbok/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/arcanine/footprint.png,art/graphics/pokemon/arcanine/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/ariados/footprint.png,art/graphics/pokemon/ariados/footprint.png,sprite-creature-footprint-generator (footprint.py --all),bug print
+graphics/pokemon/armaldo/footprint.png,art/graphics/pokemon/armaldo/footprint.png,sprite-creature-footprint-generator (footprint.py --all),claw print
+graphics/pokemon/aron/footprint.png,art/graphics/pokemon/aron/footprint.png,sprite-creature-footprint-generator (footprint.py --all),spider print
+graphics/pokemon/articuno/footprint.png,art/graphics/pokemon/articuno/footprint.png,sprite-creature-footprint-generator (footprint.py --all),talon print
+graphics/pokemon/azumarill/footprint.png,art/graphics/pokemon/azumarill/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/azurill/footprint.png,art/graphics/pokemon/azurill/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/bagon/footprint.png,art/graphics/pokemon/bagon/footprint.png,sprite-creature-footprint-generator (footprint.py --all),claw print
+graphics/pokemon/baltoy/footprint.png,art/graphics/pokemon/baltoy/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/banette/footprint.png,art/graphics/pokemon/banette/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/barboach/footprint.png,art/graphics/pokemon/barboach/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/bayleef/footprint.png,art/graphics/pokemon/bayleef/footprint.png,sprite-creature-footprint-generator (footprint.py --all),hoof print
+graphics/pokemon/beautifly/footprint.png,art/graphics/pokemon/beautifly/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/beedrill/footprint.png,art/graphics/pokemon/beedrill/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/beldum/footprint.png,art/graphics/pokemon/beldum/footprint.png,sprite-creature-footprint-generator (footprint.py --all),tread print
+graphics/pokemon/bellossom/footprint.png,art/graphics/pokemon/bellossom/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/bellsprout/footprint.png,art/graphics/pokemon/bellsprout/footprint.png,sprite-creature-footprint-generator (footprint.py --all),root print
+graphics/pokemon/blastoise/footprint.png,art/graphics/pokemon/blastoise/footprint.png,sprite-creature-footprint-generator (footprint.py --all),round print
+graphics/pokemon/blaziken/footprint.png,art/graphics/pokemon/blaziken/footprint.png,sprite-creature-footprint-generator (footprint.py --all),talon print
+graphics/pokemon/blissey/footprint.png,art/graphics/pokemon/blissey/footprint.png,sprite-creature-footprint-generator (footprint.py --all),droid print
+graphics/pokemon/breloom/footprint.png,art/graphics/pokemon/breloom/footprint.png,sprite-creature-footprint-generator (footprint.py --all),claw print
+graphics/pokemon/bulbasaur/footprint.png,art/graphics/pokemon/bulbasaur/footprint.png,sprite-creature-footprint-generator (footprint.py --all),round print
+graphics/pokemon/butterfree/footprint.png,art/graphics/pokemon/butterfree/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/cacnea/footprint.png,art/graphics/pokemon/cacnea/footprint.png,sprite-creature-footprint-generator (footprint.py --all),root print
+graphics/pokemon/cacturne/footprint.png,art/graphics/pokemon/cacturne/footprint.png,sprite-creature-footprint-generator (footprint.py --all),root print
+graphics/pokemon/camerupt/footprint.png,art/graphics/pokemon/camerupt/footprint.png,sprite-creature-footprint-generator (footprint.py --all),round print
+graphics/pokemon/carvanha/footprint.png,art/graphics/pokemon/carvanha/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/cascoon/footprint.png,art/graphics/pokemon/cascoon/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/castform/footprint.png,art/graphics/pokemon/castform/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/caterpie/footprint.png,art/graphics/pokemon/caterpie/footprint.png,sprite-creature-footprint-generator (footprint.py --all),bug print
+graphics/pokemon/celebi/footprint.png,art/graphics/pokemon/celebi/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/chansey/footprint.png,art/graphics/pokemon/chansey/footprint.png,sprite-creature-footprint-generator (footprint.py --all),droid print
+graphics/pokemon/charizard/footprint.png,art/graphics/pokemon/charizard/footprint.png,sprite-creature-footprint-generator (footprint.py --all),claw print
+graphics/pokemon/charmander/footprint.png,art/graphics/pokemon/charmander/footprint.png,sprite-creature-footprint-generator (footprint.py --all),claw print
+graphics/pokemon/charmeleon/footprint.png,art/graphics/pokemon/charmeleon/footprint.png,sprite-creature-footprint-generator (footprint.py --all),claw print
+graphics/pokemon/chikorita/footprint.png,art/graphics/pokemon/chikorita/footprint.png,sprite-creature-footprint-generator (footprint.py --all),hoof print
+graphics/pokemon/chimecho/footprint.png,art/graphics/pokemon/chimecho/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/chinchou/footprint.png,art/graphics/pokemon/chinchou/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/clamperl/footprint.png,art/graphics/pokemon/clamperl/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/claydol/footprint.png,art/graphics/pokemon/claydol/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/clefable/footprint.png,art/graphics/pokemon/clefable/footprint.png,sprite-creature-footprint-generator (footprint.py --all),foot print
+graphics/pokemon/clefairy/footprint.png,art/graphics/pokemon/clefairy/footprint.png,sprite-creature-footprint-generator (footprint.py --all),foot print
+graphics/pokemon/cleffa/footprint.png,art/graphics/pokemon/cleffa/footprint.png,sprite-creature-footprint-generator (footprint.py --all),foot print
+graphics/pokemon/cloyster/footprint.png,art/graphics/pokemon/cloyster/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/combusken/footprint.png,art/graphics/pokemon/combusken/footprint.png,sprite-creature-footprint-generator (footprint.py --all),talon print
+graphics/pokemon/corphish/footprint.png,art/graphics/pokemon/corphish/footprint.png,sprite-creature-footprint-generator (footprint.py --all),spider print
+graphics/pokemon/corsola/footprint.png,art/graphics/pokemon/corsola/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/cradily/footprint.png,art/graphics/pokemon/cradily/footprint.png,sprite-creature-footprint-generator (footprint.py --all),root print
+graphics/pokemon/crawdaunt/footprint.png,art/graphics/pokemon/crawdaunt/footprint.png,sprite-creature-footprint-generator (footprint.py --all),spider print
+graphics/pokemon/crobat/footprint.png,art/graphics/pokemon/crobat/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/croconaw/footprint.png,art/graphics/pokemon/croconaw/footprint.png,sprite-creature-footprint-generator (footprint.py --all),claw print
+graphics/pokemon/cubone/footprint.png,art/graphics/pokemon/cubone/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/cyndaquil/footprint.png,art/graphics/pokemon/cyndaquil/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/delcatty/footprint.png,art/graphics/pokemon/delcatty/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/delibird/footprint.png,art/graphics/pokemon/delibird/footprint.png,sprite-creature-footprint-generator (footprint.py --all),talon print
+graphics/pokemon/deoxys/footprint.png,art/graphics/pokemon/deoxys/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/dewgong/footprint.png,art/graphics/pokemon/dewgong/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/diglett/footprint.png,art/graphics/pokemon/diglett/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/ditto/footprint.png,art/graphics/pokemon/ditto/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/dodrio/footprint.png,art/graphics/pokemon/dodrio/footprint.png,sprite-creature-footprint-generator (footprint.py --all),talon print
+graphics/pokemon/doduo/footprint.png,art/graphics/pokemon/doduo/footprint.png,sprite-creature-footprint-generator (footprint.py --all),talon print
+graphics/pokemon/donphan/footprint.png,art/graphics/pokemon/donphan/footprint.png,sprite-creature-footprint-generator (footprint.py --all),round print
+graphics/pokemon/dragonair/footprint.png,art/graphics/pokemon/dragonair/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/dragonite/footprint.png,art/graphics/pokemon/dragonite/footprint.png,sprite-creature-footprint-generator (footprint.py --all),claw print
+graphics/pokemon/dratini/footprint.png,art/graphics/pokemon/dratini/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/drowzee/footprint.png,art/graphics/pokemon/drowzee/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/dugtrio/footprint.png,art/graphics/pokemon/dugtrio/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/dunsparce/footprint.png,art/graphics/pokemon/dunsparce/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/dusclops/footprint.png,art/graphics/pokemon/dusclops/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/duskull/footprint.png,art/graphics/pokemon/duskull/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/dustox/footprint.png,art/graphics/pokemon/dustox/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/eevee/footprint.png,art/graphics/pokemon/eevee/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/ekans/footprint.png,art/graphics/pokemon/ekans/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/electabuzz/footprint.png,art/graphics/pokemon/electabuzz/footprint.png,sprite-creature-footprint-generator (footprint.py --all),droid print
+graphics/pokemon/electrike/footprint.png,art/graphics/pokemon/electrike/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/electrode/footprint.png,art/graphics/pokemon/electrode/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/elekid/footprint.png,art/graphics/pokemon/elekid/footprint.png,sprite-creature-footprint-generator (footprint.py --all),droid print
+graphics/pokemon/entei/footprint.png,art/graphics/pokemon/entei/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/espeon/footprint.png,art/graphics/pokemon/espeon/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/exeggcute/footprint.png,art/graphics/pokemon/exeggcute/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/exeggutor/footprint.png,art/graphics/pokemon/exeggutor/footprint.png,sprite-creature-footprint-generator (footprint.py --all),root print
+graphics/pokemon/exploud/footprint.png,art/graphics/pokemon/exploud/footprint.png,sprite-creature-footprint-generator (footprint.py --all),hand print
+graphics/pokemon/farfetchd/footprint.png,art/graphics/pokemon/farfetchd/footprint.png,sprite-creature-footprint-generator (footprint.py --all),talon print
+graphics/pokemon/fearow/footprint.png,art/graphics/pokemon/fearow/footprint.png,sprite-creature-footprint-generator (footprint.py --all),talon print
+graphics/pokemon/feebas/footprint.png,art/graphics/pokemon/feebas/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/feraligatr/footprint.png,art/graphics/pokemon/feraligatr/footprint.png,sprite-creature-footprint-generator (footprint.py --all),claw print
+graphics/pokemon/flaaffy/footprint.png,art/graphics/pokemon/flaaffy/footprint.png,sprite-creature-footprint-generator (footprint.py --all),hoof print
+graphics/pokemon/flareon/footprint.png,art/graphics/pokemon/flareon/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/flygon/footprint.png,art/graphics/pokemon/flygon/footprint.png,sprite-creature-footprint-generator (footprint.py --all),claw print
+graphics/pokemon/forretress/footprint.png,art/graphics/pokemon/forretress/footprint.png,sprite-creature-footprint-generator (footprint.py --all),wheel print
+graphics/pokemon/furret/footprint.png,art/graphics/pokemon/furret/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/gardevoir/footprint.png,art/graphics/pokemon/gardevoir/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/gastly/footprint.png,art/graphics/pokemon/gastly/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/gengar/footprint.png,art/graphics/pokemon/gengar/footprint.png,sprite-creature-footprint-generator (footprint.py --all),foot print
+graphics/pokemon/geodude/footprint.png,art/graphics/pokemon/geodude/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/girafarig/footprint.png,art/graphics/pokemon/girafarig/footprint.png,sprite-creature-footprint-generator (footprint.py --all),hoof print
+graphics/pokemon/glalie/footprint.png,art/graphics/pokemon/glalie/footprint.png,sprite-creature-footprint-generator (footprint.py --all),claw print
+graphics/pokemon/gligar/footprint.png,art/graphics/pokemon/gligar/footprint.png,sprite-creature-footprint-generator (footprint.py --all),bug print
+graphics/pokemon/gloom/footprint.png,art/graphics/pokemon/gloom/footprint.png,sprite-creature-footprint-generator (footprint.py --all),root print
+graphics/pokemon/golbat/footprint.png,art/graphics/pokemon/golbat/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/goldeen/footprint.png,art/graphics/pokemon/goldeen/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/golduck/footprint.png,art/graphics/pokemon/golduck/footprint.png,sprite-creature-footprint-generator (footprint.py --all),webbed print
+graphics/pokemon/golem/footprint.png,art/graphics/pokemon/golem/footprint.png,sprite-creature-footprint-generator (footprint.py --all),round print
+graphics/pokemon/gorebyss/footprint.png,art/graphics/pokemon/gorebyss/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/granbull/footprint.png,art/graphics/pokemon/granbull/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/graveler/footprint.png,art/graphics/pokemon/graveler/footprint.png,sprite-creature-footprint-generator (footprint.py --all),round print
+graphics/pokemon/grimer/footprint.png,art/graphics/pokemon/grimer/footprint.png,sprite-creature-footprint-generator (footprint.py --all),slime print
+graphics/pokemon/groudon/footprint.png,art/graphics/pokemon/groudon/footprint.png,sprite-creature-footprint-generator (footprint.py --all),claw print
+graphics/pokemon/grovyle/footprint.png,art/graphics/pokemon/grovyle/footprint.png,sprite-creature-footprint-generator (footprint.py --all),claw print
+graphics/pokemon/growlithe/footprint.png,art/graphics/pokemon/growlithe/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/grumpig/footprint.png,art/graphics/pokemon/grumpig/footprint.png,sprite-creature-footprint-generator (footprint.py --all),hoof print
+graphics/pokemon/gulpin/footprint.png,art/graphics/pokemon/gulpin/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/gyarados/footprint.png,art/graphics/pokemon/gyarados/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/hariyama/footprint.png,art/graphics/pokemon/hariyama/footprint.png,sprite-creature-footprint-generator (footprint.py --all),foot print
+graphics/pokemon/haunter/footprint.png,art/graphics/pokemon/haunter/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/heracross/footprint.png,art/graphics/pokemon/heracross/footprint.png,sprite-creature-footprint-generator (footprint.py --all),bug print
+graphics/pokemon/hitmonchan/footprint.png,art/graphics/pokemon/hitmonchan/footprint.png,sprite-creature-footprint-generator (footprint.py --all),droid print
+graphics/pokemon/hitmonlee/footprint.png,art/graphics/pokemon/hitmonlee/footprint.png,sprite-creature-footprint-generator (footprint.py --all),droid print
+graphics/pokemon/hitmontop/footprint.png,art/graphics/pokemon/hitmontop/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/ho_oh/footprint.png,art/graphics/pokemon/ho_oh/footprint.png,sprite-creature-footprint-generator (footprint.py --all),talon print
+graphics/pokemon/hoothoot/footprint.png,art/graphics/pokemon/hoothoot/footprint.png,sprite-creature-footprint-generator (footprint.py --all),talon print
+graphics/pokemon/hoppip/footprint.png,art/graphics/pokemon/hoppip/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/horsea/footprint.png,art/graphics/pokemon/horsea/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/houndoom/footprint.png,art/graphics/pokemon/houndoom/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/houndour/footprint.png,art/graphics/pokemon/houndour/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/huntail/footprint.png,art/graphics/pokemon/huntail/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/hypno/footprint.png,art/graphics/pokemon/hypno/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/igglybuff/footprint.png,art/graphics/pokemon/igglybuff/footprint.png,sprite-creature-footprint-generator (footprint.py --all),foot print
+graphics/pokemon/illumise/footprint.png,art/graphics/pokemon/illumise/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/ivysaur/footprint.png,art/graphics/pokemon/ivysaur/footprint.png,sprite-creature-footprint-generator (footprint.py --all),round print
+graphics/pokemon/jigglypuff/footprint.png,art/graphics/pokemon/jigglypuff/footprint.png,sprite-creature-footprint-generator (footprint.py --all),foot print
+graphics/pokemon/jirachi/footprint.png,art/graphics/pokemon/jirachi/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/jolteon/footprint.png,art/graphics/pokemon/jolteon/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/jumpluff/footprint.png,art/graphics/pokemon/jumpluff/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/jynx/footprint.png,art/graphics/pokemon/jynx/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/kabuto/footprint.png,art/graphics/pokemon/kabuto/footprint.png,sprite-creature-footprint-generator (footprint.py --all),bug print
+graphics/pokemon/kabutops/footprint.png,art/graphics/pokemon/kabutops/footprint.png,sprite-creature-footprint-generator (footprint.py --all),claw print
+graphics/pokemon/kadabra/footprint.png,art/graphics/pokemon/kadabra/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/kakuna/footprint.png,art/graphics/pokemon/kakuna/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/kangaskhan/footprint.png,art/graphics/pokemon/kangaskhan/footprint.png,sprite-creature-footprint-generator (footprint.py --all),claw print
+graphics/pokemon/kecleon/footprint.png,art/graphics/pokemon/kecleon/footprint.png,sprite-creature-footprint-generator (footprint.py --all),claw print
+graphics/pokemon/kingdra/footprint.png,art/graphics/pokemon/kingdra/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/kingler/footprint.png,art/graphics/pokemon/kingler/footprint.png,sprite-creature-footprint-generator (footprint.py --all),spider print
+graphics/pokemon/kirlia/footprint.png,art/graphics/pokemon/kirlia/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/koffing/footprint.png,art/graphics/pokemon/koffing/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/krabby/footprint.png,art/graphics/pokemon/krabby/footprint.png,sprite-creature-footprint-generator (footprint.py --all),spider print
+graphics/pokemon/kyogre/footprint.png,art/graphics/pokemon/kyogre/footprint.png,sprite-creature-footprint-generator (footprint.py --all),round print
+graphics/pokemon/lairon/footprint.png,art/graphics/pokemon/lairon/footprint.png,sprite-creature-footprint-generator (footprint.py --all),spider print
+graphics/pokemon/lanturn/footprint.png,art/graphics/pokemon/lanturn/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/lapras/footprint.png,art/graphics/pokemon/lapras/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/larvitar/footprint.png,art/graphics/pokemon/larvitar/footprint.png,sprite-creature-footprint-generator (footprint.py --all),claw print
+graphics/pokemon/latias/footprint.png,art/graphics/pokemon/latias/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/latios/footprint.png,art/graphics/pokemon/latios/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/ledian/footprint.png,art/graphics/pokemon/ledian/footprint.png,sprite-creature-footprint-generator (footprint.py --all),bug print
+graphics/pokemon/ledyba/footprint.png,art/graphics/pokemon/ledyba/footprint.png,sprite-creature-footprint-generator (footprint.py --all),bug print
+graphics/pokemon/lickitung/footprint.png,art/graphics/pokemon/lickitung/footprint.png,sprite-creature-footprint-generator (footprint.py --all),claw print
+graphics/pokemon/lileep/footprint.png,art/graphics/pokemon/lileep/footprint.png,sprite-creature-footprint-generator (footprint.py --all),root print
+graphics/pokemon/linoone/footprint.png,art/graphics/pokemon/linoone/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/lombre/footprint.png,art/graphics/pokemon/lombre/footprint.png,sprite-creature-footprint-generator (footprint.py --all),webbed print
+graphics/pokemon/lotad/footprint.png,art/graphics/pokemon/lotad/footprint.png,sprite-creature-footprint-generator (footprint.py --all),webbed print
+graphics/pokemon/loudred/footprint.png,art/graphics/pokemon/loudred/footprint.png,sprite-creature-footprint-generator (footprint.py --all),hand print
+graphics/pokemon/ludicolo/footprint.png,art/graphics/pokemon/ludicolo/footprint.png,sprite-creature-footprint-generator (footprint.py --all),round print
+graphics/pokemon/lugia/footprint.png,art/graphics/pokemon/lugia/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/lunatone/footprint.png,art/graphics/pokemon/lunatone/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/luvdisc/footprint.png,art/graphics/pokemon/luvdisc/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/machamp/footprint.png,art/graphics/pokemon/machamp/footprint.png,sprite-creature-footprint-generator (footprint.py --all),droid print
+graphics/pokemon/machoke/footprint.png,art/graphics/pokemon/machoke/footprint.png,sprite-creature-footprint-generator (footprint.py --all),droid print
+graphics/pokemon/machop/footprint.png,art/graphics/pokemon/machop/footprint.png,sprite-creature-footprint-generator (footprint.py --all),droid print
+graphics/pokemon/magby/footprint.png,art/graphics/pokemon/magby/footprint.png,sprite-creature-footprint-generator (footprint.py --all),foot print
+graphics/pokemon/magcargo/footprint.png,art/graphics/pokemon/magcargo/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/magikarp/footprint.png,art/graphics/pokemon/magikarp/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/magmar/footprint.png,art/graphics/pokemon/magmar/footprint.png,sprite-creature-footprint-generator (footprint.py --all),foot print
+graphics/pokemon/magnemite/footprint.png,art/graphics/pokemon/magnemite/footprint.png,sprite-creature-footprint-generator (footprint.py --all),wheel print
+graphics/pokemon/magneton/footprint.png,art/graphics/pokemon/magneton/footprint.png,sprite-creature-footprint-generator (footprint.py --all),wheel print
+graphics/pokemon/makuhita/footprint.png,art/graphics/pokemon/makuhita/footprint.png,sprite-creature-footprint-generator (footprint.py --all),foot print
+graphics/pokemon/manectric/footprint.png,art/graphics/pokemon/manectric/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/mankey/footprint.png,art/graphics/pokemon/mankey/footprint.png,sprite-creature-footprint-generator (footprint.py --all),hand print
+graphics/pokemon/mantine/footprint.png,art/graphics/pokemon/mantine/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/mareep/footprint.png,art/graphics/pokemon/mareep/footprint.png,sprite-creature-footprint-generator (footprint.py --all),hoof print
+graphics/pokemon/marill/footprint.png,art/graphics/pokemon/marill/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/marowak/footprint.png,art/graphics/pokemon/marowak/footprint.png,sprite-creature-footprint-generator (footprint.py --all),foot print
+graphics/pokemon/marshtomp/footprint.png,art/graphics/pokemon/marshtomp/footprint.png,sprite-creature-footprint-generator (footprint.py --all),webbed print
+graphics/pokemon/masquerain/footprint.png,art/graphics/pokemon/masquerain/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/mawile/footprint.png,art/graphics/pokemon/mawile/footprint.png,sprite-creature-footprint-generator (footprint.py --all),spider print
+graphics/pokemon/medicham/footprint.png,art/graphics/pokemon/medicham/footprint.png,sprite-creature-footprint-generator (footprint.py --all),hand print
+graphics/pokemon/meditite/footprint.png,art/graphics/pokemon/meditite/footprint.png,sprite-creature-footprint-generator (footprint.py --all),hand print
+graphics/pokemon/meganium/footprint.png,art/graphics/pokemon/meganium/footprint.png,sprite-creature-footprint-generator (footprint.py --all),hoof print
+graphics/pokemon/meowth/footprint.png,art/graphics/pokemon/meowth/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/metagross/footprint.png,art/graphics/pokemon/metagross/footprint.png,sprite-creature-footprint-generator (footprint.py --all),tread print
+graphics/pokemon/metang/footprint.png,art/graphics/pokemon/metang/footprint.png,sprite-creature-footprint-generator (footprint.py --all),tread print
+graphics/pokemon/metapod/footprint.png,art/graphics/pokemon/metapod/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/mew/footprint.png,art/graphics/pokemon/mew/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/mewtwo/footprint.png,art/graphics/pokemon/mewtwo/footprint.png,sprite-creature-footprint-generator (footprint.py --all),foot print
+graphics/pokemon/mightyena/footprint.png,art/graphics/pokemon/mightyena/footprint.png,sprite-creature-footprint-generator (footprint.py --all),claw print
+graphics/pokemon/milotic/footprint.png,art/graphics/pokemon/milotic/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/miltank/footprint.png,art/graphics/pokemon/miltank/footprint.png,sprite-creature-footprint-generator (footprint.py --all),hoof print
+graphics/pokemon/minun/footprint.png,art/graphics/pokemon/minun/footprint.png,sprite-creature-footprint-generator (footprint.py --all),droid print
+graphics/pokemon/misdreavus/footprint.png,art/graphics/pokemon/misdreavus/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/moltres/footprint.png,art/graphics/pokemon/moltres/footprint.png,sprite-creature-footprint-generator (footprint.py --all),talon print
+graphics/pokemon/mr_mime/footprint.png,art/graphics/pokemon/mr_mime/footprint.png,sprite-creature-footprint-generator (footprint.py --all),foot print
+graphics/pokemon/mudkip/footprint.png,art/graphics/pokemon/mudkip/footprint.png,sprite-creature-footprint-generator (footprint.py --all),webbed print
+graphics/pokemon/muk/footprint.png,art/graphics/pokemon/muk/footprint.png,sprite-creature-footprint-generator (footprint.py --all),slime print
+graphics/pokemon/murkrow/footprint.png,art/graphics/pokemon/murkrow/footprint.png,sprite-creature-footprint-generator (footprint.py --all),talon print
+graphics/pokemon/natu/footprint.png,art/graphics/pokemon/natu/footprint.png,sprite-creature-footprint-generator (footprint.py --all),talon print
+graphics/pokemon/nidoking/footprint.png,art/graphics/pokemon/nidoking/footprint.png,sprite-creature-footprint-generator (footprint.py --all),hoof print
+graphics/pokemon/nidoqueen/footprint.png,art/graphics/pokemon/nidoqueen/footprint.png,sprite-creature-footprint-generator (footprint.py --all),round print
+graphics/pokemon/nidoran_f/footprint.png,art/graphics/pokemon/nidoran_f/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/nidoran_m/footprint.png,art/graphics/pokemon/nidoran_m/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/nidorina/footprint.png,art/graphics/pokemon/nidorina/footprint.png,sprite-creature-footprint-generator (footprint.py --all),round print
+graphics/pokemon/nidorino/footprint.png,art/graphics/pokemon/nidorino/footprint.png,sprite-creature-footprint-generator (footprint.py --all),hoof print
+graphics/pokemon/nincada/footprint.png,art/graphics/pokemon/nincada/footprint.png,sprite-creature-footprint-generator (footprint.py --all),bug print
+graphics/pokemon/ninetales/footprint.png,art/graphics/pokemon/ninetales/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/ninjask/footprint.png,art/graphics/pokemon/ninjask/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/noctowl/footprint.png,art/graphics/pokemon/noctowl/footprint.png,sprite-creature-footprint-generator (footprint.py --all),talon print
+graphics/pokemon/nosepass/footprint.png,art/graphics/pokemon/nosepass/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/numel/footprint.png,art/graphics/pokemon/numel/footprint.png,sprite-creature-footprint-generator (footprint.py --all),round print
+graphics/pokemon/nuzleaf/footprint.png,art/graphics/pokemon/nuzleaf/footprint.png,sprite-creature-footprint-generator (footprint.py --all),foot print
+graphics/pokemon/octillery/footprint.png,art/graphics/pokemon/octillery/footprint.png,sprite-creature-footprint-generator (footprint.py --all),suction print
+graphics/pokemon/oddish/footprint.png,art/graphics/pokemon/oddish/footprint.png,sprite-creature-footprint-generator (footprint.py --all),root print
+graphics/pokemon/omanyte/footprint.png,art/graphics/pokemon/omanyte/footprint.png,sprite-creature-footprint-generator (footprint.py --all),suction print
+graphics/pokemon/omastar/footprint.png,art/graphics/pokemon/omastar/footprint.png,sprite-creature-footprint-generator (footprint.py --all),suction print
+graphics/pokemon/onix/footprint.png,art/graphics/pokemon/onix/footprint.png,sprite-creature-footprint-generator (footprint.py --all),slime print
+graphics/pokemon/paras/footprint.png,art/graphics/pokemon/paras/footprint.png,sprite-creature-footprint-generator (footprint.py --all),bug print
+graphics/pokemon/parasect/footprint.png,art/graphics/pokemon/parasect/footprint.png,sprite-creature-footprint-generator (footprint.py --all),bug print
+graphics/pokemon/pelipper/footprint.png,art/graphics/pokemon/pelipper/footprint.png,sprite-creature-footprint-generator (footprint.py --all),talon print
+graphics/pokemon/persian/footprint.png,art/graphics/pokemon/persian/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/phanpy/footprint.png,art/graphics/pokemon/phanpy/footprint.png,sprite-creature-footprint-generator (footprint.py --all),round print
+graphics/pokemon/pichu/footprint.png,art/graphics/pokemon/pichu/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/pidgeot/footprint.png,art/graphics/pokemon/pidgeot/footprint.png,sprite-creature-footprint-generator (footprint.py --all),webbed print
+graphics/pokemon/pidgeotto/footprint.png,art/graphics/pokemon/pidgeotto/footprint.png,sprite-creature-footprint-generator (footprint.py --all),webbed print
+graphics/pokemon/pidgey/footprint.png,art/graphics/pokemon/pidgey/footprint.png,sprite-creature-footprint-generator (footprint.py --all),webbed print
+graphics/pokemon/pikachu/footprint.png,art/graphics/pokemon/pikachu/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/piloswine/footprint.png,art/graphics/pokemon/piloswine/footprint.png,sprite-creature-footprint-generator (footprint.py --all),claw print
+graphics/pokemon/pineco/footprint.png,art/graphics/pokemon/pineco/footprint.png,sprite-creature-footprint-generator (footprint.py --all),wheel print
+graphics/pokemon/pinsir/footprint.png,art/graphics/pokemon/pinsir/footprint.png,sprite-creature-footprint-generator (footprint.py --all),bug print
+graphics/pokemon/plusle/footprint.png,art/graphics/pokemon/plusle/footprint.png,sprite-creature-footprint-generator (footprint.py --all),droid print
+graphics/pokemon/politoed/footprint.png,art/graphics/pokemon/politoed/footprint.png,sprite-creature-footprint-generator (footprint.py --all),webbed print
+graphics/pokemon/poliwag/footprint.png,art/graphics/pokemon/poliwag/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/poliwhirl/footprint.png,art/graphics/pokemon/poliwhirl/footprint.png,sprite-creature-footprint-generator (footprint.py --all),webbed print
+graphics/pokemon/poliwrath/footprint.png,art/graphics/pokemon/poliwrath/footprint.png,sprite-creature-footprint-generator (footprint.py --all),webbed print
+graphics/pokemon/ponyta/footprint.png,art/graphics/pokemon/ponyta/footprint.png,sprite-creature-footprint-generator (footprint.py --all),hoof print
+graphics/pokemon/poochyena/footprint.png,art/graphics/pokemon/poochyena/footprint.png,sprite-creature-footprint-generator (footprint.py --all),claw print
+graphics/pokemon/porygon/footprint.png,art/graphics/pokemon/porygon/footprint.png,sprite-creature-footprint-generator (footprint.py --all),droid print
+graphics/pokemon/porygon2/footprint.png,art/graphics/pokemon/porygon2/footprint.png,sprite-creature-footprint-generator (footprint.py --all),droid print
+graphics/pokemon/primeape/footprint.png,art/graphics/pokemon/primeape/footprint.png,sprite-creature-footprint-generator (footprint.py --all),hand print
+graphics/pokemon/psyduck/footprint.png,art/graphics/pokemon/psyduck/footprint.png,sprite-creature-footprint-generator (footprint.py --all),webbed print
+graphics/pokemon/pupitar/footprint.png,art/graphics/pokemon/pupitar/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/quagsire/footprint.png,art/graphics/pokemon/quagsire/footprint.png,sprite-creature-footprint-generator (footprint.py --all),webbed print
+graphics/pokemon/quilava/footprint.png,art/graphics/pokemon/quilava/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/qwilfish/footprint.png,art/graphics/pokemon/qwilfish/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/raichu/footprint.png,art/graphics/pokemon/raichu/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/raikou/footprint.png,art/graphics/pokemon/raikou/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/ralts/footprint.png,art/graphics/pokemon/ralts/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/rapidash/footprint.png,art/graphics/pokemon/rapidash/footprint.png,sprite-creature-footprint-generator (footprint.py --all),claw print
+graphics/pokemon/raticate/footprint.png,art/graphics/pokemon/raticate/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/rattata/footprint.png,art/graphics/pokemon/rattata/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/rayquaza/footprint.png,art/graphics/pokemon/rayquaza/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/regice/footprint.png,art/graphics/pokemon/regice/footprint.png,sprite-creature-footprint-generator (footprint.py --all),foot print
+graphics/pokemon/regirock/footprint.png,art/graphics/pokemon/regirock/footprint.png,sprite-creature-footprint-generator (footprint.py --all),foot print
+graphics/pokemon/registeel/footprint.png,art/graphics/pokemon/registeel/footprint.png,sprite-creature-footprint-generator (footprint.py --all),foot print
+graphics/pokemon/relicanth/footprint.png,art/graphics/pokemon/relicanth/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/remoraid/footprint.png,art/graphics/pokemon/remoraid/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/rhydon/footprint.png,art/graphics/pokemon/rhydon/footprint.png,sprite-creature-footprint-generator (footprint.py --all),hand print
+graphics/pokemon/rhyhorn/footprint.png,art/graphics/pokemon/rhyhorn/footprint.png,sprite-creature-footprint-generator (footprint.py --all),hand print
+graphics/pokemon/roselia/footprint.png,art/graphics/pokemon/roselia/footprint.png,sprite-creature-footprint-generator (footprint.py --all),root print
+graphics/pokemon/sableye/footprint.png,art/graphics/pokemon/sableye/footprint.png,sprite-creature-footprint-generator (footprint.py --all),foot print
+graphics/pokemon/salamence/footprint.png,art/graphics/pokemon/salamence/footprint.png,sprite-creature-footprint-generator (footprint.py --all),claw print
+graphics/pokemon/sandshrew/footprint.png,art/graphics/pokemon/sandshrew/footprint.png,sprite-creature-footprint-generator (footprint.py --all),claw print
+graphics/pokemon/sandslash/footprint.png,art/graphics/pokemon/sandslash/footprint.png,sprite-creature-footprint-generator (footprint.py --all),claw print
+graphics/pokemon/sceptile/footprint.png,art/graphics/pokemon/sceptile/footprint.png,sprite-creature-footprint-generator (footprint.py --all),claw print
+graphics/pokemon/scizor/footprint.png,art/graphics/pokemon/scizor/footprint.png,sprite-creature-footprint-generator (footprint.py --all),droid print
+graphics/pokemon/scyther/footprint.png,art/graphics/pokemon/scyther/footprint.png,sprite-creature-footprint-generator (footprint.py --all),claw print
+graphics/pokemon/seadra/footprint.png,art/graphics/pokemon/seadra/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/seaking/footprint.png,art/graphics/pokemon/seaking/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/sealeo/footprint.png,art/graphics/pokemon/sealeo/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/seedot/footprint.png,art/graphics/pokemon/seedot/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/seel/footprint.png,art/graphics/pokemon/seel/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/sentret/footprint.png,art/graphics/pokemon/sentret/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/seviper/footprint.png,art/graphics/pokemon/seviper/footprint.png,sprite-creature-footprint-generator (footprint.py --all),bug print
+graphics/pokemon/sharpedo/footprint.png,art/graphics/pokemon/sharpedo/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/shedinja/footprint.png,art/graphics/pokemon/shedinja/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/shelgon/footprint.png,art/graphics/pokemon/shelgon/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/shellder/footprint.png,art/graphics/pokemon/shellder/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/shiftry/footprint.png,art/graphics/pokemon/shiftry/footprint.png,sprite-creature-footprint-generator (footprint.py --all),foot print
+graphics/pokemon/shroomish/footprint.png,art/graphics/pokemon/shroomish/footprint.png,sprite-creature-footprint-generator (footprint.py --all),root print
+graphics/pokemon/shuckle/footprint.png,art/graphics/pokemon/shuckle/footprint.png,sprite-creature-footprint-generator (footprint.py --all),bug print
+graphics/pokemon/shuppet/footprint.png,art/graphics/pokemon/shuppet/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/silcoon/footprint.png,art/graphics/pokemon/silcoon/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/skarmory/footprint.png,art/graphics/pokemon/skarmory/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/skiploom/footprint.png,art/graphics/pokemon/skiploom/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/skitty/footprint.png,art/graphics/pokemon/skitty/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/slaking/footprint.png,art/graphics/pokemon/slaking/footprint.png,sprite-creature-footprint-generator (footprint.py --all),hand print
+graphics/pokemon/slakoth/footprint.png,art/graphics/pokemon/slakoth/footprint.png,sprite-creature-footprint-generator (footprint.py --all),hand print
+graphics/pokemon/slowbro/footprint.png,art/graphics/pokemon/slowbro/footprint.png,sprite-creature-footprint-generator (footprint.py --all),slime print
+graphics/pokemon/slowking/footprint.png,art/graphics/pokemon/slowking/footprint.png,sprite-creature-footprint-generator (footprint.py --all),slime print
+graphics/pokemon/slowpoke/footprint.png,art/graphics/pokemon/slowpoke/footprint.png,sprite-creature-footprint-generator (footprint.py --all),slime print
+graphics/pokemon/slugma/footprint.png,art/graphics/pokemon/slugma/footprint.png,sprite-creature-footprint-generator (footprint.py --all),slime print
+graphics/pokemon/smeargle/footprint.png,art/graphics/pokemon/smeargle/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/smoochum/footprint.png,art/graphics/pokemon/smoochum/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/sneasel/footprint.png,art/graphics/pokemon/sneasel/footprint.png,sprite-creature-footprint-generator (footprint.py --all),claw print
+graphics/pokemon/snorlax/footprint.png,art/graphics/pokemon/snorlax/footprint.png,sprite-creature-footprint-generator (footprint.py --all),hoof print
+graphics/pokemon/snorunt/footprint.png,art/graphics/pokemon/snorunt/footprint.png,sprite-creature-footprint-generator (footprint.py --all),claw print
+graphics/pokemon/snubbull/footprint.png,art/graphics/pokemon/snubbull/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/solrock/footprint.png,art/graphics/pokemon/solrock/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/spearow/footprint.png,art/graphics/pokemon/spearow/footprint.png,sprite-creature-footprint-generator (footprint.py --all),talon print
+graphics/pokemon/spheal/footprint.png,art/graphics/pokemon/spheal/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/spinarak/footprint.png,art/graphics/pokemon/spinarak/footprint.png,sprite-creature-footprint-generator (footprint.py --all),bug print
+graphics/pokemon/spinda/footprint.png,art/graphics/pokemon/spinda/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/spoink/footprint.png,art/graphics/pokemon/spoink/footprint.png,sprite-creature-footprint-generator (footprint.py --all),hoof print
+graphics/pokemon/squirtle/footprint.png,art/graphics/pokemon/squirtle/footprint.png,sprite-creature-footprint-generator (footprint.py --all),round print
+graphics/pokemon/stantler/footprint.png,art/graphics/pokemon/stantler/footprint.png,sprite-creature-footprint-generator (footprint.py --all),hoof print
+graphics/pokemon/starmie/footprint.png,art/graphics/pokemon/starmie/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/staryu/footprint.png,art/graphics/pokemon/staryu/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/steelix/footprint.png,art/graphics/pokemon/steelix/footprint.png,sprite-creature-footprint-generator (footprint.py --all),slime print
+graphics/pokemon/sudowoodo/footprint.png,art/graphics/pokemon/sudowoodo/footprint.png,sprite-creature-footprint-generator (footprint.py --all),root print
+graphics/pokemon/suicune/footprint.png,art/graphics/pokemon/suicune/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/sunflora/footprint.png,art/graphics/pokemon/sunflora/footprint.png,sprite-creature-footprint-generator (footprint.py --all),root print
+graphics/pokemon/sunkern/footprint.png,art/graphics/pokemon/sunkern/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/surskit/footprint.png,art/graphics/pokemon/surskit/footprint.png,sprite-creature-footprint-generator (footprint.py --all),bug print
+graphics/pokemon/swablu/footprint.png,art/graphics/pokemon/swablu/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/swalot/footprint.png,art/graphics/pokemon/swalot/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/swampert/footprint.png,art/graphics/pokemon/swampert/footprint.png,sprite-creature-footprint-generator (footprint.py --all),webbed print
+graphics/pokemon/swellow/footprint.png,art/graphics/pokemon/swellow/footprint.png,sprite-creature-footprint-generator (footprint.py --all),talon print
+graphics/pokemon/swinub/footprint.png,art/graphics/pokemon/swinub/footprint.png,sprite-creature-footprint-generator (footprint.py --all),claw print
+graphics/pokemon/taillow/footprint.png,art/graphics/pokemon/taillow/footprint.png,sprite-creature-footprint-generator (footprint.py --all),talon print
+graphics/pokemon/tangela/footprint.png,art/graphics/pokemon/tangela/footprint.png,sprite-creature-footprint-generator (footprint.py --all),suction print
+graphics/pokemon/tauros/footprint.png,art/graphics/pokemon/tauros/footprint.png,sprite-creature-footprint-generator (footprint.py --all),hoof print
+graphics/pokemon/teddiursa/footprint.png,art/graphics/pokemon/teddiursa/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/tentacool/footprint.png,art/graphics/pokemon/tentacool/footprint.png,sprite-creature-footprint-generator (footprint.py --all),suction print
+graphics/pokemon/tentacruel/footprint.png,art/graphics/pokemon/tentacruel/footprint.png,sprite-creature-footprint-generator (footprint.py --all),suction print
+graphics/pokemon/togepi/footprint.png,art/graphics/pokemon/togepi/footprint.png,sprite-creature-footprint-generator (footprint.py --all),foot print
+graphics/pokemon/togetic/footprint.png,art/graphics/pokemon/togetic/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/torchic/footprint.png,art/graphics/pokemon/torchic/footprint.png,sprite-creature-footprint-generator (footprint.py --all),talon print
+graphics/pokemon/torkoal/footprint.png,art/graphics/pokemon/torkoal/footprint.png,sprite-creature-footprint-generator (footprint.py --all),tread print
+graphics/pokemon/totodile/footprint.png,art/graphics/pokemon/totodile/footprint.png,sprite-creature-footprint-generator (footprint.py --all),claw print
+graphics/pokemon/trapinch/footprint.png,art/graphics/pokemon/trapinch/footprint.png,sprite-creature-footprint-generator (footprint.py --all),claw print
+graphics/pokemon/treecko/footprint.png,art/graphics/pokemon/treecko/footprint.png,sprite-creature-footprint-generator (footprint.py --all),claw print
+graphics/pokemon/tropius/footprint.png,art/graphics/pokemon/tropius/footprint.png,sprite-creature-footprint-generator (footprint.py --all),round print
+graphics/pokemon/typhlosion/footprint.png,art/graphics/pokemon/typhlosion/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/tyranitar/footprint.png,art/graphics/pokemon/tyranitar/footprint.png,sprite-creature-footprint-generator (footprint.py --all),claw print
+graphics/pokemon/tyrogue/footprint.png,art/graphics/pokemon/tyrogue/footprint.png,sprite-creature-footprint-generator (footprint.py --all),droid print
+graphics/pokemon/umbreon/footprint.png,art/graphics/pokemon/umbreon/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/unown/footprint.png,art/graphics/pokemon/unown/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/ursaring/footprint.png,art/graphics/pokemon/ursaring/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/vaporeon/footprint.png,art/graphics/pokemon/vaporeon/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/venomoth/footprint.png,art/graphics/pokemon/venomoth/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/venonat/footprint.png,art/graphics/pokemon/venonat/footprint.png,sprite-creature-footprint-generator (footprint.py --all),bug print
+graphics/pokemon/venusaur/footprint.png,art/graphics/pokemon/venusaur/footprint.png,sprite-creature-footprint-generator (footprint.py --all),round print
+graphics/pokemon/vibrava/footprint.png,art/graphics/pokemon/vibrava/footprint.png,sprite-creature-footprint-generator (footprint.py --all),claw print
+graphics/pokemon/victreebel/footprint.png,art/graphics/pokemon/victreebel/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/vigoroth/footprint.png,art/graphics/pokemon/vigoroth/footprint.png,sprite-creature-footprint-generator (footprint.py --all),hand print
+graphics/pokemon/vileplume/footprint.png,art/graphics/pokemon/vileplume/footprint.png,sprite-creature-footprint-generator (footprint.py --all),root print
+graphics/pokemon/volbeat/footprint.png,art/graphics/pokemon/volbeat/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/voltorb/footprint.png,art/graphics/pokemon/voltorb/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/vulpix/footprint.png,art/graphics/pokemon/vulpix/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/wailmer/footprint.png,art/graphics/pokemon/wailmer/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/wailord/footprint.png,art/graphics/pokemon/wailord/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/walrein/footprint.png,art/graphics/pokemon/walrein/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/wartortle/footprint.png,art/graphics/pokemon/wartortle/footprint.png,sprite-creature-footprint-generator (footprint.py --all),round print
+graphics/pokemon/weedle/footprint.png,art/graphics/pokemon/weedle/footprint.png,sprite-creature-footprint-generator (footprint.py --all),bug print
+graphics/pokemon/weepinbell/footprint.png,art/graphics/pokemon/weepinbell/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/weezing/footprint.png,art/graphics/pokemon/weezing/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/whiscash/footprint.png,art/graphics/pokemon/whiscash/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/whismur/footprint.png,art/graphics/pokemon/whismur/footprint.png,sprite-creature-footprint-generator (footprint.py --all),hand print
+graphics/pokemon/wigglytuff/footprint.png,art/graphics/pokemon/wigglytuff/footprint.png,sprite-creature-footprint-generator (footprint.py --all),foot print
+graphics/pokemon/wingull/footprint.png,art/graphics/pokemon/wingull/footprint.png,sprite-creature-footprint-generator (footprint.py --all),talon print
+graphics/pokemon/wobbuffet/footprint.png,art/graphics/pokemon/wobbuffet/footprint.png,sprite-creature-footprint-generator (footprint.py --all),claw print
+graphics/pokemon/wooper/footprint.png,art/graphics/pokemon/wooper/footprint.png,sprite-creature-footprint-generator (footprint.py --all),webbed print
+graphics/pokemon/wurmple/footprint.png,art/graphics/pokemon/wurmple/footprint.png,sprite-creature-footprint-generator (footprint.py --all),bug print
+graphics/pokemon/wynaut/footprint.png,art/graphics/pokemon/wynaut/footprint.png,sprite-creature-footprint-generator (footprint.py --all),claw print
+graphics/pokemon/xatu/footprint.png,art/graphics/pokemon/xatu/footprint.png,sprite-creature-footprint-generator (footprint.py --all),talon print
+graphics/pokemon/yanma/footprint.png,art/graphics/pokemon/yanma/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)
+graphics/pokemon/zangoose/footprint.png,art/graphics/pokemon/zangoose/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/zapdos/footprint.png,art/graphics/pokemon/zapdos/footprint.png,sprite-creature-footprint-generator (footprint.py --all),talon print
+graphics/pokemon/zigzagoon/footprint.png,art/graphics/pokemon/zigzagoon/footprint.png,sprite-creature-footprint-generator (footprint.py --all),paw print
+graphics/pokemon/zubat/footprint.png,art/graphics/pokemon/zubat/footprint.png,sprite-creature-footprint-generator (footprint.py --all),blank (no feet)

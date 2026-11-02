@@ -23,6 +23,7 @@ HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[1]
 sys.path.insert(0, str(REPO / "tools" / "palette-enforcer"))
 from gba_palette import check  # noqa: E402
+from grids import GRIDS, grid  # noqa: E402
 
 GAME = REPO / "game"
 ART = REPO / "wiki" / "art"
@@ -222,7 +223,9 @@ def size_of(species: str) -> float:
 
 
 def stamp(kind: str, s: float) -> np.ndarray:
-    pen = Pen(s)
+    if kind in GRIDS:
+        return np.array(grid(kind, "S" if s < 0.67 else "M" if s < 0.85 else "L"))
+    pen = Pen(max(s, 0.6))
     TYPES[kind](pen)
     return pen.mask()
 
