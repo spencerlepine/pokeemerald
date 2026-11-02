@@ -1,0 +1,48 @@
+id: cloud-city-bacta-center-1f
+name: CLOUD CITY BACTA CENTER 1F
+planet: BESPIN
+kind: interior
+replaces: LilycoveCity_PokemonCenter_1F
+status: TODO
+story: ''
+grid: |
+  ##############
+  ##############
+  ....###.##....
+  ....######....
+  ..............
+  ..............
+  #..........TT.
+  ...........T#.
+  #............#
+exits: []
+buildings: []
+props: []
+people:
+- name: Nurse
+  at: [7, 2]
+  role: npc
+- name: Boy
+  at: [10, 7]
+  role: npc
+- name: Maniac
+  at: [11, 8]
+  role: npc
+- name: Lilycove Lady
+  at: [1, 3]
+  role: npc
+- name: Contest Lady Mon
+  at: [2, 3]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [7, 8]
+  to: cloud-city
+- name: Door
+  at: [6, 8]
+  to: cloud-city
+- name: Door
+  at: [1, 6]
+  to: cloud-city-bacta-center-2f
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

@@ -1,0 +1,38 @@
+id: dagobah-lotad-and-seedot-house
+name: DAGOBAH LOTAD AND SEEDOT HOUSE
+planet: DAGOBAH
+kind: interior
+replaces: SootopolisCity_LotadAndSeedotHouse
+status: TODO
+story: ''
+grid: |
+  ########
+  ######TT
+  ......##
+  ...##...
+  ...##...
+  ........
+  ........
+exits: []
+buildings: []
+props: []
+people:
+- name: Lotad Brother
+  at: [2, 4]
+  role: npc
+- name: Seedot Brother
+  at: [5, 4]
+  role: npc
+signs:
+- name: Sign
+  at: [5, 1]
+- name: Sign
+  at: [2, 1]
+warps:
+- name: Door
+  at: [3, 6]
+  to: dagobah
+- name: Door
+  at: [4, 6]
+  to: dagobah
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

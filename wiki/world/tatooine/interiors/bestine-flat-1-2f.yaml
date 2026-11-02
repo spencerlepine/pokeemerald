@@ -1,0 +1,50 @@
+id: bestine-flat-1-2f
+name: BESTINE FLAT 1 2F
+planet: TATOOINE
+kind: interior
+replaces: RustboroCity_Flat1_2F
+status: TODO
+story: ''
+grid: |
+  ##############
+  ##.#########T#
+  ..............
+  ..............
+  ..###.........
+  ..###....#....
+  .........#....
+  .##...........
+exits: []
+buildings: []
+props: []
+people:
+- name: Waldas Mom
+  at: [4, 6]
+  role: npc
+- name: '0x0'
+  at: [9, 5]
+  role: npc
+- name: Poke Doll
+  at: [9, 4]
+  role: npc
+- name: Poke Doll
+  at: [10, 5]
+  role: npc
+- name: Poke Doll
+  at: [10, 6]
+  role: npc
+- name: Waldas Dad
+  at: [8, 5]
+  role: npc
+- name: Poke Doll
+  at: [8, 6]
+  role: npc
+- name: Poke Doll
+  at: [9, 7]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [2, 1]
+  to: bestine-flat-1-1f
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

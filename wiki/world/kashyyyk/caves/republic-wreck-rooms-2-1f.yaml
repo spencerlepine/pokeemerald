@@ -1,0 +1,56 @@
+id: republic-wreck-rooms-2-1f
+name: REPUBLIC WRECK ROOMS 2 1F
+planet: KASHYYYK
+kind: dungeon
+replaces: AbandonedShip_Rooms2_1F
+status: TODO
+story: ''
+grid: |
+  #########
+  #########
+  ###.....#
+  ##T.....#
+  #.......#
+  #.......#
+  #..#....#
+  #.......#
+  ####.####
+  ####.####
+  ####.####
+  #.......#
+  #.......#
+  #.TT....#
+  #.##....#
+  #.......#
+  #.......#
+exits: []
+buildings: []
+props: []
+people:
+- name: Trainer Dan
+  at: [7, 13]
+  role: trainer
+- name: Trainer Kira
+  at: [6, 13]
+  role: trainer
+- name: Trainer Gual
+  at: [3, 2]
+  role: trainer
+- name: Trainer Jeva
+  at: [7, 2]
+  role: trainer
+- name: Item
+  at: [4, 4]
+  role: item
+signs: []
+warps:
+- name: Door
+  at: [4, 16]
+  to: republic-wreck-corridors-1f
+- name: Door
+  at: [5, 16]
+  to: republic-wreck-corridors-1f
+- name: Door
+  at: [4, 1]
+  to: republic-wreck-corridors-1f
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

@@ -1,0 +1,109 @@
+id: route-103
+name: ROUTE 103
+planet: TATOOINE
+kind: route
+replaces: Route103
+status: TODO
+story: ''
+pos: [120, 218]
+grid: |
+  TTTTTTTTTTTTTTTTTTTTTTTTTT~~~~~~~~~~~~##########################################
+  TTTTTTTTTTTTTTTTTTTTTTTTTT~##~~~~~~~~~##########################################
+  TTTT......""""""TTTTTTTTTT~##~~~~~~~~~~~########################################
+  TTTT......."""""TTTTTTTTTT~~~~~~~####~~~########################################
+  TT""........."""""TTTTTT~~~~##~~~####~~~~#####################TTTT####TTTTTTTTTT
+  TT""""vvvvvvvT""""TTTTTT##~~######~~~#############........###.TTTT....TTTTTTTTTT
+  TT"""""""....#vvvvvvTTTT####~~####~~~#############.TTTTTT.....T.T.T.T.TTT.T.TTTT
+  TT"""""""...........TTTT~~##~~~~~~~~~~~~~~~~......TTTTTTT......T.T.......TTTT.T.
+  TT""""""".............~~~~~~~~~~~~~~~~~~~~~~~~~~~...TTTTT......T....T....TTTT.T.
+  TT"""""""..#..........~~~~~~~~~~~~~~~~~~~~~~~~~~~....TTTTT.T.T..TTT...TT.T......
+  TTTT""""..............~~~~~~~~~~~~~~~~~~~~~~~~~~~......TTTTTTTT......T.T........
+  TTTT""""......""""....~~~~~~~~~~~~~~~~~~~~~~~~~~~.........T.T.TTTTTTT...........
+  TTTTvvvvvvvvvv""""".....~~~~~~~~~~~~~~~~~~~~~~~~~..............................T
+  TTTT......."""""""".....####~~~~~~~~~~##~~~~~~~~~..............................T
+  TTTT......."""""""TTTTTT######~~~~######~##~~TTT...TTT.T.....................TTT
+  TTTT........""""""TTTTTT..~~##########~######TTTTTTTTTTTTT.T.T.T.T.T.T.T.TT.TTTT
+  TTTTTT......TTTTTTTTTTTTTT~~~~####~~~~~##~~##TTTTTTTTTTTT.T.T.T.T.T.T.T.T.TTTTTT
+  TTTTTT......TTTTTTTTTTTTTT~##~~~~~~~~~~~~~~~~TTTTTTTTTTTTT.T.T.T.T.T.T.T.T.TTTTT
+  TTTTTTTT....TTTTTTTTTTTTTT~##~~~~~~~~~~~~~~~.TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTT....TTTTTTTTTTTTTT~~~~~~~~~~~~~~~~~~TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTT....TTTTTTTTTTTTTT~~~~~~~~~~~~~~~~~~TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTT....TTTTTTTTTTTTTT~~~~~~~~~~~~~~~~~~TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+exits:
+- edge: south
+  cells: [8, 9, 10, 11]
+  to: tosche-station
+- edge: east
+  cells: [7, 8, 9, 10, 11]
+  to: route-110
+buildings: []
+props: []
+people:
+- name: Man
+  at: [49, 12]
+  role: npc
+- name: Rival
+  at: [10, 3]
+  role: npc
+- name: Trainer Duara
+  at: [71, 11]
+  role: trainer
+- name: Trainer Liv
+  at: [65, 12]
+  role: trainer
+- name: Trainer Amy
+  at: [64, 12]
+  role: trainer
+- name: Trainer Akel
+  at: [50, 8]
+  role: trainer
+- name: Boy
+  at: [20, 10]
+  role: npc
+- name: Rate Pokedex Or Register
+  at: [7, 3]
+  role: npc
+- name: Trainer Mugos
+  at: [56, 13]
+  role: trainer
+- name: Event Script_Cut Tree
+  at: [67, 7]
+  role: npc
+- name: Event Script_Cut Tree
+  at: [72, 8]
+  role: npc
+- name: Trainer Reskir
+  at: [67, 5]
+  role: trainer
+- name: Trainer Monnik
+  at: [67, 9]
+  role: trainer
+- name: Trainer Ili
+  at: [36, 6]
+  role: trainer
+- name: Trainer Polesh
+  at: [36, 13]
+  role: trainer
+- name: Berry tree
+  at: [58, 5]
+  role: berry
+- name: Berry tree
+  at: [59, 5]
+  role: berry
+- name: Berry tree
+  at: [60, 5]
+  role: berry
+- name: Item
+  at: [50, 5]
+  role: item
+- name: Item
+  at: [64, 7]
+  role: item
+signs:
+- name: Sign
+  at: [11, 9]
+warps:
+- name: Door
+  at: [45, 6]
+  to: altering-cave
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

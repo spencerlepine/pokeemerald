@@ -1,0 +1,120 @@
+id: jundland-wastes
+name: JUNDLAND WASTES
+planet: TATOOINE
+kind: route
+replaces: PetalburgWoods
+status: TODO
+story: ''
+grid: |
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT......""""""TTTT
+  TTTTTTTTTTTT##..##TTTTTTTTTTTTTT....."""""""TTTT
+  TTTTTTTTTTTT......TTTTTTTT.TTTT......TTTT"""..TT
+  TTTTTTTTTTTT......TTTTTTTT.TTTT......TTTT""...TT
+  TTTT...""""#......TTTTTT""......"""..TTTTvvvvvTT
+  TTTT."""""".......TTTTTT"""..."""""".TTTT.....TT
+  TTTT""""""".........."""""""TTTTTT"""........"TT
+  TTTT""""""............""""""TTTTTT""""......""TT
+  TTTT."""TTTTTT....TTTTTTTTTTTTTTTTTTTTTT..."""TT
+  TTTT....TTTTTT....TTTTTTTTTTTTTTTTTTTTTT..."""TT
+  TTTT....TTTTTTvvvvvTTTTTTTTTTTTTTTTTTTTTT.."""TT
+  TTTT..."TTTTTT.....TTTTTTTTTTTTTTTTTTTTTT.."""TT
+  TTTT."""""".................TTTTTTTTTTTTTT."""TT
+  TTTT"""""""......"""".......TTTTTTTTTTTTTT..""TT
+  TTTT"""""""....."""""""""...TTTTTTTTTTTTTT..."TT
+  TTTT."""""......""""""""""..TTTTTTTTTTTTTT....TT
+  TTTTTTTTTTTT....TTTTTTTTTT..TTTTTT..TTTTTTvvvvTT
+  TTTTTTTTTTTT....TTTTTTTTTT..TTTTTT..TTTTTT"...TT
+  TTTTTTTTTTTTvvvvTTTTTTTTTT..TTTT".....TTTT""..TT
+  TTTTTTTTTTTT....TTTTTTTTTT..TTTT".....TTTT""".TT
+  TTTTTT............""""""""..TTTT""......""""".TT
+  TTTTTT"""..........""""""...TTTT"""...."""""""TT
+  TTTT.""""""""...............TTTT""""TT."""""""TT
+  TTTT""""""""""..............TTTT""""TT."""""""TT
+  TTTT""""""TTTTTT......TTTTTTTTTT""""TTTT""""TTTT
+  TTTT""""""TTTTTT......TTTTTTTTTT."""TTTT."""TTTT
+  TTTT""""""TTTTTTvvvvvvTTTTTTTTTT..."TTTTTTTTTTTT
+  TTTT""""""TTTTTT......TTTTTTTTTT....TTTTTTTTTTTT
+  TTTT."""""""""#.......""""TTTTTTvvvvTTTTTTTTTTTT
+  TTTT...""""""........"""""TTTTTT....TTTTTTTTTTTT
+  TTTTTT..............."""""""........""""""TTTTTT
+  TTTTTT..............."""""".........."".""TTTTTT
+  TTTTTTTTTTTTTT......TTTTTTTTTTTTTT..."""""TTTTTT
+  TTTTTTTTTTTTTT......TTTTTTTTTTTTTT....""""TTTTTT
+  TTTTTTTTTTTTTT##..##TTTTTTTTTTTTTT##..##TTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+exits: []
+buildings: []
+props: []
+people:
+- name: Event Script_Cut Tree
+  at: [19, 10]
+  role: npc
+- name: Event Script_Cut Tree
+  at: [19, 11]
+  role: npc
+- name: '0x0'
+  at: [26, 17]
+  role: npc
+- name: '0x0'
+  at: [26, 20]
+  role: npc
+- name: Boy1
+  at: [15, 19]
+  role: npc
+- name: Trainer Limax
+  at: [7, 32]
+  role: trainer
+- name: Trainer Jizal
+  at: [4, 14]
+  role: trainer
+- name: Boy2
+  at: [30, 34]
+  role: npc
+- name: Girl
+  at: [33, 5]
+  role: npc
+- name: Item
+  at: [45, 7]
+  role: item
+- name: Item
+  at: [35, 20]
+  role: item
+- name: Item
+  at: [4, 8]
+  role: item
+- name: Item
+  at: [4, 26]
+  role: item
+signs:
+- name: Sign
+  at: [14, 32]
+- name: Sign
+  at: [11, 8]
+warps:
+- name: Door
+  at: [14, 5]
+  to: route-104
+- name: Door
+  at: [15, 5]
+  to: route-104
+- name: Door
+  at: [16, 38]
+  to: route-104
+- name: Door
+  at: [17, 38]
+  to: route-104
+- name: Door
+  at: [36, 38]
+  to: route-104
+- name: Door
+  at: [37, 38]
+  to: route-104
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

@@ -1,0 +1,26 @@
+id: showcase-hall-smart
+name: SHOWCASE HALL SMART
+planet: SHARED
+kind: interior
+replaces: ContestHallSmart
+status: TODO
+story: ''
+grid: |
+  ...............
+  #TTTTTTTTTTTTT#
+  T.............T
+  T..#TTTTTTT#..T
+  T..T.......T..T
+  T..T.....T.T..T
+  T..T.......T..T
+  T..T.......T..T
+  T..#TT...TT#..T
+  T.............T
+  TTTTT#...#TTTTT
+exits: []
+buildings: []
+props: []
+people: []
+signs: []
+warps: []
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

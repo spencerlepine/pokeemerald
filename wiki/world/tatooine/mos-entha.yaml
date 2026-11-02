@@ -1,0 +1,111 @@
+id: mos-entha
+name: MOS ENTHA
+planet: TATOOINE
+kind: town
+replaces: PetalburgCity
+status: TODO
+story: ''
+pos: [40, 230]
+grid: |
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTT#####TTTTTTTTT...~~~~TTTT
+  TTTTT#####TTTTTTTTT~~~~~~~TTTT
+  TTTTT#####TT######T~~~~~~~TTTT
+  TTTT.#####TT######T~~~~~~~TTTT
+  TTTT......TT######T~~~~~~~TTTT
+  TTTT......TT######T~~~~~~~TTTT
+  TTTT......TT..###.T~~~~~~~TTTT
+  TTTT....#TTT......T.......TTTT
+  TT...............#......####TT
+  TT......................####TT
+  ........................####TT
+  ............................TT
+  TT~~~~~TT..........####.....TT
+  TT~~~~~TT..........####.....TT
+  TT~~~~~TT........#.####.......
+  TT~~~~~TT####.................
+  TT~~~~~TT####.................
+  TT~~~~~TT####.................
+  TT~~~~~...................TTTT
+  TT~~~~~...........T####TTTTTTT
+  TT~~~~~...........T####TTTTTTT
+  TT~~~~~~~~~~......T####TTTTTTT
+  TT~~~~~~~~~~TT.....####..TTTTT
+  TT~~~~~~~~~~TT...........TTTTT
+  TT~~~~~~~~~~TT...........TTTTT
+  TT~~~~~~~~~~TT............TTTT
+  TT...TTTTTT.TTTTTTTTTTTTTTTTTT
+  TT...TTTTTT.TTTTTTTTTTTTTTTTTT
+exits:
+- edge: west
+  cells: [12, 13]
+  to: route-104
+- edge: east
+  cells: [16, 17, 18, 19]
+  to: route-102
+buildings: []
+props: []
+people:
+- name: Wallys Mom
+  at: [16, 18]
+  role: npc
+- name: '0x0'
+  at: [15, 10]
+  role: npc
+- name: Boy
+  at: [8, 22]
+  role: npc
+- name: Gentleman
+  at: [20, 10]
+  role: npc
+- name: '0x0'
+  at: [15, 10]
+  role: npc
+- name: Gym Boy
+  at: [12, 15]
+  role: npc
+- name: '0x0'
+  at: [13, 12]
+  role: npc
+- name: Item
+  at: [19, 2]
+  role: item
+- name: Item
+  at: [3, 28]
+  role: item
+signs:
+- name: Sign
+  at: [17, 10]
+- name: Sign
+  at: [26, 12]
+- name: Sign
+  at: [21, 16]
+- name: Sign
+  at: [17, 16]
+- name: Sign
+  at: [22, 16]
+- name: Sign
+  at: [27, 12]
+- name: Sign
+  at: [8, 9]
+warps:
+- name: Door
+  at: [10, 19]
+  to: mos-entha-house-1
+- name: Door
+  at: [7, 5]
+  to: mos-entha-wallys-house
+- name: Door
+  at: [15, 8]
+  to: mos-entha-arena
+- name: Door
+  at: [20, 16]
+  to: mos-entha-bacta-center-1f
+- name: Door
+  at: [20, 24]
+  to: mos-entha-house-2
+- name: Door
+  at: [25, 12]
+  to: mos-entha-supply-depot
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

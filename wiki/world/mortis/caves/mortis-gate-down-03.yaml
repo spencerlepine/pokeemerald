@@ -1,0 +1,29 @@
+id: mortis-gate-down-03
+name: MORTIS GATE DOWN 03
+planet: MORTIS
+kind: dungeon
+replaces: NavelRock_Down03
+status: TODO
+story: ''
+grid: |
+  .........
+  .#######.
+  .#######.
+  .##...##.
+  .##...##.
+  .##...##.
+  .#######.
+  .#######.
+exits: []
+buildings: []
+props: []
+people: []
+signs: []
+warps:
+- name: Door
+  at: [3, 3]
+  to: mortis-gate-down-02
+- name: Door
+  at: [5, 5]
+  to: mortis-gate-down-04
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

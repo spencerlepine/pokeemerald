@@ -1,0 +1,53 @@
+id: cloud-city-galleria-5f
+name: CLOUD CITY GALLERIA 5F
+planet: BESPIN
+kind: interior
+replaces: LilycoveCity_DepartmentStore_5F
+status: TODO
+story: ''
+grid: |
+  ##################
+  #############.##.#
+  .....#.....#......
+  .....#######......
+  ..##..............
+  ..##..##..##..T###
+  ..##..##..##..T...
+  ..............#...
+exits: []
+buildings: []
+props: []
+people:
+- name: Little Girl
+  at: [1, 6]
+  role: npc
+- name: Pokefan F
+  at: [7, 7]
+  role: npc
+- name: Clerk Far Left
+  at: [7, 2]
+  role: npc
+- name: Clerk Mid Left
+  at: [9, 2]
+  role: npc
+- name: Clerk Mid Right
+  at: [15, 6]
+  role: npc
+- name: Clerk Far Right
+  at: [17, 6]
+  role: npc
+- name: Woman
+  at: [9, 5]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [13, 1]
+  to: cloud-city-galleria-4f
+- name: Door
+  at: [2, 1]
+  to: cloud-city-galleria-elevator
+- name: Door
+  at: [16, 1]
+  to: cloud-city-galleria-rooftop
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

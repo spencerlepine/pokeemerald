@@ -1,0 +1,50 @@
+id: wellspring-interior
+name: WELLSPRING INTERIOR
+planet: MORTIS
+kind: interior
+replaces: FarawayIsland_Interior
+status: TODO
+story: ''
+grid: |
+  TTT....."......""......T"""TT
+  TTT...TT"......."TTT...T"."TT
+  TT."...T..........TT...T"..TT
+  T.."."TT.T.T.....TTT...T"T.TT
+  T...".T.TTTTTTTTTTTTT.TT""TTT
+  T".#..TT............TTTT""""T
+  T.T..TT..............TT"""""T
+  T.T.T..."""""""""""".T""""""T
+  TTTTT..""""""".""".".T""".."T
+  T..TT.."".""""#"""#"T.""..."T
+  T.."T..""#""""""""""T.""..."T
+  T"..TT.""""""""""""".T"...""T
+  T...TT.""""""."""""..T"...""T
+  T....T.."""""#""""".TT"...."T
+  T.....T...""""""""..TT"...."T
+  T......T...."""....TTT""".."T
+  T..#...TT..........TT"..""".T
+  T...#..TT.........TTT"..""..T
+  T..T."""TT.......TTTT".."".TT
+  T..T."".TTTT..TTTT..""""".TTT
+  T..TT"..TTTTTTTTTT..."""..TTT
+  TTTT"".TTTTTTTTTTT...."..TTTT
+  TTT"".TTTTTTTTTTTTTTT...TTTTT
+  TTT"..TTTTTTTTTTTTTTTT.TTTTTT
+  TTT.TTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+exits: []
+buildings: []
+props: []
+people:
+- name: Mew
+  at: [13, 17]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [12, 19]
+  to: wellspring-entrance
+- name: Door
+  at: [13, 19]
+  to: wellspring-entrance
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

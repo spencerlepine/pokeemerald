@@ -1,0 +1,38 @@
+id: pirin-herb-shop
+name: PIRIN HERB SHOP
+planet: SULLUST
+kind: interior
+replaces: LavaridgeTown_HerbShop
+status: TODO
+story: ''
+grid: |
+  ###########
+  TT#####TTT#
+  .....#.....
+  ######....#
+  ..........#
+  ..........#
+  ...........
+  ##.......##
+exits: []
+buildings: []
+props: []
+people:
+- name: Clerk
+  at: [3, 2]
+  role: npc
+- name: Old Man
+  at: [7, 5]
+  role: npc
+- name: Expert M
+  at: [9, 3]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [3, 7]
+  to: pirin
+- name: Door
+  at: [4, 7]
+  to: pirin
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

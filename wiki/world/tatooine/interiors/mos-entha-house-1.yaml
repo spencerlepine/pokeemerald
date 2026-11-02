@@ -1,0 +1,36 @@
+id: mos-entha-house-1
+name: MOS ENTHA HOUSE 1
+planet: TATOOINE
+kind: interior
+replaces: PetalburgCity_House1
+status: TODO
+story: ''
+grid: |
+  ##########
+  ########..
+  ........##
+  ..........
+  ..##......
+  ..##......
+  ..........
+  ..........
+  .........#
+exits: []
+buildings: []
+props: []
+people:
+- name: Woman
+  at: [7, 4]
+  role: npc
+- name: Man
+  at: [4, 4]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [3, 8]
+  to: mos-entha
+- name: Door
+  at: [4, 8]
+  to: mos-entha
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

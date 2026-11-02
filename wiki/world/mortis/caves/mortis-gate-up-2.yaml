@@ -1,0 +1,29 @@
+id: mortis-gate-up-2
+name: MORTIS GATE UP 2
+planet: MORTIS
+kind: dungeon
+replaces: NavelRock_Up2
+status: TODO
+story: ''
+grid: |
+  .........
+  .#######.
+  .#######.
+  .##..###.
+  .##..###.
+  .##...##.
+  .#######.
+  .#######.
+exits: []
+buildings: []
+props: []
+people: []
+signs: []
+warps:
+- name: Door
+  at: [3, 3]
+  to: mortis-gate-up-1
+- name: Door
+  at: [5, 5]
+  to: mortis-gate-up-3
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

@@ -1,0 +1,41 @@
+id: grand-arena-supply-depot
+name: GRAND ARENA SUPPLY DEPOT
+planet: GRAND ARENA
+kind: interior
+replaces: BattleFrontier_Mart
+status: TODO
+story: ''
+grid: |
+  ###TTT#####
+  ###TTT#####
+  ..#........
+  ..#.......#
+  ###...##..#
+  ......##..#
+  ......##..#
+  ...........
+exits: []
+buildings: []
+props: []
+people:
+- name: Clerk
+  at: [1, 3]
+  role: npc
+- name: Old Woman
+  at: [5, 4]
+  role: npc
+- name: Old Man
+  at: [5, 5]
+  role: npc
+- name: Boy
+  at: [8, 4]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [3, 7]
+  to: grand-arena-outside-west
+- name: Door
+  at: [4, 7]
+  to: grand-arena-outside-west
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

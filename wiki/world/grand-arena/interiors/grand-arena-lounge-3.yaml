@@ -1,0 +1,43 @@
+id: grand-arena-lounge-3
+name: GRAND ARENA LOUNGE 3
+planet: GRAND ARENA
+kind: interior
+replaces: BattleFrontier_Lounge3
+status: TODO
+story: ''
+grid: |
+  #########
+  TTTT#TTTT
+  #########
+  .........
+  .........
+  .........
+  .........
+  .........
+  .........
+  #.......#
+exits: []
+buildings: []
+props: []
+people:
+- name: Gambler
+  at: [4, 6]
+  role: npc
+- name: Fat Man
+  at: [4, 4]
+  role: npc
+- name: Woman
+  at: [3, 5]
+  role: npc
+- name: Pokefan F
+  at: [5, 5]
+  role: npc
+- name: Man
+  at: [0, 6]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [4, 9]
+  to: grand-arena-outside-east
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

@@ -1,0 +1,32 @@
+id: grand-arena-battle-tower-multi-corridor
+name: GRAND ARENA BATTLE TOWER MULTI CORRIDOR
+planet: GRAND ARENA
+kind: interior
+replaces: BattleFrontier_BattleTowerMultiCorridor
+status: TODO
+story: ''
+grid: |
+  ######....#######
+  #T####....####T##
+  .................
+  .................
+  .................
+exits: []
+buildings: []
+props: []
+people:
+- name: '0x0'
+  at: [1, 1]
+  role: npc
+- name: '0x0'
+  at: [14, 3]
+  role: npc
+- name: '0x0'
+  at: [1, 3]
+  role: npc
+- name: '0x0'
+  at: [14, 1]
+  role: npc
+signs: []
+warps: []
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

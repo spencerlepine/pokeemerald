@@ -1,0 +1,38 @@
+id: ilum-hall-of-fame
+name: ILUM HALL OF FAME
+planet: ILUM
+kind: interior
+replaces: EverGrandeCity_HallOfFame
+status: TODO
+story: ''
+grid: |
+  ###############
+  ###############
+  ##...#TTT#...##
+  #....#####....#
+  #.....###.....#
+  #.............#
+  #.............#
+  #.............#
+  #.............#
+  #.............#
+  #.............#
+  #.............#
+  #.............#
+  #.............#
+  #.............#
+  #.............#
+  ######...######
+exits: []
+buildings: []
+props: []
+people:
+- name: '0x0'
+  at: [6, 16]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [7, 11]
+  to: ilum-champions-room
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

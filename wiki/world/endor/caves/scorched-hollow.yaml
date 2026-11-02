@@ -1,0 +1,41 @@
+id: scorched-hollow
+name: SCORCHED HOLLOW
+planet: ENDOR
+kind: dungeon
+replaces: ScorchedSlab
+status: TODO
+story: ''
+grid: |
+  ###############
+  ###############
+  ###############
+  #####.....#####
+  ####.......####
+  ####.......####
+  ####.......####
+  ####.......####
+  ####~~~~~~~####
+  ####~~~~~~~~###
+  ###~~~~~~~~~###
+  ###~~~~~~~~~###
+  ###~~~~~~~~~###
+  ###~~~~~~~~~###
+  ###~~~~~~~~~###
+  ###~~~~~~~~~###
+  ###~~~~.~~~~###
+  ###############
+  ###############
+  ###############
+exits: []
+buildings: []
+props: []
+people:
+- name: Item
+  at: [7, 5]
+  role: item
+signs: []
+warps:
+- name: Door
+  at: [7, 16]
+  to: route-120
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

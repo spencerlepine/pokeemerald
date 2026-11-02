@@ -55,6 +55,7 @@ def terrain_grid(map_name):
     bridge = {"MB_FORTREE_BRIDGE", "MB_PACIFIDLOG_VERTICAL_LOG_TOP", "MB_PACIFIDLOG_VERTICAL_LOG_BOTTOM",
               "MB_PACIFIDLOG_HORIZONTAL_LOG_LEFT", "MB_PACIFIDLOG_HORIZONTAL_LOG_RIGHT", "MB_BRIDGE_OVER_POND_LOW",
               "MB_BRIDGE_OVER_OCEAN", "MB_BRIDGE_OVER_POND_MED", "MB_BRIDGE_OVER_POND_HIGH"}
+    img = np.asarray(gba.render_layout(lay).convert("RGB"), dtype=float)
     rows = []
     for r in range(lay.height):
         line = ""
@@ -71,7 +72,10 @@ def terrain_grid(map_name):
             elif name in wild:
                 ch = '"'
             elif coll:
-                ch = "x"
+                cell = img[r * 16:(r + 1) * 16, c * 16:(c + 1) * 16].reshape(-1, 3)
+                rr, gg, bb = cell.mean(0)
+                green = ((cell[:, 1] > cell[:, 0] + 12) & (cell[:, 1] > cell[:, 2] - 10)).mean()
+                ch = "T" if green > 0.45 else "#"
             else:
                 ch = "."
             line += ch
@@ -92,17 +96,108 @@ def _behaviour(gba, lay, meta):
     return s.behaviour(meta - 512) if meta - 512 < s.n_metatiles else 0
 
 
+def _trainer_names():
+    import csv
+    out = {}
+    for r in csv.DictReader(open(ROOT / "wiki/mapping/trainers.csv")):
+        out[r["emerald_name"].upper()] = r["sw_name"]
+    return out
+
+
 def events(map_name):
     """Doors, people, signs and connections of a vanilla map, in blockout terms."""
     mj = map_json(map_name)
+    names = _trainer_names()
+    people, items = [], []
+    for o in mj.get("object_events") or []:
+        gfx = o["graphics_id"].replace("OBJ_EVENT_GFX_", "")
+        script = (o.get("script") or "").split("_EventScript_")[-1]
+        if gfx == "ITEM_BALL":
+            items.append({"name": "Item", "at": [o["x"], o["y"]], "role": "item"})
+            continue
+        if o.get("trainer_type", "TRAINER_TYPE_NONE") != "TRAINER_TYPE_NONE":
+            base = re.sub(r"\d+$", "", script).upper()
+            sw = names.get(base)
+            people.append({"name": f"Trainer {sw.title() if sw else script}", "at": [o["x"], o["y"]], "role": "trainer"})
+        else:
+            if "BerryTree" in script:
+                items.append({"name": "Berry tree", "at": [o["x"], o["y"]], "role": "berry"})
+                continue
+            label = re.sub(r"(?<=[a-z])(?=[A-Z])", " ", script) if script and script != "0" else gfx.title().replace("_", " ")
+            people.append({"name": label, "at": [o["x"], o["y"]], "role": "npc"})
     return {
         "warps": [{"at": [w["x"], w["y"]], "to": w["dest_map"]} for w in mj.get("warp_events") or []],
-        "people": [{"at": [o["x"], o["y"]], "gfx": o["graphics_id"].replace("OBJ_EVENT_GFX_", "")}
-                   for o in mj.get("object_events") or []],
-        "signs": [{"at": [b["x"], b["y"]], "type": b.get("type")} for b in mj.get("bg_events") or []],
-        "triggers": [{"at": [t["x"], t["y"]]} for t in mj.get("coord_events") or []],
-        "connections": [{"edge": c["direction"], "to": c["map"], "offset": c["offset"]} for c in mj.get("connections") or []],
+        "people": people + items,
+        "signs": [{"name": "Sign", "at": [b["x"], b["y"]]} for b in mj.get("bg_events") or [] if b.get("type") == "sign"],
+        "connections": [{"edge": c["direction"], "to": c["map"], "offset": int(c["offset"])}
+                        for c in mj.get("connections") or []],
     }
+
+
+def world_positions():
+    """Vanilla overworld position (cells) of every map reachable by connections, per connected group."""
+    import glob as _g
+    sizes, conns = {}, {}
+    lays = _gba().layouts()
+    for f in _g.glob(str(GAME / "data/maps/*/map.json")):
+        mj = json.loads(Path(f).read_text())
+        name = Path(f).parent.name
+        if not mj.get("connections"):
+            continue
+        lay = lays.get(mj["layout"])
+        if lay is None:
+            continue
+        sizes[name] = (lay.width, lay.height)
+        conns[name] = mj["connections"]
+    const_to_name = {}
+    for f in _g.glob(str(GAME / "data/maps/*/map.json")):
+        mj = json.loads(Path(f).read_text())
+        const_to_name[mj["id"]] = Path(f).parent.name
+    pos = {}
+    groups = []
+    for start in ["LittlerootTown"] + sorted(sizes):
+        if start in pos:
+            continue
+        pos[start] = (0, 0)
+        groups.append([start])
+        todo = [start]
+        while todo:
+            a = todo.pop()
+            ax, ay = pos[a]
+            aw, ah = sizes[a]
+            for c in conns.get(a, []):
+                b = const_to_name.get(c["map"])
+                if b is None or b in pos or b not in sizes:
+                    continue
+                bw, bh = sizes[b]
+                o = int(c["offset"])
+                d = c["direction"]
+                if d == "up":
+                    pos[b] = (ax + o, ay - bh)
+                elif d == "down":
+                    pos[b] = (ax + o, ay + ah)
+                elif d == "left":
+                    pos[b] = (ax - bw, ay + o)
+                elif d == "right":
+                    pos[b] = (ax + aw, ay + o)
+                else:
+                    continue
+                todo.append(b)
+                groups[-1].append(b)
+    # the main continent keeps its coordinates; every other connected group (islands, the frontier)
+    # goes in a row below it, normalised to start at its own top-left
+    def box(g):
+        return (min(pos[n][0] for n in g), min(pos[n][1] for n in g),
+                max(pos[n][0] + sizes[n][0] for n in g), max(pos[n][1] + sizes[n][1] for n in g))
+    mx0, my0, mx1, my1 = box(groups[0])
+    shift = {n: (pos[n][0] - mx0, pos[n][1] - my0) for n in groups[0]}
+    cx, cy = 0, my1 - my0 + 20
+    for g in groups[1:]:
+        x0, y0, x1, y1 = box(g)
+        for n in g:
+            shift[n] = (pos[n][0] - x0 + cx, pos[n][1] - y0 + cy)
+        cx += x1 - x0 + 10
+    return shift, const_to_name
 
 
 def render(map_name):

@@ -1,0 +1,35 @@
+id: yavin-4-house-1
+name: YAVIN 4 HOUSE 1
+planet: YAVIN 4
+kind: interior
+replaces: MossdeepCity_House1
+status: TODO
+story: ''
+grid: |
+  ###########
+  ###########
+  ...........
+  ...........
+  .....##....
+  .....##....
+  ...........
+  #.........#
+exits: []
+buildings: []
+props: []
+people:
+- name: Black Belt
+  at: [3, 3]
+  role: npc
+- name: Woman
+  at: [7, 4]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [3, 7]
+  to: yavin-4
+- name: Door
+  at: [4, 7]
+  to: yavin-4
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

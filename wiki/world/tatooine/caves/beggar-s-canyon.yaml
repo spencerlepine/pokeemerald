@@ -1,0 +1,78 @@
+id: beggar-s-canyon
+name: BEGGAR S CANYON
+planet: TATOOINE
+kind: dungeon
+replaces: RusturfTunnel
+status: TODO
+story: ''
+grid: |
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTT......TTTTTvTTTTvvvTTTTTTTTTTTTTT
+  TTT......TTTTTTTTTTTTTTTTTTTTT.TTTTT
+  TTTTTTTT.TTTTTTTTTTTTTTTTTTT...TTTTT
+  TTTT..........................TTTTTT
+  TTTT...........................TTTTT
+  TTTT.TTTTTTTTTTTTTTTTTTTTTTT....TTTT
+  TTT.....TTTTTTTTTTTTTTTTTTTT.....TTT
+  TTT.....TTTTTTTTvvTTTTTTTTTT......TT
+  TTT.....TTTTTTTTTTTTTTTTTTTT......TT
+  TTT....TTTTTTTTTTTTTTTTTTTTTT.TTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTT..TTTTT
+  TTTTTTTTTTTTTTTTTvTTTTTTTTTTT...TTTT
+  TTTTTTTTTTTTTTTTTTTTTTT...T......TTT
+  TTTTTTvvTTTTTTTTTTTTTT..........TTTT
+  TTTTTTTTTTTTTTTTTT..T...........TTTT
+  TTTTTTTTTTTTTTTTTT....T.........TTTT
+  TTTTTTTTTTTTTTTTTT....TTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTT....TTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTT....TTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTT...TTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTvTTTTTTTTTTTTTTTTTTTTTvTTTTTTT
+exits: []
+buildings: []
+props: []
+people:
+- name: Wandas Boyfriend
+  at: [23, 5]
+  role: npc
+- name: Event Script_Rock Smash
+  at: [24, 5]
+  role: npc
+- name: '0x0'
+  at: [5, 4]
+  role: npc
+- name: Grunt
+  at: [14, 5]
+  role: npc
+- name: Peeko
+  at: [14, 4]
+  role: npc
+- name: Event Script_Rock Smash
+  at: [24, 4]
+  role: npc
+- name: Trainer Missax
+  at: [32, 13]
+  role: trainer
+- name: Wanda
+  at: [25, 4]
+  role: npc
+- name: Item
+  at: [3, 1]
+  role: item
+- name: Item
+  at: [30, 2]
+  role: item
+signs: []
+warps:
+- name: Door
+  at: [4, 10]
+  to: route-116
+- name: Door
+  at: [29, 16]
+  to: anchorhead
+- name: Door
+  at: [18, 20]
+  to: route-116
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

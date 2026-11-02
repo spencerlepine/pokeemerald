@@ -1,0 +1,33 @@
+id: bright-tree-house-3
+name: BRIGHT TREE HOUSE 3
+planet: ENDOR
+kind: interior
+replaces: FortreeCity_House3
+status: TODO
+story: ''
+grid: |
+  ########
+  ########
+  ...##...
+  ...##...
+  ........
+  #......#
+exits: []
+buildings: []
+props: []
+people:
+- name: Maniac
+  at: [0, 3]
+  role: npc
+- name: School Kid M
+  at: [5, 4]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [3, 5]
+  to: bright-tree
+- name: Door
+  at: [4, 5]
+  to: bright-tree
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

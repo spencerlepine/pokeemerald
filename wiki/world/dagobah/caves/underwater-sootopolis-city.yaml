@@ -1,0 +1,31 @@
+id: underwater-sootopolis-city
+name: UNDERWATER SOOTOPOLIS CITY
+planet: DAGOBAH
+kind: dungeon
+replaces: Underwater_SootopolisCity
+status: TODO
+story: ''
+grid: |
+  ####################
+  ####################
+  ####################
+  ####################
+  ####################
+  #######~~~~~########
+  #####~~~~~~~~~######
+  #####~~~~~~~~~~#####
+  ######~~~.~~~~~#####
+  ####################
+exits: []
+buildings: []
+props: []
+people: []
+signs: []
+warps:
+- name: Door
+  at: [9, 8]
+  to: underwater-route-126
+- name: Door
+  at: [10, 8]
+  to: underwater-route-126
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

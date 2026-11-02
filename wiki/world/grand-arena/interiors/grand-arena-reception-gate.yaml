@@ -1,0 +1,50 @@
+id: grand-arena-reception-gate
+name: GRAND ARENA RECEPTION GATE
+planet: GRAND ARENA
+kind: interior
+replaces: BattleFrontier_ReceptionGate
+status: TODO
+story: ''
+grid: |
+  #########
+  ####.####
+  .........
+  ###...###
+  .#.....#.
+  ###...###
+  .........
+  ......###
+  .##......
+  .........
+  ###...###
+  .#.....#.
+  ###...###
+  .........
+exits: []
+buildings: []
+props: []
+people:
+- name: Greeter
+  at: [0, 11]
+  role: npc
+- name: Facility Guide
+  at: [8, 11]
+  role: npc
+- name: Rules Guide
+  at: [8, 4]
+  role: npc
+- name: '0x0'
+  at: [4, 5]
+  role: npc
+- name: Frontier Pass Guide
+  at: [0, 4]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [4, 13]
+  to: grand-arena-outside-west
+- name: Door
+  at: [4, 1]
+  to: grand-arena-outside-west
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

@@ -1,0 +1,45 @@
+id: anchorhead-bacta-center-1f
+name: ANCHORHEAD BACTA CENTER 1F
+planet: TATOOINE
+kind: interior
+replaces: VerdanturfTown_PokemonCenter_1F
+status: TODO
+story: ''
+grid: |
+  ##############
+  ##############
+  ....###.##....
+  ....######....
+  ..............
+  ..............
+  #..........TT.
+  ...........T#.
+  #............#
+exits: []
+buildings: []
+props: []
+people:
+- name: Nurse
+  at: [7, 2]
+  role: npc
+- name: Gentleman
+  at: [4, 5]
+  role: npc
+- name: Expert M
+  at: [12, 2]
+  role: npc
+- name: Fury Cutter Tutor
+  at: [10, 6]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [7, 8]
+  to: anchorhead
+- name: Door
+  at: [6, 8]
+  to: anchorhead
+- name: Door
+  at: [1, 6]
+  to: anchorhead-bacta-center-2f
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

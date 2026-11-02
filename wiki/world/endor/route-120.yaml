@@ -1,0 +1,264 @@
+id: route-120
+name: ROUTE 120
+planet: ENDOR
+kind: route
+replaces: Route120
+status: TODO
+story: ''
+pos: [360, 0]
+grid: |
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTT...TTT......TTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTT.....TTTT.........TTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTT........#.....TTTTTTT
+  TTTT..TTTTTTTTTT....................TTTT
+  ......................................TT
+  ......................"""""""""""......T
+  ....................."""""""""""""""...T
+  ...................."""""""""."""""""...
+  ....TTT............T"""""...""""""".""..
+  .TTTTTTT###########T.....TTT"""""""""".T
+  TTTTTTTT############.####...""".""""".TT
+  TTTTTTTT##~~~~~~~###.#######""""""""..TT
+  TTTTTTTT##~~~~~~~......#####.""".....TTT
+  TTTTTTTT##~~~~~~~~~~~~~~~~##.........TTT
+  TTTTT...=.===.============.=........TTTT
+  TTTT....=.================.=......TTTTTT
+  TTTT....##~~~=~~~~~~~~~~~~##.....TTTTTTT
+  TTT.....##~~~~~~~~~~~~~~~~##.TTTTTTTTTTT
+  TTT.....##~~~~~~~~~~~~~~~~##TTTTTTTTTTTT
+  TTT.....TT~~~~~~~~~~~~~~~~##TTTTTTTTTTTT
+  TTT.....TTT~~~~~~~###~~~~~##TTTTTTTTTTTT
+  TT......TTT#~~~~~#####~~TTTTTTTTTTTTTTTT
+  TT......TTT#~~~~~##.##~#TTTTTTTTTTTTTTTT
+  T.......TTTTTTTT~~~~~~##TTTTTT....###.TT
+  T........TTTTTTTTTTTTTTTTTTTTTT.......TT
+  ..........TTTTTTTTTTTTTTTTTTTTT.......TT
+  ............TTTTTTTTTTTTTTTTTTTT.....TTT
+  ..............TTTTT.....TTTTTTTT....TTTT
+  T.............................TTTT..TTTT
+  T..............................TTTT.TTTT
+  TT...........TT.................TTT.TTTT
+  TTTTT........TT.....T.....TT.....TT.TTTT
+  TTTTTTT............TTT...TTT........TTTT
+  TTTTTTTT...........T.....TT.........TTTT
+  TTTTTTTTTT....TT....................TTTT
+  TTTTTTTTTTTTT"TTT..................TTTTT
+  TTTTTTTTTTTTT"""T..................TTTTT
+  TTTTTTTTTTTTT..""T.................TTTTT
+  TTTTTT..TTTT.TT.""T................TTTTT
+  TTTTTTTTTTTTTT#T""TTTTTT"""".""""""""TTT
+  TTTTTTTTTTTTTT##."TTTTTT"""".""""""""TTT
+  TTTTTTTTTTTTTTT.T."TTTTT...........""TTT
+  TTTTTTT#...T.TT.#T""""""""""."""""."""TT
+  TTTTTTTTTTTT.#TT##""""""""""."""""."""TT
+  TTTTTTTTTT#TT#TT##".................."TT
+  TTTTTTTTTT#TT..T##".""""""""""""""""""TT
+  TTTTTTTTT...TTT###".""""""""""""""""""TT
+  TTTTTT......TT####"..................""T
+  TTT..........T####"."""""""""""""""".""T
+  TT.TT.....TT..####"."""""""""""""""".""T
+  T..##.....##..####"........."".......""T
+  T.....T#T.....####""""""""""""."""""""""
+  T....T###T....####"""""""""""".""""""...
+  .TT..#####..TT####"".................TTT
+  .##..##.##..######""."""""""""""""""."""
+  ..............####..""""""""""""""""."""
+  ..............####..................."""
+  ...TT.....TT..####TT....""""""""""""""""
+  ...##.....##..####TTTTvv""""""""""""""""
+  ..............####TTT>..................
+  ..............####T..>............vvvvv.
+  ..............####...>.#########TT.....T
+  T.............####..v#.#.......#TTT....T
+  T.............####....T#.......#TTTT...T
+  TTT.......##.#####...TT#~~~~~~~##TTT...T
+  TTTTTTT...##.#####...TT#~~~~~~~~#TTT...T
+  TTTTTTTT..##....##......========.......T
+  TTTTTTTTT.##."""##......========.......T
+  TTTTTTTTTT##""""##.....#~~~~~~~~#.....TT
+  TTTTTTTT####""""##T....#~~~~~~~~#....TTT
+  ############""".##TT...#~~~~~~~~#...TTTT
+  TTTTTTTTT#.""""###TT...#~~~~~~~~#TTTTTTT
+  TTTTTTTTT..""""###T....#~~~~~~~~#TTTTTTT
+  TTTTTTTTTT.."""##......#~~~~~~~~#TTTTTTT
+  TTTTTTTTT..."".##......#~~~~~~~~#TTTTTTT
+  TTTTTTTT....""###....#.#~~~~~~~~#TTTTTTT
+  TTTT..........###....#...~~~~~~TTTTTTTTT
+  TTT...........##.....#...~~~~~#TTTTTTTTT
+  TT..####......##.....#.......###TTTTTTTT
+  ~~~~~~~~~.....##.....#.......###TTTTTTTT
+  ~~~~~~~~~.....##...."#.......###TTTTTTTT
+  ~~~~~~~~~TT...##...""...TTTTTT###TTTTTTT
+  ~~~~~~~~~TT...##..."""""""TTTT###TTTTTTT
+  ~~~~~~~~~TT...##..."""""""""TT.#########
+  ~~~~~~~~~TT...##....""""""""TTT#TTTTTTT#
+  ..~~~~~~~T##.###....."""""""""""TTTTTTT.
+  ....~~~~~T##.###......."""""""""TT......
+  TT........##..........................#.
+  TTTT......##............................
+  TTTTTT######............................
+  TTTTTT######............................
+  TTTTTT##.###.................TTTT.......
+  TTTTTT##........TT.......TTTTTT######...
+  TT######.....TTTTTT....TTTTTTT##~~~~####
+  #####TT#TTTTTTTTTTTTT##########~~~~~~~~~
+  TT##.TT.TTTTTTT#######~~~~~~~~~~~~~~~~~~
+  TT..TTTTTTTTT###~~~~~~~~~~~~~~~~~~~~~~~~
+  TTTTTTTTTTT###~~~~~~~~~~~~~~~~~~~~~~~~~~
+  TTTTTTTTTT##~~~~~~~~~~~~~~~~~~~~~~~~~~~.
+exits:
+- edge: west
+  cells: [5, 6, 7, 8, 9, 10]
+  to: bright-tree
+- edge: east
+  cells: [86, 87, 88, 89, 90, 91, 92, 93, 99]
+  to: route-121
+buildings: []
+props: []
+people:
+- name: Trainer Cexan
+  at: [5, 22]
+  role: trainer
+- name: Trainer Rarkan
+  at: [32, 14]
+  role: trainer
+- name: Trainer Latik
+  at: [27, 51]
+  role: trainer
+- name: Trainer Joena
+  at: [36, 45]
+  role: trainer
+- name: Trainer Logray
+  at: [19, 80]
+  role: trainer
+- name: Ty Battle3
+  at: [37, 5]
+  role: npc
+- name: Gabby Battle3
+  at: [36, 5]
+  role: npc
+- name: Gabby Battle6
+  at: [36, 5]
+  role: npc
+- name: Ty Battle6
+  at: [37, 5]
+  role: npc
+- name: Event Script_Cut Tree
+  at: [35, 32]
+  role: npc
+- name: Berry Beauty
+  at: [14, 92]
+  role: npc
+- name: Trainer Jossys
+  at: [31, 37]
+  role: trainer
+- name: Trainer Cildos
+  at: [9, 60]
+  role: trainer
+- name: Trainer Cora
+  at: [16, 6]
+  role: trainer
+- name: Trainer Abbara
+  at: [18, 34]
+  role: trainer
+- name: Bridge Kecleon
+  at: [12, 16]
+  role: npc
+- name: Steven
+  at: [13, 15]
+  role: npc
+- name: Event Script_Cut Tree
+  at: [20, 1]
+  role: npc
+- name: Event Script_Cut Tree
+  at: [15, 1]
+  role: npc
+- name: Trainer Koto
+  at: [10, 72]
+  role: trainer
+- name: Trainer Rithik
+  at: [19, 28]
+  role: trainer
+- name: '0x0'
+  at: [12, 16]
+  role: npc
+- name: Kecleon1
+  at: [20, 11]
+  role: npc
+- name: Kecleon2
+  at: [27, 2]
+  role: npc
+- name: Kecleon3
+  at: [4, 77]
+  role: npc
+- name: Kecleon5
+  at: [7, 51]
+  role: npc
+- name: Kecleon4
+  at: [19, 48]
+  role: npc
+- name: Trainer Cikora
+  at: [19, 32]
+  role: trainer
+- name: Trainer Lethal
+  at: [14, 34]
+  role: trainer
+- name: Berry tree
+  at: [4, 79]
+  role: berry
+- name: Berry tree
+  at: [5, 79]
+  role: berry
+- name: Berry tree
+  at: [6, 79]
+  role: berry
+- name: Berry tree
+  at: [7, 79]
+  role: berry
+- name: Berry tree
+  at: [34, 24]
+  role: berry
+- name: Berry tree
+  at: [35, 24]
+  role: berry
+- name: Berry tree
+  at: [36, 24]
+  role: berry
+- name: Berry tree
+  at: [9, 92]
+  role: berry
+- name: Berry tree
+  at: [10, 92]
+  role: berry
+- name: Berry tree
+  at: [11, 92]
+  role: berry
+- name: Item
+  at: [20, 55]
+  role: item
+- name: Item
+  at: [7, 89]
+  role: item
+- name: Item
+  at: [22, 13]
+  role: item
+- name: Item
+  at: [23, 82]
+  role: item
+- name: Item
+  at: [24, 33]
+  role: item
+signs:
+- name: Sign
+  at: [27, 3]
+- name: Sign
+  at: [38, 88]
+warps:
+- name: Door
+  at: [7, 55]
+  to: ancient-tomb
+- name: Door
+  at: [19, 23]
+  to: scorched-hollow
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

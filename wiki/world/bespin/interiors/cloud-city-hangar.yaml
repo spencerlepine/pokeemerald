@@ -1,0 +1,51 @@
+id: cloud-city-hangar
+name: CLOUD CITY HANGAR
+planet: BESPIN
+kind: interior
+replaces: LilycoveCity_Harbor
+status: TODO
+story: ''
+grid: |
+  ........................
+  ........................
+  ........................
+  ########################
+  ...#####################
+  ...#~~~~~~~~~~~~~~~~~~~~
+  ...#~~~~~~~~~~~~~~~~~~~~
+  ...#~~~~~~~~~~~~~~~~~~~~
+  ...#~~~~~~~~~~~~~~~~~~~~
+  ...#~~~~~~~~~~~~~~~~~~~~
+  ...####..###############
+  .................#####TT
+  .................#######
+  .................#TTTT##
+  .................#######
+exits: []
+buildings: []
+props: []
+people:
+- name: Ferry Attendant
+  at: [8, 10]
+  role: npc
+- name: '0x0'
+  at: [8, 9]
+  role: npc
+- name: Sailor
+  at: [3, 13]
+  role: npc
+- name: '0x0'
+  at: [8, 10]
+  role: npc
+- name: '0x0'
+  at: [8, 10]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [11, 14]
+  to: cloud-city
+- name: Door
+  at: [12, 14]
+  to: cloud-city
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

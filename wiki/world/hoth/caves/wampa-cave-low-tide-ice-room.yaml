@@ -1,0 +1,54 @@
+id: wampa-cave-low-tide-ice-room
+name: WAMPA CAVE LOW TIDE ICE ROOM
+planet: HOTH
+kind: dungeon
+replaces: ShoalCave_LowTideIceRoom
+status: TODO
+story: ''
+grid: |
+  ####################
+  ####################
+  ##....#..#....######
+  ##.#.........#######
+  ##.........#.#######
+  ##............######
+  ##.....#.......#####
+  ##....#...#..#######
+  ##...#....#....#####
+  ##...#....#vvvv#####
+  ##.#......#.......##
+  ##.#......#.......##
+  ##.#...#..#.......##
+  ##.#.##...#.......##
+  ##....#...#...#...##
+  ##...##....#......##
+  ###...#......#....##
+  ##..#.#..#..##....##
+  ###...#.#.....#...##
+  ####..###.....#...##
+  ####....#.....#...##
+  ####....###...#...##
+  ####.#.#..#...#...##
+  #####.....#####...##
+  ##................##
+  ##................##
+  ##..#.....#.......##
+  #####..#..........##
+  ###########.......##
+  ####################
+exits: []
+buildings: []
+props: []
+people:
+- name: Item
+  at: [12, 8]
+  role: item
+- name: Item
+  at: [12, 21]
+  role: item
+signs: []
+warps:
+- name: Door
+  at: [17, 10]
+  to: wampa-cave-low-tide-lower-room
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

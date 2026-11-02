@@ -1,0 +1,36 @@
+id: tipoca-city-house-3
+name: TIPOCA CITY HOUSE 3
+planet: KAMINO
+kind: interior
+replaces: PacifidlogTown_House3
+status: TODO
+story: ''
+grid: |
+  ##########
+  ##########
+  .....#....
+  ..........
+  ....##....
+  #...##....
+  ..........
+  #.........
+  #........#
+exits: []
+buildings: []
+props: []
+people:
+- name: Girl
+  at: [3, 5]
+  role: npc
+- name: Trader
+  at: [4, 2]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [4, 8]
+  to: tipoca-city
+- name: Door
+  at: [5, 8]
+  to: tipoca-city
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

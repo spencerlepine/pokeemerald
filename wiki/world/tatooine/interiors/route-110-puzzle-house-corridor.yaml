@@ -1,0 +1,51 @@
+id: route-110-puzzle-house-corridor
+name: ROUTE 110 PUZZLE HOUSE CORRIDOR
+planet: TATOOINE
+kind: interior
+replaces: Route110_TrickHouseCorridor
+status: TODO
+story: ''
+grid: |
+  ###############
+  ###############
+  ###............
+  ###............
+  ###...#########
+  ###...#########
+  ###...#########
+  ###...#########
+  ......#########
+  ......#########
+  ......#########
+  ...############
+  ...############
+  ...############
+  ...############
+  ...############
+  ...############
+  ...############
+  ...############
+  ...############
+  ...############
+  ...############
+  ......#########
+  ......#########
+exits: []
+buildings: []
+props: []
+people: []
+signs: []
+warps:
+- name: Door
+  at: [13, 3]
+  to: route-110-puzzle-house-end
+- name: Door
+  at: [14, 3]
+  to: route-110-puzzle-house-end
+- name: Door
+  at: [4, 23]
+  to: route-110-puzzle-house-entrance
+- name: Door
+  at: [5, 23]
+  to: route-110-puzzle-house-entrance
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

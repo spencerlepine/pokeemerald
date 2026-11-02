@@ -46,6 +46,7 @@ class Area:
         self.kind = raw.get("kind", "town")
         self.replaces = raw.get("replaces", "new")
         self.status = raw.get("status", "TODO")
+        self.pos = raw.get("pos")
         self.story = raw.get("story", "")
         self.grid = [r for r in (raw.get("grid") or "").splitlines() if r.strip() != "" or False]
         self.w = max((len(r) for r in self.grid), default=0)

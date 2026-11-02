@@ -1,0 +1,58 @@
+id: trial-spire-entrance
+name: TRIAL SPIRE ENTRANCE
+planet: TATOOINE
+kind: interior
+replaces: TrainerHill_Entrance
+status: TODO
+story: ''
+grid: |
+  #######T###T#######
+  #######T#.#T#######
+  #######.....#######
+  #######.....#######
+  #######TT.TT#######
+  #######.T.T.#######
+  #######.T.T.#######
+  #TTT##T.T.T.TTTT###
+  #T##TTTTT.TTTTTTTTT
+  #T##..#T#.TT...T...
+  #TTT#TTT#..TTT#TT#T
+  ...................
+  ...................
+  ...................
+  ...................
+  .###...........###.
+  ...................
+exits: []
+buildings: []
+props: []
+people:
+- name: Attendant
+  at: [11, 6]
+  role: npc
+- name: Nurse
+  at: [4, 9]
+  role: npc
+- name: Clerk
+  at: [14, 9]
+  role: npc
+- name: Girl
+  at: [5, 14]
+  role: npc
+- name: Man
+  at: [14, 15]
+  role: npc
+signs:
+- name: Sign
+  at: [8, 10]
+warps:
+- name: Door
+  at: [9, 16]
+  to: route-111
+- name: Door
+  at: [10, 16]
+  to: route-111
+- name: Door
+  at: [9, 1]
+  to: trial-spire-1f
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

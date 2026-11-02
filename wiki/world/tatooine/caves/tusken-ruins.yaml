@@ -1,0 +1,66 @@
+id: tusken-ruins
+name: TUSKEN RUINS
+planet: TATOOINE
+kind: dungeon
+replaces: DesertRuins
+status: TODO
+story: ''
+grid: |
+  .###############.
+  .###############.
+  #################
+  ####.........####
+  ####..#...#..####
+  ###...........###
+  ###...........###
+  ###.#.......#.###
+  ###...........###
+  ###...........###
+  ####..#...#..####
+  ####.........####
+  #################
+  .##...........##.
+  .#.............#.
+  .................
+  .................
+  .................
+  .###############.
+  .###############.
+  ########.########
+  ####.........####
+  ####.........####
+  ###...........###
+  ###...........###
+  ###...........###
+  ###...........###
+  ###...........###
+  ####.........####
+  ####.........####
+  #################
+  .##...........##.
+  .#.............#.
+exits: []
+buildings: []
+props: []
+people:
+- name: Regirock
+  at: [8, 7]
+  role: npc
+signs:
+- name: Sign
+  at: [8, 20]
+- name: Sign
+  at: [7, 20]
+- name: Sign
+  at: [9, 20]
+warps:
+- name: Door
+  at: [8, 29]
+  to: route-111
+- name: Door
+  at: [8, 20]
+  to: tusken-ruins
+- name: Door
+  at: [8, 11]
+  to: tusken-ruins
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

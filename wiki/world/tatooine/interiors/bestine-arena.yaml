@@ -1,0 +1,60 @@
+id: bestine-arena
+name: BESTINE ARENA
+planet: TATOOINE
+kind: interior
+replaces: RustboroCity_Gym
+status: TODO
+story: ''
+grid: |
+  ###########
+  ###########
+  #..#...#..#
+  ...#...#...
+  ...........
+  ...........
+  #..########
+  #..########
+  #........##
+  #...#.##.##
+  #...#.##.##
+  #.###....##
+  #.....#####
+  #.##...####
+  #.##.....##
+  #.###.##.##
+  ...........
+  ...........
+  ..#.....#..
+  ...........
+exits: []
+buildings: []
+props: []
+people:
+- name: Roxanne
+  at: [5, 2]
+  role: npc
+- name: Trainer Joir
+  at: [5, 13]
+  role: trainer
+- name: Trainer Tuen
+  at: [3, 9]
+  role: trainer
+- name: Gym Guide
+  at: [3, 18]
+  role: npc
+- name: Trainer Miden
+  at: [1, 6]
+  role: trainer
+signs:
+- name: Sign
+  at: [2, 18]
+- name: Sign
+  at: [8, 18]
+warps:
+- name: Door
+  at: [5, 19]
+  to: bestine
+- name: Door
+  at: [6, 19]
+  to: bestine
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

@@ -1,0 +1,39 @@
+id: grand-arena-battle-tower-battle-room
+name: GRAND ARENA BATTLE TOWER BATTLE ROOM
+planet: GRAND ARENA
+kind: interior
+replaces: BattleFrontier_BattleTowerBattleRoom
+status: TODO
+story: ''
+grid: |
+  ##########
+  ####..####
+  #........#
+  ..........
+  ..........
+  ..........
+  ..........
+  ..........
+  #........#
+exits: []
+buildings: []
+props: []
+people:
+- name: '0x0'
+  at: [5, 1]
+  role: npc
+- name: '0x0'
+  at: [1, 7]
+  role: npc
+- name: '0x0'
+  at: [4, 8]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [5, 8]
+  to: grand-arena-battle-tower-lobby
+- name: Door
+  at: [6, 8]
+  to: grand-arena-battle-tower-lobby
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

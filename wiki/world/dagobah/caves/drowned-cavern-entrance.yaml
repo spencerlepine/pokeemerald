@@ -1,0 +1,44 @@
+id: drowned-cavern-entrance
+name: DROWNED CAVERN ENTRANCE
+planet: DAGOBAH
+kind: dungeon
+replaces: SeafloorCavern_Entrance
+status: TODO
+story: ''
+grid: |
+  ####################
+  ##########.#########
+  ########.....#######
+  ######.........#####
+  ######.........#####
+  ####............####
+  ####............####
+  ###...............##
+  ###...............##
+  ###...............##
+  ###...............##
+  ###....~~~~~~~....##
+  ###...~~~~~~~~~...##
+  ###..~~~~~~~~~~~..##
+  ###..~~~~~~~~~~~..##
+  ###..~~~~~~~~~~~..##
+  ####.~~~~~~~~~~~####
+  #####~~~~~~~~~######
+  #######~~~~~~#######
+  ####################
+exits: []
+buildings: []
+props: []
+people:
+- name: Grunt
+  at: [10, 2]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [10, 18]
+  to: underwater-route-128
+- name: Door
+  at: [10, 1]
+  to: drowned-cavern-room-1
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

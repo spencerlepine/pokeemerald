@@ -1,0 +1,241 @@
+id: route-104
+name: ROUTE 104
+planet: TATOOINE
+kind: route
+replaces: Route104
+status: TODO
+story: ''
+pos: [0, 180]
+grid: |
+  TTTTTTTTTT........................TTTTTT
+  TTTTTTTTTTTT......................TTTTTT
+  TTTTTTTTTTTT....................TTTTTTTT
+  TTTTTTTTTTTTTT..................TTTTTTTT
+  TTTTTT""TTTTTT..................TTTTTTTT
+  TTTTTT."TTTTTT.........#........TTTTTTTT
+  TT".""".""TTTT....................###.TT
+  TT""""""".TTTTTT......................TT
+  TT""".""""TTTTTTTTTT..................TT
+  TT".""""TTTTTTTTTTTT~~~~..~~~~~~~~~~~~TT
+  TT""""TTTTTTTTTTTTTT~~~~..~~~~~~~~~~~~TT
+  TT""""TTTTTTTTTTTTTT~~~~..~~~~~~~~~~~~TT
+  TT."TTTTTTTTTTTT~~~~~~~~..~~~~~~~~~~~~TT
+  TT..TTTTTTTTTT~~~~~~~~~~..~~~~~~~~~~~~TT
+  TT..TTTTTTTTTT~~~~~~~~~~..~~~~~~~~~~~~TT
+  TT..#####TTTT~~~~~~~~~~~........~~~~~~..
+  TT.######TTTT~~~~~~~~~~~........~~~~~~..
+  TT.######TTTT~~~~~~~~~~~~~~~~~..~~~~~~TT
+  TT.##.#T#TTTT~~~~~~~~~~~~~~~~~..~~~~~~TT
+  TT.........TT~~~~~~~~~~~~~~~~~..~~~~~~TT
+  TT.....#...TT~~~~~~~~~~~~~~~~~..~~~~~~TT
+  TT...........~~~~~~~~~~~~~~~~~..~~~~~~TT
+  TT.#..................................TT
+  TT.#.............#................TTTTTT
+  TT.#..............................TTTTTT
+  TT.#............................TTTTTTTT
+  TT..............................TTTTTTTT
+  TT............###TT####TTT####TTTTTTTTTT
+  TTTTTTTT##..##...TT....TTT....TTTTTTTTTT
+  TTTTTTTT......TTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTT..TTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  #####TTTTT..TTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  ~~~~#TTTTT..TTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  ~~~~##TT##..##TTTTTTTTTTTTTTTTTTTTTTTTTT
+  ~~~~~##"""..""""TTTTT.###.TTTTTTTTTTTTTT
+  ~~~~~~#"""..""""".........TTTTTT..TTTTTT
+  ~~~~~~#"""................TTTTTT..TTTTTT
+  ~~~~~~##""................TTTTT...TTTTTT
+  ~~~~~~~#""""""""""........TTTTT...TTTTTT
+  ~~~~~~~####"""""""".......TTTTT...TTTTTT
+  ~~~~~~~~~~#####............TTT....TTTTTT
+  ~~~~~~~##~~~~~######.......TTT....TTTTTT
+  ~~~~~~~##~~~~~######........<.....TTTTTT
+  ~~~~~~~~~##~~~###.###.......<.....TTTTTT
+  ~~~~~~~####~................<.....TTTTTT
+  ~~~~~####~~~................<.....TTTTTT
+  ~~~~~##~~~~~~~#.............<...TTTTTTTT
+  ~~~~~#~~~~~~~~##..##....."""<...TTTTTTTT
+  ~~~~#.#~~~~~~~.....#."""""""#vT.TTTTTTTT
+  ~~~~###~~~~~~~~....#""""""""""<.TTTTTTTT
+  ~~~~~##~~~~~~~~....#""""""""""#vvvTTTTTT
+  ~~~~~##~~~~~~~~....##"""""""""....TTTTTT
+  ~~~~~~##~~~~~~~.....#"""""".......TTTTTT
+  ~~~~~~##~~~~~~~.....##"""...........TTTT
+  ~~~~~~##~~~~~~.......#"""...............
+  ~~~~~~##~~~~~~.......###................
+  ~~~~~~~##~~~~~.........#................
+  ~~~~~####~~~~~.........##...........TTTT
+  ~~~~~##~~~~~~~..........#...........TTTT
+  ~~~~~~##~~~~~~~.........####......TTTTTT
+  ~~~~~~##~~~~~~~...........#.......TTTTTT
+  ~~~~~#~~~~~~~~~...........#.....TTTTTTTT
+  ~~~~#.#~~~~~~~~...........#.....TTTTTTTT
+  ~~~~###~~~~~~~~~..........##..##TTTTTTTT
+  ~~~~~~~##~~~~~~~...............#TTTTTTTT
+  ~~~~~~~##~~~~~~~...............#TTTTTTTT
+  ~~~~~~##~~~~~~~~~~.............#TTTTTTTT
+  ~~~~~~##~~~~~~~~~~~~...........#TTTTTTTT
+  ~~~~~##~~~~~~~~~~~~~~~~........#TTTTTTTT
+  ~~~~~####~~~~~~~~~~~~~~~~~~~~..#TTTTTTTT
+  ~~~~~~~##~~~~~~~~~~~~~~~~~~~~###TTTTTTTT
+  ~~~~~~##~~~~~~~~~~~~~~~~~~~#####TTTTTTTT
+  ~~~~~~##~~~~~~~~~~~~~~~~~~~##~~#TTTTTTTT
+exits:
+- edge: north
+  cells: [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33]
+  to: bestine
+- edge: south
+  cells: []
+  to: route-105
+- edge: east
+  cells: [61, 62, 63]
+  to: mos-entha
+buildings: []
+props: []
+people:
+- name: Bug Catcher
+  at: [15, 60]
+  role: npc
+- name: Girl1
+  at: [25, 49]
+  role: npc
+- name: Trainer Sabe
+  at: [31, 24]
+  role: trainer
+- name: Boy1
+  at: [27, 63]
+  role: npc
+- name: Woman
+  at: [30, 50]
+  role: npc
+- name: Girl2
+  at: [28, 74]
+  role: npc
+- name: '0x0'
+  at: [12, 54]
+  role: npc
+- name: '0x0'
+  at: [12, 51]
+  role: npc
+- name: Trainer Iban
+  at: [29, 8]
+  role: trainer
+- name: Expert F
+  at: [37, 8]
+  role: npc
+- name: White Herb Florist
+  at: [8, 19]
+  role: npc
+- name: Trainer Gina
+  at: [27, 15]
+  role: trainer
+- name: Trainer Mia
+  at: [28, 15]
+  role: trainer
+- name: Trainer Wedun
+  at: [21, 25]
+  role: trainer
+- name: Trainer Carka
+  at: [11, 44]
+  role: trainer
+- name: Trainer Benik
+  at: [18, 67]
+  role: trainer
+- name: Event Script_Cut Tree
+  at: [35, 22]
+  role: npc
+- name: Boy2
+  at: [5, 26]
+  role: npc
+- name: Trainer Daxek
+  at: [15, 59]
+  role: trainer
+- name: Rival
+  at: [17, 50]
+  role: npc
+- name: Berry tree
+  at: [34, 6]
+  role: berry
+- name: Berry tree
+  at: [35, 6]
+  role: berry
+- name: Berry tree
+  at: [36, 6]
+  role: berry
+- name: Berry tree
+  at: [22, 41]
+  role: berry
+- name: Berry tree
+  at: [23, 41]
+  role: berry
+- name: Berry tree
+  at: [24, 41]
+  role: berry
+- name: Berry tree
+  at: [3, 22]
+  role: berry
+- name: Berry tree
+  at: [3, 23]
+  role: berry
+- name: Berry tree
+  at: [3, 24]
+  role: berry
+- name: Berry tree
+  at: [3, 25]
+  role: berry
+- name: Item
+  at: [39, 15]
+  role: item
+- name: Item
+  at: [29, 53]
+  role: item
+- name: Item
+  at: [37, 22]
+  role: item
+- name: Item
+  at: [5, 8]
+  role: item
+signs:
+- name: Sign
+  at: [20, 50]
+- name: Sign
+  at: [27, 66]
+- name: Sign
+  at: [23, 5]
+- name: Sign
+  at: [7, 20]
+- name: Sign
+  at: [17, 23]
+warps:
+- name: Door
+  at: [17, 50]
+  to: route-104-han-hangar
+- name: Door
+  at: [5, 18]
+  to: route-104-flower-shop
+- name: Door
+  at: [10, 30]
+  to: jundland-wastes
+- name: Door
+  at: [11, 30]
+  to: jundland-wastes
+- name: Door
+  at: [10, 38]
+  to: jundland-wastes
+- name: Door
+  at: [11, 38]
+  to: jundland-wastes
+- name: Door
+  at: [32, 42]
+  to: jundland-wastes
+- name: Door
+  at: [33, 42]
+  to: jundland-wastes
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

@@ -1,0 +1,45 @@
+id: mortis-gate-exterior
+name: MORTIS GATE EXTERIOR
+planet: MORTIS
+kind: interior
+replaces: NavelRock_Exterior
+status: TODO
+story: ''
+grid: |
+  ~~~~~~~~~~~~~~~~~~~~~
+  ~~##~~~~~~~~~~~~~~~~~
+  ~~##~~#########~~~~~~
+  ~~~~~.#########.~~~~~
+  ~~~~###.......###~~~~
+  ~~~###..#...#.####~~~
+  ~~~######...##.###~~~
+  ~~~###.##...##.###~~~
+  ~~~###.###.###.###~~~
+  ~~~###########.###~~~
+  ~~~##.#.##.####.##~~~
+  ~~~###.#.....#.###~~~
+  ~~~#####.....#####~~~
+  ~~~~#####...#####~~~~
+  ~~~~~~~~~...~~~~~~~~~
+  ~~~~~~~~~...~~~~##~~~
+  ~~~~##~~~...~##~##~~~
+  ~~~~##~~~...~##~~~~~~
+  ~~~~~~~~#...#~~~~~~~~
+  ~~~~##~#######~~~~~~~
+  ~~~~##~#######~##~~~~
+  ~~~~~~~#######~##~~~~
+  ~~~~~~~#######~~~~~~~
+  ~~~~~~~~~~~~~~~~~~~~~
+exits: []
+buildings: []
+props: []
+people: []
+signs: []
+warps:
+- name: Door
+  at: [10, 18]
+  to: mortis-gate-hangar
+- name: Door
+  at: [10, 10]
+  to: mortis-gate-entrance
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

@@ -1,0 +1,134 @@
+id: pirin-arena-1f
+name: PIRIN ARENA 1F
+planet: SULLUST
+kind: interior
+replaces: LavaridgeTown_Gym_1F
+status: TODO
+story: ''
+grid: |
+  #################
+  #################
+  ......#....#....#
+  ......#....#....#
+  ......#....#....#
+  ......#....#....#
+  ......#....#....#
+  #################
+  #################
+  ....#..#..##...##
+  ....#..#..##...##
+  ....#..#..#.....#
+  ....#..#..#.....#
+  ....#..#..#vvvvv#
+  ....#..#..#.....#
+  ....#vv#..#.....#
+  ....#..#.........
+  .......#.........
+  .......#.........
+exits: []
+buildings: []
+props: []
+people:
+- name: Flannery
+  at: [13, 9]
+  role: npc
+- name: Trainer Cuir
+  at: [3, 14]
+  role: trainer
+- name: Trainer Girir
+  at: [2, 15]
+  role: trainer
+- name: Trainer Abus
+  at: [3, 10]
+  role: trainer
+- name: Trainer Dameth
+  at: [5, 2]
+  role: trainer
+- name: Gym Guide
+  at: [12, 16]
+  role: npc
+signs:
+- name: Sign
+  at: [10, 15]
+- name: Sign
+  at: [16, 15]
+warps:
+- name: Door
+  at: [13, 18]
+  to: pirin
+- name: Door
+  at: [14, 18]
+  to: pirin
+- name: Door
+  at: [10, 18]
+  to: pirin-arena-b1f
+- name: Door
+  at: [8, 9]
+  to: pirin-arena-b1f
+- name: Door
+  at: [4, 18]
+  to: pirin-arena-b1f
+- name: Door
+  at: [5, 14]
+  to: pirin-arena-b1f
+- name: Door
+  at: [0, 17]
+  to: pirin-arena-b1f
+- name: Door
+  at: [5, 9]
+  to: pirin-arena-b1f
+- name: Door
+  at: [2, 15]
+  to: pirin-arena-b1f
+- name: Door
+  at: [3, 14]
+  to: pirin-arena-b1f
+- name: Door
+  at: [1, 14]
+  to: pirin-arena-b1f
+- name: Door
+  at: [0, 10]
+  to: pirin-arena-b1f
+- name: Door
+  at: [3, 10]
+  to: pirin-arena-b1f
+- name: Door
+  at: [0, 6]
+  to: pirin-arena-b1f
+- name: Door
+  at: [3, 6]
+  to: pirin-arena-b1f
+- name: Door
+  at: [5, 6]
+  to: pirin-arena-b1f
+- name: Door
+  at: [2, 3]
+  to: pirin-arena-b1f
+- name: Door
+  at: [5, 2]
+  to: pirin-arena-b1f
+- name: Door
+  at: [7, 2]
+  to: pirin-arena-b1f
+- name: Door
+  at: [8, 6]
+  to: pirin-arena-b1f
+- name: Door
+  at: [10, 6]
+  to: pirin-arena-b1f
+- name: Door
+  at: [4, 16]
+  to: pirin-arena-b1f
+- name: Door
+  at: [12, 3]
+  to: pirin-arena-b1f
+- name: Door
+  at: [14, 6]
+  to: pirin-arena-b1f
+- name: Door
+  at: [13, 17]
+  to: pirin-arena-b1f
+- name: Door
+  at: [12, 12]
+  to: pirin-arena-b1f
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

@@ -1,0 +1,81 @@
+id: kachirho-arena
+name: KACHIRHO ARENA
+planet: KASHYYYK
+kind: interior
+replaces: DewfordTown_Gym
+status: TODO
+story: ''
+grid: |
+  ##################
+  ##################
+  ##################
+  ###..#####.####.##
+  #.#..#.###..###.##
+  #............##.##
+  ##....######....##
+  ############..####
+  #######.......####
+  ##.######.##.###.#
+  #....####.##.###.#
+  #..######.##.###.#
+  ##.######.##.#...#
+  ##.####...##.###.#
+  ##.##........###.#
+  #..##.####...###.#
+  #.....#####.####.#
+  #..########.####.#
+  ##.#####.##.##...#
+  ########.##.....##
+  ########.##..#####
+  ##.#####.....#####
+  ##..............##
+  ###.....####.#####
+  #####..#####.#####
+  ####....####.#####
+  #####..###########
+  #####..###########
+exits: []
+buildings: []
+props: []
+people:
+- name: Brawly
+  at: [4, 3]
+  role: npc
+- name: Trainer Tobir
+  at: [2, 18]
+  role: trainer
+- name: Trainer Jeara
+  at: [15, 3]
+  role: trainer
+- name: Trainer Larkissa
+  at: [12, 25]
+  role: trainer
+- name: Gym Guide
+  at: [5, 24]
+  role: npc
+- name: Trainer Kitwarr
+  at: [7, 8]
+  role: trainer
+- name: Trainer Lozena
+  at: [16, 9]
+  role: trainer
+- name: Trainer Belo
+  at: [14, 12]
+  role: trainer
+signs:
+- name: Sign
+  at: [4, 23]
+- name: Sign
+  at: [7, 23]
+- name: Sign
+  at: [4, 24]
+- name: Sign
+  at: [7, 24]
+warps:
+- name: Door
+  at: [5, 27]
+  to: kachirho
+- name: Door
+  at: [6, 27]
+  to: kachirho
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

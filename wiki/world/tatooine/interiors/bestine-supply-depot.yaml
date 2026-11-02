@@ -1,0 +1,41 @@
+id: bestine-supply-depot
+name: BESTINE SUPPLY DEPOT
+planet: TATOOINE
+kind: interior
+replaces: RustboroCity_Mart
+status: TODO
+story: ''
+grid: |
+  ###TTT#####
+  ###TTT#####
+  ..#........
+  ..#.......#
+  ###...##..#
+  ......##..#
+  ......##..#
+  ...........
+exits: []
+buildings: []
+props: []
+people:
+- name: Clerk
+  at: [1, 3]
+  role: npc
+- name: Boy
+  at: [2, 5]
+  role: npc
+- name: Pokefan F
+  at: [8, 4]
+  role: npc
+- name: Bug Catcher
+  at: [8, 2]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [3, 7]
+  to: bestine
+- name: Door
+  at: [4, 7]
+  to: bestine
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

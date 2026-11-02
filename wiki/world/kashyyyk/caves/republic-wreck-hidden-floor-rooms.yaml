@@ -1,0 +1,81 @@
+id: republic-wreck-hidden-floor-rooms
+name: REPUBLIC WRECK HIDDEN FLOOR ROOMS
+planet: KASHYYYK
+kind: dungeon
+replaces: AbandonedShip_HiddenFloorRooms
+status: TODO
+story: ''
+grid: |
+  #####################.######################
+  #####################.######################
+  ##...........##...TT#.##....##..........##.#
+  #...........####..##.###.........#......##.#
+  #..TT........##.............##.............#
+  ##.##........##.............###.TT....#....#
+  #............##.............##..##........##
+  ############################################
+  ############################################
+  ############################################
+  #......#.....##.............##..........##.#
+  #.........TT.##..........#.####....TT...##.#
+  #.........##.##.............##.....##......#
+  ##...........##.TT..........##............##
+  #...........###.##..........##...#.........#
+exits: []
+buildings: []
+props: []
+people:
+- name: Item
+  at: [41, 4]
+  role: item
+- name: Item
+  at: [16, 10]
+  role: item
+- name: Item
+  at: [5, 11]
+  role: item
+- name: Item
+  at: [31, 11]
+  role: item
+signs:
+- name: Sign
+  at: [8, 5]
+- name: Sign
+  at: [11, 3]
+- name: Sign
+  at: [10, 10]
+- name: Sign
+  at: [16, 3]
+- name: Sign
+  at: [25, 2]
+- name: Sign
+  at: [24, 6]
+warps:
+- name: Door
+  at: [6, 14]
+  to: republic-wreck-hidden-floor-corridors
+- name: Door
+  at: [7, 14]
+  to: republic-wreck-hidden-floor-corridors
+- name: Door
+  at: [21, 14]
+  to: republic-wreck-hidden-floor-corridors
+- name: Door
+  at: [22, 14]
+  to: republic-wreck-hidden-floor-corridors
+- name: Door
+  at: [36, 14]
+  to: republic-wreck-hidden-floor-corridors
+- name: Door
+  at: [37, 14]
+  to: republic-wreck-hidden-floor-corridors
+- name: Door
+  at: [6, 1]
+  to: republic-wreck-hidden-floor-corridors
+- name: Door
+  at: [21, 1]
+  to: republic-wreck-hidden-floor-corridors
+- name: Door
+  at: [36, 1]
+  to: republic-wreck-hidden-floor-corridors
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

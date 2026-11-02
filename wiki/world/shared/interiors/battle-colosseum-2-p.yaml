@@ -1,0 +1,33 @@
+id: battle-colosseum-2-p
+name: BATTLE COLOSSEUM 2 P
+planet: SHARED
+kind: interior
+replaces: BattleColosseum_2P
+status: TODO
+story: ''
+grid: |
+  ##############
+  ######TT######
+  ##############
+  #............#
+  #............#
+  #............#
+  #............#
+  #............#
+  ######..######
+exits: []
+buildings: []
+props: []
+people:
+- name: Attendant
+  at: [9, 3]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [6, 8]
+  to: MAP_DYNAMIC
+- name: Door
+  at: [7, 8]
+  to: MAP_DYNAMIC
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

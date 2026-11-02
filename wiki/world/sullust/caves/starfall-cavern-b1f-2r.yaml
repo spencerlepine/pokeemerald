@@ -1,0 +1,39 @@
+id: starfall-cavern-b1f-2r
+name: STARFALL CAVERN B1F 2R
+planet: SULLUST
+kind: dungeon
+replaces: MeteorFalls_B1F_2R
+status: TODO
+story: ''
+grid: |
+  ###########
+  ###########
+  ###########
+  ###.....###
+  ###.....###
+  ###~~~~~###
+  ###~~~~~###
+  ###~~~~~###
+  ###~~~~~###
+  ###~~~~~###
+  ###~~~~~###
+  ###~~~~~###
+  ###~~~~~###
+  ###~~~~~###
+  ###.....###
+  ###.....###
+  ###########
+  ###########
+exits: []
+buildings: []
+props: []
+people:
+- name: Item
+  at: [5, 3]
+  role: item
+signs: []
+warps:
+- name: Door
+  at: [5, 15]
+  to: starfall-cavern-b1f-1r
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

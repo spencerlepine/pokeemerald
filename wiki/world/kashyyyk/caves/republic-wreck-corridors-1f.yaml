@@ -1,0 +1,69 @@
+id: republic-wreck-corridors-1f
+name: REPUBLIC WRECK CORRIDORS 1F
+planet: KASHYYYK
+kind: dungeon
+replaces: AbandonedShip_Corridors_1F
+status: TODO
+story: ''
+grid: |
+  ##################
+  ##################
+  ......###........#
+  .......#..........
+  #.###..#..######..
+  ..###..#..######..
+  ..###..#..######..
+  ..###..#..######..
+  #.###..#..#.####..
+  ..###..#..#.####.#
+  .......#..........
+  .......#..........
+exits: []
+buildings: []
+props: []
+people:
+- name: Youngster
+  at: [17, 7]
+  role: npc
+- name: Trainer Cenan
+  at: [5, 10]
+  role: trainer
+signs: []
+warps:
+- name: Door
+  at: [9, 11]
+  to: republic-wreck-deck
+- name: Door
+  at: [8, 11]
+  to: republic-wreck-deck
+- name: Door
+  at: [0, 11]
+  to: republic-wreck-deck
+- name: Door
+  at: [1, 11]
+  to: republic-wreck-deck
+- name: Door
+  at: [11, 9]
+  to: republic-wreck-rooms-1f
+- name: Door
+  at: [14, 9]
+  to: republic-wreck-rooms-1f
+- name: Door
+  at: [11, 3]
+  to: republic-wreck-rooms-1f
+- name: Door
+  at: [14, 3]
+  to: republic-wreck-rooms-1f
+- name: Door
+  at: [3, 9]
+  to: republic-wreck-rooms-2-1f
+- name: Door
+  at: [16, 2]
+  to: republic-wreck-corridors-b1f
+- name: Door
+  at: [5, 2]
+  to: republic-wreck-corridors-b1f
+- name: Door
+  at: [3, 3]
+  to: republic-wreck-rooms-2-1f
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

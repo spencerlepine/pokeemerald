@@ -1,0 +1,51 @@
+id: route-119-house
+name: ROUTE 119 HOUSE
+planet: ENDOR
+kind: interior
+replaces: Route119_House
+status: TODO
+story: ''
+grid: |
+  ##########
+  ########..
+  ........##
+  ..........
+  ..##......
+  ..##......
+  ..........
+  ..........
+  .........#
+exits: []
+buildings: []
+props: []
+people:
+- name: Woman
+  at: [7, 2]
+  role: npc
+- name: Wingull
+  at: [1, 6]
+  role: npc
+- name: Wingull
+  at: [0, 4]
+  role: npc
+- name: Wingull
+  at: [2, 2]
+  role: npc
+- name: Wingull
+  at: [8, 5]
+  role: npc
+- name: Wingull
+  at: [6, 6]
+  role: npc
+- name: Wingull
+  at: [5, 3]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [3, 8]
+  to: route-119
+- name: Door
+  at: [4, 8]
+  to: route-119
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

@@ -1,0 +1,60 @@
+id: union-room
+name: UNION ROOM
+planet: SHARED
+kind: interior
+replaces: UnionRoom
+status: TODO
+story: ''
+grid: |
+  ###############
+  ###############
+  ...............
+  ...............
+  ...............
+  ...............
+  ...............
+  ...............
+  ...............
+  ...............
+  ...............
+  ######.=.######
+exits: []
+buildings: []
+props: []
+people:
+- name: Attendant
+  at: [3, 2]
+  role: npc
+- name: Player4
+  at: [1, 8]
+  role: npc
+- name: Player8
+  at: [7, 8]
+  role: npc
+- name: Player7
+  at: [1, 4]
+  role: npc
+- name: Player6
+  at: [7, 4]
+  role: npc
+- name: Player5
+  at: [13, 4]
+  role: npc
+- name: Player3
+  at: [10, 6]
+  role: npc
+- name: Player2
+  at: [13, 8]
+  role: npc
+- name: Player1
+  at: [4, 6]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [7, 11]
+  to: MAP_DYNAMIC
+- name: Door
+  at: [8, 11]
+  to: MAP_DYNAMIC
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

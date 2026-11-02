@@ -1,0 +1,205 @@
+id: yavin-4-arena
+name: YAVIN 4 ARENA
+planet: YAVIN 4
+kind: interior
+replaces: MossdeepCity_Gym
+status: TODO
+story: ''
+grid: |
+  ##########################
+  ######.###################
+  ##########################
+  ######.####.##############
+  ####.....##.##############
+  ####.....##..#############
+  ####.....##..########.####
+  ####.#..###.#########.####
+  ####....#...#########.#..#
+  ######......#########.....
+  ########.############.####
+  ########.#################
+  ########.#################
+  ##########################
+  ##########################
+  ##########################
+  ##########################
+  ##########################
+  #######...#############.##
+  ########.#################
+  ##.......##############.##
+  #..#..#################.##
+  #.....###############.....
+  #.##.################.....
+  ####################.....#
+  ######################....
+  ######################...#
+  #######################..#
+  ###.####################.#
+  #.....##################.#
+  #.....#.################.#
+  #.......###############..#
+  #.#.......###.########..##
+  #.#.......#...#######..###
+  ###.#...#.#...#.......####
+  ###.......#..#############
+exits: []
+buildings: []
+props: []
+people:
+- name: Tate And Liza
+  at: [23, 7]
+  role: npc
+- name: Trainer Puel
+  at: [1, 30]
+  role: trainer
+- name: Trainer Buon
+  at: [5, 20]
+  role: trainer
+- name: Trainer Mumina
+  at: [4, 29]
+  role: trainer
+- name: Trainer Sora
+  at: [4, 23]
+  role: trainer
+- name: Trainer Vuthen
+  at: [6, 9]
+  role: trainer
+- name: Trainer Hirkia
+  at: [6, 3]
+  role: trainer
+- name: Gym Guide
+  at: [5, 33]
+  role: npc
+- name: Tate And Liza
+  at: [24, 7]
+  role: npc
+- name: '0x0'
+  at: [2, 30]
+  role: npc
+- name: '0x0'
+  at: [1, 29]
+  role: npc
+- name: '0x0'
+  at: [4, 30]
+  role: npc
+- name: '0x0'
+  at: [5, 29]
+  role: npc
+- name: '0x0'
+  at: [5, 21]
+  role: npc
+- name: '0x0'
+  at: [7, 9]
+  role: npc
+- name: '0x0'
+  at: [10, 8]
+  role: npc
+- name: Trainer Neik
+  at: [9, 8]
+  role: trainer
+- name: Trainer Sarkina
+  at: [7, 5]
+  role: trainer
+- name: '0x0'
+  at: [6, 6]
+  role: npc
+- name: '0x0'
+  at: [12, 5]
+  role: npc
+- name: '0x0'
+  at: [11, 5]
+  role: npc
+- name: '0x0'
+  at: [11, 34]
+  role: npc
+- name: '0x0'
+  at: [12, 33]
+  role: npc
+- name: '0x0'
+  at: [12, 34]
+  role: npc
+- name: Trainer Cedon
+  at: [22, 25]
+  role: trainer
+- name: '0x0'
+  at: [23, 26]
+  role: npc
+- name: Trainer Mudara
+  at: [25, 25]
+  role: trainer
+- name: Trainer Kora
+  at: [22, 23]
+  role: trainer
+- name: '0x0'
+  at: [21, 23]
+  role: npc
+- name: '0x0'
+  at: [21, 22]
+  role: npc
+- name: '0x0'
+  at: [22, 22]
+  role: npc
+- name: Trainer Novon
+  at: [25, 22]
+  role: trainer
+- name: '0x0'
+  at: [24, 22]
+  role: npc
+- name: '0x0'
+  at: [24, 23]
+  role: npc
+- name: '0x0'
+  at: [6, 5]
+  role: npc
+- name: '0x0'
+  at: [23, 25]
+  role: npc
+signs:
+- name: Sign
+  at: [4, 34]
+- name: Sign
+  at: [8, 34]
+warps:
+- name: Door
+  at: [6, 35]
+  to: yavin-4
+- name: Door
+  at: [7, 35]
+  to: yavin-4
+- name: Door
+  at: [3, 28]
+  to: yavin-4-arena
+- name: Door
+  at: [1, 23]
+  to: yavin-4-arena
+- name: Door
+  at: [7, 18]
+  to: yavin-4-arena
+- name: Door
+  at: [8, 12]
+  to: yavin-4-arena
+- name: Door
+  at: [9, 18]
+  to: yavin-4-arena
+- name: Door
+  at: [23, 20]
+  to: yavin-4-arena
+- name: Door
+  at: [1, 33]
+  to: yavin-4-arena
+- name: Door
+  at: [20, 24]
+  to: yavin-4-arena
+- name: Door
+  at: [11, 3]
+  to: yavin-4-arena
+- name: Door
+  at: [11, 35]
+  to: yavin-4-arena
+- name: Door
+  at: [13, 32]
+  to: yavin-4-arena
+- name: Door
+  at: [21, 10]
+  to: yavin-4-arena
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

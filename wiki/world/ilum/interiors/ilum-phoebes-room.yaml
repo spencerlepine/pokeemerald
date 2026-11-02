@@ -1,0 +1,38 @@
+id: ilum-phoebes-room
+name: ILUM PHOEBES ROOM
+planet: ILUM
+kind: interior
+replaces: EverGrandeCity_PhoebesRoom
+status: TODO
+story: ''
+grid: |
+  #############
+  #############
+  #############
+  .............
+  ##.........##
+  ##.........##
+  ##.........##
+  ##.........##
+  ##.........##
+  .............
+  .............
+  .............
+  #####...#####
+  #####...#####
+exits: []
+buildings: []
+props: []
+people:
+- name: Phoebe
+  at: [6, 5]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [6, 13]
+  to: ilum-hall-1
+- name: Door
+  at: [6, 2]
+  to: ilum-hall-2
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

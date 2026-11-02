@@ -1,0 +1,34 @@
+id: republic-wreck-captains-office
+name: REPUBLIC WRECK CAPTAINS OFFICE
+planet: KASHYYYK
+kind: dungeon
+replaces: AbandonedShip_CaptainsOffice
+status: TODO
+story: ''
+grid: |
+  #########
+  #########
+  .......##
+  #........
+  #........
+  ...##....
+  ...##....
+exits: []
+buildings: []
+props: []
+people:
+- name: Capt Stern Aide
+  at: [3, 4]
+  role: npc
+- name: Item
+  at: [0, 6]
+  role: item
+signs: []
+warps:
+- name: Door
+  at: [7, 6]
+  to: republic-wreck-deck
+- name: Door
+  at: [8, 6]
+  to: republic-wreck-deck
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

@@ -1,0 +1,53 @@
+id: route-114-fossil-maniacs-tunnel
+name: ROUTE 114 FOSSIL MANIACS TUNNEL
+planet: SULLUST
+kind: interior
+replaces: Route114_FossilManiacsTunnel
+status: TODO
+story: ''
+grid: |
+  ..########...
+  .#####.###...
+  .#####.####..
+  .####..####..
+  .###...####..
+  .####...###..
+  .###...####..
+  .###....###..
+  .##.#...###..
+  .#.##..####..
+  ..###...###..
+  ..###..#.##..
+  ..####.#####.
+  ..###..#.###.
+  ..###..#.###.
+  ..###..#.###.
+  .###.#.#.###.
+  .#.#.#.#####.
+  .###.#.##.###
+  .#.###..#.#.#
+  .#.#.#..#.###
+  .#.#.#.##.###
+  ##.###..#####
+  ##.###..##.##
+  ##.##....#.##
+  ##.##....#.##
+exits: []
+buildings: []
+props: []
+people:
+- name: Fossil Maniac
+  at: [5, 3]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [6, 25]
+  to: route-114-fossil-maniacs-house
+- name: Door
+  at: [7, 25]
+  to: route-114-fossil-maniacs-house
+- name: Door
+  at: [6, 2]
+  to: krayt-graveyard
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

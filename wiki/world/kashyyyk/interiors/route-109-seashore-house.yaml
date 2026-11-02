@@ -1,0 +1,43 @@
+id: route-109-seashore-house
+name: ROUTE 109 SEASHORE HOUSE
+planet: KASHYYYK
+kind: interior
+replaces: Route109_SeashoreHouse
+status: TODO
+story: ''
+grid: |
+  ###############
+  ###############
+  .##....#....##.
+  ...............
+  ##.###..###..##
+  ...............
+  ##.###..###..##
+  ...............
+  ##...........##
+  ...............
+exits: []
+buildings: []
+props: []
+people:
+- name: Owner
+  at: [6, 2]
+  role: npc
+- name: Trainer Dannax
+  at: [2, 3]
+  role: trainer
+- name: Trainer Seus
+  at: [14, 9]
+  role: trainer
+- name: Trainer Jarra
+  at: [10, 5]
+  role: trainer
+signs: []
+warps:
+- name: Door
+  at: [6, 9]
+  to: route-109
+- name: Door
+  at: [7, 9]
+  to: route-109
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

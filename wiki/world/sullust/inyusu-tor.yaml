@@ -1,0 +1,83 @@
+id: inyusu-tor
+name: INYUSU TOR
+planet: SULLUST
+kind: town
+replaces: FallarborTown
+status: TODO
+story: ''
+pos: [80, 0]
+grid: |
+  ..............######
+  ##############......
+  ####################
+  #####T##############
+  ####################
+  ####..#####..#######
+  ####.#######.####...
+  ...#.#######.####...
+  ......#.............
+  ....................
+  ....................
+  ..........#.........
+  ....................
+  ..............####..
+  ..............####..
+  .....####.....######
+  .....####..........T
+  .....####.........T#
+  #................T#T
+  T#T#..........T#T#T#
+exits:
+- edge: west
+  cells: [0, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+  to: route-114
+- edge: east
+  cells: [1, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+  to: route-113
+buildings: []
+props: []
+people:
+- name: Girl
+  at: [8, 11]
+  role: npc
+- name: Expert M
+  at: [11, 9]
+  role: npc
+- name: Gentleman
+  at: [11, 15]
+  role: npc
+- name: Azurill
+  at: [8, 12]
+  role: npc
+signs:
+- name: Sign
+  at: [16, 15]
+- name: Sign
+  at: [15, 7]
+- name: Sign
+  at: [6, 8]
+- name: Sign
+  at: [16, 7]
+- name: Sign
+  at: [10, 11]
+- name: Sign
+  at: [17, 15]
+- name: Sign
+  at: [3, 7]
+warps:
+- name: Door
+  at: [15, 15]
+  to: inyusu-tor-supply-depot
+- name: Door
+  at: [8, 7]
+  to: inyusu-tor-battle-tent-lobby
+- name: Door
+  at: [14, 7]
+  to: inyusu-tor-bacta-center-1f
+- name: Door
+  at: [6, 17]
+  to: inyusu-tor-cozmos-house
+- name: Door
+  at: [1, 6]
+  to: inyusu-tor-move-relearners-house
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

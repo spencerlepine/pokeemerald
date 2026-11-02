@@ -1,0 +1,28 @@
+id: underwater-route-134
+name: UNDERWATER ROUTE 134
+planet: DAGOBAH
+kind: dungeon
+replaces: Underwater_Route134
+status: TODO
+story: ''
+grid: |
+  ##################
+  ##################
+  ##################
+  ##################
+  ##################
+  #######~~~########
+  #####~~~~~~#######
+  #####~~~~~~~######
+  ######~~.~~~######
+  ##################
+exits: []
+buildings: []
+props: []
+people: []
+signs: []
+warps:
+- name: Door
+  at: [8, 8]
+  to: underwater-sealed-chamber
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

@@ -1,0 +1,110 @@
+id: route-113
+name: ROUTE 113
+planet: SULLUST
+kind: route
+replaces: Route113
+status: TODO
+story: ''
+pos: [100, 0]
+grid: |
+  ###########.###<#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T###T#T#T#T##############
+  ###########.###<##T###T#T#T###T#T#T#T#T#T###################T#T#T#########T#..T###T#T#.#############
+  ............###<#T#..T#T#T#..T#T...##T#T#.."""""""""""">.########...>.#..#######.##T#.##############
+  ###############<##T#########T#T###########""""""""""""">......"""...>...........#.T#.###############
+  ###############<#T#Tvvvvvv#####.##.#..""""""""""####""">..#.""""""..>.#...T###.#>###################
+  ###############<##T#......<....#####."""""""""""####""">....""""""..>..####.....>""""###############
+  ...............<#T#.....""<........."""""""""...####...>"""""""""###>...........>""""##...##########
+  ...............<##T#..""""<........"""""""".....####...>"""""""""###>##T#T#vvvvv#"""".......#######.
+  ...............<.##.""""""#vv#.....""..#####....####vvv#""""""...###>#####"""""""""""...............
+  ............#..#vvv""""""""""<........###.####......""""""""""...###>.."""""""""""""................
+  ...................."""""""""#vvvvv...#####.##......"""""""#vv...vvv#.."""""""""""""................
+  ......................""""""""""".....########........""""">..........."""""""""""..#.....T#########
+  ......................""""""""""".....###########......"""">.##..........""""#######################
+  ......................""""""""""".........########..#######>...............#########################
+  ...............##.........""""""........#.######....#######>.T###T#T###T############################
+  T#T#T###T###T#..T#T#T#T#T#############T#.#.####.T###.####vv###..T#T#..T#...#########################
+  ###T#..T#..T#T#T#T###T###.###############......T#..T#######..T#T#T#T#T#T#T##########################
+  ..T#T#T#T#T#T#T#T#..T#..T############...T#T#T#T#T#T#.######.T#T#T#T#T#T#T#.#########################
+  #T#T#T#T#T#T#T#T#T#T#T#T#.#############T#T#T#T#T#T#T#########T#T#T#T#T#T#T##########################
+  T#T#T#T#T#T#T#T#T#T#T#T#T############.T#T#T#T#T#T#T#.######.T#T#T#T#T#T#T#.#########################
+exits:
+- edge: south
+  cells: [74]
+  to: route-112
+- edge: west
+  cells: [2, 6, 7, 8, 9, 10, 11, 12, 13, 14, 17]
+  to: inyusu-tor
+- edge: east
+  cells: [7, 8, 9, 10]
+  to: route-111
+buildings: []
+props: []
+people:
+- name: Ninja Boy
+  at: [66, 12]
+  role: npc
+- name: Gentleman
+  at: [36, 10]
+  role: npc
+- name: Trainer Jael
+  at: [62, 8]
+  role: trainer
+- name: Trainer Dannik
+  at: [21, 11]
+  role: trainer
+- name: Trainer Midra
+  at: [51, 11]
+  role: trainer
+- name: Trainer Lavo
+  at: [29, 6]
+  role: trainer
+- name: Trainer Lagal
+  at: [71, 2]
+  role: trainer
+- name: Trainer Tori
+  at: [45, 6]
+  role: trainer
+- name: Trainer Tia
+  at: [46, 6]
+  role: trainer
+- name: Trainer Worran
+  at: [75, 3]
+  role: trainer
+- name: Trainer Lonnan
+  at: [71, 4]
+  role: trainer
+- name: Trainer Sotara
+  at: [7, 6]
+  role: trainer
+- name: Trainer Cannal
+  at: [7, 13]
+  role: trainer
+- name: Item
+  at: [53, 7]
+  role: item
+- name: Item
+  at: [79, 5]
+  role: item
+- name: Item
+  at: [15, 15]
+  role: item
+signs:
+- name: Sign
+  at: [85, 6]
+- name: Sign
+  at: [12, 9]
+- name: Sign
+  at: [58, 4]
+- name: Sign
+  at: [31, 5]
+warps:
+- name: Door
+  at: [33, 5]
+  to: route-113-glass-workshop
+- name: Door
+  at: [41, 12]
+  to: terra-cave-entrance
+- name: Door
+  at: [88, 5]
+  to: terra-cave-entrance
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

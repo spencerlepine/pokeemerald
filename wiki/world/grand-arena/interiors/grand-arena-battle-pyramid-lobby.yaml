@@ -1,0 +1,52 @@
+id: grand-arena-battle-pyramid-lobby
+name: GRAND ARENA BATTLE PYRAMID LOBBY
+planet: GRAND ARENA
+kind: interior
+replaces: BattleFrontier_BattlePyramidLobby
+status: TODO
+story: ''
+grid: |
+  ###############
+  ###############
+  ###############
+  ###.#####.#####
+  ###.###.#.#####
+  ..#.#.....#.#..
+  ...............
+  ...............
+  ...####.####...
+  ...####.####...
+  ...####.#######
+  ##.####.#######
+  #######.#######
+  ...............
+  ...............
+  ...............
+  ...............
+  ...............
+exits: []
+buildings: []
+props: []
+people:
+- name: Attendant
+  at: [7, 12]
+  role: npc
+- name: Hint Giver
+  at: [14, 13]
+  role: npc
+- name: Woman
+  at: [2, 15]
+  role: npc
+- name: Fat Man
+  at: [12, 16]
+  role: npc
+signs:
+- name: Sign
+  at: [5, 12]
+- name: Sign
+  at: [1, 12]
+warps:
+- name: Door
+  at: [7, 17]
+  to: grand-arena-outside-east
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

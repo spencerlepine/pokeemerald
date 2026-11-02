@@ -1,0 +1,49 @@
+id: wampa-cave-low-tide-lower-room
+name: WAMPA CAVE LOW TIDE LOWER ROOM
+planet: HOTH
+kind: dungeon
+replaces: ShoalCave_LowTideLowerRoom
+status: TODO
+story: ''
+grid: |
+  ###############################
+  ###############################
+  ######..............###########
+  ######.......................##
+  ######........#vvvvv#######..##
+  ######........>.....#######..##
+  ##............>.....#######..##
+  ###################.#######..##
+  ###################.#######..##
+  ###################.#######..##
+  ###################.#######..##
+  ###################.#######..##
+  ###############################
+  ###############################
+exits: []
+buildings: []
+props: []
+people:
+- name: Event Script_Strength Boulder
+  at: [25, 3]
+  role: npc
+- name: Black Belt
+  at: [11, 4]
+  role: npc
+signs:
+- name: Sign
+  at: [18, 2]
+warps:
+- name: Door
+  at: [7, 2]
+  to: wampa-cave-low-tide-inner-room
+- name: Door
+  at: [2, 6]
+  to: wampa-cave-low-tide-inner-room
+- name: Door
+  at: [19, 11]
+  to: wampa-cave-low-tide-inner-room
+- name: Door
+  at: [28, 11]
+  to: wampa-cave-low-tide-ice-room
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

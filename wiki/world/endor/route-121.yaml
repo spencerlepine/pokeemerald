@@ -1,0 +1,139 @@
+id: route-121
+name: ROUTE 121
+planet: ENDOR
+kind: route
+replaces: Route121
+status: TODO
+story: ''
+pos: [400, 80]
+grid: |
+  TTTT##TTTTTTTTTTTTTTTTTTTTTTTTTTTTT#####TT.T##TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTT##TTTTTTTTTTTTTTTTTTTTTTTTTTTTT#####TT.T##TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTT##TTTTTTTT####TTTTTTTTT........#####...T##........TTTT..........TTTTTTTTTTTT
+  TT..##TTTTTTTT....TTTTTTTTT........#####...T##........TTTT..........TTTTTTTTTTTT
+  ######TTTTTTTT"""################################################.##############
+  ######TTTTTTTT"""".....""".........#####.#####........"""""........."""".T......
+  ......................""""".....TT.....#.#..##.........""""""".....""""""T......
+  ......................""""".....TT.......#TT#######..####..###..##########......
+  ....................."""""""....TTTT#..###..#"".........T....T..T."".""".T......
+  .............."""#############..TTTT#.......#"""######.##....T..T."""""".T......
+  ............""""""""""".######..#####.......#"""""""....T""..T....""""""......TT
+  ..........."""""""""##########..##########..#############""".T..............TTTT
+  ........TTTTTTTT##########............"""""............""""".T##########....TT##
+  ........TTTTTTTT######.....###..###....""""""".........""""".T............#####~
+  ##################.....######...########"""""""......."""""###..####......#~~~~~
+  ...TT...################~~~~#....#~~~~~####################################~~~~~
+  ...TT####......####~~~~~~~###....###~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  TT.#############~~~~~~~~~~###....#####~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  TT##..#~~~~~~~~~~~~~~~~~~##~#....#~~######~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  .##.###~~~~~~~~~~~~~~~~~~##~~~~~~~~~~~####~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+exits:
+- edge: south
+  cells: []
+  to: route-122
+- edge: west
+  cells: [6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 19]
+  to: route-120
+- edge: east
+  cells: [5, 6, 7, 8, 9]
+  to: cloud-city
+buildings: []
+props: []
+people:
+- name: Woman
+  at: [29, 14]
+  role: npc
+- name: Trainer Kate
+  at: [39, 9]
+  role: trainer
+- name: Trainer Joy
+  at: [40, 9]
+  role: trainer
+- name: '0x0'
+  at: [30, 8]
+  role: npc
+- name: '0x0'
+  at: [30, 7]
+  role: npc
+- name: '0x0'
+  at: [31, 7]
+  role: npc
+- name: Event Script_Cut Tree
+  at: [32, 5]
+  role: npc
+- name: Event Script_Cut Tree
+  at: [65, 4]
+  role: npc
+- name: Trainer Vogara
+  at: [63, 5]
+  role: trainer
+- name: Trainer Wogo
+  at: [55, 8]
+  role: trainer
+- name: Trainer Terketh
+  at: [11, 11]
+  role: trainer
+- name: Trainer Jomelle
+  at: [22, 5]
+  role: trainer
+- name: Event Script_Cut Tree
+  at: [26, 12]
+  role: npc
+- name: Trainer Coxar
+  at: [11, 6]
+  role: trainer
+- name: Trainer Mobik
+  at: [59, 8]
+  role: trainer
+- name: Trainer Poeth
+  at: [59, 13]
+  role: trainer
+- name: Trainer Morkesh
+  at: [65, 9]
+  role: trainer
+- name: Trainer Comina
+  at: [72, 9]
+  role: trainer
+- name: Berry tree
+  at: [14, 2]
+  role: berry
+- name: Berry tree
+  at: [15, 2]
+  role: berry
+- name: Berry tree
+  at: [16, 2]
+  role: berry
+- name: Berry tree
+  at: [17, 2]
+  role: berry
+- name: Berry tree
+  at: [64, 14]
+  role: berry
+- name: Berry tree
+  at: [65, 14]
+  role: berry
+- name: Berry tree
+  at: [66, 14]
+  role: berry
+- name: Berry tree
+  at: [67, 14]
+  role: berry
+- name: Item
+  at: [55, 10]
+  role: item
+- name: Item
+  at: [60, 10]
+  role: item
+- name: Item
+  at: [38, 13]
+  role: item
+signs:
+- name: Sign
+  at: [32, 14]
+- name: Sign
+  at: [39, 6]
+warps:
+- name: Door
+  at: [37, 5]
+  to: route-121-safari-zone-entrance
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

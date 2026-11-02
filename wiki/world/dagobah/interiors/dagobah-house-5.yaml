@@ -1,0 +1,34 @@
+id: dagobah-house-5
+name: DAGOBAH HOUSE 5
+planet: DAGOBAH
+kind: interior
+replaces: SootopolisCity_House5
+status: TODO
+story: ''
+grid: |
+  ########
+  T######T
+  #......#
+  ....##..
+  ....##..
+  ........
+  ........
+exits: []
+buildings: []
+props: []
+people:
+- name: Maniac
+  at: [3, 3]
+  role: npc
+- name: Girl
+  at: [6, 3]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [3, 6]
+  to: dagobah
+- name: Door
+  at: [4, 6]
+  to: dagobah
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

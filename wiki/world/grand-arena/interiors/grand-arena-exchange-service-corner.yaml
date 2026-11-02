@@ -1,0 +1,62 @@
+id: grand-arena-exchange-service-corner
+name: GRAND ARENA EXCHANGE SERVICE CORNER
+planet: GRAND ARENA
+kind: interior
+replaces: BattleFrontier_ExchangeServiceCorner
+status: TODO
+story: ''
+grid: |
+  ###############
+  ###############
+  ...#########...
+  ...###...###...
+  ...#.......#...
+  ...#.......#...
+  ...#########...
+  ...............
+  ...............
+  #.............#
+  ##...........##
+exits: []
+buildings: []
+props: []
+people:
+- name: Decor Clerk1
+  at: [4, 4]
+  role: npc
+- name: Rich Boy
+  at: [0, 5]
+  role: npc
+- name: Pokefan F
+  at: [0, 4]
+  role: npc
+- name: Sailor
+  at: [14, 6]
+  role: npc
+- name: Man
+  at: [1, 9]
+  role: npc
+- name: Decor Clerk2
+  at: [5, 5]
+  role: npc
+- name: Vitamin Clerk
+  at: [9, 5]
+  role: npc
+- name: Hold Item Clerk
+  at: [10, 4]
+  role: npc
+- name: Girl
+  at: [12, 10]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [7, 10]
+  to: grand-arena-outside-east
+- name: Door
+  at: [6, 10]
+  to: grand-arena-outside-east
+- name: Door
+  at: [8, 10]
+  to: grand-arena-outside-east
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

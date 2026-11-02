@@ -1,0 +1,39 @@
+id: route-116-tunnelers-rest-house
+name: ROUTE 116 TUNNELERS REST HOUSE
+planet: TATOOINE
+kind: interior
+replaces: Route116_TunnelersRestHouse
+status: TODO
+story: ''
+grid: |
+  ##########
+  ##########
+  ..........
+  ..........
+  .##....##.
+  .##....##.
+  ..........
+  ..........
+  ..........
+exits: []
+buildings: []
+props: []
+people:
+- name: Tunneler1
+  at: [6, 5]
+  role: npc
+- name: Tunneler3
+  at: [3, 6]
+  role: npc
+- name: Tunneler2
+  at: [7, 2]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [4, 8]
+  to: route-116
+- name: Door
+  at: [5, 8]
+  to: route-116
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

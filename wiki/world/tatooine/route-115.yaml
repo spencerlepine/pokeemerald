@@ -1,0 +1,184 @@
+id: route-115
+name: ROUTE 115
+planet: TATOOINE
+kind: route
+replaces: Route115
+status: TODO
+story: ''
+pos: [0, 40]
+grid: |
+  ~#TTTTTTTTTTTTTT########################
+  ~#TTTTTTTTTTTTTT########################
+  ~#TTTTTTTTTTTTTT###############......#..
+  ~#TTTTTTTTTTTTTT########################
+  ~#TTTTTTTTTTTTTT########################
+  ~#TTT"""TT..###.########################
+  ~#TT""""".......########################
+  ~#TT"""""T......##.#..######.....#######
+  ~#TT"""""TTTT.TT##....######.###.#######
+  ~#TT.."".TTTT.TT##......####.###.#######
+  ~#TTTT..TTTTT.TT##............##.#######
+  ~#TTTTT.TTTTT.TT##............##.....###
+  ~#TTTTT..TT.T.TT##..#######..###.....###
+  ~#TTTTTT....T..T##..#........###.....###
+  ~##TTTTTTTT.........#....###.###.....###
+  ~~#TT...............#....###.###....####
+  ~~###TTT....T.....T..........###...#####
+  ~~~~###TT..TT.TTT.#.###..#.#####...#####
+  ~~~~~~#TTT....TTT.#.###..####.....######
+  ~~~##~#..TT..TTTT.#......####.....######
+  ~~~##~#TTTT.TTTT..##..#####.......######
+  ~##~~~#..TT.TTTT.T#.#.#####......#######
+  ~##~~~##.TT.TTT..#######......##########
+  ~~~~~~~#..T..TT.T##########...##########
+  ~~~~~###T.T.....T##########..###########
+  ~~~#####T.TT...TT######.....############
+  ~~~##~~#T..TT.TT#######.....############
+  ~~##~~~#TT.TT.TT#######..###############
+  ~~##~~~#TT..T.TT#######.################
+  ~##~~~~#TT....TT#######.################
+  ~##~~~~###....TT########################
+  ~~##~~~..##...T#########################
+  ~~##~~~~~~#....#########################
+  ~~~##~~~~~#..###########################
+  ~####~~~~~....##########################
+  ~##~~~~~~~....##########################
+  ~##~~~~~~~##~.##########################
+  ~##~~~~~~~##~~#.###########.############
+  ##~~~~~~~~~##~#.########.#..#...########
+  ####~~~~~~~##~##########....############
+  ~~##~~~##~~~~~~#T#######....###..#######
+  ~##~~~~####~~~~#T..#####....###..#######
+  ~##~~~##~##~~########T##..###....#######
+  ##~~~~##~~~#####.....T#.....##..########
+  ##~~~~~~~~~##~~#.....T#.....##.#########
+  ~##~~~~~~##~~~.#.....T###......#########
+  ~##~~~~~~##~~..#..#..T###......#########
+  ~##~~~~~~~~~~.....#..T###........#######
+  ~##~~~~~~~~~~.....#..##T##..############
+  ~~##~~~~##~~~.....#....##....###########
+  ~~##~~~~##~~~.....#.............########
+  ~~~##~~~~~~~~.....#..........<...TTTTTTT
+  ~####~~~~~~~~~....##.........<...TTTTTTT
+  ~##~~~~~~~~~~~.....###TT.....<...TTTTTTT
+  ~~##~~~~~~##~~.......#TT.....<..#TTTTTTT
+  ####~~~~~~##~~~~~~~~~#TT.....<...TTTTTTT
+  ##~~~~~~~~~~~~~~~~~~~#TT.....<...TTTTTTT
+  ##~~~~~~~~~~~~~~~~~~~#TT.....<...TTTTTTT
+  ##~~~~~~~~~~~~~~~~~~~#TT.....<...TTTTTTT
+  ~##~~~~~~~~~~~~~~~~~~#TT.....<...TTTTTTT
+  ~##~~~~~~............#TT.....<...TTTTTTT
+  ~##~~~~.......#.......TT.....<...TTTTTTT
+  ~##~~~.....#..........TT.....<#..TTTTTTT
+  ##~~~~.....#.......TT.<......<...TTTTTTT
+  ##~~~~...#......#..TT.<......<.#.TTTTTTT
+  ##~~~~...#.........TT.<......<.#.TTTTTTT
+  ##~~~~...#.........TT.<......<...TTTTTTT
+  ~##~~~...#............<......#vvvTTTTTTT
+  ~##~~~...#.....<......<..........TTTTTTT
+  ##~~~~...#.....<......#vvvvvvvvvTTTTTTTT
+  ##~~~~...#..#..<................TTTTTTTT
+  ##~~~~~.....#TT#vvvv............TTTTTTTT
+  ##~~~~~.....#TT........vvvvvvvvvTTTTTTTT
+  ~##~~~~~...~#TTTT...............TTTTTTTT
+  ~##~~~~~~~~~#TTTT...............TTTTTTTT
+  ~~##~~~~~~~~#TTTTvvvvv..vvvvvvTTTTTTTTTT
+  ~~####~~~##~.TTTT.............TTTTTTTTTT
+  ~~~~####~###.TTTT.........TTTTTTTTTTTTTT
+  ~~~~~~####~#.TTTT.........TTTTTTTTTTTTTT
+  ~~~~~~~~###..TTTT.......TTTTTTTTTTTTTTTT
+exits:
+- edge: south
+  cells: [11, 12, 17, 18, 19, 20, 21, 22, 23]
+  to: bestine
+- edge: east
+  cells: [2]
+  to: route-114
+buildings: []
+props: []
+people:
+- name: Woman
+  at: [18, 68]
+  role: npc
+- name: Trainer Telun
+  at: [5, 15]
+  role: trainer
+- name: Trainer Nolden
+  at: [27, 53]
+  role: trainer
+- name: Trainer Cekys
+  at: [15, 50]
+  role: trainer
+- name: Trainer Kovax
+  at: [19, 15]
+  role: trainer
+- name: Trainer Hoskos
+  at: [24, 62]
+  role: trainer
+- name: Event Script_Rock Smash
+  at: [29, 50]
+  role: npc
+- name: Trainer Keneth
+  at: [10, 15]
+  role: trainer
+- name: Trainer Jerkar
+  at: [11, 12]
+  role: trainer
+- name: Trainer Habelle
+  at: [15, 7]
+  role: trainer
+- name: Trainer Ahia
+  at: [10, 7]
+  role: trainer
+- name: Trainer Mugissa
+  at: [28, 62]
+  role: trainer
+- name: Berry tree
+  at: [12, 5]
+  role: berry
+- name: Berry tree
+  at: [13, 5]
+  role: berry
+- name: Berry tree
+  at: [14, 5]
+  role: berry
+- name: Item
+  at: [20, 60]
+  role: item
+- name: Item
+  at: [18, 7]
+  role: item
+- name: Item
+  at: [23, 29]
+  role: item
+- name: Berry tree
+  at: [31, 64]
+  role: berry
+- name: Berry tree
+  at: [31, 65]
+  role: berry
+- name: Item
+  at: [31, 56]
+  role: item
+- name: Item
+  at: [26, 67]
+  role: item
+- name: Item
+  at: [12, 14]
+  role: item
+signs:
+- name: Sign
+  at: [16, 64]
+- name: Sign
+  at: [25, 38]
+warps:
+- name: Door
+  at: [27, 37]
+  to: starfall-cavern-1f-1r
+- name: Door
+  at: [21, 6]
+  to: terra-cave-entrance
+- name: Door
+  at: [36, 10]
+  to: terra-cave-entrance
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

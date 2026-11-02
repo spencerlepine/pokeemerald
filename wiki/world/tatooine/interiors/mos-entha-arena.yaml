@@ -1,0 +1,302 @@
+id: mos-entha-arena
+name: MOS ENTHA ARENA
+planet: TATOOINE
+kind: interior
+replaces: PetalburgCity_Gym
+status: TODO
+story: ''
+grid: |
+  #########
+  #########
+  ..#...#..
+  ..#...#..
+  .........
+  .........
+  .........
+  .........
+  #########
+  #########
+  #########
+  #########
+  #########
+  #########
+  #########
+  .........
+  .........
+  .........
+  .........
+  .........
+  .........
+  #########
+  #########
+  #########
+  #########
+  #########
+  #########
+  #########
+  .........
+  .........
+  .........
+  .........
+  .........
+  .........
+  #########
+  #########
+  #########
+  #########
+  #########
+  #########
+  #########
+  .........
+  .........
+  .........
+  .........
+  .........
+  .........
+  #########
+  #########
+  #########
+  #########
+  #########
+  #########
+  #########
+  .........
+  .........
+  .........
+  .........
+  .........
+  .........
+  #########
+  #########
+  #########
+  #########
+  #########
+  #########
+  #########
+  .........
+  .........
+  .........
+  .........
+  .........
+  .........
+  #########
+  #########
+  #########
+  #########
+  #########
+  #########
+  #########
+  .........
+  .........
+  .........
+  .........
+  .........
+  .........
+  #########
+  #########
+  #########
+  #########
+  #########
+  #########
+  #########
+  .........
+  .........
+  .........
+  .........
+  .........
+  .........
+  #########
+  #########
+  #########
+  #########
+  #########
+  #########
+  #########
+  .........
+  .........
+  .........
+  .........
+  .#.....#.
+  .........
+exits: []
+buildings: []
+props: []
+people:
+- name: Norman
+  at: [4, 2]
+  role: npc
+- name: Trainer Mavara
+  at: [4, 94]
+  role: trainer
+- name: Trainer Porkins
+  at: [4, 81]
+  role: trainer
+- name: Trainer Dreis
+  at: [4, 42]
+  role: trainer
+- name: Trainer Abena
+  at: [4, 55]
+  role: trainer
+- name: Trainer Dutch
+  at: [4, 68]
+  role: trainer
+- name: Trainer Jea
+  at: [4, 16]
+  role: trainer
+- name: Trainer Tiree
+  at: [4, 29]
+  role: trainer
+- name: Gym Guide
+  at: [3, 109]
+  role: npc
+- name: '0x0'
+  at: [4, 111]
+  role: npc
+- name: '0x0'
+  at: [1, 7]
+  role: npc
+signs:
+- name: Sign
+  at: [1, 105]
+- name: Sign
+  at: [7, 105]
+- name: Sign
+  at: [1, 79]
+- name: Sign
+  at: [7, 79]
+- name: Sign
+  at: [1, 92]
+- name: Sign
+  at: [7, 92]
+- name: Sign
+  at: [7, 40]
+- name: Sign
+  at: [1, 53]
+- name: Sign
+  at: [7, 53]
+- name: Sign
+  at: [1, 66]
+- name: Sign
+  at: [7, 14]
+- name: Sign
+  at: [1, 27]
+- name: Sign
+  at: [1, 110]
+- name: Sign
+  at: [7, 110]
+warps:
+- name: Door
+  at: [4, 111]
+  to: mos-entha
+- name: Door
+  at: [5, 111]
+  to: mos-entha
+- name: Door
+  at: [1, 105]
+  to: mos-entha-arena
+- name: Door
+  at: [7, 85]
+  to: mos-entha-arena
+- name: Door
+  at: [6, 85]
+  to: mos-entha-arena
+- name: Door
+  at: [7, 105]
+  to: mos-entha-arena
+- name: Door
+  at: [1, 98]
+  to: mos-entha-arena
+- name: Door
+  at: [2, 98]
+  to: mos-entha-arena
+- name: Door
+  at: [1, 79]
+  to: mos-entha-arena
+- name: Door
+  at: [7, 79]
+  to: mos-entha-arena
+- name: Door
+  at: [7, 46]
+  to: mos-entha-arena
+- name: Door
+  at: [6, 46]
+  to: mos-entha-arena
+- name: Door
+  at: [1, 59]
+  to: mos-entha-arena
+- name: Door
+  at: [2, 59]
+  to: mos-entha-arena
+- name: Door
+  at: [1, 92]
+  to: mos-entha-arena
+- name: Door
+  at: [7, 92]
+  to: mos-entha-arena
+- name: Door
+  at: [7, 59]
+  to: mos-entha-arena
+- name: Door
+  at: [6, 59]
+  to: mos-entha-arena
+- name: Door
+  at: [1, 72]
+  to: mos-entha-arena
+- name: Door
+  at: [2, 72]
+  to: mos-entha-arena
+- name: Door
+  at: [7, 40]
+  to: mos-entha-arena
+- name: Door
+  at: [1, 53]
+  to: mos-entha-arena
+- name: Door
+  at: [7, 53]
+  to: mos-entha-arena
+- name: Door
+  at: [1, 66]
+  to: mos-entha-arena
+- name: Door
+  at: [1, 20]
+  to: mos-entha-arena
+- name: Door
+  at: [2, 20]
+  to: mos-entha-arena
+- name: Door
+  at: [7, 20]
+  to: mos-entha-arena
+- name: Door
+  at: [6, 20]
+  to: mos-entha-arena
+- name: Door
+  at: [1, 33]
+  to: mos-entha-arena
+- name: Door
+  at: [2, 33]
+  to: mos-entha-arena
+- name: Door
+  at: [7, 33]
+  to: mos-entha-arena
+- name: Door
+  at: [6, 33]
+  to: mos-entha-arena
+- name: Door
+  at: [7, 14]
+  to: mos-entha-arena
+- name: Door
+  at: [1, 27]
+  to: mos-entha-arena
+- name: Door
+  at: [1, 7]
+  to: mos-entha-arena
+- name: Door
+  at: [2, 7]
+  to: mos-entha-arena
+- name: Door
+  at: [7, 7]
+  to: mos-entha-arena
+- name: Door
+  at: [6, 7]
+  to: mos-entha-arena
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

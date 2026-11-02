@@ -1,0 +1,48 @@
+id: inyusu-tor-battle-tent-lobby
+name: INYUSU TOR BATTLE TENT LOBBY
+planet: SULLUST
+kind: interior
+replaces: FallarborTown_BattleTentLobby
+status: TODO
+story: ''
+grid: |
+  #############
+  ######.######
+  #.##.....####
+  #.#.......###
+  #.####.######
+  ..####.####..
+  .............
+  .............
+  #...........#
+  ##.........##
+exits: []
+buildings: []
+props: []
+people:
+- name: Attendant
+  at: [6, 5]
+  role: npc
+- name: Hiker
+  at: [1, 5]
+  role: npc
+- name: Little Boy
+  at: [12, 6]
+  role: npc
+- name: Lass
+  at: [10, 9]
+  role: npc
+- name: Scott
+  at: [0, 7]
+  role: npc
+signs:
+- name: Sign
+  at: [4, 5]
+warps:
+- name: Door
+  at: [6, 9]
+  to: inyusu-tor
+- name: Door
+  at: [7, 9]
+  to: inyusu-tor
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

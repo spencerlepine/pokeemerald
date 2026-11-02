@@ -1,0 +1,35 @@
+id: asteroid-spire-2f
+name: ASTEROID SPIRE 2F
+planet: ASTEROID FIELD
+kind: dungeon
+replaces: SkyPillar_2F
+status: TODO
+story: ''
+grid: |
+  ##############
+  ###.######.###
+  ........#.....
+  .....#.##.....
+  ......#...#...
+  ....######....
+  ##..######....
+  ....######...#
+  ....######....
+  ....######....
+  ....######....
+  ...#.....#....
+  ..#...........
+  .............#
+exits: []
+buildings: []
+props: []
+people: []
+signs: []
+warps:
+- name: Door
+  at: [10, 1]
+  to: asteroid-spire-1f
+- name: Door
+  at: [3, 1]
+  to: asteroid-spire-3f
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

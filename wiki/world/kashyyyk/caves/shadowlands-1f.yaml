@@ -1,0 +1,48 @@
+id: shadowlands-1f
+name: SHADOWLANDS 1F
+planet: KASHYYYK
+kind: dungeon
+replaces: GraniteCave_1F
+status: TODO
+story: ''
+grid: |
+  ##########################################
+  ##########################################
+  ##########################################
+  ############.........................#####
+  ########.............................#####
+  ########..#####....##########...........##
+  #####.....##########........########....##
+  ###.......#######..................#######
+  ###.......#######......####...........####
+  ###..........#v>.....########..........###
+  ###.#........>.>.....#########........####
+  ##########...>.>...################....###
+  ############.>.>...################....###
+  ##########################################
+  ##########################################
+exits: []
+buildings: []
+props: []
+people:
+- name: Hiker
+  at: [36, 9]
+  role: npc
+- name: Item
+  at: [17, 7]
+  role: item
+signs: []
+warps:
+- name: Door
+  at: [37, 12]
+  to: route-106
+- name: Door
+  at: [35, 3]
+  to: shadowlands-b1f
+- name: Door
+  at: [17, 11]
+  to: shadowlands-b1f
+- name: Door
+  at: [5, 10]
+  to: shadowlands-leias-room
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

@@ -1,0 +1,66 @@
+id: ancient-tomb
+name: ANCIENT TOMB
+planet: ENDOR
+kind: dungeon
+replaces: AncientTomb
+status: TODO
+story: ''
+grid: |
+  .###############.
+  .###############.
+  #################
+  ####.........####
+  ####..#...#..####
+  ###...........###
+  ###...........###
+  ###.#.......#.###
+  ###...........###
+  ###...........###
+  ####..#...#..####
+  ####.........####
+  #################
+  .##...........##.
+  .#.............#.
+  .................
+  .................
+  .................
+  .###############.
+  .###############.
+  ########.########
+  ####.........####
+  ####.........####
+  ###...........###
+  ###...........###
+  ###...........###
+  ###...........###
+  ###...........###
+  ####.........####
+  ####.........####
+  #################
+  .##...........##.
+  .#.............#.
+exits: []
+buildings: []
+props: []
+people:
+- name: Registeel
+  at: [8, 7]
+  role: npc
+signs:
+- name: Sign
+  at: [8, 20]
+- name: Sign
+  at: [7, 20]
+- name: Sign
+  at: [9, 20]
+warps:
+- name: Door
+  at: [8, 29]
+  to: route-120
+- name: Door
+  at: [8, 20]
+  to: ancient-tomb
+- name: Door
+  at: [8, 11]
+  to: ancient-tomb
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

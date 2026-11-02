@@ -1,0 +1,53 @@
+id: tython-isle-interior
+name: TYTHON ISLE
+planet: TYTHON
+kind: route
+replaces: SouthernIsland_Interior
+status: TODO
+story: ''
+grid: |
+  TTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTT
+  ..TTTTTTTTTTTTTTTTTTTTTTTT.
+  TT..TTTTTTTTTTTTTTTTTTTT.TT
+  TTTT..TTTTTTTTTTTTTTTT.TTTT
+  TTTTTT..TT.......TT..TTTTTT
+  TTTTTTTTTT.......TTTTTTTTTT
+  TTTTTTTT...........TTTTTTTT
+  TTTTTTTT...........TTTTTTTT
+  TTTTTTTT...........TTTTTTTT
+  TTTTTTTT.....T.....TTTTTTTT
+  TTTTTTTT...........TTTTTTTT
+  TTTTTTTT...........TTTTTTTT
+  TTTTTTTT...........TTTTTTTT
+  TTTTTTTT...........TTTTTTTT
+  TTTTTTTTTT.......TTTTTTTTTT
+  TTTTTT..TT.......TT..TTTTTT
+  TTTT.TTTTTTTT..TTTTTT..TTTT
+  TT.TTTTTTTTTTTTTTTTTTTT..TT
+  .TTTTTTTTTTTTTTTTTTTTTTTT..
+  TTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTT
+exits: []
+buildings: []
+props: []
+people:
+- name: '0x0'
+  at: [13, 12]
+  role: npc
+- name: '0x0'
+  at: [13, 2]
+  role: npc
+signs:
+- name: Sign
+  at: [13, 11]
+warps:
+- name: Door
+  at: [13, 18]
+  to: tython-isle-exterior
+- name: Door
+  at: [14, 18]
+  to: tython-isle-exterior
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

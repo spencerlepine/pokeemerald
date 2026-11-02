@@ -1,0 +1,51 @@
+id: grand-arena-battle-factory-battle-room
+name: GRAND ARENA BATTLE FACTORY BATTLE ROOM
+planet: GRAND ARENA
+kind: interior
+replaces: BattleFrontier_BattleFactoryBattleRoom
+status: TODO
+story: ''
+grid: |
+  .............
+  .............
+  .............
+  .............
+  .............
+  .............
+  .............
+  .............
+  .............
+  .............
+  .............
+  .............
+exits: []
+buildings: []
+props: []
+people:
+- name: '0x0'
+  at: [0, 6]
+  role: npc
+- name: '0x0'
+  at: [7, 4]
+  role: npc
+- name: '0x0'
+  at: [0, 4]
+  role: npc
+- name: '0x0'
+  at: [0, 8]
+  role: npc
+- name: '0x0'
+  at: [12, 4]
+  role: npc
+- name: '0x0'
+  at: [12, 6]
+  role: npc
+- name: '0x0'
+  at: [12, 8]
+  role: npc
+- name: '0x0'
+  at: [5, 11]
+  role: npc
+signs: []
+warps: []
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

@@ -1,0 +1,41 @@
+id: fortress-vader-3f-2r
+name: FORTRESS VADER 3F 2R
+planet: MUSTAFAR
+kind: dungeon
+replaces: MagmaHideout_3F_2R
+status: TODO
+story: ''
+grid: |
+  ########################
+  ########################
+  ########################
+  ###########......#######
+  ###########......##.####
+  ##.####.............####
+  #######...#######...####
+  #######...#######...####
+  #######...#######...####
+  #####......######...####
+  #######....######...####
+  ###..##....######..#####
+  ###...............######
+  #####............#######
+  #######.........########
+  ########.......#########
+  ######################.#
+exits: []
+buildings: []
+props: []
+people:
+- name: Trainer Roldarg
+  at: [16, 3]
+  role: trainer
+- name: Item
+  at: [5, 9]
+  role: item
+signs: []
+warps:
+- name: Door
+  at: [12, 15]
+  to: fortress-vader-3f-1r
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

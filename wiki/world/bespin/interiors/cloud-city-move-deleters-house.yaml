@@ -1,0 +1,32 @@
+id: cloud-city-move-deleters-house
+name: CLOUD CITY MOVE DELETERS HOUSE
+planet: BESPIN
+kind: interior
+replaces: LilycoveCity_MoveDeletersHouse
+status: TODO
+story: ''
+grid: |
+  ###########
+  ###########
+  ...........
+  ...........
+  .....##....
+  .....##....
+  ...........
+  #.........#
+exits: []
+buildings: []
+props: []
+people:
+- name: Move Deleter
+  at: [4, 4]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [3, 7]
+  to: cloud-city
+- name: Door
+  at: [4, 7]
+  to: cloud-city
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

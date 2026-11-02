@@ -1,0 +1,44 @@
+id: anchorhead-wandas-house
+name: ANCHORHEAD WANDAS HOUSE
+planet: TATOOINE
+kind: interior
+replaces: VerdanturfTown_WandasHouse
+status: TODO
+story: ''
+grid: |
+  #################
+  #############T###
+  ............#....
+  ............#..#.
+  ...##.......#....
+  ...##.......#....
+  .................
+  #...............#
+exits: []
+buildings: []
+props: []
+people:
+- name: Wally
+  at: [14, 5]
+  role: npc
+- name: Wandas Boyfriend
+  at: [5, 4]
+  role: npc
+- name: Wallys Uncle
+  at: [7, 2]
+  role: npc
+- name: Wallys Aunt
+  at: [2, 4]
+  role: npc
+- name: Wanda
+  at: [5, 5]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [7, 7]
+  to: anchorhead
+- name: Door
+  at: [8, 7]
+  to: anchorhead
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

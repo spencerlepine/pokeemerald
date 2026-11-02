@@ -1,0 +1,98 @@
+id: pirin
+name: PIRIN
+planet: SULLUST
+kind: town
+replaces: LavaridgeTown
+status: TODO
+story: ''
+pos: [140, 60]
+grid: |
+  ##################TT
+  #####.....#########T
+  ######.##.#########T
+  ###....#T#########TT
+  ###....#####..####TT
+  ###....#####TT####TT
+  ############TT....TT
+  ##..................
+  ##...........#......
+  ##..................
+  ##..................
+  ##..................
+  ########............
+  ########...########.
+  ########...########T
+  ##..####...########T
+  ##............#....T
+  ##T...............TT
+  ###T..............TT
+  ####################
+exits:
+- edge: east
+  cells: [7, 8, 9, 10, 11, 12, 13]
+  to: route-112
+buildings: []
+props: []
+people:
+- name: Expert F
+  at: [8, 7]
+  role: npc
+- name: Expert M
+  at: [5, 1]
+  role: npc
+- name: Old Man
+  at: [5, 8]
+  role: npc
+- name: Twin
+  at: [10, 13]
+  role: npc
+- name: Hot Springs Old Woman1
+  at: [4, 4]
+  role: npc
+- name: Hot Springs Old Woman2
+  at: [5, 4]
+  role: npc
+- name: '0x0'
+  at: [6, 16]
+  role: npc
+- name: '0x0'
+  at: [12, 15]
+  role: npc
+- name: Egg Woman
+  at: [4, 7]
+  role: npc
+signs:
+- name: Sign
+  at: [14, 16]
+- name: Sign
+  at: [7, 15]
+- name: Sign
+  at: [17, 5]
+- name: Sign
+  at: [13, 8]
+- name: Sign
+  at: [10, 6]
+- name: Sign
+  at: [16, 5]
+- name: Sign
+  at: [11, 6]
+warps:
+- name: Door
+  at: [12, 15]
+  to: pirin-herb-shop
+- name: Door
+  at: [5, 15]
+  to: pirin-arena-1f
+- name: Door
+  at: [15, 5]
+  to: pirin-supply-depot
+- name: Door
+  at: [9, 6]
+  to: pirin-bacta-center-1f
+- name: Door
+  at: [16, 15]
+  to: pirin-house
+- name: Door
+  at: [9, 2]
+  to: pirin-bacta-center-1f
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

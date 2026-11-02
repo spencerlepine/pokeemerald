@@ -1,0 +1,249 @@
+id: mos-eisley
+name: MOS EISLEY
+planet: TATOOINE
+kind: town
+replaces: SlateportCity
+status: TODO
+story: ''
+pos: [200, 260]
+grid: |
+  TTTTTTTTTTTTTTT.....TTTTTTTTTTTTTTTT~~~~
+  TTTTTTTTTTTTTTTT....TTTTTTTTTTTTTTTT~~~~
+  TTTTTTTTTTTTTTTT.....TTTTTTTTTTTTTTT~~~~
+  TTTTTTTTTTTTTTTT.....TTTTTTTTTTTTTTT~~~~
+  ~TTTTTTTTTTTTTTT.....TTTTTTTTTTTTTTT~~~~
+  ~TTTTTTTTTTTTTTT.....TTTTTTTTTTTTTTT~~##
+  ~TTTTTTTTTTTTT.T.....T.TTTTTTTTTTTTT####
+  ~TTTTTTTTTTTT..T.....T..T#######TTTT##~~
+  ~TTT####T###T###.....###########TTTT~~~~
+  ~TTT....#####...T...T....#######~~~~~~~~
+  ~~TT...T#####T...........#######~~~~~~~~
+  ~~TT...T#####T...........#######~~~~~~~~
+  ~~TT...TT###TT..........####.###.~~~~~~~
+  ~~~T...#..............................~~
+  ~~~T..................................~~
+  ~~~T..................................##
+  ~~~T............................TTTTTT##
+  ~~~T####..........####..........~~~##~~~
+  ~~.T####..........####T..~~~~~~~~####~~~
+  ~~.T#####.........####T~~~~~~~~~~##~~~~~
+  ~~.T..................T~~~~~~~~~~~##~~~~
+  ~T##..................T~~~~~~~~~~~##~~~~
+  ~T..............#.....T~~~##########~~~~
+  ~TTTTTT...............T~~#..TTTTTT..#~~~
+  ~TTTTTT.....####......T~~#..TTTTTT..#~~~
+  ~T#####.....####......T~~#.TTTTTTTT.#~~~
+  ~T##.##.#...####......###.#TTT..TTT.#~~~
+  ~T..................................#~~~
+  ~T..................................#~~~
+  ~T....................###...........#~~~
+  ~T....................T~~############~~~
+  ~T....................T~~~~~~~~~~~~~~~~~
+  ~T######T...T##.......T~........~~~~~~~~
+  ~T..#........#T.......T.########.......~
+  ~T..###.....#.T.......##########.#...#.~
+  ~T.####....##.T......###########~###~~~~
+  ~T.#####..###.T......T##########~###~~~~
+  ~T.####.....#.T.........##.#####~######~
+  ~T..##....###.T........###.############~
+  ~T..##...##.#.T..................######~
+  ~T............T.......................#~
+  ~T.....##.....T.......................#~
+  ~T.....#......T.....##########...######~
+  ~T###.##..####T.....##########..#~~~~~~~
+  ~T.#........##T.....##########..#~###~~#
+  ~T.....#......T.................#~###~~~
+  ~T.....##.....T.................#~###~~~
+  ~T##..###.#..#T.....#############~~~~~~~
+  ~T#..........#T.....T~~~~~~~~~~~~~~###~~
+  ~T............T.....T~~~~~~~~~~~~~~###~~
+  ~T......#.....T.....T~~~~~~~##########~~
+  ~T###.#.#.#.###.....########.........#~~
+  ~T.#.................................#~~
+  ~T.##...........................##...#~~
+  ~T....#######.......T########...##...#.~
+  ~T....####..........T.......#........#.~
+  .#########..........T.......####..####.~
+  ~~~##~..########T...T..........#..#.~##~
+  ~####~~~........#...#..........#..#.~##~
+  ~##~~~~~............................~~##
+exits:
+- edge: north
+  cells: [15, 16, 17, 18, 19]
+  to: route-110
+- edge: south
+  cells: [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35]
+  to: route-109
+- edge: east
+  cells: []
+  to: route-134
+buildings: []
+props: []
+people:
+- name: Fat Man
+  at: [21, 11]
+  role: npc
+- name: Man1
+  at: [34, 29]
+  role: npc
+- name: Rich Boy
+  at: [5, 13]
+  role: npc
+- name: Woman1
+  at: [26, 29]
+  role: npc
+- name: Aqua Grunt1
+  at: [31, 27]
+  role: npc
+- name: Cook
+  at: [5, 43]
+  role: npc
+- name: Old Woman
+  at: [20, 37]
+  role: npc
+- name: Girl
+  at: [8, 42]
+  role: npc
+- name: Ty
+  at: [29, 13]
+  role: npc
+- name: Gabby
+  at: [28, 14]
+  role: npc
+- name: Capt Stern
+  at: [28, 13]
+  role: npc
+- name: Sailor1
+  at: [37, 41]
+  role: npc
+- name: Sailor2
+  at: [28, 46]
+  role: npc
+- name: Pokefan F
+  at: [9, 50]
+  role: npc
+- name: Man2
+  at: [16, 46]
+  role: npc
+- name: Maniac
+  at: [8, 24]
+  role: npc
+- name: Woman2
+  at: [15, 31]
+  role: npc
+- name: Aqua Grunt2
+  at: [30, 27]
+  role: npc
+- name: Aqua Grunt3
+  at: [29, 27]
+  role: npc
+- name: Decor Clerk
+  at: [6, 38]
+  role: npc
+- name: Doll Clerk
+  at: [5, 51]
+  role: npc
+- name: Man3
+  at: [34, 51]
+  role: npc
+- name: Effort Ribbon Woman
+  at: [4, 47]
+  role: npc
+- name: Power TMClerk
+  at: [11, 47]
+  role: npc
+- name: Energy Guru
+  at: [5, 47]
+  role: npc
+- name: Aqua Grunt4
+  at: [22, 27]
+  role: npc
+- name: Aqua Grunt5
+  at: [23, 27]
+  role: npc
+- name: Aqua Grunt6
+  at: [24, 27]
+  role: npc
+- name: Aqua Grunt7
+  at: [21, 26]
+  role: npc
+- name: Aqua Grunt8
+  at: [20, 26]
+  role: npc
+- name: Aqua Grunt9
+  at: [26, 27]
+  role: npc
+- name: Aqua Grunt10
+  at: [28, 27]
+  role: npc
+- name: Aqua Grunt11
+  at: [25, 27]
+  role: npc
+- name: Berry Powder Clerk
+  at: [11, 37]
+  role: npc
+- name: '0x0'
+  at: [10, 12]
+  role: npc
+signs:
+- name: Sign
+  at: [8, 19]
+- name: Sign
+  at: [20, 19]
+- name: Sign
+  at: [21, 19]
+- name: Sign
+  at: [14, 26]
+- name: Sign
+  at: [24, 12]
+- name: Sign
+  at: [15, 26]
+- name: Sign
+  at: [14, 51]
+- name: Sign
+  at: [26, 26]
+- name: Sign
+  at: [16, 22]
+- name: Sign
+  at: [8, 26]
+- name: Sign
+  at: [7, 13]
+- name: Sign
+  at: [23, 38]
+- name: Sign
+  at: [10, 36]
+warps:
+- name: Door
+  at: [19, 19]
+  to: mos-eisley-bacta-center-1f
+- name: Door
+  at: [13, 26]
+  to: mos-eisley-supply-depot
+- name: Door
+  at: [26, 38]
+  to: mos-eisley-sterns-shipyard-1f
+- name: Door
+  at: [10, 12]
+  to: mos-eisley-battle-tent-lobby
+- name: Door
+  at: [4, 26]
+  to: mos-eisley-fan-club
+- name: Door
+  at: [30, 26]
+  to: mos-eisley-spacer-museum-1f
+- name: Door
+  at: [5, 19]
+  to: mos-eisley-name-raters-house
+- name: Door
+  at: [31, 26]
+  to: mos-eisley-spacer-museum-1f
+- name: Door
+  at: [28, 12]
+  to: mos-eisley-hangar
+- name: Door
+  at: [40, 7]
+  to: mos-eisley-hangar
+- name: Door
+  at: [21, 44]
+  to: mos-eisley-house
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

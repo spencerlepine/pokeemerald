@@ -1,0 +1,32 @@
+id: grand-arena-scotts-house
+name: GRAND ARENA SCOTTS HOUSE
+planet: GRAND ARENA
+kind: interior
+replaces: BattleFrontier_ScottsHouse
+status: TODO
+story: ''
+grid: |
+  ######
+  ######
+  ......
+  ......
+  ......
+  .....#
+  ......
+  #....#
+exits: []
+buildings: []
+props: []
+people:
+- name: Scott
+  at: [2, 3]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [2, 7]
+  to: grand-arena-outside-west
+- name: Door
+  at: [3, 7]
+  to: grand-arena-outside-west
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

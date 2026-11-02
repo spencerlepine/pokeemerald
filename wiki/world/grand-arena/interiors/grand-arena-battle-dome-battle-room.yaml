@@ -1,0 +1,70 @@
+id: grand-arena-battle-dome-battle-room
+name: GRAND ARENA BATTLE DOME BATTLE ROOM
+planet: GRAND ARENA
+kind: interior
+replaces: BattleFrontier_BattleDomeBattleRoom
+status: TODO
+story: ''
+grid: |
+  ....................
+  ....................
+  ....................
+  ....................
+  ....................
+  ....................
+  ....................
+  ....................
+  ....................
+  ....................
+exits: []
+buildings: []
+props: []
+people:
+- name: '0x0'
+  at: [5, 4]
+  role: npc
+- name: '0x0'
+  at: [7, 2]
+  role: npc
+- name: '0x0'
+  at: [9, 2]
+  role: npc
+- name: '0x0'
+  at: [11, 2]
+  role: npc
+- name: '0x0'
+  at: [16, 2]
+  role: npc
+- name: '0x0'
+  at: [4, 2]
+  role: npc
+- name: '0x0'
+  at: [16, 1]
+  role: npc
+- name: '0x0'
+  at: [8, 1]
+  role: npc
+- name: '0x0'
+  at: [0, 4]
+  role: npc
+- name: '0x0'
+  at: [12, 1]
+  role: npc
+- name: '0x0'
+  at: [13, 2]
+  role: npc
+- name: '0x0'
+  at: [10, 2]
+  role: npc
+- name: '0x0'
+  at: [4, 9]
+  role: npc
+- name: '0x0'
+  at: [14, 2]
+  role: npc
+- name: '0x0'
+  at: [11, 6]
+  role: npc
+signs: []
+warps: []
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

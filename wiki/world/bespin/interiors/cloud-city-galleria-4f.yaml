@@ -1,0 +1,47 @@
+id: cloud-city-galleria-4f
+name: CLOUD CITY GALLERIA 4F
+planet: BESPIN
+kind: interior
+replaces: LilycoveCity_DepartmentStore_4F
+status: TODO
+story: ''
+grid: |
+  ##################
+  #############.##.#
+  ..................
+  ..................
+  ..................
+  .##...T###T..####.
+  .##...#...T..####.
+  ......#...#.......
+exits: []
+buildings: []
+props: []
+people:
+- name: Gentleman
+  at: [0, 2]
+  role: npc
+- name: Woman
+  at: [6, 2]
+  role: npc
+- name: Youngster
+  at: [13, 4]
+  role: npc
+- name: Clerk Left
+  at: [7, 6]
+  role: npc
+- name: Clerk Right
+  at: [9, 6]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [16, 1]
+  to: cloud-city-galleria-3f
+- name: Door
+  at: [13, 1]
+  to: cloud-city-galleria-5f
+- name: Door
+  at: [2, 1]
+  to: cloud-city-galleria-elevator
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

@@ -1,0 +1,91 @@
+id: anchorhead
+name: ANCHORHEAD
+planet: TATOOINE
+kind: town
+replaces: VerdanturfTown
+status: TODO
+story: ''
+pos: [120, 140]
+grid: |
+  ####################
+  ########.###########
+  #######...T########.
+  T#######..T########T
+  T#####....T........T
+  T#####..............
+  T#####........#.....
+  TT###T..............
+  T#..................
+  ....................
+  ....................
+  ....................
+  TTTT####TTTTT.......
+  ####....#####...TTTT
+  ####...######...####
+  #...............####
+  #...................
+  ....................
+  T......TTTT....###.T
+  TTT...TTTTTTT.....TT
+exits:
+- edge: north
+  cells: []
+  to: route-116
+- edge: east
+  cells: [2, 5, 6, 7, 8, 9, 10, 11, 12, 16, 17]
+  to: route-117
+buildings: []
+props: []
+people:
+- name: Man
+  at: [4, 17]
+  role: npc
+- name: Twin
+  at: [9, 2]
+  role: npc
+- name: Boy
+  at: [7, 11]
+  role: npc
+- name: Camper
+  at: [7, 6]
+  role: npc
+signs:
+- name: Sign
+  at: [14, 3]
+- name: Sign
+  at: [14, 6]
+- name: Sign
+  at: [17, 3]
+- name: Sign
+  at: [7, 14]
+- name: Sign
+  at: [13, 3]
+- name: Sign
+  at: [18, 3]
+- name: Sign
+  at: [1, 8]
+- name: Sign
+  at: [7, 3]
+warps:
+- name: Door
+  at: [3, 7]
+  to: anchorhead-battle-tent-lobby
+- name: Door
+  at: [12, 3]
+  to: anchorhead-supply-depot
+- name: Door
+  at: [16, 3]
+  to: anchorhead-bacta-center-1f
+- name: Door
+  at: [10, 14]
+  to: anchorhead-wandas-house
+- name: Door
+  at: [8, 1]
+  to: beggar-s-canyon
+- name: Door
+  at: [1, 14]
+  to: anchorhead-friendship-raters-house
+- name: Door
+  at: [17, 15]
+  to: anchorhead-house
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

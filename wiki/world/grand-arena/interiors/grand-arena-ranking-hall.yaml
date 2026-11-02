@@ -1,0 +1,69 @@
+id: grand-arena-ranking-hall
+name: GRAND ARENA RANKING HALL
+planet: GRAND ARENA
+kind: interior
+replaces: BattleFrontier_RankingHall
+status: TODO
+story: ''
+grid: |
+  #####################################################
+  #####################################################
+  #####################################################
+  #######################.......#######################
+  #####################...........#####################
+  #####.......#########.....#.....#########.......#####
+  #####.......#########...........#########.......#####
+  ###.....#.....#####...............#####.....#.....###
+  ###...........#####....#.....#....#####...........###
+  ###...#...#..............###..............#...#...###
+  ###...............................................###
+  ###...........#####...............#####...........###
+  #####.......#########...........#########.......#####
+  #####.......#########...........#########.......#####
+  #######################.......#######################
+exits: []
+buildings: []
+props: []
+people:
+- name: Attendant
+  at: [24, 13]
+  role: npc
+- name: Ninja Boy
+  at: [4, 10]
+  role: npc
+- name: Boy
+  at: [44, 11]
+  role: npc
+signs:
+- name: Sign
+  at: [26, 9]
+- name: Sign
+  at: [23, 8]
+- name: Sign
+  at: [26, 5]
+- name: Sign
+  at: [29, 8]
+- name: Sign
+  at: [42, 9]
+- name: Sign
+  at: [46, 9]
+- name: Sign
+  at: [10, 9]
+- name: Sign
+  at: [8, 7]
+- name: Sign
+  at: [6, 9]
+- name: Sign
+  at: [44, 7]
+- name: Sign
+  at: [16, 8]
+- name: Sign
+  at: [36, 8]
+warps:
+- name: Door
+  at: [26, 14]
+  to: grand-arena-outside-east
+- name: Door
+  at: [27, 14]
+  to: grand-arena-outside-east
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

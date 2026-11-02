@@ -1,0 +1,52 @@
+id: route-121-safari-zone-entrance
+name: ROUTE 121 SAFARI ZONE ENTRANCE
+planet: ENDOR
+kind: interior
+replaces: Route121_SafariZoneEntrance
+status: TODO
+story: ''
+grid: |
+  ##################
+  ##################
+  ......T....T......
+  ......######......
+  ..................
+  #......####.......
+  ############......
+  ############....T#
+  #############...T.
+  ############....T.
+  ############....T.
+  ############....##
+  ############......
+  #############....#
+exits: []
+buildings: []
+props: []
+people:
+- name: Welcome Attendant
+  at: [17, 9]
+  role: npc
+- name: Info Attendant
+  at: [10, 2]
+  role: npc
+- name: '0x0'
+  at: [8, 2]
+  role: npc
+signs:
+- name: Sign
+  at: [15, 1]
+warps:
+- name: Door
+  at: [2, 5]
+  to: felucia-reserve-south
+- name: Door
+  at: [3, 5]
+  to: felucia-reserve-south
+- name: Door
+  at: [14, 13]
+  to: route-121
+- name: Door
+  at: [15, 13]
+  to: route-121
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

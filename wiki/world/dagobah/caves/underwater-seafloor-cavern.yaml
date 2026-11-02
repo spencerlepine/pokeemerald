@@ -1,0 +1,39 @@
+id: underwater-seafloor-cavern
+name: UNDERWATER SEAFLOOR CAVERN
+planet: DAGOBAH
+kind: dungeon
+replaces: Underwater_SeafloorCavern
+status: TODO
+story: ''
+grid: |
+  ##############
+  ##############
+  ##############
+  ##############
+  #####~~~~#####
+  ####~~~~~~####
+  ###~~~~~~~####
+  ####~~.~~~####
+  ##############
+exits: []
+buildings: []
+props: []
+people:
+- name: Check Stolen Sub
+  at: [5, 4]
+  role: npc
+- name: Check Stolen Sub
+  at: [6, 4]
+  role: npc
+- name: Check Stolen Sub
+  at: [7, 4]
+  role: npc
+- name: Check Stolen Sub
+  at: [8, 4]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [6, 7]
+  to: underwater-route-128
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

@@ -1,0 +1,37 @@
+id: grand-arena-lounge-1
+name: GRAND ARENA LOUNGE 1
+planet: GRAND ARENA
+kind: interior
+replaces: BattleFrontier_Lounge1
+status: TODO
+story: ''
+grid: |
+  #########
+  TTTT#TTTT
+  #########
+  .........
+  .........
+  .........
+  .........
+  .........
+  .........
+  #.......#
+exits: []
+buildings: []
+props: []
+people:
+- name: Breeder
+  at: [0, 6]
+  role: npc
+- name: Boy1
+  at: [7, 6]
+  role: npc
+- name: Boy2
+  at: [5, 4]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [4, 9]
+  to: grand-arena-outside-east
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

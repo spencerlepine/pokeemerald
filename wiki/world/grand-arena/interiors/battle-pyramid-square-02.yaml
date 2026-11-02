@@ -1,0 +1,44 @@
+id: battle-pyramid-square-02
+name: BATTLE PYRAMID SQUARE 02
+planet: GRAND ARENA
+kind: interior
+replaces: BattlePyramidSquare02
+status: TODO
+story: ''
+grid: |
+  ..#####.
+  ........
+  ........
+  #.....#.
+  #.....#.
+  #.......
+  #.......
+  ###.##..
+exits: []
+buildings: []
+props: []
+people:
+- name: Trainer BattlePyramid_TrainerBattle
+  at: [2, 1]
+  role: trainer
+- name: Trainer BattlePyramid_TrainerBattle
+  at: [5, 6]
+  role: trainer
+- name: Trainer BattlePyramid_TrainerBattle
+  at: [2, 6]
+  role: trainer
+- name: Trainer BattlePyramid_TrainerBattle
+  at: [5, 1]
+  role: trainer
+- name: Item
+  at: [6, 5]
+  role: item
+- name: Item
+  at: [7, 0]
+  role: item
+- name: Item
+  at: [0, 2]
+  role: item
+signs: []
+warps: []
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

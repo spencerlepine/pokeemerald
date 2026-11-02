@@ -1,0 +1,68 @@
+id: felucia-reserve-northwest
+name: FELUCIA RESERVE
+planet: FELUCIA
+kind: route
+replaces: SafariZone_Northwest
+status: TODO
+story: ''
+pos: [138, 403]
+grid: |
+  TTTT####.#####......##################..
+  TTTT####.....#######################.###
+  TTTTTT#########################....#####
+  TTTTTT#######################.########..
+  TTTTTTTTTTTTTTTT.########...########.###
+  TTTTTTTTTTTTTTTT.#TTTTTT##########.#####
+  TT""""""TTTTTT.TT#TTTTTT~~~~~~~~####....
+  TT""#"""TTTTTT.TT#TTTTTT~~~~~~~~...#####
+  TT""."""...TTTTTT#TTTTTT~~~~~~~~....TTTT
+  TT"""""....TTTTTT#TTTTTT~~~~~~~~~~~~TTTT
+  TT"""""........TT#TTTTTT~~~~~~~~~~~~TTTT
+  TT"""".........TT##.TTTT~~~~~~~~~~~~TTTT
+  TT"".............#..TTTT~~~~~~~~~~~~TTTT
+  TT...............#....TT~~~~~~~~~~~~TTTT
+  TTTTTT.....##..###...#TT............""TT
+  TTTTTT.....#.................."""#""""TT
+  TTTTTTTT...#""""............."""".""""TT
+  TTTTTTTT...#"""""""...........""""""""TT
+  TTTTTTTT...#""""""""""..TT....."""""""TT
+  TTTTTTTT...#""""""""""..TTTT......""""TT
+  TTTTTTTT........T"""""".TTTT.......#TTTT
+  TTTTTTTT........#"""""".TTTT..#.....TTTT
+  ......T""..............T..TT........TTTT
+  TTTTTT##"""........TTTT#............TTTT
+  TTTTTT#""""".......TTTT#.....#......TTTT
+  TTTTTT#""""""".............T........TTTT
+  TTTTTT#"#""""".............#....."""TTTT
+  "#"""...........T.......#TT#..."""""TTTT
+  """"""..........#TT......TT#."""""""TTTT
+  """"""..........#TT....TTTT#"""#""""TTTT
+  #"""""".........#TT....TTTT#""".""""TTTT
+  """""""....##..##TT....TTTT#""""""""TTTT
+  TTTT"""...##...........TTTT#""""""TTTTTT
+  TTTT"".....#...........TTTT#""""""TTTTTT
+  TTTTTT.....##..........TTTT#TTTTTTTTTTTT
+  TTTTTT.....#..#..####..#####TTTTTTTTTTTT
+  .TTTTTT....#######......TTTTTTTTTTTTTTTT
+  #TTTTTT....##...........TTTTTTTTTTTTTTTT
+  .TTTTTT....##TTTT.......TTTTTTTTTTTTTTTT
+  #TTTTTT....##TTTT.......TTTTTTTTTTTTTTTT
+exits:
+- edge: east
+  cells: [0, 3, 6]
+  to: felucia-reserve-north
+- edge: south
+  cells: [7, 8, 9, 10, 17, 18, 19, 20, 21, 22, 23]
+  to: felucia-reserve-southwest
+buildings: []
+props: []
+people:
+- name: Man
+  at: [8, 8]
+  role: npc
+- name: Item
+  at: [33, 7]
+  role: item
+signs: []
+warps: []
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

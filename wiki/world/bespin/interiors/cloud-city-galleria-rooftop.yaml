@@ -1,0 +1,46 @@
+id: cloud-city-galleria-rooftop
+name: CLOUD CITY GALLERIA ROOFTOP
+planet: BESPIN
+kind: interior
+replaces: LilycoveCity_DepartmentStoreRooftop
+status: TODO
+story: ''
+grid: |
+  TTTTTTTTT##TTTTT..
+  #........##.####..
+  #...........####TT
+  ###.........#.#..#
+  #...............##
+  ###..##..##.....##
+  #................#
+  ##################
+  ##################
+  ##################
+  ##################
+  ##################
+exits: []
+buildings: []
+props: []
+people:
+- name: Man
+  at: [4, 4]
+  role: npc
+- name: Thirsty Man
+  at: [7, 5]
+  role: npc
+- name: Sale Woman
+  at: [6, 1]
+  role: npc
+- name: Substitute Tutor
+  at: [15, 5]
+  role: npc
+signs:
+- name: Sign
+  at: [9, 1]
+- name: Sign
+  at: [10, 1]
+warps:
+- name: Door
+  at: [13, 3]
+  to: cloud-city-galleria-5f
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

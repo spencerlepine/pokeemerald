@@ -1,0 +1,38 @@
+id: kachirho-house-1
+name: KACHIRHO HOUSE 1
+planet: KASHYYYK
+kind: interior
+replaces: DewfordTown_House1
+status: TODO
+story: ''
+grid: |
+  ##########
+  ########T#
+  ..........
+  ....##....
+  ....##....
+  ..........
+  ..........
+  ..........
+exits: []
+buildings: []
+props: []
+people:
+- name: Woman
+  at: [6, 3]
+  role: npc
+- name: Man
+  at: [3, 3]
+  role: npc
+- name: Zigzagoon
+  at: [4, 2]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [3, 7]
+  to: kachirho
+- name: Door
+  at: [4, 7]
+  to: kachirho
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

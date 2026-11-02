@@ -1,0 +1,30 @@
+id: yavin-4-sabacc-den-b1f
+name: YAVIN 4 SABACC DEN B1F
+planet: YAVIN 4
+kind: interior
+replaces: MossdeepCity_GameCorner_B1F
+status: TODO
+story: ''
+grid: |
+  ############
+  .##.#######.
+  #..........#
+  ............
+  ............
+  ............
+  ............
+  ............
+  #..........#
+exits: []
+buildings: []
+props: []
+people:
+- name: '0x0'
+  at: [6, 5]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [3, 1]
+  to: yavin-4-sabacc-den-1f
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

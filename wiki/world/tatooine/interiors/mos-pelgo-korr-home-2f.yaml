@@ -1,0 +1,82 @@
+id: mos-pelgo-korr-home-2f
+name: MOS PELGO KORR HOME 2F
+planet: TATOOINE
+kind: interior
+replaces: LittlerootTown_MaysHouse_2F
+status: TODO
+story: ''
+grid: |
+  #########
+  #.#######
+  .........
+  .........
+  .........
+  .......#.
+  .........
+  .........
+exits: []
+buildings: []
+props: []
+people:
+- name: Rival
+  at: [1, 1]
+  role: npc
+- name: '0x0'
+  at: [0, 6]
+  role: npc
+- name: '0x0'
+  at: [1, 6]
+  role: npc
+- name: '0x0'
+  at: [2, 6]
+  role: npc
+- name: '0x0'
+  at: [3, 6]
+  role: npc
+- name: '0x0'
+  at: [4, 6]
+  role: npc
+- name: '0x0'
+  at: [5, 6]
+  role: npc
+- name: '0x0'
+  at: [0, 7]
+  role: npc
+- name: '0x0'
+  at: [1, 7]
+  role: npc
+- name: '0x0'
+  at: [2, 7]
+  role: npc
+- name: '0x0'
+  at: [3, 7]
+  role: npc
+- name: '0x0'
+  at: [4, 7]
+  role: npc
+- name: '0x0'
+  at: [5, 7]
+  role: npc
+- name: '0x0'
+  at: [1, 1]
+  role: npc
+- name: '0x0'
+  at: [3, 4]
+  role: npc
+- name: Item
+  at: [5, 4]
+  role: item
+signs:
+- name: Sign
+  at: [5, 1]
+- name: Sign
+  at: [7, 1]
+- name: Sign
+  at: [3, 1]
+- name: Sign
+  at: [8, 1]
+warps:
+- name: Door
+  at: [1, 1]
+  to: mos-pelgo-korr-home-1f
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

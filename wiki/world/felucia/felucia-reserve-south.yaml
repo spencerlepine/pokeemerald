@@ -1,0 +1,86 @@
+id: felucia-reserve-south
+name: FELUCIA RESERVE
+planet: FELUCIA
+kind: route
+replaces: SafariZone_South
+status: TODO
+story: ''
+pos: [178, 443]
+grid: |
+  TTTTTTTT#TTTTTTTTTTTTTTTTTTTT..TTTTTT#TT
+  TTTTTTTT#TTTTTTTTTTTTTTTTTTTT..TTTTTT#TT
+  TTTTTTTT#TTTTTTTT#########.....TTTTTT#TT
+  TTTTTTTT#TTTTTTTT#.............TTTTTT#TT
+  TTTT....#TTTT....#.....TT#...........#TT
+  TTTT....#TTTT....#.......#..........##TT
+  ........##.......#...TT..#.TvvvvvT...#TT
+  ........#................#.>.....<####TT
+  TT..."""#.......##TTT....###vvvvv##"""TT
+  TT..""""#####..###............."""""""TT
+  TTTTTT"""".......#....TTTTTT..."""""""TT
+  TTTTTT"""""...........TTTTTT....""""""TT
+  TTTTTT"""""".........TTTTTTTT#..."""TTTT
+  TTTTTT"""""".........TTTTTTTT......"TTTT
+  TTTTTT"""""".......................#TTTT
+  TTTTTT""".TTTT......................TTTT
+  TTTTTT....TTTT..........................
+  TTTTTT#...TTTT..........................
+  TTTT#.....TTTTTT......TTTTTTTTTTTTTTTTTT
+  TTTT......TTTTTT......TTTTTTTTTTTTTTTTTT
+  ........TTTTTTTT....TTTTTTTTTTTTTTTTTTTT
+  ........TTTTTTTT....TTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTT.....TTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTT.....TTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTT...........TTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTT...........TTTTTTTTTTTTT
+  TTTTTTTTTTTTTT.................TTTTTTTTT
+  TTTTTTTTTT"""........."""......TTTTTTTTT
+  TTTTTT""""""".......""""""......#TTTTTTT
+  TTTTTT""""""........"""""""......#######
+  TTTT"""""""........"""""#"""..##########
+  TTTT""""""........."""""."""..##########
+  TTTT"""............"""""""""..##########
+  TTTT................""""""""..####TTTTTT
+  TT........TTTT........"""".......TTTTTTT
+  TT#.......TTTT...................TTTTTTT
+  .......#TTTTTTTT.................TTTTTTT
+  ........TTTTTTTT.................TTTTTTT
+  TTTTTTTTTTTTTTTTTTTT.......#TTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTT........TTTTTTTTTTTT
+exits:
+- edge: north
+  cells: [29, 30]
+  to: felucia-reserve-north
+- edge: west
+  cells: [6, 7, 20, 21, 36, 37]
+  to: felucia-reserve-southwest
+- edge: east
+  cells: [16, 17]
+  to: felucia-reserve-southeast
+buildings: []
+props: []
+people:
+- name: Exit Attendant
+  at: [32, 34]
+  role: npc
+- name: Boy
+  at: [26, 28]
+  role: npc
+- name: Man
+  at: [16, 6]
+  role: npc
+- name: Youngster
+  at: [15, 31]
+  role: npc
+- name: Construction Worker1
+  at: [36, 16]
+  role: npc
+- name: Construction Worker2
+  at: [36, 17]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [32, 33]
+  to: route-121-safari-zone-entrance
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

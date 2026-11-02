@@ -1,0 +1,59 @@
+id: tython-isle-exterior
+name: TYTHON ISLE
+planet: TYTHON
+kind: route
+replaces: SouthernIsland_Exterior
+status: TODO
+story: ''
+grid: |
+  ###TTTTTTTTTTTTTTTTTTTTTTTT.####~
+  ###TTTTTTTTTTTTTTTTTTTTTTTT#####~
+  ###TTTTTTTTTTTTTTTTTTTTTTTT#####~
+  ###TTTTTTTTTTTTTTTTTTTTTTTT#####~
+  ###TTTTTTTTTTTTTTTTTTTTTTTT#####~
+  ###TTTTTTTTTTT..TTTTTTTTTTT#####~
+  ###.TTTTTTTTTT..TTTTTTTTTT######~
+  #####TTTTTTTT...#TTTTTTTTT######~
+  #####TTTTTTTT....TT......T#####~~
+  #####TTTTTTTT.......TTT...#####~~
+  #####.TTTTTTTT.....TTTTT..#####~~
+  #####TT#TTTTTTT...TTTTT#..#####~~
+  #####TT#.TTTTTTTTT#TTTT#...####~~
+  ~##########TTTTTT##TTTT#..#####~~
+  ~######TT##TTT##########....###~~
+  ~######TT##TTT#####.......####~~~
+  ~##############..........#####~~~
+  ~#########..........#########~~~~
+  ~~~~###########..##########~~~~~~
+  ~~~~~~~########..#####~~~~~~~~~~~
+  ~~~~~~~~~~~~~~#..#~~~~~~~~~~~~~~~
+  ~~~~~~~~~~#......#~~~~~~~~~~~~~~~
+  ~~~~~~~~~~#......#~~~~~~~~~~~~~~~
+  ~~~~~~~~~~###..###~~~~~~~~~~~~~~~
+  ~~~~~~~~~~########~~~~~~~~~~~~~~~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+exits: []
+buildings: []
+props: []
+people:
+- name: Sailor
+  at: [13, 23]
+  role: npc
+- name: '0x0'
+  at: [13, 25]
+  role: npc
+signs:
+- name: Sign
+  at: [16, 7]
+warps:
+- name: Door
+  at: [14, 5]
+  to: tython-isle-interior
+- name: Door
+  at: [15, 5]
+  to: tython-isle-interior
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

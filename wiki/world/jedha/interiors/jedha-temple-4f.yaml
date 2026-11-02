@@ -1,0 +1,52 @@
+id: jedha-temple-4f
+name: JEDHA TEMPLE 4F
+planet: JEDHA
+kind: interior
+replaces: MtPyre_4F
+status: TODO
+story: ''
+grid: |
+  #############
+  ##########.##
+  #########...#
+  #########...#
+  #########...#
+  ##.######...#
+  #...#####...#
+  #...#####....
+  ............#
+  #########...#
+  #..#..###....
+  #.....#######
+  #............
+exits: []
+buildings: []
+props: []
+people:
+- name: Trainer Tadina
+  at: [11, 7]
+  role: trainer
+- name: Item
+  at: [3, 11]
+  role: item
+signs: []
+warps:
+- name: Door
+  at: [10, 1]
+  to: jedha-temple-5f
+- name: Door
+  at: [2, 5]
+  to: jedha-temple-3f
+- name: Door
+  at: [12, 10]
+  to: jedha-temple-5f
+- name: Door
+  at: [12, 12]
+  to: jedha-temple-5f
+- name: Door
+  at: [9, 10]
+  to: jedha-temple-3f
+- name: Door
+  at: [2, 12]
+  to: jedha-temple-3f
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

@@ -1,0 +1,30 @@
+id: dagobah-mystery-events-house-b1f
+name: DAGOBAH MYSTERY EVENTS HOUSE B1F
+planet: DAGOBAH
+kind: interior
+replaces: SootopolisCity_MysteryEventsHouse_B1F
+status: TODO
+story: ''
+grid: |
+  ############
+  T##.#######T
+  #..........#
+  ............
+  ............
+  ............
+  ............
+  ............
+  #..........#
+exits: []
+buildings: []
+props: []
+people:
+- name: '0x0'
+  at: [6, 5]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [3, 1]
+  to: dagobah-mystery-events-house-1f
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

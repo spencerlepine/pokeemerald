@@ -1,0 +1,38 @@
+id: dagobah-supply-depot
+name: DAGOBAH SUPPLY DEPOT
+planet: DAGOBAH
+kind: interior
+replaces: SootopolisCity_Mart
+status: TODO
+story: ''
+grid: |
+  ###TTT#####
+  ###TTT#####
+  ..#........
+  ..#.......#
+  ###...##..#
+  ......##..#
+  ......##..#
+  ...........
+exits: []
+buildings: []
+props: []
+people:
+- name: Clerk
+  at: [1, 3]
+  role: npc
+- name: Fat Man
+  at: [5, 5]
+  role: npc
+- name: Gentleman
+  at: [9, 5]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [3, 7]
+  to: dagobah
+- name: Door
+  at: [4, 7]
+  to: dagobah
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

@@ -1,0 +1,118 @@
+id: mos-espa
+name: MOS ESPA
+planet: TATOOINE
+kind: town
+replaces: MauvilleCity
+status: TODO
+story: ''
+pos: [200, 140]
+grid: |
+  TT..........T.......TTTTTTTTTTTTTTTTTTTT
+  TT..........T.......T.TTTTTTTTTTTTTTTTTT
+  T....######.T.......TT##TTTTTTTTTT#####T
+  TT..T######.T.......T####T#TT.#TTT#####T
+  TTTTT######TT.......T####T#TT.#TTT#####T
+  T......###...........####T.......T#####T
+  T..........#.....................#.....T
+  ...................#....................
+  ........................................
+  ........................................
+  ........................................
+  T....#######............................
+  T....#######..TTTT########.....#########
+  T....#T#.#T#..T...########.....#########
+  TTTTTTT.......T...########.....#########
+  TT....T....#..T.....................####
+  TTTTT.T.......T....................TTT..
+  TTTTTTT.......T....................TTT..
+  TTTTTTTTTTTTTTT....TTTTTTTTTTTTTT..T~~~~
+  TTTTTTTTT.TT.......TTTTTTTT.......TT~~~~
+exits:
+- edge: north
+  cells: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17, 18, 19]
+  to: route-111
+- edge: south
+  cells: [9, 12, 13, 14, 15, 16, 17, 18, 27, 28, 29, 30, 31, 32, 33]
+  to: route-110
+- edge: west
+  cells: [7, 8, 9, 10]
+  to: route-117
+- edge: east
+  cells: [7, 8, 9, 10, 11, 16, 17]
+  to: route-118
+buildings: []
+props: []
+people:
+- name: Boy
+  at: [29, 16]
+  role: npc
+- name: Rich Boy
+  at: [24, 10]
+  role: npc
+- name: Maniac
+  at: [14, 11]
+  role: npc
+- name: Woman
+  at: [18, 6]
+  role: npc
+- name: School Kid M
+  at: [17, 14]
+  role: npc
+- name: Wally
+  at: [8, 6]
+  role: npc
+- name: Wallys Uncle
+  at: [9, 6]
+  role: npc
+- name: Wattson
+  at: [29, 9]
+  role: npc
+- name: Rollout Tutor
+  at: [13, 7]
+  role: npc
+- name: '0x0'
+  at: [12, 14]
+  role: npc
+- name: Item
+  at: [28, 19]
+  role: item
+signs:
+- name: Sign
+  at: [23, 5]
+- name: Sign
+  at: [11, 6]
+- name: Sign
+  at: [24, 14]
+- name: Sign
+  at: [25, 14]
+- name: Sign
+  at: [24, 5]
+- name: Sign
+  at: [19, 7]
+- name: Sign
+  at: [33, 6]
+- name: Sign
+  at: [11, 15]
+warps:
+- name: Door
+  at: [8, 5]
+  to: mos-espa-arena
+- name: Door
+  at: [22, 5]
+  to: mos-espa-bacta-center-1f
+- name: Door
+  at: [35, 5]
+  to: mos-espa-speeder-shop
+- name: Door
+  at: [23, 14]
+  to: mos-espa-supply-depot
+- name: Door
+  at: [32, 14]
+  to: mos-espa-house-1
+- name: Door
+  at: [8, 13]
+  to: mos-espa-sabacc-den
+- name: Door
+  at: [19, 14]
+  to: mos-espa-house-2
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

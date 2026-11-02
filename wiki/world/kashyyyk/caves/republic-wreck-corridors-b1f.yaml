@@ -1,0 +1,57 @@
+id: republic-wreck-corridors-b1f
+name: REPUBLIC WRECK CORRIDORS B1F
+planet: KASHYYYK
+kind: dungeon
+replaces: AbandonedShip_Corridors_B1F
+status: TODO
+story: ''
+grid: |
+  #############
+  #############
+  .#######.####
+  ..####.#..###
+  ..####.#..###
+  .............
+  ............#
+  .............
+  #...#########
+  ....#########
+exits: []
+buildings: []
+props: []
+people:
+- name: Tuber M
+  at: [2, 8]
+  role: npc
+- name: Trainer Dadun
+  at: [9, 6]
+  role: trainer
+signs:
+- name: Sign
+  at: [11, 4]
+warps:
+- name: Door
+  at: [6, 4]
+  to: republic-wreck-rooms-2-b1f
+- name: Door
+  at: [3, 4]
+  to: republic-wreck-rooms-2-b1f
+- name: Door
+  at: [5, 7]
+  to: republic-wreck-rooms-b1f
+- name: Door
+  at: [8, 7]
+  to: republic-wreck-rooms-b1f
+- name: Door
+  at: [11, 7]
+  to: republic-wreck-rooms-b1f
+- name: Door
+  at: [11, 4]
+  to: republic-wreck-room-b1f
+- name: Door
+  at: [0, 2]
+  to: republic-wreck-corridors-1f
+- name: Door
+  at: [8, 2]
+  to: republic-wreck-corridors-1f
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

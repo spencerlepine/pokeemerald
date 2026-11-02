@@ -1,0 +1,46 @@
+id: grand-arena-battle-palace-battle-room
+name: GRAND ARENA BATTLE PALACE BATTLE ROOM
+planet: GRAND ARENA
+kind: interior
+replaces: BattleFrontier_BattlePalaceBattleRoom
+status: TODO
+story: ''
+grid: |
+  ..#..#..#..##.#
+  ..#..#..#..##.#
+  ..#..#..#..#...
+  ~~~~.######~~..
+  ..~~#######~~..
+  ..~~#######~~..
+  ..~~#######~~..
+  ..~~.......~~..
+  ..~~~~~~~~~~~..
+  ..~~~~~~~~~~~~~
+exits: []
+buildings: []
+props: []
+people:
+- name: '0x0'
+  at: [1, 9]
+  role: npc
+- name: '0x0'
+  at: [13, 1]
+  role: npc
+- name: '0x0'
+  at: [1, 4]
+  role: npc
+- name: '0x0'
+  at: [13, 1]
+  role: npc
+- name: '0x0'
+  at: [13, 1]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [0, 9]
+  to: grand-arena-battle-palace-corridor
+- name: Door
+  at: [1, 9]
+  to: grand-arena-battle-palace-corridor
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

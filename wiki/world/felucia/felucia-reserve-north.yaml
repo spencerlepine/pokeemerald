@@ -1,0 +1,92 @@
+id: felucia-reserve-north
+name: FELUCIA RESERVE
+planet: FELUCIA
+kind: route
+replaces: SafariZone_North
+status: TODO
+story: ''
+pos: [178, 403]
+grid: |
+  .########...##################..........
+  ##..#########...########.....######.....
+  #################......####.......#.....
+  ..####.#########..........###.....##....
+  ###..###.#####.############.######.#....
+  ##########"""############.#####..#.#....
+  ......#.""""""..#.......#####.#..#.##...
+  #######"""""""..............###..#..#...
+  TTTTTT""""""""...............##..#..###.
+  TTTTTT""""""""...............##..##...#.
+  TTTT"""""""""................###..#...#.
+  TTTT"""""""""..............#.#.#..#...##
+  TTTT""""""...................###..###...
+  TTTT""""""........#...........##....#...
+  TTTT""".......................###...####
+  TTTT..........................###.......
+  TTTT.........T........#........##.......
+  TTTT.......T..........#........####.....
+  TT.........#..........#.#......#########
+  TT.......T...............#.......##..###
+  TT.....T.................#........#TT#TT
+  TT#....#...........Tvv.T.#......#.#TT#TT
+  TT.....#......#....>...<###.......#TT#TT
+  TT.....#..........##vv.###........#TT#TT
+  TTTT...##..##.....#...............#TT#TT
+  TTTT........#.....#...............#TT#TT
+  TTTT........#TT....T........""""#"#TT#TT
+  TTTT#.......#TT....#......."""""."#TT#TT
+  TTTT........#TT....##.....""""""""#TT#TT
+  TTTT........#TT..........T""""""""#TT#TT
+  TTTT""....T.................TTTTTT#TT#TT
+  TTTT"""...#""...............TTTTTT.TT#TT
+  TT""""""T.."""...................TTTT#TT
+  TT""""""#""""""..................TTTT#TT
+  TT"""#""#""""""..TTTTTTTTTT......TTTT#TT
+  TT""".""#""""""..TTTTTTTTTT......TTTT#TT
+  TT""""""#""""""..TTTTTTTTTTTT..TTTTTT#TT
+  TT""""""#"""""...TTTTTTTTTTTT..TTTTTT#TT
+  TTTT""""#TTTT".TTTTTTTTTTTTTT..TTTTTT#TT
+  TTTT""""#TTTT..TTTTTTTTTTTTTT..TTTTTT#TT
+exits:
+- edge: west
+  cells: [0, 3, 6]
+  to: felucia-reserve-northwest
+- edge: south
+  cells: [4, 5, 6, 7, 13, 14, 29, 30]
+  to: felucia-reserve-south
+- edge: east
+  cells: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 15, 16, 17]
+  to: felucia-reserve-northeast
+buildings: []
+props: []
+people:
+- name: Fisherman
+  at: [22, 9]
+  role: npc
+- name: Man
+  at: [6, 29]
+  role: npc
+- name: Event Script_Rock Smash
+  at: [25, 10]
+  role: npc
+- name: Event Script_Rock Smash
+  at: [25, 13]
+  role: npc
+- name: Event Script_Rock Smash
+  at: [28, 14]
+  role: npc
+- name: Event Script_Rock Smash
+  at: [23, 6]
+  role: npc
+- name: Event Script_Rock Smash
+  at: [20, 7]
+  role: npc
+- name: Event Script_Rock Smash
+  at: [27, 7]
+  role: npc
+- name: Item
+  at: [7, 6]
+  role: item
+signs: []
+warps: []
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

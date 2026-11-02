@@ -1,0 +1,41 @@
+id: terra-cave-entrance
+name: TERRA CAVE ENTRANCE
+planet: TATOOINE
+kind: dungeon
+replaces: TerraCave_Entrance
+status: TODO
+story: ''
+grid: |
+  ####################
+  ##############.#####
+  #############...####
+  ##########......####
+  ##########..###.####
+  ########....###.####
+  ########....###.####
+  ######......###.####
+  ######..#######.####
+  #####..########.####
+  #####..####.....####
+  ###....####.....####
+  ###....###......####
+  ###....##....##.####
+  ###..........##...##
+  ###..........##...##
+  ####.............###
+  #####.......########
+  #######....#########
+  ####################
+exits: []
+buildings: []
+props: []
+people: []
+signs: []
+warps:
+- name: Door
+  at: [8, 18]
+  to: MAP_DYNAMIC
+- name: Door
+  at: [14, 1]
+  to: terra-cave-end
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

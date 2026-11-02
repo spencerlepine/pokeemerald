@@ -1,0 +1,48 @@
+id: mos-entha-bacta-center-1f
+name: MOS ENTHA BACTA CENTER 1F
+planet: TATOOINE
+kind: interior
+replaces: PetalburgCity_PokemonCenter_1F
+status: TODO
+story: ''
+grid: |
+  ##############
+  ##############
+  ....###.##....
+  ....######....
+  ..............
+  ..............
+  #..........TT.
+  ...........T#.
+  #............#
+exits: []
+buildings: []
+props: []
+people:
+- name: Nurse
+  at: [7, 2]
+  role: npc
+- name: Man
+  at: [11, 2]
+  role: npc
+- name: Fat Man
+  at: [2, 3]
+  role: npc
+- name: Youngster
+  at: [9, 6]
+  role: npc
+- name: Woman
+  at: [5, 4]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [7, 8]
+  to: mos-entha
+- name: Door
+  at: [6, 8]
+  to: mos-entha
+- name: Door
+  at: [1, 6]
+  to: mos-entha-bacta-center-2f
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

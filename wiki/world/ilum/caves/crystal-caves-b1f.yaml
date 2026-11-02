@@ -1,0 +1,130 @@
+id: crystal-caves-b1f
+name: CRYSTAL CAVES B1F
+planet: ILUM
+kind: dungeon
+replaces: VictoryRoad_B1F
+status: TODO
+story: ''
+grid: |
+  #############################################.
+  #########################################...#.
+  #########################################...#.
+  #######...###########.##########...######...#.
+  ####.......<.######.......#######...#####...#.
+  ####.####..<..........###...######...####...#.
+  ####.####..<....####.####...#######..###....##
+  ###.......#####.#########..########.####.....#
+  ####.####.#####.###..............##.#####...##
+  ####.####.#####..##..............##.####.....#
+  ####.......####..####.###..#####.##..####.#..#
+  #########.#####..####.###..#####.##...########
+  #########.#####.........<...####.......#######
+  #########.......####....<...######.....#######
+  ######################..<...#########..##...##
+  ######################..<...###.............##
+  ##########......#..#######..###.............##
+  ####...............#######..####.####..##...##
+  ###..............#########..####.####..##...##
+  ###..#########...#########.......####..##..###
+  ###..#########...#####.#####....#####..##..###
+  ###...########..####...#############...##..###
+  ###..#########..######.############....##..###
+  ###..#########..######.#############...##.####
+  ###...########..######.#############...##.####
+  ###....#######.........######...####...<...###
+  ####...#######.........######..........<...###
+  ####...#######.......########..........<...###
+  ##############################################
+  ##############################################
+  ##############################################
+exits: []
+buildings: []
+props: []
+people:
+- name: Event Script_Strength Boulder
+  at: [20, 5]
+  role: npc
+- name: Event Script_Strength Boulder
+  at: [21, 4]
+  role: npc
+- name: Event Script_Strength Boulder
+  at: [4, 7]
+  role: npc
+- name: Event Script_Strength Boulder
+  at: [9, 10]
+  role: npc
+- name: Event Script_Strength Boulder
+  at: [20, 26]
+  role: npc
+- name: Event Script_Strength Boulder
+  at: [21, 25]
+  role: npc
+- name: Event Script_Strength Boulder
+  at: [35, 6]
+  role: npc
+- name: Event Script_Rock Smash
+  at: [19, 5]
+  role: npc
+- name: Event Script_Rock Smash
+  at: [20, 4]
+  role: npc
+- name: Event Script_Rock Smash
+  at: [18, 12]
+  role: npc
+- name: Event Script_Rock Smash
+  at: [20, 25]
+  role: npc
+- name: Event Script_Rock Smash
+  at: [21, 26]
+  role: npc
+- name: Event Script_Strength Boulder
+  at: [34, 4]
+  role: npc
+- name: Trainer Sumir
+  at: [37, 12]
+  role: trainer
+- name: Trainer Saeth
+  at: [26, 16]
+  role: trainer
+- name: Trainer Maldia
+  at: [5, 21]
+  role: trainer
+- name: Event Script_Rock Smash
+  at: [34, 3]
+  role: npc
+- name: Trainer Maos
+  at: [14, 16]
+  role: trainer
+- name: Trainer Hildara
+  at: [14, 20]
+  role: trainer
+- name: Item
+  at: [42, 8]
+  role: item
+- name: Item
+  at: [32, 3]
+  role: item
+signs: []
+warps:
+- name: Door
+  at: [30, 25]
+  to: crystal-caves-b2f
+- name: Door
+  at: [17, 16]
+  to: crystal-caves-b2f
+- name: Door
+  at: [42, 25]
+  to: crystal-caves-1f
+- name: Door
+  at: [42, 2]
+  to: crystal-caves-b2f
+- name: Door
+  at: [8, 3]
+  to: crystal-caves-1f
+- name: Door
+  at: [20, 21]
+  to: crystal-caves-1f
+- name: Door
+  at: [5, 26]
+  to: crystal-caves-b2f
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

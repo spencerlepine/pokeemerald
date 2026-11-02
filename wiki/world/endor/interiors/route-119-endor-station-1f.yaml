@@ -1,0 +1,60 @@
+id: route-119-endor-station-1f
+name: ROUTE 119 ENDOR STATION 1F
+planet: ENDOR
+kind: interior
+replaces: Route119_WeatherInstitute_1F
+status: TODO
+story: ''
+grid: |
+  ####################
+  #################.##
+  ##.#...#####.......#
+  ##.#...#............
+  ...#...#...##...##..
+  ...#...#...##...##..
+  ...........##...##..
+  .#.................#
+  ####...#############
+  ####...#############
+  ....................
+  ....................
+  ........#..#........
+exits: []
+buildings: []
+props: []
+people:
+- name: Trainer Roldarg
+  at: [15, 3]
+  role: trainer
+- name: Trainer Roldarg
+  at: [10, 5]
+  role: trainer
+- name: Institute Worker2
+  at: [5, 4]
+  role: npc
+- name: Institute Worker1
+  at: [2, 11]
+  role: npc
+- name: Little Boy
+  at: [14, 11]
+  role: npc
+signs:
+- name: Sign
+  at: [1, 2]
+- name: Sign
+  at: [1, 3]
+- name: Sign
+  at: [0, 2]
+- name: Sign
+  at: [0, 3]
+warps:
+- name: Door
+  at: [9, 12]
+  to: route-119
+- name: Door
+  at: [10, 12]
+  to: route-119
+- name: Door
+  at: [17, 1]
+  to: route-119-endor-station-2f
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

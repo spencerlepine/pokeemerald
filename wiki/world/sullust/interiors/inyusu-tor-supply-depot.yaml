@@ -1,0 +1,44 @@
+id: inyusu-tor-supply-depot
+name: INYUSU TOR SUPPLY DEPOT
+planet: SULLUST
+kind: interior
+replaces: FallarborTown_Mart
+status: TODO
+story: ''
+grid: |
+  ###TTT#####
+  ###TTT#####
+  ..#........
+  ..#.......#
+  ###...##..#
+  ......##..#
+  ......##..#
+  ...........
+exits: []
+buildings: []
+props: []
+people:
+- name: Clerk
+  at: [1, 3]
+  role: npc
+- name: Woman
+  at: [5, 3]
+  role: npc
+- name: Pokefan M
+  at: [9, 6]
+  role: npc
+- name: Skitty
+  at: [2, 5]
+  role: npc
+- name: Metronome Tutor
+  at: [7, 2]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [3, 7]
+  to: inyusu-tor
+- name: Door
+  at: [4, 7]
+  to: inyusu-tor
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

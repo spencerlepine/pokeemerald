@@ -1,0 +1,41 @@
+id: yavin-4-supply-depot
+name: YAVIN 4 SUPPLY DEPOT
+planet: YAVIN 4
+kind: interior
+replaces: MossdeepCity_Mart
+status: TODO
+story: ''
+grid: |
+  ###TTT#####
+  ###TTT#####
+  ..#........
+  ..#.......#
+  ###...##..#
+  ......##..#
+  ......##..#
+  ...........
+exits: []
+buildings: []
+props: []
+people:
+- name: Clerk
+  at: [1, 3]
+  role: npc
+- name: Woman
+  at: [1, 5]
+  role: npc
+- name: Boy
+  at: [8, 3]
+  role: npc
+- name: Sailor
+  at: [5, 3]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [3, 7]
+  to: yavin-4
+- name: Door
+  at: [4, 7]
+  to: yavin-4
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

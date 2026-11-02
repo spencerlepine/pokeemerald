@@ -1,0 +1,29 @@
+id: grand-arena-battle-pike-room-normal
+name: GRAND ARENA BATTLE PIKE ROOM NORMAL
+planet: GRAND ARENA
+kind: interior
+replaces: BattleFrontier_BattlePikeRoomNormal
+status: TODO
+story: ''
+grid: |
+  #########
+  #########
+  #########
+  ####.####
+  ..#...#..
+  .........
+  .........
+  ..#...#..
+exits: []
+buildings: []
+props: []
+people:
+- name: NPC
+  at: [4, 4]
+  role: npc
+- name: Status Mon
+  at: [3, 4]
+  role: npc
+signs: []
+warps: []
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

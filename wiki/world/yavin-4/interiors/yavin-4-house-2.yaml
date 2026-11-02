@@ -1,0 +1,39 @@
+id: yavin-4-house-2
+name: YAVIN 4 HOUSE 2
+planet: YAVIN 4
+kind: interior
+replaces: MossdeepCity_House2
+status: TODO
+story: ''
+grid: |
+  ##########
+  ########..
+  ........##
+  ..........
+  ..##......
+  ..##......
+  ..........
+  ..........
+  .........#
+exits: []
+buildings: []
+props: []
+people:
+- name: Man
+  at: [6, 6]
+  role: npc
+- name: Twin
+  at: [4, 4]
+  role: npc
+- name: Wingull
+  at: [4, 5]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [3, 8]
+  to: yavin-4
+- name: Door
+  at: [4, 8]
+  to: yavin-4
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

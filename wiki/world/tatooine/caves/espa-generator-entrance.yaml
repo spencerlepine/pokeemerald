@@ -1,0 +1,30 @@
+id: espa-generator-entrance
+name: ESPA GENERATOR ENTRANCE
+planet: TATOOINE
+kind: dungeon
+replaces: NewMauville_Entrance
+status: TODO
+story: ''
+grid: |
+  #########
+  ####.####
+  ##.....##
+  ##.....##
+  ##.....##
+  ##.....##
+  ##.....##
+  #########
+  #########
+exits: []
+buildings: []
+props: []
+people: []
+signs: []
+warps:
+- name: Door
+  at: [4, 6]
+  to: route-110
+- name: Door
+  at: [4, 1]
+  to: espa-generator-inside
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

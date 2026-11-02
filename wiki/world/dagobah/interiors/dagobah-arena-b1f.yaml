@@ -1,0 +1,74 @@
+id: dagobah-arena-b1f
+name: DAGOBAH ARENA B1F
+planet: DAGOBAH
+kind: interior
+replaces: SootopolisCity_Gym_B1F
+status: TODO
+story: ''
+grid: |
+  #################
+  #################
+  #################
+  #################
+  #################
+  #################
+  ##.............##
+  ##.............##
+  ##.............##
+  ##.............##
+  ########.########
+  ########.########
+  ####.........####
+  ####.........####
+  ####.........####
+  ########.########
+  ########.########
+  #######...#######
+  #######...#######
+  #######...#######
+  ########.########
+  ########.##.#####
+  #####.......#####
+  #####.......#####
+  #####.......#####
+  #####.......#####
+exits: []
+buildings: []
+props: []
+people:
+- name: Trainer Abina
+  at: [7, 17]
+  role: trainer
+- name: Trainer Cudina
+  at: [9, 19]
+  role: trainer
+- name: Trainer Berara
+  at: [12, 7]
+  role: trainer
+- name: Trainer Boena
+  at: [11, 9]
+  role: trainer
+- name: Trainer Tays
+  at: [5, 6]
+  role: trainer
+- name: Trainer Bonara
+  at: [7, 8]
+  role: trainer
+- name: Trainer Cuina
+  at: [4, 8]
+  role: trainer
+- name: Trainer Ovissa
+  at: [9, 7]
+  role: trainer
+- name: Trainer Dozeth
+  at: [6, 13]
+  role: trainer
+- name: Trainer Azbelle
+  at: [10, 13]
+  role: trainer
+signs: []
+warps:
+- name: Door
+  at: [11, 22]
+  to: dagobah-arena-1f
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

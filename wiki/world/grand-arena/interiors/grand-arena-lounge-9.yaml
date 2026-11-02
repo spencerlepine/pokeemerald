@@ -1,0 +1,34 @@
+id: grand-arena-lounge-9
+name: GRAND ARENA LOUNGE 9
+planet: GRAND ARENA
+kind: interior
+replaces: BattleFrontier_Lounge9
+status: TODO
+story: ''
+grid: |
+  #########
+  TTTT#TTTT
+  #########
+  .........
+  .........
+  .........
+  .........
+  .........
+  .........
+  #.......#
+exits: []
+buildings: []
+props: []
+people:
+- name: '0x0'
+  at: [6, 3]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [1, 9]
+  to: grand-arena-outside-east
+- name: Door
+  at: [2, 9]
+  to: grand-arena-outside-east
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

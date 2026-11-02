@@ -1,0 +1,62 @@
+id: drowned-cavern-room-5
+name: DROWNED CAVERN ROOM 5
+planet: DAGOBAH
+kind: dungeon
+replaces: SeafloorCavern_Room5
+status: TODO
+story: ''
+grid: |
+  ####################
+  ####.#########~~~~~#
+  ###.......####~~~~~#
+  ###.......####~~~~~#
+  #######...######~~~#
+  ~~~#####..######~~~#
+  ~~~#####..##########
+  ########......######
+  ######........######
+  ######...###..######
+  ###.....#####.....##
+  ###.....#####.....##
+  ###..########.....##
+  ###..###############
+  ###.############~~~~
+  ###.###########~~~~~
+  ###.......###~~~~~~~
+  ###.......###~~~~~~#
+  ##############~~~###
+  ####################
+exits: []
+buildings: []
+props: []
+people:
+- name: Event Script_Strength Boulder
+  at: [3, 11]
+  role: npc
+- name: Event Script_Strength Boulder
+  at: [4, 11]
+  role: npc
+- name: Event Script_Strength Boulder
+  at: [11, 7]
+  role: npc
+- name: Event Script_Rock Smash
+  at: [3, 13]
+  role: npc
+- name: Event Script_Rock Smash
+  at: [13, 8]
+  role: npc
+- name: Event Script_Strength Boulder
+  at: [12, 8]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [4, 1]
+  to: drowned-cavern-room-1
+- name: Door
+  at: [15, 12]
+  to: drowned-cavern-room-4
+- name: Door
+  at: [7, 17]
+  to: drowned-cavern-room-4
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

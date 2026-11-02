@@ -1,0 +1,46 @@
+id: drowned-cavern-room-7
+name: DROWNED CAVERN ROOM 7
+planet: DAGOBAH
+kind: dungeon
+replaces: SeafloorCavern_Room7
+status: TODO
+story: ''
+grid: |
+  #######################
+  #####.#################
+  ##..........###########
+  ##.....~~~~~###########
+  ##~~~~~~~~~~~~~~~~~~~##
+  ##~~~~~~~~~~~~~~~~~~~##
+  ##~~~~~~~~~~~~~~~~~~~##
+  ##~~~~~~~~~~~~~~~~~~~##
+  ##~~~~~~~~~~~~~~~~~~~##
+  ##~~~~~~~~~~~~~~~~~~~##
+  ##~~~~~~~~~~~~~~~~~~~##
+  ##~~~~~~~~~~~~~~~~~~~##
+  ##~~~~~~~~~~~~~~~~~~~##
+  ##~~~~~~~~~~~~~~~~~~~##
+  ##~~~~~~~~~~~~~~~~~~~##
+  ##~~~~~~~~~~~~~~~~~~~##
+  ##~~~~~~~~~~~~~~~~~~~##
+  ##~~~~~~~~~~~~~~~~~~~##
+  ##~~~~~~~~~~~~~~~~~~~##
+  ###.~~~~~~~~~~~~~~~~~##
+  ###.~~~~~~~~~~~~~~~~~##
+  ###......~~~~~~~~~~~~##
+  ###......~~~~~~~~~~~~##
+  ##....#.#~~~~~~~~~~~~##
+  #######################
+exits: []
+buildings: []
+props: []
+people: []
+signs: []
+warps:
+- name: Door
+  at: [3, 23]
+  to: drowned-cavern-room-2
+- name: Door
+  at: [5, 1]
+  to: drowned-cavern-room-3
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

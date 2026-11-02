@@ -1,0 +1,34 @@
+id: dagobah-house-7
+name: DAGOBAH HOUSE 7
+planet: DAGOBAH
+kind: interior
+replaces: SootopolisCity_House7
+status: TODO
+story: ''
+grid: |
+  ########
+  ########
+  ........
+  ...##...
+  ...##...
+  ........
+  ........
+exits: []
+buildings: []
+props: []
+people:
+- name: Old Man
+  at: [5, 3]
+  role: npc
+- name: Pokefan F
+  at: [1, 4]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [3, 6]
+  to: dagobah
+- name: Door
+  at: [4, 6]
+  to: dagobah
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

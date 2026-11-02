@@ -1,0 +1,40 @@
+id: grand-arena-lounge-7
+name: GRAND ARENA LOUNGE 7
+planet: GRAND ARENA
+kind: interior
+replaces: BattleFrontier_Lounge7
+status: TODO
+story: ''
+grid: |
+  #########
+  TTTT#TTTT
+  #########
+  .........
+  .........
+  .........
+  .........
+  .........
+  .........
+  #.......#
+exits: []
+buildings: []
+props: []
+people:
+- name: Sailor
+  at: [0, 7]
+  role: npc
+- name: Left Move Tutor
+  at: [2, 5]
+  role: npc
+- name: Right Move Tutor
+  at: [6, 5]
+  role: npc
+- name: Gentleman
+  at: [8, 3]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [4, 9]
+  to: grand-arena-outside-west
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

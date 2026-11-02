@@ -1,0 +1,44 @@
+id: battle-pyramid-square-14
+name: BATTLE PYRAMID SQUARE 14
+planet: GRAND ARENA
+kind: interior
+replaces: BattlePyramidSquare14
+status: TODO
+story: ''
+grid: |
+  .#.#.#.#
+  ........
+  #.#.#.#.
+  ........
+  .#.#.#.#
+  ........
+  #.#.#.#.
+  ........
+exits: []
+buildings: []
+props: []
+people:
+- name: Trainer BattlePyramid_TrainerBattle
+  at: [7, 1]
+  role: trainer
+- name: Trainer BattlePyramid_TrainerBattle
+  at: [1, 1]
+  role: trainer
+- name: Trainer BattlePyramid_TrainerBattle
+  at: [6, 5]
+  role: trainer
+- name: Trainer BattlePyramid_TrainerBattle
+  at: [0, 5]
+  role: trainer
+- name: Item
+  at: [5, 3]
+  role: item
+- name: Item
+  at: [0, 7]
+  role: item
+- name: Item
+  at: [7, 5]
+  role: item
+signs: []
+warps: []
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

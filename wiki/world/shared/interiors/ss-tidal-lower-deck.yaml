@@ -1,0 +1,37 @@
+id: ss-tidal-lower-deck
+name: SS TIDAL LOWER DECK
+planet: SHARED
+kind: interior
+replaces: SSTidalLowerDeck
+status: TODO
+story: ''
+grid: |
+  #################
+  #################
+  #.##..##.####...#
+  ..##..##..###....
+  .................
+  .................
+  .######.##.###...
+  .######.##.###...
+  .................
+  .................
+  ...............##
+  .######.##.##..##
+  #######........##
+exits: []
+buildings: []
+props: []
+people:
+- name: Trainer Puax
+  at: [10, 4]
+  role: trainer
+- name: Trainer Ladik
+  at: [7, 4]
+  role: trainer
+signs: []
+warps:
+- name: Door
+  at: [15, 2]
+  to: ss-tidal-corridor
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

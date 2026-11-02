@@ -1,0 +1,36 @@
+id: tipoca-city-house-5
+name: TIPOCA CITY HOUSE 5
+planet: KAMINO
+kind: interior
+replaces: PacifidlogTown_House5
+status: TODO
+story: ''
+grid: |
+  ##########
+  ##########
+  .....#....
+  ..........
+  ....##....
+  #...##....
+  ..........
+  #.........
+  #........#
+exits: []
+buildings: []
+props: []
+people:
+- name: Mirage Island Watcher
+  at: [9, 4]
+  role: npc
+- name: Gentleman
+  at: [3, 4]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [4, 8]
+  to: tipoca-city
+- name: Door
+  at: [5, 8]
+  to: tipoca-city
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

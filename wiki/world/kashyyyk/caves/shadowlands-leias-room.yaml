@@ -1,0 +1,35 @@
+id: shadowlands-leias-room
+name: SHADOWLANDS LEIAS ROOM
+planet: KASHYYYK
+kind: dungeon
+replaces: GraniteCave_StevensRoom
+status: TODO
+story: ''
+grid: |
+  ###############
+  ###############
+  ###############
+  #######.#######
+  #####....######
+  ######...######
+  ####.....######
+  ####.......####
+  ####......#####
+  ######.....####
+  ######.#...####
+  ###############
+  ###############
+  ###############
+exits: []
+buildings: []
+props: []
+people:
+- name: Steven
+  at: [7, 8]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [7, 3]
+  to: shadowlands-1f
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

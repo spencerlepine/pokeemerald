@@ -1,0 +1,168 @@
+id: cloud-city-showcase-hall
+name: CLOUD CITY SHOWCASE HALL
+planet: BESPIN
+kind: interior
+replaces: LilycoveCity_ContestHall
+status: TODO
+story: ''
+grid: |
+  #########################################..........
+  #########################################..........
+  ##############################################.....
+  ##############################################.....
+  ##########...............................##########
+  ##########...............................##########
+  #####.........................................#####
+  #####.............#TTTTTTTTTTTTT#.............#####
+  ..................T.............T..................
+  ........#.........T..#TTTTTTT#..T.........#........
+  ..................T..T.......T..T..................
+  ..#..#............T..T.......T..T............#..#..
+  ..................T..T.......T..T..................
+  ..................T..T.......T..T..................
+  ..................T..#TT...TT#..T..................
+  ..................T.............T..................
+  ..................TTTTT#...#TTTTT..................
+  ...................................................
+  ...................................................
+  ......#TTTTTTTTTTTTT#.........#TTTTTTTTTTTTT#......
+  ......T.............T.........T.............T......
+  ......T..#TTTTTTT#..T.........T..#TTTTTTT#..T......
+  ......T..T.......T..T.........T..T.......T..T......
+  ......T..T.......T..T.........T..T.......T..T......
+  ......T..T.......T..T.........T..T.......T..T......
+  ......T..T.......T..T.........T..T.......T..T......
+  ......T..#TT...TT#..T.........T..#TT...TT#..T......
+  ......T.............T.........T.............T......
+  ......TTTTT#...#TTTTT.........TTTTT#...#TTTTT......
+  ...................................................
+  ...................................................
+  ...................................................
+  ...#...#...#...........................#...#...#...
+exits: []
+buildings: []
+props: []
+people:
+- name: Boy1
+  at: [30, 30]
+  role: npc
+- name: Boy2
+  at: [11, 7]
+  role: npc
+- name: Girl
+  at: [40, 8]
+  role: npc
+- name: Smart Contest MC
+  at: [12, 22]
+  role: npc
+- name: Smart Contest Judge
+  at: [15, 22]
+  role: npc
+- name: Smart Contestant1
+  at: [10, 25]
+  role: npc
+- name: Smart Contestant2
+  at: [12, 25]
+  role: npc
+- name: Smart Contestant3
+  at: [14, 25]
+  role: npc
+- name: Smart Contestant4
+  at: [16, 25]
+  role: npc
+- name: Smart Contest Audience1
+  at: [8, 24]
+  role: npc
+- name: Smart Contest Audience4
+  at: [18, 24]
+  role: npc
+- name: Smart Contest Audience2
+  at: [8, 22]
+  role: npc
+- name: Beauty Contest MC
+  at: [24, 10]
+  role: npc
+- name: Beauty Contest Judge
+  at: [27, 10]
+  role: npc
+- name: Beauty Contestant1
+  at: [22, 13]
+  role: npc
+- name: Beauty Contestant2
+  at: [24, 13]
+  role: npc
+- name: Beauty Contestant3
+  at: [26, 13]
+  role: npc
+- name: Beauty Contestant4
+  at: [28, 13]
+  role: npc
+- name: Beauty Contest Audience1
+  at: [20, 10]
+  role: npc
+- name: Beauty Contest Audience3
+  at: [30, 11]
+  role: npc
+- name: Beauty Contest Audience2
+  at: [26, 8]
+  role: npc
+- name: Smart Contest Audience3
+  at: [13, 20]
+  role: npc
+- name: Cute Contest MC
+  at: [36, 22]
+  role: npc
+- name: Cute Contest Judge
+  at: [39, 22]
+  role: npc
+- name: Cute Contestant1
+  at: [34, 25]
+  role: npc
+- name: Cute Contestant2
+  at: [36, 25]
+  role: npc
+- name: Cute Contestant3
+  at: [38, 25]
+  role: npc
+- name: Cute Contestant4
+  at: [40, 25]
+  role: npc
+- name: Cute Contest Audience1
+  at: [32, 23]
+  role: npc
+- name: Cute Contest Audience3
+  at: [37, 20]
+  role: npc
+- name: Cute Contest Audience2
+  at: [42, 24]
+  role: npc
+- name: Sailor
+  at: [23, 26]
+  role: npc
+signs:
+- name: Sign
+  at: [27, 16]
+- name: Sign
+  at: [39, 28]
+- name: Sign
+  at: [11, 28]
+- name: Sign
+  at: [15, 28]
+- name: Sign
+  at: [23, 16]
+- name: Sign
+  at: [35, 28]
+warps:
+- name: Door
+  at: [19, 32]
+  to: cloud-city-showcase-lobby
+- name: Door
+  at: [30, 32]
+  to: cloud-city-showcase-lobby
+- name: Door
+  at: [20, 32]
+  to: cloud-city-showcase-lobby
+- name: Door
+  at: [31, 32]
+  to: cloud-city-showcase-lobby
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

@@ -1,0 +1,40 @@
+id: ilum-hall-1
+name: ILUM HALL 1
+planet: ILUM
+kind: interior
+replaces: EverGrandeCity_Hall1
+status: TODO
+story: ''
+grid: |
+  ###########
+  ###########
+  #####.#####
+  ...........
+  ...........
+  ####...####
+  ####...####
+  ####...####
+  ####...####
+  ####...####
+  ####...####
+  ####...####
+  ####...####
+exits: []
+buildings: []
+props: []
+people: []
+signs: []
+warps:
+- name: Door
+  at: [5, 12]
+  to: ilum-sidneys-room
+- name: Door
+  at: [5, 2]
+  to: ilum-phoebes-room
+- name: Door
+  at: [4, 12]
+  to: ilum-sidneys-room
+- name: Door
+  at: [6, 12]
+  to: ilum-sidneys-room
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

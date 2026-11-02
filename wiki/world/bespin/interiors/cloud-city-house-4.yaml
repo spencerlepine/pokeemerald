@@ -1,0 +1,36 @@
+id: cloud-city-house-4
+name: CLOUD CITY HOUSE 4
+planet: BESPIN
+kind: interior
+replaces: LilycoveCity_House4
+status: TODO
+story: ''
+grid: |
+  ##########
+  ########..
+  ........##
+  ..........
+  ..##......
+  ..##......
+  ..........
+  ..........
+  .........#
+exits: []
+buildings: []
+props: []
+people:
+- name: Man1
+  at: [1, 4]
+  role: npc
+- name: Man2
+  at: [7, 4]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [3, 8]
+  to: cloud-city
+- name: Door
+  at: [4, 8]
+  to: cloud-city
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

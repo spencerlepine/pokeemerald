@@ -1,0 +1,101 @@
+id: mos-eisley-spacer-museum-1f
+name: MOS EISLEY SPACER MUSEUM 1F
+planet: TATOOINE
+kind: interior
+replaces: SlateportCity_OceanicMuseum_1F
+status: TODO
+story: ''
+grid: |
+  ####################
+  ######.#############
+  ....................
+  ....................
+  ..#............#..#.
+  ....................
+  .....####..####.....
+  ..#..#..#..#..#...#.
+  .....#..#..#..#.....
+exits: []
+buildings: []
+props: []
+people:
+- name: Entrance Attendant
+  at: [7, 7]
+  role: npc
+- name: Museum Grunt3
+  at: [18, 5]
+  role: npc
+- name: Museum Grunt4
+  at: [12, 2]
+  role: npc
+- name: Museum Grunt2
+  at: [2, 8]
+  role: npc
+- name: Museum Grunt1
+  at: [3, 4]
+  role: npc
+- name: Museum Grunt5
+  at: [14, 4]
+  role: npc
+- name: Entrance Attendant
+  at: [12, 7]
+  role: npc
+- name: Museum Grunt6
+  at: [8, 3]
+  role: npc
+- name: Museum Patron1
+  at: [4, 2]
+  role: npc
+- name: Museum Patron2
+  at: [10, 2]
+  role: npc
+- name: Museum Patron3
+  at: [17, 7]
+  role: npc
+- name: Museum Patron4
+  at: [18, 8]
+  role: npc
+- name: Familiar Grunt
+  at: [9, 4]
+  role: npc
+- name: Reporter
+  at: [7, 4]
+  role: npc
+signs:
+- name: Sign
+  at: [2, 7]
+- name: Sign
+  at: [2, 4]
+- name: Sign
+  at: [9, 1]
+- name: Sign
+  at: [12, 1]
+- name: Sign
+  at: [10, 1]
+- name: Sign
+  at: [13, 1]
+- name: Sign
+  at: [15, 4]
+- name: Sign
+  at: [18, 4]
+- name: Sign
+  at: [18, 7]
+- name: Sign
+  at: [2, 1]
+- name: Sign
+  at: [3, 1]
+- name: Sign
+  at: [16, 1]
+- name: Sign
+  at: [17, 1]
+warps:
+- name: Door
+  at: [9, 8]
+  to: mos-eisley
+- name: Door
+  at: [10, 8]
+  to: mos-eisley
+- name: Door
+  at: [6, 1]
+  to: mos-eisley-spacer-museum-2f
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

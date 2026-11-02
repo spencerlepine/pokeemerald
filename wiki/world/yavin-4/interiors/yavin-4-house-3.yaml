@@ -1,0 +1,32 @@
+id: yavin-4-house-3
+name: YAVIN 4 HOUSE 3
+planet: YAVIN 4
+kind: interior
+replaces: MossdeepCity_House3
+status: TODO
+story: ''
+grid: |
+  ###########
+  ###########
+  ...........
+  ...........
+  .....##....
+  .....##....
+  ...........
+  #.........#
+exits: []
+buildings: []
+props: []
+people:
+- name: Super Rod Fisherman
+  at: [4, 4]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [3, 7]
+  to: yavin-4
+- name: Door
+  at: [4, 7]
+  to: yavin-4
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

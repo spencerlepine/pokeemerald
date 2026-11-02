@@ -1,0 +1,32 @@
+id: inyusu-tor-move-relearners-house
+name: INYUSU TOR MOVE RELEARNERS HOUSE
+planet: SULLUST
+kind: interior
+replaces: FallarborTown_MoveRelearnersHouse
+status: TODO
+story: ''
+grid: |
+  ###########
+  ###########
+  ...........
+  ...........
+  .....##....
+  .....##....
+  ...........
+  #.........#
+exits: []
+buildings: []
+props: []
+people:
+- name: Move Relearner
+  at: [4, 4]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [3, 7]
+  to: inyusu-tor
+- name: Door
+  at: [4, 7]
+  to: inyusu-tor
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

@@ -1,0 +1,73 @@
+id: felucia-reserve-southwest
+name: FELUCIA RESERVE
+planet: FELUCIA
+kind: route
+replaces: SafariZone_Southwest
+status: TODO
+story: ''
+pos: [138, 443]
+grid: |
+  .TTTTTT....##TTTTTT.....TTTTTTTTTTTTTTTT
+  .TTTTTT....##TTTTTT.....TTTTTTTTTTTTTTTT
+  ########.####TTTTTTvvvvvvvTTTTTTTTTTTTTT
+  ########.####TTTTTT.......TTTTTTTTTTTTTT
+  #TTTTTT...TT.TTTTTT........#####TTTTTTTT
+  .TTTTTT...TT.TTTTTT.........####TTTTTTTT
+  .TTTTTT...TTTTTTTT..........####..#.....
+  .TTTTTT...TTTTTTTT.#........#####.......
+  TT.TTTT....TTTTTTTT...................TT
+  TT.TTTT....TTTTTTTT...................TT
+  TTTT"""....TTTTTTTTTTTTTTTT.......TTTTTT
+  TTTT"""....TTTTTTTTTTTTTTTT.......TTTTTT
+  TTTT"""...T................T....TTTTTTTT
+  TTTT"""..T#................#T...TTTTTTTT
+  TT""""...##..~~~~~~~~~~~...##...TTTTTTTT
+  TT""""...##..~~~~~~~~~~~...##...TTTTTTTT
+  TT"""....##..~~~~~#~~~~~...##.....TTTTTT
+  TT"".....##..~~~~~~~~~~~...##....#TTTTTT
+  TT.......##..~~~~~~~~~~~...##.....TTTTTT
+  TT.......##....~~~~~~~~~...##.....TTTTTT
+  TT.......##...............###...........
+  TTTT...."##...............###...........
+  TTTT...""##########..#######.........#TT
+  TTTT...""##########..#######..........TT
+  TTTT..."""""vvT.................TTTTTTTT
+  TTTT....""""""<.................TTTTTTTT
+  TTTT......""""<...........TTTTTTTTTTTTTT
+  TT........""""<...........TTTTTTTTTTTTTT
+  TT........."""#vvvvvTTTTTTTTTTTTTTTTTTTT
+  TT..................TTTTTTTTTTTTTTTTTTTT
+  ....................TTTTTT""""""""TTTTTT
+  ~~~~~~~~............TTTTTT""""""""TTTTTT
+  ~~~~~~~~TTTT............."""""""""TTTTTT
+  ~~~~~~~~TTTT..............""""""""TTTTTT
+  ~~~~~~~~TTTTTTTT............""""""""TTTT
+  ~~~~~~~~TTTTTTTT..............""""..TTTT
+  ~~~~~~~~TTTTTTTTTTTT....................
+  ........TTTTTTTTTTTT....................
+  TTTTTTTTTTTTTTTTTTTTTTTTTT......TTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTT......TTTTTTTT
+exits:
+- edge: north
+  cells: [0, 7, 8, 9, 10, 19, 20, 21, 22, 23]
+  to: felucia-reserve-northwest
+- edge: east
+  cells: [6, 7, 20, 21, 36, 37]
+  to: felucia-reserve-south
+buildings: []
+props: []
+people:
+- name: Woman
+  at: [22, 9]
+  role: npc
+- name: Item
+  at: [0, 37]
+  role: item
+signs:
+- name: Sign
+  at: [32, 7]
+warps:
+- name: Door
+  at: [29, 7]
+  to: felucia-reserve-rest-house
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

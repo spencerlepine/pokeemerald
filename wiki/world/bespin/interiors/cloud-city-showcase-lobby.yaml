@@ -1,0 +1,138 @@
+id: cloud-city-showcase-lobby
+name: CLOUD CITY SHOWCASE LOBBY
+planet: BESPIN
+kind: interior
+replaces: LilycoveCity_ContestLobby
+status: TODO
+story: ''
+grid: |
+  ###############################
+  #########.###########.#########
+  ...........T......T............
+  ...........########............
+  ...............................
+  .......................#...#...
+  ...............................
+  ...............................
+  ...............................
+  .......................#...#...
+  ...............................
+  ...............................
+exits: []
+buildings: []
+props: []
+people:
+- name: Contest Receptionist
+  at: [14, 2]
+  role: npc
+- name: Link Contest Receptionist
+  at: [15, 2]
+  role: npc
+- name: Blender2Man
+  at: [26, 9]
+  role: npc
+- name: '0x0'
+  at: [9, 1]
+  role: npc
+- name: Black Belt
+  at: [18, 8]
+  role: npc
+- name: Girl
+  at: [4, 9]
+  role: npc
+- name: Artist
+  at: [3, 4]
+  role: npc
+- name: Reporter
+  at: [13, 10]
+  role: npc
+- name: Blender3Boy
+  at: [23, 8]
+  role: npc
+- name: Blender2Twin
+  at: [28, 9]
+  role: npc
+- name: '0x0'
+  at: [21, 1]
+  role: npc
+- name: Fisherman
+  at: [5, 6]
+  role: npc
+- name: Fat Man
+  at: [0, 8]
+  role: npc
+- name: Ninja Boy
+  at: [8, 7]
+  role: npc
+- name: Blender3Pokefan F
+  at: [22, 9]
+  role: npc
+- name: Blender1Expert M
+  at: [26, 5]
+  role: npc
+- name: Blender3Girl
+  at: [24, 9]
+  role: npc
+- name: Blend Master Onlooker2
+  at: [27, 3]
+  role: npc
+- name: Blend Master Onlooker3
+  at: [28, 3]
+  role: npc
+- name: Blend Master Onlooker4
+  at: [28, 7]
+  role: npc
+- name: Blend Master Onlooker5
+  at: [26, 7]
+  role: npc
+- name: Blend Master Onlooker6
+  at: [27, 7]
+  role: npc
+- name: Blend Master Onlooker1
+  at: [26, 3]
+  role: npc
+- name: Blend Master
+  at: [26, 5]
+  role: npc
+- name: Little Girl
+  at: [9, 10]
+  role: npc
+signs:
+- name: Sign
+  at: [23, 5]
+- name: Sign
+  at: [23, 9]
+- name: Sign
+  at: [23, 1]
+- name: Sign
+  at: [25, 1]
+- name: Sign
+  at: [27, 1]
+- name: Sign
+  at: [30, 1]
+- name: Sign
+  at: [3, 1]
+- name: Sign
+  at: [5, 1]
+- name: Sign
+  at: [7, 1]
+- name: Sign
+  at: [27, 5]
+- name: Sign
+  at: [27, 9]
+- name: Sign
+  at: [18, 3]
+warps:
+- name: Door
+  at: [14, 11]
+  to: cloud-city
+- name: Door
+  at: [15, 11]
+  to: cloud-city
+- name: Door
+  at: [9, 1]
+  to: cloud-city-showcase-hall
+- name: Door
+  at: [21, 1]
+  to: cloud-city-showcase-hall
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

@@ -1,0 +1,303 @@
+id: route-119
+name: ROUTE 119
+planet: ENDOR
+kind: route
+replaces: Route119
+status: TODO
+story: ''
+pos: [280, 0]
+grid: |
+  TTTTTTTTTTTTTTT####TTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTT#######TTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTT#######TTTTTTTTTTTTTTTTTTTTT
+  TTTT....###########TTTTTTTTTTTTTTTTTTTTT
+  TTTTTTT.###########TTTTTTTTTTTTTTTTTTTTT
+  TTTTTT.....########.TTT.###.TTTTTTT..TTT
+  TTTTT...##.########.TTT.....T.T.T.......
+  TTTT#.###~..........TTTT................
+  TTTT#.#############.TTTTTT..............
+  TTT##.#############.TTTTTTT.#...........
+  T####.....#..........TTTTTTT......".....
+  T########.#########..TTTTTTT......"TTTTT
+  T########.#########..TTTTTTT.....T"TTTTT
+  T......~#.#########..TTTTTTTT....T"TTTTT
+  TTTTTTT##.##########.TTTTTTT.....T"TTTTT
+  TTTTTTT##.#TTTT#####.TTT.........T"TTTTT
+  TTT........TTTT~#....TTTTTTT....TT"TTTTT
+  TTTTTT.....TTTT##.##.TTTTTTT....TT""TTTT
+  TTTTTTT....TT.....~##TTTTTTT....TT""TTTT
+  TTTTTTTvvvvT...###~~#TTTTTT#....TT""TTTT
+  TTTTTTT........#~~~~#TTTTTT......T""TTTT
+  TTTTTTT........#.~~~#TTTTTT.....""""TTTT
+  TTTTTTT.....#..#.~~~#TTTTT......""""TTTT
+  TTTTTTT.##..#....~~~#TTTTT.....""..."TTT
+  #############....~~~######.....""TTT"TTT
+  ###########.#####~~~######.......""".TTT
+  T################~~~#######..####....TTT
+  TT###############~~~#######..####...TTTT
+  TT#########T..###~~~####.......##TTTTTTT
+  TT#########T..##.~~~.###.......###TTTTTT
+  TT#########T..##.~~~.###.......#.#TTTTTT
+  TT#########T..##~~~~~####..########TTTTT
+  TTT###.###....##~~~~~##.......#.###TTTTT
+  TTT......#......=====.........##########
+  TTT.............=====...........########
+  T###T.........##~~~~~##.........#TTTTTTT
+  #####......"""##~~~~~###..####...TTTTTTT
+  #####T....."""##~~~~~###.....#..TTTTTTTT
+  TT####T...."""##~~~~~~~#.....#.TTTTTTTTT
+  TT#####...."""##~~~~~~~#.....##TTTTTTTTT
+  TTT####.....""##~~~~~~~#......##########
+  TTTTTTT"".....##~~~~~~~##.TTTTTTTTTTTTTT
+  TTTTTTT"""....##~~~~~~~~..TTTTTTTTTTTTTT
+  TTTTTTT"""""..##~~~~~~~~~~~~~~~TTTTTTTTT
+  ###TTTT""""""......~~~~~~~~~~~~~~TTTTTTT
+  T##TTTT"""""""......~~~~~~~~~~~~~TTTTTTT
+  T##TTTT""""""""".......~~~~~~~~~~~~TTTTT
+  T##TTTT""""""""".......#...~~~~~~~~.TTTT
+  T##TTTT"""""".....###..#...#TT~~~~~.TTTT
+  T##TTTT"""........#........#TTT~~~~~TTTT
+  T####TT........####......###TTT~~~##.TTT
+  T#T##..........#........##""TTT~~~##.TTT
+  T.T##.....######......###""""TT~~~~~.TTT
+  TTT##....##########..##.."""".T~~~~~.TTT
+  TTT###.#######""".........""".T##~~~TTTT
+  TTT###.#####""""""..TTTTT....TT##~~~TTTT
+  TTT........""""""".TTTTTTT...TT~~~~~TTTT
+  TTT.....TTT."""""".TTTTTTTTTTTT~~~~~TTTT
+  TTTT....TTT.""""""TTTTTTTTTTTT~~~~~~TTTT
+  TTTT....TTTT""""""TTTTTTTTT~~~~~~~~..TTT
+  TTTT....TTTT""""".TTTTTTTT~~~~~~~~.."""T
+  TTTTT...TTTT."""".TTTTTTTT~~~~~~##.T""""
+  TTTTT...TTTT.""""TTTTTTTTT~~~~~~##TT""."
+  TTTTTT....TTT""".TTTTTTTTT~~~~~~~.TT."""
+  TTTTTTT...TTT""".TTTTTTT~~~~~~..."TT....
+  TTTTTTT...TT."""TTTTTTTT~~~~~..""""TT...
+  TTTTTTT......"".TTTTTT~~~~~~~..""".TTTTT
+  TTTTTTT.""......TTTTTT~~~~~~~.T""".TTTTT
+  TTTTTTT."".....TTTTTTT~~~~~..TT"".TTTTTT
+  ###TTTTT"".....TTTTT~~~~~~~..TT"".TTTTTT
+  ###TTTTT""""""TTTTTT~~~~~~..TT"""TTTTTTT
+  ####TTTT""""""TTTTTT~~~~~~.TT""""TTTTTTT
+  ####TTTT""""".TTTTTT~~~~~~.TT"...TTTTTTT
+  ####TTT.."""".TTTTTT~~~~..TTT.TTTTTTTTTT
+  ####TTT..."".TTTTTTT.~##..TTT....TTTTTTT
+  ####TTT......TTTTT...~##..TTTTTTTTTTT###
+  ####TT......TTTTTTTT.###T.TTTTTTTTTTT###
+  ####T.......TTTTTT...###T.TTTTTTTTTTT###
+  #.##........TTTTTTTTT###TTTTTTTTTTTTT###
+  #.##.....############~~~##########TTT###
+  #.###..##############~~~#######..##TT###
+  #.#....###########TT#~~~####T######TT###
+  #.#....######.....TT#~~~#...TTTT########
+  #.#....###........TT#~~~#...TTTT##....##
+  #.#..................===..............##
+  ###..................===..............##
+  .#########TTT.TTTTTT#####T..TTTT##...###
+  T#TTTT####TTT.TTTTTT#####T...TTT##...#.#
+  T.TTTT"".......TTTTT#####TT.....###..#.#
+  TTTTTT""........TTTT#####TT.....#.#..###
+  TTT.""""..........#######TT..##.#.....#.
+  TTTT....TT............###T...T........#.
+  TTTT....TTT.......###.###....#........#T
+  TTTTTTTTTTTTT..TTT###.###....#........#T
+  TTTTTTTTTTTTTTTT#####........#........#T
+  TTTTTTTTTTTTTTTT#########..""#...#TTTTTT
+  TTTT.."""""TTTTT#########."""#...#TTTTTT
+  TT""""""""""T#############"""#..#TTTTTTT
+  TT.."""""""".#~###########""""...TTTTTTT
+  TT...""""""..#~###########""""..TTTTTTTT
+  TTTT.........#~~~##~~##~~#"""...TTTTTTTT
+  TTTTT.TTT....#~~~~~~~~~~~#"".....TTTTTTT
+  TTTTTT.......#~~~~~~~~~~~#.......TTTTTTT
+  TTTTTTT...#..#~~~~~~~~~~~#TT##..#TTTTTTT
+  TTTTTTTTT.#...~~~~~~~~~~~~TT.....TTTTTTT
+  TTTTTTTT###...~~~~~~~~~~~~TT....TTTTTTTT
+  TTT######~~~~~~~~~~~~##~~~T.....####TTTT
+  TT#####~~~~~~~~~~~~~~##~~~......####TTTT
+  TT#######~~~~~~~~~~~~~~~~~......####TTTT
+  TT#######~~~~~~~~~~~~~~~........####TTTT
+  TT######~~~~~~~~~~~~................TTTT
+  ########~~~~~TTTT....................TTT
+  #######~~TTTTTTTT................"""""TT
+  #######TTTTTTTTT..............""""""""TT
+  TTTTTTTTTTTTTTT.........""""""""""""""TT
+  TTTTTTTTTTTTTT....."""""""""""""""""""TT
+  TTTTTTTTTTT.....""""""""""""""""".""""TT
+  TTTTTTTTTT"""""""""""""""""""""""."""""T
+  TTTTTTTTT""""""""""....""""""""""""""""T
+  TTTTTTTTT""""""""""""""""""""""""""""""T
+  TTTTTTT""""".."""....."""".""""""""""""T
+  TTTTTT""""""..""......."""""""""""""""""
+  TTTTT""""""""""".TTTT.."""""""""""""""""
+  TTTT"""""""""""".TTTTT."""""""""""""""""
+  TTTT""""...""""""TTTTT."""""".."""""""""
+  TTTT"""""""""""""""TTT""""""....""""""""
+  TTT""""""""""""""""""""""""".TT.."""""".
+  TTT""""""""""""""""""""""""".TTT."""""".
+  TTT""""""""""""""""""""""""""TTT.""""".T
+  TT""""..""""""""""""...""""""""""""""..T
+  TT..."""""""""""""""""""""""""""""....TT
+  TT............""""""""""""...........TTT
+  TTTTT..............................TTTTT
+  TTTTTTTTTT..................TTTTTTTTTTTT
+  TTTTTTTTTTTTTTT.......TTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTT.....TTTTTTTTTTTTTTTTTTT
+  TTT########TTTTT.....T#############TTTTT
+  TT############TT.....##################T
+  T##############T.....###################
+  T###############.....###################
+exits:
+- edge: south
+  cells: [16, 17, 18, 19, 20]
+  to: route-118
+- edge: east
+  cells: [6, 7, 8, 9, 10]
+  to: bright-tree
+buildings: []
+props: []
+people:
+- name: Trainer Gair
+  at: [12, 123]
+  role: trainer
+- name: Trainer Tiar
+  at: [26, 123]
+  role: trainer
+- name: Trainer Domel
+  at: [5, 125]
+  role: trainer
+- name: Trainer Joskos
+  at: [7, 74]
+  role: trainer
+- name: Trainer Bukir
+  at: [28, 116]
+  role: trainer
+- name: Trainer Coi
+  at: [35, 83]
+  role: trainer
+- name: Trainer Doxek
+  at: [34, 122]
+  role: trainer
+- name: Trainer Kiman
+  at: [17, 128]
+  role: trainer
+- name: Trainer Teebo
+  at: [28, 14]
+  role: trainer
+- name: Trainer Paploo
+  at: [19, 49]
+  role: trainer
+- name: Trainer Hoir
+  at: [10, 50]
+  role: trainer
+- name: Trainer Pixik
+  at: [8, 63]
+  role: trainer
+- name: '0x0'
+  at: [25, 32]
+  role: npc
+- name: Bridge Aqua Grunt1
+  at: [13, 33]
+  role: npc
+- name: Bridge Aqua Grunt2
+  at: [13, 34]
+  role: npc
+- name: '0x0'
+  at: [17, 33]
+  role: npc
+- name: Boy1
+  at: [31, 109]
+  role: npc
+- name: Cycling Triathlete M
+  at: [19, 133]
+  role: npc
+- name: Boy2
+  at: [35, 93]
+  role: npc
+- name: Trainer Hurkal
+  at: [29, 6]
+  role: trainer
+- name: Kecleon1
+  at: [31, 6]
+  role: npc
+- name: Kecleon2
+  at: [25, 15]
+  role: npc
+- name: Trainer Como
+  at: [13, 104]
+  role: trainer
+- name: Trainer Rimissa
+  at: [8, 68]
+  role: trainer
+- name: Trainer Domar
+  at: [16, 52]
+  role: trainer
+- name: Trainer Fiar
+  at: [32, 15]
+  role: trainer
+- name: '0x0'
+  at: [28, 25]
+  role: npc
+- name: Berry tree
+  at: [24, 5]
+  role: berry
+- name: Berry tree
+  at: [25, 5]
+  role: berry
+- name: Berry tree
+  at: [26, 5]
+  role: berry
+- name: Item
+  at: [12, 121]
+  role: item
+- name: Item
+  at: [4, 96]
+  role: item
+- name: Item
+  at: [29, 53]
+  role: item
+- name: Item
+  at: [25, 76]
+  role: item
+- name: Item
+  at: [8, 18]
+  role: item
+- name: Item
+  at: [33, 117]
+  role: item
+- name: Berry tree
+  at: [8, 23]
+  role: berry
+- name: Berry tree
+  at: [9, 23]
+  role: berry
+- name: Berry tree
+  at: [29, 90]
+  role: berry
+- name: Berry tree
+  at: [30, 90]
+  role: berry
+- name: Item
+  at: [3, 56]
+  role: item
+- name: Item
+  at: [19, 5]
+  role: item
+- name: Item
+  at: [24, 42]
+  role: item
+signs:
+- name: Sign
+  at: [9, 33]
+- name: Sign
+  at: [27, 19]
+- name: Sign
+  at: [28, 9]
+warps:
+- name: Door
+  at: [6, 32]
+  to: route-119-endor-station-1f
+- name: Door
+  at: [33, 109]
+  to: route-119-house
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

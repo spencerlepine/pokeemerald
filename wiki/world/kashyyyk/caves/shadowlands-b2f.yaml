@@ -1,0 +1,83 @@
+id: shadowlands-b2f
+name: SHADOWLANDS B2F
+planet: KASHYYYK
+kind: dungeon
+replaces: GraniteCave_B2F
+status: TODO
+story: ''
+grid: |
+  #########.######################
+  #.......#.#..............###...#
+  #.......###..............###...#
+  #.........<...............##...#
+  #.........<.######........##...#
+  #.........#v######.......###...#
+  #...........######.......####..#
+  ################################
+  ################################
+  ################################
+  ################################
+  ##########..#..#..##..##########
+  #######.....#.....#...........##
+  ######......###.###...........##
+  ###...........................##
+  ###...................##########
+  ##..........###########......###
+  ##.....######................###
+  ##.....#.....................###
+  ####.###...........######....###
+  ###.......##.......######....###
+  ###........#...###########...###
+  ####...........###########...###
+  ################################
+  ################################
+  ################################
+exits: []
+buildings: []
+props: []
+people:
+- name: Event Script_Rock Smash
+  at: [5, 14]
+  role: npc
+- name: Event Script_Rock Smash
+  at: [3, 14]
+  role: npc
+- name: Event Script_Rock Smash
+  at: [2, 16]
+  role: npc
+- name: Event Script_Rock Smash
+  at: [7, 12]
+  role: npc
+- name: Event Script_Rock Smash
+  at: [4, 22]
+  role: npc
+- name: Event Script_Rock Smash
+  at: [6, 22]
+  role: npc
+- name: Event Script_Rock Smash
+  at: [3, 21]
+  role: npc
+- name: Item
+  at: [4, 4]
+  role: item
+- name: Item
+  at: [29, 4]
+  role: item
+signs: []
+warps:
+- name: Door
+  at: [29, 13]
+  to: shadowlands-b1f
+- name: Door
+  at: [28, 21]
+  to: shadowlands-b1f
+- name: Door
+  at: [8, 5]
+  to: shadowlands-b1f
+- name: Door
+  at: [12, 3]
+  to: shadowlands-b1f
+- name: Door
+  at: [29, 2]
+  to: shadowlands-b1f
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

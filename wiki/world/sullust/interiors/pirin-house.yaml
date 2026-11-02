@@ -1,0 +1,38 @@
+id: pirin-house
+name: PIRIN HOUSE
+planet: SULLUST
+kind: interior
+replaces: LavaridgeTown_House
+status: TODO
+story: ''
+grid: |
+  ##########
+  ########T#
+  ..........
+  ....##....
+  ....##....
+  ..........
+  ..........
+  ..........
+exits: []
+buildings: []
+props: []
+people:
+- name: Old Man
+  at: [2, 3]
+  role: npc
+- name: Zigzagoon
+  at: [6, 6]
+  role: npc
+- name: Mimic Tutor
+  at: [8, 4]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [3, 7]
+  to: pirin
+- name: Door
+  at: [4, 7]
+  to: pirin
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

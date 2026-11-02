@@ -1,0 +1,41 @@
+id: republic-wreck-rooms-2-b1f
+name: REPUBLIC WRECK ROOMS 2 B1F
+planet: KASHYYYK
+kind: dungeon
+replaces: AbandonedShip_Rooms2_B1F
+status: TODO
+story: ''
+grid: |
+  ##################
+  ##################
+  ###.....####...###
+  ##T..TT####T...T##
+  #....##..........#
+  #.......##......##
+  ##......###......#
+  #......###.......#
+exits: []
+buildings: []
+props: []
+people:
+- name: Camper
+  at: [3, 4]
+  role: npc
+- name: Item
+  at: [13, 3]
+  role: item
+signs: []
+warps:
+- name: Door
+  at: [4, 7]
+  to: republic-wreck-corridors-b1f
+- name: Door
+  at: [5, 7]
+  to: republic-wreck-corridors-b1f
+- name: Door
+  at: [13, 7]
+  to: republic-wreck-corridors-b1f
+- name: Door
+  at: [14, 7]
+  to: republic-wreck-corridors-b1f
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

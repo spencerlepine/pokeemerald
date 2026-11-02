@@ -1,0 +1,43 @@
+id: ilum-champions-room
+name: ILUM CHAMPIONS ROOM
+planet: ILUM
+kind: interior
+replaces: EverGrandeCity_ChampionsRoom
+status: TODO
+story: ''
+grid: |
+  #############
+  #############
+  ###TTT##TT###
+  ##TTT...TTT##
+  #TTT.....TTT#
+  TTT.......TTT
+  TT.........TT
+  TT.........TT
+  TT#.......#TT
+  T###.....###T
+  ##T##...##T##
+  ##TT#...#TT##
+  ###T#...#T###
+exits: []
+buildings: []
+props: []
+people:
+- name: '0x0'
+  at: [6, 5]
+  role: npc
+- name: '0x0'
+  at: [6, 12]
+  role: npc
+- name: '0x0'
+  at: [6, 12]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [6, 12]
+  to: ilum-hall-4
+- name: Door
+  at: [6, 2]
+  to: ilum-hall-of-fame
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

@@ -1,0 +1,41 @@
+id: wampa-cave-low-tide-stairs-room
+name: WAMPA CAVE LOW TIDE STAIRS ROOM
+planet: HOTH
+kind: dungeon
+replaces: ShoalCave_LowTideStairsRoom
+status: TODO
+story: ''
+grid: |
+  #####################
+  #####################
+  #####################
+  #####################
+  ######......#.#######
+  ###########.#########
+  #####.#.....#########
+  #######.#############
+  ###.....#.###########
+  ####.################
+  ##.#....#############
+  #######.#.....#######
+  #.............#######
+  ##............#######
+  #####################
+exits: []
+buildings: []
+props: []
+people:
+- name: Item
+  at: [13, 12]
+  role: item
+signs:
+- name: Sign
+  at: [11, 11]
+warps:
+- name: Door
+  at: [3, 12]
+  to: wampa-cave-low-tide-inner-room
+- name: Door
+  at: [7, 4]
+  to: wampa-cave-low-tide-inner-room
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

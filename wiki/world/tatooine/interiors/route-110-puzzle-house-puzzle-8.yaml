@@ -1,0 +1,60 @@
+id: route-110-puzzle-house-puzzle-8
+name: ROUTE 110 PUZZLE HOUSE PUZZLE 8
+planet: TATOOINE
+kind: interior
+replaces: Route110_TrickHousePuzzle8
+status: TODO
+story: ''
+grid: |
+  ###############
+  ###############
+  ...#..........#
+  ..###.#########
+  ....#.#........
+  .#.............
+  .......#......#
+  .........#.....
+  .............#.
+  ...##..#####.#.
+  #.#######.#..#.
+  .#....##.......
+  ....#.....#....
+  ....#.....#....
+  ....#.....#....
+  ....#.....#....
+  .#........#....
+  ..........#....
+  ..........#....
+  ..###.#...#....
+  ..###.#...#....
+  ..##..#........
+exits: []
+buildings: []
+props: []
+people:
+- name: Trainer Voax
+  at: [1, 10]
+  role: trainer
+- name: Trainer Loskan
+  at: [4, 2]
+  role: trainer
+- name: Trainer Kays
+  at: [8, 17]
+  role: trainer
+- name: Item
+  at: [2, 2]
+  role: item
+signs:
+- name: Sign
+  at: [3, 21]
+warps:
+- name: Door
+  at: [0, 21]
+  to: route-110-puzzle-house-entrance
+- name: Door
+  at: [1, 21]
+  to: route-110-puzzle-house-entrance
+- name: Door
+  at: [13, 1]
+  to: route-110-puzzle-house-end
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

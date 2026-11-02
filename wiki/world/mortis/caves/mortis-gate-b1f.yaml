@@ -1,0 +1,32 @@
+id: mortis-gate-b1f
+name: MORTIS GATE B1F
+planet: MORTIS
+kind: dungeon
+replaces: NavelRock_B1F
+status: TODO
+story: ''
+grid: |
+  .......................
+  .#####################.
+  .#####################.
+  .##.................##.
+  .##.................##.
+  .##.................##.
+  .##.................##.
+  .##.................##.
+  .##.................##.
+  .##.................##.
+  .#####################.
+exits: []
+buildings: []
+props: []
+people: []
+signs: []
+warps:
+- name: Door
+  at: [4, 3]
+  to: mortis-gate-entrance
+- name: Door
+  at: [18, 9]
+  to: mortis-gate-fork
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

@@ -1,0 +1,69 @@
+id: route-110-puzzle-house-puzzle-3
+name: ROUTE 110 PUZZLE HOUSE PUZZLE 3
+planet: TATOOINE
+kind: interior
+replaces: Route110_TrickHousePuzzle3
+status: TODO
+story: ''
+grid: |
+  ###############
+  ###############
+  #..#..#..#..#..
+  #..#..#..#..#..
+  ####..#..#..###
+  .........T.....
+  #..#..#..#..#..
+  #..####..####..
+  .........#.....
+  #..####..#..#..
+  #..#######..#..
+  ...............
+  #..#..#..#..#..
+  #######..####..
+  #...........#..
+  ####..####..#..
+  ####..####..#..
+  ...T..#........
+  #..#..#..#..#..
+  #..####..####..
+  ...............
+  ...............
+exits: []
+buildings: []
+props: []
+people:
+- name: Trainer Joun
+  at: [7, 19]
+  role: trainer
+- name: Trainer Moys
+  at: [4, 4]
+  role: trainer
+- name: Trainer Anbar
+  at: [10, 10]
+  role: trainer
+- name: Event Script_Rock Smash
+  at: [1, 20]
+  role: npc
+- name: Event Script_Rock Smash
+  at: [2, 21]
+  role: npc
+- name: Item
+  at: [1, 2]
+  role: item
+- name: Item
+  at: [4, 2]
+  role: item
+signs:
+- name: Sign
+  at: [0, 14]
+warps:
+- name: Door
+  at: [0, 21]
+  to: route-110-puzzle-house-entrance
+- name: Door
+  at: [1, 21]
+  to: route-110-puzzle-house-entrance
+- name: Door
+  at: [13, 1]
+  to: route-110-puzzle-house-end
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

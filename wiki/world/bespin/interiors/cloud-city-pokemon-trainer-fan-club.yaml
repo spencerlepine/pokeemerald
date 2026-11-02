@@ -1,0 +1,62 @@
+id: cloud-city-pokemon-trainer-fan-club
+name: CLOUD CITY POKEMON TRAINER FAN CLUB
+planet: BESPIN
+kind: interior
+replaces: LilycoveCity_PokemonTrainerFanClub
+status: TODO
+story: ''
+grid: |
+  ############
+  ##T#########
+  ............
+  ....####....
+  ....####....
+  ............
+  ............
+  ###......###
+  ###......##T
+  ....####....
+  ....####....
+  ............
+  ............
+  ............
+exits: []
+buildings: []
+props: []
+people:
+- name: Lass
+  at: [3, 11]
+  role: npc
+- name: Man
+  at: [8, 10]
+  role: npc
+- name: Pokefan M
+  at: [6, 11]
+  role: npc
+- name: Little Girl
+  at: [5, 8]
+  role: npc
+- name: Ninja Boy
+  at: [7, 11]
+  role: npc
+- name: Boy
+  at: [1, 9]
+  role: npc
+- name: Woman
+  at: [3, 10]
+  role: npc
+- name: Expert F
+  at: [10, 10]
+  role: npc
+- name: Interviewer
+  at: [11, 5]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [6, 13]
+  to: cloud-city
+- name: Door
+  at: [5, 13]
+  to: cloud-city
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

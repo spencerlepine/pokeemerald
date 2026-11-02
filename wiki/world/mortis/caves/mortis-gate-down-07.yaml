@@ -1,0 +1,29 @@
+id: mortis-gate-down-07
+name: MORTIS GATE DOWN 07
+planet: MORTIS
+kind: dungeon
+replaces: NavelRock_Down07
+status: TODO
+story: ''
+grid: |
+  .........
+  .#######.
+  .#######.
+  .##...##.
+  .##...##.
+  .##...##.
+  .#######.
+  .#######.
+exits: []
+buildings: []
+props: []
+people: []
+signs: []
+warps:
+- name: Door
+  at: [3, 3]
+  to: mortis-gate-down-06
+- name: Door
+  at: [5, 5]
+  to: mortis-gate-down-08
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

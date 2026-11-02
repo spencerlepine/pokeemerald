@@ -1,0 +1,67 @@
+id: cloud-city-museum-2f
+name: CLOUD CITY MUSEUM 2F
+planet: BESPIN
+kind: interior
+replaces: LilycoveCity_LilycoveMuseum_2F
+status: TODO
+story: ''
+grid: |
+  ####TTTTTTTTT#TTTT####
+  TTTTTTTTTTTTT.TTTTTTTT
+  TTTT.......T...T..TTTT
+  ......................
+  ......................
+  .TTTT....TTTT....TTTT.
+  .T##T....T##T....T##T.
+  ......................
+  ......................
+  .....TTTT....TTTT.....
+  .....T##T....T##T.....
+  ......................
+  ......................
+exits: []
+buildings: []
+props: []
+people:
+- name: Curator
+  at: [10, 8]
+  role: npc
+- name: Girl
+  at: [19, 10]
+  role: npc
+- name: Expert M
+  at: [7, 3]
+  role: npc
+- name: Rich Boy
+  at: [14, 6]
+  role: npc
+signs:
+- name: Sign
+  at: [14, 10]
+- name: Sign
+  at: [15, 10]
+- name: Sign
+  at: [3, 6]
+- name: Sign
+  at: [2, 6]
+- name: Sign
+  at: [10, 6]
+- name: Sign
+  at: [11, 6]
+- name: Sign
+  at: [19, 6]
+- name: Sign
+  at: [18, 6]
+- name: Sign
+  at: [6, 10]
+- name: Sign
+  at: [7, 10]
+- name: Sign
+  at: [11, 2]
+- name: Sign
+  at: [15, 2]
+warps:
+- name: Door
+  at: [13, 1]
+  to: cloud-city-museum-1f
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

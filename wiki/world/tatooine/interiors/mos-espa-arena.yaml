@@ -1,0 +1,67 @@
+id: mos-espa-arena
+name: MOS ESPA ARENA
+planet: TATOOINE
+kind: interior
+replaces: MauvilleCity_Gym
+status: TODO
+story: ''
+grid: |
+  ##########
+  ##########
+  ####..####
+  ####..####
+  ###....###
+  ###....###
+  ####..####
+  ##########
+  ####..#...
+  ......#...
+  ......#...
+  ####..#..#
+  ..........
+  .......###
+  ...#######
+  ..........
+  ..........
+  ##......##
+  ##.#..#.##
+  ##......##
+  ##......##
+exits: []
+buildings: []
+props: []
+people:
+- name: Wattson
+  at: [5, 2]
+  role: npc
+- name: Trainer Suzar
+  at: [7, 8]
+  role: trainer
+- name: Trainer Vabeth
+  at: [1, 16]
+  role: trainer
+- name: Trainer Bulen
+  at: [5, 10]
+  role: trainer
+- name: Trainer Katal
+  at: [1, 13]
+  role: trainer
+- name: Gym Guide
+  at: [7, 20]
+  role: npc
+- name: Trainer Alo
+  at: [7, 10]
+  role: trainer
+signs:
+- name: Sign
+  at: [3, 18]
+- name: Sign
+  at: [6, 18]
+warps:
+- name: Door
+  at: [4, 20]
+  to: mos-espa
+- name: Door
+  at: [5, 20]
+  to: mos-espa
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

@@ -1,0 +1,74 @@
+id: bright-tree-arena
+name: BRIGHT TREE ARENA
+planet: ENDOR
+kind: interior
+replaces: FortreeCity_Gym
+status: TODO
+story: ''
+grid: |
+  TTT####TTTT##TT#TT##
+  #T##..##############
+  #T....TTTTT###...###
+  TT.T..TTTT...#...#T#
+  TT.T..............TT
+  TT.T..TTTTTTT.....TT
+  T..#T.TTTTTTTvvvvvTT
+  T..TT...TTTTT.....TT
+  T.......T.T#T.....TT
+  T.TTT......TT.....TT
+  T.TTTT.....TT.....TT
+  TTT##TTTT.T#T.....TT
+  TTTTTTT...TTTvvvvvTT
+  T##TTTT.#.TTT.....TT
+  TTTT.TT...T#T.....TT
+  TTTT.TT..TTTT.....TT
+  TTTT.....TTTT.....TT
+  TT....#.TTT#TvvvvvTT
+  TT.#....TTTTT.....TT
+  TT...T####TTT.....TT
+  TT...#TTTTTTT.....TT
+  TT...TT...T...#..#TT
+  TTT...............TT
+  TTTT....TTTTT.....TT
+  TTTTTTTTTTTTTTT..TTT
+exits: []
+buildings: []
+props: []
+people:
+- name: Winona
+  at: [15, 2]
+  role: npc
+- name: Trainer Jutax
+  at: [4, 14]
+  role: trainer
+- name: Trainer Fiun
+  at: [10, 10]
+  role: trainer
+- name: Trainer Atora
+  at: [5, 17]
+  role: trainer
+- name: Trainer Emek
+  at: [9, 8]
+  role: trainer
+- name: Gym Guide
+  at: [15, 21]
+  role: npc
+- name: Trainer Hoik
+  at: [4, 23]
+  role: trainer
+- name: Trainer Diskax
+  at: [1, 10]
+  role: trainer
+signs:
+- name: Sign
+  at: [14, 21]
+- name: Sign
+  at: [17, 21]
+warps:
+- name: Door
+  at: [15, 24]
+  to: bright-tree
+- name: Door
+  at: [16, 24]
+  to: bright-tree
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

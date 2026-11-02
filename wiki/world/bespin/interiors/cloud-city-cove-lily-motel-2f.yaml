@@ -1,0 +1,48 @@
+id: cloud-city-cove-lily-motel-2f
+name: CLOUD CITY COVE LILY MOTEL 2F
+planet: BESPIN
+kind: interior
+replaces: LilycoveCity_CoveLilyMotel_2F
+status: TODO
+story: ''
+grid: |
+  ############
+  ##.#########
+  ............
+  ..##....##..
+  ..##....##..
+  ............
+  ..##....##..
+  ..##....##..
+  ............
+exits: []
+buildings: []
+props: []
+people:
+- name: Game Designer
+  at: [4, 6]
+  role: npc
+- name: Graphic Artist
+  at: [1, 4]
+  role: npc
+- name: Fat Man
+  at: [7, 7]
+  role: npc
+- name: Programmer
+  at: [10, 3]
+  role: npc
+- name: Game Boy Kid
+  at: [7, 3]
+  role: npc
+- name: Woman
+  at: [4, 4]
+  role: npc
+- name: Scott
+  at: [1, 7]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [2, 1]
+  to: cloud-city-cove-lily-motel-1f
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

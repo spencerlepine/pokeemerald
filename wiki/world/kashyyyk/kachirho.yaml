@@ -1,0 +1,82 @@
+id: kachirho
+name: KACHIRHO
+planet: KASHYYYK
+kind: town
+replaces: DewfordTown
+status: TODO
+story: ''
+pos: [60, 360]
+grid: |
+  T##........~~#TTT.T.
+  T#####.....~~#T#TTTT
+  ######.....~~#T.TT#T
+  .#####.....~~#TT#T.#
+  T.#........~~#TT.TT.
+  #........##~~####TTT
+  .......####~~#######
+  .......####~~~~~####
+  .####..####~~~~~~~~~
+  .####.........~~~~~~
+  .####.....#~~~~.....
+  ....................
+  ................####
+  ................####
+  .....######.....####
+  T....######.......#.
+  T....#######.......T
+  #......###.........#
+  .T...........#..#TT#
+  TTT...........TT.TT.
+exits:
+- edge: north
+  cells: [3, 4, 5, 6, 7, 8, 9, 10, 17, 19]
+  to: route-106
+- edge: east
+  cells: [0, 4, 10, 11, 15, 19]
+  to: route-107
+buildings: []
+props: []
+people:
+- name: Woman
+  at: [7, 12]
+  role: npc
+- name: Briney
+  at: [12, 9]
+  role: npc
+- name: Old Rod Fisherman
+  at: [12, 14]
+  role: npc
+- name: '0x0'
+  at: [12, 8]
+  role: npc
+- name: Trendy Phrase Boy
+  at: [1, 6]
+  role: npc
+signs:
+- name: Sign
+  at: [10, 10]
+- name: Sign
+  at: [11, 16]
+- name: Sign
+  at: [4, 10]
+- name: Sign
+  at: [3, 10]
+- name: Sign
+  at: [2, 4]
+warps:
+- name: Door
+  at: [3, 3]
+  to: kachirho-hall
+- name: Door
+  at: [2, 10]
+  to: kachirho-bacta-center-1f
+- name: Door
+  at: [8, 17]
+  to: kachirho-arena
+- name: Door
+  at: [17, 14]
+  to: kachirho-house-1
+- name: Door
+  at: [8, 8]
+  to: kachirho-house-2
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

@@ -1,0 +1,141 @@
+id: hutt-hideout-b1f
+name: HUTT HIDEOUT B1F
+planet: BESPIN
+kind: interior
+replaces: AquaHideout_B1F
+status: TODO
+story: ''
+grid: |
+  ###################################################
+  ############.#####.##########.#####################
+  ########......#......######.....###########...#####
+  ###.####......#......######.....###########...#####
+  #....##.......#........###.......########.......###
+  #.............#..........#.......########.........#
+  #.............#####################################
+  #....###......############################~~~~~~~##
+  #.............###.##...###...######################
+  #.......###...#...##.....#...############.........#
+  #.............#..........#...######################
+  #.............#..........#....##.#########~~~~~~~##
+  ##########################.......##################
+  ##########################.......########.........#
+  #........................##########################
+  #................##...####################~~~~~~~##
+  ###################...###........##################
+  ##~~~~~~~~~~~~~#.................########.........#
+  ##~~~~~~~~~~~~~#.................########.........#
+  ################.##...####.......##################
+  #................................##################
+  #................................##################
+  ###################################################
+  ###################################################
+exits: []
+buildings: []
+props: []
+people:
+- name: Trainer Roldarg
+  at: [28, 16]
+  role: trainer
+- name: Trainer Roldarg
+  at: [6, 6]
+  role: trainer
+- name: Trainer Roldarg
+  at: [20, 18]
+  role: trainer
+- name: Trainer Roldarg
+  at: [28, 21]
+  role: trainer
+- name: Item
+  at: [29, 12]
+  role: item
+- name: Item
+  at: [15, 9]
+  role: item
+- name: Item
+  at: [16, 9]
+  role: item
+- name: Item
+  at: [15, 10]
+  role: item
+- name: Item
+  at: [16, 10]
+  role: item
+signs: []
+warps:
+- name: Door
+  at: [29, 1]
+  to: hutt-hideout-1f
+- name: Door
+  at: [18, 1]
+  to: hutt-hideout-b2f
+- name: Door
+  at: [12, 1]
+  to: hutt-hideout-b2f
+- name: Door
+  at: [3, 3]
+  to: hutt-hideout-b2f
+- name: Door
+  at: [31, 4]
+  to: hutt-hideout-b1f
+- name: Door
+  at: [27, 4]
+  to: hutt-hideout-b1f
+- name: Door
+  at: [20, 4]
+  to: hutt-hideout-b1f
+- name: Door
+  at: [27, 12]
+  to: hutt-hideout-b1f
+- name: Door
+  at: [3, 15]
+  to: hutt-hideout-b1f
+- name: Door
+  at: [3, 20]
+  to: hutt-hideout-b1f
+- name: Door
+  at: [32, 19]
+  to: hutt-hideout-b1f
+- name: Door
+  at: [23, 10]
+  to: hutt-hideout-b1f
+- name: Door
+  at: [45, 3]
+  to: hutt-hideout-b1f
+- name: Door
+  at: [42, 5]
+  to: hutt-hideout-b1f
+- name: Door
+  at: [45, 5]
+  to: hutt-hideout-b1f
+- name: Door
+  at: [48, 5]
+  to: hutt-hideout-b1f
+- name: Door
+  at: [42, 9]
+  to: hutt-hideout-b1f
+- name: Door
+  at: [45, 9]
+  to: hutt-hideout-b1f
+- name: Door
+  at: [48, 9]
+  to: hutt-hideout-b1f
+- name: Door
+  at: [42, 13]
+  to: hutt-hideout-b1f
+- name: Door
+  at: [45, 13]
+  to: hutt-hideout-b1f
+- name: Door
+  at: [48, 13]
+  to: hutt-hideout-b1f
+- name: Door
+  at: [42, 17]
+  to: hutt-hideout-b1f
+- name: Door
+  at: [45, 17]
+  to: hutt-hideout-b1f
+- name: Door
+  at: [48, 17]
+  to: hutt-hideout-b1f
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

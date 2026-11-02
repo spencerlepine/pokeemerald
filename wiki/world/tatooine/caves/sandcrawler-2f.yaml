@@ -1,0 +1,38 @@
+id: sandcrawler-2f
+name: SANDCRAWLER 2F
+planet: TATOOINE
+kind: dungeon
+replaces: MirageTower_2F
+status: TODO
+story: ''
+grid: |
+  #####################
+  #####################
+  ####.............####
+  ####.............####
+  ##.....#######.#...##
+  ##....##.....##....##
+  ##...##.......##...##
+  ##...##.......##...##
+  ##..###.......##.####
+  ##.#.##.......###..##
+  ##...###.....###..###
+  ##...###########..###
+  ##....#########....##
+  ####.............####
+  ####.............####
+  #.#################.#
+  #.#################.#
+exits: []
+buildings: []
+props: []
+people: []
+signs: []
+warps:
+- name: Door
+  at: [18, 12]
+  to: sandcrawler-3f
+- name: Door
+  at: [15, 2]
+  to: sandcrawler-1f
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

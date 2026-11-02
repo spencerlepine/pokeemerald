@@ -1,0 +1,36 @@
+id: anchorhead-house
+name: ANCHORHEAD HOUSE
+planet: TATOOINE
+kind: interior
+replaces: VerdanturfTown_House
+status: TODO
+story: ''
+grid: |
+  ##########
+  ########..
+  ........##
+  ..........
+  ..##......
+  ..##......
+  ..........
+  ..........
+  .........#
+exits: []
+buildings: []
+props: []
+people:
+- name: Woman1
+  at: [4, 5]
+  role: npc
+- name: Woman2
+  at: [4, 4]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [3, 8]
+  to: anchorhead
+- name: Door
+  at: [4, 8]
+  to: anchorhead
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

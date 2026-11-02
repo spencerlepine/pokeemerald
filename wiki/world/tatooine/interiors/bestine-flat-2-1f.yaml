@@ -1,0 +1,39 @@
+id: bestine-flat-2-1f
+name: BESTINE FLAT 2 1F
+planet: TATOOINE
+kind: interior
+replaces: RustboroCity_Flat2_1F
+status: TODO
+story: ''
+grid: |
+  ##############
+  ###.##########
+  .....#........
+  .....#...##...
+  .....#...##...
+  .....#........
+  .....#..######
+  .....#..######
+  ..............
+exits: []
+buildings: []
+props: []
+people:
+- name: Skitty
+  at: [11, 4]
+  role: npc
+- name: Old Woman
+  at: [8, 4]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [2, 8]
+  to: bestine
+- name: Door
+  at: [3, 8]
+  to: bestine
+- name: Door
+  at: [3, 1]
+  to: bestine-flat-2-2f
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

@@ -1,0 +1,35 @@
+id: asteroid-spire-5f
+name: ASTEROID SPIRE 5F
+planet: ASTEROID FIELD
+kind: dungeon
+replaces: SkyPillar_5F
+status: TODO
+story: ''
+grid: |
+  ##############
+  ###.######.###
+  .....#...#....
+  ..#.....#.....
+  ...#########..
+  #..#########..
+  .#.########..#
+  ...########...
+  ...########...
+  ..#########.#.
+  ...#########..
+  #..########...
+  .........#..#.
+  .#...#........
+exits: []
+buildings: []
+props: []
+people: []
+signs: []
+warps:
+- name: Door
+  at: [3, 1]
+  to: asteroid-spire-4f
+- name: Door
+  at: [10, 1]
+  to: asteroid-spire-top
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

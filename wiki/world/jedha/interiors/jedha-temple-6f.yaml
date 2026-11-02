@@ -1,0 +1,43 @@
+id: jedha-temple-6f
+name: JEDHA TEMPLE 6F
+planet: JEDHA
+kind: interior
+replaces: MtPyre_6F
+status: TODO
+story: ''
+grid: |
+  #############
+  ##.##########
+  #...##......#
+  ....#........
+  ...##...#....
+  #......##...#
+  ##########.##
+  ##########.##
+  #..##.#.##..#
+  ...#.....#...
+  .............
+  ...#.....#...
+  #..##...##..#
+exits: []
+buildings: []
+props: []
+people:
+- name: Trainer Vara
+  at: [6, 3]
+  role: trainer
+- name: Trainer Carir
+  at: [10, 3]
+  role: trainer
+- name: Item
+  at: [6, 9]
+  role: item
+signs: []
+warps:
+- name: Door
+  at: [2, 1]
+  to: jedha-temple-5f
+- name: Door
+  at: [1, 10]
+  to: jedha-temple-5f
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

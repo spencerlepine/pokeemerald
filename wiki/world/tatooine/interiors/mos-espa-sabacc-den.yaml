@@ -1,0 +1,116 @@
+id: mos-espa-sabacc-den
+name: MOS ESPA SABACC DEN
+planet: TATOOINE
+kind: interior
+replaces: MauvilleCity_GameCorner
+status: TODO
+story: ''
+grid: |
+  ######################
+  #####TTT##############
+  ###..###.#.....#..####
+  .........#######......
+  .....................#
+  ......................
+  ..##...##.....##..##..
+  ..##...##.....TT..TT..
+  ..##...##.....##..##..
+  ..##...##.............
+  ......................
+exits: []
+buildings: []
+props: []
+people:
+- name: Woman2
+  at: [12, 7]
+  role: npc
+- name: Gentleman
+  at: [16, 5]
+  role: npc
+- name: Coins Clerk
+  at: [11, 2]
+  role: npc
+- name: Prize Corner Dolls
+  at: [14, 2]
+  role: npc
+- name: Girl
+  at: [7, 3]
+  role: npc
+- name: Pokefan M
+  at: [19, 4]
+  role: npc
+- name: Old Man
+  at: [20, 8]
+  role: npc
+- name: Cook
+  at: [6, 8]
+  role: npc
+- name: Prize Corner TMs
+  at: [13, 2]
+  role: npc
+- name: Man
+  at: [1, 7]
+  role: npc
+- name: Maniac
+  at: [9, 8]
+  role: npc
+- name: Woman
+  at: [4, 6]
+  role: npc
+signs:
+- name: Sign
+  at: [2, 6]
+- name: Sign
+  at: [2, 8]
+- name: Sign
+  at: [2, 9]
+- name: Sign
+  at: [3, 7]
+- name: Sign
+  at: [3, 8]
+- name: Sign
+  at: [3, 9]
+- name: Sign
+  at: [7, 6]
+- name: Sign
+  at: [7, 7]
+- name: Sign
+  at: [7, 9]
+- name: Sign
+  at: [8, 6]
+- name: Sign
+  at: [8, 7]
+- name: Sign
+  at: [8, 9]
+- name: Sign
+  at: [14, 6]
+- name: Sign
+  at: [15, 6]
+- name: Sign
+  at: [14, 7]
+- name: Sign
+  at: [15, 7]
+- name: Sign
+  at: [14, 8]
+- name: Sign
+  at: [15, 8]
+- name: Sign
+  at: [18, 6]
+- name: Sign
+  at: [19, 6]
+- name: Sign
+  at: [18, 7]
+- name: Sign
+  at: [19, 7]
+- name: Sign
+  at: [18, 8]
+- name: Sign
+  at: [19, 8]
+warps:
+- name: Door
+  at: [11, 10]
+  to: mos-espa
+- name: Door
+  at: [12, 10]
+  to: mos-espa
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

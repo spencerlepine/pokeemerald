@@ -1,0 +1,118 @@
+id: pirin-arena-b1f
+name: PIRIN ARENA B1F
+planet: SULLUST
+kind: interior
+replaces: LavaridgeTown_Gym_B1F
+status: TODO
+story: ''
+grid: |
+  #################
+  #################
+  ....#.....#......
+  .................
+  #################
+  #################
+  ....#..#.#...#...
+  ....#..#.#...#...
+  ....#..#.#...#...
+  ....#..#.#...#...
+  ....#..#.#vvv#vvv
+  ....#vv#.#...#...
+  vvvv#..#.#...#...
+  ....#..#.#...#...
+  ....#..#.#...#...
+  ....#..#.#vvv#...
+  .........#...#...
+  .........#.......
+  .........#.......
+exits: []
+buildings: []
+props: []
+people:
+- name: Trainer Jaesh
+  at: [4, 18]
+  role: trainer
+- name: Trainer Kozo
+  at: [3, 6]
+  role: trainer
+- name: Trainer Joan
+  at: [13, 17]
+  role: trainer
+- name: Trainer Etir
+  at: [4, 16]
+  role: trainer
+signs: []
+warps:
+- name: Door
+  at: [10, 18]
+  to: pirin-arena-1f
+- name: Door
+  at: [0, 17]
+  to: pirin-arena-1f
+- name: Door
+  at: [8, 9]
+  to: pirin-arena-1f
+- name: Door
+  at: [5, 14]
+  to: pirin-arena-1f
+- name: Door
+  at: [4, 18]
+  to: pirin-arena-1f
+- name: Door
+  at: [5, 9]
+  to: pirin-arena-1f
+- name: Door
+  at: [2, 15]
+  to: pirin-arena-1f
+- name: Door
+  at: [3, 14]
+  to: pirin-arena-1f
+- name: Door
+  at: [1, 14]
+  to: pirin-arena-1f
+- name: Door
+  at: [0, 10]
+  to: pirin-arena-1f
+- name: Door
+  at: [3, 10]
+  to: pirin-arena-1f
+- name: Door
+  at: [0, 6]
+  to: pirin-arena-1f
+- name: Door
+  at: [3, 6]
+  to: pirin-arena-1f
+- name: Door
+  at: [5, 6]
+  to: pirin-arena-1f
+- name: Door
+  at: [2, 3]
+  to: pirin-arena-1f
+- name: Door
+  at: [5, 2]
+  to: pirin-arena-1f
+- name: Door
+  at: [7, 2]
+  to: pirin-arena-1f
+- name: Door
+  at: [8, 6]
+  to: pirin-arena-1f
+- name: Door
+  at: [10, 6]
+  to: pirin-arena-1f
+- name: Door
+  at: [12, 3]
+  to: pirin-arena-1f
+- name: Door
+  at: [4, 16]
+  to: pirin-arena-1f
+- name: Door
+  at: [14, 6]
+  to: pirin-arena-1f
+- name: Door
+  at: [13, 17]
+  to: pirin-arena-1f
+- name: Door
+  at: [12, 12]
+  to: pirin-arena-1f
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

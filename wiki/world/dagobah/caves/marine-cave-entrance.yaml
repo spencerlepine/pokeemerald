@@ -1,0 +1,38 @@
+id: marine-cave-entrance
+name: MARINE CAVE ENTRANCE
+planet: DAGOBAH
+kind: dungeon
+replaces: MarineCave_Entrance
+status: TODO
+story: ''
+grid: |
+  ####################
+  ##############.#####
+  #############...####
+  ##########......####
+  ##########......####
+  ########........####
+  ########........####
+  ######.....~~~~.####
+  ######....~~~~~.####
+  #####....~~~~~~.####
+  #####...~~~~~~~.####
+  ###....~~~~~~~~...##
+  ###...~~~~~~~~~...##
+  ###..~~~~~~~~~~~..##
+  ###..~~~~~~~~~~~..##
+  ###..~~~~~~~~~~~..##
+  ####.~~~~~~~~~~~####
+  #####~~~~~~~~~######
+  #######~~~~~~#######
+  ####################
+exits: []
+buildings: []
+props: []
+people: []
+signs: []
+warps:
+- name: Door
+  at: [14, 1]
+  to: marine-cave-end
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

@@ -1,0 +1,40 @@
+id: cave-of-evil-b1f
+name: CAVE OF EVIL B1F
+planet: DAGOBAH
+kind: dungeon
+replaces: CaveOfOrigin_B1F
+status: TODO
+story: ''
+grid: |
+  ###################
+  ###################
+  ###################
+  #######.....#######
+  #####.........#####
+  ####...#####...####
+  ####..##.#.##..####
+  ####.###...###.####
+  ####.#.......#.####
+  ####.##..#..##.####
+  ####.#.......#.####
+  ####..##...##..####
+  ####...#.#.#...####
+  #####.........#####
+  ######.......######
+  ###################
+  ###################
+  ###################
+  ###################
+exits: []
+buildings: []
+props: []
+people:
+- name: Wallace
+  at: [9, 13]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [9, 3]
+  to: cave-of-evil-1f
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

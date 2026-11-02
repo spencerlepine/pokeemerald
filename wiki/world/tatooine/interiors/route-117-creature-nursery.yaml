@@ -1,0 +1,33 @@
+id: route-117-creature-nursery
+name: ROUTE 117 CREATURE NURSERY
+planet: TATOOINE
+kind: interior
+replaces: Route117_PokemonDayCare
+status: TODO
+story: ''
+grid: |
+  ############
+  ##.#########
+  ....###.....
+  #####.......
+  ............
+  ..........##
+  #.........##
+  ......#.....
+  #.....######
+exits: []
+buildings: []
+props: []
+people:
+- name: Daycare Woman
+  at: [2, 2]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [2, 8]
+  to: route-117
+- name: Door
+  at: [3, 8]
+  to: route-117
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

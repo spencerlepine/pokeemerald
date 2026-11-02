@@ -1,0 +1,151 @@
+id: route-112
+name: ROUTE 112
+planet: TATOOINE
+kind: route
+replaces: Route112
+status: TODO
+story: ''
+pos: [160, 20]
+grid: |
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  #############TTTTTTTTTTTTTTTTTTTTTTTTTTT
+  #######################TTT.####.TTT""TTT
+  ########################TT......#"""""#T
+  #########################TT....."""""...
+  ###########################......"".....
+  #########T############.##...""".........
+  #########TT###########.....""""""..TT...
+  ##########T##########....."""""#"TTTTTTT
+  ######################T...TT""""TTTTTTTT
+  #########################T##TTTTTTTTTTTT
+  ##########T################TTTTTTTTTTTTT
+  ##########T########T########TTTTTTTTTT##
+  ################T##TT#T####T###TTTTTT###
+  ################T###T#T####T####TTTTT###
+  ######################T.#T#########TT###
+  #####################.T.#TTT########T###
+  ####################.T.##TTTTT##########
+  T###################.###.TTTTT...#######
+  T#####T#############.#..TT..##..T#.#####
+  ###T##T###########T#.#.....####..#######
+  ###T#####T########T#.#..#..######.######
+  #TTT#####T#.######T###..#..######T######
+  #TTT#T#####T#########.T...T#..###T######
+  T####T#TT############T.TTT.......#######
+  T######TT##TT######.#TTTT......TT#.#####
+  ###########TT###..#T#TTT##..##TTT#######
+  ####TT###TT#####TT#T#TT.......T#T##.####
+  TTT#TT###TT#####TT###TT......TT#T##T####
+  TTT#TTTT############.T......T###T#.#####
+  TTTTTTTT#######.####........T#######T###
+  TTTTTT#T###.#####..........TT###TT#.####
+  TTTTTT#T###.###............TT###TT.T####
+  TTTTTTTTT.............#....TT###TTT#####
+  TTTTTTTTT.................TT####TTT#####
+  TTTTTTTTTTT...............######TTT#####
+  TTTTTTTTTTTT#..........#########TTT#####
+  TTTTTTTTTTTT########..#######TT#TTT.####
+  TTTTTTTTTTTTT#######..#######TT.TTTT#TTT
+  TTTTTTTTTTTT>>.Tv###..####"""""TTTTT.TTT
+  TTTTTTTTTTTT>>.>.>.#....."""""""""TTTTTT
+  TTTTTTTTTTTv#>.>.>......."""""""""..TTTT
+  TTTTTT..TT>..>.>.>.....T######T"""......
+  .TTTTT..TT>..>.>.>.....########T........
+  ..TTT...TT>..>.>.>.......#######........
+  ....#....T>..>.>.>............##........
+  ..........>..>.>.>......................
+  ..........>..>.>.>......................
+  ..........>..>.>.>....................T#
+  ..........TTTTTTT>######TTTTTT#####T####
+  T........TTTTTTTTT......TTTTTTTTTTT#####
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT#####
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT#####
+  TTT####TTTTTTTTTTTTTTTTTTTTTT###########
+  T#############TTTTTTTTTTT###############
+  ################TTTTTTTT################
+exits:
+- edge: north
+  cells: []
+  to: route-113
+- edge: west
+  cells: [47, 48, 49, 50, 51, 52, 53]
+  to: pirin
+- edge: east
+  cells: [8, 9, 10, 11, 46, 47, 48, 49, 50, 51]
+  to: route-111
+buildings: []
+props: []
+people:
+- name: Magma Grunts
+  at: [26, 30]
+  role: npc
+- name: Trainer Boun
+  at: [24, 34]
+  role: trainer
+- name: Trainer Leshax
+  at: [29, 49]
+  role: trainer
+- name: Trainer Coys
+  at: [22, 46]
+  role: trainer
+- name: Trainer Tarkar
+  at: [15, 40]
+  role: trainer
+- name: Magma Grunts
+  at: [27, 30]
+  role: npc
+- name: Hiker
+  at: [8, 50]
+  role: npc
+- name: Trainer Bonen
+  at: [31, 7]
+  role: trainer
+- name: Trainer Sinnora
+  at: [31, 11]
+  role: trainer
+- name: Berry tree
+  at: [27, 6]
+  role: berry
+- name: Berry tree
+  at: [28, 6]
+  role: berry
+- name: Berry tree
+  at: [29, 6]
+  role: berry
+- name: Berry tree
+  at: [30, 6]
+  role: berry
+- name: Item
+  at: [14, 43]
+  role: item
+signs:
+- name: Sign
+  at: [19, 44]
+- name: Sign
+  at: [22, 37]
+- name: Sign
+  at: [4, 49]
+warps:
+- name: Door
+  at: [28, 27]
+  to: route-112-shuttle-station
+- name: Door
+  at: [29, 27]
+  to: route-112-shuttle-station
+- name: Door
+  at: [6, 46]
+  to: ashen-pass
+- name: Door
+  at: [7, 46]
+  to: ashen-pass
+- name: Door
+  at: [11, 36]
+  to: magma-tunnels
+- name: Door
+  at: [22, 10]
+  to: magma-tunnels
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

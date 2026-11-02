@@ -1,0 +1,55 @@
+id: yavin-4-launch-tower-2f
+name: YAVIN 4 LAUNCH TOWER 2F
+planet: YAVIN 4
+kind: interior
+replaces: MossdeepCity_SpaceCenter_2F
+status: TODO
+story: ''
+grid: |
+  #..############.
+  #############.##
+  #...............
+  #...............
+  #############...
+  ................
+  ................
+  ..##.##.##.##...
+  ................
+  ................
+exits: []
+buildings: []
+props: []
+people:
+- name: Rich Boy
+  at: [6, 2]
+  role: npc
+- name: Gentleman
+  at: [11, 8]
+  role: npc
+- name: Scientist
+  at: [5, 6]
+  role: npc
+- name: Steven
+  at: [1, 8]
+  role: npc
+- name: Grunt6
+  at: [12, 2]
+  role: npc
+- name: Grunt5
+  at: [13, 3]
+  role: npc
+- name: Grunt7
+  at: [14, 2]
+  role: npc
+- name: Tabitha
+  at: [0, 8]
+  role: npc
+- name: Maxie
+  at: [1, 9]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [13, 1]
+  to: yavin-4-launch-tower-1f
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

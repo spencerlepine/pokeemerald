@@ -1,0 +1,36 @@
+id: bestine-cutters-house
+name: BESTINE CUTTERS HOUSE
+planet: TATOOINE
+kind: interior
+replaces: RustboroCity_CuttersHouse
+status: TODO
+story: ''
+grid: |
+  ###########
+  ###########
+  ...........
+  ...........
+  ........##.
+  ........##.
+  ...........
+  ...........
+  ##.........
+exits: []
+buildings: []
+props: []
+people:
+- name: Cutter
+  at: [7, 5]
+  role: npc
+- name: Lass
+  at: [9, 2]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [5, 8]
+  to: bestine
+- name: Door
+  at: [6, 8]
+  to: bestine
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

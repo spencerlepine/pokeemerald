@@ -1,0 +1,58 @@
+id: jedha-temple-3f
+name: JEDHA TEMPLE 3F
+planet: JEDHA
+kind: interior
+replaces: MtPyre_3F
+status: TODO
+story: ''
+grid: |
+  #############
+  ##.#######.##
+  #....###....#
+  #...#####...#
+  .............
+  #.....#.....#
+  #..#######..#
+  .............
+  ##########...
+  ##########...
+  .......##....
+  ...##..##..##
+  ...##..##..##
+exits: []
+buildings: []
+props: []
+people:
+- name: Trainer San Tekka
+  at: [1, 4]
+  role: trainer
+- name: Trainer Kaeth
+  at: [11, 4]
+  role: trainer
+- name: Trainer Girrena
+  at: [6, 4]
+  role: trainer
+- name: Item
+  at: [0, 7]
+  role: item
+signs: []
+warps:
+- name: Door
+  at: [10, 1]
+  to: jedha-temple-2f
+- name: Door
+  at: [2, 1]
+  to: jedha-temple-4f
+- name: Door
+  at: [9, 10]
+  to: jedha-temple-4f
+- name: Door
+  at: [1, 12]
+  to: jedha-temple-4f
+- name: Door
+  at: [10, 12]
+  to: jedha-temple-2f
+- name: Door
+  at: [6, 12]
+  to: jedha-temple-2f
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

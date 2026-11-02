@@ -1,0 +1,51 @@
+id: republic-wreck-deck
+name: REPUBLIC WRECK DECK
+planet: KASHYYYK
+kind: dungeon
+replaces: AbandonedShip_Deck
+status: TODO
+story: ''
+grid: |
+  #######################
+  ##################T####
+  ##################T##T#
+  ##################T##T#
+  #####T##TTT#######T##T#
+  ######T#TTT#.##########
+  #######.#.....#TTTTTTTT
+  ##########..###........
+  ####TTT###..###TTTTTTTT
+  ####TTT#.#..#.#TTTTTTTT
+  ###...#....#...#.......
+  ########....#...#.#....
+  #############..########
+  TTTTTTTTTTTT#..#TTTTTTT
+  TTTTTTTTTTTT#..#TTTTTTT
+  TTTTTTTTTTTT#..#TTTTTTT
+  #######################
+  #######################
+  ~######################
+  ~~~~~~~~~##############
+  ~~~~~~~~~~~~~~~~~~~~~~~
+exits: []
+buildings: []
+props: []
+people: []
+signs: []
+warps:
+- name: Door
+  at: [13, 15]
+  to: route-108
+- name: Door
+  at: [14, 15]
+  to: route-108
+- name: Door
+  at: [13, 9]
+  to: republic-wreck-corridors-1f
+- name: Door
+  at: [8, 9]
+  to: republic-wreck-corridors-1f
+- name: Door
+  at: [12, 5]
+  to: republic-wreck-captains-office
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

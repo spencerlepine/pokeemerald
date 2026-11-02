@@ -1,0 +1,38 @@
+id: pirin-supply-depot
+name: PIRIN SUPPLY DEPOT
+planet: SULLUST
+kind: interior
+replaces: LavaridgeTown_Mart
+status: TODO
+story: ''
+grid: |
+  ###TTT#####
+  ###TTT#####
+  ..#........
+  ..#.......#
+  ###...##..#
+  ......##..#
+  ......##..#
+  ...........
+exits: []
+buildings: []
+props: []
+people:
+- name: Clerk
+  at: [1, 3]
+  role: npc
+- name: Expert M
+  at: [4, 2]
+  role: npc
+- name: Old Woman
+  at: [9, 5]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [3, 7]
+  to: pirin
+- name: Door
+  at: [4, 7]
+  to: pirin
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

@@ -1,0 +1,35 @@
+id: route-123-berry-masters-house
+name: ROUTE 123 BERRY MASTERS HOUSE
+planet: ENDOR
+kind: interior
+replaces: Route123_BerryMastersHouse
+status: TODO
+story: ''
+grid: |
+  ###########
+  ###########
+  ...........
+  ...........
+  .....##....
+  .....##....
+  ...........
+  #.........#
+exits: []
+buildings: []
+props: []
+people:
+- name: Berry Master
+  at: [4, 4]
+  role: npc
+- name: Berry Masters Wife
+  at: [7, 4]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [3, 7]
+  to: route-123
+- name: Door
+  at: [4, 7]
+  to: route-123
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

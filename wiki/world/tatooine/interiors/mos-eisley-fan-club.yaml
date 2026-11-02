@@ -1,0 +1,59 @@
+id: mos-eisley-fan-club
+name: MOS EISLEY FAN CLUB
+planet: TATOOINE
+kind: interior
+replaces: SlateportCity_PokemonFanClub
+status: TODO
+story: ''
+grid: |
+  ##############
+  ###T######T#TT
+  ####......####
+  ..............
+  ..............
+  ..............
+  .....####.....
+  .....####.....
+  ..............
+  ..............
+  #............#
+exits: []
+buildings: []
+props: []
+people:
+- name: Man
+  at: [11, 4]
+  role: npc
+- name: Twin
+  at: [1, 5]
+  role: npc
+- name: Reporter
+  at: [11, 5]
+  role: npc
+- name: Soothe Bell Woman
+  at: [6, 2]
+  role: npc
+- name: Chairman
+  at: [6, 5]
+  role: npc
+- name: Zigzagoon
+  at: [3, 9]
+  role: npc
+- name: Skitty
+  at: [8, 3]
+  role: npc
+- name: Azumarill
+  at: [10, 8]
+  role: npc
+- name: Swagger Tutor
+  at: [11, 8]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [6, 10]
+  to: mos-eisley
+- name: Door
+  at: [7, 10]
+  to: mos-eisley
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

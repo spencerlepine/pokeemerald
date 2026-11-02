@@ -1,0 +1,273 @@
+id: route-110
+name: ROUTE 110
+planet: TATOOINE
+kind: route
+replaces: Route110
+status: TODO
+story: ''
+pos: [200, 160]
+grid: |
+  TTTTTTTTTTTT.......TTTTTTTTT.TTTTTTT~~~~
+  TTTTTTTTTTT#.......TTTTTTTTTTTTTTTTT~~~~
+  TTTTTTTTTTT.......#TTTTTTTTTTTTTTTTT~~~~
+  TTTTTTTTTTT.......T.TTTTTTTTTTTTTTTT.~~~
+  TTTTTTTTTTT......#T....TTTTTTTTTTTTTT~~~
+  ~TTTTTTTTT#......TT##############TTTT~~~
+  ~TTTTTTTTT.......TT==============TTTT~~~
+  ~TTTTTTTTT.......T#==============#TTT~~~
+  ~TTTTTTTTT.......T#==============#TTT~~~
+  ~TTTTTTTTT.......T#==============#.TT~~~
+  ~TTTTTTTTT.......T#==============#.TT~~~
+  ~TTT.###.........TT#~==~~~===~~=#T.TT~~~
+  ~TTT.............####==#.#===#.#..TTT~~~
+  ~TTT..........######T==T.T===TTTTTTTT..~
+  ~TTT..........#######..###===#T###TTTTT~
+  ~TTT..........#.##.#......===.....TTTTT~
+  ~TTT.........#######....TT===T...TTTTTT~
+  ~TT#.............T.....TTT===TT..TTTTTT~
+  ~TT..............T....TTTT===TTTTTTT##T~
+  ~TT.....TT.T...TT######TT#===#TTTTT####~
+  ~~T...T~~~~~~~~~~~~~~~~~~=====~~~T#####~
+  ~~T...T~~~~~~~~~~~~~~~~~~=====~~~######~
+  ~~T.."T~~~~~~~~~~~~~~~~~~~===~~~~######~
+  ~~T...T~~~~~~~~~..~~~~~~~~===~~~~######~
+  ~~T"..T~~~~~~~~...~~~~~~~~===~~~~##.TT#~
+  ~~T.."T~~~~~~~~#TT~~~~~~~~===~~~~...TT.~
+  ~~T...T~~~~~~~~...~~~~~~~~===~~~~...TTT~
+  ~~T"."T~~~~~~~~~~~~~~~~~~~===~~~~...TTT~
+  ~~T.".T~~~~~~~~~~~~~~~~~~~===~~~~..TTT~~
+  ~~T"."T~~~~~~~~~~~~~~~~~~=====~~~~TTTT~~
+  ~~T.""T~========================~~TTTT~~
+  ~~T"""T~========================~~~##~~~
+  ~~T.""T~~======================~~~~####~
+  ~~T"""T~~~~===~~~~=~~~~~=~~~~~~~~~~~~##~
+  ~~T"""T~~~~===~~~~=~~~~~=~~~~~~~~~~~~~##
+  ~~T"."T~~~~===~~~~~~~~~~~~~~~~~~~~~~~~##
+  ~~T"""T~~~~===~~~~~~~~~~~~~~~~~~~~~~~##~
+  ~~T"".T~~~~===~~~~~~~~~~~~~~~~~~~~~~~##~
+  ~~T""..TTT#...#TTTTTTTTTTTTTTTTTTTTTT#~~
+  ~~T""......===...""."."..""."."""#"."T~~
+  ~~T""""""..===.....".."""".".".""""""T~~
+  ~~T""""""".===.."."..""".""""""""""""T~~
+  ~~#TTTTTTT#===#TTTTTTTTTTTTTTTT""""""T~~
+  ~~~~~~~~~~=====~~~##~~~~~~~~~~~T"""""T~~
+  ~~~~~##~~~=====~~~##~~~~~~~~~~~T.""""T~~
+  ~~~~~##~~~~===~~~##~~~~~~~~~~~~T"."".T~~
+  ~~~~##~~~~~===~~~##~~~~~~...~~~T"""""T~~
+  ~~####~~~~~===~~~~##~~~~~...~~~T"".".T~~
+  ####~~~~~~~===~~~~####~~~~..~~~T"."."T~~
+  ##~~~~~~~~~===~~~~~~##~~~~~~~~~T.""""T~~
+  ~##~~~~~~~=====~~~~~~~##~~~~~~~#.."..#~~
+  ~##~~~~~=#===========~##~~~~~~~~T"."T~~~
+  ~~##~~~~=============~~##~~~~~~~T"".T~~~
+  ~~##~~~~=============~~##~~~~~~~T"."T~~~
+  ~##~~~~===============~##~~~~~~~T.".T~~~
+  ~##~~~~===============~##~~~~~~~T"."T~~~
+  ##~~~~~~=============~~~##~~~~~~T...T~~~
+  ####~~~~=============~~~##~~~~~~T...T~~~
+  ~~##~~~~=============~~##~~~~~~~T"".T~~~
+  ####~~~~~~~=~~~~===~~~~##~~~~~~~T"."T~~~
+  #####~~~~~~=~~~~===~~~~##~~~~~~~T...T~~~
+  ####..~~~~###~~~===~~~~##~~~~~~~T"."T~~~
+  ###.###..#####~~===~~~##~~~~~~~~T.".T~~~
+  #######TT#####~~===~~~##~~~~~~~~T"."T~~~
+  TTTTTTTTT#####~=====~##~~~~~~~~~T"".T~~~
+  TTTTTTTTT#####~=====~##~~~~~~~#T"""."T#~
+  TTTTTTTT.#####~~===~~~##~~~~~~T"".""""T~
+  ....TTT.#....T~~===~~~##~~~~~~T"""""".T~
+  ..............T#...#TTTTTT..TT""""""""T~
+  ................===...."".""""."."."""T~
+  ................===......".".""""""".#T~
+  ................===..."...".""..."""..T~
+  TTTTTT......TTT=====TTTTTTTTTTT....TTT#~
+  TTTTTTTT....~~~=====~~~~~~~~~~~~~~~~##~~
+  TTTTTTTT....~~~~===~~~~~~~~~~~~~~~~~##~~
+  TTTTTTTT....~~~~===~~~~~~~~~~~~~~~~~##~~
+  TTTTTTT....T~~~=====~~~~~~~~~~~~~~~~####
+  TTTTTTTT...T~==================~~~~~~~##
+  TTTTTTTT...T~==================~~~~~~~##
+  TTTTTTT#...T~~=================~~~~~~~##
+  TTTTTTT....T~~~~~=~~~~=~~~~===~~~~~~~##~
+  TTTTTTT....T~~~~~=~~~~=~~~~===~~~~~~~##~
+  TTTTTTT....T~~~~~~~~~~~~~~~===~~~~~~~~##
+  TTTTTTT....T~~~~~~~~~~~~~~=====~~~~~~~##
+  TTTTTTT....T~~~~~~~~~~==============~~##
+  TTTTTTT....#########~~==============~.##
+  TTTTTTT........######================T~~
+  TTTTTTTT.......#.##.##==============#T~~
+  TTTTTTTT......########==============#T~~
+  TTTTTTTT..........T..T#=~~~~==~~~~=#TT~~
+  TTTTTTTT..........T....#...#==#...#..T~~
+  TTTTTTTT..........T........T==TT..T.TT~~
+  TTTTTTTT..........T............####TTT~~
+  TTTTTTTT."""".....#####T........#..TTT~~
+  TTTTTTTTT"""""......#..T...........TTT~~
+  TTTTTTTTT."""""........T..........TTTT~~
+  TTTTTTTTTT.""""........###TTTTTTTTTTTT~~
+  TTTTTTTTTTT..""...........TTTTTTTTTTTT~~
+  TTTTTTTTTTTTT..........TTTTTTTTTTTTT~~~~
+  TTTTTTTTTTTTTTT......TTTTTTTTTTTTTTT~~~~
+exits:
+- edge: north
+  cells: [12, 13, 14, 15, 16, 17, 18, 28]
+  to: mos-espa
+- edge: south
+  cells: [15, 16, 17, 18, 19, 20]
+  to: mos-eisley
+- edge: west
+  cells: [67, 68, 69, 70, 71]
+  to: route-103
+buildings: []
+props: []
+people:
+- name: Boy2
+  at: [17, 90]
+  role: npc
+- name: Cycling Guy2
+  at: [29, 79]
+  role: npc
+- name: Old Woman
+  at: [14, 69]
+  role: npc
+- name: Cycling Guy1
+  at: [9, 57]
+  role: npc
+- name: Old Man
+  at: [10, 11]
+  role: npc
+- name: Cycling Girl1
+  at: [27, 24]
+  role: npc
+- name: Boy1
+  at: [15, 7]
+  role: npc
+- name: Trainer Jemi
+  at: [16, 73]
+  role: trainer
+- name: Trainer Anun
+  at: [19, 31]
+  role: trainer
+- name: Trainer Aki
+  at: [30, 31]
+  role: trainer
+- name: Trainer Bonnir
+  at: [16, 55]
+  role: trainer
+- name: Trainer Esal
+  at: [3, 39]
+  role: trainer
+- name: Trainer Jenneth
+  at: [33, 15]
+  role: trainer
+- name: Trainer Ezal
+  at: [34, 40]
+  role: trainer
+- name: Trainer Dolar
+  at: [10, 19]
+  role: trainer
+- name: Challenge Guy
+  at: [27, 92]
+  role: npc
+- name: Aqua Grunt1
+  at: [7, 83]
+  role: npc
+- name: Aqua Grunt2
+  at: [8, 83]
+  role: npc
+- name: Aqua Grunt3
+  at: [9, 83]
+  role: npc
+- name: Aqua Grunt4
+  at: [10, 83]
+  role: npc
+- name: '0x0'
+  at: [8, 82]
+  role: npc
+- name: Trainer Clegg
+  at: [21, 78]
+  role: trainer
+- name: '0x0'
+  at: [34, 54]
+  role: npc
+- name: '0x0'
+  at: [34, 54]
+  role: npc
+- name: Trainer Tiesh
+  at: [33, 69]
+  role: trainer
+- name: Trainer Ihgara
+  at: [10, 76]
+  role: trainer
+- name: Trainer Kavon
+  at: [7, 76]
+  role: trainer
+- name: Trainer Alna
+  at: [10, 39]
+  role: trainer
+- name: Trainer Jixar
+  at: [36, 40]
+  role: trainer
+- name: '0x0'
+  at: [9, 79]
+  role: npc
+- name: Berry tree
+  at: [5, 11]
+  role: berry
+- name: Berry tree
+  at: [6, 11]
+  role: berry
+- name: Berry tree
+  at: [7, 11]
+  role: berry
+- name: Item
+  at: [30, 69]
+  role: item
+- name: Item
+  at: [26, 47]
+  role: item
+- name: Item
+  at: [6, 38]
+  role: item
+signs:
+- name: Sign
+  at: [15, 25]
+- name: Sign
+  at: [9, 51]
+- name: Sign
+  at: [14, 88]
+- name: Sign
+  at: [20, 94]
+- name: Sign
+  at: [7, 79]
+- name: Sign
+  at: [3, 17]
+- name: Sign
+  at: [33, 39]
+- name: Sign
+  at: [37, 70]
+- name: Sign
+  at: [8, 67]
+- name: Sign
+  at: [32, 93]
+- name: Sign
+  at: [13, 16]
+warps:
+- name: Door
+  at: [35, 24]
+  to: espa-generator-entrance
+- name: Door
+  at: [11, 66]
+  to: route-110-puzzle-house-entrance
+- name: Door
+  at: [15, 16]
+  to: route-110-seaside-cycling-road-north-entrance
+- name: Door
+  at: [18, 16]
+  to: route-110-seaside-cycling-road-north-entrance
+- name: Door
+  at: [16, 88]
+  to: route-110-seaside-cycling-road-south-entrance
+- name: Door
+  at: [19, 88]
+  to: route-110-seaside-cycling-road-south-entrance
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

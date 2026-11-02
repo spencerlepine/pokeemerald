@@ -1,0 +1,43 @@
+id: route-114-fossil-maniacs-house
+name: ROUTE 114 FOSSIL MANIACS HOUSE
+planet: SULLUST
+kind: interior
+replaces: Route114_FossilManiacsHouse
+status: TODO
+story: ''
+grid: |
+  ##########
+  ####.#####
+  .......##.
+  .....##...
+  .##.......
+  .##.......
+  ..........
+  ..........
+exits: []
+buildings: []
+props: []
+people:
+- name: Fossil Maniacs Brother
+  at: [3, 2]
+  role: npc
+signs:
+- name: Sign
+  at: [5, 3]
+- name: Sign
+  at: [6, 3]
+- name: Sign
+  at: [7, 2]
+- name: Sign
+  at: [8, 2]
+warps:
+- name: Door
+  at: [4, 7]
+  to: route-114
+- name: Door
+  at: [5, 7]
+  to: route-114
+- name: Door
+  at: [4, 1]
+  to: route-114-fossil-maniacs-tunnel
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

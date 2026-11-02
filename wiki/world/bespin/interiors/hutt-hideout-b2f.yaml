@@ -1,0 +1,87 @@
+id: hutt-hideout-b2f
+name: HUTT HIDEOUT B2F
+planet: BESPIN
+kind: interior
+replaces: AquaHideout_B2F
+status: TODO
+story: ''
+grid: |
+  ##############################...#
+  ############.#####.###############
+  #########.....#.....####..####...#
+  ###.###.......#.....####..####...#
+  #.....#.......#.....####..####...#
+  #.....#.......#......##....##....#
+  #.##..#....####..................#
+  #.###.#.......#..##..............#
+  #.###.#.......#..##.###..#####...#
+  #.....#.......#......##..##.##...#
+  ###############..................#
+  ###############..................#
+  #.............#........#.........#
+  #.............#.......##.........#
+  #.............#......#############
+  ###############......#############
+  #~~~~~~~~~~~~~.#########.........#
+  #~~~~~~~~~~~~~~~~~~~~~~#.........#
+  #~~~~~~~~~~~~~~~~~~~~~~#.....#####
+  #~~~~~~~~~~~~~~~~~~~~~~......#####
+  #~~~~~~~~~~~~~~~~~~~~~~#.....##..#
+  #~~~~~~~~~~~~~~~~~~~~~~#.........#
+  #~~~~~~~~~~~~~~~~~~~~~~###########
+  ##################################
+exits: []
+buildings: []
+props: []
+people:
+- name: Matt
+  at: [23, 19]
+  role: npc
+- name: Trainer Roldarg
+  at: [23, 10]
+  role: trainer
+- name: '0x0'
+  at: [19, 20]
+  role: npc
+- name: Trainer Roldarg
+  at: [7, 5]
+  role: trainer
+- name: Trainer Roldarg
+  at: [13, 5]
+  role: trainer
+- name: Item
+  at: [3, 13]
+  role: item
+signs: []
+warps:
+- name: Door
+  at: [18, 1]
+  to: hutt-hideout-b1f
+- name: Door
+  at: [12, 1]
+  to: hutt-hideout-b1f
+- name: Door
+  at: [3, 3]
+  to: hutt-hideout-b1f
+- name: Door
+  at: [31, 8]
+  to: hutt-hideout-b2f
+- name: Door
+  at: [8, 8]
+  to: hutt-hideout-b2f
+- name: Door
+  at: [5, 8]
+  to: hutt-hideout-b2f
+- name: Door
+  at: [18, 13]
+  to: hutt-hideout-b2f
+- name: Door
+  at: [12, 13]
+  to: hutt-hideout-b2f
+- name: Door
+  at: [31, 17]
+  to: hutt-hideout-b2f
+- name: Door
+  at: [32, 20]
+  to: hutt-hideout-b1f
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

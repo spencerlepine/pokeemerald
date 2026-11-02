@@ -1,0 +1,53 @@
+id: grand-arena-battle-pike-lobby
+name: GRAND ARENA BATTLE PIKE LOBBY
+planet: GRAND ARENA
+kind: interior
+replaces: BattleFrontier_BattlePikeLobby
+status: TODO
+story: ''
+grid: |
+  ###########
+  ###########
+  ###########
+  ###.#.#.###
+  ...#...#...
+  ....#.#....
+  ...........
+  .#.......#.
+  #..#...#..#
+  ...........
+  .#.......#.
+  ...........
+  ...#...#...
+exits: []
+buildings: []
+props: []
+people:
+- name: Attendant
+  at: [5, 5]
+  role: npc
+- name: Hiker
+  at: [10, 9]
+  role: npc
+- name: Twin
+  at: [0, 5]
+  role: npc
+- name: Beauty
+  at: [8, 9]
+  role: npc
+signs:
+- name: Sign
+  at: [8, 3]
+- name: Sign
+  at: [1, 3]
+warps:
+- name: Door
+  at: [5, 12]
+  to: grand-arena-outside-west
+- name: Door
+  at: [4, 12]
+  to: grand-arena-outside-west
+- name: Door
+  at: [6, 12]
+  to: grand-arena-outside-west
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

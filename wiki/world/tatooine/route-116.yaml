@@ -1,0 +1,151 @@
+id: route-116
+name: ROUTE 116
+planet: TATOOINE
+kind: route
+replaces: Route116
+status: TODO
+story: ''
+pos: [40, 120]
+grid: |
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT.###########################################################
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT.###########################################################
+  TTTTTTTTTTTTTT..<.####.TTTTTTTTTTTTTTTTTT###########################################################
+  TTTTTTTTTTTTTT..<......TTTTTTTTTTTTTTTTTT###########################################################
+  TTTTTT..........<......TT......TTTTTTTTTT###########################################################
+  TTTTTT......"...<T....TTT.TT.T.TT.TT###################################...##########################
+  TT......."."."..<.T.T..........TT..T#####.#############################.....########################
+  TT......".""""""#vvvvT...T...T.....T#####.###########....############............###################
+  ........TT""""""""...<T..TTT.T.....T#####..####.#####.##################.####.....##################
+  ......TTTT"""""""."..<.T....T..TTTT.....#.......#.#.....##############...######...##################
+  .....#TTTTTT""""."...<.T.T..T#....................##....#########.###....##...######################
+  ......TTTTTT"""."....<....T....T..T................#.##.########....####.###########################
+  ....."TTTTTTTTTT#....#vvvvvvvvvvvvvv..................#.########................####################
+  ....".""TTTTTTTT........""""""""".."..................#.########................####################
+  TT..."""""""""TT......."."""..""""".".....TTTTTTTT....#.....####TTTTTTTT.....T######################
+  TT..".""""""""TT........""""."""""""......TTTTTTTT....###....###TTTTTTTTT###########################
+  TTTT.""""""""..........""""""""".."."...TTTTTTTTTTTT....#....#TTTTTTTTTT#########################.##
+  TTTT""""""."."........".".."""".."""....TTTTTTTTTTTT....######TTTTTTTTTT############################
+  TTTTTTTTTTTT"."........"""."TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT############################
+  TTTTTTTTTTTT........."""""""TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT############################
+exits:
+- edge: south
+  cells: []
+  to: anchorhead
+- edge: west
+  cells: [8, 9, 10, 11, 12, 13]
+  to: bestine
+buildings: []
+props: []
+people:
+- name: Trainer Jios
+  at: [12, 7]
+  role: trainer
+- name: Event Script_Cut Tree
+  at: [21, 6]
+  role: npc
+- name: Event Script_Cut Tree
+  at: [32, 10]
+  role: npc
+- name: Trainer Jiar
+  at: [13, 17]
+  role: trainer
+- name: Briney
+  at: [46, 9]
+  role: npc
+- name: Event Script_Cut Tree
+  at: [28, 11]
+  role: npc
+- name: Trainer Cobax
+  at: [36, 17]
+  role: trainer
+- name: Event Script_Cut Tree
+  at: [24, 9]
+  role: npc
+- name: Trainer Javila
+  at: [26, 6]
+  role: trainer
+- name: Trainer Kanena
+  at: [22, 16]
+  role: trainer
+- name: Trainer Jobon
+  at: [28, 8]
+  role: trainer
+- name: Devon Employee
+  at: [46, 11]
+  role: npc
+- name: Wandas Boyfriend
+  at: [38, 9]
+  role: npc
+- name: Glasses Man
+  at: [74, 13]
+  role: npc
+- name: Trainer Solila
+  at: [33, 8]
+  role: trainer
+- name: Trainer Dessus
+  at: [33, 5]
+  role: trainer
+- name: Event Script_Cut Tree
+  at: [30, 5]
+  role: npc
+- name: Trainer Javir
+  at: [36, 13]
+  role: trainer
+- name: Trainer Dedar
+  at: [42, 13]
+  role: trainer
+- name: Berry tree
+  at: [18, 2]
+  role: berry
+- name: Berry tree
+  at: [19, 2]
+  role: berry
+- name: Item
+  at: [19, 6]
+  role: item
+- name: Item
+  at: [10, 17]
+  role: item
+- name: Berry tree
+  at: [20, 2]
+  role: berry
+- name: Berry tree
+  at: [21, 2]
+  role: berry
+- name: Item
+  at: [80, 8]
+  role: item
+- name: Item
+  at: [55, 12]
+  role: item
+- name: Item
+  at: [34, 7]
+  role: item
+signs:
+- name: Sign
+  at: [5, 10]
+- name: Sign
+  at: [48, 9]
+- name: Sign
+  at: [40, 9]
+- name: Sign
+  at: [16, 12]
+- name: Sign
+  at: [29, 10]
+warps:
+- name: Door
+  at: [47, 8]
+  to: beggar-s-canyon
+- name: Door
+  at: [38, 8]
+  to: route-116-tunnelers-rest-house
+- name: Door
+  at: [65, 10]
+  to: beggar-s-canyon
+- name: Door
+  at: [59, 13]
+  to: terra-cave-entrance
+- name: Door
+  at: [79, 6]
+  to: terra-cave-entrance
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

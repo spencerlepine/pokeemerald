@@ -1,0 +1,62 @@
+id: grand-arena-battle-palace-corridor
+name: GRAND ARENA BATTLE PALACE CORRIDOR
+planet: GRAND ARENA
+kind: interior
+replaces: BattleFrontier_BattlePalaceCorridor
+status: TODO
+story: ''
+grid: |
+  ################.
+  ####.#######.####
+  ####.#.###.#.####
+  ######.###.######
+  .................
+  .".".........".".
+  ~~~.".......".~~~
+  ~~~"........".~~~
+  ~~~"........."~~~
+  ~~~.".......".~~~
+  ~~~"........."~~~
+  ~~~"........".~~~
+  ~~~.".......".~~~
+  .................
+exits: []
+buildings: []
+props: []
+people:
+- name: '0x0'
+  at: [8, 12]
+  role: npc
+- name: '0x0'
+  at: [3, 5]
+  role: npc
+- name: '0x0'
+  at: [12, 6]
+  role: npc
+- name: '0x0'
+  at: [15, 5]
+  role: npc
+- name: '0x0'
+  at: [4, 9]
+  role: npc
+- name: '0x0'
+  at: [13, 9]
+  role: npc
+- name: '0x0'
+  at: [3, 10]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [8, 13]
+  to: grand-arena-battle-palace-lobby
+- name: Door
+  at: [9, 13]
+  to: grand-arena-battle-palace-lobby
+- name: Door
+  at: [6, 3]
+  to: grand-arena-battle-palace-battle-room
+- name: Door
+  at: [10, 3]
+  to: grand-arena-battle-palace-battle-room
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

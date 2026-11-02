@@ -1,0 +1,36 @@
+id: cloud-city-cove-lily-motel-1f
+name: CLOUD CITY COVE LILY MOTEL 1F
+planet: BESPIN
+kind: interior
+replaces: LilycoveCity_CoveLilyMotel_1F
+status: TODO
+story: ''
+grid: |
+  ############
+  ##.#########
+  ............
+  ............
+  ..##....##..
+  ..##....##..
+  ............
+  ............
+  ............
+exits: []
+buildings: []
+props: []
+people:
+- name: Motel Owner
+  at: [10, 3]
+  role: npc
+signs: []
+warps:
+- name: Door
+  at: [5, 8]
+  to: cloud-city
+- name: Door
+  at: [6, 8]
+  to: cloud-city
+- name: Door
+  at: [2, 1]
+  to: cloud-city-cove-lily-motel-2f
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

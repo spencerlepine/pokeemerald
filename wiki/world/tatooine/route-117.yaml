@@ -1,0 +1,123 @@
+id: route-117
+name: ROUTE 117
+planet: TATOOINE
+kind: route
+replaces: Route117
+status: TODO
+story: ''
+pos: [140, 140]
+grid: |
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT...TT.."........"".........
+  TTTTTTTT..""TTTTTT....~~~~~~~TTTT#.#.T...."....T."""".......
+  TTTTTTTT""""""".......~~~~~~~~TT####.#T.""....."............
+  TTTTTTT########.......~~~~~~~~~T#..###.""...."....####..T...
+  TTTTTTTT......T.......~~~~~~~~~T####.."."T........####......
+  TTTTTTTT......T...........~~~~~TTTTTTTTTTTTTTTT.T#####TTTTTT
+  .TTTTT.T......T.#.........~~~~~.............................
+  #########....##.............~~~.............................
+  ............................................................
+  .......................................TTTTTTTT.............
+  ....................~~~................TTTTTTTT.............
+  ....................~~~~..............TTTTTTTTTT............
+  ....................~~~~~~............TTTTTTTTTT.#..........
+  ##TTTT#####...###.""~~~~~~............TT.###.TT...........TT
+  ..TTTT..T.......T"""~~~~~~~~."""......TT.....TT........TTTTT
+  .TTTTTTTT.......T"""~~~~~~~~"""""....................TTTTTTT
+  TTTTTTTTT.......T"""~~~~~~~~""""""...................TTTTTTT
+  TTTTTTTT#.#######TTT~~~~~~~~""""""".................TTTTTTTT
+  TTT..............TTT.TTTTTT.TT"""""................TTTTTTTTT
+  TTTT.TTTTT.TTTTT.TTTTTTTTTTTTTTT"""..TTTTTTTTTTT..TTTTTTTTTT
+exits:
+- edge: west
+  cells: [6, 8, 9, 10, 11, 12, 14, 15]
+  to: anchorhead
+- edge: east
+  cells: [0, 1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12]
+  to: mos-espa
+buildings: []
+props: []
+people:
+- name: Woman
+  at: [13, 13]
+  role: npc
+- name: Little Boy
+  at: [25, 5]
+  role: npc
+- name: Daycare Man
+  at: [47, 4]
+  role: npc
+- name: '0x0'
+  at: [33, 3]
+  role: npc
+- name: '0x0'
+  at: [39, 4]
+  role: npc
+- name: '0x0'
+  at: [42, 2]
+  role: npc
+- name: '0x0'
+  at: [49, 2]
+  role: npc
+- name: Trainer Dadir
+  at: [38, 16]
+  role: trainer
+- name: Trainer Loys
+  at: [8, 10]
+  role: trainer
+- name: Trainer Malakili
+  at: [33, 11]
+  role: trainer
+- name: Event Script_Cut Tree
+  at: [15, 2]
+  role: npc
+- name: Trainer Mobora
+  at: [26, 13]
+  role: trainer
+- name: Trainer Damesh
+  at: [17, 12]
+  role: trainer
+- name: Trainer Meg
+  at: [43, 6]
+  role: trainer
+- name: Trainer Anna
+  at: [42, 6]
+  role: trainer
+- name: Girl
+  at: [48, 10]
+  role: npc
+- name: Trainer Beski
+  at: [15, 4]
+  role: trainer
+- name: Trainer Ahbila
+  at: [21, 4]
+  role: trainer
+- name: Trainer Menna
+  at: [16, 4]
+  role: trainer
+- name: Berry tree
+  at: [41, 13]
+  role: berry
+- name: Berry tree
+  at: [42, 13]
+  role: berry
+- name: Berry tree
+  at: [43, 13]
+  role: berry
+- name: Item
+  at: [16, 18]
+  role: item
+- name: Item
+  at: [9, 1]
+  role: item
+signs:
+- name: Sign
+  at: [16, 6]
+- name: Sign
+  at: [49, 12]
+- name: Sign
+  at: [49, 5]
+warps:
+- name: Door
+  at: [51, 5]
+  to: route-117-creature-nursery
+todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
