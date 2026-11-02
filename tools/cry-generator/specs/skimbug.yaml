@@ -1,0 +1,22 @@
+name: skimbug
+slot: surskit
+brief: "SKIMBUG: creature call that fits its look and size. Pond-skating swamp bug."
+kind: creature
+size: 0.12
+seed: 191
+master: {tilt_db: -3}
+layers:
+  # Swamp-bug DNA (chittering narrow-pulse voice ee->i->e, fast flutter, tick clicks): a pond
+  # skater's tick-tick on the water and a quick chirring "tsrrip".
+  - type: click
+    times: [0, 0.04, 0.08, 0.36, 0.41]
+    gain: 0.45
+  - type: voice
+    at: 0.1
+    pitch: [[0, 500], [0.08, 680], [0.26, 560]]
+    source: {tri: 0.7, pulse: 0.4, pulse_width: 0.2, noise: 0.1}
+    vowels: [[0, e], [0.08, i], [0.27, e]]
+    formant_scale: 0.75
+    env: [[0, 0], [0.01, 1], [0.18, 0.75], [0.27, 0]]
+    vibrato: {rate: 40, depth: 0.06}
+    jitter: 0.02

@@ -1,0 +1,36 @@
+name: duraslug
+slot: onix
+brief: "DURASLUG: creature call that fits its look and size. Rock-eating duracrete slug."
+kind: creature
+size: 0.9
+seed: 201
+layers:
+  # Duracrete-slug DNA (slow low stepped saw+square moan u->o->aw, grinding rock noise): a crunch
+  # of chewed duracrete and a long, sagging, cavernous moan.
+  - type: click
+    times: [0, 0.05, 0.1]
+    gain: 0.55
+  - type: noise
+    band: [[0, 1500], [0.4, 800]]
+    q: 1
+    env: [[0, 0], [0.02, 0.7], [0.2, 0.3], [0.45, 0]]
+    gain: 0.45
+  - type: voice
+    at: 0.05
+    pitch: [[0, 160], [0.25, 240], [0.75, 210], [1.1, 130]]
+    pitch_step: 0.05
+    source: {saw: 0.8, square: 0.4, noise: 0.15}
+    vowels: [[0, u], [0.25, o], [0.7, aw], [1.1, u]]
+    env: [[0, 0], [0.08, 1], [0.8, 0.8], [1.1, 0]]
+    growl: 0.45
+    growl_rate: 20
+    jitter: 0.02
+    drive: 2
+  - type: voice
+    at: 0.12
+    pitch: [[0, 480], [0.25, 700], [0.7, 640], [0.95, 420]]
+    pitch_step: 0.05
+    source: {saw: 0.8, square: 0.4, noise: 0.15}
+    vowels: [[0, o], [0.3, a], [0.95, o]]
+    env: [[0, 0], [0.1, 0.6], [0.7, 0.45], [0.97, 0]]
+    gain: 0.45

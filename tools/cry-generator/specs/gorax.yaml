@@ -1,0 +1,44 @@
+name: gorax
+slot: ursaring
+brief: "GORAX: creature call that fits its look and size. Giant gorax of Endor's mountains."
+kind: creature
+size: 0.9
+seed: 222
+master: {tilt_db: 6, highpass: 220}
+layers:
+  # Gorax DNA at mountain-giant size: a thundering chest-growl roar "MWAAR" that rolls on, then
+  # a second huffing growl and a heavy breath.
+  - type: voice
+    pitch: [[0, 150], [0.12, 240], [0.55, 210], [0.85, 140]]
+    source: {saw: 0.8, pulse: 0.5, pulse_width: 0.35, noise: 0.1}
+    vowels: [[0, m], [0.1, a], [0.5, o], [0.85, rr]]
+    env: [[0, 0], [0.02, 1], [0.6, 0.85], [0.87, 0]]
+    growl: 0.65
+    growl_rate: 22
+    jitter: 0.035
+    drive: 2.8
+  - type: voice
+    at: 0.04
+    pitch: [[0, 440], [0.12, 680], [0.5, 600], [0.8, 400]]
+    source: {saw: 0.8, pulse: 0.5, pulse_width: 0.35, noise: 0.1}
+    vowels: [[0, a], [0.5, aw], [0.8, rr]]
+    env: [[0, 0], [0.04, 0.8], [0.5, 0.6], [0.82, 0]]
+    growl: 0.3
+    growl_rate: 30
+    gain: 0.75
+  - type: voice
+    at: 0.92
+    pitch: [[0, 170], [0.1, 220], [0.35, 150]]
+    source: {saw: 0.8, pulse: 0.5, pulse_width: 0.35, noise: 0.1}
+    vowels: [[0, m], [0.1, o], [0.35, rr]]
+    env: [[0, 0], [0.02, 0.8], [0.25, 0.6], [0.36, 0]]
+    growl: 0.6
+    growl_rate: 22
+    jitter: 0.03
+    drive: 2.5
+  - type: noise
+    at: 1.2
+    band: [1100]
+    q: 1
+    env: [[0, 0], [0.03, 0.35], [0.2, 0]]
+    gain: 0.25

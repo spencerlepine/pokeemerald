@@ -1,0 +1,38 @@
+name: steelslug
+slot: steelix
+brief: "STEELSLUG: creature call that fits its look and size. Duracrete slug with a durasteel hide."
+kind: creature
+size: 1
+seed: 202
+layers:
+  # Duracrete-slug DNA with a durasteel hide: the same cavernous moan, lower and longer, with a
+  # grinding metal-plate servo screech riding on it and a final clank.
+  - type: click
+    times: [0, 0.05, 0.1]
+    gain: 0.6
+  - type: noise
+    band: [[0, 1400], [0.4, 700]]
+    q: 1
+    env: [[0, 0], [0.02, 0.7], [0.2, 0.3], [0.45, 0]]
+    gain: 0.45
+  - type: voice
+    at: 0.04
+    pitch: [[0, 130], [0.28, 200], [0.88, 180], [1.32, 110]]
+    pitch_step: 0.06
+    source: {saw: 0.8, square: 0.4, noise: 0.15}
+    vowels: [[0, u], [0.28, o], [0.8, aw], [1.32, u]]
+    env: [[0, 0], [0.08, 1], [0.96, 0.8], [1.33, 0]]
+    growl: 0.55
+    growl_rate: 18
+    jitter: 0.02
+    drive: 2.3
+  - type: servo
+    at: 0.12
+    pitch: [[0, 300], [0.32, 520], [0.8, 470], [1.12, 260]]
+    harmonics: [1, 0.3, 0.7, 0.2, 0.5, 0.15, 0.35]
+    env: [[0, 0], [0.12, 0.6], [0.8, 0.5], [1.14, 0]]
+    grit: 0.6
+    gain: 0.5
+  - type: click
+    times: [1.36, 1.4]
+    gain: 0.45

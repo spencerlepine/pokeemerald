@@ -1,0 +1,30 @@
+name: wompmaw
+slot: raticate
+brief: "WOMPMAW: creature call that fits its look and size. Huge womp rat with gnawing fangs."
+kind: creature
+size: 0.35
+seed: 212
+master: {rms: 0.3}
+layers:
+  # Womp-rat DNA, bigger: gnawing fang clicks and a lower, hissing, chattering squeal "skrreeee"
+  # with a growl in it.
+  - type: click
+    times: [0, 0.03, 0.06]
+    gain: 0.5
+  - type: voice
+    at: 0.06
+    pitch: [[0, 520], [0.05, 760], [0.25, 640], [0.36, 480]]
+    source: {saw: 0.7, pulse: 0.5, pulse_width: 0.25, noise: 0.15}
+    vowels: [[0, i], [0.06, ee], [0.25, ae], [0.37, rr]]
+    formant_scale: 0.8
+    env: [[0, 0], [0.008, 1], [0.25, 0.75], [0.37, 0]]
+    growl: 0.35
+    growl_rate: 55
+    jitter: 0.03
+    drive: 2.3
+  - type: noise
+    at: 0.3
+    band: [2400]
+    q: 1.6
+    env: [[0, 0], [0.02, 0.35], [0.13, 0]]
+    gain: 0.25

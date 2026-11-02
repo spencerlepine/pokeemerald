@@ -1,0 +1,31 @@
+name: womprat
+slot: rattata
+brief: "WOMPRAT: creature call that fits its look and size. Womp rat, about two meters."
+kind: creature
+size: 0.15
+seed: 211
+master: {tilt_db: -3}
+layers:
+  # Womp-rat DNA (saw+pulse squeal i->ee->e, gnawing clicks, hiss): two quick, sharp squeaks
+  # "skee-skee" after a gnaw.
+  - type: click
+    times: [0, 0.03]
+    gain: 0.45
+  - type: voice
+    at: 0.04
+    pitch: [[0, 700], [0.04, 950], [0.12, 780]]
+    source: {saw: 0.7, pulse: 0.5, pulse_width: 0.25, noise: 0.15}
+    vowels: [[0, i], [0.05, ee], [0.13, e]]
+    formant_scale: 0.75
+    env: [[0, 0], [0.006, 1], [0.09, 0.8], [0.13, 0]]
+    jitter: 0.025
+    drive: 2
+  - type: voice
+    at: 0.2
+    pitch: [[0, 720], [0.04, 980], [0.14, 720]]
+    source: {saw: 0.7, pulse: 0.5, pulse_width: 0.25, noise: 0.15}
+    vowels: [[0, i], [0.05, ee], [0.15, e]]
+    formant_scale: 0.75
+    env: [[0, 0], [0.006, 1], [0.1, 0.8], [0.15, 0]]
+    jitter: 0.025
+    drive: 2

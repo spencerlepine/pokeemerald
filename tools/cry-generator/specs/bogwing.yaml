@@ -1,0 +1,30 @@
+name: bogwing
+slot: masquerain
+brief: "BOGWING: creature call that fits its look and size. Dagobah's bat-winged swamp flyer."
+kind: creature
+size: 0.3
+seed: 192
+master: {tilt_db: -3, rms: 0.29}
+layers:
+  # Swamp-bug DNA grown wings: a leathery wing-flutter, then a fluttering bat-like screech "tsee-
+  # yaaa" that swoops down, with the bug's ticking chitter.
+  - type: noise
+    band: [1400]
+    q: 1.2
+    env: [[0, 0], [0.01, 0.7], [0.03, 0.1], [0.05, 0.7], [0.07, 0.1], [0.09, 0.7], [0.11, 0.1], [0.13, 0.6], [0.16, 0]]
+    gain: 0.5
+  - type: voice
+    at: 0.06
+    pitch: [[0, 560], [0.1, 800], [0.45, 680], [0.7, 480]]
+    source: {tri: 0.6, pulse: 0.5, pulse_width: 0.2, noise: 0.1}
+    vowels: [[0, i], [0.12, ee], [0.45, ae], [0.7, e]]
+    formant_scale: 0.8
+    env: [[0, 0], [0.012, 1], [0.45, 0.8], [0.72, 0]]
+    vibrato: {rate: 34, depth: 0.05}
+    growl: 0.2
+    growl_rate: 50
+    jitter: 0.02
+    drive: 2
+  - type: click
+    times: [0.8, 0.84, 0.88]
+    gain: 0.4
