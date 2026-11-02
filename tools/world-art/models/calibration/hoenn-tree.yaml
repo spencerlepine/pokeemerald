@@ -1,0 +1,45 @@
+# Calibration: the vanilla Hoenn route tree (General metatiles 468, 469, 476, 477), 2x2 cells.
+# APPROVED by the owner on 2026-11-02 as a usable match for vanilla (output/compare/hoenn-tree.png).
+# The crown is ~20 leaf clumps (`lobes`) round a smaller core ellipsoid. Each clump is lit as its own
+# little sphere and separated from its neighbours by a dark line, which is how vanilla's leaves read.
+# Painting a leaf pattern onto one smooth crown (scales, fans, stamps) was tried and rejected.
+name: hoenn-tree
+palette: hoenn
+cells: [2, 2]
+foot: [16, 27]
+box: [12, 4]
+footprint: 1
+shadow: {rx: 13, ry: 3.5}
+seed: 1
+render:
+  light: [-0.35, -0.4, 0.85]   # from the north-west and above, tipped south so the clumps' faces light
+  inner_lines: black           # dark line where one clump stands in front of another...
+  depth_jump: 0.08             # ...by this many metres (lower turns the whole crown into lines)
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+materials:
+  # `shares`: how much of the crown each tone covers, darkest first, close to vanilla's tone counts
+  leaf:  {ramp: tree_leaf, bands: [-0.1, 0.45, 0.85], shares: [0.15, 0.33, 0.32, 0.2]}
+  trunk: {ramp: tree_trunk, bands: [0.3]}
+# drawn on empty pixels only, outermost first: the ground-shade halo on the grass (checker, then
+# solid) and the dark crown-shadow ellipse holding the trunk stub
+ground_shadow:
+  - {rx: 16, ry: 13, dy: -9, color: shade_light, checker: true}
+  - {rx: 15, ry: 11, dy: -9, color: shade}
+  - {rx: 12.5, ry: 6.5, dy: -2, color: "tree_leaf:1"}
+  - {rx: 11.5, ry: 5.5, dy: -2.5, color: "tree_leaf:0"}
+groups:
+  trunk: {k: 0.0}
+  crown: {k: 0.02}
+parts:
+  - {name: trunk, group: trunk, mat: trunk, cylinder: {a: [0, 0.05, 0], b: [0, 0.05, 0.15], r1: 0.25, r2: 0.22}}
+  - {name: core, group: crown, mat: leaf, ellipsoid: {c: [0, 0.3, 0.6], r: [0.6912, 0.44, 0.44]}}
+  - lobes:
+      name: lobe
+      mat: leaf
+      within: {c: [0, 0.3, 0.6], r: [0.96, 0.55, 0.55]}
+      rows: [[80, 3], [52, 5], [24, 6], [-4, 7]]   # [elevation in degrees, clumps in the row]
+      size: 0.24
+      k: 0.85
+      xs: 0.9
+vanilla: {layout: Route101_Layout, rect: [0, 2, 2, 4], context: [0, 0, 8, 6]}

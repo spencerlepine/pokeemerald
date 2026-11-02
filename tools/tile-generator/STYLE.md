@@ -83,21 +83,26 @@ own primary recolour (stage 1 recipe) and each town a secondary.
   (`ground.deck_plate`, `ground.grate`) and written into both sets by the `pattern` op with two tone maps.
   Keep every top half compatible with every bottom half.
 
-## 9. New objects from 3D models: not yet good enough (2026-11-02)
+## 9. New objects from 3D models (2026-11-02)
 
-Two attempts so far, neither approved:
-- A mesh rasteriser with the Emerald camera (trees, a homestead, a house) was rejected by the owner.
-- An SDF ray-marcher (the z-day object generator, ported) with cel bands, dither, outlines, ground-shadow
-  rings and per-face pixel swatches got the size, placement and silhouette right. Calibrated side by side
-  against vanilla, it still read as clearly worse.
-Why: vanilla's quality is in hand-placed pixel clusters (leaf scales, log knots, highlight caps). Lighting
-maths alone does not produce them.
+**Approved: the Hoenn route tree**, rendered by `tools/world-art` (`models/calibration/hoenn-tree.yaml`,
+reference `tools/world-art/approved/hoenn-tree.png`). The owner judged it usable in place of vanilla.
+What made it work: the crown is built from about 20 separate leaf clumps, each cel-shaded as its own
+small sphere, with a dark line wherever one clump stands in front of another. Tone cuts follow vanilla's
+tone shares, and a ground-shade halo shows on the grass around the tree.
 
-The owner chose to keep tuning the renderer. The work in progress lives outside the repo; it comes back
-only once a side-by-side comparison with vanilla is approved. Until then nothing here describes a working
-3D tool.
+Rejected on the way, not kept as code:
+- A mesh rasteriser with the Emerald camera (trees, a homestead, a house).
+- One smooth crown with a leaf pattern painted on top: scallops, fanned scales, pixel stamps on a lattice.
+  They read as bricks or stripes, never as leaves.
+- New Endor objects and a Bright Tree Village mockup drawn before calibrating against vanilla. They were
+  cropped, did not share one structure, and did not look like a real game.
+Lesson: calibrate each kind of object against its vanilla counterpart first. Build the detail as 3D
+shapes (clumps, logs) rather than painting patterns onto a smooth shape.
 
-Measured on vanilla during those attempts (true regardless of method):
+Not approved yet: buildings. The Fortree tree house is the next calibration.
+
+Measured on vanilla (true regardless of method):
 - The Hoenn route tree (General 468/469/476/477) is 2x2 cells. Its crown is about 30x22 px, filling the
   cell width with no margin, so trees tile edge to edge. It is mirrored left/right, made of about 5x4 px leaf
   scales fanning from the top centre, and sits over a dark crown-shadow ellipse with a short grey trunk
