@@ -1,0 +1,36 @@
+# Evolution intro: hot-swap of MUS_EVOLUTION_INTRO (wiki audio:MUS_EVOLUTION_INTRO, EVENT / JINGLE, SE2 player).
+# SCRATCH (no film cue): a one-second shimmer that leads into the evolution loop (evolution.yaml, D minor).
+# Brief (sw_subject): a companion starts to evolve, shimmering lead-in. One bar of 2/4 at the vanilla 120 bpm
+# (1.0 s, plays once): two squares race up a D minor arpeggio in 32nds, a third apart, over the wave hum, a horn
+# swell on A and a timpani roll that crescendos.
+name: evolution-intro
+replaces: MUS_EVOLUTION_INTRO
+form: JINGLE
+player: SE2                           # the vanilla song's player (9 tracks)
+loop: false
+voicegroup: evolution                 # timpani 47, horn 60, sq2 80 (50%), wave 81, sq1 82 (50%)
+master_volume: 80
+tempo: 120
+steps_per_beat: 8                     # 32nd notes
+time_signature: [2, 4]
+seed: 2
+
+parts:
+  sq_a:    {program: 80, channel: 0, volume: 56, pan: -24, gate: 0.8, mono: true}
+  sq_b:    {program: 82, channel: 1, volume: 44, pan: 24,  gate: 0.8, mono: true}
+  hum:     {program: 81, channel: 2, volume: 70, pan: 0,   gate: 1.0, mono: true}
+  horn:    {program: 60, channel: 3, volume: 92, pan: 6,   gate: 1.0}
+  timpani: {program: 47, channel: 4, volume: 80, pan: -8,  gate: 1.0}
+
+sections:
+  shimmer:
+    bars: 1
+    ramp: {timpani: [-30, 10], horn: [-24, 8]}
+    parts:
+      sq_a: "D4:1 F4:1 A4:1 D5:1 F4:1 A4:1 D5:1 F5:1 A4:1 D5:1 F5:1 A5:1 D5:1 F5:1 A5:1 D6:1"
+      sq_b: "F4:1 A4:1 D5:1 F5:1 A4:1 D5:1 F5:1 A5:1 D5:1 F5:1 A5:1 D6:1 F5:1 A5:1 D6:1 F6:1"
+      hum: "D2:16"
+      horn: "A3:16"
+      timpani: "A2:1 A2:1 A2:1 A2:1 A2:1 A2:1 A2:1 A2:1 A2:1 A2:1 A2:1 A2:1 A2:1 A2:1 A2:1 A2:1"
+
+arrangement: [shimmer]
