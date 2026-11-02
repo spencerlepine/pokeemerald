@@ -193,7 +193,7 @@ people:
   role: npc
 signs:
 - name: City sign
-  at: [32, 8]
+  at: [34, 8]
 - name: Galleria sign
   at: [25, 11]
 - name: Hangar sign (Cloud City shuttle)

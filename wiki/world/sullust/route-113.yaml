@@ -25,9 +25,9 @@ grid: |
   ......................""""""""""".....########........""""">..........."""""""""""..#.....T#########
   ......................""""""""""".....###########......"""">.##..........""""#######################
   ......................""""""""""".........########..#######>...............#########################
-  ...............##.........""""""........#.######....#######>.T###T#T###T############################
+  ...............##.........""""""........#.######....#######>.T###T#T###T##.#########################
   T#T#T###T###T#..T#T#T#T#T#############T#.#.####.T###.####vv###..T#T#..T#...#########################
-  ###T#..T#..T#T#T#T###T###.###############......T#..T#######..T#T#T#T#T#T#T##########################
+  ###T#..T#..T#T#T#T###T###.###############......T#..T#######..T#T#T#T#T#T#T.#########################
   ..T#T#T#T#T#T#T#T#..T#..T############...T#T#T#T#T#T#.######.T#T#T#T#T#T#T#.#########################
   #T#T#T#T#T#T#T#T#T#T#T#T#.#############T#T#T#T#T#T#T#########T#T#T#T#T#T#T##########################
   T#T#T#T#T#T#T#T#T#T#T#T#T############.T#T#T#T#T#T#T#.######.T#T#T#T#T#T#T#T#########################
@@ -126,4 +126,5 @@ warps:
   to: magma-tunnels
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Planet border cut: south edge to route-112 (TATOOINE); reached by ship instead.', 'Planet border
     cut: east edge to route-111 (TATOOINE); reached by ship instead.', 'Planet border cut: door at [41, 12] to terra-cave-entrance; reached by ship instead.', 'Planet
-    border cut: door at [88, 5] to terra-cave-entrance; reached by ship instead.']
+    border cut: door at [88, 5] to terra-cave-entrance; reached by ship instead.', 'Path cut through the tree rows at [74, 14-17] down to the Magma Tunnels mouth
+    (the tunnels now link Route 113 and Pirin).']

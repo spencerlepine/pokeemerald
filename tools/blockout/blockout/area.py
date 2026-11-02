@@ -127,6 +127,10 @@ class Area:
         if self.kind in ("town", "landmark") or self.replaces == "new":
             p += self.reach_problems(solid)
             p += self.softlock_problems(solid)
+        # content reach runs everywhere outdoors: a cut planet border or a prop on the only path must not
+        # strand trainers, items or signs (imported caves keep vanilla puzzles the grid does not model)
+        if self.kind != "interior" and not (self.kind == "dungeon" and self.replaces != "new"):
+            p += self.content_problems(solid)
         return p
 
     def softlock_problems(self, solid):
@@ -194,6 +198,78 @@ class Area:
             if surf:
                 break
         return out
+
+    def content_problems(self, solid):
+        """Every placed thing must be reachable the way the player actually moves: ledges in their direction,
+        water with surf. A trainer, item, berry plant, sign, door or warp that no entry (exit, door, warp)
+        can reach, even with surf, is content the player can never see."""
+        fwd = self._forward_reach(solid, surf=True)
+        if fwd is None:
+            return []
+        out = []
+        targets = []
+        for e in self.exits:
+            for c in e["cells"]:
+                targets.append((f"exit {e['edge']} to {e.get('to')}", {"north": (c, 0), "south": (c, self.h - 1),
+                                                                        "west": (0, c), "east": (self.w - 1, c)}[e["edge"]]))
+        for b in self.buildings:
+            if "door" in b:
+                targets.append((f"door of {b['name']}", (b["at"][0] + int(b["door"]), b["at"][1] + b["size"][1])))
+        for o in self.warps:
+            targets.append((f"warp {o.get('name')}", tuple(o["at"])))
+        for o in self.people:
+            if o.get("role") in ("trainer", "item", "berry", "story"):   # npcs behind counters and objects are vanilla placement
+                targets.append((f"{o.get('role', 'person')} {o.get('name')}", tuple(o["at"])))
+        for o in self.signs:
+            targets.append((f"sign {o.get('name')}", tuple(o["at"])))
+        seen_exits = set()
+        for name, (x, y) in targets:
+            if name.startswith("exit") and name in seen_exits:
+                continue
+            near = {(x, y), (x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)}
+            if not (near & fwd):
+                out.append(f"unreachable: {name} at [{x}, {y}] cannot be reached from any entry (ledges and surf considered)")
+                seen_exits.add(name)
+        return out
+
+    def _forward_reach(self, solid, surf):
+        """Cells the player can reach from any exit, door or warp, moving the way the game moves."""
+        LEDGE = {"v": (0, 1), "^": (0, -1), "<": (-1, 0), ">": (1, 0)}
+
+        def land(x, y):
+            ch = self.cell(x, y)
+            return ch is not None and (x, y) not in solid and (walkable(ch) and ch not in LEDGE or (surf and ch == "~"))
+
+        def moves(x, y):
+            for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+                nx, ny = x + dx, y + dy
+                ch = self.cell(nx, ny)
+                if ch in LEDGE:
+                    if LEDGE[ch] == (dx, dy) and land(nx + dx, ny + dy):
+                        yield (nx + dx, ny + dy)
+                elif land(nx, ny):
+                    yield (nx, ny)
+
+        starts = []
+        for e in self.exits:
+            for c in e["cells"]:
+                starts.append({"north": (c, 0), "south": (c, self.h - 1), "west": (0, c), "east": (self.w - 1, c)}[e["edge"]])
+        for b in self.buildings:
+            if "door" in b:
+                starts.append((b["at"][0] + int(b["door"]), b["at"][1] + b["size"][1]))
+        for o in self.warps:   # a cave mouth or door tile is solid: the player stands on the cell in front of it
+            x, y = o["at"]
+            starts += [(x, y), (x, y + 1), (x, y - 1), (x + 1, y), (x - 1, y)]
+        starts = [c for c in starts if land(*c)]
+        if not starts:
+            return None
+        fwd, todo = set(starts), list(starts)
+        while todo:
+            c = todo.pop()
+            for n in moves(*c):
+                if n not in fwd:
+                    fwd.add(n); todo.append(n)
+        return fwd
 
     def reach_problems(self, solid):
         """Every exit, door, person and warp must be reachable on foot (or by surf) from the first

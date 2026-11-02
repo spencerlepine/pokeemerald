@@ -125,7 +125,7 @@ people:
   at: [56, 5]
   role: trainer
 - name: Item
-  at: [14, 1]
+  at: [12, 14]
   role: item
 signs: []
 warps: []

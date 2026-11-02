@@ -37,22 +37,22 @@ grid: |
   ~~~~~###T.T.....T##########..###########
   ~~~#####T.TT...TT######.....############
   ~~~##~~#T..TT.TT#######.....############
-  ~~##~~~#TT.TT.TT#######..###############
-  ~~##~~~#TT..T.TT#######.################
-  ~##~~~~#TT....TT#######.################
-  ~##~~~~###....TT########################
-  ~~##~~~..##...T#########################
-  ~~##~~~~~~#....#########################
-  ~~~##~~~~~#..###########################
-  ~####~~~~~....##########################
-  ~##~~~~~~~....##########################
-  ~##~~~~~~~##~.##########################
+  ~~##~~~#TT.TT.TT#######..##.############
+  ~~##~~~#TT..T.TT#######.###.############
+  ~##~~~~#TT....TT#######.###.############
+  ~##~~~~###....TT###########.############
+  ~~##~~~..##...T############.############
+  ~~##~~~~~~#....############.############
+  ~~~##~~~~~#..##############.############
+  ~####~~~~~....#############.############
+  ~##~~~~~~~....#############.############
+  ~##~~~~~~~##~.#############.############
   ~##~~~~~~~##~~#.###########.############
   ##~~~~~~~~~##~#.########.#..#...########
-  ####~~~~~~~##~##########....############
-  ~~##~~~##~~~~~~#T#######....###..#######
-  ~##~~~~####~~~~#T..#####....###..#######
-  ~##~~~##~##~~########T##..###....#######
+  ####~~~~~~~##~#.########....############
+  ~~##~~~##~~~~~~.T#######....###..#######
+  ~##~~~~####~~~~....#####....###..#######
+  ~##~~~##~##~~####.###T##..###....#######
   ##~~~~##~~~#####.....T#.....##..########
   ##~~~~~~~~~##~~#.....T#.....##.#########
   ~##~~~~~~##~~~.#.....T###......#########
@@ -96,17 +96,9 @@ exits:
   to: bestine
 buildings: []
 props:
-- name: Sandstone boulder
-  art: art:tatooine:sandstone-boulder
-  at: [23, 25]
-  size: [2, 2]
 - name: Pod-race junk
   art: art:tatooine:pod-race-junk
   at: [19, 47]
-  size: [2, 2]
-- name: Dead tree
-  art: art:tatooine:dead-tree
-  at: [23, 18]
   size: [2, 2]
 people:
 - name: Woman
@@ -191,4 +183,6 @@ warps:
   at: [36, 10]
   to: terra-cave-entrance
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Planet border cut: east edge to route-114 (SULLUST); reached by ship instead.', 'Planet border
-    cut: door at [27, 37] to starfall-cavern-1f-1r; reached by ship instead.']
+    cut: door at [27, 37] to starfall-cavern-1f-1r; reached by ship instead.', 'Canyon path carved at [27, 27-36] from the plateau down to the old Starfall Cavern
+    mouth: vanilla entered the east half through Meteor Falls (now Sullust), so without it three trainers, three items and the berries were cut off. Two props that
+    sat on one-cell corridors (boulder, dead tree) were removed.', 'Also a rock ramp at [15-17, 39-42] joining the beach to the small cliff stair west of the plateau.']

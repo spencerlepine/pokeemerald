@@ -2858,7 +2858,7 @@ mustafar-mining-facility,MUSTAFAR,landmark,new,BLOCKOUT,person,Stormtrooper,1x1,
 mustafar-mining-facility,MUSTAFAR,landmark,new,BLOCKOUT,person,Veers,1x1,,,PLACEHOLDER,
 mustafar-mining-facility,MUSTAFAR,landmark,new,BLOCKOUT,person,Mining droid,1x1,,,PLACEHOLDER,
 mustafar-peak,MUSTAFAR,route,MtChimney,BLOCKOUT,area,MUSTAFAR PEAK,40x47,,,pending-final-art,greybox terrain
-mustafar-peak,MUSTAFAR,route,MtChimney,BLOCKOUT,prop,Obsidian spire,2x3,art:mustafar:obsidian-spire,yes,pending-final-art,greybox piece
+mustafar-peak,MUSTAFAR,route,MtChimney,BLOCKOUT,prop,Obsidian spire,2x2,art:mustafar:obsidian-spire,yes,pending-final-art,greybox piece
 mustafar-peak,MUSTAFAR,route,MtChimney,BLOCKOUT,person,Archie,1x1,,,PLACEHOLDER,
 mustafar-peak,MUSTAFAR,route,MtChimney,BLOCKOUT,person,Maxie,1x1,,,PLACEHOLDER,
 mustafar-peak,MUSTAFAR,route,MtChimney,BLOCKOUT,person,Trainer Tabitha,1x1,,,PLACEHOLDER,
@@ -4778,9 +4778,7 @@ route-112,TATOOINE,route,Route112,BLOCKOUT,sign,Hangar sign (Shuttle (cable car)
 route-112,TATOOINE,route,Route112,BLOCKOUT,sign,Transport pad sign,1x1,,,PLACEHOLDER,
 route-112,TATOOINE,route,Route112,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 route-115,TATOOINE,route,Route115,BLOCKOUT,area,ROUTE 115,40x80,,,pending-final-art,greybox terrain
-route-115,TATOOINE,route,Route115,BLOCKOUT,prop,Sandstone boulder,2x2,art:tatooine:sandstone-boulder,yes,pending-final-art,greybox piece
 route-115,TATOOINE,route,Route115,BLOCKOUT,prop,Pod-race junk,2x2,art:tatooine:pod-race-junk,yes,pending-final-art,greybox piece
-route-115,TATOOINE,route,Route115,BLOCKOUT,prop,Dead tree,2x2,art:tatooine:dead-tree,yes,pending-mockup,greybox piece
 route-115,TATOOINE,route,Route115,BLOCKOUT,person,Woman,1x1,,,PLACEHOLDER,
 route-115,TATOOINE,route,Route115,BLOCKOUT,person,Trainer Telun,1x1,,,PLACEHOLDER,
 route-115,TATOOINE,route,Route115,BLOCKOUT,person,Trainer Nolden,1x1,,,PLACEHOLDER,

@@ -70,7 +70,7 @@ people:
   role: object
 signs:
 - name: Sign
-  at: [3, 32]
+  at: [13, 32]
 warps:
 - name: Door
   at: [22, 7]
