@@ -1,0 +1,74 @@
+# Mt. Chimney, Tatooine version (MUS_MT_CHIMNEY_TATOOINE, net-new): the dangerous-place music for the Tatooine
+# maps (the Krayt Graveyard, the Sandcrawler). ARRANGE of "The Little People Work" (wiki
+# net:mus-mt-chimney-tatooine, ref soundtrack:new-hope:06), the Jawa music. analyze_reference read the cue at
+# 112.3 bpm (112 here), its harmony sitting on G minor; its melody draft is too rough to use, so the Jawas' tune
+# is written in the cue's manner: a scurrying, staccato minor line with chromatic neighbour notes for the double
+# reeds, over a bassoon-like oom-pah. On the placeholder's voicegroup (vanilla MUS_MT_CHIMNEY's mt_chimney, which
+# has no woodwinds) the oboe is a 12.5% square and the bassoon the tuba.
+#   intro 1 bar   the oom-pah alone, a shaker in the noise channel
+#   a     8 bars  the Jawa tune on the "oboe" square, tuba oom-pah, wave bass
+#   b     8 bars  the danger: string tremolo on G minor and Ab (the Phrygian half step), low horn, timpani
+#   c     8 bars  the tune again, a second square answering in long notes, landing on D for the return
+# Brief (sw_subject): Tatooine version of Mustafar's dangerous-place theme, same role and mood family.
+# Loop 24 bars, 51.4 s.
+name: mt-chimney-tatooine
+constant: MUS_MT_CHIMNEY_TATOOINE
+form: LOOP
+voicegroup: mt_chimney        # tuba 58, horn 60, strings 48, timpani 47, squares 81/80, wave 82, noise 127
+master_volume: 80
+tempo: 112
+steps_per_beat: 4
+time_signature: [4, 4]
+seed: 6
+
+parts:
+  oboe:    {program: 81, channel: 0, volume: 72,  pan: 10,  gate: 0.7, mono: true, humanize: {vel: 5}}
+  tuba:    {program: 58, channel: 1, volume: 90,  pan: -6,  octave: 2, gate: 0.5, role: bass}
+  horn:    {program: 60, channel: 2, volume: 88,  pan: -14, gate: 0.95, transpose: -12}
+  strings: {program: 48, channel: 3, volume: 64,  pan: 24,  octave: 4, gate: 0.8}
+  timpani: {program: 47, channel: 4, volume: 86,  pan: 0,   octave: 2, gate: 1.0, role: bass}
+  bass:    {program: 82, channel: 5, volume: 64,  pan: 0,   octave: 2, gate: 0.4, role: bass, mono: true}
+  answer:  {program: 80, channel: 6, volume: 40,  pan: -32, gate: 0.9, mono: true}
+  shaker:  {program: 127, channel: 7, volume: 30, pan: 20,  role: drums, kit: {sh: A5}}
+
+progressions:
+  jawa:   "Gm | D | Gm | Cm:8 D:8 | Cm | Gm | D7 | D"
+  danger: "Gm | Ab | Gm | Ab | Cm | Ab | D | D7"
+
+phrases:
+  jawa: |
+    D5:1 r:1 D5:1 Eb5:1 D5:2 C5:2 Bb4:2 A4:2 G4:4 | A4:1 r:1 A4:1 Bb4:1 A4:2 G4:2 F#4:2 G4:2 A4:4 |
+    D5:1 r:1 D5:1 Eb5:1 D5:2 C5:2 Bb4:2 C5:2 D5:4 | Eb5:2 D5:2 C5:2 A4:2 D5:8 |
+    G5:1 r:1 G5:1 F5:1 Eb5:2 D5:2 C5:2 Eb5:2 D5:4 | Bb4:1 r:1 Bb4:1 A4:1 G4:2 F#4:2 G4:2 A4:2 Bb4:4 |
+    C5:2 Bb4:2 A4:2 G4:2 F#4:2 A4:2 C5:2 Eb5:2 | D5:4 r:4 D4:1 r:1 D4:1 r:1 D4:4
+  danger: "G4:8 Ab4:8 | G4:16 | G4:8 Ab4:8 | Bb4:16 | C5:8 Eb5:8 | C5:16 | A4:8 F#4:8 | D4:16"
+  long: "Bb4:16 | A4:16 | Bb4:16 | G4:8 F#4:8 | G4:16 | D4:16 | C5:16 | A4:8 F#4:8"
+  oompah: "^1:2 r:2 ^3:2 r:2 ^1:2 r:2 ^3:2 r:2"
+  walk: "r:2 ^1:2 r:2 ^1:2 r:2 ^1:2 r:2 ^1:2"
+  trem: "^1:1 ^1:1 ^1:1 ^1:1 ^1:1 ^1:1 ^1:1 ^1:1 ^1:1 ^1:1 ^1:1 ^1:1 ^1:1 ^1:1 ^1:1 ^1:1"
+  timp: "^1:4 r:12 | r:16 | ^1:4 r:12 | r:8 ^1:2 ^1:2 ^1:2 ^1:2"
+
+grooves:
+  shake:
+    sh: "x.o.x.o.x.o.xoxo"
+
+sections:
+  intro:
+    bars: 1
+    chords: "Gm"
+    parts: {tuba: oompah, bass: walk, shaker: shake, oboe: "r:12 D4:1 r:1 D4:2"}
+  a:
+    bars: 8
+    chords: jawa
+    parts: {oboe: jawa, tuba: oompah, bass: walk, shaker: shake}
+  b:
+    bars: 8
+    chords: danger
+    parts: {horn: danger, strings: trem, tuba: oompah, bass: walk, timpani: timp, shaker: shake}
+  c:
+    bars: 8
+    chords: jawa
+    parts: {oboe: jawa, answer: long, tuba: oompah, bass: walk, shaker: shake}
+
+arrangement: [intro, a, b, c]
+loop_start: a
