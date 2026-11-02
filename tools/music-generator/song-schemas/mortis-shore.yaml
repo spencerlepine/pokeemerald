@@ -1,0 +1,66 @@
+# Mortis Shore (MUS_RG_SEVII_ROUTE, hot-swap): the Mortis Gate harbor and shore. SCRATCH (wiki
+# audio:MUS_RG_SEVII_ROUTE has no film cue): written from the brief, "strange calm". D Lydian (the raised fourth,
+# G#, over a D / E-over-D sway) gives the calm its strangeness; the B section slips through B minor and C major
+# (a borrowed flat VII) to an E major turnaround.
+#   a  8 bars  flute over harp arpeggios, a single organ note, wave bass, square twinkles
+#   b  8 bars  the tune lower and darker (Bm, G, Em, C), the organ moving, the E-to-A turn home
+# Brief (sw_subject): Mortis Gate harbor and shore, strange calm. Vanilla voicegroup rg_sevii_route, 124 bpm.
+# Loop 16 bars, 31 s (vanilla 32.9 s).
+name: mortis-shore
+replaces: MUS_RG_SEVII_ROUTE
+form: LOOP
+voicegroup: rg_sevii_route    # flute 73, harp 46, organ 17, squares 80/81, wave 92, noise 127, frlg kit
+master_volume: 80
+tempo: 124
+steps_per_beat: 2
+time_signature: [4, 4]
+seed: 7
+
+parts:
+  flute:   {program: 73, channel: 0, volume: 92,  pan: 8,   gate: 0.95, lfo_speed: 28, lfo_delay: 24, mod: 5, humanize: {vel: 5}}
+  harp:    {program: 46, channel: 1, volume: 74,  pan: -22, octave: 4, gate: 0.9, humanize: {vel: 8}}
+  organ:   {program: 17, channel: 2, volume: 50,  pan: 22,  octave: 4, gate: 1.0}
+  bass:    {program: 92, channel: 3, volume: 80,  pan: 0,   octave: 2, gate: 0.85, role: bass, mono: true}
+  twinkle: {program: 80, channel: 4, volume: 36,  pan: 34,  octave: 5, gate: 0.5, mono: true}
+  drums:   {program: 0,  channel: 5, volume: 56,  pan: -8,  role: drums, kit: {kick: 36, tamb: 54}}
+  surf:    {program: 127, channel: 6, volume: 20, pan: -30, gate: 1.0, mono: true}
+
+progressions:
+  sway: "D | E/D | D | E/D | Bm | C | G | A"
+  dusk: "Bm | G | Bm | G | Em | C | E | A"
+
+phrases:
+  tune_a: |
+    F#5:4 A5:2 G#5:2 | E5:6 B4:2 | D5:2 E5:2 F#5:2 G#5:2 | A5:8 |
+    F#5:4 D5:2 B4:2 | C5:4 E5:2 G5:2 | B4:4 D5:2 G5:2 | A5:6 r:2
+  tune_b: |
+    D5:4 F#5:4 | G5:6 F#5:2 | F#5:4 D5:2 B4:2 | D5:8 |
+    E5:4 G5:4 | C6:4 B5:2 G5:2 | G#5:4 B5:2 E5:2 | E5:4 C#5:4
+  arp: "^1:1 ^2:1 ^3:1 ^2:1 ^1+:1 ^3:1 ^2:1 ^3:1"
+  hold: "^3:8"
+  hold2: "^2:8"
+  root: "^1:3 ^1:1 ^3:4"
+  twinkle: "r:3 ^3:1 r:2 ^1+:1 r:1"
+  swell: "C3:8 | E3:8"
+
+grooves:
+  tide:
+    kick: "x.......|x...x..."
+    tamb: "..o...o.|..o...o."
+
+sections:
+  intro:
+    bars: 2
+    chords: "D | E/D"
+    parts: {harp: arp, organ: hold, bass: root, twinkle: twinkle, surf: swell, drums: tide, flute: "r:8 | r:4 B4:2 D5:2"}
+  a:
+    bars: 8
+    chords: sway
+    parts: {flute: tune_a, harp: arp, organ: hold, bass: root, twinkle: twinkle, drums: tide, surf: swell}
+  b:
+    bars: 8
+    chords: dusk
+    parts: {flute: tune_b, harp: arp, organ: hold2, bass: root, twinkle: twinkle, drums: tide, surf: swell}
+
+arrangement: [intro, a, b]
+loop_start: a
