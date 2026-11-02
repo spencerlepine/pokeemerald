@@ -1,5 +1,7 @@
+# SHIPPED 2026-11-02 (owner pick: variant 2, raked skids with a flat rail, yoke wheel; no ground dots).
+# Writes game/graphics/intro/scene_2/bicycle.png: `python3 speeder_v2.py --install`. Rider sits 5 px further back (riders_v2.py).
 import sys; sys.path.insert(0,'.')
-import rider
+import riders_v2 as rider
 from PIL import Image, ImageDraw
 G=rider.G
 BIKE=Image.open(G+'bicycle.png')
@@ -22,7 +24,8 @@ def make(v,f):
         for x in range(64):
             if im.getpixel((x,y))==15: im.putpixel((x,y),0)
     # bike-row of the hull bottom ~ 25+d ; skids reach row 29+d ; shadow on row 31
-    for x in range(10,54,2): P(im,x,31,15)
+    if v!=2:
+        for x in range(10,54,2): P(im,x,31,15)
     if v==1:   # two straight struts and a skid rail with a turned-up nose
         for sx in (24,44): strut(im,(sx,24+d),(sx,28+d))
         y=29+d
@@ -32,8 +35,7 @@ def make(v,f):
         y=29+d
         strut(im,(28,23+d),(22,y-1)); strut(im,(40,24+d),(46,y-1))
         line(im,(17,y-1),(50,y-1),1); line(im,(17,y+1),(50,y+1),1); line(im,(17,y),(50,y),2); line(im,(18,y),(49,y),3)
-        for ex,s in ((16,-1),(51,1)):
-            P(im,ex,y,1); P(im,ex,y-1,3); P(im,ex,y-2,1); P(im,ex-s,y-2,1); P(im,ex+s,y-1,1)
+        P(im,16,y,1); P(im,51,y,1)
     else:      # three short landing legs with glowing repulsor pads
         for sx in (18,32,47):
             top=23+d if sx!=18 else 21+d
@@ -46,15 +48,15 @@ def make(v,f):
         strut(im,(11,12+d),(12,hy-2))
         line(im,(10,hy-2),(16,hy-2),1); line(im,(10,hy),(16,hy),1); line(im,(10,hy-1),(16,hy-1),7); P(im,9,hy-1,1); P(im,10,hy-1,2)
     elif v==2: # yoke wheel seen edge-on, ahead of the hands, on a column from the nose
-        strut(im,(10,12+d),(12,hy+1))
-        cx=13
+        strut(im,(12,12+d),(14,hy+1))
+        cx=15
         for y in range(hy-5,hy+5):
             w=1 if abs(y-hy)>=3 else 2
             P(im,cx-w,y,1); P(im,cx+w,y,1)
             if w==2: P(im,cx-1,y,7); P(im,cx+1,y,2); P(im,cx,y,3)
             else: P(im,cx,y,7)
         P(im,cx,hy-6,1); P(im,cx,hy+5,1)
-        line(im,(cx+2,hy),(16,hy),7)
+        line(im,(cx+2,hy),(18,hy),7)
     else:      # control stick: column with a kyber screen, grips into the gloves
         strut(im,(11,12+d),(12,hy))
         line(im,(8,hy-4),(13,hy-4),1); line(im,(8,hy-3),(13,hy-3),11); line(im,(8,hy-2),(13,hy-2),12); line(im,(8,hy-1),(13,hy-1),1)
@@ -69,6 +71,14 @@ def compose(who,v,f,bg=(232,200,144)):
     im.paste(b.convert('RGB'),(0,24),M(b))
     r=rider.rider(who,2,f); im.paste(r.convert('RGB'),(0,0),M(r))
     return im
+def install():
+    pal=BIKE.getpalette()[:48]
+    out=Image.new('P',(64,128),0); out.putpalette(pal)
+    for f in range(4): out.paste(make(2,f),(0,f*32))
+    out.save(G+'bicycle.png')
+
+if __name__=='__main__' and '--install' in sys.argv:
+    install(); sys.exit(0)
 if __name__=='__main__':
     S=4
     labels=['Current','A: straight skids, handlebar','B: raked skids, yoke wheel','C: 3 legs + glow pads, stick']

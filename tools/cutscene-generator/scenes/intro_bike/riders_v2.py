@@ -85,12 +85,13 @@ class Canvas:
 
 def rider(who,v,f):
     """Racer tuck family. v: 1 tuck, 2 deep tuck with tails, 3 tuck head-up with long band tails."""
-    bob=[0,0,1,1][f]; flap=f%2
+    bob=[0,1,1,0][f]; flap=f%2
     c=Canvas()
     if v==1:
         sh=(23,22); hip=(33,31); knee=(23,35); foot=(25,41); hand=(17,32); head=(15,10); tails=who=='mira'; band=4
     elif v==2:
-        sh=(23,24); hip=(33,31); knee=(23,35); foot=(25,41); hand=(16,32); head=(13,13); tails=True; band=5
+        R=5  # sit further back on the speeder; hands reach forward to the yoke
+        sh=(23+R,24); hip=(33+R,31); knee=(23+R,35); foot=(25+R,41); hand=(16+R-3,32); head=(13+R,13); tails=True; band=5
     else:
         sh=(23,21); hip=(33,31); knee=(23,35); foot=(25,41); hand=(17,32); head=(15,8); tails=who=='mira'; band=8
     def B(p): return (p[0],p[1]+bob)
