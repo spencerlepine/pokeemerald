@@ -1,0 +1,96 @@
+# Endor Forest (MUS_ROUTE119, hot-swap): Endor's Route 119 and the open seas of Dagobah and Kamino (129-134).
+# STYLE of "Ewok Celebration and Finale" (wiki audio:MUS_ROUTE119, ref soundtrack:return-jedi:11): an original
+# melody, not a quote. Taken from the cue: its pulse (analyze_reference 73.8 bpm; doubled to 144 here, which
+# makes the loop a whole number of frames, with the tunes moving in half time over it), its G minor / Bb major
+# colour, the wooden hand drums of the Ewok chant and the finale's broad brass and strings.
+#   intro 2 bars  hand drums, timpani, a held horn D to F#
+#   a     8 bars  a chant-like tune on horn over hand drums (G minor)
+#   b     8 bars  Bb major, the strings sing a broad line, harp underneath
+#   c     8 bars  wandering: glockenspiel and a square trace arpeggios through Gm, Eb, Cm, D
+#   d     8 bars  huge: trumpet over horn and strings, timpani and crash, landing on D for the return
+# Brief (sw_subject): lush, wandering, huge scale. Vanilla voicegroup route119. Loop 32 bars, 53.3 s
+# (vanilla 56.5 s).
+name: endor-forest
+replaces: MUS_ROUTE119
+form: LOOP
+voicegroup: route119          # trumpet 56, horn 60, strings 48, harp 46, glockenspiel 9, timpani 47, squares, wave 84, rs kit
+master_volume: 92
+tempo: 144
+steps_per_beat: 2
+time_signature: [4, 4]
+seed: 119
+
+parts:
+  trumpet: {program: 56, channel: 0, volume: 96,  pan: 6,   gate: 0.94, humanize: {vel: 4}}
+  horn:    {program: 60, channel: 1, volume: 92,  pan: -10, octave: 4, gate: 0.95, humanize: {vel: 4}}
+  strings: {program: 48, channel: 2, volume: 70,  pan: -26, octave: 4, gate: 1.0}
+  harp:    {program: 46, channel: 3, volume: 70,  pan: 24,  octave: 3, gate: 0.9, humanize: {vel: 8}}
+  glock:   {program: 9,  channel: 4, volume: 58,  pan: 30,  gate: 0.6}
+  timpani: {program: 47, channel: 5, volume: 86,  pan: 0,   octave: 2, gate: 1.0, role: bass}
+  bass:    {program: 84, channel: 6, volume: 84,  pan: 0,   octave: 2, gate: 0.8, role: bass, mono: true}
+  trace:   {program: 85, channel: 7, volume: 36,  pan: -34, gate: 0.6, mono: true}
+  drums:   {program: 0,  channel: 8, volume: 66,  pan: 14,  role: drums, kit: {kick: 36, hc: 62, lc: 64, crash: 57}}
+
+progressions:
+  chant:  "Gm | Gm | Eb | F | Gm | Gm | Eb:4 F:4 | D"
+  broad:  "Bb | F/A | Gm | Eb | Bb | F/A | Eb | F"
+  wander: "Gm | Eb | Cm | D | Gm | Eb | Cm | D7"
+  huge:   "Eb | F | Bb | Gm | Eb | F | Gm:4 Eb:4 | D"
+
+phrases:
+  chant: |
+    G4:2 Bb4:2 C5:2 D5:2 | D5:4 C5:2 Bb4:2 | G4:2 Bb4:2 Eb5:4 | D5:4 C5:4 |
+    G4:2 Bb4:2 C5:2 D5:2 | F5:4 D5:4 | Eb5:4 C5:2 A4:2 | F#4:8
+  broad: |
+    D5:6 F5:2 | C5:8 | Bb4:4 D5:2 G5:2 | G5:8 | F5:6 Bb5:2 | A5:4 F5:4 | G5:4 Eb5:2 Bb4:2 | C5:8
+  wander: |
+    G5:1 A5:1 Bb5:1 D6:1 Bb5:1 A5:1 G5:1 D5:1 | Eb5:1 G5:1 Bb5:1 Eb6:1 Bb5:1 G5:1 Eb5:1 Bb4:1 |
+    C5:1 Eb5:1 G5:1 C6:1 G5:1 Eb5:1 C5:1 G4:1 | D5:1 F#5:1 A5:1 D6:1 A5:1 F#5:1 D5:1 A4:1
+  huge: |
+    Bb4:4 Eb5:4 | F5:6 C5:2 | D5:4 F5:2 Bb5:2 | Bb5:6 G5:2 | G5:4 Eb5:4 | F5:4 A5:4 | Bb5:4 G5:4 | F#5:8
+  pad: "^3:8"
+  pad2: "^2:4 ^3:4"
+  half: "^1:4 ^2:4"
+  root: "^1:3 ^1:1 ^3:2 ^1:2"
+  sweep: "^1:1 ^2:1 ^3:1 ^1+:1 ^2+:1 ^1+:1 ^3:1 ^2:1"
+  timp: "^1:2 r:6 | r:8"
+  timp_big: "^1:2 r:6 | r:4 ^1:2 ^1:2"
+
+grooves:
+  logs:
+    kick: "x.......|x.......|x.......|x......."
+    hc:   "..x..x.x|..x..x.x|..x..x.x|..x.xxxx"
+    lc:   "....x...|....x...|....x...|........"
+  logs_soft:
+    kick: "x.......|x......."
+    lc:   "....x...|....x..."
+  big:
+    crash: "X.......|........|........|........"
+    kick:  "........|x.......|x.......|x......."
+    hc:    "..x..x.x|..x..x.x|..x..x.x|..x..x.x"
+    lc:    "....x...|....x...|....x...|....x..."
+
+sections:
+  intro:
+    bars: 2
+    chords: "Gm | D"
+    parts: {drums: logs, timpani: timp, bass: root, strings: pad, horn: "D4:8 | F#4:8"}
+  a:
+    bars: 8
+    chords: chant
+    parts: {horn: chant, strings: pad, bass: root, timpani: timp, drums: logs}
+  b:
+    bars: 8
+    chords: broad
+    parts: {strings: broad, harp: sweep, horn: half, bass: root, drums: logs_soft}
+  c:
+    bars: 8
+    chords: wander
+    parts: {glock: wander, trace: wander, harp: sweep, strings: pad, bass: root, drums: logs_soft}
+  d:
+    bars: 8
+    chords: huge
+    parts: {trumpet: huge, horn: pad2, strings: pad, bass: root, timpani: timp_big, drums: big}
+
+arrangement: [intro, a, b, c, d]
+loop_start: a
