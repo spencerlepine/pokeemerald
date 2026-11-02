@@ -1,0 +1,72 @@
+# Sealed Chamber, Kamino: net-new per-planet split of MUS_SEALED_CHAMBER (wiki row
+# net:mus-sealed-chamber-kamino), for the Sealed Vault. SCRATCH: no film cue, written from the brief. The
+# Tatooine original is an eerie, sparse vault; Kamino's is cold and clean under endless rain: E minor with
+# Lydian floating (C-D swaps, a B major and a C augmented that never settle), a slow tubular-bell line in a,
+# strings in b, harp and timpani pulses in c, the bell alone in d. The rain is on the Game Boy side: a 25 %
+# square dripping staccato notes and a soft noise hiss. Vanilla voicegroup and tempo (MUS_SEALED_CHAMBER:
+# sealed_chamber, 140 bpm, 36.0 s): 22 bars of 4/4 at 140 = 37.7 s.
+# Brief (sw_subject): Kamino version of MUS_SEALED_CHAMBER, same role and mood family; theme to be decided.
+name: sealed-chamber-kamino
+constant: MUS_SEALED_CHAMBER_KAMINO
+form: AMBIENT
+voicegroup: sealed_chamber        # vanilla's own: bell 14, harp 46, timpani 47, strings 48, squares 80/81, wave 87, noise 126
+master_volume: 100
+tempo: 140
+steps_per_beat: 2                 # eighth-note grid
+time_signature: [4, 4]
+seed: 22
+
+parts:
+  bell:    {program: 14, channel: 0, volume: 72,  pan: -12, gate: 1.0}
+  strings: {program: 48, channel: 1, volume: 70,  pan: 12,  gate: 1.0, humanize: {vel: 4}}
+  pad:     {program: 48, channel: 2, volume: 46,  pan: 26,  octave: 3, gate: 1.0}
+  harp:    {program: 46, channel: 3, volume: 70,  pan: -24, octave: 4, gate: 0.9, humanize: {vel: 8}}
+  timpani: {program: 47, channel: 4, volume: 70,  pan: 10,  gate: 1.0}
+  bass:    {program: 87, channel: 5, volume: 66,  pan: 0,   octave: 2, role: bass, gate: 0.95}
+  rain:    {program: 81, channel: 6, volume: 30,  pan: 34,  gate: 0.5, mono: true}
+  hiss:    {program: 126, channel: 7, volume: 22, pan: -30, role: drums, kit: {h: C7}}
+
+progressions:
+  intro: "Em | B"
+  a: "C | D | C | D | Em | D | C | B"
+  b: "Am | Bm | C | D | Am | Bm | Cmaj7 | B"
+  c: "C | D | Caug | B"
+  d: "Em | B"
+
+phrases:
+  pad: "^3:8"
+  root: "^1:8"
+  harp8: "^1:1 ^2:1 ^3:1 ^1+:1 ^2+:1 ^1+:1 ^3:1 ^2:1"
+  drops: "B5':1 r:1 E6':1 r:3 G5':1 r:1 | r:2 D6':1 r:2 A5':1 r:2 | E6':1 r:4 B5':1 r:2 | r:1 F#5':1 r:3 D6':1 r:2"
+  bell_a: "E5:8 | F#5:8 | G5:4 E5:4 | A5:8 | B5:4 G5:4 | F#5:8 | E5:4 C5:4 | D#5:8"
+  strings_b: "A4:8 | B4:6 D5:2 | E5:8 | F#5:8 | C5:8 | D5:6 F#5:2 | G5:4 E5:4 | D#5:8"
+  timp_c: "C3:2 r:6 | D3:2 r:6 | C3:2 r:6 | B2:1 B2:1 B2:1 B2:1 B2:4"
+  bell_d: "E5:8 | D#5:8"
+
+grooves:
+  rainfall: {h: "o.o.o.o.|o.o.oo.o"}
+
+sections:
+  intro:
+    bars: 2
+    chords: intro
+    parts: {pad: pad, bass: root, rain: "B5':1 r:1 E6':1 r:3 G5':1 r:1 | r:2 D6':1 r:2 A5':1 r:2", hiss: rainfall, bell: "B4:8 | D#5:8"}
+  a:
+    bars: 8
+    chords: a
+    parts: {bell: bell_a, pad: pad, bass: root, rain: drops, hiss: rainfall}
+  b:
+    bars: 8
+    chords: b
+    parts: {strings: strings_b, harp: harp8, pad: pad, bass: root, rain: drops, hiss: rainfall}
+  c:
+    bars: 4
+    chords: c
+    parts: {harp: harp8, timpani: timp_c, pad: pad, bass: root, hiss: rainfall}
+  d:
+    bars: 2
+    chords: d
+    parts: {bell: bell_d, pad: pad, bass: root, rain: "B5':1 r:1 E6':1 r:3 G5':1 r:1 | r:2 D6':1 r:2 A5':1 r:2", hiss: rainfall}
+
+arrangement: [intro, a, b, c, d]
+loop_start: a
