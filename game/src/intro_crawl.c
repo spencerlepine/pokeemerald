@@ -9,7 +9,8 @@
 //                   crawl has started, so the stars appear after the hand-off.
 //   BG2  affine     the crawl. 8bpp, 512x512 with wraparound. Every scanline gets its own affine
 //                   scale/offset through an HBlank DMA, which tilts the text back into the distance.
-//                   An HBlank IRQ darkens the far lines so the text fades out near the horizon.
+//                   An HBlank IRQ blends the far lines into BG1 so the text fades out into the
+//                   stars near the horizon.
 //
 // The text is printed with the game's own font into a scratch window that is never put on screen,
 // then converted from 4bpp to 8bpp tiles into a ring of 16 tile rows (8 text lines) on BG2.
@@ -49,7 +50,7 @@
 #define CRAWL_TOP           60   // first scanline the crawl is drawn on (WIN0 hides BG2 above this)
 #define CRAWL_HORIZON       30   // vanishing line: scale = CRAWL_SCALE_K / (y - CRAWL_HORIZON)
 #define CRAWL_SCALE_K       71   // texture px per screen px is 0.55 at the bottom line, 2.4 at the top
-#define CRAWL_FADE_LINES    32   // lines below CRAWL_TOP over which the text darkens to black
+#define CRAWL_FADE_LINES    32   // lines below CRAWL_TOP over which the text fades into space
 #define CRAWL_SPEED         34   // texture px per frame, 8.8 fixed point (about one text line per 2 s)
 #define CRAWL_END_HOLD      60   // frames to wait after the last line has gone
 
@@ -103,7 +104,7 @@ struct CrawlLineRegs
 static EWRAM_DATA struct CrawlLineRegs sLineRegs[2][CRAWL_NUM_LINES] = {0};
 static EWRAM_DATA s16 sLineScale[DISPLAY_HEIGHT] = {0};
 static EWRAM_DATA s32 sLineDepth[DISPLAY_HEIGHT] = {0};   // 8.8, texture px from the bottom line
-static EWRAM_DATA u8 sLineFade[CRAWL_NUM_LINES] = {0};
+static EWRAM_DATA u16 sLineFade[CRAWL_NUM_LINES] = {0};  // BLDALPHA per line
 static EWRAM_DATA u16 sTileBuffer[CRAWL_TEX_W_TILES * 32] = {0};
 static EWRAM_DATA s32 sScroll = 0;      // texture y at the bottom scanline, 8.8
 static EWRAM_DATA s32 sDepth = 0;       // texture px between the bottom and top scanline, 8.8
@@ -323,15 +324,18 @@ void CB2_InitIntroCrawl(void)
         sScroll = -8 * 256;
         sNextLine = 0;
         BuildLineRegs();
-        // Line darkening: full black at the top line, clear CRAWL_FADE_LINES lines lower.
+        // Line fade: the text blends into BG1 (space), fully gone at the top line and fully
+        // opaque CRAWL_FADE_LINES lines lower.
         for (i = 0; i < CRAWL_NUM_LINES; i++)
         {
+            u16 fade;
             if (i < CRAWL_TOP)
-                sLineFade[i] = 16;
+                fade = 16;
             else if (i < CRAWL_TOP + CRAWL_FADE_LINES)
-                sLineFade[i] = 16 - ((i - CRAWL_TOP) * 16) / CRAWL_FADE_LINES;
+                fade = 16 - ((i - CRAWL_TOP) * 16) / CRAWL_FADE_LINES;
             else
-                sLineFade[i] = 0;
+                fade = 0;
+            sLineFade[i] = BLDALPHA_BLEND(16 - fade, fade);
         }
         SetGpuReg(REG_OFFSET_BG0CNT, BGCNT_PRIORITY(0) | BGCNT_CHARBASE(CRAWL_BG0_CHARBASE) | BGCNT_SCREENBASE(CRAWL_BG0_SCREEN) | BGCNT_16COLOR | BGCNT_TXT256x256);
         SetGpuReg(REG_OFFSET_BG1CNT, BGCNT_PRIORITY(2) | BGCNT_CHARBASE(CRAWL_BG1_CHARBASE) | BGCNT_SCREENBASE(CRAWL_BG1_SCREEN) | BGCNT_16COLOR | BGCNT_TXT256x256);
@@ -340,8 +344,8 @@ void CB2_InitIntroCrawl(void)
         SetGpuReg(REG_OFFSET_WIN0V, WIN_RANGE(CRAWL_TOP, DISPLAY_HEIGHT));
         SetGpuReg(REG_OFFSET_WININ, WININ_WIN0_ALL);
         SetGpuReg(REG_OFFSET_WINOUT, WINOUT_WIN01_BG0 | WINOUT_WIN01_BG1 | WINOUT_WIN01_OBJ);
-        SetGpuReg(REG_OFFSET_BLDCNT, BLDCNT_TGT1_BG2 | BLDCNT_EFFECT_DARKEN);
-        SetGpuReg(REG_OFFSET_BLDY, 0);
+        SetGpuReg(REG_OFFSET_BLDCNT, BLDCNT_TGT1_BG2 | BLDCNT_EFFECT_BLEND | BLDCNT_TGT2_BG1);
+        SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(16, 0));
         gMain.state++;
         break;
     case 4:
@@ -386,7 +390,7 @@ static void VBlankCB_IntroCrawl(void)
     REG_BG2PD = regs[0].pd;
     REG_BG2X = regs[0].x;
     REG_BG2Y = regs[0].y;
-    REG_BLDY = sLineFade[0];
+    REG_BLDALPHA = sLineFade[0];
     DmaSet(0, &regs[1], &REG_BG2PA, ((DMA_ENABLE | DMA_START_HBLANK | DMA_REPEAT | DMA_32BIT | DMA_DEST_RELOAD | DMA_SRC_INC) << 16) | (sizeof(struct CrawlLineRegs) / 4));
     TransferPlttBuffer();
 }
@@ -396,7 +400,7 @@ static void HBlankCB_IntroCrawl(void)
     u16 next = REG_VCOUNT + 1;
 
     if (next < DISPLAY_HEIGHT)
-        REG_BLDY = sLineFade[next];
+        REG_BLDALPHA = sLineFade[next];
 }
 
 // Precompute each scanline's scale and its texture distance from the bottom scanline.
@@ -683,6 +687,7 @@ static void Task_IntroCrawlExit(u8 taskId)
         SetGpuReg(REG_OFFSET_DISPCNT, 0);
         SetGpuReg(REG_OFFSET_BLDCNT, 0);
         SetGpuReg(REG_OFFSET_BLDY, 0);
+        SetGpuReg(REG_OFFSET_BLDALPHA, 0);
         SetGpuReg(REG_OFFSET_WININ, 0);
         SetGpuReg(REG_OFFSET_WINOUT, 0);
         SetGpuReg(REG_OFFSET_WIN0H, 0);
