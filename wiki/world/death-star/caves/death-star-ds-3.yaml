@@ -1,0 +1,49 @@
+id: death-star-ds-3
+name: DEATH STAR DS-3
+planet: DEATH STAR
+kind: dungeon
+replaces: new
+status: BLOCKOUT
+story: 'DS-3: Detention block. Three Imperial trainers (levels 60-70) and one item.'
+grid: |
+  |||||||||||||||||||||||||
+  |||||||||||||||||||||||||
+  |_______________________|
+  |__|||||__|||||__|||||__|
+  |__|||||__|||||__|||||__|
+  |__|||||__|||||__|||||__|
+  |__|||||__|||||__|||||__|
+  |_______________________|
+  |_______________________|
+  |_______________________|
+  |__|||||||||||||||||||__|
+  |__|||||||||||||||||||__|
+  |_______________________|
+  |_______________________|
+  |_______________________|
+  ||||||||||||_||||||||||||
+exits: []
+buildings: []
+props: []
+people:
+- name: Stormtrooper
+  at: [4, 8]
+  role: trainer
+- name: Imperial officer
+  at: [20, 8]
+  role: trainer
+- name: Stormtrooper
+  at: [9, 13]
+  role: trainer
+- name: Item ball
+  at: [22, 14]
+  role: item
+signs: []
+warps:
+- name: Lift down
+  at: [12, 15]
+  to: death-star-ds-2
+- name: Lift up
+  at: [12, 2]
+  to: death-star-ds-4
+todo: ['Net-new area net:death-star-site (bible/NET_NEW_DESIGNS.md). Placeholder: Trainer Hill floors, tileset and elevator scripts.']

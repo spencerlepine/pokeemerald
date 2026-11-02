@@ -2,6 +2,8 @@
 
 ![Game Screenshot](TODO.png)
 
+**Agents and returning contributors: start at [`HANDOFF.md`](HANDOFF.md)** (state, rules, next steps).
+
 ## Project Structure
 
 | Path | Contents |

@@ -723,6 +723,50 @@ route-130,DAGOBAH,route,Route130,BLOCKOUT,person,Trainer Rirkel,1x1,,,PLACEHOLDE
 route-130,DAGOBAH,route,Route130,BLOCKOUT,person,Trainer Kuena,1x1,,,PLACEHOLDER
 route-130,DAGOBAH,route,Route130,BLOCKOUT,person,Trainer Seshon,1x1,,,PLACEHOLDER
 route-130,DAGOBAH,route,Route130,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+death-star-ds-1,DEATH STAR,dungeon,new,BLOCKOUT,area,DEATH STAR DS-1,25x16,,,
+death-star-ds-1,DEATH STAR,dungeon,new,BLOCKOUT,person,Stormtrooper,1x1,,,PLACEHOLDER
+death-star-ds-1,DEATH STAR,dungeon,new,BLOCKOUT,person,Imperial officer,1x1,,,PLACEHOLDER
+death-star-ds-1,DEATH STAR,dungeon,new,BLOCKOUT,person,Stormtrooper,1x1,,,PLACEHOLDER
+death-star-ds-1,DEATH STAR,dungeon,new,BLOCKOUT,person,Item ball,1x1,,,PLACEHOLDER
+death-star-ds-1,DEATH STAR,dungeon,new,BLOCKOUT,warp,Lift down,1x1,,,PLACEHOLDER
+death-star-ds-1,DEATH STAR,dungeon,new,BLOCKOUT,warp,Lift up,1x1,,,PLACEHOLDER
+death-star-ds-2,DEATH STAR,dungeon,new,BLOCKOUT,area,DEATH STAR DS-2,25x16,,,
+death-star-ds-2,DEATH STAR,dungeon,new,BLOCKOUT,person,Stormtrooper,1x1,,,PLACEHOLDER
+death-star-ds-2,DEATH STAR,dungeon,new,BLOCKOUT,person,Imperial officer,1x1,,,PLACEHOLDER
+death-star-ds-2,DEATH STAR,dungeon,new,BLOCKOUT,person,Stormtrooper,1x1,,,PLACEHOLDER
+death-star-ds-2,DEATH STAR,dungeon,new,BLOCKOUT,person,Item ball,1x1,,,PLACEHOLDER
+death-star-ds-2,DEATH STAR,dungeon,new,BLOCKOUT,warp,Lift down,1x1,,,PLACEHOLDER
+death-star-ds-2,DEATH STAR,dungeon,new,BLOCKOUT,warp,Lift up,1x1,,,PLACEHOLDER
+death-star-ds-3,DEATH STAR,dungeon,new,BLOCKOUT,area,DEATH STAR DS-3,25x16,,,
+death-star-ds-3,DEATH STAR,dungeon,new,BLOCKOUT,person,Stormtrooper,1x1,,,PLACEHOLDER
+death-star-ds-3,DEATH STAR,dungeon,new,BLOCKOUT,person,Imperial officer,1x1,,,PLACEHOLDER
+death-star-ds-3,DEATH STAR,dungeon,new,BLOCKOUT,person,Stormtrooper,1x1,,,PLACEHOLDER
+death-star-ds-3,DEATH STAR,dungeon,new,BLOCKOUT,person,Item ball,1x1,,,PLACEHOLDER
+death-star-ds-3,DEATH STAR,dungeon,new,BLOCKOUT,warp,Lift down,1x1,,,PLACEHOLDER
+death-star-ds-3,DEATH STAR,dungeon,new,BLOCKOUT,warp,Lift up,1x1,,,PLACEHOLDER
+death-star-ds-4,DEATH STAR,dungeon,new,BLOCKOUT,area,DEATH STAR DS-4,25x16,,,
+death-star-ds-4,DEATH STAR,dungeon,new,BLOCKOUT,person,Stormtrooper,1x1,,,PLACEHOLDER
+death-star-ds-4,DEATH STAR,dungeon,new,BLOCKOUT,person,Imperial officer,1x1,,,PLACEHOLDER
+death-star-ds-4,DEATH STAR,dungeon,new,BLOCKOUT,person,Stormtrooper,1x1,,,PLACEHOLDER
+death-star-ds-4,DEATH STAR,dungeon,new,BLOCKOUT,person,Item ball,1x1,,,PLACEHOLDER
+death-star-ds-4,DEATH STAR,dungeon,new,BLOCKOUT,warp,Lift down,1x1,,,PLACEHOLDER
+death-star-ds-4,DEATH STAR,dungeon,new,BLOCKOUT,warp,Lift up,1x1,,,PLACEHOLDER
+death-star-ds-5,DEATH STAR,dungeon,new,BLOCKOUT,area,DEATH STAR DS-5,25x16,,,
+death-star-ds-5,DEATH STAR,dungeon,new,BLOCKOUT,prop,Viewport on the half-built sphere,3x1,art:new:death-star-viewport,NEW,TODO
+death-star-ds-5,DEATH STAR,dungeon,new,BLOCKOUT,person,Imperial officer,1x1,,,PLACEHOLDER
+death-star-ds-5,DEATH STAR,dungeon,new,BLOCKOUT,person,Imperial officer,1x1,,,PLACEHOLDER
+death-star-ds-5,DEATH STAR,dungeon,new,BLOCKOUT,person,Stormtrooper,1x1,,,PLACEHOLDER
+death-star-ds-5,DEATH STAR,dungeon,new,BLOCKOUT,person,Grand Moff's aide (final battle),1x1,,,PLACEHOLDER
+death-star-ds-5,DEATH STAR,dungeon,new,BLOCKOUT,person,Item ball,1x1,,,PLACEHOLDER
+death-star-ds-5,DEATH STAR,dungeon,new,BLOCKOUT,warp,Lift down,1x1,,,PLACEHOLDER
+death-star-hangar,DEATH STAR,dungeon,new,BLOCKOUT,area,DEATH STAR HANGAR,26x16,,,
+death-star-hangar,DEATH STAR,dungeon,new,BLOCKOUT,prop,Imperial shuttle,6x4,art:new:imperial-shuttle,NEW,TODO
+death-star-hangar,DEATH STAR,dungeon,new,BLOCKOUT,prop,TIE fighter rack,6x3,art:new:tie-rack,NEW,TODO
+death-star-hangar,DEATH STAR,dungeon,new,BLOCKOUT,prop,Cargo crates,2x2,art:shared:cargo-crates,yes,TODO
+death-star-hangar,DEATH STAR,dungeon,new,BLOCKOUT,person,Deck officer,1x1,,,PLACEHOLDER
+death-star-hangar,DEATH STAR,dungeon,new,BLOCKOUT,person,Rebel infiltrator,1x1,,,PLACEHOLDER
+death-star-hangar,DEATH STAR,dungeon,new,BLOCKOUT,warp,Shuttle ramp (back to Yavin 4),1x1,,,PLACEHOLDER
+death-star-hangar,DEATH STAR,dungeon,new,BLOCKOUT,warp,Lift to DS-1,1x1,,,PLACEHOLDER
 bright-tree,ENDOR,town,FortreeCity,BLOCKOUT,area,BRIGHT TREE,40x20,,,
 bright-tree,ENDOR,town,FortreeCity,BLOCKOUT,building,Ewok hut,3x3,art:endor:ewok-hut,yes,TODO
 bright-tree,ENDOR,town,FortreeCity,BLOCKOUT,building,Ewok hut,3x3,art:endor:ewok-hut,yes,TODO

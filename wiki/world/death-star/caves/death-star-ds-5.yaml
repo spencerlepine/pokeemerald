@@ -1,0 +1,53 @@
+id: death-star-ds-5
+name: DEATH STAR DS-5
+planet: DEATH STAR
+kind: dungeon
+replaces: new
+status: BLOCKOUT
+story: 'DS-5: Command deck. Three Imperial trainers (levels 60-70) and one item. The final officer battle sets flag:unused-0x025.'
+grid: |
+  |||||||||||||||||||||||||
+  |||||||||||||||||||||||||
+  |_______________________|
+  |__|||||||_____|||||||__|
+  |__|||||||_____|||||||__|
+  |_______________________|
+  |_______________________|
+  |_______________________|
+  |_______________________|
+  |_______________________|
+  |_______________________|
+  |_______________________|
+  |_______________________|
+  |_______________________|
+  |_______________________|
+  ||||||||||||_||||||||||||
+exits: []
+buildings: []
+props:
+- name: Viewport on the half-built sphere
+  art: art:new:death-star-viewport
+  at: [2, 2]
+  size: [3, 1]
+people:
+- name: Imperial officer
+  at: [4, 8]
+  role: trainer
+- name: Imperial officer
+  at: [20, 8]
+  role: trainer
+- name: Stormtrooper
+  at: [9, 13]
+  role: trainer
+- name: Grand Moff's aide (final battle)
+  at: [12, 6]
+  role: story
+- name: Item ball
+  at: [22, 14]
+  role: item
+signs: []
+warps:
+- name: Lift down
+  at: [12, 15]
+  to: death-star-ds-4
+todo: ['Net-new area net:death-star-site (bible/NET_NEW_DESIGNS.md). Placeholder: Trainer Hill floors, tileset and elevator scripts.']
