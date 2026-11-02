@@ -1,0 +1,94 @@
+# Mortis Gate and the event-island caves: hot-swap of MUS_RG_SEVII_CAVE (wiki audio:MUS_RG_SEVII_CAVE, AMBIENT).
+# SCRATCH (no film cue): written from the brief. Mortis is the realm of the Father, the Son and the Daughter, so
+# the loop turns between light and dark on one E pedal: 8 bars of E lydian (the raised A# glowing), 8 of E
+# phrygian (the F natural pulling down), then 8 where they overlap. A piano figure is echoed in canon by the
+# two squares (an eighth and a quarter later, softer each time) so the cave answers itself; strings hold a
+# single high line, the wave holds the pedal. Vanilla: rg_mt_moon voicegroup, 110 bpm, 92.1 s loop; this one
+# 80 bpm, 24 bars, 72 s (the long end of the vanilla AMBIENT range).
+# Brief (sw_subject): otherworldly, echoing.
+name: mortis-depths
+replaces: MUS_RG_SEVII_CAVE
+form: AMBIENT
+voicegroup: rg_mt_moon                # piano 1, guitar 24, strings 48, kit 0, squares 80/81, wave 83
+master_volume: 86
+tempo: 80
+steps_per_beat: 4
+time_signature: [4, 4]
+seed: 3
+
+parts:
+  piano:   {program: 1,  channel: 0, volume: 80,  pan: -10, range: [E4, E6], gate: 0.9, humanize: {vel: 8}}
+  strings: {program: 48, channel: 1, volume: 56,  pan: 20,  range: [B3, B5], gate: 1.0}
+  guitar:  {program: 24, channel: 2, volume: 60,  pan: -24, range: [E3, E5], gate: 0.9}
+  pedal:   {program: 83, channel: 3, volume: 84,  pan: 0,   range: [E1, E2], gate: 1.0}
+  echo1:   {program: 80, channel: 4, volume: 28,  pan: 34,  range: [E4, E6], gate: 0.7, mono: true}
+  echo2:   {program: 81, channel: 5, volume: 20,  pan: -34, range: [E4, E6], gate: 0.7, mono: true}
+
+phrases:
+  light: |
+    E5:2 B5:2 A#5:2 F#5:2 G#5:4 r:4 | E5:2 F#5:2 G#5:2 A#5:2 B5:4 r:4 |
+    D#5:2 B5:2 A#5:2 G#5:2 F#5:4 r:4 | E5:4 B4:4 F#5:8 |
+    E5:2 B5:2 A#5:2 F#5:2 G#5:4 r:4 | C#6:2 B5:2 A#5:2 G#5:2 D#5:4 r:4 |
+    E5:2 F#5:2 G#5:2 A#5:2 B5:4 D#6:4 | E6:8 r:8
+  dark: |
+    E5:2 F5:2 G5:2 E5:2 B4:4 r:4 | E5:2 D5:2 C5:2 F5:2 E5:4 r:4 |
+    G5:2 F5:2 E5:2 D5:2 C5:4 r:4 | B4:4 C5:4 F5:8 |
+    E5:2 F5:2 G5:2 E5:2 B4:4 r:4 | A5:2 G5:2 F5:2 E5:2 D5:4 r:4 |
+    C5:2 D5:2 E5:2 F5:2 G5:4 F5:4 | E5:8 r:8
+  both: |
+    E5:2 B5:2 A#5:2 F#5:2 G#5:4 r:4 | E5:2 F5:2 G5:2 E5:2 B4:4 r:4 |
+    D#5:2 B5:2 A#5:2 G#5:2 F#5:4 r:4 | G5:2 F5:2 E5:2 D5:2 C5:4 r:4 |
+    E5:4 B5:4 A#5:8 | F5:8 E5:8 |
+    E5:2 F#5:2 G#5:2 A#5:2 B5:4 r:4 | B4:4 F5:4 E5:8
+  # the echoes: the same lines delayed by an eighth (square 1) and a quarter (square 2); the bar end cuts them
+  light_e1: |
+    r:2 E5:2 B5:2 A#5:2 F#5:2 G#5:4 r:2 | r:2 E5:2 F#5:2 G#5:2 A#5:2 B5:4 r:2 |
+    r:2 D#5:2 B5:2 A#5:2 G#5:2 F#5:4 r:2 | r:2 E5:4 B4:4 F#5:6 |
+    r:2 E5:2 B5:2 A#5:2 F#5:2 G#5:4 r:2 | r:2 C#6:2 B5:2 A#5:2 G#5:2 D#5:4 r:2 |
+    r:2 E5:2 F#5:2 G#5:2 A#5:2 B5:4 D#6:2 | r:2 E6:8 r:6
+  light_e2: |
+    r:4 E5:2 B5:2 A#5:2 F#5:2 G#5:4 | r:4 E5:2 F#5:2 G#5:2 A#5:2 B5:4 |
+    r:4 D#5:2 B5:2 A#5:2 G#5:2 F#5:4 | r:4 E5:4 B4:4 F#5:4 |
+    r:4 E5:2 B5:2 A#5:2 F#5:2 G#5:4 | r:4 C#6:2 B5:2 A#5:2 G#5:2 D#5:4 |
+    r:4 E5:2 F#5:2 G#5:2 A#5:2 B5:4 | r:4 E6:8 r:4
+  dark_e1: |
+    r:2 E5:2 F5:2 G5:2 E5:2 B4:4 r:2 | r:2 E5:2 D5:2 C5:2 F5:2 E5:4 r:2 |
+    r:2 G5:2 F5:2 E5:2 D5:2 C5:4 r:2 | r:2 B4:4 C5:4 F5:6 |
+    r:2 E5:2 F5:2 G5:2 E5:2 B4:4 r:2 | r:2 A5:2 G5:2 F5:2 E5:2 D5:4 r:2 |
+    r:2 C5:2 D5:2 E5:2 F5:2 G5:4 F5:2 | r:2 E5:8 r:6
+  dark_e2: |
+    r:4 E5:2 F5:2 G5:2 E5:2 B4:4 | r:4 E5:2 D5:2 C5:2 F5:2 E5:4 |
+    r:4 G5:2 F5:2 E5:2 D5:2 C5:4 | r:4 B4:4 C5:4 F5:4 |
+    r:4 E5:2 F5:2 G5:2 E5:2 B4:4 | r:4 A5:2 G5:2 F5:2 E5:2 D5:4 |
+    r:4 C5:2 D5:2 E5:2 F5:2 G5:4 | r:4 E5:8 r:4
+  both_e1: |
+    r:2 E5:2 B5:2 A#5:2 F#5:2 G#5:4 r:2 | r:2 E5:2 F5:2 G5:2 E5:2 B4:4 r:2 |
+    r:2 D#5:2 B5:2 A#5:2 G#5:2 F#5:4 r:2 | r:2 G5:2 F5:2 E5:2 D5:2 C5:4 r:2 |
+    r:2 E5:4 B5:4 A#5:6 | r:2 F5:8 E5:6 |
+    r:2 E5:2 F#5:2 G#5:2 A#5:2 B5:4 r:2 | r:2 B4:4 F5:4 E5:6
+  both_e2: |
+    r:4 E5:2 B5:2 A#5:2 F#5:2 G#5:4 | r:4 E5:2 F5:2 G5:2 E5:2 B4:4 |
+    r:4 D#5:2 B5:2 A#5:2 G#5:2 F#5:4 | r:4 G5:2 F5:2 E5:2 D5:2 C5:4 |
+    r:4 E5:4 B5:4 A#5:4 | r:4 F5:8 E5:4 |
+    r:4 E5:2 F#5:2 G#5:2 A#5:2 B5:4 | r:4 B4:4 F5:4 E5:4
+  line_light: "B4:16 | A#4:16 | B4:16 | C#5:16 | B4:16 | A#4:16 | G#4:16 | B4:16"
+  line_dark: "B4:16 | C5:16 | B4:16 | A4:16 | G4:16 | F4:16 | G4:16 | E4:16"
+  line_both: "B4:16 | B4:16 | A#4:16 | C5:16 | B4:16 | F4:16 | G#4:16 | E4:16"
+  strum_light: "E3:4 B3:4 F#4:4 A#4:4"
+  strum_dark: "E3:4 B3:4 F4:4 C5:4"
+  low: "E1:16"
+
+sections:
+  light:
+    bars: 8
+    parts: {piano: light, echo1: light_e1, echo2: light_e2, strings: line_light, guitar: strum_light, pedal: low}
+  dark:
+    bars: 8
+    gain: {echo2: 6}
+    parts: {piano: dark, echo1: dark_e1, echo2: dark_e2, strings: line_dark, guitar: strum_dark, pedal: low}
+  both:
+    bars: 8
+    parts: {piano: both, echo1: both_e1, echo2: both_e2, strings: line_both, pedal: low}
+
+arrangement: [light, dark, both]
+loop_start: light
