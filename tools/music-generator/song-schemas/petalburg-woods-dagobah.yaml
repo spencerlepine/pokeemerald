@@ -1,0 +1,74 @@
+# Petalburg Woods, Dagobah: net-new per-planet split of MUS_PETALBURG_WOODS (wiki row
+# net:mus-petalburg-woods-dagobah), for Marine Cave and its underwater room. SCRATCH: no film cue, written from
+# the brief. The Tatooine original (Jundland Wastes) is tense and echoing; Dagobah's version keeps the tension
+# but turns it murky and mystical: C minor with Ab / Bb colour and a G major dominant, a flute line that rises
+# and hangs in a, a low piano answer in b, then c thins to flute fragments over soft congas (swamp life).
+# Pizzicato drips, a 12.5 % square bubbling in the gaps, a wave-channel bass and a two-voice string pad.
+# Tempo, voicegroup and length from the vanilla song (MUS_PETALBURG_WOODS: petalburg_woods, 130 bpm, 42.2 s):
+# 24 bars at 130 = 44.3 s.
+# Brief (sw_subject): Dagobah version of MUS_PETALBURG_WOODS, same role and mood family; theme to be decided.
+name: petalburg-woods-dagobah
+constant: MUS_PETALBURG_WOODS_DAGOBAH
+form: AMBIENT
+voicegroup: petalburg_woods       # vanilla's own: piano 1, pizz 45, strings 48, flute 73, squares 5/80, wave 81, kit 0
+master_volume: 80
+tempo: 130
+steps_per_beat: 2                 # eighth-note grid
+time_signature: [4, 4]
+seed: 13
+
+parts:
+  flute:   {program: 73, channel: 0, volume: 94,  pan: 10,  gate: 0.95, lfo_speed: 26, lfo_delay: 20, mod: 6, humanize: {vel: 5}}
+  piano:   {program: 1,  channel: 1, volume: 84,  pan: -12, gate: 0.95, humanize: {vel: 6}}
+  str_hi:  {program: 48, channel: 2, volume: 58,  pan: 26,  octave: 3, gate: 1.0}
+  str_lo:  {program: 48, channel: 3, volume: 54,  pan: -26, octave: 3, gate: 1.0}
+  pizz:    {program: 45, channel: 4, volume: 70,  pan: -20, octave: 4, gate: 0.8, humanize: {vel: 8}}
+  bass:    {program: 81, channel: 5, volume: 80,  pan: 0,   octave: 2, role: bass, gate: 0.9}
+  bubble:  {program: 5,  channel: 6, volume: 38,  pan: 34,  gate: 0.5, mono: true}
+  congas:  {program: 0,  channel: 7, volume: 62,  pan: 18,  role: drums, kit: {lo: 64, hi: 62}}
+
+progressions:
+  intro: "Cm | G"
+  a: "Cm | Ab | Cm | Bb | Fm | Ab | G | G"
+  b: "Ab | Bb | Gm | Cm | Ab | Bb | Dm7b5 | G"
+  c: "Cm | Ab | Cm | G | Fm | Fm | Ab | G"
+
+phrases:
+  pad_lo: "^1:8"
+  pad_hi: "^3:8"
+  murk: "^1:6 ^1:2"
+  drips: "^1+:1 r:3 ^3:1 r:3 | r:2 ^2:1 r:5"
+  bubbles: "r:3 G5':1 r:2 C6':1 r:1 | r:8 | r:5 Eb6':1 r:2 | r:1 D6':1 r:6"
+  flute_a: |
+    G4:4 C5:2 D5:2 | Eb5:6 C5:2 | D5:2 Eb5:2 G5:2 F5:2 | D5:8 |
+    C5:4 F5:2 Ab5:2 | G5:4 Eb5:2 C5:2 | D5:4 B4:2 G4:2 | G4:8
+  piano_b: |
+    Ab3:4 C4:4 | Bb3:4 D4:4 | G3:4 Bb3:2 D4:2 | C4:8 |
+    Ab3:4 Eb4:4 | D4:4 F4:4 | F4:4 D4:2 Ab3:2 | B3:8
+  flute_c: "r:8 | G5:2 F5:2 Eb5:4 | r:8 | D5:8 | r:8 | C5:2 Bb4:2 Ab4:4 | r:8 | B4:8"
+
+grooves:
+  swamp: {lo: "x.....o.|..o...x.", hi: "...o....|o.......|....o..o|........"}
+
+sections:
+  intro:
+    bars: 2
+    chords: intro
+    ramp: {str_lo: [-14, 0], str_hi: [-14, 0]}
+    parts: {str_lo: pad_lo, str_hi: pad_hi, bass: murk, bubble: "r:3 G5':1 r:2 C6':1 r:1 | r:8", pizz: drips}
+  a:
+    bars: 8
+    chords: a
+    parts: {flute: flute_a, str_lo: pad_lo, str_hi: pad_hi, pizz: drips, bass: murk, bubble: bubbles}
+  b:
+    bars: 8
+    chords: b
+    parts: {piano: piano_b, str_lo: pad_lo, str_hi: pad_hi, pizz: drips, bass: murk, bubble: bubbles}
+  c:
+    bars: 8
+    chords: c
+    gain: {flute: -10}
+    parts: {flute: flute_c, str_lo: pad_lo, str_hi: pad_hi, congas: swamp, bass: murk, bubble: bubbles}
+
+arrangement: [intro, a, b, c]
+loop_start: a
