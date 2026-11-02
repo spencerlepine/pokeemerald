@@ -1,0 +1,55 @@
+# Bacta Center: hot-swap of MUS_POKE_CENTER (wiki audio:MUS_POKE_CENTER). SCRATCH (no film cue): written from
+# the brief. Brief (sw_subject): Bacta Center tended by 2-1B, calm, healing, soft bubbling bacta tanks.
+# F major, 104 bpm (vanilla tempo): a warm flute tune over soft offbeat piano and wave bass, then strings and
+# pizzicato under the second strain; a 12.5% square plays little rising ripples at the bar ends (the bubbles in
+# the tanks) and a 25% square hums a counter-line. No drums. 16-bar loop, 36.9 s (vanilla 39.2 s).
+name: bacta-center
+replaces: MUS_POKE_CENTER
+form: LOOP
+voicegroup: poke_center             # vanilla: piano 0, waves 1/4, squares 2/3/6, fretless 5, pizz 45, strings 48, flute 73
+master_volume: 88
+tempo: 104
+steps_per_beat: 4
+time_signature: [4, 4]
+seed: 81
+
+parts:
+  flute:   {program: 73, channel: 0, volume: 98, pan: 6,   gate: 0.95, lfo_speed: 30, lfo_delay: 24, mod: 4, humanize: {vel: 4}}
+  piano:   {program: 0,  channel: 1, volume: 66, pan: -16, range: [F3, D4], gate: 0.6, humanize: {vel: 6}}
+  strings: {program: 48, channel: 2, volume: 58, pan: 20,  octave: 4, gate: 1.0}
+  pizz:    {program: 45, channel: 3, volume: 80, pan: -6,  octave: 3, gate: 0.9}
+  bass:    {program: 4,  channel: 4, volume: 92, pan: 0,   octave: 2, gate: 0.85, role: bass, mono: true}
+  bubble:  {program: 2,  channel: 5, volume: 40, pan: -32, octave: 4, gate: 0.5, mono: true}
+  hum:     {program: 6,  channel: 6, volume: 34, pan: 30,  octave: 4, gate: 0.95, mono: true}
+
+progressions:
+  a: "F | Am | Dm | Bb | F | C | Bb | C"
+  b: "Bb | C | Am | Dm | Gm | C | F | C"
+
+phrases:
+  tune_a: |
+    A4:4 C5:4 F5:8 | E5:6 D5:2 C5:8 | D5:4 F5:4 A5:6 G5:2 | F5:12 r:4 |
+    A5:4 G5:4 F5:4 C5:4 | E5:6 F5:2 G5:8 | F5:4 D5:4 Bb4:4 D5:4 | C5:12 r:4
+  tune_b: |
+    D5:4 F5:4 Bb5:8 | A5:4 G5:4 E5:8 | C5:4 E5:4 A5:6 G5:2 | F5:12 r:4 |
+    Bb4:4 D5:4 G5:6 F5:2 | E5:4 G5:4 C6:8 | A5:6 G5:2 F5:4 C5:4 | E5:4 D5:4 C5:4 r:4
+  comp: "r:4 ch:4 r:4 ch:4"
+  pad: "^2:16"
+  pizz: "^1:4 r:4 ^3:4 r:4"
+  bass: "^1:8 ^3:8"
+  bubble: "r:16 | r:8 ^1+:1 ^2+:1 ^3+:1 ^1++:1 r:4"
+  bubble_b: "r:12 ^1+:1 ^2+:1 ^3+:1 ^1++:1 | r:16"
+  hum: "^3+:8 ^2+:8"
+
+sections:
+  a:
+    bars: 8
+    chords: a
+    parts: {flute: tune_a, piano: comp, bass: bass, bubble: bubble}
+  b:
+    bars: 8
+    chords: b
+    parts: {flute: tune_b, strings: pad, pizz: pizz, bass: bass, bubble: bubble_b, hum: hum}
+
+arrangement: [a, b]
+loop_start: a
