@@ -403,7 +403,169 @@ SUNKEN = {
     "mineshaft": (s_mineshaft, [(3, 4), (3, 5)]),
 }
 
-CATEGORIES = {"doorless": DOORLESS, "sunken": SUNKEN}
+
+# --------------------------------------------------------------------------- category 3: Imperial military
+# Angular, sloped walls, dark slits and blast doors. Shown in Imperial greys (MATERIAL), not planet colours.
+
+
+def _door(m, x, yf, w=8, h=12, z0=0):
+    """A door recess in a south face at y = yf."""
+    return S.box(x - w / 2, yf - 1, z0, x + w / 2, yf + 3, z0 + h, palette(m)["dark"], subtract=True)
+
+
+def _band(x0, x1, yf, z, hgt, col):
+    """A recessed window or slit band across a south face."""
+    return S.box(x0, yf - 1, z, x1, yf + 1.2, z + hgt, col, subtract=True)
+
+
+def i_checkpoint(m):
+    """Checkpoint: a guard booth with a window band and a striped barrier arm across the road."""
+    p = palette(m)
+    bw = 18
+    bx = 2 if m.r(1, 2) else m.W - 2 - bw
+    D = 14
+    h = 18
+    m.add(S.prism([(bx, 0), (bx + bw, 0), (bx + bw, D), (bx, D)], 0, h, p["wall"], p["roof"], taper=2),
+          _band(bx + 2, bx + bw - 2, 0.3, 10, 4, p["glass"]),
+          S.box(bx - 1, -1, h, bx + bw + 1, D + 1, h + 2, p["roof"]))
+    ax0, ax1 = (bx + bw + 2, m.W - 2) if bx < m.W / 2 else (2, bx - 2)
+    post = ax0 if bx < m.W / 2 else ax1 - 3
+    m.add(S.box(post, 4, 0, post + 3, 7, 10, p["trim"]))
+    n = max(2, int((ax1 - ax0) // 8))
+    for i in range(n):
+        xa = ax0 + (ax1 - ax0) * i / n
+        m.add(S.box(xa, 5, 8, xa + (ax1 - ax0) / n, 6.5, 10, p["light"] if i % 2 else p["trim"]))
+
+
+def i_barricade(m):
+    """Barricade: a row of sloped blast blocks with gaps, laid out by the seed."""
+    p = palette(m)
+    D = min(m.H - 12, 12)
+    x = 1 + 2 * m.r(1, 2)
+    k = 0
+    while x < m.W - 8:
+        k += 1
+        w = 10 + 4 * m.r(k + 3, 3)
+        w = min(w, m.W - 1 - x)
+        h = 8 + 4 * m.r(k + 11, 2)
+        m.add(S.prism([(x, 0), (x + w, 0), (x + w, D), (x, D)], 0, h, p["wall"], p["roof"], taper=3))
+        m.add(S.box(x + 2, -0.5, h * 0.4, x + w - 2, 0.8, h * 0.4 + 1.5, p["trim"], subtract=True))
+        x += w + 3 + 3 * m.r(k + 7, 2)
+
+
+def i_sentry(m):
+    """Sentry tower: four legs, a cab with a dark window band, a sloped cap and a red light."""
+    p = palette(m)
+    s = min(m.W - 4, 22)
+    x0 = (m.W - s) / 2
+    D = s * 0.7
+    cab = 14
+    h = (m.H - D - cab - 8) * (0.85 + 0.07 * m.r(1, 3))
+    t = 2.5
+    for lx in (x0 + 2, x0 + s - 2 - t):
+        for ly in (2, D - 2 - t):
+            m.add(S.box(lx, ly, 0, lx + t, ly + t, h, p["trim"]))
+    m.add(S.box(x0 + 2, 2, h * 0.45, x0 + s - 2, 2 + t, h * 0.45 + 2, p["trim"]))
+    m.add(S.prism([(x0, 0), (x0 + s, 0), (x0 + s, D), (x0, D)], h, h + cab, p["wall"], p["roof"], taper=-2),
+          _band(x0 + 2, x0 + s - 2, -1.5, h + 6, 4, p["dark"]),
+          S.prism([(x0 - 2, -2), (x0 + s + 2, -2), (x0 + s + 2, D + 2), (x0 - 2, D + 2)], h + cab, h + cab + 4,
+                  p["roof"], p["roof"], taper=4),
+          S.box(m.W / 2 - 1.5, D / 2 - 1, h + cab + 4, m.W / 2 + 1.5, D / 2 + 1, h + cab + 6, p["light"]))
+
+
+def i_garage(m):
+    """Walker garage: a tall slab-sided hall with a sloped front, a huge blast door and roof lights."""
+    p = palette(m)
+    W = m.W
+    h = m.H * 0.45
+    D = m.H - h - 4
+    m.add(S.prism([(1, 0), (W - 1, 0), (W - 1, D), (1, D)], 0, h, p["wall"], p["roof"], taper=4))
+    dw = W * (0.45 + 0.1 * m.r(1, 2))
+    m.add(S.box(W / 2 - dw / 2, -1, 0, W / 2 + dw / 2, 5, h * 0.82, p["dark"], subtract=True),
+          S.box(W / 2 - dw / 2 + 2, 1.5, 0, W / 2 + dw / 2 - 2, 3, h * 0.82 - 2, p["trim"]))
+    for i in range(2 + m.r(2, 2)):
+        z = 4 + i * (h * 0.82 - 6) / 3
+        m.add(S.box(W / 2 - dw / 2 + 2, 1, z, W / 2 + dw / 2 - 2, 2, z + 1.5, p["roof"]))
+    m.add(S.box(W * 0.2, D * 0.3, h, W * 0.8, D * 0.7, h + 3, p["roof"], p["roof"]),
+          S.box(5, 2.5, h - 4, 8, 3, h - 2, p["light"]), S.box(W - 8, 2.5, h - 4, W - 5, 3, h - 2, p["light"]))
+
+
+def i_barracks(m):
+    """Barracks: a long low block with sloped side walls, a slit window band, a door and roof vents."""
+    p = palette(m)
+    W = m.W
+    h = 18
+    D = m.H - h - 6
+    m.add(S.prism([(1, 0), (W - 1, 0), (W - 1, D), (1, D)], 0, h, p["wall"], p["roof"], taper=3))
+    xd = W * (0.25 + 0.25 * m.r(1, 3))
+    m.add(_door(m, xd, 1.5, 8, 12))
+    m.add(_band(6, xd - 7, 1.5, 9, 3, p["dark"]), _band(xd + 7, W - 6, 1.5, 9, 3, p["dark"]))
+    n = 2 + m.r(2, 3)
+    for i in range(n):
+        x = 10 + i * (W - 26) / max(1, n - 1)
+        m.add(S.box(x, D * 0.35, h, x + 6, D * 0.35 + 6, h + 4, p["trim"], p["roof"]))
+
+
+def i_pillbox(m):
+    """Pillbox: a low hexagonal bunker with sloped walls, a dark firing slit and a hatch on top."""
+    p = palette(m)
+    W = m.W
+    D = min(m.H - 14, W * K)
+    k = W * 0.22
+    poly = [(k, 0), (W - k, 0), (W - 1, D / 2), (W - k, D), (k, D), (1, D / 2)]
+    h = 12 + 2 * m.r(1, 2)
+    m.add(S.prism(poly, 0, h, p["wall"], p["roof"], taper=4),
+          _band(k + 2, W - k - 2, 1.5, h * 0.55, 2.5, p["dark"]),
+          S.cylinder(W / 2, D / 2, 4, 0, h, h + 2, p["trim"], p["roof"]))
+
+
+def i_command(m):
+    """Command post: two sloped tiers stepping back, a dark window band and a mast with a light."""
+    p = palette(m)
+    W = m.W
+    h1, h2 = 16, 12
+    D = m.H - h1 - h2 - 10
+    m.add(S.prism([(1, 0), (W - 1, 0), (W - 1, D), (1, D)], 0, h1, p["wall"], p["roof"], taper=3),
+          _door(m, W / 2, 1.5, 10, 12))
+    x0, x1 = W * 0.2, W * 0.8
+    y0, y1 = D * 0.3, D - 4
+    m.add(S.prism([(x0, y0), (x1, y0), (x1, y1), (x0, y1)], h1, h1 + h2, p["wall"], p["roof"], taper=-1.5),
+          _band(x0 + 2, x1 - 2, y0 - 1, h1 + 4, 4, p["dark"]))
+    mx = x1 - 4 if m.r(1, 2) else x0 + 4
+    m.add(S.box(mx - 1, y1 - 3, h1 + h2, mx + 1, y1 - 1, h1 + h2 + 10, p["trim"]),
+          S.box(mx - 1.5, y1 - 3.5, h1 + h2 + 10, mx + 1.5, y1 - 0.5, h1 + h2 + 12, p["light"]))
+
+
+def i_gate(m):
+    """Gate: two blocky towers with sloped faces and a closed blast door between them."""
+    p = palette(m)
+    W = m.W
+    tw = W * 0.24
+    D = 18
+    h = m.H - D - 6
+    for x in (1, W - 1 - tw):
+        m.add(S.prism([(x, 0), (x + tw, 0), (x + tw, D), (x, D)], 0, h, p["wall"], p["roof"], taper=3),
+              _band(x + 3, x + tw - 3, 1.5, h * 0.7, 3, p["dark"]))
+    m.add(S.box(1 + tw, 4, 0, W - 1 - tw, D - 4, h * 0.72, p["trim"], p["roof"]),
+          S.box(W / 2 - 0.6, 3, 0, W / 2 + 0.6, 5, h * 0.72 - 2, p["dark"], subtract=True),
+          S.box(1 + tw, 3, h * 0.72 - 4, W - 1 - tw, 4.5, h * 0.72 - 2.5, p["light"]))
+
+
+IMPERIAL = {
+    "checkpoint": (i_checkpoint, [(3, 2), (4, 2)]),
+    "barricade": (i_barricade, [(3, 1), (5, 2)]),
+    "sentry": (i_sentry, [(2, 4), (2, 5)]),
+    "garage": (i_garage, [(4, 5), (5, 6)]),
+    "barracks": (i_barracks, [(5, 3), (6, 3)]),
+    "pillbox": (i_pillbox, [(2, 2), (3, 2)]),
+    "command": (i_command, [(4, 4), (5, 5)]),
+    "gate": (i_gate, [(4, 4), (6, 5)]),
+}
+
+# Colours a category is shown in when its look belongs to a faction, not a planet.
+MATERIAL = {"imperial": {"wall": (150, 156, 164), "roof": (98, 104, 112), "trim": (52, 54, 60)}}
+
+CATEGORIES = {"doorless": DOORLESS, "sunken": SUNKEN, "imperial": IMPERIAL}
 
 
 def register(builds):

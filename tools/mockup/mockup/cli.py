@@ -136,7 +136,7 @@ def cmd_kit(a):
     st = Styles()
     planet = a.planet.upper()
     pal, _ = st.terrain(planet)
-    mat = st.material(planet)
+    mat = dict(st.material(planet), **kit.MATERIAL.get(a.category, {}))
     cat = kit.CATEGORIES[a.category]
     seeds = [11, 23, 37]
     rows = []

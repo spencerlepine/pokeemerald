@@ -65,6 +65,9 @@ python3 -m mockup missing                 # art ids that have no shape in styles
     2. `sunken`: pieces cut into the ground: pit-home, stairwell, hatch, grate, trench, sunken-bay, well,
        mineshaft. The terrain is a see-through slab (`hide_top`, `below`), a pit is a cut allowed below
        ground, so the ray sees a pit's north wall and floor. Doors in a pit go in its north wall.
+    3. `imperial`: angular military pieces with sloped walls, dark slits and blast doors: checkpoint,
+       barricade, sentry, garage, barracks, pillbox, command, gate. Shown in Imperial greys
+       (`kit.MATERIAL`), since the look belongs to the faction rather than a planet.
     Sunken pieces are allowed again now that the projection rule is enforced (owner, 2026-11-02).
   - **Solids combine in order** (`Scene.solid_at`): a cut removes only what was added before it, so a pit
     can be cut and then furnished with steps, a pad or a ladder.

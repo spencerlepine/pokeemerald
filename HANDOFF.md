@@ -65,7 +65,10 @@ The owner split the remaining work into phases on 2026-11-02.
    reviewed as side-by-side sheets in `wiki/mockup/kit/`. Pieces without doors are welcome. Sunken pieces are allowed
    again. Many town areas have no trees; keep trees out of kit sheets and scenes.
    Category 1, `doorless` (vaporator, mast, dish, beacon, tanks, stack, pylon, relay, crates, core): APPROVED, all kept.
-   Category 2, `sunken` (pit-home, stairwell, hatch, grate, trench, sunken-bay, well, mineshaft): awaiting review.
+   Category 2, `sunken` (pit-home, stairwell, hatch, grate, trench, sunken-bay, well, mineshaft): APPROVED, all kept.
+   Category 3, `imperial` (checkpoint, barricade, sentry, garage, barracks, pillbox, command, gate): awaiting review.
+   Owner (2026-11-02): preview only the new category each round, not approved art. The aim is tooling that lets the
+   bot world-build and expand on its own.
 3. **Real art.** This resumes the paused art tools. The first art step is calibrating the Fortree tree house in
    [`tools/world-art`](tools/world-art/README.md) (STYLE.md section 9). The tile pipeline is in
    [`tools/tile-generator/PLAN.md`](tools/tile-generator/PLAN.md).
