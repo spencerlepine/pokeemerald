@@ -1,0 +1,29 @@
+name: tidetooka
+slot: vaporeon
+brief: "TIDETOOKA: creature call that fits its look and size. Water-adapted tooka."
+kind: creature
+size: 0.42
+seed: 106
+layers:
+  # Tooka family voice (m-i-ae-u chirp + meow), gone aquatic: a long, liquid meow that wobbles with a
+  # slow, watery vibrato and ends in a gurgling "u", with a bubbly sine warble underneath.
+  - type: voice
+    pitch: [[0, 520], [0.05, 660], [0.11, 560]]
+    source: {pulse: 0.7, saw: 0.5, pulse_width: 0.3, noise: 0.05}
+    vowels: [[0, m], [0.05, i], [0.11, o]]
+    env: [[0, 0], [0.015, 1], [0.09, 0.8], [0.12, 0]]
+    vibrato: {rate: 12, depth: 0.04}
+  - type: voice
+    at: 0.15
+    pitch: [[0, 500], [0.18, 700], [0.5, 640], [0.85, 420]]
+    source: {pulse: 0.7, saw: 0.5, pulse_width: 0.3, noise: 0.05}
+    vowels: [[0, m], [0.12, i], [0.35, ae], [0.6, o], [0.85, u]]
+    env: [[0, 0], [0.03, 1], [0.55, 0.85], [0.87, 0]]
+    vibrato: {rate: 9, depth: 0.05}
+  - type: tone
+    at: 0.3
+    wave: sine
+    pitch: [[0, 900], [0.6, 700]]
+    warble: {rate: 14, depth: 0.25}
+    env: [[0, 0], [0.1, 0.35], [0.5, 0.3], [0.65, 0]]
+    gain: 0.3

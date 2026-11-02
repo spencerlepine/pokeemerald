@@ -1,0 +1,24 @@
+name: tooka
+slot: eevee
+brief: "TOOKA: creature call that fits its look and size. Tooka cat that adapts to anything."
+kind: creature
+size: 0.15
+seed: 101
+layers:
+  # Tooka family voice: a buzzy pulse throat shaped m-i-ae-u. A quick "mrrp" chirp, then a bright
+  # little rising-falling "mi-yaow": a curious kitten.
+  - type: voice
+    pitch: [[0, 720], [0.05, 900], [0.1, 780]]
+    source: {pulse: 0.7, saw: 0.5, pulse_width: 0.3, noise: 0.06}
+    vowels: [[0, m], [0.04, i], [0.1, e]]
+    env: [[0, 0], [0.012, 1], [0.08, 0.8], [0.11, 0]]
+    vibrato: {rate: 24, depth: 0.02}
+    gain: 1.5
+  - type: voice
+    at: 0.14
+    pitch: [[0, 700], [0.12, 980], [0.3, 900], [0.5, 640]]
+    source: {pulse: 0.7, saw: 0.5, pulse_width: 0.3, noise: 0.06}
+    vowels: [[0, m], [0.08, i], [0.22, ae], [0.47, u]]
+    env: [[0, 0], [0.02, 1], [0.15, 0.85], [0.35, 0.6], [0.52, 0]]
+    vibrato: {rate: 26, depth: 0.025}
+    jitter: 0.01
