@@ -1,0 +1,155 @@
+# Credits (MUS_CREDITS, hot-swap): a one-shot suite. ARRANGE of the end-credits medleys the row names:
+# "A New Hope and End Credits" (wiki soundtrack:revenge-sith:15) and "The Throne Room and End Title"
+# (soundtrack:new-hope:16). Kept from the cues: the main title theme in Bb with its brass triplets, the Force theme
+# as the quiet middle (horn over harp, C minor, slower), the Throne Room march (the same transcription as
+# title-throne, in F at 120), and the end-title close on the main theme's last phrase and a held Bb chord.
+#   open     2 bars  Bb fanfare hits, square triplets, timpani
+#   main     16 bars main theme (trumpet, horn below) and its middle strain, 108 bpm
+#   force    16 bars Force theme, horn then flute over harp, 80 bpm (the reflective turn)
+#   throne   16 bars Throne Room march, 120 bpm (triumphant again)
+#   finale   8 bars  main theme reprise and the last chord, 108 bpm
+# Plays once (loops=no in the row), about 2:20 against vanilla's 172 s.
+# Brief (sw_subject): Credits roll: suite of the game's themes, triumphant then reflective.
+name: credits
+replaces: MUS_CREDITS
+form: CUE
+loop: false
+voicegroup: credits               # trumpet 56, horn 60, strings 48, timpani 47, harp 46, flute 73, kit 0, squares, wave
+master_volume: 96
+tempo: 108
+steps_per_beat: 12                # 8ths, 16ths and the brass triplets on one grid
+time_signature: [4, 4]
+seed: 7
+
+parts:
+  trumpet: {program: 56, channel: 0, volume: 106, pan: 4,   range: [E4, Bb5], gate: 0.92, humanize: {vel: 3}}
+  horn:    {program: 60, channel: 1, volume: 94,  pan: -12, range: [C3, F4], gate: 0.95}
+  strings: {program: 48, channel: 2, volume: 72,  pan: -26, range: [F3, F5], gate: 1.0}
+  timpani: {program: 47, channel: 3, volume: 100, pan: 0,   range: [C2, C3], gate: 1.0}
+  flute:   {program: 73, channel: 4, volume: 90,  pan: 14,  range: [C4, F6], gate: 0.95, lfo_speed: 30, lfo_delay: 24, mod: 4}
+  harp:    {program: 46, channel: 5, volume: 80,  pan: 28,  octave: 3, range: [C3, G5], gate: 0.9}
+  bass:    {program: 82, channel: 6, volume: 100, pan: 0,   octave: 1, range: [C1, C3], gate: 0.85, role: bass}
+  sq1:     {program: 4,  channel: 7, volume: 48,  pan: 34,  octave: 4, range: [F3, F5], gate: 0.6, mono: true}
+  sq2:     {program: 5,  channel: 8, volume: 42,  pan: -34, octave: 4, range: [F3, D5], gate: 0.6, mono: true}
+  cymbal:  {program: 0,  channel: 9, volume: 76,  pan: 20, role: drums, kit: {crash: 57, snare: 40}}
+
+progressions:
+  open:     "Bb | Bb"
+  main_a:   "Bb | Eb:12 Bb:36 | Eb:12 Bb:36 | Cm:12 F:36 | Bb | Eb:12 Bb:36 | Eb:12 Bb:36 | Cm:12 F:36"
+  main_b:   "Cm | Bb | Cm | F | Bb | Eb:12 Bb:36 | Eb:12 Bb:36 | Cm:12 F:36"
+  force:    "Cm | Cm | Ab | Cm | Fm | Cm | Ab:24 G:24 | Cm"
+  strain_a: "C/F:24 C7b9:24 | Db:24 Csus4:24 | C/F:24 Db:24 | Bb:24 C7:24 | C/F:24 Db:24 | Dm6 | Dm7:24 C:24 | C/F"
+  strain_b: "F:24 C7:24 | Fm:24 C:24 | F:24 Fm:24 | Bb:24 C7:24 | Fm | Dm:24 Db:24 | Fm/C:24 C7:24 | F"
+  finale:   "Bb | Eb:12 Bb:36 | Eb:12 Bb:36 | Cm:12 F:36 | Bb | Eb:12 Bb:36 | Gb | Bb"
+
+phrases:
+  # main title theme (Luke's theme), Bb major, triplet pickups
+  main_a: |
+    Bb4:24 F5:24 | Eb5:4 D5:4 C5:4 Bb5:24 F5:12 | Eb5:4 D5:4 C5:4 Bb5:24 F5:12 | Eb5:4 D5:4 Eb5:4 C5:24 F4:4 F4:4 F4:4 |
+    Bb4:24 F5:24 | Eb5:4 D5:4 C5:4 Bb5:24 F5:12 | Eb5:4 D5:4 C5:4 Bb5:24 F5:12 | Eb5:4 D5:4 Eb5:4 C5:24 F4:4 F4:4 F4:4
+  main_b: |
+    G4:18 G4:6 Eb5:6 D5:6 C5:6 Bb4:6 | Bb4:6 C5:6 D5:6 C5:18 F4:6 F4:6 | G4:18 G4:6 Eb5:6 D5:6 C5:6 Bb4:6 | F5:18 C5:18 F4:4 F4:4 F4:4 |
+    Bb4:24 F5:24 | Eb5:4 D5:4 C5:4 Bb5:24 F5:12 | Eb5:4 D5:4 C5:4 Bb5:24 F5:12 | Eb5:4 D5:4 Eb5:4 C5:24 F4:4 F4:4 F4:4
+  horn_a: |
+    D4:24 F4:24 | Eb4:24 D4:24 | Eb4:24 D4:24 | Eb4:12 C4:24 C4:12 |
+    D4:24 F4:24 | Eb4:24 D4:24 | Eb4:24 D4:24 | Eb4:12 C4:24 C4:12
+  horn_b: |
+    Eb4:24 G4:24 | F4:24 D4:24 | Eb4:24 G4:24 | A4:24 F4:24 |
+    D4:24 F4:24 | Eb4:24 D4:24 | Eb4:24 D4:24 | Eb4:12 C4:24 C4:12
+  # Force theme, C minor
+  force: |
+    r:36 G3:12 | C4:36 D4:12 | Eb4:18 F4:6 Eb4:12 G3:12 | C4:48 |
+    r:12 G3:12 C4:12 G4:12 | F4:36 Eb4:6 D4:6 | Eb4:18 D4:6 C4:12 B3:12 | C4:48
+  force_fl: |
+    r:48 | r:48 | r:48 | r:24 G5:12 Ab5:12 | C6:24 Ab5:24 | G5:48 | Eb5:24 D5:24 | C5:48
+  force_hi: |
+    r:36 G4:12 | C5:36 D5:12 | Eb5:18 F5:6 Eb5:12 G4:12 | C5:48 |
+    r:12 G4:12 C5:12 G5:12 | F5:36 Eb5:6 D5:6 | Eb5:18 D5:6 C5:12 B4:12 | C5:36 G4:4 Ab4:4 B4:4
+  horn_low: "C4:48 | Ab3:48 | Ab3:48 | G3:48 | F3:48 | G3:48 | Ab3:24 G3:24 | G3:48"
+  # Throne Room march (as transcribed for title-throne)
+  march_a: |
+    F4:24 G4:18 Ab4:6 | Ab4:30 F4:6 C5:12 | F4:18 G4:6 Ab4:6 F4:6 Ab4:6 C5:6 | Bb4:30 F4:6 C5:6 E4:6 |
+    F4:18 G4:6 Ab4:12 C5:12 | F5:36 E5:6 D5:6 | C5:48 | F4:36 G4:6 E4:6
+  march_b: |
+    F4:24 G4:18 Ab4:6 | Ab4:30 C5:6 G4:12 | F4:18 G4:6 Ab4:18 C5:6 | Bb4:36 G4:6 E4:6 |
+    F4:18 Ab4:18 C5:12 | F4:48 | C5:18 Ab4:6 C5:12 G4:12 | F4:24 r:24
+  horn_march: |
+    C4:24 Bb3:24 | Ab3:24 G3:24 | G3:24 F3:24 | F3:24 G3:24 |
+    G3:24 F3:24 | A3:48 | A3:24 G3:24 | E3:24 G3:24
+  # the end title close
+  finale: |
+    Bb4:24 F5:24 | Eb5:4 D5:4 C5:4 Bb5:24 F5:12 | Eb5:4 D5:4 C5:4 Bb5:24 F5:12 | Eb5:4 D5:4 Eb5:4 C5:24 F4:4 F4:4 F4:4 |
+    Bb4:24 F5:24 | Eb5:4 D5:4 C5:4 Bb5:24 F5:12 | Bb5:4 Bb5:4 Bb5:4 Gb5:36 | Bb5:36 r:12
+  horn_fin: |
+    D4:24 F4:24 | Eb4:24 D4:24 | Eb4:24 D4:24 | Eb4:12 C4:24 C4:12 |
+    D4:24 F4:24 | Eb4:24 D4:24 | Db4:48 | D4:36 r:12
+  fan_tpt: "Bb4:4 Bb4:4 Bb4:4 D5:12 r:24 | Bb4:4 Bb4:4 Bb4:4 F5:12 r:12 F4:4 F4:4 F4:4"
+  fan_hrn: "F3:4 F3:4 F3:4 Bb3:12 r:24 | F3:4 F3:4 F3:4 D4:12 r:24"
+  pad: "^2:24 ^3:24"
+  pad_whole: "^2:48"
+  arp: "^1:6 ^2:6 ^3:6 ^4:6 ^5:6 ^4:6 ^3:6 ^2:6"
+  bass_march: "^1:18 ^1:6 ^1:12 ^1:12"
+  bass_long: "^1:48"
+  bass_half: "^1:24 ^1:24"
+  trip_1: "^3:4 ^3:4 ^3:4 ^2:12 ^3:4 ^3:4 ^3:4 ^2:12"
+  trip_2: "^1:4 ^1:4 ^1:4 ^1:12 ^1:4 ^1:4 ^1:4 ^1:12"
+  after_1: "r:12 ^2:6 r:6 r:12 ^2:6 r:6"
+  after_2: "r:12 ^3:6 r:6 r:12 ^3:6 r:6"
+  timp_open: "Bb2:12 r:36 | F2:3 F2:3 F2:3 F2:3 F2:3 F2:3 F2:3 F2:3 Bb2:12 r:12"
+  timp_main: "Bb2:12 r:36 | r:48 | r:48 | r:24 F2:12 F2:12"
+  timp_march: "F2:12 r:36 | r:48 | r:48 | r:24 C3:12 C3:12"
+  timp_fin: |
+    Bb2:12 r:36 | r:48 | r:48 | r:24 F2:12 F2:12 |
+    Bb2:12 r:36 | r:48 | Bb2:3 Bb2:3 Bb2:3 Bb2:3 Bb2:3 Bb2:3 Bb2:3 Bb2:3 Bb2:3 Bb2:3 Bb2:3 Bb2:3 Bb2:3 Bb2:3 Bb2:3 Bb2:3 | Bb2:12 r:36
+
+grooves:
+  crash_4: {crash: "X...............................................|................................................|................................................|................................................"}
+  crash_2: {crash: "X...............................................|................................................"}
+  crash_end:
+    crash: "X...............................................|................................................|................................................|................................................|X...............................................|................................................|................................................|X..............................................."
+
+sections:
+  open:
+    bars: 2
+    chords: open
+    parts: {trumpet: fan_tpt, horn: fan_hrn, strings: pad_whole, timpani: timp_open, cymbal: crash_2, bass: bass_half, sq1: trip_1, sq2: trip_2}
+  main:
+    bars: 8
+    chords: main_a
+    gain: {strings: -8}
+    parts: {trumpet: main_a, horn: horn_a, strings: pad, timpani: timp_main, cymbal: crash_4, bass: bass_march, sq1: trip_1, sq2: trip_2}
+  main_b:
+    bars: 8
+    chords: main_b
+    gain: {strings: -8}
+    parts: {trumpet: main_b, horn: horn_b, strings: pad, timpani: timp_main, bass: bass_march, sq1: after_1, sq2: after_2}
+  force:
+    bars: 8
+    tempo: 80
+    chords: force
+    gain: {strings: -10, harp: -6, bass: -16}
+    parts: {horn: force, flute: force_fl, harp: arp, strings: pad_whole, bass: bass_long}
+  force2:
+    bars: 8
+    chords: force
+    gain: {strings: -6, harp: -4, bass: -12, horn: -14}
+    parts: {flute: force_hi, horn: horn_low, harp: arp, strings: pad_whole, bass: bass_long}
+  throne:
+    bars: 8
+    tempo: 120
+    chords: strain_a
+    gain: {strings: -8}
+    parts: {trumpet: march_a, horn: horn_march, strings: pad, timpani: timp_march, cymbal: crash_4, bass: bass_march, sq1: after_1, sq2: after_2}
+  throne_b:
+    bars: 8
+    chords: strain_b
+    gain: {strings: -8}
+    parts: {trumpet: march_b, flute: march_b, strings: pad, timpani: timp_march, bass: bass_march, sq1: trip_1, sq2: after_2}
+  finale:
+    bars: 8
+    tempo: 108
+    chords: finale
+    gain: {strings: -4}
+    parts: {trumpet: finale, horn: horn_fin, strings: pad_whole, timpani: timp_fin, cymbal: crash_end, bass: bass_march, sq1: trip_1, sq2: trip_2}
+
+arrangement: [open, main, main_b, force, force2, throne, throne_b, finale]
