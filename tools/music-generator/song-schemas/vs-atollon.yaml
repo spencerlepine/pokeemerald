@@ -10,7 +10,6 @@ replaces: MUS_RG_VS_DEOXYS
 form: LOOP
 voicegroup: rg_vs_deoxys              # vanilla: trumpet 56, horn 60, strings 48, choir 53, fingered bass 33, timpani 47, kit 0, squares 80/81, wave 85
 master_volume: 80
-song_priority: 1
 tempo: 144
 steps_per_beat: 4
 time_signature: [4, 4]
