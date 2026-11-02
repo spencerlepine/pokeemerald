@@ -1,0 +1,62 @@
+# Anchorhead (Tatooine), hot-swap of MUS_VERDANTURF. ARRANGE of "The Meadow Picnic" (wiki
+# soundtrack:attack-clones:08, analyzed 0-90 s: 76 bpm, D major, long Dsus4/Asus4 pedals, a Dm shading).
+# Kept: the tempo (80, the cue's 76 made frame-exact for a clean seam), D major with the cue's suspended colour (the Dsus4 sigh that ends each strain), its gentle
+# pastoral woodwind tune over broken chords, and the strings taking the second strain; the quiet moisture-farm
+# morning has no drums, as vanilla Verdanturf has none.
+#   intro  1 bar   piano and bass
+#   a      8 bars  flute tune over piano broken chords and a square echo
+#   b      8 bars  the strings sing the second strain, flute descant, Dsus4 to D
+# 16-bar loop, 48 s (vanilla 49.1 s); vanilla verdanturf voicegroup.
+# Brief (sw_subject): Anchorhead: sleepy moisture-farm town, gentle and pastoral.
+name: anchorhead
+replaces: MUS_VERDANTURF
+form: LOOP
+voicegroup: verdanturf            # piano 0, squares 4-6, fretless 35, pizzicato 45, strings 48, flute 73, wave 80
+master_volume: 90
+tempo: 80                         # the cue's 76, nudged to a frame-exact loop
+steps_per_beat: 4
+time_signature: [4, 4]
+seed: 17
+
+parts:
+  flute:   {program: 73, channel: 0, volume: 98,  pan: 8,   range: [A4, B5], gate: 0.96, lfo_speed: 26, lfo_delay: 26, mod: 5, humanize: {vel: 5}}
+  strings: {program: 48, channel: 1, volume: 82,  pan: -14, octave: 4, range: [G4, A5], gate: 1.0}
+  piano:   {program: 0,  channel: 2, volume: 74,  pan: 20,  octave: 3, range: [D3, A4], gate: 0.95, humanize: {vel: 8}}
+  bass:    {program: 35, channel: 3, volume: 88,  pan: 0,   octave: 2, range: [D2, D3], gate: 0.95, role: bass}
+  echo:    {program: 4,  channel: 4, volume: 32,  pan: -32, range: [A4, A6], gate: 0.5, mono: true}
+  wave:    {program: 80, channel: 5, volume: 34,  pan: 30,  octave: 4, range: [D4, D5], gate: 0.95, mono: true}
+
+progressions:
+  intro: "D"
+  a:     "D | G/D | D | A | Bm | G | Em:8 A:8 | D"
+  b:     "G | D/F# | Em | A | G | D/F# | Em:8 A:8 | Dsus4:8 D:8"
+
+phrases:
+  tune: |
+    F#5:6 E5:2 D5:4 A4:4 | B4:8 D5:4 G5:4 | F#5:6 G5:2 A5:4 F#5:4 | E5:12 r:4 |
+    D5:6 E5:2 F#5:4 B5:4 | A5:6 G5:2 D5:8 | G5:6 F#5:2 E5:4 C#5:4 | D5:12 r:4
+  strain: |
+    B4:8 D5:4 G5:4 | F#5:8 A4:8 | G4:6 B4:2 E5:8 | C#5:12 r:4 |
+    B4:8 D5:4 G5:4 | A5:8 F#5:4 D5:4 | E5:6 F#5:2 G5:4 E5:4 | G5:8 F#5:8
+  descant: "r:16 | r:8 A5:8 | r:16 | r:8 E5:4 A5:4 | r:16 | r:8 D5:4 F#5:4 | r:16 | r:8 A5:8"
+  broken: "^1:2 ^3:2 ^2:2 ^3:2 ^1:2 ^3:2 ^2:2 ^3:2"
+  bass: "^1:8 ^5-:8"
+  echo_a: "r:12 A5:4 | r:12 D6:4 | r:12 A5:4 | r:8 C#6:4 E6:4 | r:12 F#5:4 | r:12 B5:4 | r:12 A5:4 | r:8 D6:4 A5:4"
+  hum: "^2:16"
+
+sections:
+  intro:
+    bars: 1
+    chords: intro
+    parts: {piano: broken, bass: bass, flute: "r:12 A4:4"}
+  a:
+    bars: 8
+    chords: a
+    parts: {flute: tune, piano: broken, bass: bass, echo: echo_a, wave: hum}
+  b:
+    bars: 8
+    chords: b
+    parts: {strings: strain, flute: descant, piano: broken, bass: bass, wave: hum}
+
+arrangement: [intro, a, b]
+loop_start: a
