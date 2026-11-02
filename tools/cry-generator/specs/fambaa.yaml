@@ -1,0 +1,35 @@
+name: fambaa
+slot: ludicolo
+brief: "FAMBAA: creature call that fits its look and size. Huge amphibious swamp beast that carries Gungan shield generators."
+kind: creature
+size: 0.85
+seed: 443
+layers:
+  # Family DNA (swamp croakers): pulse-heavy croak on "o -> u" with a burbling growl, closing on a hum.
+  # Fambaa: a huge, slow two-part bellow, "hrrooo-mmm", deep and wet, with a low honk riding on top.
+  - type: voice
+    pitch: [[0, 140], [0.15, 190], [0.55, 170], [0.85, 115], [1.05, 100]]
+    pitch_step: 0.04
+    source: {pulse: 0.9, saw: 0.6, pulse_width: 0.25, noise: 0.06}
+    vowels: [[0, o], [0.3, aw], [0.6, u], [1.0, m]]
+    env: [[0, 0], [0.04, 1], [0.7, 0.85], [1.05, 0]]
+    growl: 0.55
+    growl_rate: 22
+    jitter: 0.015
+    drive: 2.2
+  - type: voice
+    at: 0.06
+    pitch: [[0, 380], [0.2, 520], [0.6, 460], [0.85, 320]]
+    pitch_step: 0.04
+    source: {pulse: 0.8, saw: 0.5, pulse_width: 0.2}
+    vowels: [[0, o], [0.4, a], [0.85, o]]
+    env: [[0, 0], [0.1, 0.7], [0.6, 0.5], [0.88, 0]]
+    gain: 0.8
+  - type: noise
+    at: 0.7
+    band: [[0, 700], [0.3, 450]]
+    q: 1.2
+    env: [[0, 0], [0.08, 0.4], [0.32, 0]]
+    gain: 0.25
+master:
+  tilt_db: 5

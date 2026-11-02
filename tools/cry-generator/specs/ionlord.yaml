@@ -1,0 +1,39 @@
+name: ionlord
+slot: raichu
+brief: "IONLORD: creature call that fits its look and size. Large ion rodent."
+kind: creature
+size: 0.35
+seed: 453
+layers:
+  # Family DNA (Felucia ion rodents): squeaky pulse voice on "i/ee", two-syllable "pi-chee", square-warbled static zap.
+  # Ionlord: the deepest, longest "rai-CHEEEE" with growl, over a buzzing, crackling discharge that crests and fizzles.
+  - type: voice
+    pitch: [[0, 560], [0.09, 640]]
+    source: {pulse: 0.8, saw: 0.5, pulse_width: 0.2, noise: 0.08}
+    vowels: [[0, a], [0.09, i]]
+    env: [[0, 0], [0.008, 1], [0.09, 0.7], [0.1, 0]]
+    growl: 0.2
+    growl_rate: 40
+  - type: voice
+    at: 0.13
+    pitch: [[0, 600], [0.1, 780], [0.6, 680], [0.85, 500]]
+    pitch_step: 0.03
+    source: {pulse: 0.8, saw: 0.5, pulse_width: 0.2, noise: 0.08}
+    vowels: [[0, i], [0.2, ee], [0.6, e], [0.85, er]]
+    env: [[0, 0], [0.012, 1], [0.6, 0.8], [0.87, 0]]
+    vibrato: {rate: 20, depth: 0.03}
+    growl: 0.35
+    growl_rate: 38
+    jitter: 0.015
+    drive: 2
+  - type: tone
+    at: 0.3
+    wave: square
+    pitch: [[0, 2000], [0.4, 2300], [0.75, 1500]]
+    warble: {rate: 50, depth: 0.25, shape: square}
+    env: [[0, 0], [0.02, 0.4], [0.55, 0.35], [0.78, 0]]
+    gain: 0.35
+  - type: click
+    at: 0.3
+    times: [0.0, 0.1, 0.18, 0.31, 0.44, 0.52, 0.66]
+    gain: 0.35

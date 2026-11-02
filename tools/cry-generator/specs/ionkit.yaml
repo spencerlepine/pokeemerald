@@ -1,0 +1,32 @@
+name: ionkit
+slot: pichu
+brief: "IONKIT: creature call that fits its look and size. Tiny rodent that stores static."
+kind: creature
+size: 0.12
+seed: 451
+layers:
+  # Family DNA (Felucia ion rodents): a squeaky pulse voice on "i/ee" saying a two-syllable "pi-chee", with a square-warbled static zap.
+  # Ionkit: a tiny, high "pi-chi" and a little spark crackle.
+  - type: voice
+    pitch: [[0, 600], [0.05, 700]]
+    source: {pulse: 0.8, saw: 0.4, pulse_width: 0.35, noise: 0.05}
+    formant_scale: 0.5
+    vowels: [[0, e], [0.05, i]]
+    env: [[0, 0], [0.006, 1], [0.05, 0.7], [0.06, 0]]
+  - type: voice
+    at: 0.08
+    pitch: [[0, 660], [0.06, 800], [0.2, 640]]
+    source: {pulse: 0.8, saw: 0.4, pulse_width: 0.35, noise: 0.05}
+    formant_scale: 0.5
+    vowels: [[0, i], [0.12, e], [0.2, ae]]
+    env: [[0, 0], [0.008, 1], [0.15, 0.7], [0.21, 0]]
+    vibrato: {rate: 28, depth: 0.03}
+  - type: tone
+    at: 0.12
+    wave: square
+    pitch: [[0, 2600], [0.12, 2200]]
+    warble: {rate: 60, depth: 0.2, shape: square}
+    env: [[0, 0], [0.01, 0.4], [0.1, 0.2], [0.13, 0]]
+    gain: 0.15
+master:
+  lowpass: 3600

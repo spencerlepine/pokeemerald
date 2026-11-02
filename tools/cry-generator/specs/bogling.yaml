@@ -1,0 +1,19 @@
+name: bogling
+slot: lotad
+brief: "BOGLING: creature call that fits its look and size. Small, shy bogling with a lily pad on its back."
+kind: creature
+size: 0.15
+seed: 441
+layers:
+  # Family DNA (swamp croakers): a pulse-heavy croak on "o -> u" with a burbling growl, closing on a hum.
+  # Bogling: one small wet "plop-croak", quick and shy.
+  - type: click
+    times: [0.0]
+    gain: 0.4
+  - type: voice
+    pitch: [[0, 560], [0.05, 700], [0.18, 520]]
+    source: {pulse: 0.9, saw: 0.3, pulse_width: 0.25, noise: 0.05}
+    vowels: [[0, o], [0.1, u], [0.18, m]]
+    env: [[0, 0], [0.008, 1], [0.12, 0.7], [0.19, 0]]
+    growl: 0.25
+    growl_rate: 45
