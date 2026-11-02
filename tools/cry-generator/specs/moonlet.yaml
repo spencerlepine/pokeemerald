@@ -1,0 +1,21 @@
+name: moonlet
+slot: clefairy
+brief: "MOONLET: creature call that fits its look and size. Shy moon-dancing creature."
+kind: creature
+size: 0.25
+seed: 422
+layers:
+  # Family DNA (Endor moon dancers): soft pulse+tri voice, round "i/u" vowels, two-note chime up a fifth.
+  # Shy middle stage: a lower, slightly longer "pi-pyuu" that trails off with a little wobble.
+  - type: voice
+    pitch: [[0, 560], [0.09, 590]]
+    source: {pulse: 0.6, tri: 0.6, pulse_width: 0.4, noise: 0.04}
+    vowels: [[0, i], [0.09, e]]
+    env: [[0, 0], [0.012, 1], [0.08, 0.7], [0.1, 0]]
+  - type: voice
+    at: 0.12
+    pitch: [[0, 820], [0.08, 880], [0.26, 700]]
+    source: {pulse: 0.6, tri: 0.6, pulse_width: 0.4, noise: 0.05}
+    vowels: [[0, i], [0.12, u], [0.26, o]]
+    env: [[0, 0], [0.015, 1], [0.18, 0.7], [0.27, 0]]
+    vibrato: {rate: 11, depth: 0.03}

@@ -1,0 +1,22 @@
+name: sithwisp
+slot: gastly
+brief: "SITHWISP: creature call that fits its look and size. Wisp of dark-side gas."
+kind: creature
+size: 0.3
+seed: 431
+layers:
+  # Family DNA (Moraband dark-side ghosts): a hollow "o/u" moan that wobbles with slow vibrato and sinks, inside a breathy hiss.
+  # Wisp: mostly gas; a hissing exhale with a thin, wavering moan floating through it.
+  - type: noise
+    band: [[0, 2600], [0.5, 1500], [1.05, 900]]
+    q: 1.5
+    env: [[0, 0], [0.05, 0.9], [0.7, 0.6], [1.08, 0]]
+    gain: 0.7
+  - type: voice
+    at: 0.05
+    pitch: [[0, 520], [0.25, 620], [0.7, 480], [1.0, 340]]
+    source: {sine: 0.6, saw: 0.4, noise: 0.25}
+    vowels: [[0, u], [0.3, o], [0.7, u], [1.0, m]]
+    env: [[0, 0], [0.08, 1], [0.7, 0.7], [1.02, 0]]
+    vibrato: {rate: 5, depth: 0.06}
+    jitter: 0.02

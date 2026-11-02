@@ -1,0 +1,32 @@
+name: sithshade
+slot: haunter
+brief: "SITHSHADE: creature call that fits its look and size. Dark-side shade with floating hands."
+kind: creature
+size: 0.4
+seed: 432
+layers:
+  # Family DNA (Moraband dark-side ghosts): hollow wobbling "o/u" moan that sinks, inside a breathy hiss.
+  # Shade: a lower moan that gains a throat, plus a mocking two-step laugh-wobble and a hand-clap-like swish.
+  - type: noise
+    band: [[0, 2200], [0.5, 1300], [1.05, 800]]
+    q: 1.5
+    env: [[0, 0], [0.05, 0.7], [0.7, 0.5], [1.08, 0]]
+    gain: 0.5
+  - type: voice
+    at: 0.03
+    pitch: [[0, 420], [0.25, 520], [0.6, 400], [1.02, 270]]
+    pitch_step: 0.04
+    source: {saw: 0.6, sine: 0.4, pulse: 0.3, pulse_width: 0.3, noise: 0.15}
+    vowels: [[0, u], [0.3, o], [0.6, aw], [1.0, u]]
+    env: [[0, 0], [0.05, 1], [0.75, 0.75], [1.05, 0]]
+    vibrato: {rate: 6, depth: 0.07}
+    growl: 0.2
+    growl_rate: 30
+    jitter: 0.02
+    drive: 1.6
+  - type: noise
+    at: 0.42
+    band: [[0, 1200], [0.12, 3000]]
+    q: 1
+    env: [[0, 0], [0.08, 0.6], [0.14, 0]]
+    gain: 0.35

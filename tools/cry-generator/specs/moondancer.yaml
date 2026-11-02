@@ -1,0 +1,28 @@
+name: moondancer
+slot: clefable
+brief: "MOONDANCER: creature call that fits its look and size. Rare moon dancer."
+kind: creature
+size: 0.45
+seed: 423
+layers:
+  # Family DNA (Endor moon dancers): soft pulse+tri voice, round "i/u" vowels, two-note chime up a fifth.
+  # Grown dancer: the fullest, lowest "pi-pyuuu", with a shimmering high harmony tone over the long note.
+  - type: voice
+    pitch: [[0, 440], [0.1, 470]]
+    source: {pulse: 0.6, tri: 0.6, pulse_width: 0.4, noise: 0.04}
+    vowels: [[0, i], [0.1, e]]
+    env: [[0, 0], [0.012, 1], [0.09, 0.7], [0.11, 0]]
+  - type: voice
+    at: 0.13
+    pitch: [[0, 650], [0.1, 700], [0.38, 560]]
+    source: {pulse: 0.6, tri: 0.6, pulse_width: 0.4, noise: 0.05}
+    vowels: [[0, i], [0.15, u], [0.38, o]]
+    env: [[0, 0], [0.015, 1], [0.28, 0.75], [0.4, 0]]
+    vibrato: {rate: 9, depth: 0.03}
+  - type: tone
+    at: 0.18
+    wave: sine
+    pitch: [[0, 2100], [0.3, 1700]]
+    warble: {rate: 9, depth: 0.02}
+    env: [[0, 0], [0.04, 0.4], [0.25, 0.25], [0.32, 0]]
+    gain: 0.35

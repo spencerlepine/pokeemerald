@@ -1,0 +1,42 @@
+name: sithspectr
+slot: gengar
+brief: "SITHSPECTR: creature call that fits its look and size. Grinning dark-side specter."
+kind: creature
+size: 0.55
+seed: 433
+layers:
+  # Family DNA (Moraband dark-side ghosts): hollow wobbling "o/u" moan that sinks, inside a breathy hiss.
+  # Specter: grown solid; a grinning three-beat "heh-heh-HEHH" cackle that drops into the family's deepest sinking moan.
+  - type: voice
+    pitch: [[0, 380], [0.07, 330]]
+    source: {saw: 0.8, pulse: 0.4, pulse_width: 0.3, noise: 0.1}
+    vowels: [[0, ae], [0.07, e]]
+    env: [[0, 0], [0.008, 1], [0.06, 0.6], [0.08, 0]]
+    growl: 0.3
+    growl_rate: 35
+  - type: voice
+    at: 0.11
+    pitch: [[0, 400], [0.07, 350]]
+    source: {saw: 0.8, pulse: 0.4, pulse_width: 0.3, noise: 0.1}
+    vowels: [[0, ae], [0.07, e]]
+    env: [[0, 0], [0.008, 1], [0.06, 0.6], [0.08, 0]]
+    growl: 0.3
+    growl_rate: 35
+  - type: voice
+    at: 0.22
+    pitch: [[0, 440], [0.15, 400], [0.45, 290], [0.75, 200]]
+    pitch_step: 0.04
+    source: {saw: 0.7, sine: 0.3, pulse: 0.4, pulse_width: 0.3, noise: 0.12}
+    vowels: [[0, ae], [0.15, o], [0.45, aw], [0.75, u]]
+    env: [[0, 0], [0.01, 1], [0.5, 0.75], [0.78, 0]]
+    vibrato: {rate: 6, depth: 0.07}
+    growl: 0.35
+    growl_rate: 28
+    jitter: 0.02
+    drive: 2
+  - type: noise
+    at: 0.3
+    band: [[0, 1800], [0.6, 700]]
+    q: 1.5
+    env: [[0, 0], [0.05, 0.5], [0.5, 0.4], [0.68, 0]]
+    gain: 0.35
