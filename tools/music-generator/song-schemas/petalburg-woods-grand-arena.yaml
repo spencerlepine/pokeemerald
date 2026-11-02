@@ -1,0 +1,77 @@
+# Petalburg Woods, Grand Arena: net-new per-planet split of MUS_PETALBURG_WOODS (wiki row
+# net:mus-petalburg-woods-grand-arena), for Artisan Cave under Lando's Grand Arena. SCRATCH: no film cue,
+# written from the brief. The Tatooine original is tense and echoing; here the tension has the arena's
+# bounty-hunter swagger: F# minor with a C#7 dominant, a lightly swung eighth groove (hi-hat, kick), a walking
+# wave-channel bass, and a piano line that a 50 % square answers a beat later like an echo off the cave walls.
+# b gives the tune to the flute over a ii-V turn (Bm7 E7 A D); c drops to the groove, the bass and a metallic
+# noise clank (the artisans at work) before the loop. 24 bars at 130 = 44.3 s, on the vanilla voicegroup.
+# Brief (sw_subject): Grand Arena version of MUS_PETALBURG_WOODS, same role and mood family; theme to be decided.
+name: petalburg-woods-grand-arena
+constant: MUS_PETALBURG_WOODS_GRAND_ARENA
+form: AMBIENT
+voicegroup: petalburg_woods       # vanilla's own: piano 1, strings 48, flute 73, squares 5/80, wave 81, kit 0, noise 127
+master_volume: 80
+tempo: 130
+steps_per_beat: 2                 # eighth-note grid
+time_signature: [4, 4]
+swing: 0.3
+swing_unit: 1
+seed: 31
+
+parts:
+  piano:   {program: 1,  channel: 0, volume: 92,  pan: -8,  gate: 0.9, humanize: {vel: 6}}
+  flute:   {program: 73, channel: 1, volume: 90,  pan: 10,  gate: 0.92, lfo_speed: 26, lfo_delay: 20, mod: 5, humanize: {vel: 5}}
+  strings: {program: 48, channel: 2, volume: 54,  pan: 24,  octave: 3, gate: 1.0}
+  kit:     {program: 0,  channel: 3, volume: 64,  pan: 10,  role: drums, kit: {k: 36, hh: 42, oh: 46}}
+  bass:    {program: 81, channel: 4, volume: 84,  pan: 0,   octave: 2, role: bass, gate: 0.75}
+  echo:    {program: 80, channel: 5, volume: 34,  pan: 36,  gate: 0.85, mono: true}
+  ping:    {program: 5,  channel: 6, volume: 30,  pan: -36, octave: 5, gate: 0.4, mono: true}
+  clank:   {program: 127, channel: 7, volume: 34, pan: -20, role: drums, kit: {c: C5}}
+
+progressions:
+  intro: "F#m | C#7"
+  a: "F#m | F#m | D | C#7 | F#m | Bm | G | C#7"
+  b: "Bm7 | E7 | Amaj7 | Dmaj7 | Bm7 | C#7 | F#m | C#7"
+  c: "F#m | F#m | Em | Em | D | D | C#7 | C#7"
+
+phrases:
+  pad: "^2:8"
+  walk: "^1:2 ^1+:2 ^3:2 ^2:2"
+  pings: "r:5 ^1:1 r:2 | r:8 | r:2 ^3:1 r:5 | r:8"
+  piano_a: |
+    C#5:3 A4:1 F#4:4 | r:2 E5:2 C#5:2 A4:2 | D5:3 F#4:1 A4:4 | G#4:6 r:2 |
+    C#5:3 A4:1 F#4:2 A4:2 | B4:2 D5:2 F#5:4 | G5:3 D5:1 B4:4 | G#4:2 B4:2 C#5:2 r:2
+  echo_a: |
+    r:2 C#5:3 A4:1 F#4:2 | ~:2 r:2 E5:2 C#5:2 | A4:2 D5:3 F#4:1 A4:2 | ~:2 G#4:6 |
+    r:2 C#5:3 A4:1 F#4:2 | A4:2 B4:2 D5:2 F#5:2 | ~:2 G5:3 D5:1 B4:2 | ~:2 G#4:2 B4:2 C#5:2
+  flute_b: |
+    D5:4 C#5:2 B4:2 | G#4:4 B4:2 D5:2 | C#5:6 E5:2 | F#5:4 C#5:4 |
+    D5:2 F#5:2 A5:2 F#5:2 | F5:4 C#5:2 B4:2 | A4:2 C#5:2 F#5:4 | G#5:6 r:2
+  piano_c: "F#3:1 r:7 | r:4 C#4:1 r:3 | E3:1 r:7 | r:4 B3:1 r:3 | D3:1 r:7 | r:4 A3:1 r:3 | C#3:1 r:7 | G#3:2 B3:2 C#4:2 E#4:2"
+
+grooves:
+  groove: {k: "x.....x.|..x.....", hh: ".xoxoxox|.xoxoxo.", oh: "........|......x."}
+  soft: {hh: ".o.o.o.o"}
+  clanks: {c: "...x....|........|.......x|........"}
+
+sections:
+  intro:
+    bars: 2
+    chords: intro
+    parts: {bass: walk, kit: soft, strings: pad, ping: "r:5 ^1:1 r:2 | r:8"}
+  a:
+    bars: 8
+    chords: a
+    parts: {piano: piano_a, echo: echo_a, strings: pad, bass: walk, kit: groove}
+  b:
+    bars: 8
+    chords: b
+    parts: {flute: flute_b, strings: pad, bass: walk, kit: groove, ping: pings}
+  c:
+    bars: 8
+    chords: c
+    gain: {piano: -8}
+    parts: {piano: piano_c, strings: pad, bass: walk, kit: groove, clank: clanks, ping: pings}
+
+arrangement: [intro, a, b, c]
+loop_start: a
