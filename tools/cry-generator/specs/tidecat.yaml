@@ -1,0 +1,33 @@
+name: tidecat
+slot: suicune
+brief: "TIDECAT: creature call that fits its look and size. Legendary aurora beast."
+kind: creature
+size: 0.8
+seed: 899
+layers:
+  # A noble, clear feline roar that rings out and shimmers like an aurora, trailing off in a misty breath.
+  - type: voice
+    pitch: [[0, 260], [0.1, 400], [0.4, 440], [0.65, 380], [0.82, 260]]
+    pitch_step: 0.04
+    source: {saw: 0.8, pulse: 0.6, pulse_width: 0.3, noise: 0.06}
+    vowels: [[0, aw], [0.1, a], [0.45, ae], [0.82, o]]
+    env: [[0, 0], [0.02, 1], [0.55, 0.85], [0.84, 0]]
+    vibrato: {rate: 6, depth: 0.025}
+    growl: 0.35
+    growl_rate: 30
+    jitter: 0.015
+    drive: 2
+  - type: tone
+    at: 0.15
+    wave: tri
+    pitch: [[0, 1300], [0.3, 1560], [0.6, 1450]]
+    warble: {rate: 7, depth: 0.03}
+    env: [[0, 0], [0.1, 0.35], [0.5, 0.25], [0.62, 0]]
+    gain: 0.3
+  - type: noise
+    at: 0.55
+    band: [[0, 1500], [0.3, 1000]]
+    q: 1
+    env: [[0, 0], [0.06, 0.3], [0.3, 0]]
+    gain: 0.2
+master: {rms: 0.29}

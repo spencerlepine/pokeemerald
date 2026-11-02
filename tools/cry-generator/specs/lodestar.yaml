@@ -1,0 +1,27 @@
+name: lodestar
+slot: nosepass
+brief: "LODESTAR: creature call that fits its look and size. Magnetic rock that always points to the galactic core."
+kind: creature
+size: 0.45
+seed: 896
+layers:
+  # A stony grind and a low, humming magnetic drone that swings and locks onto one pitch, like a compass settling.
+  - type: servo
+    pitch: [[0, 60], [0.15, 110], [0.6, 95]]
+    harmonics: [1.0, 0.6, 0.5, 0.3, 0.3, 0.2]
+    grit: 0.9
+    env: [[0, 0], [0.03, 0.8], [0.5, 0.6], [0.6, 0]]
+    gain: 0.6
+  - type: voice
+    at: 0.03
+    pitch: [[0, 260], [0.12, 380], [0.2, 300], [0.28, 340], [0.56, 330]]
+    pitch_step: 0.04
+    source: {pulse: 0.8, pulse_width: 0.4, saw: 0.4}
+    vowels: [[0, m], [0.1, o], [0.56, m]]
+    env: [[0, 0], [0.02, 1], [0.45, 0.85], [0.58, 0]]
+    vibrato: {rate: 16, depth: 0.02}
+    drive: 1.8
+  - type: click
+    times: [0.0, 0.02, 0.05]
+    gain: 0.5
+master: {rms: 0.27}

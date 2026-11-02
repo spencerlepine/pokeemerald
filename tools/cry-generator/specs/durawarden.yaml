@@ -1,0 +1,34 @@
+name: durawarden
+slot: registeel
+brief: "DURAWARDEN: creature call that fits its look and size. Ancient durasteel sentinel."
+kind: creature
+size: 0.85
+seed: 897
+layers:
+  # An ancient metal sentinel waking: clanging plates, a deep resonant groan, and a frame-stepped metallic
+  # "dot" pattern ringing over it, like the old golem legends speaking in code.
+  - type: click
+    times: [0.0, 0.03, 0.95]
+    gain: 0.6
+  - type: servo
+    pitch: [[0, 70], [0.2, 120], [0.8, 110], [1.0, 60]]
+    harmonics: [1.0, 0.8, 0.5, 0.45, 0.3, 0.3]
+    grit: 0.6
+    env: [[0, 0], [0.05, 0.7], [0.85, 0.6], [1.0, 0]]
+    gain: 0.5
+  - type: voice
+    at: 0.02
+    pitch: [[0, 180], [0.2, 240], [0.7, 220], [1.0, 150]]
+    pitch_step: 0.06
+    source: {pulse: 0.8, pulse_width: 0.25, saw: 0.5, noise: 0.05}
+    vowels: [[0, o], [0.3, aw], [1.0, u]]
+    env: [[0, 0], [0.03, 1], [0.8, 0.8], [1.02, 0]]
+    growl: 0.3
+    growl_rate: 24
+    drive: 2.2
+  - type: tone
+    at: 0.1
+    wave: square
+    pitch: [[0, 880], [0.12, 880], [0.13, 1175], [0.25, 1175], [0.26, 880], [0.38, 880], [0.39, 660], [0.6, 660]]
+    env: [[0, 0], [0.01, 0.6], [0.11, 0.6], [0.125, 0], [0.135, 0.6], [0.24, 0.6], [0.255, 0], [0.265, 0.6], [0.37, 0.6], [0.385, 0], [0.395, 0.6], [0.55, 0.5], [0.6, 0]]
+    gain: 0.4

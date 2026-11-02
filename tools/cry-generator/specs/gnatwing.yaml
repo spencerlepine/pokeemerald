@@ -1,0 +1,36 @@
+name: gnatwing
+slot: yanma
+brief: "GNATWING: creature call that fits its look and size. Big-eyed swamp dragonfly."
+kind: creature
+size: 0.45
+seed: 900
+layers:
+  # A darting dragonfly: a thrumming wing buzz that swells as it zips in, a clicking chirr, and a quick "zee-ip".
+  - type: servo
+    pitch: [[0, 160], [0.25, 240], [0.5, 220], [0.75, 140]]
+    harmonics: [0.4, 1.0, 0.9, 0.6, 0.5, 0.3]
+    grit: 0.6
+    env: [[0, 0], [0.04, 0.7], [0.6, 0.6], [0.76, 0]]
+    gain: 0.5
+  - type: voice
+    at: 0.03
+    pitch: [[0, 460], [0.12, 680], [0.3, 640], [0.4, 500]]
+    pitch_step: 0.025
+    source: {pulse: 0.8, pulse_width: 0.15, saw: 0.4, noise: 0.12}
+    vowels: [[0, i], [0.15, e], [0.4, er]]
+    env: [[0, 0], [0.01, 1], [0.3, 0.75], [0.42, 0]]
+    vibrato: {rate: 36, depth: 0.04}
+    jitter: 0.02
+    drive: 1.8
+  - type: voice
+    at: 0.5
+    pitch: [[0, 620], [0.08, 860], [0.22, 680]]
+    source: {pulse: 0.8, pulse_width: 0.15, saw: 0.4, noise: 0.12}
+    vowels: [[0, ee], [0.1, i], [0.22, e]]
+    env: [[0, 0], [0.01, 0.9], [0.15, 0.7], [0.24, 0]]
+    vibrato: {rate: 36, depth: 0.04}
+    drive: 1.8
+  - type: click
+    times: [0.0, 0.015, 0.03, 0.47, 0.485]
+    gain: 0.4
+master: {lowpass: 3300, rms: 0.27}

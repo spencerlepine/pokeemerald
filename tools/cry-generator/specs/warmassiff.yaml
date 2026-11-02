@@ -1,0 +1,39 @@
+name: warmassiff
+slot: mightyena
+brief: "WARMASSIFF: creature call that fits its look and size. Pack alpha massiff."
+kind: creature
+size: 0.55
+seed: 895
+layers:
+  # The massiff's jaw snap and "hrak-ak" barks, deeper and heavier, then a long rolling alpha snarl-hiss.
+  # Family DNA (from massiff.yaml): jaw click, saw+pulse+noise barks, aw -> a -> er -> rr, growl, hissing tail.
+  - type: click
+    times: [0.0]
+    gain: 0.6
+  - type: voice
+    at: 0.01
+    pitch: [[0, 230], [0.06, 340], [0.15, 260]]
+    source: {saw: 0.9, pulse: 0.4, pulse_width: 0.3, noise: 0.15}
+    vowels: [[0, aw], [0.06, a], [0.15, er]]
+    env: [[0, 0], [0.008, 1], [0.12, 0.8], [0.16, 0]]
+    growl: 0.6
+    growl_rate: 36
+    jitter: 0.03
+    drive: 2.6
+  - type: voice
+    at: 0.19
+    pitch: [[0, 280], [0.05, 380], [0.25, 260], [0.5, 180]]
+    pitch_step: 0.03
+    source: {saw: 0.9, pulse: 0.4, pulse_width: 0.3, noise: 0.2}
+    vowels: [[0, a], [0.15, er], [0.5, rr]]
+    env: [[0, 0], [0.008, 1], [0.25, 0.85], [0.52, 0]]
+    growl: 0.7
+    growl_rate: 30
+    jitter: 0.04
+    drive: 2.6
+  - type: noise
+    at: 0.55
+    band: [[0, 2200], [0.32, 1500]]
+    q: 1.5
+    env: [[0, 0], [0.04, 0.5], [0.25, 0.2], [0.33, 0]]
+    gain: 0.35

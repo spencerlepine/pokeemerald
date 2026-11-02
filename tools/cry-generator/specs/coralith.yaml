@@ -1,0 +1,25 @@
+name: coralith
+slot: corsola
+brief: "CORALITH: creature call that fits its look and size. Branching coral creature."
+kind: creature
+size: 0.22
+seed: 891
+layers:
+  # A bright, bubbly "pli-pli-plooo" with stony clinks: a cheerful little coral, half bubbles, half pebbles.
+  - type: click
+    times: [0.0, 0.08, 0.16]
+    gain: 0.45
+  - type: voice
+    at: 0.01
+    pitch: [[0, 620], [0.07, 620], [0.08, 700], [0.15, 700], [0.16, 760], [0.4, 560]]
+    source: {pulse: 0.7, pulse_width: 0.35, saw: 0.3, noise: 0.05}
+    vowels: [[0, i], [0.08, e], [0.16, o], [0.4, u]]
+    env: [[0, 0], [0.01, 1], [0.06, 0.4], [0.085, 1], [0.14, 0.4], [0.165, 1], [0.3, 0.75], [0.42, 0]]
+    vibrato: {rate: 14, depth: 0.04}
+  - type: noise
+    at: 0.2
+    band: [[0, 1100], [0.3, 1600]]
+    q: 3.5
+    env: [[0, 0], [0.04, 0.3], [0.32, 0]]
+    gain: 0.2
+master: {rms: 0.27}

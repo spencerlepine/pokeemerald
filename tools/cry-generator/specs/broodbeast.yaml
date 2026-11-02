@@ -1,0 +1,26 @@
+name: broodbeast
+slot: kangaskhan
+brief: "BROODBEAST: creature call that fits its look and size. Mother beast that carries its young in a pouch."
+kind: creature
+size: 0.75
+seed: 893
+layers:
+  # A big protective mother's bellow ("GRAAHH-oh") and, from the pouch, the little one's squeak answering.
+  - type: voice
+    pitch: [[0, 190], [0.08, 280], [0.35, 260], [0.6, 180]]
+    pitch_step: 0.04
+    source: {saw: 0.9, pulse: 0.5, pulse_width: 0.3, noise: 0.1}
+    vowels: [[0, aw], [0.1, a], [0.4, o], [0.6, u]]
+    env: [[0, 0], [0.015, 1], [0.42, 0.85], [0.62, 0]]
+    growl: 0.55
+    growl_rate: 28
+    jitter: 0.025
+    drive: 2.5
+  - type: voice
+    at: 0.64
+    pitch: [[0, 700], [0.05, 900], [0.18, 760]]
+    source: {pulse: 0.8, pulse_width: 0.3, saw: 0.3}
+    vowels: [[0, i], [0.1, ee], [0.18, e]]
+    env: [[0, 0], [0.01, 0.8], [0.13, 0.6], [0.19, 0]]
+    vibrato: {rate: 20, depth: 0.03}
+    gain: 0.6

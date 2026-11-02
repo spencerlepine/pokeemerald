@@ -1,0 +1,27 @@
+name: falumpaset
+slot: girafarig
+brief: "FALUMPASET: creature call that fits its look and size. Long-necked Naboo herd beast."
+kind: creature
+size: 0.5
+seed: 892
+layers:
+  # A long-necked herd honk: a resonant, two-part "hoonk-WHOOOM" that rises then rolls off across the plains.
+  - type: voice
+    pitch: [[0, 260], [0.04, 340], [0.15, 300]]
+    source: {saw: 0.7, pulse: 0.7, pulse_width: 0.35, noise: 0.06}
+    vowels: [[0, m], [0.03, o], [0.15, u]]
+    env: [[0, 0], [0.012, 1], [0.12, 0.7], [0.16, 0]]
+    drive: 1.8
+  - type: voice
+    at: 0.19
+    pitch: [[0, 240], [0.12, 360], [0.32, 340], [0.48, 230]]
+    pitch_step: 0.035
+    source: {saw: 0.7, pulse: 0.7, pulse_width: 0.35, noise: 0.06}
+    vowels: [[0, u], [0.12, o], [0.3, aw], [0.48, u]]
+    env: [[0, 0], [0.02, 1], [0.35, 0.8], [0.5, 0]]
+    vibrato: {rate: 5, depth: 0.03}
+    growl: 0.2
+    growl_rate: 30
+    drive: 1.8
+    formant_scale: 0.85
+master: {rms: 0.29}
