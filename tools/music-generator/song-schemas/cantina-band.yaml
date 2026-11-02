@@ -1,0 +1,76 @@
+# Cantina band (Chalmun's Spaceport Cantina, Mos Eisley): net-new MUS_CANTINA_BAND (wiki net:mus-cantina-band).
+# The row's ref_use is ARRANGE of "Cantina Band" (wiki ref_tracks soundtrack:new-hope:09), but its sw_subject and the
+# design (bible/NET_NEW_DESIGNS.md, Music) ask for an original tune, NOT the film's melody, so this takes the cue's
+# idiom and nothing else: a hot small-band swing in A minor with the cue's Asus4 / Am7 / Dm colour (analyze_reference,
+# 0-60 s), bluesy chromatic leading notes, a reedy clarinet-like lead, kloo-horn offbeat pushes, steel-drum-like
+# mallets in the bridge, walking bass and brushed drums.
+# Brief (sw_subject): Mos Eisley Cantina band loop for the cantina map. Tech notes from the placeholder MUS_GAME_CORNER
+# (game_corner voicegroup, volume 72). 200 bpm with triplet swing, short 32-bar loop (A, A, bridge, A), 38.4 s.
+name: cantina-band
+constant: MUS_CANTINA_BAND          # wiki sw_constant (net:mus-cantina-band)
+form: LOOP
+voicegroup: game_corner             # placeholder's: rs kit 0, xylophone 13, fretless 35, horn 60, squares 81/85, noise 127
+master_volume: 72
+tempo: 200
+steps_per_beat: 2
+time_signature: [4, 4]
+swing: 0.33
+swing_unit: 1
+seed: 131
+
+parts:
+  clarinet: {program: 85, channel: 0, volume: 82, pan: 6,   gate: 0.85, mono: true}
+  fizz:     {program: 81, channel: 1, volume: 34, pan: 30,  octave: 4, gate: 0.3, mono: true}
+  horn:     {program: 60, channel: 2, volume: 78, pan: -16, octave: 3, gate: 0.6}
+  mallet:   {program: 13, channel: 3, volume: 72, pan: -28, octave: 5, gate: 0.6, humanize: {vel: 6}}
+  bass:     {program: 35, channel: 4, volume: 96, pan: 0,   octave: 2, gate: 0.85, role: bass}
+  drums:    {program: 0,  channel: 5, volume: 60, pan: 8,   role: drums, kit: {kick: 36, sn: 38}}
+  ride:     {program: 127, channel: 6, volume: 26, pan: -8, role: drums, kit: {r: 84}}
+
+progressions:
+  a:  "Am | Am | Dm | Am | F | E | Am | E"
+  a2: "Am | Am | Dm | Am | F | E | Am | Am"
+  b:  "Dm | Dm | Am | Am | Bb | Bb | E | E"
+
+phrases:
+  tune_a: |
+    A4:1 C5:1 E5:1 A5:2 G#5:1 A5:2 | G5:1 E5:1 D#5:1 E5:1 C5:2 A4:2 | D5:1 F5:1 A5:1 D6:2 C#6:1 D6:2 | C6:1 A5:1 G#5:1 A5:1 E5:4 |
+    F5:1 A5:1 C6:2 A5:1 F5:1 Eb5:2 | E5:2 G#5:1 B5:1 D6:2 B5:2 | C6:2 B5:1 A5:1 E5:2 C5:2 | B4:2 D5:1 E5:1 G#5:4
+  tune_a2: |
+    A4:1 C5:1 E5:1 A5:2 G#5:1 A5:2 | G5:1 E5:1 D#5:1 E5:1 C5:2 A4:2 | D5:1 F5:1 A5:1 D6:2 C#6:1 D6:2 | C6:1 A5:1 G#5:1 A5:1 E5:4 |
+    F5:1 A5:1 C6:2 A5:1 F5:1 Eb5:2 | E5:2 G#5:1 B5:1 D6:2 B5:2 | C6:2 B5:1 A5:1 G#5:1 A5:1 E5:2 | A5:4 r:4
+  tune_b: |
+    F5:2 A5:1 F5:1 D5:2 F5:2 | E5:1 F5:1 G5:1 A5:1 C6:2 A5:2 | E5:2 A5:1 E5:1 C5:2 E5:2 | D#5:1 E5:1 G5:1 A5:1 C6:4 |
+    D6:2 Bb5:1 F5:1 D5:2 F5:2 | D5:1 F5:1 Ab5:1 Bb5:1 D6:4 | B5:2 G#5:1 E5:1 D5:2 B4:2 | G#4:1 B4:1 D5:1 E5:1 G#5:4
+  push: "r:2 ^3:1 r:1 r:2 ^2:1 r:1"
+  fizz: "r:1 ^1+:1 r:1 ^3:1 r:1 ^2+:1 r:1 ^3:1"
+  steel: "^1:1 ^2:1 ^3:1 ^2:1 ^1+:1 ^3:1 ^2:1 ^1:1"
+  walk: "^1:2 ^2:2 ^3:2 ^2:2"
+
+grooves:
+  brush:
+    kick: "x.......|x...x..."
+    sn:   "..o...o.|..o..oo."
+  ride:
+    r:    "x.xxx.x."
+
+sections:
+  a:
+    bars: 8
+    chords: a
+    parts: {clarinet: tune_a, fizz: fizz, horn: push, bass: walk, drums: brush, ride: ride}
+  a2:
+    bars: 8
+    chords: a2
+    parts: {clarinet: tune_a2, fizz: fizz, horn: push, bass: walk, drums: brush, ride: ride}
+  b:
+    bars: 8
+    chords: b
+    parts: {clarinet: tune_b, mallet: steel, horn: push, bass: walk, drums: brush, ride: ride}
+  a3:
+    bars: 8
+    chords: a
+    parts: {clarinet: tune_a, fizz: fizz, horn: push, bass: walk, drums: brush, ride: ride}
+
+arrangement: [a, a2, b, a3]
+loop_start: a
