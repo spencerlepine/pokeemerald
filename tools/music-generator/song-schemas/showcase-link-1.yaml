@@ -1,0 +1,83 @@
+# Showcase Link 1 (Contest Hall, link play): hot-swap of MUS_LINK_CONTEST_P1 (wiki audio:MUS_LINK_CONTEST_P1,
+# FACILITY / LOOP). The same piece as showcase.yaml (MUS_CONTEST), re-voiced, as the row asks: ARRANGE of
+# "Augie's Great Municipal Band" (soundtrack:phantom-menace:17, the parade half), the Emperor's theme turned into
+# a bright A major parade march over an A-E pedal, 144 bpm, 24-bar loop.
+# Variant 1 re-voices it for the band organ: organ on the first strain, flute over a horn pad in the middle,
+# trumpet and organ together on the return. 7 tracks like the vanilla link song.
+# Brief (sw_subject): Link Showcase stage, variant 1.
+name: showcase-link-1
+replaces: MUS_LINK_CONTEST_P1
+form: LOOP
+voicegroup: link_contest_p1       # vanilla; used here: organ 17, trumpet 56, horn 60, flute 73, slap bass 36, rs_drumset 0, square2 81
+master_volume: 79
+tempo: 144
+steps_per_beat: 2
+time_signature: [4, 4]
+seed: 31
+
+parts:
+  trumpet: {program: 56, channel: 0, volume: 100, pan: 6,   gate: 0.85, humanize: {vel: 4}}
+  organ:   {program: 17, channel: 1, volume: 84,  pan: -10, gate: 0.9}
+  flute:   {program: 73, channel: 2, volume: 92,  pan: 10,  gate: 0.92, lfo_speed: 30, lfo_delay: 20, mod: 4}
+  horn:    {program: 60, channel: 3, volume: 72,  pan: -16, octave: 4, gate: 1.0}
+  bass:    {program: 36, channel: 4, volume: 96,  pan: 0,   octave: 2, gate: 0.7, role: bass}
+  drums:   {program: 0,  channel: 5, volume: 80,  pan: 8,   role: drums, kit: {kick: 36, sn: 38, crash: 55}}
+  pah:     {program: 81, channel: 6, volume: 40,  pan: 28,  octave: 4, gate: 0.5, mono: true}
+
+progressions:
+  march:  "A | A | E | E | D | A | E | A"
+  march2: "A | A | E | E | D | A | B7 | E"
+  choir:  "F#m | D | A | E | F#m | D | B7 | E"
+  intro:  "A | E"
+
+phrases:
+  oompah: "^1:2 ^3-:2 ^1:2 ^3-:2"
+  after:  "r:1 ^2:1 r:1 ^3:1 r:1 ^2:1 r:1 ^3:1"
+  pad:    "^2:8"
+  tune_a: |
+    E4:2 A4:3 G#4:1 A4:2 | C#5:3 B4:1 A4:2 E4:2 | G#4:2 B4:3 A4:1 G#4:2 | E4:6 r:2 |
+    F#4:2 A4:3 G#4:1 F#4:2 | E4:3 C#4:1 A3:2 C#4:2 | B3:2 E4:2 G#4:2 B4:2 | A4:6 r:2
+  tune_a2: |
+    E4:2 A4:3 G#4:1 A4:2 | C#5:3 B4:1 A4:2 E4:2 | G#4:2 B4:3 A4:1 G#4:2 | E4:6 r:2 |
+    F#4:2 A4:3 G#4:1 F#4:2 | E4:3 C#4:1 A3:2 C#4:2 | A4:2 B4:2 D#5:2 F#5:2 | E5:6 r:2
+  tune_b: |
+    C#6:4 A5:2 F#5:2 | F#5:4 D5:2 A5:2 | E5:3 F#5:1 E5:2 C#5:2 | B4:6 r:2 |
+    C#5:2 F#5:2 A5:2 C#6:2 | D6:4 A5:4 | D#5:2 F#5:2 A5:2 B5:2 | G#5:6 r:2
+
+
+grooves:
+  march:
+    kick:  "x...x...|x...x...|x...x...|x...x...|x...x...|x...x...|x...x...|x...x.x."
+    sn:    "..x...x.|..x..xx.|..x...x.|..x..xx.|..x...x.|..x..xx.|..x...x.|..x....."
+  march_crash:
+    crash: "x.......|........|........|........|........|........|........|........"
+    sn:    "..x...x.|..x..xx.|..x...x.|..x..xx.|..x...x.|..x..xx.|..x...x.|..x...x."
+    kick:  "....x...|x...x...|x...x...|x...x...|x...x...|x...x...|x...x...|x...x.x."
+  lift:
+    kick:  "x.......|x.......|x.......|x.......|x.......|x.......|x.......|x...x.x."
+    sn:    "....x...|....x...|....x...|....x...|....x...|....x...|....x...|..x....."
+  roll:
+    sn:    "x...x...|x.x.xxxx"
+  hat:
+    hh:    ".o.o.o.o"
+
+sections:
+  intro:
+    bars: 2
+    chords: intro
+    parts: {drums: roll, bass: oompah, pah: after, trumpet: "r:4 E4:2 E4:2 | E4:2 G#4:2 B4:2 E4:2"}
+  a:
+    bars: 8
+    chords: march
+    parts: {organ: tune_a, bass: oompah, drums: march_crash, pah: after}
+  b:
+    bars: 8
+    chords: choir
+    parts: {flute: tune_b, horn: pad, bass: oompah, drums: lift, pah: after}
+  a2:
+    bars: 8
+    chords: march2
+    parts: {trumpet: tune_a2, organ: tune_a2, bass: oompah, drums: march, pah: after}
+
+arrangement: [intro, a, b, a2]
+loop_start: a
