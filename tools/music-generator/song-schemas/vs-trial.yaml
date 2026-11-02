@@ -1,0 +1,108 @@
+# Vs Trial. Hot-swap of MUS_VS_ELITE_FOUR (wiki audio:MUS_VS_ELITE_FOUR): the Four Trials, Force visions of Maul,
+# Qui-Gon, Ki-Adi-Mundi and Anakin. ARRANGE of "Duel of the Fates" (soundtrack:phantom-menace:02), from
+# analyze_reference over 0:00-2:00 (forced to the cue's 160 bpm: E minor, the Em / Cm chromatic-mediant swing,
+# Am7-Bm7 in the middle) plus knowledge of the cue: the string ostinato (G E F# G A / B A G F# E), the choral call
+# (B up to a long E, a lift to F#, then C-Eb-C-Eb on C minor), the brass motif that answers it, and the middle
+# strain over Am7 and Bm7. Choir parts go to trumpet and horn (the vanilla voicegroup has no choir), the ostinato
+# moves between strings and a square. Kept at the cue's 160 bpm on an eighth grid. Brief (sw_subject): the Four
+# Trials: dreamlike, dangerous.
+name: vs-trial
+replaces: MUS_VS_ELITE_FOUR
+form: LOOP
+voicegroup: vs_elite_four             # vanilla: trumpet 56, horn 60, strings 48, synth bass 38, timpani 47, kit 0, squares 4/82, wave 81
+master_volume: 80
+song_priority: 1
+tempo: 160
+steps_per_beat: 2                     # eighth grid; snare rolls split a step into sixteenths
+time_signature: [4, 4]
+seed: 99
+
+parts:
+  trumpet: {program: 56, channel: 0, volume: 106, pan: 6,   range: [B4, G5], gate: 0.94, humanize: {vel: 4}}
+  horn:    {program: 60, channel: 1, volume: 92,  pan: -14, range: [E3, E5], gate: 0.96}
+  strings: {program: 48, channel: 2, volume: 80,  pan: -24, range: [G3, B4], gate: 0.85}
+  bass:    {program: 38, channel: 3, volume: 108, pan: 0,   octave: 2, range: [C2, E3], gate: 0.7, role: bass}
+  timpani: {program: 47, channel: 4, volume: 100, pan: 16,  octave: 2, range: [C2, B2], gate: 1.0}
+  drums:   {program: 0,  channel: 5, volume: 86,  pan: 10,  role: drums, kit: {s: 40, crash: 57}}
+  ost:     {program: 4,  channel: 6, volume: 42,  pan: 30,  range: [G4, B5], gate: 0.7, mono: true}
+  counter: {program: 82, channel: 7, volume: 36,  pan: -30, octave: 4, range: [E4, E5], gate: 0.5, mono: true}
+  wave:    {program: 81, channel: 8, volume: 46,  pan: -4,  octave: 2, range: [C2, E3], gate: 0.45, mono: true}
+
+progressions:
+  a: "Em | Em | Em | Cm | Cm | Cm | Em | Em"
+  b: "Em | Em | Cm | Cm | Em | Em | Am | B"
+  c: "Am7 | Bm7 | Am7 | Bm7 | Am7 | Bm7 | Am | B"
+
+phrases:
+  # the string ostinato, on E minor and moved onto C minor
+  ost_a: |
+    G3:2 E4:1 F#4:1 G4:2 A4:2 | B3:3 A4:1 G4:1 F#4:1 E4:2 | G3:2 E4:1 F#4:1 G4:2 A4:2 | G3:2 Eb4:1 F4:1 G4:2 Ab4:2 |
+    G3:3 Ab4:1 G4:1 F4:1 Eb4:2 | G3:2 Eb4:1 F4:1 G4:2 Ab4:2 | G3:2 E4:1 F#4:1 G4:2 A4:2 | B3:3 A4:1 G4:1 F#4:1 E4:2
+  ost_b: |
+    G3:2 E4:1 F#4:1 G4:2 A4:2 | B3:3 A4:1 G4:1 F#4:1 E4:2 | G3:2 Eb4:1 F4:1 G4:2 Ab4:2 | G3:3 Ab4:1 G4:1 F4:1 Eb4:2 |
+    G3:2 E4:1 F#4:1 G4:2 A4:2 | B3:3 A4:1 G4:1 F#4:1 E4:2 | A3:2 E4:1 G4:1 A4:2 C5:2 | B3:2 D#4:1 F#4:1 A4:2 B4:2
+  # the square plays the same figure an octave up
+  ost_a_hi: |
+    G4:2 E5:1 F#5:1 G5:2 A5:2 | B4:3 A5:1 G5:1 F#5:1 E5:2 | G4:2 E5:1 F#5:1 G5:2 A5:2 | G4:2 Eb5:1 F5:1 G5:2 Ab5:2 |
+    G4:3 Ab5:1 G5:1 F5:1 Eb5:2 | G4:2 Eb5:1 F5:1 G5:2 Ab5:2 | G4:2 E5:1 F#5:1 G5:2 A5:2 | B4:3 A5:1 G5:1 F#5:1 E5:2
+  ost_b_hi: |
+    G4:2 E5:1 F#5:1 G5:2 A5:2 | B4:3 A5:1 G5:1 F#5:1 E5:2 | G4:2 Eb5:1 F5:1 G5:2 Ab5:2 | G4:3 Ab5:1 G5:1 F5:1 Eb5:2 |
+    G4:2 E5:1 F#5:1 G5:2 A5:2 | B4:3 A5:1 G5:1 F#5:1 E5:2 | A4:2 E5:1 G5:1 A5:2 C6:2 | B4:2 D#5:1 F#5:1 A5:2 B5:2
+  call: "r:2 B4:2 E5:4 | E5:8 | E5:6 F#5:2 | C5:4 Eb5:4 | C5:1 Eb5:1 C5:1 Eb5:5 | Eb5:6 D5:2 | r:2 B4:2 E5:4 | E5:8"
+  call_low: "r:2 B3:2 E4:4 | E4:8 | E4:6 F#4:2 | C4:4 Eb4:4 | C4:1 Eb4:1 C4:1 Eb4:5 | Eb4:6 D4:2 | r:2 B3:2 E4:4 | E4:8"
+  brass: |
+    B4:1 E5:4 G4:1 A4:2 | E5:3 A4:1 E5:2 A4:1 E4:1 | G4:1 r:1 Eb5:1 C5:1 Eb5:1 C5:1 Eb5:2 | Eb5:2 C5:2 Eb5:2 G4:1 C5:1 |
+    E5:4 G4:2 A4:1 E4:1 | E4:1 B4:3 A4:3 F#4:1 | A4:4 C5:2 E5:2 | D#5:4 F#5:2 B4:2
+  brass_hrn: "E4:8 | E4:8 | Eb4:8 | Eb4:8 | B3:8 | B3:8 | C4:8 | B3:8"
+  middle: "A4:6 B4:1 E5:1 | G4:5 B4:3 | A4:3 F#4:1 A4:2 E5:2 | B4:8 | A4:6 B4:1 E5:1 | G4:5 B4:3 | C5:4 E5:4 | D#5:4 F#5:4"
+  pad: "^3:8"
+  drive: "^1:1 ^1:1 ^1+:1 ^1:1 ^1:1 ^1:1 ^1+:1 ^1:1"
+  wave8: "^1:1 r:1 ^1+:1 r:1 ^1:1 r:1 ^1+:1 ^1:1"
+  pulse: "^1:1 ^3:1 ^1+:1 ^3:1 ^1:1 ^3:1 ^1+:1 ^3:1"
+  timp_a: "^1:2 r:6"
+  timp_c: "^1:2 r:6 | ^1:2 r:6 | ^1:2 r:6 | ^1:2 r:4 ^1:1 ^1:1 | ^1:2 r:6 | ^1:2 r:6 | ^1:2 r:4 ^1:1 ^1:1 | ^1:1 ^1:1 ^1:1 ^1:1 ^1:2 r:2"
+
+grooves:
+  duel:
+    s: "..x...x.|..x...xx"
+  duel_crash:
+    crash: "X.......|........|........|........|........|........|........|........"
+    s: "..x...x.|..x...xx|..x...x.|..x...xx|..x...x.|..x...xx|..x...x.|..x...xx"
+  roll:
+    s: "..x.rrRR"
+  build:
+    s: "........|..x.....|........|..x...x.|........|..x.....|..x...x.|rrrrRRRR"
+
+sections:
+  intro:
+    bars: 4
+    chords: "Em | Em | Cm | Cm"
+    parts: {strings: "G3:2 E4:1 F#4:1 G4:2 A4:2 | B3:3 A4:1 G4:1 F#4:1 E4:2 | G3:2 Eb4:1 F4:1 G4:2 Ab4:2 | G3:3 Ab4:1 G4:1 F4:1 Eb4:2",
+            bass: drive, timpani: timp_a, wave: wave8, drums: duel}
+  a:
+    bars: 8
+    chords: a
+    fill: roll
+    parts: {trumpet: call, strings: ost_a, bass: drive, timpani: timp_a, drums: duel_crash, counter: pulse, wave: wave8}
+  b:
+    bars: 8
+    chords: b
+    fill: roll
+    parts: {trumpet: brass, horn: brass_hrn, bass: drive, drums: duel, ost: ost_b_hi, wave: wave8}
+  c:
+    bars: 8
+    chords: c
+    parts: {horn: middle, strings: pad, bass: drive, timpani: timp_c, drums: build, counter: pulse, wave: wave8}
+  a2:
+    bars: 8
+    chords: a
+    fill: roll
+    parts: {trumpet: call, horn: call_low, bass: drive, drums: duel_crash, ost: ost_a_hi, wave: wave8}
+  b2:
+    bars: 8
+    chords: b
+    fill: roll
+    parts: {trumpet: brass, strings: ost_b, bass: drive, drums: duel, counter: pulse, wave: wave8}
+
+arrangement: [intro, a, b, c, a2, b2]
+loop_start: a
