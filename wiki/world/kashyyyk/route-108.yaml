@@ -38,7 +38,19 @@ exits:
   cells: [0, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 19]
   to: route-109
 buildings: []
-props: []
+props:
+- name: Republic cruiser hull
+  art: art:kashyyyk:cruiser-hull
+  at: [24, 1]
+  size: [8, 4]
+- name: Beach rocks
+  art: art:kashyyyk:beach-rocks
+  at: [3, 2]
+  size: [1, 1]
+- name: Beach rocks
+  art: art:kashyyyk:beach-rocks
+  at: [45, 2]
+  size: [1, 1]
 people:
 - name: Trainer Jiven
   at: [52, 13]
@@ -66,4 +78,4 @@ warps:
 - name: Door
   at: [29, 6]
   to: republic-wreck-deck
-todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Could not fit: Republic cruiser hull']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

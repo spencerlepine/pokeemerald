@@ -40,7 +40,15 @@ grid: |
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 exits: []
 buildings: []
-props: []
+props:
+- name: Glyph stone
+  art: art:atollon:glyph-stone
+  at: [11, 9]
+  size: [1, 1]
+- name: Glyph stone
+  art: art:atollon:glyph-stone
+  at: [19, 9]
+  size: [1, 1]
 people:
 - name: Triangle
   at: [15, 12]

@@ -36,7 +36,15 @@ grid: |
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTT
 exits: []
 buildings: []
-props: []
+props:
+- name: Floating stone
+  art: art:mortis:floating-stone
+  at: [10, 9]
+  size: [2, 2]
+- name: Floating stone
+  art: art:mortis:floating-stone
+  at: [15, 13]
+  size: [2, 2]
 people:
 - name: Mew
   at: [13, 17]

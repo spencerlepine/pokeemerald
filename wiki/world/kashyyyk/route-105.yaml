@@ -99,6 +99,10 @@ props:
   art: art:kashyyyk:beach-rocks
   at: [7, 21]
   size: [1, 1]
+- name: Wroshyr tree
+  art: art:kashyyyk:wroshyr-tree
+  at: [15, 53]
+  size: [3, 3]
 people:
 - name: Trainer Loal
   at: [19, 60]
@@ -129,5 +133,4 @@ warps:
 - name: Door
   at: [9, 20]
   to: ice-grotto
-todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Planet border cut: north edge to route-104 (TATOOINE); reached by ship instead.', 'Could not fit:
-    Wroshyr tree']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Planet border cut: north edge to route-104 (TATOOINE); reached by ship instead.']

@@ -44,5 +44,6 @@ warps:
 - name: Door
   at: [10, 10]
   to: mortis-gate-entrance
-todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Was filed as an interior; walked outdoors, so it is a landmark now.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Was filed as an interior; walked outdoors, so it is a landmark now.', 'The monolith is the island
+    itself (the # cells): no prop, a one-off terrain set piece.']
 pos: [0, 0]

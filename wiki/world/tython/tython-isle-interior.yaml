@@ -34,7 +34,23 @@ grid: |
   TTTTTTTTTTTTTTTTTTTTTTTTTTT
 exits: []
 buildings: []
-props: []
+props:
+- name: Standing stone
+  art: art:tython:standing-stones
+  at: [8, 8]
+  size: [1, 1]
+- name: Standing stone
+  art: art:tython:standing-stones
+  at: [18, 8]
+  size: [1, 1]
+- name: Standing stone
+  art: art:tython:standing-stones
+  at: [8, 15]
+  size: [1, 1]
+- name: Standing stone
+  art: art:tython:standing-stones
+  at: [18, 15]
+  size: [1, 1]
 people:
 - name: Event object
   at: [13, 12]

@@ -98,7 +98,23 @@ exits:
   cells: [40, 41]
   to: dagobah
 buildings: []
-props: []
+props:
+- name: Swamp reeds
+  art: art:dagobah:swamp-reeds
+  at: [13, 11]
+  size: [1, 1]
+- name: Swamp reeds
+  art: art:dagobah:swamp-reeds
+  at: [48, 2]
+  size: [1, 1]
+- name: Hanging moss
+  art: art:dagobah:hanging-moss
+  at: [10, 7]
+  size: [1, 1]
+- name: Hanging moss
+  art: art:dagobah:hanging-moss
+  at: [27, 8]
+  size: [1, 1]
 people:
 - name: Trainer Boesh
   at: [51, 65]
@@ -130,4 +146,5 @@ people:
 signs: []
 warps: []
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Planet border cut: north edge to route-124 (YAVIN 4); reached by ship instead.', 'The north channel
-    leads to the Dagobah hollow (new link; vanilla''s north edge was Route 124, Yavin 4).', 'Could not fit: Gnarltree, Swamp reeds']
+    leads to the Dagobah hollow (new link; vanilla''s north edge was Route 124, Yavin 4).', 'No islet is 3x3, so no gnarltree: swamp reeds and hanging moss placed
+    instead.']

@@ -101,7 +101,23 @@ buildings:
   size: [5, 3]
   door: 1
   to: route-124-diving-treasure-hunters-house
-props: []
+props:
+- name: Massassi jungle tree
+  art: art:yavin-4:massassi-jungle-tree
+  at: [71, 30]
+  size: [2, 3]
+- name: Massassi jungle tree
+  art: art:yavin-4:massassi-jungle-tree
+  at: [58, 39]
+  size: [2, 3]
+- name: Jungle vines
+  art: art:yavin-4:jungle-vines
+  at: [3, 72]
+  size: [1, 1]
+- name: Jungle vines
+  art: art:yavin-4:jungle-vines
+  at: [70, 27]
+  size: [1, 1]
 people:
 - name: Trainer Sugon
   at: [34, 25]
@@ -144,4 +160,4 @@ signs:
   at: [73, 48]
 warps: []
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Planet border cut: south edge to route-126 (DAGOBAH); reached by ship instead.', 'Planet border
-    cut: west edge to cloud-city (BESPIN); reached by ship instead.', 'Could not fit: Massassi jungle tree']
+    cut: west edge to cloud-city (BESPIN); reached by ship instead.']

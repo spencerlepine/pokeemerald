@@ -54,7 +54,15 @@ exits:
   cells: [7, 8, 9, 10, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29]
   to: tipoca-city
 buildings: []
-props: []
+props:
+- name: Rock stack
+  art: art:kamino:rock-stack
+  at: [44, 18]
+  size: [1, 1]
+- name: Rock stack
+  art: art:kamino:rock-stack
+  at: [15, 7]
+  size: [1, 1]
 people:
 - name: Trainer Rios
   at: [41, 32]
@@ -83,4 +91,5 @@ people:
 signs: []
 warps: []
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Planet border cut: east edge to route-130 (DAGOBAH); reached by ship instead.', 'Planet border
-    cut: door at [36, 6] to asteroid-spire-entrance; reached by ship instead.', Vanilla's east edge to Route 130 (Dagobah) is cut., 'Could not fit: Stilt walkway']
+    cut: door at [36, 6] to asteroid-spire-entrance; reached by ship instead.', Vanilla's east edge to Route 130 (Dagobah) is cut., 'Stilt walkway is a walkable tile
+    kit (replaces log bridges), not a prop: nothing to place here.']

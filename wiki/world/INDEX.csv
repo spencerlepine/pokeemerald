@@ -36,6 +36,8 @@ asteroid-spire-hangar,ASTEROID FIELD,interior,new,BLOCKOUT,prop,Cargo crates,2x2
 asteroid-spire-hangar,ASTEROID FIELD,interior,new,BLOCKOUT,person,Pilot,1x1,,,PLACEHOLDER,
 asteroid-spire-hangar,ASTEROID FIELD,interior,new,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 atollon-exterior,ATOLLON,landmark,BirthIsland_Exterior,BLOCKOUT,area,ATOLLON EXTERIOR,30x30,,,pending-final-art,greybox terrain
+atollon-exterior,ATOLLON,landmark,BirthIsland_Exterior,BLOCKOUT,prop,Glyph stone,1x1,art:atollon:glyph-stone,yes,pending-mockup,
+atollon-exterior,ATOLLON,landmark,BirthIsland_Exterior,BLOCKOUT,prop,Glyph stone,1x1,art:atollon:glyph-stone,yes,pending-mockup,
 atollon-exterior,ATOLLON,landmark,BirthIsland_Exterior,BLOCKOUT,person,Triangle,1x1,,,PLACEHOLDER,
 atollon-exterior,ATOLLON,landmark,BirthIsland_Exterior,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER,
 atollon-exterior,ATOLLON,landmark,BirthIsland_Exterior,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
@@ -680,6 +682,10 @@ dagobah-supply-depot,DAGOBAH,interior,SootopolisCity_Mart,BLOCKOUT,warp,Door,1x1
 mirage-isle,DAGOBAH,landmark,Route130,BLOCKOUT,area,MIRAGE ISLE,80x40,,,pending-final-art,greybox terrain
 mirage-isle,DAGOBAH,landmark,Route130,BLOCKOUT,prop,Mirage Isle berry tree,1x1,art:dagobah:gnarltree,yes,pending-mockup,greybox piece
 route-126,DAGOBAH,route,Route126,BLOCKOUT,area,ROUTE 126,80x80,,,pending-final-art,greybox terrain
+route-126,DAGOBAH,route,Route126,BLOCKOUT,prop,Swamp reeds,1x1,art:dagobah:swamp-reeds,yes,pending-mockup,greybox piece
+route-126,DAGOBAH,route,Route126,BLOCKOUT,prop,Swamp reeds,1x1,art:dagobah:swamp-reeds,yes,pending-mockup,greybox piece
+route-126,DAGOBAH,route,Route126,BLOCKOUT,prop,Hanging moss,1x1,art:dagobah:hanging-moss,yes,pending-mockup,greybox piece
+route-126,DAGOBAH,route,Route126,BLOCKOUT,prop,Hanging moss,1x1,art:dagobah:hanging-moss,yes,pending-mockup,greybox piece
 route-126,DAGOBAH,route,Route126,BLOCKOUT,person,Trainer Boesh,1x1,,,PLACEHOLDER,
 route-126,DAGOBAH,route,Route126,BLOCKOUT,person,Trainer Daos,1x1,,,PLACEHOLDER,
 route-126,DAGOBAH,route,Route126,BLOCKOUT,person,Trainer Nuora,1x1,,,PLACEHOLDER,
@@ -2177,6 +2183,9 @@ nijedha,JEDHA,town,new,BLOCKOUT,person,Kyber trader,1x1,,,PLACEHOLDER,
 nijedha,JEDHA,town,new,BLOCKOUT,sign,City sign,1x1,,,PLACEHOLDER,
 route-122,JEDHA,route,Route122,BLOCKOUT,area,ROUTE 122,40x40,,,pending-final-art,greybox terrain
 route-122,JEDHA,route,Route122,BLOCKOUT,building,Pilgrim landing pad (ships),6x4,art:shared:landing-pad,yes,pending-final-art,greybox piece
+route-122,JEDHA,route,Route122,BLOCKOUT,prop,Prayer candles,1x1,art:jedha:prayer-candles,yes,pending-final-art,greybox piece
+route-122,JEDHA,route,Route122,BLOCKOUT,prop,Prayer candles,1x1,art:jedha:prayer-candles,yes,pending-final-art,greybox piece
+route-122,JEDHA,route,Route122,BLOCKOUT,prop,Toppled statue,3x3,art:jedha:toppled-statue,yes,pending-final-art,greybox piece
 route-122,JEDHA,route,Route122,BLOCKOUT,sign,Landing pad sign,1x1,,,PLACEHOLDER,
 route-122,JEDHA,route,Route122,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 sealed-vault-inner-room,KAMINO,dungeon,SealedChamber_InnerRoom,BLOCKOUT,area,SEALED VAULT INNER ROOM,21x23,,,pending-final-art,greybox terrain
@@ -2289,6 +2298,8 @@ tipoca-city-supply-depot,KAMINO,interior,new,BLOCKOUT,prop,Counter,4x1,art:share
 tipoca-city-supply-depot,KAMINO,interior,new,BLOCKOUT,person,Clerk,1x1,,,PLACEHOLDER,
 tipoca-city-supply-depot,KAMINO,interior,new,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 route-131,KAMINO,route,Route131,BLOCKOUT,area,ROUTE 131,60x40,,,pending-final-art,greybox terrain
+route-131,KAMINO,route,Route131,BLOCKOUT,prop,Rock stack,1x1,art:kamino:rock-stack,yes,pending-mockup,
+route-131,KAMINO,route,Route131,BLOCKOUT,prop,Rock stack,1x1,art:kamino:rock-stack,yes,pending-mockup,
 route-131,KAMINO,route,Route131,BLOCKOUT,person,Trainer Rios,1x1,,,PLACEHOLDER,
 route-131,KAMINO,route,Route131,BLOCKOUT,person,Trainer Hosho,1x1,,,PLACEHOLDER,
 route-131,KAMINO,route,Route131,BLOCKOUT,person,Trainer Soila,1x1,,,PLACEHOLDER,
@@ -2298,6 +2309,8 @@ route-131,KAMINO,route,Route131,BLOCKOUT,person,Trainer Ian,1x1,,,PLACEHOLDER,
 route-131,KAMINO,route,Route131,BLOCKOUT,person,Trainer Koskun,1x1,,,PLACEHOLDER,
 route-131,KAMINO,route,Route131,BLOCKOUT,person,Trainer Tegila,1x1,,,PLACEHOLDER,
 route-132,KAMINO,route,Route132,BLOCKOUT,area,ROUTE 132,80x40,,,pending-final-art,greybox terrain
+route-132,KAMINO,route,Route132,BLOCKOUT,prop,Rock stack,1x1,art:kamino:rock-stack,yes,pending-mockup,
+route-132,KAMINO,route,Route132,BLOCKOUT,prop,Rock stack,1x1,art:kamino:rock-stack,yes,pending-mockup,
 route-132,KAMINO,route,Route132,BLOCKOUT,person,Trainer Gios,1x1,,,PLACEHOLDER,
 route-132,KAMINO,route,Route132,BLOCKOUT,person,Trainer Dulena,1x1,,,PLACEHOLDER,
 route-132,KAMINO,route,Route132,BLOCKOUT,person,Trainer Kithar,1x1,,,PLACEHOLDER,
@@ -2309,6 +2322,8 @@ route-132,KAMINO,route,Route132,BLOCKOUT,person,Trainer Joshun,1x1,,,PLACEHOLDER
 route-132,KAMINO,route,Route132,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER,
 route-132,KAMINO,route,Route132,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER,
 route-133,KAMINO,route,Route133,BLOCKOUT,area,ROUTE 133,80x40,,,pending-final-art,greybox terrain
+route-133,KAMINO,route,Route133,BLOCKOUT,prop,Rock stack,1x1,art:kamino:rock-stack,yes,pending-mockup,
+route-133,KAMINO,route,Route133,BLOCKOUT,prop,Rock stack,1x1,art:kamino:rock-stack,yes,pending-mockup,
 route-133,KAMINO,route,Route133,BLOCKOUT,person,Trainer Farro,1x1,,,PLACEHOLDER,
 route-133,KAMINO,route,Route133,BLOCKOUT,person,Trainer Lethi,1x1,,,PLACEHOLDER,
 route-133,KAMINO,route,Route133,BLOCKOUT,person,Trainer Daina,1x1,,,PLACEHOLDER,
@@ -2612,6 +2627,7 @@ kachirho,KASHYYYK,town,DewfordTown,BLOCKOUT,sign,Arena sign,1x1,,,PLACEHOLDER,
 kachirho,KASHYYYK,town,DewfordTown,BLOCKOUT,sign,Hangar sign (Millennium Falcon (Han)),1x1,,,PLACEHOLDER,
 route-105,KASHYYYK,route,Route105,BLOCKOUT,area,ROUTE 105,40x80,,,pending-final-art,greybox terrain
 route-105,KASHYYYK,route,Route105,BLOCKOUT,prop,Beach rocks,1x1,art:kashyyyk:beach-rocks,yes,pending-final-art,greybox piece
+route-105,KASHYYYK,route,Route105,BLOCKOUT,prop,Wroshyr tree,3x3,art:kashyyyk:wroshyr-tree,yes,pending-mockup,greybox piece
 route-105,KASHYYYK,route,Route105,BLOCKOUT,person,Trainer Loal,1x1,,,PLACEHOLDER,
 route-105,KASHYYYK,route,Route105,BLOCKOUT,person,Trainer Diar,1x1,,,PLACEHOLDER,
 route-105,KASHYYYK,route,Route105,BLOCKOUT,person,Trainer Bovara,1x1,,,PLACEHOLDER,
@@ -2642,6 +2658,9 @@ route-107,KASHYYYK,route,Route107,BLOCKOUT,person,Trainer Lisa,1x1,,,PLACEHOLDER
 route-107,KASHYYYK,route,Route107,BLOCKOUT,person,Trainer Ray,1x1,,,PLACEHOLDER,
 route-107,KASHYYYK,route,Route107,BLOCKOUT,person,Trainer Carro,1x1,,,PLACEHOLDER,
 route-108,KASHYYYK,route,Route108,BLOCKOUT,area,ROUTE 108,60x20,,,pending-final-art,greybox terrain
+route-108,KASHYYYK,route,Route108,BLOCKOUT,prop,Republic cruiser hull,8x4,art:kashyyyk:cruiser-hull,yes,pending-final-art,greybox piece
+route-108,KASHYYYK,route,Route108,BLOCKOUT,prop,Beach rocks,1x1,art:kashyyyk:beach-rocks,yes,pending-final-art,greybox piece
+route-108,KASHYYYK,route,Route108,BLOCKOUT,prop,Beach rocks,1x1,art:kashyyyk:beach-rocks,yes,pending-final-art,greybox piece
 route-108,KASHYYYK,route,Route108,BLOCKOUT,person,Trainer Jiven,1x1,,,PLACEHOLDER,
 route-108,KASHYYYK,route,Route108,BLOCKOUT,person,Trainer Tavissa,1x1,,,PLACEHOLDER,
 route-108,KASHYYYK,route,Route108,BLOCKOUT,person,Trainer Mogal,1x1,,,PLACEHOLDER,
@@ -2767,6 +2786,8 @@ wellspring-entrance,MORTIS,landmark,FarawayIsland_Entrance,BLOCKOUT,sign,Sign,1x
 wellspring-entrance,MORTIS,landmark,FarawayIsland_Entrance,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 wellspring-entrance,MORTIS,landmark,FarawayIsland_Entrance,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 wellspring-interior,MORTIS,landmark,FarawayIsland_Interior,BLOCKOUT,area,WELLSPRING INTERIOR,29x26,,,pending-final-art,greybox terrain
+wellspring-interior,MORTIS,landmark,FarawayIsland_Interior,BLOCKOUT,prop,Floating stone,2x2,art:mortis:floating-stone,yes,pending-mockup,
+wellspring-interior,MORTIS,landmark,FarawayIsland_Interior,BLOCKOUT,prop,Floating stone,2x2,art:mortis:floating-stone,yes,pending-mockup,
 wellspring-interior,MORTIS,landmark,FarawayIsland_Interior,BLOCKOUT,person,Mew,1x1,,,PLACEHOLDER,
 wellspring-interior,MORTIS,landmark,FarawayIsland_Interior,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 wellspring-interior,MORTIS,landmark,FarawayIsland_Interior,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
@@ -4918,6 +4939,10 @@ tython-isle-exterior,TYTHON,route,SouthernIsland_Exterior,BLOCKOUT,warp,Door,1x1
 tython-isle-exterior,TYTHON,route,SouthernIsland_Exterior,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 tython-isle-exterior,TYTHON,route,SouthernIsland_Exterior,BLOCKOUT,warp,Landing pad (ships),1x1,,,PLACEHOLDER,
 tython-isle-interior,TYTHON,route,SouthernIsland_Interior,BLOCKOUT,area,TYTHON ISLE,27x24,,,pending-final-art,greybox terrain
+tython-isle-interior,TYTHON,route,SouthernIsland_Interior,BLOCKOUT,prop,Standing stone,1x1,art:tython:standing-stones,yes,pending-mockup,
+tython-isle-interior,TYTHON,route,SouthernIsland_Interior,BLOCKOUT,prop,Standing stone,1x1,art:tython:standing-stones,yes,pending-mockup,
+tython-isle-interior,TYTHON,route,SouthernIsland_Interior,BLOCKOUT,prop,Standing stone,1x1,art:tython:standing-stones,yes,pending-mockup,
+tython-isle-interior,TYTHON,route,SouthernIsland_Interior,BLOCKOUT,prop,Standing stone,1x1,art:tython:standing-stones,yes,pending-mockup,
 tython-isle-interior,TYTHON,route,SouthernIsland_Interior,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER,
 tython-isle-interior,TYTHON,route,SouthernIsland_Interior,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER,
 tython-isle-interior,TYTHON,route,SouthernIsland_Interior,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
@@ -5075,6 +5100,10 @@ yavin-4-supply-depot,YAVIN 4,interior,MossdeepCity_Mart,BLOCKOUT,warp,Door,1x1,,
 yavin-4-supply-depot,YAVIN 4,interior,MossdeepCity_Mart,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 route-124,YAVIN 4,route,Route124,BLOCKOUT,area,ROUTE 124,80x80,,,pending-final-art,greybox terrain
 route-124,YAVIN 4,route,Route124,BLOCKOUT,building,Diving treasure hunters house,5x3,art:tatooine:homestead-dome,yes,pending-final-art,greybox piece
+route-124,YAVIN 4,route,Route124,BLOCKOUT,prop,Massassi jungle tree,2x3,art:yavin-4:massassi-jungle-tree,yes,pending-mockup,greybox piece
+route-124,YAVIN 4,route,Route124,BLOCKOUT,prop,Massassi jungle tree,2x3,art:yavin-4:massassi-jungle-tree,yes,pending-mockup,greybox piece
+route-124,YAVIN 4,route,Route124,BLOCKOUT,prop,Jungle vines,1x1,art:yavin-4:jungle-vines,yes,pending-mockup,greybox piece
+route-124,YAVIN 4,route,Route124,BLOCKOUT,prop,Jungle vines,1x1,art:yavin-4:jungle-vines,yes,pending-mockup,greybox piece
 route-124,YAVIN 4,route,Route124,BLOCKOUT,person,Trainer Sugon,1x1,,,PLACEHOLDER,
 route-124,YAVIN 4,route,Route124,BLOCKOUT,person,Trainer Rovan,1x1,,,PLACEHOLDER,
 route-124,YAVIN 4,route,Route124,BLOCKOUT,person,Trainer Jivila,1x1,,,PLACEHOLDER,
@@ -5089,6 +5118,10 @@ route-124,YAVIN 4,route,Route124,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER,
 route-124,YAVIN 4,route,Route124,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER,
 route-124,YAVIN 4,route,Route124,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
 route-125,YAVIN 4,route,Route125,BLOCKOUT,area,ROUTE 125,80x40,,,pending-final-art,greybox terrain
+route-125,YAVIN 4,route,Route125,BLOCKOUT,prop,Massassi jungle tree,2x3,art:yavin-4:massassi-jungle-tree,yes,pending-mockup,greybox piece
+route-125,YAVIN 4,route,Route125,BLOCKOUT,prop,Massassi jungle tree,2x3,art:yavin-4:massassi-jungle-tree,yes,pending-mockup,greybox piece
+route-125,YAVIN 4,route,Route125,BLOCKOUT,prop,Jungle vines,1x1,art:yavin-4:jungle-vines,yes,pending-mockup,greybox piece
+route-125,YAVIN 4,route,Route125,BLOCKOUT,prop,Jungle vines,1x1,art:yavin-4:jungle-vines,yes,pending-mockup,greybox piece
 route-125,YAVIN 4,route,Route125,BLOCKOUT,person,Trainer Neus,1x1,,,PLACEHOLDER,
 route-125,YAVIN 4,route,Route125,BLOCKOUT,person,Trainer Sovo,1x1,,,PLACEHOLDER,
 route-125,YAVIN 4,route,Route125,BLOCKOUT,person,Trainer Tassys,1x1,,,PLACEHOLDER,

@@ -61,7 +61,19 @@ buildings:
   size: [6, 4]
   door: 3
   to: jedha-hangar
-props: []
+props:
+- name: Prayer candles
+  art: art:jedha:prayer-candles
+  at: [2, 18]
+  size: [1, 1]
+- name: Prayer candles
+  art: art:jedha:prayer-candles
+  at: [37, 19]
+  size: [1, 1]
+- name: Toppled statue
+  art: art:jedha:toppled-statue
+  at: [23, 30]
+  size: [3, 3]
 people: []
 signs:
 - name: Landing pad sign
@@ -72,4 +84,4 @@ warps:
   to: jedha-temple-1f
 travel: []
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Planet border cut: north edge to route-121 (ENDOR); reached by ship instead.', 'Planet border
-    cut: south edge to route-123 (ENDOR); reached by ship instead.', 'Could not fit: Toppled statue']
+    cut: south edge to route-123 (ENDOR); reached by ship instead.']

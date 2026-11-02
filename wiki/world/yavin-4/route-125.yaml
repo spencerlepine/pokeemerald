@@ -56,7 +56,23 @@ exits:
     57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79]
   to: yavin-4
 buildings: []
-props: []
+props:
+- name: Massassi jungle tree
+  art: art:yavin-4:massassi-jungle-tree
+  at: [17, 20]
+  size: [2, 3]
+- name: Massassi jungle tree
+  art: art:yavin-4:massassi-jungle-tree
+  at: [25, 27]
+  size: [2, 3]
+- name: Jungle vines
+  art: art:yavin-4:jungle-vines
+  at: [10, 25]
+  size: [1, 1]
+- name: Jungle vines
+  art: art:yavin-4:jungle-vines
+  at: [46, 13]
+  size: [1, 1]
 people:
 - name: Trainer Neus
   at: [7, 31]
@@ -90,5 +106,4 @@ people:
   role: item
 signs: []
 warps: []
-todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Planet border cut: door at [22, 19] to wampa-cave-low-tide-entrance-room; reached by ship instead.',
-  'Could not fit: Massassi jungle tree']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Planet border cut: door at [22, 19] to wampa-cave-low-tide-entrance-room; reached by ship instead.']

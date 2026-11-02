@@ -47,5 +47,6 @@ warps:
 - name: Door
   at: [16, 14]
   to: asteroid-spire-5f
-todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'The void edge is terrain, not a prop: the cliff rows at the bottom and the open edges fall into
+    space.']
 pos: [0, 25]
