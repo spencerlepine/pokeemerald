@@ -53,6 +53,8 @@ def main(argv=None):
     r.add_argument("--yaw", type=float, default=0.0)
     s = sub.add_parser("scene")
     s.add_argument("scene")
+    c = sub.add_parser("compare")
+    c.add_argument("models", nargs="+")
     b = sub.add_parser("budget")
     b.add_argument("models", nargs="+")
     a = ap.parse_args(argv)
@@ -64,6 +66,10 @@ def main(argv=None):
             obj = M.Object(p)
             _, ind, _ = R.render_object(obj)
             print(obj.name, T.budget(ind, obj.palette))
+    elif a.cmd == "compare":
+        from . import compare as C
+        for p in a.models:
+            C.build(p)
     elif a.cmd == "scene":
         from . import scene as S
         S.build(a.scene)

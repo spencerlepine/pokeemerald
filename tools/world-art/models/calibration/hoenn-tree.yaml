@@ -1,0 +1,33 @@
+# Calibration: the vanilla Hoenn route tree (General metatiles 468, 469, 476, 477), 2x2 cells.
+# Goal: render indistinguishable from vanilla at 1x, in vanilla colours. Measured from the vanilla
+# tone map: crown ~30x22 px, leaf scales ~5x4 px in rings round the top, a dark crown-shadow ellipse
+# (rows 17-29) holding a short grey trunk stub, a mid-green rim round it, a ground-shade halo.
+name: hoenn-tree
+palette: hoenn
+cells: [2, 2]
+foot: [16, 27]
+box: [12, 4]
+footprint: 1
+shadow: {rx: 13, ry: 3.5}
+seed: 1
+render: {depth_jump: 0.3, ao: {strength: 0.0, threshold: 0.3}, margin: 0, inner_lines: none, light: [-0.3, -0.2, 0.93]}
+
+materials:
+  leaf:  {ramp: tree_leaf, bands: [0.2, 0.72, 0.96], texture: fan, tex: {above: 4, ring: 4.0, leaf: 5.0, rim_v: 0.5, rim_u: 0.8, cap_v: 0.45, cap_u: 0.5}}
+  trunk: {ramp: tree_trunk, bands: [0.3]}
+
+ground_shadow:
+  - {rx: 16, ry: 15, dy: -12, color: shade_light, checker: true}
+  - {rx: 15, ry: 13, dy: -12, color: shade}
+  - {rx: 12.5, ry: 6.5, dy: -2, color: "tree_leaf:1"}
+  - {rx: 11.5, ry: 5.5, dy: -2.5, color: "tree_leaf:0"}
+
+groups:
+  trunk: {k: 0.0}
+  crown: {k: 0.02}
+
+parts:
+  - {name: trunk, group: trunk, mat: trunk, cylinder: {a: [0, 0.05, 0], b: [0, 0.05, 0.15], r1: 0.25, r2: 0.22}}
+  - {name: core, group: crown, mat: leaf, ellipsoid: {c: [0, 0.3, 0.6], r: [0.96, 0.55, 0.55]}}
+
+vanilla: {layout: Route101_Layout, rect: [0, 2, 2, 4], context: [0, 0, 8, 6]}

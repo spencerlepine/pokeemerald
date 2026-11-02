@@ -1,0 +1,12 @@
+# Vanilla Emerald colours, measured from the rendered tilesets (General bank of the route tree, etc.).
+# Used by models/calibration/: the tool must reproduce vanilla art in vanilla colours before it draws
+# anything new. Ramps darkest -> lightest.
+outline: [57, 82, 0]
+shadow: [24, 164, 106, 255]        # tree ground shadow on Hoenn grass (#18a46a)
+ramps:
+  tree_leaf:  [[57, 82, 0], [57, 139, 49], [131, 197, 98], [180, 255, 131]]   # #395200 #398b31 #83c562 #b4ff83
+  tree_trunk: [[65, 57, 49], [106, 90, 90]]                                    # #413931 #6a5a5a
+singles:
+  ground: [115, 197, 164]
+  shade: [24, 164, 106]            # ground shade under trees (#18a46a)
+  shade_light: [65, 180, 131]      # its dithered outer halo (#41b483)

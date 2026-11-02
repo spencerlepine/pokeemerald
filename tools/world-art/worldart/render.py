@@ -108,7 +108,7 @@ def render_instance(obj, inst, yaw):
     r1 = min(int(math.ceil(ay - (lo[1] + lo[2]) * scale)) + 1, H)
     out = np.zeros((H, W), np.int32)
     zdepth = np.full((H, W), np.inf)
-    nz = np.zeros((H, W))
+    nz = np.zeros((H, W, 3))
     if c1 <= c0 or r1 <= r0:
         return out, out > 0, out > 0, zdepth, nz
     w, h = c1 - c0, r1 - r0
@@ -120,7 +120,7 @@ def render_instance(obj, inst, yaw):
     hit, t, p = _raymarch(inst, yaw, us, ws, float(hi[2]) + 0.05)
     idx = np.zeros(len(us), np.int32)
     cut = np.zeros(len(us), bool)
-    nzs = np.zeros(len(us))
+    nzs = np.zeros((len(us), 3))
     if hit.any():
         px = np.floor(cc.ravel()[hit]).astype(int)
         py = np.floor(rr.ravel()[hit]).astype(int)
@@ -134,13 +134,14 @@ def render_instance(obj, inst, yaw):
         hidx[hcut] = 0
         idx[hit] = hidx
         cut[hit] = hcut
-        nzs[hit] = n[:, 2]
+        nzs[hit] = n
         hit = hit & ~cut
     depth = np.where(hit, t, np.inf)
 
     def blocks(a):
         return a.reshape(h, ss, w, ss).transpose(0, 2, 1, 3).reshape(h, w, ss * ss)
-    bi, bd, bc, bn = blocks(idx), blocks(depth), blocks(cut), blocks(nzs)
+    bi, bd, bc = blocks(idx), blocks(depth), blocks(cut)
+    bn = nzs.reshape(h, ss, w, ss, 3).transpose(0, 2, 1, 3, 4).reshape(h, w, ss * ss, 3)
     need = rnd["coverage"] * ss * ss
     holes = np.zeros((H, W), bool)
     holes[r0:r1, c0:c1] = bc.sum(-1) >= need
@@ -148,14 +149,15 @@ def render_instance(obj, inst, yaw):
     filled_n = (bi > 0).sum(-1)
     sub = np.zeros((h, w), np.int32)
     zsub = np.full((h, w), np.inf)
-    nsub = np.zeros((h, w))
+    nsub = np.zeros((h, w, 3))
     for r, c in zip(*np.nonzero(filled_n >= need)):
         b = bi[r, c]
         m = b > 0
         counts = np.bincount(b[m], minlength=npal) * obj.priority
         sub[r, c] = int(np.argmax(counts))
         zsub[r, c] = np.median(bd[r, c][m])
-        nsub[r, c] = np.median(bn[r, c][m])
+        nv = bn[r, c][m].mean(0)
+        nsub[r, c] = nv / (np.linalg.norm(nv) + 1e-9)
 
     filled = sub > 0
     final = sub.copy()
@@ -202,12 +204,13 @@ def shadow_mask(obj):
     return m
 
 
-def apply_textures(obj, canvas, mats_px, nz):
+def apply_textures(obj, canvas, mats_px, normals):
     """STYLE 5: tiny periodic patterns, applied per material on the tone image.
     `scallop`: leaf scallops, 5x4, offset every other row (dark underside line on the lit tones).
     `plank`: a dark line every 4 rows on south faces. `brick`: staggered 8x4 roof tiles."""
     H, W = canvas.shape
     yy, xx = np.mgrid[0:H, 0:W]
+    nz = normals[..., 2]
     out = canvas.copy()
     for name, mat in obj.mats.items():
         tex = mat.get("texture")
@@ -235,6 +238,64 @@ def apply_textures(obj, canvas, mats_px, nz):
             sel = m & (nz > 0.5) & ((yy % 4 == 3) | (((xx + off) % 8) == 7))
         elif tex == "panels":   # durasteel plating: a dark seam on a 16 px grid, on every face
             sel = m & (tone >= 1) & ((xx % 16 == 15) | (yy % 16 == 7))
+        elif tex == "fan":
+            # leaf scales in screen space: rings around a point just above the crown's top centre,
+            # leaves along each ring, alternate rings offset half a leaf, mirrored left/right
+            # (vanilla trees are symmetric: the right half is the left half's tiles flipped)
+            prm = mat.get("tex") or {}
+            ys, xs = np.nonzero(m)
+            cx = (xs.min() + xs.max() + 1) / 2.0
+            top = ys.min()
+            oy = top - float(prm.get("above", 6))
+            dx = np.abs(xx + 0.5 - cx)
+            dy = yy + 0.5 - oy
+            r = np.hypot(dx, dy)
+            ring_px = float(prm.get("ring", 4.0))
+            leaf_px = float(prm.get("leaf", 5.0))
+            ring = np.floor(r / ring_px)
+            v = r / ring_px - ring
+            ang = np.arctan2(dx, dy)                    # 0 straight down, grows toward the sides
+            uu = ang * (ring + 0.5) * ring_px / leaf_px + 0.5 * (ring % 2)
+            u = uu - np.floor(uu)
+            cu = np.abs(u - 0.5) * 2
+            rim = (v > float(prm.get("rim_v", 0.72)) + 0.28 * (1 - cu)) | (cu > float(prm.get("rim_u", 0.9)))
+            rim |= v > 0.97
+            cap = (v < float(prm.get("cap_v", 0.5))) & (cu < float(prm.get("cap_u", 0.6)))
+            lighter = {idx[k]: idx[min(k + 1, len(idx) - 1)] for k in range(len(idx))}
+            capsel = m & cap & ~rim
+            if capsel.any():
+                out[capsel] = np.vectorize(lambda q: lighter.get(int(q), int(q)))(out[capsel])
+            sel = m & rim
+            if sel.any():
+                out[sel] = idx[0]
+            continue
+        elif tex == "scales":
+            # leaf scales (the vanilla Hoenn tree): rings of chevron leaves around the crown's top,
+            # laid out on the normal's sphere angles; each leaf gets a lit cap and a dark lower rim
+            prm = mat.get("tex") or {}
+            dp = float(prm.get("ring", 0.42))           # ring height, radians of polar angle
+            width = float(prm.get("width", 0.55))       # leaf width, radians of arc on the ring
+            nx, ny = normals[..., 0], normals[..., 1]
+            pol = np.arccos(np.clip(nz, -1, 1))
+            az = np.arctan2(nx, -ny)                    # 0 = facing the camera (south)
+            ring = np.floor(pol / dp)
+            v = pol / dp - ring
+            circ = np.maximum(np.sin((ring + 0.5) * dp), 0.25) * 2 * np.pi
+            cnt = np.maximum(np.round(circ / width), 1)
+            uu = az / (2 * np.pi) * cnt + 0.5 * (ring % 2)
+            u = uu - np.floor(uu)
+            cu = np.abs(u - 0.5) * 2                    # 0 centre of the leaf, 1 its side edge
+            rim = (v > 0.78 - 0.35 * cu) | (cu > 0.86)
+            cap = (v < 0.45) & (cu < 0.55)
+            lighter = {idx[k]: idx[min(k + 1, len(idx) - 1)] for k in range(len(idx))}
+            capsel = m & cap & ~rim
+            if capsel.any():
+                out[capsel] = np.vectorize(lambda q: lighter.get(int(q), int(q)))(out[capsel])
+            sel = m & rim
+            if sel.any():
+                out[sel] = idx[0] if prm.get("rim", "darkest") == "darkest" else \
+                    np.vectorize(lambda q: darker.get(int(q), int(q)))(out[sel])
+            continue
         elif tex == "rows":     # thatch, tiles: a dark line every 4 rows on every face
             sel = m & (tone >= 1) & (yy % 4 == 3)
         elif tex == "ridge":    # bark: a dark vertical line every 4 columns on the south face, broken every 6 rows
@@ -256,7 +317,7 @@ def render_object(obj, yaw=0.0):
     W, H = obj.size
     canvas = np.zeros((H, W), np.int32)
     mats_px = np.full((H, W), "", dtype=object)
-    nzc = np.zeros((H, W))
+    nzc = np.zeros((H, W, 3))
     warnings = []
     margin = int(obj.rnd.get("margin", 1))
     order = sorted(range(len(obj.instances)), key=lambda i: (-obj.instances[i].foot[1], obj.instances[i].foot[0]))
@@ -281,8 +342,19 @@ def render_object(obj, yaw=0.0):
     rgb = obj.palette[canvas]
     a = np.where(canvas > 0, 255, 0).astype(np.uint8)
     yy, xx = np.mgrid[0:H, 0:W]
-    sm = shadow_mask(obj) & (canvas == 0) & (((xx + yy) & 1) == 0)
-    canvas[sm] = obj.shadow_idx
-    rgb[sm] = obj.palette[obj.shadow_idx]
-    a[sm] = 255
+    empty = canvas == 0
+    if obj.ground_shadow:
+        fx, fy = obj.instances[0].foot
+        for g in obj.ground_shadow:
+            ring = (((xx + 0.5 - fx - g["dx"]) / g["rx"]) ** 2 + ((yy + 0.5 - fy - g["dy"]) / g["ry"]) ** 2) <= 1.0
+            if g["checker"]:
+                ring &= ((xx + yy) & 1) == 0
+            sel = ring & empty
+            canvas[sel] = g["idx"]
+    else:
+        sm = shadow_mask(obj) & empty & (((xx + yy) & 1) == 0)
+        canvas[sm] = obj.shadow_idx
+    sel = empty & (canvas > 0)
+    rgb[sel] = obj.palette[canvas[sel]]
+    a[sel] = 255
     return Image.fromarray(np.dstack([rgb, a]), "RGBA"), canvas, warnings

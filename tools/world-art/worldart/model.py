@@ -539,7 +539,7 @@ class Object:
         self.mats = {}
         for name, spec in materials.items():
             m = {"priority": float(spec.get("priority", 1.0)), "cutout": spec.get("cutout"),
-                 "dither": bool(spec.get("dither", False)), "texture": spec.get("texture"),
+                 "dither": bool(spec.get("dither", False)), "texture": spec.get("texture"), "tex": spec.get("tex"),
                  "emissive": bool(spec.get("emissive", False))}
             if "ramp" in spec:
                 ramp = spec["ramp"]
@@ -578,6 +578,28 @@ class Object:
                 self.shadow_of[m["idx"][0]] = m["idx"][0]
                 for i in m["idx"][1:]:
                     self.shadow_of[i] = m["idx"][0]
+        # ground shadow rings (`ground_shadow:`), outermost first: {rx, ry, dx, dy, color, checker}
+        # `color` names a single, or `ramp:k` for tone k of a ramp; drawn only where the object is not
+        self.ground_shadow = []
+        for g in raw.get("ground_shadow", []) or []:
+            c = g["color"]
+            if isinstance(c, str) and ":" in c:
+                rname, k = c.split(":")
+                c = lib["ramps"][rname][int(k)]
+            elif isinstance(c, str):
+                c = lib["singles"][c]
+            c = snap(c)
+            if tuple(c) not in colors[1:]:
+                colors.append(tuple(c))
+            self.ground_shadow.append({"rx": float(g["rx"]), "ry": float(g["ry"]), "dx": float(g.get("dx", 0)),
+                                       "dy": float(g.get("dy", 0)), "idx": colors.index(tuple(c), 1),
+                                       "checker": bool(g.get("checker", False))})
+        extra = len(colors) - len(self.palette)
+        if extra:
+            self.palette = np.array(colors, dtype=np.uint8)
+            self.priority = np.concatenate([self.priority, np.ones(extra)])
+            self.shadow_of = np.concatenate([self.shadow_of, np.arange(len(colors) - extra, len(colors))])
+            self.darkest_of = np.concatenate([self.darkest_of, np.arange(len(colors) - extra, len(colors))])
         used = len(colors) - 1
         if used > 15:
             raise ValueError(f"{self.name}: {used} colours, a GBA bank holds 15 (+ transparent)")
