@@ -1,0 +1,91 @@
+# Endor settlements (the Route 119 research station): net-new MUS_RUSTBORO_ENDOR, the Endor split of
+# MUS_RUSTBORO (desert-city). STYLE of "The Magic Tree" (wiki soundtrack:empire-strikes-back:15): an original
+# tune, not a quote. Taken from the cue (analyzer 0-120 s): its pulse (117.5, 118 here), D minor with the cue's
+# Gm/Bb7/Asus4 motion and its tritone-away Ab minor colour, and the swirling woodwind ostinato that makes the
+# forest feel watched; kept in desert-city's family (a busy settlement) by a steady kit groove and a walking
+# wave bass. Tech notes from the vanilla song it splits from (MUS_RUSTBORO): rustboro voicegroup, volume 85, a
+# loop near 63.5 s.
+#   intro  1 bar   kit and the piano ostinato
+#   a      8 bars  flute tune over the ostinato
+#   b      8 bars  75% square lead with the Ab colour
+#   a2     8 bars  the flute tune again, square 25% ostinato and organ
+#   c      8 bars  strings strain over Gm and Bb7, E7 and A7 back to D minor
+# 32-bar loop, 65 s.
+# Brief (sw_subject): Endor version of MUS_RUSTBORO (MUS_DESERT_CITY) for Route 119; same role and mood family as the Tatooine original.
+name: rustboro-endor
+constant: MUS_RUSTBORO_ENDOR
+form: LOOP
+voicegroup: rustboro              # kit 0, squares 1 (25%) 2 (75%), wave 4, piano 10, organ 17, strings 48, flute 73, noise 127
+master_volume: 85
+tempo: 118
+steps_per_beat: 4
+time_signature: [4, 4]
+seed: 20
+
+parts:
+  flute:   {program: 73, channel: 0, volume: 96,  pan: 10,  range: [A4, G5], gate: 0.94, humanize: {vel: 5}}
+  lead:    {program: 2,  channel: 1, volume: 56,  pan: -16, range: [G4, D6], gate: 0.85, mono: true}
+  strings: {program: 48, channel: 2, volume: 86,  pan: -10, range: [D4, G5], gate: 1.0}
+  piano:   {program: 10, channel: 3, volume: 70,  pan: 24,  octave: 4, range: [D4, D5], gate: 0.7, humanize: {vel: 8}}
+  swirl:   {program: 1,  channel: 4, volume: 38,  pan: 30,  octave: 4, range: [D4, D5], gate: 0.6, mono: true}
+  organ:   {program: 17, channel: 5, volume: 54,  pan: -26, octave: 3, range: [A3, A4], gate: 0.94}
+  bass:    {program: 4,  channel: 6, volume: 96,  pan: 0,   octave: 2, range: [D2, D3], gate: 0.7, role: bass}
+  kit:     {program: 0,  channel: 7, volume: 78,  pan: -4, role: drums, kit: {kick: 36, sn: 38, tlo: 41, thi: 45}}
+  hat:     {program: 127, channel: 8, volume: 24, pan: 18, role: drums, kit: {t: A6}}
+
+progressions:
+  intro: "Dm"
+  a:     "Dm | Dm | Gm | Dm | Bb | Gm | Asus4 | A"
+  b:     "Dm | Ab | Dm | Ab | Gm | Bb7 | Asus4 | A"
+  c:     "Gm | Gm | Dm | Dm | Bb7 | Bb7 | E7 | A7"
+
+phrases:
+  tune: |
+    D5:8 F5:4 E5:4 | A4:12 r:4 | Bb4:6 D5:2 G5:4 F5:4 | E5:4 F5:4 D5:8 |
+    F5:6 E5:2 D5:4 Bb4:4 | G5:6 F5:2 Eb5:4 D5:4 | E5:8 D5:4 E5:4 | C#5:12 r:4
+  eerie: |
+    D5:4 F5:4 A5:8 | Ab5:8 Eb5:4 C5:4 | D5:4 F5:4 A5:4 D6:4 | C6:6 Ab5:2 Eb5:8 |
+    D5:6 Bb4:2 G4:8 | Ab4:4 D5:4 F5:4 Ab5:4 | G5:8 E5:8 | C#5:8 E5:8
+  strain: |
+    G4:8 Bb4:4 D5:4 | C5:8 Bb4:4 A4:4 | A4:8 F4:4 D4:4 | D5:12 r:4 |
+    F5:8 D5:4 Bb4:4 | Ab4:8 C5:4 D5:4 | G#4:8 B4:4 D5:4 | C#5:8 E5:4 G5:3 r:1
+  ost: "^1:2 ^3:2 ^2:2 ^3:2 ^1:2 ^3:2 ^2:2 ^4:2"
+  organ: "^3:16"
+  walk: "^1:4 ^1:2 ^2:2 ^3:4 ^2:4"
+
+grooves:
+  forest:
+    kick: "x.....x...x.....|x.....x...x....."
+    sn:   "....x.......x...|....x.......x..."
+    tlo:  "................|..............x."
+    thi:  "........x.......|.............x.."
+  steady:
+    kick: "x.......x.......|x.......x...x..."
+    sn:   "....x.......x...|....x.......x.x."
+  hats: {t: "x.x.x.x.x.x.x.x."}
+  intro_kit: {kick: "x.....x...x.....", tlo: "............x.x.", thi: "...........x.x.."}
+
+sections:
+  intro:
+    bars: 1
+    chords: intro
+    parts: {kit: intro_kit, piano: ost, bass: walk, hat: hats}
+  a:
+    bars: 8
+    chords: a
+    parts: {flute: tune, piano: ost, bass: walk, kit: forest, hat: hats}
+  b:
+    bars: 8
+    chords: b
+    parts: {lead: eerie, piano: ost, bass: walk, kit: steady, hat: hats, organ: organ}
+  a2:
+    bars: 8
+    chords: a
+    parts: {flute: tune, swirl: ost, organ: organ, bass: walk, kit: forest, hat: hats}
+  c:
+    bars: 8
+    chords: c
+    parts: {strings: strain, swirl: ost, organ: organ, bass: walk, kit: steady, hat: hats}
+
+arrangement: [intro, a, b, a2, c]
+loop_start: a
