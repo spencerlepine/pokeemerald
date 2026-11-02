@@ -8,7 +8,7 @@ art_status: pending-final-art
 story: Farm town where the player's father Doran leads the Normal arena. Owen Lars and Luke live in the homestead on the west side. A market square sits at the crossroads.
 notes: 'mos-entha (town, 38x32): farm town with the first gym (Normal, Doran) and the Lars homestead on the west. Market square at the crossroads with stalls · bordered
   by farm plots · need: market stalls with awnings, the homestead''s sunken courtyard (sunken kit now covers it).'
-pos: [-84, 87]
+pos: [-84, 86]
 grid: |
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT

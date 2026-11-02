@@ -17,14 +17,14 @@ grid: |
   TTTTTTTTTTTTTTTTTTTT..:::TTTTTTTTTTTTTTTTTTTTTTT
   TTTTTTTTTTTTTTTTT.....:::...........TTTTTTTTTTTT
   TTTTTTTTTTTTTTTT......:::.............TTTTTTTTTT
-  TTTTTTTTTTTTTTT.......::::::::::::::::::::::::::
-  TTTTTTTTTTTTTT........::::::::::::::::::::::::::
+  TTTTTTTTTTTTTTT.......::::::::::::::::::::::::TT
+  TTTTTTTTTTTTTT........::::::::::::::::::::::::TT
   TTTTTTTTTTTT..........:::................TTTTTTT
   TTTTTTTT..............:::................TTTTTTT
   TTTTTTTT..............:::.................TTTTTT
   TTTTTTTT..............:::.................TTTTTT
-  TTTTTTT...............:::.................TTTTTT
-  TTTTTT................:::.................TTTTTT
+  TTTTTTT...............:::.................::::::
+  TTTTTT................:::.................::::::
   TTTTT.................:::.................TTTTTT
   TTTT..................:::..................TTTTT
   TTTT........:.........:::..................TTTTT
@@ -81,7 +81,7 @@ exits:
   cells: [23, 24]
   to: route-104
 - edge: east
-  cells: [6, 7]
+  cells: [12, 13]
   to: route-116
 buildings:
 - name: House Organa office tower
@@ -237,4 +237,5 @@ signs:
 - name: Organa tower sign
   at: [17, 16]
 warps: []
-todo: [The fountain is a placeholder prop; it needs its own concept row., Two flats buildings keep vanilla's two apartment interiors.]
+todo: [The fountain is a placeholder prop; it needs its own concept row., Two flats buildings keep vanilla's two apartment interiors., East gate to Route 116 moved
+    down to rows 12-13 so Route 116 clears Route 115 on the planet map.]
