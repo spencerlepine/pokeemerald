@@ -1,6 +1,6 @@
 # music-generator
 
-**Status:** DONE. Approved by the owner on 2026-11-01. One song installed: `MUS_INTRO_CRAWL` (the opening crawl theme). Every song in `../../wiki/database/music.csv` is still
+**Status:** DONE. Approved by the owner on 2026-11-01. Installed: `MUS_INTRO_CRAWL` (the opening crawl theme), and `MUS_INTRO` (the boot cutscene, scored to picture; with the owner for review). Every song in `../../wiki/database/music.csv` is still
 `rewrite_status` TODO; composing them is a separate pass that uses this tool.
 
 Turns a song model (`song-schemas/<name>.yaml`, the z-day ai-music notation) into an Emerald song: a MIDI file
@@ -95,6 +95,30 @@ and every time is a whole number of clocks.
 | `loop` | `false` for a one-shot (no loop markers) |
 | `player` | `BGM` (default) |
 | `parts`, `phrases`, `progressions`, `grooves`, `sections`, `arrangement`, `loop_start` | as in z-day |
+| `cues`, `sync` | scoring to picture (below): the cue sheet, and where each cue lands (`cue: "bar:beat"`) |
+
+Sections can also carry `tempo` (bpm from the section start), `tempo_at` (`[[beats from the start, bpm], ...]`)
+and `programs` (`{part: slot}`: the part's track switches program for the section, as vanilla tracks do).
+
+## Scoring to picture (cutscenes)
+
+A cutscene song has to land on the frames of the animation, so it is written against a cue sheet
+(`cues/<scene>.yaml`: each event's frame, kind `hit` / `section` / `soft`, tolerance, and where the frame comes
+from) and checked three ways:
+
+1. **Measure the scene on the ROM.** `python3 romsync.py --as-is --video` runs the game headless in libmgba
+   (`romcap/romcap.c`: every frame and every audio sample, no real-time audio device to drop samples) and logs,
+   per frame, the scene's counter (`gIntroFrameCounter`) and the BGM player's clock. That gives the cue sheet's
+   `shift`: where the counter and the song's own time line part (the boot intro: clock 0 plays when the counter
+   reads 2, and loading scene 2 costs 3 lag frames on which the picture stands still and the music does not).
+2. **Write the song on that grid.** Change tempo per section so each scene change is a bar line (vanilla
+   `mus_intro` does this 8 times), and place hits on a fine step grid (`steps_per_beat: 12`) at their frame.
+   `python3 cuesync.py check song.yaml` prints every cue with the frame its `sync` position plays on (the exact
+   m4a accumulator, `Song.frame_of`), the notes starting there, and the audio onset strength of the preview
+   against the 2 s around it; it fails on a position off by more than the tolerance or a hit under 3x.
+3. **Verify on the ROM.** `python3 romsync.py song.yaml --video` installs the song in a scratch copy, builds,
+   records, and runs `cuesync.py rom`: the clock the engine was really on at each cue frame, plus the onset check
+   on the ROM recording. `capture.mp4` is the picture with its music at true speed, for the owner.
 
 ### Parts
 
@@ -133,6 +157,7 @@ stay TODO.
 
 | Model | Row | Notes |
 | --- | --- | --- |
+| [`intro-boot.yaml`](song-schemas/intro-boot.yaml) | `audio:MUS_INTRO` (hot-swap; with the owner for review, wiki row still TODO) | Original cue in the Star Wars idiom for the boot cutscene (scenes 1-2, 34.6 s), scored to [`cues/intro-boot.yaml`](cues/intro-boot.yaml): 10 tempo zones, 29 cues (drops, camera rise, shuttle and TIE, twin suns, scene cut, every raider pop and speeder move, the last shot), all within 2 frames on the ROM. 10 tracks (the flute's track is the noise snare in the chase), 5 Direct Sound notes max, 2 KB |
 | [`intro-crawl.yaml`](song-schemas/intro-crawl.yaml) | `net:mus-intro-crawl` (MUS_INTRO_CRAWL, id 610) | ARRANGE of the 1977 main title from the owner's recording of the original crawl (`wiki/music/concept/intro-crawl-1977.mp3`). Starts as the logo recedes on the title screen (`IntroCrawl_StartMusic`), 75 s of fanfare, theme and ending, then a quiet 4-bar loop; the crawl fades it out at about 77 s. 10 tracks, 2 KB |
 
 ## Files
@@ -148,6 +173,9 @@ stay TODO.
 | `generate.py` | command line: render, check, vanilla, voices, survey, install |
 | `analyze_reference.py` | reference cue -> tempo, key, chords, melody draft, sections, loop candidates |
 | `romtest.py` | scratch ROM with the songs installed, recorded from mGBA |
+| `cuesync.py` | scoring to picture: cue sheet vs song positions, note onsets and audio spikes (preview, or a ROM log + recording) |
+| `romsync.py`, `romcap/romcap.c` | the ROM run headless in libmgba: per-frame log (scene counter, BGM clock), exact audio, video -> `out/rom-sync/` |
+| `cues/` | cue sheets: the frames a cutscene song must hit |
 | `reference/vanilla_songs.json` | survey of the 204 vanilla songs |
 | `docs/voicegroups.md` | every voicegroup's slots |
 | `song-schemas/` | song models |
