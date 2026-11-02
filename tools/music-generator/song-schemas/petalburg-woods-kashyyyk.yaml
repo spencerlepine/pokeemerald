@@ -1,0 +1,77 @@
+# Petalburg Woods, Kashyyyk: net-new per-planet split of MUS_PETALBURG_WOODS (wiki row
+# net:mus-petalburg-woods-kashyyyk), for the Shadowlands under the wroshyr trees. SCRATCH: no film cue, written
+# from the brief. The Tatooine original is tense and echoing; Kashyyyk's dark lower forest gets the same tension
+# on a rolling triplet pulse (12 steps a bar): D minor stepping down D-C-Bb-A, congas and toms like Wookiee
+# drums, a pizzicato ostinato, a flute that climbs from a into b, and a 50 % square giving low horn-like Wookiee
+# calls over the drums in c. 24 bars at 130 = 44.3 s, vanilla tempo and voicegroup.
+# Brief (sw_subject): Kashyyyk version of MUS_PETALBURG_WOODS, same role and mood family; theme to be decided.
+name: petalburg-woods-kashyyyk
+constant: MUS_PETALBURG_WOODS_KASHYYYK
+form: AMBIENT
+voicegroup: petalburg_woods       # vanilla's own: pizz 45, strings 48, flute 73, squares 5/82, wave 81, kit 0
+master_volume: 80
+tempo: 130
+steps_per_beat: 3                 # triplet grid: a rolling 12/8 feel inside 4/4
+time_signature: [4, 4]
+seed: 17
+
+parts:
+  flute:   {program: 73, channel: 0, volume: 92,  pan: 10,  gate: 0.94, lfo_speed: 26, lfo_delay: 20, mod: 5, humanize: {vel: 5}}
+  pizz:    {program: 45, channel: 1, volume: 80,  pan: -18, octave: 3, gate: 0.8, humanize: {vel: 8}}
+  strings: {program: 48, channel: 2, volume: 58,  pan: 24,  octave: 3, gate: 1.0}
+  drums:   {program: 0,  channel: 3, volume: 70,  pan: 8,   role: drums, kit: {lo: 64, hi: 62, tom: 41, tomh: 45}}
+  bass:    {program: 81, channel: 4, volume: 84,  pan: 0,   octave: 2, role: bass, gate: 0.85}
+  call:    {program: 82, channel: 5, volume: 44,  pan: -30, gate: 0.92, mono: true}
+  glint:   {program: 5,  channel: 6, volume: 28,  pan: 34,  octave: 5, gate: 0.4, mono: true}
+
+progressions:
+  intro: "Dm | A"
+  a: "Dm | Dm | C | C | Bb | Bb | A | A"
+  b: "Gm | Dm | Gm | A | Bb | C | Dm | A"
+  c: "Dm | C | Bb | A | Dm | C | Bb | A"
+
+phrases:
+  ost: "^1:3 ^1:3 ^3:3 ^2:3"
+  pad: "^1:12"
+  root: "^1:6 ^1:3 ^1:3"
+  glints: "r:7 ^3:1 r:4 | r:12"
+  flute_a: |
+    D5:6 F5:3 E5:3 | D5:9 A4:3 | C5:6 E5:3 D5:3 | C5:9 G4:3 |
+    Bb4:6 D5:3 F5:3 | F5:6 D5:3 Bb4:3 | C#5:12 | E5:6 C#5:3 A4:3
+  flute_b: |
+    G5:6 Bb5:3 A5:3 | F5:9 D5:3 | G5:6 F5:3 D5:3 | E5:9 C#5:3 |
+    D5:6 F5:3 Bb5:3 | A5:6 G5:3 E5:3 | F5:6 E5:3 D5:3 | C#5:6 E5:6
+  call_c: "D4:6 A4:6 | r:12 | Bb3:6 F4:6 | r:12 | D4:6 A4:6 | r:12 | Bb3:6 F4:6 | C#4:12"
+
+grooves:
+  forest: {lo: "x.....x.....", hi: "...o.o...o.o|...o.o...o.x"}
+  intro_beat: {lo: "x.....x.....", hi: ".........o.o"}
+  wookiee:
+    lo: "x.....x.....|x.....x....."
+    hi: "...o.o...o.o|...o.o......"
+    tom: "............|.........x.."
+    tomh: "............|......x....."
+  roll: {lo: "x...........", hi: "...o.o......", tomh: "......x..o.."}
+
+sections:
+  intro:
+    bars: 2
+    chords: intro
+    ramp: {drums: [-20, 0]}
+    parts: {drums: intro_beat, bass: root, strings: pad}
+  a:
+    bars: 8
+    chords: a
+    parts: {flute: flute_a, pizz: ost, strings: pad, drums: forest, bass: root}
+  b:
+    bars: 8
+    chords: b
+    parts: {flute: flute_b, pizz: ost, strings: pad, drums: forest, bass: root, glint: glints}
+  c:
+    bars: 8
+    chords: c
+    fill: roll
+    parts: {flute: "r:12 | r:12 | r:12 | r:12 | r:12 | r:12 | r:12 | r:6 A4:3 C#5:3", call: call_c, pizz: ost, strings: pad, drums: wookiee, bass: root}
+
+arrangement: [intro, a, b, c]
+loop_start: a
