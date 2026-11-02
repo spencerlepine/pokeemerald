@@ -1,7 +1,7 @@
 # greybox: world pieces as simple 3D models, rendered to pixels
 
 Status: **READY** for buildings and structures (the owner approved the kit categories on 2026-11-02). Terrain
-in relief works. Interiors: `room` draws the room shell and the `interiors` kit has the first props (in review).
+in relief works. Interiors: `room` draws the room shell and the `interiors` kit has 19 props (owner approved the first set).
 Caves, sea, raised walkways, floating platforms, lava, swamp and ships have no model yet; they stay
 `pending-mockup` in the wiki until a model exists.
 

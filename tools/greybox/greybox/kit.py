@@ -1019,6 +1019,106 @@ def r_shelf(m):
               S.box(m.W / 2 - 0.5, y0 - 1, z, m.W / 2 + 0.5, y1 + 1, z + step - 2, p["dark"], subtract=True))
 
 
+
+def r_pods(m):
+    """Growth pods: two to four capped glass cylinders on a trough."""
+    p = palette(m)
+    y0, y1, hz = _floor(m, 14)
+    m.add(S.box(0, y0, 0, m.W, y1, 3, p["trim"], p["dark"]))
+    n = max(2, min(4, m.W // 36))
+    a = min(7, (y1 - y0) / (2 * K) - 0.5, m.W / (2 * n) - 2)
+    cy = (y0 + y1) / 2
+    for i in range(n):
+        cx = m.W * (i + 0.5) / n
+        m.add(S.cylinder(cx, cy, a, 0, 3, hz - 2, p["glass"], p["glass"]),
+              S.cylinder(cx, cy, a, 0, hz - 2, hz, p["wall"], p["roof"]))
+
+
+def r_carbonite(m):
+    """Carbonite block: a dark slab standing upright, a frame and a control strip at the foot."""
+    p = palette(m)
+    y0, y1, hz = _floor(m, 24)
+    m.add(S.box(1, y1 - 4, 0, m.W - 1, y1, hz, p["dark"], p["trim"]),
+          S.box(2, y1 - 4.5, 3, m.W - 2, y1 - 3, hz - 3, p["trim"], subtract=True),
+          S.box(0, y0, 0, m.W, y1 - 4, 3, p["wall"], p["light"]))
+
+
+def r_throne(m):
+    """Throne: a block seat with a tall back and two arm posts."""
+    p = palette(m)
+    y0, y1, hz = _floor(m, 16)
+    m.add(S.box(2, y0, 0, m.W - 2, y1, 6, p["wall"], p["roof"]),
+          S.box(2, y1 - 3, 6, m.W - 2, y1, hz, p["trim"], p["roof"]),
+          S.box(0, y0, 0, 2, y1, 9, p["trim"], p["dark"]), S.box(m.W - 2, y0, 0, m.W, y1, 9, p["trim"], p["dark"]))
+
+
+def r_dais(m):
+    """Dais: two steps up to a platform with a back wall; the seat is a separate throne."""
+    p = palette(m)
+    y0, y1, hz = _floor(m, 16)
+    m.add(S.box(0, y0, 0, m.W, y1, 3, p["roof"], p["wall"]),
+          S.box(4, y0 + 4, 3, m.W - 4, y1, 6, p["wall"], p["roof"]),
+          S.box(4, y1 - 3, 6, m.W - 4, y1, hz, p["trim"], p["dark"]))
+
+
+def r_blastdoor(m):
+    """Blast door: a thick frame with two door leaves and a dark seam, a light over it."""
+    p = palette(m)
+    y0, y1, hz = _floor(m, 20)
+    m.add(S.box(0, y1 - 4, 0, m.W, y1, hz, p["trim"], p["dark"]),
+          S.box(2, y1 - 5, 0, m.W / 2 - 0.5, y1 - 4, hz - 4, p["wall"], p["dark"]),
+          S.box(m.W / 2 + 0.5, y1 - 5, 0, m.W - 2, y1 - 4, hz - 4, p["wall"], p["dark"]),
+          S.box(m.W / 2 - 2, y1 - 5, hz - 3, m.W / 2 + 2, y1 - 4, hz - 1, p["light"]))
+
+
+def r_heater(m):
+    """Heater: a short drum with a glowing vent."""
+    p = palette(m)
+    y0, y1, hz = _floor(m, 9)
+    a = min(m.W / 2 - 1, (y1 - y0) / (2 * K))
+    cx, cy = m.W / 2, (y0 + y1) / 2
+    m.add(S.cylinder(cx, cy, a, 0, 0, hz, p["trim"], p["dark"]),
+          S.box(cx - 2, y0 - 1, 2, cx + 2, cy, hz - 3, p["light"], subtract=True))
+
+
+def r_chest(m):
+    """Old chest: a box with a lid lip and a clasp."""
+    p = palette(m)
+    y0, y1, hz = _floor(m, 8)
+    m.add(S.box(1, y0, 0, m.W - 1, y1, hz - 2, p["wall"], p["roof"]),
+          S.box(0, y0 - 0.5, hz - 3, m.W, y1, hz, p["trim"], p["roof"]),
+          S.box(m.W / 2 - 1, y0 - 1, hz - 5, m.W / 2 + 1, y0 + 1, hz - 3, p["dark"]))
+
+
+def r_viewport(m):
+    """Viewport: a wide window in the back wall, framed, glass full height."""
+    p = palette(m)
+    y0, y1, hz = _floor(m, 20)
+    m.add(S.box(0, y1 - 3, 0, m.W, y1, hz, p["trim"], p["dark"]),
+          S.box(2, y1 - 3.5, 3, m.W - 2, y1 - 1, hz - 2, p["glass"], subtract=True))
+
+
+def r_stage(m):
+    """Band stage: a low platform with a back screen and footlights."""
+    p = palette(m)
+    y0, y1, hz = _floor(m, 12)
+    m.add(S.box(0, y0, 0, m.W, y1, 4, p["wall"], p["roof"]),
+          S.box(0, y1 - 2, 4, m.W, y1, hz, p["trim"], p["dark"]))
+    for i in range(3):
+        x = m.W * (i + 1) / 4
+        m.add(S.box(x - 1.5, y0, 4, x + 1.5, y0 + 2, 5, p["light"]))
+
+
+def r_grate(m):
+    """Trapdoor grate: a dark opening in the floor under a barred cover."""
+    p = palette(m)
+    y0, y1, hz = _floor(m, 2)
+    m.add(S.box(0, y0, 0, m.W, y1, 1, p["trim"], p["dark"]))
+    for i in range(1, 4):
+        x = m.W * i / 4
+        m.add(S.box(x - 0.5, y0, 1, x + 0.5, y1, 1.5, p["trim"]))
+    m.add(S.box(0, y0, 1, m.W, y0 + 0.5, 1.5, p["trim"]), S.box(0, y1 - 0.5, 1, m.W, y1, 1.5, p["trim"]))
+
 INTERIORS = {
     "r-block": (r_block, [(2, 1), (3, 2)]),
     "r-counter": (r_counter, [(4, 2), (6, 2)]),
@@ -1029,6 +1129,16 @@ INTERIORS = {
     "r-table": (r_table, [(2, 2)]),
     "r-tank": (r_tank, [(1, 2)]),
     "r-shelf": (r_shelf, [(3, 1), (5, 1)]),
+    "r-pods": (r_pods, [(4, 2), (9, 2)]),
+    "r-carbonite": (r_carbonite, [(1, 2)]),
+    "r-throne": (r_throne, [(2, 2)]),
+    "r-dais": (r_dais, [(6, 3)]),
+    "r-blastdoor": (r_blastdoor, [(3, 2)]),
+    "r-heater": (r_heater, [(1, 1)]),
+    "r-chest": (r_chest, [(2, 1)]),
+    "r-viewport": (r_viewport, [(3, 3)]),
+    "r-stage": (r_stage, [(4, 2)]),
+    "r-grate": (r_grate, [(4, 2)]),
 }
 
 # Categories whose kit sheet shows the game's sign in front of each piece.

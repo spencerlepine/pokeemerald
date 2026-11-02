@@ -403,8 +403,8 @@ hutt-hideout-b2f,BESPIN,interior,AquaHideout_B2F,BLOCKOUT,warp,Door,1x1,,,PLACEH
 hutt-hideout-b2f,BESPIN,interior,AquaHideout_B2F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 hutt-hideout-b2f,BESPIN,interior,AquaHideout_B2F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 tibanna-refinery-annex,BESPIN,interior,new,BLOCKOUT,area,Carbon-freezing annex,18x14,,,pending-mockup,greybox room
-tibanna-refinery-annex,BESPIN,interior,new,BLOCKOUT,prop,Carbon-freezing pit,6x4,art:bespin:carbon-freezing-chamber,yes,pending-mockup,
-tibanna-refinery-annex,BESPIN,interior,new,BLOCKOUT,prop,Frozen block,1x2,art:new:carbonite-block,yes,pending-mockup,
+tibanna-refinery-annex,BESPIN,interior,new,BLOCKOUT,prop,Carbon-freezing pit,6x4,art:bespin:carbon-freezing-chamber,yes,pending-mockup,greybox room
+tibanna-refinery-annex,BESPIN,interior,new,BLOCKOUT,prop,Frozen block,1x2,art:new:carbonite-block,yes,pending-final-art,greybox piece
 tibanna-refinery-annex,BESPIN,interior,new,BLOCKOUT,person,Ugnaught foreman,1x1,,,PLACEHOLDER,
 tibanna-refinery-annex,BESPIN,interior,new,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 tibanna-refinery-interior,BESPIN,interior,new,BLOCKOUT,area,Tibanna refinery,20x14,,,pending-mockup,greybox room
@@ -885,7 +885,7 @@ bright-tree-supply-depot,ENDOR,interior,FortreeCity_Mart,BLOCKOUT,warp,Door,1x1,
 bright-tree-supply-depot,ENDOR,interior,FortreeCity_Mart,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 endor-battlefield-bunker,ENDOR,interior,new,BLOCKOUT,area,Abandoned shield bunker,20x14,,,pending-mockup,greybox room
 endor-battlefield-bunker,ENDOR,interior,new,BLOCKOUT,prop,Dead consoles,8x2,art:new:control-console,yes,pending-final-art,greybox piece
-endor-battlefield-bunker,ENDOR,interior,new,BLOCKOUT,prop,Blast door (locked),3x2,art:new:blast-door,yes,pending-mockup,
+endor-battlefield-bunker,ENDOR,interior,new,BLOCKOUT,prop,Blast door (locked),3x2,art:new:blast-door,yes,pending-final-art,greybox piece
 endor-battlefield-bunker,ENDOR,interior,new,BLOCKOUT,person,Stormtrooper straggler,1x1,,,PLACEHOLDER,
 endor-battlefield-bunker,ENDOR,interior,new,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 route-119-endor-station-1f,ENDOR,interior,Route119_WeatherInstitute_1F,BLOCKOUT,area,ROUTE 119 ENDOR STATION 1F,20x13,,,pending-mockup,greybox room
@@ -1849,7 +1849,7 @@ hoth-hangar,HOTH,interior,new,BLOCKOUT,person,Pilot,1x1,,,PLACEHOLDER,
 hoth-hangar,HOTH,interior,new,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 hoth-survey-outpost,HOTH,interior,new,BLOCKOUT,area,Rebel survey outpost,20x14,,,pending-mockup,greybox room
 hoth-survey-outpost,HOTH,interior,new,BLOCKOUT,prop,Scanner table,5x2,art:new:scanner-table,yes,pending-final-art,greybox piece
-hoth-survey-outpost,HOTH,interior,new,BLOCKOUT,prop,Heater,1x1,art:new:heater,yes,pending-mockup,
+hoth-survey-outpost,HOTH,interior,new,BLOCKOUT,prop,Heater,1x1,art:new:heater,yes,pending-final-art,greybox piece
 hoth-survey-outpost,HOTH,interior,new,BLOCKOUT,prop,Bunks,3x3,art:new:bunks,yes,pending-final-art,greybox piece
 hoth-survey-outpost,HOTH,interior,new,BLOCKOUT,person,Rebel surveyor,1x1,,,PLACEHOLDER,
 hoth-survey-outpost,HOTH,interior,new,BLOCKOUT,person,Rebel technician,1x1,,,PLACEHOLDER,
@@ -2004,7 +2004,7 @@ ilum-sidneys-room,ILUM,interior,EverGrandeCity_SidneysRoom,BLOCKOUT,person,Sidne
 ilum-sidneys-room,ILUM,interior,EverGrandeCity_SidneysRoom,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 ilum-sidneys-room,ILUM,interior,EverGrandeCity_SidneysRoom,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 ilum-supply-depot,ILUM,interior,new,BLOCKOUT,area,Supply Depot,14x10,,,pending-mockup,greybox room
-ilum-supply-depot,ILUM,interior,new,BLOCKOUT,prop,Counter,4x1,art:shared:supply-depot-interior,yes,pending-mockup,
+ilum-supply-depot,ILUM,interior,new,BLOCKOUT,prop,Counter,4x1,art:shared:supply-depot-interior,yes,pending-mockup,greybox room
 ilum-supply-depot,ILUM,interior,new,BLOCKOUT,person,Clerk,1x1,,,PLACEHOLDER,
 ilum-supply-depot,ILUM,interior,new,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 ilum-temple-1f,ILUM,interior,EverGrandeCity_PokemonLeague_1F,BLOCKOUT,area,ILUM TEMPLE 1F,19x12,,,pending-mockup,greybox room
@@ -2082,7 +2082,7 @@ jedha-temple-6f,JEDHA,interior,MtPyre_6F,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER,
 jedha-temple-6f,JEDHA,interior,MtPyre_6F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 jedha-temple-6f,JEDHA,interior,MtPyre_6F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 nijedha-bacta-center,JEDHA,interior,new,BLOCKOUT,area,NiJedha Bacta Center,14x10,,,pending-mockup,greybox room
-nijedha-bacta-center,JEDHA,interior,new,BLOCKOUT,prop,Bacta counter,6x1,art:shared:bacta-center-interior,yes,pending-mockup,
+nijedha-bacta-center,JEDHA,interior,new,BLOCKOUT,prop,Bacta counter,6x1,art:shared:bacta-center-interior,yes,pending-mockup,greybox room
 nijedha-bacta-center,JEDHA,interior,new,BLOCKOUT,person,Medic droid,1x1,,,PLACEHOLDER,
 nijedha-bacta-center,JEDHA,interior,new,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 nijedha-guardians-quarters,JEDHA,interior,new,BLOCKOUT,area,Guardians' quarters,14x10,,,pending-mockup,greybox room
@@ -2093,7 +2093,7 @@ nijedha-hostel,JEDHA,interior,new,BLOCKOUT,person,Pilgrim,1x1,,,PLACEHOLDER,
 nijedha-hostel,JEDHA,interior,new,BLOCKOUT,person,Innkeeper,1x1,,,PLACEHOLDER,
 nijedha-hostel,JEDHA,interior,new,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 nijedha-supply-depot,JEDHA,interior,new,BLOCKOUT,area,Supply Depot,14x10,,,pending-mockup,greybox room
-nijedha-supply-depot,JEDHA,interior,new,BLOCKOUT,prop,Counter,4x1,art:shared:supply-depot-interior,yes,pending-mockup,
+nijedha-supply-depot,JEDHA,interior,new,BLOCKOUT,prop,Counter,4x1,art:shared:supply-depot-interior,yes,pending-mockup,greybox room
 nijedha-supply-depot,JEDHA,interior,new,BLOCKOUT,person,Clerk,1x1,,,PLACEHOLDER,
 nijedha-supply-depot,JEDHA,interior,new,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 nijedha-temple-of-the-kyber,JEDHA,interior,new,BLOCKOUT,area,Temple of the Kyber,18x12,,,pending-mockup,greybox room
@@ -2205,11 +2205,11 @@ tipoca-city-bacta-center-2f,KAMINO,interior,PacifidlogTown_PokemonCenter_2F,BLOC
 tipoca-city-bacta-center-2f,KAMINO,interior,PacifidlogTown_PokemonCenter_2F,BLOCKOUT,person,Mystery Gift Man,1x1,,,PLACEHOLDER,
 tipoca-city-bacta-center-2f,KAMINO,interior,PacifidlogTown_PokemonCenter_2F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 tipoca-city-cloning-hall,KAMINO,interior,new,BLOCKOUT,area,Tipoca cloning hall,26x16,,,pending-mockup,greybox room
-tipoca-city-cloning-hall,KAMINO,interior,new,BLOCKOUT,prop,Growth pods,9x2,art:new:growth-pods,yes,pending-mockup,
-tipoca-city-cloning-hall,KAMINO,interior,new,BLOCKOUT,prop,Growth pods,9x2,art:new:growth-pods,yes,pending-mockup,
-tipoca-city-cloning-hall,KAMINO,interior,new,BLOCKOUT,prop,Growth pods,8x2,art:new:growth-pods,yes,pending-mockup,
-tipoca-city-cloning-hall,KAMINO,interior,new,BLOCKOUT,prop,Growth pods,8x2,art:new:growth-pods,yes,pending-mockup,
-tipoca-city-cloning-hall,KAMINO,interior,new,BLOCKOUT,prop,Sealed lab door,2x1,art:new:blast-door,yes,pending-mockup,
+tipoca-city-cloning-hall,KAMINO,interior,new,BLOCKOUT,prop,Growth pods,9x2,art:new:growth-pods,yes,pending-final-art,greybox piece
+tipoca-city-cloning-hall,KAMINO,interior,new,BLOCKOUT,prop,Growth pods,9x2,art:new:growth-pods,yes,pending-final-art,greybox piece
+tipoca-city-cloning-hall,KAMINO,interior,new,BLOCKOUT,prop,Growth pods,8x2,art:new:growth-pods,yes,pending-final-art,greybox piece
+tipoca-city-cloning-hall,KAMINO,interior,new,BLOCKOUT,prop,Growth pods,8x2,art:new:growth-pods,yes,pending-final-art,greybox piece
+tipoca-city-cloning-hall,KAMINO,interior,new,BLOCKOUT,prop,Sealed lab door,2x1,art:new:blast-door,yes,pending-final-art,greybox piece
 tipoca-city-cloning-hall,KAMINO,interior,new,BLOCKOUT,person,Kaminoan scientist,1x1,,,PLACEHOLDER,
 tipoca-city-cloning-hall,KAMINO,interior,new,BLOCKOUT,person,Clone cadet,1x1,,,PLACEHOLDER,
 tipoca-city-cloning-hall,KAMINO,interior,new,BLOCKOUT,person,Clone cadet,1x1,,,PLACEHOLDER,
@@ -2248,7 +2248,7 @@ tipoca-city-house-5,KAMINO,interior,PacifidlogTown_House5,BLOCKOUT,person,Gentle
 tipoca-city-house-5,KAMINO,interior,PacifidlogTown_House5,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 tipoca-city-house-5,KAMINO,interior,PacifidlogTown_House5,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 tipoca-city-supply-depot,KAMINO,interior,new,BLOCKOUT,area,Supply Depot,14x10,,,pending-mockup,greybox room
-tipoca-city-supply-depot,KAMINO,interior,new,BLOCKOUT,prop,Counter,4x1,art:shared:supply-depot-interior,yes,pending-mockup,
+tipoca-city-supply-depot,KAMINO,interior,new,BLOCKOUT,prop,Counter,4x1,art:shared:supply-depot-interior,yes,pending-mockup,greybox room
 tipoca-city-supply-depot,KAMINO,interior,new,BLOCKOUT,person,Clerk,1x1,,,PLACEHOLDER,
 tipoca-city-supply-depot,KAMINO,interior,new,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 route-131,KAMINO,route,Route131,BLOCKOUT,area,ROUTE 131,60x40,,,pending-mockup,greybox terrain
@@ -2296,7 +2296,7 @@ route-134,KAMINO,route,Route134,BLOCKOUT,person,Trainer Hual,1x1,,,PLACEHOLDER,
 route-134,KAMINO,route,Route134,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER,
 route-134,KAMINO,route,Route134,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER,
 tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,area,TIPOCA CITY,50x36,,,pending-mockup,greybox terrain
-tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,building,Cloning hall,12x6,art:kamino:cloning-hall,yes,pending-mockup,
+tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,building,Cloning hall,12x6,art:kamino:cloning-hall,yes,pending-mockup,greybox room
 tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,building,Landing platform (ships),6x4,art:shared:landing-pad,yes,pending-final-art,greybox piece
 tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,building,Kaminoan dwelling,5x4,art:kamino:stilt-dome,yes,pending-final-art,greybox piece
 tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,building,Bacta Center,5x4,art:shared:bacta-center,yes,pending-final-art,greybox piece
@@ -2524,7 +2524,7 @@ kachirho-house-2,KASHYYYK,interior,DewfordTown_House2,BLOCKOUT,person,Boy,1x1,,,
 kachirho-house-2,KASHYYYK,interior,DewfordTown_House2,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 kachirho-house-2,KASHYYYK,interior,DewfordTown_House2,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 kachirho-supply-depot,KASHYYYK,interior,new,BLOCKOUT,area,Kachirho supply depot,14x10,,,pending-mockup,greybox room
-kachirho-supply-depot,KASHYYYK,interior,new,BLOCKOUT,prop,Counter,4x1,art:shared:supply-depot-interior,yes,pending-mockup,
+kachirho-supply-depot,KASHYYYK,interior,new,BLOCKOUT,prop,Counter,4x1,art:shared:supply-depot-interior,yes,pending-mockup,greybox room
 kachirho-supply-depot,KASHYYYK,interior,new,BLOCKOUT,person,Wookiee clerk,1x1,,,PLACEHOLDER,
 kachirho-supply-depot,KASHYYYK,interior,new,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 route-109-seashore-house,KASHYYYK,interior,Route109_SeashoreHouse,BLOCKOUT,area,ROUTE 109 SEASHORE HOUSE,15x10,,,pending-mockup,greybox room
@@ -2535,7 +2535,7 @@ route-109-seashore-house,KASHYYYK,interior,Route109_SeashoreHouse,BLOCKOUT,perso
 route-109-seashore-house,KASHYYYK,interior,Route109_SeashoreHouse,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 route-109-seashore-house,KASHYYYK,interior,Route109_SeashoreHouse,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 rwookrrorro-chief-hut,KASHYYYK,interior,new,BLOCKOUT,area,Rwookrrorro chief's hut,16x12,,,pending-mockup,greybox room
-rwookrrorro-chief-hut,KASHYYYK,interior,new,BLOCKOUT,prop,Carved throne,2x2,art:new:wookiee-throne,yes,pending-mockup,
+rwookrrorro-chief-hut,KASHYYYK,interior,new,BLOCKOUT,prop,Carved throne,2x2,art:new:wookiee-throne,yes,pending-final-art,greybox piece
 rwookrrorro-chief-hut,KASHYYYK,interior,new,BLOCKOUT,person,Village chief,1x1,,,PLACEHOLDER,
 rwookrrorro-chief-hut,KASHYYYK,interior,new,BLOCKOUT,person,Wookiee elder,1x1,,,PLACEHOLDER,
 rwookrrorro-chief-hut,KASHYYYK,interior,new,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
@@ -2804,7 +2804,7 @@ fortress-vader-4f,MUSTAFAR,dungeon,MagmaHideout_4F,BLOCKOUT,warp,Door,1x1,,,PLAC
 fortress-vader-4f,MUSTAFAR,dungeon,MagmaHideout_4F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 mustafar-mining-control,MUSTAFAR,interior,new,BLOCKOUT,area,Mustafar mining control,20x14,,,pending-mockup,greybox room
 mustafar-mining-control,MUSTAFAR,interior,new,BLOCKOUT,prop,Control consoles,12x2,art:new:control-console,yes,pending-final-art,greybox piece
-mustafar-mining-control,MUSTAFAR,interior,new,BLOCKOUT,prop,Lava viewport,3x3,art:new:lava-viewport,yes,pending-mockup,
+mustafar-mining-control,MUSTAFAR,interior,new,BLOCKOUT,prop,Lava viewport,3x3,art:new:lava-viewport,yes,pending-final-art,greybox piece
 mustafar-mining-control,MUSTAFAR,interior,new,BLOCKOUT,person,Imperial overseer,1x1,,,PLACEHOLDER,
 mustafar-mining-control,MUSTAFAR,interior,new,BLOCKOUT,person,Mining droid,1x1,,,PLACEHOLDER,
 mustafar-mining-control,MUSTAFAR,interior,new,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
@@ -2814,7 +2814,7 @@ mustafar-peak-shuttle-station,MUSTAFAR,interior,MtChimney_CableCarStation,BLOCKO
 mustafar-peak-shuttle-station,MUSTAFAR,interior,MtChimney_CableCarStation,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 mustafar-peak-shuttle-station,MUSTAFAR,interior,MtChimney_CableCarStation,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 mustafar-mining-facility,MUSTAFAR,landmark,new,BLOCKOUT,area,MINING FACILITY,40x30,,,pending-mockup,greybox terrain
-mustafar-mining-facility,MUSTAFAR,landmark,new,BLOCKOUT,building,Separatist control center,8x5,art:mustafar:fortress-halls,yes,pending-mockup,
+mustafar-mining-facility,MUSTAFAR,landmark,new,BLOCKOUT,building,Separatist control center,8x5,art:mustafar:fortress-halls,yes,pending-mockup,greybox room
 mustafar-mining-facility,MUSTAFAR,landmark,new,BLOCKOUT,prop,Mining collector,3x4,art:mustafar:mining-collector,yes,pending-mockup,
 mustafar-mining-facility,MUSTAFAR,landmark,new,BLOCKOUT,prop,Mining collector,3x4,art:mustafar:mining-collector,yes,pending-mockup,
 mustafar-mining-facility,MUSTAFAR,landmark,new,BLOCKOUT,prop,Obsidian spire,2x3,art:mustafar:obsidian-spire,yes,pending-mockup,
@@ -3495,7 +3495,7 @@ anchorhead-wandas-house,TATOOINE,interior,VerdanturfTown_WandasHouse,BLOCKOUT,pe
 anchorhead-wandas-house,TATOOINE,interior,VerdanturfTown_WandasHouse,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 anchorhead-wandas-house,TATOOINE,interior,VerdanturfTown_WandasHouse,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 bens-hut-interior,TATOOINE,interior,new,BLOCKOUT,area,Ben's hut,14x10,,,pending-mockup,greybox room
-bens-hut-interior,TATOOINE,interior,new,BLOCKOUT,prop,Old chest,2x1,art:new:old-chest,yes,pending-mockup,
+bens-hut-interior,TATOOINE,interior,new,BLOCKOUT,prop,Old chest,2x1,art:new:old-chest,yes,pending-final-art,greybox piece
 bens-hut-interior,TATOOINE,interior,new,BLOCKOUT,prop,Work bench,3x1,art:new:work-bench,yes,pending-final-art,greybox piece
 bens-hut-interior,TATOOINE,interior,new,BLOCKOUT,person,Obi-Wan (Ben),1x1,,,PLACEHOLDER,
 bens-hut-interior,TATOOINE,interior,new,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
@@ -3640,9 +3640,9 @@ jabbas-palace-barge-dock,TATOOINE,interior,new,BLOCKOUT,person,Skiff guard,1x1,,
 jabbas-palace-barge-dock,TATOOINE,interior,new,BLOCKOUT,person,Barge crewman,1x1,,,PLACEHOLDER,
 jabbas-palace-barge-dock,TATOOINE,interior,new,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 jabbas-palace-throne-room,TATOOINE,interior,new,BLOCKOUT,area,Jabba's throne room,26x18,,,pending-mockup,greybox room
-jabbas-palace-throne-room,TATOOINE,interior,new,BLOCKOUT,prop,Jabba's dais,6x3,art:new:jabba-dais,yes,pending-mockup,
-jabbas-palace-throne-room,TATOOINE,interior,new,BLOCKOUT,prop,Rancor trapdoor grate,4x2,art:new:trapdoor-grate,yes,pending-mockup,
-jabbas-palace-throne-room,TATOOINE,interior,new,BLOCKOUT,prop,Band stage,4x2,art:new:band-stage,yes,pending-mockup,
+jabbas-palace-throne-room,TATOOINE,interior,new,BLOCKOUT,prop,Jabba's dais,6x3,art:new:jabba-dais,yes,pending-final-art,greybox piece
+jabbas-palace-throne-room,TATOOINE,interior,new,BLOCKOUT,prop,Rancor trapdoor grate,4x2,art:new:trapdoor-grate,yes,pending-final-art,greybox piece
+jabbas-palace-throne-room,TATOOINE,interior,new,BLOCKOUT,prop,Band stage,4x2,art:new:band-stage,yes,pending-final-art,greybox piece
 jabbas-palace-throne-room,TATOOINE,interior,new,BLOCKOUT,person,Jabba,1x1,,,PLACEHOLDER,
 jabbas-palace-throne-room,TATOOINE,interior,new,BLOCKOUT,person,Bib Fortuna,1x1,,,PLACEHOLDER,
 jabbas-palace-throne-room,TATOOINE,interior,new,BLOCKOUT,person,Gamorrean guard,1x1,,,PLACEHOLDER,
@@ -3680,7 +3680,7 @@ mos-eisley-battle-tent-lobby,TATOOINE,interior,SlateportCity_BattleTentLobby,BLO
 mos-eisley-battle-tent-lobby,TATOOINE,interior,SlateportCity_BattleTentLobby,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 mos-eisley-fan-club,TATOOINE,interior,SlateportCity_PokemonFanClub,BLOCKOUT,area,Mos Eisley Cantina,24x16,,,pending-mockup,greybox room
 mos-eisley-fan-club,TATOOINE,interior,SlateportCity_PokemonFanClub,BLOCKOUT,prop,Round bar,6x4,art:new:cantina-bar,yes,pending-final-art,greybox piece
-mos-eisley-fan-club,TATOOINE,interior,SlateportCity_PokemonFanClub,BLOCKOUT,prop,Band stage,5x2,art:new:band-stage,yes,pending-mockup,
+mos-eisley-fan-club,TATOOINE,interior,SlateportCity_PokemonFanClub,BLOCKOUT,prop,Band stage,5x2,art:new:band-stage,yes,pending-final-art,greybox piece
 mos-eisley-fan-club,TATOOINE,interior,SlateportCity_PokemonFanClub,BLOCKOUT,prop,Booth,3x2,art:new:cantina-booth,yes,pending-final-art,greybox piece
 mos-eisley-fan-club,TATOOINE,interior,SlateportCity_PokemonFanClub,BLOCKOUT,prop,Booth,3x2,art:new:cantina-booth,yes,pending-final-art,greybox piece
 mos-eisley-fan-club,TATOOINE,interior,SlateportCity_PokemonFanClub,BLOCKOUT,prop,Booth,3x2,art:new:cantina-booth,yes,pending-final-art,greybox piece
