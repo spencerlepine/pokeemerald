@@ -1,0 +1,41 @@
+# Comlink register (MUS_REGISTER_MATCH_CALL, hot-swap): a one-shot sting. SCRATCH (wiki
+# audio:MUS_REGISTER_MATCH_CALL, no film cue). Brief: "New comlink contact: chirpy two-note comms sting." A comms
+# chirp built on one two-note cell, B up to E: called on square 1, echoed an octave down a sixteenth late on
+# square 2 (the other end answering), doubled by xylophone, then confirmed up to the high B, over a wave-bass
+# blip and a triangle ping. 96 bpm (vanilla's), one 3/4 bar, 1.9 s like vanilla, on the vanilla
+# register_match_call voicegroup.
+name: comlink-register
+replaces: MUS_REGISTER_MATCH_CALL
+form: JINGLE
+loop: false
+player: SE2
+song_priority: 5
+voicegroup: register_match_call   # frlg kit 0, xylophone 13, square1 80, square2 81, wave 82
+master_volume: 90
+tempo: 96
+steps_per_beat: 4
+time_signature: [3, 4]
+seed: 17
+
+parts:
+  call:   {program: 80, channel: 0, volume: 58,  pan: 16,  range: [B5, B6], gate: 0.7, mono: true}
+  answer: {program: 81, channel: 1, volume: 48,  pan: -20, range: [B4, B5], gate: 0.6, mono: true}
+  xylo:   {program: 13, channel: 2, volume: 84,  pan: 8,   range: [B5, E6], gate: 0.7}
+  bass:   {program: 82, channel: 3, volume: 72,  pan: 0,   range: [B2, E3], gate: 0.6, mono: true}
+  kit:    {program: 0,  channel: 4, volume: 56,  pan: 24,  role: drums, kit: {tri: 80}}
+
+grooves:
+  ping:
+    tri: "........x..."
+
+sections:
+  sting:
+    bars: 1
+    parts:
+      call:   "B5:1 r:1 E6:2 r:2 B5:1 E6:1 B6:4"
+      answer: "r:1 B4:1 r:1 E5:1 r:3 B4:1 E5:1 B5:3"
+      xylo:   "B5:2 E6:2 r:4 E6:2 r:2"
+      bass:   "E3':1 r:3 r:4 B2:2 E3:2"
+      kit:    ping
+
+arrangement: [sting]
