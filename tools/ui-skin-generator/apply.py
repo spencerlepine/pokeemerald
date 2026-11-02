@@ -161,8 +161,26 @@ FAMILIES = {
     # shop: buy-list panel (stripes, frame) and the MONEY label
     ('graphics/shop/menu.png', 'ui', ALL),
   ],
+  '8b_easychat_frontier': [
+    # Easy Chat: backdrop/window (mode), the orange phrase frame, the green keyboard frame with its SELECT /
+    # B-button labels, the button window sprite, cursors and scroll arrows. text.pal and title_text.pal are
+    # text colours (the green word dashes and cyan title stay vanilla).
+    ('graphics/easy_chat/mode.png', 'ui', ALL),
+    ('graphics/easy_chat/text_input_frame_orange.pal', 'ui', ALL),
+    ('graphics/easy_chat/text_input_frame_green.pal', 'ui', ALL),
+    ('graphics/easy_chat/button_window.png', 'ui', ALL),
+    ('graphics/easy_chat/rectangle_cursor.png', 'ui', ALL),
+    ('graphics/easy_chat/triangle_cursor.png', 'ui', ALL),
+    # Frontier Pass: bank 0 is the frame, header bar, plaques and red arrow; banks 1-5 are the small trainer
+    # card by star rank (same rule as the trainer card); 6-7 are the Battle Frontier map (kept). Text windows
+    # use bank 15 (the text window palette). Medals and player heads stay.
+    ('graphics/frontier_pass/bg.png', 'ui', ALL + [16 + i for i in ALL] + [32 + i for i in ALL]
+                                            + [16 * b + i for b in (3, 4, 5) for i in (7, 8, 13)]),
+    ('graphics/frontier_pass/cursor.png', 'ui', ALL),
+    ('graphics/frontier_pass/map_cursor.png', 'ui', ALL),
+  ],
 }
-DONE = ['1_text_windows', '2_party_summary', '3_bag_pokeblock', '4_pokedex', '5_starnav', '6_pc_storage', '7_battle_naming', '8_card_shop']
+DONE = ['1_text_windows', '2_party_summary', '3_bag_pokeblock', '4_pokedex', '5_starnav', '6_pc_storage', '7_battle_naming', '8_card_shop', '8b_easychat_frontier']
 
 RGB_RE = re.compile(r'RGB\((\d+), *(\d+), *(\d+)\)')
 def tx_rgb5(m, fam):

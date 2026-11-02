@@ -92,9 +92,14 @@ sb16() { wild; w 3; k A; w 4; k A; w 1; k A; w 3.5; shot b17_fainted; k A; w 3; 
          for i in 1 2 3 4 5 6; do k B; w 1; done; w 2; }
 
 # ---------- family 8: trainer card, shop, ... ----------
-s40() { town; lua 'emu:write8(0x0203760e, 4); return 1'; k START; w 0.5; k A; w 3.5; k A; w 3.5; shot 40_trainer_card_front; k A; w 2.5;
-        shot 41_trainer_card_back; k B; w 3.5; k B; w 1; }
+s40() { town; lua 'emu:write8(0x0203760e, 4); return 1'; k START; w 0.5; k A; w 4; k A; w 3.5; shot 40_trainer_card_front; k A; w 2.5;
+        shot 41_trainer_card_back; k B; w 3.5; k B; w 3; k B; w 1; }   # PLAYER opens the Frontier Pass in this save
 s92() { tp 2 4 3 3; k LEFT; w 0.5; k A; w 2; k A; w 2; shot 92_shop_menu; k A; w 5; shot 93_shop_buy_list; k A; w 1.5;
         shot 94_shop_quantity; k A; w 1.5; shot 95_shop_confirm; k B; w 1; k B; w 1; k B; w 3; k B; w 1; k B; w 1; }
+sh10() { town; lua 'emu:write8(0x0203760e, 4); return 1'; k START; w 0.5; k A; w 4; shot h10_frontier_pass; k A; w 3; 
+         k B; w 3; k RIGHT; w 0.7; k A; w 3; shot h11_frontier_map; k B; w 2; k B; w 3; k B; w 1; }
+s96() { party; w 2; k A; w 1.5; k DOWN; w 0.4; k DOWN; w 0.4; k A; w 1.5; k A; w 2.5; k DOWN DOWN DOWN DOWN DOWN; w 0.5; k A; w 2.5;   # give ORANGE MAIL -> Easy Chat
+        shot 96_easychat_mail; k A; w 2; shot 97_easychat_categories; k A; w 2; shot 98_easychat_words;
+        k B; w 1; k B; w 1; k B; w 1; k UP A; w 2.5; k B; w 2; k B; w 2.5; k B; w 1; }
 
 for s in "$@"; do if declare -F "$s" >/dev/null; then "$s"; else "s$s"; fi; done
