@@ -16,20 +16,20 @@ grid: |
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
   TTTTTTTTTTTTTTT......TTTTTTTTTTTTTTTTTTTTTTT
   TTTTTTTTTTTTT................TTTTTTTTTTTTTTT
-  TTTTTTTTTTT....................TTTTTTTTTTTTT
-  TTTTTTTTTT.......................TTTTTTTTTTT
-  TTTTTTTTT..........................TTTTTTTTT
-  TTTTTTT.............................TTTTTTTT
-  TTTT..................................TTTTTT
-  TTTT..................................TTTTTT
-  TTTT...................................TTTTT
+  TTTTTTTTTTTT...................TTTTTTTTTTTTT
+  TTTTTTTTTT.T....................TTTTTTTTTTTT
+  TTTTTTTTT..T....................TTTTTTTTTTTT
+  TTTTTTT....T....................TTTTTTTTTTTT
+  TTTT.......T....................TTTTTTTTTTTT
+  TTTT.......T..........................TTTTTT
+  TTTT.......T...........................TTTTT
   TTTT....................................TTTT
   TTTT..................:.................TTTT
   TTTT..................:..................TTT
   TTT...................:...................TT
   TTT...................:...................TT
-  TT....................:............:.......T
-  T.............:::::::::::::::::....:.......T
+  TT....................:............:......TT
+  T.............:::::::::::::::::....:......TT
   ::::::::::::::::::::::::::::::::::::.......T
   :::::::::::::::::::::::::::::::............T
   :::::::::::::::::::::::::::::::............T
@@ -37,14 +37,14 @@ grid: |
   TT.......................................TTT
   TTTTT....................................TTT
   TTTTTTTT................................TTTT
-  TTTTTTTTT...............................TTTT
-  TTTTTTTTTT.............................TTTTT
-  TTTTTTTTTT............................TTTTTT
-  TTTTTTTTTTT..........................TTTTTTT
-  TTTTTTTTTTTT......................TTTTTTTTTT
-  TTTTTTTTTTTTTTTTT...............TTTTTTTTTTTT
-  TTTTTTTTTTTTTTTTTTT............TTTTTTTTTTTTT
-  TTTTTTTTTTTTTTTTTTTT..........TTTTTTTTTTTTTT
+  TTTTTTTTT........TTTTTT.................TTTT
+  TTTTTTTTTT...TTTTTTTTTT................TTTTT
+  TTTTTTTTTT...TTTTTTTTTTTTTT...........TTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTT..........TTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
 exits:
 - edge: west
   cells: [19, 20, 21]
