@@ -1,0 +1,71 @@
+# Ancient vaults with Aurebesh puzzles (Tusken Ruins, Ancient Tomb, Ice Grotto, Sealed Vault): hot-swap of
+# MUS_SEALED_CHAMBER (wiki audio:MUS_SEALED_CHAMBER, AMBIENT). STYLE of "The Walls Converge" (ref_tracks
+# soundtrack:new-hope:13): no quote. Taken from the cue: a quick, mechanical pulse (136, just under the vanilla 140), a low
+# ostinato grinding on C against Db, horn stabs a tritone apart, timpani that lurch in off the beat. Made
+# eerie and sparse for a puzzle room: the ostinato plays soft and drops out for bars at a time, a square
+# ticks like a lock mechanism, a bell pings each solved glyph, a high flute hangs over it all.
+# Vanilla: sealed_chamber voicegroup, 140 bpm, 36.0 s loop; this one 136 bpm, 20 bars, 35.3 s.
+# Brief (sw_subject): eerie and sparse.
+name: warden-vault
+replaces: MUS_SEALED_CHAMBER
+form: AMBIENT
+voicegroup: sealed_chamber            # strings 48, horn 60, timpani 47, bell 14, flute 73, harp 46, squares 80/81, wave 87, noise
+master_volume: 92
+tempo: 136
+steps_per_beat: 4
+time_signature: [4, 4]
+seed: 13
+
+parts:
+  grind:   {program: 48, channel: 0, volume: 62,  pan: -12, range: [C3, Gb3], gate: 0.55}
+  horn:    {program: 60, channel: 1, volume: 76,  pan: 14,  range: [C3, C5], gate: 0.9}
+  timpani: {program: 47, channel: 2, volume: 80,  pan: 4,   range: [C2, Gb2], gate: 1.0}
+  bell:    {program: 14, channel: 3, volume: 52,  pan: -28, range: [C5, C6], gate: 1.0}
+  flute:   {program: 73, channel: 4, volume: 58,  pan: 26,  range: [C5, C7], gate: 0.98, lfo_speed: 30, lfo_delay: 30, mod: 6}
+  tick:    {program: 80, channel: 5, volume: 26,  pan: 36,  range: [C6, C7], gate: 0.2, mono: true}
+  bass:    {program: 87, channel: 6, volume: 80,  pan: 0,   range: [C1, C2], gate: 0.9}
+  hiss:    {program: 126, channel: 7, volume: 18, pan: -36, gate: 0.4, mono: true}
+
+phrases:
+  grind_a: |
+    C3:2 C3:2 Db3:2 C3:2 C3:2 C3:2 Db3:2 C3:2 | C3:2 C3:2 Db3:2 C3:2 Eb3:2 C3:2 Db3:2 C3:2 |
+    C3:2 C3:2 Db3:2 C3:2 C3:2 C3:2 Db3:2 C3:2 | C3:2 C3:2 Db3:2 C3:2 Gb3:2 F3:2 Db3:2 C3:2 |
+    r:16 | r:16 | r:16 | r:16 |
+    C3:2 C3:2 Db3:2 C3:2 C3:2 C3:2 Db3:2 C3:2 | C3:2 C3:2 Db3:2 C3:2 Eb3:2 C3:2 Db3:2 C3:2 |
+    r:16 | r:16 |
+    Db3:2 Db3:2 D3:2 Db3:2 Db3:2 Db3:2 D3:2 Db3:2 | Db3:2 Db3:2 D3:2 Db3:2 E3:2 Db3:2 D3:2 Db3:2 |
+    r:16 | r:16 | r:16 | r:16 |
+    C3:2 C3:2 Db3:2 C3:2 C3:2 C3:2 Db3:2 C3:2 | C3:2 Db3:2 Eb3:2 E3:2 F3:2 Gb3:2 G3:2 r:2
+  stabs: |
+    r:16 | r:16 | r:16 | r:8 Gb3:4 C4:4 |
+    r:16 | r:16 | r:16 | r:16 |
+    r:16 | r:16 | r:12 C4:2 Gb3:2 | r:16 |
+    r:16 | r:8 G3:4 Db4:4 | r:16 | r:16 |
+    r:16 | r:16 | r:16 | r:16
+  lurch: |
+    C2:2 r:14 | r:6 C2:2 r:8 | C2:2 r:14 | r:10 Gb2:2 r:4 |
+    r:16 | r:16 | r:16 | r:16 |
+    C2:2 r:14 | r:6 C2:2 r:8 | r:16 | r:16 |
+    Db2:2 r:14 | r:6 Db2:2 r:8 | r:16 | r:16 |
+    r:16 | r:16 | C2:2 r:14 | r:4 C2:1 C2:1 C2:1 C2:1 C2:1 C2:1 C2:1 C2:1 r:4
+  pings: |
+    r:16 | r:16 | r:16 | r:16 | G5:16 | r:16 | r:16 | r:16 | r:16 | r:16 |
+    Db6:16 | r:16 | r:16 | r:16 | C6:8 G5:8 | r:16 | r:16 | r:16 | r:16 | r:16
+  hang: |
+    r:16 | r:16 | r:16 | r:16 | r:8 Db6:8 | C6:16 | ~:16 | r:16 |
+    r:16 | r:16 | r:16 | r:16 | r:16 | r:16 | r:8 Gb6:8 | F6:8 E6:8 | ~:16 | r:16 | r:16 | r:16
+  ticks: "C6:1 r:3 G6:1 r:3 C6:1 r:3 Db6:1 r:3"
+  floor: |
+    C1:16 | C1:16 | C1:16 | C1:16 | C1:16 | C1:16 | C1:16 | C1:16 | C1:16 | C1:16 |
+    Db1:16 | Db1:16 | Db1:16 | Db1:16 | Db1:16 | Db1:16 | C1:16 | C1:16 | C1:16 | C1:16
+  dust: |
+    r:16 | r:16 | r:16 | r:16 | r:12 C5:4 | r:16 | r:16 | r:16 | r:16 | r:16 |
+    r:16 | r:16 | r:16 | r:16 | r:4 G5:4 r:8 | r:16 | r:16 | r:16 | r:16 | r:16
+
+sections:
+  vault:
+    bars: 20
+    parts: {grind: grind_a, horn: stabs, timpani: lurch, bell: pings, flute: hang, tick: ticks, bass: floor, hiss: dust}
+
+arrangement: [vault]
+loop_start: vault
