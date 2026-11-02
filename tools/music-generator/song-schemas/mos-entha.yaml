@@ -1,0 +1,87 @@
+# Mos Entha (Tatooine), Dad's arena town: hot-swap of MUS_PETALBURG. ARRANGE of "Panaka and the Queen's
+# Protectors" (wiki soundtrack:phantom-menace:12, analyzed 0-90 s: 152 bpm, A minor with Bb and G minor turns,
+# E and Esus4 as the dominant). Kept: the tempo (152, felt in two as a march), A minor with the cue's Bb
+# (Neapolitan) edge and its G minor/Bb passage, the brass fanfare figures (75% squares, the Game Boy brass), the
+# string line and a light military snare, as a proud guards' march rather than the cue's chase.
+#   intro   2 bars  snare and bass
+#   a       8 bars  square fanfare tune over strings and snare
+#   b       8 bars  the strings take a broad proud line, flute above
+#   bridge  4 bars  the cue's G minor/Bb turn, square ostinato and a snare roll back to the top
+# 20-bar loop, 31.6 s (vanilla 32.4 s); vanilla petalburg voicegroup.
+# Brief (sw_subject): Mos Entha, Dad's arena town: steady and proud with a light military snare (Doran is an ex-Republic veteran).
+name: mos-entha
+replaces: MUS_PETALBURG
+form: LOOP
+voicegroup: petalburg             # kit 0 (petalburg), squares 24-27 (75%), strings 48, flute 73, wave 74/81, noise
+master_volume: 82
+tempo: 152
+steps_per_beat: 4
+time_signature: [4, 4]
+seed: 10
+
+parts:
+  lead:    {program: 24, channel: 0, volume: 66,  pan: 10,  range: [E4, C6], gate: 0.85, mono: true}
+  second:  {program: 25, channel: 1, volume: 44,  pan: -26, octave: 4, range: [C4, C5], gate: 0.85, mono: true}
+  strings: {program: 48, channel: 2, volume: 84,  pan: -14, octave: 4, range: [A3, B5], gate: 1.0}
+  flute:   {program: 73, channel: 3, volume: 84,  pan: 22,  range: [C5, C6], gate: 0.95}
+  bass:    {program: 81, channel: 4, volume: 90,  pan: 0,   octave: 2, range: [E2, A3], gate: 0.6, role: bass}
+  kit:     {program: 0,  channel: 5, volume: 78,  pan: -6, role: drums, kit: {kick: 36, sn: 40}}
+  hat:     {program: 127, channel: 6, volume: 26, pan: 16, role: drums, kit: {t: A6}}
+
+progressions:
+  intro:  "Am | E"
+  a:      "Am | Am | F | E | Am | Am | Bb | E"
+  b:      "F | G | C | Am | Dm | E | Am | E"
+  bridge: "Gm | Gm | Bb | E"
+
+phrases:
+  fanfare: |
+    A4:4 r:2 A4:1 A4:1 C5:4 E5:4 | A5:6 G5:2 E5:4 C5:4 | F5:4 r:2 F5:1 E5:1 D5:4 C5:4 | B4:8 G#4:4 E4:4 |
+    A4:4 r:2 A4:1 A4:1 C5:4 E5:4 | A5:6 B5:2 C6:4 A5:4 | Bb5:6 A5:2 F5:4 D5:4 | E5:12 r:4
+  str_a: "^1:16"
+  line_b: |
+    C5:8 F5:8 | D5:8 G5:8 | E5:12 C5:4 | A4:16 |
+    D5:8 F5:8 | G#4:8 B4:8 | C5:12 E5:4 | B4:8 G#4:8
+  flute_b: |
+    r:8 A5:4 C6:4 | r:8 B5:4 G5:4 | r:8 C6:4 G5:4 | r:8 E5:4 A5:4 |
+    r:8 F5:4 A5:4 | r:8 E5:4 G#5:4 | r:8 A5:4 E5:4 | r:8 G#5:4 B5:4
+  str_bridge: "D5:16 | D5:16 | F5:16 | E5:8 G#4:8"
+  ost: "G4:2 Bb4:2 D5:2 Bb4:2 G4:2 Bb4:2 D5:2 Bb4:2 | G4:2 Bb4:2 D5:2 Bb4:2 G4:2 Bb4:2 D5:2 Bb4:2 | F4:2 Bb4:2 D5:2 Bb4:2 F4:2 Bb4:2 D5:2 Bb4:2 | E4:2 G#4:2 B4:2 G#4:2 E4:2 G#4:2 B4:2 D5:2"
+  after: "r:4 ^3:2 r:2 r:4 ^2:2 r:2"
+  bass: "^1:4 ^5-:4 ^1:4 ^5-:4"
+
+grooves:
+  march:
+    kick: "x.......x.......|x.......x......."
+    sn:   "....x.......x...|....x.......x.xx"
+  march_b:
+    kick: "x.......x......."
+    sn:   "....o.x.....o.x."
+  roll:
+    kick: "x.......x.......|x.......x.......|x.......x.......|x...x...x...x..."
+    sn:   "x.x.x.x.x.x.x.x.|x.x.x.x.x.x.x.x.|xxxxxxxxxxxxxxxx|xxxxxxxxxxxxXXXX"
+  intro:
+    kick: "x.......x.......|x.......x.......|"
+    sn:   "....x.......x...|....x...x.x.xxxx"
+  ticks: {t: "x.x.x.x.x.x.x.x."}
+
+sections:
+  intro:
+    bars: 2
+    chords: intro
+    parts: {kit: intro, bass: bass, hat: ticks, strings: str_a, second: after, lead: "r:16 | r:8 E4:2 G#4:2 B4:2 E5:2"}
+  a:
+    bars: 8
+    chords: a
+    parts: {lead: fanfare, second: after, strings: str_a, bass: bass, kit: march, hat: ticks}
+  b:
+    bars: 8
+    chords: b
+    parts: {strings: line_b, flute: flute_b, second: after, bass: bass, kit: march_b, hat: ticks}
+  bridge:
+    bars: 4
+    chords: bridge
+    parts: {lead: ost, strings: str_bridge, bass: bass, kit: roll}
+
+arrangement: [intro, a, b, bridge]
+loop_start: a
