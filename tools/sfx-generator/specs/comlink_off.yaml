@@ -1,0 +1,24 @@
+name: comlink_off
+replaces: SE_POKENAV_OFF
+constant: SE_COMLINK_OFF
+brief: "Comlink closes."
+seed: 47
+layers:
+  # Power-down: square 1 falling on the hardware sweep, a dying wisp of radio static, and a soft off click.
+  - type: square
+    pitch: 1760
+    duty: 2
+    sweep: [2, true, 4]
+    env: [[0, 0.9], [0.22, 0.4], [0.28, 0]]
+    gain: 0.5
+  - type: noise
+    clock: 32768
+    short: true
+    env: [[0, 0.3], [0.25, 0]]
+    gain: 0.12
+  - type: pcm
+    at: 0.27
+    osc: noise
+    filter: {type: bp, cutoff: 1800, q: 2}
+    env: [[0, 0], [0.001, 1], [0.015, 0]]
+    gain: 0.35

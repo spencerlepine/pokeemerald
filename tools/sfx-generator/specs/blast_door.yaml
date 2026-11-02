@@ -1,0 +1,26 @@
+name: blast_door
+replaces: SE_SLIDING_DOOR
+constant: SE_BLAST_DOOR
+brief: "Automatic doors: pneumatic sci-fi hiss."
+seed: 50
+layers:
+  # A pneumatic door: a sharp air release (bright noise band falling as pressure drops) over a low
+  # sliding rumble, ending in a dull seat thunk.
+  - type: pcm
+    osc: noise
+    filter: {type: bp, cutoff: [[0, 4200], [0.22, 1800]], q: 1.6}
+    env: [[0, 0], [0.006, 1], [0.08, 0.7], [0.24, 0]]
+    gain: 0.8
+  - type: pcm
+    osc: saw
+    pitch: [[0, 90], [0.2, 70]]
+    filter: {type: lp, cutoff: 500, q: 1}
+    env: [[0, 0], [0.02, 0.5], [0.2, 0.3], [0.24, 0]]
+    gain: 0.35
+  - type: pcm
+    at: 0.19
+    osc: sine
+    pitch: [[0, 120], [0.05, 60]]
+    env: [[0, 0], [0.003, 1], [0.06, 0]]
+    drive: 1.5
+    gain: 0.4

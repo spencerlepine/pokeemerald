@@ -1,0 +1,25 @@
+name: comlink_hang_up
+replaces: SE_POKENAV_HANG_UP
+constant: SE_COMLINK_HANG_UP
+brief: "Comlink call ends: static click."
+seed: 46
+layers:
+  # The channel drops: a burst of crunchy 7-bit radio static, a hard key-up click, then a short falling
+  # two-tone "carrier lost" blip, all like the comlink-call SE's gear.
+  - type: noise
+    clock: [[0, 32768], [0.18, 16384]]
+    short: true
+    env: [[0, 0.7], [0.15, 0.5], [0.2, 0]]
+    gain: 0.3
+  - type: pcm
+    at: 0.2
+    osc: noise
+    filter: {type: bp, cutoff: 2200, q: 2}
+    env: [[0, 0], [0.001, 1], [0.02, 0]]
+    gain: 0.6
+  - type: square
+    at: 0.26
+    duty: 2
+    pitch: [[0, 1320], [0.12, 1320], [0.121, 880], [0.34, 880]]
+    env: [[0, 0.8], [0.12, 0.8], [0.121, 0.7], [0.34, 0]]
+    gain: 0.4

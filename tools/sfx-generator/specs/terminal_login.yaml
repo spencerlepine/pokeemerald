@@ -1,0 +1,23 @@
+name: terminal_login
+replaces: SE_PC_LOGIN
+constant: SE_TERMINAL_LOGIN
+brief: "Terminal login: data chirp. Optional swap, the old beep is acceptable."
+seed: 45
+layers:
+  # A terminal handshake: a rattle of fast data blips on square 2, then a clean rising two-note "accepted" chirp.
+  - type: square
+    duty: 1
+    pitch: [[0, 2349], [0.025, 2349], [0.026, 1568], [0.05, 1568], [0.051, 2794], [0.075, 2794], [0.076, 1976], [0.1, 1976], [0.101, 2637], [0.125, 2637], [0.126, 1760], [0.15, 1760]]
+    env: [[0, 0.7], [0.15, 0.7], [0.155, 0]]
+    gain: 0.4
+  - type: square
+    at: 0.2
+    duty: 2
+    pitch: [[0, 1568], [0.08, 1568], [0.081, 2093], [0.2, 2093]]
+    env: [[0, 0.9], [0.12, 0.8], [0.21, 0]]
+    gain: 0.45
+  - type: noise
+    clock: 65536
+    short: true
+    env: [[0, 0.3], [0.15, 0.2], [0.16, 0]]
+    gain: 0.08

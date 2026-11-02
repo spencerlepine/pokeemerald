@@ -1,0 +1,18 @@
+name: exp_max
+replaces: SE_EXP_MAX
+constant: SE_EXP_MAX
+brief: "Experience bar full: keep or brighten; optional."
+seed: 42
+layers:
+  # A bright rising arpeggio on square 1 (C6-E6-G6-C7) with a wave-channel sparkle an octave up on the last note.
+  - type: square
+    duty: 2
+    pitch: [[0, 1047], [0.05, 1047], [0.051, 1319], [0.1, 1319], [0.101, 1568], [0.15, 1568], [0.151, 2093], [0.3, 2093]]
+    env: [[0, 0.9], [0.15, 0.9], [0.3, 0]]
+    gain: 0.5
+  - type: wave
+    at: 0.15
+    table: sine
+    pitch: 4186
+    env: [[0, 1], [0.08, 0.5], [0.14, 0]]
+    gain: 0.3

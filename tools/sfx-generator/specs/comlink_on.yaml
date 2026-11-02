@@ -1,0 +1,24 @@
+name: comlink_on
+replaces: SE_POKENAV_ON
+constant: SE_COMLINK_ON
+brief: "Comlink opens: chirpy power-up."
+seed: 48
+layers:
+  # Power-up chirp: square 1 climbing on the hardware sweep, a wave-channel blip pair on top, and a crackle of static at switch-on.
+  - type: square
+    pitch: 660
+    duty: 1
+    sweep: [2, false, 4]
+    env: [[0, 0.8], [0.18, 0.7], [0.2, 0]]
+    gain: 0.45
+  - type: wave
+    at: 0.18
+    table: sine
+    pitch: [[0, 1760], [0.05, 1760], [0.051, 2637], [0.12, 2637]]
+    env: [[0, 1], [0.1, 1], [0.12, 0]]
+    gain: 0.35
+  - type: noise
+    clock: 32768
+    short: true
+    env: [[0, 0.5], [0.06, 0]]
+    gain: 0.15

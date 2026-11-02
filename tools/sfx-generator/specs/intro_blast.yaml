@@ -1,0 +1,32 @@
+name: intro_blast
+replaces: SE_INTRO_BLAST
+constant: SE_INTRO_BLAST
+brief: "Opening movie impact: blaster or engine boom to match the new intro."
+seed: 43
+layers:
+  # A heavy blaster-impact boom: a falling FM bolt chirp leads into a driven sub thump, a burst of LFSR noise
+  # whose clock sinks, and a long dark rumble tail (low-passed noise closing) rolling out over three seconds.
+  - type: pcm
+    osc: sine
+    pitch: [[0, 2600], [0.05, 900], [0.14, 220]]
+    fm: {ratio: 1.41, index: [[0, 0.8], [0.14, 0.2]]}
+    env: [[0, 0], [0.003, 0.8], [0.14, 0]]
+    gain: 0.5
+  - type: pcm
+    at: 0.08
+    osc: sine
+    pitch: [[0, 110], [0.6, 30]]
+    env: [[0, 0], [0.006, 1], [0.25, 0.7], [0.9, 0]]
+    drive: 3
+    gain: 1.0
+  - type: noise
+    at: 0.08
+    clock: [[0, 131072], [0.4, 8192], [1.2, 2048]]
+    env: [[0, 1], [0.15, 0.6], [1.2, 0]]
+    gain: 0.45
+  - type: pcm
+    at: 0.1
+    osc: noise
+    filter: {type: lp, cutoff: [[0, 2500], [0.6, 500], [3.2, 120]], q: 0.9}
+    env: [[0, 0], [0.02, 1], [0.8, 0.5], [3.2, 0]]
+    gain: 0.6
