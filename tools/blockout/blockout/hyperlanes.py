@@ -82,6 +82,10 @@ def _end_problems(e, side, by_id):
                       for (x, y), (w, h) in [(b["at"], b["size"])]]
     doors = building_doors   # a warp (cave mouth, ramp, lift) is the path itself; a hangar building can be walked past
     if doors and area.kind in ("town", "route", "landmark", "space"):
+        solid = area.solid_cells()
+        for x, y in doors:
+            if area.road_steps(solid, (x, y), limit=2) is None:
+                p.append(f"{area_id}: no marked path (`:` or `=`) at the door into {room_id} [{x}, {y}] (the player must walk straight into it)")
         near = any(abs(s["at"][0] - x) + abs(s["at"][1] - y) <= 3 for s in area.signs for x, y in doors if s.get("at"))
         if not near:
             p.append(f"{area_id}: no sign within 3 cells of the door into {room_id or 'the landing'} (the player must see where the ship is)")

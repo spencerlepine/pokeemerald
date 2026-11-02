@@ -131,6 +131,38 @@ class Area:
         # strand trainers, items or signs (imported caves keep vanilla puzzles the grid does not model)
         if self.kind != "interior" and not (self.kind == "dungeon" and self.replaces != "new"):
             p += self.content_problems(solid)
+        if self.kind == "town":
+            p += self.road_problems(solid)
+        return p
+
+    def road_steps(self, solid, start, limit=12):
+        """Walking steps from a cell to the nearest path or platform cell (`:` or `=`), or None."""
+        from collections import deque
+        seen = {start}
+        q = deque([(start, 0)])
+        while q:
+            (x, y), d = q.popleft()
+            if self.cell(x, y) in (":", "="):
+                return d
+            if d >= limit:
+                continue
+            for nx, ny in ((x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)):
+                ch = self.cell(nx, ny)
+                if ch is not None and (nx, ny) not in seen and (nx, ny) not in solid and walkable(ch) and ch not in "v<>^":
+                    seen.add((nx, ny))
+                    q.append(((nx, ny), d + 1))
+        return None
+
+    def road_problems(self, solid):
+        """Every town door is within a few steps of a road (the compact-town rule: a spur to every door)."""
+        p = []
+        for b in self.buildings:
+            if "door" not in b:
+                continue
+            (x, y), (w, h) = b["at"], b["size"]
+            d = self.road_steps(solid, (x + int(b["door"]), y + h))
+            if d is None or d > 5:
+                p.append(f"building {b['name']}: its door is {d or 'more than 12'} steps from any road (paint a `:` spur to it)")
         return p
 
     def softlock_problems(self, solid):
