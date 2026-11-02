@@ -1,0 +1,17 @@
+name: echowisp
+slot: shuppet
+brief: 'ECHOWISP: creature call that fits its look and size. Wisp left behind by a strong feeling.'
+kind: creature
+size: 0.22
+seed: 171
+layers:
+  # Feeling-wisp: a thin, wavering ghostly swoop that sighs away.
+  # Family voice (wavering u -> i -> u swoop, deep slow vibrato) shared with HOLLOWDOLL.
+  - type: voice
+    pitch: [[0.0, 512.0], [0.12, 832.0], [0.38, 576.0]]
+    source: {pulse: 0.7, saw: 0.2, pulse_width: 0.45, noise: 0.08}
+    vowels: [[0.0, u], [0.15, i], [0.38, u]]
+    env: [[0.0, 0], [0.04, 1], [0.25, 0.8], [0.39, 0]]
+    vibrato: {rate: 9, depth: 0.08}
+    jitter: 0.01
+master: {rms: 0.29}

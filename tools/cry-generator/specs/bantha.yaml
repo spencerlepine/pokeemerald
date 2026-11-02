@@ -1,0 +1,36 @@
+name: bantha
+slot: camerupt
+brief: 'BANTHA: creature call that fits its look and size. Huge shaggy bantha, mount of the Tuskens.'
+kind: creature
+size: 0.85
+seed: 182
+layers:
+  # Huge shaggy bantha: the family lowing as a deep, slow bellowing roar, stepped like an old
+  # chip cry, with a heavy snort of breath.
+  - type: noise
+    band: [600]
+    q: 1.5
+    env: [[0, 0], [0.02, 0.6], [0.1, 0]]
+    gain: 0.4
+  - type: voice
+    at: 0.06
+    pitch: [[0.0, 119.0], [0.235, 161.0], [0.705, 154.0], [1.034, 112.0]]
+    source: {saw: 0.9, pulse: 0.4, pulse_width: 0.35, noise: 0.1}
+    vowels: [[0.0, m], [0.141, o], [0.517, a], [1.034, u]]
+    env: [[0.0, 0], [0.0705, 1], [0.752, 0.85], [1.034, 0]]
+    growl: 0.5
+    growl_rate: 24
+    jitter: 0.02
+    drive: 2.4
+    pitch_step: 0.05
+  - type: voice
+    at: 0.1
+    pitch: [[0.0, 357.0], [0.21, 483.0], [0.63, 462.0], [0.924, 336.0]]
+    source: {saw: 0.9, pulse: 0.4, pulse_width: 0.35, noise: 0.1}
+    vowels: [[0.0, m], [0.126, o], [0.462, a], [0.924, u]]
+    env: [[0.0, 0], [0.063, 1], [0.672, 0.85], [0.924, 0]]
+    growl: 0.1
+    growl_rate: 24
+    jitter: 0.02
+    drive: 1.8
+    gain: 0.45

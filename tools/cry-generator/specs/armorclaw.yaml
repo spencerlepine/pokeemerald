@@ -1,0 +1,25 @@
+name: armorclaw
+slot: armaldo
+brief: 'ARMORCLAW: creature call that fits its look and size. Armored ancient predator.'
+kind: creature
+size: 0.57
+seed: 162
+layers:
+  # Armored ancient predator: the family clicks as heavy claw clacks and the rasp as a deep,
+  # grinding roar.
+  - type: click
+    times: [0.0, 0.08]
+    gain: 0.8
+  - type: voice
+    at: 0.12
+    pitch: [[0.0, 260.0], [0.138, 325.0], [0.575, 260.0], [0.92, 208.0]]
+    source: {saw: 0.8, pulse: 0.4, pulse_width: 0.2, noise: 0.3}
+    vowels: [[0.0, er], [0.345, ae], [0.92, er]]
+    env: [[0.0, 0], [0.023, 1], [0.644, 0.75], [0.943, 0]]
+    growl: 0.55
+    growl_rate: 55
+    jitter: 0.04
+    drive: 2.0
+  - type: click
+    times: [0.95, 1.0]
+    gain: 0.5

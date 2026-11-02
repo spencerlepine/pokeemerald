@@ -1,0 +1,25 @@
+name: hollowdoll
+slot: banette
+brief: 'HOLLOWDOLL: creature call that fits its look and size. Discarded doll animated by resentment.'
+kind: creature
+size: 0.42
+seed: 172
+layers:
+  # Resentful doll: the family swoop, lower, broken into a stepped, creepy cackle ("heh-heh")
+  # then a long wavering grudge-moan.
+  - type: voice
+    pitch: [[0, 520], [0.05, 600], [0.06, 500], [0.11, 580]]
+    pitch_step: 0.025
+    source: {pulse: 0.7, saw: 0.4, pulse_width: 0.4, noise: 0.1}
+    vowels: [[0, e], [0.11, ae]]
+    env: [[0, 0], [0.008, 1], [0.045, 0.7], [0.055, 0.1], [0.065, 1], [0.1, 0.7], [0.12, 0]]
+    growl: 0.2
+    growl_rate: 45
+  - type: voice
+    at: 0.16
+    pitch: [[0.0, 336.0], [0.132, 546.0], [0.418, 378.0]]
+    source: {pulse: 0.7, saw: 0.2, pulse_width: 0.45, noise: 0.08}
+    vowels: [[0.0, u], [0.165, i], [0.418, u]]
+    env: [[0.0, 0], [0.044, 1], [0.275, 0.8], [0.429, 0]]
+    vibrato: {rate: 9, depth: 0.1}
+    jitter: 0.01

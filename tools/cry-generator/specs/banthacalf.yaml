@@ -1,0 +1,18 @@
+name: banthacalf
+slot: numel
+brief: 'BANTHACALF: creature call that fits its look and size. Bantha calf that never notices the heat.'
+kind: creature
+size: 0.37
+seed: 181
+layers:
+  # Bantha calf: a short, warm lowing "mmuh" with a bit of bleat.
+  # Family voice (saw throat, m -> o -> a -> u lowing, slow growl) shared with BANTHA.
+  - type: voice
+    pitch: [[0.0, 289.0], [0.1, 391.0], [0.3, 374.0], [0.44, 272.0]]
+    source: {saw: 0.9, pulse: 0.4, pulse_width: 0.35, noise: 0.1}
+    vowels: [[0.0, m], [0.06, o], [0.22, a], [0.44, u]]
+    env: [[0.0, 0], [0.03, 1], [0.32, 0.85], [0.44, 0]]
+    growl: 0.15
+    growl_rate: 24
+    jitter: 0.02
+    drive: 1.8

@@ -1,0 +1,22 @@
+name: shellhusk
+slot: anorith
+brief: 'SHELLHUSK: creature call that fits its look and size. Fossil shrimp from Tatooine''s ancient seas. Revived from the CLAW FOSSIL.'
+kind: creature
+size: 0.33
+seed: 161
+layers:
+  # Fossil shrimp: two chitin clicks and a dry, raspy chitter.
+  # Family voice (chitin clicks + noisy er -> ae rasp) shared with ARMORCLAW.
+  - type: click
+    times: [0.0, 0.05]
+    gain: 0.7
+  - type: voice
+    at: 0.09
+    pitch: [[0.0, 460.0], [0.066, 575.0], [0.275, 460.0], [0.44, 368.0]]
+    source: {saw: 0.8, pulse: 0.4, pulse_width: 0.2, noise: 0.3}
+    vowels: [[0.0, er], [0.165, ae], [0.44, er]]
+    env: [[0.0, 0], [0.011, 1], [0.308, 0.75], [0.451, 0]]
+    growl: 0.35
+    growl_rate: 55
+    jitter: 0.04
+    drive: 2.0
