@@ -194,8 +194,14 @@ FAMILIES = {
     ('graphics/wallclock/female.pal', 'ui', [9]),
     ('graphics/wallclock/text_prompt.pal', 'ui', [1]),
   ],
+  '8d_contest': [
+    # contest appeal screen: the four contestant panels (banks 5-7 rivals, 8 the player: slots 1-4 are the
+    # fill and edge) and the blue move window (bank 0 slots 10, 13, 14). The hearts and applause meter,
+    # the category label, the audience and the text colours stay vanilla.
+    ('graphics/contest/interface.png', 'ui', [16 * b + i for b in (5, 6, 7, 8) for i in (1, 2, 3, 4)] + [10, 13, 14]),
+  ],
 }
-DONE = ['1_text_windows', '2_party_summary', '3_bag_pokeblock', '4_pokedex', '5_starnav', '6_pc_storage', '7_battle_naming', '8_card_shop', '8b_easychat_frontier', '8c_berry_clock']
+DONE = ['1_text_windows', '2_party_summary', '3_bag_pokeblock', '4_pokedex', '5_starnav', '6_pc_storage', '7_battle_naming', '8_card_shop', '8b_easychat_frontier', '8c_berry_clock', '8d_contest']
 
 RGB_RE = re.compile(r'RGB\((\d+), *(\d+), *(\d+)\)')
 def tx_rgb5(m, fam):

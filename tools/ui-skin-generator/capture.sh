@@ -106,6 +106,12 @@ sh29() { tp 1 1 5 2; k UP A; w 3; shot h29_wall_clock; k A; w 3; }
 sh14() { tp 13 4 23 10; k UP A; w 2; k A; w 2; local i; for i in 1 2 3 4 5 6 7 8 9 10 11; do k A; w 1.8;   # blender with 3 NPCs
          case $i in 5) shot h14_blender_start;; 9) shot h15_blender_spin;; 10) shot h16_blender_ranking;; 11) shot h17_blender_results;; esac; done
          }   # the blender cannot be left from the bag: run h14 last, then ./capture.sh boot
+sh19() { tp 13 4 14 4; k UP; w 0.5; local i n   # normal-rank contest; shots by A-press count (RNG can shift the late ones)
+         for i in $(seq 1 6); do k A; w 1.8; case $i in 3) shot h19_contest_menu;; 4) shot h20_contest_rank;;
+           5) shot h21_contest_category;; 6) shot h22_contest_party_select;; esac; done
+         for i in $(seq 7 12); do k A; w 1.8; done
+         for n in $(seq 1 47); do k A; w 1.5; case $n in 2) shot h23_contest_stage;; 5) shot h24_contest_entry_card;;
+           15) shot h25_contest_appeal;; 16) shot h26_contest_move_select;; 20) shot h27_contest_judge;; 47) shot h28_contest_results;; esac; done; }
 
 if [ "${1:-}" = do ]; then shift; "$@"; exit; fi   # ./capture.sh do FUNC ARGS: run one helper with arguments
 for s in "$@"; do if declare -F "$s" >/dev/null; then "$s"; else "s$s"; fi; done
