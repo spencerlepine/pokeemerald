@@ -1,0 +1,73 @@
+# Dune Route (MUS_ROUTE101, hot-swap): the first desert routes out of Mos Pelgo. ARRANGE of "Mouse Robot and
+# Blasting Off" (wiki audio:MUS_ROUTE101, ref soundtrack:new-hope:11): the Falcon's escape, where the main title
+# theme comes back as an adventure tune. analyze_reference read the cue at 103.4 bpm (104 here); its draft is too
+# rough on the orchestra to use, so the theme is written from the tune itself, moved to C for the squares:
+#   a  8 bars  the main theme's first strain (triplet pickups, the fifth leap, the falling triplets to high C)
+#   b  8 bars  its middle strain cut down, ending on a G7 and the triplet pickup that starts the loop again
+# Brief (sw_subject): open and adventurous walking theme, brass melody over heat-shimmer pads. A walking wave
+# bass, nylon-guitar arpeggios and a sustained string note are the heat shimmer; the vanilla route101 kit
+# (kick, snare) walks under a noise hat. Loop 16 bars, 36.9 s (vanilla 33.7 s).
+name: dune-route
+replaces: MUS_ROUTE101
+form: LOOP
+voicegroup: route101          # flute 73, guitar 24, strings 48, squares 80/81, wave 74, noise 127, kit 0
+master_volume: 80
+tempo: 104
+steps_per_beat: 6             # triplet eighths (2) and straight eighths (3) on one grid
+time_signature: [4, 4]
+seed: 101
+
+parts:
+  lead:    {program: 73, channel: 0, volume: 96,  pan: 6,   gate: 0.92, lfo_speed: 30, lfo_delay: 30, mod: 3, humanize: {vel: 4}}
+  brass:   {program: 81, channel: 1, volume: 52,  pan: -8,  gate: 0.85, mono: true}
+  strings: {program: 48, channel: 2, volume: 56,  pan: -26, octave: 4, gate: 1.0}
+  guitar:  {program: 24, channel: 3, volume: 70,  pan: 24,  octave: 3, gate: 0.9, humanize: {vel: 6}}
+  bass:    {program: 74, channel: 4, volume: 88,  pan: 0,   octave: 2, gate: 0.8, role: bass, mono: true}
+  arp:     {program: 80, channel: 5, volume: 38,  pan: 34,  octave: 5, gate: 0.6, mono: true}
+  drums:   {program: 0,  channel: 6, volume: 76,  pan: 0,   role: drums, kit: {kick: 36, snare: 38}}
+  hat:     {program: 127, channel: 7, volume: 40, pan: -16, role: drums, kit: {h: A5}}
+
+progressions:
+  strain_a: "C | F:12 C:12 | F:12 C:12 | Dm:12 G:12 | C | F:12 C:12 | F:12 C:12 | G"
+  strain_b: "F | Am:12 G:12 | C | F | C:12 G:12 | G | F:12 G:12 | G7"
+
+phrases:
+  theme_a: |
+    C5:12 G5:12 | F5:2 E5:2 D5:2 C6:12 G5:6 | F5:2 E5:2 D5:2 C6:12 G5:6 | F5:2 E5:2 F5:2 D5:12 G4:2 G4:2 G4:2 |
+    C5:12 G5:12 | F5:2 E5:2 D5:2 C6:12 G5:6 | F5:2 E5:2 D5:2 C6:12 G5:6 | F5:2 E5:2 F5:2 D5:18
+  theme_b: |
+    A4:9 F5:3 E5:3 D5:3 C5:6 | C5:3 D5:3 E5:3 D5:9 A4:3 B4:3 | G4:18 G4:3 G4:3 | A4:9 F5:3 E5:3 D5:3 C5:6 |
+    G5:12 D5:12 | D5:18 r:6 | F5:6 E5:6 D5:6 B4:6 | D5:12 r:6 G4:2 G4:2 G4:2
+  walk: "^1:6 ^3:3 ^1:3 ^2:6 ^3:6"
+  pick: "^1:3 ^2:3 ^3:3 ^2:3 ^1:3 ^2:3 ^3:3 ^2:3"
+  shimmer: "^2:24"
+  shimmer5: "^3:24"
+  sparkle: "^1:3 ^2:3 ^3:3 ^1+:3 ^3:3 ^2:3 ^1:3 ^2:3"
+
+grooves:
+  walk:
+    kick:  "x...........x..x........"
+    snare: "......x...........x....."
+  walk_end:
+    kick:  "x...........x..x........|x...........x..x........|x...........x..x........|x...........x..x........|x...........x..x........|x...........x..x........|x...........x..x........|x...........x..........."
+    snare: "......x...........x.....|......x...........x.....|......x...........x.....|......x...........x.....|......x...........x.....|......x...........x.....|......x...........x.....|......x.........x..x.xxx"
+  hats:
+    h: "x..o..x..o..x..o..x..o.."
+
+sections:
+  intro:
+    bars: 1
+    chords: "C"
+    parts: {lead: "r:18 G4:2 G4:2 G4:2", brass: "r:18 G4:2 G4:2 G4:2", bass: walk, guitar: pick, hat: hats}
+  a:
+    bars: 8
+    chords: strain_a
+    parts: {lead: theme_a, brass: theme_a, strings: shimmer, guitar: pick, bass: walk, drums: walk, hat: hats}
+  b:
+    bars: 8
+    chords: strain_b
+    gain: {brass: -6}
+    parts: {lead: theme_b, brass: theme_b, strings: shimmer5, guitar: pick, bass: walk, arp: sparkle, drums: walk_end, hat: hats}
+
+arrangement: [intro, a, b]
+loop_start: a
