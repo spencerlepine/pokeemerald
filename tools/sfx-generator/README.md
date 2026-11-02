@@ -3,7 +3,7 @@
 **Status:** DONE. Approved by the owner on 2026-11-01. The first eight SFX are in `../../game`: hot-swaps
 SE_BALL_THROW (pod throw) and SE_POKENAV_CALL (comlink call), and net-new SE_ASTROMECH_CHATTER (270),
 SE_BLASTER_BOLT (271), SE_HYPERSPACE_JUMP (272), SE_SABER_HUM (273, loops), SE_SABER_IGNITE (274) and
-SE_VADER_BREATH (275). The net-new ones have song ids but no callers yet (port work in `game_port.csv`).
+SE_VADER_BREATH (275). The net-new ones have song ids but no callers yet (port work in `game_port.csv`). The other 45 (24 hot-swaps, 21 net-new) are generated (specs in `specs/`, files in `../../wiki/audio/`, status AUDIO_READY) and wait for owner review and `install`.
 
 Sound effects: the 26 mapped hot-swaps (capture pods, comlink, doors, hover-bike, kyber, freighter) and the 17
 net-new (blaster, lightsabers, Force, turbolaser, hyperspace, astromech, Vader's breath...). Wiki rows:

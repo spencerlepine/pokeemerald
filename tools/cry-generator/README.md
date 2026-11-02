@@ -1,7 +1,7 @@
 # cry-generator
 
 **Status:** DONE. Approved by the owner on 2026-11-01. The first six cries (SUNCHICK, MASSIFF, MYNOCK, EXOGORTH,
-R2 UNIT, PERSUADER) are in `../../game`; the other 380 rows are made the same way, a spec at a time.
+R2 UNIT, PERSUADER) are in `../../game`; the other 380 are generated (specs in `specs/`, files in `../../wiki/audio/`, status AUDIO_READY) and wait for owner review and `install`.
 
 One cry per companion: creature calls, droid beeps and servos. Wiki rows: `../../wiki/database/pending_audio.csv`,
 category `cry`, HOTSWAP (386 rows). Each row's `sw_subject` is the brief and `asset_file` the slot it replaces.
@@ -60,6 +60,12 @@ Curves are `[[t, value], ...]`, interpolated (pitch exponentially).
 Design notes learned on the first batch: put a creature's fundamental around 150-900 Hz and get brightness
 from the formants (like the vanilla cries), not from a very high fundamental; very bright, loud voices hit the
 DPCM slew limit and come out gritty and quieter. Droids read best with stepped tones (`pitch_step`) and warble.
+
+Learned on the full set (2026-11-02, all 380 remaining cries generated and stored in the wiki as AUDIO_READY):
+small, bright or noisy voices make the DPCM fit turn loudness down (peak/rms WARNs); `emphasis` 0.4-0.7 on the
+voice layers, less source `noise`, a tri in the source mix or `tilt_db: -3` fix it, while heavy `drive` makes it
+worse. Quiet dense voices take `master.rms` 0.27-0.30 or a short attack transient. Give a family one voice
+(source mix, vowels, motif) and make later stages lower and longer within each slot's 0.5x-1.6x window.
 
 ## Files
 
