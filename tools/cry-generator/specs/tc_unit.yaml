@@ -1,0 +1,24 @@
+name: tc_unit
+slot: porygon2
+brief: 'TC UNIT: electronic droid voice: beeps, whistles and servo whirs. TC-series protocol droid.'
+kind: droid
+size: 0.37
+seed: 262
+layers:
+  # TC protocol droid: the family's stepped droid speech, smoother and lower and calm ("a-ha-um"),
+  # with a soft confirming chime.
+  - type: voice
+    pitch: [[0.0, 336.0], [0.162, 309.12], [0.18, 280.0], [0.324, 257.6], [0.34, 252.0], [0.574, 231.84]]
+    pitch_step: 0.02
+    source: {pulse: 0.8, saw: 0.4, pulse_width: 0.35, noise: 0.04}
+    vowels: [[0.0, a], [0.18, ae], [0.34, o], [0.6, o]]
+    env: [[0, 0], [0.01, 1], [0.144, 0.8], [0.171, 0.15], [0.19, 1], [0.308, 0.8], [0.332, 0.15], [0.35, 1], [0.548, 0.8],
+      [0.587, 0.15], [0.61, 0]]
+    jitter: 0.0
+    gain: 1.0
+  - type: tone
+    at: 0.6
+    wave: sine
+    pitch: [[0, 1320], [0.06, 1320], [0.061, 1760], [0.12, 1760]]
+    env: [[0, 0], [0.005, 0.6], [0.11, 0.4], [0.13, 0]]
+    gain: 0.5

@@ -1,0 +1,24 @@
+name: jetsquid
+slot: remoraid
+brief: 'JETSQUID: creature call that fits its look and size. Squid that fires water jets.'
+kind: creature
+size: 0.31
+seed: 251
+layers:
+  # Jet squid: a sharp water-jet squirt and a quick bubbly burble.
+  # Family voice (jet squirt + bubbling e -> o -> u burble) shared with OCTOCANNON.
+  - type: noise
+    band: [[0, 3000], [0.1, 1500]]
+    q: 1.5
+    env: [[0, 0], [0.01, 0.8], [0.1, 0]]
+    gain: 0.5
+  - type: voice
+    at: 0.08
+    pitch: [[0.0, 600.0], [0.066, 750.0], [0.275, 600.0], [0.396, 450.0]]
+    source: {pulse: 0.8, saw: 0.4, pulse_width: 0.3, noise: 0.1}
+    vowels: [[0.0, e], [0.132, o], [0.396, u]]
+    env: [[0.0, 0], [0.011, 1], [0.275, 0.75], [0.407, 0]]
+    vibrato: {rate: 30, depth: 0.05}
+    growl: 0.1
+    growl_rate: 40
+    jitter: 0.02

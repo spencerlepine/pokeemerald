@@ -1,0 +1,25 @@
+name: sunseed
+slot: sunkern
+brief: 'SUNSEED: creature call that fits its look and size. Seed that drinks twin-sun light.'
+kind: creature
+size: 0.14
+seed: 271
+layers:
+  # Sun seed: two tiny bright twin-sun chirps, a fifth apart.
+  # Family voice (narrow-pulse i -> ee chirp, twin-note motif) shared with TWINSUNFLR.
+  - type: voice
+    pitch: [[0.0, 700.0], [0.042, 840.0], [0.14, 770.0]]
+    source: {pulse: 0.8, saw: 0.3, pulse_width: 0.2, noise: 0.04}
+    vowels: [[0.0, i], [0.14, ee]]
+    env: [[0.0, 0], [0.0084, 1], [0.112, 0.7], [0.154, 0]]
+    vibrato: {rate: 20, depth: 0.02}
+    gain: 1.0
+  - type: voice
+    at: 0.18
+    pitch: [[0.0, 1050.0], [0.048, 1260.0], [0.16, 1155.0]]
+    source: {pulse: 0.8, saw: 0.3, pulse_width: 0.2, noise: 0.04}
+    vowels: [[0.0, i], [0.16, ee]]
+    env: [[0.0, 0], [0.0096, 1], [0.128, 0.7], [0.176, 0]]
+    vibrato: {rate: 20, depth: 0.02}
+    gain: 1.0
+master: {rms: 0.3}

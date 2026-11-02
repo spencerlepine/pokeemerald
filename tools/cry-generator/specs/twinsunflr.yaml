@@ -1,0 +1,25 @@
+name: twinsunflr
+slot: sunflora
+brief: 'TWINSUNFLR: creature call that fits its look and size. Flower that follows both suns.'
+kind: creature
+size: 0.34
+seed: 272
+layers:
+  # Twin-sun flower: the family twin chirp opened into a warm, sunny two-note song that turns
+  # to follow the suns.
+  - type: voice
+    pitch: [[0.0, 560.0], [0.066, 672.0], [0.22, 616.0]]
+    source: {pulse: 0.8, saw: 0.3, pulse_width: 0.2, noise: 0.04}
+    vowels: [[0.0, i], [0.22, ee]]
+    env: [[0.0, 0], [0.0132, 1], [0.176, 0.7], [0.242, 0]]
+    vibrato: {rate: 20, depth: 0.02}
+    gain: 1.0
+  - type: voice
+    at: 0.27
+    pitch: [[0.0, 840.0], [0.12, 1008.0], [0.4, 924.0]]
+    source: {pulse: 0.8, saw: 0.3, pulse_width: 0.2, noise: 0.04}
+    vowels: [[0, i], [0.2, e], [0.44, ae]]
+    env: [[0.0, 0], [0.024, 1], [0.32, 0.7], [0.44, 0]]
+    vibrato: {rate: 12, depth: 0.03}
+    gain: 1.0
+master: {rms: 0.3}

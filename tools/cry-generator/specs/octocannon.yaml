@@ -1,0 +1,37 @@
+name: octocannon
+slot: octillery
+brief: 'OCTOCANNON: creature call that fits its look and size. Octopus with a water cannon.'
+kind: creature
+size: 0.43
+seed: 252
+layers:
+  # Water-cannon octopus: the family burble, deep and wobbling, then a booming cannon blast of
+  # water and a gurgling recoil.
+  - type: voice
+    pitch: [[0.0, 330.0], [0.096, 412.5], [0.4, 330.0], [0.576, 247.5]]
+    source: {pulse: 0.8, saw: 0.4, pulse_width: 0.3, noise: 0.1}
+    vowels: [[0.0, e], [0.192, o], [0.576, u]]
+    env: [[0.0, 0], [0.016, 1], [0.4, 0.75], [0.592, 0]]
+    vibrato: {rate: 30, depth: 0.05}
+    growl: 0.35
+    growl_rate: 40
+    jitter: 0.02
+  - type: click
+    times: [0.6]
+    gain: 0.8
+  - type: noise
+    at: 0.6
+    band: [[0, 2200], [0.25, 700]]
+    q: 1.0
+    env: [[0, 0], [0.01, 1], [0.15, 0.5], [0.3, 0]]
+    gain: 0.6
+  - type: voice
+    at: 0.85
+    pitch: [[0.0, 260.0], [0.063, 325.0], [0.2625, 260.0], [0.378, 195.0]]
+    source: {pulse: 0.8, saw: 0.4, pulse_width: 0.3, noise: 0.1}
+    vowels: [[0.0, e], [0.126, o], [0.378, u]]
+    env: [[0.0, 0], [0.0105, 1], [0.2625, 0.75], [0.3885, 0]]
+    vibrato: {rate: 30, depth: 0.05}
+    growl: 0.3
+    growl_rate: 40
+    jitter: 0.02

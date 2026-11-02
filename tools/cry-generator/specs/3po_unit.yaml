@@ -1,0 +1,27 @@
+name: 3po_unit
+slot: porygon
+brief: '3PO UNIT: electronic droid voice: beeps, whistles and servo whirs. 3PO-series protocol droid.'
+kind: droid
+size: 0.42
+seed: 261
+layers:
+  # 3PO protocol droid: a servo tick and three fussy, stepped speech-like syllables ("oh-dear-me")
+  # rising in alarm. Family voice (formant-stepped droid speech) shared with TC UNIT.
+  - type: click
+    times: [0.0, 0.03]
+    gain: 0.5
+  - type: servo
+    pitch: [[0, 300], [0.08, 500], [0.12, 400]]
+    env: [[0, 0], [0.02, 0.4], [0.1, 0.3], [0.12, 0]]
+    grit: 0.3
+    gain: 0.4
+  - type: voice
+    at: 0.12
+    pitch: [[0.0, 330.0], [0.198, 303.6], [0.22, 429.0], [0.4, 394.68], [0.42, 528.0], [0.744, 485.76]]
+    pitch_step: 0.02
+    source: {pulse: 0.8, saw: 0.4, pulse_width: 0.35, noise: 0.04}
+    vowels: [[0.0, o], [0.22, e], [0.42, i], [0.78, i]]
+    env: [[0, 0], [0.01, 1], [0.176, 0.8], [0.209, 0.15], [0.23, 1], [0.38, 0.8], [0.41, 0.15], [0.43, 1], [0.708, 0.8], [
+        0.762, 0.15], [0.79, 0]]
+    jitter: 0.0
+    gain: 1.0
