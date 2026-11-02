@@ -69,13 +69,14 @@ class Scene:
         return self
 
     def solid_at(self, p):
+        """Solids combine in the order they were added: a cut removes only what came before it, so a
+        pit can be cut and then furnished (steps, a pad, a ladder)."""
         add = np.zeros(len(p), bool)
-        for s in self.solids:
-            if not s.subtract:
-                add |= s.inside(p)
         for s in self.solids:
             if s.subtract:
                 add &= ~s.inside(p)
+            else:
+                add |= s.inside(p)
         return add
 
     def cast(self, o, d, tmin=0.0):
@@ -284,7 +285,7 @@ def render(scene, W, H, margin=6):
     hit = hit & ~hidet
     outl = outl & ~hidet
     out[:, 3] = np.where(hit, 255, 0)
-    gs = ground & shadow
+    gs = (ground | hidet) & shadow
     out[gs] = (0, 0, 0, 60)
     img = out.reshape(H, Wm, 4)
     # outlines: the silhouette, and the far side of depth jumps

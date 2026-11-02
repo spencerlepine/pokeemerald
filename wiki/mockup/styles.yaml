@@ -9,7 +9,7 @@
 #     block box L oct T notch court wings hall palace pitched barrel quonset hangar tower round-tower stepped
 #     dome domes2 dome-block dome-porch store cone glass-dome bunker buried stilts stilts-dome stilts-flat
 #     deck pad bay plant lab arena hipped
-#     giants (border pieces, may run off the map): trench-wall stilt-city city-edge
+#     giants (border pieces, may run off the map): trench-wall
 #   `variants: [{build: ...}, ...]` picks one per placed building (stable by position), so a town's homes vary.
 #   `height` scales the walls (1.0 = default). `field` is the pitch colour of an arena.
 #   `kind` is the first-pass name (box | dome | pitched | stepped | tower | hall | dish | platform), used when no `build`.
@@ -244,6 +244,4 @@ shapes:
   art:new:hideout-pc:             {kind: slab, fill: "#4a5a6a", trim: "#5fd0ff"}
 
   # giants: huge border pieces placed by mockup overrides on blocked edge cells (no door)
-  art:giant:city-edge:            {kind: box, build: city-edge}
   art:giant:trench-wall:          {kind: box, build: trench-wall}
-  art:giant:stilt-city:           {kind: box, build: stilt-city, wall: "#d4d8e0", roof: "#aeb6c4", trim: "#5a6474"}

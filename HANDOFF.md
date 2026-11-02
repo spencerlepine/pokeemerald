@@ -57,13 +57,15 @@ The owner split the remaining work into phases on 2026-11-02.
    (enforced in `solid.py`: oval depth = radius·cos45°, domes at most hemispheres, shrink rather than squash); think big with giant border pieces (`build.py` GIANTS, placed by overrides, drawn behind everything).
    Cleanup (owner, 2026-11-02): debris, cliff-town, hangar-wall, fortress-wall, palace-wall, temple-stairs, cliff-door, comm-tower, obelisk, spire
    and saucer were scrapped;
-   keep only what looks good. Ship-hull and undercity-rim were scrapped too. **From here on: one building category at a
+   keep only what looks good. Ship-hull, undercity-rim, stilt-city and city-edge were scrapped too;
+   only the Death Star trench wall remains as a giant. **From here on: one building category at a
    time, small and high quality, reviewed before the next. No batches.** Colour palettes are parked (owner: not yet).
    The current focus is making lots of new pieces (owner: "we can make SO MUCH art"), not placing them in towns:
    categories live in `tools/mockup/mockup/kit.py` with a simplicity guardrail (16 solids, palette colours only) and are
    reviewed as side-by-side sheets in `wiki/mockup/kit/`. Pieces without doors are welcome. Sunken pieces are allowed
    again. Many town areas have no trees; keep trees out of kit sheets and scenes.
-   Category 1, `doorless` (vaporator, mast, dish, beacon, tanks, stack, pylon, relay, crates, core): awaiting review.
+   Category 1, `doorless` (vaporator, mast, dish, beacon, tanks, stack, pylon, relay, crates, core): APPROVED, all kept.
+   Category 2, `sunken` (pit-home, stairwell, hatch, grate, trench, sunken-bay, well, mineshaft): awaiting review.
 3. **Real art.** This resumes the paused art tools. The first art step is calibrating the Fortree tree house in
    [`tools/world-art`](tools/world-art/README.md) (STYLE.md section 9). The tile pipeline is in
    [`tools/tile-generator/PLAN.md`](tools/tile-generator/PLAN.md).

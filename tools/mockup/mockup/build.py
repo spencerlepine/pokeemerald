@@ -545,33 +545,6 @@ def m_hipped(m):
     m.windows(0, m.W, 0, h * 0.45)
 
 
-def m_city_edge(m):
-    """A city skyline wall: a row of roofed towers of different widths, heights and depths."""
-    W, H = m.W, m.H
-    x = 0
-    k = 0
-    while x < W - 8:
-        k += 1
-        w = 16 + 8 * m.r(k, 4)
-        w = min(w, W - x)
-        d = 16 + 8 * m.r(k + 7, 3)
-        hgt = min(H - d - 10, 24 + 12 * m.r(k + 3, 5))
-        y0 = 4 * m.r(k + 11, 3)
-        col = shade(m.wall, -0.06 * (k % 3))
-        m.add(S.box(x + 0.5, y0, 0, x + w - 0.5, y0 + d, hgt, col, m.roof))
-        roof = m.r(k + 5, 3)
-        if roof == 0 and hgt + 10 < H - d:
-            m.add(S.gable(x, y0 - 1, x + w, y0 + d + 1, hgt, 8, m.roof))
-        elif roof == 1 and hgt + 10 < H - d:
-            m.add(S.hip(x, y0 - 1, x + w, y0 + d + 1, hgt, 8, m.roof))
-        else:
-            m.add(S.box(x + w / 2 - 0.8, y0 + d / 2, hgt, x + w / 2 + 0.8, y0 + d / 2 + 1.6, hgt + 9, m.trim))
-        for z in range(8, int(hgt) - 4, 8):
-            for wx in range(int(x) + 4, int(x + w) - 4, 6):
-                m.add(S.box(wx, y0 - 1, z, wx + 2.5, y0 + 1, z + 3.5, m.glass, subtract=True))
-        x += w
-
-
 def _hull(m):
     return (150, 150, 150) if m.grey else m.st.get("hull", (158, 162, 168))
 
@@ -598,25 +571,7 @@ def m_trench_wall(m):
         m.add(S.box(-40, 0, z, W + 40, 4, z + 2.5, shade(hull, 0.15)))
 
 
-def m_stilt_city(m):
-    """Kamino's sea edge: giant domed platforms on clusters of tall pillars, rising off the top of the map."""
-    W, H = m.W, m.H
-    wall, roof = (m.wall, m.roof)
-    x = 30 if m.r(1, 2) else 70
-    while x < W + 60:
-        a, b = 52, 30
-        cy = b + 20
-        for f in (-0.6, -0.2, 0.2, 0.6):
-            px = x + a * f
-            m.add(S.cylinder(px, cy - b * 0.7, 4, 3, -6, 90, shade(wall, -0.15)))
-            m.add(S.cylinder(px, cy - b * 0.7, 5, 3.6, -6, -2, shade(wall, -0.3)))
-        m.add(S.cylinder(x, cy, a * 0.5, b * 0.5, 40, 90, shade(wall, -0.1)))
-        m.add(S.cylinder(x, cy, a, b, 90, 104, wall, roof))
-        m.add(S.dome(x, cy, a * 0.9, b * 0.9, 104, 22, roof))
-        x += 150
-
-
-GIANTS = ["trench-wall", "stilt-city", "city-edge"]
+GIANTS = ["trench-wall"]
 
 BUILDS = {
     "block": m_block, "box": m_block,
@@ -628,9 +583,9 @@ BUILDS = {
     "dome": m_dome, "domes2": m_domes2, "dome-block": m_dome_block, "store": m_store,
     "bunker": m_bunker, "buried": m_buried, "bay": m_bay, "pad": m_pad, "dome-porch": m_dome_porch,
     "glass-dome": m_glass_dome, 
-    "hipped": m_hipped,  "city-edge": m_city_edge,
+    "hipped": m_hipped,
       
-    "trench-wall": m_trench_wall, "stilt-city": m_stilt_city,
+    "trench-wall": m_trench_wall,
     "quonset": m_quonset, "hangar": lambda m: m_quonset(m, wide=True),
     "stilts": m_stilts, "stilts-dome": lambda m: m_stilts(m, "dome", round_=True),
     "stilts-flat": lambda m: m_stilts(m, "flat"),

@@ -40,7 +40,7 @@ python3 -m mockup missing                 # art ids that have no shape in styles
     model too. Sunken courtyards were dropped (owner: doors can't sit at the bottom of a pit like that). `python3 -m mockup builds [--grey]` draws them all.
   - **Giants** (`GIANTS` in build.py) are huge pieces for the edges of a map, modelled at true scale and
     only partly drawn: the sprite is clipped to its box, so a wall or a city runs off the map and the player
-    sees only its base. trench-wall, stilt-city, city-edge. Giants draw first, behind every
+    sees only its base. Only trench-wall is kept. Giants draw first, behind every
     building, so they never cover playable content.
     Solids are hidden below ground unless made with `below=True`. They sit on blocked border cells and are placed only by mockup
     overrides (`wiki/mockup/overrides/<area>.yaml`, `add: buildings`), never in phase 1.
@@ -52,7 +52,7 @@ python3 -m mockup missing                 # art ids that have no shape in styles
     never squashed (`fit_round` in build.py).
     The owner prefers roofed buildings; keep round ones for iconic places only.
   - **Cleaned up (owner, 2026-11-02):** scrapped as weak art: debris, cliff-town, hangar-wall, fortress-wall,
-    palace-wall, temple-stairs, cliff-door, comm-tower, obelisk, spire, saucer, ship-hull, undercity-rim (and earlier shield-gen, turret). New buildings come **one category at a
+    palace-wall, temple-stairs, cliff-door, comm-tower, obelisk, spire, saucer, ship-hull, undercity-rim, stilt-city, city-edge (and earlier shield-gen, turret). New buildings come **one category at a
     time**, small and high quality, each reviewed before the next. No batches.
   - **Categories** (`mockup/kit.py`, owner 2026-11-02): new pieces live in `CATEGORIES` and register into
     `BUILDS`. A **simplicity guardrail** runs on every piece: at most 16 solids, and colours only from the
@@ -62,6 +62,11 @@ python3 -m mockup missing                 # art ids that have no shape in styles
     for scale. The owner reviews pieces side by side, not placed in towns.
     1. `doorless`: utility and signal structures with no door: vaporator, mast, dish, beacon, tanks, stack,
        pylon, relay, crates, core.
+    2. `sunken`: pieces cut into the ground: pit-home, stairwell, hatch, grate, trench, sunken-bay, well,
+       mineshaft. The terrain is a see-through slab (`hide_top`, `below`), a pit is a cut allowed below
+       ground, so the ray sees a pit's north wall and floor. Doors in a pit go in its north wall.
     Sunken pieces are allowed again now that the projection rule is enforced (owner, 2026-11-02).
+  - **Solids combine in order** (`Scene.solid_at`): a cut removes only what was added before it, so a pit
+    can be cut and then furnished with steps, a pad or a ladder.
   - `render --grey` draws buildings in neutral grey (the pure greybox look); `--out DIR` writes elsewhere.
 - `mockup/draw.py`: terrain, props and people. `mockup/cli.py`: the commands.

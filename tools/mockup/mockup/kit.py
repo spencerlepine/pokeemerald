@@ -231,7 +231,179 @@ DOORLESS = {
     "core": (d_core, [(2, 3), (3, 4)]),
 }
 
-CATEGORIES = {"doorless": DOORLESS}
+# --------------------------------------------------------------------------- category 2: sunken pieces
+# Cut into the ground. The terrain is a see-through slab (its top shows the map's ground), and a pit is a
+# subtractive solid allowed below ground, so the ray sees the pit's north wall and floor, never the south
+# wall. Doors in a pit sit in its north wall, facing the player.
+
+
+def _slab(m, depth):
+    p = palette(m)
+    return S.box(-2, -4, -depth - 6, m.W + 2, m.H + 8, 0, p["trim"], hide_top=True, below=True, outline=False)
+
+
+def _pit(x0, y0, x1, y1, depth, wall, floor):
+    return S.box(x0, y0, -depth, x1, y1, 1, wall, floor, subtract=True, below=True)
+
+
+def _round_pit(cx, cy, a, depth, wall, floor, top=1):
+    return S.cylinder(cx, cy, a, 0, -depth, top, wall, floor, subtract=True, below=True)
+
+
+def _recess(x, yn, z0, w, h, col):
+    """A doorway or hatch cut into a pit's north wall (at y = yn), facing south."""
+    return S.box(x - w / 2, yn - 1, z0, x + w / 2, yn + 4, z0 + h, col, subtract=True, below=True)
+
+
+def s_pithome(m):
+    """Pit home: a round courtyard sunk into the ground, doorways in its far wall, an entry hut on the rim."""
+    p = palette(m)
+    dep = 16 + 2 * m.r(1, 3)
+    a = min(m.W / 2 - 10, (m.H - 6) / (2 * K))
+    cx = m.W / 2 + (6 if m.r(2, 2) else -6)
+    cy = a * K + 3
+    yn = cy + a * K
+    m.add(_slab(m, dep), _round_pit(cx, cy, a, dep, p["wall"], p["roof"]))
+    n = 1 + m.r(3, 3)
+    for i in range(n):
+        x = cx + (i - (n - 1) / 2) * 14
+        yw = cy + a * K * (1 - ((x - cx) / a) ** 2) ** 0.5
+        m.add(_recess(x, yw, -dep, 8, 12, p["dark"]))
+    hx = 9 if cx > m.W / 2 else m.W - 9
+    m.add(S.cylinder(hx, cy + 2, 7, 0, 0, 5, p["wall"]), S.dome(hx, cy + 2, 7, 0, 5, None, p["roof"]),
+          S.box(hx - 2.5, cy + 2 - 7 * K - 1, 0, hx + 2.5, cy + 2 - 7 * K + 1.5, 7, p["dark"], subtract=True))
+
+
+def s_stairwell(m):
+    """Stairwell: a rectangular cut with steps running down toward the viewer into a passage under the
+    south rim, and a low rail along the far edge."""
+    p = palette(m)
+    dep = 18
+    x0, x1 = 3, m.W - 3
+    y0, y1 = 2, min(m.H - 4, 30)
+    m.add(_slab(m, dep), _pit(x0, y0, x1, y1, dep, p["wall"], p["roof"]))
+    n = 4 + m.r(1, 2)
+    sw = (x1 - x0) * (0.55 if m.r(2, 2) else 1.0)
+    sx = x0 if m.r(3, 2) else x1 - sw
+    L = (y1 - y0) - 4
+    for i in range(n):
+        ya = y1 - L * (i + 1) / n
+        col = p["roof"] if i % 2 else p["wall"]
+        m.add(S.box(sx, ya, -dep, sx + sw, y1, -dep * (i + 1) / (n + 1), p["trim"], col, below=True))
+    m.add(S.box(x0 - 1, y1, 0, x1 + 1, y1 + 2, 4, p["trim"]))
+
+
+def s_hatch(m):
+    """Hatch: a round collar in the ground, either shut with a lid or open over a dark shaft and ladder."""
+    p = palette(m)
+    a = min(m.W / 2 - 2, (m.H - 6) / (2 * K) - 1)
+    cx, cy = m.W / 2, a * K + 2
+    m.add(_slab(m, 30), S.cylinder(cx, cy, a, 0, 0, 2.5, p["trim"], p["roof"]))
+    if m.r(1, 2):
+        m.add(_round_pit(cx, cy, a * 0.7, 30, p["dark"], p["dark"], top=3))
+        for z in range(-4, -26, -5):
+            m.add(S.box(cx - 3, cy + a * 0.7 * K - 1.5, z, cx + 3, cy + a * 0.7 * K, z + 1, p["trim"], below=True))
+    else:
+        m.add(S.cylinder(cx, cy, a * 0.72, 0, 2.5, 4, p["roof"]),
+              S.box(cx - 1, cy - a * 0.5 * K, 4, cx + 1, cy + a * 0.5 * K, 5, p["trim"]))
+
+
+def s_grate(m):
+    """Vent grate: a square shaft with bars across the top and a lit fan housing far below."""
+    p = palette(m)
+    dep = 12
+    s = min(m.W - 6, m.H - 6, 30)
+    x0, y0 = (m.W - s) / 2, 3
+    m.add(_slab(m, dep + 4), _pit(x0, y0, x0 + s, y0 + s, dep, p["trim"], p["dark"]),
+          S.box(x0 - 2, y0 - 2, 0, x0 + s + 2, y0 + s + 2, 1.5, p["trim"], p["roof"]),
+          S.box(x0, y0, -1, x0 + s, y0 + s, 2, p["trim"], subtract=True, below=True),
+          S.box(x0 + s * 0.25, y0 + s * 0.3, -dep, x0 + s * 0.75, y0 + s * 0.9, -dep + 3, p["light"], below=True))
+    n = 3 + m.r(1, 3)
+    for i in range(n):
+        x = x0 + (i + 0.5) * s / n
+        m.add(S.box(x - 1, y0 - 1, 0, x + 1, y0 + s + 1, 1.5, p["roof"]))
+
+
+def s_trench(m):
+    """Trench: a long narrow cut with braced walls and a bunker door at one end."""
+    p = palette(m)
+    dep = 16
+    w = 16 + 2 * m.r(1, 3)
+    y0 = 3
+    x0, x1 = 3, m.W - 3
+    m.add(_slab(m, dep), _pit(x0, y0, x1, y0 + w, dep, p["trim"], p["roof"]))
+    xd = x1 - 10 if m.r(2, 2) else x0 + 10
+    m.add(_recess(xd, y0 + w, -dep, 8, 12, p["dark"]))
+    k = 0
+    for x in range(int(x0) + 12, int(x1) - 6, 18):
+        k += 1
+        if abs(x - xd) > 8:
+            m.add(S.box(x, y0 + w - 2, -dep, x + 2, y0 + w, 0, p["trim"], below=True))
+    m.add(S.box(x0 - 1, y0 + w, 0, x1 + 1, y0 + w + 3, 3, p["roof"], p["roof"]))
+
+
+def s_sunken_bay(m):
+    """Sunken landing bay: a deep octagonal pit with a ringed pad on its floor and two doors in the far wall."""
+    p = palette(m)
+    dep = 22
+    W = m.W
+    D = min(m.H - 6, W * K + 8)
+    k = min(14, W * 0.18)
+    x0, y0, x1, y1 = 3, 3, W - 3, 3 + D
+    poly = [(x0 + k, y0), (x1 - k, y0), (x1, y0 + k * K), (x1, y1 - k * K), (x1 - k, y1), (x0 + k, y1),
+            (x0, y1 - k * K), (x0, y0 + k * K)]
+    cx, cy = W / 2, (y0 + y1) / 2
+    a = min(W / 2 - 14, (D / 2 - 4) / K)
+    m.add(_slab(m, dep), S.prism(poly, -dep, 1, p["trim"], p["roof"], subtract=True, below=True),
+          S.cylinder(cx, cy, a, 0, -dep, -dep + 1, p["trim"], p["trim"], below=True),
+          S.cylinder(cx, cy, a - 2.5, 0, -dep, -dep + 1.4, p["roof"], p["roof"], below=True))
+    for x in (x0 + k + 10, x1 - k - 10):
+        m.add(_recess(x, y1, -dep, 10, 14, p["dark"]))
+    m.add(S.box(x0 + k, y1, 0, x1 - k, y1 + 2, 3, p["trim"]))
+
+
+def s_well(m):
+    """Well or cistern: a stone collar over a round shaft with water shining at the bottom."""
+    p = palette(m)
+    a = min(m.W / 2 - 2, (m.H - 8) / (2 * K) - 1)
+    cx, cy = m.W / 2, a * K + 2
+    m.add(_slab(m, 20), S.cylinder(cx, cy, a, 0, 0, 5, p["wall"], p["roof"]),
+          _round_pit(cx, cy, a * 0.7, 10, p["wall"], p["glass"], top=6))
+    if m.r(1, 2):
+        m.add(S.box(cx - a, cy - 1, 5, cx - a + 2, cy + 1, 16, p["trim"]),
+              S.box(cx + a - 2, cy - 1, 5, cx + a, cy + 1, 16, p["trim"]),
+              S.box(cx - a, cy - 1, 16, cx + a, cy + 1, 18, p["roof"]))
+
+
+def s_mineshaft(m):
+    """Mine shaft: a square shaft dropping out of sight under a head frame with a winch wheel."""
+    p = palette(m)
+    s = min(m.W - 12, 26)
+    x0, y0 = (m.W - s) / 2, 4
+    h = min(m.H - s - 12, 40) * (0.8 + 0.1 * m.r(1, 3))
+    m.add(_slab(m, 40), _pit(x0, y0, x0 + s, y0 + s, 40, p["wall"], p["dark"]),
+          S.box(x0 - 3, y0 - 3, 0, x0 + s + 3, y0 + s + 3, 2, p["trim"], p["roof"]),
+          S.box(x0, y0, -1, x0 + s, y0 + s, 3, p["trim"], subtract=True, below=True))
+    cy = y0 + s / 2
+    for x in (x0 - 3, x0 + s + 1):
+        m.add(S.box(x, cy - 1, 2, x + 2, cy + 1, h, p["wall"], p["roof"]))
+    m.add(S.box(x0 - 3, cy - 1.5, h, x0 + s + 3, cy + 1.5, h + 3, p["roof"], p["roof"]),
+          S.cylinder(m.W / 2, cy, 5, 0, h + 3, h + 5, p["trim"]),
+          S.box(m.W / 2 - 0.5, cy - 0.5, 8, m.W / 2 + 0.5, cy + 0.5, h, p["trim"]))
+
+
+SUNKEN = {
+    "pit-home": (s_pithome, [(4, 3), (5, 4)]),
+    "stairwell": (s_stairwell, [(2, 3), (3, 3)]),
+    "hatch": (s_hatch, [(1, 1), (2, 2)]),
+    "grate": (s_grate, [(2, 2), (3, 3)]),
+    "trench": (s_trench, [(4, 2), (6, 2)]),
+    "sunken-bay": (s_sunken_bay, [(5, 4), (6, 5)]),
+    "well": (s_well, [(2, 2), (2, 3)]),
+    "mineshaft": (s_mineshaft, [(3, 4), (3, 5)]),
+}
+
+CATEGORIES = {"doorless": DOORLESS, "sunken": SUNKEN}
 
 
 def register(builds):
