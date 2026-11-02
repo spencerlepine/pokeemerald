@@ -149,8 +149,20 @@ FAMILIES = {
     ('graphics/naming_screen/cursor.pal', 'naming', [1, 2, 3]),
     ('graphics/naming_screen/keyboard.pal', 'naming', [13, 14, 15]),
   ],
+  '8_card_shop': [
+    # trainer card: the card colour marks the star rank (0 green, 1 bronze, 2 copper, 3 silver, 4 gold).
+    # The two green-hued tiers go Dune (green -> sand, bronze -> taupe) and stay distinct; copper, silver and
+    # gold already fit and keep their faces. Every tier gets the steel header label (0:7-8, 0:13) and steel
+    # backdrop stripes (1:12-13). The pink female backdrop stays (a gender colour). Bank 2 and the card
+    # text windows (banks 8, 15) are not touched.
+    ('graphics/trainer_card/green.pal', 'ui', ALL + [28, 29]),
+    ('graphics/trainer_card/bronze.pal', 'ui', ALL + [28, 29]),
+    *[(f'graphics/trainer_card/{t}.pal', 'ui', [7, 8, 13, 28, 29]) for t in ('copper', 'silver', 'gold')],
+    # shop: buy-list panel (stripes, frame) and the MONEY label
+    ('graphics/shop/menu.png', 'ui', ALL),
+  ],
 }
-DONE = ['1_text_windows', '2_party_summary', '3_bag_pokeblock', '4_pokedex', '5_starnav', '6_pc_storage', '7_battle_naming']
+DONE = ['1_text_windows', '2_party_summary', '3_bag_pokeblock', '4_pokedex', '5_starnav', '6_pc_storage', '7_battle_naming', '8_card_shop']
 
 RGB_RE = re.compile(r'RGB\((\d+), *(\d+), *(\d+)\)')
 def tx_rgb5(m, fam):
