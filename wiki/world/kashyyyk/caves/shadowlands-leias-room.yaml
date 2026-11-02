@@ -3,8 +3,8 @@ name: SHADOWLANDS LEIAS ROOM
 planet: KASHYYYK
 kind: dungeon
 replaces: GraniteCave_StevensRoom
-status: TODO
-story: ''
+status: BLOCKOUT
+story: The hollow where Leia waits with Sen. Organa's message.
 grid: |
   ###############
   ###############
@@ -32,4 +32,4 @@ warps:
 - name: Door
   at: [7, 3]
   to: shadowlands-1f
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

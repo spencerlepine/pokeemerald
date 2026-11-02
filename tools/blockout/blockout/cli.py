@@ -77,7 +77,7 @@ def import_map(name, cat, pos, const_to_name, force=False):
             from . import vanilla as _V
             bw, bh = _sizes(nb)
             hi = min(len(line), c["offset"] + (bw if edge in ("north", "south") else bh))
-        cells = [i for i in range(lo, hi) if line[i] in ".:\"=Hv^<>"]
+        cells = [i for i in range(lo, hi) if line[i] in ".:\"=Hv^<>~"]
         exits.append({"edge": edge, "cells": cells, "to": by_const.get(c["to"], c["to"])})
     people = [p for p in ev["people"]]
     doc = {"id": m["area"], "name": m["sw_name"] if m["kind"] in ("town", "route") else m["area"].replace("-", " ").upper(),

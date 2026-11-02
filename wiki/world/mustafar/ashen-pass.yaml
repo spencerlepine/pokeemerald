@@ -1,0 +1,99 @@
+id: ashen-pass
+name: ASHEN PASS
+planet: MUSTAFAR
+kind: route
+replaces: JaggedPass
+status: BLOCKOUT
+story: Steep ash trail down from Mustafar Peak to the gate of Fortress Vader. Its foot, once Route 112, now leads to the old mining facility.
+grid: |
+  ##############..##############
+  ##############..##############
+  ##############..####..###..###
+  ##############..####.##.######
+  ##############..######..###.##
+  ###########.#....#############
+  #############...##############
+  #.########..#.......##########
+  ##########..........#########.
+  ###########vvv..v#.###########
+  ########""<......>....##..####
+  ########""#vvv..v#..#.#######.
+  .#######""""........#..####.##
+  ####.########...#####..#..####
+  #########vvvvv..vvv##.##..####
+  ##..####<#........#>"""#######
+  #########vvvvv..##v#"".#....##
+  ##########.......#"""".###..##
+  #######..####....#####.#######
+  #######................####..#
+  #.###.##...............####..#
+  #..##.##............#..##.#..#
+  #..####vvv#.........#..#..#..#
+  ########""#v##..vvv##..####..#
+  ########""""##.....>....######
+  #TT#####""""##.....>..TT##...#
+  .#######vvvv##..vvv#..####...#
+  .#..####....##.....#v.v###TT.#
+  .#..#####vvvvv..vvv#..#...TT##
+  ####..#.<.............#...TT#.
+  #.##..#.#.vvvv..vTTvv.#.TT###.
+  ####TT#..........##"".####.##.
+  TT#####vv.vvvv..T""""""#####..
+  TT#####.........#vvvvvv#######
+  TT#####................#TTTTTT
+  TT#######............###TTTTTT
+  TTTTTTTT#####....#####TTTTTTTT
+  TTTTTTTT....##..##....TTTTTTTT
+  TTTTTTTTTTTT......TTTTTTTTTTTT
+  TTTTTTTTTTTT......TTTTTTTTTTTT
+  TTTTTTTTTTTTTT..TTTTTTTTTTTTTT
+  TTTTTTTTTTTTTT..TTTTTTTTTTTTTT
+  TTTTTTTTTTTTTT..TTTTTTTTTTTTTT
+  TTTTTTTTTTTTTT..TTTTTTTTTTTTTT
+  TTTTTTTTTTTTTT..TTTTTTTTTTTTTT
+  TTTTTTTTTTTTTT..TTTTTTTTTTTTTT
+exits:
+- edge: south
+  cells: [14, 15]
+  to: mustafar-mining-facility
+buildings: []
+props:
+- name: Obsidian spire
+  art: art:mustafar:obsidian-spire
+  at: [9, 33]
+  size: [2, 3]
+people:
+- name: Trainer Eho
+  at: [10, 8]
+  role: trainer
+- name: Trainer Emnel
+  at: [16, 35]
+  role: trainer
+- name: Trainer Diora
+  at: [9, 21]
+  role: trainer
+- name: Magma Hideout Guard
+  at: [16, 19]
+  role: npc
+- name: Trainer Akkora
+  at: [14, 25]
+  role: trainer
+- name: Trainer Jevun
+  at: [18, 25]
+  role: trainer
+- name: Item
+  at: [23, 24]
+  role: item
+signs: []
+warps:
+- name: Door
+  at: [13, 5]
+  to: mustafar-peak
+- name: Door
+  at: [14, 5]
+  to: mustafar-peak
+- name: Door
+  at: [16, 18]
+  to: fortress-vader-1f
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Planet border cut: door at [14, 40] to route-112; reached by ship instead.', 'Planet border cut:
+    door at [15, 40] to route-112; reached by ship instead.']

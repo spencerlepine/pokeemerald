@@ -3,8 +3,8 @@ name: FORTRESS VADER 1F
 planet: MUSTAFAR
 kind: dungeon
 replaces: MagmaHideout_1F
-status: TODO
-story: ''
+status: BLOCKOUT
+story: Fortress Vader gate hall, cut into the cliff above the lava.
 grid: |
   #####################################
   #####################################
@@ -54,15 +54,15 @@ people:
 - name: Trainer Roldarg
   at: [30, 20]
   role: trainer
-- name: Event Script_Strength Boulder
+- name: Event object
   at: [5, 22]
-  role: npc
-- name: Event Script_Strength Boulder
+  role: object
+- name: Event object
   at: [7, 22]
-  role: npc
-- name: Event Script_Strength Boulder
+  role: object
+- name: Event object
   at: [6, 23]
-  role: npc
+  role: object
 - name: Item
   at: [3, 20]
   role: item
@@ -80,4 +80,4 @@ warps:
 - name: Door
   at: [20, 22]
   to: fortress-vader-2f-3r
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

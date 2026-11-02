@@ -3,9 +3,9 @@ name: ROUTE 108
 planet: KASHYYYK
 kind: route
 replaces: Route108
-status: TODO
-story: ''
-pos: [140, 360]
+status: BLOCKOUT
+story: Open water around the Republic Wreck, a cruiser that went down in the Battle of Kashyyyk.
+pos: [106, 4]
 grid: |
   ~~~~~~~~~~~~~~~~##~~~............~~~~~~~~~~~~~~##~~~~~~~~~~~
   ##~~~~~~~~~~~~~~##~~..#..##.###..##~~~~~~~~~~~~##~~~~~~~~~##
@@ -29,10 +29,10 @@ grid: |
   ~~~~~~~~~~~~~~~~~~##~~~~~~~##~~~~~~~~~~~~~~~~~~~~~~##~~~~~~~
 exits:
 - edge: west
-  cells: []
+  cells: [0, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 19]
   to: route-107
 - edge: east
-  cells: []
+  cells: [0, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 19]
   to: route-109
 buildings: []
 props: []
@@ -63,4 +63,4 @@ warps:
 - name: Door
   at: [29, 6]
   to: republic-wreck-deck
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Could not fit: Republic cruiser hull']

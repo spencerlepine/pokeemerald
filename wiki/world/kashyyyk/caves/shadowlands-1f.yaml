@@ -3,8 +3,8 @@ name: SHADOWLANDS 1F
 planet: KASHYYYK
 kind: dungeon
 replaces: GraniteCave_1F
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Dark lower levels of the wroshyr forest, first level: roots and hollow trunks.'
 grid: |
   ##########################################
   ##########################################
@@ -45,4 +45,4 @@ warps:
 - name: Door
   at: [5, 10]
   to: shadowlands-leias-room
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

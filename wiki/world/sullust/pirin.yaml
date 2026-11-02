@@ -3,96 +3,132 @@ name: PIRIN
 planet: SULLUST
 kind: town
 replaces: LavaridgeTown
-status: TODO
-story: ''
+status: BLOCKOUT
+story: Sullustan hot-spring town in a volcanic bowl. Ships from Tatooine land at the spaceport; Sabine's Fire arena, the bathhouse and the hot spring pool. The Magma
+  Tunnels lead north.
 pos: [140, 60]
 grid: |
-  ##################TT
-  #####.....#########T
-  ######.##.#########T
-  ###....#T#########TT
-  ###....#####..####TT
-  ###....#####TT####TT
-  ############TT....TT
-  ##..................
-  ##...........#......
-  ##..................
-  ##..................
-  ##..................
-  ########............
-  ########...########.
-  ########...########T
-  ##..####...########T
-  ##............#....T
-  ##T...............TT
-  ###T..............TT
-  ####################
-exits:
-- edge: east
-  cells: [7, 8, 9, 10, 11, 12, 13]
-  to: route-112
-buildings: []
-props: []
+  ##########################################
+  ##########################################
+  #############.......::.....###############
+  ###########.........::......##############
+  ###########.........::.......#############
+  ##########..........::........############
+  ####................::.........###########
+  ####................::...............#####
+  ####................::...............#####
+  ####................::.....:..........####
+  ####................::.....:..........####
+  #####..:............::.....:......:....###
+  ####...:............::.....:......:....###
+  ###....:............::.....:......:.....##
+  ###....:.......::::::::::::.......:.....##
+  ###....:.......::::::::::::::::::::......#
+  ##.....::::::::::::::::::::...............
+  ##.............::::::::::::...............
+  #..............::::::::::::...............
+  ##.............::::::::::::...............
+  ###.................::.......:............
+  ####....~~~~~~~~~...::...................#
+  #######..~~~~~~~~...::..................##
+  #######~~~~~~~~~~~..::.................###
+  #######~~~~~~~~~~~~.::...............#####
+  #######~~~~~~~~~~~~.::...............#####
+  ######~~~~~~~~~~~~..::................####
+  ######....~~~~~~....::................####
+  ######....~~........::................####
+  ######...........###::................####
+  #####...........####::.........##:########
+  #####.........######:::::::::#############
+  ######.......#######::#.....##############
+  ######....################################
+exits: []
+buildings:
+- name: Sabine's arena
+  art: art:sullust:sabine-s-arena
+  at: [4, 6]
+  size: [7, 5]
+  door: 3
+  to: pirin-arena-1f
+- name: Hot-spring bathhouse
+  art: art:sullust:hot-spring-bathhouse
+  at: [5, 18]
+  size: [6, 4]
+  door: 3
+  to: pirin-herb-shop
+- name: Bacta Center
+  art: art:shared:bacta-center
+  at: [25, 5]
+  size: [5, 4]
+  door: 2
+  to: pirin-bacta-center-1f
+- name: Supply Depot
+  art: art:shared:supply-depot
+  at: [33, 7]
+  size: [4, 4]
+  door: 1
+  to: pirin-supply-depot
+- name: Sullustan home
+  art: art:sullust:sullustan-home
+  at: [27, 21]
+  size: [5, 4]
+  door: 2
+  to: pirin-house
+- name: Spaceport hangar (from Tatooine)
+  art: art:tatooine:docking-bay
+  at: [30, 26]
+  size: [8, 4]
+  door: 3
+  to: hangar-tatooine-sullust
+props:
+- name: Steam vent
+  art: art:sullust:steam-vent
+  at: [16, 9]
+  size: [1, 1]
+- name: Steam vent
+  art: art:sullust:steam-vent
+  at: [36, 17]
+  size: [1, 1]
+- name: Steam vent
+  art: art:sullust:steam-vent
+  at: [3, 13]
+  size: [1, 1]
+- name: Steam vent
+  art: art:sullust:steam-vent
+  at: [15, 29]
+  size: [1, 1]
+- name: Basalt column
+  art: art:sullust:basalt-column
+  at: [36, 21]
+  size: [2, 2]
+- name: Fungus stalks
+  art: art:sullust:fungus-stalks
+  at: [24, 11]
+  size: [1, 1]
 people:
-- name: Expert F
-  at: [8, 7]
+- name: Sabine Wren
+  at: [9, 12]
+  role: story
+- name: Bathhouse keeper
+  at: [12, 22]
   role: npc
-- name: Expert M
-  at: [5, 1]
+- name: Spring bather
+  at: [13, 26]
   role: npc
-- name: Old Man
-  at: [5, 8]
+- name: Sullustan miner
+  at: [23, 21]
   role: npc
-- name: Twin
-  at: [10, 13]
-  role: npc
-- name: Hot Springs Old Woman1
-  at: [4, 4]
-  role: npc
-- name: Hot Springs Old Woman2
-  at: [5, 4]
-  role: npc
-- name: '0x0'
-  at: [6, 16]
-  role: npc
-- name: '0x0'
-  at: [12, 15]
-  role: npc
-- name: Egg Woman
-  at: [4, 7]
+- name: Pilot fresh off the shuttle
+  at: [28, 29]
   role: npc
 signs:
-- name: Sign
-  at: [14, 16]
-- name: Sign
-  at: [7, 15]
-- name: Sign
-  at: [17, 5]
-- name: Sign
-  at: [13, 8]
-- name: Sign
-  at: [10, 6]
-- name: Sign
-  at: [16, 5]
-- name: Sign
-  at: [11, 6]
+- name: Town sign
+  at: [18, 30]
+- name: Arena sign
+  at: [12, 10]
 warps:
-- name: Door
-  at: [12, 15]
-  to: pirin-herb-shop
-- name: Door
-  at: [5, 15]
-  to: pirin-arena-1f
-- name: Door
-  at: [15, 5]
-  to: pirin-supply-depot
-- name: Door
-  at: [9, 6]
-  to: pirin-bacta-center-1f
-- name: Door
-  at: [16, 15]
-  to: pirin-house
-- name: Door
-  at: [9, 2]
-  to: pirin-bacta-center-1f
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+- name: Magma Tunnels mouth
+  at: [20, 2]
+  to: magma-tunnels
+todo: ['Vanilla''s east road to Route 112 is cut: the spaceport hangar is the Tatooine/Sullust border (net:border-tatooine-sullust).', Vanilla's herb shop becomes
+    the bathhouse front desk (herbs and hot-spring treats).]

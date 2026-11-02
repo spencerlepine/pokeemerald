@@ -3,8 +3,8 @@ name: STARFALL CAVERN 1F 1R
 planet: SULLUST
 kind: dungeon
 replaces: MeteorFalls_1F_1R
-status: TODO
-story: ''
+status: BLOCKOUT
+story: Cavern where a meteorite fell; Empire and Cartel clash at the entrance.
 grid: |
   ##############################
   ##############################
@@ -52,21 +52,21 @@ exits: []
 buildings: []
 props: []
 people:
-- name: '0x0'
+- name: Event object
   at: [12, 20]
-  role: npc
-- name: '0x0'
+  role: object
+- name: Event object
   at: [14, 21]
-  role: npc
-- name: '0x0'
+  role: object
+- name: Event object
   at: [6, 20]
-  role: npc
-- name: '0x0'
+  role: object
+- name: Event object
   at: [6, 20]
-  role: npc
-- name: '0x0'
+  role: object
+- name: Event object
   at: [6, 21]
-  role: npc
+  role: object
 - name: Prof Cozmo
   at: [13, 23]
   role: npc
@@ -82,16 +82,11 @@ people:
 - name: Item
   at: [26, 32]
   role: item
-signs:
-- name: Sign
-  at: [9, 58]
+signs: []
 warps:
 - name: Door
   at: [27, 18]
   to: route-114
-- name: Door
-  at: [6, 39]
-  to: route-115
 - name: Door
   at: [10, 3]
   to: starfall-cavern-1f-2r
@@ -104,4 +99,4 @@ warps:
 - name: Door
   at: [4, 2]
   to: starfall-cavern-hidden-cave
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Planet border cut: door at [6, 39] to route-115; reached by ship instead.']

@@ -3,8 +3,8 @@ name: STARFALL CAVERN B1F 1R
 planet: SULLUST
 kind: dungeon
 replaces: MeteorFalls_B1F_1R
-status: TODO
-story: ''
+status: BLOCKOUT
+story: Starfall Cavern, lower pools.
 grid: |
   #############################
   #############################
@@ -68,4 +68,4 @@ warps:
 - name: Door
   at: [20, 36]
   to: starfall-cavern-1f-1r
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

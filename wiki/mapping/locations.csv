@@ -75,8 +75,8 @@ location:cave-of-origin,CAVE OF EVIL,HOTSWAP,DONE,PENDING_ART,DAGOBAH,Force verg
 location:southern-island,TYTHON ISLE,HOTSWAP,DONE,PENDING_ART,TYTHON,Island of the Force dragons ASHLA and BOGAN.,
 location:fiery-path,MAGMA TUNNELS,HOTSWAP,DONE,PENDING_ART,SULLUST,Volcanic tunnels.,
 location:fiery-path2,MAGMA TUNNELS,HOTSWAP,DONE,PENDING_ART,SULLUST,Duplicate section.,
-location:jagged-pass,ASHEN PASS,HOTSWAP,DONE,PENDING_ART,SULLUST,Steep ash trail down from Mustafar's landing pad.,
-location:jagged-pass2,ASHEN PASS,HOTSWAP,DONE,PENDING_ART,SULLUST,Duplicate section.,
+location:jagged-pass,ASHEN PASS,HOTSWAP,DONE,PENDING_ART,MUSTAFAR,Steep ash trail down from Mustafar's landing pad.,"Moved to Mustafar (world blockout, 2026-11-02): it joins Mustafar Peak to Fortress Vader."
+location:jagged-pass2,ASHEN PASS,HOTSWAP,DONE,PENDING_ART,MUSTAFAR,Duplicate section.,"Moved to Mustafar (world blockout, 2026-11-02): it joins Mustafar Peak to Fortress Vader."
 location:sealed-chamber,SEALED VAULT,HOTSWAP,DONE,PENDING_ART,KAMINO,Aurebesh-glyph vault that wakes the Wardens.,
 location:underwater-sealed-chamber,UNDERWATER,HOTSWAP,DONE,PENDING_ART,DAGOBAH,,
 location:scorched-slab,SCORCHED HOLLOW,HOTSWAP,DONE,PENDING_ART,ENDOR,Sun-baked hollow under the forest.,

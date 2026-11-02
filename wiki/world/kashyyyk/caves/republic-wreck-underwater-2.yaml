@@ -3,8 +3,8 @@ name: REPUBLIC WRECK UNDERWATER 2
 planet: KASHYYYK
 kind: dungeon
 replaces: AbandonedShip_Underwater2
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Republic Wreck: the sunken hull''s inner room.'
 grid: |
   #####################
   ###.#################
@@ -22,4 +22,4 @@ warps:
 - name: Door
   at: [3, 1]
   to: republic-wreck-underwater-1
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

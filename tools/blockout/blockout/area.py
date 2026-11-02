@@ -114,7 +114,7 @@ class Area:
                 p.append(f"exit {e['edge']} to {e.get('to')} has no cells")
             for c in e["cells"]:
                 x, y = {"north": (c, 0), "south": (c, self.h - 1), "west": (0, c), "east": (self.w - 1, c)}[e["edge"]]
-                if self.cell(x, y) is None or not walkable(self.cell(x, y)) or (x, y) in solid:
+                if self.cell(x, y) is None or not (walkable(self.cell(x, y)) or self.cell(x, y) == "~") or (x, y) in solid:
                     p.append(f"exit {e['edge']} to {e.get('to')}: edge cell [{x}, {y}] is not walkable")
         return p
 

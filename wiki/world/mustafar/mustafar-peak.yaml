@@ -3,8 +3,8 @@ name: MUSTAFAR PEAK
 planet: MUSTAFAR
 kind: route
 replaces: MtChimney
-status: TODO
-story: ''
+status: BLOCKOUT
+story: Lava summit where the shuttle from Tatooine lands and Vader is fought for the first time; the Empire's machine drills into the volcano.
 grid: |
   #############.######.##.################
   ########################################
@@ -55,7 +55,11 @@ grid: |
   #################################..#####
 exits: []
 buildings: []
-props: []
+props:
+- name: Obsidian spire
+  art: art:mustafar:obsidian-spire
+  at: [9, 7]
+  size: [2, 3]
 people:
 - name: Archie
   at: [24, 19]
@@ -165,4 +169,4 @@ warps:
 - name: Door
   at: [21, 41]
   to: ashen-pass
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Could not fit: Mining collector']

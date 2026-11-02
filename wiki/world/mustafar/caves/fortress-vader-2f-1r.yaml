@@ -3,8 +3,8 @@ name: FORTRESS VADER 2F 1R
 planet: MUSTAFAR
 kind: dungeon
 replaces: MagmaHideout_2F_1R
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Fortress Vader: west hall.'
 grid: |
   #################################
   ########.########################
@@ -72,4 +72,4 @@ warps:
 - name: Door
   at: [17, 33]
   to: fortress-vader-3f-1r
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

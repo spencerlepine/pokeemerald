@@ -3,8 +3,8 @@ name: FORTRESS VADER 4F
 planet: MUSTAFAR
 kind: dungeon
 replaces: MagmaHideout_4F
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Fortress Vader: the meditation chamber over the lava, where GREATKRAYT is woken.'
 grid: |
   ###########################################################
   ###########################################################
@@ -38,9 +38,9 @@ exits: []
 buildings: []
 props: []
 people:
-- name: '0x0'
+- name: Event object
   at: [16, 17]
-  role: npc
+  role: object
 - name: Trainer Roldarg
   at: [31, 22]
   role: trainer
@@ -56,9 +56,9 @@ people:
 - name: Maxie
   at: [16, 21]
   role: npc
-- name: '0x0'
+- name: Event object
   at: [16, 17]
-  role: npc
+  role: object
 - name: Item
   at: [3, 7]
   role: item
@@ -70,4 +70,4 @@ warps:
 - name: Door
   at: [20, 21]
   to: fortress-vader-3f-3r
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

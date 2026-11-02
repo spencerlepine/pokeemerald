@@ -1,0 +1,91 @@
+id: rwookrrorro
+name: RWOOKRRORRO
+planet: KASHYYYK
+kind: landmark
+replaces: new
+status: BLOCKOUT
+story: 'Optional: a Wookiee village built across the treetops east of Kachirho, all on one high platform level. Wookiee hunters battle here and a bowcaster maker
+  trades.'
+pos: [59, -24]
+grid: |
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTT====TTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTT======TTTTTTTTTTTTTTT
+  TTTTTTTTTTTTT==========TTTTTTTTTTTTT
+  TTTTTTTT==================TTTTTTTTTT
+  TTTTTT.=====================..TTTTTT
+  TTTTTT.=====================..TTTTTT
+  TTTTTT..=====================.TTTTTT
+  TTTTTTTT========================TTTT
+  TTTTTTTT==========================TT
+  TTTTTTT============================T
+  TTT================================T
+  T=================================TT
+  T================================TTT
+  T================================TTT
+  TTT==============================TTT
+  TTTTT=============================TT
+  TTTTTT============================TT
+  TTTTTT============================TT
+  TTTTTT====================T=TTTTTTTT
+  TTTTTTT===================TTTTTTTTTT
+  TTTTTTT===================TTTTTTTTTT
+  TTTTTTTT==================TTTTTTTTTT
+  TTTTTTTTTTT======HH=======TTTTTTTTTT
+  TTTTTTTTTTTTTTTTTHHT======TTTTTTTTTT
+  TTTTTTTTTTTTTTTTTHHTTT===TTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTHHTTTTTTTTTTTTTTTTT
+exits:
+- edge: south
+  cells: [17, 18]
+  to: route-107
+buildings:
+- name: Chieftain's hut
+  art: art:kashyyyk:wookiee-hut
+  at: [15, 4]
+  size: [5, 4]
+  door: 2
+  to: rwookrrorro-chief-hut
+- name: Weaver's hut
+  art: art:kashyyyk:wookiee-hut
+  at: [6, 16]
+  size: [5, 4]
+  door: 2
+  to: rwookrrorro-hut-1
+- name: Bowcaster maker's hut
+  art: art:kashyyyk:wookiee-hut
+  at: [25, 16]
+  size: [5, 4]
+  door: 2
+  to: rwookrrorro-hut-2
+props:
+- name: Wroshyr tree
+  art: art:kashyyyk:wroshyr-tree
+  at: [27, 6]
+  size: [3, 3]
+- name: Wroshyr tree
+  art: art:kashyyyk:wroshyr-tree
+  at: [6, 6]
+  size: [3, 3]
+- name: Bowcaster rack
+  art: art:kashyyyk:bowcaster-rack
+  at: [24, 13]
+  size: [1, 1]
+people:
+- name: Wookiee elder
+  at: [18, 11]
+  role: npc
+- name: Wookiee hunter
+  at: [12, 14]
+  role: trainer
+- name: Wookiee hunter
+  at: [23, 21]
+  role: trainer
+- name: Wookiee cub
+  at: [18, 19]
+  role: npc
+signs: []
+warps: []
+todo: [New area off Route 107's north edge (a ladder up a wroshyr trunk)., 'New interiors: rwookrrorro-chief-hut, rwookrrorro-hut-1, rwookrrorro-hut-2 (Wookiee hut
+    kit).']

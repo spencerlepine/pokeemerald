@@ -3,8 +3,8 @@ name: REPUBLIC WRECK DECK
 planet: KASHYYYK
 kind: dungeon
 replaces: AbandonedShip_Deck
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Republic Wreck: the tilted deck above water.'
 grid: |
   #######################
   ##################T####
@@ -48,4 +48,4 @@ warps:
 - name: Door
   at: [12, 5]
   to: republic-wreck-captains-office
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

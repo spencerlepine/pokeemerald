@@ -3,8 +3,8 @@ name: UNDERWATER ROUTE 105
 planet: KASHYYYK
 kind: dungeon
 replaces: Underwater_Route105
-status: TODO
-story: ''
+status: BLOCKOUT
+story: Under the lagoon on Route 105.
 pos: [268, 403]
 grid: |
   ########################################
@@ -99,4 +99,4 @@ warps:
 - name: Door
   at: [17, 66]
   to: underwater-marine-cave
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

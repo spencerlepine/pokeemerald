@@ -3,8 +3,8 @@ name: SHADOWLANDS B1F
 planet: KASHYYYK
 kind: dungeon
 replaces: GraniteCave_B1F
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Shadowlands, lower: cracked root floors that drop to the level below.'
 grid: |
   ################################
   #......................######..#
@@ -62,4 +62,4 @@ warps:
 - name: Door
   at: [29, 2]
   to: shadowlands-b2f
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

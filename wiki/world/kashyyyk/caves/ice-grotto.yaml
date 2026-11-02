@@ -3,8 +3,8 @@ name: ICE GROTTO
 planet: KASHYYYK
 kind: dungeon
 replaces: IslandCave
-status: TODO
-story: ''
+status: BLOCKOUT
+story: Cold cave on a lagoon islet; home of ICEWARDEN.
 grid: |
   .###############.
   .###############.
@@ -63,4 +63,4 @@ warps:
 - name: Door
   at: [8, 11]
   to: ice-grotto
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

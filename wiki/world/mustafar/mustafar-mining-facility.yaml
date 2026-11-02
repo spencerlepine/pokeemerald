@@ -1,0 +1,79 @@
+id: mustafar-mining-facility
+name: MINING FACILITY
+planet: MUSTAFAR
+kind: landmark
+replaces: new
+status: BLOCKOUT
+story: 'Optional: the old Separatist mining facility on a lava river below Ashen Pass, where Anakin fell. Veers runs Stormtrooper drills here; the control center
+  holds rare items and an echo of the past for the Ilum trials.'
+grid: |
+  ###################==###################
+  ###################==###################
+  ###################==..#################
+  ###############....==....###############
+  ############.......==.......############
+  ##########.........==.......############
+  #######............==.......############
+  #####..............==.......############
+  ####...............==.........##########
+  ####...............==..............#####
+  ####...............==................###
+  ####...............==................###
+  ####...............==................###
+  ####...............==.................##
+  ######.............==.................##
+  ######.............==.................##
+  ####...............==.................##
+  ###................==.................##
+  ###................==................###
+  ###................==................###
+  ####...............==................###
+  ######.............==................###
+  ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##
+  ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##
+  ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##
+  ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##
+  ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##
+  ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##
+  ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##
+  ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##
+exits:
+- edge: north
+  cells: [19, 20]
+  to: ashen-pass
+buildings:
+- name: Separatist control center
+  art: art:mustafar:fortress-halls
+  at: [13, 6]
+  size: [8, 5]
+  door: 4
+  to: mustafar-mining-control
+props:
+- name: Mining collector
+  art: art:mustafar:mining-collector
+  at: [4, 10]
+  size: [3, 4]
+- name: Mining collector
+  art: art:mustafar:mining-collector
+  at: [31, 10]
+  size: [3, 4]
+- name: Obsidian spire
+  art: art:mustafar:obsidian-spire
+  at: [26, 4]
+  size: [2, 3]
+people:
+- name: Stormtrooper
+  at: [16, 14]
+  role: trainer
+- name: Stormtrooper
+  at: [24, 16]
+  role: trainer
+- name: Veers
+  at: [18, 12]
+  role: story
+- name: Mining droid
+  at: [9, 17]
+  role: npc
+signs: []
+warps: []
+todo: [New area off Ashen Pass's south end; lava ('~') is impassable., 'New interior: mustafar-mining-control.']

@@ -3,8 +3,8 @@ name: STARFALL CAVERN HIDDEN CAVE
 planet: SULLUST
 kind: dungeon
 replaces: MeteorFalls_StevensCave
-status: TODO
-story: ''
+status: BLOCKOUT
+story: Starfall Cavern's hidden room (post-game).
 grid: |
   ##############################
   ##############################
@@ -50,4 +50,4 @@ warps:
 - name: Door
   at: [10, 29]
   to: starfall-cavern-1f-1r
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

@@ -3,8 +3,8 @@ name: REPUBLIC WRECK HIDDEN FLOOR ROOMS
 planet: KASHYYYK
 kind: dungeon
 replaces: AbandonedShip_HiddenFloorRooms
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Republic Wreck: sealed hold rooms with the keys'' prizes.'
 grid: |
   #####################.######################
   #####################.######################
@@ -78,4 +78,4 @@ warps:
 - name: Door
   at: [36, 1]
   to: republic-wreck-hidden-floor-corridors
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

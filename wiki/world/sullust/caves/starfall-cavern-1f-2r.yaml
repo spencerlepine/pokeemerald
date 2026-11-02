@@ -3,8 +3,8 @@ name: STARFALL CAVERN 1F 2R
 planet: SULLUST
 kind: dungeon
 replaces: MeteorFalls_1F_2R
-status: TODO
-story: ''
+status: BLOCKOUT
+story: Starfall Cavern, upper falls.
 grid: |
   ##############################
   ##############################
@@ -51,9 +51,7 @@ people:
 - name: Trainer Jay
   at: [7, 12]
   role: trainer
-signs:
-- name: Sign
-  at: [9, 58]
+signs: []
 warps:
 - name: Door
   at: [10, 29]
@@ -67,4 +65,4 @@ warps:
 - name: Door
   at: [21, 23]
   to: starfall-cavern-b1f-1r
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

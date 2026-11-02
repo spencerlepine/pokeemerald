@@ -3,81 +3,101 @@ name: INYUSU TOR
 planet: SULLUST
 kind: town
 replaces: FallarborTown
-status: TODO
-story: ''
-pos: [80, 0]
+status: BLOCKOUT
+story: 'Ash-covered farm town: greenhouses grow crops in volcanic ash. Dr. Tien, the astronomer whose meteorite the Empire steals, lives in the observatory.'
+pos: [0, 0]
 grid: |
-  ..............######
-  ##############......
-  ####################
-  #####T##############
-  ####################
-  ####..#####..#######
-  ####.#######.####...
-  ...#.#######.####...
-  ......#.............
-  ....................
-  ....................
-  ..........#.........
-  ....................
-  ..............####..
-  ..............####..
-  .....####.....######
-  .....####..........T
-  .....####.........T#
-  #................T#T
-  T#T#..........T#T#T#
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTT.....................TTTTTTTT
+  TTTTTT............................TTTTTT
+  TTTTTT.............................TTTTT
+  TTTTTT.............................TTTTT
+  TTTTTT..............................TTTT
+  TTTTTTT..:.........:........:.......TTTT
+  TTTTTTT..:.........:........:.......TTTT
+  TTTTTT...:.........:........:........TTT
+  TTTTT....:.........:........:........TTT
+  TTTT.....:.........:........:........TTT
+  ::::::::::::::::::::::::::::::::::::::::
+  ::::::::::::::::::::::::::::::::::::::::
+  TTT.......:.................:..........T
+  TTT.......:.................:..........T
+  TTTT...................................T
+  TTTTT..................................T
+  TTTTT..................................T
+  TTTTT.................................TT
+  TTTTT..............................TTTTT
+  TTTTT..........................TTTTTTTTT
+  TTTTT........................TTTTTTTTTTT
+  TTTTT.......................TTTTTTTTTTTT
+  TTTTTT...........TTTTTT..TTTTTTTTTTTTTTT
+  TTTTTTT......TTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
 exits:
 - edge: west
-  cells: [0, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+  cells: [13, 14]
   to: route-114
 - edge: east
-  cells: [1, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+  cells: [13, 14]
   to: route-113
-buildings: []
-props: []
+buildings:
+- name: Ash farm (Showcase hall)
+  art: art:sullust:ash-farm
+  at: [6, 4]
+  size: [6, 4]
+  door: 3
+  to: inyusu-tor-battle-tent-lobby
+- name: Bacta Center
+  art: art:shared:bacta-center
+  at: [17, 4]
+  size: [5, 4]
+  door: 2
+  to: inyusu-tor-bacta-center-1f
+- name: Supply Depot
+  art: art:shared:supply-depot
+  at: [27, 4]
+  size: [4, 4]
+  door: 1
+  to: inyusu-tor-supply-depot
+- name: Dr. Tien's observatory
+  art: art:sullust:sullustan-home
+  at: [8, 17]
+  size: [5, 4]
+  door: 2
+  to: inyusu-tor-cozmos-house
+- name: Move tutor's home
+  art: art:sullust:sullustan-home
+  at: [26, 17]
+  size: [5, 4]
+  door: 2
+  to: inyusu-tor-move-relearners-house
+props:
+- name: Ash greenhouse
+  art: art:sullust:ash-greenhouse
+  at: [16, 18]
+  size: [3, 3]
+- name: Ash greenhouse
+  art: art:sullust:ash-greenhouse
+  at: [20, 18]
+  size: [3, 3]
+- name: Basalt column
+  art: art:sullust:basalt-column
+  at: [34, 18]
+  size: [2, 2]
 people:
-- name: Girl
-  at: [8, 11]
+- name: Dr. Tien
+  at: [13, 20]
+  role: story
+- name: Ash farmer
+  at: [23, 16]
   role: npc
-- name: Expert M
-  at: [11, 9]
-  role: npc
-- name: Gentleman
-  at: [11, 15]
-  role: npc
-- name: Azurill
-  at: [8, 12]
+- name: Showcase fan
+  at: [13, 10]
   role: npc
 signs:
-- name: Sign
-  at: [16, 15]
-- name: Sign
-  at: [15, 7]
-- name: Sign
-  at: [6, 8]
-- name: Sign
-  at: [16, 7]
-- name: Sign
-  at: [10, 11]
-- name: Sign
-  at: [17, 15]
-- name: Sign
-  at: [3, 7]
-warps:
-- name: Door
-  at: [15, 15]
-  to: inyusu-tor-supply-depot
-- name: Door
-  at: [8, 7]
-  to: inyusu-tor-battle-tent-lobby
-- name: Door
-  at: [14, 7]
-  to: inyusu-tor-bacta-center-1f
-- name: Door
-  at: [6, 17]
-  to: inyusu-tor-cozmos-house
-- name: Door
-  at: [1, 6]
-  to: inyusu-tor-move-relearners-house
+- name: Town sign
+  at: [4, 12]
+warps: []
 todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']

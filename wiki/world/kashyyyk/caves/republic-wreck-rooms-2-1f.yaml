@@ -3,8 +3,8 @@ name: REPUBLIC WRECK ROOMS 2 1F
 planet: KASHYYYK
 kind: dungeon
 replaces: AbandonedShip_Rooms2_1F
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Republic Wreck: officers'' cabins.'
 grid: |
   #########
   #########
@@ -53,4 +53,4 @@ warps:
 - name: Door
   at: [4, 1]
   to: republic-wreck-corridors-1f
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

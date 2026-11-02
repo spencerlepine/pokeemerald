@@ -3,8 +3,8 @@ name: ROUTE 113
 planet: SULLUST
 kind: route
 replaces: Route113
-status: TODO
-story: ''
+status: BLOCKOUT
+story: Ash fields east of Inyusu Tor where ash falls like snow; the glassblower collects it. The Magma Tunnels open on the south side.
 pos: [100, 0]
 grid: |
   ###########.###<#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T###T#T#T#T##############
@@ -14,10 +14,10 @@ grid: |
   ###############<#T#Tvvvvvv#####.##.#..""""""""""####""">..#.""""""..>.#...T###.#>###################
   ###############<##T#......<....#####."""""""""""####""">....""""""..>..####.....>""""###############
   ...............<#T#.....""<........."""""""""...####...>"""""""""###>...........>""""##...##########
-  ...............<##T#..""""<........"""""""".....####...>"""""""""###>##T#T#vvvvv#"""".......#######.
-  ...............<.##.""""""#vv#.....""..#####....####vvv#""""""...###>#####"""""""""""...............
-  ............#..#vvv""""""""""<........###.####......""""""""""...###>.."""""""""""""................
-  ...................."""""""""#vvvvv...#####.##......"""""""#vv...vvv#.."""""""""""""................
+  ...............<##T#..""""<........"""""""".....####...>"""""""""###>##T#T#vvvvv#"""".......#######T
+  ...............<.##.""""""#vv#.....""..#####....####vvv#""""""...###>#####"""""""""""..............T
+  ............#..#vvv""""""""""<........###.####......""""""""""...###>.."""""""""""""...............T
+  ...................."""""""""#vvvvv...#####.##......"""""""#vv...vvv#.."""""""""""""...............T
   ......................""""""""""".....########........""""">..........."""""""""""..#.....T#########
   ......................""""""""""".....###########......"""">.##..........""""#######################
   ......................""""""""""".........########..#######>...............#########################
@@ -26,19 +26,21 @@ grid: |
   ###T#..T#..T#T#T#T###T###.###############......T#..T#######..T#T#T#T#T#T#T##########################
   ..T#T#T#T#T#T#T#T#..T#..T############...T#T#T#T#T#T#.######.T#T#T#T#T#T#T#.#########################
   #T#T#T#T#T#T#T#T#T#T#T#T#.#############T#T#T#T#T#T#T#########T#T#T#T#T#T#T##########################
-  T#T#T#T#T#T#T#T#T#T#T#T#T############.T#T#T#T#T#T#T#.######.T#T#T#T#T#T#T#.#########################
+  T#T#T#T#T#T#T#T#T#T#T#T#T############.T#T#T#T#T#T#T#.######.T#T#T#T#T#T#T#T#########################
 exits:
-- edge: south
-  cells: [74]
-  to: route-112
 - edge: west
   cells: [2, 6, 7, 8, 9, 10, 11, 12, 13, 14, 17]
   to: inyusu-tor
-- edge: east
-  cells: [7, 8, 9, 10]
-  to: route-111
 buildings: []
-props: []
+props:
+- name: Basalt column
+  art: art:sullust:basalt-column
+  at: [17, 13]
+  size: [2, 2]
+- name: Steam vent
+  art: art:sullust:steam-vent
+  at: [62, 15]
+  size: [1, 1]
 people:
 - name: Ninja Boy
   at: [66, 12]
@@ -101,10 +103,9 @@ warps:
 - name: Door
   at: [33, 5]
   to: route-113-glass-workshop
-- name: Door
-  at: [41, 12]
-  to: terra-cave-entrance
-- name: Door
-  at: [88, 5]
-  to: terra-cave-entrance
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+- name: Magma Tunnels mouth
+  at: [74, 18]
+  to: magma-tunnels
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Planet border cut: south edge to route-112 (TATOOINE); reached by ship instead.', 'Planet border
+    cut: east edge to route-111 (TATOOINE); reached by ship instead.', 'Planet border cut: door at [41, 12] to terra-cave-entrance; reached by ship instead.', 'Planet
+    border cut: door at [88, 5] to terra-cave-entrance; reached by ship instead.']
