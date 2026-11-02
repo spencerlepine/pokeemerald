@@ -1,0 +1,50 @@
+# Captured intro (MUS_RG_CAUGHT_INTRO, hot-swap): a one-shot sting before MUS_CAPTURED. SCRATCH (wiki
+# audio:MUS_RG_CAUGHT_INTRO, no film cue). Brief: "Capture pod locks: short sting before MUS_CAPTURED." The pod
+# clamps shut on beat one (piano and tuba low C, kick, two square lock beeps), a snare roll builds while the brass
+# climbs in triplets through Eb and F (Williams' flat-side lift) and lands on a held G major with the cymbal, the
+# dominant that hands over to the capture loop. 64 bpm (vanilla's), one 4/4 bar: 3.75 s against vanilla's 3.6 s,
+# on the vanilla rg_caught_intro voicegroup.
+name: captured-intro
+replaces: MUS_RG_CAUGHT_INTRO
+form: JINGLE
+loop: false
+player: SE2
+song_priority: 5
+voicegroup: rg_caught_intro   # frlg fanfare kit 0, piano 2, trumpet 56, horn 60, tuba 58, squares 80/81, wave 87
+master_volume: 94
+tempo: 64
+steps_per_beat: 6             # triplet sixteenths at 64 bpm
+time_signature: [4, 4]
+seed: 18
+
+parts:
+  trumpet: {program: 56, channel: 0, volume: 104, pan: 4,   range: [Eb4, A5], gate: 0.92, humanize: {vel: 3}}
+  horn:    {program: 60, channel: 1, volume: 90,  pan: -14, range: [G3, B3], gate: 0.95}
+  tuba:    {program: 58, channel: 2, volume: 96,  pan: -4,  range: [C2, G2], gate: 0.9}
+  piano:   {program: 2,  channel: 3, volume: 88,  pan: 10,  range: [C2, C3], gate: 0.8}
+  kit:     {program: 0,  channel: 4, volume: 80,  pan: 14,  role: drums, kit: {kick: 36, sn: 38, crash: 49}}
+  arp:     {program: 80, channel: 5, volume: 48,  pan: 28,  range: [Eb5, G6], gate: 0.5, mono: true}
+  lock:    {program: 81, channel: 6, volume: 50,  pan: -26, range: [C6, C6], gate: 0.5, mono: true}
+  bass:    {program: 87, channel: 7, volume: 70,  pan: 0,   range: [C2, G2], gate: 0.8, mono: true}
+
+grooves:
+  build:
+    kick:  "x.......................|"
+    sn:    "......o.o.o.rrrrRR......|"
+    crash: "..................x.....|"
+
+sections:
+  sting:
+    bars: 1
+    parts:
+      # beat 1: C (the clamp); beat 2: Eb; beat 3: F; beat 4: G
+      piano:   "C2:1 C3:2 r:3 r:18"
+      lock:    "C6':1 r:1 C6':1 r:3 r:18"
+      tuba:    "C2:3 r:3 Eb2:6 F2:6 G2:6"
+      bass:    "C2:3 r:3 Eb2':1 r:1 Eb2':1 r:1 Eb2':1 r:1 F2':1 r:1 F2':1 r:1 F2':1 r:1 G2:6"
+      trumpet: "r:6 Eb4:2 G4:2 Bb4:2 C5:2 F5:2 A5:2 G5:6"
+      horn:    "r:6 G3:6 A3:6 B3:6"
+      arp:     "r:6 Eb5:1 G5:1 Bb5:1 Eb6:1 Bb5:1 G5:1 F5:1 A5:1 C6:1 F6:1 C6:1 A5:1 G5:1 B5:1 D6:1 G6:3"
+      kit:     build
+
+arrangement: [sting]
