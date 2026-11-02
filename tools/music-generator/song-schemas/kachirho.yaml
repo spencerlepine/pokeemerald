@@ -1,0 +1,95 @@
+# Kachirho (Kashyyyk), hot-swap of MUS_DEWFORD. SCRATCH: written from the brief, no film cue. D minor
+# pentatonic over a log-drum groove (low and high toms, kick, congas on the vanilla rs kit), a wooden flute tune,
+# a warm low horn that takes the tune in the middle, xylophone calls in the canopy section.
+#   intro  2 bars  log drums and the wave bass
+#   a      8 bars  flute tune, horn pad
+#   b      8 bars  the horn sings the tune low, flute answers on the square echo
+#   c      8 bars  high flute, xylophone ostinato, the drums open up; ends on A major back to D minor
+# 94 bpm (vanilla's), 24-bar loop of 61 s against vanilla's 66.4 s; vanilla dewford voicegroup.
+# Brief (sw_subject): Kachirho on Kashyyyk: Wookiee tree-village, deep log drums, wooden flutes and warm low horns.
+name: kachirho
+replaces: MUS_DEWFORD
+form: LOOP
+voicegroup: dewford               # kit 0, xylophone 13, horn 60, flute 73, squares 80/81, wave 82, noise 126
+master_volume: 80
+tempo: 94
+steps_per_beat: 4
+time_signature: [4, 4]
+seed: 12
+
+parts:
+  flute:  {program: 73, channel: 0, volume: 100, pan: 10,  range: [D4, D6], gate: 0.95, lfo_speed: 30, lfo_delay: 20, mod: 6, humanize: {vel: 6}}
+  horn:   {program: 60, channel: 1, volume: 94,  pan: -14, octave: 3, range: [A2, F4], gate: 0.97}
+  xylo:   {program: 13, channel: 2, volume: 74,  pan: 26,  octave: 5, range: [D5, A6], gate: 0.6}
+  bass:   {program: 82, channel: 3, volume: 100, pan: 0,   octave: 2, range: [D2, D3], gate: 0.75, role: bass}
+  drums:  {program: 0,  channel: 4, volume: 92,  pan: -4, role: drums, kit: {kick: 36, tlo: 41, tmid: 45, thi: 48, conga: 62, clo: 64}}
+  shaker: {program: 126, channel: 5, volume: 30, pan: 18, role: drums, kit: {s: A6}}
+  echo:   {program: 80, channel: 6, volume: 40,  pan: -32, range: [D4, D6], gate: 0.5, mono: true}
+
+progressions:
+  intro: "Dm | Dm"
+  a:     "Dm | C | Dm | Am | Dm | C | Bb | C"
+  b:     "Bb | C | Dm | Dm | Bb | C | Am | A"
+  c:     "Dm | F | G | Dm | Dm | F | C | A"
+
+phrases:
+  tune_a: |
+    D5:6 C5:2 A4:4 G4:4 | A4:8 r:4 C5:2 D5:2 | F5:6 E5:2 D5:4 C5:4 | A4:12 r:4 |
+    D5:6 C5:2 A4:4 G4:4 | E4:4 G4:4 A4:4 C5:4 | D5:6 C5:2 Bb4:4 A4:4 | G4:12 r:4
+  horn_b: |
+    Bb3:6 A3:2 F3:4 D3:4 | E3:6 F3:2 G3:8 | A3:6 G3:2 F3:4 E3:4 | D3:12 r:4 |
+    Bb3:6 C4:2 D4:4 F4:4 | E4:6 D4:2 C4:8 | A3:6 C4:2 E4:4 A3:4 | A3:8 C#4:8
+  echo_b: |
+    r:12 F5:2 D5:2 | r:12 E5:2 G5:2 | r:12 A5:2 F5:2 | r:8 D5:2 F5:2 A5:2 D6:2 |
+    r:12 F5:2 D5:2 | r:12 G5:2 E5:2 | r:12 C5:2 E5:2 | r:8 E5:2 C#5:2 A4:4
+  tune_c: |
+    A5:8 G5:4 F5:4 | A5:6 C6:2 A5:8 | G5:6 F5:2 D5:4 B4:4 | D5:16 |
+    A5:8 G5:4 F5:4 | C6:6 A5:2 G5:4 F5:4 | E5:6 F5:2 G5:4 E5:4 | E5:8 C#5:8
+  pad: "^1:16"
+  pad2: "^1:8 ^2:8"
+  xylo: "^1:2 ^2:2 ^3:2 r:2 ^1:2 ^2:2 ^3:2 r:2"
+  bass: "^1:4 r:2 ^1:2 r:2 ^1:2 ^5-:4"
+  bass_drone: "^1:6 ^1:2 r:4 ^1:4"
+
+grooves:
+  logs:
+    kick: "x.....x...x....."
+    tlo:  "....x.......x..."
+    thi:  "..x.....x.....x."
+  logs_big:
+    kick: "x.....x...x.....|x.....x...x....."
+    tlo:  "....x.......x...|....x.......x..."
+    thi:  "..x.....x.....x.|..x.....x......."
+    tmid: "................|.............x.x"
+    conga: "...x...x...x...x|...x...x...x...."
+  intro_logs:
+    kick: "x.....x...x.....|x.....x...x....."
+    tlo:  "....x.......x...|....x..........."
+    tmid: "................|.........x.x.x.x"
+  shake:
+    s: "..x...x...x...x."
+  shake16:
+    s: "x.x.x.x.x.x.x.x."
+
+sections:
+  intro:
+    bars: 2
+    chords: intro
+    parts: {drums: intro_logs, bass: bass_drone}
+  a:
+    bars: 8
+    chords: a
+    gain: {horn: -16}
+    parts: {flute: tune_a, horn: pad, bass: bass, drums: logs, shaker: shake}
+  b:
+    bars: 8
+    chords: b
+    parts: {horn: horn_b, echo: echo_b, bass: bass, drums: logs, shaker: shake}
+  c:
+    bars: 8
+    chords: c
+    gain: {drums: 4}
+    parts: {flute: tune_c, xylo: xylo, bass: bass, drums: logs_big, shaker: shake16}
+
+arrangement: [intro, a, b, c]
+loop_start: a
