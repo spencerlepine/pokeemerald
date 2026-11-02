@@ -1,3 +1,4 @@
+// RETIRED 2026-11-02: the shipped riders are drawn by riders_v2.py (trainer-style deep tuck). Kept for reference.
 // KAEL and MIRA on the speeder bike, for intro scene 2 (brendan.png / may.png, 4 frames of 64x64).
 // Included from intro_bike.px.js after use(PLAYER).
 //

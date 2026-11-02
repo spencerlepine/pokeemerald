@@ -1,3 +1,6 @@
+# SHIPPED 2026-11-02 (owner pick: "deep tuck, tails", variant 2, cloak wrapped over the whole upper body).
+# Writes game/graphics/intro/scene_2/brendan.png and may.png: `python3 riders_v2.py --install`.
+# This replaces the riders from riders.px.js; rebuilding intro_bike.px.js would put the old riders back.
 # Hand-built speeder riders: capsule parts with outlines and side shading, plus hand-drawn heads.
 import math, sys
 from PIL import Image, ImageDraw
@@ -100,23 +103,24 @@ def rider(who,v,f):
         tailset=set(body)
     else: tailset=set()
     # far arm (behind)
-    fa=set(); cap(fa,(sh[0]+3,sh[1]+1),(hand[0]+3,hand[1]-1),1.6); c.part(fa,'w','x')
+    fa=set(); cap(fa,(sh[0]+3,sh[1]+1),(hand[0]+3,hand[1]-1),1.6); c.part(fa,*(('c','s') if v==2 else ('w','x')))
     # torso + tails as one shape: no outline on the back
     t=set(); cap(t,sh,hip,4.2); body|=t
-    c.part(body,'W','w','x',outline=False)
+    c.part(body,*(('C','c','s') if v==2 else ('W','w','x')),outline=False)
     if who=='mira' or v==2:
-        for p in tailset-t: c.px[p]= 'C' if who=='mira' else 'W'
+        cl=(who=='mira' or v==2)
+        for p in tailset-t: c.px[p]= 'C' if cl else 'W'
         # shade the tails' lower edge
         for (x,y) in tailset-t:
-            if (x,y+1) not in body or (x,y+2) not in body: c.px[(x,y)]='c' if who=='mira' else 'w'
+            if (x,y+1) not in body or (x,y+2) not in body: c.px[(x,y)]='c' if cl else 'w'
     # crossover lapel
-    for i in range(6): c.put(sh[0]+i//2, sh[1]+1+i, 'x')
+    for i in range(6 if v!=2 else 0): c.put(sh[0]+i//2, sh[1]+1+i, 'x')
     # belt
     bx,by=hip[0]-1,hip[1]-4
     for dx in range(-4,5):
         for dy in (0,1):
             p=(bx+dx-dy,by+dy)
-            if p in t: c.put(*p,'V' if dy==0 else 'v')
+            if p in t and v!=2: c.put(*p,'V' if dy==0 else 'v')
     # hood hanging down behind the neck (not worn)
     hd=set(); cap(hd,(sh[0]+2,sh[1]-1),(sh[0]+4,sh[1]+1),2.2)
     for p in hd:
@@ -128,7 +132,7 @@ def rider(who,v,f):
     bt=set(); cap(bt,(foot[0]+1,foot[1]-3),(foot[0],foot[1]),2.4); cap(bt,(foot[0]-3,foot[1]),(foot[0]+1,foot[1]),1.6); c.part(bt,'B','b')
     # near arm and glove
     ar=set(); elbow=((sh[0]+hand[0])//2+1,(sh[1]+hand[1])//2+2)
-    cap(ar,(sh[0]-1,sh[1]+1),elbow,2.8); cap(ar,elbow,hand,2.3); c.part(ar,'W','w','x')
+    cap(ar,(sh[0]-1,sh[1]+1),elbow,2.8); cap(ar,elbow,hand,2.3); c.part(ar,*(('C','c','s') if v==2 else ('W','w','x')))
     gl=set(); cap(gl,(hand[0]+1,hand[1]),(hand[0]-1,hand[1]),2.0); c.part(gl,'B','b')
     # head and bandana tails
     c.head(who,*head)
@@ -153,6 +157,15 @@ def compose(who,v,f,bg=(232,200,144)):
     im.paste(r.convert('RGB'),(0,0),rm)
     return im
 
+def install():
+    for who,f in (('kael','brendan.png'),('mira','may.png')):
+        pal=Image.open(G+f).getpalette()[:48]
+        out=Image.new('P',(64,256),0); out.putpalette(pal)
+        for fr in range(4): out.paste(rider(who,2,fr),(0,fr*64))
+        out.save(G+f)
+
+if __name__=='__main__' and '--install' in sys.argv:
+    install(); sys.exit(0)
 if __name__=='__main__':
     S=4
     out=Image.new('RGB',(64*S*4+30,(64*S+10)*6),(30,30,40))
