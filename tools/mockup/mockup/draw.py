@@ -362,7 +362,9 @@ def area(doc, styles, labels=True, grey=False):
     exits(d, doc, W, H)
     # draw back to front so lower pieces overlap higher ones, like the game
     pieces = [("building", b) for b in doc.get("buildings") or []] + [("prop", p) for p in doc.get("props") or []]
-    pieces.sort(key=lambda kp: kp[1]["at"][1] + kp[1].get("size", [1, 1])[1])
+    # giants are backdrop: always drawn first, so nothing on the playable map is ever covered by them
+    pieces.sort(key=lambda kp: (not kp[1].get("art", "").startswith("art:giant:"),
+                                kp[1]["at"][1] + kp[1].get("size", [1, 1])[1]))
     for kind, o in pieces:
         seed = _h(zlib.crc32(o.get("art", "").encode()), o["at"][0], o["at"][1])
         st = styles.shape(o.get("art", ""), planet, kind, seed)

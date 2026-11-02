@@ -36,14 +36,14 @@ python3 -m mockup missing                 # art ids that have no shape in styles
   - `mockup/solid.py`: solids, ray casting, shading. `mockup/build.py`: the models in `BUILDS`: block, L,
     oct, T, notch, court, wings, hall, palace, pitched, barrel, quonset, hangar, tower, round-tower, stepped,
     dome, domes2, dome-block, dome-porch, store, cone, glass-dome, bunker, buried, stilts, stilts-dome,
-    stilts-flat, deck, pad, bay, plant, lab, arena, and the sci-fi set: spire, saucer, comm-tower,
-    cliff-door, obelisk, hipped. A prop whose style has a `build` (the landing pad) is a 3D
+    stilts-flat, deck, pad, bay, plant, lab, arena, and hipped. A prop whose style has a `build` (the landing pad) is a 3D
     model too. Sunken courtyards were dropped (owner: doors can't sit at the bottom of a pit like that). `python3 -m mockup builds [--grey]` draws them all.
   - **Giants** (`GIANTS` in build.py) are huge pieces for the edges of a map, modelled at true scale and
     only partly drawn: the sprite is clipped to its box, so a Star Destroyer runs off the map and the player
-    sees just its bow. ship-hull (`facing: east|west`), debris, palace-wall, trench-wall, stilt-city,
+    sees just its bow. ship-hull (`facing: east|west`), trench-wall, stilt-city,
     undercity-rim (`rim: [cx, cy, a, b]` in cells; its deck top is see-through and the city side drops
-    below ground level), temple-stairs, cliff-town, city-edge, hangar-wall, fortress-wall, cliff-door.
+    below ground level), city-edge. Giants draw first, behind every
+    building, so they never cover playable content.
     Solids are hidden below ground unless made with `below=True`. They sit on blocked border cells and are placed only by mockup
     overrides (`wiki/mockup/overrides/<area>.yaml`, `add: buildings`), never in phase 1.
     `python3 -m mockup builds --giants [--grey]` draws them.
@@ -53,5 +53,8 @@ python3 -m mockup missing                 # art ids that have no shape in styles
     a dome is never taller than a hemisphere. A round building that doesn't fit its box gets narrower,
     never squashed (`fit_round` in build.py).
     The owner prefers roofed buildings; keep round ones for iconic places only.
+  - **Cleaned up (owner, 2026-11-02):** scrapped as weak art: debris, cliff-town, hangar-wall, fortress-wall,
+    palace-wall, temple-stairs, cliff-door, comm-tower, obelisk, spire, saucer (and earlier shield-gen, turret, sunken). New buildings come **one category at a
+    time**, small and high quality, each reviewed before the next. No batches.
   - `render --grey` draws buildings in neutral grey (the pure greybox look); `--out DIR` writes elsewhere.
 - `mockup/draw.py`: terrain, props and people. `mockup/cli.py`: the commands.

@@ -480,42 +480,6 @@ def m_dome_porch(m):
               S.vault(px - 4, -1, px + 4, 3, 8, 4, m.door_col_rgb, subtract=True))
 
 
-def m_spire(m):
-    """A Mos Espa-style tower: stacked drums getting narrower, a mast on top."""
-    W = m.W
-    a0 = min(W / 2 - 2, 18)
-    b0 = a0 * 0.6
-    cx, cy = W / 2, b0 + 1
-    z = 0
-    tiers = [(1.0, 16), (0.75, 14), (0.55, 12), (0.35, 10)]
-    top = m.H - 2 * b0 - 12
-    for k, (f, hh) in enumerate(tiers):
-        hh = min(hh, top - z)
-        if hh < 4:
-            break
-        col = m.wall if k % 2 == 0 else shade(m.wall, -0.06)
-        m.add(S.cylinder(cx, cy, a0 * f, b0 * f, z, z + hh, col, m.roof))
-        m.add(S.cylinder(cx, cy, a0 * f + 1, b0 * f + 1, z + hh - 2, z + hh, m.trim))
-        z += hh
-    m.add(S.box(cx - 1, cy - 1, z, cx + 1, cy + 1, min(z + 12, m.H - 2 * b0), m.trim))
-    _round_door(m, cx, cy, a0, b0, h=10)
-
-
-def m_saucer(m):
-    """Cloud City: a wide disc on a slim stalk, a small dome on top."""
-    W = m.W
-    a = max(8, min(W / 2 - 1, (m.H - 36) / (2 * OVAL)))     # leave room for a visible stalk
-    b = a * OVAL
-    cx, cy = W / 2, b + 1
-    stalk = max(14, int(m.H - 2 * b - 16))
-    sa, sb = max(5, a * 0.22), max(3, b * 0.22)
-    m.add(S.cylinder(cx, cy, sa, sb, 0, stalk, m.wall, m.roof))
-    m.add(S.cylinder(cx, cy, a * 0.6, b * 0.6, stalk - 4, stalk, shade(m.wall, -0.1)))
-    m.add(S.cylinder(cx, cy, a, b, stalk, stalk + 5, m.trim, m.roof))
-    m.add(S.dome(cx, cy, a * 0.45, b * 0.45, stalk + 5, 7, shade(m.roof, 0.1)))
-    _round_door(m, cx, cy, sa, sb, w=6, h=10)
-
-
 def m_glass_dome(m):
     """A faceted glass greenhouse dome on a low ring wall (Sullust ash farms)."""
     h = 5
@@ -527,61 +491,6 @@ def m_glass_dome(m):
     m.add(S.cylinder(cx, cy, a, b, 0, h, m.wall, m.roof))
     m.add(S.dome(cx, cy, a, b, h, rise, glass, rings=4, n=12))
     _round_door(m, cx, cy, a, b, h=8)
-
-
-def m_comm_tower(m):
-    """A comms mast: a lattice tower tapering up, crossbars, a dish near the top, a small hut at its foot."""
-    W = m.W
-    s = min(W * 0.32, 16)
-    cx, cy = W / 2, s + 6
-    top = m.H - 2 * s - 14
-    leg = m.trim
-    for dx in (-1, 1):
-        for dy in (-1, 1):
-            m.add(S.prism([(cx + dx * s - 1.2, cy + dy * s * 0.6 - 1.2), (cx + dx * s + 1.2, cy + dy * s * 0.6 - 1.2),
-                           (cx + dx * s + 1.2, cy + dy * s * 0.6 + 1.2), (cx + dx * s - 1.2, cy + dy * s * 0.6 + 1.2)],
-                          0, top, leg))
-    for k, z in enumerate(range(10, int(top), 12)):
-        f = 1 - z / max(top, 1) * 0.0
-        m.add(S.box(cx - s, cy - s * 0.6 - 1, z, cx + s, cy - s * 0.6 + 1, z + 1.5, shade(leg, 0.15)))
-    m.add(S.box(cx - s - 1, cy - s * 0.6 - 1, top, cx + s + 1, cy + s * 0.6 + 1, top + 3, m.wall, m.roof))
-    m.add(S.box(cx - 1, cy - 1, top + 3, cx + 1, cy + 1, top + 14, leg))
-    m.add(S.cylinder(cx + s * 0.6, cy - s * 0.6, 6, 3, top + 6, top + 8, shade(m.wall, 0.2)))
-    m.add(S.box(cx - 9, 0, 0, cx + 9, 8, 10, m.wall, m.roof))
-    m.door(0, h=8, w=6)
-
-
-def m_cliff_door(m):
-    """A hangar dug into a rock or ice face: the face fills the box, a framed blast door in it."""
-    W = m.W
-    rock = (150, 150, 150) if m.grey else m.st.get("rock", shade(m.ground, -0.25))
-    h = m.H - 12
-    m.add(S.prism([(0, 4), (W, 4), (W, 12), (0, 12)], 0, h, rock, shade(rock, 0.15), taper=4))
-    m.add(S.box(0, 4, 0, W, 12, h * 0.3, rock))
-    if m.door_x is None:
-        m.door_x = W / 2
-    if True:
-        dw = min(W * 0.35, 26)
-        m.add(S.box(m.door_x - dw / 2 - 3, 2, 0, m.door_x + dw / 2 + 3, 6, min(h * 0.7, 26), m.wall, m.roof))
-        m.add(S.box(m.door_x - dw / 2, 1, 0, m.door_x + dw / 2, 8, min(h * 0.62, 22), m.door_col_rgb, subtract=True))
-        for z in range(4, int(min(h * 0.62, 22)), 5):
-            m.add(S.box(m.door_x - dw / 2, 6.5, z, m.door_x + dw / 2, 7.5, z + 1, shade(m.door_col_rgb, 0.25)))
-
-
-def m_obelisk(m):
-    """A tall tapering tower on a stepped base (Vader's fortress, the Kyber temple)."""
-    W = m.W
-    D = max(16, int(m.H * 0.3))
-    m.add(S.box(1, 0, 0, W - 1, D, 8, m.wall, m.roof))
-    w0 = W * 0.28
-    cx, cy = W / 2, D * 0.55
-    top = m.H - D - 2
-    m.add(S.prism([(cx - w0, cy - w0 * 0.55), (cx + w0, cy - w0 * 0.55), (cx + w0, cy + w0 * 0.55),
-                   (cx - w0, cy + w0 * 0.55)], 8, top, m.wall, m.roof, taper=w0 * 0.42))
-    if m.st.get("fork"):
-        for dx in (-3, 3):
-            m.add(S.box(cx + dx - 1.5, cy - 1, top - 2, cx + dx + 1.5, cy + 1, top + 8, m.trim))
-    m.door(0, w=10)
 
 
 def m_plant(m):
@@ -634,34 +543,6 @@ def m_hipped(m):
     m.add(S.hip(-1, -2, m.W + 1, D + 1, h, rise, m.roof))
     m.door(0)
     m.windows(0, m.W, 0, h * 0.45)
-
-
-def m_cliff_town(m):
-    """Homes carved into a rock face: two stepped rock tiers, doorways, windows, balconies and ladders."""
-    W, H = m.W, m.H
-    rock = m.st.get("cliff") or shade(m.ground, -0.3)
-    D = max(16, H * 0.3)
-    h1 = (H - D) * 0.5
-    h2 = (H - D) - h1 - 2
-    m.add(S.prism([(0, 0), (W, 0), (W, D), (0, D)], 0, h1, rock, shade(rock, 0.12), taper=3))
-    m.add(S.prism([(0, D * 0.45), (W, D * 0.45), (W, D), (0, D)], h1 - 1, h1 + h2, shade(rock, -0.05),
-                  shade(rock, 0.1), taper=3))
-    dark = (30, 26, 24)
-    x = 10 + m.r(1, 8)
-    k = 0
-    while x < W - 14:
-        k += 1
-        if (k + m.r(2, 3)) % 3:
-            m.add(S.box(x, -1, 0, x + 7, 4, 11, dark, subtract=True),
-                  S.vault(x, -1, x + 7, 4, 11, 3, dark, subtract=True))
-        else:
-            m.add(S.box(x - 1, -2, h1 * 0.55, x + 9, 2, h1 * 0.55 + 1.5, shade(m.trim, 0.1)))     # a balcony
-        if k % 2:
-            m.add(S.box(x + 2, D * 0.45 + 2, h1 + h2 * 0.35, x + 6, D * 0.45 + 6, h1 + h2 * 0.35 + 5, dark,
-                        subtract=True))
-        x += 18 + m.r(k % 5 + 3, 10)
-    for lx in (W * 0.3, W * 0.72):
-        m.add(S.box(lx - 2, 1.5 - 0.5, 0, lx + 2, 2.3, h1 + 1, shade(m.trim, -0.1)))
 
 
 def m_city_edge(m):
@@ -723,53 +604,6 @@ def m_ship_hull(m):
     for k in range(1, 14):
         x = tipx + (backx - tipx) * k / 14
         m.add(S.box(x - 0.8, -400, -30, x + 0.8, 800, 600, shade(hull, -0.35), subtract=True))
-
-
-def m_debris(m):
-    """A field of capital-ship wreckage: hull slabs stuck in the sand, a buried engine bell, a fin."""
-    W, H = m.W, m.H
-    hull = _hull(m)
-    sand = shade(m.ground, -0.08)
-    x = 4
-    k = 0
-    while x < W - 20:
-        k += 1
-        kind = m.r(k, 3)
-        w = 28 + 10 * m.r(k + 3, 4)
-        y = 6 + 6 * m.r(k + 9, 4)
-        if kind == 0:      # a slab of hull plating stuck in at an angle
-            hgt = 30 + 12 * m.r(k + 5, 4)
-            m.add(S.prism([(x, y), (x + w, y + 6), (x + w - 4, y + 14), (x + 2, y + 10)], -6, hgt, hull,
-                          shade(hull, 0.1), taper=5))
-        elif kind == 1:    # an engine bell lying on its side, half buried
-            r = w / 2
-            m.add(S.vault(x, y, x + w, y + 40, -r * 0.3, r, shade(hull, -0.05)))
-            m.add(S.vault(x + 5, y - 1, x + w - 5, y + 6, -r * 0.3, r - 5, (30, 30, 34), subtract=True))
-        else:              # a tall broken fin
-            hgt = 50 + 15 * m.r(k + 6, 4)
-            m.add(S.prism([(x, y + 4), (x + w * 0.6, y), (x + w * 0.7, y + 6), (x + 4, y + 10)], 0, hgt, hull,
-                          shade(hull, 0.1), taper=4))
-        m.add(S.cylinder(x + w / 2, y + 6, w * 0.65, 8, -2, 4, sand, shade(m.ground, -0.02), outline=False))
-        x += w + 10 + 6 * m.r(k + 2, 3)
-
-
-def m_palace_wall(m):
-    """Jabba's palace outer wall: an adobe wall too tall to fit, a round tower, a sealed blast gate."""
-    W, H = m.W, m.H
-    hgt = H * 3
-    m.add(S.prism([(-W, 6), (2 * W, 6), (2 * W, 400), (-W, 400)], 0, hgt, m.wall, m.roof, taper=6))
-    m.add(S.box(-W, 2, 0, 2 * W, 8, 6, shade(m.wall, -0.05), m.roof))       # footing
-    tx = W * (0.2 if m.r(2, 2) else 0.75)
-    m.add(S.cylinder(tx, 30, 26, 18, 0, hgt * 1.2, shade(m.wall, 0.04), m.roof))
-    m.add(S.cylinder(tx, 30, 27, 19, 22, 25, m.trim))
-    gx = W * 0.5
-    m.add(S.box(gx - 20, 0, 0, gx + 20, 9, 34, shade(m.wall, -0.08)))
-    m.add(S.box(gx - 16, -1, 0, gx + 16, 6, 28, shade(m.trim, -0.35), subtract=True))
-    for z in range(4, 28, 6):
-        m.add(S.box(gx - 16, 4, z, gx + 16, 5, z + 1, shade(m.trim, -0.15)))
-    for x in range(int(-W), int(2 * W), 22):
-        if abs(x - gx) > 30 and abs(x - tx) > 34:
-            m.add(S.box(x, -1, 30, x + 2, 9, 38, (30, 26, 22), subtract=True))
 
 
 def m_trench_wall(m):
@@ -835,64 +669,7 @@ def m_undercity_rim(m):
         m.add(S.box(x - 1.5, y - 2, -rim - 60, x + 1.5, y + 2, -rim, shade(wall, -0.3), below=True))
 
 
-def m_temple_stairs(m):
-    """The base of a Massassi temple too big to fit: stone tiers stepping up off the top of the map, a
-    central stair climbing them."""
-    W, H = m.W, m.H
-    stone, top = shade(m.wall, -0.12), shade(m.roof, 0.18)
-    step, back = 9, 7
-    sx = W * (0.35 + 0.3 * m.r(1, 2))
-    for t in range(40):
-        y0 = 2 + t * back
-        m.add(S.box(-W, y0, t * step, 2 * W, y0 + 600, (t + 1) * step, shade(stone, -0.03 * (t % 2)), top))
-    k = step / back
-    n = np.array([0, -k, 1.0]) / math.hypot(k, 1)
-    m.add(S.Solid([[1, 0, 0, sx + 14], [-1, 0, 0, -(sx - 14)], [0, -1, 0, 0], [0, 0, -1, 0], [*n, n @ np.array([0, 0, 2])]],
-                  shade(stone, 0.12), shade(top, 0.12)))
-    for t in range(80):          # step lines on the stair
-        y = t * 3
-        m.add(S.box(sx - 14, y, y * k + 1.2, sx + 14, y + 0.9, y * k + 2.2, shade(stone, -0.18)))
-    for dx in (-16, 14):         # side ramps (balustrades)
-        m.add(S.Solid([[1, 0, 0, sx + dx + 2], [-1, 0, 0, -(sx + dx)], [0, -1, 0, 0], [0, 0, -1, 0],
-                       [*n, n @ np.array([0, 0, 6])]], shade(stone, -0.05), shade(top, 0.0)))
-
-
-def m_hangar_wall(m):
-    """A giant hangar front: a huge block with an open bay door, landing lights, a vaulted roof."""
-    W, H = m.W, m.H
-    h = H * 0.42
-    rise = min(16, H * 0.2)
-    D = H - h - rise
-    m.add(S.box(0, 0, 0, W, D, h, m.wall, m.roof), S.vault(0, 0, W, D, h, rise, m.roof))
-    dw = W * 0.5
-    x0 = (W - dw) / 2
-    m.add(S.box(x0, -1, 0, x0 + dw, D * 0.6, h * 0.8, (28, 30, 34), shade(m.ground, -0.3), subtract=True))
-    for x in range(int(x0) + 3, int(x0 + dw) - 2, 6):
-        m.add(S.box(x, -1.5, h * 0.8 + 1, x + 2, -0.5, h * 0.8 + 3, (250, 220, 120) if not m.grey else (220, 220, 220)))
-    m.add(S.box(x0 - 2, -1, 0, x0, 1, h * 0.85, m.trim), S.box(x0 + dw, -1, 0, x0 + dw + 2, 1, h * 0.85, m.trim))
-    m.windows(0, x0 - 4, 0, h * 0.5)
-    m.windows(x0 + dw + 4, W, 0, h * 0.5)
-
-
-def m_fortress_wall(m):
-    """A long fortress wall with buttress towers, crenellations and a central gate."""
-    W, H = m.W, m.H
-    h = H * 0.45
-    D = H - h - 14
-    m.add(S.box(0, D * 0.3, 0, W, D, h, m.wall, m.roof))
-    for x in range(2, int(W) - 4, 8):
-        m.add(S.box(x, D * 0.3, h, x + 4, D * 0.3 + 3, h + 3, m.wall, m.roof))
-    n = max(2, int(W // 64) + 1)
-    for i in range(n + 1):
-        x = 4 + (W - 24) * i / n
-        m.add(S.box(x, 0, 0, x + 16, D, h + 10, shade(m.wall, -0.06), m.roof))
-        m.add(S.hip(x - 1, -1, x + 17, D + 1, h + 10, 4, m.roof))
-    if m.door_x is not None:
-        m.door(D * 0.3, w=14, h=min(18, h * 0.6))
-
-
-GIANTS = ["ship-hull", "debris", "palace-wall", "trench-wall", "stilt-city", "undercity-rim", "temple-stairs",
-          "cliff-town", "city-edge", "hangar-wall", "fortress-wall", "cliff-door"]
+GIANTS = ["ship-hull", "trench-wall", "stilt-city", "undercity-rim", "city-edge"]
 
 BUILDS = {
     "block": m_block, "box": m_block,
@@ -903,12 +680,11 @@ BUILDS = {
     "hall": lambda m: m_wings(m, dome_mid=True),
     "dome": m_dome, "domes2": m_domes2, "dome-block": m_dome_block, "store": m_store,
     "bunker": m_bunker, "buried": m_buried, "bay": m_bay, "pad": m_pad, "dome-porch": m_dome_porch,
-    "spire": m_spire, "saucer": m_saucer, "glass-dome": m_glass_dome, "comm-tower": m_comm_tower,
-    "hipped": m_hipped, "cliff-town": m_cliff_town, "city-edge": m_city_edge, "ship-hull": m_ship_hull,
-    "hangar-wall": m_hangar_wall, "fortress-wall": m_fortress_wall, "debris": m_debris,
-    "palace-wall": m_palace_wall, "trench-wall": m_trench_wall, "stilt-city": m_stilt_city,
-    "undercity-rim": m_undercity_rim, "temple-stairs": m_temple_stairs,
-    "cliff-door": m_cliff_door, "obelisk": m_obelisk,
+    "glass-dome": m_glass_dome, 
+    "hipped": m_hipped,  "city-edge": m_city_edge, "ship-hull": m_ship_hull,
+      
+    "trench-wall": m_trench_wall, "stilt-city": m_stilt_city,
+    "undercity-rim": m_undercity_rim,
     "quonset": m_quonset, "hangar": lambda m: m_quonset(m, wide=True),
     "stilts": m_stilts, "stilts-dome": lambda m: m_stilts(m, "dome", round_=True),
     "stilts-flat": lambda m: m_stilts(m, "flat"),

@@ -8,9 +8,9 @@
 #   building: `build` picks the composition, drawn in the game's top-down 3/4 view (see tools/mockup/mockup/build.py):
 #     block box L oct T notch court wings hall palace pitched barrel quonset hangar tower round-tower stepped
 #     dome domes2 dome-block dome-porch store cone glass-dome bunker buried stilts stilts-dome stilts-flat
-#     deck pad bay plant lab arena spire saucer comm-tower cliff-door obelisk hipped
-#     giants (border pieces, may run off the map): ship-hull debris palace-wall trench-wall stilt-city
-#       undercity-rim temple-stairs cliff-town city-edge hangar-wall fortress-wall cliff-door
+#     deck pad bay plant lab arena hipped
+#     giants (border pieces, may run off the map): ship-hull trench-wall stilt-city
+#       undercity-rim city-edge
 #   `variants: [{build: ...}, ...]` picks one per placed building (stable by position), so a town's homes vary.
 #   `height` scales the walls (1.0 = default). `field` is the pitch colour of an arena.
 #   `kind` is the first-pass name (box | dome | pitched | stepped | tower | hall | dish | platform), used when no `build`.
@@ -113,7 +113,7 @@ shapes:
   art:tatooine:jabbas-palace:     {kind: hall, wall: "#c4a074", roof: "#a07a50", label: Jabba, build: palace}
   art:tatooine:mos-entha-arena:   {kind: hall, roof: "#b08050", label: Arena, build: arena}
   art:tatooine:podrace-arena:     {kind: hall, roof: "#c8b088", label: Podrace, build: arena}
-  art:tatooine:power-station:     {kind: box, roof: "#9a9a92", trim: "#5a5a52", label: Power, build: plant, variants: [{build: plant}, {build: spire}]}
+  art:tatooine:power-station:     {kind: box, roof: "#9a9a92", trim: "#5a5a52", label: Power, build: plant, variants: [{build: plant}, {build: plant, height: 0.8}]}
   art:tatooine:sabacc-den:        {kind: dome, roof: "#b88e66", build: notch}
   art:tatooine:spacer-museum:     {kind: hall, roof: "#c4ccd2", label: Museum, build: oct}
   art:tatooine:watto-s-junk-shop: {kind: dome, roof: "#a88a64", label: Watto, build: dome-block}
@@ -155,7 +155,7 @@ shapes:
   art:sullust:lava-flow:          {kind: disc, fill: "#e8742c", ring: "#ffcc5a"}
   art:sullust:steam-vent:         {kind: disc, fill: "#5a5052", ring: "#e6e6e6"}
   # ---------------------------------------------------------------- mustafar
-  art:mustafar:fortress-halls:    {kind: tower, wall: "#2e2c34", roof: "#1c1a20", trim: "#e8742c", label: Fortress, build: obelisk, fork: true}
+  art:mustafar:fortress-halls:    {kind: tower, wall: "#2e2c34", roof: "#1c1a20", trim: "#e8742c", label: Fortress, build: tower, fork: true}
   art:mustafar:mining-collector:  {kind: tank, fill: "#4a4650", trim: "#e8742c"}
   art:mustafar:obsidian-spire:    {kind: rock, fill: "#1e1c22", tall: true}
   # ---------------------------------------------------------------- endor
@@ -169,13 +169,13 @@ shapes:
   art:endor:log-trap:             {kind: slab, fill: "#7a5634", trim: "#3e2a18", form: log}
   art:endor:totem-and-drum:       {kind: pole, fill: "#9a6a3a", trim: "#4e3a24"}
   # ---------------------------------------------------------------- bespin
-  art:bespin:cloud-city-tower:    {kind: tower, wall: "#f0e4d8", roof: "#d89a7a", build: round-tower, variants: [{build: tower}, {build: saucer}, {build: oct}, {height: 0.85}, {build: tower, height: 0.8}]}
+  art:bespin:cloud-city-tower:    {kind: tower, wall: "#f0e4d8", roof: "#d89a7a", build: round-tower, variants: [{build: tower}, {build: oct}, {height: 0.85}, {build: tower, height: 0.8}]}
   art:bespin:department-store:    {kind: hall, wall: "#f4ece0", roof: "#c88a6a", label: Galleria, build: wings}
   art:bespin:landing-platform:    {kind: platform, wall: "#e0d0c0", roof: "#c0a090", label: Pad, build: deck}
   art:bespin:promenade-railing:   {kind: pole, fill: "#e8dccc", trim: "#9a7a6a"}
   art:bespin:carbon-freezing-chamber: {kind: disc, fill: "#3a3e46", ring: "#e8742c"}
   # ---------------------------------------------------------------- jedha
-  art:jedha:temple-of-the-kyber:  {kind: stepped, wall: "#d2c2a4", roof: "#8a7a64", label: Temple, build: obelisk}
+  art:jedha:temple-of-the-kyber:  {kind: stepped, wall: "#d2c2a4", roof: "#8a7a64", label: Temple, build: stepped}
   art:jedha:prayer-candles:       {kind: pole, fill: "#f2e0a0", trim: "#c08a3a"}
   art:jedha:toppled-statue:       {kind: wreck, fill: "#b4a488"}
   # ---------------------------------------------------------------- yavin 4
@@ -185,7 +185,7 @@ shapes:
   art:yavin-4:massassi-jungle-tree: {kind: tree, fill: "#2f6e3a", trim: "#5a4428", big: true}
   art:yavin-4:jungle-vines:       {kind: plant, fill: "#3e8a3e"}
   # ---------------------------------------------------------------- hoth
-  art:hoth:echo-base-hangar-door: {kind: platform, wall: "#dfe6ee", roof: "#9cb4cc", label: Outpost, build: cliff-door, rock: "#b8c8da"}
+  art:hoth:echo-base-hangar-door: {kind: platform, wall: "#dfe6ee", roof: "#9cb4cc", label: Outpost, build: hangar}
   art:hoth:tauntaun-shelter:      {kind: dome, wall: "#d6dde6", roof: "#a8b6c6", build: quonset}
   art:hoth:ice-stalagmites:       {kind: rock, fill: "#cfe2f2", tall: true}
   art:hoth:snowspeeder:           {kind: craft, fill: "#e6e2d8", trim: "#d8642a", form: speeder}
@@ -247,13 +247,6 @@ shapes:
   # giants: huge border pieces placed by mockup overrides on blocked edge cells (no door)
   art:giant:city-edge:            {kind: box, build: city-edge}
   art:giant:ship-hull:            {kind: box, build: ship-hull, roof: "#a8acb2"}
-  art:giant:cliff-door:           {kind: box, build: cliff-door, rock: "#b8c8da"}
-  art:giant:cliff-town:           {kind: box, build: cliff-town}
-  art:giant:fortress-wall:        {kind: box, build: fortress-wall}
-  art:giant:hangar-wall:          {kind: box, build: hangar-wall}
-  art:giant:debris:               {kind: box, build: debris}
-  art:giant:palace-wall:          {kind: box, build: palace-wall}
   art:giant:trench-wall:          {kind: box, build: trench-wall}
   art:giant:stilt-city:           {kind: box, build: stilt-city, wall: "#d4d8e0", roof: "#aeb6c4", trim: "#5a6474"}
   art:giant:undercity-rim:        {kind: box, build: undercity-rim, wall: "#e6d2c0", trim: "#9a6a52"}
-  art:giant:temple-stairs:        {kind: box, build: temple-stairs, wall: "#8e8a70", roof: "#7c8a5a"}

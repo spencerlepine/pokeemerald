@@ -54,7 +54,11 @@ The owner split the remaining work into phases on 2026-11-02.
    shows them all. The owner wants images shown in the chat, not left in folders for them to find (a gallery Artifact page works well).
    Owner feedback so far: prefer roofed buildings over round ones; no sunken courtyards; shield generator and
    turret were scrapped as bad art; round shapes must follow one projection rule
-   (enforced in `solid.py`: oval depth = radius·cos45°, domes at most hemispheres, shrink rather than squash); think big with giant border pieces (`build.py` GIANTS, placed by overrides).
+   (enforced in `solid.py`: oval depth = radius·cos45°, domes at most hemispheres, shrink rather than squash); think big with giant border pieces (`build.py` GIANTS, placed by overrides, drawn behind everything).
+   Cleanup (owner, 2026-11-02): debris, cliff-town, hangar-wall, fortress-wall, palace-wall, temple-stairs, cliff-door, comm-tower, obelisk, spire
+   and saucer were scrapped;
+   keep only what looks good. **From here on: one building category at a time, small and high quality, reviewed
+   before the next. No batches.** Still open: the owner's pick of colour direction A, B or C (gallery Artifact).
 3. **Real art.** This resumes the paused art tools. The first art step is calibrating the Fortree tree house in
    [`tools/world-art`](tools/world-art/README.md) (STYLE.md section 9). The tile pipeline is in
    [`tools/tile-generator/PLAN.md`](tools/tile-generator/PLAN.md).
