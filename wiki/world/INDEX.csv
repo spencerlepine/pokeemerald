@@ -942,6 +942,12 @@ route-123-berry-masters-house,ENDOR,interior,Route123_BerryMastersHouse,BLOCKOUT
 route-123-berry-masters-house,ENDOR,interior,Route123_BerryMastersHouse,BLOCKOUT,person,Berry Masters Wife,1x1,,,PLACEHOLDER,
 route-123-berry-masters-house,ENDOR,interior,Route123_BerryMastersHouse,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 route-123-berry-masters-house,ENDOR,interior,Route123_BerryMastersHouse,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
+route-123-landing,ENDOR,interior,new,BLOCKOUT,area,Pilgrim shuttle clearing,16x12,,,pending-final-art,greybox room
+route-123-landing,ENDOR,interior,new,BLOCKOUT,prop,Player's ship,8x5,art:shared:landing-pad,yes,pending-final-art,greybox piece
+route-123-landing,ENDOR,interior,new,BLOCKOUT,prop,StarNAV flight console,1x1,art:new:starnav-console,yes,pending-final-art,greybox piece
+route-123-landing,ENDOR,interior,new,BLOCKOUT,prop,Cargo crates,2x2,art:shared:cargo-crates,yes,pending-final-art,greybox piece
+route-123-landing,ENDOR,interior,new,BLOCKOUT,person,Pilot,1x1,,,PLACEHOLDER,
+route-123-landing,ENDOR,interior,new,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 route-118,ENDOR,route,Route118,BLOCKOUT,area,ROUTE 118,80x20,,,pending-final-art,greybox terrain
 route-118,ENDOR,route,Route118,BLOCKOUT,building,Rebel shuttle clearing (from Tatooine),8x4,art:tatooine:docking-bay,yes,pending-final-art,greybox piece
 route-118,ENDOR,route,Route118,BLOCKOUT,prop,Redwood trunk,3x3,art:endor:redwood-trunk,yes,pending-mockup,greybox piece
@@ -1116,6 +1122,7 @@ route-121,ENDOR,route,Route121,BLOCKOUT,sign,Hangar sign (Cloud City shuttle),1x
 route-121,ENDOR,route,Route121,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 route-123,ENDOR,route,Route123,BLOCKOUT,area,ROUTE 123,140x20,,,pending-final-art,greybox terrain
 route-123,ENDOR,route,Route123,BLOCKOUT,building,Berry masters house,4x3,art:endor:ewok-hut,yes,pending-final-art,greybox piece
+route-123,ENDOR,route,Route123,BLOCKOUT,building,Pilgrim shuttle clearing (ships),4x4,art:shared:landing-pad,yes,pending-final-art,greybox piece
 route-123,ENDOR,route,Route123,BLOCKOUT,prop,Redwood trunk,3x3,art:endor:redwood-trunk,yes,pending-mockup,greybox piece
 route-123,ENDOR,route,Route123,BLOCKOUT,prop,Fallen log,3x1,art:endor:fallen-log,yes,pending-final-art,greybox piece
 route-123,ENDOR,route,Route123,BLOCKOUT,person,Trainer Woskila,1x1,,,PLACEHOLDER,
@@ -1164,6 +1171,7 @@ route-123,ENDOR,route,Route123,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER,
 route-123,ENDOR,route,Route123,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
 route-123,ENDOR,route,Route123,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
 route-123,ENDOR,route,Route123,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
+route-123,ENDOR,route,Route123,BLOCKOUT,sign,Shuttle clearing sign,1x1,,,PLACEHOLDER,
 felucia-reserve-north,FELUCIA,route,SafariZone_North,BLOCKOUT,area,FELUCIA RESERVE,40x40,,,pending-final-art,greybox terrain
 felucia-reserve-north,FELUCIA,route,SafariZone_North,BLOCKOUT,prop,Giant fungus,2x2,art:felucia:giant-fungus,yes,pending-final-art,greybox piece
 felucia-reserve-north,FELUCIA,route,SafariZone_North,BLOCKOUT,prop,Spore-pod plants,1x1,art:felucia:spore-pod-plants,yes,pending-mockup,greybox piece
@@ -3253,7 +3261,6 @@ pirin,SULLUST,town,LavaridgeTown,BLOCKOUT,building,Hot-spring bathhouse,6x4,art:
 pirin,SULLUST,town,LavaridgeTown,BLOCKOUT,building,Bacta Center,5x4,art:shared:bacta-center,yes,pending-final-art,greybox piece
 pirin,SULLUST,town,LavaridgeTown,BLOCKOUT,building,Supply Depot,4x4,art:shared:supply-depot,yes,pending-final-art,greybox piece
 pirin,SULLUST,town,LavaridgeTown,BLOCKOUT,building,Sullustan home,5x4,art:sullust:sullustan-home,yes,pending-final-art,greybox piece
-pirin,SULLUST,town,LavaridgeTown,BLOCKOUT,building,Spaceport hangar (from Tatooine),8x4,art:tatooine:docking-bay,yes,pending-final-art,greybox piece
 pirin,SULLUST,town,LavaridgeTown,BLOCKOUT,prop,Steam vent,1x1,art:sullust:steam-vent,yes,pending-mockup,greybox piece
 pirin,SULLUST,town,LavaridgeTown,BLOCKOUT,prop,Steam vent,1x1,art:sullust:steam-vent,yes,pending-mockup,greybox piece
 pirin,SULLUST,town,LavaridgeTown,BLOCKOUT,prop,Steam vent,1x1,art:sullust:steam-vent,yes,pending-mockup,greybox piece
@@ -3264,12 +3271,11 @@ pirin,SULLUST,town,LavaridgeTown,BLOCKOUT,person,Sabine Wren,1x1,,,PLACEHOLDER,
 pirin,SULLUST,town,LavaridgeTown,BLOCKOUT,person,Bathhouse keeper,1x1,,,PLACEHOLDER,
 pirin,SULLUST,town,LavaridgeTown,BLOCKOUT,person,Spring bather,1x1,,,PLACEHOLDER,
 pirin,SULLUST,town,LavaridgeTown,BLOCKOUT,person,Sullustan miner,1x1,,,PLACEHOLDER,
-pirin,SULLUST,town,LavaridgeTown,BLOCKOUT,person,Pilot fresh off the shuttle,1x1,,,PLACEHOLDER,
 pirin,SULLUST,town,LavaridgeTown,BLOCKOUT,sign,Town sign,1x1,,,PLACEHOLDER,
 pirin,SULLUST,town,LavaridgeTown,BLOCKOUT,sign,Arena sign,1x1,,,PLACEHOLDER,
-pirin,SULLUST,town,LavaridgeTown,BLOCKOUT,sign,Hangar sign (Sullustan transport),1x1,,,PLACEHOLDER,
 pirin,SULLUST,town,LavaridgeTown,BLOCKOUT,warp,Magma Tunnels mouth,1x1,,,PLACEHOLDER,
 route-113,SULLUST,route,Route113,BLOCKOUT,area,ROUTE 113,100x20,,,pending-final-art,greybox terrain
+route-113,SULLUST,route,Route113,BLOCKOUT,building,Tatooine landing zone (ships),6x3,art:shared:landing-pad,yes,pending-final-art,greybox piece
 route-113,SULLUST,route,Route113,BLOCKOUT,prop,Basalt column,2x2,art:sullust:basalt-column,yes,pending-mockup,greybox piece
 route-113,SULLUST,route,Route113,BLOCKOUT,prop,Steam vent,1x1,art:sullust:steam-vent,yes,pending-mockup,greybox piece
 route-113,SULLUST,route,Route113,BLOCKOUT,person,Ninja Boy,1x1,,,PLACEHOLDER,
@@ -3288,10 +3294,12 @@ route-113,SULLUST,route,Route113,BLOCKOUT,person,Trainer Cannal,1x1,,,PLACEHOLDE
 route-113,SULLUST,route,Route113,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER,
 route-113,SULLUST,route,Route113,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER,
 route-113,SULLUST,route,Route113,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER,
+route-113,SULLUST,route,Route113,BLOCKOUT,person,Ash-road warden,1x1,,,PLACEHOLDER,
 route-113,SULLUST,route,Route113,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
 route-113,SULLUST,route,Route113,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
 route-113,SULLUST,route,Route113,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
 route-113,SULLUST,route,Route113,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
+route-113,SULLUST,route,Route113,BLOCKOUT,sign,Landing zone sign,1x1,,,PLACEHOLDER,
 route-113,SULLUST,route,Route113,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 route-113,SULLUST,route,Route113,BLOCKOUT,warp,Magma Tunnels mouth,1x1,,,PLACEHOLDER,
 route-114,SULLUST,route,Route114,BLOCKOUT,area,ROUTE 114,40x80,,,pending-final-art,greybox terrain
@@ -4402,7 +4410,6 @@ mos-eisley,TATOOINE,town,SlateportCity,BLOCKOUT,building,Supply Depot,4x4,art:sh
 mos-eisley,TATOOINE,town,SlateportCity,BLOCKOUT,building,Name-changer's home,5x4,art:tatooine:homestead-dome,yes,pending-final-art,greybox piece
 mos-eisley,TATOOINE,town,SlateportCity,BLOCKOUT,building,Moisture trader's home,5x4,art:tatooine:homestead-dome,yes,pending-final-art,greybox piece
 mos-eisley,TATOOINE,town,SlateportCity,BLOCKOUT,building,Battle tent,6x5,art:shared:arena,yes,pending-final-art,greybox piece
-mos-eisley,TATOOINE,town,SlateportCity,BLOCKOUT,building,Docking Bay 35 (Sullust transport),8x5,art:tatooine:docking-bay,yes,pending-final-art,greybox piece
 mos-eisley,TATOOINE,town,SlateportCity,BLOCKOUT,prop,Parked freighter,6x4,art:tatooine:freighter-parked,yes,pending-final-art,greybox piece
 mos-eisley,TATOOINE,town,SlateportCity,BLOCKOUT,prop,Market stall,2x2,art:tatooine:market-stall,yes,pending-final-art,greybox piece
 mos-eisley,TATOOINE,town,SlateportCity,BLOCKOUT,prop,Market stall,2x2,art:tatooine:market-stall,yes,pending-final-art,greybox piece
@@ -4429,7 +4436,6 @@ mos-eisley,TATOOINE,town,SlateportCity,BLOCKOUT,sign,Cantina sign,1x1,,,PLACEHOL
 mos-eisley,TATOOINE,town,SlateportCity,BLOCKOUT,sign,Museum sign,1x1,,,PLACEHOLDER,
 mos-eisley,TATOOINE,town,SlateportCity,BLOCKOUT,sign,Docking Bay 94 sign,1x1,,,PLACEHOLDER,
 mos-eisley,TATOOINE,town,SlateportCity,BLOCKOUT,sign,Docking Bay 86 sign,1x1,,,PLACEHOLDER,
-mos-eisley,TATOOINE,town,SlateportCity,BLOCKOUT,sign,Docking Bay 35 sign,1x1,,,PLACEHOLDER,
 mos-eisley,TATOOINE,town,SlateportCity,BLOCKOUT,sign,Hangar sign (Millennium Falcon (Han)),1x1,,,PLACEHOLDER,
 mos-eisley,TATOOINE,town,SlateportCity,BLOCKOUT,sign,Hangar sign (Star liner (S.S. Tidal)),1x1,,,PLACEHOLDER,
 mos-entha,TATOOINE,town,PetalburgCity,BLOCKOUT,area,MOS ENTHA,38x32,,,pending-final-art,greybox terrain
@@ -4748,9 +4754,9 @@ route-111,TATOOINE,route,Route111,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 route-111,TATOOINE,route,Route111,BLOCKOUT,warp,Krayt Graveyard tunnel,1x1,,,PLACEHOLDER,
 route-112,TATOOINE,route,Route112,BLOCKOUT,area,ROUTE 112,40x60,,,pending-final-art,greybox terrain
 route-112,TATOOINE,route,Route112,BLOCKOUT,building,Shuttle station,6x5,art:tatooine:homestead-dome,yes,pending-final-art,greybox piece
+route-112,TATOOINE,route,Route112,BLOCKOUT,building,Sullust transport pad (ships),4x4,art:shared:landing-pad,yes,pending-final-art,greybox piece
 route-112,TATOOINE,route,Route112,BLOCKOUT,prop,Sandstone boulder,2x2,art:tatooine:sandstone-boulder,yes,pending-final-art,greybox piece
 route-112,TATOOINE,route,Route112,BLOCKOUT,prop,Rock spire,2x3,art:tatooine:rock-spire,yes,pending-final-art,greybox piece
-route-112,TATOOINE,route,Route112,BLOCKOUT,prop,Landing pad,4x4,art:shared:landing-pad,yes,pending-final-art,greybox piece
 route-112,TATOOINE,route,Route112,BLOCKOUT,person,Magma Grunts,1x1,,,PLACEHOLDER,
 route-112,TATOOINE,route,Route112,BLOCKOUT,person,Trainer Boun,1x1,,,PLACEHOLDER,
 route-112,TATOOINE,route,Route112,BLOCKOUT,person,Trainer Leshax,1x1,,,PLACEHOLDER,
@@ -4769,6 +4775,7 @@ route-112,TATOOINE,route,Route112,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
 route-112,TATOOINE,route,Route112,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
 route-112,TATOOINE,route,Route112,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
 route-112,TATOOINE,route,Route112,BLOCKOUT,sign,Hangar sign (Shuttle (cable car)),1x1,,,PLACEHOLDER,
+route-112,TATOOINE,route,Route112,BLOCKOUT,sign,Transport pad sign,1x1,,,PLACEHOLDER,
 route-112,TATOOINE,route,Route112,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 route-115,TATOOINE,route,Route115,BLOCKOUT,area,ROUTE 115,40x80,,,pending-final-art,greybox terrain
 route-115,TATOOINE,route,Route115,BLOCKOUT,prop,Sandstone boulder,2x2,art:tatooine:sandstone-boulder,yes,pending-final-art,greybox piece

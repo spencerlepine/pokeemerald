@@ -5,7 +5,8 @@ kind: route
 replaces: Route123
 status: BLOCKOUT
 art_status: pending-final-art
-story: River valley in southern Endor with the berry grower's lodge.
+story: River valley in southern Endor with the berry grower's lodge. The north corridor, once the road up to the holy waters, ends at the pilgrim shuttle clearing
+  (flights to Jedha).
 notes: 'route-123 (route, 140x20): river valley, the berry grower''s lodge · need: river, orchard rows (plants).'
 pos: [0, 140]
 grid: |
@@ -40,6 +41,12 @@ buildings:
   size: [4, 3]
   door: 1
   to: route-123-berry-masters-house
+- name: Pilgrim shuttle clearing (ships)
+  art: art:shared:landing-pad
+  at: [118, 2]
+  size: [4, 4]
+  door: 1
+  to: route-123-landing
 props:
 - name: Redwood trunk
   art: art:endor:redwood-trunk
@@ -186,5 +193,7 @@ signs:
   at: [10, 12]
 - name: Sign
   at: [20, 7]
+- name: Shuttle clearing sign
+  at: [120, 8]
 warps: []
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Planet border cut: north edge to route-122 (JEDHA); reached by ship instead.']

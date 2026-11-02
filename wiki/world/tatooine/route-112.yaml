@@ -5,7 +5,8 @@ kind: route
 replaces: Route112
 status: BLOCKOUT
 art_status: pending-final-art
-story: Canyon road north of the Dune Sea. The shuttle station (vanilla cable car) flies up to Mustafar Peak; the north edge was Sullust and is now cut.
+story: 'Canyon road north of the Dune Sea. The shuttle station (vanilla cable car) flies up to Mustafar Peak; the north edge was Sullust and is now cut. The Sullustan
+  transport pad sits in the field below the shuttle station: the road north to Sullust is now a flight.'
 notes: 'route-112 (route, 40x60): canyon road, the shuttle station to Mustafar (a landing pad with a terminal building and a parked shuttle) · cliffs both sides ·
   need: shuttle (folded wings, wedge).'
 pos: [52, -287]
@@ -81,6 +82,12 @@ buildings:
   size: [6, 5]
   door: 1
   to: route-112-shuttle-station
+- name: Sullust transport pad (ships)
+  art: art:shared:landing-pad
+  at: [17, 35]
+  size: [4, 4]
+  door: 1
+  to: hangar-tatooine-sullust
 props:
 - name: Sandstone boulder
   art: art:tatooine:sandstone-boulder
@@ -90,10 +97,6 @@ props:
   art: art:tatooine:rock-spire
   at: [24, 11]
   size: [2, 3]
-- name: Landing pad
-  art: art:shared:landing-pad
-  at: [17, 35]
-  size: [4, 4]
 people:
 - name: Magma Grunts
   at: [26, 30]
@@ -146,11 +149,13 @@ signs:
   at: [4, 49]
 - name: Hangar sign (Shuttle (cable car))
   at: [30, 28]
+- name: Transport pad sign
+  at: [20, 39]
 warps:
 - name: Door
   at: [29, 27]
   to: route-112-shuttle-station
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Planet border cut: west edge to pirin (SULLUST); reached by ship instead.', 'Planet border cut:
     door at [6, 46] to ashen-pass; reached by ship instead.', 'Planet border cut: door at [7, 46] to ashen-pass; reached by ship instead.', 'Planet border cut: door
-    at [11, 36] to magma-tunnels; reached by ship instead.', 'Planet border cut: door at [22, 10] to magma-tunnels; reached by ship instead.', Route 112 north (Sullust)
-    and the shuttle to Mustafar become ship links; see net_new.csv borders.]
+    at [11, 36] to magma-tunnels; reached by ship instead.', 'Planet border cut: door at [22, 10] to magma-tunnels; reached by ship instead.', The Sullust transport
+    pad (to Route 113) and the shuttle station (to Mustafar Peak) are the two hyperlanes here (mapping/hyperlanes.csv).]

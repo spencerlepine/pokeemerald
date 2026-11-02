@@ -5,7 +5,9 @@ kind: route
 replaces: Route113
 status: BLOCKOUT
 art_status: pending-final-art
-story: Ash fields east of Inyusu Tor where ash falls like snow; the glassblower collects it. The Magma Tunnels open on the south side.
+story: Ash fields east of Inyusu Tor where ash falls like snow; the glassblower collects it. The Magma Tunnels open on the south side. The Tatooine transport lands
+  at the east end; the ash road on east to Pirin is closed by a warden until the meteorite is taken at Starfall Cavern (event:meteor-falls-meteorite), so Sabine's
+  arena comes after Mustafar, as in Emerald.
 notes: 'route-113 (route, 100x20): ash fields, the glassblower''s hut, ash drifts, Magma Tunnel mouths · need: ash as a ground kind, drifts as berms.'
 pos: [40, 4]
 grid: |
@@ -17,9 +19,9 @@ grid: |
   ###############<##T#......<....#####."""""""""""####""">....""""""..>..####.....>""""###############
   ...............<#T#.....""<........."""""""""...####...>"""""""""###>...........>""""##...##########
   ...............<##T#..""""<........"""""""".....####...>"""""""""###>##T#T#vvvvv#"""".......#######T
-  ...............<.##.""""""#vv#.....""..#####....####vvv#""""""...###>#####"""""""""""..............T
-  ............#..#vvv""""""""""<........###.####......""""""""""...###>.."""""""""""""...............T
-  ...................."""""""""#vvvvv...#####.##......"""""""#vv...vvv#.."""""""""""""...............T
+  ...............<.##.""""""#vv#.....""..#####....####vvv#""""""...###>#####"""""""""""...............
+  ............#..#vvv""""""""""<........###.####......""""""""""...###>.."""""""""""""................
+  ...................."""""""""#vvvvv...#####.##......"""""""#vv...vvv#.."""""""""""""................
   ......................""""""""""".....########........""""">..........."""""""""""..#.....T#########
   ......................""""""""""".....###########......"""">.##..........""""#######################
   ......................""""""""""".........########..#######>...............#########################
@@ -33,7 +35,16 @@ exits:
 - edge: west
   cells: [2, 6, 7, 8, 9, 10, 11, 12, 13, 14, 17]
   to: inyusu-tor
-buildings: []
+- edge: east
+  cells: [8, 9, 10]
+  to: pirin
+buildings:
+- name: Tatooine landing zone (ships)
+  art: art:shared:landing-pad
+  at: [92, 7]
+  size: [6, 3]
+  door: 2
+  to: hangar-tatooine-sullust
 props:
 - name: Basalt column
   art: art:sullust:basalt-column
@@ -92,6 +103,9 @@ people:
 - name: Item
   at: [15, 15]
   role: item
+- name: Ash-road warden
+  at: [96, 10]
+  role: story
 signs:
 - name: Sign
   at: [85, 6]
@@ -101,6 +115,8 @@ signs:
   at: [58, 4]
 - name: Sign
   at: [31, 5]
+- name: Landing zone sign
+  at: [91, 10]
 warps:
 - name: Door
   at: [33, 5]
