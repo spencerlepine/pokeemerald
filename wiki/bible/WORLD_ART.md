@@ -28,6 +28,24 @@ The player must always see where they can walk.
 | `noise` | Small decor that blocks one or two cells (crates, vaporators, droids) | Corners, building sides and dead space only; never in a path or a doorway |
 | `landmark` | A big unique piece (docking bay, temple, sandcrawler) | One or two per map, at a point the path leads to |
 
+## Fill the tile (sizing rule for every row, owner 2026-11-02)
+
+Emerald's art fills whole 16x16 cells, so the player can see the hit box: a building's edge, a statue's base
+and a rock's outline sit on the cell line. Z-day's art was finer and more detailed; here it is not.
+
+- **Footprint is the hit box.** Every piece has a `footprint` in whole cells (width x depth). Those cells are
+  blocked; nothing else is. The drawn sprite may rise above the footprint (a 2-cell-deep house drawn 4 cells
+  tall) and the player walks behind the upper rows, as the game layers sprites. Two pieces may overlap
+  visually as long as their footprints do not touch where a walkway is needed.
+- **Fill the cells.** Size a piece to fill its footprint edge to edge. No half-empty cells at the sides of a
+  building or statue, no 10 px rock in a 16 px cell. A piece that does not fill a whole cell is a `noise`
+  decoration drawn on a walkable tile, not a blocker.
+- **Scale to the grid, not to life.** A fossil, a shipwreck or a statue is drawn at the size that looks right
+  in cells (2x2, 3x2, 4x3), bigger or smaller than it would really be. Pick the footprint first, then draw.
+- **Place first, draw later.** World building comes before art: every piece (statues, trees of many shapes
+  and sizes, ships, shipwrecks, fossils, stalagmites, mangroves, bushes) gets a row with a footprint and a
+  place on the map while it is still a wireframe; the art is drawn afterwards, one row at a time.
+
 ## Columns
 
 | Column | Meaning |

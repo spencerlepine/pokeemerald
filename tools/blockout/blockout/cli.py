@@ -3,6 +3,7 @@
 python3 -m blockout render [area.yaml ...]   -> <area>.png next to each file (default: every area)
 python3 -m blockout check  [area.yaml ...]   -> layout problems, exit 1 if any
 python3 -m blockout index                    -> wiki/world/INDEX.csv: every area and every placed piece
+python3 -m blockout world-tiles              -> <planet>/_planet_tiles.png and _world_tiles.png from the greybox terrain renders
 python3 -m blockout guide                    -> wiki/world/GUIDE.md and CONNECTIONS.csv (the area graph)
 python3 -m blockout todo [--status S] [--planet P] [--kind K] [--tool T] [--csv]   -> what to draw next
 python3 -m blockout todo --set <area-id or art id> <status>                           -> record progress"""
@@ -405,6 +406,44 @@ ORDER = ["TATOOINE", "KASHYYYK", "SULLUST", "MUSTAFAR", "ENDOR", "BESPIN", "JEDH
          "KAMINO", "ILUM", "GRAND ARENA", "FELUCIA", "TYTHON", "ATOLLON", "MORTIS", "ASTEROID FIELD", "DEATH STAR", "SHARED"]
 
 
+def cmd_world_tiles(a):
+    """wiki/world/<planet>/_planet_tiles.png (16 px per cell) and wiki/world/_world_tiles.png (8 px per cell):
+    the overworld of every planet from the greybox tile renders, dungeons below each. Interiors are not on
+    the map; see greybox/tiles/<area>.png."""
+    from PIL import Image, ImageDraw
+    from . import overview as O
+    tiles = WORLD / "greybox" / "tiles"
+    areas = [Area(p) for p in _all()]
+    planets = [p for p in ORDER if p in {x.planet for x in areas}] + sorted({x.planet for x in areas} - set(ORDER))
+    panels = []
+    for pl in planets:
+        mine = [x for x in areas if x.planet == pl and x.kind in ("town", "route", "landmark", "space", "dungeon")]
+        outdoor = [x for x in mine if x.kind != "dungeon"]
+        if outdoor and all(x.pos is None for x in outdoor):   # door-linked islands: side by side
+            cx = 0
+            for x in outdoor:
+                x.pos, cx = [cx, 0], cx + x.w + 2
+        img = O.stitch_tiles(mine, f"{pl}: greybox terrain", tiles)
+        if img is None:
+            continue
+        path = WORLD / pl.lower().replace(" ", "-") / "_planet_tiles.png"
+        img.save(path)
+        print(os.path.relpath(path, V.ROOT), img.size)
+        panels.append(img.resize((img.width // 2, img.height // 2), Image.LANCZOS))
+    gap = 16
+    W = max(i.width for i in panels) + 2 * gap
+    H = sum(i.height for i in panels) + gap * (len(panels) + 1) + 30
+    img = Image.new("RGB", (W, H), (28, 28, 32))
+    ImageDraw.Draw(img).text((gap, 8), "The whole world in greybox terrain, half size (8 px per cell); one planet after another in story order",
+                             font=O.F_BIG, fill=(255, 255, 255))
+    y = 30 + gap
+    for i in panels:
+        img.paste(i, (gap, y))
+        y += i.height + gap
+    img.save(WORLD / "_world_tiles.png", optimize=True)
+    print("wiki/world/_world_tiles.png", img.size)
+
+
 def cmd_guide(a):
     """wiki/world/GUIDE.md: every planet, its areas, how they connect and where ships land."""
     areas = [Area(p) for p in _all()]
@@ -525,6 +564,7 @@ def main(argv=None):
     td.add_argument("--csv", action="store_true")
     td.add_argument("--set", nargs=2, metavar=("ID", "STATUS"))
     sub.add_parser("world")
+    sub.add_parser("world-tiles")
     sub.add_parser("guide")
     lo = sub.add_parser("layout")
     lo.add_argument("planets", nargs="+")
@@ -533,4 +573,4 @@ def main(argv=None):
     ia.add_argument("--force", action="store_true")
     ia.add_argument("--only", nargs="*")
     a = ap.parse_args(argv)
-    {"new": cmd_new, "world": cmd_world, "layout": cmd_layout, "import-all": cmd_import_all, "render": cmd_render, "check": cmd_check, "index": cmd_index, "todo": cmd_todo, "guide": cmd_guide}[a.cmd](a)
+    {"new": cmd_new, "world": cmd_world, "layout": cmd_layout, "import-all": cmd_import_all, "render": cmd_render, "check": cmd_check, "index": cmd_index, "todo": cmd_todo, "guide": cmd_guide, "world-tiles": cmd_world_tiles}[a.cmd](a)

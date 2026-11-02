@@ -87,3 +87,60 @@ def side_list(areas, height):
         d.text((10, y), f"{a.kind[:4]}  {a.id}  {a.w}x{a.h}", font=F_SMALL, fill=col)
         y += 12
     return img
+
+
+# --------------------------------------------------------------------------------------------- terrain renders
+TILE = 16   # px per cell in a greybox tile render (tools/tile-generator `terrain run`)
+
+
+def stitch_tiles(areas, title, tiles_dir, scale=1):
+    """The planet's overworld from the greybox tile renders in `tiles_dir`, at `pos`; dungeons in a row
+    below. Returns the image, or None when no area is placed and none has a render."""
+    placed = [a for a in areas if a.kind != "dungeon" and a.pos is not None and a.w and (tiles_dir / f"{a.id}.png").exists()]
+    dungeons = [a for a in areas if a.kind == "dungeon" and (tiles_dir / f"{a.id}.png").exists()]
+    if not placed and not dungeons:
+        return None
+    px = TILE * scale
+    pad, head, gap = 16, 40, 8
+    if placed:
+        x0, y0 = min(a.pos[0] for a in placed), min(a.pos[1] for a in placed)
+        x1, y1 = max(a.pos[0] + a.w for a in placed), max(a.pos[1] + a.h for a in placed)
+        W, H = (x1 - x0) * px, (y1 - y0) * px
+    else:
+        x0 = y0 = W = H = 0
+    # dungeons flow in rows under the overworld, at most the overworld's width (or 1600 px)
+    maxw = max(W, 1600)
+    rows, row, rw, rh = [], [], 0, 0
+    for a in dungeons:
+        w, h = a.w * px, a.h * px
+        if row and rw + w + gap > maxw:
+            rows.append((row, rh)); row, rw, rh = [], 0, 0
+        row.append((a, rw)); rw += w + gap; rh = max(rh, h)
+    if row:
+        rows.append((row, rh))
+    dh = sum(h + gap + 14 for _, h in rows)
+    img = Image.new("RGB", (max(W, maxw) + 2 * pad, H + dh + 2 * pad + head + (gap if dungeons else 0)), (28, 28, 32))
+    d = ImageDraw.Draw(img)
+    d.text((pad, 8), title, font=F_BIG, fill=(255, 255, 255))
+    ox, oy = pad - x0 * px, pad + head - y0 * px
+    for a in placed:
+        im = Image.open(tiles_dir / f"{a.id}.png")
+        if scale != 1:
+            im = im.resize((im.width * scale, im.height * scale), Image.NEAREST)
+        img.paste(im, (ox + a.pos[0] * px, oy + a.pos[1] * px))
+    y = pad + head + H + gap
+    for row, rh in rows:
+        for a, rx in row:
+            im = Image.open(tiles_dir / f"{a.id}.png")
+            if scale != 1:
+                im = im.resize((im.width * scale, im.height * scale), Image.NEAREST)
+            img.paste(im, (pad + rx, y + 14))
+            d.text((pad + rx, y), a.name, font=F_SMALL, fill=(200, 200, 200))
+        y += rh + gap + 14
+    for a in placed:   # labels on top
+        ax, ay = ox + a.pos[0] * px, oy + a.pos[1] * px
+        tw = d.textlength(a.name, font=F)
+        cx, cy = ax + a.w * px / 2 - tw / 2, ay + a.h * px / 2 - 7
+        d.rectangle([cx - 3, cy - 1, cx + tw + 3, cy + 14], fill=(0, 0, 0))
+        d.text((cx, cy), a.name, font=F, fill=(255, 255, 255))
+    return img
