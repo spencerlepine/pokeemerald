@@ -1,0 +1,58 @@
+# Arena Dome lobby (Grand Arena's Battle Dome lobby): hot-swap of MUS_B_DOME_LOBBY (wiki audio:MUS_B_DOME_LOBBY).
+# SCRATCH (no film cue): written from the brief. Brief (sw_subject): Battle Dome lobby, tournament hype.
+# E major, 144 bpm (vanilla tempo) on the vanilla b_dome rock voicegroup: a rising 75% square riff over the rock
+# bVI-bVII-I (C D E) climb, chugging low distortion guitar, wave bass, frlg kick and snare, offbeat noise hats; the
+# last four bars climb A B C D back to E. 12-bar loop, 20 s (vanilla 20 s).
+name: arena-dome-lobby
+replaces: MUS_B_DOME_LOBBY
+form: LOOP
+voicegroup: b_dome                  # vanilla: frlg kit 0, distortion guitar 62, square 87, waves 83/92, noise 127
+master_volume: 56
+tempo: 144
+steps_per_beat: 4
+time_signature: [4, 4]
+seed: 161
+
+parts:
+  lead:   {program: 87, channel: 0, volume: 80, pan: 6,   gate: 0.85, mono: true}
+  guitar: {program: 62, channel: 1, volume: 74, pan: -22, octave: 3, gate: 0.5, humanize: {vel: 6}}
+  bass:   {program: 92, channel: 2, volume: 100, pan: 0,  octave: 2, gate: 0.6, role: bass, mono: true}
+  drums:  {program: 0,  channel: 3, volume: 84, pan: 6,   role: drums, kit: {kick: 36, sn: 38, crash: 49}}
+  hat:    {program: 127, channel: 4, volume: 26, pan: 20, role: drums, kit: {h: 80}}
+
+progressions:
+  a: "E | E | C | D | E | E | C | D"
+  b: "A | B | C | D"
+
+phrases:
+  riff: |
+    E5:2 E5:2 G#5:2 B5:4 G#5:2 B5:2 E6:2 | D#6:4 B5:4 G#5:4 F#5:4 |
+    E5:2 G5:2 C6:4 B5:2 G5:2 E5:4 | F#5:2 A5:2 D6:4 C6:2 A5:2 F#5:4
+  climb: "C#6:4 A5:4 E5:4 C#6:4 | D#6:4 B5:4 F#5:4 D#6:4 | E6:4 C6:4 G5:4 E6:4 | F#6:4 D6:4 A5:2 B5:2 C#6:2 D#6:2"
+  chug: "^1:2 ^1:2 ^1:2 ^1:2 ^1:2 ^1:2 ^3:2 ^1:2"
+  bass: "^1:2 ^1:2 ^1+:2 ^1:2 ^1:2 ^1:2 ^3:2 ^1+:2"
+
+grooves:
+  rock:
+    kick:  "x.....x.x.......|x.....x.x......."
+    sn:    "....x.......x...|....x.......x..."
+    crash: "X...............|................"
+  rock_up:
+    kick:  "x.....x.x.......|x.....x.x.......|x.....x.x.......|x.....x.x.x....."
+    sn:    "....x.......x...|....x.......x...|....x.......x...|....x.......x.o."
+    crash: "X...............|................|X...............|................"
+  hats:
+    h: "..x...x...x...x."
+
+sections:
+  a:
+    bars: 8
+    chords: a
+    parts: {lead: riff, guitar: chug, bass: bass, drums: rock, hat: hats}
+  b:
+    bars: 4
+    chords: b
+    parts: {lead: climb, guitar: chug, bass: bass, drums: rock_up, hat: hats}
+
+arrangement: [a, b]
+loop_start: a
