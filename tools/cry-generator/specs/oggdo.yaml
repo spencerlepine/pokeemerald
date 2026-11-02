@@ -1,0 +1,31 @@
+name: oggdo
+slot: quagsire
+brief: "OGGDO: creature call that fits its look and size. Huge frog-like oggdo that waits with its mouth open."
+kind: creature
+size: 0.7
+seed: 562
+layers:
+  # Family DNA (Bogano oggdos): a dopey "u -> aw" frog-croak with slow stepped pitch and a wet tongue flick.
+  # Oggdo: a deep, gaping "wwuuh-RAAWK" croak from a wide-open mouth and a big wet tongue snap.
+  - type: voice
+    pitch: [[0, 220], [0.15, 270], [0.45, 300], [0.62, 200]]
+    pitch_step: 0.05
+    source: {pulse: 0.9, saw: 0.5, pulse_width: 0.3, noise: 0.06}
+    vowels: [[0, u], [0.2, o], [0.42, aw], [0.62, a]]
+    env: [[0, 0], [0.02, 1], [0.45, 0.85], [0.64, 0]]
+    growl: 0.5
+    growl_rate: 25
+    jitter: 0.015
+    drive: 2
+  - type: noise
+    at: 0.64
+    band: [[0, 900], [0.08, 2200]]
+    q: 1.6
+    env: [[0, 0], [0.02, 0.7], [0.1, 0]]
+    gain: 0.45
+  - type: click
+    at: 0.72
+    times: [0.0, 0.02]
+    gain: 0.6
+master:
+  tilt_db: 3

@@ -1,0 +1,28 @@
+name: oggdolet
+slot: wooper
+brief: "OGGDOLET: creature call that fits its look and size. Oggdo tadpole that wanders the Bogano shores on cold mornings."
+kind: creature
+size: 0.15
+seed: 561
+layers:
+  # Family DNA (Bogano oggdos): a dopey "u -> aw" frog-croak with a slow stepped pitch and a wet tongue flick.
+  # Oggdolet: a little, sleepy "wuu-pah" croak and a tiny flick.
+  - type: voice
+    pitch: [[0, 520], [0.1, 600], [0.24, 470]]
+    pitch_step: 0.04
+    source: {pulse: 0.8, saw: 0.4, pulse_width: 0.3, noise: 0.05}
+    vowels: [[0, u], [0.12, aw], [0.24, o]]
+    env: [[0, 0], [0.01, 1], [0.17, 0.75], [0.25, 0]]
+    growl: 0.2
+    growl_rate: 36
+    emphasis: 0.6
+  - type: noise
+    at: 0.25
+    band: [[0, 1200], [0.06, 2400]]
+    q: 2
+    env: [[0, 0], [0.02, 0.5], [0.07, 0]]
+    gain: 0.35
+  - type: click
+    at: 0.31
+    times: [0.0]
+    gain: 0.4

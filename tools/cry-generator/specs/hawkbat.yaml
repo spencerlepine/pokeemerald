@@ -1,0 +1,33 @@
+name: hawkbat
+slot: swellow
+brief: "HAWKBAT: creature call that fits its look and size. Hawk-bat that dives between Coruscant's towers to hunt."
+kind: creature
+size: 0.35
+seed: 572
+layers:
+  # Family DNA (Coruscant hawk-bats): raspy two-part screech "kee-yaa" on a saw+pulse throat, with leathery wing-flap noise.
+  # Hawk-bat: a wing-flap whoosh into a diving, falling "KEE-YAAAH" screech.
+  - type: noise
+    band: [[0, 800], [0.1, 1600]]
+    q: 1.2
+    env: [[0, 0], [0.04, 0.6], [0.06, 0.2], [0.09, 0.6], [0.12, 0]]
+    gain: 0.45
+  - type: voice
+    at: 0.06
+    pitch: [[0, 620], [0.05, 760]]
+    source: {saw: 0.8, pulse: 0.5, pulse_width: 0.25, noise: 0.12}
+    vowels: [[0, i], [0.05, e]]
+    env: [[0, 0], [0.006, 1], [0.05, 0.6], [0.06, 0]]
+    emphasis: 0.7
+  - type: voice
+    at: 0.14
+    pitch: [[0, 700], [0.06, 880], [0.3, 640], [0.4, 520]]
+    source: {saw: 0.8, pulse: 0.5, pulse_width: 0.25, noise: 0.14}
+    vowels: [[0, i], [0.08, ae], [0.3, a], [0.4, aw]]
+    env: [[0, 0], [0.01, 1], [0.28, 0.75], [0.41, 0]]
+    vibrato: {rate: 20, depth: 0.03}
+    growl: 0.4
+    growl_rate: 56
+    jitter: 0.025
+    drive: 2.2
+    emphasis: 0.7

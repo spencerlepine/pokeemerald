@@ -1,0 +1,26 @@
+name: spiralith
+slot: omanyte
+brief: "SPIRALITH: creature call that fits its look and size. Spiral-shelled fossil."
+kind: creature
+size: 0.15
+seed: 551
+layers:
+  # Family DNA (Mon Cala spiral fossils): a hollow, ringing shell voice (sine+pulse on "o/u" that spirals down with slow vibrato) and water bubbles.
+  # Spiralith: a small, hollow "whoo-oop" echoing in its shell.
+  - type: voice
+    pitch: [[0, 560], [0.1, 700], [0.45, 480]]
+    source: {sine: 0.6, pulse: 0.5, pulse_width: 0.35, noise: 0.03}
+    vowels: [[0, o], [0.15, u], [0.45, o]]
+    env: [[0, 0], [0.01, 1], [0.3, 0.7], [0.47, 0]]
+    vibrato: {rate: 8, depth: 0.05}
+    emphasis: 0.6
+  - type: tone
+    at: 0.03
+    wave: sine
+    pitch: [[0, 1400], [0.4, 1000]]
+    warble: {rate: 8, depth: 0.04}
+    env: [[0, 0], [0.02, 0.4], [0.3, 0.2], [0.42, 0]]
+    gain: 0.4
+  - type: click
+    times: [0.48, 0.54, 0.6]
+    gain: 0.35
