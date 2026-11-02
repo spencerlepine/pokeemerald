@@ -69,4 +69,13 @@ s56() { nav; k DOWN DOWN A; w 4; shot 56_starnav_matchcall; k A; w 1.5; shot 57_
 s58() { nav; k DOWN DOWN DOWN A; w 4; shot 58_starnav_ribbons_list; k A; w 4; shot 59_starnav_ribbons_mon;
         k A; w 1.5; shot 59b_starnav_ribbon_detail; unnav; }
 
+# ---------- family 6: PC ----------
+pc() { tp 2 2 10 2; k UP; w 0.5; k A; w 2; shot 80_pc_boot_msg; k A; w 1.5; }
+s80() { pc; shot 81_pc_menu; k A; w 2; k A; w 2; k A; w 2; shot 82_pc_storage_menu; k DOWN DOWN A; w 5; shot 83_pc_box_move;
+        k A; w 1; shot 84_pc_box_mon_menu; k B; w 1; k UP; w 0.5; k A; w 1; shot 85_pc_box_options; k B; w 1;
+        k UP; w 0.5; k A; w 2; shot 87_pc_party_tray; k B; w 1.5; k B; w 1; k B; w 3; k B; w 1.5; k B; w 1; k B; w 1; }
+s89() { pc; k A; w 2; k A; w 2; k A; w 2; k DOWN DOWN DOWN A; w 5; shot 89_pc_move_items; k B; w 1; k B; w 3; k B; w 1; k B; w 1; }
+s90() { pc; k DOWN A; w 2; k A; w 2; shot 90_pc_items_menu; k A; w 2; shot 91_pc_items_withdraw; k A; w 1; shot 91b_pc_items_quantity;
+        k B; w 1; k B; w 1; k B; w 1; k B; w 1; k B; w 1; k B; w 1; }
+
 for s in "$@"; do "$s" 2>/dev/null || "s$s"; done

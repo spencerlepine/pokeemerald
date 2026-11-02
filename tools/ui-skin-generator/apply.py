@@ -123,8 +123,19 @@ FAMILIES = {
          '    [POKENAV_GFX_SEARCH_MENU - POKENAV_GFX_SUBMENUS_START] = {\n        .data = gPokenavLeftHeaderSearch_Gfx,\n        .tag = 6\n'),
     )),
   ],
+  '6_pc_storage': [
+    # box screen chrome: data panel, scrolling backdrop and buttons, party tray, box-choice popup,
+    # waveform. Wallpapers, box title colours (tied to the wallpaper), hand cursor and text stay vanilla.
+    ('graphics/pokemon_storage/interface.pal', 'ui', ALL),
+    ('graphics/pokemon_storage/pkmn_data_gray.pal', 'ui', ALL),
+    ('graphics/pokemon_storage/scrolling_bg.pal', 'ui', ALL),
+    ('graphics/pokemon_storage/scrolling_bg_move_items.pal', 'ui', ALL),
+    ('graphics/pokemon_storage/party_menu.pal', 'ui', ALL),
+    ('graphics/pokemon_storage/box_selection_popup.pal', 'ui', ALL),
+    ('graphics/pokemon_storage/waveform.png', 'ui', ALL),
+  ],
 }
-DONE = ['1_text_windows', '2_party_summary', '3_bag_pokeblock', '4_pokedex', '5_starnav']
+DONE = ['1_text_windows', '2_party_summary', '3_bag_pokeblock', '4_pokedex', '5_starnav', '6_pc_storage']
 
 RGB_RE = re.compile(r'RGB\((\d+), *(\d+), *(\d+)\)')
 def tx_rgb5(m, fam):
