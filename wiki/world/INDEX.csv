@@ -1807,6 +1807,9 @@ grand-arena-supply-depot,GRAND ARENA,interior,BattleFrontier_Mart,BLOCKOUT,warp,
 wampa-cave-high-tide-entrance-room,HOTH,dungeon,ShoalCave_HighTideEntranceRoom,BLOCKOUT,area,WAMPA CAVE HIGH TIDE ENTRANCE ROOM,35x35,,,pending-final-art,greybox terrain
 wampa-cave-high-tide-entrance-room,HOTH,dungeon,ShoalCave_HighTideEntranceRoom,BLOCKOUT,warp,Cave mouth,1x1,,,PLACEHOLDER,
 wampa-cave-high-tide-inner-room,HOTH,dungeon,ShoalCave_HighTideInnerRoom,BLOCKOUT,area,WAMPA CAVE HIGH TIDE INNER ROOM,46x38,,,pending-final-art,greybox terrain
+wampa-cave-high-tide-inner-room,HOTH,dungeon,ShoalCave_HighTideInnerRoom,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
+wampa-cave-high-tide-inner-room,HOTH,dungeon,ShoalCave_HighTideInnerRoom,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
+wampa-cave-high-tide-inner-room,HOTH,dungeon,ShoalCave_HighTideInnerRoom,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 wampa-cave-low-tide-entrance-room,HOTH,dungeon,ShoalCave_LowTideEntranceRoom,BLOCKOUT,area,WAMPA CAVE LOW TIDE ENTRANCE ROOM,35x35,,,pending-final-art,greybox terrain
 wampa-cave-low-tide-entrance-room,HOTH,dungeon,ShoalCave_LowTideEntranceRoom,BLOCKOUT,person,Shell Bell Expert,1x1,,,PLACEHOLDER,
 wampa-cave-low-tide-entrance-room,HOTH,dungeon,ShoalCave_LowTideEntranceRoom,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER,

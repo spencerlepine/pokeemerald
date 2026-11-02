@@ -41,3 +41,6 @@ warps:
   at: [14, 1]
   to: terra-cave-end
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']
+travel:
+- {to: route-116, via: emerge, name: Back out to the route the cave opened on (dynamic)}
+- {to: route-115, via: emerge, name: Back out to the route the cave opened on (dynamic)}

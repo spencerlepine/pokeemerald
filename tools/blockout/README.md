@@ -15,7 +15,7 @@ python3 -m blockout index             # wiki/world/INDEX.csv
 python3 -m blockout layout TATOOINE   # place a planet's overworld areas from their exits (writes each area's pos)
 python3 -m blockout world             # <planet>/_planet.png and _world.png (one panel per planet)
 python3 -m blockout world-tiles       # <planet>/_planet_tiles.png (16 px per cell, from the greybox terrain renders) and _world_tiles.png (half size, not committed)
-python3 -m blockout guide             # wiki/world/GUIDE.md and CONNECTIONS.csv: the computed area graph, reachability from the start, and the progression check (planet level bands, net-new area gates and level bands)
+python3 -m blockout guide             # wiki/world/GUIDE.md and CONNECTIONS.csv: the computed area graph, reachability from the start, and the progression check (planet level bands, net-new area gates and level bands), and the way-home check: areas with no forward path to any hangar
 ```
 
 - `drafts/`: the scripts that laid out every planet, with their run order ([`drafts/README.md`](drafts/README.md)).

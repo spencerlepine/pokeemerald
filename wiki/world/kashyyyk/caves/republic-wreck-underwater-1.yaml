@@ -30,3 +30,5 @@ warps:
   at: [4, 7]
   to: republic-wreck-underwater-2
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']
+travel:
+- {to: republic-wreck-room-b1f, via: surface, name: Surface into the flooded hold}

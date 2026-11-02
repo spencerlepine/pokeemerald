@@ -38,3 +38,5 @@ warps:
   at: [14, 1]
   to: marine-cave-end
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']
+travel:
+- {to: route-127, via: emerge, name: Back out to the route the cave opened on (dynamic)}

@@ -53,3 +53,5 @@ warps:
   at: [9, 3]
   to: republic-wreck-hidden-floor-rooms
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']
+travel:
+- {to: republic-wreck-underwater-2, via: dive, name: Dive back down to the flooded deck}

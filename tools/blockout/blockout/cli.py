@@ -536,11 +536,28 @@ def cmd_guide(a):
                 seen.add(n)
                 todo.append(n)
     lost = sorted(x.id for x in areas if x.id not in seen)
+    # the way home: from every area the player must be able to reach a hangar going forward (one-way
+    # warps, ledges and dives count), or a planet can strand the player. Rooms the game returns from by
+    # script (link rooms, showcase halls, the Grand Arena facilities, the intro hold) are not areas you walk out of.
+    homes = {e["from_room"] or e["from_area"] for e in lanes} | {e["to_room"] or e["to_area"] for e in lanes}
+    radj = {}
+    for a_, ts in adj.items():
+        for t in ts:
+            radj.setdefault(t, set()).add(a_)
+    home_seen, todo = set(homes), list(homes)
+    while todo:
+        for n in radj.get(todo.pop(), ()):
+            if n not in home_seen:
+                home_seen.add(n); todo.append(n)
+    script_rooms = {x.id for x in areas if x.kind == "interior" and all(w.get("to") == "MAP_DYNAMIC" for w in x.warps)}
+    stranded = sorted(x.id for x in areas if x.id not in home_seen and x.id not in script_rooms
+                      and not x.id.startswith(("battle-", "grand-arena-battle", "showcase-hall")) and x.id != "cargo-hold-inside-of-truck")
     one_way = sum(1 for x, t, _, _ in edges if (t, x.id) not in links)
     L[4:4] = [f"Connections: [CONNECTIONS.csv](CONNECTIONS.csv) has {len(edges)} links (exits, doors, warps, and the "
               f"{len(lanes)} hyperlanes both ways); {one_way} links have no way straight back (ledges, holes, "
               f"one-way warps, or a back door still missing). From Mos Pelgo, {len(seen & set(by_id))} of {len(areas)} areas can be reached."
-              + (f" Not reachable yet: {', '.join(lost)}." if lost else ""), ""]
+              + (f" Not reachable yet: {', '.join(lost)}." if lost else "")
+              + (f" **Stranded (no way forward to any hangar): {', '.join(stranded)}.**" if stranded else " Every area has a way forward to a hangar."), ""]
     L += hyperlane_section(lanes, by_id)
     L += progression_section(areas, by_id, planets, lanes, edges)
     out = WORLD / "GUIDE.md"

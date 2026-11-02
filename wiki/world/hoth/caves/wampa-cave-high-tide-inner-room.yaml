@@ -52,5 +52,15 @@ buildings: []
 props: []
 people: []
 signs: []
-warps: []
-todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']
+warps:
+- name: Door
+  at: [34, 29]
+  to: wampa-cave-high-tide-entrance-room
+- name: Door
+  at: [14, 33]
+  to: wampa-cave-high-tide-entrance-room
+- name: Door
+  at: [40, 33]
+  to: wampa-cave-high-tide-entrance-room
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Doors back to the high-water entrance room at the low-water positions (the lower rooms are flooded
+    at high water).]

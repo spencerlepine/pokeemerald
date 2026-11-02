@@ -6,8 +6,8 @@ replaces: Underwater_MarineCave
 status: BLOCKOUT
 art_status: pending-final-art
 story: Murky water under the swamp, roots and silt.
-notes: 'Dungeon room: cave mode in `greybox terrain` draws the shell; the planet-specific dressing below still needs models. Swamp: bog lakes, mist, gnarltrees with huge roots, mud
-  islets. The town is a hidden hollow.'
+notes: 'Dungeon room: cave mode in `greybox terrain` draws the shell; the planet-specific dressing below still needs models. Swamp: bog lakes, mist, gnarltrees with
+  huge roots, mud islets. The town is a hidden hollow.'
 grid: |
   ####################
   ####################
@@ -30,4 +30,5 @@ warps:
   to: MAP_DYNAMIC
 travel:
 - {to: marine-cave-entrance, via: emerge, name: Surface inside the Marine Cave}
+- {to: route-127, via: surface, name: Surface to the route above}
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

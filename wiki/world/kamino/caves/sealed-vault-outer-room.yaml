@@ -99,3 +99,5 @@ warps:
   at: [10, 2]
   to: sealed-vault-inner-room
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']
+travel:
+- {to: underwater-sealed-chamber, via: dive, name: Dive back down from the entrance pool}
