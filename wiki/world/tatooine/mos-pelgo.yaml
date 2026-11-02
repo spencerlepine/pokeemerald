@@ -1,0 +1,58 @@
+id: mos-pelgo
+name: MOS PELGO
+planet: TATOOINE
+kind: town
+replaces: LittlerootTown
+status: BLOCKOUT
+story: The family's freighter lands at this tiny moisture farm. The player's homestead, the Korr family's home and Prof. Korr's lab. Route 101 leaves north.
+grid: |
+  TTTTTTTTTT::TTTTTTTT
+  TT........::......TT
+  T.........::.......T
+  T.........::.......T
+  T.........::.......T
+  T.........::.......T
+  T.........::.......T
+  T.........::.......T
+  T...:.....::...:...T
+  T.::::::::::::::::.T
+  T.::::::::::::::::.T
+  T.........::.......T
+  T.........::.......T
+  T.........::.......T
+  T.........::.......T
+  T.........::.......T
+  T.........::.......T
+  T....:::::::.......T
+  TT.................T
+  TTTTTTTTTTTTTTTTTTTT
+exits:
+- {edge: north, cells: [10, 11], to: route-101}
+buildings:
+- {name: Player's homestead, art: 'art:tatooine:homestead-dome', at: [2, 4], size: [5, 4], door: 2, to: homestead-interior}
+- {name: Korr family home, art: 'art:tatooine:sunken-courtyard-home', at: [13, 2], size: [6, 6], door: 2, to: korr-home-interior}
+- {name: Prof. Korr's lab, art: 'art:tatooine:prof-korr-s-lab', at: [2, 12], size: [7, 5], door: 3, to: lab-interior}
+props:
+- {name: Landing pad with the family's freighter, art: 'art:shared:landing-pad', at: [13, 12], size: [4, 4]}
+- {name: Cargo crates, art: 'art:shared:cargo-crates', at: [17, 16], size: [2, 2]}
+- {name: Vaporator, art: 'art:tatooine:moisture-vaporator', at: [8, 4], size: [1, 2]}
+- {name: Vaporator, art: 'art:tatooine:moisture-vaporator', at: [1, 11], size: [1, 2]}
+- {name: Vaporator, art: 'art:tatooine:moisture-vaporator', at: [12, 4], size: [1, 2]}
+- {name: Vaporator, art: 'art:tatooine:moisture-vaporator', at: [18, 12], size: [1, 2]}
+- {name: Dewback trough, art: 'art:tatooine:dewback-trough', at: [6, 1], size: [2, 1]}
+- {name: Parked landspeeder, art: 'art:shared:parked-landspeeder', at: [12, 17], size: [2, 1]}
+people:
+- {name: Mom, at: [3, 8], role: story}
+- {name: Prof. Korr, at: [14, 10], role: story}
+- {name: Moisture farmer, at: [8, 10], role: townsfolk}
+- {name: Kid, at: [12, 13], role: townsfolk}
+- {name: Spacer unloading cargo, at: [16, 16], role: townsfolk}
+signs:
+- {name: Town holo-sign, at: [12, 8]}
+- {name: Homestead sign, at: [7, 7]}
+- {name: Korr home sign, at: [12, 6]}
+- {name: Lab sign, at: [9, 16]}
+warps: []
+todo:
+- The freighter on the landing pad replaces vanilla's moving truck; the intro cutscene needs a new landing.
+- Same size, exit and 3 doors as Littleroot, so it can be built into that map.

@@ -110,6 +110,7 @@ in `../game`. Every `source_file` is a path relative to `../game`.
   the new buildings, interiors, objects and nature each planet and town gets (with signal/noise placement rules and
   reference images in `art/concept/`).
 - **World-building tools:** [`../tools/world-art/README.md`](../tools/world-art/README.md) draws new shapes from 3D models. Only owner-approved models live there (so far the Hoenn tree).
+- **World blockout:** [`world/README.md`](world/README.md) lays out every area in placeholder tiles before any art; `world/INDEX.csv` is the to-do list.
 - **Tilesets:** [`bible/TILESET_INSTALL.md`](bible/TILESET_INSTALL.md) lists every approved tile-generator recipe and what
   its import must do beyond copying files (per-planet copies of the shared General primary, map edits such as
   removing life buoys from Star Destroyer rooms). Read it before porting any tileset.

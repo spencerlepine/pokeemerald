@@ -1,0 +1,45 @@
+area,planet,kind,replaces,layout_status,piece_kind,piece,size,art,art_known,art_status
+bright-tree,ENDOR,town,FortreeCity,BLOCKOUT,area,BRIGHT TREE,40x20,,,
+bright-tree,ENDOR,town,FortreeCity,BLOCKOUT,building,Ewok hut,3x3,art:endor:ewok-hut,yes,TODO
+bright-tree,ENDOR,town,FortreeCity,BLOCKOUT,building,Ewok hut,3x3,art:endor:ewok-hut,yes,TODO
+bright-tree,ENDOR,town,FortreeCity,BLOCKOUT,building,Ewok hut,3x3,art:endor:ewok-hut,yes,TODO
+bright-tree,ENDOR,town,FortreeCity,BLOCKOUT,building,Elder's hut,3x3,art:endor:ewok-hut,yes,TODO
+bright-tree,ENDOR,town,FortreeCity,BLOCKOUT,building,Bacta Center,5x4,art:shared:bacta-center,yes,TODO
+bright-tree,ENDOR,town,FortreeCity,BLOCKOUT,building,Supply Depot,4x4,art:shared:supply-depot,yes,TODO
+bright-tree,ENDOR,town,FortreeCity,BLOCKOUT,building,Chief Chirpa's arena,6x5,art:shared:arena,yes,TODO
+bright-tree,ENDOR,town,FortreeCity,BLOCKOUT,building,Ewok hut,3x3,art:endor:ewok-hut,yes,TODO
+bright-tree,ENDOR,town,FortreeCity,BLOCKOUT,building,Trader's hut,3x3,art:endor:ewok-hut,yes,TODO
+bright-tree,ENDOR,town,FortreeCity,BLOCKOUT,prop,Totem and drum,1x2,art:endor:totem-and-drum,yes,TODO
+bright-tree,ENDOR,town,FortreeCity,BLOCKOUT,prop,Totem and drum,1x2,art:endor:totem-and-drum,yes,TODO
+bright-tree,ENDOR,town,FortreeCity,BLOCKOUT,prop,Ewok glider,1x2,art:endor:ewok-glider,yes,TODO
+bright-tree,ENDOR,town,FortreeCity,BLOCKOUT,prop,Log trap,3x1,art:endor:log-trap,yes,TODO
+bright-tree,ENDOR,town,FortreeCity,BLOCKOUT,prop,Crashed speeder bike,2x1,art:endor:crashed-speeder-bike,yes,TODO
+bright-tree,ENDOR,town,FortreeCity,BLOCKOUT,person,Wicket,1x1,,,PLACEHOLDER
+bright-tree,ENDOR,town,FortreeCity,BLOCKOUT,person,Ewok elder,1x1,,,PLACEHOLDER
+bright-tree,ENDOR,town,FortreeCity,BLOCKOUT,person,Ewok hunter,1x1,,,PLACEHOLDER
+bright-tree,ENDOR,town,FortreeCity,BLOCKOUT,person,Ewok weaver,1x1,,,PLACEHOLDER
+bright-tree,ENDOR,town,FortreeCity,BLOCKOUT,person,Rebel scout,1x1,,,PLACEHOLDER
+bright-tree,ENDOR,town,FortreeCity,BLOCKOUT,person,Ewok guard,1x1,,,PLACEHOLDER
+bright-tree,ENDOR,town,FortreeCity,BLOCKOUT,sign,Village sign,1x1,,,PLACEHOLDER
+bright-tree,ENDOR,town,FortreeCity,BLOCKOUT,sign,Arena sign,1x1,,,PLACEHOLDER
+mos-pelgo,TATOOINE,town,LittlerootTown,BLOCKOUT,area,MOS PELGO,20x20,,,
+mos-pelgo,TATOOINE,town,LittlerootTown,BLOCKOUT,building,Player's homestead,5x4,art:tatooine:homestead-dome,yes,TODO
+mos-pelgo,TATOOINE,town,LittlerootTown,BLOCKOUT,building,Korr family home,6x6,art:tatooine:sunken-courtyard-home,yes,TODO
+mos-pelgo,TATOOINE,town,LittlerootTown,BLOCKOUT,building,Prof. Korr's lab,7x5,art:tatooine:prof-korr-s-lab,yes,TODO
+mos-pelgo,TATOOINE,town,LittlerootTown,BLOCKOUT,prop,Landing pad with the family's freighter,4x4,art:shared:landing-pad,yes,TODO
+mos-pelgo,TATOOINE,town,LittlerootTown,BLOCKOUT,prop,Cargo crates,2x2,art:shared:cargo-crates,yes,TODO
+mos-pelgo,TATOOINE,town,LittlerootTown,BLOCKOUT,prop,Vaporator,1x2,art:tatooine:moisture-vaporator,yes,TODO
+mos-pelgo,TATOOINE,town,LittlerootTown,BLOCKOUT,prop,Vaporator,1x2,art:tatooine:moisture-vaporator,yes,TODO
+mos-pelgo,TATOOINE,town,LittlerootTown,BLOCKOUT,prop,Vaporator,1x2,art:tatooine:moisture-vaporator,yes,TODO
+mos-pelgo,TATOOINE,town,LittlerootTown,BLOCKOUT,prop,Vaporator,1x2,art:tatooine:moisture-vaporator,yes,TODO
+mos-pelgo,TATOOINE,town,LittlerootTown,BLOCKOUT,prop,Dewback trough,2x1,art:tatooine:dewback-trough,yes,TODO
+mos-pelgo,TATOOINE,town,LittlerootTown,BLOCKOUT,prop,Parked landspeeder,2x1,art:shared:parked-landspeeder,yes,TODO
+mos-pelgo,TATOOINE,town,LittlerootTown,BLOCKOUT,person,Mom,1x1,,,PLACEHOLDER
+mos-pelgo,TATOOINE,town,LittlerootTown,BLOCKOUT,person,Prof. Korr,1x1,,,PLACEHOLDER
+mos-pelgo,TATOOINE,town,LittlerootTown,BLOCKOUT,person,Moisture farmer,1x1,,,PLACEHOLDER
+mos-pelgo,TATOOINE,town,LittlerootTown,BLOCKOUT,person,Kid,1x1,,,PLACEHOLDER
+mos-pelgo,TATOOINE,town,LittlerootTown,BLOCKOUT,person,Spacer unloading cargo,1x1,,,PLACEHOLDER
+mos-pelgo,TATOOINE,town,LittlerootTown,BLOCKOUT,sign,Town holo-sign,1x1,,,PLACEHOLDER
+mos-pelgo,TATOOINE,town,LittlerootTown,BLOCKOUT,sign,Homestead sign,1x1,,,PLACEHOLDER
+mos-pelgo,TATOOINE,town,LittlerootTown,BLOCKOUT,sign,Korr home sign,1x1,,,PLACEHOLDER
+mos-pelgo,TATOOINE,town,LittlerootTown,BLOCKOUT,sign,Lab sign,1x1,,,PLACEHOLDER
