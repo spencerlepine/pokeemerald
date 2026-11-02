@@ -1,0 +1,73 @@
+# Death Star (construction site, post-game): net-new dungeon loop (wiki row net:mus-death-star).
+# ARRANGE of "Rescue of the Princess" (ref_tracks soundtrack:new-hope:07, the 1977 album cue built from the
+# Death Star / detention-block music). Kept from the cue (analyze_reference, 0-50 s): its tempo (99.4 -> 100),
+# A minor home, the Bb -> Am half-step that opens it (the Imperial menace of the first film), the Gm and D
+# side-steps, and the brighter rescue span (Am7 | A | Esus4 | Bbm7 | A | Esus4 | Edim | A) where the brass
+# climbs. The draft melody on an orchestra was too rough to quote note for note, so the half-step motif is
+# written out from the cue's harmony: horn in a (the station), trumpet in b (the rescue).
+# Chiptune cut-down: tuba roots, a wave-channel bass ticking eighths like machinery, a high string pedal,
+# timpani on the downbeats, a 12.5 % square churning sixteenths and noise hiss as the station's hum.
+# Brief (sw_subject): Death Star construction site (post-game): vast, mechanical, oppressive.
+name: death-star
+constant: MUS_DEATH_STAR
+form: AMBIENT
+voicegroup: victory_road          # trumpet 56, tuba 58, horn 60, strings 48, timpani 47, squares, wave 82, noise 126
+master_volume: 82
+tempo: 100
+steps_per_beat: 4                 # 16th-note grid for the machinery
+time_signature: [4, 4]
+seed: 77
+
+parts:
+  trumpet: {program: 56, channel: 0, volume: 96,  pan: 8,   gate: 0.92, humanize: {vel: 4}}
+  horn:    {program: 60, channel: 1, volume: 100, pan: -8,  gate: 0.95, humanize: {vel: 4}}
+  strings: {program: 48, channel: 2, volume: 62,  pan: 26,  gate: 1.0}
+  tuba:    {program: 58, channel: 3, volume: 88,  pan: -18, gate: 0.95}
+  timpani: {program: 47, channel: 4, volume: 92,  pan: 12,  gate: 1.0}
+  bass:    {program: 82, channel: 5, volume: 82,  pan: 0,   octave: 2, role: bass, gate: 0.6}
+  churn:   {program: 87, channel: 6, volume: 40,  pan: 34,  octave: 4, gate: 0.55, mono: true}
+  hum:     {program: 126, channel: 7, volume: 34, pan: -10, role: drums, kit: {t: C6, k: G5}}
+
+progressions:
+  intro: "Am | Bb"
+  a: "Am | Bb | Am | Bb | Gm | Gm | Bb | E"
+  b: "Am | F | Esus4 | E | Am | Bb | Edim | E"
+
+phrases:
+  tick: "^1:2 ^1:2 ^1+:2 ^1:2 ^1:2 ^1:2 ^1+:2 ^1:2"
+  churn16: "^1:1 ^2:1 ^3:1 ^2:1 ^1:1 ^2:1 ^3:1 ^2:1 ^1:1 ^2:1 ^3:1 ^2:1 ^1:1 ^2:1 ^3:1 ^2:1"
+  horn_a: |
+    A3:6 Bb3:2 A3:8 | Bb3:6 C4:2 Bb3:8 | A3:6 Bb3:2 A3:4 E4:4 | F4:12 E4:4 |
+    D4:6 Eb4:2 D4:8 | Bb3:6 A3:2 G3:8 | F4:6 E4:2 D4:4 Bb3:4 | B3:16
+  tuba_a: "A1:16 | Bb1:16 | A1:16 | Bb1:16 | G1:16 | G1:16 | Bb1:16 | E2:16"
+  str_a: "E4:16 | F4:16 | E4:16 | F4:16 | D4:16 | Bb3:16 | D4:16 | G#3:16"
+  timp_a: "A2:4 r:12 | Bb2:4 r:12 | A2:4 r:12 | Bb2:4 r:12 | G2:4 r:12 | G2:4 r:8 G2:4 | Bb2:4 r:12 | E2:4 r:4 E2:1 E2:1 E2:1 E2:1 E2:1 E2:1 E2:1 E2:1"
+  trumpet_b: |
+    E4:4 A4:4 C5:4 B4:4 | A4:8 F4:8 | E4:4 A4:4 B4:8 | G#4:12 E4:4 |
+    E4:4 A4:4 C5:4 E5:4 | D5:8 F5:8 | Bb4:4 G4:4 E4:4 C#4:4 | B3:4 E4:4 G#4:8
+  tuba_b: "A1:16 | F1:16 | E2:16 | E2:16 | A1:16 | Bb1:16 | E2:16 | E2:16"
+  str_b: "C4:16 | C4:16 | A3:16 | G#3:16 | C4:16 | D4:16 | Bb3:16 | G#3:16"
+  timp_b: "A2:4 r:12 | F2:4 r:12 | E2:4 r:12 | E2:4 r:4 E2:4 r:4 | A2:4 r:12 | Bb2:4 r:12 | E2:4 r:12 | E2:2 E2:2 E2:2 E2:2 E2:1 E2:1 E2:1 E2:1 E2:1 E2:1 E2:1 E2:1"
+
+grooves:
+  hum_a: {t: "....o...o...o...", k: "x...............|................"}
+  hum_b: {t: "..o.x.o...o.x.o.", k: "x.......x......."}
+
+sections:
+  intro:
+    bars: 2
+    chords: intro
+    ramp: {tuba: [-10, 0]}
+    parts: {tuba: "A1:16 | Bb1:16", strings: "E4:16 | F4:16", timpani: "A2:4 r:12 | A2:1 A2:1 A2:1 A2:1 A2:1 A2:1 A2:1 A2:1 Bb2:8", bass: tick, hum: hum_a}
+  a:
+    bars: 8
+    chords: a
+    parts: {horn: horn_a, tuba: tuba_a, strings: str_a, timpani: timp_a, bass: tick, hum: hum_a}
+  b:
+    bars: 8
+    chords: b
+    ramp: {churn: [-16, -4]}
+    parts: {trumpet: trumpet_b, tuba: tuba_b, strings: str_b, timpani: timp_b, bass: tick, churn: churn16, hum: hum_b}
+
+arrangement: [intro, a, b]
+loop_start: a
