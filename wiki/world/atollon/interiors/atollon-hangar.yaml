@@ -23,7 +23,11 @@ grid: |
   #################
 exits: []
 buildings: []
-props: []
+props:
+- name: Docked charter ship
+  art: art:new:docked-ship
+  at: [4, 8]
+  size: [8, 4]
 people:
 - name: Sailor
   at: [7, 4]

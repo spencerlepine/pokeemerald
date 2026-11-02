@@ -21,7 +21,11 @@ grid: |
   ................
 exits: []
 buildings: []
-props: []
+props:
+- name: StarNAV flight console
+  art: art:new:starnav-console
+  at: [15, 4]
+  size: [1, 1]
 people:
 - name: Rocket Launch Counter
   at: [7, 2]

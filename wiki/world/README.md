@@ -54,13 +54,18 @@ progress. The wiki is the one list: no separate to-do docs.
   link them (hangars, docking bays, shuttles) along the planet graph in `../mapping/hyperlanes.csv`: one row
   per edge, naming the overworld area and ship room at each end and the unlock. A hangar is a building
   on the main road at the edge of the planet that faces the destination (where the vanilla road left the map),
-  with a sign beside its door, so the player walks straight into it. A ship room's StarNAV console lists
-  the unlocked edges from that room. `blockout check` fails if an edge lacks a door, a way back or a sign,
+  with a sign beside its door and a marked path (`:` cells) from the door to the nearest road or exit, so the
+  player walks straight into it. Inside, every ship room has the ship itself as a prop (`art:new:player-ship` in
+  the new hangars, `art:new:docked-ship` at the harbour docks) and a StarNAV console that lists the unlocked
+  edges from that room. `blockout check` fails if an edge lacks a door, a way back or a sign,
   or a planet has no edge; `blockout guide` lists the graph and the badges held on first landing. `blockout layout <PLANET>` fits a planet's towns, routes and
   landmarks together from their exits and writes each area's `pos`; it reports exits with no way back,
   loops that do not close and overlaps.
 - Towns can be bigger and any shape (owner, 2026-11-02): GBA storage is no longer the limit, but walks
   must stay short. Optional side areas are welcome; they use the characters already in the wiki.
+- **Open ground earns its place.** A town's `.` cells more than three cells from any road, building, prop or
+  person are dead space: pull the cliff or tree border in over them (done for Ilum and Dagobah, 2026-11-02)
+  or put something there.
 - **Compact towns (template: [`kashyyyk/kachirho.yaml`](kashyyyk/kachirho.yaml), 2026-11-02).** A town that
   replaces a 20x20 vanilla town is about 32x28: one main road between its exits, a short spur to every
   hangar door, every door within a few steps of a road, buildings in two rows either side, props only at the

@@ -27,7 +27,15 @@ grid: |
   .................#######
 exits: []
 buildings: []
-props: []
+props:
+- name: Docked shuttle
+  art: art:new:docked-ship
+  at: [6, 5]
+  size: [8, 4]
+- name: StarNAV flight console
+  art: art:new:starnav-console
+  at: [1, 11]
+  size: [1, 1]
 people:
 - name: Ferry Attendant
   at: [8, 10]

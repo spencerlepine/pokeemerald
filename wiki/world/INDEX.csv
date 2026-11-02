@@ -30,7 +30,7 @@ asteroid-spire-entrance,ASTEROID FIELD,dungeon,SkyPillar_Entrance,BLOCKOUT,area,
 asteroid-spire-entrance,ASTEROID FIELD,dungeon,SkyPillar_Entrance,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 asteroid-spire-entrance,ASTEROID FIELD,dungeon,SkyPillar_Entrance,BLOCKOUT,warp,Ship berth,1x1,,,PLACEHOLDER,
 asteroid-spire-hangar,ASTEROID FIELD,interior,new,BLOCKOUT,area,Asteroid docking hollow,16x12,,,pending-final-art,greybox room
-asteroid-spire-hangar,ASTEROID FIELD,interior,new,BLOCKOUT,prop,Player's ship,8x5,art:shared:landing-pad,yes,pending-final-art,greybox piece
+asteroid-spire-hangar,ASTEROID FIELD,interior,new,BLOCKOUT,prop,Player's ship,8x5,art:new:player-ship,yes,pending-mockup,
 asteroid-spire-hangar,ASTEROID FIELD,interior,new,BLOCKOUT,prop,StarNAV flight console,1x1,art:new:starnav-console,yes,pending-final-art,greybox piece
 asteroid-spire-hangar,ASTEROID FIELD,interior,new,BLOCKOUT,prop,Cargo crates,2x2,art:shared:cargo-crates,yes,pending-final-art,greybox piece
 asteroid-spire-hangar,ASTEROID FIELD,interior,new,BLOCKOUT,person,Pilot,1x1,,,PLACEHOLDER,
@@ -42,6 +42,7 @@ atollon-exterior,ATOLLON,landmark,BirthIsland_Exterior,BLOCKOUT,person,Triangle,
 atollon-exterior,ATOLLON,landmark,BirthIsland_Exterior,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER,
 atollon-exterior,ATOLLON,landmark,BirthIsland_Exterior,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 atollon-hangar,ATOLLON,interior,BirthIsland_Harbor,BLOCKOUT,area,ATOLLON HANGAR,17x13,,,pending-final-art,greybox room
+atollon-hangar,ATOLLON,interior,BirthIsland_Harbor,BLOCKOUT,prop,Docked charter ship,8x4,art:new:docked-ship,yes,pending-mockup,
 atollon-hangar,ATOLLON,interior,BirthIsland_Harbor,BLOCKOUT,person,Sailor,1x1,,,PLACEHOLDER,
 atollon-hangar,ATOLLON,interior,BirthIsland_Harbor,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER,
 atollon-hangar,ATOLLON,interior,BirthIsland_Harbor,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
@@ -168,6 +169,8 @@ cloud-city-galleria-rooftop,BESPIN,interior,LilycoveCity_DepartmentStoreRooftop,
 cloud-city-galleria-rooftop,BESPIN,interior,LilycoveCity_DepartmentStoreRooftop,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
 cloud-city-galleria-rooftop,BESPIN,interior,LilycoveCity_DepartmentStoreRooftop,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 cloud-city-hangar,BESPIN,interior,LilycoveCity_Harbor,BLOCKOUT,area,CLOUD CITY HANGAR,24x15,,,pending-final-art,greybox room
+cloud-city-hangar,BESPIN,interior,LilycoveCity_Harbor,BLOCKOUT,prop,Docked shuttle,8x4,art:new:docked-ship,yes,pending-mockup,
+cloud-city-hangar,BESPIN,interior,LilycoveCity_Harbor,BLOCKOUT,prop,StarNAV flight console,1x1,art:new:starnav-console,yes,pending-final-art,greybox piece
 cloud-city-hangar,BESPIN,interior,LilycoveCity_Harbor,BLOCKOUT,person,Ferry Attendant,1x1,,,PLACEHOLDER,
 cloud-city-hangar,BESPIN,interior,LilycoveCity_Harbor,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER,
 cloud-city-hangar,BESPIN,interior,LilycoveCity_Harbor,BLOCKOUT,person,Sailor,1x1,,,PLACEHOLDER,
@@ -619,7 +622,7 @@ dagobah-bacta-center-2f,DAGOBAH,interior,SootopolisCity_PokemonCenter_2F,BLOCKOU
 dagobah-bacta-center-2f,DAGOBAH,interior,SootopolisCity_PokemonCenter_2F,BLOCKOUT,person,Mystery Gift Man,1x1,,,PLACEHOLDER,
 dagobah-bacta-center-2f,DAGOBAH,interior,SootopolisCity_PokemonCenter_2F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 dagobah-hangar,DAGOBAH,interior,new,BLOCKOUT,area,Dagobah bog landing,16x12,,,pending-final-art,greybox room
-dagobah-hangar,DAGOBAH,interior,new,BLOCKOUT,prop,Player's ship,8x5,art:shared:landing-pad,yes,pending-final-art,greybox piece
+dagobah-hangar,DAGOBAH,interior,new,BLOCKOUT,prop,Player's ship,8x5,art:new:player-ship,yes,pending-mockup,
 dagobah-hangar,DAGOBAH,interior,new,BLOCKOUT,prop,StarNAV flight console,1x1,art:new:starnav-console,yes,pending-final-art,greybox piece
 dagobah-hangar,DAGOBAH,interior,new,BLOCKOUT,prop,Cargo crates,2x2,art:shared:cargo-crates,yes,pending-final-art,greybox piece
 dagobah-hangar,DAGOBAH,interior,new,BLOCKOUT,person,Pilot,1x1,,,PLACEHOLDER,
@@ -898,7 +901,7 @@ endor-battlefield-bunker,ENDOR,interior,new,BLOCKOUT,prop,Blast door (locked),3x
 endor-battlefield-bunker,ENDOR,interior,new,BLOCKOUT,person,Stormtrooper straggler,1x1,,,PLACEHOLDER,
 endor-battlefield-bunker,ENDOR,interior,new,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 endor-hangar,ENDOR,interior,new,BLOCKOUT,area,Route 121 shuttle pad hangar,16x12,,,pending-final-art,greybox room
-endor-hangar,ENDOR,interior,new,BLOCKOUT,prop,Player's ship,8x5,art:shared:landing-pad,yes,pending-final-art,greybox piece
+endor-hangar,ENDOR,interior,new,BLOCKOUT,prop,Player's ship,8x5,art:new:player-ship,yes,pending-mockup,
 endor-hangar,ENDOR,interior,new,BLOCKOUT,prop,StarNAV flight console,1x1,art:new:starnav-console,yes,pending-final-art,greybox piece
 endor-hangar,ENDOR,interior,new,BLOCKOUT,prop,Cargo crates,2x2,art:shared:cargo-crates,yes,pending-final-art,greybox piece
 endor-hangar,ENDOR,interior,new,BLOCKOUT,person,Pilot,1x1,,,PLACEHOLDER,
@@ -937,6 +940,7 @@ route-119-house,ENDOR,interior,Route119_House,BLOCKOUT,person,Wingull,1x1,,,PLAC
 route-119-house,ENDOR,interior,Route119_House,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 route-119-house,ENDOR,interior,Route119_House,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 route-121-safari-zone-entrance,ENDOR,interior,Route121_SafariZoneEntrance,BLOCKOUT,area,ROUTE 121 SAFARI ZONE ENTRANCE,18x14,,,pending-final-art,greybox room
+route-121-safari-zone-entrance,ENDOR,interior,Route121_SafariZoneEntrance,BLOCKOUT,prop,StarNAV flight console,1x1,art:new:starnav-console,yes,pending-final-art,greybox piece
 route-121-safari-zone-entrance,ENDOR,interior,Route121_SafariZoneEntrance,BLOCKOUT,person,Welcome Attendant,1x1,,,PLACEHOLDER,
 route-121-safari-zone-entrance,ENDOR,interior,Route121_SafariZoneEntrance,BLOCKOUT,person,Info Attendant,1x1,,,PLACEHOLDER,
 route-121-safari-zone-entrance,ENDOR,interior,Route121_SafariZoneEntrance,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER,
@@ -950,7 +954,7 @@ route-123-berry-masters-house,ENDOR,interior,Route123_BerryMastersHouse,BLOCKOUT
 route-123-berry-masters-house,ENDOR,interior,Route123_BerryMastersHouse,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 route-123-berry-masters-house,ENDOR,interior,Route123_BerryMastersHouse,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 route-123-landing,ENDOR,interior,new,BLOCKOUT,area,Pilgrim shuttle clearing,16x12,,,pending-final-art,greybox room
-route-123-landing,ENDOR,interior,new,BLOCKOUT,prop,Player's ship,8x5,art:shared:landing-pad,yes,pending-final-art,greybox piece
+route-123-landing,ENDOR,interior,new,BLOCKOUT,prop,Player's ship,8x5,art:new:player-ship,yes,pending-mockup,
 route-123-landing,ENDOR,interior,new,BLOCKOUT,prop,StarNAV flight console,1x1,art:new:starnav-console,yes,pending-final-art,greybox piece
 route-123-landing,ENDOR,interior,new,BLOCKOUT,prop,Cargo crates,2x2,art:shared:cargo-crates,yes,pending-final-art,greybox piece
 route-123-landing,ENDOR,interior,new,BLOCKOUT,person,Pilot,1x1,,,PLACEHOLDER,
@@ -1236,7 +1240,7 @@ felucia-reserve-southwest,FELUCIA,route,SafariZone_Southwest,BLOCKOUT,person,Ite
 felucia-reserve-southwest,FELUCIA,route,SafariZone_Southwest,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
 felucia-reserve-southwest,FELUCIA,route,SafariZone_Southwest,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 felucia-hangar,FELUCIA,interior,new,BLOCKOUT,area,Felucia reserve shuttle gate,16x12,,,pending-final-art,greybox room
-felucia-hangar,FELUCIA,interior,new,BLOCKOUT,prop,Player's ship,8x5,art:shared:landing-pad,yes,pending-final-art,greybox piece
+felucia-hangar,FELUCIA,interior,new,BLOCKOUT,prop,Player's ship,8x5,art:new:player-ship,yes,pending-mockup,
 felucia-hangar,FELUCIA,interior,new,BLOCKOUT,prop,StarNAV flight console,1x1,art:new:starnav-console,yes,pending-final-art,greybox piece
 felucia-hangar,FELUCIA,interior,new,BLOCKOUT,prop,Cargo crates,2x2,art:shared:cargo-crates,yes,pending-final-art,greybox piece
 felucia-hangar,FELUCIA,interior,new,BLOCKOUT,person,Pilot,1x1,,,PLACEHOLDER,
@@ -1877,7 +1881,7 @@ hoth-tundra,HOTH,route,new,BLOCKOUT,sign,Cave warning sign,1x1,,,PLACEHOLDER,
 hoth-tundra,HOTH,route,new,BLOCKOUT,sign,Hangar sign (Rebel survey shuttle),1x1,,,PLACEHOLDER,
 hoth-tundra,HOTH,route,new,BLOCKOUT,warp,Wampa Cave mouth,1x1,,,PLACEHOLDER,
 hoth-hangar,HOTH,interior,new,BLOCKOUT,area,Hoth survey pad hangar,16x12,,,pending-final-art,greybox room
-hoth-hangar,HOTH,interior,new,BLOCKOUT,prop,Player's ship,8x5,art:shared:landing-pad,yes,pending-final-art,greybox piece
+hoth-hangar,HOTH,interior,new,BLOCKOUT,prop,Player's ship,8x5,art:new:player-ship,yes,pending-mockup,
 hoth-hangar,HOTH,interior,new,BLOCKOUT,prop,StarNAV flight console,1x1,art:new:starnav-console,yes,pending-final-art,greybox piece
 hoth-hangar,HOTH,interior,new,BLOCKOUT,prop,Cargo crates,2x2,art:shared:cargo-crates,yes,pending-final-art,greybox piece
 hoth-hangar,HOTH,interior,new,BLOCKOUT,person,Pilot,1x1,,,PLACEHOLDER,
@@ -2026,7 +2030,7 @@ ilum-hall-of-fame,ILUM,interior,EverGrandeCity_HallOfFame,BLOCKOUT,area,ILUM HAL
 ilum-hall-of-fame,ILUM,interior,EverGrandeCity_HallOfFame,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER,
 ilum-hall-of-fame,ILUM,interior,EverGrandeCity_HallOfFame,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 ilum-hangar,ILUM,interior,new,BLOCKOUT,area,Ilum landing hangar,16x12,,,pending-final-art,greybox room
-ilum-hangar,ILUM,interior,new,BLOCKOUT,prop,Player's ship,8x5,art:shared:landing-pad,yes,pending-final-art,greybox piece
+ilum-hangar,ILUM,interior,new,BLOCKOUT,prop,Player's ship,8x5,art:new:player-ship,yes,pending-mockup,
 ilum-hangar,ILUM,interior,new,BLOCKOUT,prop,StarNAV flight console,1x1,art:new:starnav-console,yes,pending-final-art,greybox piece
 ilum-hangar,ILUM,interior,new,BLOCKOUT,prop,Cargo crates,2x2,art:shared:cargo-crates,yes,pending-final-art,greybox piece
 ilum-hangar,ILUM,interior,new,BLOCKOUT,person,Pilot,1x1,,,PLACEHOLDER,
@@ -2060,7 +2064,7 @@ ilum-temple-2f,ILUM,interior,EverGrandeCity_PokemonLeague_2F,BLOCKOUT,person,Dir
 ilum-temple-2f,ILUM,interior,EverGrandeCity_PokemonLeague_2F,BLOCKOUT,person,Mystery Gift Man,1x1,,,PLACEHOLDER,
 ilum-temple-2f,ILUM,interior,EverGrandeCity_PokemonLeague_2F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 jedha-hangar,JEDHA,interior,new,BLOCKOUT,area,Pilgrim landing pad hangar,16x12,,,pending-final-art,greybox room
-jedha-hangar,JEDHA,interior,new,BLOCKOUT,prop,Player's ship,8x5,art:shared:landing-pad,yes,pending-final-art,greybox piece
+jedha-hangar,JEDHA,interior,new,BLOCKOUT,prop,Player's ship,8x5,art:new:player-ship,yes,pending-mockup,
 jedha-hangar,JEDHA,interior,new,BLOCKOUT,prop,StarNAV flight console,1x1,art:new:starnav-console,yes,pending-final-art,greybox piece
 jedha-hangar,JEDHA,interior,new,BLOCKOUT,prop,Cargo crates,2x2,art:shared:cargo-crates,yes,pending-final-art,greybox piece
 jedha-hangar,JEDHA,interior,new,BLOCKOUT,person,Pilot,1x1,,,PLACEHOLDER,
@@ -2261,7 +2265,7 @@ tipoca-city-cloning-hall,KAMINO,interior,new,BLOCKOUT,person,Clone cadet,1x1,,,P
 tipoca-city-cloning-hall,KAMINO,interior,new,BLOCKOUT,person,Clone cadet,1x1,,,PLACEHOLDER,
 tipoca-city-cloning-hall,KAMINO,interior,new,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 tipoca-city-hangar,KAMINO,interior,new,BLOCKOUT,area,Tipoca landing platform,16x12,,,pending-final-art,greybox room
-tipoca-city-hangar,KAMINO,interior,new,BLOCKOUT,prop,Player's ship,8x5,art:shared:landing-pad,yes,pending-final-art,greybox piece
+tipoca-city-hangar,KAMINO,interior,new,BLOCKOUT,prop,Player's ship,8x5,art:new:player-ship,yes,pending-mockup,
 tipoca-city-hangar,KAMINO,interior,new,BLOCKOUT,prop,StarNAV flight console,1x1,art:new:starnav-console,yes,pending-final-art,greybox piece
 tipoca-city-hangar,KAMINO,interior,new,BLOCKOUT,prop,Cargo crates,2x2,art:shared:cargo-crates,yes,pending-final-art,greybox piece
 tipoca-city-hangar,KAMINO,interior,new,BLOCKOUT,person,Pilot,1x1,,,PLACEHOLDER,
@@ -2772,6 +2776,7 @@ mortis-gate-up-4,MORTIS,dungeon,NavelRock_Up4,BLOCKOUT,area,MORTIS GATE UP 4,9x8
 mortis-gate-up-4,MORTIS,dungeon,NavelRock_Up4,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 mortis-gate-up-4,MORTIS,dungeon,NavelRock_Up4,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 mortis-gate-hangar,MORTIS,interior,NavelRock_Harbor,BLOCKOUT,area,MORTIS GATE HANGAR,17x13,,,pending-final-art,greybox room
+mortis-gate-hangar,MORTIS,interior,NavelRock_Harbor,BLOCKOUT,prop,Docked charter ship,8x4,art:new:docked-ship,yes,pending-mockup,
 mortis-gate-hangar,MORTIS,interior,NavelRock_Harbor,BLOCKOUT,person,Sailor,1x1,,,PLACEHOLDER,
 mortis-gate-hangar,MORTIS,interior,NavelRock_Harbor,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER,
 mortis-gate-hangar,MORTIS,interior,NavelRock_Harbor,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
@@ -3750,6 +3755,8 @@ mos-eisley-fan-club,TATOOINE,interior,SlateportCity_PokemonFanClub,BLOCKOUT,pers
 mos-eisley-fan-club,TATOOINE,interior,SlateportCity_PokemonFanClub,BLOCKOUT,person,Patron,1x1,,,PLACEHOLDER,
 mos-eisley-fan-club,TATOOINE,interior,SlateportCity_PokemonFanClub,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 mos-eisley-hangar,TATOOINE,interior,SlateportCity_Harbor,BLOCKOUT,area,MOS EISLEY HANGAR,24x15,,,pending-final-art,greybox room
+mos-eisley-hangar,TATOOINE,interior,SlateportCity_Harbor,BLOCKOUT,prop,Docked star liner,8x4,art:new:docked-ship,yes,pending-mockup,
+mos-eisley-hangar,TATOOINE,interior,SlateportCity_Harbor,BLOCKOUT,prop,StarNAV flight console,1x1,art:new:starnav-console,yes,pending-final-art,greybox piece
 mos-eisley-hangar,TATOOINE,interior,SlateportCity_Harbor,BLOCKOUT,person,Ferry Attendant,1x1,,,PLACEHOLDER,
 mos-eisley-hangar,TATOOINE,interior,SlateportCity_Harbor,BLOCKOUT,person,Sailor,1x1,,,PLACEHOLDER,
 mos-eisley-hangar,TATOOINE,interior,SlateportCity_Harbor,BLOCKOUT,person,Fat Man,1x1,,,PLACEHOLDER,
@@ -4142,6 +4149,7 @@ route-104-flower-shop,TATOOINE,interior,Route104_PrettyPetalFlowerShop,BLOCKOUT,
 route-104-flower-shop,TATOOINE,interior,Route104_PrettyPetalFlowerShop,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 route-104-flower-shop,TATOOINE,interior,Route104_PrettyPetalFlowerShop,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 route-104-han-hangar,TATOOINE,interior,Route104_MrBrineysHouse,BLOCKOUT,area,ROUTE 104 HAN HANGAR,12x9,,,pending-final-art,greybox room
+route-104-han-hangar,TATOOINE,interior,Route104_MrBrineysHouse,BLOCKOUT,prop,StarNAV flight console,1x1,art:new:starnav-console,yes,pending-final-art,greybox piece
 route-104-han-hangar,TATOOINE,interior,Route104_MrBrineysHouse,BLOCKOUT,person,Briney,1x1,,,PLACEHOLDER,
 route-104-han-hangar,TATOOINE,interior,Route104_MrBrineysHouse,BLOCKOUT,person,Peeko,1x1,,,PLACEHOLDER,
 route-104-han-hangar,TATOOINE,interior,Route104_MrBrineysHouse,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
@@ -4924,7 +4932,7 @@ tosche-station,TATOOINE,town,OldaleTown,BLOCKOUT,person,Converter mechanic,1x1,,
 tosche-station,TATOOINE,town,OldaleTown,BLOCKOUT,sign,Tosche Station holo-sign,1x1,,,PLACEHOLDER,
 tosche-station,TATOOINE,town,OldaleTown,BLOCKOUT,sign,Power station sign,1x1,,,PLACEHOLDER,
 tython-hangar,TYTHON,interior,new,BLOCKOUT,area,Tython landing pad,16x12,,,pending-final-art,greybox room
-tython-hangar,TYTHON,interior,new,BLOCKOUT,prop,Player's ship,8x5,art:shared:landing-pad,yes,pending-final-art,greybox piece
+tython-hangar,TYTHON,interior,new,BLOCKOUT,prop,Player's ship,8x5,art:new:player-ship,yes,pending-mockup,
 tython-hangar,TYTHON,interior,new,BLOCKOUT,prop,StarNAV flight console,1x1,art:new:starnav-console,yes,pending-final-art,greybox piece
 tython-hangar,TYTHON,interior,new,BLOCKOUT,prop,Cargo crates,2x2,art:shared:cargo-crates,yes,pending-final-art,greybox piece
 tython-hangar,TYTHON,interior,new,BLOCKOUT,person,Pilot,1x1,,,PLACEHOLDER,
@@ -5044,6 +5052,7 @@ yavin-4-house-4,YAVIN 4,interior,MossdeepCity_House4,BLOCKOUT,person,Skitty,1x1,
 yavin-4-house-4,YAVIN 4,interior,MossdeepCity_House4,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 yavin-4-house-4,YAVIN 4,interior,MossdeepCity_House4,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 yavin-4-launch-tower-1f,YAVIN 4,interior,MossdeepCity_SpaceCenter_1F,BLOCKOUT,area,YAVIN 4 LAUNCH TOWER 1F,16x10,,,pending-final-art,greybox room
+yavin-4-launch-tower-1f,YAVIN 4,interior,MossdeepCity_SpaceCenter_1F,BLOCKOUT,prop,StarNAV flight console,1x1,art:new:starnav-console,yes,pending-final-art,greybox piece
 yavin-4-launch-tower-1f,YAVIN 4,interior,MossdeepCity_SpaceCenter_1F,BLOCKOUT,person,Rocket Launch Counter,1x1,,,PLACEHOLDER,
 yavin-4-launch-tower-1f,YAVIN 4,interior,MossdeepCity_SpaceCenter_1F,BLOCKOUT,person,Scientist,1x1,,,PLACEHOLDER,
 yavin-4-launch-tower-1f,YAVIN 4,interior,MossdeepCity_SpaceCenter_1F,BLOCKOUT,person,Sun Stone Man,1x1,,,PLACEHOLDER,

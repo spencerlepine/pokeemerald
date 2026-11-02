@@ -26,7 +26,7 @@ exits: []
 buildings: []
 props:
 - name: Player's ship
-  art: art:shared:landing-pad
+  art: art:new:player-ship
   at: [4, 2]
   size: [8, 5]
 - name: StarNAV flight console
