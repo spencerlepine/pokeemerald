@@ -34,8 +34,8 @@ approved.
 | 0 | **Foundation** (this commit) | We can read and render everything the game has, pixel-exact | `tilegen/gba.py`: tilesets, metatiles, layouts, map render | Vanilla Littleroot / Petalburg / Center renders match the ROM |
 | 1 | **Biome recolour** | A planet theme + per-bank recolour turns vanilla terrain into a new biome with zero pixel loss | Theme in `wiki/bible/PALETTE.md`; ramp-aware palette mapping (hue/value per ramp, not per colour); bank renumbering | Littleroot as Mos Pelgo ground: grass->scrub, dirt->sand, trees->desert trees; side by side |
 | 2 | **Ground texture synthesis** | New ground materials (sand, ash, snow, swamp, durasteel decking, Death Star floor) that tile seamlessly in the vanilla idiom | Procedural 8x8/16x16 texture generators (noise density, speck placement, edge rules measured from vanilla), quantised to a 3-4 tone ramp; auto-generated ledge/edge sets from a mask | A sheet of 8 ground materials rendered in a route layout, next to the vanilla route |
-| 3 | ~~Objects from 3D~~ | **Rejected and deleted**, see STYLE.md 9 | | |
-| 4 | ~~Buildings from 3D~~ | **Rejected and deleted**, see STYLE.md 9 | | |
+| 3 | ~~Objects from 3D~~ | **Not approved yet**, being reworked outside the repo; see STYLE.md 9 | | |
+| 4 | ~~Buildings from 3D~~ | **Not approved yet**, being reworked outside the repo; see STYLE.md 9 | | |
 | 5 | **Interiors** | A room kit (back wall, side walls, floor, door mat, props) from a brief | Wall/floor generators + object stage for props (console, cot, table, bacta tank) | Player's homestead and the Bacta Center rendered in their layouts |
 | 6 | **Water and animations** | Animated water, lava, steam, blinking lights with the right frame counts and VRAM ranges | Frame generators per animation type; keeps `tileset_anims.c` ranges | GIF of the Dune Sea shoreline and Sullust lava |
 | 7 | **Assembly and install** | A whole tileset pair builds, passes the palette gate, compiles, and runs in the ROM | Tile packer (dedup with flips, 128-wide sheet, bank per tile), `metatiles.bin` + attributes writer, `graphics.h` `-num_tiles` update, `palette-enforcer check --tile --pal`, `play-tester` screenshot | ROM screenshot of Mos Pelgo matching the review render |
@@ -60,8 +60,8 @@ cut (ground `speckle` + recipe `retexture:` ops), stage 7 writer (`python -m til
 tiles.png, .pal, metatiles.bin, attributes, palette gate passes). A test ROM with the Tatooine pair compiles
 (installed, built, then game/ restored; nothing committed in game/).
 
-**Owner direction:** the 3D path (stage 3 objects, stage 4 buildings) is **rejected** after two attempts
-(STYLE.md 9). The code is deleted. New shapes need another method, chosen with the owner.
+**Owner direction:** the 3D path (stage 3 objects, stage 4 buildings) has not been approved after two attempts
+(STYLE.md 9). The owner chose to keep tuning it; the work happens outside the repo until a comparison is approved.
 
 Next, in order:
 1. ~~ROM screenshot of the Tatooine pair~~ done: `scripts/rom-shots.sh` (mash New Game in lua, teleport,

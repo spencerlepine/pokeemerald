@@ -52,5 +52,5 @@ never shipped in the game.
 1. Collect references for every row (`REFERENCE_READY`). **Stop and review with the owner.**
 2. Concept art per biome, owner approves.
 3. Build per chunk, one category at a time, each with its own approvals. Rendering new art from 3D models
-   was tried twice and rejected (`tools/tile-generator/STYLE.md` section 9); the method for new shapes is
-   still being chosen with the owner.
+   has not been approved yet (`tools/tile-generator/STYLE.md` section 9); it is being reworked against
+   vanilla before anything is built.
