@@ -1,0 +1,47 @@
+# Encounter: Atollon. Hot-swap of MUS_RG_ENCOUNTER_DEOXYS (wiki audio:MUS_RG_ENCOUNTER_DEOXYS): plays when
+# Atollon's ancient companion appears. SCRATCH (no film cue): an original E minor mystery built like the vanilla
+# song (no drums; a pulsing synth bass, a racing square arpeggio, choir), in the Star Wars mystical idiom: a slow
+# choir line rising a minor sixth, tubular bell tolls on the phrase heads, a wave-channel counter-line and the
+# major-IV / major-VII colour (C, D, B) that makes Force music feel old and strange. Vanilla voicegroup and tempo.
+# Brief (sw_subject): Atollon's companion appears.
+name: encounter-atollon
+replaces: MUS_RG_ENCOUNTER_DEOXYS
+form: LOOP
+voicegroup: rg_encounter_deoxys       # vanilla: choir 85, tubular bell 14, synth bass 38, squares 80/81, wave 3
+master_volume: 80
+tempo: 128
+steps_per_beat: 4
+time_signature: [4, 4]
+seed: 31
+
+parts:
+  choir:   {program: 85, channel: 0, volume: 92,  pan: -6,  range: [E4, C5], gate: 1.0}
+  bell:    {program: 14, channel: 1, volume: 76,  pan: 20,  range: [E4, B4], gate: 1.0}
+  bass:    {program: 38, channel: 2, volume: 100, pan: 0,   octave: 2, range: [E2, E3], gate: 0.55, role: bass}
+  arp:     {program: 81, channel: 3, volume: 40,  pan: 30,  octave: 5, range: [E5, E6], gate: 0.5, mono: true}
+  echo:    {program: 80, channel: 4, volume: 34,  pan: -30, range: [E4, E5], gate: 0.9, mono: true}
+  wave:    {program: 3,  channel: 5, volume: 46,  pan: 12,  range: [B3, B4], gate: 0.95, mono: true}
+
+progressions:
+  verse: "Em | C | Em | D | Em | C | Am | B"
+
+phrases:
+  chant: "E4:16 | G4:16 | B4:12 A4:4 | F#4:16 | E4:16 | G4:8 A4:8 | C5:16 | B4:16"
+  echo_line: "r:8 E5:8 | r:8 G5:8 | r:8 B4:8 | r:8 A4:8 | r:8 E5:8 | r:8 E5:8 | r:8 C5:8 | r:8 D#5:8"
+  counter: "B3:8 E4:8 | E4:8 C4:8 | G4:8 E4:8 | D4:8 F#4:8 | B3:8 E4:8 | E4:8 G4:8 | A4:8 E4:8 | F#4:8 D#4:8"
+  toll: "E4:4 r:12 | r:16 | r:16 | r:16 | E4:4 r:12 | r:16 | A4:4 r:12 | B4:4 r:12"
+  pulse: ">^1:2 ^1:2 ^1:2 ^1:2 >^1:2 ^1:2 ^1+:2 ^1:2"
+  race: "^1:1 ^2:1 ^3:1 ^2:1 ^1:1 ^2:1 ^3:1 ^2:1 ^1:1 ^2:1 ^3:1 ^1+:1 ^3:1 ^2:1 ^3:1 ^2:1"
+
+sections:
+  intro:
+    bars: 2
+    chords: "Em | B"
+    parts: {choir: "E4:16 | D#4:16", bass: pulse, arp: race, bell: "E4:4 r:12 | B4:4 r:12", wave: "B3:16 | F#4:16", echo: "r:8 B4:8 | r:8 F#4:8"}
+  a:
+    bars: 8
+    chords: verse
+    parts: {choir: chant, bell: toll, bass: pulse, arp: race, echo: echo_line, wave: counter}
+
+arrangement: [intro, a]
+loop_start: a
