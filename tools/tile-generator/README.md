@@ -52,7 +52,9 @@ python -m tilegen terrain build --planet HOTH        # game-format greybox tiles
   `pending-mockup`, and their placeholder cells are toned by group (dark = blocks, blue = surface, light =
   ground, sand for the Dune Sea) so a map of placeholders still reads.
 - **Footprints.** On a redesigned area the yaml's `buildings` and sized `props` are drawn as solid blocks
-  (dark for buildings, grey for props), so a town reads with its volumes before any building art exists.
+  (dark for buildings, grey for props), so a town reads with its volumes before any building art exists. On an
+  area that keeps its vanilla layout only pieces placed on open ground in the blockout grid are drawn (a hangar
+  added to a vanilla route, planet props at the edges); the vanilla houses already have tiles.
 - **Sheets.** `wiki/world/greybox/sheets/<tileset>.png` is real size: 128 px wide, 16x16 cells, one per csv row
   in csv order (`sheet_cell` = column,row), the placeholder where the tile is missing. The placeholder is z-day's
   `16x16-placeholder-image-sprite.png` (magenta circle), copied to `tilegen/data/placeholder-16x16.png`.

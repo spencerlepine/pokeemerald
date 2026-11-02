@@ -487,16 +487,24 @@ def kit_layout(ar: dict, stats: dict):
     return _tile_names(names, lay.primary, lay.secondary, stats, p, base)
 
 
-def overlay_footprints(cells: np.ndarray, ar: dict) -> np.ndarray:
+def overlay_footprints(cells: np.ndarray, ar: dict, only_new: bool = False) -> np.ndarray:
     """Buildings and sized props from the area yaml as solid footprints (redesigned towns have no vanilla
-    building tiles). The door cell is left open."""
+    building tiles). With `only_new`, for an area that keeps its vanilla layout, only pieces placed on open
+    ground in the blockout grid are drawn (a hangar added to a vanilla route); the vanilla houses already
+    have tiles."""
     out = cells.copy()
     H, W = out.shape
+    grid = ar.get("grid") or []
     for kind, code in (("buildings", BUILDING), ("props", PROP)):
         for b in ar.get(kind) or []:
             (x, y), (w, h) = b["at"], b.get("size", [1, 1])
             if kind == "props" and (w, h) == (1, 1):
                 continue
+            if only_new:
+                under = [grid[yy][xx] for yy in range(y, y + h) for xx in range(x, x + w)
+                         if 0 <= yy < len(grid) and 0 <= xx < len(grid[yy])]
+                if not under or sum(c in ".:\"" for c in under) < len(under) / 2:
+                    continue
             out[max(0, y):min(H, y + h), max(0, x):min(W, x + w)] = code
     return out
 
@@ -527,7 +535,8 @@ def area_cells(ar: dict, all_areas: list[dict], stats: dict):
     if ar["id"] in _CELLS:
         return _CELLS[ar["id"]]
     if ar["same"]:
-        r = kit_layout(ar, stats)
+        cells, needs = kit_layout(ar, stats)
+        r = (overlay_footprints(cells, ar, only_new=True), needs)
     else:
         prim, sec = pair_for(ar, all_areas)
         cells, needs = autotile(ar["grid"], prim, sec, stats, ar["indoor"], ar["kind"], ar["planet"])
