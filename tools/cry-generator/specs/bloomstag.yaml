@@ -1,0 +1,25 @@
+name: bloomstag
+slot: meganium
+brief: 'BLOOMSTAG: creature call that fits its look and size. Flowered forest stag.'
+kind: creature
+size: 0.63
+seed: 113
+layers:
+  # Flowered forest stag: the family bleat deepened into a ringing stag bell, a long
+  # falling call with a soft breathy tail.
+  - type: voice
+    pitch: [[0, 360.0], [0.1, 460.0], [0.4, 440.0], [0.66, 300.0]]
+    source: {pulse: 0.9, saw: 0.4, pulse_width: 0.3, noise: 0.05}
+    vowels: [[0, e], [0.25, ae], [0.5, a], [0.66, o]]
+    env: [[0, 0], [0.02, 1], [0.45, 0.8], [0.68, 0]]
+    vibrato: {rate: 15, depth: 0.03}
+    growl: 0.2
+    growl_rate: 38
+    jitter: 0.012
+    drive: 1.5
+  - type: noise
+    at: 0.5
+    band: [[0, 1600], [0.25, 1100]]
+    q: 1.5
+    env: [[0, 0], [0.05, 0.4], [0.24, 0]]
+    gain: 0.25

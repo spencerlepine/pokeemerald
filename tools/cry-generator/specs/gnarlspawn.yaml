@@ -1,0 +1,30 @@
+name: gnarlspawn
+slot: oddish
+brief: 'GNARLSPAWN: creature call that fits its look and size. Walking root bulb from Endor''s forest bogs.'
+kind: creature
+size: 0.24
+seed: 101
+layers:
+  # Walking root bulb: a clipped "gnar" then a falling, bubbling "loo".
+  # Family voice (pulse+saw throat, o -> u, gurgling vibrato) shared with STINKROOT, STINKBLOOM, SUNBLOOM.
+  - type: voice
+    pitch: [[0.0, 520.0], [0.048, 624.0], [0.12, 494.0]]
+    source: {pulse: 0.8, saw: 0.5, pulse_width: 0.3, noise: 0.1}
+    vowels: [[0.0, er], [0.12, o]]
+    env: [[0.0, 0], [0.012, 1], [0.096, 0.8], [0.132, 0]]
+    growl: 0.15
+    growl_rate: 40
+    jitter: 0.02
+    drive: 1.6
+  - type: voice
+    at: 0.168
+    pitch: [[0.0, 572.0], [0.084, 676.0], [0.3, 520.0], [0.504, 364.0]]
+    source: {pulse: 0.8, saw: 0.5, pulse_width: 0.3, noise: 0.1}
+    vowels: [[0.0, o], [0.24, o], [0.504, u]]
+    env: [[0.0, 0], [0.018, 1], [0.36, 0.75], [0.516, 0]]
+    vibrato: {rate: 24, depth: 0.03}
+    growl: 0.15
+    growl_rate: 34
+    jitter: 0.02
+    drive: 1.6
+master: {rms: 0.29}

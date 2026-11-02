@@ -1,0 +1,37 @@
+name: sunbloom
+slot: bellossom
+brief: 'SUNBLOOM: creature call that fits its look and size. Dancing meadow flower.'
+kind: creature
+size: 0.22
+seed: 104
+layers:
+  # Dancing meadow flower: the family's "gnar-loo" turned sweet: brighter e -> i vowels,
+  # a lilting trill and a little skipping lift at the end.
+  - type: voice
+    pitch: [[0.0, 560.0], [0.046, 672.0], [0.115, 532.0]]
+    source: {pulse: 0.8, saw: 0.5, pulse_width: 0.3, noise: 0.05}
+    vowels: [[0.0, er], [0.115, o]]
+    env: [[0.0, 0], [0.0115, 1], [0.092, 0.8], [0.1265, 0]]
+    growl: 0.05
+    growl_rate: 40
+    jitter: 0.02
+    drive: 1.6
+  - type: voice
+    at: 0.161
+    pitch: [[0.0, 616.0], [0.0805, 728.0], [0.2875, 560.0], [0.483, 392.0]]
+    source: {pulse: 0.8, saw: 0.5, pulse_width: 0.3, noise: 0.05}
+    vowels: [[0.0, e], [0.23, e], [0.483, i]]
+    env: [[0.0, 0], [0.0172, 1], [0.345, 0.75], [0.4945, 0]]
+    vibrato: {rate: 24, depth: 0.06}
+    growl: 0.05
+    growl_rate: 34
+    jitter: 0.02
+    drive: 1.6
+  - type: voice
+    at: 0.62
+    pitch: [[0, 640], [0.03, 820], [0.06, 760]]
+    source: {pulse: 0.8, saw: 0.5, pulse_width: 0.3, noise: 0.05}
+    vowels: [[0, i], [0.06, e]]
+    env: [[0, 0], [0.008, 0.8], [0.05, 0.6], [0.07, 0]]
+    gain: 0.7
+master: {rms: 0.29}

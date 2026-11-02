@@ -1,0 +1,35 @@
+name: stinkroot
+slot: gloom
+brief: 'STINKROOT: creature call that fits its look and size. Drooling, foul-smelling root creature.'
+kind: creature
+size: 0.34
+seed: 102
+layers:
+  # Drooling root creature: the family's "gnar-loo", lower and wetter, with a dripping
+  # gurgle of band-passed noise and more rasp.
+  - type: voice
+    pitch: [[0.0, 400.0], [0.04, 480.0], [0.1, 380.0]]
+    source: {pulse: 0.8, saw: 0.5, pulse_width: 0.3, noise: 0.2}
+    vowels: [[0.0, er], [0.1, o]]
+    env: [[0.0, 0], [0.01, 1], [0.08, 0.8], [0.11, 0]]
+    growl: 0.3
+    growl_rate: 40
+    jitter: 0.02
+    drive: 1.6
+  - type: voice
+    at: 0.14
+    pitch: [[0.0, 440.0], [0.07, 520.0], [0.25, 400.0], [0.42, 280.0]]
+    source: {pulse: 0.8, saw: 0.5, pulse_width: 0.3, noise: 0.2}
+    vowels: [[0.0, o], [0.2, o], [0.42, u]]
+    env: [[0.0, 0], [0.015, 1], [0.3, 0.75], [0.43, 0]]
+    vibrato: {rate: 24, depth: 0.05}
+    growl: 0.3
+    growl_rate: 34
+    jitter: 0.02
+    drive: 1.6
+  - type: noise
+    at: 0.3
+    band: [[0, 700], [0.25, 450]]
+    q: 3
+    env: [[0, 0], [0.04, 0.6], [0.22, 0.3], [0.28, 0]]
+    gain: 0.35

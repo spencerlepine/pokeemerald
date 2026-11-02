@@ -1,0 +1,35 @@
+name: stinkbloom
+slot: vileplume
+brief: 'STINKBLOOM: creature call that fits its look and size. Giant toxic swamp flower.'
+kind: creature
+size: 0.45
+seed: 103
+layers:
+  # Giant toxic swamp flower: the family's "gnar-loo" grown huge and slow, ending in a
+  # drawn-out rotten bellow and a spray of toxic spore hiss.
+  - type: voice
+    pitch: [[0.0, 280.0], [0.088, 336.0], [0.22, 266.0]]
+    source: {pulse: 0.8, saw: 0.5, pulse_width: 0.3, noise: 0.15}
+    vowels: [[0.0, er], [0.22, o]]
+    env: [[0.0, 0], [0.022, 1], [0.176, 0.8], [0.242, 0]]
+    growl: 0.4
+    growl_rate: 40
+    jitter: 0.02
+    drive: 1.6
+  - type: voice
+    at: 0.308
+    pitch: [[0.0, 308.0], [0.154, 364.0], [0.55, 280.0], [0.924, 196.0]]
+    source: {pulse: 0.8, saw: 0.5, pulse_width: 0.3, noise: 0.15}
+    vowels: [[0.0, aw], [0.44, aw], [0.924, u]]
+    env: [[0.0, 0], [0.033, 1], [0.66, 0.75], [0.946, 0]]
+    vibrato: {rate: 24, depth: 0.04}
+    growl: 0.4
+    growl_rate: 34
+    jitter: 0.02
+    drive: 1.6
+  - type: noise
+    at: 0.75
+    band: [[0, 2600], [0.4, 1500]]
+    q: 1.2
+    env: [[0, 0], [0.08, 0.5], [0.3, 0.35], [0.42, 0]]
+    gain: 0.3
