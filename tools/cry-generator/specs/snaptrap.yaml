@@ -1,0 +1,36 @@
+name: snaptrap
+slot: weepinbell
+brief: "SNAPTRAP: creature call that fits its look and size. Carnivorous pitcher plant."
+kind: creature
+size: 0.4
+seed: 62
+master: {rms: 0.27, tilt_db: -4}
+layers:
+  # Vine DNA, a bigger pitcher: snap, a wetter, gurgling "tsee-ohh" and a short "glup"
+  # of digestive juice, then sap hiss.
+  - type: click
+    times: [0, 0.03]
+    gain: 0.6
+  - type: voice
+    at: 0.04
+    pitch: [[0, 540], [0.08, 720], [0.3, 560], [0.45, 420]]
+    source: {pulse: 0.9, pulse_width: 0.18, saw: 0.3, noise: 0.15}
+    vowels: [[0, i], [0.12, e], [0.3, o], [0.46, er]]
+    env: [[0, 0], [0.01, 1], [0.3, 0.7], [0.46, 0]]
+    growl: 0.25
+    growl_rate: 40
+    jitter: 0.02
+    vibrato: {rate: 16, depth: 0.03}
+  - type: voice
+    at: 0.5
+    pitch: [[0, 380], [0.06, 500], [0.14, 340]]
+    source: {pulse: 0.9, pulse_width: 0.18, saw: 0.3, noise: 0.15}
+    vowels: [[0, o], [0.14, u]]
+    env: [[0, 0], [0.01, 0.8], [0.15, 0]]
+    gain: 0.7
+  - type: noise
+    at: 0.42
+    band: [2300]
+    q: 2
+    env: [[0, 0], [0.03, 0.35], [0.24, 0]]
+    gain: 0.25

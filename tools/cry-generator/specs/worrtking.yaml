@@ -1,0 +1,43 @@
+name: worrtking
+slot: politoed
+brief: "WORRTKING: creature call that fits its look and size. Crowned worrt."
+kind: creature
+size: 0.5
+seed: 54
+master: {rms: 0.27}
+layers:
+  # Worrt DNA, crowned: two stately croaks and then a long, rising-falling royal ribbit
+  # with a slow vibrato, each part opened by the worrt tongue pop.
+  - type: click
+    times: [0, 0.2, 0.4]
+    gain: 0.3
+  - type: voice
+    pitch: [[0, 380], [0.05, 480], [0.14, 360]]
+    source: {saw: 0.7, pulse: 0.6, pulse_width: 0.3, noise: 0.1}
+    vowels: [[0, rr], [0.07, o], [0.15, u]]
+    env: [[0, 0], [0.01, 1], [0.1, 0.8], [0.15, 0]]
+    growl: 0.4
+    growl_rate: 30
+    jitter: 0.02
+    drive: 2
+  - type: voice
+    at: 0.2
+    pitch: [[0, 400], [0.05, 510], [0.14, 380]]
+    source: {saw: 0.7, pulse: 0.6, pulse_width: 0.3, noise: 0.1}
+    vowels: [[0, rr], [0.07, o], [0.15, u]]
+    env: [[0, 0], [0.01, 1], [0.1, 0.8], [0.15, 0]]
+    growl: 0.4
+    growl_rate: 30
+    jitter: 0.02
+    drive: 2
+  - type: voice
+    at: 0.4
+    pitch: [[0, 360], [0.12, 560], [0.3, 520], [0.46, 340]]
+    source: {saw: 0.7, pulse: 0.6, pulse_width: 0.3, noise: 0.1}
+    vowels: [[0, rr], [0.1, o], [0.28, a], [0.46, u]]
+    env: [[0, 0], [0.015, 1], [0.32, 0.85], [0.47, 0]]
+    growl: 0.3
+    growl_rate: 30
+    vibrato: {rate: 9, depth: 0.04}
+    jitter: 0.015
+    drive: 2

@@ -1,0 +1,39 @@
+name: snapper
+slot: totodile
+brief: "SNAPPER: creature call that fits its look and size. Swamp croc hatchling."
+kind: creature
+size: 0.25
+seed: 71
+layers:
+  # Swamp-croc DNA (jaw chomp, saw-heavy reptile bark aw->a->rr, hiss tail): a hatchling's
+  # chomp-chomp and two chirpy little barks, then a tiny hiss.
+  - type: click
+    times: [0, 0.3]
+    gain: 0.5
+  - type: voice
+    at: 0.01
+    pitch: [[0, 560], [0.05, 720], [0.14, 600]]
+    source: {saw: 0.9, pulse: 0.3, pulse_width: 0.3, noise: 0.2}
+    vowels: [[0, aw], [0.06, a], [0.15, rr]]
+    env: [[0, 0], [0.008, 1], [0.1, 0.8], [0.15, 0]]
+    growl: 0.25
+    growl_rate: 50
+    jitter: 0.03
+    drive: 2
+  - type: voice
+    at: 0.3
+    pitch: [[0, 600], [0.06, 780], [0.3, 560], [0.42, 480]]
+    source: {saw: 0.9, pulse: 0.3, pulse_width: 0.3, noise: 0.2}
+    vowels: [[0, aw], [0.08, a], [0.42, rr]]
+    env: [[0, 0], [0.008, 1], [0.3, 0.75], [0.44, 0]]
+    growl: 0.25
+    growl_rate: 50
+    vibrato: {rate: 14, depth: 0.03}
+    jitter: 0.03
+    drive: 2
+  - type: noise
+    at: 0.62
+    band: [[0, 2600], [0.2, 1900]]
+    q: 1.6
+    env: [[0, 0], [0.03, 0.4], [0.22, 0]]
+    gain: 0.3

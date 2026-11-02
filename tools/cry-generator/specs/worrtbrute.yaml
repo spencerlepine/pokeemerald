@@ -1,0 +1,27 @@
+name: worrtbrute
+slot: poliwrath
+brief: "WORRTBRUTE: creature call that fits its look and size. Muscular fighting worrt."
+kind: creature
+size: 0.55
+seed: 53
+layers:
+  # Worrt DNA, muscled up: a punch-like thump, then a hard, driven croak-roar with a
+  # heavy trill that sags into a breathy grunt.
+  - type: click
+    times: [0]
+    gain: 0.6
+  - type: voice
+    pitch: [[0, 300], [0.05, 420], [0.2, 340], [0.45, 240]]
+    source: {saw: 0.7, pulse: 0.6, pulse_width: 0.3, noise: 0.1}
+    vowels: [[0, rr], [0.08, o], [0.3, aw], [0.47, u]]
+    env: [[0, 0], [0.008, 1], [0.3, 0.85], [0.48, 0]]
+    growl: 0.6
+    growl_rate: 26
+    jitter: 0.03
+    drive: 3
+  - type: noise
+    at: 0.3
+    band: [700]
+    q: 1.5
+    env: [[0, 0], [0.04, 0.4], [0.2, 0]]
+    gain: 0.25

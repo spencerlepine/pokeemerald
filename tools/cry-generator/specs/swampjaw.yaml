@@ -1,0 +1,37 @@
+name: swampjaw
+slot: feraligatr
+brief: "SWAMPJAW: creature call that fits its look and size. Huge swamp crocodile."
+kind: creature
+size: 0.8
+seed: 73
+layers:
+  # Swamp-croc DNA at full size: a heavy double chomp, a deep growling bellow with a
+  # raspy upper layer, and a long swamp hiss.
+  - type: click
+    times: [0, 0.06]
+    gain: 0.7
+  - type: voice
+    at: 0.04
+    pitch: [[0, 180], [0.15, 260], [0.6, 230], [0.95, 150]]
+    source: {saw: 0.9, pulse: 0.3, pulse_width: 0.3, noise: 0.2}
+    vowels: [[0, aw], [0.2, a], [0.7, aw], [0.95, rr]]
+    env: [[0, 0], [0.01, 1], [0.6, 0.85], [0.97, 0]]
+    growl: 0.6
+    growl_rate: 24
+    jitter: 0.03
+    drive: 2.5
+  - type: voice
+    at: 0.08
+    pitch: [[0, 520], [0.15, 760], [0.6, 680], [0.85, 450]]
+    source: {saw: 0.9, pulse: 0.3, pulse_width: 0.3, noise: 0.2}
+    vowels: [[0, a], [0.6, aw], [0.85, rr]]
+    env: [[0, 0], [0.03, 0.7], [0.55, 0.5], [0.86, 0]]
+    gain: 0.45
+    growl: 0.3
+    growl_rate: 30
+  - type: noise
+    at: 0.84
+    band: [[0, 2200], [0.34, 1400]]
+    q: 1.4
+    env: [[0, 0], [0.04, 0.45], [0.34, 0]]
+    gain: 0.33

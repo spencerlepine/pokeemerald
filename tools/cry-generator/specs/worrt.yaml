@@ -1,0 +1,28 @@
+name: worrt
+slot: poliwhirl
+brief: "WORRT: creature call that fits its look and size. Long-tongued worrt from Jabba's palace grounds."
+kind: creature
+size: 0.4
+seed: 52
+master: {rms: 0.29}
+layers:
+  # Worrt DNA, a step lower: one fat croak, "brrok", and the long tongue lashing out
+  # ("fwip", a rising noise sweep) ending in a wet pop.
+  - type: click
+    times: [0, 0.33]
+    gain: 0.35
+  - type: voice
+    pitch: [[0, 420], [0.05, 540], [0.2, 380], [0.3, 330]]
+    source: {saw: 0.7, pulse: 0.6, pulse_width: 0.3, noise: 0.1}
+    vowels: [[0, rr], [0.08, o], [0.3, u]]
+    env: [[0, 0], [0.01, 1], [0.2, 0.8], [0.32, 0]]
+    growl: 0.45
+    growl_rate: 28
+    jitter: 0.025
+    drive: 2.2
+  - type: noise
+    at: 0.2
+    band: [[0, 900], [0.12, 2600]]
+    q: 2
+    env: [[0, 0], [0.02, 0.5], [0.13, 0]]
+    gain: 0.35

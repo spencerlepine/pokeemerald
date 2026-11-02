@@ -1,0 +1,26 @@
+name: snapbud
+slot: bellsprout
+brief: "SNAPBUD: creature call that fits its look and size. Snapping vine bud."
+kind: creature
+size: 0.2
+seed: 61
+layers:
+  # Vine DNA (snap clicks, thin narrow-pulse voice i->e->er, sap hiss): a quick double
+  # snap and a squeaky "tsee-yup" from a tiny bud.
+  - type: click
+    times: [0, 0.03]
+    gain: 0.6
+  - type: voice
+    at: 0.04
+    pitch: [[0, 700], [0.06, 900], [0.25, 620]]
+    source: {pulse: 0.9, pulse_width: 0.18, saw: 0.3, noise: 0.15}
+    vowels: [[0, i], [0.12, e], [0.26, er]]
+    env: [[0, 0], [0.01, 1], [0.18, 0.7], [0.27, 0]]
+    vibrato: {rate: 20, depth: 0.03}
+    jitter: 0.02
+  - type: noise
+    at: 0.2
+    band: [2600]
+    q: 2
+    env: [[0, 0], [0.02, 0.4], [0.13, 0]]
+    gain: 0.25

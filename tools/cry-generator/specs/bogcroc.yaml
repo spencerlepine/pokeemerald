@@ -1,0 +1,38 @@
+name: bogcroc
+slot: croconaw
+brief: "BOGCROC: creature call that fits its look and size. Swamp crocodile."
+kind: creature
+size: 0.45
+seed: 72
+layers:
+  # Swamp-croc DNA, a size up: chomp, a gruff bark, then a longer dragging "hrraa-rr"
+  # and a swampy hiss.
+  - type: click
+    times: [0, 0.25]
+    gain: 0.55
+  - type: voice
+    at: 0.01
+    pitch: [[0, 420], [0.05, 560], [0.16, 440]]
+    source: {saw: 0.9, pulse: 0.3, pulse_width: 0.3, noise: 0.2}
+    vowels: [[0, aw], [0.06, a], [0.17, rr]]
+    env: [[0, 0], [0.008, 1], [0.12, 0.8], [0.17, 0]]
+    growl: 0.4
+    growl_rate: 40
+    jitter: 0.03
+    drive: 2.3
+  - type: voice
+    at: 0.25
+    pitch: [[0, 440], [0.07, 600], [0.35, 430], [0.5, 340]]
+    source: {saw: 0.9, pulse: 0.3, pulse_width: 0.3, noise: 0.2}
+    vowels: [[0, aw], [0.1, a], [0.5, rr]]
+    env: [[0, 0], [0.008, 1], [0.35, 0.75], [0.52, 0]]
+    growl: 0.45
+    growl_rate: 38
+    jitter: 0.03
+    drive: 2.3
+  - type: noise
+    at: 0.66
+    band: [[0, 2300], [0.27, 1600]]
+    q: 1.5
+    env: [[0, 0], [0.03, 0.45], [0.28, 0]]
+    gain: 0.32

@@ -1,0 +1,31 @@
+name: mawflower
+slot: victreebel
+brief: "MAWFLOWER: creature call that fits its look and size. Giant flytrap flower."
+kind: creature
+size: 0.55
+seed: 63
+layers:
+  # Vine DNA at full size: a triple snap of the giant maw, a wide, growling "hwaaa-rr"
+  # that droops, a long sap hiss, and the trap snapping shut.
+  - type: click
+    times: [0, 0.04, 0.08]
+    gain: 0.7
+  - type: voice
+    at: 0.06
+    pitch: [[0, 380], [0.1, 560], [0.4, 480], [0.7, 300]]
+    source: {pulse: 0.9, pulse_width: 0.18, saw: 0.3, noise: 0.15}
+    vowels: [[0, i], [0.15, ae], [0.45, aw], [0.72, er]]
+    env: [[0, 0], [0.012, 1], [0.45, 0.8], [0.74, 0]]
+    growl: 0.45
+    growl_rate: 34
+    jitter: 0.025
+    drive: 2.5
+  - type: noise
+    at: 0.55
+    band: [[0, 2400], [0.3, 1600]]
+    q: 2
+    env: [[0, 0], [0.04, 0.4], [0.32, 0]]
+    gain: 0.3
+  - type: click
+    times: [0.86]
+    gain: 0.5

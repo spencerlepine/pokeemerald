@@ -1,0 +1,33 @@
+name: worrtlet
+slot: poliwag
+brief: "WORRTLET: creature call that fits its look and size. Worrt tadpole."
+kind: creature
+size: 0.25
+seed: 51
+master: {rms: 0.27}
+layers:
+  # Worrt DNA (croaky saw+pulse throat, rr->o->u, trilled growl): a tadpole's two small
+  # wet croaks, "brip-brup", each opened by a tiny tongue pop.
+  - type: click
+    times: [0, 0.24]
+    gain: 0.3
+  - type: voice
+    pitch: [[0, 560], [0.06, 680], [0.16, 520]]
+    source: {saw: 0.7, pulse: 0.6, pulse_width: 0.3, noise: 0.1}
+    vowels: [[0, rr], [0.08, o], [0.17, u]]
+    env: [[0, 0], [0.01, 1], [0.12, 0.8], [0.18, 0]]
+    growl: 0.35
+    growl_rate: 30
+    jitter: 0.02
+    drive: 2
+  - type: voice
+    at: 0.24
+    pitch: [[0, 520], [0.08, 720], [0.27, 480]]
+    source: {saw: 0.7, pulse: 0.6, pulse_width: 0.3, noise: 0.1}
+    vowels: [[0, rr], [0.1, o], [0.28, u]]
+    env: [[0, 0], [0.012, 1], [0.18, 0.7], [0.28, 0]]
+    growl: 0.3
+    growl_rate: 30
+    vibrato: {rate: 18, depth: 0.03}
+    jitter: 0.02
+    drive: 2
