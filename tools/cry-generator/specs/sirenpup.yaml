@@ -1,0 +1,36 @@
+name: sirenpup
+slot: seel
+brief: "SIRENPUP: creature call that fits its look and size. Thala-siren pup of Ahch-To that loves icy water."
+kind: creature
+size: 0.5
+seed: 141
+layers:
+  # Thala-siren DNA (round saw+pulse seal voice a->o->u, barks then a croon): a playful pup's
+  # "arf-arf" and a happy little "aroo".
+  - type: voice
+    pitch: [[0, 460], [0.04, 600], [0.12, 480]]
+    source: {saw: 0.6, pulse: 0.6, pulse_width: 0.35, noise: 0.06}
+    vowels: [[0, a], [0.06, o], [0.13, u]]
+    env: [[0, 0], [0.008, 1], [0.09, 0.8], [0.13, 0]]
+    growl: 0.2
+    growl_rate: 40
+    jitter: 0.02
+    drive: 1.8
+  - type: voice
+    at: 0.17
+    pitch: [[0, 480], [0.04, 630], [0.12, 500]]
+    source: {saw: 0.6, pulse: 0.6, pulse_width: 0.35, noise: 0.06}
+    vowels: [[0, a], [0.06, o], [0.13, u]]
+    env: [[0, 0], [0.008, 1], [0.09, 0.8], [0.13, 0]]
+    growl: 0.2
+    growl_rate: 40
+    jitter: 0.02
+    drive: 1.8
+  - type: voice
+    at: 0.36
+    pitch: [[0, 440], [0.15, 620], [0.3, 600], [0.46, 440]]
+    source: {saw: 0.6, pulse: 0.6, pulse_width: 0.35, noise: 0.06}
+    vowels: [[0, a], [0.15, o], [0.46, u]]
+    env: [[0, 0], [0.015, 1], [0.33, 0.8], [0.47, 0]]
+    vibrato: {rate: 8, depth: 0.03}
+    jitter: 0.015

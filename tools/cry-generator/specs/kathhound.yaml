@@ -1,0 +1,38 @@
+name: kathhound
+slot: manectric
+brief: "KATHHOUND: creature call that fits its look and size. Kath hound whose mane crackles with lightning."
+kind: creature
+size: 0.55
+seed: 152
+layers:
+  # Kath-hound DNA, full grown: a crackling burst of static, a deep snarl-bark and a rising
+  # howl, with lightning crackle snapping through the mane.
+  - type: click
+    times: [0, 0.03, 0.07, 0.1, 0.55, 0.6, 0.66, 0.8, 0.86]
+    gain: 0.45
+  - type: noise
+    band: [2600]
+    q: 1.5
+    env: [[0, 0], [0.01, 0.6], [0.04, 0.15], [0.07, 0.6], [0.12, 0]]
+    gain: 0.35
+  - type: voice
+    at: 0.04
+    pitch: [[0, 380], [0.05, 520], [0.18, 400]]
+    source: {saw: 0.9, pulse: 0.4, pulse_width: 0.25, noise: 0.15}
+    vowels: [[0, ae], [0.05, a], [0.19, rr]]
+    env: [[0, 0], [0.008, 1], [0.13, 0.8], [0.19, 0]]
+    growl: 0.5
+    growl_rate: 36
+    jitter: 0.03
+    drive: 2.5
+  - type: voice
+    at: 0.27
+    pitch: [[0, 400], [0.2, 600], [0.45, 540], [0.7, 380]]
+    source: {saw: 0.9, pulse: 0.4, pulse_width: 0.25, noise: 0.15}
+    vowels: [[0, a], [0.2, o], [0.5, aw], [0.7, rr]]
+    env: [[0, 0], [0.03, 1], [0.5, 0.8], [0.71, 0]]
+    vibrato: {rate: 8, depth: 0.03}
+    growl: 0.35
+    growl_rate: 34
+    jitter: 0.02
+    drive: 2

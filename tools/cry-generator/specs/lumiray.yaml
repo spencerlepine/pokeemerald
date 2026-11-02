@@ -1,0 +1,36 @@
+name: lumiray
+slot: chinchou
+brief: "LUMIRAY: creature call that fits its look and size. Abyssal fish with glowing lures."
+kind: creature
+size: 0.25
+seed: 131
+layers:
+  # Lantern-fish DNA (hollow tri+pulse "bloop" u->o, bubble blips, warbling lure shimmer): three
+  # rising bubbly blips and a glowing electric shimmer from the lures.
+  - type: voice
+    pitch: [[0, 500], [0.06, 700]]
+    source: {tri: 0.7, pulse: 0.5, pulse_width: 0.4, noise: 0.05}
+    vowels: [[0, u], [0.06, o]]
+    env: [[0, 0], [0.008, 1], [0.07, 0]]
+    drive: 1.5
+  - type: voice
+    at: 0.1
+    pitch: [[0, 560], [0.06, 800]]
+    source: {tri: 0.7, pulse: 0.5, pulse_width: 0.4, noise: 0.05}
+    vowels: [[0, u], [0.06, o]]
+    env: [[0, 0], [0.008, 1], [0.07, 0]]
+    drive: 1.5
+  - type: voice
+    at: 0.2
+    pitch: [[0, 620], [0.12, 900], [0.3, 760]]
+    source: {tri: 0.7, pulse: 0.5, pulse_width: 0.4, noise: 0.05}
+    vowels: [[0, u], [0.1, o], [0.3, e]]
+    env: [[0, 0], [0.01, 1], [0.22, 0.7], [0.32, 0]]
+    vibrato: {rate: 14, depth: 0.04}
+  - type: tone
+    at: 0.15
+    wave: sine
+    pitch: [[0, 1900], [0.4, 2300]]
+    warble: {rate: 38, depth: 0.12, shape: square}
+    env: [[0, 0], [0.05, 0.4], [0.3, 0.3], [0.44, 0]]
+    gain: 0.35

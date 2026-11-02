@@ -1,0 +1,33 @@
+name: wampa
+slot: glalie
+brief: "WAMPA: creature call that fits its look and size. Hoth's ice-cave predator."
+kind: creature
+size: 0.85
+seed: 162
+layers:
+  # Wampa DNA at full size: a huge, growling ice-cave roar that swells and drags down into a
+  # snarl, with a cold, breathy frost hiss behind it.
+  - type: voice
+    pitch: [[0, 200], [0.1, 300], [0.5, 270], [0.9, 170]]
+    source: {saw: 0.8, square: 0.4, noise: 0.2}
+    vowels: [[0, o], [0.12, a], [0.55, aw], [0.9, rr]]
+    env: [[0, 0], [0.015, 1], [0.55, 0.85], [0.92, 0]]
+    growl: 0.65
+    growl_rate: 24
+    jitter: 0.035
+    drive: 2.8
+  - type: voice
+    at: 0.03
+    pitch: [[0, 500], [0.1, 700], [0.5, 640], [0.8, 420]]
+    source: {saw: 0.8, square: 0.4, noise: 0.2}
+    vowels: [[0, a], [0.5, ae], [0.8, rr]]
+    env: [[0, 0], [0.03, 0.7], [0.5, 0.5], [0.82, 0]]
+    growl: 0.3
+    growl_rate: 30
+    gain: 0.45
+  - type: noise
+    at: 0.1
+    band: [1300]
+    q: 1
+    env: [[0, 0], [0.1, 0.3], [0.7, 0.25], [0.86, 0]]
+    gain: 0.25

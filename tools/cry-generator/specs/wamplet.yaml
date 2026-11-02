@@ -1,0 +1,25 @@
+name: wamplet
+slot: snorunt
+brief: "WAMPLET: creature call that fits its look and size. Wampa cub hiding in the snow."
+kind: creature
+size: 0.3
+seed: 161
+layers:
+  # Wampa DNA (growling saw+square roar o->a->rr, breathy frost noise): a cub's whiny bleating
+  # roar "mwaaa-rr" and a snuffle in the snow.
+  - type: voice
+    pitch: [[0, 560], [0.08, 720], [0.35, 640], [0.55, 480]]
+    source: {saw: 0.8, square: 0.4, noise: 0.2}
+    vowels: [[0, o], [0.1, a], [0.4, ae], [0.56, rr]]
+    env: [[0, 0], [0.012, 1], [0.4, 0.8], [0.57, 0]]
+    vibrato: {rate: 10, depth: 0.03}
+    growl: 0.3
+    growl_rate: 40
+    jitter: 0.03
+    drive: 2
+  - type: noise
+    at: 0.58
+    band: [1600]
+    q: 1.2
+    env: [[0, 0], [0.02, 0.4], [0.08, 0.1], [0.11, 0.4], [0.2, 0]]
+    gain: 0.3

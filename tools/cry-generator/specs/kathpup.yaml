@@ -1,0 +1,38 @@
+name: kathpup
+slot: electrike
+brief: "KATHPUP: creature call that fits its look and size. Kath hound pup with static in its fur."
+kind: creature
+size: 0.3
+seed: 151
+master: {rms: 0.27}
+layers:
+  # Kath-hound DNA (snarling saw yap a->rr, static crackle and hiss): a pup's sharp "yap-yarr"
+  # with sparks of static popping in its fur.
+  - type: click
+    times: [0, 0.05, 0.11, 0.38, 0.45, 0.5]
+    gain: 0.4
+  - type: voice
+    pitch: [[0, 600], [0.04, 800], [0.12, 640]]
+    source: {saw: 0.9, pulse: 0.4, pulse_width: 0.25, noise: 0.15}
+    vowels: [[0, ae], [0.05, a], [0.13, rr]]
+    env: [[0, 0], [0.006, 1], [0.09, 0.8], [0.13, 0]]
+    growl: 0.3
+    growl_rate: 48
+    jitter: 0.03
+    drive: 2.2
+  - type: voice
+    at: 0.18
+    pitch: [[0, 620], [0.05, 820], [0.25, 560], [0.36, 480]]
+    source: {saw: 0.9, pulse: 0.4, pulse_width: 0.25, noise: 0.15}
+    vowels: [[0, ae], [0.06, a], [0.36, rr]]
+    env: [[0, 0], [0.006, 1], [0.25, 0.7], [0.37, 0]]
+    growl: 0.4
+    growl_rate: 44
+    jitter: 0.03
+    drive: 2.2
+  - type: noise
+    at: 0.36
+    band: [2800]
+    q: 1.5
+    env: [[0, 0], [0.01, 0.5], [0.04, 0.1], [0.06, 0.5], [0.1, 0.1], [0.2, 0]]
+    gain: 0.3

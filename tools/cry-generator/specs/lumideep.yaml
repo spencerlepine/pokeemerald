@@ -1,0 +1,25 @@
+name: lumideep
+slot: lanturn
+brief: "LUMIDEEP: creature call that fits its look and size. Deep-sea lantern fish."
+kind: creature
+size: 0.45
+seed: 132
+layers:
+  # Lantern-fish DNA, deep-sea size: one big hollow "bwoom" bloop that swells and sinks, with a
+  # lower, slower warbling lure shimmer.
+  - type: voice
+    pitch: [[0, 300], [0.08, 460], [0.3, 400], [0.45, 260]]
+    source: {tri: 0.7, pulse: 0.5, pulse_width: 0.4, noise: 0.05}
+    vowels: [[0, u], [0.1, o], [0.3, aw], [0.45, u]]
+    env: [[0, 0], [0.012, 1], [0.3, 0.8], [0.47, 0]]
+    vibrato: {rate: 10, depth: 0.04}
+    growl: 0.2
+    growl_rate: 24
+    drive: 1.8
+  - type: tone
+    at: 0.05
+    wave: sine
+    pitch: [[0, 1500], [0.4, 1300]]
+    warble: {rate: 26, depth: 0.12, shape: square}
+    env: [[0, 0], [0.05, 0.4], [0.3, 0.3], [0.42, 0]]
+    gain: 0.35

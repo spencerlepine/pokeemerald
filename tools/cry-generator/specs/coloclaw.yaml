@@ -1,0 +1,34 @@
+name: coloclaw
+slot: gyarados
+brief: "COLOCLAW: creature call that fits its look and size. Colo claw fish, the most savage predator of Naboo's core."
+kind: creature
+size: 1
+seed: 172
+layers:
+  # Colo-claw DNA grown savage: a crashing splash, a gulping "blub" that tears open into a
+  # screeching, growling roar, layered low and high.
+  - type: noise
+    band: [[0, 2200], [0.15, 900]]
+    q: 0.8
+    env: [[0, 0], [0.005, 1], [0.15, 0]]
+    gain: 0.6
+  - type: voice
+    at: 0.04
+    pitch: [[0, 160], [0.06, 200], [0.2, 280], [0.6, 260], [0.85, 170]]
+    source: {pulse: 0.8, saw: 0.4, pulse_width: 0.3, noise: 0.1}
+    vowels: [[0, u], [0.08, o], [0.25, a], [0.6, aw], [0.85, rr]]
+    env: [[0, 0], [0.01, 1], [0.6, 0.85], [0.87, 0]]
+    growl: 0.7
+    growl_rate: 22
+    jitter: 0.04
+    drive: 3
+  - type: voice
+    at: 0.12
+    pitch: [[0, 700], [0.15, 1100], [0.5, 950], [0.75, 600]]
+    source: {pulse: 0.8, saw: 0.4, pulse_width: 0.3, noise: 0.1}
+    vowels: [[0, a], [0.2, ae], [0.5, ee], [0.75, e]]
+    env: [[0, 0], [0.03, 0.8], [0.5, 0.6], [0.76, 0]]
+    growl: 0.4
+    growl_rate: 40
+    jitter: 0.03
+    gain: 0.5

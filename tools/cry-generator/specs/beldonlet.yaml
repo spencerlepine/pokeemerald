@@ -1,0 +1,32 @@
+name: beldonlet
+slot: koffing
+brief: "BELDONLET: creature call that fits its look and size. Floating gas-bag calf from Bespin."
+kind: creature
+size: 0.35
+seed: 181
+master: {rms: 0.3}
+layers:
+  # Beldon DNA (hollow sine+saw hoot m->u->o, slow vibrato, gas-vent hiss): a floating calf's
+  # puff of gas and a wobbling "hooo-oop".
+  - type: noise
+    band: [2000]
+    q: 1
+    env: [[0, 0], [0.01, 1], [0.12, 0]]
+    gain: 0.8
+  - type: click
+    times: [0]
+    gain: 0.5
+  - type: voice
+    at: 0.06
+    pitch: [[0, 340], [0.2, 460], [0.55, 420], [0.75, 320]]
+    source: {sine: 0.8, saw: 0.4, noise: 0.05}
+    vowels: [[0, m], [0.15, u], [0.5, o], [0.75, u]]
+    env: [[0, 0], [0.03, 1], [0.55, 0.8], [0.76, 0]]
+    vibrato: {rate: 5, depth: 0.05}
+    drive: 1.6
+  - type: noise
+    at: 0.78
+    band: [1700]
+    q: 1
+    env: [[0, 0], [0.02, 0.4], [0.16, 0]]
+    gain: 0.3

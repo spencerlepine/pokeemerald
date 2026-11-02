@@ -1,0 +1,47 @@
+name: colofry
+slot: magikarp
+brief: "COLOFRY: creature call that fits its look and size. Useless-looking colo claw fry that only splashes."
+kind: creature
+size: 0.3
+seed: 171
+layers:
+  # Colo-claw DNA (gulping pulse "blub" u->o, wet splash noise): a useless fry flopping about,
+  # splash, "blub", splash, "blub-blub", splash.
+  - type: noise
+    band: [[0, 2400], [0.1, 1200]]
+    q: 0.8
+    env: [[0, 0], [0.005, 1], [0.1, 0]]
+    gain: 0.6
+  - type: voice
+    at: 0.08
+    pitch: [[0, 420], [0.06, 560]]
+    source: {pulse: 0.8, saw: 0.4, pulse_width: 0.3, noise: 0.1}
+    vowels: [[0, u], [0.06, o]]
+    env: [[0, 0], [0.008, 1], [0.07, 0]]
+    drive: 1.8
+  - type: noise
+    at: 0.28
+    band: [[0, 2200], [0.1, 1100]]
+    q: 0.8
+    env: [[0, 0], [0.005, 0.9], [0.1, 0]]
+    gain: 0.55
+  - type: voice
+    at: 0.42
+    pitch: [[0, 400], [0.06, 540]]
+    source: {pulse: 0.8, saw: 0.4, pulse_width: 0.3, noise: 0.1}
+    vowels: [[0, u], [0.06, o]]
+    env: [[0, 0], [0.008, 1], [0.07, 0]]
+    drive: 1.8
+  - type: voice
+    at: 0.52
+    pitch: [[0, 380], [0.06, 520]]
+    source: {pulse: 0.8, saw: 0.4, pulse_width: 0.3, noise: 0.1}
+    vowels: [[0, u], [0.06, o]]
+    env: [[0, 0], [0.008, 1], [0.07, 0]]
+    drive: 1.8
+  - type: noise
+    at: 0.72
+    band: [[0, 2000], [0.14, 1000]]
+    q: 0.8
+    env: [[0, 0], [0.005, 0.8], [0.15, 0]]
+    gain: 0.5
