@@ -2581,7 +2581,7 @@ rwookrrorro-hut-2,KASHYYYK,interior,new,BLOCKOUT,area,Rwookrrorro hut 2,12x10,,,
 rwookrrorro-hut-2,KASHYYYK,interior,new,BLOCKOUT,prop,Bed nest,3x2,art:new:wookiee-bed,yes,pending-final-art,greybox piece
 rwookrrorro-hut-2,KASHYYYK,interior,new,BLOCKOUT,person,Wookiee,1x1,,,PLACEHOLDER,
 rwookrrorro-hut-2,KASHYYYK,interior,new,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
-kachirho,KASHYYYK,town,DewfordTown,BLOCKOUT,area,KACHIRHO,46x38,,,pending-final-art,greybox terrain
+kachirho,KASHYYYK,town,DewfordTown,BLOCKOUT,area,KACHIRHO,32x28,,,pending-mockup,greybox terrain
 kachirho,KASHYYYK,town,DewfordTown,BLOCKOUT,building,Tarfful's arena hall,7x5,art:kashyyyk:arena-hall,yes,pending-final-art,greybox piece
 kachirho,KASHYYYK,town,DewfordTown,BLOCKOUT,building,Great hall (HoloNet trends),5x4,art:kashyyyk:wookiee-hut,yes,pending-final-art,greybox piece
 kachirho,KASHYYYK,town,DewfordTown,BLOCKOUT,building,Bacta Center,5x4,art:shared:bacta-center,yes,pending-final-art,greybox piece
@@ -2589,15 +2589,13 @@ kachirho,KASHYYYK,town,DewfordTown,BLOCKOUT,building,Supply Depot,4x4,art:shared
 kachirho,KASHYYYK,town,DewfordTown,BLOCKOUT,building,Wookiee family hut,5x4,art:kashyyyk:wookiee-hut,yes,pending-final-art,greybox piece
 kachirho,KASHYYYK,town,DewfordTown,BLOCKOUT,building,Elder's hut,5x4,art:kashyyyk:wookiee-hut,yes,pending-final-art,greybox piece
 kachirho,KASHYYYK,town,DewfordTown,BLOCKOUT,building,Falcon hangar (from Tatooine),8x4,art:tatooine:docking-bay,yes,pending-final-art,greybox piece
-kachirho,KASHYYYK,town,DewfordTown,BLOCKOUT,prop,Catamaran dock,4x3,art:kashyyyk:catamaran-dock,yes,pending-final-art,greybox piece
 kachirho,KASHYYYK,town,DewfordTown,BLOCKOUT,prop,Millennium Falcon (landed),4x4,art:shared:landing-pad,yes,pending-final-art,greybox piece
+kachirho,KASHYYYK,town,DewfordTown,BLOCKOUT,prop,Catamaran dock,4x3,art:kashyyyk:catamaran-dock,yes,pending-final-art,greybox piece
 kachirho,KASHYYYK,town,DewfordTown,BLOCKOUT,prop,Wroshyr tree,3x3,art:kashyyyk:wroshyr-tree,yes,pending-mockup,greybox piece
 kachirho,KASHYYYK,town,DewfordTown,BLOCKOUT,prop,Wroshyr tree,3x3,art:kashyyyk:wroshyr-tree,yes,pending-mockup,greybox piece
 kachirho,KASHYYYK,town,DewfordTown,BLOCKOUT,prop,Wroshyr tree,3x3,art:kashyyyk:wroshyr-tree,yes,pending-mockup,greybox piece
-kachirho,KASHYYYK,town,DewfordTown,BLOCKOUT,prop,Wroshyr tree,3x3,art:kashyyyk:wroshyr-tree,yes,pending-mockup,greybox piece
-kachirho,KASHYYYK,town,DewfordTown,BLOCKOUT,prop,Wroshyr tree,3x3,art:kashyyyk:wroshyr-tree,yes,pending-mockup,greybox piece
-kachirho,KASHYYYK,town,DewfordTown,BLOCKOUT,prop,Bowcaster rack,1x1,art:kashyyyk:bowcaster-rack,yes,pending-final-art,greybox piece
 kachirho,KASHYYYK,town,DewfordTown,BLOCKOUT,prop,Root arch,3x2,art:kashyyyk:root-arch,yes,pending-final-art,greybox piece
+kachirho,KASHYYYK,town,DewfordTown,BLOCKOUT,prop,Bowcaster rack,1x1,art:kashyyyk:bowcaster-rack,yes,pending-final-art,greybox piece
 kachirho,KASHYYYK,town,DewfordTown,BLOCKOUT,person,Tarfful,1x1,,,PLACEHOLDER,
 kachirho,KASHYYYK,town,DewfordTown,BLOCKOUT,person,Han Solo,1x1,,,PLACEHOLDER,
 kachirho,KASHYYYK,town,DewfordTown,BLOCKOUT,person,Chewie (after the rescue),1x1,,,PLACEHOLDER,

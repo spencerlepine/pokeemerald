@@ -46,7 +46,7 @@ Overview: [kashyyyk/_planet.png](kashyyyk/_planet.png). 7 overworld areas, 19 ca
 
 | Area | Kind | Built from | Connects to | What it is |
 |---|---|---|---|---|
-| [KACHIRHO](kashyyyk/kachirho.yaml) | town | DewfordTown | route-106, route-107 | Wookiee lagoon city at the foot of the wroshyr trees. The Falcon lands by the beach; Tarfful's Fighting arena and the great hall sit up on the tree platforms, reached by ladders. |
+| [KACHIRHO](kashyyyk/kachirho.yaml) | town | DewfordTown | route-106, route-107 | Wookiee lagoon city at the foot of the wroshyr trees. The Falcon lands by the beach; Tarfful's Fighting arena and the great hall sit up on the tree platform, reached by ladders at the trunks and the stairs on the main road. |
 | [ROUTE 105](kashyyyk/route-105.yaml) | route | Route105 | route-106 | Open lagoon north of Kachirho between wroshyr islets. The Ice Grotto sits on a cold islet. Vanilla's north edge (Tatooine's Route 104) is cut. |
 | [ROUTE 106](kashyyyk/route-106.yaml) | route | Route106 | kachirho, route-105 | Shore path west of Kachirho to the Shadowlands, the dark lower levels of the wroshyr forest. |
 | [ROUTE 107](kashyyyk/route-107.yaml) | route | Route107 | kachirho, route-108, rwookrrorro | Lagoon crossing east of Kachirho, swimmers and fishers on the water. A trail north climbs a wroshyr trunk to Rwookrrorro. |

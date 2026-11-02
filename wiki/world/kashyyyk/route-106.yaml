@@ -7,7 +7,7 @@ status: BLOCKOUT
 art_status: pending-final-art
 story: Shore path west of Kachirho to the Shadowlands, the dark lower levels of the wroshyr forest.
 notes: 'route-106 (route, 80x20): shore path to the Shadowlands, roots as walls · need: root arches.'
-pos: [-44, -20]
+pos: [-52, -20]
 grid: |
   ~~~~~~~~##~~~~~~~~~~~~~~~~~~~##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   ~~~~~~~~##~~~~~~~~~~~~~~~~~~~##~~~##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -7,7 +7,7 @@ status: BLOCKOUT
 art_status: pending-final-art
 story: Lagoon crossing east of Kachirho, swimmers and fishers on the water. A trail north climbs a wroshyr trunk to Rwookrrorro.
 notes: 'route-107 (route, 60x20): lagoon crossing on the water, a trail up a trunk to Rwookrrorro · need: a climbable trunk (stairs cut into bark, a spiral).'
-pos: [46, 4]
+pos: [32, 3]
 grid: |
   .TTT#TTTT#~~~~~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~~~~##~~~~~~~##
   T#TT.T#T##~~~~~~~~~~~~~~~~~~~~..~~~~~~~~##~~~~~######~~~####

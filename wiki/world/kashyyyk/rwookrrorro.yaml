@@ -9,7 +9,7 @@ story: 'Optional: a Wookiee village built across the treetops east of Kachirho, 
   trades. Trainers: levels 25-27.'
 notes: 'rwookrrorro (landmark, 36x28): a whole village on one high platform level in the treetops, rope bridges and plank decks, hunters'' lodge, bowcaster maker
   · need: platforms over a void (you see the forest floor far below), rope bridges, decks ringed around trunks.'
-pos: [59, -24]
+pos: [45, -25]
 grid: |
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT

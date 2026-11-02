@@ -4,168 +4,151 @@ planet: KASHYYYK
 kind: town
 replaces: DewfordTown
 status: BLOCKOUT
-art_status: pending-final-art
-story: Wookiee lagoon city at the foot of the wroshyr trees. The Falcon lands by the beach; Tarfful's Fighting arena and the great hall sit up on the tree platforms,
-  reached by ladders.
-notes: 'kachirho (town, 46x38): lagoon city at the foot of the trees. The Falcon lands on the beach, Tarfful''s gym and the great hall sit up on tree platforms reached
-  by ladders, Wookiee huts on stilts, a hangar bay · unique: two levels, beach below and platforms above · need: the raised-walkway layer, giant trunks that run off
-  the top, ladders between levels, a beached freighter.'
+art_status: pending-mockup
 pos: [0, 0]
+story: Wookiee lagoon city at the foot of the wroshyr trees. The Falcon lands by the beach; Tarfful's Fighting arena and the great hall sit up on the tree platform,
+  reached by ladders at the trunks and the stairs on the main road.
+notes: 'kachirho (town, 32x28): lagoon city at the foot of the trees. One road from the north gate down to the beach, the east road to Route 107, the tree platform
+  across the top with the arena hall and the great hall, Wookiee huts on stilts either side, the Falcon hangar on the beach · unique: two levels, beach below and
+  platform above · need: the raised-walkway layer, giant trunks that run off the top, ladders between levels, a beached freighter.'
 grid: |
-  TTTTTTTTTTTTTTTTTTTTTT::TTTTTTTTTTTTTTTTTTTTTT
-  TTTTTTTTTTTTTTTTTTTTTT::TTTTTTTTTTTTTTTTTTTTTT
-  TTTTTTTTTTTTTTTTTTTTTT::TT......TTTTTTTTTTTTTT
-  TTTTTTTTTTTTTT.....TTT::T....=============TTTT
-  TTTT============......::.....=============TTTT
-  TTTT============......::.....=============TTTT
-  TTTT======================================TTTT
-  TTTT============......::.....=============.TTT
-  TTTT============......::.....=============.TTT
-  T...============......::...........H......TTTT
-  T........H............::...................TTT
-  T.....................::...................TTT
-  T.....................::...................TTT
-  T.....................::::::::::::::::::::::::
-  TTTT..................::::::::::::::::::::::::
-  TTTT..................::....................TT
-  TTTT..................::.....................T
-  TTTT..................::.....................T
-  TTTT..................::.....................T
-  TTTTT.:...............::...................TTT
-  TTTTT.::::::::::::::::::...................TTT
-  T...T.................::........:........TTTTT
-  T...T.................::........:....TTTTTTTTT
-  T...T.................::..................TTTT
-  TTTTT.................::..................TTTT
-  TTTTT.................::..................TTTT
-  TTTTTTT...............::..................TTTT
-  TTTTTTT..................................TTTTT
-  ~~~~~.....................................~~~~
-  ~~~~~...................................~~~~~~
-  ~~~~~~~~~~~~...................~~~~~~~~~~~~~~~
-  ~~~~~~~~~~~~~~~~........~~~~~~~~~~~~~~~~~~~~~~
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  TTTTTTTTTTTTTTT::TTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTT::TTTTTTTTTTTTTTT
+  TTH============::============HTT
+  TTH============::============HTT
+  TTH============::============HTT
+  TTH============::============HTT
+  TTH============::============HTT
+  T..............::..............T
+  T..............::..............T
+  T..............::..............T
+  T..............::..............T
+  T..............::..............T
+  T..............:::::::::::::::::
+  T..............:::::::::::::::::
+  T..............::..............T
+  T..............::..............T
+  T..............::..............T
+  T..............::..............T
+  T..............::..............T
+  T..............::..............T
+  T..............::..............T
+  T..............::..............T
+  T..............................T
+  T................:::::::.......T
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 exits:
 - edge: north
-  cells: [22, 23]
+  cells: [15, 16]
   to: route-106
 - edge: east
-  cells: [13, 14]
+  cells: [12, 13]
   to: route-107
 buildings:
 - name: Tarfful's arena hall
   art: art:kashyyyk:arena-hall
-  at: [31, 3]
+  at: [3, 2]
   size: [7, 5]
   door: 3
   to: kachirho-arena
 - name: Great hall (HoloNet trends)
   art: art:kashyyyk:wookiee-hut
-  at: [6, 4]
+  at: [22, 2]
   size: [5, 4]
   door: 2
   to: kachirho-hall
 - name: Bacta Center
   art: art:shared:bacta-center
-  at: [4, 15]
+  at: [8, 9]
   size: [5, 4]
   door: 2
   to: kachirho-bacta-center-1f
 - name: Supply Depot
   art: art:shared:supply-depot
-  at: [13, 15]
+  at: [18, 9]
   size: [4, 4]
   door: 1
   to: kachirho-supply-depot
 - name: Wookiee family hut
   art: art:kashyyyk:wookiee-hut
-  at: [30, 17]
+  at: [4, 15]
   size: [5, 4]
   door: 2
   to: kachirho-house-1
 - name: Elder's hut
   art: art:kashyyyk:wookiee-hut
-  at: [38, 17]
+  at: [23, 14]
   size: [5, 4]
   door: 2
   to: kachirho-house-2
 - name: Falcon hangar (from Tatooine)
   art: art:tatooine:docking-bay
-  at: [34, 23]
+  at: [20, 19]
   size: [8, 4]
   door: 3
   to: hangar-tatooine-kashyyyk
 props:
-- name: Catamaran dock
-  art: art:kashyyyk:catamaran-dock
-  at: [12, 28]
-  size: [4, 3]
 - name: Millennium Falcon (landed)
   art: art:shared:landing-pad
-  at: [26, 22]
+  at: [10, 20]
   size: [4, 4]
+- name: Catamaran dock
+  art: art:kashyyyk:catamaran-dock
+  at: [4, 24]
+  size: [4, 3]
 - name: Wroshyr tree
   art: art:kashyyyk:wroshyr-tree
-  at: [1, 11]
+  at: [28, 7]
   size: [3, 3]
 - name: Wroshyr tree
   art: art:kashyyyk:wroshyr-tree
-  at: [40, 10]
+  at: [1, 19]
   size: [3, 3]
 - name: Wroshyr tree
   art: art:kashyyyk:wroshyr-tree
-  at: [1, 21]
+  at: [28, 15]
   size: [3, 3]
-- name: Wroshyr tree
-  art: art:kashyyyk:wroshyr-tree
-  at: [17, 10]
-  size: [3, 3]
-- name: Wroshyr tree
-  art: art:kashyyyk:wroshyr-tree
-  at: [26, 9]
-  size: [3, 3]
-- name: Bowcaster rack
-  art: art:kashyyyk:bowcaster-rack
-  at: [29, 13]
-  size: [1, 1]
 - name: Root arch
   art: art:kashyyyk:root-arch
-  at: [5, 24]
+  at: [1, 11]
   size: [3, 2]
+- name: Bowcaster rack
+  art: art:kashyyyk:bowcaster-rack
+  at: [2, 7]
+  size: [1, 1]
 people:
 - name: Tarfful
-  at: [34, 9]
+  at: [11, 4]
   role: story
 - name: Han Solo
-  at: [27, 26]
+  at: [14, 22]
   role: story
 - name: Chewie (after the rescue)
-  at: [29, 26]
+  at: [17, 22]
   role: story
 - name: Wookiee guard
-  at: [21, 10]
+  at: [14, 8]
   role: npc
 - name: Wookiee fisher
-  at: [16, 27]
+  at: [8, 23]
   role: npc
 - name: Trader from Mos Eisley
-  at: [10, 21]
+  at: [20, 14]
   role: npc
 - name: Wookiee cub
-  at: [24, 17]
+  at: [12, 17]
   role: npc
 signs:
 - name: Town sign
-  at: [20, 3]
+  at: [17, 7]
 - name: Arena sign
-  at: [38, 8]
+  at: [10, 7]
 - name: Hangar sign (Millennium Falcon (Han))
-  at: [39, 27]
+  at: [26, 23]
 warps: []
-todo: [Vanilla Dewford has no Supply Depot; one is added (new interior kachirho-supply-depot)., The tree platforms are one level up; ladders at the west and east
-    trunks.]
+travel: []
+todo: [Vanilla Dewford has no Supply Depot; one is added (new interior kachirho-supply-depot)., 'Template for compact towns (owner, 2026-11-02): one main road, a
+    cross road to each exit, every door within a few steps of a road, props only at edges and corners, 32x28 for a 20x20 vanilla town. Was 46x38.']

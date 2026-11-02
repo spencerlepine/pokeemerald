@@ -61,6 +61,11 @@ progress. The wiki is the one list: no separate to-do docs.
   loops that do not close and overlaps.
 - Towns can be bigger and any shape (owner, 2026-11-02): GBA storage is no longer the limit, but walks
   must stay short. Optional side areas are welcome; they use the characters already in the wiki.
+- **Compact towns (template: [`kashyyyk/kachirho.yaml`](kashyyyk/kachirho.yaml), 2026-11-02).** A town that
+  replaces a 20x20 vanilla town is about 32x28: one main road between its exits, a short spur to every
+  hangar door, every door within a few steps of a road, buildings in two rows either side, props only at the
+  edges and corners (the border nature, a dock, one landmark), people on the road. Bigger vanilla towns scale
+  the same way (about 1.5x their vanilla size), never 3x.
 - `replaces` names the vanilla map an area is built into (its doors, trainers and scripts come from
   there). The size, shape and exits can change.
 - `~` is each planet's surf medium: water on most planets, the salt lake on Tatooine.

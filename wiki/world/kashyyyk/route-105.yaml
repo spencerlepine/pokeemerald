@@ -7,7 +7,7 @@ status: BLOCKOUT
 art_status: pending-final-art
 story: Open lagoon north of Kachirho between wroshyr islets. The Ice Grotto sits on a cold islet. Vanilla's north edge (Tatooine's Route 104) is cut.
 notes: 'route-105 (route, 40x80): open lagoon with wroshyr islets, the Ice Grotto islet · need: sea mode, islets with one trunk each.'
-pos: [-44, -100]
+pos: [-52, -100]
 grid: |
   ~~~~~~~##~~~~~~~~~~~~~~~~~##~~~#TTTTTTTT
   ~~~~~~~##~~~~~~~~~~~~~~~~~##~~~#TTTTTTTT
