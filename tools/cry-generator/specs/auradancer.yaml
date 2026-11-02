@@ -1,0 +1,33 @@
+name: auradancer
+slot: kirlia
+brief: 'AURADANCER: creature call that fits its look and size. Force sprite that dances when its trainer is happy.'
+kind: creature
+size: 0.39
+seed: 132
+layers:
+  # Dancing Force sprite: the family lilt, lower, sung twice like a pirouette, the second
+  # turn higher.
+  - type: voice
+    pitch: [[0.0, 476.0], [0.0744, 672.0], [0.1736, 616.0], [0.2604, 504.0]]
+    source: {pulse: 0.6, saw: 0.25, pulse_width: 0.45, noise: 0.03}
+    vowels: [[0.0, i], [0.093, ee], [0.2604, e]]
+    env: [[0.0, 0], [0.0186, 1], [0.186, 0.8], [0.2728, 0]]
+    vibrato: {rate: 7, depth: 0.03}
+    jitter: 0.005
+    gain: 1.0
+  - type: voice
+    at: 0.27
+    pitch: [[0.0, 544.0], [0.084, 768.0], [0.196, 704.0], [0.294, 576.0]]
+    source: {pulse: 0.6, saw: 0.25, pulse_width: 0.45, noise: 0.03}
+    vowels: [[0.0, i], [0.105, ee], [0.294, e]]
+    env: [[0.0, 0], [0.021, 1], [0.21, 0.8], [0.308, 0]]
+    vibrato: {rate: 7, depth: 0.03}
+    jitter: 0.005
+    gain: 1.0
+  - type: tone
+    at: 0.05
+    wave: sine
+    pitch: [[0, 1500], [0.45, 1700]]
+    warble: {rate: 6, depth: 0.02}
+    env: [[0, 0], [0.05, 0.3], [0.4, 0.25], [0.5, 0]]
+    gain: 0.3

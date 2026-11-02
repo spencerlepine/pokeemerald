@@ -1,0 +1,24 @@
+name: auralet
+slot: ralts
+brief: 'AURALET: creature call that fits its look and size. Small Force-sensitive swamp sprite that feels emotions. Luke''s first creature.'
+kind: creature
+size: 0.23
+seed: 131
+layers:
+  # Tiny Force sprite: a soft rising lilt with a shimmering Force tone underneath.
+  # Family voice (pure-ish i -> ee -> e lilt, slow vibrato) shared with AURADANCER and AURAWARDEN.
+  - type: voice
+    pitch: [[0.0, 612.0], [0.126, 864.0], [0.294, 792.0], [0.441, 648.0]]
+    source: {pulse: 0.6, saw: 0.25, pulse_width: 0.45, noise: 0.03}
+    vowels: [[0.0, i], [0.1575, ee], [0.441, e]]
+    env: [[0.0, 0], [0.0315, 1], [0.315, 0.8], [0.462, 0]]
+    vibrato: {rate: 7, depth: 0.03}
+    jitter: 0.005
+    gain: 1.0
+  - type: tone
+    at: 0.05
+    wave: sine
+    pitch: [[0, 1800], [0.35, 2000]]
+    warble: {rate: 6, depth: 0.02}
+    env: [[0, 0], [0.05, 0.3], [0.3, 0.25], [0.4, 0]]
+    gain: 0.3

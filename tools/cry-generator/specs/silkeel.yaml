@@ -1,0 +1,20 @@
+name: silkeel
+slot: gorebyss
+brief: 'SILKEEL: creature call that fits its look and size. Graceful pink deep-sea eel.'
+kind: creature
+size: 0.54
+seed: 123
+layers:
+  # Graceful pink eel: the family's bubbling gurgle stretched into a long, sweet gliding song
+  # (o -> i), with a soft clack to start.
+  - type: click
+    times: [0.0]
+    gain: 0.4
+  - type: voice
+    at: 0.02
+    pitch: [[0, 420], [0.15, 560], [0.5, 640], [0.85, 480], [1.02, 380]]
+    source: {pulse: 0.8, saw: 0.4, pulse_width: 0.3, noise: 0.08}
+    vowels: [[0, u], [0.3, o], [0.6, e], [1.0, i]]
+    env: [[0, 0], [0.03, 1], [0.8, 0.8], [1.03, 0]]
+    vibrato: {rate: 9, depth: 0.04}
+    jitter: 0.01

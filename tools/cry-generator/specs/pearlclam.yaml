@@ -1,0 +1,26 @@
+name: pearlclam
+slot: clamperl
+brief: 'PEARLCLAM: creature call that fits its look and size. Clam that grows a krayt-pearl.'
+kind: creature
+size: 0.35
+seed: 121
+layers:
+  # Pearl clam: a hard shell clack, then a bubbling "bloo-op" gurgle from inside the shell.
+  # Family voice (clack + u -> o bubbling gurgle) shared with DEEPEEL and SILKEEL.
+  - type: click
+    times: [0.0, 0.035]
+    gain: 0.7
+  - type: voice
+    at: 0.04
+    pitch: [[0.0, 480.0], [0.112, 576.0], [0.42, 504.0], [0.7, 360.0]]
+    source: {pulse: 0.8, saw: 0.4, pulse_width: 0.3, noise: 0.12}
+    vowels: [[0.0, u], [0.35, o], [0.7, u]]
+    env: [[0.0, 0], [0.021, 1], [0.49, 0.75], [0.7, 0]]
+    vibrato: {rate: 28, depth: 0.06}
+    growl: 0.1
+    growl_rate: 30
+    jitter: 0.02
+  - type: click
+    times: [0.78]
+    gain: 0.5
+master: {rms: 0.3}

@@ -1,0 +1,33 @@
+name: aurawarden
+slot: gardevoir
+brief: 'AURAWARDEN: creature call that fits its look and size. Force sprite that will shield its trainer at any cost.'
+kind: creature
+size: 0.56
+seed: 133
+layers:
+  # Force guardian: the family lilt grown into a long, noble call with a second voice a fifth
+  # above, like a sung shield.
+  - type: voice
+    pitch: [[0.0, 357.0], [0.3, 504.0], [0.7, 462.0], [1.05, 378.0]]
+    source: {pulse: 0.6, saw: 0.25, pulse_width: 0.45, noise: 0.03}
+    vowels: [[0.0, i], [0.375, ee], [1.05, e]]
+    env: [[0.0, 0], [0.075, 1], [0.75, 0.8], [1.1, 0]]
+    vibrato: {rate: 7, depth: 0.03}
+    jitter: 0.005
+    gain: 1.0
+  - type: voice
+    at: 0.15
+    pitch: [[0.0, 535.5], [0.258, 756.0], [0.602, 693.0], [0.903, 567.0]]
+    source: {pulse: 0.6, saw: 0.25, pulse_width: 0.45, noise: 0.03}
+    vowels: [[0.0, i], [0.3225, ee], [0.903, e]]
+    env: [[0.0, 0], [0.0645, 1], [0.645, 0.8], [0.946, 0]]
+    vibrato: {rate: 7, depth: 0.03}
+    jitter: 0.005
+    gain: 0.5
+  - type: tone
+    at: 0.1
+    wave: sine
+    pitch: [[0, 1260], [0.9, 1300]]
+    warble: {rate: 5, depth: 0.015}
+    env: [[0, 0], [0.1, 0.3], [0.8, 0.25], [0.95, 0]]
+    gain: 0.3

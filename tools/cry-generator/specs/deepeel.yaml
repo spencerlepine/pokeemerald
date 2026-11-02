@@ -1,0 +1,28 @@
+name: deepeel
+slot: huntail
+brief: 'DEEPEEL: creature call that fits its look and size. Deep-sea eel with a lure tail.'
+kind: creature
+size: 0.54
+seed: 122
+layers:
+  # Deep-sea lure eel: the family's clack and gurgle dropped low and menacing, with a hissing
+  # snap as the lure strikes.
+  - type: click
+    times: [0.0]
+    gain: 0.6
+  - type: voice
+    at: 0.02
+    pitch: [[0.0, 260.0], [0.112, 312.0], [0.42, 273.0], [0.7, 195.0]]
+    source: {pulse: 0.8, saw: 0.4, pulse_width: 0.35, noise: 0.12}
+    vowels: [[0.0, u], [0.35, aw], [0.7, rr]]
+    env: [[0.0, 0], [0.021, 1], [0.49, 0.75], [0.7, 0]]
+    vibrato: {rate: 22, depth: 0.05}
+    growl: 0.4
+    growl_rate: 30
+    jitter: 0.02
+  - type: noise
+    at: 0.5
+    band: [[0, 2200], [0.2, 1400]]
+    q: 1.6
+    env: [[0, 0], [0.02, 0.5], [0.2, 0]]
+    gain: 0.3
