@@ -1,0 +1,73 @@
+# Grand Arena grounds (Lando's battle resort): hot-swap of MUS_B_FRONTIER (wiki audio:MUS_B_FRONTIER). ARRANGE of
+# "Lando's Palace" (wiki ref_tracks soundtrack:empire-strikes-back:16). From the cue (analyze_reference, 0-90 s):
+# 63 bpm, played here in double time at 126 for the resort's swagger; E major floating on Esus4 with the borrowed
+# Am7, the Dm-G7 side-step (bars 1-11), and the Abm, G, Bb augmented colour of its second half (bars 12-20); the
+# cue's shimmering harp/celesta figure under a soaring line. The line is written in the cue's manner for trumpet,
+# then a flashy C-D-E (bVI-bVII-I) strain of our own to drive the loop home.
+# Brief (sw_subject): Grand Arena grounds, flashy, confident. Vanilla b_frontier voicegroup: trumpet, harp,
+# strings, horn, timpani, 25% square shimmer, wave bass, frlg kit with tambourine, noise hats. 24-bar loop, 45.7 s
+# (vanilla 43.5 s).
+name: grand-arena
+replaces: MUS_B_FRONTIER
+form: LOOP
+voicegroup: b_frontier              # vanilla: frlg kit 1, tubular bell 14, harp 46, timpani 47, strings 48, trumpet 56, horn 60, squares 80/87, waves 83/84/92, noise 127
+master_volume: 94
+tempo: 126
+steps_per_beat: 2
+time_signature: [4, 4]
+seed: 181
+
+parts:
+  trumpet: {program: 56, channel: 0, volume: 104, pan: 6,  gate: 0.9, humanize: {vel: 4}}
+  harp:    {program: 46, channel: 1, volume: 70, pan: -24, octave: 4, gate: 0.85, humanize: {vel: 8}}
+  strings: {program: 48, channel: 2, volume: 60, pan: 22,  octave: 4, gate: 1.0}
+  horn:    {program: 60, channel: 3, volume: 80, pan: -12, octave: 3, gate: 0.95}
+  shimmer: {program: 87, channel: 4, volume: 32, pan: 34,  octave: 5, gate: 0.4, mono: true}
+  bass:    {program: 83, channel: 5, volume: 100, pan: 0,  octave: 2, gate: 0.75, role: bass, mono: true}
+  timpani: {program: 47, channel: 6, volume: 86, pan: 10,  gate: 1.0}
+  drums:   {program: 1,  channel: 7, volume: 72, pan: 4,   role: drums, kit: {kick: 36, sn: 38, tamb: 54, crash: 49}}
+  hat:     {program: 127, channel: 8, volume: 20, pan: -18, role: drums, kit: {h: 80}}
+
+progressions:
+  a: "Esus4 | E | Esus4 | Am | Esus4 | E | Dm | G"
+  b: "Esus4 | E | G#m | G | Bbaug | E | G#m | A"
+  c: "C | D | E | E | C | D | Bsus4 | B"
+
+phrases:
+  tune_a: "E5:3 F#5:1 A5:4 | G#5:6 E5:2 | B4:2 E5:2 A5:2 B5:2 | C6:6 B5:1 A5:1 | B5:4 A5:2 E5:2 | G#5:4 B5:4 | A5:3 F5:1 D5:4 | B5:4 G5:2 D5:2"
+  tune_b: "E5:2 A5:2 B5:4 | G#5:4 E5:4 | D#5:2 G#5:2 B5:4 | D5:2 G5:2 B5:4 | Bb5:4 F#5:2 D5:2 | E5:2 G#5:2 B5:4 | D#5:2 F#5:2 G#5:4 | A5:4 E5:2 C#5:2"
+  tune_c: "C5:1 C5:1 E5:2 G5:4 | D5:1 D5:1 F#5:2 A5:4 | E5:1 E5:1 G#5:2 B5:4 | B5:6 G#5:2 | C6:4 G5:2 E5:2 | A5:4 F#5:2 D5:2 | E5:4 F#5:4 | D#5:6 B4:2"
+  harp: "^1:1 ^2:1 ^3:1 ^1+:1 ^2+:1 ^1+:1 ^3:1 ^2:1"
+  pad: "^2:8"
+  horn: "^1:4 ^3:4"
+  shimmer: "^3+:1 r:1 ^1+:1 r:1 ^2+:1 r:1 ^1+:1 r:1"
+  bass: "^1:2 r:1 ^1:1 ^3:2 ^1+:2"
+  timp_c: "C3:2 r:6 | D3:2 r:6 | E2:2 r:6 | E2:1 E2:1 E2:2 r:4 | C3:2 r:6 | D3:2 r:6 | B2:2 r:6 | r:8"
+
+grooves:
+  swagger:
+    kick: "x...x.x."
+    sn:   "..x...x."
+    tamb: ".x.x.x.x"
+  swagger_c:
+    kick:  "x...x.x."
+    sn:    "..x...x.|..x...x.|..x...x.|..x.x.x."
+  hats:
+    h: "..x...x."
+
+sections:
+  a:
+    bars: 8
+    chords: a
+    parts: {trumpet: tune_a, harp: harp, horn: horn, shimmer: shimmer, bass: bass, drums: swagger, hat: hats}
+  b:
+    bars: 8
+    chords: b
+    parts: {trumpet: tune_b, harp: harp, strings: pad, bass: bass, drums: swagger, hat: hats}
+  c:
+    bars: 8
+    chords: c
+    parts: {trumpet: tune_c, harp: harp, horn: horn, shimmer: shimmer, bass: bass, timpani: timp_c, drums: swagger_c, hat: hats}
+
+arrangement: [a, b, c]
+loop_start: a
