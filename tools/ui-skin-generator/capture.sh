@@ -52,4 +52,10 @@ s61() { bag 4 9; k A; w 0.7; k A; w 3; shot 61_pokeblock_case; k A; w 0.7; shot 
         k A; w 3; shot 63_pokeblock_party; k A; w 1; k A; w 4; shot 64_pokeblock_feed; w 3; shot 65_pokeblock_feed2;
         w 4; shot 66_pokeblock_condition_after; k B B B; w 2; k B B B; w 2; k B B; w 1; }
 
+# ---------- family 4: Pokédex ----------
+s20() { town; menu0; k START; w 0.4; k A; w 3; shot 20_dex_list; k A; w 2.5; shot 21_dex_entry;
+        k A; w 3; shot 22_dex_area; k B; w 2.5; k RIGHT A; w 3; shot 23_dex_cry; k B; w 2.5;
+        k RIGHT A; w 3; shot 24_dex_size; k B; w 2.5; k B; w 2.5; k START; w 1; shot 25_dex_start_menu; k B; w 1; k SELECT; w 2.5; shot 26_dex_search;
+        k DOWN A; w 1; shot 27_dex_search_options; k B; w 0.7; k B; w 2; k B; w 2.5; k B; w 1; }
+
 for s in "$@"; do "$s" 2>/dev/null || "s$s"; done

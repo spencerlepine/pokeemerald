@@ -3718,9 +3718,9 @@ static void LoadPlayArrowPalette(bool8 cryPlaying)
     u16 color;
 
     if (cryPlaying)
-        color = RGB(18, 28, 0);
+        color = RGB(21, 12, 7);
     else
-        color = RGB(15, 21, 0);
+        color = RGB(19, 14, 2);
     LoadPalette(&color, BG_PLTT_ID(5) + 13, PLTT_SIZEOF(1));
 }
 

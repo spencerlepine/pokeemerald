@@ -58,8 +58,20 @@ FAMILIES = {
     ('graphics/pokeblock/use_screen/graph.png', 'ui', [3, 4]),
     ('graphics/pokeblock/use_screen/condition.png', 'ui', [8, 9, 10, 11]),
   ],
+  '4_pokedex': [
+    # 6 BG palettes, bank 0 doubles as the dex sprite palette. Text uses slots 2, 3 and 15 (greys, kept by tx).
+    ('graphics/pokedex/bg_hoenn.pal', 'ui', banks(0, 1, 2, 3, 4, 5)),
+    ('graphics/pokedex/bg_national.pal', 'ui', banks(0, 1, 2, 3, 4, 5)),
+    ('graphics/pokedex/search_results_bg.pal', 'ui', banks(0, 1, 2, 3, 4, 5)),
+    ('graphics/pokedex/search_menu.pal', 'ui', banks(0, 1, 2, 3)),
+    ('graphics/pokedex/cry_screen_bg.png', 'ui', ALL),
+    ('graphics/pokedex/cry_meter.png', 'ui', ALL),
+    ('graphics/pokedex/cry_meter_needle.png', 'ui', ALL),
+    ('graphics/pokedex/area_unknown.png', 'ui', ALL),
+    ('src/pokedex.c', 'ui', ['color = RGB(18, 28, 0);', 'color = RGB(15, 21, 0);']),   # cry play arrow
+  ],
 }
-DONE = ['1_text_windows', '2_party_summary', '3_bag_pokeblock']
+DONE = ['1_text_windows', '2_party_summary', '3_bag_pokeblock', '4_pokedex']
 
 RGB_RE = re.compile(r'RGB\((\d+), *(\d+), *(\d+)\)')
 def tx_rgb5(m, fam):
