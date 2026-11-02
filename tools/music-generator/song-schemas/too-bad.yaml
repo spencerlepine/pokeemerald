@@ -1,0 +1,40 @@
+# Too bad (MUS_TOO_BAD, hot-swap): a one-shot sting. SCRATCH (wiki audio:MUS_TOO_BAD, no film cue). Brief: "Lost a
+# round: deflating trombone." A bright trumpet start (C - E - G) that the low brass lets down: the horn, played as
+# a trombone, sags F# - F - E - Eb over a tuba sinking chromatically to low C (C minor), while a square slides down
+# twelve semitones like air going out, with one dull kick on the landing. 180 bpm (vanilla's), one bar of 7/4:
+# 2.3 s like vanilla, on the vanilla fanfare voicegroup.
+name: too-bad
+replaces: MUS_TOO_BAD
+form: JINGLE
+loop: false
+player: SE2
+song_priority: 5
+voicegroup: fanfare           # trumpet 56, horn 60, tuba 58, square1 81, kit 0
+master_volume: 90
+tempo: 180
+steps_per_beat: 4
+time_signature: [7, 4]
+seed: 19
+
+parts:
+  trumpet: {program: 56, channel: 0, volume: 100, pan: 6,   range: [C5, G5], gate: 0.85}
+  horn:    {program: 60, channel: 1, volume: 104, pan: -8,  range: [Eb4, F#4], gate: 0.92, lfo_speed: 22, mod: 8, lfo_delay: 30}
+  tuba:    {program: 58, channel: 2, volume: 96,  pan: -2,  range: [C2, D3], gate: 0.9}
+  slide:   {program: 81, channel: 3, volume: 46,  pan: 26,  range: [Ab4, G5], gate: 0.9, mono: true}
+  kit:     {program: 0,  channel: 4, volume: 66,  pan: 10,  role: drums, kit: {kick: 36}}
+
+grooves:
+  thud:
+    kick: "................x..........."
+
+sections:
+  sting:
+    bars: 1
+    parts:
+      trumpet: "C5':1 E5':1 G5:2 r:24"
+      horn:    "r:4 F#4:4 F4:4 E4:4 Eb4:12"
+      tuba:    "r:4 D3:4 Db3:4 C3:4 C2:12"
+      slide:   "r:16 G5:1 F#5:1 F5:1 E5:1 Eb5:1 D5:1 Db5:1 C5:1 B4:1 Bb4:1 A4:1 Ab4:1"
+      kit:     thud
+
+arrangement: [sting]
