@@ -1,0 +1,55 @@
+# Showcase Results (Contest Hall judging): hot-swap of MUS_CONTEST_RESULTS (wiki audio:MUS_CONTEST_RESULTS,
+# FACILITY / LOOP). SCRATCH: no film cue, written from the brief in the Star Wars idiom: C minor held on a knife
+# edge (Cm leaning onto Db, the flat-six Ab and a G7 that sends it round again), an unbroken noise snare roll that
+# swells every two bars, a pulsing synth bass, a ticking xylophone figure and square arpeggios that keep climbing.
+# 128 bpm like the vanilla song; 8 bars, 15 s, frame-exact.
+# Brief (sw_subject): Showcase judging, suspense drum roll.
+name: showcase-results
+replaces: MUS_CONTEST_RESULTS
+form: LOOP
+voicegroup: contest_results       # vanilla: xylophone 13, synth bass 38, harp 46, rs_drumset 0, squares 80/81, wave 82, noise 126/127
+master_volume: 80
+tempo: 128
+steps_per_beat: 4
+time_signature: [4, 4]
+seed: 19
+
+parts:
+  xylo:    {program: 13, channel: 0, volume: 88,  pan: 12,  gate: 0.6}
+  bass:    {program: 38, channel: 1, volume: 96,  pan: 0,   octave: 2, gate: 0.55, role: bass}
+  harp:    {program: 46, channel: 2, volume: 62,  pan: -20, octave: 4, gate: 1.0}
+  kit:     {program: 0,  channel: 3, volume: 76,  pan: 6,   role: drums, kit: {kick: 36}}
+  roll:    {program: 127, channel: 4, volume: 50, pan: -6,  role: drums, kit: {sn: C5}}
+  arp:     {program: 80, channel: 5, volume: 40,  pan: -30, octave: 4, gate: 0.6, mono: true}
+  hold:    {program: 81, channel: 6, volume: 30,  pan: 30,  gate: 1.0, mono: true}
+  drone:   {program: 82, channel: 7, volume: 50,  pan: 0,   octave: 3, gate: 1.0, mono: true}
+
+progressions:
+  wait: "Cm | Cm | Db | Db | Cm | Cm | Ab | G7"
+
+phrases:
+  pulse: "^1:2 ^1:2 ^1:2 ^1:2 ^1:2 ^1:2 ^1:2 ^1:2"
+  climb: "^1:1 ^2:1 ^3:1 ^1+:1 ^2+:1 ^3+:1 ^2+:1 ^1+:1 ^1:1 ^2:1 ^3:1 ^1+:1 ^2+:1 ^3+:1 ^1++:1 ^3+:1"
+  root:  "^1:16"
+  tick: |
+    G5:2 r:2 Ab5:2 r:2 G5:2 r:2 D5:2 r:2 | G5:2 r:2 Ab5:2 r:2 G5:2 r:2 Eb5:4 |
+    Ab5:2 r:2 A5:2 r:2 Ab5:2 r:2 F5:2 r:2 | Ab5:2 r:2 A5:2 r:2 Ab5:2 r:2 F5:4 |
+    G5:2 r:2 Ab5:2 r:2 G5:2 r:2 D5:2 r:2 | G5:2 r:2 Ab5:2 r:2 C6:2 r:2 Eb5:4 |
+    C5:2 Eb5:2 Ab5:2 C6:2 Bb5:2 Ab5:2 G5:2 Eb5:2 | D5:2 F5:2 G5:2 B5:2 D6:2 r:2 B4:4
+  tense: "G4:16 | G4:16 | Ab4:16 | Ab4:16 | G4:16 | G4:16 | C5:16 | B4:16"
+  shimmer: "^3:16 | r:16"
+
+grooves:
+  roll:
+    sn: "oooooooooooooooo|ooooooooxxxxxxXX"
+  beat:
+    kick: "x.......x.......|x.......x.......|x.......x.......|x.......x.......|x.......x.......|x.......x.......|x.......x.......|x.......x...x..."
+
+sections:
+  a:
+    bars: 8
+    chords: wait
+    parts: {xylo: tick, bass: pulse, harp: shimmer, kit: beat, roll: roll, arp: climb, hold: tense, drone: root}
+
+arrangement: [a]
+loop_start: a
