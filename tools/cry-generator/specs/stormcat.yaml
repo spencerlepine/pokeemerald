@@ -1,0 +1,34 @@
+name: stormcat
+slot: raikou
+brief: "STORMCAT: creature call that fits its look and size. Legendary thunder beast."
+kind: creature
+size: 0.85
+seed: 651
+layers:
+  # A legendary thunder beast: a thunderclap crack, then a huge stepped feline roar "GRRAAOW" over a crackling electric buzz.
+  - type: click
+    times: [0.0, 0.01, 0.025]
+    gain: 0.9
+  - type: noise
+    band: [[0, 1800], [0.25, 500]]
+    q: 0.8
+    env: [[0, 0], [0.005, 1], [0.08, 0.4], [0.3, 0]]
+    gain: 0.55
+  - type: voice
+    at: 0.06
+    pitch: [[0, 200], [0.12, 300], [0.45, 270], [0.72, 170]]
+    pitch_step: 0.04
+    source: {saw: 0.9, pulse: 0.6, pulse_width: 0.25, noise: 0.12}
+    vowels: [[0, rr], [0.12, a], [0.45, aw], [0.72, o]]
+    env: [[0, 0], [0.02, 1], [0.5, 0.85], [0.75, 0]]
+    growl: 0.6
+    growl_rate: 32
+    jitter: 0.025
+    drive: 2.6
+  - type: tone
+    at: 0.15
+    wave: square
+    pitch: [[0, 1300], [0.55, 900]]
+    warble: {rate: 50, depth: 0.25, shape: square}
+    env: [[0, 0], [0.02, 0.35], [0.4, 0.25], [0.6, 0]]
+    gain: 0.3

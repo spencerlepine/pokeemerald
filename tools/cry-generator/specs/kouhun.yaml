@@ -1,0 +1,29 @@
+name: kouhun
+slot: seviper
+brief: "KOUHUN: creature call that fits its look and size. Venomous assassin centipede."
+kind: creature
+size: 0.35
+seed: 661
+layers:
+  # An assassin centipede: a rapid skitter of many legs, a sharp venomous hiss and a thin, chittering "tchk-tchk-tsss".
+  - type: click
+    times: [0.0, 0.02, 0.04, 0.06, 0.08, 0.1, 0.12, 0.14, 0.16, 0.18]
+    gain: 0.55
+  - type: voice
+    at: 0.12
+    pitch: [[0, 560], [0.05, 680], [0.25, 520]]
+    pitch_step: 0.025
+    source: {saw: 0.8, pulse: 0.4, pulse_width: 0.2, noise: 0.3}
+    vowels: [[0, e], [0.1, er], [0.25, e]]
+    env: [[0, 0], [0.005, 1], [0.03, 0.3], [0.04, 1], [0.07, 0.3], [0.08, 1], [0.2, 0.6], [0.26, 0]]
+    growl: 0.5
+    growl_rate: 75
+    jitter: 0.03
+    drive: 2
+    emphasis: 0.6
+  - type: noise
+    at: 0.34
+    band: [[0, 3400], [0.18, 2800]]
+    q: 1.8
+    env: [[0, 0], [0.01, 0.8], [0.18, 0]]
+    gain: 0.5

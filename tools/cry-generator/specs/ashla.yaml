@@ -1,0 +1,22 @@
+name: ashla
+slot: latias
+brief: "ASHLA: creature call that fits its look and size. Light-side Force dragon, named for Tython's bright moon."
+kind: creature
+size: 0.45
+seed: 621
+layers:
+  # A gentle light-side dragon: a clear, singing "hyaa-iii" glide on a soft pulse+tri voice, with a bell-like chime above it.
+  - type: voice
+    pitch: [[0, 520], [0.1, 700], [0.3, 780], [0.48, 620]]
+    source: {pulse: 0.6, tri: 0.5, saw: 0.3, pulse_width: 0.35, noise: 0.04}
+    vowels: [[0, a], [0.15, e], [0.35, i], [0.48, e]]
+    env: [[0, 0], [0.015, 1], [0.38, 0.8], [0.5, 0]]
+    vibrato: {rate: 7, depth: 0.025}
+    emphasis: 0.8
+  - type: tone
+    at: 0.06
+    wave: sine
+    pitch: [[0, 1560], [0.3, 2100], [0.45, 1860]]
+    warble: {rate: 7, depth: 0.02}
+    env: [[0, 0], [0.01, 0.5], [0.35, 0.3], [0.47, 0]]
+    gain: 0.4

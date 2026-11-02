@@ -1,0 +1,23 @@
+name: duneworm
+slot: dunsparce
+brief: "DUNEWORM: creature call that fits its look and size. Small burrowing worm."
+kind: creature
+size: 0.3
+seed: 601
+layers:
+  # A burrowing worm: sand-shifting hiss, then a slithery, wobbling "brrooo-ip" trill from a small closed mouth.
+  - type: noise
+    band: [[0, 1500], [0.25, 2200]]
+    q: 1.2
+    env: [[0, 0], [0.03, 0.6], [0.2, 0.5], [0.28, 0]]
+    gain: 0.5
+  - type: voice
+    at: 0.12
+    pitch: [[0, 420], [0.2, 480], [0.48, 600], [0.6, 520]]
+    source: {pulse: 0.8, saw: 0.4, pulse_width: 0.3, noise: 0.06}
+    vowels: [[0, m], [0.15, u], [0.45, o], [0.6, i]]
+    env: [[0, 0], [0.02, 1], [0.5, 0.8], [0.62, 0]]
+    vibrato: {rate: 15, depth: 0.06}
+    growl: 0.35
+    growl_rate: 32
+    emphasis: 0.7

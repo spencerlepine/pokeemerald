@@ -1,0 +1,26 @@
+name: buzzdroid
+slot: mawile
+brief: "BUZZDROID: electronic droid voice: beeps, whistles and servo whirs. Separatist buzz droid hiding its cutting jaws."
+kind: droid
+size: 0.2
+seed: 631
+layers:
+  # A Separatist buzz droid: skittering leg clicks, a nasty buzzing saw-cutter whine, and a sly descending two-tone chirp.
+  - type: click
+    times: [0.0, 0.03, 0.06, 0.09, 0.12]
+    gain: 0.5
+  - type: servo
+    at: 0.08
+    pitch: [[0, 400], [0.1, 900], [0.25, 820], [0.3, 500]]
+    harmonics: [1.0, 0.7, 0.6, 0.4, 0.3]
+    env: [[0, 0], [0.02, 0.7], [0.26, 0.6], [0.3, 0]]
+    grit: 0.7
+    drive: 2.5
+    gain: 0.7
+  - type: tone
+    at: 0.36
+    wave: square
+    pitch: [[0, 1300], [0.07, 1300], [0.071, 950], [0.16, 900]]
+    warble: {rate: 40, depth: 0.05, shape: square}
+    env: [[0, 0], [0.004, 0.9], [0.065, 0.8], [0.07, 0.15], [0.075, 0.9], [0.15, 0.6], [0.17, 0]]
+    gain: 0.6

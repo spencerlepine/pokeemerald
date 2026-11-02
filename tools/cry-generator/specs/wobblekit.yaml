@@ -1,0 +1,16 @@
+name: wobblekit
+slot: spinda
+brief: "WOBBLEKIT: creature call that fits its look and size. Dizzy spotted cub that never walks straight."
+kind: creature
+size: 0.3
+seed: 671
+layers:
+  # A dizzy cub: a woozy, lurching "waa-uu-wee" whose pitch and vowel wobble off-balance with slow, deep vibrato.
+  - type: voice
+    pitch: [[0, 460], [0.12, 600], [0.25, 420], [0.38, 640], [0.5, 480]]
+    source: {pulse: 0.7, saw: 0.5, pulse_width: 0.3, noise: 0.05}
+    vowels: [[0, a], [0.12, u], [0.25, aw], [0.38, i], [0.5, o]]
+    env: [[0, 0], [0.012, 1], [0.12, 0.7], [0.2, 0.9], [0.38, 0.75], [0.52, 0]]
+    vibrato: {rate: 4.5, depth: 0.08}
+    jitter: 0.02
+    emphasis: 0.7

@@ -1,0 +1,29 @@
+name: emberhawk
+slot: moltres
+brief: "EMBERHAWK: creature call that fits its look and size. Legendary fire bird."
+kind: creature
+size: 0.75
+seed: 641
+layers:
+  # A Mustafar fire bird: a crackling flame roar under a fierce, stepped raptor scream "KREEE-aahh" that dies into a fiery hiss.
+  - type: noise
+    band: [[0, 1200], [0.5, 2000], [1.05, 900]]
+    q: 0.9
+    env: [[0, 0], [0.05, 0.5], [0.8, 0.4], [1.08, 0]]
+    gain: 0.4
+  - type: voice
+    at: 0.02
+    pitch: [[0, 480], [0.1, 720], [0.45, 660], [0.8, 500], [1.0, 380]]
+    pitch_step: 0.04
+    source: {saw: 0.9, pulse: 0.5, pulse_width: 0.25, noise: 0.12}
+    vowels: [[0, i], [0.15, ae], [0.5, a], [1.0, aw]]
+    env: [[0, 0], [0.015, 1], [0.6, 0.8], [1.02, 0]]
+    vibrato: {rate: 10, depth: 0.025}
+    growl: 0.4
+    growl_rate: 40
+    jitter: 0.02
+    drive: 2.4
+    emphasis: 0.7
+  - type: click
+    times: [0.1, 0.24, 0.31, 0.5, 0.66, 0.79, 0.93]
+    gain: 0.35

@@ -1,0 +1,34 @@
+name: dawnwing
+slot: ho_oh
+brief: "DAWNWING: creature call that fits its look and size. Guardian of Mortis's skies whose feathers shine with light (fire/flying)."
+kind: creature
+size: 0.95
+seed: 611
+layers:
+  # A radiant legendary bird: a vast stepped "KYAAA-ohh" call over a deep chest resonance, crowned with a bright shimmering overtone.
+  - type: voice
+    pitch: [[0, 300], [0.12, 440], [0.5, 400], [0.85, 330], [1.0, 260]]
+    pitch_step: 0.05
+    source: {saw: 0.8, pulse: 0.6, pulse_width: 0.25, noise: 0.06}
+    vowels: [[0, ae], [0.15, a], [0.6, aw], [1.0, o]]
+    env: [[0, 0], [0.03, 1], [0.7, 0.85], [1.02, 0]]
+    vibrato: {rate: 7, depth: 0.02}
+    growl: 0.3
+    growl_rate: 28
+    jitter: 0.012
+    drive: 2
+  - type: voice
+    at: 0.05
+    pitch: [[0, 900], [0.15, 1320], [0.6, 1200], [0.9, 980]]
+    pitch_step: 0.05
+    source: {pulse: 0.7, saw: 0.3, pulse_width: 0.3}
+    vowels: [[0, i], [0.3, e], [0.9, ae]]
+    env: [[0, 0], [0.06, 0.6], [0.7, 0.45], [0.92, 0]]
+    gain: 0.45
+  - type: tone
+    at: 0.2
+    wave: sine
+    pitch: [[0, 2600], [0.6, 2300]]
+    warble: {rate: 11, depth: 0.03}
+    env: [[0, 0], [0.05, 0.3], [0.5, 0.2], [0.62, 0]]
+    gain: 0.3
