@@ -1,0 +1,25 @@
+name: zenape
+slot: medicham
+brief: "ZENAPE: creature call that fits its look and size. Lemur whose meditation gives it Force-sharpened strikes."
+kind: creature
+size: 0.5
+seed: 108
+layers:
+  # Family voice (Ilum zen lemurs): the trilled "chrrip" and calm humming "mmm", deeper, then a sharp
+  # kiai-like "HYAP!" as the Force-sharpened strike lands.
+  - type: voice
+    pitch: [[0, 440], [0.07, 580], [0.14, 480], [0.38, 420]]
+    source: {pulse: 0.7, pulse_width: 0.3, saw: 0.45, noise: 0.05}
+    vowels: [[0, er], [0.07, i], [0.18, m], [0.38, m]]
+    env: [[0, 0], [0.008, 1], [0.14, 0.7], [0.36, 0.5], [0.4, 0]]
+    growl: 0.3
+    growl_rate: 28
+    vibrato: {rate: 5, depth: 0.02}
+  - type: voice
+    at: 0.42
+    pitch: [[0, 520], [0.04, 720], [0.18, 480]]
+    source: {pulse: 0.7, pulse_width: 0.3, saw: 0.6, noise: 0.1}
+    vowels: [[0, i], [0.05, a], [0.18, aw]]
+    env: [[0, 0], [0.005, 1], [0.12, 0.7], [0.2, 0]]
+    growl: 0.2
+    drive: 2

@@ -1,0 +1,29 @@
+name: mogucub
+slot: makuhita
+brief: "MOGUCUB: creature call that fits its look and size. Mogu cub that slams into wroshyr trees to toughen up."
+kind: creature
+size: 0.45
+seed: 103
+layers:
+  # Family voice (Kashyyyk mogu): a chesty, effortful "hup-HUH!" grunt from a big barrel throat with a
+  # thump. The cub's is short and eager.
+  - type: click
+    times: [0.0]
+    gain: 0.6
+  - type: voice
+    at: 0.01
+    pitch: [[0, 300], [0.06, 360]]
+    source: {saw: 0.9, pulse: 0.4, pulse_width: 0.35, noise: 0.12}
+    vowels: [[0, er], [0.06, u]]
+    env: [[0, 0], [0.006, 1], [0.05, 0.5], [0.07, 0]]
+    growl: 0.3
+    drive: 2
+  - type: voice
+    at: 0.1
+    pitch: [[0, 340], [0.05, 420], [0.18, 300]]
+    source: {saw: 0.9, pulse: 0.4, pulse_width: 0.35, noise: 0.12}
+    vowels: [[0, a], [0.08, aw], [0.18, u]]
+    env: [[0, 0], [0.006, 1], [0.13, 0.75], [0.19, 0]]
+    growl: 0.35
+    growl_rate: 38
+    drive: 2

@@ -1,0 +1,33 @@
+name: mogu
+slot: hariyama
+brief: "MOGU: creature call that fits its look and size. Massive mogu whose palm strikes fell trees."
+kind: creature
+size: 0.95
+seed: 104
+layers:
+  # Family voice (Kashyyyk mogu): the chesty "hup-HUH!" grunt from a colossal barrel chest: two
+  # thumping palm strikes, then a booming, rumbling "HUAAH" that settles into a growl.
+  - type: click
+    times: [0.0, 0.14]
+    gain: 0.8
+  - type: voice
+    at: 0.01
+    pitch: [[0, 170], [0.07, 210]]
+    source: {saw: 0.9, pulse: 0.5, pulse_width: 0.35, noise: 0.12}
+    vowels: [[0, er], [0.07, a]]
+    env: [[0, 0], [0.006, 1], [0.06, 0.5], [0.09, 0]]
+    growl: 0.4
+    drive: 2.4
+  - type: voice
+    at: 0.15
+    pitch: [[0, 190], [0.08, 250], [0.35, 220], [0.55, 150]]
+    pitch_step: 0.04
+    source: {saw: 0.9, pulse: 0.5, pulse_width: 0.35, noise: 0.12}
+    vowels: [[0, ae], [0.15, a], [0.4, aw], [0.55, rr]]
+    env: [[0, 0], [0.008, 1], [0.4, 0.8], [0.58, 0]]
+    growl: 0.5
+    growl_rate: 28
+    jitter: 0.02
+    drive: 2.5
+master:
+  tilt_db: 5

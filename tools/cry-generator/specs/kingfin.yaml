@@ -1,0 +1,29 @@
+name: kingfin
+slot: seaking
+brief: "KINGFIN: creature call that fits its look and size. Proud horned fish king."
+kind: creature
+size: 0.45
+seed: 102
+layers:
+  # Family voice (Naboo hornfish): the gulping "blub" and gargled "gwee-oo" with bubbly flutter, now
+  # a regal, lower fanfare: two gulps and a long, proud call.
+  - type: voice
+    pitch: [[0, 320], [0.06, 430]]
+    source: {pulse: 0.7, pulse_width: 0.35, saw: 0.45, noise: 0.05}
+    vowels: [[0, u], [0.06, o]]
+    env: [[0, 0], [0.008, 1], [0.05, 0.6], [0.07, 0]]
+  - type: voice
+    at: 0.1
+    pitch: [[0, 340], [0.06, 450]]
+    source: {pulse: 0.7, pulse_width: 0.35, saw: 0.45, noise: 0.05}
+    vowels: [[0, u], [0.06, o]]
+    env: [[0, 0], [0.008, 1], [0.05, 0.6], [0.07, 0]]
+  - type: voice
+    at: 0.2
+    pitch: [[0, 420], [0.08, 620], [0.4, 560], [0.6, 380]]
+    source: {pulse: 0.7, pulse_width: 0.35, saw: 0.45, noise: 0.05}
+    vowels: [[0, ee], [0.15, i], [0.4, o], [0.6, u]]
+    env: [[0, 0], [0.012, 1], [0.45, 0.8], [0.62, 0]]
+    growl: 0.35
+    growl_rate: 20
+    drive: 1.5

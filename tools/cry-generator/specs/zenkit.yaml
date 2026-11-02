@@ -1,0 +1,17 @@
+name: zenkit
+slot: meditite
+brief: "ZENKIT: creature call that fits its look and size. Ice-cave lemur that meditates to stay calm."
+kind: creature
+size: 0.25
+seed: 107
+layers:
+  # Family voice (Ilum zen lemurs): a soft trilled "chrrip" that settles into a calm, humming "mmm",
+  # a lemur meditating. The kit is light and quick.
+  - type: voice
+    pitch: [[0, 600], [0.06, 780], [0.12, 640], [0.3, 560]]
+    source: {pulse: 0.7, pulse_width: 0.3, saw: 0.3, noise: 0.05}
+    vowels: [[0, er], [0.06, i], [0.16, m], [0.3, m]]
+    env: [[0, 0], [0.008, 1], [0.12, 0.7], [0.28, 0.5], [0.32, 0]]
+    growl: 0.3
+    growl_rate: 30
+    vibrato: {rate: 5, depth: 0.02}
