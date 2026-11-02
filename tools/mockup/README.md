@@ -13,7 +13,7 @@ python3 -m mockup render --all            # every area -> wiki/mockup/<planet>/<
 python3 -m mockup render mos-eisley       # one or more areas by id
 python3 -m mockup render --planet HOTH    # one planet
 python3 -m mockup world                   # wiki/mockup/<planet>/_planet.png and wiki/mockup/_world.png
-python3 -m mockup builds                  # wiki/mockup/_buildings.png: every building type at three sizes
+python3 -m mockup builds [--grey]         # wiki/mockup/_buildings[-grey].png: every building type, three sizes
 python3 -m mockup missing                 # art ids that have no shape in styles.yaml yet
 ```
 
@@ -23,11 +23,17 @@ python3 -m mockup missing                 # art ids that have no shape in styles
   A piece whose art id is missing is drawn as a plain box with a magenta outline.
 - `wiki/mockup/overrides/<area>.yaml`: mockup-only changes for one area (`hide`, `move`, `add`, `restyle`),
   so dressing can be moved around without editing phase 1. Format at the bottom of `mockup/style.py`.
-- `mockup/build.py`: buildings. The camera looks down at about 45 degrees, so footprints are squashed in
-  depth (round buildings are ovals), walls rise up the screen and only south-facing walls show. Primitives:
-  `prism` (any polygon footprint, straight or sloped walls), `cyl` (oval footprint; roof flat, dome, cone,
-  ring, open bowl, deck), `pit` (sunken courtyard), `berm` (earth mound), `legs` (stilts). The `BUILDS` table
-  composes them: block, L, oct, T, notch, court, wings, hall, palace, pitched, barrel, quonset, hangar, tower,
-  round-tower, stepped, dome, domes2, dome-block, store, cone, sunken, sunken-dome, bunker, buried, stilts,
-  stilts-dome, stilts-flat, deck, plant, lab, arena. See them all in `wiki/mockup/_buildings.png`.
+- **Buildings are real 3D greyboxes**, the method of z-day's building generator
+  (`.claude/tools/art/world/structures/buildings` in the z-day repo). Each building is modelled as simple
+  convex solids (boxes, oval prisms, half-ellipsoid domes, cones, gables, barrel vaults, sloped bunker walls,
+  with subtractive cuts for doors, windows, courtyards and pits), then one ray per pixel is cast in the
+  game's projection and shaded by the surface normal with a cast shadow and outlines.
+  - Projection: a screen row is the line y + z = const, so one cell north and one cell up both move 16 px up
+    the screen. A footprint W x D px with walls h px fills exactly D + h rows of the phase-1 cell box. Only
+    top and south faces show. Round footprints are ovals because they fill the box's footprint rows.
+  - `mockup/solid.py`: solids, ray casting, shading. `mockup/build.py`: the models in `BUILDS`: block, L,
+    oct, T, notch, court, wings, hall, palace, pitched, barrel, quonset, hangar, tower, round-tower, stepped,
+    dome, domes2, dome-block, store, cone, sunken, sunken-dome, bunker, buried, stilts, stilts-dome,
+    stilts-flat, deck, plant, lab, arena. `python3 -m mockup builds [--grey]` draws them all.
+  - `render --grey` draws buildings in neutral grey (the pure greybox look); `--out DIR` writes elsewhere.
 - `mockup/draw.py`: terrain, props and people. `mockup/cli.py`: the commands.

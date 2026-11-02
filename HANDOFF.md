@@ -50,7 +50,7 @@ The owner split the remaining work into phases on 2026-11-02.
    and redrawn. Iterate through `wiki/mockup/styles.yaml` (colours and shapes) and `wiki/mockup/overrides/<area>.yaml`.
    Owner rules for this phase: keep the game's **top-down 45° view** (round roofs are ovals, never circles), and
    vary building shapes beyond roofs: footprints (L, octagon, courtyard, wings) and types (bunkers, half-buried,
-   sunken, stilts). The building types live in `tools/mockup/mockup/build.py`; `wiki/mockup/_buildings.png`
+   sunken, stilts). Buildings are 3D greybox models ray-cast to pixels (owner's call, z-day's method): `tools/mockup/mockup/solid.py` and `build.py`; `wiki/mockup/_buildings.png`
    shows them all. The owner wants images shown in the chat, not left in folders for them to find.
 3. **Real art.** This resumes the paused art tools. The first art step is calibrating the Fortree tree house in
    [`tools/world-art`](tools/world-art/README.md) (STYLE.md section 9). The tile pipeline is in

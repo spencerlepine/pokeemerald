@@ -346,7 +346,7 @@ def label(d, text, cx, cy):
 WATER_KIND = {"MUSTAFAR": "lava", "ASTEROID FIELD": "void"}
 
 
-def area(doc, styles, labels=True):
+def area(doc, styles, labels=True, grey=False):
     grid = [r for r in (doc.get("grid") or "").splitlines() if r]
     W = max(len(r) for r in grid)
     grid = [r.ljust(W, "x") for r in grid]
@@ -365,7 +365,7 @@ def area(doc, styles, labels=True):
         st = styles.shape(o.get("art", ""), planet, kind, seed)
         if kind == "building":
             st["ground"] = pal["ground"]
-            _build.building(d, o, st, seed)
+            _build.building(img, o, st, seed, grey)
         else:
             prop(d, o, st)
     for w in doc.get("warps") or []:

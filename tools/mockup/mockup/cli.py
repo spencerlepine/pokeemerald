@@ -7,6 +7,7 @@ import argparse
 import glob
 import os
 import sys
+from pathlib import Path
 
 from PIL import Image, ImageDraw
 
@@ -41,8 +42,10 @@ def cmd_render(a):
     elif not a.all:
         sys.exit("name areas, --planet P or --all")
     for doc in docs:
-        img = draw.area(apply_overrides(doc), st, labels=not a.no_labels)
+        img = draw.area(apply_overrides(doc), st, labels=not a.no_labels, grey=a.grey)
         out = _out(doc)
+        if a.out:
+            out = Path(a.out) / out.name
         out.parent.mkdir(parents=True, exist_ok=True)
         img.save(out)
     print(f"{len(docs)} areas rendered")
@@ -115,10 +118,11 @@ def cmd_builds(a):
         gx, gy = (i % cols) * CW + 1, (i // cols) * CH + 1
         b = {"at": [gx, gy + 5 - h], "size": [w, h], "door": w // 2}
         style = dict(mat, fill=mat["wall"], ring=mat["trim"], ground=pal["ground"], build=n)
-        build.building(d, b, style, 7919 * (i + 1))
+        build.building(img, b, style, 7919 * (i + 1), a.grey)
         d.text((gx * draw.C, (gy + 5) * draw.C + 4), f"{n}  {w}x{h}", font=draw.F, fill=(40, 30, 20))
-    img.save(MOCK / "_buildings.png")
-    print("_buildings.png", img.size)
+    name = "_buildings-grey.png" if a.grey else "_buildings.png"
+    img.save(MOCK / name)
+    print(name, img.size)
 
 
 def cmd_missing(a):
@@ -142,9 +146,12 @@ def main(argv=None):
     r.add_argument("--planet")
     r.add_argument("--all", action="store_true")
     r.add_argument("--no-labels", action="store_true")
+    r.add_argument("--grey", action="store_true", help="buildings in neutral grey (the greybox look)")
+    r.add_argument("--out", help="write here instead of wiki/mockup/<planet>/")
     w = sub.add_parser("world")
     w.add_argument("--cell", type=int, default=4, help="px per cell on the planet sheets")
     sub.add_parser("missing")
-    sub.add_parser("builds", help="sheet of every building type")
+    bl = sub.add_parser("builds", help="sheet of every building type")
+    bl.add_argument("--grey", action="store_true")
     a = ap.parse_args(argv)
     {"render": cmd_render, "world": cmd_world, "missing": cmd_missing, "builds": cmd_builds}[a.cmd](a)
