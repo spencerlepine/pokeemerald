@@ -7,8 +7,8 @@
 # shapes: one entry per art id.
 #   building: `build` picks the composition, drawn in the game's top-down 3/4 view (see tools/mockup/mockup/build.py):
 #     block box L oct T notch court wings hall palace pitched barrel quonset hangar tower round-tower stepped
-#     dome domes2 dome-block store cone sunken sunken-dome bunker buried stilts stilts-dome stilts-flat
-#     deck plant lab arena
+#     dome domes2 dome-block dome-porch store cone glass-dome bunker buried stilts stilts-dome stilts-flat
+#     deck pad bay plant lab arena spire saucer comm-tower shield-gen turret cliff-door obelisk
 #   `variants: [{build: ...}, ...]` picks one per placed building (stable by position), so a town's homes vary.
 #   `height` scales the walls (1.0 = default). `field` is the pitch colour of an arena.
 #   `kind` is the first-pass name (box | dome | pitched | stepped | tower | hall | dish | platform), used when no `build`.
@@ -89,7 +89,7 @@ shapes:
   art:shared:bacta-center:        {kind: dome, wall: "#f2f4f6", roof: "#5fb4d8", trim: "#2a6e96", label: Bacta, build: dome}
   art:shared:supply-depot:        {kind: box, wall: "#c8ccd2", roof: "#4f7fbf", trim: "#2a4a7a", label: Depot, build: quonset}
   art:shared:arena:               {kind: hall, wall: "#d8d0c0", roof: "#a03030", trim: "#5a2020", label: Arena, build: arena}
-  art:shared:landing-pad:         {kind: disc, fill: "#9a9ea6", ring: "#f2c230", mark: H, build: deck, wall: "#8a8e96", roof: "#9a9ea6", trim: "#f2c230"}
+  art:shared:landing-pad:         {kind: disc, fill: "#9a9ea6", ring: "#f2c230", mark: H, wall: "#8a8e96", roof: "#9a9ea6", trim: "#f2c230", build: pad}
   art:shared:cargo-crates:        {kind: stack, fill: "#b08a5a", trim: "#6e5232"}
   art:shared:fuel-tanks:          {kind: tank, fill: "#d8dcdf", trim: "#7a8088"}
   art:shared:parked-landspeeder:  {kind: craft, fill: "#d8cfb4", trim: "#7a6a4a", form: speeder}
@@ -99,20 +99,20 @@ shapes:
   art:shared:bacta-center-interior: {kind: slab, fill: "#e8f2f6", trim: "#5fb4d8"}
   art:shared:supply-depot-interior: {kind: slab, fill: "#d8d0bc", trim: "#4f7fbf"}
   # ---------------------------------------------------------------- tatooine
-  art:tatooine:homestead-dome:    {kind: dome, build: dome, variants: [{build: dome}, {build: domes2}, {build: dome-block}, {build: dome}, {build: buried}]}
-  art:tatooine:sunken-courtyard-home: {kind: dish, roof: "#c8a676", build: sunken}
-  art:tatooine:lars-family-home:  {kind: dish, roof: "#c8a676", label: Lars, build: sunken}
+  art:tatooine:homestead-dome:    {kind: dome, build: dome, variants: [{build: dome-porch}, {build: domes2}, {build: dome-block}, {build: dome}, {build: buried}, {build: dome-porch}]}
+  art:tatooine:sunken-courtyard-home: {kind: dish, roof: "#c8a676", build: dome-porch}
+  art:tatooine:lars-family-home:  {kind: dish, roof: "#c8a676", label: Lars, build: dome-porch}
   art:tatooine:prof-korr-s-lab:   {kind: box, roof: "#bfc4c8", label: Lab, build: lab}
   art:tatooine:academy:           {kind: hall, roof: "#b8956a", label: Academy, build: wings}
   art:tatooine:cantina:           {kind: dome, roof: "#cdb088", label: Cantina, build: domes2}
-  art:tatooine:docking-bay:       {kind: dish, wall: "#d2b488", roof: "#c4a272", label: Bay, build: sunken}
+  art:tatooine:docking-bay:       {kind: dish, wall: "#d2b488", roof: "#c4a272", label: Bay, build: bay}
   art:tatooine:farm-co-op:        {kind: box, roof: "#c09a68", build: quonset}
   art:tatooine:house-organa-office-tower: {kind: tower, wall: "#e8e2d6", roof: "#9aa6b8", label: Organa, build: tower}
   art:tatooine:jabbas-palace:     {kind: hall, wall: "#c4a074", roof: "#a07a50", label: Jabba, build: palace}
   art:tatooine:mos-entha-arena:   {kind: hall, roof: "#b08050", label: Arena, build: arena}
   art:tatooine:podrace-arena:     {kind: hall, roof: "#c8b088", label: Podrace, build: arena}
-  art:tatooine:power-station:     {kind: box, roof: "#9a9a92", trim: "#5a5a52", label: Power, build: plant}
-  art:tatooine:sabacc-den:        {kind: dome, roof: "#b88e66", build: sunken-dome}
+  art:tatooine:power-station:     {kind: box, roof: "#9a9a92", trim: "#5a5a52", label: Power, build: plant, variants: [{build: plant}, {build: spire}]}
+  art:tatooine:sabacc-den:        {kind: dome, roof: "#b88e66", build: dome-porch}
   art:tatooine:spacer-museum:     {kind: hall, roof: "#c4ccd2", label: Museum, build: oct}
   art:tatooine:watto-s-junk-shop: {kind: dome, roof: "#a88a64", label: Watto, build: dome-block}
   art:tatooine:adobe-wall:        {kind: slab, fill: "#d8bc8c", trim: "#8c6a46"}
@@ -143,8 +143,8 @@ shapes:
   art:kashyyyk:bowcaster-rack:    {kind: slab, fill: "#7a5a36", trim: "#3a2a1a"}
   art:kashyyyk:catamaran-dock:    {kind: slab, fill: "#9c7a52", trim: "#5a4028", form: dock}
   # ---------------------------------------------------------------- sullust
-  art:sullust:sullustan-home:     {kind: dome, build: buried, variants: [{build: buried}, {build: bunker}, {build: sunken-dome}]}
-  art:sullust:ash-farm:           {kind: box, roof: "#6e6a5a", build: barrel}
+  art:sullust:sullustan-home:     {kind: dome, build: buried, variants: [{build: buried}, {build: bunker}]}
+  art:sullust:ash-farm:           {kind: box, roof: "#6e6a5a", build: glass-dome}
   art:sullust:hot-spring-bathhouse: {kind: dome, roof: "#6a8a9a", build: domes2}
   art:sullust:sabine-s-arena:     {kind: hall, roof: "#c84a2a", label: Arena, build: arena}
   art:sullust:ash-greenhouse:     {kind: slab, fill: "#9ac0a0", trim: "#4a6a52"}
@@ -153,7 +153,7 @@ shapes:
   art:sullust:lava-flow:          {kind: disc, fill: "#e8742c", ring: "#ffcc5a"}
   art:sullust:steam-vent:         {kind: disc, fill: "#5a5052", ring: "#e6e6e6"}
   # ---------------------------------------------------------------- mustafar
-  art:mustafar:fortress-halls:    {kind: tower, wall: "#2e2c34", roof: "#1c1a20", trim: "#e8742c", label: Fortress, build: palace}
+  art:mustafar:fortress-halls:    {kind: tower, wall: "#2e2c34", roof: "#1c1a20", trim: "#e8742c", label: Fortress, build: obelisk, fork: true}
   art:mustafar:mining-collector:  {kind: tank, fill: "#4a4650", trim: "#e8742c"}
   art:mustafar:obsidian-spire:    {kind: rock, fill: "#1e1c22", tall: true}
   # ---------------------------------------------------------------- endor
@@ -167,13 +167,13 @@ shapes:
   art:endor:log-trap:             {kind: slab, fill: "#7a5634", trim: "#3e2a18", form: log}
   art:endor:totem-and-drum:       {kind: pole, fill: "#9a6a3a", trim: "#4e3a24"}
   # ---------------------------------------------------------------- bespin
-  art:bespin:cloud-city-tower:    {kind: tower, wall: "#f0e4d8", roof: "#d89a7a", build: round-tower, variants: [{height: 1.0}, {height: 0.7}, {height: 0.85, top: dome}, {height: 0.55}, {build: oct, height: 0.9}]}
+  art:bespin:cloud-city-tower:    {kind: tower, wall: "#f0e4d8", roof: "#d89a7a", build: round-tower, variants: [{height: 1.0}, {build: saucer}, {height: 0.85, top: dome}, {height: 0.7}, {build: saucer}]}
   art:bespin:department-store:    {kind: hall, wall: "#f4ece0", roof: "#c88a6a", label: Galleria, build: store}
   art:bespin:landing-platform:    {kind: platform, wall: "#e0d0c0", roof: "#c0a090", label: Pad, build: deck}
   art:bespin:promenade-railing:   {kind: pole, fill: "#e8dccc", trim: "#9a7a6a"}
   art:bespin:carbon-freezing-chamber: {kind: disc, fill: "#3a3e46", ring: "#e8742c"}
   # ---------------------------------------------------------------- jedha
-  art:jedha:temple-of-the-kyber:  {kind: stepped, wall: "#d2c2a4", roof: "#8a7a64", label: Temple, build: stepped}
+  art:jedha:temple-of-the-kyber:  {kind: stepped, wall: "#d2c2a4", roof: "#8a7a64", label: Temple, build: obelisk}
   art:jedha:prayer-candles:       {kind: pole, fill: "#f2e0a0", trim: "#c08a3a"}
   art:jedha:toppled-statue:       {kind: wreck, fill: "#b4a488"}
   # ---------------------------------------------------------------- yavin 4
@@ -183,7 +183,7 @@ shapes:
   art:yavin-4:massassi-jungle-tree: {kind: tree, fill: "#2f6e3a", trim: "#5a4428", big: true}
   art:yavin-4:jungle-vines:       {kind: plant, fill: "#3e8a3e"}
   # ---------------------------------------------------------------- hoth
-  art:hoth:echo-base-hangar-door: {kind: platform, wall: "#dfe6ee", roof: "#9cb4cc", label: Outpost, build: bunker}
+  art:hoth:echo-base-hangar-door: {kind: platform, wall: "#dfe6ee", roof: "#9cb4cc", label: Outpost, build: cliff-door, rock: "#b8c8da"}
   art:hoth:tauntaun-shelter:      {kind: dome, wall: "#d6dde6", roof: "#a8b6c6", build: quonset}
   art:hoth:ice-stalagmites:       {kind: rock, fill: "#cfe2f2", tall: true}
   art:hoth:snowspeeder:           {kind: craft, fill: "#e6e2d8", trim: "#d8642a", form: speeder}

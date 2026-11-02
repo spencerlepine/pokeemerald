@@ -35,7 +35,9 @@ python3 -m mockup missing                 # art ids that have no shape in styles
     top and south faces show. Round footprints are ovals because they fill the box's footprint rows.
   - `mockup/solid.py`: solids, ray casting, shading. `mockup/build.py`: the models in `BUILDS`: block, L,
     oct, T, notch, court, wings, hall, palace, pitched, barrel, quonset, hangar, tower, round-tower, stepped,
-    dome, domes2, dome-block, store, cone, sunken, sunken-dome, bunker, buried, stilts, stilts-dome,
-    stilts-flat, deck, plant, lab, arena. `python3 -m mockup builds [--grey]` draws them all.
+    dome, domes2, dome-block, dome-porch, store, cone, glass-dome, bunker, buried, stilts, stilts-dome,
+    stilts-flat, deck, pad, bay, plant, lab, arena, and the sci-fi set: spire, saucer, comm-tower,
+    shield-gen, turret, cliff-door, obelisk. A prop whose style has a `build` (the landing pad) is a 3D
+    model too. Sunken courtyards were dropped (owner: doors can't sit at the bottom of a pit like that). `python3 -m mockup builds [--grey]` draws them all.
   - `render --grey` draws buildings in neutral grey (the pure greybox look); `--out DIR` writes elsewhere.
 - `mockup/draw.py`: terrain, props and people. `mockup/cli.py`: the commands.

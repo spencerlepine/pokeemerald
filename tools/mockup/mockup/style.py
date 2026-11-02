@@ -58,8 +58,9 @@ class Styles:
         out["trim"] = hexrgb(s["trim"]) if "trim" in s else mat["trim"]
         out["fill"] = hexrgb(s["fill"]) if "fill" in s else mat["wall"]
         out["ring"] = hexrgb(s["ring"]) if "ring" in s else mat["trim"]
-        if "field" in s:
-            out["field"] = hexrgb(s["field"])
+        for k, v in list(out.items()):      # any other colour key (field, rock, glass)
+            if isinstance(v, str) and v.startswith("#"):
+                out[k] = hexrgb(v)
         return out
 
 

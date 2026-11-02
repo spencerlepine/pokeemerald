@@ -240,40 +240,6 @@ def m_cone(m):
     _round_door(m, cx, cy, a, b, h=min(11, h + 2))
 
 
-def _pit(m, x0, x1, depth=12, rim=3):
-    a = (x1 - x0) / 2
-    D = m.H - rim - 1
-    b = min(D / 2 - 2, a * 0.8)
-    cx, cy = (x0 + x1) / 2, b + 2
-    m.add(S.cylinder(cx, cy, a + 2, b + 2, -depth - 2, 0, m.dirt, m.ground, outline=False),
-          S.cylinder(cx, cy, a + 2, b + 2, 0, rim, m.roof),
-          S.cylinder(cx, cy, a - 2, b - 2, -depth, rim + 1, shade(m.wall, -0.05), shade(m.ground, -0.2),
-                     subtract=True))
-    return cx, cy, a, b
-
-
-def m_sunken(m):
-    cx, cy, a, b = _pit(m, 2, m.W - 2)
-    # doors into the far wall of the pit
-    for f in (-0.45, 0.45) if a > 30 else (0,):
-        x = cx + a * f
-        yb = cy + (b - 2) * math.sqrt(max(0, 1 - f * f)) - 1
-        m.add(S.box(x - 3, yb - 3, -12, x + 3, yb + 2, -3, m.door_col_rgb, subtract=True))
-    if m.door_x is not None:      # a small entry dome on the rim at the door
-        x = m.door_x
-        r = 7
-        m.add(S.cylinder(x, r * 0.6, r, r * 0.6, 0, 5, m.wall, m.roof),
-              S.dome(x, r * 0.6, r, r * 0.6, 5, 6, m.roof))
-        m.door(0.5, h=9, w=6)
-
-
-def m_sunken_dome(m):
-    cx, cy, a, b = _pit(m, 2, m.W - 2, depth=8)
-    m.add(S.dome(cx, cy + 2, a * 0.55, b * 0.55, -8, min(20, m.H * 0.35), m.roof))
-    if m.door_x is not None:
-        m.door(1, h=5, w=6)
-
-
 def m_bunker(m):
     h = max(10, m.wall_h(0.6))
     D = m.H - h - 3
@@ -302,12 +268,19 @@ def m_buried(m):
 
 
 def m_quonset(m, wide=False):
+    """A barrel-vault hangar: the vault runs north-south, its arched end faces south with a big door."""
     W = m.W
     rise = min(W / 2 - 1, m.H * 0.45)
     D = m.H - rise
     m.add(S.vault(1, 0, W - 1, D, 0, rise, m.roof))
-    m.add(S.box(4, -0.5, 0, W - 4, 1.5, rise * 0.75, m.wall))
-    m.door(0, w=18 if wide or m.cw >= 6 else 8, h=min(14, rise * 0.6))
+    # ribs over the vault, and the arched front frame in the wall colour
+    for y in range(8, int(D) - 4, 12):
+        m.add(S.vault(0.5, y, W - 0.5, y + 2, 0, rise + 0.6, shade(m.roof, -0.12)))
+    m.add(S.vault(0.5, -0.5, W - 0.5, 2, 0, rise + 0.6, m.wall))
+    if m.door_x is not None:
+        dw = 18 if wide or m.cw >= 6 else 9
+        dh = min(rise * (0.75 if wide else 0.6), 18)
+        m.add(S.vault(m.door_x - dw / 2, -1, m.door_x + dw / 2, 4, 0, dh, m.door_col_rgb, subtract=True))
 
 
 def m_stilts(m, cap="pitched", round_=False):
@@ -386,16 +359,231 @@ def m_stepped(m, tiers=3):
         m.door(-1, h=min(11, h * 1.5))
 
 
+def _oval(m, x0, x1, k=0.62):
+    """An oval footprint seen at the game's angle: depth about 0.6 of the width, front edge at y = 0."""
+    a = (x1 - x0) / 2
+    return (x0 + x1) / 2, a * k, a, a * k
+
+
+def _rings(m, cx, cy, a, b, z, col, rings=(0.8,), w=0.08):
+    """Painted rings on a flat top (thin raised bands)."""
+    for r in rings:
+        m.add(S.cylinder(cx, cy, a * r, b * r, z, z + 0.4, col))
+        m.add(S.cylinder(cx, cy, a * (r - w), b * (r - w), z, z + 0.6, m.roof))
+
+
+def _H(m, cx, cy, s, z, col):
+    z += 0.7      # above the painted rings
+    m.add(S.box(cx - s, cy - s * 0.7, z, cx - s + 2.5, cy + s * 0.7, z + 0.5, col),
+          S.box(cx + s - 2.5, cy - s * 0.7, z, cx + s, cy + s * 0.7, z + 0.5, col),
+          S.box(cx - s, cy - 1, z, cx + s, cy + 1.2, z + 0.5, col))
+
+
 def m_deck(m):
-    L = max(6, int(m.H * 0.14))
+    """A raised round landing deck (Cloud City): a thick oval slab on struts, a landing ring painted on top."""
+    L = 11
+    cx, cy, a, b = _oval(m, 1, m.W - 1)
+    leg = shade(m.wall, -0.25)
+    for f in (-0.55, 0.0, 0.55):
+        x = cx + a * f
+        y = _yfront_ellipse(cx, cy, a, b, x) + 2
+        m.add(S.box(x - 2, y, 0, x + 2, y + 3, L, leg))
+    m.add(S.cylinder(cx, cy, a, b, L, L + 5, m.wall, m.roof))
+    mark = (210, 210, 210) if m.grey else m.trim
+    _rings(m, cx, cy, a, b, L + 5, mark, (0.82,))
+    _H(m, cx, cy, min(a * 0.25, 10), L + 5, mark)
+
+
+def m_pad(m):
+    """A landing pad at ground level: a low octagonal slab, a painted ring and an H."""
+    cx, cy, a, b = _oval(m, 1, m.W - 1, 0.65)
+    k = 0.42
+    poly = [(cx - a, cy - b * k), (cx - a * k, cy - b), (cx + a * k, cy - b), (cx + a, cy - b * k),
+            (cx + a, cy + b * k), (cx + a * k, cy + b), (cx - a * k, cy + b), (cx - a, cy + b * k)]
+    m.add(S.prism(poly, 0, 3, m.wall, m.roof))
+    mark = (220, 220, 220) if m.grey else m.trim
+    _rings(m, cx, cy, a, b, 3, mark, (0.78,), w=0.07)
+    _H(m, cx, cy, min(a * 0.28, 11), 3, mark)
+    for f in (-1, 1):         # edge lights
+        m.add(S.box(cx + f * a * 0.92 - 1, cy - 1, 3, cx + f * a * 0.92 + 1, cy + 1, 5, mark))
+
+
+def m_bay(m):
+    """A docking bay: a round wall open to the sky, the ship floor at ground level, an arched gate."""
+    h = m.wall_h(0.75)
     W = m.W
-    D = m.H - L - 4
-    a, b = W / 2 - 1, D / 2
+    D = m.H - h - 1
+    a, b = W / 2 - 1, min(D / 2, (W / 2) * 0.8)
     cx, cy = W / 2, b
-    m.add(S.cylinder(cx, cy, 5, 3, 0, L, shade(m.wall, -0.2)))
-    m.add(S.cylinder(cx, cy, a, b, L, L + 3, m.wall, m.roof))
-    m.add(S.cylinder(cx, cy, a * 0.7, b * 0.7, L + 3, L + 3.6, (200, 200, 200) if m.grey else shade(m.trim, 0.2)))
-    m.add(S.cylinder(cx, cy, a * 0.62, b * 0.62, L + 3, L + 3.8, m.roof))
+    m.add(S.cylinder(cx, cy, a, b, 0, h, m.wall, m.roof))
+    m.add(S.cylinder(cx, cy, a - 4, b - 4, 0.6, h + 1, shade(m.wall, -0.15), shade(m.ground, -0.12), subtract=True))
+    for f in (-0.45, 0.45):     # doors in the far inner wall
+        x = cx + (a - 4) * f
+        yb = cy + (b - 4) * math.sqrt(1 - f * f) - 1
+        m.add(S.box(x - 3, yb - 1, 0.6, x + 3, yb + 3, 9, m.door_col_rgb, subtract=True))
+    mark = (205, 205, 205) if m.grey else shade(m.trim, 0.2)
+    m.add(S.cylinder(cx, cy + 2, (a - 4) * 0.55, (b - 4) * 0.55, 0.6, 1.0, mark))
+    m.add(S.cylinder(cx, cy + 2, (a - 4) * 0.48, (b - 4) * 0.48, 0.6, 1.2, shade(m.ground, -0.12)))
+    if m.door_x is not None:
+        yf = _yfront_ellipse(cx, cy, a, b, m.door_x)
+        m.add(S.vault(m.door_x - 6, yf - 1, m.door_x + 6, yf + 6, 0, min(11, h - 2), m.door_col_rgb, subtract=True))
+
+
+def m_dome_porch(m):
+    """The Tatooine homestead: a dome with a boxy arched entry block in front of it."""
+    h = max(8, m.wall_h(0.5))
+    x0, x1 = (3, m.W - 3)
+    a = (x1 - x0) / 2
+    rise = min(a * 0.6, 20)
+    D = m.H - h - rise
+    b = min((D - 6) / 2, a * 0.72)
+    cx = m.door_x if m.door_x is not None else m.W / 2
+    cx = max(x0 + a, min(x1 - a, cx))
+    cy = 6 + b
+    m.add(S.cylinder(cx, cy, a, b, 0, h, m.wall, m.roof), S.dome(cx, cy, a, b, h, rise, m.roof))
+    if m.cw >= 6:     # a second, smaller dome behind to one side
+        sx = cx + (a * 0.75 if m.r(4, 2) else -a * 0.75)
+        sx = max(9, min(m.W - 9, sx))
+        m.add(S.dome(sx, cy + b * 0.6, a * 0.4, b * 0.4, 0, rise * 0.8, shade(m.roof, -0.05)))
+    px = m.door_x if m.door_x is not None else cx
+    pw, ph = 11, h + 7
+    m.add(S.box(px - pw, 0, 0, px + pw, cy, ph, m.wall, m.roof),
+          S.vault(px - pw, 0, px + pw, cy, ph, 4, m.roof))
+    if m.door_x is not None:
+        m.add(S.box(px - 4, -1, 0, px + 4, 3, 8, m.door_col_rgb, subtract=True),
+              S.vault(px - 4, -1, px + 4, 3, 8, 4, m.door_col_rgb, subtract=True))
+
+
+def m_spire(m):
+    """A Mos Espa-style tower: stacked drums getting narrower, a mast on top."""
+    W = m.W
+    a0 = min(W / 2 - 2, 18)
+    b0 = a0 * 0.6
+    cx, cy = W / 2, b0 + 1
+    z = 0
+    tiers = [(1.0, 16), (0.75, 14), (0.55, 12), (0.35, 10)]
+    top = m.H - 2 * b0 - 12
+    for k, (f, hh) in enumerate(tiers):
+        hh = min(hh, top - z)
+        if hh < 4:
+            break
+        col = m.wall if k % 2 == 0 else shade(m.wall, -0.06)
+        m.add(S.cylinder(cx, cy, a0 * f, b0 * f, z, z + hh, col, m.roof))
+        m.add(S.cylinder(cx, cy, a0 * f + 1, b0 * f + 1, z + hh - 2, z + hh, m.trim))
+        z += hh
+    m.add(S.box(cx - 1, cy - 1, z, cx + 1, cy + 1, min(z + 12, m.H - 2 * b0), m.trim))
+    _round_door(m, cx, cy, a0, b0, h=10)
+
+
+def m_saucer(m):
+    """Cloud City: a wide disc on a slim stalk, a small dome on top."""
+    W = m.W
+    a = W / 2 - 1
+    b = a * 0.5
+    cx, cy = W / 2, b + 1
+    stalk = max(14, int(m.H - 2 * b - 16))
+    sa, sb = max(5, a * 0.22), max(3, b * 0.22)
+    m.add(S.cylinder(cx, cy, sa, sb, 0, stalk, m.wall, m.roof))
+    m.add(S.cylinder(cx, cy, a * 0.6, b * 0.6, stalk - 4, stalk, shade(m.wall, -0.1)))
+    m.add(S.cylinder(cx, cy, a, b, stalk, stalk + 5, m.trim, m.roof))
+    m.add(S.dome(cx, cy, a * 0.45, b * 0.45, stalk + 5, 7, shade(m.roof, 0.1)))
+    _round_door(m, cx, cy, sa, sb, w=6, h=10)
+
+
+def m_glass_dome(m):
+    """A faceted glass greenhouse dome on a low ring wall (Sullust ash farms)."""
+    h = 5
+    a = m.W / 2 - 1
+    rise = min(a * 0.6, m.H * 0.4)
+    b = min((m.H - h - rise) / 2, a * 0.72)
+    cx, cy = m.W / 2, b
+    glass = (150, 170, 180) if m.grey else m.st.get("glass", (150, 200, 205))
+    m.add(S.cylinder(cx, cy, a, b, 0, h, m.wall, m.roof))
+    m.add(S.dome(cx, cy, a, b, h, rise, glass, rings=4, n=12))
+    _round_door(m, cx, cy, a, b, h=8)
+
+
+def m_comm_tower(m):
+    """A comms mast: a lattice tower tapering up, crossbars, a dish near the top, a small hut at its foot."""
+    W = m.W
+    s = min(W * 0.32, 16)
+    cx, cy = W / 2, s + 6
+    top = m.H - 2 * s - 14
+    leg = m.trim
+    for dx in (-1, 1):
+        for dy in (-1, 1):
+            m.add(S.prism([(cx + dx * s - 1.2, cy + dy * s * 0.6 - 1.2), (cx + dx * s + 1.2, cy + dy * s * 0.6 - 1.2),
+                           (cx + dx * s + 1.2, cy + dy * s * 0.6 + 1.2), (cx + dx * s - 1.2, cy + dy * s * 0.6 + 1.2)],
+                          0, top, leg))
+    for k, z in enumerate(range(10, int(top), 12)):
+        f = 1 - z / max(top, 1) * 0.0
+        m.add(S.box(cx - s, cy - s * 0.6 - 1, z, cx + s, cy - s * 0.6 + 1, z + 1.5, shade(leg, 0.15)))
+    m.add(S.box(cx - s - 1, cy - s * 0.6 - 1, top, cx + s + 1, cy + s * 0.6 + 1, top + 3, m.wall, m.roof))
+    m.add(S.box(cx - 1, cy - 1, top + 3, cx + 1, cy + 1, top + 14, leg))
+    m.add(S.cylinder(cx + s * 0.6, cy - s * 0.6, 6, 3, top + 6, top + 8, shade(m.wall, 0.2)))
+    m.add(S.box(cx - 9, 0, 0, cx + 9, 8, 10, m.wall, m.roof))
+    m.door(0, h=8, w=6)
+
+
+def m_shield_gen(m):
+    """A shield generator (Hoth): a big ball on a pillar inside a ring of fins."""
+    W = m.W
+    a = W / 2 - 2
+    b = a * 0.6
+    cx, cy = W / 2, b + 1
+    m.add(S.cylinder(cx, cy, a, b, 0, 6, m.wall, m.roof))
+    for f in (-0.75, -0.25, 0.25, 0.75):
+        x = cx + a * f
+        y = _yfront_ellipse(cx, cy, a, b, x) + 1
+        m.add(S.box(x - 1.5, y, 6, x + 1.5, y + 3, 14, m.trim))
+    pil = max(16, m.H - 2 * b - 2 * a * 0.45 - 6)
+    m.add(S.cylinder(cx, cy, a * 0.18, b * 0.18, 6, pil, m.trim))
+    m.add(S.dome(cx, cy, a * 0.45, b * 0.45, pil, a * 0.45, m.roof))
+
+
+def m_turret(m):
+    """A turbolaser emplacement: a round base, a turret housing, twin barrels pointing north."""
+    W = m.W
+    a = W / 2 - 2
+    b = a * 0.6
+    cx, cy = W / 2, b + 1
+    m.add(S.cylinder(cx, cy, a, b, 0, 8, m.wall, m.roof))
+    hw = a * 0.55
+    m.add(S.prism([(cx - hw, cy - b * 0.4), (cx + hw, cy - b * 0.4), (cx + hw * 0.7, cy + b * 0.6),
+                   (cx - hw * 0.7, cy + b * 0.6)], 8, 18, shade(m.wall, -0.05), m.roof, taper=2))
+    for dx in (-4, 4):
+        m.add(S.box(cx + dx - 1.2, cy, 12, cx + dx + 1.2, cy + b * 1.6, 14.5, m.trim))
+
+
+def m_cliff_door(m):
+    """A hangar dug into a rock or ice face: the face fills the box, a framed blast door in it."""
+    W = m.W
+    rock = (150, 150, 150) if m.grey else m.st.get("rock", shade(m.ground, -0.25))
+    h = m.H - 12
+    m.add(S.prism([(0, 4), (W, 4), (W, 12), (0, 12)], 0, h, rock, shade(rock, 0.15), taper=4))
+    m.add(S.box(0, 4, 0, W, 12, h * 0.3, rock))
+    if m.door_x is not None:
+        dw = min(W * 0.35, 26)
+        m.add(S.box(m.door_x - dw / 2 - 3, 2, 0, m.door_x + dw / 2 + 3, 6, min(h * 0.7, 26), m.wall, m.roof))
+        m.add(S.box(m.door_x - dw / 2, 1, 0, m.door_x + dw / 2, 8, min(h * 0.62, 22), m.door_col_rgb, subtract=True))
+        for z in range(4, int(min(h * 0.62, 22)), 5):
+            m.add(S.box(m.door_x - dw / 2, 6.5, z, m.door_x + dw / 2, 7.5, z + 1, shade(m.door_col_rgb, 0.25)))
+
+
+def m_obelisk(m):
+    """A tall tapering tower on a stepped base (Vader's fortress, the Kyber temple)."""
+    W = m.W
+    D = max(16, int(m.H * 0.3))
+    m.add(S.box(1, 0, 0, W - 1, D, 8, m.wall, m.roof))
+    w0 = W * 0.28
+    cx, cy = W / 2, D * 0.55
+    top = m.H - D - 2
+    m.add(S.prism([(cx - w0, cy - w0 * 0.55), (cx + w0, cy - w0 * 0.55), (cx + w0, cy + w0 * 0.55),
+                   (cx - w0, cy + w0 * 0.55)], 8, top, m.wall, m.roof, taper=w0 * 0.42))
+    if m.st.get("fork"):
+        for dx in (-3, 3):
+            m.add(S.box(cx + dx - 1.5, cy - 1, top - 2, cx + dx + 1.5, cy + 1, top + 8, m.trim))
+    m.door(0, w=10)
 
 
 def m_plant(m):
@@ -444,7 +632,9 @@ BUILDS = {
     "court": m_court, "wings": m_wings, "palace": lambda m: m_wings(m, towers=True),
     "hall": lambda m: m_wings(m, dome_mid=True),
     "dome": m_dome, "domes2": m_domes2, "dome-block": m_dome_block, "store": m_store,
-    "sunken": m_sunken, "sunken-dome": m_sunken_dome, "bunker": m_bunker, "buried": m_buried,
+    "bunker": m_bunker, "buried": m_buried, "bay": m_bay, "pad": m_pad, "dome-porch": m_dome_porch,
+    "spire": m_spire, "saucer": m_saucer, "glass-dome": m_glass_dome, "comm-tower": m_comm_tower,
+    "shield-gen": m_shield_gen, "turret": m_turret, "cliff-door": m_cliff_door, "obelisk": m_obelisk,
     "quonset": m_quonset, "hangar": lambda m: m_quonset(m, wide=True),
     "stilts": m_stilts, "stilts-dome": lambda m: m_stilts(m, "dome", round_=True),
     "stilts-flat": lambda m: m_stilts(m, "flat"),
@@ -453,15 +643,17 @@ BUILDS = {
 }
 # the first-pass `kind` names, so an old catalogue entry still draws
 KIND_TO_BUILD = {"box": "block", "dome": "dome", "pitched": "pitched", "stepped": "stepped", "tower": "tower",
-                 "hall": "hall", "dish": "sunken", "platform": "deck"}
+                 "hall": "hall", "dish": "bay", "platform": "deck",
+                 "sunken": "dome-porch", "sunken-dome": "dome-porch"}
 
 _cache = {}
 
 
 def sprite(b, st, seed, grey=False):
     name = st.get("build") or KIND_TO_BUILD.get(st.get("kind"), "block")
+    name = KIND_TO_BUILD.get(name, name) if name not in BUILDS else name
     key = (name, tuple(b["size"]), b.get("door"), st["wall"], st["roof"], st["trim"], st.get("ground"),
-           st.get("height"), st.get("top"), seed & 0xFFFFFF, grey)
+           st.get("height"), st.get("top"), st.get("fork"), seed & 0xFFFFFF, grey)
     if key not in _cache:
         m = M(b, st, seed, grey)
         BUILDS.get(name, m_block)(m)

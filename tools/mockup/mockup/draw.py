@@ -204,6 +204,9 @@ def prop(d, p, st):
             d.arc([i - 3, y0 + 2, i + 5, y1 - 2], 180, 360, fill=f, width=2)
         d.ellipse([x1 - 9, (y0 + y1) // 2 - 4, x1, (y0 + y1) // 2 + 4], fill=f, outline=shade(f, -0.3))
     elif k == "disc":
+        # flat on the ground, so seen at the game's angle: an oval about 0.65 as deep as it is wide
+        y0 = max(y0, y1 - int(W * 0.65))
+        H = y1 - y0
         d.ellipse([x0 + 1, y0 + 1, x1 - 1, y1 - 1], fill=f, outline=st["ring"], width=2)
         if st.get("mark") == "H":
             mx, my = (x0 + x1) // 2, (y0 + y1) // 2
@@ -363,7 +366,7 @@ def area(doc, styles, labels=True, grey=False):
     for kind, o in pieces:
         seed = _h(zlib.crc32(o.get("art", "").encode()), o["at"][0], o["at"][1])
         st = styles.shape(o.get("art", ""), planet, kind, seed)
-        if kind == "building":
+        if kind == "building" or st.get("build"):      # props with a `build` are 3D models too
             st["ground"] = pal["ground"]
             _build.building(img, o, st, seed, grey)
         else:
