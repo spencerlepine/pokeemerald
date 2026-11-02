@@ -1,0 +1,23 @@
+name: glowfly
+slot: volbeat
+brief: "GLOWFLY: creature call that fits its look and size. Male firefly that signals with its tail."
+kind: creature
+size: 0.3
+seed: 134
+layers:
+  # A firefly signalling: a buzzy wing hum and a blinking "bip-bip-bweeep" pattern, like its tail
+  # flashing in a rhythm across the Tatooine night.
+  - type: voice
+    pitch: [[0, 560], [0.06, 560], [0.12, 620], [0.2, 700], [0.42, 640]]
+    pitch_step: 0.06
+    source: {pulse: 0.8, pulse_width: 0.2, saw: 0.3, noise: 0.06}
+    vowels: [[0, i], [0.12, i], [0.2, ee], [0.42, e]]
+    env: [[0, 0], [0.005, 1], [0.04, 0.8], [0.05, 0.05], [0.06, 0.05], [0.065, 1], [0.1, 0.8], [0.11, 0.05], [0.12, 0.05], [0.125, 1], [0.36, 0.8], [0.43, 0]]
+    vibrato: {rate: 12, depth: 0.03}
+    growl: 0.2
+    growl_rate: 60
+  - type: noise
+    band: [1200]
+    q: 2.5
+    env: [[0, 0], [0.03, 0.3], [0.4, 0.25], [0.45, 0]]
+    gain: 0.25

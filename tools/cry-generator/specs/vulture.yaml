@@ -1,0 +1,36 @@
+name: vulture
+slot: skarmory
+brief: "VULTURE: electronic droid voice: beeps, whistles and servo whirs. Vulture droid starfighter, wild and self-repairing."
+kind: droid
+size: 0.6
+seed: 132
+layers:
+  # A Vulture droid unfolding: wing servos ratchet out with relay clicks, then a predatory, screeching
+  # electronic shriek (warbled pulse diving down) and a twin-engine whine.
+  - type: servo
+    pitch: [[0, 160], [0.2, 480], [0.3, 420]]
+    harmonics: [1.0, 0.7, 0.5, 0.3, 0.2]
+    env: [[0, 0], [0.03, 0.8], [0.25, 0.6], [0.32, 0]]
+    grit: 0.6
+    gain: 0.6
+  - type: click
+    times: [0.0, 0.08, 0.16, 0.3]
+    gain: 0.5
+  - type: tone
+    at: 0.3
+    wave: pulse
+    width: 0.2
+    pitch: [[0, 1800], [0.08, 2200], [0.5, 900], [0.65, 700]]
+    warble: {rate: 28, depth: 0.1, shape: square}
+    env: [[0, 0], [0.01, 1], [0.5, 0.7], [0.66, 0]]
+    drive: 1.8
+    gain: 0.6
+  - type: servo
+    at: 0.32
+    pitch: [[0, 700], [0.6, 520]]
+    harmonics: [1.0, 0.4, 0.2]
+    env: [[0, 0], [0.05, 0.4], [0.55, 0.3], [0.63, 0]]
+    grit: 0.3
+    gain: 0.4
+master:
+  lowpass: 3600

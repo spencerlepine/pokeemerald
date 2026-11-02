@@ -1,0 +1,31 @@
+name: gnarltree
+slot: sudowoodo
+brief: "GNARLTREE: creature call that fits its look and size. Creature that pretends to be a gnarltree."
+kind: creature
+size: 0.5
+seed: 133
+layers:
+  # A creaking, woody "hrrm-HOO": a stiff trunk creak (stepped, gritty) and then a hollow, knotty hoot,
+  # like wind through a Dagobah gnarltree, trying hard to sound like wood.
+  - type: voice
+    pitch: [[0, 220], [0.1, 260], [0.2, 240], [0.3, 280]]
+    pitch_step: 0.05
+    source: {saw: 0.9, pulse: 0.4, pulse_width: 0.3, noise: 0.12}
+    vowels: [[0, rr], [0.3, m]]
+    env: [[0, 0], [0.01, 1], [0.28, 0.8], [0.32, 0]]
+    growl: 0.6
+    growl_rate: 18
+    jitter: 0.04
+    drive: 2
+  - type: voice
+    at: 0.32
+    pitch: [[0, 360], [0.08, 460], [0.3, 380]]
+    source: {saw: 0.6, pulse: 0.7, pulse_width: 0.4, noise: 0.1}
+    vowels: [[0, o], [0.15, u], [0.3, u]]
+    env: [[0, 0], [0.01, 1], [0.24, 0.7], [0.32, 0]]
+    vibrato: {rate: 6, depth: 0.03}
+  - type: click
+    times: [0.02, 0.12, 0.22]
+    gain: 0.4
+master:
+  tilt_db: 3
