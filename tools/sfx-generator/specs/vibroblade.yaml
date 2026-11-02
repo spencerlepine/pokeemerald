@@ -1,0 +1,21 @@
+name: vibroblade
+constant: SE_VIBROBLADE
+brief: "Vibroblade: buzzing blade slice (two strokes 6 frames apart). VIBROBLADE (Cut) in battle and the field."
+seed: 88
+layers:
+  # A vibrating blade: a hard 90 Hz buzz (heavily amplitude-chopped saw) under two quick slicing swishes of
+  # band-passed noise, the second 6 frames (0.1 s) after the first.
+  - type: pcm
+    osc: saw
+    unison: [-12, 12]
+    pitch: [[0, 180], [0.1, 200], [0.35, 170]]
+    filter: {type: bp, cutoff: [[0, 1600], [0.35, 900]], q: 2}
+    am: {rate: 90, depth: 0.8}
+    env: [[0, 0], [0.01, 1], [0.1, 0.6], [0.12, 1], [0.38, 0]]
+    drive: 2.0
+    gain: 0.7
+  - type: pcm
+    osc: noise
+    filter: {type: bp, cutoff: [[0, 1800], [0.06, 4500], [0.1, 1800], [0.16, 4500], [0.3, 2000]], q: 2}
+    env: [[0, 0], [0.03, 1], [0.08, 0.2], [0.13, 1], [0.3, 0]]
+    gain: 0.6

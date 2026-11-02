@@ -1,0 +1,37 @@
+name: turbolaser
+constant: SE_TURBOLASER
+brief: "Turbolaser shot: heavy capital-ship cannon, loops ~60 frames while the beam streams. TURBOLASER (Hyper Beam) fire beat."
+seed: 86
+loop: {start: 0.3, end: 1.0, crossfade: 0.1}
+layers:
+  # Fire: a low, heavy blaster chirp (square 1 sweeping down) with a driven boom. Stream (the loop): a fat
+  # detuned saw beam with an FM grind and a throbbing hiss of plasma, steady so it loops seamlessly.
+  - type: square
+    pitch: 900
+    duty: 2
+    sweep: [1, true, 3]
+    hw_env: {start: 15, step: 1, dir: -1}
+    length: 0.18
+    gain: 0.4
+  - type: pcm
+    osc: sine
+    pitch: [[0, 1400], [0.05, 300], [0.18, 70]]
+    env: [[0, 0], [0.003, 1], [0.08, 0.7], [0.18, 0]]
+    drive: 2.5
+    gain: 0.9
+  - type: pcm
+    osc: saw
+    unison: [-15, 0, 14]
+    pitch: 82
+    fm: {ratio: 0.5, index: 0.4}
+    filter: {type: lp, cutoff: 1800, q: 2}
+    am: {rate: 20, depth: 0.2}
+    env: [[0, 0], [0.06, 0.8], [1.05, 0.8]]
+    drive: 1.8
+    gain: 0.8
+  - type: pcm
+    osc: noise
+    filter: {type: bp, cutoff: 2600, q: 1.5}
+    am: {rate: 10, depth: 0.3}
+    env: [[0, 0], [0.08, 0.5], [1.05, 0.5]]
+    gain: 0.3

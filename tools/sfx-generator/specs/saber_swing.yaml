@@ -1,0 +1,21 @@
+name: saber_swing
+constant: SE_SABER_SWING
+brief: "Lightsaber swing whoosh with hum: SABER SLASH slash beat."
+seed: 83
+layers:
+  # A blade sweeping past: the saber hum Doppler-bends up and back down while its filter flares open,
+  # and a band of air noise swells and sweeps with it.
+  - type: pcm
+    osc: saw
+    unison: [-9, 0, 11]
+    pitch: [[0, 92], [0.22, 140], [0.52, 86]]
+    filter: {type: lp, cutoff: [[0, 700], [0.22, 3200], [0.52, 700]], q: 2.5}
+    am: {rate: 5, depth: 0.15}
+    env: [[0, 0.3], [0.22, 1], [0.52, 0]]
+    drive: 1.8
+    gain: 0.9
+  - type: pcm
+    osc: noise
+    filter: {type: bp, cutoff: [[0, 600], [0.22, 2400], [0.5, 700]], q: 2}
+    env: [[0, 0], [0.2, 0.8], [0.5, 0]]
+    gain: 0.4

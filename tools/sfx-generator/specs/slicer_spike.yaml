@@ -1,0 +1,30 @@
+name: slicer_spike
+constant: SE_SLICER_SPIKE
+brief: "Slicer spike plugged into a droid: data scramble and a success chirp (droid slicing)."
+seed: 81
+layers:
+  # Jack-in click, then a garbled scramble of random-pitched square blips over crunchy 7-bit static
+  # (the code being cracked), then a clean rising two-note success chirp on the wave channel.
+  - type: pcm
+    osc: noise
+    filter: {type: bp, cutoff: 2000, q: 2.5}
+    env: [[0, 0], [0.001, 1], [0.02, 0]]
+    gain: 0.5
+  - type: square
+    at: 0.03
+    duty: 1
+    pitch: [[0.0, 2794], [0.021, 2794], [0.022, 1319], [0.043, 1319], [0.044, 2093], [0.065, 2093], [0.066, 1760], [0.087, 1760], [0.088, 1397], [0.109, 1397], [0.11, 1397], [0.131, 1397], [0.132, 988], [0.153, 988], [0.154, 1047], [0.175, 1047], [0.176, 2093], [0.197, 2093], [0.198, 3136], [0.219, 3136], [0.22, 2794], [0.241, 2794], [0.242, 1319], [0.263, 1319]]
+    env: [[0, 0.8], [0.26, 0.6], [0.27, 0]]
+    gain: 0.35
+  - type: noise
+    at: 0.03
+    clock: [[0, 65536], [0.26, 131072]]
+    short: true
+    env: [[0, 0.5], [0.26, 0.4], [0.27, 0]]
+    gain: 0.12
+  - type: wave
+    at: 0.33
+    table: sine
+    pitch: [[0, 1568], [0.06, 1568], [0.061, 2349], [0.18, 2349]]
+    env: [[0, 1], [0.12, 1], [0.18, 0]]
+    gain: 0.4

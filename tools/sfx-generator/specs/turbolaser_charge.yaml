@@ -1,0 +1,27 @@
+name: turbolaser_charge
+constant: SE_TURBOLASER_CHARGE
+brief: "Turbolaser charge: rising capacitor whine (~50 frames) before the shot. TURBOLASER (Hyper Beam) charge beat."
+seed: 87
+layers:
+  # Capacitors charging: a sine whine climbing over three octaves with a pulse that speeds up, a buzzy
+  # low power-up hum underneath, and a square-1 sweep rising through the last third.
+  - type: pcm
+    osc: sine
+    unison: [-6, 6]
+    pitch: [[0, 260], [0.82, 2800]]
+    am: {rate: [[0, 6], [0.82, 32]], depth: 0.4}
+    env: [[0, 0], [0.3, 0.6], [0.8, 1], [0.84, 0]]
+    gain: 0.75
+  - type: pcm
+    osc: saw
+    pitch: [[0, 55], [0.82, 110]]
+    filter: {type: lp, cutoff: [[0, 300], [0.82, 1200]], q: 2}
+    env: [[0, 0], [0.2, 0.5], [0.8, 0.7], [0.84, 0]]
+    gain: 0.4
+  - type: square
+    at: 0.5
+    pitch: 500
+    duty: 0
+    sweep: [2, false, 6]
+    env: [[0, 0], [0.2, 0.4], [0.32, 0.5], [0.34, 0]]
+    gain: 0.25

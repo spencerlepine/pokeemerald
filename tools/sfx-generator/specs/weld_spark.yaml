@@ -1,0 +1,22 @@
+name: weld_spark
+constant: SE_WELD_SPARK
+brief: "Welding spark: short crackle-pop, three per SELF REPAIR (Soft-Boiled)."
+seed: 89
+layers:
+  # One spark (the call site repeats it): a sharp electric pop, a few frames of bright LFSR crackle, and
+  # a hissing high sizzle that fizzles out.
+  - type: pcm
+    osc: sine
+    pitch: [[0, 900], [0.02, 300]]
+    env: [[0, 0], [0.001, 1], [0.025, 0]]
+    gain: 0.6
+  - type: noise
+    clock: [[0, 262144], [0.03, 131072], [0.05, 262144], [0.1, 65536]]
+    env: [[0, 1], [0.03, 0.4], [0.05, 0.8], [0.1, 0]]
+    gain: 0.45
+  - type: pcm
+    osc: noise
+    filter: {type: hp, cutoff: 4000, q: 0.8}
+    am: {rate: 50, depth: 0.6}
+    env: [[0, 0], [0.002, 0.8], [0.04, 0.4], [0.16, 0]]
+    gain: 0.4

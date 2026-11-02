@@ -1,0 +1,26 @@
+name: tie_flyby
+constant: SE_TIE_FLYBY
+brief: "TIE fighter scream flyby for Imperial raid cutscenes (Launch Tower, Endor Station)."
+seed: 85
+layers:
+  # An original take on a twin-ion-engine scream: a harsh resonant noise howl plus a nasal FM-saw whine,
+  # both rising to a peak as it passes and dropping in pitch after (Doppler), loudest at the pass.
+  - type: pcm
+    osc: noise
+    filter: {type: bp, cutoff: [[0, 1300], [0.45, 2100], [0.55, 1700], [1.0, 800]], q: 9, stages: 2}
+    env: [[0, 0], [0.4, 1], [0.55, 0.9], [1.0, 0]]
+    gain: 0.8
+  - type: pcm
+    osc: saw
+    unison: [-25, 25]
+    pitch: [[0, 620], [0.45, 760], [0.55, 600], [1.0, 380]]
+    fm: {ratio: 1.07, index: 0.6}
+    filter: {type: bp, cutoff: [[0, 1500], [0.45, 2400], [1.0, 900]], q: 3}
+    env: [[0, 0], [0.4, 0.7], [0.55, 0.6], [1.0, 0]]
+    drive: 1.8
+    gain: 0.5
+  - type: pcm
+    osc: noise
+    filter: {type: lp, cutoff: 600, q: 1}
+    env: [[0, 0], [0.45, 0.6], [1.0, 0]]
+    gain: 0.3

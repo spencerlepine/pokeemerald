@@ -1,0 +1,39 @@
+name: target_lock
+constant: SE_TARGET_LOCK
+brief: "Targeting computer: three slow scan chirps then a high lock tone. TARGET LOCK (Lock-On) and MIND READER; also BLASTER SHOT aim beat (first chirp only)."
+seed: 84
+layers:
+  # Three short upward scan chirps on square 1 (hardware sweep climbing), evenly spaced so the first one
+  # works alone, then a steady high 75 %-duty lock tone with a wave-channel octave beneath.
+  - type: square
+    pitch: 1200
+    duty: 1
+    sweep: [1, false, 4]
+    env: [[0, 0.9], [0.06, 0.8], [0.08, 0]]
+    gain: 0.45
+  - type: square
+    at: 0.2
+    pitch: 1200
+    duty: 1
+    sweep: [1, false, 4]
+    env: [[0, 0.9], [0.06, 0.8], [0.08, 0]]
+    gain: 0.45
+  - type: square
+    at: 0.4
+    pitch: 1200
+    duty: 1
+    sweep: [1, false, 4]
+    env: [[0, 0.9], [0.06, 0.8], [0.08, 0]]
+    gain: 0.45
+  - type: square
+    at: 0.6
+    pitch: 2794
+    duty: 3
+    env: [[0, 1], [0.24, 0.9], [0.27, 0]]
+    gain: 0.45
+  - type: wave
+    at: 0.6
+    table: sine
+    pitch: 1397
+    env: [[0, 1], [0.24, 1], [0.27, 0]]
+    gain: 0.3
