@@ -14,6 +14,7 @@ phase 1, so the whole folder can be thrown away and redrawn.
 | `<planet>/<area>.png`, `<planet>/caves/`, `<planet>/interiors/` | One area each, same folders as phase 1 |
 | [`_buildings.png`](_buildings.png), [`_buildings-grey.png`](_buildings-grey.png) | Every building type at three sizes, in colour and in pure grey (`python3 -m mockup builds [--grey]`) |
 | [`_giants.png`](_giants.png) | The giant border pieces (only the Death Star trench wall for now) |
+| [`NEEDS.md`](NEEDS.md) | What every area needs, in words, before it is drawn; the missing-tools table at the end |
 | [`relief/`](relief/) | Every area in relief: heights derived from the phase-1 grid, cliffs, rock tops, 3D nature (`render --all --relief`) |
 | [`scenes/`](scenes/) | Greybox areas composed from 3D terrain, large structures and town pieces (`python3 -m mockup scene <name>`) |
 | [`kit/`](kit/) | One sheet per building category, pieces side by side for scale (`python3 -m mockup kit <category>`) |

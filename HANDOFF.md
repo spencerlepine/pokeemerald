@@ -74,7 +74,11 @@ The owner split the remaining work into phases on 2026-11-02.
    Round hangars, bays, quonsets and decks scrapped (owner: cylinders don't look good); replaced by angular kit
    categories `hangars` (hex-hangar, bay-hex, shipyard) and `gyms` (palace, temple, hex, fortress, court: varied
    boss houses sharing one bold doorway, plus the sign out front). Only the podrace arena keeps the round arena.
-   The owner paused here after this fix (2026-11-02): wait for their review before the next step.
+   Owner approved everything to this point (2026-11-02) and asked to think bigger: write down what every area
+   needs BEFORE drawing shapes. That list is [`wiki/mockup/NEEDS.md`](wiki/mockup/NEEDS.md) (all 528 areas, planet
+   by planet, plus the missing-tools table at the end). The companion Claude Doc "Star Wars world: what we still
+   need to draw" has the same gaps grouped by tool. Next: pick a missing tool from the table and build it, one at a
+   time, demo area, review.
    **Breadth pass (owner, 2026-11-02):** build tools to greybox a whole planet in three layers before more depth:
    (1) terrain, nature, ledges, berms, water, waterfalls; (2) large structures and natural borders (cliffs,
    ridges, mesas), so areas need not be ringed by trees and can have more height around the edges (towns stay
