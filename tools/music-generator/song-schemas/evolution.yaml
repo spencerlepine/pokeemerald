@@ -1,0 +1,52 @@
+# Evolution: hot-swap of MUS_EVOLUTION (wiki audio:MUS_EVOLUTION, EVENT / LOOP). SCRATCH (no film cue): an
+# original Force-mystery loop. Brief (sw_subject): evolution in progress, rising, mysterious, Force-like hum.
+# D minor with Williams-style mediant turns (Dm, Bb, Gm, A / Dm, F, Eb, A) at the vanilla 120 bpm: 16 bars,
+# 32 s (vanilla 32.0 s, frame-exact). Rising square arpeggios over a wave-channel drone (the hum), a slow horn
+# line, a held square pad that breaks into pulses in the second half, soft timpani swells into each half.
+name: evolution
+replaces: MUS_EVOLUTION
+form: LOOP
+voicegroup: evolution                 # timpani 47, horn 60, sq2 80 (50%), wave 81, sq1 82 (50%), sq2 83 (75%), sq1 84 (75%)
+master_volume: 80
+tempo: 120
+steps_per_beat: 4
+time_signature: [4, 4]
+seed: 9
+
+parts:
+  horn:    {program: 60, channel: 0, volume: 96,  pan: 6,   gate: 0.97, humanize: {vel: 3}}
+  timpani: {program: 47, channel: 1, volume: 80,  pan: -10, gate: 1.0}
+  arp:     {program: 80, channel: 2, volume: 46,  pan: -28, octave: 4, gate: 0.7, mono: true}
+  hum:     {program: 81, channel: 3, volume: 70,  pan: 0,   octave: 2, gate: 1.0, role: bass, mono: true}
+  pad:     {program: 84, channel: 4, volume: 30,  pan: 28,  octave: 4, gate: 1.0, mono: true}
+
+progressions:
+  rise: "Dm | Bb | Gm | A | Dm | F | Eb | A"
+
+phrases:
+  line_a: |
+    D4:8 A4:8 | Bb4:12 A4:4 | G4:8 D5:8 | C#5:16 |
+    D5:6 E5:2 F5:8 | C5:8 A4:8 | Bb4:6 G4:2 Eb5:8 | A4:12 C#5:4
+  line_b: |
+    F5:8 E5:4 D5:4 | D5:12 F5:4 | Bb4:8 D5:8 | C#5:8 E5:8 |
+    D5:16 | C5:8 F5:8 | G4:8 Bb4:4 Eb5:4 | E5:12 C#5:4
+  arp_up: "^1:1 ^2:1 ^3:1 ^1+:1 ^2+:1 ^3+:1 ^1++:1 ^3+:1 ^1:1 ^2:1 ^3:1 ^1+:1 ^2+:1 ^3+:1 ^1++:1 ^3+:1"
+  drone: "^1:16"
+  hold: "^2+:16"
+  echo_b: "r:2 ^3:2 r:2 ^1+:2 r:2 ^3:2 r:2 ^1+:2"
+  swell_a: "r:16 | r:16 | r:16 | _A2:1 _A2:1 _A2:1 _A2:1 A2:1 A2:1 A2:1 A2:1 A2:1 A2:1 A2:1 A2:1 >A2:4 | D2:4 r:12 | r:16 | r:16 | _A2:1 _A2:1 _A2:1 _A2:1 A2:1 A2:1 A2:1 A2:1 >A2:4 r:4"
+
+sections:
+  a:
+    bars: 8
+    chords: rise
+    ramp: {arp: [-14, 0]}
+    parts: {horn: line_a, timpani: swell_a, arp: arp_up, hum: drone, pad: hold}
+  b:
+    bars: 8
+    chords: rise
+    parts: {horn: line_b, timpani: swell_a, arp: arp_up, hum: drone, pad: echo_b}
+    programs: {pad: 82}            # the pad's square turns to 50% duty eighth pulses in the second half
+
+arrangement: [a, b]
+loop_start: a
