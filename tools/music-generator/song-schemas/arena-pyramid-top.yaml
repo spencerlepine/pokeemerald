@@ -1,0 +1,56 @@
+# Arena Pyramid Top (Grand Arena): hot-swap of MUS_B_PYRAMID_TOP (wiki audio:MUS_B_PYRAMID_TOP, FACILITY / LOOP).
+# STYLE of "The Return of the Jedi" (soundtrack:return-jedi:10): an original fanfare-like melody, not a quote.
+# Taken from the cue: D major, its broad 74 bpm, the Williams flat-six lift (D to Bb) before G and A, horn on the
+# tune with strings and choir sustained under it, harp-like arpeggios. Kept short like the vanilla loop (13 s).
+# Brief (sw_subject): Battle Pyramid summit, grand reveal.
+name: arena-pyramid-top
+replaces: MUS_B_PYRAMID_TOP
+form: LOOP
+voicegroup: b_pyramid_top         # vanilla: strings 48, horn 60, choir 53, bell 14, drumset 0, waves, squares
+master_volume: 77
+tempo: 74
+steps_per_beat: 4
+time_signature: [4, 4]
+seed: 9
+
+parts:
+  horn:    {program: 60, channel: 0, volume: 104, pan: 6,   gate: 0.95, humanize: {vel: 4}}
+  strings: {program: 48, channel: 1, volume: 80,  pan: -18, octave: 4, gate: 1.0}
+  choir:   {program: 53, channel: 2, volume: 64,  pan: 22,  octave: 4, gate: 1.0}
+  drums:   {program: 0,  channel: 3, volume: 84,  pan: 0,   role: drums, kit: {kick: 36, crash: 55, tom: 45}}
+  arp:     {program: 80, channel: 4, volume: 42,  pan: -32, octave: 4, gate: 0.6, mono: true}
+  bass:    {program: 87, channel: 5, volume: 92,  pan: 0,   octave: 2, gate: 0.85, role: bass, mono: true}
+  echo:    {program: 86, channel: 6, volume: 30,  pan: 34,  gate: 0.5, mono: true}
+
+progressions:
+  reveal: "D | Bb | G | A"
+  intro:  "A"
+
+phrases:
+  tune: "F#4:6 A4:2 D5:8 | D5:6 Bb4:2 F5:8 | D5:8 B4:4 G4:2 B4:2 | A4:12 E4:4"
+  echo_t: "r:4 F#4:6 A4:2 D5:4 | r:4 D5:6 Bb4:2 F5:4 | r:4 D5:8 B4:4 | r:16"
+  rise: "^1:1 ^2:1 ^3:1 ^1+:1 ^2+:1 ^3+:1 ^2+:1 ^1+:1 ^3:1 ^2:1 ^1:1 ^2:1 ^3:1 ^1+:1 ^2+:1 ^3+:1"
+  hold3: "^3:16"
+  hold2: "^2:16"
+  roots: "^1:6 ^1:2 ^1:4 ^3:4"
+
+grooves:
+  summit:
+    kick:  "x.......x.......|x.......x.......|x.......x.......|x.......x...x..."
+    crash: "................|................|x...............|................"
+  swell:
+    tom:   "x...x...x.x.xxxx"
+
+sections:
+  intro:
+    bars: 1
+    chords: intro
+    ramp: {strings: [-24, 0], arp: [-16, 0]}
+    parts: {strings: hold3, arp: rise, drums: swell, bass: "A1:16", horn: "r:12 r:2 E4:1 F#4:1"}
+  a:
+    bars: 4
+    chords: reveal
+    parts: {horn: tune, strings: hold3, choir: hold2, arp: rise, bass: roots, drums: summit, echo: echo_t}
+
+arrangement: [intro, a]
+loop_start: a
