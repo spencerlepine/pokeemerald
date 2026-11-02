@@ -120,6 +120,10 @@ sh05() { coins;   # leaves the roulette table open: reboot afterwards
          shot h07_roulette_bet; k A; w 3; shot h08_roulette_spin; w 8; k B; w 2; k A; w 2; k A; w 3; }
 sh34() { tp 26 31 4 9; k UP; w 0.5; local i; for i in $(seq 1 17); do k A; w 1.6;   # Lv.50 factory challenge (saves in-emulator)
          case $i in 15) shot h34_factory_rental;; 16) shot h35_factory_rental_menu;; 17) shot h36_factory_summary;; esac; done; }
+s18() { bag 0 3; k A; w 1; k RIGHT; w 0.4; k A; w 2.5; shot 18_party_give; k A; w 2; shot 19_party_given; k A; w 2; unbag; }   # give ESCAPE ROPE
+s19b() { bag 0 7; k A; w 1; k A; w 2; k A; w 2; shot 19b_party_levelup_msg; k A; w 1.4; shot 19c_party_levelup_stats; k A; w 1.4;
+         shot 19d_party_levelup_stats2; k A; w 1.4; shot 19e_learn_move_msg; k A; w 1.4; k A; w 1.4; shot 19f_learn_move_yesno;
+         k A; w 2; k A; w 3; shot 19g_forget_move_summary; }   # RARE CANDY on the lead; ends in the forget-move screen: reboot after
 
 if [ "${1:-}" = do ]; then shift; "$@"; exit; fi   # ./capture.sh do FUNC ARGS: run one helper with arguments
 for s in "$@"; do if declare -F "$s" >/dev/null; then "$s"; else "s$s"; fi; done
