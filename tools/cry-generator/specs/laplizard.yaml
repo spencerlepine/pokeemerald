@@ -1,0 +1,27 @@
+name: laplizard
+slot: lickitung
+brief: "LAPLIZARD: creature call that fits its look and size. Long-tongued Hutt-world lizard."
+kind: creature
+size: 0.5
+seed: 125
+layers:
+  # A slobbery lizard warble: a wet, tongue-flapping "blelele" (fast vowel flutter) and a gulping,
+  # croaky "hrrruk" from the Nal Hutta swamps.
+  - type: voice
+    pitch: [[0, 340], [0.1, 440], [0.35, 400]]
+    source: {saw: 0.8, pulse: 0.5, pulse_width: 0.3, noise: 0.1}
+    vowels: [[0, e], [0.04, o], [0.08, e], [0.12, o], [0.16, e], [0.2, o], [0.24, e], [0.28, o], [0.35, aw]]
+    env: [[0, 0], [0.01, 1], [0.3, 0.8], [0.37, 0]]
+    vibrato: {rate: 25, depth: 0.04}
+    jitter: 0.03
+  - type: voice
+    at: 0.4
+    pitch: [[0, 260], [0.08, 320], [0.2, 220]]
+    source: {saw: 0.9, pulse: 0.5, pulse_width: 0.3, noise: 0.12}
+    vowels: [[0, rr], [0.1, u], [0.2, rr]]
+    env: [[0, 0], [0.01, 1], [0.15, 0.7], [0.21, 0]]
+    growl: 0.5
+    growl_rate: 30
+    drive: 2
+master:
+  rms: 0.27

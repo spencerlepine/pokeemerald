@@ -1,0 +1,30 @@
+name: protoclone
+slot: mewtwo
+brief: "PROTOCLONE: creature call that fits its look and size. Kaminoan clone experiment that escaped."
+kind: creature
+size: 0.78
+seed: 126
+layers:
+  # An escaped Kaminoan experiment: a cold, deep, menacing "hrrooAAAH" with a frame-stepped psychic
+  # warble, shadowed by a thin, synthetic lab-tone ringing a fifth above.
+  - type: voice
+    pitch: [[0, 200], [0.15, 300], [0.5, 340], [0.9, 280], [1.15, 180]]
+    pitch_step: 0.05
+    source: {saw: 0.9, pulse: 0.6, pulse_width: 0.3, noise: 0.08}
+    vowels: [[0, u], [0.2, o], [0.5, a], [0.9, aw], [1.15, rr]]
+    env: [[0, 0], [0.02, 1], [0.85, 0.85], [1.18, 0]]
+    vibrato: {rate: 7, depth: 0.04}
+    growl: 0.45
+    growl_rate: 30
+    jitter: 0.015
+    drive: 2.2
+  - type: tone
+    at: 0.15
+    wave: pulse
+    width: 0.3
+    pitch: [[0, 450], [0.35, 510], [0.75, 420], [0.9, 280]]
+    warble: {rate: 7, depth: 0.03}
+    env: [[0, 0], [0.1, 0.4], [0.7, 0.3], [0.95, 0]]
+    gain: 0.3
+master:
+  tilt_db: 3

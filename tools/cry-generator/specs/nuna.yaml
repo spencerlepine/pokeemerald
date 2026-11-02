@@ -1,0 +1,16 @@
+name: nuna
+slot: farfetchd
+brief: "NUNA: creature call that fits its look and size. Swamp turkey that carries a reed stick."
+kind: creature
+size: 0.35
+seed: 123
+layers:
+  # A swamp-turkey gobble: a fast, warbling "gobble-obble" with a nasal honk to finish.
+  - type: voice
+    pitch: [[0, 480], [0.18, 560], [0.3, 440]]
+    source: {saw: 0.8, pulse: 0.5, pulse_width: 0.3, noise: 0.06}
+    vowels: [[0, o], [0.04, ae], [0.08, o], [0.12, ae], [0.16, o], [0.2, ae], [0.3, aw]]
+    env: [[0, 0], [0.008, 1], [0.22, 0.8], [0.3, 0]]
+    vibrato: {rate: 26, depth: 0.08}
+    growl: 0.2
+    drive: 1.5

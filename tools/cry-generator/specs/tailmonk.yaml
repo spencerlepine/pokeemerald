@@ -1,0 +1,29 @@
+name: tailmonk
+slot: aipom
+brief: "TAILMONK: creature call that fits its look and size. Monkey with a hand on its tail."
+kind: creature
+size: 0.35
+seed: 121
+layers:
+  # A cheeky monkey "ook-ook-EEK!": two hooting chip-stepped ooks and a bright, squealing eek.
+  - type: voice
+    pitch: [[0, 420], [0.06, 520]]
+    pitch_step: 0.03
+    source: {saw: 0.7, pulse: 0.6, pulse_width: 0.3, noise: 0.05}
+    vowels: [[0, u], [0.06, o]]
+    env: [[0, 0], [0.006, 1], [0.06, 0.6], [0.08, 0]]
+  - type: voice
+    at: 0.11
+    pitch: [[0, 460], [0.06, 560]]
+    pitch_step: 0.03
+    source: {saw: 0.7, pulse: 0.6, pulse_width: 0.3, noise: 0.05}
+    vowels: [[0, u], [0.06, o]]
+    env: [[0, 0], [0.006, 1], [0.06, 0.6], [0.08, 0]]
+  - type: voice
+    at: 0.23
+    pitch: [[0, 620], [0.06, 900], [0.22, 820], [0.32, 640]]
+    source: {saw: 0.7, pulse: 0.6, pulse_width: 0.25, noise: 0.06}
+    vowels: [[0, i], [0.1, ee], [0.32, ae]]
+    env: [[0, 0], [0.008, 1], [0.24, 0.8], [0.34, 0]]
+    vibrato: {rate: 20, depth: 0.03}
+    growl: 0.2

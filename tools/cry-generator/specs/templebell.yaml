@@ -1,0 +1,36 @@
+name: templebell
+slot: chimecho
+brief: "TEMPLEBELL: creature call that fits its look and size. Living temple wind-chime."
+kind: creature
+size: 0.15
+seed: 122
+layers:
+  # A living Jedha wind-chime: three inharmonic sine/tri bell partials ringing out, and a soft, airy
+  # "hooo" voice inside the bell that makes it a creature.
+  - type: tone
+    wave: tri
+    pitch: [[0, 880], [0.4, 870]]
+    warble: {rate: 6, depth: 0.01}
+    env: [[0, 0], [0.004, 1], [0.1, 0.6], [0.4, 0]]
+    gain: 0.7
+  - type: tone
+    at: 0.08
+    wave: sine
+    pitch: [[0, 1318], [0.32, 1310]]
+    warble: {rate: 7, depth: 0.01}
+    env: [[0, 0], [0.004, 1], [0.1, 0.5], [0.32, 0]]
+    gain: 0.5
+  - type: tone
+    at: 0.16
+    wave: sine
+    pitch: [[0, 1046], [0.24, 1040]]
+    env: [[0, 0], [0.004, 1], [0.08, 0.5], [0.24, 0]]
+    gain: 0.45
+  - type: voice
+    at: 0.02
+    pitch: [[0, 660], [0.15, 700], [0.36, 620]]
+    source: {pulse: 0.5, pulse_width: 0.4, saw: 0.2, noise: 0.15}
+    vowels: [[0, o], [0.36, u]]
+    env: [[0, 0], [0.05, 0.5], [0.3, 0.3], [0.38, 0]]
+    vibrato: {rate: 6, depth: 0.03}
+    gain: 0.4

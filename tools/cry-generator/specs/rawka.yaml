@@ -1,0 +1,27 @@
+name: rawka
+slot: murkrow
+brief: "RAWKA: creature call that fits its look and size. Dark rawka crow of Dathomir; seeing one is a bad omen."
+kind: creature
+size: 0.2
+seed: 127
+layers:
+  # An ominous crow: two harsh, raspy "KRAAW" caws, the second dragging down like a bad omen.
+  - type: voice
+    pitch: [[0, 520], [0.05, 660], [0.2, 520]]
+    source: {saw: 0.9, pulse: 0.5, pulse_width: 0.2, noise: 0.25}
+    vowels: [[0, er], [0.04, a], [0.2, aw]]
+    env: [[0, 0], [0.008, 1], [0.16, 0.8], [0.22, 0]]
+    growl: 0.6
+    growl_rate: 70
+    jitter: 0.04
+    drive: 2.5
+  - type: voice
+    at: 0.3
+    pitch: [[0, 540], [0.06, 640], [0.3, 400]]
+    source: {saw: 0.9, pulse: 0.5, pulse_width: 0.2, noise: 0.25}
+    vowels: [[0, er], [0.05, a], [0.3, aw]]
+    env: [[0, 0], [0.008, 1], [0.24, 0.7], [0.32, 0]]
+    growl: 0.65
+    growl_rate: 60
+    jitter: 0.04
+    drive: 2.5

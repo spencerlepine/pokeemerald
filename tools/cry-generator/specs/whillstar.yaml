@@ -1,0 +1,23 @@
+name: whillstar
+slot: jirachi
+brief: "WHILLSTAR: creature call that fits its look and size. Wish-granting star-creature from the Journal of the Whills."
+kind: creature
+size: 0.1
+seed: 124
+layers:
+  # A sleepy, wish-granting star: a sweet, sung "ah-ii" with a slow, dreamy vibrato and a twinkle of
+  # sine chimes sparkling above.
+  - type: voice
+    pitch: [[0, 640], [0.08, 760], [0.3, 860], [0.5, 720]]
+    source: {pulse: 0.6, pulse_width: 0.4, saw: 0.2, noise: 0.04}
+    vowels: [[0, a], [0.2, e], [0.4, i], [0.5, ee]]
+    env: [[0, 0], [0.02, 1], [0.4, 0.8], [0.52, 0]]
+    vibrato: {rate: 7, depth: 0.03}
+  - type: tone
+    at: 0.06
+    wave: sine
+    pitch: [[0, 2093], [0.08, 2093], [0.081, 2637], [0.16, 2637], [0.161, 3136], [0.24, 3136], [0.241, 2637], [0.32, 2637]]
+    env: [[0, 0], [0.004, 0.5], [0.07, 0.15], [0.08, 0.5], [0.15, 0.15], [0.16, 0.5], [0.23, 0.15], [0.24, 0.5], [0.33, 0]]
+    gain: 0.3
+master:
+  lowpass: 3600
