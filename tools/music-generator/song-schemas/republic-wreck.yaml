@@ -1,0 +1,58 @@
+# Republic Wreck off Kashyyyk (and the Tython Isle / Wellspring event islands until their split lands): hot-swap
+# of MUS_ABANDONED_SHIP (wiki audio:MUS_ABANDONED_SHIP, AMBIENT). STYLE of "Grievous Speaks to Lord Sidious"
+# (ref_tracks soundtrack:revenge-sith:13): no quote. Taken from the cue: a slow, dark E minor with a Phrygian
+# flat second (F), low brass groans moving by half step over a sustained organ-like drone, a tolling bell and
+# a soft timpani heartbeat. The wreck: harp and square drips at uneven spots, the horn creaking a half step up
+# and back, the wave bass a slow sway like a hull settling. Vanilla: abandoned_ship voicegroup, 100 bpm, 39.3 s
+# loop; this one 72 bpm, 12 bars, 40 s.
+# Brief (sw_subject): creaking hull, eerie, drips and groans.
+name: republic-wreck
+replaces: MUS_ABANDONED_SHIP
+form: AMBIENT
+voicegroup: abandoned_ship            # organ 17, horn 60, harp 46, timpani 47, tubular bell 14, squares 7/8, wave 81
+master_volume: 80
+tempo: 72
+steps_per_beat: 4
+time_signature: [4, 4]
+seed: 13
+
+parts:
+  organ:   {program: 17, channel: 0, volume: 62,  pan: -16, range: [E3, B3], gate: 1.0}
+  horn:    {program: 60, channel: 1, volume: 90,  pan: 10,  range: [E3, B4], gate: 0.98, humanize: {vel: 6}}
+  harp:    {program: 46, channel: 2, volume: 70,  pan: 26,  range: [E4, E6], gate: 0.9, humanize: {vel: 10}}
+  bell:    {program: 14, channel: 3, volume: 64,  pan: -24, range: [E3, E5], gate: 1.0}
+  timpani: {program: 47, channel: 4, volume: 80,  pan: 4,   range: [E2, B2], gate: 1.0}
+  bass:    {program: 81, channel: 5, volume: 96,  pan: 0,   range: [E1, E2], gate: 0.95}
+  drip:    {program: 8,  channel: 6, volume: 30,  pan: 36,  range: [E5, E7], gate: 0.25, mono: true}
+  creak:   {program: 7,  channel: 7, volume: 26,  pan: -36, range: [E3, E5], gate: 0.9, mono: true}
+
+phrases:
+  drone: |
+    E3:16 | E3:16 | F3:16 | E3:16 | E3:16 | E3:16 | G3:16 | F3:16 | E3:16 | E3:16 | F3:16 | E3:16
+  groan: |
+    r:16 | E4:8 F4:6 E4:2 | E4:16 | r:16 |
+    r:8 G4:8 | F#4:6 F4:2 E4:8 | r:16 | B3:8 C4:8 |
+    r:16 | E4:6 F4:2 G4:4 Bb4:4 | A4:8 F4:8 | E4:16
+  drips: |
+    r:6 B5:1 r:9 | r:12 E6:1 r:3 | r:2 G5:1 r:13 | r:16 |
+    r:9 F6:1 r:6 | r:16 | r:4 B5:1 r:5 E6:1 r:5 | r:16 |
+    r:7 G5:1 r:8 | r:14 F5:1 r:1 | r:16 | r:3 E6:1 r:12
+  harp_drips: |
+    r:16 | r:10 E5:2 r:4 | r:16 | r:4 F5:2 r:10 |
+    r:16 | r:16 | r:12 B4:2 r:2 | r:16 |
+    r:6 E5:2 r:8 | r:16 | r:16 | r:8 G4:2 F4:2 E4:4
+  toll: |
+    E4:16 | r:16 | r:16 | r:16 | B3:16 | r:16 | r:16 | r:16 | E4:16 | r:16 | F4:16 | r:16
+  heart: "E2:2 r:2 E2:2 r:10"
+  sway: |
+    E1:16 | E1:8 F1:8 | E1:16 | E1:16 | E1:16 | E1:8 D1:8 | C1:8 F1:8 | E1:16 | E1:16 | F1:16 | F1:8 E1:8 | E1:16
+  creaks: |
+    r:16 | r:16 | r:4 E3:4 F3:8 | r:16 | r:16 | r:16 | r:12 Bb3:4 | A3:8 r:8 | r:16 | r:16 | r:8 E3:2 F3:6 | r:16
+
+sections:
+  hull:
+    bars: 12
+    parts: {organ: drone, horn: groan, harp: harp_drips, bell: toll, timpani: heart, bass: sway, drip: drips, creak: creaks}
+
+arrangement: [hull]
+loop_start: hull

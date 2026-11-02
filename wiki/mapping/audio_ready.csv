@@ -1,4 +1,5 @@
 asset_id,made_by,audio_file,preview_file,spec,notes
+audio:MUS_ABANDONED_SHIP,music-generator,audio/sound/songs/midi/mus_abandoned_ship.mid,audio/previews/music/republic-wreck.mp3,tools/music-generator/song-schemas/republic-wreck.yaml,"republic-wreck; generated, gates passed; install with the spec"
 audio:MUS_ABNORMAL_WEATHER,music-generator,audio/sound/songs/midi/mus_abnormal_weather.mid,audio/previews/music/titan-storm.mp3,tools/music-generator/song-schemas/titan-storm.yaml,"titan-storm; generated, gates passed; install with the spec"
 audio:MUS_B_PALACE,music-generator,audio/sound/songs/midi/mus_b_palace.mid,audio/previews/music/arena-palace.mp3,tools/music-generator/song-schemas/arena-palace.yaml,"arena-palace; generated, gates passed; install with the spec"
 audio:MUS_B_PIKE,music-generator,audio/sound/songs/midi/mus_b_pike.mid,audio/previews/music/arena-pike.mp3,tools/music-generator/song-schemas/arena-pike.yaml,"arena-pike; generated, gates passed; install with the spec"
