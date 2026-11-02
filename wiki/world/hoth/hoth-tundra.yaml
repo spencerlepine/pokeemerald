@@ -4,7 +4,7 @@ planet: HOTH
 kind: route
 replaces: new
 status: BLOCKOUT
-art_status: pending-mockup
+art_status: pending-final-art
 story: 'New area: Hoth''s only overworld. A survey shuttle lands on the tundra; a Rebel survey team is scouting the planet for a future base. The trail runs north
   past the tauntaun shelter to the Wampa Cave; a frozen lake (Surf) and deep snow (wild encounters) fill the sides.'
 notes: 'hoth-tundra (route, 48x40): the only overworld: the survey shuttle on the tundra, the Rebel survey outpost (hex hangar), the tauntaun shelter, the Wampa Cave

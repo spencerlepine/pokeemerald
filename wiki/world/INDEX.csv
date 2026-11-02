@@ -43,7 +43,7 @@ atollon-hangar,ATOLLON,interior,BirthIsland_Harbor,BLOCKOUT,area,ATOLLON HANGAR,
 atollon-hangar,ATOLLON,interior,BirthIsland_Harbor,BLOCKOUT,person,Sailor,1x1,,,PLACEHOLDER,
 atollon-hangar,ATOLLON,interior,BirthIsland_Harbor,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER,
 atollon-hangar,ATOLLON,interior,BirthIsland_Harbor,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
-cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,area,CLOUD CITY,70x46,,,pending-mockup,greybox terrain
+cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,area,CLOUD CITY,70x46,,,pending-final-art,greybox terrain
 cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,building,Galleria (department store),8x6,art:bespin:department-store,yes,pending-final-art,greybox piece
 cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,building,Museum,5x6,art:bespin:cloud-city-tower,yes,pending-final-art,greybox piece
 cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,building,Showcase hall,5x6,art:bespin:cloud-city-tower,yes,pending-final-art,greybox piece
@@ -725,7 +725,7 @@ route-130,DAGOBAH,route,Route130,BLOCKOUT,person,Trainer Rirkel,1x1,,,PLACEHOLDE
 route-130,DAGOBAH,route,Route130,BLOCKOUT,person,Trainer Kuena,1x1,,,PLACEHOLDER,
 route-130,DAGOBAH,route,Route130,BLOCKOUT,person,Trainer Seshon,1x1,,,PLACEHOLDER,
 route-130,DAGOBAH,route,Route130,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER,
-death-star-ds-1,DEATH STAR,dungeon,new,BLOCKOUT,area,DEATH STAR DS-1,25x16,,,pending-mockup,greybox terrain
+death-star-ds-1,DEATH STAR,dungeon,new,BLOCKOUT,area,DEATH STAR DS-1,25x16,,,pending-final-art,greybox terrain
 death-star-ds-1,DEATH STAR,dungeon,new,BLOCKOUT,person,Stormtrooper,1x1,,,PLACEHOLDER,
 death-star-ds-1,DEATH STAR,dungeon,new,BLOCKOUT,person,Imperial officer,1x1,,,PLACEHOLDER,
 death-star-ds-1,DEATH STAR,dungeon,new,BLOCKOUT,person,Stormtrooper,1x1,,,PLACEHOLDER,
@@ -1823,7 +1823,7 @@ wampa-cave-low-tide-stairs-room,HOTH,dungeon,ShoalCave_LowTideStairsRoom,BLOCKOU
 wampa-cave-low-tide-stairs-room,HOTH,dungeon,ShoalCave_LowTideStairsRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
 wampa-cave-low-tide-stairs-room,HOTH,dungeon,ShoalCave_LowTideStairsRoom,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 wampa-cave-low-tide-stairs-room,HOTH,dungeon,ShoalCave_LowTideStairsRoom,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
-hoth-tundra,HOTH,route,new,BLOCKOUT,area,HOTH TUNDRA,48x40,,,pending-mockup,greybox terrain
+hoth-tundra,HOTH,route,new,BLOCKOUT,area,HOTH TUNDRA,48x40,,,pending-final-art,greybox terrain
 hoth-tundra,HOTH,route,new,BLOCKOUT,building,Survey shuttle pad (ships),6x4,art:shared:landing-pad,yes,pending-final-art,greybox piece
 hoth-tundra,HOTH,route,new,BLOCKOUT,building,Rebel survey outpost,8x5,art:hoth:echo-base-hangar-door,yes,pending-final-art,greybox piece
 hoth-tundra,HOTH,route,new,BLOCKOUT,building,Tauntaun shelter,5x4,art:hoth:tauntaun-shelter,yes,pending-final-art,greybox piece
@@ -1902,7 +1902,7 @@ crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,BLOCKOUT,warp,Door,1x1,,,PLACEHOL
 crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
-crystal-caves-b2f,ILUM,dungeon,VictoryRoad_B2F,BLOCKOUT,area,CRYSTAL CAVES B2F,46x31,,,pending-mockup,greybox terrain
+crystal-caves-b2f,ILUM,dungeon,VictoryRoad_B2F,BLOCKOUT,area,CRYSTAL CAVES B2F,46x31,,,pending-final-art,greybox terrain
 crystal-caves-b2f,ILUM,dungeon,VictoryRoad_B2F,BLOCKOUT,person,Trainer Vean,1x1,,,PLACEHOLDER,
 crystal-caves-b2f,ILUM,dungeon,VictoryRoad_B2F,BLOCKOUT,person,Trainer Otgan,1x1,,,PLACEHOLDER,
 crystal-caves-b2f,ILUM,dungeon,VictoryRoad_B2F,BLOCKOUT,person,Trainer Cossena,1x1,,,PLACEHOLDER,
@@ -2282,7 +2282,7 @@ route-133,KAMINO,route,Route133,BLOCKOUT,person,Trainer Ciskir,1x1,,,PLACEHOLDER
 route-133,KAMINO,route,Route133,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER,
 route-133,KAMINO,route,Route133,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER,
 route-133,KAMINO,route,Route133,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER,
-route-134,KAMINO,route,Route134,BLOCKOUT,area,ROUTE 134,80x40,,,pending-mockup,greybox terrain
+route-134,KAMINO,route,Route134,BLOCKOUT,area,ROUTE 134,80x40,,,pending-final-art,greybox terrain
 route-134,KAMINO,route,Route134,BLOCKOUT,prop,Storm swell,3x1,art:kamino:storm-sea,yes,pending-mockup,greybox terrain
 route-134,KAMINO,route,Route134,BLOCKOUT,person,Trainer Juo,1x1,,,PLACEHOLDER,
 route-134,KAMINO,route,Route134,BLOCKOUT,person,Trainer Lai,1x1,,,PLACEHOLDER,
@@ -2397,7 +2397,7 @@ republic-wreck-room-b1f,KASHYYYK,dungeon,AbandonedShip_Room_B1F,BLOCKOUT,area,RE
 republic-wreck-room-b1f,KASHYYYK,dungeon,AbandonedShip_Room_B1F,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER,
 republic-wreck-room-b1f,KASHYYYK,dungeon,AbandonedShip_Room_B1F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 republic-wreck-room-b1f,KASHYYYK,dungeon,AbandonedShip_Room_B1F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
-republic-wreck-rooms-1f,KASHYYYK,dungeon,AbandonedShip_Rooms_1F,BLOCKOUT,area,REPUBLIC WRECK ROOMS 1F,18x17,,,pending-mockup,greybox terrain
+republic-wreck-rooms-1f,KASHYYYK,dungeon,AbandonedShip_Rooms_1F,BLOCKOUT,area,REPUBLIC WRECK ROOMS 1F,18x17,,,pending-final-art,greybox terrain
 republic-wreck-rooms-1f,KASHYYYK,dungeon,AbandonedShip_Rooms_1F,BLOCKOUT,person,Gentleman,1x1,,,PLACEHOLDER,
 republic-wreck-rooms-1f,KASHYYYK,dungeon,AbandonedShip_Rooms_1F,BLOCKOUT,person,Trainer Tuskelle,1x1,,,PLACEHOLDER,
 republic-wreck-rooms-1f,KASHYYYK,dungeon,AbandonedShip_Rooms_1F,BLOCKOUT,person,Trainer Donnek,1x1,,,PLACEHOLDER,
@@ -2498,7 +2498,7 @@ kachirho-bacta-center-2f,KASHYYYK,interior,DewfordTown_PokemonCenter_2F,BLOCKOUT
 kachirho-bacta-center-2f,KASHYYYK,interior,DewfordTown_PokemonCenter_2F,BLOCKOUT,person,Direct Corner Attendant,1x1,,,PLACEHOLDER,
 kachirho-bacta-center-2f,KASHYYYK,interior,DewfordTown_PokemonCenter_2F,BLOCKOUT,person,Mystery Gift Man,1x1,,,PLACEHOLDER,
 kachirho-bacta-center-2f,KASHYYYK,interior,DewfordTown_PokemonCenter_2F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
-kachirho-hall,KASHYYYK,interior,DewfordTown_Hall,BLOCKOUT,area,KACHIRHO HALL,17x9,,,pending-mockup,greybox room
+kachirho-hall,KASHYYYK,interior,DewfordTown_Hall,BLOCKOUT,area,KACHIRHO HALL,17x9,,,pending-final-art,greybox room
 kachirho-hall,KASHYYYK,interior,DewfordTown_Hall,BLOCKOUT,person,Girl,1x1,,,PLACEHOLDER,
 kachirho-hall,KASHYYYK,interior,DewfordTown_Hall,BLOCKOUT,person,Woman,1x1,,,PLACEHOLDER,
 kachirho-hall,KASHYYYK,interior,DewfordTown_Hall,BLOCKOUT,person,Man,1x1,,,PLACEHOLDER,
@@ -2813,7 +2813,7 @@ mustafar-peak-shuttle-station,MUSTAFAR,interior,MtChimney_CableCarStation,BLOCKO
 mustafar-peak-shuttle-station,MUSTAFAR,interior,MtChimney_CableCarStation,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER,
 mustafar-peak-shuttle-station,MUSTAFAR,interior,MtChimney_CableCarStation,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 mustafar-peak-shuttle-station,MUSTAFAR,interior,MtChimney_CableCarStation,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
-mustafar-mining-facility,MUSTAFAR,landmark,new,BLOCKOUT,area,MINING FACILITY,40x30,,,pending-mockup,greybox terrain
+mustafar-mining-facility,MUSTAFAR,landmark,new,BLOCKOUT,area,MINING FACILITY,40x30,,,pending-final-art,greybox terrain
 mustafar-mining-facility,MUSTAFAR,landmark,new,BLOCKOUT,building,Separatist control center,8x5,art:mustafar:fortress-halls,yes,pending-mockup,greybox room
 mustafar-mining-facility,MUSTAFAR,landmark,new,BLOCKOUT,prop,Mining collector,3x4,art:mustafar:mining-collector,yes,pending-final-art,greybox piece
 mustafar-mining-facility,MUSTAFAR,landmark,new,BLOCKOUT,prop,Mining collector,3x4,art:mustafar:mining-collector,yes,pending-final-art,greybox piece
@@ -3001,7 +3001,7 @@ magma-tunnels,SULLUST,dungeon,FieryPath,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER,
 magma-tunnels,SULLUST,dungeon,FieryPath,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER,
 magma-tunnels,SULLUST,dungeon,FieryPath,BLOCKOUT,warp,Exit to Route 113,1x1,,,PLACEHOLDER,
 magma-tunnels,SULLUST,dungeon,FieryPath,BLOCKOUT,warp,Exit to Pirin,1x1,,,PLACEHOLDER,
-starfall-cavern-1f-1r,SULLUST,dungeon,MeteorFalls_1F_1R,BLOCKOUT,area,STARFALL CAVERN 1F 1R,30x42,,,pending-mockup,greybox terrain
+starfall-cavern-1f-1r,SULLUST,dungeon,MeteorFalls_1F_1R,BLOCKOUT,area,STARFALL CAVERN 1F 1R,30x42,,,pending-final-art,greybox terrain
 starfall-cavern-1f-1r,SULLUST,dungeon,MeteorFalls_1F_1R,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER,
 starfall-cavern-1f-1r,SULLUST,dungeon,MeteorFalls_1F_1R,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER,
 starfall-cavern-1f-1r,SULLUST,dungeon,MeteorFalls_1F_1R,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER,
@@ -3369,9 +3369,9 @@ bestine,TATOOINE,town,RustboroCity,BLOCKOUT,sign,City holo-sign,1x1,,,PLACEHOLDE
 bestine,TATOOINE,town,RustboroCity,BLOCKOUT,sign,Arena sign,1x1,,,PLACEHOLDER,
 bestine,TATOOINE,town,RustboroCity,BLOCKOUT,sign,Academy sign,1x1,,,PLACEHOLDER,
 bestine,TATOOINE,town,RustboroCity,BLOCKOUT,sign,Organa tower sign,1x1,,,PLACEHOLDER,
-altering-cave,TATOOINE,dungeon,AlteringCave,BLOCKOUT,area,ALTERING CAVE,32x24,,,pending-mockup,greybox terrain
+altering-cave,TATOOINE,dungeon,AlteringCave,BLOCKOUT,area,ALTERING CAVE,32x24,,,pending-final-art,greybox terrain
 altering-cave,TATOOINE,dungeon,AlteringCave,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
-beggars-canyon,TATOOINE,dungeon,RusturfTunnel,BLOCKOUT,area,BEGGARS CANYON,36x24,,,pending-mockup,greybox terrain
+beggars-canyon,TATOOINE,dungeon,RusturfTunnel,BLOCKOUT,area,BEGGARS CANYON,36x24,,,pending-final-art,greybox terrain
 beggars-canyon,TATOOINE,dungeon,RusturfTunnel,BLOCKOUT,person,Wandas Boyfriend,1x1,,,PLACEHOLDER,
 beggars-canyon,TATOOINE,dungeon,RusturfTunnel,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER,
 beggars-canyon,TATOOINE,dungeon,RusturfTunnel,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER,
@@ -3439,7 +3439,7 @@ tusken-ruins,TATOOINE,dungeon,DesertRuins,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
 tusken-ruins,TATOOINE,dungeon,DesertRuins,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 tusken-ruins,TATOOINE,dungeon,DesertRuins,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 tusken-ruins,TATOOINE,dungeon,DesertRuins,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
-anchorhead-bacta-center-1f,TATOOINE,interior,VerdanturfTown_PokemonCenter_1F,BLOCKOUT,area,ANCHORHEAD BACTA CENTER 1F,14x9,,,pending-mockup,greybox room
+anchorhead-bacta-center-1f,TATOOINE,interior,VerdanturfTown_PokemonCenter_1F,BLOCKOUT,area,ANCHORHEAD BACTA CENTER 1F,14x9,,,pending-final-art,greybox room
 anchorhead-bacta-center-1f,TATOOINE,interior,VerdanturfTown_PokemonCenter_1F,BLOCKOUT,person,Nurse,1x1,,,PLACEHOLDER,
 anchorhead-bacta-center-1f,TATOOINE,interior,VerdanturfTown_PokemonCenter_1F,BLOCKOUT,person,Gentleman,1x1,,,PLACEHOLDER,
 anchorhead-bacta-center-1f,TATOOINE,interior,VerdanturfTown_PokemonCenter_1F,BLOCKOUT,person,Expert M,1x1,,,PLACEHOLDER,
@@ -3981,7 +3981,7 @@ mos-espa-speeder-shop,TATOOINE,interior,MauvilleCity_BikeShop,BLOCKOUT,sign,Sign
 mos-espa-speeder-shop,TATOOINE,interior,MauvilleCity_BikeShop,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
 mos-espa-speeder-shop,TATOOINE,interior,MauvilleCity_BikeShop,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 mos-espa-speeder-shop,TATOOINE,interior,MauvilleCity_BikeShop,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
-mos-espa-supply-depot,TATOOINE,interior,MauvilleCity_Mart,BLOCKOUT,area,MOS ESPA SUPPLY DEPOT,11x8,,,pending-mockup,greybox room
+mos-espa-supply-depot,TATOOINE,interior,MauvilleCity_Mart,BLOCKOUT,area,MOS ESPA SUPPLY DEPOT,11x8,,,pending-final-art,greybox room
 mos-espa-supply-depot,TATOOINE,interior,MauvilleCity_Mart,BLOCKOUT,person,Clerk,1x1,,,PLACEHOLDER,
 mos-espa-supply-depot,TATOOINE,interior,MauvilleCity_Mart,BLOCKOUT,person,Expert M,1x1,,,PLACEHOLDER,
 mos-espa-supply-depot,TATOOINE,interior,MauvilleCity_Mart,BLOCKOUT,person,Man,1x1,,,PLACEHOLDER,
@@ -4020,7 +4020,7 @@ mos-pelgo-korr-home-2f,TATOOINE,interior,LittlerootTown_MaysHouse_2F,BLOCKOUT,si
 mos-pelgo-korr-home-2f,TATOOINE,interior,LittlerootTown_MaysHouse_2F,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
 mos-pelgo-korr-home-2f,TATOOINE,interior,LittlerootTown_MaysHouse_2F,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
 mos-pelgo-korr-home-2f,TATOOINE,interior,LittlerootTown_MaysHouse_2F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
-mos-pelgo-lab,TATOOINE,interior,LittlerootTown_ProfessorBirchsLab,BLOCKOUT,area,MOS PELGO LAB,13x13,,,pending-mockup,greybox room
+mos-pelgo-lab,TATOOINE,interior,LittlerootTown_ProfessorBirchsLab,BLOCKOUT,area,MOS PELGO LAB,13x13,,,pending-final-art,greybox room
 mos-pelgo-lab,TATOOINE,interior,LittlerootTown_ProfessorBirchsLab,BLOCKOUT,person,Aide,1x1,,,PLACEHOLDER,
 mos-pelgo-lab,TATOOINE,interior,LittlerootTown_ProfessorBirchsLab,BLOCKOUT,person,Birch,1x1,,,PLACEHOLDER,
 mos-pelgo-lab,TATOOINE,interior,LittlerootTown_ProfessorBirchsLab,BLOCKOUT,person,Rival,1x1,,,PLACEHOLDER,
@@ -4044,7 +4044,7 @@ mos-pelgo-lab,TATOOINE,interior,LittlerootTown_ProfessorBirchsLab,BLOCKOUT,sign,
 mos-pelgo-lab,TATOOINE,interior,LittlerootTown_ProfessorBirchsLab,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
 mos-pelgo-lab,TATOOINE,interior,LittlerootTown_ProfessorBirchsLab,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 mos-pelgo-lab,TATOOINE,interior,LittlerootTown_ProfessorBirchsLab,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
-mos-pelgo-player-home-1f,TATOOINE,interior,LittlerootTown_BrendansHouse_1F,BLOCKOUT,area,MOS PELGO PLAYER HOME 1F,11x9,,,pending-mockup,greybox room
+mos-pelgo-player-home-1f,TATOOINE,interior,LittlerootTown_BrendansHouse_1F,BLOCKOUT,area,MOS PELGO PLAYER HOME 1F,11x9,,,pending-final-art,greybox room
 mos-pelgo-player-home-1f,TATOOINE,interior,LittlerootTown_BrendansHouse_1F,BLOCKOUT,person,Mom,1x1,,,PLACEHOLDER,
 mos-pelgo-player-home-1f,TATOOINE,interior,LittlerootTown_BrendansHouse_1F,BLOCKOUT,person,Vigoroth2,1x1,,,PLACEHOLDER,
 mos-pelgo-player-home-1f,TATOOINE,interior,LittlerootTown_BrendansHouse_1F,BLOCKOUT,person,Vigoroth1,1x1,,,PLACEHOLDER,
@@ -4425,7 +4425,7 @@ mos-entha,TATOOINE,town,PetalburgCity,BLOCKOUT,person,Spacer admiring the starfi
 mos-entha,TATOOINE,town,PetalburgCity,BLOCKOUT,sign,Town holo-sign,1x1,,,PLACEHOLDER,
 mos-entha,TATOOINE,town,PetalburgCity,BLOCKOUT,sign,Arena sign,1x1,,,PLACEHOLDER,
 mos-entha,TATOOINE,town,PetalburgCity,BLOCKOUT,sign,Lars homestead sign,1x1,,,PLACEHOLDER,
-mos-espa,TATOOINE,town,MauvilleCity,BLOCKOUT,area,MOS ESPA,56x36,,,pending-mockup,greybox terrain
+mos-espa,TATOOINE,town,MauvilleCity,BLOCKOUT,area,MOS ESPA,56x36,,,pending-final-art,greybox terrain
 mos-espa,TATOOINE,town,MauvilleCity,BLOCKOUT,building,Mos Espa Grand Arena (podrace stands),8x5,art:tatooine:podrace-arena,yes,pending-final-art,greybox piece
 mos-espa,TATOOINE,town,MauvilleCity,BLOCKOUT,building,Watto's junk shop (arena),5x4,art:tatooine:watto-s-junk-shop,yes,pending-final-art,greybox piece
 mos-espa,TATOOINE,town,MauvilleCity,BLOCKOUT,building,Bacta Center,5x4,art:shared:bacta-center,yes,pending-final-art,greybox piece

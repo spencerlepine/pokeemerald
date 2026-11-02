@@ -4,7 +4,7 @@ planet: TATOOINE
 kind: dungeon
 replaces: AlteringCave
 status: BLOCKOUT
-art_status: pending-mockup
+art_status: pending-final-art
 story: 'Altering Cave: a small cave off Route 103 whose single species changes with events (vanilla Mystery Gift).'
 notes: 'altering-cave (32x24): small sandstone cave · need: cave mode (walls on all sides, a dark margin).'
 grid: |

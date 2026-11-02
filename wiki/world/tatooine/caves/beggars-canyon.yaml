@@ -4,7 +4,7 @@ planet: TATOOINE
 kind: dungeon
 replaces: RusturfTunnel
 status: BLOCKOUT
-art_status: pending-mockup
+art_status: pending-final-art
 story: Narrow canyon tunnel between Route 116 and Anchorhead that Fixer is digging by hand; cartel thugs hold Chewie here until the player rescues him.
 notes: 'beggars-canyon (36x24): a narrow open canyon rather than a cave: high walls, a dug tunnel · relief covers the walls; need: the hand-dug tunnel mouth and cartel
   camp.'
