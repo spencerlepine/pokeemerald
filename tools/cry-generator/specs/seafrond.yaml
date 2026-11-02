@@ -1,0 +1,24 @@
+name: seafrond
+slot: lileep
+brief: "SEAFROND: creature call that fits its look and size. Fossil sea-lily from when Tatooine had oceans. Revived from the FROND FOSSIL."
+kind: creature
+size: 0.38
+seed: 791
+layers:
+  # A strange, watery ancient warble ("wuo-wuo-ooo"): slow throat pulsing like fronds swaying under water.
+  # Family DNA (sea-lily line): saw+pulse throat, u -> o -> aw vowels, slow 5-6 Hz sway wobble, bubbly noise.
+  - type: voice
+    pitch: [[0, 380], [0.1, 460], [0.3, 420], [0.44, 320]]
+    source: {saw: 0.6, pulse: 0.6, pulse_width: 0.35, noise: 0.05}
+    vowels: [[0, u], [0.1, o], [0.25, u], [0.44, aw]]
+    env: [[0, 0], [0.02, 1], [0.08, 0.7], [0.14, 1], [0.22, 0.7], [0.3, 0.9], [0.45, 0]]
+    vibrato: {rate: 12, depth: 0.05}
+    jitter: 0.02
+    drive: 1.5
+  - type: noise
+    at: 0.1
+    band: [[0, 900], [0.3, 1300]]
+    q: 3
+    env: [[0, 0], [0.05, 0.3], [0.3, 0]]
+    gain: 0.2
+master: {rms: 0.3}

@@ -1,0 +1,29 @@
+name: velker
+slot: altaria
+brief: "VELKER: creature call that fits its look and size. Bespin cloud predator that sings in the gas layers."
+kind: creature
+size: 0.4
+seed: 762
+layers:
+  # A gliding, hymn-like call: two airy sung notes ("hoo-weee-oo"), lower and longer than the chick, with gas wind.
+  # Family DNA (velker line): tri-like pulse with breath noise, i -> u vowels, slow singing vibrato, airy hiss.
+  - type: voice
+    pitch: [[0, 520], [0.12, 520], [0.15, 700], [0.35, 680], [0.48, 540]]
+    source: {pulse: 0.6, pulse_width: 0.45, saw: 0.3, noise: 0.12}
+    vowels: [[0, u], [0.14, i], [0.3, e], [0.48, u]]
+    env: [[0, 0], [0.02, 0.9], [0.12, 0.7], [0.15, 1], [0.38, 0.8], [0.49, 0]]
+    vibrato: {rate: 6, depth: 0.035}
+  - type: voice
+    at: 0.15
+    pitch: [[0, 1050], [0.2, 1020], [0.32, 820]]
+    source: {pulse: 0.5, pulse_width: 0.45, noise: 0.1}
+    vowels: [[0, i], [0.32, u]]
+    env: [[0, 0], [0.03, 0.4], [0.25, 0.3], [0.33, 0]]
+    vibrato: {rate: 6, depth: 0.035}
+    gain: 0.35
+  - type: noise
+    band: [[0, 1800], [0.45, 1200]]
+    q: 1.5
+    env: [[0, 0], [0.05, 0.25], [0.46, 0]]
+    gain: 0.2
+master: {lowpass: 3600, rms: 0.27}

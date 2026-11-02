@@ -1,0 +1,33 @@
+name: octuptarra
+slot: lairon
+brief: "OCTUPTARRA: electronic droid voice: beeps, whistles and servo whirs. Three-eyed octuptarra combat droid."
+kind: droid
+size: 0.55
+seed: 772
+layers:
+  # Turret servos swinging round, three blips (one per eye locking on), then a low two-tone warble alarm.
+  # Shared DNA with persuader (aggron line): gritty servo grind, pulse-wave two-tone alarm, relay clicks.
+  - type: servo
+    pitch: [[0, 70], [0.2, 180], [0.75, 160], [0.95, 70]]
+    harmonics: [1.0, 0.8, 0.6, 0.5, 0.3, 0.25]
+    env: [[0, 0], [0.06, 0.8], [0.85, 0.65], [0.96, 0]]
+    grit: 0.8
+    drive: 3
+    gain: 0.7
+  - type: tone
+    at: 0.08
+    wave: square
+    pitch: [[0, 1400], [0.2, 1400]]
+    env: [[0, 0], [0.005, 0.8], [0.04, 0.8], [0.045, 0], [0.07, 0], [0.075, 0.8], [0.11, 0.8], [0.115, 0], [0.14, 0], [0.145, 0.8], [0.18, 0.8], [0.19, 0]]
+    gain: 0.5
+  - type: tone
+    at: 0.32
+    wave: pulse
+    width: 0.3
+    pitch: [[0, 400], [0.15, 400], [0.16, 300], [0.31, 300], [0.32, 400], [0.5, 340]]
+    env: [[0, 0], [0.01, 1], [0.15, 1], [0.16, 0.4], [0.17, 1], [0.31, 1], [0.32, 0.4], [0.33, 1], [0.55, 0]]
+    drive: 2
+    gain: 0.8
+  - type: click
+    times: [0.02, 0.06, 0.88, 0.93]
+    gain: 0.5

@@ -1,0 +1,37 @@
+name: sporefist
+slot: breloom
+brief: "SPOREFIST: creature call that fits its look and size. Fungus-armored jungle brawler with spring-loaded arms."
+kind: creature
+size: 0.45
+seed: 782
+layers:
+  # A boxer's "hup-HAH!": a springy twang-punch, a gruff shout with the family hop, and a spore puff on impact.
+  # Family DNA (spore line): round pulse throat, o -> e vowels, bouncing pitch hop, spore-puff noise.
+  - type: click
+    times: [0.0, 0.22]
+    gain: 0.6
+  - type: voice
+    at: 0.01
+    pitch: [[0, 300], [0.04, 400], [0.12, 300]]
+    source: {pulse: 0.8, pulse_width: 0.35, saw: 0.5, noise: 0.08}
+    vowels: [[0, m], [0.03, o], [0.12, u]]
+    env: [[0, 0], [0.01, 1], [0.09, 0.7], [0.13, 0]]
+    growl: 0.25
+    growl_rate: 40
+    drive: 2
+  - type: voice
+    at: 0.2
+    pitch: [[0, 340], [0.05, 520], [0.25, 460], [0.37, 330]]
+    source: {pulse: 0.8, pulse_width: 0.35, saw: 0.5, noise: 0.08}
+    vowels: [[0, o], [0.06, a], [0.22, e], [0.37, er]]
+    env: [[0, 0], [0.01, 1], [0.25, 0.8], [0.38, 0]]
+    growl: 0.35
+    growl_rate: 40
+    jitter: 0.02
+    drive: 2.2
+  - type: noise
+    at: 0.24
+    band: [1300]
+    q: 1
+    env: [[0, 0], [0.02, 0.45], [0.15, 0]]
+    gain: 0.3
