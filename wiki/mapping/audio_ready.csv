@@ -1,5 +1,6 @@
 asset_id,made_by,audio_file,preview_file,spec,notes
 audio:MUS_ABNORMAL_WEATHER,music-generator,audio/sound/songs/midi/mus_abnormal_weather.mid,audio/previews/music/titan-storm.mp3,tools/music-generator/song-schemas/titan-storm.yaml,"titan-storm; generated, gates passed; install with the spec"
+audio:MUS_B_TOWER_RS,music-generator,audio/sound/songs/midi/mus_b_tower_rs.mid,audio/previews/music/grand-arena-halls.mp3,tools/music-generator/song-schemas/grand-arena-halls.yaml,"grand-arena-halls; generated, gates passed; install with the spec"
 audio:MUS_END,music-generator,audio/sound/songs/midi/mus_end.mid,audio/previews/music/the-end.mp3,tools/music-generator/song-schemas/the-end.yaml,"the-end; generated, gates passed; install with the spec"
 audio:MUS_FALLARBOR,music-generator,audio/sound/songs/midi/mus_fallarbor.mid,audio/previews/music/fallarbor-inyusu-tor.mp3,tools/music-generator/song-schemas/fallarbor-inyusu-tor.yaml,"fallarbor-inyusu-tor; generated, gates passed; install with the spec"
 audio:MUS_MOVE_DELETED,music-generator,audio/sound/songs/midi/mus_move_deleted.mid,audio/previews/music/move-forgotten.mp3,tools/music-generator/song-schemas/move-forgotten.yaml,"move-forgotten; generated, gates passed; install with the spec"
