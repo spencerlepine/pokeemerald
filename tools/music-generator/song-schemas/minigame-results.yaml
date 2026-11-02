@@ -1,0 +1,56 @@
+# Minigame Results (link minigames): hot-swap of MUS_RG_VICTORY_WILD (wiki audio:MUS_RG_VICTORY_WILD, MINIGAME /
+# LOOP). SCRATCH: no film cue, written from the brief in the Star Wars victory idiom: a short Bb major brass tune
+# that rises to the high Bb, tuba oom-pah, timpani on the downbeats, a flute answer in the second half and a C7 to
+# F turnaround back to the top. 140 bpm like the vanilla song; 1-bar fanfare, 8-bar loop (14 s).
+# Brief (sw_subject): link minigame results.
+name: minigame-results
+replaces: MUS_RG_VICTORY_WILD
+form: LOOP
+voicegroup: rg_victory_wild       # vanilla: trumpet 56, tuba 58, flute 73, timpani 47, rs_drumset 0, square1 82, square2 83
+master_volume: 90
+tempo: 140
+steps_per_beat: 2
+time_signature: [4, 4]
+seed: 37
+
+parts:
+  trumpet: {program: 56, channel: 0, volume: 100, pan: 6,   gate: 0.85, humanize: {vel: 4}}
+  tuba:    {program: 58, channel: 1, volume: 96,  pan: 0,   octave: 2, gate: 0.6, role: bass}
+  flute:   {program: 73, channel: 2, volume: 86,  pan: 14,  gate: 0.9}
+  timpani: {program: 47, channel: 3, volume: 88,  pan: -16, gate: 1.0}
+  drums:   {program: 0,  channel: 4, volume: 70,  pan: 8,   role: drums, kit: {sn: 38}}
+  after:   {program: 82, channel: 5, volume: 38,  pan: -28, octave: 4, gate: 0.4, mono: true}
+  harm:    {program: 83, channel: 6, volume: 32,  pan: 28,  octave: 4, gate: 0.9, mono: true}
+
+progressions:
+  win:   "Bb | Eb | Bb | F | Gm | Eb | C7 | F"
+  intro: "F"
+
+phrases:
+  oompah: "^1:2 ^3-:2 ^1:2 ^3-:2"
+  offb:   "r:1 ^2:1 r:1 ^3:1 r:1 ^2:1 r:1 ^3:1"
+  hold:   "^2:8"
+  tune: |
+    F4:1 Bb4:1 D5:2 F5:3 D5:1 | Eb5:2 G5:2 Bb5:4 | F5:2 D5:1 Bb4:1 F5:2 D5:2 | C5:6 r:2 |
+    D5:2 G5:3 F5:1 D5:2 | Eb5:2 G5:2 Bb5:3 G5:1 | E5:2 G5:2 C6:2 Bb5:2 | A5:4 F5:2 C5:2
+  answer: "r:8 | r:8 | r:8 | r:4 C6:1 Bb5:1 A5:1 G5:1 | Bb5:8 | G5:8 | C6:4 Bb5:4 | A5:4 r:4"
+  timp:   "Bb2:2 r:6 | Eb3:2 r:6 | Bb2:2 r:6 | F2:2 r:2 F2:1 F2:1 F2:2 | G2:2 r:6 | Eb3:2 r:6 | C3:2 r:6 | F2:2 r:6"
+
+grooves:
+  march:
+    sn: "..x...x.|..x...x.|..x...x.|..x.xxx.|..x...x.|..x...x.|..x...x.|..x.x.x."
+  roll:
+    sn: "x.x.rrRR"
+
+sections:
+  intro:
+    bars: 1
+    chords: intro
+    parts: {trumpet: "C5:1 C5:1 C5:1 r:1 F5:2 r:2", tuba: oompah, timpani: "F2:1 F2:1 F2:1 F2:1 F2:1 F2:1 F2:1 F2:1", drums: roll, harm: hold}
+  a:
+    bars: 8
+    chords: win
+    parts: {trumpet: tune, tuba: oompah, flute: answer, timpani: timp, drums: march, after: offb, harm: hold}
+
+arrangement: [intro, a]
+loop_start: a
