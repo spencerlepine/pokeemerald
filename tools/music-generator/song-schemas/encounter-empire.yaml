@@ -1,0 +1,77 @@
+# Encounter: Empire. Hot-swap of MUS_ENCOUNTER_MAGMA (wiki audio:MUS_ENCOUNTER_MAGMA): eye-contact music for the
+# 32 Imperial trainers. STYLE of "Imperial Attack" (soundtrack:new-hope:02): an original tune, not a quote. Taken
+# from the cue: its 148 bpm drive, A minor pulled toward Bb (the half-step Imperial menace), brass on top, a
+# military snare and a pounding low ostinato. Brief (sw_subject): Imperial troops appear: cold, marching.
+name: encounter-empire
+replaces: MUS_ENCOUNTER_MAGMA
+form: LOOP
+voicegroup: encounter_magma           # vanilla: trumpet 56, horn 60, synth bass 38, timpani 47, kit 0, squares 80/81, noise 126
+master_volume: 74
+tempo: 148
+steps_per_beat: 4                     # 16th grid
+time_signature: [4, 4]
+seed: 21
+
+parts:
+  trumpet: {program: 56, channel: 0, volume: 104, pan: 8,   range: [E4, A5], gate: 0.88, humanize: {vel: 4}}
+  horn:    {program: 60, channel: 1, volume: 84,  pan: -14, octave: 3, range: [C3, A4], gate: 0.95}
+  bass:    {program: 38, channel: 2, volume: 108, pan: 0,   octave: 1, range: [E1, A2], gate: 0.7, role: bass}
+  timpani: {program: 47, channel: 3, volume: 96,  pan: 18,  octave: 2, range: [E2, A2], gate: 1.0}
+  snare:   {program: 0,  channel: 4, volume: 80,  pan: 10,  role: drums, kit: {sn: 40}}
+  hat:     {program: 126, channel: 5, volume: 44, pan: -20, gate: 0.3, mono: true}
+  sq1:     {program: 80, channel: 6, volume: 44,  pan: 32,  octave: 4, range: [A3, E5], gate: 0.5, mono: true}
+  sq2:     {program: 81, channel: 7, volume: 40,  pan: -32, octave: 4, range: [A3, E5], gate: 0.6, mono: true}
+
+progressions:
+  verse:  "Am | Bb | Am | E"
+  turn:   "Dm | Bb | Dm | E"
+
+phrases:
+  ostinato: "^1:2 ^1:2 ^1+:2 ^1:2 ^1:2 ^1:2 ^1+:2 ^1:2"
+  timp: "^1:4 r:8 ^1:2 ^1:2"
+  horn_pad: "^2:8 ^3:8"
+  tune_a: |
+    A4:3 A4:1 E5:6 r:2 D5:2 C5:2 | D5:3 D5:1 F5:6 r:2 E5:2 D5:2 |
+    C5:3 C5:1 B4:2 A4:2 E5:4 C5:4 | B4:4 G#4:4 E4:8
+  tune_b: |
+    F5:3 E5:1 D5:4 A4:4 D5:4 | F5:3 E5:1 D5:4 Bb4:8 |
+    A5:3 G5:1 F5:4 E5:2 D5:2 F5:4 | E5:8 G#4:4 B4:4
+  horn_theme: |
+    A3:3 A3:1 E4:6 r:2 D4:2 C4:2 | D4:3 D4:1 F4:6 r:2 E4:2 D4:2 |
+    C4:3 C4:1 B3:2 A3:2 E4:4 C4:4 | B3:4 G#3:4 E3:8
+  hats: "G6:2 _G6:2 G6:2 _G6:2 G6:2 _G6:2 G6:2 _G6:2"
+  arp: "^1:1 ^2:1 ^3:1 ^2:1 ^1:1 ^2:1 ^3:1 ^2:1 ^1+:1 ^3:1 ^2:1 ^3:1 ^1+:1 ^3:1 ^2:1 ^3:1"
+  pulse: "r:2 ^3:2 r:2 ^3:2 r:2 ^3:2 r:2 ^3:2"
+  sq_c: |
+    E5:4 r:4 E5:2 D5:2 C5:4 | F5:4 r:4 F5:2 E5:2 D5:4 | E5:4 r:4 C5:2 B4:2 A4:4 | G#4:8 B4:8
+
+grooves:
+  march:
+    sn: "X...x.x.x...x.xx|X...x.x.x..xx.x."
+  roll:
+    sn: "x.......rrrrRRRR"
+  roll_end:
+    sn: "X...x.x.x..xrRRR"
+
+sections:
+  intro:
+    bars: 2
+    chords: "Am | E"
+    parts: {bass: ostinato, timpani: timp, snare: roll, horn: "A3:16 | G#3:16"}
+  a:
+    bars: 4
+    chords: verse
+    parts: {trumpet: tune_a, horn: horn_pad, bass: ostinato, timpani: timp, snare: march, hat: hats, sq2: pulse}
+  b:
+    bars: 4
+    chords: turn
+    parts: {trumpet: tune_b, horn: horn_pad, bass: ostinato, timpani: timp, snare: march, hat: hats, sq1: arp, sq2: pulse}
+  c:
+    bars: 4
+    chords: verse
+    fill: roll_end
+    gain: {bass: -6}
+    parts: {trumpet: "_E5:16 | _F5:16 | E5:12 C5:4 | B4:8 G#4:4 B4:4", horn: horn_theme, bass: ostinato, timpani: timp, snare: march, hat: hats, sq1: arp, sq2: sq_c}
+
+arrangement: [intro, a, b, c]
+loop_start: a
