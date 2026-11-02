@@ -1,0 +1,36 @@
+name: seekerball
+slot: electrode
+brief: "SEEKERBALL: creature call that fits its look and size. Overcharged combat remote that may explode."
+kind: droid
+size: 0.5
+seed: 91
+layers:
+  # Family voice (training remotes): a hovering repulsor hum and stepped square-wave "bee-doo" chirps,
+  # here overcharged: lower, crackling, a rising whine like a capacitor about to blow, then a pop.
+  - type: servo
+    pitch: [[0, 120], [0.6, 260], [0.85, 420]]
+    harmonics: [1.0, 0.7, 0.5, 0.4, 0.3]
+    env: [[0, 0], [0.05, 0.6], [0.8, 0.8], [0.9, 0]]
+    grit: 0.7
+    gain: 0.6
+  - type: tone
+    wave: square
+    pitch: [[0, 880], [0.08, 880], [0.081, 660], [0.16, 660], [0.161, 990], [0.3, 990], [0.301, 740], [0.4, 740]]
+    warble: {rate: 30, depth: 0.06, shape: square}
+    env: [[0, 0], [0.005, 0.8], [0.075, 0.8], [0.08, 0.2], [0.085, 0.8], [0.155, 0.8], [0.16, 0.2], [0.165, 0.8], [0.4, 0.6], [0.42, 0]]
+    gain: 0.7
+  - type: tone
+    at: 0.45
+    wave: pulse
+    width: 0.2
+    pitch: [[0, 500], [0.45, 1700]]
+    warble: {rate: 40, depth: 0.08, shape: square}
+    env: [[0, 0], [0.02, 0.6], [0.43, 0.8], [0.46, 0]]
+    drive: 2
+    gain: 0.6
+  - type: noise
+    at: 0.9
+    band: [[0, 1200], [0.08, 700]]
+    q: 0.8
+    env: [[0, 0], [0.005, 1], [0.08, 0]]
+    gain: 0.6

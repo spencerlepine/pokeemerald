@@ -1,0 +1,16 @@
+name: swampslug
+slot: slowpoke
+brief: "SWAMPSLUG: creature call that fits its look and size. Dagobah swamp slug, slow and strangely wise."
+kind: creature
+size: 0.45
+seed: 81
+layers:
+  # Family voice (Dagobah slugs): a dopey, yawning "hwaa-uh" from a wet, low throat that sags in
+  # pitch. The smallest is a short, sleepy yawn.
+  - type: voice
+    pitch: [[0, 340], [0.08, 400], [0.3, 300]]
+    source: {saw: 0.8, pulse: 0.4, pulse_width: 0.4, noise: 0.08}
+    vowels: [[0, a], [0.15, aw], [0.3, u]]
+    env: [[0, 0], [0.02, 1], [0.22, 0.8], [0.31, 0]]
+    vibrato: {rate: 5, depth: 0.03}
+    jitter: 0.02

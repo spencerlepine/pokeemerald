@@ -1,0 +1,20 @@
+name: slugshell
+slot: slowbro
+brief: "SLUGSHELL: creature call that fits its look and size. Swamp slug wearing a shellfish."
+kind: creature
+size: 0.62
+seed: 82
+layers:
+  # Family voice (Dagobah slugs): the dopey, sagging "hwaa-uh" yawn, deeper and longer, with the
+  # shellfish clamping down (two clacks) halfway through.
+  - type: voice
+    pitch: [[0, 270], [0.1, 320], [0.35, 290], [0.55, 220]]
+    source: {saw: 0.8, pulse: 0.4, pulse_width: 0.4, noise: 0.08}
+    vowels: [[0, a], [0.2, aw], [0.4, o], [0.56, u]]
+    env: [[0, 0], [0.02, 1], [0.42, 0.8], [0.57, 0]]
+    vibrato: {rate: 4.5, depth: 0.03}
+    growl: 0.15
+    jitter: 0.02
+  - type: click
+    times: [0.3, 0.34]
+    gain: 0.5

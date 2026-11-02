@@ -1,0 +1,29 @@
+name: burrownub
+slot: diglett
+brief: "BURROWNUB: creature call that fits its look and size. Mole that pops out of Cloud City's tibanna mine floors."
+kind: creature
+size: 0.07
+seed: 88
+layers:
+  # Family voice (burrow moles): popping "dig-dig" chirps from a little nasal snout, frame-stepped,
+  # ending in a sliding "pyuu" as it ducks back down.
+  - type: voice
+    pitch: [[0, 560], [0.05, 660]]
+    pitch_step: 0.04
+    source: {pulse: 0.8, pulse_width: 0.3, saw: 0.3, noise: 0.05}
+    vowels: [[0, i], [0.06, e]]
+    env: [[0, 0], [0.006, 1], [0.05, 0.6], [0.07, 0]]
+  - type: voice
+    at: 0.12
+    pitch: [[0, 600], [0.05, 700]]
+    pitch_step: 0.04
+    source: {pulse: 0.8, pulse_width: 0.3, saw: 0.3, noise: 0.05}
+    vowels: [[0, i], [0.06, e]]
+    env: [[0, 0], [0.006, 1], [0.05, 0.6], [0.07, 0]]
+  - type: voice
+    at: 0.26
+    pitch: [[0, 700], [0.1, 760], [0.45, 420]]
+    pitch_step: 0.04
+    source: {pulse: 0.8, pulse_width: 0.3, saw: 0.3, noise: 0.05}
+    vowels: [[0, i], [0.2, u], [0.45, u]]
+    env: [[0, 0], [0.008, 1], [0.35, 0.7], [0.47, 0]]

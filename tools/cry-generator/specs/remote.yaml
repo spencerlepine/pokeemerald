@@ -1,0 +1,28 @@
+name: remote
+slot: voltorb
+brief: "REMOTE: creature call that fits its look and size. Jedi training remote gone feral."
+kind: droid
+size: 0.2
+seed: 92
+layers:
+  # Family voice (training remotes): a hovering repulsor hum with stepped square "bee-doo" chirps and
+  # a zapping blaster-bolt "pew" at the end. Small, twitchy and feral.
+  - type: servo
+    pitch: [[0, 220], [0.3, 300], [0.8, 260]]
+    harmonics: [1.0, 0.6, 0.4, 0.2]
+    env: [[0, 0], [0.04, 0.5], [0.75, 0.5], [0.82, 0]]
+    grit: 0.4
+    gain: 0.5
+  - type: tone
+    wave: square
+    pitch: [[0, 1320], [0.06, 1320], [0.061, 990], [0.12, 990], [0.121, 1480], [0.18, 1480], [0.181, 1100], [0.24, 1100]]
+    warble: {rate: 34, depth: 0.05, shape: square}
+    env: [[0, 0], [0.004, 0.8], [0.055, 0.8], [0.06, 0.15], [0.065, 0.8], [0.115, 0.8], [0.12, 0.15], [0.125, 0.8], [0.175, 0.8], [0.18, 0.15], [0.185, 0.8], [0.24, 0.6], [0.25, 0]]
+    gain: 0.6
+  - type: tone
+    at: 0.5
+    wave: pulse
+    width: 0.25
+    pitch: [[0, 2400], [0.25, 400]]
+    env: [[0, 0], [0.005, 0.9], [0.2, 0.5], [0.26, 0]]
+    gain: 0.6

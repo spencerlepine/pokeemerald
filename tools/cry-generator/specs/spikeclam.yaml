@@ -1,0 +1,22 @@
+name: spikeclam
+slot: shellder
+brief: "SPIKECLAM: creature call that fits its look and size. Spiny clam."
+kind: creature
+size: 0.15
+seed: 86
+layers:
+  # Family voice (Kamino clams): a shell clack and a gurgly, chip-stepped "blu-bli-bli" from inside
+  # the shell. The small one is quick and cheeky, tongue out.
+  - type: click
+    times: [0.0, 0.04]
+    gain: 0.6
+  - type: voice
+    at: 0.06
+    pitch: [[0, 520], [0.1, 700], [0.2, 620], [0.3, 820], [0.45, 640]]
+    pitch_step: 0.05
+    source: {pulse: 0.8, pulse_width: 0.2, saw: 0.3, noise: 0.08}
+    vowels: [[0, u], [0.1, i], [0.2, u], [0.3, i], [0.45, e]]
+    env: [[0, 0], [0.01, 1], [0.38, 0.8], [0.48, 0]]
+    vibrato: {rate: 14, depth: 0.05}
+    growl: 0.2
+    growl_rate: 55
