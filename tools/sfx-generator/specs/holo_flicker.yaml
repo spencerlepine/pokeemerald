@@ -1,0 +1,27 @@
+name: holo_flicker
+constant: SE_HOLO_FLICKER
+brief: "Hologram flicker: projector hum with a static flicker, for the HOLO-DECOY substitute appearing and fading."
+seed: 73
+layers:
+  # A holoprojector warming up: a thin buzzy hum gliding into pitch, a shimmering high partial, and
+  # bursts of soft static that flicker on and off like the image breaking up.
+  - type: pcm
+    osc: saw
+    unison: [-6, 6]
+    pitch: [[0, 100], [0.15, 120], [0.8, 118]]
+    filter: {type: bp, cutoff: [[0, 600], [0.4, 1100], [0.8, 900]], q: 3}
+    am: {rate: 17, depth: 0.35}
+    env: [[0, 0], [0.08, 0.9], [0.6, 0.8], [0.82, 0]]
+    gain: 0.7
+  - type: pcm
+    osc: sine
+    pitch: 1440
+    vibrato: {rate: 9, depth: 0.15}
+    am: {rate: 11, depth: 0.6}
+    env: [[0, 0], [0.15, 0.4], [0.6, 0.35], [0.8, 0]]
+    gain: 0.2
+  - type: pcm
+    osc: noise
+    filter: {type: bp, cutoff: 3500, q: 1.2}
+    env: [[0, 0], [0.03, 1], [0.078, 0.8], [0.121, 1], [0.172, 0.35], [0.198, 0.8], [0.246, 0.8], [0.305, 0.15], [0.331, 0.15], [0.373, 1], [0.395, 0.9], [0.426, 1], [0.478, 1], [0.535, 0.35], [0.584, 1], [0.644, 1], [0.684, 1], [0.737, 0.9], [0.782, 0.6], [0.8, 0]]
+    gain: 0.35

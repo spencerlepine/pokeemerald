@@ -1,0 +1,18 @@
+name: holoscan
+constant: SE_HOLOSCAN
+brief: "Holo scan sweep: a descending data-chirp sweep (~30 frames). HOLOSCAN (Sketch), AURA SIGHT (Foresight), RECONFIGURE and COUNTERCODE (Conversion) data run."
+seed: 76
+layers:
+  # A scanner beam running down: a staircase of fast square chirps descending an octave and a half, doubled
+  # by a smooth PCM sine sweep so it reads as one continuous scan line.
+  - type: square
+    duty: 1
+    pitch: [[0, 3520], [0.04, 3520], [0.041, 3136], [0.08, 3136], [0.081, 2637], [0.12, 2637], [0.121, 2349], [0.16, 2349], [0.161, 1976], [0.2, 1976], [0.201, 1760], [0.24, 1760], [0.241, 1480], [0.28, 1480], [0.281, 1175], [0.32, 1175]]
+    env: [[0, 0.9], [0.039, 0.5], [0.041, 0.9], [0.079, 0.5], [0.081, 0.9], [0.119, 0.5], [0.121, 0.9], [0.159, 0.5], [0.161, 0.9], [0.199, 0.5], [0.201, 0.9], [0.239, 0.5], [0.241, 0.8], [0.279, 0.4], [0.281, 0.7], [0.32, 0]]
+    gain: 0.4
+  - type: pcm
+    osc: sine
+    pitch: [[0, 4200], [0.45, 900]]
+    am: {rate: 25, depth: 0.4}
+    env: [[0, 0], [0.01, 0.6], [0.35, 0.5], [0.48, 0]]
+    gain: 0.4

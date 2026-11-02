@@ -1,0 +1,45 @@
+name: force_storm
+constant: SE_FORCE_STORM
+brief: "Force storm: a long rising roar (~40 frames) into a burst. FORCE STORM (Psycho Boost) rise and burst beats."
+seed: 75
+layers:
+  # The rise: a roaring detuned saw and a wind of noise both climbing and opening for 0.7 s; then the burst:
+  # a driven sub boom, a crack of LFSR noise and a cold high shimmer ringing out over a long dark wash.
+  - type: pcm
+    osc: saw
+    unison: [-18, 0, 17]
+    pitch: [[0, 70], [0.7, 260]]
+    filter: {type: lp, cutoff: [[0, 300], [0.7, 4000]], q: 3}
+    am: {rate: [[0, 6], [0.7, 18]], depth: 0.25}
+    env: [[0, 0], [0.4, 0.7], [0.67, 1], [0.7, 0]]
+    drive: 1.6
+    gain: 0.8
+  - type: pcm
+    osc: noise
+    filter: {type: bp, cutoff: [[0, 400], [0.7, 3500]], q: 1.5}
+    env: [[0, 0], [0.5, 0.6], [0.67, 0.9], [0.7, 0]]
+    gain: 0.5
+  - type: pcm
+    at: 0.7
+    osc: sine
+    pitch: [[0, 100], [0.6, 30]]
+    env: [[0, 0], [0.006, 1], [0.3, 0.6], [1.0, 0]]
+    drive: 3
+    gain: 1.0
+  - type: noise
+    at: 0.7
+    clock: [[0, 262144], [0.3, 16384], [1.0, 4096]]
+    env: [[0, 1], [0.2, 0.6], [1.0, 0]]
+    gain: 0.45
+  - type: pcm
+    at: 0.7
+    osc: noise
+    filter: {type: lp, cutoff: [[0, 3000], [1.4, 250]], q: 1}
+    env: [[0, 0], [0.01, 1], [0.5, 0.5], [1.4, 0]]
+    gain: 0.55
+  - type: wave
+    at: 0.72
+    table: sine
+    pitch: [[0, 1568], [1.0, 1480]]
+    env: [[0, 0.5], [0.5, 0.5], [1.0, 0]]
+    gain: 0.2

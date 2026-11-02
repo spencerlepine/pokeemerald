@@ -1,0 +1,21 @@
+name: imperial_alarm
+constant: SE_IMPERIAL_ALARM
+brief: "Imperial base alarm klaxon: Fortress Vader, the Launch Tower raid, the Death Star site."
+seed: 77
+layers:
+  # Two harsh klaxon blasts: a square-wave horn with a fifth on top, each blast bending up a little as it
+  # sounds, squashed through a nasal band-pass like a PA horn.
+  - type: pcm
+    osc: square
+    unison: [-10, 10]
+    pitch: [[0, 392], [0.08, 440], [0.42, 440], [0.43, 392], [0.53, 392], [0.6, 440], [0.95, 440]]
+    filter: {type: bp, cutoff: 1300, q: 1.6}
+    env: [[0, 0], [0.02, 1], [0.42, 1], [0.44, 0], [0.52, 0], [0.54, 1], [0.94, 1], [0.97, 0]]
+    drive: 1.8
+    gain: 0.9
+  - type: pcm
+    osc: saw
+    pitch: [[0, 587], [0.08, 659], [0.42, 659], [0.43, 587], [0.53, 587], [0.6, 659], [0.95, 659]]
+    filter: {type: bp, cutoff: 1800, q: 2}
+    env: [[0, 0], [0.02, 0.5], [0.42, 0.5], [0.44, 0], [0.52, 0], [0.54, 0.5], [0.94, 0.5], [0.97, 0]]
+    gain: 0.35
