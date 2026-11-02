@@ -1,0 +1,25 @@
+name: fathier
+slot: rapidash
+brief: "FATHIER: creature call that fits its look and size. Racing fathier."
+kind: creature
+size: 0.7
+seed: 1602
+layers:
+  # Pack-beast family voice (nasal e-aw-o groan with a bleat wobble), bred for racing: a big, rising
+  # whinny that shakes with a fast vibrato and tumbles down, then a powerful snort.
+  - type: voice
+    pitch: [[0, 340], [0.15, 560], [0.35, 520], [0.65, 300]]
+    source: {saw: 0.8, pulse: 0.4, pulse_width: 0.3, noise: 0.12}
+    vowels: [[0, e], [0.15, i], [0.35, ae], [0.65, aw]]
+    env: [[0, 0], [0.02, 1], [0.35, 0.8], [0.67, 0]]
+    vibrato: {rate: 11, depth: 0.07}
+    growl: 0.25
+    growl_rate: 30
+    jitter: 0.02
+    drive: 1.6
+  - type: noise
+    at: 0.7
+    band: [[0, 1100], [0.16, 750]]
+    q: 1.2
+    env: [[0, 0], [0.01, 0.7], [0.17, 0]]
+    gain: 0.5

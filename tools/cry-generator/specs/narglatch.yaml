@@ -1,0 +1,32 @@
+name: narglatch
+slot: jynx
+brief: "NARGLATCH: creature call that fits its look and size. Ice-world narglatch whose eerie call bewitches foes."
+kind: creature
+size: 0.55
+seed: 1302
+layers:
+  # Narglatch family voice (feline i-ee-u wail with a slow wobble), full grown: a long, bewitching,
+  # siren-like call that rises and falls twice, a ghostly second voice weaving a fifth above it and an
+  # icy breath at the end.
+  - type: voice
+    pitch: [[0, 380], [0.1, 520], [0.5, 640], [0.9, 470], [1.3, 600], [1.75, 400], [1.95, 330]]
+    source: {pulse: 0.6, saw: 0.5, pulse_width: 0.3, noise: 0.06}
+    vowels: [[0, i], [0.4, ee], [0.9, u], [1.3, i], [1.95, u]]
+    env: [[0, 0], [0.02, 1], [0.6, 0.85], [1.4, 0.75], [1.97, 0]]
+    vibrato: {rate: 5, depth: 0.045}
+    emphasis: 0.7
+  - type: voice
+    at: 0.35
+    pitch: [[0, 780], [0.4, 900], [0.75, 700], [1.15, 880], [1.45, 600]]
+    source: {pulse: 0.6, saw: 0.5, pulse_width: 0.3}
+    vowels: [[0, u], [0.4, i], [1.45, u]]
+    env: [[0, 0], [0.3, 0.45], [1.2, 0.4], [1.47, 0]]
+    vibrato: {rate: 4.3, depth: 0.05}
+    emphasis: 0.6
+    gain: 0.45
+  - type: noise
+    at: 1.6
+    band: [[0, 3000], [0.35, 2200]]
+    q: 2
+    env: [[0, 0], [0.1, 0.3], [0.37, 0]]
+    gain: 0.25

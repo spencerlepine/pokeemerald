@@ -1,0 +1,37 @@
+name: lavaflea
+slot: magcargo
+brief: "LAVAFLEA: creature call that fits its look and size. Giant shelled lava flea ridden by Mustafarians."
+kind: creature
+size: 0.45
+seed: 1402
+layers:
+  # Lava-crawler family voice (gurgling o-er throat, bubbles, hot hiss), now a giant shelled flea:
+  # chitinous leg clicks, a lower, chittering, frame-stepped bray, bubbling magma and a longer hiss.
+  - type: click
+    times: [0.0, 0.04, 0.08, 0.12]
+    gain: 0.7
+  - type: voice
+    at: 0.06
+    pitch: [[0, 300], [0.12, 380], [0.5, 280], [0.72, 210]]
+    pitch_step: 0.035
+    source: {saw: 0.8, pulse: 0.4, pulse_width: 0.3, noise: 0.1}
+    vowels: [[0, o], [0.2, a], [0.5, o], [0.72, er]]
+    env: [[0, 0], [0.015, 1], [0.4, 0.7], [0.74, 0]]
+    vibrato: {rate: 30, depth: 0.03}
+    growl: 0.5
+    growl_rate: 24
+    jitter: 0.04
+    drive: 1.8
+  - type: tone
+    at: 0.1
+    wave: sine
+    pitch: [[0, 560], [0.55, 420]]
+    warble: {rate: 8, depth: 0.35}
+    env: [[0, 0], [0.02, 0.4], [0.45, 0.3], [0.55, 0]]
+    gain: 0.35
+  - type: noise
+    at: 0.6
+    band: [[0, 2600], [0.37, 1900]]
+    q: 1.5
+    env: [[0, 0], [0.05, 0.4], [0.37, 0]]
+    gain: 0.3

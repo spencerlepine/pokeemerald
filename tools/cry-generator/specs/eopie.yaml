@@ -1,0 +1,25 @@
+name: eopie
+slot: ponyta
+brief: "EOPIE: creature call that fits its look and size. Eopie, Tatooine's sun-baked pack animal."
+kind: creature
+size: 0.4
+seed: 1601
+layers:
+  # Pack-beast family voice: a nasal, groaning saw throat shaped e-aw-o with a goat-like bleat wobble.
+  # The eopie gives a weary, sun-baked "meh-hawww" and a dusty snort.
+  - type: voice
+    pitch: [[0, 420], [0.06, 500], [0.3, 440], [0.55, 320]]
+    source: {saw: 0.8, pulse: 0.4, pulse_width: 0.3, noise: 0.12}
+    vowels: [[0, e], [0.15, ae], [0.35, aw], [0.55, o]]
+    env: [[0, 0], [0.015, 1], [0.3, 0.75], [0.57, 0]]
+    vibrato: {rate: 9, depth: 0.05}
+    growl: 0.2
+    growl_rate: 32
+    jitter: 0.02
+    emphasis: 0.7
+  - type: noise
+    at: 0.55
+    band: [[0, 1300], [0.13, 900]]
+    q: 1.2
+    env: [[0, 0], [0.01, 0.6], [0.14, 0]]
+    gain: 0.45

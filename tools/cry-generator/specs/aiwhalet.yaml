@@ -1,0 +1,24 @@
+name: aiwhalet
+slot: wailmer
+brief: "AIWHALET: creature call that fits its look and size. Aiwha calf."
+kind: creature
+size: 0.75
+seed: 1801
+layers:
+  # Aiwha family voice: a round, hollow whale throat (pulse + saw) gliding u-o-a-u with a slow vibrato,
+  # over a breathy blowhole spray. The calf calls a rising, playful "whooo-aa" and blows.
+  - type: noise
+    band: [[0, 1500], [0.15, 1000]]
+    q: 1
+    env: [[0, 0], [0.01, 0.6], [0.16, 0]]
+    gain: 0.4
+  - type: voice
+    at: 0.06
+    pitch: [[0, 260], [0.35, 400], [0.75, 380], [1.2, 250]]
+    source: {pulse: 0.6, pulse_width: 0.4, saw: 0.5, noise: 0.05}
+    vowels: [[0, u], [0.3, o], [0.7, a], [1.2, u]]
+    env: [[0, 0], [0.02, 1], [0.7, 0.8], [1.22, 0]]
+    vibrato: {rate: 4.5, depth: 0.03}
+    growl: 0.15
+    growl_rate: 25
+    formant_scale: 1.2

@@ -1,0 +1,42 @@
+name: aiwha
+slot: wailord
+brief: "AIWHA: creature call that fits its look and size. Gigantic Kamino aiwha."
+kind: creature
+size: 1.0
+seed: 1802
+layers:
+  # Aiwha family voice (round u-o-a-u whale glide + blowhole spray), the gigantic adult: a huge blow,
+  # then a vast, slow, frame-stepped moan that swells, a higher song voice drifting over it, and a
+  # second fading blow.
+  - type: noise
+    band: [[0, 1200], [0.2, 800]]
+    q: 1
+    env: [[0, 0], [0.01, 0.7], [0.2, 0]]
+    gain: 0.45
+  - type: voice
+    at: 0.08
+    pitch: [[0, 150], [0.5, 240], [1.1, 220], [1.75, 130]]
+    pitch_step: 0.05
+    source: {pulse: 0.6, pulse_width: 0.4, saw: 0.5, noise: 0.05}
+    vowels: [[0, u], [0.45, o], [1.0, a], [1.75, u]]
+    env: [[0, 0], [0.03, 1], [1.1, 0.85], [1.77, 0]]
+    vibrato: {rate: 3.5, depth: 0.03}
+    growl: 0.3
+    growl_rate: 22
+    drive: 1.6
+    formant_scale: 1.6
+  - type: voice
+    at: 0.4
+    pitch: [[0, 480], [0.5, 620], [1.0, 540]]
+    source: {pulse: 0.6, pulse_width: 0.4, saw: 0.5}
+    vowels: [[0, u], [0.5, o], [1.0, u]]
+    env: [[0, 0], [0.3, 0.4], [0.8, 0.35], [1.02, 0]]
+    vibrato: {rate: 4, depth: 0.04}
+    formant_scale: 1.6
+    gain: 0.45
+  - type: noise
+    at: 1.7
+    band: [[0, 1000], [0.22, 700]]
+    q: 1
+    env: [[0, 0], [0.02, 0.4], [0.24, 0]]
+    gain: 0.3

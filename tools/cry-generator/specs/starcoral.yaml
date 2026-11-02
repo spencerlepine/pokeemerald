@@ -1,0 +1,21 @@
+name: starcoral
+slot: staryu
+brief: "STARCORAL: creature call that fits its look and size. Star-shaped coral creature."
+kind: creature
+size: 0.35
+seed: 1701
+layers:
+  # Kyber-coral family voice: a glassy pulse throat shaped i-e in frame-steps, doubled by a square
+  # tone, singing a little rising arpeggio of three glowing notes ("hya-hya-hyaa").
+  - type: voice
+    pitch: [[0, 520], [0.15, 520], [0.151, 660], [0.3, 660], [0.301, 780], [0.85, 760]]
+    source: {pulse: 0.8, pulse_width: 0.3, saw: 0.3, noise: 0.04}
+    vowels: [[0, i], [0.15, e], [0.3, i], [0.85, e]]
+    env: [[0, 0], [0.01, 1], [0.13, 0.6], [0.15, 0.3], [0.16, 1], [0.28, 0.6], [0.3, 0.3], [0.31, 1], [0.6, 0.7], [0.87, 0]]
+    vibrato: {rate: 8, depth: 0.02}
+    emphasis: 0.7
+  - type: tone
+    wave: square
+    pitch: [[0, 1560], [0.15, 1560], [0.151, 1980], [0.3, 1980], [0.301, 2340], [0.8, 2300]]
+    env: [[0, 0], [0.01, 0.3], [0.15, 0.1], [0.16, 0.3], [0.3, 0.1], [0.31, 0.3], [0.8, 0]]
+    gain: 0.3

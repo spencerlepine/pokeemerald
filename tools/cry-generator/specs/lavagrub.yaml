@@ -1,0 +1,31 @@
+name: lavagrub
+slot: slugma
+brief: "LAVAGRUB: creature call that fits its look and size. Molten grub that crawls out of lava rivers."
+kind: creature
+size: 0.35
+seed: 1401
+layers:
+  # Lava-crawler family voice: a gurgling saw throat shaped o-er, bubbling (a wobbling sine) over the
+  # hiss of hot rock. The grub gives a slow, molten "blorrp" and a steamy hiss.
+  - type: voice
+    pitch: [[0, 340], [0.1, 420], [0.45, 300], [0.62, 240]]
+    source: {saw: 0.8, pulse: 0.4, pulse_width: 0.3, noise: 0.1}
+    vowels: [[0, o], [0.2, a], [0.45, o], [0.62, er]]
+    env: [[0, 0], [0.015, 1], [0.35, 0.7], [0.63, 0]]
+    growl: 0.55
+    growl_rate: 20
+    jitter: 0.04
+    drive: 1.6
+  - type: tone
+    at: 0.04
+    wave: sine
+    pitch: [[0, 640], [0.5, 480]]
+    warble: {rate: 10, depth: 0.35}
+    env: [[0, 0], [0.02, 0.4], [0.4, 0.3], [0.5, 0]]
+    gain: 0.35
+  - type: noise
+    at: 0.45
+    band: [[0, 2800], [0.32, 2200]]
+    q: 1.5
+    env: [[0, 0], [0.05, 0.4], [0.32, 0]]
+    gain: 0.3
