@@ -1,0 +1,91 @@
+# Rustboro, Yavin 4 version (MUS_RUSTBORO_YAVIN_4, net-new): the town music for the Yavin 4 maps (the Rebel base).
+# ARRANGE of "Rebel Briefing" (wiki net:mus-rustboro-yavin-4, ref soundtrack:return-jedi:08). analyze_reference
+# read the cue at 123 bpm (124 here) in G minor (r=0.64); its draft melody is too rough to use, so the two themes
+# the briefing turns on are written from the tunes themselves, in G minor: the Force theme (the Rebellion's hymn)
+# and the Rebel fanfare's triplet call. The tech notes come from the placeholder vanilla MUS_RUSTBORO (128 bpm,
+# 60 s loop, a town groove); the voicegroup is route120's for its trumpet and horn, which the fanfare needs.
+#   a  8 bars  the Force theme on flute over a walking wave bass, piano off-beats and a light kit
+#   b  8 bars  its climbing second half on trumpet
+#   c  8 bars  the Rebel fanfare: triplet calls on trumpet, horn answering, timpani
+#   d  8 bars  the Force theme again, a square doubling the softer flute, the D that leads back to a
+# Brief (sw_subject): Yavin 4 version of the Tatooine town theme, same role and mood family. Loop 32 bars, 61.9 s.
+name: rustboro-yavin-4
+constant: MUS_RUSTBORO_YAVIN_4
+form: LOOP
+voicegroup: route120          # flute 73, trumpet 56, horn 60, piano 1, strings 48, timpani 47, squares 80/82, wave 81, rs kit
+master_volume: 85
+tempo: 124
+steps_per_beat: 6             # the fanfare's triplet eighths (2) with straight eighths (3)
+time_signature: [4, 4]
+seed: 4
+
+parts:
+  flute:   {program: 73, channel: 0, volume: 96,  pan: 8,   gate: 0.95, lfo_speed: 28, lfo_delay: 24, mod: 4, humanize: {vel: 4}}
+  trumpet: {program: 56, channel: 1, volume: 96,  pan: 4,   gate: 0.92, humanize: {vel: 4}}
+  horn:    {program: 60, channel: 2, volume: 84,  pan: -12, octave: 4, gate: 0.95}
+  piano:   {program: 1,  channel: 3, volume: 66,  pan: 22,  octave: 4, gate: 0.6, humanize: {vel: 6}}
+  strings: {program: 48, channel: 4, volume: 56,  pan: -26, octave: 4, gate: 1.0}
+  timpani: {program: 47, channel: 5, volume: 84,  pan: 0,   octave: 2, gate: 1.0, role: bass}
+  bass:    {program: 81, channel: 6, volume: 84,  pan: 0,   octave: 2, gate: 0.8, role: bass, mono: true}
+  sq:      {program: 82, channel: 7, volume: 56,  pan: -30, gate: 0.85, mono: true}
+  sq2:     {program: 80, channel: 8, volume: 34,  pan: 32,  gate: 0.85, mono: true}
+  drums:   {program: 0,  channel: 9, volume: 64,  pan: 10,  role: drums, kit: {kick: 36, sn: 38, hh: 42}}
+
+progressions:
+  force:  "Gm | Eb | Bb | Gm:12 D:12 | Gm | Eb | Cm:12 D:12 | Gm:12 D:12"
+  climb:  "Gm | Eb | Cm | Bb | Gm | Eb | D | Gm"
+  rebel:  "G | Eb:12 F:12 | G | D | Eb | Cm | D | D"
+
+phrases:
+  force: |
+    G4:18 A4:6 | Bb4:9 C5:3 Bb4:12 | D5:18 A4:6 | G4:18 D4:6 |
+    G4:18 A4:6 | Bb4:12 G4:12 | D5:12 C5:6 A4:6 | G4:18 D4:6
+  climb: |
+    G4:6 A4:6 Bb4:6 D5:6 | G5:18 F5:6 | Eb5:6 D5:6 C5:6 D5:6 | Bb4:18 D5:6 |
+    G4:6 A4:6 Bb4:6 D5:6 | G5:12 Bb5:12 | A5:12 F#5:12 | G5:18 D4:6
+  fanfare: |
+    D5:2 D5:2 D5:2 G5:18 | F5:2 Eb5:2 D5:2 C5:6 D5:12 | D5:2 D5:2 D5:2 G5:18 | Bb5:2 A5:2 G5:2 F#5:6 A5:12 |
+    D5:2 D5:2 D5:2 Bb5:18 | A5:2 G5:2 F5:2 G5:18 | D5:2 D5:2 D5:2 A5:12 F#5:6 | D5:18 D4:6
+  answer: |
+    r:12 G4:2 G4:2 G4:2 D5:6 | Eb4:12 F4:12 | r:12 G4:2 G4:2 G4:2 D5:6 | A4:24 |
+    r:12 G4:2 G4:2 G4:2 Bb4:6 | G4:24 | r:12 F#4:2 F#4:2 F#4:2 A4:6 | F#4:24
+  walk: "^1:6 ^3:6 ^1:6 ^3:6"
+  offbeat: "r:3 ^2:3 r:3 ^3:3 r:3 ^2:3 r:3 ^3:3"
+  pad: "^3:24"
+  timp: "^1:6 r:18 | r:24 | ^1:6 r:18 | ^1:3 ^1:3 ^1:3 ^1:3 ^1:3 ^1:3 ^1:6"
+  shadow: "r:3 ^1+:3 r:6 r:3 ^3:3 r:6"
+
+grooves:
+  town:
+    kick: "x...........x..x........"
+    sn:   "......x...........x....."
+    hh:   "...x.....x.......x.....x"
+  march:
+    kick: "x.....x.....x.....x....."
+    sn:   "...x..x.x.......xxx...x.|...x..x.x.......xxx...x.|...x..x.x.......xxx...x.|...x..x.x.....xxxxxxxxxx"
+
+sections:
+  intro:
+    bars: 1
+    chords: "D"
+    parts: {bass: walk, piano: offbeat, strings: pad, drums: town, flute: "r:18 D4:6"}
+  a:
+    bars: 8
+    chords: force
+    parts: {flute: force, bass: walk, piano: offbeat, strings: pad, drums: town, sq2: shadow}
+  b:
+    bars: 8
+    chords: climb
+    parts: {trumpet: climb, bass: walk, piano: offbeat, strings: pad, drums: town, sq2: shadow}
+  c:
+    bars: 8
+    chords: rebel
+    parts: {trumpet: fanfare, horn: answer, bass: walk, timpani: timp, drums: march, sq2: shadow}
+  d:
+    bars: 8
+    chords: force
+    gain: {piano: 4, flute: -8}
+    parts: {flute: force, sq: force, piano: offbeat, bass: walk, strings: pad, drums: town, sq2: shadow}
+
+arrangement: [intro, a, b, c, d]
+loop_start: a
