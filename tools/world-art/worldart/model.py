@@ -533,6 +533,11 @@ class Object:
             arr = np.asarray(allowed, float)
             return allowed[int(np.argmin(((arr - np.asarray(col, float)) ** 2).sum(1)))]
 
+        # swatches: small tone-index pixel patterns (palette `swatches:`, or the model's own)
+        self.swatches = {}
+        for sname, rows in {**(lib.get("swatches") or {}), **(raw.get("swatches") or {})}.items():
+            rows = [r for r in rows if r]
+            self.swatches[sname] = np.array([[-1 if ch == "." else int(ch, 36) for ch in r] for r in rows], int)
         colors = [(0, 0, 0), tuple(raw.get("outline", lib["outline"]))]
         self.shadow_rgba = tuple(lib["shadow"])
         self.highlight_rgb = tuple(lib.get("highlight", (255, 255, 255)))
@@ -540,6 +545,7 @@ class Object:
         for name, spec in materials.items():
             m = {"priority": float(spec.get("priority", 1.0)), "cutout": spec.get("cutout"),
                  "dither": bool(spec.get("dither", False)), "texture": spec.get("texture"), "tex": spec.get("tex"),
+                 "swatch": spec.get("swatch"),
                  "emissive": bool(spec.get("emissive", False))}
             if "ramp" in spec:
                 ramp = spec["ramp"]

@@ -6,6 +6,33 @@ exact; the palette is calibrated last. Commit and push at every checkpoint.
 
 Status marks: `[ ]` not started, `[~]` in progress, `[x]` done, `[r]` waiting for the owner's review.
 
+## Second pass (2026-11-02): calibrate against vanilla first
+
+Owner review of the first pass: sprites cropped, objects did not share one structure, the mockup did
+not look like a game, and vanilla trees/terrain were left in place. New rule: **before drawing a new
+object, the tool must reproduce the vanilla object it replaces** (`python -m worldart compare
+models/calibration/<x>.yaml`: vanilla | ours | ours swapped into the vanilla map). Only when the swap
+is hard to spot do we draw the Star Wars version on the same structure (same cells, ramps, outline,
+swatches), and then replace vanilla art from scratch.
+
+Lessons measured so far (keep adding):
+- Vanilla trees are 2x2, crown ~30x22 px filling the cell width (they tile; no margin), left/right
+  mirrored, leaf scales ~5x4 px in fans from the top centre, a dark crown-shadow ellipse holding a
+  short grey trunk stub, a mid-green rim and a ground-shade halo. -> `texture: fan`, `ground_shadow`.
+- Buildings are pattern-driven flat faces: the look is the swatch (logs: 8-row period, 3 lit rows +
+  shadow line, knots), not the lighting. -> `swatch:` per face (south/top/side) in palette files.
+- Buildings share one slate outline (#4a4a5a), not the material's darkest tone. -> `outline_shared`.
+- A material is decided per pixel from the surface that owns it (fixed: two materials sharing
+  colours lost their swatch).
+
+| Calibration | Model | Status |
+|---|---|---|
+| Hoenn route tree (General 468/469/476/477) | `models/calibration/hoenn-tree.yaml` | [~] close at 3x in the map; leaf highlights still too even |
+| Fortree tree house (Fortree 548-598) | `models/calibration/fortree-house.yaml` | [~] logs, walls, door, frond roof right; roof must cover the wall tops, door frame/shutters, log ends, ladder |
+| Fortree forest tree (dense tiling canopy) | | [ ] |
+| Rope bridge (Fortree) | | [ ] |
+| A Hoenn house (Littleroot) | | [ ] |
+
 ## Tools
 
 - [x] Package scaffold, model loader (ported from z-day objgen), palettes per planet

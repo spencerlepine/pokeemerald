@@ -108,9 +108,9 @@ def render_instance(obj, inst, yaw):
     r1 = min(int(math.ceil(ay - (lo[1] + lo[2]) * scale)) + 1, H)
     out = np.zeros((H, W), np.int32)
     zdepth = np.full((H, W), np.inf)
-    nz = np.zeros((H, W, 3))
+    nz = np.zeros((H, W, 6))
     if c1 <= c0 or r1 <= r0:
-        return out, out > 0, out > 0, zdepth, nz
+        return out, out > 0, out > 0, zdepth, (nz, np.full((H, W), -1))
     w, h = c1 - c0, r1 - r0
     cols = c0 + (np.arange(w * ss) + 0.5) / ss
     rows = r0 + (np.arange(h * ss) + 0.5) / ss
@@ -120,7 +120,9 @@ def render_instance(obj, inst, yaw):
     hit, t, p = _raymarch(inst, yaw, us, ws, float(hi[2]) + 0.05)
     idx = np.zeros(len(us), np.int32)
     cut = np.zeros(len(us), bool)
-    nzs = np.zeros((len(us), 3))
+    nzs = np.zeros((len(us), 6))
+    mid = np.full(len(us), -1)
+    mnames = list(obj.mats)
     if hit.any():
         px = np.floor(cc.ravel()[hit]).astype(int)
         py = np.floor(rr.ravel()[hit]).astype(int)
@@ -134,14 +136,16 @@ def render_instance(obj, inst, yaw):
         hidx[hcut] = 0
         idx[hit] = hidx
         cut[hit] = hcut
-        nzs[hit] = n
+        mid[hit] = np.array([mnames.index(nm) for nm in names])
+        nzs[hit, :3] = n
+        nzs[hit, 3:] = p[hit]
         hit = hit & ~cut
     depth = np.where(hit, t, np.inf)
 
     def blocks(a):
         return a.reshape(h, ss, w, ss).transpose(0, 2, 1, 3).reshape(h, w, ss * ss)
-    bi, bd, bc = blocks(idx), blocks(depth), blocks(cut)
-    bn = nzs.reshape(h, ss, w, ss, 3).transpose(0, 2, 1, 3, 4).reshape(h, w, ss * ss, 3)
+    bi, bd, bc, bm = blocks(idx), blocks(depth), blocks(cut), blocks(mid)
+    bn = nzs.reshape(h, ss, w, ss, 6).transpose(0, 2, 1, 3, 4).reshape(h, w, ss * ss, 6)
     need = rnd["coverage"] * ss * ss
     holes = np.zeros((H, W), bool)
     holes[r0:r1, c0:c1] = bc.sum(-1) >= need
@@ -149,15 +153,21 @@ def render_instance(obj, inst, yaw):
     filled_n = (bi > 0).sum(-1)
     sub = np.zeros((h, w), np.int32)
     zsub = np.full((h, w), np.inf)
-    nsub = np.zeros((h, w, 3))
+    nsub = np.zeros((h, w, 6))
+    msub = np.full((h, w), -1)
     for r, c in zip(*np.nonzero(filled_n >= need)):
         b = bi[r, c]
         m = b > 0
         counts = np.bincount(b[m], minlength=npal) * obj.priority
         sub[r, c] = int(np.argmax(counts))
+        msub[r, c] = int(bm[r, c][b == sub[r, c]][0])
         zsub[r, c] = np.median(bd[r, c][m])
-        nv = bn[r, c][m].mean(0)
-        nsub[r, c] = nv / (np.linalg.norm(nv) + 1e-9)
+        # normal and point of the surface that owns this pixel (the nearest sub-samples)
+        dd = bd[r, c][m]
+        near = dd <= np.median(dd) + 1e-6
+        nv = bn[r, c][m][near, :3].mean(0)
+        nsub[r, c, :3] = nv / (np.linalg.norm(nv) + 1e-9)
+        nsub[r, c, 3:] = bn[r, c][m][near, 3:].mean(0)
 
     filled = sub > 0
     final = sub.copy()
@@ -174,7 +184,9 @@ def render_instance(obj, inst, yaw):
     out[r0:r1, c0:c1] = final
     zdepth[r0:r1, c0:c1] = zsub
     nz[r0:r1, c0:c1] = nsub
-    return out, out > 0, holes & (out == 0), zdepth, nz
+    mats = np.full((H, W), -1)
+    mats[r0:r1, c0:c1] = msub
+    return out, out > 0, holes & (out == 0), zdepth, (nz, mats)
 
 
 def outline(obj, ind, holes=None):
@@ -188,7 +200,7 @@ def outline(obj, ind, holes=None):
         sel = (~filled) & (out == 0) & (nb > 0)
         if holes is not None:
             sel &= ~holes
-        out[sel] = obj.darkest_of[nb[sel]]
+        out[sel] = 1 if obj.rnd.get("outline_shared") else obj.darkest_of[nb[sel]]
     return out
 
 
@@ -204,6 +216,40 @@ def shadow_mask(obj):
     return m
 
 
+def _apply_swatch(obj, out, m, normals, mat, sw):
+    """Paint a material's faces from pixel swatches (palette `swatches:`), tiled in face space:
+    south faces in (x, z), top faces in (x, y), 16 px per metre. A swatch char is a tone index into
+    the material's ramp (0 = darkest); '.' keeps the lit tone. `sw` = {south: name, top: name,
+    side: name, origin: [x, y, z]}: the swatch's (0, 0) is at the origin's west end and top edge."""
+    idx = mat["idx"]
+    nx, ny, nz = normals[..., 0], normals[..., 1], normals[..., 2]
+    px, py, pz = normals[..., 3], normals[..., 4], normals[..., 5]
+    ox, oy, oz = sw.get("origin", [0, 0, 0])
+    faces = {"top": nz > 0.6, "south": (-ny > 0.6) & (nz <= 0.6),
+             "side": (np.abs(nx) > 0.6) & (nz <= 0.6)}
+    for face, sel in faces.items():
+        name = sw.get(face)
+        if not name:
+            continue
+        grid = obj.swatches[name]
+        gh, gw = grid.shape
+        sel = sel & m
+        if not sel.any():
+            continue
+        u = np.floor((px[sel] - ox) * 16 + 1e-4).astype(int)
+        if face == "top":
+            v = np.floor((oy - py[sel]) * 16 + 1e-4).astype(int)
+        else:
+            v = np.floor((oz - pz[sel]) * 16 + 1e-4).astype(int)
+        if face == "side":
+            u = np.floor((py[sel] - oy) * 16 + 1e-4).astype(int)
+        t = grid[v % gh, u % gw]
+        cur = out[sel]
+        new = np.where(t >= 0, np.asarray(idx)[np.clip(t, 0, len(idx) - 1)], cur)
+        out[sel] = new
+    return out
+
+
 def apply_textures(obj, canvas, mats_px, normals):
     """STYLE 5: tiny periodic patterns, applied per material on the tone image.
     `scallop`: leaf scallops, 5x4, offset every other row (dark underside line on the lit tones).
@@ -213,6 +259,11 @@ def apply_textures(obj, canvas, mats_px, normals):
     nz = normals[..., 2]
     out = canvas.copy()
     for name, mat in obj.mats.items():
+        sw = mat.get("swatch")
+        if sw:
+            m = mats_px == name
+            if m.any():
+                out = _apply_swatch(obj, out, m, normals, mat, sw)
         tex = mat.get("texture")
         if not tex or len(mat["idx"]) < 2:
             continue
@@ -317,14 +368,14 @@ def render_object(obj, yaw=0.0):
     W, H = obj.size
     canvas = np.zeros((H, W), np.int32)
     mats_px = np.full((H, W), "", dtype=object)
-    nzc = np.zeros((H, W, 3))
+    nzc = np.zeros((H, W, 6))
     warnings = []
     margin = int(obj.rnd.get("margin", 1))
     order = sorted(range(len(obj.instances)), key=lambda i: (-obj.instances[i].foot[1], obj.instances[i].foot[0]))
     order.reverse()   # draw northern (small row) feet first, southern last
     for i in order:
         inst = obj.instances[i]
-        ind, filled, holes, zd, nz = render_instance(obj, inst, yaw)
+        ind, filled, holes, zd, (nz, mats) = render_instance(obj, inst, yaw)
         if margin:
             inner = np.zeros_like(filled)
             inner[margin:H - margin, margin:W - margin] = True
@@ -335,9 +386,8 @@ def render_object(obj, yaw=0.0):
         sel = ind > 0
         canvas[sel] = ind[sel]
         nzc[sel] = nz[sel]
-        for name, mat in obj.mats.items():
-            mm = sel & np.isin(ind, mat["idx"])
-            mats_px[mm] = name
+        names = np.array(list(obj.mats) + [""], dtype=object)
+        mats_px[sel] = names[mats[sel]]
     canvas = apply_textures(obj, canvas, mats_px, nzc)
     rgb = obj.palette[canvas]
     a = np.where(canvas > 0, 255, 0).astype(np.uint8)
