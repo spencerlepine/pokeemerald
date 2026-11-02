@@ -1,0 +1,99 @@
+# Vs Arena Leader. Hot-swap of MUS_VS_GYM_LEADER (wiki audio:MUS_VS_GYM_LEADER): the arena leader battles.
+# ARRANGE of "Rebels at Bay" (soundtrack:empire-strikes-back:12), from analyze_reference over 0:00-1:15 (152 bpm,
+# A minor, the melody draft per bar) plus knowledge of the cue: the tritone ostinato that opens it (G# D C# D),
+# the strain over F, D and A minor (A F D F / F C# D A / F C# F A, climbing A to Bb and Eb over Bb7 into E), and
+# the brighter answer that lifts through G minor and B major to E minor and E. Trumpet theme, horn calls over the
+# ostinato, string and square ostinati, eighth bass, timpani and snare as the vanilla battle songs drum. Kept
+# at the cue's 152 bpm. Vanilla voicegroup. Brief
+# (sw_subject): arena leader battle: heroic, high-stakes.
+name: vs-arena-leader
+replaces: MUS_VS_GYM_LEADER
+form: LOOP
+voicegroup: vs_gym_leader             # vanilla: trumpet 56, horn 60, strings 48, fingered bass 33, timpani 47, kit 0, squares 80/82, wave 81
+master_volume: 80
+song_priority: 1
+tempo: 152
+steps_per_beat: 4
+time_signature: [4, 4]
+seed: 63
+
+parts:
+  trumpet: {program: 56, channel: 0, volume: 108, pan: 6,   range: [A4, B5], gate: 0.9, humanize: {vel: 4}}
+  horn:    {program: 60, channel: 1, volume: 94,  pan: -12, range: [D4, B4], gate: 0.95}
+  strings: {program: 48, channel: 2, volume: 78,  pan: -24, range: [G#3, D4], gate: 0.7}
+  bass:    {program: 33, channel: 3, volume: 110, pan: 0,   octave: 2, range: [D1, F2], gate: 0.7, role: bass}
+  timpani: {program: 47, channel: 4, volume: 98,  pan: 16,  octave: 2, range: [D2, A2], gate: 1.0}
+  drums:   {program: 0,  channel: 5, volume: 86,  pan: 10,  role: drums, kit: {k: 36, s: 40, crash: 57}}
+  arp:     {program: 80, channel: 6, volume: 40,  pan: 30,  octave: 4, range: [A4, A5], gate: 0.5, mono: true}
+  counter: {program: 82, channel: 7, volume: 38,  pan: -30, range: [G#4, D5], gate: 0.6, mono: true}
+  wave:    {program: 81, channel: 8, volume: 46,  pan: -4,  octave: 2, range: [D2, F3], gate: 0.45, mono: true}
+
+progressions:
+  a: "F | Dm | F | Am | Am | Am | Bb7 | E"
+  b: "D | D | Bb7 | Bb7 | D | D | E | E"
+  c: "Gm | Gm | B | B | Em | Em | Bsus4 | E"
+
+phrases:
+  theme: |
+    A5:2 F5:2 D5:2 F5:10 | F5:4 C#5:4 D5:4 A5:4 | F5:4 C#5:2 F5:6 A4:4 | A4:6 F5:2 A5:8 |
+    A5:2 F5:2 A4:4 F#5:2 F5:2 D5:2 A5:2 | A5:8 Bb5:8 | Bb5:8 Ab5:4 F5:4 | E5:8 G#4:4 B4:4
+  theme_hrn: "F4:16 | D4:16 | A4:16 | E4:16 | E4:16 | F4:16 | D4:16 | G#4:16"
+  calls: "D4:16 | F#4:8 G4:8 | F4:16 | Ab4:16 | D4:16 | A4:16 | G#4:16 | B4:16"
+  calls_hi: "r:8 A4:2 D5:6 | r:8 F#4:2 A4:6 | r:8 Bb4:2 F4:6 | r:8 D4:2 Ab4:6 | r:8 A4:2 D5:6 | r:8 F#4:2 A4:6 | r:8 E4:2 G#4:6 | r:8 B4:2 D5:6"
+  answer: |
+    G4:4 D5:4 C5:2 Bb4:2 D5:4 | Bb4:4 D5:4 G5:8 | D#5:4 F#5:4 B5:8 | A#5:4 F#5:4 D#5:8 |
+    E5:4 G5:4 B5:8 | G5:4 E5:4 B4:8 | E5:8 F#5:4 B4:4 | G#5:8 E5:4 B4:4
+  answer_hrn: "D4:16 | G4:16 | D#4:16 | F#4:16 | E4:16 | G4:16 | E4:16 | G#4:16"
+  tritone: "G#3:2 D4:2 C#4:2 D4:2 G#3:2 D4:2 C#4:2 D4:2"
+  ost_hi: "G#4:2 D5:2 C#5:2 D5:2 G#4:2 D5:2 C#5:2 D5:2"
+  arp8: "^1:2 ^2:2 ^3:2 ^2:2 ^1+:2 ^3:2 ^2:2 ^3:2"
+  drive: "^1:2 ^1:2 ^1+:2 ^1:2 ^1:2 ^1:2 ^1+:2 ^1:2"
+  wave8: "^1:2 r:2 ^1+:2 r:2 ^1:2 r:2 ^1+:2 ^1:2"
+  timp_b: "^1:4 r:12 | ^1:4 r:8 ^1:2 ^1:2 | ^1:4 r:12 | ^1:4 r:8 ^1:2 ^1:2 | ^1:4 r:12 | ^1:4 r:8 ^1:2 ^1:2 | ^1:4 r:12 | ^1:2 ^1:2 ^1:2 ^1:2 ^1:4 r:4"
+
+grooves:
+  battle:
+    s: "....x.......x...|....x.......x.xx"
+  battle_crash:
+    crash: "X...............|................|................|................|................|................|................|................"
+    s: "....x.......x...|....x.......x.xx"
+  roll:
+    s: "....x...x.x.rrRR"
+  tense:
+    k: "x.......x......."
+    s: "............x..."
+
+sections:
+  intro:
+    bars: 2
+    chords: "D | E"
+    fill: roll
+    parts: {strings: tritone, bass: drive, timpani: "^1:4 r:12 | ^1:4 r:8 ^1:2 ^1:2", drums: tense, wave: wave8, horn: "D4:16 | G#4:16"}
+  a:
+    bars: 8
+    chords: a
+    fill: roll
+    parts: {trumpet: theme, horn: theme_hrn, bass: drive, drums: battle_crash, arp: arp8, wave: wave8}
+  b:
+    bars: 8
+    chords: b
+    fill: roll
+    parts: {horn: calls, strings: tritone, bass: drive, timpani: timp_b, drums: tense, counter: calls_hi, wave: wave8}
+  c:
+    bars: 8
+    chords: c
+    fill: roll
+    parts: {trumpet: answer, horn: answer_hrn, bass: drive, drums: battle_crash, arp: arp8, wave: wave8}
+  a2:
+    bars: 8
+    chords: a
+    fill: roll
+    parts: {trumpet: theme, strings: "^3:16", bass: drive, drums: battle_crash, arp: arp8, counter: theme_hrn, wave: wave8}
+  b2:
+    bars: 8
+    chords: b
+    fill: roll
+    parts: {horn: calls, strings: tritone, bass: drive, timpani: timp_b, drums: tense, arp: ost_hi, wave: wave8}
+
+arrangement: [intro, a, b, c, a2, b2]
+loop_start: a
