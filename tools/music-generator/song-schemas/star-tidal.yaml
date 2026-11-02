@@ -1,0 +1,63 @@
+# STAR TIDAL starliner (SS Tidal corridors, decks and rooms): hot-swap of MUS_SAILING (wiki audio:MUS_SAILING).
+# ARRANGE of "Star Wars Main Title and The Arrival at Naboo" (ref_tracks soundtrack:phantom-menace:01, ref_notes:
+# the Arrival at Naboo half). From the cue (analyze_reference --start 95: D major, 86 bpm, the A-sus pedal
+# under Am7 / Esus4, the bright D-Bb-D side-step, the closing Am7-G7-Dsus4 turn to G): its harmony, tempo and
+# texture (high woodwind over shimmering strings and harp, soft low pedal), cut to a 16-bar loop with a
+# floating flute line on top, xylophone and square sparkles for the stars passing the viewport.
+# Vanilla: sailing voicegroup, 156 bpm, 32.5 s; this runs at the cue's 86 bpm, 16 bars, 44.7 s.
+# Brief (sw_subject): cruising through space, calm wonder.
+name: star-tidal
+replaces: MUS_SAILING
+form: LOOP
+voicegroup: sailing                   # flute 73, strings 48, harp 46, xylophone 13, fretless 35, squares 80/81, wave 82
+master_volume: 86
+tempo: 86
+steps_per_beat: 4
+time_signature: [4, 4]
+seed: 86
+
+parts:
+  flute:   {program: 73, channel: 0, volume: 100, pan: 10,  range: [D4, D6], gate: 0.96, lfo_speed: 30, lfo_delay: 20, mod: 5, humanize: {vel: 5}}
+  strings: {program: 48, channel: 1, volume: 70,  pan: -22, octave: 4, range: [A3, D5], gate: 1.0}
+  harp:    {program: 46, channel: 2, volume: 76,  pan: 24,  octave: 3, range: [A2, A4], gate: 0.9, humanize: {vel: 8}}
+  bass:    {program: 35, channel: 3, volume: 90,  pan: 0,   octave: 2, range: [D2, D3], gate: 0.95, role: bass}
+  xylo:    {program: 13, channel: 4, volume: 60,  pan: -30, range: [A4, A6], gate: 0.8}
+  star:    {program: 80, channel: 5, volume: 32,  pan: 34,  octave: 5, range: [A4, A6], gate: 0.4, mono: true}
+  echo:    {program: 81, channel: 6, volume: 34,  pan: -34, range: [A3, A5], gate: 0.85, mono: true}
+
+progressions:
+  a: "Am7 | Esus4 | Asus4 | A | D | Bb | D | Asus4"
+  b: "Am7 | G7 | Dsus4 | G | Am7 | Bb | Esus4:8 E:8 | Asus4:8 A:8"
+
+phrases:
+  tune_a: |
+    E5:8 G5:4 A5:4 | B5:12 A5:2 E5:2 | D5:16 | C#5:12 r:4 |
+    F#5:8 A5:4 D6:4 | D6:6 C6:2 Bb5:8 | A5:6 F#5:2 D5:8 | E5:12 r:4
+  tune_b: |
+    C5:6 E5:2 G5:8 | F5:4 E5:4 D5:4 B4:4 | A4:6 D5:2 G5:8 | B5:12 r:4 |
+    C6:6 B5:2 A5:4 E5:4 | F5:6 D5:2 Bb4:8 | B4:4 D5:4 E5:4 G#5:4 | A5:12 r:4
+  shimmer: "^2:16"
+  arp: "^1:2 ^2:2 ^3:2 ^4:2 ^5:2 ^4:2 ^3:2 ^2:2"
+  bass_a: "^1:12 ^5-:4"
+  twinkle: "r:4 ^5:2 r:6 ^3+:2 r:2"
+  stars: "^1+:1 r:1 ^3:1 r:3 ^5:1 r:5 ^2+:1 r:3"
+  echo_b: |
+    r:16 | r:8 G4:8 | r:16 | r:8 D5:8 | r:16 | r:8 F4:8 | r:16 | r:8 C#5:8
+
+sections:
+  intro:
+    bars: 2
+    chords: "D | Asus4"
+    parts: {strings: shimmer, harp: arp, bass: bass_a, star: stars}
+  a:
+    bars: 8
+    chords: a
+    parts: {flute: tune_a, strings: shimmer, harp: arp, bass: bass_a, xylo: twinkle, star: stars}
+  b:
+    bars: 8
+    chords: b
+    gain: {harp: -6}
+    parts: {flute: tune_b, strings: shimmer, harp: arp, bass: bass_a, star: stars, echo: echo_b}
+
+arrangement: [intro, a, b]
+loop_start: a
