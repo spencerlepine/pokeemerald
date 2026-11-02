@@ -1,0 +1,69 @@
+# Encounter: young girls. Hot-swap of MUS_ENCOUNTER_GIRL (wiki audio:MUS_ENCOUNTER_GIRL, ENCOUNTER / LOOP).
+# SCRATCH (no film cue): an original, playful eye-contact tune in the lighter Star Wars idiom (the Ewok and
+# Mos Espa kids' music: mallets, skipping figures, bright major with a secondary dominant). Brief (sw_subject):
+# eye-contact jingle, young girls. 144 bpm (vanilla): a 1-bar G7 run-up, then an 8-bar loop in C (13.3 s,
+# vanilla 13.3 s): xylophone tune, square arpeggios and harmony, synth bass, piano off-beats, wave counter-line,
+# kick/snare and noise hats.
+name: encounter-girl
+replaces: MUS_ENCOUNTER_GIRL
+form: LOOP
+voicegroup: encounter_girl            # piano 1, xylophone 13, sq2 24, sq1 25, synth bass 38, wave 81, noise 126, kit 0
+master_volume: 80
+tempo: 144
+steps_per_beat: 4
+time_signature: [4, 4]
+seed: 91
+
+parts:
+  xylo:    {program: 13, channel: 0, volume: 108, pan: 8,   gate: 0.9, humanize: {vel: 4}}
+  piano:   {program: 1,  channel: 1, volume: 64,  pan: -18, octave: 4, gate: 0.5}
+  bass:    {program: 38, channel: 2, volume: 90,  pan: 0,   octave: 2, gate: 0.5, role: bass}
+  drums:   {program: 0,  channel: 3, volume: 74,  pan: 6,   role: drums, kit: {kick: 36, sn: 38}}
+  hat:     {program: 126, channel: 4, volume: 32, pan: -10, role: drums, kit: {h: C7}}
+  harm:    {program: 24, channel: 5, volume: 38,  pan: 30,  gate: 0.6, mono: true}
+  arp:     {program: 25, channel: 6, volume: 34,  pan: -30, octave: 5, gate: 0.5, mono: true}
+  wave:    {program: 81, channel: 7, volume: 44,  pan: 16,  octave: 4, gate: 0.85, mono: true}
+
+progressions:
+  runup: "G7"
+  skip:  "C | Am | F | G | C | E7 | F:8 G:8 | C:8 G7:8"
+
+phrases:
+  runup: "G4:2 B4:2 D5:2 F5:2 G5:4 r:4"
+  tune: |
+    E5:2 G5:2 C6:2 G5:2 E5:2 G5:2 C6:4 | A5:2 G5:2 E5:2 C5:2 A4:4 C5:4 |
+    F5:2 A5:2 C6:2 A5:2 F5:4 E5:2 F5:2 | G5:4 D5:2 B4:2 G4:8 |
+    E5:2 G5:2 C6:2 E6:2 D6:2 C6:2 G5:4 | G#5:2 B5:2 D6:2 B5:2 G#5:4 E5:4 |
+    A5:2 G5:2 F5:2 A5:2 G5:2 F5:2 D5:4 | C5:4 E5:2 G5:2 F5:2 D5:2 B4:4
+  harm: |
+    C5:2 E5:2 G5:2 E5:2 C5:2 E5:2 G5:4 | E5:2 E5:2 C5:2 A4:2 E4:4 A4:4 |
+    C5:2 F5:2 A5:2 F5:2 C5:4 C5:2 C5:2 | D5:4 B4:2 G4:2 D4:8 |
+    C5:2 E5:2 G5:2 C6:2 B5:2 G5:2 E5:4 | E5:2 G#5:2 B5:2 G#5:2 E5:4 B4:4 |
+    F5:2 E5:2 C5:2 F5:2 D5:2 D5:2 B4:4 | G4:4 C5:2 E5:2 D5:2 B4:2 G4:4
+  offs: "r:2 ^2:2 r:2 ^3:2 r:2 ^2:2 r:2 ^3:2"
+  bounce: "^1:2 r:2 ^3:2 r:2 ^1+:2 r:2 ^3:2 ^1:2"
+  arp: "^1:1 ^2:1 ^3:1 ^1+:1 ^1:1 ^2:1 ^3:1 ^1+:1 ^1:1 ^2:1 ^3:1 ^1+:1 ^1:1 ^2:1 ^3:1 ^1+:1"
+  counter: "^1:8 ^3:8"
+
+grooves:
+  runup:
+    kick: "x...x...x...x..."
+    sn:   "..........x.x.xx"
+  skip:
+    kick: "x.....x.x.......|x.....x.x...x..."
+    sn:   "....x.......x...|....x.......x.x."
+  hats:
+    h:    "x.xxx.xxx.xxx.xx"
+
+sections:
+  intro:
+    bars: 1
+    chords: runup
+    parts: {xylo: runup, arp: arp, bass: bounce, drums: runup, hat: hats, piano: offs}
+  a:
+    bars: 8
+    chords: skip
+    parts: {xylo: tune, harm: harm, piano: offs, bass: bounce, drums: skip, hat: hats, arp: arp, wave: counter}
+
+arrangement: [intro, a]
+loop_start: a
