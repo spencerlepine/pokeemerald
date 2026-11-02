@@ -233,13 +233,18 @@ def apply_textures(obj, canvas, mats_px, nz):
         elif tex == "brick":
             off = ((yy // 4) & 1) * 4
             sel = m & (nz > 0.5) & ((yy % 4 == 3) | (((xx + off) % 8) == 7))
+        elif tex == "panels":   # durasteel plating: a dark seam on a 16 px grid, on every face
+            sel = m & (tone >= 1) & ((xx % 16 == 15) | (yy % 16 == 7))
         elif tex == "rows":     # thatch, tiles: a dark line every 4 rows on every face
             sel = m & (tone >= 1) & (yy % 4 == 3)
         elif tex == "ridge":    # bark: a dark vertical line every 4 columns on the south face, broken every 6 rows
             sel = m & (nz < 0.5) & (xx % 4 == 3) & (((yy + xx // 4 * 2) % 6) != 0)
         elif tex == "speck":
-            h = ((xx * 7 + yy * 13 + (xx * yy) % 11) * 2654435761) & 0xffff
-            sel = m & (tone >= 1) & (h % 17 == 0)
+            h = (xx.astype(np.uint32) * np.uint32(73856093)) ^ (yy.astype(np.uint32) * np.uint32(19349663))
+            h ^= h >> np.uint32(13)
+            h *= np.uint32(0x5bd1e995)
+            h ^= h >> np.uint32(15)
+            sel = m & (tone >= 1) & ((h % np.uint32(40)) == 0)
         else:
             raise ValueError(f"material {name}: unknown texture {tex!r}")
         out[sel] = np.vectorize(lambda v: darker.get(int(v), int(v)))(out[sel]) if sel.any() else out[sel]

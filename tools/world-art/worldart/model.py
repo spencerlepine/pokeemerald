@@ -386,7 +386,16 @@ class Instance:
         d = np.maximum(d, -P[:, 2])          # ground clip
         if not want:
             return d
-        pid = self.union_ids[np.argmin(raw[self.union_ids], axis=0)]
+        # which part owns a surface point: the nearest union part AFTER its group's subtractions,
+        # else a door standing inside a recess cut from a wall would take the wall's material
+        carved = raw.copy()
+        for gname, ids in subs.items():
+            k = self.groups[gname]["k"]
+            for j, p in enumerate(self.parts):
+                if p.group == gname and p.op == "union":
+                    for i in ids:
+                        carved[j] = sdf.ssub(carved[j], raw[i], k)
+        pid = self.union_ids[np.argmin(carved[self.union_ids], axis=0)]
         return d, pid, Q
 
     def material_of(self, pid, Q):

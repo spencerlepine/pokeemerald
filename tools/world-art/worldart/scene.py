@@ -33,10 +33,39 @@ def _ground(w, h, spec, seed=7):
     return a
 
 
+def _layout_ground(sc):
+    """A real map rendered through a tile-generator recipe, with rectangles of cells reset to the
+    map's most common metatile (grass) where the new objects go. Needs ../tile-generator."""
+    import sys
+    sys.path.insert(0, os.path.join(HERE, "..", "tile-generator"))
+    from tilegen import gba, recolour
+    from tilegen.__main__ import _build_pair
+    L = gba.layouts()
+    lay = L[sc["layout"]]
+    rec = recolour.Recipe.load(os.path.join(HERE, sc["recipe"]))
+    _, pair = _build_pair(rec, lay.primary, lay.secondary)
+    cells = lay.cells()
+    ids = cells & 0x3FF
+    grass = int(np.bincount(ids.ravel()).argmax()) if "fill" not in sc else int(sc["fill"])
+    edited = cells.copy()
+    for x0, y0, x1, y1 in sc.get("clear", []):
+        edited[y0:y1, x0:x1] = (edited[y0:y1, x0:x1] & ~np.uint16(0x3FF)) | np.uint16(grass)
+    tmp = os.path.join(HERE, "output", "scenes", f"{lay.name}.edited.bin")
+    os.makedirs(os.path.dirname(tmp), exist_ok=True)
+    edited.astype("<u2").tofile(tmp)
+    import dataclasses
+    from pathlib import Path
+    lay2 = dataclasses.replace(lay, map_bin=Path(tmp))
+    return gba.render_layout(lay2, pair=pair).convert("RGB"), (lay.width, lay.height)
+
+
 def build(path):
     sc = yaml.safe_load(open(path))
-    w, h = sc["size"]
-    img = Image.fromarray(_ground(w, h, sc.get("ground", {})))
+    if "layout" in sc:
+        img, (w, h) = _layout_ground(sc)
+    else:
+        w, h = sc["size"]
+        img = Image.fromarray(_ground(w, h, sc.get("ground", {})))
     d = ImageDraw.Draw(img)
     for p in sc.get("paths", []):
         x0, y0, x1, y1 = p["rect"]
@@ -62,8 +91,6 @@ def build(path):
             cx, cy = o["at"]
             placements.append((cy + obj.cells[1], cx, sprite))
     img = img.convert("RGBA")
-    for _, cx, sprite in sorted(placements, key=lambda t: (t[0], t[1])):
-        pass
     # draw north to south (smaller bottom row first), so southern objects overlap northern ones
     for bottom, cx, sprite in sorted(placements, key=lambda t: (t[0], t[1])):
         img.alpha_composite(sprite, (cx * 16, (bottom - sprite.height // 16) * 16))
