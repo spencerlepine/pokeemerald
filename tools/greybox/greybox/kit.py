@@ -1119,6 +1119,37 @@ def r_grate(m):
         m.add(S.box(x - 0.5, y0, 1, x + 0.5, y1, 1.5, p["trim"]))
     m.add(S.box(0, y0, 1, m.W, y0 + 0.5, 1.5, p["trim"]), S.box(0, y1 - 0.5, 1, m.W, y1, 1.5, p["trim"]))
 
+
+def r_helm(m):
+    """Ship cockpit (helm): a tall window wall at the back, a long console under it, two seats in front."""
+    p = palette(m)
+    y0, y1, hz = _floor(m, 22)
+    m.add(S.box(0, y1 - 3, 0, m.W, y1, hz, p["trim"], p["dark"]),
+          S.box(3, y1 - 3.5, 9, m.W - 3, y1 - 1.5, hz - 2, p["glass"], subtract=True),
+          S.box(m.W / 2 - 0.5, y1 - 3.5, 9, m.W / 2 + 0.5, y1 - 1, hz - 2, p["trim"]),
+          S.box(1, y1 - 9, 0, m.W - 1, y1 - 3, 8, p["wall"], p["roof"]),
+          S.box(3, y1 - 8, 8, m.W - 3, y1 - 6, 9, p["light"]))
+    for x in (m.W * 0.33, m.W * 0.67):
+        m.add(S.box(x - 3, y0 + 1, 0, x + 3, y0 + 6, 5, p["wall"], p["roof"]),
+              S.box(x - 3, y0 + 5, 5, x + 3, y0 + 7, 12, p["trim"], p["dark"]))
+
+
+def r_stands(m):
+    """Grandstand: three tiers of benches, each a step up and back, with dark risers and a back rail."""
+    p = palette(m)
+    y0, y1, hz = _floor(m, 20)
+    d = (y1 - y0) / 3
+    for i in range(3):
+        z = 5 + i * 6
+        m.add(S.box(0, y0 + i * d, 0, m.W, y0 + (i + 1) * d, z, p["trim"], p["roof"] if i % 2 else p["wall"]),
+              S.box(0, y0 + i * d + 1, z, m.W, y0 + i * d + 2.5, z + 2, p["wall"], p["wall"]))
+    m.add(S.box(0, y1 - 1, 17, m.W, y1, hz, p["trim"], p["dark"]))
+    n = max(2, min(6, int(m.W // 48)))
+    for i in range(1, n):
+        x = m.W * i / n
+        m.add(S.box(x - 1, y0, 0, x + 1, y1, 18, p["dark"], p["dark"]))
+
+
 INTERIORS = {
     "r-block": (r_block, [(2, 1), (3, 2)]),
     "r-counter": (r_counter, [(4, 2), (6, 2)]),
@@ -1139,10 +1170,13 @@ INTERIORS = {
     "r-viewport": (r_viewport, [(3, 3)]),
     "r-stage": (r_stage, [(4, 2)]),
     "r-grate": (r_grate, [(4, 2)]),
+    "r-helm": (r_helm, [(6, 2), (6, 3)]),
+    "r-stands": (r_stands, [(8, 3), (18, 3)]),
 }
 
 from . import objects as _objects     # noqa: E402  (categories 9 and 10 live in their own files)
 from . import wild as _wild           # noqa: E402
+from . import landmarks as _landmarks  # noqa: E402
 
 # Categories whose kit sheet shows the game's sign in front of each piece.
 SIGNED = {"gyms"}
@@ -1151,12 +1185,14 @@ SIGNED = {"gyms"}
 MATERIAL = {"imperial": {"wall": (150, 156, 164), "roof": (98, 104, 112), "trim": (52, 54, 60)},
             "nature": {"wall": (120, 92, 64), "roof": (96, 140, 72), "trim": (70, 60, 50)},
             "landform": {"wall": (176, 124, 78), "roof": (214, 176, 126), "trim": (110, 80, 54)},
+            "landmarks": {"wall": (150, 138, 120), "roof": (178, 168, 150), "trim": (70, 66, 64)},
             "wild": {"wall": (120, 96, 70), "roof": (110, 140, 80), "trim": (80, 66, 52)},
             "interiors": {"wall": (196, 188, 172), "roof": (160, 150, 132), "trim": (84, 76, 66)}}
 
 CATEGORIES = {"doorless": DOORLESS, "sunken": SUNKEN, "imperial": IMPERIAL, "nature": NATURE,
               "landform": LANDFORM, "hangars": HANGARS, "gyms": GYMS, "interiors": INTERIORS,
-              "objects": _objects.OBJECTS, "wild": _wild.WILD}
+              "objects": _objects.OBJECTS, "wild": _wild.WILD,
+              "landmarks": _landmarks.LANDMARKS}
 
 
 def register(builds):

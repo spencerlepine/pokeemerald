@@ -1,6 +1,6 @@
 area,planet,kind,replaces,layout_status,piece_kind,piece,size,art,art_known,art_status,tool
 asteroid-spire-outside,ASTEROID FIELD,route,SkyPillar_Outside,BLOCKOUT,area,ASTEROID SPIRE,28x23,,,pending-mockup,greybox terrain
-asteroid-spire-outside,ASTEROID FIELD,route,SkyPillar_Outside,BLOCKOUT,prop,Asteroid spire,2x2,art:grand-arena:asteroid-spire,yes,pending-mockup,
+asteroid-spire-outside,ASTEROID FIELD,route,SkyPillar_Outside,BLOCKOUT,prop,Asteroid spire,2x2,art:grand-arena:asteroid-spire,yes,pending-final-art,greybox piece
 asteroid-spire-outside,ASTEROID FIELD,route,SkyPillar_Outside,BLOCKOUT,person,Wallace,1x1,,,PLACEHOLDER,
 asteroid-spire-outside,ASTEROID FIELD,route,SkyPillar_Outside,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 asteroid-spire-outside,ASTEROID FIELD,route,SkyPillar_Outside,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
@@ -557,7 +557,7 @@ dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,building,Dragonsnake watcher's hut,
 dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,building,Gnarltree keeper's hut,4x3,art:dagobah:yoda-s-hut,yes,pending-final-art,greybox piece
 dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,building,Old Jedi outpost (mystery events),5x4,art:dagobah:yoda-s-hut,yes,pending-final-art,greybox piece
 dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,building,Bog landing (ships),6x4,art:shared:landing-pad,yes,pending-final-art,greybox piece
-dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,prop,Cave of Evil mouth,4x3,art:dagobah:cave-of-evil-mouth,yes,pending-mockup,
+dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,prop,Cave of Evil mouth,4x3,art:dagobah:cave-of-evil-mouth,yes,pending-final-art,greybox piece
 dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,prop,Sunken X-wing,4x3,art:dagobah:sunken-x-wing,yes,pending-final-art,greybox piece
 dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,prop,Gnarltree,2x2,art:dagobah:gnarltree,yes,pending-final-art,greybox piece
 dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,prop,Gnarltree,2x2,art:dagobah:gnarltree,yes,pending-final-art,greybox piece
@@ -2723,7 +2723,7 @@ mortis-gate-exterior,MORTIS,landmark,NavelRock_Exterior,BLOCKOUT,area,MORTIS GAT
 mortis-gate-exterior,MORTIS,landmark,NavelRock_Exterior,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 mortis-gate-exterior,MORTIS,landmark,NavelRock_Exterior,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 wellspring-entrance,MORTIS,landmark,FarawayIsland_Entrance,BLOCKOUT,area,WELLSPRING ENTRANCE,34x46,,,pending-mockup,greybox terrain
-wellspring-entrance,MORTIS,landmark,FarawayIsland_Entrance,BLOCKOUT,prop,Wellspring pool,2x2,art:grand-arena:wellspring-pool,yes,pending-mockup,
+wellspring-entrance,MORTIS,landmark,FarawayIsland_Entrance,BLOCKOUT,prop,Wellspring pool,2x2,art:grand-arena:wellspring-pool,yes,pending-final-art,greybox piece
 wellspring-entrance,MORTIS,landmark,FarawayIsland_Entrance,BLOCKOUT,person,Sailor,1x1,,,PLACEHOLDER,
 wellspring-entrance,MORTIS,landmark,FarawayIsland_Entrance,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER,
 wellspring-entrance,MORTIS,landmark,FarawayIsland_Entrance,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
@@ -2870,21 +2870,21 @@ battle-colosseum-4-p,SHARED,interior,BattleColosseum_4P,BLOCKOUT,warp,Door,1x1,,
 battle-colosseum-4-p,SHARED,interior,BattleColosseum_4P,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 battle-colosseum-4-p,SHARED,interior,BattleColosseum_4P,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 hangar-tatooine-endor,SHARED,interior,new,BLOCKOUT,area,Rebel shuttle cabin,18x12,,,pending-mockup,greybox room
-hangar-tatooine-endor,SHARED,interior,new,BLOCKOUT,prop,Rebel shuttle cockpit,6x2,art:new:ship-cockpit,yes,pending-mockup,
+hangar-tatooine-endor,SHARED,interior,new,BLOCKOUT,prop,Rebel shuttle cockpit,6x2,art:new:ship-cockpit,yes,pending-final-art,greybox piece
 hangar-tatooine-endor,SHARED,interior,new,BLOCKOUT,prop,Dejarik table,2x2,art:new:dejarik-table,yes,pending-final-art,greybox piece
 hangar-tatooine-endor,SHARED,interior,new,BLOCKOUT,prop,StarNAV flight console,1x1,art:new:starnav-console,yes,pending-final-art,greybox piece
 hangar-tatooine-endor,SHARED,interior,new,BLOCKOUT,person,Pilot,1x1,,,PLACEHOLDER,
 hangar-tatooine-endor,SHARED,interior,new,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 hangar-tatooine-endor,SHARED,interior,new,BLOCKOUT,warp,Ramp (other end),1x1,,,PLACEHOLDER,
 hangar-tatooine-kashyyyk,SHARED,interior,new,BLOCKOUT,area,Millennium Falcon cabin,18x12,,,pending-mockup,greybox room
-hangar-tatooine-kashyyyk,SHARED,interior,new,BLOCKOUT,prop,Millennium Falcon cockpit,6x2,art:new:ship-cockpit,yes,pending-mockup,
+hangar-tatooine-kashyyyk,SHARED,interior,new,BLOCKOUT,prop,Millennium Falcon cockpit,6x2,art:new:ship-cockpit,yes,pending-final-art,greybox piece
 hangar-tatooine-kashyyyk,SHARED,interior,new,BLOCKOUT,prop,Dejarik table,2x2,art:new:dejarik-table,yes,pending-final-art,greybox piece
 hangar-tatooine-kashyyyk,SHARED,interior,new,BLOCKOUT,prop,StarNAV flight console,1x1,art:new:starnav-console,yes,pending-final-art,greybox piece
 hangar-tatooine-kashyyyk,SHARED,interior,new,BLOCKOUT,person,Pilot,1x1,,,PLACEHOLDER,
 hangar-tatooine-kashyyyk,SHARED,interior,new,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 hangar-tatooine-kashyyyk,SHARED,interior,new,BLOCKOUT,warp,Ramp (other end),1x1,,,PLACEHOLDER,
 hangar-tatooine-sullust,SHARED,interior,new,BLOCKOUT,area,Sullustan transport cabin,18x12,,,pending-mockup,greybox room
-hangar-tatooine-sullust,SHARED,interior,new,BLOCKOUT,prop,Sullustan transport cockpit,6x2,art:new:ship-cockpit,yes,pending-mockup,
+hangar-tatooine-sullust,SHARED,interior,new,BLOCKOUT,prop,Sullustan transport cockpit,6x2,art:new:ship-cockpit,yes,pending-final-art,greybox piece
 hangar-tatooine-sullust,SHARED,interior,new,BLOCKOUT,prop,Dejarik table,2x2,art:new:dejarik-table,yes,pending-final-art,greybox piece
 hangar-tatooine-sullust,SHARED,interior,new,BLOCKOUT,prop,StarNAV flight console,1x1,art:new:starnav-console,yes,pending-final-art,greybox piece
 hangar-tatooine-sullust,SHARED,interior,new,BLOCKOUT,person,Pilot,1x1,,,PLACEHOLDER,
@@ -3929,7 +3929,7 @@ mos-espa-house-2,TATOOINE,interior,MauvilleCity_House2,BLOCKOUT,person,Woman,1x1
 mos-espa-house-2,TATOOINE,interior,MauvilleCity_House2,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 mos-espa-house-2,TATOOINE,interior,MauvilleCity_House2,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 mos-espa-podrace-arena,TATOOINE,interior,new,BLOCKOUT,area,Mos Espa podrace grandstand,22x14,,,pending-mockup,greybox room
-mos-espa-podrace-arena,TATOOINE,interior,new,BLOCKOUT,prop,Grandstand rows,18x3,art:new:grandstand,yes,pending-mockup,
+mos-espa-podrace-arena,TATOOINE,interior,new,BLOCKOUT,prop,Grandstand rows,18x3,art:new:grandstand,yes,pending-final-art,greybox piece
 mos-espa-podrace-arena,TATOOINE,interior,new,BLOCKOUT,prop,Podracer engine,3x2,art:new:podracer-engine,yes,pending-final-art,greybox piece
 mos-espa-podrace-arena,TATOOINE,interior,new,BLOCKOUT,person,Bookie,1x1,,,PLACEHOLDER,
 mos-espa-podrace-arena,TATOOINE,interior,new,BLOCKOUT,person,Pit droid,1x1,,,PLACEHOLDER,
@@ -4869,7 +4869,7 @@ tython-hangar,TYTHON,interior,new,BLOCKOUT,prop,Cargo crates,2x2,art:shared:carg
 tython-hangar,TYTHON,interior,new,BLOCKOUT,person,Pilot,1x1,,,PLACEHOLDER,
 tython-hangar,TYTHON,interior,new,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 tython-isle-exterior,TYTHON,route,SouthernIsland_Exterior,BLOCKOUT,area,TYTHON ISLE,33x30,,,pending-mockup,greybox terrain
-tython-isle-exterior,TYTHON,route,SouthernIsland_Exterior,BLOCKOUT,prop,Tython standing stones,2x2,art:grand-arena:tython-standing-stones,yes,pending-mockup,
+tython-isle-exterior,TYTHON,route,SouthernIsland_Exterior,BLOCKOUT,prop,Tython standing stones,2x2,art:grand-arena:tython-standing-stones,yes,pending-final-art,greybox piece
 tython-isle-exterior,TYTHON,route,SouthernIsland_Exterior,BLOCKOUT,person,Sailor,1x1,,,PLACEHOLDER,
 tython-isle-exterior,TYTHON,route,SouthernIsland_Exterior,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER,
 tython-isle-exterior,TYTHON,route,SouthernIsland_Exterior,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,

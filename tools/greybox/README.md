@@ -1,10 +1,10 @@
 # greybox: world pieces as simple 3D models, rendered to pixels
 
-Status: **READY** for buildings and structures (the owner approved the kit categories on 2026-11-02). Terrain
-in relief works. Interiors: `room` draws the room shell and the `interiors` kit has 19 props (owner approved the first set).
-Dungeons: `terrain` draws caves and station decks in cave mode (all 119 render). Surfaces: `~` is water, sea, swamp,
-lava, ice, cloud or void by planet. Raised walkways, floating platforms and ships have no model yet; they stay
-`pending-mockup` in the wiki until a model exists.
+Status: **READY**. Every row in the wiki names a greybox tool (`blockout todo` shows which), and all 528 areas
+render. Buildings and structures were approved category by category with the owner on 2026-11-02; the later
+kits (interiors, objects, wild, landmarks), cave mode and surfaces were built in one pass for testing and wait
+for the owner's review. Raised walkways between areas, floating platforms and full tree canopies are not
+modelled: walkways are an `o-walkway` piece, trees use `pine` or the `w-trunk` stand-in (trees are parked).
 
 Every piece is a small 3D model of convex solids (boxes, oval prisms, domes, cones, gables, cuts), ray-cast one
 pixel at a time in the game's top-down view and shaded, so round roofs come out as ovals, only south faces show,
@@ -40,6 +40,7 @@ python3 -m greybox kit gyms [--grey]                      # one category side by
 python3 -m greybox sheet [--grey] [--giants]              # every building model at three sizes
 python3 -m greybox terrain hoth-tundra [--grey]           # one area in relief, with its pieces (caves: cave mode)
 python3 -m greybox room mos-pelgo-lab [--grey]            # one interior as a room -> wiki/world/greybox/rooms/<area>.png
+python3 -m greybox kit objects|wild|landmarks|interiors   # review sheets for the newer categories
 ```
 
 `--grey` gives pure greybox colours; otherwise the planet palette from `palettes.yaml` is used.
@@ -59,7 +60,7 @@ python3 -m greybox room mos-pelgo-lab [--grey]            # one interior as a ro
   bunker, buried, stilts, stilts-dome, stilts-flat, pad, plant, lab, arena, hipped) and the one giant,
   trench-wall. `sprite()` renders one piece; `building()` pastes it on a map.
 - `greybox/kit.py`: the categories added one at a time with the owner (`CATEGORIES`): doorless, sunken,
-  imperial, nature, landform, hangars, gyms, interiors, objects, wild. Each piece passes a **simplicity guardrail** when it renders: at
+  imperial, nature, landform, hangars, gyms, interiors, objects, wild, landmarks. Each piece passes a **simplicity guardrail** when it renders: at
   most 16 solids, colours only from its six-colour palette. Variation comes from the seed, never from detail.
   `MATERIAL` gives a category its own colours (Imperial greys); `SIGNED` categories get the game's sign drawn in
   front on the kit sheet (gyms).
@@ -71,6 +72,8 @@ python3 -m greybox room mos-pelgo-lab [--grey]            # one interior as a ro
 - `greybox/wild.py`: the `wild` category (12 models, `w-` names): reeds, scrub, fern, vines, crystal outcrop,
   basalt columns, steam vent, dune, sarlacc pit, giant trunk (stand-in for the parked forest trees), dead tree,
   spore pods.
+- `greybox/landmarks.py`: the `landmarks` category (6 models, `lm-` names): fortress tower, cave mouth, standing
+  stones, glowing pool, glyph wall, ancient spire.
 - `greybox/room.py`: an interior as a room. The `#` cells joined to the top edge are walls (two face cells above
   the floor, ceiling above that, a shadow on the floor below); every other `#` blob is furniture of unknown shape,
   drawn as a low slab (`r-block`). Props listed on the area with an `art` id use their kit model.
