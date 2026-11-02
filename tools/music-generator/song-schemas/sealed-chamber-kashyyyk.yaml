@@ -1,0 +1,72 @@
+# Sealed Chamber, Kashyyyk: net-new per-planet split of MUS_SEALED_CHAMBER (wiki row
+# net:mus-sealed-chamber-kashyyyk), for the Ice Grotto. SCRATCH: no film cue, written from the brief. The
+# Tatooine original is an eerie, sparse vault; this one is a frozen grotto, so it rocks slowly in 6/8 under harp
+# arpeggios like dripping ice: F minor with a C major dominant, a flute line in a, a low horn in b, an icy 25 %
+# square over the Neapolitan Gb in c, and d settles over timpani before the loop. Vanilla voicegroup and tempo
+# (MUS_SEALED_CHAMBER: sealed_chamber, 140 bpm, 36.0 s): 28 bars of 6/8 at 140 = 36.0 s.
+# Brief (sw_subject): Kashyyyk version of MUS_SEALED_CHAMBER, same role and mood family; theme to be decided.
+name: sealed-chamber-kashyyyk
+constant: MUS_SEALED_CHAMBER_KASHYYYK
+form: AMBIENT
+voicegroup: sealed_chamber        # vanilla's own: bell 14, harp 46, timpani 47, strings 48, horn 60, flute 73, squares 80/81, wave 87
+master_volume: 100
+tempo: 140
+steps_per_beat: 2                 # eighth-note grid, 6 steps a 6/8 bar
+time_signature: [6, 8]
+seed: 66
+
+parts:
+  flute:   {program: 73, channel: 0, volume: 84,  pan: 10,  gate: 0.95, lfo_speed: 26, lfo_delay: 20, mod: 5, humanize: {vel: 5}}
+  horn:    {program: 60, channel: 1, volume: 80,  pan: -10, gate: 0.95, humanize: {vel: 4}}
+  harp:    {program: 46, channel: 2, volume: 74,  pan: -22, octave: 4, gate: 0.9, humanize: {vel: 8}}
+  pad:     {program: 48, channel: 3, volume: 48,  pan: 24,  octave: 3, gate: 1.0}
+  bell:    {program: 14, channel: 4, volume: 56,  pan: -30, gate: 1.0}
+  timpani: {program: 47, channel: 5, volume: 72,  pan: 12,  gate: 1.0}
+  bass:    {program: 87, channel: 6, volume: 68,  pan: 0,   octave: 2, role: bass, gate: 0.95}
+  ice:     {program: 80, channel: 7, volume: 36,  pan: 34,  gate: 0.95, mono: true}
+  glint:   {program: 81, channel: 8, volume: 26,  pan: -34, octave: 5, gate: 0.4, mono: true}
+
+progressions:
+  intro: "Fm | C"
+  a: "Fm | Fm | Db | Db | Bbm | C | Fm | C"
+  b: "Db | Eb | Cm | Fm | Db | Eb | C | C"
+  c: "Fm | Gb | Fm | Gb | Bbm | Gb | Db | C"
+  d: "Fm | Db | Bbm | C"
+
+phrases:
+  harp6: "^1:1 ^2:1 ^3:1 ^1+:1 ^3:1 ^2:1"
+  pad: "^1:6"
+  root: "^1:6"
+  glints: "r:4 ^3:1 r:1 | r:6"
+  flute_a: "C5:3 Ab4:2 F4:1 | G4:6 | Ab4:3 F4:2 Db5:1 | C5:6 | Db5:3 C5:2 Bb4:1 | E4:6 | F4:2 G4:2 Ab4:2 | G4:6"
+  horn_b: "Ab3:3 F3:2 Db4:1 | Bb3:6 | G3:3 Eb3:2 C4:1 | C4:6 | F4:3 Db4:2 Ab3:1 | G3:3 Bb3:3 | E4:6 | ~:3 r:3"
+  ice_c: "F5:6 | Gb5:6 | Ab5:6 | Gb5:3 F5:3 | F5:6 | Db5:6 | F5:3 Ab5:3 | G5:6"
+  bell_c: "F4:6 | r:6 | r:6 | r:6 | Bb4:6 | r:6 | r:6 | r:6"
+  flute_d: "Ab4:6 | F4:6 | Db5:6 | C5:3 E4:3"
+  timp_d: "F2:2 r:4 | Db2:2 r:4 | Bb1:2 r:4 | C2:1 C2:1 C2:1 C2:1 C2:2"
+
+sections:
+  intro:
+    bars: 2
+    chords: intro
+    parts: {harp: harp6, pad: pad, bass: root, flute: "r:6 | r:3 E4:3"}
+  a:
+    bars: 8
+    chords: a
+    parts: {flute: flute_a, harp: harp6, pad: pad, bass: root}
+  b:
+    bars: 8
+    chords: b
+    parts: {horn: horn_b, harp: harp6, pad: pad, bass: root, glint: glints}
+  c:
+    bars: 8
+    chords: c
+    parts: {ice: ice_c, bell: bell_c, harp: harp6, pad: pad, bass: root, glint: glints}
+  d:
+    bars: 4
+    chords: d
+    gain: {flute: -6}
+    parts: {flute: flute_d, timpani: timp_d, harp: harp6, pad: pad, bass: root}
+
+arrangement: [intro, a, b, c, d]
+loop_start: a
