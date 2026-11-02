@@ -1,0 +1,62 @@
+# Jedha Road (MUS_ROUTE122, hot-swap): Routes 122-123 to Jedha. STYLE of "The High Council Meeting and Qui-Gon's
+# Funeral" (wiki audio:MUS_ROUTE122, ref soundtrack:phantom-menace:16): an original chant-like line, not a quote.
+# Taken from the cue: its tempo (analyze_reference 152 bpm, candidates 148-152.5; 150 here, where every clock is
+# one frame), the funeral's processional pulse with the chant moving in half time over it, D minor modal colour,
+# and the choral parallel fifths (horn with the tuba a fifth below) over a drone.
+#   intro 2 bars  the D-A drone, timpani, the pilgrim's bell, horn on D then A with the tuba a fifth below
+#   a     8 bars  the chant: horn, tuba a fifth below
+#   b     8 bars  the flute answers high over a horn pedal
+#   c     8 bars  the chant on trumpet with the horn and tuba, timpani rolls, settling back to the drone
+# Brief (sw_subject): mystic pilgrim road, original chant-like line. Vanilla voicegroup route122. Loop 24 bars,
+# 38.4 s (vanilla 46.5 s).
+name: jedha-road
+replaces: MUS_ROUTE122
+form: LOOP
+voicegroup: route122          # horn 60, tuba 58, trumpet 56, flute 73, strings 48, timpani 47, wave 81, square 80
+master_volume: 80
+tempo: 150
+steps_per_beat: 2
+time_signature: [4, 4]
+seed: 122
+
+parts:
+  horn:    {program: 60, channel: 0, volume: 96,  pan: -6,  gate: 0.96, humanize: {vel: 4}}
+  tuba:    {program: 58, channel: 1, volume: 80,  pan: 6,   gate: 0.96, transpose: -19}
+  trumpet: {program: 56, channel: 2, volume: 88,  pan: 10,  gate: 0.94, humanize: {vel: 4}}
+  flute:   {program: 73, channel: 3, volume: 92,  pan: 14,  gate: 0.96, lfo_speed: 26, lfo_delay: 24, mod: 6, humanize: {vel: 5}}
+  strings: {program: 48, channel: 4, volume: 60,  pan: -26, gate: 1.0}
+  timpani: {program: 47, channel: 5, volume: 84,  pan: 0,   gate: 1.0}
+  drone:   {program: 81, channel: 6, volume: 70,  pan: 0,   gate: 1.0, mono: true}
+  bell:    {program: 80, channel: 7, volume: 36,  pan: 32,  gate: 0.3, mono: true}
+
+phrases:
+  chant: |
+    D4:4 E4:2 F4:2 | G4:4 F4:4 | E4:2 D4:2 E4:2 F4:2 | D4:8 | A4:4 G4:2 F4:2 | G4:4 A4:4 | F4:2 E4:2 D4:2 C4:2 | D4:8
+  answer: |
+    A5:6 G5:2 | F5:4 E5:4 | D5:4 F5:2 A5:2 | C6:8 | Bb5:4 A5:2 G5:2 | A5:4 F5:4 | E5:2 D5:2 C5:2 E5:2 | D5:8
+  chant_hi: |
+    D5:4 E5:2 F5:2 | G5:4 F5:4 | E5:2 D5:2 E5:2 F5:2 | D5:8 | A5:4 G5:2 F5:2 | G5:4 A5:4 | F5:2 E5:2 D5:2 C5:2 | D5:8
+  pedal: "D4:8 | D4:8 | C4:8 | D4:8 | F4:8 | E4:8 | C4:8 | D4:8"
+  hold: "D4:8"
+  dr: "D2:8 | A1:8"
+  timp: "D2:2 r:6 | A1:2 r:2 A1:2 r:2"
+  timp_roll: "D2:2 r:6 | A1:2 r:6 | D2:2 r:6 | A1:2 r:6 | D2:2 r:6 | A1:2 r:6 | D2:1 D2:1 D2:1 D2:1 D2:1 D2:1 D2:1 D2:1 | D2:2 r:6"
+  toll: "D6:1 r:3 A5:1 r:3"
+
+sections:
+  intro:
+    bars: 2
+    parts: {drone: dr, strings: hold, timpani: timp, bell: toll, horn: "D4:8 | A3:8", tuba: "D4:8 | A3:8"}
+  a:
+    bars: 8
+    parts: {horn: chant, tuba: chant, strings: hold, drone: dr, timpani: timp, bell: toll}
+  b:
+    bars: 8
+    parts: {flute: answer, horn: pedal, strings: hold, drone: dr, timpani: timp, bell: toll}
+  c:
+    bars: 8
+    ramp: {trumpet: [0, -10]}
+    parts: {trumpet: chant_hi, horn: chant, tuba: chant, drone: dr, timpani: timp_roll, bell: toll}
+
+arrangement: [intro, a, b, c]
+loop_start: a
