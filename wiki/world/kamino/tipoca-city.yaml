@@ -3,93 +3,146 @@ name: TIPOCA CITY
 planet: KAMINO
 kind: town
 replaces: PacifidlogTown
-status: TODO
-story: ''
-pos: [480, 260]
+status: BLOCKOUT
+story: 'Tipoca City on Kamino''s storm sea: domes on stilts joined by walkways round the great cloning hall. Ships land on the north-east platform; the walkway runs
+  west to Route 132 and east to Route 131.'
+pos: [0, 0]
 grid: |
-  ####################
-  ####################
-  ####################
-  ####################
-  ####################
-  ####################
-  ####################
-  ####################
-  ~~~~~##########~~~~~
-  ~~~~~~~~~~~~~~~~~~##
-  ~~~~~~~~~~~~~~~~~~##
-  .###.~~~~~~~~~~~~~~~
-  .###.~~~~~~~~~.###.~
-  .....~~####~~~.###.~
-  .....~.####.~~.....~
-  ~~~.~~.####.~~~~.~~~
-  ~~~=~~.#....~~~~=~~~
-  ~~~===......=====~~~
-  ~~~~~~~~.~~~~~~~~~~~
-  ~~~~~~~~=~~~~~~~~~~~
-  ~~~~~~~~=~~~~~~.###.
-  ~.###.~~=~~~~~~.###.
-  ~.###.~~=~~~~~~.....
-  ~.....~~=~.###.~~.~~
-  ~~~.~~~~=~.###.~~=~~
-  ~~~=~~~~=~.....~~=~~
-  ~~~======~~~.~~~~=~~
-  ~~~~~~~~==========~~
-  ~~~~~~~~=~~~~~~~~~~~
-  ##~~~~~~~~~~~~~~~~~~
-  ##~~~~~~~~~~~~~~##~~
-  ~~~############~##~~
-  ####################
-  ####################
-  ####################
-  ####################
-  ####################
-  ####################
-  ####################
-  ####################
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~==========~~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~==========~~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~==========~~
+  ~~~=========~~~~~~~~~~~~~~~~~~~~~~~~~~==========~~
+  ~~~=========~~~~~~~~~~~~~~~~~~~~~~~~~~==========~~
+  ~~~=========~~======================~~==========~~
+  ~~~=========~~======================~~==========~~
+  ~~~=========~~======================~~==========~~
+  ~~~=========~~======================~~~~~~==~~~~~~
+  ~~~=========~~======================~~~~~~==~~~~~~
+  ~~~=========~~======================~~~~~~==~~~~~~
+  ~~~~~~~=~~~~~~======================~~~~~~==~~~~~~
+  ~~~~~~~=~~~~~~======================~~~~~~==~~~~~~
+  ~~~~~~~=~~~~~~======================~~~~~~==~~~~~~
+  ==================================================
+  ==================================================
+  ~~~~~~~=~~~~~~======================~~~~~~=~~~~~~~
+  ~~~~~~~=~~~~~~======================~~~~~~=~~~~~~~
+  ~~~~~~~=~~~~~~~~~~~~=~~~~~~~~~~=~~~~~============~
+  ~~~==========~~=====================~============~
+  ~~~==========~~=====================~============~
+  ~~~==========~~=====================~============~
+  ~~~==========~~=====================~============~
+  ~~~==========~~=====================~============~
+  ~~~==========~~=====================~============~
+  ~~~==========~~=====================~============~
+  ~~~==========~~=====================~============~
+  ~~~==========~~=====================~============~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 exits:
 - edge: west
-  cells: [11, 12, 13, 14]
+  cells: [17, 18]
   to: route-132
 - edge: east
-  cells: [20, 21, 22]
+  cells: [17, 18]
   to: route-131
-buildings: []
-props: []
+buildings:
+- name: Cloning hall
+  art: art:kamino:cloning-hall
+  at: [19, 9]
+  size: [12, 6]
+  door: 6
+  to: tipoca-city-cloning-hall
+- name: Landing platform (ships)
+  art: art:shared:landing-pad
+  at: [40, 4]
+  size: [6, 4]
+  door: 3
+  to: tipoca-city-hangar
+- name: Kaminoan dwelling
+  art: art:kamino:stilt-dome
+  at: [5, 7]
+  size: [5, 4]
+  door: 2
+  to: tipoca-city-house-4
+- name: Bacta Center
+  art: art:shared:bacta-center
+  at: [5, 23]
+  size: [5, 4]
+  door: 2
+  to: tipoca-city-bacta-center-1f
+- name: Clone trainer's quarters
+  art: art:kamino:stilt-dome
+  at: [16, 23]
+  size: [5, 4]
+  door: 2
+  to: tipoca-city-house-1
+- name: Kaminoan dwelling
+  art: art:kamino:stilt-dome
+  at: [23, 23]
+  size: [5, 4]
+  door: 2
+  to: tipoca-city-house-2
+- name: Supply Depot
+  art: art:shared:supply-depot
+  at: [30, 23]
+  size: [4, 4]
+  door: 1
+  to: tipoca-city-supply-depot
+- name: Fisher's dome
+  art: art:kamino:stilt-dome
+  at: [38, 22]
+  size: [4, 4]
+  door: 1
+  to: tipoca-city-house-3
+- name: Storm watcher's dome
+  art: art:kamino:stilt-dome
+  at: [43, 22]
+  size: [4, 4]
+  door: 1
+  to: tipoca-city-house-5
+props:
+- name: Cargo crates
+  art: art:shared:cargo-crates
+  at: [46, 8]
+  size: [2, 2]
+- name: Storm swell
+  art: art:kamino:storm-sea
+  at: [4, 33]
+  size: [3, 1]
+- name: Storm swell
+  art: art:kamino:storm-sea
+  at: [40, 33]
+  size: [3, 1]
 people:
-- name: Girl
-  at: [10, 23]
+- name: Kaminoan aide
+  at: [26, 16]
+  role: story
+- name: Clone cadet
+  at: [10, 17]
+  role: trainer
+- name: Clone cadet
+  at: [36, 18]
+  role: trainer
+- name: Kaminoan scientist
+  at: [18, 29]
   role: npc
-- name: Fisherman
-  at: [11, 14]
+- name: Stilt fisher
+  at: [45, 29]
   role: npc
-- name: Ninja Boy
-  at: [9, 16]
+- name: Dock worker
+  at: [39, 9]
   role: npc
 signs:
-- name: Sign
-  at: [9, 15]
-- name: Sign
-  at: [7, 16]
-- name: Sign
-  at: [10, 15]
-warps:
-- name: Door
-  at: [8, 15]
-  to: tipoca-city-bacta-center-1f
-- name: Door
-  at: [16, 13]
-  to: tipoca-city-house-1
-- name: Door
-  at: [3, 22]
-  to: tipoca-city-house-2
-- name: Door
-  at: [12, 24]
-  to: tipoca-city-house-3
-- name: Door
-  at: [2, 12]
-  to: tipoca-city-house-4
-- name: Door
-  at: [17, 21]
-  to: tipoca-city-house-5
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+- name: City holo-sign
+  at: [14, 16]
+- name: Cloning hall sign
+  at: [32, 15]
+warps: []
+todo: [Grown from Pacifidlog (20x40) to 50x36; the 5 house and Bacta Center interiors keep their ids., 'New interiors: tipoca-city-cloning-hall (PROTOCLONE lore,
+    optional), tipoca-city-supply-depot, tipoca-city-hangar.', '''~'' is the open storm sea (Surf); ''='' are the stilt walkways and platforms.']

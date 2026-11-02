@@ -3,8 +3,8 @@ name: UNDERWATER SOOTOPOLIS CITY
 planet: DAGOBAH
 kind: dungeon
 replaces: Underwater_SootopolisCity
-status: TODO
-story: ''
+status: BLOCKOUT
+story: Murky water under the swamp, roots and silt.
 grid: |
   ####################
   ####################
@@ -28,4 +28,4 @@ warps:
 - name: Door
   at: [10, 8]
   to: underwater-route-126
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

@@ -3,8 +3,8 @@ name: SEALED VAULT OUTER ROOM
 planet: KAMINO
 kind: dungeon
 replaces: SealedChamber_OuterRoom
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Sealed Vault: Aurebesh carvings on the walls; reading them wakes the Wardens.'
 grid: |
   #####################
   #####################
@@ -96,4 +96,4 @@ warps:
 - name: Door
   at: [10, 2]
   to: sealed-vault-inner-room
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

@@ -3,8 +3,8 @@ name: DROWNED CAVERN ROOM 8
 planet: DAGOBAH
 kind: dungeon
 replaces: SeafloorCavern_Room8
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Drowned Cavern: flooded caves under Route 128 where Jabba wakes SANDO (vanilla Seafloor Cavern).'
 grid: |
   ###########
   ###########
@@ -24,42 +24,42 @@ exits: []
 buildings: []
 props: []
 people:
-- name: Event Script_Strength Boulder
+- name: Event object
   at: [4, 7]
-  role: npc
-- name: Event Script_Strength Boulder
+  role: object
+- name: Event object
   at: [5, 7]
-  role: npc
-- name: Event Script_Strength Boulder
+  role: object
+- name: Event object
   at: [6, 7]
-  role: npc
-- name: Event Script_Strength Boulder
+  role: object
+- name: Event object
   at: [3, 6]
-  role: npc
-- name: Event Script_Strength Boulder
+  role: object
+- name: Event object
   at: [7, 6]
-  role: npc
-- name: Event Script_Strength Boulder
+  role: object
+- name: Event object
   at: [4, 5]
-  role: npc
-- name: Event Script_Strength Boulder
+  role: object
+- name: Event object
   at: [5, 5]
-  role: npc
-- name: Event Script_Strength Boulder
+  role: object
+- name: Event object
   at: [6, 5]
-  role: npc
-- name: Event Script_Strength Boulder
+  role: object
+- name: Event object
   at: [3, 4]
-  role: npc
-- name: Event Script_Strength Boulder
+  role: object
+- name: Event object
   at: [4, 4]
-  role: npc
-- name: Event Script_Strength Boulder
+  role: object
+- name: Event object
   at: [6, 4]
-  role: npc
-- name: Event Script_Strength Boulder
+  role: object
+- name: Event object
   at: [7, 4]
-  role: npc
+  role: object
 signs: []
 warps:
 - name: Door
@@ -68,4 +68,4 @@ warps:
 - name: Door
   at: [5, 12]
   to: drowned-cavern-room-3
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

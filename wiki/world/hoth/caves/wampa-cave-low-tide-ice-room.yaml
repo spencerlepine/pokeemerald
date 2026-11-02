@@ -3,8 +3,8 @@ name: WAMPA CAVE LOW TIDE ICE ROOM
 planet: HOTH
 kind: dungeon
 replaces: ShoalCave_LowTideIceRoom
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Wampa Cave ice room: slippery floor puzzle (vanilla ice room). The wampa''s lair with bones and an old Rebel scout''s pack.'
 grid: |
   ####################
   ####################
@@ -51,4 +51,4 @@ warps:
 - name: Door
   at: [17, 10]
   to: wampa-cave-low-tide-lower-room
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

@@ -3,8 +3,8 @@ name: WAMPA CAVE LOW TIDE INNER ROOM
 planet: HOTH
 kind: dungeon
 replaces: ShoalCave_LowTideInnerRoom
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Wampa Cave: frozen tunnels; a wampa''s lair is somewhere deep inside.'
 grid: |
   ##############################################
   ##############################################
@@ -89,4 +89,4 @@ warps:
 - name: Door
   at: [40, 33]
   to: wampa-cave-low-tide-entrance-room
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

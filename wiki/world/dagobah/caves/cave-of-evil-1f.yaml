@@ -3,8 +3,8 @@ name: CAVE OF EVIL 1F
 planet: DAGOBAH
 kind: dungeon
 replaces: CaveOfOrigin_1F
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Cave of Evil: a dark-side vergence under the gnarltree roots. Visions flicker on the walls; the titans clash in the deepest room in Act 6.'
 grid: |
   #######################
   #######################
@@ -41,4 +41,4 @@ warps:
 - name: Door
   at: [14, 5]
   to: cave-of-evil-b1f
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

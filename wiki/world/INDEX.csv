@@ -406,171 +406,164 @@ tibanna-refinery,BESPIN,landmark,new,BLOCKOUT,prop,Gas tanks,2x2,art:shared:fuel
 tibanna-refinery,BESPIN,landmark,new,BLOCKOUT,person,Ugnaught foreman,1x1,,,PLACEHOLDER
 tibanna-refinery,BESPIN,landmark,new,BLOCKOUT,person,Cartel thug,1x1,,,PLACEHOLDER
 tibanna-refinery,BESPIN,landmark,new,BLOCKOUT,person,Cartel thug,1x1,,,PLACEHOLDER
-cave-of-evil-1f,DAGOBAH,dungeon,CaveOfOrigin_1F,TODO,area,CAVE OF EVIL 1F,23x23,,,
-cave-of-evil-1f,DAGOBAH,dungeon,CaveOfOrigin_1F,TODO,warp,Door,1x1,,,PLACEHOLDER
-cave-of-evil-1f,DAGOBAH,dungeon,CaveOfOrigin_1F,TODO,warp,Door,1x1,,,PLACEHOLDER
-cave-of-evil-b1f,DAGOBAH,dungeon,CaveOfOrigin_B1F,TODO,area,CAVE OF EVIL B1F,19x19,,,
-cave-of-evil-b1f,DAGOBAH,dungeon,CaveOfOrigin_B1F,TODO,person,Wallace,1x1,,,PLACEHOLDER
-cave-of-evil-b1f,DAGOBAH,dungeon,CaveOfOrigin_B1F,TODO,warp,Door,1x1,,,PLACEHOLDER
-cave-of-evil-entrance,DAGOBAH,dungeon,CaveOfOrigin_Entrance,TODO,area,CAVE OF EVIL ENTRANCE,19x26,,,
-cave-of-evil-entrance,DAGOBAH,dungeon,CaveOfOrigin_Entrance,TODO,warp,Door,1x1,,,PLACEHOLDER
-cave-of-evil-entrance,DAGOBAH,dungeon,CaveOfOrigin_Entrance,TODO,warp,Door,1x1,,,PLACEHOLDER
-drowned-cavern-entrance,DAGOBAH,dungeon,SeafloorCavern_Entrance,TODO,area,DROWNED CAVERN ENTRANCE,20x20,,,
-drowned-cavern-entrance,DAGOBAH,dungeon,SeafloorCavern_Entrance,TODO,person,Grunt,1x1,,,PLACEHOLDER
-drowned-cavern-entrance,DAGOBAH,dungeon,SeafloorCavern_Entrance,TODO,warp,Door,1x1,,,PLACEHOLDER
-drowned-cavern-entrance,DAGOBAH,dungeon,SeafloorCavern_Entrance,TODO,warp,Door,1x1,,,PLACEHOLDER
-drowned-cavern-room-1,DAGOBAH,dungeon,SeafloorCavern_Room1,TODO,area,DROWNED CAVERN ROOM 1,20x21,,,
-drowned-cavern-room-1,DAGOBAH,dungeon,SeafloorCavern_Room1,TODO,person,Event Script_Strength Boulder,1x1,,,PLACEHOLDER
-drowned-cavern-room-1,DAGOBAH,dungeon,SeafloorCavern_Room1,TODO,person,Event Script_Strength Boulder,1x1,,,PLACEHOLDER
-drowned-cavern-room-1,DAGOBAH,dungeon,SeafloorCavern_Room1,TODO,person,Event Script_Rock Smash,1x1,,,PLACEHOLDER
-drowned-cavern-room-1,DAGOBAH,dungeon,SeafloorCavern_Room1,TODO,person,Trainer Roldarg,1x1,,,PLACEHOLDER
-drowned-cavern-room-1,DAGOBAH,dungeon,SeafloorCavern_Room1,TODO,person,Trainer Roldarg,1x1,,,PLACEHOLDER
-drowned-cavern-room-1,DAGOBAH,dungeon,SeafloorCavern_Room1,TODO,warp,Door,1x1,,,PLACEHOLDER
-drowned-cavern-room-1,DAGOBAH,dungeon,SeafloorCavern_Room1,TODO,warp,Door,1x1,,,PLACEHOLDER
-drowned-cavern-room-1,DAGOBAH,dungeon,SeafloorCavern_Room1,TODO,warp,Door,1x1,,,PLACEHOLDER
-drowned-cavern-room-2,DAGOBAH,dungeon,SeafloorCavern_Room2,TODO,area,DROWNED CAVERN ROOM 2,18x12,,,
-drowned-cavern-room-2,DAGOBAH,dungeon,SeafloorCavern_Room2,TODO,person,Event Script_Strength Boulder,1x1,,,PLACEHOLDER
-drowned-cavern-room-2,DAGOBAH,dungeon,SeafloorCavern_Room2,TODO,person,Event Script_Strength Boulder,1x1,,,PLACEHOLDER
-drowned-cavern-room-2,DAGOBAH,dungeon,SeafloorCavern_Room2,TODO,person,Event Script_Strength Boulder,1x1,,,PLACEHOLDER
-drowned-cavern-room-2,DAGOBAH,dungeon,SeafloorCavern_Room2,TODO,person,Event Script_Strength Boulder,1x1,,,PLACEHOLDER
-drowned-cavern-room-2,DAGOBAH,dungeon,SeafloorCavern_Room2,TODO,person,Event Script_Strength Boulder,1x1,,,PLACEHOLDER
-drowned-cavern-room-2,DAGOBAH,dungeon,SeafloorCavern_Room2,TODO,person,Event Script_Rock Smash,1x1,,,PLACEHOLDER
-drowned-cavern-room-2,DAGOBAH,dungeon,SeafloorCavern_Room2,TODO,person,Event Script_Rock Smash,1x1,,,PLACEHOLDER
-drowned-cavern-room-2,DAGOBAH,dungeon,SeafloorCavern_Room2,TODO,person,Event Script_Strength Boulder,1x1,,,PLACEHOLDER
-drowned-cavern-room-2,DAGOBAH,dungeon,SeafloorCavern_Room2,TODO,warp,Door,1x1,,,PLACEHOLDER
-drowned-cavern-room-2,DAGOBAH,dungeon,SeafloorCavern_Room2,TODO,warp,Door,1x1,,,PLACEHOLDER
-drowned-cavern-room-2,DAGOBAH,dungeon,SeafloorCavern_Room2,TODO,warp,Door,1x1,,,PLACEHOLDER
-drowned-cavern-room-2,DAGOBAH,dungeon,SeafloorCavern_Room2,TODO,warp,Door,1x1,,,PLACEHOLDER
-drowned-cavern-room-3,DAGOBAH,dungeon,SeafloorCavern_Room3,TODO,area,DROWNED CAVERN ROOM 3,16x17,,,
-drowned-cavern-room-3,DAGOBAH,dungeon,SeafloorCavern_Room3,TODO,person,Event Script_Strength Boulder,1x1,,,PLACEHOLDER
-drowned-cavern-room-3,DAGOBAH,dungeon,SeafloorCavern_Room3,TODO,person,Event Script_Strength Boulder,1x1,,,PLACEHOLDER
-drowned-cavern-room-3,DAGOBAH,dungeon,SeafloorCavern_Room3,TODO,person,Event Script_Strength Boulder,1x1,,,PLACEHOLDER
-drowned-cavern-room-3,DAGOBAH,dungeon,SeafloorCavern_Room3,TODO,person,Event Script_Strength Boulder,1x1,,,PLACEHOLDER
-drowned-cavern-room-3,DAGOBAH,dungeon,SeafloorCavern_Room3,TODO,person,Event Script_Strength Boulder,1x1,,,PLACEHOLDER
-drowned-cavern-room-3,DAGOBAH,dungeon,SeafloorCavern_Room3,TODO,person,Event Script_Strength Boulder,1x1,,,PLACEHOLDER
-drowned-cavern-room-3,DAGOBAH,dungeon,SeafloorCavern_Room3,TODO,person,Event Script_Strength Boulder,1x1,,,PLACEHOLDER
-drowned-cavern-room-3,DAGOBAH,dungeon,SeafloorCavern_Room3,TODO,person,Trainer Shelly,1x1,,,PLACEHOLDER
-drowned-cavern-room-3,DAGOBAH,dungeon,SeafloorCavern_Room3,TODO,person,Trainer Roldarg,1x1,,,PLACEHOLDER
-drowned-cavern-room-3,DAGOBAH,dungeon,SeafloorCavern_Room3,TODO,warp,Door,1x1,,,PLACEHOLDER
-drowned-cavern-room-3,DAGOBAH,dungeon,SeafloorCavern_Room3,TODO,warp,Door,1x1,,,PLACEHOLDER
-drowned-cavern-room-3,DAGOBAH,dungeon,SeafloorCavern_Room3,TODO,warp,Door,1x1,,,PLACEHOLDER
-drowned-cavern-room-4,DAGOBAH,dungeon,SeafloorCavern_Room4,TODO,area,DROWNED CAVERN ROOM 4,18x19,,,
-drowned-cavern-room-4,DAGOBAH,dungeon,SeafloorCavern_Room4,TODO,person,Trainer Roldarg,1x1,,,PLACEHOLDER
-drowned-cavern-room-4,DAGOBAH,dungeon,SeafloorCavern_Room4,TODO,person,Trainer Roldarg,1x1,,,PLACEHOLDER
-drowned-cavern-room-4,DAGOBAH,dungeon,SeafloorCavern_Room4,TODO,warp,Door,1x1,,,PLACEHOLDER
-drowned-cavern-room-4,DAGOBAH,dungeon,SeafloorCavern_Room4,TODO,warp,Door,1x1,,,PLACEHOLDER
-drowned-cavern-room-4,DAGOBAH,dungeon,SeafloorCavern_Room4,TODO,warp,Door,1x1,,,PLACEHOLDER
-drowned-cavern-room-4,DAGOBAH,dungeon,SeafloorCavern_Room4,TODO,warp,Door,1x1,,,PLACEHOLDER
-drowned-cavern-room-5,DAGOBAH,dungeon,SeafloorCavern_Room5,TODO,area,DROWNED CAVERN ROOM 5,20x20,,,
-drowned-cavern-room-5,DAGOBAH,dungeon,SeafloorCavern_Room5,TODO,person,Event Script_Strength Boulder,1x1,,,PLACEHOLDER
-drowned-cavern-room-5,DAGOBAH,dungeon,SeafloorCavern_Room5,TODO,person,Event Script_Strength Boulder,1x1,,,PLACEHOLDER
-drowned-cavern-room-5,DAGOBAH,dungeon,SeafloorCavern_Room5,TODO,person,Event Script_Strength Boulder,1x1,,,PLACEHOLDER
-drowned-cavern-room-5,DAGOBAH,dungeon,SeafloorCavern_Room5,TODO,person,Event Script_Rock Smash,1x1,,,PLACEHOLDER
-drowned-cavern-room-5,DAGOBAH,dungeon,SeafloorCavern_Room5,TODO,person,Event Script_Rock Smash,1x1,,,PLACEHOLDER
-drowned-cavern-room-5,DAGOBAH,dungeon,SeafloorCavern_Room5,TODO,person,Event Script_Strength Boulder,1x1,,,PLACEHOLDER
-drowned-cavern-room-5,DAGOBAH,dungeon,SeafloorCavern_Room5,TODO,warp,Door,1x1,,,PLACEHOLDER
-drowned-cavern-room-5,DAGOBAH,dungeon,SeafloorCavern_Room5,TODO,warp,Door,1x1,,,PLACEHOLDER
-drowned-cavern-room-5,DAGOBAH,dungeon,SeafloorCavern_Room5,TODO,warp,Door,1x1,,,PLACEHOLDER
-drowned-cavern-room-6,DAGOBAH,dungeon,SeafloorCavern_Room6,TODO,area,DROWNED CAVERN ROOM 6,24x23,,,
-drowned-cavern-room-6,DAGOBAH,dungeon,SeafloorCavern_Room6,TODO,warp,Door,1x1,,,PLACEHOLDER
-drowned-cavern-room-6,DAGOBAH,dungeon,SeafloorCavern_Room6,TODO,warp,Door,1x1,,,PLACEHOLDER
-drowned-cavern-room-6,DAGOBAH,dungeon,SeafloorCavern_Room6,TODO,warp,Door,1x1,,,PLACEHOLDER
-drowned-cavern-room-7,DAGOBAH,dungeon,SeafloorCavern_Room7,TODO,area,DROWNED CAVERN ROOM 7,23x25,,,
-drowned-cavern-room-7,DAGOBAH,dungeon,SeafloorCavern_Room7,TODO,warp,Door,1x1,,,PLACEHOLDER
-drowned-cavern-room-7,DAGOBAH,dungeon,SeafloorCavern_Room7,TODO,warp,Door,1x1,,,PLACEHOLDER
-drowned-cavern-room-8,DAGOBAH,dungeon,SeafloorCavern_Room8,TODO,area,DROWNED CAVERN ROOM 8,11x14,,,
-drowned-cavern-room-8,DAGOBAH,dungeon,SeafloorCavern_Room8,TODO,person,Event Script_Strength Boulder,1x1,,,PLACEHOLDER
-drowned-cavern-room-8,DAGOBAH,dungeon,SeafloorCavern_Room8,TODO,person,Event Script_Strength Boulder,1x1,,,PLACEHOLDER
-drowned-cavern-room-8,DAGOBAH,dungeon,SeafloorCavern_Room8,TODO,person,Event Script_Strength Boulder,1x1,,,PLACEHOLDER
-drowned-cavern-room-8,DAGOBAH,dungeon,SeafloorCavern_Room8,TODO,person,Event Script_Strength Boulder,1x1,,,PLACEHOLDER
-drowned-cavern-room-8,DAGOBAH,dungeon,SeafloorCavern_Room8,TODO,person,Event Script_Strength Boulder,1x1,,,PLACEHOLDER
-drowned-cavern-room-8,DAGOBAH,dungeon,SeafloorCavern_Room8,TODO,person,Event Script_Strength Boulder,1x1,,,PLACEHOLDER
-drowned-cavern-room-8,DAGOBAH,dungeon,SeafloorCavern_Room8,TODO,person,Event Script_Strength Boulder,1x1,,,PLACEHOLDER
-drowned-cavern-room-8,DAGOBAH,dungeon,SeafloorCavern_Room8,TODO,person,Event Script_Strength Boulder,1x1,,,PLACEHOLDER
-drowned-cavern-room-8,DAGOBAH,dungeon,SeafloorCavern_Room8,TODO,person,Event Script_Strength Boulder,1x1,,,PLACEHOLDER
-drowned-cavern-room-8,DAGOBAH,dungeon,SeafloorCavern_Room8,TODO,person,Event Script_Strength Boulder,1x1,,,PLACEHOLDER
-drowned-cavern-room-8,DAGOBAH,dungeon,SeafloorCavern_Room8,TODO,person,Event Script_Strength Boulder,1x1,,,PLACEHOLDER
-drowned-cavern-room-8,DAGOBAH,dungeon,SeafloorCavern_Room8,TODO,person,Event Script_Strength Boulder,1x1,,,PLACEHOLDER
-drowned-cavern-room-8,DAGOBAH,dungeon,SeafloorCavern_Room8,TODO,warp,Door,1x1,,,PLACEHOLDER
-drowned-cavern-room-8,DAGOBAH,dungeon,SeafloorCavern_Room8,TODO,warp,Door,1x1,,,PLACEHOLDER
-drowned-cavern-room-9,DAGOBAH,dungeon,SeafloorCavern_Room9,TODO,area,DROWNED CAVERN ROOM 9,27x46,,,
-drowned-cavern-room-9,DAGOBAH,dungeon,SeafloorCavern_Room9,TODO,person,0x0,1x1,,,PLACEHOLDER
-drowned-cavern-room-9,DAGOBAH,dungeon,SeafloorCavern_Room9,TODO,person,0x0,1x1,,,PLACEHOLDER
-drowned-cavern-room-9,DAGOBAH,dungeon,SeafloorCavern_Room9,TODO,person,0x0,1x1,,,PLACEHOLDER
-drowned-cavern-room-9,DAGOBAH,dungeon,SeafloorCavern_Room9,TODO,person,0x0,1x1,,,PLACEHOLDER
-drowned-cavern-room-9,DAGOBAH,dungeon,SeafloorCavern_Room9,TODO,person,0x0,1x1,,,PLACEHOLDER
-drowned-cavern-room-9,DAGOBAH,dungeon,SeafloorCavern_Room9,TODO,person,0x0,1x1,,,PLACEHOLDER
-drowned-cavern-room-9,DAGOBAH,dungeon,SeafloorCavern_Room9,TODO,person,Item,1x1,,,PLACEHOLDER
-drowned-cavern-room-9,DAGOBAH,dungeon,SeafloorCavern_Room9,TODO,warp,Door,1x1,,,PLACEHOLDER
-marine-cave-end,DAGOBAH,dungeon,MarineCave_End,TODO,area,MARINE CAVE END,27x30,,,
-marine-cave-end,DAGOBAH,dungeon,MarineCave_End,TODO,person,0x0,1x1,,,PLACEHOLDER
-marine-cave-end,DAGOBAH,dungeon,MarineCave_End,TODO,warp,Door,1x1,,,PLACEHOLDER
-marine-cave-entrance,DAGOBAH,dungeon,MarineCave_Entrance,TODO,area,MARINE CAVE ENTRANCE,20x20,,,
-marine-cave-entrance,DAGOBAH,dungeon,MarineCave_Entrance,TODO,warp,Door,1x1,,,PLACEHOLDER
-underwater-marine-cave,DAGOBAH,dungeon,Underwater_MarineCave,TODO,area,UNDERWATER MARINE CAVE,20x10,,,
-underwater-marine-cave,DAGOBAH,dungeon,Underwater_MarineCave,TODO,warp,Door,1x1,,,PLACEHOLDER
-underwater-route-126,DAGOBAH,dungeon,Underwater_Route126,TODO,area,UNDERWATER ROUTE 126,80x80,,,
-underwater-route-126,DAGOBAH,dungeon,Underwater_Route126,TODO,warp,Door,1x1,,,PLACEHOLDER
-underwater-route-127,DAGOBAH,dungeon,Underwater_Route127,TODO,area,UNDERWATER ROUTE 127,80x80,,,
-underwater-route-127,DAGOBAH,dungeon,Underwater_Route127,TODO,warp,Door,1x1,,,PLACEHOLDER
-underwater-route-127,DAGOBAH,dungeon,Underwater_Route127,TODO,warp,Door,1x1,,,PLACEHOLDER
-underwater-route-128,DAGOBAH,dungeon,Underwater_Route128,TODO,area,UNDERWATER ROUTE 128,120x40,,,
-underwater-route-128,DAGOBAH,dungeon,Underwater_Route128,TODO,warp,Door,1x1,,,PLACEHOLDER
-underwater-route-129,DAGOBAH,dungeon,Underwater_Route129,TODO,area,UNDERWATER ROUTE 129,80x40,,,
-underwater-route-129,DAGOBAH,dungeon,Underwater_Route129,TODO,warp,Door,1x1,,,PLACEHOLDER
-underwater-route-129,DAGOBAH,dungeon,Underwater_Route129,TODO,warp,Door,1x1,,,PLACEHOLDER
-underwater-route-134,DAGOBAH,dungeon,Underwater_Route134,TODO,area,UNDERWATER ROUTE 134,18x10,,,
-underwater-route-134,DAGOBAH,dungeon,Underwater_Route134,TODO,warp,Door,1x1,,,PLACEHOLDER
-underwater-seafloor-cavern,DAGOBAH,dungeon,Underwater_SeafloorCavern,TODO,area,UNDERWATER SEAFLOOR CAVERN,14x9,,,
-underwater-seafloor-cavern,DAGOBAH,dungeon,Underwater_SeafloorCavern,TODO,person,Check Stolen Sub,1x1,,,PLACEHOLDER
-underwater-seafloor-cavern,DAGOBAH,dungeon,Underwater_SeafloorCavern,TODO,person,Check Stolen Sub,1x1,,,PLACEHOLDER
-underwater-seafloor-cavern,DAGOBAH,dungeon,Underwater_SeafloorCavern,TODO,person,Check Stolen Sub,1x1,,,PLACEHOLDER
-underwater-seafloor-cavern,DAGOBAH,dungeon,Underwater_SeafloorCavern,TODO,person,Check Stolen Sub,1x1,,,PLACEHOLDER
-underwater-seafloor-cavern,DAGOBAH,dungeon,Underwater_SeafloorCavern,TODO,warp,Door,1x1,,,PLACEHOLDER
-underwater-sealed-chamber,DAGOBAH,dungeon,Underwater_SealedChamber,TODO,area,UNDERWATER SEALED CHAMBER,22x48,,,
-underwater-sealed-chamber,DAGOBAH,dungeon,Underwater_SealedChamber,TODO,sign,Sign,1x1,,,PLACEHOLDER
-underwater-sealed-chamber,DAGOBAH,dungeon,Underwater_SealedChamber,TODO,warp,Door,1x1,,,PLACEHOLDER
-underwater-sootopolis-city,DAGOBAH,dungeon,Underwater_SootopolisCity,TODO,area,UNDERWATER SOOTOPOLIS CITY,20x10,,,
-underwater-sootopolis-city,DAGOBAH,dungeon,Underwater_SootopolisCity,TODO,warp,Door,1x1,,,PLACEHOLDER
-underwater-sootopolis-city,DAGOBAH,dungeon,Underwater_SootopolisCity,TODO,warp,Door,1x1,,,PLACEHOLDER
-dagobah,DAGOBAH,town,SootopolisCity,TODO,area,DAGOBAH,60x60,,,
-dagobah,DAGOBAH,town,SootopolisCity,TODO,person,Cave Of Origin Expert,1x1,,,PLACEHOLDER
-dagobah,DAGOBAH,town,SootopolisCity,TODO,person,Woman2,1x1,,,PLACEHOLDER
-dagobah,DAGOBAH,town,SootopolisCity,TODO,person,Kiri,1x1,,,PLACEHOLDER
-dagobah,DAGOBAH,town,SootopolisCity,TODO,person,Ninja Boy,1x1,,,PLACEHOLDER
-dagobah,DAGOBAH,town,SootopolisCity,TODO,person,Boy1,1x1,,,PLACEHOLDER
-dagobah,DAGOBAH,town,SootopolisCity,TODO,person,Man,1x1,,,PLACEHOLDER
-dagobah,DAGOBAH,town,SootopolisCity,TODO,person,Steven,1x1,,,PLACEHOLDER
-dagobah,DAGOBAH,town,SootopolisCity,TODO,person,Woman1,1x1,,,PLACEHOLDER
-dagobah,DAGOBAH,town,SootopolisCity,TODO,person,0x0,1x1,,,PLACEHOLDER
-dagobah,DAGOBAH,town,SootopolisCity,TODO,person,0x0,1x1,,,PLACEHOLDER
-dagobah,DAGOBAH,town,SootopolisCity,TODO,person,0x0,1x1,,,PLACEHOLDER
-dagobah,DAGOBAH,town,SootopolisCity,TODO,person,Maniac,1x1,,,PLACEHOLDER
-dagobah,DAGOBAH,town,SootopolisCity,TODO,person,Girl,1x1,,,PLACEHOLDER
-dagobah,DAGOBAH,town,SootopolisCity,TODO,person,Black Belt,1x1,,,PLACEHOLDER
-dagobah,DAGOBAH,town,SootopolisCity,TODO,person,Boy2,1x1,,,PLACEHOLDER
-dagobah,DAGOBAH,town,SootopolisCity,TODO,person,Maxie,1x1,,,PLACEHOLDER
-dagobah,DAGOBAH,town,SootopolisCity,TODO,person,Archie,1x1,,,PLACEHOLDER
-dagobah,DAGOBAH,town,SootopolisCity,TODO,person,Wallace,1x1,,,PLACEHOLDER
-dagobah,DAGOBAH,town,SootopolisCity,TODO,sign,Sign,1x1,,,PLACEHOLDER
-dagobah,DAGOBAH,town,SootopolisCity,TODO,sign,Sign,1x1,,,PLACEHOLDER
-dagobah,DAGOBAH,town,SootopolisCity,TODO,sign,Sign,1x1,,,PLACEHOLDER
-dagobah,DAGOBAH,town,SootopolisCity,TODO,sign,Sign,1x1,,,PLACEHOLDER
-dagobah,DAGOBAH,town,SootopolisCity,TODO,sign,Sign,1x1,,,PLACEHOLDER
-dagobah,DAGOBAH,town,SootopolisCity,TODO,sign,Sign,1x1,,,PLACEHOLDER
-dagobah,DAGOBAH,town,SootopolisCity,TODO,warp,Door,1x1,,,PLACEHOLDER
-dagobah,DAGOBAH,town,SootopolisCity,TODO,warp,Door,1x1,,,PLACEHOLDER
-dagobah,DAGOBAH,town,SootopolisCity,TODO,warp,Door,1x1,,,PLACEHOLDER
-dagobah,DAGOBAH,town,SootopolisCity,TODO,warp,Door,1x1,,,PLACEHOLDER
-dagobah,DAGOBAH,town,SootopolisCity,TODO,warp,Door,1x1,,,PLACEHOLDER
-dagobah,DAGOBAH,town,SootopolisCity,TODO,warp,Door,1x1,,,PLACEHOLDER
-dagobah,DAGOBAH,town,SootopolisCity,TODO,warp,Door,1x1,,,PLACEHOLDER
-dagobah,DAGOBAH,town,SootopolisCity,TODO,warp,Door,1x1,,,PLACEHOLDER
-dagobah,DAGOBAH,town,SootopolisCity,TODO,warp,Door,1x1,,,PLACEHOLDER
-dagobah,DAGOBAH,town,SootopolisCity,TODO,warp,Door,1x1,,,PLACEHOLDER
-dagobah,DAGOBAH,town,SootopolisCity,TODO,warp,Door,1x1,,,PLACEHOLDER
-dagobah,DAGOBAH,town,SootopolisCity,TODO,warp,Door,1x1,,,PLACEHOLDER
-dagobah,DAGOBAH,town,SootopolisCity,TODO,warp,Door,1x1,,,PLACEHOLDER
+cave-of-evil-1f,DAGOBAH,dungeon,CaveOfOrigin_1F,BLOCKOUT,area,CAVE OF EVIL 1F,23x23,,,
+cave-of-evil-1f,DAGOBAH,dungeon,CaveOfOrigin_1F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+cave-of-evil-1f,DAGOBAH,dungeon,CaveOfOrigin_1F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+cave-of-evil-b1f,DAGOBAH,dungeon,CaveOfOrigin_B1F,BLOCKOUT,area,CAVE OF EVIL B1F,19x19,,,
+cave-of-evil-b1f,DAGOBAH,dungeon,CaveOfOrigin_B1F,BLOCKOUT,person,Wallace,1x1,,,PLACEHOLDER
+cave-of-evil-b1f,DAGOBAH,dungeon,CaveOfOrigin_B1F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+cave-of-evil-entrance,DAGOBAH,dungeon,CaveOfOrigin_Entrance,BLOCKOUT,area,CAVE OF EVIL ENTRANCE,19x26,,,
+cave-of-evil-entrance,DAGOBAH,dungeon,CaveOfOrigin_Entrance,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+cave-of-evil-entrance,DAGOBAH,dungeon,CaveOfOrigin_Entrance,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+drowned-cavern-entrance,DAGOBAH,dungeon,SeafloorCavern_Entrance,BLOCKOUT,area,DROWNED CAVERN ENTRANCE,20x20,,,
+drowned-cavern-entrance,DAGOBAH,dungeon,SeafloorCavern_Entrance,BLOCKOUT,person,Grunt,1x1,,,PLACEHOLDER
+drowned-cavern-entrance,DAGOBAH,dungeon,SeafloorCavern_Entrance,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+drowned-cavern-entrance,DAGOBAH,dungeon,SeafloorCavern_Entrance,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+drowned-cavern-room-1,DAGOBAH,dungeon,SeafloorCavern_Room1,BLOCKOUT,area,DROWNED CAVERN ROOM 1,20x21,,,
+drowned-cavern-room-1,DAGOBAH,dungeon,SeafloorCavern_Room1,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+drowned-cavern-room-1,DAGOBAH,dungeon,SeafloorCavern_Room1,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+drowned-cavern-room-1,DAGOBAH,dungeon,SeafloorCavern_Room1,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+drowned-cavern-room-1,DAGOBAH,dungeon,SeafloorCavern_Room1,BLOCKOUT,person,Trainer Roldarg,1x1,,,PLACEHOLDER
+drowned-cavern-room-1,DAGOBAH,dungeon,SeafloorCavern_Room1,BLOCKOUT,person,Trainer Roldarg,1x1,,,PLACEHOLDER
+drowned-cavern-room-1,DAGOBAH,dungeon,SeafloorCavern_Room1,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+drowned-cavern-room-1,DAGOBAH,dungeon,SeafloorCavern_Room1,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+drowned-cavern-room-1,DAGOBAH,dungeon,SeafloorCavern_Room1,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+drowned-cavern-room-2,DAGOBAH,dungeon,SeafloorCavern_Room2,BLOCKOUT,area,DROWNED CAVERN ROOM 2,18x12,,,
+drowned-cavern-room-2,DAGOBAH,dungeon,SeafloorCavern_Room2,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+drowned-cavern-room-2,DAGOBAH,dungeon,SeafloorCavern_Room2,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+drowned-cavern-room-2,DAGOBAH,dungeon,SeafloorCavern_Room2,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+drowned-cavern-room-2,DAGOBAH,dungeon,SeafloorCavern_Room2,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+drowned-cavern-room-2,DAGOBAH,dungeon,SeafloorCavern_Room2,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+drowned-cavern-room-2,DAGOBAH,dungeon,SeafloorCavern_Room2,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+drowned-cavern-room-2,DAGOBAH,dungeon,SeafloorCavern_Room2,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+drowned-cavern-room-2,DAGOBAH,dungeon,SeafloorCavern_Room2,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+drowned-cavern-room-2,DAGOBAH,dungeon,SeafloorCavern_Room2,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+drowned-cavern-room-2,DAGOBAH,dungeon,SeafloorCavern_Room2,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+drowned-cavern-room-2,DAGOBAH,dungeon,SeafloorCavern_Room2,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+drowned-cavern-room-2,DAGOBAH,dungeon,SeafloorCavern_Room2,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+drowned-cavern-room-3,DAGOBAH,dungeon,SeafloorCavern_Room3,BLOCKOUT,area,DROWNED CAVERN ROOM 3,16x17,,,
+drowned-cavern-room-3,DAGOBAH,dungeon,SeafloorCavern_Room3,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+drowned-cavern-room-3,DAGOBAH,dungeon,SeafloorCavern_Room3,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+drowned-cavern-room-3,DAGOBAH,dungeon,SeafloorCavern_Room3,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+drowned-cavern-room-3,DAGOBAH,dungeon,SeafloorCavern_Room3,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+drowned-cavern-room-3,DAGOBAH,dungeon,SeafloorCavern_Room3,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+drowned-cavern-room-3,DAGOBAH,dungeon,SeafloorCavern_Room3,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+drowned-cavern-room-3,DAGOBAH,dungeon,SeafloorCavern_Room3,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+drowned-cavern-room-3,DAGOBAH,dungeon,SeafloorCavern_Room3,BLOCKOUT,person,Trainer Shelly,1x1,,,PLACEHOLDER
+drowned-cavern-room-3,DAGOBAH,dungeon,SeafloorCavern_Room3,BLOCKOUT,person,Trainer Roldarg,1x1,,,PLACEHOLDER
+drowned-cavern-room-3,DAGOBAH,dungeon,SeafloorCavern_Room3,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+drowned-cavern-room-3,DAGOBAH,dungeon,SeafloorCavern_Room3,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+drowned-cavern-room-3,DAGOBAH,dungeon,SeafloorCavern_Room3,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+drowned-cavern-room-4,DAGOBAH,dungeon,SeafloorCavern_Room4,BLOCKOUT,area,DROWNED CAVERN ROOM 4,18x19,,,
+drowned-cavern-room-4,DAGOBAH,dungeon,SeafloorCavern_Room4,BLOCKOUT,person,Trainer Roldarg,1x1,,,PLACEHOLDER
+drowned-cavern-room-4,DAGOBAH,dungeon,SeafloorCavern_Room4,BLOCKOUT,person,Trainer Roldarg,1x1,,,PLACEHOLDER
+drowned-cavern-room-4,DAGOBAH,dungeon,SeafloorCavern_Room4,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+drowned-cavern-room-4,DAGOBAH,dungeon,SeafloorCavern_Room4,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+drowned-cavern-room-4,DAGOBAH,dungeon,SeafloorCavern_Room4,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+drowned-cavern-room-4,DAGOBAH,dungeon,SeafloorCavern_Room4,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+drowned-cavern-room-5,DAGOBAH,dungeon,SeafloorCavern_Room5,BLOCKOUT,area,DROWNED CAVERN ROOM 5,20x20,,,
+drowned-cavern-room-5,DAGOBAH,dungeon,SeafloorCavern_Room5,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+drowned-cavern-room-5,DAGOBAH,dungeon,SeafloorCavern_Room5,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+drowned-cavern-room-5,DAGOBAH,dungeon,SeafloorCavern_Room5,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+drowned-cavern-room-5,DAGOBAH,dungeon,SeafloorCavern_Room5,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+drowned-cavern-room-5,DAGOBAH,dungeon,SeafloorCavern_Room5,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+drowned-cavern-room-5,DAGOBAH,dungeon,SeafloorCavern_Room5,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+drowned-cavern-room-5,DAGOBAH,dungeon,SeafloorCavern_Room5,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+drowned-cavern-room-5,DAGOBAH,dungeon,SeafloorCavern_Room5,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+drowned-cavern-room-5,DAGOBAH,dungeon,SeafloorCavern_Room5,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+drowned-cavern-room-6,DAGOBAH,dungeon,SeafloorCavern_Room6,BLOCKOUT,area,DROWNED CAVERN ROOM 6,24x23,,,
+drowned-cavern-room-6,DAGOBAH,dungeon,SeafloorCavern_Room6,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+drowned-cavern-room-6,DAGOBAH,dungeon,SeafloorCavern_Room6,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+drowned-cavern-room-6,DAGOBAH,dungeon,SeafloorCavern_Room6,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+drowned-cavern-room-7,DAGOBAH,dungeon,SeafloorCavern_Room7,BLOCKOUT,area,DROWNED CAVERN ROOM 7,23x25,,,
+drowned-cavern-room-7,DAGOBAH,dungeon,SeafloorCavern_Room7,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+drowned-cavern-room-7,DAGOBAH,dungeon,SeafloorCavern_Room7,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+drowned-cavern-room-8,DAGOBAH,dungeon,SeafloorCavern_Room8,BLOCKOUT,area,DROWNED CAVERN ROOM 8,11x14,,,
+drowned-cavern-room-8,DAGOBAH,dungeon,SeafloorCavern_Room8,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+drowned-cavern-room-8,DAGOBAH,dungeon,SeafloorCavern_Room8,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+drowned-cavern-room-8,DAGOBAH,dungeon,SeafloorCavern_Room8,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+drowned-cavern-room-8,DAGOBAH,dungeon,SeafloorCavern_Room8,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+drowned-cavern-room-8,DAGOBAH,dungeon,SeafloorCavern_Room8,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+drowned-cavern-room-8,DAGOBAH,dungeon,SeafloorCavern_Room8,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+drowned-cavern-room-8,DAGOBAH,dungeon,SeafloorCavern_Room8,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+drowned-cavern-room-8,DAGOBAH,dungeon,SeafloorCavern_Room8,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+drowned-cavern-room-8,DAGOBAH,dungeon,SeafloorCavern_Room8,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+drowned-cavern-room-8,DAGOBAH,dungeon,SeafloorCavern_Room8,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+drowned-cavern-room-8,DAGOBAH,dungeon,SeafloorCavern_Room8,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+drowned-cavern-room-8,DAGOBAH,dungeon,SeafloorCavern_Room8,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+drowned-cavern-room-8,DAGOBAH,dungeon,SeafloorCavern_Room8,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+drowned-cavern-room-8,DAGOBAH,dungeon,SeafloorCavern_Room8,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+drowned-cavern-room-9,DAGOBAH,dungeon,SeafloorCavern_Room9,BLOCKOUT,area,DROWNED CAVERN ROOM 9,27x46,,,
+drowned-cavern-room-9,DAGOBAH,dungeon,SeafloorCavern_Room9,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+drowned-cavern-room-9,DAGOBAH,dungeon,SeafloorCavern_Room9,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+drowned-cavern-room-9,DAGOBAH,dungeon,SeafloorCavern_Room9,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+drowned-cavern-room-9,DAGOBAH,dungeon,SeafloorCavern_Room9,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+drowned-cavern-room-9,DAGOBAH,dungeon,SeafloorCavern_Room9,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+drowned-cavern-room-9,DAGOBAH,dungeon,SeafloorCavern_Room9,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+drowned-cavern-room-9,DAGOBAH,dungeon,SeafloorCavern_Room9,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+drowned-cavern-room-9,DAGOBAH,dungeon,SeafloorCavern_Room9,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+marine-cave-end,DAGOBAH,dungeon,MarineCave_End,BLOCKOUT,area,MARINE CAVE END,27x30,,,
+marine-cave-end,DAGOBAH,dungeon,MarineCave_End,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+marine-cave-end,DAGOBAH,dungeon,MarineCave_End,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+marine-cave-entrance,DAGOBAH,dungeon,MarineCave_Entrance,BLOCKOUT,area,MARINE CAVE ENTRANCE,20x20,,,
+marine-cave-entrance,DAGOBAH,dungeon,MarineCave_Entrance,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+underwater-marine-cave,DAGOBAH,dungeon,Underwater_MarineCave,BLOCKOUT,area,UNDERWATER MARINE CAVE,20x10,,,
+underwater-marine-cave,DAGOBAH,dungeon,Underwater_MarineCave,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+underwater-route-126,DAGOBAH,dungeon,Underwater_Route126,BLOCKOUT,area,UNDERWATER ROUTE 126,80x80,,,
+underwater-route-126,DAGOBAH,dungeon,Underwater_Route126,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+underwater-route-127,DAGOBAH,dungeon,Underwater_Route127,BLOCKOUT,area,UNDERWATER ROUTE 127,80x80,,,
+underwater-route-127,DAGOBAH,dungeon,Underwater_Route127,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+underwater-route-127,DAGOBAH,dungeon,Underwater_Route127,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+underwater-route-128,DAGOBAH,dungeon,Underwater_Route128,BLOCKOUT,area,UNDERWATER ROUTE 128,120x40,,,
+underwater-route-128,DAGOBAH,dungeon,Underwater_Route128,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+underwater-route-129,DAGOBAH,dungeon,Underwater_Route129,BLOCKOUT,area,UNDERWATER ROUTE 129,80x40,,,
+underwater-route-129,DAGOBAH,dungeon,Underwater_Route129,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+underwater-route-129,DAGOBAH,dungeon,Underwater_Route129,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+underwater-seafloor-cavern,DAGOBAH,dungeon,Underwater_SeafloorCavern,BLOCKOUT,area,UNDERWATER SEAFLOOR CAVERN,14x9,,,
+underwater-seafloor-cavern,DAGOBAH,dungeon,Underwater_SeafloorCavern,BLOCKOUT,person,Check Stolen Sub,1x1,,,PLACEHOLDER
+underwater-seafloor-cavern,DAGOBAH,dungeon,Underwater_SeafloorCavern,BLOCKOUT,person,Check Stolen Sub,1x1,,,PLACEHOLDER
+underwater-seafloor-cavern,DAGOBAH,dungeon,Underwater_SeafloorCavern,BLOCKOUT,person,Check Stolen Sub,1x1,,,PLACEHOLDER
+underwater-seafloor-cavern,DAGOBAH,dungeon,Underwater_SeafloorCavern,BLOCKOUT,person,Check Stolen Sub,1x1,,,PLACEHOLDER
+underwater-seafloor-cavern,DAGOBAH,dungeon,Underwater_SeafloorCavern,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+underwater-sootopolis-city,DAGOBAH,dungeon,Underwater_SootopolisCity,BLOCKOUT,area,UNDERWATER SOOTOPOLIS CITY,20x10,,,
+underwater-sootopolis-city,DAGOBAH,dungeon,Underwater_SootopolisCity,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+underwater-sootopolis-city,DAGOBAH,dungeon,Underwater_SootopolisCity,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,area,DAGOBAH,60x60,,,
+dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,building,Yoda's hut (arena),8x6,art:dagobah:yoda-s-hut,yes,TODO
+dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,building,Bacta Center,5x4,art:shared:bacta-center,yes,TODO
+dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,building,Supply Depot,4x4,art:shared:supply-depot,yes,TODO
+dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,building,Bog fisher's hut,4x3,art:dagobah:yoda-s-hut,yes,TODO
+dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,building,Hermit's hut,4x3,art:dagobah:yoda-s-hut,yes,TODO
+dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,building,Swamp healer's hut,4x3,art:dagobah:yoda-s-hut,yes,TODO
+dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,building,Moss gatherer's hut,4x3,art:dagobah:yoda-s-hut,yes,TODO
+dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,building,Old smuggler's hut,4x3,art:dagobah:yoda-s-hut,yes,TODO
+dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,building,Herbalist's hut,4x3,art:dagobah:yoda-s-hut,yes,TODO
+dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,building,Dragonsnake watcher's hut,4x3,art:dagobah:yoda-s-hut,yes,TODO
+dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,building,Gnarltree keeper's hut,4x3,art:dagobah:yoda-s-hut,yes,TODO
+dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,building,Old Jedi outpost (mystery events),5x4,art:dagobah:yoda-s-hut,yes,TODO
+dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,building,Bog landing (ships),6x4,art:shared:landing-pad,yes,TODO
+dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,prop,Cave of Evil mouth,4x3,art:dagobah:cave-of-evil-mouth,yes,TODO
+dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,prop,Sunken X-wing,4x3,art:dagobah:sunken-x-wing,yes,TODO
+dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,prop,Gnarltree,2x2,art:dagobah:gnarltree,yes,TODO
+dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,prop,Gnarltree,2x2,art:dagobah:gnarltree,yes,TODO
+dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,prop,Gnarltree,2x2,art:dagobah:gnarltree,yes,TODO
+dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,prop,Gnarltree,2x2,art:dagobah:gnarltree,yes,TODO
+dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,prop,Hanging moss,1x1,art:dagobah:hanging-moss,yes,TODO
+dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,prop,Hanging moss,1x1,art:dagobah:hanging-moss,yes,TODO
+dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,prop,Hanging moss,1x1,art:dagobah:hanging-moss,yes,TODO
+dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,prop,Swamp reeds,2x1,art:dagobah:swamp-reeds,yes,TODO
+dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,prop,Swamp reeds,2x1,art:dagobah:swamp-reeds,yes,TODO
+dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,prop,Swamp reeds,2x1,art:dagobah:swamp-reeds,yes,TODO
+dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,person,Yoda,1x1,,,PLACEHOLDER
+dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,person,Obi-Wan (guarding the cave),1x1,,,PLACEHOLDER
+dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,person,Bog fisher,1x1,,,PLACEHOLDER
+dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,person,Herbalist,1x1,,,PLACEHOLDER
+dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,person,Swamp hermit,1x1,,,PLACEHOLDER
+dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,person,Dagobah pilgrim,1x1,,,PLACEHOLDER
+dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,person,Smuggler stranded here,1x1,,,PLACEHOLDER
+dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,sign,Hollow sign,1x1,,,PLACEHOLDER
+dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,sign,Arena sign,1x1,,,PLACEHOLDER
+dagobah,DAGOBAH,town,SootopolisCity,BLOCKOUT,warp,Cave of Evil,1x1,,,PLACEHOLDER
 dagobah-arena-1f,DAGOBAH,interior,SootopolisCity_Gym_1F,TODO,area,DAGOBAH ARENA 1F,17x26,,,
 dagobah-arena-1f,DAGOBAH,interior,SootopolisCity_Gym_1F,TODO,person,Juan,1x1,,,PLACEHOLDER
 dagobah-arena-1f,DAGOBAH,interior,SootopolisCity_Gym_1F,TODO,person,Gym Guide,1x1,,,PLACEHOLDER
@@ -662,50 +655,55 @@ dagobah-supply-depot,DAGOBAH,interior,SootopolisCity_Mart,TODO,person,Fat Man,1x
 dagobah-supply-depot,DAGOBAH,interior,SootopolisCity_Mart,TODO,person,Gentleman,1x1,,,PLACEHOLDER
 dagobah-supply-depot,DAGOBAH,interior,SootopolisCity_Mart,TODO,warp,Door,1x1,,,PLACEHOLDER
 dagobah-supply-depot,DAGOBAH,interior,SootopolisCity_Mart,TODO,warp,Door,1x1,,,PLACEHOLDER
-route-126,DAGOBAH,route,Route126,TODO,area,ROUTE 126,80x80,,,
-route-126,DAGOBAH,route,Route126,TODO,person,Trainer Boesh,1x1,,,PLACEHOLDER
-route-126,DAGOBAH,route,Route126,TODO,person,Trainer Daos,1x1,,,PLACEHOLDER
-route-126,DAGOBAH,route,Route126,TODO,person,Trainer Nuora,1x1,,,PLACEHOLDER
-route-126,DAGOBAH,route,Route126,TODO,person,Trainer Barkina,1x1,,,PLACEHOLDER
-route-126,DAGOBAH,route,Route126,TODO,person,Trainer Sea,1x1,,,PLACEHOLDER
-route-126,DAGOBAH,route,Route126,TODO,person,Trainer Polar,1x1,,,PLACEHOLDER
-route-126,DAGOBAH,route,Route126,TODO,person,Trainer Iszila,1x1,,,PLACEHOLDER
-route-126,DAGOBAH,route,Route126,TODO,person,Trainer Laik,1x1,,,PLACEHOLDER
-route-126,DAGOBAH,route,Route126,TODO,person,Item,1x1,,,PLACEHOLDER
-route-127,DAGOBAH,route,Route127,TODO,area,ROUTE 127,80x80,,,
-route-127,DAGOBAH,route,Route127,TODO,person,Trainer Caus,1x1,,,PLACEHOLDER
-route-127,DAGOBAH,route,Route127,TODO,person,Trainer Deys,1x1,,,PLACEHOLDER
-route-127,DAGOBAH,route,Route127,TODO,person,Trainer Joen,1x1,,,PLACEHOLDER
-route-127,DAGOBAH,route,Route127,TODO,person,Trainer Rao,1x1,,,PLACEHOLDER
-route-127,DAGOBAH,route,Route127,TODO,person,Trainer Hoshen,1x1,,,PLACEHOLDER
-route-127,DAGOBAH,route,Route127,TODO,person,Trainer Avun,1x1,,,PLACEHOLDER
-route-127,DAGOBAH,route,Route127,TODO,person,Trainer Keto,1x1,,,PLACEHOLDER
-route-127,DAGOBAH,route,Route127,TODO,person,Trainer Arxina,1x1,,,PLACEHOLDER
-route-127,DAGOBAH,route,Route127,TODO,person,Item,1x1,,,PLACEHOLDER
-route-127,DAGOBAH,route,Route127,TODO,person,Item,1x1,,,PLACEHOLDER
-route-127,DAGOBAH,route,Route127,TODO,person,Item,1x1,,,PLACEHOLDER
-route-128,DAGOBAH,route,Route128,TODO,area,ROUTE 128,120x40,,,
-route-128,DAGOBAH,route,Route128,TODO,person,Trainer Ilen,1x1,,,PLACEHOLDER
-route-128,DAGOBAH,route,Route128,TODO,person,Trainer Kashys,1x1,,,PLACEHOLDER
-route-128,DAGOBAH,route,Route128,TODO,person,0x0,1x1,,,PLACEHOLDER
-route-128,DAGOBAH,route,Route128,TODO,person,0x0,1x1,,,PLACEHOLDER
-route-128,DAGOBAH,route,Route128,TODO,person,0x0,1x1,,,PLACEHOLDER
-route-128,DAGOBAH,route,Route128,TODO,person,Trainer Washus,1x1,,,PLACEHOLDER
-route-128,DAGOBAH,route,Route128,TODO,person,Trainer Rakan,1x1,,,PLACEHOLDER
-route-128,DAGOBAH,route,Route128,TODO,person,Trainer Akvelle,1x1,,,PLACEHOLDER
-route-128,DAGOBAH,route,Route128,TODO,person,Trainer Cays,1x1,,,PLACEHOLDER
-route-128,DAGOBAH,route,Route128,TODO,person,Trainer Hagax,1x1,,,PLACEHOLDER
-route-129,DAGOBAH,route,Route129,TODO,area,ROUTE 129,80x40,,,
-route-129,DAGOBAH,route,Route129,TODO,person,Trainer Ceon,1x1,,,PLACEHOLDER
-route-129,DAGOBAH,route,Route129,TODO,person,Trainer Azva,1x1,,,PLACEHOLDER
-route-129,DAGOBAH,route,Route129,TODO,person,Trainer Toba,1x1,,,PLACEHOLDER
-route-129,DAGOBAH,route,Route129,TODO,person,Trainer Rulik,1x1,,,PLACEHOLDER
-route-129,DAGOBAH,route,Route129,TODO,person,Trainer Celdik,1x1,,,PLACEHOLDER
-route-130,DAGOBAH,route,Route130,TODO,area,ROUTE 130,80x40,,,
-route-130,DAGOBAH,route,Route130,TODO,person,Trainer Rirkel,1x1,,,PLACEHOLDER
-route-130,DAGOBAH,route,Route130,TODO,person,Trainer Kuena,1x1,,,PLACEHOLDER
-route-130,DAGOBAH,route,Route130,TODO,person,Trainer Seshon,1x1,,,PLACEHOLDER
-route-130,DAGOBAH,route,Route130,TODO,person,Berry tree,1x1,,,PLACEHOLDER
+route-126,DAGOBAH,route,Route126,BLOCKOUT,area,ROUTE 126,80x80,,,
+route-126,DAGOBAH,route,Route126,BLOCKOUT,person,Trainer Boesh,1x1,,,PLACEHOLDER
+route-126,DAGOBAH,route,Route126,BLOCKOUT,person,Trainer Daos,1x1,,,PLACEHOLDER
+route-126,DAGOBAH,route,Route126,BLOCKOUT,person,Trainer Nuora,1x1,,,PLACEHOLDER
+route-126,DAGOBAH,route,Route126,BLOCKOUT,person,Trainer Barkina,1x1,,,PLACEHOLDER
+route-126,DAGOBAH,route,Route126,BLOCKOUT,person,Trainer Sea,1x1,,,PLACEHOLDER
+route-126,DAGOBAH,route,Route126,BLOCKOUT,person,Trainer Polar,1x1,,,PLACEHOLDER
+route-126,DAGOBAH,route,Route126,BLOCKOUT,person,Trainer Iszila,1x1,,,PLACEHOLDER
+route-126,DAGOBAH,route,Route126,BLOCKOUT,person,Trainer Laik,1x1,,,PLACEHOLDER
+route-126,DAGOBAH,route,Route126,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+route-127,DAGOBAH,route,Route127,BLOCKOUT,area,ROUTE 127,80x80,,,
+route-127,DAGOBAH,route,Route127,BLOCKOUT,prop,Hanging moss,1x1,art:dagobah:hanging-moss,yes,TODO
+route-127,DAGOBAH,route,Route127,BLOCKOUT,prop,Gnarltree,2x2,art:dagobah:gnarltree,yes,TODO
+route-127,DAGOBAH,route,Route127,BLOCKOUT,person,Trainer Caus,1x1,,,PLACEHOLDER
+route-127,DAGOBAH,route,Route127,BLOCKOUT,person,Trainer Deys,1x1,,,PLACEHOLDER
+route-127,DAGOBAH,route,Route127,BLOCKOUT,person,Trainer Joen,1x1,,,PLACEHOLDER
+route-127,DAGOBAH,route,Route127,BLOCKOUT,person,Trainer Rao,1x1,,,PLACEHOLDER
+route-127,DAGOBAH,route,Route127,BLOCKOUT,person,Trainer Hoshen,1x1,,,PLACEHOLDER
+route-127,DAGOBAH,route,Route127,BLOCKOUT,person,Trainer Avun,1x1,,,PLACEHOLDER
+route-127,DAGOBAH,route,Route127,BLOCKOUT,person,Trainer Keto,1x1,,,PLACEHOLDER
+route-127,DAGOBAH,route,Route127,BLOCKOUT,person,Trainer Arxina,1x1,,,PLACEHOLDER
+route-127,DAGOBAH,route,Route127,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+route-127,DAGOBAH,route,Route127,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+route-127,DAGOBAH,route,Route127,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+route-128,DAGOBAH,route,Route128,BLOCKOUT,area,ROUTE 128,120x40,,,
+route-128,DAGOBAH,route,Route128,BLOCKOUT,prop,Swamp reeds,2x1,art:dagobah:swamp-reeds,yes,TODO
+route-128,DAGOBAH,route,Route128,BLOCKOUT,person,Trainer Ilen,1x1,,,PLACEHOLDER
+route-128,DAGOBAH,route,Route128,BLOCKOUT,person,Trainer Kashys,1x1,,,PLACEHOLDER
+route-128,DAGOBAH,route,Route128,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+route-128,DAGOBAH,route,Route128,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+route-128,DAGOBAH,route,Route128,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+route-128,DAGOBAH,route,Route128,BLOCKOUT,person,Trainer Washus,1x1,,,PLACEHOLDER
+route-128,DAGOBAH,route,Route128,BLOCKOUT,person,Trainer Rakan,1x1,,,PLACEHOLDER
+route-128,DAGOBAH,route,Route128,BLOCKOUT,person,Trainer Akvelle,1x1,,,PLACEHOLDER
+route-128,DAGOBAH,route,Route128,BLOCKOUT,person,Trainer Cays,1x1,,,PLACEHOLDER
+route-128,DAGOBAH,route,Route128,BLOCKOUT,person,Trainer Hagax,1x1,,,PLACEHOLDER
+route-129,DAGOBAH,route,Route129,BLOCKOUT,area,ROUTE 129,80x40,,,
+route-129,DAGOBAH,route,Route129,BLOCKOUT,prop,Gnarltree,2x2,art:dagobah:gnarltree,yes,TODO
+route-129,DAGOBAH,route,Route129,BLOCKOUT,person,Trainer Ceon,1x1,,,PLACEHOLDER
+route-129,DAGOBAH,route,Route129,BLOCKOUT,person,Trainer Azva,1x1,,,PLACEHOLDER
+route-129,DAGOBAH,route,Route129,BLOCKOUT,person,Trainer Toba,1x1,,,PLACEHOLDER
+route-129,DAGOBAH,route,Route129,BLOCKOUT,person,Trainer Rulik,1x1,,,PLACEHOLDER
+route-129,DAGOBAH,route,Route129,BLOCKOUT,person,Trainer Celdik,1x1,,,PLACEHOLDER
+route-130,DAGOBAH,route,Route130,BLOCKOUT,area,ROUTE 130,80x40,,,
+route-130,DAGOBAH,route,Route130,BLOCKOUT,prop,Hanging moss,1x1,art:dagobah:hanging-moss,yes,TODO
+route-130,DAGOBAH,route,Route130,BLOCKOUT,person,Trainer Rirkel,1x1,,,PLACEHOLDER
+route-130,DAGOBAH,route,Route130,BLOCKOUT,person,Trainer Kuena,1x1,,,PLACEHOLDER
+route-130,DAGOBAH,route,Route130,BLOCKOUT,person,Trainer Seshon,1x1,,,PLACEHOLDER
+route-130,DAGOBAH,route,Route130,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
 bright-tree,ENDOR,town,FortreeCity,BLOCKOUT,area,BRIGHT TREE,40x20,,,
 bright-tree,ENDOR,town,FortreeCity,BLOCKOUT,building,Ewok hut,3x3,art:endor:ewok-hut,yes,TODO
 bright-tree,ENDOR,town,FortreeCity,BLOCKOUT,building,Ewok hut,3x3,art:endor:ewok-hut,yes,TODO
@@ -1693,114 +1691,144 @@ grand-arena-supply-depot,GRAND ARENA,interior,BattleFrontier_Mart,TODO,person,Ol
 grand-arena-supply-depot,GRAND ARENA,interior,BattleFrontier_Mart,TODO,person,Boy,1x1,,,PLACEHOLDER
 grand-arena-supply-depot,GRAND ARENA,interior,BattleFrontier_Mart,TODO,warp,Door,1x1,,,PLACEHOLDER
 grand-arena-supply-depot,GRAND ARENA,interior,BattleFrontier_Mart,TODO,warp,Door,1x1,,,PLACEHOLDER
-wampa-cave-high-tide-entrance-room,HOTH,dungeon,ShoalCave_HighTideEntranceRoom,TODO,area,WAMPA CAVE HIGH TIDE ENTRANCE ROOM,35x35,,,
-wampa-cave-high-tide-inner-room,HOTH,dungeon,ShoalCave_HighTideInnerRoom,TODO,area,WAMPA CAVE HIGH TIDE INNER ROOM,46x38,,,
-wampa-cave-low-tide-entrance-room,HOTH,dungeon,ShoalCave_LowTideEntranceRoom,TODO,area,WAMPA CAVE LOW TIDE ENTRANCE ROOM,35x35,,,
-wampa-cave-low-tide-entrance-room,HOTH,dungeon,ShoalCave_LowTideEntranceRoom,TODO,person,Shell Bell Expert,1x1,,,PLACEHOLDER
-wampa-cave-low-tide-entrance-room,HOTH,dungeon,ShoalCave_LowTideEntranceRoom,TODO,person,Item,1x1,,,PLACEHOLDER
-wampa-cave-low-tide-entrance-room,HOTH,dungeon,ShoalCave_LowTideEntranceRoom,TODO,warp,Door,1x1,,,PLACEHOLDER
-wampa-cave-low-tide-entrance-room,HOTH,dungeon,ShoalCave_LowTideEntranceRoom,TODO,warp,Door,1x1,,,PLACEHOLDER
-wampa-cave-low-tide-entrance-room,HOTH,dungeon,ShoalCave_LowTideEntranceRoom,TODO,warp,Door,1x1,,,PLACEHOLDER
-wampa-cave-low-tide-entrance-room,HOTH,dungeon,ShoalCave_LowTideEntranceRoom,TODO,warp,Door,1x1,,,PLACEHOLDER
-wampa-cave-low-tide-ice-room,HOTH,dungeon,ShoalCave_LowTideIceRoom,TODO,area,WAMPA CAVE LOW TIDE ICE ROOM,20x30,,,
-wampa-cave-low-tide-ice-room,HOTH,dungeon,ShoalCave_LowTideIceRoom,TODO,person,Item,1x1,,,PLACEHOLDER
-wampa-cave-low-tide-ice-room,HOTH,dungeon,ShoalCave_LowTideIceRoom,TODO,person,Item,1x1,,,PLACEHOLDER
-wampa-cave-low-tide-ice-room,HOTH,dungeon,ShoalCave_LowTideIceRoom,TODO,warp,Door,1x1,,,PLACEHOLDER
-wampa-cave-low-tide-inner-room,HOTH,dungeon,ShoalCave_LowTideInnerRoom,TODO,area,WAMPA CAVE LOW TIDE INNER ROOM,46x38,,,
-wampa-cave-low-tide-inner-room,HOTH,dungeon,ShoalCave_LowTideInnerRoom,TODO,person,Item,1x1,,,PLACEHOLDER
-wampa-cave-low-tide-inner-room,HOTH,dungeon,ShoalCave_LowTideInnerRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
-wampa-cave-low-tide-inner-room,HOTH,dungeon,ShoalCave_LowTideInnerRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
-wampa-cave-low-tide-inner-room,HOTH,dungeon,ShoalCave_LowTideInnerRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
-wampa-cave-low-tide-inner-room,HOTH,dungeon,ShoalCave_LowTideInnerRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
-wampa-cave-low-tide-inner-room,HOTH,dungeon,ShoalCave_LowTideInnerRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
-wampa-cave-low-tide-inner-room,HOTH,dungeon,ShoalCave_LowTideInnerRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
-wampa-cave-low-tide-inner-room,HOTH,dungeon,ShoalCave_LowTideInnerRoom,TODO,warp,Door,1x1,,,PLACEHOLDER
-wampa-cave-low-tide-inner-room,HOTH,dungeon,ShoalCave_LowTideInnerRoom,TODO,warp,Door,1x1,,,PLACEHOLDER
-wampa-cave-low-tide-inner-room,HOTH,dungeon,ShoalCave_LowTideInnerRoom,TODO,warp,Door,1x1,,,PLACEHOLDER
-wampa-cave-low-tide-inner-room,HOTH,dungeon,ShoalCave_LowTideInnerRoom,TODO,warp,Door,1x1,,,PLACEHOLDER
-wampa-cave-low-tide-inner-room,HOTH,dungeon,ShoalCave_LowTideInnerRoom,TODO,warp,Door,1x1,,,PLACEHOLDER
-wampa-cave-low-tide-inner-room,HOTH,dungeon,ShoalCave_LowTideInnerRoom,TODO,warp,Door,1x1,,,PLACEHOLDER
-wampa-cave-low-tide-inner-room,HOTH,dungeon,ShoalCave_LowTideInnerRoom,TODO,warp,Door,1x1,,,PLACEHOLDER
-wampa-cave-low-tide-inner-room,HOTH,dungeon,ShoalCave_LowTideInnerRoom,TODO,warp,Door,1x1,,,PLACEHOLDER
-wampa-cave-low-tide-lower-room,HOTH,dungeon,ShoalCave_LowTideLowerRoom,TODO,area,WAMPA CAVE LOW TIDE LOWER ROOM,31x14,,,
-wampa-cave-low-tide-lower-room,HOTH,dungeon,ShoalCave_LowTideLowerRoom,TODO,person,Event Script_Strength Boulder,1x1,,,PLACEHOLDER
-wampa-cave-low-tide-lower-room,HOTH,dungeon,ShoalCave_LowTideLowerRoom,TODO,person,Black Belt,1x1,,,PLACEHOLDER
-wampa-cave-low-tide-lower-room,HOTH,dungeon,ShoalCave_LowTideLowerRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
-wampa-cave-low-tide-lower-room,HOTH,dungeon,ShoalCave_LowTideLowerRoom,TODO,warp,Door,1x1,,,PLACEHOLDER
-wampa-cave-low-tide-lower-room,HOTH,dungeon,ShoalCave_LowTideLowerRoom,TODO,warp,Door,1x1,,,PLACEHOLDER
-wampa-cave-low-tide-lower-room,HOTH,dungeon,ShoalCave_LowTideLowerRoom,TODO,warp,Door,1x1,,,PLACEHOLDER
-wampa-cave-low-tide-lower-room,HOTH,dungeon,ShoalCave_LowTideLowerRoom,TODO,warp,Door,1x1,,,PLACEHOLDER
-wampa-cave-low-tide-stairs-room,HOTH,dungeon,ShoalCave_LowTideStairsRoom,TODO,area,WAMPA CAVE LOW TIDE STAIRS ROOM,21x15,,,
-wampa-cave-low-tide-stairs-room,HOTH,dungeon,ShoalCave_LowTideStairsRoom,TODO,person,Item,1x1,,,PLACEHOLDER
-wampa-cave-low-tide-stairs-room,HOTH,dungeon,ShoalCave_LowTideStairsRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
-wampa-cave-low-tide-stairs-room,HOTH,dungeon,ShoalCave_LowTideStairsRoom,TODO,warp,Door,1x1,,,PLACEHOLDER
-wampa-cave-low-tide-stairs-room,HOTH,dungeon,ShoalCave_LowTideStairsRoom,TODO,warp,Door,1x1,,,PLACEHOLDER
-crystal-caves-1f,ILUM,dungeon,VictoryRoad_1F,TODO,area,CRYSTAL CAVES 1F,46x45,,,
-crystal-caves-1f,ILUM,dungeon,VictoryRoad_1F,TODO,person,Trainer Ebvar,1x1,,,PLACEHOLDER
-crystal-caves-1f,ILUM,dungeon,VictoryRoad_1F,TODO,person,Trainer Herelle,1x1,,,PLACEHOLDER
-crystal-caves-1f,ILUM,dungeon,VictoryRoad_1F,TODO,person,Trainer Abal,1x1,,,PLACEHOLDER
-crystal-caves-1f,ILUM,dungeon,VictoryRoad_1F,TODO,person,Entrance Wally,1x1,,,PLACEHOLDER
-crystal-caves-1f,ILUM,dungeon,VictoryRoad_1F,TODO,person,Exit Wally,1x1,,,PLACEHOLDER
-crystal-caves-1f,ILUM,dungeon,VictoryRoad_1F,TODO,person,Trainer Koldena,1x1,,,PLACEHOLDER
-crystal-caves-1f,ILUM,dungeon,VictoryRoad_1F,TODO,person,Trainer Qossek,1x1,,,PLACEHOLDER
-crystal-caves-1f,ILUM,dungeon,VictoryRoad_1F,TODO,person,Item,1x1,,,PLACEHOLDER
-crystal-caves-1f,ILUM,dungeon,VictoryRoad_1F,TODO,person,Item,1x1,,,PLACEHOLDER
-crystal-caves-1f,ILUM,dungeon,VictoryRoad_1F,TODO,warp,Door,1x1,,,PLACEHOLDER
-crystal-caves-1f,ILUM,dungeon,VictoryRoad_1F,TODO,warp,Door,1x1,,,PLACEHOLDER
-crystal-caves-1f,ILUM,dungeon,VictoryRoad_1F,TODO,warp,Door,1x1,,,PLACEHOLDER
-crystal-caves-1f,ILUM,dungeon,VictoryRoad_1F,TODO,warp,Door,1x1,,,PLACEHOLDER
-crystal-caves-1f,ILUM,dungeon,VictoryRoad_1F,TODO,warp,Door,1x1,,,PLACEHOLDER
-crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,TODO,area,CRYSTAL CAVES B1F,46x31,,,
-crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,TODO,person,Event Script_Strength Boulder,1x1,,,PLACEHOLDER
-crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,TODO,person,Event Script_Strength Boulder,1x1,,,PLACEHOLDER
-crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,TODO,person,Event Script_Strength Boulder,1x1,,,PLACEHOLDER
-crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,TODO,person,Event Script_Strength Boulder,1x1,,,PLACEHOLDER
-crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,TODO,person,Event Script_Strength Boulder,1x1,,,PLACEHOLDER
-crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,TODO,person,Event Script_Strength Boulder,1x1,,,PLACEHOLDER
-crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,TODO,person,Event Script_Strength Boulder,1x1,,,PLACEHOLDER
-crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,TODO,person,Event Script_Rock Smash,1x1,,,PLACEHOLDER
-crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,TODO,person,Event Script_Rock Smash,1x1,,,PLACEHOLDER
-crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,TODO,person,Event Script_Rock Smash,1x1,,,PLACEHOLDER
-crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,TODO,person,Event Script_Rock Smash,1x1,,,PLACEHOLDER
-crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,TODO,person,Event Script_Rock Smash,1x1,,,PLACEHOLDER
-crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,TODO,person,Event Script_Strength Boulder,1x1,,,PLACEHOLDER
-crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,TODO,person,Trainer Sumir,1x1,,,PLACEHOLDER
-crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,TODO,person,Trainer Saeth,1x1,,,PLACEHOLDER
-crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,TODO,person,Trainer Maldia,1x1,,,PLACEHOLDER
-crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,TODO,person,Event Script_Rock Smash,1x1,,,PLACEHOLDER
-crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,TODO,person,Trainer Maos,1x1,,,PLACEHOLDER
-crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,TODO,person,Trainer Hildara,1x1,,,PLACEHOLDER
-crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,TODO,person,Item,1x1,,,PLACEHOLDER
-crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,TODO,person,Item,1x1,,,PLACEHOLDER
-crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,TODO,warp,Door,1x1,,,PLACEHOLDER
-crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,TODO,warp,Door,1x1,,,PLACEHOLDER
-crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,TODO,warp,Door,1x1,,,PLACEHOLDER
-crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,TODO,warp,Door,1x1,,,PLACEHOLDER
-crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,TODO,warp,Door,1x1,,,PLACEHOLDER
-crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,TODO,warp,Door,1x1,,,PLACEHOLDER
-crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,TODO,warp,Door,1x1,,,PLACEHOLDER
-crystal-caves-b2f,ILUM,dungeon,VictoryRoad_B2F,TODO,area,CRYSTAL CAVES B2F,46x31,,,
-crystal-caves-b2f,ILUM,dungeon,VictoryRoad_B2F,TODO,person,Trainer Vean,1x1,,,PLACEHOLDER
-crystal-caves-b2f,ILUM,dungeon,VictoryRoad_B2F,TODO,person,Trainer Otgan,1x1,,,PLACEHOLDER
-crystal-caves-b2f,ILUM,dungeon,VictoryRoad_B2F,TODO,person,Trainer Cossena,1x1,,,PLACEHOLDER
-crystal-caves-b2f,ILUM,dungeon,VictoryRoad_B2F,TODO,person,Trainer Jiria,1x1,,,PLACEHOLDER
-crystal-caves-b2f,ILUM,dungeon,VictoryRoad_B2F,TODO,person,Trainer Dorrys,1x1,,,PLACEHOLDER
-crystal-caves-b2f,ILUM,dungeon,VictoryRoad_B2F,TODO,person,Trainer Folal,1x1,,,PLACEHOLDER
-crystal-caves-b2f,ILUM,dungeon,VictoryRoad_B2F,TODO,person,Item,1x1,,,PLACEHOLDER
-crystal-caves-b2f,ILUM,dungeon,VictoryRoad_B2F,TODO,warp,Door,1x1,,,PLACEHOLDER
-crystal-caves-b2f,ILUM,dungeon,VictoryRoad_B2F,TODO,warp,Door,1x1,,,PLACEHOLDER
-crystal-caves-b2f,ILUM,dungeon,VictoryRoad_B2F,TODO,warp,Door,1x1,,,PLACEHOLDER
-crystal-caves-b2f,ILUM,dungeon,VictoryRoad_B2F,TODO,warp,Door,1x1,,,PLACEHOLDER
-ilum,ILUM,town,EverGrandeCity,TODO,area,ILUM,40x80,,,
-ilum,ILUM,town,EverGrandeCity,TODO,sign,Sign,1x1,,,PLACEHOLDER
-ilum,ILUM,town,EverGrandeCity,TODO,sign,Sign,1x1,,,PLACEHOLDER
-ilum,ILUM,town,EverGrandeCity,TODO,sign,Sign,1x1,,,PLACEHOLDER
-ilum,ILUM,town,EverGrandeCity,TODO,sign,Sign,1x1,,,PLACEHOLDER
-ilum,ILUM,town,EverGrandeCity,TODO,sign,Sign,1x1,,,PLACEHOLDER
-ilum,ILUM,town,EverGrandeCity,TODO,warp,Door,1x1,,,PLACEHOLDER
-ilum,ILUM,town,EverGrandeCity,TODO,warp,Door,1x1,,,PLACEHOLDER
-ilum,ILUM,town,EverGrandeCity,TODO,warp,Door,1x1,,,PLACEHOLDER
-ilum,ILUM,town,EverGrandeCity,TODO,warp,Door,1x1,,,PLACEHOLDER
+wampa-cave-high-tide-entrance-room,HOTH,dungeon,ShoalCave_HighTideEntranceRoom,BLOCKOUT,area,WAMPA CAVE HIGH TIDE ENTRANCE ROOM,35x35,,,
+wampa-cave-high-tide-entrance-room,HOTH,dungeon,ShoalCave_HighTideEntranceRoom,BLOCKOUT,warp,Cave mouth,1x1,,,PLACEHOLDER
+wampa-cave-high-tide-inner-room,HOTH,dungeon,ShoalCave_HighTideInnerRoom,BLOCKOUT,area,WAMPA CAVE HIGH TIDE INNER ROOM,46x38,,,
+wampa-cave-low-tide-entrance-room,HOTH,dungeon,ShoalCave_LowTideEntranceRoom,BLOCKOUT,area,WAMPA CAVE LOW TIDE ENTRANCE ROOM,35x35,,,
+wampa-cave-low-tide-entrance-room,HOTH,dungeon,ShoalCave_LowTideEntranceRoom,BLOCKOUT,person,Shell Bell Expert,1x1,,,PLACEHOLDER
+wampa-cave-low-tide-entrance-room,HOTH,dungeon,ShoalCave_LowTideEntranceRoom,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+wampa-cave-low-tide-entrance-room,HOTH,dungeon,ShoalCave_LowTideEntranceRoom,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+wampa-cave-low-tide-entrance-room,HOTH,dungeon,ShoalCave_LowTideEntranceRoom,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+wampa-cave-low-tide-entrance-room,HOTH,dungeon,ShoalCave_LowTideEntranceRoom,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+wampa-cave-low-tide-entrance-room,HOTH,dungeon,ShoalCave_LowTideEntranceRoom,BLOCKOUT,warp,Cave mouth,1x1,,,PLACEHOLDER
+wampa-cave-low-tide-ice-room,HOTH,dungeon,ShoalCave_LowTideIceRoom,BLOCKOUT,area,WAMPA CAVE LOW TIDE ICE ROOM,20x30,,,
+wampa-cave-low-tide-ice-room,HOTH,dungeon,ShoalCave_LowTideIceRoom,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+wampa-cave-low-tide-ice-room,HOTH,dungeon,ShoalCave_LowTideIceRoom,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+wampa-cave-low-tide-ice-room,HOTH,dungeon,ShoalCave_LowTideIceRoom,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+wampa-cave-low-tide-inner-room,HOTH,dungeon,ShoalCave_LowTideInnerRoom,BLOCKOUT,area,WAMPA CAVE LOW TIDE INNER ROOM,46x38,,,
+wampa-cave-low-tide-inner-room,HOTH,dungeon,ShoalCave_LowTideInnerRoom,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+wampa-cave-low-tide-inner-room,HOTH,dungeon,ShoalCave_LowTideInnerRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+wampa-cave-low-tide-inner-room,HOTH,dungeon,ShoalCave_LowTideInnerRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+wampa-cave-low-tide-inner-room,HOTH,dungeon,ShoalCave_LowTideInnerRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+wampa-cave-low-tide-inner-room,HOTH,dungeon,ShoalCave_LowTideInnerRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+wampa-cave-low-tide-inner-room,HOTH,dungeon,ShoalCave_LowTideInnerRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+wampa-cave-low-tide-inner-room,HOTH,dungeon,ShoalCave_LowTideInnerRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+wampa-cave-low-tide-inner-room,HOTH,dungeon,ShoalCave_LowTideInnerRoom,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+wampa-cave-low-tide-inner-room,HOTH,dungeon,ShoalCave_LowTideInnerRoom,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+wampa-cave-low-tide-inner-room,HOTH,dungeon,ShoalCave_LowTideInnerRoom,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+wampa-cave-low-tide-inner-room,HOTH,dungeon,ShoalCave_LowTideInnerRoom,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+wampa-cave-low-tide-inner-room,HOTH,dungeon,ShoalCave_LowTideInnerRoom,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+wampa-cave-low-tide-inner-room,HOTH,dungeon,ShoalCave_LowTideInnerRoom,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+wampa-cave-low-tide-inner-room,HOTH,dungeon,ShoalCave_LowTideInnerRoom,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+wampa-cave-low-tide-inner-room,HOTH,dungeon,ShoalCave_LowTideInnerRoom,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+wampa-cave-low-tide-lower-room,HOTH,dungeon,ShoalCave_LowTideLowerRoom,BLOCKOUT,area,WAMPA CAVE LOW TIDE LOWER ROOM,31x14,,,
+wampa-cave-low-tide-lower-room,HOTH,dungeon,ShoalCave_LowTideLowerRoom,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+wampa-cave-low-tide-lower-room,HOTH,dungeon,ShoalCave_LowTideLowerRoom,BLOCKOUT,person,Black Belt,1x1,,,PLACEHOLDER
+wampa-cave-low-tide-lower-room,HOTH,dungeon,ShoalCave_LowTideLowerRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+wampa-cave-low-tide-lower-room,HOTH,dungeon,ShoalCave_LowTideLowerRoom,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+wampa-cave-low-tide-lower-room,HOTH,dungeon,ShoalCave_LowTideLowerRoom,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+wampa-cave-low-tide-lower-room,HOTH,dungeon,ShoalCave_LowTideLowerRoom,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+wampa-cave-low-tide-lower-room,HOTH,dungeon,ShoalCave_LowTideLowerRoom,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+wampa-cave-low-tide-stairs-room,HOTH,dungeon,ShoalCave_LowTideStairsRoom,BLOCKOUT,area,WAMPA CAVE LOW TIDE STAIRS ROOM,21x15,,,
+wampa-cave-low-tide-stairs-room,HOTH,dungeon,ShoalCave_LowTideStairsRoom,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+wampa-cave-low-tide-stairs-room,HOTH,dungeon,ShoalCave_LowTideStairsRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+wampa-cave-low-tide-stairs-room,HOTH,dungeon,ShoalCave_LowTideStairsRoom,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+wampa-cave-low-tide-stairs-room,HOTH,dungeon,ShoalCave_LowTideStairsRoom,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+hoth-tundra,HOTH,route,new,BLOCKOUT,area,HOTH TUNDRA,48x40,,,
+hoth-tundra,HOTH,route,new,BLOCKOUT,building,Survey shuttle pad (ships),6x4,art:shared:landing-pad,yes,TODO
+hoth-tundra,HOTH,route,new,BLOCKOUT,building,Rebel survey outpost,8x5,art:hoth:echo-base-hangar-door,yes,TODO
+hoth-tundra,HOTH,route,new,BLOCKOUT,building,Tauntaun shelter,5x4,art:hoth:tauntaun-shelter,yes,TODO
+hoth-tundra,HOTH,route,new,BLOCKOUT,prop,Snowspeeder (parked),3x2,art:hoth:snowspeeder,yes,TODO
+hoth-tundra,HOTH,route,new,BLOCKOUT,prop,Ice stalagmites,1x1,art:hoth:ice-stalagmites,yes,TODO
+hoth-tundra,HOTH,route,new,BLOCKOUT,prop,Ice stalagmites,1x1,art:hoth:ice-stalagmites,yes,TODO
+hoth-tundra,HOTH,route,new,BLOCKOUT,prop,Ice stalagmites,1x1,art:hoth:ice-stalagmites,yes,TODO
+hoth-tundra,HOTH,route,new,BLOCKOUT,prop,Ice stalagmites,1x1,art:hoth:ice-stalagmites,yes,TODO
+hoth-tundra,HOTH,route,new,BLOCKOUT,person,Rebel surveyor,1x1,,,PLACEHOLDER
+hoth-tundra,HOTH,route,new,BLOCKOUT,person,Tauntaun handler,1x1,,,PLACEHOLDER
+hoth-tundra,HOTH,route,new,BLOCKOUT,person,Ice trekker,1x1,,,PLACEHOLDER
+hoth-tundra,HOTH,route,new,BLOCKOUT,person,Ice trekker,1x1,,,PLACEHOLDER
+hoth-tundra,HOTH,route,new,BLOCKOUT,person,Ice trekker,1x1,,,PLACEHOLDER
+hoth-tundra,HOTH,route,new,BLOCKOUT,person,Lost scout,1x1,,,PLACEHOLDER
+hoth-tundra,HOTH,route,new,BLOCKOUT,sign,Outpost sign,1x1,,,PLACEHOLDER
+hoth-tundra,HOTH,route,new,BLOCKOUT,sign,Cave warning sign,1x1,,,PLACEHOLDER
+hoth-tundra,HOTH,route,new,BLOCKOUT,warp,Wampa Cave mouth,1x1,,,PLACEHOLDER
+crystal-caves-1f,ILUM,dungeon,VictoryRoad_1F,BLOCKOUT,area,CRYSTAL CAVES 1F,46x45,,,
+crystal-caves-1f,ILUM,dungeon,VictoryRoad_1F,BLOCKOUT,person,Trainer Ebvar,1x1,,,PLACEHOLDER
+crystal-caves-1f,ILUM,dungeon,VictoryRoad_1F,BLOCKOUT,person,Trainer Herelle,1x1,,,PLACEHOLDER
+crystal-caves-1f,ILUM,dungeon,VictoryRoad_1F,BLOCKOUT,person,Trainer Abal,1x1,,,PLACEHOLDER
+crystal-caves-1f,ILUM,dungeon,VictoryRoad_1F,BLOCKOUT,person,Entrance Wally,1x1,,,PLACEHOLDER
+crystal-caves-1f,ILUM,dungeon,VictoryRoad_1F,BLOCKOUT,person,Exit Wally,1x1,,,PLACEHOLDER
+crystal-caves-1f,ILUM,dungeon,VictoryRoad_1F,BLOCKOUT,person,Trainer Koldena,1x1,,,PLACEHOLDER
+crystal-caves-1f,ILUM,dungeon,VictoryRoad_1F,BLOCKOUT,person,Trainer Qossek,1x1,,,PLACEHOLDER
+crystal-caves-1f,ILUM,dungeon,VictoryRoad_1F,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+crystal-caves-1f,ILUM,dungeon,VictoryRoad_1F,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+crystal-caves-1f,ILUM,dungeon,VictoryRoad_1F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+crystal-caves-1f,ILUM,dungeon,VictoryRoad_1F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+crystal-caves-1f,ILUM,dungeon,VictoryRoad_1F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+crystal-caves-1f,ILUM,dungeon,VictoryRoad_1F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+crystal-caves-1f,ILUM,dungeon,VictoryRoad_1F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,BLOCKOUT,area,CRYSTAL CAVES B1F,46x31,,,
+crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,BLOCKOUT,person,Trainer Sumir,1x1,,,PLACEHOLDER
+crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,BLOCKOUT,person,Trainer Saeth,1x1,,,PLACEHOLDER
+crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,BLOCKOUT,person,Trainer Maldia,1x1,,,PLACEHOLDER
+crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,BLOCKOUT,person,Trainer Maos,1x1,,,PLACEHOLDER
+crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,BLOCKOUT,person,Trainer Hildara,1x1,,,PLACEHOLDER
+crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+crystal-caves-b1f,ILUM,dungeon,VictoryRoad_B1F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+crystal-caves-b2f,ILUM,dungeon,VictoryRoad_B2F,BLOCKOUT,area,CRYSTAL CAVES B2F,46x31,,,
+crystal-caves-b2f,ILUM,dungeon,VictoryRoad_B2F,BLOCKOUT,person,Trainer Vean,1x1,,,PLACEHOLDER
+crystal-caves-b2f,ILUM,dungeon,VictoryRoad_B2F,BLOCKOUT,person,Trainer Otgan,1x1,,,PLACEHOLDER
+crystal-caves-b2f,ILUM,dungeon,VictoryRoad_B2F,BLOCKOUT,person,Trainer Cossena,1x1,,,PLACEHOLDER
+crystal-caves-b2f,ILUM,dungeon,VictoryRoad_B2F,BLOCKOUT,person,Trainer Jiria,1x1,,,PLACEHOLDER
+crystal-caves-b2f,ILUM,dungeon,VictoryRoad_B2F,BLOCKOUT,person,Trainer Dorrys,1x1,,,PLACEHOLDER
+crystal-caves-b2f,ILUM,dungeon,VictoryRoad_B2F,BLOCKOUT,person,Trainer Folal,1x1,,,PLACEHOLDER
+crystal-caves-b2f,ILUM,dungeon,VictoryRoad_B2F,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+crystal-caves-b2f,ILUM,dungeon,VictoryRoad_B2F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+crystal-caves-b2f,ILUM,dungeon,VictoryRoad_B2F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+crystal-caves-b2f,ILUM,dungeon,VictoryRoad_B2F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+crystal-caves-b2f,ILUM,dungeon,VictoryRoad_B2F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+ilum,ILUM,town,EverGrandeCity,BLOCKOUT,area,ILUM,44x60,,,
+ilum,ILUM,town,EverGrandeCity,BLOCKOUT,building,Jedi temple gate (the Four Trials),12x7,art:ilum:jedi-temple-gate,yes,TODO
+ilum,ILUM,town,EverGrandeCity,BLOCKOUT,building,Bacta Center,5x4,art:shared:bacta-center,yes,TODO
+ilum,ILUM,town,EverGrandeCity,BLOCKOUT,building,Supply Depot,4x4,art:shared:supply-depot,yes,TODO
+ilum,ILUM,town,EverGrandeCity,BLOCKOUT,building,Landing pad (ships),6x4,art:shared:landing-pad,yes,TODO
+ilum,ILUM,town,EverGrandeCity,BLOCKOUT,prop,Kyber crystal outcrop,2x2,art:ilum:kyber-crystal-outcrop,yes,TODO
+ilum,ILUM,town,EverGrandeCity,BLOCKOUT,prop,Kyber crystal outcrop,2x2,art:ilum:kyber-crystal-outcrop,yes,TODO
+ilum,ILUM,town,EverGrandeCity,BLOCKOUT,prop,Kyber crystal outcrop,2x2,art:ilum:kyber-crystal-outcrop,yes,TODO
+ilum,ILUM,town,EverGrandeCity,BLOCKOUT,prop,Snow pine,1x2,art:ilum:snow-pine,yes,TODO
+ilum,ILUM,town,EverGrandeCity,BLOCKOUT,prop,Snow pine,1x2,art:ilum:snow-pine,yes,TODO
+ilum,ILUM,town,EverGrandeCity,BLOCKOUT,prop,Snow pine,1x2,art:ilum:snow-pine,yes,TODO
+ilum,ILUM,town,EverGrandeCity,BLOCKOUT,prop,Snow pine,1x2,art:ilum:snow-pine,yes,TODO
+ilum,ILUM,town,EverGrandeCity,BLOCKOUT,person,Gate warden,1x1,,,PLACEHOLDER
+ilum,ILUM,town,EverGrandeCity,BLOCKOUT,person,Temple acolyte,1x1,,,PLACEHOLDER
+ilum,ILUM,town,EverGrandeCity,BLOCKOUT,person,Pilgrim,1x1,,,PLACEHOLDER
+ilum,ILUM,town,EverGrandeCity,BLOCKOUT,person,Crystal hunter,1x1,,,PLACEHOLDER
+ilum,ILUM,town,EverGrandeCity,BLOCKOUT,person,Rebel pilot,1x1,,,PLACEHOLDER
+ilum,ILUM,town,EverGrandeCity,BLOCKOUT,sign,Temple sign,1x1,,,PLACEHOLDER
+ilum,ILUM,town,EverGrandeCity,BLOCKOUT,sign,Crystal Caves sign,1x1,,,PLACEHOLDER
+ilum,ILUM,town,EverGrandeCity,BLOCKOUT,warp,Crystal Caves (north mouth),1x1,,,PLACEHOLDER
+ilum,ILUM,town,EverGrandeCity,BLOCKOUT,warp,Crystal Caves (south mouth),1x1,,,PLACEHOLDER
 ilum-bacta-center-1f,ILUM,interior,EverGrandeCity_PokemonCenter_1F,TODO,area,ILUM BACTA CENTER 1F,14x9,,,
 ilum-bacta-center-1f,ILUM,interior,EverGrandeCity_PokemonCenter_1F,TODO,person,Nurse,1x1,,,PLACEHOLDER
 ilum-bacta-center-1f,ILUM,interior,EverGrandeCity_PokemonCenter_1F,TODO,person,Woman,1x1,,,PLACEHOLDER
@@ -1983,48 +2011,53 @@ nijedha,JEDHA,town,new,BLOCKOUT,sign,City sign,1x1,,,PLACEHOLDER
 route-122,JEDHA,route,Route122,BLOCKOUT,area,ROUTE 122,40x40,,,
 route-122,JEDHA,route,Route122,BLOCKOUT,building,Pilgrim landing pad,4x4,art:shared:landing-pad,yes,TODO
 route-122,JEDHA,route,Route122,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
-sealed-vault-inner-room,KAMINO,dungeon,SealedChamber_InnerRoom,TODO,area,SEALED VAULT INNER ROOM,21x23,,,
-sealed-vault-inner-room,KAMINO,dungeon,SealedChamber_InnerRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
-sealed-vault-inner-room,KAMINO,dungeon,SealedChamber_InnerRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
-sealed-vault-inner-room,KAMINO,dungeon,SealedChamber_InnerRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
-sealed-vault-inner-room,KAMINO,dungeon,SealedChamber_InnerRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
-sealed-vault-inner-room,KAMINO,dungeon,SealedChamber_InnerRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
-sealed-vault-inner-room,KAMINO,dungeon,SealedChamber_InnerRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
-sealed-vault-inner-room,KAMINO,dungeon,SealedChamber_InnerRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
-sealed-vault-inner-room,KAMINO,dungeon,SealedChamber_InnerRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
-sealed-vault-inner-room,KAMINO,dungeon,SealedChamber_InnerRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
-sealed-vault-inner-room,KAMINO,dungeon,SealedChamber_InnerRoom,TODO,warp,Door,1x1,,,PLACEHOLDER
-sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,TODO,area,SEALED VAULT OUTER ROOM,21x23,,,
-sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
-sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
-sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
-sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
-sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
-sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
-sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
-sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
-sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
-sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
-sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
-sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
-sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
-sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
-sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
-sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
-sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
-sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
-sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
-sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
-sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
-sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
-sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
-sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
-sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
-sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
-sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
-sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
-sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
-sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,TODO,warp,Door,1x1,,,PLACEHOLDER
+sealed-vault-inner-room,KAMINO,dungeon,SealedChamber_InnerRoom,BLOCKOUT,area,SEALED VAULT INNER ROOM,21x23,,,
+sealed-vault-inner-room,KAMINO,dungeon,SealedChamber_InnerRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+sealed-vault-inner-room,KAMINO,dungeon,SealedChamber_InnerRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+sealed-vault-inner-room,KAMINO,dungeon,SealedChamber_InnerRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+sealed-vault-inner-room,KAMINO,dungeon,SealedChamber_InnerRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+sealed-vault-inner-room,KAMINO,dungeon,SealedChamber_InnerRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+sealed-vault-inner-room,KAMINO,dungeon,SealedChamber_InnerRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+sealed-vault-inner-room,KAMINO,dungeon,SealedChamber_InnerRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+sealed-vault-inner-room,KAMINO,dungeon,SealedChamber_InnerRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+sealed-vault-inner-room,KAMINO,dungeon,SealedChamber_InnerRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+sealed-vault-inner-room,KAMINO,dungeon,SealedChamber_InnerRoom,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,BLOCKOUT,area,SEALED VAULT OUTER ROOM,21x23,,,
+sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+sealed-vault-outer-room,KAMINO,dungeon,SealedChamber_OuterRoom,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+underwater-route-134,KAMINO,dungeon,Underwater_Route134,BLOCKOUT,area,UNDERWATER ROUTE 134,18x10,,,
+underwater-route-134,KAMINO,dungeon,Underwater_Route134,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+underwater-sealed-chamber,KAMINO,dungeon,Underwater_SealedChamber,BLOCKOUT,area,UNDERWATER SEALED CHAMBER,22x48,,,
+underwater-sealed-chamber,KAMINO,dungeon,Underwater_SealedChamber,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+underwater-sealed-chamber,KAMINO,dungeon,Underwater_SealedChamber,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
 tipoca-city-bacta-center-1f,KAMINO,interior,PacifidlogTown_PokemonCenter_1F,TODO,area,TIPOCA CITY BACTA CENTER 1F,14x9,,,
 tipoca-city-bacta-center-1f,KAMINO,interior,PacifidlogTown_PokemonCenter_1F,TODO,person,Nurse,1x1,,,PLACEHOLDER
 tipoca-city-bacta-center-1f,KAMINO,interior,PacifidlogTown_PokemonCenter_1F,TODO,person,Old Man,1x1,,,PLACEHOLDER
@@ -2069,63 +2102,71 @@ tipoca-city-house-5,KAMINO,interior,PacifidlogTown_House5,TODO,person,Mirage Isl
 tipoca-city-house-5,KAMINO,interior,PacifidlogTown_House5,TODO,person,Gentleman,1x1,,,PLACEHOLDER
 tipoca-city-house-5,KAMINO,interior,PacifidlogTown_House5,TODO,warp,Door,1x1,,,PLACEHOLDER
 tipoca-city-house-5,KAMINO,interior,PacifidlogTown_House5,TODO,warp,Door,1x1,,,PLACEHOLDER
-route-131,KAMINO,route,Route131,TODO,area,ROUTE 131,60x40,,,
-route-131,KAMINO,route,Route131,TODO,person,Trainer Rios,1x1,,,PLACEHOLDER
-route-131,KAMINO,route,Route131,TODO,person,Trainer Hosho,1x1,,,PLACEHOLDER
-route-131,KAMINO,route,Route131,TODO,person,Trainer Soila,1x1,,,PLACEHOLDER
-route-131,KAMINO,route,Route131,TODO,person,Trainer Koxys,1x1,,,PLACEHOLDER
-route-131,KAMINO,route,Route131,TODO,person,Trainer Reli,1x1,,,PLACEHOLDER
-route-131,KAMINO,route,Route131,TODO,person,Trainer Ian,1x1,,,PLACEHOLDER
-route-131,KAMINO,route,Route131,TODO,person,Trainer Koskun,1x1,,,PLACEHOLDER
-route-131,KAMINO,route,Route131,TODO,person,Trainer Tegila,1x1,,,PLACEHOLDER
-route-131,KAMINO,route,Route131,TODO,warp,Door,1x1,,,PLACEHOLDER
-route-132,KAMINO,route,Route132,TODO,area,ROUTE 132,80x40,,,
-route-132,KAMINO,route,Route132,TODO,person,Trainer Gios,1x1,,,PLACEHOLDER
-route-132,KAMINO,route,Route132,TODO,person,Trainer Dulena,1x1,,,PLACEHOLDER
-route-132,KAMINO,route,Route132,TODO,person,Trainer Kithar,1x1,,,PLACEHOLDER
-route-132,KAMINO,route,Route132,TODO,person,Trainer Rolos,1x1,,,PLACEHOLDER
-route-132,KAMINO,route,Route132,TODO,person,Trainer Palal,1x1,,,PLACEHOLDER
-route-132,KAMINO,route,Route132,TODO,person,Trainer Dura,1x1,,,PLACEHOLDER
-route-132,KAMINO,route,Route132,TODO,person,Trainer Modena,1x1,,,PLACEHOLDER
-route-132,KAMINO,route,Route132,TODO,person,Trainer Joshun,1x1,,,PLACEHOLDER
-route-132,KAMINO,route,Route132,TODO,person,Item,1x1,,,PLACEHOLDER
-route-132,KAMINO,route,Route132,TODO,person,Item,1x1,,,PLACEHOLDER
-route-133,KAMINO,route,Route133,TODO,area,ROUTE 133,80x40,,,
-route-133,KAMINO,route,Route133,TODO,person,Trainer Farro,1x1,,,PLACEHOLDER
-route-133,KAMINO,route,Route133,TODO,person,Trainer Lethi,1x1,,,PLACEHOLDER
-route-133,KAMINO,route,Route133,TODO,person,Trainer Daina,1x1,,,PLACEHOLDER
-route-133,KAMINO,route,Route133,TODO,person,Trainer Buax,1x1,,,PLACEHOLDER
-route-133,KAMINO,route,Route133,TODO,person,Trainer Wiax,1x1,,,PLACEHOLDER
-route-133,KAMINO,route,Route133,TODO,person,Trainer Moshi,1x1,,,PLACEHOLDER
-route-133,KAMINO,route,Route133,TODO,person,Trainer Ciskir,1x1,,,PLACEHOLDER
-route-133,KAMINO,route,Route133,TODO,person,Item,1x1,,,PLACEHOLDER
-route-133,KAMINO,route,Route133,TODO,person,Item,1x1,,,PLACEHOLDER
-route-133,KAMINO,route,Route133,TODO,person,Item,1x1,,,PLACEHOLDER
-route-134,KAMINO,route,Route134,TODO,area,ROUTE 134,80x40,,,
-route-134,KAMINO,route,Route134,TODO,person,Trainer Juo,1x1,,,PLACEHOLDER
-route-134,KAMINO,route,Route134,TODO,person,Trainer Lai,1x1,,,PLACEHOLDER
-route-134,KAMINO,route,Route134,TODO,person,Trainer Aden,1x1,,,PLACEHOLDER
-route-134,KAMINO,route,Route134,TODO,person,Trainer Abmos,1x1,,,PLACEHOLDER
-route-134,KAMINO,route,Route134,TODO,person,Trainer Hixus,1x1,,,PLACEHOLDER
-route-134,KAMINO,route,Route134,TODO,person,Trainer Molia,1x1,,,PLACEHOLDER
-route-134,KAMINO,route,Route134,TODO,person,Trainer Kual,1x1,,,PLACEHOLDER
-route-134,KAMINO,route,Route134,TODO,person,Trainer Rielle,1x1,,,PLACEHOLDER
-route-134,KAMINO,route,Route134,TODO,person,Trainer Hual,1x1,,,PLACEHOLDER
-route-134,KAMINO,route,Route134,TODO,person,Item,1x1,,,PLACEHOLDER
-route-134,KAMINO,route,Route134,TODO,person,Item,1x1,,,PLACEHOLDER
-tipoca-city,KAMINO,town,PacifidlogTown,TODO,area,TIPOCA CITY,20x40,,,
-tipoca-city,KAMINO,town,PacifidlogTown,TODO,person,Girl,1x1,,,PLACEHOLDER
-tipoca-city,KAMINO,town,PacifidlogTown,TODO,person,Fisherman,1x1,,,PLACEHOLDER
-tipoca-city,KAMINO,town,PacifidlogTown,TODO,person,Ninja Boy,1x1,,,PLACEHOLDER
-tipoca-city,KAMINO,town,PacifidlogTown,TODO,sign,Sign,1x1,,,PLACEHOLDER
-tipoca-city,KAMINO,town,PacifidlogTown,TODO,sign,Sign,1x1,,,PLACEHOLDER
-tipoca-city,KAMINO,town,PacifidlogTown,TODO,sign,Sign,1x1,,,PLACEHOLDER
-tipoca-city,KAMINO,town,PacifidlogTown,TODO,warp,Door,1x1,,,PLACEHOLDER
-tipoca-city,KAMINO,town,PacifidlogTown,TODO,warp,Door,1x1,,,PLACEHOLDER
-tipoca-city,KAMINO,town,PacifidlogTown,TODO,warp,Door,1x1,,,PLACEHOLDER
-tipoca-city,KAMINO,town,PacifidlogTown,TODO,warp,Door,1x1,,,PLACEHOLDER
-tipoca-city,KAMINO,town,PacifidlogTown,TODO,warp,Door,1x1,,,PLACEHOLDER
-tipoca-city,KAMINO,town,PacifidlogTown,TODO,warp,Door,1x1,,,PLACEHOLDER
+route-131,KAMINO,route,Route131,BLOCKOUT,area,ROUTE 131,60x40,,,
+route-131,KAMINO,route,Route131,BLOCKOUT,person,Trainer Rios,1x1,,,PLACEHOLDER
+route-131,KAMINO,route,Route131,BLOCKOUT,person,Trainer Hosho,1x1,,,PLACEHOLDER
+route-131,KAMINO,route,Route131,BLOCKOUT,person,Trainer Soila,1x1,,,PLACEHOLDER
+route-131,KAMINO,route,Route131,BLOCKOUT,person,Trainer Koxys,1x1,,,PLACEHOLDER
+route-131,KAMINO,route,Route131,BLOCKOUT,person,Trainer Reli,1x1,,,PLACEHOLDER
+route-131,KAMINO,route,Route131,BLOCKOUT,person,Trainer Ian,1x1,,,PLACEHOLDER
+route-131,KAMINO,route,Route131,BLOCKOUT,person,Trainer Koskun,1x1,,,PLACEHOLDER
+route-131,KAMINO,route,Route131,BLOCKOUT,person,Trainer Tegila,1x1,,,PLACEHOLDER
+route-132,KAMINO,route,Route132,BLOCKOUT,area,ROUTE 132,80x40,,,
+route-132,KAMINO,route,Route132,BLOCKOUT,person,Trainer Gios,1x1,,,PLACEHOLDER
+route-132,KAMINO,route,Route132,BLOCKOUT,person,Trainer Dulena,1x1,,,PLACEHOLDER
+route-132,KAMINO,route,Route132,BLOCKOUT,person,Trainer Kithar,1x1,,,PLACEHOLDER
+route-132,KAMINO,route,Route132,BLOCKOUT,person,Trainer Rolos,1x1,,,PLACEHOLDER
+route-132,KAMINO,route,Route132,BLOCKOUT,person,Trainer Palal,1x1,,,PLACEHOLDER
+route-132,KAMINO,route,Route132,BLOCKOUT,person,Trainer Dura,1x1,,,PLACEHOLDER
+route-132,KAMINO,route,Route132,BLOCKOUT,person,Trainer Modena,1x1,,,PLACEHOLDER
+route-132,KAMINO,route,Route132,BLOCKOUT,person,Trainer Joshun,1x1,,,PLACEHOLDER
+route-132,KAMINO,route,Route132,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+route-132,KAMINO,route,Route132,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+route-133,KAMINO,route,Route133,BLOCKOUT,area,ROUTE 133,80x40,,,
+route-133,KAMINO,route,Route133,BLOCKOUT,person,Trainer Farro,1x1,,,PLACEHOLDER
+route-133,KAMINO,route,Route133,BLOCKOUT,person,Trainer Lethi,1x1,,,PLACEHOLDER
+route-133,KAMINO,route,Route133,BLOCKOUT,person,Trainer Daina,1x1,,,PLACEHOLDER
+route-133,KAMINO,route,Route133,BLOCKOUT,person,Trainer Buax,1x1,,,PLACEHOLDER
+route-133,KAMINO,route,Route133,BLOCKOUT,person,Trainer Wiax,1x1,,,PLACEHOLDER
+route-133,KAMINO,route,Route133,BLOCKOUT,person,Trainer Moshi,1x1,,,PLACEHOLDER
+route-133,KAMINO,route,Route133,BLOCKOUT,person,Trainer Ciskir,1x1,,,PLACEHOLDER
+route-133,KAMINO,route,Route133,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+route-133,KAMINO,route,Route133,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+route-133,KAMINO,route,Route133,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+route-134,KAMINO,route,Route134,BLOCKOUT,area,ROUTE 134,80x40,,,
+route-134,KAMINO,route,Route134,BLOCKOUT,prop,Storm swell,3x1,art:kamino:storm-sea,yes,TODO
+route-134,KAMINO,route,Route134,BLOCKOUT,person,Trainer Juo,1x1,,,PLACEHOLDER
+route-134,KAMINO,route,Route134,BLOCKOUT,person,Trainer Lai,1x1,,,PLACEHOLDER
+route-134,KAMINO,route,Route134,BLOCKOUT,person,Trainer Aden,1x1,,,PLACEHOLDER
+route-134,KAMINO,route,Route134,BLOCKOUT,person,Trainer Abmos,1x1,,,PLACEHOLDER
+route-134,KAMINO,route,Route134,BLOCKOUT,person,Trainer Hixus,1x1,,,PLACEHOLDER
+route-134,KAMINO,route,Route134,BLOCKOUT,person,Trainer Molia,1x1,,,PLACEHOLDER
+route-134,KAMINO,route,Route134,BLOCKOUT,person,Trainer Kual,1x1,,,PLACEHOLDER
+route-134,KAMINO,route,Route134,BLOCKOUT,person,Trainer Rielle,1x1,,,PLACEHOLDER
+route-134,KAMINO,route,Route134,BLOCKOUT,person,Trainer Hual,1x1,,,PLACEHOLDER
+route-134,KAMINO,route,Route134,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+route-134,KAMINO,route,Route134,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,area,TIPOCA CITY,50x36,,,
+tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,building,Cloning hall,12x6,art:kamino:cloning-hall,yes,TODO
+tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,building,Landing platform (ships),6x4,art:shared:landing-pad,yes,TODO
+tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,building,Kaminoan dwelling,5x4,art:kamino:stilt-dome,yes,TODO
+tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,building,Bacta Center,5x4,art:shared:bacta-center,yes,TODO
+tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,building,Clone trainer's quarters,5x4,art:kamino:stilt-dome,yes,TODO
+tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,building,Kaminoan dwelling,5x4,art:kamino:stilt-dome,yes,TODO
+tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,building,Supply Depot,4x4,art:shared:supply-depot,yes,TODO
+tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,building,Fisher's dome,4x4,art:kamino:stilt-dome,yes,TODO
+tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,building,Storm watcher's dome,4x4,art:kamino:stilt-dome,yes,TODO
+tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,prop,Cargo crates,2x2,art:shared:cargo-crates,yes,TODO
+tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,prop,Storm swell,3x1,art:kamino:storm-sea,yes,TODO
+tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,prop,Storm swell,3x1,art:kamino:storm-sea,yes,TODO
+tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,person,Kaminoan aide,1x1,,,PLACEHOLDER
+tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,person,Clone cadet,1x1,,,PLACEHOLDER
+tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,person,Clone cadet,1x1,,,PLACEHOLDER
+tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,person,Kaminoan scientist,1x1,,,PLACEHOLDER
+tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,person,Stilt fisher,1x1,,,PLACEHOLDER
+tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,person,Dock worker,1x1,,,PLACEHOLDER
+tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,sign,City holo-sign,1x1,,,PLACEHOLDER
+tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,sign,Cloning hall sign,1x1,,,PLACEHOLDER
 ice-grotto,KASHYYYK,dungeon,IslandCave,BLOCKOUT,area,ICE GROTTO,17x33,,,
 ice-grotto,KASHYYYK,dungeon,IslandCave,BLOCKOUT,person,Regice,1x1,,,PLACEHOLDER
 ice-grotto,KASHYYYK,dungeon,IslandCave,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER

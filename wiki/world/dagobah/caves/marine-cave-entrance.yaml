@@ -3,8 +3,8 @@ name: MARINE CAVE ENTRANCE
 planet: DAGOBAH
 kind: dungeon
 replaces: MarineCave_Entrance
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Marine Cave: a roaming flooded cave, unused in Emerald; kept as an optional dive.'
 grid: |
   ####################
   ##############.#####
@@ -35,4 +35,4 @@ warps:
 - name: Door
   at: [14, 1]
   to: marine-cave-end
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

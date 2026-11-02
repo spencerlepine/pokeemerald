@@ -3,9 +3,9 @@ name: ROUTE 128
 planet: DAGOBAH
 kind: route
 replaces: Route128
-status: TODO
-story: ''
-pos: [640, 220]
+status: BLOCKOUT
+story: Deep swamp south of the hollow where the Drowned Cavern's dive spot lies; SANDO sleeps below.
+pos: [69, 139]
 grid: |
   ~~~~~~~~~~####.#.#~~~~##~~~~~~~~~~~~~~~~~~~~####....#.#~~~~~~~#...#...###~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   ~~~~~~~~~~##.#.#..#~~~~~~~~~~~~~~~~~~~~~~~~~#.####..#.#..........#...###~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -49,16 +49,19 @@ grid: |
   ~~~~~~~~~~~~~~~~~~~~~~~~~~##~~##~~~~~~~~~~~~~~~~~~~~~~~~####~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 exits:
 - edge: north
-  cells: [14, 16, 48, 49, 50, 51, 53, 63, 64, 65, 67, 68, 69]
+  cells: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 14, 16, 18, 19, 20, 21, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 48, 49, 50, 51, 53,
+    55, 56, 57, 58, 59, 60, 61, 63, 64, 65, 67, 68, 69, 73, 74, 75, 76, 77, 78, 79]
   to: route-127
 - edge: south
-  cells: []
+  cells: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 28, 29, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44,
+    45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79]
   to: route-129
-- edge: east
-  cells: []
-  to: ilum
 buildings: []
-props: []
+props:
+- name: Swamp reeds
+  art: art:dagobah:swamp-reeds
+  at: [26, 9]
+  size: [2, 1]
 people:
 - name: Trainer Ilen
   at: [35, 33]
@@ -66,15 +69,15 @@ people:
 - name: Trainer Kashys
   at: [78, 24]
   role: trainer
-- name: '0x0'
+- name: Event object
   at: [40, 22]
-  role: npc
-- name: '0x0'
+  role: object
+- name: Event object
   at: [37, 22]
-  role: npc
-- name: '0x0'
+  role: object
+- name: Event object
   at: [38, 21]
-  role: npc
+  role: object
 - name: Trainer Washus
   at: [63, 28]
   role: trainer
@@ -92,4 +95,5 @@ people:
   role: trainer
 signs: []
 warps: []
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Planet border cut: east edge to ilum (ILUM); reached by ship instead.', Vanilla's east coast to
+    Ever Grande (Ilum) is cut; Ilum is reached by ship., 'Could not fit: Sunken X-wing']

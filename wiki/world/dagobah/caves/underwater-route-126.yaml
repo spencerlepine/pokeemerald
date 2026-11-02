@@ -3,8 +3,8 @@ name: UNDERWATER ROUTE 126
 planet: DAGOBAH
 kind: dungeon
 replaces: Underwater_Route126
-status: TODO
-story: ''
+status: BLOCKOUT
+story: Murky water under the swamp, roots and silt.
 pos: [318, 483]
 grid: |
   ################################################################################
@@ -87,13 +87,7 @@ grid: |
   ####.....~######################################################################
   #####.....######################################################################
   ################################################################################
-exits:
-- edge: north
-  cells: []
-  to: underwater-route-124
-- edge: east
-  cells: []
-  to: underwater-route-127
+exits: []
 buildings: []
 props: []
 people: []
@@ -102,4 +96,4 @@ warps:
 - name: Door
   at: [45, 65]
   to: underwater-sootopolis-city
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

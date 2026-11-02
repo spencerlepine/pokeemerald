@@ -3,178 +3,234 @@ name: DAGOBAH
 planet: DAGOBAH
 kind: town
 replaces: SootopolisCity
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Dagobah''s hidden swamp hollow: Yoda''s hut is the arena, the Cave of Evil (a Force vergence) opens in the north-west, and a bog lagoon fills the middle.
+  Ships set down on the south-east bog landing; a surf channel runs south to the swamp routes, and divers can still surface in the lagoon from Route 126.'
+pos: [0, 0]
 grid: |
-  ################.#..###################.....###########.....
-  ##################..#######################################.
-  #############...#...##############.########........########.
-  #################...#####..#######..##....#####....#########
-  #########################..########..###########...#########
-  #######.#######......####.........###.###...#####.....###..#
-  ######..#######..##..#..............#...#...###.##########.#
-  #########.####...#........###..#######..#####.############..
-  #####.###.####...#........###..############....###########..
-  #####.#.#.####...##########.........#########.##############
-  #######.#........##..#############..#########.##############
-  ###############..#################..####.####......#####..#.
-  ..########.......######.##########..#.#######......#####..##
-  ###.#####..####..#.######...........############...##..###..
-  ....#.######......#######..#####################....#....###
-  .####.######......#.##.##..#########..##########....#......#
-  .#....#####...##..#.##.#....###.#######.##.#####....########
-  ##....#####...##..####.#....##...##...####.######....#######
-  ########......##.....####..###...##....###....#.#..########.
-  ########......##.....####..##.#.#.###..###....###..########.
-  ############..##..##.###......#.#...######.........########.
-  #######.####..##..##.###..............######.......#...#####
-  #########......#..##...#..............######..#########....#
-  #####.######..######...#..##################...####...##....
-  ####..######..#######..####~~~~~~~~~~######....####....#....
-  .###..#####...####..#..##~~~~~~~~~~~~######....####.#####...
-  .###..#####...#######..#~~~~~~~~~~~~~~~####.......#####.#...
-  .###..##......#######..#~~~~~~~~~~~~~~~#######.....####.##..
-  #####################..#~~~~~~~~~~~~~~~########....####..#..
-  ..###################..#~~~~######~~~~~########....##.#..##.
-  .##.###...#####.....#..#~~~~######~~~~~########.......#...#.
-  .#..#.....#........##..#~~~~######~~~~~#########..#...######
-  ##..#######.....#..#...#~~~...###..~~~~###........####...#.#
-  #..########....##......#~~~........~~~~###...........#####.#
-  ...#.#####....##......##~~~......#.~~~~####..###..###...##.#
-  .#########....#.###..##~~~~........~~~~####..###..########.#
-  ##..#.#.......#.#TT....~~~~........~~~~####..###..##########
-  #####.##....###.#TT....~~~~~~~~~~~~~~~~~.#...###.....####.##
-  .#..#############.~~~~~~~~~~~~~~~~~~~~~~.....###############
-  ##.###########....~~~~~~~~~~~~~~~~~~~~~~.....###############
-  ##.####.TTTT......~~~~~~~~~~~~~~~~~~~~~~~~...###############
-  ##.####.TTTT......~~~~~~~~~~~~~~~~~~~~~~~~........##########
-  ##.####...TT......~~~~~~~~~~~~~~~~~~~~~~~~.........TT#######
-  ##.####...TT......~~~~~~~~~~~~~~~~~~~~~~~~~~~......TT#######
-  ##.####...........~~~~~~~~~~~~~~~~~~~~~~~~~~~....TTTT#######
-  ##.####.......TT..~~~~~~~~~~~~~~~~~~~~~~~~~~~....TTTT#######
-  ##########T...TT~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~TTTT#######
-  ############T.TT~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~TTTT#######
-  #############.TT~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#~....######
-  ###############T~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#############
-  ################~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~############
-  ################~~~~~~~~~~~~~~~~~~~~~~~~~###################
-  ################~~~~~~~~~~~~~~~~~~~~~~~~~~##################
-  ################~~~~~~~~~~~~~~~~~~~~~#######################
-  ################~~~~~~~~~~~~~~~~~~~~~#######################
-  ###############~~~~~~~~~~~~~~~~~~~~~~~######################
-  ###################~~~~~~~~~~~~~~~~~########################
-  ############################################################
-  ############################################################
-  ############################################################
-exits: []
-buildings: []
-props: []
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT.......TTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTT..........TTTTTTTTTTTTTTTTTTTTT
+  TTT....TTTTTTTTTTTTTTTTTTTT............TTTTTTTTTTTTTTTTTTTTT
+  TTT....TTTTTTTTTTTTTTTTTTT..............TTTTTTTTTTTTTTTTTTTT
+  TTT....TTTTTTTTTTTTTT...................TTTTTTTTTTTTTTTTTTTT
+  TTTTT.TTTTTTTTTTTT......................TTTTTTTTTTTTTTTTTTTT
+  TTTTT:TTTTTTTTTT.........................TT"TTT""TTTTTTTTTTT
+  TTTTT:.TTTTTTTT..........................T"""""""TTTTTTTTTTT
+  TTTTT:TTTTTTTT..........................""""""""""""TTTTTTTT
+  TTTTT:TTTTTTTT.........................."""""""""""TTTTTTTTT
+  TTTTT:TTTTTTT............................"""""""""""TTTTTTTT
+  TTTTT:TTTTTT.............................."""""""""""TTTTTTT
+  TTTTT:TTTTT.....:.............:...........:""""""""TTTTTTTTT
+  TTTTT:TTTTT.....:.............:...........:""""""""...TTTTTT
+  TTTTT:TTT.......:.............:...........:....."""....TTTTT
+  TTTTT:TT........:.............:...........:.............TTTT
+  TTTTT:::::::::::::::::::::::::::::::::::::::::::::::.....TTT
+  TTTTTT....::::::::::::::::::::::::::::::::::::::::::.....TTT
+  TTTTTT....::......................................::.....TTT
+  TTTTT.....::......................................::.....TTT
+  TT........::......................................::......TT
+  TT........::......................................::......TT
+  TT........::............~~~~~..~~~~~~.............::......TT
+  TTT.......::............~~~~~~~~~~~~~~~...........::....TTTT
+  TTTT......::...........~~~~~~~~~~~~~~~~~~.........::....TTTT
+  TTTT......::......~~~~~~~~~~~~~~~~~~~~~~~.........::....TTTT
+  TTTT......::.....~~~~~~~~~~~~~~~~~~~~~~~~.........::......TT
+  TTTT......::.....~~~~~~~~~~~~~~~~~~~~~~~~.........::......TT
+  TTTT......::......~~~~~~~~~~~~~~~~~~~~~~~.........::....TTTT
+  TTTT......::.......~~~~~~~~~~~~~~~~~~~~~~~........::.....TTT
+  TT........::.......~~~~~~~~~~~~~~~~~~~~~~~~.......::......TT
+  TT........::.......~~~~~~~~~~~~~~~~~~~~~~~~.......::......TT
+  TT........::.......~~~~~~~~~~~~~~~~~~~~~~~........::......TT
+  TTT.......::.......~~~~~~~~~~~~~~~~~~~~~..........::.....TTT
+  TTTTT.....::........~~~~~~~~~~~~~~~~~~~~..........::....TTTT
+  TTTTTT....::..........~~~~~~~~~~~~~~~~~~..........::....TTTT
+  TTTTTT....::...........~~~~~~~~~~~~~~~~~..........::...TTTTT
+  TTTTTTT...::.............~~~~~~~~~~~~~~~..........::...TTTTT
+  TTTTTTT...::"".............~~~~~~~~~~~~~..........::..TTTTTT
+  TT.....T."::""".............~~~~~.................::.T....TT
+  TT.....T."::""""""...........~~...................::TT....TT
+  TT.....T""::""""""...........~~...................::TT....TT
+  TT....."""::"""""............~~...................::....TTTT
+  TTTT..."""::""""""...........~~...................::TTTTTTTT
+  TTTTTTT""":::::::::::::::::::==:::::::::::::::::::::TTTTTTTT
+  TTTTTTTTTT:::::::::::::::::::==::::::::::::::::::::TTTTTTTTT
+  TTTTTTTTTTT"""...............~~..................TTTTTTTTTTT
+  TTTTTTTTTTTTT................~~...............""..TTTTTTTTTT
+  TTTTTTTTTTTTTT...............~~...........""""""".TTTTTTTTTT
+  TTTTTTTTTTTTTT...............~~...........""""""""""TTTTTTTT
+  TTTTTTTTTTTTTT...............~~..........""""""""""TTTTTTTTT
+  TTTTTTTTTTTTTTT..............~~..........."""""""""TTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTT........~~...........""""""""TTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTT.......~~...........TTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTT~~.....TTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTT~~TTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTT~~TTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTT~~TTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+exits:
+- edge: south
+  cells: [29, 30]
+  to: route-126
+buildings:
+- name: Yoda's hut (arena)
+  art: art:dagobah:yoda-s-hut
+  at: [26, 8]
+  size: [8, 6]
+  door: 4
+  to: dagobah-arena-1f
+- name: Bacta Center
+  art: art:shared:bacta-center
+  at: [40, 10]
+  size: [5, 4]
+  door: 2
+  to: dagobah-bacta-center-1f
+- name: Supply Depot
+  art: art:shared:supply-depot
+  at: [15, 10]
+  size: [4, 4]
+  door: 1
+  to: dagobah-supply-depot
+- name: Bog fisher's hut
+  art: art:dagobah:yoda-s-hut
+  at: [2, 22]
+  size: [4, 3]
+  door: 1
+  to: dagobah-house-1
+- name: Hermit's hut
+  art: art:dagobah:yoda-s-hut
+  at: [54, 22]
+  size: [4, 3]
+  door: 1
+  to: dagobah-house-2
+- name: Swamp healer's hut
+  art: art:dagobah:yoda-s-hut
+  at: [2, 32]
+  size: [4, 3]
+  door: 1
+  to: dagobah-house-3
+- name: Moss gatherer's hut
+  art: art:dagobah:yoda-s-hut
+  at: [54, 32]
+  size: [4, 3]
+  door: 1
+  to: dagobah-house-4
+- name: Old smuggler's hut
+  art: art:dagobah:yoda-s-hut
+  at: [14, 50]
+  size: [4, 3]
+  door: 1
+  to: dagobah-house-5
+- name: Herbalist's hut
+  art: art:dagobah:yoda-s-hut
+  at: [46, 49]
+  size: [4, 3]
+  door: 1
+  to: dagobah-house-6
+- name: Dragonsnake watcher's hut
+  art: art:dagobah:yoda-s-hut
+  at: [21, 52]
+  size: [4, 3]
+  door: 1
+  to: dagobah-house-7
+- name: Gnarltree keeper's hut
+  art: art:dagobah:yoda-s-hut
+  at: [54, 41]
+  size: [4, 3]
+  door: 1
+  to: dagobah-lotad-and-seedot-house
+- name: Old Jedi outpost (mystery events)
+  art: art:dagobah:yoda-s-hut
+  at: [2, 41]
+  size: [5, 4]
+  door: 2
+  to: dagobah-mystery-events-house-1f
+- name: Bog landing (ships)
+  art: art:shared:landing-pad
+  at: [36, 50]
+  size: [6, 4]
+  door: 3
+  to: dagobah-hangar
+props:
+- name: Cave of Evil mouth
+  art: art:dagobah:cave-of-evil-mouth
+  at: [3, 4]
+  size: [4, 3]
+- name: Sunken X-wing
+  art: art:dagobah:sunken-x-wing
+  at: [33, 27]
+  size: [4, 3]
+- name: Gnarltree
+  art: art:dagobah:gnarltree
+  at: [21, 14]
+  size: [2, 2]
+- name: Gnarltree
+  art: art:dagobah:gnarltree
+  at: [37, 15]
+  size: [2, 2]
+- name: Gnarltree
+  art: art:dagobah:gnarltree
+  at: [4, 28]
+  size: [2, 2]
+- name: Gnarltree
+  art: art:dagobah:gnarltree
+  at: [56, 28]
+  size: [2, 2]
+- name: Hanging moss
+  art: art:dagobah:hanging-moss
+  at: [13, 38]
+  size: [1, 1]
+- name: Hanging moss
+  art: art:dagobah:hanging-moss
+  at: [47, 38]
+  size: [1, 1]
+- name: Hanging moss
+  art: art:dagobah:hanging-moss
+  at: [25, 50]
+  size: [1, 1]
+- name: Swamp reeds
+  art: art:dagobah:swamp-reeds
+  at: [17, 23]
+  size: [2, 1]
+- name: Swamp reeds
+  art: art:dagobah:swamp-reeds
+  at: [43, 23]
+  size: [2, 1]
+- name: Swamp reeds
+  art: art:dagobah:swamp-reeds
+  at: [19, 40]
+  size: [2, 1]
 people:
-- name: Cave Of Origin Expert
-  at: [31, 18]
+- name: Yoda
+  at: [31, 16]
+  role: story
+- name: Obi-Wan (guarding the cave)
+  at: [6, 9]
+  role: story
+- name: Bog fisher
+  at: [18, 30]
   role: npc
-- name: Woman2
-  at: [47, 33]
+- name: Herbalist
+  at: [46, 44]
   role: npc
-- name: Kiri
-  at: [9, 43]
+- name: Swamp hermit
+  at: [12, 26]
   role: npc
-- name: Ninja Boy
-  at: [51, 14]
-  role: npc
-- name: Boy1
-  at: [43, 26]
-  role: npc
-- name: Man
-  at: [26, 4]
-  role: npc
-- name: Steven
-  at: [20, 36]
-  role: npc
-- name: Woman1
-  at: [49, 34]
-  role: npc
-- name: '0x0'
-  at: [28, 44]
-  role: npc
-- name: '0x0'
-  at: [34, 44]
-  role: npc
-- name: '0x0'
-  at: [31, 41]
-  role: npc
-- name: Maniac
-  at: [17, 44]
-  role: npc
-- name: Girl
-  at: [14, 42]
-  role: npc
-- name: Black Belt
-  at: [17, 40]
-  role: npc
-- name: Boy2
-  at: [19, 37]
-  role: npc
-- name: Maxie
-  at: [29, 33]
-  role: npc
-- name: Archie
-  at: [31, 33]
-  role: npc
-- name: Wallace
-  at: [31, 18]
+- name: Dagobah pilgrim
+  at: [38, 48]
+  role: trainer
+- name: Smuggler stranded here
+  at: [41, 55]
   role: npc
 signs:
-- name: Sign
-  at: [33, 34]
-- name: Sign
-  at: [19, 29]
-- name: Sign
-  at: [44, 31]
-- name: Sign
-  at: [45, 31]
-- name: Sign
-  at: [18, 29]
-- name: Sign
-  at: [41, 37]
+- name: Hollow sign
+  at: [12, 17]
+- name: Arena sign
+  at: [25, 15]
 warps:
-- name: Door
-  at: [43, 31]
-  to: dagobah-bacta-center-1f
-- name: Door
-  at: [17, 29]
-  to: dagobah-supply-depot
-- name: Door
-  at: [31, 32]
-  to: dagobah-arena-1f
-- name: Door
-  at: [31, 16]
+- name: Cave of Evil
+  at: [5, 7]
   to: cave-of-evil-entrance
-- name: Door
-  at: [9, 6]
-  to: dagobah-house-1
-- name: Door
-  at: [45, 6]
-  to: dagobah-house-2
-- name: Door
-  at: [9, 17]
-  to: dagobah-house-3
-- name: Door
-  at: [44, 17]
-  to: dagobah-house-4
-- name: Door
-  at: [9, 26]
-  to: dagobah-house-5
-- name: Door
-  at: [53, 28]
-  to: dagobah-house-6
-- name: Door
-  at: [8, 35]
-  to: dagobah-house-7
-- name: Door
-  at: [48, 25]
-  to: dagobah-lotad-and-seedot-house
-- name: Door
-  at: [51, 36]
-  to: dagobah-mystery-events-house-1f
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['Same size as Sootopolis (60x60); the crater wall is now swamp trees, the crater lake the bog lagoon.', Vanilla's 7 houses become hermit huts; dagobah-house-1..7
+    interiors keep their ids., 'New interior: dagobah-hangar. New exit: the south surf channel to Route 126 (vanilla had none).', 'Act 6: storms and the titans''
+    clash play out over the lagoon; Obi-Wan stands at the cave until then.']

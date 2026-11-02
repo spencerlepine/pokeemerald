@@ -1,10 +1,10 @@
 id: underwater-sealed-chamber
 name: UNDERWATER SEALED CHAMBER
-planet: DAGOBAH
+planet: KAMINO
 kind: dungeon
 replaces: Underwater_SealedChamber
-status: TODO
-story: ''
+status: BLOCKOUT
+story: Deep water off Route 134 with the Sealed Vault's sunken door.
 grid: |
   ######################
   #######.##############
@@ -65,4 +65,4 @@ warps:
 - name: Door
   at: [7, 1]
   to: underwater-route-134
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

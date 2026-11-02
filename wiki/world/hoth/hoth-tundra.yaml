@@ -1,0 +1,122 @@
+id: hoth-tundra
+name: HOTH TUNDRA
+planet: HOTH
+kind: route
+replaces: new
+status: BLOCKOUT
+story: 'New area: Hoth''s only overworld. A survey shuttle lands on the tundra; a Rebel survey team is scouting the planet for a future base. The trail runs north
+  past the tauntaun shelter to the Wampa Cave; a frozen lake (Surf) and deep snow (wild encounters) fill the sides.'
+pos: [0, 0]
+grid: |
+  ################################################
+  ################################################
+  ################################################
+  #################......::#######################
+  ##############.........::.#######.##############
+  ###########............::...####################
+  ##########.............::...""".......##########
+  #########..............::...""""""""..##########
+  ########...............::""""""""""""..#########
+  ########.....""........::"""""""""""""..########
+  ######"""""""""".......::."""""""""""..#########
+  ######"""""""""""""....::.."""""""".....########
+  ######"""""""""""""....::...."""........########
+  ######.""""""""""""....::................#######
+  #####..""""""""""""....::..................#####
+  ###..""""""""""""""....::...................####
+  ##....""""""""""""""...::....................###
+  ##....."""""""""""""...:::::::::.............###
+  ##.....""""""".........::.....................##
+  ##.....................::.....................##
+  ###....................::.....................##
+  ####...................::.......~~~~~~~~~.....##
+  ####...................::.....~~~~~~~~~~~~~...##
+  ####...................::.....~~~~~~~~~~~~....##
+  ######..:::::::::::::::::.....~~~~~~~~~~~~~...##
+  ######.................::.....~~~~~~~~~~~~~~..##
+  ######.................::....~~~~~~~~~~~~~~...##
+  ######....""...........::....~~~~~~~~~~~~~~...##
+  ######...."""""""".....::.......~~~~~~~~~~~..###
+  ######.""""""""""".....::........~~~~~~.~~.#####
+  #######""""""""""".....::..........~~~...#######
+  ########""""""""""""...::...............########
+  ########""""""""""""...................#########
+  #########"""""""""....................##.#######
+  #########"""""""""....................##########
+  ################.....................###########
+  #################........###.........###########
+  ##################...###########...#############
+  ################################################
+  ################################################
+exits: []
+buildings:
+- name: Survey shuttle pad (ships)
+  art: art:shared:landing-pad
+  at: [21, 32]
+  size: [6, 4]
+  door: 3
+  to: hoth-hangar
+- name: Rebel survey outpost
+  art: art:hoth:echo-base-hangar-door
+  at: [4, 19]
+  size: [8, 5]
+  door: 4
+  to: hoth-survey-outpost
+- name: Tauntaun shelter
+  art: art:hoth:tauntaun-shelter
+  at: [29, 13]
+  size: [5, 4]
+  door: 2
+  to: hoth-tauntaun-shelter
+props:
+- name: Snowspeeder (parked)
+  art: art:hoth:snowspeeder
+  at: [16, 27]
+  size: [3, 2]
+- name: Ice stalagmites
+  art: art:hoth:ice-stalagmites
+  at: [9, 7]
+  size: [1, 1]
+- name: Ice stalagmites
+  art: art:hoth:ice-stalagmites
+  at: [39, 9]
+  size: [1, 1]
+- name: Ice stalagmites
+  art: art:hoth:ice-stalagmites
+  at: [40, 33]
+  size: [1, 1]
+- name: Ice stalagmites
+  art: art:hoth:ice-stalagmites
+  at: [33, 4]
+  size: [1, 1]
+people:
+- name: Rebel surveyor
+  at: [13, 24]
+  role: story
+- name: Tauntaun handler
+  at: [34, 17]
+  role: npc
+- name: Ice trekker
+  at: [12, 13]
+  role: trainer
+- name: Ice trekker
+  at: [31, 9]
+  role: trainer
+- name: Ice trekker
+  at: [13, 31]
+  role: trainer
+- name: Lost scout
+  at: [41, 14]
+  role: npc
+signs:
+- name: Outpost sign
+  at: [13, 23]
+- name: Cave warning sign
+  at: [25, 5]
+warps:
+- name: Wampa Cave mouth
+  at: [23, 3]
+  to: wampa-cave-low-tide-entrance-room
+todo: ['New area (replaces: new): vanilla Shoal Cave was reached from Route 125, which is now Yavin 4.', 'New interiors: hoth-survey-outpost, hoth-tauntaun-shelter,
+    hoth-hangar.', 'Vanilla''s tides become meltwater: the cave mouth leads to the low or high water entrance room by time of day.', Echo Base does not exist yet
+    in 2 BBY; the outpost uses the Echo Base hangar-door art as a survey camp.]

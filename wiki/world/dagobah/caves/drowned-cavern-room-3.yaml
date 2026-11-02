@@ -3,8 +3,8 @@ name: DROWNED CAVERN ROOM 3
 planet: DAGOBAH
 kind: dungeon
 replaces: SeafloorCavern_Room3
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Drowned Cavern: flooded caves under Route 128 where Jabba wakes SANDO (vanilla Seafloor Cavern).'
 grid: |
   ################
   ########.#######
@@ -27,27 +27,27 @@ exits: []
 buildings: []
 props: []
 people:
-- name: Event Script_Strength Boulder
+- name: Event object
   at: [13, 10]
-  role: npc
-- name: Event Script_Strength Boulder
+  role: object
+- name: Event object
   at: [11, 10]
-  role: npc
-- name: Event Script_Strength Boulder
+  role: object
+- name: Event object
   at: [12, 9]
-  role: npc
-- name: Event Script_Strength Boulder
+  role: object
+- name: Event object
   at: [12, 7]
-  role: npc
-- name: Event Script_Strength Boulder
+  role: object
+- name: Event object
   at: [11, 8]
-  role: npc
-- name: Event Script_Strength Boulder
+  role: object
+- name: Event object
   at: [12, 11]
-  role: npc
-- name: Event Script_Strength Boulder
+  role: object
+- name: Event object
   at: [13, 8]
-  role: npc
+  role: object
 - name: Trainer Shelly
   at: [9, 5]
   role: trainer
@@ -65,4 +65,4 @@ warps:
 - name: Door
   at: [4, 15]
   to: drowned-cavern-room-6
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

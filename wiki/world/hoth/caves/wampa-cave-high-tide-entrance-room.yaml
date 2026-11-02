@@ -3,8 +3,8 @@ name: WAMPA CAVE HIGH TIDE ENTRANCE ROOM
 planet: HOTH
 kind: dungeon
 replaces: ShoalCave_HighTideEntranceRoom
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Wampa Cave entrance: ice tunnels with meltwater pools that rise and fall.'
 grid: |
   ###################################
   ###################################
@@ -46,5 +46,8 @@ buildings: []
 props: []
 people: []
 signs: []
-warps: []
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+warps:
+- name: Cave mouth
+  at: [20, 30]
+  to: hoth-tundra
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', The mouth now opens onto the Hoth tundra (was Route 125).]
