@@ -1,0 +1,98 @@
+# Mos Eisley spaceport (Tatooine), hot-swap of MUS_SLATEPORT. ARRANGE of "Inner City" (wiki
+# soundtrack:new-hope:08, analyzed 0-90 s: 108 bpm, A minor, creeping chromatic harmony with Bb7 and F against
+# Am7). Kept: the tempo (108), A minor, the cue's creeping chromatic low line and its Bb7/F7 side-steps (the
+# shady part), now swung, with a reedy 12.5% square lead and a jazzy alien-band bridge (organ off-beats, flute
+# with blue notes, rim and hats), so the street swaggers the way the cantina next door does.
+#   intro  2 bars  walking bass and rim
+#   a      8 bars  the creeping theme, reedy square over pizzicato and walking wave bass
+#   b      8 bars  the band: flute, organ off-beats, a ii-V turnaround and the Bb7 tritone step to E7
+#   a2     8 bars  the theme again with bell and a second square
+#   c      8 bars  D minor bridge and the Bb7-E7 turn home
+# 32-bar loop, 71 s (vanilla 82.3 s); vanilla slateport voicegroup. Swung eighths.
+# Brief (sw_subject): Mos Eisley spaceport: shady and swaggering, jazzy alien-band colour, ships coming and going.
+name: mos-eisley
+replaces: MUS_SLATEPORT
+form: LOOP
+voicegroup: slateport             # kit 0, tubular bell 14, organ 17, pizzicato 45, flute 73, squares 6 (12.5%), 83 (square1 50%), wave 82, noise
+master_volume: 80
+tempo: 108
+steps_per_beat: 4
+swing: 0.33
+swing_unit: 2
+time_signature: [4, 4]
+seed: 13
+
+parts:
+  reed:   {program: 6,  channel: 0, volume: 66,  pan: 8,   range: [E4, Ab5], gate: 0.85, mono: true}
+  flute:  {program: 73, channel: 1, volume: 92,  pan: 14,  range: [G4, C6], gate: 0.85, humanize: {vel: 6}}
+  organ:  {program: 17, channel: 2, volume: 58,  pan: -20, octave: 4, range: [C4, D5], gate: 0.5}
+  pizz:   {program: 45, channel: 3, volume: 78,  pan: -8,  octave: 3, range: [E3, E4], gate: 0.6}
+  bass:   {program: 82, channel: 4, volume: 96,  pan: 0,   octave: 2, range: [E2, A3], gate: 0.8, role: bass}
+  bell:   {program: 14, channel: 5, volume: 58,  pan: 28,  range: [E5, A5], gate: 1.0}
+  sq2:    {program: 83, channel: 6, volume: 36,  pan: -32, octave: 4, range: [C4, C5], gate: 0.7, mono: true}
+  kit:    {program: 0,  channel: 7, volume: 74,  pan: -4, role: drums, kit: {kick: 36, sn: 38, rim: 39, ohh: 46}}
+  hat:    {program: 127, channel: 8, volume: 26, pan: 18, role: drums, kit: {t: A6}}
+
+progressions:
+  intro: "Am | E7"
+  a:     "Am | Am | Dm/A | Am | F7 | E7 | Am | E7"
+  b:     "Am:8 D7:8 | Am:8 D7:8 | Am:8 D7:8 | E7 | Dm:8 G7:8 | C:8 F7:8 | Bb7 | E7"
+  c:     "Dm | Dm | Am | Am | Bb7 | Bb7 | E7 | E7"
+
+phrases:
+  theme: |
+    E4:3 A4:1 C5:4 B4:2 A4:2 G#4:4 | A4:6 r:2 E4:2 F4:2 F#4:2 G4:2 |
+    A4:3 D5:1 F5:4 E5:2 D5:2 C5:4 | E5:8 r:4 D#5:2 E5:2 |
+    Eb5:4 C5:2 A4:2 Eb5:4 D5:4 | D5:3 B4:1 G#4:4 D5:4 B4:4 |
+    C5:2 B4:2 A4:2 E4:2 A4:8 | r:4 G#4:2 B4:2 D5:2 E5:2 F5:4
+  band: |
+    E5:2 G5:2 A5:2 E5:2 F#5:4 C5:4 | E5:2 G5:2 A5:2 C6:2 A5:4 F#5:4 |
+    E5:2 G5:2 A5:2 E5:2 F#5:2 A5:2 C6:2 A5:2 | G#5:4 B5:4 D5:4 E5:4 |
+    F5:4 D5:2 A4:2 G5:4 F5:2 B4:2 | E5:4 C5:2 G4:2 Eb5:4 C5:2 A4:2 |
+    D5:2 F5:2 Ab5:4 F5:2 D5:2 Bb4:4 | G#4:4 B4:4 D5:4 E5:4
+  bridge: |
+    D4:4 F4:4 A4:4 C#5:4 | D5:8 C5:4 A4:4 | C5:4 A4:4 E4:4 G#4:4 | A4:12 r:4 |
+    Bb4:4 D5:4 F5:4 Ab5:4 | G5:8 F5:4 D5:4 | E5:4 D5:4 B4:4 G#4:4 | B4:8 D5:4 E5:4
+  creep: "^1:4 ^1:2 ^2:2 ^3:4 ^2:4"
+  walk: "^1:4 ^2:4 ^3:4 ^2:4"
+  walk_b: "^1:4 ^3:4 ^1:4 ^3:4"
+  offbeat: "r:2 ^3:2 r:2 ^2:2 r:2 ^3:2 r:2 ^2:2"
+  stab: "r:4 ^3:2 r:10"
+  bells: "E5:16 | r:16 | r:16 | r:8 E5:8 | r:16 | r:16 | A5:16 | r:16"
+  sq_a2: "^2:8 ^3:8"
+
+grooves:
+  sneak:
+    kick: "x.........x....."
+    rim:  "....x.......x..."
+  swingkit:
+    kick: "x.......x.......|x.......x.....x."
+    sn:   "....x.......x...|....x.......x..."
+    ohh:  "................|..............x."
+  hats: {t: "x...x.x.x...x.x."}
+  intro_kit: {kick: "x.........x.....|x.........x.....", rim: "....x.......x...|....x...x...x.x."}
+
+sections:
+  intro:
+    bars: 2
+    chords: intro
+    parts: {bass: walk, kit: intro_kit, hat: hats, pizz: creep, reed: "r:16 | r:8 G#4:2 B4:2 D5:2 F5:2"}
+  a:
+    bars: 8
+    chords: a
+    parts: {reed: theme, pizz: creep, bass: walk, kit: sneak, hat: hats, organ: stab}
+  b:
+    bars: 8
+    chords: b
+    parts: {flute: band, organ: offbeat, bass: walk_b, kit: swingkit, hat: hats}
+  a2:
+    bars: 8
+    chords: a
+    parts: {reed: theme, sq2: sq_a2, pizz: creep, bass: walk, kit: sneak, hat: hats, bell: bells}
+  c:
+    bars: 8
+    chords: c
+    parts: {reed: bridge, organ: offbeat, pizz: creep, bass: walk, kit: swingkit, hat: hats}
+
+arrangement: [intro, a, b, a2, c]
+loop_start: a
