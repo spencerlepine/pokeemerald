@@ -50,7 +50,7 @@ def faces(grid):
     return out
 
 
-def draw(d, grid, pal, grey=False):
+def draw(d, grid, pal, grey=False, planet=""):
     """Draw a cave in relief on the game grid. Returns the `T` cells to model as stalagmites."""
     H, W = len(grid), len(grid[0])
     col = colours(pal, grey)
@@ -65,7 +65,7 @@ def draw(d, grid, pal, grey=False):
             box = [x0, y0, x0 + C - 1, y0 + C - 1]
             ch = grid[y][x]
             if not rock(x, y):
-                d.rectangle(box, fill=col["water"] if ch == "~" else col["floor"])
+                d.rectangle(box, fill=col["floor"])
                 r = _h(x, y)
                 if ch != "~":
                     for k in range(2):
@@ -102,6 +102,8 @@ def draw(d, grid, pal, grey=False):
                 d.rectangle([x0 + C - 3, y0, x0 + C - 1, y0 + C - 1], fill=col["rim"])
             if not rock(x - 1, y):
                 d.rectangle([x0, y0, x0 + 2, y0 + C - 1], fill=col["rim"])
+    from . import surface
+    surface.draw(d, grid, dict(pal, ground=col["floor"]), planet, grey)
     return [(x, y) for y in range(H) for x in range(W) if grid[y][x] == "T"]
 
 

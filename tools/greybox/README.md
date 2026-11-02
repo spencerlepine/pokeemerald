@@ -2,8 +2,9 @@
 
 Status: **READY** for buildings and structures (the owner approved the kit categories on 2026-11-02). Terrain
 in relief works. Interiors: `room` draws the room shell and the `interiors` kit has 19 props (owner approved the first set).
-Dungeons: `terrain` draws caves and station decks in cave mode (all 119 render). Sea, raised walkways, floating
-platforms, lava, swamp and ships have no model yet; they stay `pending-mockup` in the wiki until a model exists.
+Dungeons: `terrain` draws caves and station decks in cave mode (all 119 render). Surfaces: `~` is water, sea, swamp,
+lava, ice, cloud or void by planet. Raised walkways, floating platforms and ships have no model yet; they stay
+`pending-mockup` in the wiki until a model exists.
 
 Every piece is a small 3D model of convex solids (boxes, oval prisms, domes, cones, gables, cuts), ray-cast one
 pixel at a time in the game's top-down view and shaded, so round roofs come out as ovals, only south faces show,
@@ -68,6 +69,9 @@ python3 -m greybox room mos-pelgo-lab [--grey]            # one interior as a ro
 - `greybox/room.py`: an interior as a room. The `#` cells joined to the top edge are walls (two face cells above
   the floor, ceiling above that, a shadow on the floor below); every other `#` blob is furniture of unknown shape,
   drawn as a low slab (`r-block`). Props listed on the area with an `art` id use their kit model.
+- `greybox/surface.py`: what a `~` cell is per planet (`SURFACE`: lava on Mustafar, cloud on Bespin, ice on Hoth
+  and Ilum, swamp on Dagobah, sea on Kamino, void in the asteroid field; a plain water body of 200+ cells is sea),
+  its drop below the bank (`DROP`) and its marks. Used by relief and cave mode.
 - `greybox/cave.py`: cave mode, picked for every `dungeon` area with rock in it. Rock that touches no floor is the
   dark mass; rock above a floor cell is a wall two cells tall with a lit rim and a shadow on the floor; chambers
   get a rim on every side; the floor is the planet's ground darkened; `T` is a stalagmite (shard, fungus or

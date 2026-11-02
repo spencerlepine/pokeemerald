@@ -10,7 +10,7 @@ stays the game grid, nothing is shifted):
   - where rock meets ground on its east or west side, the top gets a rock lip, and the ground east of
     rock gets the rock's shadow (the light comes from the south-west).
   - ledges are one level: a lit lip on the drop side.
-  - water sits a little below its banks.
+  - `~` is the planet's surface (water, sea, swamp, lava, ice, cloud, void), drawn by surface.py.
   - nature cells become kit models: pine for forest planets, boulders for rock, shards for ice, fungus.
 `python3 -m greybox terrain <area-id>` draws areas this way. `heights(grid)` returns the derived levels.
 """
@@ -76,7 +76,7 @@ def heights(grid):
     return out
 
 
-def draw(d, grid, pal, grey=False):
+def draw(d, grid, pal, grey=False, planet=""):
     """Draw the terrain of an area in relief, on the game grid. Returns the nature cells to model."""
     from .draw import terrain as flat
     H, W = len(grid), len(grid[0])
@@ -101,9 +101,6 @@ def draw(d, grid, pal, grey=False):
                 # shadow on open ground east of a rock mass
                 if x > 0 and rock(x - 1, y) and grid[y][x] != "~":
                     d.rectangle([x0, y0, x0 + 8, y0 + C - 1], fill=(0, 0, 0, 45))
-                # water sits below its banks: a bank face on its north edge
-                if grid[y][x] == "~" and y > 0 and grid[y - 1][x] != "~":
-                    d.rectangle([x0, y0, x0 + C - 1, y0 + 2], fill=shade(pal["ground"], -0.3))
                 continue
             if c[0] == "top":
                 d.rectangle([x0, y0, x0 + C - 1, y0 + C - 1], fill=rock_top)
@@ -130,6 +127,8 @@ def draw(d, grid, pal, grey=False):
                 if 0 <= nx < W and not rock(nx, y):
                     d.rectangle([ex, y0, ex + 2, y0 + C - 1], fill=cliff if c[0] == "top" else shade(cliff, -0.2))
                     d.line([ex + (2 if ex > x0 else 0), y0, ex + (2 if ex > x0 else 0), y0 + C - 1], fill=shade(cliff, -0.45))
+    from . import surface
+    surface.draw(d, grid, pal, planet, grey)
     return [(x, y) for y in range(H) for x in range(W) if grid[y][x] == "T"]
 
 

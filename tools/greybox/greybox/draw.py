@@ -364,13 +364,13 @@ def area(doc, styles, labels=True, grey=False, relief=False):
         _cave.station(d, grid, styles, planet, grey)
     elif relief and doc.get("kind") == "dungeon" and sum(r.count("#") for r in grid) >= 0.1 * W * H:
         from . import cave as _cave, relief as _relief
-        cells = _cave.draw(d, grid, pal, grey)
+        cells = _cave.draw(d, grid, pal, grey, planet)
         # in a cave, `T` is a stalagmite: ice shards on ice planets, fungus on fungus planets, else a boulder
         kind = nature_kind if nature_kind in ("ice", "fungus") else "rock"
         nat = [("nature", n) for n in _relief.nature_pieces(cells, kind)]
     elif relief:
         from . import relief as _relief
-        cells = _relief.draw(d, grid, pal, grey)
+        cells = _relief.draw(d, grid, pal, grey, planet)
         nat = [("nature", n) for n in _relief.nature_pieces(cells, nature_kind)]
         if not nat:      # kinds without a model (clouds) keep their flat shape
             for x, y in cells:
