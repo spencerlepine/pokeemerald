@@ -1,0 +1,84 @@
+# Ilum (MUS_EVER_GRANDE, hot-swap; also the link rooms). ARRANGE of "Yoda and the Younglings" (wiki
+# soundtrack:attack-clones:04, analyzed 0-90 s: 86 bpm, D major, long Asus4/Esus4 pedals, then a turn to G minor
+# and D minor in bars 17-24). Kept: the tempo (90, the cue's 86 made frame-exact), D major over sustained suspended harmony, the cue's lyrical
+# Yoda-theme-style melody (rising fourth, stepwise turns, long held notes), the celesta-like shimmer (square
+# arpeggios and tubular bell here), and its modal G minor turn before the return.
+#   intro  2 bars  bell and organ on D
+#   a      8 bars  the theme, flute, organ, square shimmer
+#   b      8 bars  the theme's second half, majestic on trumpet with crash and snare swells
+#   c      8 bars  the cue's G minor turn: flute and bell, ending on A for the return
+# 24-bar loop, 67 s (vanilla 68 s); vanilla ever_grande voicegroup.
+# Brief (sw_subject): Ilum, the frozen crystal world and last destination (also the link rooms): majestic and cold.
+name: ilum
+replaces: MUS_EVER_GRANDE
+form: LOOP
+voicegroup: ever_grande           # kit 0, tubular bell 14, organ 17, trumpet 56, flute 73, squares 80/81, wave 83
+master_volume: 86
+tempo: 90                         # the cue's 86, nudged to a frame-exact loop
+steps_per_beat: 4
+time_signature: [4, 4]
+seed: 4
+
+parts:
+  flute:   {program: 73, channel: 0, volume: 98,  pan: 8,   range: [A4, B5], gate: 0.97, lfo_speed: 28, lfo_delay: 24, mod: 5, humanize: {vel: 4}}
+  trumpet: {program: 56, channel: 1, volume: 100, pan: -6,  range: [A3, B4], gate: 0.94, transpose: -12}
+  organ:   {program: 17, channel: 2, volume: 62,  pan: -22, octave: 4, range: [A3, A4], gate: 1.0}
+  bell:    {program: 14, channel: 3, volume: 70,  pan: 28,  range: [D4, D6], gate: 1.0}
+  bass:    {program: 83, channel: 4, volume: 100, pan: 0,   octave: 2, range: [D2, D3], gate: 0.9, role: bass}
+  arp:     {program: 80, channel: 5, volume: 42,  pan: 32,  octave: 5, range: [A4, A6], gate: 0.5, mono: true}
+  sq2:     {program: 81, channel: 6, volume: 34,  pan: -34, octave: 4, range: [D4, D5], gate: 0.95, mono: true}
+  kit:     {program: 0,  channel: 7, volume: 70,  pan: 16, role: drums, kit: {crash: 57, sn: 40}}
+
+progressions:
+  intro: "D | Asus4"
+  a:     "D | D | A | A | A | A | D | D"
+  b:     "G | D | Em | A | G | D/A | A | D"
+  c:     "Gm | Gm | Dm | D | Gm | Gm | Asus4 | A"
+
+phrases:
+  theme_a: |
+    D5:12 E5:4 | F#5:8 G5:4 F#5:4 | E5:16 | r:12 A4:4 |
+    E5:12 F#5:4 | G5:8 A5:4 G5:4 | F#5:16 | r:12 A4:4
+  theme_b: |
+    B5:12 A5:4 | A5:8 G5:4 F#5:4 | G5:8 F#5:4 E5:4 | E5:12 A4:4 |
+    B5:12 A5:4 | F#5:8 E5:4 D5:4 | E5:12 C#5:4 | D5:12 r:4
+  theme_c: |
+    D5:8 Bb4:4 G4:4 | A4:8 Bb4:4 C5:4 | D5:12 F5:4 | F#5:16 |
+    G5:8 D5:4 Bb4:4 | C5:8 D5:4 Bb4:4 | A4:8 C#5:4 E5:4 | G5:8 E5:4 A4:4
+  pad: "^3:16"
+  pad_root: "^1:16"
+  shimmer: "^1:2 ^2:2 ^3:2 ^4:2 ^3:2 ^2:2 ^1:2 ^3:2"
+  shimmer_slow: "^1:4 ^2:4 ^3:4 ^2:4"
+  third: "^2:16"
+  bass: "^1:12 ^1:4"
+  bass_walk: "^1:8 ^5-:8"
+  bell_a: "D5:16 | r:16 | E5:16 | r:16 | A4:16 | r:16 | D5:16 | r:16"
+  bell_c: "r:8 G5:8 | r:16 | r:8 F5:8 | r:8 F#5:8 | r:8 D5:8 | r:16 | E5:16 | A4:16"
+  bell_intro: "D5:16 | A4:16"
+
+grooves:
+  swell:
+    crash: "X...............|................|................|................|X...............|................|................|................"
+    sn:    "................|................|................|........o.o.rrRR|................|................|................|........o.o.rrRR"
+
+sections:
+  intro:
+    bars: 2
+    chords: intro
+    parts: {bell: bell_intro, organ: pad, bass: bass, arp: shimmer, sq2: third, flute: "r:16 | r:8 E5:4 A4:4"}
+  a:
+    bars: 8
+    chords: a
+    parts: {flute: theme_a, organ: pad, arp: shimmer, bass: bass, bell: bell_a}
+  b:
+    bars: 8
+    chords: b
+    gain: {organ: 6}
+    parts: {trumpet: theme_b, organ: pad, sq2: third, arp: shimmer_slow, bass: bass_walk, kit: swell}
+  c:
+    bars: 8
+    chords: c
+    parts: {flute: theme_c, organ: pad_root, arp: shimmer, bass: bass, bell: bell_c}
+
+arrangement: [intro, a, b, c]
+loop_start: a
