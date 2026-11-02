@@ -1,0 +1,84 @@
+# Hyperspace trips between planets (Falcon or shuttle): net-new MUS_HYPERSPACE (wiki net:mus-hyperspace).
+# ARRANGE of "Hyperspace" (ref_tracks soundtrack:empire-strikes-back:08): the cue's last jump, where the
+# hyperdrive finally kicks in and the orchestra bursts into the main theme and ends in C (analyze_reference: 92
+# bpm with a 183 double-time pulse, the Bb7 / Gm / Am / F brass swells, the closing turn into C).
+# Kept: the rush (a 2-bar string and square run up with a timpani roll and crash, played once), then a 16-bar
+# loop: the main theme on trumpet over brass chords and running square triplets (8 bars), then a soaring
+# strain on the cue's Bb-Gm-Am-F swells, horn and strings, that turns through Ab to G and the theme's own
+# triplet pickup back to the top. Net-new: route119 voicegroup for its trumpet, horn, strings and timpani (the
+# placeholder MUS_SAILING's voicegroup has no brass). Placeholder length 32.5 s; this loop 41.7 s.
+# Brief (sw_subject): rush into hyperspace, then a soaring travel theme.
+name: hyperspace
+constant: MUS_HYPERSPACE              # wiki sw_constant (net:mus-hyperspace)
+form: LOOP
+voicegroup: route119                  # trumpet 56, horn 60, strings 48, timpani 47, kit 0, squares, wave 84
+master_volume: 90
+tempo: 92
+steps_per_beat: 12                    # the theme's triplets and the 16th runs on one grid
+time_signature: [4, 4]
+seed: 8
+
+parts:
+  trumpet: {program: 56, channel: 0, volume: 106, pan: 6,   range: [G4, C6], gate: 0.92, humanize: {vel: 3}}
+  horn:    {program: 60, channel: 1, volume: 94,  pan: -10, octave: 4, range: [G3, E5], gate: 0.95}
+  strings: {program: 48, channel: 2, volume: 72,  pan: -24, octave: 4, range: [G3, C6], gate: 0.95}
+  bass:    {program: 84, channel: 3, volume: 106, pan: 0,   octave: 2, range: [C2, C3], gate: 0.8, role: bass}
+  timpani: {program: 47, channel: 4, volume: 96,  pan: 14,  range: [G1, C3], gate: 1.0}
+  kit:     {program: 0,  channel: 5, volume: 74,  pan: 18,  role: drums, kit: {crash: 57, sn: 40}}
+  trip:    {program: 81, channel: 6, volume: 40,  pan: 30,  octave: 4, range: [C4, C6], gate: 0.6, mono: true}
+  stab:    {program: 80, channel: 7, volume: 36,  pan: -30, octave: 4, range: [C4, C6], gate: 0.5, mono: true}
+
+progressions:
+  rush:  "G7sus4 | G7"
+  theme: "C | Dm7:12 C:36 | Dm7:12 C:36 | F:12 G:36 | C | Dm7:12 C:36 | Dm7:12 C:36 | F:12 G:36"
+  soar:  "Bb | Gm | Am | F | Bb | Gm | Ab | G"
+
+phrases:
+  theme: |
+    C5:24 G5:24 | F5:4 E5:4 D5:4 C6:24 G5:12 | F5:4 E5:4 D5:4 C6:24 G5:12 | F5:4 E5:4 F5:4 D5:24 G4:4 G4:4 G4:4 |
+    C5:24 G5:24 | F5:4 E5:4 D5:4 C6:24 G5:12 | F5:4 E5:4 D5:4 C6:24 G5:12 | F5:4 E5:4 F5:4 D5:36
+  soar: |
+    D5:24 F5:24 | Bb5:36 A5:12 | G5:24 E5:24 | F5:36 C5:12 |
+    D5:24 F5:12 Bb5:12 | D6:36 C6:12 | Ab5:24 C6:24 | B5:36 G4:4 G4:4 G4:4
+  horn_theme: |
+    E4:24 E4:24 | F4:12 E4:36 | F4:12 E4:36 | A4:12 B4:36 |
+    E4:24 G4:24 | F4:12 G4:36 | F4:12 G4:36 | A4:12 B4:36
+  rush_str: |
+    G3:3 A3:3 B3:3 C4:3 D4:3 E4:3 F4:3 G4:3 A4:3 B4:3 C5:3 D5:3 E5:3 F5:3 G5:3 A5:3 |
+    B5:24 ~:12 G4:4 G4:4 G4:4
+  chords8: "^1:6 ^2:6 ^3:6 ^2:6 ^1:6 ^2:6 ^3:6 ^2:6"
+  pad: "^3:24 ^2:24"
+  triplets: "^1:4 ^2:4 ^3:4 ^1+:4 ^3:4 ^2:4 ^1:4 ^2:4 ^3:4 ^1+:4 ^3:4 ^2:4"
+  stabs: "^3+:6 r:18 ^3+:6 r:6 ^3+:6 r:6"
+  bass_t: "^1:12 ^1:6 ^1:6 ^5-:12 ^1:12"
+  timp_t: |
+    C2:12 r:36 | r:48 | r:48 | r:24 G1:3 G1:3 G1:3 G1:3 G1:12 | C2:12 r:36 | r:48 | r:48 | G1:12 r:36
+  timp_s: |
+    Bb1:12 r:36 | r:48 | r:48 | r:48 | Bb1:12 r:36 | r:48 | r:48 | G1:3 G1:3 G1:3 G1:3 G1:3 G1:3 G1:3 G1:3 G1:12 r:12
+
+grooves:
+  rush:
+    sn:    "................................................|rrrrrrrrrrrrrrrrrrrrrrrrRRRRRRRRRRRRRRRRRRRRRRRR"
+  crash8:
+    crash: "X...............................................|................................................|................................................|................................................|X...............................................|................................................|................................................|................................................"
+  push:
+    sn:    "....................................x.....x.....|"
+
+sections:
+  rush:
+    bars: 2
+    chords: rush
+    parts: {strings: rush_str, timpani: "G1:3 G1:3 G1:3 G1:3 G1:3 G1:3 G1:3 G1:3 G1:3 G1:3 G1:3 G1:3 G1:3 G1:3 G1:3 G1:3 | G1:3 G1:3 G1:3 G1:3 G1:3 G1:3 G1:3 G1:3 G1:3 G1:3 G1:3 G1:3 G1:3 G1:3 G1:3 G1:3",
+            kit: rush, trip: "G3:3 B3:3 D4:3 F4:3 G4:3 B4:3 D5:3 F5:3 G5:3 r:21 | r:48", bass: "G1:48 | G1:48", horn: "r:48 | B4:36 D5:12"}
+  theme:
+    bars: 8
+    chords: theme
+    parts: {trumpet: theme, horn: horn_theme, strings: chords8, bass: bass_t, timpani: timp_t, kit: crash8, trip: triplets, stab: stabs}
+  soar:
+    bars: 8
+    chords: soar
+    gain: {strings: 6}
+    parts: {horn: soar, strings: pad, bass: bass_t, timpani: timp_s, kit: push, trip: triplets, stab: stabs}
+
+arrangement: [rush, theme, soar]
+loop_start: theme
