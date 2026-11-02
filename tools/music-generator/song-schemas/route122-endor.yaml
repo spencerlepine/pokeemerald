@@ -1,0 +1,85 @@
+# Endor road (Route 123): net-new per-planet split of MUS_ROUTE122. SCRATCH (wiki net:mus-route122-endor, no
+# film cue): written from the brief. The Jedha original is a mystic pilgrim road with a chant-like line; this is
+# its forest cousin: E dorian at the placeholder's 124 bpm, a modal flute chant answered by horn, a hollow
+# square drone, wave bass and Ewok-style log drums (toms and congas) instead of a kit backbeat.
+# Tech from the placeholder MUS_ROUTE122 (route122 voicegroup, LOOP, ~50 s): loop 24 bars, 46.5 s.
+# Brief (sw_subject): Endor version of Route 122, same mystic-road mood family as the Jedha original.
+name: route122-endor
+constant: MUS_ROUTE122_ENDOR          # wiki sw_constant (net:mus-route122-endor)
+form: LOOP
+voicegroup: route122                  # flute 73, horn 60, strings 48, tuba 58, timpani 47, kit 0, squares, wave
+master_volume: 84
+tempo: 124
+steps_per_beat: 4
+time_signature: [4, 4]
+seed: 122
+
+parts:
+  flute:   {program: 73, channel: 0, volume: 98,  pan: 10,  range: [E4, E6], gate: 0.94, lfo_speed: 30, lfo_delay: 20, mod: 4, humanize: {vel: 6}}
+  horn:    {program: 60, channel: 1, volume: 92,  pan: -10, range: [B3, E5], gate: 0.95}
+  strings: {program: 48, channel: 2, volume: 60,  pan: -24, octave: 4, range: [G3, B4], gate: 1.0}
+  bass:    {program: 81, channel: 3, volume: 104, pan: 0,   octave: 2, range: [E2, E3], gate: 0.75, role: bass}
+  logs:    {program: 0,  channel: 4, volume: 76,  pan: 14,  role: drums, kit: {lo: 41, mid: 43, hi: 45, conga: 62, congalo: 64, tamb: 54}}
+  drone:   {program: 80, channel: 5, volume: 34,  pan: -30, range: [E3, E5], gate: 1.0, mono: true}
+  echo:    {program: 82, channel: 6, volume: 36,  pan: 32,  range: [E4, E6], gate: 0.6, mono: true}
+
+progressions:
+  intro: "Em | Em"
+  a:     "Em | D | Em | A | Em | D | C:8 D:8 | Em"
+  b:     "C | D | Em | Em | C | D | Bm:8 A:8 | B"
+
+phrases:
+  chant_a: |
+    E5:4 E5:2 F#5:2 G5:4 F#5:4 | E5:4 D5:4 A4:8 | B4:4 D5:2 E5:2 F#5:4 A5:4 | F#5:12 r:4 |
+    E5:4 E5:2 F#5:2 G5:4 A5:4 | B5:4 A5:2 F#5:2 D5:8 | E5:2 D5:2 C5:4 D5:2 E5:2 F#5:4 | E5:12 r:4
+  horn_a: |
+    r:16 | r:8 F#4:4 E4:4 | r:16 | r:8 C#4:4 E4:4 | r:16 | r:8 A4:4 F#4:4 | G4:8 A4:8 | B4:12 r:4
+  chant_b: |
+    G5:6 E5:2 C5:8 | A5:6 F#5:2 D5:8 | B5:4 A5:4 G5:4 F#5:4 | E5:12 r:4 |
+    G5:6 E5:2 C5:8 | A5:6 F#5:2 D5:8 | D5:4 F#5:4 E5:4 C#5:4 | D#5:12 r:4
+  horn_b: |
+    C4:16 | D4:16 | E4:16 | B3:16 | C4:16 | D4:16 | D4:8 C#4:8 | D#4:16
+  pad: "^2:16"
+  bass_a: "^1:4 r:2 ^1:2 ^5-:4 ^1:4"
+  fifths: "E3:16"
+  ripple: "^1:2 ^5:2 ^1+:2 ^5:2 ^2+:2 ^5:2 ^1+:2 ^5:2"
+  echo_b: |
+    r:8 E6:2 r:6 | r:8 D6:2 r:6 | r:8 B5:2 r:6 | r:8 E6:2 r:6 | r:8 G5:2 r:6 | r:8 A5:2 r:6 | r:8 F#5:2 r:6 | r:8 B5:2 r:6
+
+grooves:
+  logs:
+    lo:     "x.......x.....x.|x.......x.......|x.......x.....x.|x.......x...x.x."
+    conga:  "..x.x.....x.x...|..x.x.....x.x..."
+    congalo: "......x.......x.|......x.....x..."
+  logs_soft:
+    lo:     "x...............|x.......x......."
+    conga:  "..o.o.....o.o..."
+  logs_fill:
+    lo:     "x.......x......."
+    mid:    "........x.x.x..."
+    hi:     "..............xx"
+    conga:  "..x.x..........."
+
+sections:
+  intro:
+    bars: 2
+    chords: intro
+    parts: {logs: logs_soft, drone: "E3:16 | E3:16", bass: bass_a, strings: pad}
+  a:
+    bars: 8
+    chords: a
+    fill: logs_fill
+    parts: {flute: chant_a, horn: horn_a, logs: logs, drone: fifths, bass: bass_a, strings: pad}
+  b:
+    bars: 8
+    chords: b
+    fill: logs_fill
+    parts: {flute: chant_b, horn: horn_b, logs: logs, bass: bass_a, echo: echo_b, strings: pad}
+  c:
+    bars: 8
+    chords: a
+    gain: {strings: 4}
+    parts: {horn: chant_a, logs: logs_soft, drone: fifths, bass: bass_a, echo: ripple, strings: pad}
+
+arrangement: [intro, a, b, c]
+loop_start: a
