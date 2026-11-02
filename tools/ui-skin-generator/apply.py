@@ -200,8 +200,21 @@ FAMILIES = {
     # the category label, the audience and the text colours stay vanilla.
     ('graphics/contest/interface.png', 'ui', [16 * b + i for b in (5, 6, 7, 8) for i in (1, 2, 3, 4)] + [10, 13, 14]),
   ],
+  '8e_casino_factory': [
+    # slot machine: the green body (83d5ac appears in banks 0, 1, 2, 4 and in the three flashing-light
+    # palettes that swap into bank 1) and the orange bottom bar. The bet-line lamps (bank 2), the flashing
+    # lights and the reels stay vanilla.
+    ('graphics/slot_machine/menu.png', 'ui', [4, 5, 6, 8, 9, 10, 11, 12, 13, 18, 41, 66, 68]),
+    *[(f'graphics/slot_machine/flashing_lights_{n}.pal', 'ui', [2]) for n in ('inside', 'middle', 'outside')],
+    # roulette: only the green CREDIT box; the wheel and bet grid are colour-coded and stay
+    ('graphics/roulette/credit.png', 'ui', [5, 7, 9, 10]),
+    # Battle Factory rental / swap: red arrow and highlights -> gold, blue stripes -> steel, pale mon backdrop
+    ('graphics/battle_frontier/factory_screen/interface.pal', 'ui', [2]),
+    ('graphics/battle_frontier/factory_screen/menu.png', 'ui', [14, 15, 26, 27, 28, 29]),
+    ('graphics/battle_frontier/factory_screen/mon_pic_bg.png', 'ui', ALL),
+  ],
 }
-DONE = ['1_text_windows', '2_party_summary', '3_bag_pokeblock', '4_pokedex', '5_starnav', '6_pc_storage', '7_battle_naming', '8_card_shop', '8b_easychat_frontier', '8c_berry_clock', '8d_contest']
+DONE = ['1_text_windows', '2_party_summary', '3_bag_pokeblock', '4_pokedex', '5_starnav', '6_pc_storage', '7_battle_naming', '8_card_shop', '8b_easychat_frontier', '8c_berry_clock', '8d_contest', '8e_casino_factory']
 
 RGB_RE = re.compile(r'RGB\((\d+), *(\d+), *(\d+)\)')
 def tx_rgb5(m, fam):

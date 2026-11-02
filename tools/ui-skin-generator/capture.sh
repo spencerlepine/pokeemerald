@@ -112,6 +112,14 @@ sh19() { tp 13 4 14 4; k UP; w 0.5; local i n   # normal-rank contest; shots by 
          for i in $(seq 7 12); do k A; w 1.8; done
          for n in $(seq 1 47); do k A; w 1.5; case $n in 2) shot h23_contest_stage;; 5) shot h24_contest_entry_card;;
            15) shot h25_contest_appeal;; 16) shot h26_contest_move_select;; 20) shot h27_contest_judge;; 47) shot h28_contest_results;; esac; done; }
+coins() { lua 'local a=emu:read32(0x03005d8c); local b=emu:read32(0x03005d90); emu:write16(a+0x494,(500 ~ emu:read16(b+0xAC))&0xFFFF); return 1'; }
+sh01() { coins; tp 10 3 1 6; k RIGHT; w 0.5; k A; w 2; k A; w 3; shot h01_slots; k DOWN; w 1.5; k A; w 1.5; shot h02_slots_spinning;
+         k A; w 0.8; k A; w 0.8; k A; w 3; shot h03_slots_result; k SELECT; w 3; shot h04_slots_info; k SELECT; w 2; k B; w 2; k A; w 3; }
+sh05() { coins;   # leaves the roulette table open: reboot afterwards
+         tp 10 3 13 6; k RIGHT; w 0.5; k A; w 2; shot h05_coin_box_prompt; k A; w 2.5; shot h06_roulette; k A; w 1.5;
+         shot h07_roulette_bet; k A; w 3; shot h08_roulette_spin; w 8; k B; w 2; k A; w 2; k A; w 3; }
+sh34() { tp 26 31 4 9; k UP; w 0.5; local i; for i in $(seq 1 17); do k A; w 1.6;   # Lv.50 factory challenge (saves in-emulator)
+         case $i in 15) shot h34_factory_rental;; 16) shot h35_factory_rental_menu;; 17) shot h36_factory_summary;; esac; done; }
 
 if [ "${1:-}" = do ]; then shift; "$@"; exit; fi   # ./capture.sh do FUNC ARGS: run one helper with arguments
 for s in "$@"; do if declare -F "$s" >/dev/null; then "$s"; else "s$s"; fi; done
