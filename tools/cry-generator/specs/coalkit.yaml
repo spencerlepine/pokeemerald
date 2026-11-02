@@ -1,0 +1,29 @@
+name: coalkit
+slot: magby
+brief: "COALKIT: creature call that fits its look and size. Lava sprite with a live coal for a heart."
+kind: creature
+size: 0.28
+seed: 841
+layers:
+  # A puffing, bubbly "bu-bu-BWAH" like a hot coal popping, with sizzling crackle around it.
+  # Family DNA (lava sprite line): buzzy pulse+saw throat, o -> a -> er vowels, stuttered puffs, sizzle + pops.
+  - type: voice
+    pitch: [[0, 440], [0.1, 480], [0.18, 520], [0.38, 600], [0.6, 420]]
+    pitch_step: 0.03
+    source: {pulse: 0.8, pulse_width: 0.3, saw: 0.5, noise: 0.1}
+    vowels: [[0, o], [0.18, o], [0.3, a], [0.6, er]]
+    env: [[0, 0], [0.01, 0.9], [0.06, 0.3], [0.09, 0.9], [0.15, 0.3], [0.19, 1], [0.45, 0.8], [0.62, 0]]
+    growl: 0.25
+    growl_rate: 46
+    jitter: 0.02
+    drive: 2
+  - type: noise
+    at: 0.15
+    band: [[0, 3000], [0.45, 2400]]
+    q: 1
+    env: [[0, 0], [0.05, 0.22], [0.45, 0]]
+    gain: 0.18
+  - type: click
+    times: [0.08, 0.17, 0.33, 0.5]
+    gain: 0.35
+master: {rms: 0.27}

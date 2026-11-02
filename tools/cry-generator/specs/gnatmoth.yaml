@@ -1,0 +1,31 @@
+name: gnatmoth
+slot: venomoth
+brief: "GNATMOTH: creature call that fits its look and size. Poison-dusted swamp moth."
+kind: creature
+size: 0.45
+seed: 882
+layers:
+  # Soft wingbeats and a drifting, eerie "hwee-oooo" that trails a powdery hiss of poison dust.
+  # Family DNA (gnat line): buzzing servo hum under a pulse throat, ee -> u vowels, flutter, powdery hiss.
+  - type: servo
+    pitch: [[0, 100], [0.35, 130], [0.7, 90]]
+    harmonics: [0.6, 1.0, 0.8, 0.5, 0.4]
+    grit: 0.5
+    env: [[0, 0], [0.04, 0.5], [0.1, 0.2], [0.16, 0.5], [0.22, 0.2], [0.28, 0.5], [0.62, 0.4], [0.72, 0]]
+    gain: 0.4
+  - type: voice
+    at: 0.02
+    pitch: [[0, 420], [0.15, 600], [0.45, 520], [0.7, 340]]
+    pitch_step: 0.03
+    source: {pulse: 0.8, pulse_width: 0.25, saw: 0.4, noise: 0.1}
+    vowels: [[0, ee], [0.2, i], [0.45, o], [0.7, u]]
+    env: [[0, 0], [0.015, 1], [0.5, 0.75], [0.72, 0]]
+    vibrato: {rate: 22, depth: 0.04}
+    jitter: 0.02
+    drive: 1.8
+  - type: noise
+    at: 0.35
+    band: [[0, 2200], [0.38, 1500]]
+    q: 1.5
+    env: [[0, 0], [0.08, 0.3], [0.38, 0]]
+    gain: 0.22

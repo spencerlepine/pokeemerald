@@ -1,0 +1,36 @@
+name: magnaguard
+slot: scizor
+brief: "MAGNAGUARD: creature call that fits its look and size. IG-100 MagnaGuard."
+kind: droid
+size: 0.65
+seed: 872
+layers:
+  # An electrostaff igniting with crackle, servo whirs as it squares up, and a cold, buzzing vocoder shriek.
+  # Family DNA (acklay/MagnaGuard pair): blade clacks, narrow-pulse rasp, ee -> ae -> rr, chitter vibrato (made mechanical).
+  - type: click
+    times: [0.0, 0.03, 0.06, 0.09]
+    gain: 0.6
+  - type: servo
+    pitch: [[0, 90], [0.25, 220], [0.8, 200], [1.0, 80]]
+    harmonics: [1.0, 0.7, 0.5, 0.4, 0.3]
+    grit: 0.6
+    env: [[0, 0], [0.05, 0.7], [0.85, 0.6], [1.0, 0]]
+    gain: 0.5
+  - type: voice
+    at: 0.12
+    pitch: [[0, 300], [0.08, 440], [0.5, 400], [0.8, 260]]
+    pitch_step: 0.05
+    source: {pulse: 0.8, pulse_width: 0.15, saw: 0.6, noise: 0.08}
+    vowels: [[0, ee], [0.2, ae], [0.8, rr]]
+    env: [[0, 0], [0.01, 1], [0.6, 0.8], [0.82, 0]]
+    vibrato: {rate: 30, depth: 0.03, }
+    growl: 0.3
+    growl_rate: 60
+    drive: 2.4
+  - type: noise
+    at: 0.02
+    band: [2600]
+    q: 2
+    env: [[0, 0], [0.01, 0.4], [0.2, 0.2], [0.3, 0]]
+    gain: 0.25
+master: {lowpass: 3800}

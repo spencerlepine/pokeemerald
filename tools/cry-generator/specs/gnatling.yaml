@@ -1,0 +1,25 @@
+name: gnatling
+slot: venonat
+brief: "GNATLING: creature call that fits its look and size. Fuzzy compound-eyed gnat."
+kind: creature
+size: 0.38
+seed: 881
+layers:
+  # A fuzzy, buzzing "bzzee-bzzee-oo": a round gnat humming and chirring, curious and a bit dopey.
+  # Family DNA (gnat line): buzzing servo hum under a pulse throat, ee -> u vowels, 25 Hz flutter, powdery hiss.
+  - type: servo
+    pitch: [[0, 140], [0.35, 170], [0.68, 130]]
+    harmonics: [0.6, 1.0, 0.8, 0.5, 0.4]
+    grit: 0.5
+    env: [[0, 0], [0.03, 0.5], [0.6, 0.45], [0.7, 0]]
+    gain: 0.4
+  - type: voice
+    at: 0.01
+    pitch: [[0, 520], [0.1, 640], [0.17, 520], [0.27, 660], [0.5, 560], [0.68, 420]]
+    source: {pulse: 0.8, pulse_width: 0.25, saw: 0.4, noise: 0.08}
+    vowels: [[0, ee], [0.15, i], [0.3, ee], [0.5, o], [0.68, u]]
+    env: [[0, 0], [0.012, 1], [0.15, 0.5], [0.2, 1], [0.5, 0.75], [0.7, 0]]
+    vibrato: {rate: 25, depth: 0.04}
+    jitter: 0.02
+    drive: 1.8
+master: {rms: 0.27}

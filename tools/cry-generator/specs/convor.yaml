@@ -1,0 +1,26 @@
+name: convor
+slot: xatu
+brief: "CONVOR: creature call that fits its look and size. Force-sensitive convor owl."
+kind: creature
+size: 0.45
+seed: 852
+layers:
+  # A solemn, deeper two-note hoot ("hoo-HOOO") that rings with a mystic shimmer, the Force humming through it.
+  # Family DNA (convor line): pulse throat, u -> o hoot vowels, two-note hoot motif, shimmering sine.
+  - type: voice
+    pitch: [[0, 480], [0.14, 480], [0.18, 400], [0.62, 360]]
+    pitch_step: 0.04
+    source: {pulse: 0.7, pulse_width: 0.4, saw: 0.4}
+    vowels: [[0, u], [0.18, o], [0.62, u]]
+    env: [[0, 0], [0.015, 1], [0.11, 0.6], [0.16, 0.2], [0.2, 1], [0.5, 0.75], [0.64, 0]]
+    vibrato: {rate: 6, depth: 0.025}
+    growl: 0.15
+    growl_rate: 30
+  - type: tone
+    at: 0.2
+    wave: sine
+    pitch: [[0, 1400], [0.45, 1600]]
+    warble: {rate: 9, depth: 0.04}
+    env: [[0, 0], [0.08, 0.35], [0.38, 0.25], [0.46, 0]]
+    gain: 0.35
+master: {rms: 0.29}

@@ -1,0 +1,28 @@
+name: lavaspittr
+slot: magmar
+brief: "LAVASPITTR: creature call that fits its look and size. Lava sprite that spits molten rock."
+kind: creature
+size: 0.48
+seed: 842
+layers:
+  # Two hot puffs build to a spitting "BWAAKH" and a gob of molten rock hissing as it lands.
+  # Family DNA (lava sprite line): buzzy pulse+saw throat, o -> a -> er vowels, stuttered puffs, sizzle + pops.
+  - type: voice
+    pitch: [[0, 320], [0.1, 360], [0.17, 400], [0.3, 470], [0.5, 380], [0.6, 300]]
+    pitch_step: 0.035
+    source: {pulse: 0.8, pulse_width: 0.3, saw: 0.6, noise: 0.12}
+    vowels: [[0, o], [0.17, o], [0.25, a], [0.6, er]]
+    env: [[0, 0], [0.01, 0.9], [0.06, 0.3], [0.09, 0.9], [0.14, 0.3], [0.18, 1], [0.45, 0.8], [0.62, 0]]
+    growl: 0.45
+    growl_rate: 36
+    jitter: 0.025
+    drive: 2.4
+  - type: noise
+    at: 0.42
+    band: [[0, 2800], [0.28, 1800]]
+    q: 1
+    env: [[0, 0], [0.03, 0.4], [0.28, 0]]
+    gain: 0.3
+  - type: click
+    times: [0.08, 0.16, 0.44, 0.55, 0.64]
+    gain: 0.35

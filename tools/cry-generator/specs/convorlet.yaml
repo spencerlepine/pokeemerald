@@ -1,0 +1,23 @@
+name: convorlet
+slot: natu
+brief: "CONVORLET: creature call that fits its look and size. Convor owlet that stares into the future."
+kind: creature
+size: 0.08
+seed: 851
+layers:
+  # A tiny, round "tu-tuu" hoot with an odd, otherworldly shimmer, as if it already heard what comes next.
+  # Family DNA (convor line): pulse throat, u -> o hoot vowels, two-note hoot motif, faint shimmering sine.
+  - type: voice
+    pitch: [[0, 760], [0.1, 760], [0.14, 640], [0.4, 600]]
+    source: {pulse: 0.7, pulse_width: 0.4, saw: 0.3}
+    vowels: [[0, u], [0.14, o], [0.4, u]]
+    env: [[0, 0], [0.012, 1], [0.08, 0.6], [0.12, 0.2], [0.15, 1], [0.32, 0.75], [0.42, 0]]
+    vibrato: {rate: 8, depth: 0.02}
+  - type: tone
+    at: 0.15
+    wave: sine
+    pitch: [[0, 1900], [0.3, 2100]]
+    warble: {rate: 13, depth: 0.03}
+    env: [[0, 0], [0.05, 0.3], [0.25, 0.2], [0.3, 0]]
+    gain: 0.3
+master: {rms: 0.26}

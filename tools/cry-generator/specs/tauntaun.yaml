@@ -1,0 +1,33 @@
+name: tauntaun
+slot: piloswine
+brief: "TAUNTAUN: creature call that fits its look and size. Tauntaun. Smells bad on the outside."
+kind: creature
+size: 0.45
+seed: 862
+layers:
+  # The tauntaun bray: a snort, then a honking, groaning "HNNRAAAWW" that wobbles in the cold.
+  # Family DNA (tauntaun line): saw+pulse nasal throat, m -> a -> aw vowels, groaning bray, snort noise, shiver.
+  - type: noise
+    band: [[0, 1000], [0.08, 700]]
+    q: 1.2
+    env: [[0, 0], [0.012, 0.7], [0.08, 0]]
+    gain: 0.4
+  - type: voice
+    at: 0.07
+    pitch: [[0, 300], [0.08, 420], [0.3, 380], [0.52, 260]]
+    pitch_step: 0.03
+    source: {saw: 0.9, pulse: 0.5, pulse_width: 0.3, noise: 0.12}
+    vowels: [[0, m], [0.06, a], [0.3, aw], [0.52, er]]
+    env: [[0, 0], [0.015, 1], [0.35, 0.85], [0.53, 0]]
+    vibrato: {rate: 12, depth: 0.04}
+    growl: 0.45
+    growl_rate: 34
+    jitter: 0.025
+    drive: 2.2
+  - type: voice
+    at: 0.09
+    pitch: [[0, 620], [0.3, 760], [0.48, 520]]
+    source: {pulse: 0.7, pulse_width: 0.2}
+    vowels: [[0, a], [0.48, aw]]
+    env: [[0, 0], [0.05, 0.4], [0.35, 0.3], [0.49, 0]]
+    gain: 0.3

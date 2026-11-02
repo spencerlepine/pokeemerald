@@ -1,0 +1,25 @@
+name: acklay
+slot: scyther
+brief: "ACKLAY: creature call that fits its look and size. Scythe-limbed arena beast."
+kind: creature
+size: 0.55
+seed: 871
+layers:
+  # Scythe-claws clacking, then a shrill, rasping arena shriek ("KHRRIIIKK") with an insect-like chitter.
+  # Family DNA (acklay/MagnaGuard pair): blade clacks, narrow-pulse rasp, ee -> ae -> rr, fast chitter vibrato.
+  - type: click
+    times: [0.0, 0.05, 0.1]
+    gain: 0.6
+  - type: voice
+    at: 0.1
+    pitch: [[0, 420], [0.07, 620], [0.3, 560], [0.5, 380]]
+    pitch_step: 0.025
+    source: {pulse: 0.8, pulse_width: 0.15, saw: 0.6, noise: 0.15}
+    vowels: [[0, ee], [0.15, ae], [0.5, rr]]
+    env: [[0, 0], [0.01, 1], [0.32, 0.8], [0.52, 0]]
+    vibrato: {rate: 30, depth: 0.04}
+    growl: 0.45
+    growl_rate: 38
+    jitter: 0.03
+    drive: 2.5
+master: {lowpass: 3800}

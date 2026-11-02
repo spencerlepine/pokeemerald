@@ -1,0 +1,26 @@
+name: taunkit
+slot: swinub
+brief: "TAUNKIT: creature call that fits its look and size. Tauntaun kit."
+kind: creature
+size: 0.15
+seed: 861
+layers:
+  # A snuffly kit bleat-groan ("hnn-mwaah") with a little shiver in the cold, a pint-sized tauntaun bray.
+  # Family DNA (tauntaun line): saw+pulse nasal throat, m -> a -> aw vowels, groaning bray, snort noise, cold shiver.
+  - type: noise
+    band: [[0, 1100], [0.06, 800]]
+    q: 1.2
+    env: [[0, 0], [0.012, 0.6], [0.06, 0]]
+    gain: 0.35
+  - type: voice
+    at: 0.07
+    pitch: [[0, 460], [0.08, 600], [0.3, 540], [0.48, 400]]
+    source: {saw: 0.8, pulse: 0.5, pulse_width: 0.3, noise: 0.1}
+    vowels: [[0, m], [0.06, a], [0.3, aw], [0.48, er]]
+    env: [[0, 0], [0.015, 1], [0.32, 0.8], [0.5, 0]]
+    vibrato: {rate: 14, depth: 0.035}
+    growl: 0.2
+    growl_rate: 44
+    jitter: 0.02
+    drive: 1.8
+master: {rms: 0.27}
