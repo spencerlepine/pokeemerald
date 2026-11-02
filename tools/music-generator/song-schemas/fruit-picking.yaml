@@ -1,0 +1,70 @@
+# Fruit Picking (link minigame, Dodrio Berry Picking): hot-swap of MUS_RG_BERRY_PICK (wiki audio:MUS_RG_BERRY_PICK,
+# MINIGAME / LOOP). SCRATCH: no film cue, written from the brief in the Star Wars idiom of the Ewok romps: a
+# skipping F major flute tune, tuba oom-pah, plucky square after-beats and a tambourine-and-snare skip, with a
+# D minor middle strain over strings. 148 bpm like the vanilla song.
+# Brief (sw_subject): link minigame (Dodrio Berry Picking), bouncy.
+name: fruit-picking
+replaces: MUS_RG_BERRY_PICK
+form: LOOP
+voicegroup: rg_game_corner        # vanilla: flute 73, tuba 58, strings 48, frlg drumset 0, square1 80, square2 81, waves, noise
+master_volume: 90
+tempo: 148
+steps_per_beat: 2
+time_signature: [4, 4]
+seed: 23
+
+parts:
+  flute:   {program: 73, channel: 0, volume: 100, pan: 8,   gate: 0.8, humanize: {vel: 5}}
+  tuba:    {program: 58, channel: 1, volume: 100, pan: 0,   octave: 2, gate: 0.6, role: bass}
+  strings: {program: 48, channel: 2, volume: 60,  pan: -22, octave: 4, gate: 1.0}
+  drums:   {program: 0,  channel: 3, volume: 76,  pan: 10,  role: drums, kit: {kick: 36, sn: 38, tamb: 54}}
+  pluck:   {program: 80, channel: 4, volume: 42,  pan: -28, octave: 4, gate: 0.4, mono: true}
+  echo:    {program: 81, channel: 5, volume: 30,  pan: 32,  gate: 0.5, mono: true}
+  hats:    {program: 126, channel: 6, volume: 30, pan: -10, role: drums, kit: {hh: C7}}
+
+progressions:
+  romp:  "F | C | F | Bb | F | C | Bb:4 C:4 | F"
+  glade: "Dm | Bb | F | C | Dm | Bb | Gm | C"
+  intro: "F | C"
+
+phrases:
+  oompah: "^1:2 r:2 ^3-:2 r:2"
+  after:  "r:1 ^3:1 r:1 ^2:1 r:1 ^3:1 r:1 ^2:1"
+  pad:    "^2:8"
+  tune_a: |
+    C5:1 D5:1 F5:2 A5:2 F5:2 | G5:2 E5:1 F5:1 G5:2 C5:2 | A5:1 G5:1 F5:2 C5:2 A4:2 | Bb4:2 D5:2 F5:3 r:1 |
+    C5:1 D5:1 F5:2 A5:2 C6:2 | Bb5:2 G5:2 E5:2 C5:2 | D5:2 Bb4:2 E5:2 G5:2 | F5:6 r:2
+  tune_b: |
+    F5:3 E5:1 D5:2 A4:2 | D5:2 F5:2 Bb5:4 | A5:2 F5:2 C5:2 F5:2 | E5:2 G5:2 C6:4 |
+    D6:2 A5:2 F5:2 D5:2 | F5:2 D5:2 Bb4:2 D5:2 | G5:2 Bb5:2 A5:2 G5:2 | E5:4 G5:2 E5:2
+  echo_a: |
+    r:2 C5:1 D5:1 F5:2 A5:2 | r:8 | r:2 A5:1 G5:1 F5:2 C5:2 | r:8 |
+    r:2 C5:1 D5:1 F5:2 A5:2 | r:8 | r:8 | r:8
+
+grooves:
+  skip:
+    kick: "x...x...|x...x...|x...x...|x...x..x"
+    sn:   "..x...x.|..x...x.|..x...x.|..x.x.x."
+    tamb: ".x.x.x.x"
+  light:
+    kick: "x.......|x...x..."
+    tamb: "..x...x."
+  hat:
+    hh:   "o.o.o.o."
+
+sections:
+  intro:
+    bars: 2
+    chords: intro
+    parts: {tuba: oompah, pluck: after, drums: skip, hats: hat, strings: pad, echo: "C5:1 D5:1 F5:2 A5:2 F5:2 | G5:2 E5:1 F5:1 G5:2 r:2"}
+  a:
+    bars: 8
+    chords: romp
+    parts: {flute: tune_a, tuba: oompah, pluck: after, drums: skip, hats: hat, echo: echo_a}
+  b:
+    bars: 8
+    chords: glade
+    parts: {flute: tune_b, tuba: oompah, strings: pad, pluck: after, drums: light, hats: hat}
+
+arrangement: [intro, a, b, a]
+loop_start: a
