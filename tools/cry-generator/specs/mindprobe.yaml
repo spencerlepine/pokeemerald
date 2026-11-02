@@ -1,0 +1,36 @@
+name: mindprobe
+slot: drowzee
+brief: "MINDPROBE: electronic droid voice: beeps, whistles and servo whirs. Small floating interrogation droid."
+kind: droid
+size: 0.4
+seed: 1001
+layers:
+  # Interrogator-droid family voice: a hovering repulsor hum (servo) under frame-stepped pulse beeps.
+  # The small probe chirps a probing question, scans with a rising needle whine, then beeps again.
+  - type: servo
+    pitch: [[0, 110], [0.2, 140], [1.0, 130], [1.33, 100]]
+    harmonics: [1.0, 0.6, 0.5, 0.3]
+    env: [[0, 0], [0.05, 0.6], [1.2, 0.5], [1.34, 0]]
+    grit: 0.3
+    gain: 0.55
+  - type: tone
+    at: 0.03
+    wave: pulse
+    width: 0.25
+    pitch: [[0, 1400], [0.06, 1400], [0.061, 1800], [0.12, 1800], [0.121, 1200], [0.2, 1200]]
+    env: [[0, 0], [0.005, 1], [0.055, 1], [0.06, 0.2], [0.065, 1], [0.115, 1], [0.12, 0.2], [0.125, 1], [0.2, 0.9], [0.21, 0]]
+    gain: 0.8
+  - type: tone
+    at: 0.35
+    wave: sine
+    pitch: [[0, 700], [0.5, 2600], [0.6, 2400]]
+    warble: {rate: 12, depth: 0.03}
+    env: [[0, 0], [0.05, 0.7], [0.55, 0.7], [0.62, 0]]
+    gain: 0.6
+  - type: tone
+    at: 1.05
+    wave: pulse
+    width: 0.25
+    pitch: [[0, 1800], [0.07, 1800], [0.071, 1400], [0.15, 1400]]
+    env: [[0, 0], [0.005, 0.9], [0.065, 0.9], [0.07, 0.2], [0.075, 0.9], [0.15, 0.8], [0.16, 0]]
+    gain: 0.7

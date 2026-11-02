@@ -1,0 +1,32 @@
+name: muckmound
+slot: muk
+brief: "MUCKMOUND: creature call that fits its look and size. Toxic heap of living industrial waste."
+kind: creature
+size: 0.52
+seed: 1202
+layers:
+  # Sludge family voice (gurgling u-o-er throat with bubbles), a whole heap of it: lower and longer,
+  # a thick sloshing "blooargh" with slower, bigger bubbles and a sour hiss of fumes at the end.
+  - type: voice
+    pitch: [[0, 240], [0.1, 310], [0.6, 180]]
+    pitch_step: 0.04
+    source: {saw: 0.8, pulse: 0.4, pulse_width: 0.3, noise: 0.1}
+    vowels: [[0, u], [0.18, o], [0.35, a], [0.6, er]]
+    env: [[0, 0], [0.02, 1], [0.35, 0.75], [0.62, 0]]
+    growl: 0.7
+    growl_rate: 18
+    jitter: 0.05
+    drive: 2
+  - type: tone
+    at: 0.06
+    wave: sine
+    pitch: [[0, 560], [0.5, 380]]
+    warble: {rate: 12, depth: 0.35}
+    env: [[0, 0], [0.02, 0.4], [0.42, 0.3], [0.5, 0]]
+    gain: 0.35
+  - type: noise
+    at: 0.45
+    band: [[0, 2400], [0.22, 1800]]
+    q: 1.5
+    env: [[0, 0], [0.04, 0.3], [0.22, 0]]
+    gain: 0.25

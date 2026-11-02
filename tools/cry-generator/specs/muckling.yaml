@@ -1,0 +1,25 @@
+name: muckling
+slot: grimer
+brief: "MUCKLING: creature call that fits its look and size. Sludge creature from Coruscant's lowest levels."
+kind: creature
+size: 0.4
+seed: 1201
+layers:
+  # Sludge family voice: a wet, gurgling saw throat (heavy growl and jitter) shaped u-o-er, with bubbles
+  # popping through it (a fast-wobbling sine). The small one burbles a short "blurgh".
+  - type: voice
+    pitch: [[0, 300], [0.08, 380], [0.42, 240]]
+    source: {saw: 0.8, pulse: 0.4, pulse_width: 0.3, noise: 0.1}
+    vowels: [[0, u], [0.15, o], [0.42, er]]
+    env: [[0, 0], [0.015, 1], [0.25, 0.75], [0.44, 0]]
+    growl: 0.6
+    growl_rate: 22
+    jitter: 0.05
+    drive: 1.6
+  - type: tone
+    at: 0.05
+    wave: sine
+    pitch: [[0, 700], [0.35, 500]]
+    warble: {rate: 18, depth: 0.3}
+    env: [[0, 0], [0.02, 0.4], [0.3, 0.3], [0.37, 0]]
+    gain: 0.35

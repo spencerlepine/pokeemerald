@@ -1,0 +1,39 @@
+name: voidmynock
+slot: crobat
+brief: "VOIDMYNOCK: creature call that fits its look and size. Four-winged deep-space mynock."
+kind: creature
+size: 0.7
+seed: 902
+layers:
+  # Mynock family voice (as mynock.yaml: buzzy ee-ae-e screech with fast flutter, plus a square-wave
+  # chitter), at its biggest: a quick shriek, then a long, low swooping screech whose flutter doubles
+  # for the four wings, and a fading chitter in the void.
+  - type: voice
+    pitch: [[0, 700], [0.05, 1050], [0.12, 900]]
+    source: {saw: 0.7, pulse: 0.5, pulse_width: 0.15, noise: 0.15}
+    vowels: [[0, ee], [0.12, ae]]
+    env: [[0, 0], [0.01, 1], [0.1, 0.8], [0.13, 0]]
+    vibrato: {rate: 36, depth: 0.05}
+    growl: 0.3
+    growl_rate: 60
+    drive: 3
+    emphasis: 0.6
+  - type: voice
+    at: 0.17
+    pitch: [[0, 620], [0.12, 1000], [0.5, 900], [0.88, 600]]
+    source: {saw: 0.7, pulse: 0.5, pulse_width: 0.15, noise: 0.15}
+    vowels: [[0, ee], [0.3, ae], [0.6, a], [0.88, e]]
+    env: [[0, 0], [0.02, 1], [0.5, 0.75], [0.9, 0]]
+    vibrato: {rate: 36, depth: 0.06}
+    growl: 0.4
+    growl_rate: 46
+    jitter: 0.03
+    drive: 3
+    emphasis: 0.6
+  - type: tone
+    at: 0.2
+    wave: square
+    pitch: [[0, 2100], [0.75, 1500]]
+    warble: {rate: 72, depth: 0.15, shape: square}
+    env: [[0, 0], [0.02, 0.35], [0.6, 0.2], [0.78, 0]]
+    gain: 0.3

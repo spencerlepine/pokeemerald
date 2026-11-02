@@ -1,0 +1,22 @@
+name: dullfin
+slot: feebas
+brief: "DULLFIN: creature call that fits its look and size. Drab swamp fish nobody wants."
+kind: creature
+size: 0.2
+seed: 1101
+layers:
+  # Swamp-fish family voice: a hollow, round pulse throat shaped u-o. The drab fish manages only a flat,
+  # dull "blub-blub" with no ring to it.
+  - type: voice
+    pitch: [[0, 420], [0.06, 460], [0.13, 400]]
+    source: {pulse: 0.7, pulse_width: 0.45, saw: 0.3, noise: 0.05}
+    vowels: [[0, u], [0.06, o], [0.13, u]]
+    env: [[0, 0], [0.006, 1], [0.04, 0.55], [0.14, 0]]
+    emphasis: 0.6
+  - type: voice
+    at: 0.18
+    pitch: [[0, 400], [0.06, 430], [0.16, 360]]
+    source: {pulse: 0.7, pulse_width: 0.45, saw: 0.3, noise: 0.05}
+    vowels: [[0, u], [0.06, o], [0.16, u]]
+    env: [[0, 0], [0.006, 0.9], [0.05, 0.5], [0.17, 0]]
+    emphasis: 0.6

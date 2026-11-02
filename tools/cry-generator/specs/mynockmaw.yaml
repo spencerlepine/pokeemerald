@@ -1,0 +1,27 @@
+name: mynockmaw
+slot: golbat
+brief: "MYNOCKMAW: creature call that fits its look and size. Big-mouthed mynock."
+kind: creature
+size: 0.6
+seed: 901
+layers:
+  # Mynock family voice (as mynock.yaml: buzzy ee-ae-e screech with fast flutter, plus a square-wave
+  # chitter), grown into a big-mouthed one: lower, wider-open ("a") and longer, with a gnashing rasp.
+  - type: voice
+    pitch: [[0, 760], [0.1, 1250], [0.45, 1100], [0.85, 780]]
+    source: {saw: 0.7, pulse: 0.5, pulse_width: 0.15, noise: 0.15}
+    vowels: [[0, ee], [0.25, ae], [0.5, a], [0.85, e]]
+    env: [[0, 0], [0.02, 1], [0.5, 0.75], [0.87, 0]]
+    vibrato: {rate: 28, depth: 0.05}
+    growl: 0.4
+    growl_rate: 50
+    jitter: 0.03
+    drive: 3
+    emphasis: 0.6
+  - type: tone
+    at: 0.08
+    wave: square
+    pitch: [[0, 2300], [0.6, 1800]]
+    warble: {rate: 48, depth: 0.15, shape: square}
+    env: [[0, 0], [0.02, 0.35], [0.5, 0.25], [0.62, 0]]
+    gain: 0.3
