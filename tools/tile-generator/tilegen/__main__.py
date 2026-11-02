@@ -187,10 +187,36 @@ def cmd_list_tilesets(a):
         print(f"{h:40s} {p.relative_to(gba.game_dir())}")
 
 
+def cmd_terrain(a):
+    """Greybox terrain: catalog every terrain item into the wiki, draw item sheets, render areas, build tiles."""
+    from . import terrain
+    if a.action == "run":
+        print(terrain.run(a.area or None, a.planet))
+    elif a.action == "catalog":
+        items, _ = terrain.scan()
+        rows = terrain.write_catalog(items)
+        print(f"{terrain.CSV_OUT}: {len(rows)} items")
+    elif a.action == "sheets":
+        items, _ = terrain.scan()
+        rows = terrain.write_catalog(items)
+        for f in terrain.item_sheets(items, rows):
+            print(f)
+    elif a.action == "render":
+        print(terrain.run(a.area or None, a.planet, sheets=False))
+    elif a.action == "mark":
+        print(terrain.mark(a.status), "items set to", a.status)
+    elif a.action == "build":
+        terrain.build_planet(a.planet, Path(a.out))
+
+
 def main(argv=None):
     p = argparse.ArgumentParser(prog="tilegen")
     sub = p.add_subparsers(dest="cmd", required=True)
 
+    s = sub.add_parser("terrain", help="greybox terrain: catalog, sheets, area renders, planet tilesets")
+    s.add_argument("action", choices=["run", "catalog", "sheets", "render", "mark", "build"])
+    s.add_argument("--area", nargs="*"); s.add_argument("--planet"); s.add_argument("--status", default="pending-final-art")
+    s.add_argument("--out", default="out/greybox"); s.set_defaults(fn=cmd_terrain)
     s = sub.add_parser("render-map"); s.add_argument("layout"); s.add_argument("out"); s.add_argument("--zoom", type=int, default=1)
     s.set_defaults(fn=cmd_render_map)
     s = sub.add_parser("render-tileset"); s.add_argument("tileset"); s.add_argument("out")

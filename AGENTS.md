@@ -21,6 +21,7 @@ alternate telling. Twelve planets plus a post-game; PokéNAV is called **StarNAV
 | `wiki/` | **The source of truth.** Every Emerald entity mapped to its Star Wars version ([`wiki/README.md`](wiki/README.md)), the story ([`wiki/bible/STORY.md`](wiki/bible/STORY.md)), and the world. |
 | `wiki/world/` | The world: all 528 areas as tile layouts, placed on one connected world map ([`wiki/world/README.md`](wiki/world/README.md)). Keep this map; sizes may grow later. |
 | `wiki/mapping/world_art.csv` | Every world piece (building, object, nature, landmark, interior kit) with its status, model and notes. |
+| `wiki/mapping/terrain.csv` | Every terrain item (ground, water, shores, ledges, cliffs, floors) per tileset, its planets, areas and status. `terrain_areas.csv` links areas to items. |
 | `tools/` | One tool per asset group, listed in [`tools/README.md`](tools/README.md); TODO marks the ones with work left. |
 
 ## Standing rules (from the owner)
@@ -37,12 +38,14 @@ alternate telling. Twelve planets plus a post-game; PokéNAV is called **StarNAV
 
 1. **Ask the wiki what to draw:** `cd tools/blockout && python3 -m blockout todo [--status S] [--planet P]
    [--kind K] [--tool T]`. Every area (`art_status` and `notes` in its yaml) and every art id (`status`,
-   `build`, `tool`, `notes` in `world_art.csv`) is a row. Statuses: `pending-mockup` → `pending-final-art` →
-   `art-complete` → `imported-in-game`.
-2. **Use the tool the row names.** `greybox piece`, `greybox terrain` and `greybox room` are in [`tools/greybox/`](tools/greybox/README.md). A row with no tool needs a tool or a model that doesn't exist yet; its notes say what it needs.
+   `build`, `tool`, `notes` in `world_art.csv`) and every terrain item (`terrain.csv`, `--kind terrain`) is a
+   row. Statuses: `pending-mockup` (TODO) → `pending-final-art` (GREYBOX done) → `art-complete` (READY TO
+   IMPORT) → `imported-in-game`.
+2. **Use the tool the row names.** `greybox piece`, `greybox terrain` and `greybox room` are in [`tools/greybox/`](tools/greybox/README.md); `tilegen terrain` is in [`tools/tile-generator/`](tools/tile-generator/README.md). A row with no tool needs a tool or a model that doesn't exist yet; its notes say what it needs.
    Nothing is documented or built ahead for those: they are open work, marked in the wiki.
 3. **Record progress:** `python3 -m blockout todo --set <id> <status>`, then `python3 -m blockout index`.
 
-The current phase is **greybox**: simple 3D shapes in placeholder colours, one category at a time, reviewed by the
+World art goes in three phases (owner): 1. terrain, ground and water (now: greybox tiles for all 528 areas),
+2. large structures, natural barriers and medium structures, 3. towns, buildings and the fill. The current phase is **greybox**: simple 3D shapes in placeholder colours, one category at a time, reviewed by the
 owner before the next. Final art and the colour palette come later, on the same rows. Town scenes are not
 assembled yet (the asset collection comes first); the world map layout in `wiki/world/` is kept as drafted.

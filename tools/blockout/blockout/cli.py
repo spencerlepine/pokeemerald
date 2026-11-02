@@ -338,18 +338,20 @@ STATUSES = ["pending-mockup", "pending-final-art", "art-complete", "imported-in-
 
 
 def cmd_todo(a):
-    """What to draw next, from the wiki: areas (their yaml) and assets (world_art.csv), filtered by status,
-    planet, kind or tool. --set ID STATUS writes a status back (an area id or an art id)."""
+    """What to draw next, from the wiki: areas (their yaml), assets (world_art.csv) and terrain items
+    (terrain.csv), filtered by status, planet, kind or tool. --set ID STATUS writes a status back (an area id,
+    an art id or a terrain id)."""
     if a.set:
         ident, status = a.set
         if status not in STATUSES:
             sys.exit(f"status must be one of {STATUSES}")
-        if ident.startswith("art:"):
-            path = V.ROOT / "wiki" / "mapping" / "world_art.csv"
+        if ident.startswith(("art:", "terrain:")):
+            col = "concept_id" if ident.startswith("art:") else "terrain_id"
+            path = V.ROOT / "wiki" / "mapping" / ("world_art.csv" if col == "concept_id" else "terrain.csv")
             rows = list(csv.DictReader(open(path)))
-            hit = [r for r in rows if r["concept_id"] == ident]
+            hit = [r for r in rows if r[col] == ident]
             if not hit:
-                sys.exit(f"{ident} is not in world_art.csv")
+                sys.exit(f"{ident} is not in {path.name}")
             hit[0]["status"] = status
             with open(path, "w", newline="") as fh:
                 w = csv.DictWriter(fh, fieldnames=list(rows[0].keys()))
@@ -369,6 +371,12 @@ def cmd_todo(a):
     for aid, r in _assets().items():
         rows.append({"id": aid, "kind": r["category"], "planet": r["planet"], "status": r["status"], "tool": r["tool"],
                      "build": r["build"], "used_in": r["used_in"], "notes": r["notes"] or r["description"][:90]})
+    tpath = V.ROOT / "wiki" / "mapping" / "terrain.csv"
+    if tpath.exists():                       # terrain items (tile-generator `terrain`): ground, water, ledges...
+        for r in csv.DictReader(open(tpath)):
+            rows.append({"id": r["terrain_id"], "kind": f"terrain:p{r['phase']}", "planet": r["planets"],
+                         "status": r["status"], "tool": r["tool"], "build": "", "used_in": r["areas"],
+                         "notes": r["notes"] or f"{r['metatiles']} metatiles, {r['areas']} areas"})
     for p in _all():
         d = yaml.safe_load(open(p))
         rows.append({"id": d["id"], "kind": "area:" + d["kind"], "planet": d["planet"],
@@ -378,7 +386,7 @@ def cmd_todo(a):
     if a.status:
         rows = [r for r in rows if r["status"] == a.status]
     if a.planet:
-        rows = [r for r in rows if r["planet"] == a.planet.upper()]
+        rows = [r for r in rows if a.planet.upper() in r["planet"].split(" | ")]
     if a.kind:
         rows = [r for r in rows if r["kind"] == a.kind or r["kind"].startswith(a.kind + ":")]
     if a.tool:
