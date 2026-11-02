@@ -1,0 +1,59 @@
+# Follow me: hot-swap of MUS_FOLLOW_ME (wiki audio:MUS_FOLLOW_ME, EVENT / LOOP). STYLE of "Watto's Deal and
+# Kids at Play" (wiki ref_tracks soundtrack:phantom-menace:11): an original tune, not a quote. Taken from the cue:
+# its tempo (about 100 bpm), the D-centred Mos Espa colour with the flat seventh (C natural) and a Bb/C side-step,
+# light woodwind over pizzicato and a skipping bass. Brief (sw_subject): someone leads the player somewhere,
+# bouncy walking theme. 12 bars, 28.8 s (vanilla 26.2 s): flute tune, pizzicato and fretless bass on the beat,
+# a square on the off-beats, the other square as counter-line in the B strain, kick/snare and noise hats.
+name: follow-me
+replaces: MUS_FOLLOW_ME
+form: LOOP
+voicegroup: follow_me                 # nylon 24, fretless 35, pizz 45, flute 73, sq1 80, wave 82, sq2 83, noise 126, kit 0
+master_volume: 74
+tempo: 100
+steps_per_beat: 4
+time_signature: [4, 4]
+seed: 13
+
+parts:
+  flute:   {program: 73, channel: 0, volume: 100, pan: 8,   gate: 0.8, lfo_speed: 30, lfo_delay: 20, mod: 4, humanize: {vel: 5}}
+  pizz:    {program: 45, channel: 1, volume: 80,  pan: -22, octave: 4, gate: 0.9}
+  bass:    {program: 35, channel: 2, volume: 96,  pan: 0,   octave: 2, gate: 0.6, role: bass}
+  drums:   {program: 0,  channel: 3, volume: 70,  pan: 10,  role: drums, kit: {kick: 36, sn: 38}}
+  hat:     {program: 126, channel: 4, volume: 40, pan: -14, role: drums, kit: {h: C7}}
+  offbeat: {program: 83, channel: 5, volume: 36,  pan: 30,  octave: 4, gate: 0.45, mono: true}
+  counter: {program: 80, channel: 6, volume: 40,  pan: -34, gate: 0.9, mono: true}
+
+progressions:
+  walk_a: "D | C | G | D | D | C | Bm:8 Em:8 | A"
+  walk_b: "G | F | Bb:8 C:8 | A7"
+
+phrases:
+  tune_a: |
+    A4:2 F#4:2 A4:2 D5:4 C5:2 A4:4 | G4:2 E4:2 G4:2 C5:4 B4:2 G4:4 | D5:2 B4:2 D5:2 G5:4 F#5:2 E5:2 D5:2 | E5:4 F#5:2 E5:2 D5:8 |
+    A4:2 F#4:2 A4:2 D5:4 E5:2 F#5:4 | G5:2 E5:2 C5:2 G4:2 C5:4 E5:4 | D5:2 C#5:2 B4:4 E5:2 D5:2 B4:4 | A4:4 C#5:2 E5:2 A5:4 r:4
+  tune_b: |
+    B4:4 D5:2 G5:2 F#5:4 D5:4 | C5:4 F5:2 A5:2 G5:4 F5:4 | F5:2 D5:2 Bb4:4 E5:2 C5:2 G4:4 | A4:2 C#5:2 E5:2 G5:2 E5:2 C#5:2 A4:4
+  counter_b: "D5:8 B4:8 | A4:8 C5:8 | D5:8 E5:8 | C#5:8 E5:8"
+  plucks: "^1:2 r:2 ^2:2 r:2 ^3:2 r:2 ^2:2 r:2"
+  skip: "^1:2 r:2 ^3:2 r:2 ^1+:2 r:2 ^3:2 ^2:2"
+  offs: "r:2 ^3:2 r:2 ^2+:2 r:2 ^3:2 r:2 ^2+:2"
+
+grooves:
+  bounce:
+    kick: "x.......x.......|x.......x...x..."
+    sn:   "....x.......x...|....x.......x..."
+  hats:
+    h:    "x.o.x.o.x.o.x.o.|x.o.x.o.x.o.xxo."
+
+sections:
+  a:
+    bars: 8
+    chords: walk_a
+    parts: {flute: tune_a, pizz: plucks, bass: skip, drums: bounce, hat: hats, offbeat: offs}
+  b:
+    bars: 4
+    chords: walk_b
+    parts: {flute: tune_b, pizz: plucks, bass: skip, drums: bounce, hat: hats, offbeat: offs, counter: counter_b}
+
+arrangement: [a, b]
+loop_start: a
