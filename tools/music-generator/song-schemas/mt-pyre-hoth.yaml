@@ -1,0 +1,82 @@
+# Mt. Pyre, Hoth: net-new per-planet split of MUS_MT_PYRE (wiki row net:mus-mt-pyre-hoth), for the Wampa Cave.
+# STYLE of "The Battle in the Snow" (ref_tracks soundtrack:empire-strikes-back:09): an original melody, not a
+# quote. Taken from the cue: its slow 72 pulse (written as 144 on an eighth grid), the Bm / E-sus colour, and the
+# low marching ostinato under long horn lines; here the ostinato is pizzicato and quiet, because the Jedha
+# original this splits from is reverent and eerie (choral pads), and the cave is the wampa's lair, not the battle.
+# Loop: a horn, b horn climbing, a2 the horn with a 25 % square an octave up like frost, c the ostinato stops
+# and a bell, wind (sustained noise) and timpani hold the cold before the loop. 32 bars at 144 = 53.3 s, the
+# vanilla song's own length, on its own voicegroup.
+# Brief (sw_subject): Hoth version of MUS_MT_PYRE, same role and mood family; theme to be decided.
+name: mt-pyre-hoth
+constant: MUS_MT_PYRE_HOTH
+form: AMBIENT
+voicegroup: mt_pyre               # vanilla's own: bell 14, pizz 45, timpani 47, strings 48, horn 60, squares 80/81, wave 82, noise 126
+master_volume: 88
+tempo: 144
+steps_per_beat: 2                 # eighth-note grid (the cue's quarter = 72 is a half note here)
+time_signature: [4, 4]
+seed: 44
+
+parts:
+  horn:    {program: 60, channel: 0, volume: 94,  pan: -6,  gate: 0.96, humanize: {vel: 4}}
+  pizz:    {program: 45, channel: 1, volume: 80,  pan: 18,  octave: 3, gate: 0.8, humanize: {vel: 6}}
+  str_hi:  {program: 48, channel: 2, volume: 60,  pan: 26,  octave: 3, gate: 1.0}
+  str_lo:  {program: 48, channel: 3, volume: 56,  pan: -26, octave: 3, gate: 1.0}
+  bell:    {program: 14, channel: 4, volume: 66,  pan: -30, gate: 1.0}
+  timpani: {program: 47, channel: 5, volume: 84,  pan: 10,  gate: 1.0}
+  bass:    {program: 82, channel: 6, volume: 78,  pan: 0,   octave: 1, role: bass, gate: 0.95}
+  frost:   {program: 80, channel: 7, volume: 40,  pan: 34,  gate: 0.9, mono: true, transpose: 12}
+  glint:   {program: 81, channel: 8, volume: 32,  pan: -34, octave: 5, gate: 0.4, mono: true}
+  wind:    {program: 126, channel: 9, volume: 30, pan: 0, gate: 1.0, mono: true}
+
+progressions:
+  intro: "Bm | F#sus4"
+  a: "Bm | Bm | G | A | Bm | Bm | Em | F#"
+  b: "Em | Em | Bm | Bm | G | A | F#sus4 | F#"
+  c: "G | G | Em | Em | C | C | F#sus4 | F#"
+
+phrases:
+  ost: "^1:2 ^3:2 ^1:2 ^2:2"
+  pad_lo: "^1:8"
+  pad_hi: "^3:8"
+  drone: "^1:8"
+  glints: "^1:1 r:1 ^3:1 r:1 ^2:1 r:1 ^3:1 r:1"
+  horn_a: |
+    F#4:8 | ~:4 D4:2 E4:2 | D4:6 B3:2 | C#4:8 |
+    F#4:8 | ~:4 A4:2 B4:2 | G4:6 E4:2 | F#4:8
+  horn_b: |
+    G4:4 B4:4 | A4:4 G4:2 F#4:2 | F#4:8 | D4:8 |
+    B4:4 D5:4 | C#5:4 A4:4 | B4:8 | A#4:8
+  bell_c: "B4:8 | r:8 | G4:8 | r:8 | E4:8 | r:8 | r:8 | r:8"
+  horn_c: "r:8 | r:8 | r:8 | r:8 | r:8 | r:8 | C#4:8 | A#3:4 C#4:4"
+  timp_c: "G2:2 r:6 | r:8 | E2:2 r:6 | r:8 | C3:2 r:6 | r:8 | F#2:2 r:6 | F#2:1 F#2:1 F#2:1 F#2:1 F#2:4"
+  wind_c: "C3:8 | ~:8 | r:8 | E3:8 | ~:8 | r:8 | r:8 | r:8"
+
+sections:
+  intro:
+    bars: 2
+    chords: intro
+    ramp: {pizz: [-12, 0]}
+    parts: {pizz: ost, str_lo: pad_lo, str_hi: pad_hi, bass: drone, wind: "C3:8 | ~:8"}
+  a:
+    bars: 8
+    chords: a
+    parts: {horn: horn_a, pizz: ost, str_lo: pad_lo, str_hi: pad_hi, bass: drone}
+  b:
+    bars: 8
+    chords: b
+    parts: {horn: horn_b, pizz: ost, str_lo: pad_lo, str_hi: pad_hi, bass: drone, glint: glints}
+  a2:
+    bars: 8
+    chords: a
+    gain: {horn: -6}
+    parts: {horn: horn_a, frost: horn_a, pizz: ost, str_lo: pad_lo, str_hi: pad_hi, bass: drone}
+  c:
+    bars: 8
+    chords: c
+    ramp: {pizz: [-34, 0]}
+    gain: {horn: -10}
+    parts: {horn: horn_c, pizz: ost, bell: bell_c, timpani: timp_c, str_hi: pad_hi, bass: drone, wind: wind_c, glint: glints}
+
+arrangement: [intro, a, b, a2, c]
+loop_start: a
