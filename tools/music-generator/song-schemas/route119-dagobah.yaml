@@ -1,0 +1,99 @@
+# Dagobah open seas (Routes 129-130): net-new per-planet split of MUS_ROUTE119. ARRANGE of "The Training of a
+# Jedi Knight" (wiki net:mus-route119-dagobah, ref_tracks soundtrack:empire-strikes-back:03): the cue's running
+# training music, Luke carrying Yoda through the swamp, with the Force theme stated broadly over it.
+# Taken from the cue (analyze_reference: D minor / A-sus colour, Bb and Gm side-steps, ~131 bpm running pulse):
+# the Force theme (5-1-2-b3, 4-b3, 5-1-2-b3) on horn then trumpet, a running string ostinato, wave bass on the
+# roots, a light kit. Tech from the placeholder MUS_ROUTE119: route119 voicegroup, LOOP, ~73 s (this loop 58 s).
+# Brief (sw_subject): Dagobah version of Route 119, same lush, wandering, huge-scale route mood.
+name: route119-dagobah
+constant: MUS_ROUTE119_DAGOBAH        # wiki sw_constant (net:mus-route119-dagobah)
+form: LOOP
+voicegroup: route119                  # harp 46, timpani 47, strings 48, trumpet 56, horn 60, glock 9, kit 0, squares, wave
+master_volume: 90
+tempo: 132
+steps_per_beat: 4
+time_signature: [4, 4]
+seed: 19
+
+parts:
+  horn:    {program: 60, channel: 0, volume: 100, pan: -8,  range: [A3, D5], gate: 0.95, humanize: {vel: 4}}
+  trumpet: {program: 56, channel: 1, volume: 96,  pan: 8,   range: [A3, A5], gate: 0.92, humanize: {vel: 4}}
+  strings: {program: 48, channel: 2, volume: 70,  pan: -24, octave: 4, range: [A3, A4], gate: 0.7}
+  bass:    {program: 84, channel: 3, volume: 104, pan: 0,   octave: 2, range: [D2, D3], gate: 0.7, role: bass}
+  timpani: {program: 47, channel: 4, volume: 90,  pan: 14,  range: [A1, D3], gate: 1.0}
+  drums:   {program: 0,  channel: 5, volume: 70,  pan: 10,  role: drums, kit: {kick: 36, sn: 38, hat: 42, crash: 57}}
+  arp:     {program: 81, channel: 6, volume: 42,  pan: 30,  octave: 4, range: [D4, D6], gate: 0.5, mono: true}
+  echo:    {program: 80, channel: 7, volume: 38,  pan: -32, range: [A3, A5], gate: 0.8, mono: true}
+
+progressions:
+  intro: "Asus4 | A"
+  force: "Dm | Dm | Bb | Dm | Gm | Bb | Gm:8 A:8 | Dm"
+  swamp: "Bb | F | Gm | Dm | Bb | F | Em:8 Asus4:8 | A"
+
+phrases:
+  # the Force theme, broad over the running pulse
+  force_a: |
+    r:12 A3:4 | D4:12 E4:4 | F4:8 G4:4 F4:4 | A3:12 D4:4 |
+    E4:4 F4:8 D4:4 | F4:4 Bb4:8 A4:4 | G4:4 F4:4 E4:4 C#4:4 | D4:12 A3:4
+  force_b: |
+    r:12 A4:4 | D5:12 E5:4 | F5:8 G5:4 F5:4 | A4:12 D5:4 |
+    E5:4 F5:8 D5:4 | F5:4 Bb5:8 A5:4 | G5:4 F5:4 E5:4 C#5:4 | D5:12 r:4
+  # the swamp episode: a playful, Yoda-like answer (original) that climbs back to the A
+  swamp_tune: |
+    D5:2 C5:2 Bb4:4 F4:4 Bb4:4 | C5:6 A4:2 F4:8 | G4:2 A4:2 Bb4:4 D5:4 G5:4 | F5:8 A4:8 |
+    D5:2 C5:2 Bb4:4 F4:4 D5:4 | C5:4 F5:4 A5:8 | G5:4 E5:4 D5:4 B4:4 | C#5:8 E5:4 A4:4
+  swamp_horn: |
+    D4:16 | C4:16 | D4:16 | F4:16 | D4:16 | C4:16 | B3:8 A3:8 | C#4:16
+  run: "^1:2 ^2:2 ^3:2 ^2:2 ^1:2 ^2:2 ^3:2 ^2:2"
+  run_hi: "^1:2 ^3:2 ^5:2 ^3:2 ^2:2 ^3:2 ^5:2 ^3:2"
+  walk: "^1:4 ^1:2 ^5-:2 ^1:4 ^5-:4"
+  arp8: "^1:2 ^3:2 ^5:2 ^3+:2 ^5:2 ^3:2 ^1:2 ^3:2"
+  echo_f: |
+    r:16 | r:8 A4:8 | Bb4:16 | A4:16 | Bb4:16 | D5:16 | Bb4:8 A4:8 | A4:16
+  timp_f: |
+    D2:4 r:12 | r:16 | Bb1:4 r:12 | D2:4 r:12 | G2:4 r:12 | r:16 | r:8 A1:2 A1:2 A1:2 A1:2 | D2:4 r:12
+
+grooves:
+  run:
+    kick: "x.......x.......|x.......x.....x."
+    sn:   "....x.......x...|....x.......x..."
+    hat:  "..x...x...x...x.|..x...x...x...xx"
+  soft:
+    hat:  "x.x.x.x.x.x.x.x."
+    sn:   "............o..."
+  crash_in:
+    crash: "X..............."
+    kick:  "........x......."
+    sn:    "....x.......x..."
+    hat:   "..x...x...x...x."
+  roll:
+    sn:    "....x...x.x.rRRR"
+
+sections:
+  intro:
+    bars: 2
+    chords: intro
+    parts: {strings: run, bass: "A1:4 A1:4 A1:4 A1:4 | A1:4 A1:4 A1:2 A1:2 C#2:2 E2:2", timpani: "A1:4 r:12 | A1:2 A1:2 A1:2 A1:2 A1:2 A1:2 A1:2 A1:2", drums: soft, arp: run_hi}
+  a:
+    bars: 8
+    chords: force
+    fill: roll
+    parts: {horn: force_a, strings: run, bass: walk, timpani: timp_f, drums: run, arp: arp8}
+  b:
+    bars: 8
+    chords: swamp
+    gain: {strings: -6}
+    parts: {trumpet: swamp_tune, horn: swamp_horn, strings: run_hi, bass: walk, drums: run, arp: arp8}
+  a2:
+    bars: 8
+    chords: force
+    fill: roll
+    parts: {trumpet: force_b, horn: force_a, strings: run, bass: walk, timpani: timp_f, drums: run, echo: echo_f}
+  c:
+    bars: 8
+    chords: swamp
+    gain: {strings: -10, horn: -10}
+    parts: {horn: swamp_horn, strings: run, bass: walk, drums: soft, arp: swamp_tune, echo: echo_f}
+
+arrangement: [intro, a, b, a2, c]
+loop_start: a
