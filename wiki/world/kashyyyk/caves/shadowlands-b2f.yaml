@@ -4,7 +4,10 @@ planet: KASHYYYK
 kind: dungeon
 replaces: GraniteCave_B2F
 status: BLOCKOUT
+art_status: pending-mockup
 story: Shadowlands, deepest level, where Leia waits.
+notes: 'Dungeon room: needs cave mode (walls on every side, a dark margin, a floor style for this planet). Lagoon coast under giant wroshyr trees. Water everywhere.
+  Trees are the border, but as trunks: the canopy is off the top of the map. Wookiee buildings are wood on stilts and platforms in the trees.'
 grid: |
   #########.######################
   #.......#.#..............###...#

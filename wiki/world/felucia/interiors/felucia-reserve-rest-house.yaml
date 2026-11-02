@@ -4,7 +4,11 @@ planet: FELUCIA
 kind: interior
 replaces: SafariZone_RestHouse
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'Felucia Reserve Rest House: a home; residents keep vanilla''s spots and scripts.'
+notes: 'felucia-reserve (6 zones, 40x40 each): the reserve gate where shuttles land, fungus groves, spore marsh with the rest house, giant fungus forest with ledges,
+  deep water among the stalks, a viewing deck, and the post-game zone with off-world species · need: giant fungus (have), spore pods (spheres on stalks), a marsh
+  ground kind, the viewing deck (have pad), the reserve gate building.'
 grid: |
   ##########
   ##########

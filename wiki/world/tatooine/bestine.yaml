@@ -4,8 +4,11 @@ planet: TATOOINE
 kind: town
 replaces: RustboroCity
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'Tatooine''s capital: one long main street from the Dune Sea road in the south to Route 115 in the north, with the House Organa office tower, the academy and
   Biggs''s Rock arena round a market plaza.'
+notes: 'bestine (town, 48x62): capital, one long main street. House Organa office tower (tall), the academy (winged), Biggs''s Rock gym, market plaza, many homes
+  · bordered by cliffs north and the Dune Sea road south · unique: a real skyline, two or three tall towers of different heights, the only "city" on Tatooine.'
 pos: [-135, -160]
 grid: |
   TTTTTTTTTTTTTTTTTTTTTT:::TTTTTTTTTTTTTTTTTTTTTTT

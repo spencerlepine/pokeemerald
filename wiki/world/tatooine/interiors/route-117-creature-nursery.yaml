@@ -4,7 +4,10 @@ planet: TATOOINE
 kind: interior
 replaces: Route117_PokemonDayCare
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'Route 117 Creature Nursery: vanilla room layout kept for the blockout.'
+notes: 'route-117 (route, 60x20): farm road, the Creature Nursery ranch with pens and a dewback trough · need: fences and pens (low rails), trough. Fences are a general
+  need for every farm.'
 grid: |
   ############
   ##.#########

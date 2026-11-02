@@ -4,7 +4,11 @@ planet: MORTIS
 kind: dungeon
 replaces: NavelRock_Up4
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'Mortis Gate: stairs up to the FATHER''s peak and down to the DAUGHTER''s hollow.'
+notes: 'mortis-gate (20 rooms): stairs up to the FATHER''s peak and down to the DAUGHTER''s hollow: an entrance, a long fork, eleven short descending rooms, four
+  ascending, the bottom with a pool, the top open to the sky · need: stone-stair rooms (sunken stairwell kit covers steps), a peak room open to a strange sky, a hollow
+  with a glowing pool.'
 grid: |
   .........
   .#######.

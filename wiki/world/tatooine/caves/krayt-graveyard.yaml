@@ -4,7 +4,9 @@ planet: TATOOINE
 kind: dungeon
 replaces: DesertUnderpass
 status: BLOCKOUT
+art_status: pending-mockup
 story: Tunnels under the bones of dead krayt dragons, between the Dune Sea and Route 112. Fossil companions.
+notes: 'krayt-graveyard (139x23): long tunnels under krayt bones, fossils · need: cave mode plus huge rib arcs crossing the tunnel, a skull.'
 grid: |
   ####################################################..###..################################################################################
   ###########################################################################################################################################

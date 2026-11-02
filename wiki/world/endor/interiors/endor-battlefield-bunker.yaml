@@ -4,7 +4,10 @@ planet: ENDOR
 kind: interior
 replaces: new
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'The ruined shield-generator bunker: dead consoles, a locked blast door and a straggler holding out.'
+notes: 'endor-battlefield (landmark, 40x30): the clearing: AT-ST wrecks, log traps hanging from trees, the abandoned shield bunker · need: AT-ST (two-legged walker,
+  wedge head, needs hull and rotated boxes), log traps (logs on ropes), fallen logs.'
 grid: |
   ||||||||||||||||||||
   ||||||||||||||||||||

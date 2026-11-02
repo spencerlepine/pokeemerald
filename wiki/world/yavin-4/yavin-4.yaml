@@ -4,8 +4,11 @@ planet: YAVIN 4
 kind: town
 replaces: MossdeepCity
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'Secret Rebel base in the jungle: the Massassi Temple is Kanan and Ezra''s Force arena, X-wings wait by the hangar (vanilla Space Center) and Leia keeps quarters
   here.'
+notes: 'yavin-4 (town, 70x44): the Rebel base: the Massassi Temple (huge stepped pyramid, the gym, taller than the map, partly seen), the hangar with X-wings outside,
+  Leia''s quarters · need: the temple as a landmark set piece (giant), X-wings (wedge with four wings), jungle trunks.'
 pos: [0, 0]
 grid: |
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT::TTTT::TTTTTTTTTTTTTTTTTTTT::TTTTTTTTTT

@@ -4,8 +4,12 @@ planet: KASHYYYK
 kind: town
 replaces: DewfordTown
 status: BLOCKOUT
+art_status: pending-mockup
 story: Wookiee lagoon city at the foot of the wroshyr trees. The Falcon lands by the beach; Tarfful's Fighting arena and the great hall sit up on the tree platforms,
   reached by ladders.
+notes: 'kachirho (town, 46x38): lagoon city at the foot of the trees. The Falcon lands on the beach, Tarfful''s gym and the great hall sit up on tree platforms reached
+  by ladders, Wookiee huts on stilts, a hangar bay · unique: two levels, beach below and platforms above · need: the raised-walkway layer, giant trunks that run off
+  the top, ladders between levels, a beached freighter.'
 pos: [0, 0]
 grid: |
   TTTTTTTTTTTTTTTTTTTTTT::TTTTTTTTTTTTTTTTTTTTTT

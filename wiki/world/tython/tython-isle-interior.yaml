@@ -4,7 +4,9 @@ planet: TYTHON
 kind: route
 replaces: SouthernIsland_Interior
 status: BLOCKOUT
+art_status: pending-mockup
 story: The standing-stone circle at the heart of the island, where ASHLA or BOGAN waits.
+notes: 'A small Force-sacred island: a landing pad, a climbing path, standing stones where ASHLA or BOGAN appears.'
 grid: |
   TTTTTTTTTTTTTTTTTTTTTTTTTTT
   TTTTTTTTTTTTTTTTTTTTTTTTTTT

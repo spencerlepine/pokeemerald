@@ -4,7 +4,9 @@ planet: HOTH
 kind: interior
 replaces: new
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'Hoth survey pad hangar: the player''s ship waits in the bay. Talk to the pilot or use the StarNAV console to fly to another planet.'
+notes: 'Interior: needs the room kit (walls, doors, floors) first. the survey outpost, tauntaun shelter (stalls), the shuttle pad room. ---'
 grid: |
   ||||||||||||||||
   ||||||||||||||||

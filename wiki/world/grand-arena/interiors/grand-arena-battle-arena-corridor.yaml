@@ -4,7 +4,10 @@ planet: GRAND ARENA
 kind: interior
 replaces: BattleFrontier_BattleArenaCorridor
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'Grand Arena Battle Arena Corridor: vanilla room layout kept for the blockout.'
+notes: 'Interior: needs the room kit (walls, doors, floors) first. the facility lobbies, corridors and battle rooms (Tent, Arena, Dome), sixteen Pyramid floors (dark,
+  a torch-light radius), lounges, the ranking hall, the exchange corner, Lando''s villa. ---'
 grid: |
   ##################
   ##################

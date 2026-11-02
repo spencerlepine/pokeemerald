@@ -4,8 +4,11 @@ planet: TATOOINE
 kind: route
 replaces: Route103
 status: BLOCKOUT
+art_status: pending-mockup
 story: Road north from Tosche Station along the salt lake, where the rival waits. The east end opens onto the podrace course; the cave is Altering Cave's Tatooine
   twin.
+notes: 'route-103 (route, 80x22): road along a salt lake (flat white water with a crust edge), the podrace course opens east, Altering Cave mouth · need: salt flat
+  as a water kind, a cave mouth in a cliff.'
 pos: [0, -68]
 grid: |
   TTTTTTTTTTTTTTTTTTTTTTTTTT~~~~~~~~~~~~##########################################

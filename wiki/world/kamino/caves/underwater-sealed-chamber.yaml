@@ -4,7 +4,10 @@ planet: KAMINO
 kind: dungeon
 replaces: Underwater_SealedChamber
 status: BLOCKOUT
+art_status: pending-mockup
 story: Deep water off Route 134 with the Sealed Vault's sunken door.
+notes: 'Dungeon room: needs cave mode (walls on every side, a dark margin, a floor style for this planet). Storm sea: endless rain, grey waves, white domes on stilts,
+  rocky stacks.'
 grid: |
   ######################
   #######.##############

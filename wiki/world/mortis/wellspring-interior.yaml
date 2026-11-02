@@ -4,7 +4,9 @@ planet: MORTIS
 kind: landmark
 replaces: FarawayIsland_Interior
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'The Wellspring''s heart: a clearing round the pool of life where the PRIMORDIAL plays hide and seek.'
+notes: 'A realm outside normal space: a monolith in a strange sea, floating stone, a jungle island with a pool of life.'
 grid: |
   TTT....."......""......T"""TT
   TTT...TT"......."TTT...T"."TT

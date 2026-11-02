@@ -4,7 +4,9 @@ planet: DAGOBAH
 kind: route
 replaces: Route127
 status: BLOCKOUT
+art_status: pending-mockup
 story: Misty swamp channels east of the hollow; SWAMPSLUG wallow on the islets.
+notes: 'Swamp: bog lakes, mist, gnarltrees with huge roots, mud islets. The town is a hidden hollow.'
 pos: [69, 59]
 grid: |
   #################T#T#T###~~~~~~~~~~T########~~~~~~~~~~~~~~##~~~~~~~~~~~~~#T##T~~

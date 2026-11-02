@@ -4,7 +4,10 @@ planet: TATOOINE
 kind: dungeon
 replaces: NewMauville_Entrance
 status: BLOCKOUT
+art_status: pending-mockup
 story: Hatch and stairwell down from Mos Espa into the old Espa generator.
+notes: 'espa-generator-entrance and -inside (9x9, 41x41): a hatch and stairwell down, then a machine hall: switch-floor puzzle, generator cores, cable runs · need:
+  an Imperial-style machine interior (metal floor plates, consoles, cores from the doorless kit, cable trunks).'
 grid: |
   #########
   ####.####

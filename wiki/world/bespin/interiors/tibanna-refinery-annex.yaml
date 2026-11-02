@@ -4,7 +4,10 @@ planet: BESPIN
 kind: interior
 replaces: new
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'The carbon-freezing chamber annex: the pit, the hoses and a frozen block nobody claims.'
+notes: 'tibanna-refinery (landmark, 40x26): a separate platform north, reached by cloud car or skybridge: gas tanks, pipes, Ugnaught work sheds · need: the platform
+  mode, big tanks (have), pipe runs.'
 grid: |
   ||||||||||||||||||
   ||||||||||||||||||

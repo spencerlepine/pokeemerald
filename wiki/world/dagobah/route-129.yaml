@@ -4,7 +4,9 @@ planet: DAGOBAH
 kind: route
 replaces: Route129
 status: BLOCKOUT
+art_status: pending-mockup
 story: Wide bog lake with drifting logs and trainers on rafts.
+notes: 'Swamp: bog lakes, mist, gnarltrees with huge roots, mud islets. The town is a hidden hollow.'
 pos: [69, 179]
 grid: |
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##~~~~~~~~~~~~~##~~~~~~~~~~~~~##~~~~~~~~~~~~~~~~~~~

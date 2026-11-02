@@ -4,7 +4,9 @@ planet: ENDOR
 kind: route
 replaces: Route120
 status: BLOCKOUT
+art_status: pending-mockup
 story: Deep Endor forest east of Bright Tree, where TAOZIN hide. The Ancient Tomb and the Scorched Hollow are off the trail; a side path east leads to the old battlefield.
+notes: 'route-120 (route, 40x100): deep forest, the Ancient Tomb and Scorched Hollow entrances, a path to the battlefield · need: tomb door in a mound.'
 pos: [40, 1]
 grid: |
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT

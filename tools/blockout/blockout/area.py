@@ -5,15 +5,17 @@
     planet: TATOOINE
     kind: town                       # town | route | dungeon | interior | landmark
     replaces: LittlerootTown         # vanilla map it is built into (sets size, exits and doors), or `new`
-    status: BLOCKOUT                 # TODO | BLOCKOUT | APPROVED   (the layout; art status is per piece)
+    status: BLOCKOUT                 # TODO | BLOCKOUT | APPROVED   (the layout)
+    art_status: pending-mockup       # pending-mockup | pending-final-art | art-complete | imported-in-game
     story: one or two lines on what happens here
+    notes: what this area needs drawn, in plain words (what is there, what borders it, what is unique)
     grid: |                          # one char per cell, legend in terrain.py
       TTTT::TTTT
     exits:                           # map edges the player leaves by
       - {edge: north, cells: [9, 10], to: route-101}
     buildings:                       # solid rectangles with a door on the bottom row
       - {name: Player's homestead, art: art:tatooine:homestead-dome, at: [3, 4], size: [5, 4], door: 2, to: homestead-interior}
-    props:                           # big and small objects (art id from world_art.csv)
+    props:                           # big and small objects (art id: a row in ../mapping/world_art.csv)
       - {name: Vaporator, art: art:tatooine:moisture-vaporator, at: [2, 9], size: [1, 2]}
     people:                          # pink sprites
       - {name: Prof. Korr, at: [14, 10], role: story}

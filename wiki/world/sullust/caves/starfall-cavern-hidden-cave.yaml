@@ -4,7 +4,10 @@ planet: SULLUST
 kind: dungeon
 replaces: MeteorFalls_StevensCave
 status: BLOCKOUT
+art_status: pending-mockup
 story: Starfall Cavern's hidden room (post-game).
+notes: 'starfall-cavern (5 rooms): a cavern where a meteorite fell: waterfalls inside, pools, ledges, the meteorite crater, a hidden post-game room · need: cave waterfalls,
+  pools, the meteorite (a half-buried sphere, glowing).'
 grid: |
   ##############################
   ##############################

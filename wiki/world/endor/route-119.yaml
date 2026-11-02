@@ -4,7 +4,10 @@ planet: ENDOR
 kind: route
 replaces: Route119
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'Treewalk forest: a long climb north through redwoods and ferns, with Endor Station (the Imperial research bunker the Cartel has taken) and Bossk inside.'
+notes: 'route-119 (route, 40x140): the long treewalk climb through redwoods and ferns, Endor Station (an Imperial research bunker, have bunker), raised walkways ·
+  need: trunks, walkways, ferns as wild ground.'
 pos: [-40, 0]
 grid: |
   TTTTTTTTTTTTTTT####TTTTTTTTTTTTTTTTTTTTT

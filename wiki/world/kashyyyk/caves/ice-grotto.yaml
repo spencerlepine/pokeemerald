@@ -4,7 +4,9 @@ planet: KASHYYYK
 kind: dungeon
 replaces: IslandCave
 status: BLOCKOUT
+art_status: pending-mockup
 story: Cold cave on a lagoon islet; home of ICEWARDEN.
+notes: 'ice-grotto (17x33): a cold cave on an islet, ICEWARDEN · need: ice cave mode (blue walls, frost).'
 grid: |
   .###############.
   .###############.

@@ -4,7 +4,9 @@ planet: SULLUST
 kind: dungeon
 replaces: FieryPath
 status: BLOCKOUT
+art_status: pending-mockup
 story: Volcanic tunnels joining Pirin to Route 113's ash fields.
+notes: 'magma-tunnels (35x38): volcanic tunnels · need: cave mode with a lava glow variant.'
 grid: |
   ###################################
   ###################################

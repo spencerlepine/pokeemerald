@@ -4,8 +4,12 @@ planet: KAMINO
 kind: town
 replaces: PacifidlogTown
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'Tipoca City on Kamino''s storm sea: domes on stilts joined by walkways round the great cloning hall. Ships land on the north-east platform; the walkway runs
   west to Route 132 and east to Route 131.'
+notes: 'tipoca-city (town, 50x36): domes on stilts joined by walkways round the great cloning hall; nothing but sea around it · unique: the whole town is a raised-walkway
+  layer over water · need: sea mode with rain (streaks), stilt platforms (have stilts-flat, stilt-dome), walkways between them, the cloning hall as a landmark set
+  piece (a huge dome cluster, partly seen), the landing platform.'
 pos: [0, 0]
 grid: |
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

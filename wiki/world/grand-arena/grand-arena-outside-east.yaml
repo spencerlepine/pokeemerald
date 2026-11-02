@@ -4,8 +4,10 @@ planet: GRAND ARENA
 kind: route
 replaces: BattleFrontier_OutsideEast
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'East half of the Grand Arena: the Tower, Arena, Palace and Pyramid, the ranking hall, the exchange corner, the Bacta Center and more lounges. Artisan Cave
   opens in the cliffs.'
+notes: 'Lando''s battle island (the Battle Frontier): seven facilities on a cliff-ringed island, lounges, the reception gate where ships dock.'
 pos: [0, 0]
 grid: |
   ~~~~~~~~##################~~##~~##~~################################~~##

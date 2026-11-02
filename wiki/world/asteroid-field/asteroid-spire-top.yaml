@@ -4,7 +4,9 @@ planet: ASTEROID FIELD
 kind: route
 replaces: SkyPillar_Top
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'Top of the Asteroid Spire, open to space: the EXOGORTH''s lair.'
+notes: 'asteroid-spire-top (route, 27x24): the open summit, EXOGORTH''s lair · need: a void edge all round.'
 grid: |
   ...........................
   ...........................

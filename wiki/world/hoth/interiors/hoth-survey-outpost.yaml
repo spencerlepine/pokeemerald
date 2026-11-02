@@ -4,7 +4,9 @@ planet: HOTH
 kind: interior
 replaces: new
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'Prefab survey camp: a scanner table, heaters and bunks. The surveyor hands out a cold-weather item.'
+notes: 'Interior: needs the room kit (walls, doors, floors) first. the survey outpost, tauntaun shelter (stalls), the shuttle pad room. ---'
 grid: |
   ||||||||||||||||||||
   ||||||||||||||||||||

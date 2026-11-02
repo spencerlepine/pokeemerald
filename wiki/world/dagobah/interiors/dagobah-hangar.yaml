@@ -4,7 +4,11 @@ planet: DAGOBAH
 kind: interior
 replaces: new
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'Dagobah bog landing: the player''s ship waits in the bay. Talk to the pilot or use the StarNAV console to fly to another planet.'
+notes: 'dagobah (town, 60x60): the hollow: Yoda''s hut (half-buried, the gym), the Cave of Evil mouth under the roots in the north-west, a bog lagoon in the middle,
+  the bog landing in the south-east, a surf channel · need: swamp mode (shallow water mixed with mud and roots), gnarltrees (twisted trunks with root arches), hanging
+  moss, mist.'
 grid: |
   ||||||||||||||||
   ||||||||||||||||

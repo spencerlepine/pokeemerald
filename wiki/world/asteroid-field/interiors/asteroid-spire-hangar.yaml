@@ -4,7 +4,10 @@ planet: ASTEROID FIELD
 kind: interior
 replaces: new
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'Asteroid docking hollow: the player''s ship waits in the bay. Talk to the pilot or use the StarNAV console to fly to another planet.'
+notes: 'asteroid-spire (6 rooms): the docking hollow where ships berth, then five floors of cracked floors (hover-bike speed) and falling rubble · need: cave mode
+  in grey, cracked floor tiles, rubble piles.'
 grid: |
   ||||||||||||||||
   ||||||||||||||||

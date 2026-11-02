@@ -4,7 +4,11 @@ planet: FELUCIA
 kind: route
 replaces: SafariZone_Southeast
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'South-east: post-game extension with species from other planets (vanilla Emerald-only area).'
+notes: 'felucia-reserve (6 zones, 40x40 each): the reserve gate where shuttles land, fungus groves, spore marsh with the rest house, giant fungus forest with ledges,
+  deep water among the stalks, a viewing deck, and the post-game zone with off-world species · need: giant fungus (have), spore pods (spheres on stalks), a marsh
+  ground kind, the viewing deck (have pad), the reserve gate building.'
 pos: [218, 443]
 grid: |
   TTTTTT...TTTTTTTTTTTTTTTTTT......#.TTTTT

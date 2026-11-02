@@ -4,7 +4,11 @@ planet: DEATH STAR
 kind: dungeon
 replaces: new
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'DS-5: Command deck. Three Imperial trainers (levels 60-70) and one item. The final officer battle sets flag:unused-0x025.'
+notes: 'Dungeon room: needs cave mode (walls on every side, a dark margin, a floor style for this planet). Post-game: a half-built hangar bay and five construction
+  decks, all interiors: scaffolds, reactor feed corridors, the detention block, a turbolaser battery, the command deck · need: the Imperial interior kit (black floor
+  grating, white corridor panels, blast doors, consoles, cell doors, scaffold frames), the trench wall giant for the hangar''s open side (have).'
 grid: |
   |||||||||||||||||||||||||
   |||||||||||||||||||||||||

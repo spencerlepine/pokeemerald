@@ -4,7 +4,10 @@ planet: TATOOINE
 kind: interior
 replaces: SlateportCity_House
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'Mos Eisley House: a home; residents keep vanilla''s spots and scripts.'
+notes: 'mos-eisley (town, 50x50): spaceport. Cantina (two domes), Spacer Museum, Ric Olie''s shipyard, two docking bays, bazaar stalls, parked landspeeders, crates
+  · bordered by rock · need: stalls, landspeeders (low wedge with a canopy), a freighter sitting in a docking bay.'
 grid: |
   ###########
   ###########

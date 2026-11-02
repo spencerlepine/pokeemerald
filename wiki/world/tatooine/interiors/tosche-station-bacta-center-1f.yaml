@@ -4,7 +4,10 @@ planet: TATOOINE
 kind: interior
 replaces: OldaleTown_PokemonCenter_1F
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'Bacta Center: heal counter with the medic droid and the StarNAV terminal (shared kit).'
+notes: 'tosche-station (town, 30x26): crossroads trading post. Power station with stacks and tanks, first bacta center and supply depot, a few homes, power converters
+  stacked outside · bordered by rock and scrub · have all.'
 grid: |
   ##############
   ##############

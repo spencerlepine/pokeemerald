@@ -4,7 +4,10 @@ planet: SULLUST
 kind: dungeon
 replaces: MeteorFalls_1F_2R
 status: BLOCKOUT
+art_status: pending-mockup
 story: Starfall Cavern, upper falls.
+notes: 'starfall-cavern (5 rooms): a cavern where a meteorite fell: waterfalls inside, pools, ledges, the meteorite crater, a hidden post-game room · need: cave waterfalls,
+  pools, the meteorite (a half-buried sphere, glowing).'
 grid: |
   ##############################
   ##############################

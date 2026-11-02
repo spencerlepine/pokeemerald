@@ -4,7 +4,10 @@ planet: KASHYYYK
 kind: interior
 replaces: new
 status: BLOCKOUT
+art_status: pending-mockup
 story: The village chief's hall high in the wroshyr branches.
+notes: 'rwookrrorro (landmark, 36x28): a whole village on one high platform level in the treetops, rope bridges and plank decks, hunters'' lodge, bowcaster maker
+  · need: platforms over a void (you see the forest floor far below), rope bridges, decks ringed around trunks.'
 grid: |
   ||||||||||||||||
   ||||||||||||||||

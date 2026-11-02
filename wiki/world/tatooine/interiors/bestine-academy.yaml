@@ -4,7 +4,10 @@ planet: TATOOINE
 kind: interior
 replaces: RustboroCity_PokemonSchool
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'Bestine Academy: vanilla room layout kept for the blockout.'
+notes: 'bestine (town, 48x62): capital, one long main street. House Organa office tower (tall), the academy (winged), Biggs''s Rock gym, market plaza, many homes
+  · bordered by cliffs north and the Dune Sea road south · unique: a real skyline, two or three tall towers of different heights, the only "city" on Tatooine.'
 grid: |
   ############
   #TT#TTT##TT#

@@ -4,7 +4,10 @@ planet: TATOOINE
 kind: interior
 replaces: SlateportCity_PokemonCenter_1F
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'Bacta Center: heal counter with the medic droid and the StarNAV terminal (shared kit).'
+notes: 'mos-eisley (town, 50x50): spaceport. Cantina (two domes), Spacer Museum, Ric Olie''s shipyard, two docking bays, bazaar stalls, parked landspeeders, crates
+  · bordered by rock · need: stalls, landspeeders (low wedge with a canopy), a freighter sitting in a docking bay.'
 grid: |
   ##############
   ##############

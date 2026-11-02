@@ -4,7 +4,11 @@ planet: KASHYYYK
 kind: interior
 replaces: DewfordTown_PokemonCenter_2F
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'Bacta Center upstairs: link and trade lounge (vanilla Cable Club, shared kit).'
+notes: 'kachirho (town, 46x38): lagoon city at the foot of the trees. The Falcon lands on the beach, Tarfful''s gym and the great hall sit up on tree platforms reached
+  by ladders, Wookiee huts on stilts, a hangar bay · unique: two levels, beach below and platforms above · need: the raised-walkway layer, giant trunks that run off
+  the top, ladders between levels, a beached freighter.'
 grid: |
   ##############
   ##############

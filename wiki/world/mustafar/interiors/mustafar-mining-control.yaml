@@ -4,7 +4,9 @@ planet: MUSTAFAR
 kind: interior
 replaces: new
 status: BLOCKOUT
+art_status: pending-mockup
 story: Control room over the lava collectors; Imperial overseers and droid workers.
+notes: 'Interior: needs the room kit (walls, doors, floors) first. shuttle station, control center. ---'
 grid: |
   ||||||||||||||||||||
   ||||||||||||||||||||

@@ -4,7 +4,10 @@ planet: TATOOINE
 kind: interior
 replaces: SlateportCity_PokemonFanClub
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'The cantina: Wuher at the round bar, the band on the stage, Ponda Baba and Dr. Evazan in a booth, and Greedo looking for Han''s crew.'
+notes: 'mos-eisley (town, 50x50): spaceport. Cantina (two domes), Spacer Museum, Ric Olie''s shipyard, two docking bays, bazaar stalls, parked landspeeders, crates
+  · bordered by rock · need: stalls, landspeeders (low wedge with a canopy), a freighter sitting in a docking bay.'
 grid: |
   ||||||||||||||||||||||||
   ||||||||||||||||||||||||

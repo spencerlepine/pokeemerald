@@ -4,7 +4,9 @@ planet: ENDOR
 kind: route
 replaces: Route123
 status: BLOCKOUT
+art_status: pending-mockup
 story: River valley in southern Endor with the berry grower's lodge.
+notes: 'route-123 (route, 140x20): river valley, the berry grower''s lodge · need: river, orchard rows (plants).'
 pos: [0, 140]
 grid: |
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT~~~~~~~~~~~~~~~~~~~~~~~TTTT~~~~~~~~~~~~~~~~~~

@@ -4,8 +4,11 @@ planet: MUSTAFAR
 kind: landmark
 replaces: new
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'Optional: the old Separatist mining facility on a lava river below Ashen Pass, where Anakin fell. Veers runs Stormtrooper drills here; the control center
   holds rare items and an echo of the past for the Ilum trials.'
+notes: 'mustafar-mining-facility (landmark, 40x30): the old Separatist facility on a lava river: collector arms reaching over the lava, catwalks, control center ·
+  need: catwalk layer over lava, collector arms (long horizontal booms on pylons), a lava river with banks.'
 pos: [-5, 46]
 grid: |
   ###################==###################

@@ -4,7 +4,9 @@ planet: DAGOBAH
 kind: route
 replaces: Route130
 status: BLOCKOUT
+art_status: pending-mockup
 story: The far bog. Mirage Isle, the islet that only appears sometimes, rises here.
+notes: 'Swamp: bog lakes, mist, gnarltrees with huge roots, mud islets. The town is a hidden hollow.'
 pos: [-11, 179]
 grid: |
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

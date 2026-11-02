@@ -4,7 +4,10 @@ planet: TATOOINE
 kind: interior
 replaces: VerdanturfTown_WandasHouse
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'Anchorhead Wandas House: a home; residents keep vanilla''s spots and scripts.'
+notes: 'anchorhead (town, 34x26): quiet farm town. Farm co-op (also the Showcase hall), homes, Luke''s friends'' skyhopper parked · bordered by farmland and low berms
+  · need: the skyhopper (small wedge craft with a fin).'
 grid: |
   #################
   #############T###

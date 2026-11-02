@@ -4,7 +4,9 @@ planet: ATOLLON
 kind: interior
 replaces: BirthIsland_Harbor
 status: BLOCKOUT
+art_status: pending-mockup
 story: Atollon landing strip (vanilla Birth Island harbor).
+notes: 'Interior: needs the room kit (walls, doors, floors) first.'
 grid: |
   #################
   #################

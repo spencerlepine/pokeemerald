@@ -4,7 +4,10 @@ planet: TATOOINE
 kind: interior
 replaces: Route116_TunnelersRestHouse
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'Route 116 Tunnelers Rest House: a home; residents keep vanilla''s spots and scripts.'
+notes: 'route-116 (route, 100x20): east road to Beggar''s Canyon, Fixer''s tunnel mouth with digging gear, the tunnellers'' rest house · need: a tunnel mouth under
+  a cliff with a timber frame, a digging rig.'
 grid: |
   ##########
   ##########

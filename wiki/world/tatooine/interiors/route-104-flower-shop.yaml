@@ -4,7 +4,10 @@ planet: TATOOINE
 kind: interior
 replaces: Route104_PrettyPetalFlowerShop
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'Route 104 Flower Shop: vanilla room layout kept for the blockout.'
+notes: 'route-104 (route, 40x80): coast road with a real sea on the west, Han''s hangar hut on the shore where the Falcon leaves · cliffs east · need: sea with a
+  beach edge, a landed freighter beside a hut.'
 grid: |
   ###############
   ####T##########

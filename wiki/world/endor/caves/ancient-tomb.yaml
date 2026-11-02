@@ -4,7 +4,9 @@ planet: ENDOR
 kind: dungeon
 replaces: AncientTomb
 status: BLOCKOUT
+art_status: pending-mockup
 story: Stone tomb in the forest; home of DURAWARDEN.
+notes: 'ancient-tomb (17x33): a stone tomb, DURAWARDEN · need: cave mode with cut stone walls.'
 grid: |
   .###############.
   .###############.

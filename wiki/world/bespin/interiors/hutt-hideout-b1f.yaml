@@ -4,7 +4,11 @@ planet: BESPIN
 kind: interior
 replaces: AquaHideout_B1F
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'Hutt Hideout B1F: a home; residents keep vanilla''s spots and scripts.'
+notes: 'Interior: needs the room kit (walls, doors, floors) first. Galleria floors (1 to 4 plus rooftop, a lift), museum floors, Showcase hall, Lando''s flat, bacta
+  center, sky motel, Tibanna trader, Cloud car pilot''s, Ugnaught family, the under-levels (dark industrial corridors where the Cartel hide, the carbon-freezing chamber
+  with its glow and steam, a hidden stash). Need: a clean white interior kit and a dark industrial one. ---'
 grid: |
   ###################################################
   ############.#####.##########.#####################

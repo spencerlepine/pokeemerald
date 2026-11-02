@@ -4,7 +4,10 @@ planet: TATOOINE
 kind: interior
 replaces: Route112_CableCarStation
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'Route 112 Shuttle Station: a home; residents keep vanilla''s spots and scripts.'
+notes: 'route-112 (route, 40x60): canyon road, the shuttle station to Mustafar (a landing pad with a terminal building and a parked shuttle) · cliffs both sides ·
+  need: shuttle (folded wings, wedge).'
 grid: |
   .#.##.#.##.#.
   #############

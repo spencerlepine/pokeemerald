@@ -4,8 +4,11 @@ planet: TATOOINE
 kind: route
 replaces: Route110
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'The Boonta Eve podrace course: the raised speeder road runs from Mos Espa south to Mos Eisley over the canyon, with the Trick House (Garindan''s) and side
   paths underneath.'
+notes: 'route-110 (route, 40x100): the Boonta Eve course: a raised speeder road on pylons running the whole map over a canyon, side paths underneath, Garindan''s
+  Trick House · need: the raised-road layer (walk under it), course markers, lap banners, a long elevated structure with supports.'
 pos: [80, -128]
 grid: |
   TTTTTTTTTTTT.......TTTTTTTTT.TTTTTTT~~~~

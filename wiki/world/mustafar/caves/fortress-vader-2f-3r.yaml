@@ -4,7 +4,11 @@ planet: MUSTAFAR
 kind: dungeon
 replaces: MagmaHideout_2F_3R
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'Fortress Vader: guard rooms.'
+notes: 'fortress-vader (8 rooms): Vader''s castle cut into the cliff: gate hall, halls, lava conduits (lava channels inside the rooms), guard rooms, barracks, the
+  meditation chamber over the lava · need: Imperial dark interior kit (black walls, red light strips), lava channels indoors, a raised dais, the fortress exterior
+  as a landmark set piece (two tuning-fork towers, giant).'
 grid: |
   ################.################################.##########
   ################.################################.##########

@@ -4,7 +4,10 @@ planet: SULLUST
 kind: interior
 replaces: LavaridgeTown_Gym_B1F
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'Sabine Wren (Fire)''s arena: puzzle floor and arena trainers kept from vanilla.'
+notes: 'pirin (town, 42x34): hot-spring town in a volcanic bowl: the bowl''s cliff rim is the border, spaceport pad, Sabine''s Fire gym, bathhouse, the steaming spring
+  pool · need: steam (a prop effect), the bowl rim with the town sunk inside (relief does this).'
 grid: |
   #################
   #################

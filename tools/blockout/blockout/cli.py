@@ -3,7 +3,9 @@
 python3 -m blockout render [area.yaml ...]   -> <area>.png next to each file (default: every area)
 python3 -m blockout check  [area.yaml ...]   -> layout problems, exit 1 if any
 python3 -m blockout index                    -> wiki/world/INDEX.csv: every area and every placed piece
-python3 -m blockout guide                    -> wiki/world/GUIDE.md and CONNECTIONS.csv (the area graph)"""
+python3 -m blockout guide                    -> wiki/world/GUIDE.md and CONNECTIONS.csv (the area graph)
+python3 -m blockout todo [--status S] [--planet P] [--kind K] [--tool T] [--csv]   -> what to draw next
+python3 -m blockout todo --set <area-id or art id> <status>                           -> record progress"""
 import argparse
 import csv
 import glob
@@ -306,26 +308,89 @@ def cmd_check(a):
     sys.exit(1 if bad else 0)
 
 
+def _assets():
+    return {r["concept_id"]: r for r in csv.DictReader(open(V.ROOT / "wiki" / "mapping" / "world_art.csv"))}
+
+
 def cmd_index(a):
-    art = {}
-    wa = V.ROOT / "wiki" / "mapping" / "world_art.csv"
-    for r in csv.DictReader(open(wa)):
-        art[r["concept_id"]] = r
+    """wiki/world/INDEX.csv: every area and every placed piece, with the art status from world_art.csv."""
+    art = _assets()
     out = WORLD / "INDEX.csv"
     with open(out, "w", newline="") as fh:
         w = csv.writer(fh)
         w.writerow(["area", "planet", "kind", "replaces", "layout_status", "piece_kind", "piece", "size", "art",
-                    "art_known", "art_status"])
+                    "art_known", "art_status", "tool"])
         for p in _all():
             ar = Area(p)
-            w.writerow([ar.id, ar.planet, ar.kind, ar.replaces, ar.status, "area", ar.name, f"{ar.w}x{ar.h}", "", "", ""])
+            w.writerow([ar.id, ar.planet, ar.kind, ar.replaces, ar.status, "area", ar.name, f"{ar.w}x{ar.h}", "", "",
+                        ar.raw.get("art_status", "pending-mockup"), "" if ar.kind == "interior" else "greybox terrain"])
             for pc in ar.pieces():
                 aid = pc.get("art", "")
                 known = "yes" if aid in art else ("" if not aid else "NEW")
-                st = "PLACEHOLDER" if pc["kind"] in ("person", "sign", "warp") else "TODO"
+                row = art.get(aid, {})
+                st = "PLACEHOLDER" if pc["kind"] in ("person", "sign", "warp") else row.get("status", "pending-mockup")
                 w.writerow([ar.id, ar.planet, ar.kind, ar.replaces, ar.status, pc["kind"], pc.get("name", ""),
-                            "x".join(str(v) for v in pc.get("size", [1, 1])), aid, known, st])
+                            "x".join(str(v) for v in pc.get("size", [1, 1])), aid, known, st, row.get("tool", "")])
     print(out)
+
+
+STATUSES = ["pending-mockup", "pending-final-art", "art-complete", "imported-in-game"]
+
+
+def cmd_todo(a):
+    """What to draw next, from the wiki: areas (their yaml) and assets (world_art.csv), filtered by status,
+    planet, kind or tool. --set ID STATUS writes a status back (an area id or an art id)."""
+    if a.set:
+        ident, status = a.set
+        if status not in STATUSES:
+            sys.exit(f"status must be one of {STATUSES}")
+        if ident.startswith("art:"):
+            path = V.ROOT / "wiki" / "mapping" / "world_art.csv"
+            rows = list(csv.DictReader(open(path)))
+            hit = [r for r in rows if r["concept_id"] == ident]
+            if not hit:
+                sys.exit(f"{ident} is not in world_art.csv")
+            hit[0]["status"] = status
+            with open(path, "w", newline="") as fh:
+                w = csv.DictWriter(fh, fieldnames=list(rows[0].keys()))
+                w.writeheader()
+                w.writerows(rows)
+        else:
+            paths = [p for p in _all() if os.path.basename(p) == f"{ident}.yaml"]
+            if not paths:
+                sys.exit(f"{ident} is not an area")
+            doc = yaml.safe_load(open(paths[0]))
+            doc["art_status"] = status
+            with open(paths[0], "w") as fh:
+                yaml.dump(doc, fh, Dumper=_Dumper, sort_keys=False, width=160, allow_unicode=True, default_flow_style=None)
+        print(f"{ident}: {status}")
+        return
+    rows = []
+    for aid, r in _assets().items():
+        rows.append({"id": aid, "kind": r["category"], "planet": r["planet"], "status": r["status"], "tool": r["tool"],
+                     "build": r["build"], "used_in": r["used_in"], "notes": r["notes"] or r["description"][:90]})
+    for p in _all():
+        d = yaml.safe_load(open(p))
+        rows.append({"id": d["id"], "kind": "area:" + d["kind"], "planet": d["planet"],
+                     "status": d.get("art_status", "pending-mockup"),
+                     "tool": "" if d["kind"] == "interior" else "greybox terrain", "build": "",
+                     "used_in": "", "notes": (d.get("notes") or "")[:90]})
+    if a.status:
+        rows = [r for r in rows if r["status"] == a.status]
+    if a.planet:
+        rows = [r for r in rows if r["planet"] == a.planet.upper()]
+    if a.kind:
+        rows = [r for r in rows if r["kind"] == a.kind or r["kind"].startswith(a.kind + ":")]
+    if a.tool:
+        rows = [r for r in rows if r["tool"].startswith(a.tool)]
+    if a.csv:
+        w = csv.DictWriter(sys.stdout, fieldnames=list(rows[0].keys()) if rows else ["id"])
+        w.writeheader()
+        w.writerows(rows)
+        return
+    for r in rows:
+        print(f"{r['status']:18} {r['kind']:14} {r['planet']:14} {r['id']:44} {r['tool']:16} {r['build']:14} {r['notes']}")
+    print(f"{len(rows)} rows")
 
 
 ORDER = ["TATOOINE", "KASHYYYK", "SULLUST", "MUSTAFAR", "ENDOR", "BESPIN", "JEDHA", "YAVIN 4", "HOTH", "DAGOBAH",
@@ -444,6 +509,13 @@ def main(argv=None):
         s = sub.add_parser(name)
         s.add_argument("areas", nargs="*")
     sub.add_parser("index")
+    td = sub.add_parser("todo", help="what to draw next, from the wiki")
+    td.add_argument("--status", choices=STATUSES)
+    td.add_argument("--planet")
+    td.add_argument("--kind", help="area, area:town, building, object, interior, nature, landmark")
+    td.add_argument("--tool")
+    td.add_argument("--csv", action="store_true")
+    td.add_argument("--set", nargs=2, metavar=("ID", "STATUS"))
     sub.add_parser("world")
     sub.add_parser("guide")
     lo = sub.add_parser("layout")
@@ -453,4 +525,4 @@ def main(argv=None):
     ia.add_argument("--force", action="store_true")
     ia.add_argument("--only", nargs="*")
     a = ap.parse_args(argv)
-    {"new": cmd_new, "world": cmd_world, "layout": cmd_layout, "import-all": cmd_import_all, "render": cmd_render, "check": cmd_check, "index": cmd_index, "guide": cmd_guide}[a.cmd](a)
+    {"new": cmd_new, "world": cmd_world, "layout": cmd_layout, "import-all": cmd_import_all, "render": cmd_render, "check": cmd_check, "index": cmd_index, "todo": cmd_todo, "guide": cmd_guide}[a.cmd](a)

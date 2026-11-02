@@ -4,7 +4,9 @@ planet: SULLUST
 kind: interior
 replaces: Route113_GlassWorkshop
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'Route 113 Glass Workshop: vanilla room layout kept for the blockout.'
+notes: 'route-113 (route, 100x20): ash fields, the glassblower''s hut, ash drifts, Magma Tunnel mouths · need: ash as a ground kind, drifts as berms.'
 grid: |
   ##########
   ##########

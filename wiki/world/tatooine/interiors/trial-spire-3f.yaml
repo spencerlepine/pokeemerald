@@ -4,7 +4,16 @@ planet: TATOOINE
 kind: interior
 replaces: TrainerHill_3F
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'Trial Spire 3F: vanilla room layout kept for the blockout.'
+notes: 'Interior: needs the room kit (walls, doors, floors) first. Grouped by room type. All need the room kit (walls, doors, floors) first. - Homes, about 30: sandstone
+  walls, round-cornered rooms, low beds, a cooking unit, a table. Luke''s homestead rooms, Owen Lars''s, Camie''s, the Korr home, the player''s home with upstairs.
+  - Bacta centers and supply depots (one per town): a counter, bacta tanks, shelves, a StarNAV-style terminal. - Gyms: Doran''s Normal gym (plain hall), Biggs''s
+  Rock gym (boulders inside), Watto''s Electric gym in a junk shop (junk piles, cages). Each is a different room. - Cantina: bar, booths, band stage, the fan club
+  room upstairs. - Spacer Museum: display stands, a podracer on display, a ship model. - Shipyard, docking bays and hangars (6): open hangar floors with a parked
+  freighter or the Falcon, fuel hoses, crates, a StarNAV console in the ship room. - Prof. Korr''s lab: benches, a scanner, companion pods. - Academy, House Organa
+  office tower (several floors), Trick House, podrace grandstand interior, Tosche power room (generator), Jabba''s throne room (dais, rancor pit hatch, steps), Jabba''s
+  barge dock, Ben''s hut. - Caves listed above also count as rooms.'
 grid: |
   ################
   ##.#########.###

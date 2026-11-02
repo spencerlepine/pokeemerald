@@ -4,8 +4,12 @@ planet: GRAND ARENA
 kind: route
 replaces: BattleFrontier_OutsideWest
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'West half of Lando''s Grand Arena island: the Dome, Factory and Pike, Lando''s own villa, lounges and the supply depot. Ships dock at the reception gate in
   the south.'
+notes: 'grand-arena-outside-west and -east (56x72, 72x72): the Dome, Factory, Pike, Lando''s villa, the Tower, Arena, Palace, Pyramid, ranking hall, exchange corner,
+  bacta center, lounges, the reception gate · need: seven distinct big facilities (each a landmark-sized building with its own silhouette: a dome, a factory with
+  stacks, a long pike hall, a tall tower, a palace, a pyramid), sea all round, cliffs.'
 pos: [-56, -4]
 grid: |
   ~~~~~##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##~~~##~~~~~##~

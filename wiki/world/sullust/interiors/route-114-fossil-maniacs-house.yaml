@@ -4,7 +4,10 @@ planet: SULLUST
 kind: interior
 replaces: Route114_FossilManiacsHouse
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'Route 114 Fossil Maniacs House: a home; residents keep vanilla''s spots and scripts.'
+notes: 'route-114 (route, 40x80): rocky road down to Starfall Cavern, Tess''s workshop, fossil collector''s home, a river · need: basalt columns (hexagonal prisms,
+  have oct), a waterfall where the cavern starts.'
 grid: |
   ##########
   ####.#####

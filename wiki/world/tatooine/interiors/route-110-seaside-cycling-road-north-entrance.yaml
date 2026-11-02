@@ -4,7 +4,10 @@ planet: TATOOINE
 kind: interior
 replaces: Route110_SeasideCyclingRoadNorthEntrance
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'Route 110 Seaside Cycling Road North Entrance: vanilla room layout kept for the blockout.'
+notes: 'route-110 (route, 40x100): the Boonta Eve course: a raised speeder road on pylons running the whole map over a canyon, side paths underneath, Garindan''s
+  Trick House · need: the raised-road layer (walk under it), course markers, lap banners, a long elevated structure with supports.'
 grid: |
   ###############
   ###############

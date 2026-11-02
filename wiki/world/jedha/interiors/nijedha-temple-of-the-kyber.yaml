@@ -4,7 +4,10 @@ planet: JEDHA
 kind: interior
 replaces: new
 status: BLOCKOUT
+art_status: pending-mockup
 story: Hall of the Guardians of the Whills, kyber lamps along the walls.
+notes: 'nijedha (town, 44x34): the holy city: dense stone houses in a wall, the Temple of the Kyber (stepped), prayer candles, the toppled Jedi statue · need: a walled
+  city edge (giant wall, partly seen), the fallen statue (a tilted giant figure, one-off), candle clusters.'
 grid: |
   ||||||||||||||||||
   ||||||||||||||||||

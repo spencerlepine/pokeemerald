@@ -4,8 +4,12 @@ planet: BESPIN
 kind: town
 replaces: LilycoveCity
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'Floating city over Bespin''s cloud sea: the Galleria, museum, Showcase hall and Lando''s flat round a central plaza. Ships land on the west platform; the
   lift in the east goes down to the under-levels where the Cartel hides.'
+notes: 'cloud-city (town, 70x46): the floating city: central plaza, Galleria (winged), museum, Showcase hall, Lando''s flat, round towers, west landing platform,
+  the east lift down to the under-levels, skybridges · unique: every edge is a drop into cloud · need: floating-platform mode (fascia and underside at the edge, clouds
+  below instead of ground), skybridges, cloud cars parked.'
 pos: [0, 0]
 grid: |
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~====~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

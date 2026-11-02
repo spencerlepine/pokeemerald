@@ -4,7 +4,9 @@ planet: KASHYYYK
 kind: dungeon
 replaces: Underwater_Route105
 status: BLOCKOUT
+art_status: pending-mockup
 story: Under the lagoon on Route 105.
+notes: 'underwater-route-105: under the lagoon · need: underwater mode (blue tint, bubbles, seaweed, rock).'
 pos: [268, 403]
 grid: |
   ########################################

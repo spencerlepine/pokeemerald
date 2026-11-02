@@ -4,7 +4,10 @@ planet: ILUM
 kind: dungeon
 replaces: VictoryRoad_B2F
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'Crystal Caves: kyber-lit ice tunnels; the final rival battle with Luke is on B1F, and Boba''s finale rematch waits there too.'
+notes: 'crystal-caves (3 rooms): kyber-lit ice tunnels, the final rival fight, Boba''s rematch, a lake on B2F · need: ice cave mode with glowing crystal clusters
+  (shard kit plus glow), a dark lake.'
 grid: |
   ##############################################
   ####~~~~~~~~~~~~~~~~~~~~~~~~#########.########

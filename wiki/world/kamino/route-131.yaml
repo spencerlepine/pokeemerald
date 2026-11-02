@@ -4,7 +4,9 @@ planet: KAMINO
 kind: route
 replaces: Route131
 status: BLOCKOUT
+art_status: pending-mockup
 story: Storm sea east of Tipoca City; rain never stops. Swimmers and clone cadets on training rigs.
+notes: 'Storm sea: endless rain, grey waves, white domes on stilts, rocky stacks.'
 pos: [50, -1]
 grid: |
   ####################~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

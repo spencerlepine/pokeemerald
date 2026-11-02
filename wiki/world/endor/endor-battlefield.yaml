@@ -4,8 +4,11 @@ planet: ENDOR
 kind: landmark
 replaces: new
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'Optional: the forest clearing where the battle was fought: AT-ST wrecks, log traps, and an abandoned shield bunker. Stormtrooper stragglers still patrol;
   Ewok scouts keep watch.'
+notes: 'endor-battlefield (landmark, 40x30): the clearing: AT-ST wrecks, log traps hanging from trees, the abandoned shield bunker · need: AT-ST (two-legged walker,
+  wedge head, needs hull and rotated boxes), log traps (logs on ropes), fallen logs.'
 pos: [80, 7]
 grid: |
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT

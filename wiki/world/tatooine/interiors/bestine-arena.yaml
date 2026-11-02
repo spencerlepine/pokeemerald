@@ -4,7 +4,10 @@ planet: TATOOINE
 kind: interior
 replaces: RustboroCity_Gym
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'Biggs Darklighter (Rock)''s arena: puzzle floor and arena trainers kept from vanilla.'
+notes: 'bestine (town, 48x62): capital, one long main street. House Organa office tower (tall), the academy (winged), Biggs''s Rock gym, market plaza, many homes
+  · bordered by cliffs north and the Dune Sea road south · unique: a real skyline, two or three tall towers of different heights, the only "city" on Tatooine.'
 grid: |
   ###########
   ###########

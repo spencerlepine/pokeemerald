@@ -4,7 +4,9 @@ planet: JEDHA
 kind: route
 replaces: MtPyre_Summit
 status: BLOCKOUT
+art_status: pending-mockup
 story: Summit of the Jedha Temple where the Guardians of the Whills keep the RED and BLUE KYBER.
+notes: 'jedha-temple-summit (route, 50x37): the summit with the Guardians and the red and blue kyber shrines · need: glowing crystals, a shrine dais.'
 grid: |
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   ~~~~~~~~~~~~~~~~~#############~~~~~~~~~~~~~~~~~~~~

@@ -4,7 +4,10 @@ planet: SULLUST
 kind: interior
 replaces: FallarborTown_PokemonCenter_2F
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'Bacta Center upstairs: link and trade lounge (vanilla Cable Club, shared kit).'
+notes: 'inyusu-tor (town, 40x28): ash farm town, greenhouses, Dr. Tien''s observatory with a dome, ash falling like snow · need: greenhouses (glass boxes, have glass-dome),
+  observatory dome with a slit, ash drifts.'
 grid: |
   ##############
   ##############

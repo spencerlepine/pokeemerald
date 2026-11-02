@@ -4,7 +4,9 @@ planet: KAMINO
 kind: route
 replaces: Route132
 status: BLOCKOUT
+art_status: pending-mockup
 story: Strong currents west of Tipoca City push the player along (vanilla current tiles).
+notes: 'Storm sea: endless rain, grey waves, white domes on stilts, rocky stacks.'
 pos: [-80, -2]
 grid: |
   ~~##~~~####~~##~##~##~~~~~~~~~~~~~~~~####~~~~~~##~~##~~~~~~~##~##~~~~###########

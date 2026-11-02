@@ -4,8 +4,11 @@ planet: TATOOINE
 kind: landmark
 replaces: new
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'Optional: Jabba''s desert palace at the far edge of the Dune Sea. Cartel thugs guard the gate; inside, Jabba plots to catch the sea titan SANDO. A rematch
   ladder of Cartel trainers and a rancor pit.'
+notes: 'jabbas-palace (landmark, 44x34): the palace at the far edge of the Dune Sea: a huge rounded fortress with a gate guarded by thugs, outer walls, the barge
+  dock · unique landmark set piece: the palace is bigger than the map and partly seen, with its gate as the only way in. Need: a one-off model.'
 pos: [132, -263]
 grid: |
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT

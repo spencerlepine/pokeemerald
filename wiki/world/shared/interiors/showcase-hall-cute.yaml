@@ -4,7 +4,10 @@ planet: SHARED
 kind: interior
 replaces: ContestHallCute
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'Showcase Hall Cute: vanilla room layout kept for the blockout.'
+notes: 'Interior: needs the room kit (walls, doors, floors) first. Rooms used on several planets: the ship rooms (one per route between planets, each with a StarNAV
+  console and the ship''s cockpit or hold), the standard bacta center, supply depot and arena interiors. ---'
 grid: |
   ...............
   #TTTTTTTTTTTTT#

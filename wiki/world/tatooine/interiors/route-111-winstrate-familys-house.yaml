@@ -4,7 +4,11 @@ planet: TATOOINE
 kind: interior
 replaces: Route111_WinstrateFamilysHouse
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'Route 111 Winstrate Familys House: a home; residents keep vanilla''s spots and scripts.'
+notes: 'route-111 (route, 40x140): the Dune Sea: open sand with dune ridges, sandstorm zone, Krayt Graveyard tunnel mouths, Tusken Ruins entrance, the wandering Sandcrawler,
+  Pit of Carkoon, sail barge wreck · need: dunes as soft berms, the sandcrawler (a huge tracked wedge, true scale, partly seen), the sarlacc pit (sunken, with a mouth),
+  the barge wreck (tilted hull), krayt bones (rib arcs).'
 grid: |
   ###########
   ###########

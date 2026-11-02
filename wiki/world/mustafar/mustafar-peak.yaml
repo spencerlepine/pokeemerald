@@ -4,7 +4,10 @@ planet: MUSTAFAR
 kind: route
 replaces: MtChimney
 status: BLOCKOUT
+art_status: pending-mockup
 story: Lava summit where the shuttle from Tatooine lands and Vader is fought for the first time; the Empire's machine drills into the volcano.
+notes: 'mustafar-peak (route, 40x47): the summit: the shuttle pad, the Empire''s drill rig boring into the volcano, the first Vader fight · need: lava as liquid with
+  glow on nearby faces, the drill rig (a tall Imperial machine, giant, partly seen), the crater rim.'
 grid: |
   #############.######.##.################
   ########################################

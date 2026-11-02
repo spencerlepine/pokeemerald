@@ -4,7 +4,10 @@ planet: ASTEROID FIELD
 kind: dungeon
 replaces: SkyPillar_3F
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'Inside the Asteroid Spire: cracked floors (hover-bike speed) and falling rubble.'
+notes: 'asteroid-spire (6 rooms): the docking hollow where ships berth, then five floors of cracked floors (hover-bike speed) and falling rubble · need: cave mode
+  in grey, cracked floor tiles, rubble piles.'
 grid: |
   ##############
   ###.###.###.##

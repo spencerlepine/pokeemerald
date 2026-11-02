@@ -4,7 +4,10 @@ planet: TYTHON
 kind: route
 replaces: SouthernIsland_Exterior
 status: BLOCKOUT
+art_status: pending-mockup
 story: 'Tython Isle: a small Force-sacred island. A path climbs from the landing pad to the standing stones where ASHLA or BOGAN appears.'
+notes: 'tython-isle-exterior and -interior (33x30, 27x24): the island in the sea, a path up cliffs, the stone circle in a grove · need: sea mode, standing stones
+  (tall tapered prisms, have), a circle layout.'
 grid: |
   ###TTTTTTTTTTTTTTTTTTTTTTTT.####~
   ###TTTTTTTTTTTTTTTTTTTTTTTT#####~
