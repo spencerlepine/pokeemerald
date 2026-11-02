@@ -1,0 +1,45 @@
+# Evolution complete: hot-swap of MUS_EVOLVED (wiki audio:MUS_EVOLVED), a one-shot jingle on the SE2 player.
+# SCRATCH: no film cue, written from the brief (sw_subject): "Evolution complete: triumphant sting."
+# A three-bar Rebel brass sting in Eb: trumpet call climbing the tonic triad, the flat-seven (Db) answered by Bb,
+# and a held Eb chord with crash and timpani; horn and tuba underneath, squares for the harmony and sparkle.
+# 144 bpm, 3 bars, 5.0 s (vanilla 5.0 s), no loop; vanilla fanfare voicegroup, priority 5.
+name: evolved
+replaces: MUS_EVOLVED
+form: JINGLE
+loop: false
+player: SE2
+voicegroup: fanfare               # kit 0, timpani 47, trumpet 56, tuba 58, horn 60, squares 80/81
+master_volume: 90
+song_priority: 5
+tempo: 144
+steps_per_beat: 4                 # sixteenth-note grid
+time_signature: [4, 4]
+seed: 171
+
+parts:
+  trumpet: {program: 56, channel: 0, volume: 110, pan: 6,   range: [Bb4, Bb5], gate: 0.9}
+  horn:    {program: 60, channel: 1, volume: 94,  pan: -12, range: [Eb4, Bb4], gate: 0.95}
+  tuba:    {program: 58, channel: 2, volume: 92,  pan: 0,   range: [Bb1, Eb2], gate: 0.95}
+  timpani: {program: 47, channel: 3, volume: 96,  pan: 12,  range: [Bb1, Eb2], gate: 1.0}
+  sq1:     {program: 80, channel: 4, volume: 48,  pan: 30,  range: [Eb4, Eb6], gate: 0.6, mono: true}
+  sq2:     {program: 81, channel: 5, volume: 44,  pan: -30, range: [Eb4, Eb6], gate: 0.9, mono: true}
+  kit:     {program: 0,  channel: 6, volume: 80,  pan: 0, role: drums, kit: {crash: 57, snare: 40}}
+
+grooves:
+  sting:
+    snare: "x.xx............|..........xxxxxx|................"
+    crash: "................|................|x..............."
+
+sections:
+  sting:
+    bars: 3
+    parts:
+      trumpet: "Bb4:2 Bb4:1 Bb4:1 Eb5:4 G5:4 Bb5:4 | Ab5:4 F5:2 Ab5:2 Bb5:4 F5:4 | >G5:12 r:4"
+      horn:    "G4:8 Bb4:8 | Ab4:8 F4:8 | >Eb4:12 r:4"
+      tuba:    "Eb2:8 Bb1:8 | Db2:8 Bb1:8 | >Eb2:12 r:4"
+      timpani: "Eb2:4 r:12 | r:8 Bb1:1 Bb1:1 Bb1:1 Bb1:1 Bb1:1 Bb1:1 Bb1:1 Bb1:1 | >Eb2:4 r:12"
+      sq1:     "Eb5:1 G5:1 Bb5:1 G5:1 Eb5:1 G5:1 Bb5:1 Eb6:1 Bb5:1 G5:1 Eb5:1 G5:1 Bb5:1 Eb6:1 Bb5:1 G5:1 | Db5:1 F5:1 Ab5:1 F5:1 Db5:1 F5:1 Ab5:1 Db6:1 D5:1 F5:1 Bb5:1 F5:1 D5:1 F5:1 Bb5:1 D6:1 | Eb6:10 r:6"
+      sq2:     "Bb4:8 G4:8 | F4:8 D4:8 | Bb4:12 r:4"
+      kit: sting
+
+arrangement: [sting]
