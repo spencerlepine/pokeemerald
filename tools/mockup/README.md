@@ -7,6 +7,8 @@ pink-family figures for people (gold ring = story, red ring = trainer). 16 px pe
 It is a layer on top of phase 1: it **reads** `wiki/world/` and **writes only** `wiki/mockup/`, so the mockup
 can be scrapped and redone without touching a layout.
 
+Needs pillow, pyyaml and numpy.
+
 ```bash
 cd tools/mockup
 python3 -m mockup render --all            # every area -> wiki/mockup/<planet>/<area>.png
