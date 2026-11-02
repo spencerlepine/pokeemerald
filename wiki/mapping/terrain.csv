@@ -584,8 +584,8 @@ terrain:ever_grande:ground-path:ne,ever_grande,ground-path,ne,1,4,03e 04c 067 07
 terrain:ever_grande:ground-path:nw,ever_grande,ground-path,nw,1,4,03c 048 065 070,070,learned,5,ILUM,1,0,tilegen terrain,pending-final-art,world/greybox/sheets/ever_grande.png,"3,1",
 terrain:ever_grande:ground-path:se,ever_grande,ground-path,se,1,4,03e 054 05f 06f,054,learned,6,ILUM,1,0,tilegen terrain,pending-final-art,world/greybox/sheets/ever_grande.png,"4,1",
 terrain:ever_grande:ground-path:sw,ever_grande,ground-path,sw,1,3,03c 050 06d,06d,learned,6,ILUM,1,0,tilegen terrain,pending-final-art,world/greybox/sheets/ever_grande.png,"5,1",
-terrain:ever_grande:ground-path:inner-ne,ever_grande,ground-path,inner-ne,1,3,03d 04a 04b,04b,learned,4,ILUM,1,0,tilegen terrain,pending-mockup,world/greybox/sheets/ever_grande.png,"6,1",No vanilla tile for this role: placeholder in the sheet. Needed by ilum.
-terrain:ever_grande:ground-path:inner-nw,ever_grande,ground-path,inner-nw,1,2,03d 04a,04a,learned,3,ILUM,1,0,tilegen terrain,pending-mockup,world/greybox/sheets/ever_grande.png,"7,1",No vanilla tile for this role: placeholder in the sheet. Needed by ilum.
+terrain:ever_grande:ground-path:inner-ne,ever_grande,ground-path,inner-ne,1,3,03d 04a 04b,04b,learned,4,ILUM,1,0,tilegen terrain,pending-final-art,world/greybox/sheets/ever_grande.png,"6,1",No vanilla tile for this role: placeholder in the sheet. Needed by ilum.
+terrain:ever_grande:ground-path:inner-nw,ever_grande,ground-path,inner-nw,1,2,03d 04a,04a,learned,3,ILUM,1,0,tilegen terrain,pending-final-art,world/greybox/sheets/ever_grande.png,"7,1",No vanilla tile for this role: placeholder in the sheet. Needed by ilum.
 terrain:ever_grande:ground-path:inner-se,ever_grande,ground-path,inner-se,1,4,03d 053 057 05a,057,learned,4,ILUM,1,0,tilegen terrain,pending-final-art,world/greybox/sheets/ever_grande.png,"0,2",
 terrain:ever_grande:ground-path:inner-sw,ever_grande,ground-path,inner-sw,1,3,03d 051 052,052,learned,4,ILUM,1,0,tilegen terrain,pending-final-art,world/greybox/sheets/ever_grande.png,"1,2",
 terrain:ever_grande:ground-rock:fill,ever_grande,ground-rock,fill,1,1,05d,05d,learned,1,ILUM,1,0,tilegen terrain,pending-final-art,world/greybox/sheets/ever_grande.png,"2,2",
@@ -935,7 +935,7 @@ terrain:lavaridge:ground-path:w,lavaridge,ground-path,w,1,1,0a0,0a0,learned,1,SU
 terrain:lavaridge:ground-path:ne,lavaridge,ground-path,ne,1,2,08c 0ae,08c,learned,2,SULLUST,1,0,tilegen terrain,pending-final-art,world/greybox/sheets/lavaridge.png,"3,3",
 terrain:lavaridge:ground-path:nw,lavaridge,ground-path,nw,1,3,091 098 0ae,0ae,learned,3,SULLUST,1,0,tilegen terrain,pending-final-art,world/greybox/sheets/lavaridge.png,"4,3",
 terrain:lavaridge:ground-path:se,lavaridge,ground-path,se,1,1,08a,08a,learned,1,SULLUST,1,0,tilegen terrain,pending-final-art,world/greybox/sheets/lavaridge.png,"5,3",
-terrain:lavaridge:ground-path:inner-ne,lavaridge,ground-path,inner-ne,1,1,091,091,learned,1,SULLUST,1,0,tilegen terrain,pending-mockup,world/greybox/sheets/lavaridge.png,"6,3",No vanilla tile for this role: placeholder in the sheet. Needed by pirin.
+terrain:lavaridge:ground-path:inner-ne,lavaridge,ground-path,inner-ne,1,1,091,091,learned,1,SULLUST,1,0,tilegen terrain,pending-final-art,world/greybox/sheets/lavaridge.png,"6,3",No vanilla tile for this role: placeholder in the sheet. Needed by pirin.
 terrain:lavaridge:ground-path:strip-h,lavaridge,ground-path,strip-h,1,1,0ae,0ae,learned,2,SULLUST,1,0,tilegen terrain,pending-final-art,world/greybox/sheets/lavaridge.png,"7,3",
 terrain:lavaridge:ground-path:strip-v,lavaridge,ground-path,strip-v,1,1,0a0,0a0,learned,1,SULLUST,1,0,tilegen terrain,pending-final-art,world/greybox/sheets/lavaridge.png,"0,4",
 terrain:lavaridge:ground-path:tip-n,lavaridge,ground-path,tip-n,1,1,098,098,learned,1,SULLUST,1,0,tilegen terrain,pending-final-art,world/greybox/sheets/lavaridge.png,"1,4",
@@ -1440,7 +1440,7 @@ terrain:rustboro:ground-path:nw,rustboro,ground-path,nw,1,2,06e 150,150,learned,
 terrain:rustboro:ground-path:se,rustboro,ground-path,se,1,2,136 14f,136,learned,2,TATOOINE,1,0,tilegen terrain,pending-final-art,world/greybox/sheets/rustboro.png,"5,1",
 terrain:rustboro:ground-path:sw,rustboro,ground-path,sw,1,3,06d 146 14e,146,learned,3,TATOOINE,1,0,tilegen terrain,pending-final-art,world/greybox/sheets/rustboro.png,"6,1",
 terrain:rustboro:ground-path:inner-ne,rustboro,ground-path,inner-ne,1,1,14f,14f,learned,1,TATOOINE,1,0,tilegen terrain,pending-final-art,world/greybox/sheets/rustboro.png,"7,1",
-terrain:rustboro:ground-path:inner-sw,rustboro,ground-path,inner-sw,1,1,14e,14e,learned,1,TATOOINE,1,0,tilegen terrain,pending-mockup,world/greybox/sheets/rustboro.png,"0,2",No vanilla tile for this role: placeholder in the sheet. Needed by bestine.
+terrain:rustboro:ground-path:inner-sw,rustboro,ground-path,inner-sw,1,1,14e,14e,learned,1,TATOOINE,1,0,tilegen terrain,pending-final-art,world/greybox/sheets/rustboro.png,"0,2",No vanilla tile for this role: placeholder in the sheet. Needed by bestine.
 terrain:rustboro:ground-path:strip-h,rustboro,ground-path,strip-h,1,4,069 06a 06b 0cb,069,learned,6,TATOOINE,2,0,tilegen terrain,pending-final-art,world/greybox/sheets/rustboro.png,"1,2",
 terrain:rustboro:ground-path:tip-e,rustboro,ground-path,tip-e,1,4,05f 06c 0db 157,0db,learned,4,TATOOINE | TYTHON,3,0,tilegen terrain,pending-final-art,world/greybox/sheets/rustboro.png,"2,2",
 terrain:rustboro:ground-path:tip-w,rustboro,ground-path,tip-w,1,4,05e 068 0cb 156,0cb,learned,4,TATOOINE | TYTHON,3,0,tilegen terrain,pending-final-art,world/greybox/sheets/rustboro.png,"3,2",

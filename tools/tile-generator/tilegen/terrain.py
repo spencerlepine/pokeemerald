@@ -454,7 +454,11 @@ def write_catalog(items: dict, needs_by_area: dict, all_areas: list[dict]) -> li
         o = old.get(tid, {})
         hand = o.get("use_set") == "hand" and o.get("use")
         use = o["use"] if hand else (f"{metas[0]:03x}" if metas else "")
-        status = o.get("status") or ("pending-final-art" if use else "pending-mockup")
+        status = o.get("status") or ""
+        if not use:                                   # no tile: TODO, whatever it said before
+            status = "pending-mockup"
+        elif status in ("", "pending-mockup"):        # a tile now exists: greybox done
+            status = "pending-final-art"
         note = o.get("notes", "")
         if not note:
             if phase(name) == 2:
