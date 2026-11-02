@@ -1,0 +1,22 @@
+name: acornlet
+slot: seedot
+brief: 'ACORNLET: creature call that fits its look and size. Seed-shaped sprite that hangs from Endor''s branches.'
+kind: creature
+size: 0.22
+seed: 151
+layers:
+  # Hanging acorn sprite: two hollow wooden knocks and a tiny chirp.
+  # Family voice (wood knocks + narrow-pulse o -> i chirp) shared with LEAFTRICK and GALELORD.
+  - type: click
+    times: [0.0, 0.07]
+    gain: 0.8
+  - type: voice
+    at: 0.13
+    pitch: [[0.0, 620.0], [0.055, 806.0], [0.165, 713.0], [0.22, 558.0]]
+    source: {pulse: 0.9, saw: 0.3, pulse_width: 0.15, noise: 0.06}
+    vowels: [[0.0, o], [0.088, e], [0.22, i]]
+    env: [[0.0, 0], [0.0088, 1], [0.165, 0.8], [0.231, 0]]
+    growl: 0.05
+    growl_rate: 50
+    jitter: 0.015
+master: {rms: 0.32}

@@ -1,0 +1,38 @@
+name: zillobeast
+slot: tyranitar
+brief: 'ZILLOBEAST: creature call that fits its look and size. The Zillo Beast.'
+kind: creature
+size: 0.85
+seed: 143
+layers:
+  # The Zillo Beast: the family snarl as a colossal roar, stepped and growling, with a rumbling
+  # rock-slide breath under it.
+  - type: voice
+    pitch: [[0.0, 120.0], [0.176, 187.5], [0.66, 165.0], [1.1, 105.0]]
+    pitch_step: 0.05
+    source: {saw: 0.9, pulse: 0.4, pulse_width: 0.3, noise: 0.15}
+    vowels: [[0.0, aw], [0.33, a], [1.1, rr]]
+    env: [[0.0, 0], [0.0264, 1], [0.77, 0.8], [1.1, 0]]
+    growl: 0.6
+    growl_rate: 30
+    jitter: 0.03
+    drive: 2.6
+  - type: voice
+    at: 0.05
+    pitch: [[0.0, 360.0], [0.16, 562.5], [0.6, 495.0], [1.0, 315.0]]
+    pitch_step: 0.05
+    source: {saw: 0.9, pulse: 0.4, pulse_width: 0.3, noise: 0.15}
+    vowels: [[0.0, aw], [0.3, a], [1.0, rr]]
+    env: [[0.0, 0], [0.024, 1], [0.7, 0.8], [1.0, 0]]
+    growl: 0.2
+    growl_rate: 30
+    jitter: 0.03
+    drive: 1.5
+    gain: 0.5
+  - type: noise
+    at: 0.1
+    band: [[0, 500], [0.9, 300]]
+    q: 1.0
+    env: [[0, 0], [0.1, 0.4], [0.8, 0.3], [0.95, 0]]
+    gain: 0.3
+master: {tilt_db: 4}

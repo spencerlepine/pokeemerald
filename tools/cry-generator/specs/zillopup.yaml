@@ -1,0 +1,19 @@
+name: zillopup
+slot: larvitar
+brief: 'ZILLOPUP: creature call that fits its look and size. Zillo beast hatchling.'
+kind: creature
+size: 0.42
+seed: 141
+layers:
+  # Zillo hatchling: a small gravelly snarl that pitches up and crashes down.
+  # Family voice (stepped saw throat, aw -> a -> rr, 30 Hz growl) shared with ZILLOSHELL and ZILLOBEAST.
+  - type: voice
+    pitch: [[0.0, 272.0], [0.092, 425.0], [0.345, 374.0], [0.575, 238.0]]
+    pitch_step: 0.03
+    source: {saw: 0.9, pulse: 0.4, pulse_width: 0.3, noise: 0.15}
+    vowels: [[0.0, aw], [0.1725, a], [0.575, rr]]
+    env: [[0.0, 0], [0.0138, 1], [0.4025, 0.8], [0.575, 0]]
+    growl: 0.35
+    growl_rate: 30
+    jitter: 0.03
+    drive: 2.2

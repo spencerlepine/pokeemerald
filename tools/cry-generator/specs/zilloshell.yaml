@@ -1,0 +1,26 @@
+name: zilloshell
+slot: pupitar
+brief: 'ZILLOSHELL: creature call that fits its look and size. Zillo beast in its armored shell.'
+kind: creature
+size: 0.59
+seed: 142
+layers:
+  # Armored shell stage: the family snarl muffled inside a rock shell: a hollow, lower grunt
+  # with stone rattle clicks.
+  - type: click
+    times: [0.0, 0.03, 0.06]
+    gain: 0.6
+  - type: voice
+    at: 0.04
+    pitch: [[0.0, 192.0], [0.056, 300.0], [0.21, 264.0], [0.35, 168.0]]
+    pitch_step: 0.03
+    source: {saw: 0.9, pulse: 0.4, pulse_width: 0.3, noise: 0.15}
+    vowels: [[0, u], [0.1, o], [0.35, rr]]
+    env: [[0.0, 0], [0.0084, 1], [0.245, 0.8], [0.35, 0]]
+    growl: 0.5
+    growl_rate: 30
+    jitter: 0.03
+    drive: 2.2
+  - type: click
+    times: [0.3, 0.33]
+    gain: 0.4

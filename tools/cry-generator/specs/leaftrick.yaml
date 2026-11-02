@@ -1,0 +1,28 @@
+name: leaftrick
+slot: nuzleaf
+brief: 'LEAFTRICK: creature call that fits its look and size. Tricky forest imp with a leaf whistle.'
+kind: creature
+size: 0.46
+seed: 152
+layers:
+  # Tricky forest imp: the family knock and chirp, lower and sly, then a sharp leaf-whistle
+  # trill.
+  - type: click
+    times: [0.0]
+    gain: 0.7
+  - type: voice
+    at: 0.05
+    pitch: [[0.0, 460.0], [0.06, 598.0], [0.18, 529.0], [0.24, 414.0]]
+    source: {pulse: 0.9, saw: 0.3, pulse_width: 0.15, noise: 0.06}
+    vowels: [[0.0, o], [0.096, e], [0.24, i]]
+    env: [[0.0, 0], [0.0096, 1], [0.18, 0.8], [0.252, 0]]
+    growl: 0.15
+    growl_rate: 50
+    jitter: 0.015
+  - type: tone
+    at: 0.3
+    wave: sine
+    pitch: [[0, 1700], [0.08, 2300], [0.2, 1900]]
+    warble: {rate: 26, depth: 0.05}
+    env: [[0, 0], [0.01, 0.8], [0.18, 0.6], [0.22, 0]]
+    gain: 0.6

@@ -1,0 +1,27 @@
+name: galelord
+slot: shiftry
+brief: 'GALELORD: creature call that fits its look and size. Forest spirit whose leaf fans whip up gales.'
+kind: creature
+size: 0.54
+seed: 153
+layers:
+  # Gale spirit: the family chirp grown into a deep commanding cry, swept away by a gust of
+  # wind from its leaf fans.
+  - type: click
+    times: [0.0]
+    gain: 0.7
+  - type: voice
+    at: 0.04
+    pitch: [[0.0, 320.0], [0.13, 416.0], [0.39, 368.0], [0.52, 288.0]]
+    source: {pulse: 0.9, saw: 0.3, pulse_width: 0.15, noise: 0.06}
+    vowels: [[0.0, o], [0.208, e], [0.52, i]]
+    env: [[0.0, 0], [0.0208, 1], [0.39, 0.8], [0.546, 0]]
+    growl: 0.3
+    growl_rate: 50
+    jitter: 0.015
+  - type: noise
+    at: 0.25
+    band: [[0, 600], [0.3, 1800], [0.62, 900]]
+    q: 1.8
+    env: [[0, 0], [0.15, 0.6], [0.5, 0.4], [0.64, 0]]
+    gain: 0.45
