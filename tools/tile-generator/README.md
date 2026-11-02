@@ -42,6 +42,17 @@ python -m tilegen terrain build --planet HOTH        # game-format greybox tiles
   never drew in that pair has no tile: the cell shows the placeholder and the row is added as TODO
   (`pending-mockup`) with the areas that need it. `PAIR_OVERRIDE` picks the pair for a redesigned area whose
   vanilla pair is wrong for it (NiJedha: Rustboro's stone city, not Mt. Pyre).
+- **Planet kit.** `PLANET_KIT` swaps vanilla items per planet (owner: no Hoenn tree border outside Endor and
+  Yavin 4): trees become cliffs on Tatooine, Sullust, Hoth, Jedha and the rock worlds, wroshyr on Kashyyyk,
+  gnarltrees on Dagobah, fungi on Felucia, cloud edge on Bespin, platform rails on Kamino; Tatooine's sea is
+  the Dune Sea, Dagobah's sand is mud, Kamino's ground is deck. The table is in `wiki/bible/WORLD_ART.md`.
+  The swap applies to every area, vanilla layout or not: swapped cells are re-tiled from the vocabulary
+  (cliff roles from the pair, placeholders for the net-new items in `NEW_ITEMS`), other cells keep their
+  vanilla metatile. Net-new items get rows under a planet sheet, `terrain:sw-<planet>:<item>:<role>`, all
+  `pending-mockup`, and their placeholder cells are toned by group (dark = blocks, blue = surface, light =
+  ground, sand for the Dune Sea) so a map of placeholders still reads.
+- **Footprints.** On a redesigned area the yaml's `buildings` and sized `props` are drawn as solid blocks
+  (dark for buildings, grey for props), so a town reads with its volumes before any building art exists.
 - **Sheets.** `wiki/world/greybox/sheets/<tileset>.png` is real size: 128 px wide, 16x16 cells, one per csv row
   in csv order (`sheet_cell` = column,row), the placeholder where the tile is missing. The placeholder is z-day's
   `16x16-placeholder-image-sprite.png` (magenta circle), copied to `tilegen/data/placeholder-16x16.png`.

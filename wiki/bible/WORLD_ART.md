@@ -46,6 +46,34 @@ and a rock's outline sit on the cell line. Z-day's art was finer and more detail
   and sizes, ships, shipwrecks, fossils, stalagmites, mangroves, bushes) gets a row with a footprint and a
   place on the map while it is still a wireframe; the art is drawn afterwards, one row at a time.
 
+## Planet borders and surfaces (owner 2026-11-02)
+
+Hoenn frames every map with the same tree line. That reads as Earth. Only Endor and Yavin 4 keep trees; every
+other planet borders its maps with its own thing, and swaps the surfaces that do not fit. The table is code
+(`PLANET_KIT` in `tools/tile-generator/tilegen/terrain.py`): the terrain renders apply it to every area,
+vanilla layout or not, so a Tatooine route's tree line is already drawn as mesa cliffs and a Kashyyyk route's
+as wroshyr trunks (placeholder until drawn). Net-new items get their own sheet, `wiki/world/greybox/sheets/sw-<planet>.png`,
+and one row per edge and corner in `terrain.csv`.
+
+| Planet | Border (replaces trees) | Surfaces swapped | Drawn with |
+|---|---|---|---|
+| Tatooine | Mesa and canyon cliffs | Sea becomes the Dune Sea (SURF = sand skiff, mechanics unchanged) | vanilla cliffs; `dune-sea` net-new |
+| Kashyyyk | Wroshyr trunks and roots | Tree platforms become wroshyr platforms | `wroshyr`, `wroshyr-platform` net-new |
+| Sullust | Lava-rock ridges | | vanilla cliffs, Sullust recipe |
+| Mustafar | Obsidian cliffs | Lava by recipe | vanilla cliffs, lava recipe |
+| Endor | Redwoods (trees kept) | | vanilla trees |
+| Bespin | Platform edge over the cloud layer | Water becomes cloud | `cloud-edge`, `cloud` net-new |
+| Jedha | Desert stone and ruin walls | | vanilla cliffs |
+| Yavin 4 | Jungle (trees kept) and temple stone | | vanilla trees |
+| Hoth | Ice cliffs and drifts | | vanilla cliffs, Hoth recipe |
+| Dagobah | Gnarltree roots and mangroves | Sand and paths become mud | `gnarltree`, `mud` net-new |
+| Kamino | Platform railings | Rock and grass become deck | `platform-rail`, `deck` net-new |
+| Ilum | Ice and crystal walls | | vanilla cliffs, Hoth recipe |
+| Felucia | Giant fungi | | `fungus` net-new |
+| Grand Arena, Tython, Atollon, Mortis | Rock | | vanilla cliffs |
+| Asteroid Field | Void edge | | `void-edge` net-new |
+| Death Star | Durasteel walls | | `durasteel-wall` net-new |
+
 ## Columns
 
 | Column | Meaning |

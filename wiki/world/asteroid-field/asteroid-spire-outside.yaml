@@ -52,3 +52,4 @@ warps:
   at: [14, 5]
   to: asteroid-spire-1f
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']
+pos: [0, 0]

@@ -62,3 +62,4 @@ travel:
 - {to: route-130, via: mirage, name: 'The isle sinks again (same route, normal layout)'}
 todo: ['Alternate layout of Route 130, not its own map: the game picks it with IsMirageIslandPresent.', Shown without exits so it does not overlap Route 130 on the
     planet sheet.]
+pos: [193, 0]

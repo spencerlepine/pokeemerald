@@ -65,6 +65,57 @@ PHASE2 = {"tree", "structure"}
 PAIR_OVERRIDE = {("DEATH STAR", "dungeon"): ("gTileset_General", "gTileset_Facility"),
                  ("JEDHA", "town"): ("gTileset_General", "gTileset_Rustboro")}
 
+# The planet kit (owner, 2026-11-02): no Hoenn tree border outside Endor and Yavin 4. Each planet swaps the
+# vanilla items on the left for its own: a vanilla item (cliff) is drawn with the pair's tiles, a net-new item
+# (listed in NEW_ITEMS) is a placeholder row in the planet's own sheet `sw-<planet>` until it is drawn.
+PLANET_KIT = {
+    "TATOOINE":       {"tree": "cliff", "water": "dune-sea"},
+    "KASHYYYK":       {"tree": "wroshyr", "bridge": "wroshyr-platform"},
+    "SULLUST":        {"tree": "cliff"},
+    "MUSTAFAR":       {"tree": "cliff"},
+    "ENDOR":          {},
+    "BESPIN":         {"tree": "cloud-edge", "cliff": "cloud-edge", "water": "cloud"},
+    "JEDHA":          {"tree": "cliff"},
+    "YAVIN 4":        {},
+    "HOTH":           {"tree": "cliff"},
+    "DAGOBAH":        {"tree": "gnarltree", "ground-sand": "mud", "ground-path": "mud", "sand": "mud"},
+    "KAMINO":         {"tree": "platform-rail", "cliff": "platform-rail", "ground-grass": "deck", "ground-sand": "deck",
+                       "ground-path": "deck"},
+    "ILUM":           {"tree": "cliff"},
+    "FELUCIA":        {"tree": "fungus"},
+    "GRAND ARENA":    {"tree": "cliff"},
+    "TYTHON":         {"tree": "cliff"},
+    "ATOLLON":        {"tree": "cliff"},
+    "MORTIS":         {"tree": "cliff"},
+    "ASTEROID FIELD": {"tree": "void-edge", "cliff": "void-edge"},
+    "DEATH STAR":     {"tree": "durasteel-wall"},
+}
+# net-new terrain items: item -> (group for roles, phase). Blob sets get every edge and corner itemized.
+NEW_ITEMS = {"dune-sea": "water", "wroshyr": "blocked", "wroshyr-platform": "bridge", "cloud-edge": "blocked",
+             "cloud": "water", "gnarltree": "blocked", "mud": "ground", "platform-rail": "blocked", "deck": "ground",
+             "fungus": "blocked", "void-edge": "blocked", "durasteel-wall": "wall"}
+BUILDING = 0xEFFF           # cell value for a building footprint (redesigned towns), drawn as a solid block
+PROP = 0xEFFE               # cell value for a sized prop footprint
+PH_BASE = 0xF000            # placeholder cells: PH_BASE + index into PH_ITEMS
+PH_ITEMS: list = []         # item name per placeholder code
+LAYOUT_NAMES: dict = {}     # layout name -> item name grid (filled by scan)
+
+
+def ph_code(item: str) -> int:
+    if item not in PH_ITEMS:
+        PH_ITEMS.append(item)
+    return PH_BASE + PH_ITEMS.index(item)
+
+
+def kit_item(planet: str, item: str) -> str:
+    k = PLANET_KIT.get(planet, {})
+    if item in k:
+        return k[item]
+    if item.startswith("water-") and "water" in k:
+        return k["water"]
+    return item
+
+
 WATER = {"MB_POND_WATER", "MB_DEEP_WATER", "MB_OCEAN_WATER", "MB_SOOTOPOLIS_DEEP_WATER", "MB_WATERFALL",
          "MB_INTERIOR_DEEP_WATER", "MB_NO_SURFACING", "MB_EASTWARD_CURRENT", "MB_WESTWARD_CURRENT",
          "MB_NORTHWARD_CURRENT", "MB_SOUTHWARD_CURRENT"}
@@ -109,6 +160,29 @@ PAIR_ITEMS: dict = defaultdict(Counter) # (primary, secondary) -> Counter(item) 
 LAYOUT_VOTES: dict = defaultdict(Counter)  # (primary, secondary|'*', item, role) -> Counter(meta) by layouts using it
 
 
+_group0 = R.group
+
+
+def _group(item: str) -> str:
+    return NEW_ITEMS.get(item) or _group0(item)
+
+
+R.group = _group
+_role_set0 = R.role_set
+
+
+def _role_set(item: str) -> list[str]:
+    g = NEW_ITEMS.get(item)
+    if g == "water" or g == "blocked" or item == "wroshyr-platform":
+        return R.BLOB
+    if g == "wall":
+        return R.WALL
+    return _role_set0(item)
+
+
+R.role_set = _role_set
+
+
 def pair(primary: str, secondary: str) -> gba.TilesetPair:
     k = (primary, secondary)
     if k not in _PAIRS:
@@ -147,7 +221,8 @@ def areas() -> list[dict]:
         indoor = (types.get(lay.id, "") in ("MAP_TYPE_INDOOR", "MAP_TYPE_SECRET_BASE")) if lay else \
             d.get("kind", "") == "interior"
         out.append({"id": d["id"], "planet": d.get("planet", ""), "kind": d.get("kind", ""), "path": p,
-                    "grid": grid, "layout": lay, "same": same, "indoor": indoor})
+                    "grid": grid, "layout": lay, "same": same, "indoor": indoor,
+                    "buildings": d.get("buildings") or [], "props": d.get("props") or []})
     return out
 
 
@@ -181,7 +256,7 @@ def cell_class(beh: str, coll: int, rgb_cell: np.ndarray) -> str:
     if coll:
         cell = rgb_cell.reshape(-1, 3).astype(float)
         green = ((cell[:, 1] > cell[:, 0] + 12) & (cell[:, 1] > cell[:, 2] - 10)).mean()
-        return "T" if green > 0.45 else "#"
+        return "T" if green > 0.3 else "#"       # trees and bushes (crowns, trunks with leaves) vs rock and buildings
     return "."
 
 
@@ -263,6 +338,7 @@ def scan(all_areas: list[dict] | None = None):
                     fam_cache[mid] = material(cell)
                 names[y][x] = item_name(ch, beh, fam_cache[mid], indoor)
                 metas[y, x] = mid
+        LAYOUT_NAMES[lay.name] = names
         role_grid = R.roles(names)
         keys, seen = set(), set()
         for y in range(H):
@@ -363,23 +439,66 @@ def lookup(prim: str, sec: str, item: str, role: str, stats: dict, p: gba.Tilese
     return None
 
 
-def autotile(grid: list[str], prim: str, sec: str, stats: dict, indoor: bool = False, kind: str = ""):
+def autotile(grid: list[str], prim: str, sec: str, stats: dict, indoor: bool = False, kind: str = "", planet: str = ""):
     """Grid characters -> metatile ids (MISSING where the pair has no tile for the role).
     Returns (cells, needs): needs[(item, role)] = metatile or None."""
     p = pair(prim, sec)
     names = grid_items(grid, prim, sec, indoor, kind)
+    names = [[kit_item(planet, n) for n in row] for row in names]
+    return _tile_names(names, prim, sec, stats, p)
+
+
+def _tile_names(names, prim, sec, stats, p, base=None):
+    """Item grid -> cells. `base` (vanilla metatiles) is kept where the item is the vanilla one."""
     role_grid = R.roles(names)
-    H, W = len(grid), len(grid[0])
+    H, W = len(names), len(names[0])
     out = np.full((H, W), MISSING, np.uint16)
     needs: dict = {}
     for y in range(H):
         for x in range(W):
+            if base is not None and base[y, x] != MISSING:
+                out[y, x] = base[y, x]
+                continue
             key = (names[y][x], role_grid[y][x])
             if key not in needs:
-                needs[key] = lookup(prim, sec, key[0], key[1], stats, p)
-            if needs[key] is not None:
-                out[y, x] = needs[key]
+                needs[key] = None if key[0] in NEW_ITEMS else lookup(prim, sec, key[0], key[1], stats, p)
+            out[y, x] = needs[key] if needs[key] is not None else ph_code(key[0])
     return out, needs
+
+
+def kit_layout(ar: dict, stats: dict):
+    """A vanilla layout with the planet kit applied: trees, water and grounds the planet swaps are re-tiled
+    from the item vocabulary (cliff roles from the pair, placeholders for net-new items); every other cell
+    keeps its vanilla metatile."""
+    lay = ar["layout"]
+    raw = lay.cells() & 0x3FF
+    names0 = LAYOUT_NAMES[lay.name]
+    names = [[kit_item(ar["planet"], n) for n in row] for row in names0]
+    base = raw.astype(np.uint16).copy()
+    changed = False
+    for y in range(len(names)):
+        for x in range(len(names[0])):
+            if names[y][x] != names0[y][x]:
+                base[y, x] = MISSING
+                changed = True
+    if not changed:
+        return raw, {}
+    p = pair(lay.primary, lay.secondary)
+    return _tile_names(names, lay.primary, lay.secondary, stats, p, base)
+
+
+def overlay_footprints(cells: np.ndarray, ar: dict) -> np.ndarray:
+    """Buildings and sized props from the area yaml as solid footprints (redesigned towns have no vanilla
+    building tiles). The door cell is left open."""
+    out = cells.copy()
+    H, W = out.shape
+    for kind, code in (("buildings", BUILDING), ("props", PROP)):
+        for b in ar.get(kind) or []:
+            (x, y), (w, h) = b["at"], b.get("size", [1, 1])
+            if kind == "props" and (w, h) == (1, 1):
+                continue
+            out[max(0, y):min(H, y + h), max(0, x):min(W, x + w)] = code
+    return out
 
 
 def pair_for(ar: dict, all_areas: list[dict]) -> tuple[str, str]:
@@ -408,10 +527,11 @@ def area_cells(ar: dict, all_areas: list[dict], stats: dict):
     if ar["id"] in _CELLS:
         return _CELLS[ar["id"]]
     if ar["same"]:
-        r = (ar["layout"].cells() & 0x3FF, {})
+        r = kit_layout(ar, stats)
     else:
         prim, sec = pair_for(ar, all_areas)
-        r = autotile(ar["grid"], prim, sec, stats, ar["indoor"], ar["kind"])
+        cells, needs = autotile(ar["grid"], prim, sec, stats, ar["indoor"], ar["kind"], ar["planet"])
+        r = (overlay_footprints(cells, ar), needs)
     _CELLS[ar["id"]] = r
     return r
 
@@ -444,7 +564,9 @@ def write_catalog(items: dict, needs_by_area: dict, all_areas: list[dict]) -> li
         p = pair(prim, sec)
         for (name, role), mid in needs.items():
             if mid is None:
-                key = (p.secondary.name if p.secondary.name != "0" else p.primary.name, name, role)
+                ts_new = "sw-" + by_id[aid]["planet"].lower().replace(" ", "-") if name in NEW_ITEMS else \
+                    (p.secondary.name if p.secondary.name != "0" else p.primary.name)
+                key = (ts_new, name, role)
                 r = rows_d.setdefault(key, {"metas": Counter(), "areas": set(), "planets": set(), "cells": 0, "needed_by": set()})
             else:
                 ts, local = meta_ts(p, mid)
@@ -479,7 +601,8 @@ def write_catalog(items: dict, needs_by_area: dict, all_areas: list[dict]) -> li
                 note = "Phase 2 (structures and trees): listed only."
             elif not use:
                 need = sorted(it["needed_by"])
-                note = "No vanilla tile for this role: placeholder in the sheet. Needed by " + \
+                note = ("Net-new planet item (PLANET_KIT): placeholder until drawn. Needed by " if name in NEW_ITEMS
+                        else "No vanilla tile for this role: placeholder in the sheet. Needed by ") + \
                        ", ".join(need[:6]) + (f" and {len(need) - 6} more" if len(need) > 6 else "") + "."
         rows.append({
             "terrain_id": tid, "tileset": ts, "item": name, "role": role, "phase": phase(name),
@@ -531,17 +654,38 @@ def greybox_pair(primary: str, secondary: str, planet: str = "") -> gba.TilesetP
     return g
 
 
-_PH = None
+_PH: dict = {}
+PH_TONE = {"blocked": (52, 50, 58), "wall": (52, 50, 58), "water": (74, 86, 108), "ground": (150, 148, 140),
+           "bridge": (120, 104, 88), "path": (160, 156, 146)}
+PH_ITEM_TONE = {"dune-sea": (196, 184, 150), "cloud": (206, 208, 218), "mud": (104, 92, 74), "deck": (148, 150, 160),
+                "wroshyr-platform": (118, 100, 78), "void-edge": (24, 24, 34)}
 
 
-def placeholder_cell(backdrop=(44, 44, 48)) -> np.ndarray:
-    """The z-day 16x16 placeholder (magenta circle) on a dark backdrop."""
-    global _PH
-    if _PH is None:
+def ph_tone(item: str):
+    return PH_ITEM_TONE.get(item) or PH_TONE.get(R.group(item), (44, 44, 48))
+
+
+def placeholder_cell(backdrop=(44, 44, 48), item: str = "") -> np.ndarray:
+    """The z-day 16x16 placeholder (magenta circle) on a backdrop toned by the item's group, so a map of
+    placeholders still reads (dark = blocks, blue = surface, light = ground)."""
+    key = (backdrop, item)
+    if key not in _PH:
         im = Image.new("RGBA", (16, 16), backdrop + (255,))
         im.alpha_composite(Image.open(PLACEHOLDER).convert("RGBA"))
-        _PH = np.asarray(im.convert("RGB"))
-    return _PH
+        _PH[key] = np.asarray(im.convert("RGB"))
+    return _PH[key]
+
+
+def footprint_cell(building: bool) -> np.ndarray:
+    """A solid block for a building (dark, light top rim) or a sized prop (mid grey)."""
+    key = ("fp", building)
+    if key not in _PH:
+        tone = (58, 58, 64) if building else (104, 104, 110)
+        a = np.full((16, 16, 3), tone, np.uint8)
+        a[0, :] = (140, 140, 150) if building else (170, 170, 176)
+        a[:, 0] = a[0, 0]
+        _PH[key] = a
+    return _PH[key]
 
 
 def render_cells(cells: np.ndarray, p: gba.TilesetPair) -> Image.Image:
@@ -551,8 +695,12 @@ def render_cells(cells: np.ndarray, p: gba.TilesetPair) -> Image.Image:
     for y in range(H):
         for x in range(W):
             mid = int(cells[y, x])
-            if mid == MISSING:
-                out[y * 16:(y + 1) * 16, x * 16:(x + 1) * 16] = placeholder_cell()
+            if mid >= PH_BASE or mid == MISSING:
+                item = PH_ITEMS[mid - PH_BASE] if mid != MISSING and mid - PH_BASE < len(PH_ITEMS) else ""
+                out[y * 16:(y + 1) * 16, x * 16:(x + 1) * 16] = placeholder_cell(ph_tone(item), item)
+                continue
+            if mid in (BUILDING, PROP):
+                out[y * 16:(y + 1) * 16, x * 16:(x + 1) * 16] = footprint_cell(mid == BUILDING)
                 continue
             mid &= 0x3FF
             if mid not in cache:
@@ -585,18 +733,18 @@ def real_sheets(rows: list[dict], all_areas: list[dict]) -> list[Path]:
         by_ts[r["tileset"]].append(r)
     out = []
     for ts, lst in by_ts.items():
-        if ts not in sample:
+        if ts not in sample and not ts.startswith("sw-"):
             continue
-        p = greybox_pair(*sample[ts])
-        base = 0 if p.primary.name == ts else gba.NUM_METATILES_IN_PRIMARY
+        p = greybox_pair(*sample[ts]) if ts in sample else None
+        base = 0 if p is not None and p.primary.name == ts else gba.NUM_METATILES_IN_PRIMARY
         n = len(lst)
         sheet = np.zeros((((n + SHEET_COLS - 1) // SHEET_COLS) * 16, SHEET_COLS * 16, 3), np.uint8)
         for i, r in enumerate(lst):
             cx, cy = (i % SHEET_COLS) * 16, (i // SHEET_COLS) * 16
-            if r["use"]:
+            if r["use"] and p is not None:
                 sheet[cy:cy + 16, cx:cx + 16] = p.render_metatile(base + int(r["use"], 16), backdrop=(0, 0, 0))[..., :3]
             else:
-                sheet[cy:cy + 16, cx:cx + 16] = placeholder_cell()
+                sheet[cy:cy + 16, cx:cx + 16] = placeholder_cell(ph_tone(r["item"]), r["item"])
         f = REAL_OUT / f"{ts}.png"
         Image.fromarray(sheet, "RGB").save(f)
         out.append(f)
@@ -614,10 +762,10 @@ def item_sheets(rows: list[dict], all_areas: list[dict]) -> list[Path]:
     out = []
     CW, CH = 58, 48
     for ts, items_ in by_ts.items():
-        if ts not in sample:
+        if ts not in sample and not ts.startswith("sw-"):
             continue
-        p = greybox_pair(*sample[ts])
-        base = 0 if p.primary.name == ts else gba.NUM_METATILES_IN_PRIMARY
+        p = greybox_pair(*sample[ts]) if ts in sample else None
+        base = 0 if p is not None and p.primary.name == ts else gba.NUM_METATILES_IN_PRIMARY
         strips = []
         for name, lst in items_.items():
             cols = min(len(lst), 10)
@@ -628,7 +776,8 @@ def item_sheets(rows: list[dict], all_areas: list[dict]) -> list[Path]:
             d.text((4, 1), f"{name}  ({len(lst)} roles, {todo} missing, phase {lst[0]['phase']})", fill=(230, 230, 230))
             for i, r in enumerate(lst):
                 x, y = 2 + (i % cols) * CW, 14 + (i // cols) * CH
-                cell = p.render_metatile(base + int(r["use"], 16), backdrop=(0, 0, 0))[..., :3] if r["use"] else placeholder_cell()
+                cell = p.render_metatile(base + int(r["use"], 16), backdrop=(0, 0, 0))[..., :3] if r["use"] and p is not None \
+                    else placeholder_cell(ph_tone(r["item"]), r["item"])
                 strip.paste(Image.fromarray(cell, "RGB").resize((32, 32), Image.NEAREST), (x + 12, y))
                 d.text((x + 2, y + 34), r["role"][:9], fill=(200, 200, 200) if r["use"] else (255, 120, 220))
             strips.append(strip)
@@ -653,9 +802,9 @@ def catalog(A: list[dict] | None = None):
     items, stats = scan(A)
     needs_by_area = {}
     for ar in A:
-        if not ar["same"]:
-            prim, sec = pair_for(ar, A)
-            _, needs = area_cells(ar, A, stats)
+        prim, sec = pair_for(ar, A)
+        _, needs = area_cells(ar, A, stats)
+        if needs:
             needs_by_area[ar["id"]] = (prim, sec, needs)
     rows = write_catalog(items, needs_by_area, A)
     return A, items, stats, rows
@@ -674,20 +823,21 @@ def run(ids: list[str] | None = None, planet: str | None = None, sheets: bool = 
         prim, sec = pair_for(ar, A)
         src = "vanilla layout" if ar["same"] else "autotiled from the grid"
         cells, needs = area_cells(ar, A, stats)
+        its = set()
         if ar["same"]:
-            its = sorted(f"terrain:{t}:{n}:{r}" for t, n, r in AREA_ITEMS.get(ar["layout"].name, ()))
-            missing = 0
-        else:
-            pp = pair(prim, sec)
-            its = set()
-            for (n, r), mid in needs.items():
-                if mid is None:
-                    its.add(f"terrain:{pp.secondary.name}:{n}:{r}")
-                else:
-                    ts, _ = meta_ts(pp, mid)
-                    its.add(f"terrain:{ts.name}:{n}:{r}")
-            its = sorted(its)
-            missing = sum(1 for v in needs.values() if v is None)
+            its = {f"terrain:{t}:{n}:{r}" for t, n, r in AREA_ITEMS.get(ar["layout"].name, ())}
+            if needs:
+                src = "vanilla layout + planet kit"
+        pp = pair(prim, sec)
+        sw = "sw-" + ar["planet"].lower().replace(" ", "-")
+        for (n, r), mid in needs.items():
+            if mid is None:
+                its.add(f"terrain:{sw if n in NEW_ITEMS else pp.secondary.name}:{n}:{r}")
+            else:
+                ts, _ = meta_ts(pp, mid)
+                its.add(f"terrain:{ts.name}:{n}:{r}")
+        its = sorted(its)
+        missing = sum(1 for v in needs.values() if v is None)
         links.append({"area_id": ar["id"], "planet": ar["planet"], "kind": ar["kind"], "primary": prim,
                       "secondary": sec, "source": src, "missing_roles": missing,
                       "render": f"world/greybox/tiles/{ar['id']}.png", "terrain_items": " ".join(its)})

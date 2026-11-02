@@ -116,6 +116,8 @@ in `../game`. Every `source_file` is a path relative to `../game`.
   placeholder), the planets and number of areas that use it and its status; `mapping/terrain_areas.csv` links
   each area to its tileset pair, its greybox tile render, its rows and how many roles are missing. Real-size
   sheets (128 px wide, 16x16 cells) are in `world/greybox/sheets/`, labelled ones in `world/greybox/terrain/`.
+  Net-new per-planet items (the planet kit in [`bible/WORLD_ART.md`](bible/WORLD_ART.md): wroshyr, Dune Sea,
+  mud, deck, cloud, fungi, void) are rows under `sw-<planet>` sheets, placeholders until drawn.
   Made by `python -m tilegen terrain run` in `tools/tile-generator/`.
 - **World-building tools:** [`../tools/world-art/README.md`](../tools/world-art/README.md) draws new shapes from 3D models. Only owner-approved models live there (so far the Hoenn tree).
 - **World blockout:** [`world/README.md`](world/README.md) lays out every area in placeholder tiles before any art; `world/INDEX.csv` is the to-do list.
