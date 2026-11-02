@@ -4,7 +4,7 @@ planet: ENDOR
 kind: dungeon
 replaces: ScorchedSlab
 status: BLOCKOUT
-art_status: pending-mockup
+art_status: pending-final-art
 story: Sun-baked hollow under the forest canopy.
 notes: 'scorched-hollow (15x20): a sun-baked hollow with a pool · need: cave mode, open to the sky.'
 grid: |

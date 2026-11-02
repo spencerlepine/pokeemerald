@@ -4,7 +4,7 @@ planet: TATOOINE
 kind: interior
 replaces: new
 status: BLOCKOUT
-art_status: pending-mockup
+art_status: pending-final-art
 story: 'Obi-Wan''s hermit hut: a sleeping alcove, a work bench and the old chest.'
 notes: 'bens-hut (landmark, 26x20): a hermit''s hut on a ridge over the wastes · have (dome-porch) · unique: nothing else nearby, so the border is all rock and sky.'
 grid: |

@@ -4,7 +4,7 @@ planet: YAVIN 4
 kind: dungeon
 replaces: Underwater_Route125
 status: BLOCKOUT
-art_status: pending-mockup
+art_status: pending-final-art
 story: Under the jungle river.
 notes: 'Dungeon room: cave mode in `greybox terrain` draws the shell; the planet-specific dressing below still needs models. Jungle moon with the Massassi temples. Trees and vines,
   river delta, Rebel base.'

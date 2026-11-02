@@ -4,7 +4,7 @@ planet: TATOOINE
 kind: interior
 replaces: TrainerHill_Roof
 status: BLOCKOUT
-art_status: pending-mockup
+art_status: pending-final-art
 story: 'Trial Spire Roof: vanilla room layout kept for the blockout.'
 notes: 'Interior: needs the room kit (walls, doors, floors) first. Grouped by room type. All need the room kit (walls, doors, floors) first. - Homes, about 30: sandstone
   walls, round-cornered rooms, low beds, a cooking unit, a table. Luke''s homestead rooms, Owen Lars''s, Camie''s, the Korr home, the player''s home with upstairs.

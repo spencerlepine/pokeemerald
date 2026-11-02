@@ -4,7 +4,7 @@ planet: DAGOBAH
 kind: route
 replaces: Route128
 status: BLOCKOUT
-art_status: pending-mockup
+art_status: pending-final-art
 story: Deep swamp south of the hollow where the Drowned Cavern's dive spot lies; SANDO sleeps below.
 notes: 'Swamp: bog lakes, mist, gnarltrees with huge roots, mud islets. The town is a hidden hollow.'
 pos: [69, 139]

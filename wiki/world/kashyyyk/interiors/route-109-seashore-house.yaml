@@ -4,7 +4,7 @@ planet: KASHYYYK
 kind: interior
 replaces: Route109_SeashoreHouse
 status: BLOCKOUT
-art_status: pending-mockup
+art_status: pending-final-art
 story: 'Route 109 Seashore House: a home; residents keep vanilla''s spots and scripts.'
 notes: 'route-109 (route, 40x63): the southern beach and a seaside hut · need: beach.'
 grid: |

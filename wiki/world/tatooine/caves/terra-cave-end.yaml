@@ -4,7 +4,7 @@ planet: TATOOINE
 kind: dungeon
 replaces: TerraCave_End
 status: BLOCKOUT
-art_status: pending-mockup
+art_status: pending-final-art
 story: 'Terra Cave''s inner chamber: a titan''s resting place.'
 notes: 'Dungeon room: cave mode in `greybox terrain` draws the shell; the planet-specific dressing below still needs models. Desert: sand, sandstone mesas and canyons, no trees ever.
   Borders are cliffs, rock spires and dune ridges. Round Tatooine shapes are allowed here (domes, sunken homesteads) because that is the planet''s look.'

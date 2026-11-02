@@ -4,7 +4,7 @@ planet: TATOOINE
 kind: route
 replaces: Route112
 status: BLOCKOUT
-art_status: pending-mockup
+art_status: pending-final-art
 story: Canyon road north of the Dune Sea. The shuttle station (vanilla cable car) flies up to Mustafar Peak; the north edge was Sullust and is now cut.
 notes: 'route-112 (route, 40x60): canyon road, the shuttle station to Mustafar (a landing pad with a terminal building and a parked shuttle) · cliffs both sides ·
   need: shuttle (folded wings, wedge).'

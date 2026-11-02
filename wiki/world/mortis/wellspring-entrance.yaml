@@ -4,7 +4,7 @@ planet: MORTIS
 kind: landmark
 replaces: FarawayIsland_Entrance
 status: BLOCKOUT
-art_status: pending-mockup
+art_status: pending-final-art
 story: 'The Wellspring: a jungle island on Mortis where the PRIMORDIAL hides in the long grass.'
 notes: 'wellspring-entrance and -interior (34x46, 29x26): a jungle island, long grass, a clearing round the pool of life · need: jungle trunks, a glowing pool.'
 grid: |

@@ -4,7 +4,7 @@ planet: MUSTAFAR
 kind: interior
 replaces: MtChimney_CableCarStation
 status: BLOCKOUT
-art_status: pending-mockup
+art_status: pending-final-art
 story: 'Mustafar Peak Shuttle Station: a home; residents keep vanilla''s spots and scripts.'
 notes: 'mustafar-peak (route, 40x47): the summit: the shuttle pad, the Empire''s drill rig boring into the volcano, the first Vader fight · need: lava as liquid with
   glow on nearby faces, the drill rig (a tall Imperial machine, giant, partly seen), the crater rim.'

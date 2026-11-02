@@ -4,7 +4,7 @@ planet: ENDOR
 kind: interior
 replaces: Route119_House
 status: BLOCKOUT
-art_status: pending-mockup
+art_status: pending-final-art
 story: 'Route 119 House: a home; residents keep vanilla''s spots and scripts.'
 notes: 'route-119 (route, 40x140): the long treewalk climb through redwoods and ferns, Endor Station (an Imperial research bunker, have bunker), raised walkways ·
   need: trunks, walkways, ferns as wild ground.'

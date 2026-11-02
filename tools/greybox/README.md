@@ -29,6 +29,9 @@ the model here, `footprint` its size in cells, `tool` says `greybox piece`, `gre
 PNG, `status` is one of `pending-mockup`, `pending-final-art`, `art-complete`, `imported-in-game`. An area is its
 yaml in `wiki/world/<planet>/`, with `art_status` and `notes` (what it needs, in words).
 
+Every area has a render: `wiki/world/greybox/areas/<area>.png` (outdoor and dungeon) or
+`wiki/world/greybox/rooms/<area>.png` (interiors). Re-run `terrain` or `room` after changing an area or a model.
+
 ## Commands
 
 ```bash

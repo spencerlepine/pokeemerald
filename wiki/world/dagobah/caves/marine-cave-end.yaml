@@ -4,7 +4,7 @@ planet: DAGOBAH
 kind: dungeon
 replaces: MarineCave_End
 status: BLOCKOUT
-art_status: pending-mockup
+art_status: pending-final-art
 story: 'Marine Cave: a roaming flooded cave, unused in Emerald; kept as an optional dive.'
 notes: 'marine-cave (2 rooms) and underwater- rooms (7): optional flooded cave and the murky water under the swamp: roots, silt · need: underwater mode in brown.'
 grid: |

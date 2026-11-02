@@ -4,7 +4,7 @@ planet: SULLUST
 kind: interior
 replaces: FallarborTown_CozmosHouse
 status: BLOCKOUT
-art_status: pending-mockup
+art_status: pending-final-art
 story: 'Inyusu Tor Cozmos House: a home; residents keep vanilla''s spots and scripts.'
 notes: 'inyusu-tor (town, 40x28): ash farm town, greenhouses, Dr. Tien''s observatory with a dome, ash falling like snow · need: greenhouses (glass boxes, have glass-dome),
   observatory dome with a slit, ash drifts.'

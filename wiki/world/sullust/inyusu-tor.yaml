@@ -4,7 +4,7 @@ planet: SULLUST
 kind: town
 replaces: FallarborTown
 status: BLOCKOUT
-art_status: pending-mockup
+art_status: pending-final-art
 story: 'Ash-covered farm town: greenhouses grow crops in volcanic ash. Dr. Tien, the astronomer whose meteorite the Empire steals, lives in the observatory.'
 notes: 'inyusu-tor (town, 40x28): ash farm town, greenhouses, Dr. Tien''s observatory with a dome, ash falling like snow · need: greenhouses (glass boxes, have glass-dome),
   observatory dome with a slit, ash drifts.'

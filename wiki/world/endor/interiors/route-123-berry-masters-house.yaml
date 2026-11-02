@@ -4,7 +4,7 @@ planet: ENDOR
 kind: interior
 replaces: Route123_BerryMastersHouse
 status: BLOCKOUT
-art_status: pending-mockup
+art_status: pending-final-art
 story: 'Route 123 Berry Masters House: a home; residents keep vanilla''s spots and scripts.'
 notes: 'route-123 (route, 140x20): river valley, the berry grower''s lodge · need: river, orchard rows (plants).'
 grid: |

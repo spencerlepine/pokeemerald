@@ -4,7 +4,7 @@ planet: TATOOINE
 kind: dungeon
 replaces: TerraCave_Entrance
 status: BLOCKOUT
-art_status: pending-mockup
+art_status: pending-final-art
 story: Hidden cave that only opens in drought (vanilla Terra Cave).
 notes: 'terra-cave-entrance and -end (20x20, 27x30): a cave that opens only in drought, a titan''s chamber with a pool · need: cave mode, a large pool, a raised dais.'
 grid: |

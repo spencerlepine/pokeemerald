@@ -4,7 +4,7 @@ planet: ATOLLON
 kind: landmark
 replaces: BirthIsland_Exterior
 status: BLOCKOUT
-art_status: pending-mockup
+art_status: pending-final-art
 story: 'Atollon: a rocky moon where the BENDU sleeps on a stone dais. The triangle puzzle (vanilla Birth Island) wakes it.'
 notes: 'atollon-exterior (landmark, 30x30): a rock islet in a strange sea with a dais · need: sea mode, a stone dais with glyphs.'
 grid: |

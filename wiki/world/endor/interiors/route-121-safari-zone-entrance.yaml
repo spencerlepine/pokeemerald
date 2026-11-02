@@ -4,7 +4,7 @@ planet: ENDOR
 kind: interior
 replaces: Route121_SafariZoneEntrance
 status: BLOCKOUT
-art_status: pending-mockup
+art_status: pending-final-art
 story: 'Route 121 Safari Zone Entrance: vanilla room layout kept for the blockout.'
 notes: 'route-121 (route, 80x20): forest road, the reserve shuttle stop · have.'
 grid: |

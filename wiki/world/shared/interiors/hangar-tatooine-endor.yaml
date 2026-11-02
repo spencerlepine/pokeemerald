@@ -4,7 +4,7 @@ planet: SHARED
 kind: interior
 replaces: new
 status: BLOCKOUT
-art_status: pending-mockup
+art_status: pending-final-art
 story: 'Ship link between mos-espa and route-118: the Rebel shuttle''s cabin. The pilot flies to the other end; each end''s door leads out on its planet.'
 notes: 'Interior: needs the room kit (walls, doors, floors) first. Rooms used on several planets: the ship rooms (one per route between planets, each with a StarNAV
   console and the ship''s cockpit or hold), the standard bacta center, supply depot and arena interiors. ---'

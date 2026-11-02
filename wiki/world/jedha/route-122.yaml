@@ -4,7 +4,7 @@ planet: JEDHA
 kind: route
 replaces: Route122
 status: BLOCKOUT
-art_status: pending-mockup
+art_status: pending-final-art
 story: Holy waters round the island of the Jedha Temple. Pilgrim ships land on the north-west pad; a causeway east leads to NiJedha.
 notes: 'route-122 (route, 40x40): holy waters around the Temple island, the pilgrim pad, a causeway · need: sea mode, a causeway over water.'
 pos: [-40, -1]

@@ -4,7 +4,7 @@ planet: DAGOBAH
 kind: dungeon
 replaces: Underwater_Route127
 status: BLOCKOUT
-art_status: pending-mockup
+art_status: pending-final-art
 story: Murky water under the swamp, roots and silt.
 notes: 'Dungeon room: cave mode in `greybox terrain` draws the shell; the planet-specific dressing below still needs models. Swamp: bog lakes, mist, gnarltrees with huge roots, mud
   islets. The town is a hidden hollow.'

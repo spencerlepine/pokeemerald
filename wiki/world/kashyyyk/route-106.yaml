@@ -4,7 +4,7 @@ planet: KASHYYYK
 kind: route
 replaces: Route106
 status: BLOCKOUT
-art_status: pending-mockup
+art_status: pending-final-art
 story: Shore path west of Kachirho to the Shadowlands, the dark lower levels of the wroshyr forest.
 notes: 'route-106 (route, 80x20): shore path to the Shadowlands, roots as walls · need: root arches.'
 pos: [-44, -20]

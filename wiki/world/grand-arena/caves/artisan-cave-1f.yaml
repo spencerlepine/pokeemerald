@@ -4,7 +4,7 @@ planet: GRAND ARENA
 kind: dungeon
 replaces: ArtisanCave_1F
 status: BLOCKOUT
-art_status: pending-mockup
+art_status: pending-final-art
 story: 'Artisan Cave: a hidden cave under the Grand Arena cliffs, full of SMEARGLE''s Star Wars twin painting the walls.'
 notes: 'artisan-cave (2 rooms): a hidden cave full of a painter companion''s wall paintings · need: cave mode with painted walls.'
 grid: |

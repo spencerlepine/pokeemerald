@@ -4,7 +4,7 @@ planet: ASTEROID FIELD
 kind: dungeon
 replaces: SkyPillar_Entrance
 status: BLOCKOUT
-art_status: pending-mockup
+art_status: pending-final-art
 story: 'Docking hollow inside the asteroid: ships berth here and a tunnel climbs to the spire.'
 notes: 'asteroid-spire (6 rooms): the docking hollow where ships berth, then five floors of cracked floors (hover-bike speed) and falling rubble · need: cave mode
   in grey, cracked floor tiles, rubble piles.'

@@ -4,7 +4,7 @@ planet: DEATH STAR
 kind: dungeon
 replaces: new
 status: BLOCKOUT
-art_status: pending-mockup
+art_status: pending-final-art
 story: 'DS-3: Detention block. Three Imperial trainers (levels 60-70) and one item.'
 notes: 'Dungeon room: cave mode in `greybox terrain` draws the shell; the planet-specific dressing below still needs models. Post-game: a half-built hangar bay and five construction
   decks, all interiors: scaffolds, reactor feed corridors, the detention block, a turbolaser battery, the command deck · need: the Imperial interior kit (black floor

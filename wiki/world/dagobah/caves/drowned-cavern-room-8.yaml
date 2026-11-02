@@ -4,7 +4,7 @@ planet: DAGOBAH
 kind: dungeon
 replaces: SeafloorCavern_Room8
 status: BLOCKOUT
-art_status: pending-mockup
+art_status: pending-final-art
 story: 'Drowned Cavern: flooded caves under Route 128 where Jabba wakes SANDO (vanilla Seafloor Cavern).'
 notes: 'drowned-cavern (10 rooms): flooded caves where SANDO wakes: pools, ledges, currents, the final chamber · need: cave mode with water, current arrows, a huge
   chamber for a titan.'

@@ -4,7 +4,7 @@ planet: HOTH
 kind: dungeon
 replaces: ShoalCave_LowTideInnerRoom
 status: BLOCKOUT
-art_status: pending-mockup
+art_status: pending-final-art
 story: 'Wampa Cave: frozen tunnels; a wampa''s lair is somewhere deep inside.'
 notes: 'wampa-cave (7 rooms): ice tunnels with meltwater pools that rise and fall (two versions of the same rooms), a slippery ice-floor puzzle room, the wampa''s
   lair with bones and an old scout''s pack · need: ice cave mode (translucent walls), pools, ice floor, bones.'

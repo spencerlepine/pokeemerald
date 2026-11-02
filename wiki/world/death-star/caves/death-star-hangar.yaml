@@ -4,7 +4,7 @@ planet: DEATH STAR
 kind: dungeon
 replaces: new
 status: BLOCKOUT
-art_status: pending-mockup
+art_status: pending-final-art
 story: 'Post-game: an Imperial shuttle from Yavin 4 sets down in a half-built hangar bay of the Death Star. The lift leads into the construction decks.'
 notes: 'Dungeon room: cave mode in `greybox terrain` draws the shell; the planet-specific dressing below still needs models. Post-game: a half-built hangar bay and five construction
   decks, all interiors: scaffolds, reactor feed corridors, the detention block, a turbolaser battery, the command deck · need: the Imperial interior kit (black floor

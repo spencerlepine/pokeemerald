@@ -4,7 +4,7 @@ planet: BESPIN
 kind: landmark
 replaces: new
 status: BLOCKOUT
-art_status: pending-mockup
+art_status: pending-final-art
 story: 'Optional: a Tibanna gas refinery on a separate platform north of Cloud City, reached by cloud car or the north skybridge. Ugnaughts work the tanks; Cartel
   thugs are smuggling gas.'
 notes: 'tibanna-refinery (landmark, 40x26): a separate platform north, reached by cloud car or skybridge: gas tanks, pipes, Ugnaught work sheds · need: the platform

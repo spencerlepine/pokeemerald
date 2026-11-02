@@ -4,7 +4,7 @@ planet: ENDOR
 kind: interior
 replaces: FortreeCity_House1
 status: BLOCKOUT
-art_status: pending-mockup
+art_status: pending-final-art
 story: 'Bright Tree House 1: a home; residents keep vanilla''s spots and scripts.'
 notes: 'bright-tree (town, 40x20): Ewok treetop village: a forest-floor trail, ladders up to two rows of tree platforms joined by rope bridges, huts on the platforms,
   Chief Chirpa''s gym · need: the raised-walkway layer with two platform rows, rope bridges, trunks, cone huts on decks (have cone).'

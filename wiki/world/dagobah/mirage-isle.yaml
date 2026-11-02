@@ -4,7 +4,7 @@ planet: DAGOBAH
 kind: landmark
 replaces: Route130
 status: BLOCKOUT
-art_status: pending-mockup
+art_status: pending-final-art
 story: 'Route 130 on the days Mirage Isle rises out of the far bog: a misty islet with a rare berry tree and companions found nowhere else.'
 notes: 'mirage-isle (landmark, 80x40): the islet that only sometimes appears, a rare berry tree · need: an islet that reads as unreal (pale, glowing edge).'
 grid: |

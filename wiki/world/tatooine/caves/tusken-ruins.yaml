@@ -4,7 +4,7 @@ planet: TATOOINE
 kind: dungeon
 replaces: DesertRuins
 status: BLOCKOUT
-art_status: pending-mockup
+art_status: pending-final-art
 story: Ruined Tusken shrine in the Dune Sea; home of ROCKWARDEN. Braille-style puzzle becomes Tusken glyphs.
 notes: 'tusken-ruins (17x33): a ruined shrine, glyph puzzle, ROCKWARDEN · need: ruined walls (broken boxes), glyph wall, a sealed stone door.'
 grid: |

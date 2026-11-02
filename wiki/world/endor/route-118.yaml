@@ -4,7 +4,7 @@ planet: ENDOR
 kind: route
 replaces: Route118
 status: BLOCKOUT
-art_status: pending-mockup
+art_status: pending-final-art
 story: Forest edge where Rebel shuttles from Tatooine set down. The road runs east along a river towards the redwoods; Route 119 climbs north.
 notes: 'route-118 (route, 80x20): forest edge, Rebel shuttle pad, a river east · need: river banks, a parked shuttle.'
 pos: [-80, 140]

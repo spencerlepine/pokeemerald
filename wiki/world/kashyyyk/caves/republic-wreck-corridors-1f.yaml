@@ -4,7 +4,7 @@ planet: KASHYYYK
 kind: dungeon
 replaces: AbandonedShip_Corridors_1F
 status: BLOCKOUT
-art_status: pending-mockup
+art_status: pending-final-art
 story: 'Republic Wreck: crew corridors.'
 notes: 'republic-wreck (14 rooms): the inside of a sunken Republic cruiser: tilted deck above water, crew corridors, cabins, flooded lower decks, the sealed hold,
   two underwater rooms · need: ship interior kit (bulkheads, blast doors, grating), flooded floor (shallow water in a room), tilt.'

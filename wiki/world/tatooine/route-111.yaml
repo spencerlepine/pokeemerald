@@ -4,7 +4,7 @@ planet: TATOOINE
 kind: route
 replaces: Route111
 status: BLOCKOUT
-art_status: pending-mockup
+art_status: pending-final-art
 story: 'The Dune Sea: open desert north of Mos Espa with sandstorms (SAND GOGGLES), the Krayt Graveyard tunnels, the Tusken Ruins and the wandering Sandcrawler. The
   Pit of Carkoon and the sail barge wreck are optional side spots, and a track east leads to Jabba''s palace.'
 notes: 'route-111 (route, 40x140): the Dune Sea: open sand with dune ridges, sandstorm zone, Krayt Graveyard tunnel mouths, Tusken Ruins entrance, the wandering Sandcrawler,

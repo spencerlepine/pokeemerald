@@ -4,7 +4,7 @@ planet: TATOOINE
 kind: town
 replaces: VerdanturfTown
 status: BLOCKOUT
-art_status: pending-mockup
+art_status: pending-final-art
 story: Quiet farm town with clean air. Camie and her father live here, the farm co-op doubles as a Showcase hall, and Luke's friends hang out by the skyhopper.
 notes: 'anchorhead (town, 34x26): quiet farm town. Farm co-op (also the Showcase hall), homes, Luke''s friends'' skyhopper parked · bordered by farmland and low berms
   · need: the skyhopper (small wedge craft with a fin).'

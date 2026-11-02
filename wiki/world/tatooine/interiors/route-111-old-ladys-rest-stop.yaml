@@ -4,7 +4,7 @@ planet: TATOOINE
 kind: interior
 replaces: Route111_OldLadysRestStop
 status: BLOCKOUT
-art_status: pending-mockup
+art_status: pending-final-art
 story: 'Route 111 Old Ladys Rest Stop: vanilla room layout kept for the blockout.'
 notes: 'route-111 (route, 40x140): the Dune Sea: open sand with dune ridges, sandstorm zone, Krayt Graveyard tunnel mouths, Tusken Ruins entrance, the wandering Sandcrawler,
   Pit of Carkoon, sail barge wreck · need: dunes as soft berms, the sandcrawler (a huge tracked wedge, true scale, partly seen), the sarlacc pit (sunken, with a mouth),

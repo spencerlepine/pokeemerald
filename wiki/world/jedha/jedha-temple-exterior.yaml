@@ -4,7 +4,7 @@ planet: JEDHA
 kind: route
 replaces: MtPyre_Exterior
 status: BLOCKOUT
-art_status: pending-mockup
+art_status: pending-final-art
 story: 'The Jedha Temple''s outer terraces: graves of fallen companions and pilgrims climbing to the summit.'
 notes: 'jedha-temple-exterior (route, 38x51): outer terraces with graves of companions, pilgrims climbing · relief covers terraces · need: grave markers (small stones),
   stairs between levels.'

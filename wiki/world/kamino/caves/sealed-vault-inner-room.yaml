@@ -4,7 +4,7 @@ planet: KAMINO
 kind: dungeon
 replaces: SealedChamber_InnerRoom
 status: BLOCKOUT
-art_status: pending-mockup
+art_status: pending-final-art
 story: 'Sealed Vault: Aurebesh carvings on the walls; reading them wakes the Wardens.'
 notes: 'sealed-vault (2 rooms) and underwater- (2): the sunken door and the vault with Aurebesh carvings · need: underwater mode, a carved-wall room, a sealed door.'
 grid: |

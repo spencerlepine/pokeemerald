@@ -4,7 +4,7 @@ planet: SULLUST
 kind: route
 replaces: Route113
 status: BLOCKOUT
-art_status: pending-mockup
+art_status: pending-final-art
 story: Ash fields east of Inyusu Tor where ash falls like snow; the glassblower collects it. The Magma Tunnels open on the south side.
 notes: 'route-113 (route, 100x20): ash fields, the glassblower''s hut, ash drifts, Magma Tunnel mouths · need: ash as a ground kind, drifts as berms.'
 pos: [40, 4]

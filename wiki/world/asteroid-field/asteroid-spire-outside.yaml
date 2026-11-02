@@ -4,7 +4,7 @@ planet: ASTEROID FIELD
 kind: route
 replaces: SkyPillar_Outside
 status: BLOCKOUT
-art_status: pending-mockup
+art_status: pending-final-art
 story: 'The asteroid''s surface: a crumbling path to the spire''s base.'
 notes: 'asteroid-spire-outside (route, 28x23): the asteroid''s surface, a crumbling path, star void instead of sea · need: void as the water kind (have "void"), floating-platform
   edges (no cliff below, just stars).'

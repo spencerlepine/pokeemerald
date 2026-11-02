@@ -4,7 +4,7 @@ planet: MUSTAFAR
 kind: route
 replaces: JaggedPass
 status: BLOCKOUT
-art_status: pending-mockup
+art_status: pending-final-art
 story: Steep ash trail down from Mustafar Peak to the gate of Fortress Vader. Its foot, once Route 112, now leads to the old mining facility.
 notes: 'ashen-pass (route, 30x46): steep ash trail down the mountain with many ledges, to the fortress gate · relief and ledges cover it · need: ash ground.'
 pos: [0, 0]

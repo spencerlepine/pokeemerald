@@ -4,7 +4,7 @@ planet: FELUCIA
 kind: interior
 replaces: new
 status: BLOCKOUT
-art_status: pending-mockup
+art_status: pending-final-art
 story: 'Felucia reserve shuttle gate: the player''s ship waits in the bay. Talk to the pilot or use the StarNAV console to fly to another planet.'
 notes: 'Interior: needs the room kit (walls, doors, floors) first. the gate house, the rest house. ---'
 grid: |
