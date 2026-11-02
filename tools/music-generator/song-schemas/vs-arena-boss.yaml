@@ -1,0 +1,142 @@
+# Vs Arena Boss. Hot-swap of MUS_VS_FRONTIER_BRAIN (wiki audio:MUS_VS_FRONTIER_BRAIN): the Grand Arena bosses,
+# bounty hunters. ARRANGE of "Jango's Escape" (soundtrack:attack-clones:07), from analyze_reference over 0:00-1:30
+# (152 bpm, A minor, Am-Bb-E harmony, E sections with F and G# over them, a Gm strain) plus knowledge of the cue:
+# the low chromatic-neighbour ostinato (A G A Bb) that drives it, brass figures climbing in fourths and fifths
+# (E A E / F Bb F), the E Phrygian-dominant colour (E F G# A) of the chase, the Gm brass strain (G C G / G Bb D Eb)
+# and its climb to Bb7 and E. Made gritty for the brief with the voicegroup's low distortion guitar on the E riff.
+# Kept at the cue's tempo (150 for a frame-exact loop). Vanilla voicegroup. Brief (sw_subject): Grand Arena bosses (bounty hunters): gritty,
+# mercenary.
+name: vs-arena-boss
+replaces: MUS_VS_FRONTIER_BRAIN
+form: LOOP
+voicegroup: vs_frontier_brain         # vanilla: trumpet 56, horn 60, strings 48, dist guitar 62, fingered bass 33, timpani 47, kit 0, square 80, wave 89, noise 127
+master_volume: 90
+song_priority: 1
+tempo: 150                            # the cue's 152, nudged so the 48-bar loop is a whole number of frames
+steps_per_beat: 4
+time_signature: [4, 4]
+seed: 52
+
+parts:
+  trumpet: {program: 56, channel: 0, volume: 106, pan: 6,   range: [E4, Bb5], gate: 0.88, humanize: {vel: 4}}
+  horn:    {program: 60, channel: 1, volume: 96,  pan: -12, range: [D4, E5], gate: 0.94}
+  strings: {program: 48, channel: 2, volume: 80,  pan: -24, range: [F3, D4], gate: 0.75}
+  guitar:  {program: 62, channel: 3, volume: 84,  pan: 22,  range: [E3, Eb4], gate: 0.7}
+  bass:    {program: 33, channel: 4, volume: 110, pan: 0,   octave: 1, range: [E1, Bb2], gate: 0.7, role: bass}
+  timpani: {program: 47, channel: 5, volume: 98,  pan: 16,  octave: 2, range: [E2, Bb2], gate: 1.0}
+  drums:   {program: 0,  channel: 6, volume: 88,  pan: 8,   role: drums, kit: {k: 36, s: 38, crash: 57, thi: 48, tmid: 45, tlo: 41}}
+  sq:      {program: 80, channel: 7, volume: 40,  pan: 30,  range: [E4, Bb5], gate: 0.6, mono: true}
+  wave:    {program: 89, channel: 8, volume: 46,  pan: -6,  octave: 2, range: [E2, Bb3], gate: 0.45, mono: true}
+  hat:     {program: 127, channel: 9, volume: 34, pan: -28, gate: 0.25, mono: true}
+
+progressions:
+  a: "Am | Am | Bb | Am | Am | Am | Bb | E"
+  b: "E | E | E | E | Gm | Gm | Bb | E"
+  c: "Am | Bb | Am | Bb | F | E | F | E"
+  d: "Gm | Gm | Gm | Gm | A | Bb7 | E | E"
+
+phrases:
+  theme: |
+    E4:2 A4:2 E5:8 D5:2 C5:2 | B4:2 C5:2 A4:12 | F4:2 Bb4:2 F5:8 E5:2 D5:2 | C5:4 E5:4 A4:8 |
+    E5:3 F5:1 G#5:4 A5:4 G#5:2 F5:2 | E5:12 C5:4 | D5:3 Eb5:1 F5:4 D5:4 Bb4:4 | B4:3 C5:1 B4:4 G#4:4 F4:2 E4:2
+  theme_hrn: |
+    A4:8 E4:8 | E4:8 A4:8 | D4:8 F4:8 | E4:8 A4:8 | C5:8 B4:8 | A4:8 E4:8 | F4:8 D4:8 | G#4:8 E4:8
+  hunt: |
+    E4:8 G#4:4 A4:4 | G#4:4 F4:4 E4:8 | B4:8 C5:4 B4:4 | G#4:16 |
+    G4:4 C5:4 G4:8 | G4:6 Bb4:2 D4:4 Eb4:4 | D4:4 F4:4 Bb4:8 | G#4:8 B4:4 E5:4
+  climb: |
+    G4:4 C5:4 G4:8 | G4:6 Bb4:2 D5:4 Eb5:4 | D5:4 G5:4 D5:8 | D5:6 F5:2 G5:4 Bb5:4 |
+    A5:16 | Bb5:8 Ab5:8 | G#5:8 F5:4 E5:4 | B4:4 C5:4 B4:4 G#4:4
+  climb_hrn: "D4:16 | Eb4:16 | Bb4:16 | G4:16 | E4:16 | F4:16 | E4:16 | E4:16"
+  stab_c: "r:12 E5:1 r:1 E5:2 | r:12 F5:1 r:1 F5:2 | r:12 E5:1 r:1 E5:2 | r:12 F5:1 r:1 F5:2 | r:12 C5:1 r:1 C5:2 | r:12 B4:1 r:1 B4:2 | r:12 C5:1 r:1 C5:2 | r:8 B4:2 C5:2 B4:2 G#4:2"
+  # the low ostinato: a chromatic neighbour around each chord's root
+  ost_a: |
+    A3:2 G3:2 A3:2 Bb3:2 A3:2 G3:2 C4:2 Bb3:2 | A3:2 G3:2 A3:2 Bb3:2 A3:2 G3:2 C4:2 Bb3:2 |
+    Bb3:2 A3:2 Bb3:2 C4:2 Bb3:2 A3:2 D4:2 C4:2 | A3:2 G3:2 A3:2 Bb3:2 A3:2 G3:2 C4:2 Bb3:2 |
+    A3:2 G3:2 A3:2 Bb3:2 A3:2 G3:2 C4:2 Bb3:2 | A3:2 G3:2 A3:2 Bb3:2 A3:2 G3:2 C4:2 Bb3:2 |
+    Bb3:2 A3:2 Bb3:2 C4:2 Bb3:2 A3:2 D4:2 C4:2 | G#3:2 F3:2 G#3:2 A3:2 G#3:2 F3:2 B3:2 A3:2
+  ost_c: |
+    A3:2 G3:2 A3:2 Bb3:2 A3:2 G3:2 C4:2 Bb3:2 | Bb3:2 A3:2 Bb3:2 C4:2 Bb3:2 A3:2 D4:2 C4:2 |
+    A3:2 G3:2 A3:2 Bb3:2 A3:2 G3:2 C4:2 Bb3:2 | Bb3:2 A3:2 Bb3:2 C4:2 Bb3:2 A3:2 D4:2 C4:2 |
+    A3:2 G3:2 A3:2 Bb3:2 A3:2 G3:2 C4:2 Bb3:2 | G#3:2 F3:2 G#3:2 A3:2 G#3:2 F3:2 B3:2 A3:2 |
+    A3:2 G3:2 A3:2 Bb3:2 A3:2 G3:2 C4:2 Bb3:2 | G#3:2 F3:2 G#3:2 A3:2 G#3:2 F3:2 B3:2 A3:2
+  # the same figure an octave up on the square, for the sections where the strings rest
+  ost_a_sq: |
+    A4:2 G4:2 A4:2 Bb4:2 A4:2 G4:2 C5:2 Bb4:2 | A4:2 G4:2 A4:2 Bb4:2 A4:2 G4:2 C5:2 Bb4:2 |
+    Bb4:2 A4:2 Bb4:2 C5:2 Bb4:2 A4:2 D5:2 C5:2 | A4:2 G4:2 A4:2 Bb4:2 A4:2 G4:2 C5:2 Bb4:2 |
+    A4:2 G4:2 A4:2 Bb4:2 A4:2 G4:2 C5:2 Bb4:2 | A4:2 G4:2 A4:2 Bb4:2 A4:2 G4:2 C5:2 Bb4:2 |
+    Bb4:2 A4:2 Bb4:2 C5:2 Bb4:2 A4:2 D5:2 C5:2 | G#4:2 F4:2 G#4:2 A4:2 G#4:2 F4:2 B4:2 A4:2
+  ost_d_sq: |
+    G4:2 F#4:2 G4:2 Ab4:2 G4:2 F#4:2 Bb4:2 Ab4:2 | G4:2 F#4:2 G4:2 Ab4:2 G4:2 F#4:2 Bb4:2 Ab4:2 |
+    G4:2 F#4:2 G4:2 Ab4:2 G4:2 F#4:2 Bb4:2 Ab4:2 | G4:2 F#4:2 G4:2 Ab4:2 G4:2 F#4:2 Bb4:2 Ab4:2 |
+    A4:2 G#4:2 A4:2 Bb4:2 A4:2 G#4:2 C#5:2 Bb4:2 | Bb4:2 A4:2 Bb4:2 C5:2 Bb4:2 A4:2 D5:2 Ab4:2 |
+    G#4:2 F4:2 G#4:2 A4:2 G#4:2 F4:2 B4:2 A4:2 | G#4:2 F4:2 G#4:2 A4:2 G#4:2 F4:2 B4:2 A4:2
+  riff: |
+    E3:2 E3:1 E3:1 F3:2 E3:2 G#3:2 E3:2 A3:2 G#3:2 | E3:2 E3:1 E3:1 F3:2 E3:2 G#3:2 E3:2 A3:2 G#3:2 |
+    E3:2 E3:1 E3:1 F3:2 E3:2 G#3:2 E3:2 A3:2 G#3:2 | E3:2 E3:1 E3:1 F3:2 E3:2 G#3:2 E3:2 A3:2 G#3:2 |
+    G3:2 G3:1 G3:1 Ab3:2 G3:2 Bb3:2 G3:2 C4:2 Bb3:2 | G3:2 G3:1 G3:1 Ab3:2 G3:2 Bb3:2 G3:2 C4:2 Bb3:2 |
+    Bb3:2 Bb3:1 Bb3:1 B3:2 Bb3:2 D4:2 Bb3:2 Eb4:2 D4:2 | E3:2 E3:1 E3:1 F3:2 E3:2 G#3:2 E3:2 A3:2 G#3:2
+  arp8: "^1:2 ^2:2 ^3:2 ^2:2 ^1+:2 ^3:2 ^2:2 ^3:2"
+  drive: "^1:2 ^1:2 ^1+:2 ^1:2 ^1:2 ^1:2 ^1+:2 ^1:2"
+  wave8: "^1:2 r:2 ^1+:2 r:2 ^1:2 r:2 ^1+:2 ^1:2"
+  timp_c: "^1:4 r:12"
+  hats: "C6:2 _C6:2 C6:2 _C6:2 C6:2 _C6:2 C6:2 _C6:2"
+
+grooves:
+  chase:
+    k: "x.....x...x.....|x.....x...x...x."
+    s: "....x.......x...|....x.......x..x"
+  chase_crash:
+    crash: "X...............|................|................|................|................|................|................|................"
+    k: "x.....x...x.....|x.....x...x...x."
+    s: "....x.......x...|....x.......x..x"
+  toms:
+    k: "x..............."
+    s: "....x..........."
+    thi: "........x.x....."
+    tmid: "............x..."
+    tlo: "..............xx"
+  sparse:
+    k: "x.......x......."
+    s: "....x.......x..."
+
+sections:
+  intro:
+    bars: 2
+    chords: "Am | E"
+    fill: toms
+    parts: {strings: "A3:2 G3:2 A3:2 Bb3:2 A3:2 G3:2 C4:2 Bb3:2 | G#3:2 F3:2 G#3:2 A3:2 G#3:2 F3:2 B3:2 A3:2", bass: drive,
+            timpani: "^1:4 r:12 | ^1:4 r:12", drums: sparse, wave: wave8, hat: hats}
+  a:
+    bars: 8
+    chords: a
+    fill: toms
+    parts: {trumpet: theme, strings: ost_a, bass: drive, drums: chase_crash, wave: wave8, hat: hats}
+  b:
+    bars: 8
+    chords: b
+    fill: toms
+    parts: {horn: hunt, guitar: riff, bass: drive, drums: chase, sq: arp8, wave: wave8, hat: hats}
+  c:
+    bars: 8
+    chords: c
+    fill: toms
+    parts: {trumpet: stab_c, strings: ost_c, bass: drive, timpani: timp_c, drums: sparse, wave: wave8, hat: hats}
+  a2:
+    bars: 8
+    chords: a
+    fill: toms
+    parts: {trumpet: theme, horn: theme_hrn, bass: drive, drums: chase_crash, sq: ost_a_sq, wave: wave8, hat: hats}
+  d:
+    bars: 8
+    chords: d
+    fill: toms
+    parts: {trumpet: climb, horn: climb_hrn, bass: drive, drums: chase, sq: ost_d_sq, wave: wave8, hat: hats}
+  b2:
+    bars: 8
+    chords: b
+    fill: toms
+    parts: {horn: hunt, guitar: riff, bass: drive, drums: chase, wave: wave8, hat: hats}
+
+arrangement: [intro, a, b, c, a2, d, b2]
+loop_start: a
