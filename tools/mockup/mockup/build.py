@@ -15,7 +15,12 @@ from . import solid as S
 from .style import shade
 
 C = 16
-OVAL = 0.6        # depth / width of every round footprint: the game's top-down angle, kept the same everywhere
+OVAL = S.K        # depth / width of every round footprint (the projection rule in solid.py)
+
+
+def fit_round(width, height, h, per):
+    """The largest true radius whose oval (depth 2aK) plus walls h plus a cap of per * a fits the box."""
+    return max(3.0, min(width / 2, (height - h) / (2 * OVAL + per)))
 
 
 class M:
@@ -167,20 +172,28 @@ def m_wings(m, towers=False, dome_mid=False):
 
 
 def _round(m, h, cap, rise=None, z0=0, box=None):
-    """A round building on an oval footprint filling the box (or a sub-box x0..x1)."""
+    """A round building filling the box (or a sub-box x0..x1). Domes are hemispheres unless `rise` asks for
+    a lower one; if the box is too shallow, the building gets narrower rather than squashed."""
     x0, x1 = box or (1, m.W - 1)
-    a = (x1 - x0) / 2
-    rise = rise if rise is not None else {"dome": min(a * 0.55, 18), "cone": min(a * 0.8, 22)}.get(cap, 2)
-    D = max(8, m.H - h - rise - z0)
-    b = min(D / 2, a * OVAL)
+    if cap == "dome":
+        per = OVAL if rise is None else 0
+        a = fit_round(x1 - x0, m.H - z0 - (rise or 0), h, per)
+        rise = a * OVAL if rise is None else min(rise, a * OVAL)
+    elif cap == "cone":
+        a = fit_round(x1 - x0, m.H - z0, h, 0.8)
+        rise = a * 0.8
+    else:
+        a = fit_round(x1 - x0, m.H - z0 - 3, h, 0)
+        rise = 2
+    b = a * OVAL
     cx, cy = (x0 + x1) / 2, b
     m.add(S.cylinder(cx, cy, a, b, z0, z0 + h, m.wall, m.roof))
     if cap == "dome":
         m.add(S.dome(cx, cy, a, b, z0 + h, rise, m.roof))
     elif cap == "cone":
-        m.add(S.cone(cx, cy, a + 2, b + 1.5, z0 + h, rise, m.roof))
+        m.add(S.cone(cx, cy, a + 2, b, z0 + h, rise, m.roof))
     elif cap == "ring":
-        m.add(S.cylinder(cx, cy, a * 0.7, b * 0.7, z0 + h, z0 + h + 2, shade(m.roof, 0.12)))
+        m.add(S.cylinder(cx, cy, a * 0.7, b, z0 + h, z0 + h + 2, shade(m.roof, 0.12)))
     return cx, cy, a, b
 
 
@@ -263,13 +276,11 @@ def m_bunker(m):
 
 def m_buried(m):
     W = m.W
-    rise = min(W * 0.32, m.H * 0.5)
-    D = m.H - rise + 6
-    a = W / 2 - 1
-    b = min(D / 2, a * OVAL)
+    a = fit_round(W - 2, m.H + 6, 0, OVAL * 0.78)
+    b = a * OVAL
     cx, cy = W / 2, b
     m.add(S.prism(S.ring_pts(cx, cy, a, b), 0, 6, m.dirt, shade(m.ground, -0.04), taper=8))
-    m.add(S.dome(cx, cy, a * 0.78, b * 0.78, -6, rise, m.roof))
+    m.add(S.dome(cx, cy, a * 0.78, None, -6, None, m.roof))
     if m.door_x is not None:
         x = m.door_x
         m.add(S.box(x - 6, 0, 0, x + 6, cy, 11, m.wall, m.roof))
@@ -299,9 +310,9 @@ def m_stilts(m, cap="pitched", round_=False):
     leg = shade(m.trim, -0.1)
     W = m.W
     if round_:
-        D = m.H - L - h - rise
-        a = W / 2 - 2
-        b = min(D / 2 - 1, a * OVAL)
+        a = fit_round(W - 4, m.H - L - 2, h, OVAL)
+        rise = a * OVAL
+        b = a * OVAL
         cx, cy = W / 2, b + 2
         for f in (-0.6, -0.2, 0.2, 0.6):
             x = cx + a * f
@@ -396,6 +407,7 @@ def m_deck(m):
     if 2 * b + L + 7 > m.H:          # a short box: a smaller deck rather than one cut off at the top
         b = (m.H - L - 7) / 2
         a = b / OVAL
+        cx = m.W / 2
         cy = b
     leg = shade(m.wall, -0.25)
     for f in (-0.55, 0.0, 0.55):
@@ -427,13 +439,14 @@ def m_bay(m):
     h = m.wall_h(0.75)
     W = m.W
     D = m.H - h - 1
-    a, b = W / 2 - 1, min(D / 2, (W / 2 - 1) * OVAL)
+    a = fit_round(W - 2, m.H - 1, h, 0)
+    b = a * OVAL
     cx, cy = W / 2, b
     m.add(S.cylinder(cx, cy, a, b, 0, h, m.wall, m.roof))
     m.add(S.cylinder(cx, cy, a - 4, b - 4, 0.6, h + 1, shade(m.wall, -0.15), shade(m.ground, -0.12), subtract=True))
     for f in (-0.45, 0.45):     # doors in the far inner wall
         x = cx + (a - 4) * f
-        yb = cy + (b - 4) * math.sqrt(1 - f * f) - 1
+        yb = cy + (a - 4) * OVAL * math.sqrt(1 - f * f) - 1
         m.add(S.box(x - 3, yb - 1, 0.6, x + 3, yb + 3, 9, m.door_col_rgb, subtract=True))
     mark = (205, 205, 205) if m.grey else shade(m.trim, 0.2)
     m.add(S.cylinder(cx, cy + 2, (a - 4) * 0.55, (b - 4) * 0.55, 0.6, 1.0, mark))
@@ -447,10 +460,9 @@ def m_dome_porch(m):
     """The Tatooine homestead: a dome with a boxy arched entry block in front of it."""
     h = max(8, m.wall_h(0.5))
     x0, x1 = (3, m.W - 3)
-    a = (x1 - x0) / 2
-    rise = min(a * 0.6, 20)
-    D = m.H - h - rise
-    b = min((D - 6) / 2, a * OVAL)
+    a = fit_round(x1 - x0, m.H - 6, h, OVAL)
+    rise = a * OVAL
+    b = a * OVAL
     cx = m.door_x if m.door_x is not None else m.W / 2
     cx = max(x0 + a, min(x1 - a, cx))
     cy = 6 + b
@@ -492,8 +504,8 @@ def m_spire(m):
 def m_saucer(m):
     """Cloud City: a wide disc on a slim stalk, a small dome on top."""
     W = m.W
-    a = W / 2 - 1
-    b = a * 0.5
+    a = max(8, min(W / 2 - 1, (m.H - 36) / (2 * OVAL)))     # leave room for a visible stalk
+    b = a * OVAL
     cx, cy = W / 2, b + 1
     stalk = max(14, int(m.H - 2 * b - 16))
     sa, sb = max(5, a * 0.22), max(3, b * 0.22)
@@ -507,9 +519,9 @@ def m_saucer(m):
 def m_glass_dome(m):
     """A faceted glass greenhouse dome on a low ring wall (Sullust ash farms)."""
     h = 5
-    a = m.W / 2 - 1
-    rise = min(a * 0.6, m.H * 0.4)
-    b = min((m.H - h - rise) / 2, a * OVAL)
+    a = fit_round(m.W - 2, m.H, h, OVAL)
+    rise = a * OVAL
+    b = a * OVAL
     cx, cy = m.W / 2, b
     glass = (150, 170, 180) if m.grey else m.st.get("glass", (150, 200, 205))
     m.add(S.cylinder(cx, cy, a, b, 0, h, m.wall, m.roof))
@@ -600,9 +612,8 @@ def m_lab(m):
 def m_arena(m):
     h = m.wall_h(0.8)
     W = m.W
-    D = m.H - h - 2
-    a = W / 2 - 1
-    b = min(D / 2, a * OVAL)
+    a = fit_round(W - 2, m.H - 2, h, 0)
+    b = a * OVAL
     cx, cy = W / 2, b
     m.add(S.cylinder(cx, cy, a, b, 0, h, m.wall, m.roof))
     m.add(S.cylinder(cx, cy, a + 1, b + 1, h * 0.5, h * 0.5 + 2, m.trim))
@@ -810,12 +821,12 @@ def m_undercity_rim(m):
     wall = m.wall
     # the deck (see-through on top), its rim wall, then the underside sweeping back in toward a central stalk
     rim = 34
-    m.add(S.cylinder(cx, cy, a, b, -rim, 0, wall, wall, hide_top=True, n=64, below=True))
+    m.add(S.cylinder(cx, cy, a, b, -rim, 0, wall, wall, hide_top=True, n=64, below=True, exact=True))
     t = b * 0.8
     m.add(S.prism(S.ring_pts(cx, cy, a - t, b - t, 64), -rim - 160, -rim, shade(wall, -0.15), shade(wall, -0.15),
                   taper=-t, below=True))
     for z0, col, g in ((-4, m.trim, 1.5), (-15, m.glass, 0.8), (-26, m.trim, 1.5)):
-        m.add(S.cylinder(cx, cy, a + g, b + g, z0 - 3, z0, col, col, n=64, below=True))
+        m.add(S.cylinder(cx, cy, a + g, b + g, z0 - 3, z0, col, col, n=64, below=True, exact=True))
     m.add(S.cylinder(cx, cy, a * 0.12, b * 0.12, -900, -rim, shade(wall, -0.25), below=True))
     for k in range(14):
         th = math.pi * (0.1 + 0.8 * k / 13)

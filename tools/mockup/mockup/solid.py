@@ -19,6 +19,13 @@ import numpy as np
 
 EPS = 1e-4
 RAY = np.array([0.0, 1.0, -1.0])
+# THE PROJECTION RULE for round things. The game's view is a 45-degree camera drawn without
+# foreshortening (one cell north = one cell up = 16 px). Seen through that camera, a real circle of radius r
+# on the ground shows as an oval r wide and r * K deep, and a real height h shows as h * K. So every round
+# primitive below takes only its true radius `a`: the depth is always a * K, a dome is at most a * K tall
+# (a hemisphere), and a cone's base follows the same oval. Callers cannot pass their own depth, so no
+# building can squash or stretch a round shape. A shape that does not fit its box must shrink, not squash.
+K = math.cos(math.radians(45))
 LIGHT = np.array([-0.5, -0.25, 0.83])
 LIGHT = LIGHT / np.linalg.norm(LIGHT)
 
@@ -146,13 +153,17 @@ def prism(poly, z0, z1, side, top=None, taper=0.0, **kw):
     return Solid(planes, side, top, **kw)
 
 
-def cylinder(cx, cy, a, b, z0, z1, side, top=None, n=28, **kw):
-    """An elliptic prism: a round building on an oval footprint (a by b px radii)."""
-    return prism(ring_pts(cx, cy, a, b, n), z0, z1, side, top, **kw)
+def cylinder(cx, cy, a, b, z0, z1, side, top=None, n=28, exact=False, **kw):
+    """A round prism of true radius a. Its depth is a * K by the projection rule; `b` is ignored unless
+    `exact` (a footprint fixed by the map, like Cloud City's outline)."""
+    return prism(ring_pts(cx, cy, a, b if exact else a * K, n), z0, z1, side, top, **kw)
 
 
 def dome(cx, cy, a, b, z0, c, col, rings=6, n=24, **kw):
-    """A half-ellipsoid: radii a (east-west), b (north-south), height c, sitting on z0."""
+    """A dome of true radius a sitting on z0: depth a * K, height c but never more than a * K (a
+    hemisphere). A lower c gives a shallower dome. `b` is ignored (projection rule)."""
+    b = a * K
+    c = b if c is None else max(1.0, min(c, b))
     planes = [[0, 0, -1, -z0]]
     for j in range(rings):
         ph = (j + 0.5) / rings * (math.pi / 2)
@@ -167,6 +178,8 @@ def dome(cx, cy, a, b, z0, c, col, rings=6, n=24, **kw):
 
 
 def cone(cx, cy, a, b, z0, hgt, col, n=20, **kw):
+    """A cone of true base radius a (depth a * K by the projection rule), hgt tall on screen."""
+    b = a * K
     apex = np.array([cx, cy, z0 + hgt])
     pts = ring_pts(cx, cy, a, b, n)
     planes = [[0, 0, -1, -z0]]

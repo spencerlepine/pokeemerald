@@ -47,7 +47,11 @@ python3 -m mockup missing                 # art ids that have no shape in styles
     Solids are hidden below ground unless made with `below=True`. They sit on blocked border cells and are placed only by mockup
     overrides (`wiki/mockup/overrides/<area>.yaml`, `add: buildings`), never in phase 1.
     `python3 -m mockup builds --giants [--grey]` draws them.
-  - Every round footprint uses one depth-to-width ratio (`OVAL` = 0.6), so all round things match the view.
+  - **The projection rule for round things** is enforced in `solid.py`, not left to each model: seen through
+    the game's 45° camera, a true circle of radius r is an oval r wide and r·K deep and a height h shows as
+    h·K (K = cos 45° ≈ 0.707). `cylinder`, `dome` and `cone` take only the true radius and derive the depth;
+    a dome is never taller than a hemisphere. A round building that doesn't fit its box gets narrower,
+    never squashed (`fit_round` in build.py).
     The owner prefers roofed buildings; keep round ones for iconic places only.
   - `render --grey` draws buildings in neutral grey (the pure greybox look); `--out DIR` writes elsewhere.
 - `mockup/draw.py`: terrain, props and people. `mockup/cli.py`: the commands.
