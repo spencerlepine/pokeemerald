@@ -142,13 +142,6 @@ pieces:
   size:
   - 2
   - 2
-- build: pylon
-  at:
-  - 25
-  - 15
-  size:
-  - 2
-  - 3
 - build: boulder
   at:
   - 16
@@ -167,22 +160,13 @@ pieces:
   material: landform
   wall: '#7a6b5a'
   roof: '#8f9a6a'
-- build: bush
+- build: vaporator
   at:
-  - 10
-  - 19
+  - 25
+  - 15
   size:
-  - 2
   - 1
-  material: nature
-- build: bush
-  at:
-  - 26
-  - 11
-  size:
-  - 2
-  - 1
-  material: nature
+  - 3
 people:
 - - 8
   - 12

@@ -42,8 +42,10 @@ def cmd_render(a):
     elif not a.all:
         sys.exit("name areas, --planet P or --all")
     for doc in docs:
-        img = draw.area(apply_overrides(doc), st, labels=not a.no_labels, grey=a.grey)
+        img = draw.area(apply_overrides(doc), st, labels=not a.no_labels, grey=a.grey, relief=a.relief)
         out = _out(doc)
+        if a.relief:
+            out = MOCK / "relief" / out.relative_to(MOCK)
         if a.out:
             out = Path(a.out) / out.name
         out.parent.mkdir(parents=True, exist_ok=True)
@@ -190,7 +192,7 @@ def cmd_scene(a):
             for y, row in enumerate(t.sf):
                 for x, ch in enumerate(row):
                     if ch == "T":
-                        pieces.append({"build": nat.get("build", "tree"), "at": [x, y - 1], "size": [1, 2],
+                        pieces.append({"build": nat.get("build", "pine"), "at": [x, y - 1], "size": [1, 2],
                                        "material": nat.get("material", "nature")})
         rows = {}
         for i, p in enumerate(pieces):
@@ -243,6 +245,7 @@ def main(argv=None):
     r.add_argument("--all", action="store_true")
     r.add_argument("--no-labels", action="store_true")
     r.add_argument("--grey", action="store_true", help="buildings in neutral grey (the greybox look)")
+    r.add_argument("--relief", action="store_true", help="terrain in relief: heights derived from the grid, 3D nature")
     r.add_argument("--out", help="write here instead of wiki/mockup/<planet>/")
     w = sub.add_parser("world")
     w.add_argument("--cell", type=int, default=4, help="px per cell on the planet sheets")

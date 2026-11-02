@@ -349,7 +349,7 @@ def label(d, text, cx, cy):
 WATER_KIND = {"MUSTAFAR": "lava", "ASTEROID FIELD": "void"}
 
 
-def area(doc, styles, labels=True, grey=False):
+def area(doc, styles, labels=True, grey=False, relief=False):
     grid = [r for r in (doc.get("grid") or "").splitlines() if r]
     W = max(len(r) for r in grid)
     grid = [r.ljust(W, "x") for r in grid]
@@ -358,15 +358,31 @@ def area(doc, styles, labels=True, grey=False):
     pal, nature_kind = styles.terrain(planet)
     img = Image.new("RGB", (W * C, H * C), pal["ground"])
     d = ImageDraw.Draw(img, "RGBA")
-    terrain(d, grid, pal, nature_kind, WATER_KIND.get(planet, "water"))
+    nat = []
+    if relief:
+        from . import relief as _relief
+        cells = _relief.draw(d, grid, pal, grey)
+        nat = [("nature", n) for n in _relief.nature_pieces(cells, nature_kind)]
+        if not nat:      # kinds without a model (clouds) keep their flat shape
+            for x, y in cells:
+                _nature(d, x * C, y * C, pal["nature"], nature_kind, _h(x, y), False)
+    else:
+        terrain(d, grid, pal, nature_kind, WATER_KIND.get(planet, "water"))
     exits(d, doc, W, H)
     # draw back to front so lower pieces overlap higher ones, like the game
-    pieces = [("building", b) for b in doc.get("buildings") or []] + [("prop", p) for p in doc.get("props") or []]
+    pieces = [("building", b) for b in doc.get("buildings") or []] + [("prop", p) for p in doc.get("props") or []] + nat
     # giants are backdrop: always drawn first, so nothing on the playable map is ever covered by them
     pieces.sort(key=lambda kp: (not kp[1].get("art", "").startswith("art:giant:"),
                                 kp[1]["at"][1] + kp[1].get("size", [1, 1])[1]))
     for kind, o in pieces:
         seed = _h(zlib.crc32(o.get("art", "").encode()), o["at"][0], o["at"][1])
+        if kind == "nature":
+            rockish = o["build"] in ("boulder", "shard")
+            top = pal["cliff"] if rockish and o["build"] == "boulder" else pal["nature"]
+            st = {"build": o["build"], "wall": shade(top, -0.3), "roof": top, "trim": shade(top, -0.5),
+                  "ground": pal["ground"]}
+            _build.building(img, o, st, seed, grey)
+            continue
         st = styles.shape(o.get("art", ""), planet, kind, seed)
         if kind == "building" or st.get("build"):      # props with a `build` are 3D models too
             st["ground"] = pal["ground"]

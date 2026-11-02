@@ -240,14 +240,6 @@ pieces:
   - 4
   - 3
   material: landform
-- build: checkpoint
-  at:
-  - 19
-  - 23
-  size:
-  - 4
-  - 2
-  material: imperial
 - build: crater
   at:
   - 27
@@ -263,6 +255,14 @@ pieces:
   size:
   - 1
   - 1
+- build: sentry
+  at:
+  - 20
+  - 21
+  size:
+  - 2
+  - 4
+  material: imperial
 people:
 - - 17
   - 12

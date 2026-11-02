@@ -64,16 +64,19 @@ The owner split the remaining work into phases on 2026-11-02.
    categories live in `tools/mockup/mockup/kit.py` with a simplicity guardrail (16 solids, palette colours only) and are
    reviewed as side-by-side sheets in `wiki/mockup/kit/`. Pieces without doors are welcome. Sunken pieces are allowed
    again. Many town areas have no trees; keep trees out of kit sheets and scenes.
-   Category 1, `doorless` (vaporator, mast, dish, beacon, tanks, stack, pylon, relay, crates, core): APPROVED, all kept.
+   Category 1, `doorless` (vaporator, mast, dish, beacon, tanks, stack, relay, crates, core): APPROVED (pylon later cut).
    Category 2, `sunken` (pit-home, stairwell, hatch, grate, trench, sunken-bay, well, mineshaft): APPROVED, all kept.
-   Category 3, `imperial` (checkpoint, barricade, sentry, garage, barracks, pillbox, command, gate): awaiting review.
-   Category 3, `imperial`: shown, no objections yet. Categories 4 `nature` and 5 `landform` added for the breadth pass.
+   Category 3, `imperial` (barricade, sentry, garage, barracks, pillbox, command, gate): APPROVED (checkpoint cut).
+   Category 3, `imperial`: shown, no objections yet. Categories 4 `nature` and 5 `landform` added for the breadth pass and approved; tree and bush cut (trees
+   parked until the end; pine is good). Owner: the checkpoint gate and power pole were cut as human-made z-day copies.
+   Design from Star Wars sci-fi, never copy z-day objects. Reference art and planet facts:
+   https://github.com/spencerlepine/starwars-db/tree/main/wiki
    **Breadth pass (owner, 2026-11-02):** build tools to greybox a whole planet in three layers before more depth:
    (1) terrain, nature, ledges, berms, water, waterfalls; (2) large structures and natural borders (cliffs,
    ridges, mesas), so areas need not be ringed by trees and can have more height around the edges (towns stay
    mostly flat, at least a 1-high ledge as a border); (3) town pieces. Tool: `python3 -m mockup scene <name>`
-   (`tools/mockup/mockup/terrain.py`), demo scenes in `wiki/mockup/scenes/`. Next gap: derive heights from a
-   phase-1 area automatically, so every area can get a 3D greybox without hand-written grids.
+   (`tools/mockup/mockup/terrain.py`), demo scenes in `wiki/mockup/scenes/`. Heights are now derived from every
+   phase-1 grid (`tools/mockup/mockup/relief.py`, `render --relief` -> `wiki/mockup/relief/`), all 528 areas.
    Owner (2026-11-02): preview only the new category each round, not approved art. The aim is tooling that lets the
    bot world-build and expand on its own.
 3. **Real art.** This resumes the paused art tools. The first art step is calibrating the Fortree tree house in

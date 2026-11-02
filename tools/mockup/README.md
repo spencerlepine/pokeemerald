@@ -61,17 +61,26 @@ python3 -m mockup missing                 # art ids that have no shape in styles
     piece at its sizes in three seeded variations on plain ground (no trees), with a person and a 4x3 house
     for scale. The owner reviews pieces side by side, not placed in towns.
     1. `doorless`: utility and signal structures with no door: vaporator, mast, dish, beacon, tanks, stack,
-       pylon, relay, crates, core.
+       relay, crates, core.
     2. `sunken`: pieces cut into the ground: pit-home, stairwell, hatch, grate, trench, sunken-bay, well,
        mineshaft. The terrain is a see-through slab (`hide_top`, `below`), a pit is a cut allowed below
        ground, so the ray sees a pit's north wall and floor. Doors in a pit go in its north wall.
-    3. `imperial`: angular military pieces with sloped walls, dark slits and blast doors: checkpoint,
+    3. `imperial`: angular military pieces with sloped walls, dark slits and blast doors:
        barricade, sentry, garage, barracks, pillbox, command, gate. Shown in Imperial greys
        (`kit.MATERIAL`), since the look belongs to the faction rather than a planet.
     Sunken pieces are allowed again now that the projection rule is enforced (owner, 2026-11-02).
-    4. `nature`: tree, pine, boulder, shard (ice or crystal), fungus, bush. What a `T` cell becomes, and
+    4. `nature`: pine, boulder, shard (ice or crystal), fungus. Broadleaf trees are parked until the end (hard to get right). What a `T` cell becomes, and
        only where a planet has it.
     5. `landform`: mesa, spire, arch, boulders, ridge, crater. Large natural borders instead of a ring of trees.
+  - **Scrapped (owner, 2026-11-02):** tree, bush, the checkpoint barrier gate and the power pole. They read as
+    human-made, z-day-style objects. Design from Star Wars sci-fi, not from z-day or Earth.
+  - **Relief for every phase-1 area** (`mockup/relief.py`): heights derived from the grid, no hand-written
+    grids. A rock mass (`#`, `x`) is a plateau: in each column the southern cells of a rock run are its
+    cliff face (1-2 cells: all face; 3-5: one level; 6+: two levels; none if it runs off the bottom edge),
+    the rest is rock top. Rock sides get a lip, ground east of rock gets its shadow, water sits below its
+    banks, ledges stay one level, and `T` cells become kit models (pine, boulder, shard, fungus by the
+    planet's nature kind). The map stays on the game grid. `python3 -m mockup render --all --relief`
+    writes `wiki/mockup/relief/<planet>/<area>.png`; `relief.heights(grid)` returns the levels.
   - **Greybox areas in three layers** (owner, 2026-11-02: build a whole planet in greybox, breadth first):
     1. Terrain (`mockup/terrain.py`): a heights grid (0-9 levels, one level = one 16 px ledge) and a surface
        grid (`.` ground, `:` path, `"` wild, `~` water, `b` berm, `H` stairs, `T` nature). Drawn north to

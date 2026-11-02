@@ -149,21 +149,6 @@ def d_stack(m):
               S.cylinder(x, cy, a * 0.55, 0, h - 4, h + 1, p["dark"], p["dark"], subtract=True))
 
 
-def d_pylon(m):
-    """Power pylon: one or two posts with a crossbeam and hanging insulators."""
-    p = palette(m)
-    W = m.W
-    h = (m.H - 8) * (0.78 + 0.08 * m.r(1, 3))
-    two = m.cw >= 3 or m.r(2, 2)
-    posts = [W * 0.28, W * 0.72] if two else [W / 2]
-    for x in posts:
-        m.add(S.box(x - 2, 2, 0, x + 2, 6, h, p["wall"], p["roof"]))
-    m.add(S.box(2, 2, h - 2, W - 2, 6, h + 2, p["roof"], p["roof"]))
-    for x in (4, W / 2, W - 4) if two else (4, W - 4):
-        m.add(S.box(x - 1, 3, h - 7, x + 1, 5, h - 2, p["trim"]),
-              S.box(x - 1.5, 2.5, h - 9, x + 1.5, 5.5, h - 7, p["glass"]))
-
-
 def d_relay(m):
     """Sensor relay: a low slab with three to five rods of different heights, each with a lit tip."""
     p = palette(m)
@@ -225,7 +210,6 @@ DOORLESS = {
     "beacon": (d_beacon, [(1, 2), (1, 3)]),
     "tanks": (d_tanks, [(3, 3), (4, 3)]),
     "stack": (d_stack, [(2, 3), (3, 4)]),
-    "pylon": (d_pylon, [(2, 3), (3, 4)]),
     "relay": (d_relay, [(2, 2), (3, 3)]),
     "crates": (d_crates, [(2, 3), (3, 3)]),
     "core": (d_core, [(2, 3), (3, 4)]),
@@ -418,25 +402,6 @@ def _band(x0, x1, yf, z, hgt, col):
     return S.box(x0, yf - 1, z, x1, yf + 1.2, z + hgt, col, subtract=True)
 
 
-def i_checkpoint(m):
-    """Checkpoint: a guard booth with a window band and a striped barrier arm across the road."""
-    p = palette(m)
-    bw = 18
-    bx = 2 if m.r(1, 2) else m.W - 2 - bw
-    D = 14
-    h = 18
-    m.add(S.prism([(bx, 0), (bx + bw, 0), (bx + bw, D), (bx, D)], 0, h, p["wall"], p["roof"], taper=2),
-          _band(bx + 2, bx + bw - 2, 0.3, 10, 4, p["glass"]),
-          S.box(bx - 1, -1, h, bx + bw + 1, D + 1, h + 2, p["roof"]))
-    ax0, ax1 = (bx + bw + 2, m.W - 2) if bx < m.W / 2 else (2, bx - 2)
-    post = ax0 if bx < m.W / 2 else ax1 - 3
-    m.add(S.box(post, 4, 0, post + 3, 7, 10, p["trim"]))
-    n = max(2, int((ax1 - ax0) // 8))
-    for i in range(n):
-        xa = ax0 + (ax1 - ax0) * i / n
-        m.add(S.box(xa, 5, 8, xa + (ax1 - ax0) / n, 6.5, 10, p["light"] if i % 2 else p["trim"]))
-
-
 def i_barricade(m):
     """Barricade: a row of sloped blast blocks with gaps, laid out by the seed."""
     p = palette(m)
@@ -552,7 +517,6 @@ def i_gate(m):
 
 
 IMPERIAL = {
-    "checkpoint": (i_checkpoint, [(3, 2), (4, 2)]),
     "barricade": (i_barricade, [(3, 1), (5, 2)]),
     "sentry": (i_sentry, [(2, 4), (2, 5)]),
     "garage": (i_garage, [(4, 5), (5, 6)]),
@@ -597,20 +561,6 @@ def rock_poly(m, k, cx, cy, a, n=9):
 # --------------------------------------------------------------------------- category 4: nature
 # The things a 'T' cell can be, per planet: trees only where a planet has them. One cell each, or two
 # for a big one. Colours: wall = trunk or rock side, roof = canopy or rock top.
-
-
-def n_tree(m):
-    """Broadleaf tree: a short trunk under one or two round canopies."""
-    p = palette(m)
-    cx = m.W / 2
-    a = min(m.W / 2 - 1, 9 + 2 * (m.cw - 1) * 4)
-    cy = a * K + 1
-    th = 6 + 2 * m.r(1, 3)
-    m.add(S.box(cx - 1.5, cy - 1, 0, cx + 1.5, cy + 1, th + 2, p["wall"]),
-          S.cylinder(cx, cy, a, 0, th, th + a * 0.5, p["roof"], p["roof"]),
-          S.dome(cx, cy, a, 0, th + a * 0.5, None, p["roof"]))
-    if m.r(2, 2) and m.cw > 1:
-        m.add(S.dome(cx + a * 0.4, cy - 1, a * 0.55, 0, th + a * 1.0, None, p["roof"]))
 
 
 def n_pine(m):
@@ -663,21 +613,11 @@ def n_fungus(m):
           S.cylinder(cx, cy, a, 0, h, h + 2, p["roof"]), S.dome(cx, cy, a, 0, h + 2, a * 0.35, p["roof"]))
 
 
-def n_bush(m):
-    """Low scrub or bush: two small round clumps."""
-    p = palette(m)
-    for i, (dx, s) in enumerate(((-0.18, 0.32), (0.16, 0.26))):
-        a = m.W * s
-        m.add(S.dome(m.W / 2 + dx * m.W, a * K + 1 + 2 * i, a, 0, 0, None, p["roof"]))
-
-
 NATURE = {
-    "tree": (n_tree, [(1, 2), (2, 3)]),
     "pine": (n_pine, [(1, 2), (2, 3)]),
     "boulder": (n_boulder, [(1, 1), (2, 2)]),
     "shard": (n_shard, [(1, 2), (2, 3)]),
     "fungus": (n_fungus, [(1, 2), (2, 3)]),
-    "bush": (n_bush, [(1, 1), (2, 1)]),
 }
 
 
