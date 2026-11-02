@@ -1,0 +1,59 @@
+# Jundland Wastes and the other canyons and tunnels: hot-swap of MUS_PETALBURG_WOODS (wiki
+# audio:MUS_PETALBURG_WOODS, AMBIENT). ARRANGE of "The Tusken Camp and The Homestead" (ref_tracks
+# soundtrack:attack-clones:11, ref_notes: the Tusken Camp half). From the cue (analyze_reference 0-160 s: ~108 bpm,
+# B minor over a long Bm7 pedal, the Daug / Bbaug shudders, the D7-Am-C7-G drift and the Dsus4 / Asus4 hangs):
+# a low string pedal on B pulsing in the cue's tempo with the C natural leaning on it, the augmented chords
+# as a pad, and long-spaced calls from far away. The vanilla voicegroup has no horn, so the distant calls are a
+# square with vibrato answered by the flute; pizzicato and metallic noise rattle like wind in the rocks.
+# Vanilla: petalburg_woods voicegroup, 130 bpm, 42.2 s loop; this one 108 bpm, 20 bars, 44.4 s.
+# Brief (sw_subject): tense and echoing, low strings and distant original horn calls.
+name: wastes
+replaces: MUS_PETALBURG_WOODS
+form: AMBIENT
+voicegroup: petalburg_woods           # strings 48, flute 73, pizzicato 45, piano 1, squares 4/5/80/82, wave 81, noise 127 (metallic)
+master_volume: 80
+tempo: 108
+steps_per_beat: 4
+time_signature: [4, 4]
+seed: 11
+
+parts:
+  low:     {program: 48, channel: 0, volume: 74,  pan: -10, range: [B2, D3], gate: 0.9}
+  pad:     {program: 48, channel: 1, volume: 52,  pan: -26, range: [D4, Bb4], gate: 1.0}
+  flute:   {program: 73, channel: 2, volume: 76,  pan: 24,  range: [F#4, F#6], gate: 0.95, lfo_speed: 30, lfo_delay: 20, mod: 6}
+  pizz:    {program: 45, channel: 3, volume: 66,  pan: 18,  range: [B2, B4], gate: 0.8, humanize: {vel: 10}}
+  bass:    {program: 81, channel: 4, volume: 92,  pan: 0,   range: [B1, B2], gate: 1.0}
+  call:    {program: 82, channel: 5, volume: 34,  pan: -34, range: [F#4, B5], gate: 0.95, mono: true, lfo_speed: 30, lfo_delay: 30, mod: 10}
+  wind:    {program: 127, channel: 6, volume: 22, pan: 36,  gate: 0.6, mono: true}
+
+phrases:
+  pedal: |
+    B2:2 B2:2 r:2 B2:2 C3:2 B2:2 r:4 | B2:2 B2:2 r:2 B2:2 C3:2 B2:2 r:4 |
+    B2:2 B2:2 r:2 B2:2 C3:2 B2:2 r:4 | Bb2:2 Bb2:2 r:2 Bb2:2 B2:2 Bb2:2 r:4
+  shudder: |
+    D4:16 | D4:16 | D4:16 | D4:16 | F#4:16 | F#4:16 | F#4:16 | F#4:16 | D4:16 | D4:16 | Bb4:16 | Bb4:16 |
+    C4:16 | C4:16 | G4:16 | G4:16 | D4:16 | D4:16 | E4:16 | E4:16
+  calls: |
+    r:16 | F#5:8 B4:4 ~:4 | ~:16 | r:16 | r:16 | r:16 | r:16 | r:16 |
+    r:16 | r:16 | r:16 | A5:8 D5:4 ~:4 | ~:16 | r:16 | r:16 | r:16 | r:16 | r:16 | r:16 | r:16
+  answers: |
+    r:16 | r:16 | r:16 | r:16 | r:8 F#5:4 E5:4 | D5:6 C#5:2 B4:8 | r:16 | r:16 |
+    r:16 | r:16 | r:16 | r:16 | r:16 | r:16 | r:8 E5:4 D5:4 | C5:6 B4:2 A4:8 | r:16 | r:16 | r:16 | r:16
+  plucks: |
+    r:12 F#3:2 r:2 | r:16 | r:4 D4:2 r:10 | r:16 | r:12 Bb3:2 r:2 | r:16 | r:8 F#3:2 r:6 | r:16 |
+    r:12 F#3:2 r:2 | r:16 | r:4 D4:2 r:10 | r:16 | r:12 G3:2 r:2 | r:16 | r:8 E3:2 r:6 | r:16 |
+    r:12 F#3:2 r:2 | r:16 | r:4 C4:2 r:10 | r:16
+  ground: |
+    B1:16 | B1:16 | B1:16 | B1:16 | B1:16 | B1:16 | B1:16 | Bb1:16 | B1:16 | B1:16 | B1:16 | Bb1:16 |
+    A1:16 | A1:16 | G1:16 | G1:16 | B1:16 | B1:16 | C2:16 | C2:16
+  gust: |
+    r:16 | r:16 | r:8 C5:8 | r:16 | r:16 | r:4 G5:4 r:8 | r:16 | r:16 | r:16 | r:8 C5:8 |
+    r:16 | r:16 | r:16 | r:4 D5:4 r:8 | r:16 | r:16 | r:8 C5:8 | r:16 | r:16 | r:16
+
+sections:
+  camp:
+    bars: 20
+    parts: {low: pedal, pad: shudder, flute: answers, pizz: plucks, bass: ground, call: calls, wind: gust}
+
+arrangement: [camp]
+loop_start: camp
