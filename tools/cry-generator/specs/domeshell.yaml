@@ -1,0 +1,22 @@
+name: domeshell
+slot: kabuto
+brief: 'DOMESHELL: creature call that fits its look and size. Dome-shelled fossil.'
+kind: creature
+size: 0.28
+seed: 231
+layers:
+  # Dome-shelled fossil: a rattle of shell taps and a buzzing, chittery squeak.
+  # Family voice (shell-tap rattle + narrow-pulse ee -> er chitter) shared with SCYTHESHEL.
+  - type: click
+    times: [0.0, 0.03, 0.06, 0.09]
+    gain: 0.6
+  - type: voice
+    at: 0.12
+    pitch: [[0.0, 480.0], [0.055, 576.0], [0.275, 504.0], [0.44, 384.0]]
+    source: {pulse: 0.8, saw: 0.5, pulse_width: 0.12, noise: 0.2}
+    vowels: [[0.0, ee], [0.165, e], [0.44, er]]
+    env: [[0.0, 0], [0.011, 1], [0.33, 0.75], [0.451, 0]]
+    growl: 0.3
+    growl_rate: 60
+    jitter: 0.03
+    drive: 1.8

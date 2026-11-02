@@ -1,0 +1,34 @@
+name: scytheshel
+slot: kabutops
+brief: 'SCYTHESHEL: creature call that fits its look and size. Scythe-armed fossil predator.'
+kind: creature
+size: 0.51
+seed: 232
+layers:
+  # Scythe-armed fossil: the family chitter, lower and harder, cut by two metallic scythe
+  # swipes.
+  - type: click
+    times: [0.0, 0.03, 0.06]
+    gain: 0.6
+  - type: voice
+    at: 0.08
+    pitch: [[0.0, 300.0], [0.0675, 360.0], [0.3375, 315.0], [0.54, 240.0]]
+    source: {pulse: 0.8, saw: 0.5, pulse_width: 0.12, noise: 0.2}
+    vowels: [[0.0, ee], [0.2025, e], [0.54, er]]
+    env: [[0.0, 0], [0.0135, 1], [0.405, 0.75], [0.5535, 0]]
+    growl: 0.5
+    growl_rate: 60
+    jitter: 0.03
+    drive: 1.8
+  - type: noise
+    at: 0.15
+    band: [[0, 3000], [0.08, 1800]]
+    q: 3
+    env: [[0, 0], [0.01, 0.6], [0.08, 0]]
+    gain: 0.35
+  - type: noise
+    at: 0.45
+    band: [[0, 3000], [0.08, 1800]]
+    q: 3
+    env: [[0, 0], [0.01, 0.6], [0.1, 0]]
+    gain: 0.35

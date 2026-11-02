@@ -1,0 +1,31 @@
+name: pufferboar
+slot: grumpig
+brief: 'PUFFERBOAR: creature call that fits its look and size. Grown puffer pig that channels the Force through the gems it wears.'
+kind: creature
+size: 0.49
+seed: 222
+layers:
+  # Gem-wearing puffer boar: the family oink as a deeper, longer grunt, with the gems ringing
+  # a shimmering Force chime.
+  - type: noise
+    band: [900]
+    q: 2
+    env: [[0, 0], [0.01, 0.5], [0.06, 0]]
+    gain: 0.35
+  - type: voice
+    at: 0.04
+    pitch: [[0.0, 297.0], [0.066, 396.0], [0.22, 330.0], [0.308, 264.0]]
+    source: {pulse: 0.8, saw: 0.5, pulse_width: 0.25, noise: 0.15}
+    vowels: [[0.0, m], [0.066, ae], [0.308, o]]
+    env: [[0.0, 0], [0.0176, 1], [0.22, 0.8], [0.319, 0]]
+    growl: 0.45
+    growl_rate: 38
+    jitter: 0.03
+    drive: 1.8
+  - type: tone
+    at: 0.2
+    wave: sine
+    pitch: [[0, 2100], [0.35, 2200]]
+    warble: {rate: 14, depth: 0.03}
+    env: [[0, 0], [0.01, 0.4], [0.3, 0.2], [0.37, 0]]
+    gain: 0.35

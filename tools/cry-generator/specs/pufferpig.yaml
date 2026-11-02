@@ -1,0 +1,29 @@
+name: pufferpig
+slot: spoink
+brief: 'PUFFERPIG: creature call that fits its look and size. Puffer pig that bounces on its tail and sniffs out gems.'
+kind: creature
+size: 0.39
+seed: 221
+layers:
+  # Bouncing puffer pig: two springy oinks, the second bounced higher.
+  # Family voice (snouty m -> ae -> o oink with snort) shared with PUFFERBOAR.
+  - type: voice
+    pitch: [[0.0, 468.0], [0.03, 624.0], [0.1, 520.0], [0.14, 416.0]]
+    source: {pulse: 0.8, saw: 0.5, pulse_width: 0.25, noise: 0.15}
+    vowels: [[0.0, m], [0.03, ae], [0.14, o]]
+    env: [[0.0, 0], [0.008, 1], [0.1, 0.8], [0.145, 0]]
+    growl: 0.2
+    growl_rate: 38
+    jitter: 0.03
+    drive: 1.8
+  - type: voice
+    at: 0.17
+    pitch: [[0.0, 540.0], [0.03, 720.0], [0.1, 600.0], [0.14, 480.0]]
+    source: {pulse: 0.8, saw: 0.5, pulse_width: 0.25, noise: 0.15}
+    vowels: [[0.0, m], [0.03, ae], [0.14, o]]
+    env: [[0.0, 0], [0.008, 1], [0.1, 0.8], [0.145, 0]]
+    growl: 0.2
+    growl_rate: 38
+    jitter: 0.03
+    drive: 1.8
+master: {rms: 0.3}
