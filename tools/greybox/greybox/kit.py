@@ -1141,7 +1141,8 @@ INTERIORS = {
     "r-grate": (r_grate, [(4, 2)]),
 }
 
-from . import objects as _objects     # noqa: E402  (category 9 lives in its own file)
+from . import objects as _objects     # noqa: E402  (categories 9 and 10 live in their own files)
+from . import wild as _wild           # noqa: E402
 
 # Categories whose kit sheet shows the game's sign in front of each piece.
 SIGNED = {"gyms"}
@@ -1150,11 +1151,12 @@ SIGNED = {"gyms"}
 MATERIAL = {"imperial": {"wall": (150, 156, 164), "roof": (98, 104, 112), "trim": (52, 54, 60)},
             "nature": {"wall": (120, 92, 64), "roof": (96, 140, 72), "trim": (70, 60, 50)},
             "landform": {"wall": (176, 124, 78), "roof": (214, 176, 126), "trim": (110, 80, 54)},
+            "wild": {"wall": (120, 96, 70), "roof": (110, 140, 80), "trim": (80, 66, 52)},
             "interiors": {"wall": (196, 188, 172), "roof": (160, 150, 132), "trim": (84, 76, 66)}}
 
 CATEGORIES = {"doorless": DOORLESS, "sunken": SUNKEN, "imperial": IMPERIAL, "nature": NATURE,
               "landform": LANDFORM, "hangars": HANGARS, "gyms": GYMS, "interiors": INTERIORS,
-              "objects": _objects.OBJECTS}
+              "objects": _objects.OBJECTS, "wild": _wild.WILD}
 
 
 def register(builds):

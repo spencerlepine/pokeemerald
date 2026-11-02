@@ -59,7 +59,7 @@ python3 -m greybox room mos-pelgo-lab [--grey]            # one interior as a ro
   bunker, buried, stilts, stilts-dome, stilts-flat, pad, plant, lab, arena, hipped) and the one giant,
   trench-wall. `sprite()` renders one piece; `building()` pastes it on a map.
 - `greybox/kit.py`: the categories added one at a time with the owner (`CATEGORIES`): doorless, sunken,
-  imperial, nature, landform, hangars, gyms, interiors, objects. Each piece passes a **simplicity guardrail** when it renders: at
+  imperial, nature, landform, hangars, gyms, interiors, objects, wild. Each piece passes a **simplicity guardrail** when it renders: at
   most 16 solids, colours only from its six-colour palette. Variation comes from the seed, never from detail.
   `MATERIAL` gives a category its own colours (Imperial greys); `SIGNED` categories get the game's sign drawn in
   front on the kit sheet (gyms).
@@ -68,6 +68,9 @@ python3 -m greybox room mos-pelgo-lab [--grey]            # one interior as a ro
   water sits below its banks, and `T` cells become pine, boulder, shard or fungus by the planet's nature kind.
 - `greybox/objects.py`: the `objects` category (27 models, `o-` names). Many wiki rows share one model: parked
   X-wing and sunken X-wing are both `o-fighter`, sail barge and cruiser hull are both `o-hull`.
+- `greybox/wild.py`: the `wild` category (12 models, `w-` names): reeds, scrub, fern, vines, crystal outcrop,
+  basalt columns, steam vent, dune, sarlacc pit, giant trunk (stand-in for the parked forest trees), dead tree,
+  spore pods.
 - `greybox/room.py`: an interior as a room. The `#` cells joined to the top edge are walls (two face cells above
   the floor, ceiling above that, a shadow on the floor below); every other `#` blob is furniture of unknown shape,
   drawn as a low slab (`r-block`). Props listed on the area with an `art` id use their kit model.
