@@ -562,10 +562,226 @@ IMPERIAL = {
     "gate": (i_gate, [(4, 4), (6, 5)]),
 }
 
-# Colours a category is shown in when its look belongs to a faction, not a planet.
-MATERIAL = {"imperial": {"wall": (150, 156, 164), "roof": (98, 104, 112), "trim": (52, 54, 60)}}
 
-CATEGORIES = {"doorless": DOORLESS, "sunken": SUNKEN, "imperial": IMPERIAL}
+# --------------------------------------------------------------------------- shared: irregular natural shapes
+def _hull(pts):
+    pts = sorted(set(pts))
+    if len(pts) < 3:
+        return pts
+
+    def cross(o, a, b):
+        return (a[0] - o[0]) * (b[1] - o[1]) - (a[1] - o[1]) * (b[0] - o[0])
+    lo, hi = [], []
+    for p_ in pts:
+        while len(lo) >= 2 and cross(lo[-2], lo[-1], p_) <= 0:
+            lo.pop()
+        lo.append(p_)
+    for p_ in reversed(pts):
+        while len(hi) >= 2 and cross(hi[-2], hi[-1], p_) <= 0:
+            hi.pop()
+        hi.append(p_)
+    return lo[:-1] + hi[:-1]
+
+
+def rock_poly(m, k, cx, cy, a, n=9):
+    """A convex, irregular footprint about `a` px in true radius, depth by the projection rule."""
+    import math
+    pts = []
+    for i in range(n):
+        t = 2 * math.pi * (i + 0.3 * (m.r(k + i, 7) / 7)) / n
+        rr = a * (0.78 + 0.22 * m.r(k + 40 + i, 9) / 8)
+        pts.append((round(cx + rr * math.cos(t), 2), round(cy + rr * K * math.sin(t), 2)))
+    return _hull(pts)
+
+
+# --------------------------------------------------------------------------- category 4: nature
+# The things a 'T' cell can be, per planet: trees only where a planet has them. One cell each, or two
+# for a big one. Colours: wall = trunk or rock side, roof = canopy or rock top.
+
+
+def n_tree(m):
+    """Broadleaf tree: a short trunk under one or two round canopies."""
+    p = palette(m)
+    cx = m.W / 2
+    a = min(m.W / 2 - 1, 9 + 2 * (m.cw - 1) * 4)
+    cy = a * K + 1
+    th = 6 + 2 * m.r(1, 3)
+    m.add(S.box(cx - 1.5, cy - 1, 0, cx + 1.5, cy + 1, th + 2, p["wall"]),
+          S.cylinder(cx, cy, a, 0, th, th + a * 0.5, p["roof"], p["roof"]),
+          S.dome(cx, cy, a, 0, th + a * 0.5, None, p["roof"]))
+    if m.r(2, 2) and m.cw > 1:
+        m.add(S.dome(cx + a * 0.4, cy - 1, a * 0.55, 0, th + a * 1.0, None, p["roof"]))
+
+
+def n_pine(m):
+    """Pine: two or three stacked cones on a stub trunk."""
+    p = palette(m)
+    cx = m.W / 2
+    a = min(m.W / 2 - 1, 7 + 4 * (m.cw - 1))
+    cy = a * K + 1
+    m.add(S.box(cx - 1, cy - 1, 0, cx + 1, cy + 1, 5, p["wall"]))
+    z = 3
+    n = 2 + m.r(1, 2)
+    for i in range(n):
+        r = a * (1 - 0.22 * i)
+        m.add(S.cone(cx, cy, r, 0, z, r * 1.25, p["roof"]))
+        z += r * 0.7
+
+
+def n_boulder(m):
+    """Boulder: one to three irregular rocks with sloped sides."""
+    p = palette(m)
+    n = 1 + m.r(1, 3) if m.cw > 1 else 1
+    for i in range(n):
+        a = (m.W / 2 - 1) * (1 - 0.3 * i)
+        cx = m.W / 2 + (i - (n - 1) / 2) * m.W * 0.3
+        cy = a * K + 1 + 2 * i
+        h = a * (0.7 + 0.15 * m.r(5 + i, 3))
+        m.add(S.prism(rock_poly(m, 10 * i, cx, cy, a), 0, h, p["wall"], p["roof"], taper=a * 0.45))
+
+
+def n_shard(m):
+    """Ice or crystal shard cluster: tall tapered spikes of different heights."""
+    p = palette(m)
+    n = 2 + m.r(1, 2)
+    for i in range(n):
+        a = m.W * (0.22 - 0.04 * i)
+        cx = m.W / 2 + (i - (n - 1) / 2) * m.W * 0.26
+        cy = a * K + 1 + 2 * (i % 2)
+        h = (m.H - 2 * a * K - 2) * (1 - 0.25 * i) * (0.8 + 0.1 * m.r(3 + i, 3))
+        m.add(S.prism(rock_poly(m, 20 * i, cx, cy, a, 5), 0, h, p["glass"], p["roof"], taper=a * 0.9))
+
+
+def n_fungus(m):
+    """Giant fungus: a pale stalk under a wide shallow cap."""
+    p = palette(m)
+    cx = m.W / 2
+    a = m.W / 2 - 1
+    cy = a * K + 1
+    h = (m.H - 2 * a * K - 6) * (0.7 + 0.1 * m.r(1, 3))
+    m.add(S.cylinder(cx, cy, a * 0.25, 0, 0, h, p["wall"]),
+          S.cylinder(cx, cy, a, 0, h, h + 2, p["roof"]), S.dome(cx, cy, a, 0, h + 2, a * 0.35, p["roof"]))
+
+
+def n_bush(m):
+    """Low scrub or bush: two small round clumps."""
+    p = palette(m)
+    for i, (dx, s) in enumerate(((-0.18, 0.32), (0.16, 0.26))):
+        a = m.W * s
+        m.add(S.dome(m.W / 2 + dx * m.W, a * K + 1 + 2 * i, a, 0, 0, None, p["roof"]))
+
+
+NATURE = {
+    "tree": (n_tree, [(1, 2), (2, 3)]),
+    "pine": (n_pine, [(1, 2), (2, 3)]),
+    "boulder": (n_boulder, [(1, 1), (2, 2)]),
+    "shard": (n_shard, [(1, 2), (2, 3)]),
+    "fungus": (n_fungus, [(1, 2), (2, 3)]),
+    "bush": (n_bush, [(1, 1), (2, 1)]),
+}
+
+
+# --------------------------------------------------------------------------- category 5: landforms
+# Large natural structures that bound an area instead of a wall of trees. Big, partly off the map is fine.
+
+
+def l_mesa(m):
+    """Mesa: two or three tapered rock tiers with a flat top."""
+    p = palette(m)
+    cx = m.W / 2
+    a = m.W / 2 - 2
+    cy = a * K + 2
+    n = 2 + m.r(1, 2)
+    hs = (m.H - 2 * a * K - 4)
+    z = 0
+    for i in range(n):
+        r = a * (1 - 0.18 * i)
+        h = hs * (0.5 if i == 0 else 0.5 / (n - 1))
+        m.add(S.prism(rock_poly(m, 30 * i, cx + (m.r(9 + i, 5) - 2) * 1.5, cy + i * 1.5, r), z, z + h,
+                      p["wall"], p["roof"], taper=r * 0.12))
+        z += h
+
+
+def l_spire(m):
+    """Rock spire: a tall narrow column of stacked, offset tapered blocks."""
+    p = palette(m)
+    a = m.W / 2 - 2
+    cy = a * K + 1
+    z = 0
+    n = 3 + m.r(1, 2)
+    hs = (m.H - 2 * a * K - 2) / n
+    for i in range(n):
+        r = a * (1 - 0.17 * i)
+        cx = m.W / 2 + (m.r(5 + i, 5) - 2) * 1.2
+        m.add(S.prism(rock_poly(m, 50 * i, cx, cy + i, r, 7), z, z + hs, p["wall"], p["roof"], taper=r * 0.2))
+        z += hs
+
+
+def l_arch(m):
+    """Natural arch: two rock legs and a heavy lintel across them."""
+    p = palette(m)
+    W = m.W
+    lw = W * 0.24
+    D = min(18, m.H * 0.3)
+    h = m.H - D - 16
+    for i, x in enumerate((lw / 2 + 1, W - lw / 2 - 1)):
+        m.add(S.prism(rock_poly(m, 60 + 20 * i, x, D / 2 + 1, lw / 2, 7), 0, h, p["wall"], p["roof"], taper=-2))
+    m.add(S.prism(rock_poly(m, 100, W / 2, D / 2 + 1, W / 2 - 1, 10), h, h + 14, p["wall"], p["roof"], taper=3))
+
+
+def l_boulders(m):
+    """Boulder field: a scatter of rocks of mixed sizes, laid out by the seed."""
+    p = palette(m)
+    k = 0
+    for gy in range(int(m.H * 0.6) - 8, 0, -12):
+        for gx in range(6, int(m.W) - 4, 14):
+            k += 1
+            if m.r(k, 3) == 0 or len(m.sc.solids) >= 14:
+                continue
+            a = 4 + 2 * m.r(k + 5, 4)
+            x = gx + (m.r(k + 9, 5) - 2) * 2
+            m.add(S.prism(rock_poly(m, 7 * k, x, gy + a * K, a, 7), 0, a * 0.9, p["wall"], p["roof"], taper=a * 0.4))
+
+
+def l_ridge(m):
+    """Ridge: a long jagged rock wall made of overlapping peaks, for an area border."""
+    p = palette(m)
+    n = max(3, int(m.W // 24))
+    for i in range(n):
+        a = m.W / n * 0.75
+        cx = (i + 0.5) * m.W / n + (m.r(i, 5) - 2) * 2
+        cy = a * K + 2 + 2 * m.r(i + 20, 3)
+        h = (m.H - 2 * a * K - 4) * (0.65 + 0.12 * m.r(i + 40, 4))
+        m.add(S.prism(rock_poly(m, 13 * i, cx, cy, a, 8), 0, h, p["wall"], p["roof"], taper=a * 0.5))
+
+
+def l_crater(m):
+    """Crater: a low rocky rim around a shallow bowl cut into the ground."""
+    p = palette(m)
+    cx = m.W / 2
+    a = m.W / 2 - 2
+    cy = a * K + 2
+    m.add(_slab(m, 10),
+          S.prism(rock_poly(m, 3, cx, cy, a, 12), 0, 5, p["wall"], p["roof"], taper=3),
+          S.cylinder(cx, cy, a * 0.75, 0, -8, 6, p["wall"], p["roof"], subtract=True, below=True))
+
+
+LANDFORM = {
+    "mesa": (l_mesa, [(4, 4), (6, 6)]),
+    "spire": (l_spire, [(2, 5), (3, 7)]),
+    "arch": (l_arch, [(5, 5), (7, 6)]),
+    "boulders": (l_boulders, [(4, 3), (6, 4)]),
+    "ridge": (l_ridge, [(8, 4), (10, 6)]),
+    "crater": (l_crater, [(4, 3), (6, 4)]),
+}
+
+# Colours a category is shown in when its look belongs to a faction, not a planet.
+MATERIAL = {"imperial": {"wall": (150, 156, 164), "roof": (98, 104, 112), "trim": (52, 54, 60)},
+            "nature": {"wall": (120, 92, 64), "roof": (96, 140, 72), "trim": (70, 60, 50)},
+            "landform": {"wall": (176, 124, 78), "roof": (214, 176, 126), "trim": (110, 80, 54)}}
+
+CATEGORIES = {"doorless": DOORLESS, "sunken": SUNKEN, "imperial": IMPERIAL, "nature": NATURE,
+              "landform": LANDFORM}
 
 
 def register(builds):

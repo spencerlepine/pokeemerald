@@ -67,6 +67,13 @@ The owner split the remaining work into phases on 2026-11-02.
    Category 1, `doorless` (vaporator, mast, dish, beacon, tanks, stack, pylon, relay, crates, core): APPROVED, all kept.
    Category 2, `sunken` (pit-home, stairwell, hatch, grate, trench, sunken-bay, well, mineshaft): APPROVED, all kept.
    Category 3, `imperial` (checkpoint, barricade, sentry, garage, barracks, pillbox, command, gate): awaiting review.
+   Category 3, `imperial`: shown, no objections yet. Categories 4 `nature` and 5 `landform` added for the breadth pass.
+   **Breadth pass (owner, 2026-11-02):** build tools to greybox a whole planet in three layers before more depth:
+   (1) terrain, nature, ledges, berms, water, waterfalls; (2) large structures and natural borders (cliffs,
+   ridges, mesas), so areas need not be ringed by trees and can have more height around the edges (towns stay
+   mostly flat, at least a 1-high ledge as a border); (3) town pieces. Tool: `python3 -m mockup scene <name>`
+   (`tools/mockup/mockup/terrain.py`), demo scenes in `wiki/mockup/scenes/`. Next gap: derive heights from a
+   phase-1 area automatically, so every area can get a 3D greybox without hand-written grids.
    Owner (2026-11-02): preview only the new category each round, not approved art. The aim is tooling that lets the
    bot world-build and expand on its own.
 3. **Real art.** This resumes the paused art tools. The first art step is calibrating the Fortree tree house in

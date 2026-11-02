@@ -169,6 +169,58 @@ def cmd_kit(a):
     print(fn.name, img.size)
 
 
+def cmd_scene(a):
+    """Compose a greybox area from a scene file: 3D terrain (layer 1), large structures (layer 2) and town
+    pieces (layer 3), drawn north to south so nearer things hide farther ones.
+    wiki/mockup/scenes/<name>.yaml -> wiki/mockup/scenes/<name>[-grey].png"""
+    import yaml
+    from . import build, kit, terrain
+    st = Styles()
+    for name in a.names:
+        src = MOCK / "scenes" / f"{name}.yaml"
+        doc = yaml.safe_load(open(src))
+        planet = doc.get("planet", "TATOOINE")
+        pal, _ = st.terrain(planet)
+        mat = st.material(planet)
+        img, t = terrain.render(doc["heights"], doc["surface"], pal, a.grey)
+        d = ImageDraw.Draw(img, "RGBA")
+        pieces = [dict(p) for p in doc.get("pieces") or []]
+        nat = doc.get("nature")
+        if nat:
+            for y, row in enumerate(t.sf):
+                for x, ch in enumerate(row):
+                    if ch == "T":
+                        pieces.append({"build": nat.get("build", "tree"), "at": [x, y - 1], "size": [1, 2],
+                                       "material": nat.get("material", "nature")})
+        rows = {}
+        for i, p in enumerate(pieces):
+            if "build" in p:
+                rows.setdefault(p["at"][1] + p["size"][1] - 1, []).append((i, p))
+        for y in range(t.H):
+            t.draw_row(img, d, y)
+            for i, p in sorted(rows.get(y, []), key=lambda ip: ip[1]["at"][0]):
+                x0, w = p["at"][0], p["size"][0]
+                lv = max(t.level(x, y) for x in range(x0, x0 + w))
+                m = dict(mat, **kit.MATERIAL.get(p.get("material"), {}))
+                for k in ("wall", "roof", "trim"):
+                    if k in p:
+                        m[k] = tuple(int(p[k][j:j + 2], 16) for j in (1, 3, 5))
+                style = dict(m, fill=m["wall"], ring=m["trim"], ground=pal["ground"], cliff=pal["cliff"],
+                             build=p["build"], height=p.get("height"))
+                b = {"at": p["at"], "size": p["size"], "door": p.get("door")}
+                sp = build.sprite(b, style, p.get("seed", 101 * i + 7), a.grey)
+                img.paste(sp, (x0 * draw.C, t.cell_y(p["at"][1], lv)), sp)
+        for p in doc.get("people") or []:
+            x, y = p
+            lv = t.level(x, y)
+            q = Image.new("RGBA", (draw.C, draw.C), (0, 0, 0, 0))
+            draw.person(ImageDraw.Draw(q, "RGBA"), {"at": [0, 0]}, st.roles)
+            img.paste(q, (x * draw.C, t.cell_y(y, lv)), q)
+        out = MOCK / "scenes" / f"{name}{'-grey' if a.grey else ''}.png"
+        img.save(out)
+        print(out.name, img.size)
+
+
 def cmd_missing(a):
     st = Styles()
     seen = set()
@@ -202,5 +254,8 @@ def main(argv=None):
     k.add_argument("category")
     k.add_argument("--planet", default="TATOOINE")
     k.add_argument("--grey", action="store_true")
+    sc = sub.add_parser("scene", help="compose a greybox area: terrain, large structures, town")
+    sc.add_argument("names", nargs="+")
+    sc.add_argument("--grey", action="store_true")
     a = ap.parse_args(argv)
-    {"render": cmd_render, "world": cmd_world, "missing": cmd_missing, "builds": cmd_builds, "kit": cmd_kit}[a.cmd](a)
+    {"render": cmd_render, "world": cmd_world, "missing": cmd_missing, "builds": cmd_builds, "kit": cmd_kit, "scene": cmd_scene}[a.cmd](a)

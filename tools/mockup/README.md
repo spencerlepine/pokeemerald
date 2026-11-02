@@ -69,6 +69,20 @@ python3 -m mockup missing                 # art ids that have no shape in styles
        barricade, sentry, garage, barracks, pillbox, command, gate. Shown in Imperial greys
        (`kit.MATERIAL`), since the look belongs to the faction rather than a planet.
     Sunken pieces are allowed again now that the projection rule is enforced (owner, 2026-11-02).
+    4. `nature`: tree, pine, boulder, shard (ice or crystal), fungus, bush. What a `T` cell becomes, and
+       only where a planet has it.
+    5. `landform`: mesa, spire, arch, boulders, ridge, crater. Large natural borders instead of a ring of trees.
+  - **Greybox areas in three layers** (owner, 2026-11-02: build a whole planet in greybox, breadth first):
+    1. Terrain (`mockup/terrain.py`): a heights grid (0-9 levels, one level = one 16 px ledge) and a surface
+       grid (`.` ground, `:` path, `"` wild, `~` water, `b` berm, `H` stairs, `T` nature). Drawn north to
+       south in the same projection: cliffs (strata), 1-high ledges (lit lip), berms (soft slope), water a
+       little below its banks, waterfalls where water drops a level. Side drops get a rock lip.
+    2. Large structures: `landform` pieces (and the trench wall giant) placed on the terrain at its level.
+    3. Town: any kit or building piece, placed on flat ground.
+    `python3 -m mockup scene <name> [--grey]` composes `wiki/mockup/scenes/<name>.yaml` into a `.png`,
+    drawing pieces row by row with the terrain so nearer cliffs hide what is behind them. A scene lists
+    `planet`, `heights`, `surface`, `pieces` (`build`, `at`, `size`, optional `door`, `material`, colours),
+    `people`, and `nature` (what `T` cells become). Demos: `desert-outskirts` (no trees), `forest-river`.
   - **Solids combine in order** (`Scene.solid_at`): a cut removes only what was added before it, so a pit
     can be cut and then furnished with steps, a pad or a ladder.
   - `render --grey` draws buildings in neutral grey (the pure greybox look); `--out DIR` writes elsewhere.
