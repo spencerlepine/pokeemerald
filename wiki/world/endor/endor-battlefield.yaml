@@ -1,0 +1,87 @@
+id: endor-battlefield
+name: ENDOR BATTLEFIELD
+planet: ENDOR
+kind: landmark
+replaces: new
+status: BLOCKOUT
+story: 'Optional: the forest clearing where the battle was fought: AT-ST wrecks, log traps, and an abandoned shield bunker. Stormtrooper stragglers still patrol;
+  Ewok scouts keep watch.'
+grid: |
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTT...TTTTTTTTTTT.......TTTTTTT
+  TTTTTTTTTTT.....TTTTTTTT...........TTTTT
+  TTTTTTTTTTT.......TTT...............TTTT
+  TTTTTTTTTT.........TT...............TTTT
+  TTTTTTTTTT..........................TTTT
+  TTTTTTTTTT..........................TTTT
+  TTT................................TTTTT
+  T.................................TTTTTT
+  T.................................TTTTTT
+  T......................."""......TTTTTTT
+  TT...................."""""""""..TTTTTTT
+  ....................."""""""""""....TTTT
+  ....................""""""""""""......TT
+  TTTTT............."""""""""""""""".....T
+  TTTT.............""""""""""""""""""....T
+  TTTT............."""""""""""""""""....TT
+  TTTT..............."""""""""""""""..TTTT
+  TTTT..............."""""""""""""""..TTTT
+  TTTTT..............."""."""""""""TTTTTTT
+  TTTTTTT................."""""""".TTTTTTT
+  TTTTTTTTTT.............."""""""".TTTTTTT
+  TTTTTTTTTTT.............""""""""..TTTTTT
+  TTTTTTTTTTTTT.....................TTTTTT
+  TTTTTTTTTTTTTTT..................TTTTTTT
+  TTTTTTTTTTTTTTTTT.....TTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+exits:
+- edge: west
+  cells: [14, 15]
+  to: route-120
+buildings:
+- name: Abandoned shield bunker
+  art: art:endor:imperial-bunker
+  at: [16, 9]
+  size: [6, 5]
+  door: 3
+  to: endor-battlefield-bunker
+props:
+- name: AT-ST wreck
+  art: art:endor:at-st-wreck
+  at: [10, 6]
+  size: [3, 3]
+- name: AT-ST wreck
+  art: art:endor:at-st-wreck
+  at: [28, 7]
+  size: [3, 3]
+- name: Crashed speeder bike
+  art: art:endor:crashed-speeder-bike
+  at: [16, 21]
+  size: [2, 1]
+- name: Log trap
+  art: art:endor:log-trap
+  at: [21, 5]
+  size: [3, 1]
+- name: Redwood trunk
+  art: art:endor:redwood-trunk
+  at: [33, 18]
+  size: [3, 3]
+people:
+- name: Stormtrooper straggler
+  at: [12, 11]
+  role: trainer
+- name: Stormtrooper straggler
+  at: [26, 13]
+  role: trainer
+- name: Ewok scout
+  at: [8, 18]
+  role: npc
+- name: Rebel commando
+  at: [30, 23]
+  role: trainer
+signs: []
+warps: []
+todo: ['New interior: endor-battlefield-bunker.']

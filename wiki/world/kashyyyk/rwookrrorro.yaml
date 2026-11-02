@@ -6,7 +6,6 @@ replaces: new
 status: BLOCKOUT
 story: 'Optional: a Wookiee village built across the treetops east of Kachirho, all on one high platform level. Wookiee hunters battle here and a bowcaster maker
   trades.'
-pos: [59, -24]
 grid: |
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
@@ -28,7 +27,7 @@ grid: |
   TTTTT=============================TT
   TTTTTT============================TT
   TTTTTT============================TT
-  TTTTTT====================T=TTTTTTTT
+  TTTTTT====================.=TTTTTTTT
   TTTTTTT===================TTTTTTTTTT
   TTTTTTT===================TTTTTTTTTT
   TTTTTTTT==================TTTTTTTTTT

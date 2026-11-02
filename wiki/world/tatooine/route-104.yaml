@@ -5,7 +5,7 @@ kind: route
 replaces: Route104
 status: BLOCKOUT
 story: Coast road from Mos Entha north to Bestine past the Jundland Wastes. Han's hangar (vanilla Mr. Briney's cottage) is where the Falcon leaves for Kashyyyk.
-pos: [-133, -98]
+pos: [0, 180]
 grid: |
   TTTTTTTTTT........................TTTTTT
   TTTTTTTTTTTT......................TTTTTT
@@ -254,4 +254,5 @@ warps:
 - name: Door
   at: [33, 42]
   to: jundland-wastes
-todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Han''s hangar is the Tatooine/Kashyyyk planet border (net:hangar-tatooine-kashyyyk).']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Planet border cut: south edge to route-105 (KASHYYYK); reached by ship instead.', 'Han''s hangar
+    is the Tatooine/Kashyyyk planet border (net:hangar-tatooine-kashyyyk).']

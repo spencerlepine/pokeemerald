@@ -92,11 +92,6 @@ buildings: []
 props: []
 people: []
 signs: []
-warps:
-- name: Door
-  at: [13, 4]
-  to: underwater-marine-cave
-- name: Door
-  at: [17, 66]
-  to: underwater-marine-cave
-todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']
+warps: []
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Planet border cut: door at [13, 4] to underwater-marine-cave; reached by ship instead.', 'Planet
+    border cut: door at [17, 66] to underwater-marine-cave; reached by ship instead.']

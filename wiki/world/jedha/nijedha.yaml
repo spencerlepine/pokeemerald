@@ -1,0 +1,125 @@
+id: nijedha
+name: NIJEDHA
+planet: JEDHA
+kind: town
+replaces: new
+status: BLOCKOUT
+story: 'New town: NiJedha, the holy city on Jedha''s moon, with the Temple of the Kyber where the Guardians of the Whills live. Pilgrims rest here before crossing
+  the holy waters to the Jedha Temple.'
+grid: |
+  ############################################
+  ############################################
+  ############################################
+  #########.......##...::.....################
+  #########............::.......##############
+  #########............::........#############
+  #########............::..........###########
+  #########............::.............########
+  ######...............::...............######
+  ######...............::................#####
+  ######...............::................#####
+  ######...............::................#####
+  ######..:............::.........:......#####
+  ###.....:.......::::::::::::....:.....######
+  ##......:.......::::::::::::....:.....######
+  #.......:.......::::::::::::....:.....######
+  #.......:.......::::::::::::....:......#####
+  ::::::::::::::::::::::::::::::::::::::::::::
+  ::::::::::::::::::::::::::::::::::::::::::::
+  ###.......:.....::::::::::::....:...........
+  ###.......:.....::::::::::::....:...........
+  ####............::::::::::::....:...........
+  ####.................::.....................
+  #####................::....................#
+  ######...............::..............#######
+  #######..............::............#########
+  #######..............::..............#######
+  ##########...........::..............#######
+  ###############......::..............#######
+  ################.....::..........###########
+  ################.....::..........###########
+  ##################.............#############
+  #####################.######################
+  ############################################
+exits:
+- edge: west
+  cells: [17, 18]
+  to: route-122
+buildings:
+- name: Temple of the Kyber
+  art: art:jedha:temple-of-the-kyber
+  at: [18, 3]
+  size: [8, 6]
+  door: 4
+  to: nijedha-temple-of-the-kyber
+- name: Bacta Center
+  art: art:shared:bacta-center
+  at: [6, 8]
+  size: [5, 4]
+  door: 2
+  to: nijedha-bacta-center
+- name: Supply Depot
+  art: art:shared:supply-depot
+  at: [31, 8]
+  size: [4, 4]
+  door: 1
+  to: nijedha-supply-depot
+- name: Guardians' quarters
+  art: art:tatooine:sunken-courtyard-home
+  at: [7, 21]
+  size: [6, 6]
+  door: 3
+  to: nijedha-guardians-quarters
+- name: Pilgrim hostel
+  art: art:tatooine:homestead-dome
+  at: [30, 22]
+  size: [5, 4]
+  door: 2
+  to: nijedha-hostel
+props:
+- name: Toppled statue
+  art: art:jedha:toppled-statue
+  at: [34, 26]
+  size: [3, 3]
+- name: Prayer candles
+  art: art:jedha:prayer-candles
+  at: [17, 14]
+  size: [1, 1]
+- name: Prayer candles
+  art: art:jedha:prayer-candles
+  at: [26, 14]
+  size: [1, 1]
+- name: Prayer candles
+  art: art:jedha:prayer-candles
+  at: [17, 20]
+  size: [1, 1]
+- name: Prayer candles
+  art: art:jedha:prayer-candles
+  at: [26, 20]
+  size: [1, 1]
+- name: Market stall
+  art: art:tatooine:market-stall
+  at: [13, 14]
+  size: [2, 2]
+people:
+- name: Guardian of the Whills
+  at: [22, 11]
+  role: story
+- name: Guardian of the Whills
+  at: [11, 19]
+  role: story
+- name: Pilgrim
+  at: [19, 19]
+  role: npc
+- name: Stormtrooper patrol
+  at: [28, 18]
+  role: trainer
+- name: Kyber trader
+  at: [15, 16]
+  role: npc
+signs:
+- name: City sign
+  at: [4, 16]
+warps: []
+todo: ['New town (replaces: new). New interiors: nijedha-temple-of-the-kyber, nijedha-bacta-center, nijedha-supply-depot, nijedha-guardians-quarters, nijedha-hostel.',
+  Gives Jedha a hub; the Guardians already exist in characters.csv.]

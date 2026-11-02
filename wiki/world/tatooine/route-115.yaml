@@ -5,7 +5,7 @@ kind: route
 replaces: Route115
 status: BLOCKOUT
 story: 'Coastal cliffs north of Bestine: a beach of wrecked pod parts, Starfall Cavern''s Tatooine mouth and long grass for training.'
-pos: [-130, -240]
+pos: [0, 40]
 grid: |
   ~#TTTTTTTTTTTTTT########################
   ~#TTTTTTTTTTTTTT########################
@@ -89,13 +89,13 @@ grid: |
   ~~~~~~~~###..TTTT.......TTTTTTTTTTTTTTTT
 exits:
 - edge: south
-  cells: [11, 12, 17, 18, 19, 20, 21, 22, 23]
+  cells: [0, 1, 2, 3, 4, 5, 6, 7, 11, 12, 17, 18, 19, 20, 21, 22, 23]
   to: bestine
 buildings: []
 props:
 - name: Sandstone boulder
   art: art:tatooine:sandstone-boulder
-  at: [23, 18]
+  at: [23, 25]
   size: [2, 2]
 - name: Pod-race junk
   art: art:tatooine:pod-race-junk
@@ -103,7 +103,7 @@ props:
   size: [2, 2]
 - name: Dead tree
   art: art:tatooine:dead-tree
-  at: [21, 13]
+  at: [23, 18]
   size: [2, 2]
 people:
 - name: Woman
@@ -182,12 +182,10 @@ signs:
   at: [25, 38]
 warps:
 - name: Door
-  at: [27, 37]
-  to: starfall-cavern-1f-1r
-- name: Door
   at: [21, 6]
   to: terra-cave-entrance
 - name: Door
   at: [36, 10]
   to: terra-cave-entrance
-todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Planet border cut: east edge to route-114 (SULLUST); reached by ship instead.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Planet border cut: east edge to route-114 (SULLUST); reached by ship instead.', 'Planet border
+    cut: door at [27, 37] to starfall-cavern-1f-1r; reached by ship instead.']

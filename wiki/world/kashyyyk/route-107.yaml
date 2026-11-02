@@ -5,7 +5,7 @@ kind: route
 replaces: Route107
 status: BLOCKOUT
 story: Lagoon crossing east of Kachirho, swimmers and fishers on the water. A trail north climbs a wroshyr trunk to Rwookrrorro.
-pos: [46, 4]
+pos: [80, 360]
 grid: |
   .TTT#TTTT#~~~~~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~~~~##~~~~~~~##
   T#TT.T#T##~~~~~~~~~~~~~~~~~~~~..~~~~~~~~##~~~~~######~~~####

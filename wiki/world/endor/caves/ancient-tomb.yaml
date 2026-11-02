@@ -3,8 +3,8 @@ name: ANCIENT TOMB
 planet: ENDOR
 kind: dungeon
 replaces: AncientTomb
-status: TODO
-story: ''
+status: BLOCKOUT
+story: Stone tomb in the forest; home of DURAWARDEN.
 grid: |
   .###############.
   .###############.
@@ -63,4 +63,4 @@ warps:
 - name: Door
   at: [8, 11]
   to: ancient-tomb
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

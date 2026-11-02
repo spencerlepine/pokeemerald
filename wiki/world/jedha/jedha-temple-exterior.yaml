@@ -3,8 +3,8 @@ name: JEDHA TEMPLE
 planet: JEDHA
 kind: route
 replaces: MtPyre_Exterior
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'The Jedha Temple''s outer terraces: graves of fallen companions and pilgrims climbing to the summit.'
 grid: |
   ##.#######.T.T...##TT##....##.########
   ###.#####.T#.#...##TT##....##.#.######
@@ -59,7 +59,15 @@ grid: |
   ######################################
 exits: []
 buildings: []
-props: []
+props:
+- name: Prayer candles
+  art: art:jedha:prayer-candles
+  at: [7, 25]
+  size: [1, 1]
+- name: Toppled statue
+  art: art:jedha:toppled-statue
+  at: [21, 27]
+  size: [3, 3]
 people:
 - name: Item
   at: [27, 15]
@@ -78,4 +86,4 @@ warps:
 - name: Door
   at: [20, 10]
   to: jedha-temple-summit
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

@@ -3,8 +3,8 @@ name: ROUTE 120
 planet: ENDOR
 kind: route
 replaces: Route120
-status: TODO
-story: ''
+status: BLOCKOUT
+story: Deep Endor forest east of Bright Tree, where TAOZIN hide. The Ancient Tomb and the Scorched Hollow are off the trail; a side path east leads to the old battlefield.
 pos: [360, 0]
 grid: |
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
@@ -27,8 +27,8 @@ grid: |
   TTTT....##~~~=~~~~~~~~~~~~##.....TTTTTTT
   TTT.....##~~~~~~~~~~~~~~~~##.TTTTTTTTTTT
   TTT.....##~~~~~~~~~~~~~~~~##TTTTTTTTTTTT
-  TTT.....TT~~~~~~~~~~~~~~~~##TTTTTTTTTTTT
-  TTT.....TTT~~~~~~~###~~~~~##TTTTTTTTTTTT
+  TTT.....TT~~~~~~~~~~~~~~~~..............
+  TTT.....TTT~~~~~~~###~~~~~..............
   TT......TTT#~~~~~#####~~TTTTTTTTTTTTTTTT
   TT......TTT#~~~~~##.##~#TTTTTTTTTTTTTTTT
   T.......TTTTTTTT~~~~~~##TTTTTT....###.TT
@@ -112,10 +112,25 @@ exits:
   cells: [5, 6, 7, 8, 9, 10]
   to: bright-tree
 - edge: east
-  cells: [86, 87, 88, 89, 90, 91, 92, 93, 99]
+  cells: [86, 87, 88, 89, 90, 91, 92, 93, 95, 96, 97, 98, 99]
   to: route-121
+- edge: east
+  cells: [20, 21]
+  to: endor-battlefield
 buildings: []
-props: []
+props:
+- name: Redwood trunk
+  art: art:endor:redwood-trunk
+  at: [27, 29]
+  size: [3, 3]
+- name: Fallen log
+  art: art:endor:fallen-log
+  at: [16, 78]
+  size: [3, 1]
+- name: Ewok glider
+  art: art:endor:ewok-glider
+  at: [34, 37]
+  size: [1, 2]
 people:
 - name: Trainer Cexan
   at: [5, 22]
@@ -144,9 +159,9 @@ people:
 - name: Ty Battle6
   at: [37, 5]
   role: npc
-- name: Event Script_Cut Tree
+- name: Shrub to cut (Vibroblade)
   at: [35, 32]
-  role: npc
+  role: object
 - name: Berry Beauty
   at: [14, 92]
   role: npc
@@ -168,21 +183,21 @@ people:
 - name: Steven
   at: [13, 15]
   role: npc
-- name: Event Script_Cut Tree
+- name: Shrub to cut (Vibroblade)
   at: [20, 1]
-  role: npc
-- name: Event Script_Cut Tree
+  role: object
+- name: Shrub to cut (Vibroblade)
   at: [15, 1]
-  role: npc
+  role: object
 - name: Trainer Koto
   at: [10, 72]
   role: trainer
 - name: Trainer Rithik
   at: [19, 28]
   role: trainer
-- name: '0x0'
+- name: Event object
   at: [12, 16]
-  role: npc
+  role: object
 - name: Kecleon1
   at: [20, 11]
   role: npc
@@ -204,34 +219,34 @@ people:
 - name: Trainer Lethal
   at: [14, 34]
   role: trainer
-- name: Berry tree
+- name: Berry plant
   at: [4, 79]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [5, 79]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [6, 79]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [7, 79]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [34, 24]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [35, 24]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [36, 24]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [9, 92]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [10, 92]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [11, 92]
   role: berry
 - name: Item
@@ -261,4 +276,4 @@ warps:
 - name: Door
   at: [19, 23]
   to: scorched-hollow
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

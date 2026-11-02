@@ -3,8 +3,8 @@ name: ROUTE 121
 planet: ENDOR
 kind: route
 replaces: Route121
-status: TODO
-story: ''
+status: BLOCKOUT
+story: Forest road east of Route 120 past the reserve shuttle stop. Vanilla's east road to Cloud City and south road to Jedha are cut.
 pos: [400, 80]
 grid: |
   TTTT##TTTTTTTTTTTTTTTTTTTTTTTTTTTTT#####TT.T##TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
@@ -12,11 +12,11 @@ grid: |
   TTTT##TTTTTTTT####TTTTTTTTT........#####...T##........TTTT..........TTTTTTTTTTTT
   TT..##TTTTTTTT....TTTTTTTTT........#####...T##........TTTT..........TTTTTTTTTTTT
   ######TTTTTTTT"""################################################.##############
-  ######TTTTTTTT"""".....""".........#####.#####........"""""........."""".T......
-  ......................""""".....TT.....#.#..##.........""""""".....""""""T......
-  ......................""""".....TT.......#TT#######..####..###..##########......
-  ....................."""""""....TTTT#..###..#"".........T....T..T."".""".T......
-  .............."""#############..TTTT#.......#"""######.##....T..T."""""".T......
+  ######TTTTTTTT"""".....""".........#####.#####........"""""........."""".T.....T
+  ......................""""".....TT.....#.#..##.........""""""".....""""""T.....T
+  ......................""""".....TT.......#TT#######..####..###..##########.....T
+  ....................."""""""....TTTT#..###..#"".........T....T..T."".""".T.....T
+  .............."""#############..TTTT#.......#"""######.##....T..T."""""".T.....T
   ............""""""""""".######..#####.......#"""""""....T""..T....""""""......TT
   ..........."""""""""##########..##########..#############""".T..............TTTT
   ........TTTTTTTT##########............"""""............""""".T##########....TT##
@@ -28,17 +28,19 @@ grid: |
   TT##..#~~~~~~~~~~~~~~~~~~##~#....#~~######~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   .##.###~~~~~~~~~~~~~~~~~~##~~~~~~~~~~~####~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 exits:
-- edge: south
-  cells: []
-  to: route-122
 - edge: west
   cells: [6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 19]
   to: route-120
-- edge: east
-  cells: [5, 6, 7, 8, 9]
-  to: cloud-city
 buildings: []
-props: []
+props:
+- name: Redwood trunk
+  art: art:endor:redwood-trunk
+  at: [18, 6]
+  size: [3, 3]
+- name: Totem and drum
+  art: art:endor:totem-and-drum
+  at: [62, 13]
+  size: [1, 2]
 people:
 - name: Woman
   at: [29, 14]
@@ -49,21 +51,21 @@ people:
 - name: Trainer Joy
   at: [40, 9]
   role: trainer
-- name: '0x0'
+- name: Event object
   at: [30, 8]
-  role: npc
-- name: '0x0'
+  role: object
+- name: Event object
   at: [30, 7]
-  role: npc
-- name: '0x0'
+  role: object
+- name: Event object
   at: [31, 7]
-  role: npc
-- name: Event Script_Cut Tree
+  role: object
+- name: Shrub to cut (Vibroblade)
   at: [32, 5]
-  role: npc
-- name: Event Script_Cut Tree
+  role: object
+- name: Shrub to cut (Vibroblade)
   at: [65, 4]
-  role: npc
+  role: object
 - name: Trainer Vogara
   at: [63, 5]
   role: trainer
@@ -76,9 +78,9 @@ people:
 - name: Trainer Jomelle
   at: [22, 5]
   role: trainer
-- name: Event Script_Cut Tree
+- name: Shrub to cut (Vibroblade)
   at: [26, 12]
-  role: npc
+  role: object
 - name: Trainer Coxar
   at: [11, 6]
   role: trainer
@@ -94,28 +96,28 @@ people:
 - name: Trainer Comina
   at: [72, 9]
   role: trainer
-- name: Berry tree
+- name: Berry plant
   at: [14, 2]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [15, 2]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [16, 2]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [17, 2]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [64, 14]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [65, 14]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [66, 14]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [67, 14]
   role: berry
 - name: Item
@@ -136,4 +138,5 @@ warps:
 - name: Door
   at: [37, 5]
   to: route-121-safari-zone-entrance
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Planet border cut: south edge to route-122 (JEDHA); reached by ship instead.', 'Planet border
+    cut: east edge to cloud-city (BESPIN); reached by ship instead.', Vanilla's Safari Zone gate is now the shuttle stop to Felucia (a ship link).]

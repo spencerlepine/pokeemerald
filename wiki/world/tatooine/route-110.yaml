@@ -6,7 +6,7 @@ replaces: Route110
 status: BLOCKOUT
 story: 'The Boonta Eve podrace course: the raised speeder road runs from Mos Espa south to Mos Eisley over the canyon, with the Trick House (Garindan''s) and side
   paths underneath.'
-pos: [80, -128]
+pos: [200, 160]
 grid: |
   TTTTTTTTTTTT.......TTTTTTTTT.TTTTTTT~~~~
   TTTTTTTTTTT#.......TTTTTTTTTTTTTTTTT~~~~
@@ -110,10 +110,10 @@ grid: |
   TTTTTTTTTTTTTTT......TTTTTTTTTTTTTTT~~~~
 exits:
 - edge: north
-  cells: [12, 13, 14, 15, 16, 17, 18, 28]
+  cells: [12, 13, 14, 15, 16, 17, 18, 28, 36, 37, 38, 39]
   to: mos-espa
 - edge: south
-  cells: [15, 16, 17, 18, 19, 20]
+  cells: [15, 16, 17, 18, 19, 20, 36, 37, 38, 39]
   to: mos-eisley
 - edge: west
   cells: [67, 68, 69, 70, 71]

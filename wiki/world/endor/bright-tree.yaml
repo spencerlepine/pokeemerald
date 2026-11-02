@@ -5,7 +5,7 @@ kind: town
 replaces: FortreeCity
 status: BLOCKOUT
 story: Ewok treetop village. A forest-floor trail runs west to east; ladders climb to two rows of tree platforms joined by rope bridges. Chief Chirpa's arena.
-pos: [320, 0]
+pos: [0, 0]
 grid: |
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
   TT========TTT========TTT========TT=====T

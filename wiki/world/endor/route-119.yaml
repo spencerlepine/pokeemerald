@@ -3,8 +3,8 @@ name: ROUTE 119
 planet: ENDOR
 kind: route
 replaces: Route119
-status: TODO
-story: ''
+status: BLOCKOUT
+story: 'Treewalk forest: a long climb north through redwoods and ferns, with Endor Station (the Imperial research bunker the Cartel has taken) and Bossk inside.'
 pos: [280, 0]
 grid: |
   TTTTTTTTTTTTTTT####TTTTTTTTTTTTTTTTTTTTT
@@ -113,10 +113,10 @@ grid: |
   TTTTTTT...#..#~~~~~~~~~~~#TT##..#TTTTTTT
   TTTTTTTTT.#...~~~~~~~~~~~~TT.....TTTTTTT
   TTTTTTTT###...~~~~~~~~~~~~TT....TTTTTTTT
-  TTT######~~~~~~~~~~~~##~~~T.....####TTTT
-  TT#####~~~~~~~~~~~~~~##~~~......####TTTT
-  TT#######~~~~~~~~~~~~~~~~~......####TTTT
-  TT#######~~~~~~~~~~~~~~~........####TTTT
+  TTT######~~~~~~~~~~~~##~~~T.........TTTT
+  TT#####~~~~~~~~~~~~~~##~~~..........TTTT
+  TT#######~~~~~~~~~~~~~~~~~..........TTTT
+  TT#######~~~~~~~~~~~~~~~............TTTT
   TT######~~~~~~~~~~~~................TTTT
   ########~~~~~TTTT....................TTT
   #######~~TTTTTTTT................"""""TT
@@ -154,8 +154,30 @@ exits:
 - edge: east
   cells: [6, 7, 8, 9, 10]
   to: bright-tree
-buildings: []
-props: []
+buildings:
+- name: House
+  art: art:endor:imperial-bunker
+  at: [32, 106]
+  size: [4, 4]
+  door: 1
+  to: route-119-house
+props:
+- name: Redwood trunk
+  art: art:endor:redwood-trunk
+  at: [21, 49]
+  size: [3, 3]
+- name: Redwood trunk
+  art: art:endor:redwood-trunk
+  at: [15, 90]
+  size: [3, 3]
+- name: AT-ST wreck
+  art: art:endor:at-st-wreck
+  at: [28, 28]
+  size: [3, 3]
+- name: Log trap
+  art: art:endor:log-trap
+  at: [18, 77]
+  size: [3, 1]
 people:
 - name: Trainer Gair
   at: [12, 123]
@@ -193,18 +215,18 @@ people:
 - name: Trainer Pixik
   at: [8, 63]
   role: trainer
-- name: '0x0'
+- name: Event object
   at: [25, 32]
-  role: npc
+  role: object
 - name: Bridge Aqua Grunt1
   at: [13, 33]
   role: npc
 - name: Bridge Aqua Grunt2
   at: [13, 34]
   role: npc
-- name: '0x0'
+- name: Event object
   at: [17, 33]
-  role: npc
+  role: object
 - name: Boy1
   at: [31, 109]
   role: npc
@@ -235,16 +257,16 @@ people:
 - name: Trainer Fiar
   at: [32, 15]
   role: trainer
-- name: '0x0'
+- name: Event object
   at: [28, 25]
-  role: npc
-- name: Berry tree
+  role: object
+- name: Berry plant
   at: [24, 5]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [25, 5]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [26, 5]
   role: berry
 - name: Item
@@ -265,16 +287,16 @@ people:
 - name: Item
   at: [33, 117]
   role: item
-- name: Berry tree
+- name: Berry plant
   at: [8, 23]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [9, 23]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [29, 90]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [30, 90]
   role: berry
 - name: Item
@@ -297,7 +319,4 @@ warps:
 - name: Door
   at: [6, 32]
   to: route-119-endor-station-1f
-- name: Door
-  at: [33, 109]
-  to: route-119-house
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

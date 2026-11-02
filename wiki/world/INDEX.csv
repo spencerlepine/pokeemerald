@@ -36,53 +36,36 @@ atollon-hangar,ATOLLON,interior,BirthIsland_Harbor,TODO,area,ATOLLON HANGAR,17x1
 atollon-hangar,ATOLLON,interior,BirthIsland_Harbor,TODO,person,Sailor,1x1,,,PLACEHOLDER
 atollon-hangar,ATOLLON,interior,BirthIsland_Harbor,TODO,person,0x0,1x1,,,PLACEHOLDER
 atollon-hangar,ATOLLON,interior,BirthIsland_Harbor,TODO,warp,Door,1x1,,,PLACEHOLDER
-cloud-city,BESPIN,town,LilycoveCity,TODO,area,CLOUD CITY,80x40,,,
-cloud-city,BESPIN,town,LilycoveCity,TODO,person,Sailor2,1x1,,,PLACEHOLDER
-cloud-city,BESPIN,town,LilycoveCity,TODO,person,Girl,1x1,,,PLACEHOLDER
-cloud-city,BESPIN,town,LilycoveCity,TODO,person,Man3,1x1,,,PLACEHOLDER
-cloud-city,BESPIN,town,LilycoveCity,TODO,person,Rich Boy,1x1,,,PLACEHOLDER
-cloud-city,BESPIN,town,LilycoveCity,TODO,person,Man2,1x1,,,PLACEHOLDER
-cloud-city,BESPIN,town,LilycoveCity,TODO,person,Woman2,1x1,,,PLACEHOLDER
-cloud-city,BESPIN,town,LilycoveCity,TODO,person,Expert M1,1x1,,,PLACEHOLDER
-cloud-city,BESPIN,town,LilycoveCity,TODO,person,Expert F,1x1,,,PLACEHOLDER
-cloud-city,BESPIN,town,LilycoveCity,TODO,person,Expert M2,1x1,,,PLACEHOLDER
-cloud-city,BESPIN,town,LilycoveCity,TODO,person,Wailmer Trainer Grunt,1x1,,,PLACEHOLDER
-cloud-city,BESPIN,town,LilycoveCity,TODO,person,Aqua Grunt4,1x1,,,PLACEHOLDER
-cloud-city,BESPIN,town,LilycoveCity,TODO,person,Aqua Grunt1,1x1,,,PLACEHOLDER
-cloud-city,BESPIN,town,LilycoveCity,TODO,person,Aqua Grunt2,1x1,,,PLACEHOLDER
-cloud-city,BESPIN,town,LilycoveCity,TODO,person,Aqua Grunt3,1x1,,,PLACEHOLDER
-cloud-city,BESPIN,town,LilycoveCity,TODO,person,Berry Gentleman,1x1,,,PLACEHOLDER
-cloud-city,BESPIN,town,LilycoveCity,TODO,person,Rival,1x1,,,PLACEHOLDER
-cloud-city,BESPIN,town,LilycoveCity,TODO,person,School Kid M,1x1,,,PLACEHOLDER
-cloud-city,BESPIN,town,LilycoveCity,TODO,person,Woman1,1x1,,,PLACEHOLDER
-cloud-city,BESPIN,town,LilycoveCity,TODO,person,Man1,1x1,,,PLACEHOLDER
-cloud-city,BESPIN,town,LilycoveCity,TODO,person,Sailor1,1x1,,,PLACEHOLDER
-cloud-city,BESPIN,town,LilycoveCity,TODO,person,Fat Man,1x1,,,PLACEHOLDER
-cloud-city,BESPIN,town,LilycoveCity,TODO,person,Item,1x1,,,PLACEHOLDER
-cloud-city,BESPIN,town,LilycoveCity,TODO,sign,Sign,1x1,,,PLACEHOLDER
-cloud-city,BESPIN,town,LilycoveCity,TODO,sign,Sign,1x1,,,PLACEHOLDER
-cloud-city,BESPIN,town,LilycoveCity,TODO,sign,Sign,1x1,,,PLACEHOLDER
-cloud-city,BESPIN,town,LilycoveCity,TODO,sign,Sign,1x1,,,PLACEHOLDER
-cloud-city,BESPIN,town,LilycoveCity,TODO,sign,Sign,1x1,,,PLACEHOLDER
-cloud-city,BESPIN,town,LilycoveCity,TODO,sign,Sign,1x1,,,PLACEHOLDER
-cloud-city,BESPIN,town,LilycoveCity,TODO,sign,Sign,1x1,,,PLACEHOLDER
-cloud-city,BESPIN,town,LilycoveCity,TODO,sign,Sign,1x1,,,PLACEHOLDER
-cloud-city,BESPIN,town,LilycoveCity,TODO,sign,Sign,1x1,,,PLACEHOLDER
-cloud-city,BESPIN,town,LilycoveCity,TODO,sign,Sign,1x1,,,PLACEHOLDER
-cloud-city,BESPIN,town,LilycoveCity,TODO,warp,Door,1x1,,,PLACEHOLDER
-cloud-city,BESPIN,town,LilycoveCity,TODO,warp,Door,1x1,,,PLACEHOLDER
-cloud-city,BESPIN,town,LilycoveCity,TODO,warp,Door,1x1,,,PLACEHOLDER
-cloud-city,BESPIN,town,LilycoveCity,TODO,warp,Door,1x1,,,PLACEHOLDER
-cloud-city,BESPIN,town,LilycoveCity,TODO,warp,Door,1x1,,,PLACEHOLDER
-cloud-city,BESPIN,town,LilycoveCity,TODO,warp,Door,1x1,,,PLACEHOLDER
-cloud-city,BESPIN,town,LilycoveCity,TODO,warp,Door,1x1,,,PLACEHOLDER
-cloud-city,BESPIN,town,LilycoveCity,TODO,warp,Door,1x1,,,PLACEHOLDER
-cloud-city,BESPIN,town,LilycoveCity,TODO,warp,Door,1x1,,,PLACEHOLDER
-cloud-city,BESPIN,town,LilycoveCity,TODO,warp,Door,1x1,,,PLACEHOLDER
-cloud-city,BESPIN,town,LilycoveCity,TODO,warp,Door,1x1,,,PLACEHOLDER
-cloud-city,BESPIN,town,LilycoveCity,TODO,warp,Door,1x1,,,PLACEHOLDER
-cloud-city,BESPIN,town,LilycoveCity,TODO,warp,Door,1x1,,,PLACEHOLDER
-cloud-city,BESPIN,town,LilycoveCity,TODO,warp,Door,1x1,,,PLACEHOLDER
+cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,area,CLOUD CITY,70x46,,,
+cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,building,Galleria (department store),8x6,art:bespin:department-store,yes,TODO
+cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,building,Museum,5x6,art:bespin:cloud-city-tower,yes,TODO
+cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,building,Showcase hall,5x6,art:bespin:cloud-city-tower,yes,TODO
+cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,building,Bacta Center,5x4,art:shared:bacta-center,yes,TODO
+cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,building,Companion fan club,5x6,art:bespin:cloud-city-tower,yes,TODO
+cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,building,Sky motel,5x6,art:bespin:cloud-city-tower,yes,TODO
+cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,building,Move deleter's flat,5x6,art:bespin:cloud-city-tower,yes,TODO
+cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,building,Lando's flat,5x6,art:bespin:cloud-city-tower,yes,TODO
+cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,building,Ugnaught family flat,5x6,art:bespin:cloud-city-tower,yes,TODO
+cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,building,Tibanna trader's flat,5x6,art:bespin:cloud-city-tower,yes,TODO
+cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,building,Cloud car pilot's flat,5x6,art:bespin:cloud-city-tower,yes,TODO
+cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,building,West landing platform (ships),5x5,art:bespin:landing-platform,yes,TODO
+cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,building,Under-levels lift (Hutt Hideout),5x6,art:bespin:cloud-city-tower,yes,TODO
+cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,prop,Promenade railing,1x1,art:bespin:promenade-railing,yes,TODO
+cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,prop,Promenade railing,1x1,art:bespin:promenade-railing,yes,TODO
+cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,prop,Promenade railing,1x1,art:bespin:promenade-railing,yes,TODO
+cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,prop,Promenade railing,1x1,art:bespin:promenade-railing,yes,TODO
+cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,prop,Cloud car,2x1,art:shared:parked-landspeeder,yes,TODO
+cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,prop,Cloud car,2x1,art:shared:parked-landspeeder,yes,TODO
+cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,person,Lando,1x1,,,PLACEHOLDER
+cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,person,Showcase MC,1x1,,,PLACEHOLDER
+cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,person,Ugnaught worker,1x1,,,PLACEHOLDER
+cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,person,Wing guard,1x1,,,PLACEHOLDER
+cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,person,Wing guard,1x1,,,PLACEHOLDER
+cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,person,Tourist,1x1,,,PLACEHOLDER
+cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,person,Cloud car pilot,1x1,,,PLACEHOLDER
+cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,person,Blend master,1x1,,,PLACEHOLDER
+cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,sign,City sign,1x1,,,PLACEHOLDER
+cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,sign,Galleria sign,1x1,,,PLACEHOLDER
 cloud-city-bacta-center-1f,BESPIN,interior,LilycoveCity_PokemonCenter_1F,TODO,area,CLOUD CITY BACTA CENTER 1F,14x9,,,
 cloud-city-bacta-center-1f,BESPIN,interior,LilycoveCity_PokemonCenter_1F,TODO,person,Nurse,1x1,,,PLACEHOLDER
 cloud-city-bacta-center-1f,BESPIN,interior,LilycoveCity_PokemonCenter_1F,TODO,person,Boy,1x1,,,PLACEHOLDER
@@ -415,6 +398,14 @@ hutt-hideout-b2f,BESPIN,interior,AquaHideout_B2F,TODO,warp,Door,1x1,,,PLACEHOLDE
 hutt-hideout-b2f,BESPIN,interior,AquaHideout_B2F,TODO,warp,Door,1x1,,,PLACEHOLDER
 hutt-hideout-b2f,BESPIN,interior,AquaHideout_B2F,TODO,warp,Door,1x1,,,PLACEHOLDER
 hutt-hideout-b2f,BESPIN,interior,AquaHideout_B2F,TODO,warp,Door,1x1,,,PLACEHOLDER
+tibanna-refinery,BESPIN,landmark,new,BLOCKOUT,area,TIBANNA REFINERY,40x26,,,
+tibanna-refinery,BESPIN,landmark,new,BLOCKOUT,building,Gas refinery,5x6,art:bespin:cloud-city-tower,yes,TODO
+tibanna-refinery,BESPIN,landmark,new,BLOCKOUT,building,Carbon-freezing annex,5x6,art:bespin:cloud-city-tower,yes,TODO
+tibanna-refinery,BESPIN,landmark,new,BLOCKOUT,prop,Gas tanks,2x2,art:shared:fuel-tanks,yes,TODO
+tibanna-refinery,BESPIN,landmark,new,BLOCKOUT,prop,Gas tanks,2x2,art:shared:fuel-tanks,yes,TODO
+tibanna-refinery,BESPIN,landmark,new,BLOCKOUT,person,Ugnaught foreman,1x1,,,PLACEHOLDER
+tibanna-refinery,BESPIN,landmark,new,BLOCKOUT,person,Cartel thug,1x1,,,PLACEHOLDER
+tibanna-refinery,BESPIN,landmark,new,BLOCKOUT,person,Cartel thug,1x1,,,PLACEHOLDER
 cave-of-evil-1f,DAGOBAH,dungeon,CaveOfOrigin_1F,TODO,area,CAVE OF EVIL 1F,23x23,,,
 cave-of-evil-1f,DAGOBAH,dungeon,CaveOfOrigin_1F,TODO,warp,Door,1x1,,,PLACEHOLDER
 cave-of-evil-1f,DAGOBAH,dungeon,CaveOfOrigin_1F,TODO,warp,Door,1x1,,,PLACEHOLDER
@@ -738,17 +729,28 @@ bright-tree,ENDOR,town,FortreeCity,BLOCKOUT,person,Rebel scout,1x1,,,PLACEHOLDER
 bright-tree,ENDOR,town,FortreeCity,BLOCKOUT,person,Ewok guard,1x1,,,PLACEHOLDER
 bright-tree,ENDOR,town,FortreeCity,BLOCKOUT,sign,Village sign,1x1,,,PLACEHOLDER
 bright-tree,ENDOR,town,FortreeCity,BLOCKOUT,sign,Arena sign,1x1,,,PLACEHOLDER
-ancient-tomb,ENDOR,dungeon,AncientTomb,TODO,area,ANCIENT TOMB,17x33,,,
-ancient-tomb,ENDOR,dungeon,AncientTomb,TODO,person,Registeel,1x1,,,PLACEHOLDER
-ancient-tomb,ENDOR,dungeon,AncientTomb,TODO,sign,Sign,1x1,,,PLACEHOLDER
-ancient-tomb,ENDOR,dungeon,AncientTomb,TODO,sign,Sign,1x1,,,PLACEHOLDER
-ancient-tomb,ENDOR,dungeon,AncientTomb,TODO,sign,Sign,1x1,,,PLACEHOLDER
-ancient-tomb,ENDOR,dungeon,AncientTomb,TODO,warp,Door,1x1,,,PLACEHOLDER
-ancient-tomb,ENDOR,dungeon,AncientTomb,TODO,warp,Door,1x1,,,PLACEHOLDER
-ancient-tomb,ENDOR,dungeon,AncientTomb,TODO,warp,Door,1x1,,,PLACEHOLDER
-scorched-hollow,ENDOR,dungeon,ScorchedSlab,TODO,area,SCORCHED HOLLOW,15x20,,,
-scorched-hollow,ENDOR,dungeon,ScorchedSlab,TODO,person,Item,1x1,,,PLACEHOLDER
-scorched-hollow,ENDOR,dungeon,ScorchedSlab,TODO,warp,Door,1x1,,,PLACEHOLDER
+ancient-tomb,ENDOR,dungeon,AncientTomb,BLOCKOUT,area,ANCIENT TOMB,17x33,,,
+ancient-tomb,ENDOR,dungeon,AncientTomb,BLOCKOUT,person,Registeel,1x1,,,PLACEHOLDER
+ancient-tomb,ENDOR,dungeon,AncientTomb,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+ancient-tomb,ENDOR,dungeon,AncientTomb,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+ancient-tomb,ENDOR,dungeon,AncientTomb,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+ancient-tomb,ENDOR,dungeon,AncientTomb,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+ancient-tomb,ENDOR,dungeon,AncientTomb,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+ancient-tomb,ENDOR,dungeon,AncientTomb,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+scorched-hollow,ENDOR,dungeon,ScorchedSlab,BLOCKOUT,area,SCORCHED HOLLOW,15x20,,,
+scorched-hollow,ENDOR,dungeon,ScorchedSlab,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+scorched-hollow,ENDOR,dungeon,ScorchedSlab,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+endor-battlefield,ENDOR,landmark,new,BLOCKOUT,area,ENDOR BATTLEFIELD,40x30,,,
+endor-battlefield,ENDOR,landmark,new,BLOCKOUT,building,Abandoned shield bunker,6x5,art:endor:imperial-bunker,yes,TODO
+endor-battlefield,ENDOR,landmark,new,BLOCKOUT,prop,AT-ST wreck,3x3,art:endor:at-st-wreck,yes,TODO
+endor-battlefield,ENDOR,landmark,new,BLOCKOUT,prop,AT-ST wreck,3x3,art:endor:at-st-wreck,yes,TODO
+endor-battlefield,ENDOR,landmark,new,BLOCKOUT,prop,Crashed speeder bike,2x1,art:endor:crashed-speeder-bike,yes,TODO
+endor-battlefield,ENDOR,landmark,new,BLOCKOUT,prop,Log trap,3x1,art:endor:log-trap,yes,TODO
+endor-battlefield,ENDOR,landmark,new,BLOCKOUT,prop,Redwood trunk,3x3,art:endor:redwood-trunk,yes,TODO
+endor-battlefield,ENDOR,landmark,new,BLOCKOUT,person,Stormtrooper straggler,1x1,,,PLACEHOLDER
+endor-battlefield,ENDOR,landmark,new,BLOCKOUT,person,Stormtrooper straggler,1x1,,,PLACEHOLDER
+endor-battlefield,ENDOR,landmark,new,BLOCKOUT,person,Ewok scout,1x1,,,PLACEHOLDER
+endor-battlefield,ENDOR,landmark,new,BLOCKOUT,person,Rebel commando,1x1,,,PLACEHOLDER
 bright-tree-arena,ENDOR,interior,FortreeCity_Gym,TODO,area,BRIGHT TREE ARENA,20x25,,,
 bright-tree-arena,ENDOR,interior,FortreeCity_Gym,TODO,person,Winona,1x1,,,PLACEHOLDER
 bright-tree-arena,ENDOR,interior,FortreeCity_Gym,TODO,person,Trainer Jutax,1x1,,,PLACEHOLDER
@@ -867,211 +869,224 @@ route-123-berry-masters-house,ENDOR,interior,Route123_BerryMastersHouse,TODO,per
 route-123-berry-masters-house,ENDOR,interior,Route123_BerryMastersHouse,TODO,person,Berry Masters Wife,1x1,,,PLACEHOLDER
 route-123-berry-masters-house,ENDOR,interior,Route123_BerryMastersHouse,TODO,warp,Door,1x1,,,PLACEHOLDER
 route-123-berry-masters-house,ENDOR,interior,Route123_BerryMastersHouse,TODO,warp,Door,1x1,,,PLACEHOLDER
-route-118,ENDOR,route,Route118,TODO,area,ROUTE 118,80x20,,,
-route-118,ENDOR,route,Route118,TODO,person,Trainer Poxir,1x1,,,PLACEHOLDER
-route-118,ENDOR,route,Route118,TODO,person,Gabby Battle2,1x1,,,PLACEHOLDER
-route-118,ENDOR,route,Route118,TODO,person,Ty Battle2,1x1,,,PLACEHOLDER
-route-118,ENDOR,route,Route118,TODO,person,Girl,1x1,,,PLACEHOLDER
-route-118,ENDOR,route,Route118,TODO,person,Gabby Battle5,1x1,,,PLACEHOLDER
-route-118,ENDOR,route,Route118,TODO,person,Ty Battle5,1x1,,,PLACEHOLDER
-route-118,ENDOR,route,Route118,TODO,person,Gabby Battle6,1x1,,,PLACEHOLDER
-route-118,ENDOR,route,Route118,TODO,person,Ty Battle6,1x1,,,PLACEHOLDER
-route-118,ENDOR,route,Route118,TODO,person,Event Script_Cut Tree,1x1,,,PLACEHOLDER
-route-118,ENDOR,route,Route118,TODO,person,Good Rod Fisherman,1x1,,,PLACEHOLDER
-route-118,ENDOR,route,Route118,TODO,person,Trainer Rotina,1x1,,,PLACEHOLDER
-route-118,ENDOR,route,Route118,TODO,person,Trainer Waxax,1x1,,,PLACEHOLDER
-route-118,ENDOR,route,Route118,TODO,person,Trainer Civax,1x1,,,PLACEHOLDER
-route-118,ENDOR,route,Route118,TODO,person,Trainer Birun,1x1,,,PLACEHOLDER
-route-118,ENDOR,route,Route118,TODO,person,Trainer Deskar,1x1,,,PLACEHOLDER
-route-118,ENDOR,route,Route118,TODO,person,0x0,1x1,,,PLACEHOLDER
-route-118,ENDOR,route,Route118,TODO,person,Trainer Domesh,1x1,,,PLACEHOLDER
-route-118,ENDOR,route,Route118,TODO,person,Berry tree,1x1,,,PLACEHOLDER
-route-118,ENDOR,route,Route118,TODO,person,Berry tree,1x1,,,PLACEHOLDER
-route-118,ENDOR,route,Route118,TODO,person,Berry tree,1x1,,,PLACEHOLDER
-route-118,ENDOR,route,Route118,TODO,person,Item,1x1,,,PLACEHOLDER
-route-118,ENDOR,route,Route118,TODO,sign,Sign,1x1,,,PLACEHOLDER
-route-118,ENDOR,route,Route118,TODO,sign,Sign,1x1,,,PLACEHOLDER
-route-118,ENDOR,route,Route118,TODO,warp,Door,1x1,,,PLACEHOLDER
-route-118,ENDOR,route,Route118,TODO,warp,Door,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,area,ROUTE 119,40x140,,,
-route-119,ENDOR,route,Route119,TODO,person,Trainer Gair,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,person,Trainer Tiar,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,person,Trainer Domel,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,person,Trainer Joskos,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,person,Trainer Bukir,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,person,Trainer Coi,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,person,Trainer Doxek,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,person,Trainer Kiman,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,person,Trainer Teebo,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,person,Trainer Paploo,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,person,Trainer Hoir,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,person,Trainer Pixik,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,person,0x0,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,person,Bridge Aqua Grunt1,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,person,Bridge Aqua Grunt2,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,person,0x0,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,person,Boy1,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,person,Cycling Triathlete M,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,person,Boy2,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,person,Trainer Hurkal,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,person,Kecleon1,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,person,Kecleon2,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,person,Trainer Como,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,person,Trainer Rimissa,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,person,Trainer Domar,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,person,Trainer Fiar,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,person,0x0,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,person,Berry tree,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,person,Berry tree,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,person,Berry tree,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,person,Item,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,person,Item,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,person,Item,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,person,Item,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,person,Item,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,person,Item,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,person,Berry tree,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,person,Berry tree,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,person,Berry tree,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,person,Berry tree,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,person,Item,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,person,Item,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,person,Item,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,sign,Sign,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,sign,Sign,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,sign,Sign,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,warp,Door,1x1,,,PLACEHOLDER
-route-119,ENDOR,route,Route119,TODO,warp,Door,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,area,ROUTE 120,40x100,,,
-route-120,ENDOR,route,Route120,TODO,person,Trainer Cexan,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,person,Trainer Rarkan,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,person,Trainer Latik,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,person,Trainer Joena,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,person,Trainer Logray,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,person,Ty Battle3,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,person,Gabby Battle3,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,person,Gabby Battle6,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,person,Ty Battle6,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,person,Event Script_Cut Tree,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,person,Berry Beauty,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,person,Trainer Jossys,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,person,Trainer Cildos,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,person,Trainer Cora,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,person,Trainer Abbara,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,person,Bridge Kecleon,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,person,Steven,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,person,Event Script_Cut Tree,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,person,Event Script_Cut Tree,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,person,Trainer Koto,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,person,Trainer Rithik,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,person,0x0,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,person,Kecleon1,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,person,Kecleon2,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,person,Kecleon3,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,person,Kecleon5,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,person,Kecleon4,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,person,Trainer Cikora,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,person,Trainer Lethal,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,person,Berry tree,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,person,Berry tree,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,person,Berry tree,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,person,Berry tree,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,person,Berry tree,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,person,Berry tree,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,person,Berry tree,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,person,Berry tree,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,person,Berry tree,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,person,Berry tree,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,person,Item,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,person,Item,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,person,Item,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,person,Item,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,person,Item,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,sign,Sign,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,sign,Sign,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,warp,Door,1x1,,,PLACEHOLDER
-route-120,ENDOR,route,Route120,TODO,warp,Door,1x1,,,PLACEHOLDER
-route-121,ENDOR,route,Route121,TODO,area,ROUTE 121,80x20,,,
-route-121,ENDOR,route,Route121,TODO,person,Woman,1x1,,,PLACEHOLDER
-route-121,ENDOR,route,Route121,TODO,person,Trainer Kate,1x1,,,PLACEHOLDER
-route-121,ENDOR,route,Route121,TODO,person,Trainer Joy,1x1,,,PLACEHOLDER
-route-121,ENDOR,route,Route121,TODO,person,0x0,1x1,,,PLACEHOLDER
-route-121,ENDOR,route,Route121,TODO,person,0x0,1x1,,,PLACEHOLDER
-route-121,ENDOR,route,Route121,TODO,person,0x0,1x1,,,PLACEHOLDER
-route-121,ENDOR,route,Route121,TODO,person,Event Script_Cut Tree,1x1,,,PLACEHOLDER
-route-121,ENDOR,route,Route121,TODO,person,Event Script_Cut Tree,1x1,,,PLACEHOLDER
-route-121,ENDOR,route,Route121,TODO,person,Trainer Vogara,1x1,,,PLACEHOLDER
-route-121,ENDOR,route,Route121,TODO,person,Trainer Wogo,1x1,,,PLACEHOLDER
-route-121,ENDOR,route,Route121,TODO,person,Trainer Terketh,1x1,,,PLACEHOLDER
-route-121,ENDOR,route,Route121,TODO,person,Trainer Jomelle,1x1,,,PLACEHOLDER
-route-121,ENDOR,route,Route121,TODO,person,Event Script_Cut Tree,1x1,,,PLACEHOLDER
-route-121,ENDOR,route,Route121,TODO,person,Trainer Coxar,1x1,,,PLACEHOLDER
-route-121,ENDOR,route,Route121,TODO,person,Trainer Mobik,1x1,,,PLACEHOLDER
-route-121,ENDOR,route,Route121,TODO,person,Trainer Poeth,1x1,,,PLACEHOLDER
-route-121,ENDOR,route,Route121,TODO,person,Trainer Morkesh,1x1,,,PLACEHOLDER
-route-121,ENDOR,route,Route121,TODO,person,Trainer Comina,1x1,,,PLACEHOLDER
-route-121,ENDOR,route,Route121,TODO,person,Berry tree,1x1,,,PLACEHOLDER
-route-121,ENDOR,route,Route121,TODO,person,Berry tree,1x1,,,PLACEHOLDER
-route-121,ENDOR,route,Route121,TODO,person,Berry tree,1x1,,,PLACEHOLDER
-route-121,ENDOR,route,Route121,TODO,person,Berry tree,1x1,,,PLACEHOLDER
-route-121,ENDOR,route,Route121,TODO,person,Berry tree,1x1,,,PLACEHOLDER
-route-121,ENDOR,route,Route121,TODO,person,Berry tree,1x1,,,PLACEHOLDER
-route-121,ENDOR,route,Route121,TODO,person,Berry tree,1x1,,,PLACEHOLDER
-route-121,ENDOR,route,Route121,TODO,person,Berry tree,1x1,,,PLACEHOLDER
-route-121,ENDOR,route,Route121,TODO,person,Item,1x1,,,PLACEHOLDER
-route-121,ENDOR,route,Route121,TODO,person,Item,1x1,,,PLACEHOLDER
-route-121,ENDOR,route,Route121,TODO,person,Item,1x1,,,PLACEHOLDER
-route-121,ENDOR,route,Route121,TODO,sign,Sign,1x1,,,PLACEHOLDER
-route-121,ENDOR,route,Route121,TODO,sign,Sign,1x1,,,PLACEHOLDER
-route-121,ENDOR,route,Route121,TODO,warp,Door,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,area,ROUTE 123,140x20,,,
-route-123,ENDOR,route,Route123,TODO,person,Trainer Woskila,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,person,Trainer Baon,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,person,Event Script_Cut Tree,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,person,Event Script_Cut Tree,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,person,Event Script_Cut Tree,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,person,Giga Drain Girl,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,person,Trainer Vuara,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,person,Trainer Yuki,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,person,Trainer Miu,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,person,Trainer Cazan,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,person,Trainer Jarkara,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,person,Trainer Kethara,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,person,Trainer Jizax,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,person,Trainer Kogara,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,person,Trainer Esxel,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,person,Trainer Fomus,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,person,Trainer Azrik,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,person,Trainer Frederick,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,person,Trainer Joeth,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,person,Trainer Daldel,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,person,Berry tree,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,person,Berry tree,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,person,Berry tree,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,person,Berry tree,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,person,Berry tree,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,person,Berry tree,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,person,Berry tree,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,person,Berry tree,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,person,Berry tree,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,person,Berry tree,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,person,Berry tree,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,person,Berry tree,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,person,Berry tree,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,person,Berry tree,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,person,Berry tree,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,person,Item,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,person,Berry tree,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,person,Berry tree,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,person,Berry tree,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,person,Item,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,person,Item,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,person,Item,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,person,Item,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,sign,Sign,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,sign,Sign,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,sign,Sign,1x1,,,PLACEHOLDER
-route-123,ENDOR,route,Route123,TODO,warp,Door,1x1,,,PLACEHOLDER
+route-118,ENDOR,route,Route118,BLOCKOUT,area,ROUTE 118,80x20,,,
+route-118,ENDOR,route,Route118,BLOCKOUT,building,Rebel shuttle clearing (from Tatooine),8x4,art:tatooine:docking-bay,yes,TODO
+route-118,ENDOR,route,Route118,BLOCKOUT,prop,Redwood trunk,3x3,art:endor:redwood-trunk,yes,TODO
+route-118,ENDOR,route,Route118,BLOCKOUT,prop,Fallen log,3x1,art:endor:fallen-log,yes,TODO
+route-118,ENDOR,route,Route118,BLOCKOUT,prop,Crashed speeder bike,2x1,art:endor:crashed-speeder-bike,yes,TODO
+route-118,ENDOR,route,Route118,BLOCKOUT,person,Trainer Poxir,1x1,,,PLACEHOLDER
+route-118,ENDOR,route,Route118,BLOCKOUT,person,Gabby Battle2,1x1,,,PLACEHOLDER
+route-118,ENDOR,route,Route118,BLOCKOUT,person,Ty Battle2,1x1,,,PLACEHOLDER
+route-118,ENDOR,route,Route118,BLOCKOUT,person,Girl,1x1,,,PLACEHOLDER
+route-118,ENDOR,route,Route118,BLOCKOUT,person,Gabby Battle5,1x1,,,PLACEHOLDER
+route-118,ENDOR,route,Route118,BLOCKOUT,person,Ty Battle5,1x1,,,PLACEHOLDER
+route-118,ENDOR,route,Route118,BLOCKOUT,person,Gabby Battle6,1x1,,,PLACEHOLDER
+route-118,ENDOR,route,Route118,BLOCKOUT,person,Ty Battle6,1x1,,,PLACEHOLDER
+route-118,ENDOR,route,Route118,BLOCKOUT,person,Shrub to cut (Vibroblade),1x1,,,PLACEHOLDER
+route-118,ENDOR,route,Route118,BLOCKOUT,person,Good Rod Fisherman,1x1,,,PLACEHOLDER
+route-118,ENDOR,route,Route118,BLOCKOUT,person,Trainer Rotina,1x1,,,PLACEHOLDER
+route-118,ENDOR,route,Route118,BLOCKOUT,person,Trainer Waxax,1x1,,,PLACEHOLDER
+route-118,ENDOR,route,Route118,BLOCKOUT,person,Trainer Civax,1x1,,,PLACEHOLDER
+route-118,ENDOR,route,Route118,BLOCKOUT,person,Trainer Birun,1x1,,,PLACEHOLDER
+route-118,ENDOR,route,Route118,BLOCKOUT,person,Trainer Deskar,1x1,,,PLACEHOLDER
+route-118,ENDOR,route,Route118,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+route-118,ENDOR,route,Route118,BLOCKOUT,person,Trainer Domesh,1x1,,,PLACEHOLDER
+route-118,ENDOR,route,Route118,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+route-118,ENDOR,route,Route118,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+route-118,ENDOR,route,Route118,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+route-118,ENDOR,route,Route118,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+route-118,ENDOR,route,Route118,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+route-118,ENDOR,route,Route118,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,area,ROUTE 119,40x140,,,
+route-119,ENDOR,route,Route119,BLOCKOUT,building,House,4x4,art:endor:imperial-bunker,yes,TODO
+route-119,ENDOR,route,Route119,BLOCKOUT,prop,Redwood trunk,3x3,art:endor:redwood-trunk,yes,TODO
+route-119,ENDOR,route,Route119,BLOCKOUT,prop,Redwood trunk,3x3,art:endor:redwood-trunk,yes,TODO
+route-119,ENDOR,route,Route119,BLOCKOUT,prop,AT-ST wreck,3x3,art:endor:at-st-wreck,yes,TODO
+route-119,ENDOR,route,Route119,BLOCKOUT,prop,Log trap,3x1,art:endor:log-trap,yes,TODO
+route-119,ENDOR,route,Route119,BLOCKOUT,person,Trainer Gair,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,person,Trainer Tiar,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,person,Trainer Domel,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,person,Trainer Joskos,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,person,Trainer Bukir,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,person,Trainer Coi,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,person,Trainer Doxek,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,person,Trainer Kiman,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,person,Trainer Teebo,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,person,Trainer Paploo,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,person,Trainer Hoir,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,person,Trainer Pixik,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,person,Bridge Aqua Grunt1,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,person,Bridge Aqua Grunt2,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,person,Boy1,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,person,Cycling Triathlete M,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,person,Boy2,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,person,Trainer Hurkal,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,person,Kecleon1,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,person,Kecleon2,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,person,Trainer Como,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,person,Trainer Rimissa,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,person,Trainer Domar,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,person,Trainer Fiar,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+route-119,ENDOR,route,Route119,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,area,ROUTE 120,40x100,,,
+route-120,ENDOR,route,Route120,BLOCKOUT,prop,Redwood trunk,3x3,art:endor:redwood-trunk,yes,TODO
+route-120,ENDOR,route,Route120,BLOCKOUT,prop,Fallen log,3x1,art:endor:fallen-log,yes,TODO
+route-120,ENDOR,route,Route120,BLOCKOUT,prop,Ewok glider,1x2,art:endor:ewok-glider,yes,TODO
+route-120,ENDOR,route,Route120,BLOCKOUT,person,Trainer Cexan,1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,person,Trainer Rarkan,1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,person,Trainer Latik,1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,person,Trainer Joena,1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,person,Trainer Logray,1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,person,Ty Battle3,1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,person,Gabby Battle3,1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,person,Gabby Battle6,1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,person,Ty Battle6,1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,person,Shrub to cut (Vibroblade),1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,person,Berry Beauty,1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,person,Trainer Jossys,1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,person,Trainer Cildos,1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,person,Trainer Cora,1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,person,Trainer Abbara,1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,person,Bridge Kecleon,1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,person,Steven,1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,person,Shrub to cut (Vibroblade),1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,person,Shrub to cut (Vibroblade),1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,person,Trainer Koto,1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,person,Trainer Rithik,1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,person,Kecleon1,1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,person,Kecleon2,1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,person,Kecleon3,1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,person,Kecleon5,1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,person,Kecleon4,1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,person,Trainer Cikora,1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,person,Trainer Lethal,1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+route-120,ENDOR,route,Route120,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+route-121,ENDOR,route,Route121,BLOCKOUT,area,ROUTE 121,80x20,,,
+route-121,ENDOR,route,Route121,BLOCKOUT,prop,Redwood trunk,3x3,art:endor:redwood-trunk,yes,TODO
+route-121,ENDOR,route,Route121,BLOCKOUT,prop,Totem and drum,1x2,art:endor:totem-and-drum,yes,TODO
+route-121,ENDOR,route,Route121,BLOCKOUT,person,Woman,1x1,,,PLACEHOLDER
+route-121,ENDOR,route,Route121,BLOCKOUT,person,Trainer Kate,1x1,,,PLACEHOLDER
+route-121,ENDOR,route,Route121,BLOCKOUT,person,Trainer Joy,1x1,,,PLACEHOLDER
+route-121,ENDOR,route,Route121,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+route-121,ENDOR,route,Route121,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+route-121,ENDOR,route,Route121,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+route-121,ENDOR,route,Route121,BLOCKOUT,person,Shrub to cut (Vibroblade),1x1,,,PLACEHOLDER
+route-121,ENDOR,route,Route121,BLOCKOUT,person,Shrub to cut (Vibroblade),1x1,,,PLACEHOLDER
+route-121,ENDOR,route,Route121,BLOCKOUT,person,Trainer Vogara,1x1,,,PLACEHOLDER
+route-121,ENDOR,route,Route121,BLOCKOUT,person,Trainer Wogo,1x1,,,PLACEHOLDER
+route-121,ENDOR,route,Route121,BLOCKOUT,person,Trainer Terketh,1x1,,,PLACEHOLDER
+route-121,ENDOR,route,Route121,BLOCKOUT,person,Trainer Jomelle,1x1,,,PLACEHOLDER
+route-121,ENDOR,route,Route121,BLOCKOUT,person,Shrub to cut (Vibroblade),1x1,,,PLACEHOLDER
+route-121,ENDOR,route,Route121,BLOCKOUT,person,Trainer Coxar,1x1,,,PLACEHOLDER
+route-121,ENDOR,route,Route121,BLOCKOUT,person,Trainer Mobik,1x1,,,PLACEHOLDER
+route-121,ENDOR,route,Route121,BLOCKOUT,person,Trainer Poeth,1x1,,,PLACEHOLDER
+route-121,ENDOR,route,Route121,BLOCKOUT,person,Trainer Morkesh,1x1,,,PLACEHOLDER
+route-121,ENDOR,route,Route121,BLOCKOUT,person,Trainer Comina,1x1,,,PLACEHOLDER
+route-121,ENDOR,route,Route121,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+route-121,ENDOR,route,Route121,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+route-121,ENDOR,route,Route121,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+route-121,ENDOR,route,Route121,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+route-121,ENDOR,route,Route121,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+route-121,ENDOR,route,Route121,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+route-121,ENDOR,route,Route121,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+route-121,ENDOR,route,Route121,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+route-121,ENDOR,route,Route121,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+route-121,ENDOR,route,Route121,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+route-121,ENDOR,route,Route121,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+route-121,ENDOR,route,Route121,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+route-121,ENDOR,route,Route121,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+route-121,ENDOR,route,Route121,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+route-123,ENDOR,route,Route123,BLOCKOUT,area,ROUTE 123,140x20,,,
+route-123,ENDOR,route,Route123,BLOCKOUT,building,Berry masters house,4x3,art:endor:ewok-hut,yes,TODO
+route-123,ENDOR,route,Route123,BLOCKOUT,prop,Redwood trunk,3x3,art:endor:redwood-trunk,yes,TODO
+route-123,ENDOR,route,Route123,BLOCKOUT,prop,Fallen log,3x1,art:endor:fallen-log,yes,TODO
+route-123,ENDOR,route,Route123,BLOCKOUT,person,Trainer Woskila,1x1,,,PLACEHOLDER
+route-123,ENDOR,route,Route123,BLOCKOUT,person,Trainer Baon,1x1,,,PLACEHOLDER
+route-123,ENDOR,route,Route123,BLOCKOUT,person,Shrub to cut (Vibroblade),1x1,,,PLACEHOLDER
+route-123,ENDOR,route,Route123,BLOCKOUT,person,Shrub to cut (Vibroblade),1x1,,,PLACEHOLDER
+route-123,ENDOR,route,Route123,BLOCKOUT,person,Shrub to cut (Vibroblade),1x1,,,PLACEHOLDER
+route-123,ENDOR,route,Route123,BLOCKOUT,person,Giga Drain Girl,1x1,,,PLACEHOLDER
+route-123,ENDOR,route,Route123,BLOCKOUT,person,Trainer Vuara,1x1,,,PLACEHOLDER
+route-123,ENDOR,route,Route123,BLOCKOUT,person,Trainer Yuki,1x1,,,PLACEHOLDER
+route-123,ENDOR,route,Route123,BLOCKOUT,person,Trainer Miu,1x1,,,PLACEHOLDER
+route-123,ENDOR,route,Route123,BLOCKOUT,person,Trainer Cazan,1x1,,,PLACEHOLDER
+route-123,ENDOR,route,Route123,BLOCKOUT,person,Trainer Jarkara,1x1,,,PLACEHOLDER
+route-123,ENDOR,route,Route123,BLOCKOUT,person,Trainer Kethara,1x1,,,PLACEHOLDER
+route-123,ENDOR,route,Route123,BLOCKOUT,person,Trainer Jizax,1x1,,,PLACEHOLDER
+route-123,ENDOR,route,Route123,BLOCKOUT,person,Trainer Kogara,1x1,,,PLACEHOLDER
+route-123,ENDOR,route,Route123,BLOCKOUT,person,Trainer Esxel,1x1,,,PLACEHOLDER
+route-123,ENDOR,route,Route123,BLOCKOUT,person,Trainer Fomus,1x1,,,PLACEHOLDER
+route-123,ENDOR,route,Route123,BLOCKOUT,person,Trainer Azrik,1x1,,,PLACEHOLDER
+route-123,ENDOR,route,Route123,BLOCKOUT,person,Trainer Frederick,1x1,,,PLACEHOLDER
+route-123,ENDOR,route,Route123,BLOCKOUT,person,Trainer Joeth,1x1,,,PLACEHOLDER
+route-123,ENDOR,route,Route123,BLOCKOUT,person,Trainer Daldel,1x1,,,PLACEHOLDER
+route-123,ENDOR,route,Route123,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+route-123,ENDOR,route,Route123,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+route-123,ENDOR,route,Route123,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+route-123,ENDOR,route,Route123,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+route-123,ENDOR,route,Route123,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+route-123,ENDOR,route,Route123,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+route-123,ENDOR,route,Route123,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+route-123,ENDOR,route,Route123,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+route-123,ENDOR,route,Route123,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+route-123,ENDOR,route,Route123,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+route-123,ENDOR,route,Route123,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+route-123,ENDOR,route,Route123,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+route-123,ENDOR,route,Route123,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+route-123,ENDOR,route,Route123,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+route-123,ENDOR,route,Route123,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+route-123,ENDOR,route,Route123,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+route-123,ENDOR,route,Route123,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+route-123,ENDOR,route,Route123,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+route-123,ENDOR,route,Route123,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
+route-123,ENDOR,route,Route123,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+route-123,ENDOR,route,Route123,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+route-123,ENDOR,route,Route123,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+route-123,ENDOR,route,Route123,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+route-123,ENDOR,route,Route123,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+route-123,ENDOR,route,Route123,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+route-123,ENDOR,route,Route123,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
 felucia-reserve-north,FELUCIA,route,SafariZone_North,TODO,area,FELUCIA RESERVE,40x40,,,
 felucia-reserve-north,FELUCIA,route,SafariZone_North,TODO,person,Fisherman,1x1,,,PLACEHOLDER
 felucia-reserve-north,FELUCIA,route,SafariZone_North,TODO,person,Man,1x1,,,PLACEHOLDER
@@ -1926,26 +1941,48 @@ jedha-temple-6f,JEDHA,interior,MtPyre_6F,TODO,person,Trainer Carir,1x1,,,PLACEHO
 jedha-temple-6f,JEDHA,interior,MtPyre_6F,TODO,person,Item,1x1,,,PLACEHOLDER
 jedha-temple-6f,JEDHA,interior,MtPyre_6F,TODO,warp,Door,1x1,,,PLACEHOLDER
 jedha-temple-6f,JEDHA,interior,MtPyre_6F,TODO,warp,Door,1x1,,,PLACEHOLDER
-jedha-temple-exterior,JEDHA,route,MtPyre_Exterior,TODO,area,JEDHA TEMPLE,38x51,,,
-jedha-temple-exterior,JEDHA,route,MtPyre_Exterior,TODO,person,Item,1x1,,,PLACEHOLDER
-jedha-temple-exterior,JEDHA,route,MtPyre_Exterior,TODO,person,Item,1x1,,,PLACEHOLDER
-jedha-temple-exterior,JEDHA,route,MtPyre_Exterior,TODO,warp,Door,1x1,,,PLACEHOLDER
-jedha-temple-exterior,JEDHA,route,MtPyre_Exterior,TODO,warp,Door,1x1,,,PLACEHOLDER
-jedha-temple-exterior,JEDHA,route,MtPyre_Exterior,TODO,warp,Door,1x1,,,PLACEHOLDER
-jedha-temple-summit,JEDHA,route,MtPyre_Summit,TODO,area,JEDHA TEMPLE,50x37,,,
-jedha-temple-summit,JEDHA,route,MtPyre_Summit,TODO,person,Old Man,1x1,,,PLACEHOLDER
-jedha-temple-summit,JEDHA,route,MtPyre_Summit,TODO,person,0x0,1x1,,,PLACEHOLDER
-jedha-temple-summit,JEDHA,route,MtPyre_Summit,TODO,person,Old Lady,1x1,,,PLACEHOLDER
-jedha-temple-summit,JEDHA,route,MtPyre_Summit,TODO,person,Trainer Roldarg,1x1,,,PLACEHOLDER
-jedha-temple-summit,JEDHA,route,MtPyre_Summit,TODO,person,Trainer Roldarg,1x1,,,PLACEHOLDER
-jedha-temple-summit,JEDHA,route,MtPyre_Summit,TODO,person,Trainer Roldarg,1x1,,,PLACEHOLDER
-jedha-temple-summit,JEDHA,route,MtPyre_Summit,TODO,person,Trainer Roldarg,1x1,,,PLACEHOLDER
-jedha-temple-summit,JEDHA,route,MtPyre_Summit,TODO,person,0x0,1x1,,,PLACEHOLDER
-jedha-temple-summit,JEDHA,route,MtPyre_Summit,TODO,warp,Door,1x1,,,PLACEHOLDER
-jedha-temple-summit,JEDHA,route,MtPyre_Summit,TODO,warp,Door,1x1,,,PLACEHOLDER
-jedha-temple-summit,JEDHA,route,MtPyre_Summit,TODO,warp,Door,1x1,,,PLACEHOLDER
-route-122,JEDHA,route,Route122,TODO,area,ROUTE 122,40x40,,,
-route-122,JEDHA,route,Route122,TODO,warp,Door,1x1,,,PLACEHOLDER
+jedha-temple-exterior,JEDHA,route,MtPyre_Exterior,BLOCKOUT,area,JEDHA TEMPLE,38x51,,,
+jedha-temple-exterior,JEDHA,route,MtPyre_Exterior,BLOCKOUT,prop,Prayer candles,1x1,art:jedha:prayer-candles,yes,TODO
+jedha-temple-exterior,JEDHA,route,MtPyre_Exterior,BLOCKOUT,prop,Toppled statue,3x3,art:jedha:toppled-statue,yes,TODO
+jedha-temple-exterior,JEDHA,route,MtPyre_Exterior,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+jedha-temple-exterior,JEDHA,route,MtPyre_Exterior,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+jedha-temple-exterior,JEDHA,route,MtPyre_Exterior,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+jedha-temple-exterior,JEDHA,route,MtPyre_Exterior,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+jedha-temple-exterior,JEDHA,route,MtPyre_Exterior,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+jedha-temple-summit,JEDHA,route,MtPyre_Summit,BLOCKOUT,area,JEDHA TEMPLE,50x37,,,
+jedha-temple-summit,JEDHA,route,MtPyre_Summit,BLOCKOUT,prop,Prayer candles,1x1,art:jedha:prayer-candles,yes,TODO
+jedha-temple-summit,JEDHA,route,MtPyre_Summit,BLOCKOUT,person,Old Man,1x1,,,PLACEHOLDER
+jedha-temple-summit,JEDHA,route,MtPyre_Summit,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+jedha-temple-summit,JEDHA,route,MtPyre_Summit,BLOCKOUT,person,Old Lady,1x1,,,PLACEHOLDER
+jedha-temple-summit,JEDHA,route,MtPyre_Summit,BLOCKOUT,person,Trainer Roldarg,1x1,,,PLACEHOLDER
+jedha-temple-summit,JEDHA,route,MtPyre_Summit,BLOCKOUT,person,Trainer Roldarg,1x1,,,PLACEHOLDER
+jedha-temple-summit,JEDHA,route,MtPyre_Summit,BLOCKOUT,person,Trainer Roldarg,1x1,,,PLACEHOLDER
+jedha-temple-summit,JEDHA,route,MtPyre_Summit,BLOCKOUT,person,Trainer Roldarg,1x1,,,PLACEHOLDER
+jedha-temple-summit,JEDHA,route,MtPyre_Summit,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER
+jedha-temple-summit,JEDHA,route,MtPyre_Summit,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+jedha-temple-summit,JEDHA,route,MtPyre_Summit,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+jedha-temple-summit,JEDHA,route,MtPyre_Summit,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
+nijedha,JEDHA,town,new,BLOCKOUT,area,NIJEDHA,44x34,,,
+nijedha,JEDHA,town,new,BLOCKOUT,building,Temple of the Kyber,8x6,art:jedha:temple-of-the-kyber,yes,TODO
+nijedha,JEDHA,town,new,BLOCKOUT,building,Bacta Center,5x4,art:shared:bacta-center,yes,TODO
+nijedha,JEDHA,town,new,BLOCKOUT,building,Supply Depot,4x4,art:shared:supply-depot,yes,TODO
+nijedha,JEDHA,town,new,BLOCKOUT,building,Guardians' quarters,6x6,art:tatooine:sunken-courtyard-home,yes,TODO
+nijedha,JEDHA,town,new,BLOCKOUT,building,Pilgrim hostel,5x4,art:tatooine:homestead-dome,yes,TODO
+nijedha,JEDHA,town,new,BLOCKOUT,prop,Toppled statue,3x3,art:jedha:toppled-statue,yes,TODO
+nijedha,JEDHA,town,new,BLOCKOUT,prop,Prayer candles,1x1,art:jedha:prayer-candles,yes,TODO
+nijedha,JEDHA,town,new,BLOCKOUT,prop,Prayer candles,1x1,art:jedha:prayer-candles,yes,TODO
+nijedha,JEDHA,town,new,BLOCKOUT,prop,Prayer candles,1x1,art:jedha:prayer-candles,yes,TODO
+nijedha,JEDHA,town,new,BLOCKOUT,prop,Prayer candles,1x1,art:jedha:prayer-candles,yes,TODO
+nijedha,JEDHA,town,new,BLOCKOUT,prop,Market stall,2x2,art:tatooine:market-stall,yes,TODO
+nijedha,JEDHA,town,new,BLOCKOUT,person,Guardian of the Whills,1x1,,,PLACEHOLDER
+nijedha,JEDHA,town,new,BLOCKOUT,person,Guardian of the Whills,1x1,,,PLACEHOLDER
+nijedha,JEDHA,town,new,BLOCKOUT,person,Pilgrim,1x1,,,PLACEHOLDER
+nijedha,JEDHA,town,new,BLOCKOUT,person,Stormtrooper patrol,1x1,,,PLACEHOLDER
+nijedha,JEDHA,town,new,BLOCKOUT,person,Kyber trader,1x1,,,PLACEHOLDER
+nijedha,JEDHA,town,new,BLOCKOUT,sign,City sign,1x1,,,PLACEHOLDER
+route-122,JEDHA,route,Route122,BLOCKOUT,area,ROUTE 122,40x40,,,
+route-122,JEDHA,route,Route122,BLOCKOUT,building,Pilgrim landing pad,4x4,art:shared:landing-pad,yes,TODO
+route-122,JEDHA,route,Route122,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
 sealed-vault-inner-room,KAMINO,dungeon,SealedChamber_InnerRoom,TODO,area,SEALED VAULT INNER ROOM,21x23,,,
 sealed-vault-inner-room,KAMINO,dungeon,SealedChamber_InnerRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
 sealed-vault-inner-room,KAMINO,dungeon,SealedChamber_InnerRoom,TODO,sign,Sign,1x1,,,PLACEHOLDER
@@ -2243,8 +2280,6 @@ shadowlands-leias-room,KASHYYYK,dungeon,GraniteCave_StevensRoom,BLOCKOUT,area,SH
 shadowlands-leias-room,KASHYYYK,dungeon,GraniteCave_StevensRoom,BLOCKOUT,person,Steven,1x1,,,PLACEHOLDER
 shadowlands-leias-room,KASHYYYK,dungeon,GraniteCave_StevensRoom,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
 underwater-route-105,KASHYYYK,dungeon,Underwater_Route105,BLOCKOUT,area,UNDERWATER ROUTE 105,40x80,,,
-underwater-route-105,KASHYYYK,dungeon,Underwater_Route105,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
-underwater-route-105,KASHYYYK,dungeon,Underwater_Route105,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
 kachirho-arena,KASHYYYK,interior,DewfordTown_Gym,TODO,area,KACHIRHO ARENA,18x28,,,
 kachirho-arena,KASHYYYK,interior,DewfordTown_Gym,TODO,person,Brawly,1x1,,,PLACEHOLDER
 kachirho-arena,KASHYYYK,interior,DewfordTown_Gym,TODO,person,Trainer Tobir,1x1,,,PLACEHOLDER
@@ -4244,7 +4279,6 @@ route-103,TATOOINE,route,Route103,BLOCKOUT,person,Berry plant,1x1,,,PLACEHOLDER
 route-103,TATOOINE,route,Route103,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
 route-103,TATOOINE,route,Route103,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
 route-103,TATOOINE,route,Route103,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
-route-103,TATOOINE,route,Route103,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
 route-104,TATOOINE,route,Route104,BLOCKOUT,area,ROUTE 104,40x80,,,
 route-104,TATOOINE,route,Route104,BLOCKOUT,building,Flower shop,6x4,art:tatooine:homestead-dome,yes,TODO
 route-104,TATOOINE,route,Route104,BLOCKOUT,prop,Vaporator,1x2,art:tatooine:moisture-vaporator,yes,TODO
@@ -4442,10 +4476,6 @@ route-112,TATOOINE,route,Route112,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
 route-112,TATOOINE,route,Route112,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
 route-112,TATOOINE,route,Route112,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
 route-112,TATOOINE,route,Route112,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
-route-112,TATOOINE,route,Route112,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
-route-112,TATOOINE,route,Route112,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
-route-112,TATOOINE,route,Route112,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
-route-112,TATOOINE,route,Route112,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
 route-115,TATOOINE,route,Route115,BLOCKOUT,area,ROUTE 115,40x80,,,
 route-115,TATOOINE,route,Route115,BLOCKOUT,prop,Sandstone boulder,2x2,art:tatooine:sandstone-boulder,yes,TODO
 route-115,TATOOINE,route,Route115,BLOCKOUT,prop,Pod-race junk,2x2,art:tatooine:pod-race-junk,yes,TODO
@@ -4475,7 +4505,6 @@ route-115,TATOOINE,route,Route115,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
 route-115,TATOOINE,route,Route115,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
 route-115,TATOOINE,route,Route115,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
 route-115,TATOOINE,route,Route115,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
-route-115,TATOOINE,route,Route115,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
 route-115,TATOOINE,route,Route115,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
 route-115,TATOOINE,route,Route115,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER
 route-116,TATOOINE,route,Route116,BLOCKOUT,area,ROUTE 116,100x20,,,
@@ -4587,10 +4616,8 @@ tython-isle-interior,TYTHON,route,SouthernIsland_Interior,TODO,person,0x0,1x1,,,
 tython-isle-interior,TYTHON,route,SouthernIsland_Interior,TODO,sign,Sign,1x1,,,PLACEHOLDER
 tython-isle-interior,TYTHON,route,SouthernIsland_Interior,TODO,warp,Door,1x1,,,PLACEHOLDER
 tython-isle-interior,TYTHON,route,SouthernIsland_Interior,TODO,warp,Door,1x1,,,PLACEHOLDER
-underwater-route-124,YAVIN 4,dungeon,Underwater_Route124,TODO,area,UNDERWATER ROUTE 124,80x80,,,
-underwater-route-125,YAVIN 4,dungeon,Underwater_Route125,TODO,area,UNDERWATER ROUTE 125,80x40,,,
-underwater-route-125,YAVIN 4,dungeon,Underwater_Route125,TODO,warp,Door,1x1,,,PLACEHOLDER
-underwater-route-125,YAVIN 4,dungeon,Underwater_Route125,TODO,warp,Door,1x1,,,PLACEHOLDER
+underwater-route-124,YAVIN 4,dungeon,Underwater_Route124,BLOCKOUT,area,UNDERWATER ROUTE 124,80x80,,,
+underwater-route-125,YAVIN 4,dungeon,Underwater_Route125,BLOCKOUT,area,UNDERWATER ROUTE 125,80x40,,,
 route-124-diving-treasure-hunters-house,YAVIN 4,interior,Route124_DivingTreasureHuntersHouse,TODO,area,ROUTE 124 DIVING TREASURE HUNTERS HOUSE,10x9,,,
 route-124-diving-treasure-hunters-house,YAVIN 4,interior,Route124_DivingTreasureHuntersHouse,TODO,person,Treasure Hunter,1x1,,,PLACEHOLDER
 route-124-diving-treasure-hunters-house,YAVIN 4,interior,Route124_DivingTreasureHuntersHouse,TODO,sign,Sign,1x1,,,PLACEHOLDER
@@ -4741,66 +4768,55 @@ yavin-4-supply-depot,YAVIN 4,interior,MossdeepCity_Mart,TODO,person,Boy,1x1,,,PL
 yavin-4-supply-depot,YAVIN 4,interior,MossdeepCity_Mart,TODO,person,Sailor,1x1,,,PLACEHOLDER
 yavin-4-supply-depot,YAVIN 4,interior,MossdeepCity_Mart,TODO,warp,Door,1x1,,,PLACEHOLDER
 yavin-4-supply-depot,YAVIN 4,interior,MossdeepCity_Mart,TODO,warp,Door,1x1,,,PLACEHOLDER
-route-124,YAVIN 4,route,Route124,TODO,area,ROUTE 124,80x80,,,
-route-124,YAVIN 4,route,Route124,TODO,person,Trainer Sugon,1x1,,,PLACEHOLDER
-route-124,YAVIN 4,route,Route124,TODO,person,Trainer Rovan,1x1,,,PLACEHOLDER
-route-124,YAVIN 4,route,Route124,TODO,person,Trainer Jivila,1x1,,,PLACEHOLDER
-route-124,YAVIN 4,route,Route124,TODO,person,Trainer Gorkora,1x1,,,PLACEHOLDER
-route-124,YAVIN 4,route,Route124,TODO,person,Trainer Caskun,1x1,,,PLACEHOLDER
-route-124,YAVIN 4,route,Route124,TODO,person,Trainer Lila,1x1,,,PLACEHOLDER
-route-124,YAVIN 4,route,Route124,TODO,person,Trainer Roy,1x1,,,PLACEHOLDER
-route-124,YAVIN 4,route,Route124,TODO,person,Trainer Dial,1x1,,,PLACEHOLDER
-route-124,YAVIN 4,route,Route124,TODO,person,Trainer Irina,1x1,,,PLACEHOLDER
-route-124,YAVIN 4,route,Route124,TODO,person,Item,1x1,,,PLACEHOLDER
-route-124,YAVIN 4,route,Route124,TODO,person,Item,1x1,,,PLACEHOLDER
-route-124,YAVIN 4,route,Route124,TODO,person,Item,1x1,,,PLACEHOLDER
-route-124,YAVIN 4,route,Route124,TODO,sign,Sign,1x1,,,PLACEHOLDER
-route-124,YAVIN 4,route,Route124,TODO,warp,Door,1x1,,,PLACEHOLDER
-route-125,YAVIN 4,route,Route125,TODO,area,ROUTE 125,80x40,,,
-route-125,YAVIN 4,route,Route125,TODO,person,Trainer Neus,1x1,,,PLACEHOLDER
-route-125,YAVIN 4,route,Route125,TODO,person,Trainer Sovo,1x1,,,PLACEHOLDER
-route-125,YAVIN 4,route,Route125,TODO,person,Trainer Tassys,1x1,,,PLACEHOLDER
-route-125,YAVIN 4,route,Route125,TODO,person,Trainer Sogara,1x1,,,PLACEHOLDER
-route-125,YAVIN 4,route,Route125,TODO,person,Trainer Esgal,1x1,,,PLACEHOLDER
-route-125,YAVIN 4,route,Route125,TODO,person,Trainer Kim,1x1,,,PLACEHOLDER
-route-125,YAVIN 4,route,Route125,TODO,person,Trainer Iris,1x1,,,PLACEHOLDER
-route-125,YAVIN 4,route,Route125,TODO,person,Trainer Pivax,1x1,,,PLACEHOLDER
-route-125,YAVIN 4,route,Route125,TODO,person,Trainer Adxon,1x1,,,PLACEHOLDER
-route-125,YAVIN 4,route,Route125,TODO,person,Item,1x1,,,PLACEHOLDER
-route-125,YAVIN 4,route,Route125,TODO,warp,Door,1x1,,,PLACEHOLDER
-yavin-4,YAVIN 4,town,MossdeepCity,TODO,area,YAVIN 4,80x40,,,
-yavin-4,YAVIN 4,town,MossdeepCity,TODO,person,Sailor,1x1,,,PLACEHOLDER
-yavin-4,YAVIN 4,town,MossdeepCity,TODO,person,Expert M,1x1,,,PLACEHOLDER
-yavin-4,YAVIN 4,town,MossdeepCity,TODO,person,Pokefan F,1x1,,,PLACEHOLDER
-yavin-4,YAVIN 4,town,MossdeepCity,TODO,person,Ninja Boy,1x1,,,PLACEHOLDER
-yavin-4,YAVIN 4,town,MossdeepCity,TODO,person,Girl,1x1,,,PLACEHOLDER
-yavin-4,YAVIN 4,town,MossdeepCity,TODO,person,Man,1x1,,,PLACEHOLDER
-yavin-4,YAVIN 4,town,MossdeepCity,TODO,person,Woman,1x1,,,PLACEHOLDER
-yavin-4,YAVIN 4,town,MossdeepCity,TODO,person,Kings Rock Boy,1x1,,,PLACEHOLDER
-yavin-4,YAVIN 4,town,MossdeepCity,TODO,person,0x0,1x1,,,PLACEHOLDER
-yavin-4,YAVIN 4,town,MossdeepCity,TODO,person,0x0,1x1,,,PLACEHOLDER
-yavin-4,YAVIN 4,town,MossdeepCity,TODO,person,0x0,1x1,,,PLACEHOLDER
-yavin-4,YAVIN 4,town,MossdeepCity,TODO,person,0x0,1x1,,,PLACEHOLDER
-yavin-4,YAVIN 4,town,MossdeepCity,TODO,person,0x0,1x1,,,PLACEHOLDER
-yavin-4,YAVIN 4,town,MossdeepCity,TODO,person,Dynamic Punch Tutor,1x1,,,PLACEHOLDER
-yavin-4,YAVIN 4,town,MossdeepCity,TODO,person,Scott,1x1,,,PLACEHOLDER
-yavin-4,YAVIN 4,town,MossdeepCity,TODO,person,Black Belt,1x1,,,PLACEHOLDER
-yavin-4,YAVIN 4,town,MossdeepCity,TODO,person,Item,1x1,,,PLACEHOLDER
-yavin-4,YAVIN 4,town,MossdeepCity,TODO,sign,Sign,1x1,,,PLACEHOLDER
-yavin-4,YAVIN 4,town,MossdeepCity,TODO,sign,Sign,1x1,,,PLACEHOLDER
-yavin-4,YAVIN 4,town,MossdeepCity,TODO,sign,Sign,1x1,,,PLACEHOLDER
-yavin-4,YAVIN 4,town,MossdeepCity,TODO,sign,Sign,1x1,,,PLACEHOLDER
-yavin-4,YAVIN 4,town,MossdeepCity,TODO,sign,Sign,1x1,,,PLACEHOLDER
-yavin-4,YAVIN 4,town,MossdeepCity,TODO,sign,Sign,1x1,,,PLACEHOLDER
-yavin-4,YAVIN 4,town,MossdeepCity,TODO,sign,Sign,1x1,,,PLACEHOLDER
-yavin-4,YAVIN 4,town,MossdeepCity,TODO,sign,Sign,1x1,,,PLACEHOLDER
-yavin-4,YAVIN 4,town,MossdeepCity,TODO,warp,Door,1x1,,,PLACEHOLDER
-yavin-4,YAVIN 4,town,MossdeepCity,TODO,warp,Door,1x1,,,PLACEHOLDER
-yavin-4,YAVIN 4,town,MossdeepCity,TODO,warp,Door,1x1,,,PLACEHOLDER
-yavin-4,YAVIN 4,town,MossdeepCity,TODO,warp,Door,1x1,,,PLACEHOLDER
-yavin-4,YAVIN 4,town,MossdeepCity,TODO,warp,Door,1x1,,,PLACEHOLDER
-yavin-4,YAVIN 4,town,MossdeepCity,TODO,warp,Door,1x1,,,PLACEHOLDER
-yavin-4,YAVIN 4,town,MossdeepCity,TODO,warp,Door,1x1,,,PLACEHOLDER
-yavin-4,YAVIN 4,town,MossdeepCity,TODO,warp,Door,1x1,,,PLACEHOLDER
-yavin-4,YAVIN 4,town,MossdeepCity,TODO,warp,Door,1x1,,,PLACEHOLDER
-yavin-4,YAVIN 4,town,MossdeepCity,TODO,warp,Door,1x1,,,PLACEHOLDER
+route-124,YAVIN 4,route,Route124,BLOCKOUT,area,ROUTE 124,80x80,,,
+route-124,YAVIN 4,route,Route124,BLOCKOUT,building,Diving treasure hunters house,5x3,art:tatooine:homestead-dome,yes,TODO
+route-124,YAVIN 4,route,Route124,BLOCKOUT,person,Trainer Sugon,1x1,,,PLACEHOLDER
+route-124,YAVIN 4,route,Route124,BLOCKOUT,person,Trainer Rovan,1x1,,,PLACEHOLDER
+route-124,YAVIN 4,route,Route124,BLOCKOUT,person,Trainer Jivila,1x1,,,PLACEHOLDER
+route-124,YAVIN 4,route,Route124,BLOCKOUT,person,Trainer Gorkora,1x1,,,PLACEHOLDER
+route-124,YAVIN 4,route,Route124,BLOCKOUT,person,Trainer Caskun,1x1,,,PLACEHOLDER
+route-124,YAVIN 4,route,Route124,BLOCKOUT,person,Trainer Lila,1x1,,,PLACEHOLDER
+route-124,YAVIN 4,route,Route124,BLOCKOUT,person,Trainer Roy,1x1,,,PLACEHOLDER
+route-124,YAVIN 4,route,Route124,BLOCKOUT,person,Trainer Dial,1x1,,,PLACEHOLDER
+route-124,YAVIN 4,route,Route124,BLOCKOUT,person,Trainer Irina,1x1,,,PLACEHOLDER
+route-124,YAVIN 4,route,Route124,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+route-124,YAVIN 4,route,Route124,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+route-124,YAVIN 4,route,Route124,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+route-124,YAVIN 4,route,Route124,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER
+route-125,YAVIN 4,route,Route125,BLOCKOUT,area,ROUTE 125,80x40,,,
+route-125,YAVIN 4,route,Route125,BLOCKOUT,person,Trainer Neus,1x1,,,PLACEHOLDER
+route-125,YAVIN 4,route,Route125,BLOCKOUT,person,Trainer Sovo,1x1,,,PLACEHOLDER
+route-125,YAVIN 4,route,Route125,BLOCKOUT,person,Trainer Tassys,1x1,,,PLACEHOLDER
+route-125,YAVIN 4,route,Route125,BLOCKOUT,person,Trainer Sogara,1x1,,,PLACEHOLDER
+route-125,YAVIN 4,route,Route125,BLOCKOUT,person,Trainer Esgal,1x1,,,PLACEHOLDER
+route-125,YAVIN 4,route,Route125,BLOCKOUT,person,Trainer Kim,1x1,,,PLACEHOLDER
+route-125,YAVIN 4,route,Route125,BLOCKOUT,person,Trainer Iris,1x1,,,PLACEHOLDER
+route-125,YAVIN 4,route,Route125,BLOCKOUT,person,Trainer Pivax,1x1,,,PLACEHOLDER
+route-125,YAVIN 4,route,Route125,BLOCKOUT,person,Trainer Adxon,1x1,,,PLACEHOLDER
+route-125,YAVIN 4,route,Route125,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER
+yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,area,YAVIN 4,70x44,,,
+yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,building,Massassi Temple (arena),10x8,art:yavin-4:massassi-temple,yes,TODO
+yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,building,Rebel hangar,8x5,art:yavin-4:rebel-hangar,yes,TODO
+yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,building,Bacta Center,5x4,art:shared:bacta-center,yes,TODO
+yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,building,Supply Depot,4x4,art:shared:supply-depot,yes,TODO
+yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,building,Leia's quarters,8x5,art:yavin-4:rebel-hangar,yes,TODO
+yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,building,Pilots' barracks,5x4,art:tatooine:homestead-dome,yes,TODO
+yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,building,Mechanics' barracks,5x4,art:tatooine:homestead-dome,yes,TODO
+yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,building,Medic's hut,5x4,art:tatooine:homestead-dome,yes,TODO
+yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,building,Scout's hut,5x4,art:tatooine:homestead-dome,yes,TODO
+yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,prop,X-wing (parked),4x3,art:yavin-4:x-wing-parked,yes,TODO
+yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,prop,X-wing (parked),4x3,art:yavin-4:x-wing-parked,yes,TODO
+yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,prop,Massassi jungle tree,2x3,art:yavin-4:massassi-jungle-tree,yes,TODO
+yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,prop,Massassi jungle tree,2x3,art:yavin-4:massassi-jungle-tree,yes,TODO
+yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,prop,Jungle vines,1x1,art:yavin-4:jungle-vines,yes,TODO
+yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,prop,Jungle vines,1x1,art:yavin-4:jungle-vines,yes,TODO
+yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,prop,Cargo crates,2x2,art:shared:cargo-crates,yes,TODO
+yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,person,Leia,1x1,,,PLACEHOLDER
+yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,person,Kanan Jarrus,1x1,,,PLACEHOLDER
+yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,person,Ezra Bridger,1x1,,,PLACEHOLDER
+yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,person,Rebel pilot,1x1,,,PLACEHOLDER
+yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,person,Rebel mechanic,1x1,,,PLACEHOLDER
+yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,person,Rebel trooper,1x1,,,PLACEHOLDER
+yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,person,Launch tech,1x1,,,PLACEHOLDER
+yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,sign,Base sign,1x1,,,PLACEHOLDER
+yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,sign,Temple sign,1x1,,,PLACEHOLDER

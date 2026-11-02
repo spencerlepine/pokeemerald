@@ -5,7 +5,7 @@ kind: route
 replaces: Route112
 status: BLOCKOUT
 story: Canyon road north of the Dune Sea. The shuttle station (vanilla cable car) flies up to Mustafar Peak; the north edge was Sullust and is now cut.
-pos: [45, -287]
+pos: [160, 20]
 grid: |
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
@@ -85,7 +85,7 @@ props:
   size: [2, 2]
 - name: Rock spire
   art: art:tatooine:rock-spire
-  at: [37, 9]
+  at: [24, 11]
   size: [2, 3]
 - name: Landing pad
   art: art:shared:landing-pad
@@ -145,17 +145,7 @@ warps:
 - name: Door
   at: [29, 27]
   to: route-112-shuttle-station
-- name: Door
-  at: [6, 46]
-  to: ashen-pass
-- name: Door
-  at: [7, 46]
-  to: ashen-pass
-- name: Door
-  at: [11, 36]
-  to: magma-tunnels
-- name: Door
-  at: [22, 10]
-  to: magma-tunnels
-todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Planet border cut: west edge to pirin (SULLUST); reached by ship instead.', Route 112 north (Sullust)
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Planet border cut: west edge to pirin (SULLUST); reached by ship instead.', 'Planet border cut:
+    door at [6, 46] to ashen-pass; reached by ship instead.', 'Planet border cut: door at [7, 46] to ashen-pass; reached by ship instead.', 'Planet border cut: door
+    at [11, 36] to magma-tunnels; reached by ship instead.', 'Planet border cut: door at [22, 10] to magma-tunnels; reached by ship instead.', Route 112 north (Sullust)
     and the shuttle to Mustafar become ship links; see net_new.csv borders.]

@@ -3,8 +3,8 @@ name: JEDHA TEMPLE
 planet: JEDHA
 kind: route
 replaces: MtPyre_Summit
-status: TODO
-story: ''
+status: BLOCKOUT
+story: Summit of the Jedha Temple where the Guardians of the Whills keep the RED and BLUE KYBER.
 grid: |
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   ~~~~~~~~~~~~~~~~~#############~~~~~~~~~~~~~~~~~~~~
@@ -45,14 +45,18 @@ grid: |
   ####################.TTTTT.#######################
 exits: []
 buildings: []
-props: []
+props:
+- name: Prayer candles
+  art: art:jedha:prayer-candles
+  at: [18, 7]
+  size: [1, 1]
 people:
 - name: Old Man
   at: [22, 5]
   role: npc
-- name: '0x0'
+- name: Event object
   at: [23, 6]
-  role: npc
+  role: object
 - name: Old Lady
   at: [23, 5]
   role: npc
@@ -68,9 +72,9 @@ people:
 - name: Trainer Roldarg
   at: [25, 11]
   role: trainer
-- name: '0x0'
+- name: Event object
   at: [23, 6]
-  role: npc
+  role: object
 signs: []
 warps:
 - name: Door
@@ -82,4 +86,4 @@ warps:
 - name: Door
   at: [24, 31]
   to: jedha-temple-exterior
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']

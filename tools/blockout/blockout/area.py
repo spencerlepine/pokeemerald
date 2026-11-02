@@ -93,6 +93,7 @@ class Area:
                 p.append(f"{who[0]} goes off the map at [{x}, {y}]")
             elif len(who) > 1:
                 p.append(f"overlap at [{x}, {y}]: {', '.join(who)}")
+
         for b in self.buildings:
             (x, y), (w, h) = b["at"], b["size"]
             if "door" in b:
@@ -116,7 +117,47 @@ class Area:
                 x, y = {"north": (c, 0), "south": (c, self.h - 1), "west": (0, c), "east": (self.w - 1, c)}[e["edge"]]
                 if self.cell(x, y) is None or not (walkable(self.cell(x, y)) or self.cell(x, y) == "~") or (x, y) in solid:
                     p.append(f"exit {e['edge']} to {e.get('to')}: edge cell [{x}, {y}] is not walkable")
+        # Imported routes and caves keep vanilla geometry (stairs, bridges, stacked rooms joined by
+        # warps) that the grid does not model, so only redrawn towns and new areas get the reach check.
+        if self.kind in ("town", "landmark") or self.replaces == "new":
+            p += self.reach_problems(solid)
         return p
+
+    def reach_problems(self, solid):
+        """Every exit, door, person and warp must be reachable on foot (or by surf) from the first
+        exit. Ledges and levels are ignored, so this catches blocked paths, not one-way puzzles."""
+        def ok(x, y):
+            ch = self.cell(x, y)
+            return ch is not None and (walkable(ch) or ch == "~") and (x, y) not in solid
+        targets = []
+        for e in self.exits:
+            for c in e["cells"][:1]:
+                targets.append((f"exit {e['edge']}", {"north": (c, 0), "south": (c, self.h - 1),
+                                                      "west": (0, c), "east": (self.w - 1, c)}[e["edge"]]))
+        for b in self.buildings:
+            if "door" in b:
+                targets.append((f"door of {b['name']}", (b["at"][0] + int(b["door"]), b["at"][1] + b["size"][1])))
+        for o in self.warps:
+            targets.append((f"warp {o.get('name')}", tuple(o["at"])))
+        targets = [t for t in targets if ok(*t[1]) or t[0].startswith("warp")]
+        if not targets:
+            return []
+        start = next((t[1] for t in targets if ok(*t[1])), None)
+        if start is None:
+            return []
+        seen, todo = {start}, [start]
+        while todo:
+            x, y = todo.pop()
+            for n in ((x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)):
+                if n not in seen and ok(*n):
+                    seen.add(n)
+                    todo.append(n)
+        out = []
+        for name, (x, y) in targets:
+            near = {(x, y), (x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)}
+            if not (near & seen):
+                out.append(f"{name} at [{x}, {y}] cannot be reached from {targets[0][0]}")
+        return out
 
     def pieces(self):
         """Every placed piece, numbered in drawing order, for the legend and the tracker."""

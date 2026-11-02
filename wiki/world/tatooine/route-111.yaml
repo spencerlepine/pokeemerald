@@ -6,7 +6,7 @@ replaces: Route111
 status: BLOCKOUT
 story: 'The Dune Sea: open desert north of Mos Espa with sandstorms (SAND GOGGLES), the Krayt Graveyard tunnels, the Tusken Ruins and the wandering Sandcrawler. The
   Pit of Carkoon and the sail barge wreck are optional side spots, and a track east leads to Jabba''s palace.'
-pos: [85, -304]
+pos: [200, 0]
 grid: |
   ########################################
   ########################################
@@ -200,7 +200,7 @@ props:
   size: [2, 2]
 people:
 - name: Victor
-  at: [13, 114]
+  at: [12, 115]
   role: npc
 - name: Event object
   at: [13, 113]

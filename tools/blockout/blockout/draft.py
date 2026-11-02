@@ -379,3 +379,40 @@ def open_exit(d, edge, at, to, width=2, ch="."):
             if d.get(*p) not in (".", ":", '"', "="):
                 d.set(*p, ch)
     d.exit(edge, cells, to)
+
+
+def link_all(d):
+    """Carve the shortest ground path from every unreachable exit, door, warp or person to the
+    reachable part of the map (through rock or trees, never through buildings, props or water)."""
+    from collections import deque
+    solid = set()
+    for k in ("buildings", "props"):
+        for o in d.doc[k]:
+            (x, y), (w, h) = o["at"], o.get("size", [1, 1])
+            solid |= {(x + i, y + j) for i in range(w) for j in range(h)}
+    for _ in range(40):
+        reach = _walk(d)
+        todo = [t for t in _targets(d) if t not in reach and t not in solid]
+        if not todo:
+            return
+        t = todo[0]
+        prev = {t: None}
+        q = deque([t])
+        hit = None
+        while q:
+            c = q.popleft()
+            if c in reach:
+                hit = c
+                break
+            x, y = c
+            for n in ((x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)):
+                if n not in prev and d.get(*n) is not None and n not in solid and d.get(*n) != "~":
+                    prev[n] = c
+                    q.append(n)
+        if hit is None:
+            return
+        c = hit
+        while c is not None:
+            if d.get(*c) not in (".", ":", '"', "=", "H", "v", "^", "<", ">", "_"):
+                d.set(*c, ".")
+            c = prev[c]

@@ -6,7 +6,7 @@ replaces: Route103
 status: BLOCKOUT
 story: Road north from Tosche Station along the salt lake, where the rival waits. The east end opens onto the podrace course; the cave is Altering Cave's Tatooine
   twin.
-pos: [0, -68]
+pos: [120, 218]
 grid: |
   TTTTTTTTTTTTTTTTTTTTTTTTTT~~~~~~~~~~~~##########################################
   TTTTTTTTTTTTTTTTTTTTTTTTTT~##~~~~~~~~~##########################################
@@ -119,8 +119,6 @@ people:
 signs:
 - name: Sign
   at: [11, 9]
-warps:
-- name: Door
-  at: [45, 6]
-  to: altering-cave
-todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', '''~'' on Tatooine is the planet''s surf medium: salt lake water here.']
+warps: []
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Planet border cut: door at [45, 6] to altering-cave; reached by ship instead.', '''~'' on Tatooine
+    is the planet''s surf medium: salt lake water here.']

@@ -3,17 +3,17 @@ name: ROUTE 123
 planet: ENDOR
 kind: route
 replaces: Route123
-status: TODO
-story: ''
+status: BLOCKOUT
+story: River valley in southern Endor with the berry grower's lodge.
 pos: [320, 140]
 grid: |
-  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT~~~~~~~~~~~~~~~~~~~~~~~T..T~~~~~~~~~~~~~~~~~~
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT~~~~~~~~~~~~~~~~~~~~~~~TTTT~~~~~~~~~~~~~~~~~~
   TTTTTTTTTTTT.........TTTTTTTTTTTTTTTTTTTTTTT..T############TTTTTTTT""""TTT".""<#.###.TTTTTTTTTT~~~~~~~~~~~~~~~~~~~~~~~T..T~~~~~~~~~~~~~~~~~~
   TTTTTTTTTTT########T.TTTTTTTTTTTTTTTTTTTT.....##############TTTTT.""""""TT""""<......TTTTTTTTTT..TT~~~~~~~~~~~~~~~~~~~T..T~~~~~~~~~~~~~~~~~~
   TTTTTTTTTTT##.##.##T......TTTTTTTTTTTT......#.##############TTTT..""""""TT""""<......TTTTTTTTTTTTTTT~~~~~~~~~~~~~~~~~~T..T~~~~~~~~~~~~~~~~~~
-  TTTTTTTTTTT........T.####.TTTTTTTT~~~~~~~~......<..""#######TTT..."""""""T""""<.......TTTTTTTTTTTTTTT~~~~~~~~~~~~~~~~~T..T~~~~~~~~~~~~~~~~~~
-  TTTTTTTTTTT##.##.##T.####.TTTTTTTT~~~~~~~~......<.""""####TTTTTvvvvvvv.""...""<....""........TTTTTTTTT~~~~~~~~~~~~~~~~T..T~~~~~~~~~~~~~~~~~~
-  TTTTTTTT.TT........T.####.TTTTTT..~~~~~~~~......<"""""vT..TTTTT.......T"......<..."""""TTTTT.TTTTTTTTTTT~~~~~~~~~~~~~~T..T~~~~~~~~~~~~~~~~~~
+  TTTTTTTTTTT........T......TTTTTTTT~~~~~~~~......<..""#######TTT..."""""""T""""<.......TTTTTTTTTTTTTTT~~~~~~~~~~~~~~~~~T..T~~~~~~~~~~~~~~~~~~
+  TTTTTTTTTTT##.##.##T......TTTTTTTT~~~~~~~~......<.""""####TTTTTvvvvvvv.""...""<....""........TTTTTTTTT~~~~~~~~~~~~~~~~T..T~~~~~~~~~~~~~~~~~~
+  TTTTTTTT.TT........T......TTTTTT..~~~~~~~~......<"""""vT..TTTTT.......T"......<..."""""TTTTT.TTTTTTTTTTT~~~~~~~~~~~~~~T..T~~~~~~~~~~~~~~~~~~
   TTTTTT...TT##....##T#.....TT.<#...~~~~~~~~......<""""""<...TTT.......TT.......<.."""""""TTTT.TTTTTTTTTTTTT~~~~~~~~~~~~T..T~~~~~~~~~~~~~~~TTT
   TTTT.....T................T..<....~~~~~~~~......<""""""<...TT........TTT.#.....TT"""""""TTTT.TTTTTTTTTTTTTT~~~~~~~~~~~T..T~~~~~~~~~~~~~TTTTT
   T........TTT..............T..<...............#...TT""""<...Tvvvvvv."""TTT.....TTTT"""""""TTT.TTTTTTTTTTTTTTTT~~~~~~~~~T..T~~~~~~~~~~TTTTTTTT
@@ -28,14 +28,25 @@ grid: |
   TTTTTTTTTTT.............TT......TTTTTTTT..<T......#......TT........#...<..........TT...TTTTTTTTTTTT..#............TTTTTTTTTTTTTTT..........T
   TTTTTTTTTTTTTTTTTTTTTTTTTTT.TTTTTTTTTTTTTT.TTT......TTTTTTTTTTT.........TTT...TTTTTTTTTTTTTTTTTTTTTTT........TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
 exits:
-- edge: north
-  cells: [119, 120]
-  to: route-122
 - edge: west
   cells: [10, 11, 12]
   to: route-118
-buildings: []
-props: []
+buildings:
+- name: Berry masters house
+  art: art:endor:ewok-hut
+  at: [21, 4]
+  size: [4, 3]
+  door: 1
+  to: route-123-berry-masters-house
+props:
+- name: Redwood trunk
+  art: art:endor:redwood-trunk
+  at: [73, 5]
+  size: [3, 3]
+- name: Fallen log
+  art: art:endor:fallen-log
+  at: [99, 10]
+  size: [3, 1]
 people:
 - name: Trainer Woskila
   at: [70, 12]
@@ -43,15 +54,15 @@ people:
 - name: Trainer Baon
   at: [58, 7]
   role: trainer
-- name: Event Script_Cut Tree
+- name: Shrub to cut (Vibroblade)
   at: [101, 13]
-  role: npc
-- name: Event Script_Cut Tree
+  role: object
+- name: Shrub to cut (Vibroblade)
   at: [129, 14]
-  role: npc
-- name: Event Script_Cut Tree
+  role: object
+- name: Shrub to cut (Vibroblade)
   at: [92, 9]
-  role: npc
+  role: object
 - name: Giga Drain Girl
   at: [108, 13]
   role: npc
@@ -97,61 +108,61 @@ people:
 - name: Trainer Daldel
   at: [14, 12]
   role: trainer
-- name: Berry tree
+- name: Berry plant
   at: [11, 3]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [12, 3]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [14, 3]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [15, 3]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [81, 1]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [82, 1]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [83, 1]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [14, 5]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [15, 5]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [17, 5]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [18, 5]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [17, 3]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [18, 3]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [11, 5]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [12, 5]
   role: berry
 - name: Item
   at: [31, 8]
   role: item
-- name: Berry tree
+- name: Berry plant
   at: [109, 13]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [110, 13]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [111, 13]
   role: berry
 - name: Item
@@ -173,8 +184,5 @@ signs:
   at: [10, 12]
 - name: Sign
   at: [20, 7]
-warps:
-- name: Door
-  at: [22, 6]
-  to: route-123-berry-masters-house
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+warps: []
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Planet border cut: north edge to route-122 (JEDHA); reached by ship instead.']

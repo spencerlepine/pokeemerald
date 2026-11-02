@@ -3,25 +3,25 @@ name: ROUTE 118
 planet: ENDOR
 kind: route
 replaces: Route118
-status: TODO
-story: ''
+status: BLOCKOUT
+story: Forest edge where Rebel shuttles from Tatooine set down. The road runs east along a river towards the redwoods; Route 119 climbs north.
 pos: [240, 140]
 grid: |
   TTTTT>###..###TTTTTT>.~~~~~..<TTTTTTTTT#################T...T###################
   TTTTT>###..###TTTTTT>.~~~~~..<TTTTTTTTT#################T...T###################
-  TTTTT>###..###TTTTTT#.~~~~~..#vTTTTTTTT#################T...T###################
-  TTTTT>###.####TTTTT>~~~~##~~#.#<TTTTTTT#########TTTTTTT#T...T###################
-  TTTTT>########TTTvv#~~#######.#<TTTTTTT#######..TTTTTTT"....T###################
-  TTT...########TT##.#####~~######TT.###.#######TTTTT"""""....."""".############TT
-  T.....########v###.###~~~~~~...#<T#....#######....."""""....""""""############TT
-  .................###~~~~~~~~#...#vvT................""""....""""""....######..TT
-  .................#~~~~~~~~~~.......<T..vvvvvvvvvvvvvvvvv#...vvvvvvvvvvvvvvvvvTTT
-  .....>............~~~~~~~~~~.......<TT..........""""""........."""""""""""....TT
-  .....>............~~~~~~~~~~~~~....#TT..........""""""""........."""""""".......
-  .....>...>........~~~~~~~~~~~~~.....#T#..........""""""""........"""""""".......
-  .TTTT>...>......~~~~~~~~~~~~~~~......#vvvvv...T#T.""""""".........""""""........
+  TTTTT>........TTTTTT#.~~~~~..#vTTTTTTTT#################T...T###################
+  TTTTT>........TTTTT>~~~~##~~#.#<TTTTTTT#########TTTTTTT#T...T###################
+  TTTTT>........TTTvv#~~#######.#<TTTTTTT#######..TTTTTTT"....T###################
+  TTT...........TT##.#####~~######TT.###.#######TTTTT"""""....."""".############TT
+  T.....####.###v###.###~~~~~~...#<T#....#######....."""""....""""""############TT
+  T................###~~~~~~~~#...#vvT................""""....""""""....######..TT
+  T................#~~~~~~~~~~.......<T..vvvvvvvvvvvvvvvvv#...vvvvvvvvvvvvvvvvvTTT
+  T....>............~~~~~~~~~~.......<TT..........""""""........."""""""""""....TT
+  T....>............~~~~~~~~~~~~~....#TT..........""""""""........."""""""".......
+  T....>...>........~~~~~~~~~~~~~.....#T#..........""""""""........"""""""".......
+  TTTTT>...>......~~~~~~~~~~~~~~~......#vvvvv...T#T.""""""".........""""""........
   TTTTT>.TT>......~~~~~~~~~~~~~~~#..............###<TT"""""...TTTT..."""""....TTTT
-  ....v#TTT#..#...~~~~~~~~~~~~~~~~~~...........####<TTTT"""TTTTTTTT...""""TTTTTTTT
+  T...v#TTT#..#...~~~~~~~~~~~~~~~~~~...........####<TTTT"""TTTTTTTT...""""TTTTTTTT
   ####vvvv#.#..~~~~~~~~~~~~~~~~~~~~~~~~~~.........#<TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
   ####~~~~~##~~~~~~~~~~##~~~##~~~~~~~~~~~~~~~~~~##~<TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
   ####~~~~~####~~~~~~####~######~~##~~##~~~~######~#vvvvvvTTTTTTTTTTTTTTTTTTTTTTTT
@@ -31,14 +31,29 @@ exits:
 - edge: north
   cells: [57, 58, 59]
   to: route-119
-- edge: west
-  cells: [7, 8, 9, 10, 11, 12, 14]
-  to: mos-espa
 - edge: east
   cells: [10, 11, 12]
   to: route-123
-buildings: []
-props: []
+buildings:
+- name: Rebel shuttle clearing (from Tatooine)
+  art: art:tatooine:docking-bay
+  at: [6, 2]
+  size: [8, 4]
+  door: 4
+  to: hangar-tatooine-endor
+props:
+- name: Redwood trunk
+  art: art:endor:redwood-trunk
+  at: [33, 11]
+  size: [3, 3]
+- name: Fallen log
+  art: art:endor:fallen-log
+  at: [65, 14]
+  size: [3, 1]
+- name: Crashed speeder bike
+  art: art:endor:crashed-speeder-bike
+  at: [46, 4]
+  size: [2, 1]
 people:
 - name: Trainer Poxir
   at: [64, 10]
@@ -64,9 +79,9 @@ people:
 - name: Ty Battle6
   at: [34, 8]
   role: npc
-- name: Event Script_Cut Tree
+- name: Shrub to cut (Vibroblade)
   at: [38, 8]
-  role: npc
+  role: object
 - name: Good Rod Fisherman
   at: [28, 8]
   role: npc
@@ -85,19 +100,19 @@ people:
 - name: Trainer Deskar
   at: [17, 11]
   role: trainer
-- name: '0x0'
+- name: Event object
   at: [44, 7]
-  role: npc
+  role: object
 - name: Trainer Domesh
   at: [7, 7]
   role: trainer
-- name: Berry tree
+- name: Berry plant
   at: [35, 5]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [36, 5]
   role: berry
-- name: Berry tree
+- name: Berry plant
   at: [37, 5]
   role: berry
 - name: Item
@@ -108,11 +123,7 @@ signs:
   at: [13, 6]
 - name: Sign
   at: [56, 8]
-warps:
-- name: Door
-  at: [42, 6]
-  to: terra-cave-entrance
-- name: Door
-  at: [9, 6]
-  to: terra-cave-entrance
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+warps: []
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Planet border cut: west edge to mos-espa (TATOOINE); reached by ship instead.', 'Planet border
+    cut: door at [42, 6] to terra-cave-entrance; reached by ship instead.', 'Planet border cut: door at [9, 6] to terra-cave-entrance; reached by ship instead.',
+  The shuttle clearing replaces vanilla's west road to Mos Espa (planet border).]

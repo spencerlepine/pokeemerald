@@ -3,16 +3,16 @@ name: ROUTE 122
 planet: JEDHA
 kind: route
 replaces: Route122
-status: TODO
-story: ''
+status: BLOCKOUT
+story: Holy waters round the island of the Jedha Temple. Pilgrim ships land on the north-west pad; a causeway east leads to NiJedha.
 pos: [420, 100]
 grid: |
   ~~~~~##~~~~~~~~~~~~~~######~~~~~~~~~~~~~
   ~~~~~##~~~~~~~~~~~~~~########~~~~~~~~~~~
   ~~~~~~##~~~~~~~~~~~~~~~~~~~####~~~~~~~~~
   ~~~~~~##~~~~~~~~~~~~~~~~~~~~~######~~~~~
-  ~~~~~##~~~~~~~~~~~~~~~~~~~~~~~~####~~~~~
-  ~~~~~##~~~~~~~~~~~~~~~~~~~~~~~~~~~##~~~~
+  ~~~~~.#~~~~~~~~~~~~~~~~~~~~~~~~####~~~~~
+  ~~~~~.#~~~~~~~~~~~~~~~~~~~~~~~~~~~##~~~~
   ~~####~~~~~~~~~~~~~~~~~~~~~~~~~~~~##~~~~
   ~~####~~~~~~~~~~##########~~~~~~~~~##~~~
   ~##~~~~~~~~~~~~############~~~~~~~~##~~~
@@ -25,8 +25,8 @@ grid: |
   ##~~~~###########################~~~~~##
   ##~~~~###########################~~~~~##
   ##~~~~###########################~~~~~##
-  ##~~~~###########################~~~~~##
-  ##~~~~###########################~~~~~##
+  ........................................
+  ........................................
   ##~~~~###########################~~~~~##
   ##~~~~###########################~~~~~##
   ##~~~~###########################~~~~~##
@@ -46,15 +46,16 @@ grid: |
   ~~~~####~~~~~~~~~~~~~~~~~~##~~##~##~~~~~
   ~~~~~~####~~####~~....~~##########~~~~~~
   ~~~~~~~~##########....####~~##~~##~~~~~~
-  ~~~~~~~~~~##~~~~##T..T##~~~~~~~~~~~~~~~~
+  ~~~~~~~~~~##~~~~##TTTT##~~~~~~~~~~~~~~~~
 exits:
-- edge: north
-  cells: []
-  to: route-121
-- edge: south
-  cells: [19, 20]
-  to: route-123
-buildings: []
+- edge: east
+  cells: [18, 19]
+  to: nijedha
+buildings:
+- name: Pilgrim landing pad
+  art: art:shared:landing-pad
+  at: [2, 2]
+  size: [4, 4]
 props: []
 people: []
 signs: []
@@ -62,4 +63,5 @@ warps:
 - name: Door
   at: [22, 29]
   to: jedha-temple-1f
-todo: ['Imported from vanilla: ''#'' cells are vanilla buildings, cliffs and fences; replace them with this area''s own buildings and props.']
+todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Planet border cut: north edge to route-121 (ENDOR); reached by ship instead.', 'Planet border
+    cut: south edge to route-123 (ENDOR); reached by ship instead.', 'Could not fit: Toppled statue']

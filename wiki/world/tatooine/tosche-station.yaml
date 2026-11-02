@@ -31,7 +31,7 @@ grid: |
   TTTTTT........::........TTTTTT
   TTTTTTT.......::.......TTTTTTT
   TTTTTTTT..TT..::.......TTTTTTT
-  TTTTTTTTTTTTTT::...T.TTTTTTTTT
+  TTTTTTTTTTTTTT::.....TTTTTTTTT
   TTTTTTTTTTTTTT::.TTTTTTTTTTTTT
 exits:
 - edge: north

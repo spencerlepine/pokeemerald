@@ -1,0 +1,74 @@
+id: tibanna-refinery
+name: TIBANNA REFINERY
+planet: BESPIN
+kind: landmark
+replaces: new
+status: BLOCKOUT
+story: 'Optional: a Tibanna gas refinery on a separate platform north of Cloud City, reached by cloud car or the north skybridge. Ugnaughts work the tanks; Cartel
+  thugs are smuggling gas.'
+grid: |
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~~~~~~~~~~~~~~~~~~.......~~~~~~~~~~~~~~~
+  ~~~~~~~~~~~~~~~~~...........~~~~~~~~~~~~
+  ~~~~~~~~~~~~~~~~...............~~~~~~~~~
+  ~~~~~~..........................~~~~~~~~
+  ~~~~~..............................~~~~~
+  ~~~~~~...............................~~~
+  ~~~~~~...............................~~~
+  ~~~~~~...............................~~~
+  ~~~~~...............................~~~~
+  ~~~~...............................~~~~~
+  ~~~~.............................~~~~~~~
+  ~~~~~~............................~~~~~~
+  ~~~~~~~~...........................~~~~~
+  ~~~~~~~~~..........................~~~~~
+  ~~~~~~~~............................~~~~
+  ~~~~~~~~..........................~~~~~~
+  ~~~~~~~...........~...........~~~~~~~~~~
+  ~~~~~~~........~~~====......~~~~~~~~~~~~
+  ~~~~~~~~.....~~~~~====~...~~~~~~~~~~~~~~
+  ~~~~~~~~~~~~~~~~~~====~~~~~~~~~~~~~~~~~~
+  ~~~~~~~~~~~~~~~~~~====~~~~~~~~~~~~~~~~~~
+  ~~~~~~~~~~~~~~~~~~====~~~~~~~~~~~~~~~~~~
+  ~~~~~~~~~~~~~~~~~~====~~~~~~~~~~~~~~~~~~
+exits:
+- edge: south
+  cells: [18, 19, 20, 21]
+  to: cloud-city
+buildings:
+- name: Gas refinery
+  art: art:bespin:cloud-city-tower
+  at: [8, 4]
+  size: [5, 6]
+  door: 2
+  to: tibanna-refinery-interior
+- name: Carbon-freezing annex
+  art: art:bespin:cloud-city-tower
+  at: [26, 4]
+  size: [5, 6]
+  door: 2
+  to: tibanna-refinery-annex
+props:
+- name: Gas tanks
+  art: art:shared:fuel-tanks
+  at: [16, 6]
+  size: [2, 2]
+- name: Gas tanks
+  art: art:shared:fuel-tanks
+  at: [21, 6]
+  size: [2, 2]
+people:
+- name: Ugnaught foreman
+  at: [19, 12]
+  role: npc
+- name: Cartel thug
+  at: [14, 15]
+  role: trainer
+- name: Cartel thug
+  at: [26, 15]
+  role: trainer
+signs: []
+warps: []
+todo: ['New interiors: tibanna-refinery-interior, tibanna-refinery-annex.']

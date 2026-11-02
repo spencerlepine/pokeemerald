@@ -5,7 +5,7 @@ kind: route
 replaces: Route102
 status: BLOCKOUT
 story: 'Scrubland between Tosche Station and Mos Entha: first trainers, first wild scrub patches and a dry oasis pond.'
-pos: [-55, -44]
+pos: [70, 240]
 grid: |
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT

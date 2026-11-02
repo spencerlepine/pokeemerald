@@ -5,7 +5,6 @@ kind: route
 replaces: PetalburgWoods
 status: BLOCKOUT
 story: 'Rocky canyon badlands between the two halves of Route 104: Tusken territory, where the Organa engineer is robbed. A side path east climbs to Ben''s hut.'
-pos: [-135, 34]
 grid: |
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
