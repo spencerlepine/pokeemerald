@@ -1,0 +1,115 @@
+# vs. Boba Fett: net-new boss battle (wiki net:mus-vs-boba-fett, MUS_VS_BOBA_FETT; tech notes from its placeholder
+# audio:MUS_VS_FRONTIER_BRAIN: vs_frontier_brain voicegroup, volume 90, priority 1). STYLE of "Departure of Boba
+# Fett" (wiki ref_tracks soundtrack:empire-strikes-back:06): an original melody, not a quote. Taken from the cue:
+# its ~86 bpm pulse (played here in double time, 180 to make the loop frame-exact, for a battle), A minor shaded by G minor and an Ab/G/E7
+# slide (the cue's bars 45-48), low reeds creeping by semitones, and a sparse, cold texture.
+# Brief (sw_subject): "Boba Fett's bounty-hunt boss battles: cold, percussive, western-tinged." Western: a
+# galloping nylon guitar, an Andalusian cadence (Am-G-F-E) under a lone trumpet, and a thin 12.5%-duty square
+# that whistles the hunter's call; cold and percussive: taiko and noise shaker, a creeping low horn in the break.
+# 180 bpm, 2-bar intro, 48-bar loop (64 s; placeholder 93.6 s), 9 tracks.
+name: vs-boba-fett
+constant: MUS_VS_BOBA_FETT        # wiki sw_constant (net:mus-vs-boba-fett)
+form: LOOP
+voicegroup: vs_frontier_brain     # frlg kit 0, nylon guitar 24, pizzicato 45, strings 48, trumpet 56, horn 60, squares 83/85, wave 87, noise 126
+master_volume: 90
+song_priority: 1
+tempo: 180
+steps_per_beat: 4                 # sixteenth-note grid: the gallop
+time_signature: [4, 4]
+seed: 83
+
+parts:
+  trumpet: {program: 56, channel: 0, volume: 102, pan: 8,   range: [E4, A5], gate: 0.9, humanize: {vel: 4}}
+  horn:    {program: 60, channel: 1, volume: 96,  pan: -10, range: [E3, A3], gate: 0.95}
+  guitar:  {program: 24, channel: 2, volume: 84,  pan: -22, octave: 3, range: [A2, A4], gate: 0.6, humanize: {vel: 8}}
+  bass:    {program: 87, channel: 3, volume: 96,  pan: 0,   octave: 2, range: [E1, E3], gate: 0.8, role: bass}
+  whistle: {program: 85, channel: 4, volume: 52,  pan: 26,  range: [A4, C6], gate: 0.95, mono: true}
+  echo:    {program: 83, channel: 5, volume: 36,  pan: -34, octave: 5, range: [A4, A6], gate: 0.4, mono: true}
+  pizz:    {program: 45, channel: 6, volume: 76,  pan: 30,  octave: 3, range: [A2, A4], gate: 0.5}
+  kit:     {program: 0,  channel: 7, volume: 84,  pan: 0, role: drums, kit: {kick: 36, snare: 38, taiko: 87, tamb: 54}}
+  shaker:  {program: 126, channel: 8, volume: 34, pan: 18, role: drums, kit: {sh: C6}}
+
+progressions:
+  intro: "E | E"
+  hunt:  "Am | Am | Dm/A | Am | Am | Am | Bb | E"
+  andal: "Am | G | F | E | Am | G | F | E"
+  cold:  "Am | Am | Am | Am | F | F | E | E"
+  slide: "Gm | Gm | Ab | Ab | G | G | E7 | E7"
+
+phrases:
+  call: |
+    E5:8 A5:4 B5:2 C6:2 | B5:6 A5:2 E5:8 | F5:8 D5:4 A4:4 | E5:12 r:4 |
+    A4:4 C5:4 E5:4 A5:4 | G5:6 F5:2 E5:4 D5:4 | D5:6 F5:2 Bb5:8 | G#5:12 r:4
+  tune: |
+    A4:4 E5:6 D5:2 C5:2 B4:2 | D5:4 B4:2 G4:2 D5:8 | C5:4 A4:2 F4:2 C5:4 E5:4 | E5:12 G#4:4 |
+    A4:2 B4:2 C5:4 E5:4 A5:4 | G5:6 F5:2 E5:4 D5:4 | F5:4 E5:2 D5:2 C5:4 B4:4 | B4:8 G#4:4 E4:4
+  tune_harm: |
+    r:16 | r:16 | r:16 | r:12 B4:4 |
+    E5:8 A4:8 | B4:8 G4:8 | A4:8 F4:8 | G#4:16
+  creep: |
+    A3:4 Bb3:2 A3:2 G#3:4 A3:4 | r:16 | A3:4 Bb3:2 A3:2 G#3:4 E3:4 | r:16 |
+    F3:4 Gb3:2 F3:2 E3:4 F3:4 | r:16 | E3:4 F3:2 E3:2 D#3:4 B2:4 | E3:16
+  slide: |
+    G4:4 Bb4:4 D5:8 | D5:4 C5:4 Bb4:4 A4:4 | Ab4:4 C5:4 Eb5:8 | Eb5:4 D5:4 C5:4 Bb4:4 |
+    B4:4 D5:4 G5:8 | F5:4 E5:4 D5:4 B4:4 | G#4:4 B4:4 D5:4 E5:4 | G#5:16
+  hunt_harm: "r:16 | r:16 | r:16 | r:12 B4:4 | C5:8 E5:8 | C5:8 B4:8 | Bb4:8 D5:8 | B4:16"
+  gallop: "^1:2 ^3:1 ^3:1 ^1+:2 ^3:1 ^3:1 ^1:2 ^3:1 ^3:1 ^2+:2 ^3:1 ^3:1"
+  strum: "^1:4 ^3:2 ^1+:2 r:4 ^2+:2 ^3:2"
+  bass_gallop: "^1:6 ^1:2 ^3-:6 ^3-:2"
+  bass_walk: "^1:4 ^1+:4 ^3-:4 ^1:4"
+  ticks: "^1':2 r:6 ^3':2 r:6"
+  ticks16: "^1':2 r:2 ^1':2 ^3':2 r:4 ^2':2 r:2"
+  echo_a: "r:6 ^1:2 r:6 ^2:2"
+  intro_gtr: "E3:2 B3:1 B3:1 E4:2 B3:1 B3:1 E3:2 B3:1 B3:1 G#3:2 B3:1 B3:1 | E3:2 B3:1 B3:1 E4:2 B3:1 B3:1 E3:2 B3:1 B3:1 G#3:2 B3:1 B3:1"
+
+grooves:
+  hunt:
+    kick:  "x.......x.......|x.......x.....x."
+    snare: "....x.......x...|....x.......x..x"
+    tamb:  "..x...x...x...x."
+  cold:
+    taiko: "x.........x.....|x.......x.x.x..."
+    kick:  "................|..............x."
+  slide:
+    kick:  "x.......x.......|x.......x.......|x.......x.......|x.....x.x.x.x..."
+    snare: "....x.......x...|....x.......x...|....x.......x...|....x.....rrRRRR"
+    taiko: "x...............|................|x...............|................"
+  intro_kit:
+    taiko: "x...........x...|x.......x.x.x.x."
+  shake:
+    sh: "x.xxx.xxx.xxx.xx"
+  shake_soft:
+    sh: "x...x...x...x.x."
+
+sections:
+  intro:
+    bars: 2
+    chords: intro
+    parts: {guitar: intro_gtr, bass: bass_gallop, kit: intro_kit, shaker: shake_soft}
+  a:
+    bars: 8
+    chords: hunt
+    parts: {whistle: call, guitar: gallop, bass: bass_gallop, echo: echo_a, kit: hunt, shaker: shake}
+  b:
+    bars: 8
+    chords: andal
+    parts: {trumpet: tune, whistle: tune_harm, guitar: gallop, bass: bass_walk, kit: hunt, shaker: shake}
+  c:
+    bars: 8
+    chords: cold
+    parts: {horn: creep, pizz: ticks16, bass: bass_gallop, echo: echo_a, kit: cold, shaker: shake_soft}
+  a2:
+    bars: 8
+    chords: hunt
+    parts: {whistle: call, trumpet: hunt_harm, guitar: gallop, bass: bass_gallop, pizz: ticks, kit: hunt, shaker: shake}
+  d:
+    bars: 8
+    chords: slide
+    parts: {trumpet: slide, guitar: strum, bass: bass_walk, echo: echo_a, kit: slide, shaker: shake}
+  b2:
+    bars: 8
+    chords: andal
+    parts: {trumpet: tune, whistle: tune_harm, guitar: gallop, bass: bass_gallop, pizz: ticks, kit: hunt, shaker: shake}
+
+arrangement: [intro, a, b, c, a2, d, b2]
+loop_start: a
