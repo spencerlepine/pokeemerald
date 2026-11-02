@@ -1,0 +1,46 @@
+# Obtain datadisk (MUS_OBTAIN_TMHM, hot-swap): a one-shot sting. SCRATCH (wiki audio:MUS_OBTAIN_TMHM, no film cue).
+# Brief: "Got a technique disk (TM/HM): techy, data-chirp flavoured sting." The disk loading: a bar of square
+# data chirps (E minor arpeggios in sixteenths, with astromech-style beeps on the second square) over a synth bass
+# and hi-hat ticks, then a brass cadence C - D - E major (the bVI - bVII - I lift) as the data lands. 120 bpm
+# (vanilla's), two bars of 3/4: 3 s against vanilla's 3.2 s, on the vanilla fanfare voicegroup.
+name: obtain-datadisk
+replaces: MUS_OBTAIN_TMHM
+form: JINGLE
+loop: false
+player: SE2
+song_priority: 5
+voicegroup: fanfare           # squares 81/80, synth bass 38, xylophone 13, trumpet 56, horn 60, kit 0
+master_volume: 90
+tempo: 120
+steps_per_beat: 4
+time_signature: [3, 4]
+seed: 16
+
+parts:
+  data:    {program: 81, channel: 0, volume: 54,  pan: 24,  range: [E5, E7], gate: 0.55, mono: true}
+  beeps:   {program: 80, channel: 1, volume: 46,  pan: -24, range: [B5, E7], gate: 0.5, mono: true}
+  bass:    {program: 38, channel: 2, volume: 92,  pan: 0,   range: [E2, E3], gate: 0.8}
+  xylo:    {program: 13, channel: 3, volume: 70,  pan: 18,  range: [B5, E6], gate: 0.6}
+  trumpet: {program: 56, channel: 4, volume: 104, pan: 4,   range: [C5, E5], gate: 0.92}
+  horn:    {program: 60, channel: 5, volume: 88,  pan: -14, range: [G3, B3], gate: 0.94}
+  kit:     {program: 0,  channel: 6, volume: 62,  pan: 12,  role: drums, kit: {hat: 42, crash: 57}}
+
+grooves:
+  load:
+    hat:   "x.o.x.o.x.o.|............"
+    crash: "............|....x......."
+
+sections:
+  sting:
+    bars: 2
+    parts:
+      # bar 1: Em (data); bar 2: C (one beat), D (one beat), E major
+      data:    "E5:1 B5:1 E6:1 B5:1 G5:1 D6:1 G6:1 D6:1 A5:1 E6:1 A6:1 E6:1 | C6:1 E6:1 D6:1 F#6:1 E6:1 G#6:1 B6:1 E7:1 r:4"
+      beeps:   "r:2 E6':1 r:1 D6':1 r:1 r:2 B5':1 r:1 E6':1 r:1 | r:8 E7':1 r:1 B6':1 r:1"
+      bass:    "E2:3 E2:1 G2:3 G2:1 A2:3 A2:1 | C3:4 D3:4 E2:4"
+      xylo:    "r:1 B5':1 r:2 r:1 D6':1 r:2 r:1 E6':1 r:2 | r:12"
+      trumpet: "r:12 | C5:4 D5:4 E5:4"
+      horn:    "r:12 | G3:4 A3:4 G#3:4"
+      kit:     load
+
+arrangement: [sting]
