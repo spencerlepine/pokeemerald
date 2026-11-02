@@ -382,8 +382,8 @@ graphics/pokenav/condition/pokeball.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Pok
 graphics/pokenav/condition/pokeball_placeholder.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Poké Ball icon → CAPTURE POD icon.,,,,,,Replace by hand; no generator tool.
 graphics/pokenav/condition/search_results.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/pokenav/condition/sparkle.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
-graphics/pokenav/device_outline.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,PokéNav device outline → comlink.,,,,,,Replace by hand; no generator tool.
-graphics/pokenav/header.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Baked-in text POKéNAV / POKéMON NAVIGATOR → COMLINK.,,,,,,Replace by hand; no generator tool.
+graphics/pokenav/device_outline.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,PokéNav device outline → StarNAV.,,,,,,Replace by hand; no generator tool.
+graphics/pokenav/header.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Baked-in text POKéNAV / POKéMON NAVIGATOR → StarNAV / STAR NAVIGATOR.,,,,,,Replace by hand; no generator tool.
 graphics/pokenav/left_headers/beauty.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/pokenav/left_headers/condition.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/pokenav/left_headers/cool.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
@@ -397,13 +397,13 @@ graphics/pokenav/left_headers/search.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene
 graphics/pokenav/left_headers/smart.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/pokenav/left_headers/tough.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/pokenav/list_arrows.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
-graphics/pokenav/match_call/nav_icon.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,PokéNav device icon → comlink.,,,,,,Replace by hand; no generator tool.
+graphics/pokenav/match_call/nav_icon.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,PokéNav device icon → StarNAV.,,,,,,Replace by hand; no generator tool.
 graphics/pokenav/match_call/options_cursor.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/pokenav/match_call/pokeball.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Poké Ball icon → CAPTURE POD icon.,,,,,,Replace by hand; no generator tool.
 graphics/pokenav/match_call/ui.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/pokenav/match_call/window.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/pokenav/message.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
-graphics/pokenav/nav_icon.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,PokéNav device icon → comlink.,,,,,,Replace by hand; no generator tool.
+graphics/pokenav/nav_icon.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,PokéNav device icon → StarNAV.,,,,,,Replace by hand; no generator tool.
 graphics/pokenav/options/beauty.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/pokenav/options/cancel.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/pokenav/options/condition.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,

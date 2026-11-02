@@ -133,7 +133,7 @@ audio:MUS_OBTAIN_B_POINTS,MUS_OBTAIN_ARENA_POINTS,HOTSWAP,DRAFT,PENDING_AUDIO,3,
 audio:MUS_OBTAIN_ITEM,MUS_OBTAIN_ITEM,HOTSWAP,DRAFT,PENDING_AUDIO,1,Got an item: short heroic sting (heard constantly).,,,,
 audio:MUS_OBTAIN_SYMBOL,MUS_OBTAIN_HUNTER_MARK,HOTSWAP,DRAFT,PENDING_AUDIO,3,Earned an Arena Boss symbol (bounty hunter mark).,,,,
 audio:MUS_OBTAIN_TMHM,MUS_OBTAIN_DATADISK,HOTSWAP,DRAFT,PENDING_AUDIO,1,"Got a technique disk (TM/HM): techy, data-chirp flavoured sting.",,,,
-audio:MUS_REGISTER_MATCH_CALL,MUS_COMLINK_REGISTER,HOTSWAP,DRAFT,PENDING_AUDIO,2,New comlink contact: chirpy two-note comms sting.,,,,
+audio:MUS_REGISTER_MATCH_CALL,MUS_COMLINK_REGISTER,HOTSWAP,DRAFT,PENDING_AUDIO,2,New StarNAV contact: chirpy two-note comms sting.,,,,
 audio:MUS_RG_DEX_RATING,,CUT,DRAFT,NO_AUDIO,,Ghost: not in the Star Wars game.,,,,Only listed in sFanfares; FANFARE_RG_* is never played in Emerald. Delete the .mid and point its song-table slot at mus_dummy so later song ids keep their numbers.
 audio:MUS_RG_OBTAIN_KEY_ITEM,,CUT,DRAFT,NO_AUDIO,,Ghost: not in the Star Wars game.,,,,Only listed in sFanfares; FANFARE_RG_* is never played in Emerald. Delete the .mid and point its song-table slot at mus_dummy so later song ids keep their numbers.
 audio:MUS_RG_POKE_FLUTE,,CUT,DRAFT,NO_AUDIO,,Ghost: not in the Star Wars game.,,,,Only listed in sFanfares; FANFARE_RG_* is never played in Emerald. Delete the .mid and point its song-table slot at mus_dummy so later song ids keep their numbers.
@@ -479,10 +479,10 @@ audio:SE_PC_ON,SE_PC_ON,KEEP,DRAFT,KEEP_AUDIO,,Generic sound effect: reuse as is
 audio:SE_PIKE_CURTAIN_CLOSE,SE_PIKE_CURTAIN_CLOSE,KEEP,DRAFT,KEEP_AUDIO,,Generic sound effect: reuse as is.,,,,
 audio:SE_PIKE_CURTAIN_OPEN,SE_PIKE_CURTAIN_OPEN,KEEP,DRAFT,KEEP_AUDIO,,Generic sound effect: reuse as is.,,,,
 audio:SE_PIN,SE_PIN,KEEP,DRAFT,KEEP_AUDIO,,Generic sound effect: reuse as is.,,,,
-audio:SE_POKENAV_CALL,SE_COMLINK_CALL,HOTSWAP,DRAFT,PENDING_AUDIO,2,Incoming comlink call: classic comms beep.,,,,
-audio:SE_POKENAV_HANG_UP,SE_COMLINK_HANG_UP,HOTSWAP,DRAFT,PENDING_AUDIO,2,Comlink call ends: static click.,,,,
-audio:SE_POKENAV_OFF,SE_COMLINK_OFF,HOTSWAP,DRAFT,PENDING_AUDIO,2,Comlink closes.,,,,
-audio:SE_POKENAV_ON,SE_COMLINK_ON,HOTSWAP,DRAFT,PENDING_AUDIO,2,Comlink opens: chirpy power-up.,,,,
+audio:SE_POKENAV_CALL,SE_COMLINK_CALL,HOTSWAP,DRAFT,PENDING_AUDIO,2,Incoming StarNAV call: classic comms beep.,,,,
+audio:SE_POKENAV_HANG_UP,SE_COMLINK_HANG_UP,HOTSWAP,DRAFT,PENDING_AUDIO,2,StarNAV call ends: static click.,,,,
+audio:SE_POKENAV_OFF,SE_COMLINK_OFF,HOTSWAP,DRAFT,PENDING_AUDIO,2,StarNAV closes.,,,,
+audio:SE_POKENAV_ON,SE_COMLINK_ON,HOTSWAP,DRAFT,PENDING_AUDIO,2,StarNAV opens: chirpy power-up.,,,,
 audio:SE_PUDDLE,SE_PUDDLE,KEEP,DRAFT,KEEP_AUDIO,,Generic sound effect: reuse as is.,,,,
 audio:SE_RAIN,SE_RAIN,KEEP,DRAFT,KEEP_AUDIO,,Generic sound effect: reuse as is.,,,,
 audio:SE_RAIN_STOP,SE_RAIN_STOP,KEEP,DRAFT,KEEP_AUDIO,,Generic sound effect: reuse as is.,,,,

@@ -175,7 +175,7 @@ Route111_Text_BeckyDefeat,I came up short…$,"reviewed, no change needed"
 Route111_Text_BeckyPostBattle,"If they can find fossils in the desert,\nit must have been a sea before.$","reviewed, no change needed"
 Route111_Text_DustyIntro,For thirty years I have searched for\nancient ruins!\lI am to be challenged?$,"reviewed, no change needed"
 Route111_Text_DustyPostBattle,"For thirty years I have searched for\nancient ruins!\pNo, wait, was that forty years?\nWhich was it now?$","reviewed, no change needed"
-Route111_Text_DustyRegister,"I haven't been searching for any\ntough COMPANION.\pBut, for some reason, I sure do like\nCOMLINKS.$",reviewed AUTO draft
+Route111_Text_DustyRegister,"I haven't been searching for any\ntough COMPANION.\pBut, for some reason, I sure do like\nStarNAVs.$",reviewed AUTO draft
 Route111_Text_DustyRematchIntro,"For thirty years I have searched for\nancient ruins!\pNo, wait, was that forty years?\nAnyway, am I to be challenged?$","reviewed, no change needed"
 Route111_Text_DustyRematchDefeat,"I've found no ruins, nor have I found\nany strong COMPANION…$",reviewed AUTO draft
 Route111_Text_DustyPostRematch,"For thirty years I have searched for\nancient ruins!\pNo, wait, was that forty years\nI've searched?\pHmm… It could even be fifty…\nHow long have I been at this?$","reviewed, no change needed"
@@ -229,7 +229,7 @@ Route112_Text_BricePostBattle,Hahahahaha! Something flew up my nose!\nHahahaha-h
 Route112_Text_TrentIntro,"My legs are solid from hauling ore\nup and down the canyons.\pThey're not going to buckle easily,\nfriend!$",trainer recast 2026-11-01 (bible/RECAST.md)
 Route112_Text_TrentDefeat,Ouch! My legs cramped up!$,"reviewed, no change needed"
 Route112_Text_TrentPostBattle,"Try hiking, and I mean really\npounding, on these mountain trails\lwith a heavy pack weighing dozens of\lpounds.\pThat, my friend, will get your body\ninto serious shape.$","reviewed, no change needed"
-Route112_Text_TrentRegister,"Ow, my legs have cramped up.\nCan you grab me some bandages from\lmy backpack?\pNo, that's my COMLINK!\nOh, fine, I'll register you.$",reviewed AUTO draft
+Route112_Text_TrentRegister,"Ow, my legs have cramped up.\nCan you grab me some bandages from\lmy backpack?\pNo, that's my StarNAV!\nOh, fine, I'll register you.$",reviewed AUTO draft
 Route112_Text_TrentRematchIntro,"I've been keeping fit hauling ore.\nPower, I have in spades!$",trainer recast 2026-11-01 (bible/RECAST.md)
 Route112_Text_TrentRematchDefeat,I got trumped in power?$,"reviewed, no change needed"
 Route112_Text_TrentRematchPostBattle,I hear there are some seriously tough\nTRAINERS on top of MUSTAFAR PEAK.\pI intend to get up there and give them\na challenge!$,reviewed AUTO draft
@@ -253,14 +253,14 @@ Route113_Text_DillonPostBattle,"Ouch! Owww! I can't see!\nI got ashes in my eyel
 Route113_Text_MadelineIntro,"I use this parasol to ward off this\nfilthy, yucky volcanic ash from\lmy dear BANTHACALF.$",reviewed AUTO draft
 Route113_Text_MadelineDefeat,"Huff, huff…\nI am exhausted…$","reviewed, no change needed"
 Route113_Text_MadelinePostBattle,You're very good at this.\nI must say I'm impressed!$,"reviewed, no change needed"
-Route113_Text_MadelineRegister,"Here, slide under my parasol.\nLet me register you in my COMLINK.$",reviewed AUTO draft
+Route113_Text_MadelineRegister,"Here, slide under my parasol.\nLet me register you in my StarNAV.$",reviewed AUTO draft
 Route113_Text_MadelineRematchIntro,"Oh, hello, hasn't it been a while?\nMay I invite you to battle?$","reviewed, no change needed"
 Route113_Text_MadelineRematchDefeat,"Oh, how super!$","reviewed, no change needed"
 Route113_Text_MadelinePostRematch,You've remained very good at this.\nI must say I'm impressed!$,"reviewed, no change needed"
 Route113_Text_LaoIntro,Yub yub!\p(From out of the ashes I leap!\nI challenge thee!)$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route113_Text_LaoDefeat,Ee chee wa maa!\p(With honor I admit defeat!)$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route113_Text_LaoPostBattle,I must refine the art of concealment.\nI bid thee farewell.$,"reviewed, no change needed"
-Route113_Text_LaoRegister,Yiiyaah! Witness the ancient ninja\ntechnique of COMLINK registration!$,reviewed AUTO draft
+Route113_Text_LaoRegister,Yiiyaah! Witness the ancient ninja\ntechnique of StarNAV registration!$,reviewed AUTO draft
 Route113_Text_LaoRematchIntro,Yub yub!\p(From out of the ashes I leap!\nI challenge thee!)$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route113_Text_LaoRematchDefeat,Ee chee wa maa!\p(With honor I admit defeat!)$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route113_Text_LaoPostRematch,My flawless concealment was let down\nby my immature battle skills…\pI bid thee farewell.$,"reviewed, no change needed"

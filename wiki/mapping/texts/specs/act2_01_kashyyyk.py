@@ -48,7 +48,7 @@ FIX = {
 "GraniteCave_StevensRoom_Text_ImStevenLetterForMe": r"My name is LEIA.\pI'm surveying rare crystals,\nso I travel here and there.\pOh?\nA MESSAGE DISC for me?$",
 "GraniteCave_StevensRoom_Text_ThankYouTakeThis": [("You went through all this trouble to\ndeliver that. I need to thank you.", "You went through all this trouble to\ndeliver that. My father thanks you, too.")],
 "GraniteCave_StevensRoom_Text_CouldBecomeChampionLetsRegister": [("If you keep training, you could even\nbecome the CHAMPION of the ILUM\lTEMPLE one day. That's what I think.", "If you keep training, you could even\npass the TRIALS OF ILUM one day.\lThat's what I think.")],
-"Route104_Text_DadPokenavCall": [("I just heard from HOUSE ORGANA's SEN. ORGANA\nabout your COMLINK,", "I just heard from SENATOR ORGANA\nabout your COMLINK,")],
+"Route104_Text_DadPokenavCall": [("I just heard from HOUSE ORGANA's SEN. ORGANA\nabout your StarNAV,", "I just heard from SENATOR ORGANA\nabout your StarNAV,")],
 "Route106_Text_TrainerTips": [("Advice on catching COMPANIONS with a ROD:", "Catching COMPANIONS with a ROD:")],
 # Route 109 and the Seashore House
 "Route109_Text_LittleKidsDartAround": [("Mine are with my COMPANION, so they", "Mine are with my COMPANIONS, so they")],

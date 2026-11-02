@@ -141,7 +141,7 @@ FortreeCity_Gym_Text_DariusPostBattle,"Sure, you beat me all right.\nBut you'd b
 FortreeCity_Gym_Text_ReceivedFeatherBadge,{PLAYER} received the CANOPY SHARD\nfrom CHIRPA.$,reviewed AUTO draft
 FortreeCity_Gym_Text_ExplainFeatherBadgeTakeThis,"With the CANOPY SHARD, all COMPANIONS\nup to LV 70, even those received\lthrough trades, will obey your every\lcommand.\pYou will also be able to use\nthe HM move FLY outside of battle.\pAnd this…\nThis is a gift from me.$",reviewed AUTO draft
 FortreeCity_Gym_Text_ExplainAerialAce,TM40 contains AERIAL ACE.\pIts speed…\nNo COMPANION should be able to avoid it.\p… … … … … …$,reviewed AUTO draft
-FortreeCity_Gym_Text_RegisteredWinona,Registered ARENA LEADER CHIRPA\nin the COMLINK.$,reviewed AUTO draft
+FortreeCity_Gym_Text_RegisteredWinona,Registered ARENA LEADER CHIRPA\nin the StarNAV.$,reviewed AUTO draft
 FortreeCity_Gym_Text_GymStatue,BRIGHT TREE ARENA$,reviewed AUTO draft
 FortreeCity_Gym_Text_GymStatueCertified,BRIGHT TREE ARENA\pCHIRPA'S CERTIFIED TRAINERS:\n{PLAYER}$,reviewed AUTO draft
 FortreeCity_Gym_Text_WinonaRematchDefeat,I failed to reach your height again…$,"reviewed, no change needed"
@@ -164,7 +164,7 @@ FortreeCity_House5_Text_Zigzagoon,SCURRIER: Bufuu!$,reviewed AUTO draft
 FortreeCity_Mart_Text_SuperRepelBetter,"REPULSOR II lasts a long time,\nand it gets the job done.\pIt's much better than an ordinary\nREPULSOR.$",reviewed AUTO draft
 FortreeCity_Mart_Text_StockUpOnItems,I always stock up on more items than\nI'm sure I'll need.\pYou never know what might happen.\nBetter to be safe than sorry!$,"reviewed, no change needed"
 FortreeCity_PokemonCenter_1F_Text_RecordCornerIsNeat,"Have you done anything at\nthe RECORD CORNER?\pIt's pretty neat. It mixes and matches\nthe records of TRAINERS.\pI don't know quite how it works,\nbut it's cool. It's exciting, even!$","reviewed, no change needed"
-FortreeCity_PokemonCenter_1F_Text_DoYouKnowAboutPokenav,"Oh, wow, you have a COMLINK!\nAnd it's just like mine!\pDo you know about COMLINK's\nMATCH CALL system?\pAccess it, and you can chat with\nregistered TRAINERS anytime.\pIt also shows you which TRAINERS\nwant a rematch with you.\pIt's really nifty! Those HOUSE ORGANA\nguys sure know what they're doing!$",reviewed AUTO draft
+FortreeCity_PokemonCenter_1F_Text_DoYouKnowAboutPokenav,"Oh, wow, you have a StarNAV!\nAnd it's just like mine!\pDo you know about StarNAV's\nMATCH CALL system?\pAccess it, and you can chat with\nregistered TRAINERS anytime.\pIt also shows you which TRAINERS\nwant a rematch with you.\pIt's really nifty! Those HOUSE ORGANA\nguys sure know what they're doing!$",reviewed AUTO draft
 Route118_Text_YouAgreeGoodRodIsGood,Hmm!\nA GOOD ROD is really good!\pWouldn't you agree?$,"reviewed, no change needed"
 Route118_Text_IdenticalMindsTakeThis,Hmm!\nWe're of identical minds!\pHmm!\nTake this GOOD ROD!$,"reviewed, no change needed"
 Route118_Text_TryYourLuckFishing,"Wherever there's water, try your luck\nat fishing.$","reviewed, no change needed"
@@ -212,7 +212,7 @@ Route123_Text_BerryMastersHouse,FRUIT MASTER'S HOUSE$,reviewed AUTO draft
 AncientTomb_Braille_ShineInTheMiddle,"THOSE WHO\nINHERIT OUR\nWILL, SHINE\nIN THE MIDDLE.$","reviewed, no change needed"
 Route118_Text_RoseIntro,The aroma of flowers has a magical\npower. It cleanses us body and soul.$,"reviewed, no change needed"
 Route118_Text_RoseDefeat,"Oh, dear me.\nI seem to have lost.$","reviewed, no change needed"
-Route118_Text_RoseRegister,Sniff… That odor--it's a COMLINK!\nWe must register each other!$,reviewed AUTO draft
+Route118_Text_RoseRegister,Sniff… That odor--it's a StarNAV!\nWe must register each other!$,reviewed AUTO draft
 Route118_Text_RoseRematchIntro,Were you drawn here by the sweet\naroma?$,"reviewed, no change needed"
 Route118_Text_RoseRematchDefeat,The power of aroma…\nIt didn't seem to do much.$,"reviewed, no change needed"
 Route118_Text_PerryIntro,BIRD COMPANIONS that FLY elegantly in\nthe sky… They're the best!$,reviewed AUTO draft
@@ -260,7 +260,7 @@ Route119_Text_JacksonRematchDefeat,You've remained strong!$,"reviewed, no change
 Route119_Text_CatherineIntro,"Oh? Look at you.\pFor someone on an adventure,\nyou're traveling awfully light.$","reviewed, no change needed"
 Route119_Text_CatherineDefeat,Accidents happen when you're not\nprepared!$,"reviewed, no change needed"
 Route119_Text_CatherinePostBattle,"You're traveling light but you have\neverything you need.\pYou're on top of things mentally and\nphysically, too.$","reviewed, no change needed"
-Route119_Text_CatherineRegister,"Do you have a COMLINK?\nIt's a must-have tool for any TRAINER.\pOh, you do have one!\nLet's register each other, then!$",reviewed AUTO draft
+Route119_Text_CatherineRegister,"Do you have a StarNAV?\nIt's a must-have tool for any TRAINER.\pOh, you do have one!\nLet's register each other, then!$",reviewed AUTO draft
 Route119_Text_CatherineRematchDefeat,I'm still missing something…$,"reviewed, no change needed"
 Route119_Text_HughIntro,The vast sky holds untold promise!\pNothing can compare to the sheer\nexhilaration of flight!$,"reviewed, no change needed"
 Route119_Text_HughDefeat,Down and out!$,"reviewed, no change needed"
@@ -293,7 +293,7 @@ Route120_Text_ColinPostBattle,"The move FLY is convenient,\ndon't you think?\pWh
 Route120_Text_RobertIntro,My COMPANION is strong!\nHow about yours?$,reviewed AUTO draft
 Route120_Text_RobertDefeat,Your COMPANIONS were stronger…$,reviewed AUTO draft
 Route120_Text_RobertPostBattle,A COMPANION that grows steadily is one\nyou can count on.$,reviewed AUTO draft
-Route120_Text_RobertRegister,You can be counted on to get better.\nI'd like to register you in my COMLINK!$,reviewed AUTO draft
+Route120_Text_RobertRegister,You can be counted on to get better.\nI'd like to register you in my StarNAV!$,reviewed AUTO draft
 Route120_Text_RobertRematchIntro,A COMPANION that grows steadily is one\nyou can count on.$,reviewed AUTO draft
 Route120_Text_RobertRematchDefeat,Your COMPANIONS are seriously strong.$,reviewed AUTO draft
 Route120_Text_RobertPostRematch,"My COMPANIONS are growing stronger.\nI have to grow stronger, too.$",reviewed AUTO draft
@@ -303,7 +303,7 @@ Route120_Text_JennaDefeat,"I'm totally fit, but…$","reviewed, no change needed
 Route120_Text_JeffreyIntro,… … … … … …\nLOGRAY shakes his bone staff.\p“Yub nub?”\n(Want to battle?)$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route120_Text_JeffreyDefeat,Ee chee wa maa…\p(Lost it…)$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route120_Text_JeffreyPostBattle,… … … … … …\n… … … … … …\lI'll try harder…$,"reviewed, no change needed"
-Route120_Text_JeffreyRegister,… … … … … …\n… … … … … …\lDo you have a COMLINK…?$,reviewed AUTO draft
+Route120_Text_JeffreyRegister,… … … … … …\n… … … … … …\lDo you have a StarNAV…?$,reviewed AUTO draft
 Route120_Text_JeffreyRematchIntro,… … … … … …\nLOGRAY shakes his bone staff.\p“Yub nub?”\n(Want to battle again?)$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route120_Text_JeffreyRematchDefeat,… … … … … …\n(I lost again…)$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route120_Text_JenniferIntro,"COMPANIONS have many special abilities.\nIf you want to become a first-class\lTRAINER, learn about them.$",reviewed AUTO draft
@@ -348,7 +348,7 @@ Route121_Text_JessicaRematchDefeat,"Oh, how dare you!\nYou still won't take it e
 Route121_Text_CristinIntro,I have this routine.\nDefeat five TRAINERS a day.\lGuess what? You're number five!$,"reviewed, no change needed"
 Route121_Text_CristinDefeat,No!\nYou're horrid!$,"reviewed, no change needed"
 Route121_Text_CristinPostBattle,I didn't expect to lose this easily…\nI'll win next time!$,"reviewed, no change needed"
-Route121_Text_CristinRegister,That was total humiliation!\nI won't forget you…\lHand over your COMLINK!$,reviewed AUTO draft
+Route121_Text_CristinRegister,That was total humiliation!\nI won't forget you…\lHand over your StarNAV!$,reviewed AUTO draft
 Route121_Text_CristinRematchIntro,I have this new routine.\nDefeat ten TRAINERS a day.\lGuess what? You're number ten!$,"reviewed, no change needed"
 Route121_Text_CristinRematchDefeat,Wait! That's nasty!\nI demand a rematch!$,"reviewed, no change needed"
 Route121_Text_CristinPostRematch,An opponent I just can't beat…\nSnivel…\lI can't believe this is happening…$,"reviewed, no change needed"
@@ -372,7 +372,7 @@ Route123_Text_VioletPostBattle,The FRUIT MASTER's garden is filled\nwith uplifti
 Route123_Text_CameronIntro,Being a psychic is about willpower.\pI've willed myself not to lose to\nanyone. That makes me strong!$,"reviewed, no change needed"
 Route123_Text_CameronDefeat,I feel sad…$,"reviewed, no change needed"
 Route123_Text_CameronPostBattle,Being a psychic is about willpower.\nI thought I wouldn't lose to you…$,"reviewed, no change needed"
-Route123_Text_CameronRegister,"I sense it!\nYou and I shall battle again!\lI can't tell if I'll win, though…\pLet's see your COMLINK.$",reviewed AUTO draft
+Route123_Text_CameronRegister,"I sense it!\nYou and I shall battle again!\lI can't tell if I'll win, though…\pLet's see your StarNAV.$",reviewed AUTO draft
 Route123_Text_CameronRematchIntro,I've convinced myself that I won't\nlose anymore. That makes me strong!$,"reviewed, no change needed"
 Route123_Text_CameronRematchDefeat,I feel sad…$,"reviewed, no change needed"
 Route123_Text_CameronPostRematch,I should train at JEDHA TEMPLE…\nI'll never beat you this way…$,reviewed AUTO draft

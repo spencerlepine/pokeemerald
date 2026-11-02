@@ -41,8 +41,8 @@ DewfordTown_PokemonCenter_1F_Text_StoneCavern,There's a cave system at the edge\
 GraniteCave_1F_Text_GetsDarkAheadHereYouGo,"Hey, you.\nIt gets awfully dark ahead.\lIt'll be tough trying to explore.\pThat guy who came by earlier…\nLEIA, I think it was.\pShe knew how to use FLASH, so she\nought to be all right, but…\pFor us PROSPECTORS, helping out\nthose we meet is our motto.\pHere you go, I'll pass this on to you.$",
 GraniteCave_StevensRoom_Text_ImStevenLetterForMe,"My name is LEIA.\pI'm surveying rare crystals,\nso I travel here and there.\pOh?\nA MESSAGE DISC for me?$",Leia is surveying kyber for the Rebellion; 'rare stones' -> crystals
 GraniteCave_StevensRoom_Text_ThankYouTakeThis,"LEIA: Okay, thank you.\pYou went through all this trouble to\ndeliver that. My father thanks you, too.\pLet me see…\nI'll give you this TM.\pIt contains my favorite move,\nSTEEL WING.$",
-GraniteCave_StevensRoom_Text_CouldBecomeChampionLetsRegister,"LEIA: Your COMPANIONS appear quite\ncapable.\pIf you keep training, you could even\npass the TRIALS OF ILUM one day.\lThat's what I think.\pI know, since we've gotten to know each\nother, let's register one another in\lour COMLINKS.\p… … … … … …$",
-Route104_Text_DadPokenavCall,"… … … … … …\n… … … … … Beep!\pDAD: Oh, {PLAYER}?\p… … … … … …\nWhere are you now?\lIt sounds windy wherever you are.\pI just heard from SENATOR ORGANA\nabout your COMLINK, so I decided\lto give you a call.\pIt sounds like you're doing fine,\nso that's fine with me.\pYou take care now.\p… … … … … …\n… … … … … Click!$",
+GraniteCave_StevensRoom_Text_CouldBecomeChampionLetsRegister,"LEIA: Your COMPANIONS appear quite\ncapable.\pIf you keep training, you could even\npass the TRIALS OF ILUM one day.\lThat's what I think.\pI know, since we've gotten to know each\nother, let's register one another in\lour StarNAVs.\p… … … … … …$",
+Route104_Text_DadPokenavCall,"… … … … … …\n… … … … … Beep!\pDAD: Oh, {PLAYER}?\p… … … … … …\nWhere are you now?\lIt sounds windy wherever you are.\pI just heard from SENATOR ORGANA\nabout your StarNAV, so I decided\lto give you a call.\pIt sounds like you're doing fine,\nso that's fine with me.\pYou take care now.\p… … … … … …\n… … … … … Click!$",
 Route106_Text_TrainerTips,TRAINER TIPS\pCatching COMPANIONS with a ROD:\nPress the A Button if you get a bite.$,
 Route109_Text_LittleKidsDartAround,"Little kids can dart around so quickly…\pYou don't dare take your eyes off them\nfor an instant. It's very taxing.\pMine are with my COMPANIONS, so they\nshould be okay, but…$",
 Route109_Text_ZigzagoonPicksUpLitter,"The water around these parts is clean.\pBut, I get my SCURRIER to pick up\nlitter from the shoreline at times.\pDirty water becomes rain and joins our\nrivers, which we drink from…\pIf we pollute the water, it all comes\nback to haunt us eventually.$",
@@ -88,7 +88,7 @@ DewfordTown_Gym_Text_CristianPostBattle,You win!\nGo after that SHARD!$,reviewed
 DewfordTown_Gym_Text_ReceivedKnuckleBadge,{PLAYER} received the WROSHYR SHARD\nfrom TARFFUL.$,reviewed AUTO draft
 DewfordTown_Gym_Text_KnuckleBadgeInfoTakeThis,"The WROSHYR SHARD makes all\nCOMPANIONS up to Level 30, even those\lyou get in trades, obey without\lquestion.\pAnd, you'll be able to use the HM move\nFLASH outside of battle.\pIf you'd like, use this TECHNICAL\nMACHINE, too.$",reviewed AUTO draft
 DewfordTown_Gym_Text_ExplainBulkUp,That TM08 contains BULK UP.\pIt's a move that raises both ATTACK\nand DEFENSE stats.\p… … … … … …$,"reviewed, no change needed"
-DewfordTown_Gym_Text_RegisteredBrawly,Registered ARENA LEADER TARFFUL\nin the COMLINK.$,reviewed AUTO draft
+DewfordTown_Gym_Text_RegisteredBrawly,Registered ARENA LEADER TARFFUL\nin the StarNAV.$,reviewed AUTO draft
 DewfordTown_Gym_Text_GymStatue,KACHIRHO ARENA$,reviewed AUTO draft
 DewfordTown_Gym_Text_GymStatueCertified,KACHIRHO ARENA\pTARFFUL'S CERTIFIED TRAINERS:\n{PLAYER}$,reviewed AUTO draft
 DewfordTown_Hall_Text_CantImagineLifeWithoutTrend,"What's in vogue? Why, it has to be\n“{STR_VAR_1}”!\pI can't imagine what life would be like\nwithout “{STR_VAR_1}”!$","reviewed, no change needed"
@@ -118,10 +118,10 @@ DewfordTown_House2_Text_NoRoom,"Oh, you don't have room?\pNow, listen tight, thi
 DewfordTown_House2_Text_ExplainSilkScarf,The SILK SCARF raises the power of\nNORMAL-type moves.\pIt's a marvelous SCARF that will go\nwith almost all COMPANIONS!$,reviewed AUTO draft
 DewfordTown_PokemonCenter_1F_Text_FaintedMonCanUseHM,"Even if a COMPANION faints and can't\nbattle, it can still use a move learned\lfrom a HIDDEN MACHINE (HM).$",reviewed AUTO draft
 GraniteCave_1F_Text_ExplainFlash,"Teach that hidden move FLASH to\na COMPANION and use it.\pIt lights up even the inky darkness\nof caves.\pBut, to use it, you need the ARENA SHARD\nfrom KACHIRHO's ARENA.$",reviewed AUTO draft
-GraniteCave_StevensRoom_Text_RegisteredSteven,Registered LEIA\nin the COMLINK.$,reviewed AUTO draft
+GraniteCave_StevensRoom_Text_RegisteredSteven,Registered LEIA\nin the StarNAV.$,reviewed AUTO draft
 GraniteCave_StevensRoom_Text_IveGotToHurryAlong,"Now, I've got to hurry along.$","reviewed, no change needed"
 GraniteCave_StevensRoom_Text_OhBagIsFull,"Oh, your BAG is full…\nThat's too bad, then.$","reviewed, no change needed"
-Route104_Text_RegisteredDadInPokenav,Registered DAD DORAN\nin the COMLINK.$,reviewed AUTO draft
+Route104_Text_RegisteredDadInPokenav,Registered DAD DORAN\nin the StarNAV.$,reviewed AUTO draft
 Route109_Text_ChillAtMyPapasSpot,"Yo, TRAINERS!\nWhether you're hot to trot,\lor cool cat not,\lchill at my papa's spot!$","reviewed, no change needed"
 Route109_Text_SandCastleTakingLongTime,Our sand castle's taking a long time\nto make.$,"reviewed, no change needed"
 Route109_Text_YouCanHaveThis,You can have this!$,"reviewed, no change needed"
@@ -158,7 +158,7 @@ Route105_Text_ImaniPostBattle,I want to be told I'm relaxing to be\nwith. Giggle
 Route105_Text_AndresIntro,I'm convinced that the sea keeps\nsecrets from us.$,"reviewed, no change needed"
 Route105_Text_AndresDefeated,Yes…\nI am no good at battling…$,"reviewed, no change needed"
 Route105_Text_AndresPostBattle,I'm sure there are many secrets to be\ndiscovered in the world's seas.\pI mean to find them all!$,"reviewed, no change needed"
-Route105_Text_AndresRegister,"Huh? I'm so weak, but you're willing\nto register me in your COMLINK?$",reviewed AUTO draft
+Route105_Text_AndresRegister,"Huh? I'm so weak, but you're willing\nto register me in your StarNAV?$",reviewed AUTO draft
 Route105_Text_AndresRematchIntro,I've told you that I'm weak…\nAre you sure you want to do this?$,"reviewed, no change needed"
 Route105_Text_AndresRematchDefeated,Yes…\nI didn't think I could win.$,"reviewed, no change needed"
 Route105_Text_AndresRematchPostBattle,"I may be weak at battling, but my\ndrive to explore can't be bested.\pI will travel the seas all around\nthe world!$","reviewed, no change needed"
@@ -222,7 +222,7 @@ Route108_Text_MissyPostBattle,Work off your stress by swimming!\nIt's so healthy
 Route108_Text_CoryIntro,"I love WATER-type COMPANIONS.\nI love other COMPANIONS, too!$",reviewed AUTO draft
 Route108_Text_CoryDefeated,Waaah! I lost!\nWaaah! Waaah!$,"reviewed, no change needed"
 Route108_Text_CoryPostBattle,Shouting is good for me!\nIt uplifts me!$,"reviewed, no change needed"
-Route108_Text_CoryRegister,"I love tough TRAINERS, too!\nRegister me in your COMLINK!$",reviewed AUTO draft
+Route108_Text_CoryRegister,"I love tough TRAINERS, too!\nRegister me in your StarNAV!$",reviewed AUTO draft
 Route108_Text_CoryRematchIntro,"Win or lose, I love battling at sea!$","reviewed, no change needed"
 Route108_Text_CoryRematchDefeated,Waaah! I lost again!\nWaaah! Waaah!$,"reviewed, no change needed"
 Route108_Text_CoryRematchPostBattle,"If you're faced with a challenge,\ntry shouting at the sea!$","reviewed, no change needed"

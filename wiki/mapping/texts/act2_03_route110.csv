@@ -56,8 +56,8 @@ Route110_Text_TrainerTipsRegisterItems,TRAINER TIPS\pThe items in the BAG can be
 Route110_Text_BestRecord,THE BEST RECORD TO DATE…\pNo. of collisions: {STR_VAR_1}\pElapsed time: {STR_VAR_2}$,"reviewed, no change needed"
 Route110_Text_ThereIsNoRecord,THE BEST RECORD TO DATE…\pNo one seems to have taken the\nchallenge. There is no record…$,"reviewed, no change needed"
 Route110_Text_ImagineSeeingYouHere,"PROF. KORR: Oh, {PLAYER}{KUN}!\nImagine seeing you here!\pAnd where might my {RIVAL} be?$",reviewed AUTO draft
-Route110_Text_HeardYouInstallMatchCall,"Oh, I see!\nYou two are running separately.\lWell, that's fine.\pOh, yes, I heard that your COMLINK\nhad the MATCH CALL system installed.\pWell, then, I should register you in\nmy COMLINK as well.\pThat way, even when we're apart,\nI can rate your DATAPAD anytime.\p… … … … … …$",reviewed AUTO draft
-Route110_Text_RegisteredBirchInPokenav,Registered PROF. KORR\nin the COMLINK.$,reviewed AUTO draft
+Route110_Text_HeardYouInstallMatchCall,"Oh, I see!\nYou two are running separately.\lWell, that's fine.\pOh, yes, I heard that your StarNAV\nhad the MATCH CALL system installed.\pWell, then, I should register you in\nmy StarNAV as well.\pThat way, even when we're apart,\nI can rate your DATAPAD anytime.\p… … … … … …$",reviewed AUTO draft
+Route110_Text_RegisteredBirchInPokenav,Registered PROF. KORR\nin the StarNAV.$,reviewed AUTO draft
 Route110_Text_KeepAnEyeOutForRival,"PROF. KORR: {PLAYER}{KUN}…\pPlease keep an eye out for my {RIVAL}.\n… … … … … …\pWell, I had better get going.\nSee you again, {PLAYER}{KUN}!$",reviewed AUTO draft
 Route110_TrickHouseEnd_Text_YouveMadeItToMe,Aak!\nYou've made it to me?\lHmmm… You're sharp!$,"reviewed, no change needed"
 Route110_TrickHouseEnd_Text_AllNightToPlantTrees,"It took me all night to plant all those\ntrees…\pYou're almost my equal in greatness by\none, two, three, four, five, six places!$","reviewed, no change needed"

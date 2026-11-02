@@ -52,7 +52,7 @@ Full list: `mapping/glossary.csv`. The important ones:
 | POKéMON | COMPANION | Covers beasts and droids. Decided by the owner on 2026-10-31. |
 | POKé BALL | CAPTURE POD | Ball tiers become material tiers: DURASTEEL POD, BESKAR POD, KYBER POD. |
 | POKéDEX | DATAPAD | Companion entries are "databank" style. |
-| POKéNAV | COMLINK | Map, match call and news on one comlink. |
+| POKéNAV | StarNAV | STAR NAVIGATOR: map, match call and news on one device. |
 | POKéMON CENTER | BACTA CENTER | Healed by a 2-1B medical droid. |
 | POKé MART | SUPPLY DEPOT | |
 | GYM / GYM LEADER | ARENA / ARENA LEADER | |
@@ -104,7 +104,7 @@ ship ride there (the way Mr. Briney's boat already works).
 |---|---|---|---|---|---|
 | Team Magma | **Galactic Empire** (Vader's task force) | **Darth Vader** (Maxie) | **General Veers** (Tabitha) | Stormtroopers (sandtroopers, snowtroopers by planet) | Awaken the land titan **GREATKRAYT** (Groudon) and bend its power to the Death Star project. |
 | Team Aqua | **Hutt Cartel** | **Jabba the Hutt** (Archie) | **Boba Fett** (Matt), **Bossk** (Shelly) | Cartel thugs (Gamorrean, Weequay, Nikto) | Awaken the sea titan **SANDO** (Kyogre) and hold whole worlds' ports to ransom. |
-| Devon Corp. | **House Organa** | **Senator Bail Organa** (Mr. Stone) | Organa engineers | | Alderaan's royal house; its engineers build the comlink, ORGANA SCOPE and ORGANA PARTS; quietly helps the Rebellion. |
+| Devon Corp. | **House Organa** | **Senator Bail Organa** (Mr. Stone) | Organa engineers | | Alderaan's royal house; its engineers build the StarNAV, ORGANA SCOPE and ORGANA PARTS; quietly helps the Rebellion. |
 | Pokémon League | **Ilum Temple** | **Obi-Wan Kenobi** (Champion) | the Four Trials | | The last test before the player is ready. |
 
 Both villains are humbled at the end of Act 6 when the **EXOGORTH**

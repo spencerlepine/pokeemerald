@@ -28,7 +28,7 @@ MtPyre_2F_Text_LeahPostBattle,Our family has been TRAINERS here\nsince my great-
 MtPyre_3F_Text_WilliamIntro,"The Force is strong in this holy\nplace. I have walked it for years.\pCome, child. Show me what guides\nyou.$",trainer recast 2026-11-01 (bible/RECAST.md)
 MtPyre_3F_Text_GabriellePostBattle,COMPANIONS no longer of this world.\nCOMPANIONS that are with you now.\pAnd the COMPANIONS you will meet\nin the future…\pThey are all to be equally cherished.\nPlease remember that.$,
 MtPyre_3F_Text_GabriellePostRematch,COMPANIONS no longer of this world.\nCOMPANIONS that are with you now.\pAnd the COMPANIONS you will meet\nin the future…\pThey are all to be equally cherished.\nI see that you've remembered that.$,
-MtPyre_3F_Text_GabrielleRegister,"I would like to see your COMPANIONS\nwhen they grow up some more…\pPlease, I need to see your COMLINK.$",
+MtPyre_3F_Text_GabrielleRegister,"I would like to see your COMPANIONS\nwhen they grow up some more…\pPlease, I need to see your StarNAV.$",
 MtPyre_6F_Text_ValeriePostBattle,Perhaps the power is from the spirits\nof COMPANIONS in fitful sleep here…$,
 MtPyre_6F_Text_ValeriePostRematch,"The COMPANIONS at rest here…\nSometimes, they play…$",
 MtPyre_Summit_Text_Grunt1Intro,No! Those EMPIRE goons got\nhere ahead of us!\pWe can't fall behind!$,
@@ -120,7 +120,7 @@ MtPyre_4F_Text_TashaDefeat,"Losing, I dislike…$","reviewed, no change needed"
 MtPyre_4F_Text_TashaPostBattle,I want to see dreadful things…\nI can't leave…\pStay…\nWon't you stay with me?$,"reviewed, no change needed"
 MtPyre_6F_Text_ValerieIntro,When I'm here…\nA curious power flows into me…$,"reviewed, no change needed"
 MtPyre_6F_Text_ValerieDefeat,The power is ebbing away…$,"reviewed, no change needed"
-MtPyre_6F_Text_ValerieRegister,"Fufufu… I lost the match, but…\nI have this little ability…\pWithout ever laying my hands on\nyour COMLINK… Hiyah!$",reviewed AUTO draft
+MtPyre_6F_Text_ValerieRegister,"Fufufu… I lost the match, but…\nI have this little ability…\pWithout ever laying my hands on\nyour StarNAV… Hiyah!$",reviewed AUTO draft
 MtPyre_6F_Text_ValerieRematchIntro,Behind you…\nWhat is it…$,"reviewed, no change needed"
 MtPyre_6F_Text_ValerieRematchDefeat,Something faded away…$,"reviewed, no change needed"
 MtPyre_6F_Text_CedricIntro,Have you lost your bearings?\nHave no fear for I am here!$,"reviewed, no change needed"

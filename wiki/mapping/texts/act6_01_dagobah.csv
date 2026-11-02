@@ -131,7 +131,7 @@ SootopolisCity_Text_KnowWhatsNeededToHelpHim,LEIA: I think you have what's\nneed
 SootopolisCity_Text_NeverBeenToSkyPillar,LEIA: The ASTEROID SPIRE…\pI've never been there.\nI wonder where it could be?$,reviewed AUTO draft
 SootopolisCity_Text_HaventYouScaledSkyPillar,OBI-WAN: Oh?\n{PLAYER}{KUN}?\pHaven't you scaled the ASTEROID SPIRE\nyet?\pI'm sure that you can make it to\nthe top of the ASTEROID SPIRE…$,reviewed AUTO draft
 SootopolisCity_Gym_1F_Text_ReceivedRainBadge,{PLAYER} received the SWAMP SHARD\nfrom YODA.$,reviewed AUTO draft
-SootopolisCity_Gym_1F_Text_RegisteredJuan,Registered ARENA LEADER YODA\nin the COMLINK.$,reviewed AUTO draft
+SootopolisCity_Gym_1F_Text_RegisteredJuan,Registered ARENA LEADER YODA\nin the StarNAV.$,reviewed AUTO draft
 SootopolisCity_Gym_1F_Text_GymStatue,DAGOBAH ARENA$,reviewed AUTO draft
 SootopolisCity_Gym_1F_Text_GymStatueCertified,DAGOBAH ARENA\pYODA'S CERTIFIED TRAINERS:\n{PLAYER}$,reviewed AUTO draft
 SootopolisCity_Gym_1F_Text_JuanRematchDefeat,"Ahahaha, you are the winner!\nYou have defeated me again!$","reviewed, no change needed"
@@ -270,7 +270,7 @@ Route127_Text_AthenaPostBattle,"When I'm surrounded by the blue sea\nand sky, it
 Route128_Text_IsaiahIntro,ILUM is still a long ways\naway…$,reviewed AUTO draft
 Route128_Text_IsaiahDefeat,"My first victory seems to be far\naway, too…$","reviewed, no change needed"
 Route128_Text_IsaiahPostBattle,"My whole life has been about losing,\nbut I will never give up!$","reviewed, no change needed"
-Route128_Text_IsaiahRegister,"I know I'm not good now, but I think\nI can win eventually.\pPlease register me in your COMLINK.$",reviewed AUTO draft
+Route128_Text_IsaiahRegister,"I know I'm not good now, but I think\nI can win eventually.\pPlease register me in your StarNAV.$",reviewed AUTO draft
 Route128_Text_IsaiahRematchIntro,I'm still feeling good. I'll keep on\nswimming to ILUM.$,reviewed AUTO draft
 Route128_Text_IsaiahRematchDefeat,I've yet to taste my first victory…$,"reviewed, no change needed"
 Route128_Text_IsaiahPostRematch,I'll eventually reach ILUM\nwhere I can eventually win…$,reviewed AUTO draft

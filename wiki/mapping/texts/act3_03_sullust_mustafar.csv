@@ -2,7 +2,7 @@ text_id,sw_text_raw,notes
 FallarborTown_Text_HaveYouChallengedFlannery,"Have you already challenged SABINE,\nthe LEADER of PIRIN ARENA?\pHer grandfather was famous.\nHe was one of the FOUR TRIALS in the\lILUM TEMPLE at one point.\pI wouldn't be surprised if SABINE\nbecame a great TRAINER in her\lown right.$",Sabine Wren keeps Flannery's grandfather
 FallarborTown_Text_TownSign,INYUSU TOR\n“A farming town in the ashfall.”$,
 FallarborTown_Text_MoveTutorSign,MOVE TUTOR'S HOUSE\n“New moves taught to COMPANIONS.”$,
-FallarborTown_ContestHall_Text_MonAllTheseRibbons,See!\nMy COMPANION won all these RIBBONS!\pHave yours earned any RIBBONS?\nYou can check them on your COMLINK.$,
+FallarborTown_ContestHall_Text_MonAllTheseRibbons,See!\nMy COMPANION won all these RIBBONS!\pHave yours earned any RIBBONS?\nYou can check them on your StarNAV.$,
 FallarborTown_BattleTentLobby_Text_FallarborTentMyFavorite,You know how BATTLE TENTS offer\ndifferent events in different towns?\pMy favorite is definitely the BATTLE\nTENT in INYUSU TOR.\pI think it's fantastic how TRAINERS\ntry to win with all their faith in\ltheir COMPANIONS.$,
 FallarborTown_CozmosHouse_Text_MeteoriteWillNeverBeMineNow,DR. TIEN: Oh…\nI never should have let myself be\lconned into telling the EMPIRE where\lyou can find METEORITES…\pThat METEORITE from STARFALL CAVERN…\nIt's never going to be mine now…$,
 FallarborTown_CozmosHouse_Text_IsThatMeteoriteMayIHaveIt,"Oh!\nHah?\pThat item…\pCould it be?\pIs it the METEORITE that the EMPIRE\ntook from STARFALL CAVERN?\pPlease, may I have it?\pI'm not asking for it for free.\nHow about in exchange for this TM?$",
@@ -113,7 +113,7 @@ JaggedPass_Text_DianaPostRematch,I'll forget about losing and just\nenjoy this b
 JaggedPass_Text_EthanIntro,ASHEN PASS is hard to walk on.\nIt's a good place for training.$,reviewed AUTO draft
 JaggedPass_Text_EthanDefeat,It was all over while we were still\ntrying to find a good footing…$,"reviewed, no change needed"
 JaggedPass_Text_EthanPostBattle,"If I had a SPEEDER BIKE, I'd be able to\njump ledges.$",reviewed AUTO draft
-JaggedPass_Text_EthanRegister,"When I get more used to this bumpiness,\nI'll be sure to win!\pCan you register me in your COMLINK?$",reviewed AUTO draft
+JaggedPass_Text_EthanRegister,"When I get more used to this bumpiness,\nI'll be sure to win!\pCan you register me in your StarNAV?$",reviewed AUTO draft
 JaggedPass_Text_EthanRematchIntro,I got used to this bumpiness.\nI sing while I climb now.$,"reviewed, no change needed"
 JaggedPass_Text_EthanRematchDefeat,It's still not easy to battle on this\nbumpy ground…$,"reviewed, no change needed"
 JaggedPass_Text_EthanPostRematch,I should get a SPEEDER BIKE from WALD\nin MOS ESPA…$,reviewed AUTO draft
@@ -163,7 +163,7 @@ LavaridgeTown_Gym_B1F_Text_EliIntro,"As much as I love digging,\nI especially lo
 LavaridgeTown_Gym_B1F_Text_EliDefeat,"Well, it seems to me I lost without\never being in control.$","reviewed, no change needed"
 LavaridgeTown_Gym_B1F_Text_EliPostBattle,I stay here because I became a fan\nof SABINE's power.\pHehehehe.$,reviewed AUTO draft
 LavaridgeTown_Gym_1F_Text_ReceivedHeatBadge,{PLAYER} received the MAGMA SHARD\nfrom SABINE.$,reviewed AUTO draft
-LavaridgeTown_Gym_1F_Text_RegisteredFlannery,Registered ARENA LEADER SABINE\nin the COMLINK.$,reviewed AUTO draft
+LavaridgeTown_Gym_1F_Text_RegisteredFlannery,Registered ARENA LEADER SABINE\nin the StarNAV.$,reviewed AUTO draft
 LavaridgeTown_Gym_1F_Text_FlanneryPostBattle,"Your power reminds me of someone…\pOh! I know! You battle like DORAN,\nthe ARENA LEADER of MOS ENTHA.$",reviewed AUTO draft
 LavaridgeTown_Gym_1F_Text_GymStatue,PIRIN ARENA$,reviewed AUTO draft
 LavaridgeTown_Gym_1F_Text_GymStatueCertified,PIRIN ARENA\pSABINE'S CERTIFIED TRAINERS:\n{PLAYER}$,reviewed AUTO draft
@@ -179,7 +179,7 @@ LavaridgeTown_PokemonCenter_1F_Text_TrainersPokemonSpendTimeTogether,I think COM
 LavaridgeTown_PokemonCenter_1F_Text_TrainersShouldRestToo,"Hohoho! Hey, kid, you can reach\nthe hot springs from here.\pIf COMPANIONS are getting rest, so too\nshould their TRAINERS.$",reviewed AUTO draft
 MeteorFalls_1F_1R_Text_WithThisMeteorite,"Hehehe!\pWith this METEORITE, that thing in\nMUSTAFAR PEAK will…$",reviewed AUTO draft
 MeteorFalls_1F_2R_Text_NicolasDefeat,Urgh!\nI didn't expect you to be so strong!$,"reviewed, no change needed"
-MeteorFalls_1F_2R_Text_NicolasRegister,I want to know more about your power.\nLet me register you in my COMLINK.$,reviewed AUTO draft
+MeteorFalls_1F_2R_Text_NicolasRegister,I want to know more about your power.\nLet me register you in my StarNAV.$,reviewed AUTO draft
 MeteorFalls_1F_2R_Text_NicolasRematchIntro,"Since we met, we have trained hard\nwith our sights on number one.\pHelp us see how much stronger we've\nbecome!$","reviewed, no change needed"
 MeteorFalls_1F_2R_Text_NicolasRematchDefeat,Urgh!\nI didn't expect you to be so strong!$,"reviewed, no change needed"
 MeteorFalls_1F_2R_Text_NicolasPostRematch,"You've obviously kept up your\nCOMPANION training.\pSo long as you remain strong, I, too,\ncan become stronger!$",reviewed AUTO draft
@@ -229,7 +229,7 @@ MtChimney_Text_SheilaDefeat,The way you battle…\nIt's like a MUSTAFAR PEAK eru
 MtChimney_Text_SawyerIntro,"Fine work camp, this! Plenty of\nhot folks around for company!$",trainer recast 2026-11-01 (bible/RECAST.md)
 MtChimney_Text_SawyerDefeat,"Oh, you're a real firebrand, too!$","reviewed, no change needed"
 MtChimney_Text_SawyerPostBattle,I think I need a dip in PIRIN\nHOT SPRING with the locals!$,reviewed AUTO draft
-MtChimney_Text_SawyerRegister,I like little fireballs like you.\nLet me register you in my COMLINK.$,reviewed AUTO draft
+MtChimney_Text_SawyerRegister,I like little fireballs like you.\nLet me register you in my StarNAV.$,reviewed AUTO draft
 MtChimney_Text_SawyerRematchIntro,I'm happily surrounded by hot people\naround these parts. I won't lose!$,"reviewed, no change needed"
 MtChimney_Text_SawyerRematchDefeat,"Gosh, you're still the same\nfirebrand as before!$","reviewed, no change needed"
 MtChimney_Text_SawyerPostRematch,"Actually, it really is hot here.\nI'm overdressed for these parts.$","reviewed, no change needed"

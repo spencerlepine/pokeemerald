@@ -131,7 +131,7 @@ The current pass (all `DRAFT`, waiting for the owner's review):
   beta songs Emerald never plays), `MUS_DUMMY` kept. 5 net-new tracks: Fortress Vader, VS Vader, VS Boba Fett, the
   Death Star site, hyperspace travel. Briefs ask for original music, never quotes of the film scores.
 - **Sound effects** (269 + 51 bard phonemes): 277 reused as is (UI, field, most move sounds, the phonemes),
-  26 mapped (capture pods, comlink, blast doors, hover-bike, kyber hum, the opening freighter), 17 ghosts
+  26 mapped (capture pods, StarNAV, blast doors, hover-bike, kyber hum, the opening freighter), 17 ghosts
   (never played). 27 net-new (17 below plus the 10 new move-effect sounds listed in
   `bible/MOVE_EFFECTS.md` section 7): blaster bolt, lightsaber ignite / swing / clash / hum, Force push / choke / lightning,
   turbolaser, ion cannon, vibroblade, slicer spike, hyperspace jump, astromech chatter, Imperial alarm, Vader's

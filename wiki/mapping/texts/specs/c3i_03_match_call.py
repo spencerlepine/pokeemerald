@@ -1,4 +1,4 @@
-# Match call (C3i part 3): the COMLINK calls from trainers, rivals, Mom, Korr, Leia and Lando, plus the
+# Match call (C3i part 3): the StarNAV calls from trainers, rivals, Mom, Korr, Leia and Lando, plus the
 # trainer profile blurbs. Ocean worlds keep their seas and beaches (Kamino, Yavin 4, Dagobah's swamps).
 # Han is a pilot, not a sailor, and Chewie is his co-pilot, not a pet.
 KEEP_REST_FILES = ("data/text/match_call.inc", "src/data/text/match_call_messages.h")

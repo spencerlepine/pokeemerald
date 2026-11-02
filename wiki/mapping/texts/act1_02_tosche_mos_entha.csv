@@ -145,8 +145,8 @@ PetalburgCity_Mart_Text_TakeSomeAntidotesWithYou,"Do you have any ANTITOXINS wit
 Route102_Text_CalvinIntro,"If you have COMPANION with you, then\nyou're an official COMPANION TRAINER!\lYou can't say no to my challenge!$",reviewed AUTO draft
 Route102_Text_CalvinDefeated,"Arrgh, I lost…\nI should have trained mine more…$","reviewed, no change needed"
 Route102_Text_CalvinPostBattle,"Listen, you. If you're strong,\nyou should have told me before!$","reviewed, no change needed"
-Route102_Text_CalvinRegister,"I've been working hard at this since\nI saw you before.\pI'd like to battle you again, so can\nyou register me in your COMLINK?$",reviewed AUTO draft
-Route102_Text_CalvinRegisterShort,"I'd like to battle you again, so can\nyou register me in your COMLINK?$",reviewed AUTO draft
+Route102_Text_CalvinRegister,"I've been working hard at this since\nI saw you before.\pI'd like to battle you again, so can\nyou register me in your StarNAV?$",reviewed AUTO draft
+Route102_Text_CalvinRegisterShort,"I'd like to battle you again, so can\nyou register me in your StarNAV?$",reviewed AUTO draft
 Route102_Text_CalvinRematchIntro,"Ever since I lost to you, I desperately\ntrained my COMPANION.\lYou can't say no to my challenge!$",reviewed AUTO draft
 Route102_Text_CalvinRematchDefeated,"Arrgh, I lost…\nIs my training method not right?$","reviewed, no change needed"
 Route102_Text_CalvinRematchPostBattle,"If you're going to get stronger,\nI'll get stronger, too.$","reviewed, no change needed"

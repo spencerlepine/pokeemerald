@@ -692,7 +692,7 @@ gText_G_Mode,G-MODE,"reviewed, no change needed"
 gText_MenuOptionPokedex,DATAPAD,reviewed AUTO draft
 gText_MenuOptionPokemon,COMPANION,reviewed AUTO draft
 gText_MenuOptionBag,BAG,"reviewed, no change needed"
-gText_MenuOptionPokenav,COMLINK,reviewed AUTO draft
+gText_MenuOptionPokenav,StarNAV,reviewed AUTO draft
 gText_Blank,,"reviewed, no change needed"
 gText_MenuOptionSave,SAVE,"reviewed, no change needed"
 gText_MenuOptionOption,OPTION,"reviewed, no change needed"
@@ -759,7 +759,7 @@ gText_PyramidPokemon,PYRAMID: COMPANION,reviewed AUTO draft
 gText_PyramidTrainers,PYRAMID: TRAINERS,"reviewed, no change needed"
 gText_PyramidMaze,PYRAMID: MAZE,"reviewed, no change needed"
 gText_BattleBag2,BATTLE BAG,"reviewed, no change needed"
-gText_PokenavAndBag,COMLINK AND BAG,reviewed AUTO draft
+gText_PokenavAndBag,StarNAV AND BAG,reviewed AUTO draft
 gText_HeldItems,HELD ITEMS,"reviewed, no change needed"
 gText_PokemonOrder,COMPANION ORDER,reviewed AUTO draft
 gText_BattlePokemon,BATTLE COMPANION,reviewed AUTO draft
@@ -907,12 +907,12 @@ gText_CheckMapOfHoenn,Check the map of the OUTER RIM region.,reviewed AUTO draft
 gText_CheckPokemonInDetail,Check COMPANION in detail.,reviewed AUTO draft
 gText_CallRegisteredTrainer,Call a registered TRAINER.,"reviewed, no change needed"
 gText_CheckObtainedRibbons,Check obtained RIBBONS.,"reviewed, no change needed"
-gText_PutAwayPokenav,Put away the COMLINK.,reviewed AUTO draft
+gText_PutAwayPokenav,Put away the StarNAV.,reviewed AUTO draft
 gText_NoRibbonWinners,There are no RIBBON winners.,"reviewed, no change needed"
 gText_NoTrainersRegistered,No TRAINERS are registered.,"reviewed, no change needed"
 gText_CheckPartyPokemonInDetail,Check party COMPANION in detail.,reviewed AUTO draft
 gText_CheckAllPokemonInDetail,Check all COMPANIONS in detail.,reviewed AUTO draft
-gText_ReturnToPokenavMenu,Return to the COMLINK menu.,reviewed AUTO draft
+gText_ReturnToPokenavMenu,Return to the StarNAV menu.,reviewed AUTO draft
 gText_FindCoolPokemon,Find cool COMPANIONS.,reviewed AUTO draft
 gText_FindBeautifulPokemon,Find beautiful COMPANIONS.,reviewed AUTO draft
 gText_FindCutePokemon,Find cute COMPANIONS.,reviewed AUTO draft
@@ -1466,7 +1466,7 @@ gText_UpdatedTime,Updated time,"reviewed, no change needed"
 gText_MenuPokedex,DATAPAD,reviewed AUTO draft
 gText_MenuPokemon,COMPANION,reviewed AUTO draft
 gText_MenuBag,BAG,"reviewed, no change needed"
-gText_MenuPokenav,COMLINK,reviewed AUTO draft
+gText_MenuPokenav,StarNAV,reviewed AUTO draft
 gText_MenuPlayer,{PLAYER},"reviewed, no change needed"
 gText_MenuSave,SAVE,"reviewed, no change needed"
 gText_MenuOption,OPTION,"reviewed, no change needed"

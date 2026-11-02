@@ -24,8 +24,8 @@ PlayersHouse_1F_Text_MaybeDadWillBeOn,MOM: Look! It's the MOS ENTHA ARENA!\nMayb
 PlayersHouse_1F_Text_GoIntroduceYourselfNextDoor,"Oh, yes.\nOne of DAD's friends lives here.\pPROF. KORR is his name.\pHe lives right next door, so you should\ngo over and introduce yourself.$",
 PlayersHouse_1F_Text_DidYouMeetProfBirch,MOM: Did you introduce yourself to\nPROF. KORR?$,
 PlayersHouse_1F_Text_GotDadsBadgeHeresSomethingFromMom,MOM: Oh? Did DAD give you that SHARD?\pThen here's something from your MOM!$,
-PlayersHouse_1F_Text_IsThatAPokenav,"MOM: What is that, honey? A COMLINK?\nSomeone from HOUSE ORGANA gave it\lto you?\pWell, honey, how about registering\nyour mom?\p… … …$",
-PlayersHouse_1F_Text_RegisteredMom,Registered MOM\nin the COMLINK.$,
+PlayersHouse_1F_Text_IsThatAPokenav,"MOM: What is that, honey? A StarNAV?\nSomeone from HOUSE ORGANA gave it\lto you?\pWell, honey, how about registering\nyour mom?\p… … …$",
+PlayersHouse_1F_Text_RegisteredMom,Registered MOM\nin the StarNAV.$,
 PlayersHouse_1F_Text_Vigoroth1,Hrooonk!$,SLOTHFURY grunt
 PlayersHouse_1F_Text_Vigoroth2,"Hoo hoo, hoooh…$",SLOTHFURY grunt
 PlayersHouse_1F_Text_ReportFromPetalburgGym,INTERVIEWER: …We brought you this\nreport from outside the MOS ENTHA\lARENA.$,

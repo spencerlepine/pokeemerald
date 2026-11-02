@@ -127,7 +127,7 @@ MossdeepCity_Gym_Text_NicholasPostBattle,All right! I think I'll develop a speci
 MossdeepCity_Gym_Text_TateAndLizaDefeat,"KANAN: What?! Our combination…\nEZRA: Was shattered!\pKANAN: It can't be helped. You've won…\nEZRA: So, in recognition, take this.$",reviewed AUTO draft
 MossdeepCity_Gym_Text_ReceivedMindBadge,{PLAYER} received the FORCE SHARD\nfrom KANAN and EZRA.$,reviewed AUTO draft
 MossdeepCity_Gym_Text_ExplainMindBadgeTakeThis,"KANAN: The FORCE SHARD enhances the\nSP. ATK and SP. DEF of COMPANIONS.\pEZRA: It also lets you use the HM move\nDIVE outside of battle.\pKANAN: You should also take this, too.$",reviewed AUTO draft
-MossdeepCity_Gym_Text_RegisteredTateAndLiza,Registered ARENA LEADERS KANAN & EZRA\nin the COMLINK.$,reviewed AUTO draft
+MossdeepCity_Gym_Text_RegisteredTateAndLiza,Registered ARENA LEADERS KANAN & EZRA\nin the StarNAV.$,reviewed AUTO draft
 MossdeepCity_Gym_Text_TateAndLizaRematchDefeat,KANAN: You and your COMPANION…\nEZRA: It's as if you were siblings!$,reviewed AUTO draft
 MossdeepCity_Gym_Text_TateAndLizaPostRematch,"KANAN: You can knock us down,\nbut we'll never stay down!\pEZRA: Because the two of us,\nwe always support each other!$",reviewed AUTO draft
 MossdeepCity_House1_Text_HmmYourPokemon,Hmm!\nYour {STR_VAR_1}…$,"reviewed, no change needed"
@@ -205,13 +205,13 @@ ShoalCave_Text_WasShoalSaltNowNothing,"There was some SHOAL SALT here.\nBut, the
 ShoalCave_Text_WasShoallShellNowNothing,"There was a SHOAL SHELL here.\nBut, there's nothing here now.$","reviewed, no change needed"
 Route124_Text_SpencerIntro,"Hey, are you lost at sea?\pIf you can beat my COMPANION,\nI can serve as your pilot.$",reviewed AUTO draft
 Route124_Text_SpencerDefeat,I lost my bearings in battle!$,"reviewed, no change needed"
-Route124_Text_SpencerPostBattle,"Many people lose their bearings at sea.\pIf you're that sort, you should refer\nto the COMLINK's MAP.$",reviewed AUTO draft
+Route124_Text_SpencerPostBattle,"Many people lose their bearings at sea.\pIf you're that sort, you should refer\nto the StarNAV's MAP.$",reviewed AUTO draft
 Route124_Text_RolandIntro,Hm! You're riding a COMPANION instead\nof swimming yourself…\pI am envious!$,reviewed AUTO draft
 Route124_Text_RolandDefeat,Oh!\nI can't…$,"reviewed, no change needed"
 Route124_Text_JennyIntro,"If you just float in the sea like\nthis, COMPANIONS come around to play.$",reviewed AUTO draft
 Route124_Text_JennyDefeat,"Oh, darn.\nI've gone and lost.$","reviewed, no change needed"
 Route124_Text_JennyPostBattle,"While swimming, I noticed that some\nCOMPANIONS attack, and some just\lwatch.\pI guess COMPANIONS have personalities\nof their own.$",reviewed AUTO draft
-Route124_Text_JennyRegister,"It's only on a whim, but maybe I'll get\nyou to register me in your COMLINK.$",reviewed AUTO draft
+Route124_Text_JennyRegister,"It's only on a whim, but maybe I'll get\nyou to register me in your StarNAV.$",reviewed AUTO draft
 Route124_Text_JennyRematchIntro,"If you just float in the sea like this,\nTRAINERS challenge you!$","reviewed, no change needed"
 Route124_Text_JennyRematchDefeat,That's strange…\nI lost again…$,"reviewed, no change needed"
 Route124_Text_JennyPostRematch,"This has nothing to do with anything,\nbut maybe I'll visit the TRICK HOUSE.$","reviewed, no change needed"
@@ -255,7 +255,7 @@ Route125_Text_TanyaPostBattle,Whew…\nWhich way is it to YAVIN 4?$,reviewed AUT
 Route125_Text_SharonDefeat,Lost it…$,"reviewed, no change needed"
 Route125_Text_SharonPostBattle,Your power… You're the real deal.\nI'm amazed!$,"reviewed, no change needed"
 Route125_Text_ErnestDefeat,Gwrroooar!\nI couldn't win!$,"reviewed, no change needed"
-Route125_Text_ErnestRegister,"Register me in your COMLINK,\nand I'll tell you something good.$",reviewed AUTO draft
+Route125_Text_ErnestRegister,"Register me in your StarNAV,\nand I'll tell you something good.$",reviewed AUTO draft
 Route125_Text_ErnestRematchIntro,"It's high time I get my payback\nfrom you! Come on, we're battling!$","reviewed, no change needed"
 Route125_Text_ErnestRematchDefeat,I couldn't win!\nI flat out couldn't win!$,"reviewed, no change needed"
 Route125_Text_KimIntro,"KAI: A funny old man lives in the\nWAMPA CAVE. Someone told me.\lAre you going to see him, too?$",reviewed AUTO draft

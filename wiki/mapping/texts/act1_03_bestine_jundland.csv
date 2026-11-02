@@ -7,8 +7,8 @@ PetalburgWoods_Text_TeamAquaAfterSomethingInRustboro,"Didn't that CARTEL thug sa
 PetalburgWoods_Text_GoBugPokemonTeam,"Utinni!\p(I scavenged a whole bunch of\nCOMPANIONS!)\p(Go, go, go!\nMy scrap-heap team!)$",trainer recast 2026-11-01 (bible/RECAST.md)
 PetalburgWoods_Text_ImOutOfPokeBalls,I caught a bunch of COMPANIONS.\nNow I'm out of CAPTURE PODS.$,
 PetalburgWoods_Text_InstantlyPopularWithBugPokemon,"Utinni!\p(Bring good salvage to the clan\nmeet, and you're instantly popular!)$",trainer recast 2026-11-01 (bible/RECAST.md)
-PetalburgWoods_Text_IWantRematch1,I want a rematch when my BUG\nCOMPANIONS grow up!\pI'm registering you in my COMLINK!$,
-PetalburgWoods_Text_IWantRematch2,I want a rematch when my BUG\nCOMPANIONS grow up!\pI'm registering you in my COMLINK!$,
+PetalburgWoods_Text_IWantRematch1,I want a rematch when my BUG\nCOMPANIONS grow up!\pI'm registering you in my StarNAV!$,
+PetalburgWoods_Text_IWantRematch2,I want a rematch when my BUG\nCOMPANIONS grow up!\pI'm registering you in my StarNAV!$,
 PetalburgWoods_Text_IveBeenTrainingHard,"You get to be popular if you have\nstrong COMPANIONS, right?\lSo, I've been training hard.$",
 PetalburgWoods_Text_StayOutOfTallGrass,"Yo, there!\nYour COMPANION doing okay?\pIf your COMPANIONS are weak and you\nwant to avoid battles, stay out\lof the scrub.$",
 PetalburgWoods_Text_MiracleSeedExplanation,"It's a MIRACLE SEED.\nIf a COMPANION holds that item, its\lGRASS-type moves become stronger.\pBesides MIRACLE SEED, I think there are\nother convenient items for COMPANIONS\lto hold.$",
@@ -54,23 +54,23 @@ RustboroCity_Text_BrendanNoConfidenceInPokemon,KAEL: What's the matter? Don't ha
 RustboroCity_Text_BrendanMrBrineyHint,"KAEL: By the way, you know\nHAN? The guy I just passed?\pI bet you didn't know this, since you\njust moved here, {PLAYER}, but\lHAN is a legendary pilot.$",
 RustboroCity_Text_GymSign,BESTINE ARENA\nLEADER: BIGGS\p“The ROCK-loving teacher!”$,
 RustboroCity_Text_TrainersSchoolSign,BESTINE ACADEMY\p“We'll teach you anything about\nCOMPANIONS!”$,
-RustboroCity_Text_DevelopedNewPokenavFeature,"I've been developing an added feature\nfor the COMLINK…\pAnd it turned out great!\p{PLAYER}, may I see that COMLINK?\nThe one the SENATOR gave you?$",
-RustboroCity_Text_AddedMatchCallPleaseCallMrStone,"There you go, {PLAYER}!\pI added a new feature named\nMATCH CALL to your COMLINK.\pUsing the MATCH CALL feature,\nyou can chat with people who have\lbeen registered in your COMLINK.\p{PLAYER}, SENATOR ORGANA should\nbe registered in your COMLINK.\pTest it out.\nPlease give the SENATOR a call.$",
+RustboroCity_Text_DevelopedNewPokenavFeature,"I've been developing an added feature\nfor the StarNAV…\pAnd it turned out great!\p{PLAYER}, may I see that StarNAV?\nThe one the SENATOR gave you?$",
+RustboroCity_Text_AddedMatchCallPleaseCallMrStone,"There you go, {PLAYER}!\pI added a new feature named\nMATCH CALL to your StarNAV.\pUsing the MATCH CALL feature,\nyou can chat with people who have\lbeen registered in your StarNAV.\p{PLAYER}, SENATOR ORGANA should\nbe registered in your StarNAV.\pTest it out.\nPlease give the SENATOR a call.$",
 RustboroCity_CuttersHouse_Text_YouCanPutThisHMToGoodUse,"That determined expression…\nThat limber way you move…\lAnd your well-trained COMPANIONS…\pYou're obviously a skilled TRAINER!\pNo, wait, don't say a word.\nI can tell just by looking at you.\pI'm sure that you can put this\nHIDDEN MACHINE to good use.\pNo need to be modest or shy.\nGo on, take it!$",
 RustboroCity_CuttersHouse_Text_ExplainCut,"That HIDDEN MACHINE, or HM for\nshort, is VIBROBLADE.\pAn HM move is one that can be used\nby COMPANIONS outside of battle.\pA COMPANION that knows VIBROBLADE can\nslice through thin trees if the TRAINER\lhas earned the DUNE SHARD.\pAnd, unlike a TM, an HM can be used\nmore than once.$",
 RustboroCity_CuttersHouse_Text_DadHelpedClearLandOfTrees,"When they were expanding the city of\nBESTINE, my dad helped out.\pHis COMPANIONS used VIBROBLADE to\nclear the land of trees.$",
 RustboroCity_DevonCorp_1F_Text_RocksMetalDisplay,"Samples of rocks and metal are\ndisplayed in the glass case.\pThere's a panel with some writing\non it…\p“HOUSE ORGANA got its start as\na mining company.\p“The company also refined durasteel\nfrom desert ore.\p“From that humble start as a producer\nof raw materials, HOUSE ORGANA\ldeveloped.\p“HOUSE ORGANA is now a manufacturer of\na wide range of industrial products.”$",
-RustboroCity_DevonCorp_1F_Text_ProductDisplay,"Prototypes and test products fill\nthe glass display case.\pThere's a panel with a description…\p“In addition to starfighters,\nHOUSE ORGANA now markets droids and\lmedical supplies for better lives.\p“Recently, HOUSE ORGANA has begun\nmarketing tools for COMPANION\lTRAINERS, including CAPTURE PODS and\lCOMLINK systems.”$",
+RustboroCity_DevonCorp_1F_Text_ProductDisplay,"Prototypes and test products fill\nthe glass display case.\pThere's a panel with a description…\p“In addition to starfighters,\nHOUSE ORGANA now markets droids and\lmedical supplies for better lives.\p“Recently, HOUSE ORGANA has begun\nmarketing tools for COMPANION\lTRAINERS, including CAPTURE PODS and\lStarNAV systems.”$",
 RustboroCity_DevonCorp_2F_Text_DeviceForTalkingToPokemon,We're developing a device for talking\nwith COMPANIONS.\pBut we haven't had much success…$,
 RustboroCity_DevonCorp_2F_Text_WeFinallyMadeNewBalls,We finally made new kinds of\nCAPTURE PODS!\pThe REPEAT POD makes it easier to catch\nCOMPANIONS you've caught before.\pThe TIMER POD gets better at catching\nCOMPANIONS the longer a battle runs.\pBoth are proudly developed by\nHOUSE ORGANA.\pPlease give them a try!$,
-RustboroCity_DevonCorp_2F_Text_WowThatsAPokenav,"Oh, wow!\nThat's a COMLINK!\pIt came about as a result of the\nSENATOR's wish to keep people\lin touch across the stars.\pWould you like me to describe its\nfeatures in detail?\pNo, no. I think you'll find out just by\ntrying the COMLINK out.$",
+RustboroCity_DevonCorp_2F_Text_WowThatsAPokenav,"Oh, wow!\nThat's a StarNAV!\pIt came about as a result of the\nSENATOR's wish to keep people\lin touch across the stars.\pWould you like me to describe its\nfeatures in detail?\pNo, no. I think you'll find out just by\ntrying the StarNAV out.$",
 RustboroCity_DevonCorp_2F_Text_DeviceToVisualizePokemonDreams,I'm trying to develop a device that\nvisually reproduces the dreams of\lCOMPANIONS…\pBut it's not going well.$,
 RustboroCity_DevonCorp_2F_Text_DevelopDeviceToResurrectFossils,"I've been trying to develop a device\nthat revives COMPANIONS from fossils…\pAnd, it's working!$",
 RustboroCity_DevonCorp_2F_Text_HandedFossilToResearcher,Excellent!\nLet's do this right away.\p{PLAYER} handed the {STR_VAR_1} to\nthe ORGANA ENGINEER.$,
 RustboroCity_DevonCorp_2F_Text_ReceivedMonFromResearcher,{PLAYER} received {STR_VAR_2} from\nthe ORGANA ENGINEER.$,
 RustboroCity_DevonCorp_3F_Text_MrStoneIHaveFavor,"I'm BAIL ORGANA, senator of ALDERAAN\nand head of HOUSE ORGANA.\pI'd just got word about you!\pYou saved our staff not just once,\nbut twice!\pI have a favor to ask of an amazing\nperson like you.\pI understand that you're delivering\na package to MOS EISLEY's SHIPYARD.\pWell, on the way, could you stop off on\nKASHYYYK?\pMy daughter LEIA is there. Please\ndeliver this MESSAGE DISC to her.$",Bail is chairman of House Organa; Leia is his daughter (so 'the PRESIDENT's son' = Leia)
 RustboroCity_DevonCorp_3F_Text_MrStoneWantYouToHaveThis,"SEN. ORGANA: Now, a senator never asks\na favor for nothing in return.\pThat's why I want you to have this!$",
-RustboroCity_DevonCorp_3F_Text_MrStoneExplainPokenavRestUp,"SEN. ORGANA: That device…\pIt's a COMMUNICATION LINK, or COMLINK\nfor short.\pIt's an indispensable tool for any\nTRAINER on an adventure.\pIt has a star chart of the OUTER RIM.\pYou can find KASHYYYK and\nMOS EISLEY easily!\pBy the way, I've heard that the\nEMPIRE and the CARTEL have been\lmaking trouble far and wide.\pI think it would be best if you rested\nup before you go on your way.$",
+RustboroCity_DevonCorp_3F_Text_MrStoneExplainPokenavRestUp,"SEN. ORGANA: That device…\pIt's a STAR NAVIGATOR, or StarNAV\nfor short.\pIt's an indispensable tool for any\nTRAINER on an adventure.\pIt has a star chart of the OUTER RIM.\pYou can find KASHYYYK and\nMOS EISLEY easily!\pBy the way, I've heard that the\nEMPIRE and the CARTEL have been\lmaking trouble far and wide.\pI think it would be best if you rested\nup before you go on your way.$",
 RustboroCity_DevonCorp_3F_Text_NotFamiliarWithTrends,"SEN. ORGANA: Since my youth, I've\nimmersed myself in politics.\pConsequently, I'm not familiar with\ntrends and that sort of thing.\pBut do young people all want to be\nTRAINERS at the ILUM TEMPLE?$",
 RustboroCity_DevonCorp_3F_Text_ThisIs3rdFloorWaitHere,"This is the third floor of\nHOUSE ORGANA.\pOur PRESIDENT's OFFICE is on\nthis floor.\pAnyway, I can't tell you how much I'm\ngrateful for what you've done.\pUm… By the way, that parcel\nyou got back for us…\pCould I get you to deliver that to\nthe SHIPYARD in MOS EISLEY?\pIt would be awful if those robbers\ntried to take it again.\pUh… Hehehe, so, uh, could I count\non you to do that for me?\pOh, that's right.\nCould you wait here a second?$",
 RustboroCity_DevonCorp_3F_Text_WordWithPresidentComeWithMe,SENATOR ORGANA would like to have\na word with you.\pPlease come with me.$,
@@ -137,15 +137,15 @@ Route104_Text_LikeFillingMouthWithSeedsTakeThis,"I like filling my mouth with se
 Route104_Text_TMsAreOneTimeUse,"A word of advice!\pA TM, TECHNICAL MACHINE, is good only\nfor one-time use.\pOnce you use it, it's gone.\nThink twice before using it!$","reviewed, no change needed"
 Route104_Text_DontNeedThisTakeIt,"This FLOWER SHOP started selling\nsaplings recently.\pIt made me so happy, I went overboard\nshopping.\pI don't need this WHITE HERB anymore.\nWould you take it, please?$","reviewed, no change needed"
 Route104_Text_FlowerShopSellingSaplings,"This FLOWER SHOP started selling\nsaplings recently.\pIt made me so happy, I went overboard\nshopping. Where should I put them?$","reviewed, no change needed"
-Route104_Text_MayWeShouldRegister,"MIRA: Oh, hi, {PLAYER}{KUN}!\pHOUSE ORGANA upgraded your COMLINK\nwith the MATCH CALL system, huh?\pWe should register each other so we\ncan get in contact anytime.$",reviewed AUTO draft
-Route104_Text_RegisteredMay,{PLAYER} registered MIRA\nin the COMLINK.$,reviewed AUTO draft
+Route104_Text_MayWeShouldRegister,"MIRA: Oh, hi, {PLAYER}{KUN}!\pHOUSE ORGANA upgraded your StarNAV\nwith the MATCH CALL system, huh?\pWe should register each other so we\ncan get in contact anytime.$",reviewed AUTO draft
+Route104_Text_RegisteredMay,{PLAYER} registered MIRA\nin the StarNAV.$,reviewed AUTO draft
 Route104_Text_MayHowsYourPokedex,"MIRA: Oh, by the way, {PLAYER}{KUN},\nhow's your DATAPAD coming along?$",reviewed AUTO draft
 Route104_Text_MayMinesDecentLetsBattle,Mine's looking pretty decent.\nSo…\lHow about a little battle?$,"reviewed, no change needed"
 Route104_Text_MayLetsBattle,"MIRA: So, what do you think?\nHow about a little battle here?$",reviewed AUTO draft
 Route104_Text_MayIntro,"MIRA: You just became a TRAINER,\n{PLAYER}{KUN}. I'm not going to lose!$",reviewed AUTO draft
 Route104_Text_MayDefeat,Yikes!\nYou're better than I expected!$,"reviewed, no change needed"
-Route104_Text_BrendanWeShouldRegister,"KAEL: Oh, hey, {PLAYER}!\pCool, you had HOUSE ORGANA install the\nMATCH CALL system on your COMLINK!\pLet's register each other in our\nCOMLINKS so we can keep in touch.$",reviewed AUTO draft
-Route104_Text_RegisteredBrendan,{PLAYER} registered KAEL\nin the COMLINK.$,reviewed AUTO draft
+Route104_Text_BrendanWeShouldRegister,"KAEL: Oh, hey, {PLAYER}!\pCool, you had HOUSE ORGANA install the\nMATCH CALL system on your StarNAV!\pLet's register each other in our\nStarNAVs so we can keep in touch.$",reviewed AUTO draft
+Route104_Text_RegisteredBrendan,{PLAYER} registered KAEL\nin the StarNAV.$,reviewed AUTO draft
 Route104_Text_BrendanHowsYourPokedex,"KAEL: {PLAYER}, how's your DATAPAD?\nHave you filled in any pages yet?$",reviewed AUTO draft
 Route104_Text_BrendanDoingGreatLetsBattle,"Me, I'm doing great!\pWant to check out how good I am with\na battle?$","reviewed, no change needed"
 Route104_Text_BrendanLetsBattle,KAEL: What's up?\nWant to have a battle with me?$,reviewed AUTO draft
@@ -179,13 +179,13 @@ RustboroCity_Text_ShadyCharacterTookOffTowardsTunnel,"That shady character, I th
 RustboroCity_Text_YouGotItThankYou,"Oh! How did it go?\nThe ORGANA PARTS?\pYou did!\nYou got them back!\pYou really are a great TRAINER!\pI know! As my thanks, I'll give you\nanother DURASTEEL POD!$",reviewed AUTO draft
 RustboroCity_Text_YoureLoadedWithItems,You're loaded with items.\nI can't give you this DURASTEEL POD.$,reviewed AUTO draft
 RustboroCity_Text_PleaseComeWithMe,"Excuse me, please!\nPlease come with me!$","reviewed, no change needed"
-RustboroCity_Text_MayHiLetsRegister,"MIRA: Oh, hi, {PLAYER}{KUN}!\pYou had a MATCH CALL feature put\non your COMLINK!\pLet's register each other so we can\ncontact one another anytime!\p… … … … … …$",reviewed AUTO draft
-RustboroCity_Text_RegisteredMay,Registered MIRA\nin the COMLINK.$,reviewed AUTO draft
+RustboroCity_Text_MayHiLetsRegister,"MIRA: Oh, hi, {PLAYER}{KUN}!\pYou had a MATCH CALL feature put\non your StarNAV!\pLet's register each other so we can\ncontact one another anytime!\p… … … … … …$",reviewed AUTO draft
+RustboroCity_Text_RegisteredMay,Registered MIRA\nin the StarNAV.$,reviewed AUTO draft
 RustboroCity_Text_MayWantToBattle,"MIRA: So, what do you think?\nHow about a little battle here?$",reviewed AUTO draft
 RustboroCity_Text_MayImNotGoingToLose,"MIRA: You just became a TRAINER,\n{PLAYER}{KUN}. I'm not going to lose!$",reviewed AUTO draft
 RustboroCity_Text_MayDefeat,Yikes!\nYou're better than I expected!$,"reviewed, no change needed"
-RustboroCity_Text_BrendanHiLetsRegister,"KAEL: Oh, hey, {PLAYER}!\pYou had a MATCH CALL feature put\non your COMLINK! Cool!\pLet's register each other so we can\nget in touch anytime!\p… … … … … …$",reviewed AUTO draft
-RustboroCity_Text_RegisteredBrendan,Registered KAEL\nin the COMLINK.$,reviewed AUTO draft
+RustboroCity_Text_BrendanHiLetsRegister,"KAEL: Oh, hey, {PLAYER}!\pYou had a MATCH CALL feature put\non your StarNAV! Cool!\pLet's register each other so we can\nget in touch anytime!\p… … … … … …$",reviewed AUTO draft
+RustboroCity_Text_RegisteredBrendan,Registered KAEL\nin the StarNAV.$,reviewed AUTO draft
 RustboroCity_Text_BrendanWantToBattle,KAEL: What's up?\nWant to have a battle with me?$,reviewed AUTO draft
 RustboroCity_Text_BrendanIWontGoEasy,"KAEL: I know you just became\na TRAINER, but I won't go easy!$",reviewed AUTO draft
 RustboroCity_Text_BrendanDefeat,Hmm…\nYou're pretty good.$,"reviewed, no change needed"
@@ -194,7 +194,7 @@ RustboroCity_Text_DevonCorpSign,"HOUSE ORGANA\p“For all your living needs, we 
 RustboroCity_Text_DevonCorpBranchOfficeSign,HOUSE ORGANA BRANCH OFFICE\p“Access limited to HOUSE ORGANA\nemployees and authorized personnel.”$,reviewed AUTO draft
 RustboroCity_Text_CitySign,BESTINE\p“The city probing the integration of\nnature and science.”$,reviewed AUTO draft
 RustboroCity_Text_CuttersHouse,CUTTER'S HOUSE$,"reviewed, no change needed"
-RustboroCity_Text_PleaseSelectPokenav,Please select the COMLINK.$,reviewed AUTO draft
+RustboroCity_Text_PleaseSelectPokenav,Please select the StarNAV.$,reviewed AUTO draft
 RustboroCity_Text_IdBetterGetBackToWork,"Okay, I'd better get back to work.\nPlease take care, {PLAYER}!$","reviewed, no change needed"
 RustboroCity_Text_YouCanHave2On2Battle,"Did you know this?\pYou can have a 2-on-2 battle even\nif you're not with another TRAINER.\pIf you catch the eyes of two TRAINERS\nwhen you have two or more COMPANIONS,\lthey'll both challenge you.\pDon't you think it'd be cool if you\ncould beat two TRAINERS by yourself?$",reviewed AUTO draft
 RustboroCity_DevonCorp_1F_Text_WelcomeToDevonCorp,Hello and welcome to the HOUSE\nORGANA.\pWe're proud producers of items and\nmedicine that enhance your life.$,reviewed AUTO draft
@@ -206,16 +206,16 @@ RustboroCity_DevonCorp_1F_Text_OnlyAuthorizedPeopleEnter,"I'm sorry, only author
 RustboroCity_DevonCorp_1F_Text_HowCouldWeGetRobbed,It's beyond stupid.\nHow could we get robbed?$,"reviewed, no change needed"
 RustboroCity_DevonCorp_1F_Text_YoureAlwaysWelcomeHere,"Hi, there!\nYou're always welcome here!$","reviewed, no change needed"
 RustboroCity_DevonCorp_2F_Text_DevelopingNewBalls,I'm developing new kinds of\nCAPTURE PODS…\pBut I haven't made much headway…$,reviewed AUTO draft
-RustboroCity_DevonCorp_2F_Text_IMadePokenav,"I made the COMLINK!\pAs an engineer, I feel blessed to have\nmade something so great!$",reviewed AUTO draft
+RustboroCity_DevonCorp_2F_Text_IMadePokenav,"I made the StarNAV!\pAs an engineer, I feel blessed to have\nmade something so great!$",reviewed AUTO draft
 RustboroCity_DevonCorp_2F_Text_WantToBringFossilBackToLife,Wait! That thing you have there…\nIs that a COMPANION fossil?\pWould you like to bring that COMPANION\nback to life?\pI can with my newly developed\nFOSSIL REGENERATOR.$,reviewed AUTO draft
 RustboroCity_DevonCorp_2F_Text_OhIsThatSo,"Oh, is that so?\pHOUSE ORGANA's technological expertise\nis outstanding, I tell you.$",reviewed AUTO draft
 RustboroCity_DevonCorp_2F_Text_TwoFossilsPickOne,"Oh, now that's a surprise!\nYou have not one, but two, fossils?\pUnfortunately, my machine can only\nregenerate one COMPANION at a time.\pWould you like to pick one of your\nfossils for regeneration?$",reviewed AUTO draft
 RustboroCity_DevonCorp_2F_Text_FossilRegeneratorTakesTime,"The FOSSIL REGENERATOR, which I made,\nis incredible.\pBut it has one drawback--it takes\na long time to work.\pSo, uh… How about you go for a stroll\nand look around for a while?$","reviewed, no change needed"
 RustboroCity_DevonCorp_2F_Text_FossilizedMonBroughtBackToLife,"Thanks for waiting!\pYour fossilized COMPANION has been\nbrought back to life!\pThe fossil was an ancient COMPANION.\n{STR_VAR_2}, it was!$",reviewed AUTO draft
 RustboroCity_DevonCorp_2F_Text_TooManyPokemon,"Uh-oh, you've got too many COMPANIONS.\nYou have no room for this one.$",reviewed AUTO draft
-RustboroCity_DevonCorp_2F_Text_DevelopNewPokenavFeature,I'm trying to develop a new feature\nfor the COMLINK…\pBut it's not going well.$,reviewed AUTO draft
+RustboroCity_DevonCorp_2F_Text_DevelopNewPokenavFeature,I'm trying to develop a new feature\nfor the StarNAV…\pBut it's not going well.$,reviewed AUTO draft
 RustboroCity_DevonCorp_2F_Text_WhatToWorkOnNext,"Well, now what shall I work on\ndeveloping next?\pOur company allows us to make our\ninspirations into reality.\pOne couldn't ask for a better\nenvironment as an engineer.$","reviewed, no change needed"
-RustboroCity_DevonCorp_3F_Text_ReceivedPokenav,{PLAYER} received a COMLINK.$,reviewed AUTO draft
+RustboroCity_DevonCorp_3F_Text_ReceivedPokenav,{PLAYER} received a StarNAV.$,reviewed AUTO draft
 RustboroCity_DevonCorp_3F_Text_MrStoneGoWithCautionAndCare,"SEN. ORGANA: Well, then, {PLAYER}{KUN},\ngo with caution and care!$",reviewed AUTO draft
 RustboroCity_DevonCorp_3F_Text_CountingOnYou,SEN. ORGANA: I'm counting on you!$,reviewed AUTO draft
 RustboroCity_DevonCorp_3F_Text_ExplainExpShare,SEN. ORGANA: A COMPANION holding that\nEXP. LINK will be given some of the\lEXP Points from battle.\pIt will get EXP Points even if it didn't\nactually battle.\pI would say EXP. LINK is quite useful\nfor raising weak COMPANIONS.$,reviewed AUTO draft
@@ -254,7 +254,7 @@ RustboroCity_Gym_Text_RoxannePostBattle,"Since you are so strong, you should\nch
 RustboroCity_Gym_Text_GymStatue,BESTINE ARENA$,reviewed AUTO draft
 RustboroCity_Gym_Text_GymStatueCertified,BESTINE ARENA\pBIGGS'S CERTIFIED TRAINERS:\n{PLAYER}$,reviewed AUTO draft
 RustboroCity_Gym_Text_RoxanneRegisterCall,"… … … … … …\n… … … … … Beep!\pBIGGS: Oh, hello, {PLAYER}?\nThis is BIGGS of BESTINE.\pI heard from TARFFUL that you're\nmoving up through the ranks of\lTRAINERS at an incredible clip.\pWell, I'd rather not think that\nI can't beat you.\pI promise, I will shape up my ARENA\nso that you may challenge us again.\pI hope you'll be looking forward to\nthat occasion as much as me!\p… … … … … …\n… … … … … Click!$",reviewed AUTO draft
-RustboroCity_Gym_Text_RegisteredRoxanne,Registered ARENA LEADER BIGGS\nin the COMLINK.$,reviewed AUTO draft
+RustboroCity_Gym_Text_RegisteredRoxanne,Registered ARENA LEADER BIGGS\nin the StarNAV.$,reviewed AUTO draft
 RustboroCity_Gym_Text_RoxannePreRematch,"BIGGS: I'm so glad to see you again.\nI'm BIGGS, the ARENA LEADER here.\pI'm sure we've both experienced many\nbattles since we last met.\pI would like to see how much better\nwe've become. Let us battle!$",reviewed AUTO draft
 RustboroCity_Gym_Text_RoxanneRematchDefeat,"Grr…\nAgain, I have lost…$","reviewed, no change needed"
 RustboroCity_House1_Text_IllTradeIfYouWant,"Huh? My COMPANION is cute?\nSure, I knew that.\pBut if you really want, I'm willing\nto trade it to you.\pI'll trade you my {STR_VAR_2} for\na {STR_VAR_1} if you want.$",reviewed AUTO draft
@@ -301,24 +301,24 @@ Route104_Text_BillyPostBattle,"I want to leave my footprints in\nthe sand everyw
 Route104_Text_HaleyIntro,"Should I…\nOr shouldn't I?\pMy QUEEN would say yes.\nOkay, I will battle!$",trainer recast 2026-11-01 (bible/RECAST.md)
 Route104_Text_HaleyDefeat,I shouldn't have battled…$,"reviewed, no change needed"
 Route104_Text_HaleyPostBattle,"If you're faced with a decision and\nyou let someone else choose for you,\lyou will regret it, however things\lturn out.$","reviewed, no change needed"
-Route104_Text_HaleyRegister1,"You're strong, but should I register\nyou in my COMLINK?\lMaybe I shouldn't…\pOkay, sure, I will register you!$",reviewed AUTO draft
-Route104_Text_HaleyRegister2,"You're strong, but should I register\nyou in my COMLINK?\lMaybe I shouldn't…\pOkay, sure, I will register you!$",reviewed AUTO draft
+Route104_Text_HaleyRegister1,"You're strong, but should I register\nyou in my StarNAV?\lMaybe I shouldn't…\pOkay, sure, I will register you!$",reviewed AUTO draft
+Route104_Text_HaleyRegister2,"You're strong, but should I register\nyou in my StarNAV?\lMaybe I shouldn't…\pOkay, sure, I will register you!$",reviewed AUTO draft
 Route104_Text_HaleyRematchIntro,"Come on, battle with me!$","reviewed, no change needed"
 Route104_Text_HaleyRematchDefeat,Ohh…\nI thought I could win…$,"reviewed, no change needed"
 Route104_Text_HaleyPostRematch,"I made the decision to battle, so\nI can accept this loss with grace.\pI am still upset about losing!$","reviewed, no change needed"
 Route104_Text_WinstonIntro,"Oh, sure, I'll accept your challenge.\nI have a lot of money.$","reviewed, no change needed"
 Route104_Text_WinstonDefeat,Why couldn't I win?$,"reviewed, no change needed"
 Route104_Text_WinstonPostBattle,There are some things money can't buy.\nThat's COMPANION…$,reviewed AUTO draft
-Route104_Text_WinstonRegister1,"Hm?\nAh, you've obtained a COMLINK.\pI will gladly register you.\nAfter all, I have plenty of money.$",reviewed AUTO draft
-Route104_Text_WinstonRegister2,"Hm?\nAh, you've obtained a COMLINK.\pI will gladly register you.\nAfter all, I have plenty of money.$",reviewed AUTO draft
+Route104_Text_WinstonRegister1,"Hm?\nAh, you've obtained a StarNAV.\pI will gladly register you.\nAfter all, I have plenty of money.$",reviewed AUTO draft
+Route104_Text_WinstonRegister2,"Hm?\nAh, you've obtained a StarNAV.\pI will gladly register you.\nAfter all, I have plenty of money.$",reviewed AUTO draft
 Route104_Text_WinstonRematchIntro,"After I lost to you, I learned a bunch\nof things about COMPANIONS.$",reviewed AUTO draft
 Route104_Text_WinstonRematchDefeat,I lost again?\nWhy couldn't I win?$,"reviewed, no change needed"
 Route104_Text_WinstonPostRematch,"I'm fabulously wealthy, but I can't\nseem to win at COMPANION…\pIt's so deep, the world of COMPANIONS…$",reviewed AUTO draft
 Route104_Text_CindyIntro,We must have been fated to meet.\nMay I ask you for a battle?$,"reviewed, no change needed"
 Route104_Text_CindyDefeat,"Oh, my!$","reviewed, no change needed"
 Route104_Text_CindyPostBattle,“Hello” is the beginning of “good-bye.”\nI hope we meet again.$,"reviewed, no change needed"
-Route104_Text_CindyRegister1,"Hello, we meet again.\pWe seem to be drawn together. Let's\nregister each other in our COMLINKS.$",reviewed AUTO draft
-Route104_Text_CindyRegister2,We should commemorate how we seem\nto be drawn to each other.\pLet's register each other in our\nCOMLINKS.$,reviewed AUTO draft
+Route104_Text_CindyRegister1,"Hello, we meet again.\pWe seem to be drawn together. Let's\nregister each other in our StarNAVs.$",reviewed AUTO draft
+Route104_Text_CindyRegister2,We should commemorate how we seem\nto be drawn to each other.\pLet's register each other in our\nStarNAVs.$,reviewed AUTO draft
 Route104_Text_CindyRematchIntro,"Hello, we meet again.\nMay I ask you for a battle?$","reviewed, no change needed"
 Route104_Text_CindyRematchDefeat,"Oh, my…\nI did the best that I could…$","reviewed, no change needed"
 Route104_Text_CindyPostRematch,“Hello” is the beginning of “good-bye.”\nI hope we meet again.$,"reviewed, no change needed"
@@ -340,16 +340,16 @@ Route116_Text_JanicePostBattle,"COMPANION that possess cuteness and\npower, that
 Route116_Text_JerryIntro,We learn all sorts of things at the\nACADEMY.\pI want to test things out for real!$,reviewed AUTO draft
 Route116_Text_JerryDefeat,I slacked off in school…\nThat's why I lost.$,"reviewed, no change needed"
 Route116_Text_JerryPostBattle,"I'll have to redo some courses at\nthe ACADEMY.\lIf I don't, BIGGS will be steamed.$",reviewed AUTO draft
-Route116_Text_JerryRegister1,"I learned at the ACADEMY\nthat a COMLINK can register TRAINERS.\pI don't really get what that means,\nso can I just try it?$",reviewed AUTO draft
-Route116_Text_JerryRegister2,"I learned at the ACADEMY\nthat a COMLINK can register TRAINERS.\pI don't really get what that means,\nso can I just try it?$",reviewed AUTO draft
+Route116_Text_JerryRegister1,"I learned at the ACADEMY\nthat a StarNAV can register TRAINERS.\pI don't really get what that means,\nso can I just try it?$",reviewed AUTO draft
+Route116_Text_JerryRegister2,"I learned at the ACADEMY\nthat a StarNAV can register TRAINERS.\pI don't really get what that means,\nso can I just try it?$",reviewed AUTO draft
 Route116_Text_JerryRematchIntro,I've been studying seriously at the\nACADEMY.\lI won't lose like I did last time.$,reviewed AUTO draft
 Route116_Text_JerryRematchDefeat,Hunh?\nI studied diligently.$,"reviewed, no change needed"
 Route116_Text_JerryPostRematch,"I'll have to redo some courses at\nthe ACADEMY.\lIf I don't, BIGGS will be steamed.$",reviewed AUTO draft
 Route116_Text_KarenIntro,"I study at school, and I study on\nthe way home, too!$","reviewed, no change needed"
 Route116_Text_KarenDefeat,I'm in shock--I lost?$,"reviewed, no change needed"
 Route116_Text_KarenPostBattle,"Awww, I'll never become an elegant\nTRAINER like BIGGS this way!$",reviewed AUTO draft
-Route116_Text_KarenRegister1,"Oh, wow! Isn't that a COMLINK?\nI have one, too! Please register me!$",reviewed AUTO draft
-Route116_Text_KarenRegister2,"Oh, wow! Isn't that a COMLINK?\nI have one, too! Please register me!$",reviewed AUTO draft
+Route116_Text_KarenRegister1,"Oh, wow! Isn't that a StarNAV?\nI have one, too! Please register me!$",reviewed AUTO draft
+Route116_Text_KarenRegister2,"Oh, wow! Isn't that a StarNAV?\nI have one, too! Please register me!$",reviewed AUTO draft
 Route116_Text_KarenRematchIntro,I studied a whole lot since I saw you.\nYou must see my achievements!$,"reviewed, no change needed"
 Route116_Text_KarenRematchDefeat,I'm in shock.\nI lost again?$,"reviewed, no change needed"
 Route116_Text_KarenPostRematch,"You've beaten BIGGS?\nI can't beat you, then. Not yet.$",reviewed AUTO draft

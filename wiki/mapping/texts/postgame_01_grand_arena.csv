@@ -380,7 +380,7 @@ BattleFrontier_BattlePikeLobby_Text_ThinkAbilitiesUsefulHere,Listen! Listen!\pDo
 BattleFrontier_BattlePikeLobby_Text_TrainersWhicheverPathIChoose,"What is this weird place?\nI can't figure it out at all!\pI've taken the challenge a bunch\nof times, but all I ever do is run into\lTRAINERS whichever path I choose.$","reviewed, no change needed"
 BattleFrontier_BattlePikeLobby_Text_RulesAreListed,The Battle Choice's rules are listed.$,"reviewed, no change needed"
 BattleFrontier_BattlePikeLobby_Text_ReadWhichHeading,Which heading do you want to read?$,"reviewed, no change needed"
-BattleFrontier_BattlePikeLobby_Text_ExplainPokenavBagRules,The BAG and COMLINK may not be used\nduring a Battle Choice challenge.$,reviewed AUTO draft
+BattleFrontier_BattlePikeLobby_Text_ExplainPokenavBagRules,The BAG and StarNAV may not be used\nduring a Battle Choice challenge.$,reviewed AUTO draft
 BattleFrontier_BattlePikeLobby_Text_ExplainHeldItemRules,"During a Battle Choice challenge,\nany FRUIT or HERB held by COMPANION\lwill be effective only once.$",reviewed AUTO draft
 BattleFrontier_BattlePikeRoomFinal_Text_CongratsThisWayPlease,"Congratulations…\nNow, this way, please…$","reviewed, no change needed"
 BattleFrontier_BattlePikeRoomNormal_Text_WillRestoreToFullHealth,Welcome…\nYou must be commended for your luck…\pYour COMPANION shall be restored\nto full health…$,reviewed AUTO draft

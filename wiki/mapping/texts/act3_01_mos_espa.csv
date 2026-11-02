@@ -43,8 +43,8 @@ MauvilleCity_Text_WallyDefeat,LUKE: … … … … … … …\p… … … …
 MauvilleCity_Text_WallyIllGoBackToVerdanturf,LUKE: UNCLE…\nI'll go back to ANCHORHEAD…$,reviewed AUTO draft
 MauvilleCity_Text_UncleNoNeedToBeDown,"UNCLE: LUKE, there's no need to be so\ndown on yourself.\pWhy, what's keeping you from becoming\nstronger and stronger?\pCome on, let's go home.\nEveryone's waiting for you.$",reviewed AUTO draft
 MauvilleCity_Text_UncleVisitUsSometime,"UNCLE: {PLAYER}{KUN}, it just dawned on me\nthat you must be the TRAINER who kept\lan eye out for LUKE when he caught\lhis COMPANION.\pWhy don't you visit us in ANCHORHEAD\nsometime?\lI'm sure LUKE would enjoy it.$",reviewed AUTO draft
-MauvilleCity_Text_WallyPokenavCall,"… … … … … …\n… … … … … Beep!\pLUKE: Oh, hello, {PLAYER}!\pI just wanted to tell you that\nmy uncle bought me a COMLINK!\pNow I can get in touch with you\nanytime, {PLAYER}!\p… … … … … …\n… … … … … Click!$",reviewed AUTO draft
-MauvilleCity_Text_RegisteredWally,Registered LUKE\nin the COMLINK.$,reviewed AUTO draft
+MauvilleCity_Text_WallyPokenavCall,"… … … … … …\n… … … … … Beep!\pLUKE: Oh, hello, {PLAYER}!\pI just wanted to tell you that\nmy uncle bought me a StarNAV!\pNow I can get in touch with you\nanytime, {PLAYER}!\p… … … … … …\n… … … … … Click!$",reviewed AUTO draft
+MauvilleCity_Text_RegisteredWally,Registered LUKE\nin the StarNAV.$,reviewed AUTO draft
 MauvilleCity_Text_ScottYouDidntHoldBack,"LANDO: Hehe…\nI was watching that match!\pYou're friends with that boy LUKE,\naren't you?\pBut you didn't hold anything back\nand beat him impressively.\pYeah! That's what a real COMPANION\nbattle is all about!\pI idolize TRAINERS like that!\p… … … … … …\nI'll be cheering for you!$",reviewed AUTO draft
 MauvilleCity_Text_WattsonNeedFavorTakeKey,"WATTO: Oh, {PLAYER}{KUN}!\nYou look like you have a lot of zip!\lThat's a good thing, wahahahaha!\pFine! I've decided!\nI need a favor, {PLAYER}{KUN}!\pMOS ESPA has an underground\nsector called ESPA GENERATOR.\p{PLAYER}{KUN}, I'd like you to go there and\nswitch off the GENERATOR.\pThe GENERATOR has been running a bit\nhaywire. It's getting unsafe.\pHere, this is the KEY to get into\nESPA GENERATOR.$",reviewed AUTO draft
 MauvilleCity_Text_WattsonWontBeChallenge,"WATTO: Don't you worry about it.\nIt won't be a challenge to you.\pThe entrance to ESPA GENERATOR is just\na short SURF away from ROUTE 110.\pThat's it, then, you have my trust!\nWahahahaha!$",reviewed AUTO draft
@@ -113,7 +113,7 @@ MauvilleCity_Gym_Text_AngeloDefeat,Ee chee…\p(My eyes are frazzled…)$,traine
 MauvilleCity_Gym_Text_WattsonDefeat,"Wahahahah!\nFine, I lost!\pYou ended up giving me a thrill!\nTake this SHARD!$",reviewed AUTO draft
 MauvilleCity_Gym_Text_ReceivedDynamoBadge,{PLAYER} received the SPARK SHARD\nfrom WATTO.$,reviewed AUTO draft
 MauvilleCity_Gym_Text_ExplainShockWave,That TM34 there contains FORCE BOLT.\pIt's a trustworthy move that never\nmisses! You can count on it!\p… … … … … …$,reviewed AUTO draft
-MauvilleCity_Gym_Text_RegisteredWattson,Registered ARENA LEADER WATTO\nin the COMLINK.$,reviewed AUTO draft
+MauvilleCity_Gym_Text_RegisteredWattson,Registered ARENA LEADER WATTO\nin the StarNAV.$,reviewed AUTO draft
 MauvilleCity_Gym_Text_WattsonPostBattle,"I swell with optimism, seeing a promising\nyoung TRAINER like you!$","reviewed, no change needed"
 MauvilleCity_Gym_Text_WattsonGoForthAndEndeavor,"Wahahahah!\nGo forth and endeavor, youngster!$","reviewed, no change needed"
 MauvilleCity_Gym_Text_GymStatue,MOS ESPA ARENA$,reviewed AUTO draft

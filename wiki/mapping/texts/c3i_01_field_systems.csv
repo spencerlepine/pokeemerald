@@ -36,7 +36,7 @@ gText_SelectWithoutRegisteredItem,An item in the BAG can be\nregistered to SELEC
 gText_PokeblockLinkCanceled,The link was canceled.$,"reviewed, no change needed"
 gText_UnusedNicknameReceivedPokemon,Want to give a nickname to\nthe {STR_VAR_2} you received?$,"reviewed, no change needed"
 gText_PlayerWhitedOut,{PLAYER} is out of usable\nCOMPANION!\p{PLAYER} whited out!$,reviewed AUTO draft
-gText_RegisteredTrainerinPokeNav,Registered {STR_VAR_1} {STR_VAR_2}\nin the COMLINK.$,reviewed AUTO draft
+gText_RegisteredTrainerinPokeNav,Registered {STR_VAR_1} {STR_VAR_2}\nin the StarNAV.$,reviewed AUTO draft
 gText_ComeBackWithSecretPower,"Do you know the TM SECRET POWER?\pOur group, we love the TM SECRET\nPOWER.\pOne of our members will give it to you.\nCome back and show me if you get it.\pWe'll accept you as a member and sell\nyou good stuff in secrecy.$","reviewed, no change needed"
 gText_PokerusExplanation,"Your COMPANION may be infected with\nMIDIPOX.\pLittle is known about the MIDIPOX\nexcept that they are microscopic life-\lforms that attach to COMPANION.\pWhile infected, COMPANIONS are said to\ngrow exceptionally well.$",reviewed AUTO draft
 gText_DoorOpenedFarAway,It sounded as if a door opened\nsomewhere far away.$,"reviewed, no change needed"
