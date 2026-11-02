@@ -78,4 +78,17 @@ s89() { pc; k A; w 2; k A; w 2; k A; w 2; k DOWN DOWN DOWN A; w 5; shot 89_pc_mo
 s90() { pc; k DOWN A; w 2; k A; w 2; shot 90_pc_items_menu; k A; w 2; shot 91_pc_items_withdraw; k A; w 1; shot 91b_pc_items_quantity;
         k B; w 1; k B; w 1; k B; w 1; k B; w 1; k B; w 1; k B; w 1; }
 
-for s in "$@"; do "$s" 2>/dev/null || "s$s"; done
+# ---------- family 7: battle + naming ----------
+cb2()  { "$L" lua 'return string.format("%08x", emu:read32(0x030022c4))' | grep -o '"result": "[0-9a-f]*"' | cut -d'"' -f4; }
+wild() { tp 0 17 9 4; nopopup; for i in $(seq 1 60); do "$L" tap UP 16 >/dev/null; "$L" tap DOWN 16 >/dev/null;
+         [ "$(cb2)" != "08085d15" ] && return 0; done; echo "no encounter" >&2; return 1; }
+bpos() { lua "emu:write8(0x0203ce59, 1); for i=0,4 do emu:write16(0x0203ce5c+i*2,0); emu:write16(0x0203ce66+i*2,0) end; return 1"; }
+sb01() { wild; w 3; shot b01_battle_intro; k A; w 4; shot b02_sendout; shot b03_action_menu; k A; w 1; shot b04_move_menu; k B; w 1;
+         k DOWN; w 0.3; k A; w 2.5; shot b06_battle_party; k A; w 1; shot b07_battle_party_action; k B; w 1; k B; w 3;
+         k UP RIGHT; w 0.3; bpos; k A; w 3; k DOWN DOWN DOWN; w 0.5; shot b08_battle_bag; k A; w 1; shot b09_battle_bag_use;
+         k A; w 9; shot b10_caught; k A; w 2; shot b11_nickname_prompt; k A; w 4; shot b12_naming_screen;
+         k SELECT; w 1.5; shot b13_naming_lower; k SELECT; w 1.5; shot b14_naming_symbols; k START; w 1; k A; w 4; }
+sb16() { wild; w 3; k A; w 4; k A; w 1; k A; w 3.5; shot b17_fainted; k A; w 3; shot b20_exp_gain;
+         for i in 1 2 3 4 5 6; do k B; w 1; done; w 2; }
+
+for s in "$@"; do if declare -F "$s" >/dev/null; then "$s"; else "s$s"; fi; done

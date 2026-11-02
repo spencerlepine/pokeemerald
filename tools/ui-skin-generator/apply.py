@@ -134,8 +134,23 @@ FAMILIES = {
     ('graphics/pokemon_storage/box_selection_popup.pal', 'ui', ALL),
     ('graphics/pokemon_storage/waveform.png', 'ui', ALL),
   ],
+  '7_battle_naming': [
+    # battle message box (also egg hatch and trade): teal fill and red border go grey, never brown.
+    # 1-10 are text colours of the battle windows (kept). Bank 1 is the action / move menu frame.
+    ('graphics/battle_interface/textbox_0.pal', 'battle', rng(11, 15)),
+    ('graphics/battle_interface/textbox_1.pal', 'battle', ALL),
+    # naming screen: header bar is the backdrop (menu.pal slot 0), striped bg, page frames, buttons,
+    # cursor. keyboard.pal 1-9 are text and gender colours (kept), 13-15 are the three keyboard fills.
+    ('graphics/naming_screen/menu.pal', 'naming', [0] + ALL),
+    ('graphics/naming_screen/page_swap_upper.pal', 'naming', rng(11, 15)),
+    ('graphics/naming_screen/page_swap_lower.pal', 'naming', rng(11, 15)),
+    ('graphics/naming_screen/page_swap_others.pal', 'naming', rng(11, 15)),
+    ('graphics/naming_screen/buttons.pal', 'naming', ALL),
+    ('graphics/naming_screen/cursor.pal', 'naming', [1, 2, 3]),
+    ('graphics/naming_screen/keyboard.pal', 'naming', [13, 14, 15]),
+  ],
 }
-DONE = ['1_text_windows', '2_party_summary', '3_bag_pokeblock', '4_pokedex', '5_starnav', '6_pc_storage']
+DONE = ['1_text_windows', '2_party_summary', '3_bag_pokeblock', '4_pokedex', '5_starnav', '6_pc_storage', '7_battle_naming']
 
 RGB_RE = re.compile(r'RGB\((\d+), *(\d+), *(\d+)\)')
 def tx_rgb5(m, fam):
