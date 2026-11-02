@@ -2,7 +2,7 @@
 
 ![Game Screenshot](TODO.png)
 
-**Agents and returning contributors: start at [`HANDOFF.md`](HANDOFF.md)** (state, rules, next steps).
+**Agents and returning contributors: start at [`AGENTS.md`](AGENTS.md)** (rules, how work flows, and the wiki and tools indexes).
 
 ## Project Structure
 
@@ -10,42 +10,6 @@
 | --- | --- |
 | [`game/`](game/) | C game source code (decompiled by [pret/pokeemerald](https://github.com/pret/pokeemerald)). The wiki and tools never import it; content is ported in by hand. |
 | [`wiki/`](wiki/) | The Star Wars adaptation as `.csv` tables: every creature, character, planet, item, move, line of dialogue, story event, image, VFX, song, sound effect and cry, mapped to its Star Wars version and pointing back at `game/`. Start at [`wiki/README.md`](wiki/README.md). |
-| [`tools/`](tools/) | One tool per asset group for generating new game assets, indexed in [`tools/README.md`](tools/README.md). |
+| [`tools/`](tools/) | One tool per asset group for generating new game assets. The list of tools and which ones still have work left (TODO) is in [`tools/README.md`](tools/README.md). |
+| [`AGENTS.md`](AGENTS.md) | Notes for agents: standing rules, how work flows, and the wiki and tools indexes. `CLAUDE.md` just points to it. |
 | [`.github/`](.github/) | CI workflows to build/test/lint |
-
-## Wiki: where to look
-
-| File | What it is |
-| --- | --- |
-| [`wiki/bible/STORY.md`](wiki/bible/STORY.md) | The story: planets, factions, cast, acts. |
-| [`wiki/bible/NET_NEW_DESIGNS.md`](wiki/bible/NET_NEW_DESIGNS.md) | Designs for content with no Emerald counterpart. |
-| [`wiki/database/game_port.csv`](wiki/database/game_port.csv) | The port checklist: one row per change to make in `game/` (file, line, wiring, dependencies, status). |
-| [`wiki/database/swap_map.csv`](wiki/database/swap_map.csv) | Every Emerald entity with its Star Wars name and C constant. |
-| [`wiki/database/texts.csv`](wiki/database/texts.csv) | Every line of game text with its Star Wars version. |
-| [`wiki/database/pending_art.csv`](wiki/database/pending_art.csv) | Every image, animation and VFX with its Star Wars subject and status. `todo` `HUMAN-TODO` marks what you replace by hand (logo, title screen, cutscenes, branded menus). |
-| [`wiki/database/pending_audio.csv`](wiki/database/pending_audio.csv) | Every song, sound effect and cry with its brief and status. |
-| [`wiki/database/music.csv`](wiki/database/music.csv) | Every song, labelled by category (town, route, battle, fanfare…) and form (loop, ambient, cue, jingle), with its rewrite status and tech notes for the music generator. |
-| [`wiki/database/`](wiki/database/) | The other generated tables (entities, timeline, net-new, area progression, habitats). |
-| [`wiki/mapping/`](wiki/mapping/) | The hand-written decisions the database is built from ([`mapping/README.md`](wiki/mapping/README.md)). |
-| [`wiki/emerald/`](wiki/emerald/README.md) | Read-only Emerald tables the build reads, so `wiki/tools/build.py` runs with nothing outside this repo. |
-| [`wiki/tools/`](wiki/tools/) | `build.py` (mapping → database) and `scan_game_assets.py` (inventory of `game/` sound and VFX). |
-
-## Tools
-
-| Tool | Status |
-| --- | --- |
-| [`tools/palette-enforcer/`](tools/palette-enforcer/README.md) | DONE: shared palette gate every art tool calls last |
-| [`tools/play-tester/`](tools/play-tester/README.md) | DONE: headless mGBA play-testing |
-| [`tools/title-screen-generator/`](tools/title-screen-generator/README.md) | DONE: title screen shipped into `game/` |
-| [`tools/sfx-generator/`](tools/sfx-generator/README.md), [`cry-generator/`](tools/cry-generator/README.md) | DONE: GBA-accurate SFX and cries; first 8 SFX and 6 cries shipped into `game/` |
-| [`tools/music-generator/`](tools/music-generator/README.md) | DONE: song models to MIDI on the game's voicegroups, hardware and loop checks, ROM recorder |
-| [`tools/sprite-trainer-generator/`](tools/sprite-trainer-generator/README.md) | DONE: trainer front pics via the hosted Civitai pipeline; Darth Vader shipped to the wiki |
-| [`tools/vfx-generator/`](tools/vfx-generator/README.md) | READY: move effects as storyboards; 6 shipped into `game/` (SABER SLASH, BLASTER SHOT, FORCE PUSH, FORCE CHOKE, FORCE BOLT, TURBOLASER) |
-| [`tools/cutscene-generator/`](tools/cutscene-generator/README.md) | READY: pxl + GBA output; draft intro scene not imported yet |
-| [`tools/sprite-walker-generator/`](tools/sprite-walker-generator/README.md) | READY: overworld walkers, 16x32 people kit |
-| [`tools/sprite-creature-generator/`](tools/sprite-creature-generator/README.md) | IN PROGRESS: hosted Civitai pipeline, first fronts and backs |
-| [`tools/tile-generator/`](tools/tile-generator/README.md) | IN PROGRESS: stage 0 (foundation), nothing in `game/` yet |
-| [`tools/sprite-trainer-back-generator/`](tools/sprite-trainer-back-generator/README.md) | PENDING: plan and mockups only, tool not built |
-| [`tools/sprite-creature-icon-generator/`](tools/sprite-creature-icon-generator/TODO.md), [`sprite-creature-footprint-generator/`](tools/sprite-creature-footprint-generator/TODO.md), [`sprite-creature-extras-generator/`](tools/sprite-creature-extras-generator/TODO.md), [`sprite-icon-generator/`](tools/sprite-icon-generator/TODO.md), [`ui-skin-generator/`](tools/ui-skin-generator/TODO.md) | TODO: scope only (`TODO.md`) |
-
-Statuses, scope, art categories and order of work: [`tools/README.md`](tools/README.md).

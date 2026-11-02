@@ -106,6 +106,7 @@ Shipped in the game on 2026-11-02 (`tools/ui-skin-generator/apply.py`, palette-o
 text colours, type and contest-category chips, HP bars, gender colours and hearts stay vanilla everywhere; the
 condition-screen stripes stay vanilla (they share slots with the contest circles); colour-coded casino pieces stay.
 Side-by-side v1 / mockup / v2 shots: `tools/ui-skin-generator/after/v2/` and `gallery.py`.
+The `tools/ui-skin-generator/` folder was deleted on 2026-11-02; these paths are in git history (commit `cad756de`).
 
 ## HUD and menus: Hyperspace Console (surfaces and text)
 

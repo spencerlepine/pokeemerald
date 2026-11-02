@@ -1,4 +1,16 @@
-# Handoff: start here
+# Agent notes
+
+Every session reads this file. The wiki and tool indexes are pulled in below; the handoff notes follow.
+
+# Wiki
+
+@wiki/README.md
+
+# Tools
+
+@tools/README.md
+
+# Handoff / Notes
 
 A Star Wars conversion of Pokémon Emerald (owner: spencer, GitHub `spencerlepine`). Setting: 2 BBY, an
 alternate telling. Twelve planets plus a post-game; PokéNAV is called **StarNAV** in every doc.
@@ -9,7 +21,7 @@ alternate telling. Twelve planets plus a post-game; PokéNAV is called **StarNAV
 | `wiki/` | **The source of truth.** Every Emerald entity mapped to its Star Wars version ([`wiki/README.md`](wiki/README.md)), the story ([`wiki/bible/STORY.md`](wiki/bible/STORY.md)), and the world. |
 | `wiki/world/` | The world: all 528 areas as tile layouts, placed on one connected world map ([`wiki/world/README.md`](wiki/world/README.md)). Keep this map; sizes may grow later. |
 | `wiki/mapping/world_art.csv` | Every world piece (building, object, nature, landmark, interior kit) with its status, model and notes. |
-| `tools/` | One tool per asset group, statuses in [`tools/README.md`](tools/README.md). |
+| `tools/` | One tool per asset group, listed in [`tools/README.md`](tools/README.md); TODO marks the ones with work left. |
 
 ## Standing rules (from the owner)
 
@@ -27,8 +39,7 @@ alternate telling. Twelve planets plus a post-game; PokéNAV is called **StarNAV
    [--kind K] [--tool T]`. Every area (`art_status` and `notes` in its yaml) and every art id (`status`,
    `build`, `tool`, `notes` in `world_art.csv`) is a row. Statuses: `pending-mockup` → `pending-final-art` →
    `art-complete` → `imported-in-game`.
-2. **Use the tool the row names.** `greybox piece`, `greybox terrain` and `greybox room` are in [`tools/greybox/`](tools/greybox/README.md)
-   (READY). A row with no tool needs a tool or a model that doesn't exist yet; its notes say what it needs.
+2. **Use the tool the row names.** `greybox piece`, `greybox terrain` and `greybox room` are in [`tools/greybox/`](tools/greybox/README.md). A row with no tool needs a tool or a model that doesn't exist yet; its notes say what it needs.
    Nothing is documented or built ahead for those: they are open work, marked in the wiki.
 3. **Record progress:** `python3 -m blockout todo --set <id> <status>`, then `python3 -m blockout index`.
 

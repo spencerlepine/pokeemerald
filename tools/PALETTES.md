@@ -131,5 +131,5 @@ Requirements for a tool:
 | `sprite-icon-generator` | own bank per icon; shared pod/type sets | `hud` accents for type labels; otherwise none | to build |
 | `tile-generator` | BG banks 0-5 / 6-12, 13-15 reserved | a planet theme per biome; `battle-backdrop` | to build: theme first, then `enforce --pal` per bank |
 | `vfx-generator` | OBJ banks by tag, cycled entries locked | sabers from the faction themes; weather per planet | to build |
-| `ui-skin-generator` | screen banks, 3-colour text | `hud` (strict for surfaces and text) | to build: `enforce --theme hud` |
+| (UI screens, no tool) | screen banks, 3-colour text | `hud` (strict for surfaces and text) | `enforce --theme hud` |
 | `play-tester`, `music-generator`, `sfx-generator`, `cry-generator` | n/a (no art) | n/a | n/a |
