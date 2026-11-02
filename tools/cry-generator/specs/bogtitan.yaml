@@ -1,0 +1,29 @@
+name: bogtitan
+slot: whiscash
+brief: "BOGTITAN: creature call that fits its look and size. Giant whiskered swamp fish that senses quakes."
+kind: creature
+size: 0.55
+seed: 472
+layers:
+  # Family DNA (Dagobah whisker fish): bubbling "u/o" burble with wobbling vibrato and bubble-pop clicks.
+  # Bogtitan: a big, slow "bloo-OOORM" with a growling rumble underneath (the quake sense) and big bubble pops.
+  - type: voice
+    pitch: [[0, 300], [0.08, 380], [0.14, 330]]
+    source: {sine: 0.5, pulse: 0.7, pulse_width: 0.3, noise: 0.03}
+    vowels: [[0, u], [0.14, o]]
+    env: [[0, 0], [0.01, 1], [0.11, 0.6], [0.15, 0]]
+    vibrato: {rate: 16, depth: 0.08}
+  - type: voice
+    at: 0.19
+    pitch: [[0, 280], [0.12, 400], [0.5, 330], [0.72, 230]]
+    pitch_step: 0.04
+    source: {sine: 0.4, pulse: 0.7, saw: 0.3, pulse_width: 0.3, noise: 0.04}
+    vowels: [[0, u], [0.15, o], [0.45, aw], [0.72, u]]
+    env: [[0, 0], [0.02, 1], [0.5, 0.8], [0.74, 0]]
+    vibrato: {rate: 14, depth: 0.07}
+    growl: 0.45
+    growl_rate: 24
+    drive: 1.8
+  - type: click
+    times: [0.0, 0.19, 0.62, 0.8]
+    gain: 0.45

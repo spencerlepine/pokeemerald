@@ -1,0 +1,34 @@
+name: sandasp
+slot: ekans
+brief: "SANDASP: creature call that fits its look and size. Desert snake."
+kind: creature
+size: 0.35
+seed: 461
+layers:
+  # Family DNA (Tatooine desert serpents): a dry hiss that opens into a rasping, drawn-out "hhaaa-sss" throat with a tail-rattle.
+  # Sandasp: a lean snake; a sharp hiss, a thin rasping "hyaah" and a quick dry rattle.
+  - type: noise
+    band: [[0, 3200], [0.2, 2800]]
+    q: 1.5
+    env: [[0, 0], [0.01, 0.9], [0.2, 0.6], [0.26, 0]]
+    gain: 0.7
+  - type: voice
+    at: 0.12
+    pitch: [[0, 420], [0.1, 520], [0.4, 440], [0.55, 360]]
+    source: {saw: 0.8, pulse: 0.3, pulse_width: 0.2, noise: 0.35}
+    vowels: [[0, ae], [0.2, a], [0.55, er]]
+    env: [[0, 0], [0.02, 1], [0.4, 0.75], [0.56, 0]]
+    growl: 0.4
+    growl_rate: 48
+    jitter: 0.03
+    drive: 2
+  - type: click
+    at: 0.62
+    times: [0.0, 0.03, 0.06, 0.09, 0.12, 0.15, 0.18, 0.21, 0.24]
+    gain: 0.5
+  - type: noise
+    at: 0.62
+    band: [4000]
+    q: 2
+    env: [[0, 0], [0.01, 0.4], [0.24, 0.3], [0.28, 0]]
+    gain: 0.3

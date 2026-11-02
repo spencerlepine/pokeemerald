@@ -1,0 +1,35 @@
+name: dunecobra
+slot: arbok
+brief: "DUNECOBRA: creature call that fits its look and size. Hooded desert cobra."
+kind: creature
+size: 0.75
+seed: 462
+layers:
+  # Family DNA (Tatooine desert serpents): dry hiss opening into a rasping, drawn-out throat, then a tail-rattle.
+  # Dunecobra: the hood flares; a long menacing hiss swells into a deep, rasping "HHAAAH" and a slower, heavier rattle.
+  - type: noise
+    band: [[0, 2800], [0.3, 2200]]
+    q: 1.4
+    env: [[0, 0], [0.02, 0.9], [0.28, 0.7], [0.36, 0]]
+    gain: 0.7
+  - type: voice
+    at: 0.15
+    pitch: [[0, 220], [0.15, 300], [0.55, 260], [0.75, 190]]
+    pitch_step: 0.04
+    source: {saw: 0.9, pulse: 0.4, pulse_width: 0.25, noise: 0.35}
+    vowels: [[0, aw], [0.25, a], [0.55, aw], [0.75, rr]]
+    env: [[0, 0], [0.03, 1], [0.55, 0.8], [0.77, 0]]
+    growl: 0.55
+    growl_rate: 34
+    jitter: 0.03
+    drive: 2.4
+  - type: click
+    at: 0.86
+    times: [0.0, 0.045, 0.09, 0.135, 0.18, 0.225, 0.27]
+    gain: 0.55
+  - type: noise
+    at: 0.86
+    band: [3400]
+    q: 2
+    env: [[0, 0], [0.01, 0.4], [0.27, 0.3], [0.32, 0]]
+    gain: 0.3

@@ -1,0 +1,33 @@
+name: lothcat
+slot: delcatty
+brief: "LOTHCAT: creature call that fits its look and size. Elegant grown loth-cat."
+kind: creature
+size: 0.45
+seed: 492
+layers:
+  # Family DNA (Lothal loth-cats): a meow sliding "i -> aw" on a pulse+saw throat, with a purring growl at the tail.
+  # Grown loth-cat: a low, elegant, drawn-out "mrrrROWWW" that ends in a rolling purr.
+  - type: voice
+    pitch: [[0, 380], [0.08, 400]]
+    source: {pulse: 0.7, saw: 0.5, pulse_width: 0.3, noise: 0.05}
+    vowels: [[0, m], [0.08, er]]
+    env: [[0, 0], [0.01, 0.8], [0.08, 0.6], [0.1, 0]]
+    growl: 0.3
+    growl_rate: 28
+  - type: voice
+    at: 0.1
+    pitch: [[0, 420], [0.18, 620], [0.5, 560], [0.72, 400]]
+    source: {pulse: 0.7, saw: 0.5, pulse_width: 0.3, noise: 0.06}
+    vowels: [[0, i], [0.2, ae], [0.5, aw], [0.72, o]]
+    env: [[0, 0], [0.02, 1], [0.55, 0.8], [0.74, 0]]
+    vibrato: {rate: 7, depth: 0.025}
+    jitter: 0.01
+  - type: voice
+    at: 0.72
+    pitch: [[0, 260], [0.25, 230]]
+    source: {pulse: 0.6, saw: 0.6, pulse_width: 0.3, noise: 0.1}
+    vowels: [[0, rr], [0.25, m]]
+    env: [[0, 0], [0.03, 0.6], [0.2, 0.5], [0.26, 0]]
+    growl: 0.7
+    growl_rate: 24
+    gain: 0.7

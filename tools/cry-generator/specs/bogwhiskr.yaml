@@ -1,0 +1,29 @@
+name: bogwhiskr
+slot: barboach
+brief: "BOGWHISKR: creature call that fits its look and size. Whiskered mud fish."
+kind: creature
+size: 0.2
+seed: 471
+layers:
+  # Family DNA (Dagobah whisker fish): a bubbling "u/o" burble with fast wobbling vibrato and bubble-pop clicks.
+  # Bogwhiskr: a small slippery "blup-blooop".
+  - type: voice
+    pitch: [[0, 520], [0.06, 640], [0.1, 560]]
+    source: {sine: 0.6, pulse: 0.6, pulse_width: 0.35, noise: 0.03}
+    vowels: [[0, u], [0.1, o]]
+    env: [[0, 0], [0.008, 1], [0.08, 0.6], [0.11, 0]]
+    vibrato: {rate: 22, depth: 0.08}
+    formant_scale: 0.7
+    emphasis: 0.5
+  - type: voice
+    at: 0.14
+    pitch: [[0, 480], [0.08, 660], [0.27, 500]]
+    source: {sine: 0.6, pulse: 0.6, pulse_width: 0.35, noise: 0.03}
+    vowels: [[0, u], [0.12, o], [0.27, u]]
+    env: [[0, 0], [0.01, 1], [0.2, 0.7], [0.28, 0]]
+    vibrato: {rate: 22, depth: 0.08}
+    formant_scale: 0.7
+    emphasis: 0.5
+  - type: click
+    times: [0.0, 0.14, 0.33]
+    gain: 0.3

@@ -1,0 +1,23 @@
+name: opeefry
+slot: carvanha
+brief: "OPEEFRY: creature call that fits its look and size. Opee sea killer fry, all teeth."
+kind: creature
+size: 0.35
+seed: 481
+layers:
+  # Family DNA (Naboo opee sea killers): tooth-snap clicks, then a wet, gurgling "grr-aw" with a fast growl.
+  # Fry: three quick snaps and a short, needly gurgling snarl.
+  - type: click
+    times: [0.0, 0.06, 0.12]
+    gain: 0.7
+  - type: voice
+    at: 0.14
+    pitch: [[0, 480], [0.06, 600], [0.28, 420]]
+    source: {saw: 0.8, pulse: 0.5, pulse_width: 0.25, noise: 0.15}
+    vowels: [[0, ae], [0.12, aw], [0.28, rr]]
+    env: [[0, 0], [0.01, 1], [0.2, 0.7], [0.3, 0]]
+    vibrato: {rate: 18, depth: 0.05}
+    growl: 0.5
+    growl_rate: 55
+    jitter: 0.03
+    drive: 2.5
