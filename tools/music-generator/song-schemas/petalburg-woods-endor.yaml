@@ -1,0 +1,78 @@
+# Petalburg Woods, Endor: net-new per-planet split of MUS_PETALBURG_WOODS (wiki row
+# net:mus-petalburg-woods-endor), for Scorched Hollow. STYLE of "Into the Trap" (ref_tracks
+# soundtrack:return-jedi:02): an original melody, not a quote. Taken from the cue (analyze_reference, 0-90 s):
+# its tempo (123 -> 122), the Gm / Am7 rocking harmony with D as the dominant, and the texture: a driving low
+# ostinato under long, tense string lines, woodwind answers and distant brass calls (here a 50 % square, since
+# the vanilla voicegroup has no brass). a strings over the ostinato, b flute and the far calls, c strings climb
+# on a held D-E over an orchestra-snare build and a 12.5 % square arpeggio. 24 bars at 122 = 47.2 s.
+# Brief (sw_subject): Endor version of MUS_PETALBURG_WOODS (tense and echoing, low strings, distant horn calls);
+# theme to be decided.
+name: petalburg-woods-endor
+constant: MUS_PETALBURG_WOODS_ENDOR
+form: AMBIENT
+voicegroup: petalburg_woods       # vanilla's own: piano 1, pizz 45, strings 48, flute 73, squares 5/82, wave 81, kit 0
+master_volume: 80
+tempo: 122
+steps_per_beat: 4                 # 16th-note grid
+time_signature: [4, 4]
+seed: 61
+
+parts:
+  strings: {program: 48, channel: 0, volume: 84,  pan: 14,  gate: 1.0, humanize: {vel: 4}}
+  flute:   {program: 73, channel: 1, volume: 92,  pan: 10,  gate: 0.95, lfo_speed: 26, lfo_delay: 20, mod: 5, humanize: {vel: 5}}
+  pizz:    {program: 45, channel: 2, volume: 80,  pan: -18, octave: 3, gate: 0.8, humanize: {vel: 8}}
+  piano:   {program: 1,  channel: 3, volume: 80,  pan: -6,  gate: 0.9}
+  snare:   {program: 0,  channel: 4, volume: 58,  pan: 20,  role: drums, kit: {sn: 40}}
+  bass:    {program: 81, channel: 5, volume: 82,  pan: 0,   octave: 2, role: bass, gate: 0.7}
+  call:    {program: 82, channel: 6, volume: 40,  pan: -34, gate: 0.9, mono: true}
+  arp:     {program: 5,  channel: 7, volume: 34,  pan: 34,  octave: 4, gate: 0.6, mono: true}
+
+progressions:
+  intro: "Gm | Am7"
+  a: "Gm | Gm | Am7 | Am7 | Gm | Gm | Am7 | D"
+  b: "Bb | Gm | Gm | D | Dm | Bb | Am7 | D"
+  c: "Gm | Am7 | Gm | Am7 | Gm | Am7 | Dsus4 | D"
+
+phrases:
+  ost: "^1:2 ^1:2 ^3:2 ^1:2 ^2:2 ^1:2 ^3:2 ^2:2"
+  walk: "^1:4 ^1:4 ^1:4 ^1:4"
+  stab: "^1:2 r:14"
+  arp16: "^1+:1 ^3:1 ^2:1 ^3:1 ^1+:1 ^3:1 ^2:1 ^3:1 ^1+:1 ^3:1 ^2:1 ^3:1 ^1+:1 ^3:1 ^2:1 ^3:1"
+  str_a: |
+    D4:16 | Eb4:8 D4:8 | E4:16 | G4:8 F4:4 E4:4 |
+    D4:16 | Bb4:8 A4:4 G4:4 | A4:16 | F#4:16
+  flute_b: |
+    F5:4 D5:4 Bb4:8 | D5:6 C5:2 Bb4:4 A4:4 | G4:8 Bb4:4 D5:4 | F#5:12 r:4 |
+    F5:4 E5:4 D5:4 A4:4 | Bb4:4 D5:4 F5:8 | E5:4 C5:4 G5:4 E5:4 | F#5:8 A5:8
+  call_b: "r:16 | r:8 D5:3 D5:1 G5:4 | r:16 | r:16 | r:16 | r:8 D5:3 D5:1 F5:4 | r:16 | r:16"
+  str_c: "D5:16 | E5:16 | D5:16 | E5:16 | D5:16 | E5:16 | D5:8 G5:8 | F#5:16"
+
+grooves:
+  soft: {sn: "....o.......o..."}
+  march_b: {sn: "....x.......x.o."}
+  build: {sn: "x...o...x...o.o.|x...o...x.o.x.o.|x.o.x.o.x.o.x.o.|x.o.x.o.x.o.x.o."}
+  roll: {sn: "x.x.x.x.rrrrRRRR"}
+
+sections:
+  intro:
+    bars: 2
+    chords: intro
+    ramp: {pizz: [-16, 0]}
+    parts: {pizz: ost, bass: walk, piano: stab, snare: soft}
+  a:
+    bars: 8
+    chords: a
+    parts: {strings: str_a, pizz: ost, piano: stab, bass: walk, snare: soft}
+  b:
+    bars: 8
+    chords: b
+    parts: {flute: flute_b, call: call_b, pizz: ost, piano: stab, bass: walk, snare: march_b}
+  c:
+    bars: 8
+    chords: c
+    fill: roll
+    ramp: {strings: [-10, 4], snare: [-20, 0], arp: [-12, 0]}
+    parts: {strings: str_c, pizz: ost, piano: stab, bass: walk, snare: build, arp: arp16}
+
+arrangement: [intro, a, b, c]
+loop_start: a
