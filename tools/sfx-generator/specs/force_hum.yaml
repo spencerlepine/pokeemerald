@@ -1,0 +1,25 @@
+name: force_hum
+constant: SE_FORCE_HUM
+brief: "Force hum: a short cold rising tone (~30 frames) for every non-signature Force move and the Force status moves."
+seed: 68
+layers:
+  # A cold rising tone: two detuned sines gliding up a fifth with a glassy FM edge, a wave-channel octave
+  # shadow, and a breath of high air; swells and vanishes in about half a second.
+  - type: pcm
+    osc: sine
+    unison: [-9, 8]
+    pitch: [[0, 392], [0.5, 587]]
+    fm: {ratio: 2.0, index: [[0, 0.1], [0.3, 0.5], [0.5, 0.2]]}
+    am: {rate: 9, depth: 0.15}
+    env: [[0, 0], [0.12, 0.8], [0.38, 1], [0.52, 0]]
+    gain: 0.8
+  - type: wave
+    table: tri
+    pitch: [[0, 784], [0.5, 1175]]
+    env: [[0, 0], [0.1, 0.5], [0.4, 0.5], [0.5, 0]]
+    gain: 0.2
+  - type: pcm
+    osc: noise
+    filter: {type: bp, cutoff: [[0, 2500], [0.5, 4500]], q: 3}
+    env: [[0, 0], [0.25, 0.3], [0.5, 0]]
+    gain: 0.15

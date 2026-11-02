@@ -1,0 +1,30 @@
+name: force_choke
+constant: SE_FORCE_CHOKE
+brief: "Force choke: tight, strained hum, loops for ~90 frames. FORCE CHOKE reach/lift/squeeze beats."
+seed: 67
+loop: {start: 0.3, end: 1.5, crossfade: 0.15}
+layers:
+  # A tight, strained hum: a low detuned saw squeezed through a narrow resonant band (the throat), a
+  # higher strangled partial wavering with an uneasy vibrato, and a thin hiss of breath that cannot get through.
+  - type: pcm
+    osc: saw
+    unison: [-7, 6]
+    pitch: 73
+    filter: {type: bp, cutoff: [[0, 600], [0.5, 760], [1.0, 640], [1.6, 700]], q: 5}
+    am: {rate: 7.5, depth: 0.2}
+    env: [[0, 0], [0.25, 1], [1.6, 1]]
+    drive: 2.0
+    gain: 1.0
+  - type: pcm
+    osc: saw
+    pitch: 146
+    vibrato: {rate: 5.5, depth: 0.25}
+    filter: {type: bp, cutoff: 1250, q: 7}
+    env: [[0, 0], [0.3, 0.5], [1.6, 0.5]]
+    gain: 0.35
+  - type: pcm
+    osc: noise
+    filter: {type: bp, cutoff: 2600, q: 6}
+    env: [[0, 0], [0.3, 0.15], [1.6, 0.15]]
+    normalize: false
+    gain: 0.08

@@ -1,0 +1,30 @@
+name: freighter_flight
+replaces: SE_TRUCK_MOVE
+constant: SE_FREIGHTER_FLIGHT
+brief: "Opening scene: the family freighter in flight (was the moving truck): engine rumble."
+seed: 62
+layers:
+  # A light freighter cruising: a deep detuned saw drone with a slow throb, a dark low-passed noise wash
+  # for the thrust, and a faint ion-engine whine that drifts in pitch; fades in and out over the scene.
+  - type: pcm
+    osc: saw
+    unison: [-14, 0, 13]
+    pitch: [[0, 52], [3.2, 56], [6.3, 50]]
+    filter: {type: lp, cutoff: [[0, 280], [3.2, 420], [6.3, 260]], q: 1.8}
+    am: {rate: 5.2, depth: 0.18}
+    env: [[0, 0], [0.8, 1], [5.4, 1], [6.3, 0]]
+    drive: 1.6
+    gain: 0.9
+  - type: pcm
+    osc: noise
+    filter: {type: lp, cutoff: [[0, 500], [3.2, 800], [6.3, 450]], q: 0.9}
+    am: {rate: 0.4, depth: 0.25}
+    env: [[0, 0], [1.0, 0.8], [5.2, 0.8], [6.3, 0]]
+    gain: 0.5
+  - type: pcm
+    osc: saw
+    pitch: [[0, 410], [2.5, 440], [4.5, 425], [6.3, 400]]
+    vibrato: {rate: 0.6, depth: 0.08}
+    filter: {type: bp, cutoff: 900, q: 4}
+    env: [[0, 0], [1.4, 0.25], [5.0, 0.25], [6.3, 0]]
+    gain: 0.18

@@ -1,0 +1,19 @@
+name: freighter_ramp
+replaces: SE_TRUCK_DOOR
+constant: SE_FREIGHTER_RAMP
+brief: "Freighter ramp opens: hydraulic hiss (also used by the Elite Four doors and berry blender)."
+seed: 61
+layers:
+  # Hydraulics: a burst of high pressurised hiss over a low pump groan sliding down as the ramp drops.
+  - type: pcm
+    osc: noise
+    filter: {type: hp, cutoff: [[0, 3000], [0.22, 1600]], q: 0.8}
+    env: [[0, 0], [0.005, 1], [0.1, 0.6], [0.24, 0]]
+    gain: 0.75
+  - type: pcm
+    osc: saw
+    unison: [-8, 8]
+    pitch: [[0, 140], [0.22, 95]]
+    filter: {type: lp, cutoff: 700, q: 2}
+    env: [[0, 0], [0.02, 0.8], [0.18, 0.5], [0.24, 0]]
+    gain: 0.45

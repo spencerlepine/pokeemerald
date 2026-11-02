@@ -1,0 +1,40 @@
+name: freighter_land
+replaces: SE_TRUCK_STOP
+constant: SE_FREIGHTER_LAND
+brief: "Freighter touches down at Mos Pelgo: landing thrusters and gear."
+seed: 63
+layers:
+  # Landing thrusters spool down (a saw drone and a thrust-noise wash both falling and closing), the gear
+  # touches with a heavy clunk at 1.6 s and a little hydraulic sigh settles the ship.
+  - type: pcm
+    osc: saw
+    unison: [-12, 12]
+    pitch: [[0, 70], [1.6, 42]]
+    filter: {type: lp, cutoff: [[0, 700], [1.6, 220]], q: 1.8}
+    am: {rate: 6, depth: 0.15}
+    env: [[0, 0.9], [1.0, 0.8], [1.6, 0]]
+    drive: 1.5
+    gain: 0.8
+  - type: pcm
+    osc: noise
+    filter: {type: lp, cutoff: [[0, 2600], [1.55, 400]], q: 0.9}
+    env: [[0, 0], [0.05, 1], [1.0, 0.6], [1.6, 0]]
+    gain: 0.55
+  - type: pcm
+    at: 1.6
+    osc: sine
+    pitch: [[0, 110], [0.15, 45]]
+    env: [[0, 0], [0.003, 1], [0.08, 0.5], [0.3, 0]]
+    drive: 2.5
+    gain: 0.9
+  - type: noise
+    at: 1.6
+    nr43: [2, 3]
+    env: [[0, 0.8], [0.06, 0]]
+    gain: 0.3
+  - type: pcm
+    at: 1.85
+    osc: noise
+    filter: {type: bp, cutoff: [[0, 3000], [0.5, 1500]], q: 1.5}
+    env: [[0, 0], [0.04, 0.5], [0.5, 0]]
+    gain: 0.3

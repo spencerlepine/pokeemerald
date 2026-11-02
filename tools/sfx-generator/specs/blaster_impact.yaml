@@ -1,0 +1,22 @@
+name: blaster_impact
+constant: SE_BLASTER_IMPACT
+brief: "Blaster bolt impact: short spark-and-thud, five per BLASTER SHOT; also raid cutscenes when a bolt hits a wall."
+seed: 65
+layers:
+  # One impact: a sizzling spark (bright LFSR crack with a high hissing tail) on top of a short driven thud.
+  - type: noise
+    clock: [[0, 262144], [0.06, 65536]]
+    env: [[0, 1], [0.03, 0.5], [0.08, 0]]
+    gain: 0.45
+  - type: pcm
+    osc: noise
+    filter: {type: hp, cutoff: [[0, 4000], [0.2, 2500]], q: 0.8}
+    am: {rate: 45, depth: 0.5}
+    env: [[0, 0], [0.003, 1], [0.06, 0.4], [0.22, 0]]
+    gain: 0.5
+  - type: pcm
+    osc: sine
+    pitch: [[0, 170], [0.1, 55]]
+    env: [[0, 0], [0.002, 1], [0.04, 0.5], [0.13, 0]]
+    drive: 2.5
+    gain: 0.9
