@@ -126,7 +126,74 @@ class Area:
         # warps) that the grid does not model, so only redrawn towns and new areas get the reach check.
         if self.kind in ("town", "landmark") or self.replaces == "new":
             p += self.reach_problems(solid)
+            p += self.softlock_problems(solid)
         return p
+
+    def softlock_problems(self, solid):
+        """One-way moves must never trap the player. Ledges are jumped in their direction only (a `v` cell is
+        crossed from the cell north of it to the cell south of it); water counts only with SURF, so the check
+        runs twice: on foot, and with surf. A cell the player can reach but from which no exit, door or warp
+        can be reached again is a trap."""
+        LEDGE = {"v": (0, 1), "^": (0, -1), "<": (-1, 0), ">": (1, 0)}
+
+        def land(x, y, surf):
+            ch = self.cell(x, y)
+            return ch is not None and (x, y) not in solid and (walkable(ch) and ch not in LEDGE or (surf and ch == "~"))
+
+        def moves(x, y, surf):
+            for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+                nx, ny = x + dx, y + dy
+                ch = self.cell(nx, ny)
+                if ch in LEDGE:
+                    if LEDGE[ch] == (dx, dy) and land(nx + dx, ny + dy, surf):
+                        yield (nx + dx, ny + dy)
+                elif land(nx, ny, surf):
+                    yield (nx, ny)
+
+        def back_moves(x, y, surf):      # cells that can move into (x, y)
+            for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+                px, py = x - dx, y - dy
+                ch = self.cell(px, py)
+                if ch in LEDGE:
+                    if LEDGE[ch] == (dx, dy) and land(px - dx, py - dy, surf):
+                        yield (px - dx, py - dy)
+                elif land(px, py, surf):
+                    yield (px, py)
+
+        exits = []
+        for e in self.exits:
+            for c in e["cells"]:
+                exits.append({"north": (c, 0), "south": (c, self.h - 1), "west": (0, c), "east": (self.w - 1, c)}[e["edge"]])
+        for b in self.buildings:
+            if "door" in b:
+                exits.append((b["at"][0] + int(b["door"]), b["at"][1] + b["size"][1]))
+        for o in self.warps:
+            exits.append(tuple(o["at"]))
+        out = []
+        for surf in (False, True):
+            starts = [c for c in exits if land(*c, surf)]
+            if not starts:
+                continue
+            fwd, todo = set(starts), list(starts)
+            while todo:
+                c = todo.pop()
+                for n in moves(*c, surf):
+                    if n not in fwd:
+                        fwd.add(n); todo.append(n)
+            back, todo = set(starts), list(starts)
+            while todo:
+                c = todo.pop()
+                for n in back_moves(*c, surf):
+                    if n not in back:
+                        back.add(n); todo.append(n)
+            traps = sorted(fwd - back)
+            if traps:
+                x, y = traps[0]
+                out.append(f"softlock{' with surf' if surf else ' on foot'}: {len(traps)} reachable cells have no way "
+                           f"back to any exit, door or warp, e.g. [{x}, {y}] (a one-way ledge or water with no landing)")
+            if surf:
+                break
+        return out
 
     def reach_problems(self, solid):
         """Every exit, door, person and warp must be reachable on foot (or by surf) from the first

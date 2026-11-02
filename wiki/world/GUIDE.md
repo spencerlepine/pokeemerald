@@ -309,3 +309,85 @@ Overview: [shared/_planet.png](shared/_planet.png). 0 overworld areas, 0 cave ro
 
 New areas (not in vanilla): HIDEOUT (KIT), Millennium Falcon cabin, Rebel shuttle cabin, Sullustan transport cabin.
 
+
+## Progression and balance
+
+Emerald's progression table is kept as is (badges, wild and trainer levels per map; `wiki/database/area_progression.csv`). Each planet's band below is read from the vanilla maps its areas replace. A net-new area must name its gate (`depends_on` in `net_new.csv`, found through the `net:` id in the area's `todo`) and a level band inside the planet's band (`levels N-M` in its `story`). Problems are listed; an empty list means the new content fits.
+
+| Planet | Badges | Trainer levels | Wild levels | Gates seen |
+|---|---|---|---|---|
+| TATOOINE | 0-8 | 3-46 | 2-45 | flag:badge01-get, flag:badge03-get, flag:badge04-get, flag:badge05-get ... |
+| KASHYYYK | 1-8 | 7-27 | 5-45 | flag:badge02-get, flag:badge05-get, flag:badge07-get, flag:regi-doors-opened ... |
+| SULLUST | 3-8 | 16-78 | 5-45 | flag:badge04-get, flag:badge08-get, flag:sys-game-clear, item:hm-strength ... |
+| MUSTAFAR | 3-3 | 18-25 | 20-22 |  |
+| ENDOR | 5-7 | 14-33 | 5-45 | flag:badge02-get, flag:badge05-get, flag:regi-doors-opened, item:devon-scope ... |
+| BESPIN | 6-6 | 31-34 | 5-45 |  |
+| JEDHA | 6-6 | 32-32 | 5-45 | flag:badge05-get, item:hm-surf |
+| YAVIN 4 | 6-8 | 32-42 | 5-45 | flag:badge05-get, flag:badge07-get, item:hm-dive, item:hm-surf |
+| HOTH | 6-6 | ? | (5, 45) | flag:badge04-get, flag:badge05-get, item:hm-strength, item:hm-surf |
+| DAGOBAH | 7-8 | 15-43 | 5-50 | flag:badge03-get, flag:badge04-get, flag:badge05-get, flag:badge07-get ... |
+| KAMINO | 7-7 | 19-35 | 5-45 | flag:badge05-get, flag:badge07-get, item:hm-dive, item:hm-surf |
+| ILUM | 8-8 | 46-58 | 5-45 | flag:badge08-get, item:hm-waterfall |
+| GRAND ARENA | 8-8 | (44, 44) | ? | item:ss-ticket |
+| FELUCIA | 6-6 | ? | (5, 40) |  |
+| TYTHON | 8-8 | ? | ? | item:eon-ticket |
+| ATOLLON | ? | ? | ? |  |
+| MORTIS | 8-8 | ? | ? | item:mystic-ticket |
+| ASTEROID FIELD | 7-7 | ? | ? | item:mach-bike |
+| DEATH STAR | ? | ? | ? |  |
+| SHARED | ? | ? | ? |  |
+
+### Net-new areas
+
+| Area | Planet | Gate | Levels | Check |
+|---|---|---|---|---|
+| [Asteroid docking hollow](asteroid-field/interiors/asteroid-spire-hangar.yaml) | ASTEROID FIELD |  |  | no gate: name its net: id and a depends_on flag |
+| [TIBANNA REFINERY](bespin/tibanna-refinery.yaml) | BESPIN |  |  | no gate: name its net: id and a depends_on flag; trainers but no level band in story |
+| [Carbon-freezing annex](bespin/interiors/tibanna-refinery-annex.yaml) | BESPIN |  |  | no gate: name its net: id and a depends_on flag |
+| [Tibanna refinery](bespin/interiors/tibanna-refinery-interior.yaml) | BESPIN |  |  | no gate: name its net: id and a depends_on flag |
+| [Dagobah bog landing](dagobah/interiors/dagobah-hangar.yaml) | DAGOBAH |  |  | no gate: name its net: id and a depends_on flag |
+| [DEATH STAR DS-1](death-star/caves/death-star-ds-1.yaml) | DEATH STAR | flag:sys-game-clear | 60-70 | ok |
+| [DEATH STAR DS-2](death-star/caves/death-star-ds-2.yaml) | DEATH STAR | flag:sys-game-clear | 60-70 | ok |
+| [DEATH STAR DS-3](death-star/caves/death-star-ds-3.yaml) | DEATH STAR | flag:sys-game-clear | 60-70 | ok |
+| [DEATH STAR DS-4](death-star/caves/death-star-ds-4.yaml) | DEATH STAR | flag:sys-game-clear | 60-70 | ok |
+| [DEATH STAR DS-5](death-star/caves/death-star-ds-5.yaml) | DEATH STAR | flag:sys-game-clear | 60-70 | ok |
+| [DEATH STAR HANGAR](death-star/caves/death-star-hangar.yaml) | DEATH STAR | flag:sys-game-clear |  | trainers but no level band in story |
+| [ENDOR BATTLEFIELD](endor/endor-battlefield.yaml) | ENDOR |  |  | no gate: name its net: id and a depends_on flag; trainers but no level band in story |
+| [Abandoned shield bunker](endor/interiors/endor-battlefield-bunker.yaml) | ENDOR |  |  | no gate: name its net: id and a depends_on flag |
+| [Felucia reserve shuttle gate](felucia/interiors/felucia-hangar.yaml) | FELUCIA |  |  | no gate: name its net: id and a depends_on flag |
+| [Hoth survey pad hangar](hoth/interiors/hoth-hangar.yaml) | HOTH |  |  | no gate: name its net: id and a depends_on flag |
+| [Rebel survey outpost](hoth/interiors/hoth-survey-outpost.yaml) | HOTH |  |  | no gate: name its net: id and a depends_on flag |
+| [Tauntaun shelter](hoth/interiors/hoth-tauntaun-shelter.yaml) | HOTH |  |  | no gate: name its net: id and a depends_on flag |
+| [HOTH TUNDRA](hoth/hoth-tundra.yaml) | HOTH |  |  | no gate: name its net: id and a depends_on flag; trainers but no level band in story |
+| [Ilum landing hangar](ilum/interiors/ilum-hangar.yaml) | ILUM |  |  | no gate: name its net: id and a depends_on flag |
+| [Supply Depot](ilum/interiors/ilum-supply-depot.yaml) | ILUM |  |  | no gate: name its net: id and a depends_on flag |
+| [NIJEDHA](jedha/nijedha.yaml) | JEDHA |  |  | no gate: name its net: id and a depends_on flag; trainers but no level band in story |
+| [NiJedha Bacta Center](jedha/interiors/nijedha-bacta-center.yaml) | JEDHA |  |  | no gate: name its net: id and a depends_on flag |
+| [Guardians' quarters](jedha/interiors/nijedha-guardians-quarters.yaml) | JEDHA |  |  | no gate: name its net: id and a depends_on flag |
+| [Pilgrim hostel](jedha/interiors/nijedha-hostel.yaml) | JEDHA |  |  | no gate: name its net: id and a depends_on flag |
+| [Supply Depot](jedha/interiors/nijedha-supply-depot.yaml) | JEDHA |  |  | no gate: name its net: id and a depends_on flag |
+| [Temple of the Kyber](jedha/interiors/nijedha-temple-of-the-kyber.yaml) | JEDHA |  |  | no gate: name its net: id and a depends_on flag |
+| [Tipoca cloning hall](kamino/interiors/tipoca-city-cloning-hall.yaml) | KAMINO |  |  | no gate: name its net: id and a depends_on flag |
+| [Tipoca landing platform](kamino/interiors/tipoca-city-hangar.yaml) | KAMINO |  |  | no gate: name its net: id and a depends_on flag |
+| [Supply Depot](kamino/interiors/tipoca-city-supply-depot.yaml) | KAMINO |  |  | no gate: name its net: id and a depends_on flag |
+| [Kachirho supply depot](kashyyyk/interiors/kachirho-supply-depot.yaml) | KASHYYYK |  |  | no gate: name its net: id and a depends_on flag |
+| [RWOOKRRORRO](kashyyyk/rwookrrorro.yaml) | KASHYYYK |  |  | no gate: name its net: id and a depends_on flag; trainers but no level band in story |
+| [Rwookrrorro chief's hut](kashyyyk/interiors/rwookrrorro-chief-hut.yaml) | KASHYYYK |  |  | no gate: name its net: id and a depends_on flag |
+| [Rwookrrorro hut 1](kashyyyk/interiors/rwookrrorro-hut-1.yaml) | KASHYYYK |  |  | no gate: name its net: id and a depends_on flag |
+| [Rwookrrorro hut 2](kashyyyk/interiors/rwookrrorro-hut-2.yaml) | KASHYYYK |  |  | no gate: name its net: id and a depends_on flag |
+| [Mustafar mining control](mustafar/interiors/mustafar-mining-control.yaml) | MUSTAFAR |  |  | no gate: name its net: id and a depends_on flag |
+| [MINING FACILITY](mustafar/mustafar-mining-facility.yaml) | MUSTAFAR |  |  | no gate: name its net: id and a depends_on flag; trainers but no level band in story |
+| [Rebel shuttle cabin](shared/interiors/hangar-tatooine-endor.yaml) | SHARED |  |  | no gate: name its net: id and a depends_on flag |
+| [Millennium Falcon cabin](shared/interiors/hangar-tatooine-kashyyyk.yaml) | SHARED |  |  | no gate: name its net: id and a depends_on flag |
+| [Sullustan transport cabin](shared/interiors/hangar-tatooine-sullust.yaml) | SHARED |  |  | no gate: name its net: id and a depends_on flag |
+| [HIDEOUT (KIT)](shared/interiors/hideout-kit.yaml) | SHARED |  |  | ok |
+| [BEN'S HUT](tatooine/bens-hut.yaml) | TATOOINE |  |  | no gate: name its net: id and a depends_on flag; trainers but no level band in story |
+| [Ben's hut](tatooine/interiors/bens-hut-interior.yaml) | TATOOINE |  |  | no gate: name its net: id and a depends_on flag |
+| [JABBA'S PALACE](tatooine/jabbas-palace.yaml) | TATOOINE |  |  | no gate: name its net: id and a depends_on flag; trainers but no level band in story |
+| [Jabba's barge dock](tatooine/interiors/jabbas-palace-barge-dock.yaml) | TATOOINE |  |  | no gate: name its net: id and a depends_on flag |
+| [Jabba's throne room](tatooine/interiors/jabbas-palace-throne-room.yaml) | TATOOINE |  |  | no gate: name its net: id and a depends_on flag |
+| [Mos Espa podrace grandstand](tatooine/interiors/mos-espa-podrace-arena.yaml) | TATOOINE |  |  | no gate: name its net: id and a depends_on flag |
+| [Tosche Station power room](tatooine/interiors/tosche-station-power-station.yaml) | TATOOINE |  |  | no gate: name its net: id and a depends_on flag |
+| [Tython landing pad](tython/interiors/tython-hangar.yaml) | TYTHON |  |  | no gate: name its net: id and a depends_on flag |
+
+42 net-new areas with a balance problem.

@@ -9,6 +9,7 @@ python3 -m blockout todo [--status S] [--planet P] [--kind K] [--tool T] [--csv]
 python3 -m blockout todo --set <area-id or art id> <status>                           -> record progress"""
 import argparse
 import csv
+import re
 import glob
 import os
 import sys
@@ -536,9 +537,70 @@ def cmd_guide(a):
               f"row for each of the {len(ship_rooms)} ship rooms; {one_way} links have no way straight back (ledges, holes, "
               f"one-way warps, or a back door still missing). From Mos Pelgo, {len(seen & set(by_id))} of {len(areas)} areas can be reached."
               + (f" Not reachable yet: {', '.join(lost)}." if lost else ""), ""]
+    L += progression_section(areas, by_id, planets)
     out = WORLD / "GUIDE.md"
     out.write_text("\n".join(L) + "\n")
     print(out)
+
+
+def _slug(camel: str) -> str:
+    return re.sub(r"(?<=[a-z0-9])(?=[A-Z])", "-", camel.replace("_", "-")).lower()
+
+
+def progression_section(areas, by_id, planets):
+    """Balance check (owner, 2026-11-02): every planet's badge and level band from Emerald's own table
+    (`wiki/database/area_progression.csv`, unchanged by the hotswap), and every net-new area checked against
+    it: it must name a gate (a flag or item in `net_new.csv` `depends_on`, matched by the `net:` id in its
+    yaml) and a level band inside its planet's band. Anything missing is listed here as a problem."""
+    prog = {r["map_id"]: r for r in csv.DictReader(open(V.ROOT / "wiki" / "database" / "area_progression.csv"))}
+    net = {r["id"]: r for r in csv.DictReader(open(V.ROOT / "wiki" / "database" / "net_new.csv"))}
+    L = ["", "## Progression and balance", "",
+         "Emerald's progression table is kept as is (badges, wild and trainer levels per map; `wiki/database/area_progression.csv`). "
+         "Each planet's band below is read from the vanilla maps its areas replace. A net-new area must name its gate "
+         "(`depends_on` in `net_new.csv`, found through the `net:` id in the area's `todo`) and a level band inside the "
+         "planet's band (`levels N-M` in its `story`). Problems are listed; an empty list means the new content fits.", "",
+         "| Planet | Badges | Trainer levels | Wild levels | Gates seen |", "|---|---|---|---|---|"]
+    band = {}
+    for pl in planets:
+        mine = [x for x in areas if x.planet == pl]
+        if not mine:
+            continue
+        rows = [prog["map:" + _slug(x.replaces)] for x in mine if x.replaces != "new" and "map:" + _slug(x.replaces) in prog]
+        def rng(key_lo, key_hi):
+            lo = [int(r[key_lo]) for r in rows if r[key_lo]]
+            hi = [int(r[key_hi]) for r in rows if r[key_hi]]
+            return (min(lo), max(hi)) if lo and hi else None
+        badges = sorted({int(r["badges_expected"]) for r in rows if r["badges_expected"]})
+        tl, wl = rng("trainer_level_min", "trainer_level_max"), rng("wild_any_min", "wild_any_max")
+        gates = sorted({g for r in rows for g in r["requires"].split("|") if g})
+        band[pl] = (badges, tl, wl)
+        L.append(f"| {pl} | {badges[0]}-{badges[-1] if badges else ''} | {tl[0]}-{tl[1]} | {wl[0]}-{wl[1]} | {', '.join(gates[:4])}{' ...' if len(gates) > 4 else ''} |"
+                 if badges and tl and wl else f"| {pl} | {'-'.join(map(str, badges[:1] + badges[-1:])) or '?'} | {tl or '?'} | {wl or '?'} | {', '.join(gates[:4])} |")
+    L += ["", "### Net-new areas", "", "| Area | Planet | Gate | Levels | Check |", "|---|---|---|---|---|"]
+    problems = 0
+    for x in sorted(areas, key=lambda a: (a.planet, a.id)):
+        if x.replaces != "new":
+            continue
+        text = " ".join(str(t) for t in x.todo) + " " + (x.raw.get("story") or "") + " " + (x.raw.get("notes") or "")
+        ids = re.findall(r"net:[a-z0-9-]+", text)
+        gate = "; ".join(sorted({net[i]["depends_on"] for i in ids if i in net and net[i]["depends_on"]}))
+        m = re.search(r"levels?\s+(\d+)\s*-\s*(\d+)", text)
+        lv = (int(m.group(1)), int(m.group(2))) if m else None
+        b = band.get(x.planet)
+        issues = []
+        if x.kind != "interior" or x.people:
+            if not gate and not any(i in net for i in ids):
+                issues.append("no gate: name its net: id and a depends_on flag")
+            if lv is None and x.kind in ("dungeon", "route", "landmark", "town") and any(p.get("role") == "trainer" for p in x.people):
+                issues.append("trainers but no level band in story")
+            if lv and b and b[1] and not (b[1][0] - 5 <= lv[0] and lv[1] <= max(b[1][1] + 5, 70 if "sys-game-clear" in gate else 0)):
+                issues.append(f"levels {lv[0]}-{lv[1]} outside the planet band {b[1][0]}-{b[1][1]}")
+        if issues:
+            problems += 1
+        L.append(f"| [{x.name}]({os.path.relpath(x.path, WORLD)}) | {x.planet} | {gate or ids[0] if ids else gate} | "
+                 f"{f'{lv[0]}-{lv[1]}' if lv else ''} | {'; '.join(issues) if issues else 'ok'} |")
+    L += ["", f"{problems} net-new areas with a balance problem."]
+    return L
 
 
 def main(argv=None):
