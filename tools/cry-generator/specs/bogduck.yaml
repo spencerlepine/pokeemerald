@@ -1,0 +1,18 @@
+name: bogduck
+slot: psyduck
+brief: "BOGDUCK: creature call that fits its look and size. Headache-prone swamp duck."
+kind: creature
+size: 0.35
+seed: 211
+layers:
+  # Family DNA (bog line): a nasal, quacking saw+pulse throat on "ae -> er" with a wobbly pitch.
+  # The bogduck: a dazed, wobbling "kwaa-aaa?" that sags as if its head hurts.
+  - type: voice
+    pitch: [[0, 420], [0.05, 560], [0.2, 500], [0.45, 420], [0.6, 360]]
+    source: {saw: 0.7, pulse: 0.7, pulse_width: 0.1, noise: 0.06}
+    vowels: [[0, ae], [0.15, a], [0.4, ae], [0.6, er]]
+    env: [[0, 0], [0.01, 1], [0.15, 0.7], [0.25, 0.85], [0.45, 0.6], [0.62, 0]]
+    formant_scale: 1.15
+    vibrato: {rate: 7, depth: 0.06}
+    jitter: 0.02
+    drive: 1.5

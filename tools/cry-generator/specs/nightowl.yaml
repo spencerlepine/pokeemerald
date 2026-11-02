@@ -1,0 +1,29 @@
+name: nightowl
+slot: noctowl
+brief: "NIGHTOWL: creature call that fits its look and size. Wise night owl."
+kind: creature
+size: 0.55
+seed: 222
+layers:
+  # Endor owl line (breathy sine+pulse hoots on "u" with an upward scoop), the wise elder: a deeper,
+  # slower three-note "hoo... hoo-HOOOO" with a soft rasp of breath behind it.
+  - type: voice
+    pitch: [[0, 340], [0.05, 400], [0.16, 370]]
+    source: {sine: 0.8, pulse: 0.5, pulse_width: 0.4, noise: 0.1}
+    vowels: [[0, u], [0.16, o]]
+    env: [[0, 0], [0.02, 1], [0.12, 0.7], [0.17, 0]]
+  - type: voice
+    at: 0.26
+    pitch: [[0, 340], [0.05, 400], [0.14, 370]]
+    source: {sine: 0.8, pulse: 0.5, pulse_width: 0.4, noise: 0.1}
+    vowels: [[0, u], [0.14, o]]
+    env: [[0, 0], [0.02, 0.9], [0.1, 0.7], [0.15, 0]]
+  - type: voice
+    at: 0.44
+    pitch: [[0, 360], [0.08, 460], [0.35, 420], [0.52, 330]]
+    source: {sine: 0.8, pulse: 0.5, pulse_width: 0.4, noise: 0.1}
+    vowels: [[0, u], [0.2, o], [0.52, u]]
+    env: [[0, 0], [0.02, 1], [0.38, 0.75], [0.54, 0]]
+    vibrato: {rate: 7, depth: 0.025}
+    growl: 0.1
+    growl_rate: 25

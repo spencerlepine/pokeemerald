@@ -1,0 +1,21 @@
+name: duskowl
+slot: hoothoot
+brief: "DUSKOWL: creature call that fits its look and size. One-legged forest owl."
+kind: creature
+size: 0.32
+seed: 221
+layers:
+  # Family DNA (Endor owl line): soft, breathy sine+pulse hoots on "u" with a little upward scoop.
+  # The duskowl: a quick, bouncy "hoo-HOO".
+  - type: voice
+    pitch: [[0, 480], [0.04, 560], [0.13, 520]]
+    source: {sine: 0.8, pulse: 0.4, pulse_width: 0.4, noise: 0.08}
+    vowels: [[0, u], [0.13, o]]
+    env: [[0, 0], [0.015, 1], [0.1, 0.7], [0.14, 0]]
+  - type: voice
+    at: 0.18
+    pitch: [[0, 540], [0.05, 660], [0.22, 600], [0.3, 520]]
+    source: {sine: 0.8, pulse: 0.4, pulse_width: 0.4, noise: 0.08}
+    vowels: [[0, u], [0.15, o], [0.3, u]]
+    env: [[0, 0], [0.015, 1], [0.22, 0.75], [0.31, 0]]
+    vibrato: {rate: 9, depth: 0.02}

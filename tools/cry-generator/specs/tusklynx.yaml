@@ -1,0 +1,29 @@
+name: tusklynx
+slot: persian
+brief: "TUSKLYNX: creature call that fits its look and size. Sleek, vain tusk-cat."
+kind: creature
+size: 0.4
+seed: 242
+layers:
+  # Tusk-cat line (feline saw+pulse "mrow" sliding i -> a -> o, tusk click), sleek and vain: a tusk
+  # click, a haughty, drawn-out "mrraaow" that purrs at the start and curls down with a hiss.
+  - type: click
+    times: [0.0]
+    gain: 0.4
+  - type: voice
+    at: 0.02
+    pitch: [[0, 360], [0.15, 560], [0.5, 500], [0.78, 340]]
+    source: {saw: 0.8, pulse: 0.5, pulse_width: 0.25, noise: 0.1}
+    vowels: [[0, er], [0.15, ae], [0.45, a], [0.78, o]]
+    env: [[0, 0], [0.02, 0.8], [0.15, 1], [0.6, 0.75], [0.8, 0]]
+    vibrato: {rate: 6, depth: 0.02}
+    growl: 0.35
+    growl_rate: 26
+    jitter: 0.02
+    drive: 1.8
+  - type: noise
+    at: 0.7
+    band: [[0, 3000], [0.15, 2400]]
+    q: 1.5
+    env: [[0, 0], [0.02, 0.35], [0.17, 0]]
+    gain: 0.3

@@ -1,0 +1,25 @@
+name: scurrydash
+slot: linoone
+brief: "SCURRYDASH: creature call that fits its look and size. Grown scurrier that rushes straight at anything shiny."
+kind: creature
+size: 0.35
+seed: 232
+layers:
+  # Scurrier line (ratty pulse squeaks on "i -> e", sniffing, scrap tink), grown and single-minded: a
+  # sniff, then a long, straight, rising rush-call with a growl that gallops in pulses and ends excited.
+  - type: noise
+    band: [2300]
+    q: 2
+    env: [[0, 0], [0.01, 0.45], [0.035, 0], [0.045, 0.45], [0.07, 0], [0.08, 0.45], [0.105, 0]]
+    gain: 0.35
+  - type: voice
+    at: 0.12
+    pitch: [[0, 420], [0.3, 560], [0.8, 680], [1.1, 720], [1.25, 560]]
+    pitch_step: 0.04
+    source: {pulse: 0.9, saw: 0.4, pulse_width: 0.18, noise: 0.08}
+    vowels: [[0, e], [0.4, ae], [0.9, i], [1.25, e]]
+    env: [[0, 0], [0.01, 1], [0.1, 0.6], [0.2, 0.9], [0.3, 0.6], [0.4, 0.9], [0.5, 0.6], [0.6, 0.9], [0.7, 0.6], [0.8, 0.95], [1.1, 0.8], [1.27, 0]]
+    growl: 0.3
+    growl_rate: 38
+    jitter: 0.02
+    drive: 1.8

@@ -1,0 +1,29 @@
+name: scurrier
+slot: zigzagoon
+brief: "SCURRIER: creature call that fits its look and size. Scrap-hunting scurrier that zigzags around picking things up (Pickup)."
+kind: creature
+size: 0.2
+seed: 231
+layers:
+  # Family DNA (scurrier line): ratty squeaks from a pulse throat on "i -> e" that zigzag up and down
+  # in frame-steps, plus sniffing and a scrap-metal tink. The scurrier: a zigzag "chee-chi-chee!".
+  - type: noise
+    band: [2600]
+    q: 2
+    env: [[0, 0], [0.01, 0.4], [0.03, 0], [0.04, 0.4], [0.06, 0]]
+    gain: 0.35
+  - type: voice
+    at: 0.07
+    pitch: [[0, 700], [0.06, 900], [0.07, 640], [0.13, 820], [0.14, 600], [0.26, 860], [0.4, 700]]
+    pitch_step: 0.03
+    source: {pulse: 0.9, saw: 0.3, pulse_width: 0.18, noise: 0.06}
+    vowels: [[0, i], [0.14, e], [0.3, i], [0.4, e]]
+    env: [[0, 0], [0.008, 1], [0.065, 0.5], [0.075, 1], [0.135, 0.5], [0.145, 1], [0.3, 0.8], [0.42, 0]]
+    jitter: 0.02
+    drive: 1.5
+  - type: tone
+    at: 0.42
+    wave: tri
+    pitch: [[0, 2600], [0.06, 2400]]
+    env: [[0, 0], [0.003, 0.6], [0.08, 0]]
+    gain: 0.35

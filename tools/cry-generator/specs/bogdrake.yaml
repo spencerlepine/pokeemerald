@@ -1,0 +1,20 @@
+name: bogdrake
+slot: golduck
+brief: "BOGDRAKE: creature call that fits its look and size. Sleek swimming swamp drake."
+kind: creature
+size: 0.62
+seed: 212
+layers:
+  # Bog line (nasal saw+pulse quack on "ae -> er", wobbly pitch), now sleek and confident: a sharp,
+  # lower, focused "KWAH-ah" with a touch of growl and no daze.
+  - type: voice
+    pitch: [[0, 280], [0.04, 420], [0.25, 380], [0.5, 280]]
+    source: {saw: 0.8, pulse: 0.7, pulse_width: 0.1, noise: 0.06}
+    vowels: [[0, ae], [0.12, a], [0.5, er]]
+    env: [[0, 0], [0.008, 1], [0.3, 0.8], [0.52, 0]]
+    formant_scale: 1.15
+    vibrato: {rate: 7, depth: 0.025}
+    growl: 0.3
+    growl_rate: 34
+    jitter: 0.015
+    drive: 2

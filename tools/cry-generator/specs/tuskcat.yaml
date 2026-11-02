@@ -1,0 +1,24 @@
+name: tuskcat
+slot: meowth
+brief: "TUSKCAT: creature call that fits its look and size. Scruffy cat that hoards credits."
+kind: creature
+size: 0.18
+seed: 241
+layers:
+  # Family DNA (tusk-cat line): a feline saw+pulse throat sliding "i -> a -> o" (a "mrow"), with a
+  # tusk click. The scruffy kitten: a cocky, scratchy "nyah-ow" and a coin-like tink.
+  - type: voice
+    pitch: [[0, 560], [0.08, 760], [0.25, 640], [0.36, 500]]
+    source: {saw: 0.7, pulse: 0.5, pulse_width: 0.25, noise: 0.1}
+    vowels: [[0, i], [0.1, ae], [0.25, a], [0.36, o]]
+    env: [[0, 0], [0.012, 1], [0.27, 0.75], [0.37, 0]]
+    growl: 0.2
+    growl_rate: 46
+    jitter: 0.025
+    drive: 1.6
+  - type: tone
+    at: 0.37
+    wave: tri
+    pitch: [[0, 2900], [0.05, 2800]]
+    env: [[0, 0], [0.003, 0.5], [0.07, 0]]
+    gain: 0.3
