@@ -1,10 +1,12 @@
 """Draw one area as a flat shapes-and-colours mockup: planet-coloured terrain, simple 3/4-view buildings,
 props as basic shapes, and pink-family figures for people. 16 px per map cell, like the game."""
 import math
+import zlib
 
 from PIL import Image, ImageDraw, ImageFont
 
 from .style import shade
+from . import build as _build
 
 C = 16
 TERRAIN = {".": "ground", ":": "path", '"': "wild", "~": "water", "=": "bridge", "T": "nature", "#": "cliff",
@@ -132,73 +134,7 @@ def _nature(d, x0, y0, col, kind, r, stacked):
 
 
 # ---------------------------------------------------------------------------------------------- buildings
-def building(d, b, st):
-    (cx, cy), (cw, ch) = b["at"], b["size"]
-    x0, y0, W, H = cx * C, cy * C, cw * C, ch * C
-    x1, y1 = x0 + W - 1, y0 + H - 1
-    wall, roof, trim = st["wall"], st["roof"], st["trim"]
-    out = shade(trim, -0.4)
-    kind = st["kind"]
-    wall_h = max(C, min(int(H * 0.42), 2 * C)) if kind != "tower" else int(H * 0.7)
-    wy = y1 - wall_h + 1
-    # shadow on the ground to the right
-    d.rectangle([x1 + 1, y0 + 6, min(x1 + 4, x1 + 4), y1], fill=(0, 0, 0, 60))
-    if kind == "dome":
-        d.rectangle([x0 + 1, wy, x1 - 1, y1], fill=wall, outline=out)
-        d.ellipse([x0, y0, x1, wy + wall_h // 2], fill=roof, outline=out)
-        d.arc([x0 + W // 5, y0 + 3, x1 - W // 5, wy], 200, 320, fill=shade(roof, 0.35), width=2)
-    elif kind == "pitched":
-        d.rectangle([x0 + 2, wy, x1 - 2, y1], fill=wall, outline=out)
-        d.polygon([(x0, wy + 2), (x0 + W * 0.18, y0), (x1 - W * 0.18, y0), (x1, wy + 2)], fill=roof, outline=out)
-        d.line([(x0 + W * 0.18, y0 + 1), (x1 - W * 0.18, y0 + 1)], fill=shade(roof, 0.3), width=2)
-    elif kind == "stepped":
-        tiers = 3
-        for t in range(tiers):
-            ix = int(W * 0.12 * t)
-            ty0 = y0 + int((H - wall_h) * t / tiers)
-            d.rectangle([x0 + ix, ty0, x1 - ix, y1 - int(wall_h * 0.25 * t)], fill=shade(roof, 0.12 * t), outline=out)
-        d.rectangle([x0, wy, x1, y1], fill=wall, outline=out)
-    elif kind == "tower":
-        d.rectangle([x0 + 1, wy, x1 - 1, y1], fill=wall, outline=out)
-        d.rectangle([x0, y0, x1, wy + 2], fill=roof, outline=out)
-        for wx in range(x0 + 5, x1 - 6, 8):
-            for wyy in range(wy + 4, y1 - 14, 9):
-                d.rectangle([wx, wyy, wx + 3, wyy + 4], fill=shade(trim, 0.2))
-    elif kind == "hall":
-        d.rectangle([x0, wy, x1, y1], fill=wall, outline=out)
-        d.rectangle([x0, y0, x1, wy], fill=roof, outline=out)
-        mx, my = (x0 + x1) // 2, (y0 + wy) // 2
-        rr = max(4, min(W, wy - y0) // 3)
-        d.ellipse([mx - rr, my - rr, mx + rr, my + rr], outline=shade(roof, 0.45), width=2)
-        d.rectangle([x0, wy, x1, wy + 3], fill=trim)
-    elif kind == "dish":
-        d.rectangle([x0 + 1, wy, x1 - 1, y1], fill=wall, outline=out)
-        d.ellipse([x0, y0, x1, wy + wall_h // 2], fill=roof, outline=out)
-        d.ellipse([x0 + W // 4, y0 + (wy - y0) // 4, x1 - W // 4, wy - (wy - y0) // 6], fill=shade(roof, -0.35))
-    elif kind == "platform":
-        d.rectangle([x0, y0, x1, wy], fill=roof, outline=out)
-        for k in range(x0 + 4, x1, 10):
-            d.line([k, y0 + 2, k + 4, wy - 2], fill=shade(roof, 0.25), width=2)
-        d.rectangle([x0, wy, x1, y1], fill=wall, outline=out)
-    else:   # box
-        d.rectangle([x0 + 1, wy, x1 - 1, y1], fill=wall, outline=out)
-        d.rectangle([x0, y0, x1, wy + 1], fill=roof, outline=out)
-        d.line([x0 + 1, wy - 1, x1 - 1, wy - 1], fill=shade(roof, -0.25))
-    # windows on the wall, then the door
-    door = b.get("door")
-    if kind not in ("tower", "platform"):
-        for k in range(cw):
-            if door is not None and abs(k - int(door)) < 1:
-                continue
-            if k % 2 == 1 and wall_h >= C:
-                wx = x0 + k * C + 5
-                d.rectangle([wx, wy + 5, wx + 5, wy + 9], fill=shade(trim, 0.15), outline=out)
-    if door is not None:
-        dx = x0 + int(door) * C
-        dw = C * 2 if kind == "platform" and cw >= 4 else C
-        dx = dx - (C // 2 if dw > C else 0)
-        d.rectangle([dx + 3, y1 - 12, dx + dw - 4, y1], fill=shade(trim, -0.2), outline=out)
-        d.rectangle([dx + 5, y1 - 10, dx + dw - 6, y1 - 6], fill=shade(trim, 0.25))
+# Buildings live in build.py (the 3/4 top-down projection, footprints and building types).
 
 
 # ---------------------------------------------------------------------------------------------- props
@@ -425,8 +361,13 @@ def area(doc, styles, labels=True):
     pieces = [("building", b) for b in doc.get("buildings") or []] + [("prop", p) for p in doc.get("props") or []]
     pieces.sort(key=lambda kp: kp[1]["at"][1] + kp[1].get("size", [1, 1])[1])
     for kind, o in pieces:
-        st = styles.shape(o.get("art", ""), planet, kind)
-        (building if kind == "building" else prop)(d, o, st)
+        seed = _h(zlib.crc32(o.get("art", "").encode()), o["at"][0], o["at"][1])
+        st = styles.shape(o.get("art", ""), planet, kind, seed)
+        if kind == "building":
+            st["ground"] = pal["ground"]
+            _build.building(d, o, st, seed)
+        else:
+            prop(d, o, st)
     for w in doc.get("warps") or []:
         warp(d, w, grid)
     for s in doc.get("signs") or []:

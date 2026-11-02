@@ -44,10 +44,14 @@ The owner split the remaining work into phases on 2026-11-02.
    - Every area on every planet is laid out in grey placeholder tiles with pink people and signs. That is 528 areas, all `BLOCKOUT`, none `APPROVED`. A coverage audit (2026-11-02) matched every vanilla map, every location in `wiki/mapping/locations.csv` and every net-new area to an area file.
    - Buildings are sized.
    - Every piece is listed as a TODO in `INDEX.csv`.
-2. **Dumb shapes and colours: FIRST PASS DONE (2026-11-02), waiting for the owner's look.** All 528 areas are drawn
+2. **Dumb shapes and colours: SECOND PASS DONE (2026-11-02), waiting for the owner's colour guidance.** All 528 areas are drawn
    in flat colours and simple shapes by [`tools/mockup`](tools/mockup/README.md) into [`wiki/mockup/`](wiki/mockup/README.md).
    It is a layer on top of phase 1: it reads `wiki/world/` and never writes there (owner's rule), so it can be scrapped
    and redrawn. Iterate through `wiki/mockup/styles.yaml` (colours and shapes) and `wiki/mockup/overrides/<area>.yaml`.
+   Owner rules for this phase: keep the game's **top-down 45° view** (round roofs are ovals, never circles), and
+   vary building shapes beyond roofs: footprints (L, octagon, courtyard, wings) and types (bunkers, half-buried,
+   sunken, stilts). The building types live in `tools/mockup/mockup/build.py`; `wiki/mockup/_buildings.png`
+   shows them all. The owner wants images shown in the chat, not left in folders for them to find.
 3. **Real art.** This resumes the paused art tools. The first art step is calibrating the Fortree tree house in
    [`tools/world-art`](tools/world-art/README.md) (STYLE.md section 9). The tile pipeline is in
    [`tools/tile-generator/PLAN.md`](tools/tile-generator/PLAN.md).
@@ -85,7 +89,8 @@ Before pushing world changes, from `tools/blockout/` run:
 
 ## Pending items
 
-- **Owner feedback on the phase 2 mockup.** Start with `wiki/mockup/tatooine/_planet.png` and the town sheets.
+- **Owner colour guidance on the phase 2 mockup.** Palette ideas were proposed per planet in the chat; apply
+  the owner's picks in `wiki/mockup/styles.yaml`.
 - **Owner review of the blockout.** Review planet by planet, start with Tatooine. Set `status: APPROVED` on each area the
   owner signs off.
 - **Small known issue:** Routes 115 and 116 overlap by 4x4 cells at one corner in the Tatooine layout.

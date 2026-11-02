@@ -100,6 +100,27 @@ def cmd_world(a):
     print("_world.png", world.size)
 
 
+def cmd_builds(a):
+    """One sheet with every building type at three sizes, in Tatooine colours: wiki/mockup/_buildings.png."""
+    from . import build
+    st = Styles()
+    pal, _ = st.terrain("TATOOINE")
+    mat = st.material("TATOOINE")
+    names = [n for n in dict.fromkeys(build.BUILDS) if n != "box"]
+    sizes, cols, CW, CH = [(4, 3), (5, 4), (7, 5)], 6, 9, 7
+    rows = (len(names) * len(sizes) + cols - 1) // cols
+    img = Image.new("RGB", (cols * CW * draw.C, rows * CH * draw.C), pal["ground"])
+    d = ImageDraw.Draw(img, "RGBA")
+    for i, (n, (w, h)) in enumerate((n, s) for n in names for s in sizes):
+        gx, gy = (i % cols) * CW + 1, (i // cols) * CH + 1
+        b = {"at": [gx, gy + 5 - h], "size": [w, h], "door": w // 2}
+        style = dict(mat, fill=mat["wall"], ring=mat["trim"], ground=pal["ground"], build=n)
+        build.building(d, b, style, 7919 * (i + 1))
+        d.text((gx * draw.C, (gy + 5) * draw.C + 4), f"{n}  {w}x{h}", font=draw.F, fill=(40, 30, 20))
+    img.save(MOCK / "_buildings.png")
+    print("_buildings.png", img.size)
+
+
 def cmd_missing(a):
     st = Styles()
     seen = set()
@@ -124,5 +145,6 @@ def main(argv=None):
     w = sub.add_parser("world")
     w.add_argument("--cell", type=int, default=4, help="px per cell on the planet sheets")
     sub.add_parser("missing")
+    sub.add_parser("builds", help="sheet of every building type")
     a = ap.parse_args(argv)
-    {"render": cmd_render, "world": cmd_world, "missing": cmd_missing}[a.cmd](a)
+    {"render": cmd_render, "world": cmd_world, "missing": cmd_missing, "builds": cmd_builds}[a.cmd](a)

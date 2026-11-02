@@ -12,14 +12,20 @@ phase 1, so the whole folder can be thrown away and redrawn.
 | [`_world.png`](_world.png) | Every planet's overworld, one panel each |
 | `<planet>/_planet.png` | One planet's towns, routes and landmarks stitched together |
 | `<planet>/<area>.png`, `<planet>/caves/`, `<planet>/interiors/` | One area each, same folders as phase 1 |
+| [`_buildings.png`](_buildings.png) | Every building type at three sizes (`python3 -m mockup builds`) |
 | [`styles.yaml`](styles.yaml) | Colours per planet and one shape per building and prop type |
 | `overrides/<area>.yaml` | Mockup-only tweaks for one area (hide, move, add, restyle a piece) |
 
 How to read a mockup:
-- Buildings: roof on top, front wall below with windows and the door; the name is printed on the roof.
+- Buildings are drawn in the game's top-down 3/4 view: the roof is the footprint seen from above, the south
+  wall shows below it with windows and the door, and round buildings are ovals. Footprints vary (L, octagon,
+  T, courtyard, wings), and so do types: domes, cones, quonsets, towers, stepped temples, bunkers in earth
+  berms, half-buried mounds, sunken courtyards, stilt houses, arenas and landing decks. The name is printed
+  on the roof.
 - Props: trees, rocks, crates, tanks, vehicles and ships as simple shapes.
 - People: pink figures. Gold ring = story character, red ring = trainer, plain = townsfolk. Small balls are items.
 - Signs are brown boards; dark doorways are warps (cave mouths, hatches); white arrows mark exits.
 
-Status: first pass of all 528 areas, waiting for the owner's look. Iterate here (styles and overrides);
+Status: second pass (2026-11-02): true 3/4 view and varied building shapes, all 528 areas. Colours are
+still the first guess and wait for the owner's guidance. Iterate here (styles and overrides);
 change phase 1 only when a layout itself is wrong.

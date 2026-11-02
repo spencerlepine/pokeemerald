@@ -39,19 +39,27 @@ class Styles:
         m.update(self.raw["material"].get(planet) or {})
         return {k: hexrgb(v) for k, v in m.items()}
 
-    def shape(self, art, planet, piece_kind):
-        """Resolved style for one piece: its catalogue entry, filled in from the planet material."""
+    def shape(self, art, planet, piece_kind, seed=None):
+        """Resolved style for one piece: its catalogue entry, filled in from the planet material.
+        `variants` (a list of partial entries) picks one by `seed`, so the same art can vary per spot."""
         s = dict(self.shapes.get(art) or {})
         mat = self.material(planet)
         if not s:
             s = {"kind": "box" if piece_kind == "building" else "slab", "unknown": True}
-        out = {"kind": s["kind"], "label": s.get("label"), "form": s.get("form"), "big": s.get("big"),
-               "tall": s.get("tall"), "count": s.get("count"), "mark": s.get("mark"), "unknown": s.get("unknown")}
+        vs = s.pop("variants", None)
+        if vs and seed is not None:
+            s.update(vs[seed % len(vs)])
+        out = dict(s)
+        out.setdefault("kind", "box")
+        for k in ("label", "form", "big", "tall", "count", "mark", "unknown"):
+            out.setdefault(k, None)
         out["wall"] = hexrgb(s["wall"]) if "wall" in s else mat["wall"]
         out["roof"] = hexrgb(s["roof"]) if "roof" in s else mat["roof"]
         out["trim"] = hexrgb(s["trim"]) if "trim" in s else mat["trim"]
         out["fill"] = hexrgb(s["fill"]) if "fill" in s else mat["wall"]
         out["ring"] = hexrgb(s["ring"]) if "ring" in s else mat["trim"]
+        if "field" in s:
+            out["field"] = hexrgb(s["field"])
         return out
 
 
