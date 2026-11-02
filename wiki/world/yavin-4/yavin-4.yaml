@@ -5,181 +5,174 @@ kind: town
 replaces: MossdeepCity
 status: BLOCKOUT
 art_status: pending-final-art
-story: 'Secret Rebel base in the jungle: the Massassi Temple is Kanan and Ezra''s Force arena, X-wings wait by the hangar (vanilla Space Center) and Leia keeps quarters
-  here.'
-notes: 'yavin-4 (town, 70x44): the Rebel base: the Massassi Temple (huge stepped pyramid, the gym, taller than the map, partly seen), the hangar with X-wings outside,
-  Leia''s quarters · need: the temple as a landmark set piece (giant), X-wings (wedge with four wings), jungle trunks.'
 pos: [0, 0]
+story: 'Secret Rebel base in the jungle: the Massassi Temple is Kanan and Ezra''s Force arena, X-wings wait by the Rebel hangar and Leia keeps quarters here. The
+  main road runs from the west gate past the temple to the hangar; the hangar road leads north to Route 125.'
+notes: 'yavin-4 (town, 56x36): the Rebel base in a jungle clearing: main road from the west gate, the temple and the hangar in the north row, the barracks in the
+  south row, the hangar road north with the X-wing strip beside it · need: the temple as a landmark set piece (giant), X-wings (wedge with four wings), jungle trunks.'
 grid: |
-  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT::TTTT::TTTTTTTTTTTTTTTTTTTT::TTTTTTTTTT
-  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT::TTTT::TTTTTTTTTTTTTTTTTTTT::TTTTTTTTTT
-  TTTTTTTTTTTTTTTT.........TTTTT::TTTT::TTTTTTTTTTTTTTTTTTTT::TTTTTTTTTT
-  TTTTTTTTTTTTTT...............T::TTTT::.......TTTTTTTTTTTTT::TTTTTTTTTT
-  TTTTTTTTTTTTT.......................::..........TTTTTTTTTT::TTTTTTTTTT
-  TTTTTTTTTTTT........................::............TTTTTTTT::TTTTTTTTTT
-  TTTT..TTTTTT........................::..............TTTTTT::TTTTTTTTTT
-  TTTT..TTTTTT........................::.................TTT::TTTTTTTTTT
-  TTTT..TTTTT.........................::...................T::TTTTTTTTTT
-  TTTTTTTTTTT.........................::....................::T....TTTTT
-  TTTTTTTTTTT.........................::....................::.....TTTTT
-  TTTTTTTTTT..........................::....................::.....TTTTT
-  TTTTTTTTTT.....................:....::....................::..TTTTTTTT
-  TTTTTTTTT......................:....::..............:.....::...TTTTTTT
-  TTTTTTTT.......................:....::..............:.....::...TTTTTTT
-  TTTTTT.........................:....::..............:.....::......TTTT
-  TTTTT.........:................:....::..............:.....::......TTTT
-  TTTT..........:................:....::..............:.....::......TTTT
-  TTTT..........:..........:::::::::::::...:..........:.....::...TTTTTTT
-  TTT...........:..........:::::::::::::...:..........:.....::....TTTTTT
-  TTT...........:..........:::::::::::::...:..........:.....::.....TTTTT
-  TTT...........:..........:::::::::::::...:..........:.....::......TTTT
-  ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-  ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-  TTTT........:............:::::::::::::................................
-  TTTTT.......:............:::::::::::::................................
-  TTTTT.......:............:::::::::::::................................
-  TTTTTT..............................::................................
-  TTTTTT..............................::................................
-  TTTTTTT.............................::................................
-  TTTTTTT.............................::...............................T
-  TTTTTTTT............................::..............................TT
-  TTTTTTTTT...........................::...........................TTTTT
-  TTTTTTTTT...........................::...........................TTTTT
-  TTTTTTTTTT..........................::......................TTT..TTTTT
-  TTTTTTTTTTT.........................::.....................TTTT..TTTTT
-  TTTTTTTTTTTTT.......................::...................TTTTTTTTTTTTT
-  TTTTTTTTTTTTTT......................::..................TTTTTTTTTTTTTT
-  TTTTTTTTTTTTTTTT....................::.................TTTTTTTTTTTTTTT
-  TTTTTTTTTTTTTTTTTTT.................::................TTTTTTTTTTTTTTTT
-  TTTTTTTTTTTTTTTTTTTTTT..............::..............TTTTTTTTTTTTTTTTTT
-  TTTTTTTTTTTTTTTTTTTTTTTTTTT.....................TTTTTTTTTTTTTTTTTTTTTT
-  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
-  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT::TTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT::TTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT::TTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT::T......T
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT::T......T
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT::T......T
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT::T......T
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT::T......T
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT::T......T
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT::T......T
+  T.............................................::.......T
+  T.............................................::.......T
+  T.............................................::.......T
+  T.............................................::.......T
+  T.............................................::.......T
+  T.............................................::.......T
+  T.............................................::.......T
+  T.............................................::.......T
+  :::::::::::::::::::::::::::::::::::::::::::::::::::::::T
+  :::::::::::::::::::::::::::::::::::::::::::::::::::::::T
+  T.............................................::.......T
+  T.............................................::.......T
+  T.............................................::.......T
+  T.............................................::.......T
+  T.............................................::.......T
+  T.............................................::.......T
+  T.::::::::::::::::::::::::::::::::::::::::::::::::::::.T
+  T.::::::::::::::::::::::::::::::::::::::::::::::::::::.T
+  T......................................................T
+  T......................................................T
+  TTTTT..............................................TTTTT
+  TTTTT..............................................TTTTT
+  TTTTT..............................................TTTTT
+  TTTTT..............................................TTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
 exits:
 - edge: west
-  cells: [22, 23]
+  cells: [18, 19]
   to: route-124
 - edge: north
-  cells: [58, 59]
+  cells: [46, 47]
   to: route-125
 buildings:
 - name: Massassi Temple (arena)
   art: art:yavin-4:massassi-temple
-  at: [26, 4]
+  at: [14, 10]
   size: [10, 8]
   door: 5
   to: yavin-4-arena
-- name: Rebel hangar
-  art: art:yavin-4:rebel-hangar
-  at: [48, 8]
-  size: [8, 5]
-  door: 4
-  to: yavin-4-launch-tower-1f
 - name: Bacta Center
   art: art:shared:bacta-center
-  at: [12, 12]
+  at: [25, 14]
   size: [5, 4]
   door: 2
   to: yavin-4-bacta-center-1f
 - name: Supply Depot
   art: art:shared:supply-depot
-  at: [40, 14]
+  at: [31, 14]
   size: [4, 4]
   door: 1
   to: yavin-4-supply-depot
+- name: Rebel hangar
+  art: art:yavin-4:rebel-hangar
+  at: [36, 13]
+  size: [8, 5]
+  door: 4
+  to: yavin-4-launch-tower-1f
 - name: Leia's quarters
   art: art:yavin-4:rebel-hangar
-  at: [8, 27]
+  at: [6, 21]
   size: [8, 5]
   door: 4
   to: yavin-4-stevens-house
 - name: Pilots' barracks
   art: art:tatooine:homestead-dome
-  at: [20, 30]
+  at: [16, 22]
   size: [5, 4]
   door: 2
   to: yavin-4-house-1
 - name: Sabacc den
   art: art:tatooine:homestead-dome
-  at: [28, 30]
+  at: [23, 22]
   size: [5, 4]
   door: 2
   to: yavin-4-sabacc-den-1f
 - name: Mechanics' barracks
   art: art:tatooine:homestead-dome
-  at: [38, 30]
+  at: [30, 22]
   size: [5, 4]
   door: 2
   to: yavin-4-house-2
 - name: Medic's hut
   art: art:tatooine:homestead-dome
-  at: [46, 27]
+  at: [44, 22]
   size: [5, 4]
   door: 2
   to: yavin-4-house-3
 - name: Scout's hut
   art: art:tatooine:homestead-dome
-  at: [56, 27]
+  at: [49, 22]
   size: [5, 4]
   door: 2
   to: yavin-4-house-4
 props:
 - name: X-wing (parked)
   art: art:yavin-4:x-wing-parked
-  at: [62, 15]
+  at: [50, 3]
   size: [4, 3]
 - name: X-wing (parked)
   art: art:yavin-4:x-wing-parked
-  at: [61, 9]
+  at: [50, 7]
   size: [4, 3]
 - name: Massassi jungle tree
   art: art:yavin-4:massassi-jungle-tree
-  at: [4, 6]
+  at: [2, 11]
   size: [2, 3]
 - name: Massassi jungle tree
   art: art:yavin-4:massassi-jungle-tree
-  at: [63, 33]
+  at: [6, 30]
   size: [2, 3]
 - name: Jungle vines
   art: art:yavin-4:jungle-vines
-  at: [22, 8]
+  at: [12, 10]
   size: [1, 1]
 - name: Jungle vines
   art: art:yavin-4:jungle-vines
-  at: [40, 7]
+  at: [54, 20]
   size: [1, 1]
 - name: Cargo crates
   art: art:shared:cargo-crates
-  at: [44, 9]
+  at: [52, 11]
   size: [2, 2]
 people:
 - name: Leia
-  at: [11, 25]
+  at: [12, 29]
   role: story
 - name: Kanan Jarrus
-  at: [29, 13]
+  at: [12, 15]
   role: story
 - name: Ezra Bridger
-  at: [33, 13]
+  at: [12, 17]
   role: story
 - name: Rebel pilot
-  at: [55, 19]
+  at: [47, 20]
   role: npc
 - name: Rebel mechanic
-  at: [59, 13]
+  at: [49, 12]
   role: npc
 - name: Rebel trooper
-  at: [26, 24]
+  at: [30, 30]
   role: trainer
 - name: Launch tech
-  at: [50, 15]
+  at: [44, 15]
   role: npc
 signs:
 - name: Base sign
-  at: [4, 21]
+  at: [4, 17]
 - name: Temple sign
-  at: [25, 12]
+  at: [24, 17]
 - name: Hangar sign (Rebel transport)
-  at: [54, 13]
+  at: [42, 19]
 warps: []
-todo: ['Vanilla''s south sea (Route 127, Dagobah) is cut.', Vanilla Steven's house becomes Leia's quarters.]
+travel: []
+todo: ['Vanilla''s south sea (Route 127, Dagobah) is cut.', Vanilla Steven's house becomes Leia's quarters., 'Compact town (template kachirho): was 70x44.']

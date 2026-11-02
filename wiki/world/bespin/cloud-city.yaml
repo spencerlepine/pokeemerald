@@ -5,199 +5,197 @@ kind: town
 replaces: LilycoveCity
 status: BLOCKOUT
 art_status: pending-final-art
-story: 'Floating city over Bespin''s cloud sea: the Galleria, museum, Showcase hall and Lando''s flat round a central plaza. Ships land on the west platform; the
-  lift in the east goes down to the under-levels where the Cartel hides.'
-notes: 'cloud-city (town, 70x46): the floating city: central plaza, Galleria (winged), museum, Showcase hall, Lando''s flat, round towers, west landing platform,
-  the east lift down to the under-levels, skybridges · unique: every edge is a drop into cloud · need: floating-platform mode (fascia and underside at the edge, clouds
-  below instead of ground), skybridges, cloud cars parked.'
 pos: [0, 0]
+story: Floating city over Bespin's cloud sea. Ships land on the west platform; two promenades ring the central plaza with the Galleria, museum, Showcase hall and
+  Lando's flat; the lift tower in the east goes down to the under-levels where the Cartel hides. A skybridge leads north to the Tibanna refinery.
+notes: 'cloud-city (town, 58x40): a floating disc, every edge a drop into cloud: west landing platform, upper and lower promenades joined by the plaza and the north-south
+  walk, towers in two rows facing the promenades, the east lift tower, the north skybridge · need: floating-platform mode (fascia and underside at the edge, clouds
+  below), skybridge, cloud cars parked.'
 grid: |
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~====~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~====~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~====~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~====~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~====~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~====~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~.......::.........~~~~~~~~~~~~~~~~~~~~~~~~~
-  ~~~~~~~~~~~~~~~~~~~~~~~~..........::............~~~~~~~~~~~~~~~~~~~~~~
-  ~~~~~~~~~~~~~~~~~~~~~~~...........::..............~~~~~~~~~~~~~~~~~~~~
-  ~~~~~~~~~~~~~~~~~~~~~.............::................~~~~~~~~~~~~~~~~~~
-  ~~~~~~~~~~~~~~~~~~~...............::..................~~~~~~~~~~~~~~~~
-  ~~~~~~~~~~~~~~~~~.................::...................~~~~~~~~~~~~~~~
-  ~~~~~~~~~~~~~~~...................::......:.............~~~~~~~~~~~~~~
-  ~~~~~~~~~~~~~~....................::......:.............~~~~~~~~~~~~~~
-  ~~~~~~~~~~~~~.....................::......:..............~~~~~~~~~~~~~
-  ~~~~~~~~~~~~~.....................::......:...........:..~~~~~~~~~~~~~
-  ~~~~~~~~~~~~~.....................::......:...........:...~~~~~~~~~~~~
-  ~~~~~~~~~~~~~...............::::::::::::::......:.....:...~~~~~~~~~~~~
-  ~~~~~~~~~~~~~.......:.......::::::::::::::......:.....:...~~~~~~~~~~~~
-  ~~~~~~~~~~~~~.......:.......::::::::::::::......:.....:....~~~~~~~~~~~
-  ~~~=========~~......:.......::::::::::::::......:.....:....========~~~
-  ~~~=========~.......:.......::::::::::::::......:.....:....========~~~
-  ~~~=========:::::::::::::::::::::::::::::::::::::::::::::::========~~~
-  ~~~=========:::::::::::::::::::::::::::::::::::::::::::::::========~~~
-  ~~~=========................::::::::::::::.................========~~~
-  ~~~=========................::::::::::::::.................========~~~
-  ~~~~~~~~~~~.................::::::::::::::................~~~~~~~~~~~~
-  ~~~~~~~~~~~.................::::::::::::::................~~~~~~~~~~~~
-  ~~~~~~~~~~~.......................::.....................~~~~~~~~~~~~~
-  ~~~~~~~~~~~~......................::.....................~~~~~~~~~~~~~
-  ~~~~~~~~~~~~~.....................::....................~~~~~~~~~~~~~~
-  ~~~~~~~~~~~~~~....................::....................~~~~~~~~~~~~~~
-  ~~~~~~~~~~~~~~~~..................::....................~~~~~~~~~~~~~~
-  ~~~~~~~~~~~~~~~~.~................::...................~~~~~~~~~~~~~~~
-  ~~~~~~~~~~~~~~~~~~~~..............::..................~~~~~~~~~~~~~~~~
-  ~~~~~~~~~~~~~~~~~~~~~.............::.................~~~~~~~~~~~~~~~~~
-  ~~~~~~~~~~~~~~~~~~~~~~~...........::..........~~~~~~~~.~~~~~~~~~~~~~~~
-  ~~~~~~~~~~~~~~~~~~~~~~~~~.........::.......~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~.......::.....~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~....::...~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~::~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~==~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~==~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~==~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~==~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~==~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~==~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~==~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~==~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~==~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~~~~~~~.....................::.....................~~~~~~~
+  ~~~~~~~.....................::.....................~~~~~~~
+  ~~~~........................::........................~~~~
+  ~~~~........................::........................~~~~
+  =======.....................::...........................~
+  =======.....................::...........................~
+  =======.....................::...........................~
+  =======.....................::...........................~
+  =======................::::::::::::......................~
+  =======................::::::::::::......................~
+  =======................::::::::::::......................~
+  =======::::::::::::::::::::::::::::::::::::::::::::::::::~
+  =======::::::::::::::::::::::::::::::::::::::::::::::::::~
+  =======................::::::::::::......................~
+  ~......................::::::::::::......................~
+  ~......................::::::::::::......................~
+  ~......................::::::::::::......................~
+  ~......................::::::::::::......................~
+  ~......................::::::::::::......................~
+  ~::::::::::::::::::::::::::::::::::::::::::::::::::::::::~
+  ~::::::::::::::::::::::::::::::::::::::::::::::::::::::::~
+  ~...........................::...........................~
+  ~...........................::...........................~
+  ~...........................::...........................~
+  ~~~~........................::........................~~~~
+  ~~~~........................::........................~~~~
+  ~~~~~~~.....................::.....................~~~~~~~
+  ~~~~~~~............................................~~~~~~~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 exits:
 - edge: north
-  cells: [33, 34, 35, 36]
+  cells: [28, 29]
   to: tibanna-refinery
 buildings:
+- name: West landing platform (ships)
+  art: art:bespin:landing-platform
+  at: [1, 14]
+  size: [5, 5]
+  door: 2
+  to: cloud-city-hangar
 - name: Galleria (department store)
   art: art:bespin:department-store
-  at: [26, 5]
+  at: [8, 14]
   size: [8, 6]
   door: 4
   to: cloud-city-galleria-1f
-- name: Museum
-  art: art:bespin:cloud-city-tower
-  at: [40, 6]
-  size: [5, 6]
-  door: 2
-  to: cloud-city-museum-1f
 - name: Showcase hall
   art: art:bespin:cloud-city-tower
-  at: [18, 12]
+  at: [17, 14]
   size: [5, 6]
   door: 2
   to: cloud-city-showcase-lobby
+- name: Museum
+  art: art:bespin:cloud-city-tower
+  at: [36, 14]
+  size: [5, 6]
+  door: 2
+  to: cloud-city-museum-1f
 - name: Bacta Center
   art: art:shared:bacta-center
-  at: [46, 13]
+  at: [42, 16]
   size: [5, 4]
   door: 2
   to: cloud-city-bacta-center-1f
-- name: Companion fan club
+- name: Under-levels lift (Hutt Hideout)
   art: art:bespin:cloud-city-tower
-  at: [46, 26]
+  at: [49, 14]
   size: [5, 6]
   door: 2
-  to: cloud-city-pokemon-trainer-fan-club
+  to: hutt-hideout-1f
+- name: Cloud car pilot's flat
+  art: art:bespin:cloud-city-tower
+  at: [1, 22]
+  size: [5, 6]
+  door: 2
+  to: cloud-city-house-4
+- name: Tibanna trader's flat
+  art: art:bespin:cloud-city-tower
+  at: [8, 22]
+  size: [5, 6]
+  door: 2
+  to: cloud-city-house-3
 - name: Sky motel
   art: art:bespin:cloud-city-tower
-  at: [20, 26]
+  at: [15, 22]
   size: [5, 6]
   door: 2
   to: cloud-city-cove-lily-motel-1f
 - name: Move deleter's flat
   art: art:bespin:cloud-city-tower
-  at: [26, 30]
+  at: [36, 22]
   size: [5, 6]
   door: 2
   to: cloud-city-move-deleters-house
+- name: Companion fan club
+  art: art:bespin:cloud-city-tower
+  at: [43, 22]
+  size: [5, 6]
+  door: 2
+  to: cloud-city-pokemon-trainer-fan-club
 - name: Lando's flat
   art: art:bespin:cloud-city-tower
-  at: [38, 30]
+  at: [50, 22]
   size: [5, 6]
   door: 2
   to: cloud-city-house-1
 - name: Ugnaught family flat
   art: art:bespin:cloud-city-tower
-  at: [52, 9]
+  at: [8, 30]
   size: [5, 6]
   door: 2
   to: cloud-city-house-2
-- name: Tibanna trader's flat
-  art: art:bespin:cloud-city-tower
-  at: [14, 27]
-  size: [5, 6]
-  door: 2
-  to: cloud-city-house-3
-- name: Cloud car pilot's flat
-  art: art:bespin:cloud-city-tower
-  at: [52, 30]
-  size: [5, 6]
-  door: 2
-  to: cloud-city-house-4
-- name: West landing platform (ships)
-  art: art:bespin:landing-platform
-  at: [4, 15]
-  size: [5, 5]
-  door: 2
-  to: cloud-city-hangar
-- name: Under-levels lift (Hutt Hideout)
-  art: art:bespin:cloud-city-tower
-  at: [60, 14]
-  size: [5, 6]
-  door: 2
-  to: hutt-hideout-1f
 props:
 - name: Promenade railing
   art: art:bespin:promenade-railing
-  at: [29, 18]
+  at: [4, 11]
   size: [1, 1]
 - name: Promenade railing
   art: art:bespin:promenade-railing
-  at: [39, 18]
+  at: [53, 11]
   size: [1, 1]
 - name: Promenade railing
   art: art:bespin:promenade-railing
-  at: [29, 25]
+  at: [4, 32]
   size: [1, 1]
 - name: Promenade railing
   art: art:bespin:promenade-railing
-  at: [39, 25]
+  at: [53, 32]
   size: [1, 1]
 - name: Cloud car
   art: art:shared:parked-landspeeder
-  at: [62, 23]
+  at: [1, 19]
   size: [2, 1]
 - name: Cloud car
   art: art:shared:parked-landspeeder
-  at: [6, 23]
+  at: [52, 34]
   size: [2, 1]
 people:
 - name: Lando
-  at: [37, 24]
+  at: [30, 24]
   role: story
 - name: Showcase MC
-  at: [21, 20]
+  at: [21, 21]
   role: npc
 - name: Ugnaught worker
-  at: [56, 20]
+  at: [47, 21]
   role: npc
 - name: Wing guard
-  at: [33, 13]
+  at: [26, 12]
   role: trainer
 - name: Wing guard
-  at: [44, 21]
+  at: [31, 33]
   role: trainer
 - name: Tourist
-  at: [30, 20]
+  at: [25, 22]
   role: npc
 - name: Cloud car pilot
-  at: [64, 24]
+  at: [5, 31]
   role: npc
 - name: Blend master
-  at: [25, 21]
+  at: [33, 22]
   role: npc
 signs:
 - name: City sign
-  at: [34, 8]
+  at: [30, 11]
 - name: Galleria sign
-  at: [25, 11]
+  at: [16, 19]
 - name: Hangar sign (Cloud City shuttle)
-  at: [8, 20]
+  at: [5, 19]
+- name: Lift sign (under-levels)
+  at: [47, 19]
 warps: []
+travel: []
 todo: ['''~'' on Bespin is the open cloud sea, crossed by cloud car (Surf).', 'Vanilla''s roads west (Endor) and east (Yavin 4) are cut: the west landing platform
-    is the ship link.', 'North platform: a cloud car stop to the Tibanna refinery (new optional area).']
+    is the ship link (mapping/hyperlanes.csv).', 'North skybridge: the walk to the Tibanna refinery (new optional area).', 'Compact town (template kachirho): was
+    70x46.']

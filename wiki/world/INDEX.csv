@@ -43,20 +43,20 @@ atollon-hangar,ATOLLON,interior,BirthIsland_Harbor,BLOCKOUT,area,ATOLLON HANGAR,
 atollon-hangar,ATOLLON,interior,BirthIsland_Harbor,BLOCKOUT,person,Sailor,1x1,,,PLACEHOLDER,
 atollon-hangar,ATOLLON,interior,BirthIsland_Harbor,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER,
 atollon-hangar,ATOLLON,interior,BirthIsland_Harbor,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
-cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,area,CLOUD CITY,70x46,,,pending-final-art,greybox terrain
+cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,area,CLOUD CITY,58x40,,,pending-final-art,greybox terrain
+cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,building,West landing platform (ships),5x5,art:bespin:landing-platform,yes,pending-final-art,greybox piece
 cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,building,Galleria (department store),8x6,art:bespin:department-store,yes,pending-final-art,greybox piece
-cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,building,Museum,5x6,art:bespin:cloud-city-tower,yes,pending-final-art,greybox piece
 cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,building,Showcase hall,5x6,art:bespin:cloud-city-tower,yes,pending-final-art,greybox piece
+cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,building,Museum,5x6,art:bespin:cloud-city-tower,yes,pending-final-art,greybox piece
 cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,building,Bacta Center,5x4,art:shared:bacta-center,yes,pending-final-art,greybox piece
-cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,building,Companion fan club,5x6,art:bespin:cloud-city-tower,yes,pending-final-art,greybox piece
+cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,building,Under-levels lift (Hutt Hideout),5x6,art:bespin:cloud-city-tower,yes,pending-final-art,greybox piece
+cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,building,Cloud car pilot's flat,5x6,art:bespin:cloud-city-tower,yes,pending-final-art,greybox piece
+cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,building,Tibanna trader's flat,5x6,art:bespin:cloud-city-tower,yes,pending-final-art,greybox piece
 cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,building,Sky motel,5x6,art:bespin:cloud-city-tower,yes,pending-final-art,greybox piece
 cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,building,Move deleter's flat,5x6,art:bespin:cloud-city-tower,yes,pending-final-art,greybox piece
+cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,building,Companion fan club,5x6,art:bespin:cloud-city-tower,yes,pending-final-art,greybox piece
 cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,building,Lando's flat,5x6,art:bespin:cloud-city-tower,yes,pending-final-art,greybox piece
 cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,building,Ugnaught family flat,5x6,art:bespin:cloud-city-tower,yes,pending-final-art,greybox piece
-cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,building,Tibanna trader's flat,5x6,art:bespin:cloud-city-tower,yes,pending-final-art,greybox piece
-cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,building,Cloud car pilot's flat,5x6,art:bespin:cloud-city-tower,yes,pending-final-art,greybox piece
-cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,building,West landing platform (ships),5x5,art:bespin:landing-platform,yes,pending-final-art,greybox piece
-cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,building,Under-levels lift (Hutt Hideout),5x6,art:bespin:cloud-city-tower,yes,pending-final-art,greybox piece
 cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,prop,Promenade railing,1x1,art:bespin:promenade-railing,yes,pending-final-art,greybox piece
 cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,prop,Promenade railing,1x1,art:bespin:promenade-railing,yes,pending-final-art,greybox piece
 cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,prop,Promenade railing,1x1,art:bespin:promenade-railing,yes,pending-final-art,greybox piece
@@ -74,6 +74,7 @@ cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,person,Blend master,1x1,,,PLACEHOLD
 cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,sign,City sign,1x1,,,PLACEHOLDER,
 cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,sign,Galleria sign,1x1,,,PLACEHOLDER,
 cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,sign,Hangar sign (Cloud City shuttle),1x1,,,PLACEHOLDER,
+cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,sign,Lift sign (under-levels),1x1,,,PLACEHOLDER,
 cloud-city-bacta-center-1f,BESPIN,interior,LilycoveCity_PokemonCenter_1F,BLOCKOUT,area,CLOUD CITY BACTA CENTER 1F,14x9,,,pending-final-art,greybox room
 cloud-city-bacta-center-1f,BESPIN,interior,LilycoveCity_PokemonCenter_1F,BLOCKOUT,person,Nurse,1x1,,,PLACEHOLDER,
 cloud-city-bacta-center-1f,BESPIN,interior,LilycoveCity_PokemonCenter_1F,BLOCKOUT,person,Boy,1x1,,,PLACEHOLDER,
@@ -5098,11 +5099,11 @@ route-125,YAVIN 4,route,Route125,BLOCKOUT,person,Trainer Iris,1x1,,,PLACEHOLDER,
 route-125,YAVIN 4,route,Route125,BLOCKOUT,person,Trainer Pivax,1x1,,,PLACEHOLDER,
 route-125,YAVIN 4,route,Route125,BLOCKOUT,person,Trainer Adxon,1x1,,,PLACEHOLDER,
 route-125,YAVIN 4,route,Route125,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER,
-yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,area,YAVIN 4,70x44,,,pending-final-art,greybox terrain
+yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,area,YAVIN 4,56x36,,,pending-final-art,greybox terrain
 yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,building,Massassi Temple (arena),10x8,art:yavin-4:massassi-temple,yes,pending-final-art,greybox piece
-yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,building,Rebel hangar,8x5,art:yavin-4:rebel-hangar,yes,pending-final-art,greybox piece
 yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,building,Bacta Center,5x4,art:shared:bacta-center,yes,pending-final-art,greybox piece
 yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,building,Supply Depot,4x4,art:shared:supply-depot,yes,pending-final-art,greybox piece
+yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,building,Rebel hangar,8x5,art:yavin-4:rebel-hangar,yes,pending-final-art,greybox piece
 yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,building,Leia's quarters,8x5,art:yavin-4:rebel-hangar,yes,pending-final-art,greybox piece
 yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,building,Pilots' barracks,5x4,art:tatooine:homestead-dome,yes,pending-final-art,greybox piece
 yavin-4,YAVIN 4,town,MossdeepCity,BLOCKOUT,building,Sabacc den,5x4,art:tatooine:homestead-dome,yes,pending-final-art,greybox piece

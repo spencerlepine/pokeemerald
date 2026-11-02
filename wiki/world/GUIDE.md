@@ -117,7 +117,7 @@ Overview: [bespin/_planet.png](bespin/_planet.png). 2 overworld areas, 0 cave ro
 
 | Area | Kind | Built from | Connects to | What it is |
 |---|---|---|---|---|
-| [CLOUD CITY](bespin/cloud-city.yaml) | town | LilycoveCity | tibanna-refinery | Floating city over Bespin's cloud sea: the Galleria, museum, Showcase hall and Lando's flat round a central plaza. Ships land on the west platform; the lift in the east goes down to the under-levels where the Cartel hides. |
+| [CLOUD CITY](bespin/cloud-city.yaml) | town | LilycoveCity | tibanna-refinery | Floating city over Bespin's cloud sea. Ships land on the west platform; two promenades ring the central plaza with the Galleria, museum, Showcase hall and Lando's flat; the lift tower in the east goes down to the under-levels where the Cartel hides. A skybridge leads north to the Tibanna refinery. |
 | [TIBANNA REFINERY](bespin/tibanna-refinery.yaml) | landmark | new | cloud-city | Optional: a Tibanna gas refinery on a separate platform north of Cloud City, reached by cloud car or the north skybridge. Ugnaughts work the tanks; Cartel thugs are smuggling gas. Trainers: levels 32-34. |
 
 Hyperlanes: CLOUD CITY (cloud-city-hangar) -> ATOLLON by Charter ship, needs item:aurora-ticket; CLOUD CITY (cloud-city-hangar) -> ENDOR by Cloud City shuttle, needs event:devon-scope; CLOUD CITY (cloud-city-hangar) -> GRAND ARENA by Star liner (S.S. Tidal), needs flag:sys-game-clear; CLOUD CITY (cloud-city-hangar) -> JEDHA by Pilgrim shuttle, needs item:hm-surf; CLOUD CITY (cloud-city-hangar) -> MORTIS by Charter ship, needs item:mystic-ticket; CLOUD CITY (cloud-city-hangar) -> MORTIS by Charter ship, needs item:old-sea-map; CLOUD CITY (cloud-city-hangar) -> TYTHON by Charter ship, needs item:eon-ticket; CLOUD CITY (cloud-city-hangar) -> YAVIN 4 by Rebel transport, needs item:hm-surf.
@@ -145,7 +145,7 @@ Overview: [yavin-4/_planet.png](yavin-4/_planet.png). 3 overworld areas, 2 cave 
 
 | Area | Kind | Built from | Connects to | What it is |
 |---|---|---|---|---|
-| [YAVIN 4](yavin-4/yavin-4.yaml) | town | MossdeepCity | route-124, route-125 | Secret Rebel base in the jungle: the Massassi Temple is Kanan and Ezra's Force arena, X-wings wait by the hangar (vanilla Space Center) and Leia keeps quarters here. |
+| [YAVIN 4](yavin-4/yavin-4.yaml) | town | MossdeepCity | route-124, route-125 | Secret Rebel base in the jungle: the Massassi Temple is Kanan and Ezra's Force arena, X-wings wait by the Rebel hangar and Leia keeps quarters here. The main road runs from the west gate past the temple to the hangar; the hangar road leads north to Route 125. |
 | [ROUTE 124](yavin-4/route-124.yaml) | route | Route124 | yavin-4 | Jungle river delta west of the base: deep channels to dive in and the treasure divers' hut. |
 | [ROUTE 125](yavin-4/route-125.yaml) | route | Route125 | yavin-4 | Jungle lakes north of the base. Vanilla's Shoal Cave door (Hoth) is cut. |
 

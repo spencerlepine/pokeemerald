@@ -8,7 +8,7 @@ art_status: pending-final-art
 story: Jungle lakes north of the base. Vanilla's Shoal Cave door (Hoth) is cut.
 notes: 'route-124 and route-125 (80x80, 80x40): the river delta and jungle lakes, deep channels to dive, the treasure divers'' hut · need: river and lake mode, dive
   spots (dark patches).'
-pos: [12, -40]
+pos: [0, -40]
 grid: |
   ~~~~~~~~~~~~~~~~~~##~~~############~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   ~~~~~~~~~~~~~~~~~~##~~##############~~~~~##~~~~~~~##~~~~~~~##~~~~~~~~~~~~~~~~~~~
