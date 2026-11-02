@@ -1,0 +1,72 @@
+# Cloud City (Bespin), hot-swap of MUS_LILYCOVE. ARRANGE of "The City in the Clouds" (wiki
+# soundtrack:empire-strikes-back:11, analyzed 0-90 s: 86 bpm, G minor; Gm, Eb, Cm7, G, Dsus4 in the opening bars).
+# Kept: the tempo (86), G minor with the cue's Gm-Eb-Cm-D opening, its shimmering harp/celesta sixteenths, the
+# long airy woodwind line over string pads and the warm horn answer; the hidden edge is the minor ninth (Eb) the
+# harp leans on over each D chord.
+#   intro  2 bars  harp shimmer on Gm
+#   a      8 bars  flute line over harp, strings, square bells
+#   b      8 bars  the horn answers in Bb, ending on D for the return
+# 16-bar loop, 44.7 s (vanilla 55.9 s); vanilla lilycove voicegroup.
+# Brief (sw_subject): Big sky and sea cities: elegant and airy, shimmering strings, luxury with a hidden edge.
+name: cloud-city
+replaces: MUS_LILYCOVE
+form: LOOP
+voicegroup: lilycove              # kit 0, pizzicato 45, harp 46, strings 48, tuba 58, horn 60, flute 73, squares 80/81, wave 82
+master_volume: 85
+tempo: 86
+steps_per_beat: 4
+time_signature: [4, 4]
+seed: 14
+
+parts:
+  flute:   {program: 73, channel: 0, volume: 98,  pan: 10,  range: [C5, C6], gate: 0.97, lfo_speed: 28, lfo_delay: 20, mod: 5, humanize: {vel: 4}}
+  horn:    {program: 60, channel: 1, volume: 96,  pan: -12, range: [Bb3, A4], gate: 0.97}
+  harp:    {program: 46, channel: 2, volume: 78,  pan: 24,  octave: 4, range: [G3, G5], gate: 0.8, humanize: {vel: 8}}
+  strings: {program: 48, channel: 3, volume: 64,  pan: -26, octave: 4, range: [Bb3, Bb4], gate: 1.0}
+  bass:    {program: 82, channel: 4, volume: 96,  pan: 0,   octave: 2, range: [D2, D3], gate: 0.9, role: bass}
+  bells:   {program: 80, channel: 5, volume: 36,  pan: 34,  range: [G5, D6], gate: 0.4, mono: true}
+  pulse:   {program: 81, channel: 6, volume: 30,  pan: -34, octave: 4, range: [D4, D5], gate: 0.6, mono: true}
+
+progressions:
+  intro: "Gm | Gm"
+  a:     "Gm | Eb | Cm | D | Gm | Eb | Cm | D"
+  b:     "Bb | F | Gm | D | Eb | Bb | Cm:8 D:8 | D"
+
+phrases:
+  shimmer: "^1:1 ^2:1 ^3:1 ^4:1 ^3:1 ^2:1 ^1:1 ^2:1 ^1:1 ^2:1 ^3:1 ^4:1 ^3:1 ^2:1 ^1:1 ^2:1"
+  harp_a: |
+    ^1:1 ^2:1 ^3:1 ^4:1 ^3:1 ^2:1 ^1:1 ^2:1 ^1:1 ^2:1 ^3:1 ^4:1 ^3:1 ^2:1 ^1:1 ^2:1 |
+    ^1:1 ^2:1 ^3:1 ^4:1 ^3:1 ^2:1 ^1:1 ^2:1 ^1:1 ^2:1 ^3:1 ^4:1 ^3:1 ^2:1 ^1:1 ^2:1 |
+    ^1:1 ^2:1 ^3:1 ^4:1 ^3:1 ^2:1 ^1:1 ^2:1 ^1:1 ^2:1 ^3:1 ^4:1 ^3:1 ^2:1 ^1:1 ^2:1 |
+    D4:1 F#4:1 A4:1 Eb5:1 A4:1 F#4:1 D4:1 F#4:1 D4:1 F#4:1 A4:1 Eb5:1 D5:1 A4:1 F#4:1 A4:1
+  pad: "^3:16"
+  pad2: "^2:8 ^3:8"
+  bass: "^1:12 ^5-:4"
+  pulse: "^1:4 ^2:4 ^3:4 ^2:4"
+  line_a: |
+    D5:8 G5:4 Bb5:4 | A5:6 G5:2 Eb5:8 | G5:6 F5:2 Eb5:4 C5:4 | D5:12 r:4 |
+    D5:8 G5:4 Bb5:4 | C6:6 Bb5:2 G5:8 | A5:6 G5:2 Eb5:4 C5:4 | D5:12 r:4
+  horn_b: |
+    D4:8 F4:4 Bb4:4 | A4:6 F4:2 C4:8 | Bb3:6 C4:2 D4:4 G4:4 | F#4:12 r:4 |
+    G4:6 F4:2 Eb4:4 G4:4 | F4:6 D4:2 Bb3:8 | C4:4 Eb4:4 A4:4 C4:4 | D4:8 r:8
+  bells_a: "r:12 G5:2 D6:2 | r:16 | r:12 C6:2 G5:2 | r:12 A5:2 D6:2"
+  bells_b: "r:12 D6:2 Bb5:2 | r:12 C6:2 A5:2 | r:16 | r:12 A5:2 F#5:2"
+
+sections:
+  intro:
+    bars: 2
+    chords: intro
+    ramp: {harp: [-12, 0]}
+    parts: {harp: shimmer, strings: pad, bass: bass}
+  a:
+    bars: 8
+    chords: a
+    parts: {flute: line_a, harp: harp_a, strings: pad, bass: bass, bells: bells_a}
+  b:
+    bars: 8
+    chords: b
+    parts: {horn: horn_b, harp: shimmer, strings: pad2, bass: bass, bells: bells_b, pulse: pulse,
+            flute: "r:16 | r:16 | r:16 | r:16 | r:16 | r:16 | r:16 | r:4 F#5:4 A5:4 C6:4"}
+
+arrangement: [intro, a, b]
+loop_start: a
