@@ -1,0 +1,89 @@
+# Medal ceremony (Yavin 4): hot-swap of MUS_HALL_OF_FAME (wiki audio:MUS_HALL_OF_FAME, EVENT / LOOP).
+# The row's ref_use is ARRANGE of the Throne Room march (soundtrack:new-hope:16), but its brief (sw_subject) says
+# "original composition; do not quote film themes", and the march itself is already the title screen
+# (title-throne.yaml). So this takes the cue's idiom, not its tune: an original ceremonial march at the cue's
+# 120 bpm (119.3), stately dotted brass over Williams' borrowed chords (Ebm, Gb, Ab: iv, bVI, bVII in Bb major).
+# Brief (sw_subject): medal ceremony on Yavin 4, triumphant and ceremonial.
+#   intro  2 bars, once: trumpet call
+#   loop   18 bars, 36 s (vanilla 35.7 s): march (8), second strain through Gb and Ab (8), a 2-bar turn on F7
+# Trumpet tune, horn inner line, string pad, wave bass, timpani on the bass line, noise snare, crash,
+# both squares as after-beat chords.
+name: medal-ceremony
+replaces: MUS_HALL_OF_FAME
+form: LOOP
+voicegroup: hall_of_fame              # piano 1, bell 14, timpani 47, strings 48, trumpet 56, horn 60, sq1 80, sq2 81, wave 82, noise 126, kit 0
+master_volume: 78
+tempo: 120
+steps_per_beat: 4
+time_signature: [4, 4]
+seed: 21
+
+parts:
+  trumpet: {program: 56, channel: 0, volume: 108, pan: 4,   gate: 0.9, humanize: {vel: 3}}
+  horn:    {program: 60, channel: 1, volume: 86,  pan: -14, octave: 3, gate: 0.95}
+  strings: {program: 48, channel: 2, volume: 68,  pan: -28, octave: 3, gate: 1.0}
+  timpani: {program: 47, channel: 3, volume: 90,  pan: 16,  octave: 2, gate: 1.0, role: bass}
+  cymbal:  {program: 0,  channel: 4, volume: 76,  pan: 8,   role: drums, kit: {crash: 57}}
+  snare:   {program: 126, channel: 8, volume: 56, pan: 12,  role: drums, kit: {sn: C5}}
+  bass:    {program: 82, channel: 5, volume: 100, pan: 0,   octave: 2, gate: 0.8, role: bass}
+  sq1:     {program: 80, channel: 6, volume: 40,  pan: 32,  octave: 4, gate: 0.5, mono: true}
+  sq2:     {program: 81, channel: 7, volume: 36,  pan: -32, octave: 4, gate: 0.5, mono: true}
+
+progressions:
+  call:   "Bb | Gb:8 F:8"
+  march:  "Bb | Eb/Bb | Bb | F | Gm | Eb:8 Ebm:8 | Bb/F:8 F:8 | Bb"
+  strain: "Eb | Bb | Cm:8 F:8 | Bb | Gb | Ab | Eb:8 F:8 | Bb"
+  turn:   "Gb:8 Ab:8 | F7"
+
+phrases:
+  call_tpt: "Bb4:2 Bb4:1 Bb4:1 Bb4:4 D5:4 F5:4 | Gb5:6 Db5:2 F5:4 C5:4"
+  march_tpt: |
+    F4:6 Bb4:2 D5:8 | Eb5:6 D5:2 C5:4 Bb4:4 | D5:6 F5:2 Bb5:8 | A5:4 G5:2 F5:2 C5:8 |
+    D5:6 G5:2 Bb5:8 | G5:6 F5:2 Gb5:8 | F5:4 D5:4 C5:4 A4:4 | Bb4:12 r:4
+  strain_tpt: |
+    G5:6 F5:2 Eb5:8 | D5:6 C5:2 Bb4:8 | C5:4 Eb5:4 A4:4 C5:4 | Bb4:8 F5:8 |
+    Gb5:6 F5:2 Db5:8 | Eb5:6 Db5:2 C5:8 | Bb4:4 Eb5:4 F5:4 A5:4 | Bb5:12 r:4
+  turn_tpt: "Gb5:4 Db5:4 Ab5:4 Eb5:4 | F5:2 Eb5:2 D5:2 C5:2 A4:4 C5:4"
+  inner: "^2:8 ^3:8"
+  pad: "^3:16"
+  bass_march: "^1:6 ^1:2 ^1:4 ^3:4"
+  timp_march: "^1:2 r:6 ^3:2 r:6"
+  timp_roll: "^1:2 r:6 ^1:1 ^1:1 ^1:1 ^1:1 ^1:1 ^1:1 ^1:1 ^1:1"
+  after_1: "r:4 ^2:4 r:4 ^2:4"
+  after_2: "r:4 ^3:4 r:4 ^3:4"
+
+grooves:
+  march:
+    sn:    "x..xx...x..xx.x.|x..xx...x...x..."
+  crash8:
+    crash: "X...............|................|................|................|................|................|................|................"
+  call:
+    sn:    "x.xx............|rrrrrrrrRRRRX..."
+  crash_mid:
+    crash: "................|................|................|................|X...............|................|................|................"
+  crash2:
+    crash: "X...............|................"
+  turn:
+    sn:    "x..xx...x..xx.x.|rrrrrrrrRRRRX..."
+
+sections:
+  intro:
+    bars: 2
+    chords: call
+    parts: {trumpet: call_tpt, horn: inner, strings: pad, timpani: timp_roll, snare: call, cymbal: crash2, bass: bass_march}
+  a:
+    bars: 8
+    chords: march
+    parts: {trumpet: march_tpt, horn: inner, strings: pad, timpani: timp_march, snare: march, cymbal: crash_mid, bass: bass_march, sq1: after_1, sq2: after_2}
+  b:
+    bars: 8
+    chords: strain
+    gain: {horn: 4}
+    parts: {trumpet: strain_tpt, horn: inner, strings: pad, timpani: timp_march, snare: march, cymbal: crash8, bass: bass_march, sq1: after_1, sq2: after_2}
+  turn:
+    bars: 2
+    chords: turn
+    parts: {trumpet: turn_tpt, horn: inner, strings: pad, timpani: timp_roll, snare: turn, bass: bass_march, sq1: after_1, sq2: after_2}
+
+arrangement: [intro, a, b, turn]
+loop_start: a
