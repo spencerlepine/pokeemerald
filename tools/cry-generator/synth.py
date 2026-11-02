@@ -220,7 +220,7 @@ def render(spec):
     """spec dict -> float array at SYNTH_RATE (pre-master)."""
     rng = np.random.default_rng(int(spec.get('seed', 1)))
     size = float(spec.get('size', 0.5))
-    total = max(duration_of(L) if L['type'] != 'click' else max(map(float, L['times'])) + 0.02
+    total = max(duration_of(L) if L['type'] != 'click' else max(map(float, L['times'])) + float(L.get('at', 0)) + 0.02
                 for L in spec['layers'])
     N = int((total + 0.02) * SYNTH_RATE)
     mix = np.zeros(N)
