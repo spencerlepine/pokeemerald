@@ -1,0 +1,41 @@
+# Obtain shard (MUS_OBTAIN_BADGE, hot-swap): a one-shot victory sting. SCRATCH (wiki audio:MUS_OBTAIN_BADGE, no
+# film cue). Brief: "Won a kyber shard: crystalline, resonant victory sting." An original brass call in Bb in the
+# Star Wars idiom (triplet pickup, a leap to the fifth, a lift to Eb, then the high tonic held), horn harmony,
+# glockenspiel and square arpeggios for the crystal shimmer, wave bass and a timpani roll under the last chord so it
+# rings. 120 bpm (vanilla's), two bars of 5/4: 5 s against vanilla's 5.2 s, on the vanilla fanfare voicegroup.
+name: obtain-shard
+replaces: MUS_OBTAIN_BADGE
+form: JINGLE
+loop: false
+player: SE2
+song_priority: 5
+voicegroup: fanfare           # trumpet 56, horn 60, glockenspiel 9, timpani 47, squares 80/81, wave 87
+master_volume: 90
+tempo: 120
+steps_per_beat: 6             # triplet eighths (2 steps) and plain eighths (3 steps)
+time_signature: [5, 4]
+seed: 11
+
+parts:
+  trumpet: {program: 56, channel: 0, volume: 106, pan: 4,   range: [F4, Bb5], gate: 0.92, humanize: {vel: 3}}
+  horn:    {program: 60, channel: 1, volume: 90,  pan: -14, range: [Bb2, G4], gate: 0.95}
+  glock:   {program: 9,  channel: 2, volume: 78,  pan: 26,  range: [Bb4, F6], gate: 0.8}
+  timpani: {program: 47, channel: 3, volume: 92,  pan: -6,  range: [F2, Bb2], gate: 1.0}
+  bass:    {program: 87, channel: 4, volume: 84,  pan: 0,   range: [Bb1, Bb2], gate: 0.85, mono: true}
+  arp:     {program: 81, channel: 5, volume: 50,  pan: 30,  range: [Bb4, F6], gate: 0.5, mono: true}
+  echo:    {program: 80, channel: 6, volume: 44,  pan: -30, range: [Bb4, Bb6], gate: 0.5, mono: true}
+
+sections:
+  sting:
+    bars: 2
+    parts:
+      # bar 1: Bb (3 beats) then Eb; bar 2: F (one beat) then Bb, held
+      trumpet: "Bb4:2 C5:2 D5:2 F5:9 D5:3 Eb5:6 G5:6 | F5:2 Eb5:2 D5:2 Bb5:24"
+      horn:    "D4:2 Eb4:2 F4:2 D4:12 G3:6 Bb3:6 | A3:2 C4:2 A3:2 F4:24"
+      bass:    "Bb1:3 r:3 F2:3 r:3 Bb1:3 r:3 Eb2:3 r:3 G2:3 r:3 | F2:2 F2:2 F2:2 Bb1:12 r:12"
+      timpani: "Bb2:6 r:12 r:12 | F2:6 Bb2:1 Bb2:1 Bb2:1 Bb2:1 Bb2:1 Bb2:1 Bb2:1 Bb2:1 Bb2:1 Bb2:1 Bb2:1 Bb2:1 Bb2:12"
+      arp:     "r:18 Eb5:1 G5:1 Bb5:1 Eb6:1 Bb5:1 G5:1 Eb5:1 G5:1 Bb5:1 Eb6:1 Bb5:1 G5:1 | r:6 Bb5:1 D6:1 F6:1 D6:1 Bb5:1 F5:1 Bb5:1 D6:1 F6:1 D6:1 Bb5:1 F5:1 Bb5:1 D6:1 F6:1 r:9"
+      glock:   "r:30 | r:6 Bb5:3 D6:3 F6:3 Bb5:3 D6:3 F6:9"
+      echo:    "r:30 | r:9 Bb5:3 D6:3 F6:3 Bb6:12"
+
+arrangement: [sting]
