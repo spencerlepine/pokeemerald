@@ -1,0 +1,58 @@
+# Diving (Dagobah's underwater routes, Drowned Cavern; Kashyyyk and Yavin 4 until their splits land): hot-swap of
+# MUS_UNDERWATER (wiki audio:MUS_UNDERWATER, AMBIENT). STYLE of "Passage Through the Planet Core" (ref_tracks
+# soundtrack:phantom-menace:10): no quote. Taken from the cue: its F minor and the deep, murky orchestration
+# (low strings, harp, a woodwind line above, the bassy sea-monster pedal), but slowed right down to drift, as the
+# brief asks: a long flute line over a single string voice, harp figures that rise and sink, a wave-channel
+# pedal, the voicegroup's own bubbles sample and a square glint now and then from the surface far above.
+# Vanilla: underwater voicegroup, 86 bpm, 86.5 s loop; this one 66 bpm, 20 bars, 72.7 s.
+# Brief (sw_subject): muffled, slow, floating.
+name: dive
+replaces: MUS_UNDERWATER
+form: AMBIENT
+voicegroup: underwater                # flute 73, strings 48, harp 46, bubbles 23, glockenspiel 9, squares 80/92, wave 82
+master_volume: 90
+tempo: 66
+steps_per_beat: 4
+time_signature: [4, 4]
+seed: 23
+
+parts:
+  flute:   {program: 73, channel: 0, volume: 82,  pan: 10,  range: [C4, C6], gate: 0.98, lfo_speed: 24, lfo_delay: 30, mod: 6, humanize: {vel: 5}}
+  strings: {program: 48, channel: 1, volume: 60,  pan: -18, octave: 4, range: [F3, C5], gate: 1.0}
+  harp:    {program: 46, channel: 2, volume: 66,  pan: 24,  octave: 3, range: [F2, F4], gate: 0.9, humanize: {vel: 10}}
+  bubbles: {program: 23, channel: 3, volume: 52,  pan: -30, range: [C4, C6], gate: 1.0}
+  pedal:   {program: 82, channel: 4, volume: 86,  pan: 0,   octave: 1, range: [F1, F2], gate: 1.0, role: bass}
+  glint:   {program: 80, channel: 5, volume: 22,  pan: 36,  range: [C6, C7], gate: 0.5, mono: true}
+  under:   {program: 92, channel: 6, volume: 22,  pan: -36, range: [F4, F5], gate: 0.95, mono: true}
+
+progressions:
+  drift: "Fm | Dbmaj7 | Bbm7 | C7sus4 | Fm | Abmaj7 | Gb | C | Fm | Dbmaj7 | Bbm7 | Eb | Abmaj7 | Dbmaj7 | Gm7b5 | C7sus4 | Fm | Db | Gb | C"
+
+phrases:
+  float: |
+    r:8 C5:8 | Ab4:12 F4:4 | Db5:12 C5:4 | Bb4:16 |
+    r:8 C5:8 | Eb5:12 C5:4 | Bb4:8 Db5:8 | C5:16 |
+    r:8 F5:8 | Eb5:12 C5:4 | Db5:8 F4:8 | G4:16 |
+    r:8 Eb5:8 | F5:8 Ab4:8 | Bb4:8 Db5:8 | C5:16 |
+    r:8 Ab4:8 | F4:16 | Gb4:8 Bb4:8 | C5:16
+  voice: "^3:16"
+  rise_sink: "^1:2 ^2:2 ^3:2 ^4:2 ^5:4 ^3:4"
+  low: "^1:16"
+  bubble_pops: |
+    r:16 | r:16 | r:4 C5:4 r:8 | r:16 | r:16 | r:16 | r:16 | r:8 G4:4 r:4 | r:16 | r:16 |
+    r:16 | r:4 Eb5:4 r:8 | r:16 | r:16 | r:16 | r:16 | r:16 | r:8 C5:4 r:4 | r:16 | r:16
+  glints: |
+    r:16 | r:12 F6:1 r:3 | r:16 | r:16 | r:16 | r:16 | r:6 C7:1 r:9 | r:16 | r:16 | r:16 |
+    r:16 | r:16 | r:12 Ab6:1 r:3 | r:16 | r:16 | r:16 | r:16 | r:16 | r:4 F6:1 r:11 | r:16
+  hum: |
+    r:16 | r:16 | r:16 | r:16 | r:16 | r:16 | r:16 | r:16 | C5:16 | Ab4:16 | F4:16 | G4:16 |
+    Ab4:16 | F4:16 | F4:16 | E4:16 | r:16 | r:16 | r:16 | r:16
+
+sections:
+  drift:
+    bars: 20
+    chords: drift
+    parts: {flute: float, strings: voice, harp: rise_sink, bubbles: bubble_pops, pedal: low, glint: glints, under: hum}
+
+arrangement: [drift]
+loop_start: drift
