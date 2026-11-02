@@ -1,0 +1,42 @@
+# Move forgotten (MUS_MOVE_DELETED, hot-swap): a one-shot jingle. SCRATCH (wiki audio:MUS_MOVE_DELETED, no film cue).
+# Brief: "A move is forgotten: short comic 'poof'." Written as a droid-sitcom shrug in the Star Wars idiom: a
+# quick square chirp up (the technique trying to stay), a xylophone tumble down a diminished line, a cymbal
+# "poof", and a tuba sad-trombone "wah-wah-wah-waaah" (G, F#, F, E) settling on a hollow C. 150 bpm (vanilla's), two bars of 3/4, about 2.6 s
+# like vanilla, on the vanilla fanfare voicegroup.
+name: move-forgotten
+replaces: MUS_MOVE_DELETED
+form: JINGLE
+loop: false
+player: SE2
+song_priority: 5
+voicegroup: fanfare           # xylophone 13, tuba 58, strings 48, squares 80/81, wave 87, kit 0
+master_volume: 90
+tempo: 150
+steps_per_beat: 4
+time_signature: [3, 4]
+seed: 3
+
+parts:
+  xylo:    {program: 13, channel: 0, volume: 100, pan: 10,  range: [C4, C6], gate: 0.8}
+  tuba:    {program: 58, channel: 1, volume: 104, pan: -6,  range: [C2, C4], gate: 0.85}
+  strings: {program: 48, channel: 2, volume: 64,  pan: -24, range: [G3, G4], gate: 1.0}
+  chirp:   {program: 81, channel: 3, volume: 62,  pan: 24,  range: [C4, C7], gate: 0.6, mono: true}
+  wave:    {program: 87, channel: 4, volume: 70,  pan: 0,   range: [C2, C4], gate: 0.7, mono: true}
+  kit:     {program: 0,  channel: 5, volume: 80,  pan: 14,  role: drums, kit: {crash: 57, snare: 40}}
+
+grooves:
+  poof:
+    crash: "........x... | ............"
+
+sections:
+  poof:
+    bars: 2
+    parts:
+      chirp:   "C5':1 E5':1 G5':1 C6':1 r:2 B5':1 Bb5':1 A5':1 Ab5':1 r:2 | r:12"
+      xylo:    "r:4 G5:1 Eb5:1 C5:1 A4:1 Gb4:1 Eb4:1 C4:2 | r:12"
+      strings: "r:12 | r:8 G3:4"
+      tuba:    "r:8 G2:3 r:1 | F#2:3 r:1 F2:3 r:1 E2:4"
+      wave:    "r:8 G2':1 r:3 | F#2':1 r:3 F2':1 r:3 C2:4"
+      kit:     poof
+
+arrangement: [poof]
