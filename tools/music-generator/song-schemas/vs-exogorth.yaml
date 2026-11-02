@@ -1,0 +1,100 @@
+# vs. the Exogorth: hot-swap of MUS_VS_RAYQUAZA (wiki audio:MUS_VS_RAYQUAZA). STYLE of "The Asteroid Field"
+# (wiki ref_tracks soundtrack:empire-strikes-back:10): an original melody, not a quote. Taken from the cue: its
+# ~167 bpm drive, the A-minor/Dorian colour with chords planing a step (Am, G/A, Gm, C7), a whirling eighth-note
+# ostinato under a broad brass tune, timpani and cymbal swells. Brief (sw_subject): "The EXOGORTH: vast and
+# cosmic." The tune is long-breathed over the fast swirl (the beast's size against the asteroid speed); the C
+# strain drops to bass, squares and horn for a moment of open space, then the brass comes back in full.
+# 168 bpm, 2-bar intro, 28-bar loop (40 s, a whole number of frames; vanilla 49 s), vanilla vs_rayquaza voicegroup.
+name: vs-exogorth
+replaces: MUS_VS_RAYQUAZA
+form: LOOP
+voicegroup: vs_rayquaza          # kit 0, fingered bass 33, timpani 47, strings 48, trumpet 56, horn 60, squares 80/82
+master_volume: 80
+song_priority: 1
+tempo: 168
+steps_per_beat: 2                # eighth-note grid
+time_signature: [4, 4]
+seed: 33
+
+parts:
+  trumpet: {program: 56, channel: 0, volume: 104, pan: 8,   range: [E4, A5], gate: 0.92, humanize: {vel: 4}}
+  horn:    {program: 60, channel: 1, volume: 92,  pan: -12, range: [A3, E5], gate: 0.96}
+  strings: {program: 48, channel: 2, volume: 64,  pan: -28, octave: 4, range: [A3, A5], gate: 1.0}
+  bass:    {program: 33, channel: 3, volume: 96,  pan: 0,   octave: 2, range: [E1, E3], gate: 0.7, role: bass}
+  timpani: {program: 47, channel: 4, volume: 92,  pan: 14,  range: [E2, A2], gate: 1.0}
+  swirl:   {program: 80, channel: 5, volume: 50,  pan: 30,  octave: 4, range: [A3, A5], gate: 0.7, mono: true}
+  echo:    {program: 82, channel: 6, volume: 42,  pan: -32, octave: 5, range: [A4, A6], gate: 0.6, mono: true}
+  kit:     {program: 0,  channel: 7, volume: 84,  pan: 0, role: drums, kit: {kick: 36, snare: 38, crash: 57}}
+
+progressions:
+  intro:  "Am | E"
+  verse:  "Am | G/A | F/A | G/A | Am | C | Dm:4 G:4 | E"
+  bridge: "F | G | Em | Am | F | G | Bb | E"
+  space:  "Am | Gm/A | Am | Gm/A | F | Gm | Bb:4 C:4 | E"
+
+phrases:
+  tune_a: |
+    A4:3 B4:1 C5:2 E5:2 | D5:6 C5:1 B4:1 | C5:3 A4:1 F4:4 | G4:6 r:2 |
+    A4:3 B4:1 C5:2 E5:2 | G5:4 E5:2 C5:2 | D5:2 F5:2 E5:2 D5:2 | E5:6 r:1 E4:1
+  tune_b: |
+    C5:4 A4:2 F4:2 | D5:4 B4:2 G4:2 | E5:4 B4:2 G4:2 | A4:6 C5:1 E5:1 |
+    F5:4 C5:2 A4:2 | G5:4 D5:2 B4:2 | F5:3 E5:1 D5:2 Bb4:2 | G#4:6 r:1 E4:1
+  horn_a: |
+    E4:8 | D4:8 | C4:8 | D4:8 | E4:8 | E4:4 G4:4 | F4:4 D4:4 | E4:6 r:2
+  horn_b: |
+    A3:8 | B3:8 | B3:8 | C4:8 | A3:8 | B3:8 | D4:8 | B3:6 r:2
+  # the open-space strain: a slow horn call over the swirl (the Exogorth surfacing)
+  horn_space: |
+    E4:6 A4:2 | G4:8 | E4:3 D4:1 C4:2 E4:2 | D4:8 |
+    C4:6 F4:2 | D4:4 G4:4 | F4:4 E4:4 | E4:6 r:2
+  tpt_space: |
+    r:8 | r:8 | r:8 | r:8 | r:8 | r:6 G4:1 Bb4:1 | D5:2 C5:2 Bb4:2 C5:2 | B4:2 G#4:2 E4:2 B4:1 E5:1
+  pad: "^3:8"
+  swirl8: "^1:1 ^3:1 ^1+:1 ^3:1 ^2+:1 ^3:1 ^1+:1 ^3:1"
+  swirl8b: "^1+:1 ^3:1 ^2+:1 ^3+:1 ^1+:1 ^3:1 ^2:1 ^3:1"
+  echo_a: "r:1 ^1:1 r:2 ^2:1 r:1 ^3:2"
+  drive: "^1:1 ^1:1 ^1+:1 ^1:1 ^1:1 ^1:1 ^1+:1 ^1:1"
+  drive_space: "^1:4 ^1:2 ^1+:2"
+  timp_a: "r:8 | r:8 | r:8 | r:6 E2:1 E2:1 | A2:2 r:6 | r:8 | r:8 | r:8"
+  timp_space: "r:8 | r:8 | A2:2 r:6 | r:8 | r:8 | r:8 | r:4 E2:1 E2:1 E2:1 E2:1 | E2:1 E2:1 E2:1 E2:1 E2:1 E2:1 E2:1 E2:1"
+  intro_swirl: "A3:1 C4:1 E4:1 A4:1 C5:1 A4:1 E4:1 C4:1 | E4:1 G#4:1 B4:1 E5:1 G#5:1 E5:1 B4:1 G#4:1"
+  intro_bass: "A1:1 A1:1 A2:1 A1:1 A1:1 A1:1 A2:1 A1:1 | E1:1 E1:1 E2:1 E1:1 E1:1 E1:1 E2:1 E1:1"
+  intro_timp: "A2:1 A2:1 A2:1 A2:1 A2:1 A2:1 A2:1 A2:1 | r:8"
+
+grooves:
+  battle:
+    kick:  "....x...|x...x.x.|x...x...|x...x...|....x...|x...x.x.|x...x...|x.x....."
+    snare: "..x...x.|..x...xx|..x...x.|..x.x.x.|..x...x.|..x...xx|..x...x.|..x.rRRR"
+    crash: "x.......|........|........|........|x.......|........|........|........"
+  space:
+    kick:  "........|........|x.......|........|x.......|........|........|........"
+    snare: "........|........|........|........|........|........|........|........"
+    crash: "x.......|........|........|........|........|........|........|........"
+  intro_kit:
+    snare: "........|rrrrRRRR"
+
+sections:
+  intro:
+    bars: 2
+    chords: intro
+    parts: {swirl: intro_swirl, bass: intro_bass, timpani: intro_timp, kit: intro_kit}
+  a:
+    bars: 8
+    chords: verse
+    parts: {trumpet: tune_a, horn: horn_a, swirl: swirl8, echo: echo_a, bass: drive, timpani: timp_a, kit: battle}
+  b:
+    bars: 8
+    chords: bridge
+    parts: {trumpet: tune_b, horn: horn_b, swirl: swirl8b, bass: drive, kit: battle}
+  c:
+    bars: 4
+    chords: "Am | Gm/A | F | E"
+    parts: {horn: "E4:6 A4:2 | G4:8 | F4:4 A4:4 | G#4:6 r:2", strings: pad, swirl: swirl8, echo: echo_a, bass: drive_space, timpani: "A2:2 r:6 | r:8 | r:8 | E2:1 E2:1 E2:1 E2:1 E2:1 E2:1 E2:1 E2:1"}
+  a2:
+    bars: 8
+    chords: space
+    ramp: {horn: [-12, 4], swirl: [-10, 4], bass: [-6, 4]}
+    parts: {horn: horn_space, trumpet: tpt_space, swirl: swirl8, echo: echo_a, bass: drive, timpani: timp_space, kit: space}
+
+arrangement: [intro, a, b, c, a2]
+loop_start: a
