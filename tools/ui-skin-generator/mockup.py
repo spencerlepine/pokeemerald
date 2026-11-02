@@ -36,9 +36,9 @@ rule(r'^01', only=[(168,0,240,160)])
 rule(r'^(05|06|80|h05)', only=[BOT,(0,0,90,24)])
 rule(r'^25', only=[(168,0,240,160)])
 rule(r'^43', only=[BOT,(0,0,120,112)])
+rule(r'^(1[2-6]_|19g|h36)', protect=[(4,18,60,74)])
 rule(r'^(1[0-9]_|b06|b07|h22)', protect=[(4,14,46,56),(90,0,126,160)], fam='party')
 rule(r'^19[b-f]', protect=[(4,14,46,56),(90,0,126,160)], fam='levelup')
-rule(r'^(1[2-6]_|19g|h36)', protect=[(4,18,60,74)])
 rule(r'^20', protect=[(56,28,122,110)])
 rule(r'^21', protect=[(6,22,74,90)])
 rule(r'^22', protect=[(0,16,240,128)])
@@ -78,16 +78,26 @@ rule(r'^h2[3567]', only=[BOT,(160,0,240,112)])
 rule(r'^h2[48]', protect=[(0,20,60,112)])
 rule(r'^h29', protect=[(40,16,200,144)])
 rule(r'^h3[45]', protect=[(4,18,72,84)])
+# Type and contest-category label chips keep their vanilla colours (owner's call), on top of each screen's rule.
+def _pal(path):
+    L=open(path).read().split()[3:]; return [tuple(int(v) for v in L[i:i+3]) for i in range(0,48,3)]
+CHIPCOL={tuple(v>>3 for v in c) for n in (1,2,3) for c in _pal(HERE/f'../../game/graphics/types/move_types_{n}.pal')}
+def chip_px(c): return tuple(v>>3 for v in c) in CHIPCOL
+CHIPS=[(re.compile(r'^12_'),[(118,48,194,62)]),
+       (re.compile(r'^(1[3-6]_|19g|h36)'),[(64,32,100,96)])]
 def inside(x,y,rs): return any(x0<=x<x1 and y0<=y<y1 for x0,y0,x1,y1 in rs)
 def run(f):
-    only,protect,fam=[],[],'ui'
+    only,protect,fam,chips=[],[],'ui',[]
     for p,(o,pr,fm) in R.items():
         if p.match(f): only,protect,fam=o,pr,fm; break
+    for p,rs in CHIPS:
+        if p.match(f): chips=rs
     im=Image.open(f'{SRC}/{f}').convert('RGB'); px=im.load(); cache={}
     for y in range(im.height):
         for x in range(im.width):
             if protect and inside(x,y,protect): continue
             if only and not inside(x,y,only): continue
+            if chips and inside(x,y,chips) and chip_px(px[x,y]): continue
             c=px[x,y]; k=(c,fam)
             if k not in cache: cache[k]=tx(c,fam)
             px[x,y]=cache[k]
