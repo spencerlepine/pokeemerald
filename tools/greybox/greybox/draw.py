@@ -359,7 +359,16 @@ def area(doc, styles, labels=True, grey=False, relief=False):
     img = Image.new("RGB", (W * C, H * C), pal["ground"])
     d = ImageDraw.Draw(img, "RGBA")
     nat = []
-    if relief:
+    if relief and doc.get("kind") == "dungeon" and any("|" in r for r in grid):
+        from . import cave as _cave
+        _cave.station(d, grid, styles, planet, grey)
+    elif relief and doc.get("kind") == "dungeon" and sum(r.count("#") for r in grid) >= 0.1 * W * H:
+        from . import cave as _cave, relief as _relief
+        cells = _cave.draw(d, grid, pal, grey)
+        # in a cave, `T` is a stalagmite: ice shards on ice planets, fungus on fungus planets, else a boulder
+        kind = nature_kind if nature_kind in ("ice", "fungus") else "rock"
+        nat = [("nature", n) for n in _relief.nature_pieces(cells, kind)]
+    elif relief:
         from . import relief as _relief
         cells = _relief.draw(d, grid, pal, grey)
         nat = [("nature", n) for n in _relief.nature_pieces(cells, nature_kind)]

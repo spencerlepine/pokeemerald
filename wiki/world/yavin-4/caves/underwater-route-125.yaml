@@ -6,7 +6,7 @@ replaces: Underwater_Route125
 status: BLOCKOUT
 art_status: pending-mockup
 story: Under the jungle river.
-notes: 'Dungeon room: needs cave mode (walls on every side, a dark margin, a floor style for this planet). Jungle moon with the Massassi temples. Trees and vines,
+notes: 'Dungeon room: cave mode in `greybox terrain` draws the shell; the planet-specific dressing below still needs models. Jungle moon with the Massassi temples. Trees and vines,
   river delta, Rebel base.'
 pos: [528, 403]
 grid: |

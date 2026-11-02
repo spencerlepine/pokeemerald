@@ -6,7 +6,7 @@ replaces: GraniteCave_B1F
 status: BLOCKOUT
 art_status: pending-mockup
 story: 'Shadowlands, lower: cracked root floors that drop to the level below.'
-notes: 'Dungeon room: needs cave mode (walls on every side, a dark margin, a floor style for this planet). Lagoon coast under giant wroshyr trees. Water everywhere.
+notes: 'Dungeon room: cave mode in `greybox terrain` draws the shell; the planet-specific dressing below still needs models. Lagoon coast under giant wroshyr trees. Water everywhere.
   Trees are the border, but as trunks: the canopy is off the top of the map. Wookiee buildings are wood on stilts and platforms in the trees.'
 grid: |
   ################################

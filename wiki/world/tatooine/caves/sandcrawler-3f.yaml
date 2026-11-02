@@ -6,7 +6,7 @@ replaces: MirageTower_3F
 status: BLOCKOUT
 art_status: pending-mockup
 story: 'Sandcrawler, third deck: more cracked floor.'
-notes: 'Dungeon room: needs cave mode (walls on every side, a dark margin, a floor style for this planet). Desert: sand, sandstone mesas and canyons, no trees ever.
+notes: 'Dungeon room: cave mode in `greybox terrain` draws the shell; the planet-specific dressing below still needs models. Desert: sand, sandstone mesas and canyons, no trees ever.
   Borders are cliffs, rock spires and dune ridges. Round Tatooine shapes are allowed here (domes, sunken homesteads) because that is the planet''s look.'
 grid: |
   #####################
