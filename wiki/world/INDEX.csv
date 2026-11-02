@@ -403,7 +403,7 @@ hutt-hideout-b2f,BESPIN,interior,AquaHideout_B2F,BLOCKOUT,warp,Door,1x1,,,PLACEH
 hutt-hideout-b2f,BESPIN,interior,AquaHideout_B2F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 hutt-hideout-b2f,BESPIN,interior,AquaHideout_B2F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 tibanna-refinery-annex,BESPIN,interior,new,BLOCKOUT,area,Carbon-freezing annex,18x14,,,pending-final-art,greybox room
-tibanna-refinery-annex,BESPIN,interior,new,BLOCKOUT,prop,Carbon-freezing pit,6x4,art:bespin:carbon-freezing-chamber,yes,pending-mockup,greybox room
+tibanna-refinery-annex,BESPIN,interior,new,BLOCKOUT,prop,Carbon-freezing pit,6x4,art:bespin:carbon-freezing-chamber,yes,pending-final-art,greybox room
 tibanna-refinery-annex,BESPIN,interior,new,BLOCKOUT,prop,Frozen block,1x2,art:new:carbonite-block,yes,pending-final-art,greybox piece
 tibanna-refinery-annex,BESPIN,interior,new,BLOCKOUT,person,Ugnaught foreman,1x1,,,PLACEHOLDER,
 tibanna-refinery-annex,BESPIN,interior,new,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
@@ -2004,7 +2004,7 @@ ilum-sidneys-room,ILUM,interior,EverGrandeCity_SidneysRoom,BLOCKOUT,person,Sidne
 ilum-sidneys-room,ILUM,interior,EverGrandeCity_SidneysRoom,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 ilum-sidneys-room,ILUM,interior,EverGrandeCity_SidneysRoom,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 ilum-supply-depot,ILUM,interior,new,BLOCKOUT,area,Supply Depot,14x10,,,pending-final-art,greybox room
-ilum-supply-depot,ILUM,interior,new,BLOCKOUT,prop,Counter,4x1,art:shared:supply-depot-interior,yes,pending-mockup,greybox room
+ilum-supply-depot,ILUM,interior,new,BLOCKOUT,prop,Counter,4x1,art:shared:supply-depot-interior,yes,pending-final-art,greybox room
 ilum-supply-depot,ILUM,interior,new,BLOCKOUT,person,Clerk,1x1,,,PLACEHOLDER,
 ilum-supply-depot,ILUM,interior,new,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 ilum-temple-1f,ILUM,interior,EverGrandeCity_PokemonLeague_1F,BLOCKOUT,area,ILUM TEMPLE 1F,19x12,,,pending-final-art,greybox room
@@ -2082,7 +2082,7 @@ jedha-temple-6f,JEDHA,interior,MtPyre_6F,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER,
 jedha-temple-6f,JEDHA,interior,MtPyre_6F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 jedha-temple-6f,JEDHA,interior,MtPyre_6F,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 nijedha-bacta-center,JEDHA,interior,new,BLOCKOUT,area,NiJedha Bacta Center,14x10,,,pending-final-art,greybox room
-nijedha-bacta-center,JEDHA,interior,new,BLOCKOUT,prop,Bacta counter,6x1,art:shared:bacta-center-interior,yes,pending-mockup,greybox room
+nijedha-bacta-center,JEDHA,interior,new,BLOCKOUT,prop,Bacta counter,6x1,art:shared:bacta-center-interior,yes,pending-final-art,greybox room
 nijedha-bacta-center,JEDHA,interior,new,BLOCKOUT,person,Medic droid,1x1,,,PLACEHOLDER,
 nijedha-bacta-center,JEDHA,interior,new,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 nijedha-guardians-quarters,JEDHA,interior,new,BLOCKOUT,area,Guardians' quarters,14x10,,,pending-final-art,greybox room
@@ -2093,7 +2093,7 @@ nijedha-hostel,JEDHA,interior,new,BLOCKOUT,person,Pilgrim,1x1,,,PLACEHOLDER,
 nijedha-hostel,JEDHA,interior,new,BLOCKOUT,person,Innkeeper,1x1,,,PLACEHOLDER,
 nijedha-hostel,JEDHA,interior,new,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 nijedha-supply-depot,JEDHA,interior,new,BLOCKOUT,area,Supply Depot,14x10,,,pending-final-art,greybox room
-nijedha-supply-depot,JEDHA,interior,new,BLOCKOUT,prop,Counter,4x1,art:shared:supply-depot-interior,yes,pending-mockup,greybox room
+nijedha-supply-depot,JEDHA,interior,new,BLOCKOUT,prop,Counter,4x1,art:shared:supply-depot-interior,yes,pending-final-art,greybox room
 nijedha-supply-depot,JEDHA,interior,new,BLOCKOUT,person,Clerk,1x1,,,PLACEHOLDER,
 nijedha-supply-depot,JEDHA,interior,new,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 nijedha-temple-of-the-kyber,JEDHA,interior,new,BLOCKOUT,area,Temple of the Kyber,18x12,,,pending-final-art,greybox room
@@ -2248,7 +2248,7 @@ tipoca-city-house-5,KAMINO,interior,PacifidlogTown_House5,BLOCKOUT,person,Gentle
 tipoca-city-house-5,KAMINO,interior,PacifidlogTown_House5,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 tipoca-city-house-5,KAMINO,interior,PacifidlogTown_House5,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 tipoca-city-supply-depot,KAMINO,interior,new,BLOCKOUT,area,Supply Depot,14x10,,,pending-final-art,greybox room
-tipoca-city-supply-depot,KAMINO,interior,new,BLOCKOUT,prop,Counter,4x1,art:shared:supply-depot-interior,yes,pending-mockup,greybox room
+tipoca-city-supply-depot,KAMINO,interior,new,BLOCKOUT,prop,Counter,4x1,art:shared:supply-depot-interior,yes,pending-final-art,greybox room
 tipoca-city-supply-depot,KAMINO,interior,new,BLOCKOUT,person,Clerk,1x1,,,PLACEHOLDER,
 tipoca-city-supply-depot,KAMINO,interior,new,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 route-131,KAMINO,route,Route131,BLOCKOUT,area,ROUTE 131,60x40,,,pending-final-art,greybox terrain
@@ -2283,7 +2283,7 @@ route-133,KAMINO,route,Route133,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER,
 route-133,KAMINO,route,Route133,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER,
 route-133,KAMINO,route,Route133,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER,
 route-134,KAMINO,route,Route134,BLOCKOUT,area,ROUTE 134,80x40,,,pending-final-art,greybox terrain
-route-134,KAMINO,route,Route134,BLOCKOUT,prop,Storm swell,3x1,art:kamino:storm-sea,yes,pending-mockup,greybox terrain
+route-134,KAMINO,route,Route134,BLOCKOUT,prop,Storm swell,3x1,art:kamino:storm-sea,yes,pending-final-art,greybox terrain
 route-134,KAMINO,route,Route134,BLOCKOUT,person,Trainer Juo,1x1,,,PLACEHOLDER,
 route-134,KAMINO,route,Route134,BLOCKOUT,person,Trainer Lai,1x1,,,PLACEHOLDER,
 route-134,KAMINO,route,Route134,BLOCKOUT,person,Trainer Aden,1x1,,,PLACEHOLDER,
@@ -2296,7 +2296,7 @@ route-134,KAMINO,route,Route134,BLOCKOUT,person,Trainer Hual,1x1,,,PLACEHOLDER,
 route-134,KAMINO,route,Route134,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER,
 route-134,KAMINO,route,Route134,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER,
 tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,area,TIPOCA CITY,50x36,,,pending-final-art,greybox terrain
-tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,building,Cloning hall,12x6,art:kamino:cloning-hall,yes,pending-mockup,greybox room
+tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,building,Cloning hall,12x6,art:kamino:cloning-hall,yes,pending-final-art,greybox room
 tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,building,Landing platform (ships),6x4,art:shared:landing-pad,yes,pending-final-art,greybox piece
 tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,building,Kaminoan dwelling,5x4,art:kamino:stilt-dome,yes,pending-final-art,greybox piece
 tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,building,Bacta Center,5x4,art:shared:bacta-center,yes,pending-final-art,greybox piece
@@ -2306,8 +2306,8 @@ tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,building,Supply Depot,4x4,art:sh
 tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,building,Fisher's dome,4x4,art:kamino:stilt-dome,yes,pending-final-art,greybox piece
 tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,building,Storm watcher's dome,4x4,art:kamino:stilt-dome,yes,pending-final-art,greybox piece
 tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,prop,Cargo crates,2x2,art:shared:cargo-crates,yes,pending-final-art,greybox piece
-tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,prop,Storm swell,3x1,art:kamino:storm-sea,yes,pending-mockup,greybox terrain
-tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,prop,Storm swell,3x1,art:kamino:storm-sea,yes,pending-mockup,greybox terrain
+tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,prop,Storm swell,3x1,art:kamino:storm-sea,yes,pending-final-art,greybox terrain
+tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,prop,Storm swell,3x1,art:kamino:storm-sea,yes,pending-final-art,greybox terrain
 tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,person,Kaminoan aide,1x1,,,PLACEHOLDER,
 tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,person,Clone cadet,1x1,,,PLACEHOLDER,
 tipoca-city,KAMINO,town,PacifidlogTown,BLOCKOUT,person,Clone cadet,1x1,,,PLACEHOLDER,
@@ -2524,7 +2524,7 @@ kachirho-house-2,KASHYYYK,interior,DewfordTown_House2,BLOCKOUT,person,Boy,1x1,,,
 kachirho-house-2,KASHYYYK,interior,DewfordTown_House2,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 kachirho-house-2,KASHYYYK,interior,DewfordTown_House2,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 kachirho-supply-depot,KASHYYYK,interior,new,BLOCKOUT,area,Kachirho supply depot,14x10,,,pending-final-art,greybox room
-kachirho-supply-depot,KASHYYYK,interior,new,BLOCKOUT,prop,Counter,4x1,art:shared:supply-depot-interior,yes,pending-mockup,greybox room
+kachirho-supply-depot,KASHYYYK,interior,new,BLOCKOUT,prop,Counter,4x1,art:shared:supply-depot-interior,yes,pending-final-art,greybox room
 kachirho-supply-depot,KASHYYYK,interior,new,BLOCKOUT,person,Wookiee clerk,1x1,,,PLACEHOLDER,
 kachirho-supply-depot,KASHYYYK,interior,new,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 route-109-seashore-house,KASHYYYK,interior,Route109_SeashoreHouse,BLOCKOUT,area,ROUTE 109 SEASHORE HOUSE,15x10,,,pending-final-art,greybox room
@@ -2814,7 +2814,7 @@ mustafar-peak-shuttle-station,MUSTAFAR,interior,MtChimney_CableCarStation,BLOCKO
 mustafar-peak-shuttle-station,MUSTAFAR,interior,MtChimney_CableCarStation,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 mustafar-peak-shuttle-station,MUSTAFAR,interior,MtChimney_CableCarStation,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 mustafar-mining-facility,MUSTAFAR,landmark,new,BLOCKOUT,area,MINING FACILITY,40x30,,,pending-final-art,greybox terrain
-mustafar-mining-facility,MUSTAFAR,landmark,new,BLOCKOUT,building,Separatist control center,8x5,art:mustafar:fortress-halls,yes,pending-mockup,greybox room
+mustafar-mining-facility,MUSTAFAR,landmark,new,BLOCKOUT,building,Separatist control center,8x5,art:mustafar:fortress-halls,yes,pending-final-art,greybox room
 mustafar-mining-facility,MUSTAFAR,landmark,new,BLOCKOUT,prop,Mining collector,3x4,art:mustafar:mining-collector,yes,pending-final-art,greybox piece
 mustafar-mining-facility,MUSTAFAR,landmark,new,BLOCKOUT,prop,Mining collector,3x4,art:mustafar:mining-collector,yes,pending-final-art,greybox piece
 mustafar-mining-facility,MUSTAFAR,landmark,new,BLOCKOUT,prop,Obsidian spire,2x3,art:mustafar:obsidian-spire,yes,pending-final-art,greybox piece
@@ -3267,7 +3267,7 @@ route-113,SULLUST,route,Route113,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 route-113,SULLUST,route,Route113,BLOCKOUT,warp,Magma Tunnels mouth,1x1,,,PLACEHOLDER,
 route-114,SULLUST,route,Route114,BLOCKOUT,area,ROUTE 114,40x80,,,pending-final-art,greybox terrain
 route-114,SULLUST,route,Route114,BLOCKOUT,building,Lanettes house,5x3,art:sullust:sullustan-home,yes,pending-final-art,greybox piece
-route-114,SULLUST,route,Route114,BLOCKOUT,prop,Lava flow,1x1,art:sullust:lava-flow,yes,pending-mockup,greybox terrain
+route-114,SULLUST,route,Route114,BLOCKOUT,prop,Lava flow,1x1,art:sullust:lava-flow,yes,pending-final-art,greybox terrain
 route-114,SULLUST,route,Route114,BLOCKOUT,prop,Fungus stalks,1x1,art:sullust:fungus-stalks,yes,pending-final-art,greybox piece
 route-114,SULLUST,route,Route114,BLOCKOUT,person,Trainer Lalesh,1x1,,,PLACEHOLDER,
 route-114,SULLUST,route,Route114,BLOCKOUT,person,Trainer Lozax,1x1,,,PLACEHOLDER,
@@ -4653,7 +4653,7 @@ route-111,TATOOINE,route,Route111,BLOCKOUT,building,Old ladys rest stop,4x5,art:
 route-111,TATOOINE,route,Route111,BLOCKOUT,prop,Sarlacc pit (Pit of Carkoon),4x4,art:tatooine:sarlacc-pit,yes,pending-mockup,greybox piece
 route-111,TATOOINE,route,Route111,BLOCKOUT,prop,Sail barge wreck,6x3,art:tatooine:sail-barge-wreck,yes,pending-final-art,greybox piece
 route-111,TATOOINE,route,Route111,BLOCKOUT,prop,Krayt bones,4x3,art:tatooine:krayt-bones,yes,pending-final-art,greybox piece
-route-111,TATOOINE,route,Route111,BLOCKOUT,prop,Dune ripples,1x1,art:tatooine:dune-ripple-ledges,yes,pending-mockup,greybox terrain
+route-111,TATOOINE,route,Route111,BLOCKOUT,prop,Dune ripples,1x1,art:tatooine:dune-ripple-ledges,yes,pending-final-art,greybox terrain
 route-111,TATOOINE,route,Route111,BLOCKOUT,prop,Sandstone boulder,2x2,art:tatooine:sandstone-boulder,yes,pending-final-art,greybox piece
 route-111,TATOOINE,route,Route111,BLOCKOUT,person,Victor,1x1,,,PLACEHOLDER,
 route-111,TATOOINE,route,Route111,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER,
