@@ -19,6 +19,21 @@ The new flags and vars come only from slots that `emerald-db/database/story_flag
 | `var:unused-0x4083` | Death Star site: deepest floor reached |
 | `var:unused-0x408b` | Dune Sea storm of the day (0 calm, 1 storm) |
 | `trainer:terry` (`TRAINER_TERRY`, never placed in Emerald) | Mos Eisley Cantina: Greedo's battle |
+| `flag:unused-0x026` | Ben's Hut: Ben's talk heard (Act 1) |
+| `flag:unused-0x027` | Maul duel won (post-game, Ben's Hut) |
+| `flag:unused-0x028` | Sebulba beaten (podrace grandstand) |
+| `flag:unused-0x029` | Jabba's Palace: rancor pit battle done, KING'S ROCK taken |
+| `flag:unused-0x02a` | Jabba's Palace: Bib Fortuna's errand done (the Jawa's droid delivered) |
+| `flag:unused-0x02b` | Rwookrrorro: the chieftain's TM given |
+| `flag:unused-0x02c` | Rwookrrorro: the bowcaster maker's trade done |
+| `flag:unused-0x02d` | Mining Facility: the SITH SHARD taken |
+| `flag:unused-0x02e` | Endor clearing: the commando's MAX ELIXIR given |
+| `flag:unused-0x02f` | Tibanna Refinery: smugglers cleared, Lobot's SMOKE BALL given |
+| `flag:unused-0x030` | NiJedha: Chirrut's TWISTEDSPOON given |
+| `flag:unused-0x031` | Hoth: the lost scout found |
+| `flag:unused-0x032` | Hoth: Rieekan's reward given |
+| `flag:unused-0x033` | Kamino: Cody's FOCUS BAND given |
+| `var:unused-0x4091` | Jar Jar's next stop (0-6) |
 
 ## Planet borders (`net:hangar-*`, `net:border-*`)
 
@@ -413,3 +428,160 @@ PROTOCOL DROID: Oh, dear. They don't\nallow droids inside.\pI have been waiting 
 **Port checklist:** re-arrange the layout's metatiles; change `music`; re-point objects 1, 2, 4 and 9 and move every object
 to the tiles above; add objects 10-14 and their scripts; add the droid in MOS EISLEY; change `TRAINER_TERRY`'s data and
 party; add the 11 new texts above. Placeholders keep every step playable before the new walkers are drawn.
+
+## The main path and its fixes (owner, 2026-11-03: "run it autonomously")
+
+The audit of 2026-11-03 found the main path is Emerald's and holds together, with three faults: the four-flight
+backtrack from Jedha to Fortress Vader, Act 5 opening five planets at once with nothing new on them, and 14 new
+playable areas with sprites but no gate, band, trainers or rewards. `mapping/planets.csv` records each planet's
+role, act and arrival (`database/planets.csv` adds its bands); `mapping/area_progression_extra.csv` gives every new
+area a gate, badge count, story chapter and level band, merged into `database/area_progression.csv`; and each new
+area's yaml names its `net:` row in `todo`, so `python3 -m blockout guide` checks it. The fixes, one row each:
+
+| Row | Planet | Gate | Levels | What it adds |
+|---|---|---|---|---|
+| `net:hyperlane-jedha-mustafar` | Jedha, Mustafar | `event:mt-pyre-orbs` (6 badges) | none | The Imperial shuttle from the Jedha pad to Mustafar Peak |
+| `net:bens-hut` | Tatooine | open | 7-9 | Obi-Wan in Act 1: the Force, the Cave of Evil, Ilum |
+| `net:maul-duel` | Tatooine | `flag:sys-game-clear` | 60-65 | Maul in person, one boss battle, after the Hall of Fame |
+| `net:podrace-sebulba` | Tatooine | `flag:badge03-get` | 22-24 | Sebulba, SWOOP RACER boss at the grandstand |
+| `net:jabbas-palace` | Tatooine | `item:go-goggles` (4 badges) | 19-23 | Jabba's court, the rancor pit, Bib Fortuna's errand |
+| `net:rwookrrorro` | Kashyyyk | `item:hm-surf` (5 badges) | 25-27 | Wookiee village, Chewbacca at home, a TM and a trade |
+| `net:mustafar-mining-facility` | Mustafar | `flag:badge03-get` | 20-22 | Veers's drills, a SITH SHARD, the duel record |
+| `net:endor-battlefield` | Endor | `item:devon-scope` (6 badges) | 28-30 | Scout-walker wrecks, a Rebel commando, a MAX ELIXIR |
+| `net:tibanna-refinery` | Bespin | `flag:badge06-get` | 32-34 | Lobot's side job against Cartel smugglers |
+| `net:nijedha` | Jedha | `item:hm-surf` (6 badges) | 31-33 | The holy city: Chirrut, Baze, the kyber trader |
+| `net:hoth-survey` | Hoth | `flag:badge06-get` | 32-35 | Rieekan, Derlin, the lost scout, NEVER-MELT ICE |
+| `net:kamino-cloning-hall` | Kamino | `flag:badge06-get` | 33-35 | Cody, the clone cadets, PROTOCLONE's lab |
+| `net:jar-jar-traveller` | six stops | none | none | Jar Jar one planet ahead of the player, a BIG PEARL at the end |
+
+Every band is read from `database/area_progression.csv` for the area the new one hangs off, and sits inside it with
+the five levels of slack the guide allows. No reward carries new power: TMs the game already has, held items the
+game already sells, and the two evolution items already stocked in Pirin.
+
+### Imperial shuttle, Jedha to Mustafar (`net:hyperlane-jedha-mustafar`)
+
+- **Where:** the Jedha hangar (`jedha-hangar`) to the Mustafar Peak shuttle station. Row `hl-jedha-mustafar` in
+  `mapping/hyperlanes.csv`, unlock `event:mt-pyre-orbs`.
+- **Story:** Vader's troops take the BLUE KYBER at the temple summit and leave by walker; their shuttle stays on the
+  pad with one pilot. The Guardians' IMPERIAL CODE gets the player aboard. It lands at the Mustafar Peak station,
+  three screens from the Fortress Vader door, the way Emerald's Jagged Pass sits under Mt. Chimney.
+- **Balance:** none. The gate is Emerald's (six badges, the Mt. Pyre scene). The player lands with the team they
+  would have walked in with.
+- **Placeholder:** the cable-car station interior and its script.
+
+### Ben's Hut and the Maul duel (`net:bens-hut`, `net:maul-duel`)
+
+- **Where:** `bens-hut` and `bens-hut-interior`, a side path east of the Jundland Wastes. Open from Act 1.
+- **Act 1:** old Ben sits on the porch. He names the Force, says the Cave of Evil on Dagobah and the temple on
+  Ilum are tests not places, and sends the player on. Sets `flag:unused-0x026`; the Dagobah scene (Emerald's
+  Wallace at the Cave of Origin) and the Ilum entrance quote his line back. One Tusken scout watches from the
+  rocks (RAIDER class, levels 7-9: Jundland Wastes is 3-9).
+- **Post-game:** with `flag:sys-game-clear` Darth Maul stands on the path to the hut (canon: Rebels, Twin Suns,
+  2 BBY: Maul finds Kenobi on Tatooine). He takes the player for Kenobi's apprentice and fights: SITH LORD class,
+  five companions, levels 60-65, dark-side species. One battle; winning sets `flag:unused-0x027`, Ben steps out,
+  Maul leaves, and Ben hands over Maul's SITH SHARD. Maul is a person and never catchable. Losing has no cost;
+  he waits.
+- **Placeholders:** Lanette's house for the hut; Sidney's trainer pic and party (re-leveled) for Maul.
+
+### Sebulba's challenge (`net:podrace-sebulba`)
+
+- **Where:** `mos-espa-podrace-arena`, the grandstand over Route 110's course (Emerald's Cycling Road). Open with
+  Mos Espa; Sebulba appears after the Mos Espa badge (`flag:badge03-get`).
+- **Battle:** Sebulba (SWOOP RACER, the Triathlete class renamed), four companions, levels 22-24, fast ground and
+  flying types. Mos Espa's arena band is 17-24. One battle; winning sets `flag:unused-0x028` and gives a SCOPE LENS.
+  Prize money uses the Triathlete scale.
+- **Why:** the Boonta Eve course is already the Cycling Road; the race itself needs no new system, only its champion
+  standing in the pit lane.
+- **Placeholder:** a Cycling Road triathlete's pic and party.
+
+### Jabba's Palace (`net:jabbas-palace`)
+
+- **Where:** `jabbas-palace`, `jabbas-palace-throne-room`, `jabbas-palace-barge-dock`, east of Route 111's desert.
+  The desert needs the GO-GOGGLES (four badges), so does the palace.
+- **People:** two gate guards and two thugs (CARTEL THUG, 19-23), two Gamorrean guards in the throne room
+  (WOOKIEE class renamed per trainer: GAMORREAN, 21-23), one skiff rider at the dock (20-22), Jabba on the dais
+  (lines only: he is beaten at the Hutt Hideout), Bib Fortuna, Salacious Crumb, a Jawa droid seller, a bounty hunter
+  waiting for work (Boba is not here: he is on Endor by then).
+- **Side jobs:** the trapdoor drops the player into the rancor pit: a fixed battle with a level 23 RANCOR that
+  cannot be caught (the pod is refused, as with the Emerald sealed-chamber statues); win and the keeper's chest
+  holds a KING'S ROCK (`flag:unused-0x029`). Bib Fortuna wants the Jawa's droid (a MOUSEDROID the Jawa sells for
+  500 credits); deliver it for a RARE CANDY (`flag:unused-0x02a`).
+- **Placeholders:** Aqua Hideout tiles and the grunt sprites.
+
+### Rwookrrorro (`net:rwookrrorro`)
+
+- **Where:** `rwookrrorro` and three huts above Route 107 (a ladder up a wroshyr trunk). Route 107 is reached by
+  skimming from Kachirho with SURF, so five badges; its band is 24-27.
+- **People:** two Wookiee hunters (WOOKIEE, 25-27), the elder, a cub, the chieftain, the bowcaster maker.
+  Chewbacca stands in the chieftain's hut whenever Han is not flying the player (he has a line about Han).
+- **Rewards:** the chieftain gives TM31 BRICK BREAK once (`flag:unused-0x02b`). The bowcaster maker trades his
+  WROSEED for any TATOOINE companion (an in-game trade, the fourth; `flag:unused-0x02c`).
+- **Placeholders:** Fortree's treehouse tiles; Black Belt sprites.
+
+### Mining Facility (`net:mustafar-mining-facility`)
+
+- **Where:** `mustafar-mining-facility` and `mustafar-mining-control`, south of Ashen Pass (Act 3, three badges,
+  band 19-22).
+- **People:** two stormtroopers on the catwalks and one officer in the control center (20-22). Veers drills them:
+  an NPC here with two lines (he is fought on Mustafar Peak and in Fortress Vader, as Emerald's Tabitha).
+- **Rewards:** an item ball with a SITH SHARD (`flag:unused-0x02d`) in the control center, next to a holo-table
+  that replays a few seconds of the duel on the lava river with no names. The Ilum trial of ANAKIN quotes it.
+- **Placeholder:** New Mauville tiles.
+
+### Endor clearing (`net:endor-battlefield`)
+
+- **Where:** `endor-battlefield` and its bunker, east of Route 120 (six badges, Devon Scope, band 27-30).
+- **Canon:** in 2 BBY the Battle of Endor is years away. The clearing is an Imperial survey site the Ewoks ended
+  with log traps: two scout walkers down, a bunker left behind. The Empire chose this moon for its bunker later.
+- **People:** two stormtrooper stragglers (28-30), one more in the bunker, Ewok scouts, and a Rebel commando who
+  wants the bunker's scanner table. Beat the bunker straggler and the commando gives a MAX ELIXIR
+  (`flag:unused-0x02e`).
+- **Placeholders:** Route 120 tiles, Magma grunt sprites.
+
+### Tibanna Refinery (`net:tibanna-refinery`)
+
+- **Where:** `tibanna-refinery`, its interior and annex, over Cloud City's north skybridge (six badges, band 31-34).
+- **People:** Lobot at the bridge (he opens it and asks for help), the Ugnaught foreman, two Cartel thugs outside
+  (32-34) and one inside at the siphon. Clearing the three sets `flag:unused-0x02f`; Lobot gives a SMOKE BALL.
+  The carbon-freezing annex is dressing: a line about the city's new freezing rig.
+- **Placeholder:** New Mauville interior tiles.
+
+### NiJedha (`net:nijedha`)
+
+- **Where:** `nijedha` and five interiors, west gate from Route 122 (six badges, Jedha's band 31-33).
+- **People:** Chirrut Imwe and Baze Malbus in the Temple of the Kyber (the Guardians of the Whills, canon Rogue
+  One, alive here in 2 BBY), a pilgrim, a stormtrooper patrol (31-33), the kyber trader, the hostel keeper.
+- **Rewards:** Chirrut gives a TWISTEDSPOON (`flag:unused-0x030`) after the temple summit scene. The kyber trader's
+  stall is a second shop for KYBER CRYSTAL and SITH SHARD, at Pirin's price.
+- **Placeholder:** Verdanturf's town tiles.
+
+### Hoth survey (`net:hoth-survey`)
+
+- **Where:** `hoth-tundra`, the survey outpost, the tauntaun shelter; the Wampa Cave (Shoal Cave) beyond. Survey
+  shuttle from Yavin 4 at six badges.
+- **People:** General Rieekan in the outpost, Major Derlin on the tundra with three Rebel scouts (PATHFINDER class,
+  32-35), a tauntaun handler, a technician, and a lost scout at the cave mouth.
+- **Quest:** Derlin says a scout is missing. The scout stands at the Wampa Cave mouth (`flag:unused-0x031`) and
+  gives a NEVER-MELT ICE; Rieekan then gives TM07 HAIL (`flag:unused-0x032`). Canon: Echo Base is built later;
+  this survey picks the site.
+- **Placeholders:** Shoal Cave tiles, Ranger sprites.
+
+### Tipoca City cloning hall (`net:kamino-cloning-hall`)
+
+- **Where:** `tipoca-city-cloning-hall`, the great hall of Tipoca City (six badges, Kamino's band 32-34).
+- **People:** Commander Cody, aged, keeping two clone cadets in training (CADET class, 33-35); a Kaminoan
+  scientist by the sealed lab. Canon: the Empire ended Kamino's cloning (The Bad Batch); Cody's whereabouts in
+  2 BBY are open, so he is here (`canon_note`).
+- **Rewards:** beat the cadets and Cody gives a FOCUS BAND (`flag:unused-0x033`). The scientist tells PROTOCLONE's
+  story (Mewtwo's slot, unobtainable in Emerald; still unobtainable here).
+- **Placeholder:** the Launch Tower 2F lab tiles.
+
+### Jar Jar the traveller (`net:jar-jar-traveller`)
+
+- **Stops:** Tosche Station (Act 1), Kachirho (Act 2), Pirin (Act 3), Bright Tree (Act 4), Cloud City (Act 5),
+  Dagobah (Act 6). `var:unused-0x4091` is the next stop; each stop advances it so he is only ever in one place.
+- **Lines:** always a story about the last planet, always one planet ahead of the player. At Dagobah he gives a
+  BIG PEARL ("from Otoh Gunga") and goes home. He is an NPC, never a trainer, never a companion.
+- **Canon:** after the Clone Wars Jar Jar lost his seat and became a street performer on Naboo (Aftermath: Empire's
+  End); here he spends 2 BBY wandering the Outer Rim.
+- **Placeholder:** a Gentleman sprite until `net:walker-jar-jar` is drawn (step 3).

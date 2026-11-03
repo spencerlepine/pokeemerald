@@ -290,3 +290,41 @@ under these rules, decided by the owner after the audit of 2026-11-03:
    explained in `canon_note`.
 6. **`home_planet` is the placement rule.** A species is wild on its home planet unless its row says why not
    (`habitat_note`). Emerald's slots, rates and levels stay; only the species in the slot changes.
+
+### The main path (step 2, 2026-11-03)
+
+Recorded in `mapping/planets.csv` (role, act, arrival) and `database/planets.csv` (bands). Badge counts are what the
+player holds on first landing; bands are Emerald's for the maps each planet replaces.
+
+| Act | Planet | Arrive with | Trainer band | What is new there |
+|---|---|---|---|---|
+| 1 | Tatooine | 0 | 3-15 | Ben's Hut, the Cantina, Jar Jar at Tosche Station |
+| 2 | Kashyyyk | 1 | 13-19 | Jar Jar at Kachirho; Rwookrrorro later (5 badges) |
+| 2-3 | Tatooine | 2 | 6-24 | Sebulba at the grandstand (3 badges), the Dune Sea (5) |
+| 3 | Sullust, Mustafar | 3 | 16-29 | The Mining Facility, Jar Jar at Pirin |
+| 3 | Tatooine | 4 | 26-31 | Jabba's Palace (GO-GOGGLES), Dad's arena |
+| 4 | Endor, Felucia | 5 | 20-33 | The Endor clearing, Boba Fett stage 1, Jar Jar at Bright Tree |
+| 5 | Bespin | 6 | 31-34 | The Tibanna Refinery, Lobot, Jar Jar at Cloud City |
+| 5 | Jedha | 6 | 31-33 | NiJedha, Boba Fett stage 2, the Imperial shuttle to Mustafar |
+| 5 | Mustafar | 6 | 26-39 | Fortress Vader (no backtrack) |
+| 5 | Bespin, Yavin 4 | 6 | 32-44 | The Hutt Hideout, the Massassi arena, the Launch Tower |
+| 5 | Hoth, Kamino | 6 | 32-35 | The survey (Rieekan, Derlin), the cloning hall (Cody), Boba Fett stage 3 |
+| 6 | Dagobah, Asteroid Field | 7 | 31-46 | Jar Jar's last stop, the Exogorth |
+| 7 | Ilum | 8 | 41-58 | Boba Fett's finale, the Four Trials |
+| 8 | Post-game | 8 | up to 70 | Maul at Ben's Hut, the Death Star (Krennic, Piett, K-2SO), the Grand Arena, the event planets |
+
+Faults found and fixed (rows in `mapping/net_new.csv`, designs in [`NET_NEW_DESIGNS.md`](NET_NEW_DESIGNS.md)):
+
+- **Jedha to Fortress Vader was four flights.** The Imperial shuttle left on the Jedha pad now flies straight to
+  Mustafar Peak after the kyber theft (`net:hyperlane-jedha-mustafar`).
+- **Act 5 opened five planets with nothing new on them.** Hoth and Kamino are side trips with their own quests
+  (`net:hoth-survey`, `net:kamino-cloning-hall`); Jedha and Bespin get a town and a side job (`net:nijedha`,
+  `net:tibanna-refinery`).
+- **Fourteen new playable areas had sprites and no game.** Each now has a gate, a band, trainers, a reward and a
+  reason to exist (`mapping/area_progression_extra.csv`; the rows above).
+- **Nothing set up the ending.** Obi-Wan appears in Act 1 at Ben's Hut; the duel record on Mustafar feeds the
+  ANAKIN trial; Maul is fought for real after the credits.
+- **Jar Jar** walks the main path one planet ahead of the player (`net:jar-jar-traveller`).
+
+Kept as is: Leia's post-game rematch at 75-78 (Emerald's Steven; a HOTSWAP row never changes balance). Level cap 58
+through Ilum, 70 in the post-game, holds for every new row.

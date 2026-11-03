@@ -45,4 +45,4 @@ warps:
   at: [8, 11]
   to: route-122
 todo: ['New interior (replaces: new); placeholder room, sized for its contents.', Ship travel menu = vanilla boat/ferry ticket script; the StarNAV console lists unlocked
-    planets.]
+    planets., 'Net-new row net:hyperlane-jedha-mustafar (bible/NET_NEW_DESIGNS.md); gate and level band in mapping/area_progression_extra.csv.']

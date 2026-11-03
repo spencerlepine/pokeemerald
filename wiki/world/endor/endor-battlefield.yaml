@@ -5,8 +5,9 @@ kind: landmark
 replaces: new
 status: BLOCKOUT
 art_status: pending-final-art
-story: 'Optional: the forest clearing where the battle was fought: AT-ST wrecks, log traps, and an abandoned shield bunker. Stormtrooper stragglers still patrol;
-  Ewok scouts keep watch. Trainers: levels 28-30.'
+story: 'Optional: a forest clearing where Ewok traps brought down two Imperial scout walkers surveying Endor for a base (the Empire picked this moon for a shield
+  bunker years later). Stormtrooper stragglers still patrol; Ewok scouts keep watch; a Rebel commando is here to find out what the Empire wanted. Trainers: levels
+  28-30.'
 notes: 'endor-battlefield (landmark, 40x30): the clearing: AT-ST wrecks, log traps hanging from trees, the abandoned shield bunker · need: AT-ST (two-legged walker,
   wedge head, needs hull and rotated boxes), log traps (logs on ropes), fallen logs.'
 pos: [80, 7]
@@ -88,4 +89,4 @@ people:
   role: trainer
 signs: []
 warps: []
-todo: ['New interior: endor-battlefield-bunker.']
+todo: ['New interior: endor-battlefield-bunker.', 'Net-new row net:endor-battlefield (bible/NET_NEW_DESIGNS.md); gate and level band in mapping/area_progression_extra.csv.']

@@ -121,4 +121,5 @@ signs:
 warps: []
 travel: []
 todo: ['New town (replaces: new). New interiors: nijedha-temple-of-the-kyber, nijedha-bacta-center, nijedha-supply-depot, nijedha-guardians-quarters, nijedha-hostel.',
-  Gives Jedha a hub; the Guardians already exist in characters.csv., 'Compact town (template kachirho): was 44x34.']
+  Gives Jedha a hub; the Guardians already exist in characters.csv., 'Compact town (template kachirho): was 44x34.', 'Net-new row net:nijedha (bible/NET_NEW_DESIGNS.md);
+    gate and level band in mapping/area_progression_extra.csv.']

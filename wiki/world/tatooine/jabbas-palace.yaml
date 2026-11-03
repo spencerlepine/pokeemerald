@@ -115,4 +115,4 @@ signs:
 warps: []
 todo: ['New area: reached from a side track on Route 111''s east edge.', 'New concept rows needed: art:tatooine:jabbas-palace (14x9 landmark), rancor pit (uses sarlacc-pit
     as a stand-in).', 'New interiors: jabbas-palace-throne-room, jabbas-palace-barge-dock.', 'Story check: Jabba is the Cartel boss after SANDO; this is a visit,
-    not where he is beaten (that stays at the Hutt Hideout).']
+    not where he is beaten (that stays at the Hutt Hideout).', 'Net-new row net:jabbas-palace (bible/NET_NEW_DESIGNS.md); gate and level band in mapping/area_progression_extra.csv.']

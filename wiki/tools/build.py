@@ -1114,8 +1114,45 @@ def main() -> None:
         a = dict(a)
         a["sw_map_title"] = r.get("sw_title", "")
         a["planet"] = r.get("planet", "")
+        a["net_id"] = ""
         ap.append(a)
-    write("area_progression.csv", ap)
+    # net-new areas (wiki/world, replaces: new) get their gate and band from mapping/area_progression_extra.csv
+    ap_ids = {a["map_id"] for a in ap}
+    if (MAPPING / "area_progression_extra.csv").exists():
+        for a in read(MAPPING / "area_progression_extra.csv"):
+            if a["map_id"] in ap_ids:
+                warn(f"mapping/area_progression_extra.csv: {a['map_id']} is already an Emerald map")
+            if a["net_id"] and a["net_id"] not in known:
+                warn(f"mapping/area_progression_extra.csv: {a['map_id']} net_id {a['net_id']} is not in net_new.csv")
+            for g in a["requires"].split("|"):
+                if g and g not in known and not g.startswith("event:"):
+                    warn(f"mapping/area_progression_extra.csv: {a['map_id']} requires {g} is not a known flag or item")
+            ap.append(dict(a))
+    ap_cols = list(ap[0].keys())
+    write("area_progression.csv", ap, ap_cols)
+    # planets: the hand table (role, act, arrival) plus the bands read from area_progression
+    if (MAPPING / "planets.csv").exists():
+        by_planet: dict[str, list[dict]] = {}
+        for a in ap:
+            by_planet.setdefault(a["planet"], []).append(a)
+        pl = []
+        for p in read(MAPPING / "planets.csv"):
+            mine = by_planet.pop(p["planet"], [])
+            def rng(lo_key, hi_key):
+                lo = [int(a[lo_key]) for a in mine if a[lo_key]]
+                hi = [int(a[hi_key]) for a in mine if a[hi_key]]
+                return (f"{min(lo)}-{max(hi)}" if lo and hi else "")
+            badges = [int(a["badges_expected"]) for a in mine if a["badges_expected"]]
+            p = dict(p)
+            p["badge_band"] = f"{min(badges)}-{max(badges)}" if badges else ""
+            p["trainer_band"] = rng("trainer_level_min", "trainer_level_max")
+            p["wild_band"] = rng("wild_any_min", "wild_any_max")
+            p["areas"] = len(mine)
+            p["new_areas"] = sum(1 for a in mine if a["map_id"] not in ap_ids)
+            pl.append(p)
+        for planet in sorted(k for k in by_planet if k and k != "SHARED"):
+            warn(f"mapping/planets.csv: planet {planet} has areas but no row")
+        write("planets.csv", pl)
     import build_music  # tools/build_music.py: database/music.csv + music_by_map.csv for tools/music-generator
     warnings.extend(f"music: {w}" for w in build_music.main())
 

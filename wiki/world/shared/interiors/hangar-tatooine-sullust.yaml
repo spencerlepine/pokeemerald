@@ -49,4 +49,4 @@ warps:
   at: [17, 9]
   to: route-113
 todo: ['New interior (replaces: new); placeholder room, sized for its contents.', One cabin for both ends; the script swaps which ramp opens. See net_new.csv for
-    unlock flags.]
+    unlock flags., 'Net-new row net:border-tatooine-sullust (bible/NET_NEW_DESIGNS.md); gate and level band in mapping/area_progression_extra.csv.']

@@ -1633,3 +1633,5 @@ cloud-city-hangar,BESPIN,interior,atollon-hangar,ATOLLON,interior,hyperlane,Char
 atollon-hangar,ATOLLON,interior,cloud-city-hangar,BESPIN,interior,hyperlane,Charter ship (hl-bespin-atollon),yes,yes
 cloud-city-hangar,BESPIN,interior,mortis-gate-hangar,MORTIS,interior,hyperlane,Charter ship (hl-bespin-mortis),yes,yes
 mortis-gate-hangar,MORTIS,interior,cloud-city-hangar,BESPIN,interior,hyperlane,Charter ship (hl-bespin-mortis),yes,yes
+jedha-hangar,JEDHA,interior,mustafar-peak-shuttle-station,MUSTAFAR,interior,hyperlane,Imperial shuttle (captured) (hl-jedha-mustafar),yes,yes
+mustafar-peak-shuttle-station,MUSTAFAR,interior,jedha-hangar,JEDHA,interior,hyperlane,Imperial shuttle (captured) (hl-jedha-mustafar),yes,yes

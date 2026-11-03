@@ -46,4 +46,5 @@ warps:
 - name: Door
   at: [10, 13]
   to: tibanna-refinery
-todo: ['New interior (replaces: new); placeholder room, sized for its contents.']
+todo: ['New interior (replaces: new); placeholder room, sized for its contents.', 'Net-new row net:tibanna-refinery (bible/NET_NEW_DESIGNS.md); gate and level band
+    in mapping/area_progression_extra.csv.']

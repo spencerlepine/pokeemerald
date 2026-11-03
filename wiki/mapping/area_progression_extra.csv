@@ -1,0 +1,52 @@
+map_id,map_title,map_type,location_id,first_story_chapter,first_story_event,badges_expected,wild_land_min,wild_land_max,wild_any_min,wild_any_max,wild_methods,trainer_count,trainer_level_min,trainer_level_max,requires,gating_notes,net_id,sw_map_title,planet
+map:asteroid-spire-hangar,Asteroid docking hollow,interior,,34,sky-pillar-rayquaza,7,,,,,,0,,,event:sootopolis-crisis,Hangar: the player's ship (hl-dagobah-asteroid).,,Asteroid docking hollow,ASTEROID FIELD
+map:tibanna-refinery,TIBANNA REFINERY,landmark,,26,lilycove-rival,6,,,,,,2,32,34,flag:badge06-get,North skybridge from Cloud City; Lobot opens it once the player holds six badges.,net:tibanna-refinery,TIBANNA REFINERY,BESPIN
+map:tibanna-refinery-annex,Carbon-freezing annex,interior,,26,lilycove-rival,6,,,,,,0,,,flag:badge06-get,,net:tibanna-refinery,Carbon-freezing annex,BESPIN
+map:tibanna-refinery-interior,Tibanna refinery,interior,,26,lilycove-rival,6,,,,,,1,33,34,flag:badge06-get,,net:tibanna-refinery,Tibanna refinery,BESPIN
+map:dagobah-hangar,Dagobah bog landing,interior,,33,sootopolis-crisis,7,,,,,,0,,,item:hm-dive|flag:badge07-get,Hangar: Rebel transport from Yavin 4 (hl-yavin-dagobah); the player's ship on to the Asteroid Field and Ilum.,,Dagobah bog landing,DAGOBAH
+map:death-star-ds-1,DEATH STAR DS-1,dungeon,,40,battle-frontier,8,,,,,,3,60,63,flag:sys-game-clear,,net:death-star-site,DEATH STAR DS-1,DEATH STAR
+map:death-star-ds-2,DEATH STAR DS-2,dungeon,,40,battle-frontier,8,,,,,,3,62,65,flag:sys-game-clear,,net:death-star-site,DEATH STAR DS-2,DEATH STAR
+map:death-star-ds-3,DEATH STAR DS-3,dungeon,,40,battle-frontier,8,,,,,,3,64,67,flag:sys-game-clear,,net:death-star-site,DEATH STAR DS-3,DEATH STAR
+map:death-star-ds-4,DEATH STAR DS-4,dungeon,,40,battle-frontier,8,,,,,,3,66,69,flag:sys-game-clear,,net:death-star-site,DEATH STAR DS-4,DEATH STAR
+map:death-star-ds-5,DEATH STAR DS-5,dungeon,,40,battle-frontier,8,,,,,,4,68,70,flag:sys-game-clear,Krennic is the final battle (levels 68-70).,net:death-star-site,DEATH STAR DS-5,DEATH STAR
+map:death-star-hangar,DEATH STAR HANGAR,dungeon,,40,battle-frontier,8,,,,,,1,60,62,flag:sys-game-clear,Post-game; captured shuttle from Yavin 4 (hl-yavin-death-star).,net:death-star-site,DEATH STAR HANGAR,DEATH STAR
+map:endor-battlefield,ENDOR BATTLEFIELD,landmark,,24,devon-scope,6,,,,,,3,28,30,item:devon-scope,"East of Route 120, past the scope gate.",net:endor-battlefield,ENDOR BATTLEFIELD,ENDOR
+map:endor-battlefield-bunker,Abandoned shield bunker,interior,,24,devon-scope,6,,,,,,1,29,30,item:devon-scope,,net:endor-battlefield,Abandoned shield bunker,ENDOR
+map:endor-hangar,Route 121 shuttle pad hangar,interior,,24,devon-scope,6,,,,,,0,,,event:devon-scope,Hangar: Cloud City shuttle (hl-endor-bespin).,,Route 121 shuttle pad hangar,ENDOR
+map:route-123-landing,Pilgrim shuttle clearing,interior,,27,mt-pyre-orbs,6,,,,,,0,,,flag:badge06-get,Landing: pilgrim shuttle from Jedha (hl-jedha-endor).,,Pilgrim shuttle clearing,ENDOR
+map:felucia-hangar,Felucia reserve shuttle gate,interior,,22,weather-institute,5,,,,,,0,,,item:hm-surf|flag:badge05-get,Hangar: reserve shuttle from Route 121 (hl-endor-felucia).,,Felucia reserve shuttle gate,FELUCIA
+map:hoth-hangar,Hoth survey pad hangar,interior,,30,mind-badge,6,,,,,,0,,,flag:badge06-get,Hangar: survey shuttle (hl-yavin-hoth).,,Hoth survey pad hangar,HOTH
+map:hoth-survey-outpost,Rebel survey outpost,interior,,30,mind-badge,6,,,,,,0,,,flag:badge06-get,,net:hoth-survey,Rebel survey outpost,HOTH
+map:hoth-tauntaun-shelter,Tauntaun shelter,interior,,30,mind-badge,6,,,,,,0,,,flag:badge06-get,,net:hoth-survey,Tauntaun shelter,HOTH
+map:hoth-tundra,HOTH TUNDRA,route,,30,mind-badge,6,30,34,30,34,land|surf,3,32,35,flag:badge06-get,"Survey shuttle from Yavin 4 (hl-yavin-hoth), six badges.",net:hoth-survey,HOTH TUNDRA,HOTH
+map:ilum-hangar,Ilum landing hangar,interior,,36,victory-road-wally,8,,,,,,0,,,flag:badge08-get,Hangar: the player's ship (hl-dagobah-ilum).,,Ilum landing hangar,ILUM
+map:ilum-supply-depot,Supply Depot,interior,,36,victory-road-wally,8,,,,,,0,,,flag:badge08-get,Shop.,,Supply Depot,ILUM
+map:jedha-hangar,Pilgrim landing pad hangar,interior,,27,mt-pyre-orbs,6,,,,,,0,,,item:hm-surf|flag:badge05-get,Hangar: pilgrim shuttle from Cloud City; after the kyber theft an Imperial shuttle flies to Mustafar (hl-jedha-mustafar).,net:hyperlane-jedha-mustafar,Pilgrim landing pad hangar,JEDHA
+map:nijedha,NIJEDHA,town,,27,mt-pyre-orbs,6,,,,,,1,31,33,item:hm-surf|flag:badge05-get,West gate from Route 122; the hub before the holy waters.,net:nijedha,NIJEDHA,JEDHA
+map:nijedha-bacta-center,NiJedha Bacta Center,interior,,27,mt-pyre-orbs,6,,,,,,0,,,item:hm-surf|flag:badge05-get,,net:nijedha,NiJedha Bacta Center,JEDHA
+map:nijedha-guardians-quarters,Guardians' quarters,interior,,27,mt-pyre-orbs,6,,,,,,0,,,item:hm-surf|flag:badge05-get,,net:nijedha,Guardians' quarters,JEDHA
+map:nijedha-hostel,Pilgrim hostel,interior,,27,mt-pyre-orbs,6,,,,,,0,,,item:hm-surf|flag:badge05-get,,net:nijedha,Pilgrim hostel,JEDHA
+map:nijedha-supply-depot,Supply Depot,interior,,27,mt-pyre-orbs,6,,,,,,0,,,item:hm-surf|flag:badge05-get,Shop; the kyber trader stall sells KYBER CRYSTAL and SITH SHARD.,net:nijedha,Supply Depot,JEDHA
+map:nijedha-temple-of-the-kyber,Temple of the Kyber,interior,,27,mt-pyre-orbs,6,,,,,,0,,,item:hm-surf|flag:badge05-get,,net:nijedha,Temple of the Kyber,JEDHA
+map:tipoca-city-cloning-hall,Tipoca cloning hall,interior,,30,mind-badge,6,,,,,,2,33,35,flag:badge06-get,"Tipoca City's great hall; transport from Yavin 4 (hl-yavin-kamino), six badges.",net:kamino-cloning-hall,Tipoca cloning hall,KAMINO
+map:tipoca-city-hangar,Tipoca landing platform,interior,,30,mind-badge,6,,,,,,0,,,flag:badge06-get,Hangar: Rebel transport (hl-yavin-kamino).,,Tipoca landing platform,KAMINO
+map:tipoca-city-supply-depot,Supply Depot,interior,,30,mind-badge,6,,,,,,0,,,flag:badge06-get,Shop.,,Supply Depot,KAMINO
+map:kachirho-supply-depot,Kachirho supply depot,interior,,10,sail-to-dewford,1,,,,,,0,,,flag:returned-devon-goods,Shop.,,Kachirho supply depot,KASHYYYK
+map:rwookrrorro,RWOOKRRORRO,landmark,,22,weather-institute,5,,,,,,2,25,27,item:hm-surf|flag:badge05-get,"Ladder up from Route 107, which is reached by skimming from Kachirho (SURF, 5 badges).",net:rwookrrorro,RWOOKRRORRO,KASHYYYK
+map:rwookrrorro-chief-hut,Rwookrrorro chief's hut,interior,,22,weather-institute,5,,,,,,0,,,item:hm-surf|flag:badge05-get,,net:rwookrrorro,Rwookrrorro chief's hut,KASHYYYK
+map:rwookrrorro-hut-1,Rwookrrorro hut 1,interior,,22,weather-institute,5,,,,,,0,,,item:hm-surf|flag:badge05-get,,net:rwookrrorro,Rwookrrorro hut 1,KASHYYYK
+map:rwookrrorro-hut-2,Rwookrrorro hut 2,interior,,22,weather-institute,5,,,,,,0,,,item:hm-surf|flag:badge05-get,,net:rwookrrorro,Rwookrrorro hut 2,KASHYYYK
+map:mustafar-mining-control,Mustafar mining control,interior,,19,mt-chimney,3,,,,,,1,21,22,event:meteor-falls-meteorite,,net:mustafar-mining-facility,Mustafar mining control,MUSTAFAR
+map:mustafar-mining-facility,MINING FACILITY,landmark,,19,mt-chimney,3,,,,,,2,20,22,event:meteor-falls-meteorite,"South end of Ashen Pass, reached after the shuttle to Mustafar Peak runs.",net:mustafar-mining-facility,MINING FACILITY,MUSTAFAR
+map:hangar-tatooine-endor,Rebel shuttle cabin,interior,,22,weather-institute,5,,,,,,0,,,flag:badge05-get,"Rebel shuttle cabin, both ends (hl-tatooine-endor).",net:border-tatooine-endor,Rebel shuttle cabin,SHARED
+map:hangar-tatooine-kashyyyk,Millennium Falcon cabin,interior,,10,sail-to-dewford,1,,,,,,0,,,flag:returned-devon-goods,"The Falcon cabin, both ends (hl-tatooine-kashyyyk, hl-kashyyyk-tatooine-eisley).",net:hangar-tatooine-kashyyyk,Millennium Falcon cabin,SHARED
+map:hangar-tatooine-sullust,Sullustan transport cabin,interior,,18,meteor-falls-meteorite,3,,,,,,0,,,flag:badge03-get,"Sullustan transport cabin, both ends (hl-tatooine-sullust).",net:border-tatooine-sullust,Sullustan transport cabin,SHARED
+map:hideout-kit,HIDEOUT (KIT),interior,,,,,,,,,,0,,,,Template for the secret-base interiors; not a map.,,HIDEOUT (KIT),SHARED
+map:bens-hut,BEN'S HUT,landmark,,6,petalburg-woods-aqua,0,,,,,,1,7,9,,"Side path off the Jundland Wastes; open from the start. Post-game Maul duel (flag:sys-game-clear, levels 60-65) is net:maul-duel.",net:bens-hut,BEN'S HUT,TATOOINE
+map:bens-hut-interior,Ben's hut,interior,,6,petalburg-woods-aqua,0,,,,,,0,,,,,net:bens-hut,Ben's hut,TATOOINE
+map:jabbas-palace,JABBA'S PALACE,landmark,,20,heat-badge,4,,,,,,4,19,23,item:go-goggles|flag:badge04-get,East edge of Route 111's desert: needs the GO-GOGGLES like the desert.,net:jabbas-palace,JABBA'S PALACE,TATOOINE
+map:jabbas-palace-barge-dock,Jabba's barge dock,interior,,20,heat-badge,4,,,,,,1,20,22,item:go-goggles|flag:badge04-get,,net:jabbas-palace,Jabba's barge dock,TATOOINE
+map:jabbas-palace-throne-room,Jabba's throne room,interior,,20,heat-badge,4,,,,,,2,21,23,item:go-goggles|flag:badge04-get,,net:jabbas-palace,Jabba's throne room,TATOOINE
+map:mos-espa-podrace-arena,Mos Espa podrace grandstand,interior,,16,dynamo-badge,3,,,,,,1,22,24,flag:badge03-get,Grandstand opens with Mos Espa; Sebulba's challenge after the Mos Espa badge.,net:podrace-sebulba,Mos Espa podrace grandstand,TATOOINE
+map:tosche-station-power-station,Tosche Station power room,interior,,4,first-rival-battle,0,,,,,,0,,,,NPC room in Tosche Station (Oldale).,,Tosche Station power room,TATOOINE
+map:tython-hangar,Tython landing pad,interior,,45,event-islands,8,,,,,,0,,,item:eon-ticket,Hangar: charter ship (hl-bespin-tython).,,Tython landing pad,TYTHON

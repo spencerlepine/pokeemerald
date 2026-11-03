@@ -66,4 +66,5 @@ warps:
 - name: Barge dock stairs
   at: [24, 2]
   to: jabbas-palace-barge-dock
-todo: ['New interior (replaces: new); placeholder room, sized for its contents.', New interior jabbas-palace-rancor-pit (optional battle) under the trapdoor.]
+todo: ['New interior (replaces: new); placeholder room, sized for its contents.', New interior jabbas-palace-rancor-pit (optional battle) under the trapdoor., 'Net-new
+    row net:jabbas-palace (bible/NET_NEW_DESIGNS.md); gate and level band in mapping/area_progression_extra.csv.']

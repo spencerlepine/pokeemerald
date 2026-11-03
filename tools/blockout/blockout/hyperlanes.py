@@ -20,7 +20,7 @@ PATH = V.ROOT / "wiki" / "mapping" / "hyperlanes.csv"
 # how many badges a player holds when a gate opens (Emerald's order; story events by their timeline id)
 BADGE_OF = {"flag:returned-devon-goods": 1, "item:hm-cut": 1, "item:hm-flash": 2, "item:hm-rock-smash": 3,
             "event:meteor-falls-meteorite": 3, "event:mt-chimney": 3, "item:hm-strength": 4, "item:hm-surf": 5,
-            "item:hm-fly": 6, "event:devon-scope": 6, "item:hm-dive": 7, "event:sootopolis-crisis": 7,
+            "item:hm-fly": 6, "event:devon-scope": 6, "event:mt-pyre-orbs": 6, "item:go-goggles": 4, "item:devon-scope": 6, "item:hm-dive": 7, "event:sootopolis-crisis": 7,
             "item:hm-waterfall": 7, "event:sky-pillar-rayquaza": 7, "flag:sys-game-clear": 8, "item:ss-ticket": 8,
             "item:eon-ticket": 8, "item:old-sea-map": 8, "item:aurora-ticket": 8, "item:mystic-ticket": 8}
 

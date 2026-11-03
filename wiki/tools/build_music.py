@@ -260,6 +260,10 @@ def main() -> list[str]:
         if not songs and map_music.get(mid) == "MUS_NONE":
             songs = [{"asset_id": "MUS_NONE", "wiki_title": "MUS_NONE", "music_category": "SILENT",
                       "music_form": "SILENT"}]  # map.json plays nothing: a script sets the song, or silence
+        if not songs and mid not in map_music:
+            # a net-new area (mapping/area_progression_extra.csv): no map in ../game yet. Its song is the
+            # `maps` column of a net-new row in mapping/music.csv (planned_music); until then it is marked TODO.
+            songs = [{"asset_id": "", "wiki_title": "TODO", "music_category": "", "music_form": ""}]
         if not songs:
             warn(f"music_by_map: {mid} has no music row")
         mrows.append({"map_id": mid, "sw_map_title": m.get("sw_map_title", ""), "map_title": m.get("map_title", ""),

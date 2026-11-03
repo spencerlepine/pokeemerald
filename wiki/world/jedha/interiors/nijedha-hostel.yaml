@@ -34,4 +34,4 @@ warps:
 - name: Door
   at: [7, 9]
   to: nijedha
-todo: ['New interior (replaces: new); placeholder room, sized for its contents.']
+todo: ['New interior (replaces: new); placeholder room, sized for its contents.', 'Net-new row net:nijedha (bible/NET_NEW_DESIGNS.md); gate and level band in mapping/area_progression_extra.csv.']

@@ -68,4 +68,4 @@ people:
 signs: []
 warps: []
 todo: ['New area: reached by a side path on the east edge of the Jundland Wastes.', 'New interior bens-hut-interior (one room, a chest, Ben''s workbench).', 'New
-    art rows needed: none (uses homestead-dome and planet-wide props).']
+    art rows needed: none (uses homestead-dome and planet-wide props).', 'Net-new row net:bens-hut (bible/NET_NEW_DESIGNS.md); gate and level band in mapping/area_progression_extra.csv.']
