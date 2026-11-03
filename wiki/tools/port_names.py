@@ -167,8 +167,10 @@ def port_datapad(rows, stats, report, dry_run) -> None:
             continue
         end = texts.index(");", t.end())
         cur = "".join(STR.findall(texts[t.end():end]))
-        lines = r["datapad_text"].split("\\n")
-        if cur == r["datapad_text"]:
+        # ASCII quotes end a C string, and the GBA font has curly ones: "gonk" -> “gonk”
+        want = re.sub(r'"([^"]*)"', "“\\1”", r["datapad_text"])
+        lines = want.split("\\n")
+        if cur == want:
             stats["datapad done"] += 1
             continue
         body = "\n" + "\n".join(f'    "{x}\\n"' if i < len(lines) - 1 else f'    "{x}"'

@@ -91,6 +91,8 @@ def main() -> int:
                 continue
             sym = re.search(r"(\w+)\s*\[\]\s*=\s*$", src[max(0, m.start() - 120):m.start()])
             key = (f, sym.group(1) if sym else "")
+            if not re.search(r"Desc", key[1]):
+                continue  # only descriptions: name tables (abilities.h) stay with tools/port_names.py
             if key in hand:
                 new = hand[key]
                 used_hand.add(key)

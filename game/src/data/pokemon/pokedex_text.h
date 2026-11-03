@@ -334,7 +334,7 @@ const u8 gAlakazamPokedexText[] = _(
 const u8 gMachopPokedexText[] = _(
     "A B1 battle droid. It is weak alone, but it\n"
     "trains hard and never stops. It answers\n"
-    "every order with a cheerful "Roger roger".");
+    "every order with a cheerful “Roger roger”.");
 
 const u8 gMachokePokedexText[] = _(
     "A B2 super battle droid. Its heavy frame\n"
@@ -1595,7 +1595,7 @@ const u8 gPluslePokedexText[] = _(
 const u8 gMinunPokedexText[] = _(
     "A GNK power droid. It shares its charge\n"
     "with droids around it and says nothing but\n"
-    ""gonk". It is happiest beside a pit droid.");
+    "“gonk”. It is happiest beside a pit droid.");
 
 const u8 gVolbeatPokedexText[] = _(
     "A male firefly of the desert. At night it\n"
