@@ -1,9 +1,11 @@
--- One-shot scenario runner for scripts/aurebesh-check.sh (SCENARIO env var). Addresses are the modern
--- build's (arm-none-eabi-nm game/pokeemerald_modern.elf); re-read them if the game code moves.
+-- One-shot scenario runner for scripts/aurebesh-check.sh (SCENARIO env var). Addresses come from the modern
+-- build's symbols (the script reads them with arm-none-eabi-nm), so they follow any change to the game code.
 -- boot skips the Star Wars intro crawl (A, UP to YES, A) and waits until the player can move in the truck.
 local OUT = os.getenv("PLAYTEST_OUT") .. "/"
 local SC = os.getenv("SCENARIO")
-local SB1P, CB2, CB2_OVERWORLD, CB2_LOADMAP = 0x030071f4, 0x030036d4, 0x08142180, 0x08142350
+local function sym(n) return tonumber(os.getenv("SYM_" .. n), 16) end  -- set by scripts/aurebesh-check.sh from nm
+local SB1P, CB2, CB2_OVERWORLD, CB2_LOADMAP = sym("gSaveBlock1Ptr"), sym("gMain") + 4, sym("CB2_Overworld"), sym("CB2_LoadMap")
+local CB2_INTRO_CRAWL = sym("CB2_IntroCrawl") | 1
 local K = {A=0,B=1,SELECT=2,START=3,RIGHT=4,LEFT=5,UP=6,DOWN=7}
 local function sb1() return emu:read32(SB1P) end
 local function setFlag(id, on)
@@ -30,7 +32,7 @@ if SC == "boot" then
   add({loop=function()
     if emu:read32(CB2) == (CB2_OVERWORLD | 1) then return true end
     taps = taps + 1
-    if emu:read32(CB2) == 0x08114649 then return false, ({"A", "UP", "A"})[taps % 3 + 1] end  -- intro crawl: skip? YES
+    if emu:read32(CB2) == CB2_INTRO_CRAWL then return false, ({"A", "UP", "A"})[taps % 3 + 1] end  -- intro crawl: skip? YES
     return false, (taps % 8 == 0) and "START" or "A"
   end})
   add({wait=1200})

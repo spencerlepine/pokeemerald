@@ -9,6 +9,7 @@ cd "$(dirname "$0")/.." && source scripts/env.sh
 export PLAYTEST_OUT=$PLAYTEST_ROOT/out/aurebesh; mkdir -p $PLAYTEST_OUT
 export SCENARIO=$1
 ROM=$REPO_ROOT/game/pokeemerald_modern.gba
+while read -r addr _ name; do export "SYM_$name=$addr"; done < <(arm-none-eabi-nm "${ROM%.gba}.elf" | grep -wE "gSaveBlock1Ptr|gMain|CB2_Overworld|CB2_LoadMap|CB2_IntroCrawl")
 rm -f $PLAYTEST_OUT/DONE
 setsid xvfb-run -a /opt/mgba-0.11/bin/mgba-qt --script $PLAYTEST_ROOT/lua/examples/aurebesh-check.lua -l 0 "$ROM" > $PLAYTEST_OUT/mgba_$1.log 2>&1 &
 PID=$!
