@@ -1,6 +1,6 @@
 # greybox: world pieces as simple 3D models, rendered to pixels
 
-Status: **READY**. Every row in the wiki names a greybox tool (`blockout todo` shows which), and all 528 areas
+Status: **READY**. Every row in the wiki names a greybox tool (`blockout todo` shows which), and all 523 areas
 render. Buildings and structures were approved category by category with the owner on 2026-11-02; the later
 kits (interiors, objects, wild, landmarks), cave mode and surfaces were built in one pass for testing and wait
 for the owner's review. Raised walkways between areas, floating platforms and full tree canopies are not

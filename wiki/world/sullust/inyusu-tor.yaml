@@ -7,7 +7,7 @@ status: BLOCKOUT
 art_status: pending-final-art
 pos: [0, 0]
 story: 'Ash-covered farm town: greenhouses grow crops in volcanic ash. Dr. Tien, the astronomer whose meteorite the Empire steals, lives in the observatory.'
-notes: 'inyusu-tor (town, 32x24): ash farm town on the road between Route 114 and Route 113: one road through, the Showcase hall farm, Bacta Center and depot on the
+notes: 'inyusu-tor (town, 32x24): ash farm town on the road between Route 114 and Route 113: one road through, the ash farm, Bacta Center and depot on the
   north side, the observatory and the tutor''s home on the south, two greenhouses, a basalt column in the corner.'
 grid: |
   ################################
@@ -42,7 +42,7 @@ exits:
   cells: [11, 12]
   to: route-113
 buildings:
-- name: Ash farm (Showcase hall)
+- name: Ash farm
   art: art:sullust:ash-farm
   at: [3, 4]
   size: [6, 4]
@@ -97,7 +97,7 @@ people:
 - name: Ash farmer
   at: [15, 20]
   role: npc
-- name: Showcase fan
+- name: Farm hand
   at: [12, 9]
   role: npc
 signs:

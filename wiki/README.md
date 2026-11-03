@@ -37,8 +37,14 @@ applies it the same way.
 **Dialogue and UI text is ported** (2026-11-03): `python3 tools/port_texts.py --all` copies every
 `sw_text_raw` in `texts.csv` into `../game` by label and sets `game_status` DONE. It only overwrites text that
 is still Emerald's; anything edited by hand since is listed in `database/text_port_report.csv` (result
-`changed` or `missing`) for a person to check. POKéBLOCK text is skipped on purpose: that feature is being
-replaced. Re-run it after curating more text. It also ports the `.braille` sign texts (the Sealed Vault and
+`changed` or `missing`) for a person to check. POKéBLOCK text is skipped on purpose. Re-run it after curating more text.
+
+**Showcases, treats and fruit blending are removed from the game** (2026-11-03). No summary contest tab,
+StarNAV condition screen, Safari treat option or feeders, Showcase Lady, treat-only fruit (gifts, plots and
+the Berry Master pick Pomeg to Tamato or normal fruit), or scarves. DULLFIN evolves at level 30. The Cloud
+City hall and every contest map are deleted (`missing` rows in the port report); its people stand in Cloud
+City and its buildings (`act5_02_cloud_city.csv`). The museum curator gives his ornament after his talk, and
+the trainer card star for the five paintings now needs a complete Datapad. The C code is left in place. It also ports the `.braille` sign texts (the Sealed Vault and
 the warden tombs), whose font is now Aurebesh (`../tools/glyph-maker/aurebesh.py`): the letters are redrawn in
 place, so the cell numbers, the puzzles and the window sizes are Emerald's.
 

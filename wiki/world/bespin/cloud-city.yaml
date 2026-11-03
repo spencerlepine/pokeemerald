@@ -6,7 +6,7 @@ replaces: LilycoveCity
 status: BLOCKOUT
 art_status: pending-final-art
 pos: [0, 0]
-story: Floating city over Bespin's cloud sea. Ships land on the west platform; two promenades ring the central plaza with the Galleria, museum, Showcase hall and
+story: Floating city over Bespin's cloud sea. Ships land on the west platform; two promenades ring the central plaza with the Galleria, museum and
   Lando's flat; the lift tower in the east goes down to the under-levels where the Cartel hides. A skybridge leads north to the Tibanna refinery.
 notes: 'cloud-city (town, 58x40): a floating disc, every edge a drop into cloud: west landing platform, upper and lower promenades joined by the plaza and the north-south
   walk, towers in two rows facing the promenades, the east lift tower, the north skybridge · need: floating-platform mode (fascia and underside at the edge, clouds
@@ -69,12 +69,6 @@ buildings:
   size: [8, 6]
   door: 4
   to: cloud-city-galleria-1f
-- name: Showcase hall
-  art: art:bespin:cloud-city-tower
-  at: [17, 14]
-  size: [5, 6]
-  door: 2
-  to: cloud-city-showcase-lobby
 - name: Museum
   art: art:bespin:cloud-city-tower
   at: [36, 14]
@@ -174,7 +168,7 @@ people:
 - name: Lando
   at: [30, 24]
   role: story
-- name: Showcase MC
+- name: Plaza crowd (the old Showcase hall people)
   at: [21, 21]
   role: npc
 - name: Ugnaught worker

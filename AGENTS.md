@@ -19,7 +19,7 @@ alternate telling. Twelve planets plus a post-game; PokéNAV is called **StarNAV
 |---|---|
 | `game/` | The pret/pokeemerald C source. Content is ported in by hand, later. |
 | `wiki/` | **The source of truth.** Every Emerald entity mapped to its Star Wars version ([`wiki/README.md`](wiki/README.md)), the story ([`wiki/bible/STORY.md`](wiki/bible/STORY.md)), and the world. |
-| `wiki/world/` | The world: all 528 areas as tile layouts, placed on one connected world map ([`wiki/world/README.md`](wiki/world/README.md)). Keep this map; sizes may grow later. |
+| `wiki/world/` | The world: all 523 areas as tile layouts, placed on one connected world map ([`wiki/world/README.md`](wiki/world/README.md)). Keep this map; sizes may grow later. |
 | `wiki/mapping/world_art.csv` | Every world piece (building, object, nature, landmark, interior kit) with its status, model and notes. |
 | `wiki/mapping/hyperlanes.csv` | The planet graph: one row per ship link (hangar at each end, unlock). `blockout check` validates it; `blockout guide` reports it with the balance check. |
 | `wiki/mapping/terrain.csv` | Every terrain tile the game needs: one row per tileset, item and role (`terrain:general:cliff:ne`), with the vanilla metatile it uses (`use`, empty = missing, placeholder), planets, areas and status. Real-size sheets in `wiki/world/greybox/sheets/`. `terrain_areas.csv` links areas to rows. |
@@ -46,7 +46,7 @@ alternate telling. Twelve planets plus a post-game; PokéNAV is called **StarNAV
    Nothing is documented or built ahead for those: they are open work, marked in the wiki.
 3. **Record progress:** `python3 -m blockout todo --set <id> <status>`, then `python3 -m blockout index`.
 
-World art goes in three phases (owner): 1. terrain, ground and water (now: greybox tiles for all 528 areas),
+World art goes in three phases (owner): 1. terrain, ground and water (now: greybox tiles for all 523 areas),
 2. large structures, natural barriers and medium structures, 3. towns, buildings and the fill. The current phase is **greybox**: simple 3D shapes in placeholder colours, one category at a time, reviewed by the
 owner before the next. Final art and the colour palette come later, on the same rows. Town scenes are not
 assembled yet (the asset collection comes first); the world map layout in `wiki/world/` is kept as drafted.

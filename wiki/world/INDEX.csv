@@ -51,7 +51,6 @@ atollon-hangar,ATOLLON,interior,BirthIsland_Harbor,BLOCKOUT,warp,Door,1x1,,,PLAC
 cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,area,CLOUD CITY,58x40,,,pending-final-art,greybox terrain
 cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,building,West landing platform (ships),5x5,art:bespin:landing-platform,yes,pending-final-art,greybox piece
 cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,building,Galleria (department store),8x6,art:bespin:department-store,yes,pending-final-art,greybox piece
-cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,building,Showcase hall,5x6,art:bespin:cloud-city-tower,yes,pending-final-art,greybox piece
 cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,building,Museum,5x6,art:bespin:cloud-city-tower,yes,pending-final-art,greybox piece
 cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,building,Bacta Center,5x4,art:shared:bacta-center,yes,pending-final-art,greybox piece
 cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,building,Under-levels lift (Hutt Hideout),5x6,art:bespin:cloud-city-tower,yes,pending-final-art,greybox piece
@@ -71,7 +70,7 @@ cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,prop,Cloud car,2x1,art:shared:parke
 cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,prop,Beldon,9x4,art:bespin:beldon,yes,pending-mockup,greybox piece
 cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,prop,Broken bridge,3x1,art:shared:broken-bridge,yes,pending-mockup,greybox piece
 cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,person,Lando,1x1,,,PLACEHOLDER,
-cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,person,Showcase MC,1x1,,,PLACEHOLDER,
+cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,person,Plaza crowd (the old Showcase hall people),1x1,,,PLACEHOLDER,
 cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,person,Ugnaught worker,1x1,,,PLACEHOLDER,
 cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,person,Wing guard,1x1,,,PLACEHOLDER,
 cloud-city,BESPIN,town,LilycoveCity,BLOCKOUT,person,Wing guard,1x1,,,PLACEHOLDER,
@@ -269,91 +268,6 @@ cloud-city-pokemon-trainer-fan-club,BESPIN,interior,LilycoveCity_PokemonTrainerF
 cloud-city-pokemon-trainer-fan-club,BESPIN,interior,LilycoveCity_PokemonTrainerFanClub,BLOCKOUT,person,Interviewer,1x1,,,PLACEHOLDER,
 cloud-city-pokemon-trainer-fan-club,BESPIN,interior,LilycoveCity_PokemonTrainerFanClub,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 cloud-city-pokemon-trainer-fan-club,BESPIN,interior,LilycoveCity_PokemonTrainerFanClub,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
-cloud-city-showcase-hall,BESPIN,interior,LilycoveCity_ContestHall,BLOCKOUT,area,CLOUD CITY SHOWCASE HALL,51x33,,,pending-final-art,greybox room
-cloud-city-showcase-hall,BESPIN,interior,LilycoveCity_ContestHall,BLOCKOUT,person,Boy1,1x1,,,PLACEHOLDER,
-cloud-city-showcase-hall,BESPIN,interior,LilycoveCity_ContestHall,BLOCKOUT,person,Boy2,1x1,,,PLACEHOLDER,
-cloud-city-showcase-hall,BESPIN,interior,LilycoveCity_ContestHall,BLOCKOUT,person,Girl,1x1,,,PLACEHOLDER,
-cloud-city-showcase-hall,BESPIN,interior,LilycoveCity_ContestHall,BLOCKOUT,person,Smart Contest MC,1x1,,,PLACEHOLDER,
-cloud-city-showcase-hall,BESPIN,interior,LilycoveCity_ContestHall,BLOCKOUT,person,Smart Contest Judge,1x1,,,PLACEHOLDER,
-cloud-city-showcase-hall,BESPIN,interior,LilycoveCity_ContestHall,BLOCKOUT,person,Smart Contestant1,1x1,,,PLACEHOLDER,
-cloud-city-showcase-hall,BESPIN,interior,LilycoveCity_ContestHall,BLOCKOUT,person,Smart Contestant2,1x1,,,PLACEHOLDER,
-cloud-city-showcase-hall,BESPIN,interior,LilycoveCity_ContestHall,BLOCKOUT,person,Smart Contestant3,1x1,,,PLACEHOLDER,
-cloud-city-showcase-hall,BESPIN,interior,LilycoveCity_ContestHall,BLOCKOUT,person,Smart Contestant4,1x1,,,PLACEHOLDER,
-cloud-city-showcase-hall,BESPIN,interior,LilycoveCity_ContestHall,BLOCKOUT,person,Smart Contest Audience1,1x1,,,PLACEHOLDER,
-cloud-city-showcase-hall,BESPIN,interior,LilycoveCity_ContestHall,BLOCKOUT,person,Smart Contest Audience4,1x1,,,PLACEHOLDER,
-cloud-city-showcase-hall,BESPIN,interior,LilycoveCity_ContestHall,BLOCKOUT,person,Smart Contest Audience2,1x1,,,PLACEHOLDER,
-cloud-city-showcase-hall,BESPIN,interior,LilycoveCity_ContestHall,BLOCKOUT,person,Beauty Contest MC,1x1,,,PLACEHOLDER,
-cloud-city-showcase-hall,BESPIN,interior,LilycoveCity_ContestHall,BLOCKOUT,person,Beauty Contest Judge,1x1,,,PLACEHOLDER,
-cloud-city-showcase-hall,BESPIN,interior,LilycoveCity_ContestHall,BLOCKOUT,person,Beauty Contestant1,1x1,,,PLACEHOLDER,
-cloud-city-showcase-hall,BESPIN,interior,LilycoveCity_ContestHall,BLOCKOUT,person,Beauty Contestant2,1x1,,,PLACEHOLDER,
-cloud-city-showcase-hall,BESPIN,interior,LilycoveCity_ContestHall,BLOCKOUT,person,Beauty Contestant3,1x1,,,PLACEHOLDER,
-cloud-city-showcase-hall,BESPIN,interior,LilycoveCity_ContestHall,BLOCKOUT,person,Beauty Contestant4,1x1,,,PLACEHOLDER,
-cloud-city-showcase-hall,BESPIN,interior,LilycoveCity_ContestHall,BLOCKOUT,person,Beauty Contest Audience1,1x1,,,PLACEHOLDER,
-cloud-city-showcase-hall,BESPIN,interior,LilycoveCity_ContestHall,BLOCKOUT,person,Beauty Contest Audience3,1x1,,,PLACEHOLDER,
-cloud-city-showcase-hall,BESPIN,interior,LilycoveCity_ContestHall,BLOCKOUT,person,Beauty Contest Audience2,1x1,,,PLACEHOLDER,
-cloud-city-showcase-hall,BESPIN,interior,LilycoveCity_ContestHall,BLOCKOUT,person,Smart Contest Audience3,1x1,,,PLACEHOLDER,
-cloud-city-showcase-hall,BESPIN,interior,LilycoveCity_ContestHall,BLOCKOUT,person,Cute Contest MC,1x1,,,PLACEHOLDER,
-cloud-city-showcase-hall,BESPIN,interior,LilycoveCity_ContestHall,BLOCKOUT,person,Cute Contest Judge,1x1,,,PLACEHOLDER,
-cloud-city-showcase-hall,BESPIN,interior,LilycoveCity_ContestHall,BLOCKOUT,person,Cute Contestant1,1x1,,,PLACEHOLDER,
-cloud-city-showcase-hall,BESPIN,interior,LilycoveCity_ContestHall,BLOCKOUT,person,Cute Contestant2,1x1,,,PLACEHOLDER,
-cloud-city-showcase-hall,BESPIN,interior,LilycoveCity_ContestHall,BLOCKOUT,person,Cute Contestant3,1x1,,,PLACEHOLDER,
-cloud-city-showcase-hall,BESPIN,interior,LilycoveCity_ContestHall,BLOCKOUT,person,Cute Contestant4,1x1,,,PLACEHOLDER,
-cloud-city-showcase-hall,BESPIN,interior,LilycoveCity_ContestHall,BLOCKOUT,person,Cute Contest Audience1,1x1,,,PLACEHOLDER,
-cloud-city-showcase-hall,BESPIN,interior,LilycoveCity_ContestHall,BLOCKOUT,person,Cute Contest Audience3,1x1,,,PLACEHOLDER,
-cloud-city-showcase-hall,BESPIN,interior,LilycoveCity_ContestHall,BLOCKOUT,person,Cute Contest Audience2,1x1,,,PLACEHOLDER,
-cloud-city-showcase-hall,BESPIN,interior,LilycoveCity_ContestHall,BLOCKOUT,person,Sailor,1x1,,,PLACEHOLDER,
-cloud-city-showcase-hall,BESPIN,interior,LilycoveCity_ContestHall,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
-cloud-city-showcase-hall,BESPIN,interior,LilycoveCity_ContestHall,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
-cloud-city-showcase-hall,BESPIN,interior,LilycoveCity_ContestHall,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
-cloud-city-showcase-hall,BESPIN,interior,LilycoveCity_ContestHall,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
-cloud-city-showcase-hall,BESPIN,interior,LilycoveCity_ContestHall,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
-cloud-city-showcase-hall,BESPIN,interior,LilycoveCity_ContestHall,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
-cloud-city-showcase-hall,BESPIN,interior,LilycoveCity_ContestHall,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
-cloud-city-showcase-hall,BESPIN,interior,LilycoveCity_ContestHall,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
-cloud-city-showcase-hall,BESPIN,interior,LilycoveCity_ContestHall,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
-cloud-city-showcase-hall,BESPIN,interior,LilycoveCity_ContestHall,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
-cloud-city-showcase-lobby,BESPIN,interior,LilycoveCity_ContestLobby,BLOCKOUT,area,CLOUD CITY SHOWCASE LOBBY,31x12,,,pending-final-art,greybox room
-cloud-city-showcase-lobby,BESPIN,interior,LilycoveCity_ContestLobby,BLOCKOUT,person,Contest Receptionist,1x1,,,PLACEHOLDER,
-cloud-city-showcase-lobby,BESPIN,interior,LilycoveCity_ContestLobby,BLOCKOUT,person,Link Contest Receptionist,1x1,,,PLACEHOLDER,
-cloud-city-showcase-lobby,BESPIN,interior,LilycoveCity_ContestLobby,BLOCKOUT,person,Blender2Man,1x1,,,PLACEHOLDER,
-cloud-city-showcase-lobby,BESPIN,interior,LilycoveCity_ContestLobby,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER,
-cloud-city-showcase-lobby,BESPIN,interior,LilycoveCity_ContestLobby,BLOCKOUT,person,Black Belt,1x1,,,PLACEHOLDER,
-cloud-city-showcase-lobby,BESPIN,interior,LilycoveCity_ContestLobby,BLOCKOUT,person,Girl,1x1,,,PLACEHOLDER,
-cloud-city-showcase-lobby,BESPIN,interior,LilycoveCity_ContestLobby,BLOCKOUT,person,Artist,1x1,,,PLACEHOLDER,
-cloud-city-showcase-lobby,BESPIN,interior,LilycoveCity_ContestLobby,BLOCKOUT,person,Reporter,1x1,,,PLACEHOLDER,
-cloud-city-showcase-lobby,BESPIN,interior,LilycoveCity_ContestLobby,BLOCKOUT,person,Blender3Boy,1x1,,,PLACEHOLDER,
-cloud-city-showcase-lobby,BESPIN,interior,LilycoveCity_ContestLobby,BLOCKOUT,person,Blender2Twin,1x1,,,PLACEHOLDER,
-cloud-city-showcase-lobby,BESPIN,interior,LilycoveCity_ContestLobby,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER,
-cloud-city-showcase-lobby,BESPIN,interior,LilycoveCity_ContestLobby,BLOCKOUT,person,Fisherman,1x1,,,PLACEHOLDER,
-cloud-city-showcase-lobby,BESPIN,interior,LilycoveCity_ContestLobby,BLOCKOUT,person,Fat Man,1x1,,,PLACEHOLDER,
-cloud-city-showcase-lobby,BESPIN,interior,LilycoveCity_ContestLobby,BLOCKOUT,person,Ninja Boy,1x1,,,PLACEHOLDER,
-cloud-city-showcase-lobby,BESPIN,interior,LilycoveCity_ContestLobby,BLOCKOUT,person,Blender3Pokefan F,1x1,,,PLACEHOLDER,
-cloud-city-showcase-lobby,BESPIN,interior,LilycoveCity_ContestLobby,BLOCKOUT,person,Blender1Expert M,1x1,,,PLACEHOLDER,
-cloud-city-showcase-lobby,BESPIN,interior,LilycoveCity_ContestLobby,BLOCKOUT,person,Blender3Girl,1x1,,,PLACEHOLDER,
-cloud-city-showcase-lobby,BESPIN,interior,LilycoveCity_ContestLobby,BLOCKOUT,person,Blend Master Onlooker2,1x1,,,PLACEHOLDER,
-cloud-city-showcase-lobby,BESPIN,interior,LilycoveCity_ContestLobby,BLOCKOUT,person,Blend Master Onlooker3,1x1,,,PLACEHOLDER,
-cloud-city-showcase-lobby,BESPIN,interior,LilycoveCity_ContestLobby,BLOCKOUT,person,Blend Master Onlooker4,1x1,,,PLACEHOLDER,
-cloud-city-showcase-lobby,BESPIN,interior,LilycoveCity_ContestLobby,BLOCKOUT,person,Blend Master Onlooker5,1x1,,,PLACEHOLDER,
-cloud-city-showcase-lobby,BESPIN,interior,LilycoveCity_ContestLobby,BLOCKOUT,person,Blend Master Onlooker6,1x1,,,PLACEHOLDER,
-cloud-city-showcase-lobby,BESPIN,interior,LilycoveCity_ContestLobby,BLOCKOUT,person,Blend Master Onlooker1,1x1,,,PLACEHOLDER,
-cloud-city-showcase-lobby,BESPIN,interior,LilycoveCity_ContestLobby,BLOCKOUT,person,Blend Master,1x1,,,PLACEHOLDER,
-cloud-city-showcase-lobby,BESPIN,interior,LilycoveCity_ContestLobby,BLOCKOUT,person,Little Girl,1x1,,,PLACEHOLDER,
-cloud-city-showcase-lobby,BESPIN,interior,LilycoveCity_ContestLobby,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
-cloud-city-showcase-lobby,BESPIN,interior,LilycoveCity_ContestLobby,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
-cloud-city-showcase-lobby,BESPIN,interior,LilycoveCity_ContestLobby,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
-cloud-city-showcase-lobby,BESPIN,interior,LilycoveCity_ContestLobby,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
-cloud-city-showcase-lobby,BESPIN,interior,LilycoveCity_ContestLobby,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
-cloud-city-showcase-lobby,BESPIN,interior,LilycoveCity_ContestLobby,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
-cloud-city-showcase-lobby,BESPIN,interior,LilycoveCity_ContestLobby,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
-cloud-city-showcase-lobby,BESPIN,interior,LilycoveCity_ContestLobby,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
-cloud-city-showcase-lobby,BESPIN,interior,LilycoveCity_ContestLobby,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
-cloud-city-showcase-lobby,BESPIN,interior,LilycoveCity_ContestLobby,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
-cloud-city-showcase-lobby,BESPIN,interior,LilycoveCity_ContestLobby,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
-cloud-city-showcase-lobby,BESPIN,interior,LilycoveCity_ContestLobby,BLOCKOUT,sign,Sign,1x1,,,PLACEHOLDER,
-cloud-city-showcase-lobby,BESPIN,interior,LilycoveCity_ContestLobby,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
-cloud-city-showcase-lobby,BESPIN,interior,LilycoveCity_ContestLobby,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
-cloud-city-showcase-lobby,BESPIN,interior,LilycoveCity_ContestLobby,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
-cloud-city-showcase-lobby,BESPIN,interior,LilycoveCity_ContestLobby,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 hutt-hideout-1f,BESPIN,interior,AquaHideout_1F,BLOCKOUT,area,HUTT HIDEOUT 1F,28x30,,,pending-final-art,greybox room
 hutt-hideout-1f,BESPIN,interior,AquaHideout_1F,BLOCKOUT,person,Hideout Entrance Grunt1,1x1,,,PLACEHOLDER,
 hutt-hideout-1f,BESPIN,interior,AquaHideout_1F,BLOCKOUT,person,Hideout Entrance Grunt2,1x1,,,PLACEHOLDER,
@@ -3035,27 +2949,6 @@ record-corner,SHARED,interior,RecordCorner,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 record-corner,SHARED,interior,RecordCorner,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 record-corner,SHARED,interior,RecordCorner,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 record-corner,SHARED,interior,RecordCorner,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
-showcase-hall-beauty,SHARED,interior,ContestHallBeauty,BLOCKOUT,area,SHOWCASE HALL BEAUTY,15x11,,,pending-final-art,greybox room
-showcase-hall-cool,SHARED,interior,ContestHallCool,BLOCKOUT,area,SHOWCASE HALL COOL,15x11,,,pending-final-art,greybox room
-showcase-hall-cute,SHARED,interior,ContestHallCute,BLOCKOUT,area,SHOWCASE HALL CUTE,15x11,,,pending-final-art,greybox room
-showcase-hall-smart,SHARED,interior,ContestHallSmart,BLOCKOUT,area,SHOWCASE HALL SMART,15x11,,,pending-final-art,greybox room
-showcase-hall-tough,SHARED,interior,ContestHallTough,BLOCKOUT,area,SHOWCASE HALL TOUGH,15x11,,,pending-final-art,greybox room
-showcase-hall,SHARED,interior,ContestHall,BLOCKOUT,area,SHOWCASE HALL,15x11,,,pending-final-art,greybox room
-showcase-hall,SHARED,interior,ContestHall,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER,
-showcase-hall,SHARED,interior,ContestHall,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER,
-showcase-hall,SHARED,interior,ContestHall,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER,
-showcase-hall,SHARED,interior,ContestHall,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER,
-showcase-hall,SHARED,interior,ContestHall,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER,
-showcase-hall,SHARED,interior,ContestHall,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER,
-showcase-hall,SHARED,interior,ContestHall,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER,
-showcase-hall,SHARED,interior,ContestHall,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER,
-showcase-hall,SHARED,interior,ContestHall,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER,
-showcase-hall,SHARED,interior,ContestHall,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER,
-showcase-hall,SHARED,interior,ContestHall,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER,
-showcase-hall,SHARED,interior,ContestHall,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER,
-showcase-hall,SHARED,interior,ContestHall,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER,
-showcase-hall,SHARED,interior,ContestHall,BLOCKOUT,person,Event object,1x1,,,PLACEHOLDER,
-showcase-hall,SHARED,interior,ContestHall,BLOCKOUT,person,Item,1x1,,,PLACEHOLDER,
 ss-tidal-corridor,SHARED,interior,SSTidalCorridor,BLOCKOUT,area,SS TIDAL CORRIDOR,18x13,,,pending-final-art,greybox room
 ss-tidal-corridor,SHARED,interior,SSTidalCorridor,BLOCKOUT,person,Exit Sailor,1x1,,,PLACEHOLDER,
 ss-tidal-corridor,SHARED,interior,SSTidalCorridor,BLOCKOUT,person,Sailor,1x1,,,PLACEHOLDER,
@@ -3343,7 +3236,7 @@ route-114-lanettes-house,SULLUST,interior,Route114_LanettesHouse,BLOCKOUT,sign,S
 route-114-lanettes-house,SULLUST,interior,Route114_LanettesHouse,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 route-114-lanettes-house,SULLUST,interior,Route114_LanettesHouse,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 inyusu-tor,SULLUST,town,FallarborTown,BLOCKOUT,area,INYUSU TOR,32x24,,,pending-final-art,greybox terrain
-inyusu-tor,SULLUST,town,FallarborTown,BLOCKOUT,building,Ash farm (Showcase hall),6x4,art:sullust:ash-farm,yes,pending-final-art,greybox piece
+inyusu-tor,SULLUST,town,FallarborTown,BLOCKOUT,building,Ash farm,6x4,art:sullust:ash-farm,yes,pending-final-art,greybox piece
 inyusu-tor,SULLUST,town,FallarborTown,BLOCKOUT,building,Bacta Center,5x4,art:shared:bacta-center,yes,pending-final-art,greybox piece
 inyusu-tor,SULLUST,town,FallarborTown,BLOCKOUT,building,Supply Depot,4x4,art:shared:supply-depot,yes,pending-final-art,greybox piece
 inyusu-tor,SULLUST,town,FallarborTown,BLOCKOUT,building,Dr. Tien's observatory,5x4,art:sullust:sullustan-home,yes,pending-final-art,greybox piece
@@ -3354,7 +3247,7 @@ inyusu-tor,SULLUST,town,FallarborTown,BLOCKOUT,prop,Basalt column,2x2,art:sullus
 inyusu-tor,SULLUST,town,FallarborTown,BLOCKOUT,prop,Collapsed lava tube,6x2,art:sullust:lava-tube-arch,yes,pending-mockup,greybox piece
 inyusu-tor,SULLUST,town,FallarborTown,BLOCKOUT,person,Dr. Tien,1x1,,,PLACEHOLDER,
 inyusu-tor,SULLUST,town,FallarborTown,BLOCKOUT,person,Ash farmer,1x1,,,PLACEHOLDER,
-inyusu-tor,SULLUST,town,FallarborTown,BLOCKOUT,person,Showcase fan,1x1,,,PLACEHOLDER,
+inyusu-tor,SULLUST,town,FallarborTown,BLOCKOUT,person,Farm hand,1x1,,,PLACEHOLDER,
 inyusu-tor,SULLUST,town,FallarborTown,BLOCKOUT,sign,Town sign,1x1,,,PLACEHOLDER,
 pirin,SULLUST,town,LavaridgeTown,BLOCKOUT,area,PIRIN,32x28,,,pending-final-art,greybox terrain
 pirin,SULLUST,town,LavaridgeTown,BLOCKOUT,building,Sabine's arena,7x5,art:sullust:sabine-s-arena,yes,pending-final-art,greybox piece
@@ -3448,7 +3341,7 @@ route-114,SULLUST,route,Route114,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 route-114,SULLUST,route,Route114,BLOCKOUT,warp,Door,1x1,,,PLACEHOLDER,
 anchorhead,TATOOINE,town,VerdanturfTown,BLOCKOUT,area,ANCHORHEAD,28x22,,,pending-final-art,greybox terrain
 anchorhead,TATOOINE,town,VerdanturfTown,BLOCKOUT,building,Bacta Center,5x4,art:shared:bacta-center,yes,pending-final-art,greybox piece
-anchorhead,TATOOINE,town,VerdanturfTown,BLOCKOUT,building,Farm co-op (Showcase hall),6x4,art:tatooine:farm-co-op,yes,pending-final-art,greybox piece
+anchorhead,TATOOINE,town,VerdanturfTown,BLOCKOUT,building,Farm co-op,6x4,art:tatooine:farm-co-op,yes,pending-final-art,greybox piece
 anchorhead,TATOOINE,town,VerdanturfTown,BLOCKOUT,building,Supply Depot,4x4,art:shared:supply-depot,yes,pending-final-art,greybox piece
 anchorhead,TATOOINE,town,VerdanturfTown,BLOCKOUT,building,Camie's family home,5x4,art:tatooine:homestead-dome,yes,pending-final-art,greybox piece
 anchorhead,TATOOINE,town,VerdanturfTown,BLOCKOUT,building,Companion rater's home,5x4,art:tatooine:homestead-dome,yes,pending-final-art,greybox piece
