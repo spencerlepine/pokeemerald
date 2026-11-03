@@ -538,8 +538,8 @@ gText_MatchCallPkmnBreeder_Lydia_Intro1,It takes knowledge and,"reviewed, no cha
 gText_MatchCallPkmnBreeder_Lydia_Intro2,love to raise COMPANIONS.,reviewed AUTO draft
 gText_MatchCallPkmnBreeder_Isaac_Strategy,Full-on attack!,"reviewed, no change needed"
 gText_MatchCallPkmnBreeder_Isaac_Pokemon,Anything. I'll raise it.,"reviewed, no change needed"
-gText_MatchCallPkmnBreeder_Isaac_Intro1,I give them {POKEBLOCK}S for,"reviewed, no change needed"
-gText_MatchCallPkmnBreeder_Isaac_Intro2,going after SHOWCASE titles.,reviewed AUTO draft
+gText_MatchCallPkmnBreeder_Isaac_Intro1,I raise them with care so,Showcases and treats removed
+gText_MatchCallPkmnBreeder_Isaac_Intro2,they grow up strong.,Showcases and treats removed
 gText_MatchCallPkmnBreeder_Gabrielle_Strategy,I raise COMPANIONS with care.,reviewed AUTO draft
 gText_MatchCallPkmnBreeder_Gabrielle_Pokemon,Fun-to-raise COMPANIONS.,reviewed AUTO draft
 gText_MatchCallPkmnBreeder_Gabrielle_Intro1,Treat every COMPANION you,reviewed AUTO draft

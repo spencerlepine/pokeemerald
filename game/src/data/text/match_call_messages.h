@@ -275,8 +275,8 @@ const u8 gText_MatchCallPkmnBreeder_Lydia_Intro2[] = _("love to raise COMPANIONS
 
 const u8 gText_MatchCallPkmnBreeder_Isaac_Strategy[] = _("Full-on attack!");
 const u8 gText_MatchCallPkmnBreeder_Isaac_Pokemon[] = _("Anything. I'll raise it.");
-const u8 gText_MatchCallPkmnBreeder_Isaac_Intro1[] = _("I give them {POKEBLOCK}S for");
-const u8 gText_MatchCallPkmnBreeder_Isaac_Intro2[] = _("going after SHOWCASE titles.");
+const u8 gText_MatchCallPkmnBreeder_Isaac_Intro1[] = _("I raise them with care so");
+const u8 gText_MatchCallPkmnBreeder_Isaac_Intro2[] = _("they grow up strong.");
 
 const u8 gText_MatchCallPkmnBreeder_Gabrielle_Strategy[] = _("I raise COMPANIONS with care.");
 const u8 gText_MatchCallPkmnBreeder_Gabrielle_Pokemon[] = _("Fun-to-raise COMPANIONS.");

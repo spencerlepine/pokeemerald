@@ -2544,7 +2544,7 @@ static void TryPutRandomPokeNewsOnAir(void)
         sCurTVShowSlot = GetFirstEmptyPokeNewsSlot(gSaveBlock1Ptr->pokeNews);
         if (sCurTVShowSlot != -1 && rbernoulli(1, 100) != TRUE)
         {
-            u8 newsKind = (Random() % NUM_POKENEWS_TYPES) + 1; // +1 to skip over POKENEWS_NONE
+            u8 newsKind = (Random() % (NUM_POKENEWS_TYPES - 1)) + 1; // +1 to skip over POKENEWS_NONE; the Blend Master (last) never airs, blending is gone
             if (IsAddingPokeNewsDisallowed(newsKind) != TRUE)
             {
                 gSaveBlock1Ptr->pokeNews[sCurTVShowSlot].kind = newsKind;
