@@ -38,7 +38,9 @@ applies it the same way.
 `sw_text_raw` in `texts.csv` into `../game` by label and sets `game_status` DONE. It only overwrites text that
 is still Emerald's; anything edited by hand since is listed in `database/text_port_report.csv` (result
 `changed` or `missing`) for a person to check. POKéBLOCK text is skipped on purpose: that feature is being
-replaced. Re-run it after curating more text.
+replaced. Re-run it after curating more text. It also ports the `.braille` sign texts (the Sealed Vault and
+the warden tombs), whose font is now Aurebesh (`../tools/glyph-maker/aurebesh.py`): the letters are redrawn in
+place, so the cell numbers, the puzzles and the window sizes are Emerald's.
 
 **Names, Datapad entries and descriptions are ported** the same way (2026-11-03):
 - `python3 tools/port_names.py` swaps each renamed entity's display name in `../game` by its C constant

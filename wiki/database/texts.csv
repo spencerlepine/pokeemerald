@@ -5432,28 +5432,28 @@ BerryBlender_Text_WhatAnExpert,,data/text/blend_master.inc,66,,script,blend_mast
 BerryBlender_Text_MadeAmazingPokeblocksWithMaster,,data/text/blend_master.inc,69,,script,blend_master,"When I blended with the MASTER,\nwe made amazing {POKEBLOCK}S!$","When I blended with the MASTER,\nwe made amazing {POKEBLOCK}S!$",CURATED,,,,"reviewed, no change needed",NOT_STARTED
 BerryBlender_Text_QualitiesOfBlendMaster,,data/text/blend_master.inc,73,,script,blend_master,Eyes that track the arrow with\nmachinelike intensity…\pA hand that taps the A Button\nwith clockwork-like precision…\pPossessing these qualities makes\nthe BLEND MASTER truly great.$,Eyes that track the arrow with\nmachinelike intensity…\pA hand that taps the A Button\nwith clockwork-like precision…\pPossessing these qualities makes\nthe BLEND MASTER truly great.$,CURATED,,,,"reviewed, no change needed",NOT_STARTED
 BerryBlender_Text_MasterWorksOnSkillsInMountains,,data/text/blend_master.inc,81,,script,blend_master,"The BLEND MASTER's supposed to work\non his skills deep in the mountains.\pSometimes, he comes to LILYCOVE\nto blend BERRIES all day long.$","The BLEND MASTER's supposed to work\non his skills deep in the mountains.\pSometimes, he comes to CLOUD CITY\nto blend FRUIT all day long.$",CURATED,BERRIES|LILYCOVE,,,reviewed AUTO draft,NOT_STARTED
-Underwater_SealedChamber_Braille_GoUpHere,,data/text/braille.inc,5,,script,braille,GO UP HERE.$,GO UP HERE.$,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-SealedChamber_OuterRoom_Braille_ABC,,data/text/braille.inc,9,,script,braille,ABC$,ABC$,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-SealedChamber_OuterRoom_Braille_GHI,,data/text/braille.inc,13,,script,braille,GHI$,GHI$,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-SealedChamber_OuterRoom_Braille_MNO,,data/text/braille.inc,17,,script,braille,MNO$,MNO$,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-SealedChamber_OuterRoom_Braille_TUV,,data/text/braille.inc,21,,script,braille,TUV$,TUV$,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-SealedChamber_OuterRoom_Braille_DEF,,data/text/braille.inc,25,,script,braille,DEF$,DEF$,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-SealedChamber_OuterRoom_Braille_JKL,,data/text/braille.inc,29,,script,braille,JKL$,JKL$,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-SealedChamber_OuterRoom_Braille_PQRS,,data/text/braille.inc,33,,script,braille,PQRS$,PQRS$,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-SealedChamber_OuterRoom_Braille_Period,,data/text/braille.inc,37,,script,braille,.$,.$,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-SealedChamber_OuterRoom_Braille_WXYZ,,data/text/braille.inc,41,,script,braille,WXYZ$,WXYZ$,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-SealedChamber_OuterRoom_Braille_Comma,,data/text/braille.inc,45,,script,braille,",$",",$",CURATED,,,,"reviewed, no change needed",NOT_STARTED
-SealedChamber_OuterRoom_Braille_DigHere,,data/text/braille.inc,49,,script,braille,DIG HERE.$,DIG HERE.$,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-SealedChamber_InnerRoom_Braille_FirstWailordLastRelicanth,,data/text/braille.inc,53,,script,braille,FIRST COMES\nWAILORD.\nLAST COMES\nRELICANTH.$,FIRST COMES\nAIWHA.\nLAST COMES\nRELICFISH.$,CURATED,RELICANTH|WAILORD,,,reviewed AUTO draft,NOT_STARTED
-SealedChamber_InnerRoom_Braille_InThisCaveWeHaveLived,,data/text/braille.inc,60,,script,braille,IN THIS\nCAVE WE\nHAVE\nLIVED.$,IN THIS\nCAVE WE\nHAVE\nLIVED.$,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-SealedChamber_InnerRoom_Braille_WeOweAllToThePokemon,,data/text/braille.inc,67,,script,braille,WE OWE ALL\nTO THE\nPOKEMON.$,WE OWE ALL\nTO THE\nCOMPANION.$,CURATED,,,,Braille glyphs: Step 5 redraws as Aurebesh; keep line breaks,NOT_STARTED
-SealedChamber_InnerRoom_Braille_ButWeSealedThePokemonAway,,data/text/braille.inc,73,,script,braille,"BUT, WE\nSEALED THE\nPOKEMON\nAWAY.$","BUT, WE\nSEALED THE\nCOMPANION\nAWAY.$",CURATED,,,,,NOT_STARTED
-SealedChamber_InnerRoom_Braille_WeFearedIt,,data/text/braille.inc,80,,script,braille,WE FEARED IT.$,WE FEARED IT.$,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-SealedChamber_InnerRoom_Braille_ThoseWithCourageHope,,data/text/braille.inc,84,,script,braille,"THOSE WITH\nCOURAGE,\nTHOSE WITH\nHOPE.$","THOSE WITH\nCOURAGE,\nTHOSE WITH\nHOPE.$",CURATED,,,,"reviewed, no change needed",NOT_STARTED
-SealedChamber_InnerRoom_Braille_OpenDoorEternalPokemonWaits,,data/text/braille.inc,91,,script,braille,OPEN A DOOR.\nAN ETERNAL\nPOKEMON\nWAITS.$,OPEN A DOOR.\nAN ETERNAL\nCOMPANION\nWAITS.$,CURATED,,,,,NOT_STARTED
-DesertRuins_Braille_UseRockSmash,,data/text/braille.inc,98,,script,braille,"LEFT, LEFT,\nDOWN, DOWN.\nTHEN, USE\nROCK SMASH.$","LEFT, LEFT,\nDOWN, DOWN.\nTHEN, USE\nROCK SMASH.$",CURATED,,,,"reviewed, no change needed",NOT_STARTED
-IslandCave_Braille_RunLapAroundWall,,data/text/braille.inc,105,,script,braille,STAY CLOSE\nTO THE WALL.\nRUN AROUND\nONE LAP.$,STAY CLOSE\nTO THE WALL.\nRUN AROUND\nONE LAP.$,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-AncientTomb_Braille_ShineInTheMiddle,,data/text/braille.inc,112,,script,braille,"THOSE WHO\nINHERIT OUR\nWILL, SHINE\nIN THE MIDDLE.$","THOSE WHO\nINHERIT OUR\nWILL, SHINE\nIN THE MIDDLE.$",CURATED,,,,"reviewed, no change needed",NOT_STARTED
+Underwater_SealedChamber_Braille_GoUpHere,,data/text/braille.inc,5,,script,braille,GO UP HERE.$,GO UP HERE.$,CURATED,,,,"reviewed, no change needed",DONE
+SealedChamber_OuterRoom_Braille_ABC,,data/text/braille.inc,9,,script,braille,ABC$,ABC$,CURATED,,,,"reviewed, no change needed",DONE
+SealedChamber_OuterRoom_Braille_GHI,,data/text/braille.inc,13,,script,braille,GHI$,GHI$,CURATED,,,,"reviewed, no change needed",DONE
+SealedChamber_OuterRoom_Braille_MNO,,data/text/braille.inc,17,,script,braille,MNO$,MNO$,CURATED,,,,"reviewed, no change needed",DONE
+SealedChamber_OuterRoom_Braille_TUV,,data/text/braille.inc,21,,script,braille,TUV$,TUV$,CURATED,,,,"reviewed, no change needed",DONE
+SealedChamber_OuterRoom_Braille_DEF,,data/text/braille.inc,25,,script,braille,DEF$,DEF$,CURATED,,,,"reviewed, no change needed",DONE
+SealedChamber_OuterRoom_Braille_JKL,,data/text/braille.inc,29,,script,braille,JKL$,JKL$,CURATED,,,,"reviewed, no change needed",DONE
+SealedChamber_OuterRoom_Braille_PQRS,,data/text/braille.inc,33,,script,braille,PQRS$,PQRS$,CURATED,,,,"reviewed, no change needed",DONE
+SealedChamber_OuterRoom_Braille_Period,,data/text/braille.inc,37,,script,braille,.$,.$,CURATED,,,,"reviewed, no change needed",DONE
+SealedChamber_OuterRoom_Braille_WXYZ,,data/text/braille.inc,41,,script,braille,WXYZ$,WXYZ$,CURATED,,,,"reviewed, no change needed",DONE
+SealedChamber_OuterRoom_Braille_Comma,,data/text/braille.inc,45,,script,braille,",$",",$",CURATED,,,,"reviewed, no change needed",DONE
+SealedChamber_OuterRoom_Braille_DigHere,,data/text/braille.inc,49,,script,braille,DIG HERE.$,DIG HERE.$,CURATED,,,,"reviewed, no change needed",DONE
+SealedChamber_InnerRoom_Braille_FirstWailordLastRelicanth,,data/text/braille.inc,53,,script,braille,FIRST COMES\nWAILORD.\nLAST COMES\nRELICANTH.$,FIRST COMES\nAIWHA.\nLAST COMES\nRELICFISH.$,CURATED,RELICANTH|WAILORD,,,reviewed AUTO draft,DONE
+SealedChamber_InnerRoom_Braille_InThisCaveWeHaveLived,,data/text/braille.inc,60,,script,braille,IN THIS\nCAVE WE\nHAVE\nLIVED.$,IN THIS\nCAVE WE\nHAVE\nLIVED.$,CURATED,,,,"reviewed, no change needed",DONE
+SealedChamber_InnerRoom_Braille_WeOweAllToThePokemon,,data/text/braille.inc,67,,script,braille,WE OWE ALL\nTO THE\nPOKEMON.$,WE OWE ALL\nTO THE\nCOMPANION.$,CURATED,,,,Braille glyphs: Step 5 redraws as Aurebesh; keep line breaks,DONE
+SealedChamber_InnerRoom_Braille_ButWeSealedThePokemonAway,,data/text/braille.inc,73,,script,braille,"BUT, WE\nSEALED THE\nPOKEMON\nAWAY.$","BUT, WE\nSEALED THE\nCOMPANION\nAWAY.$",CURATED,,,,,DONE
+SealedChamber_InnerRoom_Braille_WeFearedIt,,data/text/braille.inc,80,,script,braille,WE FEARED IT.$,WE FEARED IT.$,CURATED,,,,"reviewed, no change needed",DONE
+SealedChamber_InnerRoom_Braille_ThoseWithCourageHope,,data/text/braille.inc,84,,script,braille,"THOSE WITH\nCOURAGE,\nTHOSE WITH\nHOPE.$","THOSE WITH\nCOURAGE,\nTHOSE WITH\nHOPE.$",CURATED,,,,"reviewed, no change needed",DONE
+SealedChamber_InnerRoom_Braille_OpenDoorEternalPokemonWaits,,data/text/braille.inc,91,,script,braille,OPEN A DOOR.\nAN ETERNAL\nPOKEMON\nWAITS.$,OPEN A DOOR.\nAN ETERNAL\nCOMPANION\nWAITS.$,CURATED,,,,,DONE
+DesertRuins_Braille_UseRockSmash,,data/text/braille.inc,98,,script,braille,"LEFT, LEFT,\nDOWN, DOWN.\nTHEN, USE\nROCK SMASH.$","LEFT, LEFT,\nDOWN, DOWN.\nTHEN, USE\nROCK SMASH.$",CURATED,,,,"reviewed, no change needed",DONE
+IslandCave_Braille_RunLapAroundWall,,data/text/braille.inc,105,,script,braille,STAY CLOSE\nTO THE WALL.\nRUN AROUND\nONE LAP.$,STAY CLOSE\nTO THE WALL.\nRUN AROUND\nONE LAP.$,CURATED,,,,"reviewed, no change needed",DONE
+AncientTomb_Braille_ShineInTheMiddle,,data/text/braille.inc,112,,script,braille,"THOSE WHO\nINHERIT OUR\nWILL, SHINE\nIN THE MIDDLE.$","THOSE WHO\nINHERIT OUR\nWILL, SHINE\nIN THE MIDDLE.$",CURATED,,,,"reviewed, no change needed",DONE
 CableClub_Text_WelcomeWhichCableClubService,,data/text/cable_club.inc,1,,script,cable_club,Welcome to the POKéMON CABLE\nCLUB.\pWhich of our services do you wish\nto use?$,Welcome to the COMPANION CABLE\nCLUB.\pWhich of our services do you wish\nto use?$,CURATED,POKéMON,,,reviewed AUTO draft,DONE
 CableClub_Text_WhichService,,data/text/cable_club.inc,7,,script,cable_club,Which of our services do you wish\nto use?$,Which of our services do you wish\nto use?$,CURATED,,,,"reviewed, no change needed",DONE
 CableClub_Text_TradeUsingLinkCable,,data/text/cable_club.inc,11,,script,cable_club,Trade POKéMON with another player\nusing a GBA Game Link cable.$,Trade COMPANIONS with another player\nusing a COMLINK cable.$,CURATED,GBA Game Link cable|POKéMON,,,,DONE

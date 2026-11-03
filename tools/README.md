@@ -33,7 +33,7 @@ tool's own README or `TODO.md` says what is missing). A blank status means the t
 | Tool | Status | Covers | Categories | Wiki rows |
 |---|---|---|---|---|
 | [`blockout/`](blockout/) |  | World blockout: area tile layouts, the world map, INDEX, and the `todo` query that lists every area and world-art row with its status and tool. | world | `../wiki/world/<planet>/*.yaml` (`art_status`, `notes`) and `../wiki/mapping/world_art.csv` (`status`, `tool`) |
-| [`glyph-maker/`](glyph-maker/) |  | Temporary: the COMPANION ligature glyphs (Star Wars version of the PkMn glyph) drawn into every Latin font, `{COMPANION}` / `{COMPANIONS}` in charmap. | F2 | - |
+| [`glyph-maker/`](glyph-maker/) |  | Temporary: the COMPANION ligature glyphs (Star Wars version of the PkMn glyph) drawn into every Latin font, `{COMPANION}` / `{COMPANIONS}` in charmap; and the Aurebesh letters drawn into the Braille font (`aurebesh.py`). | F2 | - |
 | [`greybox/`](greybox/) |  | Greybox pieces (`piece`), category sheets (`kit`), the building sheet (`sheet`), areas in relief with caves and surfaces (`terrain`) and interiors (`room`), rendered to `../wiki/world/greybox/`. | world | `world_art.csv` rows with `tool` `greybox piece`; area rows with `greybox terrain` or `greybox room` |
 | [`palette-enforcer/`](palette-enforcer/) |  | Shared palette gate and post-processor: GBA hardware rules plus the wiki themes ([`PALETTES.md`](PALETTES.md)). Every art tool calls it last. | all art | - |
 | [`play-tester/`](play-tester/) |  | Headless mGBA play-testing: scripts, Lua helpers, savestates | - | - |
@@ -210,7 +210,7 @@ tool that edits that screen.
 | # | Category | Where it shows | Format | PNGs | .pal | Tool |
 |---|---|---|---|---|---|---|
 | F1 | Text windows and frames | Every dialogue/menu box (20 player-selectable frames) | 24x24 frame tiles + palette | 21 | 4 | none (no tool) |
-| F2 | Fonts | All text | glyph sheets 1-2bpp, Latin + Japanese + Braille | 17 | | none: kept vanilla; the Braille sheet is replaced by hand |
+| F2 | Fonts | All text | glyph sheets 1-2bpp, Latin + Japanese + Braille | 17 | | none: kept vanilla; the Braille sheet is Aurebesh, drawn by `glyph-maker/aurebesh.py` |
 | F3 | Shared interface pieces | Cursors, scroll arrows, status icons, markings, menu info | small OBJ/BG tiles | 18 | 11 | none (no tool) |
 | F4 | Bag, party and summary screens | Start menu screens | full-screen tiles + tilemap; bag pictures 64x64 x 6 pockets | 17 | 8 | none (no tool) |
 | F5 | Datapad (Pokédex) screens | Datapad | tiles + tilemaps | 9 | 5 | none (no tool) |

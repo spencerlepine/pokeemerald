@@ -66,18 +66,21 @@ def split_lines(text: str) -> list[str]:
     return parts or [""]
 
 
+DIRECTIVES = (".string", ".braille")  # .braille: the signs printed in the Braille (now Aurebesh) font
+
+
 def find_script(lines: list[str], tid: str):
-    """Return (first, last) line index of the .string block under label `tid::`, or None."""
+    """Return (first, last) line index of the .string (or .braille) block under label `tid::`, or None."""
     lab = re.compile(rf"^{re.escape(tid)}::?\s*$")
     for i, line in enumerate(lines):
         if lab.match(line):
             j = i + 1
-            while j < len(lines) and not lines[j].strip().startswith(".string"):
-                if lines[j].strip() and not lines[j].strip().startswith(("@", "//")):
+            while j < len(lines) and not lines[j].strip().startswith(DIRECTIVES):
+                if lines[j].strip() and not lines[j].strip().startswith(("@", "//", "brailleformat")):
                     return None
                 j += 1
             first = j
-            while j < len(lines) and lines[j].strip().startswith(".string"):
+            while j < len(lines) and lines[j].strip().startswith(DIRECTIVES):
                 j += 1
             return (first, j - 1) if j > first else None
     return None
@@ -192,7 +195,8 @@ def main() -> int:
             dirty = True
             if is_script:
                 indent = re.match(r"\s*", lines[span[0]]).group(0)
-                new = [f'{indent}.string "{p}"' for p in split_lines(sw)]
+                directive = lines[span[0]].split()[0]
+                new = [f'{indent}{directive} "{p}"' for p in split_lines(sw)]
                 lines[span[0]:span[1] + 1] = new
             else:
                 src = src[:span[0]] + f'_("{sw}")' + src[span[1]:]

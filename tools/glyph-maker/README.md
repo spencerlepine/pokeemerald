@@ -17,3 +17,19 @@ python3 glyph_maker.py install   # writes ../../game/graphics/fonts/latin_*.png,
 - Slots 0x37-0x3C are hiragana codes the English fonts leave blank. In the two small fonts those cells held
   kana, which the English game never shows; they are overwritten.
 - `out/` is scratch (not committed).
+
+## Aurebesh signs (`aurebesh.py`)
+
+The ancient signs (Sealed Chamber, the three warden tombs) print in the Braille font. `aurebesh.py` redraws
+each Braille cell as its Aurebesh letter: the cell for A becomes Aurek, and so on, plus the punctuation.
+The cell numbers stay, so the sign texts (`.braille "..."` in `data/text/braille.inc`), puzzles and windows
+work as before. Installed 2026-11-03.
+
+```sh
+python3 aurebesh.py preview   # out/: aurebesh_before_after.png, aurebesh_letters.png (letter next to its chart glyph)
+python3 aurebesh.py install   # writes ../../game/graphics/fonts/braille.png (idempotent)
+```
+
+- Tweak the ASCII art at the top (`#` = ink, 8 wide and 9 tall). The shadow is added automatically.
+- The letters follow the Aurebesh chart in `../sprite-creature-generator/civitai/refs/unown/`.
+- "Before" is Emerald's Braille sheet redrawn from the dot numbers, so it still works after install.

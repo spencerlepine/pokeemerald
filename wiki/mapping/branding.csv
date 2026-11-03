@@ -129,7 +129,7 @@ graphics/easy_chat/text_input_frame.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene 
 graphics/easy_chat/triangle_cursor.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/easy_chat/window.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/evolution_scene/bg.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
-graphics/fonts/braille.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Braille font (Regi puzzles) → Aurebesh.,,,,,,Replace by hand; no generator tool.
+graphics/fonts/braille.png,HOTSWAP,DRAFT,ART_READY,,Braille font (Regi puzzles) → Aurebesh.,,,,,,"Shipped 2026-11-03 by tools/glyph-maker/aurebesh.py: each Braille cell (A, B, ... and the punctuation) redrawn as its Aurebesh letter, same cell numbers, so the sign texts and puzzles are unchanged. Waiting for owner review."
 graphics/fonts/down_arrow.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/fonts/down_arrow_alt.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/fonts/japanese_bold.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,

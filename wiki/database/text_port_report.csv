@@ -1,26 +1,4 @@
 text_id,source_file,result,game_text
-AncientTomb_Braille_ShineInTheMiddle,data/text/braille.inc,missing,label not found
-DesertRuins_Braille_UseRockSmash,data/text/braille.inc,missing,label not found
-IslandCave_Braille_RunLapAroundWall,data/text/braille.inc,missing,label not found
-SealedChamber_InnerRoom_Braille_ButWeSealedThePokemonAway,data/text/braille.inc,missing,label not found
-SealedChamber_InnerRoom_Braille_FirstWailordLastRelicanth,data/text/braille.inc,missing,label not found
-SealedChamber_InnerRoom_Braille_InThisCaveWeHaveLived,data/text/braille.inc,missing,label not found
-SealedChamber_InnerRoom_Braille_OpenDoorEternalPokemonWaits,data/text/braille.inc,missing,label not found
-SealedChamber_InnerRoom_Braille_ThoseWithCourageHope,data/text/braille.inc,missing,label not found
-SealedChamber_InnerRoom_Braille_WeFearedIt,data/text/braille.inc,missing,label not found
-SealedChamber_InnerRoom_Braille_WeOweAllToThePokemon,data/text/braille.inc,missing,label not found
-SealedChamber_OuterRoom_Braille_ABC,data/text/braille.inc,missing,label not found
-SealedChamber_OuterRoom_Braille_Comma,data/text/braille.inc,missing,label not found
-SealedChamber_OuterRoom_Braille_DEF,data/text/braille.inc,missing,label not found
-SealedChamber_OuterRoom_Braille_DigHere,data/text/braille.inc,missing,label not found
-SealedChamber_OuterRoom_Braille_GHI,data/text/braille.inc,missing,label not found
-SealedChamber_OuterRoom_Braille_JKL,data/text/braille.inc,missing,label not found
-SealedChamber_OuterRoom_Braille_MNO,data/text/braille.inc,missing,label not found
-SealedChamber_OuterRoom_Braille_PQRS,data/text/braille.inc,missing,label not found
-SealedChamber_OuterRoom_Braille_Period,data/text/braille.inc,missing,label not found
-SealedChamber_OuterRoom_Braille_TUV,data/text/braille.inc,missing,label not found
-SealedChamber_OuterRoom_Braille_WXYZ,data/text/braille.inc,missing,label not found
-Underwater_SealedChamber_Braille_GoUpHere,data/text/braille.inc,missing,label not found
 gText_DefaultNameAllie,src/strings.c,missing,label not found
 gText_DefaultNameAubree,src/strings.c,missing,label not found
 gText_DefaultNameBella,src/strings.c,missing,label not found

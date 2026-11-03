@@ -1222,7 +1222,7 @@ graphics/field_effects/pics/unknown_17.png,field_effects,pics,graphics/field_eff
 graphics/field_effects/pics/unused_grass_2.png,field_effects,pics,graphics/field_effects/pics/unused_grass_2.png,64,16,,,,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/field_effects/pics/unused_sand.png,field_effects,pics,graphics/field_effects/pics/unused_sand.png,64,16,,,,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/field_effects/pics/water_surfacing.png,field_effects,pics,graphics/field_effects/pics/water_surfacing.png,80,16,,,,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
-graphics/fonts/braille.png,fonts,,graphics/fonts/braille.png,256,64,,,,,Braille font (Regi puzzles) → Aurebesh.,,PENDING_ART,,Replace by hand; no generator tool.,HOTSWAP,HUMAN-TODO,,,,,NOT_STARTED
+graphics/fonts/braille.png,fonts,,graphics/fonts/braille.png,256,64,,,,,Braille font (Regi puzzles) → Aurebesh.,,ART_READY,,"Shipped 2026-11-03 by tools/glyph-maker/aurebesh.py: each Braille cell (A, B, ... and the punctuation) redrawn as its Aurebesh letter, same cell numbers, so the sign texts and puzzles are unchanged. Waiting for owner review.",HOTSWAP,,,,,,DONE
 graphics/fonts/down_arrow.png,fonts,,graphics/fonts/down_arrow.png,8,48,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
 graphics/fonts/down_arrow_alt.png,fonts,,graphics/fonts/down_arrow_alt.png,8,48,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
 graphics/fonts/japanese_bold.png,fonts,,graphics/fonts/japanese_bold.png,128,256,,,,,Generic UI / scene art with no Pokémon branding: keep as is.,,KEEP_ART,,,KEEP,,,,,,NOT_STARTED
