@@ -162,8 +162,7 @@ The current pass (all `DRAFT`, waiting for the owner's review):
 - **Water on desert worlds.** Tatooine maps (Mos Eisley, Routes 103/104/109/110) have sea tiles and SURF works
   there. Option: draw those tiles as the DUNE SEA and theme SURF on Tatooine as sand-skimming (art only,
   mechanics unchanged). Dialogue is already neutral ("the water"). Not decided.
-- **Optional extras**, not tracked as rows: a landing pad and shuttle at the Tatooine / Sullust border
-  (`net:border-tatooine-sullust`), more invented creature names swapped for canon ones, and the ideas in
+- **Optional extras**, not tracked as rows: more invented creature names swapped for canon ones, and the ideas in
   `bible/STORY.md` section 8 that have no row yet (light / dark side evolution branches, blizzard weather).
 
 ## Rebuilding
