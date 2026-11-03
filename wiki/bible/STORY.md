@@ -263,3 +263,30 @@ Tracked as rows in `mapping/net_new.csv`, not built yet. Designs (maps, flags, l
 - Sandstorm and blizzard weather that changes encounters (blizzard: TODO row `net:weather-blizzard`).
 - New moves with new animations: FORCE CHOKE, BLASTER SHOT, SABER SLASH.
 - The Mos Eisley Cantina: Wuher's bar, the Modal Nodes, Ponda Baba, Dr. Evazan, Momaw Nadon and an optional Greedo battle, with six new walkers and its own band music.
+
+---
+
+## 9. The bigger world (owner decisions, 2026-11-03)
+
+The world in `world/` is bigger than Emerald: 531 areas on 19 planets, 51 of them new. The wiki grows to cover it
+under these rules, decided by the owner after the audit of 2026-11-03:
+
+1. **Creatures.** New placements first: every planet gets wild tables from the roster it already owns. Then up to 21
+   new species or forms in the free engine slots (`SPECIES_OLD_UNOWN_B` to `_Z`, minus `_J`; three used by the
+   light/dark forms). No engine expansion past those slots yet.
+2. **Planet roles.** Main story in Emerald's order: Tatooine, Kashyyyk, Sullust, Mustafar, Endor, Bespin, Jedha,
+   Yavin 4, Dagobah, Asteroid Field, Ilum. Side trips during the story: Felucia (5 badges), Hoth and Kamino
+   (6 badges). Post-game: Grand Arena, Death Star, Tython, Atollon, Mortis. Recorded per planet in
+   `mapping/planets.csv`.
+3. **Level curve.** Emerald's bands through Ilum (cap 58). Post-game content may reach 70, nothing higher. A side
+   trip takes the band of the act it opens in.
+4. **Must-have cast.** The owner's list (section 5 and `mapping/characters.csv`): C-3PO and R2-D2 are NPCs with
+   House Organa and never companions; Rieekan and Derlin lead the Hoth survey, Lobot runs Cloud City's systems,
+   Wedge flies from Yavin 4, Piett and Krennic hold the Death Star; Palpatine is a hologram, never fought. Darth
+   Maul is real as well as a vision: in 2 BBY he hunts Obi-Wan on Tatooine. Jar Jar Binks is a traveller met on
+   several planets along the main path. Dooku and Grievous are dead by 2 BBY: visions or relics only.
+5. **Canon sources.** `starwars-db` ids first. Where the six-film databank has nothing, `canon:<name>` picks from the
+   wider canon (Rebels, Rogue One, The Mandalorian, The Clone Wars) are allowed, each checked against 2 BBY and
+   explained in `canon_note`.
+6. **`home_planet` is the placement rule.** A species is wild on its home planet unless its row says why not
+   (`habitat_note`). Emerald's slots, rates and levels stay; only the species in the slot changes.
