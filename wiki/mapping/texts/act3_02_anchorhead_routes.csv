@@ -382,14 +382,14 @@ Route117_Text_IsaacPostBattle,COMPANION isn't all about power.\pPolishing a uniq
 Route117_Text_IsaacRegister,I'm going to redouble my training.\nWould you come look in on us?$,"reviewed, no change needed"
 Route117_Text_IsaacRematchIntro,"The beasts I've been raising are\nlooking good, just like before.$",trainer recast 2026-11-01 (bible/RECAST.md)
 Route117_Text_IsaacRematchDefeat,You know how to raise them properly.\nYou'd make a fine beast handler…$,trainer recast 2026-11-01 (bible/RECAST.md)
-Route117_Text_IsaacPostRematch,Your COMPANIONS are growing good!\nYou should enter them in SHOWCASES.$,reviewed AUTO draft
+Route117_Text_IsaacPostRematch,Your COMPANIONS are growing good!\nYou should take them to the\lGRAND ARENA.$,reviewed AUTO draft
 Route117_Text_LydiaIntro,"Please, allow me to evaluate if you\nhave raised your COMPANION properly.$",reviewed AUTO draft
 Route117_Text_LydiaDefeat,"Yes, they are growing properly.$","reviewed, no change needed"
 Route117_Text_LydiaPostBattle,Try raising COMPANIONS with more\nattention to their character traits.$,reviewed AUTO draft
 Route117_Text_LydiaRegister,I'm glad I met a superb TRAINER in you.\nI hope to see you again.$,"reviewed, no change needed"
 Route117_Text_LydiaRematchIntro,Allow me to reevaluate if you have\nraised your COMPANION properly.$,reviewed AUTO draft
 Route117_Text_LydiaRematchDefeat,They are growing admirably.$,"reviewed, no change needed"
-Route117_Text_LydiaPostRematch,"COMPANIONS seem to like different\nkinds of {POKEBLOCK}S, depending on their nature.$",reviewed AUTO draft
+Route117_Text_LydiaPostRematch,"COMPANIONS seem to like different\nkinds of FRUIT, depending on their\lnature.$",reviewed AUTO draft
 Route117_Text_DylanIntro,"I'm in the middle of a rally, but,\nwhatever, let's have a battle!$",trainer recast 2026-11-01 (bible/RECAST.md)
 Route117_Text_DylanDefeat,I ran out of energy!$,"reviewed, no change needed"
 Route117_Text_DylanPostBattle,I may have blown it…\pI might have dropped to last during\nthat battle…$,"reviewed, no change needed"

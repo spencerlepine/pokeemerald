@@ -4,7 +4,8 @@ SlateportCity_PokemonFanClub_MapScripts::
 SlateportCity_PokemonFanClub_EventScript_Chairman::
 	lock
 	faceplayer
-	goto_if_unset FLAG_ENTERED_CONTEST, SlateportCity_PokemonFanClub_EventScript_ChairmanNotEnteredContest
+	@ Showcases removed: the chairman no longer judges condition or hands out scarves.
+	goto SlateportCity_PokemonFanClub_EventScript_ChairmanNotEnteredContest
 	call_if_unset FLAG_MET_SLATEPORT_FANCLUB_CHAIRMAN, SlateportCity_PokemonFanClub_EventScript_MeetChairman
 	switch VAR_SLATEPORT_FAN_CLUB_STATE
 	case 0, SlateportCity_PokemonFanClub_EventScript_ChairmanFirstAssessment
@@ -257,12 +258,6 @@ SlateportCity_PokemonFanClub_Text_MeetChairman:
 	.string "the most important!\p"
 	.string "No one can best me when it comes\n"
 	.string "to raising COMPANIONS. No one!\p"
-	.string "Well, let me tell you about\n"
-	.string "SHOWCASES.\p"
-	.string "They're events where one can show off\n"
-	.string "COMPANIONS for the world to see!\p"
-	.string "However, they're held in far-off towns,\n"
-	.string "so I cannot participate often enough.\p"
 	.string "That is why we gather in this booth\n"
 	.string "to show off our COMPANIONS, and\l"
 	.string "have others show us theirs.\p"
@@ -270,9 +265,9 @@ SlateportCity_PokemonFanClub_Text_MeetChairman:
 	.string "is excellent!$"
 
 SlateportCity_PokemonFanClub_Text_LikeToSeeEnteredContestPokemon:
-	.string "The COMPANION of a TRAINER who has\n"
-	.string "entered a SHOWCASE…\l"
-	.string "That, I would like to see.$"
+	.string "A COMPANION raised with true care…\n"
+	.string "That, I would like to see.\p"
+	.string "Do come and show me yours again!$"
 
 SlateportCity_PokemonFanClub_Text_AllowMeToExamineYourPokemon:
 	.string "Er-hem! I see you've participated in\n"

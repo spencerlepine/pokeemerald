@@ -38,6 +38,9 @@ extern EWRAM_DATA u16 gSpecialVar_ItemId;
 
 u8 GetLilycoveLadyId(void)
 {
+    // Showcases removed: an old save's Contest Lady turns into the Favor Lady.
+    if (gSaveBlock1Ptr->lilycoveLady.id == LILYCOVE_LADY_CONTEST)
+        InitLilycoveFavorLady();
     return gSaveBlock1Ptr->lilycoveLady.id;
 }
 
@@ -72,7 +75,8 @@ void InitLilycoveLady(void)
         InitLilycoveFavorLady();
         break;
     case LILYCOVE_LADY_CONTEST:
-        InitLilycoveContestLady();
+        // Showcases removed: the Contest Lady (who wants Pokéblocks) is replaced by the Favor Lady.
+        InitLilycoveFavorLady();
         break;
     }
 }
@@ -88,7 +92,7 @@ void ResetLilycoveLadyForRecordMix(void)
         ResetFavorLadyForRecordMix();
         break;
     case LILYCOVE_LADY_CONTEST:
-        ResetContestLadyForRecordMix();
+        InitLilycoveFavorLady(); // Showcases removed (a mixed-in Contest Lady becomes the Favor Lady)
         break;
     }
 }

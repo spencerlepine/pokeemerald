@@ -2407,7 +2407,8 @@ Route117_Text_IsaacRematchDefeat:
 
 Route117_Text_IsaacPostRematch:
 	.string "Your COMPANIONS are growing good!\n"
-	.string "You should enter them in SHOWCASES.$"
+	.string "You should take them to the\l"
+	.string "GRAND ARENA.$"
 
 Route117_Text_LydiaIntro:
 	.string "Please, allow me to evaluate if you\n"
@@ -2432,8 +2433,9 @@ Route117_Text_LydiaRematchDefeat:
 	.string "They are growing admirably.$"
 
 Route117_Text_LydiaPostRematch:
-	.string "POKéMON seem to like different kinds\n"
-	.string "of {POKEBLOCK}S, depending on their nature.$"
+	.string "COMPANIONS seem to like different\n"
+	.string "kinds of FRUIT, depending on their\l"
+	.string "nature.$"
 
 Route117_Text_DylanIntro:
 	.string "I'm in the middle of a rally, but,\n"
@@ -3225,9 +3227,9 @@ Route121_Text_VanessaDefeat:
 	.string "This isn't what I meant!$"
 
 Route121_Text_VanessaPostBattle:
-	.string "I'm going to a SHOWCASE in CLOUD CITY.\p"
+	.string "I'm going to the GRAND ARENA next.\p"
 	.string "My COMPANIONS should have no problem\n"
-	.string "sweeping the MASTER CLASS.$"
+	.string "sweeping the whole place.$"
 
 Route121_Text_WalterIntro:
 	.string "With my COMPANIONS, I have traveled\n"
@@ -3414,14 +3416,14 @@ Route121_Text_PatPostBattle:
 Route121_Text_MarcelIntro:
 	.string "My COMPANIONS have never lost!\n"
 	.string "On their next win, I'm entering them\l"
-	.string "in SHOWCASES.$"
+	.string "in the GRAND ARENA.$"
 
 Route121_Text_MarcelDefeat:
 	.string "Oh, now what happened here?$"
 
 Route121_Text_MarcelPostBattle:
 	.string "I may have to train my gang some more\n"
-	.string "before entering any SHOWCASE.$"
+	.string "before entering the GRAND ARENA.$"
 
 Route123_Text_WendyIntro:
 	.string "Want to determine how strong you are?\n"

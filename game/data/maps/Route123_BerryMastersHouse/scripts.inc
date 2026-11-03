@@ -54,13 +54,8 @@ Route123_BerryMastersHouse_EventScript_CancelPhrase::
 	end
 
 Route123_BerryMastersHouse_EventScript_GavePhrase::
-	goto_if_eq VAR_0x8004, NOT_SPECIAL_PHRASE, Route123_BerryMastersHouse_EventScript_GiveNormalBerry
-	goto_if_eq VAR_0x8004, PHRASE_GREAT_BATTLE, Route123_BerryMastersHouse_EventScript_GiveSpelonBerry
-	goto_if_eq VAR_0x8004, PHRASE_CHALLENGE_CONTEST, Route123_BerryMastersHouse_EventScript_GivePamtreBerry
-	goto_if_eq VAR_0x8004, PHRASE_OVERWHELMING_LATIAS, Route123_BerryMastersHouse_EventScript_GiveWatmelBerry
-	goto_if_eq VAR_0x8004, PHRASE_COOL_LATIOS, Route123_BerryMastersHouse_EventScript_GiveDurinBerry
-	goto_if_eq VAR_0x8004, PHRASE_SUPER_HUSTLE, Route123_BerryMastersHouse_EventScript_GiveBelueBerry
-	end
+	@ The special phrases used to give the treat-only berries; every phrase now gets a normal one.
+	goto Route123_BerryMastersHouse_EventScript_GiveNormalBerry
 
 Route123_BerryMastersHouse_EventScript_GiveNormalBerry::
 	msgbox Route123_BerryMastersHouse_Text_GoodSayingTakeThis, MSGBOX_DEFAULT
@@ -70,51 +65,6 @@ Route123_BerryMastersHouse_EventScript_GiveNormalBerry::
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	goto Route123_BerryMastersHouse_EventScript_GaveBerry
 	release
-	end
-
-Route123_BerryMastersHouse_EventScript_GiveSpelonBerry::
-	goto_if_set FLAG_RECEIVED_SPELON_BERRY, Route123_BerryMastersHouse_EventScript_GiveNormalBerry
-	msgbox Route123_BerryMastersHouse_Text_InspirationalTakeThis, MSGBOX_DEFAULT
-	giveitem ITEM_SPELON_BERRY
-	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	setflag FLAG_RECEIVED_SPELON_BERRY
-	goto Route123_BerryMastersHouse_EventScript_GaveBerry
-	end
-
-Route123_BerryMastersHouse_EventScript_GivePamtreBerry::
-	goto_if_set FLAG_RECEIVED_PAMTRE_BERRY, Route123_BerryMastersHouse_EventScript_GiveNormalBerry
-	msgbox Route123_BerryMastersHouse_Text_InspirationalTakeThis, MSGBOX_DEFAULT
-	giveitem ITEM_PAMTRE_BERRY
-	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	setflag FLAG_RECEIVED_PAMTRE_BERRY
-	goto Route123_BerryMastersHouse_EventScript_GaveBerry
-	end
-
-Route123_BerryMastersHouse_EventScript_GiveWatmelBerry::
-	goto_if_set FLAG_RECEIVED_WATMEL_BERRY, Route123_BerryMastersHouse_EventScript_GiveNormalBerry
-	msgbox Route123_BerryMastersHouse_Text_InspirationalTakeThis, MSGBOX_DEFAULT
-	giveitem ITEM_WATMEL_BERRY
-	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	setflag FLAG_RECEIVED_WATMEL_BERRY
-	goto Route123_BerryMastersHouse_EventScript_GaveBerry
-	end
-
-Route123_BerryMastersHouse_EventScript_GiveDurinBerry::
-	goto_if_set FLAG_RECEIVED_DURIN_BERRY, Route123_BerryMastersHouse_EventScript_GiveNormalBerry
-	msgbox Route123_BerryMastersHouse_Text_InspirationalTakeThis, MSGBOX_DEFAULT
-	giveitem ITEM_DURIN_BERRY
-	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	setflag FLAG_RECEIVED_DURIN_BERRY
-	goto Route123_BerryMastersHouse_EventScript_GaveBerry
-	end
-
-Route123_BerryMastersHouse_EventScript_GiveBelueBerry::
-	goto_if_set FLAG_RECEIVED_BELUE_BERRY, Route123_BerryMastersHouse_EventScript_GiveNormalBerry
-	msgbox Route123_BerryMastersHouse_Text_InspirationalTakeThis, MSGBOX_DEFAULT
-	giveitem ITEM_BELUE_BERRY
-	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	setflag FLAG_RECEIVED_BELUE_BERRY
-	goto Route123_BerryMastersHouse_EventScript_GaveBerry
 	end
 
 Route123_BerryMastersHouse_EventScript_ReceivedWifeBerryToday::

@@ -85,7 +85,7 @@ Route121_Text_OkayMoveOutToMtPyre,Okay!\nWe're to fly out to JEDHA!$,
 Route121_Text_AheadLoomsMtPyre,Shuttles from this pad fly to JEDHA…\pIts TEMPLE is a monument to the\nspirits of departed COMPANIONS…$,Route 121's pier is a shuttle pad to Jedha (net:hangar rows)
 Route121_Text_MtPyrePierSign,SHUTTLE PAD: JEDHA TEMPLE\p…The sign is old and worn out.\nThe words are barely legible…$,
 Route121_Text_SafariZoneSign,“Filled with rare COMPANIONS!”\nSHUTTLE TO THE FELUCIA RESERVE$,
-Route121_Text_VanessaPostBattle,I'm going to a SHOWCASE in CLOUD CITY.\pMy COMPANIONS should have no problem\nsweeping the MASTER CLASS.$,
+Route121_Text_VanessaPostBattle,I'm going to the GRAND ARENA next.\pMy COMPANIONS should have no problem\nsweeping the whole place.$,
 Route121_Text_WalterIntro,"With my COMPANIONS, I have traveled\nto the galaxy's four corners.\pYou might say I have some confidence\nin my abilities.$",
 Route121_Text_WalterRematchIntro,"With my COMPANIONS, I have traveled\nto the galaxy's four corners.\pYou might say I have some confidence\nin my abilities.$",
 Route121_Text_WalterPostBattle,I would like to cross the galaxy once\nagain with my COMPANIONS.$,
@@ -113,7 +113,7 @@ Route123_Text_EdDefeat,I kind of like your COMPANIONS.$,
 Route123_BerryMastersHouse_Text_VisitPrettyPetalFlowerShop,Be sure to visit the PRETTY PETAL\nflower shop near BESTINE\lon TATOOINE.\pLet flowers fill the world!$,
 Route123_BerryMastersHouse_Text_JoyNeverGoesOutOfMyLife,Our four grandchildren should become\nmore accomplished than my husband.\pJoy never goes out of my life!$,
 Kecleon_Text_UseDevonScopeMonAttacked,{PLAYER} used the ORGANA SCOPE.\pAn invisible COMPANION became fully\nvisible!\pThe startled COMPANION attacked!$,
-Route121_Text_MarcelIntro,"My COMPANIONS have never lost!\nOn their next win, I'm entering them\lin SHOWCASES.$",
+Route121_Text_MarcelIntro,"My COMPANIONS have never lost!\nOn their next win, I'm entering them\lin the GRAND ARENA.$",
 Route123_Text_AlbertoDefeat,"Even in defeat, BIRD COMPANIONS\nare cool!$",
 FortreeCity_Text_SomethingBlockingGym,"I want to go to the ARENA,\nbut something's blocking the way.\pAfter all the bother I went through\ntraining on ROUTE 120…$",reviewed AUTO draft
 FortreeCity_Text_ThisTimeIllBeatWinona,"I've got my pride-and-joy COMPANION\nwith me. This time, I'll beat CHIRPA.$",reviewed AUTO draft
@@ -356,7 +356,7 @@ Route121_Text_PatIntro,I want everybody to see the COMPANION\nI've raised!$,revi
 Route121_Text_PatDefeat,Wow!\nSpectacular!$,"reviewed, no change needed"
 Route121_Text_PatPostBattle,I raise every COMPANION with the same\nlove and care--I don't pick favorites.$,reviewed AUTO draft
 Route121_Text_MarcelDefeat,"Oh, now what happened here?$","reviewed, no change needed"
-Route121_Text_MarcelPostBattle,I may have to train my gang some more\nbefore entering any SHOWCASE.$,reviewed AUTO draft
+Route121_Text_MarcelPostBattle,I may have to train my gang some more\nbefore entering the GRAND ARENA.$,reviewed AUTO draft
 Route123_Text_WendyIntro,Want to determine how strong you are?\nI'll be the test!$,"reviewed, no change needed"
 Route123_Text_WendyDefeat,You passed with flying colors!$,"reviewed, no change needed"
 Route123_Text_WendyPostBattle,To best even me…\nYour strength is marvelous!$,"reviewed, no change needed"

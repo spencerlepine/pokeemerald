@@ -172,16 +172,16 @@ SafariZone_South_Text_StillHaveTimeExit,You still have time left. Would you like
 SafariZone_South_Text_EnjoyTheRestOfYourAdventure,Please enjoy the rest of your wild\nadventure!$,"reviewed, no change needed"
 SafariZone_South_Text_ExitEarlyThankYouForPlaying,Okay.\pI'll take back your remaining SAFARI\nPODS.\pThank you for playing.\nWe hope to see you again.$,reviewed AUTO draft
 SafariZone_South_Text_GoodLuck,"Good luck!\pIf you need anything, don't hesitate\nto tell me, please!$","reviewed, no change needed"
-SafariZone_South_Text_Boy,"Did you know?\pIf you put a {POKEBLOCK} in that square box,\nCOMPANIONS gather around.$",reviewed AUTO draft
-SafariZone_Southwest_Text_Woman,"Sometimes, when I toss a {POKEBLOCK} at \nCOMPANION, it gets ignored.\pDo COMPANIONS have likes and dislikes\nabout what they eat?$",reviewed AUTO draft
+SafariZone_South_Text_Boy,Did you know?\pSome COMPANIONS only live deep in\nthe far corners of the SAFARI ZONE.$,reviewed AUTO draft
+SafariZone_Southwest_Text_Woman,"Sometimes, COMPANIONS run off the\nmoment they see me.\pAre some of them just shy?$",reviewed AUTO draft
 SafariZone_Northwest_Text_Man,Gasp… Gasp…\nI…made it out here…but…\pI'm exhausted… I don't have the\nenergy to catch COMPANIONS…$,reviewed AUTO draft
 SafariZone_North_Text_Man,I'm going to catch a lot of rare\nCOMPANIONS here and trade them with my\lfriends!$,reviewed AUTO draft
-SafariZone_South_Text_Youngster,I put a {POKEBLOCK} on the {POKEBLOCK} FEEDER.\nBut it seems to have disappeared.\pI guess COMPANION must have eaten it\nwithout me noticing.$,reviewed AUTO draft
-Route121_SafariZoneEntrance_Text_TrainerTip,FELUCIA RESERVE TRAINER TIP!\pThrow {POKEBLOCK}S at wild COMPANIONS to make\nthem less likely to flee.$,reviewed AUTO draft
+SafariZone_South_Text_Youngster,I tried to GO NEAR a COMPANION…\pBut it ran away before I could even\nthrow a SAFARI BALL!$,reviewed AUTO draft
+Route121_SafariZoneEntrance_Text_TrainerTip,"SAFARI ZONE TRAINER TIP!\pGO NEAR wild COMPANIONS to make\nthem easier to catch. But be careful,\lthey may flee!$",reviewed AUTO draft
 SafariZone_Southwest_Text_RestHouseSign,“Relieve your tired feet.”\nREST HOUSE$,"reviewed, no change needed"
-SafariZone_RestHouse_Text_Youngster,"I don't have any {POKEBLOCK}S, but I caught\na good number of COMPANIONS.\pYou can improve your chances of making\na catch by getting closer to them\lbefore throwing a SAFARI POD.$",reviewed AUTO draft
-SafariZone_RestHouse_Text_PsychicM,"If you use {POKEBLOCK}S, wild COMPANIONS won't\nbe so quick to run away.\pIt's not much use to give {POKEBLOCK}S to\nCOMPANIONS that don't flee easily.$",reviewed AUTO draft
-SafariZone_RestHouse_Text_FatMan,"If you put a {POKEBLOCK} on the FEEDER,\nCOMPANIONS are attracted to it.\pI think COMPANION with the same sort of\nnature are drawn by a certain {POKEBLOCK}.$",reviewed AUTO draft
+SafariZone_RestHouse_Text_Youngster,"I don't have any special tricks, but\nI caught a good number of COMPANIONS.\pYou can improve your chances of making\na catch by getting closer to them\lbefore throwing a SAFARI BALL.$",reviewed AUTO draft
+SafariZone_RestHouse_Text_PsychicM,Some wild COMPANIONS run away fast.\pIt's best to throw a SAFARI BALL\nright away at those ones.$,reviewed AUTO draft
+SafariZone_RestHouse_Text_FatMan,I heard rare COMPANIONS live in the\nfar corners of the SAFARI ZONE.\pI think I'll explore every area!$,reviewed AUTO draft
 SafariZone_South_Text_AreaOffLimits1,"This area is still under construction.\nIt's off-limits, sorry!$","reviewed, no change needed"
 SafariZone_Southeast_Text_ExpansionIsFinished,The FELUCIA RESERVE's expansion\nproject is finished now.\pWe hope you will enjoy the new area.$,reviewed AUTO draft
 SafariZone_South_Text_AreaOffLimits2,"This area is still under construction.\nIt's off-limits, sorry!$","reviewed, no change needed"

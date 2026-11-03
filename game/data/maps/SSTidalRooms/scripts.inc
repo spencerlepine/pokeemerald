@@ -76,8 +76,8 @@ SSTidalRooms_Text_ColtonDefeat:
 
 SSTidalRooms_Text_ColtonPostBattle:
 	.string "I get so excited imagining what kinds\n"
-	.string "of COMPANIONS I'll see in the next\l"
-	.string "SHOWCASE. The anticipation thrills!$"
+	.string "of COMPANIONS I'll see at the\l"
+	.string "GRAND ARENA. The anticipation thrills!$"
 
 SSTidalRooms_Text_MicahIntro:
 	.string "Are your friends strong?$"

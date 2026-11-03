@@ -953,7 +953,7 @@ MatchCall_PersonalizedText28::
 	.string "I can't say any more! It's a secret!\l"
 	.string "It's just too cute for words!\p"
 	.string "Oh, my sweet {STR_VAR_2} is begging\n"
-	.string "for a {POKEBLOCK}!\p"
+	.string "for a snack!\p"
 	.string "It's the picture of cuteness!\p"
 	.string "Sorry, but I can't talk now!\n"
 	.string "You'll have to hear this next time!$"
@@ -1220,10 +1220,10 @@ MatchCall_PersonalizedText51::
 
 MatchCall_PersonalizedText52::
 	.string "Hi, this is {STR_VAR_1}.\p"
-	.string "I gave a {POKEBLOCK} to my {STR_VAR_2}.\n"
+	.string "I gave some FRUIT to my {STR_VAR_2}.\n"
 	.string "It seemed to enjoy it very much.\p"
-	.string "It looks like POKéMON have their\n"
-	.string "likes and dislikes with {POKEBLOCK}S.\p"
+	.string "It looks like COMPANIONS have their\n"
+	.string "likes and dislikes with FRUIT.\p"
 	.string "I find that quite fascinating.\n"
 	.string "Please do take care.$"
 

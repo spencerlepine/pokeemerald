@@ -187,8 +187,8 @@ SafariZone_South_Text_GoodLuck:
 
 SafariZone_South_Text_Boy:
 	.string "Did you know?\p"
-	.string "If you put a {POKEBLOCK} in that square box,\n"
-	.string "POKéMON gather around.$"
+	.string "Some COMPANIONS only live deep in\n"
+	.string "the far corners of the SAFARI ZONE.$"
 
 SafariZone_South_Text_Man:
 	.string "I want to keep going deeper, but I\n"
@@ -197,10 +197,9 @@ SafariZone_South_Text_Man:
 	.string "COMPANIONS live in the outlying areas.$"
 
 SafariZone_Southwest_Text_Woman:
-	.string "Sometimes, when I toss a {POKEBLOCK} at \n"
-	.string "POKéMON, it gets ignored.\p"
-	.string "Do POKéMON have likes and dislikes\n"
-	.string "about what they eat?$"
+	.string "Sometimes, COMPANIONS run off the\n"
+	.string "moment they see me.\p"
+	.string "Are some of them just shy?$"
 
 SafariZone_Northwest_Text_Man:
 	.string "Gasp… Gasp…\n"
@@ -220,38 +219,36 @@ SafariZone_North_Text_Man:
 	.string "friends!$"
 
 SafariZone_South_Text_Youngster:
-	.string "I put a {POKEBLOCK} on the {POKEBLOCK} FEEDER.\n"
-	.string "But it seems to have disappeared.\p"
-	.string "I guess POKéMON must have eaten it\n"
-	.string "without me noticing.$"
+	.string "I tried to GO NEAR a COMPANION…\p"
+	.string "But it ran away before I could even\n"
+	.string "throw a SAFARI BALL!$"
 
 Route121_SafariZoneEntrance_Text_TrainerTip:
 	.string "SAFARI ZONE TRAINER TIP!\p"
-	.string "Throw {POKEBLOCK}S at wild POKéMON to make\n"
-	.string "them less likely to flee.$"
+	.string "GO NEAR wild COMPANIONS to make\n"
+	.string "them easier to catch. But be careful,\l"
+	.string "they may flee!$"
 
 SafariZone_Southwest_Text_RestHouseSign:
 	.string "“Relieve your tired feet.”\n"
 	.string "REST HOUSE$"
 
 SafariZone_RestHouse_Text_Youngster:
-	.string "I don't have any {POKEBLOCK}S, but I caught\n"
-	.string "a good number of POKéMON.\p"
+	.string "I don't have any special tricks, but\n"
+	.string "I caught a good number of COMPANIONS.\p"
 	.string "You can improve your chances of making\n"
 	.string "a catch by getting closer to them\l"
 	.string "before throwing a SAFARI BALL.$"
 
 SafariZone_RestHouse_Text_PsychicM:
-	.string "If you use {POKEBLOCK}S, wild POKéMON won't\n"
-	.string "be so quick to run away.\p"
-	.string "It's not much use to give {POKEBLOCK}S to\n"
-	.string "POKéMON that don't flee easily.$"
+	.string "Some wild COMPANIONS run away fast.\p"
+	.string "It's best to throw a SAFARI BALL\n"
+	.string "right away at those ones.$"
 
 SafariZone_RestHouse_Text_FatMan:
-	.string "If you put a {POKEBLOCK} on the FEEDER,\n"
-	.string "POKéMON are attracted to it.\p"
-	.string "I think POKéMON with the same sort of\n"
-	.string "nature are drawn by a certain {POKEBLOCK}.$"
+	.string "I heard rare COMPANIONS live in the\n"
+	.string "far corners of the SAFARI ZONE.\p"
+	.string "I think I'll explore every area!$"
 
 SafariZone_South_Text_AreaOffLimits1:
 	.string "This area is still under construction.\n"

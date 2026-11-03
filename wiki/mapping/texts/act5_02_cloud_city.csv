@@ -32,8 +32,8 @@ LilycoveCity_Text_SomeonePuntedTeamAquaOut,"Hey, did you know?\pSomeone punted t
 LilycoveCity_Text_SomeoneStoleMyPokemon,I was taking a relaxing snooze at the\nsky inn to the sound of the wind…\pWhen someone stole my COMPANION!\pWho's the abductor?\nThe CARTEL? Is it the CARTEL?$,
 LilycoveCity_Text_TeamAquaRenovatedCavern,"Hm, you know of the old TIBANNA mine\nunder the city?\pIt had been abandoned for years,\nbut then that CARTEL lot came\lalong and made their renovations.\pThey call themselves\n“honest businessmen”!\pBut what they do and what they say\ndon't match at all!$",Aqua Hideout = old Tibanna mine under Cloud City
 LilycoveCity_Text_TeamAquaLotGoneForGood,"That old mine under the city…\pI didn't notice it right away,\nbut it's completely empty now.\pThat CARTEL lot, they must\nhave gone away for good.$",
-LilycoveCity_Text_ContestHallInTown,There's a SHOWCASE HALL\nright in this here town. \pThat means well-raised COMPANIONS will\ncome from all over the galaxy.\pMy heart swells with excitement!$,
-LilycoveCity_Text_GoingToMoveDeleterForHMs,"I'll teach my COMPANIONS some new\nmoves for entering a SHOWCASE.\pSo, I'm going to see the MOVE DELETER\nand make it forget HM moves.$",
+LilycoveCity_Text_ContestHallInTown,CLOUD CITY draws TRAINERS from\nall over the galaxy.\pThat means well-raised COMPANIONS\ncome through here every day.\pMy heart swells with excitement!$,
+LilycoveCity_Text_GoingToMoveDeleterForHMs,"I'll teach my COMPANIONS some new\nmoves for the GRAND ARENA.\pSo, I'm going to see the MOVE DELETER\nand make it forget HM moves.$",
 LilycoveCity_Text_ImFromKanto,I came from the CORE WORLDS.\pThe OUTER RIM is beautiful with\nall its wild worlds and nature.\pHunh? Wait a second…\pCould there be rare COMPANIONS that\nlive only in this area?$,
 LilycoveCity_Text_SeaRemainsForeverYoung,"Even as we grow old and wrinkled,\nthe cloud sea remains forever young\lwith the vivid brilliance of life…\pFwohoho fwohohohoho…$",
 LilycoveCity_Text_SixtyYearsAgoHusbandProposed,It was sixty years ago that my husband\nproposed to me here.\lThe clouds remain as beautiful as ever.\pMufufufu mufufufufufu…$,
@@ -42,7 +42,7 @@ LilycoveCity_Text_HarborSignUnderConstruction,CLOUD CITY LANDING PLATFORM\p“Th
 LilycoveCity_Text_HarborSign,CLOUD CITY LANDING PLATFORM\p“Enjoy a delightful cruise on\nthe starliner STAR TIDAL.”$,
 LilycoveCity_Text_HeardTowerCalledSkyPillar,"I heard there's a tower somewhere out\nin the stars.\pIt's called the ASTEROID SPIRE, I hear.$",
 LilycoveCity_Text_BerrySuitsYou,"When it gets right down to it…\pThe same way suits suit me perfectly,\na crisp breeze suits the clouds.\pAnd you, a FRUIT suits you to a “T”…\pWhy should that be so?$",
-LilycoveCity_Text_PokeblocksSuitPokemon,"When it gets right down to it…\pThe way dignified simplicity suits me,\n{POKEBLOCK}S perfectly suit COMPANIONS.$",
+LilycoveCity_Text_PokeblocksSuitPokemon,"When it gets right down to it…\pThe way dignified simplicity suits me,\nfresh FRUIT suits COMPANIONS.$",
 LilycoveCity_ContestHall_Text_GiveItBestSmartAppeal,"MC: Okay, SMART COMPANIONS and their\nTRAINERS, are you ready?!\pGive it your best showing!\nLet's appeal!$",
 LilycoveCity_ContestHall_Text_RaisedMonToBeSmart,"I've spent many a year, and all my\nwisdom besides, raising this COMPANION\lto be smart.\pIt won't be easily bested by some\nyoung pup's COMPANIONS.\pMy dear wife, are you seeing this?$",
 LilycoveCity_ContestHall_Text_GanderAtAllThosePrettyPokemon,Wahahahah!\pWill you take a gander at all those\npretty COMPANIONS!\lI just love this sort of glitz!$,
@@ -61,8 +61,8 @@ LilycoveCity_CoveLilyMotel_2F_Text_ImTheGraphicArtist,I'm the GRAPHIC ARTIST! Ar
 LilycoveCity_CoveLilyMotel_2F_Text_SeaBreezeTicklesHeart,The breeze over the clouds tickles my\nheart. It feels wonderful here!$,
 LilycoveCity_CoveLilyMotel_2F_Text_NeverLeaveWithoutGameBoy,You never know when and where\npeople will challenge you.\pThat's why I never leave home without\nmy HOLOGAME.$,
 LilycoveCity_Text_MayGoingBackToLittleroot,"MIRA: I'm thinking of going back to\nMOS PELGO soon.\pI've caught a good group of\nCOMPANIONS, and my DATAPAD is coming\lalong, so I'm going home to show my dad.$",
-LilycoveCity_CoveLilyMotel_2F_Text_SnoozingPreferBattles,"LANDO: … … … … …\n… … … … … Zzz…\p… … … … … Huh?!\nOh, sorry, sorry! I was snoozing!\pI came to check out this COMPANION\nSHOWCASE thing.\pI have to admit, it does look quite\nentertaining, but…\pConsider me a purist--I prefer\nbattles and tough TRAINERS.\pBut that's just me.\p{PLAYER}{KUN}, I hope you'll enjoy everything\nlike the ARENAS, SHOWCASES, the\lBATTLE TENT, the whole works!$",
-LilycoveCity_CoveLilyMotel_2F_Text_ContestsDoTakeStrategy,"LANDO: I think it does take strategy\nto win a SHOWCASE.\pSHOWCASE strategy is one way\nof becoming a better TRAINER, I'd say.$",
+LilycoveCity_CoveLilyMotel_2F_Text_SnoozingPreferBattles,"LANDO: … … … … …\n… … … … … Zzz…\p… … … … … Huh?!\nOh, sorry, sorry! I was snoozing!\pI came up here to watch the sky\ntraffic and unwind.\pI have to admit, it is relaxing,\nbut…\pConsider me a purist--I prefer\nbattles and tough TRAINERS.\pBut that's just me.\p{PLAYER}{KUN}, I hope you'll enjoy everything\nlike the ARENAS, the GRAND ARENA,\lthe BATTLE TENT, the whole works!$",
+LilycoveCity_CoveLilyMotel_2F_Text_ContestsDoTakeStrategy,"LANDO: I think it does take strategy\nto win at sabacc.\pSabacc strategy is one way\nof becoming a better TRAINER, I'd say.$",
 LilycoveCity_DepartmentStore_1F_Text_WelcomeToDeptStore,Welcome to the CLOUD CITY\nDEPARTMENT STORE.$,
 LilycoveCity_DepartmentStoreRooftop_Text_SetDatesForClearOutSales,"Don't they have set dates for their\nclear-out sales?\pI watch the HOLONET, but they never\nshow any ads.$",
 LilycoveCity_DepartmentStore_3F_Text_ItemsBestForTougheningPokemon,"For quickly toughening up COMPANIONS,\nitems are the best.\pPROTEIN boosts ATTACK,\nand CALCIUM raises SP. ATK.$",
@@ -130,7 +130,7 @@ LilycoveCity_Text_MuseumSignPlayersExhibit,CLOUD CITY MUSEUM\p“{PLAYER}'s COMP
 LilycoveCity_Text_TrainerFanClubSign,COMPANION TRAINER FAN CLUB\pThe names of TRAINERS are scribbled\nall over the sign…$,reviewed AUTO draft
 LilycoveCity_Text_DepartmentStoreSign,CLOUD CITY DEPARTMENT STORE\p“Overflowing with great merchandise\nand excitement!\p“A great place to find that something\nyou need!”$,reviewed AUTO draft
 LilycoveCity_Text_MoveDeletersHouseSign,MOVE DELETER'S HOUSE\p“Unwanted COMPANION moves deleted.”$,reviewed AUTO draft
-LilycoveCity_Text_DoYouKnowAboutBerryBlender,Do you know about the machine\nFRUIT BLENDER?$,reviewed AUTO draft
+LilycoveCity_Text_DoYouKnowAboutBerryBlender,Have you been to the GALLERIA?\pThey sell all kinds of things on\nevery floor. I could shop all day!$,reviewed AUTO draft
 LilycoveCity_Text_FasterSpinBetterPokeblocks,"People have to work together to get it\nto spin faster.\pThe faster you can make it spin, the\nbetter {POKEBLOCK}S you can get, I've heard.$","reviewed, no change needed"
 LilycoveCity_Text_ExplainBerryBlender,"It's used for making a kind of candy\ncalled a {POKEBLOCK}.\pIf you give a good {POKEBLOCK} to a COMPANION,\nits condition will improve by a lot.$",reviewed AUTO draft
 LilycoveCity_Text_SawTallTowerOnRoute131,I saw this tall tower somewhere\naround ROUTE 131.\pCould that possibly be…?$,"reviewed, no change needed"
@@ -193,7 +193,7 @@ LilycoveCity_DepartmentStoreRooftop_Text_NotEnoughMoney,Not enough money…$,"re
 LilycoveCity_DepartmentStoreRooftop_Text_DecidedAgainstBuyingDrink,Decided against buying a drink.$,"reviewed, no change needed"
 LilycoveCity_DepartmentStore_1F_Text_IBuyAllSortsOfThings,"Whenever I come to the DEPARTMENT\nSTORE, I always end up buying all sorts\lof things because it's so fun.$","reviewed, no change needed"
 LilycoveCity_DepartmentStore_1F_Text_MomBuyingMeFurniture,"Today, my mom is going to buy me some\nnice furniture.$","reviewed, no change needed"
-LilycoveCity_DepartmentStore_1F_Text_BuyingSomethingForAzumarill,I'm buying something for my BLOOPHARE\nas a reward for winning a SHOWCASE.$,reviewed AUTO draft
+LilycoveCity_DepartmentStore_1F_Text_BuyingSomethingForAzumarill,I'm buying something for my BLOOPHARE\nas a reward for winning a battle.$,reviewed AUTO draft
 LilycoveCity_DepartmentStore_1F_Text_Azumarill,BLOOPHARE: Maririroo!$,reviewed AUTO draft
 LilycoveCity_DepartmentStore_1F_Text_FloorNamesSign,1F: SERVICE COUNTER\n    LOTTERY CORNER\p2F: TRAINER'S ZONE\p3F: BATTLE COLLECTION\p4F: TM CORNER\p5F: COMPANION DOLL FLOOR\pROOFTOP: ROOFTOP PLAZA$,reviewed AUTO draft
 LilycoveCity_DepartmentStore_1F_Text_WirelessCommIsFun,"the COMLINK Network is a\nlot of fun, isn't it?\pI think it lets you do things that\nweren't possible before.\pFor instance, you can now trade\nwith people you couldn't before.\pI think it's going to be exciting!$",reviewed AUTO draft
@@ -216,7 +216,7 @@ LilycoveCity_House1_Text_PokemonPartnersNotTools,"COMPANIONS are partners to peo
 LilycoveCity_House1_Text_Kecleon,TAOZIN: Ruroro?$,reviewed AUTO draft
 LilycoveCity_House2_Text_NotAwakeYetHaveThis,Huh? What? What's that?\pI'm not near awake yet…\nYou can have this…$,"reviewed, no change needed"
 LilycoveCity_House2_Text_SleepIsEssential,Yawn…\pSleep is essential for good health…\nSleep and regain health…$,"reviewed, no change needed"
-LilycoveCity_House3_Text_LearnFromMasterOfPokeblocks,"Oh, my, my! Are you traveling alone?\nBut you're so young! Good for you!\pI'm sure my kids could learn a thing\nor two from you!\pMe? I'm a master of {POKEBLOCK}S.\pIf I get serious just a little, why,\nI can concoct great {POKEBLOCK}S.\pWould you like to learn from me,\na master of {POKEBLOCK}S?$","reviewed, no change needed"
+LilycoveCity_House3_Text_LearnFromMasterOfPokeblocks,"Oh, my, my! Are you traveling alone?\nBut you're so young! Good for you!\pI'm sure my kids could learn a thing\nor two from you!$","reviewed, no change needed"
 LilycoveCity_House3_Text_OhAreYouSure,"Oh? Are you sure?\pYou shouldn't always try to do\neverything by yourself, dear!$","reviewed, no change needed"
 LilycoveCity_House3_Text_ExplainPokeblocks,"Oh, good! You're a smart soul!\nThis is a bit long, so listen up!\pAre you ready?\pIf you look at {POKEBLOCK}S, you should see\nthat they are rated on how they feel.\pThe lower the feel rating,\nthe better it is. Don't forget this!\pA good {POKEBLOCK} has a low feel\nrating and a high level.\pA COMPANION can eat more good\n{POKEBLOCK}S than ordinary ones, too.\pAnd this is important.\pIf you want to make smooth {POKEBLOCK}S,\nuse different kinds of FRUIT.\pDon't be stingy--the kinds of FRUIT\naffect the smoothness of {POKEBLOCK}S.\pAnd another thing.\pThe more people blending FRUIT,\nthe smoother the {POKEBLOCK}S.\pThat's why you should talk to other\npeople and make {POKEBLOCK}S together.\pThat's about all you need to know to\nmake good {POKEBLOCK}S.\pIf everyone had COMPANION they love,\nsmooth {POKEBLOCK}S, and a loving family,\lthe world would be a happier place.\pDon't give up, dear!$",reviewed AUTO draft
 LilycoveCity_House3_Text_HappyToHaveQuadruplets,"When my wife gave birth to quadruplets,\nyou bet I was shocked.\pBut, now, seeing them play together,\nit makes me happy.$","reviewed, no change needed"

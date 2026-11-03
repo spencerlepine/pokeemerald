@@ -275,9 +275,9 @@ static const u16 sQuizLadyPrizes[] =
     ITEM_MAX_ETHER,
     ITEM_MAX_ETHER,
     ITEM_MAX_ETHER,
-    ITEM_WATMEL_BERRY,
-    ITEM_BELUE_BERRY,
-    ITEM_DURIN_BERRY,
+    ITEM_SITRUS_BERRY, // was WATMEL; treat-only berries are gone
+    ITEM_LUM_BERRY,    // was BELUE
+    ITEM_LEPPA_BERRY,  // was DURIN
     ITEM_LUXURY_BALL,
     ITEM_TM_HYPER_BEAM,
     ITEM_BIG_PEARL,
@@ -306,7 +306,6 @@ static const u16 sFavorLadyAcceptedItems_Slippery[] =
     ITEM_ANTIDOTE,
     ITEM_PARALYZE_HEAL,
     ITEM_BURN_HEAL,
-    ITEM_BELUE_BERRY,
     ITEM_AWAKENING,
     ITEM_ICE_HEAL,
     ITEM_REVIVE,
@@ -329,8 +328,6 @@ static const u16 sFavorLadyAcceptedItems_Roundish[] =
     ITEM_ASPEAR_BERRY,
     ITEM_ORAN_BERRY,
     ITEM_GREPA_BERRY,
-    ITEM_MAGOST_BERRY,
-    ITEM_WATMEL_BERRY,
     ITEM_POKE_BALL,
     ITEM_ULTRA_BALL,
     ITEM_NONE
@@ -347,11 +344,7 @@ static const u16 sFavorLadyAcceptedItems_Whamish[] =
     ITEM_LIGHT_BALL,
     ITEM_LAVA_COOKIE,
     ITEM_CHESTO_BERRY,
-    ITEM_NANAB_BERRY,
-    ITEM_WEPEAR_BERRY,
     ITEM_KELPSY_BERRY,
-    ITEM_NOMEL_BERRY,
-    ITEM_DURIN_BERRY,
     ITEM_NONE
 };
 
@@ -388,7 +381,6 @@ static const u16 sFavorLadyAcceptedItems_Sticky[] =
     ITEM_DIRE_HIT,
     ITEM_X_ACCURACY,
     ITEM_GUARD_SPEC,
-    ITEM_WATMEL_BERRY,
     ITEM_LEFTOVERS,
     ITEM_TINY_MUSHROOM,
     ITEM_HEART_SCALE,
@@ -402,7 +394,6 @@ static const u16 sFavorLadyAcceptedItems_Pointy[] =
     ITEM_SHARP_BEAK,
     ITEM_DRAGON_FANG,
     ITEM_TAMATO_BERRY,
-    ITEM_DURIN_BERRY,
     ITEM_PETAYA_BERRY,
     ITEM_SALAC_BERRY,
     ITEM_STARDUST,

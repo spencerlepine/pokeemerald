@@ -151,7 +151,7 @@ LilycoveCity_DepartmentStore_1F_Text_MomBuyingMeFurniture:
 
 LilycoveCity_DepartmentStore_1F_Text_BuyingSomethingForAzumarill:
 	.string "I'm buying something for my BLOOPHARE\n"
-	.string "as a reward for winning a SHOWCASE.$"
+	.string "as a reward for winning a battle.$"
 
 LilycoveCity_DepartmentStore_1F_Text_Azumarill:
 	.string "BLOOPHARE: Maririroo!$"

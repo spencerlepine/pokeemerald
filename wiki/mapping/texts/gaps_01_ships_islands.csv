@@ -21,7 +21,7 @@ SSTidalCorridor_Text_Peeko,CHEWIE: Rrrwaaaghh!$,"Chewbacca is a person, not a Wi
 SSTidalCorridor_Text_ScottBattleFrontierInvite,"LANDO: Well, hi, hi!\n{PLAYER}{KUN}, {PLAYER}{KUN}!\pSomething's come up, so I have to\ndisembark, but am I glad to see you!\pCongratulations, ILUM CHAMPION!\pThere's a place I'd like to invite\nsomeone like you.\pIt's the…\nGRAND ARENA!\pWhat's the place like?\nYou'll understand when you see it!\pI've spoken with the ship's CAPTAIN\nabout this.\pThe next time you take the starliner,\nyou should be able to fly to\lthe GRAND ARENA.\pOkay, {PLAYER}{KUN}, I'll be waiting for you\nat the GRAND ARENA!$",
 SSTidalLowerDeck_Text_LeonardIntro,This is the bottom of the ship's hull.\nThere's plenty of room.\lIt'll be all right for a battle.$,
 SSTidalRooms_Text_ColtonIntro,"I often fly to MOS ESPA.\pI never miss the BOONTA EVE CLASSIC,\nyou see.$",trainer recast 2026-11-01 (bible/RECAST.md)
-SSTidalRooms_Text_ColtonPostBattle,I get so excited imagining what kinds\nof COMPANIONS I'll see in the next\lSHOWCASE. The anticipation thrills!$,
+SSTidalRooms_Text_ColtonPostBattle,I get so excited imagining what kinds\nof COMPANIONS I'll see at the\lGRAND ARENA. The anticipation thrills!$,
 SSTidalRooms_Text_GarretPostBattle,Perhaps I shall get Father to acquire\na yacht for me.\lA star yacht for me and COMPANIONS!$,
 SSTidalRooms_Text_NaomiPostBattle,"A galaxy cruise on a luxury liner has\nits charms, I must say…\pBut, I will admit there is an appealing\nside to touring the OUTER RIM like this.$",
 SSTidalRooms_Text_MicahPostBattle,"Friends need not be human.\nFor me, COMPANIONS are true friends!$",

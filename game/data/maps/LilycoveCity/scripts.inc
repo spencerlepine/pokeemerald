@@ -392,9 +392,7 @@ LilycoveCity_EventScript_RivalFlyAway::
 LilycoveCity_EventScript_SchoolKidM::
 	lock
 	faceplayer
-	msgbox LilycoveCity_Text_DoYouKnowAboutBerryBlender, MSGBOX_YESNO
-	call_if_eq VAR_RESULT, YES, LilycoveCity_EventScript_KnowAboutBerryBlender
-	call_if_eq VAR_RESULT, NO, LilycoveCity_EventScript_DontKnowAboutBerryBlender
+	msgbox LilycoveCity_Text_DoYouKnowAboutBerryBlender, MSGBOX_DEFAULT
 	release
 	end
 
@@ -576,10 +574,10 @@ LilycoveCity_Text_GetLostMessingUpTraining:
 	.string "so can you, like, get lost?$"
 
 LilycoveCity_Text_ContestHallInTown:
-	.string "There's a SHOWCASE HALL\n"
-	.string "right in this here town. \p"
-	.string "That means well-raised COMPANIONS will\n"
-	.string "come from all over the galaxy.\p"
+	.string "CLOUD CITY draws TRAINERS from\n"
+	.string "all over the galaxy.\p"
+	.string "That means well-raised COMPANIONS\n"
+	.string "come through here every day.\p"
 	.string "My heart swells with excitement!$"
 
 LilycoveCity_Text_StrangeCaveInCove:
@@ -588,7 +586,7 @@ LilycoveCity_Text_StrangeCaveInCove:
 
 LilycoveCity_Text_GoingToMoveDeleterForHMs:
 	.string "I'll teach my COMPANIONS some new\n"
-	.string "moves for entering a SHOWCASE.\p"
+	.string "moves for the GRAND ARENA.\p"
 	.string "So, I'm going to see the MOVE DELETER\n"
 	.string "and make it forget HM moves.$"
 
@@ -714,8 +712,9 @@ LilycoveCity_Text_MoveDeletersHouseSign:
 	.string "“Unwanted COMPANION moves deleted.”$"
 
 LilycoveCity_Text_DoYouKnowAboutBerryBlender:
-	.string "Do you know about the machine\n"
-	.string "FRUIT BLENDER?$"
+	.string "Have you been to the GALLERIA?\p"
+	.string "They sell all kinds of things on\n"
+	.string "every floor. I could shop all day!$"
 
 LilycoveCity_Text_FasterSpinBetterPokeblocks:
 	.string "People have to work together to get it\n"

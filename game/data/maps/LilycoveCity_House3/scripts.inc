@@ -3,16 +3,14 @@ LilycoveCity_House3_MapScripts::
 	.byte 0
 
 LilycoveCity_House3_OnTransition:
-	random 4
+	random 2  @ was 4; the blending and Showcase chats are gone
 	copyvar VAR_TEMP_1, VAR_RESULT
 	end
 
 LilycoveCity_House3_EventScript_PokefanF::
 	lock
 	faceplayer
-	msgbox LilycoveCity_House3_Text_LearnFromMasterOfPokeblocks, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, LilycoveCity_House3_EventScript_DeclinePokeblockLearn
-	msgbox LilycoveCity_House3_Text_ExplainPokeblocks, MSGBOX_DEFAULT
+	msgbox LilycoveCity_House3_Text_LearnFromMasterOfPokeblocks, MSGBOX_DEFAULT
 	closemessage
 	applywaitmovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
 	release
@@ -98,12 +96,7 @@ LilycoveCity_House3_Text_LearnFromMasterOfPokeblocks:
 	.string "Oh, my, my! Are you traveling alone?\n"
 	.string "But you're so young! Good for you!\p"
 	.string "I'm sure my kids could learn a thing\n"
-	.string "or two from you!\p"
-	.string "Me? I'm a master of {POKEBLOCK}S.\p"
-	.string "If I get serious just a little, why,\n"
-	.string "I can concoct great {POKEBLOCK}S.\p"
-	.string "Would you like to learn from me,\n"
-	.string "a master of {POKEBLOCK}S?$"
+	.string "or two from you!$"
 
 LilycoveCity_House3_Text_OhAreYouSure:
 	.string "Oh? Are you sure?\p"

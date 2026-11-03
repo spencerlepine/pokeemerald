@@ -29,8 +29,8 @@ void WonderNews_SetReward(u32 newsType)
         break;
     case WONDER_NEWS_RECV_FRIEND:
     case WONDER_NEWS_RECV_WIRELESS:
-        // Random berry between ITEM_RAZZ_BERRY and ITEM_NOMEL_BERRY
-        data->berry = (Random() % 15) + ITEM_TO_BERRY(ITEM_RAZZ_BERRY);
+        // Random berry between ITEM_CHERI_BERRY and ITEM_SITRUS_BERRY (the treat-only berries are gone)
+        data->berry = (Random() % 10) + ITEM_TO_BERRY(ITEM_CHERI_BERRY);
         break;
     case WONDER_NEWS_SENT:
         // Random berry between ITEM_CHERI_BERRY and ITEM_IAPAPA_BERRY
