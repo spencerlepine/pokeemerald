@@ -1,103 +1,91 @@
 emerald_id,sw_name,home_planet,wild_planets,decision,lore_note
-species:poochyena,MASSIFF,TATOOINE,ENDOR|TATOOINE,HOME,
-species:mightyena,WARMASSIFF,TATOOINE,ENDOR,MIGRANT,Imperial patrols brought massiffs to Endor as guard beasts; the packs went wild.
-species:zigzagoon,SCURRIER,TATOOINE,ENDOR|TATOOINE,HOME,
-species:linoone,SCURRYDASH,TATOOINE,ENDOR,MIGRANT,Scurriers stow away in cargo and turn up on any world with scrap to dig through.
+species:poochyena,MASSIFF,TATOOINE,TATOOINE,HOME,
+species:zigzagoon,SCURRIER,TATOOINE,TATOOINE,HOME,
 species:wurmple,SANDGRUB,TATOOINE,TATOOINE,HOME,
 species:silcoon,SILKPOD,TATOOINE,TATOOINE,HOME,
+species:beautifly,SANDMOTH,TATOOINE,TATOOINE,HOME,
 species:cascoon,VENOMPOD,TATOOINE,TATOOINE,HOME,
-species:lotad,BOGLING,BOGANO,SULLUST|TATOOINE,MIGRANT,Traders carried boglings off Bogano; they thrive in oasis pools and hot-spring ponds.
+species:lotad,BOGLING,BOGANO,SULLUST,MIGRANT,Traders carried boglings off Bogano; they thrive in oasis pools and hot-spring ponds.
 species:lombre,BOGTROT,NABOO,SULLUST,MIGRANT,Traders carried boglings off Bogano; they thrive in oasis pools and hot-spring ponds.
-species:seedot,ACORNLET,ENDOR,ENDOR|TATOOINE,HOME,
+species:seedot,ACORNLET,ENDOR,ENDOR,HOME,
 species:nuzleaf,LEAFTRICK,ENDOR,SULLUST,MIGRANT,A rare stray in Sullust's hills; seeds blow in on ash winds.
-species:taillow,HAWKBATKIT,CORUSCANT,TATOOINE,MIGRANT,Hawk-bats roost in every busy spaceport; Mos Eisley's flocks spread across Tatooine.
-species:swellow,HAWKBAT,CORUSCANT,TATOOINE,MIGRANT,Hawk-bats roost in every busy spaceport; Mos Eisley's flocks spread across Tatooine.
-species:wingull,SHYYYOLET,KASHYYYK,BESPIN|DAGOBAH|ENDOR|ILUM|JEDHA|KAMINO|KASHYYYK|TATOOINE|YAVIN 4,HOME,
-species:pelipper,SHYYYO,KASHYYYK,BESPIN|DAGOBAH|ENDOR|ILUM|JEDHA|KAMINO|KASHYYYK|TATOOINE|YAVIN 4,HOME,
+species:wingull,SHYYYOLET,KASHYYYK,ENDOR|ILUM|JEDHA|KASHYYYK|TATOOINE|YAVIN 4,HOME,
+species:pelipper,SHYYYO,KASHYYYK,ENDOR|ILUM|JEDHA|KASHYYYK|TATOOINE|YAVIN 4,HOME,
 species:ralts,AURALET,DAGOBAH,TATOOINE,STORY,Force sprites drift from Dagobah toward Force-sensitive people; one waits for Luke on Route 102.
-species:shroomish,FELUSPORE,FELUCIA,TATOOINE,MIGRANT,Felucian spores ride starships and take root in the Jundland's shaded canyons.
-species:breloom,SPOREFIST,FELUCIA,FACILITY,FACILITY,Only in Grand Arena facilities.
-species:slakoth,SLOTHLET,NAL HUTTA,TATOOINE,MIGRANT,Kept as pets by Hutt-world traders; a few escaped into the Jundland Wastes.
-species:abra,MISTKIN,DATHOMIR,KASHYYYK|TATOOINE,MIGRANT,Mist foxes vanish and reappear far away; they turn up in caves on many worlds.
-species:nincada,HIVEGRUB,GEONOSIS,TATOOINE,MIGRANT,Hive grubs came to Tatooine in Geonosian ore shipments and dug in.
-species:whismur,KOWAKIAN,TATOOINE,ILUM|TATOOINE,HOME,
-species:loudred,CACKLER,TATOOINE,ILUM|TATOOINE,HOME,
+species:surskit,SKIMBUG,DAGOBAH,DAGOBAH,HOME,
+species:masquerain,BOGWING,DAGOBAH,DAGOBAH,HOME,
+species:shroomish,FELUSPORE,FELUCIA,RESERVE,MIGRANT,Felucian spores ride starships and take root in the Jundland's shaded canyons.
+species:whismur,KOWAKIAN,TATOOINE,TATOOINE,HOME,
+species:loudred,CACKLER,TATOOINE,TATOOINE,HOME,
 species:makuhita,MOGUCUB,KASHYYYK,ILUM|KASHYYYK,HOME,
 species:hariyama,MOGU,KASHYYYK,ILUM,MIGRANT,Mogu wander into Ilum's caves to train; only the strongest reach them.
 species:goldeen,HORNFIN,NABOO,ENDOR|ILUM|RESERVE|SULLUST|TATOOINE,WIDESPREAD,Found across the galaxy.
 species:seaking,KINGFIN,NABOO,RESERVE,RESERVE,The Felucia Reserve keeps beasts from many worlds.
-species:magikarp,COLOFRY,NABOO,BESPIN|DAGOBAH|ENDOR|HOTH|ILUM|JEDHA|KAMINO|KASHYYYK|RESERVE|SULLUST|TATOOINE|YAVIN 4,WIDESPREAD,Found across the galaxy.
-species:gyarados,COLOCLAW,NABOO,DAGOBAH,MIGRANT,Colo claw fish grow huge in any deep water; one lurks under the Dagobah arena.
+species:magikarp,COLOFRY,NABOO,ENDOR|ILUM|JEDHA|KASHYYYK|RESERVE|SULLUST|TATOOINE|YAVIN 4,WIDESPREAD,Found across the galaxy.
 species:marill,BLOOPRAT,NABOO,ENDOR|RESERVE|SULLUST|TATOOINE,WIDESPREAD,Found across the galaxy.
-species:geodude,ROCKWART,TATOOINE,ILUM|KASHYYYK|MUSTAFAR|RESERVE|SULLUST|TATOOINE,HOME,
-species:graveler,BOULDWART,TATOOINE,ILUM|MUSTAFAR,MIGRANT,Rock warts follow heat and minerals; they crowd the Empire's volcanic hideouts and Ilum's caves.
+species:geodude,ROCKWART,TATOOINE,ILUM|KASHYYYK|RESERVE|SULLUST|TATOOINE,HOME,
+species:graveler,BOULDWART,TATOOINE,ILUM,MIGRANT,Rock warts follow heat and minerals; they crowd the Empire's volcanic hideouts and Ilum's caves.
 species:nosepass,LODESTAR,KASHYYYK,KASHYYYK,HOME,
-species:skitty,LOTHKIT,LOTHAL,TATOOINE,MIGRANT,Loth-cats travel as ship pets and sometimes go wild.
-species:zubat,MYNOCK,SPACE,|DAGOBAH|HOTH|ILUM|KASHYYYK|SULLUST|TATOOINE,WIDESPREAD,Found across the galaxy.
-species:golbat,MYNOCKMAW,SPACE,|DAGOBAH|FACILITY|HOTH|ILUM|SULLUST,WIDESPREAD,Found across the galaxy.
-species:tentacool,DIANOGLET,KAMINO,BESPIN|DAGOBAH|ENDOR|HOTH|ILUM|JEDHA|KAMINO|KASHYYYK|TATOOINE|YAVIN 4,HOME,
+species:zubat,MYNOCK,SPACE,|DAGOBAH|ILUM|SULLUST|TATOOINE,WIDESPREAD,Found across the galaxy.
+species:golbat,MYNOCKMAW,SPACE,|DAGOBAH|FACILITY|ILUM|SULLUST,WIDESPREAD,Found across the galaxy.
+species:tentacool,DIANOGLET,KAMINO,ENDOR|ILUM|JEDHA|KAMINO|KASHYYYK|TATOOINE|YAVIN 4,HOME,
 species:tentacruel,DIANOGA,KAMINO,KASHYYYK,MIGRANT,Dianogas live wherever there is dark water; the old Republic wreck is full of them.
-species:sableye,KYBERIMP,ILUM,|DAGOBAH|FACILITY|ILUM|KASHYYYK,HOME,
-species:mawile,BUZZDROID,SPACE,ILUM,MIGRANT,Buzz droids left over from the Clone Wars still crawl through Ilum's caves.
+species:sableye,KYBERIMP,ILUM,|FACILITY|ILUM,HOME,
 species:aron,SPIDROID,KASHYYYK,ILUM|KASHYYYK,HOME,
 species:lairon,OCTUPTARRA,KASHYYYK,ILUM,MIGRANT,Abandoned octuptarra droids guard Ilum's Crystal Caves.
-species:machop,B1 DROID,MUSTAFAR,MUSTAFAR|SULLUST,HOME,
-species:electrike,KATHPUP,DANTOOINE,ENDOR|TATOOINE,MIGRANT,Kath hounds spread from Dantooine to open plains on many worlds.
-species:manectric,KATHHOUND,DANTOOINE,ENDOR,MIGRANT,Kath hounds spread from Dantooine to open plains on many worlds.
+species:machop,B1 DROID,MUSTAFAR,MUSTAFAR,HOME,
+species:meditite,ZENKIT,ILUM,ILUM,HOME,
+species:medicham,ZENAPE,ILUM,ILUM,HOME,
 species:plusle,PIT DROID,TATOOINE,TATOOINE,HOME,
 species:minun,GONK,TATOOINE,TATOOINE,HOME,
 species:magnemite,MOUSEDROID,TATOOINE,TATOOINE,HOME,
 species:magneton,MOUSESWARM,TATOOINE,TATOOINE,HOME,
 species:voltorb,REMOTE,TATOOINE,TATOOINE,HOME,
-species:electrode,SEEKERBALL,TATOOINE,FACILITY|TATOOINE,HOME,
+species:electrode,SEEKERBALL,TATOOINE,TATOOINE,HOME,
 species:volbeat,GLOWFLY,TATOOINE,TATOOINE,HOME,
 species:illumise,LUMIFLY,TATOOINE,TATOOINE,HOME,
-species:oddish,GNARLSPAWN,ENDOR,ENDOR|RESERVE|TATOOINE,HOME,
+species:oddish,GNARLSPAWN,ENDOR,ENDOR|RESERVE,HOME,
 species:gloom,STINKROOT,ENDOR,ENDOR|RESERVE,HOME,
 species:doduo,KAADU,NABOO,RESERVE,RESERVE,The Felucia Reserve keeps beasts from many worlds.
 species:dodrio,KAADULORD,NABOO,RESERVE,RESERVE,The Felucia Reserve keeps beasts from many worlds.
+species:roselia,FELUROSE,FELUCIA,RESERVE,RESERVE,The Felucia Reserve keeps beasts from many worlds.
 species:gulpin,SARLACLET,TATOOINE,TATOOINE,HOME,
 species:carvanha,OPEEFRY,NABOO,ENDOR,MIGRANT,Opee fry swarm in any warm river; Endor's are a released stock.
-species:sharpedo,OPEEKILLER,NABOO,DAGOBAH|ENDOR|JEDHA|KAMINO|TATOOINE|YAVIN 4,WIDESPREAD,Found across the galaxy.
-species:wailmer,AIWHALET,KAMINO,BESPIN|DAGOBAH|ENDOR|HOTH|ILUM|JEDHA|KAMINO|KASHYYYK|TATOOINE|YAVIN 4,HOME,
-species:wailord,AIWHA,KAMINO,DAGOBAH,MIGRANT,Aiwhas fly between water worlds and rest in Dagobah's seas.
-species:numel,BANTHACALF,TATOOINE,MUSTAFAR|SULLUST|TATOOINE,HOME,
-species:slugma,LAVAGRUB,MUSTAFAR,SULLUST,MIGRANT,Lava grubs crawl out of any lava flow; Sullust's volcanoes are full of them.
-species:torkoal,SMELTER,MUSTAFAR,MUSTAFAR|SULLUST,HOME,
+species:sharpedo,OPEEKILLER,NABOO,ENDOR|JEDHA|TATOOINE|YAVIN 4,WIDESPREAD,Found across the galaxy.
+species:wailmer,AIWHALET,KAMINO,ENDOR|ILUM|JEDHA|KAMINO|KASHYYYK|TATOOINE|YAVIN 4,HOME,
+species:numel,BANTHACALF,TATOOINE,SULLUST|TATOOINE,HOME,
+species:torkoal,SMELTER,MUSTAFAR,MUSTAFAR,HOME,
 species:grimer,MUCKLING,CORUSCANT,SULLUST,MIGRANT,Muck crawls out of mine runoff on Sullust as it does in Coruscant's lower levels.
-species:koffing,BELDONLET,BESPIN,SULLUST,MIGRANT,Beldon calves drift down from Bespin's gas layers into volcanic vents.
-species:spoink,PUFFERPIG,SULLUST,MUSTAFAR,UNEXPLAINED,
+species:koffing,BELDONLET,BESPIN,BESPIN|SULLUST,HOME,
+species:spoink,PUFFERPIG,SULLUST,SULLUST,HOME,
 species:sandshrew,DEWLING,TATOOINE,TATOOINE,HOME,
 species:spinda,WOBBLEKIT,SULLUST,SULLUST,HOME,
 species:skarmory,VULTURE,SULLUST,SULLUST,HOME,
 species:trapinch,KRAYTHATCH,TATOOINE,TATOOINE,HOME,
 species:cacnea,FUNNELBUD,TATOOINE,TATOOINE,HOME,
-species:swablu,VELKLET,BESPIN,SULLUST|TATOOINE,MIGRANT,Velker chicks ride high winds to warm worlds.
-species:altaria,VELKER,BESPIN,FACILITY,FACILITY,Only in Grand Arena facilities.
-species:seviper,KOUHUN,GEONOSIS,FACILITY|SULLUST,MIGRANT,Kouhuns are smuggled as assassins' tools and escape into the wild.
+species:swablu,VELKLET,BESPIN,BESPIN|SULLUST,HOME,
+species:altaria,VELKER,BESPIN,BESPIN|FACILITY,HOME,
+species:seviper,KOUHUN,GEONOSIS,SULLUST,MIGRANT,Kouhuns are smuggled as assassins' tools and escape into the wild.
+species:lunatone,KYBERMOON,ILUM,ILUM,HOME,
 species:solrock,KYBERSUN,ILUM,SULLUST,MIGRANT,Living kyber crystals fell to Sullust as meteorites.
-species:barboach,BOGWHISKR,DAGOBAH,ENDOR|ILUM|SULLUST|TATOOINE,WIDESPREAD,Found across the galaxy.
-species:whiscash,BOGTITAN,DAGOBAH,ILUM|SULLUST,MIGRANT,Bog titans live in any deep
+species:barboach,BOGWHISKR,DAGOBAH,DAGOBAH|ENDOR|ILUM|SULLUST|TATOOINE,HOME,
+species:whiscash,BOGTITAN,DAGOBAH,DAGOBAH|ILUM|SULLUST,HOME,
 species:corphish,CRABDROID,UTAPAU,TATOOINE,MIGRANT,Crab droids were dumped on Tatooine after the Clone Wars and still scuttle in its oases.
-species:baltoy,HOLOSHARD,JEDHA,TATOOINE,MIGRANT,Holocron shards lie scattered among Tatooine's desert ruins.
+species:baltoy,HOLOSHARD,JEDHA,JEDHA,HOME,
 species:claydol,HOLOCRON,JEDHA,FACILITY,FACILITY,Only in Grand Arena facilities.
 species:jigglypuff,LULLAPUFF,TATOOINE,TATOOINE,HOME,
-species:milotic,SHIMMERFIN,DAGOBAH,FACILITY,FACILITY,Only in Grand Arena facilities.
-species:staryu,STARCORAL,KAMINO,BESPIN,MIGRANT,Star corals wash up on the shores of many worlds.
 species:kecleon,TAOZIN,ENDOR,ENDOR,HOME,
-species:shuppet,ECHOWISP,JEDHA,ENDOR|JEDHA,HOME,
+species:shuppet,ECHOWISP,JEDHA,JEDHA,HOME,
 species:banette,HOLLOWDOLL,JEDHA,FACILITY,FACILITY,Only in Grand Arena facilities.
 species:duskull,WRAITHLET,JEDHA,JEDHA,HOME,
-species:dusclops,SITHWRAITH,JEDHA,FACILITY,FACILITY,Only in Grand Arena facilities.
 species:tropius,THRANTA,ENDOR,ENDOR,HOME,
 species:chimecho,TEMPLEBELL,JEDHA,JEDHA,HOME,
-species:absol,LOTHWOLF,LOTHAL,ENDOR,MIGRANT,The Loth-wolf appears wherever disaster is coming.
-species:vulpix,VULPTEX,CRAIT,JEDHA,MIGRANT,Vulptex fur is prized; escaped pets now live on Jedha's mountain.
+species:pichu,IONKIT,FELUCIA,RESERVE,RESERVE,The Felucia Reserve keeps beasts from many worlds.
 species:pikachu,IONRAT,FELUCIA,RESERVE,RESERVE,The Felucia Reserve keeps beasts from many worlds.
 species:psyduck,BOGDUCK,NABOO,RESERVE,RESERVE,The Felucia Reserve keeps beasts from many worlds.
 species:golduck,BOGDRAKE,NABOO,RESERVE,RESERVE,The Felucia Reserve keeps beasts from many worlds.
 species:wynaut,YSALAKIT,MYRKR,DAGOBAH,MIGRANT,Ysalamiri hatchlings cling to driftwood and wash up on far islands.
-species:wobbuffet,YSALAMIRI,MYRKR,FACILITY|RESERVE,RESERVE,The Felucia Reserve keeps beasts from many worlds.
+species:wobbuffet,YSALAMIRI,MYRKR,RESERVE,RESERVE,The Felucia Reserve keeps beasts from many worlds.
 species:natu,CONVORLET,LOTHAL,RESERVE,RESERVE,The Felucia Reserve keeps beasts from many worlds.
 species:xatu,CONVOR,LOTHAL,RESERVE,RESERVE,The Felucia Reserve keeps beasts from many worlds.
 species:girafarig,FALUMPASET,NABOO,RESERVE,RESERVE,The Felucia Reserve keeps beasts from many worlds.
@@ -106,39 +94,79 @@ species:pinsir,KILLIK,ALDERAAN,RESERVE,RESERVE,The Felucia Reserve keeps beasts 
 species:heracross,HORNBEETLE,FELUCIA,RESERVE,RESERVE,The Felucia Reserve keeps beasts from many worlds.
 species:rhyhorn,RANCORPUP,DATHOMIR,RESERVE,RESERVE,The Felucia Reserve keeps beasts from many worlds.
 species:snorunt,WAMPLET,HOTH,HOTH,HOME,
+species:glalie,WAMPA,HOTH,HOTH,HOME,
 species:spheal,SNOWSEAL,HOTH,HOTH,HOME,
-species:clamperl,PEARLCLAM,KAMINO,DAGOBAH|YAVIN 4,SEA,Roams the open water between worlds.
-species:relicanth,RELICFISH,KAMINO,DAGOBAH|YAVIN 4,SEA,Roams the open water between worlds.
-species:corsola,CORALITH,KAMINO,DAGOBAH|ILUM,SEA,Roams the open water between worlds.
-species:chinchou,LUMIRAY,KAMINO,DAGOBAH|YAVIN 4,SEA,Roams the open water between worlds.
-species:luvdisc,HEARTFIN,KAMINO,DAGOBAH|ILUM,SEA,Roams the open water between worlds.
+species:sealeo,ICESEAL,HOTH,HOTH,HOME,
+species:walrein,TUSKWALRUS,HOTH,HOTH,HOME,
+species:clamperl,PEARLCLAM,KAMINO,YAVIN 4,SEA,Roams the open water between worlds.
+species:relicanth,RELICFISH,KAMINO,YAVIN 4,SEA,Roams the open water between worlds.
+species:corsola,CORALITH,KAMINO,ILUM,MIGRANT,"CORALITH grows on the warm vents of Ilum's harbour, carried there in Kamino ballast."
+species:chinchou,LUMIRAY,KAMINO,KAMINO|YAVIN 4,HOME,
+species:lanturn,LUMIDEEP,KAMINO,KAMINO,HOME,
+species:luvdisc,HEARTFIN,KAMINO,ILUM,MIGRANT,HEARTFIN shoals follow the Kamino transports as far as Ilum's harbour.
 species:horsea,SEASTEED,KAMINO,KAMINO,HOME,
+species:seadra,SPINESTEED,KAMINO,KAMINO,HOME,
 species:bagon,DACTHATCH,UTAPAU,SULLUST,MIGRANT,Dactillion hatchlings were brought to Sullust's caves by traders.
-species:bulbasaur,SPROUTLIZ,KASHYYYK,FACILITY,FACILITY,Only in Grand Arena facilities.
-species:ivysaur,BUDLIZARD,KASHYYYK,FACILITY,FACILITY,Only in Grand Arena facilities.
-species:venusaur,BLOOMBEAST,KASHYYYK,FACILITY,FACILITY,Only in Grand Arena facilities.
-species:charmander,EMBERLIZ,MUSTAFAR,FACILITY,FACILITY,Only in Grand Arena facilities.
-species:charmeleon,MAGMANDER,MUSTAFAR,FACILITY,FACILITY,Only in Grand Arena facilities.
-species:charizard,LAVADRAGON,MUSTAFAR,FACILITY,FACILITY,Only in Grand Arena facilities.
-species:squirtle,SHELLPUP,MON CALA,FACILITY,FACILITY,Only in Grand Arena facilities.
-species:wartortle,SHELLWARD,MON CALA,FACILITY,FACILITY,Only in Grand Arena facilities.
+species:charmander,EMBERLIZ,MUSTAFAR,MUSTAFAR,HOME,
+species:charmeleon,MAGMANDER,MUSTAFAR,MUSTAFAR,HOME,
+species:caterpie,NEEDLEWORM,ENDOR,ENDOR,HOME,
+species:butterfree,SKYMOTH,ENDOR,ENDOR,HOME,
+species:rattata,WOMPRAT,TATOOINE,TATOOINE,HOME,
+species:spearow,SANDHAWK,TATOOINE,TATOOINE,HOME,
+species:fearow,DUNECONDOR,TATOOINE,TATOOINE,HOME,
+species:ekans,SANDASP,TATOOINE,TATOOINE,HOME,
+species:nidoran-f,RONTOCALF,TATOOINE,TATOOINE,HOME,
+species:clefairy,MOONLET,ENDOR,ENDOR,HOME,
+species:paras,GELAGRUB,FELUCIA,RESERVE,RESERVE,The Felucia Reserve keeps beasts from many worlds.
+species:poliwag,WORRTLET,TATOOINE,TATOOINE,HOME,
+species:bellsprout,SNAPBUD,FELUCIA,RESERVE,RESERVE,The Felucia Reserve keeps beasts from many worlds.
+species:weepinbell,SNAPTRAP,FELUCIA,RESERVE,RESERVE,The Felucia Reserve keeps beasts from many worlds.
+species:slowpoke,SWAMPSLUG,DAGOBAH,DAGOBAH,HOME,
+species:exeggcute,WROSEED,KASHYYYK,KASHYYYK,HOME,
+species:cubone,SKULLKIT,TATOOINE,TATOOINE,HOME,
 species:ditto,SHIFTBLOB,ZOLAN,TATOOINE,MIGRANT,A shapeshifter can be anything; a colony hides in Tatooine's desert underpass.
-species:hoothoot,DUSKOWL,ENDOR,RESERVE,RESERVE,The Felucia Reserve keeps beasts from many worlds.
+species:dratini,WYRMLING,DAGOBAH,DAGOBAH,HOME,
+species:dragonair,DRAGNSNAKE,DAGOBAH,DAGOBAH,HOME,
+species:cyndaquil,CINDERMOLE,SULLUST,SULLUST,HOME,
+species:quilava,FLAMEMOLE,SULLUST,SULLUST,HOME,
+species:totodile,SNAPPER,DAGOBAH,DAGOBAH,HOME,
+species:croconaw,BOGCROC,DAGOBAH,DAGOBAH,HOME,
+species:feraligatr,SWAMPJAW,DAGOBAH,DAGOBAH,HOME,
+species:sentret,SANDMEER,TATOOINE,TATOOINE,HOME,
+species:hoothoot,DUSKOWL,ENDOR,ENDOR|RESERVE,HOME,
 species:ledyba,DOTBUG,NABOO,RESERVE,RESERVE,The Felucia Reserve keeps beasts from many worlds.
 species:spinarak,KRYKLING,LOTHAL,RESERVE,RESERVE,The Felucia Reserve keeps beasts from many worlds.
-species:mareep,NERFLET,ALDERAAN,RESERVE|TATOOINE,UNEXPLAINED,
-species:aipom,TAILMONK,FELUCIA,RESERVE|TATOOINE,UNEXPLAINED,
-species:sunkern,SUNSEED,TATOOINE,RESERVE,RESERVE,The Felucia Reserve keeps beasts from many worlds.
+species:mareep,NERFLET,ALDERAAN,TATOOINE,EVENT,Altering Cave: the Mystery Event table only; nothing to place.
+species:hoppip,PUFFSEED,BESPIN,BESPIN,HOME,
+species:skiploom,PUFFBLOOM,BESPIN,BESPIN,HOME,
+species:jumpluff,PUFFCLOUD,BESPIN,BESPIN,HOME,
+species:aipom,TAILMONK,FELUCIA,RESERVE|TATOOINE,EVENT,"Altering Cave: the Mystery Event table only (and the Felucia Reserve, its home swap)."
+species:sunkern,SUNSEED,TATOOINE,TATOOINE,HOME,
 species:wooper,OGGDOLET,BOGANO,RESERVE,RESERVE,The Felucia Reserve keeps beasts from many worlds.
 species:quagsire,OGGDO,BOGANO,RESERVE,RESERVE,The Felucia Reserve keeps beasts from many worlds.
-species:pineco,DEKALET,SPACE,RESERVE|TATOOINE,UNEXPLAINED,
+species:slowking,SLUGSAGE,DAGOBAH,DAGOBAH,HOME,
+species:pineco,DEKALET,SPACE,TATOOINE,EVENT,Altering Cave: the Mystery Event table only.
 species:gligar,SCORPWING,GEONOSIS,RESERVE,RESERVE,The Felucia Reserve keeps beasts from many worlds.
-species:snubbull,ANOOBLET,TATOOINE,RESERVE,RESERVE,The Felucia Reserve keeps beasts from many worlds.
-species:shuckle,SHELLSAP,FELUCIA,RESERVE|TATOOINE,UNEXPLAINED,
-species:teddiursa,GORAXCUB,ENDOR,RESERVE|TATOOINE,UNEXPLAINED,
+species:snubbull,ANOOBLET,TATOOINE,TATOOINE,HOME,
+species:shuckle,SHELLSAP,FELUCIA,RESERVE|TATOOINE,EVENT,Altering Cave: the Mystery Event table only (and the Felucia Reserve).
+species:sneasel,SCRABBLER,HOTH,HOTH,HOME,
+species:teddiursa,GORAXCUB,ENDOR,ENDOR|TATOOINE,HOME,
+species:ursaring,GORAX,ENDOR,ENDOR,HOME,
+species:swinub,TAUNKIT,HOTH,HOTH,HOME,
+species:piloswine,TAUNTAUN,HOTH,HOTH,HOME,
 species:remoraid,JETSQUID,KAMINO,RESERVE,RESERVE,The Felucia Reserve keeps beasts from many worlds.
 species:octillery,OCTOCANNON,KAMINO,RESERVE,RESERVE,The Felucia Reserve keeps beasts from many worlds.
-species:houndour,FYRNOCK,LOTHAL,RESERVE|TATOOINE,UNEXPLAINED,
-species:stantler,IKOPI,NABOO,RESERVE|TATOOINE,UNEXPLAINED,
+species:houndour,FYRNOCK,LOTHAL,TATOOINE,EVENT,Altering Cave: the Mystery Event table only.
+species:stantler,IKOPI,NABOO,TATOOINE,EVENT,Altering Cave: the Mystery Event table only.
 species:smeargle,PAINTKIT,TATOOINE,FACILITY|TATOOINE,HOME,
+species:magby,COALKIT,MUSTAFAR,MUSTAFAR,HOME,
 species:miltank,SHAAK,NABOO,RESERVE,RESERVE,The Felucia Reserve keeps beasts from many worlds.
+species:old-unown-e,WYYYSCHOKK,KASHYYYK,KASHYYYK,HOME,
+species:old-unown-f,KNOBSPIDER,DAGOBAH,DAGOBAH,HOME,
+species:old-unown-g,SLEEN,DAGOBAH,DAGOBAH,HOME,
+species:old-unown-h,JUBBABIRD,DAGOBAH,DAGOBAH,HOME,
+species:old-unown-i,SLYYYG,KASHYYYK,KASHYYYK,HOME,
+species:old-unown-k,JAKRAB,TATOOINE,TATOOINE,HOME,
+species:old-unown-l,BOARWOLF,ENDOR,ENDOR,HOME,
+species:old-unown-m,PROFOGG,TATOOINE,TATOOINE,HOME,
+species:old-unown-n,YUZZUM,ENDOR,ENDOR,HOME,

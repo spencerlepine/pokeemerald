@@ -1,0 +1,28 @@
+map_id,method,area_rate,slot,slot_rate_percent,species_id,min_level,max_level,note
+map:hoth-tundra,land,20,0,20,species:swinub,30,32,Deep snow beside the trail (net:hoth-survey).
+map:hoth-tundra,land,20,1,20,species:swinub,31,33,
+map:hoth-tundra,land,20,2,10,species:spheal,30,32,
+map:hoth-tundra,land,20,3,10,species:snorunt,31,33,
+map:hoth-tundra,land,20,4,10,species:spheal,32,34,
+map:hoth-tundra,land,20,5,10,species:snorunt,32,34,
+map:hoth-tundra,land,20,6,5,species:sneasel,32,34,
+map:hoth-tundra,land,20,7,5,species:sneasel,33,34,
+map:hoth-tundra,land,20,8,4,species:piloswine,33,34,
+map:hoth-tundra,land,20,9,4,species:sealeo,33,34,
+map:hoth-tundra,land,20,10,1,species:piloswine,34,34,
+map:hoth-tundra,land,20,11,1,species:glalie,34,34,Rare: a young wampa out of the cave.
+map:hoth-tundra,water,4,0,60,species:spheal,25,30,The frozen lake (SURF).
+map:hoth-tundra,water,4,1,30,species:sealeo,28,32,
+map:hoth-tundra,water,4,2,5,species:sealeo,30,34,
+map:hoth-tundra,water,4,3,4,species:walrein,32,34,
+map:hoth-tundra,water,4,4,1,species:walrein,34,34,
+map:hoth-tundra,old_rod,30,0,70,species:spheal,5,10,
+map:hoth-tundra,old_rod,30,1,30,species:spheal,5,10,
+map:hoth-tundra,good_rod,30,0,60,species:spheal,10,30,
+map:hoth-tundra,good_rod,30,1,20,species:sealeo,10,30,
+map:hoth-tundra,good_rod,30,2,20,species:sealeo,10,30,
+map:hoth-tundra,super_rod,30,0,40,species:sealeo,25,35,
+map:hoth-tundra,super_rod,30,1,40,species:sealeo,25,35,
+map:hoth-tundra,super_rod,30,2,15,species:walrein,30,35,
+map:hoth-tundra,super_rod,30,3,4,species:walrein,30,35,
+map:hoth-tundra,super_rod,30,4,1,species:walrein,35,35,

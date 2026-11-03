@@ -7,7 +7,9 @@ is not one of the planets it is found on gets an explanation:
   FACILITY   only in Grand Arena facilities (Battle Pyramid, Altering/Artisan caves) or the Asteroid Field
   WIDESPREAD found on three or more planets (fishing/surf commons and cave dwellers)
   SEA        a sea species found on the open-water routes between worlds
-  MIGRANT / REHOME / STORY   hand decisions in mapping/habitat_notes.csv
+  MIGRANT / REHOME / STORY / EVENT   hand decisions in mapping/habitat_notes.csv (EVENT: a Mystery Event table only)
+
+Reads database/encounters.csv (tools/encounters.py: the Star Wars tables) when it exists, else Emerald's.
 
 Writes database/species_habitats.csv. Run after tools/build.py.
 """
@@ -31,7 +33,14 @@ def main():
     notes = {r["emerald_id"]: r for r in read(ROOT / "mapping" / "habitat_notes.csv")}
     found = collections.defaultdict(collections.Counter)
     sea = collections.defaultdict(float)
-    for r in read(EMERALD / "wild_encounters.csv"):
+    # the Star Wars tables (tools/encounters.py: Emerald's slots with the Dune Sea and habitat swaps applied),
+    # or Emerald's own when they have not been built
+    table = ROOT / "database" / "encounters.csv"
+    if table.exists():
+        enc = [{**r, "species_id": r["sw_species"]} for r in read(table)]
+    else:
+        enc = read(EMERALD / "wild_encounters.csv")
+    for r in enc:
         m = r["map_id"]
         p = "FACILITY" if not m else planet.get(m, "")
         if "safari-zone" in m:

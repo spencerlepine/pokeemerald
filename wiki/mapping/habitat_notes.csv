@@ -34,7 +34,7 @@ species:swablu,MIGRANT,Velker chicks ride high winds to warm worlds.
 species:seviper,MIGRANT,Kouhuns are smuggled as assassins' tools and escape into the wild.
 species:solrock,MIGRANT,Living kyber crystals fell to Sullust as meteorites.
 species:lunatone,MIGRANT,Living kyber crystals fell to Sullust as meteorites.
-species:whiscash,MIGRANT,Bog titans live in any deep, muddy water.
+species:whiscash,MIGRANT,"Bog titans live in any deep, muddy water."
 species:corphish,MIGRANT,Crab droids were dumped on Tatooine after the Clone Wars and still scuttle in its oases.
 species:baltoy,MIGRANT,Holocron shards lie scattered among Tatooine's desert ruins.
 species:staryu,MIGRANT,Star corals wash up on the shores of many worlds.
@@ -43,3 +43,11 @@ species:vulpix,MIGRANT,Vulptex fur is prized; escaped pets now live on Jedha's m
 species:wynaut,MIGRANT,Ysalamiri hatchlings cling to driftwood and wash up on far islands.
 species:bagon,MIGRANT,Dactillion hatchlings were brought to Sullust's caves by traders.
 species:ditto,MIGRANT,A shapeshifter can be anything; a colony hides in Tatooine's desert underpass.
+species:mareep,EVENT,Altering Cave: the Mystery Event table only; nothing to place.
+species:aipom,EVENT,"Altering Cave: the Mystery Event table only (and the Felucia Reserve, its home swap)."
+species:pineco,EVENT,Altering Cave: the Mystery Event table only.
+species:shuckle,EVENT,Altering Cave: the Mystery Event table only (and the Felucia Reserve).
+species:houndour,EVENT,Altering Cave: the Mystery Event table only.
+species:stantler,EVENT,Altering Cave: the Mystery Event table only.
+species:corsola,MIGRANT,"CORALITH grows on the warm vents of Ilum's harbour, carried there in Kamino ballast."
+species:luvdisc,MIGRANT,HEARTFIN shoals follow the Kamino transports as far as Ilum's harbour.

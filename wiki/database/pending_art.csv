@@ -4424,6 +4424,15 @@ net:relic-dooku,net_new,cutscene,,,,,,net:relic-dooku:net_new,Dooku's holocron,D
 net:vision-grievous,net_new,cutscene,,,,,,net:vision-grievous:net_new,Vision of Grievous,Vision of Grievous,,NEEDS_PLACEHOLDER,,placeholder: copy the art of npc:magma-hideout-4f:1,NET_NEW,,,,,,NOT_STARTED
 net:walker-sandtrooper,net_new,object_graphics,,,,,,net:walker-sandtrooper:net_new,Walker: sandtrooper,Walker: sandtrooper,,NEEDS_PLACEHOLDER,,placeholder: copy the art of object-gfx:magma-member-m,NET_NEW,,,,,,NOT_STARTED
 net:walker-jar-jar,net_new,object_graphics,,,,,,net:walker-jar-jar:net_new,Walker: Jar Jar Binks,Walker: Jar Jar Binks,,NEEDS_PLACEHOLDER,,placeholder: copy the art of object-gfx:gentleman,NET_NEW,,,,,,NOT_STARTED
+net:species-wyyyschokk,net_new,species,,,,,,net:species-wyyyschokk:net_new,WYYYSCHOKK,WYYYSCHOKK,,NEEDS_PLACEHOLDER,,placeholder: copy the art of species:ariados,NET_NEW,,,,,,NOT_STARTED
+net:species-knobspider,net_new,species,,,,,,net:species-knobspider:net_new,KNOBSPIDER,KNOBSPIDER,,NEEDS_PLACEHOLDER,,placeholder: copy the art of species:spinarak,NET_NEW,,,,,,NOT_STARTED
+net:species-sleen,net_new,species,,,,,,net:species-sleen:net_new,SLEEN,SLEEN,,NEEDS_PLACEHOLDER,,placeholder: copy the art of species:quagsire,NET_NEW,,,,,,NOT_STARTED
+net:species-jubbabird,net_new,species,,,,,,net:species-jubbabird:net_new,JUBBABIRD,JUBBABIRD,,NEEDS_PLACEHOLDER,,placeholder: copy the art of species:xatu,NET_NEW,,,,,,NOT_STARTED
+net:species-slyyyg,net_new,species,,,,,,net:species-slyyyg:net_new,SLYYYG,SLYYYG,,NEEDS_PLACEHOLDER,,placeholder: copy the art of species:gulpin,NET_NEW,,,,,,NOT_STARTED
+net:species-jakrab,net_new,species,,,,,,net:species-jakrab:net_new,JAKRAB,JAKRAB,,NEEDS_PLACEHOLDER,,placeholder: copy the art of species:sentret,NET_NEW,,,,,,NOT_STARTED
+net:species-boarwolf,net_new,species,,,,,,net:species-boarwolf:net_new,BOARWOLF,BOARWOLF,,NEEDS_PLACEHOLDER,,placeholder: copy the art of species:mightyena,NET_NEW,,,,,,NOT_STARTED
+net:species-profogg,net_new,species,,,,,,net:species-profogg:net_new,PROFOGG,PROFOGG,,NEEDS_PLACEHOLDER,,placeholder: copy the art of species:sandshrew,NET_NEW,,,,,,NOT_STARTED
+net:species-yuzzum,net_new,species,,,,,,net:species-yuzzum:net_new,YUZZUM,YUZZUM,,NEEDS_PLACEHOLDER,,placeholder: copy the art of species:vigoroth,NET_NEW,,,,,,NOT_STARTED
 brand:rom-title,branding,,Makefile,,,,,,,"ROM header title 'POKEMON EMER' (12 chars, shown by emulators and flash carts) → 'SW KYBER' (done in game/Makefile on 2026-11-01).",,NO_ART,,Not an image. Keep GAME_CODE BPEE (Makefile:3): emulators use it to pick the save type and RTC.,HOTSWAP,,2,,,,NOT_STARTED
 vfx:General_CastformChange,vfx_battle_anim,general,data/battle_anim_scripts.s,,,,,,,Keep the animation; its sprites are redrawn through pending_art (battle_anims).,,KEEP_ANIM,,,KEEP,,10574,,,,NOT_STARTED
 vfx:General_DoomDesireHit,vfx_battle_anim,general,data/battle_anim_scripts.s,,,,,ANIM_TAG_EXPLOSION|SE_M_CONFUSE_RAY|SE_M_SELF_DESTRUCT,,Keep the animation; its sprites are redrawn through pending_art (battle_anims).,,KEEP_ANIM,,,KEEP,,10870,,,,NOT_STARTED

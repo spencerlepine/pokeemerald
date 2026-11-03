@@ -280,7 +280,49 @@ Each new move clones an existing move's data row. Only the name, description and
 
 ## Habitat swaps (`net:habitat-swaps`)
 
-Resolved with no slot swaps, so wild balance stays identical to Emerald. `database/species_habitats.csv` (built by `tools/habitats.py`) explains every companion that lives off its home world: it is either a migrant, part of the Felucia Reserve, widespread, a sea species, part of the story, or re-homed (the GNARLSPAWN line now lives on Endor).
+Owner decision (2026-11-03): `home_planet` is the placement rule. A species is wild on its home planet; Emerald's
+slots, rates and levels never move, only the species in a slot. `mapping/habitat_swaps.csv` lists every swap
+(planet, from, to, optional maps and methods, reason); `tools/encounters.py` applies them after the Dune Sea
+swaps and writes `database/encounters.csv`, the table the game will get (every map, method, slot, rate, levels,
+Emerald species, Star Wars species, source, stat change). `tools/habitats.py` then explains what is left off
+its home world in `database/species_habitats.csv` (HOME, MIGRANT, WIDESPREAD, SEA, RESERVE, FACILITY, STORY,
+EVENT). Rules:
+
+- A swap keeps the slot's stat total within 150 of Emerald's (the tool warns past that), so a route is never
+  much harder or easier than it was.
+- Each ocean world has its own water life: Kamino's steeds and lanterns, Dagobah's bog fish and crocodiles,
+  Hoth's seals, Bespin's cloud drifters. The WIDE set (COLOFRY, DIANOGLET, AIWHALET, SHYYYO) stays on the open
+  routes between worlds (Kashyyyk's archipelago, Yavin 4, Jedha's holy waters, Endor's rivers, Ilum's harbour).
+- The Felucia Reserve keeps beasts from many worlds by design (RESERVE); seven of its slots went to Felucia
+  natives so the reserve shows its own life too.
+- The Altering Cave's Mystery Event table is EVENT: never placed, never swapped.
+- Nine free slots hold new species (below), each placed in one foreign slot on its home planet.
+- New areas get their own tables in `mapping/wild_extra.csv` (the Hoth tundra: tauntauns, seals, scrabblers, a
+  rare wampa; the frozen lake by SURF and rod).
+
+## New species in the free slots (`net:species-*`)
+
+Owner decision (2026-11-03): up to 21 species in `SPECIES_OLD_UNOWN_B` to `_Z` (minus `_J`); three hold the
+light/dark forms. Nine more are canon creatures the game was missing, each on its home planet in one slot a
+foreign species held. Stats, types and the Emerald species whose abilities, learnset, EXP yield, catch rate and
+egg data each copies are in its `net:species-*` row; none evolves. Datapad text is in `mapping/datapad.csv`,
+the cry brief in `mapping/audio.csv`.
+
+| Slot | Species | Planet | Types | Total | Copies | Where |
+|---|---|---|---|---|---|---|
+| E | WYYYSCHOKK | Kashyyyk | Bug / Dark | 410 | ARIADOS | Shadowlands B1F-B2F, the rare slots |
+| F | KNOBSPIDER | Dagobah | Bug / Grass | 380 | SPINARAK | Cave of Evil 1F |
+| G | SLEEN | Dagobah | Water / Ground | 395 | QUAGSIRE | every Dagobah water route, the common surf slot |
+| H | JUBBABIRD | Dagobah | Flying / Psychic | 420 | XATU | Cave of Evil entrance and 1F, MYNOCKMAW's slot |
+| I | SLYYYG | Kashyyyk | Poison / Grass | 290 | GULPIN | the Shadowlands, the common slot |
+| K | JAKRAB | Tatooine | Normal | 280 | SENTRET | Route 110 |
+| L | BOARWOLF | Endor | Dark / Normal | 450 | MIGHTYENA | Route 120, the rare slot |
+| M | PROFOGG | Tatooine | Normal / Ground | 270 | SANDSHREW | Route 116 |
+| N | YUZZUM | Endor | Normal / Fighting | 430 | VIGOROTH | Route 118 |
+
+Twelve slots (O to Z) stay free. In the game each needs the same work as the light/dark forms: species info,
+graphics tables, a cry remap, a name, and the swapped encounter slot (`tools/encounters.py --install`, to be
+written in step 6).
 
 ## Mos Eisley Cantina (`net:mos-eisley-cantina`)
 

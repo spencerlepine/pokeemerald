@@ -313,7 +313,9 @@ under these rules, decided by the owner after the audit of 2026-11-03:
 
 1. **Creatures.** New placements first: every planet gets wild tables from the roster it already owns. Then up to 21
    new species or forms in the free engine slots (`SPECIES_OLD_UNOWN_B` to `_Z`, minus `_J`; three used by the
-   light/dark forms). No engine expansion past those slots yet.
+   light/dark forms). No engine expansion past those slots yet. Done in step 4 (2026-11-03): 76 swaps in
+   `mapping/habitat_swaps.csv`, the Hoth table, and nine canon species (WYYYSCHOKK, SLYYYG, KNOBSPIDER, SLEEN,
+   JUBBABIRD, JAKRAB, PROFOGG, BOARWOLF, YUZZUM) in slots E to N.
 2. **Planet roles.** Main story in Emerald's order: Tatooine, Kashyyyk, Sullust, Mustafar, Endor, Bespin, Jedha,
    Yavin 4, Dagobah, Asteroid Field, Ilum. Side trips during the story: Felucia (5 badges), Hoth and Kamino
    (6 badges). Post-game: Grand Arena, Death Star, Tython, Atollon, Mortis. Recorded per planet in

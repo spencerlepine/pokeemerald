@@ -116,7 +116,8 @@ and field-effect ids are table indexes, so deleting a ghost keeps its slot (poin
 | `area_progression.csv` | Emerald's balance table (levels, badges, gating) with planet and new map titles, plus every net-new area from `mapping/area_progression_extra.csv` (`net_id` names its design row). |
 | `people.csv` | Every person placed by hand in the world (`mapping/people.csv`): new-area NPCs, trainers with parties, bosses, the must-have cast, with planet, map id, level band and the band check. Query: `grep ',boss,' database/people.csv`. |
 | `planets.csv` | One row per planet: role (`main`, `side`, `post`), act, badges on arrival and the hyperlane in (`mapping/planets.csv`), with the badge, trainer and wild bands read from `area_progression.csv`. |
-| `species_habitats.csv` | Why each wild companion lives where Emerald's encounter tables put it. Tables are unchanged. |
+| `encounters.csv` | Every wild slot on every map (plus the new areas' tables): Emerald's species and the Star Wars one after the Dune Sea and habitat swaps, with rate, levels, source and stat change. Built by `tools/encounters.py` from `mapping/habitat_swaps.csv` and `mapping/wild_extra.csv`. |
+| `species_habitats.csv` | Why each wild companion lives where the tables put it (HOME on its home planet, or MIGRANT, WIDESPREAD, SEA, RESERVE, FACILITY, STORY, EVENT). Built by `tools/habitats.py` from `encounters.csv`. |
 | `sand_skim.csv`, `dune_sea_encounters.csv` | SAND SKIM, the Dune Sea field move: which species learn it (from `mapping/sand_skim_rules.csv`) and the Dune Sea's own wild table on each Tatooine map (from `mapping/dune_sea_swaps.csv`; no fishing there). Built by `tools/sand_skim.py`, which also checks the tables and the SAND SKIM learnsets in `../game` (`--install` writes them); design in [`bible/NET_NEW_DESIGNS.md`](bible/NET_NEW_DESIGNS.md). |
 | `obtain.csv` | Every way the player gets something, in story order: gift items (TMs, HMs, key items), item balls, hidden items, fruit trees, shop stock, gift companions and eggs, in-game trades, decorations, coins. Each row has the giver (`npc_id`, `character_id` and its Star Wars name), the map and planet, the flag that marks it received, the flags the script checks, `badges` and `story_event` (`story_order` sorts them), and the script and source line in `../game`. Net-new gifts (HM09 from OWEN) come from `mapping/obtain_extra.csv`. Built by `tools/obtain.py`. Query: `grep ',character:wallys-father,' database/obtain.csv`. |
 | `npcs.csv` | Every NPC (object event) on every map: `npc_id` (`npc:<map>:<local id>`), map and planet, sprite, script, flag, the named character it is (from `mapping/npcs.csv`) and the `obtain.csv` rows it gives. Built by `tools/obtain.py`. |
@@ -208,6 +209,7 @@ needs, copied into this repo. Nothing outside the repo is needed; starwars-db is
 ```sh
 python3 tools/scan_game_assets.py   # mapping/asset_inventory.csv from ../game (re-run after the game changes)
 python3 tools/build.py              # optional: STARWARS_DB_DIR=/path/to/starwars-db/database
+python3 tools/encounters.py # encounters.csv (habitat swaps, new-area tables)
 python3 tools/habitats.py   # species_habitats.csv
 python3 tools/sand_skim.py  # sand_skim.csv, dune_sea_encounters.csv (Dune Sea field move)
 python3 tools/obtain.py     # obtain.csv, npcs.csv (who gives what, in story order)

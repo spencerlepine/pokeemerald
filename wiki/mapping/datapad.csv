@@ -79,7 +79,7 @@ species:medicham,Meditate,A crystal-cave ape of Ilum. Years of meditation give i
 species:electrike,Lightning,A kath hound pup. Static builds up in its fur as it runs across the Dantooine plains. Its sparks keep predators away.,
 species:manectric,Discharge,A kath hound whose mane crackles with lightning. It gathers static from the air. Thunderclouds form where it runs.,
 species:plusle,Cheering,A podrace pit droid. It cheers its partner on with sparks and pom-poms. It folds up when tapped on the nose.,
-species:minun,Cheering,"A GNK power droid. It shares its charge with droids around it and says nothing but “gonk”. It is happiest beside a pit droid.",
+species:minun,Cheering,A GNK power droid. It shares its charge with droids around it and says nothing but “gonk”. It is happiest beside a pit droid.,
 species:magnemite,Magnet,"An MSE mouse droid. It scurries along the halls of starships and stations, beeping. It gets lost if its magnets are scrambled.",
 species:magneton,Magnet,Three mouse droids linked into one unit. They send out strong magnetic waves that jam scanners and comlinks nearby.,
 species:voltorb,Ball,A Jedi training remote gone feral. It floats and fires stinging bolts at anything that moves. It hides in empty temples.,
@@ -385,3 +385,12 @@ species:tyranitar,Armor,The Zillo Beast. Its armor cannot be pierced by any blas
 species:lugia,Diving,A legendary sea bird of Mortis. Its wings can cause a storm that lasts 40 days. It sleeps at the bottom of the sea.,beast swap (sentient species replaced)
 species:ho-oh,Rainbow,A legendary sky bird of Mortis. Its feathers glow in seven colors. A rainbow is said to follow it wherever it flies.,beast swap (sentient species replaced)
 species:celebi,Time Travel,A spirit that walks the World Between Worlds. It wanders through time. Forests where it appears are said to bloom.,
+species:old-unown-e,WEB HUNTER,A hunting spider as big as a Wookiee cub. It spins webs between wroshyr roots and drops on anything that pulls at them.,"net:species-wyyyschokk; old-Unown slots have no Datapad page in Emerald, text kept for when one is wired."
+species:old-unown-f,POD SPIDER,It begins as a pod on a GNARLTREE and walks away when ripe. Its white legs are knobbed like roots. It waits where the Force is dark.,"net:species-knobspider; old-Unown slots have no Datapad page in Emerald, text kept for when one is wired."
+species:old-unown-g,BOG LIZARD,"A broad-tailed lizard of the bog. It swims with its legs folded and surfaces to breathe through the mud. It is not quick, and does not need to be.","net:species-sleen; old-Unown slots have no Datapad page in Emerald, text kept for when one is wired."
+species:old-unown-h,SONGBIRD,Its soft song settles the bog at dusk. Anything that listens too long sleeps where it stands. The Jedi master on Dagobah hums it.,"net:species-jubbabird; old-Unown slots have no Datapad page in Emerald, text kept for when one is wired."
+species:old-unown-i,BARK SLUG,A slug the length of an arm that grazes wroshyr bark. Its trail eats the wood it crosses. Wookiee cubs dare each other to touch one.,"net:species-slyyyg; old-Unown slots have no Datapad page in Emerald, text kept for when one is wired."
+species:old-unown-k,FLATS HARE,It outruns sandhawks over the flats of Route 110. Podrace crews chase them off the course before a race. They are never off the course for long.,"net:species-jakrab; old-Unown slots have no Datapad page in Emerald, text kept for when one is wired."
+species:old-unown-l,TUSK WOLF,"Tusked and shaggy, it hunts the forest moon alone. The Ewoks build their villages high because of it. It climbs anyway.","net:species-boarwolf; old-Unown slots have no Datapad page in Emerald, text kept for when one is wired."
+species:old-unown-m,BURROWER,It digs under the vaporator fields and surfaces to whistle. Farmers swear at it; children feed it. It knows which is which.,"net:species-profogg; old-Unown slots have no Datapad page in Emerald, text kept for when one is wired."
+species:old-unown-n,TALL WALKER,"A round body on two long legs, taller than an Ewok by half. It walks the forest moon singing. Its kick fells a sapling.","net:species-yuzzum; old-Unown slots have no Datapad page in Emerald, text kept for when one is wired."
