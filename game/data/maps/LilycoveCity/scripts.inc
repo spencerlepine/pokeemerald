@@ -110,6 +110,154 @@ LilycoveCity_EventScript_Girl3::
 	msgbox LilycoveCity_Text_Girl3, MSGBOX_NPC
 	end
 
+LilycoveCity_EventScript_Judge1::
+	msgbox LilycoveCity_Text_Judge1, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_Judge2::
+	msgbox LilycoveCity_Text_Judge2, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_Judge3::
+	msgbox LilycoveCity_Text_Judge3, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_Host1::
+	msgbox LilycoveCity_Text_Host1, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_Host2::
+	msgbox LilycoveCity_Text_Host2, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_Host3::
+	msgbox LilycoveCity_Text_Host3, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_TeaFan1::
+	msgbox LilycoveCity_Text_TeaFan1, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_TeaFan2::
+	msgbox LilycoveCity_Text_TeaFan2, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_TeaFan3::
+	msgbox LilycoveCity_Text_TeaFan3, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_TeaFan4::
+	msgbox LilycoveCity_Text_TeaFan4, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_TeaFan5::
+	msgbox LilycoveCity_Text_TeaFan5, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_TeaFan6::
+	msgbox LilycoveCity_Text_TeaFan6, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_OldTimer::
+	msgbox LilycoveCity_Text_OldTimer, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_Sketcher1::
+	msgbox LilycoveCity_Text_Sketcher1, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_Sketcher2::
+	msgbox LilycoveCity_Text_Sketcher2, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_Trainer1::
+	msgbox LilycoveCity_Text_Trainer1, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_Trainer2::
+	msgbox LilycoveCity_Text_Trainer2, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_Trainer3::
+	msgbox LilycoveCity_Text_Trainer3, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_Trainer4::
+	msgbox LilycoveCity_Text_Trainer4, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_Trainer5::
+	msgbox LilycoveCity_Text_Trainer5, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_Trainer6::
+	msgbox LilycoveCity_Text_Trainer6, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_Shopper1::
+	msgbox LilycoveCity_Text_Shopper1, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_Shopper2::
+	msgbox LilycoveCity_Text_Shopper2, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_Shopper3::
+	msgbox LilycoveCity_Text_Shopper3, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_Shopper4::
+	msgbox LilycoveCity_Text_Shopper4, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_Shopper5::
+	msgbox LilycoveCity_Text_Shopper5, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_Shopper6::
+	msgbox LilycoveCity_Text_Shopper6, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_Shopper7::
+	msgbox LilycoveCity_Text_Shopper7, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_Shopper8::
+	msgbox LilycoveCity_Text_Shopper8, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_Shopper9::
+	msgbox LilycoveCity_Text_Shopper9, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_Visitor1::
+	msgbox LilycoveCity_Text_Visitor1, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_Visitor2::
+	msgbox LilycoveCity_Text_Visitor2, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_Visitor3::
+	msgbox LilycoveCity_Text_Visitor3, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_Guest1::
+	msgbox LilycoveCity_Text_Guest1, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_Guest2::
+	msgbox LilycoveCity_Text_Guest2, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_Patient1::
+	msgbox LilycoveCity_Text_Patient1, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_Patient2::
+	msgbox LilycoveCity_Text_Patient2, MSGBOX_NPC
+	end
+
 
 LilycoveCity_EventScript_BerryGentleman::
 	lock
@@ -921,4 +1069,153 @@ LilycoveCity_Text_Boy2:
 LilycoveCity_Text_Girl3:
 	.string "I like to sit here and watch the\n"
 	.string "ships come and go.$"
+
+LilycoveCity_Text_Judge1:
+	.string "I spent years as a judge.\p"
+	.string "Now I judge sunsets. Tonight's\n"
+	.string "gets a perfect score!$"
+
+LilycoveCity_Text_Judge2:
+	.string "My eyes are trained to spot talent.\p"
+	.string "You and your COMPANIONS have it.\n"
+	.string "I'm sure of it!$"
+
+LilycoveCity_Text_Judge3:
+	.string "Retirement suits me.\p"
+	.string "I watch the cloud cars go by and\n"
+	.string "give each one a score.$"
+
+LilycoveCity_Text_Host1:
+	.string "I used to host big shows!\p"
+	.string "Now I give tours of CLOUD CITY.\n"
+	.string "Right this way, please!$"
+
+LilycoveCity_Text_Host2:
+	.string "Ladies and gentlemen…\p"
+	.string "Oh, sorry. Old habits!$"
+
+LilycoveCity_Text_Host3:
+	.string "I still practice my announcer voice.\p"
+	.string "CLOUD CITY! Wooo!$"
+
+LilycoveCity_Text_TeaFan1:
+	.string "The BLEND MASTER makes the best tea\n"
+	.string "in the whole city. I'm here for a cup!$"
+
+LilycoveCity_Text_TeaFan2:
+	.string "I followed the BLEND MASTER all the\n"
+	.string "way up here. He walks so fast!$"
+
+LilycoveCity_Text_TeaFan3:
+	.string "That old man by the plaza is the\n"
+	.string "BLEND MASTER. He's famous!$"
+
+LilycoveCity_Text_TeaFan4:
+	.string "I'm studying how tibanna gas keeps\n"
+	.string "the city afloat. Fascinating!$"
+
+LilycoveCity_Text_TeaFan5:
+	.string "I come here every day to relax.\n"
+	.string "The air is so fresh up here.$"
+
+LilycoveCity_Text_TeaFan6:
+	.string "I'm a ninja! You didn't see me!\p"
+	.string "Wait… You did see me?$"
+
+LilycoveCity_Text_OldTimer:
+	.string "I've lived in CLOUD CITY my whole\n"
+	.string "life. It never gets old.$"
+
+LilycoveCity_Text_Sketcher1:
+	.string "I'm sketching the city skyline.\n"
+	.string "Hold still, please!$"
+
+LilycoveCity_Text_Sketcher2:
+	.string "I paint the clouds every day.\n"
+	.string "No two are ever the same.$"
+
+LilycoveCity_Text_Trainer1:
+	.string "My COMPANION and I train every day.\n"
+	.string "We're aiming for the GRAND ARENA!$"
+
+LilycoveCity_Text_Trainer2:
+	.string "Wisdom comes with age. Good battles\n"
+	.string "come with wisdom. Hohoho!$"
+
+LilycoveCity_Text_Trainer3:
+	.string "I know everything about COMPANIONS!\p"
+	.string "Ask me anything! …Maybe later.$"
+
+LilycoveCity_Text_Trainer4:
+	.string "I sense great power in you…\p"
+	.string "And in your COMPANIONS.$"
+
+LilycoveCity_Text_Trainer5:
+	.string "I'm going to beat every TRAINER\n"
+	.string "in CLOUD CITY!$"
+
+LilycoveCity_Text_Trainer6:
+	.string "Raising COMPANIONS takes patience.\p"
+	.string "And a lot of snacks.$"
+
+LilycoveCity_Text_Shopper1:
+	.string "Shopping is so tiring.\n"
+	.string "I need a break.$"
+
+LilycoveCity_Text_Shopper2:
+	.string "I love browsing here, even when\n"
+	.string "I don't buy anything.$"
+
+LilycoveCity_Text_Shopper3:
+	.string "Can I have that? No? Okay…$"
+
+LilycoveCity_Text_Shopper4:
+	.string "My husband is still upstairs.\n"
+	.string "He always takes forever!$"
+
+LilycoveCity_Text_Shopper5:
+	.string "This place has everything!$"
+
+LilycoveCity_Text_Shopper6:
+	.string "I'm just waiting for my friend.\n"
+	.string "She said five minutes an hour ago.$"
+
+LilycoveCity_Text_Shopper7:
+	.string "I came up from the under-levels.\n"
+	.string "It's much brighter up here!$"
+
+LilycoveCity_Text_Shopper8:
+	.string "Have you tried the food in this city?\n"
+	.string "It's out of this world!$"
+
+LilycoveCity_Text_Shopper9:
+	.string "I'm looking for a gift for my\n"
+	.string "COMPANION. What would it like?$"
+
+LilycoveCity_Text_Visitor1:
+	.string "I'm lost! Where's my mom?$"
+
+LilycoveCity_Text_Visitor2:
+	.string "I'm on my day off.\n"
+	.string "The paintings here are so calming.$"
+
+LilycoveCity_Text_Visitor3:
+	.string "My COMPANION's coat shines brighter\n"
+	.string "than any painting in here!$"
+
+LilycoveCity_Text_Guest1:
+	.string "We're staying here on vacation!\n"
+	.string "The view from our room is amazing!$"
+
+LilycoveCity_Text_Guest2:
+	.string "Brushing my COMPANION every night\n"
+	.string "keeps it happy!$"
+
+LilycoveCity_Text_Patient1:
+	.string "My COMPANION can do a backflip!\p"
+	.string "Well, almost. That's why we're here.$"
+
+LilycoveCity_Text_Patient2:
+	.string "I named my COMPANION after my\n"
+	.string "favorite pilot!$"
 
