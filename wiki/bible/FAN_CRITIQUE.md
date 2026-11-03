@@ -692,7 +692,7 @@ Thirty-six lines; the widest is 200 px.
 
 Stage 1 is about 400 script lines, 70 text rows and no C at all. Stage 2 is under 50 lines of C. Stage 3 is 15
 lines of C plus text. The whole feature uses one var and two flags from the unused list (and one more var for the
-bounty board), leaving twelve flags and eleven vars free.
+bounty board), leaving 25 unused flags and 16 unused vars free (counted in `../game/include/constants/`).
 
 **Testing plan.** `tools/play-tester` (headless mGBA, savestates, `E.setFlag`): add a `setVar` helper (about ten
 lines of Lua reading the var's address from the symbol file; story vars are "not tried" in its README and this
