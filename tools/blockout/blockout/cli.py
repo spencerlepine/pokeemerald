@@ -382,7 +382,7 @@ def cmd_todo(a):
     if tpath.exists():                       # terrain items (tile-generator `terrain`): ground, water, ledges...
         for r in csv.DictReader(open(tpath)):
             rows.append({"id": r["terrain_id"], "kind": f"terrain:p{r['phase']}", "planet": r["planets"],
-                         "status": r["status"], "tool": r["tool"], "build": "", "used_in": r["areas"],
+                         "status": r["status"], "tool": r["tool"], "build": r.get("art", ""), "used_in": r["areas"],
                          "notes": r["notes"] or f"{r['metatiles']} metatiles, {r['areas']} areas"})
     for p in _all():
         d = yaml.safe_load(open(p))

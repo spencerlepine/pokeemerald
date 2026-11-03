@@ -31,8 +31,14 @@ python -m tilegen terrain build --planet HOTH        # game-format greybox tiles
   and given its role from its neighbours. Its metatile is filed under `terrain:<tileset>:<item>:<role>` in
   `wiki/mapping/terrain.csv`: `metatile_ids` (every vanilla metatile seen, the chosen one first), `use` (the one
   the autotiler draws), `use_set` (`learned`, or `hand` when you set `use` yourself: a hand value is kept across
-  runs and wins; `fill` for a thin path drawn with the plain path tile), `cells`, `planets`, `areas`, `needed_by` (redesigned areas that need it), `status`, `sheet`
-  and `sheet_cell`. Phase 1 rows have the tool `tilegen terrain`; trees and structures are phase 2, listed only.
+  runs and wins; `fill` for a thin path drawn with the plain path tile), `cells`, `planets`, `areas`, `needed_by` (redesigned areas that need it), `status`, `art`
+  (how the final art is made: `recolour` a vanilla tile in the planet's colours, or `redraw` new pixels),
+  `art_from` (the source: the `use` tile, the vanilla item a net-new item is recoloured from, or the fill a
+  missing role is drawn from), `art_set` (`planned`, or `hand` when you set `art` yourself: kept across runs),
+  `sheet` and `sheet_cell`. Net-new items take theirs from `NEW_ART` in `tilegen/terrain.py` (owner,
+  2026-11-03): the Dune Sea, cloud, mud, deck and the wroshyr platform are recolours; cloud-edge, wroshyr,
+  gnarltree, platform rail, fungus, void-edge and the durasteel wall are redraws. `blockout todo` shows `art` in
+  its `build` column. Phase 1 rows have the tool `tilegen terrain`; trees and structures are phase 2, listed only.
   `terrain_areas.csv` links each area to its pair, render, items and `missing_roles`.
 - **Autotile.** 466 areas keep their vanilla layout and are drawn with it. 62 areas were redesigned or are
   new; their grid is drawn from the vocabulary: each cell gets an item (the pair's usual ground, Hoenn's dirt for

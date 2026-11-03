@@ -94,6 +94,21 @@ PLANET_KIT = {
 NEW_ITEMS = {"dune-sea": "water", "wroshyr": "blocked", "wroshyr-platform": "bridge", "cloud-edge": "blocked",
              "cloud": "water", "gnarltree": "blocked", "mud": "ground", "platform-rail": "blocked", "deck": "ground",
              "fungus": "blocked", "void-edge": "blocked", "durasteel-wall": "wall"}
+# how each net-new item's final art is made (owner, 2026-11-03): `recolour` = a vanilla item's tiles in the planet's
+# colours (the source is named), `redraw` = new pixels. A vanilla item's row is a recolour of its own `use` tile;
+# a role vanilla never drew is a redraw from that item's fill. A hand-set `art` in terrain.csv (`art_set` hand) wins.
+NEW_ART = {"dune-sea": ("recolour", "water: the vanilla sea, every edge and corner, in sand colours"),
+           "cloud": ("recolour", "water: the vanilla sea in cloud white"),
+           "cloud-edge": ("redraw", "new cloud-bank border; no vanilla shape"),
+           "mud": ("recolour", "ground-sand: the vanilla sand in swamp-mud browns"),
+           "deck": ("recolour", "ground-path: the vanilla path as Kamino's metal deck"),
+           "wroshyr-platform": ("recolour", "bridge: Fortree's wooden bridge"),
+           "wroshyr": ("redraw", "giant wroshyr trunk border; no vanilla shape"),
+           "gnarltree": ("redraw", "Dagobah gnarltree border; no vanilla shape"),
+           "platform-rail": ("redraw", "Kamino platform railing; no vanilla shape"),
+           "fungus": ("redraw", "Felucia giant-fungus border; no vanilla shape"),
+           "void-edge": ("redraw", "asteroid rim over open space; no vanilla shape"),
+           "durasteel-wall": ("redraw", "Death Star durasteel wall; no vanilla shape")}
 BUILDING = 0xEFFF           # cell value for a building footprint (redesigned towns), drawn as a solid block
 PROP = 0xEFFE               # cell value for a sized prop footprint
 PH_BASE = 0xF000            # placeholder cells: PH_BASE + index into PH_ITEMS
@@ -613,6 +628,16 @@ def write_catalog(items: dict, needs_by_area: dict, all_areas: list[dict]) -> li
                 note = ("Net-new planet item (PLANET_KIT): placeholder until drawn. Needed by " if name in NEW_ITEMS
                         else "No vanilla tile for this role: placeholder in the sheet. Needed by ") + \
                        ", ".join(need[:6]) + (f" and {len(need) - 6} more" if len(need) > 6 else "") + "."
+        if o.get("art_set") == "hand" and o.get("art"):
+            art, art_from, art_set = o["art"], o.get("art_from", ""), "hand"
+        elif name in NEW_ART:
+            art, art_from, art_set = NEW_ART[name][0], NEW_ART[name][1], "planned"
+        elif use:
+            art, art_from, art_set = "recolour", f"{ts}:{use}", "planned"
+        else:
+            art, art_from, art_set = "redraw", f"{name} fill", "planned"
+        if phase(name) == 2 and name not in NEW_ART:
+            art, art_from, art_set = "", "", ""
         rows.append({
             "terrain_id": tid, "tileset": ts, "item": name, "role": role, "phase": phase(name),
             "metatiles": len(metas), "metatile_ids": " ".join(f"{m:03x}" for m in sorted(metas)),
@@ -620,7 +645,7 @@ def write_catalog(items: dict, needs_by_area: dict, all_areas: list[dict]) -> li
             "cells": it["cells"], "planets": " | ".join(sorted(it["planets"])),
             "areas": len(it["areas"] | it["needed_by"]), "needed_by": len(it["needed_by"]),
             "tool": "tilegen terrain" if phase(name) == 1 else "",
-            "status": status,
+            "status": status, "art": art, "art_from": art_from, "art_set": art_set,
             "sheet": f"world/greybox/sheets/{ts}.png", "sheet_cell": "",
             "notes": note,
         })

@@ -135,7 +135,7 @@ in `../game`. Every `source_file` is a path relative to `../game`.
 - **Terrain tiles:** `mapping/terrain.csv` lists every terrain tile of every tileset, one row per item and role
   (water, cliffs, walls and paths: fill, edges, corners, strips, tips; ledges: fill and end caps; grounds: fill),
   with the vanilla metatile it uses (`use`; empty means the game has no such tile yet and the sheet shows the
-  placeholder), the planets and number of areas that use it and its status; `mapping/terrain_areas.csv` links
+  placeholder), how its final art is made (`art`: `recolour` a vanilla tile or `redraw`, with `art_from`), the planets and number of areas that use it and its status; `mapping/terrain_areas.csv` links
   each area to its tileset pair, its greybox tile render, its rows and how many roles are missing. Real-size
   sheets (128 px wide, 16x16 cells) are in `world/greybox/sheets/`, labelled ones in `world/greybox/terrain/`.
   Net-new per-planet items (the planet kit in [`bible/WORLD_ART.md`](bible/WORLD_ART.md): wroshyr, Dune Sea,
