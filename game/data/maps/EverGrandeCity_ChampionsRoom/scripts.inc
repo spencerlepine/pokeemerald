@@ -253,29 +253,29 @@ EverGrandeCity_ChampionsRoom_Text_PostBattleSpeech:
 	.string "HOENN region…$"
 
 EverGrandeCity_ChampionsRoom_Text_MayAdvice:
-	.string "MAY: {PLAYER}{KUN}!\p"
+	.string "MIRA: {PLAYER}{KUN}!\p"
 	.string "Here's some advice before you challenge\n"
 	.string "the CHAMPION…$"
 
 EverGrandeCity_ChampionsRoom_Text_MayItsAlreadyOver:
-	.string "MAY: Huh?\n"
+	.string "MIRA: Huh?\n"
 	.string "What, what, what?\p"
 	.string "{PLAYER}{KUN}…\n"
 	.string "Could it be that…\l"
 	.string "It's already over?$"
 
 EverGrandeCity_ChampionsRoom_Text_BrendanAdvice:
-	.string "BRENDAN: {PLAYER}!\p"
+	.string "KAEL: {PLAYER}!\p"
 	.string "How would you like some advice before\n"
 	.string "you challenge the CHAMPION?…$"
 
 EverGrandeCity_ChampionsRoom_Text_BrendanYouveWon:
-	.string "BRENDAN: {PLAYER}…\p"
+	.string "KAEL: {PLAYER}…\p"
 	.string "Are you trying to tell me…\n"
 	.string "You've beaten the CHAMPION?$"
 
 EverGrandeCity_ChampionsRoom_Text_BirchArriveRatePokedex:
-	.string "PROF. BIRCH: See?\n"
+	.string "PROF. KORR: See?\n"
 	.string "What did I tell you, {RIVAL}?\p"
 	.string "Didn't I tell you that you don't need\n"
 	.string "to worry about {PLAYER}{KUN}?\p"
@@ -291,7 +291,7 @@ EverGrandeCity_ChampionsRoom_Text_BirchArriveRatePokedex:
 	.string "Here, let me see.$"
 
 EverGrandeCity_ChampionsRoom_Text_BirchCongratulations:
-	.string "PROF. BIRCH: Anyways,\n"
+	.string "PROF. KORR: Anyways,\n"
 	.string "congratulations!\p"
 	.string "Now, go proudly into the final room!$"
 
@@ -306,10 +306,10 @@ EverGrandeCity_ChampionsRoom_Text_WallaceWaitOutside:
 	.string "From here on, only those TRAINERS who\n"
 	.string "have become CHAMPIONS may enter.\p"
 	.string "You'll have to wait outside with\n"
-	.string "PROF. BIRCH.$"
+	.string "PROF. KORR.$"
 
 EverGrandeCity_ChampionsRoom_Text_MayCongratulations:
-	.string "MAY: Groan…\p"
+	.string "MIRA: Groan…\p"
 	.string "… … … … … … … …\n"
 	.string "… … … … … … … …\p"
 	.string "I'm just joking! That's okay!\n"
@@ -318,7 +318,7 @@ EverGrandeCity_ChampionsRoom_Text_MayCongratulations:
 	.string "Honestly, congratulations!$"
 
 EverGrandeCity_ChampionsRoom_Text_BrendanCongratulations:
-	.string "BRENDAN: Whaaaat?! … … … … …\n"
+	.string "KAEL: Whaaaat?! … … … … …\n"
 	.string "… … … … … … … …\p"
 	.string "It can't be helped if that's the rule.\p"
 	.string "{PLAYER}, way to go!\n"

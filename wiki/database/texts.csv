@@ -9464,46 +9464,46 @@ gText_PickCancel,,src/strings.c,56,,c,ui_string,{DPAD_UPDOWN}PICK {A_BUTTON}{B_B
 gText_AButtonExit,,src/strings.c,57,,c,ui_string,{A_BUTTON}EXIT,{A_BUTTON}EXIT,CURATED,,,,"reviewed, no change needed",NOT_STARTED
 gText_BirchBoy,,src/strings.c,58,,c,ui_string,BOY,BOY,CURATED,,,,"reviewed, no change needed",NOT_STARTED
 gText_BirchGirl,,src/strings.c,59,,c,ui_string,GIRL,GIRL,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-gText_DefaultNameStu,,src/strings.c,60,,c,ui_string,STU,STU,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-gText_DefaultNameMilton,,src/strings.c,61,,c,ui_string,MILTON,MILTON,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-gText_DefaultNameTom,,src/strings.c,62,,c,ui_string,TOM,TOM,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-gText_DefaultNameKenny,,src/strings.c,63,,c,ui_string,KENNY,KENNY,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-gText_DefaultNameReid,,src/strings.c,64,,c,ui_string,REID,REID,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-gText_DefaultNameJude,,src/strings.c,65,,c,ui_string,JUDE,JUDE,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-gText_DefaultNameJaxson,,src/strings.c,66,,c,ui_string,JAXSON,JAXSON,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-gText_DefaultNameEaston,,src/strings.c,67,,c,ui_string,EASTON,EASTON,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-gText_DefaultNameWalker,,src/strings.c,68,,c,ui_string,WALKER,WALKER,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-gText_DefaultNameTeru,,src/strings.c,69,,c,ui_string,TERU,TERU,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-gText_DefaultNameJohnny,,src/strings.c,70,,c,ui_string,JOHNNY,JOHNNY,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-gText_DefaultNameBrett,,src/strings.c,71,,c,ui_string,BRETT,BRETT,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-gText_DefaultNameSeth,,src/strings.c,72,,c,ui_string,SETH,SETH,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-gText_DefaultNameTerry,,src/strings.c,73,,c,ui_string,TERRY,TERRY,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-gText_DefaultNameCasey,,src/strings.c,74,,c,ui_string,CASEY,CASEY,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-gText_DefaultNameDarren,,src/strings.c,75,,c,ui_string,DARREN,DARREN,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-gText_DefaultNameLandon,,src/strings.c,76,,c,ui_string,LANDON,LANDON,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-gText_DefaultNameCollin,,src/strings.c,77,,c,ui_string,COLLIN,COLLIN,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-gText_DefaultNameStanley,,src/strings.c,78,,c,ui_string,STANLEY,STANLEY,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-gText_DefaultNameQuincy,,src/strings.c,79,,c,ui_string,QUINCY,QUINCY,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-gText_DefaultNameKimmy,,src/strings.c,80,,c,ui_string,KIMMY,KIMMY,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-gText_DefaultNameTiara,,src/strings.c,81,,c,ui_string,TIARA,TIARA,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-gText_DefaultNameBella,,src/strings.c,82,,c,ui_string,BELLA,BELLA,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-gText_DefaultNameJayla,,src/strings.c,83,,c,ui_string,JAYLA,JAYLA,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-gText_DefaultNameAllie,,src/strings.c,84,,c,ui_string,ALLIE,ALLIE,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-gText_DefaultNameLianna,,src/strings.c,85,,c,ui_string,LIANNA,LIANNA,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-gText_DefaultNameSara,,src/strings.c,86,,c,ui_string,SARA,SARA,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-gText_DefaultNameMonica,,src/strings.c,87,,c,ui_string,MONICA,MONICA,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-gText_DefaultNameCamila,,src/strings.c,88,,c,ui_string,CAMILA,CAMILA,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-gText_DefaultNameAubree,,src/strings.c,89,,c,ui_string,AUBREE,AUBREE,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-gText_DefaultNameRuthie,,src/strings.c,90,,c,ui_string,RUTHIE,RUTHIE,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-gText_DefaultNameHazel,,src/strings.c,91,,c,ui_string,HAZEL,HAZEL,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-gText_DefaultNameNadine,,src/strings.c,92,,c,ui_string,NADINE,NADINE,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-gText_DefaultNameTanja,,src/strings.c,93,,c,ui_string,TANJA,TANJA,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-gText_DefaultNameYasmin,,src/strings.c,94,,c,ui_string,YASMIN,YASMIN,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-gText_DefaultNameNicola,,src/strings.c,95,,c,ui_string,NICOLA,NICOLA,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-gText_DefaultNameLillie,,src/strings.c,96,,c,ui_string,LILLIE,LILLIE,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-gText_DefaultNameTerra,,src/strings.c,97,,c,ui_string,TERRA,TERRA,CURATED,,,,"reviewed, no change needed",NOT_STARTED
-gText_DefaultNameLucy,,src/strings.c,98,,c,ui_string,LUCY,GARDULLA,CURATED,LUCY,,24,reviewed AUTO draft,NOT_STARTED
-gText_DefaultNameHalie,,src/strings.c,99,,c,ui_string,HALIE,HALIE,CURATED,,,,"reviewed, no change needed",NOT_STARTED
+gText_DefaultNameStu,,src/strings.c,60,,c,ui_string,STU,STU,CURATED,,,,"removed from the game 2026-11-03: a blank name now defaults to KAEL (boy) or MIRA (girl), gText_DefaultNameKael / gText_DefaultNameMira in src/strings.c",NOT_STARTED
+gText_DefaultNameMilton,,src/strings.c,61,,c,ui_string,MILTON,MILTON,CURATED,,,,"removed from the game 2026-11-03: a blank name now defaults to KAEL (boy) or MIRA (girl), gText_DefaultNameKael / gText_DefaultNameMira in src/strings.c",NOT_STARTED
+gText_DefaultNameTom,,src/strings.c,62,,c,ui_string,TOM,TOM,CURATED,,,,"removed from the game 2026-11-03: a blank name now defaults to KAEL (boy) or MIRA (girl), gText_DefaultNameKael / gText_DefaultNameMira in src/strings.c",NOT_STARTED
+gText_DefaultNameKenny,,src/strings.c,63,,c,ui_string,KENNY,KENNY,CURATED,,,,"removed from the game 2026-11-03: a blank name now defaults to KAEL (boy) or MIRA (girl), gText_DefaultNameKael / gText_DefaultNameMira in src/strings.c",NOT_STARTED
+gText_DefaultNameReid,,src/strings.c,64,,c,ui_string,REID,REID,CURATED,,,,"removed from the game 2026-11-03: a blank name now defaults to KAEL (boy) or MIRA (girl), gText_DefaultNameKael / gText_DefaultNameMira in src/strings.c",NOT_STARTED
+gText_DefaultNameJude,,src/strings.c,65,,c,ui_string,JUDE,JUDE,CURATED,,,,"removed from the game 2026-11-03: a blank name now defaults to KAEL (boy) or MIRA (girl), gText_DefaultNameKael / gText_DefaultNameMira in src/strings.c",NOT_STARTED
+gText_DefaultNameJaxson,,src/strings.c,66,,c,ui_string,JAXSON,JAXSON,CURATED,,,,"removed from the game 2026-11-03: a blank name now defaults to KAEL (boy) or MIRA (girl), gText_DefaultNameKael / gText_DefaultNameMira in src/strings.c",NOT_STARTED
+gText_DefaultNameEaston,,src/strings.c,67,,c,ui_string,EASTON,EASTON,CURATED,,,,"removed from the game 2026-11-03: a blank name now defaults to KAEL (boy) or MIRA (girl), gText_DefaultNameKael / gText_DefaultNameMira in src/strings.c",NOT_STARTED
+gText_DefaultNameWalker,,src/strings.c,68,,c,ui_string,WALKER,WALKER,CURATED,,,,"removed from the game 2026-11-03: a blank name now defaults to KAEL (boy) or MIRA (girl), gText_DefaultNameKael / gText_DefaultNameMira in src/strings.c",NOT_STARTED
+gText_DefaultNameTeru,,src/strings.c,69,,c,ui_string,TERU,TERU,CURATED,,,,"removed from the game 2026-11-03: a blank name now defaults to KAEL (boy) or MIRA (girl), gText_DefaultNameKael / gText_DefaultNameMira in src/strings.c",NOT_STARTED
+gText_DefaultNameJohnny,,src/strings.c,70,,c,ui_string,JOHNNY,JOHNNY,CURATED,,,,"removed from the game 2026-11-03: a blank name now defaults to KAEL (boy) or MIRA (girl), gText_DefaultNameKael / gText_DefaultNameMira in src/strings.c",NOT_STARTED
+gText_DefaultNameBrett,,src/strings.c,71,,c,ui_string,BRETT,BRETT,CURATED,,,,"removed from the game 2026-11-03: a blank name now defaults to KAEL (boy) or MIRA (girl), gText_DefaultNameKael / gText_DefaultNameMira in src/strings.c",NOT_STARTED
+gText_DefaultNameSeth,,src/strings.c,72,,c,ui_string,SETH,SETH,CURATED,,,,"removed from the game 2026-11-03: a blank name now defaults to KAEL (boy) or MIRA (girl), gText_DefaultNameKael / gText_DefaultNameMira in src/strings.c",NOT_STARTED
+gText_DefaultNameTerry,,src/strings.c,73,,c,ui_string,TERRY,TERRY,CURATED,,,,"removed from the game 2026-11-03: a blank name now defaults to KAEL (boy) or MIRA (girl), gText_DefaultNameKael / gText_DefaultNameMira in src/strings.c",NOT_STARTED
+gText_DefaultNameCasey,,src/strings.c,74,,c,ui_string,CASEY,CASEY,CURATED,,,,"removed from the game 2026-11-03: a blank name now defaults to KAEL (boy) or MIRA (girl), gText_DefaultNameKael / gText_DefaultNameMira in src/strings.c",NOT_STARTED
+gText_DefaultNameDarren,,src/strings.c,75,,c,ui_string,DARREN,DARREN,CURATED,,,,"removed from the game 2026-11-03: a blank name now defaults to KAEL (boy) or MIRA (girl), gText_DefaultNameKael / gText_DefaultNameMira in src/strings.c",NOT_STARTED
+gText_DefaultNameLandon,,src/strings.c,76,,c,ui_string,LANDON,LANDON,CURATED,,,,"removed from the game 2026-11-03: a blank name now defaults to KAEL (boy) or MIRA (girl), gText_DefaultNameKael / gText_DefaultNameMira in src/strings.c",NOT_STARTED
+gText_DefaultNameCollin,,src/strings.c,77,,c,ui_string,COLLIN,COLLIN,CURATED,,,,"removed from the game 2026-11-03: a blank name now defaults to KAEL (boy) or MIRA (girl), gText_DefaultNameKael / gText_DefaultNameMira in src/strings.c",NOT_STARTED
+gText_DefaultNameStanley,,src/strings.c,78,,c,ui_string,STANLEY,STANLEY,CURATED,,,,"removed from the game 2026-11-03: a blank name now defaults to KAEL (boy) or MIRA (girl), gText_DefaultNameKael / gText_DefaultNameMira in src/strings.c",NOT_STARTED
+gText_DefaultNameQuincy,,src/strings.c,79,,c,ui_string,QUINCY,QUINCY,CURATED,,,,"removed from the game 2026-11-03: a blank name now defaults to KAEL (boy) or MIRA (girl), gText_DefaultNameKael / gText_DefaultNameMira in src/strings.c",NOT_STARTED
+gText_DefaultNameKimmy,,src/strings.c,80,,c,ui_string,KIMMY,KIMMY,CURATED,,,,"removed from the game 2026-11-03: a blank name now defaults to KAEL (boy) or MIRA (girl), gText_DefaultNameKael / gText_DefaultNameMira in src/strings.c",NOT_STARTED
+gText_DefaultNameTiara,,src/strings.c,81,,c,ui_string,TIARA,TIARA,CURATED,,,,"removed from the game 2026-11-03: a blank name now defaults to KAEL (boy) or MIRA (girl), gText_DefaultNameKael / gText_DefaultNameMira in src/strings.c",NOT_STARTED
+gText_DefaultNameBella,,src/strings.c,82,,c,ui_string,BELLA,BELLA,CURATED,,,,"removed from the game 2026-11-03: a blank name now defaults to KAEL (boy) or MIRA (girl), gText_DefaultNameKael / gText_DefaultNameMira in src/strings.c",NOT_STARTED
+gText_DefaultNameJayla,,src/strings.c,83,,c,ui_string,JAYLA,JAYLA,CURATED,,,,"removed from the game 2026-11-03: a blank name now defaults to KAEL (boy) or MIRA (girl), gText_DefaultNameKael / gText_DefaultNameMira in src/strings.c",NOT_STARTED
+gText_DefaultNameAllie,,src/strings.c,84,,c,ui_string,ALLIE,ALLIE,CURATED,,,,"removed from the game 2026-11-03: a blank name now defaults to KAEL (boy) or MIRA (girl), gText_DefaultNameKael / gText_DefaultNameMira in src/strings.c",NOT_STARTED
+gText_DefaultNameLianna,,src/strings.c,85,,c,ui_string,LIANNA,LIANNA,CURATED,,,,"removed from the game 2026-11-03: a blank name now defaults to KAEL (boy) or MIRA (girl), gText_DefaultNameKael / gText_DefaultNameMira in src/strings.c",NOT_STARTED
+gText_DefaultNameSara,,src/strings.c,86,,c,ui_string,SARA,SARA,CURATED,,,,"removed from the game 2026-11-03: a blank name now defaults to KAEL (boy) or MIRA (girl), gText_DefaultNameKael / gText_DefaultNameMira in src/strings.c",NOT_STARTED
+gText_DefaultNameMonica,,src/strings.c,87,,c,ui_string,MONICA,MONICA,CURATED,,,,"removed from the game 2026-11-03: a blank name now defaults to KAEL (boy) or MIRA (girl), gText_DefaultNameKael / gText_DefaultNameMira in src/strings.c",NOT_STARTED
+gText_DefaultNameCamila,,src/strings.c,88,,c,ui_string,CAMILA,CAMILA,CURATED,,,,"removed from the game 2026-11-03: a blank name now defaults to KAEL (boy) or MIRA (girl), gText_DefaultNameKael / gText_DefaultNameMira in src/strings.c",NOT_STARTED
+gText_DefaultNameAubree,,src/strings.c,89,,c,ui_string,AUBREE,AUBREE,CURATED,,,,"removed from the game 2026-11-03: a blank name now defaults to KAEL (boy) or MIRA (girl), gText_DefaultNameKael / gText_DefaultNameMira in src/strings.c",NOT_STARTED
+gText_DefaultNameRuthie,,src/strings.c,90,,c,ui_string,RUTHIE,RUTHIE,CURATED,,,,"removed from the game 2026-11-03: a blank name now defaults to KAEL (boy) or MIRA (girl), gText_DefaultNameKael / gText_DefaultNameMira in src/strings.c",NOT_STARTED
+gText_DefaultNameHazel,,src/strings.c,91,,c,ui_string,HAZEL,HAZEL,CURATED,,,,"removed from the game 2026-11-03: a blank name now defaults to KAEL (boy) or MIRA (girl), gText_DefaultNameKael / gText_DefaultNameMira in src/strings.c",NOT_STARTED
+gText_DefaultNameNadine,,src/strings.c,92,,c,ui_string,NADINE,NADINE,CURATED,,,,"removed from the game 2026-11-03: a blank name now defaults to KAEL (boy) or MIRA (girl), gText_DefaultNameKael / gText_DefaultNameMira in src/strings.c",NOT_STARTED
+gText_DefaultNameTanja,,src/strings.c,93,,c,ui_string,TANJA,TANJA,CURATED,,,,"removed from the game 2026-11-03: a blank name now defaults to KAEL (boy) or MIRA (girl), gText_DefaultNameKael / gText_DefaultNameMira in src/strings.c",NOT_STARTED
+gText_DefaultNameYasmin,,src/strings.c,94,,c,ui_string,YASMIN,YASMIN,CURATED,,,,"removed from the game 2026-11-03: a blank name now defaults to KAEL (boy) or MIRA (girl), gText_DefaultNameKael / gText_DefaultNameMira in src/strings.c",NOT_STARTED
+gText_DefaultNameNicola,,src/strings.c,95,,c,ui_string,NICOLA,NICOLA,CURATED,,,,"removed from the game 2026-11-03: a blank name now defaults to KAEL (boy) or MIRA (girl), gText_DefaultNameKael / gText_DefaultNameMira in src/strings.c",NOT_STARTED
+gText_DefaultNameLillie,,src/strings.c,96,,c,ui_string,LILLIE,LILLIE,CURATED,,,,"removed from the game 2026-11-03: a blank name now defaults to KAEL (boy) or MIRA (girl), gText_DefaultNameKael / gText_DefaultNameMira in src/strings.c",NOT_STARTED
+gText_DefaultNameTerra,,src/strings.c,97,,c,ui_string,TERRA,TERRA,CURATED,,,,"removed from the game 2026-11-03: a blank name now defaults to KAEL (boy) or MIRA (girl), gText_DefaultNameKael / gText_DefaultNameMira in src/strings.c",NOT_STARTED
+gText_DefaultNameLucy,,src/strings.c,98,,c,ui_string,LUCY,GARDULLA,CURATED,LUCY,,24,"removed from the game 2026-11-03: a blank name now defaults to KAEL (boy) or MIRA (girl), gText_DefaultNameKael / gText_DefaultNameMira in src/strings.c",NOT_STARTED
+gText_DefaultNameHalie,,src/strings.c,99,,c,ui_string,HALIE,HALIE,CURATED,,,,"removed from the game 2026-11-03: a blank name now defaults to KAEL (boy) or MIRA (girl), gText_DefaultNameKael / gText_DefaultNameMira in src/strings.c",NOT_STARTED
 gText_ThisIsAPokemon,,src/strings.c,100,,c,ui_string,This is what we call a “POKéMON.”{PAUSE 96}\p,This is what we call a “COMPANION.”{PAUSE 96}\p,CURATED,POKéMON,,12,reviewed AUTO draft,NOT_STARTED
 gText_5MarksPokemon,,src/strings.c,101,,c,ui_string,????? POKéMON,????? COMPANION,CURATED,POKéMON,,12,reviewed AUTO draft,NOT_STARTED
 gText_UnkHeight,,src/strings.c,102,,c,ui_string,{CLEAR_TO 12}??'??”,{CLEAR_TO 12}??'??”,CURATED,,,,"reviewed, no change needed",NOT_STARTED

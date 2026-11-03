@@ -127,6 +127,15 @@ in `../game`. Every `source_file` is a path relative to `../game`.
   removing life buoys from Star Destroyer rooms). Read it before porting any tileset.
 - [`bible/PALETTE.md`](bible/PALETTE.md) is the chosen color themes (title screen, factions, HUD and menus), enforced by the art tools through `tools/palette-enforcer`; the hardware rules are in [`../tools/PALETTES.md`](../tools/PALETTES.md).
 
+## Character names in the game
+
+The player, the rival and the professor carry their Star Wars names in every line of `../game` the player
+sees: BRENDAN is KAEL, MAY is MIRA, PROF. BIRCH is PROF. KORR (and Pyramid ace BRANDON is DEXTER). A blank
+name at the start defaults to KAEL (boy) or MIRA (girl). Code identifiers (flags, map folders, labels such as
+`LittlerootTown_BrendansHouse_1F`) keep the Emerald names; the player never sees them.
+`mapping/name_refs.csv` lists every reference with its file and line; re-run
+`python3 tools/scan_name_refs.py --check` after any change to `../game` text (it fails if an Emerald name is back).
+
 ## Sound and visual effects
 
 `tools/scan_game_assets.py` walks `../game` and writes `mapping/asset_inventory.csv` (every song, sound effect, cry and
