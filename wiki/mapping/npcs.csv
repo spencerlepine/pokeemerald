@@ -197,3 +197,12 @@ npc:rusturf-tunnel:1,net:character-fixer,RusturfTunnel_EventScript_ClearTunnelSc
 npc:mauville-city-gym:1,character:wattson,,checked 2026-11-03; name match (MauvilleCity_Gym_EventScript_Wattson)
 npc:mauville-city:8,character:wattson,,checked 2026-11-03; name match (MauvilleCity_EventScript_Wattson)
 npc:fortree-city-gym:1,character:winona,,checked 2026-11-03; name match (FortreeCity_Gym_EventScript_Winona)
+npc:fallarbor-town:3,net:character-nien-nunb,,"mapping/people.csv, 2026-11-03"
+npc:lilycove-city:7,net:character-lobot,,"mapping/people.csv, 2026-11-03"
+npc:mossdeep-city:1,net:character-wedge,,"mapping/people.csv, 2026-11-03"
+npc:mossdeep-city:7,net:character-janson,,"mapping/people.csv, 2026-11-03"
+npc:mossdeep-city-space-center-1f:3,net:character-hobbie,,"mapping/people.csv, 2026-11-03"
+npc:mossdeep-city-space-center-1f:2,net:character-zev,,"mapping/people.csv, 2026-11-03"
+npc:mossdeep-city-space-center-2f:1,net:character-dak,,"mapping/people.csv, 2026-11-03"
+npc:rustboro-city-devon-corp-3f:2,net:character-c-3po,,"mapping/people.csv, 2026-11-03"
+npc:rustboro-city-devon-corp-2f:3,net:character-r2-d2,,"mapping/people.csv, 2026-11-03"

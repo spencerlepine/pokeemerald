@@ -144,6 +144,46 @@ Full list with ids and trainer links: `mapping/characters.csv`.
 | Pokémon Center nurse | **2-1B** | Medical droid. |
 | Frontier Brains | Bounty hunters: **Aurra Sing, Dengar, Zuckuss, 4-LOM, IG-88, Gardulla the Hutt, Dexter Jettster** | Lando hires them for the Grand Arena. |
 
+### The must-have cast (owner's list, placed 2026-11-03)
+
+Every named person below is a row: `mapping/characters.csv` for Emerald's slots, `net:character-*` in
+`mapping/net_new.csv` for the rest, and `mapping/people.csv` for where each one stands and what they say.
+Nobody on this list is ever a companion.
+
+| Who | Where | As |
+|---|---|---|
+| C-3PO, R2-D2 | House Organa's tower, Bestine | NPCs beside Sen. Organa and the StarNAV bench |
+| Jawas | Tatooine routes, Jabba's Palace | JAWA trainers (Bug Catcher class) and a droid seller |
+| Tusken Raiders | Ben's Hut, Tusken Ruins | RAIDER trainer class (`net:trainer-class-raider`) |
+| Sandtroopers | Tosche Station, Mos Eisley | NPC patrols in desert cloaks (`net:walker-sandtrooper`) |
+| Stormtroopers | Sullust, Mustafar, Jedha, Yavin 4, the Death Star | STORMTROOPER trainers (Team Magma's slots) |
+| Jar Jar Binks | six stops along the main path | a traveller, one planet ahead (`net:jar-jar-traveller`) |
+| Boba Fett | Route 121, Jedha summit, Route 134, Crystal Caves; the Hutt Hideout | bounty-hunt boss (`net:boba-fett-hunt`) |
+| Watto | Mos Espa | Arena Leader (Electric) |
+| Darth Maul | Ilum (vision); Ben's Hut after the credits | the First Trial; a real duel (`net:maul-duel`) |
+| Vader / Anakin | Mustafar Peak, Fortress Vader, the Launch Tower; Ilum | the Empire's leader; the Fourth Trial |
+| Sebulba | the Mos Espa grandstand | SWOOP RACER boss (`net:podrace-sebulba`) |
+| Jabba | the Spacer Museum, his palace, the Hutt Hideout | Cartel boss |
+| Leia | Shadowlands, Starfall, the Launch Tower, the Hall of Fame | mentor and courier |
+| Han, Chewbacca | Route 104, the Falcon, the Cantina; Rwookrrorro | pilot; co-pilot at home |
+| Yoda | Dagobah | Arena Leader (Water) |
+| Ahsoka | the Mortis Gate | a voice between worlds, lines only |
+| Obi-Wan | Ben's Hut, the Cave of Evil, Ilum | hermit; the final battle |
+| Dooku, Grievous | the Mining Facility; the Cave of Evil | a holocron (`net:relic-dooku`); a vision (`net:vision-grievous`) |
+| Luke | Mos Entha, Mos Espa, Crystal Caves | the rival Wally was |
+| Commander Cody | Tipoca City's cloning hall | drill master, gives a FOCUS BAND |
+| Captain Rex | the Endor clearing | Rebel commando trainer |
+| Director Krennic, Piett, Ozzel, Needa, Motti, Tagge | the Death Star | officers; Krennic is the last battle |
+| K-2SO | the Death Star hangar | the Rebel infiltrator |
+| Palpatine | the Death Star command deck | a hologram, never fought |
+| General Veers | Mustafar Peak, the Mining Facility, Fortress Vader, the Launch Tower | Vader's field commander |
+| Rieekan, Derlin | Hoth | the survey (`net:hoth-survey`) |
+| Lobot | Cloud City | opens the refinery (`net:tibanna-refinery`) |
+| Wedge, Janson, Hobbie, Zev, Dak | Yavin 4 | Rebel pilots, lines only |
+| Chirrut, Baze | NiJedha | the Guardians of the Whills (`net:nijedha`) |
+| Nien Nunb | Inyusu Tor | Sullustan pilot, lines only |
+| Bib Fortuna, Salacious Crumb, Malakili, Bossk | Jabba's Palace | the court |
+
 ### Everyone else
 
 Generic trainers are species, droids and jobs from the films, chosen to fit the planet they stand on: Ugnaught miners,

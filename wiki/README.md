@@ -114,6 +114,7 @@ and field-effect ids are table indexes, so deleting a ghost keeps its slot (poin
 | `timeline_events.csv` | The 45 story events, rewritten. |
 | `net_new.csv` | Net-new content with placeholder, dependencies and balance notes. |
 | `area_progression.csv` | Emerald's balance table (levels, badges, gating) with planet and new map titles, plus every net-new area from `mapping/area_progression_extra.csv` (`net_id` names its design row). |
+| `people.csv` | Every person placed by hand in the world (`mapping/people.csv`): new-area NPCs, trainers with parties, bosses, the must-have cast, with planet, map id, level band and the band check. Query: `grep ',boss,' database/people.csv`. |
 | `planets.csv` | One row per planet: role (`main`, `side`, `post`), act, badges on arrival and the hyperlane in (`mapping/planets.csv`), with the badge, trainer and wild bands read from `area_progression.csv`. |
 | `species_habitats.csv` | Why each wild companion lives where Emerald's encounter tables put it. Tables are unchanged. |
 | `sand_skim.csv`, `dune_sea_encounters.csv` | SAND SKIM, the Dune Sea field move: which species learn it (from `mapping/sand_skim_rules.csv`) and the Dune Sea's own wild table on each Tatooine map (from `mapping/dune_sea_swaps.csv`; no fishing there). Built by `tools/sand_skim.py`, which also checks the tables and the SAND SKIM learnsets in `../game` (`--install` writes them); design in [`bible/NET_NEW_DESIGNS.md`](bible/NET_NEW_DESIGNS.md). |

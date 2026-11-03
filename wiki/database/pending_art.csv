@@ -4393,6 +4393,37 @@ net:tibanna-refinery,net_new,area,,,,,,net:tibanna-refinery:net_new,Tibanna Refi
 net:nijedha,net_new,area,,,,,,net:nijedha:net_new,NiJedha,NiJedha,,NEEDS_PLACEHOLDER,,placeholder: copy the art of map:verdanturf-town,NET_NEW,,,,,,NOT_STARTED
 net:kamino-cloning-hall,net_new,area,,,,,,net:kamino-cloning-hall:net_new,Tipoca City cloning hall,Tipoca City cloning hall,,NEEDS_PLACEHOLDER,,placeholder: copy the art of map:mossdeep-city-space-center-2f,NET_NEW,,,,,,NOT_STARTED
 net:jar-jar-traveller,net_new,character,,,,,,net:jar-jar-traveller:net_new,"JAR JAR BINKS, the traveller","JAR JAR BINKS, the traveller",,NEEDS_PLACEHOLDER,,placeholder: copy the art of npc:oldale-town:1,NET_NEW,,,,,,NOT_STARTED
+net:character-c-3po,net_new,character,,,,,,net:character-c-3po:net_new,C-3PO,C-3PO,,NEEDS_PLACEHOLDER,,placeholder: copy the art of npc:rustboro-city-devon-corp-3f:2,NET_NEW,,,,,,NOT_STARTED
+net:character-r2-d2,net_new,character,,,,,,net:character-r2-d2:net_new,R2-D2,R2-D2,,NEEDS_PLACEHOLDER,,placeholder: copy the art of npc:rustboro-city-devon-corp-2f:3,NET_NEW,,,,,,NOT_STARTED
+net:character-sebulba,net_new,character,,,,,,net:character-sebulba:net_new,SEBULBA,SEBULBA,,NEEDS_PLACEHOLDER,,placeholder: copy the art of trainer:jasmine,NET_NEW,,,,,,NOT_STARTED
+net:character-bib-fortuna,net_new,character,,,,,,net:character-bib-fortuna:net_new,BIB FORTUNA,BIB FORTUNA,,NEEDS_PLACEHOLDER,,placeholder: copy the art of npc:aqua-hideout-1f:1,NET_NEW,,,,,,NOT_STARTED
+net:character-salacious-crumb,net_new,character,,,,,,net:character-salacious-crumb:net_new,SALACIOUS CRUMB,SALACIOUS CRUMB,,NEEDS_PLACEHOLDER,,placeholder: copy the art of npc:aqua-hideout-1f:1,NET_NEW,,,,,,NOT_STARTED
+net:character-malakili,net_new,character,,,,,,net:character-malakili:net_new,MALAKILI,MALAKILI,,NEEDS_PLACEHOLDER,,placeholder: copy the art of npc:aqua-hideout-1f:1,NET_NEW,,,,,,NOT_STARTED
+net:character-rex,net_new,character,,,,,,net:character-rex:net_new,REX,REX,,NEEDS_PLACEHOLDER,,placeholder: copy the art of trainer:braxton,NET_NEW,,,,,,NOT_STARTED
+net:character-lobot,net_new,character,,,,,,net:character-lobot:net_new,LOBOT,LOBOT,,NEEDS_PLACEHOLDER,,placeholder: copy the art of npc:lilycove-city:7,NET_NEW,,,,,,NOT_STARTED
+net:character-chirrut,net_new,character,,,,,,net:character-chirrut:net_new,CHIRRUT,CHIRRUT,,NEEDS_PLACEHOLDER,,placeholder: copy the art of npc:mt-pyre-summit:1,NET_NEW,,,,,,NOT_STARTED
+net:character-baze,net_new,character,,,,,,net:character-baze:net_new,BAZE,BAZE,,NEEDS_PLACEHOLDER,,placeholder: copy the art of npc:mt-pyre-summit:1,NET_NEW,,,,,,NOT_STARTED
+net:character-kyber-trader,net_new,character,,,,,,net:character-kyber-trader:net_new,KYBER TRADER,KYBER TRADER,,NEEDS_PLACEHOLDER,,placeholder: copy the art of npc:oldale-town:2,NET_NEW,,,,,,NOT_STARTED
+net:character-rieekan,net_new,character,,,,,,net:character-rieekan:net_new,RIEEKAN,RIEEKAN,,NEEDS_PLACEHOLDER,,placeholder: copy the art of npc:mossdeep-city-space-center-1f:4,NET_NEW,,,,,,NOT_STARTED
+net:character-derlin,net_new,character,,,,,,net:character-derlin:net_new,DERLIN,DERLIN,,NEEDS_PLACEHOLDER,,placeholder: copy the art of npc:mossdeep-city:1,NET_NEW,,,,,,NOT_STARTED
+net:character-cody,net_new,character,,,,,,net:character-cody:net_new,CODY,CODY,,NEEDS_PLACEHOLDER,,placeholder: copy the art of npc:mossdeep-city:15,NET_NEW,,,,,,NOT_STARTED
+net:character-wedge,net_new,character,,,,,,net:character-wedge:net_new,WEDGE,WEDGE,,NEEDS_PLACEHOLDER,,placeholder: copy the art of npc:mossdeep-city:1,NET_NEW,,,,,,NOT_STARTED
+net:character-janson,net_new,character,,,,,,net:character-janson:net_new,JANSON,JANSON,,NEEDS_PLACEHOLDER,,placeholder: copy the art of npc:mossdeep-city:7,NET_NEW,,,,,,NOT_STARTED
+net:character-hobbie,net_new,character,,,,,,net:character-hobbie:net_new,HOBBIE,HOBBIE,,NEEDS_PLACEHOLDER,,placeholder: copy the art of npc:mossdeep-city-space-center-1f:3,NET_NEW,,,,,,NOT_STARTED
+net:character-zev,net_new,character,,,,,,net:character-zev:net_new,ZEV,ZEV,,NEEDS_PLACEHOLDER,,placeholder: copy the art of npc:mossdeep-city-space-center-1f:2,NET_NEW,,,,,,NOT_STARTED
+net:character-dak,net_new,character,,,,,,net:character-dak:net_new,DAK,DAK,,NEEDS_PLACEHOLDER,,placeholder: copy the art of npc:mossdeep-city-space-center-2f:1,NET_NEW,,,,,,NOT_STARTED
+net:character-nien-nunb,net_new,character,,,,,,net:character-nien-nunb:net_new,NIEN NUNB,NIEN NUNB,,NEEDS_PLACEHOLDER,,placeholder: copy the art of npc:fallarbor-town:3,NET_NEW,,,,,,NOT_STARTED
+net:character-piett,net_new,character,,,,,,net:character-piett:net_new,PIETT,PIETT,,NEEDS_PLACEHOLDER,,placeholder: copy the art of trainer:tabitha-mossdeep,NET_NEW,,,,,,NOT_STARTED
+net:character-ozzel,net_new,character,,,,,,net:character-ozzel:net_new,OZZEL,OZZEL,,NEEDS_PLACEHOLDER,,placeholder: copy the art of trainer:tabitha-mossdeep,NET_NEW,,,,,,NOT_STARTED
+net:character-needa,net_new,character,,,,,,net:character-needa:net_new,NEEDA,NEEDA,,NEEDS_PLACEHOLDER,,placeholder: copy the art of trainer:tabitha-mossdeep,NET_NEW,,,,,,NOT_STARTED
+net:character-krennic,net_new,character,,,,,,net:character-krennic:net_new,KRENNIC,KRENNIC,,NEEDS_PLACEHOLDER,,placeholder: copy the art of trainer:maxie-mossdeep,NET_NEW,,,,,,NOT_STARTED
+net:character-k-2so,net_new,character,,,,,,net:character-k-2so:net_new,K-2SO,K-2SO,,NEEDS_PLACEHOLDER,,placeholder: copy the art of npc:mossdeep-city-space-center-1f:1,NET_NEW,,,,,,NOT_STARTED
+net:character-palpatine,net_new,character,,,,,,net:character-palpatine:net_new,PALPATINE,PALPATINE,,NEEDS_PLACEHOLDER,,placeholder: copy the art of npc:magma-hideout-4f:1,NET_NEW,,,,,,NOT_STARTED
+net:character-ahsoka,net_new,character,,,,,,net:character-ahsoka:net_new,AHSOKA,AHSOKA,,NEEDS_PLACEHOLDER,,placeholder: copy the art of npc:mt-pyre-summit:3,NET_NEW,,,,,,NOT_STARTED
+net:relic-dooku,net_new,cutscene,,,,,,net:relic-dooku:net_new,Dooku's holocron,Dooku's holocron,,NEEDS_PLACEHOLDER,,placeholder: copy the art of npc:mossdeep-city-space-center-2f:3,NET_NEW,,,,,,NOT_STARTED
+net:vision-grievous,net_new,cutscene,,,,,,net:vision-grievous:net_new,Vision of Grievous,Vision of Grievous,,NEEDS_PLACEHOLDER,,placeholder: copy the art of npc:magma-hideout-4f:1,NET_NEW,,,,,,NOT_STARTED
+net:walker-sandtrooper,net_new,object_graphics,,,,,,net:walker-sandtrooper:net_new,Walker: sandtrooper,Walker: sandtrooper,,NEEDS_PLACEHOLDER,,placeholder: copy the art of object-gfx:magma-member-m,NET_NEW,,,,,,NOT_STARTED
+net:walker-jar-jar,net_new,object_graphics,,,,,,net:walker-jar-jar:net_new,Walker: Jar Jar Binks,Walker: Jar Jar Binks,,NEEDS_PLACEHOLDER,,placeholder: copy the art of object-gfx:gentleman,NET_NEW,,,,,,NOT_STARTED
 brand:rom-title,branding,,Makefile,,,,,,,"ROM header title 'POKEMON EMER' (12 chars, shown by emulators and flash carts) → 'SW KYBER' (done in game/Makefile on 2026-11-01).",,NO_ART,,Not an image. Keep GAME_CODE BPEE (Makefile:3): emulators use it to pick the save type and RTC.,HOTSWAP,,2,,,,NOT_STARTED
 vfx:General_CastformChange,vfx_battle_anim,general,data/battle_anim_scripts.s,,,,,,,Keep the animation; its sprites are redrawn through pending_art (battle_anims).,,KEEP_ANIM,,,KEEP,,10574,,,,NOT_STARTED
 vfx:General_DoomDesireHit,vfx_battle_anim,general,data/battle_anim_scripts.s,,,,,ANIM_TAG_EXPLOSION|SE_M_CONFUSE_RAY|SE_M_SELF_DESTRUCT,,Keep the animation; its sprites are redrawn through pending_art (battle_anims).,,KEEP_ANIM,,,KEEP,,10870,,,,NOT_STARTED

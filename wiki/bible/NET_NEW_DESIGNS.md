@@ -585,3 +585,18 @@ game already sells, and the two evolution items already stocked in Pirin.
 - **Canon:** after the Clone Wars Jar Jar lost his seat and became a street performer on Naboo (Aftermath: Empire's
   End); here he spends 2 BBY wandering the Outer Rim.
 - **Placeholder:** a Gentleman sprite until `net:walker-jar-jar` is drawn (step 3).
+
+## People (`mapping/people.csv`)
+
+One row per person placed by hand in the world (step 3, 2026-11-03): every NPC, trainer, boss, story character,
+vision and relic in a new area, every must-have character taking over an Emerald object event (`npc_id`), and
+every new object on an Emerald map (`yaml_name` empty: still to be placed in the area's yaml). Columns: `area`
+(the world yaml), `yaml_name` and `yaml_index` (which person in that yaml), `npc_id`, `kind` (`npc`, `trainer`,
+`boss`, `story`, `wild`, `vision`, `relic`), `character`, `trainer_class`, `trainer_name` (10 characters at most),
+`party` (`species:<id>@<level>|...`), `flag`, `lines` (the one line that defines them) and `notes`.
+`tools/build.py` checks every id, that the person exists in the yaml, and that the party sits in the band of the
+area's map (`database/area_progression.csv`, five levels of slack; post-game up to 70), and writes
+`database/people.csv` with the planet, map id, band and the check. Trainer classes are Emerald's (STORMTROOPER,
+OFFICER, CARTEL THUG, WOOKIEE, PATHFINDER, CADET, VETERAN, SWOOP RACER, SITH LORD, SKIFF RIDER) plus
+RAIDER (`net:trainer-class-raider`). Placeholders: each `net:character-*` row names the Emerald trainer or
+object event whose pic, sprite and party it starts from.

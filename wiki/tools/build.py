@@ -981,6 +981,80 @@ def game_port(ents, net, texts, tl, art, audio):
 
 # --------------------------------------------------------------------------- main
 
+def _slug(camel: str) -> str:
+    """Emerald map folder name to the wiki map id (same rule as tools/blockout)."""
+    return re.sub(r"(?<=[a-z0-9])(?=[A-Z])", "-", camel.replace("_", "-")).lower()
+
+
+def people(hand: list[dict], ap: list[dict], known: set, rows: dict) -> list[dict]:
+    """mapping/people.csv checked and joined: the area exists in wiki/world, a named person is in its yaml
+    (`yaml_name`, with `yaml_index` when the name repeats), the character, class and species ids are known, and
+    a party sits inside the level band of the area's map (five levels of slack; post-game areas up to 70)."""
+    import yaml  # the world files are yaml, as for tools/blockout
+    world = ROOT / "world"
+    index = {r["area"]: r for r in read(world / "INDEX.csv")} if (world / "INDEX.csv").exists() else {}
+    paths = {q.stem: q for q in world.glob("*/*.yaml")} | {q.stem: q for q in world.glob("*/*/*.yaml")}
+    prog = {a["map_id"]: a for a in ap}
+    names_cache: dict[str, list[str]] = {}
+    out = []
+    for h in hand:
+        r = dict(h)
+        area, idx = r["area"], index.get(r["area"])
+        if not idx or area not in paths:
+            warn(f"mapping/people.csv: {r['person_id']} area {area} is not in wiki/world")
+            r.update(planet="", map_id="", band="", level_check="no area")
+            out.append(r)
+            continue
+        r["planet"] = idx["planet"]
+        map_id = "map:" + (area if idx["replaces"] == "new" else _slug(idx["replaces"]))
+        r["map_id"] = map_id
+        if r["yaml_name"]:
+            if area not in names_cache:
+                doc = yaml.safe_load(paths[area].open(encoding="utf-8"))
+                names_cache[area] = [p.get("name", "") for p in (doc.get("people") or [])]
+            same = [n for n in names_cache[area] if n == r["yaml_name"]]
+            want = int(r["yaml_index"] or 1)
+            if len(same) < want:
+                warn(f"mapping/people.csv: {r['person_id']} has no person {r['yaml_name']!r} #{want} in world/{paths[area].relative_to(world)}")
+        for col in ("character", "trainer_class"):
+            if r[col] and r[col] not in known:
+                warn(f"mapping/people.csv: {r['person_id']} {col} {r[col]} is not a known id")
+        if r["npc_id"] and r["npc_id"] not in known:
+            warn(f"mapping/people.csv: {r['person_id']} npc_id {r['npc_id']} is not a known object event")
+        if r["flag"] and r["flag"] not in known:
+            warn(f"mapping/people.csv: {r['person_id']} flag {r['flag']} is not a known flag")
+        if r["kind"] in ("trainer", "boss") and not r["trainer_class"]:
+            warn(f"mapping/people.csv: {r['person_id']} is a {r['kind']} with no trainer_class")
+        if r["trainer_name"] and len(r["trainer_name"]) > 10:
+            warn(f"mapping/people.csv: {r['person_id']} trainer_name {r['trainer_name']!r} is longer than 10")
+        levels = []
+        for m in [m for m in r["party"].split("|") if m]:
+            sid, _, lv = m.partition("@")
+            if sid not in known:
+                warn(f"mapping/people.csv: {r['person_id']} party species {sid} is not known")
+            if not lv.isdigit():
+                warn(f"mapping/people.csv: {r['person_id']} party member {m} has no level")
+            else:
+                levels.append(int(lv))
+        if len(levels) > 6:
+            warn(f"mapping/people.csv: {r['person_id']} party has more than 6")
+        a = prog.get(map_id)
+        band = f"{a['trainer_level_min']}-{a['trainer_level_max']}" if a and a["trainer_level_min"] else ""
+        r["band"] = band
+        if levels and a:
+            post = "sys-game-clear" in (a["requires"] or "") or "sys-game-clear" in (r["notes"] or "")
+            lo = int(a["trainer_level_min"]) - 5 if a["trainer_level_min"] else 0
+            hi = 70 if post else (int(a["trainer_level_max"]) + 5 if a["trainer_level_max"] else 70)
+            ok = lo <= min(levels) and max(levels) <= hi
+            r["level_check"] = "ok" if ok else f"levels {min(levels)}-{max(levels)} outside {lo}-{hi}"
+            if not ok:
+                warn(f"mapping/people.csv: {r['person_id']} {r['level_check']} ({map_id})")
+        else:
+            r["level_check"] = "ok" if not levels else "no band"
+        out.append(r)
+    return out
+
+
 def main() -> None:
     print("building emerald-sw-db")
     entities, by_id, mapping, sw_ids = load_inputs()
@@ -1130,6 +1204,11 @@ def main() -> None:
             ap.append(dict(a))
     ap_cols = list(ap[0].keys())
     write("area_progression.csv", ap, ap_cols)
+    # people: every person placed in the world by hand (mapping/people.csv), checked against the world files,
+    # the character and species ids and the level band of the area (database/people.csv)
+    if (MAPPING / "people.csv").exists():
+        people_rows = people(read(MAPPING / "people.csv"), ap, known, rows)
+        write("people.csv", people_rows)
     # planets: the hand table (role, act, arrival) plus the bands read from area_progression
     if (MAPPING / "planets.csv").exists():
         by_planet: dict[str, list[dict]] = {}
