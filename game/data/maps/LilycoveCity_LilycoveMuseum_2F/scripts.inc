@@ -92,14 +92,9 @@ LilycoveCity_LilycoveMuseum_2F_Movement_FaceExhibitHall:
 LilycoveCity_LilycoveMuseum_2F_EventScript_Curator::
 	lockall
 	goto_if_set FLAG_RECEIVED_GLASS_ORNAMENT, LilycoveCity_LilycoveMuseum_2F_EventScript_ReceivedGlassOrnament
-	specialvar VAR_0x8004, CountPlayerMuseumPaintings
-	switch VAR_0x8004
-	case 1, LilycoveCity_LilycoveMuseum_2F_EventScript_AddedPainting
-	case 2, LilycoveCity_LilycoveMuseum_2F_EventScript_AddedPainting
-	case 3, LilycoveCity_LilycoveMuseum_2F_EventScript_AddedPainting
-	case 4, LilycoveCity_LilycoveMuseum_2F_EventScript_AddedPainting
-	case 5, LilycoveCity_LilycoveMuseum_2F_EventScript_ThankPlayer
-	msgbox LilycoveCity_LilycoveMuseum_2F_Text_WishToFillExhibit, MSGBOX_NPC
+	applywaitmovement LOCALID_MUSEUM_2F_CURATOR, Common_Movement_FacePlayer
+	msgbox LilycoveCity_LilycoveMuseum_2F_Text_WishToFillExhibit, MSGBOX_DEFAULT
+	goto LilycoveCity_LilycoveMuseum_2F_EventScript_GiveGlassOrnament
 	end
 
 LilycoveCity_LilycoveMuseum_2F_EventScript_AddedPainting::
@@ -237,17 +232,16 @@ LilycoveCity_LilycoveMuseum_2F_Text_PleaseObtainPaintingsForExhibit:
 	.string "to monopolize the conversation.\p"
 	.string "Now, as you are young, and yet\n"
 	.string "obviously well traveled…\p"
-	.string "You must encounter lively COMPANIONS\n"
-	.string "and works of art depicting them.\p"
-	.string "If you were to come across such\n"
-	.string "a painting, may we ask you to obtain\l"
-	.string "the artist's permission to exhibit\l"
-	.string "it here?$"
+	.string "If you ever meet an artist who paints\n"
+	.string "lively COMPANIONS, do tell them\l"
+	.string "these walls are waiting for them.$"
 
 LilycoveCity_LilycoveMuseum_2F_Text_WishToFillExhibit:
 	.string "I wish to fill this exhibit hall with\n"
 	.string "modern and vibrant paintings of\l"
-	.string "COMPANIONS.$"
+	.string "COMPANIONS.\p"
+	.string "You listened to an old man's dream,\n"
+	.string "and that means a great deal to me.$"
 
 LilycoveCity_LilycoveMuseum_2F_Text_ThanksAddedNewPainting:
 	.string "Thanks to you, we've added a new\n"
