@@ -243,7 +243,7 @@ character:rival,MIRA / KAEL,code,KEEP,,,src/battle_controller_link_opponent.c,12
 character:rival,MIRA / KAEL,code,KEEP,,,src/battle_controller_link_partner.c,1129,,2,TRAINER_BACK_PIC_RUBY_SAPPHIRE_BRENDAN
 character:rival,MIRA / KAEL,code,KEEP,,,src/battle_controller_player.c,2280,,5,TRAINER_BACK_PIC_RUBY_SAPPHIRE_BRENDAN | TRAINER_BACK_PIC_BRENDAN
 character:rival,MIRA / KAEL,code,KEEP,,,src/battle_dome.c,4402,,1,FACILITY_CLASS_BRENDAN
-character:rival,MIRA / KAEL,code,KEEP,,,src/battle_main.c,4126,,3,STATE_SELECTION_SCRIPT_MAY_RUN
+character:rival,MIRA / KAEL,code,KEEP,,,src/battle_main.c,4127,,3,STATE_SELECTION_SCRIPT_MAY_RUN
 character:rival,MIRA / KAEL,code,KEEP,,,src/battle_tower.c,328,,12,RS_FACILITY_CLASS_BRENDAN_1 | FACILITY_CLASS_BRENDAN | RS_FACILITY_CLASS_BRENDAN_2 | FACILITY_CLASS_BRENDAN_2 | +8 more
 character:rival,MIRA / KAEL,code,KEEP,,,src/battle_transition.c,302,,16,sUnusedBrendan_Gfx | sOam_UnusedBrendanLass | sImageTable_UnusedBrendan | sSpriteAnim_UnusedBrendanLass | +3 more
 character:rival,MIRA / KAEL,code,KEEP,,,src/cable_car.c,790,,2,OBJ_EVENT_GFX_RIVAL_BRENDAN_NORMAL | OBJ_EVENT_GFX_RIVAL_MAY_NORMAL
@@ -369,7 +369,7 @@ character:prof-birch,PROF. KORR,code,KEEP,,,include/constants/flags.h,98,,17,FLA
 character:prof-birch,PROF. KORR,code,KEEP,,,include/constants/metatile_labels.h,392,,1,METATILE_Petalburg_Door_BirchsLab
 character:prof-birch,PROF. KORR,code,KEEP,,,include/constants/songs.h,322,,1,MUS_BIRCH_LAB
 character:prof-birch,PROF. KORR,code,KEEP,,,include/constants/vars.h,93,,3,VAR_BIRCH_STATE | VAR_BIRCH_LAB_STATE | VAR_REGISTER_BIRCH_STATE
-character:prof-birch,PROF. KORR,code,KEEP,,,include/event_scripts.h,552,,1,LittlerootTown_ProfessorBirchsLab_EventScript_ScottAboardSSTidalCall
+character:prof-birch,PROF. KORR,code,KEEP,,,include/event_scripts.h,553,,1,LittlerootTown_ProfessorBirchsLab_EventScript_ScottAboardSSTidalCall
 character:prof-birch,PROF. KORR,code,KEEP,,,include/field_effect.h,4,,4,gNewGameBirchObjectPaletteInfo | gNewGameBirchObjectTemplate | gNewGameBirchOamAttributes | AddNewGameBirchObject
 character:prof-birch,PROF. KORR,code,KEEP,,,include/match_call.h,8,,1,MATCH_CALL_TYPE_BIRCH
 character:prof-birch,PROF. KORR,code,KEEP,,,include/pokenav.h,189,,1,MC_HEADER_PROF_BIRCH
@@ -377,7 +377,7 @@ character:prof-birch,PROF. KORR,code,KEEP,,,include/starter_choose.h,4,,4,gBirch
 character:prof-birch,PROF. KORR,code,KEEP,,,include/strings.h,340,,34,gText_Birch_Welcome | gText_Birch_MainSpeech | gText_Birch_AndYouAre | gText_Birch_BoyOrGirl | +30 more
 character:prof-birch,PROF. KORR,code,KEEP,,,include/time_events.h,6,,1,UpdateBirchState
 character:prof-birch,PROF. KORR,code,KEEP,,,src/battle_controllers.c,42,,1,SetUpBattleVarsAndBirchZigzagoon
-character:prof-birch,PROF. KORR,code,KEEP,,,src/battle_main.c,684,,2,SetUpBattleVarsAndBirchZigzagoon | B_MSG_DONT_LEAVE_BIRCH
+character:prof-birch,PROF. KORR,code,KEEP,,,src/battle_main.c,685,,2,SetUpBattleVarsAndBirchZigzagoon | B_MSG_DONT_LEAVE_BIRCH
 character:prof-birch,PROF. KORR,code,KEEP,,,src/battle_message.c,734,,4,STRINGID_DONTLEAVEBIRCH | sText_DontLeaveBirch | B_MSG_DONT_LEAVE_BIRCH
 character:prof-birch,PROF. KORR,code,KEEP,,,src/birch_pc.c,27,,26,gBirchDexRatingText_LessThan10 | gBirchDexRatingText_LessThan20 | gBirchDexRatingText_LessThan30 | gBirchDexRatingText_LessThan40 | +17 more
 character:prof-birch,PROF. KORR,code,KEEP,,,src/clock.c,50,,1,UpdateBirchState
@@ -386,7 +386,7 @@ character:prof-birch,PROF. KORR,code,KEEP,,,src/data/object_events/object_event_
 character:prof-birch,PROF. KORR,code,KEEP,,,src/data/object_events/object_event_graphics_info.h,1217,,4,gObjectEventGraphicsInfo_ProfBirch | sPicTable_ProfBirch | gObjectEventGraphicsInfo_BirchsBag | sPicTable_BirchsBag
 character:prof-birch,PROF. KORR,code,KEEP,,,src/data/object_events/object_event_graphics_info_pointers.h,65,,6,gObjectEventGraphicsInfo_ProfBirch | gObjectEventGraphicsInfo_BirchsBag | OBJ_EVENT_GFX_PROF_BIRCH | OBJ_EVENT_GFX_BIRCHS_BAG
 character:prof-birch,PROF. KORR,code,KEEP,,,src/data/object_events/object_event_pic_tables.h,750,,12,sPicTable_ProfBirch | gObjectEventPic_ProfBirch | sPicTable_BirchsBag | gObjectEventPic_BirchsBag
-character:prof-birch,PROF. KORR,code,KEEP,,,src/field_control_avatar.c,582,,1,LittlerootTown_ProfessorBirchsLab_EventScript_ScottAboardSSTidalCall
+character:prof-birch,PROF. KORR,code,KEEP,,,src/field_control_avatar.c,586,,1,LittlerootTown_ProfessorBirchsLab_EventScript_ScottAboardSSTidalCall
 character:prof-birch,PROF. KORR,code,KEEP,,,src/field_door.c,34,,5,sDoorAnimTiles_BirchsLab | sDoorAnimPalettes_BirchsLab | METATILE_Petalburg_Door_BirchsLab
 character:prof-birch,PROF. KORR,code,KEEP,,,src/field_effect.c,245,,15,sNewGameBirch_Gfx | sNewGameBirch_Pal | sPicTable_NewGameBirch | sSpritePalette_NewGameBirch | +4 more
 character:prof-birch,PROF. KORR,code,KEEP,,,src/main_menu.c,91,,288,Task_NewGameBirchSpeech_Init | Task_NewGameBirchSpeech_WaitToShowBirch | Task_NewGameBirchSpeech_FadeInTarget1OutTarget2 | Task_NewGameBirchSpeech_FadePlatformOut | +70 more
@@ -409,7 +409,7 @@ character:brandon,DEXTER,code,KEEP,,,include/constants/trainers.h,107,,1,TRAINER
 character:brandon,DEXTER,code,KEEP,,,include/graphics.h,2960,,2,gTrainerFrontPic_PyramidKingBrandon | gTrainerPalette_PyramidKingBrandon
 character:brandon,DEXTER,code,KEEP,,,include/strings.h,1342,,4,gText_BrandonWonSilver | gText_BrandonDefeatSilver | gText_BrandonWonGold | gText_BrandonDefeatGold
 character:brandon,DEXTER,code,KEEP,,,src/data/graphics/trainers.h,265,,2,gTrainerFrontPic_PyramidKingBrandon | gTrainerPalette_PyramidKingBrandon
-character:brandon,DEXTER,code,KEEP,,,src/data/object_events/object_event_graphics.h,352,,1,gObjectEventPic_Brandon
+character:brandon,DEXTER,code,KEEP,,,src/data/object_events/object_event_graphics.h,354,,1,gObjectEventPic_Brandon
 character:brandon,DEXTER,code,KEEP,,,src/data/object_events/object_event_graphics_info.h,4523,,2,gObjectEventGraphicsInfo_Brandon | sPicTable_Brandon
 character:brandon,DEXTER,code,KEEP,,,src/data/object_events/object_event_graphics_info_pointers.h,233,,3,gObjectEventGraphicsInfo_Brandon | OBJ_EVENT_GFX_BRANDON
 character:brandon,DEXTER,code,KEEP,,,src/data/object_events/object_event_pic_tables.h,2092,,10,sPicTable_Brandon | gObjectEventPic_Brandon
