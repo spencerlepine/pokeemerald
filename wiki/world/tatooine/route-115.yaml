@@ -102,19 +102,19 @@ props:
   size: [2, 2]
 - name: Wrecked freighter
   art: art:tatooine:wrecked-freighter
-  at: [1, 12]
-  size: [6, 3]
+  at: [27, 3]
+  size: [8, 4]
+  facing: w
+- name: Hull debris
+  art: art:shared:hull-debris
+  at: [9, 14]
+  size: [2, 1]
   facing: e
 - name: Hull debris
   art: art:shared:hull-debris
-  at: [25, 12]
+  at: [8, 5]
   size: [2, 1]
-  facing: w
-- name: Hull debris
-  art: art:shared:hull-debris
-  at: [28, 44]
-  size: [2, 1]
-  facing: w
+  facing: e
 people:
 - name: Woman
   at: [18, 68]

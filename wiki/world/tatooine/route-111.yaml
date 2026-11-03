@@ -204,9 +204,9 @@ props:
   size: [2, 2]
 - name: Greater krayt skeleton
   art: art:tatooine:greater-krayt-skeleton
-  at: [30, 33]
-  size: [10, 2]
-  facing: w
+  at: [0, 101]
+  size: [14, 3]
+  facing: e
 - name: Hull debris
   art: art:shared:hull-debris
   at: [35, 69]

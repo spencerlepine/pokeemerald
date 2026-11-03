@@ -58,10 +58,15 @@ props:
   art: art:tatooine:dead-tree
   at: [77, 12]
   size: [2, 2]
+- name: Sandcrawler (far)
+  art: art:tatooine:sandcrawler-far
+  at: [40, 0]
+  size: [12, 3]
+  facing: w
 - name: Droid tank wreck
   art: art:shared:droid-tank-wreck
-  at: [24, 13]
-  size: [3, 2]
+  at: [20, 5]
+  size: [4, 3]
   facing: e
 people:
 - name: Man

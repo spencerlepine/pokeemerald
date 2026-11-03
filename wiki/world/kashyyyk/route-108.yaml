@@ -53,9 +53,9 @@ props:
   size: [1, 1]
 - name: Catamaran wreck
   art: art:kashyyyk:catamaran-wreck
-  at: [39, 0]
-  size: [3, 2]
-  facing: w
+  at: [15, 12]
+  size: [5, 3]
+  facing: e
 people:
 - name: Trainer Jiven
   at: [52, 13]

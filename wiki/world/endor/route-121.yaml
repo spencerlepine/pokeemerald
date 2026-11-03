@@ -52,8 +52,8 @@ props:
   size: [1, 2]
 - name: Fallen redwood
   art: art:endor:fallen-redwood
-  at: [59, 0]
-  size: [8, 2]
+  at: [58, 0]
+  size: [10, 2]
   facing: w
 people:
 - name: Woman

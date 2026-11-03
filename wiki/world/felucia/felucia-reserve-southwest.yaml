@@ -70,8 +70,8 @@ props:
   size: [1, 1]
 - name: Vulture droid wreck
   art: art:shared:vulture-droid-wreck
-  at: [36, 34]
-  size: [3, 2]
+  at: [34, 17]
+  size: [4, 3]
   facing: w
 people:
 - name: Woman

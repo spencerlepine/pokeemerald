@@ -60,8 +60,8 @@ props:
   size: [1, 1]
 - name: Crashed TIE fighter
   art: art:shared:crashed-tie-fighter
-  at: [6, 10]
-  size: [2, 2]
+  at: [5, 2]
+  size: [3, 2]
   facing: e
 people:
 - name: Little Boy

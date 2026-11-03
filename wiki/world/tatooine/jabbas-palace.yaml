@@ -89,8 +89,8 @@ props:
   size: [1, 1]
 - name: B'omarr ruin
   art: art:tatooine:bomarr-ruin
-  at: [32, 7]
-  size: [3, 3]
+  at: [32, 6]
+  size: [4, 4]
   facing: w
 people:
 - name: Cartel thug (gate guard)

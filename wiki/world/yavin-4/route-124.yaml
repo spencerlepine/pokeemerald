@@ -120,19 +120,20 @@ props:
   size: [1, 1]
 - name: Massassi ruin
   art: art:yavin-4:massassi-ruin
-  at: [2, 77]
-  size: [5, 3]
+  at: [9, 74]
+  size: [7, 4]
   facing: s
+  fit: 'no blocked spot this big here: it takes open ground at the edge; adjust the terrain when placing for real'
 - name: Y-wing wreck
   art: art:shared:y-wing-wreck
-  at: [63, 3]
-  size: [4, 2]
-  facing: w
+  at: [16, 69]
+  size: [6, 2]
+  facing: e
 - name: Fallen Massassi head
   art: art:yavin-4:fallen-massassi-head
-  at: [77, 1]
-  size: [3, 2]
-  facing: w
+  at: [16, 0]
+  size: [4, 3]
+  facing: e
 people:
 - name: Trainer Sugon
   at: [34, 25]

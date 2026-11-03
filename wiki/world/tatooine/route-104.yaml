@@ -123,9 +123,9 @@ props:
   size: [2, 1]
 - name: Crashed skyhopper
   art: art:tatooine:crashed-skyhopper
-  at: [38, 13]
-  size: [2, 2]
-  facing: w
+  at: [3, 4]
+  size: [3, 2]
+  facing: e
 people:
 - name: Bug Catcher
   at: [15, 60]

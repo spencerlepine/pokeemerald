@@ -65,16 +65,16 @@ props:
   art: art:mustafar:obsidian-spire
   at: [26, 4]
   size: [2, 3]
-- name: Fallen collector arm
-  art: art:mustafar:fallen-collector-arm
-  at: [2, 27]
-  size: [5, 2]
-  facing: e
 - name: Fallen comm tower
   art: art:shared:fallen-comm-tower
-  at: [24, 21]
-  size: [6, 1]
+  at: [27, 20]
+  size: [8, 2]
   facing: w
+- name: Fallen collector arm
+  art: art:mustafar:fallen-collector-arm
+  at: [3, 27]
+  size: [8, 2]
+  facing: e
 people:
 - name: Stormtrooper
   at: [16, 14]

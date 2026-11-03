@@ -52,16 +52,16 @@ props:
   art: art:jedha:prayer-candles
   at: [18, 7]
   size: [1, 1]
-- name: Rubble pile
-  art: art:shared:rubble-pile
-  at: [26, 7]
-  size: [2, 2]
-  facing: w
 - name: Headless Jedi statue
   art: art:jedha:headless-guardian
-  at: [3, 16]
-  size: [2, 2]
+  at: [18, 29]
+  size: [3, 3]
   facing: s
+- name: Rubble pile
+  art: art:shared:rubble-pile
+  at: [34, 27]
+  size: [3, 2]
+  facing: w
 people:
 - name: Old Man
   at: [22, 5]

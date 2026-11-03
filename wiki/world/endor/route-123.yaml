@@ -58,9 +58,9 @@ props:
   size: [3, 1]
 - name: Towani starcruiser wreck
   art: art:endor:towani-starcruiser
-  at: [46, 1]
-  size: [6, 3]
-  facing: e
+  at: [86, 1]
+  size: [8, 4]
+  facing: w
 people:
 - name: Trainer Woskila
   at: [70, 12]

@@ -97,10 +97,15 @@ props:
   art: art:tatooine:rock-spire
   at: [24, 11]
   size: [2, 3]
+- name: Sandcrawler (far)
+  art: art:tatooine:sandcrawler-far
+  at: [0, 42]
+  size: [12, 3]
+  facing: e
 - name: Fallen comm tower
   art: art:shared:fallen-comm-tower
-  at: [18, 53]
-  size: [6, 1]
+  at: [31, 4]
+  size: [8, 2]
   facing: w
 people:
 - name: Magma Grunts

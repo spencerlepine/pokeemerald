@@ -105,8 +105,8 @@ props:
   size: [3, 3]
 - name: Sunken tank droid
   art: art:kashyyyk:tank-droid-sunk
-  at: [1, 0]
-  size: [3, 3]
+  at: [15, 0]
+  size: [4, 4]
   facing: e
 people:
 - name: Trainer Loal

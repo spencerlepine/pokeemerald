@@ -163,20 +163,20 @@ props:
   art: art:tatooine:moisture-vaporator
   at: [35, 90]
   size: [1, 2]
+- name: Podracer wreck
+  art: art:tatooine:podracer-wreck
+  at: [0, 64]
+  size: [5, 3]
+  facing: e
+- name: Podracer wreck
+  art: art:tatooine:podracer-wreck
+  at: [20, 1]
+  size: [5, 3]
+  facing: w
 - name: Fallen canyon arch
   art: art:tatooine:arch-canyon-arch
-  at: [29, 13]
-  size: [5, 2]
-  facing: w
-- name: Podracer wreck
-  art: art:tatooine:podracer-wreck
-  at: [34, 29]
-  size: [4, 2]
-  facing: w
-- name: Podracer wreck
-  art: art:tatooine:podracer-wreck
-  at: [0, 65]
-  size: [4, 2]
+  at: [3, 9]
+  size: [7, 2]
   facing: e
 people:
 - name: Boy2

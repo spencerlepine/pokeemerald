@@ -94,14 +94,15 @@ props:
   size: [4, 3]
 - name: Juggernaut wreck
   art: art:kashyyyk:juggernaut-wreck
-  at: [3, 5]
-  size: [6, 3]
-  facing: e
+  at: [27, 21]
+  size: [8, 4]
+  facing: w
 - name: Droid tank wreck
   art: art:shared:droid-tank-wreck
-  at: [6, 28]
-  size: [3, 2]
-  facing: e
+  at: [22, 0]
+  size: [4, 3]
+  facing: w
+  fit: 'no blocked spot this big here: it takes open ground at the edge; adjust the terrain when placing for real'
 people:
 - name: Event object
   at: [21, 26]

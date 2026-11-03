@@ -163,7 +163,7 @@ props:
 - name: Beldon
   art: art:bespin:beldon
   at: [0, 0]
-  size: [6, 3]
+  size: [9, 4]
   facing: e
 - name: Broken bridge
   art: art:shared:broken-bridge

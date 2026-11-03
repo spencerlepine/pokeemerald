@@ -101,25 +101,27 @@ props:
   size: [2, 2]
 - name: Star Destroyer overhead
   art: art:jedha:star-destroyer-overhead
-  at: [0, 0]
-  size: [14, 2]
+  at: [1, 0]
+  size: [20, 2]
   facing: s
   shown: until VAR_MT_PYRE_STATE done
 - name: Ruined wall
   art: art:shared:ruined-wall
-  at: [22, 0]
-  size: [3, 2]
+  at: [27, 11]
+  size: [4, 3]
   facing: w
+  fit: 'no blocked spot this big here: it takes open ground at the edge; adjust the terrain when placing for real'
 - name: Assault tank wreck
   art: art:jedha:assault-tank-wreck
-  at: [2, 26]
-  size: [3, 2]
-  facing: e
+  at: [18, 22]
+  size: [4, 3]
+  facing: w
+  fit: 'no blocked spot this big here: it takes open ground at the edge; adjust the terrain when placing for real'
 - name: Rubble pile
   art: art:shared:rubble-pile
-  at: [13, 26]
-  size: [2, 2]
-  facing: e
+  at: [28, 0]
+  size: [3, 2]
+  facing: w
 people:
 - name: Guardian of the Whills
   at: [14, 10]

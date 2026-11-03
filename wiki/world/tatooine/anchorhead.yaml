@@ -100,9 +100,10 @@ props:
   size: [2, 1]
 - name: Abandoned homestead
   art: art:tatooine:moisture-farm-ruin
-  at: [3, 0]
-  size: [3, 2]
+  at: [8, 4]
+  size: [4, 3]
   facing: e
+  fit: 'no blocked spot this big here: it takes open ground at the edge; adjust the terrain when placing for real'
 people:
 - name: Camie
   at: [10, 13]

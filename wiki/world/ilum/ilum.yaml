@@ -127,25 +127,25 @@ props:
   art: art:ilum:snow-pine
   at: [36, 19]
   size: [1, 2]
-- name: Abandoned kyber drill
-  art: art:ilum:abandoned-kyber-drill
-  at: [22, 0]
-  size: [4, 3]
-  facing: w
 - name: Crystal spires (far)
   art: art:ilum:crystal-spires-distant
-  at: [14, 0]
-  size: [6, 2]
+  at: [22, 0]
+  size: [10, 3]
+  facing: s
+- name: Abandoned kyber drill
+  art: art:ilum:abandoned-kyber-drill
+  at: [37, 12]
+  size: [5, 4]
+  facing: w
+- name: Frozen Jedi statue
+  art: art:ilum:frozen-jedi-statue
+  at: [10, 6]
+  size: [3, 3]
   facing: s
 - name: Frozen Jedi statue
   art: art:ilum:frozen-jedi-statue
-  at: [37, 14]
-  size: [2, 2]
-  facing: s
-- name: Frozen Jedi statue
-  art: art:ilum:frozen-jedi-statue
-  at: [39, 38]
-  size: [2, 2]
+  at: [14, 40]
+  size: [3, 3]
   facing: s
 people:
 - name: Gate warden

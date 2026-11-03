@@ -67,8 +67,8 @@ props:
   size: [2, 3]
 - name: Fortress Vader (far)
   art: art:mustafar:fortress-vader-distant
-  at: [18, 0]
-  size: [4, 2]
+  at: [8, 0]
+  size: [6, 3]
   facing: s
 people:
 - name: Trainer Eho

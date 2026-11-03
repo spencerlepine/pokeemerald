@@ -73,21 +73,26 @@ props:
   art: art:yavin-4:jungle-vines
   at: [46, 13]
   size: [1, 1]
+- name: Crashed Republic frigate
+  art: art:yavin-4:crashed-frigate
+  at: [23, 0]
+  size: [12, 4]
+  facing: e
 - name: Massassi ruin
   art: art:yavin-4:massassi-ruin
-  at: [31, 20]
-  size: [5, 3]
+  at: [29, 19]
+  size: [7, 4]
   facing: s
 - name: Crashed X-wing
   art: art:shared:crashed-x-wing
-  at: [6, 24]
-  size: [4, 2]
+  at: [16, 16]
+  size: [6, 3]
   facing: e
 - name: Rubble pile
   art: art:shared:rubble-pile
-  at: [46, 27]
-  size: [2, 2]
-  facing: w
+  at: [23, 31]
+  size: [3, 2]
+  facing: e
 people:
 - name: Trainer Neus
   at: [7, 31]

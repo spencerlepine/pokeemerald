@@ -65,13 +65,13 @@ props:
   size: [2, 2]
 - name: Drifting platform
   art: art:bespin:drifting-platform
-  at: [1, 0]
-  size: [5, 3]
+  at: [0, 0]
+  size: [6, 4]
   facing: e
 - name: Crashed cloud car
   art: art:bespin:crashed-cloud-car
-  at: [18, 1]
-  size: [3, 2]
+  at: [17, 1]
+  size: [4, 2]
   facing: e
 - name: Broken bridge
   art: art:shared:broken-bridge

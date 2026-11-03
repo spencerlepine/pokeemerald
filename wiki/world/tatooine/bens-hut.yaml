@@ -60,8 +60,8 @@ props:
   size: [1, 1]
 - name: Ruined wall
   art: art:shared:ruined-wall
-  at: [0, 7]
-  size: [3, 2]
+  at: [6, 0]
+  size: [4, 3]
   facing: e
 people:
 - name: Obi-Wan 'Ben' Kenobi

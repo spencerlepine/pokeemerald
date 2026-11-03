@@ -133,6 +133,11 @@ props:
   art: art:endor:ewok-glider
   at: [34, 37]
   size: [1, 2]
+- name: Crashed Imperial shuttle
+  art: art:endor:crashed-lambda-shuttle
+  at: [0, 73]
+  size: [8, 4]
+  facing: e
 people:
 - name: Trainer Cexan
   at: [5, 22]

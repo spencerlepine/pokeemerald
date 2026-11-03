@@ -125,8 +125,8 @@ props:
   size: [2, 2]
 - name: Statue of Lando
   art: art:grand-arena:lando-statue
-  at: [17, 68]
-  size: [2, 2]
+  at: [7, 22]
+  size: [3, 3]
   facing: s
 people:
 - name: Boy1

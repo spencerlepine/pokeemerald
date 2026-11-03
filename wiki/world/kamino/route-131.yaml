@@ -65,8 +65,8 @@ props:
   size: [1, 1]
 - name: Toppled stilt dome
   art: art:kamino:toppled-stilt-dome
-  at: [20, 0]
-  size: [4, 3]
+  at: [21, 0]
+  size: [6, 4]
   facing: e
 people:
 - name: Trainer Rios

@@ -63,7 +63,10 @@ def place_area(aid, reqs, log):
         w, d = piece["fp"]; rise = piece["rise"]
         for i in range(count):
             best = None
-            for zone in zones:
+            tiers = [(z, st) for st in (True, False) for z in zones]
+            tiers += [(z, "mixed") for z in zones + ([] if "edge" in zones else ["edge"])]
+            tiers += [(z, "open") for z in zones + ([] if "edge" in zones else ["edge"]) if z != "water"]
+            for zone, strict in tiers:
                 cands = []
                 for y in range(0, ar.h - d + 1):
                     for x in range(0, ar.w - w + 1):
@@ -71,7 +74,12 @@ def place_area(aid, reqs, log):
                         chs = [ar.cell(*c) for c in cells]
                         if any(c in solid or c in mark or c in exitc for c in cells): continue
                         nw = sum(ch == "~" for ch in chs); nl = sum(ch in LAND for ch in chs)
-                        if nw + nl != len(cells): continue
+                        no = sum(ch == "." for ch in chs) if strict == "open" else 0
+                        if nw + nl + no != len(cells): continue
+                        if no and (nw or any((ar.cell(*q) or "") in list(":=H<>^v") for q in
+                                             ((xx + dx, yy + dy) for (xx, yy) in cells for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)))
+                                             if q not in cells)):
+                            continue                  # open ground only away from roads, stairs and ledges
                         if zone == "water" and nl: continue
                         if zone == "shore" and not nw: continue
                         if zone in ("n", "s", "e", "w", "edge") and nw: continue
@@ -86,6 +94,17 @@ def place_area(aid, reqs, log):
                         ring_open = sum(open_(*c) for c in ring)
                         front = sum(open_(xx, y+d) for xx in range(x, x+w))
                         land_open = sum(1 for c in ring if open_(*c) and ar.cell(*c) != "~")
+                        # clean edges: a land piece stands on one kind of blocked ground (all rock or all trees, never across
+                        # a cliff line) and its drawn rows never hang over water; a water piece keeps clear of the banks
+                        if zone != "shore" and nl and len(set(chs)) > 1 and strict not in ("mixed", "open"): continue
+                        if nl and any(ar.cell(*c) == "~" for c in risec): continue
+                        if zone == "water":
+                            wr = [ar.cell(*c) == "~" for c in ring if ar.cell(*c) is not None]
+                            if strict and not all(wr): continue
+                            if not strict and sum(wr) < 0.75 * len(wr): continue
+                        elif strict is False:
+                            continue
+                        if strict == "mixed" and zone == "water": continue
                         if ring_open < 2: continue
                         if zone == "edge" and land_open < 2: continue     # seen from where the player walks, not only from the water
                         if zone == "shore" and not (nl or land_open): continue
@@ -105,18 +124,19 @@ def place_area(aid, reqs, log):
                 cands.sort(reverse=True)
                 for c in cands:
                     sc, _, _, x, y, cells, zone = c
-                    if any(ar.cell(*q) == "~" for q in cells):     # water pieces must not cut a surf route
+                    if any(ar.cell(*q) in ("~", ".") for q in cells):     # a piece on water or open ground must not cut a route
                         free = {(xx, yy) for yy in range(ar.h) for xx in range(ar.w) if open_(xx, yy)}
                         lab, _ = comps(free); lab2, _ = comps(free - set(cells))
                         groups = {}
                         for q, l in lab2.items(): groups.setdefault(lab[q], set()).add(l)
                         if any(len(v) > 1 for v in groups.values()) or len(groups) < len(set(lab.values())):
                             continue
-                    best = (sc, x, y, cells, zone); break
+                    best = (sc, x, y, cells, zone if strict is True else f"{zone} ({strict or 'loose'})"); break
                 if best: break
             if not best:
                 log.append(f"FAIL {aid}: {piece['id']} {w}x{d} zones {zones}"); continue
             _, x, y, cells, zone = best
+            zone = zone.split(" (")[0]
             solid |= set(cells)
             placed_new.append((x, y, w, d))
             fac = piece["facings"].split()
@@ -124,6 +144,11 @@ def place_area(aid, reqs, log):
             if "e" not in fac: facing = fac[0]
             pr = {"name": nm or piece["name"], "art": piece["id"], "at": [x, y], "size": [w, d], "facing": facing}
             if shown != "always": pr["shown"] = shown
+            kinds = {ar.cell(*c) for c in cells}
+            if "." in kinds:
+                pr["fit"] = "no blocked spot this big here: it takes open ground at the edge; adjust the terrain when placing for real"
+            elif len(kinds) > 1 and "~" not in kinds:
+                pr["fit"] = "stands across rock and trees: even out the terrain under it when placing for real"
             out.append(pr)
             log.append(f"ok   {aid}: {piece['id']} at {x},{y} zone {zone} facing {facing}")
     return doc, out

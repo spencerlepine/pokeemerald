@@ -50,14 +50,14 @@ props:
   size: [2, 2]
 - name: Crashed skyhopper
   art: art:tatooine:crashed-skyhopper
-  at: [14, 14]
-  size: [2, 2]
+  at: [11, 2]
+  size: [3, 2]
   facing: e
 - name: Crashed skyhopper
   art: art:tatooine:crashed-skyhopper
-  at: [31, 5]
-  size: [2, 2]
-  facing: e
+  at: [56, 12]
+  size: [3, 2]
+  facing: w
 people:
 - name: Trainer Jios
   at: [12, 7]

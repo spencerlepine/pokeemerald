@@ -70,13 +70,14 @@ props:
   size: [1, 1]
 - name: Venator wreck
   art: art:felucia:venator-wreck
-  at: [20, 0]
-  size: [16, 2]
-  facing: w
+  at: [8, 27]
+  size: [20, 3]
+  facing: e
+  fit: 'no blocked spot this big here: it takes open ground at the edge; adjust the terrain when placing for real'
 - name: AT-TE wreck
   art: art:shared:at-te-wreck
-  at: [2, 24]
-  size: [5, 3]
+  at: [0, 18]
+  size: [8, 4]
   facing: e
 people:
 - name: Man

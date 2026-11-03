@@ -18,7 +18,8 @@
     props:                           # big and small objects (art id: a row in ../mapping/world_art.csv)
       - {name: Vaporator, art: art:tatooine:moisture-vaporator, at: [2, 9], size: [1, 2]}
       - {name: Crashed X-wing, art: art:shared:crashed-x-wing, at: [0, 3], size: [4, 2], facing: w,
-         shown: after FLAG_X}       # scenery: facing e/w/n/s (w = e mirrored), shown = always or a story flag
+         shown: after FLAG_X}       # scenery: facing e/w/n/s (w = e mirrored), shown = always or a story flag,
+                                    # fit = a note when the terrain under it must be evened out later
     people:                          # pink sprites
       - {name: Prof. Korr, at: [14, 10], role: story}
     signs:                           # pink, readable

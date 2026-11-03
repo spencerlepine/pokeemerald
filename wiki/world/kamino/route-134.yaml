@@ -59,11 +59,16 @@ props:
   art: art:kamino:storm-sea
   at: [41, 15]
   size: [3, 1]
+- name: Sunken Venator stern
+  art: art:kamino:sunken-venator-stern
+  at: [0, 9]
+  size: [12, 3]
+  facing: e
 - name: Aiwha skeleton
   art: art:kamino:aiwha-skeleton
-  at: [66, 1]
-  size: [3, 2]
-  facing: w
+  at: [24, 5]
+  size: [4, 2]
+  facing: e
 people:
 - name: Trainer Juo
   at: [49, 9]

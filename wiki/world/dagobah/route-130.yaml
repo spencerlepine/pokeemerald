@@ -61,8 +61,8 @@ props:
   size: [1, 1]
 - name: Fallen gnarltree
   art: art:dagobah:fallen-gnarltree
-  at: [56, 38]
-  size: [5, 1]
+  at: [72, 32]
+  size: [7, 2]
   facing: w
 people:
 - name: Trainer Rirkel

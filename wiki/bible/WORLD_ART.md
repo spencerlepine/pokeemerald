@@ -91,11 +91,16 @@ player can walk. Every one is a `scenery` row in `world_art.csv` and a prop in i
   `landmark`: one per map, a place the path leads past. `noise`: small, in dead space. `backdrop`: a giant
   that is far bigger than the screen; it lies along the map edge and runs off it, so only part of it shows (the
   greater krayt skeleton, the Venator, the Star Destroyer over NiJedha, Fortress Vader beyond Ashen Pass).
-- **On the screen.** The GBA shows 15x10 cells. Every non-backdrop piece is drawn at most 8 cells wide and 6 tall, so it is
-  seen whole with room around it. Sizes are picked to look right, not to scale.
+- **On the screen.** The GBA shows 15x10 cells. Every non-backdrop piece is drawn at most 10 cells wide and 7 tall, so it is
+  seen whole with room around it. Big is the point: a wreck should read from across the screen. Sizes are picked to look right, not to scale.
 - **Facing.** The camera is the game's 3/4 top-down view, so a piece can't turn freely. `facings` lists the
   drawings: `e` and `w` are one drawing mirrored (the tilemap's flip bit, free), `n` and `s` are drawings of
   their own. Each placement says which it uses (`facing` in the yaml); the greybox mirrors `w`.
+- **Clean edges.** A land piece stands on one kind of ground (all rock or all trees), never across a cliff
+  line or a bank, and its drawn rows never hang over water. A water piece keeps a ring of water round it.
+  Where an area has no blocked spot that big, the piece takes open ground at the map's edge (never next to a
+  road, stairs or a ledge, never cutting a route) and its placement says so in `fit`: the terrain is evened
+  out there when the piece is placed for real.
 - **Water.** Pieces on water (`~`: sea, swamp, lava, the cloud sea, the Dune Sea) never cut a surf route; the
   placer checks that every body of water stays one piece.
 - **Events.** `shown` is `always`, or tied to an existing story flag. The map script swaps the metatiles on
@@ -104,9 +109,11 @@ player can walk. Every one is a `scenery` row in `world_art.csv` and a prop in i
   appears or leaves needs none. Collision never changes with an event.
 - **Tile budget.** A secondary tileset holds 512 tiles and 512 metatiles, shared with the planet's buildings
   and terrain. `metatiles` is the piece's cost (every drawn cell, every drawing, every state) and `tiles` is
-  four per metatile, an upper bound before repeated tiles are shared. Keep a planet's scenery near 200 tiles
-  per tileset. The two giants over that (the Venator on Felucia, the Star Destroyer over NiJedha) are drawn
-  from a repeating hull strip, which brings them well under.
+  four per metatile, an upper bound before repeated tiles are shared. Counted per planet and tileset, the
+  metatiles fit: the most is Hoth with 239 of 512. The tile upper bound does not: 11 planet tilesets go over
+  512 (Hoth, Felucia and Yavin 4 near 900). So the big pieces must be drawn from repeated tiles (hull plating,
+  rib arcs, rock), the way vanilla draws its cliffs, and each planet's tileset is checked when its pieces are
+  drawn. If one is still over, the heaviest piece moves to a map with room or shrinks.
 
 Review sheets: `world/greybox/scenery/placements-*.png`, one screen-sized crop (15x10 cells) per placement with its hit box in red. Placements are made by `tools/blockout/drafts/scenery.py` from the catalog in `scenery_spec.py` (rerun it after
 an area's grid changes; it redoes every scenery prop). Query the rows with
@@ -116,19 +123,19 @@ and `notes`); each needs its own shape when its category is reviewed.
 | Planet | Pieces (where) | Lore |
 |---|---|---|
 | Every planet | Crashed X-wing, Crashed TIE fighter, Y-wing wreck, Vulture droid wreck, Droid tank wreck, AT-TE wreck, Republic gunship wreck, Hull debris, Fallen comm tower, Broken bridge, Collapsed stairs, Ruined wall, Rubble pile | Clone Wars wrecks seventeen years on, and the first Rebel and Imperial losses. One drawing each, recoloured per planet. |
-| Tatooine | Greater krayt skeleton (Route 111, backdrop), Gutted sandcrawler (Jundland Wastes), Crashed skyhopper (Routes 104, 116), Podracer wreck (Route 110, Mos Espa), Fallen canyon arch (Route 110), B'omarr ruin (Jabba's palace), Abandoned homestead (Routes 101, 117, Anchorhead), Wrecked freighter (Route 115) | A New Hope's krayt skeleton, Beggar's Canyon, the Boonta Eve course, the B'omarr monastery. |
+| Tatooine | Sandcrawler far off (Routes 103, 112, backdrop), Greater krayt skeleton (Route 111, backdrop), Gutted sandcrawler (Jundland Wastes), Crashed skyhopper (Routes 104, 116), Podracer wreck (Route 110, Mos Espa), Fallen canyon arch (Route 110), B'omarr ruin (Jabba's palace), Abandoned homestead (Routes 101, 117, Anchorhead), Wrecked freighter (Route 115) | The Sandcrawler the player enters (`art:tatooine:sandcrawler`, the wandering one after a sandstorm) is a building, not scenery. A New Hope's krayt skeleton, Beggar's Canyon, the Boonta Eve course, the B'omarr monastery. |
 | Kashyyyk | Juggernaut wreck (Route 109), Sunken tank droid (Route 105, water), Fallen wroshyr trunk (Route 106), Catamaran wreck (Route 108) | The Battle of Kashyyyk (Revenge of the Sith). |
 | Sullust | Separatist frigate wreck (Route 113, backdrop), Hyena bomber wreck (Route 114), Collapsed lava tube (Inyusu Tor, Route 113) | SoroSuub joined the Separatists. |
 | Mustafar | Fallen collector arm (mining facility, in the lava), Fortress Vader far off (Ashen Pass, backdrop), Imperial drill rig (Mustafar Peak, topples after Vader is beaten there) | The duel on the collector arm; Vader's castle from Rogue One. |
-| Endor | Fallen redwood (Routes 118, 121), Towani starcruiser wreck (Route 123) | The Ewok film Caravan of Courage (Legends). |
+| Endor | Fallen redwood (Routes 118, 121), Towani starcruiser wreck (Route 123), Crashed Imperial shuttle (Route 120) | The Ewok film Caravan of Courage (Legends); the Imperial survey that picked Endor. |
 | Bespin | Beldon (Cloud City, in the cloud sea), Crashed cloud car, Drifting platform (Tibanna refinery) | Beldons breathe out Tibanna gas. |
 | Jedha | Star Destroyer overhead (NiJedha, backdrop, leaves once the temple's kyber is safe), Assault tank wreck (NiJedha, Route 122), Headless Jedi statue (temple terraces and summit) | Rogue One. |
-| Yavin 4 | Massassi ruin (Routes 124, 125), Fallen Massassi head (Route 124, river) | The Massassi temples. |
-| Hoth | Frozen AT-AT (the frozen lake), Probe droid crater, Ion cannon footing (dish built after the player is champion) | Alternate telling: the Empire tested cold-weather walkers here years early. |
-| Dagobah | Dragonsnake skeleton (Routes 126, 128, in the bog), Fallen gnarltree (Routes 129, 130) | The dragonsnake that spat out R2-D2. |
-| Kamino | Trident drill wreck (Routes 132, 133, in the sea), Toppled stilt dome (Route 131), Aiwha skeleton (Route 134) | The Battle of Kamino (The Clone Wars). |
+| Yavin 4 | Crashed Republic frigate (Route 125, backdrop), Massassi ruin (Routes 124, 125), Fallen Massassi head (Route 124, river) | The Massassi temples; a Clone Wars Pelta frigate. |
+| Hoth | Gozanti cruiser wreck (backdrop), Frozen AT-AT (the frozen lake), Probe droid crater, Ion cannon footing (dish built after the player is champion) | Alternate telling: the Empire tested cold-weather walkers here years early. |
+| Dagobah | Sunken landing craft (Routes 126, 128, in the bog), Dragonsnake skeleton (Routes 126, 128, in the bog), Fallen gnarltree (Routes 129, 130) | The dragonsnake that spat out R2-D2. |
+| Kamino | Sunken Venator stern (Route 134, in the sea), Trident drill wreck (Routes 132, 133, in the sea), Toppled stilt dome (Route 131), Aiwha skeleton (Route 134) | The Battle of Kamino (The Clone Wars). |
 | Ilum | Abandoned kyber drill, Frozen Jedi statues, Crystal spires far off (backdrop) | The Empire stripped Ilum's kyber. |
-| Post-game | Statue of Lando (Grand Arena), Venator wreck (Felucia, backdrop), Ruined temple arch (Tython), AT-AT wreck (Atollon, appears after the Bendu wakes), Mortis statues (the Daughter, the Father and the Son), Chewed freighter (Asteroid Spire) | Order 66 on Felucia; Rebels' Battle of Atollon; the Mortis arc; the exogorth. |
+| Post-game | Statue of Lando and a Star Destroyer bridge tower Lando won at sabacc (Grand Arena), Venator wreck (Felucia, backdrop), Ruined temple arch (Tython), AT-AT wreck (Atollon, appears after the Bendu wakes), Mortis statues (the Daughter, the Father and the Son), Chewed freighter (Asteroid Spire) | Order 66 on Felucia; Rebels' Battle of Atollon; the Mortis arc; the exogorth. |
 
 Open: no piece has its own greybox model yet; 40 rows have no reference image (`reference_art` is blank); the
 sunken X-wing rising after shard 8 (bible/FAN_CRITIQUE.md) is not set as an event until the owner approves it.

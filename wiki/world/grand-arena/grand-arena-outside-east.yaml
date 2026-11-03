@@ -147,10 +147,15 @@ props:
   art: art:shared:holo-sign
   at: [33, 36]
   size: [1, 1]
+- name: Star Destroyer bridge tower
+  art: art:grand-arena:star-destroyer-bridge
+  at: [15, 61]
+  size: [6, 4]
+  facing: s
 - name: Statue of Lando
   art: art:grand-arena:lando-statue
-  at: [34, 2]
-  size: [2, 2]
+  at: [36, 10]
+  size: [3, 3]
   facing: s
 people:
 - name: Ninja Boy

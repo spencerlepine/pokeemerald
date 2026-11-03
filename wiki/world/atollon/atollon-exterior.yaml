@@ -51,10 +51,11 @@ props:
   size: [1, 1]
 - name: AT-AT wreck
   art: art:atollon:at-at-wreck
-  at: [23, 17]
-  size: [6, 3]
+  at: [17, 16]
+  size: [9, 4]
   facing: w
   shown: after FLAG_BATTLED_DEOXYS
+  fit: 'no blocked spot this big here: it takes open ground at the edge; adjust the terrain when placing for real'
 people:
 - name: Triangle
   at: [15, 12]
