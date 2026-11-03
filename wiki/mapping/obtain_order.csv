@@ -1,0 +1,5 @@
+script,map_prefix,badges,story_event,reason
+PetalburgCity_WallysHouse_EventScript_GiveHMSurf,,5,balance-badge,"Runs when VAR_PETALBURG_CITY_STATE is 4, which the Mos Entha arena sets after the fifth badge."
+,map:battle-frontier,8,battle-frontier,The Grand Arena opens in the post-game (S.S. Tidal ticket).
+,map:trainer-hill,8,champion-wallace,Trainer Hill opens once the game is cleared (FLAG_SYS_GAME_CLEAR).
+,map:ss-tidal,8,ss-ticket-lati,The S.S. Tidal sails once the player has the ticket (post-game).

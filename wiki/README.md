@@ -114,6 +114,8 @@ and field-effect ids are table indexes, so deleting a ghost keeps its slot (poin
 | `area_progression.csv` | Emerald's balance table (levels, badges, gating) with planet and new map titles. |
 | `species_habitats.csv` | Why each wild companion lives where Emerald's encounter tables put it. Tables are unchanged. |
 | `sand_skim.csv`, `dune_sea_encounters.csv` | SAND SKIM, the Dune Sea field move: which species learn it (from `mapping/sand_skim_rules.csv`) and the Dune Sea's own wild table on each Tatooine map (from `mapping/dune_sea_swaps.csv`; no fishing there). Built by `tools/sand_skim.py`, which also checks the tables in `../game` (`--install` writes them); design in [`bible/NET_NEW_DESIGNS.md`](bible/NET_NEW_DESIGNS.md). |
+| `obtain.csv` | Every way the player gets something, in story order: gift items (TMs, HMs, key items), item balls, hidden items, fruit trees, shop stock, gift companions and eggs, in-game trades, decorations, coins. Each row has the giver (`npc_id`, `character_id` and its Star Wars name), the map and planet, the flag that marks it received, the flags the script checks, `badges` and `story_event` (`story_order` sorts them), and the script and source line in `../game`. Net-new gifts (HM09 from OWEN) come from `mapping/obtain_extra.csv`. Built by `tools/obtain.py`. Query: `grep ',character:wallys-father,' database/obtain.csv`. |
+| `npcs.csv` | Every NPC (object event) on every map: `npc_id` (`npc:<map>:<local id>`), map and planet, sprite, script, flag, the named character it is (from `mapping/npcs.csv`) and the `obtain.csv` rows it gives. Built by `tools/obtain.py`. |
 | `build_info.csv`, `build_warnings.csv` | Inputs, counts, warnings (must be 0). |
 
 Unchanged game data (learnsets, parties, encounters, map events, scripts, flags) is not copied; it stays as is
@@ -203,6 +205,7 @@ python3 tools/scan_game_assets.py   # mapping/asset_inventory.csv from ../game (
 python3 tools/build.py              # optional: STARWARS_DB_DIR=/path/to/starwars-db/database
 python3 tools/habitats.py   # species_habitats.csv
 python3 tools/sand_skim.py  # sand_skim.csv, dune_sea_encounters.csv (Dune Sea field move)
+python3 tools/obtain.py     # obtain.csv, npcs.csv (who gives what, in story order)
 python3 wiki/server.py      # browse at http://127.0.0.1:8000
 ```
 

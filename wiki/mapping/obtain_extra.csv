@@ -1,0 +1,3 @@
+obtain_id,kind,what,sw_name,quantity,npc_id,map_id,flag,after_script,after_what,notes
+obtain:net:hm09-sand-skim,gift_item,net:hm09-sand-skim,HM09 SAND SKIM,1,npc:petalburg-city-wallys-house:1,,,PetalburgCity_WallysHouse_EventScript_GiveHMSurf,item:hm-surf,"Net-new (net:hm09-sand-skim). OWEN gives it right after HM03, in the same script and under the same flag, so nothing opens earlier or later. Port: one more giveitem ITEM_HM09 after giveitem ITEM_HM_SURF."
+obtain:starter,gift_companion,species:treecko|species:torchic|species:mudkip,starter (one of three),1,,map:route101,FLAG_SYS_POKEMON_GET,,,"The starter: chosen from PROF. KORR's bag on Route 101 (src/starter_choose.c, not a script command). Level 5."

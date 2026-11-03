@@ -178,7 +178,7 @@ background that Emerald already has. Dune Sea tiles: the `sw-tatooine` `dune-sea
 - `FIELD_MOVE_SAND_SKIM`: party menu entry, badge 5 check, the prompt scripts above.
 - `MB_DUNE_SEA` in an unused metatile behaviour slot: crossable only with SAND SKIM, not fishable, wild "water" table, sand battle background; SURF refuses it.
 - Move Deleter: HM09 can't be forgotten, like the other HMs.
-- OWEN's script gives HM09 right after HM03 (same flag; the TM case never fills).
+- OWEN's script gives HM09 right after HM03 (same flag; the TM case never fills). OWEN is `character:wallys-father`, NPC `npc:petalburg-city-wallys-house:1`; the gift is `obtain:net:hm09-sand-skim` in `database/obtain.csv`.
 - Trainer class `SKIFF RIDER` for POLESH and ILI.
 
 ## New moves (`net:move-force-choke`, `net:move-blaster-shot`, `net:move-saber-slash`)
