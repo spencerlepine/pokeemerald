@@ -9,7 +9,7 @@ constant (`source_constant`) and swaps the name string right after it, only if i
 
   ported / done   the game now shows `sw_name`; the row gets `game_status` DONE in database/entities.csv
   too_long        `sw_name` is longer than the game's buffer (LIMITS): left alone, listed
-  Also the Datapad entries: `dex_category` and the 4-line `datapad_text` of every species.
+  Also the Trainer Hill companions' nicknames (Emerald's species names) and the Datapad entries: `dex_category` and the 4-line `datapad_text` of every species.
   changed         the game has some other name (edited by hand): left alone, listed
   missing         the constant is not found in the file: left alone, listed
 Writes the changed / missing list to database/name_port_report.csv.
@@ -118,6 +118,7 @@ def main() -> int:
 
     if "species" in types:
         port_datapad(rows, stats, report, args.dry_run)
+        port_nicknames(rows, stats, args.dry_run)
 
     if not args.dry_run:
         with ENTS.open("w", encoding="utf-8", newline="") as fh:
@@ -132,6 +133,25 @@ def main() -> int:
     for x in report[:30]:
         print("  ", *x)
     return 0
+
+
+NICKNAME_FILES = ["src/data/battle_frontier/trainer_hill.h"]
+
+
+def port_nicknames(rows, stats, dry_run) -> None:
+    """Trainer Hill companions are stored with a nickname that is just Emerald's species name: give them the
+    Star Wars species name."""
+    names = {r["game_name"]: r["sw_name"] for r in rows
+             if r["entity_type"] == "species" and r["game_name"] and r["sw_name"]}
+    for f in NICKNAME_FILES:
+        path = GAME / f
+        src = path.read_text(encoding="utf-8")
+        new = re.sub(r'(\.nickname\s*=\s*_\(")([^"]*)("\))',
+                     lambda m: m.group(1) + names.get(m.group(2), m.group(2)) + m.group(3), src)
+        stats["nicknames ported"] += sum(1 for a, b in zip(re.findall(r'nickname = _\("([^"]*)"', src),
+                                                           re.findall(r'nickname = _\("([^"]*)"', new)) if a != b)
+        if new != src and not dry_run:
+            path.write_text(new, encoding="utf-8")
 
 
 ENTRIES = "src/data/pokemon/pokedex_entries.h"

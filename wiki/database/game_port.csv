@@ -16792,7 +16792,7 @@ text|gText_MoveToWhere,texts.csv,text:ui_string,gText_MoveToWhere,KEEP,replace t
 text|gText_TeachWhichPokemon,texts.csv,text:ui_string,gText_TeachWhichPokemon,HOTSWAP,replace the text with sw_text_raw,src/strings.c,431,,,DONE,UI string 12 px wider than Emerald's: make its window fit
 text|gText_UseOnWhichPokemon,texts.csv,text:ui_string,gText_UseOnWhichPokemon,HOTSWAP,replace the text with sw_text_raw,src/strings.c,432,,,DONE,UI string 12 px wider than Emerald's: make its window fit
 text|gText_GiveToWhichPokemon,texts.csv,text:ui_string,gText_GiveToWhichPokemon,HOTSWAP,replace the text with sw_text_raw,src/strings.c,433,,,DONE,UI string 12 px wider than Emerald's: make its window fit
-text|gText_DoWhatWithPokemon,texts.csv,text:ui_string,gText_DoWhatWithPokemon,HOTSWAP,replace the text with sw_text_raw,src/strings.c,434,,,DONE,UI string 54 px wider than Emerald's: make its window fit
+text|gText_DoWhatWithPokemon,texts.csv,text:ui_string,gText_DoWhatWithPokemon,HOTSWAP,replace the text with sw_text_raw,src/strings.c,434,,,DONE,UI string 21 px wider than Emerald's: make its window fit
 text|gText_NothingToCut,texts.csv,text:ui_string,gText_NothingToCut,HOTSWAP,replace the text with sw_text_raw,src/strings.c,435,,,DONE,UI string 34 px wider than Emerald's: make its window fit
 text|gText_CantSurfHere,texts.csv,text:ui_string,gText_CantSurfHere,KEEP,replace the text with sw_text_raw,src/strings.c,436,,,DONE,
 text|gText_AlreadySurfing,texts.csv,text:ui_string,gText_AlreadySurfing,KEEP,replace the text with sw_text_raw,src/strings.c,437,,,DONE,
@@ -17127,13 +17127,13 @@ text|gText_JoinGroup,texts.csv,text:ui_string,gText_JoinGroup,KEEP,replace the t
 text|gText_TwoStyles,texts.csv,text:ui_string,gText_TwoStyles,KEEP,replace the text with sw_text_raw,src/strings.c,766,,,DONE,
 text|gText_Lv50_3,texts.csv,text:ui_string,gText_Lv50_3,KEEP,replace the text with sw_text_raw,src/strings.c,767,,,DONE,
 text|gText_OpenLevel2,texts.csv,text:ui_string,gText_OpenLevel2,KEEP,replace the text with sw_text_raw,src/strings.c,768,,,DONE,
-text|gText_MonTypeAndNo,texts.csv,text:ui_string,gText_MonTypeAndNo,HOTSWAP,replace the text with sw_text_raw,src/strings.c,769,,,DONE,UI string 54 px wider than Emerald's: make its window fit
+text|gText_MonTypeAndNo,texts.csv,text:ui_string,gText_MonTypeAndNo,HOTSWAP,replace the text with sw_text_raw,src/strings.c,769,,,DONE,UI string 21 px wider than Emerald's: make its window fit
 text|gText_HoldItems,texts.csv,text:ui_string,gText_HoldItems,KEEP,replace the text with sw_text_raw,src/strings.c,770,,,DONE,
 text|gText_Symbols2,texts.csv,text:ui_string,gText_Symbols2,KEEP,replace the text with sw_text_raw,src/strings.c,771,,,DONE,
 text|gText_Record3,texts.csv,text:ui_string,gText_Record3,KEEP,replace the text with sw_text_raw,src/strings.c,772,,,DONE,
 text|gText_BattlePts,texts.csv,text:ui_string,gText_BattlePts,KEEP,replace the text with sw_text_raw,src/strings.c,773,,,DONE,
 text|gText_TowerInfo,texts.csv,text:ui_string,gText_TowerInfo,KEEP,replace the text with sw_text_raw,src/strings.c,774,,,DONE,
-text|gText_BattleMon,texts.csv,text:ui_string,gText_BattleMon,HOTSWAP,replace the text with sw_text_raw,src/strings.c,775,,,DONE,UI string 54 px wider than Emerald's: make its window fit
+text|gText_BattleMon,texts.csv,text:ui_string,gText_BattleMon,HOTSWAP,replace the text with sw_text_raw,src/strings.c,775,,,DONE,UI string 21 px wider than Emerald's: make its window fit
 text|gText_BattleSalon,texts.csv,text:ui_string,gText_BattleSalon,KEEP,replace the text with sw_text_raw,src/strings.c,776,,,DONE,
 text|gText_MultiLink2,texts.csv,text:ui_string,gText_MultiLink2,KEEP,replace the text with sw_text_raw,src/strings.c,777,,,DONE,
 text|gText_BattleRules,texts.csv,text:ui_string,gText_BattleRules,KEEP,replace the text with sw_text_raw,src/strings.c,778,,,DONE,
@@ -17973,7 +17973,7 @@ text|gText_Deselect,texts.csv,text:ui_string,gText_Deselect,KEEP,replace the tex
 text|gText_TheseThreePkmnOkay,texts.csv,text:ui_string,gText_TheseThreePkmnOkay,HOTSWAP,replace the text with sw_text_raw,src/strings.c,1620,,,DONE,UI string 18 px wider than Emerald's: make its window fit
 text|gText_Yes2,texts.csv,text:ui_string,gText_Yes2,KEEP,replace the text with sw_text_raw,src/strings.c,1621,,,DONE,
 text|gText_No2,texts.csv,text:ui_string,gText_No2,KEEP,replace the text with sw_text_raw,src/strings.c,1622,,,DONE,
-text|gText_CantSelectSamePkmn,texts.csv,text:ui_string,gText_CantSelectSamePkmn,HOTSWAP,replace the text with sw_text_raw,src/strings.c,1623,,,DONE,UI string 54 px wider than Emerald's: make its window fit
+text|gText_CantSelectSamePkmn,texts.csv,text:ui_string,gText_CantSelectSamePkmn,HOTSWAP,replace the text with sw_text_raw,src/strings.c,1623,,,DONE,UI string 21 px wider than Emerald's: make its window fit
 text|gText_PkmnSwap,texts.csv,text:ui_string,gText_PkmnSwap,HOTSWAP,replace the text with sw_text_raw,src/strings.c,1624,,,DONE,UI string 12 px wider than Emerald's: make its window fit
 text|gText_SelectPkmnToSwap,texts.csv,text:ui_string,gText_SelectPkmnToSwap,HOTSWAP,replace the text with sw_text_raw,src/strings.c,1625,,,DONE,UI string 12 px wider than Emerald's: make its window fit
 text|gText_SelectPkmnToAccept,texts.csv,text:ui_string,gText_SelectPkmnToAccept,HOTSWAP,replace the text with sw_text_raw,src/strings.c,1626,,,DONE,UI string 12 px wider than Emerald's: make its window fit
@@ -17983,13 +17983,13 @@ text|gText_Rechoose,texts.csv,text:ui_string,gText_Rechoose,KEEP,replace the tex
 text|gText_QuitSwapping,texts.csv,text:ui_string,gText_QuitSwapping,KEEP,replace the text with sw_text_raw,src/strings.c,1630,,,DONE,
 text|gText_Yes3,texts.csv,text:ui_string,gText_Yes3,KEEP,replace the text with sw_text_raw,src/strings.c,1631,,,DONE,
 text|gText_No3,texts.csv,text:ui_string,gText_No3,KEEP,replace the text with sw_text_raw,src/strings.c,1632,,,DONE,
-text|gText_PkmnForSwap,texts.csv,text:ui_string,gText_PkmnForSwap,HOTSWAP,replace the text with sw_text_raw,src/strings.c,1633,,,DONE,UI string 54 px wider than Emerald's: make its window fit
+text|gText_PkmnForSwap,texts.csv,text:ui_string,gText_PkmnForSwap,HOTSWAP,replace the text with sw_text_raw,src/strings.c,1633,,,DONE,UI string 21 px wider than Emerald's: make its window fit
 text|gText_Cancel3,texts.csv,text:ui_string,gText_Cancel3,KEEP,replace the text with sw_text_raw,src/strings.c,1634,,,DONE,
 text|gText_Swap2,texts.csv,text:ui_string,gText_Swap2,KEEP,replace the text with sw_text_raw,src/strings.c,1635,,,DONE,
 text|gText_Accept,texts.csv,text:ui_string,gText_Accept,KEEP,replace the text with sw_text_raw,src/strings.c,1636,,,DONE,
 text|gText_AcceptThisPkmn,texts.csv,text:ui_string,gText_AcceptThisPkmn,HOTSWAP,replace the text with sw_text_raw,src/strings.c,1637,,,DONE,UI string 12 px wider than Emerald's: make its window fit
 text|gText_4Spaces,texts.csv,text:ui_string,gText_4Spaces,KEEP,replace the text with sw_text_raw,src/strings.c,1638,,,DONE,
-text|gText_SamePkmnInPartyAlready,texts.csv,text:ui_string,gText_SamePkmnInPartyAlready,HOTSWAP,replace the text with sw_text_raw,src/strings.c,1639,,,DONE,UI string 54 px wider than Emerald's: make its window fit
+text|gText_SamePkmnInPartyAlready,texts.csv,text:ui_string,gText_SamePkmnInPartyAlready,HOTSWAP,replace the text with sw_text_raw,src/strings.c,1639,,,DONE,UI string 21 px wider than Emerald's: make its window fit
 text|gText_DecimalPoint,texts.csv,text:ui_string,gText_DecimalPoint,KEEP,replace the text with sw_text_raw,src/strings.c,1640,,,DONE,
 text|gText_SavingPlayer,texts.csv,text:ui_string,gText_SavingPlayer,KEEP,replace the text with sw_text_raw,src/strings.c,1641,,,DONE,
 text|gText_SavingBadges,texts.csv,text:ui_string,gText_SavingBadges,HOTSWAP,replace the text with sw_text_raw,src/strings.c,1642,,,DONE,
@@ -18123,7 +18123,7 @@ text|gText_StevenMatchCallName,texts.csv,text:match_call_profile,gText_StevenMat
 text|gText_MayBrendanMatchCallDesc,texts.csv,text:match_call_profile,gText_MayBrendanMatchCallDesc,KEEP,replace the text with sw_text_raw,src/strings.c,1778,,,DONE,
 text|gText_NormanMatchCallDesc,texts.csv,text:match_call_profile,gText_NormanMatchCallDesc,KEEP,replace the text with sw_text_raw,src/strings.c,1779,,,DONE,
 text|gText_MomMatchCallDesc,texts.csv,text:match_call_profile,gText_MomMatchCallDesc,KEEP,replace the text with sw_text_raw,src/strings.c,1780,,,DONE,
-text|gText_WallyMatchCallDesc,texts.csv,text:match_call_profile,gText_WallyMatchCallDesc,HOTSWAP,replace the text with sw_text_raw,src/strings.c,1781,,,DONE,UI string 54 px wider than Emerald's: make its window fit
+text|gText_WallyMatchCallDesc,texts.csv,text:match_call_profile,gText_WallyMatchCallDesc,HOTSWAP,replace the text with sw_text_raw,src/strings.c,1781,,,DONE,UI string 21 px wider than Emerald's: make its window fit
 text|gText_NormanMatchCallName,texts.csv,text:match_call_profile,gText_NormanMatchCallName,KEEP,replace the text with sw_text_raw,src/strings.c,1782,,,DONE,
 text|gText_MomMatchCallName,texts.csv,text:match_call_profile,gText_MomMatchCallName,KEEP,replace the text with sw_text_raw,src/strings.c,1783,,,DONE,
 text|gText_ScottMatchCallDesc,texts.csv,text:match_call_profile,gText_ScottMatchCallDesc,KEEP,replace the text with sw_text_raw,src/strings.c,1784,,,DONE,
@@ -18137,7 +18137,7 @@ text|gText_TateLizaMatchCallDesc,texts.csv,text:match_call_profile,gText_TateLiz
 text|gText_JuanMatchCallDesc,texts.csv,text:match_call_profile,gText_JuanMatchCallDesc,KEEP,replace the text with sw_text_raw,src/strings.c,1792,,,DONE,
 text|gText_EliteFourMatchCallDesc,texts.csv,text:match_call_profile,gText_EliteFourMatchCallDesc,HOTSWAP,replace the text with sw_text_raw,src/strings.c,1793,,,DONE,UI string 6 px wider than Emerald's: make its window fit
 text|gText_ChampionMatchCallDesc,texts.csv,text:match_call_profile,gText_ChampionMatchCallDesc,KEEP,replace the text with sw_text_raw,src/strings.c,1794,,,DONE,
-text|gText_ProfBirchMatchCallDesc,texts.csv,text:match_call_profile,gText_ProfBirchMatchCallDesc,HOTSWAP,replace the text with sw_text_raw,src/strings.c,1795,,,DONE,UI string 54 px wider than Emerald's: make its window fit
+text|gText_ProfBirchMatchCallDesc,texts.csv,text:match_call_profile,gText_ProfBirchMatchCallDesc,HOTSWAP,replace the text with sw_text_raw,src/strings.c,1795,,,DONE,UI string 21 px wider than Emerald's: make its window fit
 text|gText_CommStandbyAwaitingOtherPlayer,texts.csv,text:ui_string,gText_CommStandbyAwaitingOtherPlayer,KEEP,replace the text with sw_text_raw,src/strings.c,1796,,,DONE,
 text|gText_BattleWasRefused,texts.csv,text:ui_string,gText_BattleWasRefused,KEEP,replace the text with sw_text_raw,src/strings.c,1797,,,DONE,
 text|gText_RefusedBattle,texts.csv,text:ui_string,gText_RefusedBattle,KEEP,replace the text with sw_text_raw,src/strings.c,1798,,,DONE,

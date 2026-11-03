@@ -407,7 +407,7 @@ PLURAL_BEFORE = re.compile(r"(\b(?:all|many|some|several|two|three|four|five|six
 # no Emerald script line without placeholders is wider than that.
 FONT_WIDTHS = json.loads((ROOT / "tools" / "font_widths.json").read_text(encoding="utf-8"))
 BOX_PX = 208
-PLACEHOLDER_PX = {"PLAYER": 42, "RIVAL": 42, "KUN": 0, "STR_VAR_1": 60, "STR_VAR_2": 60, "STR_VAR_3": 60}
+PLACEHOLDER_PX = {"PKMN": 16, "COMPANION": 37, "COMPANIONS": 37, "PLAYER": 42, "RIVAL": 42, "KUN": 0, "STR_VAR_1": 60, "STR_VAR_2": 60, "STR_VAR_3": 60}
 
 
 # "rare COMPANION" is plural unless an article or determiner comes first ("a rare COMPANION").
@@ -459,6 +459,28 @@ def line_px(line: str) -> int:
 # wider than Emerald's gets `ui_wider_px`; during the port its window must fit it (or the text gets shorter).
 UI_FILES = ("src/strings.c", "src/battle_message.c", "src/text_input_strings.c", "src/landmark.c",
             "src/data/text/gift_ribbon_descriptions.h", "src/data/union_room.h", "src/data/credits.h")
+
+
+def star_wars_room_names(rows, terms: dict[str, str]) -> None:
+    """Map titles are "<place> · <room>", the room taken from Emerald's map name ("Pokemon Center", "Brendans
+    House", "Mt Pyre"). Swap the Emerald words in the room with the term dictionary, a trailing S as a possessive
+    ("Brendans House" -> "Kael's House")."""
+    plain = {k: v for k, v in terms.items() if "\\" not in k and k != v}
+    pat = re.compile(r"(?<![A-Z0-9])(" + "|".join(re.escape(k) for k in sorted(plain, key=len, reverse=True))
+                     + r")(S?)(?![A-Z0-9])")
+    for r in rows.values():
+        if r.get("entity_type") != "map" or " · " not in r.get("sw_title", ""):
+            continue
+        parts = r["sw_title"].split(" · ")
+        for i in range(1, len(parts)):
+            up = parts[i].upper().replace("MT ", "MT. ").replace("POKEMON", "POKéMON")
+            new = pat.sub(lambda m: plain[m.group(1)] + ("'S" if m.group(2) else ""), up)
+            if new != up:
+                parts[i] = " ".join(w[:1] + w[1:].lower() for w in new.split(" "))
+        title = " · ".join(parts)
+        if r["sw_name"] == r["sw_title"]:
+            r["sw_name"] = title
+        r["sw_title"] = title
 
 
 def draft_texts(terms: dict[str, str]):
@@ -961,6 +983,7 @@ def main() -> None:
     print("building emerald-sw-db")
     entities, by_id, mapping, sw_ids = load_inputs()
     rows, char_terms = derive(entities, by_id, mapping)
+    star_wars_room_names(rows, build_terms(rows, by_id, char_terms)[0])
 
     # net-new rows
     net = read(MAPPING / "net_new.csv")

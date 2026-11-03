@@ -43,10 +43,11 @@ replaced. Re-run it after curating more text.
 **Names, Datapad entries and descriptions are ported** the same way (2026-11-03):
 - `python3 tools/port_names.py` swaps each renamed entity's display name in `../game` by its C constant
   (creatures, items, moves, abilities, types, trainer classes, trainers, Grand Arena and showcase trainers,
-  decorations, region-map places) and writes each species' Datapad category and text. Constants never change.
+  decorations, region-map places), the Trainer Hill companions' nicknames, and writes each species' Datapad category
+  and text. Constants never change.
   Names longer than the game's buffer are left as Emerald's and listed in `database/name_port_report.csv`.
 - `python3 tools/port_terms.py` swaps the terms (`text_terms.csv`, plus BALL → POD) in item, move, ability,
-  fruit and decoration descriptions, which have no curated rows. Lines that would get too wide, or that the
+  fruit, decoration and ribbon descriptions, which have no curated rows, and every Easy Chat word (whole words only). Lines that would get too wide, or that the
   automatic pass gets wrong, are written by hand in `mapping/descriptions.csv`. Left-alone strings go to
   `database/term_port_report.csv`.
 - Images with Pokémon branding baked in are not touched by any tool: they are the `HUMAN-TODO` rows in

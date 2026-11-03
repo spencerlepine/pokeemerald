@@ -4,6 +4,7 @@ decoration descriptions.
     python3 tools/port_terms.py            # FILES below
     python3 tools/port_terms.py --dry-run  # only report
 
+Also every Easy Chat word (names of moves, abilities, types, events) and the ribbon descriptions.
 These strings are not in texts.csv, so they get the same automatic pass tools/build.py gives an uncurated
 text: every `emerald_term` in database/text_terms.csv (POKéMON -> COMPANION, POKé BALL -> CAPTURE POD,
 creature, item and place names...) with the article and plural fixes. A string is left alone when a new line
@@ -30,8 +31,21 @@ import build as B  # noqa: E402  (term regexes, plural and article fixes, font w
 
 GAME = Path(os.environ.get("GAME_DIR", ROOT.parent / "game"))
 REPORT = ROOT / "database" / "term_port_report.csv"
-FILES = ["src/data/text/item_descriptions.h", "src/data/text/move_descriptions.h", "src/data/text/abilities.h",
-         "src/data/decoration/description.h", "src/berry.c"]
+# file -> which strings in it (by symbol) get the pass
+FILES = {
+    "src/data/text/item_descriptions.h": r"Desc",
+    "src/data/text/move_descriptions.h": r"Desc",
+    "src/data/text/abilities.h": r"Desc",  # not the name table: names are tools/port_names.py
+    "src/data/decoration/description.h": r"Desc",
+    "src/berry.c": r"Desc",
+    "src/data/text/ribbon_descriptions.h": r"RibbonDescription",
+}
+# Easy Chat words: every word file, whole words, at most EC_WORD_MAX letters (ANTICIPATION, the longest
+# Emerald word, fits the word columns). The alphabetical lists (easy_chat_words_by_letter.h) keep Emerald's order.
+for _g in sorted((GAME / "src/data/easy_chat").glob("easy_chat_group_*.h")):
+    FILES[str(_g.relative_to(GAME))] = r"^gEasyChatWord_"
+EC_WORD_MAX = 12
+EC_KEEP = {"PSYCHIC"}  # one word for the kept PSYCHIC type and the renamed move: the type wins
 SKIP = re.compile(r"POK[éE]BLOCK|\{POKEBLOCK\}", re.I)
 STR = re.compile(r'"((?:[^"\\]|\\.)*)"')
 BLOCK = re.compile(r'_\(\s*((?:"(?:[^"\\]|\\.)*"\s*)+)\)')
@@ -91,16 +105,22 @@ def main() -> int:
                 continue
             sym = re.search(r"(\w+)\s*\[\]\s*=\s*$", src[max(0, m.start() - 120):m.start()])
             key = (f, sym.group(1) if sym else "")
-            if not re.search(r"Desc", key[1]):
-                continue  # only descriptions: name tables (abilities.h) stay with tools/port_names.py
+            if not re.search(FILES[f], key[1]):
+                continue
             if key in hand:
                 new = hand[key]
                 used_hand.add(key)
+            elif "easy_chat" in f:
+                new = text if text in EC_KEEP else terms.get(text, text)  # a word is swapped only as a whole (MAGMA ARMOR stays)
             else:
                 new = swap(text, terms, pat)
             if new == text:
                 continue
-            if any(B.line_px(x) > widest for x in re.split(r"\\[nlp]", new)):
+            if "easy_chat" in f and len(new) > EC_WORD_MAX:
+                stats["too_long"] += 1
+                report.append((f, src.count("\n", 0, m.start()) + 1, "too_long", new))
+                continue
+            if "easy_chat" not in f and any(B.line_px(x) > widest for x in re.split(r"\\[nlp]", new)):
                 stats["too_wide"] += 1
                 report.append((f, src.count("\n", 0, m.start()) + 1, "too_wide", new))
                 continue

@@ -22,31 +22,31 @@ map:artisan-cave-b1f,Artisan Cave · B1F,underground,location:artisan-cave,,,8,4
 map:battle-frontier-battle-pyramid-floor,Battle Frontier · Battle Pyramid Floor,indoor,location:battle-frontier,,,8,,,,,,1,44,44,item:ss-ticket,Battle Pyramid floors; wild Pokémon by level.,GRAND ARENA · Battle Pyramid Floor,GRAND ARENA
 map:battle-frontier-outside-east,Battle Frontier · Outside East,route,location:battle-frontier,40,battle-frontier,8,,,,,,0,,,item:ss-ticket,Post-game.,GRAND ARENA · Outside East,GRAND ARENA
 map:battle-frontier-outside-west,Battle Frontier · Outside West,route,location:battle-frontier,40,battle-frontier,8,,,,,,0,,,item:ss-ticket,Post-game.,GRAND ARENA · Outside West,GRAND ARENA
-map:cave-of-origin-1f,Cave Of Origin · 1F,underground,location:cave-of-origin,33,sootopolis-crisis,7,30,36,30,36,land,0,,,item:hm-dive|flag:badge07-get,Wallace guards it during the crisis.,CAVE OF EVIL · Cave Of Origin · 1F,DAGOBAH
-map:cave-of-origin-b1f,Cave Of Origin · B1F,underground,location:cave-of-origin,33,sootopolis-crisis,7,,,,,,0,,,item:hm-dive|flag:badge07-get,Wallace guards it during the crisis.,CAVE OF EVIL · Cave Of Origin · B1F,DAGOBAH
-map:cave-of-origin-entrance,Cave Of Origin · Entrance,underground,location:cave-of-origin,33,sootopolis-crisis,7,28,36,28,36,land,0,,,item:hm-dive|flag:badge07-get,Wallace guards it during the crisis.,CAVE OF EVIL · Cave Of Origin · Entrance,DAGOBAH
+map:cave-of-origin-1f,Cave Of Origin · 1F,underground,location:cave-of-origin,33,sootopolis-crisis,7,30,36,30,36,land,0,,,item:hm-dive|flag:badge07-get,Wallace guards it during the crisis.,CAVE OF EVIL · Cave Of Evil · 1F,DAGOBAH
+map:cave-of-origin-b1f,Cave Of Origin · B1F,underground,location:cave-of-origin,33,sootopolis-crisis,7,,,,,,0,,,item:hm-dive|flag:badge07-get,Wallace guards it during the crisis.,CAVE OF EVIL · Cave Of Evil · B1F,DAGOBAH
+map:cave-of-origin-entrance,Cave Of Origin · Entrance,underground,location:cave-of-origin,33,sootopolis-crisis,7,28,36,28,36,land,0,,,item:hm-dive|flag:badge07-get,Wallace guards it during the crisis.,CAVE OF EVIL · Cave Of Evil · Entrance,DAGOBAH
 map:desert-ruins,Desert Ruins,underground,location:desert-ruins,42,regi-trio,7,,,,,,0,,,item:hm-rock-smash|flag:badge03-get|flag:regi-doors-opened,Regirock (Lv 40).,TUSKEN RUINS,TATOOINE
 map:desert-underpass,Desert Underpass,underground,location:desert-underpass,,,8,35,45,35,45,land,0,,,flag:sys-game-clear,"Post-game, from Route 114.",KRAYT GRAVEYARD,TATOOINE
 map:dewford-town,Dewford Town,town,location:dewford-town,10,sail-to-dewford,1,,,5,45,good_rod|old_rod|super_rod|water,0,,,flag:returned-devon-goods,Reached by Mr. Briney's boat (VAR_BOARD_BRINEY_BOAT_STATE).,KACHIRHO,KASHYYYK
-map:dewford-town-gym,Dewford Town · Gym,indoor,location:dewford-town,11,knuckle-badge,1,,,,,,7,13,19,,"Gym 2: Fighting, dark maze.",KACHIRHO · Gym,KASHYYYK
+map:dewford-town-gym,Dewford Town · Gym,indoor,location:dewford-town,11,knuckle-badge,1,,,,,,7,13,19,,"Gym 2: Fighting, dark maze.",KACHIRHO · Arena,KASHYYYK
 map:ever-grande-city,Ever Grande City,city,location:ever-grande-city,36,victory-road-wally,8,,,5,45,good_rod|old_rod|super_rod|water,0,,,item:hm-waterfall|flag:badge08-get,Reached by Waterfall from Route 128.,ILUM,ILUM
 map:ever-grande-city-champions-room,Ever Grande City · Champions Room,indoor,location:ever-grande-city,38,champion-wallace,8,,,,,,1,55,58,,Champion Wallace.,ILUM · Champions Room,ILUM
-map:ever-grande-city-drakes-room,Ever Grande City · Drakes Room,indoor,location:ever-grande-city,37,elite-four,8,,,,,,1,52,55,,Elite Four 4 (Dragon).,ILUM · Drakes Room,ILUM
-map:ever-grande-city-glacias-room,Ever Grande City · Glacias Room,indoor,location:ever-grande-city,37,elite-four,8,,,,,,1,50,53,,Elite Four 3 (Ice).,ILUM · Glacias Room,ILUM
-map:ever-grande-city-phoebes-room,Ever Grande City · Phoebes Room,indoor,location:ever-grande-city,37,elite-four,8,,,,,,1,48,51,,Elite Four 2 (Ghost).,ILUM · Phoebes Room,ILUM
-map:ever-grande-city-sidneys-room,Ever Grande City · Sidneys Room,indoor,location:ever-grande-city,37,elite-four,8,,,,,,1,46,49,,Elite Four 1 (Dark).,ILUM · Sidneys Room,ILUM
+map:ever-grande-city-drakes-room,Ever Grande City · Drakes Room,indoor,location:ever-grande-city,37,elite-four,8,,,,,,1,52,55,,Elite Four 4 (Dragon).,ILUM · Anakin's Room,ILUM
+map:ever-grande-city-glacias-room,Ever Grande City · Glacias Room,indoor,location:ever-grande-city,37,elite-four,8,,,,,,1,50,53,,Elite Four 3 (Ice).,ILUM · Ki-adi's Room,ILUM
+map:ever-grande-city-phoebes-room,Ever Grande City · Phoebes Room,indoor,location:ever-grande-city,37,elite-four,8,,,,,,1,48,51,,Elite Four 2 (Ghost).,ILUM · Qui-gon's Room,ILUM
+map:ever-grande-city-sidneys-room,Ever Grande City · Sidneys Room,indoor,location:ever-grande-city,37,elite-four,8,,,,,,1,46,49,,Elite Four 1 (Dark).,ILUM · Maul's Room,ILUM
 map:fallarbor-town,Fallarbor Town,town,location:fallarbor-town,18,meteor-falls-meteorite,3,,,,,,0,,,,Battle Tent; Move Relearner.,INYUSU TOR,SULLUST
 map:fiery-path,Fiery Path,underground,location:fiery-path,,,3,14,16,14,16,land,0,,,item:hm-strength|flag:badge04-get,Strength boulders block the shortcut until badge 4.,MAGMA TUNNELS,SULLUST
 map:fortree-city,Fortree City,city,location:fortree-city,24,devon-scope,5,,,,,,0,,,,East exit blocked by invisible Kecleon until Devon Scope.,BRIGHT TREE,ENDOR
-map:fortree-city-gym,Fortree City · Gym,indoor,location:fortree-city,25,feather-badge,5,,,,,,7,27,33,,Gym 6: Flying.,BRIGHT TREE · Gym,ENDOR
+map:fortree-city-gym,Fortree City · Gym,indoor,location:fortree-city,25,feather-badge,5,,,,,,7,27,33,,Gym 6: Flying.,BRIGHT TREE · Arena,ENDOR
 map:granite-cave-1f,Granite Cave · 1F,underground,location:granite-cave,12,letter-for-steven,1,6,10,6,10,land,0,,,item:hm-flash|flag:badge02-get,Dark without Flash; Mach Bike needed for cracked floor in B1F.,SHADOWLANDS · 1F,KASHYYYK
 map:granite-cave-b1f,Granite Cave · B1F,underground,location:granite-cave,12,letter-for-steven,1,9,11,9,11,land,0,,,item:hm-flash|flag:badge02-get,Dark without Flash; Mach Bike needed for cracked floor in B1F.,SHADOWLANDS · B1F,KASHYYYK
 map:granite-cave-b2f,Granite Cave · B2F,underground,location:granite-cave,12,letter-for-steven,1,10,12,5,20,land|rock_smash,0,,,item:hm-flash|flag:badge02-get,Dark without Flash; Mach Bike needed for cracked floor in B1F.,SHADOWLANDS · B2F,KASHYYYK
-map:granite-cave-stevens-room,Granite Cave · Stevens Room,underground,location:granite-cave,12,letter-for-steven,1,6,10,6,10,land,0,,,item:hm-flash|flag:badge02-get,Dark without Flash; Mach Bike needed for cracked floor in B1F.,SHADOWLANDS · Stevens Room,KASHYYYK
+map:granite-cave-stevens-room,Granite Cave · Stevens Room,underground,location:granite-cave,12,letter-for-steven,1,6,10,6,10,land,0,,,item:hm-flash|flag:badge02-get,Dark without Flash; Mach Bike needed for cracked floor in B1F.,SHADOWLANDS · Leia's Room,KASHYYYK
 map:island-cave,Island Cave,underground,location:island-cave,42,regi-trio,7,,,,,,0,,,flag:regi-doors-opened,Regice (Lv 40).,ICE GROTTO,KASHYYYK
 map:jagged-pass,Jagged Pass,route,location:jagged-pass,19,mt-chimney,3,20,22,20,22,land,6,19,22,,Acro Bike needed to go back up; Magma Hideout entrance needs Magma Emblem.,ASHEN PASS,MUSTAFAR
 map:lavaridge-town,Lavaridge Town,town,location:lavaridge-town,20,heat-badge,3,,,,,,0,,,,Gym 4; Go-Goggles from rival.,PIRIN,SULLUST
-map:lavaridge-town-gym-1f,Lavaridge Town · Gym · 1F,indoor,location:lavaridge-town,20,heat-badge,3,,,,,,9,22,29,,Gym 4: Fire.,PIRIN · Gym · 1F,SULLUST
+map:lavaridge-town-gym-1f,Lavaridge Town · Gym · 1F,indoor,location:lavaridge-town,20,heat-badge,3,,,,,,9,22,29,,Gym 4: Fire.,PIRIN · Arena · 1F,SULLUST
 map:lilycove-city,Lilycove City,city,location:lilycove-city,26,lilycove-rival,6,,,5,45,good_rod|old_rod|super_rod|water,6,31,34,,"Contest Hall, Department Store; Aqua Hideout in the cove needs Surf.",CLOUD CITY,BESPIN
 map:littleroot-town,Littleroot Town,town,location:littleroot-town,1,moving-day,0,,,,,,0,,,,Start.,MOS PELGO,TATOOINE
 map:magma-hideout-1f,Magma Hideout · 1F,underground,location:magma-hideout,28,magma-hideout,6,27,33,27,33,land,1,29,29,item:magma-emblem|item:hm-strength|flag:badge04-get,Entrance on Jagged Pass.,FORTRESS VADER · 1F,MUSTAFAR
@@ -60,29 +60,29 @@ map:magma-hideout-4f,Magma Hideout · 4F,underground,location:magma-hideout,28,m
 map:marine-cave-end,Marine Cave · End,underground,location:marine-cave,43,weather-legends-return,8,,,,,,0,,,flag:sys-game-clear|item:hm-dive|flag:badge07-get,Appears with Kyogre's weather report.,MARINE CAVE · End,DAGOBAH
 map:marine-cave-entrance,Marine Cave · Entrance,underground,location:marine-cave,,,8,,,,,,0,,,flag:sys-game-clear|item:hm-dive|flag:badge07-get,Appears with Kyogre's weather report.,MARINE CAVE · Entrance,DAGOBAH
 map:mauville-city,Mauville City,city,location:mauville-city,15,wally-in-mauville,2,,,,,,1,16,16,,Gym 3; Rydel's Cycles gives a bike.,MOS ESPA,TATOOINE
-map:mauville-city-gym,Mauville City · Gym,indoor,location:mauville-city,16,dynamo-badge,2,,,,,,6,17,24,,Gym 3: Electric.,MOS ESPA · Gym,TATOOINE
+map:mauville-city-gym,Mauville City · Gym,indoor,location:mauville-city,16,dynamo-badge,2,,,,,,6,17,24,,Gym 3: Electric.,MOS ESPA · Arena,TATOOINE
 map:meteor-falls-1f-1r,Meteor Falls · 1F · 1R,underground,location:meteor-falls,18,meteor-falls-meteorite,3,14,20,5,45,good_rod|land|old_rod|super_rod|water,0,,,,Inner areas need Surf and Waterfall (post-game Steven).,STARFALL CAVERN · 1F · 1R,SULLUST
 map:meteor-falls-1f-2r,Meteor Falls · 1F · 2R,underground,location:meteor-falls,,,5,33,40,5,45,good_rod|land|old_rod|super_rod|water,2,37,39,item:hm-surf|flag:badge05-get,Back of Meteor Falls across the water; dragon tamers ~Lv 37-39.,STARFALL CAVERN · 1F · 2R,SULLUST
 map:meteor-falls-b1f-1r,Meteor Falls · B1F · 1R,underground,location:meteor-falls,,,8,33,40,5,45,good_rod|land|old_rod|super_rod|water,0,,,item:hm-surf|flag:badge05-get|item:hm-waterfall|flag:badge08-get,Bagon area needs Surf + Waterfall (Lv 33-40 wild).,STARFALL CAVERN · B1F · 1R,SULLUST
 map:meteor-falls-b1f-2r,Meteor Falls · B1F · 2R,underground,location:meteor-falls,,,8,25,40,5,45,good_rod|land|old_rod|super_rod|water,0,,,item:hm-surf|flag:badge05-get|item:hm-waterfall|flag:badge08-get,Bagon area needs Surf + Waterfall (Lv 33-40 wild).,STARFALL CAVERN · B1F · 2R,SULLUST
-map:meteor-falls-stevens-cave,Meteor Falls · Stevens Cave,underground,location:meteor-falls,41,steven-meteor-falls,8,33,40,33,40,land,1,75,78,item:hm-waterfall|flag:badge08-get|flag:sys-game-clear,Post-game Steven battle.,STARFALL CAVERN · Stevens Cave,SULLUST
+map:meteor-falls-stevens-cave,Meteor Falls · Stevens Cave,underground,location:meteor-falls,41,steven-meteor-falls,8,33,40,33,40,land,1,75,78,item:hm-waterfall|flag:badge08-get|flag:sys-game-clear,Post-game Steven battle.,STARFALL CAVERN · Leia's Cave,SULLUST
 map:mirage-tower-1f,Mirage Tower · 1F,underground,location:mirage-tower,,,4,20,24,20,24,land,0,,,item:go-goggles|item:mach-bike,In the desert; Mach Bike for cracked floors; fossil choice.,SANDCRAWLER · 1F,TATOOINE
 map:mirage-tower-2f,Mirage Tower · 2F,underground,location:mirage-tower,,,4,20,24,20,24,land,0,,,item:go-goggles|item:mach-bike,In the desert; Mach Bike for cracked floors; fossil choice.,SANDCRAWLER · 2F,TATOOINE
 map:mirage-tower-3f,Mirage Tower · 3F,underground,location:mirage-tower,,,4,20,24,20,24,land,0,,,item:go-goggles|item:mach-bike,In the desert; Mach Bike for cracked floors; fossil choice.,SANDCRAWLER · 3F,TATOOINE
 map:mirage-tower-4f,Mirage Tower · 4F,underground,location:mirage-tower,,,4,20,24,20,24,land,0,,,item:go-goggles|item:mach-bike,In the desert; Mach Bike for cracked floors; fossil choice.,SANDCRAWLER · 4F,TATOOINE
 map:mossdeep-city,Mossdeep City,city,location:mossdeep-city,,,6,,,5,45,good_rod|old_rod|super_rod|water,0,,,item:hm-surf|flag:badge05-get,Gym 7; Space Center.,YAVIN 4,YAVIN 4
-map:mossdeep-city-gym,Mossdeep City · Gym,indoor,location:mossdeep-city,30,mind-badge,6,,,,,,13,36,42,,Gym 7: Psychic double battle.,YAVIN 4 · Gym,YAVIN 4
-map:mossdeep-city-space-center-1f,Mossdeep City · Space Center · 1F,indoor,location:mossdeep-city,31,space-center,7,,,,,,1,32,32,,Magma attack after Mind Badge.,YAVIN 4 · Space Center · 1F,YAVIN 4
-map:mossdeep-city-space-center-2f,Mossdeep City · Space Center · 2F,indoor,location:mossdeep-city,31,space-center,7,,,,,,4,32,44,,Magma attack after Mind Badge.,YAVIN 4 · Space Center · 2F,YAVIN 4
-map:mt-chimney,Mt Chimney,route,location:mt-chimney,19,mt-chimney,3,,,,,,8,18,25,,Reached by Cable Car from Route 112.,MUSTAFAR PEAK · Mt Chimney,MUSTAFAR
-map:mt-pyre-1f,Mt Pyre · 1F,indoor,location:mt-pyre,27,mt-pyre-orbs,6,22,29,22,29,land,0,,,item:hm-surf|flag:badge05-get,Summit event with Aqua/Magma.,JEDHA TEMPLE · Mt Pyre · 1F,JEDHA
-map:mt-pyre-2f,Mt Pyre · 2F,indoor,location:mt-pyre,,,6,22,29,22,29,land,4,31,31,item:hm-surf|flag:badge05-get,Summit event with Aqua/Magma.,JEDHA TEMPLE · Mt Pyre · 2F,JEDHA
-map:mt-pyre-3f,Mt Pyre · 3F,indoor,location:mt-pyre,,,6,22,29,22,29,land,3,26,26,item:hm-surf|flag:badge05-get,Summit event with Aqua/Magma.,JEDHA TEMPLE · Mt Pyre · 3F,JEDHA
-map:mt-pyre-4f,Mt Pyre · 4F,indoor,location:mt-pyre,,,6,22,29,22,29,land,1,32,32,item:hm-surf|flag:badge05-get,Summit event with Aqua/Magma.,JEDHA TEMPLE · Mt Pyre · 4F,JEDHA
-map:mt-pyre-5f,Mt Pyre · 5F,indoor,location:mt-pyre,,,6,22,29,22,29,land,1,32,32,item:hm-surf|flag:badge05-get,Summit event with Aqua/Magma.,JEDHA TEMPLE · Mt Pyre · 5F,JEDHA
-map:mt-pyre-6f,Mt Pyre · 6F,indoor,location:mt-pyre,,,6,22,29,22,29,land,2,32,32,item:hm-surf|flag:badge05-get,Summit event with Aqua/Magma.,JEDHA TEMPLE · Mt Pyre · 6F,JEDHA
-map:mt-pyre-exterior,Mt Pyre · Exterior,route,location:mt-pyre,27,mt-pyre-orbs,6,25,29,25,29,land,0,,,item:hm-surf|flag:badge05-get,Summit event with Aqua/Magma.,JEDHA TEMPLE · Mt Pyre · Exterior,JEDHA
-map:mt-pyre-summit,Mt Pyre · Summit,route,location:mt-pyre,27,mt-pyre-orbs,6,24,30,24,30,land,1,32,32,item:hm-surf|flag:badge05-get,Summit event with Aqua/Magma.,JEDHA TEMPLE · Mt Pyre · Summit,JEDHA
+map:mossdeep-city-gym,Mossdeep City · Gym,indoor,location:mossdeep-city,30,mind-badge,6,,,,,,13,36,42,,Gym 7: Psychic double battle.,YAVIN 4 · Arena,YAVIN 4
+map:mossdeep-city-space-center-1f,Mossdeep City · Space Center · 1F,indoor,location:mossdeep-city,31,space-center,7,,,,,,1,32,32,,Magma attack after Mind Badge.,YAVIN 4 · Launch Tower · 1F,YAVIN 4
+map:mossdeep-city-space-center-2f,Mossdeep City · Space Center · 2F,indoor,location:mossdeep-city,31,space-center,7,,,,,,4,32,44,,Magma attack after Mind Badge.,YAVIN 4 · Launch Tower · 2F,YAVIN 4
+map:mt-chimney,Mt Chimney,route,location:mt-chimney,19,mt-chimney,3,,,,,,8,18,25,,Reached by Cable Car from Route 112.,MUSTAFAR PEAK · Mustafar Peak,MUSTAFAR
+map:mt-pyre-1f,Mt Pyre · 1F,indoor,location:mt-pyre,27,mt-pyre-orbs,6,22,29,22,29,land,0,,,item:hm-surf|flag:badge05-get,Summit event with Aqua/Magma.,JEDHA TEMPLE · Jedha Temple · 1F,JEDHA
+map:mt-pyre-2f,Mt Pyre · 2F,indoor,location:mt-pyre,,,6,22,29,22,29,land,4,31,31,item:hm-surf|flag:badge05-get,Summit event with Aqua/Magma.,JEDHA TEMPLE · Jedha Temple · 2F,JEDHA
+map:mt-pyre-3f,Mt Pyre · 3F,indoor,location:mt-pyre,,,6,22,29,22,29,land,3,26,26,item:hm-surf|flag:badge05-get,Summit event with Aqua/Magma.,JEDHA TEMPLE · Jedha Temple · 3F,JEDHA
+map:mt-pyre-4f,Mt Pyre · 4F,indoor,location:mt-pyre,,,6,22,29,22,29,land,1,32,32,item:hm-surf|flag:badge05-get,Summit event with Aqua/Magma.,JEDHA TEMPLE · Jedha Temple · 4F,JEDHA
+map:mt-pyre-5f,Mt Pyre · 5F,indoor,location:mt-pyre,,,6,22,29,22,29,land,1,32,32,item:hm-surf|flag:badge05-get,Summit event with Aqua/Magma.,JEDHA TEMPLE · Jedha Temple · 5F,JEDHA
+map:mt-pyre-6f,Mt Pyre · 6F,indoor,location:mt-pyre,,,6,22,29,22,29,land,2,32,32,item:hm-surf|flag:badge05-get,Summit event with Aqua/Magma.,JEDHA TEMPLE · Jedha Temple · 6F,JEDHA
+map:mt-pyre-exterior,Mt Pyre · Exterior,route,location:mt-pyre,27,mt-pyre-orbs,6,25,29,25,29,land,0,,,item:hm-surf|flag:badge05-get,Summit event with Aqua/Magma.,JEDHA TEMPLE · Jedha Temple · Exterior,JEDHA
+map:mt-pyre-summit,Mt Pyre · Summit,route,location:mt-pyre,27,mt-pyre-orbs,6,24,30,24,30,land,1,32,32,item:hm-surf|flag:badge05-get,Summit event with Aqua/Magma.,JEDHA TEMPLE · Jedha Temple · Summit,JEDHA
 map:navel-rock-b1f,Navel Rock · B1F,underground,location:navel-rock,,,8,,,,,,0,,,item:mystic-ticket,Event island (Lugia/Ho-Oh).,MORTIS GATE · B1F,MORTIS
 map:navel-rock-bottom,Navel Rock · Bottom,underground,location:navel-rock,45,event-islands,8,,,,,,0,,,item:mystic-ticket,Event island (Lugia/Ho-Oh).,MORTIS GATE · Bottom,MORTIS
 map:navel-rock-down01,Navel Rock · Down 01,underground,location:navel-rock,,,8,,,,,,0,,,item:mystic-ticket,Event island (Lugia/Ho-Oh).,MORTIS GATE · Down 01,MORTIS
@@ -108,7 +108,7 @@ map:new-mauville-inside,New Mauville · Inside,underground,location:new-mauville
 map:oldale-town,Oldale Town,town,location:oldale-town,4,first-rival-battle,0,,,,,,0,,,,,TOSCHE STATION,TATOOINE
 map:pacifidlog-town,Pacifidlog Town,town,location:pacifidlog-town,,,7,,,5,45,good_rod|old_rod|super_rod|water,0,,,item:hm-surf|flag:badge05-get,,TIPOCA CITY,KAMINO
 map:petalburg-city,Petalburg City,city,location:petalburg-city,5,wally-catches-ralts,0,,,5,45,good_rod|old_rod|super_rod|water,0,,,,Gym needs 4 badges (VAR_PETALBURG_GYM_STATE).,MOS ENTHA,TATOOINE
-map:petalburg-city-gym,Petalburg City · Gym,indoor,location:petalburg-city,5,wally-catches-ralts,4,,,,,,8,26,31,flag:badge04-get,Norman only accepts challengers with four badges (levels 24-31).,MOS ENTHA · Gym,TATOOINE
+map:petalburg-city-gym,Petalburg City · Gym,indoor,location:petalburg-city,5,wally-catches-ralts,4,,,,,,8,26,31,flag:badge04-get,Norman only accepts challengers with four badges (levels 24-31).,MOS ENTHA · Arena,TATOOINE
 map:petalburg-woods,Petalburg Woods,route,location:petalburg-woods,6,petalburg-woods-aqua,0,5,6,5,6,land,3,3,9,,Cut tree hides items.,JUNDLAND WASTES,TATOOINE
 map:route101,Route 101,route,location:route-101,3,rescue-prof-birch,0,2,3,2,3,land,0,,,,Starter choice.,ROUTE 101,TATOOINE
 map:route102,Route 102,route,location:route-102,5,wally-catches-ralts,0,3,4,3,45,good_rod|land|old_rod|super_rod|water,4,3,5,,,ROUTE 102,TATOOINE
@@ -138,8 +138,8 @@ map:route116,Route 116,route,location:route-116,8,devon-goods-stolen,1,6,8,6,8,l
 map:route117,Route 117,route,location:route-117,,,2,13,14,5,45,good_rod|land|old_rod|super_rod|water,9,11,17,,Day Care.,ROUTE 117,TATOOINE
 map:route118,Route 118,route,location:route-118,,,5,24,27,5,45,good_rod|land|old_rod|super_rod|water,7,14,26,item:hm-surf|flag:badge05-get,Needs Surf to cross from Mauville.,ROUTE 118,ENDOR
 map:route119,Route 119,route,location:route-119,22,weather-institute,5,24,27,5,45,good_rod|land|old_rod|super_rod|water,23,20,31,item:hm-surf|flag:badge05-get,Acro Bike for some items; Weather Institute; HM Fly.,ROUTE 119,ENDOR
-map:route119-weather-institute-1f,Route 119 · Weather Institute · 1F,indoor,location:route-119,22,weather-institute,5,,,,,,1,27,27,,Team Aqua occupation.,ROUTE 119 · Weather Institute · 1F,ENDOR
-map:route119-weather-institute-2f,Route 119 · Weather Institute · 2F,indoor,location:route-119,22,weather-institute,5,,,,,,1,28,28,,Team Aqua occupation.,ROUTE 119 · Weather Institute · 2F,ENDOR
+map:route119-weather-institute-1f,Route 119 · Weather Institute · 1F,indoor,location:route-119,22,weather-institute,5,,,,,,1,27,27,,Team Aqua occupation.,ROUTE 119 · Endor Station · 1F,ENDOR
+map:route119-weather-institute-2f,Route 119 · Weather Institute · 2F,indoor,location:route-119,22,weather-institute,5,,,,,,1,28,28,,Team Aqua occupation.,ROUTE 119 · Endor Station · 2F,ENDOR
 map:route120,Route 120,route,location:route-120,24,devon-scope,6,25,27,5,45,good_rod|land|old_rod|super_rod|water,13,27,30,item:devon-scope,Steven gives Devon Scope; Ancient Tomb; Scorched Slab.,ROUTE 120,ENDOR
 map:route121,Route 121,route,location:route-121,,,6,25,28,5,45,good_rod|land|old_rod|super_rod|water,10,25,32,,Safari Zone entrance; path to Mt. Pyre needs Surf.,ROUTE 121,ENDOR
 map:route122,Route 122,route,location:route-122,,,6,,,5,45,good_rod|old_rod|super_rod|water,0,,,item:hm-surf|flag:badge05-get,,ROUTE 122,JEDHA
@@ -156,7 +156,7 @@ map:route132,Route 132,ocean-route,location:route-132,,,7,,,5,45,good_rod|old_ro
 map:route133,Route 133,ocean-route,location:route-133,,,7,,,5,45,good_rod|old_rod|super_rod|water,7,33,34,item:hm-surf|flag:badge05-get,Currents.,ROUTE 133,KAMINO
 map:route134,Route 134,ocean-route,location:route-134,,,7,,,5,45,good_rod|old_rod|super_rod|water,9,32,34,item:hm-surf|flag:badge05-get,Currents; Sealed Chamber below.,ROUTE 134,KAMINO
 map:rustboro-city,Rustboro City,city,location:rustboro-city,7,stone-badge,0,,,,,,6,13,15,,Gym 1.,BESTINE,TATOOINE
-map:rustboro-city-gym,Rustboro City · Gym,indoor,location:rustboro-city,7,stone-badge,0,,,,,,4,8,15,,"Gym 1: Rock, levels ~12-15.",BESTINE · Gym,TATOOINE
+map:rustboro-city-gym,Rustboro City · Gym,indoor,location:rustboro-city,7,stone-badge,0,,,,,,4,8,15,,"Gym 1: Rock, levels ~12-15.",BESTINE · Arena,TATOOINE
 map:rusturf-tunnel,Rusturf Tunnel,underground,location:rusturf-tunnel,8,devon-goods-stolen,1,5,8,5,8,land,1,11,11,,Rock Smash rocks block the Verdanturf side until FLAG_RUSTURF_TUNNEL_OPENED.,BEGGAR'S CANYON,TATOOINE
 map:ss-tidal-lower-deck,SS Tidal Lower Deck,indoor,location:dynamic,,,8,,,,,,2,43,44,item:ss-ticket,Post-game ferry Slateport ↔ Lilycove.,,
 map:ss-tidal-rooms,SS Tidal Rooms,indoor,location:dynamic,,,8,,,,,,6,12,45,item:ss-ticket,Post-game ferry Slateport ↔ Lilycove.,,
@@ -195,10 +195,10 @@ map:sky-pillar-entrance,Sky Pillar · Entrance,underground,location:sky-pillar,3
 map:sky-pillar-outside,Sky Pillar · Outside,route,location:sky-pillar,34,sky-pillar-rayquaza,7,,,,,,0,,,item:mach-bike,Cracked floors need the Mach Bike.,ASTEROID SPIRE · Outside,ASTEROID FIELD
 map:sky-pillar-top,Sky Pillar · Top,route,location:sky-pillar,34,sky-pillar-rayquaza,7,,,,,,0,,,item:mach-bike,Cracked floors need the Mach Bike.,ASTEROID SPIRE · Top,ASTEROID FIELD
 map:slateport-city,Slateport City,city,location:slateport-city,13,oceanic-museum,2,,,5,45,good_rod|old_rod|super_rod|water,0,,,,Arrive by boat; Battle Tent; Oceanic Museum event.,MOS EISLEY,TATOOINE
-map:slateport-city-oceanic-museum-2f,Slateport City · Oceanic Museum · 2F,indoor,location:slateport-city,13,oceanic-museum,2,,,,,,1,15,15,,Team Aqua grunts.,MOS EISLEY · Oceanic Museum · 2F,TATOOINE
+map:slateport-city-oceanic-museum-2f,Slateport City · Oceanic Museum · 2F,indoor,location:slateport-city,13,oceanic-museum,2,,,,,,1,15,15,,Team Aqua grunts.,MOS EISLEY · Spacer Museum · 2F,TATOOINE
 map:sootopolis-city,Sootopolis City,city,location:sootopolis-city,33,sootopolis-crisis,7,,,5,45,good_rod|old_rod|super_rod|water,0,,,item:hm-dive|flag:badge07-get,Weather crisis; Gym 8 opens after Rayquaza.,DAGOBAH,DAGOBAH
-map:sootopolis-city-gym-1f,Sootopolis City · Gym · 1F,indoor,location:sootopolis-city,35,rain-badge,7,,,,,,1,41,46,,"Gym 8: Water, cracking-ice puzzle.",DAGOBAH · Gym · 1F,DAGOBAH
-map:sootopolis-city-gym-b1f,Sootopolis City · Gym · B1F,indoor,location:sootopolis-city,,,7,,,,,,10,35,40,,"Gym 8: Water, cracking-ice puzzle.",DAGOBAH · Gym · B1F,DAGOBAH
+map:sootopolis-city-gym-1f,Sootopolis City · Gym · 1F,indoor,location:sootopolis-city,35,rain-badge,7,,,,,,1,41,46,,"Gym 8: Water, cracking-ice puzzle.",DAGOBAH · Arena · 1F,DAGOBAH
+map:sootopolis-city-gym-b1f,Sootopolis City · Gym · B1F,indoor,location:sootopolis-city,,,7,,,,,,10,35,40,,"Gym 8: Water, cracking-ice puzzle.",DAGOBAH · Arena · B1F,DAGOBAH
 map:southern-island-exterior,Southern Island · Exterior,route,location:southern-island,45,event-islands,8,,,,,,0,,,item:eon-ticket,Event island (Latias/Latios).,TYTHON ISLE · Exterior,TYTHON
 map:southern-island-interior,Southern Island · Interior,route,location:southern-island,45,event-islands,8,,,,,,0,,,item:eon-ticket,Event island (Latias/Latios).,TYTHON ISLE · Interior,TYTHON
 map:terra-cave-end,Terra Cave · End,underground,location:terra-cave,43,weather-legends-return,8,,,,,,0,,,flag:sys-game-clear,Appears with Groudon's weather report.,TERRA CAVE · End,TATOOINE
@@ -212,9 +212,9 @@ map:underwater-route127,Underwater · Route 127,underwater,location:underwater-1
 map:underwater-route128,Underwater · Route 128,underwater,location:underwater-128,32,seafloor-cavern,7,,,,,,0,,,item:hm-dive|flag:badge07-get,Seafloor Cavern entrance.,UNDERWATER · Route 128,DAGOBAH
 map:underwater-route129,Underwater · Route 129,underwater,location:underwater-129,,,7,,,,,,0,,,item:hm-dive|flag:badge07-get,,UNDERWATER · Route 129,DAGOBAH
 map:underwater-route134,Underwater · Route 134,underwater,location:underwater-sealed-chamber,,,7,,,,,,0,,,item:hm-dive|flag:badge07-get,,UNDERWATER · Route 134,KAMINO
-map:underwater-seafloor-cavern,Underwater · Seafloor Cavern,underwater,location:underwater-seafloor-cavern,,,7,,,,,,0,,,item:hm-dive|flag:badge07-get,,UNDERWATER · Seafloor Cavern,DAGOBAH
-map:underwater-sealed-chamber,Underwater · Sealed Chamber,underwater,location:underwater-sealed-chamber,,,7,,,,,,0,,,item:hm-dive|flag:badge07-get,,UNDERWATER · Sealed Chamber,KAMINO
-map:underwater-sootopolis-city,Underwater · Sootopolis City,underwater,location:underwater-sootopolis,,,7,,,,,,0,,,item:hm-dive|flag:badge07-get,,UNDERWATER · Sootopolis City,DAGOBAH
+map:underwater-seafloor-cavern,Underwater · Seafloor Cavern,underwater,location:underwater-seafloor-cavern,,,7,,,,,,0,,,item:hm-dive|flag:badge07-get,,UNDERWATER · Drowned Cavern,DAGOBAH
+map:underwater-sealed-chamber,Underwater · Sealed Chamber,underwater,location:underwater-sealed-chamber,,,7,,,,,,0,,,item:hm-dive|flag:badge07-get,,UNDERWATER · Sealed Vault,KAMINO
+map:underwater-sootopolis-city,Underwater · Sootopolis City,underwater,location:underwater-sootopolis,,,7,,,,,,0,,,item:hm-dive|flag:badge07-get,,UNDERWATER · Dagobah,DAGOBAH
 map:verdanturf-town,Verdanturf Town,town,location:verdanturf-town,17,rusturf-tunnel-opens,2,,,,,,0,,,,Battle Tent; Rusturf Tunnel east end.,ANCHORHEAD,TATOOINE
 map:victory-road-1f,Victory Road · 1F,underground,location:victory-road,36,victory-road-wally,8,36,40,36,40,land,6,41,45,item:hm-strength|flag:badge04-get|item:hm-rock-smash|flag:badge03-get|item:hm-flash|flag:badge02-get,Wally's final battle.,CRYSTAL CAVES · 1F,ILUM
 map:victory-road-b1f,Victory Road · B1F,underground,location:victory-road,,,8,38,42,30,42,land|rock_smash,5,42,45,item:hm-strength|flag:badge04-get|item:hm-rock-smash|flag:badge03-get|item:hm-flash|flag:badge02-get,Wally's final battle.,CRYSTAL CAVES · B1F,ILUM
