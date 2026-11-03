@@ -39,9 +39,7 @@ map:underwater-route126,UNDERWATER · Route 126,Underwater · Route 126,DAGOBAH,
 map:underwater-route127,UNDERWATER · Route 127,Underwater · Route 127,DAGOBAH,underwater,audio:MUS_UNDERWATER,MUS_UNDERWATER,DUNGEON,AMBIENT,
 map:underwater-route128,UNDERWATER · Route 128,Underwater · Route 128,DAGOBAH,underwater,audio:MUS_UNDERWATER,MUS_UNDERWATER,DUNGEON,AMBIENT,
 map:underwater-route129,UNDERWATER · Route 129,Underwater · Route 129,DAGOBAH,underwater,audio:MUS_UNDERWATER,MUS_UNDERWATER,DUNGEON,AMBIENT,
-map:underwater-route134,UNDERWATER · Route 134,Underwater · Route 134,DAGOBAH,underwater,audio:MUS_UNDERWATER,MUS_UNDERWATER,DUNGEON,AMBIENT,
 map:underwater-seafloor-cavern,UNDERWATER · Seafloor Cavern,Underwater · Seafloor Cavern,DAGOBAH,underwater,audio:MUS_UNDERWATER,MUS_UNDERWATER,DUNGEON,AMBIENT,
-map:underwater-sealed-chamber,UNDERWATER · Sealed Chamber,Underwater · Sealed Chamber,DAGOBAH,underwater,audio:MUS_UNDERWATER,MUS_UNDERWATER,DUNGEON,AMBIENT,
 map:underwater-sootopolis-city,UNDERWATER · Sootopolis City,Underwater · Sootopolis City,DAGOBAH,underwater,audio:MUS_UNDERWATER,MUS_UNDERWATER,DUNGEON,AMBIENT,
 map:ancient-tomb,ANCIENT TOMB,Ancient Tomb,ENDOR,underground,audio:MUS_SEALED_CHAMBER,MUS_SEALED_CHAMBER,DUNGEON,AMBIENT,net:mus-sealed-chamber-endor
 map:fortree-city,BRIGHT TREE,Fortree City,ENDOR,city,audio:MUS_FORTREE,MUS_FORTREE,TOWN,LOOP,
@@ -60,7 +58,6 @@ map:safari-zone-northwest,FELUCIA RESERVE · Northwest,Safari Zone · Northwest,
 map:safari-zone-south,FELUCIA RESERVE · South,Safari Zone · South,FELUCIA,route,audio:MUS_SAFARI_ZONE,MUS_SAFARI_ZONE,BUILDING,LOOP,
 map:safari-zone-southeast,FELUCIA RESERVE · Southeast,Safari Zone · Southeast,FELUCIA,route,audio:MUS_SAFARI_ZONE,MUS_SAFARI_ZONE,BUILDING,LOOP,
 map:safari-zone-southwest,FELUCIA RESERVE · Southwest,Safari Zone · Southwest,FELUCIA,route,audio:MUS_SAFARI_ZONE,MUS_SAFARI_ZONE,BUILDING,LOOP,
-map:altering-cave,ALTERING CAVE,Altering Cave,GRAND ARENA,underground,audio:MUS_RG_SEVII_CAVE,MUS_RG_SEVII_CAVE,DUNGEON,AMBIENT,net:mus-rg-sevii-cave-grand-arena
 map:artisan-cave-1f,ARTISAN CAVE · 1F,Artisan Cave · 1F,GRAND ARENA,underground,audio:MUS_PETALBURG_WOODS,MUS_PETALBURG_WOODS,DUNGEON,AMBIENT,net:mus-petalburg-woods-grand-arena
 map:artisan-cave-b1f,ARTISAN CAVE · B1F,Artisan Cave · B1F,GRAND ARENA,underground,audio:MUS_PETALBURG_WOODS,MUS_PETALBURG_WOODS,DUNGEON,AMBIENT,net:mus-petalburg-woods-grand-arena
 map:battle-frontier-battle-pyramid-floor,GRAND ARENA · Battle Pyramid Floor,Battle Frontier · Battle Pyramid Floor,GRAND ARENA,indoor,MUS_NONE,MUS_NONE,SILENT,SILENT,
@@ -98,6 +95,8 @@ map:route133,ROUTE 133,Route 133,KAMINO,ocean-route,audio:MUS_ROUTE119,MUS_ROUTE
 map:route134,ROUTE 134,Route 134,KAMINO,ocean-route,audio:MUS_ROUTE119,MUS_ROUTE119,ROUTE,LOOP,net:mus-route119-kamino
 map:sealed-chamber-inner-room,SEALED VAULT · Inner Room,Sealed Chamber · Inner Room,KAMINO,underground,audio:MUS_SEALED_CHAMBER,MUS_SEALED_CHAMBER,DUNGEON,AMBIENT,net:mus-sealed-chamber-kamino
 map:sealed-chamber-outer-room,SEALED VAULT · Outer Room,Sealed Chamber · Outer Room,KAMINO,underground,audio:MUS_SEALED_CHAMBER,MUS_SEALED_CHAMBER,DUNGEON,AMBIENT,net:mus-sealed-chamber-kamino
+map:underwater-route134,UNDERWATER · Route 134,Underwater · Route 134,KAMINO,underwater,audio:MUS_UNDERWATER,MUS_UNDERWATER,DUNGEON,AMBIENT,
+map:underwater-sealed-chamber,UNDERWATER · Sealed Chamber,Underwater · Sealed Chamber,KAMINO,underwater,audio:MUS_UNDERWATER,MUS_UNDERWATER,DUNGEON,AMBIENT,
 map:abandoned-ship-captains-office,REPUBLIC WRECK · Captains Office,Abandoned Ship · Captains Office,KASHYYYK,underground,audio:MUS_ABANDONED_SHIP,MUS_ABANDONED_SHIP,DUNGEON,AMBIENT,
 map:abandoned-ship-corridors-1f,REPUBLIC WRECK · Corridors · 1F,Abandoned Ship · Corridors · 1F,KASHYYYK,underground,audio:MUS_ABANDONED_SHIP,MUS_ABANDONED_SHIP,DUNGEON,AMBIENT,
 map:abandoned-ship-corridors-b1f,REPUBLIC WRECK · Corridors · B1F,Abandoned Ship · Corridors · B1F,KASHYYYK,underground,audio:MUS_ABANDONED_SHIP,MUS_ABANDONED_SHIP,DUNGEON,AMBIENT,
@@ -145,6 +144,7 @@ map:navel-rock-up1,MORTIS GATE · Up 1,Navel Rock · Up 1,MORTIS,underground,aud
 map:navel-rock-up2,MORTIS GATE · Up 2,Navel Rock · Up 2,MORTIS,underground,audio:MUS_RG_SEVII_CAVE,MUS_RG_SEVII_CAVE,DUNGEON,AMBIENT,
 map:navel-rock-up3,MORTIS GATE · Up 3,Navel Rock · Up 3,MORTIS,underground,audio:MUS_RG_SEVII_CAVE,MUS_RG_SEVII_CAVE,DUNGEON,AMBIENT,
 map:navel-rock-up4,MORTIS GATE · Up 4,Navel Rock · Up 4,MORTIS,underground,audio:MUS_RG_SEVII_CAVE,MUS_RG_SEVII_CAVE,DUNGEON,AMBIENT,
+map:jagged-pass,ASHEN PASS,Jagged Pass,MUSTAFAR,route,audio:MUS_PETALBURG_WOODS,MUS_PETALBURG_WOODS,DUNGEON,AMBIENT,net:mus-petalburg-woods-sullust
 map:magma-hideout-1f,FORTRESS VADER · 1F,Magma Hideout · 1F,MUSTAFAR,underground,audio:MUS_AQUA_MAGMA_HIDEOUT,MUS_AQUA_MAGMA_HIDEOUT,DUNGEON,LOOP,net:mus-fortress-vader
 map:magma-hideout-2f-1r,FORTRESS VADER · 2F · 1R,Magma Hideout · 2F · 1R,MUSTAFAR,underground,audio:MUS_AQUA_MAGMA_HIDEOUT,MUS_AQUA_MAGMA_HIDEOUT,DUNGEON,LOOP,net:mus-fortress-vader
 map:magma-hideout-2f-2r,FORTRESS VADER · 2F · 2R,Magma Hideout · 2F · 2R,MUSTAFAR,underground,audio:MUS_AQUA_MAGMA_HIDEOUT,MUS_AQUA_MAGMA_HIDEOUT,DUNGEON,LOOP,net:mus-fortress-vader
@@ -156,7 +156,6 @@ map:magma-hideout-4f,FORTRESS VADER · 4F,Magma Hideout · 4F,MUSTAFAR,undergrou
 map:mt-chimney,MUSTAFAR PEAK · Mt Chimney,Mt Chimney,MUSTAFAR,route,audio:MUS_MT_CHIMNEY,MUS_MT_CHIMNEY,ROUTE,LOOP,
 map:fallarbor-town,INYUSU TOR,Fallarbor Town,SULLUST,town,audio:MUS_FALLARBOR,MUS_FALLARBOR,TOWN,LOOP,
 map:fiery-path,MAGMA TUNNELS,Fiery Path,SULLUST,underground,audio:MUS_PETALBURG_WOODS,MUS_PETALBURG_WOODS,DUNGEON,AMBIENT,net:mus-petalburg-woods-sullust
-map:jagged-pass,ASHEN PASS,Jagged Pass,SULLUST,route,audio:MUS_PETALBURG_WOODS,MUS_PETALBURG_WOODS,DUNGEON,AMBIENT,net:mus-petalburg-woods-sullust
 map:lavaridge-town,PIRIN,Lavaridge Town,SULLUST,town,audio:MUS_OLDALE,MUS_OLDALE,TOWN,LOOP,net:mus-oldale-sullust
 map:lavaridge-town-gym-1f,PIRIN · Gym · 1F,Lavaridge Town · Gym · 1F,SULLUST,indoor,audio:MUS_GYM,MUS_GYM,BUILDING,LOOP,
 map:meteor-falls-1f-1r,STARFALL CAVERN · 1F · 1R,Meteor Falls · 1F · 1R,SULLUST,underground,audio:MUS_CAVE_OF_ORIGIN,MUS_CAVE_OF_ORIGIN,DUNGEON,AMBIENT,net:mus-cave-of-origin-sullust
@@ -166,6 +165,7 @@ map:meteor-falls-b1f-2r,STARFALL CAVERN · B1F · 2R,Meteor Falls · B1F · 2R,S
 map:meteor-falls-stevens-cave,STARFALL CAVERN · Stevens Cave,Meteor Falls · Stevens Cave,SULLUST,underground,audio:MUS_CAVE_OF_ORIGIN,MUS_CAVE_OF_ORIGIN,DUNGEON,AMBIENT,net:mus-cave-of-origin-sullust
 map:route113,ROUTE 113,Route 113,SULLUST,route,audio:MUS_ROUTE113,MUS_ROUTE113,ROUTE,AMBIENT,
 map:route114,ROUTE 114,Route 114,SULLUST,route,audio:MUS_ROUTE110,MUS_ROUTE110,ROUTE,LOOP,net:mus-route110-sullust
+map:altering-cave,ALTERING CAVE,Altering Cave,TATOOINE,underground,audio:MUS_RG_SEVII_CAVE,MUS_RG_SEVII_CAVE,DUNGEON,AMBIENT,net:mus-rg-sevii-cave-grand-arena
 map:desert-ruins,TUSKEN RUINS,Desert Ruins,TATOOINE,underground,audio:MUS_SEALED_CHAMBER,MUS_SEALED_CHAMBER,DUNGEON,AMBIENT,
 map:desert-underpass,KRAYT GRAVEYARD,Desert Underpass,TATOOINE,underground,audio:MUS_MT_CHIMNEY,MUS_MT_CHIMNEY,ROUTE,LOOP,net:mus-mt-chimney-tatooine
 map:littleroot-town,MOS PELGO,Littleroot Town,TATOOINE,town,audio:MUS_LITTLEROOT,MUS_LITTLEROOT,TOWN,LOOP,

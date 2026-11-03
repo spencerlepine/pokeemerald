@@ -51,3 +51,8 @@ NOTES = {R1+"Text_ShouldBeMirageTowerAroundHere": "Mirage Tower = a JAWA SANDCRA
 FIX["Route113_GlassWorkshop_Text_NoRoomInPC"] = [("You've no room in your TERMINAL, huff-puff?", "You've no room in your TERMINAL,\nhuff-puff?")]
 
 REFLOW = True
+
+# Dune Sea (2026-11-03): Tatooine's sea is sand, crossed with SAND SKIM
+FIX.update({
+    'Route117_Text_DylanPostRematch': "I was tops in skimming and racing,\\nbut I'm not quite that confident with\\lCOMPANION yet.$",
+})

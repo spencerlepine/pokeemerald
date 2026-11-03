@@ -140,3 +140,8 @@ REFLOW = True
 FIX["RustboroCity_Text_WeShortenItToDevon"] = r"HOUSE ORGANA of ALDERAAN…\nWe all just shorten it to ORGANA.\pThey make all sorts of\nconvenient products.$"
 FIX["RustboroCity_DevonCorp_2F_Text_WeFinallyMadeNewBalls"] = [("developed by\nthe HOUSE ORGANA.", "developed by\nHOUSE ORGANA.")]
 FIX["RustboroCity_DevonCorp_3F_Text_ThisIs3rdFloorWaitHere"] = [("This is the HOUSE ORGANA's\nthird floor.", "This is the third floor of\nHOUSE ORGANA.")]
+
+# Dune Sea (2026-11-03): Tatooine's sea is sand, crossed with SAND SKIM
+FIX.update({
+    'Route104_Text_WhatsItLikeAtBottomOfSea': "The DUNE SEA, huh?\\pI wonder what's down there under\\nall that sand?$",
+})

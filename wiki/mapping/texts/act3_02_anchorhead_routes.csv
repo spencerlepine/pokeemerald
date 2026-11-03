@@ -397,7 +397,7 @@ Route117_Text_DylanPostBattle,I may have blown it…\pI might have dropped to la
 Route117_Text_DylanRegister,"COMPANIONS have to be strong, too?\nI'd like you to train me!$",reviewed AUTO draft
 Route117_Text_DylanRematchIntro,"I'm smack in the middle of a rally,\nbut I'm comfortably ahead.\lLet's make this a quick battle!$",trainer recast 2026-11-01 (bible/RECAST.md)
 Route117_Text_DylanRematchDefeat,I ran out of energy again!$,"reviewed, no change needed"
-Route117_Text_DylanPostRematch,"I was tops in swimming and cycling,\nbut I'm not quite that confident with\lCOMPANION yet.$",reviewed AUTO draft
+Route117_Text_DylanPostRematch,"I was tops in skimming and racing,\nbut I'm not quite that confident with\lCOMPANION yet.$","reviewed AUTO draft; Dune Sea: Tatooine's sea is sand, crossed with SAND SKIM (bible/NET_NEW_DESIGNS.md, Dune Sea)."
 Route117_Text_MariaDefeat,"I need to get more practices in,\nI guess.$","reviewed, no change needed"
 Route117_Text_MariaPostBattle,Training is meaningful only if you\nkeep it up regularly.\pOkay! I'll resume my training!\nTomorrow!$,"reviewed, no change needed"
 Route117_Text_MariaRegister,"You appear to be training properly…\nIf you'd like, I'll battle you later!$","reviewed, no change needed"

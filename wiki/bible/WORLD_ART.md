@@ -57,7 +57,7 @@ and one row per edge and corner in `terrain.csv`.
 
 | Planet | Border (replaces trees) | Surfaces swapped | Drawn with |
 |---|---|---|---|
-| Tatooine | Mesa and canyon cliffs | Sea becomes the Dune Sea (SURF = sand skiff, mechanics unchanged) | vanilla cliffs; `dune-sea` net-new |
+| Tatooine | Mesa and canyon cliffs | Sea becomes the Dune Sea, crossed with SAND SKIM (HM09, its own move; see NET_NEW_DESIGNS.md) | vanilla cliffs; `dune-sea` net-new |
 | Kashyyyk | Wroshyr trunks and roots | Tree platforms become wroshyr platforms | `wroshyr`, `wroshyr-platform` net-new |
 | Sullust | Lava-rock ridges | | vanilla cliffs, Sullust recipe |
 | Mustafar | Obsidian cliffs | Lava by recipe | vanilla cliffs, lava recipe |

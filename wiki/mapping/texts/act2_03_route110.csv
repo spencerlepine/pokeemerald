@@ -207,7 +207,7 @@ Route110_Text_BenjaminRegister,I'll keep chugging on without stressing.\nGive me
 Route110_Text_BenjaminRematchIntro,Aren't you going a little too fast?\nTake it easy and let's battle.$,"reviewed, no change needed"
 Route110_Text_BenjaminRematchDefeated,"I didn't panic, but I still lost…$","reviewed, no change needed"
 Route110_Text_BenjaminRematchPostBattle,There's no need to panic or stress.\nTake it easy. There's plenty of time.$,"reviewed, no change needed"
-Route110_Text_AbigailIntro,"A SWOOP RALLY is hard in the extreme.\pYou have to finish three legs:\nswimming, swoop riding and running.$",trainer recast 2026-11-01 (bible/RECAST.md)
+Route110_Text_AbigailIntro,"A SWOOP RALLY is hard in the extreme.\pYou have to finish three legs:\nskimming, swoop riding and running.$","trainer recast 2026-11-01 (bible/RECAST.md); Dune Sea: Tatooine's sea is sand, crossed with SAND SKIM (bible/NET_NEW_DESIGNS.md, Dune Sea)."
 Route110_Text_AbigailDefeated,"COMPANION battles are hard, too!$",reviewed AUTO draft
 Route110_Text_AbigailPostBattle,"I'm exhausted, so I need a break.\nIt's important to get proper rest.$","reviewed, no change needed"
 Route110_Text_AbigailRegister,"You know, I like you!\nLet's have a rematch on PODRACE TRACK.$",reviewed AUTO draft

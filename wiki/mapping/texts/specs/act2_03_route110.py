@@ -36,3 +36,8 @@ R+"TrickHousePuzzle8_Text_VincentPostBattle": [("You've beaten the ILUM TEMPLE\n
 }
 
 REFLOW = True
+
+# Dune Sea (2026-11-03): Tatooine's sea is sand, crossed with SAND SKIM
+FIX.update({
+    'Route110_Text_AbigailIntro': 'A SWOOP RALLY is hard in the extreme.\\pYou have to finish three legs:\\nskimming, swoop riding and running.$',
+})

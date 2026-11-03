@@ -9,7 +9,7 @@ TERRAIN = {
     ".": ("ground", True, (206, 206, 206), "open ground the player walks on"),
     ":": ("path", True, (236, 236, 236), "path, street or plaza: the signal the player follows"),
     '"': ("wild", True, (168, 168, 168), "wild encounter ground (tall grass, scrub, ash, ferns)"),
-    "~": ("water", False, (140, 150, 164), "water: surf only"),
+    "~": ("water", False, (140, 150, 164), "water: surf only (on Tatooine the Dune Sea: deep sand, SAND SKIM only, same badge)"),
     "=": ("bridge", True, (190, 180, 168), "raised walkway: bridge, platform, catwalk (a level above the ground)"),
     "T": ("nature", False, (206, 206, 206), "edge nature that blocks: trees, rocks, bushes"),
     "#": ("cliff", False, (104, 104, 104), "cliff, wall or rock face"),

@@ -100,6 +100,7 @@ and field-effect ids are table indexes, so deleting a ghost keeps its slot (poin
 | `net_new.csv` | Net-new content with placeholder, dependencies and balance notes. |
 | `area_progression.csv` | Emerald's balance table (levels, badges, gating) with planet and new map titles. |
 | `species_habitats.csv` | Why each wild companion lives where Emerald's encounter tables put it. Tables are unchanged. |
+| `sand_skim.csv`, `dune_sea_encounters.csv` | SAND SKIM, the Dune Sea field move: which species learn it (from `mapping/sand_skim_rules.csv`) and Tatooine's sea and fishing slots on the Dune Sea (from `mapping/dune_sea_swaps.csv`). Built by `tools/sand_skim.py`; design in [`bible/NET_NEW_DESIGNS.md`](bible/NET_NEW_DESIGNS.md). |
 | `build_info.csv`, `build_warnings.csv` | Inputs, counts, warnings (must be 0). |
 
 Unchanged game data (learnsets, parties, encounters, map events, scripts, flags) is not copied; it stays as is
@@ -174,9 +175,6 @@ The current pass (all `DRAFT`, waiting for the owner's review):
 
 ## Open decisions
 
-- **Water on desert worlds.** Tatooine maps (Mos Eisley, Routes 103/104/109/110) have sea tiles and SURF works
-  there. Option: draw those tiles as the DUNE SEA and theme SURF on Tatooine as sand-skimming (art only,
-  mechanics unchanged). Dialogue is already neutral ("the water"). Not decided.
 - **Optional extras**, not tracked as rows: more invented creature names swapped for canon ones, and the ideas in
   `bible/STORY.md` section 8 that have no row yet (light / dark side evolution branches, blizzard weather).
 
@@ -191,6 +189,7 @@ needs, copied into this repo. Nothing outside the repo is needed; starwars-db is
 python3 tools/scan_game_assets.py   # mapping/asset_inventory.csv from ../game (re-run after the game changes)
 python3 tools/build.py              # optional: STARWARS_DB_DIR=/path/to/starwars-db/database
 python3 tools/habitats.py   # species_habitats.csv
+python3 tools/sand_skim.py  # sand_skim.csv, dune_sea_encounters.csv (Dune Sea field move)
 python3 wiki/server.py      # browse at http://127.0.0.1:8000
 ```
 

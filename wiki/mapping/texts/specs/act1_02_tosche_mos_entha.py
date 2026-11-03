@@ -110,3 +110,15 @@ NOTES = {"PetalburgCity_WallysHouse_Text_ThanksForPlayingWithWally": "Luke is re
          "PetalburgCity_Gym_Text_RandallPostBattle": "CONFUSION is the status here, not the move (MIND TRICK)"}
 
 REFLOW = True
+
+# Dune Sea (2026-11-03): Tatooine's sea is sand, crossed with SAND SKIM
+FIX.update({
+    'Route103_Text_ShortcutToOldale': "If you skim the DUNE SEA from here,\\nit'll be a shortcut to TOSCHE STATION.\\pFufufu, that's useful, isn't it?$",
+    'PetalburgCity_Gym_Text_ExplainBalanceBadgeTakeThis': "DAD: With that SHARD, the DEFENSE\\nof all your COMPANIONS will increase.\\pCOMPANIONS that know the HM SURF\\nwill be able to travel over water.\\pAnd those that know SAND SKIM can\\npull a skiff across the DUNE SEA.\\pThis is my gift to you. {PLAYER}, I'm\\nsure you can use it correctly.$",
+    'PetalburgCity_WallysHouse_Text_PleaseExcuseUs': "{PLAYER}{KUN}! Please excuse us for\\ndragging you here this way.\\pBut our LUKE's become so confident\\nsince he went to ANCHORHEAD.\\pWe owe it all to you!\\pWhen LUKE left town, you helped\\nhim catch a COMPANION, right?\\pI think that made LUKE really\\nhappy.\\pActually, not just LUKE.\\nIt made me, his uncle OWEN, happy too.\\pHappy that he's gained such a great\\nfriend as you.\\pThis isn't a bribe or anything, but\\nI'd really like you to have these.$",
+    'PetalburgCity_WallysHouse_Text_SurfGoAllSortsOfPlaces': "SURF crosses water, and SAND SKIM\\npulls my old skiff over the DUNE SEA.\\pWith both, you'll be able to go to\\nall sorts of places.$",
+    'PetalburgCity_Gym_Text_AlexiaPostBadge': 'Hi! Have you tried SAND SKIM yet?$',
+    'Route103_Text_PeteIntro': 'This sort of distance…\\nYou should just skim it!$',
+    'Route103_Text_PetePostBattle': "Oh, I understand where you're coming\\nfrom now.\\pIf I had a COMPANION that trusty,\\nI'd let it pull my skiff, too!$",
+    'Route103_Text_IsabellePostBattle': "I'm a poor skiff rider so I was\\npracticing… Sorry for almost\\lcrashing into you.$",
+})

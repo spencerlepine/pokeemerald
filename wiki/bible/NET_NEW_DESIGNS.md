@@ -71,6 +71,108 @@ catchable, never traded and never joins the party. His companions are droids and
 - **Rewards:** items only (rare candy, PP up, one of each held item already sold at the Grand Arena). There are no new companions.
 - **Placeholders:** Trainer Hill tileset and elevator scripts; stormtrooper overworld = Team Magma grunt sprite; trainer pics `magma_grunt_m`, `magma_admin`.
 
+## Dune Sea and SAND SKIM (`net:dune-sea`, `net:move-sand-skim`, `net:hm09-sand-skim`, `net:dune-sea-encounters`, `net:trainer-class-skiff-rider`)
+
+Owner decision (2026-11-03): Tatooine's sea is sand, and the player crosses it on a sand skiff with its own move,
+not SURF. Every other planet keeps SURF on its water (and on Bespin's cloud sea).
+
+**What the player sees.** Deep, soft dunes fill the places where Emerald had sea on Tatooine. Walking stops at
+their edge. A companion that knows SAND SKIM pulls the player across on a skiff. It plays exactly like SURF:
+wild companions appear while skimming, rods work, trainers wait out on the dunes.
+
+**Where.** Every `~` cell on Tatooine: Routes 102, 103, 104, 110, 111, 115 and 117 (and the dock in the Mos Eisley
+star-liner room, which is scenery). Same cells as Emerald's sea, so no map changes shape. The Route 111 desert
+stays walkable sand; the Dune Sea is the deep sand around it. Mos Entha's pond and the Mos Eisley harbour left
+those towns when they were made compact, so their sea and fishing tables never run.
+
+**The move: SAND SKIM.**
+
+| Field | Value |
+|---|---|
+| Type | Ground |
+| Power / accuracy / PP | 80 / 100 / 15 |
+| Target | both foes (like SURF) |
+| Contact / side effect | none / none |
+| Contest | SURF's data |
+| Taught by | HM09 only (no level-up or tutor) |
+| Field use | crosses the Dune Sea; needs badge 5, like SURF |
+| Animation (placeholder) | SURF's wave recoloured to sand |
+
+80 power keeps it under SURF (95) and EARTHQUAKE (100, TM26 around badge 7). Ground hits five types
+super-effectively and Water only three, so an equal 95 would make it the better move. Flying companions and
+LEVITATE ignore it, which also keeps it in check.
+
+**The HM.** HM09 SAND SKIM takes the unused item slot right after HM08 (`ITEM_15B`), so the HM range stays
+one block. OWEN gives it in Mos Entha together with HM03 SURF, at the moment Emerald gives HM03 (after the
+fifth badge). Both arrive together, so nothing anywhere opens earlier or later than in Emerald, and the blockout
+reach checks need no change: on Tatooine, `item:hm-surf` in the balance table means HM09.
+
+**Who can learn it.** A rule list, kept in `mapping/sand_skim_rules.csv` (one row per type or species, with the
+reason). `python3 tools/sand_skim.py` applies it to every species and writes `database/sand_skim.csv` (types,
+SURF for comparison, SAND SKIM, the rule and where the species is first caught).
+
+| Rule | Learns | Why |
+|---|---|---|
+| Ground type (either slot) | yes | They burrow, dig or stride over sand: dewbacks, krayts, banthas, rontos, rock warts. |
+| SUNSTRIDER, SUNBLAZER (Torchic line) | yes | Long-legged desert runners of Tatooine. |
+| EOPIE, FATHIER (Ponyta line) | yes | Pack and racing beasts bred to haul over sand. |
+| DUNEWORM (Dunsparce) | yes | Burrowing worm that swims through loose sand. |
+| A species that learns no TM or HM at all | no | Same rule as every HM. |
+| Everything else | no | |
+
+That is 42 species. To add a type (say Rock) or a species, add a row to the rules file and re-run the tool.
+
+**Balance checks (run by the tool).**
+- Two of the three starters can learn it: the Mudkip line (MARSHRUNNR, MARSHTITAN) and the Torchic line (SUNSTRIDER, SUNBLAZER). A Treecko player catches one.
+- Seven learners are catchable before the fifth badge: HIVEGRUB (Route 116), ROCKWART (Granite Cave), BANTHACALF (Jagged Pass), BOGWHISKR (Meteor Falls), and DEWLING, KRAYTHATCH and HOLOSHARD in the Route 111 desert.
+- No one can be stuck: the HM, the badge and the learners are all in hand before the first Dune Sea cell matters.
+
+**Encounters on the Dune Sea.** The tables keep every slot, level and rate. Six sea species swap for Tatooine
+sand species (`mapping/dune_sea_swaps.csv`); the birds, the crab droid and the mud fish stay. The result is
+`database/dune_sea_encounters.csv`, one row per slot with its stat-total change.
+
+| Emerald sea species | Dune Sea species | Why |
+|---|---|---|
+| DIANOGLET (Tentacool) | KRAYTHATCH (Trapinch) | Krayt hatchlings dig their pits in deep dunes. |
+| BLOOPRAT (Marill) | DEWLING (Sandshrew) | Dewback hatchlings roll through the sand. |
+| HORNFIN (Goldeen), 1% | SARLACLET (Gulpin) | A young sarlacc waiting under the sand. |
+| COLOFRY (Magikarp) | SANDGRUB (Wurmple) | The weak catch a line pulls from the sand. |
+| AIWHALET (Wailmer) | SARLACLET (Gulpin) | The big thing that bites from below. |
+| OPEEKILLER (Sharpedo) | SARLACC (Swalot) | The Dune Sea's predator. |
+| SHYYYOLET, SHYYYO, CRABDROID, BOGWHISKR | kept | Birds glide over dunes; the crab droid and mud fish burrow. |
+
+Every swapped-out species is still wild on other planets. The largest stat-total change is -98 (AIWHALET to
+SARLACLET), which makes that slot easier, not harder. No new species enter the Hoenn dex.
+
+**Trainers.** The two Route 103 trainers out on the Dune Sea (POLESH and ILI) become a new class, SKIFF RIDER,
+with the swimmer classes' prize money and AI. Their parties do not change. Their lines are rewritten for skiffs.
+
+**Texts.** Rewritten in `mapping/texts/` (notes say "Dune Sea"): Dad's badge speech, OWEN's gift and his tip,
+Alexia, WATTO's ESPA GENERATOR hint, the Route 103 shortcut hint, the Route 104 lake line, POLESH, ILI, and the
+two swoop-rally racers (swimming becomes skimming). New field texts for the port:
+
+| Text | Line |
+|---|---|
+| Facing the Dune Sea, no SAND SKIM | `Deep, soft sand rolls on like a sea.\nA COMPANION may be able to cross it.$` |
+| Facing the Dune Sea, can skim | `The dunes roll on like a sea…\nWould you like to use SAND SKIM?$` |
+| Using it | `{STR_VAR_1} used SAND SKIM!$` |
+| Trying SURF on the Dune Sea | `This is sand, not water.\nSURF won't work here.$` |
+| Item description | `Teaches SAND SKIM. Lets a\nCOMPANION pull a skiff over sand.` |
+
+**Art (placeholders until drawn).** Player while skimming: the SURF sprite (owner, 2026-11-03), later a sand skiff
+with the companion towing. Wake: the SURF ripple, later a sand spray. Battles on the Dune Sea: the sand battle
+background that Emerald already has. Dune Sea tiles: the `sw-tatooine` `dune-sea` rows in `mapping/terrain.csv`.
+
+**Port notes (for `../game`, later).**
+- `MOVE_SAND_SKIM` after the last move: battle data, name, description, contest data, animation (copy SURF's).
+- `ITEM_HM09` in place of `ITEM_15B`; `NUM_HIDDEN_MACHINES` 9; HM range checks, the TM case and item data.
+- One more TM/HM learnset flag (`SAND_SKIM`), set from `database/sand_skim.csv`.
+- `FIELD_MOVE_SAND_SKIM`: party menu entry, badge 5 check, the prompt scripts above.
+- `MB_DUNE_SEA` in an unused metatile behaviour slot: crossable only with SAND SKIM, fishable, wild "water" table, sand battle background; SURF refuses it.
+- Move Deleter: HM09 can't be forgotten, like the other HMs.
+- OWEN's script gives HM09 right after HM03 (same flag; the TM case never fills).
+- Trainer class `SKIFF RIDER` for POLESH and ILI.
+
 ## New moves (`net:move-force-choke`, `net:move-blaster-shot`, `net:move-saber-slash`)
 
 Each new move clones an existing move's data row. Only the name, description and animation are new.

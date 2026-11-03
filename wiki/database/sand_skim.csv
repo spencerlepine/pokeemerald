@@ -1,0 +1,385 @@
+emerald_id,sw_name,types,home_planet,stat_total,surf,sand_skim,rule,reason,first_wild
+species:baltoy,HOLOSHARD,GROUND/PSYCHIC,JEDHA,300,,YES,type:GROUND,"Ground companions burrow, dig or stride over sand, so they can pull a sand skiff across the Dune Sea.","map:route111 (TATOOINE, land, badges 3)"
+species:barboach,BOGWHISKR,WATER/GROUND,DAGOBAH,288,YES,YES,type:GROUND,"Ground companions burrow, dig or stride over sand, so they can pull a sand skiff across the Dune Sea.","map:meteor-falls-1f-1r (SULLUST, good_rod, badges 3)"
+species:blaziken,SUNBLAZER,FIRE/FIGHTING,TATOOINE,530,,YES,species:BLAZIKEN,SUNBLAZER: the fighter of the Dune Sea.,
+species:camerupt,BANTHA,FIRE/GROUND,TATOOINE,460,,YES,type:GROUND,"Ground companions burrow, dig or stride over sand, so they can pull a sand skiff across the Dune Sea.",
+species:claydol,HOLOCRON,GROUND/PSYCHIC,JEDHA,500,,YES,type:GROUND,"Ground companions burrow, dig or stride over sand, so they can pull a sand skiff across the Dune Sea.","map:sky-pillar-1f (ASTEROID FIELD, land, badges 7)"
+species:combusken,SUNSTRIDER,FIRE/FIGHTING,TATOOINE,405,,YES,species:COMBUSKEN,SUNSTRIDER: long-legged desert runner of Tatooine. Gives the Torchic starter line a way across.,
+species:cubone,SKULLKIT,GROUND,TATOOINE,320,,YES,type:GROUND,"Ground companions burrow, dig or stride over sand, so they can pull a sand skiff across the Dune Sea.",
+species:diglett,BURROWNUB,GROUND,BESPIN,265,,YES,type:GROUND,"Ground companions burrow, dig or stride over sand, so they can pull a sand skiff across the Dune Sea.",
+species:donphan,MUDHORN,GROUND,ARVALA,500,,YES,type:GROUND,"Ground companions burrow, dig or stride over sand, so they can pull a sand skiff across the Dune Sea.",
+species:dugtrio,BURROWTRIO,GROUND,BESPIN,405,,YES,type:GROUND,"Ground companions burrow, dig or stride over sand, so they can pull a sand skiff across the Dune Sea.",
+species:dunsparce,DUNEWORM,NORMAL,TATOOINE,415,,YES,species:DUNSPARCE,DUNEWORM: small burrowing worm that swims through loose sand.,
+species:flygon,KRAYT,GROUND/DRAGON,TATOOINE,520,,YES,type:GROUND,"Ground companions burrow, dig or stride over sand, so they can pull a sand skiff across the Dune Sea.",
+species:geodude,ROCKWART,ROCK/GROUND,TATOOINE,300,,YES,type:GROUND,"Ground companions burrow, dig or stride over sand, so they can pull a sand skiff across the Dune Sea.","map:granite-cave-1f (KASHYYYK, land, badges 1)"
+species:gligar,SCORPWING,GROUND/FLYING,GEONOSIS,430,,YES,type:GROUND,"Ground companions burrow, dig or stride over sand, so they can pull a sand skiff across the Dune Sea.","map:safari-zone-southeast (FELUCIA, land, badges 6)"
+species:golem,MEGAWART,ROCK/GROUND,TATOOINE,485,,YES,type:GROUND,"Ground companions burrow, dig or stride over sand, so they can pull a sand skiff across the Dune Sea.",
+species:graveler,BOULDWART,ROCK/GROUND,TATOOINE,390,,YES,type:GROUND,"Ground companions burrow, dig or stride over sand, so they can pull a sand skiff across the Dune Sea.","map:magma-hideout-1f (MUSTAFAR, land, badges 6)"
+species:groudon,GREATKRAYT,GROUND,TATOOINE,670,,YES,type:GROUND,"Ground companions burrow, dig or stride over sand, so they can pull a sand skiff across the Dune Sea.",
+species:larvitar,ZILLOPUP,ROCK/GROUND,MALASTARE,300,,YES,type:GROUND,"Ground companions burrow, dig or stride over sand, so they can pull a sand skiff across the Dune Sea.",
+species:marowak,BONELORD,GROUND,TATOOINE,425,,YES,type:GROUND,"Ground companions burrow, dig or stride over sand, so they can pull a sand skiff across the Dune Sea.",
+species:marshtomp,MARSHRUNNR,WATER/GROUND,NABOO,405,YES,YES,type:GROUND,"Ground companions burrow, dig or stride over sand, so they can pull a sand skiff across the Dune Sea.",
+species:nidoking,REEK,POISON/GROUND,GEONOSIS,495,YES,YES,type:GROUND,"Ground companions burrow, dig or stride over sand, so they can pull a sand skiff across the Dune Sea.",
+species:nidoqueen,RONTO,POISON/GROUND,TATOOINE,495,YES,YES,type:GROUND,"Ground companions burrow, dig or stride over sand, so they can pull a sand skiff across the Dune Sea.",
+species:nincada,HIVEGRUB,BUG/GROUND,GEONOSIS,266,,YES,type:GROUND,"Ground companions burrow, dig or stride over sand, so they can pull a sand skiff across the Dune Sea.","map:route116 (TATOOINE, land, badges 1)"
+species:numel,BANTHACALF,FIRE/GROUND,TATOOINE,305,,YES,type:GROUND,"Ground companions burrow, dig or stride over sand, so they can pull a sand skiff across the Dune Sea.","map:jagged-pass (MUSTAFAR, land, badges 3)"
+species:onix,DURASLUG,ROCK/GROUND,CORUSCANT,385,,YES,type:GROUND,"Ground companions burrow, dig or stride over sand, so they can pull a sand skiff across the Dune Sea.",
+species:phanpy,MUDHORNLET,GROUND,ARVALA,330,,YES,type:GROUND,"Ground companions burrow, dig or stride over sand, so they can pull a sand skiff across the Dune Sea.","map:safari-zone-north (FELUCIA, land, badges 6)"
+species:piloswine,TAUNTAUN,ICE/GROUND,HOTH,450,,YES,type:GROUND,"Ground companions burrow, dig or stride over sand, so they can pull a sand skiff across the Dune Sea.",
+species:ponyta,EOPIE,FIRE,TATOOINE,410,,YES,species:PONYTA,"EOPIE: Tatooine's sun-baked pack animal, bred to haul loads over sand.",
+species:pupitar,ZILLOSHELL,ROCK/GROUND,MALASTARE,410,,YES,type:GROUND,"Ground companions burrow, dig or stride over sand, so they can pull a sand skiff across the Dune Sea.",
+species:quagsire,OGGDO,WATER/GROUND,BOGANO,430,YES,YES,type:GROUND,"Ground companions burrow, dig or stride over sand, so they can pull a sand skiff across the Dune Sea.","map:safari-zone-southeast (FELUCIA, water, badges 6)"
+species:rapidash,FATHIER,FIRE,CANTONICA,500,,YES,species:RAPIDASH,Grown pack animal of the same line.,
+species:rhydon,RANCOR,GROUND/ROCK,DATHOMIR,485,YES,YES,type:GROUND,"Ground companions burrow, dig or stride over sand, so they can pull a sand skiff across the Dune Sea.",
+species:rhyhorn,RANCORPUP,GROUND/ROCK,DATHOMIR,345,,YES,type:GROUND,"Ground companions burrow, dig or stride over sand, so they can pull a sand skiff across the Dune Sea.","map:safari-zone-northwest (FELUCIA, land, badges 6)"
+species:sandshrew,DEWLING,GROUND,TATOOINE,300,,YES,type:GROUND,"Ground companions burrow, dig or stride over sand, so they can pull a sand skiff across the Dune Sea.","map:route111 (TATOOINE, land, badges 3)"
+species:sandslash,DEWBACK,GROUND,TATOOINE,450,,YES,type:GROUND,"Ground companions burrow, dig or stride over sand, so they can pull a sand skiff across the Dune Sea.",
+species:steelix,STEELSLUG,STEEL/GROUND,CORUSCANT,510,,YES,type:GROUND,"Ground companions burrow, dig or stride over sand, so they can pull a sand skiff across the Dune Sea.",
+species:swampert,MARSHTITAN,WATER/GROUND,NABOO,535,YES,YES,type:GROUND,"Ground companions burrow, dig or stride over sand, so they can pull a sand skiff across the Dune Sea.",
+species:swinub,TAUNKIT,ICE/GROUND,HOTH,250,,YES,type:GROUND,"Ground companions burrow, dig or stride over sand, so they can pull a sand skiff across the Dune Sea.",
+species:trapinch,KRAYTHATCH,GROUND,TATOOINE,290,,YES,type:GROUND,"Ground companions burrow, dig or stride over sand, so they can pull a sand skiff across the Dune Sea.","map:route111 (TATOOINE, land, badges 3)"
+species:vibrava,KRAYTLING,GROUND/DRAGON,TATOOINE,340,,YES,type:GROUND,"Ground companions burrow, dig or stride over sand, so they can pull a sand skiff across the Dune Sea.",
+species:whiscash,BOGTITAN,WATER/GROUND,DAGOBAH,468,YES,YES,type:GROUND,"Ground companions burrow, dig or stride over sand, so they can pull a sand skiff across the Dune Sea.","map:meteor-falls-1f-2r (SULLUST, super_rod, badges 5)"
+species:wooper,OGGDOLET,WATER/GROUND,BOGANO,210,YES,YES,type:GROUND,"Ground companions burrow, dig or stride over sand, so they can pull a sand skiff across the Dune Sea.","map:safari-zone-southeast (FELUCIA, water, badges 6)"
+species:abra,MISTKIN,PSYCHIC,DATHOMIR,310,,,,,"map:granite-cave-1f (KASHYYYK, land, badges 1)"
+species:absol,LOTHWOLF,DARK,LOTHAL,465,,,,,"map:route120 (ENDOR, land, badges 6)"
+species:aerodactyl,FOSSILWING,ROCK/FLYING,TATOOINE,515,,,,,
+species:aggron,PERSUADER,STEEL/ROCK,KASHYYYK,530,YES,,,,
+species:aipom,TAILMONK,NORMAL,FELUCIA,360,,,,,"map:safari-zone-northeast (FELUCIA, land, badges 6)"
+species:alakazam,MISTSAGE,PSYCHIC,DATHOMIR,490,,,,,
+species:altaria,VELKER,DRAGON/FLYING,BESPIN,490,,,,,"map:sky-pillar-5f (ASTEROID FIELD, land, badges 7)"
+species:ampharos,NERFBEACON,ELECTRIC,ALDERAAN,500,,,,,
+species:anorith,SHELLHUSK,ROCK/BUG,TATOOINE,355,,,,,
+species:arbok,DUNECOBRA,POISON,TATOOINE,438,,,,,
+species:arcanine,AKKDOG,FIRE,HARUUN KAL,555,,,,,
+species:ariados,KRYKNA,BUG/POISON,LOTHAL,390,,,,,
+species:armaldo,ARMORCLAW,ROCK/BUG,TATOOINE,495,,,,,
+species:aron,SPIDROID,STEEL/ROCK,KASHYYYK,330,,,,,"map:granite-cave-b1f (KASHYYYK, land, badges 1)"
+species:articuno,FROSTHAWK,ICE/FLYING,HOTH,580,,,,,
+species:azumarill,BLOOPHARE,WATER,NABOO,410,YES,,,,
+species:azurill,BLOOPKIT,NORMAL,NABOO,190,YES,,,,
+species:bagon,DACTHATCH,DRAGON,UTAPAU,300,,,,,"map:meteor-falls-b1f-2r (SULLUST, land, badges 8)"
+species:banette,HOLLOWDOLL,GHOST,JEDHA,455,,,,,"map:sky-pillar-1f (ASTEROID FIELD, land, badges 7)"
+species:bayleef,BUDFAWN,GRASS,ENDOR,405,,,,,
+species:beautifly,SANDMOTH,BUG/FLYING,TATOOINE,385,,,,,
+species:beedrill,STINGWASP,BUG/POISON,ENDOR,385,,,,,
+species:beldum,R1 UNIT,STEEL/PSYCHIC,ALDERAAN,300,,,,,
+species:bellossom,SUNBLOOM,GRASS,NABOO,480,,,,,
+species:bellsprout,SNAPBUD,GRASS/POISON,FELUCIA,300,,,,,
+species:blastoise,TORPEDTURT,WATER,MON CALA,530,YES,,,,
+species:blissey,2-1B UNIT,NORMAL,POLIS MASSA,540,,,,,
+species:breloom,SPOREFIST,GRASS/FIGHTING,FELUCIA,460,,,,," (?, land)"
+species:butterfree,SKYMOTH,BUG/FLYING,ENDOR,385,,,,,
+species:cacnea,FUNNELBUD,GRASS,TATOOINE,335,,,,,"map:route111 (TATOOINE, land, badges 3)"
+species:cacturne,DUNEHUSK,GRASS/DARK,TATOOINE,475,,,,,
+species:carvanha,OPEEFRY,WATER/DARK,NABOO,305,YES,,,,"map:route118 (ENDOR, good_rod, badges 5)"
+species:cascoon,VENOMPOD,BUG,TATOOINE,205,,,,,"map:petalburg-woods (TATOOINE, land, badges 0)"
+species:castform,CLIMADROID,NORMAL,ENDOR,420,,,,,
+species:caterpie,NEEDLEWORM,BUG,ENDOR,195,,,,,
+species:celebi,TIMEWISP,PSYCHIC/GRASS,LOTHAL,600,,,,,
+species:chansey,FX-6 UNIT,NORMAL,POLIS MASSA,450,,,,,
+species:charizard,LAVADRAGON,FIRE/FLYING,MUSTAFAR,534,,,,," (?, land)"
+species:charmander,EMBERLIZ,FIRE,MUSTAFAR,309,,,,," (?, land)"
+species:charmeleon,MAGMANDER,FIRE,MUSTAFAR,405,,,,," (?, land)"
+species:chikorita,LEAFKIT,GRASS,ENDOR,318,,,,,
+species:chinchou,LUMIRAY,WATER/ELECTRIC,KAMINO,330,YES,,,,"map:underwater-route126 (DAGOBAH, water, badges 7)"
+species:clamperl,PEARLCLAM,WATER,KAMINO,345,YES,,,,"map:underwater-route126 (DAGOBAH, water, badges 7)"
+species:clefable,MOONDANCER,NORMAL,ENDOR,473,,,,,
+species:clefairy,MOONLET,NORMAL,ENDOR,323,,,,,
+species:cleffa,MOONSPECK,NORMAL,ENDOR,218,,,,,
+species:cloyster,FORTCLAM,WATER/ICE,KAMINO,525,YES,,,,
+species:corphish,CRABDROID,WATER,UTAPAU,308,YES,,,,"map:petalburg-city (TATOOINE, good_rod, badges 0)"
+species:corsola,CORALITH,WATER/ROCK,KAMINO,380,YES,,,,"map:route128 (DAGOBAH, super_rod, badges 7)"
+species:cradily,FRONDTITAN,ROCK/GRASS,TATOOINE,495,,,,,
+species:crawdaunt,MUCKRAKER,WATER/DARK,UTAPAU,468,YES,,,,
+species:crobat,VOIDMYNOCK,POISON/FLYING,SPACE,535,,,,,
+species:croconaw,BOGCROC,WATER,DAGOBAH,405,YES,,,,
+species:cyndaquil,CINDERMOLE,FIRE,SULLUST,309,,,,,
+species:delcatty,LOTHCAT,NORMAL,LOTHAL,380,,,,,
+species:delibird,LIFEDAY,ICE/FLYING,KASHYYYK,330,,,,,
+species:deoxys,SHIFTSTAR,PSYCHIC,ATOLLON,600,,,,,
+species:dewgong,THALASIREN,WATER/ICE,AHCH-TO,475,YES,,,,
+species:ditto,SHIFTBLOB,NORMAL,ZOLAN,288,,,,,"map:desert-underpass (TATOOINE, land, badges 8)"
+species:dodrio,KAADULORD,NORMAL/FLYING,NABOO,460,,,,,"map:safari-zone-northwest (FELUCIA, land, badges 6)"
+species:doduo,KAADU,NORMAL/FLYING,NABOO,310,,,,,"map:safari-zone-northwest (FELUCIA, land, badges 6)"
+species:dragonair,DRAGNSNAKE,DRAGON,DAGOBAH,420,YES,,,,
+species:dragonite,VARACTYL,DRAGON/FLYING,UTAPAU,600,YES,,,,
+species:dratini,WYRMLING,DRAGON,DAGOBAH,300,YES,,,,
+species:drowzee,MINDPROBE,PSYCHIC,SPACE,328,,,,,
+species:dusclops,SITHWRAITH,GHOST,JEDHA,455,,,,," (?, land)"
+species:duskull,WRAITHLET,GHOST,JEDHA,295,,,,,"map:mt-pyre-4f (JEDHA, land, badges 6)"
+species:dustox,DUSTMOTH,BUG/POISON,TATOOINE,385,,,,,
+species:eevee,TOOKA,NORMAL,CORUSCANT,325,,,,,
+species:ekans,SANDASP,POISON,TATOOINE,288,,,,,
+species:electabuzz,IG UNIT,ELECTRIC,SPACE,490,,,,,
+species:electrike,KATHPUP,ELECTRIC,DANTOOINE,295,,,,,"map:route110 (TATOOINE, land, badges 2)"
+species:electrode,SEEKERBALL,ELECTRIC,TATOOINE,480,,,,,"map:new-mauville-inside (TATOOINE, land, badges 3)"
+species:elekid,IG-RM,ELECTRIC,SPACE,360,,,,,
+species:entei,MAGMACAT,FIRE,MUSTAFAR,580,,,,,
+species:espeon,JEDITOOKA,PSYCHIC,CORUSCANT,525,,,,,
+species:exeggcute,WROSEED,GRASS/PSYCHIC,KASHYYYK,325,,,,,
+species:exeggutor,WROSHYR,GRASS/PSYCHIC,KASHYYYK,520,,,,,
+species:exploud,BOOMCACKLE,NORMAL,TATOOINE,480,,,,,
+species:farfetchd,NUNA,NORMAL/FLYING,NABOO,352,,,,,
+species:fearow,DUNECONDOR,NORMAL/FLYING,TATOOINE,442,,,,,
+species:feebas,DULLFIN,WATER,DAGOBAH,200,YES,,,,
+species:feraligatr,SWAMPJAW,WATER,DAGOBAH,530,YES,,,,
+species:flaaffy,NERF,ELECTRIC,ALDERAAN,365,,,,,
+species:flareon,FLARETOOKA,FIRE,CORUSCANT,525,,,,,
+species:forretress,DROIDEKA,BUG/STEEL,SPACE,465,,,,,
+species:furret,DUNEFERRET,NORMAL,TATOOINE,415,YES,,,,
+species:gardevoir,AURAWARDEN,PSYCHIC,DAGOBAH,518,,,,,
+species:gastly,SITHWISP,GHOST/POISON,MORABAND,310,,,,,
+species:gengar,SITHSPECTR,GHOST/POISON,MORABAND,500,,,,,
+species:girafarig,FALUMPASET,NORMAL/PSYCHIC,NABOO,455,,,,,"map:safari-zone-south (FELUCIA, land, badges 6)"
+species:glalie,WAMPA,ICE,HOTH,480,,,,,
+species:gloom,STINKROOT,GRASS/POISON,ENDOR,395,,,,,"map:route121 (ENDOR, land, badges 6)"
+species:golbat,MYNOCKMAW,POISON/FLYING,SPACE,455,,,,,"map:meteor-falls-1f-2r (SULLUST, land, badges 5)"
+species:goldeen,HORNFIN,WATER,NABOO,320,YES,,,,"map:petalburg-city (TATOOINE, good_rod, badges 0)"
+species:golduck,BOGDRAKE,WATER,NABOO,500,YES,,,,"map:safari-zone-northwest (FELUCIA, water, badges 6)"
+species:gorebyss,SILKEEL,WATER,KAMINO,485,YES,,,,
+species:granbull,ANOOBA,NORMAL,TATOOINE,450,,,,,
+species:grimer,MUCKLING,POISON,CORUSCANT,325,,,,,"map:fiery-path (SULLUST, land, badges 3)"
+species:grovyle,KATARNJAW,GRASS,KASHYYYK,405,,,,,
+species:growlithe,AKKPUP,FIRE,HARUUN KAL,350,,,,,
+species:grumpig,PUFFERBOAR,PSYCHIC,SULLUST,470,,,,,
+species:gulpin,SARLACLET,POISON,TATOOINE,302,,,,,"map:route110 (TATOOINE, land, badges 2)"
+species:gyarados,COLOCLAW,WATER/FLYING,NABOO,540,YES,,,,"map:sootopolis-city (DAGOBAH, super_rod, badges 7)"
+species:hariyama,MOGU,FIGHTING,KASHYYYK,474,YES,,,,"map:victory-road-1f (ILUM, land, badges 8)"
+species:haunter,SITHSHADE,GHOST/POISON,MORABAND,405,,,,,
+species:heracross,HORNBEETLE,BUG/FIGHTING,FELUCIA,500,,,,,"map:safari-zone-north (FELUCIA, land, badges 6)"
+species:hitmonchan,PUNCHDROID,FIGHTING,KAMINO,455,,,,,
+species:hitmonlee,KICKDROID,FIGHTING,KAMINO,455,,,,,
+species:hitmontop,SPINDROID,FIGHTING,KAMINO,455,,,,,
+species:ho-oh,DAWNWING,FIRE/FLYING,MORTIS,680,,,,,
+species:hoothoot,DUSKOWL,NORMAL/FLYING,ENDOR,262,,,,,"map:safari-zone-northeast (FELUCIA, land, badges 6)"
+species:hoppip,PUFFSEED,GRASS/FLYING,BESPIN,250,,,,,
+species:horsea,SEASTEED,WATER,KAMINO,295,YES,,,,"map:route132 (KAMINO, super_rod, badges 7)"
+species:houndoom,FYRNALPHA,DARK/FIRE,LOTHAL,500,,,,,
+species:houndour,FYRNOCK,DARK/FIRE,LOTHAL,330,,,,,"map:safari-zone-northeast (FELUCIA, land, badges 6)"
+species:huntail,DEEPEEL,WATER,KAMINO,485,YES,,,,
+species:hypno,INTERROGTR,PSYCHIC,SPACE,483,,,,,
+species:igglybuff,LULLAKIT,NORMAL,TATOOINE,210,,,,,
+species:illumise,LUMIFLY,BUG,TATOOINE,400,,,,,"map:route117 (TATOOINE, land, badges 2)"
+species:ivysaur,BUDLIZARD,GRASS/POISON,KASHYYYK,405,,,,," (?, land)"
+species:jigglypuff,LULLAPUFF,NORMAL,TATOOINE,270,,,,,"map:route115 (TATOOINE, land, badges 5)"
+species:jirachi,WHILLSTAR,STEEL/PSYCHIC,SPACE,600,,,,,
+species:jolteon,VOLTTOOKA,ELECTRIC,CORUSCANT,525,,,,,
+species:jumpluff,PUFFCLOUD,GRASS/FLYING,BESPIN,450,,,,,
+species:jynx,NARGLATCH,ICE/PSYCHIC,ORTO PLUTONIA,455,,,,,
+species:kabuto,DOMESHELL,ROCK/WATER,MON CALA,355,YES,,,,
+species:kabutops,SCYTHESHEL,ROCK/WATER,MON CALA,495,YES,,,,
+species:kadabra,MISTWEAVER,PSYCHIC,DATHOMIR,400,,,,,
+species:kakuna,STINGPOD,BUG/POISON,ENDOR,205,,,,,
+species:kangaskhan,BROODBEAST,NORMAL,DANTOOINE,490,YES,,,,
+species:kecleon,TAOZIN,NORMAL,ENDOR,440,,,,,"map:route118 (ENDOR, land, badges 5)"
+species:kingdra,STORMSTEED,WATER/DRAGON,KAMINO,540,YES,,,,
+species:kingler,KINGCRAB,WATER,KAMINO,475,YES,,,,
+species:kirlia,AURADANCER,PSYCHIC,DAGOBAH,278,,,,,
+species:koffing,BELDONLET,POISON,BESPIN,340,,,,,"map:fiery-path (SULLUST, land, badges 3)"
+species:krabby,SANDCRAB,WATER,KAMINO,325,YES,,,,
+species:kyogre,SANDO,WATER,NABOO,670,YES,,,,
+species:lairon,OCTUPTARRA,STEEL/ROCK,KASHYYYK,430,,,,,"map:victory-road-1f (ILUM, land, badges 8)"
+species:lanturn,LUMIDEEP,WATER/ELECTRIC,KAMINO,460,YES,,,,
+species:lapras,PURRGIL,WATER/ICE,SPACE,535,YES,,,,
+species:latias,ASHLA,DRAGON/PSYCHIC,TYTHON,600,YES,,,,
+species:latios,BOGAN,DRAGON/PSYCHIC,TYTHON,600,YES,,,,
+species:ledian,DOTFLYER,BUG/FLYING,NABOO,390,,,,,
+species:ledyba,DOTBUG,BUG/FLYING,NABOO,265,,,,,"map:safari-zone-northeast (FELUCIA, land, badges 6)"
+species:lickitung,LAPLIZARD,NORMAL,NAL HUTTA,385,YES,,,,
+species:lileep,SEAFROND,ROCK/GRASS,TATOOINE,355,,,,,
+species:linoone,SCURRYDASH,NORMAL,TATOOINE,420,YES,,,,"map:route118 (ENDOR, land, badges 5)"
+species:lombre,BOGTROT,WATER/GRASS,NABOO,340,YES,,,,"map:route114 (SULLUST, land, badges 3)"
+species:lotad,BOGLING,WATER/GRASS,BOGANO,220,YES,,,,"map:route102 (TATOOINE, land, badges 0)"
+species:loudred,CACKLER,NORMAL,TATOOINE,360,,,,,"map:victory-road-1f (ILUM, land, badges 8)"
+species:ludicolo,FAMBAA,WATER/GRASS,NABOO,480,YES,,,,
+species:lugia,TIDEWING,PSYCHIC/FLYING,MORTIS,680,YES,,,,
+species:lunatone,KYBERMOON,ROCK/PSYCHIC,ILUM,440,,,,,
+species:luvdisc,HEARTFIN,WATER,KAMINO,330,YES,,,,"map:route128 (DAGOBAH, good_rod, badges 7)"
+species:machamp,BX DROID,FIGHTING,MUSTAFAR,505,,,,,
+species:machoke,B2 DROID,FIGHTING,MUSTAFAR,405,,,,,
+species:machop,B1 DROID,FIGHTING,MUSTAFAR,305,,,,,"map:jagged-pass (MUSTAFAR, land, badges 3)"
+species:magby,COALKIT,FIRE,MUSTAFAR,365,,,,,
+species:magcargo,LAVAFLEA,FIRE/ROCK,MUSTAFAR,410,,,,,
+species:magikarp,COLOFRY,WATER,NABOO,200,,,,,"map:petalburg-city (TATOOINE, good_rod, badges 0)"
+species:magmar,LAVASPITTR,FIRE,MUSTAFAR,495,,,,,
+species:magnemite,MOUSEDROID,ELECTRIC/STEEL,TATOOINE,325,,,,,"map:new-mauville-entrance (TATOOINE, land, badges 3)"
+species:magneton,MOUSESWARM,ELECTRIC/STEEL,TATOOINE,465,,,,,"map:new-mauville-inside (TATOOINE, land, badges 3)"
+species:makuhita,MOGUCUB,FIGHTING,KASHYYYK,237,YES,,,,"map:granite-cave-1f (KASHYYYK, land, badges 1)"
+species:manectric,KATHHOUND,ELECTRIC,DANTOOINE,475,,,,,"map:route118 (ENDOR, land, badges 5)"
+species:mankey,GUNDARKLET,FIGHTING,VANQOR,305,,,,,
+species:mantine,NEEBRAY,WATER/FLYING,SPACE,465,YES,,,,
+species:mareep,NERFLET,ELECTRIC,ALDERAAN,280,,,,,"map:safari-zone-southeast (FELUCIA, land, badges 6)"
+species:marill,BLOOPRAT,WATER,NABOO,250,YES,,,,"map:petalburg-city (TATOOINE, water, badges 0)"
+species:masquerain,BOGWING,BUG/FLYING,DAGOBAH,414,,,,,
+species:mawile,BUZZDROID,STEEL,SPACE,380,,,,,"map:victory-road-b1f (ILUM, land, badges 8)"
+species:medicham,ZENAPE,FIGHTING/PSYCHIC,ILUM,410,,,,,
+species:meditite,ZENKIT,FIGHTING/PSYCHIC,ILUM,280,,,,,
+species:meganium,BLOOMSTAG,GRASS,ENDOR,525,,,,,
+species:meowth,TUSKCAT,NORMAL,CORELLIA,290,,,,,
+species:metagross,R2 UNIT,STEEL/PSYCHIC,ALDERAAN,600,,,,,
+species:metang,R4 UNIT,STEEL/PSYCHIC,ALDERAAN,420,,,,,
+species:metapod,HUSKPOD,BUG,ENDOR,205,,,,,
+species:mew,PRIMORDIAL,PSYCHIC,MORTIS,600,YES,,,,
+species:mewtwo,PROTOCLONE,PSYCHIC,KAMINO,680,,,,,
+species:mightyena,WARMASSIFF,DARK,TATOOINE,420,,,,,"map:route120 (ENDOR, land, badges 6)"
+species:milotic,SHIMMERFIN,WATER,DAGOBAH,540,YES,,,," (?, land)"
+species:miltank,SHAAK,NORMAL,NABOO,490,YES,,,,"map:safari-zone-northeast (FELUCIA, land, badges 6)"
+species:minun,GONK,ELECTRIC,TATOOINE,405,,,,,"map:route110 (TATOOINE, land, badges 2)"
+species:misdreavus,WAILWISP,GHOST,MORABAND,435,,,,,
+species:moltres,EMBERHAWK,FIRE/FLYING,MUSTAFAR,580,,,,,
+species:mr-mime,WALLMIMIC,PSYCHIC,NABOO,460,,,,,
+species:mudkip,MARSHLET,WATER,NABOO,310,YES,,,,
+species:muk,MUCKMOUND,POISON,CORUSCANT,500,,,,,
+species:murkrow,RAWKA,DARK/FLYING,DATHOMIR,405,,,,,
+species:natu,CONVORLET,PSYCHIC/FLYING,LOTHAL,320,,,,,"map:safari-zone-north (FELUCIA, land, badges 6)"
+species:nidoran-f,RONTOCALF,POISON,TATOOINE,275,,,,,
+species:nidoran-m,REEKCALF,POISON,GEONOSIS,273,,,,,
+species:nidorina,RONTOLING,POISON,TATOOINE,365,,,,,
+species:nidorino,REEKHORN,POISON,GEONOSIS,365,,,,,
+species:ninetales,VULPTEXA,FIRE,CRAIT,505,,,,,
+species:ninjask,HIVEDART,BUG/FLYING,GEONOSIS,456,,,,,
+species:noctowl,NIGHTOWL,NORMAL/FLYING,ENDOR,442,,,,,
+species:nosepass,LODESTAR,ROCK,KASHYYYK,375,,,,,"map:granite-cave-b2f (KASHYYYK, rock_smash, badges 1)"
+species:nuzleaf,LEAFTRICK,GRASS/DARK,ENDOR,340,,,,,"map:route114 (SULLUST, land, badges 3)"
+species:octillery,OCTOCANNON,WATER,KAMINO,480,YES,,,,"map:safari-zone-southeast (FELUCIA, super_rod, badges 6)"
+species:oddish,GNARLSPAWN,GRASS/POISON,ENDOR,320,,,,,"map:route110 (TATOOINE, land, badges 2)"
+species:omanyte,SPIRALITH,ROCK/WATER,MON CALA,355,YES,,,,
+species:omastar,SPIRALORD,ROCK/WATER,MON CALA,495,YES,,,,
+species:paras,GELAGRUB,BUG/GRASS,FELUCIA,285,,,,,
+species:parasect,GELASPORE,BUG/GRASS,FELUCIA,405,,,,,
+species:pelipper,SHYYYO,WATER/FLYING,KASHYYYK,430,YES,,,,"map:route103 (TATOOINE, water, badges 0)"
+species:persian,TUSKLYNX,NORMAL,CORELLIA,440,,,,,
+species:pichu,IONKIT,ELECTRIC,FELUCIA,205,,,,,
+species:pidgeot,PORGMAJOR,NORMAL/FLYING,AHCH-TO,469,,,,,
+species:pidgeotto,PORG,NORMAL/FLYING,AHCH-TO,349,,,,,
+species:pidgey,PORGLET,NORMAL/FLYING,AHCH-TO,251,,,,,
+species:pikachu,IONRAT,ELECTRIC,FELUCIA,300,,,,,"map:safari-zone-south (FELUCIA, land, badges 6)"
+species:pineco,DEKALET,BUG,SPACE,290,,,,,"map:safari-zone-northeast (FELUCIA, land, badges 6)"
+species:pinsir,KILLIK,BUG,ALDERAAN,500,,,,,"map:safari-zone-northwest (FELUCIA, land, badges 6)"
+species:plusle,PIT DROID,ELECTRIC,TATOOINE,405,,,,,"map:route110 (TATOOINE, land, badges 2)"
+species:politoed,WORRTKING,WATER,TATOOINE,500,YES,,,,
+species:poliwag,WORRTLET,WATER,TATOOINE,300,YES,,,,
+species:poliwhirl,WORRT,WATER,TATOOINE,385,YES,,,,
+species:poliwrath,WORRTBRUTE,WATER/FIGHTING,TATOOINE,500,YES,,,,
+species:poochyena,MASSIFF,DARK,TATOOINE,220,,,,,"map:petalburg-woods (TATOOINE, land, badges 0)"
+species:porygon,3PO UNIT,NORMAL,CORUSCANT,395,,,,,
+species:porygon2,TC UNIT,NORMAL,CORUSCANT,515,,,,,
+species:primeape,GUNDARK,FIGHTING,VANQOR,455,,,,,
+species:psyduck,BOGDUCK,WATER,NABOO,320,YES,,,,"map:safari-zone-northwest (FELUCIA, water, badges 6)"
+species:quilava,FLAMEMOLE,FIRE,SULLUST,405,,,,,
+species:qwilfish,SPINEPUFF,WATER/POISON,KAMINO,430,YES,,,,
+species:raichu,IONLORD,ELECTRIC,FELUCIA,475,,,,,
+species:raikou,STORMCAT,ELECTRIC,ENDOR,580,,,,,
+species:ralts,AURALET,PSYCHIC,DAGOBAH,198,,,,,"map:route102 (TATOOINE, land, badges 0)"
+species:raticate,WOMPMAW,NORMAL,TATOOINE,413,,,,,
+species:rattata,WOMPRAT,NORMAL,TATOOINE,253,,,,,
+species:rayquaza,EXOGORTH,DRAGON/FLYING,ASTEROID FIELD,680,YES,,,,
+species:regice,ICEWARDEN,ICE,KASHYYYK,580,,,,,
+species:regirock,ROCKWARDEN,ROCK,TATOOINE,580,,,,,
+species:registeel,DURAWARDEN,STEEL,ENDOR,580,,,,,
+species:relicanth,RELICFISH,WATER/ROCK,KAMINO,485,YES,,,,"map:underwater-route126 (DAGOBAH, water, badges 7)"
+species:remoraid,JETSQUID,WATER,KAMINO,300,YES,,,,"map:safari-zone-southeast (FELUCIA, good_rod, badges 6)"
+species:roselia,FELUROSE,GRASS/POISON,FELUCIA,400,,,,,
+species:sableye,KYBERIMP,DARK/GHOST,ILUM,380,,,,,"map:granite-cave-b1f (KASHYYYK, land, badges 1)"
+species:salamence,DACTILLION,DRAGON/FLYING,UTAPAU,600,,,,,
+species:sceptile,KATARN,GRASS,KASHYYYK,530,,,,,
+species:scizor,MAGNAGUARD,BUG/STEEL,KALEE,500,,,,,
+species:scyther,ACKLAY,BUG/FLYING,GEONOSIS,500,,,,,
+species:seadra,SPINESTEED,WATER,KAMINO,440,YES,,,,
+species:seaking,KINGFIN,WATER,NABOO,450,YES,,,,"map:safari-zone-northwest (FELUCIA, super_rod, badges 6)"
+species:sealeo,ICESEAL,ICE/WATER,HOTH,410,YES,,,,
+species:seedot,ACORNLET,GRASS,ENDOR,220,,,,,"map:route102 (TATOOINE, land, badges 0)"
+species:seel,SIRENPUP,WATER,AHCH-TO,325,YES,,,,
+species:sentret,SANDMEER,NORMAL,TATOOINE,215,YES,,,,
+species:seviper,KOUHUN,POISON,GEONOSIS,458,,,,,"map:route114 (SULLUST, land, badges 3)"
+species:sharpedo,OPEEKILLER,WATER/DARK,NABOO,460,YES,,,,"map:route103 (TATOOINE, super_rod, badges 0)"
+species:shedinja,GEOZOMBIE,BUG/GHOST,GEONOSIS,236,,,,,
+species:shelgon,DACTSHELL,DRAGON,UTAPAU,420,,,,,
+species:shellder,SPIKECLAM,WATER,KAMINO,305,YES,,,,
+species:shiftry,GALELORD,GRASS/DARK,ENDOR,480,,,,,
+species:shroomish,FELUSPORE,GRASS,FELUCIA,295,,,,,"map:petalburg-woods (TATOOINE, land, badges 0)"
+species:shuckle,SHELLSAP,BUG/ROCK,FELUCIA,505,,,,,"map:safari-zone-northeast (FELUCIA, rock_smash, badges 6)"
+species:shuppet,ECHOWISP,GHOST,JEDHA,295,,,,,"map:route121 (ENDOR, land, badges 6)"
+species:silcoon,SILKPOD,BUG,TATOOINE,205,,,,,"map:petalburg-woods (TATOOINE, land, badges 0)"
+species:skarmory,VULTURE,STEEL/FLYING,SULLUST,465,,,,,"map:route113 (SULLUST, land, badges 3)"
+species:skiploom,PUFFBLOOM,GRASS/FLYING,BESPIN,340,,,,,
+species:skitty,LOTHKIT,NORMAL,LOTHAL,260,,,,,"map:route116 (TATOOINE, land, badges 1)"
+species:slaking,SLOTHKING,NORMAL,NAL HUTTA,670,,,,,
+species:slakoth,SLOTHLET,NORMAL,NAL HUTTA,280,,,,,"map:petalburg-woods (TATOOINE, land, badges 0)"
+species:slowbro,SLUGSHELL,WATER/PSYCHIC,DAGOBAH,490,YES,,,,
+species:slowking,SLUGSAGE,WATER/PSYCHIC,DAGOBAH,490,YES,,,,
+species:slowpoke,SWAMPSLUG,WATER/PSYCHIC,DAGOBAH,315,YES,,,,
+species:slugma,LAVAGRUB,FIRE,MUSTAFAR,250,,,,,"map:fiery-path (SULLUST, land, badges 3)"
+species:smeargle,PAINTKIT,NORMAL,TATOOINE,250,,,,,"map:artisan-cave-1f (GRAND ARENA, land, badges 8)"
+species:smoochum,NARGLET,ICE/PSYCHIC,ORTO PLUTONIA,305,,,,,
+species:sneasel,SCRABBLER,DARK/ICE,HOTH,430,YES,,,,
+species:snorlax,HAPPABORE,NORMAL,JAKKU,540,YES,,,,
+species:snorunt,WAMPLET,ICE,HOTH,300,,,,,"map:shoal-cave-low-tide-ice-room (HOTH, land, badges 6)"
+species:snubbull,ANOOBLET,NORMAL,TATOOINE,300,,,,,"map:safari-zone-southeast (FELUCIA, land, badges 6)"
+species:solrock,KYBERSUN,ROCK/PSYCHIC,ILUM,440,,,,,"map:meteor-falls-1f-1r (SULLUST, land, badges 3)"
+species:spearow,SANDHAWK,NORMAL/FLYING,TATOOINE,262,,,,,
+species:spheal,SNOWSEAL,ICE/WATER,HOTH,290,YES,,,,"map:shoal-cave-low-tide-entrance-room (HOTH, land, badges 6)"
+species:spinarak,KRYKLING,BUG/POISON,LOTHAL,250,,,,,"map:safari-zone-southeast (FELUCIA, land, badges 6)"
+species:spinda,WOBBLEKIT,NORMAL,SULLUST,360,,,,,"map:route113 (SULLUST, land, badges 3)"
+species:spoink,PUFFERPIG,PSYCHIC,SULLUST,330,,,,,"map:jagged-pass (MUSTAFAR, land, badges 3)"
+species:squirtle,SHELLPUP,WATER,MON CALA,314,YES,,,," (?, land)"
+species:stantler,IKOPI,NORMAL,NABOO,465,,,,,"map:safari-zone-southeast (FELUCIA, land, badges 6)"
+species:starmie,NOVACORAL,WATER/PSYCHIC,KAMINO,520,YES,,,,
+species:staryu,STARCORAL,WATER,KAMINO,340,YES,,,,"map:lilycove-city (BESPIN, super_rod, badges 6)"
+species:sudowoodo,GNARLTREE,ROCK,DAGOBAH,410,,,,,
+species:suicune,TIDECAT,WATER,NABOO,580,YES,,,,
+species:sunflora,TWINSUNFLR,GRASS,TATOOINE,425,,,,,
+species:sunkern,SUNSEED,GRASS,TATOOINE,180,,,,,"map:safari-zone-northeast (FELUCIA, land, badges 6)"
+species:surskit,SKIMBUG,BUG/WATER,DAGOBAH,269,,,,,
+species:swablu,VELKLET,NORMAL/FLYING,BESPIN,310,,,,,"map:route114 (SULLUST, land, badges 3)"
+species:swalot,SARLACC,POISON,TATOOINE,467,,,,,
+species:swellow,HAWKBAT,NORMAL/FLYING,CORUSCANT,430,,,,,"map:route115 (TATOOINE, land, badges 5)"
+species:taillow,HAWKBATKIT,NORMAL/FLYING,CORUSCANT,270,,,,,"map:petalburg-woods (TATOOINE, land, badges 0)"
+species:tangela,RATHTAR,GRASS,TWON KETTER,435,,,,,
+species:tauros,ORRAY,NORMAL,GEONOSIS,490,YES,,,,
+species:teddiursa,GORAXCUB,NORMAL,ENDOR,330,,,,,"map:safari-zone-northeast (FELUCIA, land, badges 6)"
+species:tentacool,DIANOGLET,WATER/POISON,KAMINO,335,YES,,,,"map:route103 (TATOOINE, good_rod, badges 0)"
+species:tentacruel,DIANOGA,WATER/POISON,KAMINO,515,YES,,,,"map:abandoned-ship-hidden-floor-corridors (KASHYYYK, super_rod, badges 5)"
+species:togepi,LUCKEGG,NORMAL,ALDERAAN,245,,,,,
+species:togetic,LUCKWING,NORMAL/FLYING,ALDERAAN,405,,,,,
+species:torchic,SUNCHICK,FIRE,TATOOINE,310,,,,,
+species:torkoal,SMELTER,FIRE,MUSTAFAR,470,,,,,"map:fiery-path (SULLUST, land, badges 3)"
+species:totodile,SNAPPER,WATER,DAGOBAH,314,YES,,,,
+species:treecko,KATARNKIT,GRASS,KASHYYYK,310,,,,,
+species:tropius,THRANTA,GRASS/FLYING,ENDOR,460,,,,,"map:route119 (ENDOR, land, badges 5)"
+species:typhlosion,BLAZEMOLE,FIRE,SULLUST,534,,,,,
+species:tyranitar,ZILLOBEAST,ROCK/DARK,MALASTARE,600,YES,,,,
+species:tyrogue,TRAINDROID,FIGHTING,KAMINO,210,,,,,
+species:umbreon,SITHTOOKA,DARK,CORUSCANT,525,,,,,
+species:unown,AUREBESH,PSYCHIC,SPACE,336,,,,,
+species:ursaring,GORAX,NORMAL,ENDOR,500,,,,,
+species:vaporeon,TIDETOOKA,WATER,CORUSCANT,525,YES,,,,
+species:venomoth,GNATMOTH,BUG/POISON,DAGOBAH,450,,,,,
+species:venonat,GNATLING,BUG/POISON,DAGOBAH,305,,,,,
+species:venusaur,BLOOMBEAST,GRASS/POISON,KASHYYYK,525,,,,," (?, land)"
+species:victreebel,MAWFLOWER,GRASS/POISON,FELUCIA,480,,,,,
+species:vigoroth,SLOTHFURY,NORMAL,NAL HUTTA,440,,,,,
+species:vileplume,STINKBLOOM,GRASS/POISON,ENDOR,480,,,,,
+species:volbeat,GLOWFLY,BUG,TATOOINE,400,,,,,"map:route117 (TATOOINE, land, badges 2)"
+species:voltorb,REMOTE,ELECTRIC,TATOOINE,330,,,,,"map:new-mauville-entrance (TATOOINE, land, badges 3)"
+species:vulpix,VULPTEX,FIRE,CRAIT,299,,,,,"map:mt-pyre-exterior (JEDHA, land, badges 6)"
+species:wailmer,AIWHALET,WATER,KAMINO,400,YES,,,,"map:route103 (TATOOINE, good_rod, badges 0)"
+species:wailord,AIWHA,WATER,KAMINO,500,YES,,,,"map:route129 (DAGOBAH, water, badges 7)"
+species:walrein,TUSKWALRUS,ICE/WATER,HOTH,530,YES,,,,
+species:wartortle,SHELLWARD,WATER,MON CALA,405,YES,,,," (?, land)"
+species:weedle,STINGWORM,BUG/POISON,ENDOR,195,,,,,
+species:weepinbell,SNAPTRAP,GRASS/POISON,FELUCIA,390,,,,,
+species:weezing,BELDON,POISON,BESPIN,490,,,,,
+species:whismur,KOWAKIAN,NORMAL,TATOOINE,240,,,,,"map:route116 (TATOOINE, land, badges 1)"
+species:wigglytuff,LULLADIVA,NORMAL,TATOOINE,425,,,,,
+species:wingull,SHYYYOLET,WATER/FLYING,KASHYYYK,270,,,,,"map:route103 (TATOOINE, land, badges 0)"
+species:wobbuffet,YSALAMIRI,PSYCHIC,MYRKR,405,,,,,"map:safari-zone-south (FELUCIA, land, badges 6)"
+species:wurmple,SANDGRUB,BUG,TATOOINE,195,,,,,"map:petalburg-woods (TATOOINE, land, badges 0)"
+species:wynaut,YSALAKIT,PSYCHIC,MYRKR,260,,,,,"map:route130 (DAGOBAH, land, badges 7)"
+species:xatu,CONVOR,PSYCHIC/FLYING,LOTHAL,470,,,,,"map:safari-zone-north (FELUCIA, land, badges 6)"
+species:yanma,GNATWING,BUG/FLYING,DAGOBAH,390,,,,,
+species:zangoose,NEXU,NORMAL,GEONOSIS,458,,,,,
+species:zapdos,STORMHAWK,ELECTRIC/FLYING,BESPIN,580,,,,,
+species:zigzagoon,SCURRIER,NORMAL,TATOOINE,240,YES,,,,"map:route101 (TATOOINE, land, badges 0)"
+species:zubat,MYNOCK,POISON/FLYING,SPACE,245,,,,,"map:granite-cave-1f (KASHYYYK, land, badges 1)"

@@ -40,3 +40,8 @@ NOTES = {M+"Gym_Text_WattsonIntro": "Watto lost Anakin (and Shmi) on the Boonta 
 FIX["MauvilleCity_BikeShop_Text_OhYourBikeIsInPC"] = [("Oh, I get it, you stored it using your TERMINAL.", "Oh, I get it, you stored it using\nyour TERMINAL.")]
 
 REFLOW = True
+
+# Dune Sea (2026-11-03): Tatooine's sea is sand, crossed with SAND SKIM
+FIX.update({
+    'MauvilleCity_Text_WattsonWontBeChallenge': "WATTO: Don't you worry about it.\\nIt won't be a challenge to you.\\pThe entrance to ESPA GENERATOR is just\\na short skim away from ROUTE 110.\\pThat's it, then, you have my trust!\\nWahahahaha!$",
+})

@@ -12,7 +12,7 @@ map:abandoned-ship-rooms-1f,Abandoned Ship · Rooms · 1F,underground,location:a
 map:abandoned-ship-rooms-b1f,Abandoned Ship · Rooms · B1F,underground,location:abandoned-ship,,,5,,,5,35,good_rod|old_rod|super_rod|water,0,,,item:hm-surf|flag:badge05-get,Hidden rooms need keys from the ship; underwater rooms need Dive.,REPUBLIC WRECK · Rooms · B1F,KASHYYYK
 map:abandoned-ship-underwater1,Abandoned Ship · Underwater 1,underwater,location:abandoned-ship,,,7,,,,,,0,,,item:hm-dive|flag:badge07-get,,REPUBLIC WRECK · Underwater 1,KASHYYYK
 map:abandoned-ship-underwater2,Abandoned Ship · Underwater 2,underwater,location:abandoned-ship,,,7,,,,,,0,,,item:hm-dive|flag:badge07-get,,REPUBLIC WRECK · Underwater 2,KASHYYYK
-map:altering-cave,Altering Cave,underground,location:altering-cave,,,8,3,29,3,29,land,0,,,flag:sys-game-clear,Off Route 103; Mystery Event changes its Pokémon.,ALTERING CAVE,GRAND ARENA
+map:altering-cave,Altering Cave,underground,location:altering-cave,,,8,3,29,3,29,land,0,,,flag:sys-game-clear,Off Route 103; Mystery Event changes its Pokémon.,ALTERING CAVE,TATOOINE
 map:ancient-tomb,Ancient Tomb,underground,location:ancient-tomb,42,regi-trio,7,,,,,,0,,,item:hm-flash|flag:badge02-get|flag:regi-doors-opened,Registeel (Lv 40).,ANCIENT TOMB,ENDOR
 map:aqua-hideout-1f,Aqua Hideout · 1F,indoor,location:aqua-hideout,29,aqua-hideout,6,,,,,,1,32,32,item:hm-surf|flag:badge05-get,Opens after the Mt. Pyre event.,HUTT HIDEOUT · 1F,BESPIN
 map:aqua-hideout-b1f,Aqua Hideout · B1F,indoor,location:aqua-hideout,29,aqua-hideout,6,,,,,,1,31,31,item:hm-surf|flag:badge05-get,Opens after the Mt. Pyre event.,HUTT HIDEOUT · B1F,BESPIN
@@ -44,7 +44,7 @@ map:granite-cave-b1f,Granite Cave · B1F,underground,location:granite-cave,12,le
 map:granite-cave-b2f,Granite Cave · B2F,underground,location:granite-cave,12,letter-for-steven,1,10,12,5,20,land|rock_smash,0,,,item:hm-flash|flag:badge02-get,Dark without Flash; Mach Bike needed for cracked floor in B1F.,SHADOWLANDS · B2F,KASHYYYK
 map:granite-cave-stevens-room,Granite Cave · Stevens Room,underground,location:granite-cave,12,letter-for-steven,1,6,10,6,10,land,0,,,item:hm-flash|flag:badge02-get,Dark without Flash; Mach Bike needed for cracked floor in B1F.,SHADOWLANDS · Stevens Room,KASHYYYK
 map:island-cave,Island Cave,underground,location:island-cave,42,regi-trio,7,,,,,,0,,,flag:regi-doors-opened,Regice (Lv 40).,ICE GROTTO,KASHYYYK
-map:jagged-pass,Jagged Pass,route,location:jagged-pass,19,mt-chimney,3,20,22,20,22,land,6,19,22,,Acro Bike needed to go back up; Magma Hideout entrance needs Magma Emblem.,ASHEN PASS,SULLUST
+map:jagged-pass,Jagged Pass,route,location:jagged-pass,19,mt-chimney,3,20,22,20,22,land,6,19,22,,Acro Bike needed to go back up; Magma Hideout entrance needs Magma Emblem.,ASHEN PASS,MUSTAFAR
 map:lavaridge-town,Lavaridge Town,town,location:lavaridge-town,20,heat-badge,3,,,,,,0,,,,Gym 4; Go-Goggles from rival.,PIRIN,SULLUST
 map:lavaridge-town-gym-1f,Lavaridge Town · Gym · 1F,indoor,location:lavaridge-town,20,heat-badge,3,,,,,,9,22,29,,Gym 4: Fire.,PIRIN · Gym · 1F,SULLUST
 map:lilycove-city,Lilycove City,city,location:lilycove-city,26,lilycove-rival,6,,,5,45,good_rod|old_rod|super_rod|water,6,31,34,,"Contest Hall, Department Store; Aqua Hideout in the cove needs Surf.",CLOUD CITY,BESPIN
@@ -211,9 +211,9 @@ map:underwater-route126,Underwater · Route 126,underwater,location:underwater-1
 map:underwater-route127,Underwater · Route 127,underwater,location:underwater-127,,,7,,,,,,0,,,item:hm-dive|flag:badge07-get,,UNDERWATER · Route 127,DAGOBAH
 map:underwater-route128,Underwater · Route 128,underwater,location:underwater-128,32,seafloor-cavern,7,,,,,,0,,,item:hm-dive|flag:badge07-get,Seafloor Cavern entrance.,UNDERWATER · Route 128,DAGOBAH
 map:underwater-route129,Underwater · Route 129,underwater,location:underwater-129,,,7,,,,,,0,,,item:hm-dive|flag:badge07-get,,UNDERWATER · Route 129,DAGOBAH
-map:underwater-route134,Underwater · Route 134,underwater,location:underwater-sealed-chamber,,,7,,,,,,0,,,item:hm-dive|flag:badge07-get,,UNDERWATER · Route 134,DAGOBAH
+map:underwater-route134,Underwater · Route 134,underwater,location:underwater-sealed-chamber,,,7,,,,,,0,,,item:hm-dive|flag:badge07-get,,UNDERWATER · Route 134,KAMINO
 map:underwater-seafloor-cavern,Underwater · Seafloor Cavern,underwater,location:underwater-seafloor-cavern,,,7,,,,,,0,,,item:hm-dive|flag:badge07-get,,UNDERWATER · Seafloor Cavern,DAGOBAH
-map:underwater-sealed-chamber,Underwater · Sealed Chamber,underwater,location:underwater-sealed-chamber,,,7,,,,,,0,,,item:hm-dive|flag:badge07-get,,UNDERWATER · Sealed Chamber,DAGOBAH
+map:underwater-sealed-chamber,Underwater · Sealed Chamber,underwater,location:underwater-sealed-chamber,,,7,,,,,,0,,,item:hm-dive|flag:badge07-get,,UNDERWATER · Sealed Chamber,KAMINO
 map:underwater-sootopolis-city,Underwater · Sootopolis City,underwater,location:underwater-sootopolis,,,7,,,,,,0,,,item:hm-dive|flag:badge07-get,,UNDERWATER · Sootopolis City,DAGOBAH
 map:verdanturf-town,Verdanturf Town,town,location:verdanturf-town,17,rusturf-tunnel-opens,2,,,,,,0,,,,Battle Tent; Rusturf Tunnel east end.,ANCHORHEAD,TATOOINE
 map:victory-road-1f,Victory Road · 1F,underground,location:victory-road,36,victory-road-wally,8,36,40,36,40,land,6,41,45,item:hm-strength|flag:badge04-get|item:hm-rock-smash|flag:badge03-get|item:hm-flash|flag:badge02-get,Wally's final battle.,CRYSTAL CAVES · 1F,ILUM

@@ -1,0 +1,7 @@
+from_species,to_species,reason
+species:tentacool,species:trapinch,"DIANOGLET is a sea creature. KRAYTHATCH, the krayt hatchling, digs its pits in the deep dunes."
+species:marill,species:sandshrew,"BLOOPRAT floats on water. DEWLING, the dewback hatchling, rolls through the sand."
+species:goldeen,species:gulpin,"HORNFIN is a river fish. SARLACLET, the young sarlacc, waits under the Dune Sea (rare, 1%)."
+species:magikarp,species:wurmple,"COLOFRY is a sea fish. SANDGRUB, the desert larva, is the weak catch a line pulls out of the sand."
+species:wailmer,species:gulpin,"AIWHALET is an ocean calf. SARLACLET is the big thing that bites from below."
+species:sharpedo,species:swalot,"OPEEKILLER is a sea predator. SARLACC is the Dune Sea's predator."
