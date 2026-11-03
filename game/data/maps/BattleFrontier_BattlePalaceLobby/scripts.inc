@@ -498,7 +498,8 @@ BattleFrontier_BattlePalaceLobby_Text_ReceivedPrize:
 	.string "{STR_VAR_1}.$"
 
 BattleFrontier_BattlePalaceLobby_Text_LadyCanTellWhatMonsThink:
-	.string "For a hardy fellow like me,\n"
+	.string "Wyaaaaaa.\p"
+	.string "(For a hardy fellow like me,\n"
 	.string "hardy COMPANIONS are the best.\p"
 	.string "Offense is the best defense!\n"
 	.string "A relentless attack is the ultimate!\p"
@@ -509,9 +510,9 @@ BattleFrontier_BattlePalaceLobby_Text_LadyCanTellWhatMonsThink:
 	.string "She says that she can tell what\n"
 	.string "COMPANIONS are thinking.\p"
 	.string "I don't know about that part,\n"
-	.string "but she is really cute.\p"
-	.string "Huh?\n"
-	.string "Why are you looking at me like that?$"
+	.string "but she is really cute.)\p"
+	.string "Arrrgrrr?\p"
+	.string "(Why are you looking at me like that?)$"
 
 BattleFrontier_BattlePalaceLobby_Text_NatureAndMovesKeyHere:
 	.string "Hmm…\p"

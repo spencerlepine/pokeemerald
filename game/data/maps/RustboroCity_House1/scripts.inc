@@ -75,5 +75,6 @@ RustboroCity_House1_Text_AllSortsOfPlaces:
 	.string "In all sorts of places, there are all\n"
 	.string "sorts of COMPANIONS and people.\p"
 	.string "I find that fascinating, so I go to all\n"
-	.string "sorts of places.$"
+	.string "sorts of places.\p"
+	.string "I have spoken.$"
 

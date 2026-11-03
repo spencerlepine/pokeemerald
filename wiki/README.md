@@ -133,6 +133,9 @@ in `../game`. Every `source_file` is a path relative to `../game`.
 - New flags and vars use only Emerald's unused slots (listed in `bible/NET_NEW_DESIGNS.md`).
 - Name limits: creature 10, move 12, item 14, ability 12, type 6, trainer class 12, trainer name 10, map name 16.
 - [`bible/STORY.md`](bible/STORY.md) is the story: planets, factions, cast, acts.
+- [`bible/ALIEN_LANGUAGES.md`](bible/ALIEN_LANGUAGES.md) is the phrasebook for background NPCs who speak their own
+  language (Jawas, Rodians, Twi'leks, Wookiees, Ewoks): every word, its meaning and its source. The lines are
+  `mapping/texts/lang_01_alien_npcs.csv`. Only real, attested words; Wookiees get the meaning in brackets.
 - [`bible/FAN_CRITIQUE.md`](bible/FAN_CRITIQUE.md) is the fan and critic read of the whole game (2026-11-03):
   who is missing, who is filler, placement and timeline problems, transitions and set pieces, side content and
   the light / dark paths, each with a cost. Proposals only; nothing lands until the owner approves it.

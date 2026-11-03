@@ -364,7 +364,7 @@ BattleFrontier_OutsideWest_Text_OnlyToughTrainersBroughtHere:
 	.string "know about the GRAND ARENA.$"
 
 BattleFrontier_OutsideWest_Text_SureWeCanChallengeWithNoMons:
-	.string "Hey, bro…\p"
+	.string "Punchee…\p"
 	.string "Are you sure we can make challenges\n"
 	.string "even if we don't have any COMPANION?$"
 

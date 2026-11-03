@@ -1414,19 +1414,23 @@ SootopolisCity_Text_ThatWasWicked:
 	.string "That was wicked!$"
 
 SootopolisCity_Text_GoRedAndBlueMon:
-	.string "Go for it, red COMPANION!\n"
-	.string "Don't back off, blue COMPANION!$"
+	.string "Grrrrrrrraaaaaarrrrph!\p"
+	.string "(Go for it, red COMPANION!\n"
+	.string "Don't back off, blue COMPANION!)$"
 
 SootopolisCity_Text_DoYouKnowMonNames:
-	.string "… … … … … …\p"
-	.string "Hi, do you know the names of those\n"
-	.string "COMPANIONS fighting over there?$"
+	.string "Roooarrgh ur roo.\p"
+	.string "(I have a bad feeling about this.\p"
+	.string "Do you know the names of those\n"
+	.string "COMPANIONS fighting over there?)$"
 
 SootopolisCity_Text_GreenOneSettlesThings:
-	.string "I was wondering which one would win,\n"
-	.string "the red one or the blue one, but, oh no,\l"
-	.string "it's the green one that settles things!\p"
-	.string "Talk about a huge turn of events!$"
+	.string "Yyyuurrrrrrruuunghh!\p"
+	.string "(I was wondering which one would win,\n"
+	.string "the red one or the blue one…\p"
+	.string "But it's the green one that settles\n"
+	.string "things! Talk about a huge turn of\l"
+	.string "events!)$"
 
 SootopolisCity_Text_SeeingLegendWithOwnEyes:
 	.string "There's an ancient legend that claims\n"
@@ -1434,7 +1438,7 @@ SootopolisCity_Text_SeeingLegendWithOwnEyes:
 	.string "a colossal battle between COMPANIONS.\p"
 	.string "Well, I'm seeing that happen with\n"
 	.string "my very own eyes!\p"
-	.string "Whoa! I never expected to be\n"
+	.string "Inkabunga! I never expected to be\n"
 	.string "witness to something this huge!$"
 
 SootopolisCity_Text_SawLegendWithOwnEyes:
@@ -1443,7 +1447,7 @@ SootopolisCity_Text_SawLegendWithOwnEyes:
 	.string "a colossal battle between COMPANIONS.\p"
 	.string "Well, I saw that happen with\n"
 	.string "my very own eyes!\p"
-	.string "Whoa! I never expected to be\n"
+	.string "Inkabunga! I never expected to be\n"
 	.string "witness to something this huge!$"
 
 SootopolisCity_Text_BigPokemonFighting:

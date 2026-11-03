@@ -353,6 +353,7 @@ SlateportCity_OceanicMuseum_2F_Text_RemindsMeOfAbandonedShip:
 	.string "near KACHIRHO…$"
 
 SlateportCity_OceanicMuseum_2F_Text_DontRunInMuseum:
+	.string "Chess ko!\p"
 	.string "Don't you dare run around inside\n"
 	.string "the MUSEUM!$"
 

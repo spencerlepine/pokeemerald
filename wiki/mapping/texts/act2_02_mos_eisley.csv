@@ -52,7 +52,6 @@ SlateportCity_PokemonCenter_1F_Text_TradedMonWithFriend,"I trade COMPANIONS with
 SlateportCity_OceanicMuseum_1F_Text_WouldYouLikeToEnter,Welcome to the SPACER MUSEUM.\pThe entrance fee is 50 credits.\nWould you like to enter?$,
 SlateportCity_OceanicMuseum_1F_Text_DidntHaveMoney,"I didn't have 50 credits, so it took\na long time getting by the receptionist.$",
 SlateportCity_OceanicMuseum_1F_Text_LearnAboutSeaForBattling,I want to learn about the stars and\nuse that knowledge for battling.$,
-SlateportCity_OceanicMuseum_1F_Text_SternIsRoleModel,"I get all giddy and gooey when\nI see a starship!\pFor me, RIC OLIé is the number\none role model!$",
 SlateportCity_OceanicMuseum_1F_Text_MustBePokemonWeDontKnow,"The galaxy is vast without end, and\ninfinitely deep…\pThere must be many COMPANIONS that\nwe don't know about.$",
 SlateportCity_OceanicMuseum_1F_Text_WantSeaPokemon,I want a water COMPANION.\pI think it would feel cool and nice\nto hug on a hot day.$,
 SlateportCity_OceanicMuseum_1F_Text_RememberMeTakeThis,"Aiyeeeh!\nWhat are you doing here?\pMe? I'm the CARTEL thug\nyou thumped before, remember?\lBack in BEGGAR'S CANYON?\pHere, take this!\nYou have to forgive me!$",
@@ -83,7 +82,6 @@ SlateportCity_OceanicMuseum_2F_Text_SSAnneReplica,“NABOO ROYAL STARSHIP\p“A 
 SlateportCity_PokemonFanClub_Text_MeetChairman,"Er-hem! I am the CHAIRMAN of the\nCOMPANION FAN CLUB!\pBeing the CHAIRMAN, I am naturally\nthe most important!\pNo one can best me when it comes\nto raising COMPANIONS. No one!\pWell, let me tell you about\nSHOWCASES.\pThey're events where one can show off\nCOMPANIONS for the world to see!\pHowever, they're held in far-off towns,\nso I cannot participate often enough.\pThat is why we gather in this booth\nto show off our COMPANIONS, and\lhave others show us theirs.\pThe music is loud, but the company\nis excellent!$",cantina recast 2026-11-01 (bible/NET_NEW_DESIGNS.md)
 SlateportCity_PokemonFanClub_Text_AllowMeToExamineYourPokemon,Er-hem! I see you've participated in\na SHOWCASE!\pPlease! Allow me to examine how you\nhave raised your COMPANION.\pIt delights me no end to see\nCOMPANIONS raised by other TRAINERS.\pThe happy faces of COMPANIONS\nraised with proper care…\pThe kindly eyes of the TRAINER that\nnurtured and raised the COMPANION…\pThe very thought fills my heart to\noverwhelming with joy.\pOh! I do beg your pardon!\nForgive me for prattling on so!\pPlease! Allow me to examine how much\nyour COMPANION has grown!$,
 SlateportCity_PokemonFanClub_Text_ExplainGreenScarf,Let a COMPANION hold that GREEN SCARF.\pThat will enhance the\nsmartness of a COMPANION!$,
-SlateportCity_PokemonFanClub_Text_MonEnjoyedProtein,Do COMPANIONS enjoy having items used\non them?\pMine danced all night after I gave\nit some PROTEIN.$,cantina recast 2026-11-01 (bible/NET_NEW_DESIGNS.md)
 SlateportCity_PokemonFanClub_Text_Azumarill,BLOOPHARE: Bloop-bloop?$,
 SlateportCity_SternsShipyard_1F_Text_MeetDockDeliverToStern,"Hm?\nHi, I'm DOCK.\pRIC OLIé commissioned me to\ndesign a starliner.\pOh! That there…\nAre they ORGANA PARTS?\pBut, hmm…\nThis won't do…\pRIC OLIé went off somewhere.\nHe said he had some work to do.\pCould I get you to go find RIC\nOLIé and deliver that to him?$",
 SlateportCity_SternsShipyard_1F_Text_CouldUseAdviceFromVeteran,DOCK: Shipbuilding is an art.\pA lot of things can't be figured out\njust by calculating.\pI really could use advice from a veteran\npilot who knows ships…$,
@@ -102,7 +100,6 @@ SlateportCity_Text_GoForItLittleHarder,"You have to go for it a little harder.\p
 SlateportCity_Text_EffortRibbonLooksGoodOnIt,"Oh! Your {STR_VAR_1}, that EFFORT\nRIBBON looks good on it!$","reviewed, no change needed"
 SlateportCity_Text_BuyBricksSoDecorWontGetDirty,"If you put DOLLS or CUSHIONS on\nthe floor, they'll get dirty.\pI'm going to buy some BRICKS so my\nDOLLS and CUSHIONS won't get dirty\lwhen I leave them out.$","reviewed, no change needed"
 SlateportCity_Text_WhatsLongLineOverThere,What is that over there?\nThat long line…$,"reviewed, no change needed"
-SlateportCity_Text_QuitPushing,"Hey, there! Quit pushing!\nThis is the line, can't you see?$","reviewed, no change needed"
 SlateportCity_Text_AquaHasPolicy,THE CARTEL has a policy of\nassembling and dispersing at\lthe operation site.$,reviewed AUTO draft
 SlateportCity_Text_BossIsBrilliant,Our BOSS is brilliant.\pWhat would he want to do with\na MUSEUM now?$,"reviewed, no change needed"
 SlateportCity_Text_WhatsNewSchemeIWonder,"What's the new scheme, I wonder?\pOur BOSS is scary when he's mad, so\nI'd better not screw things up…$","reviewed, no change needed"
@@ -113,8 +110,6 @@ SlateportCity_Text_WhyAreWeLiningUp,Why are we even lining up and paying?\nWe sh
 SlateportCity_Text_WhatDoYouWant,What?\nWhat do you want?$,"reviewed, no change needed"
 SlateportCity_Text_IllReadSignForYou,You want to read this sign?\nI'll read it for you!$,"reviewed, no change needed"
 SlateportCity_Text_HotSpringsAfterOperation,"When this operation's over, I'll take\nyou to a hot spring spa!\pThat's what our leader said.\nI can't wait!$","reviewed, no change needed"
-SlateportCity_Text_BuyTooMuch,"Whenever I visit here, I get carried\naway and buy too much.$","reviewed, no change needed"
-SlateportCity_Text_GetNameRaterToHelpYou,"If you want to change your COMPANION's\nnickname, you'll have to get the NAME\lRATER to help you.$",reviewed AUTO draft
 SlateportCity_Text_CantChangeTradeMonName,"Any COMPANION you get in a trade,\nyou can't change its nickname.\pThe original TRAINER's love for that\nCOMPANION is in the nickname.$",reviewed AUTO draft
 SlateportCity_Text_BattleTentBuiltRecently,"Recently, a BATTLE TENT was built\nin MOS EISLEY.\pARENAS are fun, but the BATTLE TENT's\nawesome in its own way.\pYou should go find tough COMPANIONS\nfor the BATTLE TENT!$",reviewed AUTO draft
 SlateportCity_Text_CaptSternBeingInterviewed,I was hoping that it was a famous star\nso I could get an autograph.\pBut who's that being interviewed?\nIsn't that RIC OLIé?$,reviewed AUTO draft
@@ -172,7 +167,6 @@ SlateportCity_Harbor_Text_WhichOneDoYouWant,RIC OLIé: Which one do you want?$,r
 SlateportCity_Harbor_Text_HandedScannerToStern,{PLAYER} handed the DATA SCANNER to\nRIC OLIé.$,reviewed AUTO draft
 SlateportCity_Harbor_Text_ThisWillHelpResearch,"RIC OLIé: Thanks, {PLAYER}{KUN}!\nThis will help our research a lot!$",reviewed AUTO draft
 SlateportCity_House_Text_MustBeGoingToBattleTent,"You're a TRAINER, aren't you?\pSince you came to MOS EISLEY,\nyou must be going to the BATTLE TENT.$",reviewed AUTO draft
-SlateportCity_Mart_Text_SomeItemsOnlyAtMart,The MARKET does have some interesting\nmerchandise.\pBut there are some items you can only\nget at a SUPPLY DEPOT.$,reviewed AUTO draft
 SlateportCity_NameRatersHouse_Text_PleasedToRateMonNickname,"Hi, hi! I'm the NAME RATER!\nI'm the fortune-teller of names!\pI shall be pleased to rate your\nCOMPANION's nickname.$",reviewed AUTO draft
 SlateportCity_NameRatersHouse_Text_CritiqueWhichMonNickname,Which COMPANION's nickname should\nI critique?$,reviewed AUTO draft
 SlateportCity_NameRatersHouse_Text_FineNameSuggestBetterOne,"Hmmm… {STR_VAR_1}, is it? That is\nquite a fine name you bestowed.\pBut! What say you, if I were to\nsuggest a slightly better name?$","reviewed, no change needed"
@@ -202,7 +196,6 @@ SlateportCity_OceanicMuseum_2F_Text_Grunt2Defeat,"What?!\nI lost, too!$","review
 SlateportCity_OceanicMuseum_2F_Text_MeddlingKid,"Now what? If we don't get the parts,\nwe're in for it!\pArrgh, I didn't count on being meddled\nwith by some meddling kid!$","reviewed, no change needed"
 SlateportCity_OceanicMuseum_2F_Text_CameToSeeWhatsTakingSoLong,"I came to see what was taking so\nlong to snatch some parts, and you\lsimps are held up by a mere child?$","reviewed, no change needed"
 SlateportCity_OceanicMuseum_2F_Text_SternThankYouForSavingUs,"RIC OLIé: You're…\nAh, okay, you're {PLAYER}{KUN}…\pAnyway, that was a tense situation!\nThank you for saving us!\pOh, yes, I almost forgot that you even\nbrought the parts from HOUSE ORGANA!$",reviewed AUTO draft
-SlateportCity_OceanicMuseum_2F_Text_DontRunInMuseum,Don't you dare run around inside\nthe MUSEUM!$,"reviewed, no change needed"
 SlateportCity_PokemonFanClub_Text_LikeToSeeEnteredContestPokemon,"The COMPANION of a TRAINER who has\nentered a SHOWCASE…\lThat, I would like to see.$",reviewed AUTO draft
 SlateportCity_PokemonFanClub_Text_HowIsYourPokemonGrowing,How is your COMPANION growing?\nAllow me to examine it.$,reviewed AUTO draft
 SlateportCity_PokemonFanClub_Text_HmHmISee,"Hm, hm…\nI see…$","reviewed, no change needed"

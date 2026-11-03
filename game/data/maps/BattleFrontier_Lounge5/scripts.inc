@@ -192,8 +192,9 @@ BattleFrontier_Lounge5_Text_LadyClaimsSheUnderstandsPokemon::
 	.string "understand COMPANION!$"
 
 BattleFrontier_Lounge5_Text_GirlSayingSomethingProfound::
-	.string "I have this feeling that the little girl\n"
-	.string "is saying something profound.$"
+	.string "Awwwrrrrrrrr.\p"
+	.string "(I have this feeling that the little\n"
+	.string "girl is saying something profound.)$"
 
 BattleFrontier_Lounge5_Text_GirlPlaysAtRedHouseALot::
 	.string "I know something!\p"

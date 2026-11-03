@@ -979,8 +979,9 @@ SlateportCity_Text_VisitedMuseumOften:
 	.string "the stars after seeing the exhibits.$"
 
 SlateportCity_Text_QuitPushing:
-	.string "Hey, there! Quit pushing!\n"
-	.string "This is the line, can't you see?$"
+	.string "Chess ko!\p"
+	.string "Quit pushing! This is the line,\n"
+	.string "can't you see?$"
 
 SlateportCity_Text_AquaHasPolicy:
 	.string "THE CARTEL has a policy of\n"
@@ -1053,10 +1054,12 @@ SlateportCity_Text_SinkOldBoats:
 	.string "parts right back to us!$"
 
 SlateportCity_Text_BuyTooMuch:
+	.string "Bedwana, bedwana…\p"
 	.string "Whenever I visit here, I get carried\n"
 	.string "away and buy too much.$"
 
 SlateportCity_Text_GetNameRaterToHelpYou:
+	.string "Achuta, pateesa!\p"
 	.string "If you want to change your COMPANION's\n"
 	.string "nickname, you'll have to get the NAME\l"
 	.string "RATER to help you.$"

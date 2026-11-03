@@ -8,7 +8,6 @@ MossdeepCity_Text_NiceIfWorldCoveredByFlowers,Wouldn't it be nice?\pIf the whole
 MossdeepCity_Text_SurfExhilarating,"A voyage on a ship is fine.\pBut crossing the sea with COMPANIONS\nusing SURF…\pNow that's an exhilarating trip!\nWouldn't you agree, youngster?$",
 MossdeepCity_Text_CitySign,YAVIN 4\n“The jungle moon. Cherish COMPANIONS!”$,
 MossdeepCity_Text_GymSign,"MASSASSI TEMPLE ARENA\nLEADERS: KANAN & EZRA\p“Master and apprentice, one in\nthe Force!”$",
-MossdeepCity_Text_SootopolisNewGymLeader,"Ahh… It feels great letting the waves\nwash over my feet…\pSpeaking of water, you know that\nswamp world DAGOBAH?\pI think the ARENA there had a new\nLEADER come in.\pPeople tell me the new LEADER once\nmentored OBI-WAN.$",
 MossdeepCity_Text_ScottSomethingWrongWithTown,"LANDO: {PLAYER}{KUN}, feeling good?\nI'm doing great!\pI'd heard YAVIN 4's ARENA LEADER is\npretty strong, so I decided to come\ltake a look-see for myself.\pBut there's something wrong about\nthis place.\pPeople are going on about a warning\nletter and the LAUNCH TOWER…\pI don't think it concerns me in any\nway, though.$",
 MossdeepCity_Gym_Text_GymGuideAdvice,"Yo, how's it going, ILUM-bound\n{PLAYER}?\pThe ARENA LEADERS here use\nFORCE-type COMPANIONS.\pIf you go up against them with\nFIGHTING- or POISON-type COMPANIONS,\lthey'll inflict horrible damage!\pPlus, they'll come at you with\noutstanding combination attacks.\pIf you want to win, show them how\ntight you are with your COMPANIONS.\lGo for it!$",
 MossdeepCity_Gym_Text_VirgilPostBattle,"If there are prodigies in the galaxy,\nthen our ARENA LEADERS are them!\pHowever, you may be even more talented\nthan them…$",
@@ -72,7 +71,6 @@ Route125_Text_KimPostBattle,"KAI: A funny old man lives in the\nWAMPA CAVE, does
 Route125_Text_IrisIntro,R4: Bwee-doo-woo?\p(R4 asks KAI what they're looking\nfor out here.)$,trainer recast 2026-11-01 (bible/RECAST.md)
 Route125_Text_IrisPostBattle,"ISRA: KAI, are we really going into\nthe WAMPA CAVE?\lWe'll freeze.$",
 Route125_Text_SharonIntro,How would you like to take on the\nWATER-type COMPANIONS I raised?$,
-ShoalCave_LowTideLowerRoom_Text_CanOvercomeColdWithFocus,"The penetrating cold of\nHOTH is an impediment to training.\pBut with focus, one can overcome!\pWith this FOCUS BAND, buckle down and\nwithstand the cold!$",
 MossdeepCity_Text_YouCanKeepIt,"Why would you want it?\nYou're weird.\pYou can keep it, but keep it a secret\nfrom LEIA.$",reviewed AUTO draft
 MossdeepCity_Text_StevensHouseOverThere,LEIA's house is right over there!$,reviewed AUTO draft
 MossdeepCity_Text_WailmerWatching,"Around YAVIN 4, you can see wild\nAIWHALET.\pIt's called, uh…\nWhat was it now…\pWAI, WAI, WAI…\pAIWHALET watching!$",reviewed AUTO draft
@@ -193,7 +191,6 @@ Route124_DivingTreasureHuntersHouse_Text_TradeSomethingElse,Do you want to trade
 Route124_DivingTreasureHuntersHouse_Text_BagFull,"Whoops, your BAG's full.\nGet rid of some items, friend!$","reviewed, no change needed"
 Route124_DivingTreasureHuntersHouse_Text_ComeBackIfYouChangeMind,"No? That's a downer.\nWell, if you change your mind, come back.$","reviewed, no change needed"
 Route124_DivingTreasureHuntersHouse_Text_ShardTradeBoard,{CLEAR_TO 10}Wanted item{CLEAR_TO 124}Trade item\n{CLEAR_TO 15}RED CRYSTAL{CLEAR_TO 89}{LEFT_ARROW}{RIGHT_ARROW}{CLEAR_TO 123}FIRE STONE{CLEAR_TO 200}\p{CLEAR_TO 10}Wanted item{CLEAR_TO 124}Trade item\n{CLEAR_TO 6}AMBER CRYSTAL{CLEAR_TO 89}{LEFT_ARROW}{RIGHT_ARROW}{CLEAR_TO 115}THUNDERSTONE{CLEAR_TO 200}\p{CLEAR_TO 10}Wanted item{CLEAR_TO 124}Trade item\n{CLEAR_TO 12}BLUE CRYSTAL{CLEAR_TO 89}{LEFT_ARROW}{RIGHT_ARROW}{CLEAR_TO 121}WATER STONE{CLEAR_TO 200}\p{CLEAR_TO 10}Wanted item{CLEAR_TO 124}Trade item\n{CLEAR_TO 8}GREEN CRYSTAL{CLEAR_TO 89}{LEFT_ARROW}{RIGHT_ARROW}{CLEAR_TO 123}LEAF STONE$,reviewed AUTO draft
-ShoalCave_LowTideLowerRoom_Text_EverythingStartsWithFocus,Everything starts with focus!$,"reviewed, no change needed"
 ShoalCave_LowTideEntranceRoom_Text_AreYouPlanningOnGoingInThere,Are you planning on going deep\nin there?\pHow about bringing me back some\nSHOAL SALT and SHOAL SHELLS?\pI can make you something good if\nyou bring me the ingredients.$,"reviewed, no change needed"
 ShoalCave_LowTideEntranceRoom_Text_BringMe4ShoalSaltAndShells,"If you bring me four each of the\nSHOAL SALT and SHOAL SHELLS,\lI can make you a SHELL BELL…\pYou can get those ingredients\nevery day.$","reviewed, no change needed"
 ShoalCave_LowTideEntranceRoom_Text_WouldYouLikeShellBell,"Oh, hey! SHOAL SALT and SHOAL SHELLS!\nAnd enough of them, too!\pWould you like me to make you\na SHELL BELL with them?$","reviewed, no change needed"

@@ -139,9 +139,10 @@ VerdanturfTown_WandasHouse_Text_DontWorryAboutWally:
 	.string "COMPANIONS with him, too.$"
 
 VerdanturfTown_WandasHouse_Text_CanSeeGirlfriendEveryDay:
-	.string "Thanks to you, I can see my girlfriend\n"
-	.string "every day.\l"
-	.string "Happy? You bet I am!$"
+	.string "Grrgaaggaa!\p"
+	.string "(Thanks to you, I can see my\n"
+	.string "girlfriend every day.\l"
+	.string "Happy? You bet I am!)$"
 
 VerdanturfTown_WandasHouse_Text_DaughtersBoyfriendDriven:
 	.string "My daughter's boyfriend is a very\n"

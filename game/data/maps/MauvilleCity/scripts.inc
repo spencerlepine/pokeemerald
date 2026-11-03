@@ -600,6 +600,7 @@ MauvilleCity_Text_NurseHurtMonBackToHealth:
 	.string "you have to nurse it back to health.$"
 
 MauvilleCity_Text_AllSortsOfPeopleComeThrough:
+	.string "Achuta! Koona t'chuta?\p"
 	.string "The roads of this town stretch north\n"
 	.string "and south, and east and west.\p"
 	.string "Because of that, we get all sorts of\n"

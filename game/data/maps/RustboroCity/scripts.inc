@@ -964,7 +964,8 @@ RustboroCity_Text_MrBrineyLovesPeeko:
 	.string "Those two are never apart.$"
 
 RustboroCity_Text_WowYouHavePokemon:
-	.string "Wow, you have COMPANIONS with you, too.\p"
+	.string "Inkabunga! You have COMPANIONS\n"
+	.string "with you, too.\p"
 	.string "When I get bigger, I'm going to go\n"
 	.string "places with COMPANIONS, too.$"
 

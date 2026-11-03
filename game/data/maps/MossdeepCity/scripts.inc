@@ -416,12 +416,13 @@ MossdeepCity_Text_ScottSomethingWrongWithTown:
 	.string "way, though.$"
 
 MossdeepCity_Text_SootopolisNewGymLeader:
-	.string "Ahh… It feels great letting the waves\n"
+	.string "Mmmmmmrrrrr.\p"
+	.string "(It feels great letting the waves\n"
 	.string "wash over my feet…\p"
 	.string "Speaking of water, you know that\n"
 	.string "swamp world DAGOBAH?\p"
 	.string "I think the ARENA there had a new\n"
 	.string "LEADER come in.\p"
 	.string "People tell me the new LEADER once\n"
-	.string "mentored OBI-WAN.$"
+	.string "mentored OBI-WAN.)$"
 

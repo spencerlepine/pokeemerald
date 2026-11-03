@@ -339,7 +339,6 @@ BattleFrontier_BattlePalaceLobby_Text_WeHaveBeenWaiting,We have been waiting for
 BattleFrontier_BattlePalaceLobby_Text_MustSaveBeforeChallenge,I must save before I show you to\nthe BATTLE HALL. Is that okay?$,"reviewed, no change needed"
 BattleFrontier_BattlePalaceLobby_Text_FailedToSaveBeforeEndingChallenge,"Sigh…\pYou failed to save before you ended\nyour challenge the last time.\pAs a result, your challenge has been\ndisqualified. It is most unfortunate.$","reviewed, no change needed"
 BattleFrontier_BattlePalaceLobby_Text_ReceivedPrize,{PLAYER} received the prize\n{STR_VAR_1}.$,"reviewed, no change needed"
-BattleFrontier_BattlePalaceLobby_Text_LadyCanTellWhatMonsThink,"For a hardy fellow like me,\nhardy COMPANIONS are the best.\pOffense is the best defense!\nA relentless attack is the ultimate!\pBut that's not what I wanted to chat\nabout.\pEvery so often a really cute lady\nswings by here.\pShe says that she can tell what\nCOMPANIONS are thinking.\pI don't know about that part,\nbut she is really cute.\pHuh?\nWhy are you looking at me like that?$",reviewed AUTO draft
 BattleFrontier_BattlePalaceLobby_Text_MonDocileButTransforms,"My COMPANION is usually very docile.\pBut when it's in a BATTLE HALL,\nit sometimes seems to become\ltransformed into something wicked!\pIt becomes totally intimidating.\nIt's shocking, even.$",reviewed AUTO draft
 BattleFrontier_BattlePalaceLobby_Text_WhatNatureFavorsChippingAway,"I wonder what sort of nature a\nCOMPANION would have if it favored\lenfeebling its opponents and chipping\laway slowly.\pI'd be surprised if it was a LAX nature.\pBut, nah, that can't be right.$",reviewed AUTO draft
 BattleFrontier_BattlePalaceLobby_Text_WelcomeForDoubleBattle,Where the hearts of TRAINERS\nare put to the test.\pI welcome you to the BATTLE PALACE.\pI accept challenges to the DOUBLE\nBATTLE HALLS.$,"reviewed, no change needed"
@@ -1275,7 +1274,6 @@ BattleFrontier_Lounge3_Text_NotInterested,Not interested?! You shouldn't be\nso 
 BattleFrontier_Lounge3_Text_Oh,Oh…$,"reviewed, no change needed"
 BattleFrontier_Lounge3_Text_BackedWrongTrainer,I backed the wrong TRAINER again!\pMaybe I should be battling normally\nlike everyone else…$,"reviewed, no change needed"
 BattleFrontier_Lounge3_Text_TrainerGoodButRattled,"That TRAINER…\pHe's good, but he gets rattled too\neasily to survive the BATTLE DOME…$","reviewed, no change needed"
-BattleFrontier_Lounge3_Text_KnowWinnerWhenISeeOne,Giggle!\nI know a winner when I see one!$,"reviewed, no change needed"
 BattleFrontier_Lounge3_Text_ShouldBeTakingChallenges,Those TRAINERS…\nWhat are they doing?\lThey should be taking challenges.$,"reviewed, no change needed"
 BattleFrontier_Lounge4_Text_WonderIfInterviewsAiring,I wonder if they'll be airing interviews\nwith tough TRAINERS today?$,"reviewed, no change needed"
 BattleFrontier_Lounge4_Text_IfIOpenedRestaurantHere,"If I opened a restaurant here,\nit'd make money for sure.$","reviewed, no change needed"
@@ -1306,7 +1304,6 @@ BattleFrontier_Lounge5_Text_NatureGirlSassy,"Hmhm…\pThis one says it likes to 
 BattleFrontier_Lounge5_Text_NatureGirlCareful,"Hmhm…\pThis one says it looks after itself!\nBut if it gets enough ouchies,\lit will turn sneaky!$","reviewed, no change needed"
 BattleFrontier_Lounge5_Text_NatureGirlEgg,That's silly! An EGG is asleep!\nI can't talk to it!$,"reviewed, no change needed"
 BattleFrontier_Lounge5_Text_LadyClaimsSheUnderstandsPokemon,How charming!\nThat little lady claims she can\lunderstand COMPANION!$,reviewed AUTO draft
-BattleFrontier_Lounge5_Text_GirlSayingSomethingProfound,I have this feeling that the little girl\nis saying something profound.$,"reviewed, no change needed"
 BattleFrontier_Lounge5_Text_GirlPlaysAtRedHouseALot,I know something!\pThat little girl plays at the red house\na lot!$,"reviewed, no change needed"
 BattleFrontier_Lounge6_Text_WouldYouLikeToTrade,"My COMPANION is a {STR_VAR_2}.\nDo you know it?\lIt's quite cute and rather nice.\pThis little one, I could trade with\npride!\pWould you like to trade me a {STR_VAR_1}\nfor my {STR_VAR_2}?$",reviewed AUTO draft
 BattleFrontier_Lounge6_Text_PromiseIllBeGoodToIt,"Oh, it's adorable!\nThank you!\lI promise I'll be good to it!\pOh! I hope you'll be good to\nmy {STR_VAR_2}, too!$","reviewed, no change needed"
@@ -1358,9 +1355,7 @@ BattleFrontier_OutsideEast_Text_BattlePyramidSign,This is the BATTLE PYRAMID!\nA
 BattleFrontier_OutsideEast_Text_RankingHallSign,GRAND ARENA RANKING HALL\nSet your sights on new records!$,reviewed AUTO draft
 BattleFrontier_OutsideEast_Text_ExchangeCornerSign,BATTLE POINT EXCHANGE SERVICE CORNER\nExchange your Battle Points!$,"reviewed, no change needed"
 BattleFrontier_OutsideEast_Text_BattleTowerFeelsSpecial,Wow!\nIt's huge!\pThe BATTLE TOWER feels special.\nIt's different from the others.$,"reviewed, no change needed"
-BattleFrontier_OutsideEast_Text_PyramidTooHarsh,"The BATTLE PYRAMID's too harsh!\nI just can't make it to the top!\pSince I'm out of options, maybe I can\nclimb the outside…$","reviewed, no change needed"
 BattleFrontier_OutsideEast_Text_ThriveInDarkness,I thrive in darkness…\nYes… What is worthy of me?\lNone other than the BATTLE PYRAMID…\pWhat say you to wandering in darkness\nand in utter and total desperation?$,"reviewed, no change needed"
-BattleFrontier_OutsideEast_Text_PutTogetherUltimateTeam,"I didn't sleep for a week, but then\nI put together the ultimate team!\pI can't see myself losing, no joke.\nWe're storming the BATTLE ARENA!$","reviewed, no change needed"
 BattleFrontier_OutsideEast_Text_DidScottBringYouHere,"Did LANDO bring you here, too?\nWhat is it with that guy?\pIt sounds like he really does know\nhow to spot talented TRAINERS, but…\pI've never seen him battling in person\never.$",reviewed AUTO draft
 BattleFrontier_OutsideEast_Text_BelieveInYouBuddy,"ZIGG!\nI believe in you, little buddy!\pI'll make my little ZIGG any favorite\ntasty treats you like if you win!$","reviewed, no change needed"
 BattleFrontier_OutsideEast_Text_ZigzagoonLooksVacant,SCURRIER looks vacant…$,reviewed AUTO draft
@@ -1375,7 +1370,6 @@ BattleFrontier_OutsideEast_Text_LegendOfBattlePyramid,"Do you know it?\nThe lege
 BattleFrontier_OutsideEast_Text_GotWipedOut,Man! Oh man!\nI've never lost once before!\pBut I got wiped out with no saving\ngrace at all!\pAnd then I'm told I don't have any\ntalent?! Man!$,"reviewed, no change needed"
 BattleFrontier_OutsideEast_Text_ToughTrainerInBattleTower,This guy ran into a horribly tough\nTRAINER while he was on the BATTLE\lTOWER challenge.\pNow look at him…\pYou need to be cautious if you ever\ndecide to go to the BATTLE TOWER.$,"reviewed, no change needed"
 BattleFrontier_OutsideEast_Text_EnoughBattlePointsForDoll,Yes!\nI've finally got enough Battle Points!\pI guess I'll trade for another giant\nplush DOLL!$,"reviewed, no change needed"
-BattleFrontier_OutsideEast_Text_LikeToHaveNameRecordedHere,"Oh, yeah, okay!\nSo this is the RANKING HALL!\pI'd like to go down in history as\na super champ and have my name\lrecorded here for posterity.$","reviewed, no change needed"
 BattleFrontier_OutsideEast_Text_CanDoAnythingWithYou,"With you by my side, I can do anything.$","reviewed, no change needed"
 BattleFrontier_OutsideEast_Text_PowerOfOurLoveWillOvercome,"Ooh, darling, you are so wonderful!\pOoh, I just can't wait anymore!\pLet's go to a MULTI BATTLE ROOM\nright this instant!\pIf we get together in the BATTLE SALON,\nthe power of our love will overcome\leveryone we meet.\pWhy, before us, darling, everything\nwill topple like dominoes!$","reviewed, no change needed"
 BattleFrontier_OutsideEast_Text_FrontierNotExclusivelyForToughTrainers,"The GRAND ARENA isn't exclusively\nfor tough TRAINERS.\pMany people with special abilities\nhave been invited, it seems.\pThat man LANDO…\pHe may have built this place to serve\na bigger objective…$",reviewed AUTO draft
@@ -1394,7 +1388,6 @@ BattleFrontier_OutsideWest_Text_ThenWhereWouldYouLikeToGo,"Then, where would you
 BattleFrontier_OutsideWest_Text_BestOutOfAllMyFriends,I'm the best out of all my friends.\nBut here…\lI've been useless!$,"reviewed, no change needed"
 BattleFrontier_OutsideWest_Text_CantFindBattleTower,"I want to go to the BATTLE TOWER,\nbut I can't find it even though I have\la map of the GRAND ARENA.\pThis place is just too big!$",reviewed AUTO draft
 BattleFrontier_OutsideWest_Text_OnlyToughTrainersBroughtHere,"It's not as if just anyone can come\nhere, you know?\pOnly those TRAINERS who've been\nrecognized as tough are brought here.\pThat's why many TRAINERS don't even\nknow about the GRAND ARENA.$",reviewed AUTO draft
-BattleFrontier_OutsideWest_Text_SureWeCanChallengeWithNoMons,"Hey, bro…\pAre you sure we can make challenges\neven if we don't have any COMPANION?$",reviewed AUTO draft
 BattleFrontier_OutsideWest_Text_BigGuySaidIllLendYouMons,"Uh…\nI'm sure it'll be okay.\pI think…\pBut remember that big scary guy?\nHe said, “I'll lend you COMPANION!”$",reviewed AUTO draft
 BattleFrontier_OutsideWest_Text_WhosRaisingThoseRentalMons,That's the BATTLE FACTORY.\nYou can rent strong COMPANIONS there.\pBut it makes me wonder.\nWho's raising those rental COMPANIONS?$,reviewed AUTO draft
 BattleFrontier_OutsideWest_Text_ScaredOfPikeBecauseSeviper,"I'm scared of going into the BATTLE\nPIKE because of KOUHUN…\pB-but I came all the way here, so I will\ntry to conquer everything!\l…Shudder…$",reviewed AUTO draft

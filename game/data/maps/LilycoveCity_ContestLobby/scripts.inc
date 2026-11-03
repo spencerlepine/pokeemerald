@@ -1015,12 +1015,11 @@ LilycoveCity_ContestLobby_Text_FineThatsTheWayItIs:
 	.string "Well, be seeing you.$"
 
 LilycoveCity_ContestLobby_Text_MasterRankHereICome:
-	.string "Hoo, boy… Master Rank SHOWCASES,\n"
-	.string "here I come.\p"
-	.string "The world will know that my dearest\n"
+	.string "Mmmmmmrrrrr.\p"
+	.string "(Master Rank SHOWCASES, here I come.\p"
+	.string "The galaxy will know that my dearest\n"
 	.string "COMPANION is the cutest being in all\l"
-	.string "existence. The time has come!\l"
-	.string "Uheheheh.$"
+	.string "existence. The time has come!)$"
 
 LilycoveCity_ContestLobby_Text_WholeVarietyOfPokemonHere:
 	.string "You can see a whole variety of\n"

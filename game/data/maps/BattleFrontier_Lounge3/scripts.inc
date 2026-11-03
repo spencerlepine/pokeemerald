@@ -458,7 +458,7 @@ BattleFrontier_Lounge3_Text_TrainerGoodButRattled::
 	.string "easily to survive the BATTLE DOME…$"
 
 BattleFrontier_Lounge3_Text_KnowWinnerWhenISeeOne::
-	.string "Giggle!\n"
+	.string "Bo shuda!\n"
 	.string "I know a winner when I see one!$"
 
 BattleFrontier_Lounge3_Text_ShouldBeTakingChallenges::

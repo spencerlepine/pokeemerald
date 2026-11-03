@@ -13,7 +13,6 @@ PetalburgWoods_Text_IveBeenTrainingHard,"You get to be popular if you have\nstro
 PetalburgWoods_Text_StayOutOfTallGrass,"Yo, there!\nYour COMPANION doing okay?\pIf your COMPANIONS are weak and you\nwant to avoid battles, stay out\lof the scrub.$",
 PetalburgWoods_Text_MiracleSeedExplanation,"It's a MIRACLE SEED.\nIf a COMPANION holds that item, its\lGRASS-type moves become stronger.\pBesides MIRACLE SEED, I think there are\nother convenient items for COMPANIONS\lto hold.$",
 Route104_Text_BrineyLivesInSeasideCottage,That shack by the landing pad is where\nHAN lives.\pThey say he's the best pilot in the\nOUTER RIM. Just ask him!$,
-Route104_Text_WhatsItLikeAtBottomOfSea,"The DUNE SEA, huh?\pI wonder what's down there under\nall that sand?$","Dune Sea: Tatooine's sea is sand, crossed with SAND SKIM (bible/NET_NEW_DESIGNS.md, Dune Sea)."
 Route104_Text_OnlyThrowBallAtWildPokemon,You're a thief if you try to steal\nsomeone else's COMPANION.\pYou should throw CAPTURE PODS only at\nwild COMPANIONS.$,
 Route104_Text_MrBrineysCottage,HAN'S LANDING PAD$,
 Route104_Text_RouteSignPetalburg,ROUTE 104\n{RIGHT_ARROW} MOS ENTHA$,
@@ -34,7 +33,6 @@ Route104_MrBrineysHouse_Text_WhereAreWeBound,"HAN: Hey, kid!\nFor you, the FALCO
 Route104_MrBrineysHouse_Text_TellMeWheneverYouWantToSail,"HAN: Is that so?\nWell, CHEWIE owes you one.\pJust tell me whenever you're\nready to fly!$",
 Route104_MrBrineysHouse_Text_Peeko,CHEWIE: Rrrwaaaghh!$,
 Route116_Text_ScoundrelMadeOffWithPeeko,"Ohhh, what am I gonna do?\pCHEWIE and I were picking up parts\nwhen some cartel thug jumped us…\pThat scoundrel made off with my\nco-pilot! With CHEWIE!\pCHEWIIIIEEEE!$",
-Route116_Text_DiggingTunnelWhenGoonOrderedMeOut,Nnn… Roar!\nWhat's going on?\pI was digging the tunnel without any\ntools when some goon ordered me out!\pThat tunnel's filled with COMPANIONS\nthat react badly to loud noises.\lThey could cause an uproar.\pThat's why we stopped using heavy\nequipment for tunneling…\pI'm worried that the goon will do\nsomething stupid and startle the\lCOMPANION into an uproar.$,
 Route116_Text_ThankYouTokenOfAppreciation,"Oh! It's you!\pYou're that person who not only helped\nme in JUNDLAND WASTES, but also got\lback my stolen package and then even\lgraciously delivered it to MOS EISLEY!\pRIC OLIé informed us that the\npackage arrived, too!\pI thank you very, very much!\pWhy, if I were a sandstorm, I would\nbury you in gratitude and hail\lyou as a hero!\pFor you, the most wonderful TRAINER,\nI bear good news!\pRecently, our company developed\na new kind of CAPTURE POD.\pAs a token of our appreciation, this\nis our gift to our wonderful TRAINER!$",
 Route116_Text_RusturfTunnelSign,BEGGAR'S CANYON TUNNEL\n“Linking BESTINE and ANCHORHEAD”\p“The tunnel project has been\ncanceled.”$,
 Route116_TunnelersRestHouse_Text_WeHadToStopBoring,"That BEGGAR'S CANYON there…\pAt first, we had a huge work crew boring\nthrough rock with the latest machinery.\lBut, we had to stop.\pIt turns out that we would have had\na negative effect on wild COMPANIONS in\lthe area.\pSo, we've got nothing to do but loll\naround here doing nothing.$",
@@ -43,7 +41,6 @@ Route116_TunnelersRestHouse_Text_GetToVerdanturfWithoutTunnel,"To get to ANCHORH
 RustboroCity_Text_GymLeaderIsntEasyWithFire,"I challenged the ARENA LEADER, but…\pIt's not going to be easy winning with\nmy FIRE-type COMPANIONS…\pFIRE-type COMPANIONS don't match up\nwell against ROCK-type COMPANIONS…$",
 RustboroCity_Text_MrBrineyWalksInTheTunnel,The pilot HAN has a landing pad\nsouth of here.\pHe goes poking around in the canyon\nevery so often.$,
 RustboroCity_Text_MrBrineyLovesPeeko,"The pilot HAN has a landing pad\nsouth of here.\pHe said he was going to MOS EISLEY\nfor parts with his co-pilot, CHEWIE.\pThose two are never apart.$",
-RustboroCity_Text_WowYouHavePokemon,"Wow, you have COMPANIONS with you, too.\pWhen I get bigger, I'm going to go\nplaces with COMPANIONS, too.$",
 RustboroCity_Text_CatchRarePokemonIfIGoToSchool,"BESTINE ACADEMY!\pIf I go to this school, will I be able\nto catch rare COMPANIONS easily?$",
 RustboroCity_Text_WaitDontTakeMyGoods,Wait! Pleeeaaase!\pDon't take my PARTS!$,
 RustboroCity_Text_MayPassedBrineyWantToBattle,"MIRA: Oh, by the way, I passed\nHAN in JUNDLAND WASTES.\pI guess he's on his way back to his\nlanding pad.\pHow's your DATAPAD coming along,\n{PLAYER}{KUN}? Mine's looking pretty decent!\pSo…\nHow about a little battle?$",
@@ -87,7 +84,6 @@ RustboroCity_Gym_Text_RoxanneDefeat,So…\nI lost…\pIt seems that I still have
 RustboroCity_Gym_Text_StoneBadgeInfoTakeThis,"The DUNE SHARD heightens the ATTACK\npower of your COMPANIONS.\pIt also enables them to use the HM move\nVIBROBLADE outside of battle.\pPlease take this with you, too.$",
 RustboroCity_Gym_Text_RoxannePostRematch,BIGGS: I still have much to learn\nwhen it comes to battling COMPANIONS.\pThat awareness makes me love battling\nall that much more!$,
 RustboroCity_Gym_Text_RoxanneRematchNeedTwoMons,"BIGGS: I'm so glad to see you again.\nI'm BIGGS, the ARENA LEADER here.\pI'm sure we've both experienced many\nbattles since we last met.\pI would like to see how much better\nwe've become…\pOh, no…\nYou only have one COMPANION with you?\pPlease return with at least one more\nCOMPANION.$",
-RustboroCity_House1_Text_AllSortsOfPlaces,"In all sorts of places, there are all\nsorts of COMPANIONS and people.\pI find that fascinating, so I go to all\nsorts of places.$",
 RustboroCity_House2_Text_RoxanneKnowsALot,"BIGGS, the ARENA LEADER, really knows\na lot about COMPANIONS.\pHe's really strong, too!$",
 RustboroCity_House3_Text_IGivePerfectlySuitedNicknames,"For my own COMPANIONS, I give them\nperfectly suited nicknames!\pIt's my expression of, uh…\noriginality, yes, that's it!$",
 RustboroCity_Mart_Text_ShouldBuySuperPotionsInstead,My COMPANION evolved.\nIt has a lot of HP now.\pI should buy BACTA PATCHES for it\ninstead of ordinary BACTA SPRAYS.$,
@@ -151,8 +147,6 @@ Route104_Text_BrendanDoingGreatLetsBattle,"Me, I'm doing great!\pWant to check o
 Route104_Text_BrendanLetsBattle,KAEL: What's up?\nWant to have a battle with me?$,reviewed AUTO draft
 Route104_Text_BrendanIntro,"KAEL: I know you just became\na TRAINER, but I won't go easy!$",reviewed AUTO draft
 Route104_Text_BrendanDefeat,Hmm…\nYou're pretty good.$,"reviewed, no change needed"
-Route116_Text_WantToDigTunnel,Nnn… Roar!\pI want to dig that tunnel!$,"reviewed, no change needed"
-Route116_Text_GoonHightailedItOutOfTunnel,Nnn… Roar!\pThat goofy goon hightailed it out of\nthe tunnel! I can go back to digging!$,"reviewed, no change needed"
 Route116_Text_NewBallAvailableAtMart,Our new CAPTURE POD will be available\nat the SUPPLY DEPOT in BESTINE.\pPlease do try it out!\nThank you and bye-bye!$,reviewed AUTO draft
 Route116_Text_BagIsJamPacked,Your BAG is jam-packed.\nI can't give you this REPEAT POD.$,reviewed AUTO draft
 Route116_Text_TokenOfAppreciation,"As a token of our appreciation for\nyour delivering our package, I have\la gift of a new kind of CAPTURE POD\lfor our most wonderful TRAINER!$",reviewed AUTO draft
@@ -266,7 +260,6 @@ RustboroCity_House2_Text_TrainerSchoolExcellent,"The ACADEMY is excellent.\pIf y
 RustboroCity_House3_Text_NamingPikachuPekachu,"But giving the name PEKACHU to\nan IONRAT? It seems pointless.\pI suppose it is good to use a name\nthat's easy to understand, but…$",reviewed AUTO draft
 RustboroCity_House3_Text_Pekachu,PEKACHU: Peka!$,"reviewed, no change needed"
 RustboroCity_Mart_Text_BuyingHealsInCaseOfShroomish,I'm buying some NERVE TONICS and\nANTITOXINS.\pJust in case I run into FELUSPORE\nin JUNDLAND WASTES.$,reviewed AUTO draft
-RustboroCity_Mart_Text_GettingEscapeRopeJustInCase,I'm getting a GRAPPLE LINE just in\ncase I get lost in a cave.\pI just need to use it to get back to\nthe entrance.$,reviewed AUTO draft
 RustboroCity_PokemonCenter_1F_Text_PokemonHavePersonalities,"My COMPANION has a NAIVE nature, and\nmy friend's has a JOLLY nature.\pIt's fascinating how COMPANIONS have\npersonalities!$",reviewed AUTO draft
 RustboroCity_PokemonCenter_1F_Text_HMCutNextDoor,The man next door gave me an HM!\pI used it to teach my COMPANION how to\nVIBROBLADE down skinny trees.$,reviewed AUTO draft
 RustboroCity_PokemonSchool_Text_ReadWhichTopic,Which topic do you want to read?$,"reviewed, no change needed"

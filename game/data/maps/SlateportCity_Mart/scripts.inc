@@ -33,10 +33,11 @@ SlateportCity_Mart_EventScript_Man::
 	end
 
 SlateportCity_Mart_Text_SomeItemsOnlyAtMart:
-	.string "The MARKET does have some interesting\n"
-	.string "merchandise.\p"
-	.string "But there are some items you can only\n"
-	.string "get at a SUPPLY DEPOT.$"
+	.string "Wyaaaaaa.\p"
+	.string "(The MARKET does have some\n"
+	.string "interesting merchandise.\p"
+	.string "But there are some items you can\n"
+	.string "only get at a SUPPLY DEPOT.)$"
 
 SlateportCity_Mart_Text_GreatBallIsBetter:
 	.string "A DURASTEEL POD beats a CAPTURE POD\n"

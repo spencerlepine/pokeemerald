@@ -263,6 +263,7 @@ SlateportCity_OceanicMuseum_1F_Text_LearnAboutSeaForBattling:
 	.string "use that knowledge for battling.$"
 
 SlateportCity_OceanicMuseum_1F_Text_SternIsRoleModel:
+	.string "Inkabunga! Pankpa!\p"
 	.string "I get all giddy and gooey when\n"
 	.string "I see a starship!\p"
 	.string "For me, RIC OLIé is the number\n"

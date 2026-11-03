@@ -387,6 +387,7 @@ SlateportCity_PokemonFanClub_Text_PokemonDontLikeFainting:
 	.string "would tend a garden.$"
 
 SlateportCity_PokemonFanClub_Text_MonEnjoyedProtein:
+	.string "Achuta!\p"
 	.string "Do COMPANIONS enjoy having items used\n"
 	.string "on them?\p"
 	.string "Mine danced all night after I gave\n"

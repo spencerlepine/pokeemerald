@@ -320,12 +320,12 @@ LilycoveCity_ContestHall_Text_AreYouEnjoyingThisContest:
 	.string "all of you may enter a SHOWCASE!$"
 
 LilycoveCity_ContestHall_Text_EnteredWrongContest:
-	.string "Ayayayay…\n"
-	.string "I entered the wrong SHOWCASE.\p"
-	.string "I entered this tough COMPANIONS in\n"
+	.string "Grrrrafffffffffgrrr!\p"
+	.string "(I entered the wrong SHOWCASE.\p"
+	.string "I entered this tough COMPANION in\n"
 	.string "the SMARTNESS SHOWCASE…\p"
-	.string "Come on, wow them with a smart-looking\n"
-	.string "ROCK SMASH.$"
+	.string "Come on, wow them with a smart-\n"
+	.string "looking ROCK SMASH.)$"
 
 LilycoveCity_ContestHall_Text_RaisedMonToBeSmart:
 	.string "I've spent many a year, and all my\n"

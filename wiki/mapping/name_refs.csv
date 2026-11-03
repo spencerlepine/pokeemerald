@@ -43,26 +43,26 @@ character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/LittlerootTown_Profe
 character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/LittlerootTown_ProfessorBirchsLab/scripts.inc,960,LittlerootTown_ProfessorBirchsLab_Text_BrendanPreferCollectingSlowly,1,KAEL: Rather than collecting\n
 character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/LittlerootTown_ProfessorBirchsLab/scripts.inc,965,LittlerootTown_ProfessorBirchsLab_Text_MayHaveYouGoneToBattleFrontier,1,"MIRA: Oh, hi, {PLAYER}{KUN}!\n"
 character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/LittlerootTown_ProfessorBirchsLab/scripts.inc,970,LittlerootTown_ProfessorBirchsLab_Text_BrendanHaveYouGoneToBattleFrontier,1,"KAEL: Hey, {PLAYER}!\n"
-character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/OldaleTown/scripts.inc,374,OldaleTown_Text_MayLetsGoBack,1,MIRA: {PLAYER}{KUN}!\n
-character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/OldaleTown/scripts.inc,379,OldaleTown_Text_BrendanLetsGoBack,1,KAEL: I'm heading back to my dad's\n
+character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/OldaleTown/scripts.inc,376,OldaleTown_Text_MayLetsGoBack,1,MIRA: {PLAYER}{KUN}!\n
+character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/OldaleTown/scripts.inc,381,OldaleTown_Text_BrendanLetsGoBack,1,KAEL: I'm heading back to my dad's\n
 character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/Route103/scripts.inc,280,Route103_Text_MayRoute103Pokemon,1,MIRA: Let's see… The COMPANIONS found\n
 character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/Route103/scripts.inc,297,Route103_Text_MayTimeToHeadBack,1,MIRA: I think I know why my dad has\n
 character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/Route103/scripts.inc,307,Route103_Text_BrendanRoute103Pokemon,1,"KAEL: Okay, so it's this one and\n"
 character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/Route103/scripts.inc,322,Route103_Text_BrendanTimeToHeadBack,1,KAEL: I think I get it.\n
-character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/Route104/scripts.inc,1068,Route104_Text_MayWeShouldRegister,1,"MIRA: Oh, hi, {PLAYER}{KUN}!\p"
-character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/Route104/scripts.inc,1075,Route104_Text_RegisteredMay,1,{PLAYER} registered MIRA\n
-character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/Route104/scripts.inc,1079,Route104_Text_MayHowsYourPokedex,1,"MIRA: Oh, by the way, {PLAYER}{KUN},\n"
-character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/Route104/scripts.inc,1088,Route104_Text_MayHaventRaisedPokemon,1,"MIRA: Oh, what's the matter?\p"
-character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/Route104/scripts.inc,1094,Route104_Text_MayLetsBattle,1,"MIRA: So, what do you think?\n"
-character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/Route104/scripts.inc,1098,Route104_Text_MayIntro,1,"MIRA: You just became a TRAINER,\n"
-character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/Route104/scripts.inc,1106,Route104_Text_MayPostBattle,1,MIRA: I can tell you've gotten pretty\n
-character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/Route104/scripts.inc,1114,Route104_Text_BrendanWeShouldRegister,1,"KAEL: Oh, hey, {PLAYER}!\p"
-character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/Route104/scripts.inc,1121,Route104_Text_RegisteredBrendan,1,{PLAYER} registered KAEL\n
-character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/Route104/scripts.inc,1125,Route104_Text_BrendanHowsYourPokedex,1,"KAEL: {PLAYER}, how's your DATAPAD?\n"
-character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/Route104/scripts.inc,1134,Route104_Text_BrendanNoConfidence,1,KAEL: What's the matter? Don't have\n
-character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/Route104/scripts.inc,1138,Route104_Text_BrendanLetsBattle,1,KAEL: What's up?\n
-character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/Route104/scripts.inc,1142,Route104_Text_BrendanIntro,1,KAEL: I know you just became\n
-character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/Route104/scripts.inc,1150,Route104_Text_BrendanPostBattle,1,KAEL: You've gotten pretty decent\n
+character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/Route104/scripts.inc,1067,Route104_Text_MayWeShouldRegister,1,"MIRA: Oh, hi, {PLAYER}{KUN}!\p"
+character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/Route104/scripts.inc,1074,Route104_Text_RegisteredMay,1,{PLAYER} registered MIRA\n
+character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/Route104/scripts.inc,1078,Route104_Text_MayHowsYourPokedex,1,"MIRA: Oh, by the way, {PLAYER}{KUN},\n"
+character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/Route104/scripts.inc,1087,Route104_Text_MayHaventRaisedPokemon,1,"MIRA: Oh, what's the matter?\p"
+character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/Route104/scripts.inc,1093,Route104_Text_MayLetsBattle,1,"MIRA: So, what do you think?\n"
+character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/Route104/scripts.inc,1097,Route104_Text_MayIntro,1,"MIRA: You just became a TRAINER,\n"
+character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/Route104/scripts.inc,1105,Route104_Text_MayPostBattle,1,MIRA: I can tell you've gotten pretty\n
+character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/Route104/scripts.inc,1113,Route104_Text_BrendanWeShouldRegister,1,"KAEL: Oh, hey, {PLAYER}!\p"
+character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/Route104/scripts.inc,1120,Route104_Text_RegisteredBrendan,1,{PLAYER} registered KAEL\n
+character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/Route104/scripts.inc,1124,Route104_Text_BrendanHowsYourPokedex,1,"KAEL: {PLAYER}, how's your DATAPAD?\n"
+character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/Route104/scripts.inc,1133,Route104_Text_BrendanNoConfidence,1,KAEL: What's the matter? Don't have\n
+character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/Route104/scripts.inc,1137,Route104_Text_BrendanLetsBattle,1,KAEL: What's up?\n
+character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/Route104/scripts.inc,1141,Route104_Text_BrendanIntro,1,KAEL: I know you just became\n
+character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/Route104/scripts.inc,1149,Route104_Text_BrendanPostBattle,1,KAEL: You've gotten pretty decent\n
 character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/Route110/scripts.inc,730,Route110_Text_MayLetsBattle,1,"MIRA: Hi, {PLAYER}{KUN}, long time no see!\p"
 character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/Route110/scripts.inc,742,Route110_Text_MayTakeThis,1,"MIRA: {PLAYER}{KUN}, you've been busy\n"
 character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/Route110/scripts.inc,748,Route110_Text_MayExplainItemfinder,1,MIRA: That's a SCANNER.\p
@@ -75,20 +75,20 @@ character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/Route119/scripts.inc
 character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/Route119/scripts.inc,503,Route119_Text_BrendanIntro,1,KAEL: {PLAYER}! So this is where\n
 character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/Route119/scripts.inc,515,Route119_Text_BrendanIllGiveYouThis,1,KAEL: I'd say you're good enough\n
 character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/Route119/scripts.inc,521,Route119_Text_BrendanExplainFly,1,"KAEL: Use FLY, and your COMPANION\n"
-character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/RustboroCity/scripts.inc,1030,RustboroCity_Text_MayHiLetsRegister,1,"MIRA: Oh, hi, {PLAYER}{KUN}!\p"
-character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/RustboroCity/scripts.inc,1038,RustboroCity_Text_RegisteredMay,1,Registered MIRA\n
-character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/RustboroCity/scripts.inc,1042,RustboroCity_Text_MayPassedBrineyWantToBattle,1,"MIRA: Oh, by the way, I passed\n"
-character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/RustboroCity/scripts.inc,1052,RustboroCity_Text_MayOhHaventRaisedPokemonEnough,1,"MIRA: Oh, what's the matter?\p"
-character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/RustboroCity/scripts.inc,1058,RustboroCity_Text_MayWantToBattle,1,"MIRA: So, what do you think?\n"
-character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/RustboroCity/scripts.inc,1062,RustboroCity_Text_MayImNotGoingToLose,1,"MIRA: You just became a TRAINER,\n"
-character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/RustboroCity/scripts.inc,1070,RustboroCity_Text_MayMrBrineyHint,1,"MIRA: Oh, by the way, HAN, who\n"
-character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/RustboroCity/scripts.inc,1077,RustboroCity_Text_BrendanHiLetsRegister,1,"KAEL: Oh, hey, {PLAYER}!\p"
-character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/RustboroCity/scripts.inc,1085,RustboroCity_Text_RegisteredBrendan,1,Registered KAEL\n
-character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/RustboroCity/scripts.inc,1089,RustboroCity_Text_BrendanPassedBrineyWantToBattle,1,"KAEL: By the way, {PLAYER}, I walked\n"
-character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/RustboroCity/scripts.inc,1100,RustboroCity_Text_BrendanNoConfidenceInPokemon,1,KAEL: What's the matter? Don't have\n
-character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/RustboroCity/scripts.inc,1104,RustboroCity_Text_BrendanWantToBattle,1,KAEL: What's up?\n
-character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/RustboroCity/scripts.inc,1108,RustboroCity_Text_BrendanIWontGoEasy,1,KAEL: I know you just became\n
-character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/RustboroCity/scripts.inc,1116,RustboroCity_Text_BrendanMrBrineyHint,1,"KAEL: By the way, you know\n"
+character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/RustboroCity/scripts.inc,1031,RustboroCity_Text_MayHiLetsRegister,1,"MIRA: Oh, hi, {PLAYER}{KUN}!\p"
+character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/RustboroCity/scripts.inc,1039,RustboroCity_Text_RegisteredMay,1,Registered MIRA\n
+character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/RustboroCity/scripts.inc,1043,RustboroCity_Text_MayPassedBrineyWantToBattle,1,"MIRA: Oh, by the way, I passed\n"
+character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/RustboroCity/scripts.inc,1053,RustboroCity_Text_MayOhHaventRaisedPokemonEnough,1,"MIRA: Oh, what's the matter?\p"
+character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/RustboroCity/scripts.inc,1059,RustboroCity_Text_MayWantToBattle,1,"MIRA: So, what do you think?\n"
+character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/RustboroCity/scripts.inc,1063,RustboroCity_Text_MayImNotGoingToLose,1,"MIRA: You just became a TRAINER,\n"
+character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/RustboroCity/scripts.inc,1071,RustboroCity_Text_MayMrBrineyHint,1,"MIRA: Oh, by the way, HAN, who\n"
+character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/RustboroCity/scripts.inc,1078,RustboroCity_Text_BrendanHiLetsRegister,1,"KAEL: Oh, hey, {PLAYER}!\p"
+character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/RustboroCity/scripts.inc,1086,RustboroCity_Text_RegisteredBrendan,1,Registered KAEL\n
+character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/RustboroCity/scripts.inc,1090,RustboroCity_Text_BrendanPassedBrineyWantToBattle,1,"KAEL: By the way, {PLAYER}, I walked\n"
+character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/RustboroCity/scripts.inc,1101,RustboroCity_Text_BrendanNoConfidenceInPokemon,1,KAEL: What's the matter? Don't have\n
+character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/RustboroCity/scripts.inc,1105,RustboroCity_Text_BrendanWantToBattle,1,KAEL: What's up?\n
+character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/RustboroCity/scripts.inc,1109,RustboroCity_Text_BrendanIWontGoEasy,1,KAEL: I know you just became\n
+character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/RustboroCity/scripts.inc,1117,RustboroCity_Text_BrendanMrBrineyHint,1,"KAEL: By the way, you know\n"
 character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/text/match_call.inc,2312,MatchCall_Text_MayRayquazaCall,1,"MIRA: Hi, {PLAYER}{KUN}!\p"
 character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/text/match_call.inc,2327,MatchCall_Text_BrendanRayquazaCall,1,"KAEL: Hey, {PLAYER}!\n"
 character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/text/match_call.inc,2339,MatchCall_Text_May1,1,"MIRA: Hi, {PLAYER}{KUN}!\p"

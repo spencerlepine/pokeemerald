@@ -359,6 +359,7 @@ OldaleTown_Text_WaitDontComeInHere:
 	.string "them, okay?$"
 
 OldaleTown_Text_DiscoveredFootprints:
+	.string "Chut chut!\p"
 	.string "I just discovered the footprints of\n"
 	.string "a rare COMPANION!\p"
 	.string "Wait until I finish sketching\n"
@@ -368,7 +369,8 @@ OldaleTown_Text_FinishedSketchingFootprints:
 	.string "I finished sketching the footprints of\n"
 	.string "a rare COMPANION.\p"
 	.string "But it turns out they were only my\n"
-	.string "own footprints…$"
+	.string "own footprints…\p"
+	.string "Poodoo.$"
 
 OldaleTown_Text_MayLetsGoBack:
 	.string "MIRA: {PLAYER}{KUN}!\n"

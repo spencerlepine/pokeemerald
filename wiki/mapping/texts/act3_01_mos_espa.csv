@@ -50,7 +50,6 @@ MauvilleCity_Text_WattsonNeedFavorTakeKey,"WATTO: Oh, {PLAYER}{KUN}!\nYou look l
 MauvilleCity_Text_WattsonWontBeChallenge,"WATTO: Don't you worry about it.\nIt won't be a challenge to you.\pThe entrance to ESPA GENERATOR is just\na short skim away from ROUTE 110.\pThat's it, then, you have my trust!\nWahahahaha!$","reviewed AUTO draft; Dune Sea: Tatooine's sea is sand, crossed with SAND SKIM (bible/NET_NEW_DESIGNS.md, Dune Sea)."
 MauvilleCity_Text_WattsonThanksTakeTM,"WATTO: Wahahahaha!\pI knew it, {PLAYER}{KUN}! I knew I'd made\nthe right choice asking you!\pThis is my thanks--a TM containing\nTHUNDERBOLT!\pGo on, you've earned it!$",reviewed AUTO draft
 MauvilleCity_Text_WattsonYoungTakeCharge,WATTO: Wahahahaha!\pIt pleases me to no end to see\nthe young step up and take charge!$,reviewed AUTO draft
-MauvilleCity_Text_AllSortsOfPeopleComeThrough,"The roads of this town stretch north\nand south, and east and west.\pBecause of that, we get all sorts of\npeople coming through.$","reviewed, no change needed"
 MauvilleCity_Text_GameCornerSign,“The play spot for all!”\nMOS ESPA SABACC DEN$,reviewed AUTO draft
 MauvilleCity_BikeShop_Text_DidYouComeFromFarAway,WALD: Your RUNNING SHOES…\nThey're awfully filthy.\pDid you come from far away?$,reviewed AUTO draft
 MauvilleCity_BikeShop_Text_GuessYouDontNeedBike,"WALD: Is that right?\pThen, I guess you have no need for\nany of my BIKES.$",reviewed AUTO draft
@@ -95,7 +94,6 @@ MauvilleCity_GameCorner_Text_EasyToLoseTrackOfTime,It's easy to lose track of ti
 MauvilleCity_GameCorner_Text_CoinsAreNeededToPlay,CHIPS are needed to play here\nin the SABACC DEN.$,reviewed AUTO draft
 MauvilleCity_GameCorner_Text_RouletteOnlyLuck,"This ROULETTE thing…\nIt's rather demanding.\pWin or lose, it's only by luck.$","reviewed, no change needed"
 MauvilleCity_GameCorner_Text_UpTo3CoinsCanBeUsed,Up to three CHIPS can be used to play\nthe SLOTS.$,reviewed AUTO draft
-MauvilleCity_GameCorner_Text_DifficultToStopOn7,"It's very difficult to make it stop\nright on “7.”\pIf it stops on “7” during the REEL TIME\nbonus game, you'll receive extra CHIPS.$",reviewed AUTO draft
 MauvilleCity_GameCorner_Text_HeresSomeSlotsInfo,"Here's some information for you\nabout the SLOTS.\pThe more lightning bolts you stock,\nthe more REEL TIME chances you get.\pIn a game with the maximum five\nREEL TIME chances…\pIt is possible to receive four regular\nbonuses, then a big bonus.\pThat would total 660 CHIPS, but it's\nvery difficult to get.$",reviewed AUTO draft
 MauvilleCity_GameCorner_Text_CantPlayWithNoCoinCase,You can't play if you don't have\na CHIP CASE.$,reviewed AUTO draft
 MauvilleCity_Gym_Text_GymGuidePostVictory,"Whoa, you're electrifying!\nYou've powered the door open!$","reviewed, no change needed"

@@ -754,6 +754,7 @@ MauvilleCity_GameCorner_Text_UpTo3CoinsCanBeUsed:
 	.string "the SLOTS.$"
 
 MauvilleCity_GameCorner_Text_DifficultToStopOn7:
+	.string "Poodoo!\p"
 	.string "It's very difficult to make it stop\n"
 	.string "right on “7.”\p"
 	.string "If it stops on “7” during the REEL TIME\n"

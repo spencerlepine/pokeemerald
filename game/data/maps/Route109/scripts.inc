@@ -516,18 +516,21 @@ Route109_Text_LittleKidsDartAround:
 	.string "should be okay, but…$"
 
 Route109_Text_SandCastleTakingLongTime:
-	.string "Our sand castle's taking a long time\n"
-	.string "to make.$"
+	.string "Awwwrrrrrrrr.\p"
+	.string "(Our sand castle's taking a long time\n"
+	.string "to make.)$"
 
 Route109_Text_YouCanHaveThis:
-	.string "You can have this!$"
+	.string "Uma!\p"
+	.string "(You can have this!)$"
 
 Route109_Text_WereGoingToMakeBigCastle:
-	.string "We're going to get all the sand from\n"
+	.string "Wyaaaaaa!\p"
+	.string "(We're going to get all the sand from\n"
 	.string "the beach and make a big castle!\p"
 	.string "And then we're going to be a king and\n"
 	.string "queen.\p"
-	.string "We'll let you be a servant.$"
+	.string "We'll let you be a servant.)$"
 
 Route109_Text_ZigzagoonPicksUpLitter:
 	.string "The water around these parts is clean.\p"

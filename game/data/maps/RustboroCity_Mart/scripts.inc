@@ -77,8 +77,7 @@ RustboroCity_Mart_Text_ShouldBuySuperPotionsInstead:
 	.string "instead of ordinary BACTA SPRAYS.$"
 
 RustboroCity_Mart_Text_GettingEscapeRopeJustInCase:
-	.string "I'm getting a GRAPPLE LINE just in\n"
-	.string "case I get lost in a cave.\p"
-	.string "I just need to use it to get back to\n"
-	.string "the entrance.$"
+	.string "M'um m'aloo!\p"
+	.string "Mombay m'bwa! Mombay m'bwa!\p"
+	.string "Togo togu!$"
 

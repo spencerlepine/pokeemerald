@@ -270,8 +270,8 @@ BattleFrontier_OutsideEast_Text_ConquerLeagueAndFrontier:
 BattleFrontier_OutsideEast_Text_PyramidTooHarsh:
 	.string "The BATTLE PYRAMID's too harsh!\n"
 	.string "I just can't make it to the top!\p"
-	.string "Since I'm out of options, maybe I can\n"
-	.string "climb the outside…$"
+	.string "Since I'm out of options, I will\n"
+	.string "climb the outside. I have spoken.$"
 
 BattleFrontier_OutsideEast_Text_ThriveInDarkness:
 	.string "I thrive in darkness…\n"
@@ -281,10 +281,11 @@ BattleFrontier_OutsideEast_Text_ThriveInDarkness:
 	.string "and in utter and total desperation?$"
 
 BattleFrontier_OutsideEast_Text_PutTogetherUltimateTeam:
-	.string "I didn't sleep for a week, but then\n"
+	.string "Hrung?\p"
+	.string "(I didn't sleep for a week, but then\n"
 	.string "I put together the ultimate team!\p"
 	.string "I can't see myself losing, no joke.\n"
-	.string "We're storming the BATTLE ARENA!$"
+	.string "We're storming the BATTLE ARENA!)$"
 
 BattleFrontier_OutsideEast_Text_DidScottBringYouHere:
 	.string "Did LANDO bring you here, too?\n"
@@ -384,11 +385,11 @@ BattleFrontier_OutsideEast_Text_EnoughBattlePointsForDoll:
 	.string "plush DOLL!$"
 
 BattleFrontier_OutsideEast_Text_LikeToHaveNameRecordedHere:
-	.string "Oh, yeah, okay!\n"
-	.string "So this is the RANKING HALL!\p"
+	.string "Mmmmmmrrrrr.\p"
+	.string "(So this is the RANKING HALL!\p"
 	.string "I'd like to go down in history as\n"
 	.string "a super champ and have my name\l"
-	.string "recorded here for posterity.$"
+	.string "recorded here for posterity.)$"
 
 BattleFrontier_OutsideEast_Text_CanDoAnythingWithYou:
 	.string "With you by my side, I can do anything.$"

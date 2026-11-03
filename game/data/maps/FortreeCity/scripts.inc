@@ -105,12 +105,14 @@ FortreeCity_Text_ThisTimeIllBeatWinona:
 	.string "with me. This time, I'll beat CHIRPA.$"
 
 FortreeCity_Text_TreesGrowByDrinkingRainwater:
+	.string "Yaa-yaah!\p"
 	.string "The ground absorbs rainwater, and\n"
 	.string "trees grow by drinking that water…\p"
 	.string "BRIGHT TREE VILLAGE exists because\n"
 	.string "there's both water and soil.$"
 
 FortreeCity_Text_EveryoneHealthyAndLively:
+	.string "Yub nub!\p"
 	.string "The village is made of huts built\n"
 	.string "high in the trees.\p"
 	.string "Perhaps because of that lifestyle,\n"
@@ -121,7 +123,8 @@ FortreeCity_Text_EveryoneHealthyAndLively:
 FortreeCity_Text_BugPokemonComeThroughWindow:
 	.string "Living on top of trees is okay.\p"
 	.string "But sometimes BUG COMPANIONS come in\n"
-	.string "through windows.\l"
+	.string "through windows.\p"
+	.string "Ee chee wa maa!\n"
 	.string "It can be really startling.$"
 
 FortreeCity_Text_PokemonThatEvolveWhenTraded:

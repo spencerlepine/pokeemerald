@@ -27,8 +27,6 @@ SootopolisCity_Text_PhysicallyFitLivingHere,"Diving in the sea. Climbing up and\
 SootopolisCity_Text_GiantPokemonSuddenlyAppeared,"These giant COMPANIONS appeared out\nof nowhere in the village!\pAnd, I've never seen them before!\pWhy are they smashing into each\nother like that?\pWhy can't they be friends, those\nCOMPANIONS?$",
 SootopolisCity_Text_FlyingMonStoppedRampage,That flying COMPANION came down from\nthe sky and stopped the rampaging\lCOMPANIONS…$,
 SootopolisCity_Text_WonderWhatWorldIsLike,I… I've never been out of this village.\pI wonder what the galaxy is like on\nthe other side of this round sky?$,
-SootopolisCity_Text_SeeingLegendWithOwnEyes,"There's an ancient legend that claims\nthe land and sea were shaped by\la colossal battle between COMPANIONS.\pWell, I'm seeing that happen with\nmy very own eyes!\pWhoa! I never expected to be\nwitness to something this huge!$",
-SootopolisCity_Text_SawLegendWithOwnEyes,"There's an ancient legend that claims\nthe land and sea were shaped by\la colossal battle between COMPANIONS.\pWell, I saw that happen with\nmy very own eyes!\pWhoa! I never expected to be\nwitness to something this huge!$",
 SootopolisCity_Text_PrettyMonCameFromSky,A pretty COMPANION came down from\nthe sky…$,
 SootopolisCity_Text_CityRegainedCalm,The village has regained its calm…$,
 SootopolisCity_Text_CaveOfOriginPleaseLeave,"Who might you be?\pThis is the CAVE OF EVIL.\pWhat is in it is only what you take\nwith you, they say.\pPlease leave.$",Cave of Evil line echoes Yoda's 'only what you take with you'
@@ -112,9 +110,6 @@ SootopolisCity_Text_WhereDidLegendariesGo,GREATKRAYT and SANDO…\nWhere did the
 SootopolisCity_Text_TwoPokemonArentAngry,I just get this sense somehow that\nthe two COMPANIONS aren't angry.\pI think… They probably can't control\ntheir own power…$,reviewed AUTO draft
 SootopolisCity_Text_ThisIsWicked,Wow!\nThis is wicked!$,"reviewed, no change needed"
 SootopolisCity_Text_ThatWasWicked,Wow!\nThat was wicked!$,"reviewed, no change needed"
-SootopolisCity_Text_GoRedAndBlueMon,"Go for it, red COMPANION!\nDon't back off, blue COMPANION!$",reviewed AUTO draft
-SootopolisCity_Text_DoYouKnowMonNames,"… … … … … …\pHi, do you know the names of those\nCOMPANIONS fighting over there?$",reviewed AUTO draft
-SootopolisCity_Text_GreenOneSettlesThings,"I was wondering which one would win,\nthe red one or the blue one, but, oh no,\lit's the green one that settles things!\pTalk about a huge turn of events!$","reviewed, no change needed"
 SootopolisCity_Text_BigPokemonFighting,"A big COMPANION is fighting with\nanother big COMPANION!\pPlease, someone make them stop!$",reviewed AUTO draft
 SootopolisCity_Text_SootopolisWillBeWrecked,"Oh, no!\nDAGOBAH will get wrecked!$",reviewed AUTO draft
 SootopolisCity_Text_SootopolisDidntGetWrecked,DAGOBAH didn't get wrecked!$,reviewed AUTO draft
@@ -162,8 +157,6 @@ SootopolisCity_Gym_B1F_Text_AnnikaPostBattle,"I came to this ARENA because YODA\
 SootopolisCity_Gym_B1F_Text_BriannaIntro,Giggle…\nYour grim look is so charming.$,"reviewed, no change needed"
 SootopolisCity_Gym_B1F_Text_BriannaDefeat,"Oh, dear.\nI went much too easy on you.$","reviewed, no change needed"
 SootopolisCity_Gym_B1F_Text_BriannaPostBattle,"You couldn't lay a finger on YODA,\nI'm sure. Giggle…$",reviewed AUTO draft
-SootopolisCity_House1_Text_DevelopedThisTM,For thirty years I've remained in\nDAGOBAH honing my skills.\pI developed a shattering TM.\nI bequeath it to you!$,reviewed AUTO draft
-SootopolisCity_House1_Text_ExplainBrickBreak,TM31 contains BRICK BREAK! It's a move\nso horrible that I can't describe it.$,"reviewed, no change needed"
 SootopolisCity_House1_Text_Kecleon,TAOZIN: Puu puhyaah.$,reviewed AUTO draft
 SootopolisCity_House2_Text_OughtToVisitAndSee,Is that so?\nPerhaps you ought to visit and see…$,"reviewed, no change needed"
 SootopolisCity_House3_Text_YouMustBePrettyStrong,"Oh, then you must be pretty strong.$","reviewed, no change needed"

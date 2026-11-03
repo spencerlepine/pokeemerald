@@ -320,8 +320,8 @@ FallarborTown_BattleTentLobby_Text_CameToCampOut:
 	.string "so I came to camp out.\p"
 	.string "I didn't know that tents these days\n"
 	.string "are so luxurious!\p"
-	.string "Since I'm here, I may as well try\n"
-	.string "my hand at battling!$"
+	.string "Since I'm here, I will try my hand\n"
+	.string "at battling. I have spoken.$"
 
 FallarborTown_BattleTentLobby_Text_ScottLookingForSomeone:
 	.string "LANDO: Hi, {PLAYER}{KUN}!\n"

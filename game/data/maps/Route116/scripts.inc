@@ -353,12 +353,12 @@ Route116_Text_ScoundrelMadeOffWithPeeko:
 	.string "CHEWIIIIEEEE!$"
 
 Route116_Text_WantToDigTunnel:
-	.string "Nnn… Roar!\p"
-	.string "I want to dig that tunnel!$"
+	.string "Grrrrrupmprrr!\p"
+	.string "(I want to dig that tunnel!)$"
 
 Route116_Text_DiggingTunnelWhenGoonOrderedMeOut:
-	.string "Nnn… Roar!\n"
-	.string "What's going on?\p"
+	.string "Grrrrrupmprrr!\p"
+	.string "(What's going on?\p"
 	.string "I was digging the tunnel without any\n"
 	.string "tools when some goon ordered me out!\p"
 	.string "That tunnel's filled with COMPANIONS\n"
@@ -368,12 +368,12 @@ Route116_Text_DiggingTunnelWhenGoonOrderedMeOut:
 	.string "equipment for tunneling…\p"
 	.string "I'm worried that the goon will do\n"
 	.string "something stupid and startle the\l"
-	.string "COMPANION into an uproar.$"
+	.string "COMPANION into an uproar.)$"
 
 Route116_Text_GoonHightailedItOutOfTunnel:
-	.string "Nnn… Roar!\p"
-	.string "That goofy goon hightailed it out of\n"
-	.string "the tunnel! I can go back to digging!$"
+	.string "Mmmmmmrrrrr!\p"
+	.string "(That goofy goon hightailed it out of\n"
+	.string "the tunnel! I can go back to digging!)$"
 
 Route116_Text_ThankYouTokenOfAppreciation:
 	.string "Oh! It's you!\p"
