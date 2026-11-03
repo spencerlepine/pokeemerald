@@ -275,7 +275,7 @@ character:rival,MIRA / KAEL,code,KEEP,,,src/event_object_movement.c,435,,39,OBJ_
 character:rival,MIRA / KAEL,code,KEEP,,,src/field_control_avatar.c,227,,2,LittlerootTown_BrendansHouse_2F_EventScript_PC | LittlerootTown_MaysHouse_2F_EventScript_PC
 character:rival,MIRA / KAEL,code,KEEP,,,src/field_player_avatar.c,236,,60,OBJ_EVENT_GFX_RIVAL_BRENDAN_NORMAL | OBJ_EVENT_GFX_RIVAL_MAY_NORMAL | OBJ_EVENT_GFX_RIVAL_BRENDAN_MACH_BIKE | OBJ_EVENT_GFX_RIVAL_MAY_MACH_BIKE | +24 more
 character:rival,MIRA / KAEL,code,KEEP,,,src/field_specials.c,549,,27,OBJ_EVENT_GFX_LINK_RS_BRENDAN | OBJ_EVENT_GFX_LINK_RS_MAY | OBJ_EVENT_GFX_RIVAL_BRENDAN_NORMAL | OBJ_EVENT_GFX_RIVAL_MAY_NORMAL | +8 more
-character:rival,MIRA / KAEL,code,KEEP,,,src/intro.c,1340,,3,gSpriteSheet_IntroBrendan | CreateIntroBrendanSprite | CreateIntroMaySprite
+character:rival,MIRA / KAEL,code,KEEP,,,src/intro.c,1326,,3,gSpriteSheet_IntroBrendan | CreateIntroBrendanSprite | CreateIntroMaySprite
 character:rival,MIRA / KAEL,code,KEEP,,,src/intro_credits_graphics.c,21,,41,TAG_BRENDAN | TAG_MAY | sBrendanCredits_Pal | sBrendanCredits_Gfx | +12 more
 character:rival,MIRA / KAEL,code,KEEP,,,src/main_menu.c,1224,,17,tBrendanSpriteId | tMaySpriteId | FACILITY_CLASS_BRENDAN | FACILITY_CLASS_MAY
 character:rival,MIRA / KAEL,code,KEEP,,,src/player_pc.c,497,,2,LittlerootTown_BrendansHouse_2F_EventScript_TurnOffPlayerPC | LittlerootTown_MaysHouse_2F_EventScript_TurnOffPlayerPC
