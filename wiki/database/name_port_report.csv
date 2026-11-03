@@ -1,4 +1,8 @@
 id,game_file,result,detail
+item:hondew-berry,src/berry.c,too_long,"DEWMELON is 8 letters, the game holds 6"
+item:leppa-berry,src/berry.c,too_long,"WROSHYR is 7 letters, the game holds 6"
+item:starf-berry,src/berry.c,too_long,"STARFALL is 8 letters, the game holds 6"
+item:watmel-berry,src/berry.c,too_long,"DUNEMEL is 7 letters, the game holds 6"
 facility-trainer:battle-frontier:breanna,src/data/battle_frontier/battle_frontier_trainers.h,too_long,"BANNELLE is 8 letters, the game holds 7"
 facility-trainer:battle-frontier:conner,src/data/battle_frontier/battle_frontier_trainers.h,too_long,"COLDISSA is 8 letters, the game holds 7"
 facility-trainer:battle-frontier:griffen,src/data/battle_frontier/battle_frontier_trainers.h,too_long,"GASSISSA is 8 letters, the game holds 7"

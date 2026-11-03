@@ -119,6 +119,8 @@ def main() -> int:
     if "species" in types:
         port_datapad(rows, stats, report, args.dry_run)
         port_nicknames(rows, stats, args.dry_run)
+    if "item" in types:
+        port_fruit_names(rows, stats, report, args.dry_run)
 
     if not args.dry_run:
         with ENTS.open("w", encoding="utf-8", newline="") as fh:
@@ -133,6 +135,37 @@ def main() -> int:
     for x in report[:30]:
         print("  ", *x)
     return 0
+
+
+BERRY_NAME_LENGTH = 6  # include/global.berry.h; the game adds " FRUIT" (sText_BerrySuffix) when it needs to
+
+
+def port_fruit_names(rows, stats, report, dry_run) -> None:
+    """gBerries in src/berry.c holds each fruit's short name (CHERI, shown as "CHERI BERRY"). It becomes the
+    item's Star Wars name without " FRUIT" (JOGAN FRUIT -> JOGAN)."""
+    path = GAME / "src/berry.c"
+    src = orig = path.read_text(encoding="utf-8")
+    for r in rows:
+        if r["entity_type"] != "item" or not r["game_name"].endswith(" BERRY") or not r["source_constant"]:
+            continue
+        a = re.search(rf"\[{re.escape(r['source_constant'])} - FIRST_BERRY_INDEX\]\s*=", src)
+        m = a and re.compile(r'\.name\s*=\s*_\("(?P<n>[^"]*)"\)').search(src, a.end(), a.end() + 200)
+        if not m:
+            continue
+        emer, sw = r["game_name"][:-len(" BERRY")], re.sub(r" FRUIT$", "", r["sw_name"])
+        cur = m.group("n")
+        if cur == sw:
+            stats["fruit names done"] += 1
+        elif cur != emer:
+            report.append((r["id"], "src/berry.c", "changed", cur))
+        elif len(sw) > BERRY_NAME_LENGTH:
+            stats["too_long"] += 1
+            report.append((r["id"], "src/berry.c", "too_long", f"{sw} is {len(sw)} letters, the game holds 6"))
+        else:
+            src = src[:m.start("n")] + sw + src[m.end("n"):]
+            stats["fruit names ported"] += 1
+    if src != orig and not dry_run:
+        path.write_text(src, encoding="utf-8")
 
 
 NICKNAME_FILES = ["src/data/battle_frontier/trainer_hill.h"]

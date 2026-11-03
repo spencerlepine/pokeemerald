@@ -43,7 +43,7 @@ replaced. Re-run it after curating more text.
 **Names, Datapad entries and descriptions are ported** the same way (2026-11-03):
 - `python3 tools/port_names.py` swaps each renamed entity's display name in `../game` by its C constant
   (creatures, items, moves, abilities, types, trainer classes, trainers, Grand Arena and showcase trainers,
-  decorations, region-map places), the Trainer Hill companions' nicknames, and writes each species' Datapad category
+  decorations, region-map places, fruit short names in `src/berry.c`), the Trainer Hill companions' nicknames, and writes each species' Datapad category
   and text. Constants never change.
   Names longer than the game's buffer are left as Emerald's and listed in `database/name_port_report.csv`.
 - `python3 tools/port_terms.py` swaps the terms (`text_terms.csv`, plus BALL → POD) in item, move, ability,
