@@ -8,8 +8,8 @@ Inputs: the wiki (`mapping/`, `database/`, `world/GUIDE.md`, the bible), the own
 [starwars-db](https://github.com/spencerlepine/starwars-db) (`../starwars-db/database`, 594 entities,
 5,513 lines of film dialogue, 727 scenes), and `../game` for feasibility only.
 
-Written piece by piece. Sections 1 and 2 are Part 1 (characters), section 3 is Part 2 (transitions and set pieces).
-Sections 4 and 5 (Part 3) follow.
+Written piece by piece: sections 1 and 2 are Part 1 (characters), section 3 is Part 2 (transitions and set
+pieces), sections 4 and 5 are Part 3 (side content, the light / dark paths, what to approve). Complete.
 
 ---
 
@@ -390,7 +390,7 @@ Jabba beaten), the Tibanna Refinery (Lobot's side job), the galleria, the showca
   piece: "a smuggler who crossed him". Not Han; it is 2 BBY. One sign. Cheap.
 - **The dinner.** Lando leads the player into the Hideout to "dinner", and Boba Fett is at the table: that is
   the Hideout's Boba battle already; one line makes it the Empire Strikes Back beat. Cheap.
-- **An Ugnaught** in the refinery: re-skin one worker (a walker row). Cheap.
+- **An Ugnaught** in the refinery: the UGNAUGHT class exists (Emerald's hikers); place one. Cheap.
 - The cloud car on the landing platform (3.2).
 
 **Jedha.** There now: NiJedha (Chirrut, Baze, the kyber trader), the Temple of the Kyber (six floors, the
@@ -502,8 +502,292 @@ like Star Wars rather than like Hoenn with new names.
 
 ## 4. Side content and the light / dark paths
 
-Written in the next piece.
+Part 3. Three things: the bounty hunter side quest, the light / dark two-path feature (decided by the owner,
+designed here in full), and the things the owner asked about that turn out not to be needed. Costs use the
+scale from section 3. Feasibility was checked by reading `../game`; nothing in it was changed.
+
+### 4.1 The bounty board
+
+The game already has bounty hunters everywhere (Boba Fett's four stages, the seven Frontier Brains, the hunter
+waiting for work in Jabba's Palace), but the player never hunts anything. A board fixes that cheaply.
+
+**Where.** A WANTED board on the wall of the Mos Eisley Cantina (`mos-eisley-fan-club`), next to Wuher's bar.
+Wuher is the broker: his drinks menu is already a multichoice, and the board is a second one (one new
+`MULTI_` list in `src/data/script_menu.h`). Mos Eisley is the hub the player passes through most, so the board is
+seen often.
+
+**Two columns.** Hutt pucks (posted by the Cartel: paid in credits) and Alliance pucks (posted by the Rebellion:
+paid in items). Which column a player works from feeds the light / dark score (4.2), so the board is also the
+cheapest place for the player to *choose* a path by doing rather than by answering a question.
+
+**The marks.** Six, every one an existing person or an existing class in an existing room, so no new map:
+
+| # | Column | Mark | Where | Act | Payout |
+|---|---|---|---|---|---|
+| 1 | Hutt | Ponda Baba and Dr. Evazan: "the death sentence on twelve systems" is a bounty by definition. A double battle in the cantina's back booth (they are regulars already). | Cantina | 2 | 1,500 credits |
+| 2 | Alliance | The cartel thug who robbed the Organa engineer in Act 1, hiding in the Tusken Ruins. | Tusken Ruins | 2 | a GREAT POD × 5 |
+| 3 | Hutt | A Trandoshan slaver (BOUNTYHUNTER class) on the Route 109 beach, among the WOOKIEE CUB trainers, which explains why. | Route 109 | 2 | 2,000 credits |
+| 4 | Alliance | The smuggler captain of the Tibanna Refinery (Lobot's side job already clears his crew; the captain comes back for the bounty). | Tibanna Refinery | 5 | a MAX REVIVE |
+| 5 | Hutt | A deserter from the Mining Facility garrison (a STORMTROOPER class trainer) hiding on Ashen Pass. Jabba wants the Empire's gratitude. | Ashen Pass | 5 | 3,000 credits |
+| 6 | Alliance | Cad Bane (section 1 swap) at the Grand Arena, post-game: the one mark who hunts back. | Grand Arena lounge | 8 | a LUCKY EGG |
+
+Each mark is a trainer in its band (no balance change: payouts use existing trainer classes, prize items are
+existing items with no new power). Taking a puck sets a flag that shows the mark; beating the mark sets a second
+flag and the board pays (`addmoney` or `giveitem`). Twelve flags is too many for the unused list, so the pucks are
+one var: `VAR_UNUSED_0x409D` as the bounty state (bits are awkward in scripts, so it is a counter: 0 none taken,
+then the puck number taken and +10 when claimed; one special of eight lines, or plain `compare` chains).
+
+**The player's own poster.** The board's last puck is the player, posted by the Hutt Cartel, and it rises with
+Boba Fett's hunt var (`var:unused-0x404e`): "WANTED: KAEL. 5,000 credits. / Posted by the Hutt Cartel." at
+stage 0, then 10,000, 25,000, 50,000, and "CANCELLED" after the finale. One sign script with five `compare`
+branches. Cheap, and it is the single best joke the board can tell.
+
+**Cost.** Cheap. Six trainer placements (existing classes and sprites), one var, one `MULTI_` list, about 150
+script lines across seven maps, roughly 30 text rows. No C beyond the optional eight-line special.
+
+### 4.2 The light / dark paths
+
+The owner decided this feature. Below is the full design: the score, how it moves, where it locks, what it
+changes, what it never changes, how the player sees it, the film echoes, the full cost, the risks, and three
+stages. The guiding rule: **the dark path is Han's path, not a villain's.** Pragmatic over selfless, paid over
+thanked, Vader's offer heard rather than refused. A child can play either side.
+
+#### The score
+
+| Item | Design |
+|---|---|
+| Storage | One var, `VAR_UNUSED_0x409B` → `VAR_ALIGNMENT`. Vars live in `gSaveBlock1Ptr->vars` (`include/global.h`), so there is no save layout change and old saves keep working. |
+| Range | 0 to 200. New game sets 100 (one `setvar` in `EventScript_ResetAllMapFlags`, `data/scripts/new_game.inc`). |
+| Bands | LIGHT at 140 and above. DARK at 60 and below. BALANCED between. A pure player reaches a band in Act 5, a mixed player stays balanced. |
+| Moving it | Only by one-shot events: story choices, side errands, bounty pucks, and the two Force items (below). Every event fires once, so the score cannot be farmed. |
+| Clamping | Two helper scripts in a new `data/scripts/alignment.inc`: `Common_EventScript_PathLight` and `Common_EventScript_PathDark`, each taking the amount in `VAR_0x8004`, with a `compare` guard before `subvar` (a u16 var wraps below zero) and a cap at 200. About forty lines, no C. |
+| Decay | None. A choice stands. |
+| Lock | At the Ilum temple door (`EverGrandeCity_PokemonLeague_1F_EventScript_DoorGuard`). The score is read once, one of two flags is set (`FLAG_UNUSED_0x039` → `FLAG_PATH_LIGHT`, `0x03A` → `FLAG_PATH_DARK`; neither set means balanced), and the score stops moving. The ending and the stage 3 evolutions read the flags, never the var. |
+| Force items | Using a KYBER CRYSTAL moves +3 light, a SITH SHARD +3 dark, once per use. Both are sold at Pirin for 2,100, so a player can buy a band for about 28,000 credits: that is a choice too, and it is what the items are for. One `VarSet` line each in `ItemUseOutOfBattle_EvolutionStone` (`src/item_use.c`) or in the evolution callback (`src/party_menu.c`). Optional in stage 1; recommended in stage 2. |
+
+#### How it is earned: the choice points
+
+Thirteen, all inside scripts that already run exactly once (so no new flag per choice), all with `yesnobox` or
+a two-item `multichoice`, all with the same outcome for the story. The B button is "no", which is never the
+dark answer, so a player who skips through is balanced, not dark.
+
+| # | Where | Act | The choice (prompt fits 208 px) | Light | Dark |
+|---|---|---|---|---|---|
+| 1 | Jundland Wastes, the robbed Organa engineer | 1 | Return every part, or keep one for yourself. | +10 | +10 |
+| 2 | Ben's Hut, Obi-Wan | 1 | "Will you learn the ways of the Force?" / "I'd rather have a good blaster." | +5 | +5 |
+| 3 | Beggar's Canyon, the thug after Chewie's rescue | 1 | Let him go, or take his credits (a payout in the Act 1 band). | +5 | +5 |
+| 4 | The Cantina, after Greedo | 2 | "Tell Jabba I'm not for sale." / "Tell Jabba I'm for hire." | +5 | +5 |
+| 5 | Jabba's Palace, the rancor keeper | 3 | Comfort him, or mock him (Return of the Jedi's weeping keeper). | +5 | +5 |
+| 6 | Mustafar Peak, after Vader's first battle | 3 | "Join me. It is your destiny." Refuse, or listen. Vader leaves either way. | +10 | +10 |
+| 7 | The Mining Facility, the SITH SHARD on the body | 3 | Leave it, or take it (it is still sold at Pirin). | +5 | +5 |
+| 8 | Endor Station, the captured grunt | 4 | Hand him to the Ewoks, or claim Bossk's bounty on him. | +5 | +5 |
+| 9 | The Hutt Hideout, Jabba beaten | 5 | "Work for me." Refuse, or accept (nothing follows; Jabba is beaten). | +10 | +10 |
+| 10 | Jedha summit, after the BLUE KYBER is taken | 5 | Give your crystal to the temple, or take the officer's bled shard. | +10 | +10 |
+| 11 | Fortress Vader, after the battle | 5 | "I am altering the deal. / Pray I don't alter it any further." Walk out, or ask the terms. | +10 | +10 |
+| 12 | Yavin 4 Launch Tower, after the tag battle | 5 | Leia: stay with the Alliance, or "I work alone." | +5 | +5 |
+| 13 | Cave of Evil, Obi-Wan at the mouth | 6 | "Your weapons, you will not need them." Leave them, or keep them. The cave is the same. | +5 | +5 |
+
+Plus the one-shot side content, hooked into reward scripts that already exist (one line each):
+
+| Source | Light | Dark |
+|---|---|---|
+| The six helping errands (Rwookrrorro chieftain, Chirrut, the Hoth scout, Cody, Lobot, the Endor commando) | +5 each | – |
+| Alliance bounty pucks (4.1) | +3 each | – |
+| Hutt bounty pucks (4.1) | – | +3 each |
+| KYBER CRYSTAL / SITH SHARD used (stage 2) | +3 | +3 |
+
+Reach: a player who always answers one way has 90 from the story, 30 from errands, and 9 from pucks, so 140 is
+reached in Act 5 without the items. A player who splits stays within 80 to 120.
+
+#### What changes
+
+| Stage | Change | Where it lives |
+|---|---|---|
+| 1 | Flavour lines by band: the Bacta Center nurse, Yoda at the arena door, Obi-Wan at the Cave of Evil and Ben's Hut, Vader at Fortress Vader, the kyber trader in NiJedha, the Bendu on Atollon, Han on the liner. Each is `compare VAR_ALIGNMENT` and a second `msgbox`. | The map scripts named; `data/scripts/pkmn_center_nurse.inc` |
+| 2 | Side events and rewards by band, items only: the Gathering at the Ilum door (a KYBER CRYSTAL from Yoda or a SITH SHARD from Obi-Wan's warning), Vader's gift at the Fortress (a SITH SHARD, dark only), Chirrut's blessing (a KYBER CRYSTAL, light only), a Bendu line for the balanced player that no one else hears. The trainer card line and the StarNAV line (below). | Four map scripts; `src/trainer_card.c`; `src/match_call.c` |
+| 3 | The three light / dark lines evolve by level on the player's path, without the stone: AURADANCER → AURAREAVER on dark, KATHPUP → KATHWARDEN and ECHOWISP → WHILLGUARD on light. The stones keep working, so nobody is locked out. Two endings: the Champions Room and the medal ceremony say different things; the Hall of Fame scene is the same. | `include/constants/pokemon.h` (`EVO_LEVEL_LIGHT` 16, `EVO_LEVEL_DARK` 17), `src/pokemon.c` `GetEvolutionTargetSpecies` (two cases, about twelve lines), `src/data/pokemon/evolution.h` (one entry each; `EVOS_PER_MON` is 5 and each line uses 2); `data/maps/EverGrandeCity_ChampionsRoom/scripts.inc` |
+
+#### What never changes
+
+The arena ladder and every shard, every hyperlane unlock, the HMs, the Four Trials, Boba Fett's hunt, every
+wild table, every trainer party, every level band, the Grand Arena. No door is ever closed by the score. The
+paths split only inside a scene and rejoin before the player can walk:
+
+| Split | Rejoin |
+|---|---|
+| Ben's Hut (Act 1) | The hut's door. |
+| The Cantina (Act 2) | Greedo's booth. |
+| Mustafar Peak, Vader's offer (Act 3) | Vader's shuttle leaves; the Pirin arena is next for everyone. |
+| The Mining Facility (Act 3) | The shard is in the shop either way. |
+| Endor Station, the Hideout, Jedha, Fortress Vader, the Launch Tower (Acts 4 and 5) | The same shard, the same shuttle, the same tag battle. |
+| The Cave of Evil (Act 6) | The cave. |
+| The Ilum door (Act 7): the lock | The Four Trials and Obi-Wan are the same fight; the ending text differs. |
+
+#### How the player sees it
+
+The var is hidden; the player sees a word, never a number.
+
+| Where | What | Cost |
+|---|---|---|
+| Trainer card, back, row 1 | Row 1 is LINK BATTLES, which reads 0 for nearly every player of a hack. It becomes PATH: LIGHT / DARK / BALANCED. `PrintStatOnBackOfCard(1, …)` in `src/trainer_card.c`; the band is carried in the card struct's link-battle field so shared cards still work. About fifteen lines of C and one string. | Medium (small C) |
+| Bacta Center | After the heal, one extra line by band: "The Force is strong with you." (light), "You look tired. Rest." *(new)* (dark), nothing (balanced). `Common_EventScript_PkmnCenterNurse`. | Cheap |
+| An NPC who reads it | The kyber trader in NiJedha holds the player's crystal: "Your crystal sings. It is yours." *(new)* / "Your crystal has gone dark." *(new)* / "Not yet chosen." *(new)*. The Bendu says the same in his own words post-game. | Cheap |
+| StarNAV | The Match Call: Obi-Wan's and Luke's general line picks by band. `GetGeneralMatchCallText` in `src/match_call.c` chooses from per-trainer text tables, so this is about thirty lines of C and data. Stage 2. | Medium |
+| The Continue box | Could show PATH beside the shards (`gText_ContinueMenuBadges`, `src/main_menu.c`). Not proposed: the box is full and shards matter more. | – |
+
+#### Film echoes
+
+From `quotes.csv`, cut to lines of 208 px or less (measured), spoken by the character who said them or a stand-in
+the story already has. *(new)* lines are written for the game.
+
+| Speaker | Where | Band | Lines |
+|---|---|---|---|
+| Yoda | Dagobah arena, before the battle | light | "The Force is strong with you." *(Palpatine's words in the film; Yoda's here)* |
+| Yoda | Dagobah arena | dark | "Fear is the path to the dark side." |
+| Yoda | Dagobah arena | balanced | "Always in motion is the future." |
+| Yoda | Raising the X-wing (3.3) | any | "Do. Or do not. / There is no try." |
+| Yoda | The Ilum door, at the lock | light | "A Jedi uses the Force for knowledge / and defense, never for attack." |
+| Yoda | The Ilum door | dark | "Once you start down the dark path, / forever will it dominate your destiny." |
+| Yoda | The Ilum door | balanced | "Difficult to see." *(cut from the same line)* |
+| Obi-Wan | Cave of Evil | any | "Only what you take with you." |
+| Obi-Wan | Ben's Hut, the choice | – | "Stretch out with your feelings." |
+| Obi-Wan | The Champions Room, light ending | light | "Remember, the Force will be / with you... always." |
+| Obi-Wan | The Champions Room, dark ending | dark | "If you strike me down, I shall become / more powerful than you can / possibly imagine." *(he loses the fight either way)* |
+| Vader | Mustafar Peak, the offer | – | "Join me. It is your destiny." |
+| Vader | Fortress Vader, dark | dark | "Good. Use your aggressive feelings. / Let the hate flow through you." *(the Emperor's words; Vader repeats his master)* |
+| Vader | Fortress Vader, light | light | "I find your lack of faith disturbing." |
+| Vader | Fortress Vader, the second offer | – | "I am altering the deal. / Pray I don't alter it any further." |
+| Vader | The Launch Tower, after the tag battle, light | light | "Obi-Wan has taught you well." |
+| Han | The Cantina choice, dark answer | dark | "Hokey religions and ancient weapons / are no match for a good blaster / at your side, kid." |
+| Han | The liner, any | any | "Great, kid! Don't get cocky." |
+| Luke | The Ilum rival battle, light | light | "I'll never turn to the dark side." |
+| Luke | The Ilum rival battle, dark | dark | "Your overconfidence is your weakness." |
+| Dooku's holocron | Mustafar (`net:relic-dooku`) | dark | "Twice the pride, double the fall." |
+| Palpatine | The hologram on the Death Star command deck (`net:character-palpatine`) | dark | "So be it... Jedi." / "Your faith in your friends is yours." |
+| Boba Fett | Any stage, any | any | "He's no good to me dead." |
+| Jar Jar | The traveller, any | any | "How wude." |
+| Ackbar | Yavin 4 hangar | any | "It's a trap!" |
+
+Thirty-six lines; the widest is 200 px.
+
+#### Full cost
+
+| Item | Stage | Where | Size |
+|---|---|---|---|
+| The var, its name and its start value | 1 | `include/constants/vars.h` (rename), `data/scripts/new_game.inc` | 2 lines |
+| Helper scripts with clamps | 1 | `data/scripts/alignment.inc` (new) | ~40 lines asm |
+| 13 choice points | 1 | the 13 map `scripts.inc` files above; 2 or 3 `MULTI_` lists in `src/data/script_menu.h` | ~260 lines asm |
+| Side-errand hooks | 1 | 6 existing reward scripts | 6 lines |
+| Flavour readers | 1 | `pkmn_center_nurse.inc` + 7 map scripts | ~80 lines asm |
+| Text rows | 1 | `texts.csv`: prompts, two answers, two replies per choice, the flavour lines | ~70 rows |
+| Trainer card row | 2 | `src/trainer_card.c`, `src/strings.c` | ~15 lines C |
+| StarNAV line | 2 | `src/match_call.c` | ~30 lines C and data |
+| Force item hook | 2 | `src/item_use.c` or `src/party_menu.c` | 2 lines C |
+| Band-gated rewards | 2 | 4 map scripts, items only | ~60 lines asm, ~12 rows |
+| The lock and its flags | 3 | `include/constants/flags.h` (2 renames), `EverGrandeCity_PokemonLeague_1F/scripts.inc` | ~20 lines asm |
+| Evolutions | 3 | `include/constants/pokemon.h`, `src/pokemon.c`, `src/data/pokemon/evolution.h` | ~15 lines C, 3 table entries |
+| Endings | 3 | `EverGrandeCity_ChampionsRoom/scripts.inc`; the medal ceremony text; optional one credits page in `src/data/credits.h` and `src/credits.c` | ~40 lines asm, ~10 rows; credits Medium |
+| Save data | – | none: a var is always saved | 0 |
+| Wiki | 1 | `NET_NEW_DESIGNS.md` slot table (one var, two flags), `net_new.csv` rows, `texts.csv` | – |
+
+Stage 1 is about 400 script lines, 70 text rows and no C at all. Stage 2 is under 50 lines of C. Stage 3 is 15
+lines of C plus text. The whole feature uses one var and two flags from the unused list (and one more var for the
+bounty board), leaving twelve flags and eleven vars free.
+
+**Testing plan.** `tools/play-tester` (headless mGBA, savestates, `E.setFlag`): add a `setVar` helper (about ten
+lines of Lua reading the var's address from the symbol file; story vars are "not tried" in its README and this
+is the first use). Then three savestates at the Ilum door, one per band, and a check matrix: every reader (the
+nurse, the trader, the card, Yoda, Obi-Wan, Vader, the evolutions, the ending) times three bands is about
+twenty-four checks, scripted. Regression: play the main path once per band from a savestate at each act's
+start and confirm every shard, hyperlane and HM is reached at the same point. Two full runs, not three, since
+balanced is the vanilla path.
+
+#### Risk
+
+1. **Choice fatigue.** Thirteen prompts over seven acts is one every half hour. Never more, and never on the
+   critical path; a player who presses B is balanced.
+2. **Farming.** Only the two items repeat, and they cost 2,100 each. Acceptable; it is the shop's purpose.
+3. **Lock-out.** None: the stones still evolve the three lines on any path, and no reward is a power.
+4. **Width.** Every proposed line was measured; the port tool's `overflow_risk` check catches any rewrite.
+5. **Tone.** The dark answers are Han's, never cruelty. The owner should read the thirteen prompts before
+   stage 1 is scripted; it is the one place where a judgement call shapes the player's path.
+6. **Old saves.** A var not yet set reads 0, which is dark. The helper scripts and readers treat 0 as "unset:
+   set to 100 first" (two lines), so a save from before the feature is balanced.
+
+#### Stages
+
+1. **Score and flavour.** The var, the helpers, the thirteen choices, the errand hooks, the nurse, the trader,
+   Yoda, Obi-Wan, Vader. Cheap. Playable in one session of script work.
+2. **Side events and rewards.** The Gathering, Vader's and Chirrut's gifts, the Bendu, the bounty columns, the
+   items hook, the trainer card row, the StarNAV line. Cheap plus two small C changes.
+3. **Evolutions and endings.** The lock, the two level evolutions, the two endings, the optional credits page.
+   Medium.
+
+### 4.3 What is not needed
+
+- **Reputation.** The owner asked whether a reputation system is needed beside the score. No: the score *is*
+  the reputation, read in words by the trader, the nurse and the card, and Boba's hunt var already tracks the
+  player's notoriety for the poster. A second number would split one idea in two.
+- **A ship you own.** Every hangar already has "Player's ship" and a StarNAV console; the X-wing (3.3) gives
+  that ship a face and a story. No ship menu, no upgrades, no fuel: Expensive and the films do not do it either.
+- **Day and night.** The binary sunset wants it; the engine has no clock use in the overworld, so it stays a
+  one-off palette moment (3.4).
+
+### 4.4 Feasibility, every idea
+
+| Idea | Section | Cost | Files |
+|---|---|---|---|
+| The 23 ride moments | 3.2 | Cheap | hangar `scripts.inc` per hyperlane; `texts.csv` |
+| Nien Nunb flies the Sullust transport | 3.2 | Cheap | `hangar-tatooine-sullust` script; `mapping/people.csv` |
+| Cloud car | 3.2 | Cheap (1 art row) | `mapping/world_art.csv` |
+| Tantive IV and Antilles | 3.2 | Cheap / Medium | hangar scripts; one interior yaml |
+| The X-wing sink and raise | 3.3 | Medium | `dagobah-hangar` scripts; one object sprite; `world_art.csv` |
+| Han's Falcon for the asteroid run | 3.2 | Cheap | `dagobah-hangar` script; the Falcon cabin room |
+| The sail barge and the Sarlacc | 3.3 | Medium | `jabbas-palace-barge-dock` script; one fixed battle; one flag |
+| The escape pod from the Death Star | 3.3 | Cheap | deck 5 script |
+| Graves, krayt call, Han and Greedo's booth, Yoda's pod, the high ground, Vader's chamber, the net, the trophy, the dinner, the patrol, Y-wings, Cell 2187, the briefing table, the Gathering | 3.4 | Cheap each | one map script and 1 to 3 rows each |
+| The binary sunset (sky strip) | 3.4 | Cheap | `terrain.csv` |
+| The WAMPA fixed battle | 3.4 | Medium | Wampa Cave script |
+| The probe droid | 3.4 | Medium | one object sprite; Hoth tundra script |
+| The trash compactor | 3.4 | Medium | one room; deck 2 and 3 scripts; one fixed battle |
+| AT-AT, Slave I, Y-wing | 3.5 | Cheap (1 art row each) | `world_art.csv` |
+| GUNDARK rename | 3.5 | Cheap | `mapping/species.csv` |
+| The bounty board and the poster | 4.1 | Cheap | cantina script; 6 trainer placements; 1 var; 1 `MULTI_` list |
+| Light / dark stage 1 | 4.2 | Cheap | 13 map scripts; `alignment.inc`; `new_game.inc`; `texts.csv` |
+| Light / dark stage 2 | 4.2 | Cheap + small C | `trainer_card.c`, `match_call.c`, `item_use.c`; 4 map scripts |
+| Light / dark stage 3 | 4.2 | Medium | `pokemon.c`, `evolution.h`, `pokemon.h`; Champions Room; optional `credits.c` |
+| Tauntaun riding, a ship menu, day and night | 3.4, 4.3 | Expensive | not proposed |
 
 ## 5. What to approve first
 
-Written with sections 3 and 4.
+Ranked by payoff per cost. Each item is one approval; nothing lands before it.
+
+1. **Light / dark stage 1** (4.2). Decided by the owner; Cheap; it touches every act. The thirteen prompts are
+   the one thing to read first.
+2. **Han's Falcon for the asteroid run** and **the X-wing in the bog** (3.2, 3.3). The two best film moments
+   the game can add, and they fix the section 2 anachronism. Cheap plus one Medium.
+3. **The three top swaps from section 1:** Aurra Sing → Cad Bane, Gardulla → Hondo, HURKAL → WICKET. Cheap;
+   Wicket also carries the Ewok net (3.4).
+4. **The bounty board and the WANTED poster** (4.1). Cheap; it makes the Cartel a presence instead of a word.
+5. **The timeline fixes** (section 2, text only). Cheap; a fan notices every one of them.
+6. **The 23 ride moments** (3.2). Cheap; the single biggest change in how the planets feel.
+7. **The Tantive IV, Antilles, Dodonna, Mon Mothma and Ackbar** on the Bespin → Yavin ride and at the base
+   (3.2, section 1). Cheap; Yavin 4 becomes the Rebellion's home instead of a town with a hangar.
+8. **The sail barge and the Sarlacc** (3.3). Medium; the Dune Sea earns its tiles.
+9. **The trash compactor and the escape pod** (3.3, 3.4). Cheap plus Medium; the Death Star post-game gets
+   its two most famous rooms.
+10. **Light / dark stage 2** (4.2): the Gathering, the gifts, the card, the StarNAV line.
+11. **Missing ships** (3.5): AT-AT, Slave I, Y-wing, cloud car, the probe droid. Art rows; the pipeline does
+    the rest.
+12. **The small set pieces** (3.4): graves, the krayt call, the net, Yoda's pod, the trophy, the patrol, the
+    WAMPA. Cheap each; approve as a batch.
+13. **Light / dark stage 3** (4.2): evolutions and endings. Medium; last, because it needs stages 1 and 2
+    tested.
+14. **Optional:** the GUNDARK rename, the remaining section 1 swaps (JERJERROD, YULAREN, the racers,
+    BO-KATAN), Tarkin and the series cast on the Death Star and Atollon.
+
+Not recommended: Leia held in Jabba's Palace (the owner asked to consider it). At 2 BBY she is Bail Organa's
+daughter and a senator-in-waiting; Jabba holding her would be an act of war against Alderaan, and the Return of
+the Jedi beat is six years away. The cheaper version, the carbonite trophy and the barge, gives the palace its
+menace without her. If the owner still wants it, it is Expensive: a new story event with its own flags, Leia's
+walker in the throne room, and a rewrite of Act 2's Shadowlands delivery.
