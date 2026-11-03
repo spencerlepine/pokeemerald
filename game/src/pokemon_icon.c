@@ -275,9 +275,9 @@ const u8 *const gMonIconTable[] =
     [SPECIES_LUGIA] = gMonIcon_Lugia,
     [SPECIES_HO_OH] = gMonIcon_HoOh,
     [SPECIES_CELEBI] = gMonIcon_Celebi,
-    [SPECIES_OLD_UNOWN_B] = gMonIcon_QuestionMark,
-    [SPECIES_OLD_UNOWN_C] = gMonIcon_QuestionMark,
-    [SPECIES_OLD_UNOWN_D] = gMonIcon_QuestionMark,
+    [SPECIES_OLD_UNOWN_B] = gMonIcon_Gardevoir, // AURAREAVER: placeholder = GARDEVOIR
+    [SPECIES_OLD_UNOWN_C] = gMonIcon_Manectric, // KATHWARDEN: placeholder = MANECTRIC
+    [SPECIES_OLD_UNOWN_D] = gMonIcon_Banette, // WHILLGUARD: placeholder = BANETTE
     [SPECIES_OLD_UNOWN_E] = gMonIcon_QuestionMark,
     [SPECIES_OLD_UNOWN_F] = gMonIcon_QuestionMark,
     [SPECIES_OLD_UNOWN_G] = gMonIcon_QuestionMark,
@@ -719,9 +719,9 @@ const u8 gMonIconPaletteIndices[] =
     [SPECIES_LUGIA] = 0,
     [SPECIES_HO_OH] = 1,
     [SPECIES_CELEBI] = 1,
-    [SPECIES_OLD_UNOWN_B] = 0,
-    [SPECIES_OLD_UNOWN_C] = 0,
-    [SPECIES_OLD_UNOWN_D] = 0,
+    [SPECIES_OLD_UNOWN_B] = 1, // AURAREAVER: placeholder = GARDEVOIR
+    [SPECIES_OLD_UNOWN_C] = 0, // KATHWARDEN: placeholder = MANECTRIC
+    [SPECIES_OLD_UNOWN_D] = 0, // WHILLGUARD: placeholder = BANETTE
     [SPECIES_OLD_UNOWN_E] = 0,
     [SPECIES_OLD_UNOWN_F] = 0,
     [SPECIES_OLD_UNOWN_G] = 0,

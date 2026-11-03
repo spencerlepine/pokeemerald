@@ -29,6 +29,9 @@ GAME = Path(os.environ.get("GAME_DIR", ROOT.parent / "game"))
 ENTS = ROOT / "database" / "entities.csv"
 REPORT = ROOT / "database" / "name_port_report.csv"
 
+# unused slots that net-new content took over: the game constant was renamed with them
+RENAMED = {"ITEM_15B": "ITEM_HM_SAND_SKIM", "ITEM_063": "ITEM_KYBER_CRYSTAL", "ITEM_064": "ITEM_SITH_SHARD"}
+
 # entity_type -> (file in ../game, or None for the row's source_file; anchor style; name field)
 C_KEY = r"\[{c}\]\s*="
 FILES = {
@@ -86,7 +89,8 @@ def main() -> int:
         orig = src
         for r in frows:
             _, anchor, field = FILES[r["entity_type"]]
-            a = re.search(anchor.format(c=re.escape(r["source_constant"])) + r"(?![A-Z0-9_])", src)
+            const = RENAMED.get(r["source_constant"], r["source_constant"])
+            a = re.search(anchor.format(c=re.escape(const)) + r"(?![A-Z0-9_])", src)
             if not a:
                 stats["missing"] += 1
                 report.append((r["id"], f, "missing", r["source_constant"]))

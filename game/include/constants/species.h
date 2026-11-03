@@ -280,6 +280,10 @@
 #define SPECIES_OLD_UNOWN_Y 275
 #define SPECIES_OLD_UNOWN_Z 276
 
+#define SPECIES_AURAREAVER SPECIES_OLD_UNOWN_B // net-new light/dark form (old Unown slot)
+#define SPECIES_KATHWARDEN SPECIES_OLD_UNOWN_C // net-new light/dark form (old Unown slot)
+#define SPECIES_WHILLGUARD SPECIES_OLD_UNOWN_D // net-new light/dark form (old Unown slot)
+
 #define SPECIES_TREECKO 277
 #define SPECIES_GROVYLE 278
 #define SPECIES_SCEPTILE 279

@@ -5506,9 +5506,9 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     [SPECIES_LUGIA]       = sAnims_Lugia,
     [SPECIES_HO_OH]       = sAnims_HoOh,
     [SPECIES_CELEBI]      = sAnims_Celebi,
-    [SPECIES_OLD_UNOWN_B] = sAnims_OldUnownB,
-    [SPECIES_OLD_UNOWN_C] = sAnims_OldUnownB,
-    [SPECIES_OLD_UNOWN_D] = sAnims_OldUnownB,
+    [SPECIES_OLD_UNOWN_B] = sAnims_Gardevoir, // AURAREAVER: placeholder = GARDEVOIR
+    [SPECIES_OLD_UNOWN_C] = sAnims_Manectric, // KATHWARDEN: placeholder = MANECTRIC
+    [SPECIES_OLD_UNOWN_D] = sAnims_Banette, // WHILLGUARD: placeholder = BANETTE
     [SPECIES_OLD_UNOWN_E] = sAnims_OldUnownB,
     [SPECIES_OLD_UNOWN_F] = sAnims_OldUnownB,
     [SPECIES_OLD_UNOWN_G] = sAnims_OldUnownB,

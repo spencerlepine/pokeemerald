@@ -346,6 +346,8 @@ def build_terms(rows, by_id, char_terms):
         # trainer-class names are not used: in dialogue CHAMPION / LEADER / PSYCHIC are generic words
         if et in ("species", "move", "item", "ability", "game_type", "badge"):
             name = r["emerald_name"].upper() if et != "badge" else r["emerald_title"].upper()
+            if not name.strip("? "):  # reused unused slots ("????????", "?") are not words in any text
+                continue
             add(name, r["sw_name"], et)
             if et == "item" and not name.endswith("S"):  # "POKé BALLS", "POTIONS" in dialogue
                 sw = r["sw_name"]

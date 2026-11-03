@@ -977,9 +977,9 @@ const u8 gSunfloraPokedexText[] = _(
     "energy. It is lively all day.");
 
 const u8 gYanmaPokedexText[] = _(
-    "A big-eyed swamp dragonfly of Dagobah. It\n"
-    "can see in every direction. It hovers in\n"
-    "place over the water.");
+    "A CAN-CELL of Kashyyyk. Its huge eyes see\n"
+    "in every direction. It hovers in place over\n"
+    "the lakes below the trees.");
 
 const u8 gWooperPokedexText[] = _(
     "An oggdo tadpole of Bogano. On cold\n"
@@ -1045,8 +1045,8 @@ const u8 gForretressPokedexText[] = _(
     "shell is hard as durasteel.");
 
 const u8 gDunsparcePokedexText[] = _(
-    "A small burrowing worm of Tatooine. It digs\n"
-    "into the sand tail-first. If spotted, it\n"
+    "A young JOOPA, a sand worm of Seelos. It\n"
+    "swims through loose sand. If spotted, it\n"
     "digs away at once.");
 
 const u8 gGligarPokedexText[] = _(

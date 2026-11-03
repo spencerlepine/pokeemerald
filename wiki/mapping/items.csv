@@ -216,3 +216,5 @@ item:lansat-berry,LANSA FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Ilum.
 item:starf-berry,NOVA FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Sullust (grows where meteorites land). Same effect as the Emerald berry.,
 item:enigma-berry,WHILLS FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from unknown (event fruit). Same effect as the Emerald berry.,
 item:15b,HM09,HOTSWAP,DONE,PENDING_ART,original,Teaches SAND SKIM: a companion pulls a sand skiff across the Dune Sea.,Unused slot ITEM_15B is now ITEM_HM09 (HM09 SAND SKIM) in ../game since 2026-11-03. The design row is net:hm09-sand-skim.
+item:063,KYBER CRYSTAL,HOTSWAP,DONE,NEEDS_PLACEHOLDER,canon:Kyber crystal,A living crystal that leads some companions to the light side when they evolve.,Unused slot ITEM_063 is now ITEM_KYBER_CRYSTAL in ../game since 2026-11-03. Design row net:item-kyber-crystal.
+item:064,SITH SHARD,HOTSWAP,DONE,NEEDS_PLACEHOLDER,original,A bled kyber shard that leads some companions to the dark side when they evolve.,Unused slot ITEM_064 is now ITEM_SITH_SHARD in ../game since 2026-11-03. Design row net:item-sith-shard.

@@ -233,7 +233,7 @@ character:rival,MIRA / KAEL,code,KEEP,,,include/constants/trainers.h,90,,22,TRAI
 character:rival,MIRA / KAEL,code,KEEP,,,include/constants/vars.h,150,,2,VAR_LITTLEROOT_HOUSES_STATE_MAY | VAR_LITTLEROOT_HOUSES_STATE_BRENDAN
 character:rival,MIRA / KAEL,code,KEEP,,,include/data.h,103,,2,gTrainerBackPicTable_Brendan | gTrainerBackPicTable_RubySapphireBrendan
 character:rival,MIRA / KAEL,code,KEEP,,,include/event_scripts.h,382,,4,LittlerootTown_BrendansHouse_2F_EventScript_TurnOffPlayerPC | LittlerootTown_MaysHouse_2F_EventScript_TurnOffPlayerPC | LittlerootTown_BrendansHouse_2F_EventScript_PC | LittlerootTown_MaysHouse_2F_EventScript_PC
-character:rival,MIRA / KAEL,code,KEEP,,,include/graphics.h,2943,,12,gTrainerFrontPic_Brendan | gTrainerFrontPic_RubySapphireBrendan | gTrainerPalette_Brendan | gTrainerPalette_RubySapphireBrendan | +8 more
+character:rival,MIRA / KAEL,code,KEEP,,,include/graphics.h,2946,,12,gTrainerFrontPic_Brendan | gTrainerFrontPic_RubySapphireBrendan | gTrainerPalette_Brendan | gTrainerPalette_RubySapphireBrendan | +8 more
 character:rival,MIRA / KAEL,code,KEEP,,,include/intro_credits_graphics.h,24,,5,gSpriteSheet_IntroBrendan | gSpriteSheet_CreditsBrendan | gSpriteSheet_CreditsRivalBrendan | CreateIntroBrendanSprite | +1 more
 character:rival,MIRA / KAEL,code,KEEP,,,include/match_call.h,9,,1,MATCH_CALL_TYPE_MAY_BRENDAN
 character:rival,MIRA / KAEL,code,KEEP,,,include/pokenav.h,190,,2,MC_HEADER_BRENDAN | MC_HEADER_MAY
@@ -279,7 +279,7 @@ character:rival,MIRA / KAEL,code,KEEP,,,src/intro.c,1340,,3,gSpriteSheet_IntroBr
 character:rival,MIRA / KAEL,code,KEEP,,,src/intro_credits_graphics.c,21,,41,TAG_BRENDAN | TAG_MAY | sBrendanCredits_Pal | sBrendanCredits_Gfx | +12 more
 character:rival,MIRA / KAEL,code,KEEP,,,src/main_menu.c,1224,,17,tBrendanSpriteId | tMaySpriteId | FACILITY_CLASS_BRENDAN | FACILITY_CLASS_MAY
 character:rival,MIRA / KAEL,code,KEEP,,,src/player_pc.c,497,,2,LittlerootTown_BrendansHouse_2F_EventScript_TurnOffPlayerPC | LittlerootTown_MaysHouse_2F_EventScript_TurnOffPlayerPC
-character:rival,MIRA / KAEL,code,KEEP,,,src/pokemon.c,1982,,8,TRAINER_BACK_PIC_BRENDAN | gTrainerBackPicTable_Brendan | TRAINER_BACK_PIC_MAY | TRAINER_BACK_PIC_RUBY_SAPPHIRE_BRENDAN | +4 more
+character:rival,MIRA / KAEL,code,KEEP,,,src/pokemon.c,1985,,8,TRAINER_BACK_PIC_BRENDAN | gTrainerBackPicTable_Brendan | TRAINER_BACK_PIC_MAY | TRAINER_BACK_PIC_RUBY_SAPPHIRE_BRENDAN | +4 more
 character:rival,MIRA / KAEL,code,KEEP,,,src/pokenav_match_call_data.c,275,,33,sMayTextScripts | sMayMatchCallHeader | gText_MayBrendanMatchCallDesc | sBrendanTextScripts | +22 more
 character:rival,MIRA / KAEL,code,KEEP,,,src/post_battle_event_funcs.c,39,,1,HEAL_LOCATION_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F
 character:rival,MIRA / KAEL,code,KEEP,,,src/region_map.c,125,,10,sRegionMapPlayerIcon_BrendanPal | sRegionMapPlayerIcon_BrendanGfx | sRegionMapPlayerIcon_MayPal | sRegionMapPlayerIcon_MayGfx | +2 more
@@ -406,7 +406,7 @@ character:brandon,DEXTER,code,KEEP,,,data/text/frontier_brain.inc,94,,4,gText_Br
 character:brandon,DEXTER,code,KEEP,,,include/constants/event_objects.h,239,,1,OBJ_EVENT_GFX_BRANDON
 character:brandon,DEXTER,code,KEEP,,,include/constants/opponents.h,815,,1,TRAINER_BRANDON
 character:brandon,DEXTER,code,KEEP,,,include/constants/trainers.h,107,,1,TRAINER_PIC_PYRAMID_KING_BRANDON
-character:brandon,DEXTER,code,KEEP,,,include/graphics.h,2960,,2,gTrainerFrontPic_PyramidKingBrandon | gTrainerPalette_PyramidKingBrandon
+character:brandon,DEXTER,code,KEEP,,,include/graphics.h,2963,,2,gTrainerFrontPic_PyramidKingBrandon | gTrainerPalette_PyramidKingBrandon
 character:brandon,DEXTER,code,KEEP,,,include/strings.h,1342,,4,gText_BrandonWonSilver | gText_BrandonDefeatSilver | gText_BrandonWonGold | gText_BrandonDefeatGold
 character:brandon,DEXTER,code,KEEP,,,src/data/graphics/trainers.h,265,,2,gTrainerFrontPic_PyramidKingBrandon | gTrainerPalette_PyramidKingBrandon
 character:brandon,DEXTER,code,KEEP,,,src/data/object_events/object_event_graphics.h,354,,1,gObjectEventPic_Brandon

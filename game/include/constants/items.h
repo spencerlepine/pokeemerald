@@ -109,8 +109,8 @@ enum {
     ITEM_THUNDER_STONE,
     ITEM_WATER_STONE,
     ITEM_LEAF_STONE,
-    ITEM_063,
-    ITEM_064,
+    ITEM_KYBER_CRYSTAL, // was ITEM_063 (net-new light-side evolution item)
+    ITEM_SITH_SHARD,    // was ITEM_064 (net-new dark-side evolution item)
     ITEM_065,
     ITEM_066,
 

@@ -365,6 +365,16 @@ static const u8 sRepelDesc[] = _(
     "steps.");
 
 // Evolution stones
+static const u8 sKyberCrystalDesc[] = _(
+    "A living crystal.\n"
+    "Some COMPANIONS\n"
+    "evolve to light.");
+
+static const u8 sSithShardDesc[] = _(
+    "A bled crystal.\n"
+    "Some COMPANIONS\n"
+    "evolve to dark.");
+
 static const u8 sSunStoneDesc[] = _(
     "Makes certain\n"
     "kinds of COMPANION\n"

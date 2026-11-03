@@ -192,8 +192,9 @@ The current pass (all `DRAFT`, waiting for the owner's review):
 
 ## Open decisions
 
-- **Optional extras**, not tracked as rows: more invented creature names swapped for canon ones, and light / dark
-  side evolution branches (`bible/STORY.md` section 8). Blizzard weather is now a TODO row (`net:weather-blizzard`).
+- **Optional extras**, not tracked as rows: more invented creature names swapped for canon ones (two done on
+  2026-11-03: CAN-CELL and JOOPA), and more light / dark evolution lines (three are rows:
+  `net:light-dark-evolutions`). Blizzard weather is a TODO row (`net:weather-blizzard`).
 
 ## Rebuilding
 

@@ -55,6 +55,7 @@ const u8 gEnemyMonElevation[NUM_SPECIES] =
     [SPECIES_DUSKULL] = 9,
     [SPECIES_SHUPPET] = 12,
     [SPECIES_BANETTE] = 8,
+    [SPECIES_OLD_UNOWN_D] = 8, // WHILLGUARD (floats like HOLLOWDOLL)
     [SPECIES_CASTFORM] = 16,
     [SPECIES_BELDUM] = 8,
     [SPECIES_RAYQUAZA] = 6,

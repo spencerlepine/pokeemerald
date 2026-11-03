@@ -1717,6 +1717,7 @@ static const u8 sMonFrontAnimIdsTable[NUM_SPECIES - 1] =
     [SPECIES_HARIYAMA - 1]    = ANIM_ROTATE_UP_TO_SIDES,
     [SPECIES_ELECTRIKE - 1]   = ANIM_V_SQUISH_AND_BOUNCE,
     [SPECIES_MANECTRIC - 1]   = ANIM_V_SQUISH_AND_BOUNCE,
+    [SPECIES_OLD_UNOWN_C - 1] = ANIM_V_SQUISH_AND_BOUNCE, // KATHWARDEN
     [SPECIES_NUMEL - 1]       = ANIM_V_SLIDE,
     [SPECIES_CAMERUPT - 1]    = ANIM_V_SHAKE,
     [SPECIES_SPHEAL - 1]      = ANIM_SPIN,
@@ -1757,6 +1758,7 @@ static const u8 sMonFrontAnimIdsTable[NUM_SPECIES - 1] =
     [SPECIES_ABSOL - 1]       = ANIM_CIRCULAR_VIBRATE,
     [SPECIES_SHUPPET - 1]     = ANIM_V_SLIDE_WOBBLE,
     [SPECIES_BANETTE - 1]     = ANIM_SWING_CONVEX,
+    [SPECIES_OLD_UNOWN_D - 1] = ANIM_SWING_CONVEX, // WHILLGUARD
     [SPECIES_SEVIPER - 1]     = ANIM_V_STRETCH,
     [SPECIES_ZANGOOSE - 1]    = ANIM_GROW_VIBRATE,
     [SPECIES_RELICANTH - 1]   = ANIM_TIP_MOVE_FORWARD,
@@ -1773,6 +1775,7 @@ static const u8 sMonFrontAnimIdsTable[NUM_SPECIES - 1] =
     [SPECIES_RALTS - 1]       = ANIM_V_SQUISH_AND_BOUNCE_SLOW,
     [SPECIES_KIRLIA - 1]      = ANIM_V_SQUISH_AND_BOUNCE,
     [SPECIES_GARDEVOIR - 1]   = ANIM_V_SQUISH_AND_BOUNCE,
+    [SPECIES_OLD_UNOWN_B - 1] = ANIM_V_SQUISH_AND_BOUNCE, // AURAREAVER
     [SPECIES_BAGON - 1]       = ANIM_V_SHAKE_TWICE,
     [SPECIES_SHELGON - 1]     = ANIM_V_SLIDE,
     [SPECIES_SALAMENCE - 1]   = ANIM_H_SHAKE,
@@ -5682,6 +5685,12 @@ u16 HoennToNationalOrder(u16 hoennNum)
 
 u16 SpeciesToCryId(u16 species)
 {
+    if (species == SPECIES_OLD_UNOWN_B - 1) // AURAREAVER uses GARDEVOIR's cry until it has its own
+        species = SPECIES_GARDEVOIR - 1;
+    if (species == SPECIES_OLD_UNOWN_C - 1) // KATHWARDEN uses MANECTRIC's cry until it has its own
+        species = SPECIES_MANECTRIC - 1;
+    if (species == SPECIES_OLD_UNOWN_D - 1) // WHILLGUARD uses BANETTE's cry until it has its own
+        species = SPECIES_BANETTE - 1;
     if (species <= SPECIES_CELEBI - 1)
         return species;
 

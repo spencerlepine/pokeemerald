@@ -2187,6 +2187,7 @@ const u8 gMonIcon_Electrike[] = INCGFX_U8("graphics/pokemon/electrike/icon.png",
 const u8 gMonFootprint_Electrike[] = INCGFX_U8("graphics/pokemon/electrike/footprint.png", ".1bpp");
 
 const u32 gMonStillFrontPic_Manectric[] = INCGFX_U32("graphics/pokemon/manectric/front.png", ".4bpp.lz");
+const u32 gMonPalette_Kathwarden[] = INCGFX_U32("graphics/pokemon/kathwarden/normal.pal", ".gbapal.lz"); // KATHWARDEN placeholder tint
 const u32 gMonPalette_Manectric[] = INCGFX_U32("graphics/pokemon/manectric/normal.pal", ".gbapal.lz");
 const u32 gMonBackPic_Manectric[] = INCGFX_U32("graphics/pokemon/manectric/back.png", ".4bpp.lz");
 const u32 gMonShinyPalette_Manectric[] = INCGFX_U32("graphics/pokemon/manectric/shiny.pal", ".gbapal.lz");
@@ -2467,6 +2468,7 @@ const u8 gMonIcon_Shuppet[] = INCGFX_U8("graphics/pokemon/shuppet/icon.png", ".4
 const u8 gMonFootprint_Shuppet[] = INCGFX_U8("graphics/pokemon/shuppet/footprint.png", ".1bpp");
 
 const u32 gMonStillFrontPic_Banette[] = INCGFX_U32("graphics/pokemon/banette/front.png", ".4bpp.lz");
+const u32 gMonPalette_Whillguard[] = INCGFX_U32("graphics/pokemon/whillguard/normal.pal", ".gbapal.lz"); // WHILLGUARD placeholder tint
 const u32 gMonPalette_Banette[] = INCGFX_U32("graphics/pokemon/banette/normal.pal", ".gbapal.lz");
 const u32 gMonBackPic_Banette[] = INCGFX_U32("graphics/pokemon/banette/back.png", ".4bpp.lz");
 const u32 gMonShinyPalette_Banette[] = INCGFX_U32("graphics/pokemon/banette/shiny.pal", ".gbapal.lz");
@@ -2579,6 +2581,7 @@ const u8 gMonIcon_Kirlia[] = INCGFX_U8("graphics/pokemon/kirlia/icon.png", ".4bp
 const u8 gMonFootprint_Kirlia[] = INCGFX_U8("graphics/pokemon/kirlia/footprint.png", ".1bpp");
 
 const u32 gMonStillFrontPic_Gardevoir[] = INCGFX_U32("graphics/pokemon/gardevoir/front.png", ".4bpp.lz");
+const u32 gMonPalette_Aurareaver[] = INCGFX_U32("graphics/pokemon/aurareaver/normal.pal", ".gbapal.lz"); // AURAREAVER placeholder tint
 const u32 gMonPalette_Gardevoir[] = INCGFX_U32("graphics/pokemon/gardevoir/normal.pal", ".gbapal.lz");
 const u32 gMonBackPic_Gardevoir[] = INCGFX_U32("graphics/pokemon/gardevoir/back.png", ".4bpp.lz");
 const u32 gMonShinyPalette_Gardevoir[] = INCGFX_U32("graphics/pokemon/gardevoir/shiny.pal", ".gbapal.lz");

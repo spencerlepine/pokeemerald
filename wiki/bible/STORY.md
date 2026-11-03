@@ -259,7 +259,7 @@ Tracked as rows in `mapping/net_new.csv`, not built yet. Designs (maps, flags, l
 - Slicing droids instead of throwing capture pods.
 - Hyperlane travel: hangars at every planet border, unlocked one by one.
 - A Death Star construction site dungeon (multi-floor, elevators, stormtrooper patrols) for the post-game.
-- Light side / dark side affinity that picks between evolution branches (the TOOKA line already splits JEDITOOKA / SITHTOOKA by day / night).
-- Sandstorm and blizzard weather that changes encounters.
+- Light side / dark side evolution branches: done for three lines (KYBER CRYSTAL / SITH SHARD; `net:light-dark-evolutions`). The TOOKA line already splits JEDITOOKA / SITHTOOKA by day / night.
+- Sandstorm and blizzard weather that changes encounters (blizzard: TODO row `net:weather-blizzard`).
 - New moves with new animations: FORCE CHOKE, BLASTER SHOT, SABER SLASH.
 - The Mos Eisley Cantina: Wuher's bar, the Modal Nodes, Ponda Baba, Dr. Evazan, Momaw Nadon and an optional Greedo battle, with six new walkers and its own band music.

@@ -252,9 +252,9 @@ const u16 *const gLevelUpLearnsets[NUM_SPECIES] =
     [SPECIES_LUGIA] = sLugiaLevelUpLearnset,
     [SPECIES_HO_OH] = sHoOhLevelUpLearnset,
     [SPECIES_CELEBI] = sCelebiLevelUpLearnset,
-    [SPECIES_OLD_UNOWN_B] = sSpecies252LevelUpLearnset,
-    [SPECIES_OLD_UNOWN_C] = sSpecies253LevelUpLearnset,
-    [SPECIES_OLD_UNOWN_D] = sSpecies254LevelUpLearnset,
+    [SPECIES_OLD_UNOWN_B] = sGardevoirLevelUpLearnset, // AURAREAVER: placeholder = GARDEVOIR
+    [SPECIES_OLD_UNOWN_C] = sManectricLevelUpLearnset, // KATHWARDEN: placeholder = MANECTRIC
+    [SPECIES_OLD_UNOWN_D] = sBanetteLevelUpLearnset, // WHILLGUARD: placeholder = BANETTE
     [SPECIES_OLD_UNOWN_E] = sSpecies255LevelUpLearnset,
     [SPECIES_OLD_UNOWN_F] = sSpecies256LevelUpLearnset,
     [SPECIES_OLD_UNOWN_G] = sSpecies257LevelUpLearnset,

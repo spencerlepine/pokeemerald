@@ -197,7 +197,7 @@ const struct MonCoords gMonFrontPicCoords[] =
     [SPECIES_AIPOM]       = { .size = MON_COORDS_SIZE(32, 64), .y_offset =  0 },  // TAILMONK (sprite-creature-generator)
     [SPECIES_SUNKERN]     = { .size = MON_COORDS_SIZE(48, 40), .y_offset =  0 },  // SUNSEED (sprite-creature-generator)
     [SPECIES_SUNFLORA]    = { .size = MON_COORDS_SIZE(24, 56), .y_offset =  0 },  // TWINSUNFLR (sprite-creature-generator)
-    [SPECIES_YANMA]       = { .size = MON_COORDS_SIZE(64, 48), .y_offset =  0 },  // GNATWING (sprite-creature-generator)
+    [SPECIES_YANMA]       = { .size = MON_COORDS_SIZE(64, 48), .y_offset =  0 },  // CAN-CELL (sprite-creature-generator)
     [SPECIES_WOOPER]      = { .size = MON_COORDS_SIZE(48, 32), .y_offset =  0 },  // OGGDOLET (sprite-creature-generator)
     [SPECIES_QUAGSIRE]    = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  0 },  // OGGDO (sprite-creature-generator)
     [SPECIES_ESPEON]      = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },  // JEDITOOKA (sprite-creature-generator)
@@ -210,7 +210,7 @@ const struct MonCoords gMonFrontPicCoords[] =
     [SPECIES_GIRAFARIG]   = { .size = MON_COORDS_SIZE(64, 48), .y_offset =  0 },  // FALUMPASET (sprite-creature-generator)
     [SPECIES_PINECO]      = { .size = MON_COORDS_SIZE(48, 48), .y_offset =  0 },  // DEKALET (sprite-creature-generator)
     [SPECIES_FORRETRESS]  = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },  // DROIDEKA (sprite-creature-generator)
-    [SPECIES_DUNSPARCE]   = { .size = MON_COORDS_SIZE(56, 24), .y_offset =  0 },  // DUNEWORM (sprite-creature-generator)
+    [SPECIES_DUNSPARCE]   = { .size = MON_COORDS_SIZE(56, 24), .y_offset =  0 },  // JOOPA (sprite-creature-generator)
     [SPECIES_GLIGAR]      = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },  // SCORPWING (sprite-creature-generator)
     [SPECIES_STEELIX]     = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },  // STEELSLUG (sprite-creature-generator)
     [SPECIES_SNUBBULL]    = { .size = MON_COORDS_SIZE(48, 40), .y_offset =  0 },  // ANOOBLET (sprite-creature-generator)
@@ -256,9 +256,9 @@ const struct MonCoords gMonFrontPicCoords[] =
     [SPECIES_LUGIA]       = { .size = MON_COORDS_SIZE(64, 40), .y_offset =  0 },  // TIDEWING (sprite-creature-generator)
     [SPECIES_HO_OH]       = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // DAWNWING (sprite-creature-generator)
     [SPECIES_CELEBI]      = { .size = MON_COORDS_SIZE(40, 56), .y_offset =  0 },  // TIMEWISP (sprite-creature-generator)
-    [SPECIES_OLD_UNOWN_B] = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  4 },
-    [SPECIES_OLD_UNOWN_C] = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  4 },
-    [SPECIES_OLD_UNOWN_D] = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  4 },
+    [SPECIES_OLD_UNOWN_B] = { .size = MON_COORDS_SIZE(24, 64), .y_offset =  0 }, // AURAREAVER: placeholder = GARDEVOIR
+    [SPECIES_OLD_UNOWN_C] = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 }, // KATHWARDEN: placeholder = MANECTRIC
+    [SPECIES_OLD_UNOWN_D] = { .size = MON_COORDS_SIZE(40, 64), .y_offset =  0 }, // WHILLGUARD: placeholder = BANETTE
     [SPECIES_OLD_UNOWN_E] = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  4 },
     [SPECIES_OLD_UNOWN_F] = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  4 },
     [SPECIES_OLD_UNOWN_G] = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  4 },

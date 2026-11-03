@@ -9,7 +9,7 @@ species:cubone,SKULLKIT,GROUND,TATOOINE,320,,YES,type:GROUND,"Ground companions 
 species:diglett,BURROWNUB,GROUND,BESPIN,265,,YES,type:GROUND,"Ground companions burrow, dig or stride over sand, so they can pull a sand skiff across the Dune Sea.",
 species:donphan,MUDHORN,GROUND,ARVALA,500,,YES,type:GROUND,"Ground companions burrow, dig or stride over sand, so they can pull a sand skiff across the Dune Sea.",
 species:dugtrio,BURROWTRIO,GROUND,BESPIN,405,,YES,type:GROUND,"Ground companions burrow, dig or stride over sand, so they can pull a sand skiff across the Dune Sea.",
-species:dunsparce,DUNEWORM,NORMAL,TATOOINE,415,,YES,species:DUNSPARCE,DUNEWORM: small burrowing worm that swims through loose sand.,
+species:dunsparce,JOOPA,NORMAL,SEELOS,415,,YES,species:DUNSPARCE,JOOPA: young burrowing sand worm that swims through loose sand.,
 species:flygon,KRAYT,GROUND/DRAGON,TATOOINE,520,,YES,type:GROUND,"Ground companions burrow, dig or stride over sand, so they can pull a sand skiff across the Dune Sea.",
 species:geodude,ROCKWART,ROCK/GROUND,TATOOINE,300,,YES,type:GROUND,"Ground companions burrow, dig or stride over sand, so they can pull a sand skiff across the Dune Sea.","map:granite-cave-1f (KASHYYYK, land, badges 1)"
 species:gligar,SCORPWING,GROUND/FLYING,GEONOSIS,430,,YES,type:GROUND,"Ground companions burrow, dig or stride over sand, so they can pull a sand skiff across the Dune Sea.","map:safari-zone-southeast (FELUCIA, land, badges 6)"
@@ -378,7 +378,7 @@ species:wobbuffet,YSALAMIRI,PSYCHIC,MYRKR,405,,,,,"map:safari-zone-south (FELUCI
 species:wurmple,SANDGRUB,BUG,TATOOINE,195,,,,,"map:petalburg-woods (TATOOINE, land, badges 0)"
 species:wynaut,YSALAKIT,PSYCHIC,MYRKR,260,,,,,"map:route130 (DAGOBAH, land, badges 7)"
 species:xatu,CONVOR,PSYCHIC/FLYING,LOTHAL,470,,,,,"map:safari-zone-north (FELUCIA, land, badges 6)"
-species:yanma,GNATWING,BUG/FLYING,DAGOBAH,390,,,,,
+species:yanma,CAN-CELL,BUG/FLYING,KASHYYYK,390,,,,,
 species:zangoose,NEXU,NORMAL,GEONOSIS,458,,,,,
 species:zapdos,STORMHAWK,ELECTRIC/FLYING,BESPIN,580,,,,,
 species:zigzagoon,SCURRIER,NORMAL,TATOOINE,240,YES,,,,"map:route101 (TATOOINE, land, badges 0)"

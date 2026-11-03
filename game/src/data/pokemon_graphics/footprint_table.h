@@ -252,9 +252,9 @@ const u8 *const gMonFootprintTable[] =
     [SPECIES_LUGIA] = gMonFootprint_Lugia,
     [SPECIES_HO_OH] = gMonFootprint_HoOh,
     [SPECIES_CELEBI] = gMonFootprint_Celebi,
-    [SPECIES_OLD_UNOWN_B] = gMonFootprint_QuestionMark,
-    [SPECIES_OLD_UNOWN_C] = gMonFootprint_QuestionMark,
-    [SPECIES_OLD_UNOWN_D] = gMonFootprint_QuestionMark,
+    [SPECIES_OLD_UNOWN_B] = gMonFootprint_Gardevoir, // AURAREAVER: placeholder = GARDEVOIR
+    [SPECIES_OLD_UNOWN_C] = gMonFootprint_Manectric, // KATHWARDEN: placeholder = MANECTRIC
+    [SPECIES_OLD_UNOWN_D] = gMonFootprint_Banette, // WHILLGUARD: placeholder = BANETTE
     [SPECIES_OLD_UNOWN_E] = gMonFootprint_QuestionMark,
     [SPECIES_OLD_UNOWN_F] = gMonFootprint_QuestionMark,
     [SPECIES_OLD_UNOWN_G] = gMonFootprint_QuestionMark,

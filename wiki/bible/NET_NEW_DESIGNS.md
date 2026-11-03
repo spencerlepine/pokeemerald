@@ -118,7 +118,7 @@ SURF for comparison, SAND SKIM, the rule and where the species is first caught).
 | Ground type (either slot) | yes | They burrow, dig or stride over sand: dewbacks, krayts, banthas, rontos, rock warts. |
 | SUNSTRIDER, SUNBLAZER (Torchic line) | yes | Long-legged desert runners of Tatooine. |
 | EOPIE, FATHIER (Ponyta line) | yes | Pack and racing beasts bred to haul over sand. |
-| DUNEWORM (Dunsparce) | yes | Burrowing worm that swims through loose sand. |
+| JOOPA (Dunsparce) | yes | Young burrowing sand worm that swims through loose sand. |
 | A species that learns no TM or HM at all | no | Same rule as every HM. |
 | Everything else | no | |
 
@@ -199,6 +199,49 @@ Still to do: `MB_DUNE_SEA` (an unused metatile behaviour) once the `dune-sea` ti
 the map list; the final skiff art and a skimming player sprite; SKIFF RIDER pics and overworld sprites.
 Crossing a map connection between Dune Sea and real water while surfing keeps the old blob until the next mount
 (cosmetic only).
+
+## Light and dark evolutions (`net:light-dark-evolutions`, `net:item-kyber-crystal`, `net:item-sith-shard`, `net:species-aurareaver`, `net:species-kathwarden`, `net:species-whillguard`)
+
+Owner decision (2026-11-03): a few companion lines can evolve two ways. One way is the usual evolution. The
+other is a light-side form (KYBER CRYSTAL) or a dark-side form (SITH SHARD). Kept small: three lines, one met
+early, one in the middle and one late.
+
+| Line | Usual evolution | New branch | Item | Types | Stats (HP/Atk/Def/Spe/SpA/SpD) |
+|---|---|---|---|---|---|
+| AURADANCER (Kirlia), Act 1 | AURAWARDEN, level 30 | AURAREAVER (dark) | SITH SHARD | Psychic / Dark | 68/65/55/110/135/85 = 518 |
+| KATHPUP (Electrike), Act 2-3 | KATHHOUND, level 26 | KATHWARDEN (light) | KYBER CRYSTAL | Electric / Psychic | 70/55/90/80/85/95 = 475 |
+| ECHOWISP (Shuppet), Act 5 | HOLLOWDOLL, level 37 | WHILLGUARD (light) | KYBER CRYSTAL | Ghost / Psychic | 64/55/95/50/96/95 = 455 |
+
+Rules:
+- The new form has the same base stat total as the usual one, split differently: light leans to the defences,
+  dark to speed and power. In Emerald, Psychic and Dark moves are special, so the dark form gains special attack.
+- Same abilities, learnsets, EXP yield, catch rate and egg data as the usual form. Its eggs hatch into the
+  first stage of the line.
+- Nothing else moves: no wild table, trainer party or level evolution changes. The usual evolution still
+  happens by level; the item is an extra way.
+
+Items: KYBER CRYSTAL and SITH SHARD are used like evolution stones. Both are sold for 2100 at the Pirin Depot
+(Lavaridge Mart), right after Mustafar Peak, where the player first meets Vader.
+
+**In the game (2026-11-03).**
+- Items in the unused slots after LEAF STONE: `ITEM_KYBER_CRYSTAL` (was `ITEM_063`) and `ITEM_SITH_SHARD`
+  (was `ITEM_064`), with the evolution-stone item effect, descriptions, and the BLUE / RED CRYSTAL shard icons
+  as placeholders. On sale in `data/maps/LavaridgeTown_Mart/scripts.inc`.
+- New forms in the unused old-Unown species slots `SPECIES_OLD_UNOWN_B`, `_C`, `_D`, with the aliases
+  `SPECIES_AURAREAVER`, `SPECIES_KATHWARDEN`, `SPECIES_WHILLGUARD` in `include/constants/species.h`
+  (`_J` is left alone: the game uses it for the "?" icon). Every species table has an entry: name, stats,
+  learnsets, pics, palettes, icon, footprint, coordinates and animations. The pics and icon are the usual
+  form's. The battle palette is a tinted copy (`graphics/pokemon/<name>/normal.pal`): red-black for dark,
+  blue-white for light.
+- `src/data/pokemon/evolution.h`: one `EVO_ITEM` line under KIRLIA, ELECTRIKE and SHUPPET.
+- Cries: `SpeciesToCryId` plays the usual form's cry.
+- Tested in the emulator: the bag shows both items, each evolves only its own line ("No use." on the others),
+  all three evolution scenes play, and the summary shows the new types.
+
+Still to do (TODO rows): front, back, icon and footprint art for the three forms; their cries
+(`net:cry-*` in `mapping/audio.csv`); item icons; Datapad entries. The Datapad lists 386 species, so the
+old-Unown slots have no Datapad page yet and the forms are not counted in it. More lines can follow the same
+pattern while old-Unown slots remain (B to Z, minus J).
 
 ## New moves (`net:move-force-choke`, `net:move-blaster-shot`, `net:move-saber-slash`)
 
