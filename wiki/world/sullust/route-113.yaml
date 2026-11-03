@@ -106,6 +106,7 @@ people:
 - name: Ash-road warden
   at: [96, 10]
   role: story
+  note: Closes the ash road to Pirin until event:meteor-falls-meteorite (owner approved, 2026-11-03).
 signs:
 - name: Sign
   at: [85, 6]

@@ -70,10 +70,15 @@ progress. The wiki is the one list: no separate to-do docs.
   replaces a 20x20 vanilla town is about 32x28: one main road between its exits, a short spur to every
   hangar door, every door within a few steps of a road, buildings in two rows either side, props only at the
   edges and corners (the border nature, a dock, one landmark), people on the road. Bigger vanilla towns scale
-  the same way (about 1.5x their vanilla size), never 3x.
+  the same way (about 1.5x their vanilla size), never 3x. Approved by the owner on 2026-11-03: this is the
+  rule for every town still to be redrawn.
+- **Decided by the owner (2026-11-03).** The Kashyyyk and Yavin 4 ocean routes stay open water with islands
+  (Kachirho is a coastal city in canon). Pirin is reached on foot from Route 113, and a warden closes the ash
+  road until the meteorite event, which keeps Emerald's order (Starfall, then Mustafar, then Sabine). The Jedha
+  pilgrim shuttle to Route 123 opens at six badges, so Route 123's ledges are walked downhill and never a shortcut.
 - `replaces` names the vanilla map an area is built into (its doors, trainers and scripts come from
   there). The size, shape and exits can change.
-- `~` is each planet's surf medium: water on most planets, the salt lake on Tatooine.
+- `~` is each planet's surf medium: water on most planets; on Tatooine the Dune Sea, crossed with SAND SKIM (HM09).
 - Signal and noise (`../bible/WORLD_ART.md`): paths stay clear; props sit at edges, corners and dead space.
 - `python3 -m blockout check` must report no problems before an area is sent for review. Redrawn towns and
   new areas must also pass the reach check (every exit, door and warp reachable on foot or by surf).
