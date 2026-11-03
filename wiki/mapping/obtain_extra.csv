@@ -1,2 +1,24 @@
 obtain_id,kind,what,sw_name,quantity,npc_id,map_id,flag,after_script,after_what,notes
 obtain:starter,gift_companion,species:treecko|species:torchic|species:mudkip,starter (one of three),1,,map:route101,FLAG_SYS_POKEMON_GET,,,"The starter: chosen from PROF. KORR's bag on Route 101 (src/starter_choose.c, not a script command). Level 5."
+obtain:net:bens-hut:escape-rope,item_ball,item:escape-rope,,1,,map:bens-hut-interior,FLAG_UNUSED_0x026,,,"Ben's chest, next to his workbench (net:bens-hut). 'You will want to leave the Cave of Evil quickly.'"
+obtain:net:maul-duel:sith-shard,gift_item,item:064,,1,person:bens-hut:003,map:bens-hut,FLAG_UNUSED_0x027,,,"Maul's SITH SHARD, handed over by Ben after the post-game duel (net:maul-duel). Post-game (flag:sys-game-clear): the story order here is the hut's, not the duel's."
+obtain:net:podrace-sebulba:scope-lens,gift_item,item:scope-lens,,1,person:mos-espa-podrace-arena:016,map:mos-espa-podrace-arena,FLAG_UNUSED_0x028,,,From Sebulba after his boss battle (net:podrace-sebulba).
+obtain:net:jabbas-palace:kings-rock,item_ball,item:kings-rock,,1,person:jabbas-palace-throne-room:029,map:jabbas-palace-throne-room,FLAG_UNUSED_0x029,,,"The rancor keeper's chest, opened after the pit battle (net:jabbas-palace)."
+obtain:net:jabbas-palace:rare-candy,gift_item,item:rare-candy,,1,person:jabbas-palace-throne-room:025,map:jabbas-palace-throne-room,FLAG_UNUSED_0x02A,,,Bib Fortuna's errand: send his lost droid back inside (net:jabbas-palace).
+obtain:net:rwookrrorro:tm31,gift_item,item:tm31,,1,person:rwookrrorro-chief-hut:038,map:rwookrrorro-chief-hut,FLAG_UNUSED_0x02B,,,"TM31 BRICK BREAK from the village chief, once (net:rwookrrorro)."
+obtain:net:rwookrrorro:trade,trade,species:exeggcute,,1,person:rwookrrorro-hut-1:041,map:rwookrrorro-hut-1,FLAG_UNUSED_0x02C,,,The bowcaster maker's WROSEED for any TATOOINE companion: the fourth in-game trade (src/trade.c table) (net:rwookrrorro).
+obtain:net:mustafar-mining-facility:sith-shard,item_ball,item:064,,1,,map:mustafar-mining-control,FLAG_UNUSED_0x02D,,,"A SITH SHARD on the control center console, beside the duel holo-record (net:mustafar-mining-facility)."
+obtain:net:endor-battlefield:max-elixir,gift_item,item:max-elixir,,1,person:endor-battlefield:056,map:endor-battlefield,FLAG_UNUSED_0x02E,,,From Captain Rex once the bunker straggler is beaten (net:endor-battlefield).
+obtain:net:tibanna-refinery:smoke-ball,gift_item,item:smoke-ball,,1,person:cloud-city:059,map:lilycove-city,FLAG_UNUSED_0x02F,,,From Lobot once the three Cartel thugs at the refinery are beaten (net:tibanna-refinery).
+obtain:net:nijedha:twisted-spoon,gift_item,item:twisted-spoon,,1,person:nijedha-temple-of-the-kyber:072,map:nijedha-temple-of-the-kyber,FLAG_UNUSED_0x030,,,From Chirrut after the Jedha Temple summit scene (net:nijedha).
+obtain:net:nijedha:shop-kyber-crystal,shop,item:063,,,,map:nijedha-supply-depot,,,,"The kyber trader's stall: KYBER CRYSTAL at Pirin's price, 2100 (net:nijedha)."
+obtain:net:nijedha:shop-sith-shard,shop,item:064,,,,map:nijedha-supply-depot,,,,"The kyber trader's stall: SITH SHARD, 2100 (net:nijedha)."
+obtain:net:hoth-survey:never-melt-ice,gift_item,item:never-melt-ice,,1,person:hoth-tundra:084,map:hoth-tundra,FLAG_UNUSED_0x031,,,From the lost scout at the Wampa Cave mouth (net:hoth-survey).
+obtain:net:hoth-survey:tm07,gift_item,item:tm07,,1,person:hoth-survey-outpost:085,map:hoth-survey-outpost,FLAG_UNUSED_0x032,,,TM07 HAIL from General Rieekan once the scout is home (net:hoth-survey).
+obtain:net:kamino-cloning-hall:focus-band,gift_item,item:focus-band,,1,person:tipoca-city-cloning-hall:091,map:tipoca-city-cloning-hall,FLAG_UNUSED_0x033,,,From Commander Cody once both cadets are beaten (net:kamino-cloning-hall).
+obtain:net:jar-jar:big-pearl,gift_item,item:big-pearl,,1,person:dagobah:098,map:sootopolis-city,,,,Jar Jar's last stop: a pearl from Otoh Gunga (net:jar-jar-traveller; var:unused-0x4091 = 5).
+obtain:net:death-star:ds-1:rare-candy,item_ball,item:rare-candy,,1,,map:death-star-ds-1,FLAG_UNUSED_0x034,,,Deck 1 item ball (net:death-star-site).
+obtain:net:death-star:ds-2:pp-up,item_ball,item:pp-up,,1,,map:death-star-ds-2,FLAG_UNUSED_0x035,,,Deck 2 item ball (net:death-star-site).
+obtain:net:death-star:ds-3:max-revive,item_ball,item:max-revive,,1,,map:death-star-ds-3,FLAG_UNUSED_0x036,,,Deck 3 item ball (net:death-star-site).
+obtain:net:death-star:ds-4:pp-max,item_ball,item:pp-max,,1,,map:death-star-ds-4,FLAG_UNUSED_0x037,,,Deck 4 item ball (net:death-star-site).
+obtain:net:death-star:ds-5:choice-band,item_ball,item:choice-band,,1,,map:death-star-ds-5,FLAG_UNUSED_0x038,,,"Command deck item ball, behind Krennic: a held item the Grand Arena already sells (net:death-star-site)."

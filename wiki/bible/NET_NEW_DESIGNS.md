@@ -34,6 +34,7 @@ The new flags and vars come only from slots that `emerald-db/database/story_flag
 | `flag:unused-0x032` | Hoth: Rieekan's reward given |
 | `flag:unused-0x033` | Kamino: Cody's FOCUS BAND given |
 | `var:unused-0x4091` | Jar Jar's next stop (0-6) |
+| `flag:unused-0x034` to `0x038` | Death Star item balls, decks 1-5 |
 
 ## Planet borders (`net:hangar-*`, `net:border-*`)
 
