@@ -8,7 +8,8 @@ Inputs: the wiki (`mapping/`, `database/`, `world/GUIDE.md`, the bible), the own
 [starwars-db](https://github.com/spencerlepine/starwars-db) (`../starwars-db/database`, 594 entities,
 5,513 lines of film dialogue, 727 scenes), and `../game` for feasibility only.
 
-Written piece by piece. Sections 1 and 2 are Part 1 (characters). Sections 3 to 5 follow.
+Written piece by piece. Sections 1 and 2 are Part 1 (characters), section 3 is Part 2 (transitions and set pieces).
+Sections 4 and 5 (Part 3) follow.
 
 ---
 
@@ -241,7 +242,263 @@ and Hobbie defected in 2 BBY (Rebels), Nien Nunb smuggling for the cause.
 
 ## 3. Transitions and set pieces, planet by planet
 
-Written in the next piece.
+Part 2. The question here is whether the trip between planets, and the big rooms on each planet, feel like the
+films. Every ride in `mapping/hyperlanes.csv` is reviewed, then every planet's set pieces, then the classic
+creatures and ships. Costs use one scale for the rest of this document:
+
+| Cost | Means |
+|---|---|
+| Cheap | Text rows and script lines only (or one `world_art.csv` row for the usual art pipeline). No C. |
+| Medium | A new room, a new sprite, or a C change under about fifty lines. |
+| Expensive | A new system (battle code, a new vehicle, a new screen) or a new art kit. |
+
+Every film line below was measured against the 208 px text box with the width table `tools/font_widths.json`;
+each line as written fits. Lines are quoted from `quotes.csv` and cut, never reworded, unless marked *(new)*.
+
+### 3.1 How a ride works now
+
+Three rides have a cabin: the Falcon (one shared room, `hangar-tatooine-kashyyyk`, for both legs), the Rebel
+shuttle (`hangar-tatooine-endor`) and the Sullustan transport (`hangar-tatooine-sullust`). They follow Mr.
+Briney's boat (`data/maps/Route104_MrBrineysHouse/scripts.inc`, `..._EventScript_SailingIntro`): talk to the
+pilot at the StarNAV console, fade, cabin, fade, the other hangar. The cable car keeps Emerald's scene
+(`src/cable_car.c`). The star liner keeps the S.S. Tidal rooms. Every other ride is hangar to hangar with a
+fade, like the Lilycove ferry (`data/maps/LilycoveCity_Harbor/scripts.inc`). The hyperspace jump has a VFX row
+(`net:vfx-hyperspace-jump`).
+
+That is sound. The problem is that most rides are silent: a console, a fade, a new planet. A film ride has one
+beat: a line from the pilot, a thing seen from the viewport, a face on the pad. One beat per ride is two or
+three text boxes in the hangar script, so almost every row below is Cheap.
+
+### 3.2 Every ride
+
+| Ride | Ship and pilot now | Proposed | The moment | Cost |
+|---|---|---|---|---|
+| Route 104 → Kachirho | Millennium Falcon, Han | Keep. | Chewie is just rescued and boards first. The cabin gets the dejarik table (`art:new:dejarik-table` exists). Han, at the console: "She may not look like much, but / she's got it where it counts, kid." The jump plays the hyperspace VFX. On the pad: Chewie leaves without a word; Han: "Kashyyyk. His home. Don't stare at the trees." *(new)* | Cheap |
+| Kachirho → Mos Eisley | Falcon, Han | Keep. The parked freighter at Docking Bay 94 (`art:tatooine:freighter-parked`) is named as the Falcon from this ride on. | Han, before landing: "Old Ben calls Mos Eisley a wretched / hive of scum and villainy." *(new, from Obi-Wan's line)*. The Falcon stays parked in the docking bay for the rest of the game, so the town has the ship in it. | Cheap |
+| Route 112 → Route 113 | Sullustan transport, no named pilot | **Nien Nunb flies it.** He is at Inyusu Tor with lines only (section 1); this gives him a job. | Nien speaks Sullustese; the console translates: "He says Sullust is hot. Keep your / companions out of the vents." *(new)*. The viewport shows the ash sky. | Cheap |
+| Route 112 → Mustafar Peak | Shuttle (cable car) | Keep Emerald's cable-car scene as a mining tram over lava; the redrawn background is already a cutscene-generator row (G4). | Attendant, first ride: "They say a Jedi died up there. / Nobody says which one." *(new)*. On the Act 5 ride the fortress spire is visible in the background. | Cheap |
+| Mos Espa → Route 118 | Rebel shuttle | Keep. Say what it is: a stolen Lambda-class Imperial shuttle (the Lambda slot). The cockpit art exists (`art:new:ship-cockpit`). | Pilot: "Stolen. The codes are older than me, / but they check out." *(new, after Piett)*. From orbit: "Forest moon. The Empire's been / surveying the far side. We go in low." *(new)* | Cheap |
+| Route 121 → Cloud City | Cloud City shuttle | **A twin-pod cloud car.** Bespin's own ship; one `world_art.csv` row, greybox piece, parked on the landing platform (`art:bespin:landing-platform`). | The moment is silence: Lobot waits on the platform, nods, and walks off. He never speaks in the films, so he never speaks here. | Cheap (text) + 1 art row |
+| Route 121 → Felucia Reserve | Reserve shuttle | Keep. | One warden line about the fungus forest. Nothing else; the reserve is its own set piece. | Cheap |
+| Cloud City → Jedha pad | Pilgrim shuttle | Keep. | The pilgrims chant on the way: "I am one with the Force / and the Force is with me." (Chirrut's mantra; Rogue One, not in the six-film db, see section 1). From orbit: "Star Destroyers over the holy city." *(new)*: the Empire holds Jedha in 2 BBY. | Cheap |
+| Jedha pad → Route 123 | Pilgrim shuttle | Keep. | A return drop. One line. | Cheap |
+| Cloud City → Yavin 4 | Rebel transport | **The Tantive IV, Captain Antilles** (section 1 swap): Bail Organa's consular ship running Alliance friends to the Massassi base. | Antilles: "Senator Organa sends his regards. / We fly for the Alliance now." *(new)*. Option: the cabin is the white corridor (one interior yaml, `greybox room`). On the pad Dodonna meets the ship (section 1 add). | Cheap (text) / Medium (corridor room) |
+| Yavin 4 → Hoth | Rebel survey shuttle | Keep. | Pilot: "Nothing lives out there but wampas / and tauntauns. Keep moving." *(new)*. The probe droid is a set piece below. | Cheap |
+| Yavin 4 → Tipoca City | Rebel transport | Keep. | Pilot: "Kamino isn't on any Republic chart. / Somebody erased it." *(new, the archive erasure)*. Rain on the pad. | Cheap |
+| Yavin 4 → Dagobah | Rebel transport | **A borrowed X-wing.** The player's first solo flight. It sinks into the bog on landing: the Empire Strikes Back homage moved onto the player, which fixes the "Luke's X-wing" landmark (section 2). Yoda raises it after the eighth shard. Details in 3.3. | The sink: a short scene on the pad (the X-wing object slides into the water, one sound, one line: "I have a bad feeling about this."). | Medium |
+| Dagobah → Asteroid Spire | Player's ship | **Han's Falcon.** When the titans wake, Han flies in ("heard about the storm") and takes the player into the asteroid field. The Falcon cabin room exists; the player's X-wing is still in the bog, so Han is needed, not decorative. | At the jump: "Never tell me the odds!" At the Spire's mouth: "This is no cave." (the Spire's wild table already has MYNOCKMAW; the EXOGORTH is the space slug). Inside: "Mynocks. Chewie, check the outside." | Cheap |
+| Dagobah → Ilum | Player's ship | The raised X-wing. | Yoda, at the pad: "Mind what you have learned. / Save you it can." | Cheap |
+| Yavin 4 → Death Star | Captured Imperial shuttle | Keep (the second Lambda). | The deck officer clears the shuttle: "It's an older code, sir, but it / checks out." The viewport art exists (`art:new:death-star-viewport`). | Cheap |
+| Cloud City / Mos Eisley → Grand Arena | Star liner (S.S. Tidal), Han as captain (Briney's role) | Keep the rooms. The liner is Lando's; Han flies it ("he owes me a ship"). | The lounge has a sabacc table: "Lando lost the Falcon at a table / like this one." *(new)*. Chewie on the lower deck. | Cheap |
+| Cloud City → Tython, Atollon, Mortis, the Wellspring | Charter ship | Keep. | One line per destination at the Cloud City console. | Cheap |
+| Jedha pad → Mustafar Peak | Imperial shuttle (captured) | Keep (Lambda). | The viewport: a Star Destroyer hangs over the lava; the shuttle flies under it and no one hails. The fortress below. Two boxes. | Cheap |
+
+Twenty-three rides. Three need a decision from the owner (the X-wing, Han's return, the Tantive IV); the rest
+are text.
+
+### 3.3 One-way escapes
+
+The owner asked for one-way escapes. Rule first: no planet is ever stranded. Every one-way ride ends on a
+planet with a hangar, and Emerald's Fly (StarNAV) needs nothing new. Three escapes fit the story as it stands.
+
+1. **The X-wing in the bog (Dagobah, Act 6).** The player lands on Dagobah in a borrowed X-wing and it sinks
+   (ride above). For the whole of Act 6 the ship sits nose-down in the swamp beside the pad, which is what the
+   sunken X-wing landmark (`art:dagobah:sunken-x-wing`) already draws; it just stops being Luke's. Han's Falcon
+   carries the player to the asteroids. After the eighth shard, Yoda raises the ship: he walks to the water, the
+   object rises (one fade, one sound), and he says "Do. Or do not. / There is no try." From then on it is the
+   player's ship for Ilum. Cost: Medium. One X-wing object sprite (64x64; placeholder: the vanilla S.S. Tidal
+   sprite scaled is wrong, so a greybox piece first), two short scripts in `world/dagobah/interiors/dagobah-hangar`
+   (about eighty lines), three text rows. The hangar yaml's "Player's ship" (`art:new:player-ship`) becomes the X-wing. Nothing else
+   changes: the hyperlane gates stay `event:sootopolis-crisis` and `flag:badge08-get`.
+2. **Jabba's sail barge to the Pit of Carkoon (Tatooine, Act 3 side content).** The barge dock
+   (`jabbas-palace-barge-dock`, `art:new:sail-barge`) is a prop today. Proposal: after the rancor pit, Bib
+   Fortuna invites the player aboard; the barge sails to the Great Pit in the Dune Sea and the player is put on
+   the plank. C-3PO's line, from a protocol droid on the deck: "In his belly, you will find a new / definition of
+   pain and suffering." The drop is a fixed battle with a SARLACC (Swalot line) in the palace band (level 23,
+   like the rancor), not catchable, same script shape as the rancor pit (`net:jabbas-palace`). Win, and the
+   barge leaves without you: the way back is on foot through the Dune Sea with SAND SKIM, past the older barge
+   wreck and the krayt bones, which gives the Dune Sea its reason to exist. Reward: an item only (no new power).
+   Gate: the rancor flag (`flag:unused-0x029`) and HM09 SAND SKIM, which OWEN gives at Mos Entha after the fifth shard
+   (`database/obtain.csv`), so the walk home is always possible. Cost: Medium: a warp with a fade, one short deck
+   scene (about forty lines), one fixed battle, six text rows, one flag.
+3. **The escape pod from the Death Star (post-game).** After Krennic on deck 5, the command deck's escape pod
+   (`art:shared:escape-pod`) drops the player into the Dune Sea beside the sandcrawler, which is A New Hope's
+   opening. The Jawas are already there. The shuttle from Yavin 4 flies back to the Death Star any time, so
+   nothing is lost. Cost: Cheap: one warp, two text rows.
+
+Not proposed: a one-way planet (the owner's loop through Tatooine needs every hangar open), and a ship the
+player steers (section 4.3).
+
+### 3.4 Set pieces, planet by planet
+
+"There now" is what the wiki already places. "Add" is proposed, each with a cost. Beats are kept short on
+purpose: a set piece in this engine is a room, a prop and three text boxes.
+
+**Tatooine.** There now: Mos Pelgo and the freighter, Ben's Hut (Obi-Wan; the Maul duel post-game), the Lars
+homestead at Tosche Station, Anchorhead with the T-16 prop, Beggar's Canyon (Chewie's rescue), the Cantina
+(Wuher, the band, Ponda Baba and Evazan, Greedo's optional battle), the Spacer Museum (Jabba and Boba Fett), the
+podrace grandstand (Sebulba), Watto's junk shop, Jabba's Palace (rancor pit, barge dock), the Dune Sea (sail
+barge wreck, sandcrawler, krayt bones), the Tusken Ruins. That is the best-covered planet in the game. Add:
+
+- **Shmi's and Cliegg's graves** at the homestead (section 1): two sign tiles, two text rows. Cheap.
+- **The krayt call.** When the player first enters the Jundland Wastes, play GREATKRAYT's cry off-screen
+  (`playmoncry`) and one line from a settler. Obi-Wan's trick in A New Hope. Cheap.
+- **The binary sunset.** The cheap version is a sky strip in the Tosche Station tileset with two suns (one
+  `terrain.csv` row). The real version is an evening palette on the homestead map for one scripted moment,
+  which is a palette copy of the tileset and a fade: Medium. Recommend the cheap version now.
+- **Han and Greedo in the booth** (the owner asked to consider a first meeting in the Cantina). Han has to be
+  met on Route 104 in Act 1, because the Falcon flies in Act 1. What the Cantina can hold is the *first proper
+  scene*: once, when the player enters with Han's flag set, Han and Greedo sit in the booth; Greedo backs down
+  (he lives until 0 BBY). Greedo's optional battle is already designed (`net:cantina-greedo-battle`). Cheap.
+- **The barge and the Sarlacc** (3.3). Medium.
+
+**Kashyyyk.** There now: Kachirho (Tarfful), the Shadowlands (Leia), the Republic Wreck (a Venator hull from
+the Clone Wars battle), Rwookrrorro (Chewbacca at home), the Ice Grotto. Add:
+
+- **Yoda's escape pod.** In Revenge of the Sith Yoda fled Kashyyyk in a pod with Chewbacca's help. Put
+  `art:shared:escape-pod` on the Republic Wreck's deck with one sign: "19 BBY. A Jedi left in this. Tarfful
+  says no more." *(new)*. It sets up Yoda's arena four acts later. Cheap.
+- **"Let the Wookiee win."** A dejarik table in Chewbacca's hut, one sign. Cheap.
+
+**Sullust.** There now: Inyusu Tor (Nien Nunb), Starfall Cavern (the meteorite), Pirin (Sabine's arena), the
+Magma Tunnels. Add: Nien flies the transport (3.2). Nothing else; Sullust is a short act.
+
+**Mustafar.** There now: Mustafar Peak (first Vader battle), the Mining Facility (Veers, the SITH SHARD, the
+duel record), Fortress Vader (Act 5), the lava viewport, the shuttle station. Add:
+
+- **The high ground.** One more line in the duel record: "It's over. I have the high ground." Cheap.
+- **An AT-AT at the Mining Facility.** Veers is there; the walker is his. One `world_art.csv` row (a large
+  landmark, about 4x3 tiles). Cheap to list; the usual art pipeline.
+- **Vader's chamber** on Fortress Vader 4F: a meditation pod prop with one line. Cheap.
+
+**Endor.** There now: the treewalk routes, Bright Tree (Chirpa's arena), Endor Station (Bossk), the Endor
+clearing (AT-ST wrecks, the Imperial bunker, the commando), Boba Fett stage 1, the Ancient Tomb, the Scorched
+Hollow. Add:
+
+- **The net.** The log trap art exists (`endor_log-trap`). First time into Bright Tree, the player is caught in
+  a net (fade, one sound) and WICKET (section 1 swap) cuts them down. Six script lines, three text rows. Cheap.
+- The Imperial bunker is a survey post in 2 BBY, not the shield generator; one line in its sign says so
+  (section 2's timeline fixes).
+
+**Felucia.** The reserve is its own set piece: catching. Option: a crashed Republic gunship with a sign about
+Order 66 (Aayla Secura died here); one art row, one text. Cheap, low priority.
+
+**Bespin.** There now: Cloud City (Lando, Lobot), the carbon-freezing chamber, the Hutt Hideout (Boba Fett;
+Jabba beaten), the Tibanna Refinery (Lobot's side job), the galleria, the showcase hall. Add:
+
+- **The carbonite trophy.** `new_carbonite-block` exists. Put it in the Hideout's throne room as Jabba's wall
+  piece: "a smuggler who crossed him". Not Han; it is 2 BBY. One sign. Cheap.
+- **The dinner.** Lando leads the player into the Hideout to "dinner", and Boba Fett is at the table: that is
+  the Hideout's Boba battle already; one line makes it the Empire Strikes Back beat. Cheap.
+- **An Ugnaught** in the refinery: re-skin one worker (a walker row). Cheap.
+- The cloud car on the landing platform (3.2).
+
+**Jedha.** There now: NiJedha (Chirrut, Baze, the kyber trader), the Temple of the Kyber (six floors, the
+summit, Vader's troops take the BLUE KYBER), Boba Fett stage 2, the pilgrim shuttle. Add:
+
+- **A stormtrooper patrol** in NiJedha's street: two trainers of the existing STORMTROOPER class, the Rogue One
+  street. Cheap.
+- The kyber trader reads the player's path (section 4.2). Cheap.
+- Saw's Partisan (section 1). Cheap.
+
+**Yavin 4.** There now: the Massassi Temple arena (Kanan and Ezra), the Launch Tower (the raid, the tag battle
+with Leia against Vader and Veers), the X-wing hangar (Wedge and the pilots), the medal ceremony, the Sabacc
+Den. Add: Dodonna, Mon Mothma and Ackbar (section 1), **Y-wings** beside the X-wings (one art row), and the
+scanner table on Launch Tower 2F (`new_scanner-table`) as the briefing table with one sign. Cheap.
+
+**Hoth.** There now: the tundra, the survey outpost (Rieekan, Derlin), the tauntaun shelter, the Wampa Cave (the
+lost scout), the snowspeeder, the Echo Base hangar door. Add:
+
+- **The WAMPA that has the scout.** When the player finds the lost scout he hangs from the ice like Luke, and
+  a fixed battle with a WAMPA (Glalie line, the cave's band) starts; not catchable, same script shape as the
+  rancor. Medium (one fixed battle, four text rows).
+- **The probe droid.** An Imperial probe droid stands on the tundra; walk up to it and it self-destructs (fade,
+  sound, a crater line). The Empire Strikes Back opening, two years early, which the timeline allows: the
+  Empire probes everywhere. Medium: one 32x32 object sprite (the big walker kit is not built; placeholder: a
+  vanilla sprite), one script.
+- Not proposed: tauntaun riding. A new mount is the hover-bike code plus a rider sheet: Expensive.
+
+**Kamino.** There now: Tipoca City, the cloning hall (Cody; PROTOCLONE's lab; the growth pods), the Sealed
+Vault, Boba Fett stage 3 on Route 134. Add: Jango's record and the Lama Su line (section 1), and **Slave I** parked
+on the Tipoca pad while Boba is at stage 3 (one art row, shown by the hunt var). Cheap.
+
+**Dagobah.** There now: the swamp town (Yoda's arena), Yoda's hut, the Cave of Evil (Obi-Wan at the mouth), the
+Drowned Cavern (Jabba wakes SANDO), the titans' clash, the sunken X-wing. Add: the X-wing sink and raise (3.3),
+Han's Falcon (3.2), and Obi-Wan's line at the cave by the player's path (section 4.2). Qui-Gon's "There's always
+a bigger fish." from a fisher on the pier after SANDO wakes. Cheap.
+
+**Asteroid Field.** There now: the Spire and the EXOGORTH. Add Han's three lines (3.2). Cheap.
+
+**Ilum.** There now: the Crystal Caves (Luke's last battle, Boba Fett's finale), the Four Trials, Obi-Wan, the
+visions (Maul, Qui-Gon, Ki-Adi, Anakin), the supply depot. Add: **the Gathering**: at the temple door Yoda hands
+the player a KYBER CRYSTAL, or Obi-Wan a SITH SHARD, by the player's path (section 4.2, stage 2). It is an
+existing item, so no new power. Cheap.
+
+**Death Star (post-game).** There now: five decks, the hangar (TIE rack, Imperial shuttle), Krennic on the
+command deck, Piett on the hangar deck, K-2SO, the superlaser console, the turbolift, the viewport, the trench
+wall. Add:
+
+- **The trash compactor.** A garbage chute on deck 3 drops the player into a compactor room on deck 2: a fixed
+  battle with a DIANOGA (Tentacruel line, deck band), then the walls close (two screen shakes, a fade) and K-2SO
+  opens the hatch. Leia's line on the chute sign: "Into the garbage chute, wise guy." Medium (one room, one
+  fixed battle, five text rows).
+- **Cell 2187** in the detention block: one sign. Cheap.
+- Tarkin on deck 5 (section 1). Cheap.
+- The escape pod exit (3.3). Cheap.
+
+**Grand Arena, Tython, Atollon, Mortis (post-game).** Add: the section 1 swaps (Cad Bane, Hondo), the liner's
+sabacc line (3.2), Thrawn and the Bendu at Atollon (section 1; the Bendu is the balance voice in section 4.2).
+Cheap.
+
+### 3.5 Classic creatures and ships
+
+**Creatures.** Checked against `mapping/species.csv` and `database/species_habitats.csv`. Every creature a
+film fan would name is a species and lives where it should: BANTHA, DEWBACK, RONTO, EOPIE, WOMPRAT and KRAYT
+on Tatooine (GREATKRAYT is the titan); SARLACC, RANCOR, DIANOGA, MYNOCK, EXOGORTH (the space slug); WAMPA and
+TAUNTAUN on Hoth; NEXU, REEK and ACKLAY (the Geonosis arena beasts); OPEE, COLOCLAW, KAADU, FAMBAA and NUNA from
+Naboo; AIWHA on Kamino; VARACTYL; KOWAKIAN; LOTHCAT, LOTHWOLF, TOOKA, PURRGIL and CONVOR from the series; MASSIFF.
+Droids: B1 and B2, IG UNIT, MOUSEDROID, GONK, the R-units, BUZZDROID, VULTURE, OCTUPTARRA, PIT DROID, the
+training REMOTE, the crab droid, FX-6 and MINDPROBE (the interrogation droid). PORG is the one sequel-era creature;
+harmless.
+
+Four icons have no row. The mapping is approved, so these are optional renames of rows whose basis is `original`
+(an invented creature), listed for the owner's "more invented names swapped for canon ones" note:
+
+| Missing | Why it matters | Row that could carry it |
+|---|---|---|
+| Droideka | The destroyer droid; every prequel fan expects it. | None fits well: every droid row is already a canon droid. Leave it. |
+| Probe droid | The Empire Strikes Back opening. | Better as the Hoth object above than as a species. |
+| Gundark | "Strong enough to pull the ears off a gundark." A big four-armed brute. | `species:slaking` SLOTHKING (line SLOTHLET, SLOTHFURY: all `original`) → GUNDARK. |
+| Nerf | "Nerf herder." The galaxy's cattle. | No `original` herd beast is free. Leave it; the insult can still appear in text. |
+
+**Ships.** Checked against `mapping/world_art.csv` and the greybox sheets.
+
+| Ship | In the game now | Proposed | Cost |
+|---|---|---|---|
+| Millennium Falcon | Cabin room; the parked freighter at Mos Eisley | Name the freighter as the Falcon; Han's asteroid run (3.2) | Cheap |
+| X-wing | Parked at Yavin 4; sunken on Dagobah | The player's X-wing (3.3) | Medium |
+| Snowspeeder | Hoth | Keep | – |
+| AT-ST, speeder bike | Wrecks on Endor | Keep | – |
+| TIE fighter | The rack in the Death Star hangar | Keep | – |
+| Lambda shuttle | The Imperial shuttle in the Death Star hangar; the Rebel shuttle and both captured shuttles are the same ship | Say so in each hangar's sign | Cheap |
+| Sail barge | Jabba's dock; a wreck in the Dune Sea | The barge ride (3.3) | Medium |
+| Podracers | Mos Espa, the course on Route 110 | Keep | – |
+| Sandcrawler, landspeeder, escape pod | Dune Sea; every town | The pod as the Death Star exit (3.3) | Cheap |
+| Republic cruiser | The wreck on Kashyyyk | Yoda's pod on its deck (3.4) | Cheap |
+| S.S. Tidal | The star liner rooms | Lando's liner, Han flying (3.2) | Cheap |
+| **AT-AT** | Missing | The Mining Facility, with Veers (3.4) | 1 art row |
+| **Slave I** | Missing | The Tipoca pad at Boba's stage 3 (3.4) | 1 art row |
+| **Star Destroyer** | Only a quarters interior | Seen from the Jedha → Mustafar shuttle viewport (3.2); never walked on | Cheap (text) |
+| **Y-wing** | Missing | Beside the X-wings on Yavin 4 (3.4) | 1 art row |
+| **Tantive IV** | Missing | The Bespin → Yavin ride (3.2) | Cheap / Medium |
+| **Probe droid** | Missing | The Hoth tundra (3.4) | Medium |
+| **Cloud car** | Missing | The Endor → Bespin ride (3.2) | 1 art row |
+| Jedi starfighter, N-1, skiff | Missing | Not needed by any scene. Skip. | – |
+
+The verdict for Part 2: the rooms are there. The game already has more film rooms than most fan games, and
+nearly all of them in the right place. What it lacks is the *moment* on the way in: the line at the console, the
+thing out the window, the face on the pad. Those are text, and they are the cheapest way to make a planet feel
+like Star Wars rather than like Hoenn with new names.
 
 ## 4. Side content and the light / dark paths
 
