@@ -133,6 +133,11 @@ in `../game`. Every `source_file` is a path relative to `../game`.
 - New flags and vars use only Emerald's unused slots (listed in `bible/NET_NEW_DESIGNS.md`).
 - Name limits: creature 10, move 12, item 14, ability 12, type 6, trainer class 12, trainer name 10, map name 16.
 - [`bible/STORY.md`](bible/STORY.md) is the story: planets, factions, cast, acts.
+- [`bible/FAN_CRITIQUE.md`](bible/FAN_CRITIQUE.md) is the fan and critic read of the whole game (2026-11-03):
+  who is missing, who is filler, placement and timeline problems, transitions and set pieces, side content and
+  the light / dark paths, each with a cost. Proposals only; nothing lands until the owner approves it.
+  `python3 tools/prominence.py` scores every starwars-db entity (`mapping/proposals/prominence.csv`) and every
+  visible slot in the game (`prominence_slots.csv`); it needs `../starwars-db` or `STARWARS_DB_DIR`.
 - **World art:** [`bible/WORLD_ART.md`](bible/WORLD_ART.md) and `mapping/world_art.csv` (every piece with its `status`,
   `build`, `tool` and `notes`; `python3 -m blockout todo` queries it with the areas) are the source of truth for
   the new buildings, interiors, objects and nature each planet and town gets (with signal/noise placement rules and
@@ -213,6 +218,7 @@ python3 tools/encounters.py # encounters.csv (habitat swaps, new-area tables)
 python3 tools/habitats.py   # species_habitats.csv
 python3 tools/sand_skim.py  # sand_skim.csv, dune_sea_encounters.csv (Dune Sea field move)
 python3 tools/obtain.py     # obtain.csv, npcs.csv (who gives what, in story order)
+python3 tools/prominence.py # mapping/proposals/prominence*.csv (fan prominence of every starwars-db entity; needs starwars-db)
 python3 wiki/server.py      # browse at http://127.0.0.1:8000
 ```
 

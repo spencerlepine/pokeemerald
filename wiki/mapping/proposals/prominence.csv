@@ -1,0 +1,526 @@
+id,category,title,films,films_w,lines,lines_w,scenes_w,reach,db_score,fan,score,era_note,source,in_game,game_use
+databank:1-the-phantom-menace:characters:obi-wan-kenobi,characters,Obi-Wan Kenobi,6,7.5,631,631.0,0.0,5,146.6,30,176.6,,starwars-db,yes,"character:wallace OBI-WAN: Hermit 'Ben', guardian of the Cave of Evil during the crisis"
+databank:1-the-phantom-menace:characters:c-3po,characters,C-3PO (See-Threepio),6,7.5,518,517.5,0.0,6,146.7,20,166.7,,starwars-db,yes,net:character-c-3po (ALDERAAN)
+databank:3-revenge-of-the-sith:characters:luke-skywalker,characters,Luke Skywalker,4,5.5,740,739.5,0.0,6,130.1,30,160.1,,starwars-db,yes,character:wally LUKE: Farm boy longing for adventure; catches a AURALET with the p
+databank:3-revenge-of-the-sith:characters:leia-organa,characters,Leia Organa,4,5.5,357,357.0,0.0,6,123.2,30,153.2,,starwars-db,yes,character:steven LEIA: Young senator and secret Rebel courier
+databank:1-the-phantom-menace:characters:r2-d2,characters,R2-D2,6,7.5,43,43.0,0.0,6,123.2,30,153.2,,starwars-db,yes,net:character-r2-d2 (ALDERAAN)
+databank:1-the-phantom-menace:characters:anakin-skywalker,characters,Anakin Skywalker,4,4.5,633,633.0,0.0,6,118.6,30,148.6,,starwars-db,yes,character:drake ANAKIN: Fourth Trial (Dragon): the fallen hero on Mustafar
+databank:3-revenge-of-the-sith:characters:darth-vader,characters,Darth Vader,4,5.5,218,217.5,0.0,6,118.5,30,148.5,,starwars-db,yes,character:maxie VADER: Leader of the Imperial task force hunting the land titan GRE
+databank:1-the-phantom-menace:characters:yoda,characters,Yoda,5,6.0,216,215.5,0.0,3,117.4,30,147.4,,starwars-db,yes,character:juan YODA: In exile on Dagobah; Arena Leader (Water/swamp)
+databank:4-a-new-hope:characters:han-solo,characters,Han Solo,3,4.5,692,691.5,0.0,4,115.5,30,145.5,,starwars-db,yes,character:mr-briney HAN: Smuggler who flies the player between planets in the Millenn
+databank:1-the-phantom-menace:characters:emperor-palpatine-darth-sidious,characters,Emperor Palpatine (Darth Sidious),5,6.0,262,262.0,0.0,6,125.2,20,145.2,,starwars-db,yes,net:character-palpatine (CORUSCANT)
+databank:2-attack-of-the-clones:characters:boba-fett,characters,Boba Fett,4,5.5,13,13.0,0.0,6,92.2,30,122.2,,starwars-db,yes,character:matt BOBA FETT: Jabba's top bounty hunter; recurring boss (Hutt Hideout)
+databank:5-the-empire-strikes-back:characters:lando-calrissian,characters,Lando Calrissian,2,3.0,148,148.5,0.0,5,87.8,20,107.8,,starwars-db,yes,"character:scott LANDO: Gambler and talent scout who keeps turning up, then opens th"
+databank:1-the-phantom-menace:characters:padme-amidala,characters,Padmé Amidala,3,3.0,387,387.0,0.0,2,91.0,10,101.0,,starwars-db,no,
+databank:1-the-phantom-menace:characters:jabba-the-hutt,characters,Jabba the Hutt,3,4.0,41,41.0,0.0,1,77.7,20,97.7,,starwars-db,yes,character:archie JABBA: Hutt Cartel boss after the sea titan SANDO
+databank:3-revenge-of-the-sith:characters:chewbacca,characters,Chewbacca,4,5.5,0,0.0,0.0,6,67.0,30,97.0,,starwars-db,yes,"character:peeko CHEWIE: Han's co-pilot, kidnapped by cartel thugs in Beggar's Canyon"
+databank:1-the-phantom-menace:locations:tatooine,locations,Tatooine,5,6.0,0,0.0,41.5,6,96.4,0,96.4,,starwars-db,yes,"planet TATOOINE (main, act 1)"
+databank:4-a-new-hope:characters:wedge-antilles,characters,Wedge Antilles,3,4.5,48,48.0,0.0,2,86.2,10,96.2,,starwars-db,yes,net:character-wedge (CORELLIA)
+databank:3-revenge-of-the-sith:vehicles:millennium-falcon,vehicles,Millennium Falcon,4,5.5,0,0.0,73.5,4,91.1,0,91.1,,starwars-db,yes,hyperlane hl-tatooine-kashyyyk-han (Millennium Falcon (Han)); hyperlane hl-kashyyyk-tatooine-eisley (Millennium Falcon (Han)); hyperlane Tatooine/Kashyyyk
+databank:3-revenge-of-the-sith:characters:grand-moff-tarkin,characters,Grand Moff Tarkin,2,2.5,42,42.0,0.0,4,68.9,20,88.9,,starwars-db,no,
+databank:1-the-phantom-menace:characters:mace-windu,characters,Mace Windu,2,2.0,84,84.0,0.0,3,68.4,20,88.4,,starwars-db,no,
+databank:1-the-phantom-menace:characters:qui-gon-jinn,characters,Qui-Gon Jinn,1,1.0,185,185.0,0.0,3,65.9,20,85.9,,starwars-db,yes,character:phoebe QUI-GON: Second Trial (Spirit): the first Jedi to return as a Force s
+databank:4-a-new-hope:vehicles:x-wing-starfighter,vehicles,X-wing Starfighter,3,4.5,0,0.0,43.5,6,81.7,0,81.7,,starwars-db,yes,"world art Yavin 4, Dagobah"
+databank:1-the-phantom-menace:driods:astromech-droid,driods,Astromech Droid,6,7.5,0,0.0,0.0,3,81.0,0,81.0,,starwars-db,yes,companion R1 UNIT (ALDERAAN); companion R4 UNIT (ALDERAAN); companion R2 UNIT (ALDERAAN); trainer class PILOT&DROID
+databank:1-the-phantom-menace:driods:protocol-droid,driods,Protocol Droid,6,7.5,0,0.0,0.0,3,81.0,0,81.0,,starwars-db,yes,companion 3PO UNIT (CORUSCANT); companion TC UNIT (CORUSCANT)
+databank:1-the-phantom-menace:locations:coruscant,locations,Coruscant,4,4.5,0,0.0,37.0,6,80.7,0,80.7,,starwars-db,no,
+databank:2-attack-of-the-clones:characters:count-dooku,characters,Count Dooku,2,2.0,35,35.0,0.0,2,58.2,20,78.2,,starwars-db,yes,net:relic-dooku (MUSTAFAR)
+databank:1-the-phantom-menace:locations:naboo,locations,Naboo,4,4.5,0,0.0,40.0,3,75.2,0,75.2,,starwars-db,no,
+databank:1-the-phantom-menace:species:wookiee,species,Wookiee,5,6.5,0,0.0,0.0,5,75.0,0,75.0,,starwars-db,yes,trainer class WOOKIEE; trainer class WOOKIEE CUB
+databank:4-a-new-hope:vehicles:imperial-star-destroyer,vehicles,Imperial Star Destroyer,3,4.5,0,0.0,25.5,4,74.3,0,74.3,,starwars-db,no,
+databank:1-the-phantom-menace:characters:jar-jar-binks,characters,Jar Jar Binks,3,3.0,82,82.0,0.0,1,74.2,0,74.2,,starwars-db,yes,net:jar-jar-traveller (NABOO)
+databank:1-the-phantom-menace:locations:jedi-temple,locations,Jedi Temple,4,4.5,0,0.0,17.0,5,73.8,0,73.8,,starwars-db,no,
+databank:2-attack-of-the-clones:characters:owen-lars,characters,Owen Lars,3,3.5,44,44.5,0.0,1,73.5,0,73.5,,starwars-db,yes,character:wallys-father OWEN: Luke's uncle and guardian in Mos Entha; gives HM03 SURF and 
+databank:1-the-phantom-menace:driods:gonk-droid,driods,Gonk Droid,5,6.5,0,0.0,0.0,4,73.0,0,73.0,,starwars-db,yes,companion GONK (TATOOINE); world art art:shared:gonk-droid
+databank:4-a-new-hope:vehicles:y-wing-starfighter,vehicles,Y-wing Starfighter,3,4.5,0,0.0,18.0,4,72.2,0,72.2,,starwars-db,no,
+databank:1-the-phantom-menace:characters:nute-gunray,characters,Nute Gunray,3,3.0,49,49.0,0.0,1,69.4,0,69.4,,starwars-db,no,
+databank:2-attack-of-the-clones:characters:bail-organa,characters,Bail Organa,2,2.0,45,45.0,0.0,6,68.6,0,68.6,,starwars-db,yes,"character:mr-stone SEN. ORGANA: Leia's father, backer of House Organa; gives the StarNAV and"
+databank:3-revenge-of-the-sith:characters:mon-mothma,characters,Mon Mothma,2,2.5,10,10.5,0.0,5,58.3,10,68.3,,starwars-db,no,
+databank:5-the-empire-strikes-back:characters:admiral-piett,characters,Admiral Piett,2,3.0,46,46.5,0.0,0,66.9,0,66.9,,starwars-db,yes,"net:character-piett (DEATH STAR); person:death-star-hangar:103 (boss, death-star-hangar)"
+databank:3-revenge-of-the-sith:driods:mouse-droid,driods,Mouse Droid,4,5.5,0,0.0,0.0,5,65.0,0,65.0,,starwars-db,yes,companion MOUSEDROID (TATOOINE); companion MOUSESWARM (TATOOINE)
+databank:3-revenge-of-the-sith:locations:death-star,locations,Death Star,2,2.5,0,0.0,165.0,2,62.3,0,62.3,,starwars-db,yes,"planet DEATH STAR (post, act 8)"
+databank:1-the-phantom-menace:species:bith,species,Bith,5,6.0,0,0.0,0.0,1,62.0,0,62.0,,starwars-db,no,
+databank:2-attack-of-the-clones:characters:beru-lars,characters,Beru Lars,3,3.5,12,11.5,0.0,1,61.1,0,61.1,,starwars-db,no,
+databank:6-return-of-the-jedi:characters:admiral-ackbar,characters,Admiral Ackbar,1,1.5,21,21.0,0.0,3,50.5,10,60.5,,starwars-db,no,
+databank:1-the-phantom-menace:characters:bib-fortuna,characters,Bib Fortuna,2,2.5,9,9.0,0.0,1,49.0,10,59.0,,starwars-db,yes,net:character-bib-fortuna (TATOOINE)
+databank:2-attack-of-the-clones:driods:wed-treadwell-droid,driods,WED Treadwell Droid,4,5.5,0,0.0,0.0,2,59.0,0,59.0,,starwars-db,no,
+databank:1-the-phantom-menace:characters:sio-bibble,characters,Sio Bibble,3,3.0,14,14.0,0.0,1,57.9,0,57.9,,starwars-db,yes,"trainer name SIO BIBBLE (Sio Bibble, Governor of Naboo, on the st)"
+databank:1-the-phantom-menace:characters:mas-amedda,characters,Mas Amedda,3,3.0,11,11.0,0.0,2,57.7,0,57.7,,starwars-db,no,
+databank:1-the-phantom-menace:characters:watto,characters,Watto,2,2.0,40,40.0,0.0,1,57.5,0,57.5,,starwars-db,yes,character:wattson WATTO: Toydarian junk dealer and Mos Espa Arena Leader (Electric)
+databank:1-the-phantom-menace:species:jawa,species,Jawa,4,5.0,0,0.0,0.0,3,56.0,0,56.0,,starwars-db,yes,trainer class JAWA
+databank:1-the-phantom-menace:characters:ki-adi-mundi,characters,Ki-Adi-Mundi,3,3.0,7,7.0,0.0,3,55.9,0,55.9,,starwars-db,yes,character:glacia KI-ADI: Third Trial (Ice): the betrayal on frozen Mygeeto
+databank:1-the-phantom-menace:characters:shmi-skywalker-lars,characters,Shmi Skywalker Lars,2,2.0,33,33.0,0.0,1,55.7,0,55.7,,starwars-db,no,
+databank:1-the-phantom-menace:characters:maul,characters,Maul,1,1.0,3,3.0,0.0,6,35.2,20,55.2,,starwars-db,yes,"character:sidney MAUL: First Trial (Dark): a Force vision of fear; person:bens-hut:003 (boss, bens-hut)"
+databank:1-the-phantom-menace:characters:rune-haako,characters,Rune Haako,3,3.0,13,13.0,0.0,0,55.2,0,55.2,,starwars-db,no,
+databank:1-the-phantom-menace:creatures:bantha,creatures,Bantha,4,5.0,0,0.0,0.0,2,54.0,0,54.0,,starwars-db,yes,companion BANTHACALF (TATOOINE); companion BANTHA (TATOOINE)
+databank:3-revenge-of-the-sith:characters:general-grievous,characters,General Grievous,1,1.0,27,27.0,0.0,1,43.8,10,53.8,,starwars-db,yes,net:vision-grievous (DAGOBAH)
+databank:4-a-new-hope:characters:garven-dreis,characters,Garven Dreis,1,1.5,54,54.0,0.0,0,53.3,0,53.3,,starwars-db,yes,"trainer name DREIS (Garven Dreis, Red Leader at Yavin)"
+databank:4-a-new-hope:vehicles:tie-fighter,vehicles,TIE Fighter,3,4.5,0,0.0,0.0,4,53.0,0,53.0,,starwars-db,yes,world art Death Star rack
+databank:4-a-new-hope:characters:biggs-darklighter,characters,Biggs Darklighter,1,1.5,51,51.0,0.0,0,52.8,0,52.8,,starwars-db,yes,"character:roxanne BIGGS: Luke's friend from Anchorhead, home from the flight academy;"
+databank:5-the-empire-strikes-back:locations:cloud-city,locations,Cloud City,2,3.0,0,0.0,24.0,0,51.0,0,51.0,,starwars-db,yes,location:lilycove-city CLOUD CITY (BESPIN); location:aqua-hideout-old HUTT HIDEOUT (BESPIN); location:aqua-hideout HUTT HIDEOUT (BESPIN)
+databank:1-the-phantom-menace:locations:coruscant-senate-building,locations,Coruscant Senate Building,4,4.5,0,0.0,0.0,3,51.0,0,51.0,,starwars-db,no,
+databank:1-the-phantom-menace:species:twi-lek,species,Twi'lek,4,4.5,0,0.0,0.0,3,51.0,0,51.0,,starwars-db,yes,trainer class TWINS
+databank:1-the-phantom-menace:species:gran,species,Gran,4,4.5,0,0.0,0.0,2,49.0,0,49.0,,starwars-db,no,
+databank:1-the-phantom-menace:species:nikto-red,species,Nikto (Red),4,4.5,0,0.0,0.0,2,49.0,0,49.0,,starwars-db,no,
+databank:3-revenge-of-the-sith:vehicles:alderaan-cruiser,vehicles,Alderaan Cruiser,3,4.0,0,0.0,1.0,2,48.5,0,48.5,,starwars-db,no,
+databank:1-the-phantom-menace:characters:orn-free-taa,characters,Orn Free Taa,3,3.0,3,3.0,0.0,2,47.2,0,47.2,,starwars-db,no,
+databank:1-the-phantom-menace:characters:boss-nass,characters,Boss Nass,2,2.0,16,16.0,0.0,0,47.1,0,47.1,,starwars-db,no,
+databank:2-attack-of-the-clones:characters:jango-fett,characters,Jango Fett,1,1.0,16,16.0,0.0,0,37.1,10,47.1,,starwars-db,no,
+databank:1-the-phantom-menace:species:gungan,species,Gungan,4,4.5,0,0.0,0.0,1,47.0,0,47.0,,starwars-db,no,
+databank:1-the-phantom-menace:species:quarren,species,Quarren,4,4.5,0,0.0,0.0,1,47.0,0,47.0,,starwars-db,yes,trainer class ANGLER
+databank:1-the-phantom-menace:locations:theed-royal-palace,locations,Theed Royal Palace,4,4.5,0,0.0,0.0,1,47.0,0,47.0,,starwars-db,no,
+databank:1-the-phantom-menace:vehicles:naboo-n-1-starfighter,vehicles,Naboo N-1 Starfighter,3,3.5,0,0.0,1.0,3,45.5,0,45.5,,starwars-db,no,
+databank:2-attack-of-the-clones:characters:captain-typho,characters,Captain Typho,2,2.0,10,10.0,0.0,1,44.9,0,44.9,,starwars-db,no,
+databank:1-the-phantom-menace:characters:captain-panaka,characters,Captain Panaka,1,1.0,35,35.0,0.0,0,44.2,0,44.2,,starwars-db,no,
+databank:3-revenge-of-the-sith:driods:2-1b-droid,driods,2-1B Droid,3,4.0,0,0.0,0.0,2,44.0,0,44.0,,starwars-db,yes,character:pokemon-center-nurse 2-1B: Heals the party at every Bacta Center; companion 2-1B UNIT (POLIS MASSA)
+databank:5-the-empire-strikes-back:characters:general-rieekan,characters,General Rieekan,1,1.5,20,19.5,0.0,0,43.9,0,43.9,,starwars-db,yes,net:character-rieekan (ALDERAAN)
+databank:1-the-phantom-menace:locations:mos-espa,locations,Mos Espa,2,2.0,0,0.0,26.0,1,43.5,0,43.5,,starwars-db,yes,location:mauville-city MOS ESPA (TATOOINE)
+databank:5-the-empire-strikes-back:vehicles:imperial-shuttle,vehicles,Imperial Shuttle,2,3.0,0,0.0,4.5,1,43.1,0,43.1,,starwars-db,yes,"hyperlane hl-jedha-mustafar (Imperial shuttle (captured)); world art art:new:imperial-shuttle; hyperlane Jedha/Mustafar, Death Star"
+databank:6-return-of-the-jedi:characters:nien-nunb,characters,Nien Nunb,1,1.5,9,9.0,0.0,3,43.0,0,43.0,,starwars-db,yes,net:character-nien-nunb (SULLUST)
+databank:2-attack-of-the-clones:characters:lama-su,characters,Lama Su,1,1.0,19,19.0,0.0,2,42.6,0,42.6,,starwars-db,no,
+databank:1-the-phantom-menace:characters:plo-koon,characters,Plo Koon,3,3.0,2,2.0,0.0,1,42.5,0,42.5,,starwars-db,no,
+databank:1-the-phantom-menace:species:hutt,species,Hutt,3,4.0,0,0.0,0.0,1,42.0,0,42.0,,starwars-db,no,
+databank:5-the-empire-strikes-back:locations:dagobah,locations,Dagobah,2,3.0,0,0.0,3.0,1,41.0,0,41.0,,starwars-db,yes,"organization:sootopolis-gym DAGOBAH ARENA: Water arena (cracking ice becomes sinking bog), Leader Yoda; location:sootopolis-city DAGOBAH (DAGOBAH); planet DAGOBAH (main, act 6)"
+databank:4-a-new-hope:characters:greedo,characters,Greedo,1,1.5,9,9.0,0.0,2,41.0,0,41.0,,starwars-db,yes,net:cantina-greedo-battle
+databank:1-the-phantom-menace:species:ithorians,species,Ithorians,3,3.5,0,0.0,0.0,3,41.0,0,41.0,,starwars-db,yes,trainer class HERBALIST
+databank:4-a-new-hope:characters:jan-dodonna,characters,Jan Dodonna,1,1.5,9,9.0,0.0,2,41.0,0,41.0,,starwars-db,no,
+databank:2-attack-of-the-clones:characters:jocasta-nu,characters,Jocasta Nu,1,1.0,15,15.0,0.0,2,40.5,0,40.5,,starwars-db,no,
+databank:5-the-empire-strikes-back:characters:general-veers,characters,General Veers,1,1.5,10,10.5,0.0,0,38.3,0,38.3,,starwars-db,yes,character:tabitha VEERS: Vader's field commander
+databank:6-return-of-the-jedi:characters:moff-jerjerrod,characters,Moff Jerjerrod,1,1.5,10,10.5,0.0,0,38.3,0,38.3,,starwars-db,no,
+databank:3-revenge-of-the-sith:locations:alderaan,locations,Alderaan,2,2.5,0,0.0,3.0,2,38.0,0,38.0,,starwars-db,no,
+databank:2-attack-of-the-clones:characters:taun-we,characters,Taun We,1,1.0,11,11.0,0.0,2,37.7,0,37.7,,starwars-db,no,
+databank:2-attack-of-the-clones:locations:padmes-apartment,locations,Padmé's Apartment,2,2.0,0,0.0,10.0,1,37.6,0,37.6,,starwars-db,no,
+databank:1-the-phantom-menace:vehicles:coruscant-air-taxi,vehicles,Coruscant Air Taxi,3,3.5,0,0.0,0.0,1,37.0,0,37.0,,starwars-db,no,
+databank:1-the-phantom-menace:species:dug,species,Dug,3,3.5,0,0.0,0.0,1,37.0,0,37.0,,starwars-db,no,
+databank:1-the-phantom-menace:species:klatooinian,species,Klatooinian,3,3.5,0,0.0,0.0,1,37.0,0,37.0,,starwars-db,no,
+databank:2-attack-of-the-clones:locations:lars-moisture-farm,locations,Lars Moisture Farm,3,3.5,0,0.0,0.0,1,37.0,0,37.0,,starwars-db,no,
+databank:1-the-phantom-menace:vehicles:sandcrawler,vehicles,Sandcrawler,3,3.5,0,0.0,0.0,1,37.0,0,37.0,,starwars-db,yes,location:mirage-tower SANDCRAWLER (TATOOINE); world art art:tatooine:sandcrawler
+databank:5-the-empire-strikes-back:vehicles:at-at-walker,vehicles,AT-AT Walker (All Terrain Armored Transport),2,3.0,0,0.0,0.0,3,36.0,0,36.0,,starwars-db,no,
+databank:1-the-phantom-menace:driods:battle-droid,driods,Battle Droid,3,3.0,0,0.0,0.0,3,36.0,0,36.0,,starwars-db,yes,companion B1 DROID (MUSTAFAR)
+databank:5-the-empire-strikes-back:locations:hoth,locations,Hoth,1,1.5,0,0.0,24.0,0,36.0,0,36.0,,starwars-db,yes,"location:shoal-cave WAMPA CAVE (HOTH); planet HOTH (side, act 5)"
+databank:5-the-empire-strikes-back:driods:imperial-probe-droid,driods,Imperial Probe Droid,2,3.0,0,0.0,0.0,3,36.0,0,36.0,,starwars-db,no,
+databank:5-the-empire-strikes-back:vehicles:snowspeeder,vehicles,Snowspeeder,1,1.5,0,0.0,24.0,0,36.0,0,36.0,,starwars-db,yes,world art art:hoth:snowspeeder; world art Hoth
+databank:5-the-empire-strikes-back:vehicles:super-star-destroyer,vehicles,Super Star Destroyer,2,3.0,0,0.0,1.5,0,36.0,0,36.0,,starwars-db,no,
+databank:3-revenge-of-the-sith:characters:captain-antilles,characters,Captain Antilles,2,2.5,2,2.0,0.0,0,35.5,0,35.5,,starwars-db,no,
+databank:5-the-empire-strikes-back:characters:admiral-ozzel,characters,Admiral Ozzel,1,1.5,8,7.5,0.0,0,35.4,0,35.4,,starwars-db,yes,"net:character-ozzel (DEATH STAR); person:death-star-ds-3:113 (trainer, death-star-ds-3)"
+databank:5-the-empire-strikes-back:characters:captain-needa,characters,Captain Needa,1,1.5,8,7.5,0.0,0,35.4,0,35.4,,starwars-db,yes,"net:character-needa (DEATH STAR); person:death-star-ds-4:116 (trainer, death-star-ds-4)"
+databank:1-the-phantom-menace:characters:ric-olie,characters,Ric Olie,1,1.0,13,13.0,0.0,0,35.2,0,35.2,,starwars-db,yes,"character:capt-stern RIC OLIé: Veteran Naboo pilot running a shipyard at Mos Eisley, buildi"
+databank:2-attack-of-the-clones:vehicles:speeder-bike,vehicles,Speeder Bike,2,2.5,0,0.0,0.0,5,35.0,0,35.0,,starwars-db,no,
+databank:3-revenge-of-the-sith:characters:clone-commander-cody,characters,Clone Commander Cody,1,1.0,10,10.0,0.0,1,34.9,0,34.9,,starwars-db,yes,net:character-cody (KAMINO)
+databank:3-revenge-of-the-sith:locations:mustafar,locations,Mustafar,1,1.0,0,0.0,11.0,4,34.2,0,34.2,,starwars-db,yes,"location:mt-chimney MUSTAFAR PEAK (MUSTAFAR); location:magma-hideout FORTRESS VADER (MUSTAFAR); planet MUSTAFAR (main, act 3); world art art:mustafar:fortress-vader"
+databank:5-the-empire-strikes-back:vehicles:tie-bomber,vehicles,TIE Bomber,2,3.0,0,0.0,0.0,2,34.0,0,34.0,,starwars-db,no,
+databank:1-the-phantom-menace:creatures:eopie,creatures,eopie,3,3.0,0,0.0,0.0,2,34.0,0,34.0,,starwars-db,yes,companion EOPIE (TATOOINE)
+databank:2-attack-of-the-clones:characters:dexter-jettster,characters,Dexter Jettster,1,1.0,11,11.0,0.0,0,33.7,0,33.7,,starwars-db,yes,"character:brandon DEXTER: Grand Arena Pyramid ace, an old prospector"
+databank:4-a-new-hope:characters:admiral-motti,characters,Admiral Motti,1,1.5,6,6.0,0.0,0,33.6,0,33.6,,starwars-db,yes,"person:death-star-ds-1:107 (trainer, death-star-ds-1)"
+databank:4-a-new-hope:characters:general-tagge,characters,General Tagge,1,1.5,6,6.0,0.0,0,33.6,0,33.6,,starwars-db,yes,"person:death-star-ds-2:110 (trainer, death-star-ds-2)"
+databank:5-the-empire-strikes-back:characters:wes-janson,characters,Wes Janson,1,1.5,6,6.0,0.0,0,33.6,0,33.6,,starwars-db,yes,net:character-janson (YAVIN 4)
+databank:2-attack-of-the-clones:characters:queen-jamillia,characters,Queen Jamillia,1,1.0,10,10.0,0.0,0,32.9,0,32.9,,starwars-db,no,
+databank:5-the-empire-strikes-back:vehicles:at-st-walker,vehicles,AT-ST Walker,2,3.0,0,0.0,0.0,1,32.0,0,32.0,,starwars-db,yes,world art Endor clearing wrecks
+databank:5-the-empire-strikes-back:characters:bossk,characters,Bossk,2,3.0,0,0.0,0.0,1,32.0,0,32.0,,starwars-db,yes,"character:shelly BOSSK: Trandoshan bounty hunter on Jabba's payroll (Endor Station, "
+databank:1-the-phantom-menace:species:cerean,species,Cerean,3,3.0,0,0.0,0.0,1,32.0,0,32.0,,starwars-db,no,
+databank:1-the-phantom-menace:species:chagrian,species,Chagrian,3,3.0,0,0.0,0.0,1,32.0,0,32.0,,starwars-db,no,
+databank:5-the-empire-strikes-back:characters:dengar,characters,Dengar,2,3.0,0,0.0,0.0,1,32.0,0,32.0,,starwars-db,yes,character:tucker DENGAR: Grand Arena Dome ace
+databank:1-the-phantom-menace:driods:droideka,driods,Droideka,3,3.0,0,0.0,0.0,1,32.0,0,32.0,,starwars-db,yes,companion DEKALET (SPACE); companion DROIDEKA (SPACE)
+databank:1-the-phantom-menace:species:neimoidian,species,Neimoidian,3,3.0,0,0.0,0.0,1,32.0,0,32.0,,starwars-db,no,
+databank:1-the-phantom-menace:vehicles:neimoidian-escort-shuttle,vehicles,Neimoidian Escort Shuttle,3,3.0,0,0.0,0.0,1,32.0,0,32.0,,starwars-db,no,
+databank:1-the-phantom-menace:characters:saesee-tiin,characters,Saesee Tiin,3,3.0,0,0.0,0.0,1,32.0,0,32.0,,starwars-db,no,
+databank:1-the-phantom-menace:species:togruta,species,Togruta,3,3.0,0,0.0,0.0,1,32.0,0,32.0,,starwars-db,no,
+databank:1-the-phantom-menace:vehicles:trade-federation-battleship,vehicles,Trade Federation Battleship,3,3.0,0,0.0,0.0,1,32.0,0,32.0,,starwars-db,no,
+databank:5-the-empire-strikes-back:characters:major-bren-derlin,characters,Major Bren Derlin,1,1.5,4,4.5,0.0,0,31.3,0,31.3,,starwars-db,yes,net:character-derlin (HOTH)
+databank:3-revenge-of-the-sith:vehicles:escape-pod,vehicles,Escape Pod,2,2.5,0,0.0,0.0,3,31.0,0,31.0,,starwars-db,yes,world art art:shared:escape-pod; world art route landmark
+databank:3-revenge-of-the-sith:species:mon-calamari,species,Mon Calamari,2,2.5,0,0.0,0.0,3,31.0,0,31.0,,starwars-db,yes,trainer class MON CAL
+databank:1-the-phantom-menace:characters:supreme-chancellor-valorum,characters,Supreme Chancellor Valorum,1,1.0,6,6.0,0.0,1,30.6,0,30.6,,starwars-db,no,
+databank:5-the-empire-strikes-back:locations:bespin,locations,Bespin,2,3.0,0,0.0,0.0,0,30.0,0,30.0,,starwars-db,yes,"planet BESPIN (main, act 5)"
+databank:5-the-empire-strikes-back:vehicles:cloud-car,vehicles,Cloud Car,2,3.0,0,0.0,0.0,0,30.0,0,30.0,,starwars-db,no,
+databank:5-the-empire-strikes-back:vehicles:executor,vehicles,Executor,2,3.0,0,0.0,0.0,0,30.0,0,30.0,,starwars-db,no,
+databank:5-the-empire-strikes-back:vehicles:gr-75-medium-transport,vehicles,GR-75 Medium Transport,2,3.0,0,0.0,0.0,0,30.0,0,30.0,,starwars-db,no,
+fan:grogu,characters,Grogu,0,0,0,0,0,0,0,30,30,"alive, in hiding (skip: no film-era role)",fan-list,no,
+databank:5-the-empire-strikes-back:vehicles:nebulon-b-frigate,vehicles,Nebulon-B Frigate,2,3.0,0,0.0,0.0,0,30.0,0,30.0,,starwars-db,no,
+databank:1-the-phantom-menace:characters:passel-argente,characters,Passel Argente,3,3.0,0,0.0,0.0,0,30.0,0,30.0,,starwars-db,no,
+databank:1-the-phantom-menace:characters:po-nudo,characters,Po Nudo,3,3.0,0,0.0,0.0,0,30.0,0,30.0,,starwars-db,no,
+databank:4-a-new-hope:species:saurin,species,Saurin,2,3.0,0,0.0,0.0,0,30.0,0,30.0,,starwars-db,no,
+databank:5-the-empire-strikes-back:creatures:tauntaun,creatures,Tauntaun,2,3.0,0,0.0,0.0,0,30.0,0,30.0,,starwars-db,yes,companion TAUNKIT (HOTH); companion TAUNTAUN (HOTH)
+databank:5-the-empire-strikes-back:locations:yodas-hut,locations,Yoda's Hut,2,3.0,0,0.0,0.0,0,30.0,0,30.0,,starwars-db,yes,world art art:dagobah:yoda-s-hut
+databank:6-return-of-the-jedi:vehicles:the-khetanna-jabba-s-sail-barge,vehicles,The Khetanna (Jabba's Sail Barge),1,1.5,0,0.0,6.0,1,29.7,0,29.7,,starwars-db,yes,"world art art:new:sail-barge; world art sail barge wreck, Jabba's barge dock"
+databank:2-attack-of-the-clones:locations:asteroid-field,locations,Asteroid Field,2,2.5,0,0.0,0.0,2,29.0,0,29.0,,starwars-db,yes,"location:sky-pillar ASTEROID SPIRE (ASTEROID FIELD); planet ASTEROID FIELD (main, act 6); world art art:grand-arena:asteroid-spire"
+databank:2-attack-of-the-clones:vehicles:boba-fetts-starship,vehicles,Boba Fett's starship,2,2.5,0,0.0,0.0,2,29.0,0,29.0,,starwars-db,no,
+databank:1-the-phantom-menace:creatures:dewback,creatures,Dewback,2,2.5,0,0.0,0.0,2,29.0,0,29.0,,starwars-db,yes,companion DEWLING (TATOOINE); companion DEWBACK (TATOOINE)
+databank:4-a-new-hope:locations:mos-eisley-spaceport,locations,Mos Eisley Spaceport,1,1.5,0,0.0,1.5,4,29.0,0,29.0,,starwars-db,yes,location:slateport-city MOS EISLEY (TATOOINE)
+databank:1-the-phantom-menace:species:rodian,species,Rodian,2,2.5,0,0.0,0.0,2,29.0,0,29.0,,starwars-db,yes,trainer class GAME HUNTER
+databank:2-attack-of-the-clones:vehicles:swoop,vehicles,Swoop,2,2.5,0,0.0,0.0,2,29.0,0,29.0,,starwars-db,no,
+databank:2-attack-of-the-clones:locations:geonosis,locations,Geonosis,1,1.0,0,0.0,12.0,1,28.7,0,28.7,,starwars-db,no,
+databank:2-attack-of-the-clones:characters:cliegg-lars,characters,Cliegg Lars,1,1.0,6,6.0,0.0,0,28.6,0,28.6,,starwars-db,no,
+databank:3-revenge-of-the-sith:locations:utapau,locations,Utapau,1,1.0,0,0.0,11.0,1,28.2,0,28.2,,starwars-db,no,
+databank:4-a-new-hope:locations:dune-sea,locations,Dune Sea,1,1.5,0,0.0,3.0,2,28.0,0,28.0,,starwars-db,yes,location:desert-ruins TUSKEN RUINS (TATOOINE); location:desert-underpass KRAYT GRAVEYARD (TATOOINE); world art art:tatooine:tusken-ruins
+databank:4-a-new-hope:locations:mos-eisley-cantina,locations,Mos Eisley Cantina,1,1.5,0,0.0,3.0,2,28.0,0,28.0,,starwars-db,yes,net:mos-eisley-cantina (TATOOINE)
+databank:3-revenge-of-the-sith:characters:clone-commander-gree,characters,Clone Commander Gree,1,1.0,4,4.0,0.0,1,27.4,0,27.4,,starwars-db,no,
+databank:1-the-phantom-menace:characters:kitster,characters,Kitster,1,1.0,5,5.0,0.0,0,27.1,0,27.1,,starwars-db,yes,trainer class SCRAP KID
+databank:1-the-phantom-menace:characters:sebulba,characters,Sebulba,1,1.0,5,5.0,0.0,0,27.1,0,27.1,,starwars-db,yes,"net:character-sebulba (TATOOINE); person:mos-espa-podrace-arena:016 (boss, mos-espa-podrace-arena)"
+databank:1-the-phantom-menace:driods:smelter-droid,driods,Smelter Droid,2,2.5,0,0.0,0.0,1,27.0,0,27.0,,starwars-db,yes,companion SMELTER (MUSTAFAR)
+databank:6-return-of-the-jedi:characters:wicket-w-warrick,characters,Wicket W. Warrick,1,1.5,0,0.0,0.0,1,17.0,10,27.0,,starwars-db,no,
+databank:2-attack-of-the-clones:vehicles:delta-7-jedi-starfighter,vehicles,Delta-7 Jedi Starfighter,2,2.0,0,0.0,1.0,1,26.5,0,26.5,,starwars-db,no,
+databank:2-attack-of-the-clones:vehicles:at-te-walker,vehicles,AT-TE Walker,2,2.0,0,0.0,0.0,3,26.0,0,26.0,,starwars-db,no,
+databank:6-return-of-the-jedi:locations:endor,locations,Endor,1,1.5,0,0.0,3.0,1,26.0,0,26.0,,starwars-db,yes,"planet ENDOR (main, act 4)"
+databank:1-the-phantom-menace:driods:pit-droid,driods,Pit Droid,2,2.0,0,0.0,0.0,3,26.0,0,26.0,,starwars-db,yes,companion PIT DROID (TATOOINE)
+databank:1-the-phantom-menace:characters:daultay-dofine,characters,Daultay Dofine,1,1.0,4,4.0,0.0,0,25.4,0,25.4,,starwars-db,no,
+databank:2-attack-of-the-clones:characters:hermione-bagwa,characters,Hermione Bagwa,1,1.0,4,4.0,0.0,0,25.4,0,25.4,,starwars-db,no,
+databank:1-the-phantom-menace:characters:tc-14,characters,TC-14,1,1.0,4,4.0,0.0,0,25.4,0,25.4,,starwars-db,no,
+databank:2-attack-of-the-clones:characters:zam-wesell,characters,Zam Wesell,1,1.0,4,4.0,0.0,0,25.4,0,25.4,,starwars-db,no,
+databank:3-revenge-of-the-sith:characters:greeata,characters,Greeata,2,2.5,0,0.0,0.0,0,25.0,0,25.0,,starwars-db,no,
+databank:1-the-phantom-menace:creatures:ronto,creatures,Ronto,2,2.5,0,0.0,0.0,0,25.0,0,25.0,,starwars-db,yes,companion RONTOCALF (TATOOINE); companion RONTOLING (TATOOINE); companion RONTO (TATOOINE)
+databank:1-the-phantom-menace:vehicles:aat,vehicles,AAT (Armored Assault Tank),2,2.0,0,0.0,0.0,2,24.0,0,24.0,,starwars-db,no,
+databank:2-attack-of-the-clones:characters:luminara-unduli,characters,Luminara Unduli,2,2.0,0,0.0,0.0,2,24.0,0,24.0,,starwars-db,no,
+databank:2-attack-of-the-clones:species:mirialan,species,Mirialan,2,2.0,0,0.0,0.0,2,24.0,0,24.0,,starwars-db,yes,trainer class MIRIALAN
+databank:2-attack-of-the-clones:vehicles:republic-attack-gunship,vehicles,Republic Attack Gunship,2,2.0,0,0.0,0.0,2,24.0,0,24.0,,starwars-db,no,
+databank:2-attack-of-the-clones:driods:super-battle-droid,driods,Super Battle Droid,2,2.0,0,0.0,0.0,2,24.0,0,24.0,,starwars-db,yes,companion B2 DROID (MUSTAFAR)
+databank:6-return-of-the-jedi:characters:oola,characters,Oola,1,1.5,2,1.5,0.0,0,23.8,0,23.8,,starwars-db,no,
+databank:3-revenge-of-the-sith:locations:kashyyyk,locations,Kashyyyk,1,1.0,0,0.0,5.0,1,23.7,0,23.7,,starwars-db,yes,"location:granite-cave SHADOWLANDS (KASHYYYK); planet KASHYYYK (main, act 2)"
+swapi:starships:59,starships,Trade Federation cruiser,0,0,0,0.0,35.0,0,23.3,0,23.3,,starwars-db,no,
+databank:2-attack-of-the-clones:characters:elan-sleazebaggano,characters,Elan Sleazebaggano,1,1.0,3,3.0,0.0,0,23.2,0,23.2,,starwars-db,no,
+databank:4-a-new-hope:vehicles:tantive-iv,vehicles,Tantive IV,1,1.5,0,0.0,0.0,4,23.0,0,23.0,,starwars-db,no,
+databank:1-the-phantom-menace:characters:lott-dod,characters,Lott Dod,1,1.0,2,2.0,0.0,1,22.5,0,22.5,,starwars-db,no,
+databank:2-attack-of-the-clones:characters:aayla-secura,characters,Aayla Secura,2,2.0,0,0.0,0.0,1,22.0,0,22.0,,starwars-db,no,
+databank:1-the-phantom-menace:characters:adi-gallia,characters,Adi Gallia,2,2.0,0,0.0,0.0,1,22.0,0,22.0,,starwars-db,no,
+databank:2-attack-of-the-clones:characters:agen-kolar,characters,Agen Kolar,2,2.0,0,0.0,0.0,1,22.0,0,22.0,,starwars-db,no,
+databank:1-the-phantom-menace:characters:aurra-sing,characters,Aurra Sing,1,1.0,0,0.0,0.0,1,12.0,10,22.0,,starwars-db,yes,character:anabel AURRA: Grand Arena Tower ace
+databank:1-the-phantom-menace:characters:depa-billaba,characters,Depa Billaba,2,2.0,0,0.0,0.0,1,22.0,0,22.0,,starwars-db,no,
+databank:2-attack-of-the-clones:driods:dwarf-spider-droid,driods,Dwarf Spider Droid,2,2.0,0,0.0,0.0,1,22.0,0,22.0,,starwars-db,yes,companion SPIDROID (KASHYYYK)
+databank:1-the-phantom-menace:characters:eeth-koth,characters,Eeth Koth,2,2.0,0,0.0,0.0,1,22.0,0,22.0,,starwars-db,no,
+databank:1-the-phantom-menace:characters:even-piell,characters,Even Piell,2,2.0,0,0.0,0.0,1,22.0,0,22.0,,starwars-db,no,
+databank:2-attack-of-the-clones:driods:fa-4-pilot-droid,driods,FA-4 pilot droid,2,2.0,0,0.0,0.0,1,22.0,0,22.0,,starwars-db,no,
+databank:2-attack-of-the-clones:species:geonosian,species,Geonosian,2,2.0,0,0.0,0.0,1,22.0,0,22.0,,starwars-db,no,
+databank:2-attack-of-the-clones:characters:kit-fisto,characters,Kit Fisto,2,2.0,0,0.0,0.0,1,22.0,0,22.0,,starwars-db,no,
+databank:1-the-phantom-menace:vehicles:mtt,vehicles,MTT,2,2.0,0,0.0,0.0,1,22.0,0,22.0,,starwars-db,no,
+databank:2-attack-of-the-clones:species:nautolan,species,Nautolan,2,2.0,0,0.0,0.0,1,22.0,0,22.0,,starwars-db,yes,trainer class NAUTOLAN; trainer class NAUTOLANS
+databank:1-the-phantom-menace:creatures:nuna,creatures,Nuna,2,2.0,0,0.0,0.0,1,22.0,0,22.0,,starwars-db,yes,companion NUNA (NABOO)
+databank:1-the-phantom-menace:characters:onaconda-farr,characters,Onaconda Farr,2,2.0,0,0.0,0.0,1,22.0,0,22.0,,starwars-db,no,
+databank:1-the-phantom-menace:characters:oppo-rancisis,characters,Oppo Rancisis,2,2.0,0,0.0,0.0,1,22.0,0,22.0,,starwars-db,no,
+databank:2-attack-of-the-clones:characters:poggle-the-lesser,characters,Poggle the Lesser,2,2.0,0,0.0,0.0,1,22.0,0,22.0,,starwars-db,no,
+databank:2-attack-of-the-clones:characters:r4-p17,characters,R4-P17,2,2.0,0,0.0,0.0,1,22.0,0,22.0,,starwars-db,no,
+databank:1-the-phantom-menace:creatures:shaak,creatures,Shaak,2,2.0,0,0.0,0.0,1,22.0,0,22.0,,starwars-db,yes,companion SHAAK (NABOO)
+databank:2-attack-of-the-clones:characters:shaak-ti,characters,Shaak Ti,2,2.0,0,0.0,0.0,1,22.0,0,22.0,,starwars-db,no,
+databank:1-the-phantom-menace:species:toydarian,species,Toydarian,2,2.0,0,0.0,0.0,1,22.0,0,22.0,,starwars-db,yes,trainer class JUNK DEALER
+databank:1-the-phantom-menace:vehicles:trade-federation-landing-ship,vehicles,Trade Federation Landing Ship,2,2.0,0,0.0,0.0,1,22.0,0,22.0,,starwars-db,no,
+databank:1-the-phantom-menace:driods:vulture-droid,driods,Vulture Droid (Droid Starfighter),2,2.0,0,0.0,0.0,1,22.0,0,22.0,,starwars-db,yes,companion VULTURE (SULLUST)
+databank:2-attack-of-the-clones:characters:wat-tambor,characters,Wat Tambor,2,2.0,0,0.0,0.0,1,22.0,0,22.0,,starwars-db,no,
+databank:3-revenge-of-the-sith:locations:polis-massa,locations,Polis Massa,1,1.0,0,0.0,5.0,0,21.7,0,21.7,,starwars-db,no,
+databank:6-return-of-the-jedi:characters:rancor,characters,Rancor,1,1.5,0,0.0,0.0,3,21.0,0,21.0,,starwars-db,no,
+databank:4-a-new-hope:characters:wullf-yularen,characters,Wullf Yularen,1,1.5,0,0.0,0.0,3,21.0,0,21.0,,starwars-db,no,
+databank:4-a-new-hope:locations:yavin-4,locations,Yavin 4,1,1.5,0,0.0,0.0,3,21.0,0,21.0,,starwars-db,yes,"organization:mossdeep-gym MASSASSI TEMPLE: Force arena (warp tiles, double battle), Leaders Kanan & Ezr; location:mossdeep-city YAVIN 4 (YAVIN 4); planet YAVIN 4 (main, act 5)"
+databank:3-revenge-of-the-sith:characters:clone-commander-bacara,characters,Clone Commander Bacara,1,1.0,2,2.0,0.0,0,20.5,0,20.5,,starwars-db,no,
+databank:2-attack-of-the-clones:characters:dorme,characters,Dormé,1,1.0,2,2.0,0.0,0,20.5,0,20.5,,starwars-db,no,
+fan:ahsoka-tano,characters,Ahsoka Tano,0,0,0,0,0,0,0,20,20,"alive: lost at Malachor 3 BBY, back 1 BBY (in the game at the Mortis Gate)",fan-list,yes,net:character-ahsoka (MORTIS)
+fan:asajj-ventress,characters,Asajj Ventress,0,0,0,0,0,0,0,20,20,dead 19 BBY,fan-list,no,
+fan:cassian-andor,characters,Cassian Andor,0,0,0,0,0,0,0,20,20,alive: Rebel agent with K-2SO in 2 BBY (Andor S2),fan-list,no,
+fan:din-djarin,characters,Din Djarin,0,0,0,0,0,0,0,20,20,a child in 2 BBY (skip),fan-list,no,
+fan:grand-admiral-thrawn,characters,Grand Admiral Thrawn,0,0,0,0,0,0,0,20,20,alive: hunts the Rebels in the Outer Rim in 2 BBY (Rebels S3),fan-list,no,
+fan:moff-gideon,characters,Moff Gideon,0,0,0,0,0,0,0,20,20,ISB officer later; nothing known for 2 BBY (skip),fan-list,no,
+databank:2-attack-of-the-clones:characters:san-hill,characters,San Hill,2,2.0,0,0.0,0.0,0,20.0,0,20.0,,starwars-db,no,
+databank:2-attack-of-the-clones:characters:shu-mai,characters,Shu Mai,2,2.0,0,0.0,0.0,0,20.0,0,20.0,,starwars-db,no,
+databank:2-attack-of-the-clones:characters:sly-moore,characters,Sly Moore,2,2.0,0,0.0,0.0,0,20.0,0,20.0,,starwars-db,no,
+databank:2-attack-of-the-clones:characters:stass-allie,characters,Stass Allie,2,2.0,0,0.0,0.0,0,20.0,0,20.0,,starwars-db,no,
+databank:2-attack-of-the-clones:characters:zett-jukassa,characters,Zett Jukassa,2,2.0,0,0.0,0.0,0,20.0,0,20.0,,starwars-db,no,
+databank:3-revenge-of-the-sith:locations:cato-neimoidia,locations,Cato Neimoidia,1,1.0,0,0.0,2.0,1,19.2,0,19.2,,starwars-db,no,
+databank:1-the-phantom-menace:locations:otoh-gunga,locations,Otoh Gunga,1,1.0,0,0.0,2.0,1,19.2,0,19.2,,starwars-db,no,
+databank:6-return-of-the-jedi:vehicles:a-wing-fighter,vehicles,A-wing Fighter,1,1.5,0,0.0,0.0,2,19.0,0,19.0,,starwars-db,no,
+databank:4-a-new-hope:locations:base-one,locations,Base One,1,1.5,0,0.0,0.0,2,19.0,0,19.0,,starwars-db,yes,organization:mossdeep-space-center LAUNCH TOWER: Rebel launch site the Empire raids for fuel
+databank:6-return-of-the-jedi:species:gamorreans,species,Gamorreans,1,1.5,0,0.0,0.0,2,19.0,0,19.0,,starwars-db,no,
+databank:4-a-new-hope:species:gotal,species,Gotal,1,1.5,0,0.0,0.0,2,19.0,0,19.0,,starwars-db,no,
+databank:6-return-of-the-jedi:locations:jabba-the-hutts-palace,locations,Jabba the Hutt's Palace,1,1.5,0,0.0,0.0,2,19.0,0,19.0,,starwars-db,yes,net:jabbas-palace (TATOOINE)
+databank:6-return-of-the-jedi:creatures:kowakian-monkey-lizard,creatures,Kowakian Monkey-Lizard,1,1.5,0,0.0,0.0,2,19.0,0,19.0,,starwars-db,yes,companion KOWAKIAN (TATOOINE); companion CACKLER (TATOOINE)
+databank:6-return-of-the-jedi:species:sullustan,species,Sullustan,1,1.5,0,0.0,0.0,2,19.0,0,19.0,,starwars-db,yes,trainer class OLD COUPLE
+databank:6-return-of-the-jedi:vehicles:tie-interceptor,vehicles,TIE Interceptor,1,1.5,0,0.0,0.0,2,19.0,0,19.0,,starwars-db,no,
+databank:5-the-empire-strikes-back:species:trandoshan,species,Trandoshan,1,1.5,0,0.0,0.0,2,19.0,0,19.0,,starwars-db,no,
+databank:5-the-empire-strikes-back:species:ugnaught,species,Ugnaught,1,1.5,0,0.0,0.0,2,19.0,0,19.0,,starwars-db,yes,trainer class UGNAUGHT
+databank:6-return-of-the-jedi:species:weequay,species,Weequay,1,1.5,0,0.0,0.0,2,19.0,0,19.0,,starwars-db,yes,"person:jabbas-palace-barge-dock:031 (trainer, jabbas-palace-barge-dock)"
+databank:2-attack-of-the-clones:locations:kamino,locations,Kamino,1,1.0,0,0.0,1.0,2,18.5,0,18.5,,starwars-db,yes,"location:pacifidlog-town TIPOCA CITY (KAMINO); location:sealed-chamber SEALED VAULT (KAMINO); planet KAMINO (side, act 5)"
+databank:1-the-phantom-menace:vehicles:republic-cruiser,vehicles,Republic Cruiser,1,1.0,0,0.0,2.0,0,17.2,0,17.2,,starwars-db,yes,location:abandoned-ship REPUBLIC WRECK (KASHYYYK)
+databank:4-a-new-hope:driods:asp-general-purpose-droid,driods,ASP General Purpose Droid,1,1.5,0,0.0,0.0,1,17.0,0,17.0,,starwars-db,no,
+databank:6-return-of-the-jedi:species:amani,species,Amani,1,1.5,0,0.0,0.0,1,17.0,0,17.0,,starwars-db,no,
+databank:5-the-empire-strikes-back:locations:cave-of-evil,locations,Cave of Evil,1,1.5,0,0.0,0.0,1,17.0,0,17.0,,starwars-db,yes,location:cave-of-origin CAVE OF EVIL (DAGOBAH)
+databank:6-return-of-the-jedi:characters:chief-chirpa,characters,Chief Chirpa,1,1.5,0,0.0,0.0,1,17.0,0,17.0,,starwars-db,yes,character:winona CHIRPA: Ewok chief of Bright Tree Village; Arena Leader (Flying) wit
+databank:4-a-new-hope:vehicles:darth-vader-s-tie-fighter,vehicles,Darth Vader's TIE Fighter,1,1.5,0,0.0,0.0,1,17.0,0,17.0,,starwars-db,no,
+databank:6-return-of-the-jedi:locations:death-star-ii,locations,Death Star II,1,1.5,0,0.0,0.0,1,17.0,0,17.0,,starwars-db,no,
+databank:5-the-empire-strikes-back:characters:derek-hobbie-klivian,characters,"Derek ""Hobbie"" Klivian",1,1.5,0,0.0,0.0,1,17.0,0,17.0,,starwars-db,yes,net:character-hobbie (YAVIN 4)
+databank:6-return-of-the-jedi:vehicles:desert-skiff,vehicles,Desert Skiff,1,1.5,0,0.0,0.0,1,17.0,0,17.0,,starwars-db,no,
+databank:4-a-new-hope:species:devaronian,species,Devaronian,1,1.5,0,0.0,0.0,1,17.0,0,17.0,,starwars-db,no,
+databank:4-a-new-hope:creatures:dianoga,creatures,Dianoga,1,1.5,0,0.0,0.0,1,17.0,0,17.0,,starwars-db,yes,companion DIANOGLET (KAMINO); companion DIANOGA (KAMINO)
+databank:4-a-new-hope:characters:doctor-cornelius-evazan,characters,Doctor Cornelius Evazan,1,1.5,0,0.0,0.0,1,17.0,0,17.0,,starwars-db,yes,net:mos-eisley-cantina
+databank:4-a-new-hope:species:duros,species,Duros,1,1.5,0,0.0,0.0,1,17.0,0,17.0,,starwars-db,yes,trainer class RELIC HUNTER
+databank:6-return-of-the-jedi:locations:emperor-s-throne-room,locations,Emperor’s throne room,1,1.5,0,0.0,0.0,1,17.0,0,17.0,,starwars-db,no,
+databank:6-return-of-the-jedi:vehicles:home-one,vehicles,Home One,1,1.5,0,0.0,0.0,1,17.0,0,17.0,,starwars-db,no,
+databank:4-a-new-hope:driods:interrogation-droid,driods,Interrogation Droid,1,1.5,0,0.0,0.0,1,17.0,0,17.0,,starwars-db,yes,companion MINDPROBE (SPACE); companion INTERROGTR (SPACE)
+databank:4-a-new-hope:characters:jon-dutch-vander,characters,"Jon ""Dutch"" Vander",1,1.5,0,0.0,0.0,1,17.0,0,17.0,,starwars-db,yes,"trainer name DUTCH (Jon 'Dutch' Vander, Gold Leader at Yavin)"
+databank:4-a-new-hope:locations:jundland-wastes,locations,Jundland Wastes,1,1.5,0,0.0,0.0,1,17.0,0,17.0,,starwars-db,yes,location:petalburg-woods JUNDLAND WASTES (TATOOINE)
+databank:6-return-of-the-jedi:characters:max-rebo,characters,Max Rebo,1,1.5,0,0.0,0.0,1,17.0,0,17.0,,starwars-db,no,
+databank:4-a-new-hope:characters:ponda-baba,characters,Ponda Baba,1,1.5,0,0.0,0.0,1,17.0,0,17.0,,starwars-db,yes,net:mos-eisley-cantina
+databank:6-return-of-the-jedi:creatures:sarlacc,creatures,Sarlacc,1,1.5,0,0.0,0.0,1,17.0,0,17.0,,starwars-db,yes,companion SARLACLET (TATOOINE); companion SARLACC (TATOOINE)
+databank:6-return-of-the-jedi:locations:sarlacc-pit,locations,Sarlacc Pit,1,1.5,0,0.0,0.0,1,17.0,0,17.0,,starwars-db,yes,world art art:tatooine:sarlacc-pit
+databank:6-return-of-the-jedi:characters:sy-snootles,characters,Sy Snootles,1,1.5,0,0.0,0.0,1,17.0,0,17.0,,starwars-db,no,
+databank:6-return-of-the-jedi:driods:tt-8l-y7,driods,TT-8L/Y7,1,1.5,0,0.0,0.0,1,17.0,0,17.0,,starwars-db,no,
+databank:4-a-new-hope:species:talz,species,Talz,1,1.5,0,0.0,0.0,1,17.0,0,17.0,,starwars-db,no,
+databank:6-return-of-the-jedi:creatures:worrt,creatures,Worrt,1,1.5,0,0.0,0.0,1,17.0,0,17.0,,starwars-db,yes,companion WORRTLET (TATOOINE); companion WORRT (TATOOINE); companion WORRTBRUTE (TATOOINE); companion WORRTKING (TATOOINE)
+databank:1-the-phantom-menace:characters:jira,characters,Jira,1,1.0,1,1.0,0.0,0,16.6,0,16.6,,starwars-db,no,
+databank:1-the-phantom-menace:characters:sabe,characters,Sabé,1,1.0,1,1.0,0.0,0,16.6,0,16.6,,starwars-db,yes,"trainer name SABE (Sabe, Padme's handmaiden and decoy)"
+databank:1-the-phantom-menace:characters:wald,characters,Wald,1,1.0,1,1.0,0.0,0,16.6,0,16.6,,starwars-db,yes,"character:rydel WALD: Anakin's old Rodian friend, now runs Wald's Hover-Bikes in M"
+databank:3-revenge-of-the-sith:locations:felucia,locations,Felucia,1,1.0,0,0.0,1.0,1,16.5,0,16.5,,starwars-db,yes,"organization:safari-zone FELUCIA RESERVE: Preserve where companions are caught with SAFARI PODS; location:safari-zone FELUCIA RESERVE (FELUCIA); planet FELUCIA (side, act 4)"
+databank:5-the-empire-strikes-back:characters:4-lom,characters,4-LOM,1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,yes,character:greta 4-LOM: Grand Arena Arena ace
+databank:6-return-of-the-jedi:characters:8d8,characters,8D8,1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,no,
+databank:6-return-of-the-jedi:vehicles:b-wing-fighter,vehicles,B-wing Fighter,1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,no,
+databank:6-return-of-the-jedi:characters:barada,characters,Barada,1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,no,
+databank:4-a-new-hope:characters:boshek,characters,BoShek,1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,no,
+databank:6-return-of-the-jedi:locations:bright-tree-village,locations,Bright Tree Village,1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,yes,location:fortree-city BRIGHT TREE (ENDOR)
+databank:4-a-new-hope:species:chadra-fan,species,Chadra-Fan,1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,no,
+databank:5-the-empire-strikes-back:characters:dak-ralter,characters,Dak Ralter,1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,yes,net:character-dak (YAVIN 4)
+databank:4-a-new-hope:characters:dex-tiree,characters,Dex Tiree,1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,yes,"trainer name TIREE (Dex Tiree, Gold Two at Yavin)"
+databank:6-return-of-the-jedi:characters:droopy-mccool,characters,Droopy McCool,1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,no,
+databank:6-return-of-the-jedi:characters:ev-9d9,characters,EV-9D9,1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,no,
+databank:5-the-empire-strikes-back:locations:echo-base,locations,Echo Base,1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,no,
+databank:6-return-of-the-jedi:species:ewok,species,Ewok,1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,yes,trainer class EWOK
+databank:4-a-new-hope:characters:figrin-d-an,characters,Figrin D’an,1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,yes,net:mos-eisley-cantina
+databank:4-a-new-hope:characters:garindan,characters,Garindan,1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,yes,character:trick-master GARINDAN: Kubaz spy and master of disguise who runs the Trick House
+databank:6-return-of-the-jedi:characters:general-madine,characters,General Madine,1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,no,
+databank:4-a-new-hope:species:givin,species,Givin,1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,no,
+databank:6-return-of-the-jedi:characters:hermi-odle,characters,Hermi Odle,1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,no,
+databank:5-the-empire-strikes-back:characters:ig-88,characters,IG-88,1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,yes,"character:noland IG-88: Grand Arena Factory ace (a droid factory, fittingly)"
+databank:6-return-of-the-jedi:characters:janus-greejatus,characters,Janus Greejatus,1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,no,
+databank:4-a-new-hope:characters:jek-porkins,characters,Jek Porkins,1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,yes,"trainer name PORKINS (Jek Porkins, Rebel pilot, flying for Dor)"
+databank:6-return-of-the-jedi:characters:joh-yowza,characters,Joh Yowza,1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,no,
+databank:6-return-of-the-jedi:characters:klaatu,characters,Klaatu,1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,no,
+databank:4-a-new-hope:species:kubaz,species,Kubaz,1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,no,
+databank:5-the-empire-strikes-back:characters:lobot,characters,Lobot,1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,yes,net:character-lobot (BESPIN)
+databank:6-return-of-the-jedi:characters:logray,characters,Logray,1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,yes,"trainer class SHAMAN; trainer name LOGRAY (Logray, Ewok shaman)"
+databank:6-return-of-the-jedi:characters:lyn-me,characters,Lyn Me,1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,no,
+databank:6-return-of-the-jedi:characters:malakili,characters,Malakili,1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,yes,"trainer class HANDLER; net:character-malakili (TATOOINE); trainer name MALAKILI (Malakili, Jabba's rancor keeper)"
+databank:4-a-new-hope:characters:momaw-nadon,characters,Momaw Nadon,1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,yes,net:mos-eisley-cantina
+databank:6-return-of-the-jedi:vehicles:mon-calamari-star-cruiser,vehicles,Mon Calamari Star Cruiser,1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,no,
+databank:5-the-empire-strikes-back:creatures:mynock,creatures,Mynock,1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,yes,companion MYNOCK (SPACE); companion MYNOCKMAW (SPACE); companion VOIDMYNOCK (SPACE)
+databank:6-return-of-the-jedi:species:nikto-green,species,Nikto (Green),1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,no,
+databank:4-a-new-hope:locations:obi-wan-kenobis-house,locations,Obi-Wan Kenobi's House,1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,yes,net:bens-hut (TATOOINE)
+databank:6-return-of-the-jedi:characters:paploo,characters,Paploo,1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,yes,"trainer name PAPLOO (Paploo, the Ewok who stole a speeder bik)"
+databank:4-a-new-hope:characters:r5-d4,characters,R5-D4,1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,no,
+databank:6-return-of-the-jedi:characters:rappertunie,characters,Rappertunie,1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,no,
+databank:6-return-of-the-jedi:characters:rystall-sant,characters,Rystáll Sant,1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,no,
+databank:6-return-of-the-jedi:characters:salacious-crumb,characters,Salacious B. Crumb,1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,yes,net:character-salacious-crumb (TATOOINE)
+databank:6-return-of-the-jedi:characters:sim-aloo,characters,Sim Aloo,1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,no,
+databank:5-the-empire-strikes-back:creatures:space-slug,creatures,Space Slug,1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,yes,companion EXOGORTH (ASTEROID FIELD)
+databank:6-return-of-the-jedi:characters:teebo,characters,Teebo,1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,yes,"trainer name TEEBO (Teebo, Ewok warrior)"
+databank:5-the-empire-strikes-back:creatures:wampa,creatures,Wampa,1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,yes,companion WAMPLET (HOTH); companion WAMPA (HOTH)
+databank:4-a-new-hope:characters:wuher,characters,Wuher,1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,yes,net:mos-eisley-cantina
+databank:4-a-new-hope:vehicles:x-34-landspeeder,vehicles,X-34 Landspeeder,1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,yes,world art Tatooine
+databank:6-return-of-the-jedi:characters:yarna-d-al-gargan,characters,Yarna d'al' Gargan,1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,no,
+databank:5-the-empire-strikes-back:characters:zev-senesca,characters,Zev Senesca,1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,yes,net:character-zev (YAVIN 4)
+databank:5-the-empire-strikes-back:characters:zuckuss,characters,Zuckuss,1,1.5,0,0.0,0.0,0,15.0,0,15.0,,starwars-db,yes,character:spenser ZUCKUSS: Grand Arena Palace ace
+databank:2-attack-of-the-clones:locations:dexs-diner,locations,Dex's Diner,1,1.0,0,0.0,1.0,0,14.5,0,14.5,,starwars-db,no,
+databank:3-revenge-of-the-sith:locations:galaxies-opera-house,locations,Galaxies Opera House,1,1.0,0,0.0,1.0,0,14.5,0,14.5,,starwars-db,no,
+databank:3-revenge-of-the-sith:locations:mygeeto,locations,Mygeeto,1,1.0,0,0.0,1.0,0,14.5,0,14.5,,starwars-db,no,
+databank:3-revenge-of-the-sith:vehicles:at-rt-walker,vehicles,AT-RT Walker,1,1.0,0,0.0,0.0,2,14.0,0,14.0,,starwars-db,no,
+databank:2-attack-of-the-clones:characters:barriss-offee,characters,Barriss Offee,1,1.0,0,0.0,0.0,2,14.0,0,14.0,,starwars-db,no,
+databank:3-revenge-of-the-sith:species:dactillion,species,Dactillion,1,1.0,0,0.0,0.0,2,14.0,0,14.0,,starwars-db,yes,companion DACTHATCH (UTAPAU); companion DACTSHELL (UTAPAU); companion DACTILLION (UTAPAU)
+databank:1-the-phantom-menace:vehicles:flash-speeder,vehicles,Flash Speeder,1,1.0,0,0.0,0.0,2,14.0,0,14.0,,starwars-db,no,
+databank:1-the-phantom-menace:species:palliduvan,species,Palliduvan,1,1.0,0,0.0,0.0,2,14.0,0,14.0,,starwars-db,no,
+databank:3-revenge-of-the-sith:species:pauan,species,Pau'an,1,1.0,0,0.0,0.0,2,14.0,0,14.0,,starwars-db,no,
+databank:3-revenge-of-the-sith:locations:saleucami,locations,Saleucami,1,1.0,0,0.0,0.0,2,14.0,0,14.0,,starwars-db,no,
+databank:2-attack-of-the-clones:vehicles:taylander-shuttle,vehicles,Taylander shuttle,1,1.0,0,0.0,0.0,2,14.0,0,14.0,,starwars-db,no,
+databank:3-revenge-of-the-sith:vehicles:arc-170-starfighter,vehicles,ARC-170 Starfighter,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,no,
+databank:2-attack-of-the-clones:species:aiwha,species,Aiwha,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,yes,companion AIWHALET (KAMINO); companion AIWHA (KAMINO)
+databank:1-the-phantom-menace:species:aleena,species,Aleena,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,no,
+databank:3-revenge-of-the-sith:characters:appo,characters,Appo,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,no,
+databank:3-revenge-of-the-sith:vehicles:barc-speeder,vehicles,BARC Speeder,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,no,
+databank:3-revenge-of-the-sith:driods:bd-3000-luxury-droid,driods,BD-3000 luxury droid,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,no,
+databank:2-attack-of-the-clones:species:besalisk,species,Besalisk,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,no,
+databank:3-revenge-of-the-sith:driods:buzz-droid,driods,Buzz Droid,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,yes,companion BUZZDROID (SPACE)
+databank:3-revenge-of-the-sith:characters:chairman-papanoida,characters,Chairman Papanoida,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,no,
+databank:3-revenge-of-the-sith:characters:chi-eekway-papanoida,characters,Chi Eekway Papanoida,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,no,
+databank:3-revenge-of-the-sith:characters:cin-drallig,characters,Cin Drallig,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,no,
+databank:3-revenge-of-the-sith:characters:clone-commander-bly,characters,Clone Commander Bly,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,no,
+databank:3-revenge-of-the-sith:characters:clone-commander-neyo,characters,Clone Commander Neyo,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,no,
+databank:2-attack-of-the-clones:characters:clone-commander-ponds,characters,Clone Commander Ponds,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,no,
+databank:3-revenge-of-the-sith:characters:clone-pilot-odd-ball,characters,Clone Pilot Odd Ball,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,no,
+databank:2-attack-of-the-clones:vehicles:count-dookus-speeder,vehicles,Count Dooku's Speeder,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,no,
+databank:1-the-phantom-menace:species:dathomirian,species,Dathomirian,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,yes,trainer class NIGHTBROTHER
+databank:3-revenge-of-the-sith:vehicles:droid-gunship,vehicles,Droid Gunship,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,no,
+databank:3-revenge-of-the-sith:vehicles:eta-2-jedi-starfighter,vehicles,Eta-2 Jedi Starfighter,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,no,
+databank:1-the-phantom-menace:species:falumpaset,species,Falumpaset,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,yes,companion FALUMPASET (NABOO)
+databank:1-the-phantom-menace:creatures:fambaa,creatures,Fambaa,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,yes,companion FAMBAA (NABOO)
+databank:1-the-phantom-menace:characters:gardulla-the-hutt,characters,Gardulla the Hutt,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,yes,character:lucy GARDULLA: Grand Arena Pike ace
+databank:1-the-phantom-menace:characters:general-tarpals,characters,General Tarpals,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,no,
+databank:2-attack-of-the-clones:vehicles:geonosian-fighter,vehicles,Geonosian Fighter,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,no,
+databank:1-the-phantom-menace:vehicles:gungan-bongo-submarine,vehicles,Gungan Bongo Submarine,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,no,
+databank:2-attack-of-the-clones:vehicles:h-type-nubian-yacht,vehicles,H-type Nubian yacht,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,no,
+databank:1-the-phantom-menace:creatures:kaadu,creatures,Kaadu,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,yes,companion KAADU (NABOO); companion KAADULORD (NABOO)
+databank:2-attack-of-the-clones:species:kaminoan,species,Kaminoan,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,no,
+databank:3-revenge-of-the-sith:driods:lm-432-muckraker-crab-droid,driods,"LM-432 ""Muckraker"" Crab Droid",1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,yes,companion CRABDROID (UTAPAU); companion MUCKRAKER (UTAPAU)
+databank:3-revenge-of-the-sith:driods:magna-guard,driods,MagnaGuards,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,yes,companion MAGNAGUARD (KALEE)
+databank:3-revenge-of-the-sith:characters:meena-tills,characters,Meena Tills,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,no,
+databank:3-revenge-of-the-sith:driods:nr-n99-persuader-class-tank-droid,driods,NR-N99 Persuader-class Tank Droid,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,yes,companion PERSUADER (KASHYYYK)
+databank:2-attack-of-the-clones:vehicles:naboo-royal-cruiser,vehicles,Naboo Royal Cruiser,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,no,
+databank:2-attack-of-the-clones:creatures:nexu,creatures,Nexu,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,yes,companion NEXU (GEONOSIS)
+databank:3-revenge-of-the-sith:driods:octuptarra-droid,driods,Octuptarra Droid,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,yes,companion OCTUPTARRA (KASHYYYK)
+databank:3-revenge-of-the-sith:species:pantoran,species,Pantoran,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,no,
+databank:1-the-phantom-menace:characters:quinlan-vos,characters,Quinlan Vos,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,no,
+databank:2-attack-of-the-clones:creatures:reek,creatures,Reek,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,yes,companion REEKCALF (GEONOSIS); companion REEKHORN (GEONOSIS); companion REEK (GEONOSIS)
+databank:3-revenge-of-the-sith:vehicles:republic-attack-cruiser,vehicles,Republic Attack Cruiser,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,no,
+databank:1-the-phantom-menace:vehicles:stap,vehicles,STAP,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,no,
+databank:2-attack-of-the-clones:characters:sifo-dyas,characters,Sifo-Dyas,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,no,
+databank:2-attack-of-the-clones:vehicles:solar-sailer,vehicles,Solar Sailer,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,no,
+databank:3-revenge-of-the-sith:vehicles:soulless-one,vehicles,Soulless One,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,no,
+databank:3-revenge-of-the-sith:characters:tarfful,characters,Tarfful,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,yes,character:brawly TARFFUL: Wookiee chieftain of Kachirho and its Arena Leader (Fighting
+databank:2-attack-of-the-clones:characters:teckla-minnau,characters,Teckla Minnau,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,no,
+databank:2-attack-of-the-clones:locations:the-works,locations,The Works,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,no,
+databank:3-revenge-of-the-sith:species:utai,species,Utai,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,no,
+databank:3-revenge-of-the-sith:creatures:varactyl,creatures,Varactyl,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,yes,companion VARACTYL (UTAPAU)
+databank:1-the-phantom-menace:locations:vergence,locations,Vergence,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,no,
+databank:1-the-phantom-menace:characters:yaddle,characters,Yaddle,1,1.0,0,0.0,0.0,1,12.0,0,12.0,,starwars-db,no,
+databank:2-attack-of-the-clones:vehicles:aa-9-coruscant-freighter,vehicles,AA-9 Coruscant freighter,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,no,
+databank:2-attack-of-the-clones:creatures:acklay,creatures,Acklay,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,yes,companion ACKLAY (GEONOSIS)
+databank:1-the-phantom-menace:vehicles:anakin-skywalkers-podracer,vehicles,Anakin Skywalker's Podracer,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,no,
+databank:2-attack-of-the-clones:characters:ask-aak,characters,Ask Aak,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,no,
+fan:bb-8,characters,BB-8,0,0,0,0,0,0,0,10,10,not built,fan-list,no,
+databank:2-attack-of-the-clones:species:balosar,species,Balosar,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,no,
+databank:1-the-phantom-menace:characters:ben-quadinaros,characters,Ben Quadinaros,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,no,
+fan:bo-katan-kryze,characters,Bo-Katan Kryze,0,0,0,0,0,0,0,10,10,"alive: Mandalorian leader in exile, 2 BBY (Rebels S4 is 1 BBY)",fan-list,no,
+databank:3-revenge-of-the-sith:creatures:boga,creatures,Boga,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,no,
+databank:2-attack-of-the-clones:characters:bultar-swan,characters,Bultar Swan,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,no,
+fan:cad-bane,characters,Cad Bane,0,0,0,0,0,0,0,10,10,"alive (Clone Wars, Book of Boba Fett)",fan-list,no,
+databank:3-revenge-of-the-sith:characters:captain-merumeru,characters,Captain Merumeru,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,no,
+fan:chopper,characters,Chopper,0,0,0,0,0,0,0,10,10,alive: the Ghost's astromech,fan-list,no,
+databank:1-the-phantom-menace:characters:clegg-holdfast,characters,Clegg Holdfast,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,yes,"trainer name CLEGG (Clegg Holdfast, Boonta Eve racer and jou)"
+databank:2-attack-of-the-clones:characters:coleman-trebor,characters,Coleman Trebor,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,no,
+databank:1-the-phantom-menace:creatures:colo-claw-fish,creatures,Colo Claw Fish,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,yes,companion COLOFRY (NABOO); companion COLOCLAW (NABOO)
+fan:dash-rendar,characters,Dash Rendar,0,0,0,0,0,0,0,10,10,Legends only (skip),fan-list,no,
+fan:ezra-bridger,characters,Ezra Bridger,0,0,0,0,0,0,0,10,10,alive: Kanan's Padawan (in the game),fan-list,yes,character:liza EZRA: Kanan's Padawan from Lothal; shares the Yavin 4 arena
+databank:3-revenge-of-the-sith:driods:fx-6-medical-droid,driods,FX-6 Medical Droid,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,yes,companion FX-6 UNIT (POLIS MASSA)
+fan:finn,characters,Finn,0,0,0,0,0,0,0,10,10,not born,fan-list,no,
+databank:1-the-phantom-menace:characters:fode-and-beed,characters,Fode and Beed,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,yes,"character:gabby-and-ty FODE&BEED: Two-headed Troig HoloNet reporter (one body, two interviewer; trainer class ANNOUNCER"
+databank:3-revenge-of-the-sith:driods:gh-7-analysis-droid,driods,GH-7 Analysis Droid,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,no,
+databank:1-the-phantom-menace:characters:gasgano,characters,Gasgano,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,no,
+databank:3-revenge-of-the-sith:vehicles:general-grievous-tsmeu-6-wheel-bike,vehicles,General Grievous’ TSMEU-6 Wheel Bike,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,no,
+databank:2-attack-of-the-clones:locations:geonosis-droid-factory,locations,Geonosis Droid Factory,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,no,
+databank:1-the-phantom-menace:vehicles:gian-speeder,vehicles,Gian Speeder,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,no,
+databank:2-attack-of-the-clones:driods:hailfire-droid,driods,Hailfire Droid,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,no,
+fan:hera-syndulla,characters,Hera Syndulla,0,0,0,0,0,0,0,10,10,"alive: pilot of the Ghost, Rebel captain in 2 BBY",fan-list,no,
+fan:hondo-ohnaka,characters,Hondo Ohnaka,0,0,0,0,0,0,0,10,10,"alive: Weequay pirate, turns up wherever there is profit (Rebels)",fan-list,no,
+databank:3-revenge-of-the-sith:vehicles:invisible-hand,vehicles,Invisible Hand,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,no,
+databank:3-revenge-of-the-sith:locations:kachirho,locations,Kachirho,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,yes,location:dewford-town KACHIRHO (KASHYYYK)
+databank:3-revenge-of-the-sith:species:kallidahin,species,Kallidahin,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,no,
+databank:2-attack-of-the-clones:creatures:kouhun,creatures,Kouhun,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,yes,companion KOUHUN (GEONOSIS)
+fan:kylo-ren,characters,Kylo Ren,0,0,0,0,0,0,0,10,10,not born,fan-list,no,
+databank:2-attack-of-the-clones:characters:magaloof,characters,Magaloof,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,no,
+databank:1-the-phantom-menace:characters:mawhonic,characters,Mawhonic,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,no,
+fan:maz-kanata,characters,Maz Kanata,0,0,0,0,0,0,0,10,10,alive: Takodana castle (optional cameo),fan-list,no,
+databank:3-revenge-of-the-sith:driods:midwife-droid,driods,Midwife Droid,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,no,
+databank:1-the-phantom-menace:locations:mos-espa-grand-arena,locations,Mos Espa Grand Arena,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,no,
+databank:1-the-phantom-menace:vehicles:naboo-royal-starship,vehicles,Naboo Royal Starship,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,no,
+databank:1-the-phantom-menace:characters:ody-mandrell,characters,Ody Mandrell,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,no,
+databank:1-the-phantom-menace:creatures:opee-sea-killer,creatures,Opee Sea Killer,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,yes,companion OPEEFRY (NABOO); companion OPEEKILLER (NABOO)
+databank:2-attack-of-the-clones:creatures:orray,creatures,Orray,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,yes,companion ORRAY (GEONOSIS)
+fan:orson-krennic,characters,Orson Krennic,0,0,0,0,0,0,0,10,10,alive: runs the Death Star project (in the game),fan-list,yes,"net:character-krennic (DEATH STAR); person:death-star-ds-5:120 (boss, death-star-ds-5)"
+databank:1-the-phantom-menace:vehicles:podracer,vehicles,Podracer,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,no,
+fan:poe-dameron,characters,Poe Dameron,0,0,0,0,0,0,0,10,10,not born,fan-list,no,
+databank:3-revenge-of-the-sith:characters:queen-apailana,characters,Queen Apailana,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,no,
+databank:3-revenge-of-the-sith:characters:queen-breha-organa,characters,Queen Breha Organa,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,no,
+databank:2-attack-of-the-clones:driods:ric-series-general-labor-droid,driods,RIC-series General Labor Droid,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,no,
+databank:1-the-phantom-menace:characters:ratts-tyerell,characters,Ratts Tyerell,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,no,
+fan:rey,characters,Rey,0,0,0,0,0,0,0,10,10,not born,fan-list,no,
+databank:1-the-phantom-menace:creatures:sando-aqua-monster,creatures,Sando Aqua Monster,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,yes,companion SANDO (NABOO)
+fan:saw-gerrera,characters,Saw Gerrera,0,0,0,0,0,0,0,10,10,"alive: Partisan leader, Geonosis 2 BBY then Jedha",fan-list,no,
+databank:1-the-phantom-menace:vehicles:sebulbas-podracer,vehicles,Sebulba's Podracer,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,no,
+databank:1-the-phantom-menace:vehicles:sith-infiltrator,vehicles,Sith Infiltrator,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,no,
+databank:1-the-phantom-menace:driods:sith-probe-droid,driods,Sith Probe Droid,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,no,
+databank:1-the-phantom-menace:vehicles:sith-speeder,vehicles,Sith Speeder,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,no,
+fan:supreme-leader-snoke,characters,Supreme Leader Snoke,0,0,0,0,0,0,0,10,10,skip,fan-list,no,
+databank:1-the-phantom-menace:characters:teemto-pagalies,characters,Teemto Pagalies,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,no,
+databank:2-attack-of-the-clones:locations:the-outlander-club,locations,The Outlander Club,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,no,
+databank:3-revenge-of-the-sith:characters:tion-medon,characters,Tion Medon,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,no,
+databank:3-revenge-of-the-sith:vehicles:v-wing-fighter,vehicles,V-wing Fighter,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,no,
+databank:2-attack-of-the-clones:characters:wa-7,characters,WA-7,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,no,
+databank:3-revenge-of-the-sith:vehicles:wookiee-catamaran,vehicles,Wookiee Catamaran,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,no,
+databank:2-attack-of-the-clones:vehicles:xj-6-airspeeder,vehicles,XJ-6 Airspeeder,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,no,
+databank:1-the-phantom-menace:characters:yarael-poof,characters,Yarael Poof,1,1.0,0,0.0,0.0,0,10.0,0,10.0,,starwars-db,no,
+swapi:people:61,characters,Cordé,0,0,1,1.0,0.0,0,6.6,0,6.6,,starwars-db,no,
+swapi:planets:38,locations,Aleen Minor,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:people:29,characters,Arvel Crynyd,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:starships:68,starships,Banking clan frigte,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+fan:baze-malbus,characters,Baze Malbus,0,0,0,0,0,0,0,0,0,in the game,fan-list,yes,net:character-baze (JEDHA)
+swapi:starships:74,starships,Belbullab-22 starfighter,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:planets:26,locations,Bestine IV,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,yes,location:rustboro-city BESTINE (TATOOINE)
+swapi:vehicles:37,vehicles,C-9979 landing craft,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:starships:2,starships,CR90 corvette,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+fan:captain-rex,characters,Captain Rex,0,0,0,0,0,0,0,0,0,alive (in the game),fan-list,yes,"net:character-rex (KAMINO); person:endor-battlefield:056 (trainer, endor-battlefield)"
+swapi:planets:43,locations,Cerea,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:planets:50,locations,Champala,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:planets:32,locations,Chandrila,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+fan:chirrut-mwe,characters,Chirrut Îmwe,0,0,0,0,0,0,0,0,0,in the game,fan-list,yes,character:mt-pyre-elders GUARDIANS: Guardians of the Whills who keep the RED and BLUE KYBER; giv; net:character-chirrut (JEDHA)
+swapi:species:30,species,Clawdite,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:vehicles:71,vehicles,Clone turbo tank,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:planets:53,locations,Concord Dawn,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:planets:22,locations,Corellia,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:planets:25,locations,Dantooine,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:planets:36,locations,Dathomir,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:planets:49,locations,Dorin,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:species:2,species,Droid,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:vehicles:67,vehicles,Droid tri-fighter,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:people:48,characters,Dud Bolt,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:vehicles:62,vehicles,Emergency Firespeeder,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:planets:21,locations,Eriadu,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:vehicles:55,vehicles,Flitknot speeder,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:planets:44,locations,Glee Anselm,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:planets:42,locations,Haruun Kal,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:species:1,species,Human,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:planets:47,locations,Iktotch,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:species:24,species,Iktotchi,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:planets:45,locations,Iridonia,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:starships:43,starships,J-type diplomatic barge,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+fan:k-2so,characters,K-2SO,0,0,0,0,0,0,0,0,0,in the game,fan-list,yes,net:character-k-2so (DEATH STAR)
+swapi:planets:59,locations,Kalee,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:species:36,species,Kaleesh,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+fan:kanan-jarrus,characters,Kanan Jarrus,0,0,0,0,0,0,0,0,0,alive (in the game),fan-list,yes,"character:tate KANAN: Jedi who survived Order 66, now with the Rebels; shares the "
+swapi:species:26,species,Kel Dor,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:vehicles:45,vehicles,Koro-2 Exodrive airspeeder,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:vehicles:51,vehicles,LAAT/c,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:planets:35,locations,Malastare,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:planets:51,locations,Mirial,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:planets:31,locations,Mon Cala,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:species:34,species,Muun,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:planets:57,locations,Muunilinst,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:starships:64,starships,Naboo star skiff,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:planets:24,locations,Nal Hutta,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:vehicles:69,vehicles,Oevvaor jet catamaran,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:planets:55,locations,Ojom,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:planets:27,locations,Ord Mantell,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:planets:48,locations,Quermia,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:species:25,species,Quermian,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:vehicles:70,vehicles,Raddaugh Gnasp fluttercraft,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:starships:52,starships,Republic Assault ship,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:planets:23,locations,Rodia,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:planets:37,locations,Ryloth,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:vehicles:54,vehicles,SPHA,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+fan:sabine-wren,characters,Sabine Wren,0,0,0,0,0,0,0,0,0,alive (in the game),fan-list,yes,character:flannery SABINE: Mandalorian artist and explosives expert; Pirin's new Arena 
+swapi:starships:5,starships,Sentinel-class landing craft,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:planets:52,locations,Serenno,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:planets:58,locations,Shili,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:planets:56,locations,Skako,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:species:33,species,Skakoan,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:planets:30,locations,Socorro,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:planets:20,locations,Stewjon,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:planets:33,locations,Sullust,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,yes,"location:lavaridge-town PIRIN (SULLUST); location:fallarbor-town INYUSU TOR (SULLUST); planet SULLUST (main, act 3)"
+swapi:vehicles:6,vehicles,T-16 skyhopper,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:starships:61,starships,Theta-class T-2c shuttle,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:planets:46,locations,Tholoth,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:species:23,species,Tholothian,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:species:19,species,Toong,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:planets:34,locations,Toydaria,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:planets:29,locations,Trandosha,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:vehicles:38,vehicles,Tribubble bongo,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:planets:40,locations,Troiken,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:planets:41,locations,Tund,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:planets:60,locations,Umbara,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:planets:39,locations,Vulpter,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:species:17,species,Vulptereen,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:species:18,species,Xexto,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:species:6,species,Yoda's species,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:species:22,species,Zabrak,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:vehicles:44,vehicles,Zephyr-G swoop bike,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:planets:54,locations,Zolan,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,
+swapi:planets:28,locations,unknown,0,0,0,0.0,0.0,0,0.0,0,0.0,,starwars-db,no,

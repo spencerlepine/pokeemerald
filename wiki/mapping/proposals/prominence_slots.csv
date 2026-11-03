@@ -1,0 +1,56 @@
+slot,kind,sw_name,basis,planet,score,verdict,role
+character:player,family,KAEL / MIRA,original,TATOOINE,,original,One fixed player chosen at the start (boy or girl); collects and trains companions.
+character:rival,rival,MIRA / KAEL,original,TATOOINE,,original,Prof. Korr's child and friendly rival (five battles).
+character:mom,family,MOM,original,TATOOINE,,original,Player's mother; moved the family to Mos Pelgo.
+character:norman,arena leader,DORAN,original,TATOOINE,,original,"Player's father, Clone Wars veteran pilot, Mos Entha Arena Leader (Normal)."
+character:rivals-mom,family,MRS. KORR,original,TATOOINE,,original,"Prof. Korr's spouse, the player's neighbour."
+character:prof-birch,story / gift,PROF. KORR,original,TATOOINE,,original,Xenobiologist who studies companion habitats in the field; gives the starters and the DATA
+character:wally,rival,LUKE,databank:3-revenge-of-the-sith:characters:luke-skywalker,TATOOINE,160.1,classic,Farm boy longing for adventure; catches a AURALET with the player; final rival in the Crys
+character:wallys-uncle,story / gift,CAMIE'S DAD,original,TATOOINE,,original,Anchorhead moisture farmer who puts Luke up in town.
+character:wallys-father,story / gift,OWEN,databank:2-attack-of-the-clones:characters:owen-lars,TATOOINE,73.5,classic,Luke's uncle and guardian in Mos Entha; gives HM03 SURF and HM09 SAND SKIM in thanks (npc:
+character:wanda,story / gift,CAMIE,canon:Camie Marstrap,TATOOINE,n/a,series / spin-off (no six-film data),Luke's friend in Anchorhead.
+character:steven,story / gift,LEIA,databank:3-revenge-of-the-sith:characters:leia-organa,ALDERAAN,153.2,classic,"Young senator and secret Rebel courier. Mentor-ally: Shadowlands message, tag battle vs Va"
+character:mr-stone,family,SEN. ORGANA,databank:2-attack-of-the-clones:characters:bail-organa,ALDERAAN,68.6,classic,"Leia's father, backer of House Organa; gives the StarNAV and asks the player to carry a me"
+character:devon-researcher,story / gift,ORGANA ENGINEER,original,TATOOINE,,original,Engineer robbed in the Jundland Wastes.
+character:mr-briney,family,HAN,databank:4-a-new-hope:characters:han-solo,CORELLIA,145.5,classic,Smuggler who flies the player between planets in the Millennium Falcon after the player re
+character:peeko,story / gift,CHEWIE,databank:3-revenge-of-the-sith:characters:chewbacca,KASHYYYK,97.0,classic,"Han's co-pilot, kidnapped by cartel thugs in Beggar's Canyon. A character, never a compani"
+character:capt-stern,story / gift,RIC OLIé,databank:1-the-phantom-menace:characters:ric-olie,NABOO,35.2,known,"Veteran Naboo pilot running a shipyard at Mos Eisley, building a deep-diving bongo sub."
+character:prof-cozmo,story / gift,DR. TIEN,original,SULLUST,,original,Sullustan astronomer whose meteorite the Empire steals.
+character:rydel,story / gift,WALD,databank:1-the-phantom-menace:characters:wald,TATOOINE,16.6,filler,"Anakin's old Rodian friend, now runs Wald's Hover-Bikes in Mos Espa (Swoop / Speeder bike)"
+character:wattson,arena leader,WATTO,databank:1-the-phantom-menace:characters:watto,TATOOINE,57.5,known,Toydarian junk dealer and Mos Espa Arena Leader (Electric). Asks you to shut down the old 
+character:roxanne,arena leader,BIGGS,databank:4-a-new-hope:characters:biggs-darklighter,TATOOINE,52.8,known,"Luke's friend from Anchorhead, home from the flight academy; teaches at the Bestine academ"
+character:brawly,arena leader,TARFFUL,databank:3-revenge-of-the-sith:characters:tarfful,KASHYYYK,12.0,filler,Wookiee chieftain of Kachirho and its Arena Leader (Fighting).
+character:flannery,arena leader,SABINE,canon:Sabine Wren,SULLUST,0,series / spin-off (no six-film data),Mandalorian artist and explosives expert; Pirin's new Arena Leader (Fire).
+character:winona,arena leader,CHIRPA,databank:6-return-of-the-jedi:characters:chief-chirpa,ENDOR,17.0,filler,Ewok chief of Bright Tree Village; Arena Leader (Flying) with glider riders.
+character:tate,arena leader,KANAN,canon:Kanan Jarrus,YAVIN 4,0,series / spin-off (no six-film data),"Jedi who survived Order 66, now with the Rebels; shares the Yavin 4 arena (Force) with his"
+character:liza,story / gift,EZRA,canon:Ezra Bridger,YAVIN 4,10,series / spin-off (no six-film data),Kanan's Padawan from Lothal; shares the Yavin 4 arena.
+character:juan,arena leader,YODA,databank:1-the-phantom-menace:characters:yoda,DAGOBAH,147.4,classic,In exile on Dagobah; Arena Leader (Water/swamp). Obi-Wan's old teacher.
+character:sidney,trial,MAUL,databank:1-the-phantom-menace:characters:maul,ILUM,55.2,known,First Trial (Dark): a Force vision of fear.
+character:phoebe,trial,QUI-GON,databank:1-the-phantom-menace:characters:qui-gon-jinn,ILUM,85.9,classic,Second Trial (Spirit): the first Jedi to return as a Force spirit.
+character:glacia,trial,KI-ADI,databank:1-the-phantom-menace:characters:ki-adi-mundi,ILUM,55.9,known,Third Trial (Ice): the betrayal on frozen Mygeeto.
+character:drake,trial,ANAKIN,databank:1-the-phantom-menace:characters:anakin-skywalker,ILUM,148.6,classic,Fourth Trial (Dragon): the fallen hero on Mustafar.
+character:wallace,champion,OBI-WAN,databank:1-the-phantom-menace:characters:obi-wan-kenobi,TATOOINE,176.6,classic,"Hermit 'Ben', guardian of the Cave of Evil during the crisis, gives HM07; the final battle"
+character:scott,story / gift,LANDO,databank:5-the-empire-strikes-back:characters:lando-calrissian,BESPIN,107.8,classic,"Gambler and talent scout who keeps turning up, then opens the Grand Arena."
+character:maxie,faction boss,VADER,databank:3-revenge-of-the-sith:characters:darth-vader,MUSTAFAR,148.5,classic,Leader of the Imperial task force hunting the land titan GREATKRAYT. Fought on Mustafar Pe
+character:tabitha,faction lieutenant,VEERS,databank:5-the-empire-strikes-back:characters:general-veers,MUSTAFAR,38.3,known,Vader's field commander.
+character:archie,faction boss,JABBA,databank:1-the-phantom-menace:characters:jabba-the-hutt,TATOOINE,97.7,classic,Hutt Cartel boss after the sea titan SANDO.
+character:matt,faction lieutenant,BOBA FETT,databank:2-attack-of-the-clones:characters:boba-fett,KAMINO,122.2,classic,"Jabba's top bounty hunter; recurring boss (Hutt Hideout). A person, never catchable."
+character:shelly,faction lieutenant,BOSSK,databank:5-the-empire-strikes-back:characters:bossk,TRANDOSHA,32.0,filler,"Trandoshan bounty hunter on Jabba's payroll (Endor Station, Drowned Cavern)."
+character:mt-pyre-elders,story / gift,GUARDIANS,canon:Guardians of the Whills,JEDHA,0,series / spin-off (no six-film data),Guardians of the Whills who keep the RED and BLUE KYBER; give the IMPERIAL CODE.
+character:gabby-and-ty,story / gift,FODE&BEED,databank:1-the-phantom-menace:characters:fode-and-beed,TATOOINE,10.0,filler,"Two-headed Troig HoloNet reporter (one body, two interviewers)."
+character:lanette,story / gift,TESS,original,SULLUST,,original,Built the companion storage system ('TESS's TERMINAL').
+character:anabel,grand arena ace,AURRA,databank:1-the-phantom-menace:characters:aurra-sing,GRAND ARENA,22.0,filler,Grand Arena Tower ace.
+character:tucker,grand arena ace,DENGAR,databank:5-the-empire-strikes-back:characters:dengar,GRAND ARENA,32.0,filler,Grand Arena Dome ace.
+character:spenser,grand arena ace,ZUCKUSS,databank:5-the-empire-strikes-back:characters:zuckuss,GRAND ARENA,15.0,filler,Grand Arena Palace ace.
+character:greta,grand arena ace,4-LOM,databank:5-the-empire-strikes-back:characters:4-lom,GRAND ARENA,15.0,filler,Grand Arena Arena ace.
+character:noland,grand arena ace,IG-88,databank:5-the-empire-strikes-back:characters:ig-88,GRAND ARENA,15.0,filler,"Grand Arena Factory ace (a droid factory, fittingly)."
+character:lucy,grand arena ace,GARDULLA,databank:1-the-phantom-menace:characters:gardulla-the-hutt,GRAND ARENA,12.0,filler,Grand Arena Pike ace.
+character:brandon,grand arena ace,DEXTER,databank:2-attack-of-the-clones:characters:dexter-jettster,GRAND ARENA,33.7,filler,"Grand Arena Pyramid ace, an old prospector."
+character:trick-master,story / gift,GARINDAN,databank:4-a-new-hope:characters:garindan,TATOOINE,15.0,filler,Kubaz spy and master of disguise who runs the Trick House.
+person:bens-hut:003,new boss,MAUL,character:sidney,bens-hut,55.2,known,"New object on the path, shown with flag:sys-game-clear until the flag is set (net:maul-due"
+person:mos-espa-podrace-arena:016,new boss,SEBULBA,net:character-sebulba,mos-espa-podrace-arena,27.1,filler,SWOOP RACER boss after flag:badge03-get (net:podrace-sebulba). Gives a SCOPE LENS. New obj
+person:endor-battlefield:056,new boss,REX,net:character-rex,endor-battlefield,0,series / spin-off (no six-film data),Rex on Endor (canon: Rebels; a clone alongside the Rebellion in 2 BBY). Gives a MAX ELIXIR
+person:death-star-hangar:103,new boss,PIETT,net:character-piett,death-star-hangar,66.9,classic,
+person:death-star-ds-3:113,new boss,OZZEL,net:character-ozzel,death-star-ds-3,35.4,known,
+person:death-star-ds-4:116,new boss,NEEDA,net:character-needa,death-star-ds-4,35.4,known,
+person:death-star-ds-5:120,new boss,KRENNIC,net:character-krennic,death-star-ds-5,10,series / spin-off (no six-film data),The final battle of the Death Star site (net:death-star-site). Sets flag:unused-0x025.
