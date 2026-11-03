@@ -202,6 +202,21 @@ props:
   art: art:tatooine:sandstone-boulder
   at: [35, 25]
   size: [2, 2]
+- name: Greater krayt skeleton
+  art: art:tatooine:greater-krayt-skeleton
+  at: [30, 33]
+  size: [10, 2]
+  facing: w
+- name: Hull debris
+  art: art:shared:hull-debris
+  at: [35, 69]
+  size: [2, 1]
+  facing: w
+- name: Hull debris
+  art: art:shared:hull-debris
+  at: [34, 87]
+  size: [2, 1]
+  facing: w
 people:
 - name: Victor
   at: [12, 115]

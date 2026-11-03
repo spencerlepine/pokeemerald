@@ -58,6 +58,11 @@ props:
   art: art:tatooine:bantha-skeleton
   at: [9, 15]
   size: [1, 1]
+- name: Ruined wall
+  art: art:shared:ruined-wall
+  at: [0, 7]
+  size: [3, 2]
+  facing: e
 people:
 - name: Obi-Wan 'Ben' Kenobi
   at: [15, 11]

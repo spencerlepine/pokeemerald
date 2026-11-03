@@ -71,6 +71,16 @@ props:
   art: art:felucia:spore-pod-plants
   at: [11, 30]
   size: [1, 1]
+- name: Hull debris
+  art: art:shared:hull-debris
+  at: [31, 1]
+  size: [2, 1]
+  facing: w
+- name: Hull debris
+  art: art:shared:hull-debris
+  at: [36, 14]
+  size: [2, 1]
+  facing: w
 people:
 - name: Fisherman
   at: [22, 9]

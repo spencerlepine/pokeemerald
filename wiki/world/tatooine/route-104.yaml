@@ -121,6 +121,11 @@ props:
   art: art:shared:parked-landspeeder
   at: [24, 67]
   size: [2, 1]
+- name: Crashed skyhopper
+  art: art:tatooine:crashed-skyhopper
+  at: [38, 13]
+  size: [2, 2]
+  facing: w
 people:
 - name: Bug Catcher
   at: [15, 60]

@@ -65,6 +65,11 @@ props:
   art: art:mustafar:obsidian-spire
   at: [9, 33]
   size: [2, 3]
+- name: Fortress Vader (far)
+  art: art:mustafar:fortress-vader-distant
+  at: [18, 0]
+  size: [4, 2]
+  facing: s
 people:
 - name: Trainer Eho
   at: [10, 8]

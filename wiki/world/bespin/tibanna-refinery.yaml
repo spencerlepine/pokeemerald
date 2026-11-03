@@ -63,6 +63,21 @@ props:
   art: art:shared:fuel-tanks
   at: [21, 6]
   size: [2, 2]
+- name: Drifting platform
+  art: art:bespin:drifting-platform
+  at: [1, 0]
+  size: [5, 3]
+  facing: e
+- name: Crashed cloud car
+  art: art:bespin:crashed-cloud-car
+  at: [18, 1]
+  size: [3, 2]
+  facing: e
+- name: Broken bridge
+  art: art:shared:broken-bridge
+  at: [35, 7]
+  size: [3, 1]
+  facing: w
 people:
 - name: Ugnaught foreman
   at: [19, 12]

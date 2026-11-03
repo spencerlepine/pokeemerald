@@ -27,6 +27,7 @@ The player must always see where they can walk.
 | `edge` | Blocks movement and outlines paths (trees, cliffs, walls, railings) | Line paths and map borders; never scatter in the middle of a path |
 | `noise` | Small decor that blocks one or two cells (crates, vaporators, droids) | Corners, building sides and dead space only; never in a path or a doorway |
 | `landmark` | A big unique piece (docking bay, temple, sandcrawler) | One or two per map, at a point the path leads to |
+| `backdrop` | A giant bigger than the screen (a Star Destroyer, a krayt skeleton) | Along a map edge, running off it; only part of it shows |
 
 ## Fill the tile (sizing rule for every row, owner 2026-11-02)
 
@@ -74,13 +75,71 @@ and one row per edge and corner in `terrain.csv`.
 | Asteroid Field | Void edge | | `void-edge` net-new |
 | Death Star | Durasteel walls | | `durasteel-wall` net-new |
 
+## Large scenery (owner 2026-11-03)
+
+Big static pieces placed through the world: crashed ships, toppled walkers, fossils, statues, ruins, broken
+bridges and stairs. They are scenery only. None can be entered, none is a building, and none changes where the
+player can walk. Every one is a `scenery` row in `world_art.csv` and a prop in its area's yaml.
+
+- **They replace the border, they don't add walls.** A piece only sits on cells that are already blocked (the
+  tree line, the cliff, the rock mass) or on water. So a wreck stands where the planet's border was, and the map
+  edge reads as a place instead of a fence. The path never moves and `blockout check` stays green.
+- **Hit box = footprint.** Whole cells, like a building. The drawn piece is taller than its hit box: the `drawn`
+  column is the footprint plus the rows that rise above it. In the game those rows go in the metatiles' top
+  layer, so the player walks behind them, as behind a tree top.
+- **Roles.** `edge`: lines a border or closes a side way (broken bridge, fallen trunk, collapsed stairs).
+  `landmark`: one per map, a place the path leads past. `noise`: small, in dead space. `backdrop`: a giant
+  that is far bigger than the screen; it lies along the map edge and runs off it, so only part of it shows (the
+  greater krayt skeleton, the Venator, the Star Destroyer over NiJedha, Fortress Vader beyond Ashen Pass).
+- **On the screen.** The GBA shows 15x10 cells. Every non-backdrop piece is drawn at most 8 cells wide and 6 tall, so it is
+  seen whole with room around it. Sizes are picked to look right, not to scale.
+- **Facing.** The camera is the game's 3/4 top-down view, so a piece can't turn freely. `facings` lists the
+  drawings: `e` and `w` are one drawing mirrored (the tilemap's flip bit, free), `n` and `s` are drawings of
+  their own. Each placement says which it uses (`facing` in the yaml); the greybox mirrors `w`.
+- **Water.** Pieces on water (`~`: sea, swamp, lava, the cloud sea, the Dune Sea) never cut a surf route; the
+  placer checks that every body of water stays one piece.
+- **Events.** `shown` is `always`, or tied to an existing story flag. The map script swaps the metatiles on
+  load with `setmetatile` (as vanilla does for its puzzle doors), so no new flag is spent. A piece that
+  changes (the drill rig topples, the ion cannon dish gets built) needs a second drawing; a piece that only
+  appears or leaves needs none. Collision never changes with an event.
+- **Tile budget.** A secondary tileset holds 512 tiles and 512 metatiles, shared with the planet's buildings
+  and terrain. `metatiles` is the piece's cost (every drawn cell, every drawing, every state) and `tiles` is
+  four per metatile, an upper bound before repeated tiles are shared. Keep a planet's scenery near 200 tiles
+  per tileset. The two giants over that (the Venator on Felucia, the Star Destroyer over NiJedha) are drawn
+  from a repeating hull strip, which brings them well under.
+
+Review sheets: `world/greybox/scenery/placements-*.png`, one screen-sized crop (15x10 cells) per placement with its hit box in red. Placements are made by `tools/blockout/drafts/scenery.py` from the catalog in `scenery_spec.py` (rerun it after
+an area's grid changes; it redoes every scenery prop). Query the rows with
+`python3 -m blockout todo --kind scenery`. Greybox renders use a stand-in model per piece (named in `build`
+and `notes`); each needs its own shape when its category is reviewed.
+
+| Planet | Pieces (where) | Lore |
+|---|---|---|
+| Every planet | Crashed X-wing, Crashed TIE fighter, Y-wing wreck, Vulture droid wreck, Droid tank wreck, AT-TE wreck, Republic gunship wreck, Hull debris, Fallen comm tower, Broken bridge, Collapsed stairs, Ruined wall, Rubble pile | Clone Wars wrecks seventeen years on, and the first Rebel and Imperial losses. One drawing each, recoloured per planet. |
+| Tatooine | Greater krayt skeleton (Route 111, backdrop), Gutted sandcrawler (Jundland Wastes), Crashed skyhopper (Routes 104, 116), Podracer wreck (Route 110, Mos Espa), Fallen canyon arch (Route 110), B'omarr ruin (Jabba's palace), Abandoned homestead (Routes 101, 117, Anchorhead), Wrecked freighter (Route 115) | A New Hope's krayt skeleton, Beggar's Canyon, the Boonta Eve course, the B'omarr monastery. |
+| Kashyyyk | Juggernaut wreck (Route 109), Sunken tank droid (Route 105, water), Fallen wroshyr trunk (Route 106), Catamaran wreck (Route 108) | The Battle of Kashyyyk (Revenge of the Sith). |
+| Sullust | Separatist frigate wreck (Route 113, backdrop), Hyena bomber wreck (Route 114), Collapsed lava tube (Inyusu Tor, Route 113) | SoroSuub joined the Separatists. |
+| Mustafar | Fallen collector arm (mining facility, in the lava), Fortress Vader far off (Ashen Pass, backdrop), Imperial drill rig (Mustafar Peak, topples after Vader is beaten there) | The duel on the collector arm; Vader's castle from Rogue One. |
+| Endor | Fallen redwood (Routes 118, 121), Towani starcruiser wreck (Route 123) | The Ewok film Caravan of Courage (Legends). |
+| Bespin | Beldon (Cloud City, in the cloud sea), Crashed cloud car, Drifting platform (Tibanna refinery) | Beldons breathe out Tibanna gas. |
+| Jedha | Star Destroyer overhead (NiJedha, backdrop, leaves once the temple's kyber is safe), Assault tank wreck (NiJedha, Route 122), Headless Jedi statue (temple terraces and summit) | Rogue One. |
+| Yavin 4 | Massassi ruin (Routes 124, 125), Fallen Massassi head (Route 124, river) | The Massassi temples. |
+| Hoth | Frozen AT-AT (the frozen lake), Probe droid crater, Ion cannon footing (dish built after the player is champion) | Alternate telling: the Empire tested cold-weather walkers here years early. |
+| Dagobah | Dragonsnake skeleton (Routes 126, 128, in the bog), Fallen gnarltree (Routes 129, 130) | The dragonsnake that spat out R2-D2. |
+| Kamino | Trident drill wreck (Routes 132, 133, in the sea), Toppled stilt dome (Route 131), Aiwha skeleton (Route 134) | The Battle of Kamino (The Clone Wars). |
+| Ilum | Abandoned kyber drill, Frozen Jedi statues, Crystal spires far off (backdrop) | The Empire stripped Ilum's kyber. |
+| Post-game | Statue of Lando (Grand Arena), Venator wreck (Felucia, backdrop), Ruined temple arch (Tython), AT-AT wreck (Atollon, appears after the Bendu wakes), Mortis statues (the Daughter, the Father and the Son), Chewed freighter (Asteroid Spire) | Order 66 on Felucia; Rebels' Battle of Atollon; the Mortis arc; the exogorth. |
+
+Open: no piece has its own greybox model yet; 40 rows have no reference image (`reference_art` is blank); the
+sunken X-wing rising after shard 8 (bible/FAN_CRITIQUE.md) is not set as an event until the owner approves it.
+
 ## Columns
 
 | Column | Meaning |
 |---|---|
 | `concept_id` | `art:<planet>:<name>` |
 | `planet`, `place` | Planet and town/route/area (`planet-wide` = the planet's shared kit; `SHARED` = every planet) |
-| `category` | `building` (exterior), `interior` (room kit), `object` (prop), `nature` (flora, rock), `landmark` (unique set piece) |
+| `category` | `building` (exterior), `interior` (room kit), `object` (prop), `nature` (flora, rock), `landmark` (unique set piece), `scenery` (large static scenery, see above) |
 | `description` | The brief: shape, materials, what makes it read as Star Wars at 16x16 |
 | `footprint` | Size in 16x16 cells, width x height on screen |
 | `used_in`, `areas` | How many times the piece is placed in `../world/`, and where (generated by `blockout index`) |
@@ -89,6 +148,10 @@ and one row per edge and corner in `terrain.csv`.
 | `status` | `pending-mockup`, `pending-final-art`, `art-complete`, `imported-in-game` |
 | `greybox` | Path of the rendered greybox PNG under `wiki/` |
 | `notes` | What it needs, in plain words |
+| `drawn` | Scenery: cells drawn, the footprint plus the rows that rise above it (walk-behind) |
+| `facings` | Scenery: the facings that exist; `e` and `w` share one mirrored drawing |
+| `metatiles`, `tiles` | Scenery: metatiles it costs in its tileset (all drawings and states) and 8x8 tiles, an upper bound |
+| `shown` | Scenery: `always`, or the story flag that makes it appear, leave or change |
 | `vanilla_template` | The Emerald tiles it replaces or is built from (`(done)` = covered by a recipe already) |
 | `sw_refs` | `starwars-db` entity ids used as reference (github.com/spencerlepine/starwars-db) |
 | `reference_art` | Local reference images (`art/concept/...`): starwars-db databank images (`__db_`), web references (`__web_`, sources in `art/concept/SOURCES.csv`) and paintings generated in code where nothing usable was found (`__gen_`, made by `art/concept/_generated/paint.py`; `__civ_`, SDXL paintings from Civitai made by `tools/tile-generator/scripts/civitai_concepts.py`) |

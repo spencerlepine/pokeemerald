@@ -103,6 +103,11 @@ props:
   art: art:kashyyyk:wroshyr-tree
   at: [15, 53]
   size: [3, 3]
+- name: Sunken tank droid
+  art: art:kashyyyk:tank-droid-sunk
+  at: [1, 0]
+  size: [3, 3]
+  facing: e
 people:
 - name: Trainer Loal
   at: [19, 60]

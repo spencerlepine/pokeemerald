@@ -59,6 +59,11 @@ props:
   art: art:kamino:storm-sea
   at: [41, 15]
   size: [3, 1]
+- name: Aiwha skeleton
+  art: art:kamino:aiwha-skeleton
+  at: [66, 1]
+  size: [3, 2]
+  facing: w
 people:
 - name: Trainer Juo
   at: [49, 9]

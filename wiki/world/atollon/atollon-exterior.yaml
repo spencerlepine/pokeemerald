@@ -49,6 +49,12 @@ props:
   art: art:atollon:glyph-stone
   at: [19, 9]
   size: [1, 1]
+- name: AT-AT wreck
+  art: art:atollon:at-at-wreck
+  at: [23, 17]
+  size: [6, 3]
+  facing: w
+  shown: after FLAG_BATTLED_DEOXYS
 people:
 - name: Triangle
   at: [15, 12]

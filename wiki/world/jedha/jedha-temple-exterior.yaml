@@ -71,6 +71,16 @@ props:
   art: art:jedha:toppled-statue
   at: [21, 27]
   size: [3, 3]
+- name: Collapsed stairs
+  art: art:shared:collapsed-stairs
+  at: [7, 2]
+  size: [2, 2]
+  facing: e
+- name: Headless Jedi statue
+  art: art:jedha:headless-guardian
+  at: [12, 20]
+  size: [2, 2]
+  facing: s
 people:
 - name: Item
   at: [27, 15]

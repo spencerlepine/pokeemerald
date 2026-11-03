@@ -58,7 +58,7 @@ python3 -m greybox kit objects|wild|landmarks|interiors   # review sheets for th
   lives here, not in each model: a true circle of radius r shows as an oval r wide and r·K deep (K = cos 45°),
   a dome is never taller than a hemisphere, a round piece that doesn't fit shrinks rather than squashes.
   Solids combine in order: a cut removes only what was added before it, so a pit can be dug and then furnished.
-- `greybox/build.py`: the base building models (`BUILDS`: block, L, oct, T, notch, court, wings, hall, palace,
+- `greybox/build.py`: a piece placed with `facing: w` is drawn mirrored (models face east). The base building models (`BUILDS`: block, L, oct, T, notch, court, wings, hall, palace,
   pitched, barrel, tower, round-tower, stepped, dome, domes2, dome-block, dome-porch, store, cone, glass-dome,
   bunker, buried, stilts, stilts-dome, stilts-flat, pad, plant, lab, arena, hipped) and the one giant,
   trench-wall. `sprite()` renders one piece; `building()` pastes it on a map.

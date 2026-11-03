@@ -156,6 +156,11 @@ props:
   art: art:tatooine:dewback-trough
   at: [10, 25]
   size: [2, 1]
+- name: Podracer wreck
+  art: art:tatooine:podracer-wreck
+  at: [19, 0]
+  size: [4, 2]
+  facing: e
 people:
 - name: Watto (outside his shop)
   at: [9, 10]

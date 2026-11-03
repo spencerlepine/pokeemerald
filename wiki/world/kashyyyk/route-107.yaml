@@ -45,6 +45,11 @@ props:
   art: art:kashyyyk:beach-rocks
   at: [21, 4]
   size: [1, 1]
+- name: Broken bridge
+  art: art:shared:broken-bridge
+  at: [1, 9]
+  size: [3, 1]
+  facing: e
 people:
 - name: Trainer Disko
   at: [41, 10]

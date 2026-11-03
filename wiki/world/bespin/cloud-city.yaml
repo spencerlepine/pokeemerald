@@ -160,6 +160,16 @@ props:
   art: art:shared:parked-landspeeder
   at: [52, 34]
   size: [2, 1]
+- name: Beldon
+  art: art:bespin:beldon
+  at: [0, 0]
+  size: [6, 3]
+  facing: e
+- name: Broken bridge
+  art: art:shared:broken-bridge
+  at: [1, 12]
+  size: [3, 1]
+  facing: e
 people:
 - name: Lando
   at: [30, 24]

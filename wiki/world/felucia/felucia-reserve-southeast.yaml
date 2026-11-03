@@ -68,6 +68,11 @@ props:
   art: art:felucia:spore-pod-plants
   at: [6, 31]
   size: [1, 1]
+- name: Droid tank wreck
+  art: art:shared:droid-tank-wreck
+  at: [9, 2]
+  size: [3, 2]
+  facing: e
 people:
 - name: Rich Boy
   at: [7, 7]

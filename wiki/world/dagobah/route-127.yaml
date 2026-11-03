@@ -108,6 +108,11 @@ props:
   art: art:dagobah:gnarltree
   at: [60, 17]
   size: [2, 2]
+- name: Broken bridge
+  art: art:shared:broken-bridge
+  at: [59, 75]
+  size: [3, 1]
+  facing: w
 people:
 - name: Trainer Caus
   at: [45, 42]

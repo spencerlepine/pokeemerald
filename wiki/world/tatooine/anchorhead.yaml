@@ -98,6 +98,11 @@ props:
   art: art:shared:parked-landspeeder
   at: [20, 9]
   size: [2, 1]
+- name: Abandoned homestead
+  art: art:tatooine:moisture-farm-ruin
+  at: [3, 0]
+  size: [3, 2]
+  facing: e
 people:
 - name: Camie
   at: [10, 13]

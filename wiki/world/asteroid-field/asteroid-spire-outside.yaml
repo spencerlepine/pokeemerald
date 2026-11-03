@@ -39,6 +39,11 @@ props:
   art: art:grand-arena:asteroid-spire
   at: [18, 7]
   size: [2, 2]
+- name: Chewed freighter
+  art: art:asteroid-field:chewed-freighter
+  at: [10, 19]
+  size: [5, 2]
+  facing: e
 people:
 - name: Wallace
   at: [13, 7]

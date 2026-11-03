@@ -147,6 +147,11 @@ props:
   art: art:shared:holo-sign
   at: [33, 36]
   size: [1, 1]
+- name: Statue of Lando
+  art: art:grand-arena:lando-statue
+  at: [34, 2]
+  size: [2, 2]
+  facing: s
 people:
 - name: Ninja Boy
   at: [20, 17]

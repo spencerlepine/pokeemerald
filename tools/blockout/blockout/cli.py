@@ -322,6 +322,7 @@ def _assets():
 def cmd_index(a):
     """wiki/world/INDEX.csv: every area and every placed piece, with the art status from world_art.csv."""
     art = _assets()
+    uses = {}
     out = WORLD / "INDEX.csv"
     with open(out, "w", newline="") as fh:
         w = csv.writer(fh)
@@ -338,7 +339,21 @@ def cmd_index(a):
                 st = "PLACEHOLDER" if pc["kind"] in ("person", "sign", "warp") else row.get("status", "pending-mockup")
                 w.writerow([ar.id, ar.planet, ar.kind, ar.replaces, ar.status, pc["kind"], pc.get("name", ""),
                             "x".join(str(v) for v in pc.get("size", [1, 1])), aid, known, st, row.get("tool", "")])
+                if aid:
+                    uses.setdefault(aid, []).append(ar.id)
     print(out)
+    # world_art.csv `used_in` and `areas`: how often each piece is placed, and where
+    path = V.ROOT / "wiki" / "mapping" / "world_art.csv"
+    rows = list(csv.DictReader(open(path)))
+    for r in rows:
+        where = sorted(set(uses.get(r["concept_id"], [])))
+        r["used_in"] = str(len(uses.get(r["concept_id"], [])))
+        r["areas"] = " ".join(where[:6]) + (" ..." if len(where) > 6 else "")
+    with open(path, "w", newline="") as fh:
+        wr = csv.DictWriter(fh, fieldnames=list(rows[0].keys()))
+        wr.writeheader()
+        wr.writerows(rows)
+    print(path)
 
 
 STATUSES = ["pending-mockup", "pending-final-art", "art-complete", "imported-in-game"]

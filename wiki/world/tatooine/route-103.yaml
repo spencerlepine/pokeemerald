@@ -58,6 +58,11 @@ props:
   art: art:tatooine:dead-tree
   at: [77, 12]
   size: [2, 2]
+- name: Droid tank wreck
+  art: art:shared:droid-tank-wreck
+  at: [24, 13]
+  size: [3, 2]
+  facing: e
 people:
 - name: Man
   at: [49, 12]

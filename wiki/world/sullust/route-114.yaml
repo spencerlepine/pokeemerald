@@ -110,6 +110,16 @@ props:
   art: art:sullust:fungus-stalks
   at: [16, 11]
   size: [1, 1]
+- name: Vulture droid wreck
+  art: art:shared:vulture-droid-wreck
+  at: [8, 3]
+  size: [3, 2]
+  facing: e
+- name: Hyena bomber wreck
+  art: art:sullust:hyena-bomber-wreck
+  at: [19, 8]
+  size: [3, 2]
+  facing: w
 people:
 - name: Trainer Lalesh
   at: [15, 65]

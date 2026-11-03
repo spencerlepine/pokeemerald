@@ -123,6 +123,11 @@ props:
   art: art:shared:cargo-crates
   at: [28, 66]
   size: [2, 2]
+- name: Statue of Lando
+  art: art:grand-arena:lando-statue
+  at: [17, 68]
+  size: [2, 2]
+  facing: s
 people:
 - name: Boy1
   at: [26, 38]

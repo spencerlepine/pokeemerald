@@ -50,6 +50,11 @@ props:
   art: art:endor:totem-and-drum
   at: [62, 13]
   size: [1, 2]
+- name: Fallen redwood
+  art: art:endor:fallen-redwood
+  at: [59, 0]
+  size: [8, 2]
+  facing: w
 people:
 - name: Woman
   at: [29, 14]

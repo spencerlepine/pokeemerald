@@ -99,6 +99,27 @@ props:
   art: art:tatooine:market-stall
   at: [20, 14]
   size: [2, 2]
+- name: Star Destroyer overhead
+  art: art:jedha:star-destroyer-overhead
+  at: [0, 0]
+  size: [14, 2]
+  facing: s
+  shown: until VAR_MT_PYRE_STATE done
+- name: Ruined wall
+  art: art:shared:ruined-wall
+  at: [22, 0]
+  size: [3, 2]
+  facing: w
+- name: Assault tank wreck
+  art: art:jedha:assault-tank-wreck
+  at: [2, 26]
+  size: [3, 2]
+  facing: e
+- name: Rubble pile
+  art: art:shared:rubble-pile
+  at: [13, 26]
+  size: [2, 2]
+  facing: e
 people:
 - name: Guardian of the Whills
   at: [14, 10]

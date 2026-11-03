@@ -51,6 +51,11 @@ props:
   art: art:kashyyyk:beach-rocks
   at: [45, 2]
   size: [1, 1]
+- name: Catamaran wreck
+  art: art:kashyyyk:catamaran-wreck
+  at: [39, 0]
+  size: [3, 2]
+  facing: w
 people:
 - name: Trainer Jiven
   at: [52, 13]

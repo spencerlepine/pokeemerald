@@ -93,6 +93,32 @@ props:
   art: art:hoth:ice-stalagmites
   at: [33, 4]
   size: [1, 1]
+- name: Frozen AT-AT
+  art: art:hoth:frozen-at-at
+  at: [34, 21]
+  size: [7, 3]
+  facing: w
+- name: Ion cannon footing
+  art: art:hoth:ion-cannon-footing
+  at: [21, 0]
+  size: [3, 3]
+  facing: s
+  shown: 'after FLAG_IS_CHAMPION: dish built'
+- name: Crashed X-wing
+  art: art:shared:crashed-x-wing
+  at: [0, 13]
+  size: [4, 2]
+  facing: e
+- name: Fallen comm tower
+  art: art:shared:fallen-comm-tower
+  at: [34, 5]
+  size: [6, 1]
+  facing: w
+- name: Probe droid crater
+  art: art:hoth:probe-droid-crater
+  at: [11, 3]
+  size: [2, 2]
+  facing: s
 people:
 - name: Rebel surveyor
   at: [13, 24]

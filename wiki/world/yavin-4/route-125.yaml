@@ -73,6 +73,21 @@ props:
   art: art:yavin-4:jungle-vines
   at: [46, 13]
   size: [1, 1]
+- name: Massassi ruin
+  art: art:yavin-4:massassi-ruin
+  at: [31, 20]
+  size: [5, 3]
+  facing: s
+- name: Crashed X-wing
+  art: art:shared:crashed-x-wing
+  at: [6, 24]
+  size: [4, 2]
+  facing: e
+- name: Rubble pile
+  art: art:shared:rubble-pile
+  at: [46, 27]
+  size: [2, 2]
+  facing: w
 people:
 - name: Trainer Neus
   at: [7, 31]

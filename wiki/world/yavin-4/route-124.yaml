@@ -118,6 +118,21 @@ props:
   art: art:yavin-4:jungle-vines
   at: [70, 27]
   size: [1, 1]
+- name: Massassi ruin
+  art: art:yavin-4:massassi-ruin
+  at: [2, 77]
+  size: [5, 3]
+  facing: s
+- name: Y-wing wreck
+  art: art:shared:y-wing-wreck
+  at: [63, 3]
+  size: [4, 2]
+  facing: w
+- name: Fallen Massassi head
+  art: art:yavin-4:fallen-massassi-head
+  at: [77, 1]
+  size: [3, 2]
+  facing: w
 people:
 - name: Trainer Sugon
   at: [34, 25]

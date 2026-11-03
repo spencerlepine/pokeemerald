@@ -66,6 +66,11 @@ props:
   art: art:kamino:rock-stack
   at: [46, 30]
   size: [1, 1]
+- name: Trident drill wreck
+  art: art:kamino:trident-wreck
+  at: [1, 5]
+  size: [4, 3]
+  facing: e
 people:
 - name: Trainer Gios
   at: [40, 13]

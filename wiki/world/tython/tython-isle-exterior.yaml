@@ -46,6 +46,21 @@ props:
   art: art:grand-arena:tython-standing-stones
   at: [23, 8]
   size: [2, 2]
+- name: Ruined temple arch
+  art: art:tython:ruined-temple-arch
+  at: [23, 17]
+  size: [4, 2]
+  facing: s
+- name: Ruined wall
+  art: art:shared:ruined-wall
+  at: [10, 18]
+  size: [3, 2]
+  facing: e
+- name: Collapsed stairs
+  art: art:shared:collapsed-stairs
+  at: [17, 7]
+  size: [2, 2]
+  facing: w
 people:
 - name: Sailor
   at: [13, 23]

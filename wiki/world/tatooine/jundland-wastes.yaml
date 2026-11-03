@@ -76,6 +76,16 @@ props:
   art: art:tatooine:sandstone-boulder
   at: [38, 10]
   size: [2, 2]
+- name: Gutted sandcrawler
+  art: art:tatooine:gutted-sandcrawler
+  at: [33, 1]
+  size: [6, 3]
+  facing: w
+- name: Ruined wall
+  art: art:shared:ruined-wall
+  at: [39, 22]
+  size: [3, 2]
+  facing: w
 people:
 - name: Shrub to cut (Vibroblade)
   at: [19, 10]

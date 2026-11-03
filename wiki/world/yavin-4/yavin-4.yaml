@@ -144,6 +144,11 @@ props:
   art: art:shared:cargo-crates
   at: [52, 11]
   size: [2, 2]
+- name: Collapsed stairs
+  art: art:shared:collapsed-stairs
+  at: [44, 8]
+  size: [2, 2]
+  facing: w
 people:
 - name: Leia
   at: [12, 29]

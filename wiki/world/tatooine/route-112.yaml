@@ -97,6 +97,11 @@ props:
   art: art:tatooine:rock-spire
   at: [24, 11]
   size: [2, 3]
+- name: Fallen comm tower
+  art: art:shared:fallen-comm-tower
+  at: [18, 53]
+  size: [6, 1]
+  facing: w
 people:
 - name: Magma Grunts
   at: [26, 30]

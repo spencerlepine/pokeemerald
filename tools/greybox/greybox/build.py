@@ -558,4 +558,7 @@ def sprite(b, st, seed, grey=False):
 
 def building(img, b, st, seed, grey=False):
     sp = sprite(b, st, seed, grey)
+    if b.get("facing") == "w":        # models face east; west is the same drawing mirrored (free in the game)
+        from PIL import Image
+        sp = sp.transpose(Image.FLIP_LEFT_RIGHT)
     img.paste(sp, (b["at"][0] * C, b["at"][1] * C), sp)

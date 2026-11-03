@@ -56,6 +56,16 @@ props:
   art: art:endor:crashed-speeder-bike
   at: [46, 4]
   size: [2, 1]
+- name: Fallen redwood
+  art: art:endor:fallen-redwood
+  at: [30, 0]
+  size: [8, 2]
+  facing: e
+- name: Broken bridge
+  art: art:shared:broken-bridge
+  at: [50, 18]
+  size: [3, 1]
+  facing: w
 people:
 - name: Trainer Poxir
   at: [64, 10]

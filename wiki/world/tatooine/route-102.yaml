@@ -58,6 +58,11 @@ props:
   art: art:tatooine:bantha-skeleton
   at: [13, 7]
   size: [1, 1]
+- name: Crashed TIE fighter
+  art: art:shared:crashed-tie-fighter
+  at: [6, 10]
+  size: [2, 2]
+  facing: e
 people:
 - name: Little Boy
   at: [18, 11]

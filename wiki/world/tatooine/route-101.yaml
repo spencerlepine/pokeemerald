@@ -54,6 +54,11 @@ props:
   art: art:tatooine:bantha-skeleton
   at: [2, 8]
   size: [1, 1]
+- name: Abandoned homestead
+  art: art:tatooine:moisture-farm-ruin
+  at: [12, 0]
+  size: [3, 2]
+  facing: w
 people:
 - name: Youngster
   at: [16, 8]

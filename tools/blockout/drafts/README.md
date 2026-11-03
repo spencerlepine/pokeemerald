@@ -21,6 +21,7 @@ Run from anywhere, in this order (later scripts fix links that earlier ones cut)
 | 8 | `deathstar.py` | Death Star construction site (post-game, net:death-star-site) |
 | 9 | `links.py` | `travel:` links (ships, shuttles, tides, dives, scripted moves) and graph fixes |
 | 10 | `extras.py` | Places that are not their own vanilla map: Mirage Isle (Route 130 alternate layout), the hideout kit (secret bases) |
+| 11 | `scenery.py` (catalog in `scenery_spec.py`) | Large static scenery (wrecks, fossils, statues, ruins, broken bridges) on blocked border cells and water; writes the `scenery` rows of `world_art.csv` ([`WORLD_ART.md`](../../../wiki/bible/WORLD_ART.md#large-scenery-owner-2026-11-03)). Dry run without `--write`. |
 
 Then, from `tools/blockout/`: `python3 -m blockout layout <PLANET>` for each planet (not FELUCIA: its six
 zones keep vanilla's positions), and `python3 -m blockout world`, `index`, `guide`, `check`.

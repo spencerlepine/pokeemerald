@@ -59,6 +59,11 @@ props:
   art: art:dagobah:hanging-moss
   at: [45, 19]
   size: [1, 1]
+- name: Fallen gnarltree
+  art: art:dagobah:fallen-gnarltree
+  at: [56, 38]
+  size: [5, 1]
+  facing: w
 people:
 - name: Trainer Rirkel
   at: [70, 21]

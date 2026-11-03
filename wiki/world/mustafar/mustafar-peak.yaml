@@ -63,6 +63,12 @@ props:
   art: art:mustafar:obsidian-spire
   at: [7, 8]
   size: [2, 2]
+- name: Imperial drill rig
+  art: art:mustafar:imperial-drill-rig
+  at: [23, 11]
+  size: [4, 3]
+  facing: s
+  shown: 'after FLAG_DEFEATED_EVIL_TEAM_MT_CHIMNEY: toppled'
 people:
 - name: Archie
   at: [24, 19]

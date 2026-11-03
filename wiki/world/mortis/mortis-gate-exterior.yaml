@@ -34,7 +34,22 @@ grid: |
   ~~~~~~~~~~~~~~~~~~~~~
 exits: []
 buildings: []
-props: []
+props:
+- name: Mortis statue
+  art: art:mortis:statue
+  at: [8, 2]
+  size: [3, 2]
+  facing: s
+- name: Mortis statue
+  art: art:mortis:statue
+  at: [5, 12]
+  size: [3, 2]
+  facing: s
+- name: Mortis statue
+  art: art:mortis:statue
+  at: [13, 12]
+  size: [3, 2]
+  facing: s
 people: []
 signs: []
 warps:

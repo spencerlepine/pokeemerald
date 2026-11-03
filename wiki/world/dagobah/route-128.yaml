@@ -64,6 +64,11 @@ props:
   art: art:dagobah:swamp-reeds
   at: [26, 9]
   size: [2, 1]
+- name: Dragonsnake skeleton
+  art: art:dagobah:dragonsnake-skeleton
+  at: [80, 0]
+  size: [5, 2]
+  facing: w
 people:
 - name: Trainer Ilen
   at: [35, 33]

@@ -115,6 +115,11 @@ props:
   art: art:dagobah:hanging-moss
   at: [27, 8]
   size: [1, 1]
+- name: Dragonsnake skeleton
+  art: art:dagobah:dragonsnake-skeleton
+  at: [23, 0]
+  size: [5, 2]
+  facing: e
 people:
 - name: Trainer Boesh
   at: [51, 65]

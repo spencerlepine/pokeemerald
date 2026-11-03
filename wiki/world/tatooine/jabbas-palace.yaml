@@ -87,6 +87,11 @@ props:
   art: art:shared:gonk-droid
   at: [13, 23]
   size: [1, 1]
+- name: B'omarr ruin
+  art: art:tatooine:bomarr-ruin
+  at: [32, 7]
+  size: [3, 3]
+  facing: w
 people:
 - name: Cartel thug (gate guard)
   at: [20, 14]

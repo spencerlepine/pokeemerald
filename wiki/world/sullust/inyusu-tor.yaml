@@ -85,6 +85,11 @@ props:
   art: art:sullust:basalt-column
   at: [28, 19]
   size: [2, 2]
+- name: Collapsed lava tube
+  art: art:sullust:lava-tube-arch
+  at: [2, 0]
+  size: [4, 2]
+  facing: e
 people:
 - name: Dr. Tien
   at: [9, 19]

@@ -74,6 +74,21 @@ props:
   art: art:jedha:toppled-statue
   at: [23, 30]
   size: [3, 3]
+- name: Assault tank wreck
+  art: art:jedha:assault-tank-wreck
+  at: [30, 16]
+  size: [3, 2]
+  facing: w
+- name: Crashed TIE fighter
+  art: art:shared:crashed-tie-fighter
+  at: [0, 16]
+  size: [2, 2]
+  facing: e
+- name: Collapsed stairs
+  art: art:shared:collapsed-stairs
+  at: [19, 29]
+  size: [2, 2]
+  facing: w
 people: []
 signs:
 - name: Landing pad sign

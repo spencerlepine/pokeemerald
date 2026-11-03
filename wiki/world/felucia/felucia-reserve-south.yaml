@@ -71,6 +71,11 @@ props:
   art: art:felucia:spore-pod-plants
   at: [9, 35]
   size: [1, 1]
+- name: Republic gunship wreck
+  art: art:shared:gunship-wreck
+  at: [31, 1]
+  size: [5, 3]
+  facing: w
 people:
 - name: Exit Attendant
   at: [32, 34]
