@@ -576,7 +576,7 @@ MauvilleCity_Text_WattsonWontBeChallenge:
 	.string "WATTO: Don't you worry about it.\n"
 	.string "It won't be a challenge to you.\p"
 	.string "The entrance to ESPA GENERATOR is just\n"
-	.string "a short SURF away from ROUTE 110.\p"
+	.string "a short skim away from ROUTE 110.\p"
 	.string "That's it, then, you have my trust!\n"
 	.string "Wahahahaha!$"
 

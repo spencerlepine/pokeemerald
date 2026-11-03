@@ -11,7 +11,9 @@ reads what the game has now and:
   ported    the game still had Emerald's text (or Emerald's text with the names already swapped by
             scan_name_refs): it is replaced by `sw_text_raw`, split into one .string line per \\n, \\l, \\p.
   done      the game already has `sw_text_raw`.
-  changed   the game has something else (edited by hand since). Left alone, listed for a person to check.
+  changed   the game has something else (edited by hand, or the wiki row was rewritten after it was ported).
+            Left alone, game_status back to NOT_STARTED, listed for a person to check. --force ID,ID
+            overwrites those rows with the wiki text.
   missing   the label is not in the file. Left alone, listed.
   skipped   a row of a feature that is being cut (SKIP below, the POKéBLOCK / treat feature).
 
@@ -129,9 +131,12 @@ def main() -> int:
     ap.add_argument("--files", default="")
     ap.add_argument("--all", action="store_true")
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--force", default="", help="text ids to overwrite even if the game text was changed "
+                                                 "(a row re-curated in the wiki after it was ported)")
     args = ap.parse_args()
     args.maps = {m for m in args.maps.split(",") if m}
     args.files = {f for f in args.files.split(",") if f}
+    args.force = {x for x in args.force.split(",") if x}
 
     with TEXTS.open(encoding="utf-8", newline="") as fh:
         reader = csv.DictReader(fh)
@@ -140,7 +145,7 @@ def main() -> int:
 
     by_file = defaultdict(list)
     for r in rows:
-        if wanted(r, args):
+        if wanted(r, args) or r["text_id"] in args.force:
             by_file[r["source_file"]].append(r)
 
     stats = Counter()
@@ -171,14 +176,15 @@ def main() -> int:
                 stats["missing"] += 1
                 report.append((tid, f, "missing", "label not found"))
                 continue
-            if cur == sw:
+            if cur == sw or (sw.endswith("$$") and cur == sw[:-1]):
                 stats["done"] += 1
                 r["game_status"] = "DONE"
                 continue
             if emer.endswith("$$") and cur.endswith("$") and not cur.endswith("$$"):
                 emer, sw = emer[:-1], sw[:-1] if sw.endswith("$$") else sw  # the text table doubled the $
-            if cur not in (emer, name_swapped(emer)):
+            if cur not in (emer, name_swapped(emer)) and tid not in args.force:
                 stats["changed"] += 1
+                r["game_status"] = "NOT_STARTED"
                 report.append((tid, f, "changed", cur[:200]))
                 continue
             stats["ported"] += 1

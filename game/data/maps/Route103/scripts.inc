@@ -334,7 +334,7 @@ Route103_Text_ShouldHaveBroughtPotion:
 	.string "I should have brought a BACTA SPRAY…$"
 
 Route103_Text_ShortcutToOldale:
-	.string "If you cross the water from here,\n"
+	.string "If you skim the DUNE SEA from here,\n"
 	.string "it'll be a shortcut to TOSCHE STATION.\p"
 	.string "Fufufu, that's useful, isn't it?$"
 

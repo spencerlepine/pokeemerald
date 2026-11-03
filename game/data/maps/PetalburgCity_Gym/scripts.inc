@@ -1263,6 +1263,8 @@ PetalburgCity_Gym_Text_ExplainBalanceBadgeTakeThis:
 	.string "of all your COMPANIONS will increase.\p"
 	.string "COMPANIONS that know the HM SURF\n"
 	.string "will be able to travel over water.\p"
+	.string "And those that know SAND SKIM can\n"
+	.string "pull a skiff across the DUNE SEA.\p"
 	.string "This is my gift to you. {PLAYER}, I'm\n"
 	.string "sure you can use it correctly.$"
 

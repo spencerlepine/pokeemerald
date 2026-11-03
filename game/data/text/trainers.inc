@@ -210,7 +210,7 @@ Route103_Text_PetePostBattle:
 	.string "Oh, I understand where you're coming\n"
 	.string "from now.\p"
 	.string "If I had a COMPANION that trusty,\n"
-	.string "I'd want to SURF on it, too!$"
+	.string "I'd let it pull my skiff, too!$"
 
 Route103_Text_IsabelleIntro:
 	.string "Watch where you're going!\n"
@@ -1076,7 +1076,7 @@ Route110_Text_BenjaminRematchPostBattle:
 Route110_Text_AbigailIntro:
 	.string "A SWOOP RALLY is hard in the extreme.\p"
 	.string "You have to finish three legs:\n"
-	.string "swimming, swoop riding and running.$"
+	.string "skimming, swoop riding and running.$"
 
 Route110_Text_AbigailDefeated:
 	.string "COMPANION battles are hard, too!$"
@@ -2460,7 +2460,7 @@ Route117_Text_DylanRematchDefeat:
 	.string "I ran out of energy again!$"
 
 Route117_Text_DylanPostRematch:
-	.string "I was tops in swimming and cycling,\n"
+	.string "I was tops in skimming and racing,\n"
 	.string "but I'm not quite that confident with\l"
 	.string "COMPANION yet.$"
 

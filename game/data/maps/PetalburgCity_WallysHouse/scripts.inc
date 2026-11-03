@@ -99,11 +99,13 @@ PetalburgCity_WallysHouse_Text_PleaseExcuseUs:
 	.string "Happy that he's gained such a great\n"
 	.string "friend as you.\p"
 	.string "This isn't a bribe or anything, but\n"
-	.string "I'd really like you to have this.$"
+	.string "I'd really like you to have these.$"
 
 PetalburgCity_WallysHouse_Text_SurfGoAllSortsOfPlaces:
-	.string "If your COMPANION can SURF, you'll be\n"
-	.string "able to go to all sorts of places.$"
+	.string "SURF crosses water, and SAND SKIM\n"
+	.string "pulls my old skiff over the DUNE SEA.\p"
+	.string "With both, you'll be able to go to\n"
+	.string "all sorts of places.$"
 
 PetalburgCity_WallysHouse_Text_WallyIsComingHomeSoon:
 	.string "LUKE's coming home soon.\n"

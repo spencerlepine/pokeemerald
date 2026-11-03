@@ -988,9 +988,9 @@ Route104_Text_BrineyLivesInSeasideCottage:
 	.string "OUTER RIM. Just ask him!$"
 
 Route104_Text_WhatsItLikeAtBottomOfSea:
-	.string "The water, huh?\p"
-	.string "I wonder what's at the bottom of\n"
-	.string "the lake?$"
+	.string "The DUNE SEA, huh?\p"
+	.string "I wonder what's down there under\n"
+	.string "all that sand?$"
 
 Route104_Text_ThrowBallAtWeakenedPokemon:
 	.string "If you're going to throw a CAPTURE POD,\n"
