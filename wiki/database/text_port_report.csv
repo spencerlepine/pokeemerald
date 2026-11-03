@@ -1,4 +1,10 @@
 text_id,source_file,result,game_text
+MauvilleCity_Text_WattsonWontBeChallenge,data/maps/MauvilleCity/scripts.inc,changed,"WATTO: Don't you worry about it.\nIt won't be a challenge to you.\pThe entrance to ESPA GENERATOR is just\na short SURF away from ROUTE 110.\pThat's it, then, you have my trust!\nWahahahaha!$"
+PetalburgCity_Gym_Text_ExplainBalanceBadgeTakeThis,data/maps/PetalburgCity_Gym/scripts.inc,changed,"DAD: With that SHARD, the DEFENSE\nof all your COMPANIONS will increase.\pCOMPANIONS that know the HM SURF\nwill be able to travel over water.\pThis is my gift to you. {PLAYER}, I'm\nsure you can use "
+PetalburgCity_WallysHouse_Text_PleaseExcuseUs,data/maps/PetalburgCity_WallysHouse/scripts.inc,changed,"{PLAYER}{KUN}! Please excuse us for\ndragging you here this way.\pBut our LUKE's become so confident\nsince he went to ANCHORHEAD.\pWe owe it all to you!\pWhen LUKE left town, you helped\nhim catch a "
+PetalburgCity_WallysHouse_Text_SurfGoAllSortsOfPlaces,data/maps/PetalburgCity_WallysHouse/scripts.inc,changed,"If your COMPANION can SURF, you'll be\nable to go to all sorts of places.$"
+Route103_Text_ShortcutToOldale,data/maps/Route103/scripts.inc,changed,"If you cross the water from here,\nit'll be a shortcut to TOSCHE STATION.\pFufufu, that's useful, isn't it?$"
+Route104_Text_WhatsItLikeAtBottomOfSea,data/maps/Route104/scripts.inc,changed,"The water, huh?\pI wonder what's at the bottom of\nthe lake?$"
 AncientTomb_Braille_ShineInTheMiddle,data/text/braille.inc,missing,label not found
 DesertRuins_Braille_UseRockSmash,data/text/braille.inc,missing,label not found
 IslandCave_Braille_RunLapAroundWall,data/text/braille.inc,missing,label not found
@@ -21,6 +27,9 @@ SealedChamber_OuterRoom_Braille_Period,data/text/braille.inc,missing,label not f
 SealedChamber_OuterRoom_Braille_TUV,data/text/braille.inc,missing,label not found
 SealedChamber_OuterRoom_Braille_WXYZ,data/text/braille.inc,missing,label not found
 Underwater_SealedChamber_Braille_GoUpHere,data/text/braille.inc,missing,label not found
+Route103_Text_PetePostBattle,data/text/trainers.inc,changed,"Oh, I understand where you're coming\nfrom now.\pIf I had a COMPANION that trusty,\nI'd want to SURF on it, too!$"
+Route110_Text_AbigailIntro,data/text/trainers.inc,changed,"A SWOOP RALLY is hard in the extreme.\pYou have to finish three legs:\nswimming, swoop riding and running.$"
+Route117_Text_DylanPostRematch,data/text/trainers.inc,changed,"I was tops in swimming and cycling,\nbut I'm not quite that confident with\lCOMPANION yet.$"
 gTVTodaysRivalTrainerText10,data/text/tv.inc,changed,"Today's rival TRAINER is {STR_VAR_1},\nwho's on a starliner now.\p{STR_VAR_1} has so far registered\n{STR_VAR_2} COMPANIONS in the DATAPAD.$"
 gText_DefaultNameAllie,src/strings.c,missing,label not found
 gText_DefaultNameAubree,src/strings.c,missing,label not found

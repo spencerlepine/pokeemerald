@@ -1458,7 +1458,7 @@ PetalburgCity_Gym_Text_AlexiaPostBattle:
 	.string "skilled at offense.$"
 
 PetalburgCity_Gym_Text_AlexiaPostBadge:
-	.string "Hi! Have you tried using SURF?$"
+	.string "Hi! Have you tried SAND SKIM yet?$"
 
 PetalburgCity_Gym_Text_JodyIntro:
 	.string "Our ARENA LEADER told us to go all out\n"

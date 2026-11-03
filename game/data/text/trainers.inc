@@ -201,7 +201,7 @@ Route103_Text_MiguelRematchPostBattle:
 
 Route103_Text_PeteIntro:
 	.string "This sort of distance…\n"
-	.string "You should just swim it!$"
+	.string "You should just skim it!$"
 
 Route103_Text_PeteDefeated:
 	.string "Oh, that's good going!$"
@@ -220,8 +220,9 @@ Route103_Text_IsabelleDefeated:
 	.string "Groan…$"
 
 Route103_Text_IsabellePostBattle:
-	.string "I'm a poor swimmer so I was practicing…\n"
-	.string "Sorry for almost crashing into you.$"
+	.string "I'm a poor skiff rider so I was\n"
+	.string "practicing… Sorry for almost\l"
+	.string "crashing into you.$"
 
 Route103_Text_RhettIntro:
 	.string "Rrrowr?\p"
