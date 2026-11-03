@@ -19,12 +19,12 @@ SootopolisCity_House2_EventScript_DontKnowAboutOrbs::
 	return
 
 SootopolisCity_House2_Text_DidYouKnowAboutMtPyreOrbs:
-	.string "MT. PYRE…\p"
-	.string "At its peak are two orbs placed side\n"
-	.string "by side. Did you know?$"
+	.string "JEDHA TEMPLE…\p"
+	.string "At its peak are two kyber crystals\n"
+	.string "placed side by side. Did you know?$"
 
 SootopolisCity_House2_Text_YesTwoOrbsSideBySide:
-	.string "Yes, two orbs side by side…\p"
+	.string "Yes, two crystals side by side…\p"
 	.string "The sight of them together…\n"
 	.string "It is somehow soothing…$"
 

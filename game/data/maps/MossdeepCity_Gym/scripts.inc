@@ -347,18 +347,18 @@ MossdeepCity_Gym_EventScript_RedFloorSwitch::
 	end
 
 MossdeepCity_Gym_Text_GymGuideAdvice:
-	.string "Yo, how's it going, CHAMPION-bound\n"
+	.string "Yo, how's it going, ILUM-bound\n"
 	.string "{PLAYER}?\p"
-	.string "The GYM LEADERS here use\n"
-	.string "PSYCHIC-type POKéMON.\p"
+	.string "The ARENA LEADERS here use\n"
+	.string "FORCE-type COMPANIONS.\p"
 	.string "If you go up against them with\n"
-	.string "FIGHTING- or POISON-type POKéMON,\l"
+	.string "FIGHTING- or POISON-type COMPANIONS,\l"
 	.string "they'll inflict horrible damage!\p"
 	.string "Plus, they'll come at you with\n"
 	.string "outstanding combination attacks.\p"
-	.string "If you want to win, you'll need to show\n"
-	.string "them how tight you are with your\l"
-	.string "POKéMON. Go for it!$"
+	.string "If you want to win, show them how\n"
+	.string "tight you are with your COMPANIONS.\l"
+	.string "Go for it!$"
 
 MossdeepCity_Gym_Text_GymGuidePostVictory:
 	.string "Wow, you're astounding!\n"
@@ -383,25 +383,25 @@ MossdeepCity_Gym_Text_VirgilDefeat:
 	.string "You possess spectacular talent!$"
 
 MossdeepCity_Gym_Text_VirgilPostBattle:
-	.string "If there are prodigies in the world,\n"
-	.string "then our GYM LEADERS are them!\p"
+	.string "If there are prodigies in the galaxy,\n"
+	.string "then our ARENA LEADERS are them!\p"
 	.string "However, you may be even more talented\n"
 	.string "than them…$"
 
 MossdeepCity_Gym_Text_BlakeIntro:
-	.string "Fufufufu… Watch me levitate a POKé\n"
-	.string "BALL telekinetically!\p"
+	.string "Fufufufu… Watch me levitate a CAPTURE\n"
+	.string "POD with the Force!\p"
 	.string "Wrooooooooaaaar!\n"
 	.string "… … … … … … …\p"
 	.string "Sometimes, I'm out of sync…$"
 
 MossdeepCity_Gym_Text_BlakeDefeat:
-	.string "My POKéMON battling skills are out\n"
+	.string "My COMPANION battling skills are out\n"
 	.string "of sync, too!$"
 
 MossdeepCity_Gym_Text_BlakePostBattle:
-	.string "A POKé BALL was too heavy to lift\n"
-	.string "psychically. But this dust bunny…\p"
+	.string "A CAPTURE POD was too heavy to lift\n"
+	.string "with the Force. But this dust bunny…\p"
 	.string "Whoooooooooooooooh!\n"
 	.string "… … … … … …\p"
 	.string "No, I'm not cheating!\n"
@@ -433,7 +433,7 @@ MossdeepCity_Gym_Text_SamanthaDefeat:
 
 MossdeepCity_Gym_Text_SamanthaPostBattle:
 	.string "You will wage a terrifically intense\n"
-	.string "battle with our GYM LEADERS…\p"
+	.string "battle with our ARENA LEADERS…\p"
 	.string "The result…\n"
 	.string "You won't hear it from me!$"
 
@@ -469,7 +469,7 @@ MossdeepCity_Gym_Text_SylviaPostBattle:
 MossdeepCity_Gym_Text_NateIntro:
 	.string "Hohoho.\p"
 	.string "You need me to show you how tenacious\n"
-	.string "the PSYCHIC type can be.$"
+	.string "the FORCE type can be.$"
 
 MossdeepCity_Gym_Text_NateDefeat:
 	.string "Oh! My, my!\n"
@@ -512,12 +512,12 @@ MossdeepCity_Gym_Text_MaceyDefeat:
 
 MossdeepCity_Gym_Text_MaceyPostBattle:
 	.string "Humph! You may be strong, but you're\n"
-	.string "not suitable for the PSYCHIC type!\p"
+	.string "not suitable for the FORCE type!\p"
 	.string "The way you battle is somehow brutal!$"
 
 MossdeepCity_Gym_Text_NicholasIntro:
 	.string "Wroooar! Have a taste of my super\n"
-	.string "POKéMON hard-battling power!$"
+	.string "COMPANIONS hard-battling power!$"
 
 MossdeepCity_Gym_Text_NicholasDefeat:
 	.string "Oh!\n"
@@ -525,106 +525,106 @@ MossdeepCity_Gym_Text_NicholasDefeat:
 
 MossdeepCity_Gym_Text_NicholasPostBattle:
 	.string "All right! I think I'll develop a special\n"
-	.string "invincible POKéMON power next.$"
+	.string "invincible COMPANION power next.$"
 
 MossdeepCity_Gym_Text_TateAndLizaIntro:
-	.string "TATE: Hehehe… Were you surprised?\p"
-	.string "LIZA: Fufufu… Were you surprised?\p"
-	.string "TATE: That there are two GYM LEADERS?\n"
-	.string "LIZA: That there are two GYM LEADERS?\p"
-	.string "TATE: We're twins!\n"
-	.string "LIZA: We're twins!\p"
-	.string "TATE: We don't need to talk because…\n"
-	.string "LIZA: We can each determine what…\p"
-	.string "TATE: The other is thinking…\n"
-	.string "LIZA: All in our minds!\p"
-	.string "TATE: This combination of ours…\n"
-	.string "LIZA: Can you beat it?$"
+	.string "KANAN: Hehehe… Were you surprised?\p"
+	.string "EZRA: Fufufu… Were you surprised?\p"
+	.string "KANAN: That there are two LEADERS?\n"
+	.string "EZRA: That there are two LEADERS?\p"
+	.string "KANAN: I am his master!\n"
+	.string "EZRA: I am his PADAWAN!\p"
+	.string "KANAN: We don't need to talk because…\n"
+	.string "EZRA: Through the Force, we sense…\p"
+	.string "KANAN: What the other is thinking…\n"
+	.string "EZRA: All in our minds!\p"
+	.string "KANAN: This combination of ours…\n"
+	.string "EZRA: Can you beat it?$"
 
 MossdeepCity_Gym_Text_TateAndLizaDefeat:
-	.string "TATE: What?! Our combination…\n"
-	.string "LIZA: Was shattered!\p"
-	.string "TATE: It can't be helped. You've won…\n"
-	.string "LIZA: So, in recognition, take this.$"
+	.string "KANAN: What?! Our combination…\n"
+	.string "EZRA: Was shattered!\p"
+	.string "KANAN: It can't be helped. You've won…\n"
+	.string "EZRA: So, in recognition, take this.$"
 
 MossdeepCity_Gym_Text_ReceivedMindBadge:
-	.string "{PLAYER} received the MIND BADGE\n"
-	.string "from TATE and LIZA.$"
+	.string "{PLAYER} received the FORCE SHARD\n"
+	.string "from KANAN and EZRA.$"
 
 MossdeepCity_Gym_Text_ExplainMindBadgeTakeThis:
-	.string "TATE: The MIND BADGE enhances the\n"
-	.string "SP. ATK and SP. DEF of POKéMON.\p"
-	.string "LIZA: It also lets you use the HM move\n"
+	.string "KANAN: The FORCE SHARD enhances the\n"
+	.string "SP. ATK and SP. DEF of COMPANIONS.\p"
+	.string "EZRA: It also lets you use the HM move\n"
 	.string "DIVE outside of battle.\p"
-	.string "TATE: You should also take this, too.$"
+	.string "KANAN: You should also take this, too.$"
 
 MossdeepCity_Gym_Text_ExplainCalmMind:
-	.string "TATE: That TM04 contains…\n"
-	.string "LIZA: CALM MIND!\p"
-	.string "TATE: It raises SP. ATK and…\n"
-	.string "LIZA: It raises SP. DEF!\p"
-	.string "TATE: It's a move that's perfect…\n"
-	.string "LIZA: For PSYCHIC POKéMON!\p"
+	.string "KANAN: That TM04 contains…\n"
+	.string "EZRA: CALM MIND!\p"
+	.string "KANAN: It raises SP. ATK and…\n"
+	.string "EZRA: It raises SP. DEF!\p"
+	.string "KANAN: It's a move that's perfect…\n"
+	.string "EZRA: For FORCE-type COMPANIONS!\p"
 	.string "… … … … … …$"
 
 MossdeepCity_Gym_Text_RegisteredTateAndLiza:
-	.string "Registered GYM LEADERS TATE & LIZA\n"
+	.string "Registered ARENA LEADERS KANAN & EZRA\n"
 	.string "in the StarNAV.$"
 
 MossdeepCity_Gym_Text_TateAndLizaPostBattle:
-	.string "TATE: Looks like the bond between you\n"
-	.string "and your POKéMON is far stronger than\l"
-	.string "the bond that we share as twins.\p"
-	.string "LIZA: You will become even stronger!\n"
+	.string "KANAN: Looks like the bond between you\n"
+	.string "and your COMPANIONS is stronger than\l"
+	.string "the bond of master and apprentice.\p"
+	.string "EZRA: You will become even stronger!\n"
 	.string "We've battled you, so we know.$"
 
 MossdeepCity_Gym_Text_TateAndLizaNeedTwoMons:
-	.string "TATE: Hehehe… Were you surprised?\p"
-	.string "LIZA: That there are two GYM LEADERS?\p"
-	.string "TATE: Oops, you have only one…\n"
-	.string "LIZA: POKéMON that can battle.\p"
-	.string "TATE: We can't battle that way!\p"
-	.string "LIZA: If you want to challenge us,\n"
-	.string "bring some more POKéMON.$"
+	.string "KANAN: Hehehe… Were you surprised?\p"
+	.string "EZRA: That there are two LEADERS?\p"
+	.string "KANAN: Oops, you have only one…\n"
+	.string "EZRA: COMPANION that can battle.\p"
+	.string "KANAN: We can't battle that way!\p"
+	.string "EZRA: If you want to challenge us,\n"
+	.string "bring some more COMPANIONS.$"
 
 MossdeepCity_Gym_Text_GymStatue:
-	.string "MOSSDEEP CITY POKéMON GYM$"
+	.string "MASSASSI TEMPLE ARENA$"
 
 MossdeepCity_Gym_Text_GymStatueCertified:
-	.string "MOSSDEEP CITY POKéMON GYM\p"
-	.string "LIZA AND TATE'S CERTIFIED TRAINERS:\n"
+	.string "MASSASSI TEMPLE ARENA\p"
+	.string "EZRA AND KANAN'S CERTIFIED TRAINERS:\n"
 	.string "{PLAYER}$"
 
 MossdeepCity_Gym_Text_TateAndLizaPreRematch:
-	.string "TATE: POKéMON…\n"
-	.string "LIZA: POKéMON…\p"
-	.string "TATE: By changing the party's mix…\n"
-	.string "LIZA: The battle style changes.\p"
-	.string "TATE: But me…\n"
-	.string "LIZA: But me…\p"
-	.string "TATE: I'll always be with LIZA!\n"
-	.string "LIZA: I'll always be with TATE!\p"
-	.string "TATE: Our combination…\n"
-	.string "LIZA: We'll show you again and again!$"
+	.string "KANAN: COMPANIONS…\n"
+	.string "EZRA: COMPANIONS…\p"
+	.string "KANAN: By changing the party's mix…\n"
+	.string "EZRA: The battle style changes.\p"
+	.string "KANAN: But me…\n"
+	.string "EZRA: But me…\p"
+	.string "KANAN: I'll always be with EZRA!\n"
+	.string "EZRA: I'll always be with KANAN!\p"
+	.string "KANAN: Our combination…\n"
+	.string "EZRA: We'll show you again and again!$"
 
 MossdeepCity_Gym_Text_TateAndLizaRematchDefeat:
-	.string "TATE: You and your POKéMON…\n"
-	.string "LIZA: It's as if you were siblings!$"
+	.string "KANAN: You and your COMPANION…\n"
+	.string "EZRA: It's as if you were siblings!$"
 
 MossdeepCity_Gym_Text_TateAndLizaPostRematch:
-	.string "TATE: You can knock us down,\n"
+	.string "KANAN: You can knock us down,\n"
 	.string "but we'll never stay down!\p"
-	.string "LIZA: Because the two of us,\n"
+	.string "EZRA: Because the two of us,\n"
 	.string "we always support each other!$"
 
 MossdeepCity_Gym_Text_TateAndLizaRematchNeedTwoMons:
-	.string "TATE: You're back again…\n"
-	.string "LIZA: You're back again…\p"
-	.string "TATE: To give us a rematch.\n"
-	.string "LIZA: To give us a rematch.\p"
-	.string "TATE: But…\n"
-	.string "LIZA: For our match…\p"
-	.string "TATE: You brought just one POKéMON!\n"
-	.string "LIZA: You brought just one POKéMON!\p"
-	.string "TATE: We need you to bring at least…\n"
-	.string "LIZA: Two POKéMON when you come back.$"
+	.string "KANAN: You're back again…\n"
+	.string "EZRA: You're back again…\p"
+	.string "KANAN: To give us a rematch.\n"
+	.string "EZRA: To give us a rematch.\p"
+	.string "KANAN: But…\n"
+	.string "EZRA: For our match…\p"
+	.string "KANAN: You brought just one COMPANION!\n"
+	.string "EZRA: You brought just one COMPANION!\p"
+	.string "KANAN: We need you to bring at least…\n"
+	.string "EZRA: Two COMPANIONS next time.$"

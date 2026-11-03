@@ -38,7 +38,7 @@ AbandonedShip_Rooms_1F_Text_TakingALookAround:
 	.string "There appear to be other cabins…$"
 
 AbandonedShip_Rooms_1F_Text_ThaliaIntro:
-	.string "What on earth would compel you to\n"
+	.string "What in the galaxy would compel you to\n"
 	.string "come here? You must be curious!$"
 
 AbandonedShip_Rooms_1F_Text_ThaliaDefeat:
@@ -54,7 +54,7 @@ AbandonedShip_Rooms_1F_Text_ThaliaRegister:
 	.string "Let me register you as a memento!$"
 
 AbandonedShip_Rooms_1F_Text_ThaliaRematchIntro:
-	.string "What on earth would compel you to\n"
+	.string "What in the galaxy would compel you to\n"
 	.string "come back? You must really be curious!$"
 
 AbandonedShip_Rooms_1F_Text_ThaliaRematchDefeat:

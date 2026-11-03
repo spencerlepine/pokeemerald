@@ -33,13 +33,14 @@ MtPyre_3F_EventScript_RematchGabrielle::
 	end
 
 MtPyre_3F_Text_WilliamIntro:
-	.string "The rich atmosphere of the mountain\n"
-	.string "has elevated my psychic power!\p"
-	.string "A mere child like you…\n"
-	.string "You dream of winning?$"
+	.string "The Force is strong in this holy\n"
+	.string "place. I have walked it for years.\p"
+	.string "Come, child. Show me what guides\n"
+	.string "you.$"
 
 MtPyre_3F_Text_WilliamDefeat:
-	.string "I drown in self-pity…$"
+	.string "The Force will be with you,\n"
+	.string "always.$"
 
 MtPyre_3F_Text_WilliamPostBattle:
 	.string "My psychic powers have surely\n"
@@ -68,31 +69,31 @@ MtPyre_3F_Text_GabrielleDefeat:
 	.string "You're a very special TRAINER.$"
 
 MtPyre_3F_Text_GabriellePostBattle:
-	.string "POKéMON no longer of this world.\n"
-	.string "POKéMON that are with you now.\p"
-	.string "And the POKéMON that you will meet\n"
+	.string "COMPANIONS no longer of this world.\n"
+	.string "COMPANIONS that are with you now.\p"
+	.string "And the COMPANIONS you will meet\n"
 	.string "in the future…\p"
 	.string "They are all to be equally cherished.\n"
 	.string "Please remember that.$"
 
 MtPyre_3F_Text_GabrielleRegister:
-	.string "I would like to see your POKéMON\n"
+	.string "I would like to see your COMPANIONS\n"
 	.string "when they grow up some more…\p"
 	.string "Please, I need to see your StarNAV.$"
 
 MtPyre_3F_Text_GabrielleRematchIntro:
 	.string "Oh, it's you…\p"
 	.string "Have you come to show me your grown\n"
-	.string "POKéMON?$"
+	.string "COMPANION?$"
 
 MtPyre_3F_Text_GabrielleRematchDefeat:
 	.string "How amazing!\n"
 	.string "You are a special person.$"
 
 MtPyre_3F_Text_GabriellePostRematch:
-	.string "POKéMON no longer of this world.\n"
-	.string "POKéMON that are with you now.\p"
-	.string "And the POKéMON that you will meet\n"
+	.string "COMPANIONS no longer of this world.\n"
+	.string "COMPANIONS that are with you now.\p"
+	.string "And the COMPANIONS you will meet\n"
 	.string "in the future…\p"
 	.string "They are all to be equally cherished.\n"
 	.string "I see that you've remembered that.$"

@@ -1,57 +1,57 @@
 PetalburgCity_Gym_Text_GiveEnigmaBerry:
 	.string "DAD: Hi, {PLAYER}!\p"
-	.string "I just received a very rare BERRY.\n"
+	.string "I just received a very rare FRUIT.\n"
 	.string "I'd like you to have it.$"
 
 Route104_Text_PlantBerriesInSoilTakeThis:
-	.string "If you see BERRIES growing in loamy\n"
+	.string "If you see FRUIT growing in loamy\n"
 	.string "soil, feel free to take them.\p"
-	.string "But make sure you plant a BERRY in the\n"
+	.string "But make sure you plant a FRUIT in the\n"
 	.string "same spot. That's common courtesy.\p"
 	.string "Here, I'll share this with you.$"
 
 Route104_Text_TrainersOftenMakeMonHoldBerries:
 	.string "The way you look, you must be a\n"
 	.string "TRAINER, no?\p"
-	.string "TRAINERS often make POKéMON hold\n"
-	.string "BERRIES.\p"
-	.string "It's up to you whether to grow BERRIES\n"
+	.string "TRAINERS often make COMPANION hold\n"
+	.string "FRUIT.\p"
+	.string "It's up to you whether to grow FRUIT\n"
 	.string "or use them.$"
 
 Route111_Text_WateredPlantsEveryDayTakeBerry:
 	.string "I watered the plants every day.\n"
 	.string "They grew lots of flowers.\p"
-	.string "And they gave me lots of BERRIES, too.\p"
+	.string "And they gave me lots of FRUIT, too.\p"
 	.string "Here you go!\n"
 	.string "You can have it!$"
 
 Route111_Text_GoingToTryToMakeDifferentColorBerries:
 	.string "I'm going to try really hard and make\n"
-	.string "BERRIES in different colors.\p"
+	.string "FRUIT in different colors.\p"
 	.string "I hope you try hard, too!$"
 
 Route111_Text_WhatColorBerriesToLookForToday:
-	.string "I wonder what color BERRIES I'll look\n"
+	.string "I wonder what color FRUIT I'll look\n"
 	.string "for today?$"
 
 Route114_Text_LoveUsingBerryCrushShareBerry:
-	.string "I love using the BERRY CRUSH machine,\n"
-	.string "so I'm collecting BERRIES.\p"
+	.string "I love using the FRUIT CRUSH machine,\n"
+	.string "so I'm collecting FRUIT.\p"
 	.string "I'll share one with you, if you'd like.$"
 
 Route114_Text_TryBerryCrushWithFriends:
-	.string "You should try the BERRY CRUSH\n"
+	.string "You should try the FRUIT CRUSH\n"
 	.string "machine with your friends.$"
 
 Route114_Text_FunToThinkAboutBerries:
-	.string "Which BERRY should be planted?\n"
-	.string "Should you use or hoard BERRIES?\p"
+	.string "Which FRUIT should be planted?\n"
+	.string "Should you use or hoard FRUIT?\p"
 	.string "It's fun to think about.$"
 
 Route120_Text_BerriesExpressionOfLoveIsntIt:
-	.string "BERRIES grow by soaking up sunlight.\p"
-	.string "We help the BERRIES grow by watering\n"
-	.string "them regularly.\p"
+	.string "FRUIT grows by soaking up sunlight.\p"
+	.string "We help the FRUIT grow by watering\n"
+	.string "it regularly.\p"
 	.string "It's an expression of love, isn't it?$"
 
 Route120_Text_YesYouUnderstand:
@@ -65,18 +65,18 @@ Route120_Text_MakeYourOwnImpressions:
 	.string "You can have this.$"
 
 Route120_Text_BerryIsRareRaiseItWithCare:
-	.string "I think that BERRY is rare.\n"
+	.string "I think that FRUIT is rare.\n"
 	.string "I hope you raise it with loving care.$"
 
 Route120_Text_IllGetMoreBerriesFromBerryMaster:
-	.string "I'll get more BERRIES from\n"
-	.string "the BERRY MASTER.$"
+	.string "I'll get more FRUIT from\n"
+	.string "the FRUIT MASTER.$"
 
 LilycoveCity_Text_BerrySuitsYou:
 	.string "When it gets right down to it…\p"
 	.string "The same way suits suit me perfectly,\n"
-	.string "a crisp breeze suits the sea.\p"
-	.string "And you, a BERRY suits you to a “T”…\p"
+	.string "a crisp breeze suits the clouds.\p"
+	.string "And you, a FRUIT suits you to a “T”…\p"
 	.string "Why should that be so?$"
 
 LilycoveCity_Text_BecauseYoureTrainer:
@@ -89,9 +89,9 @@ LilycoveCity_Text_PokeblocksSuitPokemon:
 	.string "{POKEBLOCK}S perfectly suit POKéMON.$"
 
 Route123_BerryMastersHouse_Text_YoureDeservingOfBerry:
-	.string "You may call me the BERRY MASTER.\p"
+	.string "You may call me the FRUIT MASTER.\p"
 	.string "I dream of filling the world with\n"
-	.string "beautiful flowers, so I raise BERRIES\l"
+	.string "beautiful flowers, so I raise FRUIT\l"
 	.string "and hand them out to everyone.\p"
 	.string "You're deserving of one!$"
 
@@ -101,7 +101,8 @@ Route123_BerryMastersHouse_Text_WhyBeStingyTakeAnother:
 
 Route123_BerryMastersHouse_Text_VisitPrettyPetalFlowerShop:
 	.string "Be sure to visit the PRETTY PETAL\n"
-	.string "flower shop near RUSTBORO.\p"
+	.string "flower shop near BESTINE\l"
+	.string "on TATOOINE.\p"
 	.string "Let flowers fill the world!$"
 
 Route123_BerryMastersHouse_Text_DoneForToday:
@@ -110,7 +111,7 @@ Route123_BerryMastersHouse_Text_DoneForToday:
 	.string "Let flowers fill the world!$"
 
 Route123_BerryMastersHouse_Text_HeardAGoodSayingLately:
-	.string "The way my husband grows BERRIES,\n"
+	.string "The way my husband grows FRUIT,\n"
 	.string "oh, he's the best in the world.\p"
 	.string "He makes me proud, that he does.\p"
 	.string "Incidentally, child, have you heard\n"
@@ -141,27 +142,27 @@ Route104_PrettyPetalFlowerShop_Text_ThisIsPrettyPetalFlowerShop:
 
 Route104_PrettyPetalFlowerShop_Text_LearnAboutBerries:
 	.string "{PLAYER}{KUN}, would you like to learn about\n"
-	.string "BERRIES?$"
+	.string "FRUIT?$"
 
 Route104_PrettyPetalFlowerShop_Text_IntroLearnAboutBerries:
 	.string "Your name is?\p"
 	.string "{PLAYER}{KUN}.\n"
 	.string "That's a nice name.\p"
 	.string "{PLAYER}{KUN}, would you like to learn about\n"
-	.string "BERRIES?$"
+	.string "FRUIT?$"
 
 Route104_PrettyPetalFlowerShop_Text_BerriesExplanation:
-	.string "BERRIES grow on trees that thrive\n"
+	.string "FRUIT grow on trees that thrive\n"
 	.string "only in soft, loamy soil.\p"
-	.string "If you take some BERRIES, be sure to\n"
+	.string "If you take some FRUIT, be sure to\n"
 	.string "plant one in the loamy soil again.\p"
-	.string "A planted BERRY will soon sprout,\n"
+	.string "A planted FRUIT will soon sprout,\n"
 	.string "grow into a plant, flower beautifully,\l"
-	.string "then grow BERRIES again.\p"
+	.string "then grow FRUIT again.\p"
 	.string "I want to see the whole wide world\n"
 	.string "filled with beautiful flowers.\l"
 	.string "That's my dream.\p"
-	.string "Please help me, {PLAYER}{KUN}. Plant BERRIES\n"
+	.string "Please help me, {PLAYER}{KUN}. Plant FRUIT\n"
 	.string "and bring more flowers into the world.$"
 
 Route104_PrettyPetalFlowerShop_Text_FlowersBringHappiness:
@@ -176,10 +177,10 @@ Route104_PrettyPetalFlowerShop_Text_YouCanHaveThis:
 	.string "of it. You can have this.$"
 
 Route104_PrettyPetalFlowerShop_Text_WailmerPailExplanation:
-	.string "While BERRY plants are growing,\n"
-	.string "water them with the WAILMER PAIL.\p"
+	.string "While FRUIT plants are growing,\n"
+	.string "water them with the WATER CANTEEN.\p"
 	.string "Oh, another thing.\p"
-	.string "If you don't pick BERRIES for a while,\n"
+	.string "If you don't pick FRUIT for a while,\n"
 	.string "they'll drop off onto the ground.\l"
 	.string "But they'll sprout again.\p"
 	.string "Isn't that awesome?\n"
@@ -192,11 +193,11 @@ Route104_PrettyPetalFlowerShop_Text_ImGrowingFlowers:
 	.string "It's for you!$"
 
 Route104_PrettyPetalFlowerShop_Text_MachineMixesBerries:
-	.string "You can plant a BERRY and grow it big,\n"
-	.string "or you can make a POKéMON hold it.\p"
+	.string "You can plant a FRUIT and grow it big,\n"
+	.string "or you can make a COMPANION hold it.\p"
 	.string "But now they have a machine that mixes\n"
-	.string "up different BERRIES and makes candies\l"
-	.string "for POKéMON.\p"
+	.string "up different FRUIT and makes candies\l"
+	.string "for COMPANION.\p"
 	.string "I want some candy, too.$"
 
 SootopolisCity_Text_NameIsKiriHaveOneOfThese:
@@ -210,7 +211,7 @@ SootopolisCity_Text_NameIsKiriHaveOneOfThese:
 	.string "You can have one of these.$"
 
 SootopolisCity_Text_GiveYouThisBerryToo:
-	.string "KIRI will give you this BERRY, too!\n"
+	.string "KIRI will give you this FRUIT, too!\n"
 	.string "I really like it lots!$"
 
 SootopolisCity_Text_WhatKindOfWishInYourName:

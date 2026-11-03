@@ -67,8 +67,8 @@ SSTidalRooms_Text_TakeRestOnBed:
 	.string "Let's take a rest.$"
 
 SSTidalRooms_Text_ColtonIntro:
-	.string "I often sail to LILYCOVE CITY.\p"
-	.string "I enjoy attending CONTESTS,\n"
+	.string "I often fly to MOS ESPA.\p"
+	.string "I never miss the BOONTA EVE CLASSIC,\n"
 	.string "you see.$"
 
 SSTidalRooms_Text_ColtonDefeat:
@@ -76,8 +76,8 @@ SSTidalRooms_Text_ColtonDefeat:
 
 SSTidalRooms_Text_ColtonPostBattle:
 	.string "I get so excited imagining what kinds\n"
-	.string "of POKéMON I'll get to see in the next\l"
-	.string "CONTEST. The anticipation of it thrills!$"
+	.string "of COMPANIONS I'll see in the next\l"
+	.string "SHOWCASE. The anticipation thrills!$"
 
 SSTidalRooms_Text_MicahIntro:
 	.string "Are your friends strong?$"
@@ -87,11 +87,13 @@ SSTidalRooms_Text_MicahDefeat:
 
 SSTidalRooms_Text_MicahPostBattle:
 	.string "Friends need not be human.\n"
-	.string "For me, POKéMON are treasured friends!$"
+	.string "For me, COMPANIONS are true friends!$"
 
 SSTidalRooms_Text_ThomasIntro:
 	.string "Child…\n"
-	.string "Did you knock on the door?$"
+	.string "Did you knock on the door?\p"
+	.string "I am the Governor of NABOO,\n"
+	.string "you know.$"
 
 SSTidalRooms_Text_ThomasDefeat:
 	.string "A loss is to be accepted without haste\n"
@@ -102,36 +104,36 @@ SSTidalRooms_Text_ThomasPostBattle:
 	.string "the GENTLEMAN's code of conduct.$"
 
 SSTidalRooms_Text_JedIntro:
-	.string "JED: I feel a little shy about this, but…\n"
+	.string "JOSS: I feel a little shy, but…\n"
 	.string "We'll show you our lovey-dovey power!$"
 
 SSTidalRooms_Text_JedDefeat:
-	.string "JED: Sigh…$"
+	.string "JOSS: Sigh…$"
 
 SSTidalRooms_Text_JedPostBattle:
-	.string "JED: It's the first time that our lovey-\n"
+	.string "JOSS: It's the first time our lovey-\n"
 	.string "dovey power couldn't prevail!\l"
 	.string "You must be an awesome TRAINER!$"
 
 SSTidalRooms_Text_JedNotEnoughMons:
-	.string "JED: You only have one POKéMON?\n"
+	.string "JOSS: You only have one COMPANION?\n"
 	.string "Isn't that just too lonesome?$"
 
 SSTidalRooms_Text_LeaIntro:
-	.string "LEA: I feel a little silly, but…\n"
+	.string "LYA: I feel a little silly, but…\n"
 	.string "We'll show you our lovey-dovey power!$"
 
 SSTidalRooms_Text_LeaDefeat:
-	.string "LEA: Oh, boo!$"
+	.string "LYA: Oh, boo!$"
 
 SSTidalRooms_Text_LeaPostBattle:
-	.string "LEA: I can't believe it!\n"
+	.string "LYA: I can't believe it!\n"
 	.string "Our lovey-dovey power failed…\l"
 	.string "You must be an awesome TRAINER!$"
 
 SSTidalRooms_Text_LeaNotEnoughMons:
-	.string "LEA: I wanted to battle…\n"
-	.string "But you don't even have two POKéMON…$"
+	.string "LYA: I wanted to battle… But you don't\n"
+	.string "even have two COMPANIONS…$"
 
 SSTidalRooms_Text_GarretIntro:
 	.string "Ah, you've come just in time.\p"
@@ -144,7 +146,7 @@ SSTidalRooms_Text_GarretDefeat:
 SSTidalRooms_Text_GarretPostBattle:
 	.string "Perhaps I shall get Father to acquire\n"
 	.string "a yacht for me.\l"
-	.string "A yacht for me and POKéMON!$"
+	.string "A star yacht for me and COMPANIONS!$"
 
 SSTidalRooms_Text_NaomiIntro:
 	.string "Oh, you're such an adorable TRAINER.\n"
@@ -156,10 +158,10 @@ SSTidalRooms_Text_NaomiDefeat:
 	.string "You're the active sort.$"
 
 SSTidalRooms_Text_NaomiPostBattle:
-	.string "A world cruise on a luxury liner has its\n"
-	.string "charms, I must say…\p"
+	.string "A galaxy cruise on a luxury liner has\n"
+	.string "its charms, I must say…\p"
 	.string "But, I will admit there is an appealing\n"
-	.string "side to touring HOENN by ferry.$"
+	.string "side to touring the OUTER RIM like this.$"
 
 SSTidalRooms_Text_NotSuspiciousTakeThis:
 	.string "Uh… Hi! I… I'm not acting suspicious!\n"

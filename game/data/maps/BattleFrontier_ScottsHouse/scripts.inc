@@ -205,10 +205,10 @@ BattleFrontier_ScottsHouse_EventScript_ScottFaceAwayWest::
 	return
 
 BattleFrontier_ScottsHouse_Text_WelcomeToBattleFrontier:
-	.string "SCOTT: Well, hello and welcome!\n"
+	.string "LANDO: Well, hello and welcome!\n"
 	.string "Heheh… Sorry about the cramped space.\p"
 	.string "Anyway, {PLAYER}{KUN}, let me formally\n"
-	.string "welcome you to the BATTLE FRONTIER.\p"
+	.string "welcome you to the GRAND ARENA.\p"
 	.string "This is my dream come true.\n"
 	.string "It took me years and years, but I've\l"
 	.string "finally given shape to my dream.$"
@@ -235,10 +235,10 @@ BattleFrontier_ScottsHouse_Text_ObtainedXBattlePoints:
 	.string "{STR_VAR_1} Battle Point(s).$"
 
 BattleFrontier_ScottsHouse_Text_ExplainBattlePoints:
-	.string "SCOTT: You can check your Battle\n"
-	.string "Points on your FRONTIER PASS.\p"
+	.string "LANDO: You can check your Battle\n"
+	.string "Points on your ARENA PASS.\p"
 	.string "The more success you have here at\n"
-	.string "the BATTLE FRONTIER, the more Battle\l"
+	.string "the GRAND ARENA, the more Battle\l"
 	.string "Points you will collect.\p"
 	.string "Use your Battle Points the way you\n"
 	.string "see fit, like trading them for items.$"
@@ -247,7 +247,7 @@ BattleFrontier_ScottsHouse_Text_ExpectingGreatThings:
 	.string "I'm expecting great things from you!$"
 
 BattleFrontier_ScottsHouse_Text_WhyIGoSeekingTrainers:
-	.string "SCOTT: Every TRAINER is an individual.\n"
+	.string "LANDO: Every TRAINER is an individual.\n"
 	.string "They all lead lives of their own.\p"
 	.string "But when they're in a battle,\n"
 	.string "it doesn't matter who they are.\p"
@@ -259,31 +259,31 @@ BattleFrontier_ScottsHouse_Text_WhyIGoSeekingTrainers:
 	.string "battling, and invite them here.$"
 
 BattleFrontier_ScottsHouse_Text_HaveYouMetFrontierBrain:
-	.string "SCOTT: Have you met any of\n"
-	.string "the FRONTIER BRAINS?\p"
+	.string "LANDO: Have you met any of\n"
+	.string "the ARENA BOSSES?\p"
 	.string "Better yet, have you obtained any\n"
 	.string "symbols from them?\p"
-	.string "I handpicked the FRONTIER BRAINS\n"
+	.string "I handpicked the ARENA BOSSES\n"
 	.string "as the toughest TRAINERS anywhere.\p"
 	.string "But I'm sure that seeing how tough\n"
 	.string "you are will startle even them!$"
 
 BattleFrontier_ScottsHouse_Text_MayFindWildMonsInFrontier:
-	.string "SCOTT: You don't just train for battle,\n"
+	.string "LANDO: You don't just train for battle,\n"
 	.string "right?\p"
 	.string "I think I remember you working on\n"
-	.string "a POKéDEX as well.\p"
+	.string "a DATAPAD as well.\p"
 	.string "Well, guess what?\p"
-	.string "You may run into wild POKéMON in\n"
-	.string "the BATTLE FRONTIER somewhere…\l"
+	.string "You may run into wild COMPANIONS in\n"
+	.string "the GRAND ARENA somewhere…\l"
 	.string "Fufufu!$"
 
 BattleFrontier_ScottsHouse_Text_YouveCollectedAllSilverSymbols:
-	.string "SCOTT: Are you enjoying things in\n"
-	.string "the BATTLE FRONTIER?\p"
+	.string "LANDO: Are you enjoying things in\n"
+	.string "the GRAND ARENA?\p"
 	.string "…Wait a second…\n"
 	.string "Oh!\p"
-	.string "Your FRONTIER PASS!\n"
+	.string "Your ARENA PASS!\n"
 	.string "You've collected the full set\l"
 	.string "of silver symbols!\p"
 	.string "That's more than impressive!\n"
@@ -294,11 +294,11 @@ BattleFrontier_ScottsHouse_Text_YouveCollectedAllSilverSymbols:
 	.string "I'm sure you can put it to proper use.$"
 
 BattleFrontier_ScottsHouse_Text_YouveCollectedAllGoldSymbols:
-	.string "SCOTT: I hope you're enjoying\n"
-	.string "everything in the BATTLE FRONTIER.\p"
+	.string "LANDO: I hope you're enjoying\n"
+	.string "everything in the GRAND ARENA.\p"
 	.string "…Wait a second…\n"
 	.string "Oh, my disbelieving eyes!\p"
-	.string "Your FRONTIER PASS!\n"
+	.string "Your ARENA PASS!\n"
 	.string "You've gathered up the full set\l"
 	.string "of gold symbols!\p"
 	.string "That's more than stupendous!\n"
@@ -315,18 +315,18 @@ BattleFrontier_ScottsHouse_Text_SoGladIBroughtYouHere:
 	.string "bring you here!$"
 
 BattleFrontier_ScottsHouse_Text_BerryPocketStuffed:
-	.string "Your BERRY POCKET seems to\n"
+	.string "Your FRUIT POCKET seems to\n"
 	.string "be stuffed.$"
 
 BattleFrontier_ScottsHouse_Text_Beat50TrainersInARow:
-	.string "SCOTT: Oh, I heard about you!\n"
+	.string "LANDO: Oh, I heard about you!\n"
 	.string "How you ruled the BATTLE TOWER!\l"
 	.string "You beat over 50 TRAINERS in a row?\p"
 	.string "That's fantastic!\n"
 	.string "I want you to have this!$"
 
 BattleFrontier_ScottsHouse_Text_Beat100TrainersInARow:
-	.string "SCOTT: Oh, my! I heard about you!\n"
+	.string "LANDO: Oh, my! I heard about you!\n"
 	.string "How you overwhelmed the BATTLE TOWER!\l"
 	.string "You beat over 100 TRAINERS in a row?\p"
 	.string "That's ridiculously spectacular!\n"

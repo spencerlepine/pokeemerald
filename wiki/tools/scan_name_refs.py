@@ -84,19 +84,19 @@ def main() -> int:
                 text = " ".join(s[1:-1] for s in STRING.findall(line))
                 if f == "src/strings.c" and label.startswith("gText_DefaultName"):
                     for old in OLD_PRESETS:
-                        if re.search(rf"\b{old}\b", text):
+                        if re.search(rf"(?:(?<=\\[nlp])|\b){old}\b", text):
                             rows.append(row("character:player", "KAEL / MIRA", "text", "OLD", old, "KAEL / MIRA",
                                             f, n, label, 1, text))
                     for new, lab in PLAYER_DEFAULTS.items():
-                        if label == lab and re.search(rf"\b{new}\b", text):
+                        if label == lab and re.search(rf"(?:(?<=\\[nlp])|\b){new}\b", text):
                             rows.append(row("character:player", "KAEL / MIRA", "text", "SWAPPED", "", new,
                                             f, n, label, 1, text))
                     continue
                 for cid, sw, terms, _ in CHARACTERS[1:]:
                     for old, new in terms:
-                        if re.search(rf"\b{old}\b", text):
+                        if re.search(rf"(?:(?<=\\[nlp])|\b){old}\b", text):
                             rows.append(row(cid, sw, "text", "OLD", old, new, f, n, label, 1, text))
-                        elif re.search(rf"\b{new}\b", text):
+                        elif re.search(rf"(?:(?<=\\[nlp])|\b){new}\b", text):
                             rows.append(row(cid, sw, "text", "SWAPPED", old, new, f, n, label, 1, text))
                 continue
             bare = COMMENT.sub("", line)

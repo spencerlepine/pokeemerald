@@ -141,7 +141,7 @@ Route113_Text_AshCanBeFashionedIntoGlass:
 
 Route113_Text_FunWalkingThroughAsh:
 	.string "It's fun walking through the volcano's\n"
-	.string "ashes on the ground and grass.\p"
+	.string "ashes on the ground and scrub.\p"
 	.string "You can see where you walked--it's\n"
 	.string "really neat!$"
 
@@ -151,7 +151,7 @@ Route113_Text_RouteSign111:
 
 Route113_Text_RouteSignFallarbor:
 	.string "ROUTE 113\n"
-	.string "{LEFT_ARROW} FALLARBOR TOWN$"
+	.string "{LEFT_ARROW} INYUSU TOR$"
 
 Route113_Text_TrainerTipsRegisterKeyItems:
 	.string "TRAINER TIPS\p"

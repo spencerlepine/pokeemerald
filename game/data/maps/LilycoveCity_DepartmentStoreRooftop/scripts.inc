@@ -187,8 +187,8 @@ LilycoveCity_DepartmentStoreRooftop_EventScript_ExitVendingMachine::
 LilycoveCity_DepartmentStoreRooftop_Text_SetDatesForClearOutSales:
 	.string "Don't they have set dates for their\n"
 	.string "clear-out sales?\p"
-	.string "I watch TV, but they never show any\n"
-	.string "commercials.$"
+	.string "I watch the HOLONET, but they never\n"
+	.string "show any ads.$"
 
 LilycoveCity_DepartmentStoreRooftop_Text_BeenWaitingForClearOutSale:
 	.string "Yes! I've been waiting a long time for\n"

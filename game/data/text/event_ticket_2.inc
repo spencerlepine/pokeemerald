@@ -8,7 +8,7 @@ EventTicket_Text_OldSeaMapTooFar:
 	.string "I'm afraid I can't help you…$"
 
 EventTicket_Text_BrineyHoldOnASecond:
-	.string "BRINEY: Hold on a second!\p"
+	.string "HAN: Hold on a second!\p"
 	.string "What's the idea of turning down\n"
 	.string "someone that I owe so much to?$"
 
@@ -17,41 +17,41 @@ EventTicket_Text_BrineyLetsSail:
 	.string "You came to me seeking my help,\n"
 	.string "and we almost turned you away.\p"
 	.string "Well, let me make things right.\p"
-	.string "We'll sail right away, of course!\p"
-	.string "Let's find this island on\n"
-	.string "this OLD SEA MAP!$"
+	.string "We'll fly right away, of course!\p"
+	.string "Let's find this isle on\n"
+	.string "this WELLSPRING MAP!$"
 
 EventTicket_Text_OddTicketGetOnBoard:
 	.string "Is it you who brought that odd\n"
-	.string "ticket?\p"
-	.string "Where you're trying to go is an island\n"
-	.string "that's far, far away.\p"
+	.string "PASS?\p"
+	.string "Where you're trying to go is an isle\n"
+	.string "that's far, far out past the charts.\p"
 	.string "No one knows what awaits there…\p"
-	.string "The very thought excites my blood\n"
-	.string "as a sailing man!\p"
-	.string "Get on board, youngster!$"
+	.string "The very thought gets my blood going\n"
+	.string "as a pilot!\p"
+	.string "Get on board, kid!$"
 
 FarawayIsland_Entrance_Text_SailorReturn:
-	.string "CAPT. BRINEY can be so maddeningly\n"
+	.string "CAPTAIN HAN can be so maddeningly\n"
 	.string "fickle…\p"
-	.string "Do you want to return to LILYCOVE?$"
+	.string "Do you want to return to CLOUD CITY?$"
 
 BirthIsland_Harbor_Text_SailorReturn:
-	.string "What an oddly shaped island, eh?\n"
-	.string "Do you want to return to LILYCOVE?$"
+	.string "What an oddly shaped rock, eh?\n"
+	.string "Do you want to return to CLOUD CITY?$"
 
 EventTicket_Text_OddTicketsWhereTo:
 	.string "Is it you who brought those\n"
-	.string "odd tickets?\p"
+	.string "odd PASSES?\p"
 	.string "… … …Hm.\p"
-	.string "These tickets will get you to islands\n"
-	.string "that are far, far away.\p"
+	.string "These PASSES will get you to places\n"
+	.string "far out past the charts.\p"
 	.string "No one knows what awaits there,\n"
 	.string "or what may happen there.\p"
-	.string "The very thought excites my blood\n"
-	.string "as a sailing man!\p"
-	.string "Get on board, youngster!\n"
-	.string "Where shall we sail first?$"
+	.string "The very thought gets my blood going\n"
+	.string "as a pilot!\p"
+	.string "Get on board, kid!\n"
+	.string "Where do we fly first?$"
 
 NavelRock_Harbor_Text_SailorReturn:
 	.string "Did… Did you hear that?\n"

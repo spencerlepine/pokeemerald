@@ -9,12 +9,13 @@ MtPyre_5F_EventScript_Atsushi::
 	end
 
 MtPyre_5F_Text_AtsushiIntro:
-	.string "Teacher…\n"
-	.string "Please watch over my progress!$"
+	.string "Hrrrmmm…\p"
+	.string "(Elders of the forest…\n"
+	.string "please watch over my progress!)$"
 
 MtPyre_5F_Text_AtsushiDefeat:
-	.string "Teacher…\n"
-	.string "Please forgive me!$"
+	.string "Hrrnnn…\p"
+	.string "(Elders… please forgive me!)$"
 
 MtPyre_5F_Text_AtsushiPostBattle:
 	.string "Until I improve, my teacher, who rests\n"

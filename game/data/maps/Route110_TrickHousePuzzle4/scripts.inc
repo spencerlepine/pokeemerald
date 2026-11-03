@@ -47,12 +47,14 @@ Route110_TrickHousePuzzle4_Text_CoraPostBattle:
 	.string "anywhere if TRAINERS were there.$"
 
 Route110_TrickHousePuzzle4_Text_YujiIntro:
-	.string "Heh! Boulders like this, I can brush\n"
-	.string "aside with one finger!$"
+	.string "Wrrah!\p"
+	.string "(Boulders like this, I can brush\n"
+	.string "aside with one paw!)$"
 
 Route110_TrickHousePuzzle4_Text_YujiDefeat:
-	.string "I can push boulders, but I can't solve\n"
-	.string "the puzzle…$"
+	.string "Hrrrnn…\p"
+	.string "(I can push boulders, but I can't\n"
+	.string "solve the puzzle…)$"
 
 Route110_TrickHousePuzzle4_Text_YujiPostBattle:
 	.string "It's not good enough to be brawny…\n"

@@ -445,13 +445,13 @@ BattleFrontier_BattleDomeLobby_Text_ExplainSinglesChallenge:
 	.string "is exactly as the name suggests--\l"
 	.string "a tournament of SINGLE BATTLES.\p"
 	.string "All participating TRAINERS must\n"
-	.string "enter three POKéMON each.\p"
+	.string "enter three COMPANIONS each.\p"
 	.string "In each battle, one of the three\n"
-	.string "POKéMON must be held in reserve.\p"
-	.string "The other two POKéMON can battle\n"
+	.string "COMPANIONS must be held in reserve.\p"
+	.string "The other two COMPANIONS can battle\n"
 	.string "one at a time.\p"
-	.string "Choose the two battling POKéMON after\n"
-	.string "examining the opponent's trio.\p"
+	.string "Choose the two battling COMPANION\n"
+	.string "after examining the opponent's trio.\p"
 	.string "You win the tournament by defeating\n"
 	.string "four TRAINERS.\p"
 	.string "Battle Points are awarded to\n"
@@ -471,22 +471,25 @@ BattleFrontier_BattleDomeLobby_Text_WhichLevelMode:
 	.string "Which is your choice?$"
 
 BattleFrontier_BattleDomeLobby_Text_SelectThreeMons:
-	.string "Now select the three POKéMON that\n"
+	.string "Now select the three COMPANIONS that\n"
 	.string "you wish to enter, please.$"
 
 BattleFrontier_BattleDomeLobby_Text_NotEnoughValidMonsLvOpen:
 	.string "Excuse me!\p"
-	.string "You don't have three eligible POKéMON.\p"
-	.string "Also, the POKéMON must be holding\n"
+	.string "You don't have three eligible\n"
+	.string "COMPANIONS.\p"
+	.string "Also, the COMPANION must be holding\n"
 	.string "different kinds of items.\p"
 	.string "EGGS{STR_VAR_1} ineligible.\p"
 	.string "Please come see me when you are ready.$"
 
 BattleFrontier_BattleDomeLobby_Text_NotEnoughValidMonsLv50:
 	.string "Excuse me!\p"
-	.string "You don't have three eligible POKéMON.\p"
-	.string "You must have three different POKéMON\n"
-	.string "of Level 50 or less to enter.\p"
+	.string "You don't have three eligible\n"
+	.string "COMPANIONS.\p"
+	.string "You must have three different\n"
+	.string "COMPANIONS of Level 50 or less to\l"
+	.string "enter.\p"
 	.string "They also must be holding different\n"
 	.string "kinds of items.\p"
 	.string "EGGS{STR_VAR_1} ineligible.\p"
@@ -553,13 +556,13 @@ BattleFrontier_BattleDomeLobby_Text_ExplainDoublesChallenge:
 	.string "is exactly as the name suggests--\l"
 	.string "a tournament of DOUBLE BATTLES.\p"
 	.string "All participating TRAINERS must\n"
-	.string "enter three POKéMON each.\p"
+	.string "enter three COMPANIONS each.\p"
 	.string "In each battle, one of the three\n"
-	.string "POKéMON must be held in reserve.\p"
-	.string "The remaining two POKéMON must take\n"
+	.string "COMPANIONS must be held in reserve.\p"
+	.string "The remaining two COMPANIONS must take\n"
 	.string "part in a DOUBLE BATTLE.\p"
-	.string "Choose the two battling POKéMON after\n"
-	.string "examining the opponent's trio.\p"
+	.string "Choose the two battling COMPANION\n"
+	.string "after examining the opponent's trio.\p"
 	.string "You win the tournament by defeating\n"
 	.string "four TRAINERS.\p"
 	.string "Battle Points are awarded to\n"
@@ -591,10 +594,10 @@ BattleFrontier_BattleDomeLobby_Text_LastWinnerWasTough:
 	.string "The winner, {STR_VAR_1}, was seriously\n"
 	.string "tough.\p"
 	.string "You should check out the results\n"
-	.string "on the monitor beside the PC.$"
+	.string "on the monitor beside the terminal.$"
 
 BattleFrontier_OutsideWest_Text_LongDreamedAboutBattleFrontier:
-	.string "The BATTLE FRONTIER…\n"
+	.string "The GRAND ARENA…\n"
 	.string "I've long dreamed about a place like it.$"
 
 @ Functionally unused
@@ -622,11 +625,11 @@ BattleFrontier_BattleDomeLobby_Text_TrashedInFirstRound:
 	.string "Of course I got trashed…$"
 
 BattleFrontier_BattleDomeLobby_Text_NeedToCheckOpponentCarefully:
-	.string "I would've won if I'd kept this POKéMON\n"
-	.string "held in reserve.\p"
+	.string "I would've won if I'd kept this\n"
+	.string "COMPANION held in reserve.\p"
 	.string "You need to check your opponent's\n"
-	.string "POKéMON carefully before choosing\l"
-	.string "your battling POKéMON.$"
+	.string "COMPANION carefully before choosing\l"
+	.string "your battling COMPANION.$"
 
 BattleFrontier_BattleDomeLobby_Text_CongratsDefeatedTucker:
 	.string "Congratulations!\p"
@@ -641,7 +644,7 @@ BattleFrontier_BattleDomeLobby_Text_AwardTheseBattlePoints:
 BattleFrontier_BattleDomeLobby_Text_RecordLastMatch:
 	.string "Would you like to record your\n"
 	.string "last BATTLE DOME match on your\l"
-	.string "FRONTIER PASS?$"
+	.string "ARENA PASS?$"
 
 BattleFrontier_BattleDomeLobby_Text_RulesAreListed:
 	.string "The Battle Tournament rules\n"
@@ -652,7 +655,7 @@ BattleFrontier_BattleDomeLobby_Text_ReadWhichHeading:
 
 BattleFrontier_BattleDomeLobby_Text_ExplainMatchupRules:
 	.string "The tournament matchups are drawn up\n"
-	.string "based on the toughness of POKéMON\l"
+	.string "based on the toughness of COMPANIONS\l"
 	.string "held by TRAINERS.\p"
 	.string "The matchups avoid having tough\n"
 	.string "TRAINERS face each other right away.$"
@@ -664,12 +667,13 @@ BattleFrontier_BattleDomeLobby_Text_ExplainTourneyTree:
 	.string "The Tournament Tree will provide\n"
 	.string "several kinds of data.\p"
 	.string "The data on view includes the previous\n"
-	.string "tournament's results, the POKéMON held\l"
-	.string "by TRAINERS, and the battle styles of\l"
-	.string "TRAINERS.$"
+	.string "tournament's results, the COMPANION\l"
+	.string "held by TRAINERS, and the battle styles\l"
+	.string "of TRAINERS.$"
 
 BattleFrontier_BattleDomeLobby_Text_ExplainDoubleKORules:
-	.string "If battling POKéMON faint at the same\n"
-	.string "time--a double KO--in a tournament\l"
-	.string "match, the REFEREES will review\l"
-	.string "the match and declare the winner.$"
+	.string "If battling COMPANION faint at the\n"
+	.string "same time--a double KO--in a\l"
+	.string "tournament match, the REFEREES will\l"
+	.string "review the match and declare the\l"
+	.string "winner.$"

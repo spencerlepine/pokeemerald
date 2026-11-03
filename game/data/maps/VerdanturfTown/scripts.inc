@@ -62,7 +62,7 @@ VerdanturfTown_EventScript_RusturfTunnelSign::
 VerdanturfTown_Text_ManTryingToDigTunnel:
 	.string "My papa told me.\p"
 	.string "He says this tunnel is full of\n"
-	.string "timid POKéMON.\p"
+	.string "timid COMPANIONS.\p"
 	.string "They get all scared of loud noise and\n"
 	.string "make a big uproar.\p"
 	.string "So they had to stop the big tunnel\n"
@@ -76,48 +76,49 @@ VerdanturfTown_Text_ManDugTunnelForLove:
 	.string "I don't really get it, but hey!$"
 
 VerdanturfTown_Text_AirCleanHere:
-	.string "The way the winds blow, volcanic ash\n"
-	.string "is never blown in this direction.\p"
-	.string "The air is clean and delicious here.\n"
-	.string "Living here should do wonders for even\l"
-	.string "frail and sickly people.$"
+	.string "The way the winds blow, sandstorms\n"
+	.string "never reach this far.\p"
+	.string "The air is clean and fresh here.\n"
+	.string "Living here should do wonders for\l"
+	.string "anyone stuck on a moisture farm.$"
 
 VerdanturfTown_Text_MakeBattleTentDebut:
-	.string "My POKéMON and I, we've been riding\n"
+	.string "My COMPANION and I, we've been riding\n"
 	.string "a hot winning streak.\p"
 	.string "So I decided to make my BATTLE TENT\n"
 	.string "debut in this town.$"
 
 VerdanturfTown_Text_GuyTryingToBustThroughCave:
 	.string "Did you see the cave next to the\n"
-	.string "POKéMON MART?\p"
+	.string "SUPPLY DEPOT?\p"
 	.string "There's a guy in there who's trying to\n"
 	.string "bust up boulders so he can bust out\l"
 	.string "through to the other side.\p"
 	.string "It'd be great if we could go through…\n"
-	.string "It'll make it easy to visit RUSTBORO.$"
+	.string "It'll make it easy to visit BESTINE.$"
 
 VerdanturfTown_Text_EasyToGetToRustboroNow:
-	.string "That cave next to the POKéMON MART\n"
+	.string "That cave next to the SUPPLY DEPOT\n"
 	.string "is now a tunnel to the other side.\p"
 	.string "It's great--it's easy to go shop for\n"
-	.string "new DEVON products in RUSTBORO now.$"
+	.string "new HOUSE ORGANA products in BESTINE\l"
+	.string "now.$"
 
 VerdanturfTown_Text_TownSign:
-	.string "VERDANTURF TOWN\p"
-	.string "“The windswept highlands with the\n"
-	.string "sweet fragrance of grass.”$"
+	.string "ANCHORHEAD\p"
+	.string "“The windswept town where moisture\n"
+	.string "farmers meet.”$"
 
 VerdanturfTown_Text_WandasHouse:
-	.string "WANDA'S HOUSE$"
+	.string "CAMIE'S HOUSE$"
 
 VerdanturfTown_Text_BattleTentSign:
-	.string "BATTLE TENT VERDANTURF SITE\n"
+	.string "BATTLE TENT ANCHORHEAD SITE\n"
 	.string "“Feast Your Eyes on Battles!”$"
 
 VerdanturfTown_Text_RusturfTunnelSign:
-	.string "RUSTURF TUNNEL\n"
-	.string "“Linking RUSTBORO and VERDANTURF\p"
+	.string "BEGGAR'S CANYON\n"
+	.string "“Linking BESTINE and ANCHORHEAD\p"
 	.string "“The tunnel project has been\n"
 	.string "canceled.”$"
 

@@ -82,33 +82,28 @@ AquaHideout_B2F_EventScript_Grunt8::
 	end
 
 AquaHideout_B2F_Text_MattIntro:
-	.string "Hehehe…\p"
-	.string "Got here already, did you?\n"
-	.string "We underestimated you!\p"
-	.string "But this is it!\p"
-	.string "I'm a cut above the GRUNTS you've seen\n"
-	.string "so far.\p"
-	.string "I'm not stalling for time.\n"
-	.string "I'm going to pulverize you!$"
+	.string "BOBA FETT: …\p"
+	.string "So. You got this far.\p"
+	.string "The others were paid to slow you\n"
+	.string "down. I'm paid to stop you.\p"
+	.string "Nothing personal, kid.$"
 
 AquaHideout_B2F_Text_MattDefeat:
-	.string "Hehehe…\n"
-	.string "So, I lost, too…$"
+	.string "…Not bad.\n"
+	.string "Not bad at all.$"
 
 AquaHideout_B2F_Text_OurBossGotThroughHisPreparations:
-	.string "Hehehe!\p"
-	.string "While I was toying with you, our BOSS\n"
-	.string "got through his preparations!$"
+	.string "BOBA FETT: You fight well.\p"
+	.string "But while we were busy, JABBA\n"
+	.string "finished his preparations.$"
 
 AquaHideout_B2F_Text_MattPostBattle:
-	.string "Hehehe!\p"
-	.string "Our BOSS has already gone on his way to\n"
-	.string "some cave under the sea!\p"
-	.string "If you're going to give chase, you'd\n"
-	.string "better search the big, wide sea beyond\l"
-	.string "LILYCOVE.\p"
-	.string "But will you find it then?\n"
-	.string "Hehehe!$"
+	.string "BOBA FETT: JABBA has gone to some\n"
+	.string "cave under the sea.\p"
+	.string "If you want to give chase, search\n"
+	.string "the deep waters past YAVIN 4.\p"
+	.string "You won't find it.\n"
+	.string "But I'll be watching if you do.$"
 
 AquaHideout_B2F_Text_Grunt4Intro:
 	.string "Wahahah, I grew weary of waiting!\n"
@@ -119,7 +114,7 @@ AquaHideout_B2F_Text_Grunt4Defeat:
 	.string "Lost and dazed…$"
 
 AquaHideout_B2F_Text_Grunt4PostBattle:
-	.string "BOSS…\n"
+	.string "Mighty JABBA…\n"
 	.string "Is this good enough?$"
 
 AquaHideout_B2F_Text_Grunt6Intro:
@@ -136,12 +131,12 @@ AquaHideout_B2F_Text_Grunt6Defeat:
 
 AquaHideout_B2F_Text_Grunt6PostBattle:
 	.string "That reminds me… I can't remember\n"
-	.string "where I put the MASTER BALL.\p"
-	.string "If I fail to guard it, our BOSS will\n"
-	.string "chew me out…$"
+	.string "where I put the KYBER POD.\p"
+	.string "If I fail to guard it, JABBA will\n"
+	.string "feed me to the RANCOR…$"
 
 AquaHideout_B2F_Text_Grunt8Intro:
-	.string "When I joined TEAM AQUA, the first\n"
+	.string "When I joined the CARTEL, the first\n"
 	.string "thing I had to learn was how these\l"
 	.string "warp panels connected.$"
 

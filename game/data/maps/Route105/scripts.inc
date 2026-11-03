@@ -83,7 +83,7 @@ Route104_Text_DadPokenavCall:
 	.string "… … … … … …\n"
 	.string "Where are you now?\l"
 	.string "It sounds windy wherever you are.\p"
-	.string "I just heard from DEVON's MR. STONE\n"
+	.string "I just heard from SENATOR ORGANA\n"
 	.string "about your StarNAV, so I decided\l"
 	.string "to give you a call.\p"
 	.string "It sounds like you're doing fine,\n"
@@ -93,5 +93,5 @@ Route104_Text_DadPokenavCall:
 	.string "… … … … … Click!$"
 
 Route104_Text_RegisteredDadInPokenav:
-	.string "Registered DAD NORMAN\n"
+	.string "Registered DAD DORAN\n"
 	.string "in the StarNAV.$"

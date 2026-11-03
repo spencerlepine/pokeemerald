@@ -46,15 +46,15 @@ EventScript_CancelCut::
 
 Text_WantToCut:
 	.string "This tree looks like it can be\n"
-	.string "CUT down!\p"
-	.string "Would you like to CUT it?$"
+	.string "VIBROBLADE down!\p"
+	.string "Would you like to VIBROBLADE it?$"
 
 Text_MonUsedFieldMove:
 	.string "{STR_VAR_1} used {STR_VAR_2}!$"
 
 Text_CantCut:
 	.string "This tree looks like it can be\n"
-	.string "CUT down!$"
+	.string "VIBROBLADE down!$"
 
 @ Interact with smashable rock
 EventScript_RockSmash::
@@ -116,7 +116,7 @@ Text_WantToSmash:
 	.string "Would you like to use ROCK SMASH?$"
 
 Text_CantSmash:
-	.string "It's a rugged rock, but a POKéMON\n"
+	.string "It's a rugged rock, but a COMPANION\n"
 	.string "may be able to smash it.$"
 
 EventScript_StrengthBoulder::
@@ -163,7 +163,7 @@ EventScript_CancelStrength::
 	end
 
 Text_WantToStrength:
-	.string "It's a big boulder, but a POKéMON\n"
+	.string "It's a big boulder, but a COMPANION\n"
 	.string "may be able to push it aside.\p"
 	.string "Would you like to use STRENGTH?$"
 
@@ -173,7 +173,7 @@ Text_MonUsedStrength:
 	.string "possible to move boulders around!$"
 
 Text_CantStrength:
-	.string "It's a big boulder, but a POKéMON\n"
+	.string "It's a big boulder, but a COMPANION\n"
 	.string "may be able to push it aside.$"
 
 Text_StrengthActivated:
@@ -261,7 +261,7 @@ EventScript_EndSurface::
 	end
 
 Text_CantDive:
-	.string "The sea is deep here. A POKéMON\n"
+	.string "The sea is deep here. A COMPANION\n"
 	.string "may be able to go underwater.$"
 
 Text_WantToDive:
@@ -273,7 +273,7 @@ Text_MonUsedDive:
 
 Text_CantSurface:
 	.string "Light is filtering down from above.\n"
-	.string "A POKéMON may be able to surface.$"
+	.string "A COMPANION may be able to surface.$"
 
 Text_WantToSurface:
 	.string "Light is filtering down from above.\n"

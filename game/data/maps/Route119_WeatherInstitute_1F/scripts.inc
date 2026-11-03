@@ -69,8 +69,8 @@ Route119_WeatherInstitute_1F_EventScript_Grunt4::
 	end
 
 Route119_WeatherInstitute_1F_Text_Grunt1Intro:
-	.string "The BOSS got interested in\n"
-	.string "the research they have going here,\l"
+	.string "JABBA got interested in the\n"
+	.string "research they have going here,\l"
 	.string "so he sent us out.\p"
 	.string "You quit meddling!$"
 
@@ -79,8 +79,8 @@ Route119_WeatherInstitute_1F_Text_Grunt1Defeat:
 	.string "Blasted by a kid…$"
 
 Route119_WeatherInstitute_1F_Text_Grunt1PostBattle:
-	.string "Our BOSS knows everything.\p"
-	.string "But I'm just a GRUNT. What would I know\n"
+	.string "The mighty JABBA knows everything.\p"
+	.string "But I'm just a THUG. What would I know\n"
 	.string "about what he's thinking?$"
 
 Route119_WeatherInstitute_1F_Text_Grunt4Intro:
@@ -102,7 +102,7 @@ Route119_WeatherInstitute_1F_Text_EveryoneWentUpstairs:
 
 Route119_WeatherInstitute_1F_Text_WowYoureStrong:
 	.string "Wow, you're really strong!\p"
-	.string "I wish I could be a POKéMON TRAINER\n"
+	.string "I wish I could be a COMPANION TRAINER\n"
 	.string "like you!$"
 
 Route119_WeatherInstitute_1F_Text_ProfStudyingRain:
@@ -114,9 +114,9 @@ Route119_WeatherInstitute_1F_Text_ProfStudyingRain:
 	.string "if the rain can be put to good use.$"
 
 Route119_WeatherInstitute_1F_Text_NoticingAbnormalWeather:
-	.string "On the 2nd floor of the INSTITUTE,\n"
+	.string "On the 2nd floor of the STATION,\n"
 	.string "we study the weather patterns over\l"
-	.string "the HOENN region.\p"
+	.string "the OUTER RIM region.\p"
 	.string "We've been noticing temporary and\n"
 	.string "isolated cases of droughts and\l"
 	.string "heavy rain lately…$"
@@ -124,8 +124,8 @@ Route119_WeatherInstitute_1F_Text_NoticingAbnormalWeather:
 Route119_WeatherInstitute_1F_Text_WhatWereAquasUpTo:
 	.string "Hello!\n"
 	.string "We've been saved by your actions!\p"
-	.string "What I don't understand is what on\n"
-	.string "earth the AQUAS were up to.$"
+	.string "What I don't understand is what in the\n"
+	.string "galaxy the CARTEL was up to.$"
 
 Route119_WeatherInstitute_1F_Text_TakeRestInBed:
 	.string "There's a bed…\n"

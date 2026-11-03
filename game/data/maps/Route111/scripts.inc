@@ -545,7 +545,7 @@ Route111_Text_BattleOurFamily:
 	.string "Hello! I take it you're a traveler.\p"
 	.string "How's this? What do you say to taking\n"
 	.string "on our family of four in a series of\l"
-	.string "POKéMON battles?$"
+	.string "COMPANION battles?$"
 
 Route111_Text_IsThatSo:
 	.string "Is that so?\n"
@@ -603,12 +603,12 @@ Route111_Text_VickyPostBattle:
 	.string "visit with us awhile.$"
 
 Route111_Text_ToughToKeepWinningUpTheRanks:
-	.string "If you don't raise your POKéMON some\n"
-	.string "more, it could be tough to keep winning\l"
-	.string "up through the ranks.\p"
-	.string "I've heard the POKéMON LEAGUE's\n"
-	.string "ELITE FOUR are far stronger than\l"
-	.string "any GYM LEADER.$"
+	.string "If you don't raise your COMPANIONS\n"
+	.string "some more, it could be tough to keep\l"
+	.string "winning up through the ranks.\p"
+	.string "I've heard the ILUM TEMPLE's\n"
+	.string "FOUR TRIALS are far stronger than\l"
+	.string "any ARENA LEADER.$"
 
 Route111_Text_WinstrateFamilyDestroyedMe:
 	.string "I challenged the WINSTRATE family,\n"
@@ -617,7 +617,7 @@ Route111_Text_WinstrateFamilyDestroyedMe:
 
 Route111_Text_RouteSignMauville:
 	.string "ROUTE 111\n"
-	.string "{DOWN_ARROW} MAUVILLE CITY$"
+	.string "{DOWN_ARROW} MOS ESPA$"
 
 Route111_Text_WinstrateHouseSign:
 	.string "“Our family's hearts beat as one!”\n"
@@ -637,61 +637,62 @@ Route111_Text_OldLadysRestStopSign:
 
 Route111_Text_TrainerTipsSpAtkSpDef:
 	.string "TRAINER TIPS\p"
-	.string "One of the indicators of a POKéMON's\n"
+	.string "One of the indicators of a COMPANION's\n"
 	.string "powerfulness is SP. ATK. It stands for\l"
 	.string "“SPECIAL ATTACK.”\p"
 	.string "Likewise, SP. DEF stands for “SPECIAL\n"
 	.string "DEFENSE.”$"
 
 Route111_Text_ShouldBeMirageTowerAroundHere:
-	.string "There should be a tower made of sand\n"
+	.string "There should be a giant SANDCRAWLER\n"
 	.string "around here somewhere.\p"
-	.string "But for some reason, it can be seen\n"
+	.string "But for some reason, you can see it\n"
 	.string "sometimes, and sometimes not.\p"
-	.string "That's why I call it the MIRAGE TOWER.$"
+	.string "The JAWAS keep driving it around,\n"
+	.string "I guess.$"
 
 Route111_Text_MirageTowerClearlyVisible:
 	.string "I see it!\n"
-	.string "The tower of sand!\p"
-	.string "The sand tower they called a mirage\n"
+	.string "The SANDCRAWLER!\p"
+	.string "The one they said was a mirage\n"
 	.string "is clearly visible!\p"
-	.string "But it looks so fragile…\n"
-	.string "It could crumble away anytime…\p"
+	.string "But it looks so rusty…\n"
+	.string "It could fall apart anytime…\p"
 	.string "I want to go inside it, but I can't\n"
 	.string "get my courage up for it…$"
 
 Route111_Text_ThatWasShockingSandRainedDown:
 	.string "Whoa…\n"
 	.string "That was shocking.\p"
-	.string "Sand rained down in chunks all of\n"
-	.string "a sudden.\p"
+	.string "The SANDCRAWLER just fell apart all\n"
+	.string "of a sudden.\p"
 	.string "What was it like inside?\n"
-	.string "Were there sandy ghosts and such?$"
+	.string "Were there JAWAS and such?$"
 
 Route111_Text_MirageTowerHasntBeenSeenSince:
-	.string "Since I spoke to you, the tower of sand\n"
+	.string "Since I spoke to you, the SANDCRAWLER\n"
 	.string "hasn't been seen.\p"
-	.string "Perhaps it really was\n"
-	.string "the MIRAGE TOWER…$"
+	.string "Perhaps the JAWAS sold it for\n"
+	.string "parts…$"
 
 Route111_Text_ClawFossilDisappeared:
 	.string "The CLAW FOSSIL disappeared into\n"
 	.string "the sand…$"
 
 Route111_Text_RootFossilDisappeared:
-	.string "The ROOT FOSSIL disappeared into\n"
+	.string "The FROND FOSSIL disappeared into\n"
 	.string "the sand…$"
 
 Route111_Text_MauvilleUncleToldMeToTakeRockSmash:
 	.string "Oh, no!\p"
-	.string "My uncle in MAUVILLE told me to take\n"
+	.string "My uncle in MOS ESPA told me to take\n"
 	.string "ROCK SMASH with me if I was going to\l"
 	.string "ROUTE 111!\p"
 	.string "My uncle? He lives across from\n"
-	.string "the bike shop in MAUVILLE.$"
+	.string "the bike shop in MOS ESPA.$"
 
 Route111_Text_TrainerHillSign:
-	.string "{RIGHT_ARROW} TRAINER HILL ENTRANCE\p"
+	.string "{RIGHT_ARROW} TRIAL SPIRE ENTRANCE\p"
 	.string "“Scale the heights, you hot-blooded\n"
 	.string "TRAINERS!”$"
 

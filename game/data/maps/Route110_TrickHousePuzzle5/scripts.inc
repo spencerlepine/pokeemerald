@@ -839,24 +839,24 @@ Route110_TrickHousePuzzle5_Text_WroteSecretCodeLockOpened:
 
 Route110_TrickHousePuzzle5_Text_Mechadoll1Intro:
 	.string "CLICKETY-CLACK…\n"
-	.string "MECHADOLL 1 AM I!\p"
+	.string "QUIZ DROID 1 AM I!\p"
 	.string "IF YOU ANSWER QUIZZES CORRECTLY,\n"
-	.string "THEN YOU WILL GO TO MECHADOLL 5.\l"
+	.string "THEN YOU WILL GO TO QUIZ DROID 5.\l"
 	.string "THEN YOU CAN OBTAIN THE SECRET CODE.$"
 
 Route110_TrickHousePuzzle5_Text_Mechadoll1Quiz1:
-	.string "MECHADOLL 1 QUIZ.\p"
-	.string "One of these POKéMON is not found\n"
+	.string "QUIZ DROID 1 QUIZ.\p"
+	.string "One of these COMPANIONS is not found\n"
 	.string "on ROUTE 110. Which one is it?$"
 
 Route110_TrickHousePuzzle5_Text_Mechadoll1Quiz2:
-	.string "MECHADOLL 1 QUIZ.\p"
-	.string "One of these POKéMON is not of the\n"
+	.string "QUIZ DROID 1 QUIZ.\p"
+	.string "One of these COMPANIONS is not of the\n"
 	.string "WATER type. Which one is it?$"
 
 Route110_TrickHousePuzzle5_Text_Mechadoll1Quiz3:
-	.string "MECHADOLL 1 QUIZ.\p"
-	.string "One of these POKéMON does not use\n"
+	.string "QUIZ DROID 1 QUIZ.\p"
+	.string "One of these COMPANIONS does not use\n"
 	.string "LEECH LIFE. Which one is it?$"
 
 Route110_TrickHousePuzzle5_Text_CorrectGoThrough:
@@ -876,82 +876,82 @@ Route110_TrickHousePuzzle5_Text_WaitForNextChallenge:
 
 Route110_TrickHousePuzzle5_Text_Mechadoll2Intro:
 	.string "CLICKETY-CLACK…\n"
-	.string "MECHADOLL 2 AM I!\p"
-	.string "MECHADOLL 1'S QUIZ DIFFICULTY LEVEL\n"
+	.string "QUIZ DROID 2 AM I!\p"
+	.string "QUIZ DROID 1'S QUIZ DIFFICULTY LEVEL\n"
 	.string "IS SET TOO LOW.$"
 
 Route110_TrickHousePuzzle5_Text_Mechadoll2Quiz1:
-	.string "MECHADOLL 2 QUIZ.\p"
-	.string "Which of these POKéMON did WALLY\n"
+	.string "QUIZ DROID 2 QUIZ.\p"
+	.string "Which of these COMPANIONS did LUKE\n"
 	.string "borrow from your father?$"
 
 Route110_TrickHousePuzzle5_Text_Mechadoll2Quiz2:
-	.string "MECHADOLL 2 QUIZ.\p"
-	.string "Which of these POKéMON was chasing\n"
+	.string "QUIZ DROID 2 QUIZ.\p"
+	.string "Which of these COMPANIONS was chasing\n"
 	.string "PROF. KORR?$"
 
 Route110_TrickHousePuzzle5_Text_Mechadoll2Quiz3:
-	.string "MECHADOLL 2 QUIZ.\p"
-	.string "Which of these POKéMON did TEAM AQUA\n"
-	.string "use in PETALBURG FOREST?$"
+	.string "QUIZ DROID 2 QUIZ.\p"
+	.string "Which of these COMPANIONS did the\n"
+	.string "CARTEL use in JUNDLAND WASTES?$"
 
 Route110_TrickHousePuzzle5_Text_Mechadoll3Intro:
 	.string "CLICKETY-CLACK…\n"
-	.string "MECHADOLL 3 AM I!\p"
+	.string "QUIZ DROID 3 AM I!\p"
 	.string "MATTERS OF MONEY ARE MY SOLE FOCUS.$"
 
 Route110_TrickHousePuzzle5_Text_Mechadoll3Quiz1:
-	.string "MECHADOLL 3 QUIZ.\p"
+	.string "QUIZ DROID 3 QUIZ.\p"
 	.string "Which costs more?\n"
-	.string "Three HARBOR MAILS or one BURN HEAL?$"
+	.string "Three HARBOR MAILS or one BURN GEL?$"
 
 Route110_TrickHousePuzzle5_Text_Mechadoll3Quiz2:
-	.string "MECHADOLL 3 QUIZ.\p"
-	.string "Sell one GREAT BALL and buy\n"
-	.string "one POTION. How much money remains?$"
+	.string "QUIZ DROID 3 QUIZ.\p"
+	.string "Sell one DURASTEEL POD and buy one\n"
+	.string "BACTA SPRAY. How much is left?$"
 
 Route110_TrickHousePuzzle5_Text_Mechadoll3Quiz3:
-	.string "MECHADOLL 3 QUIZ.\p"
-	.string "Do one REPEL and SODA POP cost\n"
-	.string "more than one SUPER POTION?$"
+	.string "QUIZ DROID 3 QUIZ.\p"
+	.string "Do one REPULSOR and JAWA JUICE cost\n"
+	.string "more than one BACTA PATCH?$"
 
 Route110_TrickHousePuzzle5_Text_Mechadoll4Intro:
 	.string "CLICKETY-CLACK…\n"
-	.string "MECHADOLL 4 THAT IS ME!\p"
+	.string "QUIZ DROID 4 THAT IS ME!\p"
 	.string "MY QUIZ IS AN OBJECT OF BEAUTY.$"
 
 Route110_TrickHousePuzzle5_Text_Mechadoll4Quiz1:
-	.string "MECHADOLL 4 QUIZ.\p"
+	.string "QUIZ DROID 4 QUIZ.\p"
 	.string "In SEASHORE HOUSE, were there more men\n"
 	.string "or women?$"
 
 Route110_TrickHousePuzzle5_Text_Mechadoll4Quiz2:
-	.string "MECHADOLL 4 QUIZ.\p"
-	.string "In LAVARIDGE TOWN, were there more\n"
+	.string "QUIZ DROID 4 QUIZ.\p"
+	.string "In PIRIN, were there more\n"
 	.string "elderly men or elderly women?$"
 
 Route110_TrickHousePuzzle5_Text_Mechadoll4Quiz3:
-	.string "MECHADOLL 4 QUIZ.\p"
-	.string "In the TRAINER'S SCHOOL, how many\n"
+	.string "QUIZ DROID 4 QUIZ.\p"
+	.string "In the ACADEMY, how many\n"
 	.string "girl students were there?$"
 
 Route110_TrickHousePuzzle5_Text_Mechadoll5Intro:
 	.string "CLICKETY-CLACK…\n"
-	.string "MECHADOLL 5 AM I!\p"
+	.string "QUIZ DROID 5 AM I!\p"
 	.string "THE MASTER'S BEST AND PROUDEST\n"
 	.string "ACHIEVEMENT AM I.$"
 
 Route110_TrickHousePuzzle5_Text_Mechadoll5Quiz1:
-	.string "MECHADOLL 5 QUIZ.\p"
-	.string "In SLATEPORT's POKéMON FAN CLUB,\n"
-	.string "how many POKéMON were there?$"
+	.string "QUIZ DROID 5 QUIZ.\p"
+	.string "In MOS EISLEY's COMPANION FAN CLUB,\n"
+	.string "how many COMPANIONS were there?$"
 
 Route110_TrickHousePuzzle5_Text_Mechadoll5Quiz2:
-	.string "MECHADOLL 5 QUIZ.\p"
-	.string "In FORTREE CITY, how many\n"
+	.string "QUIZ DROID 5 QUIZ.\p"
+	.string "In BRIGHT TREE, how many\n"
 	.string "tree houses were there?$"
 
 Route110_TrickHousePuzzle5_Text_Mechadoll5Quiz3:
-	.string "MECHADOLL 5 QUIZ.\p"
-	.string "On the CYCLING ROAD, how many\n"
-	.string "TRIATHLETES were there?$"
+	.string "QUIZ DROID 5 QUIZ.\p"
+	.string "On the PODRACE TRACK, how many\n"
+	.string "SWOOP RACERS were there?$"

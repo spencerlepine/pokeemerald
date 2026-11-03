@@ -982,27 +982,27 @@ Route104_EventScript_Darian::
 	end
 
 Route104_Text_BrineyLivesInSeasideCottage:
-	.string "That seaside cottage is where\n"
-	.string "MR. BRINEY lives.\p"
-	.string "He was once a mighty sailor who never\n"
-	.string "feared the sea, however stormy.$"
+	.string "That shack by the landing pad is where\n"
+	.string "HAN lives.\p"
+	.string "They say he's the best pilot in the\n"
+	.string "OUTER RIM. Just ask him!$"
 
 Route104_Text_WhatsItLikeAtBottomOfSea:
-	.string "The sea, huh?\p"
-	.string "I wonder what it's like at the bottom\n"
-	.string "of the sea?$"
+	.string "The water, huh?\p"
+	.string "I wonder what's at the bottom of\n"
+	.string "the lake?$"
 
 Route104_Text_ThrowBallAtWeakenedPokemon:
-	.string "If you're going to throw a POKé BALL,\n"
-	.string "weaken the wild POKéMON first.\p"
+	.string "If you're going to throw a CAPTURE POD,\n"
+	.string "weaken the wild COMPANION first.\p"
 	.string "It will be easier to catch if it's been\n"
 	.string "poisoned, burned, or lulled to sleep.$"
 
 Route104_Text_OnlyThrowBallAtWildPokemon:
 	.string "You're a thief if you try to steal\n"
-	.string "someone else's POKéMON.\p"
-	.string "You should throw POKé BALLS only at\n"
-	.string "wild POKéMON.$"
+	.string "someone else's COMPANION.\p"
+	.string "You should throw CAPTURE PODS only at\n"
+	.string "wild COMPANIONS.$"
 
 Route104_Text_ImNotATrainer:
 	.string "Oh, no, I'm not a TRAINER.\p"
@@ -1015,7 +1015,7 @@ Route104_Text_LikeFillingMouthWithSeedsTakeThis:
 	.string "I like filling my mouth with seeds,\n"
 	.string "then spitting them out fast!\p"
 	.string "You can have this, so you try it out!\p"
-	.string "Use it on a POKéMON, and it will learn\n"
+	.string "Use it on a COMPANION, and it will learn\n"
 	.string "a move for firing seeds rapidly.$"
 
 Route104_Text_TMsAreOneTimeUse:
@@ -1040,34 +1040,34 @@ Route104_Text_FlowerShopSellingSaplings:
 	.string "shopping. Where should I put them?$"
 
 Route104_Text_MrBrineysCottage:
-	.string "MR. BRINEY'S COTTAGE$"
+	.string "HAN'S LANDING PAD$"
 
 Route104_Text_RouteSignPetalburg:
-	.string "ROUTE 1O4\n"
-	.string "{RIGHT_ARROW} PETALBURG CITY$"
+	.string "ROUTE 104\n"
+	.string "{RIGHT_ARROW} MOS ENTHA$"
 
 Route104_Text_RouteSignRustboro:
-	.string "ROUTE 1O4\n"
-	.string "{UP_ARROW} RUSTBORO CITY$"
+	.string "ROUTE 104\n"
+	.string "{UP_ARROW} BESTINE$"
 
 Route104_Text_PrettyPetalFlowShop:
-	.string "PRETTY PETAL FLOWER SHOP$"
+	.string "DESERT BLOOM FLOWER SHOP$"
 
 Route104_Text_TrainerTipsDoubleBattles:
 	.string "TRAINER TIPS\p"
-	.string "In the HOENN region there are pairs\n"
+	.string "In the OUTER RIM there are pairs\n"
 	.string "of TRAINERS who challenge others\l"
-	.string "for 2-on-2 POKéMON battles called\l"
+	.string "for 2-on-2 COMPANION battles called\l"
 	.string "DOUBLE BATTLES.\p"
 	.string "In a DOUBLE BATTLE, the TRAINER must\n"
-	.string "send out two POKéMON, the one at the\l"
-	.string "left of the list and the top one.\l"
-	.string "Watch how POKéMON are lined up.$"
+	.string "send out two COMPANIONS, the one at\l"
+	.string "the left of the list and the top one.\l"
+	.string "Watch how COMPANIONS are lined up.$"
 
 Route104_Text_MayWeShouldRegister:
 	.string "MIRA: Oh, hi, {PLAYER}{KUN}!\p"
-	.string "DEVON upgraded your StarNAV with\n"
-	.string "the MATCH CALL system, huh?\p"
+	.string "HOUSE ORGANA upgraded your StarNAV\n"
+	.string "with the MATCH CALL system, huh?\p"
 	.string "We should register each other so we\n"
 	.string "can get in contact anytime.$"
 
@@ -1077,7 +1077,7 @@ Route104_Text_RegisteredMay:
 
 Route104_Text_MayHowsYourPokedex:
 	.string "MIRA: Oh, by the way, {PLAYER}{KUN},\n"
-	.string "how's your POKéDEX coming along?$"
+	.string "how's your DATAPAD coming along?$"
 
 Route104_Text_MayMinesDecentLetsBattle:
 	.string "Mine's looking pretty decent.\n"
@@ -1087,7 +1087,7 @@ Route104_Text_MayMinesDecentLetsBattle:
 Route104_Text_MayHaventRaisedPokemon:
 	.string "MIRA: Oh, what's the matter?\p"
 	.string "Haven't you caught or raised your\n"
-	.string "POKéMON very much?\p"
+	.string "COMPANIONS very much?\p"
 	.string "That's not very good for a TRAINER!$"
 
 Route104_Text_MayLetsBattle:
@@ -1104,25 +1104,25 @@ Route104_Text_MayDefeat:
 
 Route104_Text_MayPostBattle:
 	.string "MIRA: I can tell you've gotten pretty\n"
-	.string "good with the way you handle POKéMON.\p"
+	.string "good at handling COMPANIONS.\p"
 	.string "But instead of only making them\n"
-	.string "battle, you should be like MR. BRINEY.\p"
+	.string "battle, be like HAN and CHEWIE.\p"
 	.string "It's important to become friends with\n"
-	.string "POKéMON, too.$"
+	.string "your COMPANIONS, too.$"
 
 Route104_Text_BrendanWeShouldRegister:
 	.string "KAEL: Oh, hey, {PLAYER}!\p"
-	.string "Cool, you had DEVON install the MATCH\n"
-	.string "CALL system on your StarNAV!\p"
+	.string "Cool, you had HOUSE ORGANA install the\n"
+	.string "MATCH CALL system on your StarNAV!\p"
 	.string "Let's register each other in our\n"
-	.string "StarNAVS so we can keep in touch.$"
+	.string "StarNAVs so we can keep in touch.$"
 
 Route104_Text_RegisteredBrendan:
 	.string "{PLAYER} registered KAEL\n"
 	.string "in the StarNAV.$"
 
 Route104_Text_BrendanHowsYourPokedex:
-	.string "KAEL: {PLAYER}, how's your POKéDEX?\n"
+	.string "KAEL: {PLAYER}, how's your DATAPAD?\n"
 	.string "Have you filled in any pages yet?$"
 
 Route104_Text_BrendanDoingGreatLetsBattle:
@@ -1132,7 +1132,7 @@ Route104_Text_BrendanDoingGreatLetsBattle:
 
 Route104_Text_BrendanNoConfidence:
 	.string "KAEL: What's the matter? Don't have\n"
-	.string "any confidence in your POKéMON?$"
+	.string "any confidence in your COMPANIONS?$"
 
 Route104_Text_BrendanLetsBattle:
 	.string "KAEL: What's up?\n"
@@ -1148,8 +1148,8 @@ Route104_Text_BrendanDefeat:
 
 Route104_Text_BrendanPostBattle:
 	.string "KAEL: You've gotten pretty decent\n"
-	.string "at handling POKéMON.\p"
+	.string "at handling COMPANIONS.\p"
 	.string "But, you know, you shouldn't just be\n"
-	.string "making POKéMON battle.\p"
-	.string "Like MR. BRINEY, it's important to\n"
-	.string "become friends with your POKéMON.$"
+	.string "making COMPANIONS battle.\p"
+	.string "Like HAN and CHEWIE, you should\n"
+	.string "be real partners with your COMPANIONS.$"

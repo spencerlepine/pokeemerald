@@ -1342,115 +1342,116 @@ LilycoveCity_ContestLobby_Text_NowThatWeveClearedThatUp:
 	.string "up…\p"
 	.string "Hello!\p"
 	.string "This is the reception counter for\n"
-	.string "POKéMON CONTESTS.$"
+	.string "SHOWCASES.$"
 
 LilycoveCity_ContestLobby_Text_ContestReception:
 	.string "Hello!\p"
 	.string "This is the reception counter for\n"
-	.string "POKéMON CONTESTS.$"
+	.string "SHOWCASES.$"
 
 @ Unused
 LilycoveCity_ContestLobby_Text_CounterOnlyFor4PlayerContests:
 	.string "Hello!\p"
 	.string "This reception counter is only\n"
-	.string "for 4-player POKéMON CONTESTS.$"
+	.string "for 4-player SHOWCASES.$"
 
 LilycoveCity_ContestLobby_Text_EnterContest1:
-	.string "Would you like to enter your POKéMON\n"
-	.string "in our CONTESTS?$"
+	.string "Would you like to enter your COMPANION\n"
+	.string "in our SHOWCASES?$"
 
 LilycoveCity_ContestLobby_Text_WhichTopic1:
 	.string "Which topic would you like?$"
 
 LilycoveCity_ContestLobby_Text_ExplainContests:
-	.string "A POKéMON CONTEST involves four\n"
-	.string "TRAINERS entering one POKéMON each\l"
+	.string "A SHOWCASE involves four\n"
+	.string "TRAINERS entering one COMPANION each\l"
 	.string "in competitive judging.\p"
-	.string "A CONTEST has two stages of judging,\n"
+	.string "A SHOWCASE has two stages of judging,\n"
 	.string "primary and secondary.\p"
 	.string "Primary judging is a popularity poll\n"
 	.string "involving the audience.\p"
 	.string "Secondary judging features appeals\n"
-	.string "by the POKéMON using their moves.\p"
+	.string "by the COMPANION using their moves.\p"
 	.string "Plan appeals carefully to earn the\n"
 	.string "most attention of the JUDGE and\l"
 	.string "excite the audience.\l"
 	.string "Do your best to stand out.\p"
 	.string "The primary and secondary scores are\n"
 	.string "added at the end.\p"
-	.string "The POKéMON garnering the highest\n"
+	.string "The COMPANION garnering the highest\n"
 	.string "score is declared the winner.$"
 
 LilycoveCity_ContestLobby_Text_ExplainContestTypes:
-	.string "There are five kinds of CONTESTS.\p"
+	.string "There are five kinds of SHOWCASES.\p"
 	.string "COOL, BEAUTY, CUTE, SMART, and\n"
 	.string "TOUGH are the five categories.\p"
-	.string "Choose the CONTEST that is right for\n"
-	.string "the POKéMON you plan to enter.$"
+	.string "Choose the SHOWCASE that is right for\n"
+	.string "the COMPANION you plan to enter.$"
 
 LilycoveCity_ContestLobby_Text_ExplainContestRanks:
-	.string "There are four ranks of POKéMON\n"
-	.string "CONTESTS.\p"
+	.string "There are four ranks of\n"
+	.string "SHOWCASES.\p"
 	.string "NORMAL, SUPER, HYPER, and MASTER\n"
 	.string "are the four ranks.\p"
-	.string "In the NORMAL Rank, any POKéMON may\n"
+	.string "In the NORMAL Rank, any COMPANION may\n"
 	.string "enter.\p"
-	.string "Any POKéMON that won a NORMAL Rank\n"
-	.string "CONTEST may move up to the SUPER Rank\l"
+	.string "Any COMPANION that won a NORMAL Rank\n"
+	.string "SHOWCASE may move up to the SUPER Rank\l"
 	.string "in the same category.\p"
 	.string "In the same way, a SUPER Rank winner\n"
 	.string "can move up to the HYPER Rank, and\l"
 	.string "a HYPER Rank winner can advance to\l"
 	.string "the MASTER Rank in the same category.\p"
-	.string "A POKéMON that won in the MASTER Rank\n"
-	.string "may compete in the MASTER Rank as\l"
+	.string "A COMPANION that won in the MASTER\n"
+	.string "Rank may compete in the MASTER Rank as\l"
 	.string "often as its TRAINER wants.$"
 
 LilycoveCity_ContestLobby_Text_EnterWhichRank:
 	.string "Which Rank would you like to enter?$"
 
 LilycoveCity_ContestLobby_Text_EnterWhichContest1:
-	.string "Which CONTEST would you like to enter?$"
+	.string "Which SHOWCASE would you like to enter?$"
 
 LilycoveCity_ContestLobby_Text_EnterWhichPokemon1:
-	.string "Which POKéMON would you like to enter?$"
+	.string "Which COMPANION would you like to\n"
+	.string "enter?$"
 
 LilycoveCity_ContestLobby_Text_MonNotQualifiedForRank:
-	.string "I'm terribly sorry, but your POKéMON\n"
+	.string "I'm terribly sorry, but your COMPANION\n"
 	.string "is not qualified to compete at this\l"
 	.string "Rank yet…$"
 
 LilycoveCity_ContestLobby_Text_EggCannotTakePart:
 	.string "I'm sorry, but an EGG cannot take part\n"
-	.string "in a POKéMON CONTEST.$"
+	.string "in a SHOWCASE.$"
 
 LilycoveCity_ContestLobby_Text_MonInNoConditionForContest:
-	.string "Your POKéMON appears to be in no\n"
-	.string "condition to take part in a CONTEST…$"
+	.string "Your COMPANION appears to be in no\n"
+	.string "condition to take part in a SHOWCASE…$"
 
 LilycoveCity_ContestLobby_Text_AlreadyWonEnterAnyway:
 	.string "Oh, but that RIBBON…\p"
-	.string "Your POKéMON has won this CONTEST\n"
+	.string "Your COMPANION has won this SHOWCASE\n"
 	.string "before, hasn't it?\p"
 	.string "Would you like to enter it in this\n"
-	.string "CONTEST anyway?$"
+	.string "SHOWCASE anyway?$"
 
 LilycoveCity_ContestLobby_Text_ConfirmContestMon:
-	.string "Is that your CONTEST POKéMON?$"
+	.string "Is that your SHOWCASE COMPANION?$"
 
 LilycoveCity_ContestLobby_Text_YourMonIsEntryNum4:
-	.string "Okay, your POKéMON will be entered\n"
-	.string "in this CONTEST.\p"
-	.string "Your POKéMON is Entry No. 4.\n"
-	.string "The CONTEST will begin shortly.$"
+	.string "Okay, your COMPANION will be entered\n"
+	.string "in this SHOWCASE.\p"
+	.string "Your COMPANION is Entry No. 4.\n"
+	.string "The SHOWCASE will begin shortly.$"
 
 LilycoveCity_ContestLobby_Text_ComeThroughHere:
 	.string "Please come in through here.\n"
 	.string "Good luck!$"
 
 LilycoveCity_ContestLobby_Text_PokemonWonWeHavePrize:
-	.string "Congratulations! Your POKéMON is the\n"
-	.string "CONTEST winner!\p"
+	.string "Congratulations! Your COMPANION is the\n"
+	.string "SHOWCASE winner!\p"
 	.string "We have your prize right here.\n"
 	.string "Please, right this way!$"
 
@@ -1460,28 +1461,28 @@ LilycoveCity_ContestLobby_Text_ComeBackForPrizeLater:
 
 ContestHall_Text_GettingStartedParticipantsAsFollows:
 	.string "MC: Hello! We're just getting started\n"
-	.string "with a {STR_VAR_3} Rank POKéMON\l"
+	.string "with a {STR_VAR_3} Rank COMPANION\l"
 	.string "{STR_VAR_2}!\p"
 	.string "The participating TRAINERS and their\n"
-	.string "POKéMON are as follows:$"
+	.string "COMPANIONS are as follows:$"
 
 ContestHall_Text_GettingStartedParticipantsAsFollowsLink:
 	.string "MC: Hello! We're just getting started\n"
-	.string "with a 4-player linked POKéMON\l"
+	.string "with a 4-player linked COMPANION\l"
 	.string "{STR_VAR_2}!\p"
 	.string "The participating TRAINERS and their\n"
-	.string "POKéMON are as follows:$"
+	.string "COMPANIONS are as follows:$"
 
 ContestHall_Text_EntryXTrainersMon:
 	.string "MC: Entry No. {STR_VAR_2}!\n"
 	.string "{STR_VAR_1}'s {STR_VAR_3}!$"
 
 ContestHall_Text_SeenContestantsAudienceWillVote:
-	.string "MC: We've just seen the four POKéMON\n"
+	.string "MC: We've just seen the four COMPANIONS\n"
 	.string "contestants.\p"
 	.string "Now it's time for primary judging!\p"
 	.string "The audience will vote on their\n"
-	.string "favorite POKéMON contestants.\p"
+	.string "favorite COMPANION contestants.\p"
 	.string "Without any further ado, let the\n"
 	.string "voting begin!$"
 
@@ -1549,13 +1550,13 @@ ContestHall_Text_PickUpPrizeAtCounterLater:
 @ Unused
 ContestHall_Text_OnlyRegister4Players:
 	.string "I only register four players for\n"
-	.string "POKéMON CONTESTS.\p"
+	.string "SHOWCASES.\p"
 	.string "If three other players link up, all\n"
-	.string "four may enter the same CONTEST.\p"
+	.string "four may enter the same SHOWCASE.\p"
 	.string "Would you like to take part?$"
 
 LilycoveCity_ContestLobby_Text_ProgressWillBeSaved:
-	.string "Before entering a CONTEST, your\n"
+	.string "Before entering a SHOWCASE, your\n"
 	.string "progress will be saved.$"
 
 LilycoveCity_ContestLobby_Text_ParticipateAnotherTime:
@@ -1564,27 +1565,28 @@ LilycoveCity_ContestLobby_Text_ParticipateAnotherTime:
 
 @ Unused
 LilycoveCity_ContestLobby_Text_EnterContest2:
-	.string "Would you like to enter a CONTEST?$"
+	.string "Would you like to enter a SHOWCASE?$"
 
 @ Unused
 LilycoveCity_ContestLobby_Text_Explain4PlayerContest:
 	.string "When four players are ready, connect\n"
-	.string "over a Game Link cable, and register\l"
+	.string "over a COMLINK, and register\l"
 	.string "with me, please.\p"
-	.string "Please choose the same CONTEST\n"
+	.string "Please choose the same SHOWCASE\n"
 	.string "as your fellow contestants.\p"
-	.string "The CONTEST begins as soon as all\n"
+	.string "The SHOWCASE begins as soon as all\n"
 	.string "players register their entry.\p"
-	.string "After that, the usual CONTEST rules\n"
+	.string "After that, the usual SHOWCASE rules\n"
 	.string "apply.$"
 
 @ Unused
 LilycoveCity_ContestLobby_Text_EnterWhichContest2:
-	.string "Which CONTEST would you like to enter?$"
+	.string "Which SHOWCASE would you like to enter?$"
 
 @ Unused
 LilycoveCity_ContestLobby_Text_EnterWhichPokemon2:
-	.string "Which POKéMON would you like to enter?$"
+	.string "Which COMPANION would you like to\n"
+	.string "enter?$"
 
 LilycoveCity_ContestLobby_Text_Transmitting:
 	.string "Transmitting…$"
@@ -1594,7 +1596,7 @@ LilycoveCity_ContestLobby_Text_TransmissionError:
 
 LilycoveCity_ContestLobby_Text_PlayersChoseDifferentContest:
 	.string "You may have chosen a different\n"
-	.string "CONTEST than another player.$"
+	.string "SHOWCASE than another player.$"
 
 LilycoveCity_ContestLobby_Text_PlayersMadeDifferentChoice:
 	.string "You may have made a different\n"
@@ -1615,38 +1617,40 @@ LilycoveCity_ContestLobby_Text_TransmissionErrorTryAgain:
 	.string "Please try again.$"
 
 LilycoveCity_ContestLobby_Text_YourMonIsEntryNumX:
-	.string "Your POKéMON will be entered in\n"
-	.string "the CONTEST.\p"
-	.string "Your POKéMON is Entry No. {STR_VAR_2}.$"
+	.string "Your COMPANION will be entered in\n"
+	.string "the SHOWCASE.\p"
+	.string "Your COMPANION is Entry No.\n"
+	.string "{STR_VAR_2}.$"
 
 LilycoveCity_ContestLobby_Text_ContestBeginShortly:
-	.string "The CONTEST will begin shortly.$"
+	.string "The SHOWCASE will begin shortly.$"
 
 LilycoveCity_ContestLobby_Text_LinkContestReception:
-	.string "Welcome! This is the POKéMON CONTEST\n"
+	.string "Welcome! This is the SHOWCASE\n"
 	.string "link reception counter.\p"
-	.string "You may enter CONTESTS together with\n"
+	.string "You may enter SHOWCASES together with\n"
 	.string "one or more friends.$"
 
 LilycoveCity_ContestLobby_Text_WhichTopic2:
 	.string "Which topic would you like?$"
 
 LilycoveCity_ContestLobby_Text_EnterContest3:
-	.string "Would you like to enter a CONTEST?$"
+	.string "Would you like to enter a SHOWCASE?$"
 
 LilycoveCity_ContestLobby_Text_EnterWhichContest3:
-	.string "Which CONTEST would you like to enter?$"
+	.string "Which SHOWCASE would you like to enter?$"
 
 LilycoveCity_ContestLobby_Text_MonInNoCondition2:
-	.string "Your POKéMON appears to be in no\n"
-	.string "condition to take part in a CONTEST…$"
+	.string "Your COMPANION appears to be in no\n"
+	.string "condition to take part in a SHOWCASE…$"
 
 LilycoveCity_ContestLobby_Text_EggCannotTakePart2:
 	.string "I'm sorry, but an EGG cannot take part\n"
-	.string "in a POKéMON CONTEST.$"
+	.string "in a SHOWCASE.$"
 
 LilycoveCity_ContestLobby_Text_EnterWhichPokemon3:
-	.string "Which POKéMON would you like to enter?$"
+	.string "Which COMPANION would you like to\n"
+	.string "enter?$"
 
 LilycoveCity_ContestLobby_Text_PleaseDecideLinkLeader:
 	.string "Please decide which of you will\n"
@@ -1658,85 +1662,83 @@ LilycoveCity_ContestLobby_Text_PlayerAt4PCounterUseGMode:
 	.string "At least one player has entered using\n"
 	.string "the 4-player reception counter.\p"
 	.string "There must be four players connected\n"
-	.string "using a GBA Game Link cable.\p"
+	.string "using COMLINK cables.\p"
 	.string "When the four players are ready,\n"
 	.string "select G-MODE (GLOBAL MODE),\l"
 	.string "then register to enter again, please.$"
 
 LilycoveCity_ContestLobby_Text_ExplainLinkContest:
-	.string "This is a CONTEST for two to four\n"
-	.string "players linked using a Wireless\l"
-	.string "Adapter or a GBA Game Link cable.\p"
+	.string "This is a SHOWCASE for two to four\n"
+	.string "players linked by COMLINK.\p"
 	.string "Participants are first asked to choose\n"
 	.string "the mode they wish to enter.\p"
 	.string "There are two different modes.\p"
 	.string "E-MODE (EMERALD MODE) is for\n"
-	.string "two to four players, each with a\l"
-	.string "POKéMON Emerald Game Pak.\p"
+	.string "two to four players, each with\l"
+	.string "this game.\p"
 	.string "G-MODE (GLOBAL MODE) is only for\n"
-	.string "four players, each with a POKéMON\l"
-	.string "Emerald, Ruby, or Sapphire Game Pak.\p"
+	.string "four players, each with this game\l"
+	.string "or an older version.\p"
 	.string "The players should discuss which mode\n"
 	.string "they want, then choose the same mode.\p"
 	.string "Once all the players have chosen\n"
-	.string "the same CONTEST in the same mode,\l"
+	.string "the same SHOWCASE in the same mode,\l"
 	.string "the entry registration is complete.\p"
-	.string "After that, a CONTEST will start in\n"
+	.string "After that, a SHOWCASE will start in\n"
 	.string "the usual manner.$"
 
 LilycoveCity_ContestLobby_Text_ExplainEMode:
 	.string "In E-MODE (EMERALD MODE),\n"
-	.string "a LINK CONTEST can be held with\l"
+	.string "a LINK SHOWCASE can be held with\l"
 	.string "two to four players. Each player must\l"
-	.string "have a POKéMON Emerald Game Pak.\p"
+	.string "have this game.\p"
 	.string "The players must be linked with each\n"
-	.string "other using Wireless Adapters or\l"
-	.string "GBA Game Link cables.\p"
+	.string "other by COMLINK.\p"
 	.string "If there are fewer than four players,\n"
 	.string "TRAINERS in the hall will join to fill\l"
-	.string "the 4-player CONTEST lineup.\p"
+	.string "the 4-player SHOWCASE lineup.\p"
 	.string "Please be aware that E-MODE is not\n"
-	.string "available in POKéMON Ruby or Sapphire.$"
+	.string "available in older versions.$"
 
 LilycoveCity_ContestLobby_Text_ExplainGMode:
 	.string "G-MODE (GLOBAL MODE) is specifically\n"
 	.string "for four players who are linked using\l"
-	.string "GBA Game Link cables.\p"
-	.string "Each player must have a POKéMON\n"
-	.string "Emerald, Ruby, or Sapphire Game Pak.\p"
-	.string "The CONTEST starts after all players\n"
-	.string "choose G-MODE (POKéMON Emerald) or\l"
+	.string "COMLINK cables.\p"
+	.string "Each player must have this game or\n"
+	.string "an older version.\p"
+	.string "The SHOWCASE starts after all players\n"
+	.string "choose G-MODE (this game) or\l"
 	.string "enter through the 4-player reception\l"
-	.string "counter (POKéMON Ruby or Sapphire).$"
+	.string "counter (an older version).$"
 
 LilycoveCity_ContestLobby_Text_NoWirelessAdapterInGMode:
 	.string "I'm terribly sorry.\p"
 	.string "G-MODE does not function\n"
-	.string "with Wireless Adapters.\p"
+	.string "with a wireless COMLINK.\p"
 	.string "Please select E-MODE or try\n"
-	.string "again using a GBA Game Link cable.$"
+	.string "again using a COMLINK cable.$"
 
 LilycoveCity_ContestLobby_Text_WhichContestMode:
-	.string "Which CONTEST MODE would you like\n"
+	.string "Which SHOWCASE MODE would you like\n"
 	.string "to enter?$"
 
 ContestHall_Text_GettingStartedWireless:
 	.string "MC: Hello! We're just getting started\n"
-	.string "with a 4-player linked POKéMON\l"
+	.string "with a 4-player linked COMPANION\l"
 	.string "{STR_VAR_2}!$"
 
 ContestHall_Text_ParticipantsAsFollows:
 	.string "The participating TRAINERS and their\n"
-	.string "POKéMON are as follows:$"
+	.string "COMPANIONS are as follows:$"
 
 ContestHall_Text_WeveSeenContestants:
-	.string "MC: We've just seen the four POKéMON\n"
+	.string "MC: We've just seen the four COMPANIONS\n"
 	.string "contestants.\p"
 	.string "Now it's time for primary judging!$"
 
 ContestHall_Text_AudienceWillVote:
 	.string "The audience will vote on their\n"
-	.string "favorite POKéMON contestants.$"
+	.string "favorite COMPANION contestants.$"
 
 ContestHall_Text_LetVotingBegin:
 	.string "Without any further ado,\n"

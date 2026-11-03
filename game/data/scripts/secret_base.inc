@@ -670,12 +670,13 @@ SecretBase_EventScript_CushionInteract::
 
 SecretBase_Text_AllDecorationsWillBeReturned:
 	.string "All decorations and furniture in your\n"
-	.string "SECRET BASE will be returned to your PC.\p"
+	.string "HIDEOUT will be returned to your\l"
+	.string "TERMINAL.\p"
 	.string "Is that okay?$"
 
 SecretBase_Text_WantToRegisterSecretBase:
 	.string "Do you want to register\n"
-	.string "{STR_VAR_1}'s SECRET BASE?$"
+	.string "{STR_VAR_1}'s HIDEOUT?$"
 
 SecretBase_Text_AlreadyRegisteredDelete:
 	.string "This data is already registered.\n"
@@ -693,19 +694,19 @@ SecretBase_Text_DataUnregistered:
 	.string "Data has been unregistered.$"
 
 SecretBase_Text_BootUpPC:
-	.string "{PLAYER} booted up the PC.$"
+	.string "{PLAYER} booted up the TERMINAL.$"
 
 SecretBase_Text_WhatWouldYouLikeToDo:
 	.string "What would you like to do?$"
 
 SecretBase_Text_RegistryInfo:
-	.string "Once registered, a SECRET BASE will not\n"
+	.string "Once registered, a HIDEOUT will not\n"
 	.string "disappear unless the other TRAINER\l"
 	.string "moves it to a different location.\p"
-	.string "If a SECRET BASE is deleted from the\n"
+	.string "If a HIDEOUT is deleted from the\n"
 	.string "registered list, another one may take\l"
 	.string "its place.\p"
-	.string "Up to ten SECRET BASE locations\n"
+	.string "Up to ten HIDEOUT locations\n"
 	.string "may be registered.$"
 
 SecretBase_Text_BattleTowerShield:
@@ -713,19 +714,20 @@ SecretBase_Text_BattleTowerShield:
 	.string "{STR_VAR_1} times in a row at the BATTLE TOWER.$"
 
 SecretBase_Text_ToyTV:
-	.string "A realistic toy TV. It could be easily\n"
-	.string "mistaken for the real thing.$"
+	.string "A realistic toy HOLOPROJECTOR. It could\n"
+	.string "be easily mistaken for the real thing.$"
 
 SecretBase_Text_SeedotTV:
-	.string "A toy TV shaped like a SEEDOT.\n"
-	.string "It looks ready to roll away on its own…$"
+	.string "A toy HOLOPROJECTOR shaped like an\n"
+	.string "ACORNLET. It looks ready to roll away\l"
+	.string "on its own…$"
 
 SecretBase_Text_SkittyTV:
-	.string "A toy TV shaped like a SKITTY.\n"
-	.string "It looks ready to stroll away…$"
+	.string "A toy HOLOPROJECTOR shaped like a\n"
+	.string "LOTHKIT. It looks ready to stroll away…$"
 
 SecretBase_Text_WouldYouLikeToMoveBases:
-	.string "You may only make one SECRET BASE.\p"
+	.string "You may only make one HIDEOUT.\p"
 	.string "Would you like to move from the SECRET\n"
 	.string "BASE near {STR_VAR_1}?$"
 

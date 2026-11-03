@@ -59,26 +59,27 @@ EverGrandeCity_PhoebesRoom_EventScript_Defeated::
 	end
 
 EverGrandeCity_PhoebesRoom_Text_IntroSpeech:
-	.string "Ahahaha!\p"
-	.string "I'm PHOEBE of the ELITE FOUR.\n"
-	.string "I did my training on MT. PYRE.\p"
-	.string "While I trained, I gained the ability\n"
-	.string "to commune with GHOST-type POKéMON.\p"
-	.string "Yes, the bond I developed with POKéMON\n"
-	.string "is extremely tight.\p"
-	.string "So, come on, just try and see if you can\n"
-	.string "even inflict damage on my POKéMON!$"
+	.string "QUI-GON: Hello, young one.\p"
+	.string "I am the TRIAL OF LOSS.\n"
+	.string "I trained my spirit at the JEDHA\l"
+	.string "TEMPLE, and it outlived me.\p"
+	.string "There, I learned to commune with\n"
+	.string "SPIRIT-type COMPANIONS.\p"
+	.string "The bond I share with my COMPANIONS\n"
+	.string "reaches past death itself.\p"
+	.string "So, come. See if you can even\n"
+	.string "touch my COMPANIONS!$"
 
 EverGrandeCity_PhoebesRoom_Text_Defeat:
-	.string "Oh, darn.\n"
-	.string "I've gone and lost.$"
+	.string "Ah.\n"
+	.string "Well done, young one.$"
 
 EverGrandeCity_PhoebesRoom_Text_PostBattleSpeech:
-	.string "There's a definite bond between you\n"
-	.string "and your POKéMON, too.\p"
-	.string "I didn't recognize it, so it's only\n"
-	.string "natural that I lost.\p"
-	.string "Yup, I'd like to see how far your bond\n"
+	.string "There's a deep bond between you\n"
+	.string "and your COMPANIONS, too.\p"
+	.string "No one is ever truly gone.\n"
+	.string "Remember that when you lose someone.\p"
+	.string "I'd like to see how far your bond\n"
 	.string "will carry you.\p"
-	.string "Go ahead, move on to the next room.$"
+	.string "Go ahead, move on to the next TRIAL.$"
 

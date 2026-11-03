@@ -1,11 +1,12 @@
 LilycoveCity_DepartmentStore_1F_Text_LotteryCornerDrawTicket:
-	.string "This is the POKéMON LOTTERY CORNER.\p"
+	.string "This is the COMPANION LOTTERY CORNER.\p"
 	.string "All shoppers at our DEPARTMENT STORE\n"
-	.string "get to draw a POKéMON LOTO TICKET.\p"
+	.string "get to draw a COMPANION LOTO TICKET.\p"
 	.string "If the LOTO TICKET's number matches\n"
-	.string "the ID number of any of your POKéMON,\l"
-	.string "you will receive a fabulous gift.\p"
-	.string "Would you like to draw a POKéMON\n"
+	.string "the ID number of any of your\l"
+	.string "COMPANIONS, you will receive a fabulous\l"
+	.string "gift.\p"
+	.string "Would you like to draw a COMPANION\n"
 	.string "LOTO TICKET?$"
 
 LilycoveCity_DepartmentStore_1F_Text_ComeBackTomorrow:
@@ -22,7 +23,7 @@ LilycoveCity_DepartmentStore_1F_Text_TicketNumberIsXPleaseWait:
 	.string "The LOTO TICKET number is {STR_VAR_1}.\p"
 	.string "I need to run a check on this number\n"
 	.string "to see if it matches any of your\l"
-	.string "POKéMON's ID numbers. Please wait.$"
+	.string "COMPANION's ID numbers. Please wait.$"
 
 LilycoveCity_DepartmentStore_1F_Text_TicketMatchesPartyMon:
 	.string "Congratulations!\p"
@@ -32,7 +33,7 @@ LilycoveCity_DepartmentStore_1F_Text_TicketMatchesPartyMon:
 
 LilycoveCity_DepartmentStore_1F_Text_TicketMatchesPCMon:
 	.string "Congratulations!\p"
-	.string "The ID number of your PC-boxed\n"
+	.string "The ID number of your stored\n"
 	.string "{STR_VAR_1} matches your\l"
 	.string "LOTO TICKET's number!$"
 

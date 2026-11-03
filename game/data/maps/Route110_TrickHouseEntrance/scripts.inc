@@ -724,8 +724,8 @@ Route110_TrickHouseEntrance_Text_ConcealedBeneathCushion:
 Route110_TrickHouseEntrance_Text_TheyCallMeTrickMaster:
 	.string "Behold!\p"
 	.string "For I am the greatest living mystery\n"
-	.string "of a man in all of HOENN!\l"
-	.string "They call me…\p"
+	.string "of a spy in all of the OUTER RIM!\l"
+	.string "They call me GARINDAN…\p"
 	.string "The TRICK MASTER!\n"
 	.string "Wahahaha! Glad to meet you!$"
 
@@ -779,7 +779,7 @@ Route110_TrickHouseEntrance_Text_DidYouNotComeToClaimReward:
 	.string "Did you not come to claim your reward?$"
 
 Route110_TrickHouseEntrance_Text_MechadollWhichTent:
-	.string "MECHADOLL 5 I AM!\n"
+	.string "QUIZ DROID 5 I AM!\n"
 	.string "IF REWARD IS NOT TAKEN BY YOU,\l"
 	.string "THEN TRICK MASTER YOU CANNOT FOLLOW.\p"
 	.string "RED TENT OR BLUE TENT,\n"
@@ -789,7 +789,7 @@ Route110_TrickHouseEntrance_Text_ThenFarewell:
 	.string "THEN FAREWELL.$"
 
 Route110_TrickHouseEntrance_Text_PCFullAgain:
-	.string "YOUR PC STATUS: FULL AGAIN.\n"
+	.string "YOUR TERMINAL STATUS: FULL AGAIN.\n"
 	.string "MEAN, YOU ARE.$"
 
 Route110_TrickHousePuzzle_Text_FoundAScroll:

@@ -1,5 +1,5 @@
 SecretBase_Text_Trainer0Intro:
-	.string "Have you made a SECRET BASE already?\p"
+	.string "Have you made a HIDEOUT already?\p"
 	.string "I went here, there, everywhere before\n"
 	.string "choosing this place.\p"
 	.string "Since you're already here, how would\n"
@@ -18,18 +18,18 @@ SecretBase_Text_Trainer0Defeated::
 	.string "About me losing… Please keep it secret!$"
 
 SecretBase_Text_Trainer0PostBattle:
-	.string "What do you think of my SECRET BASE?\n"
+	.string "What do you think of my HIDEOUT?\n"
 	.string "Come visit me again tomorrow.$"
 
 SecretBase_Text_Trainer0PreChampion:
-	.string "Have you made a SECRET BASE already?\p"
+	.string "Have you made a HIDEOUT already?\p"
 	.string "I went here, there, everywhere before\n"
 	.string "choosing this place.\p"
 	.string "Feel free to hang out!$"
 
 SecretBase_Text_Trainer5Intro:
 	.string "There're a lot of places where\n"
-	.string "you can make a SECRET BASE.\p"
+	.string "you can make a HIDEOUT.\p"
 	.string "But I like this spot best.\n"
 	.string "Don't you think it's nice?\p"
 	.string "Oh, would you like to have a battle?$"
@@ -52,7 +52,7 @@ SecretBase_Text_Trainer5PostBattle:
 
 SecretBase_Text_Trainer5PreChampion:
 	.string "There're a lot of places where you can\n"
-	.string "make a SECRET BASE.\p"
+	.string "make a HIDEOUT.\p"
 	.string "But I like this spot best.\n"
 	.string "Don't you think it's nice?$"
 
@@ -66,7 +66,7 @@ SecretBase_Text_Trainer1Intro:
 
 SecretBase_Text_Trainer1AcceptBattle:
 	.string "Okay!\n"
-	.string "I'm going to defend my SECRET BASE!$"
+	.string "I'm going to defend my HIDEOUT!$"
 
 SecretBase_Text_Trainer1DeclineBattle:
 	.string "Hunh? Is that right?\n"
@@ -87,7 +87,7 @@ SecretBase_Text_Trainer1PreChampion:
 	.string "I finally got to use it!$"
 
 SecretBase_Text_Trainer6Intro:
-	.string "Welcome to my POKéMON LAB.\p"
+	.string "Welcome to my COMPANION LAB.\p"
 	.string "I carry out research on battling in\n"
 	.string "secrecy.\p"
 	.string "Would you like to see how strong I am?$"
@@ -108,7 +108,7 @@ SecretBase_Text_Trainer6PostBattle:
 	.string "Please come back again tomorrow.$"
 
 SecretBase_Text_Trainer6PreChampion:
-	.string "Welcome to my POKéMON LAB.\p"
+	.string "Welcome to my COMPANION LAB.\p"
 	.string "I carry out research on battling in\n"
 	.string "secrecy.$"
 
@@ -132,7 +132,7 @@ SecretBase_Text_Trainer2Defeated::
 SecretBase_Text_Trainer2PostBattle:
 	.string "Well, anyway, I should go buy some\n"
 	.string "decorations and furniture.\p"
-	.string "I want my SECRET BASE to be a place\n"
+	.string "I want my HIDEOUT to be a place\n"
 	.string "other people can enjoy.$"
 
 SecretBase_Text_Trainer2PreChampion:
@@ -144,10 +144,10 @@ SecretBase_Text_Trainer2PreChampion:
 SecretBase_Text_Trainer7Intro:
 	.string "I simply adore shopping for decorations\n"
 	.string "and furniture.\p"
-	.string "I also love raising POKéMON just\n"
+	.string "I also love raising COMPANIONS just\n"
 	.string "as much.\p"
 	.string "If you would be so kind, will you battle\n"
-	.string "with my POKéMON?$"
+	.string "with my COMPANION?$"
 
 SecretBase_Text_Trainer7AcceptBattle:
 	.string "Thank you.\n"
@@ -167,7 +167,7 @@ SecretBase_Text_Trainer7PostBattle:
 SecretBase_Text_Trainer7PreChampion:
 	.string "I simply adore shopping for decorations\n"
 	.string "and furniture.\p"
-	.string "I also love raising POKéMON just\n"
+	.string "I also love raising COMPANIONS just\n"
 	.string "as much.$"
 
 SecretBase_Text_Trainer3Intro:
@@ -188,7 +188,7 @@ SecretBase_Text_Trainer3Defeated::
 	.string "I went down…$"
 
 SecretBase_Text_Trainer3PostBattle:
-	.string "Where's your SECRET BASE?\n"
+	.string "Where's your HIDEOUT?\n"
 	.string "I should go visit you there.$"
 
 SecretBase_Text_Trainer3PreChampion:
@@ -204,7 +204,7 @@ SecretBase_Text_Trainer8Intro:
 	.string "In the meantime, want to battle?$"
 
 SecretBase_Text_Trainer8AcceptBattle:
-	.string "This is my SECRET BASE.\n"
+	.string "This is my HIDEOUT.\n"
 	.string "I can't lose!$"
 
 SecretBase_Text_Trainer8DeclineBattle:
@@ -227,7 +227,7 @@ SecretBase_Text_Trainer8PreChampion:
 SecretBase_Text_Trainer4Intro:
 	.string "I found a spot I liked, and I did it up\n"
 	.string "with my favorite decorations.\p"
-	.string "I raise my favorite POKéMON and grow\n"
+	.string "I raise my favorite COMPANION and grow\n"
 	.string "stronger with it.\p"
 	.string "That's what I do.\n"
 	.string "Want to battle with me?$"
@@ -249,7 +249,7 @@ SecretBase_Text_Trainer4PostBattle:
 SecretBase_Text_Trainer4PreChampion:
 	.string "I found a spot I liked, and I did it up\n"
 	.string "with my favorite decorations.\p"
-	.string "I raise my favorite POKéMON and grow\n"
+	.string "I raise my favorite COMPANION and grow\n"
 	.string "stronger with it.\p"
 	.string "Every day is a great day.$"
 

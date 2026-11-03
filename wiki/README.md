@@ -34,6 +34,12 @@ Generated sounds not yet in the game live in [`audio/`](audio) the same way (`au
 `python3 tools/mark_audio_ready.py` lists and applies them. Approved sounds installed into `../game` are listed in `mapping/audio_done.csv`; `python3 tools/mark_audio_done.py`
 applies it the same way.
 
+**Dialogue and UI text is ported** (2026-11-03): `python3 tools/port_texts.py --all` copies every
+`sw_text_raw` in `texts.csv` into `../game` by label and sets `game_status` DONE. It only overwrites text that
+is still Emerald's; anything edited by hand since is listed in `database/text_port_report.csv` (result
+`changed` or `missing`) for a person to check. POKéBLOCK text is skipped on purpose: that feature is being
+replaced. Re-run it after curating more text.
+
 When a row is in the game, set `game_status` to `DONE` in its source table (named in `table`) and rebuild.
 `game_port.csv` is generated from those tables. Net-new content (`NET_NEW` rows) is built after all
 hotswaps, following [`bible/NET_NEW_DESIGNS.md`](bible/NET_NEW_DESIGNS.md).

@@ -20,13 +20,13 @@ MagmaHideout_3F_1R_Text_Grunt9Defeat:
 	.string "I'm getting heat exhaustion…$"
 
 MagmaHideout_3F_1R_Text_Grunt9PostBattle:
-	.string "Do you think it's odd that we're wearing\n"
-	.string "hoods in this magma-filled volcano?$"
+	.string "Do you think it's odd that we wear\n"
+	.string "full armor in a lava-filled fortress?$"
 
 MagmaHideout_3F_1R_Text_Grunt16Intro:
-	.string "We joined so we can help our leader\n"
-	.string "achieve his fantastic vision.\p"
-	.string "I don't care if you're with TEAM AQUA\n"
+	.string "We serve LORD VADER and his vision\n"
+	.string "of order.\p"
+	.string "I don't care if you're with the CARTEL\n"
 	.string "or if you're just some kid passing by.\p"
 	.string "No one interferes with us and gets\n"
 	.string "away with it!$"
@@ -37,7 +37,7 @@ MagmaHideout_3F_1R_Text_Grunt16Defeat:
 
 MagmaHideout_3F_1R_Text_Grunt16PostBattle:
 	.string "Listen to me.\n"
-	.string "TEAM MAGMA is right!\p"
-	.string "Don't listen to TEAM AQUA.\n"
+	.string "The EMPIRE is right!\p"
+	.string "Don't listen to the CARTEL.\n"
 	.string "Don't believe their lies!$"
 

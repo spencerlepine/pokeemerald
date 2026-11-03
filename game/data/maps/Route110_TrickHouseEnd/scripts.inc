@@ -265,8 +265,8 @@ Route110_TrickHouseEnd_Text_AllNightToShoveBoulders:
 	.string "one, two, three places!$"
 
 Route110_TrickHouseEnd_Text_AllNightToMakeMechadolls:
-	.string "It took me all night to make MECHADOLLS\n"
-	.string "and another to think up the quiz…\p"
+	.string "It took me all night to build QUIZ\n"
+	.string "DROIDS and another to write the quiz…\p"
 	.string "You're almost my equal in greatness by\n"
 	.string "one, two places!$"
 
@@ -288,7 +288,7 @@ Route110_TrickHouseEnd_Text_FountainOfIdeasRunDry:
 	.string "Wh-what should I do?\n"
 	.string "My fountain of ideas for tricks has\l"
 	.string "run dry…\p"
-	.string "Perhaps it is time I toured the country\n"
+	.string "Perhaps it is time I toured the galaxy\n"
 	.string "on a quest to devise new tricks…$"
 
 Route110_TrickHouseEnd_Text_DefeatedMePreferWhichTent:
@@ -308,7 +308,7 @@ Route110_TrickHouseEnd_Text_DefeatedMePreferWhichTent:
 	.string "Which do you prefer?$"
 
 Route110_TrickHouseEnd_Text_NoRoomInPC:
-	.string "What? No room in your PC?\n"
+	.string "What? No room in your TERMINAL?\n"
 	.string "What am I to make of that?\p"
 	.string "I wish I could say that, but I am much\n"
 	.string "too kind and caring, so come back later!$"

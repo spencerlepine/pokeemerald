@@ -42,7 +42,7 @@ sText_AuroraTicketForYou:
 
 sText_AuroraTicketUseAtPort:
 	.string "It appears to be for use at the\n"
-	.string "LILYCOVE CITY port.\p"
+	.string "CLOUD CITY port.\p"
 	.string "Why not give it a try and see what\n"
 	.string "it is about?$"
 
@@ -53,5 +53,5 @@ sText_AuroraTicketThankYou:
 sText_AuroraTicketBagFull:
 	.string "Oh, I'm sorry, {PLAYER}.\n"
 	.string "Your BAG's KEY ITEMS POCKET is full.\p"
-	.string "Please store something on your PC,\n"
-	.string "then come back for this.$"
+	.string "Please store something in your\n"
+	.string "TERMINAL, then come back for this.$"

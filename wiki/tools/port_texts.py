@@ -47,7 +47,7 @@ BREAK = re.compile(r"(\\[nlp])")
 
 def name_swapped(text: str) -> str:
     for a, b in NAME_SWAPS:
-        text = re.sub(a, b, text)
+        text = re.sub(r"(?:(?<=\\[nlp])|(?<![\w]))" + a.replace("\\b", "", 1), b, text)
     return text
 
 
@@ -175,6 +175,8 @@ def main() -> int:
                 stats["done"] += 1
                 r["game_status"] = "DONE"
                 continue
+            if emer.endswith("$$") and cur.endswith("$") and not cur.endswith("$$"):
+                emer, sw = emer[:-1], sw[:-1] if sw.endswith("$$") else sw  # the text table doubled the $
             if cur not in (emer, name_swapped(emer)):
                 stats["changed"] += 1
                 report.append((tid, f, "changed", cur[:200]))

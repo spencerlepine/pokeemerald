@@ -17,9 +17,9 @@ MagmaHideout_1F_EventScript_Grunt2::
 	end
 
 MagmaHideout_1F_Text_Grunt1Intro:
-	.string "When TEAM MAGMA has roll call, we get\n"
-	.string "important guarding assignments in\l"
-	.string "the order that we line up.\p"
+	.string "When the EMPIRE has roll call, we get\n"
+	.string "important guard posts in the order\l"
+	.string "that we line up.\p"
 	.string "That's why I'm stuck off in this corner.\n"
 	.string "I'm always late to roll call!$"
 
@@ -33,8 +33,8 @@ MagmaHideout_1F_Text_Grunt1PostBattle:
 	.string "effort into things from now on…$"
 
 MagmaHideout_1F_Text_Grunt2Intro:
-	.string "Our leader told us to dig into\n"
-	.string "MT. CHIMNEY, so we dug and dug.\p"
+	.string "LORD VADER told us to dig into\n"
+	.string "MUSTAFAR PEAK, so we dug and dug.\p"
 	.string "And in the course of digging, we came\n"
 	.string "across something that blew our minds!\p"
 	.string "What did we find?\p"
