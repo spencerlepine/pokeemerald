@@ -40,6 +40,18 @@ is still Emerald's; anything edited by hand since is listed in `database/text_po
 `changed` or `missing`) for a person to check. POKéBLOCK text is skipped on purpose: that feature is being
 replaced. Re-run it after curating more text.
 
+**Names, Datapad entries and descriptions are ported** the same way (2026-11-03):
+- `python3 tools/port_names.py` swaps each renamed entity's display name in `../game` by its C constant
+  (creatures, items, moves, abilities, types, trainer classes, trainers, Grand Arena and showcase trainers,
+  decorations, region-map places) and writes each species' Datapad category and text. Constants never change.
+  Names longer than the game's buffer are left as Emerald's and listed in `database/name_port_report.csv`.
+- `python3 tools/port_terms.py` swaps the terms (`text_terms.csv`, plus BALL → POD) in item, move, ability,
+  fruit and decoration descriptions, which have no curated rows. Lines that would get too wide, or that the
+  automatic pass gets wrong, are written by hand in `mapping/descriptions.csv`. Left-alone strings go to
+  `database/term_port_report.csv`.
+- Images with Pokémon branding baked in are not touched by any tool: they are the `HUMAN-TODO` rows in
+  `mapping/branding.csv` (see Statuses).
+
 When a row is in the game, set `game_status` to `DONE` in its source table (named in `table`) and rebuild.
 `game_port.csv` is generated from those tables. Net-new content (`NET_NEW` rows) is built after all
 hotswaps, following [`bible/NET_NEW_DESIGNS.md`](bible/NET_NEW_DESIGNS.md).
