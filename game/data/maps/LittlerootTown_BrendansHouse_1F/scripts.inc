@@ -279,12 +279,12 @@ PlayersHouse_1F_Text_IsntItNiceInHere:
 	.string "Isn't it nice in here, too?$"
 
 PlayersHouse_1F_Text_MoversPokemonGoSetClock:
-	.string "The mover's POKéMON do all the work\n"
-	.string "of moving us in and cleaning up after.\l"
-	.string "This is so convenient!\p"
+	.string "The movers' SLOTHFURY crew does all\n"
+	.string "the work of moving us in and cleaning\l"
+	.string "up after. This is so convenient!\p"
 	.string "{PLAYER}, your room is upstairs.\n"
 	.string "Go check it out, dear!\p"
-	.string "DAD bought you a new clock to mark\n"
+	.string "DAD bought you a new chrono to mark\n"
 	.string "our move here.\l"
 	.string "Don't forget to set it!$"
 
@@ -302,7 +302,7 @@ PlayersHouse_1F_Text_OhComeQuickly:
 	.string "Quick! Come quickly!$"
 
 PlayersHouse_1F_Text_MaybeDadWillBeOn:
-	.string "MOM: Look! It's PETALBURG GYM!\n"
+	.string "MOM: Look! It's the MOS ENTHA ARENA!\n"
 	.string "Maybe DAD will be on!$"
 
 PlayersHouse_1F_Text_ItsOverWeMissedHim:
@@ -312,7 +312,7 @@ PlayersHouse_1F_Text_ItsOverWeMissedHim:
 
 PlayersHouse_1F_Text_GoIntroduceYourselfNextDoor:
 	.string "Oh, yes.\n"
-	.string "One of DAD's friends lives in town.\p"
+	.string "One of DAD's friends lives here.\p"
 	.string "PROF. KORR is his name.\p"
 	.string "He lives right next door, so you should\n"
 	.string "go over and introduce yourself.$"
@@ -333,7 +333,7 @@ PlayersHouse_1F_Text_TakeCareHoney:
 	.string "MOM: Take care, honey!$"
 
 PlayersHouse_1F_Text_GotDadsBadgeHeresSomethingFromMom:
-	.string "MOM: Oh? Did DAD give you that BADGE?\p"
+	.string "MOM: Oh? Did DAD give you that SHARD?\p"
 	.string "Then here's something from your MOM!$"
 
 PlayersHouse_1F_Text_DontPushYourselfTooHard:
@@ -343,7 +343,8 @@ PlayersHouse_1F_Text_DontPushYourselfTooHard:
 
 PlayersHouse_1F_Text_IsThatAPokenav:
 	.string "MOM: What is that, honey? A StarNAV?\n"
-	.string "Someone from DEVON gave it to you?\p"
+	.string "Someone from HOUSE ORGANA gave it\l"
+	.string "to you?\p"
 	.string "Well, honey, how about registering\n"
 	.string "your mom?\p"
 	.string "… … …$"
@@ -353,18 +354,19 @@ PlayersHouse_1F_Text_RegisteredMom:
 	.string "in the StarNAV.$"
 
 PlayersHouse_1F_Text_Vigoroth1:
-	.string "Fugiiiiih!$"
+	.string "Hrooonk!$"
 
 PlayersHouse_1F_Text_Vigoroth2:
-	.string "Huggoh, uggo uggo…$"
+	.string "Hoo hoo, hoooh…$"
 
 PlayersHouse_1F_Text_ReportFromPetalburgGym:
 	.string "INTERVIEWER: …We brought you this\n"
-	.string "report from in front of PETALBURG GYM.$"
+	.string "report from outside the MOS ENTHA\l"
+	.string "ARENA.$"
 
 PlayersHouse_1F_Text_TheresAMovieOnTV:
-	.string "There is a movie on TV.\p"
-	.string "Two men are dancing on a big piano\n"
+	.string "There's a holodrama on the HoloNet.\p"
+	.string "Two droids are dancing on a giant\n"
 	.string "keyboard.\p"
 	.string "Better get going!$"
 
@@ -384,23 +386,25 @@ PlayersHouse_1F_Text_TicketFromBrineyCameForYou:
 	.string "That's the impression I get.\n"
 	.string "But your old man hasn't given up yet!\p"
 	.string "Oh, yes, I have something for you.\n"
-	.string "This came to you from someone named\l"
-	.string "MR. BRINEY.$"
+	.string "This came for you from someone named\l"
+	.string "HAN SOLO.$"
 
 PlayersHouse_1F_Text_PortsInSlateportLilycove:
-	.string "DAD: Hm, a TICKET for a ferry?\p"
-	.string "If I recall, there are ferry ports in\n"
-	.string "SLATEPORT and LILYCOVE.$"
+	.string "DAD: Hm, a STARLINER PASS?\p"
+	.string "If I recall, starliners leave from\n"
+	.string "MOS EISLEY and CLOUD CITY.$"
 
 PlayersHouse_1F_Text_BetterGetBackToGym:
-	.string "I'd better get back to PETALBURG GYM.\p"
+	.string "I'd better get back to the MOS ENTHA\n"
+	.string "ARENA.\p"
 	.string "MOM, thanks for looking after the house\n"
 	.string "while I'm away.$"
 
 PlayersHouse_1F_Text_DadShouldStayLonger:
 	.string "MOM: That DAD of yours…\p"
 	.string "He comes home for the first time in a\n"
-	.string "while, but all he talks about is POKéMON.\p"
+	.string "while, but all he talks about is\l"
+	.string "COMPANIONS.\p"
 	.string "He should relax and stay a little longer.$"
 
 PlayersHouse_1F_Text_IsThatABreakingStory:
@@ -408,20 +412,20 @@ PlayersHouse_1F_Text_IsThatABreakingStory:
 
 PlayersHouse_1F_Text_LatiEmergencyNewsFlash:
 	.string "We bring you this emergency\n"
-	.string "news flash!\p"
-	.string "In various HOENN locales, there have\n"
+	.string "HoloNet bulletin!\p"
+	.string "Across the OUTER RIM, there have\n"
 	.string "been reports of a BZZT…colored\l"
-	.string "POKéMON in flight.\p"
-	.string "The identity of this POKéMON is\n"
+	.string "COMPANION streaking across the sky.\p"
+	.string "The identity of this COMPANION is\n"
 	.string "currently unknown.\p"
 	.string "We now return you to the regular\n"
-	.string "movie program.$"
+	.string "holodrama.$"
 
 PlayersHouse_1F_Text_WhatColorDidTheySay:
 	.string "MOM: {PLAYER}, did you catch that?\p"
 	.string "What color did the announcer say\n"
-	.string "that POKéMON was?$"
+	.string "that COMPANION was?$"
 
 PlayersHouse_1F_Text_StillUnknownPokemon:
 	.string "MOM: Well, isn't that something!\n"
-	.string "There are still unknown POKéMON.$"
+	.string "There are still unknown COMPANIONS.$"

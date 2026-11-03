@@ -28,4 +28,4 @@ gText_NoRoomLeftForAnother::
 
 gText_TheDecorWasTransferredToThePC::
 	.string "The {STR_VAR_2} was transferred\n"
-	.string "to the PC.$"
+	.string "to the TERMINAL.$"

@@ -257,7 +257,7 @@ Route101_Text_PleaseHelp:
 	.string "Hello! You over there!\n"
 	.string "Please! Help!\p"
 	.string "In my BAG!\n"
-	.string "There's a POKé BALL!$"
+	.string "There's a CAPTURE POD!$"
 
 Route101_Text_DontLeaveMe:
 	.string "Wh-Where are you going?!\n"
@@ -265,28 +265,28 @@ Route101_Text_DontLeaveMe:
 
 Route101_Text_YouSavedMe:
 	.string "PROF. KORR: Whew…\p"
-	.string "I was in the tall grass studying wild\n"
-	.string "POKéMON when I was jumped.\p"
+	.string "I was out in the scrub studying wild\n"
+	.string "COMPANIONS when I was jumped.\p"
 	.string "You saved me.\n"
 	.string "Thanks a lot!\p"
 	.string "Oh?\p"
 	.string "Hi, you're {PLAYER}{KUN}!\p"
 	.string "This is not the place to chat, so come\n"
-	.string "by my POKéMON LAB later, okay?$"
+	.string "by my COMPANION LAB later, okay?$"
 
 Route101_Text_TakeTiredPokemonToPokeCenter:
-	.string "If POKéMON get tired, take them to\n"
-	.string "a POKéMON CENTER.\p"
-	.string "There's a POKéMON CENTER in OLDALE\n"
-	.string "TOWN right close by.$"
+	.string "If COMPANIONS get tired, take them to\n"
+	.string "a BACTA CENTER.\p"
+	.string "There's a BACTA CENTER in TOSCHE\n"
+	.string "STATION right close by.$"
 
 Route101_Text_WildPokemonInTallGrass:
-	.string "Wild POKéMON will jump out at you in\n"
-	.string "tall grass.\p"
-	.string "If you want to catch POKéMON, you have\n"
-	.string "to go into the tall grass and search.$"
+	.string "Wild COMPANIONS will jump out at you in\n"
+	.string "the tall scrub.\p"
+	.string "If you want to catch COMPANIONS, you\n"
+	.string "have to go into the scrub and search.$"
 
 Route101_Text_RouteSign:
 	.string "ROUTE 101\n"
-	.string "{UP_ARROW} OLDALE TOWN$"
+	.string "{UP_ARROW} TOSCHE STATION$"
 
