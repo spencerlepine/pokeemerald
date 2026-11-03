@@ -2,7 +2,7 @@
 
 **Status:** READY (owner, 2026-11-01: "ready to be used"). The tool is pxl (vendored from crsolver/claude-pxl, MIT) plus GBA output; intro scene 2
 (the bike ride) is in the game as KAEL/MIRA's speeder ride on Tatooine with Tusken raiders (round 3, APPROVED and
-shipped 2026-11-01; review files in `scenes/intro_bike/review/`). Intro scene 1 (`scenes/intro_drops`: canyon drip at dawn,
+shipped 2026-11-01; review files in `scenes/intro_bike/review/`). Intro scene 1 (`scenes/intro_drops`: dry canyon at dawn, round 3 drops the water and plants,
 pan up to the twin suns, ship flyover, no logo) is in the game, round 1 APPROVED and shipped 2026-11-01 (`scenes/intro_drops/review/`).
 Intro scene 3 (`scenes/intro_legends`) is in the game: capture pod, sand and sea backgrounds shipped 2026-11-01. The three
 titans (GREATKRAYT, SANDO, EXOGORTH) are PLACEHOLDERS, parked as a follow-up task: see

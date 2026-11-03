@@ -27,3 +27,16 @@ from a farm on the rim, and B, a desert succulent on the rim beside the spring. 
   leaf tooth at (196, 50).
 - The GAME FREAK logo is back (owner: "restore the game freak logo during the transition, we should just keep it").
 - `round2_succulent_rom.gif` (frames 250-1300 every 3rd, real speed) and `round2_succulent_sheet.png`.
+
+## Round 3 (2026-11-03): a dry canyon, no water and no plants
+
+Owner: Tatooine is rocky and sandy, with no water or plants here. Keep the ground and the backdrop, then the
+pan to the skyline, and keep the music exactly as it is.
+
+- BG1: the pool and its wet basin are gone. The canyon floor is now a dry sandy wash in the shade: talus at the
+  foot of the walls, wind ripples, a few half-sunk boulders and grit. Bank 3 entries 11-13 (the water) are sand.
+- BG0: both succulents and the drip spine are gone; the rock ledges at the top corners and the dark floor rim
+  stay. BG0 now shares bank 3 with BG1 (bank 4 is unused).
+- `src/intro.c`: the big drop, the two small drops (and their ripples) and the sparkles are no longer created.
+  The GAME FREAK logo, every timer and `MUS_INTRO` are unchanged, so the pan starts on the same beat.
+- `round3_rom.gif` (frames 250-1300 every 3rd, real speed) and `round3_sheet.png`.

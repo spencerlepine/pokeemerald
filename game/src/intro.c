@@ -1116,7 +1116,6 @@ void CB2_InitCopyrightScreenAfterTitleScreen(void)
     SetUpCopyrightScreen();
 }
 
-#define sBigDropSpriteId data[0]
 
 static void Task_Scene1_Load(u8 taskId)
 {
@@ -1155,7 +1154,7 @@ static void Task_Scene1_Load(u8 taskId)
     CpuCopy16(&gPlttBufferUnfaded[OBJ_PLTT_ID(0)], &gPlttBufferUnfaded[OBJ_PLTT_ID(10) + 5], PLTT_SIZEOF(16 - 5));
     CpuCopy16(&gPlttBufferUnfaded[OBJ_PLTT_ID(0)], &gPlttBufferUnfaded[OBJ_PLTT_ID( 9) + 6], PLTT_SIZEOF(16 - 6));
     CreateGameFreakLogoSprites(DISPLAY_WIDTH / 2, DISPLAY_HEIGHT / 2, 0);
-    gTasks[taskId].sBigDropSpriteId = CreateWaterDrop(236, -14, 0x200, 1, 0x78, FALSE);
+    // No water drops on Tatooine: the big drop, the two small drops and the sparkles are not created.
     gTasks[taskId].func = Task_Scene1_FadeIn;
 }
 
@@ -1180,26 +1179,13 @@ static void Task_Scene1_FadeIn(u8 taskId)
 
 static void Task_Scene1_WaterDrops(u8 taskId)
 {
-    if (gIntroFrameCounter == TIMER_BIG_DROP_START)
-        gSprites[gTasks[taskId].sBigDropSpriteId].sState = 1;
-
+    // Only the GAME FREAK logo is left of Emerald's drop sequence; the timers are Emerald's, so the
+    // pan still starts on the same beat of MUS_INTRO.
     if (gIntroFrameCounter == TIMER_LOGO_APPEAR)
         CreateTask(Task_BlendLogoIn, 0);
 
-    if (gIntroFrameCounter == TIMER_BIG_DROP_FALLS)
-        gSprites[gTasks[taskId].sBigDropSpriteId].sState = 2;
-
     if (gIntroFrameCounter == TIMER_LOGO_BLEND_OUT)
         CreateTask(Task_BlendLogoOut, 0);
-
-    if (gIntroFrameCounter == TIMER_SMALL_DROP_1)
-        CreateWaterDrop(48, 0, 0x400, 5, 0x70, TRUE);
-
-    if (gIntroFrameCounter == TIMER_SMALL_DROP_2)
-        CreateWaterDrop(196, 10, 0x400, 9, 0x80, TRUE);
-
-    if (gIntroFrameCounter == TIMER_SPARKLES)
-        CreateTask(Task_CreateSparkles, 0);
 
     if (gIntroFrameCounter > TIMER_SPARKLES)
     {
