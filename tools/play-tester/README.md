@@ -27,6 +27,15 @@ run end to end on Ubuntu 24.04 (4 cores, no GPU, no display) on 2026-10-31.
 
 Screenshots of every row are in `screenshots/`.
 
+## Aurebesh check (modern build, no MCP server)
+
+`scripts/aurebesh-check.sh` drives `make modern`'s ROM headless with one Lua script
+(`lua/examples/aurebesh-check.lua`): `boot` once, then `sign_outer`, `sign_inner`, `regirock`, `regice`,
+`registeel`. Screenshots land in `out/aurebesh/`. Only mGBA is needed (setup step 2). Notes from 2026-11-03:
+the intro crawl asks "skip?" with NO selected, so mashing A never leaves it; teleporting before the truck
+cutscene ends leaves the player invisible; and never `pkill -f mgba-qt` from a shell whose command line
+holds that text (it kills the shell): use `pkill -x mgba-qt`.
+
 ## Quick start (Ubuntu)
 
 ```bash

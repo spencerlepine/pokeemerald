@@ -65,7 +65,7 @@ graphics/battle_transitions/kyogre.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Lege
 graphics/battle_transitions/pokeball.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Poké Ball wipe → capture pod.,,,,,,Replace by hand; no generator tool.
 graphics/battle_transitions/pokeball_trail.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Poké Ball wipe → capture pod.,,,,,,Replace by hand; no generator tool.
 graphics/battle_transitions/rayquaza.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Legendary silhouette wipe → GREATKRAYT / SANDO / EXOGORTH.,,,,,,Replace by hand; no generator tool.
-graphics/battle_transitions/regis.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Regi Braille pattern wipe → Aurebesh glyphs (Warden vaults).,,,,,,Replace by hand; no generator tool.
+graphics/battle_transitions/regis.png,HOTSWAP,DRAFT,ART_READY,,Regi Braille pattern wipe → Aurebesh glyphs (Warden vaults).,,,,,,"Shipped 2026-11-03 by tools/vfx-generator/transitions/aurebesh_wipes.py with regice/registeel/regirock.bin: ICE, DURA and ROCK in big Aurebesh letters. Waiting for owner review."
 graphics/battle_transitions/shrinking_box.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/battle_transitions/team_aqua.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Team Aqua logo wipe → Hutt Cartel crest.,,,,,,Replace by hand; no generator tool.
 graphics/battle_transitions/team_magma.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Team Magma logo wipe → Imperial crest.,,,,,,Replace by hand; no generator tool.

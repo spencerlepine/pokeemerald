@@ -30,6 +30,15 @@ python -m vfx story romtest force_push --no-build    # scratch ROM, film the mov
 python -m vfx story install force_push --no-build    # after owner approval: patch ../../game
 ```
 
+## Warden wipes (`transitions/aurebesh_wipes.py`)
+
+The three warden battle wipes (Emerald's Regi Braille dot patterns) spell each warden's element in big
+Aurebesh letters, ICE / DURA / ROCK, from the approved letters in `../glyph-maker/aurebesh.py`.
+`python3 transitions/aurebesh_wipes.py preview` writes `output/aurebesh_wipes/before_after.png`; `install`
+writes `regis.png`, `regice/registeel/regirock.bin` and the tile count in `src/battle_transition.c`.
+Palettes and code are Emerald's. Shipped 2026-11-03, checked in the ROM with
+`../play-tester/scripts/aurebesh-check.sh regirock` (and `regice`, `registeel`).
+
 ## Storyboards (move effects)
 
 A storyboard is `art/moves/<name>.yaml`. The four beats and the rules (arena reacts, bodies react, every new

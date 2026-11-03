@@ -69,9 +69,9 @@ vfx:B_TRANSITION_PHOEBE,KEEP,DRAFT,KEEP_ANIM,Keep the wipe; it draws no Pokemon-
 vfx:B_TRANSITION_POKEBALLS_TRAIL,HOTSWAP,DRAFT,PENDING_ART,Trail of capture pods across the screen instead of Poke Balls.,,,,
 vfx:B_TRANSITION_RAYQUAZA,HOTSWAP,DRAFT,PENDING_ART,EXOGORTH coil wipe (was Rayquaza's pattern).,,,,
 vfx:B_TRANSITION_RECTANGULAR_SPIRAL,KEEP,DRAFT,KEEP_ANIM,Keep the wipe; it draws no Pokemon-specific shape.,,,,
-vfx:B_TRANSITION_REGICE,HOTSWAP,DRAFT,PENDING_ART,Warden vault wipe: swap the Braille dot pattern for Aurebesh glyphs.,,,,
-vfx:B_TRANSITION_REGIROCK,HOTSWAP,DRAFT,PENDING_ART,Warden vault wipe: Aurebesh glyphs instead of Braille.,,,,
-vfx:B_TRANSITION_REGISTEEL,HOTSWAP,DRAFT,PENDING_ART,Warden vault wipe: Aurebesh glyphs instead of Braille.,,,,
+vfx:B_TRANSITION_REGICE,HOTSWAP,DRAFT,ART_READY,Warden vault wipe: swap the Braille dot pattern for Aurebesh glyphs.,,,,"Shipped 2026-11-03 by tools/vfx-generator/transitions/aurebesh_wipes.py: the element in big Aurebesh letters (ICE) in place of the dot pattern; shared sheet regis.png, palettes and code unchanged. Waiting for owner review."
+vfx:B_TRANSITION_REGIROCK,HOTSWAP,DRAFT,ART_READY,Warden vault wipe: Aurebesh glyphs instead of Braille.,,,,"Shipped 2026-11-03 by tools/vfx-generator/transitions/aurebesh_wipes.py: the element in big Aurebesh letters (ROCK) in place of the dot pattern; shared sheet regis.png, palettes and code unchanged. Waiting for owner review."
+vfx:B_TRANSITION_REGISTEEL,HOTSWAP,DRAFT,ART_READY,Warden vault wipe: Aurebesh glyphs instead of Braille.,,,,"Shipped 2026-11-03 by tools/vfx-generator/transitions/aurebesh_wipes.py: the element in big Aurebesh letters (DURA) in place of the dot pattern; shared sheet regis.png, palettes and code unchanged. Waiting for owner review."
 vfx:B_TRANSITION_RIPPLE,KEEP,DRAFT,KEEP_ANIM,Keep the wipe; it draws no Pokemon-specific shape.,,,,
 vfx:B_TRANSITION_SHRED_SPLIT,KEEP,DRAFT,KEEP_ANIM,Keep the wipe; it draws no Pokemon-specific shape.,,,,
 vfx:B_TRANSITION_SHUFFLE,KEEP,DRAFT,KEEP_ANIM,Keep the wipe; it draws no Pokemon-specific shape.,,,,
@@ -144,7 +144,7 @@ vfx:FLDEFF_USE_SECRET_POWER_TREE,KEEP,DRAFT,KEEP_ANIM,Keep the animation; its sp
 vfx:FLDEFF_USE_STRENGTH,KEEP,DRAFT,KEEP_ANIM,Keep the animation; its sprites are redrawn through pending_art (field_effects).,,,,
 vfx:FLDEFF_USE_SURF,KEEP,DRAFT,KEEP_ANIM,Keep the animation; its sprites are redrawn through pending_art (field_effects).,,,,
 vfx:FLDEFF_USE_TELEPORT,KEEP,DRAFT,KEEP_ANIM,Keep the animation; its sprites are redrawn through pending_art (field_effects).,,,,
-vfx:FLDEFF_USE_TOMB_PUZZLE_EFFECT,HOTSWAP,DRAFT,PENDING_ART,Aurebesh vault puzzle opens (was Braille).,,,,
+vfx:FLDEFF_USE_TOMB_PUZZLE_EFFECT,HOTSWAP,DRAFT,KEEP_ANIM,Aurebesh vault puzzle opens (was Braille).,,,,"The effect itself draws no Braille: it is the field-move pop-out, then the tomb door metatiles swap in. The Braille it answers is the sign font (graphics/fonts/braille.png, Aurebesh since 2026-11-03). The dotted wall plaques are tiles in data/tilesets/secondary/cave (tile-generator, art:kamino:aurebesh-vault)."
 vfx:FLDEFF_USE_WATERFALL,KEEP,DRAFT,KEEP_ANIM,Keep the animation; its sprites are redrawn through pending_art (field_effects).,,,,
 vfx:FLDEFF_WATER_SURFACING,KEEP,DRAFT,KEEP_ANIM,Keep the animation; its sprites are redrawn through pending_art (field_effects).,,,,
 vfx:WEATHER_DOWNPOUR,KEEP,DRAFT,KEEP_ANIM,Keep the weather effect; restyle its sprites per planet through pending_art (weather).,,,,

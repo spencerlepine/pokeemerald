@@ -96,7 +96,7 @@ Overworld and transitions:
 | `team_magma.png` | Imperial crest |
 | `team_aqua.png` | Hutt Cartel crest |
 | `groudon.png` / `kyogre.png` / `rayquaza.png` | GREATKRAYT / SANDO / EXOGORTH silhouettes |
-| `regis.png` | Aurebesh glyphs instead of Braille dots |
+| ~~`regis.png`~~ | **Shipped 2026-11-03** (`transitions/aurebesh_wipes.py`): ICE / DURA / ROCK in big Aurebesh letters instead of Braille dots, checked in the ROM |
 | `frontier_logo.png`, `frontier_logo_center.png`, `frontier_logo_circles.png` | Grand Arena logo (post-game, lowest priority here) |
 
 **Field effects (9).**
@@ -175,8 +175,9 @@ Tatooine's Dune Sea. Recolor per planet only if a map looks off.
 3. **Droid slicing has no VFX row.** `net:droid-slicing` (NET_NEW_DESIGNS.md) calls for a SLICER SPIKE throw
    animation, but nothing in `vfx.csv` tracks it. Placeholder today is the pod throw with a palette swap.
    Likely a 14th NEW piece (spike + data-spark), shared with `sprite-icon-generator` for the item.
-4. **Aurebesh tomb puzzle has no field-effect sheet.** `vfx:FLDEFF_USE_TOMB_PUZZLE_EFFECT` changes Braille to
-   Aurebesh, but that art lives in the Braille font sheet (F2) and the tomb tiles, not here.
+4. ~~**Aurebesh tomb puzzle has no field-effect sheet.**~~ Settled 2026-11-03: the effect draws no Braille
+   (`KEEP_ANIM`). The signs' font is Aurebesh (`../glyph-maker/aurebesh.py`); the dotted wall plaques are cave
+   tileset tiles, left to `tile-generator`.
 5. **Psychic-themed moves were renamed to Force moves but kept the pink psychic look.** 17 of the 22 renamed
    moves reuse vanilla art (see `wiki/mapping/moves.csv`); the `psychic.png` recolor in section 4 covers most
    of them at once.
