@@ -192,8 +192,8 @@ The current pass (all `DRAFT`, waiting for the owner's review):
 
 ## Open decisions
 
-- **Optional extras**, not tracked as rows: more invented creature names swapped for canon ones, and the ideas in
-  `bible/STORY.md` section 8 that have no row yet (light / dark side evolution branches, blizzard weather).
+- **Optional extras**, not tracked as rows: more invented creature names swapped for canon ones, and light / dark
+  side evolution branches (`bible/STORY.md` section 8). Blizzard weather is now a TODO row (`net:weather-blizzard`).
 
 ## Rebuilding
 

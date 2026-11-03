@@ -513,6 +513,7 @@ const struct TrainerMoney gTrainerMoneyTable[] =
     {TRAINER_CLASS_BATTLE_GIRL, 6},
     {TRAINER_CLASS_PARASOL_LADY, 10},
     {TRAINER_CLASS_SWIMMER_F, 2},
+    {TRAINER_CLASS_SKIFF_RIDER, 2}, // the swimmers' prize money
     {TRAINER_CLASS_PICNICKER, 4},
     {TRAINER_CLASS_TWINS, 3},
     {TRAINER_CLASS_SAILOR, 8},

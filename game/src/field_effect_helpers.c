@@ -10,6 +10,7 @@
 #include "sound.h"
 #include "sprite.h"
 #include "trig.h"
+#include "wild_encounter.h"
 #include "constants/field_effects.h"
 #include "constants/songs.h"
 
@@ -168,6 +169,7 @@ static void UpdateObjectReflectionSprite(struct Sprite *reflectionSprite)
 #undef sIsStillReflection
 
 extern const struct SpriteTemplate *const gFieldEffectObjectTemplatePointers[];
+extern const struct SpriteTemplate gFieldEffectObjectTemplate_SandSkiff;
 
 #define sPrevX data[0]
 #define sPrevY data[1]
@@ -1001,7 +1003,9 @@ u32 FldEff_SurfBlob(void)
     u8 spriteId;
 
     SetSpritePosToOffsetMapCoords((s16 *)&gFieldEffectArguments[0], (s16 *)&gFieldEffectArguments[1], 8, 8);
-    spriteId = CreateSpriteAtEnd(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_SURF_BLOB], gFieldEffectArguments[0], gFieldEffectArguments[1], 150);
+    // On the Dune Sea the player rides a sand skiff instead of the surf blob
+    spriteId = CreateSpriteAtEnd(IsCurrentMapDuneSea() ? &gFieldEffectObjectTemplate_SandSkiff : gFieldEffectObjectTemplatePointers[FLDEFFOBJ_SURF_BLOB],
+                                 gFieldEffectArguments[0], gFieldEffectArguments[1], 150);
     if (spriteId != MAX_SPRITES)
     {
         struct Sprite *sprite = &gSprites[spriteId];

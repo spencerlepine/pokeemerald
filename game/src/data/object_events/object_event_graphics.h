@@ -285,6 +285,8 @@ const u32 gObjectEventPic_LansatBerryTree[] = INCGFX_U32("graphics/object_events
 const u32 gObjectEventPic_DurinBerryTree[] = INCGFX_U32("graphics/object_events/pics/berry_trees/durin.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u32 gObjectEventPic_TamatoBerryTree[] = INCGFX_U32("graphics/object_events/pics/berry_trees/tamato.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u32 gFieldEffectObjectPic_SurfBlob[] = INCGFX_U32("graphics/field_effects/pics/surf_blob.png", ".4bpp", "-mwidth 4 -mheight 4");
+// Star Wars net-new: the sand skiff under the player on the Dune Sea (placeholder: the surf blob in the player's browns)
+const u32 gFieldEffectObjectPic_SandSkiff[] = INCGFX_U32("graphics/field_effects/pics/sand_skiff.png", ".4bpp", "-mwidth 4 -mheight 4");
 const u32 gObjectEventPic_QuintyPlump[] = INCGFX_U32("graphics/object_events/pics/people/quinty_plump.png", ".4bpp", "-mwidth 4 -mheight 4");
 const u16 gObjectEventPal_QuintyPlump[] = INCGFX_U16("graphics/object_events/palettes/quinty_plump.pal", ".gbapal");
 const u16 gObjectEventPal_QuintyPlumpReflection[] = INCGFX_U16("graphics/object_events/palettes/quinty_plump_reflection.pal", ".gbapal");

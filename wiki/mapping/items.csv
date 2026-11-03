@@ -215,3 +215,4 @@ item:apicot-berry,APIKA FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Hoth.
 item:lansat-berry,LANSA FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Ilum. Same effect as the Emerald berry.,
 item:starf-berry,NOVA FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Sullust (grows where meteorites land). Same effect as the Emerald berry.,
 item:enigma-berry,WHILLS FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from unknown (event fruit). Same effect as the Emerald berry.,
+item:15b,HM09,HOTSWAP,DONE,PENDING_ART,original,Teaches SAND SKIM: a companion pulls a sand skiff across the Dune Sea.,Unused slot ITEM_15B is now ITEM_HM09 (HM09 SAND SKIM) in ../game since 2026-11-03. The design row is net:hm09-sand-skim.

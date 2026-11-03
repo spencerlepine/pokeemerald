@@ -182,14 +182,23 @@ background that Emerald already has. Dune Sea tiles: the `sw-tatooine` `dune-sea
 - Field use: `FIELD_MOVE_SAND_SKIM` in the party menu (needs badge 5). The Dune Sea is the map list in
   `src/data/dune_sea_maps.h` (`IsCurrentMapDuneSea()`): there SAND SKIM crosses, SURF does not ("You can't SURF
   here"), facing the sand offers `EventScript_UseSandSkim` (`data/scripts/surf.inc`, texts in `data/text/surf.inc`),
-  and the battle background is sand. Crossing uses SURF's field effect and sprite until the skiff is drawn.
+  and the battle background is sand. Facing the sand without SAND SKIM shows "Deep, soft sand rolls on like a
+  sea. A COMPANION may be able to cross it." (`EventScript_CantSandSkim`).
+- The skiff: on Dune Sea maps `FldEff_SurfBlob` uses `gFieldEffectObjectTemplate_SandSkiff`, a placeholder
+  (`graphics/field_effects/pics/sand_skiff.png`, the surf blob in sand colours with a plank seam; row
+  `net:vfx-sand-skiff`). The player still uses the SURF sprite.
+- `TRAINER_CLASS_SKIFF_RIDER` (0x42, the first unused class slot) for POLESH and ILI, 2 money per level like the
+  swimmers. Their pics and overworld sprites are still the swimmer ones.
 - HM09 can't be forgotten (it is an HM), and the last companion that knows it can't be released.
 - OWEN gives HM09 right after HM03, in the same script and under the same flag.
 - Tested in the emulator: the rod and SURF are refused on Route 103, SAND SKIM prompts and crosses, a wild
-  encounter on the Dune Sea uses the sand background, OWEN hands over both HMs, SURF still works in Kachirho.
+  encounter on the Dune Sea uses the sand background, OWEN hands over both HMs, SURF still works in Kachirho,
+  the no-skim line shows, the skiff shows under the player, and "SKIFF RIDER POLESH" battles.
 
-Still to do: the `SKIFF RIDER` class for POLESH and ILI; `MB_DUNE_SEA` (an unused metatile behaviour) once the
-`dune-sea` tiles exist, which can then replace the map list; the "no SAND SKIM" field line; the skiff sprite.
+Still to do: `MB_DUNE_SEA` (an unused metatile behaviour) once the `dune-sea` tiles exist, which can then replace
+the map list; the final skiff art and a skimming player sprite; SKIFF RIDER pics and overworld sprites.
+Crossing a map connection between Dune Sea and real water while surfing keeps the old blob until the next mount
+(cosmetic only).
 
 ## New moves (`net:move-force-choke`, `net:move-blaster-shot`, `net:move-saber-slash`)
 

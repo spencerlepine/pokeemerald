@@ -218,6 +218,23 @@ const struct SpriteTemplate gFieldEffectObjectTemplate_SurfBlob = {
     .callback = UpdateSurfBlobFieldEffect,
 };
 
+// Star Wars net-new: the sand skiff (SAND SKIM on the Dune Sea). Same frames and animation as the surf blob.
+static const struct SpriteFrameImage sPicTable_SandSkiff[] = {
+    overworld_frame(gFieldEffectObjectPic_SandSkiff, 4, 4, 0),
+    overworld_frame(gFieldEffectObjectPic_SandSkiff, 4, 4, 1),
+    overworld_frame(gFieldEffectObjectPic_SandSkiff, 4, 4, 2),
+};
+
+const struct SpriteTemplate gFieldEffectObjectTemplate_SandSkiff = {
+    .tileTag = TAG_NONE,
+    .paletteTag = TAG_NONE,
+    .oam = &gObjectEventBaseOam_32x32,
+    .anims = sAnimTable_SurfBlob,
+    .images = sPicTable_SandSkiff,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = UpdateSurfBlobFieldEffect,
+};
+
 static const struct SpriteFrameImage sPicTable_Arrow[] = {
     overworld_frame(gFieldEffectObjectPic_Arrow, 2, 2, 0),
     overworld_frame(gFieldEffectObjectPic_Arrow, 2, 2, 1),

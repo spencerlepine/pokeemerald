@@ -450,6 +450,10 @@ static const u8 *GetInteractedWaterScript(struct MapPosition *unused1, u8 metati
     if (FlagGet(FLAG_BADGE05_GET) == TRUE && PartyHasMonWithSurf() == TRUE && IsPlayerFacingSurfableFishableWater() == TRUE)
         return IsCurrentMapDuneSea() ? EventScript_UseSandSkim : EventScript_UseSurf;
 
+    // Facing the Dune Sea without SAND SKIM (or before the fifth badge)
+    if (IsCurrentMapDuneSea() && !TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING) && IsPlayerFacingSurfableFishableWater() == TRUE)
+        return EventScript_CantSandSkim;
+
     if (MetatileBehavior_IsWaterfall(metatileBehavior) == TRUE)
     {
         if (FlagGet(FLAG_BADGE08_GET) == TRUE && IsPlayerSurfingNorth() == TRUE)

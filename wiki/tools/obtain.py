@@ -413,10 +413,10 @@ write(WIKI / "database" / "npcs.csv", npcs, ["npc_id", "map_id", "sw_map", "plan
 # checks
 missing = [r for r in rows if r["kind"] in ("gift_item", "gift_companion", "gift_egg", "gift_decoration", "trade") and not r["npc_id"]]
 print(f"{len(missing)} gifts with no NPC found (a sign, a step trigger or a shared script; add the script to mapping/npcs.csv)")
-chars = {r["emerald_id"] for r in read(WIKI / "mapping" / "characters.csv")}
+chars = {r["emerald_id"] for r in read(WIKI / "mapping" / "characters.csv")} | {k for k in net_names if k.startswith("net:character-")}
 for k, h in npc_hand.items():
     if h["character_id"] and h["character_id"] not in chars:
-        print("  PROBLEM: mapping/npcs.csv names a character that is not in mapping/characters.csv:", k, h["character_id"])
+        print("  PROBLEM: mapping/npcs.csv names a character that is not in mapping/characters.csv or a net:character-* row:", k, h["character_id"])
 bad = [k for k in npc_hand if k not in npc_by_id]
 for k in bad:
     print("  PROBLEM: mapping/npcs.csv names an NPC that is not in the game:", k)

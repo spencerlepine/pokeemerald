@@ -28,3 +28,7 @@ EventScript_ReleaseUseSandSkim::
 	releaseall
 EventScript_EndUseSandSkim::
 	end
+
+EventScript_CantSandSkim::
+	msgbox gText_DuneSeaCantSkim, MSGBOX_SIGN
+	end

@@ -11,3 +11,7 @@ gText_WantToUseSandSkim::
 
 gText_PlayerUsedSandSkim::
 	.string "{STR_VAR_1} used SAND SKIM!$"
+
+gText_DuneSeaCantSkim::
+	.string "Deep, soft sand rolls on like a sea.\n"
+	.string "A COMPANION may be able to cross it.$"
