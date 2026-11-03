@@ -2832,6 +2832,14 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboStarterId = 0,
         .comboMoves = {COMBO_STARTER_CALM_MIND},
     },
+
+    [MOVE_SAND_SKIM] =
+    {
+        .effect = CONTEST_EFFECT_AFFECTED_BY_PREV_APPEAL,
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .comboStarterId = 0,
+        .comboMoves = {0},
+    },
 };
 
 const struct ContestEffect gContestEffects[] =

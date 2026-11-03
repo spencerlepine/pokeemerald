@@ -12,3 +12,19 @@ EventScript_ReleaseUseSurf::
 	releaseall
 EventScript_EndUseSurf::
 	end
+
+@ Star Wars net-new: SAND SKIM on the Dune Sea (Tatooine). Same field effect as SURF.
+EventScript_UseSandSkim::
+	checkpartymove MOVE_SAND_SKIM
+	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_EndUseSandSkim
+	bufferpartymonnick STR_VAR_1, VAR_RESULT
+	setfieldeffectargument 0, VAR_RESULT
+	lockall
+	msgbox gText_WantToUseSandSkim, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, EventScript_ReleaseUseSandSkim
+	msgbox gText_PlayerUsedSandSkim, MSGBOX_DEFAULT
+	dofieldeffect FLDEFF_USE_SURF
+EventScript_ReleaseUseSandSkim::
+	releaseall
+EventScript_EndUseSandSkim::
+	end

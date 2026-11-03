@@ -4,3 +4,10 @@ gText_WantToUseSurf::
 
 gText_PlayerUsedSurf::
 	.string "{STR_VAR_1} used SURF!$"
+
+gText_WantToUseSandSkim::
+	.string "The dunes roll on like a sea…\n"
+	.string "Would you like to use SAND SKIM?$"
+
+gText_PlayerUsedSandSkim::
+	.string "{STR_VAR_1} used SAND SKIM!$"

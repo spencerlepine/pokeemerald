@@ -225,6 +225,10 @@ static const u8 sHydroPumpDescription[] = _(
     "Blasts water at high power\n"
     "to strike the foe.");
 
+static const u8 sSandSkimDescription[] = _(
+    "Rides a skiff over the\n"
+    "sand and rams the foes.");
+
 static const u8 sSurfDescription[] = _(
     "Creates a huge wave, then\n"
     "crashes it down on the foe.");
@@ -1774,4 +1778,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_WATER_PULSE - 1] = sWaterPulseDescription,
     [MOVE_DOOM_DESIRE - 1] = sDoomDesireDescription,
     [MOVE_PSYCHO_BOOST - 1] = sPsychoBoostDescription,
+    [MOVE_SAND_SKIM - 1] = sSandSkimDescription,
 };

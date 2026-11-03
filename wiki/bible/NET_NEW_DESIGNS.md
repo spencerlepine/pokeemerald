@@ -171,15 +171,25 @@ two swoop-rally racers (swimming becomes skimming). New field texts for the port
 with the companion towing. Wake: the SURF ripple, later a sand spray. Battles on the Dune Sea: the sand battle
 background that Emerald already has. Dune Sea tiles: the `sw-tatooine` `dune-sea` rows in `mapping/terrain.csv`.
 
-**Port notes (for `../game`, later).**
-- `MOVE_SAND_SKIM` after the last move: battle data, name, description, contest data, animation (copy SURF's).
-- `ITEM_HM09` in place of `ITEM_15B`; `NUM_HIDDEN_MACHINES` 9; HM range checks, the TM case and item data.
-- One more TM/HM learnset flag (`SAND_SKIM`), set from `database/sand_skim.csv`.
-- `FIELD_MOVE_SAND_SKIM`: party menu entry, badge 5 check, the prompt scripts above.
-- `MB_DUNE_SEA` in an unused metatile behaviour slot: crossable only with SAND SKIM, not fishable, wild "water" table, sand battle background; SURF refuses it.
-- Move Deleter: HM09 can't be forgotten, like the other HMs.
-- OWEN's script gives HM09 right after HM03 (same flag; the TM case never fills). OWEN is `character:wallys-father`, NPC `npc:petalburg-city-wallys-house:1`; the gift is `obtain:net:hm09-sand-skim` in `database/obtain.csv`.
-- Trainer class `SKIFF RIDER` for POLESH and ILI.
+**In the game (2026-11-03).** SAND SKIM is playable. SURF stays as it was everywhere else.
+- `MOVE_SAND_SKIM` (355, after the last move; `MOVES_COUNT` 356): battle data, name, description, contest data
+  (Tough, no combo) and animation (SURF's wave in MUDDY WATER's brown, SURF's sound) in `data/battle_anim_scripts.s`.
+- `ITEM_HM09` takes the unused `ITEM_15B` slot; `NUM_HIDDEN_MACHINES` 9; `F(SAND_SKIM)` ends `FOREACH_HM` in
+  `include/constants/tms_hms.h`, which gives `ITEM_HM_SAND_SKIM`, the learnset bit and the TM/HM move table entry.
+  HM range checks (`field_specials.c`, `item_menu.c`) run to HM09. The Ground HM icon palette.
+- Learnsets: `python3 tools/sand_skim.py --install` writes `.SAND_SKIM = TRUE` into `src/data/pokemon/tmhm_learnsets.h`
+  for exactly the species in `database/sand_skim.csv`; a plain run reports any difference.
+- Field use: `FIELD_MOVE_SAND_SKIM` in the party menu (needs badge 5). The Dune Sea is the map list in
+  `src/data/dune_sea_maps.h` (`IsCurrentMapDuneSea()`): there SAND SKIM crosses, SURF does not ("You can't SURF
+  here"), facing the sand offers `EventScript_UseSandSkim` (`data/scripts/surf.inc`, texts in `data/text/surf.inc`),
+  and the battle background is sand. Crossing uses SURF's field effect and sprite until the skiff is drawn.
+- HM09 can't be forgotten (it is an HM), and the last companion that knows it can't be released.
+- OWEN gives HM09 right after HM03, in the same script and under the same flag.
+- Tested in the emulator: the rod and SURF are refused on Route 103, SAND SKIM prompts and crosses, a wild
+  encounter on the Dune Sea uses the sand background, OWEN hands over both HMs, SURF still works in Kachirho.
+
+Still to do: the `SKIFF RIDER` class for POLESH and ILI; `MB_DUNE_SEA` (an unused metatile behaviour) once the
+`dune-sea` tiles exist, which can then replace the map list; the "no SAND SKIM" field line; the skiff sprite.
 
 ## New moves (`net:move-force-choke`, `net:move-blaster-shot`, `net:move-saber-slash`)
 

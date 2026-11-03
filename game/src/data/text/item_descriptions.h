@@ -1410,6 +1410,11 @@ static const u8 sHM08Desc[] = _(
     "the 1st turn, then\n"
     "attacks next turn.");
 
+static const u8 sHM09Desc[] = _(
+    "Teaches SAND SKIM.\n"
+    "A COMPANION pulls a\n"
+    "skiff over sand.");
+
 // FireRed/LeafGreen key items
 static const u8 sOaksParcelDesc[] = _(
     "A parcel for PROF.\n"

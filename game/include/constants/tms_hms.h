@@ -61,7 +61,8 @@
     F(FLASH) \
     F(ROCK_SMASH) \
     F(WATERFALL) \
-    F(DIVE)
+    F(DIVE) \
+    F(SAND_SKIM)
 
 #define FOREACH_TMHM(F) \
     FOREACH_TM(F) \

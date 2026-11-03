@@ -48,6 +48,9 @@ def slug(name):                 # PetalburgCity_WallysHouse -> petalburg-city-wa
 
 # ---------- wiki lookups ----------
 by_const = {r["source_constant"]: r["id"] for r in read(WIKI / "emerald" / "entities.csv") if r["source_constant"]}
+# net-new constants already in ../game
+by_const.update({"ITEM_HM_SAND_SKIM": "net:hm09-sand-skim", "ITEM_HM09": "net:hm09-sand-skim", "MOVE_SAND_SKIM": "net:move-sand-skim"})
+net_names = {r["id"]: r["sw_name"] for r in read(WIKI / "mapping" / "net_new.csv")}
 swap = {r["emerald_id"]: r for r in read(WIKI / "database" / "swap_map.csv")}
 prog = {r["map_id"]: r for r in read(WIKI / "database" / "area_progression.csv")}
 order_hand = {r["script"] or r["map_prefix"]: r for r in read(WIKI / "mapping" / "obtain_order.csv")}
@@ -87,7 +90,7 @@ def wiki_id(const):
 
 def sw_name(wid):
     r = swap.get(wid)
-    return (r["sw_name"] or r["emerald_name"]) if r else ""
+    return (r["sw_name"] or r["emerald_name"]) if r else net_names.get(wid, "")
 
 
 # ---------- scripts ----------

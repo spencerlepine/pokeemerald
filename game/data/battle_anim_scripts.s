@@ -371,7 +371,8 @@ gBattleAnims_Moves::
 	.4byte Move_WATER_PULSE
 	.4byte Move_DOOM_DESIRE
 	.4byte Move_PSYCHO_BOOST
-	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
+	.4byte Move_SAND_SKIM
+	.4byte Move_COUNT @ cannot be reached, because last move is Sand Skim
 
 	.align 2
 gBattleAnims_StatusConditions::
@@ -8857,6 +8858,14 @@ ArmThrustRight:
 ArmThrustLeft:
 	create_basic_hitsplat_sprite ANIM_TARGET, 2, x=-8, y=0, relative_to=ANIM_TARGET, animation=2
 	goto ArmThrustContinue
+
+@ Star Wars net-new: SAND SKIM, SURF's wave in MUDDY WATER's brown (a sand placeholder)
+Move_SAND_SKIM:
+	create_surf_wave palette=ANIM_SURF_PAL_MUDDY_WATER
+	delay 24
+	panse SE_M_SURF, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, +2, 0
+	waitforvisualfinish
+	end
 
 Move_MUDDY_WATER:
 	panse SE_M_WHIRLPOOL, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, +2, 0

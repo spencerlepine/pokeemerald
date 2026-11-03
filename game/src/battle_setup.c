@@ -14,6 +14,7 @@
 #include "starter_choose.h"
 #include "script_pokemon_util.h"
 #include "palette.h"
+#include "wild_encounter.h"
 #include "window.h"
 #include "event_object_movement.h"
 #include "event_scripts.h"
@@ -646,6 +647,9 @@ u8 BattleSetup_GetEnvironmentId(void)
     if (MetatileBehavior_IsLongGrass(tileBehavior))
         return BATTLE_ENVIRONMENT_LONG_GRASS;
     if (MetatileBehavior_IsSandOrDeepSand(tileBehavior))
+        return BATTLE_ENVIRONMENT_SAND;
+    // The Dune Sea is sand, not water
+    if (IsCurrentMapDuneSea() && MetatileBehavior_IsSurfableWaterOrUnderwater(tileBehavior))
         return BATTLE_ENVIRONMENT_SAND;
 
     switch (gMapHeader.mapType)

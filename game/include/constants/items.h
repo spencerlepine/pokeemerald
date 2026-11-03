@@ -372,9 +372,9 @@ enum {
     ITEM_HM06,
     ITEM_HM07,
     ITEM_HM08,
+    ITEM_HM09, // Star Wars net-new: SAND SKIM (was the unused ITEM_15B)
 
     // Unknown
-    ITEM_15B,
     ITEM_15C,
 
     // FireRed/LeafGreen
@@ -448,7 +448,7 @@ enum {
 #define MAIL_NONE 0xFF
 
 #define NUM_TECHNICAL_MACHINES 50
-#define NUM_HIDDEN_MACHINES     8
+#define NUM_HIDDEN_MACHINES     9
 
 #define MAX_BAG_ITEM_CAPACITY  99
 #define MAX_PC_ITEM_CAPACITY   999

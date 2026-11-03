@@ -131,6 +131,28 @@ def game_sync(dune_maps, enc, install):
         print("../game matches the Dune Sea tables")
 
 
+GAME_TMHM = GAME / "src/data/pokemon/tmhm_learnsets.h"
+
+
+def learnset_sync(learners, install):
+    """`.SAND_SKIM = TRUE` in ../game's TM/HM learnsets for exactly the SAND SKIM learners. Returns the differences."""
+    text = GAME_TMHM.read_text()
+    diffs = []
+
+    def fix(m):
+        k, body = m.group(1), m.group(2)
+        has = ".SAND_SKIM = TRUE," in body
+        if (k in learners) != has:
+            diffs.append(f"SPECIES_{k}: SAND_SKIM {'missing' if not has else 'not a learner'}")
+            if install:
+                body = body.replace("        .SAND_SKIM = TRUE,\n", "") if has else body + "        .SAND_SKIM = TRUE,\n"
+        return f"[SPECIES_{k}] = {{ .learnset = {{\n{body}    }} }},"
+    new = re.sub(r"\[SPECIES_(\w+)\] = \{ \.learnset = \{\n(.*?)    \} \},", fix, text, flags=re.S)
+    if install and diffs:
+        GAME_TMHM.write_text(new)
+    return diffs
+
+
 def main():
     types, bst, learn = game_species()
     sw = {r["emerald_id"]: r for r in read(WIKI / "mapping" / "species.csv")}
@@ -212,6 +234,14 @@ def main():
           ["map_id", "method", "slot", "rate_percent", "min_level", "max_level", "emerald_species", "dune_species",
            "sw_name", "stat_total_change", "note"])
     game_sync(dune_maps, enc, install="--install" in sys.argv)
+    learners = {key(r["emerald_id"]) for r in rows if r["sand_skim"] == "YES"}
+    ld = learnset_sync(learners, "--install" in sys.argv)
+    if not ld:
+        print("../game learnsets match: SAND SKIM for", len(learners), "species")
+    elif "--install" in sys.argv:
+        print(f"installed SAND SKIM learnsets into ../game: {len(ld)} changes")
+    else:
+        print(f"../game learnsets differ ({len(ld)}); run with --install:", ", ".join(ld[:5]))
 
     # balance checks
     yes = [r for r in rows if r["sand_skim"] == "YES"]

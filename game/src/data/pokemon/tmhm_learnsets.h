@@ -595,6 +595,7 @@ const union {
         .CUT = TRUE,
         .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
+        .SAND_SKIM = TRUE,
     } },
 
     [SPECIES_SANDSLASH] = { .learnset = {
@@ -622,6 +623,7 @@ const union {
         .CUT = TRUE,
         .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
+        .SAND_SKIM = TRUE,
     } },
 
     [SPECIES_NIDORAN_F] = { .learnset = {
@@ -722,6 +724,7 @@ const union {
         .SURF = TRUE,
         .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
+        .SAND_SKIM = TRUE,
     } },
 
     [SPECIES_NIDORAN_M] = { .learnset = {
@@ -819,6 +822,7 @@ const union {
         .SURF = TRUE,
         .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
+        .SAND_SKIM = TRUE,
     } },
 
     [SPECIES_CLEFAIRY] = { .learnset = {
@@ -1233,6 +1237,7 @@ const union {
         .THIEF = TRUE,
         .CUT = TRUE,
         .ROCK_SMASH = TRUE,
+        .SAND_SKIM = TRUE,
     } },
 
     [SPECIES_DUGTRIO] = { .learnset = {
@@ -1256,6 +1261,7 @@ const union {
         .THIEF = TRUE,
         .CUT = TRUE,
         .ROCK_SMASH = TRUE,
+        .SAND_SKIM = TRUE,
     } },
 
     [SPECIES_MEOWTH] = { .learnset = {
@@ -1881,6 +1887,7 @@ const union {
         .ATTRACT = TRUE,
         .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
+        .SAND_SKIM = TRUE,
     } },
 
     [SPECIES_GRAVELER] = { .learnset = {
@@ -1905,6 +1912,7 @@ const union {
         .ATTRACT = TRUE,
         .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
+        .SAND_SKIM = TRUE,
     } },
 
     [SPECIES_GOLEM] = { .learnset = {
@@ -1931,6 +1939,7 @@ const union {
         .ATTRACT = TRUE,
         .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
+        .SAND_SKIM = TRUE,
     } },
 
     [SPECIES_PONYTA] = { .learnset = {
@@ -1951,6 +1960,7 @@ const union {
         .ATTRACT = TRUE,
         .OVERHEAT = TRUE,
         .STRENGTH = TRUE,
+        .SAND_SKIM = TRUE,
     } },
 
     [SPECIES_RAPIDASH] = { .learnset = {
@@ -1972,6 +1982,7 @@ const union {
         .ATTRACT = TRUE,
         .OVERHEAT = TRUE,
         .STRENGTH = TRUE,
+        .SAND_SKIM = TRUE,
     } },
 
     [SPECIES_SLOWPOKE] = { .learnset = {
@@ -2393,6 +2404,7 @@ const union {
         .ATTRACT = TRUE,
         .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
+        .SAND_SKIM = TRUE,
     } },
 
     [SPECIES_DROWZEE] = { .learnset = {
@@ -2628,6 +2640,7 @@ const union {
         .THIEF = TRUE,
         .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
+        .SAND_SKIM = TRUE,
     } },
 
     [SPECIES_MAROWAK] = { .learnset = {
@@ -2658,6 +2671,7 @@ const union {
         .THIEF = TRUE,
         .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
+        .SAND_SKIM = TRUE,
     } },
 
     [SPECIES_HITMONLEE] = { .learnset = {
@@ -2826,6 +2840,7 @@ const union {
         .THIEF = TRUE,
         .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
+        .SAND_SKIM = TRUE,
     } },
 
     [SPECIES_RHYDON] = { .learnset = {
@@ -2862,6 +2877,7 @@ const union {
         .SURF = TRUE,
         .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
+        .SAND_SKIM = TRUE,
     } },
 
     [SPECIES_CHANSEY] = { .learnset = {
@@ -5047,6 +5063,7 @@ const union {
         .ROCK_SMASH = TRUE,
         .WATERFALL = TRUE,
         .DIVE = TRUE,
+        .SAND_SKIM = TRUE,
     } },
 
     [SPECIES_QUAGSIRE] = { .learnset = {
@@ -5080,6 +5097,7 @@ const union {
         .ROCK_SMASH = TRUE,
         .WATERFALL = TRUE,
         .DIVE = TRUE,
+        .SAND_SKIM = TRUE,
     } },
 
     [SPECIES_ESPEON] = { .learnset = {
@@ -5336,6 +5354,7 @@ const union {
         .THIEF = TRUE,
         .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
+        .SAND_SKIM = TRUE,
     } },
 
     [SPECIES_GLIGAR] = { .learnset = {
@@ -5363,6 +5382,7 @@ const union {
         .CUT = TRUE,
         .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
+        .SAND_SKIM = TRUE,
     } },
 
     [SPECIES_STEELIX] = { .learnset = {
@@ -5389,6 +5409,7 @@ const union {
         .CUT = TRUE,
         .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
+        .SAND_SKIM = TRUE,
     } },
 
     [SPECIES_SNUBBULL] = { .learnset = {
@@ -5722,6 +5743,7 @@ const union {
         .ATTRACT = TRUE,
         .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
+        .SAND_SKIM = TRUE,
     } },
 
     [SPECIES_PILOSWINE] = { .learnset = {
@@ -5749,6 +5771,7 @@ const union {
         .ATTRACT = TRUE,
         .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
+        .SAND_SKIM = TRUE,
     } },
 
     [SPECIES_CORSOLA] = { .learnset = {
@@ -6003,6 +6026,7 @@ const union {
         .ATTRACT = TRUE,
         .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
+        .SAND_SKIM = TRUE,
     } },
 
     [SPECIES_DONPHAN] = { .learnset = {
@@ -6025,6 +6049,7 @@ const union {
         .ATTRACT = TRUE,
         .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
+        .SAND_SKIM = TRUE,
     } },
 
     [SPECIES_PORYGON2] = { .learnset = {
@@ -6385,6 +6410,7 @@ const union {
         .REST = TRUE,
         .ATTRACT = TRUE,
         .ROCK_SMASH = TRUE,
+        .SAND_SKIM = TRUE,
     } },
 
     [SPECIES_PUPITAR] = { .learnset = {
@@ -6408,6 +6434,7 @@ const union {
         .REST = TRUE,
         .ATTRACT = TRUE,
         .ROCK_SMASH = TRUE,
+        .SAND_SKIM = TRUE,
     } },
 
     [SPECIES_TYRANITAR] = { .learnset = {
@@ -6770,6 +6797,7 @@ const union {
         .CUT = TRUE,
         .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
+        .SAND_SKIM = TRUE,
     } },
 
     [SPECIES_BLAZIKEN] = { .learnset = {
@@ -6799,6 +6827,7 @@ const union {
         .CUT = TRUE,
         .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
+        .SAND_SKIM = TRUE,
     } },
 
     [SPECIES_MUDKIP] = { .learnset = {
@@ -6852,6 +6881,7 @@ const union {
         .ROCK_SMASH = TRUE,
         .WATERFALL = TRUE,
         .DIVE = TRUE,
+        .SAND_SKIM = TRUE,
     } },
 
     [SPECIES_SWAMPERT] = { .learnset = {
@@ -6883,6 +6913,7 @@ const union {
         .ROCK_SMASH = TRUE,
         .WATERFALL = TRUE,
         .DIVE = TRUE,
+        .SAND_SKIM = TRUE,
     } },
 
     [SPECIES_POOCHYENA] = { .learnset = {
@@ -7234,6 +7265,7 @@ const union {
         .REST = TRUE,
         .CUT = TRUE,
         .FLASH = TRUE,
+        .SAND_SKIM = TRUE,
     } },
 
     [SPECIES_NINJASK] = { .learnset = {
@@ -7673,6 +7705,7 @@ const union {
         .REST = TRUE,
         .SKILL_SWAP = TRUE,
         .FLASH = TRUE,
+        .SAND_SKIM = TRUE,
     } },
 
     [SPECIES_CLAYDOL] = { .learnset = {
@@ -7702,6 +7735,7 @@ const union {
         .STRENGTH = TRUE,
         .FLASH = TRUE,
         .ROCK_SMASH = TRUE,
+        .SAND_SKIM = TRUE,
     } },
 
     [SPECIES_NOSEPASS] = { .learnset = {
@@ -7803,6 +7837,7 @@ const union {
         .SURF = TRUE,
         .WATERFALL = TRUE,
         .DIVE = TRUE,
+        .SAND_SKIM = TRUE,
     } },
 
     [SPECIES_WHISCASH] = { .learnset = {
@@ -7830,6 +7865,7 @@ const union {
         .ROCK_SMASH = TRUE,
         .WATERFALL = TRUE,
         .DIVE = TRUE,
+        .SAND_SKIM = TRUE,
     } },
 
     [SPECIES_LUVDISC] = { .learnset = {
@@ -8034,6 +8070,7 @@ const union {
         .ATTRACT = TRUE,
         .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
+        .SAND_SKIM = TRUE,
     } },
 
     [SPECIES_VIBRAVA] = { .learnset = {
@@ -8059,6 +8096,7 @@ const union {
         .FLY = TRUE,
         .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
+        .SAND_SKIM = TRUE,
     } },
 
     [SPECIES_FLYGON] = { .learnset = {
@@ -8088,6 +8126,7 @@ const union {
         .FLY = TRUE,
         .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
+        .SAND_SKIM = TRUE,
     } },
 
     [SPECIES_MAKUHITA] = { .learnset = {
@@ -8205,6 +8244,7 @@ const union {
         .OVERHEAT = TRUE,
         .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
+        .SAND_SKIM = TRUE,
     } },
 
     [SPECIES_CAMERUPT] = { .learnset = {
@@ -8230,6 +8270,7 @@ const union {
         .OVERHEAT = TRUE,
         .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
+        .SAND_SKIM = TRUE,
     } },
 
     [SPECIES_SPHEAL] = { .learnset = {
@@ -9964,6 +10005,7 @@ const union {
         .CUT = TRUE,
         .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
+        .SAND_SKIM = TRUE,
     } },
 
     [SPECIES_RAYQUAZA] = { .learnset = {

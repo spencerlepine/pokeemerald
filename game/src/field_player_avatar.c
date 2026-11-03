@@ -1283,9 +1283,11 @@ u8 GetPlayerAvatarGenderByGraphicsId(u8 gfxId)
     }
 }
 
+// On the Dune Sea (Star Wars net-new) the crossing move is SAND SKIM instead of SURF.
 bool8 PartyHasMonWithSurf(void)
 {
     u8 i;
+    u16 move = IsCurrentMapDuneSea() ? MOVE_SAND_SKIM : MOVE_SURF;
 
     if (!TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING))
     {
@@ -1293,7 +1295,7 @@ bool8 PartyHasMonWithSurf(void)
         {
             if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES) == SPECIES_NONE)
                 break;
-            if (MonKnowsMove(&gPlayerParty[i], MOVE_SURF))
+            if (MonKnowsMove(&gPlayerParty[i], move))
                 return TRUE;
         }
     }

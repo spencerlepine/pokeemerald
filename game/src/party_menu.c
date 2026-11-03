@@ -18,6 +18,7 @@
 #include "field_control_avatar.h"
 #include "field_effect.h"
 #include "field_player_avatar.h"
+#include "wild_encounter.h"
 #include "field_screen_effect.h"
 #include "field_specials.h"
 #include "field_weather.h"
@@ -131,6 +132,7 @@ enum {
     FIELD_MOVE_MILK_DRINK,
     FIELD_MOVE_SOFT_BOILED,
     FIELD_MOVE_SWEET_SCENT,
+    FIELD_MOVE_SAND_SKIM,   // FLAG_BADGE05_GET (Star Wars net-new: SURF on the Dune Sea)
     FIELD_MOVES_COUNT
 };
 
@@ -477,6 +479,7 @@ static void CursorCb_Trade2(u8);
 static void CursorCb_Toss(u8);
 static void CursorCb_FieldMove(u8);
 static bool8 SetUpFieldMove_Surf(void);
+static bool8 SetUpFieldMove_SandSkim(void);
 static bool8 SetUpFieldMove_Fly(void);
 static bool8 SetUpFieldMove_Waterfall(void);
 static bool8 SetUpFieldMove_Dive(void);
@@ -3722,7 +3725,8 @@ static void CursorCb_FieldMove(u8 taskId)
     else
     {
         // All field moves before WATERFALL are HMs.
-        if (fieldMove <= FIELD_MOVE_WATERFALL && FlagGet(FLAG_BADGE01_GET + fieldMove) != TRUE)
+        if ((fieldMove <= FIELD_MOVE_WATERFALL && FlagGet(FLAG_BADGE01_GET + fieldMove) != TRUE)
+         || (fieldMove == FIELD_MOVE_SAND_SKIM && FlagGet(FLAG_BADGE05_GET) != TRUE))
         {
             DisplayPartyMenuMessage(gText_CantUseUntilNewBadge, TRUE);
             gTasks[taskId].func = Task_ReturnToChooseMonAfterText;
@@ -3765,6 +3769,7 @@ static void CursorCb_FieldMove(u8 taskId)
             switch (fieldMove)
             {
             case FIELD_MOVE_SURF:
+            case FIELD_MOVE_SAND_SKIM:
                 DisplayCantUseSurfMessage();
                 break;
             case FIELD_MOVE_FLASH:
@@ -3857,7 +3862,20 @@ static void FieldCallback_Surf(void)
 
 static bool8 SetUpFieldMove_Surf(void)
 {
-    if (PartyHasMonWithSurf() == TRUE && IsPlayerFacingSurfableFishableWater() == TRUE)
+    // The Dune Sea is sand: only SAND SKIM crosses it
+    if (!IsCurrentMapDuneSea() && PartyHasMonWithSurf() == TRUE && IsPlayerFacingSurfableFishableWater() == TRUE)
+    {
+        gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;
+        gPostMenuFieldCallback = FieldCallback_Surf;
+        return TRUE;
+    }
+    return FALSE;
+}
+
+// SAND SKIM crosses the Dune Sea exactly like SURF crosses water (same field effect, player sprite for now)
+static bool8 SetUpFieldMove_SandSkim(void)
+{
+    if (IsCurrentMapDuneSea() && PartyHasMonWithSurf() == TRUE && IsPlayerFacingSurfableFishableWater() == TRUE)
     {
         gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;
         gPostMenuFieldCallback = FieldCallback_Surf;
