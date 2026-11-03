@@ -63,6 +63,7 @@ EWRAM_DATA static u8 sWildEncountersDisabled = 0;
 EWRAM_DATA static u32 sFeebasRngValue = 0;
 
 #include "data/wild_encounters.h"
+#include "data/dune_sea_maps.h"
 
 static const struct WildPokemon sWildFeebas = {20, 25, SPECIES_FEEBAS};
 
@@ -764,6 +765,20 @@ bool8 SweetScentWildEncounter(void)
         }
     }
 
+    return FALSE;
+}
+
+// The Dune Sea (Tatooine's sand sea) has its own wild table and no fishing.
+bool8 IsCurrentMapDuneSea(void)
+{
+    u32 i;
+    u16 map = gSaveBlock1Ptr->location.mapNum | (gSaveBlock1Ptr->location.mapGroup << 8);
+
+    for (i = 0; i < ARRAY_COUNT(sDuneSeaMaps); i++)
+    {
+        if (sDuneSeaMaps[i] == map)
+            return TRUE;
+    }
     return FALSE;
 }
 

@@ -36,6 +36,7 @@
 #include "string_util.h"
 #include "task.h"
 #include "text.h"
+#include "wild_encounter.h"
 #include "constants/event_bg.h"
 #include "constants/event_objects.h"
 #include "constants/item_effects.h"
@@ -243,6 +244,10 @@ static bool32 CanFish(void)
         return FALSE;
 
     if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_UNDERWATER))
+        return FALSE;
+
+    // No fishing on the Dune Sea
+    if (IsCurrentMapDuneSea())
         return FALSE;
 
     if (!TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING))

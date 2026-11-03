@@ -77,13 +77,15 @@ Owner decision (2026-11-03): Tatooine's sea is sand, and the player crosses it o
 not SURF. Every other planet keeps SURF on its water (and on Bespin's cloud sea).
 
 **What the player sees.** Deep, soft dunes fill the places where Emerald had sea on Tatooine. Walking stops at
-their edge. A companion that knows SAND SKIM pulls the player across on a skiff. It plays exactly like SURF:
-wild companions appear while skimming, rods work, trainers wait out on the dunes.
+their edge. A companion that knows SAND SKIM pulls the player across on a skiff. It plays like SURF:
+wild companions appear while skimming and trainers wait out on the dunes. There is no fishing: a rod can't be
+cast on the Dune Sea (owner, 2026-11-03).
 
 **Where.** Every `~` cell on Tatooine: Routes 102, 103, 104, 110, 111, 115 and 117 (and the dock in the Mos Eisley
 star-liner room, which is scenery). Same cells as Emerald's sea, so no map changes shape. The Route 111 desert
 stays walkable sand; the Dune Sea is the deep sand around it. Mos Entha's pond and the Mos Eisley harbour left
-those towns when they were made compact, so their sea and fishing tables never run.
+those towns when they were made compact, so in the new layout their Dune Sea tables never run. The
+current game still has those cells, so their tables are set like the rest.
 
 **The move: SAND SKIM.**
 
@@ -127,22 +129,28 @@ That is 42 species. To add a type (say Rock) or a species, add a row to the rule
 - Seven learners are catchable before the fifth badge: HIVEGRUB (Route 116), ROCKWART (Granite Cave), BANTHACALF (Jagged Pass), BOGWHISKR (Meteor Falls), and DEWLING, KRAYTHATCH and HOLOSHARD in the Route 111 desert.
 - No one can be stuck: the HM, the badge and the learners are all in hand before the first Dune Sea cell matters.
 
-**Encounters on the Dune Sea.** The tables keep every slot, level and rate. Six sea species swap for Tatooine
-sand species (`mapping/dune_sea_swaps.csv`); the birds, the crab droid and the mud fish stay. The result is
-`database/dune_sea_encounters.csv`, one row per slot with its stat-total change.
+**Encounters on the Dune Sea.** The Dune Sea has its own table: Emerald's sea ("water") table of that map, with
+every slot, level and rate kept and the sea species swapped for sand species (`mapping/dune_sea_swaps.csv`; a
+row can be limited to some maps and slots). The fishing tables of these maps are deleted, because the Dune Sea has
+no fishing. The result is `database/dune_sea_encounters.csv`, one row per slot with its stat-total change.
 
-| Emerald sea species | Dune Sea species | Why |
-|---|---|---|
-| DIANOGLET (Tentacool) | KRAYTHATCH (Trapinch) | Krayt hatchlings dig their pits in deep dunes. |
-| BLOOPRAT (Marill) | DEWLING (Sandshrew) | Dewback hatchlings roll through the sand. |
-| HORNFIN (Goldeen), 1% | SARLACLET (Gulpin) | A young sarlacc waiting under the sand. |
-| COLOFRY (Magikarp) | SANDGRUB (Wurmple) | The weak catch a line pulls from the sand. |
-| AIWHALET (Wailmer) | SARLACLET (Gulpin) | The big thing that bites from below. |
-| OPEEKILLER (Sharpedo) | SARLACC (Swalot) | The Dune Sea's predator. |
-| SHYYYOLET, SHYYYO, CRABDROID, BOGWHISKR | kept | Birds glide over dunes; the crab droid and mud fish burrow. |
+| Emerald sea species | Dune Sea species | Where | Why |
+|---|---|---|---|
+| DIANOGLET (Tentacool) | KRAYTHATCH (Trapinch) | all | Krayt hatchlings dig their pits in deep dunes. |
+| BLOOPRAT (Marill), 30% slot | CRABDROID (Corphish) | Mos Entha, Routes 102 and 117 | Its only home was the rods on these maps, so it moves here. |
+| BLOOPRAT (Marill) | DEWLING (Sandshrew) | all other slots | Dewback hatchlings roll through the sand. |
+| HORNFIN (Goldeen), 1% | SARLACLET (Gulpin) | all | A young sarlacc waiting under the sand. |
+| SHYYYOLET, SHYYYO | kept | all | Birds glide over the dunes. |
 
-Every swapped-out species is still wild on other planets. The largest stat-total change is -98 (AIWHALET to
-SARLACLET), which makes that slot easier, not harder. No new species enter the Hoenn dex.
+The tool checks that no species loses its last wild home. Cutting the rods only touched CRABDROID, which is
+why it takes the 30% slot on its three maps (levels 10-20, inside its old rod range). Everything else that was
+fished there is still wild elsewhere. No new species enter the Hoenn dex.
+
+**In the game (2026-11-03).** `python3 tools/sand_skim.py --install` writes these tables into
+`../game/src/data/wild_encounters.json` (sea species swapped, fishing tables removed); a plain run reports
+whether the game still matches. `../game/src/data/dune_sea_maps.h` lists the Dune Sea maps, and
+`CanFish()` in `src/item_use.c` refuses the rod on them (Dad's "not the time" line). SURF still crosses the
+Dune Sea until SAND SKIM is ported.
 
 **Trainers.** The two Route 103 trainers out on the Dune Sea (POLESH and ILI) become a new class, SKIFF RIDER,
 with the swimmer classes' prize money and AI. Their parties do not change. Their lines are rewritten for skiffs.
@@ -168,7 +176,7 @@ background that Emerald already has. Dune Sea tiles: the `sw-tatooine` `dune-sea
 - `ITEM_HM09` in place of `ITEM_15B`; `NUM_HIDDEN_MACHINES` 9; HM range checks, the TM case and item data.
 - One more TM/HM learnset flag (`SAND_SKIM`), set from `database/sand_skim.csv`.
 - `FIELD_MOVE_SAND_SKIM`: party menu entry, badge 5 check, the prompt scripts above.
-- `MB_DUNE_SEA` in an unused metatile behaviour slot: crossable only with SAND SKIM, fishable, wild "water" table, sand battle background; SURF refuses it.
+- `MB_DUNE_SEA` in an unused metatile behaviour slot: crossable only with SAND SKIM, not fishable, wild "water" table, sand battle background; SURF refuses it.
 - Move Deleter: HM09 can't be forgotten, like the other HMs.
 - OWEN's script gives HM09 right after HM03 (same flag; the TM case never fills).
 - Trainer class `SKIFF RIDER` for POLESH and ILI.

@@ -1,136 +1,46 @@
 map_id,method,slot,rate_percent,min_level,max_level,emerald_species,dune_species,sw_name,stat_total_change,note
 map:route102,skim,0,60,20,30,species:marill,species:sandshrew,DEWLING,50,"BLOOPRAT floats on water. DEWLING, the dewback hatchling, rolls through the sand."
-map:route102,skim,1,30,10,20,species:marill,species:sandshrew,DEWLING,50,"BLOOPRAT floats on water. DEWLING, the dewback hatchling, rolls through the sand."
+map:route102,skim,1,30,10,20,species:marill,species:corphish,CRABDROID,58,"CRABDROID, the small crab droid, scuttles over the sand. These three maps were its only home (by rod), and the Dune Sea has no fishing, so it moves to the 30% skim slot here."
 map:route102,skim,2,5,30,35,species:marill,species:sandshrew,DEWLING,50,"BLOOPRAT floats on water. DEWLING, the dewback hatchling, rolls through the sand."
 map:route102,skim,3,4,5,10,species:marill,species:sandshrew,DEWLING,50,"BLOOPRAT floats on water. DEWLING, the dewback hatchling, rolls through the sand."
 map:route102,skim,4,1,20,30,species:goldeen,species:gulpin,SARLACLET,-18,"HORNFIN is a river fish. SARLACLET, the young sarlacc, waits under the Dune Sea (rare, 1%)."
-map:route102,old_rod,0,70,5,10,species:magikarp,species:wurmple,SANDGRUB,-5,"COLOFRY is a sea fish. SANDGRUB, the desert larva, is the weak catch a line pulls out of the sand."
-map:route102,old_rod,1,30,5,10,species:goldeen,species:gulpin,SARLACLET,-18,"HORNFIN is a river fish. SARLACLET, the young sarlacc, waits under the Dune Sea (rare, 1%)."
-map:route102,good_rod,2,60,10,30,species:magikarp,species:wurmple,SANDGRUB,-5,"COLOFRY is a sea fish. SANDGRUB, the desert larva, is the weak catch a line pulls out of the sand."
-map:route102,good_rod,3,20,10,30,species:goldeen,species:gulpin,SARLACLET,-18,"HORNFIN is a river fish. SARLACLET, the young sarlacc, waits under the Dune Sea (rare, 1%)."
-map:route102,good_rod,4,20,10,30,species:corphish,species:corphish,CRABDROID,0,Kept: fits the Dune Sea as is.
-map:route102,super_rod,5,40,25,30,species:corphish,species:corphish,CRABDROID,0,Kept: fits the Dune Sea as is.
-map:route102,super_rod,6,40,30,35,species:corphish,species:corphish,CRABDROID,0,Kept: fits the Dune Sea as is.
-map:route102,super_rod,7,15,20,25,species:corphish,species:corphish,CRABDROID,0,Kept: fits the Dune Sea as is.
-map:route102,super_rod,8,4,35,40,species:corphish,species:corphish,CRABDROID,0,Kept: fits the Dune Sea as is.
-map:route102,super_rod,9,1,40,45,species:corphish,species:corphish,CRABDROID,0,Kept: fits the Dune Sea as is.
 map:route103,skim,0,60,5,35,species:tentacool,species:trapinch,KRAYTHATCH,-45,"DIANOGLET is a sea creature. KRAYTHATCH, the krayt hatchling, digs its pits in the deep dunes."
 map:route103,skim,1,30,10,30,species:wingull,species:wingull,SHYYYOLET,0,Kept: fits the Dune Sea as is.
 map:route103,skim,2,5,15,25,species:wingull,species:wingull,SHYYYOLET,0,Kept: fits the Dune Sea as is.
 map:route103,skim,3,4,25,30,species:pelipper,species:pelipper,SHYYYO,0,Kept: fits the Dune Sea as is.
 map:route103,skim,4,1,25,30,species:pelipper,species:pelipper,SHYYYO,0,Kept: fits the Dune Sea as is.
-map:route103,old_rod,0,70,5,10,species:magikarp,species:wurmple,SANDGRUB,-5,"COLOFRY is a sea fish. SANDGRUB, the desert larva, is the weak catch a line pulls out of the sand."
-map:route103,old_rod,1,30,5,10,species:tentacool,species:trapinch,KRAYTHATCH,-45,"DIANOGLET is a sea creature. KRAYTHATCH, the krayt hatchling, digs its pits in the deep dunes."
-map:route103,good_rod,2,60,10,30,species:magikarp,species:wurmple,SANDGRUB,-5,"COLOFRY is a sea fish. SANDGRUB, the desert larva, is the weak catch a line pulls out of the sand."
-map:route103,good_rod,3,20,10,30,species:tentacool,species:trapinch,KRAYTHATCH,-45,"DIANOGLET is a sea creature. KRAYTHATCH, the krayt hatchling, digs its pits in the deep dunes."
-map:route103,good_rod,4,20,10,30,species:wailmer,species:gulpin,SARLACLET,-98,AIWHALET is an ocean calf. SARLACLET is the big thing that bites from below.
-map:route103,super_rod,5,40,30,35,species:sharpedo,species:swalot,SARLACC,7,OPEEKILLER is a sea predator. SARLACC is the Dune Sea's predator.
-map:route103,super_rod,6,40,30,35,species:wailmer,species:gulpin,SARLACLET,-98,AIWHALET is an ocean calf. SARLACLET is the big thing that bites from below.
-map:route103,super_rod,7,15,25,30,species:wailmer,species:gulpin,SARLACLET,-98,AIWHALET is an ocean calf. SARLACLET is the big thing that bites from below.
-map:route103,super_rod,8,4,35,40,species:wailmer,species:gulpin,SARLACLET,-98,AIWHALET is an ocean calf. SARLACLET is the big thing that bites from below.
-map:route103,super_rod,9,1,40,45,species:wailmer,species:gulpin,SARLACLET,-98,AIWHALET is an ocean calf. SARLACLET is the big thing that bites from below.
 map:route104,skim,0,60,10,30,species:wingull,species:wingull,SHYYYOLET,0,Kept: fits the Dune Sea as is.
 map:route104,skim,1,30,15,25,species:wingull,species:wingull,SHYYYOLET,0,Kept: fits the Dune Sea as is.
 map:route104,skim,2,5,15,25,species:wingull,species:wingull,SHYYYOLET,0,Kept: fits the Dune Sea as is.
 map:route104,skim,3,4,25,30,species:pelipper,species:pelipper,SHYYYO,0,Kept: fits the Dune Sea as is.
 map:route104,skim,4,1,25,30,species:pelipper,species:pelipper,SHYYYO,0,Kept: fits the Dune Sea as is.
-map:route104,old_rod,0,70,5,10,species:magikarp,species:wurmple,SANDGRUB,-5,"COLOFRY is a sea fish. SANDGRUB, the desert larva, is the weak catch a line pulls out of the sand."
-map:route104,old_rod,1,30,5,10,species:magikarp,species:wurmple,SANDGRUB,-5,"COLOFRY is a sea fish. SANDGRUB, the desert larva, is the weak catch a line pulls out of the sand."
-map:route104,good_rod,2,60,10,30,species:magikarp,species:wurmple,SANDGRUB,-5,"COLOFRY is a sea fish. SANDGRUB, the desert larva, is the weak catch a line pulls out of the sand."
-map:route104,good_rod,3,20,10,30,species:magikarp,species:wurmple,SANDGRUB,-5,"COLOFRY is a sea fish. SANDGRUB, the desert larva, is the weak catch a line pulls out of the sand."
-map:route104,good_rod,4,20,10,30,species:magikarp,species:wurmple,SANDGRUB,-5,"COLOFRY is a sea fish. SANDGRUB, the desert larva, is the weak catch a line pulls out of the sand."
-map:route104,super_rod,5,40,25,30,species:magikarp,species:wurmple,SANDGRUB,-5,"COLOFRY is a sea fish. SANDGRUB, the desert larva, is the weak catch a line pulls out of the sand."
-map:route104,super_rod,6,40,30,35,species:magikarp,species:wurmple,SANDGRUB,-5,"COLOFRY is a sea fish. SANDGRUB, the desert larva, is the weak catch a line pulls out of the sand."
-map:route104,super_rod,7,15,20,25,species:magikarp,species:wurmple,SANDGRUB,-5,"COLOFRY is a sea fish. SANDGRUB, the desert larva, is the weak catch a line pulls out of the sand."
-map:route104,super_rod,8,4,35,40,species:magikarp,species:wurmple,SANDGRUB,-5,"COLOFRY is a sea fish. SANDGRUB, the desert larva, is the weak catch a line pulls out of the sand."
-map:route104,super_rod,9,1,40,45,species:magikarp,species:wurmple,SANDGRUB,-5,"COLOFRY is a sea fish. SANDGRUB, the desert larva, is the weak catch a line pulls out of the sand."
 map:route110,skim,0,60,5,35,species:tentacool,species:trapinch,KRAYTHATCH,-45,"DIANOGLET is a sea creature. KRAYTHATCH, the krayt hatchling, digs its pits in the deep dunes."
 map:route110,skim,1,30,10,30,species:wingull,species:wingull,SHYYYOLET,0,Kept: fits the Dune Sea as is.
 map:route110,skim,2,5,15,25,species:wingull,species:wingull,SHYYYOLET,0,Kept: fits the Dune Sea as is.
 map:route110,skim,3,4,25,30,species:pelipper,species:pelipper,SHYYYO,0,Kept: fits the Dune Sea as is.
 map:route110,skim,4,1,25,30,species:pelipper,species:pelipper,SHYYYO,0,Kept: fits the Dune Sea as is.
-map:route110,old_rod,0,70,5,10,species:magikarp,species:wurmple,SANDGRUB,-5,"COLOFRY is a sea fish. SANDGRUB, the desert larva, is the weak catch a line pulls out of the sand."
-map:route110,old_rod,1,30,5,10,species:tentacool,species:trapinch,KRAYTHATCH,-45,"DIANOGLET is a sea creature. KRAYTHATCH, the krayt hatchling, digs its pits in the deep dunes."
-map:route110,good_rod,2,60,10,30,species:magikarp,species:wurmple,SANDGRUB,-5,"COLOFRY is a sea fish. SANDGRUB, the desert larva, is the weak catch a line pulls out of the sand."
-map:route110,good_rod,3,20,10,30,species:tentacool,species:trapinch,KRAYTHATCH,-45,"DIANOGLET is a sea creature. KRAYTHATCH, the krayt hatchling, digs its pits in the deep dunes."
-map:route110,good_rod,4,20,10,30,species:wailmer,species:gulpin,SARLACLET,-98,AIWHALET is an ocean calf. SARLACLET is the big thing that bites from below.
-map:route110,super_rod,5,40,25,30,species:wailmer,species:gulpin,SARLACLET,-98,AIWHALET is an ocean calf. SARLACLET is the big thing that bites from below.
-map:route110,super_rod,6,40,30,35,species:wailmer,species:gulpin,SARLACLET,-98,AIWHALET is an ocean calf. SARLACLET is the big thing that bites from below.
-map:route110,super_rod,7,15,20,25,species:wailmer,species:gulpin,SARLACLET,-98,AIWHALET is an ocean calf. SARLACLET is the big thing that bites from below.
-map:route110,super_rod,8,4,35,40,species:wailmer,species:gulpin,SARLACLET,-98,AIWHALET is an ocean calf. SARLACLET is the big thing that bites from below.
-map:route110,super_rod,9,1,40,45,species:wailmer,species:gulpin,SARLACLET,-98,AIWHALET is an ocean calf. SARLACLET is the big thing that bites from below.
 map:route111,skim,0,60,20,30,species:marill,species:sandshrew,DEWLING,50,"BLOOPRAT floats on water. DEWLING, the dewback hatchling, rolls through the sand."
 map:route111,skim,1,30,10,20,species:marill,species:sandshrew,DEWLING,50,"BLOOPRAT floats on water. DEWLING, the dewback hatchling, rolls through the sand."
 map:route111,skim,2,5,30,35,species:marill,species:sandshrew,DEWLING,50,"BLOOPRAT floats on water. DEWLING, the dewback hatchling, rolls through the sand."
 map:route111,skim,3,4,5,10,species:marill,species:sandshrew,DEWLING,50,"BLOOPRAT floats on water. DEWLING, the dewback hatchling, rolls through the sand."
 map:route111,skim,4,1,20,30,species:goldeen,species:gulpin,SARLACLET,-18,"HORNFIN is a river fish. SARLACLET, the young sarlacc, waits under the Dune Sea (rare, 1%)."
-map:route111,old_rod,0,70,5,10,species:magikarp,species:wurmple,SANDGRUB,-5,"COLOFRY is a sea fish. SANDGRUB, the desert larva, is the weak catch a line pulls out of the sand."
-map:route111,old_rod,1,30,5,10,species:goldeen,species:gulpin,SARLACLET,-18,"HORNFIN is a river fish. SARLACLET, the young sarlacc, waits under the Dune Sea (rare, 1%)."
-map:route111,good_rod,2,60,10,30,species:magikarp,species:wurmple,SANDGRUB,-5,"COLOFRY is a sea fish. SANDGRUB, the desert larva, is the weak catch a line pulls out of the sand."
-map:route111,good_rod,3,20,10,30,species:goldeen,species:gulpin,SARLACLET,-18,"HORNFIN is a river fish. SARLACLET, the young sarlacc, waits under the Dune Sea (rare, 1%)."
-map:route111,good_rod,4,20,10,30,species:barboach,species:barboach,BOGWHISKR,0,Kept: fits the Dune Sea as is.
-map:route111,super_rod,5,40,25,30,species:barboach,species:barboach,BOGWHISKR,0,Kept: fits the Dune Sea as is.
-map:route111,super_rod,6,40,30,35,species:barboach,species:barboach,BOGWHISKR,0,Kept: fits the Dune Sea as is.
-map:route111,super_rod,7,15,20,25,species:barboach,species:barboach,BOGWHISKR,0,Kept: fits the Dune Sea as is.
-map:route111,super_rod,8,4,35,40,species:barboach,species:barboach,BOGWHISKR,0,Kept: fits the Dune Sea as is.
-map:route111,super_rod,9,1,40,45,species:barboach,species:barboach,BOGWHISKR,0,Kept: fits the Dune Sea as is.
 map:route117,skim,0,60,20,30,species:marill,species:sandshrew,DEWLING,50,"BLOOPRAT floats on water. DEWLING, the dewback hatchling, rolls through the sand."
-map:route117,skim,1,30,10,20,species:marill,species:sandshrew,DEWLING,50,"BLOOPRAT floats on water. DEWLING, the dewback hatchling, rolls through the sand."
+map:route117,skim,1,30,10,20,species:marill,species:corphish,CRABDROID,58,"CRABDROID, the small crab droid, scuttles over the sand. These three maps were its only home (by rod), and the Dune Sea has no fishing, so it moves to the 30% skim slot here."
 map:route117,skim,2,5,30,35,species:marill,species:sandshrew,DEWLING,50,"BLOOPRAT floats on water. DEWLING, the dewback hatchling, rolls through the sand."
 map:route117,skim,3,4,5,10,species:marill,species:sandshrew,DEWLING,50,"BLOOPRAT floats on water. DEWLING, the dewback hatchling, rolls through the sand."
 map:route117,skim,4,1,20,30,species:goldeen,species:gulpin,SARLACLET,-18,"HORNFIN is a river fish. SARLACLET, the young sarlacc, waits under the Dune Sea (rare, 1%)."
-map:route117,old_rod,0,70,5,10,species:magikarp,species:wurmple,SANDGRUB,-5,"COLOFRY is a sea fish. SANDGRUB, the desert larva, is the weak catch a line pulls out of the sand."
-map:route117,old_rod,1,30,5,10,species:goldeen,species:gulpin,SARLACLET,-18,"HORNFIN is a river fish. SARLACLET, the young sarlacc, waits under the Dune Sea (rare, 1%)."
-map:route117,good_rod,2,60,10,30,species:magikarp,species:wurmple,SANDGRUB,-5,"COLOFRY is a sea fish. SANDGRUB, the desert larva, is the weak catch a line pulls out of the sand."
-map:route117,good_rod,3,20,10,30,species:goldeen,species:gulpin,SARLACLET,-18,"HORNFIN is a river fish. SARLACLET, the young sarlacc, waits under the Dune Sea (rare, 1%)."
-map:route117,good_rod,4,20,10,30,species:corphish,species:corphish,CRABDROID,0,Kept: fits the Dune Sea as is.
-map:route117,super_rod,5,40,25,30,species:corphish,species:corphish,CRABDROID,0,Kept: fits the Dune Sea as is.
-map:route117,super_rod,6,40,30,35,species:corphish,species:corphish,CRABDROID,0,Kept: fits the Dune Sea as is.
-map:route117,super_rod,7,15,20,25,species:corphish,species:corphish,CRABDROID,0,Kept: fits the Dune Sea as is.
-map:route117,super_rod,8,4,35,40,species:corphish,species:corphish,CRABDROID,0,Kept: fits the Dune Sea as is.
-map:route117,super_rod,9,1,40,45,species:corphish,species:corphish,CRABDROID,0,Kept: fits the Dune Sea as is.
 map:route115,skim,0,60,5,35,species:tentacool,species:trapinch,KRAYTHATCH,-45,"DIANOGLET is a sea creature. KRAYTHATCH, the krayt hatchling, digs its pits in the deep dunes."
 map:route115,skim,1,30,10,30,species:wingull,species:wingull,SHYYYOLET,0,Kept: fits the Dune Sea as is.
 map:route115,skim,2,5,15,25,species:wingull,species:wingull,SHYYYOLET,0,Kept: fits the Dune Sea as is.
 map:route115,skim,3,4,25,30,species:pelipper,species:pelipper,SHYYYO,0,Kept: fits the Dune Sea as is.
 map:route115,skim,4,1,25,30,species:pelipper,species:pelipper,SHYYYO,0,Kept: fits the Dune Sea as is.
-map:route115,old_rod,0,70,5,10,species:magikarp,species:wurmple,SANDGRUB,-5,"COLOFRY is a sea fish. SANDGRUB, the desert larva, is the weak catch a line pulls out of the sand."
-map:route115,old_rod,1,30,5,10,species:tentacool,species:trapinch,KRAYTHATCH,-45,"DIANOGLET is a sea creature. KRAYTHATCH, the krayt hatchling, digs its pits in the deep dunes."
-map:route115,good_rod,2,60,10,30,species:magikarp,species:wurmple,SANDGRUB,-5,"COLOFRY is a sea fish. SANDGRUB, the desert larva, is the weak catch a line pulls out of the sand."
-map:route115,good_rod,3,20,10,30,species:tentacool,species:trapinch,KRAYTHATCH,-45,"DIANOGLET is a sea creature. KRAYTHATCH, the krayt hatchling, digs its pits in the deep dunes."
-map:route115,good_rod,4,20,10,30,species:wailmer,species:gulpin,SARLACLET,-98,AIWHALET is an ocean calf. SARLACLET is the big thing that bites from below.
-map:route115,super_rod,5,40,25,30,species:wailmer,species:gulpin,SARLACLET,-98,AIWHALET is an ocean calf. SARLACLET is the big thing that bites from below.
-map:route115,super_rod,6,40,30,35,species:wailmer,species:gulpin,SARLACLET,-98,AIWHALET is an ocean calf. SARLACLET is the big thing that bites from below.
-map:route115,super_rod,7,15,20,25,species:wailmer,species:gulpin,SARLACLET,-98,AIWHALET is an ocean calf. SARLACLET is the big thing that bites from below.
-map:route115,super_rod,8,4,35,40,species:wailmer,species:gulpin,SARLACLET,-98,AIWHALET is an ocean calf. SARLACLET is the big thing that bites from below.
-map:route115,super_rod,9,1,40,45,species:wailmer,species:gulpin,SARLACLET,-98,AIWHALET is an ocean calf. SARLACLET is the big thing that bites from below.
-map:slateport-city,skim,0,60,5,35,species:tentacool,species:trapinch,KRAYTHATCH,-45,"DIANOGLET is a sea creature. KRAYTHATCH, the krayt hatchling, digs its pits in the deep dunes. The area has no Dune Sea cells now, so this table never runs."
-map:slateport-city,skim,1,30,10,30,species:wingull,species:wingull,SHYYYOLET,0,"Kept: fits the Dune Sea as is. The area has no Dune Sea cells now, so this table never runs."
-map:slateport-city,skim,2,5,15,25,species:wingull,species:wingull,SHYYYOLET,0,"Kept: fits the Dune Sea as is. The area has no Dune Sea cells now, so this table never runs."
-map:slateport-city,skim,3,4,25,30,species:pelipper,species:pelipper,SHYYYO,0,"Kept: fits the Dune Sea as is. The area has no Dune Sea cells now, so this table never runs."
-map:slateport-city,skim,4,1,25,30,species:pelipper,species:pelipper,SHYYYO,0,"Kept: fits the Dune Sea as is. The area has no Dune Sea cells now, so this table never runs."
-map:slateport-city,old_rod,0,70,5,10,species:magikarp,species:wurmple,SANDGRUB,-5,"COLOFRY is a sea fish. SANDGRUB, the desert larva, is the weak catch a line pulls out of the sand. The area has no Dune Sea cells now, so this table never runs."
-map:slateport-city,old_rod,1,30,5,10,species:tentacool,species:trapinch,KRAYTHATCH,-45,"DIANOGLET is a sea creature. KRAYTHATCH, the krayt hatchling, digs its pits in the deep dunes. The area has no Dune Sea cells now, so this table never runs."
-map:slateport-city,good_rod,2,60,10,30,species:magikarp,species:wurmple,SANDGRUB,-5,"COLOFRY is a sea fish. SANDGRUB, the desert larva, is the weak catch a line pulls out of the sand. The area has no Dune Sea cells now, so this table never runs."
-map:slateport-city,good_rod,3,20,10,30,species:tentacool,species:trapinch,KRAYTHATCH,-45,"DIANOGLET is a sea creature. KRAYTHATCH, the krayt hatchling, digs its pits in the deep dunes. The area has no Dune Sea cells now, so this table never runs."
-map:slateport-city,good_rod,4,20,10,30,species:wailmer,species:gulpin,SARLACLET,-98,"AIWHALET is an ocean calf. SARLACLET is the big thing that bites from below. The area has no Dune Sea cells now, so this table never runs."
-map:slateport-city,super_rod,5,40,25,30,species:wailmer,species:gulpin,SARLACLET,-98,"AIWHALET is an ocean calf. SARLACLET is the big thing that bites from below. The area has no Dune Sea cells now, so this table never runs."
-map:slateport-city,super_rod,6,40,30,35,species:wailmer,species:gulpin,SARLACLET,-98,"AIWHALET is an ocean calf. SARLACLET is the big thing that bites from below. The area has no Dune Sea cells now, so this table never runs."
-map:slateport-city,super_rod,7,15,20,25,species:wailmer,species:gulpin,SARLACLET,-98,"AIWHALET is an ocean calf. SARLACLET is the big thing that bites from below. The area has no Dune Sea cells now, so this table never runs."
-map:slateport-city,super_rod,8,4,35,40,species:wailmer,species:gulpin,SARLACLET,-98,"AIWHALET is an ocean calf. SARLACLET is the big thing that bites from below. The area has no Dune Sea cells now, so this table never runs."
-map:slateport-city,super_rod,9,1,40,45,species:wailmer,species:gulpin,SARLACLET,-98,"AIWHALET is an ocean calf. SARLACLET is the big thing that bites from below. The area has no Dune Sea cells now, so this table never runs."
-map:petalburg-city,skim,0,60,20,30,species:marill,species:sandshrew,DEWLING,50,"BLOOPRAT floats on water. DEWLING, the dewback hatchling, rolls through the sand. The area has no Dune Sea cells now, so this table never runs."
-map:petalburg-city,skim,1,30,10,20,species:marill,species:sandshrew,DEWLING,50,"BLOOPRAT floats on water. DEWLING, the dewback hatchling, rolls through the sand. The area has no Dune Sea cells now, so this table never runs."
-map:petalburg-city,skim,2,5,30,35,species:marill,species:sandshrew,DEWLING,50,"BLOOPRAT floats on water. DEWLING, the dewback hatchling, rolls through the sand. The area has no Dune Sea cells now, so this table never runs."
-map:petalburg-city,skim,3,4,5,10,species:marill,species:sandshrew,DEWLING,50,"BLOOPRAT floats on water. DEWLING, the dewback hatchling, rolls through the sand. The area has no Dune Sea cells now, so this table never runs."
-map:petalburg-city,skim,4,1,5,10,species:marill,species:sandshrew,DEWLING,50,"BLOOPRAT floats on water. DEWLING, the dewback hatchling, rolls through the sand. The area has no Dune Sea cells now, so this table never runs."
-map:petalburg-city,old_rod,0,70,5,10,species:magikarp,species:wurmple,SANDGRUB,-5,"COLOFRY is a sea fish. SANDGRUB, the desert larva, is the weak catch a line pulls out of the sand. The area has no Dune Sea cells now, so this table never runs."
-map:petalburg-city,old_rod,1,30,5,10,species:goldeen,species:gulpin,SARLACLET,-18,"HORNFIN is a river fish. SARLACLET, the young sarlacc, waits under the Dune Sea (rare, 1%). The area has no Dune Sea cells now, so this table never runs."
-map:petalburg-city,good_rod,2,60,10,30,species:magikarp,species:wurmple,SANDGRUB,-5,"COLOFRY is a sea fish. SANDGRUB, the desert larva, is the weak catch a line pulls out of the sand. The area has no Dune Sea cells now, so this table never runs."
-map:petalburg-city,good_rod,3,20,10,30,species:goldeen,species:gulpin,SARLACLET,-18,"HORNFIN is a river fish. SARLACLET, the young sarlacc, waits under the Dune Sea (rare, 1%). The area has no Dune Sea cells now, so this table never runs."
-map:petalburg-city,good_rod,4,20,10,30,species:corphish,species:corphish,CRABDROID,0,"Kept: fits the Dune Sea as is. The area has no Dune Sea cells now, so this table never runs."
-map:petalburg-city,super_rod,5,40,25,30,species:corphish,species:corphish,CRABDROID,0,"Kept: fits the Dune Sea as is. The area has no Dune Sea cells now, so this table never runs."
-map:petalburg-city,super_rod,6,40,30,35,species:corphish,species:corphish,CRABDROID,0,"Kept: fits the Dune Sea as is. The area has no Dune Sea cells now, so this table never runs."
-map:petalburg-city,super_rod,7,15,20,25,species:corphish,species:corphish,CRABDROID,0,"Kept: fits the Dune Sea as is. The area has no Dune Sea cells now, so this table never runs."
-map:petalburg-city,super_rod,8,4,35,40,species:corphish,species:corphish,CRABDROID,0,"Kept: fits the Dune Sea as is. The area has no Dune Sea cells now, so this table never runs."
-map:petalburg-city,super_rod,9,1,40,45,species:corphish,species:corphish,CRABDROID,0,"Kept: fits the Dune Sea as is. The area has no Dune Sea cells now, so this table never runs."
+map:slateport-city,skim,0,60,5,35,species:tentacool,species:trapinch,KRAYTHATCH,-45,"DIANOGLET is a sea creature. KRAYTHATCH, the krayt hatchling, digs its pits in the deep dunes. The new layout has no Dune Sea cells here, so in the finished game this table never runs."
+map:slateport-city,skim,1,30,10,30,species:wingull,species:wingull,SHYYYOLET,0,"Kept: fits the Dune Sea as is. The new layout has no Dune Sea cells here, so in the finished game this table never runs."
+map:slateport-city,skim,2,5,15,25,species:wingull,species:wingull,SHYYYOLET,0,"Kept: fits the Dune Sea as is. The new layout has no Dune Sea cells here, so in the finished game this table never runs."
+map:slateport-city,skim,3,4,25,30,species:pelipper,species:pelipper,SHYYYO,0,"Kept: fits the Dune Sea as is. The new layout has no Dune Sea cells here, so in the finished game this table never runs."
+map:slateport-city,skim,4,1,25,30,species:pelipper,species:pelipper,SHYYYO,0,"Kept: fits the Dune Sea as is. The new layout has no Dune Sea cells here, so in the finished game this table never runs."
+map:petalburg-city,skim,0,60,20,30,species:marill,species:sandshrew,DEWLING,50,"BLOOPRAT floats on water. DEWLING, the dewback hatchling, rolls through the sand. The new layout has no Dune Sea cells here, so in the finished game this table never runs."
+map:petalburg-city,skim,1,30,10,20,species:marill,species:corphish,CRABDROID,58,"CRABDROID, the small crab droid, scuttles over the sand. These three maps were its only home (by rod), and the Dune Sea has no fishing, so it moves to the 30% skim slot here. The new layout has no Dune Sea cells here, so in the finished game this table never runs."
+map:petalburg-city,skim,2,5,30,35,species:marill,species:sandshrew,DEWLING,50,"BLOOPRAT floats on water. DEWLING, the dewback hatchling, rolls through the sand. The new layout has no Dune Sea cells here, so in the finished game this table never runs."
+map:petalburg-city,skim,3,4,5,10,species:marill,species:sandshrew,DEWLING,50,"BLOOPRAT floats on water. DEWLING, the dewback hatchling, rolls through the sand. The new layout has no Dune Sea cells here, so in the finished game this table never runs."
+map:petalburg-city,skim,4,1,5,10,species:marill,species:sandshrew,DEWLING,50,"BLOOPRAT floats on water. DEWLING, the dewback hatchling, rolls through the sand. The new layout has no Dune Sea cells here, so in the finished game this table never runs."

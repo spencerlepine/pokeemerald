@@ -112,7 +112,7 @@ and field-effect ids are table indexes, so deleting a ghost keeps its slot (poin
 | `net_new.csv` | Net-new content with placeholder, dependencies and balance notes. |
 | `area_progression.csv` | Emerald's balance table (levels, badges, gating) with planet and new map titles. |
 | `species_habitats.csv` | Why each wild companion lives where Emerald's encounter tables put it. Tables are unchanged. |
-| `sand_skim.csv`, `dune_sea_encounters.csv` | SAND SKIM, the Dune Sea field move: which species learn it (from `mapping/sand_skim_rules.csv`) and Tatooine's sea and fishing slots on the Dune Sea (from `mapping/dune_sea_swaps.csv`). Built by `tools/sand_skim.py`; design in [`bible/NET_NEW_DESIGNS.md`](bible/NET_NEW_DESIGNS.md). |
+| `sand_skim.csv`, `dune_sea_encounters.csv` | SAND SKIM, the Dune Sea field move: which species learn it (from `mapping/sand_skim_rules.csv`) and the Dune Sea's own wild table on each Tatooine map (from `mapping/dune_sea_swaps.csv`; no fishing there). Built by `tools/sand_skim.py`, which also checks the tables in `../game` (`--install` writes them); design in [`bible/NET_NEW_DESIGNS.md`](bible/NET_NEW_DESIGNS.md). |
 | `build_info.csv`, `build_warnings.csv` | Inputs, counts, warnings (must be 0). |
 
 Unchanged game data (learnsets, parties, encounters, map events, scripts, flags) is not copied; it stays as is
