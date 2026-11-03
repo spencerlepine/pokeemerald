@@ -29,6 +29,87 @@ LilycoveCity_EventScript_SetWailmerMetatiles::
 	setmetatile 77, 17, METATILE_Lilycove_Wailmer2, TRUE
 	setmetatile 78, 17, METATILE_Lilycove_Wailmer3, TRUE
 	return
+@ People who used to be in the Showcase hall (removed 2026-11-03); they stand outside now.
+LilycoveCity_EventScript_ShowcaseReceptionist::
+	msgbox LilycoveCity_Text_ShowcaseReceptionist, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_ShowcaseLinkReceptionist::
+	msgbox LilycoveCity_Text_ShowcaseLinkReceptionist, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_BlendMaster::
+	msgbox LilycoveCity_Text_BlendMaster, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_PlazaMan::
+	msgbox LilycoveCity_Text_PlazaMan, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_PlazaTwin::
+	msgbox LilycoveCity_Text_PlazaTwin, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_PlazaPokefanF::
+	msgbox LilycoveCity_Text_PlazaPokefanF, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_Reporter::
+	msgbox LilycoveCity_Text_Reporter, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_PlazaBoy::
+	msgbox LilycoveCity_Text_PlazaBoy, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_PlazaGirl::
+	msgbox LilycoveCity_Text_PlazaGirl, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_Artist::
+	msgbox LilycoveCity_Text_Artist, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_LittleGirl::
+	msgbox LilycoveCity_Text_LittleGirl, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_Girl2::
+	msgbox LilycoveCity_Text_Girl2, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_FatMan2::
+	msgbox LilycoveCity_Text_FatMan2, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_NinjaBoy::
+	msgbox LilycoveCity_Text_NinjaBoy, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_BlackBelt::
+	msgbox LilycoveCity_Text_BlackBelt, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_Fisherman::
+	msgbox LilycoveCity_Text_Fisherman, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_Sailor3::
+	msgbox LilycoveCity_Text_Sailor3, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_Boy1::
+	msgbox LilycoveCity_Text_Boy1, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_Boy2::
+	msgbox LilycoveCity_Text_Boy2, MSGBOX_NPC
+	end
+
+LilycoveCity_EventScript_Girl3::
+	msgbox LilycoveCity_Text_Girl3, MSGBOX_NPC
+	end
+
 
 LilycoveCity_EventScript_BerryGentleman::
 	lock
@@ -752,4 +833,92 @@ LilycoveCity_Text_HoneymoonVowToSeeRarePokemon:
 	.string "So we were delighted to see a rare\n"
 	.string "COMPANION as soon as we arrived.\p"
 	.string "I mean, we are totally happy!$"
+
+LilycoveCity_Text_ShowcaseReceptionist:
+	.string "Welcome to CLOUD CITY!\p"
+	.string "The old hall here was torn down,\n"
+	.string "so now we greet visitors outside.\p"
+	.string "Enjoy the city breeze!$"
+
+LilycoveCity_Text_ShowcaseLinkReceptionist:
+	.string "I used to work at a counter inside.\p"
+	.string "Now I just point lost travelers\n"
+	.string "toward the GALLERIA and the\l"
+	.string "BACTA CENTER!$"
+
+LilycoveCity_Text_BlendMaster:
+	.string "Hohoho! I am known as the\n"
+	.string "BLEND MASTER.\p"
+	.string "These days I blend nothing but tea.\p"
+	.string "A fine cup and a fine view of the\n"
+	.string "clouds… That is all I need!$"
+
+LilycoveCity_Text_PlazaMan:
+	.string "This square is the best place in\n"
+	.string "CLOUD CITY to watch the sunset.$"
+
+LilycoveCity_Text_PlazaTwin:
+	.string "We play tag around the trees here.\n"
+	.string "You're it!$"
+
+LilycoveCity_Text_PlazaPokefanF:
+	.string "My COMPANION loves the open sky.\n"
+	.string "It can't stop looking at the clouds!$"
+
+LilycoveCity_Text_Reporter:
+	.string "I'm a reporter for the HOLONET.\p"
+	.string "I'm looking for a good story in\n"
+	.string "CLOUD CITY. Got any tips?$"
+
+LilycoveCity_Text_PlazaBoy:
+	.string "When I grow up, I want to battle\n"
+	.string "at the GRAND ARENA!$"
+
+LilycoveCity_Text_PlazaGirl:
+	.string "The flowers here grow so well up\n"
+	.string "above the clouds!$"
+
+LilycoveCity_Text_Artist:
+	.string "I'm painting the MUSEUM from out\n"
+	.string "here. The light is just right!$"
+
+LilycoveCity_Text_LittleGirl:
+	.string "I'm waiting for my mom.\n"
+	.string "She's shopping at the GALLERIA.$"
+
+LilycoveCity_Text_Girl2:
+	.string "Did you know the whole city floats\n"
+	.string "on a single giant repulsorlift?$"
+
+LilycoveCity_Text_FatMan2:
+	.string "I came to CLOUD CITY for the food.\n"
+	.string "I'm not leaving until I try it all!$"
+
+LilycoveCity_Text_NinjaBoy:
+	.string "I'm training my legs by walking\n"
+	.string "up and down all day!$"
+
+LilycoveCity_Text_BlackBelt:
+	.string "I train my COMPANIONS in the wind\n"
+	.string "of the cloud sea every morning. Hah!$"
+
+LilycoveCity_Text_Fisherman:
+	.string "They say you can't fish in a cloud\n"
+	.string "sea. I'm going to prove them wrong!$"
+
+LilycoveCity_Text_Sailor3:
+	.string "I fly cargo between CLOUD CITY and\n"
+	.string "the outer systems. Busy work!$"
+
+LilycoveCity_Text_Boy1:
+	.string "I'm exploring every corner of\n"
+	.string "CLOUD CITY today!$"
+
+LilycoveCity_Text_Boy2:
+	.string "My big sister says the best TRAINERS\n"
+	.string "all pass through CLOUD CITY.$"
+
+LilycoveCity_Text_Girl3:
+	.string "I like to sit here and watch the\n"
+	.string "ships come and go.$"
 
