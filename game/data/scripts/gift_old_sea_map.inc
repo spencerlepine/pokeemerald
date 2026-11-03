@@ -38,7 +38,7 @@ sText_MysteryGiftOldSeaMapForYou:
 	.string "Thank you for using the MYSTERY\n"
 	.string "GIFT System.\p"
 	.string "Let me confirm--you are {PLAYER}?\p"
-	.string "We received this WELLSPRING MAP\n"
+	.string "We received this SPRING CHART\n"
 	.string "addressed to you.$"
 
 sText_MysteryGiftOldSeaMapUseAtPort:

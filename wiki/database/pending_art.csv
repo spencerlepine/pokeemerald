@@ -1358,7 +1358,7 @@ graphics/items/icons/hard_stone.png,items,icons,graphics/items/icons/hard_stone.
 graphics/items/icons/heart_scale.png,items,icons,graphics/items/icons/heart_scale.png,24,24,,,item:heart-scale:item_icon,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/items/icons/helix_fossil.png,items,icons,graphics/items/icons/helix_fossil.png,24,24,,,item:helix-fossil:item_icon,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/items/icons/hm.png,items,icons,graphics/items/icons/hm.png,24,24,,,,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
-graphics/items/icons/hondew_berry.png,items,icons,graphics/items/icons/hondew_berry.png,24,24,,,item:hondew-berry:item_icon,DEWMELON FRUIT,,graphics/items/icons/dewmelon_fruit.png,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
+graphics/items/icons/hondew_berry.png,items,icons,graphics/items/icons/hondew_berry.png,24,24,,,item:hondew-berry:item_icon,DEWMEL FRUIT,,graphics/items/icons/dewmel_fruit.png,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/items/icons/hp_up.png,items,icons,graphics/items/icons/hp_up.png,24,24,,,item:hp-up:item_icon,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/items/icons/iapapa_berry.png,items,icons,graphics/items/icons/iapapa_berry.png,24,24,,,item:iapapa-berry:item_icon,PAPAWA FRUIT,,graphics/items/icons/papawa_fruit.png,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/items/icons/in_battle_herb.png,items,icons,graphics/items/icons/in_battle_herb.png,24,24,,,item:white-herb:item_icon|item:mental-herb:item_icon,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
@@ -1372,7 +1372,7 @@ graphics/items/icons/lax_incense.png,items,icons,graphics/items/icons/lax_incens
 graphics/items/icons/leaf_stone.png,items,icons,graphics/items/icons/leaf_stone.png,24,24,,,item:leaf-stone:item_icon,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/items/icons/leftovers.png,items,icons,graphics/items/icons/leftovers.png,24,24,,,item:leftovers:item_icon,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/items/icons/lemonade.png,items,icons,graphics/items/icons/lemonade.png,24,24,,,item:lemonade:item_icon,MEILOORUN,,graphics/items/icons/meiloorun.png,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
-graphics/items/icons/leppa_berry.png,items,icons,graphics/items/icons/leppa_berry.png,24,24,,,item:leppa-berry:item_icon,WROSHYR FRUIT,,graphics/items/icons/wroshyr_fruit.png,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
+graphics/items/icons/leppa_berry.png,items,icons,graphics/items/icons/leppa_berry.png,24,24,,,item:leppa-berry:item_icon,WROSH FRUIT,,graphics/items/icons/wrosh_fruit.png,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/items/icons/letter.png,items,icons,graphics/items/icons/letter.png,24,24,,,item:letter:item_icon,MESSAGE DISC,,graphics/items/icons/message_disc.png,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/items/icons/liechi_berry.png,items,icons,graphics/items/icons/liechi_berry.png,24,24,,,item:liechi-berry:item_icon,LIESHA FRUIT,,graphics/items/icons/liesha_fruit.png,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/items/icons/lift_key.png,items,icons,graphics/items/icons/lift_key.png,24,24,,,item:lift-key:item_icon,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
@@ -1390,7 +1390,7 @@ graphics/items/icons/magost_berry.png,items,icons,graphics/items/icons/magost_be
 graphics/items/icons/master_ball.png,items,icons,graphics/items/icons/master_ball.png,24,24,,,item:master-ball:item_icon,KYBER POD,,graphics/items/icons/kyber_pod.png,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/items/icons/max_revive.png,items,icons,graphics/items/icons/max_revive.png,24,24,,,item:max-revive:item_icon,BACTA REVIVE,,graphics/items/icons/bacta_revive.png,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/items/icons/mech_mail.png,items,icons,graphics/items/icons/mech_mail.png,24,24,,,item:mech-mail:item_icon,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
-graphics/items/icons/metal_coat.png,items,icons,graphics/items/icons/metal_coat.png,24,24,,,item:metal-coat:item_icon,DURASTEEL COAT,,graphics/items/icons/durasteel_coat.png,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
+graphics/items/icons/metal_coat.png,items,icons,graphics/items/icons/metal_coat.png,24,24,,,item:metal-coat:item_icon,PLASTEEL COAT,,graphics/items/icons/plasteel_coat.png,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/items/icons/metal_powder.png,items,icons,graphics/items/icons/metal_powder.png,24,24,,,item:metal-powder:item_icon,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/items/icons/meteorite.png,items,icons,graphics/items/icons/meteorite.png,24,24,,,item:meteorite:item_icon,METEORITE,,graphics/items/icons/meteorite.png,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/items/icons/miracle_seed.png,items,icons,graphics/items/icons/miracle_seed.png,24,24,,,item:miracle-seed:item_icon,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
@@ -1407,7 +1407,7 @@ graphics/items/icons/nugget.png,items,icons,graphics/items/icons/nugget.png,24,2
 graphics/items/icons/oaks_parcel.png,items,icons,graphics/items/icons/oaks_parcel.png,24,24,,,item:oaks-parcel:item_icon,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/items/icons/old_amber.png,items,icons,graphics/items/icons/old_amber.png,24,24,,,item:old-amber:item_icon,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/items/icons/old_rod.png,items,icons,graphics/items/icons/old_rod.png,24,24,,,item:old-rod:item_icon,OLD ROD,,graphics/items/icons/old_rod.png,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
-graphics/items/icons/old_sea_map.png,items,icons,graphics/items/icons/old_sea_map.png,24,24,,,item:old-sea-map:item_icon,WELLSPRING MAP,,graphics/items/icons/wellspring_map.png,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
+graphics/items/icons/old_sea_map.png,items,icons,graphics/items/icons/old_sea_map.png,24,24,,,item:old-sea-map:item_icon,SPRING CHART,,graphics/items/icons/spring_chart.png,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/items/icons/oran_berry.png,items,icons,graphics/items/icons/oran_berry.png,24,24,,,item:oran-berry:item_icon,HUBBA FRUIT,,graphics/items/icons/hubba_fruit.png,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/items/icons/orange_mail.png,items,icons,graphics/items/icons/orange_mail.png,24,24,,,item:orange-mail:item_icon,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/items/icons/orb.png,items,icons,graphics/items/icons/orb.png,24,24,,,item:red-orb:item_icon|item:blue-orb:item_icon,RED KYBER,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
@@ -1473,10 +1473,10 @@ graphics/items/icons/soothe_bell.png,items,icons,graphics/items/icons/soothe_bel
 graphics/items/icons/soul_dew.png,items,icons,graphics/items/icons/soul_dew.png,24,24,,,item:soul-dew:item_icon,KYBER DEW,,graphics/items/icons/kyber_dew.png,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/items/icons/spell_tag.png,items,icons,graphics/items/icons/spell_tag.png,24,24,,,item:spell-tag:item_icon,SPIRIT TAG,,graphics/items/icons/spirit_tag.png,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/items/icons/spelon_berry.png,items,icons,graphics/items/icons/spelon_berry.png,24,24,,,item:spelon-berry:item_icon,SPELNA FRUIT,,graphics/items/icons/spelna_fruit.png,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
-graphics/items/icons/ss_ticket.png,items,icons,graphics/items/icons/ss_ticket.png,24,24,,,item:ss-ticket:item_icon,STARLINER PASS,,graphics/items/icons/starliner_pass.png,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
+graphics/items/icons/ss_ticket.png,items,icons,graphics/items/icons/ss_ticket.png,24,24,,,item:ss-ticket:item_icon,LINER PASS,,graphics/items/icons/liner_pass.png,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/items/icons/star_piece.png,items,icons,graphics/items/icons/star_piece.png,24,24,,,item:star-piece:item_icon,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/items/icons/stardust.png,items,icons,graphics/items/icons/stardust.png,24,24,,,item:stardust:item_icon,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
-graphics/items/icons/starf_berry.png,items,icons,graphics/items/icons/starf_berry.png,24,24,,,item:starf-berry:item_icon,STARFALL FRUIT,,graphics/items/icons/starfall_fruit.png,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
+graphics/items/icons/starf_berry.png,items,icons,graphics/items/icons/starf_berry.png,24,24,,,item:starf-berry:item_icon,NOVA FRUIT,,graphics/items/icons/nova_fruit.png,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/items/icons/status_heal.png,items,icons,graphics/items/icons/status_heal.png,24,24,,,item:burn-heal:item_icon|item:ice-heal:item_icon|item:awakening:item_icon|item:paralyze-heal:item_icon,BURN GEL,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/items/icons/stick.png,items,icons,graphics/items/icons/stick.png,24,24,,,item:stick:item_icon,REED STICK,,graphics/items/icons/reed_stick.png,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/items/icons/storage_key.png,items,icons,graphics/items/icons/storage_key.png,24,24,,,item:storage-key:item_icon,STORAGE KEY,,graphics/items/icons/storage_key.png,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
@@ -1501,7 +1501,7 @@ graphics/items/icons/vitamin.png,items,icons,graphics/items/icons/vitamin.png,24
 graphics/items/icons/vs_seeker.png,items,icons,graphics/items/icons/vs_seeker.png,24,24,,,item:vs-seeker:item_icon,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/items/icons/wailmer_pail.png,items,icons,graphics/items/icons/wailmer_pail.png,24,24,,,item:wailmer-pail:item_icon,WATER CANTEEN,,graphics/items/icons/water_canteen.png,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/items/icons/water_stone.png,items,icons,graphics/items/icons/water_stone.png,24,24,,,item:water-stone:item_icon,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
-graphics/items/icons/watmel_berry.png,items,icons,graphics/items/icons/watmel_berry.png,24,24,,,item:watmel-berry:item_icon,DUNEMEL FRUIT,,graphics/items/icons/dunemel_fruit.png,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
+graphics/items/icons/watmel_berry.png,items,icons,graphics/items/icons/watmel_berry.png,24,24,,,item:watmel-berry:item_icon,DUNMEL FRUIT,,graphics/items/icons/dunmel_fruit.png,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/items/icons/wave_mail.png,items,icons,graphics/items/icons/wave_mail.png,24,24,,,item:wave-mail:item_icon,,,,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/items/icons/wepear_berry.png,items,icons,graphics/items/icons/wepear_berry.png,24,24,,,item:wepear-berry:item_icon,WEPA FRUIT,,graphics/items/icons/wepa_fruit.png,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED
 graphics/items/icons/wiki_berry.png,items,icons,graphics/items/icons/wiki_berry.png,24,24,,,item:wiki-berry:item_icon,KASHA FRUIT,,graphics/items/icons/kasha_fruit.png,PENDING_ART,,,HOTSWAP,,,,,,NOT_STARTED

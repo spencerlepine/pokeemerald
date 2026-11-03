@@ -559,7 +559,7 @@ const struct BattleFrontierTrainer gSlateportBattleTentTrainers[NUM_BATTLE_TENT_
     },
     [SLATEPORT_TENT_TRAINER_RODOLFO] = {
         .facilityClass = FACILITY_CLASS_RICH_BOY,
-        .trainerName = _("RODOLFO"),
+        .trainerName = _("RARISSA"),
         .speechBefore = {EC_WORD_GO, EC_WORD_GET, EC_WORD_A, EC_POKEMON(WHISCASH), EC_WORD_FOR, EC_WORD_ME},
         .speechWin = {EC_WORD_AWW, EC_WORD_YOU, EC_WORD_DON_T, EC_WORD_HAVE, EC_WORD_A, EC_POKEMON(WHISCASH)},
         .speechLose = {EC_WORD_PLEASE, EC_WORD_I, EC_WORD_NEED, EC_WORD_A, EC_POKEMON(WHISCASH), EC_WORD_BADLY},
@@ -607,7 +607,7 @@ const struct BattleFrontierTrainer gSlateportBattleTentTrainers[NUM_BATTLE_TENT_
     },
     [SLATEPORT_TENT_TRAINER_KYLER] = {
         .facilityClass = FACILITY_CLASS_GUITARIST,
-        .trainerName = _("KYLER"),
+        .trainerName = _("KASHISA"),
         .speechBefore = {EC_WORD_ELLIPSIS_ELLIPSIS_ELLIPSIS, EC_WORD_ELLIPSIS_ELLIPSIS_ELLIPSIS, EC_WORD_ELLIPSIS_ELLIPSIS_ELLIPSIS, EC_WORD_ELLIPSIS_ELLIPSIS_ELLIPSIS, EC_WORD_ELLIPSIS_ELLIPSIS_ELLIPSIS, EC_WORD_QUES},
         .speechWin = {EC_WORD_ELLIPSIS_ELLIPSIS_ELLIPSIS, EC_WORD_ELLIPSIS_ELLIPSIS_ELLIPSIS, EC_WORD_ELLIPSIS_ELLIPSIS_ELLIPSIS, EC_WORD_ELLIPSIS_ELLIPSIS_ELLIPSIS, EC_WORD_ELLIPSIS_ELLIPSIS_ELLIPSIS, EC_WORD_YAY},
         .speechLose = {EC_WORD_ELLIPSIS_ELLIPSIS_ELLIPSIS, EC_WORD_ELLIPSIS_ELLIPSIS_ELLIPSIS, EC_WORD_ELLIPSIS_ELLIPSIS_ELLIPSIS, EC_WORD_ELLIPSIS_ELLIPSIS_ELLIPSIS, EC_WORD_ELLIPSIS_ELLIPSIS_ELLIPSIS, EC_WORD_WOW},
@@ -639,7 +639,7 @@ const struct BattleFrontierTrainer gSlateportBattleTentTrainers[NUM_BATTLE_TENT_
     },
     [SLATEPORT_TENT_TRAINER_REGGIE] = {
         .facilityClass = FACILITY_CLASS_POKEFAN_M,
-        .trainerName = _("REGGIE"),
+        .trainerName = _("RANELLE"),
         .speechBefore = {EC_WORD_POKEMON, EC_WORD_COME, EC_WORD_BEFORE, EC_WORD_MONEY, EC_WORD_OR, EC_WORD_FAMILY},
         .speechWin = {EC_WORD_THAT_S, EC_WORD_WHAT, EC_WORD_IS, EC_WORD_MAKING, EC_WORD_ME, EC_WORD_STRONG},
         .speechLose = {EC_WORD_THAT_S, EC_WORD_WHY, EC_WORD_I_AM, EC_WORD_SO, EC_WORD_THICK, EC_WORD_ELLIPSIS},
@@ -2597,7 +2597,7 @@ const struct BattleFrontierTrainer gFallarborBattleTentTrainers[NUM_BATTLE_TENT_
     },
     [FALLARBOR_TENT_TRAINER_BRITNEY] = {
         .facilityClass = FACILITY_CLASS_EXPERT_F,
-        .trainerName = _("BRITNEY"),
+        .trainerName = _("BERKISA"),
         .speechBefore = {EC_WORD_IT, EC_WORD_SEEMS, EC_WORD_THAT, EC_WORD_YOU_RE, EC_WORD_QUITE, EC_WORD_GOOD},
         .speechWin = {EC_WORD_YOU_RE, EC_WORD_A, EC_WORD_LUKEWARM, EC_WORD_TALENT, EC_WORD_AT, EC_WORD_BEST},
         .speechLose = {EC_WORD_YOU_RE, EC_WORD_A, EC_WORD_COOL, EC_WORD_HERO, EC_WORD_AT, EC_WORD_THIS},
@@ -2613,7 +2613,7 @@ const struct BattleFrontierTrainer gFallarborBattleTentTrainers[NUM_BATTLE_TENT_
     },
     [FALLARBOR_TENT_TRAINER_TANNOR] = {
         .facilityClass = FACILITY_CLASS_FISHERMAN,
-        .trainerName = _("TANNOR"),
+        .trainerName = _("TUSHISA"),
         .speechBefore = {EC_WORD_YOU, EC_WORD_HAVE, EC_WORD_GOT, EC_WORD_TO, EC_WORD_BE, EC_WORD_JOKING},
         .speechWin = {EC_WORD_YOU_RE, EC_WORD_THE, EC_WORD_BEST, EC_WORD_AT, EC_WORD_BEING, EC_WORD_FUNNY},
         .speechLose = {EC_WORD_YOU, EC_WORD_WEREN_T, EC_WORD_BEING, EC_WORD_FUNNY, EC_WORD_AT, EC_WORD_ALL},

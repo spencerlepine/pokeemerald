@@ -49,7 +49,7 @@ item:mach-bike,SWOOP BIKE,HOTSWAP,DONE,PENDING_ART,original,Brown hover-bike bui
 item:acro-bike,SPEEDER BIKE,HOTSWAP,DONE,PENDING_ART,original,White hover-bike built for tricks and jumps (Acro Bike).,
 item:coin-case,CHIP CASE,HOTSWAP,DONE,PENDING_ART,original,Holds sabacc chips.,
 item:itemfinder,SCANNER,HOTSWAP,DONE,PENDING_ART,original,Detects hidden items.,
-item:ss-ticket,STARLINER PASS,HOTSWAP,DONE,PENDING_ART,original,Boarding pass for the STAR TIDAL.,
+item:ss-ticket,LINER PASS,HOTSWAP,DONE,PENDING_ART,original,Boarding pass for the STAR TIDAL.,
 item:contest-pass,SHOWCASE PASS,HOTSWAP,DONE,PENDING_ART,original,Entry to Cloud City Showcases.,
 item:wailmer-pail,WATER CANTEEN,HOTSWAP,DONE,PENDING_ART,original,Waters berry plants.,
 item:devon-goods,ORGANA PARTS,HOTSWAP,DONE,PENDING_ART,original,Bongo-sub parts made by House Organa.,
@@ -68,7 +68,7 @@ item:devon-scope,ORGANA SCOPE,HOTSWAP,DONE,PENDING_ART,original,Reveals the invi
 item:magma-emblem,CODE CYLINDER,HOTSWAP,DONE,PENDING_ART,original,Imperial code cylinder; opens Fortress Vader.,
 item:mystic-ticket,MORTIS PASS,HOTSWAP,DONE,PENDING_ART,original,Pass to the Mortis Gate.,
 item:aurora-ticket,ATOLLON PASS,HOTSWAP,DONE,PENDING_ART,original,Pass to Atollon.,
-item:old-sea-map,WELLSPRING MAP,HOTSWAP,DONE,PENDING_ART,original,Map to the Wellspring of Life.,
+item:old-sea-map,SPRING CHART,HOTSWAP,DONE,PENDING_ART,original,Map to the Wellspring of Life.,
 item:basement-key,BASEMENT KEY,HOTSWAP,DONE,PENDING_ART,original,,
 item:storage-key,STORAGE KEY,HOTSWAP,DONE,PENDING_ART,original,,
 item:room-1-key,RM. 1 KEY,HOTSWAP,DONE,PENDING_ART,original,,
@@ -85,7 +85,7 @@ item:everstone,CARBONITE,HOTSWAP,DONE,PENDING_ART,original,Holder will not evolv
 item:kings-rock,HUTT CROWN,HOTSWAP,DONE,PENDING_ART,original,May make the foe flinch.,
 item:dragon-scale,KRAYT SCALE,HOTSWAP,DONE,PENDING_ART,original,,
 item:up-grade,DROID UPGRADE,HOTSWAP,DONE,PENDING_ART,original,Upgrades a 3PO UNIT into a TC UNIT.,
-item:metal-coat,DURASTEEL COAT,HOTSWAP,DONE,PENDING_ART,original,,
+item:metal-coat,PLASTEEL COAT,HOTSWAP,DONE,PENDING_ART,original,,
 item:deep-sea-tooth,DEEPSEA TOOTH,HOTSWAP,DONE,PENDING_ART,original,,
 item:deep-sea-scale,DEEPSEA SCALE,HOTSWAP,DONE,PENDING_ART,original,,
 item:light-ball,ION CELL,HOTSWAP,DONE,PENDING_ART,original,Boosts IONRAT.,
@@ -139,7 +139,7 @@ item:shoal-salt,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn i
 item:shoal-shell,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
 item:red-shard,RED CRYSTAL,HOTSWAP,DONE,PENDING_ART,original,Crystal fragment traded for evolution stones.,Renamed so it never clashes with arena SHARDS (badges).
 item:blue-shard,BLUE CRYSTAL,HOTSWAP,DONE,PENDING_ART,original,Crystal fragment traded for evolution stones.,Renamed so it never clashes with arena SHARDS (badges).
-item:yellow-shard,YELLOW CRYSTAL,HOTSWAP,DONE,PENDING_ART,original,Crystal fragment traded for evolution stones.,Renamed so it never clashes with arena SHARDS (badges).
+item:yellow-shard,AMBER CRYSTAL,HOTSWAP,DONE,PENDING_ART,original,Crystal fragment traded for evolution stones.,Renamed so it never clashes with arena SHARDS (badges).
 item:green-shard,GREEN CRYSTAL,HOTSWAP,DONE,PENDING_ART,original,Crystal fragment traded for evolution stones.,Renamed so it never clashes with arena SHARDS (badges).
 item:bright-powder,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
 item:white-herb,,KEEP,DONE,PENDING_ART,,,Generic name kept; icon still redrawn in Step 5.
@@ -177,7 +177,7 @@ item:chesto-berry,MUJA FRUIT,HOTSWAP,DONE,PENDING_ART,canon:Muja fruit,Fruit fro
 item:pecha-berry,PALLIE FRUIT,HOTSWAP,DONE,PENDING_ART,canon:Pallie fruit,Fruit from Tatooine. Same effect as the Emerald berry.,
 item:rawst-berry,SHUURA FRUIT,HOTSWAP,DONE,PENDING_ART,canon:Shuura fruit,Fruit from Naboo. Same effect as the Emerald berry.,
 item:aspear-berry,BLBA FRUIT,HOTSWAP,DONE,PENDING_ART,canon:Blba tree,Fruit from Dantooine. Same effect as the Emerald berry.,
-item:leppa-berry,WROSHYR FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Kashyyyk (wroshyr seed pod). Same effect as the Emerald berry.,
+item:leppa-berry,WROSH FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Kashyyyk (wroshyr seed pod). Same effect as the Emerald berry.,
 item:oran-berry,HUBBA FRUIT,HOTSWAP,DONE,PENDING_ART,canon:Hubba gourd,Fruit from Tatooine. Same effect as the Emerald berry.,
 item:persim-berry,SAPIR FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Endor. Same effect as the Emerald berry.,
 item:lum-berry,ILUM FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Ilum (frost fruit that grows near kyber). Same effect as the Emerald berry.,
@@ -195,7 +195,7 @@ item:pinap-berry,PINJA FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Yavin 
 item:pomeg-berry,POMOGO FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Sullust. Same effect as the Emerald berry.,
 item:kelpsy-berry,KELPA FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Kamino. Same effect as the Emerald berry.,
 item:qualot-berry,QUALA FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Kashyyyk. Same effect as the Emerald berry.,
-item:hondew-berry,DEWMELON FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Tatooine. Same effect as the Emerald berry.,
+item:hondew-berry,DEWMEL FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Tatooine. Same effect as the Emerald berry.,
 item:grepa-berry,GRAVA FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Bespin. Same effect as the Emerald berry.,
 item:tamato-berry,TAMATA FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Sullust. Same effect as the Emerald berry.,
 item:cornn-berry,CORNA FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Tatooine. Same effect as the Emerald berry.,
@@ -204,7 +204,7 @@ item:rabuta-berry,RABUTO FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Endo
 item:nomel-berry,NOMELA FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Hoth. Same effect as the Emerald berry.,
 item:spelon-berry,SPELNA FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Mustafar. Same effect as the Emerald berry.,
 item:pamtre-berry,PAMTRA FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Felucia. Same effect as the Emerald berry.,
-item:watmel-berry,DUNEMEL FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Tatooine. Same effect as the Emerald berry.,
+item:watmel-berry,DUNMEL FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Tatooine. Same effect as the Emerald berry.,
 item:durin-berry,DURA FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Sullust. Same effect as the Emerald berry.,
 item:belue-berry,BELUA FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Kamino. Same effect as the Emerald berry.,
 item:liechi-berry,LIESHA FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Dagobah. Same effect as the Emerald berry.,
@@ -213,5 +213,5 @@ item:salac-berry,SALAKA FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Feluc
 item:petaya-berry,PETAJA FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Yavin 4. Same effect as the Emerald berry.,
 item:apicot-berry,APIKA FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Hoth. Same effect as the Emerald berry.,
 item:lansat-berry,LANSA FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Ilum. Same effect as the Emerald berry.,
-item:starf-berry,STARFALL FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Sullust (grows where meteorites land). Same effect as the Emerald berry.,
+item:starf-berry,NOVA FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from Sullust (grows where meteorites land). Same effect as the Emerald berry.,
 item:enigma-berry,WHILLS FRUIT,HOTSWAP,DONE,PENDING_ART,original,Fruit from unknown (event fruit). Same effect as the Emerald berry.,

@@ -19,7 +19,7 @@ EventTicket_Text_BrineyLetsSail:
 	.string "Well, let me make things right.\p"
 	.string "We'll fly right away, of course!\p"
 	.string "Let's find this isle on\n"
-	.string "this WELLSPRING MAP!$"
+	.string "this SPRING CHART!$"
 
 EventTicket_Text_OddTicketGetOnBoard:
 	.string "Is it you who brought that odd\n"

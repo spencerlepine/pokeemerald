@@ -390,7 +390,7 @@ PlayersHouse_1F_Text_TicketFromBrineyCameForYou:
 	.string "HAN SOLO.$"
 
 PlayersHouse_1F_Text_PortsInSlateportLilycove:
-	.string "DAD: Hm, a STARLINER PASS?\p"
+	.string "DAD: Hm, a LINER PASS?\p"
 	.string "If I recall, starliners leave from\n"
 	.string "MOS EISLEY and CLOUD CITY.$"
 

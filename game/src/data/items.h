@@ -659,7 +659,7 @@ const struct Item gItems[] =
 
     [ITEM_YELLOW_SHARD] =
     {
-        .name = _("YELLOW SHARD"),
+        .name = _("AMBER CRYSTAL"),
         .itemId = ITEM_YELLOW_SHARD,
         .price = 200,
         .description = sYellowShardDesc,
@@ -1688,7 +1688,7 @@ const struct Item gItems[] =
 
     [ITEM_LEPPA_BERRY] =
     {
-        .name = _("WROSHYR FRUIT"),
+        .name = _("WROSH FRUIT"),
         .itemId = ITEM_LEPPA_BERRY,
         .price = 20,
         .holdEffect = HOLD_EFFECT_RESTORE_PP,
@@ -1914,7 +1914,7 @@ const struct Item gItems[] =
 
     [ITEM_HONDEW_BERRY] =
     {
-        .name = _("HONDEW BERRY"),
+        .name = _("DEWMEL FRUIT"),
         .itemId = ITEM_HONDEW_BERRY,
         .price = 20,
         .description = sHondewBerryDesc,
@@ -2013,7 +2013,7 @@ const struct Item gItems[] =
 
     [ITEM_WATMEL_BERRY] =
     {
-        .name = _("DUNEMEL FRUIT"),
+        .name = _("DUNMEL FRUIT"),
         .itemId = ITEM_WATMEL_BERRY,
         .price = 20,
         .description = sWatmelBerryDesc,
@@ -2124,7 +2124,7 @@ const struct Item gItems[] =
 
     [ITEM_STARF_BERRY] =
     {
-        .name = _("STARF BERRY"),
+        .name = _("NOVA FRUIT"),
         .itemId = ITEM_STARF_BERRY,
         .price = 20,
         .holdEffect = HOLD_EFFECT_RANDOM_STAT_UP,
@@ -2431,7 +2431,7 @@ const struct Item gItems[] =
 
     [ITEM_METAL_COAT] =
     {
-        .name = _("METAL COAT"),
+        .name = _("PLASTEEL COAT"),
         .itemId = ITEM_METAL_COAT,
         .price = 100,
         .holdEffect = HOLD_EFFECT_STEEL_POWER,
@@ -3222,7 +3222,7 @@ const struct Item gItems[] =
 
     [ITEM_SS_TICKET] =
     {
-        .name = _("S.S. TICKET"),
+        .name = _("LINER PASS"),
         .itemId = ITEM_SS_TICKET,
         .price = 0,
         .description = sSSTicketDesc,
@@ -4527,7 +4527,7 @@ const struct Item gItems[] =
 
     [ITEM_OLD_SEA_MAP] =
     {
-        .name = _("OLD SEA MAP"),
+        .name = _("SPRING CHART"),
         .itemId = ITEM_OLD_SEA_MAP,
         .price = 0,
         .description = sOldSeaMapDesc,

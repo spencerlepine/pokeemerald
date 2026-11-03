@@ -1,5 +1,5 @@
 text_id,sw_text_raw,notes
-BattleFrontier_OutsideWest_Text_MayISeeYourTicket,"Hello, are you here for the starliner?\nMay I see your STARLINER PASS?$",the arena's dock is a starliner pad (STAR TIDAL)
+BattleFrontier_OutsideWest_Text_MayISeeYourTicket,"Hello, are you here for the starliner?\nMay I see your LINER PASS?$",the arena's dock is a starliner pad (STAR TIDAL)
 BattleFrontier_OutsideWest_Text_MustHaveTicketToBoard,{PLAYER} doesn't have the STARLINER\nPASS…\pI'm terribly sorry.\pYou must have a PASS to board\nthe starliner.$,
 BattleFrontier_OutsideWest_Text_PleaseBoardFerry,Please board the starliner and wait\nfor departure.$,
 BattleFrontier_OutsideWest_Text_GotSeasickOnWayHere,"I wanted to take a challenge as soon\nas I arrived here.\pBut on the way, I got space-sick…\nUrrrrp…$",

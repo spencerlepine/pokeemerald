@@ -308,7 +308,7 @@ BattleFrontier_OutsideWest_Text_ThisIsBattleTower:
 
 BattleFrontier_OutsideWest_Text_MayISeeYourTicket:
 	.string "Hello, are you here for the starliner?\n"
-	.string "May I see your STARLINER PASS?$"
+	.string "May I see your LINER PASS?$"
 
 BattleFrontier_OutsideWest_Text_MustHaveTicketToBoard:
 	.string "{PLAYER} doesn't have the STARLINER\n"

@@ -17034,7 +17034,7 @@ text|gText_500CoinsAndPrice,texts.csv,text:ui_string,gText_500CoinsAndPrice,HOTS
 text|gText_Excellent2,texts.csv,text:ui_string,gText_Excellent2,KEEP,replace the text with sw_text_raw,src/strings.c,673,,,DONE,
 text|gText_NotSoGood,texts.csv,text:ui_string,gText_NotSoGood,KEEP,replace the text with sw_text_raw,src/strings.c,674,,,DONE,
 text|gText_RedShard,texts.csv,text:ui_string,gText_RedShard,HOTSWAP,replace the text with sw_text_raw,src/strings.c,675,,,DONE,UI string 12 px wider than Emerald's: make its window fit
-text|gText_YellowShard,texts.csv,text:ui_string,gText_YellowShard,HOTSWAP,replace the text with sw_text_raw,src/strings.c,676,,,DONE,UI string 12 px wider than Emerald's: make its window fit
+text|gText_YellowShard,texts.csv,text:ui_string,gText_YellowShard,HOTSWAP,replace the text with sw_text_raw,src/strings.c,676,,,DONE,UI string 6 px wider than Emerald's: make its window fit
 text|gText_BlueShard,texts.csv,text:ui_string,gText_BlueShard,HOTSWAP,replace the text with sw_text_raw,src/strings.c,677,,,DONE,UI string 12 px wider than Emerald's: make its window fit
 text|gText_GreenShard,texts.csv,text:ui_string,gText_GreenShard,HOTSWAP,replace the text with sw_text_raw,src/strings.c,678,,,DONE,UI string 12 px wider than Emerald's: make its window fit
 text|gText_BattleFrontier,texts.csv,text:ui_string,gText_BattleFrontier,HOTSWAP,replace the text with sw_text_raw,src/strings.c,679,,,DONE,
