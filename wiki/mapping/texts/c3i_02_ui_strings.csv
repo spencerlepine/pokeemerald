@@ -27,7 +27,7 @@ gText_PlayersPC,{PLAYER}'s TERMINAL,
 gText_NotPkmnOtherTrainerWants,That isn't the kind of COMPANION\nthat the other TRAINER wants.,
 gText_MarkYourPkmn,Mark your COMPANION.,
 gEasyChatGroupName_Pokemon2,COMPANIONS2,Easy Chat group name; second COMPANION word list
-gText_ProfBirchMatchCallDesc,COMPANION PROF.,{PKMN} glyph token -> plain word (glossary)
+gText_ProfBirchMatchCallDesc,{COMPANION} PROF.,"{PKMN} glyph -> {COMPANION} glyph (tools/glyph-maker), 2026-11-03"
 gText_NothingToCut,There's nothing to slice here.,
 gText_DexSortNumericalDescription,COMPANIONS are listed by their\nnumber.,
 gText_DexSortAtoZDescription,Seen and owned COMPANIONS are listed\nalphabetically.,
@@ -405,7 +405,7 @@ gText_MoveToWhere,Move to where?,"reviewed, no change needed"
 gText_TeachWhichPokemon,Teach which COMPANION?,reviewed AUTO draft
 gText_UseOnWhichPokemon,Use on which COMPANION?,reviewed AUTO draft
 gText_GiveToWhichPokemon,Give to which COMPANION?,reviewed AUTO draft
-gText_DoWhatWithPokemon,Do what with this COMPANION?,reviewed AUTO draft
+gText_DoWhatWithPokemon,Do what with this {COMPANION}?,"{PKMN} glyph -> {COMPANION} glyph (tools/glyph-maker), 2026-11-03"
 gText_CantSurfHere,You can't SURF here.,"reviewed, no change needed"
 gText_AlreadySurfing,You're already SURFING.,"reviewed, no change needed"
 gText_CantUseHere,Can't use that here.,"reviewed, no change needed"
@@ -729,13 +729,13 @@ gText_JoinGroup,JOIN GROUP,"reviewed, no change needed"
 gText_TwoStyles,TWO STYLES,"reviewed, no change needed"
 gText_Lv50_3,LV. 50,"reviewed, no change needed"
 gText_OpenLevel2,OPEN LEVEL,"reviewed, no change needed"
-gText_MonTypeAndNo,COMPANION TYPE & NO.,reviewed AUTO draft
+gText_MonTypeAndNo,{COMPANION} TYPE & NO.,"{PKMN} glyph -> {COMPANION} glyph (tools/glyph-maker), 2026-11-03"
 gText_HoldItems,HOLD ITEMS,"reviewed, no change needed"
 gText_Symbols2,SYMBOLS,"reviewed, no change needed"
 gText_Record3,RECORD,"reviewed, no change needed"
 gText_BattlePts,BATTLE PTS,"reviewed, no change needed"
 gText_TowerInfo,TOWER INFO,"reviewed, no change needed"
-gText_BattleMon,BATTLE COMPANION,reviewed AUTO draft
+gText_BattleMon,BATTLE {COMPANION},"{PKMN} glyph -> {COMPANION} glyph (tools/glyph-maker), 2026-11-03"
 gText_BattleSalon,BATTLE SALON,"reviewed, no change needed"
 gText_MultiLink2,MULTI-LINK,"reviewed, no change needed"
 gText_BattleRules,BATTLE RULES,"reviewed, no change needed"
@@ -1571,7 +1571,7 @@ gText_Deselect,DESELECT,"reviewed, no change needed"
 gText_TheseThreePkmnOkay,Are these three COMPANIONS OK?,reviewed AUTO draft
 gText_Yes2,YES,"reviewed, no change needed"
 gText_No2,NO,"reviewed, no change needed"
-gText_CantSelectSamePkmn,Can't select same COMPANION.,reviewed AUTO draft
+gText_CantSelectSamePkmn,Can't select same {COMPANION}.,"{PKMN} glyph -> {COMPANION} glyph (tools/glyph-maker), 2026-11-03"
 gText_PkmnSwap,COMPANION SWAP,reviewed AUTO draft
 gText_SelectPkmnToSwap,Select COMPANION to swap.,reviewed AUTO draft
 gText_SelectPkmnToAccept,Select COMPANION to accept.,reviewed AUTO draft
@@ -1581,13 +1581,13 @@ gText_Rechoose,RECHOOSE,"reviewed, no change needed"
 gText_QuitSwapping,Quit swapping?,"reviewed, no change needed"
 gText_Yes3,YES,"reviewed, no change needed"
 gText_No3,NO,"reviewed, no change needed"
-gText_PkmnForSwap,COMPANION FOR SWAP,reviewed AUTO draft
+gText_PkmnForSwap,{COMPANION} FOR SWAP,"{PKMN} glyph -> {COMPANION} glyph (tools/glyph-maker), 2026-11-03"
 gText_Cancel3,CANCEL,"reviewed, no change needed"
 gText_Swap2,SWAP,"reviewed, no change needed"
 gText_Accept,ACCEPT,"reviewed, no change needed"
 gText_AcceptThisPkmn,Accept this COMPANION?,reviewed AUTO draft
 gText_4Spaces,    ,"reviewed, no change needed"
-gText_SamePkmnInPartyAlready,Same COMPANION in party already.,reviewed AUTO draft
+gText_SamePkmnInPartyAlready,Same {COMPANION} in party already.,"{PKMN} glyph -> {COMPANION} glyph (tools/glyph-maker), 2026-11-03"
 gText_DecimalPoint,.,"reviewed, no change needed"
 gText_SavingPlayer,PLAYER,"reviewed, no change needed"
 gText_SavingBadges,SHARDS,reviewed AUTO draft
@@ -1719,7 +1719,7 @@ gText_StevenMatchCallName,LEIA,reviewed AUTO draft
 gText_MayBrendanMatchCallDesc,RAD NEIGHBOR,"reviewed, no change needed"
 gText_NormanMatchCallDesc,RELIABLE ONE,"reviewed, no change needed"
 gText_MomMatchCallDesc,CALM & KIND,"reviewed, no change needed"
-gText_WallyMatchCallDesc,COMPANION LOVER,reviewed AUTO draft
+gText_WallyMatchCallDesc,{COMPANION} LOVER,"{PKMN} glyph -> {COMPANION} glyph (tools/glyph-maker), 2026-11-03"
 gText_NormanMatchCallName,DAD,"reviewed, no change needed"
 gText_MomMatchCallName,MOM,"reviewed, no change needed"
 gText_ScottMatchCallDesc,ELUSIVE EYES,"reviewed, no change needed"

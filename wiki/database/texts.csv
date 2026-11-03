@@ -9800,7 +9800,7 @@ gText_MoveToWhere,,src/strings.c,430,,c,ui_string,Move to where?,Move to where?,
 gText_TeachWhichPokemon,,src/strings.c,431,,c,ui_string,Teach which POKéMON?,Teach which COMPANION?,CURATED,POKéMON,,12,reviewed AUTO draft,DONE
 gText_UseOnWhichPokemon,,src/strings.c,432,,c,ui_string,Use on which POKéMON?,Use on which COMPANION?,CURATED,POKéMON,,12,reviewed AUTO draft,DONE
 gText_GiveToWhichPokemon,,src/strings.c,433,,c,ui_string,Give to which POKéMON?,Give to which COMPANION?,CURATED,POKéMON,,12,reviewed AUTO draft,DONE
-gText_DoWhatWithPokemon,,src/strings.c,434,,c,ui_string,Do what with this {PKMN}?,Do what with this COMPANION?,CURATED,{PKMN},,54,reviewed AUTO draft,DONE
+gText_DoWhatWithPokemon,,src/strings.c,434,,c,ui_string,Do what with this {PKMN}?,Do what with this {COMPANION}?,CURATED,{PKMN},,54,reviewed AUTO draft,DONE
 gText_NothingToCut,,src/strings.c,435,,c,ui_string,There's nothing to CUT.,There's nothing to slice here.,CURATED,CUT,,34,,DONE
 gText_CantSurfHere,,src/strings.c,436,,c,ui_string,You can't SURF here.,You can't SURF here.,CURATED,,,,"reviewed, no change needed",DONE
 gText_AlreadySurfing,,src/strings.c,437,,c,ui_string,You're already SURFING.,You're already SURFING.,CURATED,,,,"reviewed, no change needed",DONE
@@ -10135,13 +10135,13 @@ gText_JoinGroup,,src/strings.c,765,,c,ui_string,JOIN GROUP,JOIN GROUP,CURATED,,,
 gText_TwoStyles,,src/strings.c,766,,c,ui_string,TWO STYLES,TWO STYLES,CURATED,,,,"reviewed, no change needed",DONE
 gText_Lv50_3,,src/strings.c,767,,c,ui_string,LV. 50,LV. 50,CURATED,,,,"reviewed, no change needed",DONE
 gText_OpenLevel2,,src/strings.c,768,,c,ui_string,OPEN LEVEL,OPEN LEVEL,CURATED,,,,"reviewed, no change needed",DONE
-gText_MonTypeAndNo,,src/strings.c,769,,c,ui_string,{PKMN} TYPE & NO.,COMPANION TYPE & NO.,CURATED,{PKMN},,54,reviewed AUTO draft,DONE
+gText_MonTypeAndNo,,src/strings.c,769,,c,ui_string,{PKMN} TYPE & NO.,{COMPANION} TYPE & NO.,CURATED,{PKMN},,54,reviewed AUTO draft,DONE
 gText_HoldItems,,src/strings.c,770,,c,ui_string,HOLD ITEMS,HOLD ITEMS,CURATED,,,,"reviewed, no change needed",DONE
 gText_Symbols2,,src/strings.c,771,,c,ui_string,SYMBOLS,SYMBOLS,CURATED,,,,"reviewed, no change needed",DONE
 gText_Record3,,src/strings.c,772,,c,ui_string,RECORD,RECORD,CURATED,,,,"reviewed, no change needed",DONE
 gText_BattlePts,,src/strings.c,773,,c,ui_string,BATTLE PTS,BATTLE PTS,CURATED,,,,"reviewed, no change needed",DONE
 gText_TowerInfo,,src/strings.c,774,,c,ui_string,TOWER INFO,TOWER INFO,CURATED,,,,"reviewed, no change needed",DONE
-gText_BattleMon,,src/strings.c,775,,c,ui_string,BATTLE {PKMN},BATTLE COMPANION,CURATED,{PKMN},,54,reviewed AUTO draft,DONE
+gText_BattleMon,,src/strings.c,775,,c,ui_string,BATTLE {PKMN},BATTLE {COMPANION},CURATED,{PKMN},,54,reviewed AUTO draft,DONE
 gText_BattleSalon,,src/strings.c,776,,c,ui_string,BATTLE SALON,BATTLE SALON,CURATED,,,,"reviewed, no change needed",DONE
 gText_MultiLink2,,src/strings.c,777,,c,ui_string,MULTI-LINK,MULTI-LINK,CURATED,,,,"reviewed, no change needed",DONE
 gText_BattleRules,,src/strings.c,778,,c,ui_string,BATTLE RULES,BATTLE RULES,CURATED,,,,"reviewed, no change needed",DONE
@@ -10981,7 +10981,7 @@ gText_Deselect,,src/strings.c,1619,,c,ui_string,DESELECT,DESELECT,CURATED,,,,"re
 gText_TheseThreePkmnOkay,,src/strings.c,1620,,c,ui_string,Are these three POKéMON OK?,Are these three COMPANIONS OK?,CURATED,POKéMON,,18,reviewed AUTO draft,DONE
 gText_Yes2,,src/strings.c,1621,,c,ui_string,YES,YES,CURATED,,,,"reviewed, no change needed",DONE
 gText_No2,,src/strings.c,1622,,c,ui_string,NO,NO,CURATED,,,,"reviewed, no change needed",DONE
-gText_CantSelectSamePkmn,,src/strings.c,1623,,c,ui_string,Can't select same {PKMN}.,Can't select same COMPANION.,CURATED,{PKMN},,54,reviewed AUTO draft,DONE
+gText_CantSelectSamePkmn,,src/strings.c,1623,,c,ui_string,Can't select same {PKMN}.,Can't select same {COMPANION}.,CURATED,{PKMN},,54,reviewed AUTO draft,DONE
 gText_PkmnSwap,,src/strings.c,1624,,c,ui_string,POKéMON SWAP,COMPANION SWAP,CURATED,POKéMON,,12,reviewed AUTO draft,DONE
 gText_SelectPkmnToSwap,,src/strings.c,1625,,c,ui_string,Select POKéMON to swap.,Select COMPANION to swap.,CURATED,POKéMON,,12,reviewed AUTO draft,DONE
 gText_SelectPkmnToAccept,,src/strings.c,1626,,c,ui_string,Select POKéMON to accept.,Select COMPANION to accept.,CURATED,POKéMON,,12,reviewed AUTO draft,DONE
@@ -10991,13 +10991,13 @@ gText_Rechoose,,src/strings.c,1629,,c,ui_string,RECHOOSE,RECHOOSE,CURATED,,,,"re
 gText_QuitSwapping,,src/strings.c,1630,,c,ui_string,Quit swapping?,Quit swapping?,CURATED,,,,"reviewed, no change needed",DONE
 gText_Yes3,,src/strings.c,1631,,c,ui_string,YES,YES,CURATED,,,,"reviewed, no change needed",DONE
 gText_No3,,src/strings.c,1632,,c,ui_string,NO,NO,CURATED,,,,"reviewed, no change needed",DONE
-gText_PkmnForSwap,,src/strings.c,1633,,c,ui_string,{PKMN} FOR SWAP,COMPANION FOR SWAP,CURATED,{PKMN},,54,reviewed AUTO draft,DONE
+gText_PkmnForSwap,,src/strings.c,1633,,c,ui_string,{PKMN} FOR SWAP,{COMPANION} FOR SWAP,CURATED,{PKMN},,54,reviewed AUTO draft,DONE
 gText_Cancel3,,src/strings.c,1634,,c,ui_string,CANCEL,CANCEL,CURATED,,,,"reviewed, no change needed",DONE
 gText_Swap2,,src/strings.c,1635,,c,ui_string,SWAP,SWAP,CURATED,,,,"reviewed, no change needed",DONE
 gText_Accept,,src/strings.c,1636,,c,ui_string,ACCEPT,ACCEPT,CURATED,,,,"reviewed, no change needed",DONE
 gText_AcceptThisPkmn,,src/strings.c,1637,,c,ui_string,Accept this POKéMON?,Accept this COMPANION?,CURATED,POKéMON,,12,reviewed AUTO draft,DONE
 gText_4Spaces,,src/strings.c,1638,,c,ui_string,    ,    ,CURATED,,,,"reviewed, no change needed",DONE
-gText_SamePkmnInPartyAlready,,src/strings.c,1639,,c,ui_string,Same {PKMN} in party already.,Same COMPANION in party already.,CURATED,{PKMN},,54,reviewed AUTO draft,DONE
+gText_SamePkmnInPartyAlready,,src/strings.c,1639,,c,ui_string,Same {PKMN} in party already.,Same {COMPANION} in party already.,CURATED,{PKMN},,54,reviewed AUTO draft,DONE
 gText_DecimalPoint,,src/strings.c,1640,,c,ui_string,.,.,CURATED,,,,"reviewed, no change needed",DONE
 gText_SavingPlayer,,src/strings.c,1641,,c,ui_string,PLAYER,PLAYER,CURATED,,,,"reviewed, no change needed",DONE
 gText_SavingBadges,,src/strings.c,1642,,c,ui_string,BADGES,SHARDS,CURATED,BADGES,,,reviewed AUTO draft,DONE
@@ -11131,7 +11131,7 @@ gText_StevenMatchCallName,,src/strings.c,1777,,c,match_call_profile,STEVEN,LEIA,
 gText_MayBrendanMatchCallDesc,,src/strings.c,1778,,c,match_call_profile,RAD NEIGHBOR,RAD NEIGHBOR,CURATED,,,,"reviewed, no change needed",DONE
 gText_NormanMatchCallDesc,,src/strings.c,1779,,c,match_call_profile,RELIABLE ONE,RELIABLE ONE,CURATED,,,,"reviewed, no change needed",DONE
 gText_MomMatchCallDesc,,src/strings.c,1780,,c,match_call_profile,CALM & KIND,CALM & KIND,CURATED,,,,"reviewed, no change needed",DONE
-gText_WallyMatchCallDesc,,src/strings.c,1781,,c,match_call_profile,{PKMN} LOVER,COMPANION LOVER,CURATED,{PKMN},,54,reviewed AUTO draft,DONE
+gText_WallyMatchCallDesc,,src/strings.c,1781,,c,match_call_profile,{PKMN} LOVER,{COMPANION} LOVER,CURATED,{PKMN},,54,reviewed AUTO draft,DONE
 gText_NormanMatchCallName,,src/strings.c,1782,,c,match_call_profile,DAD,DAD,CURATED,,,,"reviewed, no change needed",DONE
 gText_MomMatchCallName,,src/strings.c,1783,,c,match_call_profile,MOM,MOM,CURATED,,,,"reviewed, no change needed",DONE
 gText_ScottMatchCallDesc,,src/strings.c,1784,,c,match_call_profile,ELUSIVE EYES,ELUSIVE EYES,CURATED,,,,"reviewed, no change needed",DONE
@@ -11145,7 +11145,7 @@ gText_TateLizaMatchCallDesc,,src/strings.c,1791,,c,match_call_profile,MYSTIC DUO
 gText_JuanMatchCallDesc,,src/strings.c,1792,,c,match_call_profile,DANDY CHARM,DANDY CHARM,CURATED,,,,"reviewed, no change needed",DONE
 gText_EliteFourMatchCallDesc,,src/strings.c,1793,,c,match_call_profile,ELITE FOUR,FOUR TRIALS,CURATED,ELITE FOUR,,6,reviewed AUTO draft,DONE
 gText_ChampionMatchCallDesc,,src/strings.c,1794,,c,match_call_profile,CHAMPION,CHAMPION,CURATED,,,,"reviewed, no change needed",DONE
-gText_ProfBirchMatchCallDesc,,src/strings.c,1795,,c,match_call_profile,{PKMN} PROF.,COMPANION PROF.,CURATED,{PKMN},,54,{PKMN} glyph token -> plain word (glossary),DONE
+gText_ProfBirchMatchCallDesc,,src/strings.c,1795,,c,match_call_profile,{PKMN} PROF.,{COMPANION} PROF.,CURATED,{PKMN},,54,{PKMN} glyph token -> plain word (glossary),DONE
 gText_CommStandbyAwaitingOtherPlayer,,src/strings.c,1796,,c,ui_string,Communication standby…\nAwaiting another player to choose.,Communication standby…\nAwaiting another player to choose.,CURATED,,,,"reviewed, no change needed",DONE
 gText_BattleWasRefused,,src/strings.c,1797,,c,ui_string,The battle was refused.{PAUSE 60},The battle was refused.{PAUSE 60},CURATED,,,,"reviewed, no change needed",DONE
 gText_RefusedBattle,,src/strings.c,1798,,c,ui_string,Refused the battle.{PAUSE 60},Refused the battle.{PAUSE 60},CURATED,,,,"reviewed, no change needed",DONE
