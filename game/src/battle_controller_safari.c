@@ -169,7 +169,7 @@ static void SafariBufferRunCommand(void)
 
 static void HandleInputChooseAction(void)
 {
-    if (JOY_NEW(A_BUTTON))
+    if (JOY_NEW(A_BUTTON) && gActionSelectionCursor[gActiveBattler] != 1)
     {
         PlaySE(SE_SELECT);
 
@@ -177,9 +177,6 @@ static void HandleInputChooseAction(void)
         {
         case 0:
             BtlController_EmitTwoReturnValues(B_COMM_TO_ENGINE, B_ACTION_SAFARI_BALL, 0);
-            break;
-        case 1:
-            BtlController_EmitTwoReturnValues(B_COMM_TO_ENGINE, B_ACTION_SAFARI_POKEBLOCK, 0);
             break;
         case 2:
             BtlController_EmitTwoReturnValues(B_COMM_TO_ENGINE, B_ACTION_SAFARI_GO_NEAR, 0);
@@ -202,7 +199,8 @@ static void HandleInputChooseAction(void)
     }
     else if (JOY_NEW(DPAD_RIGHT))
     {
-        if (!(gActionSelectionCursor[gActiveBattler] & 1))
+        // Showcases removed: the top-right Pokéblock slot is empty and can't be selected.
+        if (!(gActionSelectionCursor[gActiveBattler] & 1) && (gActionSelectionCursor[gActiveBattler] ^ 1) != 1)
         {
             PlaySE(SE_SELECT);
             ActionSelectionDestroyCursorAt(gActionSelectionCursor[gActiveBattler]);
@@ -212,7 +210,7 @@ static void HandleInputChooseAction(void)
     }
     else if (JOY_NEW(DPAD_UP))
     {
-        if (gActionSelectionCursor[gActiveBattler] & 2)
+        if ((gActionSelectionCursor[gActiveBattler] & 2) && (gActionSelectionCursor[gActiveBattler] ^ 2) != 1)
         {
             PlaySE(SE_SELECT);
             ActionSelectionDestroyCursorAt(gActionSelectionCursor[gActiveBattler]);
