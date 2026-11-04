@@ -1,0 +1,42 @@
+# A Felucian fungus home (Revenge of the Sith: Aayla Secura's Felucia; The Clone Wars' Felucian
+# villages): a hollow swollen stalk with a round door, under a broad cap, a pointed cap or two caps
+# stacked; sometimes a smaller fungus grown against it, pod windows in the stalk.
+name: fungus-home
+style: felucia
+about: Hollow swollen fungus stalk with a round door, under a broad, pointed or double cap; a small fungus beside.
+width: [4, 5, 6]
+choose:
+  B: "=(H if H else 4) - 0.35"
+  dxx: "=door_x if door_x is not None else 0"
+  ry: [0.7, 0.82]
+  sr: "=min(1.2, w_max * [0.25, 0.3][seed % 2])"      # stalk radius
+  hx: "=max(-w_max / 2 + sr + 0.4, min(w_max / 2 - sr - 0.4, dxx + [-0.2, 0.0, 0.2][seed % 3]))"
+  cy: "=sr * ry"
+  kind: {pick: [broad, spire, double], weights: [2, 2, 2]}
+  cry: [0.52, 0.62]                               # cap plan squash
+  sh: "=max(1.1, min(1.9, B - cy - (0.4 if kind != 'spire' else 0.8)))"   # stalk height
+  CR: "=min((w_max / 2 - abs(hx)) * 0.98, sr * [1.35, 1.6][seed % 2])"
+  side: {pick: [-1, 1]}
+  buddy: {pick: [true, false], weights: [2, 2]}
+  bx: "=max(-w_max / 2 + 0.55, min(w_max / 2 - 0.55, hx + side * (sr + 0.55)))"
+  wins: {pick: [0, 1, 2], weights: [1, 2, 2]}
+parts:
+  - {use: stalk, name: stalk, at: ["=hx", 0, 0], with: {r: "=sr", h: "=sh", ry: "=ry", neck: "=[0.62, 0.8][seed % 2]"}}
+  - when: "=kind == 'broad'"
+    parts:
+      - {use: cap, name: cap, at: ["=hx", 0, 0], with: {r: "=CR", ry: "=cry", cy: "=cy", z: "=sh", t: "=max(0.25, min(0.5, B - sh - cy - 0.05))"}}
+  - when: "=kind == 'spire'"
+    parts:
+      - {use: spire-cap, name: cap, at: ["=hx", 0, 0], with: {r: "=CR * 0.92", ry: "=cry", cy: "=cy", z: "=sh", rise: "=max(0.6, min(1.3, B - sh - cy - 0.05))"}}
+  - when: "=kind == 'double'"
+    parts:
+      - {use: cap, name: cap, at: ["=hx", 0, 0], with: {r: "=CR", ry: "=cry", cy: "=cy", z: "=sh - 0.1", t: 0.25}}
+      - {use: cap, name: cap2, at: ["=hx", 0, 0], with: {r: "=CR * 0.55", ry: "=cry", cy: "=cy", z: "=min(sh + 0.4, B - cy - 0.25)", t: 0.25}}
+  - {use: pod-door, name: door, at: ["=dxx", "=max(0, cy - sqrt(max(0, sr * sr - (dxx - hx) ** 2)) * ry) + 0.02", 0], with: {w: 0.78, h: "=min(0.9, sh - 0.35)"}}
+  - when: "=wins >= 1 and abs(dxx - hx) < 0.3"
+    parts:
+      - {use: pod-window, name: win-1, at: ["=hx + (0.62 if seed % 2 else -0.62) * sr", "=cy - sr * ry * 0.75", "=sh * 0.55"], with: {r: 0.15}}
+  - when: "=buddy"
+    parts:
+      - {use: stalk, name: small, at: ["=bx", 0.05, 0], with: {r: 0.36, h: "=sh * 0.6", ry: 0.85, neck: 0.6, mat: stalk}}
+      - {use: cap, name: small-cap, at: ["=bx", 0.05, 0], with: {r: 0.55, ry: 0.85, cy: 0.31, z: "=sh * 0.6", t: 0.24}}

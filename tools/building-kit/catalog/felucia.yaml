@@ -1,0 +1,95 @@
+# Building catalog for FELUCIA: one entry per building design (see bkit/catalog.py).
+planet: FELUCIA
+buildings:
+- id: bld:felucia:reserve-gate
+  kind: landmark
+  name: Reserve gate
+  areas: []
+  art: art:felucia:reserve-gate
+  size: [5, 4]
+  door: 2
+  blueprint: felucia/reserve-gate
+  seed: 4
+  about: Organic ranger gatehouse of the Felucia reserve (The Clone Wars' Felucian farm gate), a grown dome between fungus pillars.
+- id: bld:felucia:ranger-hut
+  kind: hut
+  name: Ranger hut
+  areas: []
+  art: ''
+  size: [5, 4]
+  door: 2
+  blueprint: felucia/pod-dome
+  seed: 3
+  about: Reserve ranger's grown dome with an antenna mast (The Clone Wars' Felucian farms).
+- id: bld:felucia:bacta-center
+  kind: bacta
+  name: Bacta Center
+  areas: []
+  art: art:shared:bacta-center
+  size: [5, 4]
+  door: 2
+  blueprint: felucia/pod-dome
+  seed: 1
+  about: Bacta Center grown as a Felucian dome, a dark glass band round it and a landing light on top.
+  set: {mode: bacta}
+- id: bld:felucia:supply-depot
+  kind: depot
+  name: Supply Depot
+  areas: []
+  art: art:shared:supply-depot
+  size: [4, 4]
+  door: 1
+  blueprint: felucia/pod-dome
+  seed: 2
+  about: Supply Depot in a Felucian farm dome, a slab door, crates and a Republic stilt tank.
+  set: {mode: depot}
+- id: bld:felucia:farmer-dome
+  kind: home
+  name: Farmer's dome
+  areas: []
+  art: ''
+  size: [5, 4]
+  door: 2
+  blueprint: felucia/pod-dome
+  seed: 7
+  about: The Felucian farm domes defended in The Clone Wars ("Bounty Hunters"), a water tank on splayed legs beside.
+- id: bld:felucia:twin-dome
+  kind: home
+  name: Twin dome
+  areas: []
+  art: ''
+  size: [6, 4]
+  door: 2
+  blueprint: felucia/pod-dome
+  seed: 6
+  about: Two grown Felucian domes joined, a round porch in front.
+- id: bld:felucia:fungus-home
+  kind: home
+  name: Fungus home
+  areas: []
+  art: ''
+  size: [5, 4]
+  door: 2
+  blueprint: felucia/fungus-home
+  seed: 16
+  about: A hollow fungus stalk under a broad cap (Revenge of the Sith's Felucia, where Aayla Secura fell).
+- id: bld:felucia:spire-fungus-home
+  kind: home
+  name: Spire fungus home
+  areas: []
+  art: ''
+  size: [4, 4]
+  door: 1
+  blueprint: felucia/fungus-home
+  seed: 5
+  about: A swollen fungus stalk under a pointed cap, a small fungus grown against it.
+- id: bld:felucia:double-cap-home
+  kind: home
+  name: Double-cap home
+  areas: []
+  art: ''
+  size: [6, 4]
+  door: 3
+  blueprint: felucia/fungus-home
+  seed: 12
+  about: A fungus home under two stacked caps, a Felucian elder's.

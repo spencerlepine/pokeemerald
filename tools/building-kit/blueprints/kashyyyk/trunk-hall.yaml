@@ -30,7 +30,6 @@ parts:
     parts:
       - {use: octo, name: ring2, with: {r: "=R2 - 0.2", ry: "=ry", cy: "=cy", z0: "=z2", z1: "=z2 + h2", top: 1, mat: wood}}
       - {use: octo, name: roof2, with: {r: "=R2", ry: "=ry", cy: "=cy", z0: "=z2 + h2", z1: "=z2 + h2 + sk1 * 0.8", top: "=(tr + 0.2) / R2", mat: thatch}}
-      - {use: slat-window, name: win2, at: [0, "=cy - (R2 - 0.2) * ry * 0.924", "=z2 + h2 * 0.5"], with: {w: 0.6, h: 0.26}}
   - {use: octo, name: cap, with: {r: "=tr * 1.75", ry: "=ry", cy: "=cy", z0: "=apex - 0.85", z1: "=apex", top: 0.06, mat: thatch}}
   - {use: porch, name: porch, at: ["=dxx", 0, 0], with: {w: 1.45, d: "=set + 0.5", h: "=h1 * 0.95", rise: 0.2}}
   - {use: wook-door, name: door, at: ["=dxx", 0, 0], with: {w: 0.82, h: "=min(0.86, h1 * 0.95 - 0.16)"}}

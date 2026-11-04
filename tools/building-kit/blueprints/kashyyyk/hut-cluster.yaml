@@ -4,7 +4,7 @@
 # small drums) or a bacta lodge (a dark glass band round the big drum and a landing light on top).
 name: hut-cluster
 style: kashyyyk
-about: Two or three round timber drums with cone roofs on a shared deck; homes, storage pods or a bacta lodge.
+about: Two or three round timber drums with cone roofs side by side; homes, storage pods or a bacta lodge.
 width: [5, 6, 7]
 choose:
   B: "=(H if H else 4) - 0.35"
@@ -22,16 +22,12 @@ choose:
   side: {pick: [-1, 1]}
   sx: "=mx + side * (Rm * 0.924 + rs * 0.55)"
   sx2: "=mx - side * (Rm * 0.924 + rs * 0.5)"
-  deck: {pick: [true, false], weights: [2, 2]}
 parts:
-  - when: "=deck"
-    parts:
-      - {use: deck, name: deck, at: [0, 0.02, 0], with: {w: "=w_max - 0.1", d: "=cym * 1.6", z: 0.16, t: 0.16, mat: plank}}
   # the big drum
   - {use: octo, name: wall, at: ["=mx", 0, 0], with: {r: "=rm", ry: "=ry", cy: "=cym", z0: 0, z1: "=hm", top: 1, mat: wood}}
   - when: "=mode == 'bacta'"
     parts:
-      - {use: octo, name: glass, at: ["=mx", 0, 0], with: {r: "=rm + 0.05", ry: "=ry", cy: "=cym", z0: "=hm - 0.42", z1: "=hm - 0.12", top: 1, mat: dark}}
+      - {use: octo, name: glass, at: ["=mx", 0, 0], with: {r: "=rm + 0.05", ry: "=ry", cy: "=cym", z0: 0.14, z1: "=min(0.5, hm - 0.2)", top: 1, mat: dark}}
   - {use: flare-roof, name: roof, at: ["=mx", 0, 0], with: {r: "=Rm", ry: "=ry", cy: "=cym", z: "=hm", skirt: 0.2, kink: 0.58, rise: "=riseM - 0.2"}}
   - when: "=mode == 'bacta'"
     parts:
@@ -47,5 +43,11 @@ parts:
     parts:
       - {use: door-slab, name: door, at: ["=mx", "=cym - rm * ry * 0.924", 0], with: {w: 0.8, h: 0.62, door: dark, trim: plank}}
     else:
-      - {use: porch, name: porch, at: ["=mx", 0, 0], with: {w: 1.3, d: 0.75, h: "=hm * 0.98", rise: 0.16}}
+      - when: "=mode == 'bacta'"
+        parts:
+          - {use: porch, name: porch, at: ["=mx", 0, 0], with: {w: 2.3, d: 0.8, h: "=hm * 0.98", rise: 0.16, mat: light}}
+          - {name: glass-w, mat: dark, box: {c: ["=mx - 0.82", -0.03, "=hm * 0.5"], half: [0.2, 0.05, 0.22]}}
+          - {name: glass-e, mat: dark, box: {c: ["=mx + 0.82", -0.03, "=hm * 0.5"], half: [0.2, 0.05, 0.22]}}
+        else:
+          - {use: porch, name: porch, at: ["=mx", 0, 0], with: {w: 1.3, d: 0.75, h: "=hm * 0.98", rise: 0.16}}
       - {use: wook-door, name: door, at: ["=mx", 0, 0], with: {w: 0.78, h: "=min(0.8, hm - 0.17)"}}

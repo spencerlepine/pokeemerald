@@ -1,0 +1,34 @@
+# A Wookiee ship shed (Revenge of the Sith: the Kachirho landing platforms and catamaran sheds): a long
+# low timber hall with a wide dark bay across most of its front, under a woven roof with a raised middle
+# gable, carved tusks at the bay's posts, pylons at the ends.
+name: canopy-hangar
+style: kashyyyk
+about: Long timber ship shed, a wide dark bay, woven roof with a raised gable or a skirt, tusks and pylons.
+width: [7, 8]
+choose:
+  B: "=(H if H else 4) - 0.35"
+  w: "=w_max - 0.5"
+  d: [1.2, 1.5]
+  h: [1.15, 1.35]
+  bw: "=min(3.4, w * 0.55)"
+  dxx: "=door_x if door_x is not None else 0"
+  bx: "=max(-w / 2 + bw / 2 + 0.3, min(w / 2 - bw / 2 - 0.3, dxx))"
+  roof: {pick: [gable, skirt], weights: [1, 1]}
+  rise: "=max(0.5, min(1.1, B - d * 0.6 - h - 0.3))"
+parts:
+  - {use: box-block, name: hall, with: {w: "=w", d: "=d", h: "=h", mat: wood}}
+  - when: "=roof == 'gable'"
+    parts:
+      - {use: gable-roof, name: roof, with: {w: "=w", d: "=d", z: "=h", rise: "=rise * 0.45", over: 0.15, mat: thatch}}
+      - name: mid-gable
+        mat: thatch
+        extrude: {axis: y, profile: [["=bx - bw / 2 - 0.25", "=h - 0.02"], ["=bx + bw / 2 + 0.25", "=h - 0.02"], ["=bx", "=h + rise + 0.15"]], span: [-0.22, "=d * 0.75"], round: 0.03}
+    else:
+      - {use: hip-roof, name: skirt, with: {w: "=w", d: "=d", z: "=h", rise: 0.25, ridge: 0.75, over: 0.2, mat: thatch}}
+      - {use: octo, name: roof, at: ["=bx", 0, 0], with: {r: "=min(bw * 0.5, d * 0.85)", ry: 0.7, cy: "=d * 0.5", z0: "=h + 0.2", z1: "=h + rise + 0.2", top: 0.06, mat: thatch}}
+  - {name: bay-frame, mat: plank, box: {c: ["=bx", -0.03, "=(h - 0.08) / 2"], half: ["=bw / 2 + 0.14", 0.07, "=(h - 0.08) / 2"], radius: 0.02}}
+  - {name: door, at: ["=bx", 0, 0], mat: dark, box: {c: ["=bx", -0.08, "=(h - 0.22) / 2"], half: ["=bw / 2", 0.05, "=(h - 0.22) / 2"]}}
+  - {use: tusk, name: tusk-w, at: ["=bx - bw / 2 - 0.3", -0.12, 0], with: {s: -1, l: "=h * 0.85", r: 0.15, lean: 0.25}}
+  - {use: tusk, name: tusk-e, at: ["=bx + bw / 2 + 0.3", -0.12, 0], with: {s: 1, l: "=h * 0.85", r: 0.15, lean: 0.25}}
+  - {use: pylon, name: pylon-w, at: ["=-w_max / 2 + 0.3", 0.1, 0], with: {h: "=h + 0.25", disc: 0.3}}
+  - {use: pylon, name: pylon-e, at: ["=w_max / 2 - 0.3", 0.1, 0], with: {h: "=h + 0.25", disc: 0.3}}

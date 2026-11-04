@@ -1,0 +1,64 @@
+# Felucia kit: the fungus world (Revenge of the Sith, The Clone Wars). Felucian farmers live in squat
+# grown domes and hollow fungus stalks under broad caps; the Republic left stilt water tanks and prefab
+# rings behind. What makes it Felucia and not Earth: everything swells, nothing is square, caps overhang,
+# round doors and pod windows, tanks on splayed legs.
+# Greybox: grown walls bone, caps light, stalks mid, openings and gills dark.
+materials:
+  flesh: {ramp: bone,  bands: [0.25, 0.55, 0.84]}
+  cap:   {ramp: light, bands: [0.3, 0.58, 0.85]}
+  stalk: {ramp: mid,   bands: [0.2, 0.5, 0.85]}
+  gill:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+templates:
+  # A fungus stalk: swollen at the foot, narrowing up; its front at y = 0.
+  stalk:
+    params: {r: 0.7, h: 1.4, neck: 0.75, ry: 0.8, mat: flesh}
+    preview: {}
+    parts:
+      - {name: bulb, mat: "=mat", ellipsoid: {c: [0, "=r * ry", "=h * 0.3"], r: ["=r", "=r * ry", "=h * 0.42"]}}
+      - {name: neck, mat: "=mat", cylinder: {a: [0, "=r * ry", "=h * 0.3"], b: [0, "=r * ry", "=h"], r1: "=r * 0.92", r2: "=r * neck"}}
+  # A mushroom cap: a broad flattened bowl, its middle at (0, cy, z).
+  cap:
+    params: {r: 1.3, ry: 0.75, cy: 0.6, z: 1.4, t: 0.45, gills: true, mat: cap}
+    preview: {}
+    parts:
+      - {name: rim, mat: gill, cylinder: {a: [0, "=cy", "=z - 0.06"], b: [0, "=cy", "=z + 0.04"], r1: "=r * 0.97"}, squash: {scale: [1, "=ry", 1], center: [0, "=cy", "=z"]}}
+      - {name: cap, mat: "=mat", ellipsoid: {c: [0, "=cy", "=z"], r: ["=r", "=r * ry", "=t"]}}
+  # A pointed cap: a steep cone over a rim.
+  spire-cap:
+    params: {r: 1.0, ry: 0.75, cy: 0.6, z: 1.4, rise: 0.9, mat: cap}
+    preview: {}
+    parts:
+      - {name: spire, mat: "=mat", cylinder: {a: [0, "=cy", "=z"], b: [0, "=cy", "=z + rise"], r1: "=r", r2: 0.05}, squash: {scale: [1, "=ry", 1], center: [0, "=cy", "=z"]}}
+      - {name: rim, mat: gill, cylinder: {a: [0, "=cy", "=z - 0.1"], b: [0, "=cy", "=z + 0.02"], r1: "=r * 0.9"}, squash: {scale: [1, "=ry", 1], center: [0, "=cy", "=z"]}}
+  # A grown dome (the Felucian farmer domes in The Clone Wars), with a dark band round its foot.
+  grown-dome:
+    params: {r: 1.2, ry: 0.75, hk: 0.85, cy: 0.9, band: true, mat: flesh}
+    preview: {}
+    parts:
+      - {name: dome, mat: "=mat", ellipsoid: {c: [0, "=cy", 0], r: ["=r", "=r * ry", "=r * hk"]}}
+      - {name: band, mat: stalk, cylinder: {a: [0, "=cy", 0], b: [0, "=cy", 0.18], r1: "=r * 1.03"}, squash: {scale: [1, "=ry", 1], center: [0, "=cy", 0]}}
+  # A round grown doorway: a dark oval in a swollen lip.
+  pod-door:
+    params: {w: 0.8, h: 0.9, lip: 0.13, door: gill, trim: stalk}
+    preview: {}
+    parts:
+      - {name: lip, mat: "=trim", ellipsoid: {c: [0, -0.02, "=h * 0.5"], r: ["=w / 2 + lip", 0.12, "=h * 0.5 + lip * 0.6"]}}
+      - {name: hole, mat: "=door", ellipsoid: {c: [0, -0.1, "=h * 0.48"], r: ["=w / 2", 0.06, "=h * 0.5"]}}
+      - {name: sill, mat: "=trim", box: {c: [0, -0.04, 0.04], half: ["=w / 2 + lip", 0.12, 0.05]}}
+  # A round pod window.
+  pod-window:
+    params: {r: 0.2, mat: gill, trim: stalk}
+    preview: {at: [0, 0, 0.6]}
+    parts:
+      - {name: lip, mat: "=trim", ellipsoid: {c: [0, -0.02, 0], r: ["=r + 0.08", 0.1, "=r + 0.08"]}}
+      - {name: glass, mat: "=mat", ellipsoid: {c: [0, -0.07, 0], r: ["=r", 0.06, "=r"]}}
+  # A Republic stilt tank (the water towers of The Clone Wars' Felucian farms): a drum on splayed legs.
+  stilt-tank:
+    params: {r: 0.5, h: 0.7, z: 1.1, mat: metal}
+    preview: {}
+    parts:
+      - {name: leg-w, mat: "=mat", cylinder: {a: ["=-r * 1.05", 0.15, 0], b: ["=-r * 0.6", "=r", "=z"], r1: 0.1}}
+      - {name: leg-e, mat: "=mat", cylinder: {a: ["=r * 1.05", 0.15, 0], b: ["=r * 0.6", "=r", "=z"], r1: 0.1}}
+      - {name: leg-n, mat: "=mat", cylinder: {a: [0, "=r * 2", 0], b: [0, "=r * 1.4", "=z"], r1: 0.1}}
+      - {name: tank, mat: "=mat", cylinder: {a: [0, "=r", "=z"], b: [0, "=r", "=z + h"], r1: "=r"}}
+      - {name: lid, mat: light, cylinder: {a: [0, "=r", "=z + h"], b: [0, "=r", "=z + h + 0.25"], r1: "=r * 1.05", r2: 0.12}}

@@ -8,9 +8,10 @@ buildings:
   art: art:kashyyyk:arena-hall
   size: [7, 5]
   door: 3
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: kashyyyk/longhouse
+  seed: 4
+  about: Tarfful's carved-wood longhouse at Kachirho (Revenge of the Sith), a steep swept roof with tusk horns on the gable.
+  set: {pylons: true}
 - id: bld:kashyyyk:kachirho-great-hall-holonet-trends
   kind: landmark
   name: Great hall (HoloNet trends)
@@ -18,9 +19,9 @@ buildings:
   art: art:kashyyyk:wookiee-hut
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: kashyyyk/longhouse
+  seed: 6
+  about: Kachirho's great timber hall (Revenge of the Sith), a tall gable front with carved tusks by the door.
 - id: bld:kashyyyk:kachirho-bacta-center
   kind: bacta
   name: Bacta Center
@@ -28,9 +29,10 @@ buildings:
   art: art:shared:bacta-center
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: kashyyyk/hut-cluster
+  seed: 1
+  about: Bacta lodge in Kachirho's round-hut style, a dark glass band round the big drum and a landing light on the roof.
+  set: {mode: bacta}
 - id: bld:kashyyyk:kachirho-supply-depot
   kind: depot
   name: Supply Depot
@@ -38,9 +40,9 @@ buildings:
   art: art:shared:supply-depot
   size: [4, 4]
   door: 1
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: kashyyyk/trade-shed
+  seed: 2
+  about: Kachirho shore trade shed (Revenge of the Sith), a wide shutter under a steep woven gable, crates by the door.
 - id: bld:kashyyyk:kachirho-wookiee-family-hut
   kind: hut
   name: Wookiee family hut
@@ -48,9 +50,9 @@ buildings:
   art: art:kashyyyk:wookiee-hut
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: kashyyyk/wroshyr-hut
+  seed: 37
+  about: Round Wookiee hut on stilts at the Kachirho shore (Revenge of the Sith), flared woven roof, ramp to the door.
 - id: bld:kashyyyk:kachirho-elder-s-hut
   kind: hut
   name: Elder's hut
@@ -58,9 +60,9 @@ buildings:
   art: art:kashyyyk:wookiee-hut
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: kashyyyk/wroshyr-hut
+  seed: 10
+  about: An elder's two-tier round hut at Kachirho (Revenge of the Sith), a woven skirt with a drum and cone rising out of it.
 - id: bld:kashyyyk:kachirho-falcon-hangar-from-tatooine
   kind: hangar
   name: Falcon hangar (from Tatooine)
@@ -68,9 +70,9 @@ buildings:
   art: art:tatooine:docking-bay
   size: [8, 4]
   door: 3
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: kashyyyk/canopy-hangar
+  seed: 7
+  about: Wookiee ship shed for the Falcon (Revenge of the Sith landing platforms), a wide dark bay under a raised woven gable.
 - id: bld:kashyyyk:route-109-seashore-house
   kind: hut
   name: Seashore house
@@ -78,9 +80,9 @@ buildings:
   art: art:kashyyyk:wookiee-hut
   size: [6, 3]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: kashyyyk/longhouse
+  seed: 5
+  about: Low shore longhouse by the lagoon (Revenge of the Sith's Kachirho beach), a woven side-ridge roof with a cross gable.
 - id: bld:kashyyyk:rwookrrorro-chieftain-s-hut
   kind: hut
   name: Chieftain's hut
@@ -88,9 +90,9 @@ buildings:
   art: art:kashyyyk:wookiee-hut
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: kashyyyk/hut-cluster
+  seed: 14
+  about: Chieftain's house at Rwookrrorro (the Holiday Special's tree city), a big round drum flanked by smaller ones.
 - id: bld:kashyyyk:rwookrrorro-weaver-s-hut
   kind: hut
   name: Weaver's hut
@@ -98,9 +100,9 @@ buildings:
   art: art:kashyyyk:wookiee-hut
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: kashyyyk/wroshyr-hut
+  seed: 15
+  about: A weaver's round hut on a cut wroshyr stump at Rwookrrorro, buttress roots at its foot.
 - id: bld:kashyyyk:rwookrrorro-bowcaster-maker-s-hut
   kind: hut
   name: Bowcaster maker's hut
@@ -108,6 +110,86 @@ buildings:
   art: art:kashyyyk:wookiee-hut
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: kashyyyk/wroshyr-hut
+  seed: 16
+  about: The bowcaster maker's round hut at Rwookrrorro, a porch door and carved tusks or a pylon outside.
+- id: bld:kashyyyk:fill-trunk-hall
+  kind: landmark
+  name: Wroshyr trunk hall
+  areas: []
+  art: ''
+  size: [7, 6]
+  door: 3
+  blueprint: kashyyyk/trunk-hall
+  seed: 3
+  about: Kachirho's great tree halls (Revenge of the Sith), timber rings and woven skirts wrapped round a wroshyr trunk.
+- id: bld:kashyyyk:fill-trunk-lodge
+  kind: fill
+  name: Trunk lodge
+  areas: []
+  art: ''
+  size: [6, 5]
+  door: 2
+  blueprint: kashyyyk/trunk-hall
+  seed: 8
+  about: A smaller Kachirho trunk lodge, one timber ring round the trunk, a woven cap above.
+- id: bld:kashyyyk:fill-lookout-tower
+  kind: tower
+  name: Lookout tower
+  areas: []
+  art: ''
+  size: [3, 5]
+  door: 1
+  blueprint: kashyyyk/lookout
+  seed: 9
+  about: Kachirho shore watch post (Revenge of the Sith), a round hut on splayed legs above a store hut.
+- id: bld:kashyyyk:fill-canopy-lookout
+  kind: tower
+  name: Canopy lookout
+  areas: []
+  art: ''
+  size: [4, 5]
+  door: 2
+  blueprint: kashyyyk/lookout
+  seed: 11
+  about: An open woven canopy on a high platform, the beach watch where the Wookiees saw the droid army come in.
+- id: bld:kashyyyk:fill-storage-pods
+  kind: fill
+  name: Storage pods
+  areas: []
+  art: ''
+  size: [5, 4]
+  door: 2
+  blueprint: kashyyyk/hut-cluster
+  seed: 12
+  about: Low round woven storage drums under cone roofs, the Kachirho stores.
+- id: bld:kashyyyk:fill-workshop
+  kind: shop
+  name: Catamaran workshop
+  areas: []
+  art: ''
+  size: [5, 4]
+  door: 2
+  blueprint: kashyyyk/trade-shed
+  seed: 13
+  about: Timber workshop of the Wookiee catamaran yards (Revenge of the Sith), an open lean-to and a smoke stack.
+- id: bld:kashyyyk:fill-market-platform
+  kind: market
+  name: Market platform
+  areas: []
+  art: ''
+  size: [6, 4]
+  door: null
+  blueprint: kashyyyk/trade-shed
+  seed: 19
+  about: A raised timber market deck under a row of steep woven awnings.
+- id: bld:kashyyyk:fill-stilt-longhouse
+  kind: home
+  name: Stilt longhouse
+  areas: []
+  art: ''
+  size: [6, 4]
+  door: 3
+  blueprint: kashyyyk/longhouse
+  seed: 18
+  about: A long timber house on stilts over the Kachirho shallows, a ramp up to the door.

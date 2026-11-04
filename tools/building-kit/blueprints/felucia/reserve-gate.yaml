@@ -1,0 +1,33 @@
+# The Felucia reserve gatehouse (The Clone Wars' Felucian farm gate; Revenge of the Sith's fungus
+# forest): a grown dome gatehouse with a round door, two swollen fungus pillars flanking it under broad
+# or pointed caps, a cap spanning the middle on some.
+name: reserve-gate
+style: felucia
+about: Grown dome gatehouse with a round door between two fungus pillars; broad or pointed caps, a spanning cap.
+width: [5, 6]
+choose:
+  B: "=(H if H else 4) - 0.35"
+  dxx: "=door_x if door_x is not None else 0"
+  px: "=w_max / 2 - 0.62"                        # pillar centres
+  pr: [0.42, 0.52]
+  ph: "=max(1.3, min(2.0, B - 0.9))"
+  caps: {pick: [broad, spire], weights: [1, 1]}
+  span: {pick: [true, false], weights: [1, 1]}
+  R: "=min(px - pr * 0.6, 1.35)"
+  ry: [0.62, 0.72]
+parts:
+  - {use: grown-dome, name: house, at: ["=dxx * 0.5", 0, 0], with: {r: "=R", ry: "=ry", hk: "=min(1.0, (B - 0.3 - R * ry * 2) / R)", cy: "=0.25 + R * ry"}}
+  - repeat: 2
+    parts:
+      - {use: stalk, name: pillar, at: ["=(i * 2 - 1) * px", 0, 0], with: {r: "=pr", h: "=ph", ry: 0.85, neck: 0.72, mat: stalk}}
+      - when: "=caps == 'broad'"
+        parts:
+          - {use: cap, name: pcap, at: ["=(i * 2 - 1) * px", 0, 0], with: {r: "=min(0.62, pr + 0.2)", ry: 0.8, cy: "=pr * 0.85", z: "=ph", t: 0.3}}
+        else:
+          - {use: spire-cap, name: pcap, at: ["=(i * 2 - 1) * px", 0, 0], with: {r: "=min(0.6, pr + 0.15)", ry: 0.8, cy: "=pr * 0.85", z: "=ph", rise: "=min(0.8, B - ph - pr * 0.85 - 0.05)"}}
+  - when: "=span"
+    parts:
+      - {name: lintel, mat: flesh, ellipsoid: {c: [0, "=pr * 0.85", "=ph - 0.25"], r: ["=px", 0.28, 0.2]}}
+  - {use: pod-door, name: door, at: ["=dxx", 0.02, 0], with: {w: 0.82, h: 0.9}}
+  - {use: pod-window, name: win-w, at: ["=dxx * 0.5 - R * 0.55", "=0.25 + R * ry * 0.35", 0.55], with: {r: 0.15}}
+  - {use: pod-window, name: win-e, at: ["=dxx * 0.5 + R * 0.55", "=0.25 + R * ry * 0.35", 0.55], with: {r: 0.15}}
