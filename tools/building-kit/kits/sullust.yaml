@@ -1,0 +1,133 @@
+# Sullust kit: volcanic-stone burrows, SoroSuub prefab industry and Sabine's painted durasteel.
+# What makes them Sullust and not Earth: everything rounded and low, half sunk into lava rock, round
+# hatch doors at the end of short lava-tube entries, big portholes, glass domes over ash farms, tall
+# vent stacks for the heat. SoroSuub's blocks are rounded slabs with sloped fronts and stacks.
+# Sabine's arena is the odd one out: angular durasteel with Mandalorian stripes and a T-visor door.
+materials:
+  stone:  {ramp: mid,   bands: [0.18, 0.48, 0.82]}   # volcanic stone (the main wall)
+  basalt: {ramp: dark,  bands: [0.15, 0.45, 0.8]}    # raw lava rock, the slope a home is dug into
+  glass:  {ramp: light, bands: [0.12, 0.42, 0.74]}   # greenhouse and observatory glass
+  steel:  {ramp: light, bands: [0.25, 0.55, 0.85]}   # durasteel plate
+  paint:  {ramp: bone,  bands: [0.3, 0.6, 0.9]}      # Mandalorian stripes (value only, no colour yet)
+  water:  {ramp: dark,  bands: [0.4, 0.7, 0.95]}     # hot spring
+templates:
+  # A low stone dome: plan radius r east-west, r * ry north-south, height r * hk. Centre on the ground.
+  shell:
+    params: {r: 1.2, ry: 0.75, hk: 0.75, mat: stone}
+    preview: {at: [0, 1.0, 0]}
+    parts:
+      - {name: shell, mat: "=mat", ellipsoid: {c: [0, 0, 0], r: ["=r", "=r * ry", "=r * hk"]}}
+  # A flat round terrace a dome sits on (the ring platform of a Sullustan home), oval by ry.
+  plinth:
+    params: {r: 1.6, ry: 0.6, t: 0.14, mat: stone}
+    preview: {at: [0, 1.0, 0]}
+    parts:
+      - {name: plinth, mat: "=mat", cylinder: {a: [0, 0, 0], b: [0, 0, "=t"], r1: "=r"}, squash: {scale: [1, "=ry", 1], center: [0, 0, 0]}}
+  # A short lava-tube entry: a round tube coming south out of a dome, sunk into the ground. Front at y = 0.
+  tube:
+    params: {r: 0.6, d: 1.0, zc: 0.42, mat: stone}
+    preview: {}
+    parts:
+      - {name: tube, mat: "=mat", cylinder: {a: [0, 0, "=zc"], b: [0, "=d", "=zc"], r1: "=r"}}
+  # A round hatch door (Sullustan), its centre at height zc; the ground cuts its foot flat.
+  hatch:
+    params: {r: 0.4, frame: 0.1, zc: 0.42, door: dark, trim: trim}
+    preview: {}
+    parts:
+      - {name: ring, mat: "=trim", cylinder: {a: [0, -0.08, "=zc"], b: [0, 0.05, "=zc"], r1: "=r + frame"}}
+      - {name: disc, mat: "=door", cylinder: {a: [0, -0.12, "=zc"], b: [0, -0.02, "=zc"], r1: "=r"}}
+  # The slope a home is dug into: a wedge of lava rock rising to the north behind it.
+  berm:
+    params: {w: 4.0, y0: 0.6, y1: 2.6, h: 0.9, tilt: 0.0, mat: basalt}
+    preview: {}
+    parts:
+      - name: slope
+        mat: "=mat"
+        hull: {points: [["=-w / 2", "=y0 + 0.2", 0], ["=w / 2", "=y0 + 0.1", 0], ["=-w / 2 * 0.92", "=y1", 0], ["=w / 2 * 0.92", "=y1", 0],
+                        ["=-w / 2 * 0.78", "=y1 - 0.2", "=h * (1 + tilt)"], ["=w / 2 * 0.72", "=y1 - 0.12", "=h * (1 - tilt)"],
+                        ["=-w / 2 * 0.95", "=y0 + (y1 - y0) * 0.5", "=h * 0.55 * (1 + tilt)"], ["=w / 2 * 0.9", "=y0 + (y1 - y0) * 0.4", "=h * 0.5 * (1 - tilt)"],
+                        [0, "=y0 + (y1 - y0) * 0.3", "=h * 0.6"]],
+               round: 0.1}
+  # A lump of lava rock.
+  rock:
+    params: {s: 0.6, mat: basalt}
+    preview: {at: [0, 0.6, 0]}
+    parts:
+      - name: rock
+        mat: "=mat"
+        hull: {points: [["=-s * 0.6", "=-s * 0.4", 0], ["=s * 0.55", "=-s * 0.5", 0], ["=s * 0.7", "=s * 0.4", 0], ["=-s * 0.5", "=s * 0.5", 0],
+                        ["=-s * 0.3", "=-s * 0.15", "=s * 0.7"], ["=s * 0.25", "=-s * 0.2", "=s * 0.8"], ["=s * 0.1", "=s * 0.3", "=s * 0.6"]],
+               round: 0.04}
+  # A glass dome on a stone ring, a cap on top (greenhouse, observatory).
+  glass-dome:
+    params: {r: 1.0, ry: 0.85, hk: 0.85, band: 0.22, mat: glass, trim: stone}
+    preview: {at: [0, 1.0, 0]}
+    parts:
+      - {name: ring, mat: "=trim", cylinder: {a: [0, 0, 0], b: [0, 0, "=band"], r1: "=r + 0.06"}, squash: {scale: [1, "=ry", 1], center: [0, 0, 0]}}
+      - {name: glass, mat: "=mat", ellipsoid: {c: [0, 0, "=band"], r: ["=r", "=r * ry", "=r * hk"]}}
+      - {name: cap, mat: "=trim", cylinder: {a: [0, 0, "=band + r * hk - 0.12"], b: [0, 0, "=band + r * hk + 0.06"], r1: "=r * 0.22"}}
+  # A barrel vault (half a cylinder lying east-west) w long, radius r, its front at y = 0.
+  vault:
+    params: {w: 2.0, r: 0.8, hk: 1.0, mat: stone}
+    preview: {}
+    parts:
+      - {name: vault, mat: "=mat", cylinder: {a: ["=-w / 2", "=r", 0], b: ["=w / 2", "=r", 0], r1: "=r"}, squash: {scale: [1, 1, "=hk"], center: [0, "=r", 0]}}
+  # A tall vent stack (SoroSuub heat stack): tapered, with a collar and a cap.
+  stack:
+    params: {r: 0.24, h: 1.6, mat: metal}
+    preview: {}
+    parts:
+      - {name: pipe, mat: "=mat", cylinder: {a: [0, 0, 0], b: [0, 0, "=h"], r1: "=r * 1.25", r2: "=r"}}
+      - {name: collar, mat: trim, cylinder: {a: [0, 0, "=h * 0.55"], b: [0, 0, "=h * 0.55 + 0.14"], r1: "=r * 1.4"}}
+      - {name: cap, mat: "=mat", cylinder: {a: [0, 0, "=h"], b: [0, 0, "=h + 0.12"], r1: "=r + 0.1"}}
+  # A rounded SoroSuub slab: a block whose front leans back (sloped face) and every edge soft.
+  slab:
+    params: {w: 3.0, d: 2.0, h: 1.2, lean: 0.25, rnd: 0.12, mat: stone}
+    preview: {}
+    parts:
+      - name: slab
+        mat: "=mat"
+        prism: {poly: [["=-w / 2", 0], ["=w / 2", 0], ["=w / 2", "=d"], ["=-w / 2", "=d"]], z: [0, "=h"],
+                top: ["=(w - 0.16) / w", "=(d - lean) / d"], lean: [0, "=lean / 2"], round: "=rnd"}
+  # A wide roll-up garage door (SoroSuub sheds): a dark opening with a thick frame.
+  garage-door:
+    params: {w: 1.4, h: 0.85, frame: 0.12}
+    preview: {}
+    parts:
+      - {name: frame, mat: trim, box: {c: [0, -0.03, "=(h + frame) / 2"], half: ["=w / 2 + frame", 0.07, "=(h + frame) / 2"], radius: 0.03}}
+      - {name: hole, mat: dark, box: {c: [0, -0.08, "=h / 2"], half: ["=w / 2", 0.05, "=h / 2"]}}
+      - {name: slat, mat: metal, box: {c: [0, -0.11, "=h * 0.72"], half: ["=w / 2", 0.03, "=h * 0.28"]}}
+  # Mandalorian durasteel hall: a block whose top is chamfered all round, like a helmet's brow.
+  steel-hall:
+    params: {w: 5.0, d: 2.4, h: 1.5, cham: 0.3, mat: steel}
+    preview: {}
+    parts:
+      - name: hall
+        mat: "=mat"
+        prism: {poly: [["=-w / 2", 0], ["=w / 2", 0], ["=w / 2", "=d"], ["=-w / 2", "=d"]], z: [0, "=h"],
+                top: ["=(w - 2 * cham) / w", "=(d - 2 * cham) / d"], round: 0.04}
+  # The Mandalorian T-visor as a door: a dark bar across and a dark door down its middle, in a frame.
+  t-visor:
+    params: {bw: 1.9, bh: 0.32, dw: 0.9, dh: 1.05, frame: 0.1}
+    preview: {}
+    parts:
+      - {name: bar-frame, mat: trim, box: {c: [0, -0.03, "=dh + bh / 2"], half: ["=bw / 2 + frame", 0.07, "=bh / 2 + frame"], radius: 0.02}}
+      - {name: door-frame, mat: trim, box: {c: [0, -0.03, "=dh / 2"], half: ["=dw / 2 + frame", 0.07, "=dh / 2"], radius: 0.02}}
+      - {name: bar, mat: dark, box: {c: [0, -0.08, "=dh + bh / 2"], half: ["=bw / 2", 0.05, "=bh / 2"]}}
+      - {name: slot, mat: dark, box: {c: [0, -0.08, "=dh / 2 + 0.05"], half: ["=dw / 2", 0.05, "=dh / 2 + 0.05"]}}
+  # A painted stripe on a south wall: a band slanted by `slant` (m of run across its height).
+  stripe:
+    params: {w: 0.35, h: 1.2, slant: 0.4, z0: 0.0, mat: paint}
+    preview: {at: [0, 0, 0.1]}
+    parts:
+      - name: stripe
+        mat: "=mat"
+        extrude: {axis: y, profile: [["=-w / 2", "=z0"], ["=w / 2", "=z0"], ["=w / 2 + slant", "=z0 + h"], ["=-w / 2 + slant", "=z0 + h"]],
+                  span: [-0.07, 0.02], round: 0.01}
+  # A round hot-spring pool: a stone rim with dark water a little below it.
+  pool:
+    params: {r: 1.0, ry: 0.6, rim: 0.2, h: 0.22, mat: stone}
+    preview: {at: [0, 0.8, 0]}
+    parts:
+      - {name: rim, mat: "=mat", cylinder: {a: [0, 0, 0], b: [0, 0, "=h"], r1: "=r"}, squash: {scale: [1, "=ry", 1], center: [0, 0, 0]}}
+      - {name: water, mat: water, cylinder: {a: [0, 0, "=h - 0.04"], b: [0, 0, "=h + 0.01"], r1: "=r - rim"}, squash: {scale: [1, "=ry", 1], center: [0, 0, 0]}}

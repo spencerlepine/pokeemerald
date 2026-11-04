@@ -1,0 +1,83 @@
+# The Wookiee family hut (Revenge of the Sith: Kachirho's shore; the Holiday Special's Rwookrrorro):
+# a round faceted timber drum under a steep woven roof that flares out in a skirt, on the ground with a
+# porch, up on stilts with a ramp, or on a cut wroshyr stump with buttress roots.
+name: wroshyr-hut
+style: kashyyyk
+about: Round timber drum, flared woven roof (or plain cone, or two tiers); on the ground, stilts or a wroshyr stump.
+width: [4, 5, 6]
+choose:
+  B: "=(H if H else 4) - 0.35"                    # rows the art may use
+  base: {pick: [ground, stilts, stump], weights: [3, 3, 2]}
+  lift: "=0 if base == 'ground' else (0.42 if base == 'stilts' else 0.28)"
+  jit: [-0.18, 0.18]
+  dxx: "=door_x if door_x is not None else 0"
+  hx: "=max(-w_max / 2 + 1.2, min(w_max / 2 - 1.2, dxx * 0.6 + jit))"
+  Rk: [0.74, 0.9]
+  R: "=min(2.3, (w_max / 2 - abs(hx)) / 0.924 * Rk)"   # roof radius
+  over: [1.12, 1.24]
+  r: "=R / over"                                   # wall radius
+  wh: [0.95, 1.15]
+  porch: "=base == 'ground' and seed % 3 != 0"
+  set: "=(0.32 if porch else 0.08) if base == 'ground' else 0.42"
+  ry0: [0.66, 0.8]
+  ry: "=max(0.45, min(ry0, (B - set - lift - wh) / (0.924 * (r + R))))"
+  cy: "=set + r * ry * 0.924"
+  ez: "=lift + wh"                                 # eave height
+  roof: {pick: [flare, cone, tiered], weights: [4, 2, 2]}
+  skirt: [0.14, 0.22]
+  kink: [0.5, 0.62]
+  room: "=B - cy - ez"                             # height left above the eave at the hut's middle
+  rise: "=max(0.5, min(room - skirt - 0.05, [1.1, 1.5][seed % 2]))"
+  extra: {pick: [none, pylon, pod, tusks], weights: [2, 2, 2, 2]}
+  side: {pick: [-1, 1]}
+parts:
+  # the base
+  - when: "=base == 'stilts'"
+    parts:
+      - {use: octo, name: deck, with: {r: "=r + 0.22", ry: "=ry", cy: "=cy", z0: "=lift - 0.12", z1: "=lift", top: 1, mat: plank}}
+      - repeat: 4
+        parts:
+          - {name: post, mat: bark, cylinder: {a: ["=(r + 0.05) * cos(radians(45 + 90 * i)) + hx", "=cy + ry * (r + 0.05) * sin(radians(45 + 90 * i))", 0],
+                                                b: ["=(r + 0.05) * cos(radians(45 + 90 * i)) + hx", "=cy + ry * (r + 0.05) * sin(radians(45 + 90 * i))", "=lift"], r1: 0.15}}
+  - when: "=base == 'stump'"
+    parts:
+      - {use: octo, name: stump, with: {r: "=r + 0.3", ry: "=ry", cy: "=cy", z0: 0, z1: "=lift", top: 0.94, mat: bark}}
+      - {use: root, name: root-w, at: ["=hx - r * 0.75", "=cy - r * ry * 0.6", 0], with: {s: -1, l: 0.65, hh: "=lift + 0.15"}}
+      - {use: root, name: root-e, at: ["=hx + r * 0.75", "=cy - r * ry * 0.6", 0], with: {s: 1, l: 0.65, hh: "=lift + 0.15"}}
+  - when: "=base != 'ground'"
+    parts:
+      - name: ramp
+        mat: plank
+        extrude: {axis: x, profile: [[0, 0], ["=set + 0.05", 0], ["=set + 0.05", "=lift"]], span: ["=dxx - 0.5", "=dxx + 0.5"], round: 0.02}
+  # the hut
+  - {use: octo, name: wall, at: ["=hx", 0, 0], with: {r: "=r", ry: "=ry", cy: "=cy", z0: "=lift", z1: "=ez", top: 1, mat: wood}}
+  - when: "=roof == 'flare'"
+    parts:
+      - {use: flare-roof, name: roof, at: ["=hx", 0, 0], with: {r: "=R", ry: "=ry", cy: "=cy", z: "=ez", skirt: "=skirt", kink: "=kink", rise: "=rise"}}
+  - when: "=roof == 'cone'"
+    parts:
+      - {use: octo, name: roof, at: ["=hx", 0, 0], with: {r: "=R * 0.94", ry: "=ry", cy: "=cy", z0: "=ez", z1: "=ez + skirt + rise", top: 0.05, mat: thatch}}
+  - when: "=roof == 'tiered'"
+    parts:
+      - {use: octo, name: roof, at: ["=hx", 0, 0], with: {r: "=R", ry: "=ry", cy: "=cy", z0: "=ez", z1: "=ez + skirt + 0.12", top: 0.62, mat: thatch}}
+      - {use: octo, name: drum2, at: ["=hx", 0, 0], with: {r: "=r * 0.6", ry: "=ry", cy: "=cy", z0: "=ez + skirt", z1: "=ez + skirt + 0.12 + max(0.35, rise * 0.38)", top: 1, mat: wood}}
+      - {use: octo, name: roof2, at: ["=hx", 0, 0], with: {r: "=r * 0.68", ry: "=ry", cy: "=cy", z0: "=ez + skirt + 0.12 + max(0.35, rise * 0.38)", z1: "=ez + skirt + rise", top: 0.06, mat: thatch}}
+  # the way in
+  - when: "=porch"
+    parts:
+      - {use: porch, name: porch, at: ["=dxx", 0, 0], with: {w: 1.35, d: "=set + 0.45", h: "=wh * 0.98", rise: 0.18}}
+      - {use: wook-door, name: door, at: ["=dxx", 0, 0], with: {w: 0.78, h: "=min(0.82, wh * 0.98 - 0.16)"}}
+    else:
+      - {use: wook-door, name: door, at: ["=dxx", "=set", "=lift"], with: {w: 0.8, h: "=min(0.86, wh - 0.12)"}}
+  # extras
+  - when: "=extra == 'pylon'"
+    parts:
+      - {use: pylon, name: pylon, at: ["=max(-w_max / 2 + 0.4, min(w_max / 2 - 0.4, dxx + side * 1.1))", 0.25, 0], with: {h: "=min(ez + 0.5, B - 0.6)", disc: 0.36}}
+  - when: "=extra == 'pod'"
+    parts:
+      - {use: octo, name: pod, at: ["=max(-w_max / 2 + 0.5, min(w_max / 2 - 0.5, dxx + side * 1.25))", 0, 0], with: {r: 0.42, ry: 0.85, cy: 0.38, z0: 0, z1: 0.55, top: 1, mat: wood}}
+      - {use: octo, name: pod-roof, at: ["=max(-w_max / 2 + 0.5, min(w_max / 2 - 0.5, dxx + side * 1.25))", 0, 0], with: {r: 0.52, ry: 0.85, cy: 0.38, z0: 0.55, z1: 1.05, top: 0.06, mat: thatch}}
+  - when: "=extra == 'tusks' and roof != 'tiered'"
+    parts:
+      - {use: tusk, name: tusk-w, at: ["=hx - 0.1", "=cy", "=ez + skirt + rise * 0.82"], with: {s: -1, l: 0.6, r: 0.14}}
+      - {use: tusk, name: tusk-e, at: ["=hx + 0.1", "=cy", "=ez + skirt + rise * 0.82"], with: {s: 1, l: 0.6, r: 0.14}}

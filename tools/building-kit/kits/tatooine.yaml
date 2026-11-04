@@ -49,3 +49,40 @@ templates:
     preview: {at: [0, 0.7, 0]}
     parts:
       - {name: drum, mat: "=mat", cylinder: {a: [0, 0, 0], b: [0, 0, "=h"], r1: "=r", r2: "=r * 0.9"}}
+  # --- landmark pieces (docking bays, hangars, labs, arenas) ---
+  # A wide hangar mouth: a dark opening `w` x `h` in a heavy frame with a metal lintel, its foot at the
+  # entry's `at` (name the entry `door`). `arch: 1` gives it a round top.
+  hangar-mouth:
+    params: {w: 2.4, h: 1.2, frame: 0.16, arch: 0, trim: trim, hole: dark}
+    preview: {}
+    parts:
+      - {name: frame, mat: "=trim", box: {c: [0, -0.02, "=(h - w / 2 if arch else h + frame) / 2"], half: ["=w / 2 + frame", 0.08, "=(h - w / 2 if arch else h + frame) / 2"], radius: 0.03}}
+      - {name: frame-top, mat: "=trim", cylinder: {a: [0, -0.1, "=h - w / 2 if arch else 0.3"], b: [0, 0.06, "=h - w / 2 if arch else 0.3"], r1: "=w / 2 + frame if arch else 0.01"}}
+      - {name: hole, mat: "=hole", box: {c: [0, -0.07, "=(h - w / 2 if arch else h) / 2"], half: ["=w / 2", 0.06, "=(h - w / 2 if arch else h) / 2"]}}
+      - {name: hole-top, mat: "=hole", cylinder: {a: [0, -0.13, "=h - w / 2 if arch else 0.3"], b: [0, -0.01, "=h - w / 2 if arch else 0.3"], r1: "=w / 2 if arch else 0.01"}}
+      - {name: lintel, mat: metal, box: {c: [0, -0.12, "=0.1 if arch else h - 0.08"], half: ["=w / 2", 0.05, 0.08]}}
+  # A dish antenna on a short mast, the dish facing south and up (Mos Eisley rooftops, the Lars
+  # garage). `r` is the dish radius.
+  dish:
+    params: {r: 0.45, mast: 0.5, mat: light}
+    preview: {}
+    parts:
+      - {name: mast, mat: metal, cylinder: {a: [0, 0.1, 0], b: [0, 0.1, "=mast"], r1: 0.07}}
+      - {name: dish, mat: "=mat", cylinder: {a: [0, "=0.12 + r * 0.25", "=mast + r * 0.7"], b: [0, "=0.0 - r * 0.15", "=mast + r * 0.85"], r1: "=r", r2: "=r * 0.92"}}
+      - {name: horn, mat: metal, cylinder: {a: [0, "=-r * 0.1", "=mast + r * 0.85"], b: [0, "=-r * 0.45", "=mast + r * 0.95"], r1: 0.05}}
+  # A tall power cell: a stack of drums with a domed cap (power converters, generator plants).
+  power-cell:
+    params: {r: 0.3, h: 1.2, mat: light}
+    preview: {at: [0, 0.3, 0]}
+    parts:
+      - {name: base, mat: metal, cylinder: {a: [0, 0, 0], b: [0, 0, 0.2], r1: "=r + 0.06"}}
+      - {name: body, mat: "=mat", cylinder: {a: [0, 0, 0.2], b: [0, 0, "=h"], r1: "=r"}}
+      - {name: band, mat: metal, cylinder: {a: [0, 0, "=h * 0.55"], b: [0, 0, "=h * 0.55 + 0.12"], r1: "=r + 0.04"}}
+      - {name: cap, mat: metal, ellipsoid: {c: [0, 0, "=h"], r: ["=r", "=r", "=r * 0.45"]}}
+  # A pennant mast with a hanging banner facing south (arenas, the podrace grandstand).
+  banner:
+    params: {h: 1.6, w: 0.45, l: 0.7, mat: light}
+    preview: {}
+    parts:
+      - {name: mast, mat: metal, cylinder: {a: [0, 0, 0], b: [0, 0, "=h"], r1: 0.06}}
+      - {name: flag, mat: "=mat", box: {c: [0, -0.05, "=h - 0.05 - l / 2"], half: ["=w / 2", 0.04, "=l / 2"], radius: 0.02}}

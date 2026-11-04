@@ -1,7 +1,0 @@
-name: part-entry-vault
-parts:
-- name: entry-vault
-  use: entry-vault
-style: tatooine
-width:
-- 4

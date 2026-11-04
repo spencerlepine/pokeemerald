@@ -1,0 +1,230 @@
+# Endor kit: Bright Tree Village (Return of the Jedi) and the Imperial base on the forest moon.
+# Ewok pieces: round log drums under steep thatch cones, raised on stilts or log decks, hide door
+# flaps, log ramps, torch posts and totems. Imperial pieces: battered concrete portals with a flat
+# overhanging roof slab, set into a hill mound (the shield-generator bunker), prefab sheds, dishes.
+# Axes as in common.yaml: x east, y north (0 = the south front), z up, 1 m = 1 cell.
+materials:
+  wood:     {ramp: mid,   bands: [0.15, 0.42, 0.72]}
+  thatch:   {ramp: bone,  bands: [0.2, 0.5, 0.8]}
+  log:      {ramp: dark,  bands: [0.12, 0.42, 0.78]}
+  hide:     {ramp: bone,  bands: [0.3, 0.62, 0.9]}
+  concrete: {ramp: light, bands: [0.24, 0.54, 0.86]}
+  steel:    {ramp: mid,   bands: [0.25, 0.55, 0.88]}
+  sod:      {ramp: mid,   bands: [0.32, 0.62, 0.95]}
+templates:
+  # A round log drum, the Ewok hut wall, squashed north-south by `ry`. Origin: its centre at floor level.
+  ewok-drum:
+    params: {r: 0.8, ry: 0.85, h: 0.5, mat: wood}
+    preview: {at: [0, 0.9, 0]}
+    parts:
+      - {name: drum, mat: "=mat", cylinder: {a: [0, 0, 0], b: [0, 0, "=h"], r1: "=r", r2: "=r * 0.94"},
+         squash: {scale: [1, "=ry", 1], center: [0, 0, 0]}}
+  # A steep thatch cone with a log knot on top (the common Bright Tree hut). Base at z, radius r.
+  thatch-cone:
+    params: {r: 0.95, ry: 0.85, z: 0.5, rise: 0.95, knot: 0.3, mat: thatch}
+    preview: {at: [0, 1.0, 0]}
+    parts:
+      - {name: cone, mat: "=mat", cylinder: {a: [0, 0, "=z"], b: [0, 0, "=z + rise"], r1: "=r", r2: 0.06},
+         squash: {scale: [1, "=ry", 1], center: [0, 0, 0]}}
+      - {name: knot, mat: log, cylinder: {a: [0, 0, "=z + rise * 0.8"], b: [0, 0, "=z + rise * 0.8 + knot"], r1: 0.13, r2: 0.08}}
+  # Two thatch tiers: a wide flat skirt and a steep cone above it (the chief's and elders' huts).
+  thatch-tiered:
+    params: {r: 0.95, ry: 0.85, z: 0.5, rise: 1.0, mat: thatch}
+    preview: {at: [0, 1.0, 0]}
+    parts:
+      - {name: skirt, mat: "=mat", cylinder: {a: [0, 0, "=z"], b: [0, 0, "=z + rise * 0.38"], r1: "=r", r2: "=r * 0.55"},
+         squash: {scale: [1, "=ry", 1], center: [0, 0, 0]}}
+      - {name: cone, mat: "=mat", cylinder: {a: [0, 0, "=z + rise * 0.3"], b: [0, 0, "=z + rise"], r1: "=r * 0.68", r2: 0.06},
+         squash: {scale: [1, "=ry", 1], center: [0, 0, 0]}}
+  # A rounded thatch cap, like a haystack, with a short spike.
+  thatch-bulb:
+    params: {r: 0.95, ry: 0.85, z: 0.5, rise: 0.8, mat: thatch}
+    preview: {at: [0, 1.0, 0]}
+    parts:
+      - {name: bulb, mat: "=mat", ellipsoid: {c: [0, 0, "=z"], r: ["=r", "=r * ry", "=rise * 0.72"]}}
+      - {name: spike, mat: "=mat", cylinder: {a: [0, 0, "=z + rise * 0.55"], b: [0, 0, "=z + rise"], r1: "=r * 0.32", r2: 0.05}}
+  # A round log deck on posts: the platform a hut stands on. Top at z, front posts show under it.
+  ewok-deck:
+    params: {r: 1.0, ry: 0.8, z: 0.4, t: 0.16, post: 0.13, mat: wood, posts: log}
+    preview: {at: [0, 1.0, 0]}
+    parts:
+      - {name: deck, mat: "=mat", cylinder: {a: [0, 0, "=z - t"], b: [0, 0, "=z"], r1: "=r"},
+         squash: {scale: [1, "=ry", 1], center: [0, 0, 0]}}
+      - {name: post-w, mat: "=posts", cylinder: {a: ["=-r * 0.62", "=-r * ry * 0.55", 0], b: ["=-r * 0.62", "=-r * ry * 0.55", "=z - t"], r1: "=post"}}
+      - {name: post-e, mat: "=posts", cylinder: {a: ["=r * 0.62", "=-r * ry * 0.55", 0], b: ["=r * 0.62", "=-r * ry * 0.55", "=z - t"], r1: "=post"}}
+      - {name: post-m, mat: "=posts", cylinder: {a: [0, "=-r * ry * 0.2", 0], b: [0, "=-r * ry * 0.2", "=z - t"], r1: "=post * 1.4"}}
+  # A low ring of logs: the base a ground hut sits in (a raised floor ring).
+  log-ring:
+    params: {r: 1.0, ry: 0.8, h: 0.18, mat: log}
+    preview: {at: [0, 1.0, 0]}
+    parts:
+      - {name: ring, mat: "=mat", cylinder: {a: [0, 0, 0], b: [0, 0, "=h"], r1: "=r", r2: "=r - 0.05"},
+         squash: {scale: [1, "=ry", 1], center: [0, 0, 0]}}
+  # A hide door flap in a log frame: a dark opening with a rounded top.
+  ewok-door:
+    params: {w: 0.55, h: 0.45, flap: true}
+    preview: {}
+    parts:
+      - {name: frame, mat: hide, box: {c: [0, -0.04, "=h / 2 + 0.03"], half: ["=w / 2 + 0.1", 0.06, "=h / 2 + 0.03"], radius: 0.04}}
+      - {name: hole, mat: dark, box: {c: [0, -0.09, "=h * 0.42"], half: ["=w / 2", 0.05, "=h * 0.42"]}}
+      - {name: hole-top, mat: dark, cylinder: {a: [0, -0.14, "=h * 0.84"], b: [0, -0.04, "=h * 0.84"], r1: "=w / 2"}}
+      - {name: flap, mat: hide, box: {c: ["=w * 0.18 if flap else 0", -0.12, "=h * 0.62"], half: ["=w * 0.22 if flap else 0.005", 0.03, "=h * 0.3"], radius: 0.02}}
+  # A sloped log ramp from a deck edge down to the ground, running south. Top at z.
+  log-ramp:
+    params: {w: 0.6, z: 0.4, l: 0.45, mat: wood}
+    preview: {}
+    parts:
+      - name: ramp
+        mat: "=mat"
+        extrude: {axis: x, profile: [["=-l", 0], [0.05, 0], [0.05, "=z"], [-0.02, "=z"]], span: ["=-w / 2", "=w / 2"], round: 0.03}
+  # A torch post: a log with a fat head (Bright Tree Village is lit by torches).
+  torch-post:
+    params: {h: 0.9, r: 0.11, mat: log}
+    preview: {}
+    parts:
+      - {name: pole, mat: "=mat", cylinder: {a: [0, 0, 0], b: [0, 0, "=h"], r1: "=r", r2: "=r * 0.85"}}
+      - {name: head, mat: hide, cylinder: {a: [0, 0, "=h - 0.02"], b: [0, 0, "=h + 0.22"], r1: "=r + 0.07", r2: "=r + 0.12"}}
+  # A carved totem: stacked log drums of different sizes, a cap of horns.
+  totem:
+    params: {h: 1.4, r: 0.2, mat: log}
+    preview: {}
+    parts:
+      - {name: t1, mat: "=mat", cylinder: {a: [0, 0, 0], b: [0, 0, "=h * 0.4"], r1: "=r"}}
+      - {name: t2, mat: wood, cylinder: {a: [0, 0, "=h * 0.4"], b: [0, 0, "=h * 0.7"], r1: "=r * 1.25", r2: "=r * 1.1"}}
+      - {name: t3, mat: "=mat", cylinder: {a: [0, 0, "=h * 0.7"], b: [0, 0, "=h"], r1: "=r * 0.95", r2: "=r * 0.8"}}
+      - {name: horns, mat: hide, box: {c: [0, 0, "=h + 0.06"], half: ["=r * 1.9", 0.08, 0.08], radius: 0.03}}
+  # A woven basket or storage drum, for decks and storehouses.
+  basket:
+    params: {r: 0.24, h: 0.34, mat: hide}
+    preview: {}
+    parts:
+      - {name: basket, mat: "=mat", cylinder: {a: [0, 0, 0], b: [0, 0, "=h"], r1: "=r * 0.85", r2: "=r"}}
+      - {name: lid, mat: wood, cylinder: {a: [0, 0, "=h"], b: [0, 0, "=h + 0.08"], r1: "=r * 0.75", r2: "=r * 0.4"}}
+  # A redwood trunk stump the platforms wrap round: wide flared foot, straight shaft up to z.
+  redwood:
+    params: {r: 0.55, z: 2.0, mat: log}
+    preview: {at: [0, 0.8, 0]}
+    parts:
+      - {name: flare, mat: "=mat", cylinder: {a: [0, 0, 0], b: [0, 0, 0.45], r1: "=r * 1.45", r2: "=r"}}
+      - {name: shaft, mat: "=mat", cylinder: {a: [0, 0, 0.4], b: [0, 0, "=z"], r1: "=r", r2: "=r * 0.92"}}
+
+  # --- Imperial (the shield-generator bunker, Return of the Jedi) ---
+  # The bunker portal: a battered concrete block whose sides slope back, under a flat slab that
+  # overhangs it. Front at y = 0, centred on x.
+  imp-portal:
+    params: {w: 3.0, d: 1.2, h: 1.2, lean: 0.35, slab: 0.22, over: 0.15, mat: concrete}
+    preview: {}
+    parts:
+      - name: block
+        mat: "=mat"
+        prism: {poly: [["=-w / 2", 0], ["=w / 2", 0], ["=w / 2", "=d"], ["=-w / 2", "=d"]], z: [0, "=h"],
+                top: ["=(w - 2 * lean) / w", 1.0], round: 0.04}
+      - {name: slab, mat: "=mat", box: {c: [0, "=d / 2 - over / 2", "=h + slab / 2"], half: ["=w / 2 - lean + over + 0.1", "=d / 2 + over / 2", "=slab / 2"], radius: 0.03}}
+  # The bunker blast door: a wide recessed slab door with a heavy frame and a dark band at the top.
+  imp-door:
+    params: {w: 1.1, h: 0.95}
+    preview: {}
+    parts:
+      - {name: frame, mat: steel, box: {c: [0, -0.03, "=(h + 0.16) / 2"], half: ["=w / 2 + 0.16", 0.06, "=(h + 0.16) / 2"], radius: 0.02}}
+      - {name: slab, mat: metal, box: {c: [0, -0.08, "=h * 0.42"], half: ["=w / 2", 0.05, "=h * 0.42"]}}
+      - {name: band, mat: dark, box: {c: [0, -0.09, "=h * 0.92"], half: ["=w / 2", 0.05, "=h * 0.09"]}}
+  # A sloped concrete wing wall running from a portal corner out and down into the hill.
+  imp-wing:
+    params: {l: 0.9, h: 1.0, t: 0.3, s: 1, mat: concrete}
+    preview: {}
+    parts:
+      - name: wing
+        mat: "=mat"
+        extrude: {axis: y, profile: [[0, 0], ["=s * l", 0], [0, "=h"]], span: [0, "=t"], round: 0.04}
+  # A sensor dish on a mast, tipped back so its face looks south and up. `tip`: degrees from flat.
+  dish:
+    params: {r: 0.55, mast: 0.6, tip: 55, mat: steel}
+    preview: {at: [0, 0.5, 0]}
+    parts:
+      - {name: mast, mat: metal, cylinder: {a: [0, 0, 0], b: [0, 0, "=mast"], r1: 0.12, r2: 0.09}}
+      - {name: dish, mat: "=mat", rot: ["=0", 0, "=-tip"], cylinder: {a: [0, 0, "=mast + 0.05"], b: [0, 0, "=mast + 0.22"], r1: "=r * 0.35", r2: "=r"}}
+      - {name: face, mat: dark, rot: ["=0", 0, "=-tip"], cylinder: {a: [0, 0, "=mast + 0.2"], b: [0, 0, "=mast + 0.25"], r1: "=r * 0.72"}}
+      - {name: horn, mat: light, rot: ["=0", 0, "=-tip"], cylinder: {a: [0, 0, "=mast + 0.2"], b: [0, 0, "=mast + 0.6"], r1: 0.12, r2: 0.08}}
+  # A grassy hill mound the bunker is dug into.
+  mound:
+    params: {rx: 2.5, ry: 1.4, rz: 1.1, mat: sod}
+    preview: {at: [0, 1.4, 0]}
+    parts:
+      - {name: mound, mat: "=mat", ellipsoid: {c: [0, 0, 0], r: ["=rx", "=ry", "=rz"]}}
+  # A low-poly earth berm: a faceted hill with a sloped front from y = yf and a flat top, the bunker
+  # dug into its front. a: half width at the foot; top: the plateau's share of it.
+  berm:
+    params: {a: 2.6, yf: 0.25, yb: 3.0, h: 1.4, top: 0.62, slope: 0.8, mat: sod}
+    preview: {}
+    parts:
+      - name: berm
+        mat: "=mat"
+        hull: {points: [["=-a", "=yf + 0.3", 0], ["=a", "=yf + 0.3", 0], ["=-a * 0.8", "=yf", 0], ["=a * 0.8", "=yf", 0],
+                        ["=-a", "=yb", 0], ["=a", "=yb", 0],
+                        ["=-a * top", "=yf + slope", "=h"], ["=a * top", "=yf + slope", "=h"],
+                        ["=-a * top * 0.85", "=yb - slope", "=h"], ["=a * top * 0.85", "=yb - slope", "=h"]], round: 0.06}
+  # An Imperial prefab hut: a box with chamfered roof edges and a darker band of slit windows.
+  imp-shed:
+    params: {w: 2.4, d: 1.4, h: 1.0, cham: 0.25, mat: concrete}
+    preview: {}
+    parts:
+      - name: body
+        mat: "=mat"
+        prism: {poly: [["=-w / 2", 0], ["=w / 2", 0], ["=w / 2", "=d"], ["=-w / 2", "=d"]], z: [0, "=h"], round: 0.03}
+      - name: roof
+        mat: "=mat"
+        prism: {poly: [["=-w / 2", 0], ["=w / 2", 0], ["=w / 2", "=d"], ["=-w / 2", "=d"]], z: ["=h - 0.01", "=h + cham"],
+                top: ["=(w - 2 * cham) / w", "=(d - 2 * cham) / d"], round: 0.03}
+  # A short Imperial antenna mast with a cross arm.
+  antenna:
+    params: {h: 1.0, mat: metal}
+    preview: {}
+    parts:
+      - {name: mast, mat: "=mat", cylinder: {a: [0, 0, 0], b: [0, 0, "=h"], r1: 0.1, r2: 0.07}}
+      - {name: arm, mat: "=mat", box: {c: [0, 0, "=h * 0.75"], half: [0.32, 0.07, 0.07], radius: 0.02}}
+  # A vent box: a squat block with a dark louvre face, for bunker roofs and hill tops.
+  vent-box:
+    params: {w: 0.6, d: 0.45, h: 0.4, mat: steel}
+    preview: {}
+    parts:
+      - {name: box, mat: "=mat", box: {c: [0, "=d / 2", "=h / 2"], half: ["=w / 2", "=d / 2", "=h / 2"], radius: 0.03}}
+      - {name: louvre, mat: dark, box: {c: [0, -0.02, "=h * 0.5"], half: ["=w / 2 - 0.1", 0.03, "=h * 0.25"]}}
+  # A fuel or coolant tank lying east-west on two saddles.
+  tank:
+    params: {l: 1.0, r: 0.3, mat: steel}
+    preview: {at: [0, 0.4, 0]}
+    parts:
+      - {name: tank, mat: "=mat", cylinder: {a: ["=-l / 2", 0, "=r + 0.08"], b: ["=l / 2", 0, "=r + 0.08"], r1: "=r"}}
+      - {name: cap-w, mat: "=mat", ellipsoid: {c: ["=-l / 2", 0, "=r + 0.08"], r: ["=r * 0.5", "=r", "=r"]}}
+      - {name: cap-e, mat: "=mat", ellipsoid: {c: ["=l / 2", 0, "=r + 0.08"], r: ["=r * 0.5", "=r", "=r"]}}
+      - {name: saddles, mat: metal, box: {c: [0, 0, 0.12], half: ["=l * 0.35", "=r * 0.6", 0.12]}}
+  # A Lambda-class shuttle (Return of the Jedi: the stolen Tydirium) landed with its wings folded up,
+  # parked nose east so the tall wings show side-on. Origin: under the hull's middle.
+  lambda:
+    params: {l: 3.2, s: 1.0, mat: light}
+    preview: {at: [0, 1.0, 0]}
+    parts:
+      - name: hull
+        mat: "=mat"
+        extrude: {axis: x, profile: [["=-0.55 * s", "=0.35 * s"], ["=0.55 * s", "=0.35 * s"], ["=0.45 * s", "=0.95 * s"], ["=-0.45 * s", "=0.95 * s"]],
+                  span: ["=-l * 0.45", "=l * 0.3"], end: 0.85, round: 0.05}
+      - name: nose
+        mat: "=mat"
+        hull: {points: [["=l * 0.3", "=-0.45 * s", "=0.4 * s"], ["=l * 0.3", "=0.45 * s", "=0.4 * s"], ["=l * 0.3", "=-0.38 * s", "=0.9 * s"], ["=l * 0.3", "=0.38 * s", "=0.9 * s"],
+                        ["=l * 0.5", "=-0.15 * s", "=0.5 * s"], ["=l * 0.5", "=0.15 * s", "=0.5 * s"], ["=l * 0.48", 0, "=0.72 * s"]], round: 0.04}
+      - {name: glass, mat: dark, box: {c: ["=l * 0.42", "=-0.2 * s", "=0.66 * s"], half: ["=0.12 * s", 0.08, "=0.1 * s"]}}
+      - name: fin
+        mat: "=mat"
+        prism: {poly: [["=-l * 0.4", -0.06], ["=l * 0.12", -0.06], ["=l * 0.12", 0.06], ["=-l * 0.4", 0.06]], z: ["=0.9 * s", "=2.3 * s"], top: [0.55, 1.0], lean: ["=-l * 0.12", 0], round: 0.03}
+      - name: wing-s
+        mat: "=mat"
+        prism: {poly: [["=-l * 0.36", "=-0.62 * s"], ["=l * 0.1", "=-0.62 * s"], ["=l * 0.1", "=-0.5 * s"], ["=-l * 0.36", "=-0.5 * s"]], z: ["=0.45 * s", "=1.6 * s"], top: [0.6, 1.0], lean: ["=-l * 0.08", 0.1], round: 0.03}
+      - {name: strut-w, mat: metal, box: {c: ["=-l * 0.3", 0, "=0.18 * s"], half: [0.12, 0.3, "=0.18 * s"]}}
+      - {name: strut-e, mat: metal, box: {c: ["=l * 0.2", 0, "=0.18 * s"], half: [0.12, 0.3, "=0.18 * s"]}}
+  # A landing light on a short post.
+  pad-light:
+    params: {h: 0.45}
+    preview: {}
+    parts:
+      - {name: post, mat: metal, cylinder: {a: [0, 0, 0], b: [0, 0, "=h"], r1: 0.1}}
+      - {name: lamp, mat: light, ellipsoid: {c: [0, 0, "=h + 0.06"], r: [0.15, 0.15, 0.12]}}

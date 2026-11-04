@@ -1,0 +1,50 @@
+# A wayside house on the Tatooine flats (the Mos Espa and Anchorhead backstreets, the Tosche Station
+# lean-tos): a small dome or block with a broad shade canopy on posts beside its door, where travellers
+# rest out of the twin suns; crates or a water tank under it.
+name: canopy-house
+style: tatooine
+about: Small dome or block with a broad shade canopy on posts beside the door, crates or a tank under it.
+width: [4, 5, 6]
+choose:
+  hh: "=H or 4"
+  dx: "=door_x if door_x is not None else -(w_max / 2 - 0.9)"
+  side: "=1 if dx <= 0 else -1"                    # the canopy goes on the other side of the door
+  mass: {pick: [dome, block], weights: [1, 1]}
+  bw: "=min(2.0, w_max * 0.5)"                     # the house's width
+  bx: "=dx"
+  bd: "=min(1.5, hh * 0.38)"
+  bh: "=min(1.05, hh * 0.3)"
+  cw: "=w_max - bw - 0.05"                         # the canopy's width
+  cx: "=bx + side * (bw / 2 + cw / 2)"
+  cd: "=min(1.15, hh * 0.3)"
+  ch: [0.8, 0.95]
+  under: {pick: [crates, tank, bench], weights: [2, 2, 2]}
+  slope: [0.1, 0.25]
+parts:
+  - when: "=mass == 'dome'"
+    parts:
+      - {use: dome, name: house, at: ["=bx", "=0.3 + bd * 0.45", 0], with: {r: "=bw / 2", ry: "=bd / bw * 1.1", hk: "=min(1.1, (hh - 0.3 - bd) / (bw / 2) * 0.55)"}}
+      - {use: entry-vault, name: entry, at: ["=bx", 0, 0], with: {w: 1.0, d: 0.55, h: 0.5}}
+      - {use: door-arch, name: door, at: ["=bx", 0, 0], with: {w: 0.68, h: 0.45}}
+  - when: "=mass == 'block'"
+    parts:
+      - {use: adobe-block, name: house, at: ["=bx", 0, 0], with: {w: "=bw", d: "=bd", h: "=bh", batter: 0.12}}
+      - {use: roof-lip, name: lip, at: ["=bx", 0, 0], with: {w: "=bw", d: "=bd", h: "=bh", batter: 0.12, t: 0.13}}
+      - {use: door-arch, name: door, at: ["=bx", 0, 0], with: {w: 0.75, h: "=bh * 0.62"}}
+      - {use: vent, name: vent, at: ["=bx - side * bw * 0.22", "=bd * 0.6", "=bh"], with: {r: 0.15, h: 0.3}}
+  # the shade canopy: a sloped slab on four posts, low at the front
+  - {name: canopy, mat: mid, extrude: {axis: x, profile: [[0.0, "=ch"], ["=cd", "=ch + slope"], ["=cd", "=ch + slope + 0.09"], [0.0, "=ch + 0.09"]],
+                                       span: ["=cx - cw / 2", "=cx + cw / 2"], round: 0.02}}
+  - {name: post-1, mat: dark, box: {c: ["=cx - cw / 2 + 0.12", 0.14, "=ch / 2"], half: [0.06, 0.06, "=ch / 2"]}}
+  - {name: post-2, mat: dark, box: {c: ["=cx + cw / 2 - 0.12", 0.14, "=ch / 2"], half: [0.06, 0.06, "=ch / 2"]}}
+  - when: "=under == 'crates'"
+    parts:
+      - {use: crate, name: crate-1, at: ["=cx + side * cw * 0.15", "=cd * 0.6", 0], with: {s: 0.5}}
+      - {use: crate, name: crate-2, at: ["=cx - side * cw * 0.15", "=cd * 0.65", 0], with: {s: 0.4}}
+  - when: "=under == 'tank'"
+    parts:
+      - {name: tank, mat: metal, cylinder: {a: ["=cx", "=cd * 0.55", 0], b: ["=cx", "=cd * 0.55", 0.62], r1: "=min(0.4, cd * 0.3)"}}
+      - {name: tank-cap, mat: metal, ellipsoid: {c: ["=cx", "=cd * 0.55", 0.62], r: ["=min(0.4, cd * 0.3)", "=min(0.4, cd * 0.3)", 0.15]}}
+  - when: "=under == 'bench'"
+    parts:
+      - {name: bench, mat: wall, box: {c: ["=cx", "=cd * 0.7", 0.18], half: ["=cw * 0.32", 0.2, 0.18], radius: 0.05}}

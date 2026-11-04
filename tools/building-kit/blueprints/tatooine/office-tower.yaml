@@ -1,0 +1,61 @@
+# A Bestine office tower (House Organa's offices): a wide battered podium, a tall stepped adobe tower on
+# it with durasteel bands and long slot windows, drum wings or a side block, an antenna or a dish on top.
+# Mos Espa's tall towers (The Phantom Menace) in a capital's dress.
+name: office-tower
+style: tatooine
+about: Wide podium, a tall stepped tower with durasteel bands and slot windows, drum wings, antenna on top.
+width: [6, 7, 8]
+choose:
+  hh: "=H if H else 7"
+  w: ["=w_max * 0.9", "=w_max"]
+  pd: ["=hh * 0.27", "=hh * 0.32"]              # podium depth
+  ph: [1.1, 1.35]
+  tw: ["=w * 0.42", "=w * 0.5"]                 # tower width
+  td: ["=pd * 0.6", "=pd * 0.7"]
+  ty: "=pd * 0.25"
+  room: "=hh - 0.35 - ty - td - ph"             # metres of tower above the podium the lot allows
+  tiers: {pick: [2, 3], weights: [2, 3]}
+  t1: "=room * (0.55 if tiers == 2 else 0.42)"
+  t2: "=room * (0.3 if tiers == 2 else 0.28)"
+  t3: "=room * 0.14"
+  wing: {pick: [drums, block, none], weights: [3, 2, 1]}
+  top: {pick: [antenna, dish, dome], weights: [2, 2, 1]}
+  dx: "=door_x if door_x is not None else 0"
+parts:
+  - {use: adobe-block, name: podium, with: {w: "=w", d: "=pd", h: "=ph", batter: 0.16}}
+  - {use: roof-lip, name: podium-lip, with: {w: "=w", d: "=pd", h: "=ph", batter: 0.16, t: 0.18, mat: metal}}
+  # the tower: tier 1, durasteel band, tier 2 stepping back, (tier 3)
+  - {use: adobe-block, name: t1, at: [0, "=ty", "=ph"], with: {w: "=tw", d: "=td", h: "=t1", batter: 0.1}}
+  - {use: roof-lip, name: t1-band, at: [0, "=ty", "=ph"], with: {w: "=tw", d: "=td", h: "=t1", batter: 0.1, t: 0.2, mat: metal}}
+  - {use: window-slot, name: t1-win, at: [0, "=ty + 0.06", "=ph + t1 * 0.55"], with: {w: "=tw * 0.6", h: "=min(0.5, t1 * 0.35)"}}
+  - {use: adobe-block, name: t2, at: [0, "=ty + td * 0.15", "=ph + t1"], with: {w: "=tw * 0.74", d: "=td * 0.7", h: "=t2", batter: 0.08}}
+  - {use: roof-lip, name: t2-band, at: [0, "=ty + td * 0.15", "=ph + t1"], with: {w: "=tw * 0.74", d: "=td * 0.7", h: "=t2", batter: 0.08, t: 0.16, mat: metal}}
+  - when: "=tiers == 3"
+    parts:
+      - {use: window-slot, name: t2-win, at: [0, "=ty + td * 0.15 + 0.05", "=ph + t1 + t2 * 0.5"], with: {w: "=tw * 0.4", h: 0.22}}
+      - {use: adobe-block, name: t3, at: [0, "=ty + td * 0.25", "=ph + t1 + t2"], with: {w: "=tw * 0.48", d: "=td * 0.48", h: "=t3", batter: 0.06}}
+  - when: "=top == 'antenna'"
+    parts:
+      - {name: antenna, mat: metal, cylinder: {a: [0, "=ty + td * 0.45", "=ph + t1 + t2"], b: [0, "=ty + td * 0.45", "=ph + t1 + t2 + (t3 if tiers == 3 else 0) + 0.8"], r1: 0.08}}
+      - {name: antenna-ball, mat: light, ellipsoid: {c: [0, "=ty + td * 0.45", "=ph + t1 + t2 + (t3 if tiers == 3 else 0) + 0.45"], r: [0.16, 0.16, 0.16]}}
+  - when: "=top == 'dish'"
+    parts:
+      - {use: dish, name: dish, at: ["=tw * 0.18", "=ty + td * 0.4", "=ph + t1 + t2 + (t3 if tiers == 3 else 0)"], with: {r: 0.35, mast: 0.25}}
+  - when: "=top == 'dome'"
+    parts:
+      - {use: dome, name: cap, at: [0, "=ty + td * 0.5", "=ph + t1 + t2 + (t3 if tiers == 3 else 0)"], with: {r: "=tw * 0.22", ry: 0.8, hk: 0.6}}
+  # the wings on the podium
+  - when: "=wing == 'drums'"
+    parts:
+      - repeat: 2
+        parts:
+          - {use: drum, name: wdrum, at: ["=(i * 2 - 1) * (tw / 2 + (w / 2 - tw / 2) * 0.5)", "=pd * 0.55", "=ph - 0.1"], with: {r: "=min(0.55, (w / 2 - tw / 2) * 0.38)", h: "=t1 * 0.4"}}
+          - {use: dome, name: wcap, at: ["=(i * 2 - 1) * (tw / 2 + (w / 2 - tw / 2) * 0.5)", "=pd * 0.55", "=ph - 0.1 + t1 * 0.4"], with: {r: "=min(0.5, (w / 2 - tw / 2) * 0.34)", ry: 1.0, hk: 0.5}}
+  - when: "=wing == 'block'"
+    parts:
+      - {use: adobe-block, name: wblock, at: ["=(tw / 2 + (w / 2 - tw / 2) * 0.5) * (1 if seed % 2 else -1)", "=pd * 0.3", "=ph"], with: {w: "=(w / 2 - tw / 2) * 0.75", d: "=pd * 0.55", h: "=t1 * 0.45", batter: 0.08}}
+  # the entrance
+  - {use: door-slab, name: door, at: ["=dx", 0, 0], with: {w: 1.1, h: "=ph * 0.68"}}
+  - repeat: 2
+    parts:
+      - {use: window-slot, name: pwin, at: ["=dx + (i * 2 - 1) * 1.6", 0.05, "=ph * 0.6"], with: {w: 0.8, h: 0.26}}

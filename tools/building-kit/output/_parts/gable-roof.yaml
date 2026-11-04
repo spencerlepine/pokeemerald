@@ -1,7 +1,0 @@
-name: part-gable-roof
-parts:
-- name: gable-roof
-  use: gable-roof
-style: tatooine
-width:
-- 4

@@ -1,7 +1,0 @@
-name: part-deck
-parts:
-- name: deck
-  use: deck
-style: tatooine
-width:
-- 4

@@ -8,9 +8,9 @@ buildings:
   art: art:tatooine:house-organa-office-tower
   size: [8, 7]
   door: 4
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/office-tower
+  seed: 601
+  about: 'House Organa''s Bestine offices: a Mos Espa stepped tower (The Phantom Menace) in durasteel bands on a wide podium.'
 - id: bld:tatooine:bestine-bestine-arena-biggs
   kind: arena
   name: Bestine arena (Biggs)
@@ -28,9 +28,9 @@ buildings:
   art: art:tatooine:academy
   size: [6, 4]
   door: 3
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/academy
+  seed: 701
+  about: A domed Tatooine hall (Mos Espa, The Phantom Menace) between two low wings, a holo board out front.
 - id: bld:tatooine:jabbas-palace-jabba-s-palace-gate
   kind: landmark
   name: Jabba's palace gate
@@ -38,9 +38,9 @@ buildings:
   art: art:tatooine:jabbas-palace
   size: [14, 9]
   door: 7
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/palace
+  seed: 101
+  about: 'Jabba''s palace (Return of the Jedi): great drum towers on a battered wall, the massive gate, the rock mesa behind.'
 - id: bld:tatooine:jabbas-palace-sail-barge-dock-shed
   kind: hangar
   name: Sail barge dock shed
@@ -48,9 +48,9 @@ buildings:
   art: art:tatooine:docking-bay
   size: [6, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/hangar-shed
+  seed: 401
+  about: 'The shed where Jabba''s sail barge Khetanna is kept (Return of the Jedi): a long low vaulted shed, wide dark mouth.'
 - id: bld:tatooine:mos-eisley-docking-bay-94
   kind: hangar
   name: Docking Bay 94
@@ -58,9 +58,10 @@ buildings:
   art: art:tatooine:docking-bay
   size: [8, 8]
   door: 4
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/docking-bay
+  seed: 94
+  set: {ship: freighter}
+  about: 'Docking Bay 94 (A New Hope): the round open-roof pit where the Millennium Falcon waits, blast door on the street.'
 - id: bld:tatooine:mos-eisley-docking-bay-86-kashyyyk-hangar
   kind: hangar
   name: Docking Bay 86 (Kashyyyk hangar)
@@ -68,9 +69,10 @@ buildings:
   art: art:tatooine:docking-bay
   size: [8, 8]
   door: 4
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/docking-bay
+  seed: 86
+  set: {ship: shuttle}
+  about: A Mos Eisley docking bay (A New Hope) like Bay 94, a shuttle parked in the pit, the hangar for Kashyyyk.
 - id: bld:tatooine:mos-eisley-chalmun-s-cantina
   kind: landmark
   name: Chalmun's Cantina
@@ -88,9 +90,9 @@ buildings:
   art: art:tatooine:spacer-museum
   size: [8, 5]
   door: 4
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/museum
+  seed: 501
+  about: A two-tier Mos Eisley block (A New Hope) turned museum, a retired starfighter mounted on the roof as its sign.
 - id: bld:tatooine:mos-eisley-ric-olie-s-shipyard
   kind: hangar
   name: Ric Olie's shipyard
@@ -98,9 +100,10 @@ buildings:
   art: art:tatooine:docking-bay
   size: [8, 5]
   door: 4
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/hangar-shed
+  seed: 402
+  set: {mouth: square, extra: gantry}
+  about: 'A Mos Eisley spaceport hangar (A New Hope): long battered shed, a wide hangar mouth, crates and a gantry.'
 - id: bld:tatooine:mos-eisley-battle-tent
   kind: arena
   name: Battle tent
@@ -188,9 +191,9 @@ buildings:
   art: art:tatooine:prof-korr-s-lab
   size: [7, 5]
   door: 3
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/lab
+  seed: 801
+  about: A wide adobe block like the Lars garage (A New Hope) with solar panels, a dish antenna and a vaporator.
 - id: bld:tatooine:route-112-sullust-transport-pad-ships
   kind: pad
   name: Sullust transport pad (ships)

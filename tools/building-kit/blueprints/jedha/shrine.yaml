@@ -1,0 +1,32 @@
+# A pilgrim shrine of the Whills (Rogue One, Jedha's street shrines): a stepped plinth with a robed
+# statue, a kyber crystal on a pillar or a little domed niche; candles on the step, banners on poles.
+name: shrine
+style: jedha
+about: Stepped plinth with a robed statue, a kyber crystal pillar or a domed niche; candles and banners.
+width: [2, 3]
+choose:
+  w: ["=w_max * 0.85", "=w_max"]
+  what: {pick: [statue, crystal, niche], weights: [3, 2, 2]}
+  flags: {pick: [true, false]}
+parts:
+  - {use: stone-block, name: step1, at: [0, 0.1, 0], with: {w: "=w", d: 1.0, h: 0.18, mat: trim}}
+  - {use: stone-block, name: step2, at: [0, 0.3, 0.18], with: {w: "=w * 0.7", d: 0.65, h: 0.16}}
+  - when: "=what == 'statue'"
+    parts:
+      - {use: statue, name: statue, at: [0, 0.62, 0.34], with: {s: 0.95, plinth: 0.2}}
+  - when: "=what == 'crystal'"
+    parts:
+      - {use: column, name: pillar, at: [0, 0.62, 0.34], with: {r: 0.15, h: 0.8}}
+      - {name: kyber, mat: light, hull: {points: [[0, 0.62, 1.12], [-0.18, 0.62, 1.4], [0.18, 0.62, 1.4], [0, 0.48, 1.4], [0, 0.76, 1.4], [0, 0.62, 1.8]]}}
+  - when: "=what == 'niche'"
+    parts:
+      - {use: stone-block, name: niche, at: [0, 0.42, 0.34], with: {w: 0.9, d: 0.55, h: 0.8}}
+      - {use: drum-dome, name: niche-dome, at: [0, 0.7, 1.14], with: {r: 0.45, ry: 0.65, dh: 0.05, hk: 0.75}}
+      - {use: door-arch, name: niche-hole, at: [0, 0.42, 0.42], with: {w: 0.45, h: 0.32, frame: 0.08}}
+  - {name: candles, mat: light, box: {c: [0, -0.02, 0.24], half: ["=w * 0.3", 0.06, 0.06]}}
+  - when: "=flags and w > 2.2"
+    parts:
+      - {name: mast-w, mat: metal, box: {c: ["=-w / 2 + 0.15", 0.6, 0.65], half: [0.05, 0.05, 0.65]}}
+      - {name: flag-w, mat: cloth, box: {c: ["=-w / 2 + 0.15", 0.53, 1.0], half: [0.12, 0.03, 0.28]}}
+      - {name: mast-e, mat: metal, box: {c: ["=w / 2 - 0.15", 0.6, 0.65], half: [0.05, 0.05, 0.65]}}
+      - {name: flag-e, mat: cloth, box: {c: ["=w / 2 - 0.15", 0.53, 1.0], half: [0.12, 0.03, 0.28]}}

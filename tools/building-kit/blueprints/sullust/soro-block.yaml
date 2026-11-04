@@ -1,0 +1,60 @@
+# A SoroSuub industrial block (SoroSuub Corporation's prefab works on Sullust): a rounded slab with a
+# sloped front, then a barrel-vault roof, a stepped upper slab, a sawtooth of north-light roofs or a
+# flat roof with a lip; a blast door or a wide garage door; heat stacks, a side tank, crates.
+name: soro-block
+style: sullust
+about: Rounded slab, sloped front; vault, step, sawtooth or flat roof; blast or garage door; stacks, tank, crates.
+width: [4, 5, 6, 7]
+choose:
+  Hb: "=H if H else 4"
+  w: ["=w_max * 0.78", "=w_max * 0.95"]
+  d: "=min(2.3, max(1.4, Hb * 0.48))"
+  h: "=min(1.35, max(0.85, Hb * 0.3))"
+  roof: {pick: [vault, step, saw, flat], weights: [3, 2, 2, 2]}
+  door: {pick: [slab, garage], weights: [3, 2]}
+  dx0: ["=-(w / 2 - 1.0)", "=(w / 2 - 1.0)"]
+  dxx: "=door_x if door_x is not None else dx0"
+  side: "=-1 if dxx > 0 else 1"
+  stacks: {int: [0, 2]}
+  tank: {pick: [true, false], weights: [2, 3]}
+  wins: {pick: [slot, round, none], weights: [3, 2, 1]}
+parts:
+  - {use: slab, name: block, with: {w: "=w", d: "=d", h: "=h", lean: 0.3, rnd: 0.12}}
+  - when: "=roof == 'vault'"
+    parts:
+      - {use: vault, name: roof, at: [0, 0.25, "=h - 0.05"], with: {w: "=w - 0.35", r: "=(d - 0.35) / 2", hk: 0.8}}
+  - when: "=roof == 'step'"
+    parts:
+      - {use: slab, name: upper, at: ["=side * w * 0.2", "=d * 0.35", "=h - 0.04"], with: {w: "=w * 0.5", d: "=d * 0.55", h: 0.6, lean: 0.2, rnd: 0.1}}
+  - when: "=roof == 'saw'"
+    parts:
+      - repeat: "=max(2, round(w / 1.3))"
+        parts:
+          - name: "=f'saw{i}'"
+            mat: roof
+            extrude: {axis: y, profile: [["=-w / 2 + 0.2 + i * (w - 0.4) / n", "=h - 0.05"], ["=-w / 2 + 0.2 + (i + 1) * (w - 0.4) / n", "=h - 0.05"],
+                                         ["=-w / 2 + 0.2 + (i + 1) * (w - 0.4) / n", "=h + 0.45"]],
+                      span: [0.35, "=d - 0.15"], round: 0.03}
+  - when: "=roof == 'flat'"
+    parts:
+      - {name: lip, mat: trim, box: {c: [0, "=d / 2 + 0.1", "=h"], half: ["=w / 2 - 0.02", "=d / 2 - 0.05", 0.1], radius: 0.04}}
+  - when: "=door == 'slab'"
+    parts:
+      - {use: door-slab, name: door, at: ["=dxx", 0, 0], with: {w: 0.9, h: "=min(0.95, h * 0.75)"}}
+    else:
+      - {use: garage-door, name: door, at: ["=dxx", 0, 0], with: {w: 1.3, h: "=min(0.85, h * 0.7)"}}
+  - when: "=wins == 'slot' and w > 2.6"
+    parts:
+      - {use: window-slot, name: win, at: ["=dxx + side * 1.3", 0.02, "=h * 0.6"], with: {w: 0.8, h: 0.26}}
+  - when: "=wins == 'round' and w > 2.6"
+    parts:
+      - {use: window-round, name: win, at: ["=dxx + side * 1.15", 0.02, "=h * 0.58"], with: {r: 0.21}}
+  - repeat: "=stacks"
+    parts:
+      - {use: stack, name: "=f'stack{i}'", at: ["=-side * (w / 2 - 0.45 - i * 0.6)", "=d - 0.45", "=h - 0.05"], with: {r: 0.19, h: "=0.95 - i * 0.3"}}
+  - when: "=tank"
+    parts:
+      - {name: tank, mat: metal, cylinder: {a: ["=side * min(w / 2 + 0.1, w_max / 2 - 0.36)", "=d * 0.55", 0], b: ["=side * min(w / 2 + 0.1, w_max / 2 - 0.36)", "=d * 0.55", "=h * 0.8"], r1: 0.32}}
+      - {name: tank-top, mat: metal, ellipsoid: {c: ["=side * min(w / 2 + 0.1, w_max / 2 - 0.36)", "=d * 0.55", "=h * 0.8"], r: [0.32, 0.32, 0.18]}}
+    else:
+      - {use: crate, name: crate, at: ["=side * (w / 2 - 0.1)", -0.35, 0], with: {s: 0.45}}

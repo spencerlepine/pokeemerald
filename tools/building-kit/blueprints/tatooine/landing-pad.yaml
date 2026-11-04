@@ -1,0 +1,37 @@
+# A small Tatooine landing field (the Mos Eisley and Mos Espa pads, The Phantom Menace): a round raised
+# pad with a lighter landing ring, a squat control hut with the door, a beacon mast, fuel drums.
+name: landing-pad
+style: tatooine
+about: Round raised landing pad with a ring, a squat control hut with the door, a beacon mast, fuel drums.
+width: [5, 6, 7]
+choose:
+  dx: "=door_x if door_x is not None else -(w_max / 2 - 0.8)"
+  side: "=1 if dx <= 0 else -1"
+  hut: {pick: [dome, block], weights: [1, 1]}
+  hw: [1.35, 1.6]
+  pr: "=min((w_max - hw - 0.1) / 2, ((H or 5) - 0.6) / 2, 2.0)"   # pad radius
+  px: "=dx + side * (hw / 2 + 0.05 + pr)"
+  ph: [0.22, 0.32]
+  mast: {pick: [true, false], weights: [3, 1]}
+parts:
+  # the pad: a low drum with a raised landing ring and a dark centre
+  - {name: pad, mat: wall, cylinder: {a: ["=px", "=pr + 0.05", 0], b: ["=px", "=pr + 0.05", "=ph"], r1: "=pr", r2: "=pr - 0.08"}}
+  - {name: ring, mat: trim, cylinder: {a: ["=px", "=pr + 0.05", "=ph"], b: ["=px", "=pr + 0.05", "=ph + 0.04"], r1: "=pr * 0.72"}}
+  - {name: mark, mat: wall, cylinder: {a: ["=px", "=pr + 0.05", "=ph"], b: ["=px", "=pr + 0.05", "=ph + 0.06"], r1: "=pr * 0.5"}}
+  # the control hut
+  - when: "=hut == 'dome'"
+    parts:
+      - {use: dome, name: hut, at: ["=dx", "=0.35 + hw * 0.4", 0], with: {r: "=hw / 2", ry: 0.85, hk: 1.0}}
+      - {use: entry-vault, name: entry, at: ["=dx", 0, 0], with: {w: 0.95, d: 0.55, h: 0.5}}
+      - {use: door-arch, name: door, at: ["=dx", 0, 0], with: {w: 0.66, h: 0.45}}
+  - when: "=hut == 'block'"
+    parts:
+      - {use: adobe-block, name: hut, at: ["=dx", 0, 0], with: {w: "=hw", d: 1.2, h: 0.95, batter: 0.1}}
+      - {use: roof-lip, name: hut-lip, at: ["=dx", 0, 0], with: {w: "=hw", d: 1.2, h: 0.95, batter: 0.1, t: 0.12}}
+      - {use: door-slab, name: door, at: ["=dx", 0, 0], with: {w: 0.8, h: 0.75}}
+      - {use: vent, name: dish, at: ["=dx", 0.7, 0.95], with: {r: 0.24, h: 0.15, mat: light}}
+  - when: "=mast"
+    parts:
+      - {name: mast, mat: metal, cylinder: {a: ["=dx - side * (hw / 2 - 0.1)", "=1.2 + hw * 0.3", 0], b: ["=dx - side * (hw / 2 - 0.1)", "=1.2 + hw * 0.3", 1.5], r1: 0.07}}
+      - {name: lamp, mat: light, ellipsoid: {c: ["=dx - side * (hw / 2 - 0.1)", "=1.2 + hw * 0.3", 1.55], r: [0.14, 0.14, 0.14]}}
+  - {name: drum-1, mat: metal, cylinder: {a: ["=dx + side * (hw / 2 - 0.15)", "=2 * pr + 0.15", 0], b: ["=dx + side * (hw / 2 - 0.15)", "=2 * pr + 0.15", 0.45], r1: 0.2}}

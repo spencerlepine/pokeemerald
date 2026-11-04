@@ -1,0 +1,54 @@
+# A NiJedha walled compound (the Guardians of the Whills' quarters, a kyber storehouse): a high
+# sandstone front wall with a gate, buttress piers or corner towers, and the inner house rising
+# behind it: a dome, a stacked block or a flat roof with a shade.
+name: walled-compound
+style: jedha
+about: High sandstone wall with a gate and piers or corner towers; the inner house behind it with a dome or stack.
+width: [5, 6]
+choose:
+  w: ["=w_max * 0.94", "=w_max"]
+  wh: [0.95, 1.2]
+  D: "=max(3.0, (H or 6) - 2.4)"
+  iw: ["=w * 0.55", "=w * 0.75"]
+  id: "=min(D * 0.55, 1.8)"
+  ih: [1.4, 1.75]
+  inner: {pick: [dome, stack, shade], weights: [3, 2, 2]}
+  corners: {pick: [towers, piers], weights: [2, 3]}
+  gate: {pick: [portal, slab], weights: [3, 2]}
+  dx: "=door_x if door_x is not None else 0"
+  ix: ["=-(w - iw) / 2 * 0.6", "=(w - iw) / 2 * 0.6"]
+parts:
+  - {use: stone-block, name: wall, with: {w: "=w", d: 0.4, h: "=wh"}}
+  - {name: wall-cap, mat: trim, box: {c: [0, 0.2, "=wh + 0.03"], half: ["=w / 2 + 0.04", 0.24, 0.07], radius: 0.02}}
+  - {use: stone-block, name: side-w, at: ["=-w / 2 + 0.2", 0.3, 0], with: {w: 0.4, d: "=D - 0.3", h: "=wh * 0.8"}}
+  - {use: stone-block, name: side-e, at: ["=w / 2 - 0.2", 0.3, 0], with: {w: 0.4, d: "=D - 0.3", h: "=wh * 0.8"}}
+  - {use: stone-block, name: inner, at: ["=ix", "=D - id", 0], with: {w: "=iw", d: "=id", h: "=ih"}}
+  - {use: cornice, name: inner-c, at: ["=ix", "=D - id", 0], with: {w: "=iw", d: "=id", h: "=ih", t: 0.16, b: 0.16}}
+  - {use: win-deep, name: inner-win, at: ["=ix - iw * 0.25", "=D - id", "=ih * 0.78"], with: {w: 0.42, h: 0.32}}
+  - when: "=inner == 'dome'"
+    parts:
+      - {use: drum-dome, name: dome, at: ["=ix + iw * 0.12", "=D - id * 0.45", "=ih"], with: {r: "=min(0.65, iw * 0.25)", ry: 0.75, dh: 0.2, hk: 0.75}}
+  - when: "=inner == 'stack'"
+    parts:
+      - {use: stone-block, name: inner2, at: ["=ix + iw * 0.18", "=D - id * 0.75", "=ih"], with: {w: "=iw * 0.5", d: "=id * 0.6", h: 0.55}}
+      - {use: cornice, name: inner2-c, at: ["=ix + iw * 0.18", "=D - id * 0.75", "=ih"], with: {w: "=iw * 0.5", d: "=id * 0.6", h: 0.55, t: 0.12, b: 0.14}}
+  - when: "=inner == 'shade'"
+    parts:
+      - {use: canopy, name: shade, at: ["=ix", "=D - id * 0.85", "=ih + 0.02"], with: {w: "=iw * 0.6", d: "=id * 0.6", z: 0.45}}
+  - when: "=corners == 'towers'"
+    parts:
+      - {use: stone-block, name: tower-w, at: ["=-w / 2 + 0.4", 0, 0], with: {w: 0.8, d: 0.8, h: "=wh + 0.65"}}
+      - {use: stone-block, name: tower-e, at: ["=w / 2 - 0.4", 0, 0], with: {w: 0.8, d: 0.8, h: "=wh + 0.65"}}
+      - {use: cornice, name: tower-w-c, at: ["=-w / 2 + 0.4", 0, 0], with: {w: 0.8, d: 0.8, h: "=wh + 0.65", t: 0.12, b: 0.16}}
+      - {use: cornice, name: tower-e-c, at: ["=w / 2 - 0.4", 0, 0], with: {w: 0.8, d: 0.8, h: "=wh + 0.65", t: 0.12, b: 0.16}}
+      - {name: slit-w, mat: dark, box: {c: ["=-w / 2 + 0.4", -0.03, "=wh + 0.25"], half: [0.1, 0.04, 0.2]}}
+      - {name: slit-e, mat: dark, box: {c: ["=w / 2 - 0.4", -0.03, "=wh + 0.25"], half: [0.1, 0.04, 0.2]}}
+    else:
+      - {use: stone-block, name: pier-w, at: ["=-w / 2 + 0.25", -0.06, 0], with: {w: 0.45, d: 0.55, h: "=wh + 0.2", mat: trim}}
+      - {use: stone-block, name: pier-e, at: ["=w / 2 - 0.25", -0.06, 0], with: {w: 0.45, d: 0.55, h: "=wh + 0.2", mat: trim}}
+      - {use: banner, name: banner, at: ["=dx + (1.2 if dx < 0.5 else -1.2)", -0.02, "=wh - 0.1"], with: {w: 0.4, h: "=wh * 0.55"}}
+  - when: "=gate == 'portal'"
+    parts:
+      - {use: portal, name: door, at: ["=dx", 0, 0], with: {w: 0.85, h: "=wh - 0.75", frame: 0.14}}
+    else:
+      - {use: door-slab, name: door, at: ["=dx", 0, 0], with: {w: 0.95, h: "=wh - 0.2", door: dark}}

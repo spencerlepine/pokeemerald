@@ -1,7 +1,0 @@
-name: part-box-block
-parts:
-- name: box-block
-  use: box-block
-style: tatooine
-width:
-- 4

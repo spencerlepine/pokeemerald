@@ -1,0 +1,95 @@
+# Kashyyyk kit: Wookiee timber (Kachirho, Rwookrrorro; Revenge of the Sith, the Holiday Special).
+# What makes them Wookiee and not Earth: round faceted timber drums, steep woven roofs that flare out in
+# a skirt, everything raised on stilts or wroshyr platforms, wedge doors narrower at the top, carved
+# tusk horns on the ridges, tall pylons with flat discs, and the huge dark wroshyr trunks they wrap round.
+# Greybox: wood is mid, woven roofs bone, bark dark, planks and decks light.
+materials:
+  wood:   {ramp: mid,   bands: [0.2, 0.5, 0.85]}
+  bark:   {ramp: dark,  bands: [0.18, 0.48, 0.82]}
+  thatch: {ramp: bone,  bands: [0.34, 0.6, 0.84]}
+  plank:  {ramp: light, bands: [0.25, 0.55, 0.85]}
+templates:
+  # An eight-sided solid: radius r east-west, r * ry north-south, centred at (0, cy), from z0 to z1,
+  # its top scaled by `top` (1 = a drum, 0.05 = a cone). One facet faces south.
+  octo:
+    params: {r: 1.0, ry: 0.75, cy: 0.7, z0: 0.0, z1: 0.8, top: 1.0, rnd: 0.03, mat: wood}
+    preview: {}
+    parts:
+      - name: body
+        mat: "=mat"
+        prism:
+          poly: [["=r * 0.924", "=cy + ry * r * 0.383"], ["=r * 0.383", "=cy + ry * r * 0.924"],
+                 ["=-r * 0.383", "=cy + ry * r * 0.924"], ["=-r * 0.924", "=cy + ry * r * 0.383"],
+                 ["=-r * 0.924", "=cy - ry * r * 0.383"], ["=-r * 0.383", "=cy - ry * r * 0.924"],
+                 ["=r * 0.383", "=cy - ry * r * 0.924"], ["=r * 0.924", "=cy - ry * r * 0.383"]]
+          z: ["=z0", "=z1"]
+          top: "=top"
+          round: "=rnd"
+  # The Wookiee woven roof: a shallow skirt flaring out over the eaves, then a steep faceted cone.
+  flare-roof:
+    params: {r: 1.4, ry: 0.75, cy: 0.7, z: 0.8, skirt: 0.25, kink: 0.62, rise: 0.8, mat: thatch}
+    preview: {}
+    parts:
+      - {use: octo, name: skirt, with: {r: "=r", ry: "=ry", cy: "=cy", z0: "=z", z1: "=z + skirt", top: "=kink", rnd: 0.03, mat: "=mat"}}
+      - {use: octo, name: cone, with: {r: "=r * kink", ry: "=ry", cy: "=cy", z0: "=z + skirt - 0.01", z1: "=z + skirt + rise", top: 0.06, rnd: 0.03, mat: "=mat"}}
+  # A Wookiee doorway: a tall opening narrower at the top, in a heavy timber frame.
+  wook-door:
+    params: {w: 0.8, h: 0.95, frame: 0.13, taper: 0.72, door: dark, trim: plank}
+    preview: {}
+    parts:
+      - name: frame
+        mat: "=trim"
+        prism: {poly: [["=-w / 2 - frame", -0.1], ["=w / 2 + frame", -0.1], ["=w / 2 + frame", 0.1], ["=-w / 2 - frame", 0.1]],
+                z: [0, "=h + frame"], top: ["=taper", 1], round: 0.02}
+      - name: hole
+        mat: "=door"
+        prism: {poly: [["=-w / 2", -0.14], ["=w / 2", -0.14], ["=w / 2", -0.04], ["=-w / 2", -0.04]],
+                z: [0, "=h"], top: ["=taper * 0.95", 1], round: 0.01}
+  # A timber porch block in front of a hut: a box with a sloped pent roof, its front at y = 0.
+  porch:
+    params: {w: 1.3, d: 0.8, h: 1.05, rise: 0.25, over: 0.12, mat: wood, roofmat: thatch}
+    preview: {}
+    parts:
+      - {name: body, mat: "=mat", box: {c: [0, "=d / 2", "=h / 2"], half: ["=w / 2", "=d / 2", "=h / 2"], radius: 0.03}}
+      - name: roof
+        mat: "=roofmat"
+        extrude: {axis: x, profile: [["=-over", "=h"], ["=d", "=h + rise"], ["=d", "=h + rise + 0.1"], ["=-over", "=h + 0.1"]],
+                  span: ["=-w / 2 - over", "=w / 2 + over"], round: 0.03}
+  # A Kachirho pylon: a tall round post with a flat disc on top.
+  pylon:
+    params: {h: 1.6, r: 0.13, disc: 0.38, mat: wood, cap: plank}
+    preview: {}
+    parts:
+      - {name: post, mat: "=mat", cylinder: {a: [0, 0, 0], b: [0, 0, "=h"], r1: "=r * 1.25", r2: "=r"}}
+      - {name: disc, mat: "=cap", cylinder: {a: [0, 0, "=h"], b: [0, 0, "=h + 0.12"], r1: "=disc", r2: "=disc * 0.85"}}
+  # A carved tusk horn: a curved spike from a base, as two slanted cone pieces. `s` = +1 east, -1 west.
+  tusk:
+    params: {l: 0.7, r: 0.12, s: 1, lean: 0.55, mat: plank}
+    preview: {}
+    parts:
+      - {name: base, mat: "=mat", cylinder: {a: [0, 0, 0], b: ["=s * l * lean * 0.5", 0, "=l * 0.55"], r1: "=r", r2: "=r * 0.7"}}
+      - {name: tip, mat: "=mat", cylinder: {a: ["=s * l * lean * 0.5", 0, "=l * 0.55"], b: ["=s * l * lean * 1.25", 0, "=l"], r1: "=r * 0.7", r2: 0.03}}
+  # A wroshyr trunk: dark bark, flared at the foot, centred at (0, cy).
+  trunk:
+    params: {r: 0.9, h: 3.0, cy: 1.2, flare: 1.35, mat: bark}
+    preview: {}
+    parts:
+      - {name: foot, mat: "=mat", cylinder: {a: [0, "=cy", 0], b: [0, "=cy", 0.6], r1: "=r * flare", r2: "=r"}}
+      - {name: stem, mat: "=mat", cylinder: {a: [0, "=cy", 0.5], b: [0, "=cy", "=h"], r1: "=r", r2: "=r * 0.88"}}
+  # A buttress root running out from a trunk to the south-east or south-west (`s`).
+  root:
+    params: {l: 0.8, hh: 0.6, t: 0.16, s: 1, mat: bark}
+    preview: {}
+    parts:
+      - name: wedge
+        mat: "=mat"
+        hull: {points: [["=-t", 0, 0], ["=t", 0, 0], ["=s * l - t * 0.5", "=-l * 0.45", 0], ["=s * l + t * 0.5", "=-l * 0.45", 0],
+                        ["=-t * 0.8", 0, "=hh"], ["=t * 0.8", 0, "=hh"]], round: 0.03}
+  # A wide slatted window: a dark opening with two vertical slats.
+  slat-window:
+    params: {w: 0.7, h: 0.4, frame: 0.08, glass: dark, trim: plank}
+    preview: {at: [0, 0, 0.7]}
+    parts:
+      - {name: frame, mat: "=trim", box: {c: [0, -0.04, 0], half: ["=w / 2 + frame", 0.06, "=h / 2 + frame"], radius: 0.02}}
+      - {name: glass, mat: "=glass", box: {c: [0, -0.08, 0], half: ["=w / 2", 0.04, "=h / 2"]}}
+      - {name: slat, mat: "=trim", box: {c: [0, -0.11, 0], half: [0.05, 0.03, "=h / 2"]}}

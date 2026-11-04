@@ -1,0 +1,58 @@
+# A Tatooine Supply Depot (always 4x4): a trader's shop like Watto's in Mos Espa or the Mos Eisley
+# stalls: a battered block with a wide door under a flat shade canopy, a low dome or upper block on
+# the roof, cargo crates stacked by the wall.
+name: supply-depot
+style: tatooine
+about: Battered shop block with a wide door, a shade canopy or porch, a roof dome and stacked crates.
+width: [4]
+choose:
+  mass: {pick: [shop, dome, step], weights: [3, 2, 2]}
+  w: ["=w_max * 0.92", "=w_max"]
+  d0: [1.2, 1.5]
+  h0: [0.95, 1.15]
+  batter: [0.08, 0.16]
+  dx: "=door_x if door_x is not None else -0.5"
+  side: "=1 if dx <= 0 else -1"                  # east of the door when it is west, and so on
+  front: {pick: [canopy, porch, plain], weights: [3, 2, 1]}
+  crates: {pick: [2, 3, 0], weights: [3, 2, 1]}
+  y0: "=0.6 if front == 'canopy' else 0.0"        # the canopy stands in front, so the block steps back
+  d: "=d0 - y0 * 0.45"
+  h: "=h0 - y0 * 0.25"
+parts:
+  - when: "=mass == 'shop'"
+    parts:
+      - {use: adobe-block, name: block, at: [0, "=y0", 0], with: {w: "=w", d: "=d", h: "=h", batter: "=batter"}}
+      - {use: roof-lip, name: lip, at: [0, "=y0", 0], with: {w: "=w", d: "=d", h: "=h", batter: "=batter"}}
+      - {use: dome, name: dome, at: ["=side * w * 0.2", "=y0 + d * 0.55", "=h"], with: {r: "=w * 0.25", ry: 0.8, hk: 0.62}}
+  - when: "=mass == 'dome'"                      # Watto's: a big dome behind a flat-fronted shop block
+    parts:
+      - {use: dome, name: dome, at: ["=side * 0.25", "=y0 + d * 0.75", 0], with: {r: "=w * 0.43", ry: 0.6, hk: "=0.9 - y0 * 0.3"}}
+      - {use: adobe-block, name: block, at: [0, "=y0", 0], with: {w: "=w * 0.85", d: "=d * 0.55", h: "=h * 0.9", batter: "=batter"}}
+      - {use: roof-lip, name: lip, at: [0, "=y0", 0], with: {w: "=w * 0.85", d: "=d * 0.55", h: "=h * 0.9", batter: "=batter", t: 0.14}}
+  - when: "=mass == 'step'"
+    parts:
+      - {use: adobe-block, name: block, at: [0, "=y0", 0], with: {w: "=w", d: "=d", h: "=h * 0.9", batter: "=batter"}}
+      - {use: roof-lip, name: lip, at: [0, "=y0", 0], with: {w: "=w", d: "=d", h: "=h * 0.9", batter: "=batter"}}
+      - {use: adobe-block, name: upper, at: ["=side * w * 0.2", "=y0 + d * 0.35", "=h * 0.9 - 0.05"], with: {w: "=w * 0.48", d: "=d * 0.55", h: 0.6, batter: 0.08}}
+      - {use: vent, name: vent, at: ["=-side * w * 0.28", "=y0 + d * 0.7", "=h * 0.9"], with: {r: 0.16, h: 0.35}}
+  # the wide door
+  - {use: door-slab, name: door, at: ["=dx", "=y0", 0], with: {w: 1.2, h: 0.9, frame: 0.13}}
+  - when: "=front == 'canopy'"                   # a flat shade canopy on two posts over the door
+    parts:
+      - {name: canopy, mat: roof, prism: {poly: [["=dx - 0.95", 0.0], ["=dx + 0.95", 0.0], ["=dx + 0.95", "=y0 + 0.1"], ["=dx - 0.95", "=y0 + 0.1"]], z: [0.86, 0.96], round: 0.02}}
+      - {name: post-w, mat: dark, box: {c: ["=dx - 0.85", 0.1, 0.43], half: [0.07, 0.07, 0.43]}}
+      - {name: post-e, mat: dark, box: {c: ["=dx + 0.85", 0.1, 0.43], half: [0.07, 0.07, 0.43]}}
+  - when: "=front == 'porch'"                    # buttressed jambs either side of the door
+    parts:
+      - {use: buttress, name: jamb-w, at: ["=dx - 0.82", "=y0 + 0.05", 0], with: {hh: 1.0, l: 0.4, t: 0.18}}
+      - {use: buttress, name: jamb-e, at: ["=dx + 0.82", "=y0 + 0.05", 0], with: {hh: 1.0, l: 0.4, t: 0.18}}
+  - when: "=crates >= 2"
+    parts:
+      - {use: crate, name: crate-1, at: ["=dx + side * 1.45", "=y0 * 0.5 + 0.3", 0], with: {s: 0.5}}
+      - {use: crate, name: crate-2, at: ["=dx + side * 1.45", "=y0 * 0.5 + 0.3", 0.5], with: {s: 0.42}}
+  - when: "=crates == 3"
+    parts:
+      - {use: crate, name: crate-3, at: ["=dx + side * 1.0", 0.22, 0], with: {s: 0.4}}
+  - when: "=crates == 0 and front != 'canopy'"
+    parts:
+      - {use: window-round, name: win, at: ["=dx + side * 1.4", "=y0", "=h * 0.55"], with: {r: 0.2}}

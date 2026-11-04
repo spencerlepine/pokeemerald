@@ -1,7 +1,0 @@
-name: part-adobe-block
-parts:
-- name: adobe-block
-  use: adobe-block
-style: tatooine
-width:
-- 4

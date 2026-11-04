@@ -1,0 +1,46 @@
+# Kachirho's great tree halls (Revenge of the Sith): a dark wroshyr trunk with timber rings wrapped round
+# it, each ring a faceted wall under a woven skirt roof, a porch at the foot, a woven cap where the trunk
+# goes up into the canopy. Big: for 6x5 lots and up.
+name: trunk-hall
+style: kashyyyk
+about: Wroshyr trunk wrapped in one or two timber rings with woven skirt roofs; porch at the foot, woven cap on top.
+width: [6, 7]
+choose:
+  B: "=(H if H else 6) - 0.35"
+  tr: [0.62, 0.85]                               # trunk radius
+  R1: "=min(w_max / 2 / 0.924 - 0.15, [2.1, 2.5][seed % 2])"   # lower ring (roof eave) radius
+  ry: [0.56, 0.66]
+  set: 0.36
+  cy: "=set + (R1 - 0.25) * ry * 0.924"
+  h1: [0.95, 1.15]
+  sk1: [0.4, 0.55]
+  tiers: "=2 if B - cy - h1 - sk1 > 1.9 else 1"
+  h2: [0.5, 0.65]
+  R2: "=R1 * [0.62, 0.7][seed % 3 % 2]"
+  z2: "=h1 + sk1 * 0.55"
+  apex: "=B - cy - 0.15"                           # the cap's apex (z)
+  dxx: "=door_x if door_x is not None else 0"
+  roots: {pick: [true, false], weights: [3, 1]}
+  pyl: {pick: [none, both, one], weights: [2, 2, 1]}
+parts:
+  - {use: trunk, name: trunk, with: {r: "=tr", h: "=apex - 0.5", cy: "=cy", flare: 1.25}}
+  - {use: octo, name: ring1, with: {r: "=R1 - 0.25", ry: "=ry", cy: "=cy", z0: 0, z1: "=h1", top: 1, mat: wood}}
+  - {use: octo, name: roof1, with: {r: "=R1", ry: "=ry", cy: "=cy", z0: "=h1", z1: "=h1 + sk1", top: "=(tr + 0.25) / R1", mat: thatch}}
+  - when: "=tiers == 2"
+    parts:
+      - {use: octo, name: ring2, with: {r: "=R2 - 0.2", ry: "=ry", cy: "=cy", z0: "=z2", z1: "=z2 + h2", top: 1, mat: wood}}
+      - {use: octo, name: roof2, with: {r: "=R2", ry: "=ry", cy: "=cy", z0: "=z2 + h2", z1: "=z2 + h2 + sk1 * 0.8", top: "=(tr + 0.2) / R2", mat: thatch}}
+      - {use: slat-window, name: win2, at: [0, "=cy - (R2 - 0.2) * ry * 0.924", "=z2 + h2 * 0.5"], with: {w: 0.6, h: 0.26}}
+  - {use: octo, name: cap, with: {r: "=tr * 1.75", ry: "=ry", cy: "=cy", z0: "=apex - 0.85", z1: "=apex", top: 0.06, mat: thatch}}
+  - {use: porch, name: porch, at: ["=dxx", 0, 0], with: {w: 1.45, d: "=set + 0.5", h: "=h1 * 0.95", rise: 0.2}}
+  - {use: wook-door, name: door, at: ["=dxx", 0, 0], with: {w: 0.82, h: "=min(0.86, h1 * 0.95 - 0.16)"}}
+  - when: "=roots"
+    parts:
+      - {use: root, name: root-w, at: ["=-(R1 - 0.45)", "=cy - (R1 - 0.25) * ry * 0.55", 0], with: {s: -1, l: 0.6, hh: 0.55}}
+      - {use: root, name: root-e, at: ["=R1 - 0.45", "=cy - (R1 - 0.25) * ry * 0.55", 0], with: {s: 1, l: 0.6, hh: 0.55}}
+  - when: "=pyl != 'none'"
+    parts:
+      - {use: pylon, name: pylon-e, at: ["=w_max / 2 - 0.35", 0.15, 0], with: {h: "=h1 + 0.5", disc: 0.32}}
+  - when: "=pyl == 'both'"
+    parts:
+      - {use: pylon, name: pylon-w, at: ["=-w_max / 2 + 0.35", 0.15, 0], with: {h: "=h1 + 0.5", disc: 0.32}}

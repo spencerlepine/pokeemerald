@@ -1,0 +1,109 @@
+# Jedha kit: NiJedha, the holy city (Rogue One). Sandstone in big square-cut blocks stacked and
+# offset, walls straight up (not Tatooine's battered adobe), heavy cornices, low stone domes on round
+# drums, tall recessed portals, cloth awnings on poles over doors and roofs, robed guardian statues.
+materials:
+  stone: {ramp: bone,  bands: [0.2, 0.5, 0.86]}
+  cloth: {ramp: light, bands: [0.2, 0.5, 0.82]}
+  imp:   {ramp: mid,   bands: [0.22, 0.52, 0.86]}
+templates:
+  # A square-cut sandstone block, its front at y = 0. Edges barely softened.
+  stone-block:
+    params: {w: 3.0, d: 2.0, h: 1.4, rnd: 0.04, mat: stone}
+    preview: {}
+    parts:
+      - {name: block, mat: "=mat", box: {c: [0, "=d / 2", "=h / 2"], half: ["=w / 2", "=d / 2", "=h / 2"], radius: "=rnd"}}
+  # The heavy cornice: a band proud of the wall on all four sides, the roof inside it stays stone.
+  cornice:
+    params: {w: 3.0, d: 2.0, h: 1.4, t: 0.18, out: 0.08, b: 0.2, mat: trim}
+    preview: {}
+    parts:
+      - {name: front, mat: "=mat", box: {c: [0, "=b / 2 - out", "=h - t / 2 + 0.03"], half: ["=w / 2 + out", "=b / 2", "=t / 2"], radius: 0.03}}
+      - {name: back, mat: "=mat", box: {c: [0, "=d - b / 2 + out", "=h - t / 2 + 0.03"], half: ["=w / 2 + out", "=b / 2", "=t / 2"], radius: 0.03}}
+      - {name: west, mat: "=mat", box: {c: ["=-w / 2 + b / 2 - out", "=d / 2", "=h - t / 2 + 0.03"], half: ["=b / 2", "=d / 2 + out", "=t / 2"], radius: 0.03}}
+      - {name: east, mat: "=mat", box: {c: ["=w / 2 - b / 2 + out", "=d / 2", "=h - t / 2 + 0.03"], half: ["=b / 2", "=d / 2 + out", "=t / 2"], radius: 0.03}}
+  # A low stone dome on a round drum, standing at its centre. `dh` drum height, hk dome height / r.
+  drum-dome:
+    params: {r: 0.7, ry: 0.72, dh: 0.3, hk: 0.75, mat: roof, finial: true}
+    preview: {at: [0, 0.6, 0]}
+    parts:
+      - {name: drum, mat: "=mat", cylinder: {a: [0, 0, 0], b: [0, 0, "=dh"], r1: "=r"}, squash: {scale: [1, "=ry", 1], center: [0, 0, 0]}}
+      - {name: ring, mat: trim, cylinder: {a: [0, 0, "=dh - 0.05"], b: [0, 0, "=dh + 0.05"], r1: "=r + 0.06"}, squash: {scale: [1, "=ry", 1], center: [0, 0, 0]}}
+      - {name: dome, mat: "=mat", ellipsoid: {c: [0, 0, "=dh"], r: ["=r", "=r * ry", "=r * hk"]}}
+      - {name: finial, mat: trim, cylinder: {a: [0, 0, "=dh + r * hk - 0.05"], b: [0, 0, "=dh + r * hk + (0.22 if finial else 0.0)"], r1: 0.09, r2: 0.06}}
+  # A tall recessed portal: a dark round-topped opening in a stepped stone frame with a lintel slab.
+  portal:
+    params: {w: 0.85, h: 0.95, frame: 0.16, mat: trim}
+    preview: {}
+    parts:
+      - {name: frame, mat: "=mat", box: {c: [0, -0.04, "=(h + w / 2 + frame) / 2"], half: ["=w / 2 + frame", 0.08, "=(h + w / 2 + frame) / 2"], radius: 0.02}}
+      - {name: lintel, mat: "=mat", box: {c: [0, -0.07, "=h + w / 2 + frame + 0.06"], half: ["=w / 2 + frame + 0.1", 0.09, 0.08], radius: 0.02}}
+      - {name: hole, mat: dark, box: {c: [0, -0.1, "=h / 2"], half: ["=w / 2", 0.05, "=h / 2"]}}
+      - {name: hole-top, mat: dark, cylinder: {a: [0, -0.15, "=h"], b: [0, -0.05, "=h"], r1: "=w / 2"}}
+  # A deep square window with a stone sill.
+  win-deep:
+    params: {w: 0.5, h: 0.5, mat: trim}
+    preview: {at: [0, 0, 0.6]}
+    parts:
+      - {name: sill, mat: "=mat", box: {c: [0, -0.05, "=-h / 2 - 0.05"], half: ["=w / 2 + 0.1", 0.07, 0.06], radius: 0.02}}
+      - {name: glass, mat: dark, box: {c: [0, -0.04, 0], half: ["=w / 2", 0.05, "=h / 2"]}}
+  # A cloth awning on two poles, sloping south from the wall at z `hi` down to `lo`, `out` deep.
+  awning:
+    params: {w: 1.4, out: 0.6, hi: 1.15, lo: 0.85, t: 0.07, mat: cloth}
+    preview: {}
+    parts:
+      - name: cloth
+        mat: "=mat"
+        extrude: {axis: x, profile: [[0.04, "=hi"], [0.04, "=hi + t"], ["=-out", "=lo + t"], ["=-out", "=lo"]], span: ["=-w / 2", "=w / 2"], round: 0.02}
+      - {name: pole-w, mat: metal, box: {c: ["=-w / 2 + 0.08", "=-out + 0.08", "=lo / 2"], half: [0.06, 0.06, "=lo / 2"]}}
+      - {name: pole-e, mat: metal, box: {c: ["=w / 2 - 0.08", "=-out + 0.08", "=lo / 2"], half: [0.06, 0.06, "=lo / 2"]}}
+  # A flat cloth canopy on four poles (a roof shade or a market stall), its front poles at y = 0.
+  canopy:
+    params: {w: 1.6, d: 1.0, z: 1.0, sag: 0.12, mat: cloth}
+    preview: {}
+    parts:
+      - name: cloth
+        mat: "=mat"
+        extrude: {axis: x, profile: [[0, "=z"], [0, "=z + 0.07"], ["=d / 2", "=z + 0.07 + sag"], ["=d", "=z + 0.07"], ["=d", "=z"], ["=d / 2", "=z + sag"]], span: ["=-w / 2 - 0.05", "=w / 2 + 0.05"], round: 0.02}
+      - {name: p-sw, mat: metal, box: {c: ["=-w / 2 + 0.06", 0.06, "=z / 2"], half: [0.06, 0.06, "=z / 2"]}}
+      - {name: p-se, mat: metal, box: {c: ["=w / 2 - 0.06", 0.06, "=z / 2"], half: [0.06, 0.06, "=z / 2"]}}
+  # A hanging cloth banner on a wall.
+  banner:
+    params: {w: 0.36, h: 0.8, mat: cloth}
+    preview: {at: [0, 0, 1.2]}
+    parts:
+      - {name: rod, mat: metal, box: {c: [0, -0.06, 0.03], half: ["=w / 2 + 0.06", 0.04, 0.04]}}
+      - {name: cloth, mat: "=mat", prism: {poly: [["=-w / 2", -0.08], ["=w / 2", -0.08], ["=w / 2", -0.03], ["=-w / 2", -0.03]], z: ["=-h", 0], round: 0.01}}
+      - {name: tip, mat: "=mat", hull: {points: [["=-w / 2", -0.08, "=-h"], ["=w / 2", -0.08, "=-h"], ["=-w / 2", -0.03, "=-h"], ["=w / 2", -0.03, "=-h"], [0, -0.08, "=-h - 0.2"], [0, -0.03, "=-h - 0.2"]]}}
+  # A round stone column with a square base and capital.
+  column:
+    params: {r: 0.16, h: 1.2, mat: trim}
+    preview: {at: [0, 0.3, 0]}
+    parts:
+      - {name: base, mat: "=mat", box: {c: [0, 0, 0.07], half: ["=r + 0.06", "=r + 0.06", 0.07], radius: 0.02}}
+      - {name: shaft, mat: "=mat", cylinder: {a: [0, 0, 0.1], b: [0, 0, "=h - 0.1"], r1: "=r"}}
+      - {name: cap, mat: "=mat", box: {c: [0, 0, "=h - 0.07"], half: ["=r + 0.08", "=r + 0.08", 0.08], radius: 0.02}}
+  # A robed, hooded guardian of the Whills on a plinth (the temple's statues), scaled by s.
+  statue:
+    params: {s: 1.0, plinth: 0.35, mat: stone}
+    preview: {at: [0, 0.4, 0]}
+    parts:
+      - {name: plinth, mat: trim, box: {c: [0, 0, "=plinth / 2"], half: ["=0.36 * s", "=0.3 * s", "=plinth / 2"], radius: 0.03}}
+      - {name: robe, mat: "=mat", cylinder: {a: [0, 0, "=plinth"], b: [0, 0, "=plinth + 1.05 * s"], r1: "=0.3 * s", r2: "=0.17 * s"}}
+      - {name: arms, mat: "=mat", ellipsoid: {c: [0, "=-0.06 * s", "=plinth + 0.72 * s"], r: ["=0.24 * s", "=0.17 * s", "=0.2 * s"]}}
+      - {name: hood, mat: "=mat", ellipsoid: {c: [0, 0, "=plinth + 1.15 * s"], r: ["=0.16 * s", "=0.15 * s", "=0.19 * s"]}}
+      - {name: face, mat: dark, ellipsoid: {c: [0, "=-0.09 * s", "=plinth + 1.12 * s"], r: ["=0.08 * s", "=0.06 * s", "=0.1 * s"]}}
+  # A clay water jar.
+  jar:
+    params: {r: 0.2, mat: stone}
+    preview: {}
+    parts:
+      - {name: belly, mat: "=mat", ellipsoid: {c: [0, 0, "=r * 0.95"], r: ["=r", "=r", "=r * 0.95"]}}
+      - {name: neck, mat: trim, cylinder: {a: [0, 0, "=r * 1.6"], b: [0, 0, "=r * 2.0"], r1: "=r * 0.45"}}
+  # An Imperial pillbox: a slab-sided grey block whose south face leans back (Imperial wedge walls).
+  imp-block:
+    params: {w: 2.0, d: 1.4, h: 1.1, lean: 0.25, mat: imp}
+    preview: {}
+    parts:
+      - name: block
+        mat: "=mat"
+        extrude: {axis: x, profile: [[0, 0], ["=d", 0], ["=d", "=h"], ["=lean", "=h"]], span: ["=-w / 2", "=w / 2"], round: 0.03}

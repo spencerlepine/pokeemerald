@@ -1,0 +1,42 @@
+# A Sullustan hot-spring bathhouse (the hot-spring concept art; Lavaridge's spa): a rough lava-rock dome
+# with a pale round portal and steps, a steaming pool or two beside it with heat vents, sometimes a
+# stone vault wing or a second small dome.
+name: bathhouse
+style: sullust
+about: Lava-rock dome with a pale round portal; one or two hot pools beside it; vents; vault wing or small dome.
+width: [5, 6, 7]
+choose:
+  ex: "=door_x if door_x is not None else 0.6"
+  R: [1.05, 1.3]
+  ry: [0.7, 0.82]
+  hk: [0.7, 0.85]
+  cy: "=0.55 + R * ry * 0.8"
+  dx: "=max(-(w_max / 2 - R), min(w_max / 2 - R, ex + (0.25 if ex >= 0 else -0.25)))"
+  pside: "=-1 if dx >= 0 else 1"
+  room: "=w_max / 2 - pside * (dx - pside * R) * -1"
+  pools: {pick: [1, 2], weights: [3, 2]}
+  wing: {pick: [vault, dome, none], weights: [2, 2, 1]}
+  dome: {pick: [basalt, stone], weights: [3, 1]}
+parts:
+  - {use: shell, name: dome, at: ["=dx", "=cy", 0], with: {r: "=R", ry: "=ry", hk: "=hk", mat: "=dome"}}
+  - {use: tube, name: portal, at: ["=ex", 0.22, 0], with: {r: 0.72, d: "=cy - R * ry * 0.5 - 0.22", zc: 0.3, mat: steel}}
+  - {use: hatch, name: door, at: ["=ex", 0.22, 0], with: {r: 0.46, frame: 0.12, zc: 0.4, trim: steel}}
+  - {name: step, mat: stone, box: {c: ["=ex", 0.05, 0.05], half: [0.62, 0.22, 0.05], radius: 0.02}}
+  - {use: window-round, name: win, at: ["=dx - pside * R * 0.62", "=cy - R * ry * 0.7", "=R * hk * 0.45"], with: {r: 0.2, trim: steel}}
+  - when: "=pools == 1"
+    parts:
+      - {use: pool, name: pool, at: ["=pside * (w_max / 2 - (w_max / 2 + pside * (dx + pside * R)) / 2 + 0.05)", 0.95, 0],
+         with: {r: "=max(0.75, min(1.25, (w_max / 2 - pside * (dx + pside * R) * -1) / 2))", ry: 0.62, rim: 0.2}}
+    else:
+      - {use: pool, name: pool, at: ["=pside * (pside * (dx + pside * R) * -1 * 0 + (abs(dx + pside * R) + w_max / 2) / 2) * 1", 0.6, 0],
+         with: {r: "=max(0.6, min(1.0, (w_max / 2 - abs(dx + pside * R)) / 2 + 0.1))", ry: 0.55, rim: 0.18}}
+      - {use: pool, name: pool2, at: ["=pside * ((abs(dx + pside * R) + w_max / 2) / 2 + 0.2)", 1.8, 0],
+         with: {r: "=max(0.5, min(0.8, (w_max / 2 - abs(dx + pside * R)) / 2))", ry: 0.55, rim: 0.16}}
+  - {use: vent, name: vent1, at: ["=pside * (w_max / 2 - 0.3)", 0.25, 0], with: {r: 0.15, h: 0.35}}
+  - when: "=wing == 'vault'"
+    parts:
+      - {use: vault, name: wing, at: ["=dx - pside * R * 0.75", "=cy + 0.1", 0], with: {w: "=R * 0.9", r: "=R * ry * 0.55", hk: 1.0, mat: stone}}
+  - when: "=wing == 'dome'"
+    parts:
+      - {use: shell, name: dome2, at: ["=dx + pside * R * 0.6", "=cy + R * ry * 0.75", 0], with: {r: "=R * 0.55", ry: "=ry", hk: "=hk", mat: stone}}
+  - {use: stack, name: stack, at: ["=dx - pside * R * 0.3", "=cy + R * ry * 0.35", "=R * hk * 0.82 - 0.1"], with: {r: 0.14, h: 0.35}}

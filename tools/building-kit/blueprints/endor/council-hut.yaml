@@ -1,0 +1,58 @@
+# Chief Chirpa's council hut in Bright Tree Village (Return of the Jedi): the biggest hut in the
+# village, a wide drum under a two-tier or crowned thatch roof, raised on a high log deck reached by a
+# broad ramp, totems and torches at the front, smaller huts tucked against its sides.
+name: council-hut
+style: endor
+about: Big drum under a tiered or crowned roof on a high deck; broad ramp, totems, torches, side huts.
+width: [6, 7]
+choose:
+  lim: "=(H if H else 5) - 0.3"
+  z0: [0.38, 0.5]
+  R: ["=min(w_max * 0.24, 1.35)", "=min(w_max * 0.27, 1.5)"]
+  ry: [0.64, 0.72]
+  wh: [0.8, 0.95]
+  over: [0.1, 0.18]
+  roof: {pick: [tiered, crown, cone], weights: [3, 3, 1]}
+  cy: "=(R + 0.35) * ry + 0.1"
+  rise: "=max(0.8, min(1.8, lim - cy - z0 - wh - 0.3))"
+  dx: "=door_x if door_x is not None else 0"
+  hx: "=dx * 0.5"
+  dy: "=cy - ry * sqrt(max(R * R - (dx - hx) ** 2, 0.04))"
+  sides: {pick: [none, one, two], weights: [1, 2, 3]}
+  side: "=1 if (seed % 2) else -1"
+  rs: ["=R * 0.45", "=R * 0.55"]
+  front: {pick: [totems, torches, both], weights: [2, 2, 2]}
+parts:
+  - {use: ewok-deck, name: deck, at: ["=hx", "=cy + 0.05", 0], with: {r: "=w_max / 2 - 0.15", ry: "=(R + 0.4) * ry / (w_max / 2 - 0.15)", z: "=z0", t: 0.18, post: 0.16}}
+  - when: "=sides != 'none'"
+    parts:
+      - {use: ewok-drum, name: hut-a, at: ["=hx + side * (R + rs * 0.55)", "=cy + R * ry * 0.3", "=z0"], with: {r: "=rs", ry: "=ry", h: "=wh * 0.75"}}
+      - {use: thatch-cone, name: roof-a, at: ["=hx + side * (R + rs * 0.55)", "=cy + R * ry * 0.3", 0], with: {r: "=rs + over", ry: "=ry", z: "=z0 + wh * 0.75 - 0.05", rise: "=rise * 0.6", knot: 0.24}}
+  - when: "=sides == 'two'"
+    parts:
+      - {use: ewok-drum, name: hut-b, at: ["=hx - side * (R + rs * 0.5)", "=cy + R * ry * 0.35", "=z0"], with: {r: "=rs * 0.9", ry: "=ry", h: "=wh * 0.7"}}
+      - {use: thatch-bulb, name: roof-b, at: ["=hx - side * (R + rs * 0.5)", "=cy + R * ry * 0.35", 0], with: {r: "=rs * 0.9 + over", ry: "=ry", z: "=z0 + wh * 0.7 - 0.06", rise: "=rise * 0.5"}}
+  - {use: ewok-drum, name: hall, at: ["=hx", "=cy", "=z0"], with: {r: "=R", ry: "=ry", h: "=wh"}}
+  - when: "=roof == 'cone'"
+    parts:
+      - {use: thatch-cone, name: roof, at: ["=hx", "=cy", 0], with: {r: "=R + over", ry: "=ry", z: "=z0 + wh - 0.05", rise: "=rise", knot: 0.3}}
+    else:
+      - {use: thatch-tiered, name: roof, at: ["=hx", "=cy", 0], with: {r: "=R + over + 0.1", ry: "=ry", z: "=z0 + wh - 0.05", rise: "=rise + 0.25"}}
+  - when: "=roof == 'crown'"                       # log ends sticking out round the eave, like a crown
+    parts:
+      - repeat: 9
+        parts:
+          - name: "=f'crown{i}'"
+            mat: log
+            box: {c: ["=hx + (R + over) * 0.92 * cos(radians(198 + i * 18))", "=cy + (R + over) * 0.92 * ry * sin(radians(198 + i * 18))", "=z0 + wh + rise * 0.12"],
+                  half: [0.11, 0.11, 0.24], radius: 0.03}
+  - {use: ewok-door, name: door, at: ["=dx", "=dy", "=z0"], with: {w: 0.8, h: "=min(0.7, wh - over * ry - 0.1)", flap: false}}
+  - {use: log-ramp, name: ramp, at: ["=dx", "=dy - 0.1", 0], with: {w: 1.0, z: "=z0", l: 0.14}}
+  - when: "=front == 'totems' or front == 'both'"
+    parts:
+      - {use: totem, name: totem-w, at: ["=dx - 1.0", 0.12, 0], with: {h: 1.5, r: 0.18}}
+      - {use: totem, name: totem-e, at: ["=dx + 1.0", 0.12, 0], with: {h: 1.5, r: 0.18}}
+  - when: "=front == 'torches' or front == 'both'"
+    parts:
+      - {use: torch-post, name: torch-w, at: ["=-(w_max / 2 - 0.25)", 0.2, 0], with: {h: 1.15}}
+      - {use: torch-post, name: torch-e, at: ["=(w_max / 2 - 0.25)", 0.2, 0], with: {h: 1.15}}

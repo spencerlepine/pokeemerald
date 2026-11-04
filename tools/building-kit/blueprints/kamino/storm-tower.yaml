@@ -1,0 +1,25 @@
+# A Tipoca storm tower (Attack of the Clones: the thin columns that rise over the city, each with a saucer
+# head, beacon masts in the rain). A tall column on a round base deck, one or two saucer heads, a beacon.
+name: storm-tower
+style: kamino
+about: Tall column on a round deck; one or two saucer heads, beacon mast, side pod on some.
+width: [2, 3]
+choose:
+  heads: {pick: [1, 2], weights: [2, 1]}
+  h: [2.1, 2.7]
+  R: "=w_max / 2 - 0.02"
+  r: [0.18, 0.26]
+  pod: {pick: [true, false], weights: "=[1, 1] if W >= 3 else [0, 1]"}
+  side: {pick: [-1, 1]}
+parts:
+  - {use: disc, name: base, at: [0, "=R * 0.6 + 0.05", 0], with: {R: "=R", ry: 0.6, z: 0.3, t: 0.14}}
+  - {use: pylon, name: column, at: [0, "=R * 0.6 + 0.05", 0], with: {h: "=h", r: "=r"}}
+  - {use: saucer, name: head, at: [0, "=R * 0.6 + 0.05", 0], with: {R: "=min(R, 0.95)", ry: 0.62, z0: "=h", skirt: 0.25, wall: 0.24, hk: 0.36}}
+  - {use: saucer-band, name: head-band, at: [0, "=R * 0.6 + 0.05", 0], with: {R: "=min(R, 0.95)", ry: 0.62, z0: "=h", wall: 0.24, lo: 0.3, hi: 0.8}}
+  - when: "=heads == 2"
+    parts:
+      - {use: saucer, name: low-head, at: [0, "=R * 0.6 + 0.05", 0], with: {R: "=min(R, 0.95) * 0.7", ry: 0.62, z0: "=h * 0.55", skirt: 0.18, wall: 0.2, hk: 0.0001}}
+  - {use: mast, name: beacon, at: [0, "=R * 0.6 + 0.05", "=h + 0.3 + min(R, 0.95) * 0.3"], with: {h: 0.5, head: 0.1, r: 0.05}}
+  - when: "=pod"
+    parts:
+      - {use: saucer, name: pod, at: ["=side * (R - 0.45)", "=R * 0.6 + 0.2", 0], with: {R: 0.45, ry: 0.7, z0: 0.35, skirt: 0.05, wall: 0.36, hk: 0.4}}

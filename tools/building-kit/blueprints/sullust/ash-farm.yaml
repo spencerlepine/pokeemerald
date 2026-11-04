@@ -1,0 +1,60 @@
+# A Sullustan ash farm: crops grown under glass in the ash fields (the ash-farm concept art). A glass
+# dome on a stone drum with greenhouse vaults east and west and a stone porch; or a stone farmhouse
+# with a big glass dome beside it; or a long house with two glass domes behind. A silo or a stack.
+name: ash-farm
+style: sullust
+about: Glass dome with greenhouse vault wings and a porch; farmhouse beside a big dome; long house with two domes.
+width: [5, 6, 7]
+choose:
+  form: {pick: [cross, beside, row], weights: [3, 3, 2]}
+  ex: "=door_x if door_x is not None else 0"
+  side: "=-1 if ex >= 0 else 1"
+  Rc: [0.85, 1.02]
+  Rb: [1.1, 1.3]
+  Rr: [0.7, 0.85]
+  hv: [0.75, 0.95]
+  extra: {pick: [silo, stack, crates, none], weights: [2, 2, 2, 1]}
+  door: {pick: [arch, slab], weights: [3, 2]}
+parts:
+  # cross: the concept's layout
+  - when: "=form == 'cross'"
+    parts:
+      - {name: drum, mat: stone, cylinder: {a: [0, "=0.85 + Rc * 0.8", 0], b: [0, "=0.85 + Rc * 0.8", 0.38], r1: "=Rc + 0.05"}, squash: {scale: [1, 0.85, 1], center: [0, "=0.85 + Rc * 0.8", 0]}}
+      - {use: glass-dome, name: dome, at: [0, "=0.85 + Rc * 0.8", 0.38], with: {r: "=Rc", ry: 0.85, hk: 0.85, band: 0.1}}
+      - {use: vault, name: wing-w, at: ["=-(Rc + (w_max / 2 - Rc) / 2)", "=0.85 + Rc * 0.8 - 0.65", 0], with: {w: "=w_max / 2 - Rc + 0.1", r: 0.6, hk: 1.15, mat: glass}}
+      - {use: vault, name: wing-e, at: ["=Rc + (w_max / 2 - Rc) / 2", "=0.85 + Rc * 0.8 - 0.65", 0], with: {w: "=w_max / 2 - Rc + 0.1", r: 0.6, hk: 1.15, mat: glass}}
+      - {name: wing-w-end, mat: stone, box: {c: ["=-(w_max / 2) + 0.1", "=0.85 + Rc * 0.8 - 0.05", 0.4], half: [0.12, 0.62, 0.4], radius: 0.05}}
+      - {name: wing-e-end, mat: stone, box: {c: ["=w_max / 2 - 0.1", "=0.85 + Rc * 0.8 - 0.05", 0.4], half: [0.12, 0.62, 0.4], radius: 0.05}}
+      - {use: slab, name: porch, at: ["=ex", 0, 0], with: {w: 1.35, d: "=0.85 + Rc * 0.5", h: "=hv", lean: 0.12, rnd: 0.08}}
+  # beside: a stone farmhouse with the door, a big glass dome on the far side
+  - when: "=form == 'beside'"
+    parts:
+      - {use: glass-dome, name: dome, at: ["=-side * (w_max / 2 - Rb)", "=Rb * 0.85 + 0.1", 0], with: {r: "=Rb", ry: 0.85, hk: 0.85, band: 0.25}}
+      - {use: slab, name: house, at: ["=side * (w_max / 2 - (w_max - 2 * Rb + 0.4) / 2)", 0, 0], with: {w: "=w_max - 2 * Rb + 0.4", d: 1.6, h: "=hv", lean: 0.15}}
+      - {use: vault, name: house-roof, at: ["=side * (w_max / 2 - (w_max - 2 * Rb + 0.4) / 2)", 0.2, "=hv - 0.05"], with: {w: "=w_max - 2 * Rb + 0.1", r: 0.62, hk: 0.75}}
+  # row: a long low house, two glass domes behind it
+  - when: "=form == 'row'"
+    parts:
+      - {use: glass-dome, name: dome-w, at: ["=-(w_max / 2 - Rr - 0.1)", "=1.25 + Rr * 0.6", 0], with: {r: "=Rr", ry: 0.85, hk: 0.85, band: 0.2}}
+      - {use: glass-dome, name: dome-e, at: ["=w_max / 2 - Rr - 0.1", "=1.25 + Rr * 0.6", 0], with: {r: "=Rr", ry: 0.85, hk: 0.85, band: 0.2}}
+      - {use: slab, name: house, with: {w: "=w_max * 0.92", d: 1.3, h: "=hv", lean: 0.2}}
+      - {name: lip, mat: trim, box: {c: [0, 0.72, "=hv"], half: ["=w_max * 0.46 - 0.08", 0.5, 0.08], radius: 0.03}}
+  - when: "=door == 'arch'"
+    parts:
+      - {use: door-arch, name: door, at: ["=ex", 0, 0], with: {w: 0.82, h: "=hv * 0.62"}}
+    else:
+      - {use: door-slab, name: door, at: ["=ex", 0, 0], with: {w: 0.85, h: "=hv * 0.85"}}
+  - when: "=form != 'cross'"
+    parts:
+      - {use: window-round, name: win, at: ["=ex + side * 1.1", 0.05, "=hv * 0.55"], with: {r: 0.19}}
+  - when: "=extra == 'silo' and form != 'cross'"
+    parts:
+      - {name: silo, mat: stone, cylinder: {a: ["=side * (w_max / 2 - 0.4)", 1.85, 0], b: ["=side * (w_max / 2 - 0.4)", 1.85, 1.3], r1: 0.38}}
+      - {name: silo-cap, mat: metal, ellipsoid: {c: ["=side * (w_max / 2 - 0.4)", 1.85, 1.3], r: [0.4, 0.4, 0.3]}}
+  - when: "=extra == 'stack'"
+    parts:
+      - {use: stack, name: stack, at: ["=side * 0.9", 1.5, 0], with: {r: 0.18, h: 1.5}}
+  - when: "=extra == 'crates'"
+    parts:
+      - {use: crate, name: crate1, at: ["=-side * (w_max / 2 - 0.35)", -0.3, 0], with: {s: 0.5}}
+      - {use: crate, name: crate2, at: ["=-side * (w_max / 2 - 0.85)", -0.35, 0], with: {s: 0.4}}

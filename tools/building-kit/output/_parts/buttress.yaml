@@ -1,7 +1,0 @@
-name: part-buttress
-parts:
-- name: buttress
-  use: buttress
-style: tatooine
-width:
-- 4

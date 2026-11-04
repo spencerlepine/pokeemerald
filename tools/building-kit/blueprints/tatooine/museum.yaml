@@ -1,0 +1,69 @@
+# The Spacer Museum: a big two-tier Mos Eisley block (A New Hope), the upper tier set back, a retired
+# starfighter or a podracer engine pair mounted on the lower roof as the sign.
+name: museum
+style: tatooine
+about: Wide two-tier battered block, the upper tier set back, a display starfighter or podracer on the roof.
+width: [7, 8]
+choose:
+  hh: "=H if H else 5"
+  w: ["=w_max * 0.92", "=w_max"]
+  d: ["=hh * 0.4", "=hh * 0.45"]
+  h: ["=hh * 0.25", "=hh * 0.28"]
+  side: {pick: [-1, 1]}
+  uw: ["=w * 0.42", "=w * 0.52"]
+  uh: ["=min(0.8, hh - d - h - 0.35)", "=min(1.1, hh - d - h - 0.3)"]
+  ux: "=-side * (w / 2 - uw / 2 - 0.2)"
+  shipx: "=side * (w / 2 - 1.5)"
+  ship: {pick: [fighter, pod], weights: [3, 2]}
+  dx0: [-0.4, 0.4]
+  dx: "=door_x if door_x is not None else dx0"
+  porch: {pick: [true, false], weights: [3, 2]}
+  wins: {pick: [round, slot], weights: [1, 1]}
+parts:
+  - {use: adobe-block, name: hall, with: {w: "=w", d: "=d", h: "=h", batter: 0.16, rnd: 0.08}}
+  - {use: roof-lip, name: hall-lip, with: {w: "=w", d: "=d", h: "=h", batter: 0.16, t: 0.18}}
+  - {use: adobe-block, name: upper, at: ["=ux", "=d * 0.42", "=h"], with: {w: "=uw", d: "=d * 0.5", h: "=uh", batter: 0.12}}
+  - {use: roof-lip, name: upper-lip, at: ["=ux", "=d * 0.42", "=h"], with: {w: "=uw", d: "=d * 0.5", h: "=uh", batter: 0.12, t: 0.14}}
+  - {use: window-slot, name: upper-win, at: ["=ux", "=d * 0.42 + 0.06", "=h + uh * 0.55"], with: {w: "=uw * 0.55", h: 0.25}}
+  # the entrance: a deep porch block with a wide slab door
+  - when: "=porch"
+    parts:
+      - {use: adobe-block, name: porch, at: ["=dx", -0.02, 0], with: {w: 2.2, d: 0.8, h: "=h * 0.85", batter: 0.12, rnd: 0.08}}
+      - {use: roof-lip, name: porch-lip, at: ["=dx", -0.02, 0], with: {w: 2.2, d: 0.8, h: "=h * 0.85", batter: 0.12, t: 0.14}}
+      - {use: door-slab, name: door, at: ["=dx", -0.02, 0], with: {w: 1.1, h: "=h * 0.62"}}
+    else:
+      - {use: door-arch, name: door, at: ["=dx", 0, 0], with: {w: 1.05, h: "=h * 0.55", frame: 0.16}}
+  - repeat: 2
+    parts:
+      - when: "=wins == 'round'"
+        parts:
+          - {use: window-round, name: win, at: ["=dx + (i * 2 - 1) * 1.8", 0.04, "=h * 0.58"], with: {r: 0.22}}
+        else:
+          - {use: window-slot, name: win, at: ["=dx + (i * 2 - 1) * 1.9", 0.04, "=h * 0.6"], with: {w: 0.8, h: 0.26}}
+  # the display piece on the lower roof
+  - when: "=ship == 'fighter'"                    # an X-wing nose-on, its four wings spread in an X
+    parts:
+      - {name: ship-stand, mat: metal, box: {c: ["=shipx", "=d * 0.6", "=h + 0.2"], half: [0.1, 0.1, 0.2]}}
+      - {name: ship-body, mat: light, cylinder: {a: ["=shipx", "=d * 0.6 + 0.4", "=h + 0.55"], b: ["=shipx", "=d * 0.6 - 0.45", "=h + 0.55"], r1: 0.22, r2: 0.14}}
+      - repeat: 4
+        parts:
+          - name: ship-wing
+            mat: mid
+            hull: {round: 0.02, points: [
+              ["=shipx", "=d * 0.6 - 0.1", "=h + 0.55 - 0.1"], ["=shipx", "=d * 0.6 - 0.1", "=h + 0.55 + 0.1"],
+              ["=shipx", "=d * 0.6 + 0.3", "=h + 0.55 - 0.1"], ["=shipx", "=d * 0.6 + 0.3", "=h + 0.55 + 0.1"],
+              ["=shipx + (1 if i % 2 else -1) * 1.05", "=d * 0.6 - 0.05", "=h + 0.55 + (1 if i < 2 else -1) * 0.34 - 0.09"],
+              ["=shipx + (1 if i % 2 else -1) * 1.05", "=d * 0.6 - 0.05", "=h + 0.55 + (1 if i < 2 else -1) * 0.34 + 0.09"],
+              ["=shipx + (1 if i % 2 else -1) * 1.05", "=d * 0.6 + 0.2", "=h + 0.55 + (1 if i < 2 else -1) * 0.34 - 0.09"],
+              ["=shipx + (1 if i % 2 else -1) * 1.05", "=d * 0.6 + 0.2", "=h + 0.55 + (1 if i < 2 else -1) * 0.34 + 0.09"]]}
+          - {name: ship-engine, mat: metal, cylinder: {a: ["=shipx + (1 if i % 2 else -1) * 0.32", "=d * 0.6 + 0.35", "=h + 0.55 + (1 if i < 2 else -1) * 0.12"], b: ["=shipx + (1 if i % 2 else -1) * 0.32", "=d * 0.6 - 0.15", "=h + 0.55 + (1 if i < 2 else -1) * 0.12"], r1: 0.12}}
+  - when: "=ship == 'pod'"                        # a podracer: two long engines and a cockpit tub
+    parts:
+      - {name: pod-eng-1, mat: light, cylinder: {a: ["=shipx - 0.9", "=d * 0.4", "=h + 0.3"], b: ["=shipx + 0.5", "=d * 0.4", "=h + 0.3"], r1: 0.2, r2: 0.15}}
+      - {name: pod-eng-2, mat: light, cylinder: {a: ["=shipx - 0.9", "=d * 0.75", "=h + 0.3"], b: ["=shipx + 0.5", "=d * 0.75", "=h + 0.3"], r1: 0.2, r2: 0.15}}
+      - {name: pod-intake, mat: dark, cylinder: {a: ["=shipx + 0.5", "=d * 0.4 - 0.01", "=h + 0.3"], b: ["=shipx + 0.56", "=d * 0.4 - 0.01", "=h + 0.3"], r1: 0.14}}
+      - {name: pod-tub, mat: mid, ellipsoid: {c: ["=shipx - 1.25", "=d * 0.58", "=h + 0.18"], r: [0.3, 0.22, 0.16]}}
+      - {name: pod-stand, mat: metal, box: {c: ["=shipx - 0.2", "=d * 0.58", "=h + 0.06"], half: [0.4, 0.3, 0.06]}}
+  - chance: 0.5
+    parts:
+      - {use: vent, name: vent, at: ["=ux + uw * 0.3", "=d * 0.75", "=h + uh"], with: {r: 0.16, h: 0.3}}

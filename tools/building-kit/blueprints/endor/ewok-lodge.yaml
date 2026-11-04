@@ -1,0 +1,71 @@
+# A bigger Bright Tree lodge (Return of the Jedi): a main hut and one or two smaller huts joined on
+# one wide log deck, as Ewok huts cluster round a trunk. Roofs mix cones, tiers and haystack caps.
+# Used for the Bacta Center, the depot, storehouses and the larger homes.
+name: ewok-lodge
+style: endor
+about: A main hut with one or two smaller huts on a shared log deck; mixed roofs, ramp, baskets, torches.
+width: [4, 5, 6]
+choose:
+  lim: "=(H if H else 4) - 0.3"
+  z0: {pick: [0.16, 0.28, 0.38]}
+  n: "=1 if W <= 4 else 2"
+  two: {pick: [true, false], weights: [3, 1]}
+  R: ["=min(w_max * 0.24, 1.0)", "=min(w_max * 0.28, 1.15)"]
+  ry: [0.66, 0.76]
+  wh: [0.6, 0.78]
+  over: [0.06, 0.13]
+  roof: {pick: [cone, tiered, bulb], weights: [3, 3, 1]}
+  roof2: {pick: [cone, bulb, tiered], weights: [3, 2, 1]}
+  side: "=1 if (seed % 2) else -1"
+  mx: "=-side * (w_max / 2 - R - over - 0.05)"
+  cy: "=(R + 0.18) * ry + 0.05"
+  r2: ["=R * 0.55", "=R * 0.7"]
+  x2: "=mx + side * (R + r2 * 0.75)"
+  y2: "=cy + R * ry * 0.35"
+  x3: "=mx + side * (R + r2 * 0.75 + r2 * 1.35)"
+  knot: "=0.0 if roof == 'bulb' else 0.26"
+  rise: "=max(0.5, min(1.4, lim - cy - z0 - wh - knot))"
+  rise2: "=max(0.45, min(1.0, lim - y2 - z0 - wh * 0.8 - 0.26))"
+  dx0: "=mx"
+  dx: "=door_x if door_x is not None else dx0"
+  hx: "=dx if abs(dx - mx) < R * 0.6 else mx"
+  dy: "=cy - ry * sqrt(max(R * R - (dx - mx) ** 2, 0.04))"
+  extra: {pick: [torches, baskets, totem, none], weights: [3, 3, 2, 1]}
+parts:
+  - {use: ewok-deck, name: deck, at: [0, "=cy + 0.05", 0], with: {r: "=w_max / 2 - 0.12", ry: "=(R + 0.25) * ry / (w_max / 2 - 0.12)", z: "=z0", t: "=min(0.16, z0)"}}
+  - {use: ewok-drum, name: main, at: ["=mx", "=cy", "=z0"], with: {r: "=R", ry: "=ry", h: "=wh"}}
+  - when: "=roof == 'cone'"
+    parts:
+      - {use: thatch-cone, name: roof, at: ["=mx", "=cy", 0], with: {r: "=R + over", ry: "=ry", z: "=z0 + wh - 0.05", rise: "=rise", knot: "=knot"}}
+  - when: "=roof == 'tiered'"
+    parts:
+      - {use: thatch-tiered, name: roof, at: ["=mx", "=cy", 0], with: {r: "=R + over + 0.08", ry: "=ry", z: "=z0 + wh - 0.05", rise: "=rise + knot"}}
+  - when: "=roof == 'bulb'"
+    parts:
+      - {use: thatch-bulb, name: roof, at: ["=mx", "=cy", 0], with: {r: "=R + over", ry: "=ry", z: "=z0 + wh - 0.08", rise: "=rise"}}
+  # the second hut, smaller, a little back
+  - {use: ewok-drum, name: hut2, at: ["=x2", "=y2", "=z0"], with: {r: "=r2", ry: "=ry", h: "=wh * 0.8"}}
+  - when: "=roof2 == 'bulb'"
+    parts:
+      - {use: thatch-bulb, name: roof2, at: ["=x2", "=y2", 0], with: {r: "=r2 + over", ry: "=ry", z: "=z0 + wh * 0.8 - 0.06", rise: "=rise2"}}
+    else:
+      - {use: thatch-cone, name: roof2, at: ["=x2", "=y2", 0], with: {r: "=r2 + over", ry: "=ry", z: "=z0 + wh * 0.8 - 0.05", rise: "=rise2", knot: 0.24}}
+  # a third, smallest hut on the widest lodges
+  - when: "=W >= 6 and two"
+    parts:
+      - {use: ewok-drum, name: hut3, at: ["=x3", "=y2 - 0.1", "=z0"], with: {r: "=r2 * 0.75", ry: "=ry", h: "=wh * 0.7"}}
+      - {use: thatch-cone, name: roof3, at: ["=x3", "=y2 - 0.1", 0], with: {r: "=r2 * 0.75 + over", ry: "=ry", z: "=z0 + wh * 0.7 - 0.05", rise: "=rise2 * 0.85", knot: 0.2}}
+  - {use: ewok-door, name: door, at: ["=dx", "=dy", "=z0"], with: {w: 0.6, h: "=min(0.58, wh - over * ry - 0.08)", flap: "=seed % 3 != 1"}}
+  - when: "=z0 > 0.2"
+    parts:
+      - {use: log-ramp, name: ramp, at: ["=dx", "=dy - 0.1", 0], with: {w: 0.6, z: "=z0", l: 0.12}}
+  - when: "=extra == 'torches'"
+    parts:
+      - {use: torch-post, name: torch, at: ["=mx - side * (R + 0.08)", 0.12, 0], with: {h: 1.0}}
+  - when: "=extra == 'baskets'"
+    parts:
+      - {use: basket, name: b1, at: ["=x2 + side * 0.05", 0.14, 0], with: {r: 0.22, h: 0.32}}
+      - {use: basket, name: b2, at: ["=x2 + side * 0.5", 0.24, 0], with: {r: 0.19, h: 0.28}}
+  - when: "=extra == 'totem'"
+    parts:
+      - {use: totem, name: totem, at: ["=x2 + side * 0.15", 0.12, 0], with: {h: "=min(1.4, lim - 0.8)", r: 0.16}}

@@ -1,0 +1,60 @@
+# The Temple of the Kyber on Jedha (Rogue One; Jedi: Survivor's temple facade): a terrace with a wide
+# stair, a massive sandstone hall in two set-back tiers, a tall gate between two pylons, robed guardian
+# statues either side of the stair, and a dome, a shrine block or a third tier on top.
+name: kyber-temple
+style: jedha
+about: Terraced sandstone temple, two set-back tiers, a tall gate between pylons, guardian statues, dome or shrine on top.
+width: [7, 8, 9]
+choose:
+  w: ["=w_max * 0.92", "=w_max"]
+  t0: [0.45, 0.6]
+  d1: ["=max(1.8, (H or 6) * 0.38)", "=max(2.0, (H or 6) * 0.42)"]
+  h1: [1.3, 1.55]
+  w2: ["=w * 0.5", "=w * 0.62"]
+  h2: [0.65, 0.85]
+  top: {pick: [dome, shrine, tier], weights: [3, 2, 2]}
+  dx: "=door_x if door_x is not None else 0"
+  ph: "=h1 + 0.75"
+  statues: {pick: [two, four], weights: [3, 2]}
+parts:
+  # the terrace and its stair
+  - {use: stone-block, name: terrace, with: {w: "=w", d: "=t0 + d1 + 0.2", h: 0.22, mat: trim}}
+  - {use: stone-block, name: stair, at: ["=dx", -0.02, 0], with: {w: 1.5, d: "=t0", h: 0.12, mat: trim}}
+  # the hall, two tiers
+  - {use: stone-block, name: hall, at: [0, "=t0", 0.2], with: {w: "=w - 0.5", d: "=d1", h: "=h1"}}
+  - {use: cornice, name: hall-c, at: [0, "=t0", 0.2], with: {w: "=w - 0.5", d: "=d1", h: "=h1", t: 0.22, b: 0.24}}
+  - {use: stone-block, name: tier2, at: [0, "=t0 + d1 * 0.3", "=h1 + 0.2"], with: {w: "=w2", d: "=d1 * 0.55", h: "=h2"}}
+  - {use: cornice, name: tier2-c, at: [0, "=t0 + d1 * 0.3", "=h1 + 0.2"], with: {w: "=w2", d: "=d1 * 0.55", h: "=h2", t: 0.16, b: 0.18}}
+  # pylons and the gate
+  - {use: stone-block, name: pylon-w, at: ["=dx - 1.0", "=t0 - 0.12", 0.2], with: {w: 0.55, d: 0.7, h: "=ph"}}
+  - {use: stone-block, name: pylon-e, at: ["=dx + 1.0", "=t0 - 0.12", 0.2], with: {w: 0.55, d: 0.7, h: "=ph"}}
+  - {name: pyl-cap-w, mat: trim, box: {c: ["=dx - 1.0", "=t0 + 0.23", "=ph + 0.26"], half: [0.34, 0.42, 0.08], radius: 0.02}}
+  - {name: pyl-cap-e, mat: trim, box: {c: ["=dx + 1.0", "=t0 + 0.23", "=ph + 0.26"], half: [0.34, 0.42, 0.08], radius: 0.02}}
+  - {name: gate-lintel, mat: trim, box: {c: ["=dx", "=t0 - 0.06", "=h1 + 0.05"], half: [0.78, 0.12, 0.16], radius: 0.02}}
+  - {name: oculus, mat: dark, cylinder: {a: [0, "=t0 + d1 * 0.3 - 0.12", "=h1 + 0.2 + h2 * 0.48"], b: [0, "=t0 + d1 * 0.3", "=h1 + 0.2 + h2 * 0.48"], r1: "=min(0.24, h2 * 0.3)"}}
+  - {name: oculus-ring, mat: trim, cylinder: {a: [0, "=t0 + d1 * 0.3 - 0.08", "=h1 + 0.2 + h2 * 0.48"], b: [0, "=t0 + d1 * 0.3 + 0.02", "=h1 + 0.2 + h2 * 0.48"], r1: "=min(0.24, h2 * 0.3) + 0.09"}}
+  - {use: portal, name: door, at: ["=dx", "=t0", 0.2], with: {w: 1.0, h: "=h1 - 0.95", frame: 0.14}}
+  # guardian statues
+  - {use: statue, name: statue-w, at: ["=dx - 1.75", "=t0 * 0.5", 0.2], with: {s: 0.95, plinth: 0.25}}
+  - {use: statue, name: statue-e, at: ["=dx + 1.75", "=t0 * 0.5", 0.2], with: {s: 0.95, plinth: 0.25}}
+  - when: "=statues == 'four' and w > 6.5"
+    parts:
+      - {use: statue, name: statue-w2, at: ["=-w / 2 + 0.55", "=t0 * 0.5", 0.2], with: {s: 0.8, plinth: 0.2}}
+      - {use: statue, name: statue-e2, at: ["=w / 2 - 0.55", "=t0 * 0.5", 0.2], with: {s: 0.8, plinth: 0.2}}
+    else:
+      - {use: win-deep, name: win-w, at: ["=-w / 2 + 0.8", "=t0", "=h1 * 0.6 + 0.2"], with: {w: 0.4, h: 0.55}}
+      - {use: win-deep, name: win-e, at: ["=w / 2 - 0.8", "=t0", "=h1 * 0.6 + 0.2"], with: {w: 0.4, h: 0.55}}
+  # the top
+  - when: "=top == 'dome'"
+    parts:
+      - {use: drum-dome, name: dome, at: [0, "=t0 + d1 * 0.58", "=h1 + 0.2 + h2"], with: {r: "=min(0.75, w2 * 0.28)", ry: 0.7, dh: 0.25, hk: 0.75}}
+  - when: "=top == 'shrine'"
+    parts:
+      - {use: stone-block, name: shrine, at: [0, "=t0 + d1 * 0.42", "=h1 + 0.2 + h2"], with: {w: 1.2, d: "=d1 * 0.3", h: 0.65}}
+      - {name: shrine-roof, mat: roof, prism: {poly: [[-0.72, "=t0 + d1 * 0.42 - 0.08"], [0.72, "=t0 + d1 * 0.42 - 0.08"], [0.72, "=t0 + d1 * 0.72 + 0.08"], [-0.72, "=t0 + d1 * 0.72 + 0.08"]], z: ["=h1 + h2 + 0.85", "=h1 + h2 + 1.15"], top: [0.3, 0.3], round: 0.03}}
+      - {name: shrine-hole, mat: dark, box: {c: [0, "=t0 + d1 * 0.42 - 0.04", "=h1 + h2 + 0.45"], half: [0.2, 0.05, 0.25]}}
+  - when: "=top == 'tier'"
+    parts:
+      - {use: stone-block, name: tier3, at: [0, "=t0 + d1 * 0.42", "=h1 + 0.2 + h2"], with: {w: "=w2 * 0.55", d: "=d1 * 0.32", h: 0.55}}
+      - {use: cornice, name: tier3-c, at: [0, "=t0 + d1 * 0.42", "=h1 + 0.2 + h2"], with: {w: "=w2 * 0.55", d: "=d1 * 0.32", h: 0.55, t: 0.12, b: 0.14}}
+      - {name: kyber, mat: light, hull: {points: [[0, "=t0 + d1 * 0.58", "=h1 + h2 + 0.75"], [-0.16, "=t0 + d1 * 0.58", "=h1 + h2 + 1.05"], [0.16, "=t0 + d1 * 0.58", "=h1 + h2 + 1.05"], [0, "=t0 + d1 * 0.58 - 0.12", "=h1 + h2 + 1.05"], [0, "=t0 + d1 * 0.58", "=h1 + h2 + 1.45"]]}}

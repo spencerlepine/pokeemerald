@@ -1,0 +1,29 @@
+# A NiJedha market stall (Rogue One's street market): a cloth awning on poles over a stone counter,
+# crates, jars and sacks; some lean on a low stone booth, some have two awnings side by side.
+name: market-stall
+style: jedha
+about: Cloth awning on poles over a stone counter, crates, jars and sacks; single, double or a booth.
+width: [2, 3, 4]
+choose:
+  w: ["=w_max * 0.9", "=w_max"]
+  form: {pick: [single, double, booth], weights: [3, 2, 2]}
+  z: [0.95, 1.15]
+  d: [0.9, 1.2]
+  side: {pick: [-1, 1]}
+parts:
+  - when: "=form == 'double' and w > 2.2"
+    parts:
+      - {use: canopy, name: aw-w, at: ["=-w / 4", 0.1, 0], with: {w: "=w / 2 - 0.05", d: "=d", z: "=z", sag: 0.1}}
+      - {use: canopy, name: aw-e, at: ["=w / 4", 0.25, 0], with: {w: "=w / 2 - 0.05", d: "=d", z: "=z - 0.15", sag: 0.1, mat: trim}}
+    else:
+      - {use: canopy, name: aw, at: [0, 0.1, 0], with: {w: "=w", d: "=d", z: "=z", sag: 0.12}}
+  - when: "=form == 'booth'"
+    parts:
+      - {use: stone-block, name: booth, at: [0, "=d * 0.55", 0], with: {w: "=w * 0.9", d: "=d * 0.45 + 0.1", h: "=z - 0.05"}}
+  - {use: stone-block, name: counter, at: [0, 0.25, 0], with: {w: "=w * 0.75", d: 0.38, h: 0.42, mat: trim}}
+  - {use: jar, name: jar1, at: ["=-w * 0.22", 0.42, 0.42], with: {r: 0.15}}
+  - {use: jar, name: jar2, at: ["=w * 0.05", 0.42, 0.42], with: {r: 0.13}}
+  - {use: crate, name: crate, at: ["=side * (w / 2 - 0.25)", "=d * 0.75", 0], with: {s: 0.45}}
+  - chance: 0.6
+    parts:
+      - {name: sacks, mat: cloth, ellipsoid: {c: ["=-side * (w / 2 - 0.25)", 0.1, 0.18], r: [0.22, 0.18, 0.18]}}

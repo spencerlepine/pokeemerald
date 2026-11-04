@@ -1,0 +1,56 @@
+# A Bright Tree Village hut (Return of the Jedi): a round log drum under a thatch roof (a steep cone,
+# a wide skirt with a cone above, or a rounded haystack cap), raised on a log deck on posts, sat in a
+# log ring on the ground, or on tall stilts with a ramp. Torches, baskets and a totem on some.
+name: ewok-hut
+style: endor
+about: Round log hut, thatch cone / tiered / bulb roof; on stilts, a deck or a log ring; torch, baskets, totem.
+width: [3, 4]
+choose:
+  lim: "=(H if H else 3) - 0.3"                    # highest y + z the art may reach
+  base: {pick: [stilts, deck, ring], weights: [3, 2, 2]}
+  z0: "=0.36 if base == 'stilts' else (0.18 if base == 'deck' else 0.12)"
+  r: ["=min(w_max * 0.3, 0.72)", "=min(w_max * 0.34, 0.86)"]
+  ry: [0.68, 0.8]
+  wh: [0.55, 0.68]
+  over: [0.05, 0.13]
+  roof: {pick: [cone, tiered, bulb], weights: [3, 2, 2]}
+  hx0: ["=-(w_max / 2 - r - over) * 0.7", "=(w_max / 2 - r - over) * 0.7"]
+  hx: "=0 if W <= 3 else hx0"
+  cy: "=(r + 0.2) * ry + 0.04"
+  knot: "=0.0 if roof == 'bulb' else 0.26"
+  rise: "=max(0.45, min(1.15, lim - cy - z0 - wh - knot))"
+  dx: "=door_x if door_x is not None else hx"
+  dy: "=cy - ry * sqrt(max(r * r - (dx - hx) ** 2, 0.04))"
+  side: "=1 if (seed % 2) else -1"
+  extra: {pick: [none, torch, baskets, totem], weights: [2, 3, 2, 2]}
+parts:
+  - when: "=base == 'stilts' or base == 'deck'"
+    parts:
+      - {use: ewok-deck, name: deck, at: ["=hx", "=cy", 0], with: {r: "=r + 0.2", ry: "=ry", z: "=z0", t: "=min(0.16, z0)"}}
+  - when: "=base == 'ring'"
+    parts:
+      - {use: log-ring, name: ring, at: ["=hx", "=cy", 0], with: {r: "=r + 0.16", ry: "=ry", h: "=z0"}}
+  - {use: ewok-drum, name: drum, at: ["=hx", "=cy", "=z0"], with: {r: "=r", ry: "=ry", h: "=wh"}}
+  - when: "=roof == 'cone'"
+    parts:
+      - {use: thatch-cone, name: roof, at: ["=hx", "=cy", 0], with: {r: "=r + over", ry: "=ry", z: "=z0 + wh - 0.05", rise: "=rise", knot: "=knot"}}
+  - when: "=roof == 'tiered'"
+    parts:
+      - {use: thatch-tiered, name: roof, at: ["=hx", "=cy", 0], with: {r: "=r + over + 0.05", ry: "=ry", z: "=z0 + wh - 0.05", rise: "=rise + knot"}}
+  - when: "=roof == 'bulb'"
+    parts:
+      - {use: thatch-bulb, name: roof, at: ["=hx", "=cy", 0], with: {r: "=r + over", ry: "=ry", z: "=z0 + wh - 0.08", rise: "=rise"}}
+  - {use: ewok-door, name: door, at: ["=dx", "=dy", "=z0"], with: {w: 0.52, h: "=min(0.52, wh - over * ry - 0.08)", flap: "=seed % 3 != 0"}}
+  - when: "=base == 'stilts'"
+    parts:
+      - {use: log-ramp, name: ramp, at: ["=dx", "=dy - 0.12", 0], with: {w: 0.5, z: "=z0", l: 0.12}}
+  - when: "=extra == 'torch'"
+    parts:
+      - {use: torch-post, name: torch, at: ["=hx + side * (r + 0.05)", 0.12, 0], with: {h: "=min(1.0, lim - 0.5)"}}
+  - when: "=extra == 'baskets'"
+    parts:
+      - {use: basket, name: b1, at: ["=hx + side * (r * 0.95)", "=0.14", 0], with: {r: 0.2, h: 0.3}}
+      - {when: "=W > 3", parts: [{use: basket, name: b2, at: ["=hx + side * (r * 0.95 + 0.42)", 0.3, 0], with: {r: 0.18, h: 0.26}}]}
+  - when: "=extra == 'totem'"
+    parts:
+      - {use: totem, name: totem, at: ["=hx - side * (r + 0.02)", 0.16, 0], with: {h: "=min(1.3, lim - 0.6)", r: 0.15}}

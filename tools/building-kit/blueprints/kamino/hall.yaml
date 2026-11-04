@@ -1,0 +1,69 @@
+# The Tipoca City main complex (Attack of the Clones): a big white drum with two window bands and a low
+# dome, long capsule wings with rounded ends to each side, spire towers behind, all on stilts over the sea,
+# a rounded entry pod jutting forward with the door.
+# Varies: the centre (great drum, or a long capsule with a dome riding on it), the wings (capsules, saucer
+# pods, or one of each), spire towers behind (0-2), an upper capsule deck, stilt count.
+name: hall
+style: kamino
+about: Great drum or domed capsule centre, capsule or saucer wings, spire towers, entry pod; on stilts.
+width: [10, 12]
+choose:
+  centre: {pick: [drum, capsule], weights: [3, 2]}
+  wings: {pick: [capsule, saucer, mixed], weights: [3, 2, 2]}
+  dx0: [-0.6, 0.6]
+  dx: "=door_x if door_x is not None else dx0"
+  st: [0.2, 0.32]
+  R: ["=w_max * 0.2", "=w_max * 0.23"]
+  ry: [0.46, 0.52]
+  cy: "=R * ry + 0.75"
+  wall: [1.05, 1.25]
+  ww: "=(w_max / 2 - R * 0.6)"              # each wing's length, from the centre's side to the edge
+  wd: [1.5, 1.9]
+  wh: [0.7, 0.9]
+  spires: {int: [0, 2]}
+  sh: [1.4, 2.0]
+  upper: {pick: [true, false], weights: [1, 2]}
+  flip: {pick: [-1, 1]}
+parts:
+  # stilts under the whole front
+  - repeat: "=round(W / 1.5)"
+    parts:
+      - {use: pylon, name: "=f'stilt{i}'", at: ["=-w_max / 2 + 0.45 + i * ((w_max - 0.9) / (n - 1))", 0.55, 0], with: {h: "=st + 0.1", r: 0.15}}
+  # the wings (west then east)
+  - repeat: 2
+    parts:
+      - when: "=wings == 'capsule' or (wings == 'mixed' and (i == 0) == (flip > 0))"
+        parts:
+          - {use: capsule-hall, name: "=f'wing{i}'", at: ["=(1 if i else -1) * (w_max / 2 - ww / 2)", 0.45, "=st"],
+             with: {w: "=ww", d: "=wd", h: "=wh", k: 0.35}}
+          - {use: capsule-band, name: "=f'wingband{i}'", at: ["=(1 if i else -1) * (w_max / 2 - ww / 2)", 0.45, "=st"],
+             with: {w: "=ww", d: "=wd", h: "=wh", band: 0.22, bz: 0.55}}
+        else:
+          - {use: saucer, name: "=f'pod{i}'", at: ["=(1 if i else -1) * (w_max / 2 - ww * 0.48)", "=0.45 + wd * 0.55", 0],
+             with: {R: "=ww * 0.48", ry: "=min(0.62, wd * 0.55 / (ww * 0.48))", z0: "=st + 0.18", skirt: 0.18, wall: "=wh * 0.75", hk: 0.26}}
+          - {use: saucer-band, name: "=f'podband{i}'", at: ["=(1 if i else -1) * (w_max / 2 - ww * 0.48)", "=0.45 + wd * 0.55", 0],
+             with: {R: "=ww * 0.48", ry: "=min(0.62, wd * 0.55 / (ww * 0.48))", z0: "=st + 0.18", wall: "=wh * 0.75", lo: 0.4, hi: 0.78}}
+  # spire towers behind (Tipoca's tall columns with a saucer head)
+  - repeat: "=spires"
+    parts:
+      - {use: pylon, name: "=f'spire{i}'", at: ["=(R * 1.15 + 0.3) * (flip if i == 0 else -flip)", "=cy + R * ry + 0.25", 0], with: {h: "=sh + wall * 0.6", r: 0.24}}
+      - {use: saucer, name: "=f'spirehead{i}'", at: ["=(R * 1.15 + 0.3) * (flip if i == 0 else -flip)", "=cy + R * ry + 0.25", 0],
+         with: {R: 0.62, ry: 0.6, z0: "=sh + wall * 0.6", skirt: 0.2, wall: 0.24, hk: 0.35}}
+  # the centre
+  - when: "=centre == 'drum'"
+    parts:
+      - {use: saucer, name: core, at: ["=dx", "=cy", 0], with: {R: "=R", ry: "=ry", z0: "=st + 0.3", skirt: 0.3, wall: "=wall", hk: 0.24}}
+      - {use: saucer-band, name: band1, at: ["=dx", "=cy", 0], with: {R: "=R", ry: "=ry", z0: "=st + 0.3", wall: "=wall", lo: 0.22, hi: 0.38}}
+      - {use: saucer-band, name: band2, at: ["=dx", "=cy", 0], with: {R: "=R", ry: "=ry", z0: "=st + 0.3", wall: "=wall", lo: 0.62, hi: 0.8}}
+    else:
+      - {use: capsule-hall, name: core, at: ["=dx", 0.6, "=st"], with: {w: "=R * 2.6", d: "=R * ry * 2.1", h: "=wall", k: 0.3}}
+      - {use: capsule-band, name: core-band, at: ["=dx", 0.6, "=st"], with: {w: "=R * 2.6", d: "=R * ry * 2.1", h: "=wall", band: 0.26, bz: 0.62}}
+      - {use: saucer, name: core-dome, at: ["=dx", "=0.6 + R * ry * 1.05", 0], with: {R: "=R * 0.62", ry: 0.7, z0: "=st + wall + 0.05", skirt: 0.05, wall: 0.3, hk: 0.4}}
+      - {use: saucer-band, name: core-dome-band, at: ["=dx", "=0.6 + R * ry * 1.05", 0], with: {R: "=R * 0.62", ry: 0.7, z0: "=st + wall + 0.05", wall: 0.3, lo: 0.3, hi: 0.8}}
+  - when: "=upper"
+    parts:
+      - {use: capsule-hall, name: upper, at: ["=-flip * (R * 1.4)", "=cy + 0.15", "=st + wh"], with: {w: "=ww * 0.7", d: 0.9, h: 0.45, k: 0.4}}
+  # the entry pod jutting forward with the door
+  - {use: capsule-hall, name: entry, at: ["=dx", 0, "=st"], with: {w: 1.5, d: 0.9, h: 1.0, k: 0.35}}
+  - {name: step, mat: shell, box: {c: ["=dx", 0.0, "=st / 2"], half: [0.55, 0.12, "=st / 2"], radius: 0.03}}
+  - {use: door-pod, name: door, at: ["=dx", 0.02, "=st"], with: {w: 0.82, h: 0.86}}

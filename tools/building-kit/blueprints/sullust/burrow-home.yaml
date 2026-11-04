@@ -1,0 +1,60 @@
+# A Sullustan home (Sullust, Battlefront; the Sullustan concept homes): a low dome of volcanic stone
+# half dug into a lava-rock slope, entered through a short lava tube with a round hatch, a stone porch
+# with an arched door, or a big round portal. Portholes, a heat stack, a second dome or a flat annex.
+name: burrow-home
+style: sullust
+about: Stone dome dug into a slope; lava-tube hatch, porch or round portal; portholes, twin dome or annex, stack.
+width: [5]
+choose:
+  Hb: "=H if H else 4"
+  k: "=min(1.0, Hb / 4.0)"
+  form: {pick: [single, twin, wing], weights: [3, 2, 2]}
+  side: {pick: [-1, 1]}
+  R0: ["=w_max * 0.31", "=w_max * 0.37"]
+  R: "=R0 * (0.85 if form != 'single' else 1.0) * k"
+  ry: [0.62, 0.78]
+  hk: [0.55, 0.75]
+  dx: "=-side * R * (0.45 if form != 'single' else 0.12)"
+  entry: {pick: [tube, porch, portal], weights: [3, 2, 2]}
+  td: "=(0.85 if entry == 'tube' else (0.7 if entry == 'porch' else 0.4)) * k"
+  cy: "=td + R * ry * 0.75"
+  ex: "=door_x if door_x is not None else dx + side * R * 0.2"
+  slope: {pick: [none, berm], weights: [2, 3]}
+  bh: [0.35, 0.6]
+  wins: {int: [1, 2]}
+parts:
+  - {use: shell, name: dome, at: ["=dx", "=cy", 0], with: {r: "=R", ry: "=ry", hk: "=hk"}}
+  - when: "=form == 'twin'"
+    parts:
+      - {use: shell, name: dome2, at: ["=dx + side * R * 1.05", "=cy + 0.12", 0], with: {r: "=R * 0.66", ry: "=ry", hk: "=hk * 0.9"}}
+      - {use: window-round, name: win2, at: ["=dx + side * R * 1.15", "=cy + 0.12 - R * 0.66 * ry * 0.72", "=R * 0.66 * hk * 0.4"], with: {r: 0.17}}
+  - when: "=form == 'wing'"
+    parts:
+      - {use: slab, name: wing, at: ["=dx + side * (R * 0.55 + 0.75)", "=cy - R * ry * 0.55", 0], with: {w: 1.5, d: 1.3, h: "=0.75 * k + 0.05", lean: 0.2, rnd: 0.1}}
+      - {use: stack, name: stack, at: ["=dx + side * (R * 0.55 + 1.05)", "=cy - R * ry * 0.55 + 0.75", "=0.75 * k"], with: {r: 0.17, h: 0.45}}
+  - when: "=entry == 'tube'"
+    parts:
+      - {use: tube, name: entry, at: ["=ex", 0, 0], with: {r: 0.5, d: "=cy - R * ry * 0.6", zc: 0.3}}
+      - {use: hatch, name: door, at: ["=ex", 0, 0], with: {r: 0.35, frame: 0.09, zc: 0.35}}
+  - when: "=entry == 'portal'"
+    parts:
+      - {use: tube, name: entry, at: ["=ex", 0, 0], with: {r: 0.68, d: "=cy - R * ry * 0.6", zc: 0.22}}
+      - {use: hatch, name: door, at: ["=ex", 0, 0], with: {r: 0.46, frame: 0.12, zc: 0.38}}
+  - when: "=entry == 'porch'"
+    parts:
+      - {name: porch, mat: stone, box: {c: ["=ex", "=(cy - R * ry * 0.45) / 2", 0.3], half: [0.62, "=(cy - R * ry * 0.45) / 2", 0.3], radius: 0.06}}
+      - {name: porch-top, mat: stone, cylinder: {a: ["=ex", 0, 0.6], b: ["=ex", "=cy - R * ry * 0.45", 0.6], r1: 0.62}, squash: {scale: [1, 1, 0.55], center: ["=ex", 0, 0.6]}}
+      - {use: door-arch, name: door, at: ["=ex", 0, 0], with: {w: 0.78, h: 0.55}}
+  - repeat: "=wins"
+    parts:
+      - {use: window-round, name: "=f'win{i}'", at: ["=dx - side * R * (0.55 - 0.3 * i)", "=cy - R * ry * (0.7 + 0.12 * i) - 0.02", "=R * hk * (0.42 + 0.15 * i)"],
+         with: {r: "=0.24 - 0.06 * i"}}
+  - chance: "=0.4 if form != 'wing' else 0"
+    parts:
+      - {use: stack, name: stack, at: ["=dx - side * R * 0.25", "=cy + R * ry * 0.3", "=R * hk * 0.86 - 0.1"], with: {r: 0.15, h: 0.4}}
+  - when: "=slope == 'berm'"
+    parts:
+      - {use: berm, name: berm, at: [0, 0, 0], with: {w: "=min(w_max, R * 2.6)", y0: "=cy", y1: "=min(Hb - bh - 0.1, cy + R * ry + 0.35)", h: "=bh", tilt: "=0.35 * side"}}
+  - chance: 0.55
+    parts:
+      - {use: rock, name: rock, at: ["=side * (w_max / 2 - 0.38) if form == 'single' else -side * (w_max / 2 - 0.35)", 0.45, 0], with: {s: 0.5}}

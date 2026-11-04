@@ -1,7 +1,0 @@
-name: part-roof-lip
-parts:
-- name: roof-lip
-  use: roof-lip
-style: tatooine
-width:
-- 4

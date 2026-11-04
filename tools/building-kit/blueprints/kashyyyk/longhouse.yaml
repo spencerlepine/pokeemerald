@@ -1,0 +1,88 @@
+# A Kachirho timber hall (Revenge of the Sith): a long carved-wood house under a steep roof, its gable to
+# the front or its ridge along it, or a wide woven skirt with a steep gable rising out of it; tusk horns
+# by the door or on the gable, pylons at the corners; on the ground or up on stilts at the shore.
+name: longhouse
+style: kashyyyk
+about: Long timber hall; gable-front, side-ridge, hipped or swept roof; tusks, pylons, slat windows; ground or stilts.
+width: [5, 6, 7]
+choose:
+  B: "=(H if H else 4) - 0.35"
+  over: 0.15
+  w: "=w_max - 2 * over - [0.0, 0.35, 0.6][seed % 3] * (W > 4)"
+  base: {pick: [ground, stilts], weights: [3, 2]}
+  lift: "=0.36 if base == 'stilts' else 0"
+  set: "=0.42 if base == 'stilts' else 0"
+  h: [1.0, 1.3]
+  roof0: {pick: [front, side, hip, swept], weights: [3, 3, 2, 3]}
+  roof: "=roof0 if B > 3 or roof0 == 'side' else 'side'"
+  d0: [1.5, 2.5]
+  d: "=max(0.9, min(d0, B - lift - set - h - (0.9 if roof == 'front' else 0.5)))"
+  rise0: [0.8, 1.4]
+  rise: "=max(0.35, min(rise0, (B - lift - set - d - over - h) if roof == 'front' else (B - lift - set - h - d / 2 - 0.05) if roof == 'side' else (B - lift - set - h - d * 0.55)))"
+  dxx: "=door_x if door_x is not None else 0"
+  wins: {pick: [slat, none], weights: [3, 1]}
+  tusks: {pick: [door, gable, none], weights: [2, 2, 1]}
+  pylons: {pick: [true, false], weights: [2, 3]}
+parts:
+  - when: "=base == 'stilts'"
+    parts:
+      - {use: deck, name: deck, at: [0, "=set - 0.12", 0], with: {w: "=w + 0.3", d: "=d + 0.24", z: "=lift", t: 0.12, mat: plank}}
+      - repeat: "=3 if w > 3.5 else 2"
+        parts:
+          - {name: post-f, mat: bark, cylinder: {a: ["=-w / 2 + 0.2 + i * (w - 0.4) / (n - 1)", "=set + 0.05", 0], b: ["=-w / 2 + 0.2 + i * (w - 0.4) / (n - 1)", "=set + 0.05", "=lift"], r1: 0.15}}
+      - name: ramp
+        mat: plank
+        extrude: {axis: x, profile: [[0, 0], ["=set", 0], ["=set", "=lift"]], span: ["=dxx - 0.55", "=dxx + 0.55"], round: 0.02}
+  - {use: box-block, name: hall, at: [0, "=set", "=lift"], with: {w: "=w", d: "=d", h: "=h", mat: wood, rnd: 0.04}}
+  # roofs
+  - when: "=roof == 'front'"
+    parts:
+      - name: roof
+        mat: thatch
+        extrude: {axis: y, profile: [["=-w / 2 - over", "=lift + h"], ["=w / 2 + over", "=lift + h"], [0, "=lift + h + rise"]],
+                  span: ["=set - over", "=set + d + over"], round: 0.03}
+  - when: "=roof == 'side'"
+    parts:
+      - {use: gable-roof, name: roof, at: [0, "=set", "=lift"], with: {w: "=w", d: "=d", z: "=h", rise: "=rise", over: "=over", mat: thatch}}
+      - name: cross-gable
+        mat: thatch
+        extrude: {axis: y, profile: [["=-0.85", "=lift + h - 0.02"], [0.85, "=lift + h - 0.02"], [0, "=lift + h + rise * 0.95"]],
+                  span: ["=set - over - 0.08", "=set + d / 2"], round: 0.03}
+  - when: "=roof == 'hip'"
+    parts:
+      - {use: hip-roof, name: roof, at: [0, "=set", "=lift"], with: {w: "=w", d: "=d", z: "=h", rise: "=rise", ridge: "=max(0.15, 1 - d / w)", over: "=over", mat: thatch}}
+  - when: "=roof == 'swept'"
+    parts:
+      - {use: hip-roof, name: skirt, at: [0, "=set", "=lift"], with: {w: "=w", d: "=d", z: "=h", rise: 0.22, ridge: 0.7, over: "=over + 0.08", mat: thatch}}
+      - name: roof
+        mat: thatch
+        extrude: {axis: y, profile: [["=-w * 0.36", "=lift + h + 0.15"], ["=w * 0.36", "=lift + h + 0.15"], [0, "=lift + h + max(rise, 0.6)"]],
+                  span: ["=set + d * 0.12", "=set + d * 0.9"], round: 0.03}
+  # timber frame: posts at the corners and between the bays
+  - repeat: "=max(2, round(w / 1.4 - 0.49) + 1)"
+    parts:
+      - when: "=i in (0, n - 1) or min(abs(-w / 2 + 0.1 + i * (w - 0.2) / (n - 1) - dxx + 1.4), abs(-w / 2 + 0.1 + i * (w - 0.2) / (n - 1) - dxx), abs(-w / 2 + 0.1 + i * (w - 0.2) / (n - 1) - dxx - 1.4)) > 0.62"
+        parts:
+          - {name: frame-post, mat: plank, box: {c: ["=-w / 2 + 0.1 + i * (w - 0.2) / (n - 1)", "=set - 0.03", "=lift + h / 2"], half: [0.1, 0.06, "=h / 2"], radius: 0.02}}
+  # the front
+  - {use: wook-door, name: door, at: ["=dxx", "=set", "=lift"], with: {w: 0.86, h: "=min(0.98, h - 0.14)"}}
+  - when: "=wins == 'slat'"
+    parts:
+      - when: "=dxx - 1.4 > -w / 2 + 0.45"
+        parts:
+          - {use: slat-window, name: win-w, at: ["=dxx - 1.4", "=set", "=lift + h * 0.58"], with: {w: 0.62, h: 0.36}}
+      - when: "=dxx + 1.4 < w / 2 - 0.45"
+        parts:
+          - {use: slat-window, name: win-e, at: ["=dxx + 1.4", "=set", "=lift + h * 0.58"], with: {w: 0.62, h: 0.36}}
+  - when: "=tusks == 'door'"
+    parts:
+      - {use: tusk, name: tusk-w, at: ["=dxx - 0.62", "=set - 0.12", "=lift"], with: {s: -1, l: "=min(1.15, h)", r: 0.15, lean: 0.22}}
+      - {use: tusk, name: tusk-e, at: ["=dxx + 0.62", "=set - 0.12", "=lift"], with: {s: 1, l: "=min(1.15, h)", r: 0.15, lean: 0.22}}
+  - when: "=tusks == 'gable' and roof in ('front', 'swept')"
+    parts:
+      - {use: tusk, name: horn-w, at: [-0.08, "=set + (d * 0.12 if roof == 'swept' else -over) + 0.05", "=lift + h + (max(rise, 0.6) if roof == 'swept' else rise) - 0.12"], with: {s: -1, l: 0.55, r: 0.14}}
+      - {use: tusk, name: horn-e, at: [0.08, "=set + (d * 0.12 if roof == 'swept' else -over) + 0.05", "=lift + h + (max(rise, 0.6) if roof == 'swept' else rise) - 0.12"], with: {s: 1, l: 0.55, r: 0.14}}
+  - when: "=pylons and W >= 5"
+    parts:
+      - {use: pylon, name: pylon-w, at: ["=-w_max / 2 + 0.3", 0.1, 0], with: {h: "=min(lift + h + 0.3, B - 0.4)", disc: 0.3, r: 0.13}}
+      - {use: pylon, name: pylon-e, at: ["=w_max / 2 - 0.3", 0.1, 0], with: {h: "=min(lift + h + 0.3, B - 0.4)", disc: 0.3, r: 0.13}}

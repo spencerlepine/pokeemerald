@@ -1,0 +1,117 @@
+# Bespin kit: Cloud City (The Empire Strikes Back). White rounded towers in squashed ovals, curved bands
+# of windows broken by piers, flared saucer tops and glass cupolas, landing platforms with cloud cars,
+# and the Tibanna works below: tanks, stacks, pipe runs and Ugnaught sheds in bare metal.
+# The oval is a 12-sided prism, so a round tower reads as five lit facets from the front.
+materials:
+  cc-wall:  {ramp: light, bands: [0.04, 0.26, 0.6]}     # Cloud City white: the south face stays light
+  cc-trim:  {ramp: light, bands: [0.12, 0.42, 0.74]}    # lids, rims, sills: a step darker on top
+  cc-glass: {ramp: dark,  bands: [0.15, 0.45, 0.8]}     # window bands and the sunset-glass tops
+  cc-deck:  {ramp: mid,   bands: [0.1, 0.35, 0.7]}      # platforms and walkways
+  works:    {ramp: mid,   bands: [0.18, 0.48, 0.82]}    # refinery metal
+  works-dk: {ramp: dark,  bands: [0.12, 0.4, 0.75]}
+templates:
+  # A squashed round prism (12 sides), w east-west, d north-south, its front at y = 0, from z0 to z1.
+  # `top` scales the top face about the centre (less than 1 tapers in, more flares out).
+  oval:
+    params: {w: 3.0, d: 1.6, z0: 0.0, z1: 2.0, top: 1.0, rnd: 0.03, mat: cc-wall}
+    preview: {}
+    parts:
+      - name: body
+        mat: "=mat"
+        prism:
+          poly: [["=w * 0.5", "=d * 0.5 * (1 + 0.268)"], ["=w * 0.366", "=d * 0.5 * (1 + 0.732)"], ["=w * 0.134", "=d"],
+                 ["=-w * 0.134", "=d"], ["=-w * 0.366", "=d * 0.5 * (1 + 0.732)"], ["=-w * 0.5", "=d * 0.5 * (1 + 0.268)"],
+                 ["=-w * 0.5", "=d * 0.5 * (1 - 0.268)"], ["=-w * 0.366", "=d * 0.5 * (1 - 0.732)"], ["=-w * 0.134", 0],
+                 ["=w * 0.134", 0], ["=w * 0.366", "=d * 0.5 * (1 - 0.732)"], ["=w * 0.5", "=d * 0.5 * (1 - 0.268)"]]
+          z: ["=z0", "=z1"]
+          top: "=top"
+          round: "=rnd"
+  # A curved band of windows round an oval of w x d (front at y = 0): a dark glass ring a little proud of
+  # the wall. Blueprints break it with `oval-pier`s across the front (a repeat), so it reads as windows.
+  window-band:
+    params: {w: 3.0, d: 1.6, z0: 1.4, z1: 1.8, out: 0.06, glass: cc-glass}
+    preview: {}
+    parts:
+      - {use: oval, name: glass, at: [0, "=-out", 0], with: {w: "=w + 2 * out", d: "=d + 2 * out", z0: "=z0", z1: "=z1", mat: "=glass", rnd: 0.02}}
+  # One pier on the front of an oval of wk x dk, standing on its facets at x.
+  oval-pier:
+    params: {x: 0.0, wk: 3.0, dk: 1.6, z0: 1.0, z1: 1.4, pw: 0.28, out: 0.07, mat: cc-wall,
+             u: "=min(1.0, abs(x) / (wk / 2))",
+             s: "=0 if u < 0.268 else (0.268 * (u - 0.268) / 0.464 if u < 0.732 else 0.268 + 0.464 * (u - 0.732) / 0.268)",
+             yp: "=s * dk / 2 - out"}
+    parts:
+      - {name: pier, mat: "=mat", box: {c: ["=x", "=yp + 0.2", "=(z0 + z1) / 2"], half: ["=pw / 2", 0.2, "=(z1 - z0) / 2"], radius: 0.02}}
+  # A flared saucer top: the wall flares out from w x d to wc x dc over t0, then a lid t1 thick.
+  saucer:
+    params: {w: 3.0, d: 1.6, wc: 4.0, dc: 2.1, z: 3.0, t0: 0.35, t1: 0.22, mat: cc-trim, lid: cc-wall}
+    preview: {}
+    parts:
+      - {use: oval, name: flare, with: {w: "=w", d: "=d", z0: "=z", z1: "=z + t0", top: ["=wc / w", "=dc / d"], mat: "=mat"}}
+      - {use: oval, name: lid, at: [0, "=-(dc - d) / 2", 0], with: {w: "=wc", d: "=dc", z0: "=z + t0", z1: "=z + t0 + t1", top: 0.9, mat: "=lid"}}
+  # A glass cupola (the sunset-glass top), centre at its foot.
+  cupola:
+    params: {rx: 0.8, ry: 0.5, rz: 0.5, mat: cc-glass}
+    preview: {at: [0, 0.6, 0]}
+    parts:
+      - {name: glass, mat: "=mat", ellipsoid: {c: [0, 0, 0], r: ["=rx", "=ry", "=rz"]}}
+  # A Cloud City doorway: a rounded frame round a dark opening, a lintel band over it.
+  door-cc:
+    params: {w: 0.9, h: 1.0, frame: 0.13, door: cc-glass, trim: cc-trim}
+    preview: {}
+    parts:
+      - {name: frame, mat: "=trim", box: {c: [0, -0.04, "=(h + frame) / 2"], half: ["=w / 2 + frame", 0.08, "=(h + frame) / 2"], radius: 0.1}}
+      - {name: hole, mat: "=door", box: {c: [0, -0.1, "=h / 2"], half: ["=w / 2", 0.06, "=h / 2"], radius: 0.08}}
+  # A curved canopy over a door: half an oval slab sticking out south.
+  canopy:
+    params: {w: 1.5, d: 0.6, z: 1.15, t: 0.18, mat: cc-trim}
+    preview: {}
+    parts:
+      - {use: oval, name: slab, at: [0, "=-d", 0], with: {w: "=w", d: "=2 * d", z0: "=z", z1: "=z + t", mat: "=mat", top: 0.94}}
+  # A tall rib up the front of a tower, ending in a point above the wall.
+  rib:
+    params: {h: 3.0, t: 0.3, l: 0.3, peak: 0.5, mat: cc-trim}
+    preview: {}
+    parts:
+      - name: rib
+        mat: "=mat"
+        extrude: {axis: x, profile: [["=-l", 0], [0.2, 0], [0.2, "=h + peak"], ["=-l", "=h"]], span: ["=-t / 2", "=t / 2"], round: 0.03}
+  # A cloud car: twin pods side by side joined by a cockpit, nose south.
+  cloud-car:
+    params: {s: 1.0, mat: cc-trim}
+    preview: {at: [0, 0.6, 0]}
+    parts:
+      - {name: pod-w, mat: "=mat", ellipsoid: {c: ["=-0.48 * s", 0, "=0.3 * s"], r: ["=0.3 * s", "=0.62 * s", "=0.27 * s"]}}
+      - {name: pod-e, mat: "=mat", ellipsoid: {c: ["=0.48 * s", 0, "=0.3 * s"], r: ["=0.3 * s", "=0.62 * s", "=0.27 * s"]}}
+      - {name: beam, mat: metal, box: {c: [0, "=0.1 * s", "=0.3 * s"], half: ["=0.45 * s", "=0.14 * s", "=0.09 * s"]}}
+      - {name: cockpit, mat: cc-glass, ellipsoid: {c: ["=-0.48 * s", "=-0.32 * s", "=0.42 * s"], r: ["=0.18 * s", "=0.22 * s", "=0.14 * s"]}}
+  # A Tibanna tank standing up: a drum with a domed top.
+  tank:
+    params: {r: 0.55, h: 1.4, mat: works}
+    preview: {at: [0, 0.6, 0]}
+    parts:
+      - {name: drum, mat: "=mat", cylinder: {a: [0, 0, 0], b: [0, 0, "=h"], r1: "=r"}}
+      - {name: top, mat: "=mat", ellipsoid: {c: [0, 0, "=h"], r: ["=r", "=r", "=r * 0.55"]}}
+      - {name: hoop, mat: works-dk, cylinder: {a: [0, 0, "=h * 0.55"], b: [0, 0, "=h * 0.55 + 0.26"], r1: "=r + 0.04"}}
+  # A Tibanna tank lying east-west on two saddles.
+  tank-lying:
+    params: {l: 2.0, r: 0.5, mat: works}
+    preview: {at: [0, 0.6, 0]}
+    parts:
+      - {name: drum, mat: "=mat", cylinder: {a: ["=-l / 2 + r * 0.5", 0, "=r + 0.12"], b: ["=l / 2 - r * 0.5", 0, "=r + 0.12"], r1: "=r"}}
+      - {name: end-w, mat: "=mat", ellipsoid: {c: ["=-l / 2 + r * 0.5", 0, "=r + 0.12"], r: ["=r * 0.5", "=r", "=r"]}}
+      - {name: end-e, mat: "=mat", ellipsoid: {c: ["=l / 2 - r * 0.5", 0, "=r + 0.12"], r: ["=r * 0.5", "=r", "=r"]}}
+      - {name: saddle-w, mat: works-dk, box: {c: ["=-l * 0.28", 0, 0.2], half: [0.14, "=r * 0.8", 0.2]}}
+      - {name: saddle-e, mat: works-dk, box: {c: ["=l * 0.28", 0, 0.2], half: [0.14, "=r * 0.8", 0.2]}}
+  # An exhaust stack with a collar.
+  stack:
+    params: {r: 0.3, h: 2.2, mat: works}
+    preview: {}
+    parts:
+      - {name: pipe, mat: "=mat", cylinder: {a: [0, 0, 0], b: [0, 0, "=h"], r1: "=r * 1.2", r2: "=r"}}
+      - {name: collar, mat: works-dk, cylinder: {a: [0, 0, "=h - 0.3"], b: [0, 0, "=h"], r1: "=r + 0.06"}}
+  # A fat pipe running east-west at height z (a Tibanna line).
+  pipe:
+    params: {l: 2.0, r: 0.16, z: 0.8, mat: works-dk}
+    preview: {}
+    parts:
+      - {name: pipe, mat: "=mat", cylinder: {a: ["=-l / 2", 0, "=z"], b: ["=l / 2", 0, "=z"], r1: "=r"}}

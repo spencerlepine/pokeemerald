@@ -1,0 +1,61 @@
+# Docking Bay 94 (A New Hope): a round open-roof pit, its ring wall built of flat battered panels,
+# an entry block with a blast door on the south side, sometimes a freighter or a shuttle parked inside.
+name: docking-bay
+style: tatooine
+about: Round open-roof bay, a faceted ring wall, an entry block with the door, a ship or crates inside.
+width: [7, 8]
+choose:
+  hh: "=H if H else 8"
+  hr: [0.95, 1.25]                                # ring wall height
+  Rr: "=min(w_max / 2 - 0.05, (hh - 0.6 - hr) / 2)"   # ring outer radius
+  t: [0.5, 0.7]                                  # ring wall thickness
+  n: {pick: [10, 12, 14]}                        # facets
+  cy: "=Rr + 0.35"                               # ring centre, north of the front
+  ex0: [-0.6, 0.6]
+  ex: "=door_x if door_x is not None else ex0"
+  ew: [1.9, 2.4]
+  eh: "=hr + 0.3"
+  door: {pick: [slab, arch], weights: [3, 1]}
+  ship: {pick: [freighter, shuttle, crates, none], weights: [3, 2, 2, 1]}
+  ribs: {pick: [true, false], weights: [3, 2]}
+parts:
+  - {name: floor, mat: dark, cylinder: {a: [0, "=cy", 0], b: [0, "=cy", 0.05], r1: "=Rr - t + 0.05"}}
+  - ring: {name: wall, mat: wall, c: [0, "=cy", "=hr / 2"], axis: z, r: "=Rr - t / 2", n: "=n",
+           size: ["=2 * pi * Rr / n * 1.02", "=t", "=hr"], round: 0.04}
+  - ring: {name: rim, mat: trim, c: [0, "=cy", "=hr - 0.06"], axis: z, r: "=Rr - t / 2", n: "=n",
+           size: ["=2 * pi * Rr / n * 1.04", "=t + 0.1", 0.14], round: 0.03}
+  - when: "=ribs"                                # buttress ribs between the panels, outside
+    parts:
+      - ring: {name: rib, mat: trim, c: [0, "=cy", "=hr * 0.4"], axis: z, r: "=Rr - 0.05", n: "=n", start: "=180 / n",
+               size: [0.28, 0.35, "=hr * 0.8"], round: 0.04}
+  # the entry block on the south side, with the blast door
+  - {use: adobe-block, name: entry, at: ["=ex", -0.05, 0], with: {w: "=ew", d: 1.3, h: "=eh", batter: 0.15, rnd: 0.1}}
+  - {use: roof-lip, name: entry-lip, at: ["=ex", -0.05, 0], with: {w: "=ew", d: 1.3, h: "=eh", batter: 0.15, t: 0.16}}
+  - when: "=door == 'slab'"
+    parts:
+      - {use: door-slab, name: door, at: ["=ex", -0.05, 0], with: {w: 1.0, h: "=eh * 0.7"}}
+    else:
+      - {use: door-arch, name: door, at: ["=ex", -0.05, 0], with: {w: 0.95, h: "=eh * 0.55"}}
+  # what is parked inside
+  - when: "=ship == 'freighter'"                  # a saucer freighter: disc, mandibles south, cockpit tube
+    parts:
+      - {name: ship-disc, mat: light, cylinder: {a: [0.1, "=cy + 0.3", 0.15], b: [0.1, "=cy + 0.3", 0.5], r1: "=Rr * 0.5", r2: "=Rr * 0.46"}}
+      - {name: ship-hump, mat: mid, ellipsoid: {c: [0.1, "=cy + 0.4", 0.5], r: ["=Rr * 0.26", "=Rr * 0.26", 0.22]}}
+      - {name: ship-mand-w, mat: light, box: {c: [-0.35, "=cy + 0.3 - Rr * 0.55", 0.33], half: [0.22, "=Rr * 0.22", 0.13], radius: 0.03}}
+      - {name: ship-mand-e, mat: light, box: {c: [0.55, "=cy + 0.3 - Rr * 0.55", 0.33], half: [0.22, "=Rr * 0.22", 0.13], radius: 0.03}}
+      - {name: ship-cockpit, mat: mid, cylinder: {a: ["=0.1 + Rr * 0.4", "=cy + 0.1", 0.38], b: ["=0.1 + Rr * 0.62", "=cy - 0.25", 0.38], r1: 0.2}}
+  - when: "=ship == 'shuttle'"                     # a wedge shuttle with a tall tail fin
+    parts:
+      - name: shuttle-hull
+        mat: light
+        prism: {poly: [[0, "=cy - Rr * 0.5"], ["=Rr * 0.32", "=cy + Rr * 0.35"], ["=-Rr * 0.32", "=cy + Rr * 0.35"]], z: [0.1, 0.5], top: 0.8, round: 0.04}
+      - {name: shuttle-fin, mat: mid, box: {c: [0, "=cy + Rr * 0.2", 0.85], half: [0.08, "=Rr * 0.18", 0.4], radius: 0.02}}
+  - when: "=ship == 'crates'"
+    parts:
+      - {use: crate, name: crate1, at: [-0.7, "=cy + 0.6", 0], with: {s: 0.6}}
+      - {use: crate, name: crate2, at: [0.1, "=cy + 0.9", 0], with: {s: 0.7}}
+      - {use: crate, name: crate3, at: [-0.3, "=cy + 1.1", 0.6], with: {s: 0.5}}
+      - {use: crate, name: crate4, at: [0.9, "=cy + 0.4", 0], with: {s: 0.5}}
+  - chance: 0.6                                  # a vent stack on the ring
+    parts:
+      - {use: vent, name: vent, at: ["=-(Rr - t / 2) * 0.7 * (1 if seed % 2 else -1)", "=cy + (Rr - t / 2) * 0.7", "=hr"], with: {r: 0.2, h: 0.4}}

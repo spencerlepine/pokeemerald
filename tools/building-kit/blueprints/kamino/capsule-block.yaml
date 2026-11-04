@@ -1,0 +1,55 @@
+# Tipoca's long low blocks (Attack of the Clones: the clone barracks, the store rooms along the walkways):
+# a white capsule hall with rounded ends and a vaulted roof on stilts, a window band, a walkway deck.
+# Varies: length, one or two tiers, pod door or wide cargo door, an end saucer pod, a roof drum or mast,
+# crates on the deck.
+name: capsule-block
+style: kamino
+about: Capsule hall on stilts; one or two tiers, pod or cargo door, end pod, roof drum or mast, crates.
+width: [4, 5, 6, 7, 8]
+choose:
+  tiers: {pick: [1, 2], weights: [3, 2]}
+  podend: {pick: [true, false], weights: "=[1, 2] if W >= 5 else [0, 1]"}
+  L: "=w_max * (0.72 if podend else 1.0)"
+  d: [1.2, 1.5]
+  st: [0.18, 0.3]
+  h: "=0.62 if tiers == 2 else 0.85"
+  k: [0.3, 0.45]
+  doorkind: {pick: [pod, cargo], weights: [3, 2]}
+  dx0: ["=-L / 2 + 0.8", "=L / 2 - 0.8"]
+  side: {pick: [-1, 1]}
+  cx: "=-side * (w_max - L) / 2"
+  dx: "=door_x if door_x is not None else cx + dx0 * 0.6"
+  roof: {pick: [none, drum, mast], weights: [2, 2, 1]}
+  crates: {pick: [0, 1, 2], weights: [2, 1, 1]}
+  y0: 0.42
+parts:
+  - repeat: "=max(2, round(L / 1.4))"
+    parts:
+      - {use: pylon, name: "=f'stilt{i}'", at: ["=cx - L / 2 + 0.45 + i * ((L - 0.9) / (n - 1))", "=y0 + 0.2", 0], with: {h: "=st + 0.05", r: 0.14}}
+  - {use: capsule-hall, name: hall, at: ["=cx", "=y0", "=st"], with: {w: "=L", d: "=d", h: "=h", k: "=k if tiers == 1 else 0.12"}}
+  - {use: capsule-band, name: band, at: ["=cx", "=y0", "=st"], with: {w: "=L", d: "=d", h: "=h", band: 0.2, bz: "=0.78 if tiers == 1 else 0.72"}}
+  - when: "=tiers == 2"
+    parts:
+      - {use: capsule-hall, name: upper, at: ["=cx + side * L * 0.12", "=y0 + 0.2", "=st + h + 0.02"], with: {w: "=L * 0.7", d: "=d - 0.3", h: 0.45, k: "=k"}}
+      - {use: capsule-band, name: upper-band, at: ["=cx + side * L * 0.12", "=y0 + 0.2", "=st + h + 0.02"], with: {w: "=L * 0.7", d: "=d - 0.3", h: 0.45, band: 0.16, bz: 0.55}}
+  - when: "=podend"
+    parts:
+      - {use: pylon, name: pod-stilt, at: ["=side * (w_max / 2 - (w_max - L) * 0.5)", "=y0 + 0.5", 0], with: {h: "=st + 0.2", r: 0.13}}
+      - {use: saucer, name: pod, at: ["=side * (w_max / 2 - (w_max - L) * 0.62)", "=y0 + d / 2 + 0.1", 0],
+         with: {R: "=(w_max - L) * 0.62", ry: 0.75, z0: "=st + 0.25", skirt: 0.2, wall: 0.35, hk: 0.4}}
+  - when: "=roof == 'drum' and tiers == 1"
+    parts:
+      - {name: roof-drum, mat: shell, cylinder: {a: ["=cx - side * L * 0.25", "=y0 + d / 2", "=st + h"], b: ["=cx - side * L * 0.25", "=y0 + d / 2", "=st + h + d * k + 0.2"], r1: 0.38}}
+      - {name: roof-drum-cap, mat: dome, ellipsoid: {c: ["=cx - side * L * 0.25", "=y0 + d / 2", "=st + h + d * k + 0.2"], r: [0.42, 0.34, 0.16]}}
+  - when: "=roof == 'mast'"
+    parts:
+      - {use: mast, name: mast, at: ["=cx - side * L * 0.32", "=y0 + d / 2", "=st + h"], with: {h: "=0.9 if tiers == 1 else 1.2", head: 0.24}}
+  - {name: deck, mat: shell, box: {c: ["=cx", "=y0 / 2", "=st"], half: ["=L / 2 - 0.1", "=y0 / 2 + 0.02", 0.07], radius: 0.04}}
+  - repeat: "=crates"
+    parts:
+      - {use: crate, name: "=f'crate{i}'", at: ["=dx + (1 if dx < cx else -1) * (0.85 + i * 0.5)", 0.2, "=st + 0.07"], with: {s: 0.42}}
+  - when: "=doorkind == 'pod'"
+    parts:
+      - {use: door-pod, name: door, at: ["=dx", "=y0 + 0.02", "=st + 0.07"], with: {w: 0.72, h: "=min(0.82, h - 0.05)"}}
+    else:
+      - {use: door-slab, name: door, at: ["=dx", "=y0 + 0.02", "=st + 0.07"], with: {w: 1.0, h: "=min(0.78, h - 0.08)", door: pylon, trim: shell}}

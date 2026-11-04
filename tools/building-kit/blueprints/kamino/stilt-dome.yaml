@@ -1,0 +1,72 @@
+# A Tipoca City dwelling (Attack of the Clones): a white saucer on short thick stilts over the storm sea,
+# a sloped skirt, a dark window band, a wide eave and a low dome; a small deck in front of a pod door.
+# Varies: saucer size and squash, a plain dome, a second tier, a twin pod beside it, a mast, or a lens
+# body with no wall; band or none; two to four stilts.
+name: stilt-dome
+style: kamino
+about: White saucer dome on stilts; plain, two-tier, twin pod, mast or lens body; window band, entry deck.
+width: [4, 5]
+choose:
+  form: {pick: [plain, tier, twin, mast, lens], weights: [2, 2, 2, 2, 2]}
+  R: ["=w_max * (0.31 if form == 'twin' else 0.4)", "=w_max * (0.34 if form == 'twin' else 0.46)"]
+  ry: [0.42, 0.5]
+  st: [0.14, 0.26]                          # stilt height (the deck level)
+  skirt: [0.12, 0.2]
+  z0: "=st + skirt"
+  wall: "=0.6 if form == 'tier' else 0.74"
+  top: {pick: [dome, hub, cupola], weights: [3, 2, 2]}
+  hk: "=0.14 if form == 'tier' else (0.2 if form == 'lens' else (0.18 if top != 'dome' else 0.26))"
+  cy: "=R * ry + 0.22"
+  dx0: ["=-R * 0.3", "=R * 0.3"]
+  dx: "=door_x if door_x is not None else dx0"
+  side: "=-1 if dx > 0 else 1"              # the twin pod or mast goes away from the door
+  cx: "=-side * (w_max / 2 - R - 0.02) if form == 'twin' else 0"   # a twin pushes the main body aside
+  band: {pick: [true, false], weights: [3, 1]}
+  ns: {int: [2, 4]}
+  yf: "=cy - R * ry * sqrt(max(0.05, 1 - (dx / R) ** 2))"   # the wall's front at the door
+parts:
+  - repeat: "=ns"
+    parts:
+      - {use: pylon, name: "=f'stilt{i}'", at: ["=cx - R * 0.6 + i * (1.2 * R / (n - 1))", "=cy - R * ry * 0.45", 0], with: {h: "=st + 0.05", r: 0.15}}
+  - when: "=form != 'lens'"
+    parts:
+      - {use: saucer, name: body, at: ["=cx", "=cy", 0], with: {R: "=R", ry: "=ry", z0: "=z0", skirt: "=skirt", wall: "=wall", hk: "=hk"}}
+      - when: "=band"
+        parts:
+          - {use: saucer-band, name: band, at: ["=cx", "=cy", 0], with: {R: "=R", ry: "=ry", z0: "=z0", wall: "=wall", lo: 0.5, hi: 0.82}}
+    else:
+      - {use: pylon, name: core, at: [0, "=cy", 0], with: {h: "=z0", r: "=R * 0.35"}}
+      - {name: lens-lo, mat: shell, ellipsoid: {c: [0, "=cy", "=z0 + 0.3"], r: ["=R", "=R * ry", 0.42]}}
+      - {name: lens-hi, mat: dome, ellipsoid: {c: [0, "=cy", "=z0 + 0.42"], r: ["=R * 0.94", "=R * ry * 0.94", "=R * 0.3 + 0.2"]}}
+      - when: "=band"
+        parts:
+          - {name: lens-band, mat: glass, cylinder: {a: [0, "=cy", "=z0 + 0.26"], b: [0, "=cy", "=z0 + 0.44"], r1: "=R * 0.99"},
+             squash: {scale: [1, "=ry", 1], center: [0, "=cy", 0]}}
+  - when: "=form == 'tier'"
+    parts:
+      - {use: saucer, name: upper, at: ["=side * R * 0.15", "=cy + 0.1", 0],
+         with: {R: "=R * 0.55", ry: "=ry", z0: "=z0 + wall + 0.2", skirt: 0.12, wall: 0.32, hk: 0.3}}
+  - when: "=form == 'twin'"
+    parts:
+      - {use: pylon, name: twin-stilt, at: ["=side * (w_max / 2 - R * 0.62)", "=cy + 0.1", 0], with: {h: "=st + 0.2", r: 0.13}}
+      - {use: saucer, name: twin, at: ["=side * (w_max / 2 - R * 0.66)", "=cy + 0.2", 0],
+         with: {R: "=R * 0.64", ry: "=ry", z0: "=z0 + 0.16", skirt: 0.16, wall: 0.42, hk: 0.34}}
+      - {use: saucer-band, name: twin-band, at: ["=side * (w_max / 2 - R * 0.66)", "=cy + 0.2", 0],
+         with: {R: "=R * 0.64", ry: "=ry", z0: "=z0 + 0.16", wall: 0.42, lo: 0.4, hi: 0.75}}
+  - when: "=form == 'mast'"
+    parts:
+      - {use: mast, name: mast, at: ["=side * R * 0.5", "=cy - R * ry * 0.35", "=z0 + wall"], with: {h: 0.75, head: 0.26}}
+  - when: "=form != 'lens'"
+    parts:
+      - when: "=top == 'hub'"                 # a raised hub ring on the dome
+        parts:
+          - {name: hub, mat: shell, cylinder: {a: ["=cx", "=cy", "=z0 + wall"], b: ["=cx", "=cy", "=z0 + wall + R * hk + 0.22"], r1: "=R * 0.36", r2: "=R * 0.3"},
+             squash: {scale: [1, "=ry", 1], center: ["=cx", "=cy", 0]}}
+          - {name: hub-cap, mat: dome, ellipsoid: {c: ["=cx", "=cy", "=z0 + wall + R * hk + 0.22"], r: ["=R * 0.3", "=R * 0.3 * ry", 0.14]}}
+      - when: "=top == 'cupola'"              # a glass cupola ring with a cap
+        parts:
+          - {name: cupola, mat: glass, cylinder: {a: ["=cx", "=cy", "=z0 + wall"], b: ["=cx", "=cy - 0.1", "=z0 + wall + R * hk + 0.36"], r1: "=R * 0.24"}}
+          - {name: cupola-cap, mat: dome, ellipsoid: {c: ["=cx", "=cy - 0.1", "=z0 + wall + R * hk + 0.36"], r: ["=R * 0.32", "=R * 0.32 * 0.8", 0.12]}}
+  - {name: deck, mat: shell, box: {c: ["=dx", "=yf / 2", "=st"], half: [0.55, "=yf / 2 + 0.02", 0.07], radius: 0.04}}
+  - {use: pylon, name: deck-post, at: ["=dx", 0.14, 0], with: {h: "=st - 0.05", r: 0.1}}
+  - {use: door-pod, name: door, at: ["=dx", "=yf + 0.04", "=st + 0.07"], with: {w: 0.72, h: "=min(0.86, (wall + skirt if form != 'lens' else 0.62) * 0.9)"}}

@@ -1,0 +1,102 @@
+# Yavin 4 kit: the Great Temple of the Massassi and the Rebel base in it (A New Hope, Rogue One).
+# Two materials that never mix up: Massassi stone (dark grey-green blocks, battered tiers, rows of deep
+# window slots, vines) and Rebel prefab (light, rounded modules, arched roofs, blast doors, masts,
+# fuel tanks, crates). Rebel kit is always bolted onto or set beside the old stone.
+materials:
+  massassi: {ramp: mid,   bands: [0.25, 0.55, 0.86]}
+  moss:     {ramp: dark,  bands: [0.25, 0.55, 0.86]}
+  prefab:   {ramp: light, bands: [0.25, 0.55, 0.86]}
+  tarp:     {ramp: mid,   bands: [0.15, 0.45, 0.8]}
+templates:
+  # A battered Massassi tier: a block whose walls lean in (top scaled by `top`), front at y = 0.
+  stone-tier:
+    params: {w: 4.0, d: 2.0, h: 0.8, top: 0.9, rnd: 0.03, mat: massassi}
+    preview: {}
+    parts:
+      - name: tier
+        mat: "=mat"
+        prism: {poly: [["=-w / 2", 0], ["=w / 2", 0], ["=w / 2", "=d"], ["=-w / 2", "=d"]], z: [0, "=h"],
+                top: ["=(w - 2 * (1 - top) * h) / w", "=(d - 2 * (1 - top) * h) / d"], round: "=rnd"}
+  # A row of deep window slots on a south face (the temple's carved openings), n across w.
+  slot-row:
+    params: {w: 3.0, n: 4, sw: 0.3, sh: 0.32, mat: dark}
+    preview: {at: [0, 0, 0.5]}
+    parts:
+      - {name: s0, mat: "=mat", box: {c: ["=-w / 2 + w / n * 0.5", -0.04, 0], half: ["=sw / 2", 0.05, "=sh / 2"]}}
+      - {name: s1, mat: "=mat", box: {c: ["=-w / 2 + w / n * 1.5", -0.04, 0], half: ["=sw / 2", 0.05, "=sh / 2"]}}
+      - {name: s2, mat: "=mat", box: {c: ["=-w / 2 + w / n * (2.5 if n > 2 else 1.5)", -0.04, 0], half: ["=sw / 2", 0.05, "=sh / 2"]}}
+      - {name: s3, mat: "=mat", box: {c: ["=-w / 2 + w / n * (3.5 if n > 3 else 1.5)", -0.04, 0], half: ["=sw / 2", 0.05, "=sh / 2"]}}
+      - {name: s4, mat: "=mat", box: {c: ["=-w / 2 + w / n * (4.5 if n > 4 else 1.5)", -0.04, 0], half: ["=sw / 2", 0.05, "=sh / 2"]}}
+      - {name: s5, mat: "=mat", box: {c: ["=-w / 2 + w / n * (5.5 if n > 5 else 1.5)", -0.04, 0], half: ["=sw / 2", 0.05, "=sh / 2"]}}
+  # The hangar mouth at a temple's foot: a wide dark opening under a heavy stone lintel, the blast
+  # door raised to `open` (0-1) of its height.
+  hangar-mouth:
+    params: {w: 3.0, h: 1.0, open: 0.6, mat: massassi}
+    preview: {}
+    parts:
+      - {name: jamb-w, mat: "=mat", box: {c: ["=-w / 2 - 0.15", -0.04, "=h / 2 + 0.1"], half: [0.18, 0.1, "=h / 2 + 0.1"], radius: 0.02}}
+      - {name: jamb-e, mat: "=mat", box: {c: ["=w / 2 + 0.15", -0.04, "=h / 2 + 0.1"], half: [0.18, 0.1, "=h / 2 + 0.1"], radius: 0.02}}
+      - {name: lintel, mat: "=mat", box: {c: [0, -0.06, "=h + 0.12"], half: ["=w / 2 + 0.36", 0.12, 0.13], radius: 0.02}}
+      - {name: hole, mat: dark, box: {c: [0, -0.07, "=h / 2"], half: ["=w / 2", 0.06, "=h / 2"]}}
+      - {name: blast, mat: metal, box: {c: [0, -0.1, "=h - h * (1 - open) / 2"], half: ["=w / 2 - 0.02", 0.05, "=h * (1 - open) / 2 + 0.01"]}}
+  # A Rebel prefab module: a rounded box with a low arched roof, front at y = 0.
+  module:
+    params: {w: 2.0, d: 1.4, h: 0.9, rise: 0.25, mat: prefab}
+    preview: {}
+    parts:
+      - {name: body, mat: "=mat", box: {c: [0, "=d / 2", "=h / 2"], half: ["=w / 2", "=d / 2", "=h / 2"], radius: 0.07}}
+      - name: roof
+        mat: "=mat"
+        extrude: {axis: x, profile: [[-0.04, "=h - 0.02"], ["=d + 0.04", "=h - 0.02"], ["=d * 0.85", "=h + rise * 0.8"], ["=d * 0.5", "=h + rise"], ["=d * 0.15", "=h + rise * 0.8"]],
+                  span: ["=-w / 2 - 0.04", "=w / 2 + 0.04"], round: 0.04}
+      - {name: rib-w, mat: metal, box: {c: ["=-w / 2 + 0.05", "=d / 2", "=h / 2"], half: [0.1, "=d / 2 + 0.03", "=h / 2 + 0.03"], radius: 0.03}}
+      - {name: rib-e, mat: metal, box: {c: ["=w / 2 - 0.05", "=d / 2", "=h / 2"], half: [0.1, "=d / 2 + 0.03", "=h / 2 + 0.03"], radius: 0.03}}
+  # A Rebel arched shelter (a quonset): half a cylinder lying east-west, ends capped.
+  arch-hut:
+    params: {w: 2.6, r: 0.9, sq: 1.0, mat: prefab}
+    preview: {at: [0, 0, 0]}
+    parts:
+      - {name: shell, mat: "=mat", cylinder: {a: ["=-w / 2", "=r", 0], b: ["=w / 2", "=r", 0], r1: "=r"}, squash: {scale: [1, 1, "=sq"], center: [0, "=r", 0]}}
+      - {name: rib-w, mat: metal, cylinder: {a: ["=-w / 2 + 0.05", "=r", 0], b: ["=-w / 2 + 0.25", "=r", 0], r1: "=r + 0.05"}, squash: {scale: [1, 1, "=sq"], center: [0, "=r", 0]}}
+      - {name: rib-e, mat: metal, cylinder: {a: ["=w / 2 - 0.25", "=r", 0], b: ["=w / 2 - 0.05", "=r", 0], r1: "=r + 0.05"}, squash: {scale: [1, 1, "=sq"], center: [0, "=r", 0]}}
+  # A Rebel comms mast with a dish.
+  mast:
+    params: {h: 1.6, dish: 0.3, mat: metal}
+    preview: {}
+    parts:
+      - {name: pole, mat: "=mat", box: {c: [0, 0, "=h / 2"], half: [0.07, 0.07, "=h / 2"]}}
+      - {name: dish, mat: light, ellipsoid: {c: [0, -0.1, "=h - dish * 0.6"], r: ["=dish", 0.08, "=dish"]}}
+      - {name: tip, mat: "=mat", box: {c: [0, 0, "=h + 0.1"], half: [0.04, 0.04, 0.1]}}
+  # A standing fuel tank with a domed cap.
+  tank:
+    params: {r: 0.4, h: 0.9, mat: prefab}
+    preview: {at: [0, 0.4, 0]}
+    parts:
+      - {name: body, mat: "=mat", cylinder: {a: [0, 0, 0], b: [0, 0, "=h"], r1: "=r"}}
+      - {name: cap, mat: "=mat", ellipsoid: {c: [0, 0, "=h"], r: ["=r", "=r", "=r * 0.45"]}}
+      - {name: band, mat: metal, cylinder: {a: [0, 0, "=h * 0.35"], b: [0, 0, "=h * 0.35 + 0.12"], r1: "=r + 0.03"}}
+  # A fuel tank lying east-west on two saddles.
+  tank-lying:
+    params: {l: 1.8, r: 0.38, mat: prefab}
+    preview: {at: [0, 0.4, 0]}
+    parts:
+      - {name: body, mat: "=mat", cylinder: {a: ["=-l / 2 + r * 0.5", 0, "=r + 0.12"], b: ["=l / 2 - r * 0.5", 0, "=r + 0.12"], r1: "=r"}}
+      - {name: end-w, mat: "=mat", ellipsoid: {c: ["=-l / 2 + r * 0.5", 0, "=r + 0.12"], r: ["=r * 0.5", "=r", "=r"]}}
+      - {name: end-e, mat: "=mat", ellipsoid: {c: ["=l / 2 - r * 0.5", 0, "=r + 0.12"], r: ["=r * 0.5", "=r", "=r"]}}
+      - {name: saddle-w, mat: metal, box: {c: ["=-l * 0.25", 0, 0.12], half: [0.12, "=r * 0.8", 0.12]}}
+      - {name: saddle-e, mat: metal, box: {c: ["=l * 0.25", 0, 0.12], half: [0.12, "=r * 0.8", 0.12]}}
+  # Vines hanging down a stone face from z = 0 (put it at the top edge): two or three dark strands.
+  vines:
+    params: {w: 0.8, h: 0.6, mat: moss}
+    preview: {at: [0, 0, 1.0]}
+    parts:
+      - {name: v0, mat: "=mat", box: {c: ["=-w / 2 + 0.12", -0.06, "=-h / 2"], half: [0.12, 0.04, "=h / 2"], radius: 0.03}}
+      - {name: v1, mat: "=mat", box: {c: [0.0, -0.06, "=-h * 0.32"], half: [0.12, 0.04, "=h * 0.32"], radius: 0.03}}
+      - {name: v2, mat: "=mat", box: {c: ["=w / 2 - 0.12", -0.06, "=-h * 0.4"], half: [0.12, 0.04, "=h * 0.4"], radius: 0.03}}
+      - {name: tuft, mat: "=mat", box: {c: [0, -0.04, 0.03], half: ["=w / 2", 0.06, 0.07], radius: 0.03}}
+  # A low barricade of plates (sandbag wall), its front at y = 0.
+  barricade:
+    params: {w: 1.2, h: 0.4, mat: tarp}
+    preview: {}
+    parts:
+      - {name: wall, mat: "=mat", prism: {poly: [["=-w / 2", 0], ["=w / 2", 0], ["=w / 2", 0.35], ["=-w / 2", 0.35]], z: [0, "=h"], top: [0.95, 0.5], round: 0.04}}

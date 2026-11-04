@@ -1,0 +1,49 @@
+# An Imperial forest outpost on Endor (Return of the Jedi): a prefab block with chamfered roof edges
+# like the bunker's, a slab door, a dark band of slit windows, and on the roof a dish, an antenna or
+# vent boxes. A drum module or a tank beside some. The route 119 house and the scout posts.
+name: imperial-post
+style: endor
+about: Prefab block with a chamfered roof, slab door, slit windows; dish, antenna or vents; drum module or tank.
+width: [3, 4, 5]
+choose:
+  lim: "=(H if H else 4) - 0.3"
+  w: ["=w_max * 0.62", "=w_max * 0.85"]
+  d: [1.1, 1.6]
+  h: [0.95, 1.25]
+  cham: [0.18, 0.32]
+  side: "=1 if (seed % 2) else -1"
+  bx0: "=side * (w_max - w) / 2"
+  dx: "=door_x if door_x is not None else bx0 - side * (w / 2 - 0.6)"
+  bx: "=max(dx - w / 2 + 0.55, min(dx + w / 2 - 0.55, bx0))"
+  wins: {pick: [slots, band, none], weights: [3, 2, 1]}
+  top: {pick: [dish, antenna, vents, none], weights: [3, 2, 2, 1]}
+  annex: {pick: [none, drum, tank, crates], weights: [2, 2, 1, 2]}
+  ax: "=bx + (side if bx <= 0 else -side) * 0 + (1 if bx < 0 else -1) * (w / 2 + 0.38)"
+parts:
+  - {use: imp-shed, name: body, at: ["=bx", 0, 0], with: {w: "=w", d: "=d", h: "=h", cham: "=cham"}}
+  - {use: door-slab, name: door, at: ["=dx", 0, 0], with: {w: 0.85, h: "=min(0.9, h * 0.78)", door: metal, trim: steel}}
+  - when: "=wins == 'slots'"
+    parts:
+      - {use: window-slot, name: win, at: ["=dx + (0.95 if dx < bx else -0.95)", 0, "=h * 0.62"], with: {w: 0.55, h: 0.2, trim: steel}}
+  - when: "=wins == 'band'"
+    parts:
+      - {name: band, mat: dark, box: {c: ["=bx", -0.03, "=h * 0.86"], half: ["=w / 2 - 0.06", 0.04, 0.09]}}
+  - when: "=top == 'dish'"
+    parts:
+      - {use: dish, name: dish, at: ["=bx - side * w * 0.22", "=d * 0.55", "=h + cham"], with: {r: "=min(0.5, max(0.35, (lim - d * 0.55 - h - cham - 0.35) * 0.6))", mast: 0.2, tip: 45}}
+  - when: "=top == 'antenna'"
+    parts:
+      - {use: antenna, name: ant, at: ["=bx + side * w * 0.25", "=d * 0.6", "=h + cham"], with: {h: "=min(0.9, lim - d * 0.6 - h - cham - 0.1)"}}
+  - when: "=top == 'vents'"
+    parts:
+      - {use: vent-box, name: vent, at: ["=bx - side * w * 0.15", "=d * 0.35", "=h + cham - 0.05"], with: {w: 0.55, h: 0.3}}
+  - when: "=annex == 'drum' and abs(ax) < w_max / 2 - 0.3"
+    parts:
+      - {name: drum, mat: steel, cylinder: {a: ["=ax", "=d * 0.5", 0], b: ["=ax", "=d * 0.5", "=h * 0.75"], r1: 0.36}}
+      - {name: drum-cap, mat: metal, cylinder: {a: ["=ax", "=d * 0.5", "=h * 0.75"], b: ["=ax", "=d * 0.5", "=h * 0.75 + 0.14"], r1: 0.38, r2: 0.22}}
+  - when: "=annex == 'tank' and abs(ax) < w_max / 2 - 0.3"
+    parts:
+      - {use: tank, name: tank, at: ["=ax", 0.4, 0], turn: 90, with: {l: 0.8, r: 0.24}}
+  - when: "=annex == 'crates' and abs(ax) < w_max / 2 - 0.25"
+    parts:
+      - {use: crate, name: crate, at: ["=ax", 0.05, 0], with: {s: 0.42, mat: steel}}

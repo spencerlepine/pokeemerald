@@ -1,7 +1,0 @@
-name: part-door-arch
-parts:
-- name: door-arch
-  use: door-arch
-style: tatooine
-width:
-- 4

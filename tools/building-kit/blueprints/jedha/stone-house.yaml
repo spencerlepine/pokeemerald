@@ -1,0 +1,76 @@
+# A NiJedha house (Rogue One): square-cut sandstone blocks stacked and offset, a heavy cornice, then a
+# roof: flat, a low dome on a drum, a cloth shade on poles, or a narrow tower block at one end; some
+# stand behind a colonnade porch. A tall recessed portal or an arch, deep square windows, a cloth
+# awning, a banner, water jars.
+name: stone-house
+style: jedha
+about: Stacked sandstone blocks with a cornice; flat, dome, roof shade or tower; porch, portal, awning, banner.
+width: [4, 5, 6]
+choose:
+  w: ["=w_max * 0.8", "=w_max"]
+  mass: {pick: [block, stack, tower, porch], weights: [2, 3, 2, 2]}
+  y0: "=0.42 if mass == 'porch' else 0"
+  d: ["=max(1.3, (H or 4) * 0.42 - y0 * 0.5)", "=max(1.5, (H or 4) * 0.55 - y0)"]
+  h: [1.05, 1.35]
+  roof: {pick: [flat, dome, shade], weights: [2, 3, 2]}
+  side: {pick: [-1, 1]}
+  doorx0: ["=-(w / 2 - 0.8)", "=(w / 2 - 0.8)"]
+  dx: "=door_x if door_x is not None else doorx0"
+  door: {pick: [portal, arch], weights: [3, 2]}
+  wx: "=dx + (1.2 if dx < 0 else -1.2)"
+  ncol: "=round(w / 1.1) + 1"
+parts:
+  - {use: stone-block, name: block, at: [0, "=y0", 0], with: {w: "=w", d: "=d", h: "=h"}}
+  - {use: cornice, name: cornice, at: [0, "=y0", 0], with: {w: "=w", d: "=d", h: "=h"}}
+  # massing
+  - when: "=mass == 'stack'"
+    parts:
+      - {use: stone-block, name: upper, at: ["=side * w * 0.2", "=d * 0.3", "=h"], with: {w: "=w * 0.55", d: "=d * 0.6", h: 0.7}}
+      - {use: cornice, name: upper-c, at: ["=side * w * 0.2", "=d * 0.3", "=h"], with: {w: "=w * 0.55", d: "=d * 0.6", h: 0.7, t: 0.14, b: 0.16}}
+      - {use: win-deep, name: upper-win, at: ["=side * w * 0.2", "=d * 0.3", "=h + 0.38"], with: {w: 0.45, h: 0.3}}
+  - when: "=mass == 'tower'"
+    parts:
+      - {use: stone-block, name: tower, at: ["=side * (w / 2 - 0.55)", "=d * 0.35", 0], with: {w: 1.1, d: "=d * 0.6", h: "=h + 0.95"}}
+      - {use: cornice, name: tower-c, at: ["=side * (w / 2 - 0.55)", "=d * 0.35", 0], with: {w: 1.1, d: "=d * 0.6", h: "=h + 0.95", t: 0.14, b: 0.16}}
+      - {use: win-deep, name: tower-win, at: ["=side * (w / 2 - 0.55)", "=d * 0.35", "=h + 0.5"], with: {w: 0.45, h: 0.4}}
+  - when: "=mass == 'porch'"
+    parts:
+      - {name: porch-roof, mat: trim, box: {c: [0, "=y0 / 2 - 0.02", "=h - 0.1"], half: ["=w / 2 + 0.05", "=y0 / 2 + 0.06", 0.08], radius: 0.02}}
+      - repeat: "=ncol"
+        parts:
+          - when: "=abs((-w / 2 + 0.2 + i * (w - 0.4) / (n - 1)) - dx) > 0.55"
+            parts:
+              - {use: column, name: "col", at: ["=-w / 2 + 0.2 + i * (w - 0.4) / (n - 1)", 0.08, 0], with: {r: 0.13, h: "=h - 0.18"}}
+  # roof
+  - when: "=roof == 'dome' and mass != 'tower'"
+    parts:
+      - {use: drum-dome, name: dome, at: ["=-side * w * 0.2 if mass == 'stack' else 0", "=y0 + d * 0.55", "=h"], with: {r: "=min(0.72, w * 0.2, d * 0.36)", dh: 0.22, hk: 0.6}}
+  - when: "=roof == 'dome' and mass == 'tower'"
+    parts:
+      - {use: drum-dome, name: dome, at: ["=side * (w / 2 - 0.55)", "=d * 0.65", "=h + 0.95"], with: {r: 0.42, dh: 0.1, hk: 0.6}}
+  - when: "=roof == 'shade'"
+    parts:
+      - {use: canopy, name: shade, at: ["=-side * w * 0.18", "=y0 + d * 0.25", "=h + 0.02"], with: {w: "=w * 0.45", d: "=d * 0.55", z: 0.5, sag: 0.1}}
+  # door
+  - when: "=door == 'portal'"
+    parts:
+      - {use: portal, name: door, at: ["=dx", "=y0", 0], with: {w: 0.8, h: "=min(0.72, h - 0.6)"}}
+    else:
+      - {use: door-arch, name: door, at: ["=dx", "=y0", 0], with: {w: 0.85, h: "=min(0.8, h - 0.4)"}}
+  - when: "=abs(wx) < w / 2 - 0.35"
+    parts:
+      - {use: win-deep, name: win, at: ["=wx", "=y0", "=h * 0.58"], with: {w: 0.5, h: 0.45}}
+  - when: "=mass != 'porch'"
+    parts:
+      - pick:
+          - weight: 2
+            parts: []
+          - weight: 2
+            parts:
+              - {use: awning, name: awning, at: ["=dx", 0, 0], with: {w: 1.35, out: 0.38, hi: "=h - 0.12", lo: "=h - 0.32"}}
+          - weight: 1
+            parts:
+              - {use: banner, name: banner, at: ["=wx if abs(wx) < w / 2 - 0.3 else -dx * 0.5", -0.02, "=h - 0.2"], with: {w: 0.38, h: "=h * 0.55"}}
+  - chance: 0.45
+    parts:
+      - {use: jar, name: jar, at: ["=-side * (w / 2 - 0.3)", -0.05, 0], with: {r: 0.26}}

@@ -1,0 +1,87 @@
+# A wide Cloud City building (The Empire Strikes Back): the long white halls on the city's plazas, the
+# Galleria, Bacta Centers and depots. A long oval block ringed with window bands, under a lid, a flared
+# saucer edge or a roof terrace, with a feature rising from it: a round atrium with a glass dome, a
+# glazed curtain-wall front, twin end drums under saucers, or nothing. A canopy or porch at the door.
+name: cc-hall
+style: bespin
+about: Long white oval hall, window bands; lid, saucer or terrace roof; atrium dome, glass front, end drums or plain.
+width: [4, 5, 6, 8]
+choose:
+  Hc: "=H if H else 5"
+  w: ["=w_max * 0.9", "=w_max"]
+  d: ["=min(2.6, Hc * 0.36)", "=min(2.9, Hc * 0.44)"]
+  feat: {pick: [atrium, glass, ends, none], weights: [3, 2, 2, 1]}
+  roof: {pick: [lid, saucer, terrace], weights: [2, 3, 2]}
+  fx0: "=door_x if door_x is not None else 0"
+  wa: "=min(w * 0.42, 3.0) if feat == 'atrium' else (min(w * 0.36, 2.4) if feat == 'glass' else 1.25)"
+  fx: "=max(-w / 2 + wa / 2 + 0.2, min(w / 2 - wa / 2 - 0.2, fx0))"
+  da: "=d * 0.86"
+  ry: "=da * 0.42"
+  hf: "=Hc - 0.35 - (da / 2 - 0.25) - (sqrt(ry ** 2 + 0.25) if feat == 'atrium' else (0.3 if feat == 'glass' else da * 0.15 + 0.6))"
+  rt: "=0.25 if roof == 'lid' else (0.55 if roof == 'saucer' else 0.95)"
+  hb0: "=Hc - 0.35 - d - rt - (0.12 * d if roof == 'saucer' else 0)"
+  hb: "=hb0 if feat == 'none' else min(hb0, hf - 0.5) * 1.0"
+  nb: "=1 if hb < 2.2 else 2"
+  bh: [0.3, 0.4]
+  door: {pick: [canopy, porch, plain], weights: [3, 2, 1]}
+parts:
+  - {use: oval, name: body, with: {w: "=w", d: "=d", z0: 0, z1: "=hb"}}
+  - repeat: "=nb"
+    parts:
+      - pick:
+          - set: {bz: "=1.35 + (hb - 0.3 - bh - 1.35) * ((i + 0.5) / n if n > 1 else 0.5) if hb > 1.9 else max(1.15, hb - 0.3 - bh)"}
+            parts:
+              - {use: window-band, name: "=f'band{i}'", with: {w: "=w", d: "=d", z0: "=bz", z1: "=bz + bh"}}
+              - repeat: "=max(3, round(w / 0.75 - 0.5))"
+                parts:
+                  - {use: oval-pier, name: "=f'pier{bz:.2f}-{i}'", with: {x: "=(i - (n - 1) / 2) * (w * 0.86 / n)", wk: "=w", dk: "=d", z0: "=bz - 0.03", z1: "=bz + bh + 0.03"}}
+  # the roof
+  - when: "=roof == 'lid'"
+    parts:
+      - {use: oval, name: lid, at: [0, -0.07, 0], with: {w: "=w + 0.14", d: "=d + 0.14", z0: "=hb - 0.04", z1: "=hb + 0.25", mat: cc-trim, top: 0.97}}
+  - when: "=roof == 'saucer'"
+    parts:
+      - {use: saucer, name: roof, with: {w: "=w", d: "=d", wc: "=min(w_max - 0.05, w + 0.4)", dc: "=d * 1.12", z: "=hb", t0: 0.3, t1: 0.22}}
+  - when: "=roof == 'terrace'"
+    parts:
+      - {use: oval, name: lid, at: [0, -0.07, 0], with: {w: "=w + 0.14", d: "=d + 0.14", z0: "=hb - 0.04", z1: "=hb + 0.22", mat: cc-trim, top: 0.97}}
+      - {use: oval, name: upper, at: ["=-fx * 0.3", "=d * 0.2", 0], with: {w: "=w * 0.55", d: "=d * 0.6", z0: "=hb + 0.2", z1: "=hb + 0.85", mat: cc-wall}}
+      - {use: window-band, name: uband, at: ["=-fx * 0.3", "=d * 0.2", 0], with: {w: "=w * 0.55", d: "=d * 0.6", z0: "=hb + 0.35", z1: "=hb + 0.68"}}
+  # the feature
+  - when: "=feat == 'atrium'"
+    parts:
+      - {use: oval, name: atrium, at: ["=fx", -0.25, 0], with: {w: "=wa", d: "=da", z0: 0, z1: "=hf"}}
+      - {use: window-band, name: aband, at: ["=fx", -0.25, 0], with: {w: "=wa", d: "=da", z0: "=hf - 0.65", z1: "=hf - 0.3"}}
+      - repeat: 4
+        parts:
+          - {use: oval-pier, name: "=f'apier{i}'", at: ["=fx", -0.25, 0], with: {x: "=(i - 1.5) * wa * 0.21", wk: "=wa", dk: "=da", z0: "=hf - 0.68", z1: "=hf - 0.27"}}
+      - {use: oval, name: arim, at: ["=fx", -0.31, 0], with: {w: "=wa + 0.12", d: "=da + 0.12", z0: "=hf - 0.05", z1: "=hf + 0.15", mat: cc-trim}}
+      - {use: cupola, name: dome, at: ["=fx", "=da / 2 - 0.25", "=hf + 0.12"], with: {rx: "=wa * 0.42", ry: "=ry", rz: 0.5}}
+  - when: "=feat == 'glass'"
+    parts:
+      - {use: oval, name: front, at: ["=fx", -0.3, 0], with: {w: "=wa", d: "=da", z0: 0, z1: "=hf", mat: cc-glass}}
+      - repeat: "=max(3, round(wa / 0.55))"
+        parts:
+          - {use: oval-pier, name: "=f'gpier{i}'", at: ["=fx", -0.3, 0], with: {x: "=(i - (n - 1) / 2) * (wa * 0.9 / n)", wk: "=wa", dk: "=da", z0: 1.2, z1: "=hf", pw: 0.26}}
+      - {use: oval, name: glid, at: ["=fx", -0.37, 0], with: {w: "=wa + 0.14", d: "=da + 0.14", z0: "=hf - 0.04", z1: "=hf + 0.24", mat: cc-trim, top: 0.95}}
+  - when: "=feat == 'ends'"
+    parts:
+      - repeat: 2
+        parts:
+          - {use: oval, name: "=f'end{i}'", at: ["=(w / 2 - wa / 2 - 0.05) * (2 * i - 1)", -0.15, 0], with: {w: "=wa", d: "=da", z0: 0, z1: "=hf"}}
+          - {use: saucer, name: "=f'endcap{i}'", at: ["=(w / 2 - wa / 2 - 0.05) * (2 * i - 1)", -0.15, 0], with: {w: "=wa", d: "=da", wc: "=wa + 0.18", dc: "=da * 1.15", z: "=hf", t0: 0.22, t1: 0.18}}
+          - {use: window-band, name: "=f'endband{i}'", at: ["=(w / 2 - wa / 2 - 0.05) * (2 * i - 1)", -0.15, 0], with: {w: "=wa", d: "=da", z0: "=hf - 0.6", z1: "=hf - 0.28"}}
+  # the door
+  - pick:
+      - set: {dy: "=-0.25 if (feat == 'atrium' and abs((door_x or 0) - fx) < wa / 2 - 0.3) else (-0.3 if (feat == 'glass' and abs((door_x or 0) - fx) < wa / 2 - 0.3) else 0)"}
+        parts:
+          - when: "=door == 'porch'"
+            parts:
+              - {use: oval, name: porch, at: ["=door_x or 0", "=dy - 0.4", 0], with: {w: 1.5, d: 0.9, z0: 0, z1: 1.25}}
+              - {use: oval, name: porch-lid, at: ["=door_x or 0", "=dy - 0.46", 0], with: {w: 1.64, d: 1.02, z0: 1.25, z1: 1.42, mat: cc-trim}}
+              - {use: door-cc, name: door, at: ["=door_x or 0", "=dy - 0.4", 0], with: {w: 0.85, h: 0.95}}
+            else:
+              - {use: door-cc, name: door, at: ["=door_x or 0", "=dy", 0], with: {w: 0.9, h: 1.0}}
+              - when: "=door == 'canopy'"
+                parts:
+                  - {use: canopy, name: canopy, at: ["=door_x or 0", "=dy", 0], with: {w: 1.7, d: 0.45, z: 1.18}}

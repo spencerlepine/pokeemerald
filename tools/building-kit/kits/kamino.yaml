@@ -1,0 +1,92 @@
+# Kamino kit: Tipoca City (Attack of the Clones). White saucer buildings on thick stilts over the storm
+# sea: a sloped skirt narrowing to the stilts, a short wall with a dark window band, a wide eave and a low
+# dome; round decks, capsule-shaped long halls, rounded pod doors, landing discs.
+# What makes them Kamino and not Earth: everything round or rounded, no roof pitch, no corners, white
+# over dark glass, the whole town lifted off the water on columns.
+materials:
+  shell: {ramp: light, bands: [0.18, 0.5, 0.82]}     # the white hull
+  dome:  {ramp: light, bands: [0.12, 0.42, 0.74]}    # domes and roofs: flat tops in the lightest tone
+  glass: {ramp: dark,  bands: [0.25, 0.55, 0.9]}     # window bands, door slabs
+  pylon: {ramp: mid,   bands: [0.25, 0.55, 0.85]}    # stilts, masts, under-decks
+templates:
+  # A Tipoca saucer: sloped skirt, wall with a window band, eave ring, low dome. Plan radius R east-west,
+  # R * ry north-south, centred on the origin; the skirt starts at z0 - skirt, the wall at z0.
+  saucer:
+    params: {R: 1.8, ry: 0.62, z0: 0.5, skirt: 0.25, wall: 0.6, hk: 0.32, wallmat: shell, roofmat: dome}
+    preview: {at: [0, 1.2, 0]}
+    parts:
+      - {name: skirt, mat: "=wallmat", cylinder: {a: [0, 0, "=z0 - skirt"], b: [0, 0, "=z0 + 0.01"], r1: "=R * 0.7", r2: "=R"},
+         squash: {scale: [1, "=ry", 1], center: [0, 0, 0]}}
+      - {name: wall, mat: "=wallmat", cylinder: {a: [0, 0, "=z0"], b: [0, 0, "=z0 + wall"], r1: "=R"},
+         squash: {scale: [1, "=ry", 1], center: [0, 0, 0]}}
+      - {name: eave, mat: "=roofmat", cylinder: {a: [0, 0, "=z0 + wall - 0.02"], b: [0, 0, "=z0 + wall + 0.1"], r1: "=R + 0.08"},
+         squash: {scale: [1, "=ry", 1], center: [0, 0, 0]}}
+      - {name: dome, mat: "=roofmat", ellipsoid: {c: [0, 0, "=z0 + wall + 0.08"], r: ["=R * 0.96", "=R * 0.96 * ry", "=R * hk"]}}
+  # The dark window band round a saucer's wall (a separate piece so it can be left off).
+  saucer-band:
+    params: {R: 1.8, ry: 0.62, z0: 0.5, wall: 0.6, lo: 0.42, hi: 0.78, mat: glass}
+    parts:
+      - {name: band, mat: "=mat", cylinder: {a: [0, 0, "=z0 + wall * lo"], b: [0, 0, "=z0 + wall * hi"], r1: "=R + 0.03"},
+         squash: {scale: [1, "=ry", 1], center: [0, 0, 0]}}
+  # A thick round column with a flared foot (the stilts Tipoca stands on).
+  pylon:
+    params: {h: 0.5, r: 0.16, mat: pylon}
+    preview: {}
+    parts:
+      - {name: shaft, mat: "=mat", cylinder: {a: [0, 0, 0], b: [0, 0, "=h"], r1: "=r"}}
+      - {name: foot, mat: "=mat", cylinder: {a: [0, 0, 0], b: [0, 0, 0.12], r1: "=r + 0.08", r2: "=r"}}
+  # A round deck (a walkway hub or a landing disc), plan radius R by R * ry, top at z, centred on the origin.
+  disc:
+    params: {R: 1.6, ry: 0.6, z: 0.4, t: 0.14, mat: shell, under: pylon}
+    preview: {at: [0, 1.1, 0]}
+    parts:
+      - {name: top, mat: "=mat", cylinder: {a: [0, 0, "=z - t"], b: [0, 0, "=z"], r1: "=R"},
+         squash: {scale: [1, "=ry", 1], center: [0, 0, 0]}}
+      - {name: under, mat: "=under", cylinder: {a: [0, 0, "=z - t - 0.12"], b: [0, 0, "=z - t + 0.01"], r1: "=R * 0.8", r2: "=R * 0.97"},
+         squash: {scale: [1, "=ry", 1], center: [0, 0, 0]}}
+  # A rounded pod door (Kaminoan doors are tall rounded slabs in a thick white frame).
+  door-pod:
+    params: {w: 0.8, h: 0.9, frame: 0.1, door: glass, trim: shell}
+    preview: {}
+    parts:
+      - {name: frame, mat: "=trim", box: {c: [0, -0.02, "=h / 2 + 0.02"], half: ["=w / 2 + frame", 0.07, "=h / 2 + 0.04"], radius: 0.1}}
+      - {name: slab, mat: "=door", box: {c: [0, -0.07, "=h / 2"], half: ["=w / 2", 0.05, "=h / 2 - 0.02"], radius: 0.09}}
+  # A long hall with rounded ends in plan and a low vaulted roof, its front at y = 0 (the cloning halls,
+  # barracks). `band` is the dark window band's height (0: none).
+  capsule-hall:
+    params: {w: 4.0, d: 1.6, h: 0.9, k: 0.45, band: 0.3, bz: 0.6, wallmat: shell, roofmat: dome, bandmat: glass}
+    preview: {}
+    parts:
+      - {name: body, mat: "=wallmat", box: {c: [0, "=d / 2", "=h / 2"], half: ["=max(0.01, w / 2 - d / 2)", "=d / 2", "=h / 2"]}}
+      - {name: end-w, mat: "=wallmat", cylinder: {a: ["=-(w / 2 - d / 2)", "=d / 2", 0], b: ["=-(w / 2 - d / 2)", "=d / 2", "=h"], r1: "=d / 2"}}
+      - {name: end-e, mat: "=wallmat", cylinder: {a: ["=w / 2 - d / 2", "=d / 2", 0], b: ["=w / 2 - d / 2", "=d / 2", "=h"], r1: "=d / 2"}}
+      - {name: eave, mat: "=roofmat", box: {c: [0, "=d / 2", "=h"], half: ["=max(0.01, w / 2 - d / 2)", "=d / 2 + 0.06", 0.05]}}
+      - {name: eave-w, mat: "=roofmat", cylinder: {a: ["=-(w / 2 - d / 2)", "=d / 2", "=h - 0.05"], b: ["=-(w / 2 - d / 2)", "=d / 2", "=h + 0.05"], r1: "=d / 2 + 0.06"}}
+      - {name: eave-e, mat: "=roofmat", cylinder: {a: ["=w / 2 - d / 2", "=d / 2", "=h - 0.05"], b: ["=w / 2 - d / 2", "=d / 2", "=h + 0.05"], r1: "=d / 2 + 0.06"}}
+      - {name: vault, mat: "=roofmat", cylinder: {a: ["=-(w / 2 - d / 2)", "=d / 2", "=h"], b: ["=w / 2 - d / 2", "=d / 2", "=h"], r1: "=d / 2"},
+         squash: {scale: [1, 1, "=k"], center: [0, "=d / 2", "=h"]}}
+      - {name: cap-w, mat: "=roofmat", ellipsoid: {c: ["=-(w / 2 - d / 2)", "=d / 2", "=h"], r: ["=d / 2", "=d / 2", "=d / 2 * k"]}}
+      - {name: cap-e, mat: "=roofmat", ellipsoid: {c: ["=w / 2 - d / 2", "=d / 2", "=h"], r: ["=d / 2", "=d / 2", "=d / 2 * k"]}}
+  # The window band round a capsule hall, `bz` of the way up its wall.
+  capsule-band:
+    params: {w: 4.0, d: 1.6, h: 0.9, band: 0.26, bz: 0.6, mat: glass}
+    parts:
+      - {name: band, mat: "=mat", box: {c: [0, "=d / 2", "=h * bz"], half: ["=max(0.01, w / 2 - d / 2)", "=d / 2 + 0.03", "=band / 2"]}}
+      - {name: band-w, mat: "=mat", cylinder: {a: ["=-(w / 2 - d / 2)", "=d / 2", "=h * bz - band / 2"], b: ["=-(w / 2 - d / 2)", "=d / 2", "=h * bz + band / 2"], r1: "=d / 2 + 0.03"}}
+      - {name: band-e, mat: "=mat", cylinder: {a: ["=w / 2 - d / 2", "=d / 2", "=h * bz - band / 2"], b: ["=w / 2 - d / 2", "=d / 2", "=h * bz + band / 2"], r1: "=d / 2 + 0.03"}}
+  # A storm mast: a thin tapering pylon with a small saucer-shaped sensor head and a beacon.
+  mast:
+    params: {h: 2.0, r: 0.1, head: 0.32, mat: pylon, headmat: shell}
+    preview: {}
+    parts:
+      - {name: shaft, mat: "=mat", cylinder: {a: [0, 0, 0], b: [0, 0, "=h"], r1: "=r * 1.4", r2: "=r"}}
+      - {name: head, mat: "=headmat", ellipsoid: {c: [0, 0, "=h"], r: ["=head", "=head * 0.7", "=head * 0.4"]}}
+      - {name: tip, mat: "=mat", cylinder: {a: [0, 0, "=h"], b: [0, 0, "=h + head * 0.7"], r1: 0.05}}
+  # A walkway rail post pair with a low rail between (the deck edge), front at y = 0, `w` long.
+  rail:
+    params: {w: 2.0, h: 0.35, mat: shell}
+    preview: {}
+    parts:
+      - {name: rail, mat: "=mat", box: {c: [0, 0, "=h"], half: ["=w / 2", 0.05, 0.05], radius: 0.03}}
+      - {name: post-w, mat: "=mat", box: {c: ["=-w / 2 + 0.06", 0, "=h / 2"], half: [0.06, 0.06, "=h / 2"]}}
+      - {name: post-e, mat: "=mat", box: {c: ["=w / 2 - 0.06", 0, "=h / 2"], half: [0.06, 0.06, "=h / 2"]}}

@@ -1,0 +1,39 @@
+# A ruined homestead (the burned Lars farm, the Tusken-raided farms of the Jundland Wastes): a dome with
+# its roof fallen in, broken wall stubs, a dark doorway still standing, sand-buried rubble and a dead
+# vaporator leaning over.
+name: ruin
+style: tatooine
+about: Homestead dome with its roof caved in, broken wall stubs, a dark doorway, rubble, a dead vaporator.
+width: [4, 5]
+choose:
+  R: ["=w_max * 0.33", "=w_max * 0.4"]
+  ry: [0.65, 0.8]
+  hk: [0.7, 0.85]
+  dx: "=door_x if door_x is not None else 0"
+  cx: ["=-0.4", "=0.4"]                           # where the roof broke
+  cut: [0.85, 1.15]                               # how big the hole is
+  side: {pick: [-1, 1]}
+  stubs: {int: [1, 3]}
+parts:
+  - {name: dome, group: shell, _new_group: true, mat: wall, ellipsoid: {c: ["=dx * 0.3", "=0.5 + R * ry", 0], r: ["=R", "=R * ry", "=R * hk"]}}
+  - {name: hollow, group: shell, _new_group: true, op: subtract, mat: wall,
+     ellipsoid: {c: ["=dx * 0.3", "=0.5 + R * ry", 0], r: ["=R - 0.2", "=R * ry - 0.2", "=R * hk - 0.2"]}}
+  - {name: cave, group: shell, _new_group: true, op: subtract, mat: wall,
+     ellipsoid: {c: ["=dx * 0.3 + cx", "=0.5 + R * ry + 0.1", "=R * hk * 0.95"], r: ["=R * 0.7 * cut", "=R * ry * 0.8", "=R * hk * 0.6"]}}
+  - {name: inside, mat: dark, cylinder: {a: ["=dx * 0.3", "=0.5 + R * ry", 0], b: ["=dx * 0.3", "=0.5 + R * ry", 0.04], r1: "=R * 0.8"}}
+  - {name: heap, mat: mid, hull: {points: [["=dx * 0.3 + cx - 0.4", "=0.5 + R * ry - 0.1", 0], ["=dx * 0.3 + cx + 0.45", "=0.5 + R * ry", 0],
+                                          ["=dx * 0.3 + cx", "=0.5 + R * ry + 0.4", 0], ["=dx * 0.3 + cx + 0.05", "=0.5 + R * ry + 0.05", 0.35]], round: 0.04}}
+  - {use: entry-vault, name: entry, at: ["=dx", 0, 0], with: {w: 1.15, d: 0.55, h: 0.55}}
+  - {use: door-arch, name: door, at: ["=dx", 0, 0], with: {w: 0.7, h: 0.46, trim: wall}}
+  - repeat: "=stubs"                             # broken wall stubs
+    parts:
+      - name: "=f'stub-{i}'"
+        mat: wall
+        prism: {poly: [["=side * (w_max / 2 - 0.25 - i * 0.55) - 0.22", "=0.15 + i * 0.35"], ["=side * (w_max / 2 - 0.25 - i * 0.55) + 0.22", "=0.15 + i * 0.35"],
+                       ["=side * (w_max / 2 - 0.25 - i * 0.55) + 0.22", "=0.45 + i * 0.35"], ["=side * (w_max / 2 - 0.25 - i * 0.55) - 0.22", "=0.45 + i * 0.35"]],
+                z: [0, "=0.55 - i * 0.12"], top: [0.7, 0.8], lean: [0.05, 0], round: 0.04}
+  - name: rubble-1
+    mat: mid
+    hull: {points: [["=-side * (w_max / 2 - 0.5)", 0.1, 0], ["=-side * (w_max / 2 - 0.05)", 0.2, 0], ["=-side * (w_max / 2 - 0.3)", 0.55, 0],
+                    ["=-side * (w_max / 2 - 0.3)", 0.3, 0.3]], round: 0.03}
+  - {use: vaporator, name: vap, at: ["=-side * (w_max / 2 - 0.35)", 1.1, 0], turn: "=side * 20", with: {h: 1.2}}

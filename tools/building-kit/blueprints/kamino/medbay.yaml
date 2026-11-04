@@ -1,0 +1,56 @@
+# A Kaminoan medical station (Attack of the Clones: the Tipoca medical bays and the bacta tanks of the
+# cloning floors): a white saucer raised on a dark glass drum, upright bacta tanks with white caps at its
+# front corners, a curved entry hood with a pod door, on stilts.
+# Varies: the head (saucer, lens or capsule), tank count (0, 1, 2), tank height, a hub on top, the hood.
+name: medbay
+style: kamino
+about: Saucer head on a glass drum, bacta tanks at the corners, an entry hood; on stilts.
+width: [5]
+choose:
+  head: {pick: [saucer, lens, capsule], weights: [3, 2, 2]}
+  tanks: {pick: [0, 1, 2], weights: [1, 2, 3]}
+  tside: {pick: [-1, 1]}
+  st: [0.16, 0.24]
+  R: ["=w_max * 0.36", "=w_max * 0.42"]
+  ry: [0.42, 0.5]
+  cy: "=R * ry + 0.35"
+  drum: [0.35, 0.5]
+  th: [0.9, 1.2]
+  hub: {pick: [true, false]}
+  dx: "=door_x if door_x is not None else 0"
+parts:
+  - repeat: 3
+    parts:
+      - {use: pylon, name: "=f'stilt{i}'", at: ["=-R * 0.55 + i * R * 0.55", "=cy - R * ry * 0.5", 0], with: {h: "=st + 0.05", r: 0.15}}
+  - {name: core, mat: glass, cylinder: {a: [0, "=cy", "=st"], b: [0, "=cy", "=st + drum + 0.2"], r1: "=R * 0.6"},
+     squash: {scale: [1, "=ry", 1], center: [0, "=cy", 0]}}
+  - {name: base, mat: shell, cylinder: {a: [0, "=cy", "=st - 0.05"], b: [0, "=cy", "=st + 0.12"], r1: "=R * 0.72", r2: "=R * 0.66"},
+     squash: {scale: [1, "=ry", 1], center: [0, "=cy", 0]}}
+  - when: "=head == 'saucer'"
+    parts:
+      - {use: saucer, name: head, at: [0, "=cy", 0], with: {R: "=R", ry: "=ry", z0: "=st + drum + 0.2", skirt: 0.25, wall: 0.36, hk: 0.24}}
+      - {use: saucer-band, name: head-band, at: [0, "=cy", 0], with: {R: "=R", ry: "=ry", z0: "=st + drum + 0.2", wall: 0.36, lo: 0.3, hi: 0.75}}
+  - when: "=head == 'lens'"
+    parts:
+      - {name: lens-lo, mat: shell, ellipsoid: {c: [0, "=cy", "=st + drum + 0.3"], r: ["=R", "=R * ry", 0.3]}}
+      - {name: lens-hi, mat: dome, ellipsoid: {c: [0, "=cy", "=st + drum + 0.36"], r: ["=R * 0.92", "=R * ry * 0.92", "=R * 0.32"]}}
+      - {name: lens-band, mat: glass, cylinder: {a: [0, "=cy", "=st + drum + 0.24"], b: [0, "=cy", "=st + drum + 0.38"], r1: "=R * 0.99"},
+         squash: {scale: [1, "=ry", 1], center: [0, "=cy", 0]}}
+  - when: "=head == 'capsule'"
+    parts:
+      - {use: capsule-hall, name: head, at: [0, "=cy - R * ry", "=st + drum"], with: {w: "=R * 2", d: "=R * ry * 2", h: 0.5, k: 0.32}}
+      - {use: capsule-band, name: head-band, at: [0, "=cy - R * ry", "=st + drum"], with: {w: "=R * 2", d: "=R * ry * 2", h: 0.5, band: 0.18, bz: 0.5}}
+  - when: "=hub"
+    parts:
+      - {name: hub, mat: shell, cylinder: {a: [0, "=cy + 0.1", "=st + drum + 0.5"], b: [0, "=cy + 0.1", "=st + drum + 0.5 + R * 0.3"], r1: "=R * 0.28", r2: "=R * 0.22"}}
+      - {name: hub-cap, mat: dome, ellipsoid: {c: [0, "=cy + 0.1", "=st + drum + 0.5 + R * 0.3"], r: ["=R * 0.24", "=R * 0.2", 0.1]}}
+  # bacta tanks: glass cylinders with white caps and bases
+  - repeat: "=tanks"
+    parts:
+      - {name: "=f'tank{i}'", mat: glass, cylinder: {a: ["=(tside if i == 0 else -tside) * (w_max / 2 - 0.36)", 0.42, "=st + 0.1"], b: ["=(tside if i == 0 else -tside) * (w_max / 2 - 0.36)", 0.42, "=st + th"], r1: 0.3}}
+      - {name: "=f'tankbase{i}'", mat: shell, cylinder: {a: ["=(tside if i == 0 else -tside) * (w_max / 2 - 0.36)", 0.42, 0], b: ["=(tside if i == 0 else -tside) * (w_max / 2 - 0.36)", 0.42, "=st + 0.16"], r1: 0.34}}
+      - {name: "=f'tankcap{i}'", mat: dome, ellipsoid: {c: ["=(tside if i == 0 else -tside) * (w_max / 2 - 0.36)", 0.42, "=st + th"], r: [0.34, 0.3, 0.16]}}
+  # the entry hood
+  - {use: capsule-hall, name: hood, at: ["=dx", 0.05, "=st"], with: {w: 1.4, d: "=cy - R * ry * 0.6", h: 0.92, k: 0.35}}
+  - {name: deck, mat: shell, box: {c: ["=dx", 0.05, "=st / 2"], half: [0.6, 0.12, "=st / 2"], radius: 0.03}}
+  - {use: door-pod, name: door, at: ["=dx", 0.07, "=st"], with: {w: 0.72, h: 0.82}}

@@ -1,0 +1,48 @@
+# A route gatehouse on Tatooine (the Mos Espa and Mos Eisley town gates, The Phantom Menace): a long
+# battered block with a big arched passage, drum towers at the ends, sometimes an upper guard room
+# and roof domes. Taller lots get taller towers.
+name: gatehouse
+style: tatooine
+about: Battered gate block with a big arched passage, drum towers at the ends, upper guard room.
+width: [5, 6, 8, 11]
+choose:
+  w: ["=w_max * 0.9", "=w_max"]
+  hh: "=H or 4"
+  d: "=min(1.8, max(1.2, hh * 0.32))"
+  h: "=min(1.6, max(1.0, hh * 0.27))"
+  batter: [0.1, 0.16]
+  dx: "=door_x if door_x is not None else 0"
+  tr: [0.48, 0.6]
+  th: "=h + min(1.0, max(0.35, (hh - 4) * 0.4 + 0.35))"
+  towers: {pick: [round, square, none], weights: [4, 2, 1]}
+  upper: {pick: [room, domes, lip], weights: [2, 2, 2]}
+  side: {pick: [-1, 1]}
+parts:
+  - {use: adobe-block, name: block, with: {w: "=w", d: "=d", h: "=h", batter: "=batter"}}
+  - {use: roof-lip, name: lip, with: {w: "=w", d: "=d", h: "=h", batter: "=batter"}}
+  # the passage: a tall arch with a lintel band over it
+  - {use: door-arch, name: door, at: ["=dx", 0, 0], with: {w: 1.0, h: "=min(0.95, h * 0.62)", frame: 0.16}}
+  - when: "=towers == 'round'"
+    parts:
+      - {use: drum, name: tw-w, at: ["=-w / 2 + tr", "=tr * 0.9", 0], with: {r: "=tr", h: "=th"}}
+      - {use: drum, name: tw-e, at: ["=w / 2 - tr", "=tr * 0.9", 0], with: {r: "=tr", h: "=th"}}
+      - {use: dome, name: tc-w, at: ["=-w / 2 + tr", "=tr * 0.9", "=th"], with: {r: "=tr * 0.88", ry: 1.0, hk: 0.6}}
+      - {use: dome, name: tc-e, at: ["=w / 2 - tr", "=tr * 0.9", "=th"], with: {r: "=tr * 0.88", ry: 1.0, hk: 0.6}}
+  - when: "=towers == 'square'"
+    parts:
+      - {use: adobe-block, name: tw-w, at: ["=-w / 2 + tr", -0.05, 0], with: {w: "=tr * 2", d: "=tr * 1.8", h: "=th", batter: 0.1}}
+      - {use: adobe-block, name: tw-e, at: ["=w / 2 - tr", -0.05, 0], with: {w: "=tr * 2", d: "=tr * 1.8", h: "=th", batter: 0.1}}
+      - {use: roof-lip, name: tl-w, at: ["=-w / 2 + tr", -0.05, 0], with: {w: "=tr * 2", d: "=tr * 1.8", h: "=th", batter: 0.1, t: 0.13}}
+      - {use: roof-lip, name: tl-e, at: ["=w / 2 - tr", -0.05, 0], with: {w: "=tr * 2", d: "=tr * 1.8", h: "=th", batter: 0.1, t: 0.13}}
+  - when: "=upper == 'room'"                     # a guard room over the passage
+    parts:
+      - {use: adobe-block, name: room, at: ["=dx", "=d * 0.3", "=h - 0.04"], with: {w: "=min(2.0, w * 0.4)", d: "=d * 0.55", h: 0.55, batter: 0.08}}
+      - {use: window-slot, name: room-win, at: ["=dx", "=d * 0.3 + 0.05", "=h + 0.3"], with: {w: 0.6, h: 0.18}}
+  - when: "=upper == 'domes'"
+    parts:
+      - {use: dome, name: dome, at: ["=dx + side * min(1.4, w * 0.18)", "=d * 0.55", "=h"], with: {r: "=min(0.85, d * 0.45)", ry: 0.9, hk: 0.65}}
+  - when: "=w > 6"                                 # long fronts get windows and vents
+    parts:
+      - {use: window-round, name: win-w, at: ["=dx - 1.6", 0, "=h * 0.55"], with: {r: 0.2}}
+      - {use: window-round, name: win-e, at: ["=dx + 1.6", 0, "=h * 0.55"], with: {r: 0.2}}
+      - {use: vent, name: vent, at: ["=-side * w * 0.28", "=d * 0.6", "=h"], with: {r: 0.16, h: 0.35}}

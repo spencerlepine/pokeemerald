@@ -1,0 +1,33 @@
+# An Imperial checkpoint in NiJedha (Rogue One: the occupation's barricades): a grey pillbox with a
+# sloped Imperial face and a slot window, a barrier arm or a blast-door gate, stacked crates or a
+# sandbag of durasteel plates, a comms mast or a searchlight on the roof.
+name: checkpoint
+style: jedha
+about: Grey Imperial pillbox with a sloped face and slot window; barrier arm or gate; comms mast or searchlight.
+width: [3, 4, 5]
+choose:
+  w: ["=min(2.4, w_max * 0.6)", "=min(3.0, w_max * 0.7)"]
+  d: [1.1, 1.4]
+  h: [0.95, 1.15]
+  side: {pick: [-1, 1]}
+  bx: "=side * (w_max / 2 - w / 2)"
+  top: {pick: [mast, light], weights: [1, 1]}
+  bar: {pick: [arm, plates], weights: [3, 2]}
+parts:
+  - {use: imp-block, name: box, at: ["=bx", 0, 0], with: {w: "=w", d: "=d", h: "=h", lean: 0.28}}
+  - {name: band, mat: dark, box: {c: ["=bx", 0.24, "=h * 0.75"], half: ["=w * 0.32", 0.05, 0.09]}}
+  - {use: door-slab, name: door, at: ["=bx + (w / 2 - 0.55) * -side", 0, 0], with: {w: 0.65, h: "=h * 0.65", door: dark, trim: metal}}
+  - when: "=top == 'mast'"
+    parts:
+      - {name: mast, mat: metal, box: {c: ["=bx + side * (w / 2 - 0.3)", "=d * 0.6", "=h + 0.45"], half: [0.05, 0.05, 0.45]}}
+      - {name: dish, mat: light, ellipsoid: {c: ["=bx + side * (w / 2 - 0.3)", "=d * 0.6 - 0.08", "=h + 0.75"], r: [0.2, 0.06, 0.2]}}
+    else:
+      - {name: lamp-post, mat: metal, box: {c: ["=bx", "=d * 0.6", "=h + 0.18"], half: [0.08, 0.08, 0.18]}}
+      - {name: lamp, mat: light, box: {c: ["=bx", "=d * 0.55", "=h + 0.42"], half: [0.2, 0.14, 0.12], radius: 0.03}}
+  - when: "=bar == 'arm'"
+    parts:
+      - {name: arm-post, mat: imp, box: {c: ["=bx - side * (w / 2 + 0.2)", 0.3, 0.35], half: [0.14, 0.14, 0.35]}}
+      - {name: arm, mat: light, box: {c: ["=bx - side * (w / 2 + 0.2 + (w_max - w) / 2 * 0.5)", 0.25, 0.6], half: ["=(w_max - w) / 2 * 0.5 + 0.05", 0.05, 0.06]}}
+    else:
+      - {name: plate1, mat: imp, prism: {poly: [["=bx - side * (w / 2 + 0.15)", 0.1], ["=bx - side * (w / 2 + 0.75)", 0.1], ["=bx - side * (w / 2 + 0.75)", 0.45], ["=bx - side * (w / 2 + 0.15)", 0.45]], z: [0, 0.55], top: [1, 0.4], round: 0.02}}
+  - {use: crate, name: crate, at: ["=bx + side * (w / 2 + 0.05) if abs(bx) + w / 2 + 0.6 < w_max / 2 + 0.1 else bx", "=d + 0.1", 0], with: {s: 0.45}}

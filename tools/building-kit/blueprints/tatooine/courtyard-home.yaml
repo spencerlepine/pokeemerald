@@ -1,0 +1,62 @@
+# The sunken courtyard homestead (the Lars moisture farm, A New Hope and Obi-Wan Kenobi): a round pit
+# dug into the flats, its rim a low battered ring, doorways in the pit's inner wall, and a domed entrance
+# block standing out on the sand in front. Only the pit's north inner wall faces the camera, so it reads
+# as a hole. Bestine's flats use the same pit with a block entrance.
+name: courtyard-home
+style: tatooine
+about: Round sunken courtyard with a low rim and inner doorways, a domed or block entrance in front.
+width: [6]
+choose:
+  R: ["=min(w_max * 0.3, (H or 6) * 0.27)", "=min(w_max * 0.36, (H or 6) * 0.3)"]   # pit radius (inner)
+  sq: [0.72, 0.85]                                # the pit's plan squash north-south
+  rim: [0.28, 0.38]                               # rim thickness
+  rh: [0.38, 0.5]                                 # rim height
+  ex: "=door_x if door_x is not None else 0"
+  px: ["=-(w_max / 2 - R - rim) * 0.6", "=(w_max / 2 - R - rim) * 0.6"]
+  ent: {pick: [dome, drum, block], weights: [3, 2, 2]}
+  er: [0.8, 0.98]                                 # entrance dome radius
+  py: "=1.15 + er * 0.55 + (R + rim) * sq"        # the pit's centre, north of the entrance
+  inner: {int: [1, 3]}                            # doorways in the pit's inner wall
+  extra: {pick: [vents, dome, vap, none], weights: [3, 2, 2, 1]}
+  side: {pick: [-1, 1]}
+parts:
+  # --- the pit: a battered ring, a dark floor, doorways in the north inner wall
+  - {name: rim, group: pit, _new_group: true, mat: wall, squash: {scale: [1, "=sq", 1], center: ["=px", "=py", 0]},
+     cylinder: {a: ["=px", "=py", 0], b: ["=px", "=py", "=rh"], r1: "=R + rim", r2: "=R + rim * 0.55"}}
+  - {name: hole, group: pit, _new_group: true, op: subtract, mat: wall, squash: {scale: [1, "=sq", 1], center: ["=px", "=py", 0]},
+     cylinder: {a: ["=px", "=py", -1], b: ["=px", "=py", 2], r1: "=R"}}
+  - {name: floor, mat: mid, squash: {scale: [1, "=sq", 1], center: ["=px", "=py", 0]},
+     cylinder: {a: ["=px", "=py", 0], b: ["=px", "=py", 0.03], r1: "=R + 0.05"}}
+  - repeat: "=inner"
+    parts:
+      - {use: door-arch, name: "=f'inner-{i}'", turn: "=-(i - (n - 1) / 2) * 38",
+         at: ["=px + sin(radians((i - (n - 1) / 2) * 38)) * R * 0.97", "=py + cos(radians((i - (n - 1) / 2) * 38)) * R * sq * 0.97", 0],
+         with: {w: 0.6, h: "=rh * 0.85", frame: 0.08}}
+  # --- the entrance block on the sand in front
+  - when: "=ent == 'dome'"
+    parts:
+      - {use: dome, name: e-dome, at: ["=ex", "=0.5 + er * 0.55", 0], with: {r: "=er", ry: 0.8, hk: 0.72}}
+      - {use: entry-vault, name: e-vault, at: ["=ex", 0, 0], with: {w: 1.15, d: 0.7, h: 0.55}}
+      - {use: door-arch, name: door, at: ["=ex", 0, 0], with: {w: 0.72, h: 0.48}}
+  - when: "=ent == 'drum'"                       # the Lars entrance: a dome on a short drum
+    parts:
+      - {use: drum, name: e-drum, at: ["=ex", "=0.45 + er * 0.55", 0], with: {r: "=er * 0.92", h: 0.42}}
+      - {use: dome, name: e-dome, at: ["=ex", "=0.45 + er * 0.55", 0.42], with: {r: "=er * 0.86", ry: 1.0, hk: 0.62}}
+      - {use: entry-vault, name: e-vault, at: ["=ex", 0, 0], with: {w: 1.1, d: 0.6, h: 0.55}}
+      - {use: door-arch, name: door, at: ["=ex", 0, 0], with: {w: 0.72, h: 0.48}}
+  - when: "=ent == 'block'"
+    parts:
+      - {use: adobe-block, name: e-block, at: ["=ex", 0, 0], with: {w: "=er * 2.1", d: "=er * 1.3", h: 0.85, batter: 0.12}}
+      - {use: roof-lip, name: e-lip, at: ["=ex", 0, 0], with: {w: "=er * 2.1", d: "=er * 1.3", h: 0.85, batter: 0.12, t: 0.13}}
+      - {use: door-arch, name: door, at: ["=ex", 0, 0], with: {w: 0.75, h: 0.6}}
+  # --- on the rim
+  - when: "=extra == 'vents'"
+    parts:
+      - {use: vent, name: vent-w, at: ["=px - (R + rim * 0.5) * 0.8", "=py + (R + rim * 0.5) * sq * 0.6", 0], with: {r: 0.17, h: 0.55}}
+      - {use: vent, name: vent-e, at: ["=px + (R + rim * 0.5) * 0.8", "=py + (R + rim * 0.5) * sq * 0.6", 0], with: {r: 0.17, h: 0.45}}
+  - when: "=extra == 'dome'"                      # a small storeroom dome on the rim
+    parts:
+      - {use: dome, name: store, at: ["=px + side * (R + rim * 0.4)", "=py + 0.2", 0], with: {r: 0.62, ry: 0.85, hk: 0.85}}
+  - when: "=extra == 'vap'"
+    parts:
+      - {use: vaporator, name: vap, at: ["=px + side * (R + rim) * 0.95", "=py - (R + rim) * sq * 0.35", 0], with: {h: 1.4}}

@@ -1,0 +1,52 @@
+# The shield-generator bunker on Endor (Return of the Jedi): a battered concrete portal with a flat
+# overhanging roof slab, dug into a grassy hill, a wide blast door, sloped wing walls running into the
+# slope, and on the hill above a sensor dish, antennas or vent boxes.
+name: shield-bunker
+style: endor
+about: Concrete portal in a hill mound, blast door, wing walls; dish, antennas or vents on the hill.
+width: [4, 5, 6, 7]
+choose:
+  lim: "=(H if H else 5) - 0.3"
+  px0: ["=-0.4", 0.4]
+  px: "=door_x if door_x is not None else px0"
+  pw: ["=min(w_max * 0.45, 2.4)", "=min(w_max * 0.58, 3.2)"]
+  pd: [0.75, 1.05]
+  ph: [1.05, 1.3]
+  lean: [0.25, 0.45]
+  slab: [0.2, 0.3]
+  rz: "=ph + slab + 0.05"
+  yb: "=min(lim - rz + 0.6, 3.6)"
+  ym: "=yb * 0.6"
+  wings: {pick: [true, false], weights: [3, 1]}
+  top: {pick: [dish, antennas, vents, step], weights: [3, 2, 2, 2]}
+  side: "=1 if (seed % 2) else -1"
+  extra: {pick: [none, crates, tank], weights: [2, 2, 1]}
+parts:
+  - {use: berm, name: hill, at: [0, 0, 0], with: {a: "=w_max / 2 - 0.05", yf: 0.25, yb: "=yb", h: "=rz", slope: "=min(0.9, pd * 0.7)"}}
+  - {use: imp-portal, name: portal, at: ["=px", 0, 0], with: {w: "=pw", d: "=pd", h: "=ph", lean: "=lean", slab: "=slab"}}
+  - when: "=wings"
+    parts:
+      - {use: imp-wing, name: wing-w, at: ["=px - pw / 2 + 0.05", 0.05, 0], with: {l: "=min(1.0, (w_max / 2 + px - pw / 2) * 0.8)", h: "=ph * 0.85", t: 0.5, s: -1}}
+      - {use: imp-wing, name: wing-e, at: ["=px + pw / 2 - 0.05", 0.05, 0], with: {l: "=min(1.0, (w_max / 2 - px - pw / 2) * 0.8)", h: "=ph * 0.85", t: 0.5, s: 1}}
+  - {use: imp-door, name: door, at: ["=px", 0, 0], with: {w: "=min(1.25, pw - 2 * lean - 0.35)", h: "=ph * 0.78"}}
+  - when: "=top == 'step'"                         # a second, smaller block on the roof slab
+    parts:
+      - {use: imp-shed, name: upper, at: ["=px", "=pd * 0.35", "=ph + slab"], with: {w: "=pw * 0.55", d: "=pd * 0.55", h: 0.4, cham: 0.15}}
+  - when: "=top == 'dish'"
+    parts:
+      - {use: dish, name: dish, at: ["=side * w_max * 0.24", "=ym", "=rz"], with: {r: "=min(0.65, max(0.42, (lim - ym - rz - 0.4) * 0.6))", mast: 0.3, tip: 48}}
+  - when: "=top == 'antennas'"
+    parts:
+      - {use: antenna, name: ant-1, at: ["=side * w_max * 0.25", "=ym", "=rz"], with: {h: "=min(1.1, lim - ym - rz - 0.1)"}}
+      - {use: antenna, name: ant-2, at: ["=side * w_max * 0.25 - side * 0.7", "=ym + 0.1", "=rz"], with: {h: "=min(0.7, lim - ym - rz - 0.2)"}}
+  - when: "=top == 'vents'"
+    parts:
+      - {use: vent-box, name: vent-1, at: ["=-side * w_max * 0.2", "=ym - 0.1", "=rz"], with: {}}
+      - {use: vent-box, name: vent-2, at: ["=side * w_max * 0.24", "=ym + 0.1", "=rz"], with: {w: 0.5}}
+  - when: "=extra == 'crates'"
+    parts:
+      - {use: crate, name: crate-1, at: ["=px + side * (pw / 2 + 0.5)", -0.05, 0], with: {s: 0.5, mat: steel}}
+      - {use: crate, name: crate-2, at: ["=px + side * (pw / 2 + 0.6)", 0.4, 0.5], with: {s: 0.38, mat: metal}}
+  - when: "=extra == 'tank'"
+    parts:
+      - {use: tank, name: tank, at: ["=max(-w_max / 2 + 0.55, min(w_max / 2 - 0.55, px - side * (pw / 2 + 0.6)))", 0.25, 0], with: {l: 0.8, r: 0.26}}

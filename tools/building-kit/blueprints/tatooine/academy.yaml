@@ -1,0 +1,48 @@
+# A Tatooine school hall: a domed central drum between two low battered wings (the Mos Espa and Mos
+# Eisley domed halls, The Phantom Menace / A New Hope), an arched entry, a holo board on a post out front.
+name: academy
+style: tatooine
+about: Central domed drum between two low wings, arched entry block, a holo board on a post out front.
+width: [5, 6, 7]
+choose:
+  hh: "=H if H else 4"
+  w: ["=w_max * 0.9", "=w_max"]
+  wd: ["=hh * 0.36", "=hh * 0.42"]             # wing depth
+  wh: ["=hh * 0.24", "=hh * 0.28"]
+  R: ["=min(w * 0.2, wd * 0.62)", "=min(w * 0.24, wd * 0.7)"]
+  cx0: [-0.3, 0.3]
+  cx: "=door_x if door_x is not None else cx0"
+  dh: ["=wh + 0.15", "=wh + 0.35"]             # drum height
+  wings: {pick: [vault, lip, step], weights: [2, 2, 1]}
+  board: {pick: [-1, 1]}
+parts:
+  - {use: adobe-block, name: wings, at: [0, 0.25, 0], with: {w: "=w - 0.3", d: "=wd", h: "=wh", batter: 0.14}}
+  - when: "=wings == 'lip'"
+    parts:
+      - {use: roof-lip, name: wings-lip, at: [0, 0.25, 0], with: {w: "=w - 0.3", d: "=wd", h: "=wh", batter: 0.14}}
+  - when: "=wings == 'vault'"                     # each wing gets a low vault, east-west
+    parts:
+      - repeat: 2
+        parts:
+          - name: vault
+            mat: roof
+            extrude: {axis: x, span: ["=-(w - 0.3) / 2 + 0.2 if i == 0 else cx + R * 0.6", "=cx - R * 0.6 if i == 0 else (w - 0.3) / 2 - 0.2"], round: 0.04,
+                      profile: [[0.45, "=wh - 0.02"], ["=0.25 + wd * 0.35", "=wh + 0.32"], ["=0.25 + wd * 0.65", "=wh + 0.32"], ["=0.25 + wd - 0.2", "=wh - 0.02"]]}
+  - when: "=wings == 'step'"
+    parts:
+      - {use: roof-lip, name: wings-lip, at: [0, 0.25, 0], with: {w: "=w - 0.3", d: "=wd", h: "=wh", batter: 0.14}}
+      - repeat: 2
+        parts:
+          - {use: adobe-block, name: upper, at: ["=(i * 2 - 1) * (w * 0.32)", "=0.25 + wd * 0.35", "=wh"], with: {w: "=w * 0.2", d: "=wd * 0.5", h: 0.4, batter: 0.06}}
+  # the domed drum
+  - {use: drum, name: drum, at: ["=cx", "=0.25 + wd * 0.5", 0], with: {r: "=R", h: "=dh"}}
+  - {name: drum-band, mat: trim, cylinder: {a: ["=cx", "=0.25 + wd * 0.5", "=dh - 0.14"], b: ["=cx", "=0.25 + wd * 0.5", "=dh + 0.02"], r1: "=R * 0.93"}}
+  - {use: dome, name: dome, at: ["=cx", "=0.25 + wd * 0.5", "=dh"], with: {r: "=R * 0.88", ry: 1.0, hk: 0.55}}
+  # the entry and the windows
+  - {use: adobe-block, name: entry, at: ["=cx", 0, 0], with: {w: 1.4, d: 0.7, h: "=wh * 0.9", batter: 0.1, rnd: 0.1}}
+  - {use: door-arch, name: door, at: ["=cx", 0, 0], with: {w: 0.85, h: "=wh * 0.6"}}
+  - repeat: 2
+    parts:
+      - {use: window-round, name: win, at: ["=cx + (i * 2 - 1) * (R + 0.55)", 0.3, "=wh * 0.58"], with: {r: 0.2}}
+  # the holo board
+  - {use: sign, name: board, at: ["=board * (w / 2 - 0.55)", -0.1, 0], with: {w: 0.85, h: 0.55, post: 0.35, mat: metal, face: light}}

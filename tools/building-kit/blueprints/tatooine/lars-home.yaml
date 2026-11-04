@@ -1,0 +1,44 @@
+# The Lars homestead above ground (A New Hope, Attack of the Clones): the entrance dome on its short
+# drum with a vaulted door block, beside a wide, low garage vault with a big dark bay where the
+# landspeeder is kept; a vaporator or two on the sand.
+name: lars-home
+style: tatooine
+about: Entrance dome on a drum with a vaulted door, a low garage vault with a wide bay, vaporators.
+width: [6]
+choose:
+  dx: "=door_x if door_x is not None else -0.5"
+  side: "=1 if dx <= 0 else -1"                   # the garage goes on the other side of the door
+  er: [0.95, 1.12]                                # entrance dome radius
+  dh: [0.3, 0.45]                                 # drum height
+  gw: [1.9, 2.3]                                  # garage width
+  gh: [0.85, 1.0]                                 # garage vault rise
+  gx: "=dx + side * (er + gw / 2 + 0.05)"
+  gx2: "=max(-w_max / 2 + gw / 2, min(w_max / 2 - gw / 2, gx))"
+  speeder: {pick: [true, false], weights: [3, 2]}
+  vaps: {pick: [1, 2, 0], weights: [3, 2, 1]}
+  gy: "=0.65 if speeder else 0.1"                # the garage steps back when the speeder is out front
+parts:
+  # the entrance dome on its drum
+  - {use: drum, name: drum, at: ["=dx", "=0.55 + er * 0.6", 0], with: {r: "=er", h: "=dh"}}
+  - {use: dome, name: dome, at: ["=dx", "=0.55 + er * 0.6", "=dh"], with: {r: "=er * 0.96", ry: 0.95, hk: 0.66}}
+  - {use: entry-vault, name: entry, at: ["=dx", 0, 0], with: {w: 1.2, d: 0.8, h: 0.6}}
+  - {use: door-arch, name: door, at: ["=dx", 0, 0], with: {w: 0.78, h: 0.5}}
+  # the garage: a barrel vault lying north-south, its south end open
+  - {name: garage, mat: wall, squash: {scale: [1, 1, "=gh / (gw / 2)"], center: ["=gx2", "=gy", 0]},
+     cylinder: {a: ["=gx2", "=gy + 0.05", 0], b: ["=gx2", "=gy + 1.75", 0], r1: "=gw / 2"}}
+  - {name: g-lip, mat: trim, squash: {scale: [1, 1, "=gh / (gw / 2)"], center: ["=gx2", "=gy", 0]},
+     cylinder: {a: ["=gx2", "=gy - 0.02", 0], b: ["=gx2", "=gy + 0.2", 0], r1: "=gw / 2 + 0.06"}}
+  - {name: bay, mat: dark, squash: {scale: [1, 1, "=gh / (gw / 2)"], center: ["=gx2", "=gy", 0]},
+     cylinder: {a: ["=gx2", "=gy - 0.08", 0], b: ["=gx2", "=gy + 0.02", 0], r1: "=gw / 2 - 0.25"}}
+  - when: "=speeder"                              # Luke's X-34 nosing out of the bay
+    parts:
+      - name: speeder
+        mat: light
+        hull: {points: [["=gx2 - 0.5", 0.05, 0.18], ["=gx2 + 0.5", 0.05, 0.18], ["=gx2 - 0.6", 0.85, 0.18], ["=gx2 + 0.6", 0.85, 0.18],
+                        ["=gx2 - 0.4", 0.12, 0.36], ["=gx2 + 0.4", 0.12, 0.36], ["=gx2 - 0.5", 0.85, 0.46], ["=gx2 + 0.5", 0.85, 0.46]], round: 0.04}
+  - when: "=vaps >= 1"
+    parts:
+      - {use: vaporator, name: vap-1, at: ["=dx - side * (er + 0.35)", 0.9, 0], with: {h: 1.45}}
+  - when: "=vaps == 2"
+    parts:
+      - {use: vaporator, name: vap-2, at: ["=gx2 + side * (gw / 2 - 0.2)", 2.3, 0], with: {h: 1.2}}

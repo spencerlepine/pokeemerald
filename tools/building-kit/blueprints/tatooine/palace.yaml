@@ -1,0 +1,64 @@
+# Jabba's palace (Return of the Jedi): a huge drum tower and a smaller one standing on a long battered
+# wall, a massive round-topped gate in a deep gate block, built against a rock mesa. Also a Hutt
+# townhouse at smaller widths (one drum, a gate, no rock).
+name: palace
+style: tatooine
+about: Big drum tower and a smaller one behind a long battered wall, a tall gatehouse with a massive round-topped door.
+width: [10, 12, 14]
+choose:
+  side: {pick: [-1, 1]}                          # where the big drum stands
+  hh: "=H if H else 9"                           # rows the lot allows
+  wd: ["=hh * 0.22", "=hh * 0.26"]              # main wall depth
+  wh: ["=hh * 0.16", "=hh * 0.19"]              # main wall height
+  R: ["=min(w_max * 0.12, hh * 0.18)", "=min(w_max * 0.14, hh * 0.2)"]   # big drum radius
+  ty: "=0.35 + wd * 0.5 + R * 0.55"             # big drum centre, half behind the wall
+  th0: ["=hh * 0.4", "=hh * 0.48"]
+  th: "=min(th0, hh - 0.75 - ty - R)"            # big drum height, kept inside the lot
+  tx: "=side * (w_max / 2 - R - 0.5)"
+  r2: ["=R * 0.55", "=R * 0.68"]
+  t2h: ["=th * 0.6", "=th * 0.72"]
+  t2x: "=-side * (w_max / 2 - r2 - 0.4)"
+  gx0: ["=-w_max * 0.1", "=w_max * 0.1"]
+  gx: "=door_x if door_x is not None else gx0"
+  gw: [2.8, 3.4]                                # gate block
+  gh: ["=wh + 0.8", "=wh + 1.1"]
+  cap: {pick: [dome, lookout], weights: [3, 2]}
+  third: {pick: [true, false], weights: [2, 3]}
+  buttress: {pick: [true, false]}
+parts:
+  # the long battered wall the towers stand behind
+  - {use: adobe-block, name: wall, at: [0, 0.35, 0], with: {w: "=w_max - 0.2", d: "=wd", h: "=wh", batter: 0.22, rnd: 0.1}}
+  - {use: roof-lip, name: wall-lip, at: [0, 0.35, 0], with: {w: "=w_max - 0.2", d: "=wd", h: "=wh", batter: 0.22, t: 0.18}}
+  # the big drum tower
+  - {use: drum, name: tower, at: ["=tx", "=ty", 0], with: {r: "=R", h: "=th"}}
+  - {name: tower-band, mat: trim, cylinder: {a: ["=tx", "=ty", "=th - 0.25"], b: ["=tx", "=ty", "=th + 0.02"], r1: "=R * 0.93"}}
+  - when: "=cap == 'dome'"
+    parts:
+      - {use: dome, name: tower-cap, at: ["=tx", "=ty", "=th"], with: {r: "=R * 0.8", ry: 1.0, hk: 0.22}}
+    else:
+      - {name: tower-top, mat: wall, cylinder: {a: ["=tx", "=ty + R * 0.25", "=th"], b: ["=tx", "=ty + R * 0.25", "=th + 0.5"], r1: "=R * 0.42"}}
+      - {name: tower-top-cap, mat: trim, cylinder: {a: ["=tx", "=ty + R * 0.25", "=th + 0.5"], b: ["=tx", "=ty + R * 0.25", "=th + 0.62"], r1: "=R * 0.48"}}
+  - {use: window-slot, name: tower-win, at: ["=tx", "=ty - R + 0.1", "=th * 0.72"], with: {w: "=R * 0.8", h: 0.3}}
+  # the smaller drum tower
+  - {use: drum, name: tower2, at: ["=t2x", "=ty + 0.2", 0], with: {r: "=r2", h: "=t2h"}}
+  - {use: dome, name: tower2-cap, at: ["=t2x", "=ty + 0.2", "=t2h"], with: {r: "=r2 * 0.85", ry: 1.0, hk: 0.3}}
+  - {use: window-round, name: tower2-win, at: ["=t2x", "=ty + 0.2 - r2 + 0.08", "=t2h * 0.75"], with: {r: 0.22}}
+  - when: "=third"
+    parts:
+      - {use: drum, name: tower3, at: ["=(tx + gx) / 2", "=0.35 + wd * 0.8", 0], with: {r: "=r2 * 0.7", h: "=wh + 0.9"}}
+      - {name: tower3-cap, mat: trim, cylinder: {a: ["=(tx + gx) / 2", "=0.35 + wd * 0.8", "=wh + 0.9"], b: ["=(tx + gx) / 2", "=0.35 + wd * 0.8", "=wh + 1.02"], r1: "=r2 * 0.75"}}
+  # the gatehouse and its massive round-topped door
+  - {use: adobe-block, name: gate, at: ["=gx", 0, 0], with: {w: "=gw", d: "=wd * 0.75", h: "=gh", batter: 0.24, rnd: 0.1}}
+  - {use: roof-lip, name: gate-lip, at: ["=gx", 0, 0], with: {w: "=gw", d: "=wd * 0.75", h: "=gh", batter: 0.24, t: 0.2}}
+  - {use: door-arch, name: door, at: ["=gx", 0, 0], with: {w: 1.5, h: "=gh * 0.5", frame: 0.28}}
+  - when: "=buttress"
+    parts:
+      - {use: buttress, name: gb-w, at: ["=gx - gw / 2 + 0.2", 0.05, 0], with: {hh: "=gh * 0.7", l: 0.4, t: 0.24}}
+      - {use: buttress, name: gb-e, at: ["=gx + gw / 2 - 0.2", 0.05, 0], with: {hh: "=gh * 0.7", l: 0.4, t: 0.24}}
+  # slot windows along the wall
+  - repeat: 2
+    parts:
+      - {use: window-slot, name: wslot, at: ["=gx + (i * 2 - 1) * (gw / 2 + 1.2)", 0.45, "=wh * 0.62"], with: {w: 0.9, h: 0.3}}
+  - chance: 0.6
+    parts:
+      - {use: vent, name: vent, at: ["=gx - side * (gw / 2 + 0.9)", "=0.35 + wd * 0.6", "=wh"], with: {r: 0.22, h: 0.5}}

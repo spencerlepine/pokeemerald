@@ -1,0 +1,54 @@
+# Dr. Tien's observatory: a Sullustan stargazing dome. A stone drum or a rounded slab carries a
+# glass or stone dome with a telescope tube looking out south and up; a dish or a mast beside it;
+# a lava-tube hatch or a blast door below.
+name: observatory
+style: sullust
+about: Drum or slab base under a glass or stone dome with a telescope; dish or mast; hatch or blast door.
+width: [4, 5]
+choose:
+  Hb: "=H if H else 4"
+  base: {pick: [drum, slab], weights: [3, 2]}
+  R: ["=w_max * 0.26", "=w_max * 0.31"]
+  bh: [0.6, 0.85]
+  cy: "=R * 0.8 + 0.25"
+  dome: {pick: [glass, stone], weights: [3, 2]}
+  ex: "=door_x if door_x is not None else 0"
+  scope: [28, 42]
+  L: "=R * 1.25"
+  extra: {pick: [dish, mast, stack], weights: [3, 2, 1]}
+  side: {pick: [-1, 1]}
+parts:
+  - when: "=base == 'drum'"
+    parts:
+      - {name: drum, mat: stone, cylinder: {a: [0, "=cy", 0], b: [0, "=cy", "=bh"], r1: "=R * 1.08"}, squash: {scale: [1, 0.78, 1], center: [0, "=cy", 0]}}
+    else:
+      - {use: slab, name: base, at: [0, "=cy - R * 0.85", 0], with: {w: "=R * 2.4", d: "=R * 1.7", h: "=bh", lean: 0.15}}
+  - {name: band, mat: trim, cylinder: {a: [0, "=cy", "=bh - 0.06"], b: [0, "=cy", "=bh + 0.06"], r1: "=R * 1.0"}, squash: {scale: [1, 0.78, 1], center: [0, "=cy", 0]}}
+  - when: "=dome == 'glass'"
+    parts:
+      - {use: glass-dome, name: dome, at: [0, "=cy", "=bh"], with: {r: "=R * 0.92", ry: 0.78, hk: 0.85, band: 0.1}}
+    else:
+      - {use: shell, name: dome, at: [0, "=cy", "=bh"], with: {r: "=R * 0.92", ry: 0.78, hk: 0.85}}
+      - {name: slit, mat: dark, box: {c: [0, "=cy - R * 0.5", "=bh + R * 0.55"], half: [0.26, 0.3, "=R * 0.4"]}, rot: [0, 0, -40]}
+  - {name: scope, mat: metal, cylinder: {a: [0, "=cy", "=bh + R * 0.55"], b: ["=-side * L * cos(radians(scope))", "=cy - 0.35", "=bh + R * 0.55 + L * sin(radians(scope))"], r1: 0.22, r2: 0.27}}
+  - {name: scope-end, mat: trim, cylinder: {a: ["=-side * (L - 0.12) * cos(radians(scope))", "=cy - 0.35", "=bh + R * 0.55 + (L - 0.12) * sin(radians(scope))"], b: ["=-side * (L + 0.04) * cos(radians(scope))", "=cy - 0.37", "=bh + R * 0.55 + (L + 0.04) * sin(radians(scope))"], r1: 0.33}}
+  - when: "=base == 'drum'"
+    parts:
+      - {use: tube, name: entry, at: ["=ex", 0, 0], with: {r: 0.5, d: "=cy", zc: 0.3}}
+      - {use: hatch, name: door, at: ["=ex", 0, 0], with: {r: 0.35, frame: 0.09, zc: 0.35}}
+    else:
+      - {use: door-slab, name: door, at: ["=ex", "=cy - R * 0.85", 0], with: {w: 0.85, h: "=min(0.75, bh - 0.1)"}}
+  - when: "=extra == 'dish'"
+    parts:
+      - {name: dish-post, mat: metal, cylinder: {a: ["=side * (w_max / 2 - 0.45)", "=cy + 0.2", 0], b: ["=side * (w_max / 2 - 0.45)", "=cy + 0.2", 0.9], r1: 0.1}}
+      - {name: dish, mat: light, cylinder: {a: ["=side * (w_max / 2 - 0.45)", "=cy + 0.1", 1.05], b: ["=side * (w_max / 2 - 0.45)", "=cy + 0.25", 1.15], r1: 0.5, r2: 0.14}, rot: [0, 0, -35]}
+  - when: "=extra == 'mast'"
+    parts:
+      - {name: mast, mat: metal, cylinder: {a: ["=side * (w_max / 2 - 0.35)", "=cy + 0.3", 0], b: ["=side * (w_max / 2 - 0.35)", "=cy + 0.3", 1.7], r1: 0.13, r2: 0.09}}
+      - {name: mast-top, mat: trim, box: {c: ["=side * (w_max / 2 - 0.35)", "=cy + 0.3", 1.6], half: [0.28, 0.1, 0.1]}}
+  - when: "=extra == 'stack'"
+    parts:
+      - {use: stack, name: stack, at: ["=side * (w_max / 2 - 0.4)", "=cy + 0.2", 0], with: {r: 0.2, h: 1.2}}
+  - chance: 0.5
+    parts:
+      - {use: rock, name: rock, at: ["=-side * (w_max / 2 - 0.35)", 0.4, 0], with: {s: 0.5}}

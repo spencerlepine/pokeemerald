@@ -1,0 +1,42 @@
+# A desert research lab: a wide battered block (the Lars garage and the Mos Eisley blocks, A New Hope)
+# with tilted solar panels on the roof, a dish antenna, a side dome or a vaulted annex, a vaporator.
+name: lab
+style: tatooine
+about: Wide battered block, tilted solar panels on the roof, a dish antenna, a side dome or vaulted annex.
+width: [6, 7]
+choose:
+  hh: "=H if H else 5"
+  w: ["=w_max * 0.72", "=w_max * 0.8"]
+  d: ["=hh * 0.44", "=hh * 0.5"]
+  h: ["=hh * 0.25", "=hh * 0.29"]
+  side: {pick: [-1, 1]}
+  bx: "=-side * (w_max - w) / 2"               # the block leaves room for the annex on one side
+  panels: {int: [2, 3]}
+  annex: {pick: [dome, vault], weights: [1, 1]}
+  dx0: [-0.5, 0.5]
+  dx: "=door_x if door_x is not None else bx + dx0"
+  vap: {pick: [true, false], weights: [2, 1]}
+parts:
+  - {use: adobe-block, name: block, at: ["=bx", 0, 0], with: {w: "=w", d: "=d", h: "=h", batter: 0.15}}
+  - {use: roof-lip, name: lip, at: ["=bx", 0, 0], with: {w: "=w", d: "=d", h: "=h", batter: 0.15, t: 0.16}}
+  # solar panels: dark slabs tilted to face south
+  - repeat: "=panels"
+    parts:
+      - name: panel
+        mat: dark
+        extrude: {axis: x, span: ["=bx - w * 0.38 + i * (w * 0.62 / n) + 0.08", "=bx - w * 0.38 + (i + 1) * (w * 0.62 / n) - 0.08"], round: 0.02,
+                  profile: [["=d * 0.3", "=h + 0.08"], ["=d * 0.3 + 0.12", "=h + 0.02"], ["=d * 0.72", "=h + 0.45"], ["=d * 0.72 - 0.1", "=h + 0.5"]]}
+  - {use: dish, name: dish, at: ["=bx + side * w * 0.32", "=d * 0.55", "=h"], with: {r: 0.42, mast: 0.35}}
+  # the annex on the free side
+  - when: "=annex == 'dome'"
+    parts:
+      - {use: dome, name: annex, at: ["=side * (w_max / 2 - (w_max - w) * 0.5)", "=d * 0.45", 0], with: {r: "=min(0.95, (w_max - w) * 0.62)", ry: 0.95, hk: 0.85}}
+    else:
+      - {use: entry-vault, name: annex, at: ["=side * (w_max / 2 - (w_max - w) * 0.5)", 0.2, 0], with: {w: "=(w_max - w) * 1.05", d: "=d * 0.65", h: "=h * 0.6"}}
+  # the door and windows
+  - {use: door-slab, name: door, at: ["=dx", 0, 0], with: {w: 0.95, h: "=h * 0.7"}}
+  - {use: window-slot, name: win, at: ["=dx + (1.3 if dx < bx else -1.3)", 0.04, "=h * 0.62"], with: {w: 0.85, h: 0.28}}
+  - {use: window-round, name: win2, at: ["=dx + (-1.2 if dx < bx else 1.2)", 0.04, "=h * 0.6"], with: {r: 0.18}}
+  - when: "=vap"
+    parts:
+      - {use: vaporator, name: vap, at: ["=side * (w_max / 2 - 0.25)", "=d * 0.9", 0], with: {h: 1.5}}
