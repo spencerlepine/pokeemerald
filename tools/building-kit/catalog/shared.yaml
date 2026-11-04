@@ -1,0 +1,7 @@
+# Shared pieces placed with buildings on every planet (signs). See bkit/catalog.py.
+planet: SHARED
+buildings:
+- {id: 'bld:shared:sign-arena', kind: fill, name: Arena sign, areas: [], size: [1, 1], blueprint: shared/sign, seed: 0, set: {kind: arena}, about: Stands beside every arena door; the arena building itself differs per planet.}
+- {id: 'bld:shared:sign-bacta', kind: fill, name: Bacta Center sign, areas: [], size: [1, 1], blueprint: shared/sign, seed: 0, set: {kind: bacta}, about: Stands beside every Bacta Center.}
+- {id: 'bld:shared:sign-depot', kind: fill, name: Supply Depot sign, areas: [], size: [1, 1], blueprint: shared/sign, seed: 0, set: {kind: depot}, about: Stands beside every Supply Depot.}
+- {id: 'bld:shared:sign-info', kind: fill, name: Town sign, areas: [], size: [1, 1], blueprint: shared/sign, seed: 0, set: {kind: info}, about: Town and route signs.}

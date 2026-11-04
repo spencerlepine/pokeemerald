@@ -1,0 +1,26 @@
+# The signs that say what a public building is, so the buildings themselves can vary per planet:
+# an arena (a crossed-blades emblem), a Bacta Center (a bacta droplet in a ring), a Supply Depot (a crate).
+name: sign
+style: shared
+about: One-cell sign in front of an arena, a Bacta Center or a depot; the emblem says which.
+width: [1]
+choose:
+  kind: {pick: [arena, bacta, depot, info]}
+parts:
+  - {use: sign-board, name: board}
+  - when: "=kind == 'arena'"
+    parts:
+      - {name: x1, mat: dark, hull: {points: [[-0.2, -0.06, 0.2], [-0.12, -0.06, 0.2], [0.2, -0.06, 0.46], [0.12, -0.06, 0.46], [-0.2, 0.0, 0.2], [-0.12, 0.0, 0.2], [0.2, 0.0, 0.46], [0.12, 0.0, 0.46]]}}
+      - {name: x2, mat: dark, hull: {points: [[0.2, -0.06, 0.2], [0.12, -0.06, 0.2], [-0.2, -0.06, 0.46], [-0.12, -0.06, 0.46], [0.2, 0.0, 0.2], [0.12, 0.0, 0.2], [-0.2, 0.0, 0.46], [-0.12, 0.0, 0.46]]}}
+  - when: "=kind == 'bacta'"
+    parts:
+      - {name: ring, mat: dark, cylinder: {a: [0, -0.05, 0.33], b: [0, 0.0, 0.33], r1: 0.15}}
+      - {name: drop, mat: light, ellipsoid: {c: [0, -0.06, 0.31], r: [0.08, 0.03, 0.1]}}
+  - when: "=kind == 'depot'"
+    parts:
+      - {name: crate, mat: dark, box: {c: [0, -0.03, 0.33], half: [0.15, 0.03, 0.13]}}
+      - {name: band, mat: light, box: {c: [0, -0.06, 0.33], half: [0.16, 0.02, 0.03]}}
+  - when: "=kind == 'info'"
+    parts:
+      - {name: text1, mat: dark, box: {c: [0, -0.03, 0.39], half: [0.26, 0.03, 0.035]}}
+      - {name: text2, mat: dark, box: {c: [0, -0.03, 0.27], half: [0.22, 0.03, 0.035]}}
