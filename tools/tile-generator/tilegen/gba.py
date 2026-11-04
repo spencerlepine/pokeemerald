@@ -17,6 +17,7 @@ from __future__ import annotations
 
 import json
 import os
+import sys
 import struct
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -36,11 +37,27 @@ LAYER_NORMAL, LAYER_COVERED, LAYER_SPLIT = 0, 1, 2
 LAYER_NAMES = {0: "normal", 1: "covered", 2: "split"}
 
 
+REPO_GAME = Path(__file__).resolve().parents[3] / "game"
+
+
+def repo_game_dir() -> Path:
+    """The game this repo builds (EMERALD_DIR, else ../game): where `install` writes."""
+    env = os.environ.get("EMERALD_DIR")
+    return Path(env) if env else REPO_GAME
+
+
 def game_dir() -> Path:
+    """The vanilla game every reader works from: EMERALD_DIR, else the world port's snapshot of ../game from
+    before the ported world went in (wiki/tools/world_port/base.py), else ../game itself."""
     env = os.environ.get("EMERALD_DIR")
     if env:
         return Path(env)
-    return Path(__file__).resolve().parents[3] / "game"
+    try:
+        sys.path.insert(0, str(REPO_GAME.parent / "wiki" / "tools"))
+        from world_port import base
+        return base.ensure_base()
+    except Exception:
+        return REPO_GAME
 
 
 # ----------------------------------------------------------------------------- palettes

@@ -37,19 +37,19 @@ exits:
 buildings:
 - name: Player's homestead
   art: art:tatooine:homestead-dome
-  at: [2, 4]
+  at: [3, 5]
   size: [5, 4]
   door: 2
   to: mos-pelgo-player-home-1f
 - name: Korr family home
   art: art:tatooine:sunken-courtyard-home
-  at: [13, 2]
+  at: [12, 3]
   size: [6, 6]
   door: 2
   to: mos-pelgo-korr-home-1f
 - name: Prof. Korr's lab
   art: art:tatooine:prof-korr-s-lab
-  at: [2, 12]
+  at: [4, 12]
   size: [7, 5]
   door: 3
   to: mos-pelgo-lab
@@ -72,7 +72,7 @@ props:
   size: [1, 2]
 - name: Vaporator
   art: art:tatooine:moisture-vaporator
-  at: [12, 4]
+  at: [18, 4]
   size: [1, 2]
 - name: Vaporator
   art: art:tatooine:moisture-vaporator
@@ -88,7 +88,7 @@ props:
   size: [2, 1]
 people:
 - name: Mom
-  at: [3, 8]
+  at: [5, 9]
   role: story
 - name: Prof. Korr
   at: [14, 10]
@@ -104,15 +104,15 @@ people:
   role: townsfolk
 signs:
 - name: Town holo-sign
-  at: [12, 8]
+  at: [12, 11]
 - name: Homestead sign
-  at: [7, 7]
+  at: [8, 8]
 - name: Korr home sign
-  at: [12, 6]
+  at: [18, 8]
 - name: Lab sign
-  at: [9, 16]
+  at: [3, 16]
 warps: []
 travel:
 - {to: cargo-hold-inside-of-truck, via: intro, name: Opening scene in the freighter's hold}
 todo: [The freighter on the landing pad replaces vanilla's moving truck; the intro cutscene needs a new landing., 'Same size, exit and 3 doors as Littleroot, so it
-    can be built into that map.']
+    can be built into that map.', 'The three buildings stand so their doors are Littleroot''s (5,8), (14,8) and (7,16): the intro, the running shoes and the dex upgrade scripts walk Mom, the rival and Prof. Korr by those cells.']

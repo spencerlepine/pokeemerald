@@ -44,7 +44,7 @@ const u16 gTilesetPalettes_SwBensHutInterior[][16] =
 	INCGFX_U16("data/tilesets/secondary/sw/bens-hut-interior/palettes/15.pal", ".gbapal"),
 };
 
-const u32 gTilesetTiles_SwJabbasPalace[] = INCGFX_U32("data/tilesets/secondary/sw/jabbas-palace/tiles.png", ".4bpp.lz", "-num_tiles 352 -Wnum_tiles");
+const u32 gTilesetTiles_SwJabbasPalace[] = INCGFX_U32("data/tilesets/secondary/sw/jabbas-palace/tiles.png", ".4bpp.lz", "-num_tiles 356 -Wnum_tiles");
 
 const u16 gTilesetPalettes_SwJabbasPalace[][16] =
 {
@@ -174,6 +174,28 @@ const u16 gTilesetPalettes_SwMosEspaPodraceArena[][16] =
 	INCGFX_U16("data/tilesets/secondary/sw/mos-espa-podrace-arena/palettes/13.pal", ".gbapal"),
 	INCGFX_U16("data/tilesets/secondary/sw/mos-espa-podrace-arena/palettes/14.pal", ".gbapal"),
 	INCGFX_U16("data/tilesets/secondary/sw/mos-espa-podrace-arena/palettes/15.pal", ".gbapal"),
+};
+
+const u32 gTilesetTiles_SwMosPelgo[] = INCGFX_U32("data/tilesets/secondary/sw/mos-pelgo/tiles.png", ".4bpp.lz", "-num_tiles 271 -Wnum_tiles");
+
+const u16 gTilesetPalettes_SwMosPelgo[][16] =
+{
+	INCGFX_U16("data/tilesets/secondary/sw/mos-pelgo/palettes/00.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/sw/mos-pelgo/palettes/01.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/sw/mos-pelgo/palettes/02.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/sw/mos-pelgo/palettes/03.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/sw/mos-pelgo/palettes/04.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/sw/mos-pelgo/palettes/05.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/sw/mos-pelgo/palettes/06.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/sw/mos-pelgo/palettes/07.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/sw/mos-pelgo/palettes/08.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/sw/mos-pelgo/palettes/09.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/sw/mos-pelgo/palettes/10.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/sw/mos-pelgo/palettes/11.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/sw/mos-pelgo/palettes/12.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/sw/mos-pelgo/palettes/13.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/sw/mos-pelgo/palettes/14.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/sw/mos-pelgo/palettes/15.pal", ".gbapal"),
 };
 
 const u32 gTilesetTiles_SwRoute101[] = INCGFX_U32("data/tilesets/secondary/sw/route-101/tiles.png", ".4bpp.lz", "-num_tiles 160 -Wnum_tiles");

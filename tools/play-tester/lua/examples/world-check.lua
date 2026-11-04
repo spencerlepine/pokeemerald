@@ -23,14 +23,14 @@ local steps = {}
 local function add(s) steps[#steps+1] = s end
 add({fn=function() emu:loadStateFile(OUT .. "../ui/overworld.ss0") end}); add({wait=30})
 for _, s in ipairs(spots) do
-  add({fn=function() teleport(s[2], s[3], s[4], s[5]) end}); add({wait=200})
+  if s[2] ~= 255 then add({fn=function() teleport(s[2], s[3], s[4], s[5]) end}); add({wait=200}) end
   for k, n in s[6]:gmatch("(%u+)(%d*)") do
     for _ = 1, (tonumber(n) or 1) do
       add({key=k, n=8}); add({wait=12})
       if os.getenv("WORLD_TRACE") then add({fn=function() local b = sb1()
         log(string.format("  %s %s step map %d.%d pos %d,%d", s[1], k, emu:read8(b+4), emu:read8(b+5), emu:read16(b+0), emu:read16(b+2))) end}) end
     end
-    add({wait=60})
+    add({wait=tonumber(os.getenv("WORLD_WAIT") or "60")})
   end
   add({fn=function()
     local lay = emu:read32(MAPHDR)

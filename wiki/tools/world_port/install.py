@@ -237,7 +237,7 @@ def write_tileset_c(world, written):
 
 
 def install(scope=None, exclude=(), log=print):
-    from . import events as E
+    from . import events as E, towns as T
     world = World(scope, exclude)
     problems = []
     B.ensure_base()
@@ -271,6 +271,8 @@ def install(scope=None, exclude=(), log=print):
         mj["connections"] = world.connections_for(a)
         if a.new or a.mode in ("vanilla", "hybrid"):
             problems += E.events(world, a, r, mj)
+        else:
+            problems += T.town_events(world, a, r, mj)
         maps_out[aid] = mj
         report.append((aid, a.mode, len(r["C"].syms), r["tileset"]["n_new_meta"] if r["tileset"] else 0,
                        "; ".join(r["C"].notes)))
@@ -311,6 +313,7 @@ def install(scope=None, exclude=(), log=print):
                 sp.write_text(f"{a.map_name}_MapScripts::\n\t.byte 0\n")
     write_event_script_includes(new_maps)
     write_tileset_c(world, tilesets)
+    T.heal_locations(world)
     world.event_problems = problems
     return world, report
 

@@ -5,6 +5,9 @@ for buildings and props, pink placeholders for every sprite and event. Areas liv
 [`wiki/world/`](../../wiki/world/README.md); this tool checks them, renders a review sheet for each,
 and writes the tracker `wiki/world/INDEX.csv`.
 
+Vanilla maps are read from the world port's snapshot of `game/` from before the ported world went in
+(`wiki/tools/world_port/base.py`), so a ported map never reads as vanilla. `EMERALD_DIR` overrides it.
+
 ```bash
 cd tools/blockout && pip install -r requirements.txt
 python3 -m blockout new mos-pelgo --replaces LittlerootTown --planet TATOOINE --name "MOS PELGO"   # start from the vanilla map's collision

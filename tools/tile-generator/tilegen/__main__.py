@@ -147,7 +147,7 @@ def cmd_install(a):
     for ts in (new.primary, new.secondary):
         d = pack.write_tileset(ts, out / ts.name)
         pack.install_tileset(ts, d)
-        print(f"installed {ts.path.relative_to(gba.game_dir())}")
+        print(f"installed {ts.path.relative_to(gba.game_dir())} into {gba.repo_game_dir()}")
 
 
 def cmd_anim(a):

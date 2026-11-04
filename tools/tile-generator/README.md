@@ -77,7 +77,8 @@ python -m tilegen terrain build --planet HOTH        # game-format greybox tiles
 ```bash
 cd tools/tile-generator
 pip install -r requirements.txt            # pillow, numpy
-# the game is found automatically (this repo's game/); EMERALD_DIR overrides it
+# vanilla Emerald is read from the world port's snapshot of game/ from before the ported world went in
+# (wiki/tools/world_port/base.py); `install` writes into this repo's game/. EMERALD_DIR overrides both.
 ```
 
 | Path | What |

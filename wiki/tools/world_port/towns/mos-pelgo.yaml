@@ -1,0 +1,46 @@
+# Mos Pelgo (LittlerootTown). The wiki places the three doors on Littleroot's (5,8), (14,8), (7,16) and keeps
+# the open band on rows 9-10 and the route path on columns 10-11, so the intro, running shoes, twin and dex
+# upgrade scripts walk the same cells as vanilla. Only the people and signs move.
+objects:
+  1: Kid                       # LOCALID_LITTLEROOT_TWIN (scripts move her to the route gate before the rescue)
+  2: Moisture farmer           # fat man
+  3: Spacer unloading cargo    # boy
+  4: =Mom                      # LOCALID_LITTLEROOT_MOM, walked by the intro and running-shoes scripts
+  5: keep                      # the truck by the player's home
+  6: keep                      # the truck by the rival's home
+  7: keep                      # LOCALID_LITTLEROOT_RIVAL (dex upgrade scene)
+  8: =Prof. Korr               # LOCALID_LITTLEROOT_BIRCH (dex upgrade scene)
+bgs:
+  0: Town holo-sign
+  1: Lab sign
+  2: Homestead sign
+  3: Korr home sign
+checks:
+  - {movement: LittlerootTown_Movement_PlayerStepOffTruck, from: [3, 10], to: [4, 10]}
+  - {movement: LittlerootTown_Movement_MomExitHouse, from: [5, 8], to: [5, 9]}
+  - {movement: LittlerootTown_Movement_MomApproachPlayerAtTruck, from: [5, 9], to: [5, 10]}
+  - {movement: LittlerootTown_Movement_MomApproachDoor, from: [5, 10], to: [5, 9]}
+  - {movement: LittlerootTown_Movement_PlayerApproachDoor, from: [4, 10], to: [5, 10]}
+  - {movement: LittlerootTown_Movement_PlayerEnterHouse, from: [5, 10], to: [5, 8]}
+  - {movement: LittlerootTown_Movement_MomEnterHouse, from: [5, 9], to: [5, 8]}
+  - {movement: LittlerootTown_Movement_PlayerStepOffTruck, from: [12, 10], to: [13, 10]}
+  - {movement: LittlerootTown_Movement_MomApproachPlayerAtTruck, from: [14, 9], to: [14, 10]}
+  - {movement: LittlerootTown_Movement_PlayerEnterHouse, from: [14, 10], to: [14, 8]}
+  - {movement: LittlerootTown_Movement_TwinApproachPlayerLeft, from: [7, 2], to: [10, 0]}
+  - {movement: LittlerootTown_Movement_TwinReturnLeft, from: [10, 1], to: [7, 2]}
+  - {movement: LittlerootTown_Movement_TwinApproachPlayerRight, from: [7, 2], to: [11, 0]}
+  - {movement: LittlerootTown_Movement_TwinReturnRight, from: [11, 1], to: [7, 2]}
+  - {movement: LittlerootTown_Movement_MomApproachPlayer0, from: [10, 9], to: [10, 3]}
+  - {movement: LittlerootTown_Movement_MomApproachPlayer1, from: [11, 9], to: [11, 3]}
+  - {movement: LittlerootTown_Movement_MomApproachPlayerMale2, from: [5, 9], to: [9, 9]}
+  - {movement: LittlerootTown_Movement_MomApproachPlayerMale3, from: [5, 9], to: [10, 9]}
+  - {movement: LittlerootTown_Movement_MomApproachPlayerMale4, from: [5, 9], to: [7, 9]}
+  - {movement: LittlerootTown_Movement_MomApproachPlayerMale5, from: [5, 9], to: [8, 9]}
+  - {movement: LittlerootTown_Movement_MomApproachPlayerFemale2, from: [14, 9], to: [11, 9]}
+  - {movement: LittlerootTown_Movement_MomApproachPlayerFemale3, from: [14, 9], to: [12, 9]}
+  - {movement: LittlerootTown_Movement_MomApproachPlayerFemale4, from: [14, 9], to: [9, 9]}
+  - {movement: LittlerootTown_Movement_MomApproachPlayerFemale5, from: [14, 9], to: [10, 9]}
+  - {movement: LittlerootTown_Movement_MomReturnHome0, from: [10, 3], to: [10, 8]}
+  - {movement: LittlerootTown_Movement_MomReturnHomeMale2, from: [9, 9], to: [5, 9]}
+  - {movement: LittlerootTown_Movement_MomReturnHomeFemale2, from: [11, 9], to: [14, 9]}
+  - {movement: LittlerootTown_Movement_MomExitThroughDoor, from: [5, 9], to: [5, 8]}

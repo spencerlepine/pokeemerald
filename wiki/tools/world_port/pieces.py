@@ -7,7 +7,7 @@ door cell (bottom row, `door` column) is walkable and warps (MB_NON_ANIMATED_DOO
 map only the pieces set on ground vanilla has open are drawn; the vanilla buildings keep their own tiles.
 
 The render is fitted to the piece's cells: scaled down if it is bigger, centred and standing on the bottom row
-if smaller. `facing: w` mirrors the east-facing render. A prop `shown` only after a story flag is always drawn
+if smaller. `facing: w` mirrors the east-facing render. A redrawn or new map's signs are holo-sign posts. A prop `shown` only after a story flag is always drawn
 for now (listed in the port report).
 """
 from pathlib import Path
@@ -59,6 +59,12 @@ def pieces_of(area):
         door = x + int(b["door"]) if "door" in b else None
         out.append(dict(kind="building", name=b["name"], key=key or b.get("art") or b["name"], png=png, x=x, y=y,
                         w=w, h=h, door=door, mirror=False, shown=None))
+    if area.mode == "redraw":
+        # a redrawn map has no vanilla sign tiles: each sign is a holo-sign post (solid, read from below)
+        for sg in area.signs:
+            png, key = art_png("art:shared:holo-sign")
+            out.append(dict(kind="sign", name=sg.get("name", "Sign"), key=key or "sign", png=png, x=sg["at"][0],
+                            y=sg["at"][1], w=1, h=1, door=None, mirror=False, shown=None))
     for p in area.props:
         (x, y), (w, h) = p["at"], p.get("size", [1, 1])
         png, key = art_png(p.get("art"))

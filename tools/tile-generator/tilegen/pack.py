@@ -83,13 +83,13 @@ def install_tileset(ts: gba.Tileset, out: Path, num_tiles_header: Path | None = 
     ok, lines = check_tileset(ts, out)
     if not ok:
         raise SystemExit("refusing to install, check failed:\n" + "\n".join(lines))
-    dst = tileset_game_dir(ts)
+    dst = gba.repo_game_dir() / ts.path.relative_to(gba.game_dir())
     for f in ("tiles.png", "metatiles.bin", "metatile_attributes.bin"):
         shutil.copy(out / f, dst / f)
     for i in range(16):
         shutil.copy(out / "palettes" / f"{i:02d}.pal", dst / "palettes" / f"{i:02d}.pal")
     if ts.secondary:
-        game = gba.game_dir()
+        game = gba.repo_game_dir()
         rel = dst.relative_to(game).as_posix()
         import re
         for hdr in (game / "src/data/tilesets/graphics.h", game / "src/graphics.c"):

@@ -24,6 +24,9 @@ const u16 gMetatileAttributes_SwMosEisleyHangar[] = INCBIN_U16("data/tilesets/se
 const u16 gMetatiles_SwMosEspaPodraceArena[] = INCBIN_U16("data/tilesets/secondary/sw/mos-espa-podrace-arena/metatiles.bin");
 const u16 gMetatileAttributes_SwMosEspaPodraceArena[] = INCBIN_U16("data/tilesets/secondary/sw/mos-espa-podrace-arena/metatile_attributes.bin");
 
+const u16 gMetatiles_SwMosPelgo[] = INCBIN_U16("data/tilesets/secondary/sw/mos-pelgo/metatiles.bin");
+const u16 gMetatileAttributes_SwMosPelgo[] = INCBIN_U16("data/tilesets/secondary/sw/mos-pelgo/metatile_attributes.bin");
+
 const u16 gMetatiles_SwRoute101[] = INCBIN_U16("data/tilesets/secondary/sw/route-101/metatiles.bin");
 const u16 gMetatileAttributes_SwRoute101[] = INCBIN_U16("data/tilesets/secondary/sw/route-101/metatile_attributes.bin");
 

@@ -10,7 +10,22 @@ from pathlib import Path
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[3]
-GAME = ROOT / "game"
+
+
+def _vanilla_game():
+    """Vanilla Emerald: the world port's snapshot of ../game from before the ported world went in
+    (wiki/tools/world_port/base.py), so ported maps never read as vanilla. ../game if it cannot be made."""
+    if os.environ.get("EMERALD_DIR"):
+        return Path(os.environ["EMERALD_DIR"])
+    try:
+        sys.path.insert(0, str(ROOT / "wiki" / "tools"))
+        from world_port import base
+        return base.ensure_base()
+    except Exception:
+        return ROOT / "game"
+
+
+GAME = _vanilla_game()
 TILEGEN = Path(os.environ.get("TILEGEN_DIR", ROOT / "tools" / "tile-generator"))
 
 

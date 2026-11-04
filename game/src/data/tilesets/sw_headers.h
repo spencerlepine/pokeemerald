@@ -88,6 +88,17 @@ const struct Tileset gTileset_SwMosEspaPodraceArena =
     .callback = NULL,
 };
 
+const struct Tileset gTileset_SwMosPelgo =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SwMosPelgo,
+    .palettes = gTilesetPalettes_SwMosPelgo,
+    .metatiles = gMetatiles_SwMosPelgo,
+    .metatileAttributes = gMetatileAttributes_SwMosPelgo,
+    .callback = InitTilesetAnim_Petalburg,
+};
+
 const struct Tileset gTileset_SwRoute101 =
 {
     .isCompressed = TRUE,
