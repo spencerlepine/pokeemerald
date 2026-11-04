@@ -1,0 +1,31 @@
+# Felucia's fungus grove (round 4, medium): one giant cap and two small ones. Every cap is round in plan,
+# so the 45° camera sees its top as a full lit disc with the dark gills and stalk below it.
+name: fungus-grove
+style: felucia
+role: edge
+about: One giant mushroom and two small ones; round caps seen from above, gills and stalks below.
+footprint: [3, 2]
+fill: true
+render: {inner_lines: black, depth_jump: 0.08}
+choose:
+  big: [0.95, 1.05]
+  hz: [1.8, 2.1]
+  flip: {pick: [-1, 1]}
+templates:
+  shroom:
+    params: {x: 0, y: 0, R: 0.5, hz: 1.0, tag: a}
+    parts:
+      - {name: "='stalk' + tag", group: "='stalk' + tag", _new_group: true, mat: stalk,
+         cylinder: {a: ["=x", "=y", 0], b: ["=x", "=y", "=hz"], r1: "=R * 0.32", r2: "=R * 0.24"}}
+      - {name: "='gill' + tag", group: "='gill' + tag", _new_group: true, mat: gill,
+         ellipsoid: {c: ["=x", "=y", "=hz"], r: ["=R * 0.9", "=R * 0.9", "=R * 0.16"]}}
+      - {name: "='cap' + tag", group: "='cap' + tag", _new_group: true, mat: cap,
+         ellipsoid: {c: ["=x", "=y", "=hz + R * 0.08"], r: ["=R", "=R", "=R * 0.42"]}}
+materials:
+  cap:   {ramp: light, bands: [0.2, 0.5, 0.82]}
+  gill:  {ramp: dark, bands: [0.3, 0.6, 0.9]}
+  stalk: {ramp: bone, bands: [0.25, 0.55, 0.85]}
+parts:
+  - {use: shroom, name: big, at: [0, 0, 0], with: {x: "=flip * 0.35", y: 1.15, R: "=big", hz: "=hz", tag: big}}
+  - {use: shroom, name: small1, at: [0, 0, 0], with: {x: "=-flip * 0.95", y: 0.45, R: 0.45, hz: 0.75, tag: s1}}
+  - {use: shroom, name: small2, at: [0, 0, 0], with: {x: "=flip * 1.0", y: 0.35, R: 0.32, hz: 0.5, tag: s2}}

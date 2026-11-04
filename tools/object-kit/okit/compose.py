@@ -157,7 +157,11 @@ def _expand(entries, params, rng, depth=0):
             for key in ("mat", "name", "group"):
                 if key in spec and key not in g:
                     g[key] = spec[key]
-            out += G.GENERATORS[kind](g, rng)
+            made = G.GENERATORS[kind](g, rng)
+            if spec.get("_new_group"):          # its own group: a dark line where it meets the rest
+                for j, m in enumerate(made):
+                    m["_new_group"] = j == 0 or m.get("group") != made[0].get("group")
+            out += made
             continue
         out.append(e)
     return out

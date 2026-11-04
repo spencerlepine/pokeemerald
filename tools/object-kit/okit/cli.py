@@ -29,6 +29,9 @@ def make(path, seed, footprint=None, overrides=None, quiet=False):
     raw, params, info = C.compose(path, seed, footprint, overrides)
     img, ind, warnings, tiles = R.render(raw, info)
     depth, west, east = R.hit_box(raw)
+    pw, pd = R.plan(raw)
+    if pw > 1.2 and pd < 0.6 * pw:
+        warnings.append(f"flat in plan ({pw:.1f} m wide, {pd:.1f} m deep): the camera sees little top, it reads as a side view")
     info.update(tiles=tiles, rows=img.height // 16, depth=depth, west=west, east=east,
                 fits=(depth <= info["D"] and west >= 0 and east < info["W"]), warnings=warnings)
     if not quiet:

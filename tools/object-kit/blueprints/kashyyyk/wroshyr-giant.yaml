@@ -1,0 +1,30 @@
+# Kashyyyk's giant wroshyr (round 4, large): a trunk two cells thick on buttress roots, and a canopy round
+# in plan, seen from above as a wide disc of leaf clumps in two shelves. Walk-behind canopy, hit box at
+# the roots only.
+name: wroshyr-giant
+style: kashyyyk
+role: landmark
+about: Giant wroshyr; thick trunk on buttress fins, a wide two-shelf canopy seen from above.
+footprint: [[4, 3], [5, 3]]
+fill: true
+render: {inner_lines: black, depth_jump: 0.08}
+materials:
+  leaf: {ramp: mid, bands: [0.25, 0.6, 0.88]}
+  bark: {ramp: dark, bands: [0.15, 0.45, 0.8]}
+choose:
+  yc: "=D * 0.5"
+  turn: [0, 50]
+  shift: [-0.2, 0.2]
+parts:
+  - roots: {c: [0, "=yc", 0.9], n: 7, reach: [1.15, 1.35], arc: ["=turn", "=turn + 360"], kind: wedge, t: 0.26, tip_h: 0.15, inset: 0.3}
+    mat: bark
+    name: fin
+  - {name: trunk, mat: bark, cylinder: {a: [0, "=yc", 0], b: [0, "=yc", 2.6], r1: 0.62, r2: 0.48}}
+  - {name: shelf, mat: leaf, ellipsoid: {c: [0, "=yc + 0.1", 2.45], r: ["=w_max * 0.42", 1.25, 0.32]}}
+  - lobes: {name: rim, within: {c: [0, "=yc + 0.1", 2.45], r: ["=w_max * 0.48", 1.45, 0.4]}, rows: [[55, 7], [20, 11], [-15, 11]], size: 0.32, k: 0.88, squash: [1.2, 1.1, 0.75]}
+    mat: leaf
+  - lobes: {name: rimback, within: {c: [0, "=yc + 0.9", 2.55], r: ["=w_max * 0.36", 0.8, 0.35]}, rows: [[60, 4], [25, 6]], size: 0.3, k: 0.88, squash: [1.2, 1.1, 0.75]}
+    mat: leaf
+  - {name: crown, group: crown, _new_group: true, mat: leaf, ellipsoid: {c: ["=shift", "=yc + 0.25", 3.05], r: [0.95, 0.7, 0.3]}}
+  - lobes: {name: top, within: {c: ["=shift", "=yc + 0.25", 3.05], r: [1.15, 0.85, 0.38]}, rows: [[65, 3], [25, 7]], size: 0.28, k: 0.88, squash: [1.2, 1.1, 0.75]}
+    mat: leaf

@@ -1,0 +1,40 @@
+# Tatooine's mesa (round 4, medium): a flat-topped sandstone block several cells across. Built deep, not
+# just wide, so the 45° camera shows its flat top as a big lit plate above the cliff face, the way vanilla
+# shows a ledge or a roof. A lower step on one side and a few fallen chunks at the foot.
+name: mesa
+style: tatooine
+role: edge
+about: Flat-topped sandstone mesa; a cap rock with a lit top over a tapering cliff face, a lower step, fallen chunks.
+footprint: [[4, 3], [5, 3]]
+fill: true
+render: {inner_lines: black, depth_jump: 0.08}
+choose:
+  h: [1.9, 2.3]
+  side: {pick: [-1, 1]}
+parts:
+  - rock: {c: ["=-side * 0.3", "=D * 0.55", 0], r: ["=w_max * 0.37", "=D * 0.41", "=h * 0.75"], n: 7, jitter: 0.06,
+           rings: [[0, 1.0], [0.12, 1.0], [1.0, 0.86]]}
+    mat: stone
+    name: body
+  - rock: {c: ["=-side * 0.3", "=D * 0.56", "=h * 0.72"], r: ["=w_max * 0.36", "=D * 0.38", "=h * 0.28"], n: 7, jitter: 0.05,
+           rings: [[0, 0.92], [0.3, 1.0], [1.0, 0.94]]}
+    mat: stone
+    name: cap
+    group: cap
+    _new_group: true
+  - rock: {c: ["=side * (w_max * 0.3)", "=D * 0.42", 0], r: ["=w_max * 0.2", "=D * 0.36", "=h * 0.55"], n: 7, jitter: 0.08,
+           rings: [[0, 1.0], [0.15, 1.0], [0.85, 0.92], [1.0, 0.84]]}
+    mat: stone
+    name: step
+    group: step
+    _new_group: true
+  - rock: {c: ["=side * 0.2", 0.22, 0], r: [0.4, 0.28, 0.4]}
+    mat: stone
+    name: chunk1
+    group: chunk1
+    _new_group: true
+  - rock: {c: ["=-side * (w_max * 0.36)", 0.3, 0], r: [0.3, 0.24, 0.3]}
+    mat: stone
+    name: chunk2
+    group: chunk2
+    _new_group: true

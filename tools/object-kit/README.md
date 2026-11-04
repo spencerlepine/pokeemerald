@@ -1,6 +1,6 @@
 # object-kit: small world objects in greybox
 
-Status: **round 3, in review (owner, 2026-11-04: rocks approved at `faceted`; trees rebuilt from scratch as forest blocks).** Shapes and light only, no colour or texture. Nothing
+Status: **round 4, in review (owner, 2026-11-04: rocks approved at `faceted`; 2x2 forest trees are fine as filler, the tool's real job is larger pieces, all in the 45° view).** Shapes and light only, no colour or texture. Nothing
 goes into `../../game` or the wiki yet.
 
 Small and medium world pieces: rocks, trees, plants, ice, crystals, and small structures (comm towers,
@@ -47,6 +47,25 @@ Rules for writing a family under the dial:
 - Width about the same as the height; a tall piece is a stack of chunks, never a cone to a point.
 - Leaf crowns and bushes are clumps lit as balls with dark lines between them (`lobes`, the method
   of the approved Hoenn tree).
+
+## Build for the 45° camera (round 4)
+
+The camera is the vanilla one: it looks down at 45°, so a top surface is drawn at its full plan depth and
+a south face at its full height. A piece only reads as seen from above if it has a top to show. So:
+
+- Make pieces about as deep as they are wide (round or square in plan), not flat billboards: crowns,
+  caps and rock tops get their real depth, and their top is the biggest lit area.
+- Roots, legs and limbs splay in every direction (`arc` 0 to 360), not only east, west and south.
+- A crown's north half is seen too: give it clumps (a second `lobes` set centred further north).
+- `try` warns `flat in plan` when a piece is much wider than it is deep. A log lying east-west may
+  ignore it; a tree or a rock should not.
+
+| Medium and large pieces | Hit box | What it is |
+|---|---|---|
+| `dagobah/mangrove` | 3x2 | round crown seen from above, prop roots all round a short trunk |
+| `tatooine/mesa` | 4x3, 5x3 | cap rock with a lit top over a tapering cliff, a lower step, fallen chunks |
+| `felucia/fungus-grove` | 3x2 | one giant mushroom and two small ones, round caps |
+| `kashyyyk/wroshyr-giant` | 4x3, 5x3 | thick trunk on buttress fins, a two-shelf canopy |
 
 ## Trees are forest blocks (round 3)
 

@@ -55,6 +55,27 @@ def hit_box(raw):
     return depth, west, east
 
 
+def plan(raw):
+    """(width, depth) in metres of the piece seen straight from above: everything solid at any height.
+    The 45° camera draws a top surface at its full plan depth, so a piece much wider than it is deep
+    shows almost no top and reads as a side view (owner, round 4)."""
+    obj = C.obj_from(raw)
+    W = raw["cells"][0]
+    inst = obj.instances[0]
+    xs = np.arange(-W / 2 + 1 / 16, W / 2, 1 / 8)
+    ys = np.arange(-0.5 + 1 / 16, C.TALL, 1 / 8)
+    X, Y = np.meshgrid(xs, ys)
+    solid = np.zeros(X.size, bool)
+    for z in np.arange(0.1, 6.0, 0.2):
+        P_ = np.stack([X.ravel(), Y.ravel(), np.full(X.size, z)], 1)
+        d = inst.sdf(P_, 0.0)
+        solid |= (d[0] if isinstance(d, tuple) else d) < 0
+    if not solid.any():
+        return 0.0, 0.0
+    xx, yy = X.ravel()[solid], Y.ravel()[solid]
+    return float(xx.max() - xx.min() + 0.125), float(yy.max() - yy.min() + 0.125)
+
+
 def on_ground(img, scale=1, grid=False, bg_color=GROUND):
     bg = P.speckled(img.width, img.height, bg_color).convert("RGBA")
     bg.alpha_composite(img)
