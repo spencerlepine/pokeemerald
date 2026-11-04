@@ -307,7 +307,9 @@ def render(name, rows, only=None, tries=(), wiki=True):
             if not row["drawn"] and not room:
                 row["drawn"] = f"{obj.cells[0]}x{obj.cells[1]}"
     if dry:
-        print("(--variant / --try: output/ only, the wiki is not changed)")
+        if len(shots) > 1:
+            variant_sheet(name, shots, row).save(os.path.join(OUT, name, "variants.png"))
+        print("(--variant / --try / --no-csv: output/ only, the wiki is not changed)")
         return
     if len(shots) > 1:
         variant_sheet(name, shots, row).save(os.path.join(WIKI_OUT, f"{name}_variants.png"))
@@ -315,6 +317,66 @@ def render(name, rows, only=None, tries=(), wiki=True):
     row["model_variants"] = " ".join(v for v, _, _ in shots) if len(shots) > 1 else ""
     if row["model_status"] in ("", "TODO", "IN-PROGRESS"):
         row["model_status"] = "IN-REVIEW"
+
+
+def collage(rows, out=None, scale=2):
+    """Every model's first drawing on one sheet, grouped by planet, real proportions (16 px a cell)."""
+    out = out or os.path.join(WIKI_OUT, "_collage.png")
+    have = [r for r in rows if r.get("model_png") and os.path.exists(os.path.join(ROOT, "wiki", r["model_png"]))]
+    order = ["SHARED", "TATOOINE", "KASHYYYK", "SULLUST", "MUSTAFAR", "ENDOR", "BESPIN", "JEDHA", "YAVIN 4", "HOTH",
+             "DAGOBAH", "KAMINO", "ILUM", "GRAND ARENA", "FELUCIA", "TYTHON", "ATOLLON", "MORTIS", "ASTEROID FIELD", "DEATH STAR"]
+    planets = [p for p in order if any(r["planet"] == p for r in have)] + \
+              sorted({r["planet"] for r in have} - set(order))
+    W = 1800
+    pad, lab = 6, 10
+    layout, y = [], 0
+    for pl in planets:
+        items = sorted([r for r in have if r["planet"] == pl], key=lambda r: (r["category"], r["name"]))
+        y += 22
+        x, rowh = pad, 0
+        for r in items:
+            im = Image.open(os.path.join(ROOT, "wiki", r["model_png"])).convert("RGBA")
+            w, h = im.width * scale, im.height * scale
+            if w > W - 2 * pad:                       # a giant room or backdrop: shrink to fit
+                f = (W - 2 * pad) / w
+                w, h = int(w * f), int(h * f)
+            if x + w > W - pad:
+                x, y = pad, y + rowh + lab + pad
+                rowh = 0
+            layout.append((pl, r, im, x, y, w, h))
+            x += w + pad
+            rowh = max(rowh, h)
+        y += rowh + lab + pad
+        layout.append((pl, None, None, 0, 0, 0, 0))
+    H = y + pad
+    sheet = Image.new("RGB", (W, H), (176, 176, 168))
+    d = ImageDraw.Draw(sheet)
+    seen = set()
+    for pl, r, im, x, y0, w, h in layout:
+        if r is None:
+            continue
+        if pl not in seen:
+            seen.add(pl)
+            d.rectangle([0, y0 - 22, W, y0 - 4], fill=(40, 40, 46))
+            d.text((8, y0 - 19), f"{pl}  ({sum(1 for q in layout if q[0] == pl and q[1] is not None)})", fill=(240, 240, 240))
+        sheet.paste(im.resize((w, h), Image.NEAREST), (x, y0), im.resize((w, h), Image.NEAREST))
+        d.text((x, y0 + h), r["name"][:max(4, w // 6)], fill=(50, 50, 56))
+    sheet.save(out)
+    print(f"collage: {len(have)} models -> {os.path.relpath(out, ROOT)} {sheet.size}")
+    return out
+
+
+COLS = ("model", "model_png", "model_tiles", "model_variants", "model_status", "drawn")
+
+
+def _job(a):
+    """One model rendered in a worker process; returns the row columns it set."""
+    name, only, tries, wiki = a
+    rows = _rows()
+    render(name, rows, only, tries, wiki)
+    art = vs_art(model_path(name))
+    r = next(r for r in rows if r["concept_id"] == art)
+    return art, {c: r[c] for c in COLS}
 
 
 def tilesets(rows):
@@ -389,10 +451,21 @@ def main(args):
             sweep(n, args.sweep, args.variant, args.tries)
         return
     wiki = not getattr(args, "no_csv", False)
-    for n in names:
-        render(n, rows, getattr(args, "variant", None), getattr(args, "tries", ()), wiki)
+    jobs = int(getattr(args, "jobs", 1) or 1)
+    if jobs > 1 and len(names) > 1:            # render in parallel; this process alone writes the csv
+        from multiprocessing import Pool
+        by = {r["concept_id"]: r for r in rows}
+        with Pool(jobs) as pool:
+            for art, cols in pool.imap_unordered(_job, [(n, getattr(args, "variant", None), getattr(args, "tries", ()), wiki)
+                                                        for n in names]):
+                by[art].update(cols)
+    else:
+        for n in names:
+            render(n, rows, getattr(args, "variant", None), getattr(args, "tries", ()), wiki)
     if getattr(args, "tilesets", False):
         tilesets(rows)
+    if getattr(args, "collage", False):
+        collage(rows)
     if wiki:
         _save(rows)
     if args.status or not names:

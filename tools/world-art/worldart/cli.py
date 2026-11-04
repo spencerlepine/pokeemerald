@@ -64,6 +64,8 @@ def main(argv=None):
                    help="override a key for this render only, e.g. turn=12 or params.fknee=40 (output/ only, the wiki is untouched)")
     s.add_argument("--no-csv", dest="no_csv", action="store_true",
                    help="render to output/ only; never write the wiki (for parallel work: one final run writes it)")
+    s.add_argument("--jobs", type=int, default=1, help="render this many models at once")
+    s.add_argument("--collage", action="store_true", help="also write every model on one sheet (wiki/world/models/_collage.png)")
     s.add_argument("--tilesets", action="store_true", help="also write one tileset sheet per planet (wiki/world/models/tilesets/)")
     s.add_argument("--sweep", metavar="KEY=V1,V2,...",
                    help="render each value side by side into output/scenery/<name>/sweep.png (output/ only)")

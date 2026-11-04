@@ -40,9 +40,11 @@ objects for Bright Tree Village, then a mockup that swaps them into Fortree.
 
 ## Scenery greyboxes (owner 2026-11-03)
 
-Every `scenery` row in `../../wiki/mapping/world_art.csv` (wrecks, walkers, fossils, ruins) gets a low-poly
-model here: `models/scenery/<id>.yaml`, where `<id>` is the art id without `art:` and with `:` as `_`
-(`art:hoth:frozen-at-at` is `hoth_frozen-at-at.yaml`). It is modelled like the real object from the films,
+Every row in `../../wiki/mapping/world_art.csv` gets a low-poly model here: `scenery` rows (wrecks, walkers,
+fossils, ruins) in `models/scenery/<id>.yaml`, every other category (buildings, objects, nature, landmarks,
+interior props and rooms) in `models/world/<id>.yaml`, where `<id>` is the art id without `art:` and with `:`
+as `_` (`art:hoth:frozen-at-at` is `hoth_frozen-at-at.yaml`). The four terrain surfaces (tool
+`greybox terrain`) are tiles, not models: their `model_status` is `N/A`. It is modelled like the real object from the films,
 then rendered by the Emerald camera into a grey sprite. Grey only: no colour, outline or texture yet.
 
 - **Shapes for low poly.** Besides the smooth shapes there are three flat-faced ones, each with `round`
@@ -58,8 +60,10 @@ then rendered by the Emerald camera into a grey sprite. Grey only: no colour, ou
   `[0.25, 0.55, 0.85]` put them in the second-lightest tone and `[0.1, 0.45, 0.8]` in the lightest.
 - **Drop shadow** `drop_shadow: [{dx, dy, color, below}]`: the outline shifted right and down, painted
   only on empty ground, `below` = in the bottom n cells. **cleanup**: true removes single stray pixels.
-- **Size is checked against the wiki.** `cells` must equal the row's `drawn` and `footprint` (bottom rows)
-  the depth of its hit box. Drawn rows = plan depth + height, so a tall object needs a shallow plan.
+- **Size is checked against the wiki.** Scenery: `cells` must equal the row's `drawn`. Other rows: `cells`
+  is the footprint's width and at least its depth (taller where it rises above its hit box; the render
+  writes `drawn`). Rooms (tool `greybox room`) are drawn whole at their footprint. `footprint` (bottom rows)
+  is always the depth of the hit box. Drawn rows = plan depth + height, so a tall object needs a shallow plan.
 - **What reads at 16 px a metre:** the south face shows whole, east and west faces are edge-on and north
   faces are hidden. Put the parts that identify an object where they show: a TIE's hexagon wing stands up
   facing south (flat on the ground it is a line), a fallen AT-AT's legs point south, not north. A tall light
@@ -96,6 +100,8 @@ python3 -m worldart scenery hoth_frozen-at-at --variant toppled --try turn=10 --
                                                  # one variant with tweaks, to output/ only
 python3 -m worldart scenery hoth_frozen-at-at --variant toppled --sweep "turn=-12,0,12"
                                                  # each value side by side: output/scenery/<id>/sweep.png
+python3 -m worldart scenery --all --jobs 4 --tilesets --collage
+                                                 # every model into the wiki, per-planet tilesets, one collage
 python3 -m worldart scenery hoth_frozen-at-at --sweep 'params={fknee: 20};{fknee: 60}'
                                                  # use ";" between values that hold commas; a dict merges
 python3 -m worldart scenery --status             # every scenery row's model status
@@ -107,7 +113,10 @@ It warns when the art touches an edge of the sprite, where it would be cut off. 
 15x10-cell screen with a greyed vanilla house, the vanilla cone rock and the player standing south of the
 piece, its hit box in red, at 1x and 3x. The sprites (`<id>--<variant>.png`), the first variant's scene and a
 sheet of every variant (`<id>_variants.png`) are copied to `../../wiki/world/models/`. `--variant`, `--try`
-and `--sweep` never touch the wiki. The wiki row gets `model` (the yaml), `model_png`, `model_variants`,
+and `--sweep` never touch the wiki, nor does `--no-csv` (for several people or agents working at once:
+one final `--all` run writes the wiki). Each render also writes the model's unique 8x8 tiles as a
+128 px wide sheet, `wiki/world/models/tiles/<id>.png`, and `--tilesets` writes one sheet per planet with
+every model's tiles (`wiki/world/models/tilesets/`, with a README of the counts against 512). The wiki row gets `model` (the yaml), `model_png`, `model_variants`,
 `model_tiles` (unique 8x8 tiles after flips) and
 `model_status`: `TODO` (no model), `IN-PROGRESS` (a model file exists), `IN-REVIEW` (rendered, for the
 owner), `APPROVED`. List them with `python3 -m blockout todo --model IN-REVIEW` (in `../blockout`).
