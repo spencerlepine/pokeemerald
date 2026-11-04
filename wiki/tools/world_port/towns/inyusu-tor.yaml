@@ -1,0 +1,18 @@
+# Inyusu Tor (FallarborTown), 32x24 (was 20x20). Exits west and east on rows 11-12 (routes 114 and 113).
+# Fallarbor's scripts place no one, so only the events move.
+objects:
+  1: [4, 9]                  # the girl, with her pet by the ash farm
+  2: Ash farmer              # the expert (the ash and the meteorite)
+  3: Farm hand               # the gentleman
+  4: [5, 9]                  # the girl's pet (hidden after the story)
+bgs:
+  0: [25, 7]                 # Supply Depot signs, beside its door (26,7)
+  1: [19, 7]                 # Bacta Center signs, beside its door (20,7)
+  2: [5, 7]                  # ash farm sign (the battle tent), beside its door (6,7)
+  3: [21, 7]
+  4: Town sign
+  5: [27, 7]
+  6: [24, 18]                # move tutor sign, beside his door (25,18)
+  7: [2, 15]                 # hidden NUGGET
+heal:
+  HEAL_LOCATION_FALLARBOR_TOWN: [20, 8]

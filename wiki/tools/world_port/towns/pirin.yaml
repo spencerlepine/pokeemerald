@@ -1,0 +1,54 @@
+# Pirin (LavaridgeTown), 32x28 (was 20x20). Exit west on rows 12-13 (route 113); the Magma Tunnels mouth is (16,1).
+# The arena door is (6,7) (was the gym, 5,15), the Bacta Center (21,6) (was 9,6), the bathhouse (23,18) (was the
+# herb shop, 12,15). The rival's GO-GOGGLES scene keeps its two cases: the player steps out of the Bacta Center
+# (x 21, was 9) or anywhere else (the arena, 6,8).
+objects:
+  1: {person: Bathhouse keeper, at: [24, 19]}   # the expert by the springs, beside the bathhouse door
+  2: Sullustan miner         # the expert (the springs never run dry)
+  3: [3, 14]                 # the old man
+  4: Spring bather           # the twin (bathes every day)
+  5: [30, 20]                # the two old women by the springs
+  6: [30, 23]
+  7: [7, 8]                  # rival on the bike: where the rival stops beside the arena door (hidden)
+  8: [23, 18]                # rival: comes out of the bathhouse (hidden)
+  9: [13, 9]                 # the egg woman
+coords:
+  0: drop                    # hot springs step counter: the springs here are water
+bgs:
+  0: [24, 18]                # bathhouse sign (the herb shop), beside its door (23,18)
+  1: Arena sign
+  2: [25, 6]                 # Supply Depot signs, beside its door (26,6)
+  3: Town sign
+  4: [20, 6]                 # Bacta Center signs, beside its door (21,6)
+  5: [27, 6]
+  6: [22, 6]
+  7: [1, 14]                 # hidden ICE HEAL
+heal:
+  HEAL_LOCATION_LAVARIDGE_TOWN: [21, 7]
+patches:
+  - old: "goto_if_eq VAR_0x8004, 9, LavaridgeTown_EventScript_SetRivalPos"
+    new: "goto_if_eq VAR_0x8004, 21, LavaridgeTown_EventScript_SetRivalPos"
+  - old: "VAR_0x8008, 9,"
+    new: "VAR_0x8008, 21,"
+    count: 6
+  - old: "setobjectxyperm LOCALID_LAVARIDGE_RIVAL, 11, 9"
+    new: "setobjectxyperm LOCALID_LAVARIDGE_RIVAL, 23, 9"
+  - old: "setobjectxyperm LOCALID_LAVARIDGE_RIVAL_ON_BIKE, 9, 8"
+    new: "setobjectxyperm LOCALID_LAVARIDGE_RIVAL_ON_BIKE, 21, 8"
+  - old: "opendoor 12, 15"
+    new: "opendoor 23, 18"
+  - old: "closedoor 12, 15"
+    new: "closedoor 23, 18"
+movements:
+  # from the Bacta Center: the rival waits at (23,9) and stops below the player (21,7)
+  LavaridgeTown_Movement_RivalApproachPlayer1: l2 u
+  # from the arena: out of the bathhouse (23,19), round by the main road to the player's right (7,8)
+  LavaridgeTown_Movement_RivalApproachPlayer2: l8 u9 l8 u2
+  LavaridgeTown_Movement_RivalExit1: fd fr8
+  LavaridgeTown_Movement_RivalExit2: fd4 fl7
+checks:
+  - {movement: LavaridgeTown_Movement_RivalApproachPlayer1, from: [23, 9], to: [21, 8]}
+  - {movement: LavaridgeTown_Movement_RivalApproachPlayer2, from: [23, 19], to: [7, 8]}
+  - {movement: LavaridgeTown_Movement_RivalExit1, from: [21, 8], to: [29, 9]}
+  - {movement: LavaridgeTown_Movement_RivalExit2, from: [7, 8], to: [0, 12]}
+  - {movement: LavaridgeTown_Movement_RivalExitHerbShop, from: [23, 18], to: [23, 19]}

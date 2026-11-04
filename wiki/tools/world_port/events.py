@@ -249,6 +249,57 @@ def write_block(path, blk, header=None):
     B.write_text(path, t)
 
 
+SIMPLE_CMDS = {"lock", "lockall", "faceplayer", "msgbox", "release", "releaseall", "end", "applywaitmovement",
+               "waitmovement", "closemessage"}
+
+
+def map_slug(map_name):
+    return re.sub(r"(?<=[a-z])(?=[A-Z])|_", "-", map_name).lower().replace("--", "-")
+
+
+def vanilla_body(map_name, label):
+    path = B.BASE_GAME / "data/maps" / map_name / "scripts.inc"
+    if not path.exists():
+        return None
+    body, on = [], False
+    for line in path.read_text().splitlines():
+        if line.startswith(label + "::") or line.startswith(label + ":"):
+            on = True
+            continue
+        if on:
+            if re.match(r"^\w+::?", line):
+                break
+            if line.strip():
+                body.append(line.strip().split()[0])
+    return body if on else None
+
+
+def apply_takeovers(a, objs, blk, rows, problems):
+    """A people.csv row with npc_id npc:<vanilla map>:<n> takes over vanilla object n: its walker, and its lines
+    when the vanilla script only talks (one that gives, sets or branches keeps its script)."""
+    slug = map_slug(a.map_name)
+    for row in rows.get(a.id, []):
+        nid = row.get("npc_id", "")
+        if not nid.startswith("npc:"):
+            continue
+        _, m, n = nid.split(":")
+        if m != slug or not n.isdigit() or not (1 <= int(n) <= len(objs)):
+            problems.append(f"{a.id}: takeover {row['person_id']} names {nid}, not an object of {a.map_name}")
+            continue
+        o = objs[int(n) - 1]
+        if row.get("walker"):
+            o["graphics_id"] = gfx_const(row["walker"], row.get("kind", "npc"))
+        body = vanilla_body(a.map_name, o.get("script", ""))
+        if body and set(body) <= SIMPLE_CMDS and row.get("lines"):
+            who = (row.get("character") or "").split(":")[-1].replace("character-", "")
+            key = "".join(w.capitalize() for w in re.split(r"[^A-Za-z0-9]+", who) if w) or f"Takeover{n}"
+            label, _, _ = person_script(blk, key, row, who.upper(), a)
+            o["script"] = label
+        elif row.get("lines"):
+            problems.append(f"{a.id}: {row['person_id']} takes over {o.get('script')}, which does more than talk; "
+                            f"walker changed, vanilla script kept")
+
+
 def events(world, a, r, mj):
     """Fill mj's object, sign and trigger events for a vanilla, hybrid or new map; returns problems."""
     problems = []
@@ -291,6 +342,8 @@ def events(world, a, r, mj):
         key = key_of(p["name"], nth, counts[p["name"]] > 1)
         label, trainer, flag = person_script(blk, key, row, p["name"].upper(), a)
         objs.append(new_object(a, C, p, row, label, trainer, flag, taken, problems))
+    if not a.new:
+        apply_takeovers(a, objs, blk, rows, problems)
     if len(objs) > 64:
         problems.append(f"{a.id}: {len(objs)} objects, the game holds 64; the last ones are left out")
         objs = objs[:64]

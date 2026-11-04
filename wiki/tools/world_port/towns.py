@@ -212,6 +212,7 @@ def town_events(world, a, r, mj):
         key = E.key_of(p["name"], n, counts[p["name"]] > 1)
         label, trainer, flag = E.person_script(blk, key, row, p["name"].upper(), a)
         objs.append(E.new_object(a, C, p, row, label, trainer, flag, taken, problems))
+    E.apply_takeovers(a, objs, blk, rows, problems)
     if len(objs) > 64:
         problems.append(f"{a.id}: {len(objs)} objects, the game holds 64")
     mj["object_events"] = objs

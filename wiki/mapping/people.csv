@@ -160,3 +160,5 @@ person:kachirho:002,kachirho,Chewie (after the rescue),,,npc,,,,,,"""Grrgaaggaa!
 person:kachirho:003,kachirho,Wookiee guard,,,npc,,,,,,"""Hrung? (Ready? Tarfful only fights trainers who mean it.)""",Guard below Tarfful's lookout.,object-gfx:black-belt,,,,
 person:kachirho:004,kachirho,Trader from Mos Eisley,,,npc,,,,,,"""I came all the way from Mos Eisley for wroshyr sap. The Wookiees drive a hard bargain, but they never cheat.""",Off-world trader on the east path.,object-gfx:man-4,,,,
 person:kachirho:005,kachirho,Wookiee cub,,,npc,,,,,,"""Uma! Uma! (Yes! Yes! Did you fly here on the Falcon? I want to fly it one day!)""",Cub near the family huts.,object-gfx:tuber-m,,,,
+person:inyusu-tor:001,inyusu-tor,Dr. Tien,,,npc,,,,,,"""The stars over Sullust are hidden by ash most nights. I watch them anyway. Visit my observatory any time.""",Dr. Tien (Prof. Cozmo) outside his observatory.,object-gfx:scientist-1,,,,
+person:pirin:001,pirin,Sabine Wren,,,npc,,,,,,"""My arena is hot, and so is my temper. Beat my crew and I will paint your name on my armor.""",Sabine Wren (Flannery) outside her arena.,object-gfx:flannery,,,,

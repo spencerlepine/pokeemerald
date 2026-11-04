@@ -93,13 +93,13 @@
     {
       "id": "HEAL_LOCATION_LAVARIDGE_TOWN",
       "map": "MAP_LAVARIDGE_TOWN",
-      "x": 9,
+      "x": 21,
       "y": 7
     },
     {
       "id": "HEAL_LOCATION_FALLARBOR_TOWN",
       "map": "MAP_FALLARBOR_TOWN",
-      "x": 14,
+      "x": 20,
       "y": 8
     },
     {

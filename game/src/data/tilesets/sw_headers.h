@@ -44,6 +44,17 @@ const struct Tileset gTileset_SwBestine =
     .callback = InitTilesetAnim_Rustboro,
 };
 
+const struct Tileset gTileset_SwInyusuTor =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SwInyusuTor,
+    .palettes = gTilesetPalettes_SwInyusuTor,
+    .metatiles = gMetatiles_SwInyusuTor,
+    .metatileAttributes = gMetatileAttributes_SwInyusuTor,
+    .callback = InitTilesetAnim_Fallarbor,
+};
+
 const struct Tileset gTileset_SwJabbasPalace =
 {
     .isCompressed = TRUE,
@@ -185,6 +196,17 @@ const struct Tileset gTileset_SwMosPelgo =
     .metatiles = gMetatiles_SwMosPelgo,
     .metatileAttributes = gMetatileAttributes_SwMosPelgo,
     .callback = InitTilesetAnim_Petalburg,
+};
+
+const struct Tileset gTileset_SwPirin =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SwPirin,
+    .palettes = gTilesetPalettes_SwPirin,
+    .metatiles = gMetatiles_SwPirin,
+    .metatileAttributes = gMetatileAttributes_SwPirin,
+    .callback = InitTilesetAnim_Lavaridge,
 };
 
 const struct Tileset gTileset_SwRepublicWreckCaptainsOffice =
@@ -405,6 +427,28 @@ const struct Tileset gTileset_SwRoute112 =
     .metatiles = gMetatiles_SwRoute112,
     .metatileAttributes = gMetatileAttributes_SwRoute112,
     .callback = InitTilesetAnim_Lavaridge,
+};
+
+const struct Tileset gTileset_SwRoute113 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SwRoute113,
+    .palettes = gTilesetPalettes_SwRoute113,
+    .metatiles = gMetatiles_SwRoute113,
+    .metatileAttributes = gMetatileAttributes_SwRoute113,
+    .callback = InitTilesetAnim_Fallarbor,
+};
+
+const struct Tileset gTileset_SwRoute114 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SwRoute114,
+    .palettes = gTilesetPalettes_SwRoute114,
+    .metatiles = gMetatiles_SwRoute114,
+    .metatileAttributes = gMetatileAttributes_SwRoute114,
+    .callback = InitTilesetAnim_Fallarbor,
 };
 
 const struct Tileset gTileset_SwRoute115 =
