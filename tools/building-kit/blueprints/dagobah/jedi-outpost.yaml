@@ -1,0 +1,43 @@
+# An old Jedi outpost sunk in the Dagobah bog (the planet where Yoda hid; Jedi ruins there are Legends
+# and Clone Wars lore): weathered stone blocks stepping up, sunk and tipped in the mud, a round-topped
+# doorway, a broken pillar or a stone dome on top, gnarltree roots growing over the stone.
+name: jedi-outpost
+style: dagobah
+about: Weathered stepped stone sunk in the mud, round doorway, broken pillar or dome; roots over it.
+width: [4, 5, 6]
+choose:
+  lim: "=(H if H else 4) - 0.3"
+  w: ["=w_max * 0.7", "=w_max * 0.88"]
+  d: [1.2, 1.6]
+  h1: [0.85, 1.1]
+  tiers: {pick: [2, 1], weights: [3, 2]}
+  top: {pick: [pillar, dome, stub], weights: [2, 2, 1]}
+  tilt: [-4, 4]
+  side: "=1 if (seed % 2) else -1"
+  dx: "=door_x if door_x is not None else 0"
+  bx0: "=side * (w_max - w) / 2"
+  bx: "=max(dx - w / 2 + 0.6, min(dx + w / 2 - 0.6, bx0))"
+  h2: "=min(0.7, lim - d * 0.75 - h1 - 0.6)"
+  roots: {pick: [true, false], weights: [3, 2]}
+parts:
+  - {use: jedi-block, name: base, at: ["=bx", 0, 0], with: {w: "=w", d: "=d", h: "=h1", slope: 0.16}}
+  - when: "=tiers == 2"
+    parts:
+      - {use: jedi-block, name: tier2, at: ["=bx - side * w * 0.08", "=d * 0.2", "=h1 - 0.02"], with: {w: "=w * 0.6", d: "=d * 0.55", h: "=h2", slope: 0.12}}
+  - when: "=top == 'pillar'"
+    parts:
+      - {name: pillar, mat: stone, cylinder: {a: ["=bx + side * w * 0.3", "=d * 0.55", "=h1"], b: ["=bx + side * w * 0.3 + side * 0.1", "=d * 0.55", "=min(h1 + 1.0, lim - d * 0.55 - 0.1)"], r1: 0.24, r2: 0.2}}
+      - {name: pillar-break, mat: stone, hull: {points: [["=bx + side * w * 0.3 - 0.2", "=d * 0.55 - 0.2", "=min(h1 + 1.0, lim - d * 0.55 - 0.1) - 0.05"], ["=bx + side * w * 0.3 + 0.3", "=d * 0.55 - 0.2", "=min(h1 + 1.0, lim - d * 0.55 - 0.1) - 0.05"],
+                                                      ["=bx + side * w * 0.3 + 0.25", "=d * 0.55 + 0.2", "=min(h1 + 1.0, lim - d * 0.55 - 0.1) - 0.05"], ["=bx + side * w * 0.3", "=d * 0.55", "=min(h1 + 1.0, lim - d * 0.55 - 0.1) + 0.1"]], round: 0.03}}
+  - when: "=top == 'dome'"
+    parts:
+      - {name: cupola, mat: stone, ellipsoid: {c: ["=bx - side * w * 0.08", "=d * 0.48", "=h1 + (h2 if tiers == 2 else 0) - 0.05"], r: ["=w * 0.18", "=d * 0.2", "=min(0.5, lim - d * 0.5 - h1 - (h2 if tiers == 2 else 0) - 0.1)"]}}
+  - when: "=top == 'stub'"
+    parts:
+      - {name: stub, mat: stone, box: {c: ["=bx - side * w * 0.3", "=d * 0.6", "=h1 + 0.15"], half: [0.25, 0.25, 0.18], radius: 0.04}, rot: [0, 0, 12]}
+  - {use: door-arch, name: door, at: ["=dx", 0, 0], with: {w: 0.65, h: "=h1 * 0.55", trim: stone, door: dark}}
+  - {use: porthole, name: oculus, at: ["=bx + side * w * 0.3 if abs(bx + side * w * 0.3 - dx) > 0.7 else bx - side * w * 0.3", -0.02, "=h1 * 0.58"], with: {r: 0.17, lip: 0.08, mat: stone}}
+  - when: "=roots"
+    parts:
+      - {use: root-arch, name: root, with: {x0: "=bx - side * (w / 2 + 0.05)", x1: "=bx - side * w * 0.05", y0: "=d * 0.4", y1: "=d + 0.1", ax: "=bx - side * w * 0.3", z: "=h1 + 0.3", dy: 0.1, r: 0.14}}
+  - {name: mud, mat: moss, cylinder: {a: ["=bx", "=d * 0.5", 0], b: ["=bx", "=d * 0.5", 0.16], r1: "=w / 2 + 0.15"}, squash: {scale: [1, "=(d * 0.5 + 0.1) / (w / 2 + 0.15)", 1], center: ["=bx", "=d * 0.5", 0]}}

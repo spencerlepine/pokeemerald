@@ -1,0 +1,47 @@
+# A swamp shack on Dagobah's bog (the Empire Strikes Back swamp, settled): a plank box raised on
+# root-wood stilts over the water, a mono-pitch roof of ship scrap, a porthole salvaged from a hull,
+# a plank ramp to the door, crates, a scrap cargo drum or a mud dome patched against one side.
+name: stilt-shack
+style: dagobah
+about: Plank shack on stilts over the bog, scrap mono-pitch roof, porthole, ramp, crates, drum or mud patch.
+width: [3, 4, 5]
+choose:
+  lim: "=(H if H else 4) - 0.3"
+  z0: [0.3, 0.5]
+  gable: {pick: [true, false]}
+  w: ["=w_max * 0.6", "=w_max * 0.78"]
+  d: [0.9, 1.3]
+  h: [0.85, 1.05]
+  rise: "=max(0.2, min(0.45, (lim - d - z0 - h - 0.25) / (1.6 if gable else 1.0)))"
+  side: "=1 if (seed % 2) else -1"
+  dx: "=door_x if door_x is not None else 0"
+  bx0: "=side * (w_max - w) / 2 * 0.7"
+  bx: "=max(dx - w / 2 + 0.5, min(dx + w / 2 - 0.5, bx0))"
+  rmat: {pick: [scrap, moss, plank], weights: [2, 2, 1]}
+  win: {pick: [port, slot], weights: [3, 1]}
+  annex: {pick: [drum, mud, crates, none], weights: [2, 2, 2, 1]}
+  ax: "=bx + (1 if bx < 0 else -1) * (w / 2 + 0.35)"
+parts:
+  - {use: deck, name: deck, at: [0, -0.05, 0], with: {w: "=w_max - 0.05", d: "=d + 0.3", z: "=z0", t: 0.12, mat: plank}}
+  - {use: stilts, name: stilts, at: [0, -0.05, 0], with: {w: "=w_max - 0.05", d: "=d + 0.3", h: "=z0 - 0.1", r: 0.11, mat: root}}
+  - {use: plank-shack, name: shack, at: ["=bx", 0.15, "=z0"], with: {w: "=w", d: "=d", h: "=h", rise: "=rise", gable: "=gable", roof: "=rmat"}}
+  - {use: door-slab, name: door, at: ["=dx", 0.15, "=z0"], with: {w: 0.6, h: "=h * 0.8", door: dark, trim: root}}
+  - when: "=win == 'port'"
+    parts:
+      - {use: porthole, name: win, at: ["=dx + (0.7 if dx < bx else -0.7)", 0.15, "=z0 + h * 0.6"], with: {r: 0.18, mat: scrap}}
+    else:
+      - {use: window-slot, name: win, at: ["=dx + (0.75 if dx < bx else -0.75)", 0.15, "=z0 + h * 0.62"], with: {w: 0.45, h: 0.2, trim: plank}}
+  - {name: ramp, mat: plank, hull: {points: [["=dx - 0.3", -0.12, 0], ["=dx + 0.3", -0.12, 0], ["=dx - 0.3", 0.0, "=z0"], ["=dx + 0.3", 0.0, "=z0"], ["=dx - 0.3", -0.12, 0.05], ["=dx + 0.3", -0.12, 0.05]], round: 0.02}}
+  - when: "=annex == 'drum' and abs(ax) < w_max / 2 - 0.3"
+    parts:
+      - {name: drum, mat: scrap, cylinder: {a: ["=ax", "=d * 0.6", "=z0"], b: ["=ax", "=d * 0.6", "=z0 + h * 0.85"], r1: 0.3}}
+      - {name: drum-cap, mat: scrap, ellipsoid: {c: ["=ax", "=d * 0.6", "=z0 + h * 0.85"], r: [0.3, 0.3, 0.15]}}
+  - when: "=annex == 'mud' and abs(ax) < w_max / 2 - 0.35"
+    parts:
+      - {use: mud-dome, name: patch, at: ["=ax - (0.1 if ax > 0 else -0.1)", "=d * 0.6", "=z0"], with: {r: 0.5, ry: 0.85, hk: 1.0, seed: "=seed"}}
+  - when: "=annex == 'crates' and abs(ax) < w_max / 2 - 0.25"
+    parts:
+      - {use: crate, name: crate, at: ["=ax", 0.35, "=z0"], with: {s: 0.4, mat: scrap}}
+  - chance: 0.5
+    parts:
+      - {use: chimney, name: pipe, at: ["=bx + side * w * 0.25", "=0.15 + d * 0.6", "=z0 + h + rise * 0.55"], with: {h: 0.3, r: 0.1, mat: scrap}}

@@ -1,0 +1,89 @@
+# Dagobah kit: Yoda's hut and the swamp (The Empire Strikes Back).
+# Lumpy mud domes in clusters with round porthole windows and a round-topped door, a clay chimney,
+# the gnarled roots of a gnarltree arching over them; plank shacks on stilts over the bog; old Jedi
+# stone sunk in the mud; scrap from crashed ships.
+# Axes as in common.yaml: x east, y north (0 = the south front), z up, 1 m = 1 cell.
+materials:
+  mud:   {ramp: bone, bands: [0.2, 0.5, 0.82]}
+  root:  {ramp: dark, bands: [0.15, 0.45, 0.78]}
+  moss:  {ramp: mid,  bands: [0.25, 0.55, 0.88]}
+  stone: {ramp: mid,  bands: [0.18, 0.48, 0.8]}
+  plank: {ramp: mid,  bands: [0.2, 0.5, 0.85]}
+  scrap: {ramp: light, bands: [0.25, 0.55, 0.88]}
+templates:
+  # A lumpy mud dome (Yoda's hut): an ellipsoid roughened with slow noise. Origin: its centre on the ground.
+  mud-dome:
+    params: {r: 0.9, ry: 0.78, hk: 0.85, lump: 0.035, seed: 0, mat: mud}
+    preview: {at: [0, 0.8, 0]}
+    parts:
+      - {name: dome, mat: "=mat", ellipsoid: {c: [0, 0, 0], r: ["=r", "=r * ry", "=r * hk"]}, noise: {amp: "=lump", freq: 2.2, seed: "=seed"}}
+  # A round porthole window in a thick mud lip, facing south.
+  porthole:
+    params: {r: 0.2, lip: 0.09, mat: mud}
+    preview: {at: [0, 0, 0.6]}
+    parts:
+      - {name: lip, mat: "=mat", cylinder: {a: [0, -0.08, 0], b: [0, 0.1, 0], r1: "=r + lip"}}
+      - {name: glass, mat: dark, cylinder: {a: [0, -0.11, 0], b: [0, 0.0, 0], r1: "=r"}}
+  # The round-topped hut door in a mud collar.
+  mud-door:
+    params: {w: 0.5, h: 0.55, mat: mud}
+    preview: {}
+    parts:
+      - {name: collar, mat: "=mat", box: {c: [0, -0.02, "=h * 0.4"], half: ["=w / 2 + 0.1", 0.09, "=h * 0.4"], radius: 0.05}}
+      - {name: collar-top, mat: "=mat", cylinder: {a: [0, -0.11, "=h * 0.75"], b: [0, 0.07, "=h * 0.75"], r1: "=w / 2 + 0.1"}}
+      - {name: hole, mat: dark, box: {c: [0, -0.08, "=h * 0.38"], half: ["=w / 2", 0.06, "=h * 0.38"]}}
+      - {name: hole-top, mat: dark, cylinder: {a: [0, -0.14, "=h * 0.75"], b: [0, -0.02, "=h * 0.75"], r1: "=w / 2"}}
+  # A gnarled root arching from one foot (x0, y0) up over to another (x1, y1): each side bends at a
+  # knee before it reaches the top at (ax, ay, z), so it reads as a crooked root, not a beam.
+  root-arch:
+    params: {x0: -1.0, x1: 1.0, y0: 0.3, y1: 0.6, z: 1.6, ax: 0.2, dy: 0.4, r: 0.17, mat: root}
+    preview: {}
+    parts:
+      - {name: w-low, mat: "=mat", cylinder: {a: ["=x0", "=y0", 0], b: ["=x0 + (ax - x0) * 0.2", "=y0 + dy * 0.4", "=z * 0.72"], r1: "=r * 1.6", r2: "=r * 1.15"}}
+      - {name: w-high, mat: "=mat", cylinder: {a: ["=x0 + (ax - x0) * 0.2", "=y0 + dy * 0.4", "=z * 0.72"], b: ["=ax", "=(y0 + y1) / 2 + dy", "=z"], r1: "=r * 1.15", r2: "=r"}}
+      - {name: e-low, mat: "=mat", cylinder: {a: ["=x1", "=y1", 0], b: ["=x1 + (ax - x1) * 0.35", "=y1 + dy * 0.5", "=z * 0.85"], r1: "=r * 1.4", r2: "=r * 1.05"}}
+      - {name: e-high, mat: "=mat", cylinder: {a: ["=x1 + (ax - x1) * 0.35", "=y1 + dy * 0.5", "=z * 0.85"], b: ["=ax", "=(y0 + y1) / 2 + dy", "=z"], r1: "=r * 1.05", r2: "=r"}}
+      - {name: knot, mat: "=mat", ellipsoid: {c: ["=ax", "=(y0 + y1) / 2 + dy", "=z"], r: ["=r * 1.5", "=r * 1.3", "=r * 1.25"]}}
+  # A gnarltree trunk: a fat flared stump with roots splaying out, up to z.
+  gnarl-trunk:
+    params: {r: 0.5, z: 2.0, lean: 0.15, reach: 0.8, mat: root}
+    preview: {at: [0, 0.8, 0]}
+    parts:
+      - {name: flare, mat: "=mat", cylinder: {a: [0, 0, 0], b: [0, 0, 0.5], r1: "=r * 1.6", r2: "=r"}}
+      - {name: trunk, mat: "=mat", cylinder: {a: [0, 0, 0.4], b: ["=lean", 0, "=z"], r1: "=r", r2: "=r * 0.92"}}
+      - {name: limb, mat: "=mat", cylinder: {a: ["=lean", 0, "=z * 0.85"], b: ["=lean + reach", -0.1, "=z * 0.92"], r1: "=r * 0.55", r2: "=r * 0.35"}}
+      - {name: root-w, mat: "=mat", cylinder: {a: ["=-r * 0.4", 0, 0.5], b: ["=-r * 2.3", "=-r * 0.6", 0], r1: "=r * 0.45", r2: "=r * 0.25"}}
+      - {name: root-e, mat: "=mat", cylinder: {a: ["=r * 0.4", 0, 0.45], b: ["=r * 2.1", "=-r * 0.9", 0], r1: "=r * 0.42", r2: "=r * 0.22"}}
+  # A clay chimney pipe with a lip.
+  chimney:
+    params: {r: 0.13, h: 0.45, mat: mud}
+    preview: {}
+    parts:
+      - {name: pipe, mat: "=mat", cylinder: {a: [0, 0, 0], b: [0, 0, "=h"], r1: "=r * 1.2", r2: "=r"}}
+      - {name: lip, mat: "=mat", cylinder: {a: [0, 0, "=h - 0.04"], b: [0, 0, "=h + 0.08"], r1: "=r + 0.06"}}
+  # A plank shack: a box of boards with a mono-pitch scrap roof falling south. Front at y = 0.
+  plank-shack:
+    params: {w: 2.2, d: 1.4, h: 0.9, rise: 0.35, over: 0.12, mat: plank, roof: scrap, gable: false}
+    preview: {}
+    parts:
+      - {name: body, mat: "=mat", box: {c: [0, "=d / 2", "=h / 2"], half: ["=w / 2", "=d / 2", "=h / 2"], radius: 0.03}}
+      - name: roof
+        mat: "=roof"
+        extrude: {axis: x, profile: "=[[-over, h - 0.02], [d + over, h - 0.02], [d / 2, h + rise * 1.6]] if gable else [[-over, h - 0.02], [d + over, h + rise - 0.02], [d + over, h + rise + 0.1], [-over, h + 0.1]]",
+                  span: ["=-w / 2 - over", "=w / 2 + over"], round: 0.02}
+  # A swamp lamp: a crooked pole with a glowing lamp.
+  bog-lamp:
+    params: {h: 1.0}
+    preview: {}
+    parts:
+      - {name: pole, mat: root, cylinder: {a: [0, 0, 0], b: [0.08, 0, "=h"], r1: 0.1, r2: 0.07}}
+      - {name: lamp, mat: light, ellipsoid: {c: [0.08, -0.02, "=h + 0.05"], r: [0.15, 0.15, 0.15]}}
+  # A weathered Jedi stone block, sides sloping in, its front at y = 0.
+  jedi-block:
+    params: {w: 2.4, d: 1.4, h: 1.0, slope: 0.18, mat: stone}
+    preview: {}
+    parts:
+      - name: block
+        mat: "=mat"
+        prism: {poly: [["=-w / 2", 0], ["=w / 2", 0], ["=w / 2", "=d"], ["=-w / 2", "=d"]], z: [0, "=h"],
+                top: ["=(w - 2 * slope) / w", "=(d - 2 * slope) / d"], round: 0.05}

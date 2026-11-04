@@ -8,9 +8,10 @@ buildings:
   art: art:endor:ewok-hut
   size: [3, 3]
   door: 1
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: endor/ewok-hut
+  seed: 3
+  about: 'A Bright Tree Village hut: a log drum under a thatch cone on its platform (Return of the Jedi).'
+  set: {base: stilts, roof: cone, extra: torch}
 - id: bld:endor:bright-tree-ewok-hut-2
   kind: hut
   name: Ewok hut
@@ -18,9 +19,10 @@ buildings:
   art: art:endor:ewok-hut
   size: [3, 3]
   door: 1
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: endor/ewok-hut
+  seed: 11
+  about: A Bright Tree Village hut on a log deck (Return of the Jedi).
+  set: {base: deck, roof: bulb, extra: none}
 - id: bld:endor:bright-tree-ewok-hut-3
   kind: hut
   name: Ewok hut
@@ -28,9 +30,10 @@ buildings:
   art: art:endor:ewok-hut
   size: [3, 3]
   door: 1
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: endor/ewok-hut
+  seed: 14
+  about: A Bright Tree Village hut sat in a log ring on the forest floor (Return of the Jedi).
+  set: {base: ring, roof: cone, extra: baskets}
 - id: bld:endor:bright-tree-elder-s-hut
   kind: hut
   name: Elder's hut
@@ -38,9 +41,10 @@ buildings:
   art: art:endor:ewok-hut
   size: [3, 3]
   door: 1
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: endor/ewok-hut
+  seed: 31
+  about: 'The elder''s hut: a two-tier thatch roof and a carved totem, like Logray the shaman''s (Return of the Jedi).'
+  set: {roof: tiered, extra: totem, base: deck}
 - id: bld:endor:bright-tree-bacta-center
   kind: bacta
   name: Bacta Center
@@ -48,9 +52,9 @@ buildings:
   art: art:shared:bacta-center
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: endor/ewok-lodge
+  seed: 5
+  about: 'The village healers'' lodge: a big hut and its side huts on one log deck (Bright Tree Village, Return of the Jedi).'
 - id: bld:endor:bright-tree-supply-depot
   kind: depot
   name: Supply Depot
@@ -58,9 +62,9 @@ buildings:
   art: art:shared:supply-depot
   size: [4, 4]
   door: 1
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: endor/ewok-lodge
+  seed: 12
+  about: 'The village storehouse: a hut and a lean store hut on a deck, baskets out front (Return of the Jedi).'
 - id: bld:endor:bright-tree-chief-chirpa-s-arena
   kind: arena
   name: Chief Chirpa's arena
@@ -68,9 +72,9 @@ buildings:
   art: art:shared:arena
   size: [6, 5]
   door: 3
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: endor/council-hut
+  seed: 2
+  about: Chief Chirpa's council hut, where C-3PO told the story (Return of the Jedi).
 - id: bld:endor:bright-tree-ewok-hut-4
   kind: hut
   name: Ewok hut
@@ -78,9 +82,10 @@ buildings:
   art: art:endor:ewok-hut
   size: [3, 3]
   door: 1
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: endor/ewok-hut
+  seed: 22
+  about: A Bright Tree Village hut on stilts with a haystack thatch cap (Return of the Jedi).
+  set: {base: stilts, roof: tiered, extra: none}
 - id: bld:endor:bright-tree-trader-s-hut
   kind: shop
   name: Trader's hut
@@ -88,9 +93,10 @@ buildings:
   art: art:endor:ewok-hut
   size: [3, 3]
   door: 1
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: endor/ewok-hut
+  seed: 40
+  about: An Ewok trader's hut with baskets of goods at the door (Return of the Jedi).
+  set: {extra: baskets, base: ring, roof: bulb}
 - id: bld:endor:endor-battlefield-abandoned-shield-bunker
   kind: landmark
   name: Abandoned shield bunker
@@ -98,9 +104,9 @@ buildings:
   art: art:endor:imperial-bunker
   size: [6, 5]
   door: 3
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: endor/shield-bunker
+  seed: 4
+  about: 'The shield-generator bunker the strike team blew up: a concrete portal in a hill, a dish above (Return of the Jedi).'
 - id: bld:endor:route-118-rebel-shuttle-clearing-from-tatooine
   kind: pad
   name: Rebel shuttle clearing (from Tatooine)
@@ -108,9 +114,9 @@ buildings:
   art: art:tatooine:docking-bay
   size: [8, 4]
   door: 4
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: endor/forest-pad
+  seed: 7
+  about: A clearing with the stolen Lambda shuttle Tydirium parked, wings folded up (Return of the Jedi).
 - id: bld:endor:route-119-house
   kind: landmark
   name: House
@@ -118,9 +124,9 @@ buildings:
   art: art:endor:imperial-bunker
   size: [4, 4]
   door: 1
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: endor/imperial-post
+  seed: 1
+  about: An Imperial outpost hut left from the shield-generator garrison, dish on the roof (Return of the Jedi).
 - id: bld:endor:route-121-cloud-city-shuttle-pad-ships
   kind: pad
   name: Cloud City shuttle pad (ships)
@@ -128,9 +134,10 @@ buildings:
   art: art:shared:landing-pad
   size: [5, 4]
   door: 2
-  blueprint: ''
+  blueprint: endor/forest-pad
   seed: 0
-  about: ''
+  about: A duracrete landing pad cut into the forest, landing lights at its corners (Return of the Jedi landing platform).
+  set: {kind: slab}
 - id: bld:endor:route-123-berry-masters-house
   kind: hut
   name: Berry masters house
@@ -138,9 +145,10 @@ buildings:
   art: art:endor:ewok-hut
   size: [4, 3]
   door: 1
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: endor/ewok-hut
+  seed: 51
+  about: An Ewok gardener's hut with a wider plot and a torch (Return of the Jedi).
+  set: {extra: baskets, base: deck}
 - id: bld:endor:route-123-pilgrim-shuttle-clearing-ships
   kind: pad
   name: Pilgrim shuttle clearing (ships)
@@ -148,6 +156,57 @@ buildings:
   art: art:shared:landing-pad
   size: [4, 4]
   door: 1
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: endor/forest-pad
+  seed: 1
+  about: A log-ringed forest clearing where pilgrim shuttles set down (Return of the Jedi).
+  set: {kind: logs}
+- id: bld:endor:fill-ewok-storehouse
+  kind: hut
+  name: Ewok storehouse
+  areas: []
+  art: ''
+  size: [4, 3]
+  door: null
+  blueprint: endor/ewok-lodge
+  seed: 61
+  about: A store hut and a smaller one on a low deck, baskets out front (Bright Tree Village).
+- id: bld:endor:fill-lookout-hut
+  kind: hut
+  name: Ewok lookout
+  areas: []
+  art: ''
+  size: [3, 5]
+  door: null
+  blueprint: endor/ewok-lookout
+  seed: 2
+  about: A sentry hut high on stilts, where the Ewoks blow the horn (Return of the Jedi).
+- id: bld:endor:fill-imperial-scout-post
+  kind: fill
+  name: Imperial scout post
+  areas: []
+  art: ''
+  size: [3, 4]
+  door: null
+  blueprint: endor/imperial-post
+  seed: 8
+  about: A scout trooper post with an antenna, from the biker scouts' patrols (Return of the Jedi).
+- id: bld:endor:fill-ewok-longhouse
+  kind: home
+  name: Ewok longhouse
+  areas: []
+  art: ''
+  size: [6, 4]
+  door: null
+  blueprint: endor/ewok-lodge
+  seed: 3
+  about: Three huts on one long deck, an Ewok family's home (Bright Tree Village).
+- id: bld:endor:fill-imperial-sensor-bunker
+  kind: fill
+  name: Imperial sensor bunker
+  areas: []
+  art: ''
+  size: [4, 4]
+  door: null
+  blueprint: endor/shield-bunker
+  seed: 13
+  about: A small concrete bunker in a slope, an outlying sensor post of the shield generator (Return of the Jedi).

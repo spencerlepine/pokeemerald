@@ -1,0 +1,49 @@
+# A bog landing on Dagobah (The Empire Strikes Back: Luke sets down in the swamp): a plank platform
+# on root-wood stilts over the water, a ring of salvaged plating to land on, swamp lamps at its
+# corners, cargo, sometimes a battered scout pod parked on it; plank steps up from the bank.
+name: bog-pad
+style: dagobah
+about: Plank platform on stilts over the bog, plating ring, swamp lamps, cargo, a parked scout pod on some.
+width: [4, 5, 6]
+choose:
+  lim: "=(H if H else 4) - 0.3"
+  z0: [0.25, 0.4]
+  pd: "=min(2.6, lim - 0.9)"
+  pw: "=w_max - 0.1"
+  dx: "=door_x if door_x is not None else 0"
+  side: "=1 if (seed % 2) else -1"
+  ring: {pick: [round, square], weights: [2, 1]}
+  ship: {pick: [pod, none], weights: [2, 1]}
+  cargo: {pick: [crates, drums, none], weights: [2, 2, 1]}
+parts:
+  - {use: deck, name: deck, at: [0, 0.1, 0], with: {w: "=pw", d: "=pd", z: "=z0", t: 0.14, mat: plank}}
+  - {use: stilts, name: stilts, at: [0, 0.1, 0], with: {w: "=pw", d: "=pd", h: "=z0 - 0.1", r: 0.12, mat: root}}
+  - {name: post-mid, mat: root, cylinder: {a: [0, 0.3, 0], b: [0, 0.3, "=z0 - 0.1"], r1: 0.12}}
+  - when: "=ring == 'round'"
+    parts:
+      - {name: plate, mat: root, cylinder: {a: [0, "=0.1 + pd * 0.52", "=z0"], b: [0, "=0.1 + pd * 0.52", "=z0 + 0.05"], r1: "=min(pw * 0.3, pd * 0.62)"},
+         squash: {scale: [1, 0.72, 1], center: [0, "=0.1 + pd * 0.52", "=z0"]}}
+    else:
+      - {name: plate, mat: root, box: {c: [0, "=0.1 + pd * 0.52", "=z0 + 0.025"], half: ["=pw * 0.28", "=pd * 0.3", 0.025]}}
+  - {use: bog-lamp, name: lamp-w, at: ["=-pw / 2 + 0.25", 0.25, "=z0"], with: {h: 0.7}}
+  - {use: bog-lamp, name: lamp-e, at: ["=pw / 2 - 0.25", 0.25, "=z0"], with: {h: 0.7}}
+  - when: "=ship == 'pod'"
+    parts:
+      - {name: pod, mat: light, ellipsoid: {c: ["=side * 0.25", "=0.1 + pd * 0.55", "=z0 + 0.42"], r: ["=min(1.1, pw * 0.24)", 0.42, 0.36]}}
+      - {name: pod-glass, mat: dark, ellipsoid: {c: ["=side * 0.25 + side * min(1.1, pw * 0.24) * 0.55", "=0.1 + pd * 0.55 - 0.18", "=z0 + 0.55"], r: [0.3, 0.2, 0.16]}}
+      - {name: pod-fin, mat: light, prism: {poly: [["=side * 0.25 - side * min(1.1, pw * 0.24) * 0.9", "=0.1 + pd * 0.55 - 0.05"], ["=side * 0.25 - side * min(1.1, pw * 0.24) * 0.4", "=0.1 + pd * 0.55 - 0.05"],
+                                                    ["=side * 0.25 - side * min(1.1, pw * 0.24) * 0.4", "=0.1 + pd * 0.55 + 0.05"], ["=side * 0.25 - side * min(1.1, pw * 0.24) * 0.9", "=0.1 + pd * 0.55 + 0.05"]],
+                                             z: ["=z0 + 0.5", "=z0 + 1.15"], top: [0.5, 1], lean: ["=-side * 0.2", 0], round: 0.02}}
+      - {name: pod-leg-w, mat: metal, box: {c: ["=side * 0.25 - 0.55", "=0.1 + pd * 0.55", "=z0 + 0.1"], half: [0.08, 0.2, 0.1]}}
+      - {name: pod-leg-e, mat: metal, box: {c: ["=side * 0.25 + 0.55", "=0.1 + pd * 0.55", "=z0 + 0.1"], half: [0.08, 0.2, 0.1]}}
+  - when: "=cargo == 'crates'"
+    parts:
+      - {use: crate, name: c1, at: ["=-side * (pw / 2 - 0.55)", "=pd - 0.35", "=z0"], with: {s: 0.48, mat: scrap}}
+      - {use: crate, name: c2, at: ["=-side * (pw / 2 - 0.55)", "=pd - 0.3", "=z0 + 0.48"], with: {s: 0.36, mat: plank}}
+  - when: "=cargo == 'drums'"
+    parts:
+      - {name: d1, mat: scrap, cylinder: {a: ["=-side * (pw / 2 - 0.5)", "=pd - 0.3", "=z0"], b: ["=-side * (pw / 2 - 0.5)", "=pd - 0.3", "=z0 + 0.55"], r1: 0.24}}
+      - {name: d2, mat: plank, cylinder: {a: ["=-side * (pw / 2 - 0.95)", "=pd - 0.2", "=z0"], b: ["=-side * (pw / 2 - 0.95)", "=pd - 0.2", "=z0 + 0.45"], r1: 0.22}}
+  - name: door                                     # plank steps up from the bank at the entry
+    mat: plank
+    hull: {points: [["=dx - 0.4", -0.12, 0], ["=dx + 0.4", -0.12, 0], ["=dx - 0.4", 0.12, "=z0"], ["=dx + 0.4", 0.12, "=z0"], ["=dx - 0.4", -0.12, 0.06], ["=dx + 0.4", -0.12, 0.06], ["=dx - 0.4", 0.12, 0], ["=dx + 0.4", 0.12, 0]], round: 0.02}

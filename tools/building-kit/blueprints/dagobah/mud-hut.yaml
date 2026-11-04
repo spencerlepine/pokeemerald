@@ -1,0 +1,54 @@
+# A Yoda's-hut style home on Dagobah (The Empire Strikes Back): a lumpy mud dome with one or two
+# smaller domes grown against it, round porthole windows, a round-topped door, a clay chimney, and
+# the roots of a gnarltree arching over it or a trunk rising behind. Some sit on a moss bank.
+name: mud-hut
+style: dagobah
+about: Lumpy mud dome cluster, portholes, round door, chimney; a root arch over it or a trunk behind.
+width: [4, 5]
+choose:
+  lim: "=(H if H else 3) - 0.3"
+  R: ["=min(w_max * 0.24, 0.95)", "=min(w_max * 0.28, 1.05)"]
+  ry: [0.62, 0.74]
+  hk0: [0.75, 0.95]
+  hk: "=min(hk0, (lim - R * ry - 0.25) / (R * 1.15))"
+  lump: [0.02, 0.05]
+  side: "=1 if (seed % 2) else -1"
+  dx: "=door_x if door_x is not None else 0"
+  mx: "=dx + side * R * [0.0, 0.25, 0.4][seed % 3]"
+  cy: "=R * ry + 0.08"
+  n2: {pick: [1, 2, 0], weights: [4, 2, 1]}
+  r2: ["=R * 0.5", "=R * 0.68"]
+  x2: "=max(-w_max / 2 + r2, min(w_max / 2 - r2, mx + side * (R * 0.85 + r2 * 0.35)))"
+  y2: "=cy + R * ry * 0.15"
+  x3: "=max(-w_max / 2 + r2 * 0.6, min(w_max / 2 - r2 * 0.6, mx - side * (R * 0.85 + r2 * 0.2)))"
+  over: {pick: [arch, trunk, none], weights: [3, 2, 2]}
+  bank: {pick: [true, false], weights: [1, 2]}
+  chim: {pick: [true, false], weights: [3, 2]}
+  dfr: "=cy - R * ry * sqrt(max(0.05, 1 - ((dx - mx) / R) ** 2)) + 0.05"
+  wz: "=r2 * hk * 0.45"
+parts:
+  - when: "=bank"
+    parts:
+      - {name: bank, mat: moss, cylinder: {a: [0, "=cy", 0], b: [0, "=cy", 0.1], r1: "=w_max / 2 - 0.05"}, squash: {scale: [1, "=(cy + 0.05) / (w_max / 2)", 1], center: [0, "=cy", 0]}}
+  - when: "=over == 'trunk'"
+    parts:
+      - {use: gnarl-trunk, name: trunk, at: ["=-side * (w_max / 2 - 0.8)", "=cy + R * ry * 0.6", 0], with: {r: 0.4, z: "=lim - cy - R * ry * 0.6 - 0.55", lean: "=side * 0.12", reach: "=side * 0.9"}}
+  - {use: mud-dome, name: main, at: ["=mx", "=cy", 0], with: {r: "=R", ry: "=ry", hk: "=hk", lump: "=lump", seed: "=seed"}}
+  - when: "=n2 >= 1"
+    parts:
+      - {use: mud-dome, name: dome2, at: ["=x2", "=y2", 0], with: {r: "=r2", ry: "=ry", hk: "=hk * 1.05", lump: "=lump", seed: "=seed + 1"}}
+      - {use: porthole, name: win2, at: ["=x2", "=y2 - r2 * ry * sqrt(1 - 0.45 ** 2) + 0.06", "=wz"], with: {r: "=min(0.2, r2 * 0.33)"}}
+  - when: "=n2 == 2"
+    parts:
+      - {use: mud-dome, name: dome3, at: ["=x3", "=y2 + 0.1", 0], with: {r: "=r2 * 0.75", ry: "=ry", hk: "=hk", lump: "=lump", seed: "=seed + 2"}}
+  - when: "=n2 != 2 and abs(dx - mx) < R * 0.3"     # a porthole on the main dome beside the door
+    parts:
+      - {use: porthole, name: win1, at: ["=mx - side * R * 0.55", "=cy - R * ry * 0.6 + 0.04", "=R * hk * 0.55"], with: {r: 0.19}}
+  - {use: mud-door, name: door, at: ["=dx", "=dfr", 0], with: {w: 0.5, h: "=min(0.6, R * hk * 0.75)"}}
+  - when: "=chim"
+    parts:
+      - {use: chimney, name: chimney, at: ["=mx + side * R * 0.3", "=cy + R * ry * 0.2", "=R * hk * 0.82"], with: {h: "=min(0.4, lim - cy - R * ry * 0.2 - R * hk * 0.82 - 0.12)"}}
+  - when: "=over == 'arch'"
+    parts:
+      - {use: root-arch, name: root, with: {x0: "=-(w_max / 2 - 0.3) * (0.75 + 0.25 * (seed % 2))", x1: "=(w_max / 2 - 0.3) * (1.0 - 0.25 * (seed % 2))", y0: "=cy * (0.5 + 0.3 * (seed % 3))", y1: "=cy * 1.3",
+                                            ax: "=side * R * 0.45", z: "=min(R * hk + 0.4, lim - cy - 0.4)", dy: 0.3, r: 0.15}}

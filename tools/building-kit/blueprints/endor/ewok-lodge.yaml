@@ -17,12 +17,14 @@ choose:
   roof: {pick: [cone, tiered, bulb], weights: [3, 3, 1]}
   roof2: {pick: [cone, bulb, tiered], weights: [3, 2, 1]}
   side: "=1 if (seed % 2) else -1"
-  mx: "=-side * (w_max / 2 - R - over - 0.05)"
+  mlim: "=w_max / 2 - R - over - 0.05"
+  mx: "=-side * mlim if door_x is None else max(-mlim, min(mlim, door_x - (1 if door_x >= 0 else -1) * R * 0.3 * (0 if abs(door_x) < 0.1 else 1)))"
   cy: "=(R + 0.18) * ry + 0.05"
   r2: ["=R * 0.55", "=R * 0.7"]
-  x2: "=mx + side * (R + r2 * 0.75)"
+  s2: "=side if abs(mx) < 0.2 else (-1 if mx > 0 else 1)"
+  x2: "=max(-w_max / 2 + r2 + over + 0.05, min(w_max / 2 - r2 - over - 0.05, mx + s2 * (R + r2 * 0.75)))"
   y2: "=cy + R * ry * 0.35"
-  x3: "=mx + side * (R + r2 * 0.75 + r2 * 1.35)"
+  x3: "=max(-w_max / 2 + r2 * 0.75 + over + 0.05, min(w_max / 2 - r2 * 0.75 - over - 0.05, mx - s2 * (R + r2 * 0.6)))"
   knot: "=0.0 if roof == 'bulb' else 0.26"
   rise: "=max(0.5, min(1.4, lim - cy - z0 - wh - knot))"
   rise2: "=max(0.45, min(1.0, lim - y2 - z0 - wh * 0.8 - 0.26))"

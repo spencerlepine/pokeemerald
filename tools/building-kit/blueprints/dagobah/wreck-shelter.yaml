@@ -1,0 +1,40 @@
+# A crashed-ship shelter in the Dagobah swamp (the planet's wrecks: Luke's X-wing sank there): the
+# broken nose or hull section of a small ship, half sunk and tipped in the mud, a hatch cut into its
+# side for a door, a mud dome patched on where the hull broke open, roots over it.
+name: wreck-shelter
+style: dagobah
+about: A sunk, tipped ship hull section with a hatch door, a mud dome patched on, roots or a lamp.
+width: [4, 5]
+choose:
+  lim: "=(H if H else 3) - 0.3"
+  L: ["=w_max * 0.6", "=w_max * 0.75"]
+  hw: [0.6, 0.8]
+  hh: [0.7, 0.95]
+  side: "=1 if (seed % 2) else -1"
+  dx: "=door_x if door_x is not None else 0"
+  hx: "=dx + side * 0.3"
+  nose: {pick: [taper, blunt], weights: [2, 1]}
+  patch: {pick: [true, false], weights: [3, 1]}
+  extra: {pick: [root, lamp, fin], weights: [2, 2, 2]}
+parts:
+  - name: hull
+    mat: scrap
+    extrude: {axis: x, profile: [[0.05, 0], ["=hw * 2", 0], ["=hw * 2 - 0.15", "=hh"], ["=hw * 1.4", "=hh + 0.2"], ["=hw * 0.6", "=hh + 0.2"], [0.2, "=hh"]],
+              span: ["=hx - L / 2", "=hx + L / 2"], end: "=0.55 if nose == 'taper' else 0.85", round: 0.04}
+    rot: [0, 0, 6]
+  - {name: glass, mat: dark, box: {c: ["=hx + L * 0.33", "=hw * 0.4", "=hh * 0.7"], half: ["=L * 0.08", 0.06, "=hh * 0.15"]}}
+  - {name: scar, mat: root, box: {c: ["=hx - L * 0.38", "=hw * 0.35", "=hh * 0.5"], half: [0.12, 0.08, "=hh * 0.4"]}}
+  - {use: door-slab, name: door, at: ["=dx", 0.12, 0], with: {w: 0.55, h: "=hh * 0.72", door: dark, trim: scrap}}
+  - when: "=patch"
+    parts:
+      - {use: mud-dome, name: patch, at: ["=hx - L / 2 - 0.1 if hx - L / 2 - 0.1 > -w_max / 2 + 0.55 else hx + L / 2 + 0.1", "=hw * 0.9", 0], with: {r: 0.62, ry: 0.85, hk: 1.1, seed: "=seed"}}
+  - when: "=extra == 'root'"
+    parts:
+      - {use: root-arch, name: root, with: {x0: "=hx - L * 0.45", x1: "=hx + L * 0.2", y0: "=hw * 2.1", y1: "=hw * 1.8", ax: "=hx - L * 0.1", z: "=min(hh + 0.55, lim - hw * 2 - 0.2)", dy: -0.3, r: 0.13}}
+  - when: "=extra == 'lamp'"
+    parts:
+      - {use: bog-lamp, name: lamp, at: ["=dx - 0.75 if dx - 0.75 > -w_max / 2 + 0.2 else dx + 0.75", -0.05, 0], with: {h: 0.85}}
+  - when: "=extra == 'fin'"
+    parts:
+      - {name: fin, mat: scrap, prism: {poly: [["=hx - L * 0.35", "=hw * 1.2"], ["=hx - L * 0.05", "=hw * 1.2"], ["=hx - L * 0.05", "=hw * 1.3"], ["=hx - L * 0.35", "=hw * 1.3"]],
+                                     z: ["=hh", "=min(hh + 0.8, lim - hw * 1.3 - 0.1)"], top: [0.5, 1], lean: [-0.2, 0], round: 0.02}}

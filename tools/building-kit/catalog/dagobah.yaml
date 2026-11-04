@@ -8,9 +8,9 @@ buildings:
   art: art:dagobah:yoda-s-hut
   size: [8, 6]
   door: 4
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: dagobah/yoda-hut
+  seed: 1
+  about: Yoda's hut at the foot of a gnarltree, mud domes and round windows (The Empire Strikes Back).
 - id: bld:dagobah:dagobah-bacta-center
   kind: bacta
   name: Bacta Center
@@ -18,9 +18,9 @@ buildings:
   art: art:shared:bacta-center
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: dagobah/mud-lodge
+  seed: 2
+  about: A long mud lodge with end domes and portholes, a healer's house in Yoda's style (The Empire Strikes Back).
 - id: bld:dagobah:dagobah-supply-depot
   kind: depot
   name: Supply Depot
@@ -28,9 +28,9 @@ buildings:
   art: art:shared:supply-depot
   size: [4, 4]
   door: 1
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: dagobah/stilt-shack
+  seed: 3
+  about: A plank store shack on stilts over the bog, scrap roof (Dagobah swamp).
 - id: bld:dagobah:dagobah-bog-fisher-s-hut
   kind: hut
   name: Bog fisher's hut
@@ -38,9 +38,10 @@ buildings:
   art: art:dagobah:yoda-s-hut
   size: [4, 3]
   door: 1
-  blueprint: ''
+  blueprint: dagobah/mud-hut
   seed: 0
-  about: ''
+  about: A mud dome hut on a moss bank by the water (Yoda's hut, The Empire Strikes Back).
+  set: {over: none, bank: true}
 - id: bld:dagobah:dagobah-hermit-s-hut
   kind: hut
   name: Hermit's hut
@@ -48,9 +49,10 @@ buildings:
   art: art:dagobah:yoda-s-hut
   size: [4, 3]
   door: 1
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: dagobah/mud-hut
+  seed: 7
+  about: A lone mud dome under an arching root, like Yoda's (The Empire Strikes Back).
+  set: {over: arch, n2: 1}
 - id: bld:dagobah:dagobah-swamp-healer-s-hut
   kind: hut
   name: Swamp healer's hut
@@ -58,9 +60,10 @@ buildings:
   art: art:dagobah:yoda-s-hut
   size: [4, 3]
   door: 1
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: dagobah/mud-hut
+  seed: 2
+  about: Three mud domes huddled under a root, a chimney for brewing (Yoda's hut).
+  set: {over: arch, n2: 2}
 - id: bld:dagobah:dagobah-moss-gatherer-s-hut
   kind: hut
   name: Moss gatherer's hut
@@ -68,9 +71,10 @@ buildings:
   art: art:dagobah:yoda-s-hut
   size: [4, 3]
   door: 1
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: dagobah/mud-hut
+  seed: 6
+  about: Mud domes on a moss bank against a gnarltree trunk (Dagobah).
+  set: {over: trunk, bank: true}
 - id: bld:dagobah:dagobah-old-smuggler-s-hut
   kind: hut
   name: Old smuggler's hut
@@ -78,9 +82,10 @@ buildings:
   art: art:dagobah:yoda-s-hut
   size: [4, 3]
   door: 1
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: dagobah/mud-hut
+  seed: 9
+  about: A mud dome cluster with no chimney, kept low (Yoda's hut style).
+  set: {over: none, n2: 2, chim: false}
 - id: bld:dagobah:dagobah-herbalist-s-hut
   kind: hut
   name: Herbalist's hut
@@ -88,9 +93,10 @@ buildings:
   art: art:dagobah:yoda-s-hut
   size: [4, 3]
   door: 1
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: dagobah/mud-hut
+  seed: 4
+  about: One big mud dome with a chimney under a crooked root (Yoda's hut).
+  set: {over: arch, n2: 0}
 - id: bld:dagobah:dagobah-dragonsnake-watcher-s-hut
   kind: hut
   name: Dragonsnake watcher's hut
@@ -98,9 +104,10 @@ buildings:
   art: art:dagobah:yoda-s-hut
   size: [4, 3]
   door: 1
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: dagobah/mud-hut
+  seed: 10
+  about: A mud hut beside a gnarltree trunk, its branch over the roof (Dagobah).
+  set: {over: trunk, bank: false}
 - id: bld:dagobah:dagobah-gnarltree-keeper-s-hut
   kind: hut
   name: Gnarltree keeper's hut
@@ -108,9 +115,10 @@ buildings:
   art: art:dagobah:yoda-s-hut
   size: [4, 3]
   door: 1
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: dagobah/mud-hut
+  seed: 5
+  about: A mud dome pair on a moss bank, roots grown right over it (Yoda's hut).
+  set: {over: arch, bank: true, n2: 1}
 - id: bld:dagobah:dagobah-old-jedi-outpost-mystery-events
   kind: landmark
   name: Old Jedi outpost (mystery events)
@@ -118,9 +126,9 @@ buildings:
   art: art:dagobah:yoda-s-hut
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: dagobah/jedi-outpost
+  seed: 2
+  about: Weathered Jedi stone sunk in the bog, a broken pillar, a round doorway (Dagobah Jedi lore).
 - id: bld:dagobah:dagobah-bog-landing-ships
   kind: pad
   name: Bog landing (ships)
@@ -128,6 +136,57 @@ buildings:
   art: art:shared:landing-pad
   size: [6, 4]
   door: 3
-  blueprint: ''
+  blueprint: dagobah/bog-pad
   seed: 0
-  about: ''
+  about: A plank landing platform on stilts over the bog, where Luke would have wanted to land (The Empire Strikes Back).
+- id: bld:dagobah:fill-stilt-shack
+  kind: home
+  name: Swamp stilt shack
+  areas: []
+  art: ''
+  size: [4, 4]
+  door: null
+  blueprint: dagobah/stilt-shack
+  seed: 5
+  about: A plank shack on stilts over the bog, a mud dome patched against it (Dagobah).
+- id: bld:dagobah:fill-fisher-shack
+  kind: hut
+  name: Fisher shack
+  areas: []
+  art: ''
+  size: [3, 4]
+  door: null
+  blueprint: dagobah/stilt-shack
+  seed: 8
+  about: A narrow plank shack on stilts with a scrap drum (Dagobah).
+- id: bld:dagobah:fill-crashed-ship-shelter
+  kind: hut
+  name: Crashed-ship shelter
+  areas: []
+  art: ''
+  size: [4, 3]
+  door: null
+  blueprint: dagobah/wreck-shelter
+  seed: 0
+  about: A sunk ship hull lived in, a hatch for a door and a mud dome patched on (Dagobah's wrecks).
+- id: bld:dagobah:fill-root-hollow
+  kind: hut
+  name: Root hollow hut
+  areas: []
+  art: ''
+  size: [5, 3]
+  door: null
+  blueprint: dagobah/mud-hut
+  seed: 13
+  set: {over: arch}
+  about: A wide mud dome cluster under gnarltree roots (Yoda's hut).
+- id: bld:dagobah:fill-jedi-ruin
+  kind: fill
+  name: Jedi ruin
+  areas: []
+  art: ''
+  size: [4, 3]
+  door: null
+  blueprint: dagobah/jedi-outpost
+  seed: 11
+  about: A small block of old Jedi stone in the mud, roots over it (Dagobah).
