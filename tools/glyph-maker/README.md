@@ -33,3 +33,14 @@ python3 aurebesh.py install   # writes ../../game/graphics/fonts/braille.png (id
 - Tweak the ASCII art at the top (`#` = ink, 8 wide and 9 tall). The shadow is added automatically.
 - The letters follow the Aurebesh chart in `../sprite-creature-generator/civitai/refs/unown/`.
 - "Before" is Emerald's Braille sheet redrawn from the dot numbers, so it still works after install.
+
+## StarNAV header (`starnav_header.py`)
+
+The StarNAV title bar is an image (`graphics/pokenav/header.png` + `header.bin`), so its letters are tiles, not
+font text. `starnav_header.py` rebuilds Emerald's header (read from git) as STAR NAVIGATOR, top title and bottom
+bar, from the header's own letters plus a drawn S, and re-tiles it into the same 53 tiles. Installed 2026-11-04.
+
+```sh
+python3 starnav_header.py preview   # out/starnav_header.png (before above, after below)
+python3 starnav_header.py install   # writes ../../game/graphics/pokenav/header.png and header.bin (idempotent)
+```

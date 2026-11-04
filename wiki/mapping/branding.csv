@@ -383,7 +383,7 @@ graphics/pokenav/condition/pokeball_placeholder.png,HOTSWAP,DRAFT,PENDING_ART,HU
 graphics/pokenav/condition/search_results.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/pokenav/condition/sparkle.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/pokenav/device_outline.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,PokéNav device outline → StarNAV.,,,,,,Replace by hand; no generator tool.
-graphics/pokenav/header.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Baked-in text POKéNAV / POKéMON NAVIGATOR → StarNAV / STAR NAVIGATOR.,,,,,,Replace by hand; no generator tool.
+graphics/pokenav/header.png,HOTSWAP,DRAFT,ART_READY,,Baked-in text POKéNAV / POKéMON NAVIGATOR → StarNAV / STAR NAVIGATOR.,,,,,,"Shipped 2026-11-04 by tools/glyph-maker/starnav_header.py: STAR NAVIGATOR in the header's own letters (top title and bottom bar), same 53 tiles. Waiting for owner review."
 graphics/pokenav/left_headers/beauty.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/pokenav/left_headers/condition.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/pokenav/left_headers/cool.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
