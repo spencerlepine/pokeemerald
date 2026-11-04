@@ -115,7 +115,9 @@ else
     add({fn=function() emu:write16(sym("sLastSelectedPokemon"), SC == "starnav_dex_cave" and 62 or 26) end})
     press("START"); add({wait=30}); press("DOWN"); press("UP"); add({wait=20}); press("A"); add({wait=240})
     press("A"); shot("01_entry", 200); press("A"); shot("02_area", 200)
-    for v = 1, 7 do press("A"); shot(string.format("%02d_view", 2 + v), 90) end
+    for v = 1, 7 do  -- two shots 12 frames apart: the marks flash on and off every 12 frames
+      press("A"); shot(string.format("%02d_view", 2 + v), 90); shot(string.format("%02d_view_b", 2 + v), 12)
+    end
     press("B"); shot("10_back", 120)
   elseif SC == "starnav_reopen" then  -- leave the StarNAV zoomed in, reopen it, then fly from the Fly map
     press("START"); add({wait=30}); press("DOWN"); press("DOWN"); press("DOWN"); press("A"); add({wait=150})
