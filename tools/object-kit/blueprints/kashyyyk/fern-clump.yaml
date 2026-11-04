@@ -1,24 +1,24 @@
-# Large Kashyyyk fern bush (wiki art:kashyyyk:fern-clump): replaces small trees and cuttable bushes. Broad
-# fronds fanning up and out of a dense heart (a back row high, a front row low), so it reads as a bush.
+# Large Kashyyyk fern bush (wiki art:kashyyyk:fern-clump): replaces small trees and cuttable bushes. Built
+# like the approved vanilla tree's crown: a few fat leaf clumps, each lit as its own ball, with a dark line
+# where one clump stands in front of another. Here the clumps are long and splay out like fronds.
 name: fern-clump
 style: kashyyyk
 role: noise
-about: Big fern bush; broad fronds fanning up and out of a dense heart.
+about: Round fern bush of fat frond clumps fanning out from the middle.
 footprint: [[1, 1], [2, 1]]
+render: {inner_lines: black, depth_jump: 0.1}
 choose:
-  n: {int: [5, 7]}
-  L: ["=w_max * 0.46", "=w_max * 0.52"]
-  rise: [0.75, 1.0]
+  n: {int: ["=3 + W", "=4 + W"]}
+  L: ["=w_max * 0.24", "=w_max * 0.28"]
+  h: [0.8, 1.05]
   yc: "=D * 0.55"
 parts:
-  - {name: heart, mat: leaf, ellipsoid: {c: [0, "=yc", 0.2], r: ["=w_max * 0.2", 0.2, 0.22]}}
+  - {name: heart, mat: leaf, group: heart, _new_group: true, ellipsoid: {c: [0, "=yc + 0.05", "=h * 0.55"], r: ["=w_max * 0.24", 0.24, "=h * 0.42"]}}
   - repeat: "=n"
     parts:
-      - name: back
+      - name: "='frond' + str(i)"
+        group: "='frond' + str(i)"
+        _new_group: true
         mat: leaf
-        cone: {a: [0, "=yc", 0.15], b: ["=L * cos(pi * (i + 0.5) / n)", "=yc + 0.1", "=0.25 + rise * sin(pi * (i + 0.5) / n)"], r1: 0.15, r2: 0.05}
-  - repeat: "=n - 2"
-    parts:
-      - name: front
-        mat: leaf
-        cone: {a: [0, "=yc", 0.12], b: ["=L * 0.85 * cos(pi * (i + 0.5) / (n - 2))", "=yc - 0.3", "=0.15 + rise * 0.45 * sin(pi * (i + 0.5) / (n - 2))"], r1: 0.14, r2: 0.05}
+        ellipsoid: {c: ["=L * cos(pi * (i + 0.5) / n)", "=yc - 0.12 * sin(pi * (i + 0.5) / n)", "=h * (0.3 + 0.35 * sin(pi * (i + 0.5) / n))"],
+                    r: ["=max(0.2, L * 0.6 * abs(cos(pi * (i + 0.5) / n))) + 0.06", 0.2, 0.2]}

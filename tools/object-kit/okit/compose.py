@@ -46,6 +46,7 @@ from worldart import model as M  # noqa: E402
 from . import gens as G  # noqa: E402
 
 M.GENERATORS.update(G.GENERATORS)   # so templates in kits may use rock, spike, columns, roots too
+M.EXPR_ENV.setdefault("str", str)   # part names built in a repeat: "='tier' + str(i)"
 
 TALL = 8          # cells of canvas the render starts with; cropped to the art afterwards
 MARGIN = 0.1      # metres kept clear on each side of a piece that does not `fill`

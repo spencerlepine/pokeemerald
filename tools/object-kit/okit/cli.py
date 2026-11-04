@@ -130,5 +130,10 @@ def main(argv=None):
     p.add_argument("--scale", type=int, default=2); p.add_argument("--out"); p.set_defaults(f=cmd_collage)
     p = sub.add_parser("catalog", help="the object list per planet (catalog/<planet>.yaml)"); p.add_argument("--planet"); p.set_defaults(f=cmd_catalog)
     p = sub.add_parser("build", help="render every designed catalog entry (output/build/, or --wiki)"); p.add_argument("--planet"); p.add_argument("--wiki", action="store_true"); p.set_defaults(f=cmd_build)
+    for sp in sub.choices.values():
+        sp.add_argument("--chunk", choices=["faceted", "chunky", "soft"], help="the chunk dial (okit/gens.py LEVELS); default chunky")
     a = ap.parse_args(argv)
+    if a.chunk:
+        from . import gens
+        gens.set_level(a.chunk)
     a.f(a)

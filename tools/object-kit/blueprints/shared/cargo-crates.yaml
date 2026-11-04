@@ -15,11 +15,11 @@ parts:
   - repeat: "=nx * ny"
     parts:
       - {name: crate, mat: "='metal' if (i + seed) % 3 else 'light'", box: {c: ["=-W / 2 + 0.5 + (i % nx)", "=0.5 + i // nx", "=s * (0.4 + 0.1 * ((i * 7 + seed) % 3)) "],
-         half: ["=s / 2", "=s / 2", "=s * (0.4 + 0.1 * ((i * 7 + seed) % 3))"], radius: 0.03}}
+         half: ["=s / 2", "=s / 2", "=s * (0.4 + 0.1 * ((i * 7 + seed) % 3))"], radius: 0.08}}
       - {name: band, mat: dark, box: {c: ["=-W / 2 + 0.5 + (i % nx)", "=0.5 + i // nx - s / 2 - 0.01", "=s * 0.4"], half: ["=s / 2 - 0.06", 0.02, 0.05]}}
   - chance: "=0.6 if W * D > 1 else 0.3"
     parts:
-      - {name: top, mat: light, box: {c: ["=-W / 2 + 0.55", 0.6, "=s * 1.25"], half: ["=s * 0.4", "=s * 0.4", "=s * 0.3"], radius: 0.03}}
+      - {name: top, mat: light, box: {c: ["=-W / 2 + 0.55", 0.6, "=s * 1.25"], half: ["=s * 0.4", "=s * 0.4", "=s * 0.3"], radius: 0.08}}
   - when: "=barrel == 'barrel'"
     parts:
       - {name: barrel, mat: light, cylinder: {a: ["=W / 2 - 0.3", 0.25, 0], b: ["=W / 2 - 0.3", 0.25, 0.6], r1: 0.2}}

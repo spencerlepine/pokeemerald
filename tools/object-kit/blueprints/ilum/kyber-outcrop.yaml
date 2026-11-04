@@ -1,19 +1,19 @@
-# Ilum's kyber crystal outcrop (wiki art:ilum:kyber-crystal-outcrop): a cluster of six-sided crystals breaking
-# out of a rock base, in the caves and the temple. The glow comes with colour later.
+# Ilum's kyber crystal outcrop (wiki art:ilum:kyber-crystal-outcrop): two or three chunky six-sided crystals
+# with blunt bevelled tips out of a round rock. The glow comes with colour later.
 name: kyber-outcrop
 style: ilum
 role: noise
-about: Six-sided kyber crystals fanning out of a rock base; one big crystal or a spray of small ones.
+about: Two or three chunky blunt crystals out of a round rock.
 footprint: [[1, 1], [2, 1]]
 choose:
-  n: {int: ["=2 + W", "=2 + 2 * W"]}
-  h: [1.0, 1.5]
+  n: {int: [2, "=2 + W"]}
+  h: [0.75, 1.05]
 parts:
-  - {rock: {c: [0, "=D * 0.5", 0], r: ["=w_max * 0.38", "=D * 0.34", 0.2], n: 7, jitter: 0.15}, mat: rock, name: base}
+  - {rock: {c: [0, "=D * 0.5", 0], r: ["=w_max * 0.42", "=D * 0.38", 0.3], rings: [[0, 1.0], [0.4, 0.95], [1.0, 0.5]]}, mat: rock, name: base}
   - repeat: "=n"
     parts:
-      - spike: {c: ["=w_max * 0.26 * cos(pi * (i + 0.5) / n)", "=D * 0.5", 0.12],
-                r: "=0.13 + 0.08 * (1 - abs(cos(pi * (i + 0.5) / n)))", h: "=h * (0.45 + 0.55 * sin(pi * (i + 0.5) / n))",
-                lean: ["=w_max * 0.16 * cos(pi * (i + 0.5) / n)", -0.05], sides: 6, top: 0.0, ry: 0.8}
+      - spike: {c: ["=w_max * 0.28 * (-1 + 2 * (i + 0.5) / n)", "=D * 0.5", 0.15],
+                r: "=w_max * 0.38 / n + 0.08", h: "=h * (1 - 0.3 * abs(-1 + 2 * (i + 0.5) / n))",
+                lean: ["=w_max * 0.12 * (-1 + 2 * (i + 0.5) / n)", -0.05], sides: 6, ry: 0.85}
         mat: ice
         name: crystal

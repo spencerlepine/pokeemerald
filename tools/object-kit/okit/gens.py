@@ -16,8 +16,25 @@ ones nature and small structures need on top. Every one takes `mat` and `name`.
              two cones, out to a bend `sag` m above c, then down (a mangrove), `wedge` = a thin buttress fin that widens to the ground (a wroshyr).
 """
 import math
+import os
 
 import numpy as np
+
+# The chunk dial (owner 2026-11-04: "chunkier low poly, rounded, not pointy"). Every generator reads its
+# defaults from here, so one setting moves every family. Levels: `faceted` (round 1), `chunky` (default),
+# `soft`. Pick one with --chunk on the CLI or OKIT_CHUNK. A blueprint should not set `n`, `round` or `top`
+# unless the shape needs it.
+LEVELS = {
+    "faceted": {"round": 0.03, "facets": 7, "blunt": 0.0, "min_r": 0.08},
+    "chunky":  {"round": 0.09, "facets": 6, "blunt": 0.45, "min_r": 0.16},
+    "soft":    {"round": 0.14, "facets": 6, "blunt": 0.6, "min_r": 0.2},
+}
+STYLE = dict(LEVELS[os.environ.get("OKIT_CHUNK", "chunky")])
+
+
+def set_level(name):
+    STYLE.clear()
+    STYLE.update(LEVELS[name])
 
 
 def _rng_of(rng):
@@ -38,8 +55,10 @@ def gen_rock(g, rng):
     c = np.asarray(g.get("c", [0, 0, 0]), float)
     r = np.asarray(g.get("r", [0.5, 0.4, 0.6]), float)
     rings = g.get("rings") or [[0.0, 0.72], [0.14, 0.95], [0.45, 1.0], [0.76, 0.82], [1.0, 0.38]]
-    n = int(g.get("n", 7))
-    jit = float(g.get("jitter", 0.12))
+    n = int(g.get("n", STYLE["facets"]))
+    jit = float(g.get("jitter", 0.1))
+    rnd = float(g.get("round", STYLE["round"]))
+    r = r + rnd * 0.7                     # the bevel eats into the hull: grow it back so the rock still fills its cells
     lean = np.asarray(g.get("lean", [0, 0]), float)
     pts = []
     for zf, rf in rings:
@@ -53,16 +72,18 @@ def gen_rock(g, rng):
             z = c[2] + r[2] * (zf + (R.uniform(-jit, jit) * 0.35 if 0 < zf < 1 else 0))
             pts.append([round(x, 3), round(y, 3), round(max(z, 0.0), 3)])
     return [{"name": g.get("name", "rock"), "mat": g["mat"], "group": g.get("group", "body"),
-             "hull": {"points": pts, "round": float(g.get("round", 0.03))}}]
+             "hull": {"points": pts, "round": rnd}}]
 
 
 def gen_spike(g, rng):
     R = _rng_of(rng)
     c = np.asarray(g.get("c", [0, 0, 0]), float)
-    r, h = float(g.get("r", 0.2)), float(g.get("h", 1.0))
-    sides = int(g.get("sides", 5))
+    r, h = max(float(g.get("r", 0.2)), STYLE["min_r"]), float(g.get("h", 1.0))
+    sides = int(g.get("sides", min(5, STYLE["facets"])))
     lean = np.asarray(g.get("lean", [0, 0]), float)
-    top = float(g.get("top", 0.0))
+    top = float(g.get("top", r * STYLE["blunt"]))      # blunt top by default: no needle points
+    rnd = float(g.get("round", STYLE["round"]))
+    r, h = r + rnd * 0.5, h + rnd * 0.5           # grow back what the bevel eats
     base = R.uniform(0, math.tau)
     pts = []
     for i in range(sides):
@@ -110,7 +131,7 @@ def gen_columns(g, rng):
             poly = [[round(x + math.cos(a0 + math.tau * k / sides) * r, 3), round(y + math.sin(a0 + math.tau * k / sides) * r, 3)]
                     for k in range(sides)]
             out.append({"name": f"{g.get('name', 'col')}/{len(out)}", "mat": g["mat"], "group": g.get("group", "body"),
-                        "prism": {"poly": poly, "z": [0, round(h, 3)], "round": float(g.get("round", 0.02))}})
+                        "prism": {"poly": poly, "z": [0, round(h, 3)], "round": float(g.get("round", STYLE["round"] * 0.6))}})
     return out
 
 
@@ -120,7 +141,7 @@ def gen_roots(g, rng):
     n = int(g.get("n", 5))
     a0, a1 = (float(v) for v in g.get("arc", [200, 340]))      # degrees, 270 = due south
     kind = g.get("kind", "arch")
-    rr = float(g.get("r", 0.1))
+    rr = max(float(g.get("r", 0.1)), STYLE["min_r"] * 0.8)
     z0 = float(g.get("z0", 0.0))
     out = []
     for i in range(n):
@@ -136,7 +157,7 @@ def gen_roots(g, rng):
             pts = [base - side, base + side, base - side + [0, 0, c[2]], base + side + [0, 0, c[2]],
                    tip - side * 0.7, tip + side * 0.7, tip - side * 0.5 + [0, 0, float(g.get("tip_h", 0.12))], tip + side * 0.5 + [0, 0, float(g.get("tip_h", 0.12))]]
             out.append({"name": name, "mat": g["mat"], "group": g.get("group", "body"),
-                        "hull": {"points": np.round(pts, 3).tolist(), "round": float(g.get("round", 0.02))}})
+                        "hull": {"points": np.round(pts, 3).tolist(), "round": float(g.get("round", STYLE["round"] * 0.6))}})
         else:
             # an arch: two cones, out and a little up, then down to the ground
             # `sag`: how far the bend rises above the root's start (an arch out, then down to the mud)

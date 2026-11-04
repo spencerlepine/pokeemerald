@@ -1,32 +1,33 @@
-# Giant wroshyr trunk as Kashyyyk's route wall (wiki art:kashyyyk:wroshyr-tree): far too tall for the screen,
-# so the sprite is cut at a fixed height (the canopy is the top layer above it, drawn on its own). Ridged
-# bark, buttress roots fanning south, a shelf fungus or a branch stub on some seeds.
+# Giant wroshyr trunk as Kashyyyk's route wall (wiki art:kashyyyk:wroshyr-tree): too tall for the screen, so
+# the sprite is cut at a fixed height (the canopy is the top layer, drawn on its own). A fat trunk with a
+# few broad bark ridges, rounded buttress roots spreading at the foot, a shelf fungus on some seeds.
 name: wroshyr-trunk
 style: kashyyyk
 role: edge
-about: Giant wroshyr trunk, cut off at the top; bark ridges, buttress roots, shelf fungus or a branch stub.
+about: Giant trunk cut off at the top; broad bark ridges, rounded buttress roots, a shelf fungus.
 footprint: [[3, 2], [2, 2]]
 fill: true
 drawn: 5
 choose:
-  R: ["=w_max * 0.3", "=w_max * 0.36"]
+  R: ["=w_max * 0.32", "=w_max * 0.38"]
   yc: "=D * 0.55"
-  nroot: {int: [3, 5]}
-  stub: {pick: [none, fungus, branch], weights: [2, 2, 1]}
-  sz: [1.6, 2.6]
+  nroot: {int: [2, 3]}
+  fungus: {pick: [true, false]}
+  sz: [1.8, 2.6]
 parts:
-  - {name: trunk, mat: bark, cylinder: {a: [0, "=yc", 0], b: [0, "=yc", 8], r1: "=R * 1.05", r2: "=R * 0.9"}, squash: {scale: [1, 0.6, 1], center: [0, "=yc", 0]}}
-  - ring: {c: [0, "=yc", 4], axis: z, r: "=R * 0.98", size: [0.16, 0.14, 8], n: 7, arc: [105, 255], round: 0.03}
+  - {name: trunk, mat: bark, cylinder: {a: [0, "=yc", 0], b: [0, "=yc", 8], r1: "=R", r2: "=R * 0.92"}, squash: {scale: [1, 0.6, 1], center: [0, "=yc", 0]}}
+  - ring: {c: [0, "=yc", 4], axis: z, r: "=R * 0.96", size: [0.3, 0.16, 8], n: 4, arc: [125, 235], round: 0.08}
     mat: bark
     name: ridge
     squash: {scale: [1, 0.6, 1], center: [0, "=yc", 0]}
-  - roots: {c: [0, "=yc", 1.1], n: "=nroot", reach: ["=R + 0.35", "=R + 0.7"], arc: [195, 345], kind: wedge, t: 0.16, tip_h: 0.1}
-    mat: bark
-    name: root
-  - when: "=stub == 'fungus'"
+  - repeat: "=nroot"
     parts:
-      - {name: shelf, mat: fungus, ellipsoid: {c: ["=R * 0.55", "=yc - R * 0.55", "=sz"], r: [0.32, 0.18, 0.07]}}
-      - {name: shelf2, mat: fungus, ellipsoid: {c: ["=R * 0.7", "=yc - R * 0.5", "=sz - 0.3"], r: [0.22, 0.13, 0.05]}}
-  - when: "=stub == 'branch'"
+      - name: root
+        mat: bark
+        ellipsoid: {c: ["=(R + 0.15) * cos(pi * (0.2 + 0.6 * (i + 0.5) / nroot) + pi)", "=yc - 0.2 - 0.25 * sin(pi * (0.2 + 0.6 * (i + 0.5) / nroot))", 0.15],
+                    r: [0.42, 0.3, 0.5]}
+  - {name: root-w, mat: bark, ellipsoid: {c: ["=-R - 0.1", "=yc", 0.12], r: [0.4, 0.3, 0.45]}}
+  - {name: root-e, mat: bark, ellipsoid: {c: ["=R + 0.1", "=yc", 0.12], r: [0.4, 0.3, 0.45]}}
+  - when: "=fungus"
     parts:
-      - {name: branch, mat: bark, cone: {a: ["=-R * 0.5", "=yc - R * 0.4", "=sz + 0.4"], b: ["=-R - 0.4", "=yc - R * 0.5", "=sz + 1.0"], r1: 0.16, r2: 0.09}}
+      - {name: shelf, mat: fungus, ellipsoid: {c: ["=R * 0.55", "=yc - R * 0.6", "=sz"], r: [0.4, 0.22, 0.12]}}

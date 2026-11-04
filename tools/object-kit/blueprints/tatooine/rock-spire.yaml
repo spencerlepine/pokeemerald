@@ -1,39 +1,38 @@
-# Tall eroded hoodoo (wiki art:tatooine:rock-spire): route edges and canyon walls, the top layer over the
-# player. A narrow waist under a wider cap, or a plain tapering needle. Shallow plan, so it draws tall.
+# Tall eroded rock (wiki art:tatooine:rock-spire): route edges and canyon walls, a walk-behind top. Built from
+# two or three chunky rounded blocks stacked and stepping in, never a point: a hoodoo with a wide cap, a
+# stepped stack, or a tall rounded butte.
 name: rock-spire
 style: tatooine
 role: edge
-about: Eroded hoodoo; a cap on a narrow waist, a tapering needle, or a twin spire.
-footprint: [[2, 1], [1, 1]]
+about: Tall chunky rock; a hoodoo with a wide cap, a stepped stack, or a rounded butte.
+footprint: [[2, 1], [2, 2]]
 fill: true
 choose:
-  kind: {pick: [hoodoo, needle, twin], weights: "=[3, 2, 2] if W > 1 else [2, 3, 0]"}
-  h: [1.7, 2.6]
-  lx: [-0.12, 0.12]
+  kind: {pick: [hoodoo, stack, butte], weights: [3, 3, 2]}
+  h: [1.6, 2.2]
+  lx: [-0.1, 0.1]
 parts:
   - when: "=kind == 'hoodoo'"
     parts:
-      - rock: {c: [0, "=D * 0.5", 0], r: ["=w_max * 0.34", "=D * 0.32", "=h * 0.78"], n: 7, jitter: 0.1, lean: ["=lx", 0],
-               rings: [[0, 1.0], [0.2, 0.8], [0.6, 0.6], [1.0, 0.5]]}
+      - rock: {c: [0, "=D * 0.5", 0], r: ["=w_max * 0.4", "=D * 0.38", "=h * 0.72"], rings: [[0, 1.0], [0.3, 0.85], [1.0, 0.72]]}
         mat: stone
         name: column
-      - rock: {c: ["=lx * 0.8", "=D * 0.48", "=h * 0.72"], r: ["=w_max * 0.48", "=D * 0.42", "=h * 0.28"], n: 7, jitter: 0.12,
-               rings: [[0, 0.7], [0.3, 1.0], [0.75, 0.9], [1.0, 0.45]]}
+      - rock: {c: ["=lx", "=D * 0.48", "=h * 0.62"], r: ["=w_max * 0.5", "=D * 0.44", "=h * 0.38"], rings: [[0, 0.75], [0.35, 1.0], [0.8, 0.9], [1.0, 0.5]]}
         mat: stone
         name: cap
-  - when: "=kind == 'needle'"
+  - when: "=kind == 'stack'"
     parts:
-      - rock: {c: [0, "=D * 0.5", 0], r: ["=w_max * 0.48", "=D * 0.42", "=h"], n: 7, jitter: 0.12, lean: ["=lx * 2", 0],
-               rings: [[0, 1.0], [0.25, 0.8], [0.55, 0.55], [0.85, 0.32], [1.0, 0.12]]}
+      - rock: {c: [0, "=D * 0.5", 0], r: ["=w_max * 0.5", "=D * 0.46", "=h * 0.42"], rings: [[0, 0.95], [0.3, 1.0], [1.0, 0.8]]}
+        mat: stone
+        name: low
+      - rock: {c: ["=lx", "=D * 0.52", "=h * 0.36"], r: ["=w_max * 0.38", "=D * 0.38", "=h * 0.36"], rings: [[0, 0.9], [0.4, 1.0], [1.0, 0.7]]}
+        mat: stone
+        name: mid
+      - rock: {c: ["=-lx", "=D * 0.55", "=h * 0.68"], r: ["=w_max * 0.26", "=D * 0.3", "=h * 0.32"], rings: [[0, 0.9], [0.4, 1.0], [1.0, 0.45]]}
+        mat: stone
+        name: top
+  - when: "=kind == 'butte'"
+    parts:
+      - rock: {c: [0, "=D * 0.5", 0], r: ["=w_max * 0.5", "=D * 0.46", "=h"], rings: [[0, 1.0], [0.25, 0.92], [0.7, 0.82], [0.92, 0.72], [1.0, 0.45]]}
         mat: stone
         name: body
-  - when: "=kind == 'twin'"
-    parts:
-      - rock: {c: ["=-w_max * 0.22", "=D * 0.52", 0], r: ["=w_max * 0.27", "=D * 0.36", "=h"], n: 6, jitter: 0.12, lean: [-0.1, 0],
-               rings: [[0, 1.0], [0.3, 0.75], [0.7, 0.55], [0.92, 0.6], [1.0, 0.3]]}
-        mat: stone
-        name: west
-      - rock: {c: ["=w_max * 0.24", "=D * 0.45", 0], r: ["=w_max * 0.25", "=D * 0.34", "=h * 0.7"], n: 6, jitter: 0.12, lean: [0.1, 0],
-               rings: [[0, 1.0], [0.3, 0.78], [0.75, 0.5], [1.0, 0.2]]}
-        mat: stone
-        name: east

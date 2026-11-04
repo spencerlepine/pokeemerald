@@ -1,22 +1,18 @@
-# Endor's mossy fallen log (wiki art:endor:fallen-log): blocks a path edge. A long trunk lying east-west with
-# a root plate standing up at one end (or a broken end), a branch stub, moss lumps on top.
+# Endor's mossy fallen log (wiki art:endor:fallen-log): blocks a path edge. A fat round trunk lying east-west
+# with a rounded root ball at one end, big moss humps on top.
 name: fallen-log
 style: endor
 role: edge
-about: Fallen trunk lying east-west; a root plate or a broken end; a branch stub and moss lumps.
+about: Fat trunk lying east-west, a root ball at one end, big moss humps on top.
 footprint: [[2, 1], [3, 1], [4, 1]]
 fill: true
 choose:
-  r: [0.3, 0.4]
+  r: [0.38, 0.44]
   side: {pick: [-1, 1]}
-  plate: {pick: [true, false], weights: [3, 2]}
 parts:
-  - {name: log, mat: bark, cylinder: {a: ["=-w_max / 2 + (0.3 if plate else 0.1)", "=D * 0.5", "=r"], b: ["=w_max / 2 - 0.1", "=D * 0.5", "=r * 0.9"], r1: "=r", r2: "=r * 0.88"}}
-  - when: "=plate"
+  - {name: log, mat: bark, cylinder: {a: ["=-side * (w_max / 2 - 0.55)", "=D * 0.5", "=r"], b: ["=side * (w_max / 2 - 0.25)", "=D * 0.5", "=r * 0.92"], r1: "=r", r2: "=r * 0.9"}, squash: {scale: [1, 0.85, 1], center: [0, "=D * 0.5", "=r"]}}
+  - {name: end, mat: stone, ellipsoid: {c: ["=side * (w_max / 2 - 0.25)", "=D * 0.5", "=r * 0.92"], r: [0.1, "=r * 0.78", "=r * 0.88"]}}
+  - {name: rootball, mat: bark, ellipsoid: {c: ["=-side * (w_max / 2 - 0.42)", "=D * 0.5", "=r * 1.15"], r: [0.38, "=min(D * 0.42, r * 1.2)", "=r * 1.4"]}}
+  - repeat: "=W - 1"
     parts:
-      - {name: plate, mat: bark, cylinder: {a: ["=-w_max / 2 + 0.06", "=D * 0.5", "=r * 1.1"], b: ["=-w_max / 2 + 0.3", "=D * 0.5", "=r * 1.1"], r1: "=r * 2.2", r2: "=r * 1.8"}, squash: {scale: [1, 0.45, 1], center: [0, "=D * 0.5", "=r"]}}
-      - {name: dirt, mat: dark, cylinder: {a: ["=-w_max / 2 + 0.02", "=D * 0.5", "=r * 1.1"], b: ["=-w_max / 2 + 0.08", "=D * 0.5", "=r * 1.1"], r1: "=r * 1.5"}, squash: {scale: [1, 0.45, 1], center: [0, "=D * 0.5", "=r"]}}
-  - {name: stub, mat: bark, cone: {a: ["=w_max * 0.1", "=D * 0.5", "=r * 1.6"], b: ["=w_max * 0.18", "=D * 0.5", "=r * 2.0 + 0.35"], r1: 0.11, r2: 0.07}}
-  - repeat: "=W"
-    parts:
-      - {name: moss, mat: leaf, ellipsoid: {c: ["=-w_max / 2 + 0.5 + i * (w_max - 0.8) / max(W - 1, 1)", "=D * 0.5 - 0.05", "=r * 1.75"], r: [0.22, 0.16, 0.1]}}
+      - {name: moss, mat: leaf, ellipsoid: {c: ["=-w_max / 2 + 1.0 + i * (w_max - 1.4) / max(W - 1, 1)", "=D * 0.5 - 0.05", "=r * 1.8"], r: [0.32, 0.24, 0.16]}}

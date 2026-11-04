@@ -1,6 +1,6 @@
 # object-kit: small world objects in greybox
 
-Status: **round 1, in review (owner, 2026-11-04).** Shapes and light only, no colour or texture. Nothing
+Status: **round 2, in review (owner, 2026-11-04: round 1 was too pointy; chunkier, rounder low poly).** Shapes and light only, no colour or texture. Nothing
 goes into `../../game` or the wiki yet.
 
 Small and medium world pieces: rocks, trees, plants, ice, crystals, and small structures (comm towers,
@@ -31,6 +31,21 @@ python3 -m okit build [--planet endor]                 # every designed catalog 
 Everything is written to `output/` (not committed). Each line printed for a seed gives the hit box, the
 drawn size (rows above the hit box are walk-behind), the unique 8x8 tiles, and `HIT BOX OVERFLOW` if the
 piece stands on more ground than its hit box.
+
+## The chunk dial (owner 2026-11-04)
+
+Vanilla's rocks and trees are wide at the base, round on top and built from one to three big masses.
+Nothing ends in a point and nothing is thinner than about 5 px. So the generators take their
+defaults from one dial in `okit/gens.py` (`LEVELS`): `faceted` (round 1), `chunky` (the default) and
+`soft`. It sets the bevel on every edge, the facets per ring, how far spike tops are cut flat and the
+thinnest spike. Pick a level with `--chunk` on any command or `OKIT_CHUNK`. Blueprints leave `n`,
+`round` and `top` unset unless the shape needs them, so the dial moves every family at once.
+
+Rules for writing a family under the dial:
+- One to three big masses; no twigs, needles or thin fins. Limbs end in a round knob.
+- Width about the same as the height; a tall piece is a stack of chunks, never a cone to a point.
+- Leaf crowns and bushes are clumps lit as balls with dark lines between them (`lobes`, the method
+  of the approved Hoenn tree).
 
 ## Hit box and drawn size
 
@@ -82,18 +97,18 @@ approves the look; the scenery thread is greyboxing those rows in `../world-art`
 
 | Blueprint | Role | What varies |
 |---|---|---|
-| `tatooine/sandstone-boulder` | edge | round, slab or split; a pebble beside it |
-| `tatooine/rock-spire` | edge | hoodoo (cap on a waist), needle, twin spire |
-| `tatooine/dead-tree` | noise | limbs, lean, a rock at the foot |
+| `tatooine/sandstone-boulder` | edge | dome, slab, or a big rock leaning on a small one |
+| `tatooine/rock-spire` | edge | hoodoo with a wide cap, a stepped stack of chunks, or a rounded butte |
+| `tatooine/dead-tree` | noise | a thick trunk and two or three fat limbs with round knobs |
 | `kashyyyk/wroshyr-trunk` | edge | width, buttress roots, shelf fungus or a branch stub; cut off at 5 rows |
 | `kashyyyk/fern-clump` | noise | frond count, spread and height |
-| `dagobah/gnarltree` | edge | prop roots, trunk bend, crown, hanging moss |
+| `dagobah/gnarltree` | edge | three thick prop roots, trunk bend, a wide low clumped crown |
 | `felucia/giant-fungus` | edge | single or a cluster of 2-3, cap size, spots |
-| `hoth/ice-spikes` | edge | spike count, height and lean on a snow mound |
+| `hoth/ice-spikes` | edge | chunky blunt ice blocks out of a snow drift |
 | `sullust/basalt-columns` | edge | column size and peak |
-| `ilum/snow-pine` | edge | tiers, height, width; snow on every skirt |
+| `ilum/snow-pine` | edge | two or three fat skirts with snow caps, a round top |
 | `ilum/kyber-outcrop` | noise | crystal count and height |
-| `mustafar/obsidian-spire` | edge | blade, pair or broken stump |
+| `mustafar/obsidian-spire` | edge | two or three blunt shards on a rubble base |
 | `endor/fallen-log` | edge | length, root plate or broken end, moss |
 | `shared/comm-tower` | landmark | block or leg base, dish, array or sensor ball |
 | `shared/cargo-crates` | noise | stack size, a top crate, a barrel or canister |

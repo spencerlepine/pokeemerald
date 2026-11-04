@@ -19,7 +19,7 @@ parts:
           - {name: tank, mat: light, cylinder: {a: ["=-W / 2 + 0.5 + i", "=D * 0.5", 0], b: ["=-W / 2 + 0.5 + i", "=D * 0.5", "=h * (1 - 0.15 * (i % 2))"], r1: "=r"}}
           - {name: dome, mat: light, ellipsoid: {c: ["=-W / 2 + 0.5 + i", "=D * 0.5", "=h * (1 - 0.15 * (i % 2))"], r: ["=r", "=r", "=r * 0.5"]}}
           - {name: ring, mat: metal, cylinder: {a: ["=-W / 2 + 0.5 + i", "=D * 0.5", "=h * 0.3"], b: ["=-W / 2 + 0.5 + i", "=D * 0.5", "=h * 0.3 + 0.08"], r1: "=r + 0.03"}}
-      - {name: pipe, mat: metal, cylinder: {a: ["=-W / 2 + 0.5", "=D * 0.5 - r - 0.04", "=h * 0.6"], b: ["=W / 2 - 0.5", "=D * 0.5 - r - 0.04", "=h * 0.6"], r1: 0.06}}
+      - {name: pipe, mat: metal, cylinder: {a: ["=-W / 2 + 0.5", "=D * 0.5 - r - 0.04", "=h * 0.6"], b: ["=W / 2 - 0.5", "=D * 0.5 - r - 0.04", "=h * 0.6"], r1: 0.1}}
   - when: "=kind == 'lying'"
     parts:
       - repeat: "=D"

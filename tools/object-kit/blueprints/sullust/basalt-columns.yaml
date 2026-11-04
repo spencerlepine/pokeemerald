@@ -1,16 +1,16 @@
-# Sullust's hexagonal basalt columns (wiki art:sullust:basalt-column): the planet's tree replacement. Packed
-# hex prisms, tallest at the back or at a peak, stepping down to the path.
+# Sullust's hexagonal basalt columns (wiki art:sullust:basalt-column): the planet's tree replacement. A few
+# big hex columns with bevelled tops, tallest at the back, stepping down to the path.
 name: basalt-columns
 style: sullust
 role: edge
-about: Packed hexagonal basalt columns stepping down toward the path; a peak at the back or one side.
+about: A few big bevelled hex columns stepping down toward the path.
 footprint: [[2, 1], [2, 2], [3, 2]]
 fill: true
 choose:
-  r: [0.27, 0.33]
-  hi: ["=0.9 + 0.4 * D", "=1.3 + 0.5 * D"]
+  r: [0.38, 0.44]
+  hi: ["=0.9 + 0.35 * D", "=1.2 + 0.4 * D"]
   px: ["=-w_max * 0.3", "=w_max * 0.3"]
 parts:
-  - columns: {c: [0, "=D * 0.5"], w: "=w_max", d: "=D * 0.92", r: "=r", h: ["=hi * 0.25", "=hi"], peak: ["=px", "=D"], round: 0.015}
+  - columns: {c: [0, "=D * 0.5"], w: "=w_max", d: "=D * 0.92", r: "=r", h: ["=hi * 0.35", "=hi"], peak: ["=px", "=D"], round: 0.07}
     mat: rock
     name: col
