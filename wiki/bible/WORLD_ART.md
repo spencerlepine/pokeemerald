@@ -177,6 +177,7 @@ sunken X-wing rising after shard 8 (bible/FAN_CRITIQUE.md) is not set as an even
 | `sw_refs` | `starwars-db` entity ids used as reference (github.com/spencerlepine/starwars-db) |
 | `reference_art` | Local reference images (`art/concept/...`): starwars-db databank images (`__db_`), web references (`__web_`, sources in `art/concept/SOURCES.csv`) and paintings generated in code where nothing usable was found (`__gen_`, made by `art/concept/_generated/paint.py`; `__civ_`, SDXL paintings from Civitai made by `tools/tile-generator/scripts/civitai_concepts.py`) |
 | `concept_art` | Concept art made for this game (pixel mock-ups), once drawn |
+| `placeholder` | Interior objects: their sheet of 16x16 placeholder tiles at the drawn size, under `wiki/world/interiors/placeholders/` (no art yet; needs the interior-object tool) |
 
 Reference images are film and franchise stills (Lucasfilm) kept only as private mood references for drawing; they are
 never shipped in the game.

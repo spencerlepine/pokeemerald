@@ -317,6 +317,9 @@ def cmd_check(a):
         for q in R.check(every):
             print(f"rooms.csv: {q}")
             bad += 1
+        for q in R.check_objects(every, _assets()):
+            print(f"world_art.csv: {q}")
+            bad += 1
     sys.exit(1 if bad else 0)
 
 
@@ -346,6 +349,13 @@ def cmd_index(a):
                 w.writerow([ar.id, ar.planet, ar.kind, ar.replaces, ar.status, pc["kind"], pc.get("name", ""),
                             "x".join(str(v) for v in pc.get("size", [1, 1])), aid, known, st, row.get("tool", "")])
                 if aid:
+                    uses.setdefault(aid, []).append(ar.id)
+            for aid in ar.raw.get("objects") or []:   # interior objects the room needs, not placed yet
+                row = art.get(aid, {})
+                w.writerow([ar.id, ar.planet, ar.kind, ar.replaces, ar.status, "object", row.get("name", ""),
+                            row.get("drawn") or row.get("footprint", ""), aid, "yes" if row else "NEW",
+                            row.get("status", "pending-mockup"), row.get("tool", "")])
+                if ar.id not in uses.get(aid, []):
                     uses.setdefault(aid, []).append(ar.id)
             room = ar.raw.get("room")
             if room:   # the room shell: its style row in rooms.csv

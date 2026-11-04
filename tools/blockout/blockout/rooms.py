@@ -18,6 +18,10 @@ An area that has a room shell names it in its yaml:
       grow: '13x10: why the room needs a bigger map than Emerald's'   # optional
 
 Every interior area must have one; built dungeons (Death Star decks, Fortress Vader...) may.
+
+The objects that furnish a room (`interior` rows of wiki/mapping/world_art.csv) are listed in the yaml's
+top-level `objects:` (art ids the room needs, placed later) or placed as `props:`. Every room with a shell
+must have at least one; every interior object with a `placeholder` must be used by a room and have its PNG.
 """
 import csv
 import os
@@ -112,3 +116,26 @@ def index(areas):
         w.writerows(rows.values())
     print(PATH)
     return blocks
+
+
+def check_objects(areas, art):
+    """Problems with the interior objects: rooms with none, unknown ids, unused rows, missing placeholders."""
+    out, used = [], set()
+    for a in areas:
+        if not a.raw.get("room"):
+            continue
+        ids = list(a.raw.get("objects") or []) + [p.get("art", "") for p in a.props if p.get("art")]
+        for aid in a.raw.get("objects") or []:
+            if aid not in art:
+                out.append(f"{a.id}: object {aid} is not in world_art.csv")
+        if not any(art.get(i, {}).get("category") in ("interior", "object") for i in ids):
+            out.append(f"{a.id}: room has no interior objects (`objects:` or placed props)")
+        used.update(ids)
+    for aid, r in art.items():
+        if r.get("category") != "interior" or not r.get("placeholder"):
+            continue
+        if aid not in used:
+            out.append(f"{aid}: interior object is used by no room")
+        if not (ROOT / "wiki" / r["placeholder"]).exists():
+            out.append(f"{aid}: placeholder {r['placeholder']} is missing (run wiki/world/interiors/placeholders/make_placeholders.py)")
+    return out

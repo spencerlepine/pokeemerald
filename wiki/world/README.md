@@ -26,6 +26,9 @@ The owner's plan (2026-11-02): build the whole world conceptually first, then fi
   planet in story order at half size; that file is not committed, 13 MB).
 - `interiors/rooms/`: the room shells: placeholder tiles for every kit part and a sheet per room style, from
   `../mapping/rooms.csv` ([`interiors/rooms/README.md`](interiors/rooms/README.md)). Each interior yaml names its style in a `room:` block.
+- `interiors/placeholders/`: the interior objects (furniture, machines, set pieces): a placeholder PNG per
+  `interior` row of `../mapping/world_art.csv` and a sheet per planet ([`interiors/placeholders/README.md`](interiors/placeholders/README.md)).
+  Each room lists the objects it needs in `objects:`.
 - `greybox/`: rendered greybox pieces (`<planet>_<name>.png`), kit sheets (`_kit-*.png`) and areas in relief
   (`areas/`), written by `tools/greybox`.
 

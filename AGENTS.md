@@ -23,7 +23,7 @@ alternate telling. Twelve planets plus a post-game; PokéNAV is called **StarNAV
 | `wiki/mapping/world_art.csv` | Every world piece (building, object, nature, landmark, interior kit) with its status, model and notes. |
 | `wiki/mapping/hyperlanes.csv` | The planet graph: one row per ship link (hangar at each end, unlock). `blockout check` validates it; `blockout guide` reports it with the balance check. |
 | `wiki/mapping/terrain.csv` | Every terrain tile the game needs: one row per tileset, item and role (`terrain:general:cliff:ne`), with the vanilla metatile it uses (`use`, empty = missing, placeholder), planets, areas and status. Real-size sheets in `wiki/world/greybox/sheets/`. `terrain_areas.csv` links areas to rows. |
-| `wiki/mapping/rooms.csv` | Interior room shells: every room style and its kit parts (size, hit box, placeholder PNG). Each interior yaml names its style in `room:`. No tool yet ([`wiki/world/interiors/rooms/`](wiki/world/interiors/rooms/README.md)). |
+| `wiki/mapping/rooms.csv` | Interior room shells: every room style and its kit parts (size, hit box, placeholder PNG). Each interior yaml names its style in `room:`. No tool yet ([`wiki/world/interiors/rooms/`](wiki/world/interiors/rooms/README.md)). Furniture and set pieces are the `interior` rows of `world_art.csv`, listed per room in `objects:` ([`wiki/world/interiors/placeholders/`](wiki/world/interiors/placeholders/README.md)). |
 | `tools/` | One tool per asset group, listed in [`tools/README.md`](tools/README.md); TODO marks the ones with work left. |
 
 ## Standing rules (from the owner)
