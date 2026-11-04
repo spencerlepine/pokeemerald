@@ -1,0 +1,45 @@
+# Dewback trough (art:tatooine:dewback-trough), hit box 2x1, drawn 2x1.
+# Reference: the dewback mounts of Mos Eisley (dewback-trough__db_dewback, __web_1-3) are watered and tied
+# up in the town squares. A long low stone trough with thick rounded lips and dark water inside, on two
+# squat feet, and a hitching post with a ring at its east end.
+# Axes: x east, y north, z up, origin on the ground at the centre of the south edge.
+name: tatooine_dewback-trough
+art: art:tatooine:dewback-trough
+palette: greybox
+cells: [2, 1]
+foot: [16, 15]
+footprint: 1
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  stone: {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  lip:   {ramp: light, bands: [0.2, 0.5, 0.85]}
+  water: {ramp: dark,  bands: [0.6, 0.85, 0.95]}
+  post:  {ramp: dark,  bands: [0.1, 0.45, 0.8]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 1}
+box: [32, 16]
+groups: {body: {}, water: {}}
+params: {tw: 0.7, y0: 0.08, y1: 0.56, h: 0.28}
+parts:
+  # the trough: a stone tub, slightly wider at the top, hollowed out, water low inside
+  - {name: tub, mat: stone, prism: {poly: [["=-tw", "=y0"], ["=tw", "=y0"], ["=tw", "=y1"], ["=-tw", "=y1"]], z: [0.04, "=h"], top: 1.06}}
+  - {name: lip, mat: lip, box: {c: [0, "=(y0 + y1) / 2", "=h"], half: ["=tw + 0.04", "=(y1 - y0) / 2 + 0.03", 0.05], radius: 0.04}}
+  - {name: hollow, mat: stone, op: subtract, box: {c: [0, "=(y0 + y1) / 2", "=h"], half: ["=tw - 0.1", "=(y1 - y0) / 2 - 0.09", 0.2], radius: 0.03}}
+  - {name: water, mat: water, group: water, box: {c: [0, "=(y0 + y1) / 2", "=h - 0.12"], half: ["=tw - 0.1", "=(y1 - y0) / 2 - 0.09", 0.02]}}
+  - {name: foot-w, mat: stone, box: {c: ["=-tw + 0.16", "=(y0 + y1) / 2", 0.03], half: [0.12, 0.2, 0.04], radius: 0.02}}
+  - {name: foot-e, mat: stone, box: {c: ["=tw - 0.16", "=(y0 + y1) / 2", 0.03], half: [0.12, 0.2, 0.04], radius: 0.02}}
+  # the hitching post, east end: a dark pole with a cap and a tie ring
+  - {name: post, mat: post, box: {c: [0.86, 0.2, 0.25], half: [0.05, 0.05, 0.25], radius: 0.02}}
+  - {name: post-cap, mat: lip, box: {c: [0.86, 0.2, 0.5], half: [0.07, 0.07, 0.04], radius: 0.03}}
+  - {ring: {name: tie-ring, mat: lip, c: [0.86, 0.13, 0.36], axis: y, r: 0.07, size: [0.05, 0.03, 0.03], n: 6}}
+variants:
+  trough: {}
+  # dry: no water, cracked lip, no post
+  dry:
+    drop: ["water", "post", "post-cap", "tie-ring/*"]

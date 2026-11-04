@@ -1,0 +1,72 @@
+# Crashed speeder bike (art:endor:crashed-speeder-bike), hit box 2x1, drawn 2x2.
+# Reference: the 74-Z speeder bike (Return of the Jedi; wiki/art/concept/endor/crashed-speeder-bike__web_3.jpg).
+# The long thin body with the seat and the boxy engine at the back, two long steering rods reaching
+# forward to the pair of steering vanes, the small gun under the nose. Modelled level, nose east;
+# posed tipped on its side where it hit a redwood root (placed against a trunk on the map), one vane
+# snapped off and lying on the ground.
+# Axes: x east (forward), y north, z up, origin on the ground under the seat.
+name: endor_crashed-speeder-bike
+art: art:endor:crashed-speeder-bike
+palette: greybox
+cells: [2, 2]
+foot: [13, 22]
+footprint: 1
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  hull:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  plate: {ramp: light, bands: [0.15, 0.5, 0.82]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  bark:  {ramp: mid,   bands: [0.1, 0.4, 0.75]}
+  dirt:  {ramp: mid,   bands: [0.2, 0.5, 0.8]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 1}
+box: [32, 16]
+parts:
+  # the body: the engine block at the back, the seat, the nose tapering forward
+  - name: engine
+    mat: hull
+    hull: {points: [[-0.75, -0.2, 0.15], [-0.75, 0.2, 0.15], [-0.75, -0.18, 0.5], [-0.75, 0.18, 0.5],
+                    [-0.25, -0.24, 0.12], [-0.25, 0.24, 0.12], [-0.25, -0.2, 0.52], [-0.25, 0.2, 0.52]], round: 0.03}
+  - {name: exhaust, mat: dark, box: {c: [-0.78, 0, 0.32], half: [0.03, 0.14, 0.13], radius: 0.01}}
+  - name: nose
+    mat: plate
+    extrude: {axis: x, span: [-0.3, 0.45], profile: [[-0.17, 0.15], [0.17, 0.15], [0.14, 0.45], [-0.14, 0.45]], end: [0.6, 0.55], round: 0.03}
+  - {name: seat, mat: dark, box: {c: [-0.3, 0, 0.55], half: [0.18, 0.1, 0.04], radius: 0.02}}
+  - {name: bars, mat: dark, box: {c: [0.05, 0, 0.6], half: [0.03, 0.22, 0.03], radius: 0.01}}
+  # the two steering rods and the vanes at their tips
+  - {name: rod-l, mat: dark, cylinder: {a: [0.35, 0.07, 0.3], b: [1.05, 0.08, 0.3], r1: 0.025}}
+  - {name: rod-r, mat: dark, cylinder: {a: [0.35, -0.07, 0.3], b: [1.05, -0.08, 0.3], r1: 0.025}}
+  - name: vane-l
+    mat: plate
+    prism: {poly: [[0.85, 0.08], [1.1, 0.08], [1.1, 0.12], [0.85, 0.12]], z: [0.1, 0.5], top: [0.6, 1], lean: [0.08, 0], round: 0.01}
+  - name: vane-r
+    mat: plate
+    prism: {poly: [[0.85, -0.12], [1.1, -0.12], [1.1, -0.08], [0.85, -0.08]], z: [0.1, 0.5], top: [0.6, 1], lean: [0.08, 0], round: 0.01}
+ground:
+  # the redwood root it hit, and dirt thrown up
+  - {name: root, mat: bark, cone: {a: [0.92, 0.5, 0.0], b: [0.8, -0.2, 0.08], r1: 0.17, r2: 0.09}}
+  - {name: dirt, mat: dirt, ellipsoid: {c: [0.4, -0.25, 0], r: [0.3, 0.08, 0.06]}}
+variants:
+  # tipped onto its side against the root, the south vane snapped off
+  crashed:
+    tilt: [0, -35]
+    pivot: [0, 0]
+    turn: 10
+    scale: 0.95
+    drop: ["vane-r"]
+    ground:
+      - {name: root, mat: bark, cone: {a: [0.92, 0.5, 0.0], b: [0.8, -0.2, 0.08], r1: 0.17, r2: 0.09}}
+      - {name: lost-vane, mat: plate, prism: {poly: [[-0.1, -0.33], [0.2, -0.36], [0.18, -0.22], [-0.08, -0.2]], z: [0, 0.04], round: 0.01}}
+  # landed whole, nose in the dirt
+  nose-down:
+    tilt: [-10, 0]
+    pivot: [0.6, 0]
+    foot: [13, 22]
+    sink: 0.05
+    scale: 0.9

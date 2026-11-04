@@ -1,0 +1,56 @@
+# Sarlacc pit (art:tatooine:sarlacc-pit), hit box 4x4, drawn 4x4: a no-walk landmark ring.
+# Reference: the Great Pit of Carkoon (Return of the Jedi). A wide sand funnel with a raised rim, its
+# slopes falling to a dark throat ringed with inward-pointing teeth, the beak open in the middle and a
+# few tentacles reaching up out of the throat.
+# Axes: x east, y north, z up; origin on the ground at the pit's centre.
+name: tatooine_sarlacc-pit
+art: art:tatooine:sarlacc-pit
+palette: greybox
+cells: [4, 4]
+foot: [32, 33]
+scale: 0.97
+footprint: 4
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  sand:   {ramp: bone, bands: [0.3, 0.6, 0.9]}
+  slope:  {ramp: bone, bands: [0.5, 0.72, 0.86]}
+  throat: {ramp: dark, bands: [0.3, 0.6, 0.9]}
+  flesh:  {ramp: mid,  bands: [0.25, 0.55, 0.85]}
+  tooth:  {ramp: light, bands: [0.2, 0.5, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 4}
+box: [64, 62]
+groups: {body: {}, rim: {}}   # the funnel is cut from the rim only
+parts:
+  # the rim: a low mound of sand, the funnel cut out of it; the pit is modelled above the ground (the
+  # renderer cuts everything below z = 0), so its slopes fall from the rim to a floor at z = 0.1
+  - {name: rim, group: rim, mat: sand, ellipsoid: {c: [0, 0.1, 0], r: [1.95, 1.72, 0.7]}}
+  - {name: floor, mat: slope, cylinder: {a: [0, 0.1, 0], b: [0, 0.1, 0.1], r1: 1.6}}
+  - {name: funnel, group: rim, mat: slope, op: subtract, cone: {a: [0, 0.1, 0.1], b: [0, 0.1, 0.95], r1: 0.72, r2: 1.75}}
+  # the throat: a dark hole with a fleshy lip
+  - {name: lip, mat: flesh, cylinder: {a: [0, 0.1, 0.08], b: [0, 0.1, 0.17], r1: 0.78, r2: 0.7}}
+  - {name: throat, mat: throat, cylinder: {a: [0, 0.1, 0.1], b: [0, 0.1, 0.2], r1: 0.6}}
+  # teeth round the throat, pointing in
+  - ring: {name: teeth, c: [0, 0.1, 0.24], axis: z, r: 0.66, n: 14, size: [0.12, 0.26, 0.2], round: 0.02}
+    mat: tooth
+  # the beak, open, rising out of the throat
+  - {name: beak-w, mat: tooth, cone: {a: [-0.14, 0.12, 0.15], b: [-0.32, 0.02, 0.7], r1: 0.182, r2: 0.042}}
+  - {name: beak-e, mat: tooth, cone: {a: [0.14, 0.12, 0.15], b: [0.3, 0.04, 0.65], r1: 0.182, r2: 0.042}}
+  # tentacles reaching up and out over the slope
+  - {name: tent-1a, mat: flesh, cone: {a: [-0.45, 0.2, 0.15], b: [-0.75, 0.0, 0.65], r1: 0.14, r2: 0.112}}
+  - {name: tent-1b, mat: flesh, cone: {a: [-0.75, 0.0, 0.65], b: [-1.0, -0.25, 0.57], r1: 0.112, r2: 0.056}}
+  - {name: tent-2a, mat: flesh, cone: {a: [0.4, 0.3, 0.15], b: [0.85, 0.35, 0.75], r1: 0.14, r2: 0.112}}
+  - {name: tent-2b, mat: flesh, cone: {a: [0.85, 0.35, 0.75], b: [1.15, 0.25, 0.65], r1: 0.112, r2: 0.056}}
+  - {name: tent-3a, mat: flesh, cone: {a: [0.2, -0.3, 0.15], b: [0.55, -0.55, 0.5], r1: 0.126, r2: 0.098}}
+  - {name: tent-3b, mat: flesh, cone: {a: [0.55, -0.55, 0.5], b: [0.85, -0.65, 0.37], r1: 0.098, r2: 0.049}}
+variants:
+  awake: {}
+  # asleep: the beak shut and the tentacles drawn in, only the funnel and the teeth
+  asleep:
+    drop: ["tent-*", "beak-*"]

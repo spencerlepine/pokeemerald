@@ -1,0 +1,48 @@
+# Canyon cliffs (art:tatooine:canyon-cliffs), hit box 1x1, drawn 1x2: one tiling piece of cliff face.
+# Reference: the Jundland Wastes canyon walls (A New Hope, the Battlefront Tatooine maps). Flat-bedded
+# sandstone in steps: hard ledges stick out, soft layers are pinched back and dark, and vertical crevices
+# split the face. The piece is as wide as its cell, so it tiles edge to edge along a ridge.
+# Axes: x east, y north, z up; origin on the ground at the south edge of the cell.
+name: tatooine_canyon-cliffs
+art: art:tatooine:canyon-cliffs
+palette: greybox
+cells: [1, 2]
+foot: [8, 31]
+footprint: 1
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  rock: {ramp: mid,  bands: [0.25, 0.5, 0.8]}
+  top:  {ramp: bone, bands: [0.25, 0.55, 0.85]}
+  seam: {ramp: dark, bands: [0.25, 0.55, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 1}
+box: [16, 16]
+params:
+  w: 0.5          # half the cell
+parts:
+  # the face steps back as it rises: three hard beds over dark soft seams; behind it the lit plateau
+  - {name: bed-1, mat: rock, box: {c: [0, 0.5, 0.2], half: ["=w", 0.5, 0.2], radius: 0.02}}
+  - {name: seam-1, mat: seam, box: {c: [0, 0.56, 0.44], half: ["=w", 0.44, 0.05]}}
+  - {name: bed-2, mat: rock, box: {c: [0, 0.57, 0.64], half: ["=w", 0.43, 0.17], radius: 0.02}}
+  - {name: seam-2, mat: seam, box: {c: [0, 0.63, 0.84], half: ["=w", 0.37, 0.04]}}
+  - {name: bed-3, mat: rock, box: {c: [0, 0.64, 0.95], half: ["=w", 0.36, 0.08], radius: 0.02}}
+  - {name: top, mat: top, box: {c: [0, 0.64, 1.04], half: ["=w", 0.35, 0.02]}}
+  # a vertical crevice splitting the face
+  - {name: crevice, mat: seam, op: subtract, box: {c: [0.12, 0.0, 0.85], half: [0.045, 0.32, 0.68]}}
+  - {name: crevice-back, mat: seam, box: {c: [0.12, 0.34, 0.5], half: [0.06, 0.04, 0.6]}}
+variants:
+  crevice: {}
+  # a plain face, to alternate with the crevice one
+  plain:
+    drop: ["crevice", "crevice-back"]
+  # a fallen block at the foot of the face
+  scree:
+    drop: ["crevice", "crevice-back"]
+    ground:
+      - {name: block, mat: rock, hull: {round: 0.03, points: [[-0.32, 0.0, 0], [0.12, 0.0, 0], [0.15, 0.1, 0], [-0.3, 0.12, 0], [-0.27, 0.02, 0.2], [0.08, 0.02, 0.18], [0.1, 0.09, 0.18]]}}

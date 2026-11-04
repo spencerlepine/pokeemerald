@@ -1,0 +1,70 @@
+# Cantina interior (art:tatooine:cantina-interior), a greybox room 14x10, drawn at its size.
+# Reference: the Mos Eisley cantina (A New Hope): a dim, round-walled room with the round bar in the
+# middle (a ring counter round the dispenser column, stools all round it), curved booths in niches in
+# the walls, the band's low stage in the corner, small lamps. Placed after the room's area yaml
+# (mos-eisley-fan-club: stage north-west, bar in the middle, booths east and south-west, door south).
+# Axes: x east, y north, z up; origin at the middle of the room's south edge. Kit: room-shell, niche,
+# booth, round-table.
+name: tatooine_cantina-interior
+art: art:tatooine:cantina-interior
+palette: greybox
+kits: [../scenery/kits/tatooine-rest.yaml]
+cells: [14, 10]
+foot: [112, 160]
+footprint: 1
+box: null
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  floor: {ramp: bone,  bands: [0.3, 0.6, 0.95]}
+  wall:  {ramp: light, bands: [0.2, 0.42, 0.9]}
+  cap:   {ramp: dark,  bands: [0.5, 0.8, 0.98]}
+  base:  {ramp: dark,  bands: [0.3, 0.6, 0.9]}
+  wood:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  metal: {ramp: mid,   bands: [0.2, 0.5, 0.8]}
+  bar:   {ramp: light, bands: [0.25, 0.55, 0.85]}
+  glow:  {ramp: light, emissive: true}
+groups: {body: {}, cut: {}}
+params:
+  bx: 1.4         # the bar's centre
+  by: 4.4
+parts:
+  - {use: room-shell, name: shell, with: {W: 14, D: 10, dx: 0, dw: 1.4}}
+  # booth niches in the north wall, and the band's stage in the north-west corner
+  - {use: niche, name: niche-1, at: [3.6, 7.98, 0], with: {w: 1.6, h: 1.4, z0: 0.0}}
+  - {use: niche, name: niche-2, at: [5.6, 7.98, 0], with: {w: 1.6, h: 1.4, z0: 0.0}}
+  - {use: booth, name: booth-1, at: [3.6, 7.75, 0], with: {r: 0.75}}
+  - {use: booth, name: booth-2, at: [5.6, 7.75, 0], with: {r: 0.75}}
+  - {name: stage, mat: wood, prism: {poly: [[-6.8, 6.1], [-4.6, 6.0], [-3.6, 6.6], [-3.4, 7.95], [-6.8, 7.95]], z: [0, 0.3], round: 0.04}}
+  - {name: stage-edge, mat: base, prism: {poly: [[-6.8, 6.0], [-4.6, 5.9], [-3.5, 6.5], [-3.3, 7.95], [-3.4, 7.95], [-3.6, 6.6], [-4.6, 6.0], [-6.8, 6.1]], z: [0, 0.22], round: 0.01}}
+  - {name: horn-1, mat: metal, cylinder: {a: [-6.0, 7.1, 0.3], b: [-6.0, 7.1, 0.95], r1: 0.05}}
+  - {name: horn-1-bell, mat: bar, cone: {a: [-6.0, 7.1, 0.95], b: [-6.0, 7.0, 1.2], r1: 0.05, r2: 0.16}}
+  - {name: horn-2, mat: metal, cylinder: {a: [-5.0, 7.0, 0.3], b: [-5.0, 7.0, 0.95], r1: 0.05}}
+  - {name: horn-2-bell, mat: bar, cone: {a: [-5.0, 7.0, 0.95], b: [-5.0, 6.9, 1.2], r1: 0.05, r2: 0.16}}
+  - {name: drum, mat: metal, cylinder: {a: [-4.2, 7.2, 0.3], b: [-4.2, 7.2, 0.7], r1: 0.25}}
+  # the round bar: a ring counter round the dispenser column
+  - {name: bar-ring, mat: wood, group: cut, cylinder: {a: ["=bx", "=by", 0], b: ["=bx", "=by", 0.8], r1: 1.55}}
+  - {name: bar-top, mat: bar, group: cut, cylinder: {a: ["=bx", "=by", 0.8], b: ["=bx", "=by", 0.9], r1: 1.62}}
+  - {name: bar-in, mat: wood, group: cut, op: subtract, cylinder: {a: ["=bx", "=by", 0.05], b: ["=bx", "=by", 1.2], r1: 1.1}}
+  - {name: bar-floor, mat: base, cylinder: {a: ["=bx", "=by", 0], b: ["=bx", "=by", 0.06], r1: 1.12}}
+  - {name: dispenser, mat: metal, cylinder: {a: ["=bx", "=by", 0], b: ["=bx", "=by", 1.5], r1: 0.42, r2: 0.36}}
+  - {name: dispenser-top, mat: bar, cylinder: {a: ["=bx", "=by", 1.5], b: ["=bx", "=by", 1.62], r1: 0.5}}
+  - ring: {name: stools, c: ["=bx", "=by", 0.2], axis: z, r: 1.95, n: 10, size: [0.3, 0.3, 0.4], round: 0.06, start: 18}
+    mat: wood
+  # a booth on the east wall and one in the south-west corner
+  - {use: booth, name: booth-3, at: [5.9, 2.8, 0], turn: 90, with: {r: 0.75}}
+  - {use: booth, name: booth-4, at: [-5.8, 1.4, 0], turn: -90, with: {r: 0.75}}
+  # a free table near the stage
+  - {use: round-table, name: table-1, at: [-2.2, 3.4, 0], with: {r: 0.4}}
+  # dim lamps: small glowing sconces on the north wall
+  - {name: lamp-1, mat: glow, ellipsoid: {c: [-2.4, 7.9, 1.3], r: [0.14, 0.08, 0.12]}}
+  - {name: lamp-2, mat: glow, ellipsoid: {c: [0.6, 7.9, 1.3], r: [0.14, 0.08, 0.12]}}
+  - {name: lamp-3, mat: glow, ellipsoid: {c: [4.6, 7.9, 1.55], r: [0.14, 0.08, 0.12]}}
+  - {name: bar-lamp, mat: glow, ellipsoid: {c: ["=bx", "=by - 0.3", 1.7], r: [0.18, 0.1, 0.08]}}
+variants:
+  cantina: {}

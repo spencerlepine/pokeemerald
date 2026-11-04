@@ -1,0 +1,57 @@
+# Cloud City tower (art:bespin:cloud-city-tower), hit box 5x6, drawn 5x8.
+# Reference: the round towers of Cloud City (The Empire Strikes Back, Ralph McQuarrie's paintings):
+# a white drum stepped in tiers like a wedding cake, each tier with a band of dark windows, capped
+# by a glass dome (orange sunset glass in final art) and a short mast. The door faces south.
+# Variants: `tower` (round tiers) and `oct-tower` (the same tiers as octagons).
+# Axes: x east, y north, z up, origin on the ground at the hit box's centre.
+name: bespin_cloud-city-tower
+art: art:bespin:cloud-city-tower
+palette: greybox
+cells: [5, 8]
+foot: [39, 80]
+footprint: 6
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  wall:  {ramp: light, bands: [0.08, 0.25, 0.6]}
+  trim:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  glass: {ramp: dark,  bands: [0.05, 0.35, 0.7]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 6}
+box: [80, 96]
+params: {sq: 1.08}
+parts:
+  # the podium: a wide low drum with a window band, its roof a terrace round the tower
+  - {name: t1, mat: wall, cylinder: {a: [0, 0, 0], b: [0, 0, 0.95], r1: 2.36, r2: 2.34}, squash: {scale: [1, "=sq", 1], center: [0, 0, 0]}}
+  - {name: t1-win, mat: dark, cylinder: {a: [0, 0, 0.45], b: [0, 0, 0.68], r1: 2.37}, squash: {scale: [1, "=sq", 1], center: [0, 0, 0]}}
+  - {name: t1-lip, mat: trim, cylinder: {a: [0, 0, 0.92], b: [0, 0, 1.02], r1: 2.38}, squash: {scale: [1, "=sq", 1], center: [0, 0, 0]}}
+  - {name: door, mat: dark, box: {c: [0, -2.52, 0.32], half: [0.34, 0.08, 0.32], radius: 0.03}}
+  # the tower: a tall drum with two window bands
+  - {name: t2, mat: wall, cylinder: {a: [0, 0, 0.9], b: [0, 0, 3.0], r1: 1.6, r2: 1.5}, squash: {scale: [1, "=sq", 1], center: [0, 0, 0]}}
+  - {name: t2-win, mat: dark, cylinder: {a: [0, 0, 1.45], b: [0, 0, 1.68], r1: 1.59}, squash: {scale: [1, "=sq", 1], center: [0, 0, 0]}}
+  - {name: t2-win2, mat: dark, cylinder: {a: [0, 0, 2.2], b: [0, 0, 2.43], r1: 1.56}, squash: {scale: [1, "=sq", 1], center: [0, 0, 0]}}
+  - {name: t2-lip, mat: trim, cylinder: {a: [0, 0, 2.95], b: [0, 0, 3.08], r1: 1.66}, squash: {scale: [1, "=sq", 1], center: [0, 0, 0]}}
+  # the glass dome and mast
+  - {name: dome, mat: glass, ellipsoid: {c: [0, 0, 3.0], r: [1.35, 1.45, 0.85]}}
+  - {name: mast, mat: wall, cylinder: {a: [0, 0, 3.7], b: [0, 0, 4.4], r1: 0.1, r2: 0.04}}
+variants:
+  tower: {}
+  # the same tiers as octagons, flat faces and a faceted glass cap
+  oct-tower:
+    parts:
+      - {name: t1, mat: wall, prism: {poly: [[2.310, 1.033], [0.957, 2.494], [-0.957, 2.494], [-2.310, 1.033], [-2.310, -1.033], [-0.957, -2.494], [0.957, -2.494], [2.310, -1.033]], z: [0, 0.95], round: 0.03}}
+      - {name: t1-win, mat: dark, prism: {poly: [[2.328, 1.042], [0.964, 2.514], [-0.964, 2.514], [-2.328, 1.042], [-2.328, -1.042], [-0.964, -2.514], [0.964, -2.514], [2.328, -1.042]], z: [0.45, 0.68], round: 0.0}}
+      - {name: t1-lip, mat: trim, prism: {poly: [[2.347, 1.050], [0.972, 2.534], [-0.972, 2.534], [-2.347, 1.050], [-2.347, -1.050], [-0.972, -2.534], [0.972, -2.534], [2.347, -1.050]], z: [0.92, 1.02], round: 0.02}}
+      - {name: door, mat: dark, box: {c: [0, -2.52, 0.32], half: [0.34, 0.08, 0.32], radius: 0.03}}
+      - {name: t2, mat: wall, prism: {poly: [[1.524, 0.682], [0.631, 1.646], [-0.631, 1.646], [-1.524, 0.682], [-1.524, -0.682], [-0.631, -1.646], [0.631, -1.646], [1.524, -0.682]], z: [0.9, 3.0], top: 0.94, round: 0.03}}
+      - {name: t2-win, mat: dark, prism: {poly: [[1.515, 0.678], [0.628, 1.636], [-0.628, 1.636], [-1.515, 0.678], [-1.515, -0.678], [-0.628, -1.636], [0.628, -1.636], [1.515, -0.678]], z: [1.45, 1.68], round: 0.0}}
+      - {name: t2-win2, mat: dark, prism: {poly: [[1.478, 0.661], [0.612, 1.596], [-0.612, 1.596], [-1.478, 0.661], [-1.478, -0.661], [-0.612, -1.596], [0.612, -1.596], [1.478, -0.661]], z: [2.2, 2.43], round: 0.0}}
+      - {name: t2-lip, mat: trim, prism: {poly: [[1.552, 0.694], [0.643, 1.676], [-0.643, 1.676], [-1.552, 0.694], [-1.552, -0.694], [-0.643, -1.676], [0.643, -1.676], [1.552, -0.694]], z: [2.95, 3.08], round: 0.02}}
+      - {name: dome, mat: glass, prism: {poly: [[1.293, 0.579], [0.536, 1.397], [-0.536, 1.397], [-1.293, 0.579], [-1.293, -0.579], [-0.536, -1.397], [0.536, -1.397], [1.293, -0.579]], z: [3.0, 3.75], top: 0.45, round: 0.03}}
+      - {name: mast, mat: wall, cylinder: {a: [0, 0, 3.7], b: [0, 0, 4.4], r1: 0.1, r2: 0.04}}

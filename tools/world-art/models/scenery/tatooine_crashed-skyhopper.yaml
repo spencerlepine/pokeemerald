@@ -1,0 +1,71 @@
+# Crashed skyhopper (art:tatooine:crashed-skyhopper), hit box 3x2, drawn 3x3: the top row stands over the
+# cell behind. Reference: the Incom T-16 skyhopper (A New Hope; Luke's toy model, the Darkstar kit side
+# view): a slim fuselage with a pointed nose, a tall swept tail wing standing up from its back and two
+# lower wings angled down to the sides. A farm kid took Beggar's Canyon too fast: it is nose-first in a
+# heap of rock, tail up, one lower wing snapped off and lying in the sand.
+# Modelled level, nose east (+x); posed nose-down. `mirror` gives the west-facing one.
+# Axes: x east, y north, z up; origin on the ground at the south edge of the hit box, centred.
+name: tatooine_crashed-skyhopper
+art: art:tatooine:crashed-skyhopper
+palette: greybox
+cells: [3, 3]
+foot: [23, 46]
+scale: 0.88
+footprint: 2
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  hull:  {ramp: light, bands: [0.25, 0.55, 0.85]}
+  wing:  {ramp: mid,   bands: [0.2, 0.5, 0.85]}
+  dark:  {ramp: dark,  bands: [0.3, 0.6, 0.9]}
+  rock:  {ramp: mid,   bands: [0.3, 0.55, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 2}
+box: [44, 28]
+tilt: [0, 30]
+pivot: [1.1, 0.9]
+sink: 0.15
+params:
+  fy: 0.9         # the fuselage's line (m north)
+  fz: 0.55        # and its height
+parts:
+  # fuselage: a slim triangular-section body tapering to the pointed nose
+  - name: body
+    mat: hull
+    extrude: {axis: x, span: [-1.15, 0.7], end: 0.85, round: 0.03, profile: [["=fy - 0.17", "=fz - 0.12"], ["=fy + 0.17", "=fz - 0.12"], ["=fy + 0.1", "=fz + 0.14"], ["=fy - 0.1", "=fz + 0.14"]]}
+  - name: nose
+    mat: hull
+    hull: {round: 0.02, points: [[0.7, "=fy - 0.15", "=fz - 0.11"], [0.7, "=fy + 0.15", "=fz - 0.11"], [0.7, "=fy - 0.09", "=fz + 0.12"], [0.7, "=fy + 0.09", "=fz + 0.12"], [1.35, "=fy", "=fz - 0.02"]]}
+  - {name: canopy, mat: dark, hull: {round: 0.02, points: [[0.0, "=fy - 0.09", "=fz + 0.13"], [0.5, "=fy - 0.07", "=fz + 0.12"], [0.0, "=fy + 0.09", "=fz + 0.13"], [0.5, "=fy + 0.07", "=fz + 0.12"], [0.15, "=fy", "=fz + 0.24"]]}}
+  - {name: engine, mat: dark, cylinder: {a: [-1.25, "=fy", "=fz"], b: [-1.1, "=fy", "=fz"], r1: 0.13}}
+  # the tall tail wing, swept back, standing up from the back: faces south, so it reads
+  - name: fin
+    mat: wing
+    extrude: {axis: y, span: ["=fy - 0.03", "=fy + 0.03"], round: 0.02, profile: [[-1.1, "=fz + 0.1"], [0.1, "=fz + 0.1"], [-0.72, "=fz + 1.08"], [-1.05, "=fz + 1.08"]]}
+  - {name: fin-stripe, mat: dark, box: {c: [-0.87, "=fy - 0.04", "=fz + 0.9"], half: [0.2, 0.02, 0.06]}}
+  # the two lower wings, angled down and out to each side
+  - name: wing-s
+    mat: wing
+    hull: {round: 0.02, points: [[-1.05, "=fy - 0.12", "=fz - 0.05"], [0.0, "=fy - 0.12", "=fz - 0.05"], [-0.75, "=fy - 0.6", "=fz - 0.5"], [-1.0, "=fy - 0.6", "=fz - 0.5"],
+                                 [-1.05, "=fy - 0.07", "=fz - 0.05"], [0.0, "=fy - 0.07", "=fz - 0.05"], [-0.75, "=fy - 0.55", "=fz - 0.48"], [-1.0, "=fy - 0.55", "=fz - 0.48"]]}
+  - name: wing-n
+    mat: wing
+    hull: {round: 0.02, points: [[-1.05, "=fy + 0.12", "=fz - 0.05"], [0.0, "=fy + 0.12", "=fz - 0.05"], [-0.75, "=fy + 0.6", "=fz - 0.5"], [-1.0, "=fy + 0.6", "=fz - 0.5"],
+                                 [-1.05, "=fy + 0.07", "=fz - 0.05"], [0.0, "=fy + 0.07", "=fz - 0.05"], [-0.75, "=fy + 0.55", "=fz - 0.48"], [-1.0, "=fy + 0.55", "=fz - 0.48"]]}
+ground:
+  # the rock heap the nose is buried in
+  - {name: heap, mat: rock, hull: {round: 0.05, points: [[0.55, 0.3, 0], [1.42, 0.25, 0], [1.45, 1.5, 0], [0.6, 1.55, 0], [0.8, 0.5, 0.42], [1.25, 0.6, 0.5], [1.2, 1.2, 0.45], [0.85, 1.15, 0.4]]}}
+  - {name: rock-s, mat: rock, hull: {round: 0.04, points: [[0.3, 0.05, 0], [0.75, 0.02, 0], [0.75, 0.32, 0], [0.35, 0.3, 0], [0.5, 0.15, 0.22]]}}
+variants:
+  crashed: {}
+  # a lower wing snapped off, lying in the sand to the south-west
+  wing-lost:
+    drop: ["wing-s"]
+    ground:
+      - {name: heap, mat: rock, hull: {round: 0.05, points: [[0.55, 0.3, 0], [1.42, 0.25, 0], [1.45, 1.5, 0], [0.6, 1.55, 0], [0.8, 0.5, 0.42], [1.25, 0.6, 0.5], [1.2, 1.2, 0.45], [0.85, 1.15, 0.4]]}}
+      - {name: lost-wing, mat: wing, prism: {poly: [[-1.4, 0.05], [-0.4, 0.1], [-0.65, 0.5], [-1.3, 0.45]], z: [0, 0.06], round: 0.02}}

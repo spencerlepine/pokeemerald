@@ -1,0 +1,54 @@
+# Tython standing stones (art:grand-arena:tython-standing-stones), hit box 5x5, drawn 5x7.
+# Reference: the Force stones of Tython (The Old Republic, The Bad Batch / concept art in the wiki): a
+# ring of tall rough monoliths on a grassy headland, each cut with a glowing glyph, round a sunken
+# round stone set in the turf that glows at the centre. Seven stones, each turned to face the centre.
+# Axes: x east, y north, z up, origin on the ground at the ring's centre.
+name: grand-arena_tython-standing-stones
+art: art:grand-arena:tython-standing-stones
+palette: greybox
+cells: [5, 7]
+foot: [40, 76]
+footprint: 5
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  stone: {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  rim:   {ramp: mid,   bands: [0.4, 0.7, 0.95]}
+  glyph: {ramp: light, bands: [0.0, 0.1, 0.3]}
+  glow:  {ramp: light, bands: [0.0, 0.05, 0.2]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 5}
+box: [80, 80]
+params:
+  r: 1.95          # the ring's radius
+templates:
+  # one standing stone: a tall rough slab, rounder at the top, a glyph cut through it
+  stone:
+    params: {h: 1.9}
+    parts:
+      - {name: slab, mat: stone, hull: {points: [[-0.36, -0.27, 0], [0.36, -0.27, 0], [0.36, 0.27, 0], [-0.36, 0.27, 0],
+                                                 [-0.33, -0.25, "=h * 0.7"], [0.33, -0.24, "=h * 0.72"], [0.31, 0.24, "=h * 0.7"], [-0.31, 0.25, "=h * 0.68"],
+                                                 [-0.15, -0.1, "=h"], [0.17, -0.1, "=h * 0.97"], [0.12, 0.1, "=h"], [-0.12, 0.1, "=h * 0.96"]], round: 0.04}}
+      - {name: glyph, mat: glyph, box: {c: [0, 0, "=h * 0.55"], half: [0.07, 0.3, "=h * 0.22"], radius: 0.01}}
+      - {name: glyph-ring, mat: glyph, box: {c: [0, 0, "=h * 0.55"], half: [0.17, 0.29, 0.05], radius: 0.01}}
+parts:
+  # seven stones round the ring, each turned to face the centre (`turn` = its bearing + 90)
+  - {use: stone, name: s1, at: ["=r * cos(radians(244))", "=r * sin(radians(244))", 0], turn: 334, with: {h: 2.1}}
+  - {use: stone, name: s2, at: ["=r * cos(radians(296))", "=r * sin(radians(296))", 0], turn: 26, with: {h: 2.2}}
+  - {use: stone, name: s3, at: ["=r * cos(radians(348))", "=r * sin(radians(348))", 0], turn: 78, with: {h: 2.0}}
+  - {use: stone, name: s4, at: ["=r * cos(radians(40))", "=r * sin(radians(40))", 0], turn: 130, with: {h: 2.4}}
+  - {use: stone, name: s5, at: ["=r * cos(radians(92))", "=r * sin(radians(92))", 0], turn: 182, with: {h: 2.25}}
+  - {use: stone, name: s6, at: ["=r * cos(radians(140))", "=r * sin(radians(140))", 0], turn: 230, with: {h: 2.35}}
+  - {use: stone, name: s7, at: ["=r * cos(radians(192))", "=r * sin(radians(192))", 0], turn: 282, with: {h: 2.05}}
+  # the centre: a dark round pit with the glowing stone in it
+  - {name: pit-rim, mat: rim, cylinder: {a: [0, 0, 0], b: [0, 0, 0.12], r1: 0.85, r2: 0.8}}
+  - {name: pit, mat: dark, op: subtract, cylinder: {a: [0, 0, 0.02], b: [0, 0, 0.3], r1: 0.66}}
+  - {name: core, mat: glow, group: face, cylinder: {a: [0, 0, 0], b: [0, 0, 0.07], r1: 0.5}}
+  - {name: crystal, mat: glow, group: face, hull: {points: [[-0.14, 0, 0.05], [0.14, 0, 0.05], [0, -0.12, 0.05], [0, 0.12, 0.05], [0.02, 0, 0.62]], round: 0.01}}
+groups: {body: {}, face: {}}

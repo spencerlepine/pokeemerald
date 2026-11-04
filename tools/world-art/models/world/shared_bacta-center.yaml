@@ -1,0 +1,56 @@
+# Bacta Center (art:shared:bacta-center), hit box 5x4, drawn 5x4. Replaces the Pokemon Center.
+# Reference: the domed Tatooine buildings (Mos Espa, Mos Eisley) and the bacta tank (Empire Strikes
+# Back): a square white hall with a parapet, a dome on top with the landing light, a dark
+# glass band (bacta-blue later) round the walls, a porch with a sliding door in the middle of the
+# south face. Each planet repaints it later. Axes: x east, y north, z up; origin on the ground at the
+# middle of the south wall.
+name: shared_bacta-center
+art: art:shared:bacta-center
+palette: greybox
+kits: [../scenery/kits/shared-a.yaml]
+cells: [5, 4]
+foot: [40, 57]
+footprint: 4
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  wall:  {ramp: light, bands: [-0.1, 0.2, 0.6]}
+  roof:  {ramp: mid,   bands: [0.2, 0.5, 0.85]}
+  dome:  {ramp: light, bands: [0.2, 0.5, 0.85]}
+  trim:  {ramp: light, bands: [0.1, 0.45, 0.8]}
+  glass: {ramp: dark,  bands: [0.1, 0.4, 0.8]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  plinth: {ramp: mid,  bands: [0.3, 0.6, 0.9]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 4}
+box: [78, 62]
+params:
+  W: 2.3           # half width of the hall
+  D: 1.55          # depth of the hall
+  H: 1.5           # wall height
+parts:
+  # the hall, its plinth, the roof deck and the parapet
+  - {name: plinth, mat: plinth, box: {c: [0, "=D/2 + 0.05", 0.08], half: ["=W + 0.04", "=D/2 + 0.06", 0.08], radius: 0.02}}
+  - {name: hall, mat: wall, box: {c: [0, "=D/2 + 0.05", "=H/2"], half: ["=W", "=D/2", "=H/2"], radius: 0.04}}
+  - {name: parapet, mat: trim, box: {c: [0, "=D/2 + 0.05", "=H + 0.04"], half: ["=W + 0.04", "=D/2 + 0.05", 0.08], radius: 0.03}}
+  - {name: deck, mat: roof, box: {c: [0, "=D/2 + 0.05", "=H + 0.08"], half: ["=W - 0.12", "=D/2 - 0.12", 0.05]}}
+  # the glass band round the south wall, broken by the porch
+  - {name: band-w, mat: glass, box: {c: ["=-W/2 - 0.45", 0.03, "=H*0.62"], half: ["=W/2 - 0.55", 0.04, 0.2], radius: 0.01}}
+  - {name: band-e, mat: glass, box: {c: ["=W/2 + 0.45", 0.03, "=H*0.62"], half: ["=W/2 - 0.55", 0.04, 0.2], radius: 0.01}}
+  # the dome and its landing light
+  - {name: dome, mat: dome, ellipsoid: {c: [0, "=D/2 + 0.1", "=H + 0.12"], r: [1.1, 0.72, 0.62]}}
+  - {name: dome-ring, mat: trim, cylinder: {a: [0, "=D/2 + 0.1", "=H + 0.1"], b: [0, "=D/2 + 0.1", "=H + 0.22"], r1: 0.8}, squash: {scale: [1.4, 0.95, 1], center: [0, "=D/2 + 0.1", 0]}}
+  - {name: beacon-post, mat: dark, cylinder: {a: [0, "=D/2 + 0.1", "=H + 0.7"], b: [0, "=D/2 + 0.1", "=H + 0.86"], r1: 0.06}}
+  - {name: beacon, mat: trim, ellipsoid: {c: [0, "=D/2 + 0.1", "=H + 0.9"], r: [0.13, 0.13, 0.1]}}
+  # the porch: a block standing out of the south wall, a flat canopy, a sliding door
+  - {name: porch, mat: wall, box: {c: [0, -0.02, 0.6], half: [0.75, 0.24, 0.6], radius: 0.04}}
+  - {name: canopy, mat: trim, box: {c: [0, -0.06, 1.22], half: [0.88, 0.3, 0.07], radius: 0.03}}
+  - {name: door, mat: glass, box: {c: [0, -0.27, 0.45], half: [0.4, 0.03, 0.45], radius: 0.01}}
+  - {name: door-split, mat: trim, box: {c: [0, -0.3, 0.45], half: [0.025, 0.02, 0.43]}}
+  # a light strip over the door (the red-cross-free sign)
+  - {name: sign, mat: glass, box: {c: [0, -0.37, 1.22], half: [0.45, 0.03, 0.04]}}

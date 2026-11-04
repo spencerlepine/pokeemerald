@@ -1,0 +1,62 @@
+# Jabba's dais (art:new:jabba-dais), hit box 6x3, drawn 6x5.
+# Reference: Jabba's throne dais in his palace (Return of the Jedi; the same dais under Boba Fett in
+# The Book of Boba Fett): a broad low block of weathered stone with canted front corners, round vent
+# ports along its face, Jabba's great cushioned lounge across the back, his hookah on its stand
+# beside it and a lamp post at the other end. Jabba himself is not part of the prop.
+# Axes: x east, y north, z up, origin on the ground at the footprint's south-west corner.
+name: new_jabba-dais
+art: art:new:jabba-dais
+palette: greybox
+cells: [6, 5]
+foot: [0, 80]
+footprint: 3
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  stone:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  top:    {ramp: bone,  bands: [0.45, 0.8, 0.97]}
+  dark:   {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  ring:   {ramp: light, bands: [0.1, 0.45, 0.8]}
+  cushion: {ramp: light, bands: [0.25, 0.55, 0.88]}
+  metal:  {ramp: mid,   bands: [0.4, 0.7, 0.95]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 3}
+box: [94, 46]
+params:
+  h: 0.72         # the dais height
+parts:
+  # the dais block, canted front corners
+  - name: dais
+    mat: stone
+    prism: {poly: [[0.05, 0.6], [0.6, 0.14], [5.35, 0.14], [5.9, 0.6], [5.9, 2.9], [0.05, 2.9]], z: [0, "=h"], top: [0.99, 0.98], round: 0.05}
+  - name: deck
+    mat: top
+    prism: {poly: [[0.2, 0.65], [0.68, 0.24], [5.27, 0.24], [5.75, 0.65], [5.75, 2.8], [0.2, 2.8]], z: ["=h - 0.02", "=h + 0.02"], round: 0.01}
+  # round vent ports along the face
+  - {name: port-1, mat: ring, cylinder: {a: [1.2, 0.16, 0.36], b: [1.2, 0.1, 0.36], r1: 0.2}}
+  - {name: hole-1, mat: dark, cylinder: {a: [1.2, 0.12, 0.36], b: [1.2, 0.08, 0.36], r1: 0.12}}
+  - {name: port-2, mat: ring, cylinder: {a: [2.4, 0.16, 0.36], b: [2.4, 0.1, 0.36], r1: 0.2}}
+  - {name: hole-2, mat: dark, cylinder: {a: [2.4, 0.12, 0.36], b: [2.4, 0.08, 0.36], r1: 0.12}}
+  - {name: port-3, mat: ring, cylinder: {a: [3.55, 0.16, 0.36], b: [3.55, 0.1, 0.36], r1: 0.2}}
+  - {name: hole-3, mat: dark, cylinder: {a: [3.55, 0.12, 0.36], b: [3.55, 0.08, 0.36], r1: 0.12}}
+  - {name: port-4, mat: ring, cylinder: {a: [4.75, 0.16, 0.36], b: [4.75, 0.1, 0.36], r1: 0.2}}
+  - {name: hole-4, mat: dark, cylinder: {a: [4.75, 0.12, 0.36], b: [4.75, 0.08, 0.36], r1: 0.12}}
+  # Jabba's lounge: a long cushioned couch with a raised back and rolled ends
+  - {name: lounge, mat: cushion, box: {c: [2.95, 2.05, "=h + 0.2"], half: [1.7, 0.62, 0.2], radius: 0.15}}
+  - {name: lounge-back, mat: cushion, box: {c: [2.95, 2.62, "=h + 0.5"], half: [1.75, 0.2, 0.48], radius: 0.18}}
+  - {name: roll-w, mat: cushion, cylinder: {a: [1.22, 1.5, "=h + 0.45"], b: [1.22, 2.6, "=h + 0.45"], r1: 0.25}}
+  - {name: roll-e, mat: cushion, cylinder: {a: [4.68, 1.5, "=h + 0.45"], b: [4.68, 2.6, "=h + 0.45"], r1: 0.25}}
+  - {name: lounge-base, mat: stone, box: {c: [2.95, 2.1, "=h + 0.05"], half: [1.85, 0.72, 0.06], radius: 0.03}}
+  # the hookah on its stand, west
+  - {name: hk-stand, mat: dark, cylinder: {a: [0.62, 1.3, "=h"], b: [0.62, 1.3, "=h + 0.55"], r1: 0.08}}
+  - {name: hk-bowl, mat: metal, ellipsoid: {c: [0.62, 1.3, "=h + 0.7"], r: [0.24, 0.24, 0.22]}}
+  - {name: hk-neck, mat: dark, cylinder: {a: [0.62, 1.3, "=h + 0.85"], b: [0.62, 1.3, "=h + 1.15"], r1: 0.05}}
+  - {name: hk-pipe, mat: dark, cone: {a: [0.75, 1.32, "=h + 0.75"], b: [1.15, 1.6, "=h + 0.5"], r1: 0.03, r2: 0.03}}
+  # a lamp post at the east end
+  - {name: lamp-post, mat: dark, cylinder: {a: [5.35, 1.4, "=h"], b: [5.35, 1.4, "=h + 1.2"], r1: 0.05}}
+  - {name: lamp, mat: ring, ellipsoid: {c: [5.35, 1.4, "=h + 1.25"], r: [0.16, 0.16, 0.12]}}

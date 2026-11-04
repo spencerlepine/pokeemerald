@@ -1,0 +1,80 @@
+# Trident drill wreck (art:kamino:trident-wreck), hit box 5x4, drawn 5x7.
+# Reference: the Separatist Trident-class assault ship (The Clone Wars, the Battle of Kamino): a long
+# faceted body tapering to a drill nose, a round viewport on the head, four long jointed tentacle
+# arms with hooked tips. Modelled upright (nose up, as it dived into the sea), then posed sunk to
+# the head and leaning, its four arms reaching up out of the water round it.
+# Axes: x east, y north, z up, origin on the sea at the hit box's centre.
+name: kamino_trident-wreck
+art: art:kamino:trident-wreck
+palette: greybox
+cells: [5, 7]
+foot: [40, 80]
+footprint: 4
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  hull:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  plate: {ramp: light, bands: [0.2, 0.5, 0.85]}
+  arm:   {ramp: mid,   bands: [0.2, 0.5, 0.8]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  foam:  {ramp: bone,  bands: [0.05, 0.3, 0.7]}
+  sea:   {color: shade}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 4}
+box: [80, 64]
+params:
+  lean: -12        # the body leans east (deg)
+  reach: 0         # added to every arm's lift (deg): more = arms more upright
+templates:
+  # the body, upright: a diamond section swelling to the head, then the drill nose
+  body:
+    parts:
+      - name: hull
+        mat: hull
+        hull: {points: [[-0.5, 0, -1.0], [0.5, 0, -1.0], [0, -0.4, -1.0], [0, 0.4, -1.0],
+                        [-0.68, 0, 2.3], [0.68, 0, 2.3], [0, -0.52, 2.3], [0, 0.52, 2.3],
+                        [-0.42, 0, 3.0], [0.42, 0, 3.0], [0, -0.34, 3.0], [0, 0.34, 3.0]], round: 0.04}
+      - name: nose
+        mat: plate
+        hull: {points: [[-0.42, 0, 2.95], [0.42, 0, 2.95], [0, -0.34, 2.95], [0, 0.34, 2.95], [0, 0, 4.0]], round: 0.03}
+      - {name: ring-1, mat: dark, hull: {points: [[-0.36, 0, 3.25], [0.36, 0, 3.25], [0, -0.29, 3.25], [0, 0.29, 3.25], [-0.34, 0, 3.33], [0.34, 0, 3.33], [0, -0.275, 3.33], [0, 0.275, 3.33]], round: 0.0}}
+      - {name: ring-2, mat: dark, hull: {points: [[-0.22, 0, 3.55], [0.22, 0, 3.55], [0, -0.18, 3.55], [0, 0.18, 3.55], [-0.2, 0, 3.63], [0.2, 0, 3.63], [0, -0.165, 3.63], [0, 0.165, 3.63]], round: 0.0}}
+      - {name: eye-rim, mat: plate, cylinder: {a: [0, -0.3, 1.95], b: [0, -0.55, 1.95], r1: 0.26}}
+      - {name: eye, mat: dark, cylinder: {a: [0, -0.4, 1.95], b: [0, -0.58, 1.95], r1: 0.15}}
+      - {name: spine, mat: plate, box: {c: [0, -0.3, 0.6], half: [0.08, 0.2, 1.0], radius: 0.02}}
+  # a tentacle arm rising out of the water: three jointed segments, the last a hooked tip
+  arm:
+    params: {lift: 165, yaw: 0, l1: 1.5, l2: 1.2, l3: 0.9}
+    parts:
+      - name: arm
+        mat: arm
+        limb:
+          root: [0, 0, -0.4]
+          yaw: "=yaw"
+          segments:
+            - {len: "=l1", w: 0.3, d: 0.3, bend: "=lift + reach", taper: 0.9}
+            - {len: "=l2", w: 0.26, d: 0.26, bend: 28, taper: 0.85, joint: {r: 0.18, len: 0.36, mat: dark}}
+            - {len: "=l3", w: 0.22, d: 0.22, bend: 45, taper: 0.35, joint: {r: 0.15, len: 0.3, mat: dark}}
+parts:
+  - {use: body, name: body, at: [0.1, 0.25, -0.2], rot: ["=lean", 0, 8]}
+  - {use: arm, name: arm-ne, at: [1.2, 1.1, 0], with: {yaw: 20, lift: 152, l1: 2.0}}
+  - {use: arm, name: arm-nw, at: [-1.1, 1.0, 0], with: {yaw: 165, lift: 150, l1: 1.8}}
+  - {use: arm, name: arm-se, at: [1.4, -0.8, 0], with: {yaw: -10, lift: 150, l1: 1.2, l2: 0.9, l3: 0.7}}
+  - {use: arm, name: arm-sw, at: [-1.45, -0.7, 0], with: {yaw: 190, lift: 148, l1: 1.1, l2: 0.9, l3: 0.7}}
+ground:
+  - {name: wash, mat: sea, cylinder: {a: [0, 0.1, 0], b: [0, 0.1, 0.01], r1: 1.7}, squash: [1.1, 0.6, 1]}
+  - {name: foam-1, mat: foam, ellipsoid: {c: [0.2, -0.45, 0], r: [0.75, 0.16, 0.08]}}
+  - {name: foam-2, mat: foam, ellipsoid: {c: [-1.6, -0.95, 0], r: [0.35, 0.12, 0.06]}}
+  - {name: foam-3, mat: foam, ellipsoid: {c: [1.6, -1.05, 0], r: [0.35, 0.12, 0.06]}}
+variants:
+  # sunk to the head, all four arms reaching out of the sea
+  reaching: {}
+  # two arms torn off: only stumps of the south pair
+  broken-arms:
+    params: {}
+    drop: ["arm-se/arm/seg1", "arm-se/arm/seg2", "arm-se/arm/joint1", "arm-se/arm/joint2", "arm-nw/arm/seg2", "arm-nw/arm/joint2"]

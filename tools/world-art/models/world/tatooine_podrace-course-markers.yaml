@@ -1,0 +1,58 @@
+# Podrace course markers (art:tatooine:podrace-course-markers), hit box 1x2, drawn 1x2.
+# Reference: the Boonta Eve course (podrace-course-markers__db_podracer, __web_1/2): slim course pylons
+# with a beacon lamp, standing in pairs along the track, and the start gantry over the grid. Here one
+# pylon: a heavy foot, a tapering shaft with a striped marker panel facing the track (south) and a lamp
+# on top. `gantry` is the same post with the gantry beam leaving east (mirror it for the far post).
+# Axes: x east, y north, z up, origin on the ground at the pylon's centre.
+name: tatooine_podrace-course-markers
+art: art:tatooine:podrace-course-markers
+palette: greybox
+cells: [1, 2]
+foot: [8, 27]
+footprint: 2
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  mid:   {ramp: mid,   bands: [0.1, 0.45, 0.8]}
+  light: {ramp: light, bands: [-0.1, 0.35, 0.75]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  lamp:  {ramp: light, bands: [-0.9, -0.8, -0.7]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 2}
+box: [16, 32]
+params: {h: 1.35}
+parts:
+  - {name: foot, mat: dark, prism: {poly: [[-0.26, -0.2], [0.26, -0.2], [0.26, 0.2], [-0.26, 0.2]], z: [0, 0.2], top: 0.75, round: 0.03}}
+  - {name: shaft, mat: mid, prism: {poly: [[-0.13, -0.1], [0.13, -0.1], [0.13, 0.1], [-0.13, 0.1]], z: [0.15, "=h"], top: 0.6, round: 0.02}}
+  # the marker panel on the south face: light with two dark chevron stripes
+  - {name: panel, mat: light, box: {c: [0, -0.14, 0.78], half: [0.2, 0.04, 0.3], radius: 0.02}}
+  - {name: stripe-1, mat: dark, box: {c: [0, -0.19, 0.92], half: [0.2, 0.02, 0.05]}}
+  - {name: stripe-2, mat: dark, box: {c: [0, -0.19, 0.66], half: [0.2, 0.02, 0.05]}}
+  # the beacon lamp on top in a dark cage
+  - {name: cage, mat: dark, cylinder: {a: [0, 0, "=h"], b: [0, 0, "=h + 0.06"], r1: 0.13}}
+  - {name: lamp, mat: lamp, ellipsoid: {c: [0, 0, "=h + 0.14"], r: [0.1, 0.1, 0.1]}}
+variants:
+  pylon: {}
+  # a start-gantry post: the beam leaves east at the top, the lamp moves onto the beam
+  gantry:
+    drop: ["cage", "lamp"]
+    parts:
+      - {name: foot, mat: dark, prism: {poly: [[-0.26, -0.2], [0.26, -0.2], [0.26, 0.2], [-0.26, 0.2]], z: [0, 0.2], top: 0.75, round: 0.03}}
+      - {name: shaft, mat: mid, box: {c: [0, 0, 0.75], half: [0.12, 0.1, 0.65], radius: 0.02}}
+      - {name: panel, mat: light, box: {c: [0, -0.14, 0.7], half: [0.2, 0.04, 0.3], radius: 0.02}}
+      - {name: stripe-1, mat: dark, box: {c: [0, -0.19, 0.84], half: [0.2, 0.02, 0.05]}}
+      - {name: stripe-2, mat: dark, box: {c: [0, -0.19, 0.58], half: [0.2, 0.02, 0.05]}}
+      - {name: beam, mat: mid, box: {c: [0.3, 0, 1.3], half: [0.3, 0.1, 0.1], radius: 0.02}}
+      - {name: beam-lamp, mat: lamp, box: {c: [0.3, -0.12, 1.3], half: [0.12, 0.03, 0.05]}}
+  # knocked flat by a crash, lying north along its hit box, the striped panel facing up
+  down:
+    tilt: [0, 82]
+    foot: [8, 29]
+    turn: 8
+    scale: 0.9
+    drop: ["cage"]

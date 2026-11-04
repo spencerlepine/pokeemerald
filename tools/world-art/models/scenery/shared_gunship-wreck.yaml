@@ -1,0 +1,97 @@
+# Republic gunship wreck (art:shared:gunship-wreck), hit box 7x3, drawn 7x5.
+# Reference: the LAAT/i gunship (Attack of the Clones, The Clone Wars;
+# wiki/art/concept/shared/gunship-wreck__web_1.jpg). A long troop bay, wider at the top, with a big
+# sliding door in each flank; a blunt nose with the cockpit windows on top and the glass ball turrets
+# on its cheeks; the two engine pods slanting up and back above the wing roots; a tapered tail with
+# twin fins. Down on its belly: both wings sheared off at the roots (one lies in front of it), the
+# south troop door slid open to a dark bay.
+# Ship axes: x forward (east), y to its left (north), z up; origin on the ground under the middle.
+# 1 m = 1 cell = 16 px.
+name: shared_gunship-wreck
+art: art:shared:gunship-wreck
+palette: greybox
+cells: [7, 5]
+foot: [63, 55]
+scale: 1.05
+footprint: 3
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  hull:  {ramp: light, bands: [0.25, 0.55, 0.88]}
+  mid:   {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  metal: {ramp: mid,   bands: [0.1, 0.45, 0.8]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  glass: {ramp: dark,  bands: [0.3, 0.6, 0.9]}
+  ball:  {ramp: light, bands: [0.05, 0.35, 0.7]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 3}
+box: [108, 44]
+turn: -5
+sink: 0.08
+tilt: [0, 3]
+templates:
+  # an engine pod above a wing root, slanting up and back
+  pod:
+    parts:
+      - {name: can, mat: mid, cylinder: {a: [0.35, 0, 0], b: [-0.6, 0, 0.6], r1: 0.2, r2: 0.17}}
+      - {name: nozzle, mat: dark, cylinder: {a: [-0.55, 0, 0.57], b: [-0.68, 0, 0.66], r1: 0.15}}
+  # a glass ball turret
+  ball:
+    parts:
+      - {name: glass, mat: ball, ellipsoid: {c: [0, 0, 0], r: [0.24, 0.22, 0.24]}}
+      - {name: gun, mat: dark, cylinder: {a: [0, 0, 0], b: [0.4, 0, -0.05], r1: 0.035}}
+parts:
+  # the troop bay: wider at the top
+  - name: bay
+    mat: hull
+    hull: {points: [[-2.3, -0.62, 0.05], [1.0, -0.62, 0.05], [-2.3, 0.62, 0.05], [1.0, 0.62, 0.05],
+                    [-2.4, -0.85, 0.95], [1.05, -0.85, 0.95], [-2.4, 0.85, 0.95], [1.05, 0.85, 0.95],
+                    [-2.3, -0.62, 1.42], [1.0, -0.62, 1.42], [-2.3, 0.62, 1.42], [1.0, 0.62, 1.42]], round: 0.05}
+  - {name: roof, mat: mid, box: {c: [-0.65, 0, 1.43], half: [1.45, 0.45, 0.05], radius: 0.02}}
+  # the nose: blunt, tapering forward, the cockpit windows on top
+  - name: nose
+    mat: hull
+    extrude: {axis: x, span: [0.95, 2.55], profile: [[-0.6, 0.08], [0.6, 0.08], [0.82, 0.9], [0.55, 1.35], [-0.55, 1.35], [-0.82, 0.9]], end: [0.5, 0.6], round: 0.05}
+  # the cockpit windows on the nose's sloping top
+  - name: canopy
+    mat: glass
+    hull: {points: [[1.15, -0.42, 1.3], [1.15, 0.42, 1.3], [2.0, -0.3, 1.05], [2.0, 0.3, 1.05],
+                    [1.15, -0.42, 1.4], [1.15, 0.42, 1.4], [2.0, -0.3, 1.13], [2.0, 0.3, 1.13]], round: 0.02}
+  - {name: frame, mat: hull, box: {c: [1.55, 0, 1.28], half: [0.42, 0.03, 0.06]}, rot: [17, 0, 0]}
+  - {name: chin, mat: dark, box: {c: [2.55, 0, 0.6], half: [0.06, 0.2, 0.2], radius: 0.02}}
+  - {use: ball, name: ball-s, at: [1.55, -0.8, 0.82]}
+  - {use: ball, name: ball-n, at: [1.55, 0.8, 0.82]}
+  # the tail: tapering back from the bay, twin fins
+  - name: tail
+    mat: hull
+    extrude: {axis: x, span: [-2.3, -3.25], profile: [[-0.6, 0.15], [0.6, 0.15], [0.7, 0.95], [0.5, 1.3], [-0.5, 1.3], [-0.7, 0.95]], end: [0.55, 0.6], round: 0.04}
+  - {name: fin-s, mat: mid, prism: {poly: [[-3.25, -0.36], [-2.6, -0.36], [-2.75, -0.28], [-3.3, -0.28]], z: [1.1, 1.85], top: [0.6, 1], lean: [-0.25, -0.08], round: 0.02}}
+  - {name: fin-n, mat: mid, prism: {poly: [[-3.25, 0.28], [-2.6, 0.28], [-2.75, 0.36], [-3.3, 0.36]], z: [1.1, 1.85], top: [0.6, 1], lean: [-0.25, 0.08], round: 0.02}}
+  # the south troop door slid open: the dark bay, the door panel pushed back along the hull
+  - {name: door-open, mat: dark, box: {c: [-0.3, -0.84, 0.62], half: [0.75, 0.04, 0.42], radius: 0.02}}
+  - {name: door-panel, mat: mid, box: {c: [-1.55, -0.9, 0.66], half: [0.55, 0.04, 0.4], radius: 0.02}}
+  - {name: door-n, mat: mid, box: {c: [-0.3, 0.86, 0.66], half: [0.75, 0.03, 0.4], radius: 0.02}}
+  # the wing roots, sheared, and the engine pods above them
+  - {name: root-s, mat: metal, prism: {poly: [[-0.95, -0.6], [-0.15, -0.6], [-0.55, -1.25], [-1.05, -1.25]], z: [1.3, 1.42], round: 0.02}}
+  - {name: root-n, mat: metal, prism: {poly: [[-0.95, 0.6], [-0.15, 0.6], [-0.55, 1.25], [-1.05, 1.25]], z: [1.3, 1.42], round: 0.02}}
+  - {name: shear-s, mat: dark, box: {c: [-0.8, -1.25, 1.36], half: [0.25, 0.02, 0.06]}}
+  - {use: pod, name: pod-s, at: [-0.7, -0.5, 1.4]}
+  - {use: pod, name: pod-n, at: [-0.7, 0.5, 1.4]}
+ground:
+  # the sheared south wing, lying flat in front of it, its tip ball turret still on
+  - name: wing
+    mat: metal
+    prism: {poly: [[-0.6, -1.45], [1.3, -1.25], [1.15, -1.0], [-0.55, -1.15]], z: [0, 0.1], round: 0.02}
+  - {name: wing-ball, mat: ball, ellipsoid: {c: [1.4, -1.25, 0.14], r: [0.18, 0.16, 0.16]}}
+  - {name: debris, mat: mid, hull: {points: [[-2.0, -1.3, 0], [-1.6, -1.35, 0], [-1.55, -1.1, 0], [-1.95, -1.05, 0], [-1.8, -1.2, 0.14]], round: 0.02}}
+variants:
+  # down on its belly, wings sheared, the south door open
+  crashed: {}
+  # doors shut, wings sheared: a cleaner hulk
+  doors-shut:
+    drop: ["door-open"]

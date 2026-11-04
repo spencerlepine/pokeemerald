@@ -1,0 +1,53 @@
+# Growth pods (art:new:growth-pods), hit box 9x2, drawn 9x4.
+# Reference: the clone growth jars of Tipoca City (Attack of the Clones; The Bad Batch): rounded
+# glass jars, round as bubbles, standing in long rows on a white plinth, each with a metal collar at the foot and a domed
+# cap, fed by a pipe manifold that runs along the back. Axes: x east, y north, z up, origin on the
+# ground at the footprint's south-west corner.
+name: new_growth-pods
+art: art:new:growth-pods
+palette: greybox
+cells: [9, 4]
+foot: [0, 64]
+footprint: 2
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  plinth: {ramp: light, bands: [0.25, 0.55, 0.88]}
+  metal:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  glass:  {ramp: light, bands: [-0.3, 0.1, 0.5]}
+  fluid:  {ramp: mid,   bands: [0.0, 0.35, 0.7]}
+  dark:   {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 2}
+box: [142, 30]
+groups: {body: {}, fluid: {}, glass: {}}
+templates:
+  # one jar: collar, glass body with the fluid line, a dark band, domed cap and a feed pipe to the back
+  jar:
+    params: {r: 0.56, zc: 1.1, rz: 0.66, line: 1.2}
+    parts:
+      - {name: collar, mat: metal, cylinder: {a: [0, 0, 0.3], b: [0, 0, 0.56], r1: 0.42, r2: 0.36}}
+      - {name: fluid, mat: fluid, group: fluid, ellipsoid: {c: [0, 0, "=zc"], r: ["=r", "=r", "=rz"]}}
+      - {name: fluid-cut, mat: fluid, group: fluid, op: subtract, box: {c: [0, 0, "=line + 1"], half: [1, 1, 1]}}
+      - {name: glass, mat: glass, group: glass, ellipsoid: {c: [0, 0, "=zc"], r: ["=r", "=r", "=rz"]}}
+      - {name: glass-cut, mat: glass, group: glass, op: subtract, box: {c: [0, 0, "=line - 1"], half: [1, 1, 1]}}
+      - {name: cap, mat: metal, cylinder: {a: [0, 0, "=zc + rz - 0.12"], b: [0, 0, "=zc + rz + 0.06"], r1: 0.3, r2: 0.26}}
+      - {name: pipe, mat: dark, cylinder: {a: [0, 0, "=zc + rz"], b: [0, 0.75, "=zc + rz"], r1: 0.05}}
+parts:
+  # the plinth the jars stand on
+  - {name: plinth, mat: plinth, prism: {poly: [[0.06, 0.12], [8.9, 0.12], [8.9, 1.5], [0.06, 1.5]], z: [0, 0.3], top: [0.995, 0.92], round: 0.04}}
+  - {name: kick, mat: dark, box: {c: [4.48, 0.16, 0.05], half: [4.38, 0.04, 0.05], radius: 0.0}}
+  # the manifold along the back
+  - {name: manifold, mat: metal, box: {c: [4.48, 1.65, 0.95], half: [4.38, 0.14, 0.95], radius: 0.05}}
+  - {name: duct, mat: dark, cylinder: {a: [0.12, 1.55, 1.76], b: [8.84, 1.55, 1.76], r1: 0.08}}
+  - {use: jar, name: jar-1, at: [0.75, 0.82, 0]}
+  - {use: jar, name: jar-2, at: [2.25, 0.82, 0]}
+  - {use: jar, name: jar-3, at: [3.75, 0.82, 0]}
+  - {use: jar, name: jar-4, at: [5.25, 0.82, 0]}
+  - {use: jar, name: jar-5, at: [6.75, 0.82, 0]}
+  - {use: jar, name: jar-6, at: [8.25, 0.82, 0]}

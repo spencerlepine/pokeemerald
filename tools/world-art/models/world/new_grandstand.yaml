@@ -1,0 +1,71 @@
+# Grandstand (art:new:grandstand), hit box 18x3, drawn 18x5.
+# Reference: the stands of the Mos Espa Grand Arena (The Phantom Menace): long banks of sandstone
+# tiers rising away from the track behind a low parapet, stair aisles cut through them, heavy canted
+# end walls and banner poles along the top. Axes: x east, y north, z up, origin on the ground at the
+# footprint's south-west corner.
+name: new_grandstand
+art: art:new:grandstand
+palette: greybox
+cells: [18, 5]
+foot: [0, 80]
+footprint: 3
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  riser:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  tread:  {ramp: bone,  bands: [0.25, 0.55, 0.85]}
+  wall:   {ramp: light, bands: [0.25, 0.55, 0.88]}
+  dark:   {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  banner: {ramp: light, bands: [0.1, 0.45, 0.8]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 3}
+box: [286, 46]
+parts:
+  # the parapet along the track
+  - {name: parapet, mat: wall, box: {c: [9.0, 0.32, 0.3], half: [8.6, 0.16, 0.3], radius: 0.04}}
+  - {name: parapet-band, mat: dark, box: {c: [9.0, 0.15, 0.36], half: [8.5, 0.01, 0.05], radius: 0.0}}
+  # four tiers rising to the back, a dark line of seat backs under each tread
+  - {name: tier-1, mat: riser, box: {c: [9.0, 1.750, 0.225], half: [8.55, 1.200, 0.225], radius: 0.03}}
+  - {name: tread-1, mat: tread, box: {c: [9.0, 0.750, 0.450], half: [8.53, 0.2, 0.025], radius: 0.01}}
+  - {name: seat-1, mat: dark, box: {c: [9.0, 0.580, 0.330], half: [8.53, 0.03, 0.06], radius: 0.0}}
+  - {name: tier-2, mat: riser, box: {c: [9.0, 2.025, 0.435], half: [8.55, 0.925, 0.435], radius: 0.03}}
+  - {name: tread-2, mat: tread, box: {c: [9.0, 1.300, 0.870], half: [8.53, 0.2, 0.025], radius: 0.01}}
+  - {name: seat-2, mat: dark, box: {c: [9.0, 1.130, 0.750], half: [8.53, 0.03, 0.06], radius: 0.0}}
+  - {name: tier-3, mat: riser, box: {c: [9.0, 2.300, 0.645], half: [8.55, 0.650, 0.645], radius: 0.03}}
+  - {name: tread-3, mat: tread, box: {c: [9.0, 1.850, 1.290], half: [8.53, 0.2, 0.025], radius: 0.01}}
+  - {name: seat-3, mat: dark, box: {c: [9.0, 1.680, 1.170], half: [8.53, 0.03, 0.06], radius: 0.0}}
+  - {name: tier-4, mat: riser, box: {c: [9.0, 2.575, 0.855], half: [8.55, 0.375, 0.855], radius: 0.03}}
+  - {name: tread-4, mat: tread, box: {c: [9.0, 2.400, 1.710], half: [8.53, 0.2, 0.025], radius: 0.01}}
+  - {name: seat-4, mat: dark, box: {c: [9.0, 2.230, 1.590], half: [8.53, 0.03, 0.06], radius: 0.0}}
+  # stair aisles through the tiers
+  - {name: aisle-1-1, mat: wall, box: {c: [4.5, 0.690, 0.240], half: [0.3, 0.16, 0.240], radius: 0.02}}
+  - {name: aisle-1-2, mat: wall, box: {c: [4.5, 1.240, 0.450], half: [0.3, 0.16, 0.450], radius: 0.02}}
+  - {name: aisle-1-3, mat: wall, box: {c: [4.5, 1.790, 0.660], half: [0.3, 0.16, 0.660], radius: 0.02}}
+  - {name: aisle-1-4, mat: wall, box: {c: [4.5, 2.340, 0.870], half: [0.3, 0.16, 0.870], radius: 0.02}}
+  - {name: aisle-2-1, mat: wall, box: {c: [9.0, 0.690, 0.240], half: [0.3, 0.16, 0.240], radius: 0.02}}
+  - {name: aisle-2-2, mat: wall, box: {c: [9.0, 1.240, 0.450], half: [0.3, 0.16, 0.450], radius: 0.02}}
+  - {name: aisle-2-3, mat: wall, box: {c: [9.0, 1.790, 0.660], half: [0.3, 0.16, 0.660], radius: 0.02}}
+  - {name: aisle-2-4, mat: wall, box: {c: [9.0, 2.340, 0.870], half: [0.3, 0.16, 0.870], radius: 0.02}}
+  - {name: aisle-3-1, mat: wall, box: {c: [13.5, 0.690, 0.240], half: [0.3, 0.16, 0.240], radius: 0.02}}
+  - {name: aisle-3-2, mat: wall, box: {c: [13.5, 1.240, 0.450], half: [0.3, 0.16, 0.450], radius: 0.02}}
+  - {name: aisle-3-3, mat: wall, box: {c: [13.5, 1.790, 0.660], half: [0.3, 0.16, 0.660], radius: 0.02}}
+  - {name: aisle-3-4, mat: wall, box: {c: [13.5, 2.340, 0.870], half: [0.3, 0.16, 0.870], radius: 0.02}}
+  # the canted end walls
+  - name: end-w
+    mat: wall
+    prism: {poly: [[0.08, 0.15], [0.55, 0.15], [0.55, 2.95], [0.08, 2.95]], z: [0, 2.0], top: [1.0, 0.4], lean: [0, 0.8], round: 0.05}
+  - name: end-e
+    mat: wall
+    prism: {poly: [[17.42, 0.15], [17.86, 0.15], [17.86, 2.95], [17.42, 2.95]], z: [0, 2.0], top: [1.0, 0.4], lean: [0, 0.8], round: 0.05}
+  # banner poles along the top
+  - {name: pole-1, mat: dark, cylinder: {a: [3.0, 2.7, 1.71], b: [3.0, 2.7, 2.12], r1: 0.04}}
+  - {name: flag-1, mat: banner, box: {c: [3.3, 2.7, 1.98], half: [0.28, 0.02, 0.12], radius: 0.01}}
+  - {name: pole-2, mat: dark, cylinder: {a: [9.0, 2.7, 1.71], b: [9.0, 2.7, 2.12], r1: 0.04}}
+  - {name: flag-2, mat: banner, box: {c: [9.3, 2.7, 1.98], half: [0.28, 0.02, 0.12], radius: 0.01}}
+  - {name: pole-3, mat: dark, cylinder: {a: [15.0, 2.7, 1.71], b: [15.0, 2.7, 2.12], r1: 0.04}}
+  - {name: flag-3, mat: banner, box: {c: [15.3, 2.7, 1.98], half: [0.28, 0.02, 0.12], radius: 0.01}}

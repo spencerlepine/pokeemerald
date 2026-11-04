@@ -1,0 +1,53 @@
+# Fallen redwood (art:endor:fallen-redwood), hit box 10x2, drawn 10x4.
+# Reference: the redwoods of the Endor forest (Return of the Jedi; wiki/art/concept/endor/
+# fern-undergrowth__db_endor.jpg). A whole redwood lying on its side, a wall of bark the player follows:
+# the long trunk with its bark furrows and moss, the root plate torn out of the ground standing up at
+# the west end with roots splaying out of it, the snapped top splintered at the east.
+# Axes: x east (along the trunk), y north, z up, origin on the ground at the trunk's middle.
+name: endor_fallen-redwood
+art: art:endor:fallen-redwood
+palette: greybox
+kits: [kits/endor-dagobah.yaml]
+cells: [10, 4]
+foot: [81, 53]
+scale: 0.95
+drop: ["trunk/moss-*"]      # no moss lumps: on a trunk this big they read as portholes
+footprint: 2
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  bark:  {ramp: mid,   bands: [0.05, 0.42, 0.74]}
+  moss:  {ramp: mid,   bands: [0.1, 0.45, 0.75]}
+  wood:  {ramp: bone,  bands: [0.2, 0.5, 0.85]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  root:  {ramp: mid,   bands: [0.1, 0.45, 0.78]}
+  earth: {ramp: dark,  bands: [0.0, 0.35, 0.7]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 2}
+box: [160, 32]
+params:
+  R: 1.05            # trunk radius
+parts:
+  - {use: log, name: trunk, at: [0.35, 0.05, 0], with: {len: 8.2, r: "=R", taper: 0.8, moss: bark}}
+  - {name: furrow-3, mat: dark, box: {c: [0.6, "=-R * 0.95 + 0.05", "=R * 1.25"], half: [3.4, 0.03, 0.025], radius: 0.01}}
+  # the root plate: a disc of earth and roots torn up, standing at the west end, turned south-west so
+  # its face shows
+  - {name: plate, mat: earth, cylinder: {a: [-3.81, 0.21, 1.08], b: [-4.02, -0.10, 1.11], r1: 1.1, r2: 1.0}}
+  - {name: clod, mat: dark, cylinder: {a: [-4.00, -0.08, 1.11], b: [-4.05, -0.15, 1.12], r1: 0.55}}
+  - name: roots
+    mat: root
+    ring: {c: [-3.96, -0.02, 1.10], axis: [-0.55, -0.83, 0.10], r: 1.12, n: 12, size: [0.26, 0.7, 0.24], round: 0.04}
+  - {name: root-w1, mat: root, cone: {a: [-4.2, -0.6, 1.6], b: [-4.6, -0.75, 1.9], r1: 0.14, r2: 0.04}}
+  - {name: root-w2, mat: root, cone: {a: [-4.3, -0.4, 0.6], b: [-4.7, -0.55, 0.25], r1: 0.13, r2: 0.04}}
+  # the snapped top at the east end: splinters
+  - {name: splinter-1, mat: wood, cone: {a: [4.35, -0.2, 0.75], b: [4.85, -0.25, 0.95], r1: 0.2, r2: 0.03}}
+  - {name: splinter-2, mat: wood, cone: {a: [4.35, 0.3, 1.0], b: [4.75, 0.35, 1.35], r1: 0.17, r2: 0.03}}
+  - {name: splinter-3, mat: wood, cone: {a: [4.35, 0.0, 0.3], b: [4.8, 0.0, 0.25], r1: 0.15, r2: 0.03}}
+  # stubs of snapped branches along the top
+  - {name: stub-1, mat: bark, cylinder: {a: [-1.2, 0.2, 1.55], b: [-1.0, 0.3, 2.05], r1: 0.14, r2: 0.1}}
+  - {name: stub-2, mat: bark, cylinder: {a: [2.2, -0.1, 1.5], b: [2.5, -0.35, 1.95], r1: 0.12, r2: 0.08}}

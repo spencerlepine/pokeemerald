@@ -1,0 +1,71 @@
+# Frozen Jedi statue (art:ilum:frozen-jedi-statue), hit box 3x3, drawn 3x6.
+# Reference: the Jedi statues of the temples (wiki/art/concept/ilum/frozen-jedi-statue__web_1.jpg, a
+# seated Jedi statue; the guardian statues of the Coruscant temple stand). A hooded, robed guardian
+# standing on a low plinth, both hands on the hilt of a lightsaber held point-down before it, the
+# face dark under the hood. Ice crusts its shoulders and hood and drifts round the plinth.
+# Axes: x east, y north, z up, origin on the ground at the middle of the hit box.
+name: ilum_frozen-jedi-statue
+art: art:ilum:frozen-jedi-statue
+palette: greybox
+cells: [3, 6]
+foot: [24, 72]
+footprint: 3
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  stone: {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  robe:  {ramp: mid,   bands: [0.2, 0.5, 0.82]}
+  base:  {ramp: dark,  bands: [0.2, 0.5, 0.82]}
+  dark:  {ramp: dark,  bands: [0.5, 0.8, 0.95]}
+  blade: {ramp: light, bands: [0.1, 0.4, 0.75]}
+  ice:   {ramp: bone,  bands: [0.05, 0.3, 0.7]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 3}
+box: [44, 44]
+params:
+  yc: 0.05          # the figure's centre line
+parts:
+  # the plinth: one low step
+  - {name: plinth, mat: base, prism: {poly: [[-1.25, -1.0], [1.25, -1.0], [1.25, 1.05], [-1.25, 1.05]], z: [0, 0.42], top: 0.95, round: 0.03}}
+  # the robe: wide at the hem, narrowing to the shoulders
+  - name: robe
+    mat: robe
+    hull: {points: [[-1.0, "=yc - 0.6", 0.42], [1.0, "=yc - 0.6", 0.42], [-1.0, "=yc + 0.6", 0.42], [1.0, "=yc + 0.6", 0.42],
+                    [-0.75, "=yc - 0.45", 2.95], [0.75, "=yc - 0.45", 2.95], [-0.75, "=yc + 0.45", 2.95], [0.75, "=yc + 0.45", 2.95],
+                    [-0.5, "=yc - 0.36", 3.25], [0.5, "=yc - 0.36", 3.25], [-0.5, "=yc + 0.36", 3.25], [0.5, "=yc + 0.36", 3.25]], round: 0.05}
+  # the robe's front fold, lighter, down from the hands
+  - {name: fold, mat: stone, prism: {poly: [[-0.22, "=yc - 0.63"], [0.22, "=yc - 0.63"], [0.22, "=yc - 0.5"], [-0.22, "=yc - 0.5"]], z: [0.45, 2.0], top: [0.6, 1.0], round: 0.02}}
+  # sleeves meeting at the hands in front of the chest
+  - name: sleeve-w
+    mat: robe
+    hull: {points: [[-0.8, "=yc - 0.3", 2.85], [-0.55, "=yc - 0.3", 2.95], [-0.25, "=yc - 0.72", 2.1], [-0.02, "=yc - 0.72", 2.2],
+                    [-0.8, "=yc + 0.05", 2.85], [-0.55, "=yc + 0.05", 2.95], [-0.25, "=yc - 0.45", 2.1], [-0.02, "=yc - 0.45", 2.2]], round: 0.05}
+  - name: sleeve-e
+    mat: robe
+    hull: {points: [[0.8, "=yc - 0.3", 2.85], [0.55, "=yc - 0.3", 2.95], [0.25, "=yc - 0.72", 2.1], [0.02, "=yc - 0.72", 2.2],
+                    [0.8, "=yc + 0.05", 2.85], [0.55, "=yc + 0.05", 2.95], [0.25, "=yc - 0.45", 2.1], [0.02, "=yc - 0.45", 2.2]], round: 0.05}
+  - {name: hands, mat: stone, box: {c: [0, "=yc - 0.78", 2.15], half: [0.2, 0.12, 0.14], radius: 0.05}}
+  # the lightsaber, point down to the plinth
+  - {name: hilt, mat: dark, cylinder: {a: [0, "=yc - 0.86", 2.45], b: [0, "=yc - 0.86", 1.85], r1: 0.08}}
+  - {name: saber, mat: blade, cylinder: {a: [0, "=yc - 0.86", 1.85], b: [0, "=yc - 0.9", 0.45], r1: 0.09, r2: 0.06}}
+  # the hood with the dark face inside
+  - {name: hood, mat: robe, ellipsoid: {c: [0, "=yc", 3.62], r: [0.5, 0.46, 0.56]}}
+  - {name: face, mat: dark, ellipsoid: {c: [0, "=yc - 0.36", 3.52], r: [0.26, 0.14, 0.32]}}
+  # ice on the shoulders and the hood
+  - {name: ice-sh-w, mat: ice, ellipsoid: {c: [-0.58, "=yc", 3.05], r: [0.3, 0.42, 0.13]}}
+  - {name: ice-sh-e, mat: ice, ellipsoid: {c: [0.55, "=yc + 0.05", 3.02], r: [0.22, 0.38, 0.11]}}
+  - {name: ice-hood, mat: ice, ellipsoid: {c: [-0.08, "=yc + 0.0", 4.02], r: [0.33, 0.3, 0.11]}}
+ground:
+  - {name: drift-w, mat: ice, ellipsoid: {c: [-1.25, -0.4, 0], r: [0.22, 0.75, 0.28]}}
+  - {name: drift-s, mat: ice, ellipsoid: {c: [0.5, -1.15, 0], r: [0.7, 0.17, 0.16]}}
+variants:
+  # standing guard, ice-crusted
+  standing: {}
+  # the blade broken off, its stub on the plinth
+  broken-blade:
+    drop: ["saber"]

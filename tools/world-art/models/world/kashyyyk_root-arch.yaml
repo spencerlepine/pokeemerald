@@ -1,0 +1,47 @@
+# Root arch (art:kashyyyk:root-arch), footprint 3x2, drawn 3x4. Walk under it (top layer).
+# Reference: the wroshyr roots of Kashyyyk's forest floor (Revenge of the Sith; Jedi: Fallen Order):
+# a root as thick as a body lifts off the ground, arches over the path and dives back in. Two strands
+# twist together into one arch, buttress fins at both feet. Axes: x east, y north, z up, origin on the
+# ground at the south middle of the hit box. The ring's blocks run round the arch (axis y).
+name: kashyyyk_root-arch
+art: art:kashyyyk:root-arch
+palette: greybox
+kits: [../scenery/kits/kashyyyk-felucia-small.yaml]
+cells: [3, 4]
+foot: [24, 62]
+scale: 0.9
+footprint: 2
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  bark:  {ramp: mid,  bands: [0.25, 0.55, 0.85]}
+  ridge: {ramp: mid,  bands: [0.15, 0.45, 0.75]}
+  dark:  {ramp: dark, bands: [0.2, 0.5, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 2}
+box: [48, 32]
+params:
+  ay: 1.0           # the arch's line, north of the hit box's south edge
+parts:
+  # the main strand: blocks round a half circle, thicker at the feet
+  - name: strand
+    mat: bark
+    ring: {c: [0, "=ay", 0.8], axis: y, r: 1.15, n: 22, arc: [168, 372], size: [0.4, 0.5, 0.55], round: 0.08}
+  - {name: leg-w, mat: bark, hull: {points: [[-1.55, "=ay-0.3", 0], [-0.95, "=ay-0.3", 0], [-1.55, "=ay+0.3", 0], [-0.95, "=ay+0.3", 0],
+                                            [-1.35, "=ay-0.26", 0.95], [-0.92, "=ay-0.26", 0.95], [-1.35, "=ay+0.26", 0.95], [-0.92, "=ay+0.26", 0.95]], round: 0.08}}
+  - {name: leg-e, mat: bark, hull: {points: [[1.55, "=ay-0.3", 0], [0.95, "=ay-0.3", 0], [1.55, "=ay+0.3", 0], [0.95, "=ay+0.3", 0],
+                                            [1.35, "=ay-0.26", 0.95], [0.92, "=ay-0.26", 0.95], [1.35, "=ay+0.26", 0.95], [0.92, "=ay+0.26", 0.95]], round: 0.08}}
+  # a thinner strand twisting over it, a little to the south
+  - name: twist
+    mat: ridge
+    ring: {c: [0.15, "=ay-0.26", 0.85], axis: y, r: 1.2, n: 16, arc: [190, 350], size: [0.36, 0.24, 0.24], round: 0.06}
+  # buttress fins at the feet
+  - {use: wroshyr-root, name: foot-w, at: [-1.0, "=ay", 0], turn: 205, with: {len: 0.45, h: 0.7, w: 0.5}}
+  - {use: wroshyr-root, name: foot-e, at: [1.0, "=ay", 0], turn: -25, with: {len: 0.45, h: 0.7, w: 0.5}}
+  # a knot where the strands cross at the crown
+  - {name: knot, mat: bark, ellipsoid: {c: [0.2, "=ay-0.1", 2.0], r: [0.34, 0.34, 0.26]}}

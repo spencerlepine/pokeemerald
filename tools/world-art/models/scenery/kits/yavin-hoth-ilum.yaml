@@ -1,0 +1,73 @@
+# Yavin 4 / Hoth / Ilum kit: pieces shared by several models of this group.
+# Axes of each piece: x forward (or east), y to its left (or north), z up; origin on the ground.
+# Materials named here must exist in the model that uses the template: hull (mid), plate (light),
+# dark, stone (mid), moss (dark), snow (bone), ice (light), glow (light).
+templates:
+  # A T-65 X-wing (A New Hope) standing on its gear, S-foils open in attack position, nose to +x.
+  # About 3.4 m long at this scale (the real one is 12.5 m; scale the piece to fit). `foil` is the
+  # S-foil angle (deg): 12 open, 2 closed. `gear` is the height of the hull's belly; `k` scales the
+  # whole ship (a template cannot be scaled otherwise).
+  x-wing:
+    params: {foil: 12, gear: 0.45, k: 1.0}
+    parts:
+      - name: body
+        mat: plate
+        extrude: {axis: x, span: ["=-1.15 * k", "=0.55 * k"], profile: [["=-0.2 * k", "=gear * k"], ["=0.2 * k", "=gear * k"], ["=0.22 * k", "=(gear + 0.36) * k"], ["=-0.22 * k", "=(gear + 0.36) * k"]], round: 0.03}
+      - name: nose
+        mat: plate
+        extrude: {axis: x, span: ["=0.55 * k", "=2.2 * k"], profile: [["=-0.2 * k", "=gear * k"], ["=0.2 * k", "=gear * k"], ["=0.22 * k", "=(gear + 0.36) * k"], ["=-0.22 * k", "=(gear + 0.36) * k"]], end: [0.3, 0.4], round: 0.025}
+      - name: canopy
+        mat: dark
+        prism: {poly: [["=-0.15 * k", "=-0.15 * k"], ["=0.55 * k", "=-0.12 * k"], ["=0.55 * k", "=0.12 * k"], ["=-0.15 * k", "=0.15 * k"]], z: ["=(gear + 0.34) * k", "=(gear + 0.58) * k"], top: [0.7, 0.7], round: 0.02}
+      - {name: droid, mat: hull, ellipsoid: {c: ["=-0.55 * k", 0, "=(gear + 0.42) * k"], r: ["=0.13 * k", "=0.13 * k", "=0.12 * k"]}}
+      - {use: xw-wing, name: wing-ul, with: {side: 1, up: 1}}
+      - {use: xw-wing, name: wing-ur, with: {side: -1, up: 1}}
+      - {use: xw-wing, name: wing-ll, with: {side: 1, up: -1}}
+      - {use: xw-wing, name: wing-lr, with: {side: -1, up: -1}}
+      - {name: gear-n, mat: dark, cylinder: {a: ["=1.3 * k", 0, 0], b: ["=1.3 * k", 0, "=gear * k"], r1: "=0.05 * k"}}
+      - {name: gear-l, mat: dark, cylinder: {a: ["=-0.8 * k", "=0.25 * k", 0], b: ["=-0.8 * k", "=0.2 * k", "=gear * k"], r1: "=0.05 * k"}}
+      - {name: gear-r, mat: dark, cylinder: {a: ["=-0.8 * k", "=-0.25 * k", 0], b: ["=-0.8 * k", "=-0.2 * k", "=gear * k"], r1: "=0.05 * k"}}
+  # one S-foil with its engine and its wingtip cannon; side +1 = left (north), up +1 = upper
+  xw-wing:
+    params: {side: 1, up: 1, span: 1.65, zc: "=gear + 0.18", t: "=tan(radians(foil))"}
+    parts:
+      - name: foil
+        mat: hull
+        hull: {points: [["=-1.1 * k", "=side * 0.2 * k", "=(zc + up * 0.06) * k"], ["=-0.3 * k", "=side * 0.2 * k", "=(zc + up * 0.06) * k"],
+                        ["=-1.1 * k", "=side * span * k", "=(zc + up * (0.06 + span * t)) * k"], ["=-0.6 * k", "=side * span * k", "=(zc + up * (0.06 + span * t)) * k"],
+                        ["=-1.1 * k", "=side * 0.2 * k", "=(zc + up * 0.12) * k"], ["=-0.3 * k", "=side * 0.2 * k", "=(zc + up * 0.12) * k"],
+                        ["=-1.1 * k", "=side * span * k", "=(zc + up * (0.12 + span * t)) * k"], ["=-0.6 * k", "=side * span * k", "=(zc + up * (0.12 + span * t)) * k"]], round: 0.015}
+      - {name: engine, mat: plate, cylinder: {a: ["=-1.3 * k", "=side * 0.36 * k", "=(zc + up * (0.2 + 0.36 * t)) * k"], b: ["=-0.35 * k", "=side * 0.36 * k", "=(zc + up * (0.2 + 0.36 * t)) * k"], r1: "=0.13 * k"}}
+      - {name: nozzle, mat: dark, cylinder: {a: ["=-1.34 * k", "=side * 0.36 * k", "=(zc + up * (0.2 + 0.36 * t)) * k"], b: ["=-1.28 * k", "=side * 0.36 * k", "=(zc + up * (0.2 + 0.36 * t)) * k"], r1: "=0.1 * k"}}
+      - {name: cannon, mat: dark, cylinder: {a: ["=-1.2 * k", "=side * span * k", "=(zc + up * (0.09 + span * t)) * k"], b: ["=1.0 * k", "=side * span * k", "=(zc + up * (0.09 + span * t)) * k"], r1: "=max(0.045 * k, 0.035)"}}
+
+  # A kyber crystal: a six-sided shaft with a pointed tip, standing on the ground at its origin and
+  # tipped by `lean` (deg toward +x) and `yaw`. `h` tall, `r` thick.
+  kyber:
+    params: {h: 1.0, r: 0.15, tip: 0.3, mat_c: glow}
+    parts:
+      - name: shaft
+        mat: "=mat_c"
+        prism: {poly: [["=r", 0], ["=r * 0.5", "=r * 0.87"], ["=-r * 0.5", "=r * 0.87"], ["=-r", 0], ["=-r * 0.5", "=-r * 0.87"], ["=r * 0.5", "=-r * 0.87"]],
+                z: [-0.2, "=h - tip"], round: 0.015}
+      - name: point
+        mat: "=mat_c"
+        prism: {poly: [["=r", 0], ["=r * 0.5", "=r * 0.87"], ["=-r * 0.5", "=r * 0.87"], ["=-r", 0], ["=-r * 0.5", "=-r * 0.87"], ["=r * 0.5", "=-r * 0.87"]],
+                z: ["=h - tip", "=h"], top: 0.04, round: 0.01}
+
+  # A Massassi temple block tier: a stepped stone platform, `w` wide, `d` deep, `h` tall, its walls
+  # battered (`top` < 1). Origin at the middle of its foot.
+  tier:
+    params: {w: 4, d: 3, h: 1, top: 0.92, mat_t: stone}
+    parts:
+      - name: block
+        mat: "=mat_t"
+        prism: {poly: [["=-w / 2", "=-d / 2"], ["=w / 2", "=-d / 2"], ["=w / 2", "=d / 2"], ["=-w / 2", "=d / 2"]], z: [0, "=h"], top: "=top", round: 0.03}
+
+  # A snow-laden conifer: dark tiers under bone snow caps, a dark trunk stub. `h` tall, `r` wide.
+  snow-pine:
+    params: {h: 3.0, r: 0.95, n: 4}
+    parts:
+      - {name: trunk, mat: dark, cylinder: {a: [0, 0, 0], b: [0, 0, 0.5], r1: 0.14, r2: 0.12}}
+      - tiers: {name: green, mat: dark, count: "=n", base_z: 0.35, top_z: "=h * 0.62", base_r: "=r", top_r: "=r * 0.32", flat: 0.6, tip: 0.1, seed: 3}
+      - tiers: {name: cap, mat: snow, count: "=n", base_z: 0.5, top_z: "=h * 0.62 + 0.15", base_r: "=r * 0.82", top_r: "=r * 0.26", flat: 0.45, tip: 0.1, height: "=h * 0.2", seed: 3}

@@ -494,8 +494,8 @@ def _compose(frame, R, t):
 
 
 def expand_templates(parts, templates, params, prefix="", depth=0):
-    """`use: <template>` entries become the template's parts, evaluated with its params (template
-    defaults < the model's params < the entry's `with`), named <entry name>/<part name>, moved by the
+    """`use: <template>` entries become the template's parts, evaluated with its params (the model's
+    params < the template's own defaults < the entry's `with`: pass values in through `with`), named <entry name>/<part name>, moved by the
     entry's `at: [x, y, z]` and turned by `turn` (deg about z) and `rot: [pitch, yaw, roll]`.
     `mirror: y` flips the template north-south (a left leg from a right one)."""
     if depth > 8:

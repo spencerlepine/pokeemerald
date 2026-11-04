@@ -1,0 +1,50 @@
+# Gnarltree (art:dagobah:gnarltree), hit box 3x3, drawn 3x5.
+# Reference: the gnarltrees of the Dagobah bog (The Empire Strikes Back; the set's banyan-like trunks,
+# wiki/art/concept/dagobah/gnarltree__web_1.jpg and __web_2.jpg). Stand-in: trunk and roots only, the
+# crown comes later (owner). A thick twisted trunk held up on a cage of arching roots that bend down
+# into the water; the trunk runs out of the top of the sprite into the canopy layer on purpose.
+# Axes: x east, y north, z up, origin on the water under the trunk.
+name: dagobah_gnarltree
+art: art:dagobah:gnarltree
+palette: greybox
+kits: [../scenery/kits/endor-dagobah.yaml]
+cells: [3, 5]
+foot: [24, 56]
+scale: 0.78
+footprint: 3
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  bark:  {ramp: mid,  bands: [-0.05, 0.35, 0.7]}
+  root:  {ramp: mid,  bands: [0.15, 0.5, 0.8]}
+  back:  {ramp: dark, bands: [0.1, 0.45, 0.8]}
+  hole:  {ramp: dark, bands: [0.4, 0.7, 0.95]}
+  water: {color: shade}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 3}
+box: [48, 48]
+params:
+  rz: 1.0            # where the roots leave the trunk
+parts:
+  # the trunk: a fat foot over the roots, then a twisted bole leaning west, then east
+  - {name: foot, mat: bark, ellipsoid: {c: [0, 0.15, "=rz + 0.1"], r: [0.72, 0.55, 0.55]}}
+  - {name: bole-1, mat: bark, cone: {a: [0, 0.15, "=rz"], b: [-0.2, 0.25, 2.3], r1: 0.6, r2: 0.46}}
+  - {name: bole-2, mat: bark, cone: {a: [-0.2, 0.25, 2.3], b: [0.1, 0.3, 4.0], r1: 0.46, r2: 0.4}}
+  - {name: knot, mat: hole, ellipsoid: {c: [-0.05, -0.27, 1.75], r: [0.12, 0.05, 0.16]}}
+  # roots behind the trunk (darker, they are in its shade)
+  - {use: arch-root, name: root-n,  at: [0.05, 0.4, "=rz"], turn: 90,  with: {reach: 0.9, r: 0.2, mat: back}}
+  - {use: arch-root, name: root-nw, at: [-0.2, 0.3, "=rz"], turn: 140, with: {reach: 1.15, r: 0.2, mat: back}}
+  - {use: arch-root, name: root-ne, at: [0.2, 0.3, "=rz"], turn: 40,  with: {reach: 1.15, r: 0.2, mat: back}}
+  # roots to the sides and the front
+  - {use: arch-root, name: root-w,  at: [-0.35, 0.1, "=rz"], turn: 185, with: {reach: 1.22, r: 0.25, mat: root}}
+  - {use: arch-root, name: root-e,  at: [0.35, 0.1, "=rz"], turn: -5,  with: {reach: 1.2, r: 0.25, mat: root}}
+  - {use: arch-root, name: root-sw, at: [-0.25, -0.15, "=rz"], turn: 245, with: {reach: 1.35, r: 0.23, mat: root}}
+  - {use: arch-root, name: root-se, at: [0.25, -0.15, "=rz"], turn: -65, with: {reach: 1.3, r: 0.23, mat: root}}
+  - {use: arch-root, name: root-s,  at: [0.0, -0.2, "=rz"], turn: 275, with: {reach: 0.85, r: 0.2, mat: root}}
+ground:
+  - {name: pool, mat: water, cylinder: {a: [0, 0.05, 0], b: [0, 0.05, 0.01], r1: 1.2}, squash: [1.15, 0.55, 1]}

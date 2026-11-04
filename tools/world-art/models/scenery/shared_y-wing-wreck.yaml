@@ -1,0 +1,89 @@
+# Y-wing wreck (art:shared:y-wing-wreck), hit box 6x2, drawn 6x3.
+# Reference: the BTL Y-wing (A New Hope; wiki/art/concept/yavin-4/rebel-hangar__db_y-wing-starfighter.jpg,
+# wiki/art/concept/shared/y-wing-wreck__web_1.jpg). Seen from above, nose east: the long flat nose with
+# its canopy and ion turret, the exposed spine, the crossbar, and the two long engine nacelles with
+# round domed intakes in front and open vector-frame cages at the back. Broken at the neck: the nose
+# section has torn away from the spine, slewed and dug in.
+# The nacelles sit closer together than the real ship (about 3:1 instead of 2:1) to fit the hit box.
+# Ship axes: x forward (east), y to its left (north), z up; origin on the ground under the centre line.
+# 1 m = 1 cell = 16 px.
+name: shared_y-wing-wreck
+art: art:shared:y-wing-wreck
+palette: greybox
+cells: [6, 3]
+foot: [48, 28]
+scale: 0.9
+footprint: 2
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  hull:  {ramp: light, bands: [0.2, 0.5, 0.86]}
+  eng:   {ramp: mid,   bands: [0.3, 0.6, 0.9]}
+  metal: {ramp: mid,   bands: [0.1, 0.45, 0.8]}
+  dome:  {ramp: light, bands: [0.05, 0.35, 0.7]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  glass: {ramp: dark,  bands: [0.3, 0.6, 0.9]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 2}
+box: [92, 28]
+params:
+  ny: 0.85         # nacelle centre lines out from the middle
+  nr: 0.31         # nacelle radius
+  nz: 0.34         # nacelle axis height
+  gap: 0.2         # how far the nose has torn away (m, east)
+  slew: -12        # and turned (deg)
+  droop: 6         # and dug in nose-down (deg)
+templates:
+  # an engine nacelle along x: the long can, the domed intake, a dark ring, the open cage at the back
+  nacelle:
+    parts:
+      - {name: can, mat: eng, cylinder: {a: [-2.7, 0, 0], b: [0.3, 0, 0], r1: "=nr"}}
+      - {name: band, mat: dark, cylinder: {a: [0.22, 0, 0], b: [0.3, 0, 0], r1: "=nr + 0.02"}}
+      - {name: dome, mat: dome, ellipsoid: {c: [0.3, 0, 0], r: [0.42, "=nr + 0.02", "=nr + 0.02"]}}
+      - {name: back, mat: dark, cylinder: {a: [-2.76, 0, 0], b: [-2.7, 0, 0], r1: "=nr - 0.04"}}
+      - {name: cage, mat: metal, ring: {c: [-2.92, 0, 0], axis: x, r: "=nr - 0.03", n: 8, size: [0.07, 0.05, 0.3], round: 0.01}}
+  # the nose section, its back (the neck) at the origin: a flat wedge, canopy, ion turret, twin cannons
+  nose:
+    parts:
+      - name: body
+        mat: hull
+        extrude: {axis: x, span: [0, 2.15], profile: [[-0.45, 0.06], [0.45, 0.06], [0.42, 0.48], [-0.42, 0.48]], end: [0.42, 0.55], round: 0.04}
+      - {name: canopy, mat: glass, prism: {poly: [[0.15, -0.25], [0.65, -0.22], [0.65, 0.22], [0.15, 0.25]], z: [0.46, 0.68], top: [0.75, 0.8], round: 0.03}}
+      - {name: turret, mat: metal, cylinder: {a: [0.0, 0, 0.5], b: [0.0, 0, 0.72], r1: 0.13}}
+      - {name: ion-gun, mat: dark, cylinder: {a: [0.0, 0, 0.66], b: [0.55, 0, 0.7], r1: 0.035}}
+      - {name: gun-s, mat: dark, cylinder: {a: [1.8, -0.12, 0.2], b: [2.3, -0.12, 0.2], r1: 0.04}}
+      - {name: gun-n, mat: dark, cylinder: {a: [1.8, 0.12, 0.2], b: [2.3, 0.12, 0.2], r1: 0.04}}
+      - {name: torn, mat: dark, box: {c: [0.02, 0, 0.28], half: [0.03, 0.36, 0.18], radius: 0.01}}
+parts:
+  # the two nacelles
+  - {use: nacelle, name: nac-s, at: [0, "=-ny", "=nz"]}
+  - {use: nacelle, name: nac-n, at: [0, "=ny", "=nz"]}
+  # the crossbar and the exposed spine between them
+  - {name: crossbar, mat: metal, box: {c: [-1.05, 0, "=nz"], half: [0.24, "=ny", 0.07], radius: 0.02}}
+  - {name: spine, mat: eng, box: {c: [-0.4, 0, 0.36], half: [0.95, 0.24, 0.2], radius: 0.03}}
+  - {name: spine-top, mat: dark, box: {c: [-0.3, 0, 0.57], half: [0.6, 0.12, 0.03], radius: 0.01}}
+  - {name: pipes, mat: metal, cylinder: {a: [-1.3, 0.16, 0.58], b: [0.4, 0.16, 0.58], r1: 0.05}}
+  - {name: neck-stub, mat: dark, box: {c: [0.62, 0, 0.32], half: [0.08, 0.18, 0.14], radius: 0.01}}
+  # the nose section, torn away at the neck
+  - {use: nose, name: nose, at: ["=0.68 + gap", 0, 0], rot: ["=droop", "=slew", 0]}
+ground:
+  - {name: plate, mat: metal, prism: {poly: [[0.95, -0.95], [1.45, -0.98], [1.5, -0.7], [1.0, -0.66]], z: [0, 0.05], round: 0.015}}
+  - {name: cable, mat: dark, cylinder: {a: [0.55, 0.05, 0.04], b: [0.95, -0.25, 0.04], r1: 0.03}}
+variants:
+  # broken at the neck: the nose torn away, slewed and dug in
+  broken: {}
+  # the nose gone (salvaged): just the engines, the crossbar and the spine
+  nose-gone:
+    drop: ["nose/*"]
+    ground:
+      - {name: plate, mat: metal, prism: {poly: [[0.95, -0.95], [1.45, -0.98], [1.5, -0.7], [1.0, -0.66]], z: [0, 0.05], round: 0.015}}
+      - {name: cable, mat: dark, cylinder: {a: [0.55, 0.05, 0.04], b: [1.2, -0.3, 0.04], r1: 0.03}}
+      - {name: cable-2, mat: dark, cylinder: {a: [0.6, -0.1, 0.04], b: [1.5, 0.2, 0.04], r1: 0.03}}
+  # whole: a hard landing, the nose still on
+  intact:
+    params: {gap: -0.02, slew: 0, droop: 0}

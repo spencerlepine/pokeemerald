@@ -1,0 +1,96 @@
+# Juggernaut wreck (art:kashyyyk:juggernaut-wreck), hit box 8x4, drawn 8x6.
+# Reference: the HAVw A6 Juggernaut turbo tank (Revenge of the Sith, the Battle of Kashyyyk): ten big
+# wheels, five a side, under a long armoured body with sloped sides, low at the nose and stepping up
+# to the tall command tower at the stern, a laser turret on the bow deck. White armour, dark wheels.
+# Modelled on level ground, driving east (+x); posed stuck in the shore mud, nose down, turned.
+# Axes: x east (forward), y north, z up, origin on the ground under its middle.
+name: kashyyyk_juggernaut-wreck
+art: art:kashyyyk:juggernaut-wreck
+palette: greybox
+cells: [8, 6]
+foot: [64, 67]
+scale: 0.86
+footprint: 4
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  armour: {ramp: light, bands: [0.2, 0.5, 0.85]}
+  hull:   {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  wheel:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  hub:    {ramp: mid,   bands: [0.2, 0.5, 0.8]}
+  dark:   {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  mud:    {ramp: mid,   bands: [0.2, 0.5, 0.8]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 4}
+box: [128, 64]
+params:
+  wy: 1.18          # wheel line out from the centre
+  wr: 0.62          # wheel radius
+templates:
+  # one wheel, its face to the side (axis y), with a hub
+  wheel:
+    parts:
+      - {name: tyre, mat: wheel, cylinder: {a: [0, -0.22, "=wr"], b: [0, 0.22, "=wr"], r1: "=wr"}}
+      - {name: hub, mat: hub, cylinder: {a: [0, -0.26, "=wr"], b: [0, 0.26, "=wr"], r1: "=wr*0.42"}}
+parts:
+  # five wheels a side
+  - {use: wheel, name: w-s1, at: [-2.6, "=-wy", 0]}
+  - {use: wheel, name: w-s2, at: [-1.3, "=-wy", 0]}
+  - {use: wheel, name: w-s3, at: [0.0, "=-wy", 0]}
+  - {use: wheel, name: w-s4, at: [1.3, "=-wy", 0]}
+  - {use: wheel, name: w-s5, at: [2.6, "=-wy", 0]}
+  - {use: wheel, name: w-n1, at: [-2.6, "=wy", 0]}
+  - {use: wheel, name: w-n2, at: [-1.3, "=wy", 0]}
+  - {use: wheel, name: w-n3, at: [0.0, "=wy", 0]}
+  - {use: wheel, name: w-n4, at: [1.3, "=wy", 0]}
+  - {use: wheel, name: w-n5, at: [2.6, "=wy", 0]}
+  # the body: a long armoured hull with sloped sides, the bow lower and wedged
+  - name: body
+    mat: hull
+    hull: {points: [[-3.3, -0.95, 0.55], [-3.3, 0.95, 0.55], [3.0, -0.95, 0.55], [3.0, 0.95, 0.55],
+                    [-3.3, -1.45, 1.2], [-3.3, 1.45, 1.2], [2.8, -1.45, 1.15], [2.8, 1.45, 1.15],
+                    [-3.3, -0.95, 1.9], [-3.3, 0.95, 1.9], [2.4, -0.85, 1.55], [2.4, 0.85, 1.55],
+                    [3.7, -0.5, 0.9], [3.7, 0.5, 0.9]], round: 0.05}
+  # armour skirts over the wheels
+  - {name: skirt-s, mat: armour, box: {c: [0.0, -1.44, 1.2], half: [3.0, 0.05, 0.16], radius: 0.02}}
+  - {name: skirt-n, mat: armour, box: {c: [0.0, 1.44, 1.15], half: [3.0, 0.05, 0.16], radius: 0.02}}
+  # the raised stern deck and the command tower with its sensor pod
+  - name: stern
+    mat: armour
+    hull: {points: [[-3.3, -0.95, 1.85], [-3.3, 0.95, 1.85], [-0.6, -0.85, 1.65], [-0.6, 0.85, 1.65],
+                    [-3.2, -0.75, 2.55], [-3.2, 0.75, 2.55], [-1.2, -0.65, 2.45], [-1.2, 0.65, 2.45]], round: 0.04}
+  - name: tower
+    mat: armour
+    prism: {poly: [[-2.9, -0.45], [-1.9, -0.4], [-1.9, 0.4], [-2.9, 0.45]], z: [2.45, 3.25], top: [0.8, 0.85], round: 0.04}
+  - {name: tower-glass, mat: dark, box: {c: [-1.92, 0, 3.0], half: [0.05, 0.32, 0.1], radius: 0.01}}
+  - {name: tower-band, mat: dark, box: {c: [-2.4, -0.42, 3.0], half: [0.42, 0.04, 0.08], radius: 0.01}}
+  - {name: sensor, mat: hull, ellipsoid: {c: [-2.4, 0, 3.4], r: [0.34, 0.3, 0.2]}}
+  # the bow turret and its twin guns
+  - {name: deck, mat: armour, box: {c: [1.0, 0, 1.6], half: [1.5, 0.78, 0.06], radius: 0.02}}
+  - {name: turret, mat: hull, cylinder: {a: [1.6, 0, 1.6], b: [1.6, 0, 2.0], r1: 0.45, r2: 0.38}}
+  - {name: gun-1, mat: dark, cylinder: {a: [1.8, -0.12, 1.85], b: [2.9, -0.12, 1.9], r1: 0.06}}
+  - {name: gun-2, mat: dark, cylinder: {a: [1.8, 0.12, 1.85], b: [2.9, 0.12, 1.9], r1: 0.06}}
+  - {name: side-gun, mat: dark, cylinder: {a: [-0.4, -1.0, 1.62], b: [0.4, -1.0, 1.62], r1: 0.1}}
+ground:
+  # the mud it churned up, heaped at the bow and along the south side
+  - {name: mud-bow, mat: mud, ellipsoid: {c: [3.15, -0.2, 0], r: [0.5, 0.75, 0.2]}}
+  - {name: mud-s, mat: mud, ellipsoid: {c: [0.3, -1.35, 0], r: [2.6, 0.2, 0.14]}}
+variants:
+  # stuck nose-down in the shore mud, the wheels sunk to their hubs
+  stuck:
+    tilt: [-4, 3]
+    pivot: [0, 0]
+    turn: -7
+    sink: 0.22
+  # stripped: the turret and the sensor pod shot off
+  stripped:
+    tilt: [-4, 3]
+    pivot: [0, 0]
+    turn: -7
+    sink: 0.22
+    drop: ["turret", "gun-*", "sensor"]

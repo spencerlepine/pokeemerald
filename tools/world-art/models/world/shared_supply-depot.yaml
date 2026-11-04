@@ -1,0 +1,72 @@
+# Supply Depot (art:shared:supply-depot), hit box 4x4, drawn 4x4. Replaces the Poke Mart.
+# Reference: Mos Eisley / Outlaws trading posts built from cargo containers: a long container body
+# with ribbed walls and corner posts, a roll-up shutter half open in the south face, a holo sign
+# panel on the roof edge, crates stacked by the door. Axes: x east, y north, z up; origin on the
+# ground at the middle of the south wall.
+name: shared_supply-depot
+art: art:shared:supply-depot
+palette: greybox
+kits: [../scenery/kits/shared-a.yaml]
+cells: [4, 4]
+foot: [32, 56]
+footprint: 4
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  wall:   {ramp: mid,   bands: [0.1, 0.25, 0.75]}
+  rib:    {ramp: light, bands: [0.0, 0.3, 0.7]}
+  roofrib: {ramp: mid,  bands: [0.1, 0.4, 0.7]}
+  roof:   {ramp: mid,   bands: [0.2, 0.5, 0.85]}
+  post:   {ramp: dark,  bands: [0.0, 0.3, 0.8]}
+  shutter: {ramp: light, bands: [-0.1, 0.2, 0.6]}
+  dark:   {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  mid:    {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  light:  {ramp: light, bands: [0.15, 0.5, 0.82]}
+  bone:   {ramp: bone,  bands: [0.25, 0.55, 0.85]}
+  holo:   {ramp: light, bands: [-0.2, 0.1, 0.5]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 4}
+box: [62, 62]
+params:
+  W: 1.84          # half width of the container
+  D: 1.45          # its depth
+  H: 1.45          # its height
+parts:
+  # the container: body, corner posts, the ribs of its south face, a roof with a lip
+  - {name: body, mat: wall, box: {c: [0, "=D/2 + 0.05", "=H/2"], half: ["=W", "=D/2", "=H/2"], radius: 0.03}}
+  - {name: roof, mat: roof, box: {c: [0, "=D/2 + 0.05", "=H + 0.03"], half: ["=W + 0.04", "=D/2 + 0.04", 0.05], radius: 0.02}}
+  - {name: post-w, mat: post, box: {c: ["=-W + 0.06", 0.02, "=H/2"], half: [0.08, 0.06, "=H/2"], radius: 0.01}}
+  - {name: post-e, mat: post, box: {c: ["=W - 0.06", 0.02, "=H/2"], half: [0.08, 0.06, "=H/2"], radius: 0.01}}
+  # the roll-up shutter, half up, dark inside below it
+  - {name: opening, mat: dark, box: {c: [-0.35, 0.0, 0.62], half: [0.62, 0.04, 0.62]}}
+  - {name: shutter, mat: shutter, box: {c: [-0.35, -0.02, 1.0], half: [0.62, 0.04, 0.26], radius: 0.01}}
+  - {name: slat-1, mat: mid, box: {c: [-0.35, -0.065, 0.92], half: [0.6, 0.01, 0.015]}}
+  - {name: slat-2, mat: mid, box: {c: [-0.35, -0.065, 1.08], half: [0.6, 0.01, 0.015]}}
+  - {name: hood, mat: post, box: {c: [-0.35, -0.04, 1.3], half: [0.7, 0.07, 0.06], radius: 0.02}}
+  # ribbed panel east of the door
+  - {name: rib-1, mat: rib, box: {c: [0.58, -0.01, "=H/2"], half: [0.06, 0.03, "=H/2 - 0.1"]}}
+  - {name: rib-2, mat: rib, box: {c: [0.82, -0.01, "=H/2"], half: [0.06, 0.03, "=H/2 - 0.1"]}}
+  - {name: rib-3, mat: rib, box: {c: [1.09, -0.01, "=H/2"], half: [0.06, 0.03, "=H/2 - 0.1"]}}
+  - {name: rib-4, mat: rib, box: {c: [1.36, -0.01, "=H/2"], half: [0.06, 0.03, "=H/2 - 0.1"]}}
+  # the holo sign on the roof edge, on two struts
+  - {name: sign-back, mat: post, box: {c: [0.1, 0.08, "=H + 0.2"], half: [0.85, 0.06, 0.2], radius: 0.02}}
+  - {name: sign, mat: holo, box: {c: [0.1, 0.0, "=H + 0.2"], half: [0.75, 0.03, 0.14], radius: 0.01}}
+  - {name: sign-text, mat: dark, box: {c: [0.05, -0.035, "=H + 0.2"], half: [0.45, 0.01, 0.04]}}
+  # the corrugated roof: light ribs running north-south
+  - {name: roof-rib-0, mat: roofrib, box: {c: [-1.50, "=D/2 + 0.05", "=H + 0.09"], half: [0.05, "=D/2 - 0.02", 0.02]}}
+  - {name: roof-rib-1, mat: roofrib, box: {c: [-1.05, "=D/2 + 0.05", "=H + 0.09"], half: [0.05, "=D/2 - 0.02", 0.02]}}
+  - {name: roof-rib-2, mat: roofrib, box: {c: [-0.60, "=D/2 + 0.05", "=H + 0.09"], half: [0.05, "=D/2 - 0.02", 0.02]}}
+  - {name: roof-rib-3, mat: roofrib, box: {c: [-0.15, "=D/2 + 0.05", "=H + 0.09"], half: [0.05, "=D/2 - 0.02", 0.02]}}
+  - {name: roof-rib-4, mat: roofrib, box: {c: [0.30, "=D/2 + 0.05", "=H + 0.09"], half: [0.05, "=D/2 - 0.02", 0.02]}}
+  - {name: roof-rib-5, mat: roofrib, box: {c: [0.75, "=D/2 + 0.05", "=H + 0.09"], half: [0.05, "=D/2 - 0.02", 0.02]}}
+  - {name: roof-rib-6, mat: roofrib, box: {c: [1.20, "=D/2 + 0.05", "=H + 0.09"], half: [0.05, "=D/2 - 0.02", 0.02]}}
+  - {name: roof-rib-7, mat: roofrib, box: {c: [1.60, "=D/2 + 0.05", "=H + 0.09"], half: [0.05, "=D/2 - 0.02", 0.02]}}
+  # crates stacked by the door
+  - {use: crate, name: crate-a, at: [1.15, -0.25, 0], with: {w: 0.6, d: 0.42, h: 0.48, body: dark, lid: mid, slot: post}}
+  - {use: crate, name: crate-b, at: [1.12, -0.22, 0.48], with: {w: 0.44, d: 0.36, h: 0.34, body: bone, lid: light}}
+  - {name: rib-5, mat: rib, box: {c: [1.63, -0.01, "=H/2"], half: [0.06, 0.03, "=H/2 - 0.1"]}}

@@ -1,0 +1,52 @@
+# Cave of Evil mouth (art:dagobah:cave-of-evil-mouth), hit box 4x4, drawn 4x6.
+# Reference: the dark side cave under the black gnarltree (The Empire Strikes Back;
+# wiki/art/concept/dagobah/cave-of-evil-mouth__web_1.jpg). A huge dark tree squats on a mound; its
+# roots spread like claws and arch over a black hole in the bank on the south side. The trunk splits
+# into dead limbs above. Axes: x east, y north, z up, origin on the ground at the mound's centre.
+name: dagobah_cave-of-evil-mouth
+art: art:dagobah:cave-of-evil-mouth
+palette: greybox
+kits: [../scenery/kits/endor-dagobah.yaml]
+cells: [4, 6]
+foot: [32, 70]
+scale: 0.88
+footprint: 4
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  earth: {ramp: mid,  bands: [0.35, 0.65, 0.95]}
+  bark:  {ramp: dark, bands: [-0.1, 0.3, 0.7]}
+  root:  {ramp: mid,  bands: [0.25, 0.6, 0.88]}
+  hole:  {ramp: dark, bands: [0.9, 0.95, 0.99]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 4}
+box: [64, 64]
+templates:
+  # one root rib running down the tree's south face and out over the ground, from `top` to `toe`
+  rib:
+    params: {top: [0, 0, 2], toe: [0, -1, 0], r: 0.2, mid: [0, -0.8, 0.8]}
+    parts:
+      - {name: upper, mat: root, cone: {a: "=top", b: "=mid", r1: "=r * 0.8", r2: "=r"}}
+      - {name: lower, mat: root, cone: {a: "=mid", b: "=toe", r1: "=r", r2: "=r * 0.7"}}
+parts:
+  # the black tree: a huge flared foot, shallow north-south, rising to a short trunk
+  - {name: foot, mat: bark, cone: {a: [0, 0.5, 0], b: [0.05, 0.5, 1.3], r1: 1.8, r2: 0.7}, squash: {scale: [1, 0.55, 1], center: [0, 0.5, 0]}}
+  - {name: trunk, mat: bark, cone: {a: [0.05, 0.5, 1.2], b: [-0.1, 0.55, 3.0], r1: 0.7, r2: 0.48}}
+  - {name: limb-w, mat: bark, cone: {a: [-0.1, 0.55, 2.8], b: [-1.15, 0.6, 3.2], r1: 0.32, r2: 0.12}}
+  - {name: limb-e, mat: bark, cone: {a: [0.0, 0.55, 2.7], b: [0.95, 0.6, 3.5], r1: 0.28, r2: 0.1}}
+  - {name: twig-w, mat: bark, cone: {a: [-1.1, 0.6, 3.18], b: [-1.5, 0.6, 2.85], r1: 0.1, r2: 0.04}}
+  - {name: twig-e, mat: bark, cone: {a: [0.9, 0.6, 3.45], b: [1.35, 0.6, 3.35], r1: 0.09, r2: 0.03}}
+  # the bank at its foot and the black mouth under the roots
+  - {name: bank, mat: earth, ellipsoid: {c: [0, -0.35, 0], r: [1.85, 0.75, 0.32]}}
+  - {name: mouth, mat: hole, ellipsoid: {c: [-0.1, -0.35, 0.3], r: [0.62, 0.42, 0.72]}}
+  # the root ribs: two arch over the mouth, the rest splay out like fingers
+  - {use: rib, name: rib-1, with: {top: [-0.35, 0.2, 1.7], mid: [-0.85, -0.35, 0.95], toe: [-1.0, -0.85, 0], r: 0.28}}
+  - {use: rib, name: rib-2, with: {top: [0.3, 0.2, 1.6], mid: [0.7, -0.3, 1.0], toe: [0.85, -0.95, 0], r: 0.3}}
+  - {use: rib, name: rib-3, with: {top: [-0.6, 0.3, 1.2], mid: [-1.25, -0.1, 0.45], toe: [-1.8, -0.5, 0], r: 0.22}}
+  - {use: rib, name: rib-4, with: {top: [0.55, 0.3, 1.0], mid: [1.3, 0.0, 0.5], toe: [1.7, -0.3, 0], r: 0.24}}
+  - {use: rib, name: rib-5, with: {top: [-0.2, 0.05, 1.9], mid: [-0.05, -0.25, 1.3], toe: [0.05, -0.5, 1.05], r: 0.15}}

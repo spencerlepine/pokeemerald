@@ -1,0 +1,49 @@
+# Floating stone (art:mortis:floating-stone), footprint 2x2, drawn 2x4. Top layer; its shadow below.
+# Reference: the floating rocks of Mortis (The Clone Wars, the Mortis arc: stone slabs and islands
+# hanging in the air over the jungle). A slab with a flat, worn top and a rough underside tapering to
+# a point, roots trailing from it, one small shard hanging beside it; its shadow on the ground under it.
+# Axes: x east, y north, z up, origin on the ground at the south middle of the footprint.
+name: mortis_floating-stone
+art: art:mortis:floating-stone
+palette: greybox
+cells: [2, 4]
+foot: [16, 62]
+footprint: 2
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  top:   {ramp: bone, bands: [0.25, 0.55, 0.85]}
+  rock:  {ramp: mid,  bands: [0.25, 0.55, 0.85]}
+  root:  {ramp: dark, bands: [0.2, 0.5, 0.85]}
+  shade: {color: shade}
+box: [32, 32]
+params:
+  fz: 1.35          # the slab's underside rim, above the ground
+parts:
+  # the slab: a flat-topped plate of stone
+  - name: slab
+    mat: top
+    hull: {points: [[-0.9, 0.6, "=fz"], [0.85, 0.55, "=fz"], [0.9, 1.45, "=fz"], [-0.8, 1.5, "=fz"],
+                    [-0.85, 0.62, "=fz+0.32"], [0.8, 0.58, "=fz+0.36"], [0.84, 1.42, "=fz+0.34"], [-0.76, 1.46, "=fz+0.3"]], round: 0.04}
+  # the rough underside tapering down to a point
+  - name: under
+    mat: rock
+    hull: {points: [[-0.86, 0.62, "=fz+0.05"], [0.82, 0.58, "=fz+0.05"], [0.86, 1.42, "=fz+0.05"], [-0.76, 1.46, "=fz+0.05"],
+                    [-0.4, 0.8, "=fz-0.45"], [0.45, 0.85, "=fz-0.35"], [0.1, 1.2, "=fz-0.5"], [0.05, 0.95, "=fz-0.95"]], round: 0.03}
+  - {name: root-1, mat: root, cylinder: {a: [-0.35, 0.75, "=fz-0.2"], b: [-0.45, 0.7, "=fz-0.75"], r1: 0.05, r2: 0.02}}
+  - {name: root-2, mat: root, cylinder: {a: [0.4, 0.8, "=fz-0.15"], b: [0.5, 0.78, "=fz-0.55"], r1: 0.05, r2: 0.02}}
+  - {name: shard, mat: rock, hull: {points: [[0.55, 0.3, "=fz+0.35"], [0.8, 0.28, "=fz+0.4"], [0.7, 0.42, "=fz+0.5"], [0.66, 0.34, "=fz+0.05"]], round: 0.02}}
+ground:
+  # its shadow on the ground, offset as the light falls
+  - {name: shadow, mat: shade, cylinder: {a: [0.1, 0.95, 0], b: [0.1, 0.95, 0.01], r1: 0.8}, squash: [1.0, 0.55, 1]}
+variants:
+  slab: {}
+  # a smaller stone riding higher
+  high:
+    params: {fz: 1.75}
+    scale: 0.8

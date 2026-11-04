@@ -1,0 +1,30 @@
+# Ash dune (art:sullust:ash-dune), hit box 1x1, drawn 1x1.
+# A small drift of grey volcanic ash: a wind-shaped heap with a sharp crest, its lee face in shade,
+# a smaller drift beside it and a few ember specks. Axes: x east, y north, z up, origin on the ground at
+# the cell's south edge, middle.
+name: sullust_ash-dune
+art: art:sullust:ash-dune
+palette: greybox
+cells: [1, 1]
+foot: [8, 16]
+footprint: 1
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  ash:   {ramp: mid,   bands: [0.3, 0.55, 0.8]}
+  ember: {ramp: light, bands: [0.05, 0.3, 0.6]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 1}
+box: [14, 14]
+parts:
+  # the drift: a long windward slope from the west up to the crest, the steep lee face east
+  - {name: drift, mat: ash, hull: {points: [[-0.45, 0.3, 0], [0.4, 0.22, 0], [0.4, 0.6, 0], [0.2, 0.62, 0], [-0.45, 0.62, 0], [0.18, 0.4, 0.3], [0.0, 0.32, 0.2], [-0.2, 0.5, 0.16]], round: 0.03}}
+  - {name: drift-2, mat: ash, hull: {points: [[-0.45, 0.12, 0], [0.1, 0.12, 0], [0.05, 0.3, 0], [-0.45, 0.32, 0], [-0.15, 0.17, 0.12]], round: 0.03}}
+  - {name: ember-1, mat: ember, box: {c: [-0.3, 0.5, 0.14], half: [0.04, 0.04, 0.03]}}
+  - {name: ember-2, mat: ember, box: {c: [0.28, 0.16, 0.04], half: [0.04, 0.04, 0.03]}}
+  - {name: ember-3, mat: ember, box: {c: [-0.3, 0.15, 0.1], half: [0.035, 0.035, 0.03]}}

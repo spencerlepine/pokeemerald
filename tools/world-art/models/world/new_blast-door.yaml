@@ -1,0 +1,68 @@
+# Blast door (art:new:blast-door), hit box 3x2, drawn 3x4.
+# Reference: the Imperial bunker door on Endor (Return of the Jedi) and the sealed doors of Tipoca City
+# (Attack of the Clones): a heavy bulkhead with a trapezoid frame, the door itself in thick horizontal
+# slabs, two sloped buttresses that step out into the room and a control panel on the right one.
+# Axes: x east, y north, z up, origin on the ground at the footprint's south-west corner.
+name: new_blast-door
+art: art:new:blast-door
+palette: greybox
+cells: [3, 4]
+foot: [0, 64]
+footprint: 2
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  wall:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  frame: {ramp: light, bands: [0.1, 0.45, 0.8]}
+  door:  {ramp: mid,   bands: [0.4, 0.7, 0.95]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  lamp:  {ramp: light, bands: [-0.6, -0.3, 0.0]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 2}
+box: [46, 30]
+groups: {body: {}, door: {}}   # the hole is cut from the wall and frame only
+params:
+  wy: 1.0         # the bulkhead's south face
+  dz: 1.8         # door opening height
+parts:
+  # the bulkhead the door sits in
+  - {name: bulkhead, mat: wall, box: {c: [1.5, "=wy + 0.25", 1.1], half: [1.37, 0.25, 1.1], radius: 0.04}}
+  # the trapezoid frame standing proud of it
+  - name: frame
+    mat: frame
+    extrude: {axis: y, profile: [[0.3, 0], [2.7, 0], [2.4, 2.15], [0.6, 2.15]], span: ["=wy - 0.12", "=wy + 0.05"], round: 0.03}
+  - name: hole
+    mat: dark
+    op: subtract
+    extrude: {axis: y, profile: [[0.62, -0.1], [2.38, -0.1], [2.2, "=dz + 0.08"], [0.8, "=dz + 0.08"]], span: ["=wy - 0.3", "=wy + 0.12"], round: 0.0}
+  - name: recess
+    mat: dark
+    group: door
+    extrude: {axis: y, profile: [[0.6, 0], [2.4, 0], [2.2, "=dz + 0.1"], [0.8, "=dz + 0.1"]], span: ["=wy + 0.1", "=wy + 0.2"], round: 0.0}
+  # the door: horizontal slabs, a dark seam between each
+  - {name: slab-1, mat: door, group: door, box: {c: [1.5, "=wy + 0.02", 0.3], half: [0.84, 0.07, 0.27], radius: 0.03}}
+  - {name: slab-2, mat: door, group: door, box: {c: [1.5, "=wy + 0.02", 0.9], half: [0.78, 0.07, 0.27], radius: 0.03}}
+  - {name: slab-3, mat: door, group: door, box: {c: [1.5, "=wy + 0.02", 1.5], half: [0.72, 0.07, 0.27], radius: 0.03}}
+  # sloped buttresses stepping out into the room
+  - name: butt-w
+    mat: wall
+    extrude: {axis: x, profile: [[0.1, 0], ["=wy", 0], ["=wy", 1.5], [0.55, 1.1], [0.1, 0.45]], span: [0.06, 0.5], round: 0.04}
+  - name: butt-e
+    mat: wall
+    extrude: {axis: x, profile: [[0.1, 0], ["=wy", 0], ["=wy", 1.5], [0.55, 1.1], [0.1, 0.45]], span: [2.5, 2.86], round: 0.04}
+  # the control panel on the east buttress
+  - {name: panel, mat: dark, box: {c: [2.72, 0.42, 0.62], half: [0.15, 0.04, 0.16], radius: 0.01}, rot: [0, 0, -30]}
+  - {name: panel-lamp, mat: lamp, box: {c: [2.72, 0.38, 0.68], half: [0.08, 0.02, 0.04], radius: 0.01}, rot: [0, 0, -30]}
+  # the threshold
+  - {name: sill, mat: dark, box: {c: [1.5, 0.75, 0.02], half: [0.9, 0.25, 0.02], radius: 0.0}}
+variants:
+  # shut and locked
+  closed: {}
+  # slid up into the frame: a dark doorway
+  open:
+    drop: ["slab-*"]

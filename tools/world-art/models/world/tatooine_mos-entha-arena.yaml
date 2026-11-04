@@ -1,0 +1,44 @@
+# Mos Entha arena (art:tatooine:mos-entha-arena), hit box 7x5, drawn 7x6. The town's battle hall (gym).
+# Reference: the sandstone halls round the Mos Espa arena (The Phantom Menace; Star Wars Galaxies): a long
+# sandstone hall with a stepped upper storey, a portico of two tall pillars under a lintel framing the big
+# door, and long banners hung down the front either side.
+# Axes: x east, y north, z up, origin on the ground at the hit box's centre. Door: column 3 (x = 0).
+name: tatooine_mos-entha-arena
+art: art:tatooine:mos-entha-arena
+palette: greybox
+kits: [../scenery/kits/tatooine-buildings.yaml]
+cells: [7, 6]
+foot: [56, 56]
+footprint: 5
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  adobe: {ramp: bone,  bands: [0.3, 0.6, 0.88]}
+  stone: {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  trim:  {ramp: light, bands: [0.2, 0.5, 0.85]}
+  mid:   {ramp: mid,   bands: [0.2, 0.5, 0.85]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 5}
+box: [108, 76]
+parts:
+  # the hall and its stepped upper storey
+  - {use: block, name: hall, at: [0, -0.35, 0], with: {w: 6.7, d: 3.6, h: 1.55, mat: stone, lip: trim}}
+  - {use: block, name: upper, at: [0, 0.0, 1.55], with: {w: 4.2, d: 2.2, h: 0.55, mat: adobe, lip: trim}}
+  - {use: block, name: crown, at: [0, 0.1, 2.1], with: {w: 1.8, d: 1.2, h: 0.3, mat: stone, lip: trim}}
+  # the portico: two pillars, the lintel, the big door between
+  - {use: pillar, name: pillar-w, at: [-0.85, -2.1, 0], with: {h: 1.75, r: 0.19}}
+  - {use: pillar, name: pillar-e, at: [0.85, -2.1, 0], with: {h: 1.75, r: 0.19}}
+  - {name: lintel, mat: trim, box: {c: [0, -2.12, 1.82], half: [1.2, 0.26, 0.13], radius: 0.03}}
+  - {name: pediment, mat: adobe, prism: {poly: [[-1.1, -2.42], [1.1, -2.42], [1.1, -1.98], [-1.1, -1.98]], z: [1.95, 2.3], top: [0.35, 1.0]}}
+  - {use: doorway, name: door, at: [0, -2.15, 0], with: {w: 0.85, h: 1.15}}
+  # the banners
+  - {use: banner, name: banner-w, at: [-2.2, 0, 0], with: {y: -2.15, top: 1.45, len: 1.0, w: 0.45}}
+  - {use: banner, name: banner-e, at: [2.2, 0, 0], with: {y: -2.15, top: 1.45, len: 1.0, w: 0.45}}
+  - {use: slot, name: win-w, at: [-3.0, -2.15, 0], with: {z: 1.0, w: 0.3, h: 0.35}}
+  - {use: slot, name: win-e, at: [3.0, -2.15, 0], with: {z: 1.0, w: 0.3, h: 0.35}}

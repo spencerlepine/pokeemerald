@@ -1,0 +1,76 @@
+# Aiwha skeleton (art:kamino:aiwha-skeleton), hit box 4x2, drawn 4x3.
+# Reference: the aiwha, Kamino's winged whale (Attack of the Clones): a manta-like body with a long
+# whale head and broad wings. Its bones lie on the flat top of a black rock stack: the long skull to
+# the east, the spine and a short rib cage, the tail to the west, one wing's finger bones spread flat
+# on the rock to the south, the other wing raised like a fan behind.
+# Axes: x east (the head), y north, z up, origin on the ground at the hit box's centre.
+name: kamino_aiwha-skeleton
+art: art:kamino:aiwha-skeleton
+palette: greybox
+cells: [4, 3]
+foot: [32, 30]
+scale: 0.95
+footprint: 2
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  rock: {ramp: dark,  bands: [0.25, 0.55, 0.85]}
+  bone: {ramp: bone,  bands: [0.2, 0.5, 0.82]}
+  dark: {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  foam: {ramp: light, bands: [0.05, 0.3, 0.7]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 2}
+box: [64, 32]
+params:
+  top: 0.3         # the rock's flat top
+  fan: -0.3          # the raised wing's tip height added (m)
+templates:
+  rib:
+    parts:
+      - name: arc
+        mat: bone
+        ring: {c: [0, 0, 0], axis: x, r: 0.48, n: 5, arc: [195, 345], size: [0.26, 0.13, 0.13], round: 0.02}
+parts:
+  # the rock stack's flat top, faceted
+  - name: rock
+    mat: rock
+    hull: {points: [[-1.8, -0.7, 0], [-0.4, -0.88, 0], [1.6, -0.75, 0], [1.85, 0.2, 0], [1.4, 0.8, 0], [-1.85, 0.6, 0],
+                    [-1.55, -0.5, "=top"], [1.35, -0.55, "=top"], [1.55, 0.5, "=top"], [-1.5, 0.5, "=top"],
+                    [0.1, -0.85, 0.15]], round: 0.03}
+  # spine and tail
+  - {name: spine, mat: bone, cylinder: {a: [-0.8, 0.05, "=top + 0.12"], b: [0.85, 0.05, "=top + 0.14"], r1: 0.13}}
+  - {name: tail, mat: bone, cylinder: {a: [-1.8, 0.15, "=top + 0.05"], b: [-0.8, 0.05, "=top + 0.12"], r1: 0.05, r2: 0.12}}
+  - {use: rib, name: rib-1, at: [-0.4, 0.05, "=top + 0.06"]}
+  - {use: rib, name: rib-2, at: [-0.05, 0.05, "=top + 0.08"]}
+  - {use: rib, name: rib-3, at: [0.3, 0.05, "=top + 0.1"]}
+  # the long skull: a flat wedge with the dark eye socket, the jaw open on the rock
+  - name: skull
+    mat: bone
+    hull: {points: [[0.75, -0.38, "=top"], [0.75, 0.38, "=top"], [0.8, -0.3, "=top + 0.5"], [0.8, 0.3, "=top + 0.5"],
+                    [1.8, -0.14, "=top"], [1.8, 0.14, "=top"], [1.75, -0.1, "=top + 0.16"], [1.75, 0.1, "=top + 0.16"]], round: 0.03}
+  - {name: socket, mat: dark, ellipsoid: {c: [1.0, -0.33, "=top + 0.3"], r: [0.13, 0.07, 0.1]}}
+  # the south wing: four finger bones fanned flat on the rock
+  - {name: s-arm, mat: bone, cylinder: {a: [0.45, -0.25, "=top + 0.06"], b: [0.0, -0.5, "=top + 0.05"], r1: 0.12}}
+  - {name: s-f1, mat: bone, cylinder: {a: [0.0, -0.5, "=top + 0.05"], b: [-1.45, -0.6, "=top + 0.03"], r1: 0.1, r2: 0.05}}
+  - {name: s-f2, mat: bone, cylinder: {a: [0.0, -0.5, "=top + 0.05"], b: [-0.95, -0.8, "=top + 0.03"], r1: 0.1, r2: 0.05}}
+  - {name: s-f3, mat: bone, cylinder: {a: [0.0, -0.5, "=top + 0.05"], b: [-0.3, -0.85, "=top + 0.03"], r1: 0.1, r2: 0.05}}
+  - {name: s-f4, mat: bone, cylinder: {a: [0.0, -0.5, "=top + 0.05"], b: [0.55, -0.8, "=top + 0.03"], r1: 0.1, r2: 0.05}}
+  # the north wing raised, its fingers fanning up behind the spine
+  - {name: n-arm, mat: bone, cylinder: {a: [0.45, 0.25, "=top + 0.1"], b: [0.0, 0.45, "=top + 0.45"], r1: 0.12}}
+  - {name: n-f1, mat: bone, cylinder: {a: [0.0, 0.45, "=top + 0.45"], b: [-1.5, 0.65, "=top + 0.75 + fan"], r1: 0.1, r2: 0.05}}
+  - {name: n-f2, mat: bone, cylinder: {a: [0.0, 0.45, "=top + 0.45"], b: [-0.95, 0.7, "=top + 1.05 + fan"], r1: 0.1, r2: 0.05}}
+  - {name: n-f3, mat: bone, cylinder: {a: [0.0, 0.45, "=top + 0.45"], b: [-0.25, 0.7, "=top + 1.15 + fan"], r1: 0.1, r2: 0.05}}
+  - {name: n-f4, mat: bone, cylinder: {a: [0.0, 0.45, "=top + 0.45"], b: [0.5, 0.7, "=top + 0.95 + fan"], r1: 0.1, r2: 0.05}}
+ground:
+  - {name: foam-s, mat: foam, ellipsoid: {c: [-0.6, -0.8, 0], r: [0.9, 0.1, 0.06]}}
+variants:
+  # the whole skeleton, one wing raised
+  bones: {}
+  # both wings lie flat: the raised one has fallen
+  wings-down:
+    drop: ["n-*"]

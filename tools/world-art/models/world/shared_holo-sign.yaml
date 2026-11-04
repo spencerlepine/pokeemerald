@@ -1,0 +1,50 @@
+# Holo sign (art:shared:holo-sign), hit box 1x1, drawn 1x1. Replaces the wooden sign.
+# Reference: street holo-signs (Coruscant, Canto Bight, Outlaws' Kijimi): a slim emitter post with a
+# flat light panel floating above it, two dark text bars on its south face. Two frames for the
+# flicker: lit, and the panel dimmed with its top slice jumped east.
+# Axes: x east, y north, z up; origin on the ground at the cell's south-centre.
+name: shared_holo-sign
+art: art:shared:holo-sign
+palette: greybox
+cells: [1, 1]
+foot: [8, 15]
+footprint: 1
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  post:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  cap:   {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  holo:  {ramp: light, bands: [-0.2, 0.1, 0.5]}
+  dim:   {ramp: mid,   bands: [-0.2, 0.1, 0.5]}
+  text:  {ramp: dark,  bands: [0.3, 0.6, 0.9]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 1}
+box: [14, 14]
+params:
+  py: 0.06          # the panel's plane (y)
+templates:
+  emitter:
+    parts:
+      - {name: foot, mat: post, box: {c: [0, "=py + 0.06", 0.04], half: [0.18, 0.08, 0.04], radius: 0.02}}
+      - {name: post, mat: post, box: {c: [0, "=py", 0.16], half: [0.06, 0.05, 0.12]}}
+      - {name: emitter, mat: cap, box: {c: [0, "=py", 0.3], half: [0.27, 0.06, 0.035], radius: 0.01}}
+parts:
+  - {use: emitter, name: e}
+  # the light panel and its text bars
+  - {name: panel, mat: holo, box: {c: [0, "=py", 0.55], half: [0.36, 0.025, 0.22], radius: 0.01}}
+  - {name: line-1, mat: text, box: {c: [-0.05, "=py - 0.03", 0.64], half: [0.25, 0.01, 0.035]}}
+  - {name: line-2, mat: text, box: {c: [0.08, "=py - 0.03", 0.48], half: [0.2, 0.01, 0.035]}}
+variants:
+  lit: {}
+  # the flicker frame: the panel dims and its top slice jumps east
+  flicker:
+    parts:
+      - {use: emitter, name: e}
+      - {name: panel-lo, mat: dim, box: {c: [0, "=py", 0.5], half: [0.36, 0.025, 0.17], radius: 0.01}}
+      - {name: panel-hi, mat: holo, box: {c: [0.03, "=py", 0.71], half: [0.31, 0.025, 0.06], radius: 0.01}}
+      - {name: line-2, mat: text, box: {c: [0.08, "=py - 0.03", 0.48], half: [0.2, 0.01, 0.035]}}

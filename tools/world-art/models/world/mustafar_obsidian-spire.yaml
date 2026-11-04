@@ -1,0 +1,46 @@
+# Obsidian spire (art:mustafar:obsidian-spire), hit box 2x3, drawn 2x6.
+# Reference: the black rock needles over the lava rivers of Mustafar (Revenge of the Sith). A tall
+# faceted spire of black glassy rock, a shorter shard leaning on its east side, and the lava glow
+# at its foot shown as light cracked slabs. Axes: x east, y north, z up, origin on the ground at the
+# hit box's south edge, middle.
+name: mustafar_obsidian-spire
+art: art:mustafar:obsidian-spire
+palette: greybox
+cells: [2, 6]
+foot: [16, 96]
+scale: 0.94
+footprint: 3
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  rock:  {ramp: dark,  bands: [0.15, 0.45, 0.78]}
+  shard: {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  glow:  {ramp: light, bands: [0.1, 0.35, 0.65]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 3}
+box: [30, 46]
+parts:
+  # the main spire: wide faceted foot, a kinked waist, a needle tip
+  - name: spire
+    mat: rock
+    hull: {points: [[-0.9, 1.0, 0], [-0.3, 0.55, 0], [0.55, 0.7, 0], [0.85, 1.4, 0], [0.4, 2.1, 0], [-0.6, 2.0, 0],
+                    [-0.55, 1.2, 1.2], [0.35, 1.05, 1.3], [0.4, 1.7, 1.2], [-0.4, 1.8, 1.4],
+                    [-0.25, 1.3, 2.6], [0.15, 1.25, 2.8], [-0.05, 1.6, 2.7],
+                    [-0.12, 1.45, 4.05]], round: 0.02}
+  # a shorter shard leaning out to the east
+  - name: shard
+    mat: shard
+    hull: {points: [[0.35, 0.75, 0], [0.95, 0.7, 0], [0.95, 1.25, 0], [0.5, 1.3, 0], [0.8, 0.95, 1.9], [0.65, 1.05, 1.7]], round: 0.02}
+  # a stub to the west
+  - name: stub
+    mat: rock
+    hull: {points: [[-0.98, 0.6, 0], [-0.45, 0.45, 0], [-0.4, 1.0, 0], [-0.95, 1.1, 0], [-0.8, 0.8, 1.0]], round: 0.02}
+ground:
+  # lava glow at the foot: bright cracked slabs along the south side
+  - {name: glow-s, mat: glow, hull: {points: [[-0.9, 0.2, 0], [-0.15, 0.16, 0], [0.1, 0.4, 0], [-0.3, 0.62, 0], [-0.85, 0.62, 0], [-0.5, 0.38, 0.16]], round: 0.03}}
+  - {name: glow-e, mat: glow, hull: {points: [[0.22, 0.18, 0], [0.88, 0.2, 0], [0.9, 0.55, 0], [0.35, 0.55, 0], [0.6, 0.35, 0.14]], round: 0.03}}

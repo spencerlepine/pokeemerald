@@ -1,0 +1,45 @@
+# Watto's junk shop (art:tatooine:watto-s-junk-shop), hit box 5x4, drawn 5x5. Mos Espa.
+# Reference: Watto's shop (The Phantom Menace): a Mos Espa adobe dome with a square shop front, the wide
+# dark doorway under a sign hung from a beam, and scrap heaped in the yard out front.
+# Axes: x east, y north, z up, origin on the ground at the hit box's centre. Door: column 2 (x = 0).
+name: tatooine_watto-s-junk-shop
+art: art:tatooine:watto-s-junk-shop
+palette: greybox
+kits: [../scenery/kits/tatooine-buildings.yaml]
+cells: [5, 5]
+foot: [40, 48]
+footprint: 4
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  adobe: {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  trim:  {ramp: light, bands: [0.2, 0.5, 0.85]}
+  mid:   {ramp: mid,   bands: [0.2, 0.5, 0.85]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 4}
+box: [76, 60]
+parts:
+  - {use: dome, name: dome, at: [0.8, 0.55, 0], with: {r: 1.4, h: 0.95, drum: 0.45, mat: trim}}
+  - {use: block, name: shop, at: [-0.6, -0.45, 0], with: {w: 3.0, d: 1.8, h: 1.15, mat: adobe}}
+  - {use: doorway, name: door, at: [0, -1.35, 0], with: {w: 0.75, h: 0.9}}
+  - {use: slot, name: win-w, at: [-1.45, -1.35, 0], with: {z: 0.75, w: 0.35, h: 0.25}}
+  # the sign hung from a beam over the door
+  - {name: beam, mat: dark, box: {c: [0.55, -1.6, 1.1], half: [0.05, 0.3, 0.04], radius: 0.01}}
+  - {name: sign, mat: adobe, box: {c: [0.55, -1.83, 0.85], half: [0.32, 0.04, 0.2], radius: 0.02}}
+  - {name: sign-mark, mat: dark, box: {c: [0.55, -1.88, 0.85], half: [0.18, 0.02, 0.06], radius: 0.01}}
+ground:
+  - {use: scrap-pile, name: heap-e, at: [1.75, -1.3, 0]}
+  - {use: scrap-pile, name: heap-w, at: [-1.75, -1.5, 0], turn: 160}
+  - {name: plate, mat: mid, box: {c: [1.0, -1.7, 0.03], half: [0.3, 0.15, 0.03], radius: 0.01}, rot: [0, 0, 20]}
+variants:
+  # the shop with its scrap out front
+  shop: {}
+  # the yard cleared
+  tidy:
+    ground: []

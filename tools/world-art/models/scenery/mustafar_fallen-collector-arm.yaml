@@ -1,0 +1,46 @@
+# Fallen collector arm (art:mustafar:fallen-collector-arm), hit box 8x2, drawn 8x3.
+# Reference: the collector arm that broke off and rode the lava river while Obi-Wan and Anakin fought
+# on it (Revenge of the Sith): a long lattice boom, its torn root to the west, the curved slatted
+# collector still on its east end. Modelled level along x, then laid a little off the grid, half sunk
+# in the lava. Axes: x east, y north, z up, origin on the ground at the hit box's south edge, middle.
+name: mustafar_fallen-collector-arm
+art: art:mustafar:fallen-collector-arm
+palette: greybox
+kits: [kits/sullust-mustafar.yaml]
+cells: [8, 3]
+foot: [64, 48]
+footprint: 2
+turn: 5
+pivot: [0, 1]
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  mid:   {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  light: {ramp: light, bands: [0.15, 0.5, 0.82]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  lava:  {ramp: light, bands: [0.1, 0.35, 0.65]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 2}
+box: [124, 28]
+params:
+  len: 6.1
+  bz: 0.28           # the boom's height above the lava
+parts:
+  # the boom, its south face showing the lattice
+  - {use: boom, name: boom, at: [-3.0, 1.0, "=bz"], with: {len: "=len", w: 0.42, t: 0.62, rail: mid}}
+  # the torn root at the west end: a block with a jagged break
+  - {name: root, mat: mid, hull: {points: [[-3.75, 0.62, 0], [-3.0, 0.62, 0], [-3.0, 1.4, 0], [-3.75, 1.35, 0],
+                                            [-3.7, 0.68, 0.7], [-3.05, 0.66, 0.85], [-3.1, 1.3, 0.8], [-3.6, 1.25, 0.6]], round: 0.04}}
+  - {name: break, mat: dark, hull: {points: [[-3.85, 0.7, 0], [-3.7, 0.65, 0], [-3.7, 1.2, 0], [-3.85, 1.2, 0], [-3.8, 0.75, 0.5], [-3.75, 1.0, 0.65]], round: 0.02}}
+  # the collector at the east end, still standing on the boom's tip
+  - {name: mount, mat: mid, box: {c: ["=-3.0 + len + 0.05", 1.0, 0.3], half: [0.3, 0.3, 0.3], radius: 0.04}}
+  - {use: collector-head, name: scoop, at: ["=-3.0 + len + 0.05", 0.45, 0], rot: [0, 0, -12], with: {r: 0.62, h: 1.8, n: 6, arc: 120}}
+ground:
+  # the lava river heaped up along the sunk boom
+  - {name: swell-s, mat: lava, hull: {points: [[-3.6, 0.35, 0], [2.6, 0.4, 0], [2.6, 0.75, 0], [-3.6, 0.7, 0], [0, 0.55, 0.2]], round: 0.04}}
+  - {name: swell-n, mat: lava, hull: {points: [[-3.4, 1.3, 0], [3.0, 1.3, 0], [3.0, 1.62, 0], [-3.4, 1.62, 0], [-0.5, 1.45, 0.18]], round: 0.04}}

@@ -1,0 +1,48 @@
+# Hot spring bathhouse (art:sullust:hot-spring-bathhouse), hit box 6x4, drawn 6x5.
+# The Lavaridge spa on Sullust (reference: the bathhouse concepts): a low stone dome to the west with a
+# big round facade on its south side, a round window in it and the door under it, steps in front; to
+# the east the hot pool in a round stone rim, steam rising off the water.
+# Axes: x east, y north, z up, origin on the ground at the hit box's south edge, middle.
+name: sullust_hot-spring-bathhouse
+art: art:sullust:hot-spring-bathhouse
+palette: greybox
+kits: [../scenery/kits/sullust-mustafar.yaml]
+cells: [6, 5]
+foot: [48, 80]
+footprint: 4
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  stone: {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  rock:  {ramp: dark,  bands: [0.15, 0.45, 0.78]}
+  light: {ramp: light, bands: [0.15, 0.5, 0.82]}
+  dark:  {ramp: dark,  bands: [0.25, 0.55, 0.85]}
+  water: {ramp: dark,  bands: [0.05, 0.3, 0.6]}
+  steam: {ramp: light, bands: [0.1, 0.35, 0.65]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 4}
+box: [92, 60]
+params:
+  hx: -1.35         # the dome
+  hy: 2.15
+  px: 1.55          # the pool
+  py: 1.65
+parts:
+  # the dome of rough volcanic stone
+  - {name: dome, mat: rock, ellipsoid: {c: ["=hx", "=hy", 0], r: [1.55, 1.4, 1.25]}}
+  # the round facade: a light stone disc standing on the south side
+  - {name: facade, mat: light, cylinder: {a: ["=hx", 0.95, 0.95], b: ["=hx", 0.75, 0.95], r1: 0.98}}
+  - {use: porthole, name: window, at: ["=hx", 0.68, 1.2], with: {r: 0.4, rim: stone}}
+  - {name: door, mat: dark, box: {c: ["=hx", 0.7, 0.3], half: [0.26, 0.05, 0.3], radius: 0.02}}
+  - {name: steps, mat: stone, prism: {poly: [["=hx - 0.65", 0.15], ["=hx + 0.65", 0.15], ["=hx + 0.65", 0.72], ["=hx - 0.65", 0.72]], z: [0, 0.16], top: [1.0, 0.6], lean: [0, 0.12], round: 0.02}}
+  # the hot pool: a round stone rim, the water inside, steam over it
+  - {name: rim, ring: {c: ["=px", "=py", 0.16], axis: z, r: 1.1, n: 14, size: [0.56, 0.32, 0.32], round: 0.03}, mat: light}
+  - {name: water, mat: water, cylinder: {a: ["=px", "=py", 0], b: ["=px", "=py", 0.2], r1: 1.0}}
+  - {name: steam-1, mat: steam, ellipsoid: {c: ["=px - 0.3", "=py + 0.1", 0.55], r: [0.42, 0.22, 0.24]}}
+  - {name: steam-2, mat: steam, ellipsoid: {c: ["=px + 0.3", "=py + 0.35", 0.9], r: [0.35, 0.2, 0.2]}}
+  - {name: steam-3, mat: steam, ellipsoid: {c: ["=px - 0.05", "=py + 0.55", 1.25], r: [0.26, 0.16, 0.16]}}

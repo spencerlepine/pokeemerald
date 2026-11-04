@@ -1,0 +1,50 @@
+# Catamaran dock (art:kashyyyk:catamaran-dock), footprint 4x3, drawn 4x4.
+# Reference: the Wookiee Oevvaor jet catamaran (Revenge of the Sith, the Kachirho lagoon) and the
+# wooden jetties of Kachirho. A plank jetty on round posts along the back of the hit box, a mooring
+# bollard, and a catamaran moored alongside on the water in front of it, bow east.
+# Axes: x east, y north, z up, origin on the water at the south middle of the hit box.
+name: kashyyyk_catamaran-dock
+art: art:kashyyyk:catamaran-dock
+palette: greybox
+kits: [../scenery/kits/kashyyyk-felucia-small.yaml]
+cells: [4, 4]
+foot: [32, 62]
+scale: 0.96
+footprint: 3
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  hull:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  float: {ramp: light, bands: [0.2, 0.5, 0.85]}
+  deck:  {ramp: mid,   bands: [0.3, 0.6, 0.92]}
+  metal: {ramp: light, bands: [0.2, 0.5, 0.85]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  plank: {ramp: bone,  bands: [0.3, 0.6, 0.9]}
+  post:  {ramp: mid,   bands: [0.3, 0.6, 0.9]}
+  water: {color: shade}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 3}
+box: [64, 48]
+params:
+  jy: 2.35          # the jetty's line
+parts:
+  # the jetty: a plank deck on posts, its planks running north-south
+  - {name: deck, mat: plank, box: {c: [0, "=jy", 0.55], half: [1.9, 0.5, 0.07], radius: 0.02}}
+  - {name: plank-1, mat: post, box: {c: [-1.2, "=jy", 0.6], half: [0.025, 0.5, 0.03]}}
+  - {name: plank-2, mat: post, box: {c: [-0.4, "=jy", 0.6], half: [0.025, 0.5, 0.03]}}
+  - {name: plank-3, mat: post, box: {c: [0.4, "=jy", 0.6], half: [0.025, 0.5, 0.03]}}
+  - {name: plank-4, mat: post, box: {c: [1.2, "=jy", 0.6], half: [0.025, 0.5, 0.03]}}
+  - {name: post-1, mat: post, cylinder: {a: [-1.7, "=jy-0.5", 0], b: [-1.7, "=jy-0.5", 0.6], r1: 0.12}}
+  - {name: post-2, mat: post, cylinder: {a: [-0.55, "=jy-0.5", 0], b: [-0.55, "=jy-0.5", 0.6], r1: 0.12}}
+  - {name: post-3, mat: post, cylinder: {a: [0.6, "=jy-0.5", 0], b: [0.6, "=jy-0.5", 0.6], r1: 0.12}}
+  - {name: post-4, mat: post, cylinder: {a: [1.75, "=jy-0.5", 0], b: [1.75, "=jy-0.5", 0.6], r1: 0.12}}
+  - {name: bollard, mat: dark, cylinder: {a: [0.1, "=jy-0.3", 0.6], b: [0.1, "=jy-0.3", 0.82], r1: 0.1}}
+  # the moored catamaran, bow east
+  - {use: catamaran, name: boat, at: [-0.05, 0.95, 0], with: {L: 3.7, fy: 0.62}}
+ground:
+  - {name: wake, mat: water, cylinder: {a: [0, 0.95, 0], b: [0, 0.95, 0.01], r1: 1.0}, squash: [1.75, 0.5, 1]}

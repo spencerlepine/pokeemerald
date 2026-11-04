@@ -1,0 +1,54 @@
+# Mining collector (art:mustafar:mining-collector), hit box 3x4, drawn 3x8.
+# Reference: the lava collector towers of the Mustafar mining facility (Revenge of the Sith): a tall
+# braced pylon on the bank, a lattice arm reaching out over the lava, and the curved slatted collector
+# hanging from it into the channel. Axes: x east, y north, z up, origin on the ground at the hit
+# box's south edge, middle.
+name: mustafar_mining-collector
+art: art:mustafar:mining-collector
+palette: greybox
+kits: [../scenery/kits/sullust-mustafar.yaml]
+cells: [3, 8]
+foot: [24, 128]
+footprint: 4
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  mid:   {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  light: {ramp: light, bands: [0.15, 0.5, 0.82]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  rock:  {ramp: dark,  bands: [0.15, 0.45, 0.78]}
+  lava:  {ramp: light, bands: [0.1, 0.45, 0.8]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 4}
+box: [46, 62]
+params:
+  tx: -0.7         # the pylon
+  ty: 2.75
+  th: 3.8
+  ax: 0.75         # where the collector hangs
+  ay: 0.95
+  az: 3.25         # the arm's height at its tip
+parts:
+  # the pylon: a tapering tower on a wide plinth, dark slits on its south face, a slatted cap
+  - {name: plinth, mat: mid, prism: {poly: [["=tx - 0.7", "=ty - 0.6"], ["=tx + 0.7", "=ty - 0.6"], ["=tx + 0.7", "=ty + 0.5"], ["=tx - 0.7", "=ty + 0.5"]], z: [0, 0.45], top: 0.85, round: 0.04}}
+  - {name: tower, mat: mid, prism: {poly: [["=tx - 0.45", "=ty - 0.4"], ["=tx + 0.45", "=ty - 0.4"], ["=tx + 0.45", "=ty + 0.35"], ["=tx - 0.45", "=ty + 0.35"]], z: [0.4, "=th"], top: 0.6, round: 0.03}}
+  - {name: slit-1, mat: dark, box: {c: ["=tx - 0.15", "=ty - 0.32", "=th * 0.45"], half: [0.06, 0.08, "=th * 0.25"], radius: 0.01}, rot: [0, 0, -4]}
+  - {name: slit-2, mat: dark, box: {c: ["=tx + 0.15", "=ty - 0.32", "=th * 0.45"], half: [0.06, 0.08, "=th * 0.25"], radius: 0.01}, rot: [0, 0, -4]}
+  - {name: brace-w, mat: light, box: {c: ["=tx - 0.5", "=ty - 0.42", 1.1], half: [0.07, 0.07, 0.9], radius: 0.02}, rot: [-10, 0, 0]}
+  - {name: brace-e, mat: light, box: {c: ["=tx + 0.5", "=ty - 0.42", 1.1], half: [0.07, 0.07, 0.9], radius: 0.02}, rot: [10, 0, 0]}
+  - {name: head, mat: light, box: {c: ["=tx", "=ty", "=th + 0.05"], half: [0.42, 0.36, 0.2], radius: 0.04}}
+  - {name: cap, mat: mid, prism: {poly: [["=tx - 0.55", "=ty - 0.25"], ["=tx + 0.55", "=ty - 0.25"], ["=tx + 0.55", "=ty + 0.25"], ["=tx - 0.55", "=ty + 0.25"]], z: ["=th + 0.22", "=th + 0.55"], top: [0.5, 0.6], round: 0.03}}
+  # the arm out over the channel, and the hanger down to the collector
+  - {use: boom, name: arm, at: ["=tx + 0.2", "=ty - 0.1", "=th - 0.1"], rot: [-12, -42, 0], with: {len: 2.2, w: 0.14, t: 0.5}}
+  - {name: hanger, mat: dark, box: {c: ["=ax", "=ay + 0.3", "=(az + 2.0) / 2"], half: [0.06, 0.06, "=(az - 2.0) / 2"]}}
+  - {use: collector-head, name: scoop, at: ["=ax", "=ay - 0.1", 0.55], with: {r: 0.65, h: 1.5, n: 6}}
+ground:
+  # the lava channel along the south of the piece, with black rock banks
+  - {name: bank-s, mat: rock, hull: {points: [[-1.38, 0.06, 0], [1.38, 0.06, 0], [1.38, 0.38, 0], [-1.38, 0.38, 0], [-0.5, 0.22, 0.16], [0.6, 0.2, 0.14]], round: 0.03}}
+  - {name: lava, mat: lava, prism: {poly: [[-1.38, 0.36], [1.38, 0.38], [1.38, 1.2], [-1.38, 1.15]], z: [0, 0.03], round: 0.01}}
+  - {name: bank-n, mat: rock, hull: {points: [[-1.38, 1.12, 0], [1.38, 1.18, 0], [1.38, 1.65, 0], [-1.38, 1.6, 0], [0.2, 1.4, 0.2]], round: 0.03}}

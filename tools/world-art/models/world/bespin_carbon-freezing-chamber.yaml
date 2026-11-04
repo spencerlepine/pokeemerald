@@ -1,0 +1,68 @@
+# Carbon-freezing chamber (art:bespin:carbon-freezing-chamber), the set piece room 5x5, game camera.
+# Reference: the carbon-freezing chamber of Cloud City (The Empire Strikes Back): a round pit, rings
+# of glowing grated steps down to the freezing platform in its middle, the hydraulic clamps hanging
+# over it, hoses down the back, the slatted stair in from the south.
+# Placed in the Tibanna refinery annex (wiki/world/bespin/interiors/tibanna-refinery-annex.yaml).
+# Axes: x east, y north, z up, origin on the floor at the middle of the south edge.
+name: bespin_carbon-freezing-chamber
+art: art:bespin:carbon-freezing-chamber
+palette: greybox
+cells: [5, 5]
+foot: [40, 80]
+footprint: 1
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  floor: {ramp: mid,   bands: [0.2, 0.5, 0.85]}
+  pit:   {ramp: dark,  bands: [0.3, 0.6, 0.95]}
+  light: {ramp: light, bands: [0.1, 0.4, 0.75]}
+  mid:   {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+drop_shadow: []
+box: null
+params: {cy: 2.35}
+templates:
+  # a hydraulic clamp hanging over the platform from the back: an arm reaching forward, a claw
+  clamp:
+    params: {yaw: -90}
+    parts:
+      - name: arm
+        mat: mid
+        limb:
+          root: [0, 0, 1.9]
+          yaw: "=yaw"
+          segments:
+            - {len: 0.45, w: 0.2, d: 0.22, bend: 35}
+            - {len: 0.5, w: 0.18, d: 0.2, bend: 25, joint: {r: 0.14, len: 0.3, mat: dark}}
+          foot: {r: 0.17, r2: 0.12, h: 0.2, mat: dark, flat: false}
+parts:
+  # the deck round the pit, the pit itself
+  - {name: deck, mat: floor, box: {c: [0, 2.5, -0.05], half: [2.5, 2.5, 0.05], radius: 0.0}}
+  - {name: pit, mat: pit, cylinder: {a: [0, "=cy", -0.04], b: [0, "=cy", 0.004], r1: 2.2}, squash: {scale: [1, 0.95, 1], center: [0, "=cy", 0]}}
+  # rings of glowing grated steps (light), the dark gaps between
+  - {name: ring-1, mat: light, cylinder: {a: [0, "=cy", 0], b: [0, "=cy", 0.08], r1: 1.95}, squash: {scale: [1, 0.95, 1], center: [0, "=cy", 0]}}
+  - {name: gap-1, mat: pit, cylinder: {a: [0, "=cy", 0], b: [0, "=cy", 0.1], r1: 1.75}, squash: {scale: [1, 0.95, 1], center: [0, "=cy", 0]}}
+  - {name: ring-2, mat: light, cylinder: {a: [0, "=cy", 0], b: [0, "=cy", 0.16], r1: 1.5}, squash: {scale: [1, 0.95, 1], center: [0, "=cy", 0]}}
+  - {name: gap-2, mat: pit, cylinder: {a: [0, "=cy", 0], b: [0, "=cy", 0.18], r1: 1.3}, squash: {scale: [1, 0.95, 1], center: [0, "=cy", 0]}}
+  # the freezing platform with its dark hatch
+  - {name: platform, mat: mid, cylinder: {a: [0, "=cy", 0], b: [0, "=cy", 0.32], r1: 1.05, r2: 0.98}}
+  - {name: hatch, mat: dark, cylinder: {a: [0, "=cy", 0.3], b: [0, "=cy", 0.34], r1: 0.55}}
+  # the slatted stair in from the south
+  - {name: slat-0, mat: light, box: {c: [0, 0.35, 0.02], half: [0.5, 0.06, 0.03], radius: 0.01}}
+  - {name: slat-1, mat: light, box: {c: [0, 0.67, 0.08], half: [0.5, 0.06, 0.03], radius: 0.01}}
+  - {name: slat-2, mat: light, box: {c: [0, 0.99, 0.14], half: [0.5, 0.06, 0.03], radius: 0.01}}
+  - {name: slat-3, mat: light, box: {c: [0, 1.31, 0.20], half: [0.5, 0.06, 0.03], radius: 0.01}}
+  - {name: slat-4, mat: light, box: {c: [0, 1.63, 0.26], half: [0.5, 0.06, 0.03], radius: 0.01}}
+  # the clamp gantry across the pit behind the platform, hoses down its posts, two clamps hanging
+  - {name: post-w, mat: mid, box: {c: [-2.25, 3.0, 0.75], half: [0.12, 0.12, 0.75], radius: 0.02}}
+  - {name: post-e, mat: mid, box: {c: [2.25, 3.0, 0.75], half: [0.12, 0.12, 0.75], radius: 0.02}}
+  - {name: gantry, mat: mid, box: {c: [0, 3.0, 1.5], half: [2.35, 0.14, 0.1], radius: 0.02}}
+  - {name: hose-w, mat: dark, cylinder: {a: [-2.05, 3.15, 0], b: [-1.2, 3.1, 1.45], r1: 0.09}}
+  - {name: hose-e, mat: dark, cylinder: {a: [2.05, 3.15, 0], b: [1.2, 3.1, 1.45], r1: 0.09}}
+  - {use: clamp, name: clamp-w, at: [-0.55, 3.0, -0.45], with: {yaw: -95}}
+  - {use: clamp, name: clamp-e, at: [0.55, 3.0, -0.45], with: {yaw: -85}}

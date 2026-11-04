@@ -1,0 +1,62 @@
+# Podracer wreck (art:tatooine:podracer-wreck), hit box 5x3, drawn 5x4: the top row stands over the cells
+# behind. Reference: the Boonta Eve podracers (The Phantom Menace): long round engines with a big open
+# intake at the front, split air-brake flaps and tail fins, towing a small cockpit tub on cables.
+# This one hit the canyon wall: one engine lies whole on its side, the other split in two, the tub
+# tipped over in front, a cable trailing between them.
+# Axes: x east, y north, z up; origin on the ground at the south edge of the hit box, centred.
+name: tatooine_podracer-wreck
+art: art:tatooine:podracer-wreck
+palette: greybox
+cells: [5, 4]
+foot: [40, 63]
+footprint: 3
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  hull:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  plate: {ramp: light, bands: [0.25, 0.55, 0.85]}
+  dark:  {ramp: dark,  bands: [0.3, 0.6, 0.9]}
+  sand:  {ramp: bone,  bands: [0.55, 0.8, 0.97]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 3}
+box: [78, 46]
+templates:
+  # one podracer engine lying level, intake to +x: a long round body tapering to the exhaust, the big
+  # intake ring with its dark mouth, two split flaps and a tail fin. `l` long, `r` the intake radius.
+  engine:
+    params: {l: 2.4, r: 0.4}
+    parts:
+      - {name: body, mat: hull, cone: {a: ["=l * 0.4", 0, "=r"], b: ["=-l * 0.5", 0, "=r"], r1: "=r * 0.92", r2: "=r * 0.55"}}
+      - {name: band, mat: plate, cylinder: {a: ["=l * 0.05", 0, "=r"], b: ["=-l * 0.12", 0, "=r"], r1: "=r * 0.86"}}
+      - {name: intake, mat: plate, cylinder: {a: ["=l * 0.38", 0, "=r"], b: ["=l * 0.5", 0, "=r"], r1: "=r", r2: "=r * 1.02"}}
+      - {name: mouth, mat: dark, cylinder: {a: ["=l * 0.42", 0, "=r"], b: ["=l * 0.52", 0, "=r"], r1: "=r * 0.72"}}
+      - {name: exhaust, mat: dark, cylinder: {a: ["=-l * 0.5", 0, "=r"], b: ["=-l * 0.53", 0, "=r"], r1: "=r * 0.45"}}
+      - {name: flap-up, mat: plate, prism: {poly: [["=l * 0.1", -0.04], ["=l * 0.35", -0.04], ["=l * 0.35", 0.04], ["=l * 0.1", 0.04]], z: ["=r * 1.7", "=r * 2.15"], top: [0.6, 1], lean: [0.1, 0], round: 0.02}}
+      - {name: fin, mat: plate, extrude: {axis: y, span: [-0.03, 0.03], round: 0.02, profile: [["=-l * 0.48", "=r * 1.4"], ["=-l * 0.2", "=r * 1.6"], ["=-l * 0.35", "=r * 2.4"], ["=-l * 0.48", "=r * 2.4"]]}}
+parts:
+  # the whole engine, lying on the sand, its intake turned toward the camera
+  - {use: engine, name: eng-a, at: [-1.0, 2.0, -0.05], turn: -38, with: {l: 2.5, r: 0.42}}
+  # the split engine: its front half with the intake, and its back half thrown on ahead
+  - {use: engine, name: eng-b, at: [0.85, 1.25, -0.05], turn: 25, with: {l: 2.3, r: 0.38}}
+  - {name: split, mat: sand, op: subtract, box: {c: [0.75, 1.2, 0.4], half: [0.12, 0.8, 0.8]}, rot: [0, 25, 0]}
+  - {name: split-dark, mat: dark, cylinder: {a: [0.72, 1.18, 0.33], b: [0.84, 1.24, 0.33], r1: 0.28}}
+  # the cockpit tub: an open pod with a pointed nose, lying in front, its seat well dark
+  - {name: tub, mat: plate, hull: {round: 0.07, points: [[-1.6, 0.2, 0], [-0.75, 0.15, 0], [-0.3, 0.45, 0.05], [-0.75, 0.8, 0], [-1.6, 0.78, 0],
+                                                       [-1.62, 0.22, 0.45], [-0.8, 0.2, 0.38], [-0.4, 0.45, 0.25], [-0.8, 0.75, 0.38], [-1.62, 0.75, 0.45]]}}
+  - {name: seat, mat: dark, box: {c: [-1.2, 0.48, 0.45], half: [0.28, 0.2, 0.08], radius: 0.03}}
+  # the cable from the tub to the whole engine
+  - {name: cable-1, mat: dark, cone: {a: [-0.5, 0.6, 0.2], b: [-0.6, 1.2, 0.08], r1: 0.035, r2: 0.035}}
+  - {name: cable-2, mat: dark, cone: {a: [-0.6, 1.2, 0.08], b: [-0.2, 1.75, 0.3], r1: 0.035, r2: 0.035}}
+ground:
+  - {name: furrow, mat: sand, ellipsoid: {c: [1.5, 0.55, 0], r: [0.7, 0.2, 0.12]}}
+  - {name: scrap, mat: hull, prism: {poly: [[1.7, 0.1], [2.25, 0.15], [2.1, 0.4], [1.75, 0.35]], z: [0, 0.06], round: 0.02}}
+variants:
+  wreck: {}
+  # the tub gone (salvaged), only the two engines
+  engines-only:
+    drop: ["tub", "seat", "cable-*"]

@@ -1,0 +1,64 @@
+# Scanner table (art:new:scanner-table), hit box 5x2, drawn 5x4. Hoth survey outpost: the Rebel
+# sensor station of Echo Base (The Empire Strikes Back). A long console table whose top is a big dark
+# scanner screen in a light rim, a sloped bank of keys along the south edge, three monitors on the
+# north edge facing the camera, and a small sensor dish on a mast at the east end.
+# Axes: x east, y north from the hit box's south edge, z up; origin at the hit box's south-centre.
+name: new_scanner-table
+art: art:new:scanner-table
+palette: greybox
+cells: [5, 4]
+foot: [40, 63]
+scale: 0.97
+footprint: 2
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  body:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  trim:  {ramp: light, bands: [0.15, 0.5, 0.82]}
+  glass: {ramp: dark,  bands: [0.3, 0.6, 0.9]}
+  blip:  {ramp: light, bands: [0.05, 0.3, 0.6]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 2}
+box: [78, 30]
+templates:
+  monitor:
+    parts:
+      - {name: case, mat: body, hull: {points: [[-0.42, 0, 0.82], [0.42, 0, 0.82], [-0.42, 0.25, 0.82], [0.42, 0.25, 0.82],
+                                                [-0.4, 0.08, 1.48], [0.4, 0.08, 1.48], [-0.4, 0.3, 1.48], [0.4, 0.3, 1.48]], round: 0.03}}
+      - {name: screen, mat: glass, hull: {points: [[-0.32, -0.02, 0.92], [0.32, -0.02, 0.92], [-0.32, 0.02, 0.92], [0.32, 0.02, 0.92],
+                                                  [-0.31, 0.05, 1.4], [0.31, 0.05, 1.4], [-0.31, 0.09, 1.4], [0.31, 0.09, 1.4]], round: 0.01}}
+      - {name: trace, mat: blip, box: {c: [0, 0.03, 1.12], half: [0.22, 0.03, 0.025]}}
+parts:
+  # the table body: a long cabinet, a recessed kick, a light rim
+  - {name: cabinet, mat: body, box: {c: [0, 0.98, 0.36], half: [2.3, 0.72, 0.36], radius: 0.04}}
+  - {name: kick, mat: glass, box: {c: [0, 0.3, 0.07], half: [2.2, 0.06, 0.07]}}
+  - {name: panel-1, mat: trim, box: {c: [-1.4, 0.26, 0.38], half: [0.5, 0.02, 0.18], radius: 0.01}}
+  - {name: panel-2, mat: trim, box: {c: [1.4, 0.26, 0.38], half: [0.5, 0.02, 0.18], radius: 0.01}}
+  - {name: vent, mat: glass, box: {c: [0, 0.26, 0.38], half: [0.6, 0.02, 0.1]}}
+  - {name: rim, mat: trim, box: {c: [0, 0.98, 0.76], half: [2.36, 0.78, 0.05], radius: 0.03}}
+  # the scanner screen: dark, with a sweep ring and two contacts
+  - {name: scope, mat: glass, box: {c: [0, 1.0, 0.8], half: [1.6, 0.5, 0.03], radius: 0.01}}
+  - {name: sweep, mat: blip, cylinder: {a: [-0.5, 1.0, 0.82], b: [-0.5, 1.0, 0.84], r1: 0.42}}
+  - {name: sweep-in, mat: glass, cylinder: {a: [-0.5, 1.0, 0.82], b: [-0.5, 1.0, 0.85], r1: 0.34}}
+  - {name: dot-1, mat: blip, ellipsoid: {c: [0.55, 1.1, 0.83], r: [0.07, 0.07, 0.03]}}
+  - {name: dot-2, mat: blip, ellipsoid: {c: [1.1, 0.85, 0.83], r: [0.07, 0.07, 0.03]}}
+  # the key bank along the south edge, sloping to the player
+  - name: keys
+    mat: body
+    hull: {points: [[-2.2, 0.22, 0.72], [2.2, 0.22, 0.72], [-2.2, 0.48, 0.86], [2.2, 0.48, 0.86],
+                    [-2.2, 0.22, 0.8], [2.2, 0.22, 0.8], [-2.2, 0.48, 0.92], [2.2, 0.48, 0.92]], round: 0.02}
+  - {name: keys-1, mat: trim, box: {c: [-1.2, 0.3, 0.86], half: [0.6, 0.04, 0.03]}}
+  - {name: keys-2, mat: trim, box: {c: [1.2, 0.3, 0.86], half: [0.6, 0.04, 0.03]}}
+  # three monitors along the north edge
+  - {use: monitor, name: mon-w, at: [-1.45, 1.5, 0]}
+  - {use: monitor, name: mon-m, at: [-0.45, 1.5, 0]}
+  - {use: monitor, name: mon-e, at: [0.55, 1.5, 0]}
+  # a sensor dish on a mast at the east end
+  - {name: mast, mat: body, cylinder: {a: [1.75, 1.6, 0.8], b: [1.75, 1.6, 1.45], r1: 0.06}}
+  - {name: dish, mat: trim, cone: {a: [1.75, 1.52, 1.6], b: [1.75, 1.66, 1.4], r1: 0.36, r2: 0.06}}
+  - {name: horn, mat: body, cylinder: {a: [1.75, 1.52, 1.6], b: [1.75, 1.42, 1.72], r1: 0.03}}

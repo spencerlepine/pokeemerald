@@ -1,0 +1,46 @@
+# Department store (art:bespin:department-store), hit box 8x6, drawn 8x9.
+# Reference: Cloud City's white blocks and round towers (The Empire Strikes Back; the Lilycove store's
+# role). A tall white block, three floors of dark window bands, a flat roof with a trim edge and roof
+# plant, and a round glass-roofed atrium drum standing out from its south face over the entrance.
+# Axes: x east, y north, z up, origin on the ground at the hit box's centre.
+name: bespin_department-store
+art: art:bespin:department-store
+palette: greybox
+cells: [8, 9]
+foot: [64, 92]
+footprint: 6
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  wall:  {ramp: light, bands: [0.08, 0.25, 0.6]}
+  roof:  {ramp: mid,   bands: [0.2, 0.45, 0.8]}
+  trim:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  glass: {ramp: dark,  bands: [0.05, 0.35, 0.7]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 6}
+box: [128, 96]
+params: {H: 2.9}
+parts:
+  # the block
+  - {name: block, mat: wall, box: {c: [0, 0.3, "=H / 2"], half: [3.85, 2.45, "=H / 2"], radius: 0.06}}
+  - {name: roof, mat: roof, box: {c: [0, 0.3, "=H"], half: [3.6, 2.2, 0.04], radius: 0.0}}
+  - {name: parapet, mat: trim, box: {c: [0, -2.15, "=H + 0.05"], half: [3.85, 0.06, 0.1], radius: 0.02}}
+  - {name: win-1, mat: dark, box: {c: [0, -2.17, 0.85], half: [3.86, 0.03, 0.17], radius: 0.0}}
+  - {name: win-2, mat: dark, box: {c: [0, -2.17, 1.65], half: [3.86, 0.03, 0.17], radius: 0.0}}
+  - {name: win-3, mat: dark, box: {c: [0, -2.17, 2.35], half: [3.86, 0.03, 0.17], radius: 0.0}}
+  - {name: skylight-w, mat: glass, box: {c: [-2.3, 0.7, "=H + 0.05"], half: [0.9, 0.9, 0.08], radius: 0.03}}
+  - {name: skylight-e, mat: glass, box: {c: [2.3, 0.7, "=H + 0.05"], half: [0.9, 0.9, 0.08], radius: 0.03}}
+  # the atrium drum over the entrance: glass bands at each floor, a glass dome
+  - {name: atrium, mat: wall, cylinder: {a: [0, -1.75, 0], b: [0, -1.75, "=H + 0.35"], r1: 1.32}}
+  - {name: atrium-glass-1, mat: glass, cylinder: {a: [0, -1.75, 1.25], b: [0, -1.75, 1.85], r1: 1.33}}
+  - {name: atrium-glass-2, mat: glass, cylinder: {a: [0, -1.75, 2.25], b: [0, -1.75, 2.85], r1: 1.33}}
+  - {name: atrium-lip, mat: trim, cylinder: {a: [0, -1.75, "=H + 0.3"], b: [0, -1.75, "=H + 0.42"], r1: 1.38}}
+  - {name: atrium-dome, mat: glass, ellipsoid: {c: [0, -1.75, "=H + 0.38"], r: [1.15, 1.15, 0.6]}}
+  - {name: door, mat: dark, box: {c: [0, -3.03, 0.38], half: [0.5, 0.06, 0.38], radius: 0.02}}
+  - {name: canopy, mat: trim, box: {c: [0, -3.1, 0.85], half: [0.75, 0.14, 0.05], radius: 0.02}}

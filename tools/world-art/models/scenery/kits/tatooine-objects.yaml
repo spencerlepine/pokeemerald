@@ -1,0 +1,26 @@
+# Tatooine objects kit: pieces shared by the Tatooine object models (models/world/tatooine_*.yaml).
+# Axes: x forward, y left, z up, origin at the piece's centre (engines: on their axis, at the rear).
+templates:
+  # A podracer engine (Anakin's, The Phantom Menace): a long round core with a dark band of fittings, a
+  # light cowl over the front with the split air-scoop plates reaching forward (upper and lower jaw), a
+  # dark exhaust at the rear. `L` is the core length, `r` its radius; the jaws open by `jaw` (deg).
+  pod-engine:
+    params: {L: 1.9, r: 0.26, jaw: 8, core: mid, cowl: light, dark: dark}
+    parts:
+      - {name: core, mat: "=core", cylinder: {a: [0, 0, 0], b: ["=L * 0.62", 0, 0], r1: "=r * 0.82", r2: "=r"}}
+      - {name: band, mat: "=dark", cylinder: {a: ["=L * 0.18", 0, 0], b: ["=L * 0.34", 0, 0], r1: "=r * 0.92"}}
+      - {name: cowl, mat: "=cowl", cylinder: {a: ["=L * 0.6", 0, 0], b: ["=L * 0.8", 0, 0], r1: "=r * 1.08", r2: "=r * 1.0"}}
+      - {name: exhaust, mat: "=dark", cylinder: {a: ["=-0.06", 0, 0], b: [0.02, 0, 0], r1: "=r * 0.7"}}
+      - {name: jaw-top, mat: "=cowl", box: {c: ["=L * 0.98", 0, "=r * 0.6"], half: ["=L * 0.2", "=r * 0.8", 0.035], radius: 0.02}, rot: ["=-jaw", 0, 0]}
+      - {name: jaw-bot, mat: "=cowl", box: {c: ["=L * 0.98", 0, "=-r * 0.6"], half: ["=L * 0.2", "=r * 0.8", 0.035], radius: 0.02}, rot: ["=jaw", 0, 0]}
+      - {name: mouth, mat: "=dark", box: {c: ["=L * 0.84", 0, 0], half: ["=L * 0.06", "=r * 0.6", "=r * 0.4"]}}
+  # A podracer cockpit tub: a short pointed shell, open on top with a dark seat well. Nose to +x.
+  pod-cockpit:
+    params: {shell: light, dark: dark}
+    parts:
+      - name: tub
+        mat: "=shell"
+        hull: {points: [[-0.35, -0.2, 0], [-0.35, 0.2, 0], [-0.35, -0.22, 0.26], [-0.35, 0.22, 0.26],
+                        [0.15, -0.24, 0.0], [0.15, 0.24, 0.0], [0.15, -0.24, 0.24], [0.15, 0.24, 0.24],
+                        [0.55, 0, 0.06], [0.55, 0, 0.16]], round: 0.03}
+      - {name: seat, mat: "=dark", ellipsoid: {c: [-0.08, 0, 0.26], r: [0.18, 0.14, 0.06]}}

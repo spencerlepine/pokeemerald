@@ -1,0 +1,76 @@
+# Market stall (art:tatooine:market-stall), hit box 2x2, drawn 2x3.
+# Reference: the Mos Eisley and Mos Espa market streets (market-stall__db_mos-eisley-spaceport, __web_3):
+# a cloth awning on four thin poles over a mud counter, baskets of fruit on the counter, clay pots stacked
+# beside it. The awning slopes down toward the street (south) in striped cloth panels, so its top shows.
+# Axes: x east, y north, z up, origin on the ground at the centre of the hit box's south edge.
+name: tatooine_market-stall
+art: art:tatooine:market-stall
+palette: greybox
+cells: [2, 3]
+foot: [16, 46]
+footprint: 2
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  cloth:  {ramp: light, bands: [0.2, 0.5, 0.88]}
+  stripe: {ramp: mid,   bands: [0.3, 0.6, 0.95]}
+  adobe:  {ramp: bone,  bands: [0.25, 0.55, 0.85]}
+  clay:   {ramp: mid,   bands: [0.2, 0.5, 0.85]}
+  dark:   {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  fruit:  {ramp: light, bands: [0.1, 0.5, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 2}
+box: [32, 32]
+params: {zf: 1.05, zb: 1.18, yf: 0.7, yb: 1.5, hw: 0.95}
+templates:
+  # one awning panel from x0 to x1, sloping from the back (high) to the front (low), with a short valance
+  panel:
+    params: {x0: 0, x1: 0.5, m: cloth}
+    parts:
+      - {name: sheet, mat: "=m", hull: {points: [["=x0", "=yf", "=zf"], ["=x1", "=yf", "=zf"], ["=x0", "=yb", "=zb"], ["=x1", "=yb", "=zb"],
+                                                  ["=x0", "=yf", "=zf + 0.05"], ["=x1", "=yf", "=zf + 0.05"], ["=x0", "=yb", "=zb + 0.05"], ["=x1", "=yb", "=zb + 0.05"]], round: 0.01}}
+      - {name: valance, mat: "=m", box: {c: ["=(x0 + x1) / 2", "=yf - 0.01", "=zf - 0.07"], half: ["=(x1 - x0) / 2", 0.02, 0.08]}}
+  pot:
+    params: {s: 1.0}
+    parts:
+      - {name: belly, mat: clay, ellipsoid: {c: [0, 0, "=0.16 * s"], r: ["=0.16 * s", "=0.14 * s", "=0.16 * s"]}}
+      - {name: neck, mat: clay, cylinder: {a: [0, 0, "=0.26 * s"], b: [0, 0, "=0.36 * s"], r1: "=0.07 * s", r2: "=0.09 * s"}}
+      - {name: mouth, mat: dark, cylinder: {a: [0, 0, "=0.35 * s"], b: [0, 0, "=0.37 * s"], r1: "=0.06 * s"}}
+parts:
+  # back wall: a low mud screen with a shelf
+  - {name: back, mat: adobe, box: {c: [0, 1.4, 0.45], half: [0.9, 0.12, 0.45], radius: 0.06}}
+  - {name: shelf, mat: dark, box: {c: [0, 1.27, 0.62], half: [0.8, 0.03, 0.12]}}
+  # the counter at the front, its face dark under the lip
+  - {name: counter, mat: adobe, box: {c: [-0.1, 0.48, 0.25], half: [0.62, 0.22, 0.25], radius: 0.05}}
+  - {name: counter-top, mat: adobe, box: {c: [-0.1, 0.48, 0.5], half: [0.66, 0.26, 0.04], radius: 0.03}}
+  - {name: counter-shade, mat: dark, box: {c: [-0.1, 0.25, 0.4], half: [0.6, 0.02, 0.05]}}
+  # baskets of fruit on the counter
+  - {name: basket-w, mat: clay, cylinder: {a: [-0.4, 0.5, 0.54], b: [-0.4, 0.5, 0.64], r1: 0.18, r2: 0.22}}
+  - {scatter: {name: fruit-w, mat: fruit, within: {c: [-0.4, 0.5, 0.66], r: [0.16, 0.14, 0.06]}, count: 5, size: [0.06, 0.07], seed: 3}}
+  - {name: basket-e, mat: clay, cylinder: {a: [0.2, 0.48, 0.54], b: [0.2, 0.48, 0.64], r1: 0.18, r2: 0.22}}
+  - {scatter: {name: fruit-e, mat: dark, within: {c: [0.2, 0.48, 0.66], r: [0.16, 0.14, 0.06]}, count: 5, size: [0.06, 0.07], seed: 5}}
+  # four thin poles
+  - {name: pole-sw, mat: dark, box: {c: ["=-hw", "=yf + 0.04", "=zf / 2"], half: [0.035, 0.035, "=zf / 2"]}}
+  - {name: pole-se, mat: dark, box: {c: ["=hw", "=yf + 0.04", "=zf / 2"], half: [0.035, 0.035, "=zf / 2"]}}
+  - {name: pole-nw, mat: dark, box: {c: ["=-hw", "=yb", "=zb / 2"], half: [0.035, 0.035, "=zb / 2"]}}
+  - {name: pole-ne, mat: dark, box: {c: ["=hw", "=yb", "=zb / 2"], half: [0.035, 0.035, "=zb / 2"]}}
+  # the striped awning
+  - {use: panel, name: aw-1, with: {x0: -1.0, x1: -0.6, m: cloth}}
+  - {use: panel, name: aw-2, with: {x0: -0.6, x1: -0.2, m: stripe}}
+  - {use: panel, name: aw-3, with: {x0: -0.2, x1: 0.2, m: cloth}}
+  - {use: panel, name: aw-4, with: {x0: 0.2, x1: 0.6, m: stripe}}
+  - {use: panel, name: aw-5, with: {x0: 0.6, x1: 1.0, m: cloth}}
+ground:
+  - {use: pot, name: pot-1, at: [0.78, 0.3, 0], with: {s: 1.0}}
+  - {use: pot, name: pot-2, at: [0.74, 0.0, 0], with: {s: 0.75}}
+variants:
+  stall: {}
+  # shut for the night: no goods, the awning rolled up on the back wall
+  closed:
+    drop: ["aw-*", "basket-*", "fruit-*", "pole-sw", "pole-se"]
+    ground: []

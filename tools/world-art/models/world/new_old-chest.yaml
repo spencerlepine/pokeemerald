@@ -1,0 +1,45 @@
+# Old chest (art:new:old-chest), hit box 2x1, drawn 2x2. Ben's hut (A New Hope): the battered trunk
+# Obi-Wan keeps Anakin's lightsaber in. A long low trunk with a rounded lid, two strap bands wrapping
+# it, metal corner caps and a latch plate on the front (south) face, where the camera sees it.
+# Axes: x east, y north from the hit box's south edge, z up; origin at the hit box's south-centre.
+name: new_old-chest
+art: art:new:old-chest
+palette: greybox
+cells: [2, 2]
+foot: [15, 31]
+scale: 0.96
+footprint: 1
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  wood:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  band:  {ramp: light, bands: [0.15, 0.5, 0.82]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 1}
+box: [30, 14]
+templates:
+  strap:
+    parts:
+      - {name: front, mat: band, box: {c: [0, 0.1, 0.27], half: [0.06, 0.03, 0.27], radius: 0.01}}
+      - name: over
+        mat: band
+        extrude: {axis: x, span: [-0.065, 0.065], profile: [[0.08, 0.52], [0.08, 0.6], [0.2, 0.76], [0.42, 0.84], [0.64, 0.76], [0.77, 0.6], [0.77, 0.52]], round: 0.01}
+parts:
+  - {name: body, mat: wood, box: {c: [0, 0.42, 0.27], half: [0.88, 0.32, 0.27], radius: 0.04}}
+  - {name: skid, mat: dark, box: {c: [0, 0.42, 0.03], half: [0.9, 0.34, 0.03], radius: 0.01}}
+  - name: lid
+    mat: wood
+    extrude: {axis: x, span: [-0.9, 0.9], profile: [[0.09, 0.52], [0.09, 0.6], [0.21, 0.74], [0.42, 0.81], [0.63, 0.74], [0.75, 0.6], [0.75, 0.52]], round: 0.03}
+  - {name: lip, mat: dark, box: {c: [0, 0.09, 0.53], half: [0.86, 0.02, 0.02]}}
+  - {use: strap, name: strap-w, at: [-0.5, 0, 0]}
+  - {use: strap, name: strap-e, at: [0.5, 0, 0]}
+  - {name: cap-w, mat: band, box: {c: [-0.84, 0.12, 0.27], half: [0.06, 0.04, 0.26], radius: 0.01}}
+  - {name: cap-e, mat: band, box: {c: [0.84, 0.12, 0.27], half: [0.06, 0.04, 0.26], radius: 0.01}}
+  - {name: latch, mat: band, box: {c: [0, 0.08, 0.44], half: [0.1, 0.03, 0.1], radius: 0.01}}
+  - {name: keyhole, mat: dark, box: {c: [0, 0.05, 0.43], half: [0.03, 0.01, 0.04]}}

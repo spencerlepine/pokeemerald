@@ -1,0 +1,60 @@
+# Ion cannon footing (art:hoth:ion-cannon-footing), hit box 4x4, drawn 4x6.
+# Reference: the v-150 Planet Defender at Echo Base (The Empire Strikes Back;
+# wiki/art/concept/hoth/ion-cannon-footing__web_1.jpg): a huge armoured sphere sunk in a round
+# foundation, the barrel standing out of its top. In the main game only the footing stands: an
+# eight-sided slab with a ring of anchor blocks round an empty socket pit. After FLAG_IS_CHAMPION the
+# sphere is built in it (variant `built`).
+# Axes: x east, y north, z up, origin on the ground at the footing's centre.
+name: hoth_ion-cannon-footing
+art: art:hoth:ion-cannon-footing
+palette: greybox
+cells: [4, 6]
+foot: [32, 64]
+footprint: 4
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  slab:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  plate: {ramp: light, bands: [0.2, 0.5, 0.85]}
+  dark:  {ramp: dark,  bands: [0.5, 0.8, 0.95]}
+  metal: {ramp: dark,  bands: [0.2, 0.5, 0.82]}
+  snow:  {ramp: bone,  bands: [0.05, 0.3, 0.7]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 4}
+box: [60, 60]
+groups: {body: {}, pit: {}, gun: {}}
+parts:
+  # the eight-sided foundation slab and its socket pit
+  - name: slab
+    mat: slab
+    prism: {poly: [[1.85, 0.77], [0.77, 1.85], [-0.77, 1.85], [-1.85, 0.77], [-1.85, -0.77], [-0.77, -1.85], [0.77, -1.85], [1.85, -0.77]],
+            z: [0, 0.45], top: 0.95, round: 0.04}
+  - {name: socket, mat: slab, op: subtract, cylinder: {a: [0, 0, 0.1], b: [0, 0, 1.0], r1: 1.2}}
+  - {name: pit, group: pit, mat: dark, cylinder: {a: [0, 0, 0], b: [0, 0, 0.12], r1: 1.2}}
+  - {name: pivot, group: pit, mat: metal, cylinder: {a: [0, 0, 0], b: [0, 0, 0.28], r1: 0.35, r2: 0.3}}
+  # anchor blocks round the rim
+  - name: anchors
+    group: pit
+    mat: plate
+    ring: {c: [0, 0, 0.55], axis: z, r: 1.5, n: 8, start: 22.5, size: [0.32, 0.4, 0.22], round: 0.03}
+  # the v-150 sphere and its barrel (built variant)
+  - {name: sphere, group: gun, mat: plate, ellipsoid: {c: [0, 0.1, 0.95], r: [1.5, 1.15, 1.25]}}
+  - {name: band, group: gun, mat: slab, cylinder: {a: [0, 0.1, 0.85], b: [0, 0.1, 1.1], r1: 1.52}, squash: [1, 0.78, 1]}
+  - {name: cap, group: gun, mat: slab, cylinder: {a: [0, 0.25, 2.05], b: [0, 0.3, 2.3], r1: 0.55, r2: 0.45}}
+  - {name: barrel, group: gun, mat: metal, cylinder: {a: [0, 0.3, 2.15], b: [0, 0.75, 3.1], r1: 0.2, r2: 0.15}}
+  - {name: muzzle, group: gun, mat: metal, cylinder: {a: [0, 0.72, 3.0], b: [0, 0.8, 3.2], r1: 0.25}}
+ground:
+  - {name: drift-w, mat: snow, ellipsoid: {c: [-1.8, -0.6, 0], r: [0.3, 0.8, 0.25]}}
+  - {name: drift-s, mat: snow, ellipsoid: {c: [0.7, -1.85, 0], r: [0.75, 0.2, 0.18]}}
+variants:
+  # the empty footing (main game)
+  footing:
+    drop: ["sphere", "band", "cap", "barrel", "muzzle"]
+  # the v-150 built in it (after the player is champion)
+  built:
+    drop: ["pivot"]

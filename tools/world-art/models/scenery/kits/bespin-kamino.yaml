@@ -1,0 +1,53 @@
+# Bespin and Kamino kit: pieces shared by the Cloud City and Tipoca City models.
+# Axes: x east, y north, z up, origin on the ground at the piece's centre.
+# Materials named here (`mat: "=..."` params) must exist in the model that uses the template.
+templates:
+  # A Tipoca City dome (Attack of the Clones): a round deck on stilts, a short wall band with a dark
+  # window strip, a shallow cone roof, a thin spire. `r` is the deck radius, `sq` squashes the plan
+  # north-south (the camera shows depth short), `lift` is the stilt height.
+  tipoca-dome:
+    params: {r: 2.3, sq: 0.75, lift: 1.0, wall: 0.55, roof: 0.7, spire: 1.1,
+             body: wall, top: roof, glass: dark, legs: dark}
+    parts:
+      # the lower body flares from the stilts out to the rim
+      - {name: belly, mat: "=body", cylinder: {a: [0, 0, "=lift - 0.25"], b: [0, 0, "=lift + 0.2"], r1: "=r * 0.7", r2: "=r * 0.92"}, squash: {scale: [1, "=sq", 1], center: [0, 0, 0]}}
+      - {name: band, mat: "=body", cylinder: {a: [0, 0, "=lift + 0.15"], b: [0, 0, "=lift + 0.15 + wall"], r1: "=r * 0.92", r2: "=r * 0.9"}, squash: {scale: [1, "=sq", 1], center: [0, 0, 0]}}
+      - {name: glass, mat: "=glass", cylinder: {a: [0, 0, "=lift + 0.15 + wall * 0.35"], b: [0, 0, "=lift + 0.15 + wall * 0.75"], r1: "=r * 0.925"}, squash: {scale: [1, "=sq", 1], center: [0, 0, 0]}}
+      - {name: rim, mat: "=body", cylinder: {a: [0, 0, "=lift + 0.1 + wall"], b: [0, 0, "=lift + 0.2 + wall"], r1: "=r * 0.93"}, squash: {scale: [1, "=sq", 1], center: [0, 0, 0]}}
+      - {name: roof, mat: "=top", cylinder: {a: [0, 0, "=lift + 0.18 + wall"], b: [0, 0, "=lift + 0.18 + wall + roof"], r1: "=r * 0.92", r2: "=r * 0.3"}, squash: {scale: [1, "=sq", 1], center: [0, 0, 0]}}
+      - {name: spire, mat: "=top", cylinder: {a: [0, 0, "=lift + wall + roof"], b: [0, 0, "=lift + wall + roof + spire"], r1: "=r * 0.1", r2: 0.03}}
+      - {name: stilt-1, mat: "=legs", box: {c: ["=-r * 0.62", "=-r * sq * 0.4", "=lift / 2"], half: [0.12, 0.12, "=lift / 2"], radius: 0.02}}
+      - {name: stilt-2, mat: "=legs", box: {c: ["=r * 0.62", "=-r * sq * 0.4", "=lift / 2"], half: [0.12, 0.12, "=lift / 2"], radius: 0.02}}
+      - {name: stilt-3, mat: "=legs", box: {c: ["=-r * 0.62", "=r * sq * 0.4", "=lift / 2"], half: [0.12, 0.12, "=lift / 2"], radius: 0.02}}
+      - {name: stilt-4, mat: "=legs", box: {c: ["=r * 0.62", "=r * sq * 0.4", "=lift / 2"], half: [0.12, 0.12, "=lift / 2"], radius: 0.02}}
+
+  # A Storm IV twin-pod cloud car (The Empire Strikes Back): two rounded pods, each with a cockpit
+  # bubble, joined by a short wing with the engine block between them. Nose to +x, pods north and
+  # south; `k` scales the whole car (1 = about 1.9 m long).
+  cloud-car:
+    params: {gap: 0.62, k: 1.0, pod: hull, glass: dark, eng: dark}
+    parts:
+      - {name: pod-s, mat: "=pod", ellipsoid: {c: ["=k * 0.05", "=k * -gap", "=k * 0.36"], r: ["=k * 0.9", "=k * 0.34", "=k * 0.3"]}}
+      - {name: pod-n, mat: "=pod", ellipsoid: {c: ["=k * 0.05", "=k * gap", "=k * 0.36"], r: ["=k * 0.9", "=k * 0.34", "=k * 0.3"]}}
+      - {name: canopy-s, mat: "=glass", ellipsoid: {c: ["=k * 0.1", "=k * -gap", "=k * 0.58"], r: ["=k * 0.36", "=k * 0.22", "=k * 0.2"]}}
+      - {name: canopy-n, mat: "=glass", ellipsoid: {c: ["=k * 0.1", "=k * gap", "=k * 0.58"], r: ["=k * 0.36", "=k * 0.22", "=k * 0.2"]}}
+      - {name: wing, mat: "=pod", box: {c: ["=k * -0.15", 0, "=k * 0.36"], half: ["=k * 0.22", "=k * gap", "=k * 0.05"], radius: 0.02}}
+      - {name: engine, mat: "=eng", box: {c: ["=k * -0.25", 0, "=k * 0.36"], half: ["=k * 0.3", "=k * 0.17", "=k * 0.14"], radius: 0.04}}
+
+  # One promenade railing bay (Cloud City): a white curved top rail on two posts with a lower rail.
+  # `w` is its length along x.
+  rail-bay:
+    params: {w: 1.0, h: 0.62, rail: wall, post: mid}
+    parts:
+      - {name: top, mat: "=rail", box: {c: [0, 0, "=h"], half: ["=w / 2", 0.08, 0.07], radius: 0.05}}
+      - {name: mid-rail, mat: "=post", box: {c: [0, 0, "=h * 0.45"], half: ["=w / 2", 0.025, 0.025], radius: 0.0}}
+      - {name: post-w, mat: "=post", box: {c: ["=-w / 4", 0, "=h / 2"], half: [0.04, 0.04, "=h / 2"], radius: 0.0}}
+      - {name: post-e, mat: "=post", box: {c: ["=w / 4", 0, "=h / 2"], half: [0.04, 0.04, "=h / 2"], radius: 0.0}}
+
+  # A Kaminoan growth pod: a glass capsule on a dark base.
+  clone-pod:
+    params: {h: 0.75, r: 0.19, glass: light, base: dark}
+    parts:
+      - {name: base, mat: "=base", cylinder: {a: [0, 0, 0], b: [0, 0, 0.14], r1: "=r + 0.05"}}
+      - {name: tube, mat: "=glass", cylinder: {a: [0, 0, 0.12], b: [0, 0, "=h"], r1: "=r"}}
+      - {name: cap, mat: "=glass", ellipsoid: {c: [0, 0, "=h"], r: ["=r", "=r", "=r * 0.65"]}}

@@ -1,0 +1,41 @@
+# Bunks (art:new:bunks), hit box 3x3, drawn 3x5.
+# Reference: the Rebel bunk room of Echo Base (The Empire Strikes Back): metal two-tier bunks with thin
+# corner posts, grey mattresses, rolled blankets, a footlocker at the end. Two bunks side by side,
+# heads to the north wall. Axes: x east, y north, z up, origin on the ground at the footprint's
+# south-west corner.
+name: new_bunks
+art: art:new:bunks
+palette: greybox
+kits: [../scenery/kits/shared-b1.yaml]
+cells: [3, 5]
+foot: [0, 80]
+footprint: 3
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  dark:    {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  bed:     {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  pillow:  {ramp: light, bands: [0.1, 0.45, 0.8]}
+  blanket: {ramp: bone,  bands: [0.25, 0.55, 0.85]}
+  locker:  {ramp: mid,   bands: [0.35, 0.65, 0.9]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 3}
+box: [46, 46]
+parts:
+  - {use: bunk, name: bunk-w, at: [0.08, 0.5, 0], with: {w: 1.3, l: 2.4}}
+  - {use: bunk, name: bunk-e, at: [1.56, 0.5, 0], with: {w: 1.3, l: 2.4}}
+  # footlockers at the bunks' feet
+  - {name: locker-w, mat: locker, box: {c: [0.73, 0.32, 0.2], half: [0.4, 0.2, 0.2], radius: 0.03}}
+  - {name: lid-w, mat: dark, box: {c: [0.73, 0.12, 0.3], half: [0.08, 0.02, 0.04], radius: 0.01}}
+  - {name: locker-e, mat: locker, box: {c: [2.21, 0.32, 0.2], half: [0.4, 0.2, 0.2], radius: 0.03}}
+  - {name: lid-e, mat: dark, box: {c: [2.21, 0.12, 0.3], half: [0.08, 0.02, 0.04], radius: 0.01}}
+variants:
+  made: {}
+  # one top bunk stripped
+  stripped:
+    drop: ["bunk-e/blk-2", "bunk-e/pil-2", "locker-e", "lid-e"]

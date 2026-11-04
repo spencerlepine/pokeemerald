@@ -1,0 +1,60 @@
+# Death Star viewport (art:new:death-star-viewport), hit box 3x1, drawn 3x3. DS-5, the command deck.
+# Reference: the Death Star's command-deck and throne-room windows (A New Hope, Return of the Jedi):
+# a wide window with chamfered upper corners, split by heavy mullions, set in a grey wall panel with
+# a sill, and through it the half-built second Death Star: one half a solid disc with its dish, the
+# other half bare lattice. It stands against the north wall; its wall face fills the two wall rows.
+# Axes: x east, y north, z up; origin on the ground at the middle of the wall's foot.
+name: new_death-star-viewport
+art: art:new:death-star-viewport
+palette: greybox
+cells: [3, 3]
+foot: [24, 45]
+footprint: 1
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  wall:   {ramp: mid,   bands: [0.0, 0.25, 0.75]}
+  trim:   {ramp: light, bands: [0.0, 0.3, 0.75]}
+  glass:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  sphere: {ramp: light, bands: [-0.2, 0.15, 0.6]}
+  lattice: {ramp: mid,  bands: [-0.2, 0.15, 0.6]}
+  dish:   {ramp: mid,   bands: [0.0, 0.25, 0.75]}
+  dark:   {ramp: dark,  bands: [0.0, 0.3, 0.8]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 1}
+box: [46, 14]
+params:
+  wy: 0.55          # the wall face
+parts:
+  # the wall panel, a base strip and a cornice
+  - {name: wall, mat: wall, box: {c: [0, "=wy + 0.08", 0.92], half: [1.38, 0.08, 0.92], radius: 0.02}}
+  - {name: base, mat: dark, box: {c: [0, "=wy - 0.05", 0.12], half: [1.38, 0.08, 0.12], radius: 0.02}}
+  - {name: cornice, mat: wall, box: {c: [0, "=wy + 0.02", 1.8], half: [1.38, 0.1, 0.05], radius: 0.02}}
+  # the window: chamfered frame, dark glass
+  - name: frame
+    mat: trim
+    extrude: {axis: y, span: ["=wy - 0.06", "=wy"], profile: [[-1.32, 0.42], [1.32, 0.42], [1.32, 1.42], [1.05, 1.72], [-1.05, 1.72], [-1.32, 1.42]], round: 0.01}
+  - name: glass
+    mat: glass
+    extrude: {axis: y, span: ["=wy - 0.08", "=wy - 0.06"], profile: [[-1.22, 0.5], [1.22, 0.5], [1.22, 1.38], [1.0, 1.63], [-1.0, 1.63], [-1.22, 1.38]], round: 0.0}
+  # the half-built Death Star: a solid half with its dish, a lattice half
+  - name: sphere
+    mat: sphere
+    extrude: {axis: y, span: ["=wy - 0.1", "=wy - 0.08"], profile: [[-0.250, 1.560], [-0.374, 1.544], [-0.490, 1.496], [-0.589, 1.419], [-0.666, 1.320], [-0.714, 1.204], [-0.730, 1.080], [-0.714, 0.956], [-0.666, 0.840], [-0.589, 0.741], [-0.490, 0.664], [-0.374, 0.616], [-0.250, 0.600]], round: 0.0}
+  - {name: dish, mat: dish, cylinder: {a: [-0.45, "=wy - 0.11", 1.25], b: [-0.45, "=wy - 0.1", 1.25], r1: 0.1}}
+  - {name: trench, mat: dish, box: {c: [-0.48, "=wy - 0.105", 1.08], half: [0.24, 0.005, 0.015]}}
+  - {name: lat-1, mat: lattice, box: {c: [-0.07, "=wy - 0.1", 1.08], half: [0.02, 0.01, 0.44]}}
+  - {name: lat-2, mat: lattice, box: {c: [0.1, "=wy - 0.1", 1.08], half: [0.02, 0.01, 0.3]}}
+  - {name: lat-3, mat: lattice, box: {c: [-0.05, "=wy - 0.1", 1.30], half: [0.2, 0.01, 0.015]}}
+  - {name: lat-4, mat: lattice, box: {c: [-0.05, "=wy - 0.1", 0.86], half: [0.2, 0.01, 0.015]}}
+  # heavy mullions in front, three panes
+  - {name: mullion-w, mat: wall, box: {c: [-0.42, "=wy - 0.13", 1.06], half: [0.05, 0.03, 0.62]}}
+  - {name: mullion-e, mat: wall, box: {c: [0.42, "=wy - 0.13", 1.06], half: [0.05, 0.03, 0.62]}}
+  # the sill, standing out over the floor
+  - {name: sill, mat: trim, box: {c: [0, "=wy - 0.16", 0.4], half: [1.36, 0.16, 0.04], radius: 0.02}}
+  - {name: console, mat: wall, box: {c: [0, "=wy - 0.2", 0.18], half: [1.25, 0.12, 0.18], radius: 0.02}}

@@ -1,0 +1,46 @@
+# Fern clump (art:kashyyyk:fern-clump), footprint 1x1, drawn 1x1; replaces the cut-able bush.
+# Reference: the big ground ferns of the Kashyyyk forest floor (concept art): long fronds fanning out
+# from one crown and arching over, the tips drooping. Each frond is a thin bent blade (two low-poly
+# segments) with a light top. Axes: x east, y north, z up, origin on the ground under the crown.
+name: kashyyyk_fern-clump
+art: art:kashyyyk:fern-clump
+palette: greybox
+cells: [1, 1]
+foot: [8, 11]
+scale: 0.88
+footprint: 1
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  frond: {ramp: mid, bands: [0.3, 0.6, 0.92]}
+  heart: {ramp: dark, bands: [0.2, 0.5, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 1}
+box: [16, 16]
+templates:
+  # one frond: rises from the crown, arches out and droops at the tip; it points along +x before `turn`
+  frond:
+    params: {len: 0.5, rise: 0.3, w: 0.09}
+    parts:
+      - name: base
+        mat: frond
+        hull: {points: [[0, -0.04, 0.0], [0, 0.04, 0.0], [0, 0, 0.1], ["=len*0.55", "=-w", "=rise-0.05"], ["=len*0.55", "=w", "=rise-0.05"], ["=len*0.55", 0, "=rise+0.05"]], round: 0.01}
+      - name: tip
+        mat: frond
+        hull: {points: [["=len*0.55", "=-w", "=rise-0.05"], ["=len*0.55", "=w", "=rise-0.05"], ["=len*0.55", 0, "=rise+0.05"], ["=len", -0.02, "=rise*0.4"], ["=len", 0.02, "=rise*0.4"]], round: 0.01}
+parts:
+  - {name: heart, mat: heart, ellipsoid: {c: [0, 0, 0.04], r: [0.16, 0.1, 0.1]}}
+  # long fronds fan east and west (the sprite is wider than it is deep), short ones north and south
+  - {use: frond, name: f1, turn: 8,   with: {len: 0.52, rise: 0.22}}
+  - {use: frond, name: f2, turn: 40,  with: {len: 0.42, rise: 0.3}}
+  - {use: frond, name: f3, turn: 90,  with: {len: 0.22, rise: 0.36, w: 0.1}}
+  - {use: frond, name: f4, turn: 140, with: {len: 0.42, rise: 0.3}}
+  - {use: frond, name: f5, turn: 172, with: {len: 0.52, rise: 0.22}}
+  - {use: frond, name: f6, turn: 215, with: {len: 0.44, rise: 0.16}}
+  - {use: frond, name: f7, turn: 270, with: {len: 0.22, rise: 0.14, w: 0.1}}
+  - {use: frond, name: f8, turn: 325, with: {len: 0.44, rise: 0.16}}

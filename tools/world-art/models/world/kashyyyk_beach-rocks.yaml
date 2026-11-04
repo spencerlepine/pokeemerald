@@ -1,0 +1,37 @@
+# Beach rocks (art:kashyyyk:beach-rocks), footprint 1x1, drawn 1x1.
+# Reference: the dark basalt rocks on Kashyyyk's lagoon beaches (concept art): blunt hexagonal basalt
+# columns and a low boulder, dark stone with light tops. Axes: x east, y north, z up, origin on the
+# ground at the south middle of the cell.
+name: kashyyyk_beach-rocks
+art: art:kashyyyk:beach-rocks
+palette: greybox
+kits: [../scenery/kits/kashyyyk-felucia-small.yaml]
+cells: [1, 1]
+foot: [8, 15]
+footprint: 1
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  rock: {ramp: dark, bands: [0.1, 0.4, 0.72]}
+  sand: {ramp: bone, bands: [0.35, 0.65, 0.93]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 1}
+box: [16, 16]
+parts:
+      - name: col
+        mat: rock
+        hull: {points: [["=r", 0, 0], ["=r*0.5", "=r*0.87", 0], ["=-r*0.5", "=r*0.87", 0], ["=-r", 0, 0], ["=-r*0.5", "=-r*0.87", 0], ["=r*0.5", "=-r*0.87", 0],
+                        ["=r", 0, "=h-slant"], ["=r*0.5", "=r*0.87", "=h"], ["=-r*0.5", "=r*0.87", "=h"], ["=-r", 0, "=h"], ["=-r*0.5", "=-r*0.87", "=h-slant"], ["=r*0.5", "=-r*0.87", "=h-slant*2"]], round: 0.03}
+parts:
+  - {use: basalt, name: c1, at: [-0.2, 0.32, 0], with: {r: 0.24, h: 0.4}}
+  - {use: basalt, name: c2, at: [0.22, 0.4, 0], turn: 20, with: {r: 0.2, h: 0.34}}
+  - name: boulder
+    mat: rock
+    hull: {points: [[-0.1, 0.12, 0], [0.42, 0.1, 0], [0.45, 0.4, 0], [-0.05, 0.35, 0], [0.05, 0.2, 0.2], [0.3, 0.18, 0.22], [0.25, 0.32, 0.18]], round: 0.03}
+ground:
+  - {name: drift, mat: sand, ellipsoid: {c: [-0.32, 0.16, 0], r: [0.14, 0.07, 0.04]}}

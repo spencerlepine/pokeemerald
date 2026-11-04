@@ -1,0 +1,53 @@
+# Bantha skeleton (art:tatooine:bantha-skeleton), hit box 1x1, drawn 1x1.
+# Reference: the bantha (bantha-skeleton__db_bantha, __web_1): a long heavy skull with a broad brow and
+# the two great ridged horns that curl back and round beside the head. Here the bleached skull lies on the
+# sand, snout to the south, both horn curls standing up either side; a half-buried rib or two behind.
+# Axes: x east, y north, z up, origin on the ground at the cell's centre-south.
+name: tatooine_bantha-skeleton
+art: art:tatooine:bantha-skeleton
+palette: greybox
+cells: [1, 1]
+foot: [8, 14]
+footprint: 1
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  bone:  {ramp: bone, bands: [0.2, 0.5, 0.85]}
+  horn:  {ramp: mid,  bands: [0.2, 0.5, 0.85]}
+  hole:  {ramp: dark, bands: [0.3, 0.6, 0.9]}
+  sand:  {ramp: bone, bands: [0.35, 0.65, 0.93]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 1}
+box: [16, 16]
+templates:
+  # one horn: a ridged curl standing in the y-z plane beside the skull, rings of blocks round an x axis
+  horn:
+    parts:
+      - {ring: {name: curl, mat: horn, c: [0, 0, 0], axis: x, r: 0.13, size: [0.1, 0.09, 0.1], n: 8, arc: [-70, 240], round: 0.02}}
+parts:
+  # the skull: a long wedge, broad and high at the brow (north), narrowing to the snout (south)
+  - name: skull
+    mat: bone
+    hull: {points: [[-0.2, 0.42, 0], [0.2, 0.42, 0], [-0.2, 0.42, 0.24], [0.2, 0.42, 0.24],
+                    [-0.13, 0.12, 0], [0.13, 0.12, 0], [-0.1, 0.14, 0.15], [0.1, 0.14, 0.15],
+                    [-0.07, 0.02, 0], [0.07, 0.02, 0], [-0.06, 0.03, 0.08], [0.06, 0.03, 0.08]], round: 0.03}
+  - {name: eye-w, mat: hole, ellipsoid: {c: [-0.1, 0.27, 0.19], r: [0.045, 0.05, 0.04]}}
+  - {name: eye-e, mat: hole, ellipsoid: {c: [0.1, 0.27, 0.19], r: [0.045, 0.05, 0.04]}}
+  - {name: nose, mat: hole, ellipsoid: {c: [0, 0.05, 0.08], r: [0.04, 0.03, 0.025]}}
+  - {use: horn, name: horn-w, at: [-0.28, 0.38, 0.17]}
+  - {use: horn, name: horn-e, at: [0.27, 0.38, 0.17]}
+ground:
+  - {name: drift, mat: sand, ellipsoid: {c: [0.0, 0.5, 0], r: [0.4, 0.12, 0.06]}}
+  - {name: rib-1, mat: bone, box: {c: [0.24, 0.08, 0.02], half: [0.09, 0.025, 0.025], radius: 0.015}, rot: [0, 30, 0]}
+variants:
+  skull: {}
+  # half sunk in a drift, only the brow and the horn curls showing
+  half-buried:
+    sink: 0.08
+    ground:
+      - {name: drift, mat: sand, ellipsoid: {c: [-0.02, 0.3, 0], r: [0.4, 0.26, 0.08]}}

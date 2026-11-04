@@ -1,0 +1,70 @@
+# Cloning hall (art:kamino:cloning-hall), a whole room 12x9, seen in the game camera.
+# Reference: Tipoca City's cloning halls (Attack of the Clones): white curved walls, a smooth pale
+# floor, banks of glass growth pods on dark plinths. Laid out like the area map
+# (wiki/world/kamino/interiors/tipoca-city-cloning-hall.yaml, 26x16 there, drawn here at the row's
+# 12x9): the north wall face with the sealed lab door in its middle, two pod banks along it, two more
+# mid-room, the entrance gap in the south wall. Side walls edge-on, rounded at the north corners.
+# Axes: x east, y north, z up, origin on the floor at the middle of the south edge.
+name: kamino_cloning-hall
+art: art:kamino:cloning-hall
+palette: greybox
+kits: [../scenery/kits/bespin-kamino.yaml]
+cells: [12, 9]
+foot: [96, 144]
+footprint: 1
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  floor: {ramp: light, bands: [0.2, 0.5, 0.9]}
+  wall:  {ramp: light, bands: [0.08, 0.3, 0.65]}
+  trim:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  light: {ramp: light, bands: [0.15, 0.45, 0.8]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+drop_shadow: []
+box: null
+params: {D: 7.0, H: 2.0}
+parts:
+  # the floor and its panel seams
+  - {name: floor, mat: floor, box: {c: [0, "=D / 2", -0.05], half: [6, "=D / 2", 0.05], radius: 0.0}}
+  - {name: seam-1, mat: trim, box: {c: [0, 2.0, 0.005], half: [5.6, 0.02, 0.006], radius: 0.0}}
+  - {name: seam-2, mat: trim, box: {c: [0, 4.6, 0.005], half: [5.6, 0.02, 0.006], radius: 0.0}}
+  - {name: aisle, mat: trim, box: {c: [0, 3.0, 0.005], half: [0.75, 3.0, 0.006], radius: 0.0}}
+  # the north wall face, a rounded cove along its top, the sealed lab door in the middle
+  - {name: wall-n, mat: wall, box: {c: [0, "=D + 0.2", "=H / 2"], half: [6, 0.2, "=H / 2"], radius: 0.0}}
+  - {name: cove, mat: trim, cylinder: {a: [-6, "=D - 0.02", "=H - 0.2"], b: [6, "=D - 0.02", "=H - 0.2"], r1: 0.2}}
+  - {name: band, mat: trim, box: {c: [0, "=D - 0.01", 0.5], half: [6, 0.02, 0.06], radius: 0.0}}
+  - {name: lab-frame, mat: trim, box: {c: [0, "=D - 0.05", 0.75], half: [0.95, 0.06, 0.78], radius: 0.06}}
+  - {name: lab-door, mat: dark, box: {c: [0, "=D - 0.1", 0.66], half: [0.72, 0.06, 0.66], radius: 0.04}}
+  # the side walls, edge-on, rounding into the north wall
+  - {name: wall-w, mat: wall, box: {c: [-5.8, "=D / 2", "=H / 2"], half: [0.2, "=D / 2", "=H / 2"], radius: 0.0}}
+  - {name: wall-e, mat: wall, box: {c: [5.8, "=D / 2", "=H / 2"], half: [0.2, "=D / 2", "=H / 2"], radius: 0.0}}
+  - {name: corner-w, mat: wall, cylinder: {a: [-5.6, "=D - 0.2", 0], b: [-5.6, "=D - 0.2", "=H"], r1: 0.45}}
+  - {name: corner-e, mat: wall, cylinder: {a: [5.6, "=D - 0.2", 0], b: [5.6, "=D - 0.2", "=H"], r1: 0.45}}
+  # the south wall, low, with the entrance gap
+  - {name: wall-sw, mat: trim, box: {c: [-3.3, 0.2, 0.15], half: [2.7, 0.2, 0.15], radius: 0.0}}
+  - {name: wall-se, mat: trim, box: {c: [3.3, 0.2, 0.15], half: [2.7, 0.2, 0.15], radius: 0.0}}
+  - {name: mat, mat: dark, box: {c: [0, 0.3, 0.005], half: [0.5, 0.3, 0.006], radius: 0.0}}
+  # the growth pod banks
+  - {name: pods-nw-base, mat: dark, box: {c: [-3.65, 6.3, 0.12], half: [1.75, 0.38, 0.12], radius: 0.04}}
+  - {use: clone-pod, name: pods-nw-0, at: [-5.00, 6.3, 0.22], with: {h: 0.8, r: 0.27}}
+  - {use: clone-pod, name: pods-nw-1, at: [-4.10, 6.3, 0.22], with: {h: 0.8, r: 0.27}}
+  - {use: clone-pod, name: pods-nw-2, at: [-3.20, 6.3, 0.22], with: {h: 0.8, r: 0.27}}
+  - {use: clone-pod, name: pods-nw-3, at: [-2.30, 6.3, 0.22], with: {h: 0.8, r: 0.27}}
+  - {name: pods-ne-base, mat: dark, box: {c: [3.65, 6.3, 0.12], half: [1.75, 0.38, 0.12], radius: 0.04}}
+  - {use: clone-pod, name: pods-ne-0, at: [2.30, 6.3, 0.22], with: {h: 0.8, r: 0.27}}
+  - {use: clone-pod, name: pods-ne-1, at: [3.20, 6.3, 0.22], with: {h: 0.8, r: 0.27}}
+  - {use: clone-pod, name: pods-ne-2, at: [4.10, 6.3, 0.22], with: {h: 0.8, r: 0.27}}
+  - {use: clone-pod, name: pods-ne-3, at: [5.00, 6.3, 0.22], with: {h: 0.8, r: 0.27}}
+  - {name: pods-w-base, mat: dark, box: {c: [-3.70, 3.4, 0.12], half: [1.30, 0.38, 0.12], radius: 0.04}}
+  - {use: clone-pod, name: pods-w-0, at: [-4.60, 3.4, 0.22], with: {h: 0.8, r: 0.27}}
+  - {use: clone-pod, name: pods-w-1, at: [-3.70, 3.4, 0.22], with: {h: 0.8, r: 0.27}}
+  - {use: clone-pod, name: pods-w-2, at: [-2.80, 3.4, 0.22], with: {h: 0.8, r: 0.27}}
+  - {name: pods-e-base, mat: dark, box: {c: [3.70, 3.4, 0.12], half: [1.30, 0.38, 0.12], radius: 0.04}}
+  - {use: clone-pod, name: pods-e-0, at: [2.80, 3.4, 0.22], with: {h: 0.8, r: 0.27}}
+  - {use: clone-pod, name: pods-e-1, at: [3.70, 3.4, 0.22], with: {h: 0.8, r: 0.27}}
+  - {use: clone-pod, name: pods-e-2, at: [4.60, 3.4, 0.22], with: {h: 0.8, r: 0.27}}

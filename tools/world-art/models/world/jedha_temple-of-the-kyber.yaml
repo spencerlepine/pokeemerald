@@ -1,0 +1,59 @@
+# Temple of the Kyber (art:jedha:temple-of-the-kyber), hit box 8x6, drawn 8x12. Mt. Pyre's retheme.
+# Reference: the Temple of the Kyber in the Holy City of Jedha (Rogue One, Jedi: Survivor): a vast
+# tapering sandstone obelisk rising from a stepped temple block, buttressed walls, a tall dark doorway
+# with stairs up the terraces, and robed guardian statues standing either side of the stairs.
+# Axes: x east, y north, z up, origin on the ground at the hit box's centre.
+name: jedha_temple-of-the-kyber
+art: art:jedha:temple-of-the-kyber
+palette: greybox
+kits: [../scenery/kits/deathstar-arena-jedha.yaml]
+cells: [8, 12]
+foot: [63, 143]
+footprint: 6
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  stone: {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  tier:  {ramp: bone,  bands: [0.3, 0.6, 0.9]}
+  trim:  {ramp: light, bands: [0.15, 0.5, 0.82]}
+  rib:   {ramp: light, bands: [0.25, 0.55, 0.85]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 6}
+box: [128, 96]
+params:
+  bz: 2.5          # the temple block's roof
+  oz: 6.3          # the obelisk's top
+templates:
+  buttress:
+    parts:
+      - {name: rib, mat: rib, prism: {poly: [[-0.2, -0.3], [0.2, -0.3], [0.2, 0.1], [-0.2, 0.1]], z: [0, "=bz + 0.15"], top: [0.8, 0.6], lean: [0, 0.08], round: 0.03}}
+parts:
+  # three terraces, each stepped in
+  - {name: tier-1, mat: tier, prism: {poly: [[-3.85, -2.95], [3.85, -2.95], [3.85, 2.9], [-3.85, 2.9]], z: [0, 0.45], round: 0.04}}
+  - {name: tier-2, mat: stone, prism: {poly: [[-3.4, -2.3], [3.4, -2.3], [3.4, 2.9], [-3.4, 2.9]], z: [0, 0.95], round: 0.04}}
+  # the temple block with its buttressed south wall
+  - {name: block, mat: stone, prism: {poly: [[-2.75, -1.35], [2.75, -1.35], [2.75, 2.85], [-2.75, 2.85]], z: [0, "=bz"], top: [0.97, 0.98], round: 0.04}}
+  - {name: cornice, mat: trim, prism: {poly: [[-2.85, -1.45], [2.85, -1.45], [2.85, 2.9], [-2.85, 2.9]], z: ["=bz - 0.2", "=bz"], round: 0.03}}
+  - {use: buttress, name: b1, at: [-2.45, -1.35, 0]}
+  - {use: buttress, name: b2, at: [-1.55, -1.35, 0]}
+  - {use: buttress, name: b3, at: [1.55, -1.35, 0]}
+  - {use: buttress, name: b4, at: [2.45, -1.35, 0]}
+  # the tall doorway and the stairs up the terraces to it
+  - {name: door-frame, mat: trim, prism: {poly: [[-0.85, -1.5], [0.85, -1.5], [0.85, -1.3], [-0.85, -1.3]], z: [0, 2.1], top: [0.75, 1], round: 0.03}}
+  - {name: door, mat: dark, prism: {poly: [[-0.55, -1.56], [0.55, -1.56], [0.55, -1.45], [-0.55, -1.45]], z: [0.9, 1.95], top: [0.6, 1], round: 0.02}}
+  - {name: stair-1, mat: trim, box: {c: [0, -2.62, 0.2], half: [0.75, 0.35, 0.2], radius: 0.02}}
+  - {name: stair-2, mat: trim, box: {c: [0, -2.1, 0.45], half: [0.7, 0.3, 0.45], radius: 0.02}}
+  - {name: stair-3, mat: trim, box: {c: [0, -1.75, 0.7], half: [0.65, 0.25, 0.7], radius: 0.02}}
+  # the obelisk: a tall square spire tapering to a blunt top, a slot window up its face
+  - {name: obelisk, mat: stone, prism: {poly: [[-1.35, 0.4], [1.35, 0.4], [1.35, 2.6], [-1.35, 2.6]], z: ["=bz - 0.1", "=oz"], top: [0.35, 0.5], lean: [0, 0.25], round: 0.04}}
+  - {name: obelisk-base, mat: trim, prism: {poly: [[-1.55, 0.25], [1.55, 0.25], [1.55, 2.75], [-1.55, 2.75]], z: ["=bz - 0.1", "=bz + 0.5"], top: 0.93, round: 0.03}}
+  - {name: slot, mat: dark, prism: {poly: [[-0.17, 0.36], [0.17, 0.36], [0.17, 0.5], [-0.17, 0.5]], z: ["=bz + 0.9", "=oz - 1.6"], top: [0.6, 1], lean: [0, 0.3], round: 0.01}}
+  # the guardian statues either side of the stairs
+  - {use: robed-statue, name: guard-w, at: [-1.4, -2.55, 0.45], with: {h: 2.1}}
+  - {use: robed-statue, name: guard-e, at: [1.4, -2.55, 0.45], with: {h: 2.1}}

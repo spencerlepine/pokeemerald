@@ -1,0 +1,86 @@
+# Ewok hut interior (art:endor:ewok-hut-interior), a whole room, 8x8 cells.
+# Reference: inside the Ewok huts of Bright Tree Village (Return of the Jedi;
+# wiki/art/concept/endor/ewok-hut-interior__web_1.jpg and __web_2.jpg). Laid out on the Bright Tree
+# house maps (wiki/world/endor/interiors/bright-tree-house-1.yaml): the north wall two cells high, a
+# tree trunk through the floor at cells 3-4 of rows 2-3, the door in the middle of the south edge. Seen
+# in the game camera: the plank floor in plan, the north wall of upright logs face-on, the side walls
+# edge-on, a low log sill along the south. Fixtures: the fire pit, furs on the floor, baskets and pots
+# in the corners, hide drapes on the wall. Axes: x east, y north, z up, origin at the middle of the
+# south edge, on the floor.
+name: endor_ewok-hut-interior
+art: art:endor:ewok-hut-interior
+palette: greybox
+cells: [8, 8]
+foot: [64, 127]
+footprint: 1          # a room is walkable; the tool needs one row for its scene sheet
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  floor: {ramp: mid,   bands: [0.3, 0.6, 0.9]}
+  seam:  {ramp: dark,  bands: [0.3, 0.6, 0.9]}
+  log:   {ramp: mid,   bands: [0.0, 0.35, 0.7]}
+  log2:  {ramp: mid,   bands: [0.1, 0.45, 0.8]}
+  trunk: {ramp: dark,  bands: [-0.1, 0.3, 0.7]}
+  fur:   {ramp: bone,  bands: [0.2, 0.5, 0.85]}
+  stone: {ramp: light, bands: [0.2, 0.5, 0.85]}
+  ember: {ramp: dark,  bands: [0.5, 0.8, 0.95]}
+  basket: {ramp: bone, bands: [0.25, 0.55, 0.88]}
+box: null
+parts:
+  # the plank floor and its seams
+  - {name: floor, mat: floor, box: {c: [0, 3.1, 0.0], half: [3.98, 3.1, 0.02]}}
+  - {name: seam-0, mat: seam, box: {c: [0, 0.50, 0.025], half: [3.85, 0.025, 0.01]}}
+  - {name: seam-1, mat: seam, box: {c: [0, 1.50, 0.025], half: [3.85, 0.025, 0.01]}}
+  - {name: seam-2, mat: seam, box: {c: [0, 2.50, 0.025], half: [3.85, 0.025, 0.01]}}
+  - {name: seam-3, mat: seam, box: {c: [0, 3.50, 0.025], half: [3.85, 0.025, 0.01]}}
+  - {name: seam-4, mat: seam, box: {c: [0, 4.50, 0.025], half: [3.85, 0.025, 0.01]}}
+  - {name: seam-5, mat: seam, box: {c: [0, 5.50, 0.025], half: [3.85, 0.025, 0.01]}}
+  # the north wall of upright logs, a beam along the top
+  - {name: wall-log-0, mat: log, cylinder: {a: [-3.75, 6.25, 0], b: [-3.75, 6.25, 1.85], r1: 0.25}}
+  - {name: wall-log-1, mat: log2, cylinder: {a: [-3.25, 6.25, 0], b: [-3.25, 6.25, 1.85], r1: 0.25}}
+  - {name: wall-log-2, mat: log, cylinder: {a: [-2.75, 6.25, 0], b: [-2.75, 6.25, 1.85], r1: 0.25}}
+  - {name: wall-log-3, mat: log2, cylinder: {a: [-2.25, 6.25, 0], b: [-2.25, 6.25, 1.85], r1: 0.25}}
+  - {name: wall-log-4, mat: log, cylinder: {a: [-1.75, 6.25, 0], b: [-1.75, 6.25, 1.85], r1: 0.25}}
+  - {name: wall-log-5, mat: log2, cylinder: {a: [-1.25, 6.25, 0], b: [-1.25, 6.25, 1.85], r1: 0.25}}
+  - {name: wall-log-6, mat: log, cylinder: {a: [-0.75, 6.25, 0], b: [-0.75, 6.25, 1.85], r1: 0.25}}
+  - {name: wall-log-7, mat: log2, cylinder: {a: [-0.25, 6.25, 0], b: [-0.25, 6.25, 1.85], r1: 0.25}}
+  - {name: wall-log-8, mat: log, cylinder: {a: [0.25, 6.25, 0], b: [0.25, 6.25, 1.85], r1: 0.25}}
+  - {name: wall-log-9, mat: log2, cylinder: {a: [0.75, 6.25, 0], b: [0.75, 6.25, 1.85], r1: 0.25}}
+  - {name: wall-log-10, mat: log, cylinder: {a: [1.25, 6.25, 0], b: [1.25, 6.25, 1.85], r1: 0.25}}
+  - {name: wall-log-11, mat: log2, cylinder: {a: [1.75, 6.25, 0], b: [1.75, 6.25, 1.85], r1: 0.25}}
+  - {name: wall-log-12, mat: log, cylinder: {a: [2.25, 6.25, 0], b: [2.25, 6.25, 1.85], r1: 0.25}}
+  - {name: wall-log-13, mat: log2, cylinder: {a: [2.75, 6.25, 0], b: [2.75, 6.25, 1.85], r1: 0.25}}
+  - {name: wall-log-14, mat: log, cylinder: {a: [3.25, 6.25, 0], b: [3.25, 6.25, 1.85], r1: 0.25}}
+  - {name: wall-log-15, mat: log2, cylinder: {a: [3.75, 6.25, 0], b: [3.75, 6.25, 1.85], r1: 0.25}}
+  - {name: beam, mat: trunk, box: {c: [0, 6.25, 1.85], half: [4.0, 0.2, 0.08], radius: 0.03}}
+  # hide drapes hung on the north wall either side of the trunk
+  - {name: drape-w, mat: fur, prism: {poly: [[-3.2, 5.95], [-1.8, 5.95], [-1.8, 6.0], [-3.2, 6.0]], z: [0.6, 1.7], top: [1.0, 1.0], round: 0.02}}
+  - {name: drape-e, mat: fur, prism: {poly: [[1.9, 5.95], [3.1, 5.95], [3.1, 6.0], [1.9, 6.0]], z: [0.5, 1.6], round: 0.02}}
+  # the side walls, edge-on, and the low sill along the south with the doorway gap
+  - {name: side-w, mat: log, box: {c: [-3.92, 3.1, 0.15], half: [0.08, 3.2, 0.15], radius: 0.02}}
+  - {name: side-e, mat: log, box: {c: [3.92, 3.1, 0.15], half: [0.08, 3.2, 0.15], radius: 0.02}}
+  - {name: sill-w, mat: log, cylinder: {a: [-3.95, 0.12, 0.12], b: [-1.05, 0.12, 0.12], r1: 0.12}}
+  - {name: sill-e, mat: log, cylinder: {a: [1.05, 0.12, 0.12], b: [3.95, 0.12, 0.12], r1: 0.12}}
+  # the tree trunk the hut is built round (cells 3-4, rows 2-3)
+  - {name: trunk, mat: trunk, cylinder: {a: [0, 5.0, 0], b: [0, 5.0, 2.95], r1: 0.95, r2: 0.9}}
+  - {name: trunk-foot, mat: trunk, cylinder: {a: [0, 5.0, 0], b: [0, 5.0, 0.3], r1: 1.0}}
+  # the fire pit: a ring of stones round the embers
+  - {name: pit, mat: ember, cylinder: {a: [0, 2.4, 0.0], b: [0, 2.4, 0.1], r1: 0.62}}
+  - name: stones
+    mat: stone
+    ring: {c: [0, 2.4, 0.12], axis: z, r: 0.72, n: 9, size: [0.38, 0.26, 0.24], round: 0.05}
+  - {name: log-1, mat: log, cylinder: {a: [-0.35, 2.25, 0.14], b: [0.35, 2.55, 0.18], r1: 0.09}}
+  # furs on the floor
+  - {name: fur-w, mat: fur, hull: {points: [[-3.2, 1.2, 0.03], [-1.9, 1.0, 0.03], [-1.7, 2.1, 0.03], [-2.6, 2.4, 0.03], [-3.3, 1.9, 0.03], [-2.5, 1.6, 0.12]], round: 0.02}}
+  - {name: fur-e, mat: basket, hull: {points: [[1.9, 2.4, 0.03], [3.2, 2.2, 0.03], [3.4, 3.2, 0.03], [2.4, 3.5, 0.03], [1.8, 3.1, 0.03], [2.6, 2.8, 0.12]], round: 0.02}}
+  # baskets and pots in the corners by the north wall
+  - {name: basket-1, mat: basket, cylinder: {a: [-3.35, 5.5, 0], b: [-3.35, 5.5, 0.5], r1: 0.3, r2: 0.36}}
+  - {name: basket-2, mat: basket, cylinder: {a: [-2.75, 5.6, 0], b: [-2.75, 5.6, 0.35], r1: 0.22, r2: 0.27}}
+  - {name: pot-1, mat: stone, ellipsoid: {c: [3.3, 5.5, 0.25], r: [0.3, 0.3, 0.28]}}
+  - {name: basket-3, mat: basket, cylinder: {a: [2.7, 5.65, 0], b: [2.7, 5.65, 0.45], r1: 0.26, r2: 0.3}}
+  - {name: bed, mat: basket, box: {c: [-3.3, 3.8, 0.12], half: [0.5, 0.9, 0.12], radius: 0.08}}

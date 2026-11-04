@@ -1,0 +1,90 @@
+# Bacta Center interior (art:shared:bacta-center-interior), the whole room, 14x9 cells (Pokemon
+# Center 1F). Seen by the game camera: the floor in plan, the north wall's face in the top two rows,
+# the side walls edge-on. The medic counter across the middle (the medic droid stands behind it, an
+# NPC), two bacta tanks against the north wall behind the counter (The Empire Strikes Back, where
+# Luke floats in one), a terminal on the left by the wall, the stairs up to the HoloNet club in the
+# north-east corner, a waiting bench on the west side and the door mat at the south edge.
+# Axes: x east, y north, z up; origin at the room's south-west corner on the floor.
+name: shared_bacta-center-interior
+art: art:shared:bacta-center-interior
+palette: greybox
+cells: [14, 9]
+foot: [0, 144]
+footprint: 1     # rooms have no hit box; the scene check needs one row, so the south wall row
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  floor: {ramp: light, bands: [0.3, 0.6, 0.9]}
+  tile:  {ramp: mid,   bands: [0.3, 0.6, 0.95]}
+  wall:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  trim:  {ramp: light, bands: [0.15, 0.5, 0.82]}
+  edge:  {ramp: dark,  bands: [0.3, 0.6, 0.9]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  glass: {ramp: light, bands: [0.25, 0.45, 0.7]}
+  seat:  {ramp: bone,  bands: [0.2, 0.5, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 0}
+box: null
+templates:
+  # a bacta tank: a dark base, a tall glass drum ringed by dark bands, a cap with pipes
+  tank:
+    parts:
+      - {name: base, mat: dark, cylinder: {a: [0, 0, 0], b: [0, 0, 0.3], r1: 0.5, r2: 0.46}}
+      - {name: glass, mat: glass, cylinder: {a: [0, 0, 0.3], b: [0, 0, 1.55], r1: 0.4}}
+      - {name: ring-1, mat: dark, cylinder: {a: [0, 0, 0.62], b: [0, 0, 0.68], r1: 0.42}}
+      - {name: ring-2, mat: dark, cylinder: {a: [0, 0, 1.12], b: [0, 0, 1.18], r1: 0.42}}
+      - {name: cap, mat: wall, cylinder: {a: [0, 0, 1.55], b: [0, 0, 1.75], r1: 0.48, r2: 0.4}}
+      - {name: pipe, mat: dark, cylinder: {a: [0, 0.2, 1.7], b: [0, 0.45, 1.95], r1: 0.08}}
+  step:
+    params: {i: 0}
+    parts:
+      - {name: s, mat: trim, box: {c: [0, "=4.9 + 0.5 * i", "=0.13 + 0.13 * i"], half: [0.95, "=1.0 - 0.25 * i", "=0.13 + 0.13 * i"], radius: 0.02}}
+parts:
+  # the floor: light tiles, a mid walkway from the door to the counter, the door mat
+  - {name: floor, mat: floor, box: {c: [7, 3.5, 0.02], half: [7, 3.5, 0.02]}}
+  - {name: walk, mat: tile, box: {c: [7, 2.0, 0.045], half: [1.6, 2.0, 0.01]}}
+  - {name: mat, mat: dark, box: {c: [7, 0.3, 0.05], half: [0.75, 0.3, 0.015], radius: 0.02}}
+  - {name: seal, mat: tile, cylinder: {a: [7, 2.4, 0.04], b: [7, 2.4, 0.06], r1: 0.9}}
+  - {name: seal-in, mat: floor, cylinder: {a: [7, 2.4, 0.05], b: [7, 2.4, 0.07], r1: 0.6}}
+  - {name: cross-v, mat: tile, box: {c: [7, 2.4, 0.07], half: [0.12, 0.4, 0.01]}}
+  - {name: cross-h, mat: tile, box: {c: [7, 2.4, 0.07], half: [0.4, 0.12, 0.01]}}
+  # the north wall: panels, a light trim rail, a dark cornice
+  - {name: wall, mat: wall, box: {c: [7, 6.95, 1.0], half: [6.8, 0.05, 1.0]}}
+  - {name: rail, mat: trim, box: {c: [7, 6.88, 0.9], half: [6.8, 0.03, 0.06]}}
+  - {name: cornice, mat: dark, box: {c: [7, 6.88, 1.9], half: [6.8, 0.04, 0.1]}}
+  - {name: base, mat: dark, box: {c: [7, 6.88, 0.08], half: [6.8, 0.04, 0.08]}}
+  # side walls, edge-on
+  - {name: wall-w, mat: edge, box: {c: [0.15, 3.5, 1.0], half: [0.15, 3.5, 1.0]}}
+  - {name: wall-e, mat: edge, box: {c: [13.85, 3.5, 1.0], half: [0.15, 3.5, 1.0]}}
+  # the medic counter
+  - {name: counter, mat: wall, box: {c: [7, 4.5, 0.45], half: [3.0, 0.38, 0.45], radius: 0.04}}
+  - {name: counter-top, mat: trim, box: {c: [7, 4.5, 0.93], half: [3.08, 0.44, 0.05], radius: 0.03}}
+  - {name: counter-band, mat: dark, box: {c: [7, 4.11, 0.55], half: [2.9, 0.02, 0.1]}}
+  - {name: counter-cross, mat: trim, box: {c: [7, 4.1, 0.5], half: [0.24, 0.02, 0.07]}}
+  - {name: counter-cross-v, mat: trim, box: {c: [7, 4.1, 0.5], half: [0.07, 0.02, 0.24]}}
+  # two bacta tanks against the wall behind it
+  - {use: tank, name: tank-w, at: [5.0, 6.35, 0]}
+  - {use: tank, name: tank-e, at: [9.0, 6.35, 0]}
+  - {name: rack, mat: dark, box: {c: [7, 6.6, 0.6], half: [1.0, 0.25, 0.6], radius: 0.03}}
+  - {name: rack-screen, mat: trim, box: {c: [7, 6.34, 0.85], half: [0.7, 0.02, 0.22]}}
+  # the terminal on the left, by the wall
+  - {name: term, mat: wall, box: {c: [1.6, 6.45, 0.45], half: [0.7, 0.35, 0.45], radius: 0.04}}
+  - {name: term-screen, mat: dark, box: {c: [1.6, 6.55, 1.2], half: [0.6, 0.06, 0.32], radius: 0.03}}
+  - {name: term-frame, mat: trim, box: {c: [1.6, 6.62, 1.2], half: [0.68, 0.04, 0.38], radius: 0.03}}
+  - {name: term-keys, mat: trim, box: {c: [1.6, 6.15, 0.92], half: [0.6, 0.12, 0.03]}}
+  # the stairs up to the HoloNet club: steps rising north into a dark doorway
+  - {name: door-club, mat: dark, box: {c: [12.4, 6.86, 0.95], half: [0.85, 0.05, 0.95]}}
+  - {use: step, name: step-0, at: [12.4, 0, 0], with: {i: 0}}
+  - {use: step, name: step-1, at: [12.4, 0, 0], with: {i: 1}}
+  - {use: step, name: step-2, at: [12.4, 0, 0], with: {i: 2}}
+  - {use: step, name: step-3, at: [12.4, 0, 0], with: {i: 3}}
+  - {name: stair-rail, mat: dark, box: {c: [11.4, 5.8, 0.6], half: [0.05, 1.0, 0.6]}}
+  # a waiting bench on the west side
+  - {name: bench, mat: seat, box: {c: [1.6, 3.0, 0.3], half: [0.9, 0.35, 0.1], radius: 0.05}}
+  - {name: bench-back, mat: seat, box: {c: [0.85, 3.0, 0.55], half: [0.1, 0.4, 0.3], radius: 0.04}}
+  - {name: bench-leg, mat: dark, box: {c: [1.6, 3.0, 0.1], half: [0.7, 0.25, 0.1]}}

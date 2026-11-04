@@ -1,0 +1,46 @@
+# Ewok glider (art:endor:ewok-glider), hit box 1x2, drawn 1x3.
+# Reference: the Ewok hang gliders (Return of the Jedi; wiki/art/concept/endor/ewok-glider__web_1.jpg and
+# __web_2.jpg): a hide sail stretched over a frame of lashed poles, the scalloped trailing edge between
+# the ribs. Stood on its wingtip and leaning back against a tree trunk (the trunk is placed on the map),
+# the sail facing south. Axes: x east, y north, z up, origin on the ground under the glider.
+name: endor_ewok-glider
+art: art:endor:ewok-glider
+palette: greybox
+cells: [1, 3]
+foot: [8, 44]
+footprint: 2
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  hide:  {ramp: bone,  bands: [0.1, 0.45, 0.8]}
+  pole:  {ramp: dark,  bands: [0.1, 0.45, 0.8]}
+  rope:  {ramp: mid,   bands: [0.2, 0.5, 0.85]}
+  shade: {color: shade}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 2}
+box: [16, 32]
+tilt: [0, 14]
+scale: 0.8
+pivot: [0, 0]
+parts:
+  # the sail: one wing stood on its tip, the straight leading edge on the west, the scalloped trailing
+  # edge on the east, sagging between the ribs
+  - {name: sail-1, mat: hide, extrude: {axis: y, span: [0.0, 0.04], round: 0.01, profile: [[-0.36, 0.05], [-0.36, 0.72], [0.2, 0.72], [-0.05, 0.4]]}}
+  - {name: sail-2, mat: hide, extrude: {axis: y, span: [0.0, 0.04], round: 0.01, profile: [[-0.36, 0.7], [-0.36, 1.32], [0.42, 1.32], [0.12, 1.0]]}}
+  - {name: sail-3, mat: hide, extrude: {axis: y, span: [0.0, 0.04], round: 0.01, profile: [[-0.36, 1.3], [-0.36, 1.92], [0.3, 1.92], [0.14, 1.6]]}}
+  - {name: sail-4, mat: hide, extrude: {axis: y, span: [0.0, 0.04], round: 0.01, profile: [[-0.36, 1.9], [-0.36, 2.55], [-0.1, 2.5], [0.05, 2.2]]}}
+  # the frame: the leading-edge pole, three ribs out to the trailing edge, lashings
+  - {name: spar, mat: pole, cylinder: {a: [-0.38, -0.04, 0.0], b: [-0.38, -0.04, 2.62], r1: 0.05}}
+  - {name: rib-1, mat: pole, cylinder: {a: [-0.38, -0.04, 0.72], b: [0.22, -0.04, 0.72], r1: 0.04}}
+  - {name: rib-2, mat: pole, cylinder: {a: [-0.38, -0.04, 1.32], b: [0.44, -0.04, 1.32], r1: 0.045}}
+  - {name: rib-3, mat: pole, cylinder: {a: [-0.38, -0.04, 1.92], b: [0.32, -0.04, 1.92], r1: 0.04}}
+  - {name: lash, mat: rope, box: {c: [-0.38, -0.07, 1.32], half: [0.07, 0.03, 0.07], radius: 0.01}}
+  # the harness straps hanging from the middle rib
+  - {name: strap, mat: rope, box: {c: [0.0, -0.08, 1.05], half: [0.03, 0.02, 0.25], radius: 0.01}}
+ground:
+  - {name: foot-shade, mat: shade, cylinder: {a: [0, 0.05, 0], b: [0, 0.05, 0.01], r1: 0.4}, squash: [1.0, 0.45, 1]}

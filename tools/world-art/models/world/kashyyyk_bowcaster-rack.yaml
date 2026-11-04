@@ -1,0 +1,45 @@
+# Bowcaster rack (art:kashyyyk:bowcaster-rack), footprint 1x1, drawn 1x2. Outside the huts.
+# Reference: the Wookiee bowcaster (A New Hope; Chewbacca's crossbow-like blaster with the bow and
+# its two ball-ended arms) and the drying frames of Kachirho. Two rough posts with a crossbar, a hide
+# stretched below it, a bowcaster racked on pegs across the front. Axes: x east, y north, z up.
+name: kashyyyk_bowcaster-rack
+art: art:kashyyyk:bowcaster-rack
+palette: greybox
+cells: [1, 2]
+foot: [8, 28]
+scale: 0.92
+footprint: 1
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  wood:  {ramp: mid, bands: [0.25, 0.55, 0.85]}
+  hide:  {ramp: bone, bands: [0.25, 0.55, 0.88]}
+  metal: {ramp: dark, bands: [0.2, 0.5, 0.82]}
+  steel: {ramp: light, bands: [0.2, 0.5, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 1}
+box: [16, 16]
+templates:
+  # the bowcaster standing on its stock: stock, barrel up, the bow across the muzzle with its two balls
+  bowcaster:
+    parts:
+      - {name: stock, mat: metal, box: {c: [0, 0, 0.18], half: [0.07, 0.05, 0.18], radius: 0.015}}
+      - {name: barrel, mat: steel, box: {c: [0, 0, 0.62], half: [0.05, 0.04, 0.28], radius: 0.015}}
+      - {name: scope, mat: metal, box: {c: [0.08, 0, 0.62], half: [0.035, 0.03, 0.12], radius: 0.01}}
+      - {name: bow, mat: metal, box: {c: [0, 0, 0.9], half: [0.24, 0.04, 0.035], radius: 0.01}}
+      - {name: ball-w, mat: steel, ellipsoid: {c: [-0.26, 0, 0.9], r: [0.065, 0.06, 0.065]}}
+      - {name: ball-e, mat: steel, ellipsoid: {c: [0.26, 0, 0.9], r: [0.065, 0.06, 0.065]}}
+parts:
+  # the frame: two posts and a crossbar, a small hide hung at the east end
+  - {name: post-w, mat: wood, box: {c: [-0.4, 0.42, 0.62], half: [0.06, 0.06, 0.62], radius: 0.02}}
+  - {name: post-e, mat: wood, box: {c: [0.4, 0.42, 0.62], half: [0.06, 0.06, 0.62], radius: 0.02}}
+  - {name: bar, mat: wood, box: {c: [0, 0.42, 1.12], half: [0.47, 0.06, 0.05], radius: 0.02}}
+  - {name: bar-low, mat: wood, box: {c: [0, 0.42, 0.4], half: [0.42, 0.05, 0.04], radius: 0.02}}
+  - {name: hide, mat: hide, box: {c: [0.0, 0.5, 0.76], half: [0.3, 0.03, 0.3], radius: 0.03}}
+  # two bowcasters leaning in it, stocks down, the bows across the top
+  - {use: bowcaster, name: bc1, at: [-0.15, 0.24, 0.02], rot: [-6, 0, 0]}

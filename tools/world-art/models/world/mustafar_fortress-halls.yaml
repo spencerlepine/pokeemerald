@@ -1,0 +1,88 @@
+# Fortress Vader halls (art:mustafar:fortress-halls), a whole room, 20x20 cells.
+# The halls of Vader's castle (Rogue One): black stone, red-lit strips up the walls (light here), a lava
+# conduit crossing the floor under a bridge, the raised dais of the meditation chamber against the
+# north wall and Vader's upright bacta tank beside it. Seen in the game camera: the floor in plan, the
+# north wall's face showing, the side walls edge-on, the door gap in the south wall.
+# The fortress maps (wiki/world/mustafar/caves/fortress-vader-*) are cave grids; this is the room kit
+# they share: halls, conduits, the chamber. Axes: x east, y north, z up, origin on the floor at the
+# room's south edge, middle.
+name: mustafar_fortress-halls
+art: art:mustafar:fortress-halls
+palette: greybox
+cells: [20, 20]
+foot: [160, 320]
+footprint: 1        # a room has no hit box; this is the south wall's row, for the scene check
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  floor:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  runner: {ramp: dark,  bands: [0.2, 0.5, 0.95]}
+  stone:  {ramp: dark,  bands: [0.15, 0.45, 0.75]}
+  wall:   {ramp: mid,   bands: [0.35, 0.65, 0.95]}
+  trim:   {ramp: light, bands: [0.15, 0.5, 0.82]}
+  glow:   {ramp: light, bands: [0.1, 0.35, 0.65]}
+  glass:  {ramp: light, bands: [0.2, 0.55, 0.88]}
+  dark:   {ramp: dark,  bands: [0.3, 0.6, 0.95]}
+box: null
+parts:
+  # the floor, with a dark runner from the door to the dais
+  - {name: floor, mat: floor, box: {c: [0, 8.6, 0.03], half: [9.7, 8.6, 0.03]}}
+  - {name: runner, mat: runner, box: {c: [0, 6.0, 0.07], half: [1.2, 5.9, 0.03]}}
+  # the north wall: its face with red light strips, a heavy cornice
+  - {name: wall-n, mat: wall, box: {c: [0, 17.3, 1.2], half: [10.0, 0.3, 1.2]}}
+  - {name: cornice-n, mat: stone, box: {c: [0, 17.0, 2.3], half: [10.0, 0.12, 0.1]}}
+  # the side walls, edge-on
+  - {name: wall-w, mat: stone, box: {c: [-9.8, 8.8, 1.2], half: [0.2, 8.8, 1.2]}}
+  - {name: wall-e, mat: stone, box: {c: [9.8, 8.8, 1.2], half: [0.2, 8.8, 1.2]}}
+  # the south wall, low in this view, with the door gap in the middle
+  - {name: wall-sw, mat: stone, box: {c: [-5.6, 0.2, 0.25], half: [4.4, 0.2, 0.25]}}
+  - {name: wall-se, mat: stone, box: {c: [5.6, 0.2, 0.25], half: [4.4, 0.2, 0.25]}}
+  # the lava conduit across the hall, walled in black stone, and the bridge over it
+  - {name: conduit, mat: glow, box: {c: [0, 9.0, 0.06], half: [9.6, 0.7, 0.04]}}
+  - {name: kerb-s, mat: stone, box: {c: [0, 8.2, 0.12], half: [9.6, 0.12, 0.12], radius: 0.02}}
+  - {name: kerb-n, mat: stone, box: {c: [0, 9.8, 0.12], half: [9.6, 0.12, 0.12], radius: 0.02}}
+  - {name: bridge, mat: floor, box: {c: [0, 9.0, 0.22], half: [1.4, 1.0, 0.1], radius: 0.02}}
+  - {name: bridge-w, mat: trim, box: {c: [-1.45, 9.0, 0.32], half: [0.08, 1.0, 0.08]}}
+  - {name: bridge-e, mat: trim, box: {c: [1.45, 9.0, 0.32], half: [0.08, 1.0, 0.08]}}
+  # the meditation dais: two stepped tiers and the closed meditation pod on top
+  - {name: dais-1, mat: stone, prism: {poly: [[-3.4, 11.8], [3.4, 11.8], [3.4, 17.0], [-3.4, 17.0]], z: [0, 0.3], top: 0.96, round: 0.03}}
+  - {name: dais-2, mat: floor, prism: {poly: [[-2.5, 12.6], [2.5, 12.6], [2.5, 17.0], [-2.5, 17.0]], z: [0.3, 0.6], top: 0.95, round: 0.03}}
+  - {name: dais-edge, mat: trim, box: {c: [0, 12.55, 0.56], half: [2.5, 0.06, 0.04]}}
+  - {name: pod, mat: stone, ellipsoid: {c: [0, 15.1, 1.35], r: [1.25, 1.1, 0.95]}}
+  - {name: pod-seam, mat: glow, box: {c: [0, 14.0, 1.4], half: [1.25, 0.08, 0.05]}}
+  - {name: pod-base, mat: stone, cylinder: {a: [0, 15.1, 0.55], b: [0, 15.1, 0.75], r1: 1.0}}
+  # Vader's bacta tank, upright, east of the dais, on its machine base
+  - {name: tank-base, mat: stone, box: {c: [6.0, 14.8, 0.3], half: [1.0, 0.9, 0.3], radius: 0.04}}
+  - {name: tank, mat: glass, cylinder: {a: [6.0, 14.8, 0.6], b: [6.0, 14.8, 2.8], r1: 0.62}}
+  - {name: tank-cap, mat: dark, cylinder: {a: [6.0, 14.8, 2.8], b: [6.0, 14.8, 3.1], r1: 0.72, r2: 0.5}}
+  - {name: tank-ring, mat: dark, cylinder: {a: [6.0, 14.8, 1.65], b: [6.0, 14.8, 1.75], r1: 0.66}}
+  # a console to the west of the dais
+  - {name: console, mat: stone, prism: {poly: [[-7.0, 14.1], [-5.0, 14.1], [-5.0, 15.1], [-7.0, 15.1]], z: [0, 0.8], top: [1.0, 0.6], lean: [0, 0.2], round: 0.03}}
+  - {name: console-screen, mat: glow, box: {c: [-6.0, 14.25, 0.62], half: [0.7, 0.05, 0.12]}}
+  - {name: pillar-w0, mat: stone, box: {c: [-8.6, 2.5, 1.05], half: [0.42, 0.42, 1.05], radius: 0.04}}
+  - {name: pillar-w0-light, mat: glow, box: {c: [-8.6, 2.06, 1.2], half: [0.08, 0.03, 0.55]}}
+  - {name: pillar-w1, mat: stone, box: {c: [-8.6, 6.0, 1.05], half: [0.42, 0.42, 1.05], radius: 0.04}}
+  - {name: pillar-w1-light, mat: glow, box: {c: [-8.6, 5.56, 1.2], half: [0.08, 0.03, 0.55]}}
+  - {name: pillar-w2, mat: stone, box: {c: [-8.6, 11.0, 1.05], half: [0.42, 0.42, 1.05], radius: 0.04}}
+  - {name: pillar-w2-light, mat: glow, box: {c: [-8.6, 10.56, 1.2], half: [0.08, 0.03, 0.55]}}
+  - {name: pillar-w3, mat: stone, box: {c: [-8.6, 14.2, 1.05], half: [0.42, 0.42, 1.05], radius: 0.04}}
+  - {name: pillar-w3-light, mat: glow, box: {c: [-8.6, 13.76, 1.2], half: [0.08, 0.03, 0.55]}}
+  - {name: pillar-e0, mat: stone, box: {c: [8.6, 2.5, 1.05], half: [0.42, 0.42, 1.05], radius: 0.04}}
+  - {name: pillar-e0-light, mat: glow, box: {c: [8.6, 2.06, 1.2], half: [0.08, 0.03, 0.55]}}
+  - {name: pillar-e1, mat: stone, box: {c: [8.6, 6.0, 1.05], half: [0.42, 0.42, 1.05], radius: 0.04}}
+  - {name: pillar-e1-light, mat: glow, box: {c: [8.6, 5.56, 1.2], half: [0.08, 0.03, 0.55]}}
+  - {name: pillar-e2, mat: stone, box: {c: [8.6, 11.0, 1.05], half: [0.42, 0.42, 1.05], radius: 0.04}}
+  - {name: pillar-e2-light, mat: glow, box: {c: [8.6, 10.56, 1.2], half: [0.08, 0.03, 0.55]}}
+  - {name: pillar-e3, mat: stone, box: {c: [8.6, 14.2, 1.05], half: [0.42, 0.42, 1.05], radius: 0.04}}
+  - {name: pillar-e3-light, mat: glow, box: {c: [8.6, 13.76, 1.2], half: [0.08, 0.03, 0.55]}}
+  - {name: strip-0, mat: glow, box: {c: [-7.5, 16.95, 1.25], half: [0.1, 0.05, 0.75]}}
+  - {name: strip-1, mat: glow, box: {c: [-5.0, 16.95, 1.25], half: [0.1, 0.05, 0.75]}}
+  - {name: strip-2, mat: glow, box: {c: [-2.5, 16.95, 1.25], half: [0.1, 0.05, 0.75]}}
+  - {name: strip-3, mat: glow, box: {c: [2.5, 16.95, 1.25], half: [0.1, 0.05, 0.75]}}
+  - {name: strip-4, mat: glow, box: {c: [5.0, 16.95, 1.25], half: [0.1, 0.05, 0.75]}}
+  - {name: strip-5, mat: glow, box: {c: [7.5, 16.95, 1.25], half: [0.1, 0.05, 0.75]}}

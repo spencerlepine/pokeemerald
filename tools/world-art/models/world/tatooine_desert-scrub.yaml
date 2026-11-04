@@ -1,0 +1,46 @@
+# Desert scrub (art:tatooine:desert-scrub), hit box 1x1, drawn 1x1.
+# Reference: dry desert grass tussocks on dunes. A low tuft of stiff blades fanning out of a dark
+# clump, the blades spread east-west so they read from the front, with a smaller tuft beside it.
+# Axes: x east, y north, z up; origin on the ground at the south edge of the cell.
+name: tatooine_desert-scrub
+art: art:tatooine:desert-scrub
+palette: greybox
+cells: [1, 1]
+foot: [8, 14]
+scale: 0.76
+footprint: 1
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  blade: {ramp: mid,  bands: [0.2, 0.5, 0.8]}
+  tip:   {ramp: bone, bands: [0.3, 0.6, 0.9]}
+  clump: {ramp: dark, bands: [0.3, 0.6, 0.9]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 1}
+box: [12, 8]
+templates:
+  # one tuft: a dark clump and blades fanning up and out; `s` sizes it
+  tuft:
+    params: {s: 1.0}
+    parts:
+      - {name: clump, mat: clump, ellipsoid: {c: [0, 0, 0], r: ["=0.16 * s", "=0.1 * s", "=0.1 * s"]}}
+      - {name: b1, mat: blade, cone: {a: [0, 0, 0.02], b: ["=-0.3 * s", "=-0.04 * s", "=0.26 * s"], r1: 0.038, r2: 0.012}}
+      - {name: b2, mat: tip,   cone: {a: [0, 0, 0.02], b: ["=-0.14 * s", "=-0.06 * s", "=0.42 * s"], r1: 0.038, r2: 0.012}}
+      - {name: b3, mat: blade, cone: {a: [0, 0, 0.02], b: ["=0.04 * s", "=-0.02 * s", "=0.48 * s"], r1: 0.038, r2: 0.012}}
+      - {name: b4, mat: tip,   cone: {a: [0, 0, 0.02], b: ["=0.2 * s", "=-0.06 * s", "=0.38 * s"], r1: 0.038, r2: 0.012}}
+      - {name: b5, mat: blade, cone: {a: [0, 0, 0.02], b: ["=0.34 * s", "=-0.03 * s", "=0.2 * s"], r1: 0.038, r2: 0.012}}
+      - {name: b6, mat: blade, cone: {a: [0, 0, 0.02], b: ["=-0.06 * s", "=0.1 * s", "=0.36 * s"], r1: 0.034, r2: 0.012}}
+      - {name: b7, mat: blade, cone: {a: [0, 0, 0.02], b: ["=0.14 * s", "=0.1 * s", "=0.3 * s"], r1: 0.034, r2: 0.012}}
+parts:
+  - {use: tuft, name: big, at: [-0.08, 0.4, 0], with: {s: 1.55}}
+  - {use: tuft, name: small, at: [0.22, 0.14, 0], with: {s: 0.9}}
+variants:
+  scrub: {}
+  # one tuft only
+  single:
+    drop: ["small/*"]

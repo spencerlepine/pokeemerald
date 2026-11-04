@@ -1,0 +1,63 @@
+# Frigate wreck (art:sullust:frigate-wreck), hit box 16x3, drawn 16x6.
+# Reference: the Munificent-class star frigate (The Clone Wars): a long, tall, narrow hull in plated
+# sections with a light deck along its top, and at the bow the great split prow, an upper and a lower
+# jaw curving forward round the dark gap where the comm array sits. Buried in the Sullust ash fields,
+# bow east: the lower jaw sunk in the ash, the hull running west along the route's edge and off the map
+# (cut off at the west edge on purpose), ash drifted along its south side and a torn wing in the ash.
+# Axes: x east, y north, z up, origin on the ground at the hit box's south edge, middle.
+name: sullust_frigate-wreck
+art: art:sullust:frigate-wreck
+palette: greybox
+cells: [16, 6]
+foot: [128, 96]
+footprint: 3
+tilt: [-3, 3]
+pivot: [6, 1.5]
+sink: 0.3
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  hull:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  deck:  {ramp: light, bands: [0.2, 0.5, 0.85]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  ash:   {ramp: mid,   bands: [0.3, 0.55, 0.8]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 3}
+box: [252, 44]
+parts:
+  # the long hull: tall and narrow, lower toward the stern, two dark seams, a light deck along its top
+  - name: hull
+    mat: hull
+    hull: {points: [[-8.7, 0.55, 0], [-8.7, 2.45, 0], [-8.7, 0.65, 1.75], [-8.7, 2.35, 1.75], [-8.7, 0.5, 0.8], [-8.7, 2.5, 0.8],
+                    [3.2, 0.4, 0], [3.2, 2.6, 0], [3.2, 0.55, 2.4], [3.2, 2.45, 2.4], [3.2, 0.35, 1.1], [3.2, 2.65, 1.1]], round: 0.05}
+    regions:
+      - {where: "abs(x + 4.6) < 0.06", mat: dark}
+      - {where: "abs(x + 0.4) < 0.06", mat: dark}
+  - {name: deck, mat: deck, hull: {points: [[-8.6, 1.05, 1.72], [-8.6, 1.95, 1.72], [3.1, 1.0, 2.38], [3.1, 2.0, 2.38],
+                                             [-8.6, 1.05, 1.82], [-8.6, 1.95, 1.82], [3.1, 1.0, 2.48], [3.1, 2.0, 2.48]], round: 0.02}}
+  # the prow: a tall rounded bulb with a light livery band, the upper and lower jaws reaching forward
+  # round the dark gap, the comm array inside
+  - name: bulb
+    mat: hull
+    ellipsoid: {c: [4.0, 1.5, 1.2], r: [1.9, 1.18, 1.65]}
+    regions:
+      - {where: "abs(x - 3.55) < 0.22", mat: deck}
+  - {name: jaw-top, mat: hull, ellipsoid: {c: [5.7, 1.5, 1.85], r: [2.0, 0.8, 0.55]}, rot: [-14, 0, 0]}
+  - {name: jaw-top-band, mat: deck, ellipsoid: {c: [5.75, 1.5, 1.95], r: [1.7, 0.42, 0.5]}, rot: [-14, 0, 0]}
+  - {name: jaw-low, mat: hull, ellipsoid: {c: [5.8, 1.5, 0.35], r: [1.85, 0.75, 0.5]}, rot: [8, 0, 0]}
+  - {name: gap, mat: dark, ellipsoid: {c: [5.6, 1.5, 1.1], r: [1.45, 0.6, 0.45]}}
+  - {name: array, mat: deck, cylinder: {a: [5.0, 1.5, 1.1], b: [6.6, 1.5, 1.1], r1: 0.14, r2: 0.06}}
+  # the comm spire and dorsal fin at the aft end of what shows
+  - {name: fin, mat: hull, prism: {poly: [[-6.4, 1.3], [-4.8, 1.3], [-4.8, 1.7], [-6.4, 1.7]], z: [1.7, 2.7], top: [0.5, 1.0], lean: [-0.3, 0], round: 0.03}}
+  - {name: spire, mat: deck, cylinder: {a: [-5.75, 1.5, 2.6], b: [-5.75, 1.5, 3.3], r1: 0.08, r2: 0.04}}
+ground:
+  # ash drifted along the south side, a torn wing lying in it
+  - {name: drift-1, mat: ash, ellipsoid: {c: [-5.3, 0.48, 0], r: [2.6, 0.28, 0.3]}}
+  - {name: drift-2, mat: ash, ellipsoid: {c: [-0.5, 0.46, 0], r: [2.2, 0.25, 0.26]}}
+  - {name: drift-3, mat: ash, ellipsoid: {c: [5.4, 0.5, 0], r: [1.9, 0.3, 0.4]}}
+  - {name: wing, mat: deck, prism: {poly: [[-3.4, 0.22], [-1.8, 0.25], [-2.2, 0.55], [-3.6, 0.5]], z: [0, 0.12], round: 0.02}}

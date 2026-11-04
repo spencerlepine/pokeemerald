@@ -1,0 +1,45 @@
+# Rubble pile (art:shared:rubble-pile), hit box 3x2, drawn 3x2.
+# A heap of fallen masonry next to a ruin: a low mound of broken stone with cut blocks tumbled on and
+# around it, a fallen column drum, and a lintel slab leaning on the heap. Cut stone (square edges) is what
+# tells it from a natural rock pile. Axes: x east, y north from the hit box's south edge, z up.
+name: shared_rubble-pile
+art: art:shared:rubble-pile
+palette: greybox
+kits: [kits/shared-scenery.yaml]
+cells: [3, 2]
+foot: [24, 31]
+footprint: 2
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  stone: {ramp: light, bands: [0.3, 0.6, 0.9]}
+  block: {ramp: mid,   bands: [0.1, 0.45, 0.8]}
+  heap:  {ramp: mid,   bands: [0.4, 0.7, 0.95]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 2}
+box: [44, 28]
+parts:
+  # the mound of small broken stone under everything
+  - name: heap
+    mat: heap
+    hull: {points: [[-1.35, 0.25, 0], [1.3, 0.2, 0], [1.4, 0.9, 0], [0.9, 1.25, 0], [-1.0, 1.25, 0], [-1.45, 0.75, 0],
+                    [-0.6, 0.55, 0.45], [0.4, 0.5, 0.5], [0.1, 0.95, 0.6], [-0.5, 0.95, 0.5]], round: 0.04}
+  # cut blocks tumbled on the heap and at its foot
+  - {use: stone, name: blk-1, at: [-0.55, 0.55, 0.32], rot: [8, -6, 18], with: {s: [0.32, 0.2, 0.17], mat: block}}
+  - {use: stone, name: blk-2, at: [0.45, 0.6, 0.38], rot: [-6, 12, -24], with: {s: [0.28, 0.2, 0.16], mat: stone}}
+  - {use: stone, name: blk-3, at: [-1.05, 0.3, 0], rot: [0, 8, 0], with: {s: [0.25, 0.18, 0.15], mat: stone}}
+  - {use: stone, name: blk-4, at: [1.05, 0.38, 0], rot: [0, -14, 0], with: {s: [0.22, 0.17, 0.14], mat: block}}
+  - {use: stone, name: blk-5, at: [-0.05, 0.95, 0.38], rot: [0, -8, 6], with: {s: [0.3, 0.18, 0.15], mat: block}}
+  # a fallen column drum, its round end to the south
+  - {name: drum, mat: stone, cylinder: {a: [0.15, 0.1, 0.2], b: [0.3, 0.5, 0.2], r1: 0.2}}
+  # a lintel slab leaning on the heap's north side
+  - {name: lintel, mat: block, box: {c: [0.8, 1.05, 0.25], half: [0.45, 0.12, 0.1], radius: 0.03}, rot: [12, 18, 0]}
+  # small chunks scattered south
+  - {use: chunk, name: ch-1, at: [-0.35, 0.18, 0], with: {r: 0.14, h: 0.12, mat: stone}}
+  - {use: chunk, name: ch-2, at: [0.75, 0.15, 0], with: {r: 0.12, h: 0.1, mat: heap}}

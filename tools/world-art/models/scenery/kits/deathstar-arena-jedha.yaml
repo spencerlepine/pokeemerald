@@ -1,0 +1,115 @@
+# Kit for the Death Star, Grand Arena and Jedha pieces. Axes of each template: x east, y north, z up,
+# origin on the ground (or at the named joint), 1 m = 1 cell = 16 px.
+# Parts that must survive a template's own `op: subtract` cuts sit in group `face` (declare
+# `groups: {body: {}, face: {}}` in the model that uses them).
+templates:
+  # The hooded head of a Jedha guardian statue (Rogue One): a deep cowl, the face set back inside it.
+  # Upright, the face looks south (-y); origin at the middle of the neck's cut. `s` scales it.
+  jedi-head:
+    params: {s: 1.0, stone: stone, inner: dark, skin: face}
+    parts:
+      - name: cowl
+        mat: "=stone"
+        hull: {points: [["=-0.85*s", "=-0.55*s", 0], ["=0.85*s", "=-0.55*s", 0], ["=-0.9*s", "=0.75*s", 0], ["=0.9*s", "=0.75*s", 0],
+                        ["=-0.95*s", "=-0.6*s", "=0.9*s"], ["=0.95*s", "=-0.6*s", "=0.9*s"], ["=-0.95*s", "=0.85*s", "=0.9*s"], ["=0.95*s", "=0.85*s", "=0.9*s"],
+                        ["=-0.7*s", "=-0.5*s", "=1.75*s"], ["=0.7*s", "=-0.5*s", "=1.75*s"], ["=-0.65*s", "=0.7*s", "=1.75*s"], ["=0.65*s", "=0.7*s", "=1.75*s"],
+                        [0, "=-0.3*s", "=2.15*s"], [0, "=0.5*s", "=2.1*s"]], round: 0.05}
+      # the opening of the cowl: a deep pointed arch cut into the south face
+      - name: opening
+        mat: "=stone"
+        op: subtract
+        hull: {points: [["=-0.55*s", "=-1.0*s", "=0.05*s"], ["=0.55*s", "=-1.0*s", "=0.05*s"], ["=-0.6*s", "=-1.0*s", "=1.25*s"], ["=0.6*s", "=-1.0*s", "=1.25*s"], [0, "=-1.0*s", "=1.75*s"],
+                        ["=-0.45*s", "=0.15*s", "=0.15*s"], ["=0.45*s", "=0.15*s", "=0.15*s"], ["=-0.45*s", "=0.15*s", "=1.25*s"], ["=0.45*s", "=0.15*s", "=1.25*s"], [0, "=0.15*s", "=1.6*s"]], round: 0.03}
+      - {name: shadow-in, mat: "=inner", group: face, box: {c: [0, "=0.12*s", "=0.9*s"], half: ["=0.5*s", "=0.06*s", "=0.75*s"], radius: 0.02}}
+      # the face: brow, nose and chin as one wedge, set back in the cowl
+      - name: face
+        mat: "=skin"
+        group: face
+        hull: {points: [["=-0.38*s", "=0.05*s", "=0.15*s"], ["=0.38*s", "=0.05*s", "=0.15*s"], [0, "=-0.28*s", "=0.2*s"],
+                        ["=-0.42*s", "=-0.05*s", "=1.15*s"], ["=0.42*s", "=-0.05*s", "=1.15*s"], [0, "=-0.38*s", "=0.75*s"], [0, "=-0.3*s", "=1.1*s"],
+                        ["=-0.36*s", "=0.1*s", "=1.35*s"], ["=0.36*s", "=0.1*s", "=1.35*s"]], round: 0.04}
+      - {name: brow, mat: "=inner", group: face, box: {c: [0, "=-0.16*s", "=0.98*s"], half: ["=0.32*s", "=0.06*s", "=0.05*s"], radius: 0.01}}
+  # A statue plinth: a stepped block, the front step wider. `w` wide, `d` deep, `h` high.
+  plinth:
+    params: {w: 2.6, d: 1.3, h: 0.55, stone: stone, trim: trim}
+    parts:
+      - {name: base, mat: "=stone", prism: {poly: [["=-w/2", "=-d/2"], ["=w/2", "=-d/2"], ["=w/2", "=d/2"], ["=-w/2", "=d/2"]], z: [0, "=h*0.45"], round: 0.04}}
+      - {name: top, mat: "=trim", prism: {poly: [["=-w/2+0.18", "=-d/2+0.12"], ["=w/2-0.18", "=-d/2+0.12"], ["=w/2-0.18", "=d/2-0.08"], ["=-w/2+0.18", "=d/2-0.08"]], z: [0, "=h"], top: 0.96, round: 0.04}}
+  # The command tower of an Imperial Star Destroyer (A New Hope): stepped decks, a tall narrow neck,
+  # the T-shaped bridge with its window band facing the bow (-y), two shield-generator domes on top.
+  # Origin on the deck at the neck's foot; `s` scales it, `nh` is the neck's height.
+  isd-tower:
+    params: {s: 1.0, nh: 2.6, hull: hull, plate: plate, dark: dark, dome: plate}
+    parts:
+      - {name: deck-1, mat: "=hull", prism: {poly: [["=-2.2*s", "=-0.9*s"], ["=2.2*s", "=-0.9*s"], ["=2.2*s", "=1.0*s"], ["=-2.2*s", "=1.0*s"]], z: [0, "=0.45*s"], top: [0.94, 0.9], round: 0.04}}
+      - {name: deck-2, mat: "=plate", prism: {poly: [["=-1.5*s", "=-0.55*s"], ["=1.5*s", "=-0.55*s"], ["=1.5*s", "=0.85*s"], ["=-1.5*s", "=0.85*s"]], z: [0, "=0.95*s"], top: [0.9, 0.85], round: 0.04}}
+      - {name: deck-3, mat: "=hull", prism: {poly: [["=-0.9*s", "=-0.25*s"], ["=0.9*s", "=-0.25*s"], ["=0.9*s", "=0.75*s"], ["=-0.9*s", "=0.75*s"]], z: [0, "=1.45*s"], top: [0.85, 0.85], round: 0.04}}
+      - {name: neck, mat: "=plate", prism: {poly: [["=-0.42*s", "=0.0*s"], ["=0.42*s", "=0.0*s"], ["=0.42*s", "=0.6*s"], ["=-0.42*s", "=0.6*s"]], z: [0, "=(1.45 + nh)*s"], top: [0.85, 1], round: 0.03}}
+      - {name: neck-slot, mat: "=dark", box: {c: [0, "=-0.01*s", "=(1.45 + nh*0.55)*s"], half: ["=0.1*s", "=0.02*s", "=nh*0.4*s"], radius: 0.01}}
+      # the bridge: a wide flat bar, its front face sloped back, the window band across it
+      - name: bridge
+        mat: "=hull"
+        extrude: {axis: x, span: ["=-2.5*s", "=2.5*s"], end: 1.0,
+                  profile: [["=-0.1*s", "=(1.45 + nh)*s"], ["=0.75*s", "=(1.45 + nh)*s"], ["=0.75*s", "=(1.45 + nh + 0.8)*s"], ["=0.05*s", "=(1.45 + nh + 0.8)*s"], ["=-0.25*s", "=(1.45 + nh + 0.5)*s"]], round: 0.04}
+      - {name: windows, mat: "=dark", box: {c: [0, "=-0.14*s", "=(1.45 + nh + 0.6)*s"], half: ["=2.3*s", "=0.08*s", "=0.08*s"], radius: 0.01}, rot: [0, 0, 45]}
+      - {name: roof, mat: "=plate", box: {c: [0, "=0.42*s", "=(1.45 + nh + 0.78)*s"], half: ["=2.0*s", "=0.26*s", "=0.05*s"], radius: 0.02}}
+      # the shield domes on their short stalks
+      - {name: stalk-l, mat: "=dark", cylinder: {a: ["=-1.85*s", "=0.4*s", "=(1.45 + nh + 0.75)*s"], b: ["=-1.85*s", "=0.4*s", "=(1.45 + nh + 1.05)*s"], r1: "=0.13*s"}}
+      - {name: stalk-r, mat: "=dark", cylinder: {a: ["=1.85*s", "=0.4*s", "=(1.45 + nh + 0.75)*s"], b: ["=1.85*s", "=0.4*s", "=(1.45 + nh + 1.05)*s"], r1: "=0.13*s"}}
+      - {name: dome-l, mat: "=dome", ellipsoid: {c: ["=-1.85*s", "=0.4*s", "=(1.45 + nh + 1.3)*s"], r: ["=0.36*s", "=0.36*s", "=0.34*s"]}}
+      - {name: dome-r, mat: "=dome", ellipsoid: {c: ["=1.85*s", "=0.4*s", "=(1.45 + nh + 1.3)*s"], r: ["=0.36*s", "=0.36*s", "=0.34*s"]}}
+  # A small robed guardian statue (Jedha): a hooded figure, hands on a sword point down. `h` its height.
+  robed-statue:
+    params: {h: 2.0, stone: stone, trim: trim, inner: dark}
+    parts:
+      - {name: robe, mat: "=stone", prism: {poly: [["=-0.24*h", "=-0.15*h"], ["=0.24*h", "=-0.15*h"], ["=0.24*h", "=0.15*h"], ["=-0.24*h", "=0.15*h"]], z: [0, "=0.78*h"], top: [0.62, 0.8], round: 0.04}}
+      - {name: hood, mat: "=stone", ellipsoid: {c: [0, 0, "=0.85*h"], r: ["=0.13*h", "=0.13*h", "=0.16*h"]}}
+      - {name: face, mat: "=inner", ellipsoid: {c: [0, "=-0.09*h", "=0.83*h"], r: ["=0.07*h", "=0.05*h", "=0.09*h"]}}
+      - {name: hands, mat: "=trim", box: {c: [0, "=-0.15*h", "=0.5*h"], half: ["=0.08*h", "=0.04*h", "=0.06*h"], radius: 0.02}}
+      - {name: blade, mat: "=trim", box: {c: [0, "=-0.16*h", "=0.24*h"], half: ["=0.03*h", "=0.02*h", "=0.22*h"], radius: 0.01}}
+  # An Imperial wall console (Death Star, Star Destroyer): a desk with a sloped control face and a tall
+  # back panel with screens. `w` wide; origin on the floor at the desk's south edge centre.
+  imperial-console:
+    params: {w: 1.8, bh: 1.9, hull: hull, plate: plate, dark: dark, glow: glow}
+    parts:
+      - name: desk
+        mat: "=hull"
+        extrude: {axis: x, span: ["=-w/2", "=w/2"], end: 1.0, profile: [[0, 0], [0.75, 0], [0.75, 0.95], [0.3, 0.95], [0, 0.7]], round: 0.03}
+      - {name: keys, mat: "=dark", box: {c: [0, 0.16, 0.84], half: ["=w/2 - 0.15", 0.12, 0.03], radius: 0.01}, rot: [0, 0, -40]}
+      - {name: back, mat: "=plate", box: {c: [0, 0.95, "=bh/2"], half: ["=w/2", 0.2, "=bh/2"], radius: 0.03}}
+      - {name: screen-l, mat: "=dark", box: {c: ["=-w/4", 0.74, "=bh*0.72"], half: ["=w/4 - 0.1", 0.03, "=bh*0.16"], radius: 0.01}}
+      - {name: screen-r, mat: "=dark", box: {c: ["=w/4", 0.74, "=bh*0.72"], half: ["=w/4 - 0.1", 0.03, "=bh*0.16"], radius: 0.01}}
+      - {name: line-l, mat: "=glow", box: {c: ["=-w/4", 0.7, "=bh*0.75"], half: ["=w/4 - 0.22", 0.02, 0.04]}}
+      - {name: line-r, mat: "=glow", box: {c: ["=w/4", 0.7, "=bh*0.68"], half: ["=w/4 - 0.22", 0.02, 0.04]}}
+  # An Imperial sliding door in a wall block (turbolifts, blast doors): a bevelled frame, two door
+  # leaves meeting in the middle, a light strip above. `w`/`h` the opening; origin on the floor at the
+  # wall's south face, centre of the door.
+  imperial-door:
+    params: {w: 1.1, h: 1.45, frame: plate, leaf: hull, gap: dark, lamp: glow}
+    parts:
+      - {name: frame, mat: "=frame", prism: {poly: [["=-w/2 - 0.22", -0.12], ["=w/2 + 0.22", -0.12], ["=w/2 + 0.22", 0.05], ["=-w/2 - 0.22", 0.05]], z: [0, "=h + 0.22"], round: 0.03}}
+      - {name: opening, mat: "=frame", op: subtract, box: {c: [0, -0.1, "=h/2"], half: ["=w/2", 0.2, "=h/2"]}}
+      - {name: leaf-l, mat: "=leaf", group: face, box: {c: ["=-w/4", -0.02, "=h/2"], half: ["=w/4 - 0.02", 0.04, "=h/2"], radius: 0.01}}
+      - {name: leaf-r, mat: "=leaf", group: face, box: {c: ["=w/4", -0.02, "=h/2"], half: ["=w/4 - 0.02", 0.04, "=h/2"], radius: 0.01}}
+      - {name: lamp, mat: "=lamp", group: face, box: {c: [0, -0.15, "=h + 0.11"], half: ["=w/2 - 0.1", 0.04, 0.05], radius: 0.01}}
+  # A TIE/ln fighter (A New Hope) side-on to the camera: the ball cockpit at the origin, its two
+  # hexagon wings standing in x-z planes to the south (-y) and north (+y), so the south wing shows
+  # face-on. `s` scales it; the window looks along +x.
+  tie-fighter:
+    params: {s: 1.0, hull: hull, frame: plate, panel: dark, glass: dark}
+    parts:
+      - {name: ball, mat: "=hull", ellipsoid: {c: [0, 0, 0], r: ["=0.42*s", "=0.42*s", "=0.42*s"]}}
+      - {name: window, mat: "=glass", ellipsoid: {c: ["=0.3*s", 0, 0], r: ["=0.15*s", "=0.22*s", "=0.22*s"]}}
+      - {name: pylons, mat: "=hull", box: {c: [0, 0, 0], half: ["=0.12*s", "=0.78*s", "=0.08*s"], radius: 0.02}}
+      - name: wing-s
+        mat: "=frame"
+        extrude: {axis: y, span: ["=-0.86*s", "=-0.74*s"], profile: [["=-0.82*s", "=-0.5*s"], [0, "=-0.98*s"], ["=0.82*s", "=-0.5*s"], ["=0.82*s", "=0.5*s"], [0, "=0.98*s"], ["=-0.82*s", "=0.5*s"]], round: 0.03}
+      - name: panel-s
+        mat: "=panel"
+        extrude: {axis: y, span: ["=-0.88*s", "=-0.84*s"], profile: [["=-0.7*s", "=-0.43*s"], [0, "=-0.84*s"], ["=0.7*s", "=-0.43*s"], ["=0.7*s", "=0.43*s"], [0, "=0.84*s"], ["=-0.7*s", "=0.43*s"]], round: 0.01}
+      - {name: spar-v, mat: "=frame", box: {c: [0, "=-0.89*s", 0], half: ["=0.05*s", "=0.02*s", "=0.86*s"]}}
+      - {name: spar-a, mat: "=frame", box: {c: [0, "=-0.89*s", 0], half: ["=0.8*s", "=0.02*s", "=0.05*s"]}, rot: [31, 0, 0]}
+      - {name: spar-b, mat: "=frame", box: {c: [0, "=-0.89*s", 0], half: ["=0.8*s", "=0.02*s", "=0.05*s"]}, rot: [-31, 0, 0]}
+      - name: wing-n
+        mat: "=frame"
+        extrude: {axis: y, span: ["=0.74*s", "=0.86*s"], profile: [["=-0.82*s", "=-0.5*s"], [0, "=-0.98*s"], ["=0.82*s", "=-0.5*s"], ["=0.82*s", "=0.5*s"], [0, "=0.98*s"], ["=-0.82*s", "=0.5*s"]], round: 0.03}

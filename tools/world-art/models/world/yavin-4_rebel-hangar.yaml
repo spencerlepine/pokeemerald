@@ -1,0 +1,66 @@
+# Rebel hangar (art:yavin-4:rebel-hangar), hit box 8x5, drawn 8x8.
+# Reference: the hangar in the foot of the Great Temple of Massassi (A New Hope, Rogue One;
+# wiki/art/concept/yavin-4/massassi-temple__db_yavin-4.jpg shows X-wings parked before the dark mouth).
+# A stone block cut into the temple's base with a wide, low hangar mouth in its south face, a stepped
+# ledge over it and the moss line; a landing apron in front with two X-wings (group kit) lined up.
+# Axes: x east, y north, z up, origin on the ground at the middle of the hit box's south edge.
+name: yavin-4_rebel-hangar
+art: art:yavin-4:rebel-hangar
+palette: greybox
+kits: [../scenery/kits/yavin-hoth-ilum.yaml]
+cells: [8, 8]
+foot: [64, 127]
+footprint: 5
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  stone: {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  cap:   {ramp: bone,  bands: [0.25, 0.55, 0.85]}
+  moss:  {ramp: dark,  bands: [0.3, 0.6, 0.9]}
+  dark:  {ramp: dark,  bands: [0.5, 0.8, 0.95]}
+  hull:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  plate: {ramp: light, bands: [0.2, 0.5, 0.85]}
+  apron: {ramp: mid,   bands: [0.5, 0.8, 0.95]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 5}
+box: [124, 76]
+groups: {body: {}, inside: {}}
+params:
+  yb: 2.35        # the block's south face
+parts:
+  # the temple's base block and a stepped ledge above it
+  - name: block
+    mat: stone
+    prism: {poly: [[-3.95, "=yb"], [3.95, "=yb"], [3.95, 5.0], [-3.95, 5.0]], z: [0, 2.0], top: [1.0, 0.95], round: 0.03}
+  - name: ledge
+    mat: cap
+    prism: {poly: [[-3.95, "=yb + 0.55"], [3.95, "=yb + 0.55"], [3.95, 5.0], [-3.95, 5.0]], z: [2.0, 2.35], round: 0.03}
+  - name: step
+    mat: stone
+    prism: {poly: [[-3.4, "=yb + 1.15"], [3.4, "=yb + 1.15"], [3.4, 5.0], [-3.4, 5.0]], z: [2.35, 3.0], top: [0.97, 0.9], round: 0.03}
+  # the hangar mouth: cut deep into the block, dark inside
+  - {name: mouth-cut, mat: stone, op: subtract, box: {c: [0, "=yb + 0.9", 0.75], half: [3.0, 0.9, 0.82]}}
+  - {name: mouth, group: inside, mat: dark, box: {c: [0, "=yb + 1.75", 0.85], half: [3.1, 0.12, 0.95]}}
+  - {name: bay-floor, group: inside, mat: dark, box: {c: [0, "=yb + 0.8", 0.0], half: [3.0, 0.9, 0.04]}}
+  - {name: lintel, mat: cap, box: {c: [0, "=yb - 0.02", 1.68], half: [3.2, 0.06, 0.1], radius: 0.02}}
+  # pillars between the bays
+  - {name: pillar-w, mat: stone, box: {c: [-1.0, "=yb + 0.3", 0.75], half: [0.16, 0.3, 0.8], radius: 0.02}}
+  - {name: pillar-e, mat: stone, box: {c: [1.0, "=yb + 0.3", 0.75], half: [0.16, 0.3, 0.8], radius: 0.02}}
+  # moss hanging over the corners
+  - {name: moss-w, mat: moss, prism: {poly: [[-3.95, "=yb - 0.05"], [-3.3, "=yb - 0.05"], [-3.3, "=yb + 0.1"], [-3.95, "=yb + 0.1"]], z: [1.1, 2.0], round: 0.03}}
+  - {name: moss-e, mat: moss, prism: {poly: [[3.45, "=yb - 0.05"], [3.95, "=yb - 0.05"], [3.95, "=yb + 0.1"], [3.45, "=yb + 0.1"]], z: [0.8, 2.0], round: 0.03}}
+  # the apron and two X-wings lined up on it, noses east
+  - {name: apron, mat: apron, box: {c: [0, 1.15, 0.02], half: [3.9, 1.12, 0.03], radius: 0.01}}
+  - {use: x-wing, name: xw-w, at: [-2.0, 1.1, 0.03], with: {k: 0.72}}
+  - {use: x-wing, name: xw-e, at: [1.75, 1.1, 0.03], with: {k: 0.72}}
+variants:
+  # two X-wings on the apron
+  lined-up: {}
+  # the bay empty, the fighters out on a mission
+  empty:
+    drop: ["xw-*"]

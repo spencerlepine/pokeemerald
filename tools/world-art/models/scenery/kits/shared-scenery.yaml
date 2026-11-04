@@ -1,0 +1,26 @@
+# Shared-scenery kit: templates shared by the SHARED scenery rows (wrecks, ruins, debris).
+# Use one with `- {use: hull-plate, name: p1, at: [x, y, z], rot: [rx, ry, rz], with: {w: 1, d: 0.6}}`.
+# Axes: x east, y north, z up, 1 m = 1 cell = 16 px.
+templates:
+  # A bent hull plate lying flat: a slightly irregular slab with a raised panel seam across it.
+  # `w` x `d` its size (m), `t` its thickness, centred on the origin.
+  hull-plate:
+    params: {w: 0.9, d: 0.6, t: 0.07, mat: hull, seam: dark}
+    parts:
+      - name: slab
+        mat: "=mat"
+        prism: {poly: [["=-w/2", "=-d/2"], ["=w*0.3", "=-d/2 - 0.03"], ["=w/2", "=-d*0.15"], ["=w*0.45", "=d/2"], ["=-w*0.4", "=d/2 + 0.02"], ["=-w/2 - 0.02", "=d*0.1"]], z: [0, "=t"], round: 0.015}
+      - {name: seam, mat: "=seam", box: {c: ["=w*0.05", 0, "=t"], half: [0.025, "=d*0.42", 0.02], radius: 0.005}}
+  # A cut stone block, rounded a little; `s` [x, y, z] half sizes.
+  stone:
+    params: {s: [0.3, 0.2, 0.15], mat: stone}
+    parts:
+      - {name: block, mat: "=mat", box: {c: [0, 0, "=s[2]"], half: "=s", radius: 0.04}}
+  # A lump of broken masonry: a jagged convex hull about `r` m across, `h` tall.
+  chunk:
+    params: {r: 0.3, h: 0.25, mat: stone}
+    parts:
+      - name: lump
+        mat: "=mat"
+        hull: {points: [["=-r", "=-r*0.6", 0], ["=r*0.8", "=-r*0.8", 0], ["=r", "=r*0.5", 0], ["=-r*0.5", "=r*0.8", 0],
+                        ["=-r*0.6", "=-r*0.3", "=h*0.8"], ["=r*0.4", "=-r*0.4", "=h"], ["=r*0.3", "=r*0.4", "=h*0.7"], ["=-r*0.3", "=r*0.3", "=h*0.6"]], round: 0.03}

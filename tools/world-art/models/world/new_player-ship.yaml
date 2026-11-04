@@ -1,0 +1,81 @@
+# Player's ship (art:new:player-ship), hit box 8x5, drawn 8x6. Parked in every hangar room.
+# No canon ship is named for this row (the X-wing proposal in bible/FAN_CRITIQUE.md is not approved),
+# so this is a stock light freighter in the films' style (the HWK-290 / YT-series family): a flat
+# wedge hull tapering to the nose, a raised cockpit with dark glass forward, two engine nacelles on
+# stub wings at the back with dark exhausts, a sensor dish on top, landing gear, the boarding ramp
+# down on the south side. Parked broadside, nose east. Recoloured per owner later.
+# Axes: x east, y north, z up; origin on the floor at the middle of the hit box's south edge.
+name: new_player-ship
+art: art:new:player-ship
+palette: greybox
+cells: [8, 6]
+foot: [64, 98]
+footprint: 5
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  hull:   {ramp: mid,   bands: [0.0, 0.3, 0.75]}
+  plate:  {ramp: light, bands: [-0.1, 0.25, 0.7]}
+  deck:   {ramp: mid,   bands: [0.0, 0.3, 0.7]}
+  glass:  {ramp: dark,  bands: [0.1, 0.4, 0.8]}
+  dark:   {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  engine: {ramp: light, bands: [0.0, 0.35, 0.75]}
+  ramp:   {ramp: bone,  bands: [0.0, 0.3, 0.7]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 5}
+box: [126, 78]
+params:
+  cy: 2.0           # the hull's centre line (y)
+  hb: 0.6           # the hull's belly height
+parts:
+  # the hull: a flat slab tapering to a wedge nose in the east, a light deck plate on top
+  - name: hull
+    mat: hull
+    extrude: {axis: x, span: [-3.0, 0.9], profile: [["=cy - 1.05", "=hb"], ["=cy + 1.05", "=hb"], ["=cy + 0.9", "=hb + 0.75"], ["=cy - 0.9", "=hb + 0.75"]], round: 0.05}
+  - name: nose
+    mat: hull
+    extrude: {axis: x, span: [0.9, 3.6], profile: [["=cy - 1.05", "=hb"], ["=cy + 1.05", "=hb"], ["=cy + 0.9", "=hb + 0.75"], ["=cy - 0.9", "=hb + 0.75"]], end: [0.35, 0.45], lean: [0, -0.2], round: 0.05}
+  - name: deck
+    mat: deck
+    prism: {poly: [[-2.8, "=cy - 0.75"], [0.8, "=cy - 0.75"], [2.2, "=cy - 0.25"], [2.2, "=cy + 0.25"], [0.8, "=cy + 0.75"], [-2.8, "=cy + 0.75"]], z: ["=hb + 0.74", "=hb + 0.84"], top: 0.97, round: 0.02}
+  # the raised cockpit, forward, glass to the south and east
+  - name: cockpit
+    mat: hull
+    hull: {points: [[0.6, "=cy - 0.55", "=hb + 0.8"], [2.3, "=cy - 0.35", "=hb + 0.8"], [2.3, "=cy + 0.35", "=hb + 0.8"], [0.6, "=cy + 0.55", "=hb + 0.8"],
+                    [0.8, "=cy - 0.45", "=hb + 1.25"], [1.7, "=cy - 0.3", "=hb + 1.25"], [1.7, "=cy + 0.3", "=hb + 1.25"], [0.8, "=cy + 0.45", "=hb + 1.25"]], round: 0.04}
+  - name: canopy
+    mat: glass
+    hull: {points: [[1.45, "=cy - 0.42", "=hb + 0.98"], [2.25, "=cy - 0.36", "=hb + 0.84"], [1.7, "=cy - 0.33", "=hb + 1.2"], [1.45, "=cy - 0.38", "=hb + 1.22"],
+                    [1.45, "=cy - 0.2", "=hb + 1.0"], [2.25, "=cy - 0.2", "=hb + 0.86"]], round: 0.01}
+  - {name: dish-post, mat: dark, cylinder: {a: [-1.1, "=cy + 0.2", "=hb + 0.84"], b: [-1.1, "=cy + 0.2", "=hb + 1.15"], r1: 0.08}}
+  - {name: dish, mat: engine, cylinder: {a: [-1.1, "=cy + 0.2", "=hb + 1.12"], b: [-1.1, "=cy + 0.2", "=hb + 1.2"], r1: 0.42, r2: 0.3}}
+  # stub wings and the two engine nacelles at the back
+  - {name: wing, mat: hull, box: {c: [-1.9, "=cy", "=hb + 0.35"], half: [0.75, 1.75, 0.1], radius: 0.03}}
+  - {name: eng-s, mat: engine, cylinder: {a: [-3.65, "=cy - 1.55", "=hb + 0.45"], b: [-0.95, "=cy - 1.55", "=hb + 0.45"], r1: 0.4}}
+  - {name: eng-n, mat: engine, cylinder: {a: [-3.65, "=cy + 1.55", "=hb + 0.45"], b: [-0.95, "=cy + 1.55", "=hb + 0.45"], r1: 0.4}}
+  - {name: cone-s, mat: engine, cylinder: {a: [-0.95, "=cy - 1.55", "=hb + 0.45"], b: [-0.55, "=cy - 1.55", "=hb + 0.45"], r1: 0.4, r2: 0.2}}
+  - {name: cone-n, mat: engine, cylinder: {a: [-0.95, "=cy + 1.55", "=hb + 0.45"], b: [-0.55, "=cy + 1.55", "=hb + 0.45"], r1: 0.4, r2: 0.2}}
+  - {name: band-s, mat: dark, cylinder: {a: [-2.0, "=cy - 1.55", "=hb + 0.45"], b: [-1.85, "=cy - 1.55", "=hb + 0.45"], r1: 0.42}}
+  - {name: band-n, mat: dark, cylinder: {a: [-2.0, "=cy + 1.55", "=hb + 0.45"], b: [-1.85, "=cy + 1.55", "=hb + 0.45"], r1: 0.42}}
+  - {name: exhaust-s, mat: dark, cylinder: {a: [-3.72, "=cy - 1.55", "=hb + 0.45"], b: [-3.6, "=cy - 1.55", "=hb + 0.45"], r1: 0.3}}
+  # landing gear
+  - {name: gear-sw, mat: dark, box: {c: [-2.2, "=cy - 0.7", "=hb/2"], half: [0.12, 0.12, "=hb/2"]}}
+  - {name: gear-se, mat: dark, box: {c: [1.6, "=cy - 0.6", "=hb/2"], half: [0.12, 0.12, "=hb/2"]}}
+  - {name: gear-nw, mat: dark, box: {c: [-2.2, "=cy + 0.7", "=hb/2"], half: [0.12, 0.12, "=hb/2"]}}
+  - {name: gear-ne, mat: dark, box: {c: [1.6, "=cy + 0.6", "=hb/2"], half: [0.12, 0.12, "=hb/2"]}}
+  # the boarding ramp, down to the floor on the south side, the hatch dark above it
+  - name: ramp
+    mat: ramp
+    hull: {points: [[-0.15, "=cy - 1.0", "=hb + 0.02"], [0.75, "=cy - 1.0", "=hb + 0.02"], [-0.15, "=cy - 2.05", 0.0], [0.75, "=cy - 2.05", 0.0],
+                    [-0.15, "=cy - 1.0", "=hb - 0.06"], [0.75, "=cy - 1.0", "=hb - 0.06"], [-0.15, "=cy - 2.05", 0.0], [0.75, "=cy - 2.05", 0.0]], round: 0.01}
+  - {name: hatch, mat: dark, box: {c: [0.3, "=cy - 1.04", "=hb + 0.33"], half: [0.4, 0.04, 0.28], radius: 0.02}}
+variants:
+  ramp-down: {}
+  # ramp up, ready to fly
+  ramp-up:
+    drop: ["ramp"]

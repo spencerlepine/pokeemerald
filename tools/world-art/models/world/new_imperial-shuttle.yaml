@@ -1,0 +1,71 @@
+# Imperial shuttle (art:new:imperial-shuttle), hit box 6x4, drawn 6x6. The Death Star's hangar.
+# Reference: the Lambda-class T-4a shuttle (Return of the Jedi; databank, the Outlaws landing pad): a
+# boxy fuselage with a stepped cockpit nose, the tall dorsal fin, two long wings folded up for
+# landing, the boarding ramp lowered under the nose. Parked broadside, nose east, so the near wing
+# shows its whole planform and the fin its full height, as the shuttle is known from the side.
+# Axes: x east, y north, z up; origin on the floor at the middle of the hit box's south edge.
+name: new_imperial-shuttle
+art: art:new:imperial-shuttle
+palette: greybox
+cells: [6, 6]
+foot: [47, 104]
+footprint: 4
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  hull:   {ramp: light, bands: [-0.1, 0.25, 0.7]}
+  wing:   {ramp: light, bands: [0.0, 0.35, 0.75]}
+  panel:  {ramp: mid,   bands: [0.0, 0.35, 0.75]}
+  under:  {ramp: mid,   bands: [0.2, 0.5, 0.85]}
+  glass:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  dark:   {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  ramp:   {ramp: mid,   bands: [0.0, 0.3, 0.7]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 4}
+box: [94, 62]
+parts:
+  # the fuselage: a box tapering to a stepped cockpit nose in the east
+  - name: body
+    mat: hull
+    extrude: {axis: x, span: [-2.3, 1.15], profile: [[0.86, 0.55], [2.34, 0.55], [2.2, 1.38], [1.0, 1.38]], round: 0.04}
+  - name: nose
+    mat: hull
+    extrude: {axis: x, span: [1.15, 2.55], profile: [[0.86, 0.55], [2.34, 0.55], [2.2, 1.38], [1.0, 1.38]], end: [0.62, 0.55], lean: [0, -0.18], round: 0.04}
+  - {name: cockpit, mat: glass, box: {c: [1.95, 0.98, 1.05], half: [0.42, 0.04, 0.12], radius: 0.02}}
+  - {name: tail, mat: under, box: {c: [-2.32, 1.6, 0.96], half: [0.1, 0.62, 0.36], radius: 0.03}}
+  # landing gear and the ramp lowered under the nose
+  - {name: gear-w, mat: dark, box: {c: [-1.6, 1.6, 0.28], half: [0.12, 0.45, 0.28]}}
+  - {name: gear-e, mat: dark, box: {c: [0.6, 1.6, 0.28], half: [0.12, 0.45, 0.28]}}
+  - name: ramp
+    mat: ramp
+    prism: {poly: [[1.0, 1.25], [1.0, 1.95], [2.75, 1.95], [2.75, 1.25]], z: [0, 0.06], round: 0.01}
+    rot: [0, -17, 0]
+  # the dorsal fin, standing in the x-z plane over the fuselage
+  - name: fin
+    mat: wing
+    extrude: {axis: y, span: [1.5, 1.7], profile: [[-1.9, 1.35], [0.9, 1.35], [-0.65, 3.55], [-1.5, 3.55]], round: 0.02}
+  - name: fin-panel
+    mat: panel
+    extrude: {axis: y, span: [1.47, 1.5], profile: [[-1.68, 1.55], [0.35, 1.55], [-0.75, 3.25], [-1.38, 3.25]], round: 0.0}
+  # the folded wings: the south one shows its planform, a panel inset in its frame
+  - name: wing-s
+    mat: wing
+    hull: {points: [[-1.95, 0.894, 0.95], [-1.95, 0.826, 0.95], [1.25, 0.894, 0.95], [1.25, 0.826, 0.95], [-0.55, 0.277, 3.424], [-0.55, 0.209, 3.424], [-1.55, 0.277, 3.424], [-1.55, 0.209, 3.424]], round: 0.02}
+  - name: wing-s-panel
+    mat: panel
+    hull: {points: [[-1.75, 0.756, 1.193], [-1.75, 0.736, 1.193], [0.75, 0.756, 1.193], [0.75, 0.736, 1.193], [-0.68, 0.26, 3.182], [-0.68, 0.24, 3.182], [-1.42, 0.26, 3.182], [-1.42, 0.24, 3.182]], round: 0.0}
+  - name: wing-n
+    mat: wing
+    hull: {points: [[-1.95, 2.306, 0.95], [-1.95, 2.374, 0.95], [1.25, 2.306, 0.95], [1.25, 2.374, 0.95], [-0.55, 2.923, 3.424], [-0.55, 2.991, 3.424], [-1.55, 2.923, 3.424], [-1.55, 2.991, 3.424]], round: 0.02}
+  # the hinges
+  - {name: hinge-s, mat: under, box: {c: [-0.4, 0.86, 0.95], half: [1.55, 0.1, 0.1], radius: 0.03}}
+variants:
+  ramp-down: {}
+  # ramp up, ready to leave
+  ramp-up:
+    drop: ["ramp"]

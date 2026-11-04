@@ -1,0 +1,58 @@
+# Yoda's hut (art:dagobah:yoda-s-hut), hit box 4x3, drawn 4x4.
+# Reference: Yoda's hut (The Empire Strikes Back; wiki/art/concept/dagobah/yoda-s-hut__db_yodas-hut.jpg
+# and the Ralph McQuarrie painting __web_2.jpg). A squat mud dome with a smaller dome at its side, a
+# round window and a low round doorway on the south, built in under a gnarltree root that arches over
+# its back. Axes: x east, y north, z up, origin on the ground at the main dome's centre.
+name: dagobah_yoda-s-hut
+art: art:dagobah:yoda-s-hut
+palette: greybox
+kits: [../scenery/kits/endor-dagobah.yaml]
+cells: [4, 4]
+foot: [31, 44]
+scale: 0.88
+footprint: 3
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  mud:    {ramp: bone,  bands: [0.35, 0.62, 0.92]}
+  lump:   {ramp: bone,  bands: [0.4, 0.7, 0.95]}
+  rim:    {ramp: mid,   bands: [0.2, 0.5, 0.85]}
+  inside: {ramp: dark,  bands: [0.3, 0.6, 0.9]}
+  root:   {ramp: mid,   bands: [0.1, 0.45, 0.75]}
+  back:   {ramp: dark,  bands: [0.1, 0.45, 0.8]}
+  water:  {color: shade}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 3}
+box: [64, 48]
+parts:
+  # the main dome and the small side dome to the west
+  - {name: dome, mat: mud, ellipsoid: {c: [0.1, 0.1, 0], r: [1.15, 0.95, 1.05]}}
+  - {name: dome-w, mat: mud, ellipsoid: {c: [-1.05, -0.05, 0], r: [0.65, 0.6, 0.7]}}
+  - {name: cap, mat: mud, cone: {a: [0.1, 0.15, 0.95], b: [0.15, 0.15, 1.45], r1: 0.28, r2: 0.03}}
+  - {name: lump-1, mat: lump, ellipsoid: {c: [0.85, -0.2, 0.15], r: [0.45, 0.5, 0.4]}}
+  - {name: lump-2, mat: lump, ellipsoid: {c: [-0.45, 0.55, 0.65], r: [0.45, 0.4, 0.4]}}
+  # the low round doorway, on the side dome, and the round window in the main dome
+  - {name: door-rim, mat: rim, ellipsoid: {c: [-1.0, -0.5, 0.28], r: [0.36, 0.14, 0.4]}}
+  - {name: door, mat: inside, ellipsoid: {c: [-1.0, -0.58, 0.25], r: [0.26, 0.1, 0.32]}}
+  - {name: window-rim, mat: rim, ellipsoid: {c: [0.35, -0.58, 0.62], r: [0.4, 0.14, 0.34]}}
+  - {name: window, mat: inside, ellipsoid: {c: [0.35, -0.66, 0.62], r: [0.3, 0.1, 0.24]}}
+  # the stovepipe
+  - {name: pipe, mat: rim, cylinder: {a: [0.95, 0.1, 0.6], b: [1.0, 0.1, 1.35], r1: 0.08}}
+  - {name: pipe-cap, mat: inside, cylinder: {a: [1.0, 0.1, 1.35], b: [1.0, 0.1, 1.45], r1: 0.12}}
+  # the gnarltree roots the hut is built under: a thick one up out of the bog behind it, over the top
+  # and down to the east; a thinner one down the west side
+  - {name: root-1, mat: back, cone: {a: [-1.75, 0.85, 0], b: [-1.15, 0.8, 0.9], r1: 0.34, r2: 0.26}}
+  - {name: root-2, mat: root, cone: {a: [-1.15, 0.8, 0.9], b: [-0.45, 0.75, 1.5], r1: 0.26, r2: 0.22}}
+  - {name: root-3, mat: root, cone: {a: [-0.45, 0.75, 1.5], b: [0.55, 0.6, 1.55], r1: 0.22, r2: 0.2}}
+  - {name: root-4, mat: root, cone: {a: [0.55, 0.6, 1.55], b: [1.25, 0.45, 0.85], r1: 0.2, r2: 0.2}}
+  - {name: root-5, mat: root, cone: {a: [1.25, 0.45, 0.85], b: [1.6, 0.25, 0.0], r1: 0.2, r2: 0.26}}
+  - {name: twig-1, mat: back, cone: {a: [-0.2, 0.75, 1.55], b: [-0.3, 0.9, 1.85], r1: 0.1, r2: 0.04}}
+  - {name: twig-2, mat: back, cone: {a: [0.6, 0.6, 1.55], b: [0.85, 0.7, 1.85], r1: 0.09, r2: 0.03}}
+  - {name: root-w, mat: root, cone: {a: [-1.0, 0.45, 0.85], b: [-1.7, 0.0, 0.0], r1: 0.13, r2: 0.16}}
+ground:
+  - {name: bank, mat: water, cylinder: {a: [0.1, -0.7, 0], b: [0.1, -0.7, 0.01], r1: 1.0}, squash: [1.6, 0.32, 1]}

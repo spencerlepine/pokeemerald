@@ -1,0 +1,63 @@
+# Escape pod (art:shared:escape-pod), hit box 2x2, drawn 2x3.
+# Reference: the Lifepod R2-D2 and C-3PO ride to Tatooine (A New Hope; databank side view): a barrel
+# body with a sensor band and a viewport, a narrower top with the ingress hatch, four retro-rocket
+# nozzles at the base, an access panel on its side. Modelled upright on its nozzles (low-poly
+# octagons), then tipped over nose-first into the sand, the four nozzles up in the air to the west.
+# Axes (upright): x east, y north, z up; origin on the ground under the pod's axis.
+name: shared_escape-pod
+art: art:shared:escape-pod
+palette: greybox
+cells: [2, 3]
+foot: [7, 38]
+scale: 0.86
+footprint: 2
+tilt: [-125, 0]
+turn: 6
+sink: -0.85
+pivot: [0, 0]
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  hull:  {ramp: mid,   bands: [0.2, 0.5, 0.85]}
+  band:  {ramp: light, bands: [0.15, 0.5, 0.82]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  sand:  {ramp: bone,  bands: [0.35, 0.65, 0.93]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 2}
+box: [30, 30]
+params:
+  r: 0.5
+parts:
+  # four retro-rocket nozzles under the base
+  - {name: noz-1, mat: dark, cylinder: {a: [0.2, 0.2, 0.3], b: [0.24, 0.24, 0.02], r1: 0.1, r2: 0.15}}
+  - {name: noz-2, mat: dark, cylinder: {a: [-0.2, 0.2, 0.3], b: [-0.24, 0.24, 0.02], r1: 0.1, r2: 0.15}}
+  - {name: noz-3, mat: dark, cylinder: {a: [0.2, -0.2, 0.3], b: [0.24, -0.24, 0.02], r1: 0.1, r2: 0.15}}
+  - {name: noz-4, mat: dark, cylinder: {a: [-0.2, -0.2, 0.3], b: [-0.24, -0.24, 0.02], r1: 0.1, r2: 0.15}}
+  # the barrel body (an octagon, a little wider at the band), the band, the narrower top
+  - {name: base, mat: hull, prism: {poly: &oct [[0.5, 0.21], [0.21, 0.5], [-0.21, 0.5], [-0.5, 0.21], [-0.5, -0.21], [-0.21, -0.5], [0.21, -0.5], [0.5, -0.21]], z: [0.25, 0.42], top: 1.0, round: 0.03}}
+  - {name: body, mat: hull, prism: {poly: *oct, z: [0.42, 1.15], top: 1.08, round: 0.03}}
+  - {name: band, mat: band, prism: {poly: *oct, z: [1.15, 1.32], top: 1.0, round: 0.03, lean: [0, 0]}, squash: {scale: [1.12, 1.12, 1], center: [0, 0, 1.2]}}
+  - {name: top, mat: hull, prism: {poly: *oct, z: [1.32, 1.8], top: 0.6, round: 0.03}}
+  - {name: hatch, mat: band, cylinder: {a: [0, 0, 1.78], b: [0, 0, 1.9], r1: 0.2}}
+  # the viewport in the band and the access panel on the body, both on the south face (-y)
+  - {name: viewport, mat: dark, box: {c: [0, -0.55, 1.24], half: [0.14, 0.05, 0.06]}}
+  - {name: panel, mat: dark, box: {c: [0, -0.52, 0.78], half: [0.22, 0.05, 0.26], radius: 0.02}}
+ground:
+  - {name: drift-e, mat: sand, ellipsoid: {c: [0.72, -0.3, 0], r: [0.5, 0.2, 0.14]}}
+variants:
+  # laid over and sunk nose-first in the sand
+  buried: {}
+  # just landed, upright on its nozzles, scorched ground round it
+  landed:
+    tilt: [0, 0]
+    turn: 0
+    sink: 0
+    scale: 1.0
+    foot: [16, 38]
+    ground:
+      - {name: scorch, mat: dark, prism: {poly: [[0.8, 0.0], [0.55, 0.55], [0.0, 0.75], [-0.55, 0.55], [-0.8, 0.0], [-0.55, -0.38], [0.0, -0.45], [0.55, -0.38]], z: [0, 0.02], round: 0.0}}

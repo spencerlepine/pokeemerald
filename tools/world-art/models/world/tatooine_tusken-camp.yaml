@@ -1,0 +1,70 @@
+# Tusken camp (art:tatooine:tusken-camp), hit box 3x2, drawn 3x3.
+# Reference: the Tusken tents of the Jundland (tusken-camp__web_1-3; the Book of Boba Fett camp): a
+# peaked tent of stitched hides over a cone of poles whose tips stick out of the top, a dark slit doorway
+# facing out (south), and a ring of stones round a fire pit beside it.
+# Axes: x east, y north, z up, origin on the ground at the centre of the hit box's south edge.
+name: tatooine_tusken-camp
+art: art:tatooine:tusken-camp
+palette: greybox
+cells: [3, 3]
+foot: [24, 46]
+footprint: 2
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  hide:  {ramp: bone, bands: [0.25, 0.55, 0.85]}
+  wrap:  {ramp: mid,  bands: [0.2, 0.5, 0.85]}
+  pole:  {ramp: dark, bands: [0.1, 0.45, 0.8]}
+  dark:  {ramp: dark, bands: [0.4, 0.7, 0.95]}
+  stone: {ramp: mid,  bands: [0.1, 0.45, 0.8]}
+  fire:  {ramp: light, bands: [-0.9, -0.8, -0.7]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 2}
+box: [48, 32]
+params: {tx: -0.45, ty: 0.95, tr: 0.95, th: 1.5}
+templates:
+  # one tent pole, from the ground at the hide's edge up past the apex
+  pole:
+    params: {a: 0}
+    parts:
+      - {name: p, mat: pole, cylinder: {a: ["=tx + cos(radians(a)) * tr * 0.95", "=ty + sin(radians(a)) * tr * 0.6", 0.0],
+                                         b: ["=tx - cos(radians(a)) * 0.14", "=ty - sin(radians(a)) * 0.08", "=th + 0.32"], r1: 0.035}}
+parts:
+  # the hide cone: eight-sided, a little squat front to back so it fits two cells deep
+  - name: tent
+    mat: hide
+    hull: {points: [["=tx - tr", "=ty", 0], ["=tx - tr * 0.7", "=ty - tr * 0.42", 0], ["=tx", "=ty - tr * 0.6", 0], ["=tx + tr * 0.7", "=ty - tr * 0.42", 0],
+                    ["=tx + tr", "=ty", 0], ["=tx + tr * 0.7", "=ty + tr * 0.42", 0], ["=tx", "=ty + tr * 0.6", 0], ["=tx - tr * 0.7", "=ty + tr * 0.42", 0],
+                    ["=tx", "=ty", "=th"]], round: 0.04}
+  # stitched seams of darker hide, and a wrap of cloth round the top
+  - {name: patch, mat: wrap, hull: {points: [["=tx + 0.25", "=ty - 0.5", 0.05], ["=tx + 0.62", "=ty - 0.34", 0.05], ["=tx + 0.36", "=ty - 0.3", 0.6], ["=tx + 0.18", "=ty - 0.36", 0.6]], round: 0.02}}
+  - {name: crown, mat: wrap, cylinder: {a: ["=tx", "=ty", "=th - 0.32"], b: ["=tx", "=ty", "=th - 0.12"], r1: 0.2, r2: 0.12}}
+  # the slit doorway facing south
+  - name: door
+    mat: dark
+    hull: {points: [["=tx - 0.22", "=ty - tr * 0.6 + 0.02", 0], ["=tx + 0.18", "=ty - tr * 0.6 + 0.02", 0], ["=tx - 0.02", "=ty - tr * 0.6 + 0.2", 0.82],
+                    ["=tx - 0.2", "=ty - tr * 0.6 - 0.02", 0], ["=tx + 0.16", "=ty - tr * 0.6 - 0.02", 0]], round: 0.0}
+  # the poles poking out of the top
+  - {use: pole, name: pole-1, with: {a: 20}}
+  - {use: pole, name: pole-2, with: {a: 160}}
+  - {use: pole, name: pole-4, with: {a: 90}}
+ground:
+  # the fire pit, east of the tent: a ring of stones, ash, a small flame
+  - {ring: {name: stones, mat: stone, c: [0.95, 0.6, 0.06], axis: z, r: 0.32, size: [0.16, 0.14, 0.13], n: 8, round: 0.03}}
+  - {name: ash, mat: dark, cylinder: {a: [0.95, 0.6, 0], b: [0.95, 0.6, 0.04], r1: 0.24}}
+  - {name: flame, mat: fire, cone: {a: [0.95, 0.6, 0.02], b: [0.95, 0.6, 0.32], r1: 0.1, r2: 0.02}}
+  # a gaderffii staff and a bundle by the door
+  - {name: bundle, mat: wrap, ellipsoid: {c: [0.35, 0.18, 0.12], r: [0.2, 0.14, 0.13]}}
+variants:
+  camp: {}
+  # abandoned: the fire out, the hides torn off the north side
+  abandoned:
+    drop: ["crown", "patch", "pole-2/*"]
+    ground:
+      - {ring: {name: stones, mat: stone, c: [0.95, 0.6, 0.06], axis: z, r: 0.32, size: [0.16, 0.14, 0.13], n: 7, round: 0.03}}
+      - {name: ash, mat: dark, cylinder: {a: [0.95, 0.6, 0], b: [0.95, 0.6, 0.04], r1: 0.24}}

@@ -1,0 +1,38 @@
+# Landing platform (art:bespin:landing-platform), hit box 5x5, drawn 5x6.
+# Reference: Cloud City's round landing pads (The Empire Strikes Back) and the twin-pod cloud car.
+# A round pad on a deep rim, a dark landing ring and centre mark, light lamps round the edge, and a
+# twin-pod cloud car parked on it (the kit's `cloud-car`), nose east.
+# Axes: x east, y north, z up, origin on the ground at the hit box's centre.
+name: bespin_landing-platform
+art: art:bespin:landing-platform
+palette: greybox
+kits: [../scenery/kits/bespin-kamino.yaml]
+cells: [5, 6]
+foot: [39, 58]
+footprint: 5
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  pad:  {ramp: light, bands: [0.15, 0.45, 0.8]}
+  rim:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  hull: {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  dark: {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 5}
+box: [80, 80]
+params: {sq: 0.98, h: 0.35}
+parts:
+  - {name: rim, mat: rim, cylinder: {a: [0, 0, 0], b: [0, 0, "=h"], r1: 2.15, r2: 2.36}, squash: {scale: [1, "=sq", 1], center: [0, 0, 0]}}
+  - {name: deck, mat: pad, cylinder: {a: [0, 0, "=h - 0.02"], b: [0, 0, "=h + 0.04"], r1: 2.32}, squash: {scale: [1, "=sq", 1], center: [0, 0, 0]}}
+  - {name: ring, mat: dark, cylinder: {a: [0, 0, "=h + 0.03"], b: [0, 0, "=h + 0.06"], r1: 1.85}, squash: {scale: [1, "=sq", 1], center: [0, 0, 0]}}
+  - {name: ring-in, mat: pad, cylinder: {a: [0, 0, "=h + 0.03"], b: [0, 0, "=h + 0.07"], r1: 1.68}, squash: {scale: [1, "=sq", 1], center: [0, 0, 0]}}
+  - name: lamps
+    mat: dark
+    ring: {c: [0, 0, "=h + 0.06"], axis: z, r: 2.15, n: 12, size: [0.16, 0.16, 0.1], round: 0.02}
+    squash: {scale: [1, "=sq", 1], center: [0, 0, 0]}
+  - {use: cloud-car, name: car, at: [0, -0.15, "=h + 0.04"], turn: -80, with: {k: 1.4, gap: 0.62}}

@@ -1,0 +1,82 @@
+# Fallen comm tower (art:shared:fallen-comm-tower), hit box 8x2, drawn 8x4.
+# A lattice sensor mast lying where it fell: a square truss of four corner rails with zig-zag braces,
+# snapped off its concrete footing at the west end (the stub still standing), its top lying across the
+# big dish it carried, the dish crumpled and tipped up on its rim. Long and low: a wall you can't cross.
+# Axes: x east along the mast, y north from the hit box's south edge, z up; 1 m = 1 cell = 16 px.
+name: shared_fallen-comm-tower
+art: art:shared:fallen-comm-tower
+palette: greybox
+cells: [8, 4]
+foot: [64, 63]
+footprint: 2
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  rail:  {ramp: light, bands: [0.15, 0.5, 0.82]}
+  brace: {ramp: mid,   bands: [0.1, 0.45, 0.8]}
+  dish:  {ramp: light, bands: [0.25, 0.55, 0.88]}
+  back:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  conc:  {ramp: mid,   bands: [0.3, 0.6, 0.9]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 2}
+box: [124, 28]
+params:
+  y0: 0.42         # the mast's south face
+  s: 0.72          # the truss's side
+  bay: 0.62        # brace spacing
+  x0: -3.15        # the snapped foot of the mast
+templates:
+  # one bay of the truss: a zig-zag brace on the south face and on the top face
+  bay:
+    params: {i: 0}
+    parts:
+      - {name: south, mat: brace, cylinder: {a: ["=x0 + i * bay", "=y0", 0.06], b: ["=x0 + (i + 1) * bay", "=y0", "=s - 0.06"], r1: 0.035}}
+      - {name: top, mat: brace, cylinder: {a: ["=x0 + i * bay", "=y0 + 0.06", "=s"], b: ["=x0 + (i + 1) * bay", "=y0 + s - 0.06", "=s"], r1: 0.035}}
+      - {name: ring, mat: rail, box: {c: ["=x0 + (i + 1) * bay", "=y0", "=s / 2"], half: [0.03, 0.03, "=s / 2"], radius: 0.01}}
+parts:
+  # the four corner rails, the full length of the fallen mast
+  - {name: rail-sb, mat: rail, cylinder: {a: ["=x0", "=y0", 0.06], b: [2.55, "=y0", 0.06], r1: 0.06}}
+  - {name: rail-st, mat: rail, cylinder: {a: ["=x0", "=y0", "=s"], b: [2.55, "=y0", "=s"], r1: 0.06}}
+  - {name: rail-nt, mat: rail, cylinder: {a: ["=x0", "=y0 + s", "=s"], b: [2.55, "=y0 + s", "=s"], r1: 0.06}}
+  - {name: rail-nb, mat: back, cylinder: {a: ["=x0", "=y0 + s", 0.06], b: [2.55, "=y0 + s", 0.06], r1: 0.06}}
+  - {use: bay, name: b0, with: {i: 0}}
+  - {use: bay, name: b1, with: {i: 1}}
+  - {use: bay, name: b2, with: {i: 2}}
+  - {use: bay, name: b3, with: {i: 3}}
+  - {use: bay, name: b4, with: {i: 4}}
+  - {use: bay, name: b5, with: {i: 5}}
+  - {use: bay, name: b6, with: {i: 6}}
+  - {use: bay, name: b7, with: {i: 7}}
+  - {use: bay, name: b8, with: {i: 8}}
+  # the mast's top: an equipment box and a stub antenna
+  - {name: head, mat: back, box: {c: [2.7, "=y0 + s / 2", "=s / 2 + 0.05"], half: [0.25, "=s / 2 + 0.08", "=s / 2 + 0.1"], radius: 0.04}}
+  - {name: antenna, mat: rail, cylinder: {a: [2.9, "=y0 + s / 2", "=s / 2"], b: [3.85, "=y0 + 0.2", 0.25], r1: 0.04}}
+  # the footing at the west end, the snapped stub of the mast still on it
+  - {name: footing, mat: conc, prism: {poly: [[-3.95, 0.25], [-3.15, 0.25], [-3.15, 1.4], [-3.95, 1.4]], z: [0, 0.3], top: 0.9, round: 0.04}}
+  - {name: stub-1, mat: rail, cylinder: {a: [-3.75, 0.5, 0.3], b: [-3.72, 0.5, 1.15], r1: 0.06}}
+  - {name: stub-2, mat: rail, cylinder: {a: [-3.3, 0.5, 0.3], b: [-3.32, 0.5, 0.75], r1: 0.06}}
+  - {name: stub-3, mat: back, cylinder: {a: [-3.75, 1.15, 0.3], b: [-3.7, 1.15, 0.95], r1: 0.06}}
+  - {name: stub-brace, mat: brace, cylinder: {a: [-3.75, 0.5, 0.35], b: [-3.32, 0.5, 0.72], r1: 0.035}}
+  # the dish, crumpled and tipped up on its rim behind the mast's top, its bowl facing south and up
+  - {name: dish, mat: dish, cylinder: {a: [1.95, 1.82, 0.86], b: [1.95, 1.74, 0.96], r1: 0.84}, rot: [0, 0, 0]}
+  - {name: dish-back, mat: back, cylinder: {a: [1.95, 1.95, 0.72], b: [1.95, 1.82, 0.86], r1: 0.45, r2: 0.72}}
+  - {name: dish-face, mat: brace, cylinder: {a: [1.95, 1.73, 0.97], b: [1.95, 1.71, 0.99], r1: 0.62}}
+  - {name: dish-hub, mat: dark, cylinder: {a: [1.95, 1.70, 0.99], b: [1.95, 1.66, 1.03], r1: 0.18}}
+  - {name: dent, mat: dish, op: subtract, hull: {points: [[2.25, 1.2, 1.35], [3.2, 1.2, 0.85], [3.2, 2.4, 0.85], [2.25, 2.4, 1.5], [3.2, 1.2, 2.4], [3.2, 2.4, 2.4], [2.3, 1.2, 2.4], [2.3, 2.4, 2.4]]}}
+  - {name: feed-1, mat: rail, cylinder: {a: [1.45, 1.75, 1.0], b: [1.95, 1.3, 1.5], r1: 0.035}}
+  - {name: feed-2, mat: rail, cylinder: {a: [2.4, 1.75, 0.8], b: [1.95, 1.3, 1.5], r1: 0.035}}
+  - {name: feed-horn, mat: dark, ellipsoid: {c: [1.95, 1.3, 1.5], r: [0.09, 0.09, 0.09]}}
+ground:
+  - {name: plate-1, mat: back, prism: {poly: [[-1.2, 0.12], [-0.6, 0.1], [-0.55, 0.36], [-1.15, 0.38]], z: [0, 0.06], round: 0.015}}
+  - {name: strut-1, mat: rail, cylinder: {a: [0.6, 0.1, 0.04], b: [1.4, 0.22, 0.04], r1: 0.035}}
+variants:
+  fallen: {}
+  # the dish torn off and gone: just the mast
+  no-dish:
+    drop: ["dish*", "dent", "feed*"]

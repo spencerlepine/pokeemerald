@@ -1,0 +1,40 @@
+# Rope bridge (art:endor:rope-bridge), 1x1, a tiling piece of the walkway between platforms.
+# Reference: the Bright Tree Village walkways (Return of the Jedi;
+# wiki/art/concept/endor/rope-bridge__web_1.jpg and __db_bright-tree-village.jpg). One cell of a
+# north-south bridge: rough planks laid across it with gaps between, two rope stringers under their ends,
+# a rope hand-line on each side. It tiles north-south edge to edge, so the planks meet the top and
+# bottom of the cell on purpose. Axes: x east, y north, z up, origin at the cell's centre on the deck.
+name: endor_rope-bridge
+art: art:endor:rope-bridge
+palette: greybox
+cells: [1, 1]
+foot: [8, 8]
+footprint: 1
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  plank: {ramp: mid,  bands: [0.2, 0.5, 0.8]}
+  plank2: {ramp: mid, bands: [0.3, 0.6, 0.95]}
+  rope:  {ramp: bone, bands: [0.1, 0.45, 0.8]}
+  gap:   {ramp: dark, bands: [0.5, 0.8, 0.95]}
+box: [16, 16]
+parts:
+  # the dark drop seen between the planks
+  - {name: under, mat: gap, box: {c: [0, 0.0, -0.12], half: [0.34, 0.5, 0.02]}}
+  # four planks across the bridge, each a little askew
+  - {name: plank-1, mat: plank,  box: {c: [0.0, -0.38, 0.0], half: [0.4, 0.1, 0.04], radius: 0.015}, rot: [0, 0, 0]}
+  - {name: plank-2, mat: plank2, box: {c: [0.02, -0.13, 0.0], half: [0.38, 0.1, 0.04], radius: 0.015}}
+  - {name: plank-3, mat: plank,  box: {c: [-0.02, 0.12, 0.0], half: [0.4, 0.1, 0.04], radius: 0.015}}
+  - {name: plank-4, mat: plank2, box: {c: [0.01, 0.37, 0.0], half: [0.39, 0.1, 0.04], radius: 0.015}}
+  # the stringers and the hand-lines with their posts
+  - {name: stringer-w, mat: rope, cylinder: {a: [-0.4, -0.5, -0.03], b: [-0.4, 0.5, -0.03], r1: 0.03}}
+  - {name: stringer-e, mat: rope, cylinder: {a: [0.4, -0.5, -0.03], b: [0.4, 0.5, -0.03], r1: 0.03}}
+  - {name: post-w, mat: plank, cylinder: {a: [-0.42, -0.3, 0.0], b: [-0.42, -0.3, 0.32], r1: 0.04}}
+  - {name: post-e, mat: plank, cylinder: {a: [0.42, -0.3, 0.0], b: [0.42, -0.3, 0.32], r1: 0.04}}
+  - {name: line-w, mat: rope, cylinder: {a: [-0.42, -0.5, 0.3], b: [-0.42, 0.15, 0.3], r1: 0.025}}
+  - {name: line-e, mat: rope, cylinder: {a: [0.42, -0.5, 0.3], b: [0.42, 0.15, 0.3], r1: 0.025}}

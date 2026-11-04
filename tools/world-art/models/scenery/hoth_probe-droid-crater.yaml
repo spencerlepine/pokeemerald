@@ -1,0 +1,63 @@
+# Probe droid crater (art:hoth:probe-droid-crater), hit box 3x3, drawn 3x4.
+# Reference: the Viper probe droid (The Empire Strikes Back; wiki/art/concept/hoth/probe-droid-crater__web_1.jpg):
+# a domed head on a wider drum body with a rim, dark sensor eyes, and long thin jointed arms hanging
+# beneath. Modelled upright; posed upside down, head buried in the middle of a scorched crater with its
+# arms sticking up out of it. The crater is ground: a ring of thrown-up snow round a dark scorch.
+# Axes: x east, y north, z up, origin on the ground at the crater's centre.
+name: hoth_probe-droid-crater
+art: art:hoth:probe-droid-crater
+palette: greybox
+cells: [3, 4]
+foot: [24, 40]
+footprint: 3
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  hull:  {ramp: dark,  bands: [0.2, 0.5, 0.82]}
+  plate: {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  dark:  {ramp: dark,  bands: [0.5, 0.8, 0.95]}
+  snow:  {ramp: bone,  bands: [0.05, 0.3, 0.7]}
+  scorch: {ramp: mid,  bands: [0.25, 0.55, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 3}
+box: [44, 44]
+params:
+  lz: 1.25          # the body's underside: where the arms hang from
+parts:
+  # the droid, upright: drum body with a rim, domed head, sensor eyes, five hanging arms
+  - {name: body, mat: hull, cylinder: {a: [0, 0, "=lz"], b: [0, 0, "=lz + 0.35"], r1: 0.42, r2: 0.46}}
+  - {name: rim, mat: plate, cylinder: {a: [0, 0, "=lz + 0.33"], b: [0, 0, "=lz + 0.43"], r1: 0.55}}
+  - {name: head, mat: hull, ellipsoid: {c: [0, 0, "=lz + 0.43"], r: [0.46, 0.46, 0.4]}}
+  - {name: eye-1, mat: dark, box: {c: [0, -0.43, "=lz + 0.6"], half: [0.08, 0.05, 0.06], radius: 0.02}}
+  - {name: eye-2, mat: dark, box: {c: [0.22, -0.38, "=lz + 0.55"], half: [0.06, 0.05, 0.05], radius: 0.02}}
+  - {name: antenna, mat: plate, cylinder: {a: [0.1, 0.1, "=lz + 0.75"], b: [0.1, 0.1, "=lz + 1.05"], r1: 0.03}}
+  - {name: arm-1, mat: plate, cylinder: {a: [0.3, 0, "=lz"], b: [0.45, -0.05, 0.1], r1: 0.05}}
+  - {name: arm-2, mat: plate, cylinder: {a: [-0.3, 0.05, "=lz"], b: [-0.5, 0.15, 0.2], r1: 0.05}}
+  - {name: arm-3, mat: plate, cylinder: {a: [0, 0.3, "=lz"], b: [0.1, 0.5, 0.0], r1: 0.05}}
+  - {name: arm-4, mat: plate, cylinder: {a: [0, -0.3, "=lz"], b: [-0.15, -0.5, 0.15], r1: 0.05}}
+  - {name: arm-5, mat: plate, cylinder: {a: [0.15, -0.15, "=lz"], b: [0.3, -0.35, 0.4], r1: 0.04}}
+  - {name: claw-1, mat: dark, box: {c: [0.45, -0.05, 0.1], half: [0.08, 0.04, 0.08]}}
+  - {name: claw-2, mat: dark, box: {c: [-0.5, 0.15, 0.2], half: [0.08, 0.04, 0.08]}}
+  - {name: claw-3, mat: dark, box: {c: [0.1, 0.5, 0.0], half: [0.04, 0.08, 0.08]}}
+# head down in the crater, tipped toward the camera so the arms splay up and south
+tilt: [160, -8]
+pivot: [0, 0]
+sink: -1.75
+ground:
+  - {name: scorch, mat: scorch, cylinder: {a: [0, 0, 0], b: [0, 0, 0.02], r1: 1.05}, squash: [1.1, 0.85, 1]}
+  - name: rim
+    ring: {c: [0, 0.05, 0.0], axis: z, r: 1.2, n: 14, size: [0.5, 0.3, 0.24], round: 0.06}
+    mat: snow
+    squash: [1.15, 0.95, 1]
+  - {name: drift-s, mat: snow, ellipsoid: {c: [-0.4, -1.25, 0], r: [0.5, 0.15, 0.12]}}
+variants:
+  # head buried, arms up
+  buried: {}
+  # the crater empty but for a lone arm: the droid self-destructed
+  self-destructed:
+    drop: ["body", "rim", "head", "eye-*", "antenna", "arm-1", "arm-2", "arm-4", "arm-5", "claw-1", "claw-2"]

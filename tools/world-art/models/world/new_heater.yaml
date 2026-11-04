@@ -1,0 +1,35 @@
+# Heater (art:new:heater), hit box 1x1, drawn 1x2.
+# Reference: the portable heaters in Echo Base (The Empire Strikes Back): a squat metal drum on short
+# feet with a glowing grille band round its middle and a domed cap with a carry handle. Axes: x east,
+# y north, z up, origin on the ground at the footprint's south-west corner.
+name: new_heater
+art: art:new:heater
+palette: greybox
+cells: [1, 2]
+foot: [0, 32]
+footprint: 1
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  body:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  cap:   {ramp: light, bands: [0.1, 0.45, 0.8]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  glow:  {ramp: bone,  bands: [-0.6, -0.3, 0.0]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 1}
+box: [14, 12]
+params:
+  cx: 0.47
+  cy: 0.48
+parts:
+  - {name: feet, mat: dark, cylinder: {a: ["=cx", "=cy", 0], b: ["=cx", "=cy", 0.1], r1: 0.36, r2: 0.3}}
+  - {name: drum, mat: body, cylinder: {a: ["=cx", "=cy", 0.08], b: ["=cx", "=cy", 0.78], r1: 0.36}}
+  - {name: grille, mat: glow, cylinder: {a: ["=cx", "=cy", 0.3], b: ["=cx", "=cy", 0.56], r1: 0.38}}
+  - {name: bars, mat: body, ring: {c: ["=cx", "=cy", 0.43], axis: z, r: 0.39, size: [0.06, 0.04, 0.28], n: 12, round: 0.0}}
+  - {name: cap, mat: cap, ellipsoid: {c: ["=cx", "=cy", 0.78], r: [0.36, 0.36, 0.16]}}
+  - {name: handle, mat: dark, cylinder: {a: ["=cx - 0.16", "=cy", 0.96], b: ["=cx + 0.16", "=cy", 0.96], r1: 0.04}}

@@ -1,0 +1,47 @@
+# Power converters (art:tatooine:power-converters), hit box 1x1, drawn 1x1.
+# Reference: power-converters__web_1 (the Tosche Station converters): a waisted urn on an octagonal foot,
+# a flared collar at the top with a lit strip under it, a dark band of coils round the middle and a big
+# loop handle on each side. Crate-sized, so it fills one cell.
+# Axes: x east, y north, z up, origin on the ground at the converter's centre.
+name: tatooine_power-converters
+art: art:tatooine:power-converters
+palette: greybox
+cells: [1, 1]
+foot: [8, 13]
+scale: 1.0
+footprint: 1
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  body:  {ramp: mid,   bands: [0.1, 0.45, 0.8]}
+  light: {ramp: light, bands: [0.1, 0.4, 0.75]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  glow:  {ramp: light, bands: [-0.9, -0.8, -0.7]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 1}
+box: [16, 16]
+templates:
+  # an octagon of radius r (flat to the south), as a polygon for a prism
+  oct:
+    params: {r: 0.2, z0: 0, z1: 0.1, top: 1.0, m: dark}
+    parts:
+      - {name: o, mat: "=m", prism: {poly: [["=-r*0.41", "=-r"], ["=r*0.41", "=-r"], ["=r", "=-r*0.41"], ["=r", "=r*0.41"], ["=r*0.41", "=r"], ["=-r*0.41", "=r"], ["=-r", "=r*0.41"], ["=-r", "=-r*0.41"]], z: ["=z0", "=z1"], top: "=top", round: 0.02}}
+parts:
+  - {use: oct, name: foot, with: {r: 0.2, z0: 0, z1: 0.14, top: 0.95, m: dark}}
+  - {use: oct, name: belly, with: {r: 0.26, z0: 0.12, z1: 0.24, top: 1.0, m: light}}
+  - {use: oct, name: coils, with: {r: 0.22, z0: 0.24, z1: 0.38, top: 1.0, m: dark}}
+  - {use: oct, name: neck, with: {r: 0.2, z0: 0.38, z1: 0.46, top: 0.9, m: body}}
+  - {name: glow, mat: glow, box: {c: [0, -0.14, 0.48], half: [0.13, 0.04, 0.03]}}
+  - {use: oct, name: collar, with: {r: 0.18, z0: 0.46, z1: 0.54, top: 1.25, m: body}}
+  # the loop handles, one on each side: an upright grip on two stubs
+  - {name: grip-w, mat: light, box: {c: [-0.38, 0, 0.3], half: [0.045, 0.05, 0.16], radius: 0.03}}
+  - {name: stub-w1, mat: light, box: {c: [-0.3, 0, 0.44], half: [0.09, 0.04, 0.035], radius: 0.02}}
+  - {name: stub-w2, mat: light, box: {c: [-0.3, 0, 0.16], half: [0.09, 0.04, 0.035], radius: 0.02}}
+  - {name: grip-e, mat: light, box: {c: [0.38, 0, 0.3], half: [0.045, 0.05, 0.16], radius: 0.03}}
+  - {name: stub-e1, mat: light, box: {c: [0.3, 0, 0.44], half: [0.09, 0.04, 0.035], radius: 0.02}}
+  - {name: stub-e2, mat: light, box: {c: [0.3, 0, 0.16], half: [0.09, 0.04, 0.035], radius: 0.02}}

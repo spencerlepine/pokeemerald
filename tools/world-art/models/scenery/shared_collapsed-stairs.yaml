@@ -1,0 +1,81 @@
+# Collapsed stairs (art:shared:collapsed-stairs), hit box 3x3, drawn 3x4.
+# A flight of stone stairs set against a cliff face, climbing to a broken landing that goes nowhere.
+# Modelled as a solid stair mass (each step a block from the ground to its tread), two steps in the
+# middle fallen out, the landing at the top snapped off, the fallen steps lying at its foot.
+# Facing e/w: the flight climbs east along the cliff, its saw-tooth profile toward the camera.
+# Facing s: turned to climb north, straight up the cliff, the risers toward the camera.
+# Axes (the stair's own): x the way it climbs, y across it, z up; origin on the ground at the flight's
+# middle. 1 m = 1 cell = 16 px.
+name: shared_collapsed-stairs
+art: art:shared:collapsed-stairs
+palette: greybox
+kits: [kits/shared-scenery.yaml]
+cells: [3, 4]
+foot: [24, 56]
+footprint: 3
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  stone: {ramp: light, bands: [0.2, 0.5, 0.85]}
+  side:  {ramp: mid,   bands: [0.1, 0.45, 0.8]}
+  heap:  {ramp: mid,   bands: [0.4, 0.7, 0.95]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 3}
+box: [44, 44]
+params:
+  run: 0.36       # tread depth
+  rise: 0.32       # step height
+  w: 0.7          # flight width
+  x0: -1.4         # foot of the flight
+  gz1: 0.52        # where the blocks fallen into the gap rest
+  gz2: 0.6
+templates:
+  # step i of the flight: a block from the ground up to its tread, the tread a lighter slab on top
+  step:
+    params: {i: 0}
+    parts:
+      - {name: mass, mat: side, box: {c: ["=x0 + (i + 0.5) * run", 0, "=(i + 1) * rise / 2"], half: ["=run / 2 + 0.005", "=w / 2", "=(i + 1) * rise / 2"], radius: 0.015}}
+      - {name: tread, mat: stone, box: {c: ["=x0 + (i + 0.5) * run + 0.02", 0, "=(i + 1) * rise - 0.04"], half: ["=run / 2 + 0.02", "=w / 2 + 0.02", 0.05], radius: 0.02}}
+parts:
+  - {use: step, name: s0, with: {i: 0}}
+  - {use: step, name: s1, with: {i: 1}}
+  - {use: step, name: s2, with: {i: 2}}
+  # steps 3 and 4 have fallen out: broken rubble slopes down into the gap
+  - {name: stub, mat: heap, hull: {points: [["=x0 + 3 * run", "=-w/2", 0], ["=x0 + 5 * run", "=-w/2", 0], ["=x0 + 5 * run", "=w/2", 0], ["=x0 + 3 * run", "=w/2", 0],
+                                            ["=x0 + 3 * run", "=-w/2", "=3 * rise - 0.05"], ["=x0 + 3 * run", "=w/2", "=3 * rise - 0.05"],
+                                            ["=x0 + 4 * run", "=-w/2", "=1.3 * rise"], ["=x0 + 4.2 * run", "=w/2", "=1.6 * rise"],
+                                            ["=x0 + 5 * run", "=-w/2", "=4.6 * rise"], ["=x0 + 5 * run", "=w/2", "=5 * rise"]], round: 0.02}}
+  - {use: chunk, name: gap-block, at: ["=x0 + 4 * run", "=-w * 0.05", "=gz1"], rot: [10, 20, 0], with: {r: 0.17, h: 0.2, mat: stone}}
+  - {use: stone, name: gap-step, at: ["=x0 + 3.7 * run", "=w * 0.3", "=gz2"], rot: [-14, 8, 0], with: {s: ["=run * 0.6", "=min(0.3, w * 0.18)", 0.1], mat: stone}}
+  - {use: step, name: s5, with: {i: 5}}
+  # the landing on a square pier, its far edge snapped off
+  - name: pier
+    mat: side
+    box: {c: ["=x0 + 6 * run + 0.25", 0, "=3 * rise"], half: [0.25, "=w / 2", "=3 * rise"], radius: 0.015}
+  - name: landing
+    mat: stone
+    prism: {poly: [["=x0 + 6 * run - 0.02", "=-w/2 - 0.02"], ["=x0 + 6 * run + 0.55", "=-w/2 - 0.02"], ["=x0 + 6 * run + 0.42", -0.05],
+                   ["=x0 + 6 * run + 0.58", "=w/2 + 0.02"], ["=x0 + 6 * run - 0.02", "=w/2 + 0.02"]], z: ["=6 * rise - 0.1", "=6 * rise + 0.02"], round: 0.02}
+  - {name: crack, mat: dark, box: {c: ["=x0 + 6 * run + 0.3", "=-w/2 - 0.01", "=4.2 * rise"], half: [0.03, 0.02, 0.22]}, rot: [20, 0, 0]}
+ground:
+  # the fallen steps lying south of the gap
+  - {use: stone, name: fallen-1, at: [-0.2, -0.05, 0], rot: [0, 18, 0], with: {s: [0.22, 0.12, 0.12], mat: stone}}
+  - {use: stone, name: fallen-2, at: [0.45, -0.15, 0], rot: [0, -25, 0], with: {s: [0.18, 0.1, 0.1], mat: side}}
+  - {use: chunk, name: grit, at: [-0.55, -0.2, 0], with: {r: 0.12, h: 0.1, mat: heap}}
+variants:
+  # climbing east along the cliff (e; w is the mirror)
+  climb-east: {}
+  # facing s: climbing north up the cliff, the risers toward the camera; shorter steps to fit
+  facing-s:
+    turn: 90
+    params: {run: 0.24, rise: 0.2, w: 2.5, x0: -0.75, gz1: 0.42, gz2: 0.5}
+    foot: [24, 48]
+    ground:
+      - {use: stone, name: fallen-1, at: [-0.85, -0.72, 0], rot: [0, 18, 0], with: {s: [0.2, 0.1, 0.12], mat: stone}}
+      - {use: stone, name: fallen-2, at: [0.95, -0.7, 0], rot: [0, -25, 0], with: {s: [0.16, 0.1, 0.1], mat: side}}

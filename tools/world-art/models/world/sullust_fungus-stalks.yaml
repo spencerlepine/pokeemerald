@@ -1,0 +1,38 @@
+# Fungus stalks (art:sullust:fungus-stalks), hit box 1x1, drawn 1x2.
+# A clump of pale cave fungus for the Sullust tunnels: one tall stalk with a wide domed cap, two short
+# ones at its foot, the gills under the caps in shade. Axes: x east, y north, z up, origin on the
+# ground at the cell's south edge, middle.
+name: sullust_fungus-stalks
+art: art:sullust:fungus-stalks
+palette: greybox
+cells: [1, 2]
+foot: [8, 32]
+scale: 0.92
+footprint: 1
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  cap:   {ramp: light, bands: [0.15, 0.45, 0.75]}
+  stalk: {ramp: bone,  bands: [0.25, 0.55, 0.85]}
+  gill:  {ramp: mid,   bands: [0.3, 0.6, 0.9]}
+  soil:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 1}
+box: [14, 14]
+parts:
+  # the tall one, its stalk bending a little east
+  - {name: stalk-1, mat: stalk, cone: {a: [-0.08, 0.55, 0], b: [-0.02, 0.55, 0.88], r1: 0.09, r2: 0.06}}
+  - {name: gill-1, mat: gill, ellipsoid: {c: [-0.02, 0.55, 0.88], r: [0.36, 0.26, 0.06]}}
+  - {name: cap-1, mat: cap, ellipsoid: {c: [-0.02, 0.55, 0.92], r: [0.4, 0.28, 0.15]}}
+  # two short ones at its foot
+  - {name: stalk-2, mat: stalk, cone: {a: [-0.25, 0.28, 0], b: [-0.24, 0.28, 0.42], r1: 0.06, r2: 0.05}}
+  - {name: gill-2, mat: gill, ellipsoid: {c: [-0.24, 0.28, 0.42], r: [0.18, 0.15, 0.05]}}
+  - {name: cap-2, mat: cap, ellipsoid: {c: [-0.24, 0.28, 0.45], r: [0.21, 0.17, 0.12]}}
+  - {name: stalk-3, mat: stalk, cone: {a: [0.22, 0.22, 0], b: [0.22, 0.22, 0.26], r1: 0.05, r2: 0.04}}
+  - {name: cap-3, mat: cap, ellipsoid: {c: [0.22, 0.22, 0.28], r: [0.15, 0.11, 0.08]}}
+  - {name: soil, mat: soil, ellipsoid: {c: [0, 0.45, 0], r: [0.42, 0.32, 0.07]}}

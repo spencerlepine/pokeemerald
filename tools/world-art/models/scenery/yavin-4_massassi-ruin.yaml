@@ -1,0 +1,87 @@
+# Massassi ruin (art:yavin-4:massassi-ruin), hit box 7x4, drawn 7x7.
+# Reference: the Great Temple of Massassi (wiki/art/concept/yavin-4/massassi-temple__*), smaller and
+# fallen: three battered stone tiers and a shrine block on top with its dark doorway, a stair up the
+# south face, the east corner broken away, fallen blocks at its foot, moss and creepers over the tiers.
+# Axes: x east, y north, z up, origin on the ground at the middle of the hit box's south edge.
+name: yavin-4_massassi-ruin
+art: art:yavin-4:massassi-ruin
+palette: greybox
+kits: [kits/yavin-hoth-ilum.yaml]
+cells: [7, 7]
+foot: [56, 111]
+footprint: 4
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  stone: {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  cap:   {ramp: bone,  bands: [0.3, 0.6, 0.88]}
+  moss:  {ramp: dark,  bands: [0.25, 0.55, 0.85]}
+  dark:  {ramp: dark,  bands: [0.5, 0.8, 0.95]}
+  stair: {ramp: light, bands: [0.25, 0.55, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 4}
+box: [108, 60]
+parts:
+  # three tiers with near-upright walls (the light falls on the terraces, the south walls stay mid)
+  - {use: tier, name: t1, at: [0, 2.2, 0],    with: {w: 6.7, d: 3.6, h: 1.05, top: [0.98, 0.98]}}
+  - {use: tier, name: t2, at: [0, 2.45, 1.05], with: {w: 5.2, d: 2.7, h: 0.95, top: [0.98, 0.97]}}
+  - {use: tier, name: t3, at: [0, 2.65, 2.0], with: {w: 3.7, d: 1.9, h: 0.85, top: [0.97, 0.96]}}
+  - {use: tier, name: shrine, at: [-0.15, 2.85, 2.85], with: {w: 1.9, d: 1.2, h: 1.05, top: [0.9, 0.85]}}
+  - {name: shrine-cap, mat: cap, prism: {poly: [[-1.05, 2.15], [0.75, 2.15], [0.75, 3.55], [-1.05, 3.55]], z: [3.85, 4.05], top: 0.85, round: 0.03}}
+  - {name: shrine-door, mat: dark, box: {c: [-0.15, 2.23, 3.25], half: [0.28, 0.05, 0.4], radius: 0.02}}
+  # light lips along each terrace
+  - {name: lip1, mat: cap, box: {c: [0, 0.42, 1.05], half: [3.3, 0.06, 0.05]}}
+  - {name: lip2, mat: cap, box: {c: [0, 1.12, 2.0], half: [2.55, 0.06, 0.05]}}
+  # the stair up the south face, standing proud of every wall
+  - name: stair
+    mat: stair
+    hull: {points: [[-0.5, 0.05, 0.0], [0.5, 0.05, 0.0], [-0.45, 1.15, 2.85], [0.45, 1.15, 2.85],
+                    [-0.5, 0.9, 0.0], [0.5, 0.9, 0.0], [-0.45, 1.8, 2.85], [0.45, 1.8, 2.85]], round: 0.02}
+  - {name: stair-w, mat: stone, hull: {points: [[-0.62, 0.0, 0.0], [-0.5, 0.0, 0.0], [-0.55, 1.12, 2.95], [-0.45, 1.12, 2.95], [-0.62, 0.9, 0.0], [-0.5, 0.9, 0.0], [-0.55, 1.8, 2.95], [-0.45, 1.8, 2.95]], round: 0.02}}
+  - {name: stair-e, mat: stone, hull: {points: [[0.5, 0.0, 0.0], [0.62, 0.0, 0.0], [0.45, 1.12, 2.95], [0.55, 1.12, 2.95], [0.5, 0.9, 0.0], [0.62, 0.9, 0.0], [0.45, 1.8, 2.95], [0.55, 1.8, 2.95]], round: 0.02}}
+  # the broken east corner: a bite out of the tiers
+  - name: break
+    mat: stone
+    op: subtract
+    hull: {points: [[1.9, 0.0, 3.5], [3.6, 0.0, 3.5], [3.6, 4.4, 3.5], [2.1, 4.4, 3.5],
+                    [2.9, 0.0, 0.6], [3.6, 0.0, 0.6], [3.6, 4.4, 0.8], [3.0, 4.4, 0.9]], round: 0.0}
+  # moss draped over the lips and creepers down the walls
+  # the fallen shrine block (shrine-fallen only)
+  - {name: shrine-down, mat: stone, box: {c: [-1.75, 1.75, 2.35], half: [0.7, 0.45, 0.4], radius: 0.03}, rot: [0, 18, 12]}
+  # moss clumps along the terrace lips
+  - {name: moss-1-0, mat: moss, ellipsoid: {c: [-3.00, 0.45, 0.92], r: [0.29000000000000004, 0.22, 0.23]}}
+  - {name: moss-1-1, mat: moss, ellipsoid: {c: [-2.60, 0.45, 0.98], r: [0.28, 0.22, 0.22]}}
+  - {name: moss-1-2, mat: moss, ellipsoid: {c: [-2.20, 0.45, 0.94], r: [0.26, 0.22, 0.2]}}
+  - {name: moss-1-3, mat: moss, ellipsoid: {c: [-1.80, 0.45, 0.94], r: [0.26, 0.22, 0.2]}}
+  - {name: moss-2-0, mat: moss, ellipsoid: {c: [1.20, 1.15, 1.88], r: [0.25, 0.22, 0.19]}}
+  - {name: moss-2-1, mat: moss, ellipsoid: {c: [1.60, 1.15, 1.92], r: [0.25, 0.22, 0.19]}}
+  - {name: moss-2-2, mat: moss, ellipsoid: {c: [2.00, 1.15, 1.87], r: [0.33, 0.22, 0.27]}}
+  - {name: moss-3-0, mat: moss, ellipsoid: {c: [-1.63, 1.75, 2.80], r: [0.28, 0.22, 0.22]}}
+  - {name: moss-3-1, mat: moss, ellipsoid: {c: [-1.30, 1.75, 2.77], r: [0.33, 0.22, 0.27]}}
+  - {name: moss-3-2, mat: moss, ellipsoid: {c: [-0.97, 1.75, 2.82], r: [0.33, 0.22, 0.27]}}
+  - {name: moss-4-0, mat: moss, ellipsoid: {c: [-0.70, 2.60, 4.01], r: [0.34, 0.22, 0.28]}}
+  - {name: moss-4-1, mat: moss, ellipsoid: {c: [-0.30, 2.60, 3.96], r: [0.3, 0.22, 0.24]}}
+  - {name: creeper-1, mat: moss, box: {c: [-1.55, 0.37, 0.45], half: [0.08, 0.05, 0.45], radius: 0.03}}
+  - {name: creeper-2, mat: moss, box: {c: [-3.0, 0.37, 0.35], half: [0.08, 0.05, 0.35], radius: 0.03}}
+  - {name: creeper-3, mat: moss, box: {c: [1.15, 1.07, 1.4], half: [0.08, 0.05, 0.4], radius: 0.03}}
+  - {name: creeper-4, mat: moss, box: {c: [0.55, 2.2, 3.4], half: [0.07, 0.05, 0.4], radius: 0.03}}
+ground:
+  # fallen blocks from the broken corner
+  - {name: block-1, mat: stone, hull: {points: [[2.75, 0.2, 0], [3.4, 0.25, 0], [3.35, 0.75, 0], [2.8, 0.7, 0], [2.8, 0.25, 0.45], [3.35, 0.3, 0.45], [3.3, 0.7, 0.42], [2.85, 0.65, 0.42]], round: 0.03}}
+  - {name: block-2, mat: stone, hull: {points: [[2.2, 0.05, 0], [2.65, 0.0, 0], [2.7, 0.35, 0], [2.25, 0.4, 0], [2.25, 0.05, 0.3], [2.6, 0.05, 0.32], [2.65, 0.35, 0.3], [2.3, 0.35, 0.3]], round: 0.03}}
+  - {name: moss-g, mat: moss, ellipsoid: {c: [3.1, 1.3, 0], r: [0.45, 0.5, 0.35]}}
+variants:
+  # overgrown, the east corner broken
+  overgrown:
+    drop: ["shrine-down"]
+  # the shrine on top has fallen too: its block lies tipped on the west terrace
+  shrine-fallen:
+    drop: ["shrine/*", "shrine-cap", "shrine-door", "moss-4-*", "creeper-4"]
+    ground:
+      - {name: block-1, mat: stone, hull: {points: [[2.75, 0.2, 0], [3.4, 0.25, 0], [3.35, 0.75, 0], [2.8, 0.7, 0], [2.8, 0.25, 0.45], [3.35, 0.3, 0.45], [3.3, 0.7, 0.42], [2.85, 0.65, 0.42]], round: 0.03}}
+      - {name: moss-g, mat: moss, ellipsoid: {c: [3.1, 1.3, 0], r: [0.45, 0.5, 0.35]}}

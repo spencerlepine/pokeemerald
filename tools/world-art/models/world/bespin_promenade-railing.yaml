@@ -1,0 +1,28 @@
+# Promenade railing (art:bespin:promenade-railing), one 1x1 tile of the railing kit (east-west run).
+# Reference: Cloud City's walkway railings (The Empire Strikes Back): a thick rounded white top rail
+# on slim posts, a thin lower rail, set on a low kerb. Runs edge to edge so tiles join.
+# Axes: x east, y north, z up, origin on the ground at the cell's centre.
+name: bespin_promenade-railing
+art: art:bespin:promenade-railing
+palette: greybox
+kits: [../scenery/kits/bespin-kamino.yaml]
+cells: [1, 1]
+foot: [8, 13]
+footprint: 1
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  wall: {ramp: light, bands: [0.15, 0.5, 0.82]}
+  mid:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  dark: {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+drop_shadow:
+  - {dx: 0, dy: 1, color: shade, below: 1}
+box: [16, 16]
+parts:
+  - {name: kerb, mat: mid, box: {c: [0, 0, 0.06], half: [0.5, 0.1, 0.05], radius: 0.0}}
+  - {use: rail-bay, name: bay, at: [0, 0, 0.08], with: {w: 1.0, h: 0.46, post: dark}}

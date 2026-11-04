@@ -1,0 +1,54 @@
+# Sabine's arena (art:sullust:sabine-s-arena), the Sullust gym, hit box 7x5, drawn 7x7.
+# A painted durasteel hall: a tall central block with an armoured, chamfered roof and a T-shaped doorway
+# (the Mandalorian helmet visor), two lower wings either side painted with Sabine Wren's diagonal colour
+# stripes (light and dark bands here), light trim along the eaves and two short masts.
+# Axes: x east, y north, z up, origin on the ground at the hit box's south edge, middle.
+name: sullust_sabine-s-arena
+art: art:sullust:sabine-s-arena
+palette: greybox
+cells: [7, 7]
+foot: [56, 112]
+footprint: 5
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  steel: {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  light: {ramp: light, bands: [0.15, 0.5, 0.82]}
+  dark:  {ramp: dark,  bands: [0.25, 0.55, 0.85]}
+  paint: {ramp: light, bands: [0.1, 0.35, 0.65]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 5}
+box: [108, 76]
+parts:
+  # the central hall: tall, its roof chamfered to a ridge
+  - {name: hall, mat: steel, prism: {poly: [[-1.5, 0.55], [1.5, 0.55], [1.5, 4.5], [-1.5, 4.5]], z: [0, 1.75], round: 0.04}}
+  - {name: hall-roof, mat: steel, prism: {poly: [[-1.55, 0.5], [1.55, 0.5], [1.55, 4.5], [-1.55, 4.5]], z: [1.75, 2.25], top: [0.55, 0.8], round: 0.04}}
+  - {name: ridge, mat: light, box: {c: [0, 2.5, 2.27], half: [0.12, 1.55, 0.05]}}
+  - {name: eave, mat: light, box: {c: [0, 0.5, 1.78], half: [1.58, 0.07, 0.07]}}
+  # the T-shaped doorway, the visor of a Mandalorian helmet
+  - {name: visor-bar, mat: dark, box: {c: [0, 0.52, 1.32], half: [0.95, 0.06, 0.17], radius: 0.02}}
+  - {name: visor-door, mat: dark, box: {c: [0, 0.52, 0.62], half: [0.34, 0.06, 0.62], radius: 0.02}}
+  - {name: step, mat: light, box: {c: [0, 0.4, 0.05], half: [0.6, 0.15, 0.05]}}
+  # the wings, painted with diagonal stripes
+  - name: wing-w
+    mat: steel
+    prism: {poly: [[-3.36, 0.9], [-1.45, 0.9], [-1.45, 4.25], [-3.36, 4.25]], z: [0, 1.3], top: [0.95, 0.9], lean: [0.03, 0.05], round: 0.04}
+    regions:
+      - {where: "((x - z) * 1.25) % 2 < 0.45", mat: paint}
+      - {where: "(((x - z) * 1.25) % 2 > 1.0) & (((x - z) * 1.25) % 2 < 1.3)", mat: dark}
+  - name: wing-e
+    mat: steel
+    prism: {poly: [[1.45, 0.9], [3.36, 0.9], [3.36, 4.25], [1.45, 4.25]], z: [0, 1.3], top: [0.95, 0.9], lean: [-0.03, 0.05], round: 0.04}
+    regions:
+      - {where: "((x + z) * 1.25) % 2 < 0.45", mat: paint}
+      - {where: "(((x + z) * 1.25) % 2 > 1.0) & (((x + z) * 1.25) % 2 < 1.3)", mat: dark}
+  - {name: eave-w, mat: light, box: {c: [-2.4, 0.9, 1.3], half: [0.95, 0.07, 0.06]}}
+  - {name: eave-e, mat: light, box: {c: [2.4, 0.9, 1.3], half: [0.95, 0.07, 0.06]}}
+  # two short masts at the back of the wings
+  - {name: mast-w, mat: light, cylinder: {a: [-2.9, 3.6, 1.2], b: [-2.9, 3.6, 2.35], r1: 0.07}}
+  - {name: mast-e, mat: light, cylinder: {a: [2.9, 3.6, 1.2], b: [2.9, 3.6, 2.35], r1: 0.07}}

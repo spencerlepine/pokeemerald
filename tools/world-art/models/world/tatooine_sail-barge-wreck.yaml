@@ -1,0 +1,75 @@
+# Sail barge wreck (art:tatooine:sail-barge-wreck), hit box 6x3, drawn 6x4.
+# Reference: Jabba's sail barge, the Khetanna (sail-barge-wreck__web_1), and its burnt-out wreck in the
+# Dune Sea (sail-barge-wreck__db_the-khetanna-jabba-s-sail-barge, __web_3): a long hull whose sides lean
+# out to a wide flat deck, a raised prow, sail masts at the stern. The wreck lies half sunk and listing,
+# the stern burnt away to a cage of ribs, a mast snapped, a torn sail flat on the sand.
+# Barge axes: x forward (prow east), y to port (north), z up, origin on the ground under midships.
+name: tatooine_sail-barge-wreck
+art: art:tatooine:sail-barge-wreck
+palette: greybox
+cells: [6, 4]
+foot: [52, 46]
+footprint: 3
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  hull:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  deck:  {ramp: light, bands: [0.15, 0.5, 0.85]}
+  rib:   {ramp: dark,  bands: [0.05, 0.4, 0.8]}
+  dark:  {ramp: dark,  bands: [0.3, 0.6, 0.9]}
+  sail:  {ramp: light, bands: [0.2, 0.5, 0.88]}
+  sand:  {ramp: bone,  bands: [0.35, 0.65, 0.93]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 3}
+box: [96, 48]
+params: {zd: 1.15, w: 0.95}
+templates:
+  # one rib of the burnt stern: a U of blocks under where the deck was
+  rib:
+    parts:
+      - {ring: {name: u, mat: rib, c: [0, 0, "=zd"], axis: x, r: "=w", size: [0.42, 0.13, 0.13], n: 7, arc: [170, 370], round: 0.02}}
+parts:
+  # the hull forward of the break: sides leaning out to the deck, the prow raised and pointed
+  - name: hull
+    mat: hull
+    hull: {points: [[-0.9, -0.45, 0], [-0.9, 0.45, 0], [1.6, -0.4, 0], [1.6, 0.4, 0],
+                    [-0.9, "=-w", "=zd"], [-0.9, "=w", "=zd"], [1.7, "=-w", "=zd"], [1.7, "=w", "=zd"],
+                    [2.75, 0, "=zd + 0.35"], [2.3, -0.4, 0.35], [2.3, 0.4, 0.35]], round: 0.05}
+  - {name: deck, mat: deck, prism: {poly: [[-0.9, "=-w + 0.08"], [1.7, "=-w + 0.08"], [2.6, 0], [1.7, "=w - 0.08"], [-0.9, "=w - 0.08"]], z: ["=zd", "=zd + 0.06"], round: 0.02}}
+  # the dark ribbed band along the hull side (the Khetanna's panelled skirt)
+  - {name: skirt, mat: dark, box: {c: [0.4, "=-w * 0.72", "=zd * 0.55"], half: [1.25, 0.03, 0.12]}, rot: [0, 0, -18]}
+  # the jagged break where the stern burnt away, and a hole torn in the deck
+  - {name: break, mat: hull, op: subtract, hull: {points: [[-1.0, -1.2, 0.5], [-0.35, -1.2, 1.5], [-1.0, 1.2, 0.3], [-0.55, 1.2, 1.5], [-1.0, -1.2, 1.6], [-1.0, 1.2, 1.6]], round: 0.0}}
+  - {name: hole, mat: hull, op: subtract, ellipsoid: {c: [1.1, -0.2, "=zd + 0.05"], r: [0.35, 0.3, 0.25]}}
+  - {name: hold, mat: dark, box: {c: [0.0, 0, 0.45], half: [1.4, 0.4, 0.4]}}
+  # the deck house, a low cabin near the break, its windows dark
+  - {name: cabin, mat: hull, box: {c: [0.1, 0.15, "=zd + 0.3"], half: [0.65, 0.5, 0.28], radius: 0.05}}
+  - {name: cabin-win, mat: dark, box: {c: [0.1, -0.36, "=zd + 0.34"], half: [0.5, 0.02, 0.07]}}
+  # the burnt stern: a keel and four ribs, the hull plating gone
+  - {name: keel, mat: rib, box: {c: [-1.95, 0, 0.2], half: [1.05, 0.12, 0.12], radius: 0.03}}
+  - {use: rib, name: rib-1, at: [-1.2, 0, 0]}
+  - {use: rib, name: rib-2, at: [-1.75, 0, 0]}
+  - {use: rib, name: rib-3, at: [-2.3, 0, -0.15]}
+  - {use: rib, name: rib-4, at: [-2.85, 0, -0.3]}
+  - {name: rail, mat: rib, box: {c: [-2.0, "=-w", "=zd"], half: [1.05, 0.06, 0.06]}}
+  # the snapped mast, leaning aft
+  - {name: mast, mat: rib, box: {c: [-0.6, 0.3, "=zd + 0.75"], half: [0.07, 0.07, 0.75]}, rot: [-24, 0, 0]}
+ground:
+  # sand drifted against the hull and the torn sail flat behind it
+  - {name: sail, mat: sail, hull: {points: [[-2.4, 1.15, 0], [-0.6, 1.0, 0], [-0.9, 1.55, 0], [-2.7, 1.5, 0], [-1.6, 1.3, 0.08]], round: 0.02}}
+  - {name: drift-s, mat: sand, ellipsoid: {c: [0.6, -1.05, 0], r: [1.9, 0.32, 0.22]}}
+  - {name: drift-w, mat: sand, ellipsoid: {c: [-2.3, -0.7, 0], r: [0.7, 0.3, 0.14]}}
+sink: 0.35
+tilt: [0, -10]
+turn: 0
+variants:
+  wreck: {}
+  # deeper in the dunes: only the prow, the deck edge and the rib tops showing
+  buried:
+    sink: 0.75
+    drop: ["mast"]

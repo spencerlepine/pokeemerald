@@ -1,0 +1,41 @@
+# Fern undergrowth (art:endor:fern-undergrowth), 1x1, the Endor tall grass (encounters).
+# Reference: the sword ferns under the redwoods (Return of the Jedi;
+# wiki/art/concept/endor/fern-undergrowth__db_endor.jpg). A clump of arching fronds from one crown,
+# filling the cell edge to edge like vanilla tall grass. Axes: x east, y north, z up, origin at the
+# cell's centre on the ground.
+name: endor_fern-undergrowth
+art: art:endor:fern-undergrowth
+palette: greybox
+cells: [1, 1]
+foot: [8, 12]
+scale: 0.85
+footprint: 1
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  frond: {ramp: mid,  bands: [0.15, 0.45, 0.8]}
+  back:  {ramp: mid,  bands: [0.35, 0.65, 0.95]}
+  heart: {ramp: dark, bands: [0.2, 0.5, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 1}
+box: [16, 16]
+templates:
+  # one frond: a long thin leaf rising from the crown and arching out, `yaw` its direction
+  frond:
+    params: {len: 0.42, up: 35, mat: frond}
+    parts:
+      - {name: blade, mat: "=mat", ellipsoid: {c: ["=len * 0.5 * cos(radians(up))", 0, "=len * 0.5 * sin(radians(up))"], r: ["=len * 0.55", 0.065, 0.025]}, rot: ["=up", 0, 0]}
+parts:
+  - {name: heart, mat: heart, ellipsoid: {c: [0, 0.02, 0.04], r: [0.16, 0.12, 0.08]}}
+  - {use: frond, name: f-n,  at: [0, 0.05, 0.02], turn: 90,  with: {up: 70, len: 0.5, mat: back}}
+  - {use: frond, name: f-nw, at: [0, 0.05, 0.02], turn: 135, with: {up: 52, len: 0.55, mat: back}}
+  - {use: frond, name: f-ne, at: [0, 0.05, 0.02], turn: 45,  with: {up: 52, len: 0.55, mat: back}}
+  - {use: frond, name: f-w,  at: [0, 0, 0.02], turn: 180, with: {up: 30, len: 0.5}}
+  - {use: frond, name: f-e,  at: [0, 0, 0.02], turn: 0,   with: {up: 30, len: 0.5}}
+  - {use: frond, name: f-sw, at: [0, 0, 0.02], turn: 235, with: {up: 40, len: 0.42}}
+  - {use: frond, name: f-se, at: [0, 0, 0.02], turn: -55, with: {up: 40, len: 0.42}}

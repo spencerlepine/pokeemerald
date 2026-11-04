@@ -1,0 +1,72 @@
+# Star Destroyer overhead (art:jedha:star-destroyer-overhead), hit box 20x2, drawn 20x6, facing s.
+# Reference: the Imperial Star Destroyer hanging over the Holy City (Rogue One). It is far bigger than
+# the map: the sprite sits on the map's north edge and only the southern flank of the dagger hull
+# shows, the nose off the west edge and the centre line off the top (cut off on purpose). Seen from the
+# camera: the lower hull's long side wall, the stepped upper hull sloping up to the north, the
+# superstructure steps at the stern, and its dark shadow on the ground in the hit box rows.
+# Axes: x east (the stern), y north, z up, origin on the ground at the sprite's bottom centre.
+name: jedha_star-destroyer-overhead
+art: art:jedha:star-destroyer-overhead
+palette: greybox
+cells: [20, 6]
+foot: [160, 96]
+footprint: 2
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  hull:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  plate: {ramp: light, bands: [0.3, 0.6, 0.9]}
+  deck:  {ramp: mid,   bands: [0.15, 0.45, 0.8]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  shade: {color: shade}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 2}
+box: [320, 32]
+params:
+  nx: -9.3         # the nose
+  sx: 13.0         # the stern
+  yc: 2.7          # the centre line at the nose: the model is turned so its south flank runs east-west here
+  hw: 6.6          # half the stern's width
+  hz: 1.0          # the belly's height above the ground
+parts:
+  # the lower hull: a flat triangular slab, its side wall facing south
+  - name: lower
+    mat: hull
+    prism: {poly: [["=nx", "=yc"], ["=sx", "=yc - hw"], ["=sx", "=yc + hw"]], z: ["=hz", "=hz + 0.75"], round: 0.04}
+  # the trench and the upper hull, stepped in from the edge, sloping up to the centre line
+  - name: trench
+    mat: dark
+    prism: {poly: [["=nx + 1.0", "=yc"], ["=sx - 0.1", "=yc - hw + 0.45"], ["=sx - 0.1", "=yc + hw - 0.45"]], z: ["=hz + 0.7", "=hz + 0.85"], round: 0.01}
+  - name: upper
+    mat: deck
+    prism: {poly: [["=nx + 1.6", "=yc"], ["=sx - 0.2", "=yc - hw + 0.75"], ["=sx - 0.2", "=yc + hw - 0.75"]], z: ["=hz + 0.75", "=hz + 2.4"], top: 0.55, lean: [0.9, 0], round: 0.04}
+  # the superstructure steps at the stern
+  - {name: super-1, mat: hull, prism: {poly: [[2.0, "=yc - 3.0"], ["=sx - 0.3", "=yc - 3.6"], ["=sx - 0.3", "=yc + 3.6"], [2.0, "=yc + 3.0"]], z: ["=hz + 1.5", "=hz + 2.8"], top: 0.9, round: 0.04}}
+  - {name: super-2, mat: plate, prism: {poly: [[4.6, "=yc - 2.3"], ["=sx - 0.4", "=yc - 2.7"], ["=sx - 0.4", "=yc + 2.7"], [4.6, "=yc + 2.3"]], z: ["=hz + 2.4", "=hz + 3.4"], top: 0.9, round: 0.04}}
+  - {name: super-3, mat: hull, prism: {poly: [[6.6, "=yc - 1.6"], ["=sx - 0.5", "=yc - 1.8"], ["=sx - 0.5", "=yc + 1.8"], [6.6, "=yc + 1.6"]], z: ["=hz + 3.2", "=hz + 4.0"], top: 0.9, round: 0.04}}
+  # engine glow blocks on the stern face (edge-on, a dark notch at the east end)
+  - {name: engines, mat: dark, box: {c: ["=sx + 0.15", "=yc - 4.3", "=hz + 0.5"], half: [0.15, 1.6, 0.35], radius: 0.03}}
+# turned about the nose so the south flank runs gently down to the east
+turn: 9
+pivot: ["=nx", "=yc"]
+ground:
+  # its shadow on the city: a band under the flank, in the hit box rows
+  - name: shadow
+    mat: shade
+    prism: {poly: [[-9.9, 2.4], [10.5, -0.3], [10.5, 1.2], [-9.0, 2.9]], z: [0, 0.01]}
+variants:
+  # the dagger's nose in view at the west end, the flank running down to the east
+  nose: {}
+  # cheaper in tiles: the flank turned level along the whole sprite, nose off the west edge
+  flank:
+    params: {nx: -14.0, sx: 8.4, yc: 0.9}
+    turn: 16.4
+    ground:
+      - name: shadow
+        mat: shade
+        prism: {poly: [[-10.5, -0.2], [9.2, -0.2], [9.2, 0.9], [-10.5, 0.9]], z: [0, 0.01]}

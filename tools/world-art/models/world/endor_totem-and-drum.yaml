@@ -1,0 +1,50 @@
+# Totem and drum (art:endor:totem-and-drum), hit box 1x2, drawn 1x3.
+# Reference: the Bright Tree Village square (Return of the Jedi): the Ewoks' log drums with hide heads
+# beaten with sticks, and the carved poles hung with horns and skulls (the reference image in
+# wiki/art/concept/endor/totem-and-drum__web_1.jpg is a game drum and not used). A carved pole of
+# stacked faces with a pair of horns on top in the north cell, a hollow-log drum in the south cell.
+# Axes: x east, y north, z up, origin on the ground at the centre of the two cells.
+name: endor_totem-and-drum
+art: art:endor:totem-and-drum
+palette: greybox
+cells: [1, 3]
+foot: [8, 34]
+scale: 0.8
+footprint: 2
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  wood:  {ramp: mid,   bands: [0.15, 0.45, 0.8]}
+  carve: {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  hide:  {ramp: bone,  bands: [0.15, 0.45, 0.8]}
+  horn:  {ramp: light, bands: [0.15, 0.5, 0.82]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 2}
+box: [16, 32]
+templates:
+  # one carved face on the pole: a bulge with two dark eye holes and a mouth, facing south
+  face:
+    parts:
+      - {name: block, mat: wood, cylinder: {a: [0, 0, 0], b: [0, 0, 0.5], r1: 0.3, r2: 0.27}}
+      - {name: brow, mat: wood, box: {c: [0, -0.26, 0.38], half: [0.25, 0.06, 0.05], radius: 0.02}}
+      - {name: eye-w, mat: carve, box: {c: [-0.11, -0.28, 0.28], half: [0.06, 0.03, 0.05], radius: 0.01}}
+      - {name: eye-e, mat: carve, box: {c: [0.11, -0.28, 0.28], half: [0.06, 0.03, 0.05], radius: 0.01}}
+      - {name: mouth, mat: carve, box: {c: [0, -0.28, 0.1], half: [0.12, 0.03, 0.04], radius: 0.01}}
+parts:
+  # the totem pole in the north cell
+  - {use: face, name: face-1, at: [0, 0.5, 0.0]}
+  - {use: face, name: face-2, at: [0, 0.5, 0.52]}
+  - {use: face, name: face-3, at: [0, 0.5, 1.04]}
+  - {name: cap, mat: wood, cylinder: {a: [0, 0.5, 1.55], b: [0, 0.5, 1.7], r1: 0.33, r2: 0.2}}
+  - {name: horn-w, mat: horn, cone: {a: [-0.12, 0.5, 1.65], b: [-0.44, 0.5, 1.98], r1: 0.11, r2: 0.02}}
+  - {name: horn-e, mat: horn, cone: {a: [0.12, 0.5, 1.65], b: [0.44, 0.5, 1.98], r1: 0.11, r2: 0.02}}
+  # the log drum in the south cell: a hollow log stood on end, a hide head lashed on, a beater
+  - {name: drum, mat: wood, cylinder: {a: [0, -0.45, 0], b: [0, -0.45, 0.62], r1: 0.38, r2: 0.36}}
+  - {name: lashing, mat: carve, cylinder: {a: [0, -0.45, 0.48], b: [0, -0.45, 0.55], r1: 0.385}}
+  - {name: head, mat: hide, cylinder: {a: [0, -0.45, 0.6], b: [0, -0.45, 0.66], r1: 0.34}}
+  - {name: stick, mat: horn, cylinder: {a: [-0.2, -0.45, 0.68], b: [0.3, -0.6, 0.72], r1: 0.035}}

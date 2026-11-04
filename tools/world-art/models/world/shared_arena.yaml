@@ -1,0 +1,85 @@
+# Arena (art:shared:arena), hit box 6x5, drawn 6x5. The gym of every planet.
+# Reference: the Mos Espa Grand Arena (The Phantom Menace): long sloped grandstands round an open
+# floor, domed round towers at the corners, a gatehouse. Here: a stepped grandstand bowl with its
+# open middle dark, a gatehouse in the middle of the south side with a tall banner of the leader's
+# emblem over the door, domed towers at the front corners. Variants for the other planets' shapes:
+# a stepped temple (no bowl, a shrine on top) and a dome (a great dome over the bowl).
+# Axes: x east, y north, z up; origin on the ground at the middle of the south side.
+name: shared_arena
+art: art:shared:arena
+palette: greybox
+kits: [../scenery/kits/shared-a.yaml]
+cells: [6, 5]
+foot: [48, 76]
+footprint: 5
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  stone:  {ramp: bone,  bands: [0.0, 0.3, 0.75]}
+  step:   {ramp: light, bands: [0.0, 0.3, 0.75]}
+  wall:   {ramp: mid,   bands: [0.0, 0.3, 0.75]}
+  dark:   {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  tower:  {ramp: light, bands: [-0.1, 0.2, 0.6]}
+  roof:   {ramp: mid,   bands: [0.2, 0.5, 0.85]}
+  banner: {ramp: light, bands: [-0.3, 0.0, 0.4]}
+  emblem: {ramp: dark,  bands: [0.3, 0.6, 0.9]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 5}
+box: [94, 78]
+groups:
+  body: {}
+  inner: {}
+params:
+  W: 2.8          # half width of the grandstand
+  y0: 0.45        # its south edge
+  y1: 3.35        # its north edge
+parts:
+  # the grandstand: three stepped tiers, the open floor in the middle dark
+  - {name: tier-1, mat: wall, prism: {poly: [["=-W", "=y0"], ["=W", "=y0"], ["=W", "=y1"], ["=-W", "=y1"]], z: [0, 0.6], top: [0.97, 0.95], round: 0.03}}
+  - {name: tier-2, mat: step, prism: {poly: [["=-W + 0.3", "=y0 + 0.25"], ["=W - 0.3", "=y0 + 0.25"], ["=W - 0.3", "=y1 - 0.2"], ["=-W + 0.3", "=y1 - 0.2"]], z: [0.6, 1.15], top: [0.97, 0.94], round: 0.03}}
+  - {name: tier-3, mat: wall, prism: {poly: [["=-W + 0.6", "=y0 + 0.5"], ["=W - 0.6", "=y0 + 0.5"], ["=W - 0.6", "=y1 - 0.4"], ["=-W + 0.6", "=y1 - 0.4"]], z: [1.15, 1.6], top: [0.97, 0.93], round: 0.03}}
+  - {name: bowl, mat: dark, op: subtract, prism: {poly: [["=-W + 0.8", "=y0 + 0.75"], ["=W - 0.8", "=y0 + 0.75"], ["=W - 0.8", "=y1 - 0.6"], ["=-W + 0.8", "=y1 - 0.6"]], z: [0.9, 1.75], top: [1.1, 1.15], round: 0.0},
+}
+  - {name: floor, mat: dark, group: inner, box: {c: [0, "=(y0 + y1)/2 + 0.08", 0.94], half: ["=W - 0.75", "=(y1 - y0)/2 - 0.6", 0.04]}}
+  # the gatehouse with its doorway and the banner over it
+  - {name: gate, mat: stone, box: {c: [0, 0.32, 1.0], half: [0.8, 0.32, 1.0], radius: 0.05}}
+  - {name: gate-top, mat: wall, box: {c: [0, 0.32, 2.04], half: [0.88, 0.36, 0.07], radius: 0.03}}
+  - {name: merlon-w, mat: stone, box: {c: [-0.62, 0.1, 2.2], half: [0.17, 0.1, 0.12], radius: 0.03}}
+  - {name: merlon-m, mat: stone, box: {c: [0, 0.1, 2.2], half: [0.17, 0.1, 0.12], radius: 0.03}}
+  - {name: merlon-e, mat: stone, box: {c: [0.62, 0.1, 2.2], half: [0.17, 0.1, 0.12], radius: 0.03}}
+  - {name: door, mat: dark, box: {c: [0, -0.02, 0.42], half: [0.36, 0.04, 0.42], radius: 0.02}}
+  - {name: door-arch, mat: dark, cylinder: {a: [0, 0.0, 0.84], b: [0, -0.06, 0.84], r1: 0.36}}
+  - {name: banner, mat: banner, extrude: {axis: y, span: [-0.08, -0.03], profile: [[-0.42, 1.3], [0, 1.12], [0.42, 1.3], [0.42, 2.1], [-0.42, 2.1]], round: 0.0}}
+  - {name: emblem, mat: emblem, extrude: {axis: y, span: [-0.1, -0.07], profile: [[0, 1.42], [0.2, 1.66], [0, 1.9], [-0.2, 1.66]], round: 0.0}}
+  - {name: rod, mat: dark, box: {c: [0, -0.07, 2.12], half: [0.5, 0.04, 0.04]}}
+  # two domed round towers at the front corners
+  - {name: tower-w, mat: tower, cylinder: {a: [-2.3, 0.45, 0], b: [-2.3, 0.45, 1.45], r1: 0.42}}
+  - {name: cap-w, mat: tower, ellipsoid: {c: [-2.3, 0.45, 1.45], r: [0.44, 0.44, 0.26]}}
+  - {name: ring-w, mat: roof, cylinder: {a: [-2.3, 0.45, 1.3], b: [-2.3, 0.45, 1.42], r1: 0.47}}
+  - {name: slit-w, mat: dark, box: {c: [-2.3, 0.02, 0.9], half: [0.07, 0.03, 0.2]}}
+  - {name: tower-e, mat: tower, cylinder: {a: [2.3, 0.45, 0], b: [2.3, 0.45, 1.45], r1: 0.42}}
+  - {name: cap-e, mat: tower, ellipsoid: {c: [2.3, 0.45, 1.45], r: [0.44, 0.44, 0.26]}}
+  - {name: ring-e, mat: roof, cylinder: {a: [2.3, 0.45, 1.3], b: [2.3, 0.45, 1.42], r1: 0.47}}
+  - {name: slit-e, mat: dark, box: {c: [2.3, 0.02, 0.9], half: [0.07, 0.03, 0.2]}}
+  # the temple's shrine and the great dome (each variant keeps only its own)
+  - {name: shrine, mat: stone, box: {c: [0, 1.85, 1.85], half: [1.2, 0.45, 0.3], radius: 0.04}}
+  - {name: shrine-roof, mat: wall, prism: {poly: [[-1.32, 1.32], [1.32, 1.32], [1.32, 2.38], [-1.32, 2.38]], z: [2.15, 2.38], top: [0.8, 0.6], round: 0.03}}
+  - {name: shrine-door, mat: dark, box: {c: [0, 1.39, 1.8], half: [0.3, 0.03, 0.22]}}
+  - {name: great-dome, mat: tower, ellipsoid: {c: [0, 1.95, 1.0], r: [2.0, 1.1, 0.95]}}
+  - {name: dome-rib, mat: wall, cylinder: {a: [0, 1.95, 1.3], b: [0, 1.95, 1.42], r1: 1.0}, squash: {scale: [1.82, 1.0, 1], center: [0, 1.95, 0]}}
+  - {name: oculus, mat: dark, cylinder: {a: [0, 1.95, 1.9], b: [0, 1.95, 1.97], r1: 0.28}}
+variants:
+  # the Grand Arena's open bowl
+  colosseum:
+    drop: ["shrine*", "great-dome", "dome-rib", "oculus"]
+  # a stepped temple (Yavin, Ilum): no open floor, a shrine on the top step
+  temple:
+    drop: ["bowl", "floor", "great-dome", "dome-rib", "oculus"]
+  # a great dome over the bowl (Mustafar, Hoth)
+  dome:
+    drop: ["floor", "shrine*"]

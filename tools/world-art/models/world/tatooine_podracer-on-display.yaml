@@ -1,0 +1,54 @@
+# Podracer on display (art:tatooine:podracer-on-display), hit box 4x2, drawn 4x3.
+# Reference: Anakin's podracer (podracer-on-display__db_anakin-skywalkers-podracer, __web_1-3): two long
+# round engines with the split air-scoop jaws at the front, a dark band of fittings, tied side by side,
+# and a small pointed cockpit trailing behind on two control cables. Parked in a pit lane: the engines
+# point east on low stands so their side shows; the cockpit sits on the ground to the west.
+# Engines and cockpit are in the Tatooine objects kit. Axes: x east, y north, z up, origin on the ground at
+# the centre of the hit box's south edge.
+name: tatooine_podracer-on-display
+art: art:tatooine:podracer-on-display
+palette: greybox
+kits: [../scenery/kits/tatooine-objects.yaml]
+cells: [4, 3]
+foot: [32, 45]
+footprint: 2
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  mid:   {ramp: mid,   bands: [0.15, 0.5, 0.85]}
+  light: {ramp: light, bands: [0.1, 0.45, 0.8]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  cable: {ramp: dark,  bands: [0.5, 0.8, 0.95]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 2}
+box: [64, 32]
+params: {ex: -0.75, ez: 0.4, y1: 0.3, y2: 1.45, L: 2.2, r: 0.25}
+templates:
+  stand:
+    parts:
+      - {name: leg, mat: dark, prism: {poly: [[-0.12, -0.12], [0.12, -0.12], [0.12, 0.12], [-0.12, 0.12]], z: [0, "=ez - 0.18"], top: 0.6}}
+parts:
+  - {use: pod-engine, name: eng-s, at: ["=ex", "=y1", "=ez"], with: {L: "=L", r: "=r"}}
+  - {use: pod-engine, name: eng-n, at: ["=ex", "=y2", "=ez"], with: {L: "=L", r: "=r"}}
+  - {use: stand, name: st-s1, at: [-0.4, "=y1", 0]}
+  - {use: stand, name: st-s2, at: [0.7, "=y1", 0]}
+  - {use: stand, name: st-n1, at: [-0.4, "=y2", 0]}
+  - {use: stand, name: st-n2, at: [0.7, "=y2", 0]}
+  # the tie bar between the engines (the energy binder's plates)
+  - {name: binder, mat: light, box: {c: [1.1, "=(y1 + y2) / 2", "=ez + 0.1"], half: [0.05, "=(y2 - y1) / 2", 0.03]}}
+  # the cockpit on the ground to the west, nose to the east, cables to each engine
+  - {use: pod-cockpit, name: pit, at: [-1.6, 0.85, 0.02]}
+  - {name: cable-s, mat: cable, cylinder: {a: [-1.2, 0.76, 0.2], b: ["=ex + 0.05", "=y1", "=ez"], r1: 0.025}}
+  - {name: cable-n, mat: cable, cylinder: {a: [-1.2, 0.84, 0.2], b: ["=ex + 0.05", "=y2", "=ez"], r1: 0.025}}
+variants:
+  display: {}
+  # in the pits: the north engine's cowl off, lying on the ground beside it
+  in-repair:
+    drop: ["eng-n/cowl", "eng-n/jaw-*", "eng-n/mouth"]
+    ground:
+      - {name: cowl-off, mat: light, cylinder: {a: [-1.25, 0.05, 0.22], b: [-0.95, 0.05, 0.22], r1: 0.22}}

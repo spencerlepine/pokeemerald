@@ -1,0 +1,48 @@
+# Swamp reeds (art:dagobah:swamp-reeds), 1x1, the Dagobah tall grass (encounters) in shallow water.
+# Reference: the reed beds in the Dagobah bog (The Empire Strikes Back;
+# wiki/art/concept/dagobah/swamp-reeds__db_dagobah.jpg). A tuft of tall thin blades leaning out from
+# one root, two seed heads, a ripple ring where they leave the water.
+# Axes: x east, y north, z up, origin at the cell's centre on the ground.
+name: dagobah_swamp-reeds
+art: art:dagobah:swamp-reeds
+palette: greybox
+cells: [1, 1]
+foot: [8, 13]
+scale: 0.72
+footprint: 1
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  reed:  {ramp: mid,  bands: [0.1, 0.4, 0.75]}
+  back:  {ramp: mid,  bands: [0.35, 0.65, 0.95]}
+  head:  {ramp: dark, bands: [0.2, 0.5, 0.85]}
+  water: {color: shade}
+box: [16, 16]
+templates:
+  # one blade: a thin tapering spike from the root, leaning `lean` deg toward `turn`
+  blade:
+    params: {h: 0.7, lean: 10, mat: reed}
+    parts:
+      - {name: b, mat: "=mat", cone: {a: [0, 0, 0], b: ["=h * sin(radians(lean))", 0, "=h * cos(radians(lean))"], r1: 0.06, r2: 0.015}}
+parts:
+  - {use: blade, name: b1, at: [-0.26, 0.05, 0], turn: 190, with: {h: 0.55, lean: 12, mat: reed}}
+  - {use: blade, name: b2, at: [-0.17, 0.12, 0], turn: 170, with: {h: 0.78, lean: 6, mat: back}}
+  - {use: blade, name: b3, at: [-0.08, 0.02, 0], turn: 200, with: {h: 0.62, lean: 4, mat: reed}}
+  - {use: blade, name: b4, at: [0.0, 0.14, 0], turn: 90, with: {h: 0.85, lean: 3, mat: back}}
+  - {use: blade, name: b5, at: [0.06, 0.0, 0], turn: 0, with: {h: 0.7, lean: 5, mat: reed}}
+  - {use: blade, name: b6, at: [0.15, 0.12, 0], turn: 10, with: {h: 0.75, lean: 7, mat: back}}
+  - {use: blade, name: b7, at: [0.24, 0.03, 0], turn: -10, with: {h: 0.56, lean: 12, mat: reed}}
+  - {use: blade, name: b8, at: [-0.03, -0.1, 0], turn: 250, with: {h: 0.45, lean: 10, mat: reed}}
+  - {use: blade, name: b9, at: [0.12, -0.08, 0], turn: -60, with: {h: 0.42, lean: 12, mat: reed}}
+  # two cattail seed heads on stalks
+  - {name: stalk-1, mat: reed, cylinder: {a: [-0.12, 0.2, 0], b: [-0.14, 0.2, 0.7], r1: 0.018}}
+  - {name: head-1, mat: head, cone: {a: [-0.14, 0.2, 0.58], b: [-0.145, 0.2, 0.8], r1: 0.055, r2: 0.045}}
+  - {name: stalk-2, mat: reed, cylinder: {a: [0.1, 0.18, 0], b: [0.12, 0.18, 0.58], r1: 0.018}}
+  - {name: head-2, mat: head, cone: {a: [0.12, 0.18, 0.46], b: [0.125, 0.18, 0.66], r1: 0.05, r2: 0.04}}
+ground:
+  - {name: ripple, mat: water, cylinder: {a: [0.02, 0.0, 0], b: [0.02, 0.0, 0.01], r1: 0.36}, squash: [1.1, 0.4, 1]}

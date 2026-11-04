@@ -1,0 +1,48 @@
+# StarNAV console (art:new:starnav-console), hit box 1x1, drawn 1x2. Shared by every hangar.
+# The terminal the player uses to pick a hyperlane: a squat pedestal with a screen tilted up to the
+# south, a round holo-projector disc on top showing a small planet. Like a ship's nav station.
+# Axes: x east, y north from the hit box's south edge, z up; origin at the hit box's south-centre.
+name: new_starnav-console
+art: art:new:starnav-console
+palette: greybox
+cells: [1, 2]
+foot: [8, 31]
+scale: 0.92
+footprint: 1
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  body:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  trim:  {ramp: light, bands: [0.15, 0.5, 0.82]}
+  glass: {ramp: dark,  bands: [0.3, 0.6, 0.9]}
+  holo:  {ramp: light, bands: [0.1, 0.4, 0.75]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 1}
+box: [14, 14]
+parts:
+  - {name: plinth, mat: body, box: {c: [0, 0.48, 0.05], half: [0.4, 0.3, 0.05], radius: 0.02}}
+  - name: body
+    mat: body
+    prism: {poly: [[-0.32, 0.25], [0.32, 0.25], [0.32, 0.7], [-0.32, 0.7]], z: [0.1, 0.6], top: [1.0, 1.0], round: 0.03}
+  - {name: kick, mat: glass, box: {c: [0, 0.24, 0.32], half: [0.22, 0.02, 0.1], radius: 0.01}}
+  # the control deck: a slanted shelf of keys facing the player
+  - name: desk
+    mat: trim
+    hull: {points: [[-0.38, 0.12, 0.56], [0.38, 0.12, 0.56], [-0.38, 0.55, 0.66], [0.38, 0.55, 0.66],
+                    [-0.38, 0.12, 0.62], [0.38, 0.12, 0.62], [-0.38, 0.55, 0.72], [0.38, 0.55, 0.72]], round: 0.02}
+  # the upright nav screen facing south, in a light frame, leaning back a little
+  - name: frame
+    mat: trim
+    hull: {points: [[-0.36, 0.55, 0.66], [0.36, 0.55, 0.66], [-0.36, 0.7, 0.66], [0.36, 0.7, 0.66],
+                    [-0.34, 0.66, 1.18], [0.34, 0.66, 1.18], [-0.34, 0.78, 1.18], [0.34, 0.78, 1.18]], round: 0.03}
+  - name: screen
+    mat: glass
+    hull: {points: [[-0.27, 0.53, 0.74], [0.27, 0.53, 0.74], [-0.27, 0.56, 0.74], [0.27, 0.56, 0.74],
+                    [-0.26, 0.63, 1.1], [0.26, 0.63, 1.1], [-0.26, 0.66, 1.1], [0.26, 0.66, 1.1]], round: 0.01}
+  # the hyperlane chart on the screen: one bright planet
+  - {name: planet, mat: holo, ellipsoid: {c: [0.04, 0.56, 0.92], r: [0.09, 0.04, 0.09]}}

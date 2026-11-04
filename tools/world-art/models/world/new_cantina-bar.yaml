@@ -1,0 +1,57 @@
+# Cantina bar (art:new:cantina-bar), hit box 6x4, drawn 6x5.
+# Reference: the round bar of the Mos Eisley cantina (A New Hope): a twelve-sided ring of counter with a
+# padded front and a light top, the bartender's well inside it, and in the middle the drinks
+# dispenser: a tall drum with tap pipes curving out of it. Stools stand round the front.
+# Axes: x east, y north, z up, origin on the ground at the footprint's south-west corner.
+name: new_cantina-bar
+art: art:new:cantina-bar
+palette: greybox
+cells: [6, 5]
+foot: [0, 80]
+footprint: 4
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  front: {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  top:   {ramp: light, bands: [0.1, 0.45, 0.8]}
+  floor: {ramp: dark,  bands: [0.3, 0.6, 0.9]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  drum:  {ramp: bone,  bands: [0.25, 0.55, 0.85]}
+  stool: {ramp: mid,   bands: [0.35, 0.65, 0.9]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 4}
+box: [94, 62]
+groups: {bar: {}, top: {}, body: {}}
+params:
+  cx: 2.97
+  cy: 2.05
+  sy: 0.6          # the oval's y squash
+  h: 1.05          # counter height
+parts:
+  # the counter: an oval ring, a padded front and a light top lip
+  - {name: counter, mat: front, group: bar, prism: {poly: [[5.675, 2.485], [4.950, 3.238], [3.695, 3.673], [2.245, 3.673], [0.990, 3.238], [0.265, 2.485], [0.265, 1.615], [0.990, 0.862], [2.245, 0.427], [3.695, 0.427], [4.950, 0.862], [5.675, 1.615]], z: [0, "=h - 0.08"], round: 0.04}}
+  - {name: well, mat: front, group: bar, op: subtract, prism: {poly: [[5.095, 2.386], [4.526, 2.969], [3.539, 3.306], [2.401, 3.306], [1.414, 2.969], [0.845, 2.386], [0.845, 1.714], [1.414, 1.131], [2.401, 0.794], [3.539, 0.794], [4.526, 1.131], [5.095, 1.714]], z: [0.1, 2], round: 0.0}}
+  - {name: kick, mat: dark, group: bar, prism: {poly: [[5.578, 2.464], [4.879, 3.181], [3.669, 3.595], [2.271, 3.595], [1.061, 3.181], [0.362, 2.464], [0.362, 1.636], [1.061, 0.919], [2.271, 0.505], [3.669, 0.505], [4.879, 0.919], [5.578, 1.636]], z: [0, 0.14], round: 0.0}}
+  - {name: lip, mat: top, group: top, prism: {poly: [[5.752, 2.500], [5.006, 3.280], [3.715, 3.731], [2.225, 3.731], [0.934, 3.280], [0.188, 2.500], [0.188, 1.600], [0.934, 0.820], [2.225, 0.369], [3.715, 0.369], [5.006, 0.820], [5.752, 1.600]], z: ["=h - 0.1", "=h"], round: 0.02}}
+  - {name: lip-in, mat: top, group: top, op: subtract, prism: {poly: [[4.998, 2.371], [4.455, 2.927], [3.514, 3.248], [2.426, 3.248], [1.485, 2.927], [0.942, 2.371], [0.942, 1.729], [1.485, 1.173], [2.426, 0.852], [3.514, 0.852], [4.455, 1.173], [4.998, 1.729]], z: [0, 2], round: 0.0}}
+  - {name: gap, mat: floor, prism: {poly: [[5.095, 2.386], [4.526, 2.969], [3.539, 3.306], [2.401, 3.306], [1.414, 2.969], [0.845, 2.386], [0.845, 1.714], [1.414, 1.131], [2.401, 0.794], [3.539, 0.794], [4.526, 1.131], [5.095, 1.714]], z: [0, 0.04], round: 0.0}}
+  # the drinks dispenser in the middle: a drum, a light cap and tap pipes bent out over the counter
+  - {name: drum, mat: drum, cylinder: {a: ["=cx", "=cy + 0.1", 0], b: ["=cx", "=cy + 0.1", 1.55], r1: 0.55, r2: 0.48}}
+  - {name: cap, mat: top, cylinder: {a: ["=cx", "=cy + 0.1", 1.55], b: ["=cx", "=cy + 0.1", 1.68], r1: 0.6, r2: 0.5}}
+  - {name: pipe-w, mat: dark, cone: {a: ["=cx - 0.45", "=cy", 1.3], b: ["=cx - 1.05", "=cy - 0.3", 1.15], r1: 0.07, r2: 0.06}}
+  - {name: pipe-e, mat: dark, cone: {a: ["=cx + 0.45", "=cy", 1.3], b: ["=cx + 1.05", "=cy - 0.3", 1.15], r1: 0.07, r2: 0.06}}
+  - {name: pipe-s, mat: dark, cone: {a: ["=cx", "=cy - 0.4", 1.3], b: ["=cx", "=cy - 0.85", 1.15], r1: 0.07, r2: 0.06}}
+  # stools round the front: a post and a round seat
+  - {name: stool-1, mat: dark, cylinder: {a: [1.2, 0.32, 0], b: [1.2, 0.32, 0.5], r1: 0.06}}
+  - {name: seat-1, mat: stool, cylinder: {a: [1.2, 0.32, 0.48], b: [1.2, 0.32, 0.6], r1: 0.2}}
+  - {name: stool-2, mat: dark, cylinder: {a: [2.4, 0.24, 0], b: [2.4, 0.24, 0.5], r1: 0.06}}
+  - {name: seat-2, mat: stool, cylinder: {a: [2.4, 0.24, 0.48], b: [2.4, 0.24, 0.6], r1: 0.2}}
+  - {name: stool-3, mat: dark, cylinder: {a: [3.6, 0.24, 0], b: [3.6, 0.24, 0.5], r1: 0.06}}
+  - {name: seat-3, mat: stool, cylinder: {a: [3.6, 0.24, 0.48], b: [3.6, 0.24, 0.6], r1: 0.2}}
+  - {name: stool-4, mat: dark, cylinder: {a: [4.8, 0.32, 0], b: [4.8, 0.32, 0.5], r1: 0.06}}
+  - {name: seat-4, mat: stool, cylinder: {a: [4.8, 0.32, 0.48], b: [4.8, 0.32, 0.6], r1: 0.2}}

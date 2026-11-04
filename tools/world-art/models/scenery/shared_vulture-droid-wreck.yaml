@@ -1,0 +1,83 @@
+# Vulture droid wreck (art:shared:vulture-droid-wreck), hit box 4x3, drawn 4x4.
+# Reference: the Vulture-class droid starfighter in walking mode (The Clone Wars;
+# wiki/art/concept/shared/vulture-droid-wreck__web_1.jpg). A flat central body with the head on a short
+# neck at the front, and four long blade-shaped wings that it walks on. Here it has folded down on
+# them: the front pair collapsed and splayed out flat, the back pair still propped up in an A-frame,
+# the head split open down the middle.
+# Axes: x east, y north, z up; origin on the ground under the body. 1 m = 1 cell = 16 px.
+name: shared_vulture-droid-wreck
+art: art:shared:vulture-droid-wreck
+palette: greybox
+cells: [4, 4]
+foot: [32, 42]
+scale: 0.93
+footprint: 3
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  body:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  wing:  {ramp: mid,   bands: [0.1, 0.45, 0.8]}
+  edge:  {ramp: light, bands: [0.15, 0.5, 0.82]}
+  head:  {ramp: light, bands: [0.2, 0.5, 0.85]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 3}
+box: [60, 44]
+params:
+  L: 1.6           # wing (leg) length
+  bz: 0.42         # body height
+  fy: -10          # front wings' pitch (deg): tips down to the ground
+  by: 30           # back wings' pitch (deg): propped up
+templates:
+  # one wing-leg from the hip (origin) out along +x: a long lens-shaped blade standing on edge,
+  # its lit leading edge along the top, a dark claw at the tip
+  wing:
+    parts:
+      - name: blade
+        mat: wing
+        hull: {points: [[0, -0.05, -0.08], [0, 0.05, -0.08], [0, -0.05, 0.08], [0, 0.05, 0.08],
+                        ["=L * 0.35", -0.1, -0.22], ["=L * 0.35", 0.1, -0.22], ["=L * 0.35", -0.1, 0.22], ["=L * 0.35", 0.1, 0.22],
+                        ["=L * 0.8", -0.06, -0.12], ["=L * 0.8", 0.06, -0.12], ["=L * 0.8", -0.06, 0.1], ["=L * 0.8", 0.06, 0.1],
+                        ["=L", 0, -0.02]], round: 0.03}
+      - {name: edge, mat: edge, cylinder: {a: [0.1, 0, 0.1], b: ["=L * 0.35", 0, 0.24], r1: 0.05}}
+      - {name: edge-2, mat: edge, cylinder: {a: ["=L * 0.35", 0, 0.24], b: ["=L * 0.85", 0, 0.1], r1: 0.045}}
+      - {name: claw, mat: dark, cylinder: {a: ["=L * 0.8", 0, -0.02], b: ["=L + 0.12", 0, -0.04], r1: 0.07, r2: 0.02}}
+parts:
+  # the body: a flat wedge, wider at the back
+  - name: body
+    mat: body
+    hull: {points: [[-0.55, 0.45, 0.15], [0.55, 0.45, 0.15], [-0.4, -0.3, 0.2], [0.4, -0.3, 0.2],
+                    [-0.5, 0.4, "=bz + 0.12"], [0.5, 0.4, "=bz + 0.12"], [-0.32, -0.25, "=bz + 0.05"], [0.32, -0.25, "=bz + 0.05"],
+                    [0, 0.6, 0.35], [0, -0.45, 0.32]], round: 0.04}
+  - {name: deck, mat: edge, prism: {poly: [[-0.35, 0.3], [0.35, 0.3], [0.22, -0.18], [-0.22, -0.18]], z: ["=bz + 0.06", "=bz + 0.12"], round: 0.02}}
+  # the neck and the split head, its two halves falling apart, facing south
+  - {name: neck, mat: dark, cylinder: {a: [0, -0.3, "=bz"], b: [0, -0.55, "=bz + 0.12"], r1: 0.07}}
+  - name: head-w
+    mat: head
+    hull: {points: [[-0.04, -0.45, 0.22], [-0.04, -1.05, 0.28], [-0.04, -0.55, 0.95], [-0.04, -0.95, 0.82],
+                    [-0.34, -0.5, 0.28], [-0.34, -1.0, 0.3], [-0.3, -0.6, 0.8], [-0.3, -0.9, 0.72]], round: 0.04}
+    rot: [16, 0, 0]
+  - name: head-e
+    mat: head
+    hull: {points: [[0.04, -0.45, 0.22], [0.04, -1.05, 0.28], [0.04, -0.55, 0.95], [0.04, -0.95, 0.82],
+                    [0.34, -0.5, 0.28], [0.34, -1.0, 0.3], [0.3, -0.6, 0.8], [0.3, -0.9, 0.72]], round: 0.04}
+    rot: [-16, 0, 0]
+  - {name: head-core, mat: dark, box: {c: [0, -0.75, 0.45], half: [0.1, 0.2, 0.2], radius: 0.02}}
+  # the eye slits on each half, facing south
+  - {name: eye-w, mat: dark, box: {c: [-0.2, -1.02, 0.55], half: [0.03, 0.03, 0.17], radius: 0.01}, rot: [16, 0, 0]}
+  - {name: eye-e, mat: dark, box: {c: [0.2, -1.02, 0.55], half: [0.03, 0.03, 0.17], radius: 0.01}, rot: [-16, 0, 0]}
+  # the front wings collapsed and splayed out flat; the back pair propped up behind
+  - {use: wing, name: wing-fw, at: [-0.45, -0.15, 0.32], rot: ["=fy", -140, 90]}
+  - {use: wing, name: wing-fe, at: [0.45, -0.15, 0.32], rot: ["=fy", -40, 90]}
+  - {use: wing, name: wing-bw, at: [-0.45, 0.4, 0.4], rot: ["=by", 140, 0]}
+  - {use: wing, name: wing-be, at: [0.45, 0.4, 0.4], rot: ["=by", 40, 0]}
+variants:
+  folded: {}
+  # all four wings down and splayed: just the body sitting in the X
+  flat:
+    params: {by: -12}

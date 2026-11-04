@@ -1,0 +1,69 @@
+# Jabba's palace (art:tatooine:jabbas-palace), hit box 14x9, drawn 14x11.
+# Reference: the palace on the edge of the Dune Sea (Return of the Jedi, the opening matte shot): a huge
+# squat round main tower with a flared, stepped cap and a dark band under it, the heavy gate at its foot,
+# a tall thin tower with a bulb top behind it, a domed rotunda and a small domed turret, low walls
+# between them, all set in rock.
+# Axes: x east, y north, z up, origin on the ground at the hit box's centre. Door: column 7 (x = 0.5).
+name: tatooine_jabbas-palace
+art: art:tatooine:jabbas-palace
+palette: greybox
+kits: [../scenery/kits/tatooine-buildings.yaml]
+cells: [14, 11]
+foot: [112, 104]
+footprint: 9
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  adobe: {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  trim:  {ramp: light, bands: [0.2, 0.5, 0.85]}
+  rock:  {ramp: mid,   bands: [0.3, 0.6, 0.88]}
+  mid:   {ramp: mid,   bands: [0.2, 0.5, 0.85]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 9}
+box: [220, 140]
+params:
+  mx: 0.5          # the main tower
+  my: -0.9
+  mr: 2.45
+  mh: 3.1
+parts:
+  # the main tower: drum, dark band, flared cap, stepped top
+  - {name: main, mat: adobe, cylinder: {a: ["=mx", "=my", 0], b: ["=mx", "=my", "=mh"], r1: "=mr + 0.1", r2: "=mr - 0.05"}}
+  - {name: main-band, mat: dark, cylinder: {a: ["=mx", "=my", "=mh - 0.32"], b: ["=mx", "=my", "=mh - 0.12"], r1: "=mr + 0.02"}}
+  - {name: main-flare, mat: trim, cylinder: {a: ["=mx", "=my", "=mh - 0.12"], b: ["=mx", "=my", "=mh + 0.2"], r1: "=mr + 0.05", r2: "=mr + 0.35"}}
+  - {name: main-step, mat: adobe, cylinder: {a: ["=mx", "=my", "=mh + 0.2"], b: ["=mx", "=my", "=mh + 0.55"], r1: "=mr - 0.35", r2: "=mr - 0.45"}}
+  - {name: main-top, mat: trim, ellipsoid: {c: ["=mx", "=my", "=mh + 0.55"], r: ["=mr - 0.5", "=mr - 0.5", 0.3]}}
+  - {name: main-knob, mat: adobe, cylinder: {a: ["=mx", "=my", "=mh + 0.75"], b: ["=mx", "=my", "=mh + 0.95"], r1: 0.35, r2: 0.25}}
+  # the gate at its foot: a heavy block with the big dark door
+  - {use: block, name: gatehouse, at: ["=mx", "=my - mr - 0.15", 0], with: {w: 2.0, d: 0.9, h: 1.75, mat: trim, lip: adobe}}
+  - {use: arch-frame, name: gate, at: ["=mx", "=my - mr - 0.62", 0], with: {w: 1.15, h: 1.4, t: 0.16, d: 0.15, mat: mid}}
+  - {use: slot, name: slit-1, at: ["=mx - 1.6", "=my - mr + 0.2", 0], with: {z: 1.8, w: 0.18, h: 0.4}}
+  - {use: slot, name: slit-2, at: ["=mx + 1.6", "=my - mr + 0.2", 0], with: {z: 1.8, w: 0.18, h: 0.4}}
+  # the tall tower behind, west
+  - {name: tall, mat: adobe, cylinder: {a: [-3.5, 1.3, 0], b: [-3.5, 1.3, 3.35], r1: 0.72, r2: 0.6}}
+  - {name: tall-band, mat: dark, cylinder: {a: [-3.5, 1.3, 2.3], b: [-3.5, 1.3, 2.45], r1: 0.66}}
+  - {name: tall-collar, mat: trim, cylinder: {a: [-3.5, 1.3, 3.3], b: [-3.5, 1.3, 3.45], r1: 0.82}}
+  - {name: tall-bulb, mat: trim, ellipsoid: {c: [-3.5, 1.3, 3.65], r: [0.6, 0.6, 0.38]}}
+  - {name: tall-tip, mat: adobe, cylinder: {a: [-3.5, 1.3, 3.95], b: [-3.5, 1.3, 4.15], r1: 0.18, r2: 0.1}}
+  # the rotunda behind, east
+  - {use: dome, name: rotunda, at: [3.6, 1.5, 0], with: {r: 1.6, h: 0.7, drum: 1.4, mat: adobe}}
+  - {name: rotunda-band, mat: dark, cylinder: {a: [3.6, 1.5, 1.15], b: [3.6, 1.5, 1.3], r1: 1.63}}
+  # the small turret east
+  - {use: round-tower, name: turret, at: [4.45, -2.6, 0], with: {r: 0.55, h: 1.35, mat: adobe}}
+  # walls between them
+  - {use: block, name: wall-w, at: [-2.9, -1.0, 0], with: {w: 2.4, d: 1.6, h: 1.25, mat: adobe, lip: trim}}
+  - {use: block, name: wall-e, at: [3.5, -1.0, 0], with: {w: 2.4, d: 1.8, h: 1.1, mat: adobe, lip: trim}}
+  - {use: slot, name: slit-w, at: [-3.0, -1.8, 0], with: {z: 0.75, w: 0.18, h: 0.35}}
+  # the rock it stands on
+  - {name: rock-w, mat: rock, hull: {points: [[-6.9, -3.6, 0], [-4.2, -3.9, 0], [-3.4, -1.0, 0], [-4.5, 3.6, 0], [-6.9, 3.4, 0], [-6.2, -1.2, 0.9], [-5.2, 1.6, 1.1], [-4.7, -2.6, 0.45], [-6.6, 2.6, 0.7], [-5.6, -3.0, 0.5]], round: 0.05}}
+  - {name: rock-e, mat: rock, hull: {points: [[6.9, -3.0, 0], [5.3, -3.9, 0], [4.9, 0.0, 0], [5.2, 3.7, 0], [6.9, 3.5, 0], [6.3, -1.4, 0.8], [5.9, 1.9, 1.05], [6.6, 0.4, 0.95], [5.7, -3.1, 0.4]], round: 0.05}}
+  - {name: rock-n, mat: rock, hull: {points: [[-2.4, 2.3, 0], [1.9, 2.0, 0], [1.6, 4.4, 0], [-2.2, 4.4, 0], [-0.4, 3.4, 0.7], [0.8, 3.6, 0.55]], round: 0.05}}
+ground:
+  - {name: scree-w, mat: rock, hull: {points: [[-4.0, -4.3, 0], [-2.4, -4.2, 0], [-2.6, -3.3, 0], [-3.6, -3.4, 0], [-3.2, -3.8, 0.3]], round: 0.04}}
+  - {name: scree-e, mat: rock, hull: {points: [[2.8, -4.3, 0], [4.2, -4.3, 0], [4.0, -3.6, 0], [3.0, -3.7, 0], [3.5, -4.0, 0.25]], round: 0.04}}

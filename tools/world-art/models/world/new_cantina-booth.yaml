@@ -1,0 +1,46 @@
+# Cantina booth (art:new:cantina-booth), hit box 3x2, drawn 3x3.
+# Reference: the alcove booths of the Mos Eisley cantina (A New Hope), where Han meets Greedo: a curved
+# adobe wall wrapping a padded bench, a small round table on one leg in the middle, open to the room
+# on the south. Axes: x east, y north, z up, origin on the ground at the footprint's south-west corner.
+name: new_cantina-booth
+art: art:new:cantina-booth
+palette: greybox
+cells: [3, 3]
+foot: [0, 48]
+footprint: 2
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  adobe: {ramp: light, bands: [0.25, 0.55, 0.88]}
+  seat:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  table: {ramp: bone,  bands: [0.25, 0.55, 0.85]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 2}
+box: [46, 30]
+params:
+  cx: 1.47
+  cy: 0.5
+groups: {wall: {}, bench: {}, body: {}}
+parts:
+  # the curved adobe wall round the back: a ring cut in half, open to the south
+  - {name: wall, mat: adobe, group: wall, cylinder: {a: ["=cx", "=cy", 0], b: ["=cx", "=cy", 1.1], r1: 1.36, r2: 1.3}}
+  - {name: wall-in, mat: adobe, group: wall, op: subtract, cylinder: {a: ["=cx", "=cy", -0.1], b: ["=cx", "=cy", 1.3], r1: 1.12}}
+  - {name: wall-cut, mat: adobe, group: wall, op: subtract, box: {c: ["=cx", "=cy - 1.0", 0.6], half: [2.0, 1.0, 1.0]}}
+  - {name: wall-top, mat: adobe, group: wall, op: subtract, ellipsoid: {c: ["=cx", "=cy - 1.4", 1.75], r: [2.2, 1.6, 0.9]}}
+  # the padded bench inside it, its back cushion against the wall
+  - {name: bench, mat: seat, group: bench, cylinder: {a: ["=cx", "=cy", 0], b: ["=cx", "=cy", 0.45], r1: 1.12}}
+  - {name: back, mat: seat, group: bench, cylinder: {a: ["=cx", "=cy", 0.4], b: ["=cx", "=cy", 0.85], r1: 1.12, r2: 1.08}}
+  - {name: back-in, mat: seat, group: bench, op: subtract, cylinder: {a: ["=cx", "=cy", 0.45], b: ["=cx", "=cy", 1.0], r1: 0.98, r2: 0.94}}
+  - {name: bench-in, mat: seat, group: bench, op: subtract, cylinder: {a: ["=cx", "=cy", -0.1], b: ["=cx", "=cy", 1.0], r1: 0.72}}
+  - {name: bench-cut, mat: seat, group: bench, op: subtract, box: {c: ["=cx", "=cy - 1.0", 0.6], half: [2.0, 1.02, 1.0]}}
+  # the round table on its single leg
+  - {name: leg, mat: dark, cylinder: {a: ["=cx", "=cy", 0], b: ["=cx", "=cy", 0.6], r1: 0.1}}
+  - {name: foot, mat: dark, cylinder: {a: ["=cx", "=cy", 0], b: ["=cx", "=cy", 0.05], r1: 0.25}}
+  - {name: table, mat: table, cylinder: {a: ["=cx", "=cy", 0.6], b: ["=cx", "=cy", 0.7], r1: 0.48}}
+  - {name: cup, mat: dark, cylinder: {a: ["=cx + 0.15", "=cy + 0.05", 0.7], b: ["=cx + 0.15", "=cy + 0.05", 0.82], r1: 0.05}}

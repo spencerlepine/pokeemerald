@@ -1,0 +1,65 @@
+# Wookiee throne (art:new:wookiee-throne), hit box 2x2, drawn 2x4. Rwookrrorro chief's hut (Kashyyyk):
+# the chieftain's seat carved from wroshyr wood. A round wooden dais, a broad seat with a fur pelt
+# draped over it, thick rolled armrests, and a tall back that rises to a rounded crown with three
+# carved notches and a ring of bark ridges, facing the camera (south).
+# Axes: x east, y north from the hit box's south edge, z up; origin at the hit box's south-centre.
+name: new_wookiee-throne
+art: art:new:wookiee-throne
+palette: greybox
+cells: [2, 4]
+foot: [16, 63]
+scale: 0.95
+footprint: 2
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  wood:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  dais:  {ramp: light, bands: [0.2, 0.5, 0.85]}
+  fur:   {ramp: bone,  bands: [0.2, 0.5, 0.85]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 2}
+box: [30, 30]
+parts:
+  # the dais: a low round step of planks
+  - {name: dais, mat: dais, cylinder: {a: [0, 1.0, 0], b: [0, 1.0, 0.14], r1: 0.92}}
+  - {name: dais-cut-s, mat: dais, op: subtract, box: {c: [0, -0.05, 0.1], half: [1, 0.1, 0.2]}}
+  # the seat block and the pelt over it
+  - {name: seat, mat: wood, box: {c: [0, 1.05, 0.34], half: [0.62, 0.48, 0.2], radius: 0.06}}
+  - name: pelt
+    mat: fur
+    hull: {points: [[-0.5, 0.52, 0.42], [0.5, 0.52, 0.42], [-0.52, 1.45, 0.55], [0.52, 1.45, 0.55],
+                    [-0.42, 0.5, 0.2], [0.44, 0.48, 0.24], [0.0, 0.48, 0.12], [-0.3, 1.2, 0.6], [0.3, 1.2, 0.6]], round: 0.05}
+  # armrests: thick rolled logs on posts
+  - {name: arm-w, mat: wood, cylinder: {a: [-0.66, 0.6, 0.78], b: [-0.66, 1.5, 0.82], r1: 0.13}}
+  - {name: arm-e, mat: wood, cylinder: {a: [0.66, 0.6, 0.78], b: [0.66, 1.5, 0.82], r1: 0.13}}
+  - {name: post-w, mat: wood, box: {c: [-0.66, 0.66, 0.46], half: [0.1, 0.08, 0.34], radius: 0.03}}
+  - {name: post-e, mat: wood, box: {c: [0.66, 0.66, 0.46], half: [0.1, 0.08, 0.34], radius: 0.03}}
+  - {name: knob-w, mat: dais, ellipsoid: {c: [-0.66, 0.56, 0.8], r: [0.15, 0.08, 0.15]}}
+  - {name: knob-e, mat: dais, ellipsoid: {c: [0.66, 0.56, 0.8], r: [0.15, 0.08, 0.15]}}
+  # the tall back with a rounded crown, its front face toward the camera
+  - name: back
+    mat: wood
+    extrude: {axis: y, span: [1.42, 1.65], profile: [[-0.72, 0.2], [0.72, 0.2], [0.72, 1.5], [0.6, 1.72], [0.32, 1.86], [0.0, 1.9], [-0.32, 1.86], [-0.6, 1.72], [-0.72, 1.5]], round: 0.05}
+  - name: back-panel
+    mat: dark
+    extrude: {axis: y, span: [1.38, 1.44], profile: [[-0.48, 0.62], [0.48, 0.62], [0.48, 1.5], [0.3, 1.7], [0.0, 1.76], [-0.3, 1.7], [-0.48, 1.5]], round: 0.02}
+  - name: back-fur
+    mat: fur
+    extrude: {axis: y, span: [1.33, 1.39], profile: [[-0.4, 0.62], [0.4, 0.62], [0.42, 1.2], [0.3, 1.5], [0.0, 1.58], [-0.3, 1.5], [-0.42, 1.2]], round: 0.03}
+  # carved notches in the crown and bark ridges up the sides
+  - {name: notch-1, mat: wood, op: subtract, box: {c: [-0.3, 1.5, 1.88], half: [0.07, 0.3, 0.12]}}
+  - {name: notch-2, mat: wood, op: subtract, box: {c: [0.0, 1.5, 1.95], half: [0.07, 0.3, 0.12]}}
+  - {name: notch-3, mat: wood, op: subtract, box: {c: [0.3, 1.5, 1.88], half: [0.07, 0.3, 0.12]}}
+  - {name: ridge-w, mat: dais, box: {c: [-0.62, 1.38, 1.15], half: [0.06, 0.03, 0.85], radius: 0.02}}
+  - {name: ridge-e, mat: dais, box: {c: [0.62, 1.38, 1.15], half: [0.06, 0.03, 0.85], radius: 0.02}}
+  # two curved branch horns at the crown's corners: the Wookiee touch
+  - {name: horn-w1, mat: wood, cone: {a: [-0.62, 1.52, 1.6], b: [-0.82, 1.52, 2.0], r1: 0.11, r2: 0.07}}
+  - {name: horn-w2, mat: dais, cone: {a: [-0.82, 1.52, 2.0], b: [-0.74, 1.52, 2.22], r1: 0.07, r2: 0.03}}
+  - {name: horn-e1, mat: wood, cone: {a: [0.62, 1.52, 1.6], b: [0.82, 1.52, 2.0], r1: 0.11, r2: 0.07}}
+  - {name: horn-e2, mat: dais, cone: {a: [0.82, 1.52, 2.0], b: [0.74, 1.52, 2.22], r1: 0.07, r2: 0.03}}

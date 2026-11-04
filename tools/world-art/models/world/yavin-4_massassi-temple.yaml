@@ -1,0 +1,61 @@
+# Great Temple of Massassi (art:yavin-4:massassi-temple), hit box 10x8, drawn 10x12.
+# Reference: the Great Temple on Yavin 4 (A New Hope, Rogue One; wiki/art/concept/yavin-4/massassi-temple__*):
+# a stepped stone ziggurat of five battered tiers, a stair up the middle of the south face, a tall
+# shrine block on the summit, and the Rebels' hangar mouth cut into the foot of the south face.
+# Axes: x east, y north, z up, origin on the ground at the middle of the hit box's south edge.
+name: yavin-4_massassi-temple
+art: art:yavin-4:massassi-temple
+palette: greybox
+kits: [../scenery/kits/yavin-hoth-ilum.yaml]
+cells: [10, 12]
+foot: [80, 191]
+footprint: 8
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  stone: {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  cap:   {ramp: bone,  bands: [0.3, 0.6, 0.88]}
+  dark:  {ramp: dark,  bands: [0.5, 0.8, 0.95]}
+  stair: {ramp: light, bands: [0.25, 0.55, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 8}
+box: [156, 124]
+groups: {body: {}, inside: {}}
+parts:
+  # five tiers with near-upright walls; each terrace is lit, each south wall stays mid
+  - {use: tier, name: t1, at: [0, 4.1, 0],    with: {w: 9.9, d: 7.6, h: 1.5, top: [0.99, 0.99]}}
+  - {use: tier, name: t2, at: [0, 4.4, 1.5],  with: {w: 8.2, d: 6.2, h: 1.35, top: [0.99, 0.99]}}
+  - {use: tier, name: t3, at: [0, 4.6, 2.85], with: {w: 6.6, d: 5.0, h: 1.25, top: [0.99, 0.99]}}
+  - {use: tier, name: t4, at: [0, 4.75, 4.1], with: {w: 5.0, d: 3.7, h: 1.15, top: [0.99, 0.98]}}
+  - {use: tier, name: t5, at: [0, 4.3, 5.25], with: {w: 2.6, d: 1.6, h: 1.3, top: [0.9, 0.85]}}
+  - {name: crown, mat: cap, prism: {poly: [[-1.25, 3.45], [1.25, 3.45], [1.25, 5.15], [-1.25, 5.15]], z: [6.55, 6.8], top: 0.85, round: 0.03}}
+  - {name: shrine-door, mat: dark, box: {c: [0, 3.52, 5.85], half: [0.35, 0.05, 0.5], radius: 0.02}}
+  # light lips on the terraces so the steps read
+  - {name: lip1, mat: cap, box: {c: [0, 0.32, 1.5], half: [4.9, 0.06, 0.05]}}
+  - {name: lip2, mat: cap, box: {c: [0, 1.32, 2.85], half: [4.05, 0.06, 0.05]}}
+  - {name: lip3, mat: cap, box: {c: [0, 2.12, 4.1], half: [3.25, 0.06, 0.05]}}
+  - {name: lip4, mat: cap, box: {c: [0, 2.92, 5.25], half: [2.45, 0.06, 0.05]}}
+  # the stair up the middle, from the hangar's roof to the shrine, proud of every wall
+  - name: stair
+    mat: stair
+    hull: {points: [[-0.6, 0.45, 1.5], [0.6, 0.45, 1.5], [-0.5, 2.4, 5.3], [0.5, 2.4, 5.3],
+                    [-0.6, 1.4, 1.5], [0.6, 1.4, 1.5], [-0.5, 3.4, 5.3], [0.5, 3.4, 5.3]], round: 0.02}
+  - {name: stair-w, mat: stone, hull: {points: [[-0.74, 0.4, 1.5], [-0.6, 0.4, 1.5], [-0.64, 2.36, 5.4], [-0.5, 2.36, 5.4], [-0.74, 1.4, 1.5], [-0.6, 1.4, 1.5], [-0.64, 3.4, 5.4], [-0.5, 3.4, 5.4]], round: 0.02}}
+  - {name: stair-e, mat: stone, hull: {points: [[0.6, 0.4, 1.5], [0.74, 0.4, 1.5], [0.5, 2.36, 5.4], [0.64, 2.36, 5.4], [0.6, 1.4, 1.5], [0.74, 1.4, 1.5], [0.5, 3.4, 5.4], [0.64, 3.4, 5.4]], round: 0.02}}
+  # the hangar mouth at the foot of the south face
+  - {name: mouth-cut, mat: stone, op: subtract, box: {c: [0, 1.0, 0.6], half: [3.2, 0.75, 0.68]}}
+  - {name: mouth, group: inside, mat: dark, box: {c: [0, 1.7, 0.7], half: [3.3, 0.1, 0.8]}}
+  - {name: bay-floor, group: inside, mat: dark, box: {c: [0, 1.0, 0.0], half: [3.2, 0.7, 0.03]}}
+  - {name: pillar-w, group: inside, mat: stone, box: {c: [-1.1, 0.7, 0.65], half: [0.18, 0.35, 0.68], radius: 0.02}}
+  - {name: pillar-e, group: inside, mat: stone, box: {c: [1.1, 0.7, 0.65], half: [0.18, 0.35, 0.68], radius: 0.02}}
+variants:
+  # the Rebel base: the hangar open
+  hangar: {}
+  # before the Rebels: the mouth sealed with stone
+  sealed:
+    drop: ["mouth-cut", "mouth", "bay-floor", "pillar-*"]

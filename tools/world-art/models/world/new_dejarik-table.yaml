@@ -1,0 +1,44 @@
+# Dejarik table (art:new:dejarik-table), hit box 2x2, drawn 2x3.
+# Reference: the Millennium Falcon's hologame table (A New Hope): a round table on a thick pedestal,
+# its top a ring of game squares round a centre disc, a lit control strip on the front edge, and the
+# curved bench that wraps round the back. Axes: x east, y north, z up, origin on the ground at the
+# footprint's south-west corner.
+name: new_dejarik-table
+art: art:new:dejarik-table
+palette: greybox
+cells: [2, 3]
+foot: [0, 48]
+footprint: 2
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  body:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  top:   {ramp: light, bands: [0.1, 0.45, 0.8]}
+  board: {ramp: bone,  bands: [0.25, 0.55, 0.85]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  seat:  {ramp: mid,   bands: [0.35, 0.65, 0.9]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 2}
+box: [30, 30]
+params:
+  cx: 0.98
+  cy: 0.95
+  tz: 0.62        # table top height
+parts:
+  # the bench round the back: a C of seat blocks and a taller back
+  - {name: seat, mat: seat, ring: {c: ["=cx", "=cy", 0.2], axis: z, r: 0.7, size: [0.36, 0.3, 0.4], n: 7, arc: [-85, 85], round: 0.04}}
+  - {name: back, mat: body, ring: {c: ["=cx", "=cy", 0.45], axis: z, r: 0.84, size: [0.4, 0.12, 0.9], n: 7, arc: [-90, 90], round: 0.04}}
+  # pedestal and table
+  - {name: foot, mat: dark, cylinder: {a: ["=cx", "=cy", 0], b: ["=cx", "=cy", 0.08], r1: 0.42}}
+  - {name: pedestal, mat: dark, cylinder: {a: ["=cx", "=cy", 0], b: ["=cx", "=cy", "=tz - 0.1"], r1: 0.26}}
+  - {name: rim, mat: body, cylinder: {a: ["=cx", "=cy", "=tz - 0.2"], b: ["=cx", "=cy", "=tz"], r1: 0.56, r2: 0.66}}
+  - {name: board, mat: board, cylinder: {a: ["=cx", "=cy", "=tz"], b: ["=cx", "=cy", "=tz + 0.03"], r1: 0.54}}
+  - {name: squares, mat: dark, ring: {c: ["=cx", "=cy", "=tz + 0.04"], axis: z, r: 0.37, size: [0.16, 0.2, 0.04], n: 8, round: 0.01}}
+  - {name: hub, mat: top, cylinder: {a: ["=cx", "=cy", "=tz"], b: ["=cx", "=cy", "=tz + 0.06"], r1: 0.17}}
+  # the control strip on the front edge
+  - {name: strip, mat: dark, box: {c: ["=cx", "=cy - 0.6", "=tz - 0.1"], half: [0.3, 0.05, 0.05], radius: 0.01}}

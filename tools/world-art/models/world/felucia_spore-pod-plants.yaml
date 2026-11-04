@@ -1,0 +1,39 @@
+# Spore pod plants (art:felucia:spore-pod-plants), footprint 1x1, drawn 1x1: Felucia's tall grass.
+# Reference: Felucia's pod plants (Revenge of the Sith; The Clone Wars): clusters of glassy teardrop
+# pods on short stalks, each with a little curled tip. Light pods (translucent in final art) on dark
+# stalks, a low leafy base. Axes: x east, y north, z up, origin on the ground at the cell's middle.
+name: felucia_spore-pod-plants
+art: art:felucia:spore-pod-plants
+palette: greybox
+cells: [1, 1]
+foot: [8, 15]
+footprint: 1
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  pod:   {ramp: light, bands: [0.2, 0.5, 0.82]}
+  stalk: {ramp: dark, bands: [0.2, 0.5, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 1}
+box: [16, 16]
+templates:
+  pod:
+    params: {h: 0.45, r: 0.11}
+    parts:
+      - {name: stalk, mat: stalk, cylinder: {a: [0, 0, 0], b: [0, 0, "=h*0.4"], r1: 0.035}}
+      - name: bulb
+        mat: pod
+        hull: {points: [["=-r", 0, "=h*0.45"], ["=r", 0, "=h*0.45"], [0, "=-r", "=h*0.45"], [0, "=r", "=h*0.45"],
+                        ["=-r*0.8", 0, "=h*0.32"], ["=r*0.8", 0, "=h*0.32"], [0, "=-r*0.8", "=h*0.32"], [0, "=r*0.8", "=h*0.32"],
+                        ["=-r*0.55", 0, "=h*0.8"], ["=r*0.55", 0, "=h*0.8"], [0, "=-r*0.55", "=h*0.8"], [0, "=r*0.55", "=h*0.8"], [0, 0, "=h"]], round: 0.02}
+      - {name: tip, mat: stalk, cylinder: {a: [0, 0, "=h-0.02"], b: [0.06, 0, "=h+0.06"], r1: 0.025}}
+parts:
+  - {name: leaves, mat: stalk, ellipsoid: {c: [0, 0.16, 0], r: [0.4, 0.16, 0.05]}}
+  - {use: pod, name: p1, at: [-0.16, 0.2, 0], with: {h: 0.7, r: 0.17}}
+  - {use: pod, name: p2, at: [0.24, 0.24, 0], turn: 180, with: {h: 0.5, r: 0.14}}
+  - {use: pod, name: p3, at: [0.08, 0.06, 0], with: {h: 0.34, r: 0.12}}

@@ -1,0 +1,53 @@
+# TIE rack (art:new:tie-rack), hit box 6x3, drawn 6x4. The Death Star's half-built hangar.
+# Reference: TIE fighters hung from overhead racks in Imperial hangars (A New Hope's Death Star
+# hangar, Rebels' Star Destroyer bays): a gantry of two end frames and an overhead rail, three TIEs
+# hanging from it broadside, so each shows its south wing face-on (the hexagon and its spars read
+# only face-on in this view). Axes: x east, y north, z up; origin on the floor at the rack's
+# south-centre.
+name: new_tie-rack
+art: art:new:tie-rack
+palette: greybox
+kits: [../scenery/kits/shared-a.yaml]
+cells: [6, 4]
+foot: [48, 62]
+footprint: 3
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  frame:  {ramp: light, bands: [-0.2, 0.15, 0.6]}
+  panel:  {ramp: dark,  bands: [0.1, 0.4, 0.8]}
+  hull:   {ramp: mid,   bands: [0.1, 0.45, 0.8]}
+  rack:   {ramp: mid,   bands: [0.0, 0.3, 0.75]}
+  dark:   {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 3}
+box: [94, 46]
+params:
+  ry: 0.95          # the rail's line (y)
+  rz: 2.15          # the rail's height
+  s: 0.92
+parts:
+  # the gantry: two end frames and the overhead rail
+  - {name: leg-w, mat: rack, box: {c: [-2.76, "=ry", "=rz/2"], half: [0.08, 0.5, "=rz/2"], radius: 0.02}}
+  - {name: leg-e, mat: rack, box: {c: [2.74, "=ry", "=rz/2"], half: [0.08, 0.5, "=rz/2"], radius: 0.02}}
+  - {name: foot-w, mat: dark, box: {c: [-2.76, "=ry", 0.05], half: [0.14, 0.62, 0.05], radius: 0.02}}
+  - {name: foot-e, mat: dark, box: {c: [2.74, "=ry", 0.05], half: [0.14, 0.62, 0.05], radius: 0.02}}
+  - {name: rail, mat: rack, box: {c: [0, "=ry", "=rz + 0.1"], half: [2.82, 0.16, 0.1], radius: 0.02}}
+  - {name: rail-lip, mat: dark, box: {c: [0, "=ry - 0.17", "=rz + 0.06"], half: [2.78, 0.02, 0.04]}}
+  # three TIEs on hangers
+  - {name: hanger-w, mat: dark, box: {c: [-1.92, "=ry", "=rz - 0.05"], half: [0.06, 0.06, 0.12]}}
+  - {use: tie-broadside, name: tie-w, at: [-1.92, "=ry", 0], with: {s: "=s", z0: 0.38, gap: 0.62}}
+  - {name: hanger-m, mat: dark, box: {c: [0, "=ry", "=rz - 0.05"], half: [0.06, 0.06, 0.12]}}
+  - {use: tie-broadside, name: tie-m, at: [0, "=ry", 0], with: {s: "=s", z0: 0.38, gap: 0.62}}
+  - {name: hanger-e, mat: dark, box: {c: [1.92, "=ry", "=rz - 0.05"], half: [0.06, 0.06, 0.12]}}
+  - {use: tie-broadside, name: tie-e, at: [1.92, "=ry", 0], with: {s: "=s", z0: 0.38, gap: 0.62}}
+variants:
+  full: {}
+  # one TIE out on patrol: the middle hanger empty
+  one-out:
+    drop: ["tie-m/*"]

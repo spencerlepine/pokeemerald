@@ -1,0 +1,84 @@
+# Aurebesh vault (art:kamino:aurebesh-vault), hit box 4x2, drawn 4x4.
+# Reference: the Aurebesh alphabet (the glyph sheets in wiki/art/concept/kamino/) on the sealed wall
+# of Emerald's Sealed Chamber, here a Kaminoan vault wall. A smooth slab in a rounded frame, three
+# rows of blocky dark Aurebesh glyphs raised on its south face, a low step in front.
+# Axes: x east, y north, z up, origin on the ground at the hit box's centre.
+name: kamino_aurebesh-vault
+art: art:kamino:aurebesh-vault
+palette: greybox
+cells: [4, 4]
+foot: [31.5, 48]
+footprint: 2
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  frame: {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  slab:  {ramp: light, bands: [0.08, 0.3, 0.65]}
+  step:  {ramp: mid,   bands: [0.2, 0.5, 0.8]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 2}
+box: [64, 32]
+parts:
+  # the frame and the slab set in it
+  - {name: frame, mat: frame, box: {c: [0, 0.15, 1.1], half: [1.88, 0.3, 1.1], radius: 0.12}}
+  - {name: slab, mat: slab, box: {c: [0, -0.12, 1.12], half: [1.7, 0.08, 0.92], radius: 0.04}}
+  - {name: lintel, mat: frame, box: {c: [0, -0.1, 2.15], half: [1.88, 0.2, 0.08], radius: 0.04}}
+  # the step in front
+  - {name: step, mat: step, box: {c: [0, -0.55, 0.08], half: [1.7, 0.3, 0.08], radius: 0.02}}
+  # the glyphs: three rows of six
+  - {name: g00-0, mat: dark, box: {c: [-1.335, -0.21, 1.555], half: [0.055, 0.03, 0.165], radius: 0.0}}
+  - {name: g00-1, mat: dark, box: {c: [-1.170, -0.21, 1.555], half: [0.110, 0.03, 0.055], radius: 0.0}}
+  - {name: g00-2, mat: dark, box: {c: [-1.170, -0.21, 1.665], half: [0.110, 0.03, 0.055], radius: 0.0}}
+  - {name: g01-0, mat: dark, box: {c: [-0.735, -0.21, 1.665], half: [0.165, 0.03, 0.055], radius: 0.0}}
+  - {name: g01-1, mat: dark, box: {c: [-0.735, -0.21, 1.445], half: [0.165, 0.03, 0.055], radius: 0.0}}
+  - {name: g01-2, mat: dark, box: {c: [-0.845, -0.21, 1.555], half: [0.055, 0.03, 0.055], radius: 0.0}}
+  - {name: g01-3, mat: dark, box: {c: [-0.625, -0.21, 1.555], half: [0.055, 0.03, 0.055], radius: 0.0}}
+  - {name: g02-0, mat: dark, box: {c: [-0.355, -0.21, 1.555], half: [0.055, 0.03, 0.165], radius: 0.0}}
+  - {name: g02-1, mat: dark, box: {c: [-0.190, -0.21, 1.665], half: [0.110, 0.03, 0.055], radius: 0.0}}
+  - {name: g02-2, mat: dark, box: {c: [-0.135, -0.21, 1.555], half: [0.055, 0.03, 0.055], radius: 0.0}}
+  - {name: g03-0, mat: dark, box: {c: [0.245, -0.21, 1.665], half: [0.165, 0.03, 0.055], radius: 0.0}}
+  - {name: g03-1, mat: dark, box: {c: [0.245, -0.21, 1.500], half: [0.055, 0.03, 0.110], radius: 0.0}}
+  - {name: g04-0, mat: dark, box: {c: [0.625, -0.21, 1.555], half: [0.055, 0.03, 0.165], radius: 0.0}}
+  - {name: g04-1, mat: dark, box: {c: [0.845, -0.21, 1.555], half: [0.055, 0.03, 0.165], radius: 0.0}}
+  - {name: g04-2, mat: dark, box: {c: [0.735, -0.21, 1.665], half: [0.055, 0.03, 0.055], radius: 0.0}}
+  - {name: g05-0, mat: dark, box: {c: [1.225, -0.21, 1.445], half: [0.165, 0.03, 0.055], radius: 0.0}}
+  - {name: g05-1, mat: dark, box: {c: [1.225, -0.21, 1.610], half: [0.055, 0.03, 0.110], radius: 0.0}}
+  - {name: g10-0, mat: dark, box: {c: [-1.225, -0.21, 1.165], half: [0.165, 0.03, 0.055], radius: 0.0}}
+  - {name: g10-1, mat: dark, box: {c: [-1.335, -0.21, 1.000], half: [0.055, 0.03, 0.110], radius: 0.0}}
+  - {name: g10-2, mat: dark, box: {c: [-1.115, -0.21, 1.000], half: [0.055, 0.03, 0.110], radius: 0.0}}
+  - {name: g11-0, mat: dark, box: {c: [-0.735, -0.21, 0.945], half: [0.165, 0.03, 0.055], radius: 0.0}}
+  - {name: g11-1, mat: dark, box: {c: [-0.735, -0.21, 1.165], half: [0.165, 0.03, 0.055], radius: 0.0}}
+  - {name: g11-2, mat: dark, box: {c: [-0.680, -0.21, 1.055], half: [0.110, 0.03, 0.055], radius: 0.0}}
+  - {name: g12-0, mat: dark, box: {c: [-0.245, -0.21, 1.055], half: [0.055, 0.03, 0.165], radius: 0.0}}
+  - {name: g12-1, mat: dark, box: {c: [-0.355, -0.21, 1.165], half: [0.055, 0.03, 0.055], radius: 0.0}}
+  - {name: g13-0, mat: dark, box: {c: [0.245, -0.21, 1.165], half: [0.165, 0.03, 0.055], radius: 0.0}}
+  - {name: g13-1, mat: dark, box: {c: [0.135, -0.21, 1.000], half: [0.055, 0.03, 0.110], radius: 0.0}}
+  - {name: g13-2, mat: dark, box: {c: [0.355, -0.21, 1.000], half: [0.055, 0.03, 0.110], radius: 0.0}}
+  - {name: g14-0, mat: dark, box: {c: [0.625, -0.21, 1.055], half: [0.055, 0.03, 0.165], radius: 0.0}}
+  - {name: g14-1, mat: dark, box: {c: [0.790, -0.21, 1.055], half: [0.110, 0.03, 0.055], radius: 0.0}}
+  - {name: g14-2, mat: dark, box: {c: [0.790, -0.21, 1.165], half: [0.110, 0.03, 0.055], radius: 0.0}}
+  - {name: g15-0, mat: dark, box: {c: [1.225, -0.21, 1.165], half: [0.165, 0.03, 0.055], radius: 0.0}}
+  - {name: g15-1, mat: dark, box: {c: [1.225, -0.21, 1.000], half: [0.055, 0.03, 0.110], radius: 0.0}}
+  - {name: g20-0, mat: dark, box: {c: [-1.225, -0.21, 0.445], half: [0.165, 0.03, 0.055], radius: 0.0}}
+  - {name: g20-1, mat: dark, box: {c: [-1.225, -0.21, 0.665], half: [0.165, 0.03, 0.055], radius: 0.0}}
+  - {name: g20-2, mat: dark, box: {c: [-1.170, -0.21, 0.555], half: [0.110, 0.03, 0.055], radius: 0.0}}
+  - {name: g21-0, mat: dark, box: {c: [-0.735, -0.21, 0.665], half: [0.165, 0.03, 0.055], radius: 0.0}}
+  - {name: g21-1, mat: dark, box: {c: [-0.735, -0.21, 0.445], half: [0.165, 0.03, 0.055], radius: 0.0}}
+  - {name: g21-2, mat: dark, box: {c: [-0.845, -0.21, 0.555], half: [0.055, 0.03, 0.055], radius: 0.0}}
+  - {name: g21-3, mat: dark, box: {c: [-0.625, -0.21, 0.555], half: [0.055, 0.03, 0.055], radius: 0.0}}
+  - {name: g22-0, mat: dark, box: {c: [-0.355, -0.21, 0.555], half: [0.055, 0.03, 0.165], radius: 0.0}}
+  - {name: g22-1, mat: dark, box: {c: [-0.135, -0.21, 0.555], half: [0.055, 0.03, 0.165], radius: 0.0}}
+  - {name: g22-2, mat: dark, box: {c: [-0.245, -0.21, 0.665], half: [0.055, 0.03, 0.055], radius: 0.0}}
+  - {name: g23-0, mat: dark, box: {c: [0.135, -0.21, 0.555], half: [0.055, 0.03, 0.165], radius: 0.0}}
+  - {name: g23-1, mat: dark, box: {c: [0.300, -0.21, 0.665], half: [0.110, 0.03, 0.055], radius: 0.0}}
+  - {name: g23-2, mat: dark, box: {c: [0.355, -0.21, 0.555], half: [0.055, 0.03, 0.055], radius: 0.0}}
+  - {name: g24-0, mat: dark, box: {c: [0.735, -0.21, 0.445], half: [0.165, 0.03, 0.055], radius: 0.0}}
+  - {name: g24-1, mat: dark, box: {c: [0.735, -0.21, 0.610], half: [0.055, 0.03, 0.110], radius: 0.0}}
+  - {name: g25-0, mat: dark, box: {c: [1.225, -0.21, 0.555], half: [0.055, 0.03, 0.165], radius: 0.0}}
+  - {name: g25-1, mat: dark, box: {c: [1.115, -0.21, 0.665], half: [0.055, 0.03, 0.055], radius: 0.0}}

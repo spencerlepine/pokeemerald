@@ -1,0 +1,45 @@
+# Gonk droid (art:shared:gonk-droid), hit box 1x1, drawn 1x2.
+# Reference: the GNK power droid (A New Hope, Jawa sandcrawler): a walking battery box. Two stacked
+# boxes, the upper one a little narrower, a wide rim between them, a face panel with two lamps on the
+# south face, a pair of stubby feet. Axes: x east, y north, z up; origin on the ground at the cell's
+# south-centre.
+name: shared_gonk-droid
+art: art:shared:gonk-droid
+palette: greybox
+cells: [1, 2]
+foot: [8, 31]
+footprint: 1
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  body:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  rim:   {ramp: light, bands: [0.15, 0.5, 0.82]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  lamp:  {ramp: light, bands: [0.1, 0.45, 0.8]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 1}
+box: [14, 14]
+params:
+  y0: 0.06          # south face of the body
+  d: 0.5            # body depth
+parts:
+  # feet: two flat blocks with a short leg each
+  - {name: foot-w, mat: dark, box: {c: [-0.18, 0.3, 0.06], half: [0.11, 0.2, 0.06], radius: 0.02}}
+  - {name: foot-e, mat: dark, box: {c: [0.18, 0.3, 0.06], half: [0.11, 0.2, 0.06], radius: 0.02}}
+  - {name: leg-w, mat: dark, box: {c: [-0.18, 0.33, 0.18], half: [0.07, 0.07, 0.1]}}
+  - {name: leg-e, mat: dark, box: {c: [0.18, 0.33, 0.18], half: [0.07, 0.07, 0.1]}}
+  # lower box, rim, upper box
+  - {name: lower, mat: body, box: {c: [0, "=y0 + d/2", 0.5], half: [0.33, "=d/2", 0.24], radius: 0.04}}
+  - {name: rim, mat: rim, box: {c: [0, "=y0 + d/2", 0.77], half: [0.38, "=d/2 + 0.04", 0.035], radius: 0.02}}
+  - {name: upper, mat: body, prism: {poly: [[-0.31, "=y0 + 0.03"], [0.31, "=y0 + 0.03"], [0.31, "=y0 + d - 0.03"], [-0.31, "=y0 + d - 0.03"]], z: [0.8, 1.12], top: 0.94, round: 0.03}}
+  # the face panel and its two lamps, on the south face
+  - {name: face, mat: dark, box: {c: [0, "=y0 + 0.02", 0.98], half: [0.15, 0.03, 0.07], radius: 0.01}}
+  - {name: lamp-w, mat: lamp, box: {c: [-0.07, "=y0 - 0.01", 0.99], half: [0.035, 0.02, 0.04]}}
+  - {name: lamp-e, mat: lamp, box: {c: [0.07, "=y0 - 0.01", 0.99], half: [0.035, 0.02, 0.04]}}
+  # a seam on the lower box
+  - {name: seam, mat: dark, box: {c: [0, "=y0 - 0.005", 0.5], half: [0.02, 0.02, 0.16]}}

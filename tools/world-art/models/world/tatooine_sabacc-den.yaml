@@ -1,0 +1,51 @@
+# Sabacc den (art:tatooine:sabacc-den), hit box 6x4, drawn 6x5. Mos Espa; replaces the Game Corner.
+# Reference: Mos Espa's big domed halls (The Phantom Menace) and the sabacc tables of Solo / Outlaws: a
+# wide low dome on a tall drum, a square front block with a dark notch entrance and the bright gold door
+# in it, a lit sign band over the door and two lamp pylons flanking it.
+# Axes: x east, y north, z up, origin on the ground at the hit box's centre. Door: column 3 (x = 0.5).
+name: tatooine_sabacc-den
+art: art:tatooine:sabacc-den
+palette: greybox
+kits: [../scenery/kits/tatooine-buildings.yaml]
+cells: [6, 5]
+foot: [48, 48]
+footprint: 4
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  adobe: {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  trim:  {ramp: light, bands: [0.2, 0.5, 0.85]}
+  gold:  {ramp: bone,  bands: [0.02, 0.1, 0.4]}
+  mid:   {ramp: mid,   bands: [0.2, 0.5, 0.85]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 4}
+box: [92, 60]
+parts:
+  # the hall: a wide dome on a tall drum, a lantern on top
+  - {use: dome, name: dome, at: [0.0, 0.45, 0], with: {r: 1.85, h: 0.72, drum: 0.5, mat: adobe}}
+  - {name: lantern, mat: trim, cylinder: {a: [0.0, 0.45, 1.15], b: [0.0, 0.45, 1.4], r1: 0.32, r2: 0.26}}
+  - {name: band, mat: trim, cylinder: {a: [0.0, 0.45, 0.4], b: [0.0, 0.45, 0.55], r1: 1.88}}
+  # the front block with its notch and gold door
+  - {use: block, name: front, at: [0.5, -1.15, 0], with: {w: 2.5, d: 1.3, h: 1.35, mat: trim, lip: trim}}
+  - {name: notch, mat: dark, box: {c: [0.5, -1.82, 0.55], half: [0.55, 0.05, 0.55], radius: 0.01}}
+  - {name: door, mat: gold, box: {c: [0.5, -1.86, 0.45], half: [0.36, 0.04, 0.45], radius: 0.02}}
+  - {name: sign, mat: gold, box: {c: [0.5, -1.85, 1.18], half: [0.95, 0.04, 0.11], radius: 0.02}}
+  - {name: pip-1, mat: dark, box: {c: [0.05, -1.89, 1.18], half: [0.08, 0.02, 0.05], radius: 0.01}}
+  - {name: pip-2, mat: dark, box: {c: [0.5, -1.89, 1.18], half: [0.08, 0.02, 0.05], radius: 0.01}}
+  - {name: pip-3, mat: dark, box: {c: [0.95, -1.89, 1.18], half: [0.08, 0.02, 0.05], radius: 0.01}}
+  # low side wings
+  - {use: block, name: wing-w, at: [-2.2, -0.15, 0], with: {w: 1.45, d: 2.6, h: 0.85, mat: adobe}}
+  - {use: block, name: wing-e, at: [2.2, -0.15, 0], with: {w: 1.3, d: 2.6, h: 0.85, mat: adobe}}
+  - {use: slot, name: win-w, at: [-2.35, -1.45, 0], with: {z: 0.5, w: 0.4}}
+  - {use: slot, name: win-e, at: [2.45, -1.45, 0], with: {z: 0.5, w: 0.4}}
+  # the lamp pylons either side
+  - {name: pylon-w, mat: mid, cylinder: {a: [-1.05, -1.6, 0], b: [-1.05, -1.6, 1.3], r1: 0.2, r2: 0.15}}
+  - {name: lamp-w, mat: gold, ellipsoid: {c: [-1.05, -1.6, 1.38], r: [0.22, 0.22, 0.18]}}
+  - {name: pylon-e, mat: mid, cylinder: {a: [2.05, -1.6, 0], b: [2.05, -1.6, 1.3], r1: 0.2, r2: 0.15}}
+  - {name: lamp-e, mat: gold, ellipsoid: {c: [2.05, -1.6, 1.38], r: [0.22, 0.22, 0.18]}}

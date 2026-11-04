@@ -1,0 +1,58 @@
+# TIE fighter rack (art:death-star:tie-fighter-rack), hit box 4x4, drawn 4x5.
+# Reference: TIE fighters hanging in the Death Star and Star Destroyer hangar racks (A New Hope, Rogue
+# One, Andor): fighters clamped by the top of the ball to an overhead rail, hanging in a row. Here two
+# TIEs on one gantry: posts at each end, the rail across the top, a clamp down to each ball, deck plates
+# under them. Each TIE comes from the kit (tie-fighter), its south wing face-on to the camera.
+# Axes: x east, y north, z up, origin on the floor at the hit box's centre.
+name: death-star_tie-fighter-rack
+art: art:death-star:tie-fighter-rack
+palette: greybox
+kits: [../scenery/kits/deathstar-arena-jedha.yaml]
+cells: [4, 5]
+foot: [32, 47]
+footprint: 4
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  hull:  {ramp: mid,   bands: [0.1, 0.45, 0.8]}
+  plate: {ramp: light, bands: [0.1, 0.45, 0.8]}
+  dark:  {ramp: dark,  bands: [0.1, 0.45, 0.8]}
+  rack:  {ramp: dark,  bands: [0.3, 0.6, 0.9]}
+  deck:  {ramp: mid,   bands: [0.35, 0.65, 0.92]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 4}
+box: [64, 64]
+params:
+  tz: 1.3        # the balls' height
+  rz: 2.55        # the rail's height
+  s: 0.95
+  ty: -0.45       # the rack's line, south of the middle
+templates:
+  post:
+    parts:
+      - {name: leg-s, mat: rack, box: {c: [0, -0.9, "=rz/2"], half: [0.1, 0.1, "=rz/2"], radius: 0.02}, rot: [0, 0, 12]}
+      - {name: leg-n, mat: rack, box: {c: [0, 0.9, "=rz/2"], half: [0.1, 0.1, "=rz/2"], radius: 0.02}, rot: [0, 0, -12]}
+      - {name: foot, mat: rack, box: {c: [0, 0, 0.06], half: [0.14, 1.0, 0.06], radius: 0.02}}
+parts:
+  # the deck plates under the rack
+  - {name: deck, mat: deck, prism: {poly: [[-1.8, -1.5], [1.8, -1.5], [1.8, 1.4], [-1.8, 1.4]], z: [0, 0.04]}}
+  - {name: deck-line, mat: rack, box: {c: [0, 0.75, 0.04], half: [1.7, 0.04, 0.01]}}
+  # the gantry: a post at each end, the rail across the top
+  - {use: post, name: post-w, at: [-1.74, "=ty", 0]}
+  - {use: post, name: post-e, at: [1.74, "=ty", 0]}
+  - {name: rail, mat: rack, box: {c: [0, "=ty", "=rz"], half: [1.84, 0.16, 0.13], radius: 0.03}}
+  # two TIEs hanging from clamps
+  - {name: clamp-w, mat: rack, box: {c: [-0.92, "=ty", "=(tz + rz)/2"], half: [0.08, 0.08, "=(rz - tz)/2"]}}
+  - {name: clamp-e, mat: rack, box: {c: [0.92, "=ty", "=(tz + rz)/2"], half: [0.08, 0.08, "=(rz - tz)/2"]}}
+  - {use: tie-fighter, name: tie-w, at: [-0.92, "=ty", "=tz"], with: {s: "=s"}}
+  - {use: tie-fighter, name: tie-e, at: [0.92, "=ty", "=tz"], with: {s: "=s"}}
+variants:
+  full: {}
+  # one fighter out on patrol: an empty clamp
+  one-out:
+    drop: ["tie-e/*"]

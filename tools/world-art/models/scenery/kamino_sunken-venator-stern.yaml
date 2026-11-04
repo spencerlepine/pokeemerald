@@ -1,0 +1,90 @@
+# Sunken Venator stern (art:kamino:sunken-venator-stern), hit box 12x3, drawn 12x6.
+# Reference: the Venator-class Star Destroyer (Revenge of the Sith, The Clone Wars): a wide wedge
+# hull, the stepped dorsal superstructure with the twin bridge towers at the rear, and the stern's
+# three big round main thrusters with a smaller one each side. It went down bow first: only the
+# engine block rises from the storm sea, its thrusters facing the camera (south).
+# Built in world axes: the stern face to the south at y = s0, the hull running north (bow +y).
+# Partly off the map on purpose. Axes: x east, y north, z up, origin on the sea at the hit box's centre.
+name: kamino_sunken-venator-stern
+art: art:kamino:sunken-venator-stern
+palette: greybox
+cells: [12, 6]
+foot: [96, 70]
+scale: 0.9
+footprint: 3
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  hull:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  deck:  {ramp: light, bands: [0.2, 0.5, 0.85]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  foam:  {ramp: bone,  bands: [0.05, 0.3, 0.7]}
+  sea:   {color: shade}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 3}
+box: [192, 48]
+params:
+  s0: -0.9         # the stern face
+  W: 5.3           # half the beam at the stern
+  ez: 1.0          # thruster centre height
+templates:
+  thruster:
+    params: {r: 0.75, l: 0.5}
+    parts:
+      - {name: bell, mat: hull, cylinder: {a: [0, 0, 0], b: [0, "=-l", 0], r1: "=r * 0.9", r2: "=r"}}
+      - {name: lip, mat: deck, cylinder: {a: [0, "=-l", 0], b: [0, "=-l - 0.06", 0], r1: "=r"}}
+      - {name: mouth, mat: dark, cylinder: {a: [0, "=-l + 0.05", 0], b: [0, "=-l - 0.08", 0], r1: "=r * 0.72"}}
+parts:
+  # the hull block: wide and low at the stern, sloping sides, its top a deck
+  - name: hull
+    mat: hull
+    hull: {points: [["=-W", "=s0", 0], ["=W", "=s0", 0], ["=-W - 0.15", "=s0", 0.75], ["=W + 0.15", "=s0", 0.75],
+                    ["=-2.3", "=s0", 1.85], ["=2.3", "=s0", 1.85],
+                    ["=-W + 1.2", "=s0 + 3.6", 0], ["=W - 1.2", "=s0 + 3.6", 0], ["=-W + 1.0", "=s0 + 3.6", 0.75], ["=W - 1.0", "=s0 + 3.6", 0.75],
+                    ["=-1.8", "=s0 + 3.6", 1.85], ["=1.8", "=s0 + 3.6", 1.85]], round: 0.05}
+  # the sloping armour plates of the wedge, light
+  - name: plate-w
+    mat: deck
+    hull: {points: [["=-W - 0.17", "=s0 + 0.02", 0.75], ["=-2.3", "=s0 + 0.02", 1.87], ["=-1.8", "=s0 + 3.5", 1.87], ["=-W + 1.0", "=s0 + 3.5", 0.77],
+                    ["=-W - 0.05", "=s0 + 0.1", 0.7], ["=-W + 1.1", "=s0 + 3.4", 0.72]], round: 0.02}
+  - name: plate-e
+    mat: deck
+    hull: {points: [["=W + 0.17", "=s0 + 0.02", 0.75], ["=2.3", "=s0 + 0.02", 1.87], ["=1.8", "=s0 + 3.5", 1.87], ["=W - 1.0", "=s0 + 3.5", 0.77],
+                    ["=W + 0.05", "=s0 + 0.1", 0.7], ["=W - 1.1", "=s0 + 3.4", 0.72]], round: 0.02}
+  # the dorsal superstructure and the twin bridge towers
+  - name: super
+    mat: hull
+    prism: {poly: [[-2.2, "=s0 + 0.3"], [2.2, "=s0 + 0.3"], [1.6, "=s0 + 3.5"], [-1.6, "=s0 + 3.5"]], z: [1.8, 2.4], top: [0.85, 0.95], round: 0.04}
+  - {name: tower-w, mat: hull, prism: {poly: [[-2.0, "=s0 + 0.6"], [-0.6, "=s0 + 0.6"], [-0.75, "=s0 + 1.5"], [-1.85, "=s0 + 1.5"]], z: [2.4, 3.4], top: [0.9, 0.85], round: 0.03}}
+  - {name: tower-e, mat: hull, prism: {poly: [[0.6, "=s0 + 0.6"], [2.0, "=s0 + 0.6"], [1.85, "=s0 + 1.5"], [0.75, "=s0 + 1.5"]], z: [2.4, 3.4], top: [0.9, 0.85], round: 0.03}}
+  - {name: bridge-w, mat: dark, box: {c: [-1.3, "=s0 + 0.62", 3.15], half: [0.6, 0.04, 0.1], radius: 0.0}}
+  - {name: bridge-e, mat: dark, box: {c: [1.3, "=s0 + 0.62", 3.15], half: [0.6, 0.04, 0.1], radius: 0.0}}
+  - {name: cap-w, mat: deck, box: {c: [-1.3, "=s0 + 1.05", 3.43], half: [0.85, 0.5, 0.05], radius: 0.02}}
+  - {name: cap-e, mat: deck, box: {c: [1.3, "=s0 + 1.05", 3.43], half: [0.85, 0.5, 0.05], radius: 0.02}}
+  # the stern thrusters: three big, one small each side
+  - {use: thruster, name: eng-w, at: [-2.15, "=s0", "=ez"], with: {r: 0.78}}
+  - {use: thruster, name: eng-c, at: [0, "=s0", "=ez"], with: {r: 0.82}}
+  - {use: thruster, name: eng-e, at: [2.15, "=s0", "=ez"], with: {r: 0.78}}
+  - {use: thruster, name: eng-sw, at: [-3.95, "=s0", 0.75], with: {r: 0.45, l: 0.3}}
+  - {use: thruster, name: eng-se, at: [3.95, "=s0", 0.75], with: {r: 0.45, l: 0.3}}
+tilt: [0, 10]
+pivot: [0, 0]
+sink: 0.35
+ground:
+  - {name: wash, mat: sea, cylinder: {a: [0, -0.4, 0], b: [0, -0.4, 0.01], r1: 5.6}, squash: [1.0, 0.17, 1]}
+  - {name: foam-w, mat: foam, ellipsoid: {c: [-4.4, -0.95, 0], r: [1.0, 0.14, 0.08]}}
+  - {name: foam-c, mat: foam, ellipsoid: {c: [-0.6, -1.05, 0], r: [1.4, 0.13, 0.08]}}
+  - {name: foam-e, mat: foam, ellipsoid: {c: [3.6, -1.0, 0], r: [1.1, 0.13, 0.08]}}
+variants:
+  # sunk bow first, the stern standing out of the sea
+  rising: {}
+  # sunk deeper and listing: the east tower gone, one big thruster under
+  listing:
+    tilt: [-6, 14]
+    sink: 0.75
+    drop: ["tower-e", "bridge-e", "cap-e"]

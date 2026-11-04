@@ -1,0 +1,65 @@
+# Drifting platform (art:bespin:drifting-platform), hit box 6x4, drawn 6x5.
+# Reference: Bespin's small sky platforms and the Cloud City undercity (The Empire Strikes Back,
+# Ralph McQuarrie's Cloud City paintings): a round deck with a rim, a cone-shaped underside ending
+# in the repulsor bulb, a small hut and a mast on top, railing posts round the edge. Cut loose from
+# its repulsors, it hangs tilted in the clouds, the railing half gone.
+# Axes: x east, y north, z up, origin on the cloud deck at the hit box's centre.
+name: bespin_drifting-platform
+art: art:bespin:drifting-platform
+palette: greybox
+kits: [kits/bespin-kamino.yaml]
+cells: [6, 5]
+foot: [48, 55]
+scale: 0.88
+footprint: 4
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  deck:  {ramp: mid,   bands: [0.15, 0.4, 0.75]}
+  wall:  {ramp: light, bands: [0.08, 0.3, 0.65]}
+  hull:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  cloud: {ramp: bone,  bands: [0.05, 0.3, 0.7]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 4}
+box: [96, 64]
+params: {sq: 0.68, R: 2.45, lift: 1.3}
+parts:
+  # the underside: a cone down to the repulsor bulb
+  - {name: belly, mat: hull, cylinder: {a: [0, 0, "=lift - 0.9"], b: [0, 0, "=lift"], r1: 0.6, r2: "=R * 0.95"}, squash: {scale: [1, "=sq", 1], center: [0, 0, 0]}}
+  - {name: bulb, mat: dark, ellipsoid: {c: [0, 0, "=lift - 0.95"], r: [0.45, "=0.45 * sq", 0.3]}}
+  # the deck and its rim
+  - {name: rim, mat: hull, cylinder: {a: [0, 0, "=lift - 0.02"], b: [0, 0, "=lift + 0.22"], r1: "=R"}, squash: {scale: [1, "=sq", 1], center: [0, 0, 0]}}
+  - {name: deck, mat: deck, cylinder: {a: [0, 0, "=lift + 0.2"], b: [0, 0, "=lift + 0.24"], r1: "=R - 0.12"}, squash: {scale: [1, "=sq", 1], center: [0, 0, 0]}}
+  - {name: seam, mat: dark, box: {c: [0, 0, "=lift + 0.245"], half: ["=R - 0.2", 0.03, 0.01], radius: 0.0}}
+  # a small domed hut, its door south, and a mast
+  - {name: hut, mat: wall, cylinder: {a: [-0.8, 0.35, "=lift + 0.2"], b: [-0.8, 0.35, "=lift + 1.0"], r1: 0.8}, squash: {scale: [1, 0.8, 1], center: [-0.8, 0.35, 0]}}
+  - {name: hut-roof, mat: hull, ellipsoid: {c: [-0.8, 0.35, "=lift + 1.0"], r: [0.8, 0.64, 0.35]}}
+  - {name: hut-door, mat: dark, box: {c: [-0.8, -0.32, "=lift + 0.55"], half: [0.2, 0.05, 0.33], radius: 0.02}}
+  - {name: hut-win, mat: dark, box: {c: [-0.8, -0.28, "=lift + 0.8"], half: [0.55, 0.05, 0.07], radius: 0.0}}
+  - {name: mast, mat: hull, cylinder: {a: [1.4, 0.55, "=lift + 0.2"], b: [1.4, 0.55, "=lift + 1.0"], r1: 0.08, r2: 0.05}}
+  - {name: mast-dish, mat: wall, cylinder: {a: [1.4, 0.55, "=lift + 0.92"], b: [1.4, 0.55, "=lift + 1.0"], r1: 0.32}}
+  # what is left of the railing: a few bays along the south edge
+  - {use: rail-bay, name: rail-1, at: [0.6, "=-R * sq + 0.15", "=lift + 0.22"], with: {w: 1.0, h: 0.42, post: dark}}
+  - {use: rail-bay, name: rail-2, at: [1.75, "=-R * sq + 0.5", "=lift + 0.22"], turn: 35, with: {w: 0.9, h: 0.42, post: dark}}
+  - {use: rail-bay, name: rail-3, at: [-1.9, "=-R * sq + 0.55", "=lift + 0.22"], turn: -35, with: {w: 0.9, h: 0.42, post: dark}}
+tilt: [8, 16]
+turn: -8
+pivot: [0, 0]
+ground:
+  # cloud tops it hangs in
+  - {name: cloud-1, mat: cloud, ellipsoid: {c: [-1.4, -0.75, 0.1], r: [1.2, 0.45, 0.35]}}
+  - {name: cloud-2, mat: cloud, ellipsoid: {c: [0.6, -1.0, 0.05], r: [1.1, 0.35, 0.3]}}
+  - {name: cloud-3, mat: cloud, ellipsoid: {c: [2.2, -0.7, 0.1], r: [0.65, 0.35, 0.3]}}
+variants:
+  # tilted, hanging in the clouds
+  drifting: {}
+  # tipped further, the hut gone over the side
+  listing:
+    tilt: [14, 26]
+    drop: ["hut*"]

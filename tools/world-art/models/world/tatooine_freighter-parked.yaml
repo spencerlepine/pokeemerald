@@ -1,0 +1,78 @@
+# Freighter parked (art:tatooine:freighter-parked), hit box 6x4, drawn 6x5.
+# Reference: a YT-1300 light freighter, the Millennium Falcon (freighter-parked__db_millennium-falcon,
+# __web_1-3): a round saucer hull, two forward mandibles with the slot between them, the tube cockpit on
+# the starboard side, a radar dish on the upper hull, the gun turret in the middle, the engine glow strip
+# round the stern. It is flat, so the camera sees it almost from above: nose east, the cockpit on the
+# south side where it shows. It stands on short landing legs over its own shadow.
+# Ship axes: x forward (nose), y to port (north), z up, origin on the ground under the saucer's centre.
+name: tatooine_freighter-parked
+art: art:tatooine:freighter-parked
+palette: greybox
+cells: [6, 5]
+foot: [36, 46]
+footprint: 4
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  hull:  {ramp: light, bands: [0.25, 0.55, 0.88]}
+  plate: {ramp: mid,   bands: [0.15, 0.5, 0.85]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  glass: {ramp: dark,  bands: [0.4, 0.7, 0.95]}
+  shade: {color: shade}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 4}
+box: [96, 64]
+params: {R: 1.75, zh: 0.3, t: 0.42}
+templates:
+  # one mandible: a flat tapering prong reaching forward from the saucer
+  prong:
+    params: {s: 1}
+    parts:
+      - {name: p, mat: hull, prism: {poly: [[0.9, "=s * 0.32"], [3.05, "=s * 0.36"], [3.05, "=s * 0.98"], [0.9, "=s * 1.45"]], z: ["=zh + 0.04", "=zh + t * 0.85"], top: 0.92, round: 0.03}}
+      - {name: tip, mat: plate, box: {c: [2.9, "=s * 0.67", "=zh + t * 0.8"], half: [0.16, 0.26, 0.04], radius: 0.02}}
+  leg:
+    parts:
+      - {name: l, mat: dark, box: {c: [0, 0, "=zh / 2"], half: [0.08, 0.08, "=zh / 2"]}}
+      - {name: pad, mat: dark, cylinder: {a: [0, 0, 0], b: [0, 0, 0.04], r1: 0.13}}
+parts:
+  # the saucer: a low twelve-sided disc with a raised centre
+  - {name: saucer, mat: hull, cylinder: {a: [0, 0, "=zh"], b: [0, 0, "=zh + t"], r1: "=R", r2: "=R - 0.12"}}
+  - {name: rim, mat: plate, cylinder: {a: [0, 0, "=zh"], b: [0, 0, "=zh + 0.12"], r1: "=R + 0.03"}}
+  - {name: crown, mat: plate, cylinder: {a: [0, 0, "=zh + t"], b: [0, 0, "=zh + t + 0.12"], r1: 1.05, r2: 0.95}}
+  # the upper hull plates (a darker trench ring) and the gun turret in the middle
+  - {ring: {name: trench, mat: plate, c: [0, 0, "=zh + t - 0.02"], axis: z, r: 1.35, size: [0.5, 0.18, 0.06], n: 14, round: 0.01}}
+  - {name: turret, mat: dark, cylinder: {a: [0, 0, "=zh + t + 0.1"], b: [0, 0, "=zh + t + 0.2"], r1: 0.32, r2: 0.26}}
+  - {name: guns, mat: dark, box: {c: [0.38, 0, "=zh + t + 0.17"], half: [0.25, 0.1, 0.03]}}
+  # the engine glow strip round the stern
+  - {ring: {name: engine, mat: glass, c: [0, 0, "=zh + 0.22"], axis: z, r: "=R - 0.04", size: [0.5, 0.12, 0.16], n: 18, arc: [130, 230], round: 0.01}}
+  # the two mandibles and the dark slot between them
+  - {use: prong, name: prong-n, with: {s: 1}}
+  - {use: prong, name: prong-s, with: {s: -1}}
+  # the cockpit tube on the starboard (south) side, its glass at the front
+  - {name: neck, mat: hull, box: {c: [0.85, -1.45, "=zh + 0.25"], half: [0.4, 0.35, 0.14], radius: 0.05}}
+  - {name: tube, mat: hull, cylinder: {a: [0.6, -1.85, "=zh + 0.28"], b: [2.2, -1.85, "=zh + 0.28"], r1: 0.27, r2: 0.25}}
+  - {name: canopy, mat: glass, ellipsoid: {c: [2.2, -1.85, "=zh + 0.3"], r: [0.2, 0.22, 0.2]}}
+  # the radar dish, on the upper hull to port of the turret
+  - {name: dish-post, mat: dark, box: {c: [0.75, 0.75, "=zh + t + 0.2"], half: [0.06, 0.06, 0.12]}}
+  - {name: dish, mat: hull, cylinder: {a: [0.75, 0.78, "=zh + t + 0.3"], b: [0.75, 0.72, "=zh + t + 0.4"], r1: 0.4, r2: 0.3}}
+  - {name: dish-hub, mat: dark, ellipsoid: {c: [0.75, 0.7, "=zh + t + 0.42"], r: [0.08, 0.08, 0.06]}}
+  # landing legs
+  - {use: leg, name: leg-1, at: [1.0, 0.7, 0]}
+  - {use: leg, name: leg-2, at: [1.0, -0.7, 0]}
+  - {use: leg, name: leg-3, at: [-1.0, 0, 0]}
+ground:
+  # the ship's shadow on the deck under it, and the ramp let down at the back
+  - {name: under, mat: shade, cylinder: {a: [0.3, -0.2, 0], b: [0.3, -0.2, 0.01], r1: 1.8}}
+  - {name: ramp, mat: plate, hull: {points: [[-1.4, -0.28, "=zh"], [-1.4, 0.28, "=zh"], [-2.2, -0.32, 0.0], [-2.2, 0.32, 0.0],
+                                              [-1.4, -0.28, "=zh + 0.05"], [-1.4, 0.28, "=zh + 0.05"], [-2.2, -0.32, 0.05], [-2.2, 0.32, 0.05]], round: 0.01}}
+variants:
+  parked: {}
+  # ready to leave: the boarding ramp up
+  ramp-up:
+    ground:
+      - {name: under, mat: shade, cylinder: {a: [0.3, -0.2, 0], b: [0.3, -0.2, 0.01], r1: 1.8}}

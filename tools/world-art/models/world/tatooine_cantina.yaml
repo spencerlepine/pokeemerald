@@ -1,0 +1,39 @@
+# Cantina (art:tatooine:cantina), hit box 7x5, drawn 7x7. Mos Eisley.
+# Reference: the Mos Eisley cantina (A New Hope; the Ajim bakery it was filmed at): a big low adobe dome,
+# a smaller one beside it, a square entrance block in front with its dark arched door, low yard walls
+# either side and a tall round vent tower behind.
+# Axes: x east, y north, z up, origin on the ground at the hit box's centre. Door: column 3 (x = 0).
+name: tatooine_cantina
+art: art:tatooine:cantina
+palette: greybox
+kits: [../scenery/kits/tatooine-buildings.yaml]
+cells: [7, 7]
+foot: [56, 71]
+footprint: 5
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  adobe: {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  trim:  {ramp: light, bands: [0.2, 0.5, 0.85]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 5}
+box: [108, 76]
+parts:
+  - {use: dome, name: dome, at: [-0.75, 0.55, 0], with: {r: 2.0, h: 1.2, drum: 0.45, mat: adobe}}
+  - {use: dome, name: dome-e, at: [2.2, 0.95, 0], with: {r: 1.05, h: 0.75, drum: 0.45, mat: adobe}}
+  - {use: vent-tower, name: vent, at: [-2.55, 1.65, 0], with: {r: 0.32, h: 2.05}}
+  # the entrance block and its arched door
+  - {use: block, name: front, at: [0, -1.55, 0], with: {w: 2.3, d: 1.5, h: 1.45, mat: trim, lip: trim}}
+  - {name: porch, mat: adobe, box: {c: [0, -2.33, 0.62], half: [0.72, 0.06, 0.62], radius: 0.03}}
+  - {use: doorway, name: door, at: [0, -2.37, 0], with: {w: 0.85, h: 1.1}}
+  # the low yard walls either side
+  - {use: block, name: wall-w, at: [-2.25, -1.75, 0], with: {w: 2.1, d: 0.35, h: 0.7, mat: adobe, lip: adobe, rnd: 0.06}}
+  - {use: block, name: wall-e, at: [2.25, -1.75, 0], with: {w: 2.1, d: 0.35, h: 0.7, mat: adobe, lip: adobe, rnd: 0.06}}
+  - {use: block, name: annex-e, at: [2.55, -0.55, 0], with: {w: 1.5, d: 1.3, h: 1.0, mat: trim}}
+  - {use: slot, name: win-e, at: [2.55, -1.2, 0], with: {z: 0.6}}

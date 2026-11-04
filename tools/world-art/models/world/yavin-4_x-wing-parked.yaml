@@ -1,0 +1,38 @@
+# Parked X-wing (art:yavin-4:x-wing-parked), hit box 4x3, drawn 4x4.
+# Reference: the T-65 X-wing on the Yavin 4 apron (A New Hope; wiki/art/concept/yavin-4/x-wing-parked__*).
+# The X-wing from the group kit, standing on its gear, nose east and turned a little off the grid; seen
+# from above its four foils spread north and south of the white fuselage, cannons forward.
+# Axes: x east, y north, z up, origin on the ground under the ship's middle.
+name: yavin-4_x-wing-parked
+art: art:yavin-4:x-wing-parked
+palette: greybox
+kits: [../scenery/kits/yavin-hoth-ilum.yaml]
+cells: [4, 4]
+foot: [31, 39]
+footprint: 3
+scale: 0.8
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  hull:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  plate: {ramp: light, bands: [0.2, 0.5, 0.85]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  glow:  {ramp: light, bands: [0.2, 0.5, 0.85]}
+  shade: {color: shade}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 3}
+box: [60, 44]
+params: {foil: 12}
+parts:
+  - {use: x-wing, name: xw, turn: -8, with: {foil: "=foil"}}
+variants:
+  # S-foils open (attack position), the iconic X
+  foils-open: {}
+  # S-foils closed for parking, the wings nearly flat
+  foils-closed:
+    params: {foil: 2}

@@ -1,0 +1,69 @@
+# Cruiser hull (art:kashyyyk:cruiser-hull), footprint 8x4, drawn 8x6. The wreck the player enters.
+# Reference: the Republic cruiser, the Radiant VII (The Phantom Menace): a long hull, the broad
+# hammerhead salon pod at the bow with the cockpit in its face, two big round engines side by side at
+# the stern, banded with the Republic's white stripes. Modelled level, bow east (+x), then beached in
+# the shallows: run aground at a slight list, sunk to its belly, turned off the grid.
+# Axes: x east (bow), y north, z up, origin on the ground at the hull's middle.
+name: kashyyyk_cruiser-hull
+art: art:kashyyyk:cruiser-hull
+palette: greybox
+cells: [8, 6]
+foot: [66, 70]
+scale: 0.88
+footprint: 4
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  hull:   {ramp: mid,   bands: [0.3, 0.62, 0.92]}
+  stripe: {ramp: light, bands: [0.15, 0.5, 0.82]}
+  dark:   {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  water:  {color: shade}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 4}
+box: [128, 64]
+parts:
+  # the main hull, its roof chamfered, narrowing to the neck under the salon pod
+  - name: hull
+    mat: hull
+    hull: {points: [[-2.4, -1.0, 0.15], [-2.4, 1.0, 0.15], [1.9, -0.7, 0.3], [1.9, 0.7, 0.3],
+                    [-2.4, -1.05, 1.4], [-2.4, 1.05, 1.4], [1.9, -0.7, 1.25], [1.9, 0.7, 1.25],
+                    [-2.2, -0.6, 1.9], [-2.2, 0.6, 1.9], [1.6, -0.4, 1.55], [1.6, 0.4, 1.55]], round: 0.05}
+  - {name: stripe-s, mat: stripe, box: {c: [-0.3, -1.0, 0.95], half: [1.9, 0.05, 0.16], radius: 0.02}, rot: [0, 0, 4]}
+  - {name: spine, mat: stripe, box: {c: [-0.4, 0, 1.86], half: [1.6, 0.42, 0.05], radius: 0.02}}
+  # the engines: two big cylinders side by side, a white band round each, dark nozzles at the back
+  - {name: engine-s, mat: hull, cylinder: {a: [-4.0, -0.62, 1.0], b: [-2.1, -0.62, 1.0], r1: 0.78, r2: 0.72}}
+  - {name: engine-n, mat: hull, cylinder: {a: [-4.0, 0.62, 1.0], b: [-2.1, 0.62, 1.0], r1: 0.78, r2: 0.72}}
+  - {name: band-s, mat: stripe, cylinder: {a: [-3.3, -0.62, 1.0], b: [-2.9, -0.62, 1.0], r1: 0.81}}
+  - {name: band-n, mat: stripe, cylinder: {a: [-3.3, 0.62, 1.0], b: [-2.9, 0.62, 1.0], r1: 0.81}}
+  - {name: nozzle-s, mat: dark, cylinder: {a: [-4.08, -0.62, 1.0], b: [-3.96, -0.62, 1.0], r1: 0.6}}
+  - {name: nozzle-n, mat: dark, cylinder: {a: [-4.08, 0.62, 1.0], b: [-3.96, 0.62, 1.0], r1: 0.6}}
+  # the salon pod: the broad hammerhead at the bow, its face wedged, the cockpit window in it
+  - name: pod
+    mat: hull
+    hull: {points: [[1.7, -1.3, 0.35], [1.7, 1.3, 0.35], [1.7, -1.3, 1.55], [1.7, 1.3, 1.55],
+                    [3.2, -1.15, 0.45], [3.2, 1.15, 0.45], [3.0, -1.1, 1.4], [3.0, 1.1, 1.4],
+                    [3.55, -0.6, 0.6], [3.55, 0.6, 0.6], [3.4, -0.55, 1.15], [3.4, 0.55, 1.15]], round: 0.05}
+  - {name: pod-stripe, mat: stripe, box: {c: [2.45, -1.26, 0.95], half: [0.72, 0.05, 0.16], radius: 0.02}}
+  - {name: pod-roof, mat: stripe, box: {c: [2.35, 0, 1.54], half: [0.6, 1.0, 0.04], radius: 0.02}}
+  - {name: windows, mat: dark, box: {c: [2.6, -1.22, 1.15], half: [0.55, 0.06, 0.1], radius: 0.02}}
+  - {name: cockpit, mat: dark, box: {c: [3.42, 0, 0.92], half: [0.12, 0.42, 0.16], radius: 0.03}, rot: [0, 25, 0]}
+  # the hatch on the south side where the player goes in
+  - {name: hatch, mat: dark, box: {c: [0.5, -0.95, 0.65], half: [0.32, 0.08, 0.4], radius: 0.02}}
+  - {name: fin, mat: hull, prism: {poly: [[-2.4, -0.06], [-1.2, -0.06], [-1.2, 0.06], [-2.4, 0.06]], z: [1.85, 2.4], top: [0.4, 1], lean: [-0.3, 0], round: 0.02}}
+ground:
+  - {name: wash, mat: water, cylinder: {a: [-0.2, 0.25, 0], b: [-0.2, 0.25, 0.01], r1: 1.0}, squash: [3.7, 1.25, 1]}
+variants:
+  # run aground with a slight list, sunk to its belly in the shallows
+  beached:
+    tilt: [-3, 5]
+    pivot: [0, 0]
+    turn: -6
+    sink: 0.3
+  # level and upright, as if it landed here
+  landed:
+    sink: 0.15

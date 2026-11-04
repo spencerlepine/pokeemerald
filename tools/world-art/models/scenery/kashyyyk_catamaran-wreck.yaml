@@ -1,0 +1,61 @@
+# Catamaran wreck (art:kashyyyk:catamaran-wreck), hit box 5x3, drawn 5x4.
+# Reference: the Wookiee Oevvaor jet catamaran (Revenge of the Sith, the Battle of Kashyyyk). The
+# catamaran from the Kashyyyk kit, smashed on the basalt rocks of the lagoon: it lies heeled over with
+# its south float and that side of the hull under water, the curled prow torn off and one engine
+# gone; dark rocks stand out of the water round it. Axes: x east, y north, z up, origin on the water
+# at the south middle of the hit box. The boat's own axes: bow +x.
+name: kashyyyk_catamaran-wreck
+art: art:kashyyyk:catamaran-wreck
+palette: greybox
+kits: [kits/kashyyyk-felucia-small.yaml]
+cells: [5, 4]
+foot: [40, 62]
+footprint: 3
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  hull:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  float: {ramp: light, bands: [0.2, 0.5, 0.85]}
+  deck:  {ramp: mid,   bands: [0.3, 0.6, 0.92]}
+  metal: {ramp: light, bands: [0.2, 0.5, 0.85]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  rock:  {ramp: dark,  bands: [0.1, 0.4, 0.72]}
+  water: {color: shade}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 3}
+box: [80, 48]
+parts:
+  - {use: catamaran, name: boat, at: [0, 1.25, 0], with: {L: 3.9, fy: 0.68}}
+ground:
+  # ripples where the hull broke the water
+  - {name: ripple, mat: water, cylinder: {a: [0, 1.2, 0], b: [0, 1.2, 0.01], r1: 1.0}, squash: [2.1, 0.75, 1]}
+  # the rocks it struck, at the bow and along the south side
+  - {use: basalt, name: rock-1, at: [1.95, 1.0, 0], with: {r: 0.3, h: 0.75}}
+  - {use: basalt, name: rock-2, at: [2.15, 1.55, 0], turn: 25, with: {r: 0.24, h: 0.5}}
+  - {use: basalt, name: rock-3, at: [-1.9, 0.35, 0], turn: 10, with: {r: 0.26, h: 0.45}}
+  - {use: basalt, name: rock-4, at: [0.6, 0.25, 0], turn: 40, with: {r: 0.2, h: 0.3}}
+  # the torn-off prow, lying on the rocks
+  - {name: lost-prow, mat: hull, hull: {points: [[1.55, 0.55, 0.0], [1.95, 0.4, 0.0], [1.6, 0.4, 0.3], [2.25, 0.5, 0.65], [2.15, 0.55, 0.7]], round: 0.03}}
+variants:
+  # heeled over to the south, half under: the south float and gunwale awash, the north float up
+  heeled:
+    tilt: [-8, -18]
+    pivot: [0, 1.25]
+    turn: -8
+    scale: 1.15
+    sink: 0.05
+    foot: [40, 62]
+    drop: ["boat/prow", "boat/jet-n", "boat/jet-n-in"]
+  # stove in at the bow and settled level in the shallows
+  settled:
+    tilt: [-6, 0]
+    pivot: [0, 1.25]
+    turn: 6
+    scale: 1.15
+    sink: 0.1
+    drop: ["boat/prow"]

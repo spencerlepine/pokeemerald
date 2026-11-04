@@ -1,0 +1,145 @@
+# Tatooine kit (rest): templates shared by the Tatooine nature and scenery models of the `tatooine-rest`
+# group (the krayt bones and skeleton, the sandcrawler wrecks, the standing stones).
+# Axes of each piece: x east, y north, z up, origin on the ground at the piece's centre.
+templates:
+  # One krayt rib: a curved bone rising from the spine, bowing out to one side (`s` = -1 south, +1 north)
+  # and swept back toward the tail (`back`, m along x). `h` is its height above the spine, `w` the bow,
+  # `r` its thickness at the root.
+  krayt-rib:
+    params: {h: 1.4, w: 0.5, back: -0.3, s: -1, r: 0.09, mat: bone}
+    parts:
+      - {name: r0, mat: "=mat", cone: {a: [0, 0, 0], b: ["=back * 0.25", "=s * w * 0.8", "=h * 0.35"], r1: "=r", r2: "=r * 0.9"}}
+      - {name: r1, mat: "=mat", cone: {a: ["=back * 0.25", "=s * w * 0.8", "=h * 0.35"], b: ["=back * 0.6", "=s * w", "=h * 0.72"], r1: "=r * 0.9", r2: "=r * 0.75"}}
+      - {name: r2, mat: "=mat", cone: {a: ["=back * 0.6", "=s * w", "=h * 0.72"], b: ["=back", "=s * w * 0.7", "=h"], r1: "=r * 0.75", r2: "=r * 0.45"}}
+  # One vertebra: a squat block with a spine plate on top (`l` long along x, `t` tall).
+  vertebra:
+    params: {l: 0.34, t: 0.3, r: 0.17, mat: bone}
+    parts:
+      - {name: body, mat: "=mat", hull: {round: 0.04, points: [["=-l / 2", "=-r", 0], ["=l / 2", "=-r", 0], ["=l / 2", "=r", 0], ["=-l / 2", "=r", 0],
+                                                               ["=-l * 0.4", "=-r * 0.7", "=t"], ["=l * 0.4", "=-r * 0.7", "=t"], ["=l * 0.4", "=r * 0.7", "=t"], ["=-l * 0.4", "=r * 0.7", "=t"]]}}
+      - {name: plate, mat: "=mat", prism: {poly: [["=-l * 0.3", -0.04], ["=l * 0.3", -0.04], ["=l * 0.3", 0.04], ["=-l * 0.3", 0.04]], z: ["=t * 0.9", "=t * 1.7"], top: [0.5, 1.0], lean: ["=-l * 0.2", 0], round: 0.02}}
+  # A krayt dragon skull in profile, snout to +x: a long wedge cranium with a heavy brow, a dark eye socket
+  # and nostril, the lower jaw and a row of teeth. `s` scales it. Its profile faces south (it reads in
+  # this camera), its origin on the ground under the back of the skull.
+  krayt-skull:
+    params: {s: 1.0, mat: bone, hole: hole}
+    parts:
+      # cranium: high at the back, a long wedge down to the snout
+      - name: cranium
+        mat: "=mat"
+        extrude: {axis: y, span: ["=-0.36 * s", "=0.36 * s"], end: 0.9, round: 0.04,
+                  profile: [["=0.05 * s", "=0.35 * s"], ["=0.18 * s", "=1.02 * s"], ["=0.5 * s", "=1.12 * s"], ["=1.0 * s", "=0.85 * s"], ["=1.95 * s", "=0.55 * s"], ["=2.1 * s", "=0.42 * s"], ["=2.0 * s", "=0.36 * s"], ["=0.5 * s", "=0.36 * s"]]}
+      # two horns sweeping back from the top of the skull
+      - {name: horn-s, mat: "=mat", cone: {a: ["=0.3 * s", "=-0.22 * s", "=1.0 * s"], b: ["=-0.4 * s", "=-0.3 * s", "=1.32 * s"], r1: "=0.11 * s", r2: "=0.03 * s"}}
+      - {name: horn-n, mat: "=mat", cone: {a: ["=0.3 * s", "=0.22 * s", "=1.0 * s"], b: ["=-0.38 * s", "=0.3 * s", "=1.36 * s"], r1: "=0.11 * s", r2: "=0.03 * s"}}
+      - {name: brow, mat: "=mat", hull: {round: 0.04, points: [["=0.3 * s", "=-0.4 * s", "=1.02 * s"], ["=0.95 * s", "=-0.4 * s", "=0.9 * s"], ["=0.3 * s", "=-0.15 * s", "=1.18 * s"], ["=0.9 * s", "=-0.15 * s", "=1.0 * s"]]}}
+      # big dark eye socket and the hole behind it, the nostril at the snout
+      - {name: eye, mat: "=hole", ellipsoid: {c: ["=0.68 * s", "=-0.36 * s", "=0.74 * s"], r: ["=0.24 * s", "=0.07 * s", "=0.17 * s"]}}
+      - {name: temple, mat: "=hole", ellipsoid: {c: ["=0.2 * s", "=-0.36 * s", "=0.66 * s"], r: ["=0.13 * s", "=0.06 * s", "=0.18 * s"]}}
+      - {name: nostril, mat: "=hole", ellipsoid: {c: ["=1.8 * s", "=-0.3 * s", "=0.52 * s"], r: ["=0.1 * s", "=0.05 * s", "=0.05 * s"]}}
+      # the lower jaw, dropped open a little: a dark gap with teeth across it
+      - name: jaw
+        mat: "=mat"
+        extrude: {axis: y, span: ["=-0.33 * s", "=0.33 * s"], end: 1.0, round: 0.04,
+                  profile: [["=0.05 * s", "=0.0"], ["=1.85 * s", "=0.0"], ["=1.95 * s", "=0.16 * s"], ["=0.25 * s", "=0.2 * s"]]}
+      - {name: mouth, mat: "=hole", box: {c: ["=1.1 * s", "=-0.24 * s", "=0.28 * s"], half: ["=0.85 * s", "=0.08 * s", "=0.08 * s"]}}
+      - {name: tooth-1, mat: "=mat", cone: {a: ["=0.6 * s", "=-0.33 * s", "=0.38 * s"], b: ["=0.62 * s", "=-0.33 * s", "=0.19 * s"], r1: "=0.055 * s", r2: 0.01}}
+      - {name: tooth-2, mat: "=mat", cone: {a: ["=0.9 * s", "=-0.33 * s", "=0.38 * s"], b: ["=0.92 * s", "=-0.33 * s", "=0.19 * s"], r1: "=0.055 * s", r2: 0.01}}
+      - {name: tooth-3, mat: "=mat", cone: {a: ["=1.2 * s", "=-0.32 * s", "=0.38 * s"], b: ["=1.22 * s", "=-0.32 * s", "=0.19 * s"], r1: "=0.055 * s", r2: 0.01}}
+      - {name: tooth-4, mat: "=mat", cone: {a: ["=1.5 * s", "=-0.3 * s", "=0.38 * s"], b: ["=1.52 * s", "=-0.3 * s", "=0.2 * s"], r1: "=0.05 * s", r2: 0.01}}
+      - {name: tooth-5, mat: "=mat", cone: {a: ["=1.75 * s", "=-0.29 * s", "=0.38 * s"], b: ["=1.77 * s", "=-0.29 * s", "=0.22 * s"], r1: "=0.045 * s", r2: 0.01}}
+      - {name: tooth-6, mat: "=mat", cone: {a: ["=0.75 * s", "=-0.33 * s", "=0.18 * s"], b: ["=0.77 * s", "=-0.33 * s", "=0.32 * s"], r1: "=0.05 * s", r2: 0.01}}
+      - {name: tooth-7, mat: "=mat", cone: {a: ["=1.35 * s", "=-0.32 * s", "=0.18 * s"], b: ["=1.37 * s", "=-0.32 * s", "=0.32 * s"], r1: "=0.05 * s", r2: 0.01}}
+  # A sandcrawler hull (A New Hope): a tall box whose front leans forward over a sloped nose, with the
+  # cab block and windows on top. Treads are separate (`crawler-tread`). Length along x (front to +x).
+  # `L` long, `W` wide, `H` tall above the deck at `z0`.
+  crawler-hull:
+    params: {L: 9.0, W: 3.4, H: 4.0, z0: 0.9, hull: hull, dark: dark, deck: deck}
+    parts:
+      - name: body
+        mat: "=hull"
+        extrude: {axis: y, span: ["=-W / 2", "=W / 2"], round: 0.05,
+                  profile: [["=-L / 2", "=z0"], ["=L / 2 - 1.4", "=z0"], ["=L / 2 - 0.35", "=z0 + H * 0.42"], ["=L / 2 + 0.75", "=z0 + H"], ["=-L / 2 + 0.25", "=z0 + H"], ["=-L / 2", "=z0 + H * 0.85"]]}
+      - {name: cab, mat: "=hull", prism: {poly: [["=L / 2 - 2.2", "=-W * 0.32"], ["=L / 2 + 0.6", "=-W * 0.32"], ["=L / 2 + 0.6", "=W * 0.32"], ["=L / 2 - 2.2", "=W * 0.32"]], z: ["=z0 + H - 0.05", "=z0 + H + 0.7"], top: [0.85, 0.9], lean: [0.1, 0], round: 0.04}}
+      - {name: windows, mat: "=dark", box: {c: ["=L / 2 - 0.9", "=-W * 0.33", "=z0 + H + 0.38"], half: [0.9, 0.04, 0.1]}}
+      - {name: deck-rail, mat: "=deck", box: {c: [-0.6, 0, "=z0 + H + 0.06"], half: ["=L / 2 - 0.9", "=W / 2 - 0.05", 0.06], radius: 0.02}}
+      - {name: band, mat: "=dark", box: {c: [-0.4, "=-W / 2", "=z0 + 0.35"], half: ["=L / 2 - 0.5", 0.05, 0.12]}}
+  # One sandcrawler tread unit: a long low block on rollers (`l` long, `w` wide).
+  crawler-tread:
+    params: {l: 3.0, w: 1.0, h: 0.95, mat: dark, wheel: hull}
+    parts:
+      - {name: block, mat: "=mat", hull: {round: 0.05, points: [["=-l / 2", "=-w / 2", 0.1], ["=l / 2", "=-w / 2", 0.1], ["=l / 2", "=w / 2", 0.1], ["=-l / 2", "=w / 2", 0.1],
+                                                                ["=-l / 2 - 0.2", "=-w / 2", "=h * 0.6"], ["=l / 2 + 0.2", "=-w / 2", "=h * 0.6"], ["=l / 2 + 0.2", "=w / 2", "=h * 0.6"], ["=-l / 2 - 0.2", "=w / 2", "=h * 0.6"],
+                                                                ["=-l / 2", "=-w / 2", "=h"], ["=l / 2", "=-w / 2", "=h"], ["=l / 2", "=w / 2", "=h"], ["=-l / 2", "=w / 2", "=h"]]}}
+      - {name: hub-1, mat: "=wheel", cylinder: {a: ["=-l * 0.3", "=-w / 2 - 0.04", "=h * 0.5"], b: ["=-l * 0.3", "=-w / 2 + 0.05", "=h * 0.5"], r1: "=h * 0.3"}}
+      - {name: hub-2, mat: "=wheel", cylinder: {a: ["=l * 0.3", "=-w / 2 - 0.04", "=h * 0.5"], b: ["=l * 0.3", "=-w / 2 + 0.05", "=h * 0.5"], r1: "=h * 0.3"}}
+  # One weathered standing stone: a tall slab leaning a little, its top worn round (`h` tall).
+  standing-stone:
+    params: {h: 1.6, w: 0.5, d: 0.3, lean: 0.06, mat: stone}
+    parts:
+      - {name: slab, mat: "=mat", prism: {poly: [["=-w / 2", "=-d / 2"], ["=w / 2", "=-d / 2"], ["=w / 2 + 0.04", "=d / 2"], ["=-w / 2 - 0.03", "=d / 2"]], z: [0, "=h"], top: [0.75, 0.8], lean: ["=lean", 0], round: 0.05}}
+      - {name: top, mat: "=mat", hull: {round: 0.06, points: [["=-w * 0.38 + lean", "=-d * 0.4", "=h - 0.02"], ["=w * 0.38 + lean", "=-d * 0.4", "=h - 0.02"], ["=w * 0.38 + lean", "=d * 0.4", "=h - 0.02"], ["=-w * 0.38 + lean", "=d * 0.4", "=h - 0.02"], ["=lean", 0, "=h + 0.12"]]}}
+
+  # ---------------------------------------------------------------- interior rooms (greybox room)
+  # A room shell in the game camera, origin at the middle of its south edge: the floor in plan from
+  # y = 0 to the north wall at y = D - 2, the north wall's face 2 cells tall (it fills the top 2 rows),
+  # the side walls edge-on as dark strips, a low south lip with the doorway gap at `dx` (`dw` wide)
+  # and a dark mat inside it. `W` x `D` is the room's footprint.
+  room-shell:
+    params: {W: 11, D: 8, wh: 1.8, t: 0.25, dx: 0, dw: 1.0, floor: floor, wall: wall, cap: cap, base: base}
+    parts:
+      - {name: floor, mat: "=floor", box: {c: [0, "=(D - 2) / 2", 0.02], half: ["=W / 2", "=(D - 2) / 2", 0.02]}}
+      - {name: north-wall, mat: "=wall", box: {c: [0, "=D - 1.9", "=wh / 2"], half: ["=W / 2", 0.1, "=wh / 2"]}}
+      - {name: wall-cap, mat: "=cap", box: {c: [0, "=D - 1.9", "=wh + 0.02"], half: ["=W / 2", 0.1, 0.03]}}
+      - {name: skirting, mat: "=base", box: {c: [0, "=D - 2.04", 0.12], half: ["=W / 2", 0.04, 0.12]}}
+      - {name: side-w, mat: "=cap", box: {c: ["=-W / 2 + t / 2", "=(D - 2) / 2", "=wh / 2"], half: ["=t / 2", "=(D - 2) / 2", "=wh / 2"]}}
+      - {name: side-e, mat: "=cap", box: {c: ["=W / 2 - t / 2", "=(D - 2) / 2", "=wh / 2"], half: ["=t / 2", "=(D - 2) / 2", "=wh / 2"]}}
+      - {name: lip-w, mat: "=cap", box: {c: ["=(-W / 2 + dx - dw / 2) / 2", 0.12, 0.15], half: ["=(W / 2 + dx - dw / 2) / 2", 0.12, 0.15]}}
+      - {name: lip-e, mat: "=cap", box: {c: ["=(W / 2 + dx + dw / 2) / 2", 0.12, 0.15], half: ["=(W / 2 - dx - dw / 2) / 2", 0.12, 0.15]}}
+      - {name: mat, mat: "=base", box: {c: ["=dx", 0.4, 0.045], half: ["=dw / 2", 0.3, 0.01]}}
+  # A round-topped niche in the north wall's face (dark), `w` wide, `h` tall, sill at `z0`.
+  niche:
+    params: {w: 0.9, h: 1.0, z0: 0.3, mat: base}
+    parts:
+      - {name: box, mat: "=mat", box: {c: [0, -0.02, "=z0 + (h - w / 2) / 2"], half: ["=w / 2", 0.06, "=(h - w / 2) / 2"]}}
+      - {name: arch, mat: "=mat", cylinder: {a: [0, -0.08, "=z0 + h - w / 2"], b: [0, 0.04, "=z0 + h - w / 2"], r1: "=w / 2"}}
+  # A low round table with stools round it (`r` table radius).
+  round-table:
+    params: {r: 0.45, h: 0.5, top: wood, leg: base, stool: wood}
+    parts:
+      - {name: top, mat: "=top", cylinder: {a: [0, 0, "=h - 0.08"], b: [0, 0, "=h"], r1: "=r"}}
+      - {name: leg, mat: "=leg", cylinder: {a: [0, 0, 0], b: [0, 0, "=h - 0.08"], r1: 0.1, r2: 0.08}}
+      - {name: stool-w, mat: "=stool", cylinder: {a: ["=-r - 0.32", 0, 0], b: ["=-r - 0.32", 0, 0.3], r1: 0.17, r2: 0.15}}
+      - {name: stool-e, mat: "=stool", cylinder: {a: ["=r + 0.32", 0, 0], b: ["=r + 0.32", 0, 0.3], r1: 0.17, r2: 0.15}}
+      - {name: stool-s, mat: "=stool", cylinder: {a: [0, "=-r - 0.3", 0], b: [0, "=-r - 0.3", 0.3], r1: 0.17, r2: 0.15}}
+  # A workbench: a long top on two dark end blocks, a few tool blocks on top (`l` long, `d` deep).
+  workbench:
+    params: {l: 2.0, d: 0.7, h: 0.75, top: wood, body: base, tool: metal}
+    parts:
+      - {name: top, mat: "=top", box: {c: [0, 0, "=h - 0.05"], half: ["=l / 2", "=d / 2", 0.05], radius: 0.02}}
+      - {name: end-w, mat: "=body", box: {c: ["=-l / 2 + 0.2", 0, "=(h - 0.1) / 2"], half: [0.18, "=d / 2 - 0.05", "=(h - 0.1) / 2"]}}
+      - {name: end-e, mat: "=body", box: {c: ["=l / 2 - 0.2", 0, "=(h - 0.1) / 2"], half: [0.18, "=d / 2 - 0.05", "=(h - 0.1) / 2"]}}
+      - {name: tool-1, mat: "=tool", box: {c: ["=-l * 0.25", 0.05, "=h + 0.08"], half: [0.18, 0.14, 0.08], radius: 0.02}}
+      - {name: tool-2, mat: "=tool", cylinder: {a: ["=l * 0.2", -0.05, "=h"], b: ["=l * 0.2", -0.05, "=h + 0.22"], r1: 0.09}}
+  # A small astromech droid (R2 unit): round body, dome, two legs (`s` scales it).
+  astromech:
+    params: {s: 1.0, body: metal, dome: wall, dark: base}
+    parts:
+      - {name: body, mat: "=body", cylinder: {a: [0, 0, "=0.12 * s"], b: [0, 0, "=0.62 * s"], r1: "=0.2 * s"}}
+      - {name: dome, mat: "=dome", ellipsoid: {c: [0, 0, "=0.62 * s"], r: ["=0.2 * s", "=0.2 * s", "=0.17 * s"]}}
+      - {name: eye, mat: "=dark", ellipsoid: {c: [0, "=-0.17 * s", "=0.68 * s"], r: ["=0.05 * s", "=0.04 * s", "=0.05 * s"]}}
+      - {name: panel, mat: "=dark", box: {c: [0, "=-0.19 * s", "=0.38 * s"], half: ["=0.08 * s", "=0.02 * s", "=0.1 * s"]}}
+      - {name: leg-w, mat: "=dome", box: {c: ["=-0.24 * s", 0, "=0.3 * s"], half: ["=0.05 * s", "=0.08 * s", "=0.3 * s"]}}
+      - {name: leg-e, mat: "=dome", box: {c: ["=0.24 * s", 0, "=0.3 * s"], half: ["=0.05 * s", "=0.08 * s", "=0.3 * s"]}}
+  # A curved booth: a half-ring bench open to the south round a small table (`r` bench radius). Its
+  # bench is in group `cut` (the model must declare it): the inside and the south half are cut away.
+  booth:
+    params: {r: 0.8, bench: wood, table: wood, leg: base}
+    parts:
+      - {name: bench, mat: "=bench", group: cut, cylinder: {a: [0, 0, 0], b: [0, 0, 0.45], r1: "=r"}}
+      - {name: back, mat: "=bench", group: cut, cylinder: {a: [0, 0, 0.4], b: [0, 0, 0.8], r1: "=r", r2: "=r - 0.05"}}
+      - {name: seat-cut, mat: "=bench", group: cut, op: subtract, cylinder: {a: [0, 0, 0.45], b: [0, 0, 1.0], r1: "=r - 0.18"}}
+      - {name: in-cut, mat: "=bench", group: cut, op: subtract, cylinder: {a: [0, 0, -0.1], b: [0, 0, 1.0], r1: "=r - 0.4"}}
+      - {name: open-cut, mat: "=bench", group: cut, op: subtract, box: {c: [0, "=-r / 2 - 0.15", 0.5], half: ["=r + 0.1", "=r / 2", 0.6]}}
+      - {name: table, mat: "=table", cylinder: {a: [0, -0.05, 0.42], b: [0, -0.05, 0.5], r1: 0.32}}
+      - {name: table-leg, mat: "=leg", cylinder: {a: [0, -0.05, 0], b: [0, -0.05, 0.42], r1: 0.07}}

@@ -1,0 +1,48 @@
+# Water condenser pipe (art:tatooine:water-condenser-pipe), walk-over decal 1x1, drawn 1x1.
+# Reference: the pipes between the Lars farm vaporators (water-condenser-pipe__web_1-3): thin metal pipe
+# lying half sunk in the sand, a collar at each joint. A low-contrast decal the player walks over, so it
+# stays flat and pale. Straight runs tile edge to edge; `vertical` runs north-south, `elbow` turns.
+# Axes: x east, y north, z up, origin on the ground at the cell's centre.
+name: tatooine_water-condenser-pipe
+art: art:tatooine:water-condenser-pipe
+palette: greybox
+cells: [1, 1]
+foot: [8, 8]
+footprint: 1
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  pipe:  {ramp: bone, bands: [-0.2, 0.3, 0.85]}
+  joint: {ramp: mid,  bands: [-0.1, 0.4, 0.8]}
+  sand:  {ramp: bone, bands: [0.35, 0.65, 0.93]}
+box: null
+params: {r: 0.08}
+templates:
+  pipe-x:
+    params: {x0: -0.5, x1: 0.5}
+    parts:
+      - {name: pipe, mat: pipe, cylinder: {a: ["=x0", 0, 0], b: ["=x1", 0, 0], r1: "=r"}}
+  pipe-y:
+    params: {y0: -0.5, y1: 0.5}
+    parts:
+      - {name: pipe, mat: pipe, cylinder: {a: [0, "=y0", 0], b: [0, "=y1", 0], r1: "=r"}}
+parts:
+  - {use: pipe-x, name: run}
+  - {name: collar, mat: joint, cylinder: {a: [0.12, 0, 0], b: [0.22, 0, 0], r1: "=r + 0.03"}}
+variants:
+  straight: {}
+  vertical:
+    parts:
+      - {use: pipe-y, name: run}
+      - {name: collar, mat: joint, cylinder: {a: [0, 0.1, 0], b: [0, 0.2, 0], r1: "=r + 0.03"}}
+  # from the west, turning north, a round joint box at the bend
+  elbow:
+    parts:
+      - {use: pipe-x, name: run, with: {x0: -0.5, x1: 0}}
+      - {use: pipe-y, name: up, with: {y0: 0, y1: 0.5}}
+      - {name: joint, mat: joint, cylinder: {a: [0, 0, 0], b: [0, 0, 0.1], r1: 0.13}}

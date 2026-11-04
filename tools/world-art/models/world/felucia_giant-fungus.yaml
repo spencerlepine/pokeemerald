@@ -1,0 +1,38 @@
+# Giant fungus (art:felucia:giant-fungus), footprint 2x3, drawn 2x5. Felucia's tree.
+# Reference: Felucia's giant fungi (Revenge of the Sith; The Clone Wars): a fat bulbous stalk, swollen
+# at the foot and pinched under the cap, a broad glowing cap with a scalloped rim. One big fungus at the
+# back of the hit box and two young ones in front fill its three rows. The cap is light (it glows in
+# final art), the stalk mid, the cap's underside dark. Axes: x east, y north, z up, origin on the ground
+# at the south middle of the hit box.
+name: felucia_giant-fungus
+art: art:felucia:giant-fungus
+palette: greybox
+kits: [../scenery/kits/kashyyyk-felucia-small.yaml]
+cells: [2, 5]
+foot: [16, 78]
+footprint: 3
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  stalk: {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  cap:   {ramp: light, bands: [0.2, 0.5, 0.8]}
+  lobe:  {ramp: mid,   bands: [0.15, 0.45, 0.72]}
+  gill:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  spot:  {ramp: mid,   bands: [0.1, 0.4, 0.7]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 3}
+box: [32, 48]
+parts:
+  - {use: fungus, name: big, at: [0.0, 1.7, 0], with: {h: 2.55, r: 1.05}}
+  - {use: fungus, name: young-w, at: [-0.48, 0.5, 0], with: {h: 1.1, r: 0.5, bulb: 0.26, neck: 0.08, lobes: 7}}
+  - {use: fungus, name: young-e, at: [0.55, 0.75, 0], with: {h: 0.75, r: 0.36, bulb: 0.2, neck: 0.07, lobes: 6}}
+variants:
+  cluster: {}
+  # one fungus alone, for edges where the cluster is too busy
+  single:
+    drop: ["young-*"]

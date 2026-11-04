@@ -1,0 +1,39 @@
+# Hull debris (art:shared:hull-debris), hit box 2x1, drawn 2x1.
+# Scattered hull plates and a snapped strut: filler that ties a big wreck into the ground.
+# Two bent plates lying flat and overlapping, a snapped I-beam strut across them, a small torn chunk.
+# Everything is low: drawn rows = plan depth + height, so it stays under ~0.25 m.
+# Axes: x east, y north from the hit box's south edge, z up; 1 m = 1 cell = 16 px.
+name: shared_hull-debris
+art: art:shared:hull-debris
+palette: greybox
+kits: [kits/shared-scenery.yaml]
+cells: [2, 1]
+foot: [16, 16]
+footprint: 1
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  hull:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  plate: {ramp: mid,   bands: [0.1, 0.45, 0.8]}
+  edge:  {ramp: light, bands: [0.15, 0.5, 0.82]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 1}
+box: [28, 12]
+parts:
+  # the big plate, tipped up at its east edge
+  - {use: hull-plate, name: plate-w, at: [-0.42, 0.5, 0.0], rot: [0, 12, 0], with: {w: 0.9, d: 0.55, t: 0.08, mat: hull}}
+  # a lighter plate, overlapping it from the east
+  - {use: hull-plate, name: plate-e, at: [0.5, 0.5, 0.0], rot: [0, -18, 0], with: {w: 0.7, d: 0.48, t: 0.12, mat: plate}}
+  # a small curled plate standing on its edge between them: its south face shows
+  - {name: curl, mat: edge, prism: {poly: [[-0.05, 0.3], [0.25, 0.26], [0.28, 0.34], [-0.03, 0.38]], z: [0, 0.3], top: [0.8, 1], lean: [0.05, 0], round: 0.02}}
+  # the snapped strut lying across both
+  - {name: strut, mat: dark, box: {c: [0.05, 0.62, 0.12], half: [0.62, 0.05, 0.05], radius: 0.01}, rot: [0, -9, 0]}
+  - {name: strut-end, mat: dark, hull: {points: [[0.62, 0.48, 0.07], [0.78, 0.5, 0.07], [0.7, 0.62, 0.07], [0.66, 0.55, 0.2]], round: 0.01}}
+  # a torn chunk at the west
+  - {name: chunk, mat: edge, hull: {points: [[-0.95, 0.12, 0], [-0.72, 0.08, 0], [-0.7, 0.3, 0], [-0.93, 0.33, 0], [-0.84, 0.2, 0.15]], round: 0.02}}

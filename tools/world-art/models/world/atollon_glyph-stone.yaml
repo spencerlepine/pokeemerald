@@ -1,0 +1,41 @@
+# Glyph stone (art:atollon:glyph-stone), footprint 1x1, drawn 1x2. Flanks the approach to the dais.
+# Reference: the Bendu's Atollon (Star Wars Rebels): bare rock spires on the dry plain. A rough
+# faceted rock pillar, its south face cut flat and carved with glyphs (dark grooves): a ring and bars.
+# Axes: x east, y north, z up, origin on the ground at the pillar's middle.
+name: atollon_glyph-stone
+art: art:atollon:glyph-stone
+palette: greybox
+cells: [1, 2]
+foot: [8, 28]
+scale: 0.95
+footprint: 1
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  rock:  {ramp: mid,  bands: [0.25, 0.55, 0.85]}
+  face:  {ramp: mid, bands: [0.12, 0.42, 0.75]}
+  glyph: {ramp: dark, bands: [0.2, 0.5, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 1}
+box: [16, 16]
+parts:
+  - name: pillar
+    mat: rock
+    hull: {points: [[-0.46, -0.1, 0], [0.45, -0.12, 0], [0.4, 0.3, 0], [-0.38, 0.32, 0],
+                    [-0.38, -0.08, 0.7], [0.4, -0.1, 0.8], [0.36, 0.26, 0.75], [-0.34, 0.25, 0.7],
+                    [-0.26, -0.02, 1.4], [0.18, -0.02, 1.48], [0.08, 0.18, 1.5], [-0.2, 0.18, 1.35]], round: 0.03}
+  - name: panel
+    mat: face
+    hull: {points: [[-0.3, -0.16, 0.18], [0.3, -0.16, 0.18], [-0.27, -0.12, 1.12], [0.24, -0.12, 1.15],
+                    [-0.3, 0.0, 0.18], [0.3, 0.0, 0.18], [-0.27, 0.0, 1.12], [0.24, 0.0, 1.15]], round: 0.02}
+  # the glyphs: a ring over three strokes of different lengths
+  - {name: ring, mat: glyph, cylinder: {a: [0, -0.18, 0.9], b: [0, -0.1, 0.9], r1: 0.13}}
+  - {name: ring-eye, mat: face, cylinder: {a: [0, -0.2, 0.9], b: [0, -0.1, 0.9], r1: 0.05}}
+  - {name: bar-1, mat: glyph, box: {c: [0, -0.15, 0.62], half: [0.2, 0.03, 0.035]}}
+  - {name: bar-2, mat: glyph, box: {c: [-0.06, -0.15, 0.46], half: [0.12, 0.03, 0.035]}}
+  - {name: bar-3, mat: glyph, box: {c: [0.05, -0.15, 0.3], half: [0.17, 0.03, 0.035]}}

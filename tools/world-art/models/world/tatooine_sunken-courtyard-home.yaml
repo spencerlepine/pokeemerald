@@ -1,0 +1,61 @@
+# Sunken courtyard home (art:tatooine:sunken-courtyard-home), hit box 6x6, drawn 6x7.
+# Reference: the Lars homestead (A New Hope): a round courtyard dug into the desert, its floor below, the
+# rooms opening off it through arched doors, and the small domed entrance block standing on the rim.
+# The pit can't go below the ground here, so its rim is a low berm with a sloped outside, its inner
+# north wall (the side the camera sees) showing two arched doors over a shadowed floor.
+# Axes: x east, y north, z up, origin on the ground at the hit box's centre. Door: column 2 (x = -0.5).
+name: tatooine_sunken-courtyard-home
+art: art:tatooine:sunken-courtyard-home
+palette: greybox
+kits: [../scenery/kits/tatooine.yaml, ../scenery/kits/tatooine-buildings.yaml]
+cells: [6, 7]
+foot: [48, 63]
+footprint: 6
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  adobe: {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  trim:  {ramp: light, bands: [0.2, 0.5, 0.85]}
+  sand:  {ramp: bone,  bands: [0.3, 0.6, 0.9]}
+  floor: {ramp: bone,  bands: [0.75, 0.97, 0.99]}
+  light: {ramp: light, bands: [0.15, 0.5, 0.82]}
+  mid:   {ramp: mid,   bands: [0.2, 0.5, 0.85]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+groups:
+  body: {}
+  pit: {}
+  wall: {}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 6}
+box: [92, 92]
+params:
+  px: 0.25         # the pit's centre
+  py: 0.55
+  ro: 2.55         # outer foot of the berm
+  ri: 1.85         # inner wall
+  rh: 0.8          # rim height
+parts:
+  # the courtyard: berm, hollow, floor, the rooms' doors in the inner north wall
+  - {name: berm, mat: sand, group: pit, cylinder: {a: ["=px", "=py", 0], b: ["=px", "=py", "=rh"], r1: "=ro", r2: "=ri + 0.3"}}
+  - {name: hollow, mat: sand, group: pit, op: subtract, cylinder: {a: ["=px", "=py", 0.04], b: ["=px", "=py", 1.5], r1: "=ri"}}
+  - {name: floor, mat: floor, cylinder: {a: ["=px", "=py", 0], b: ["=px", "=py", 0.05], r1: "=ri + 0.05"}}
+  - {name: wall-in, mat: adobe, group: wall, cylinder: {a: ["=px", "=py", 0], b: ["=px", "=py", "=rh - 0.02"], r1: "=ri + 0.06"}}
+  - {name: wall-cut, mat: adobe, group: wall, op: subtract, cylinder: {a: ["=px", "=py", 0.04], b: ["=px", "=py", 1.5], r1: "=ri"}}
+  - {name: wall-front, mat: adobe, group: wall, op: subtract, box: {c: ["=px", "=py - 1.5", 0.5], half: [3, 1.6, 1]}}
+  - {use: doorway, name: door-n, at: ["=px - 0.15", "=py + ri - 0.02", 0.04], with: {w: 0.36, h: 0.52}}
+  - {use: doorway, name: door-ne, at: ["=px + 1.15", "=py + 1.4", 0.04], turn: -35, with: {w: 0.32, h: 0.48}}
+  # the domed entrance block on the south-west rim, its vaulted door to the south
+  - {use: dome, name: dome, at: [-1.25, -1.45, 0], with: {r: 0.95, h: 0.75, drum: 0.3, mat: adobe}}
+  - {use: entry, name: entry, at: [-0.5, -2.2, 0], with: {w: 0.95, d: 1.0, h: 1.05, mat: trim}}
+  - {use: vaporator, name: vap, at: [2.3, -2.0, 0], with: {h: 1.6}}
+variants:
+  # the courtyard with its entrance block
+  courtyard: {}
+  # no vaporator
+  plain:
+    drop: ["vap/*"]

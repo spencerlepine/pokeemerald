@@ -1,0 +1,50 @@
+# Sandstone boulder (art:tatooine:sandstone-boulder), hit box 2x2, drawn 2x2.
+# Reference: the Jundland Wastes boulders (A New Hope). A rounded, lopsided sandstone rock undercut by the
+# wind at its foot, one wind groove across its face, and a smaller stone leaning on its east side.
+# Replaces the tree as the main route blocker, so it fills its 2x2 cells edge to edge like the Hoenn tree.
+# Axes: x east, y north, z up; origin on the ground at the south edge of the hit box.
+name: tatooine_sandstone-boulder
+art: art:tatooine:sandstone-boulder
+palette: greybox
+cells: [2, 2]
+foot: [16, 31]
+scale: 0.96
+footprint: 2
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  rock: {ramp: mid,  bands: [0.25, 0.5, 0.78]}
+  cap:  {ramp: bone, bands: [0.25, 0.55, 0.85]}
+  seam: {ramp: dark, bands: [0.25, 0.55, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 2}
+box: [30, 30]
+parts:
+  # the undercut foot: narrower and dark, so the body overhangs it
+  - {name: foot, mat: seam, prism: {poly: [[-0.55, 0.12], [0.4, 0.1], [0.75, 0.35], [0.7, 0.75], [0.3, 0.92], [-0.55, 0.9], [-0.8, 0.6], [-0.78, 0.3]], z: [0, 0.3], round: 0.04}}
+  # the body: a lopsided rounded hull, high on the west, its top worn smooth
+  - name: body
+    mat: rock
+    hull: {round: 0.07, points: [[-0.9, 0.2, 0.2], [-0.2, 0.02, 0.18], [0.55, 0.12, 0.2], [0.9, 0.45, 0.22], [0.7, 0.9, 0.2], [-0.3, 0.98, 0.2], [-0.95, 0.7, 0.2],
+                                 [-0.85, 0.25, 0.62], [0.0, 0.05, 0.6], [0.7, 0.2, 0.55], [0.82, 0.6, 0.5], [-0.2, 0.95, 0.66], [-0.92, 0.65, 0.64],
+                                 [-0.6, 0.3, 1.02], [0.05, 0.22, 0.98], [0.45, 0.45, 0.82], [-0.1, 0.8, 1.0], [-0.65, 0.7, 1.02]]}
+  # the wind groove: a dark band set into the south face
+  - {name: groove, mat: seam, hull: {round: 0.02, points: [[-0.86, 0.17, 0.5], [0.66, 0.1, 0.44], [0.86, 0.5, 0.42], [-0.9, 0.6, 0.52], [-0.86, 0.17, 0.57], [0.66, 0.1, 0.5], [0.86, 0.5, 0.48], [-0.9, 0.6, 0.58]]}}
+  - {name: groove-cut, mat: seam, op: subtract, hull: {round: 0.0, points: [[-1, -0.2, 0.5], [1, -0.2, 0.44], [1, 0.08, 0.44], [-1, 0.13, 0.5], [-1, -0.2, 0.57], [1, -0.2, 0.5], [1, 0.08, 0.5], [-1, 0.13, 0.57]]}}
+  # the cap: a lighter, smoother top lit by the suns
+  - name: cap
+    mat: cap
+    hull: {round: 0.08, points: [[-0.62, 0.32, 0.92], [0.02, 0.24, 0.9], [0.4, 0.46, 0.78], [-0.1, 0.78, 0.94], [-0.64, 0.68, 0.96], [-0.45, 0.45, 1.06], [-0.05, 0.5, 1.04]]}
+  # a smaller stone leaning on the east side
+  - name: stone
+    mat: rock
+    hull: {round: 0.06, points: [[0.35, 0.0, 0], [0.97, 0.03, 0], [0.98, 0.5, 0], [0.45, 0.55, 0], [0.45, 0.08, 0.5], [0.9, 0.1, 0.42], [0.88, 0.42, 0.38], [0.52, 0.45, 0.52]]}
+variants:
+  boulder: {}
+  # the same rock mirrored, so a row of them does not repeat
+  mirrored: {mirror: true}

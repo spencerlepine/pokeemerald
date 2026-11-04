@@ -1,0 +1,53 @@
+# Control console (art:new:control-console), hit box 8x2, drawn 8x3.
+# Reference: the Mustafar mining control room (Revenge of the Sith) and the Endor shield bunker's
+# control room (Return of the Jedi): a long bank of sloped console desks along a wall, their keyboard
+# faces tilted to the operator, a row of screens on a raised back panel. Axes: x east, y north, z up,
+# origin on the ground at the footprint's south-west corner.
+name: new_control-console
+art: art:new:control-console
+palette: greybox
+kits: [../scenery/kits/shared-b1.yaml]
+cells: [8, 3]
+foot: [0, 48]
+footprint: 2
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  body:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  face:  {ramp: light, bands: [0.1, 0.45, 0.8]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  glass: {ramp: light, bands: [-0.6, -0.3, 0.0]}
+  frame: {ramp: mid,   bands: [0.35, 0.65, 0.9]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 2}
+box: [126, 30]
+params:
+  dy: 0.12         # the desks' south edge
+  dd: 0.8          # desk depth
+  sy: 1.02         # the screen wall's south face
+  screen: glass    # the screens' material (dark when dead)
+parts:
+  # the raised back panel the screens sit in, against the wall
+  - {name: wall, mat: frame, box: {c: [4.0, "=sy + 0.14", 0.68], half: [3.86, 0.14, 0.72], radius: 0.04}}
+  - {name: cap, mat: body, box: {c: [4.0, "=sy + 0.12", 1.46], half: [3.9, 0.18, 0.06], radius: 0.03}}
+  - {name: scr-1, mat: "=screen", box: {c: [1.0, "=sy", 1.0], half: [0.8, 0.04, 0.3], radius: 0.03}}
+  - {name: scr-2, mat: "=screen", box: {c: [3.0, "=sy", 1.0], half: [0.8, 0.04, 0.3], radius: 0.03}}
+  - {name: scr-3, mat: "=screen", box: {c: [5.0, "=sy", 1.0], half: [0.8, 0.04, 0.3], radius: 0.03}}
+  - {name: scr-4, mat: "=screen", box: {c: [7.0, "=sy", 1.0], half: [0.8, 0.04, 0.3], radius: 0.03}}
+  # four desks in a row, dark gaps between them
+  - {use: console-desk, name: desk-1, at: [0.08, "=dy", 0], with: {w: 1.88, d: "=dd", h: 0.5, back: 0.78}}
+  - {use: console-desk, name: desk-2, at: [2.04, "=dy", 0], with: {w: 1.92, d: "=dd", h: 0.5, back: 0.78}}
+  - {use: console-desk, name: desk-3, at: [4.04, "=dy", 0], with: {w: 1.92, d: "=dd", h: 0.5, back: 0.78}}
+  - {use: console-desk, name: desk-4, at: [6.04, "=dy", 0], with: {w: 1.84, d: "=dd", h: 0.5, back: 0.78}}
+variants:
+  # Mustafar: the facility running, screens lit
+  live: {}
+  # Endor bunker: dead consoles, dark screens, one smashed out
+  dead:
+    params: {screen: dark}
+    drop: ["scr-3"]

@@ -1,0 +1,35 @@
+# Stilt dome (art:kamino:stilt-dome), hit box 5x4, drawn 5x6.
+# Reference: Tipoca City (Attack of the Clones, The Clone Wars): a round grey saucer house raised on
+# stilts over the sea, a band of dark windows, a shallow cone roof and a thin spire on top.
+# The door faces south onto the walkway. Axes: x east, y north, z up, origin on the sea at its centre.
+name: kamino_stilt-dome
+art: art:kamino:stilt-dome
+palette: greybox
+kits: [../scenery/kits/bespin-kamino.yaml]
+cells: [5, 6]
+foot: [40, 74]
+footprint: 4
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  wall: {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  roof: {ramp: light, bands: [0.4, 0.68, 0.93]}
+  dark: {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  mid:  {ramp: mid,   bands: [0.2, 0.5, 0.8]}
+  sea:  {color: shade}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 4}
+box: [80, 64]
+params: {r: 2.45, lift: 1.2}
+parts:
+  - {use: tipoca-dome, name: dome, at: [0, 0.15, 0], with: {r: "=r", sq: 0.7, lift: "=lift", wall: 0.6, roof: 0.55, spire: 1.0}}
+  # the door on the south, a short landing out to the walkway
+  - {name: door, mat: dark, box: {c: [0, -1.62, "=lift + 0.4"], half: [0.28, 0.08, 0.32], radius: 0.03}}
+  - {name: landing, mat: mid, box: {c: [0, -1.95, "=lift + 0.05"], half: [0.5, 0.3, 0.06], radius: 0.02}}
+ground:
+  - {name: wake, mat: sea, cylinder: {a: [0, 0.1, 0], b: [0, 0.1, 0.01], r1: 1.6}, squash: [1.0, 0.6, 1]}

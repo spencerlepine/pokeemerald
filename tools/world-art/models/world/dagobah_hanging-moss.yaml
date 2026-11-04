@@ -1,0 +1,40 @@
+# Hanging moss (art:dagobah:hanging-moss), 1x1, top layer.
+# Reference: the grey moss and creepers that hang from the gnarltree limbs over the Dagobah bog
+# (The Empire Strikes Back; wiki/art/concept/dagobah/hanging-moss__db_dagobah.jpg). A short bough
+# across the top of the cell with ragged strands of moss hanging from it, longest in the middle.
+# Drawn over the player. Axes: x east, y north, z up, origin at the cell's centre on the ground.
+name: dagobah_hanging-moss
+art: art:dagobah:hanging-moss
+palette: greybox
+cells: [1, 1]
+foot: [8, 14]
+scale: 0.88
+footprint: 1
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  bough: {ramp: dark, bands: [0.2, 0.5, 0.85]}
+  moss:  {ramp: bone, bands: [0.15, 0.45, 0.8]}
+  deep:  {ramp: mid,  bands: [0.3, 0.6, 0.9]}
+box: [16, 16]
+templates:
+  # one strand: a thin ragged tassel hanging from the bough, `len` long
+  strand:
+    params: {len: 0.5, w: 0.06, mat: moss}
+    parts:
+      - {name: s, mat: "=mat", cone: {a: [0, 0, 0], b: [0, 0, "=-len"], r1: "=w", r2: 0.015}}
+      - {name: tuft, mat: "=mat", ellipsoid: {c: [0, 0, "=-len * 0.35"], r: ["=w * 1.4", "=w", "=len * 0.18"]}}
+parts:
+  - {name: bough, mat: bough, cylinder: {a: [-0.42, 0.0, 0.7], b: [0.42, 0.0, 0.64], r1: 0.08, r2: 0.06}}
+  - {use: strand, name: s1, at: [-0.38, -0.06, 0.69], with: {len: 0.3, mat: deep}}
+  - {use: strand, name: s2, at: [-0.24, -0.08, 0.68], with: {len: 0.5}}
+  - {use: strand, name: s3, at: [-0.10, -0.06, 0.67], with: {len: 0.38, mat: deep}}
+  - {use: strand, name: s4, at: [0.04, -0.08, 0.66], with: {len: 0.55, w: 0.07}}
+  - {use: strand, name: s5, at: [0.17, -0.06, 0.65], with: {len: 0.42, mat: deep}}
+  - {use: strand, name: s6, at: [0.30, -0.08, 0.64], with: {len: 0.52}}
+  - {use: strand, name: s7, at: [0.43, -0.06, 0.63], with: {len: 0.28, mat: deep}}

@@ -1,0 +1,31 @@
+# Hideout PC (art:new:hideout-pc), hit box 1x1, drawn 1x2.
+# Reference: a Rebel-base computer terminal (Echo Base, Yavin base): a narrow cabinet with a sloped
+# keyboard, an angled screen hood above it and a dark vent at the foot. Uses the console desk from the
+# group kit. Axes: x east, y north, z up, origin on the ground at the footprint's south-west corner.
+name: new_hideout-pc
+art: art:new:hideout-pc
+palette: greybox
+kits: [../scenery/kits/shared-b1.yaml]
+cells: [1, 2]
+foot: [0, 32]
+footprint: 1
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  body:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  face:  {ramp: light, bands: [0.1, 0.45, 0.8]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  glass: {ramp: light, bands: [-0.6, -0.3, 0.0]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 1}
+box: [14, 12]
+parts:
+  - {use: console-desk, name: desk, at: [0.05, 0.1, 0], with: {w: 0.84, d: 0.62, h: 0.55, back: 0.8}}
+  # the screen hood: a tall panel at the back with a lit screen tilted to the user
+  - {name: hood, mat: body, box: {c: [0.47, 0.62, 0.86], half: [0.4, 0.1, 0.33], radius: 0.04}}
+  - {name: screen, mat: glass, box: {c: [0.47, 0.52, 0.9], half: [0.3, 0.03, 0.22], radius: 0.02}}

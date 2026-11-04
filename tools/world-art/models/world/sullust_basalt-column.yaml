@@ -1,0 +1,33 @@
+# Basalt columns (art:sullust:basalt-column), hit box 2x2, drawn 2x4.
+# Sullust's tree stand-in: a cluster of six-sided basalt columns, short ones to the south and the tallest
+# at the back, flat lit tops stepping up like the Giant's Causeway. Axes: x east, y north, z up, origin
+# on the ground at the hit box's south edge, middle.
+name: sullust_basalt-column
+art: art:sullust:basalt-column
+palette: greybox
+cells: [2, 4]
+foot: [16, 64]
+scale: 0.9
+footprint: 2
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  rock:  {ramp: mid, bands: [0.25, 0.5, 0.75]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 2}
+box: [30, 30]
+parts:
+  - {name: col-0, mat: rock, prism: {poly: [[-0.23, 1.45], [-0.39, 1.677], [-0.71, 1.677], [-0.87, 1.45], [-0.71, 1.223], [-0.39, 1.223]], z: [0, 2.15], round: 0.02}}
+  - {name: col-1, mat: rock, prism: {poly: [[0.369, 1.62], [0.135, 1.811], [-0.183, 1.741], [-0.269, 1.48], [-0.035, 1.289], [0.283, 1.359]], z: [0, 2.35], round: 0.02}}
+  - {name: col-2, mat: rock, prism: {poly: [[0.86, 1.523], [0.6, 1.646], [0.34, 1.523], [0.34, 1.277], [0.6, 1.154], [0.86, 1.277]], z: [0, 1.9], round: 0.02}}
+  - {name: col-3, mat: rock, prism: {poly: [[-0.488, 1.074], [-0.778, 1.138], [-0.99, 0.964], [-0.912, 0.726], [-0.622, 0.662], [-0.41, 0.836]], z: [0, 1.45], round: 0.02}}
+  - {name: col-4, mat: rock, prism: {poly: [[0.01, 1.177], [-0.31, 1.177], [-0.47, 0.95], [-0.31, 0.723], [0.01, 0.723], [0.17, 0.95]], z: [0, 1.75], round: 0.02}}
+  - {name: col-5, mat: rock, prism: {poly: [[0.53, 1.096], [0.231, 1.03], [0.151, 0.784], [0.37, 0.604], [0.669, 0.67], [0.749, 0.916]], z: [0, 1.3], round: 0.02}}
+  - {name: col-6, mat: rock, prism: {poly: [[-0.35, 0.65], [-0.592, 0.535], [-0.592, 0.305], [-0.35, 0.19], [-0.108, 0.305], [-0.108, 0.535]], z: [0, 0.75], round: 0.02}}
+  - {name: col-7, mat: rock, prism: {poly: [[0.13, 0.594], [-0.061, 0.437], [0.009, 0.223], [0.27, 0.166], [0.461, 0.323], [0.391, 0.537]], z: [0, 0.5], round: 0.02}}
+  - {name: col-8, mat: rock, prism: {poly: [[0.6, 0.57], [0.48, 0.4], [0.6, 0.23], [0.84, 0.23], [0.96, 0.4], [0.84, 0.57]], z: [0, 0.85], round: 0.02}}

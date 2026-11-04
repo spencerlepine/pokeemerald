@@ -1,0 +1,34 @@
+# Fallen log (art:endor:fallen-log), hit box 3x1, drawn 3x2.
+# Reference: a mossy fallen redwood limb on the Endor forest floor (wiki/art/concept/endor/fallen-log__web_1.jpg).
+# A thick log lying east-west along the path edge, moss along its top, two snapped branch stubs and a
+# pale cut end at the west. Axes: x east, y north, z up, origin on the ground under the log's middle.
+name: endor_fallen-log
+art: art:endor:fallen-log
+palette: greybox
+kits: [../scenery/kits/endor-dagobah.yaml]
+cells: [3, 2]
+foot: [24, 21]
+footprint: 1
+turn: 0
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  bark:  {ramp: mid,   bands: [0.2, 0.55, 0.8]}
+  moss:  {ramp: light, bands: [0.3, 0.7, 0.97]}
+  wood:  {ramp: bone,  bands: [0.2, 0.5, 0.85]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 1}
+box: [48, 16]
+parts:
+  - {use: log, name: log, at: [0, 0, 0], with: {len: 2.75, r: 0.4}}
+  - {name: stub-1, mat: bark, cylinder: {a: [0.5, 0.05, 0.55], b: [0.75, -0.05, 0.9], r1: 0.1, r2: 0.07}}
+  - {name: stub-2, mat: bark, cylinder: {a: [-0.6, -0.2, 0.35], b: [-0.75, -0.5, 0.5], r1: 0.09, r2: 0.06}}
+ground:
+  - {name: fern-1, mat: moss, ellipsoid: {c: [0.95, -0.36, 0], r: [0.28, 0.12, 0.12]}}
+  - {name: fern-2, mat: moss, ellipsoid: {c: [-1.1, -0.36, 0], r: [0.22, 0.1, 0.1]}}

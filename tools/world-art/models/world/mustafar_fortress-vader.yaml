@@ -1,0 +1,47 @@
+# Fortress Vader (art:mustafar:fortress-vader), hit box 8x10, drawn 8x16.
+# Reference: Vader's castle (Rogue One, the Vader comics): a ribbed black podium on a crag over the
+# lava, the tapering tower splitting into two prongs at the top, lit slits up its face and the lava
+# fall pouring down the rock into a pool at its foot. The castle is the kit's `vader-castle`, shared
+# with the distant view (art:mustafar:fortress-vader-distant).
+# Axes: x east, y north, z up, origin on the ground at the hit box's south edge, middle.
+name: mustafar_fortress-vader
+art: art:mustafar:fortress-vader
+palette: greybox
+kits: [../scenery/kits/sullust-mustafar.yaml]
+cells: [8, 16]
+foot: [64, 256]
+footprint: 10
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  mid:   {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  light: {ramp: light, bands: [0.15, 0.5, 0.82]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  rock:  {ramp: dark,  bands: [0.15, 0.45, 0.78]}
+  lava:  {ramp: light, bands: [0.1, 0.35, 0.65]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 10}
+box: [124, 156]
+params:
+  cy: 2.3          # the castle's place on the crag
+  cz: 1.05
+parts:
+  # the crag: a black rock shelf the castle stands on, stepping up to the north
+  - name: crag
+    mat: rock
+    hull: {points: [[-3.85, 1.1, 0], [3.85, 1.0, 0], [3.85, 9.3, 0], [-3.85, 9.4, 0],
+                    [-3.7, 1.9, 0.95], [3.6, 1.8, 1.0], [3.7, 8.0, 1.25], [-3.6, 8.2, 1.3]], round: 0.04}
+  # the castle
+  - {use: vader-castle, name: castle, at: [0, "=cy", "=cz"], with: {prong_w: 10.2, prong_e: 9.5}}
+  # the lava fall running on down the crag's face
+  - {name: fall-rock, mat: lava, hull: {points: [[1.22, 1.0, 0], [1.58, 1.0, 0], [1.25, "=cy - 0.14", "=cz + 0.05"], [1.55, "=cy - 0.14", "=cz + 0.05"],
+                                                  [1.22, 0.9, 0.12], [1.58, 0.9, 0.12]], round: 0.01}}
+ground:
+  # the lava pool at the foot of the fall
+  - {name: pool, mat: lava, hull: {points: [[0.0, 0.35, 0], [2.6, 0.3, 0], [3.0, 0.7, 0], [2.5, 1.1, 0], [0.4, 1.1, 0], [-0.2, 0.7, 0], [1.4, 0.7, 0.1]], round: 0.03}}
+  - {name: rim, mat: rock, hull: {points: [[-0.6, 0.1, 0], [3.5, 0.08, 0], [3.5, 0.38, 0], [-0.6, 0.4, 0], [1.4, 0.22, 0.16]], round: 0.03}}

@@ -1,0 +1,40 @@
+# Log trap (art:endor:log-trap), hit box 3x1, drawn 3x4 (top layer).
+# Reference: the Ewoks' swinging-log traps in the Battle of Endor (Return of the Jedi;
+# wiki/art/concept/endor/log-trap__web_1.jpg shows the village's rope rigging). A heavy log slung on two
+# rope pairs, hanging above the path; its shadow on the ground shows it is in the air.
+# Axes: x east, y north, z up, origin on the ground under the log's middle.
+name: endor_log-trap
+art: art:endor:log-trap
+palette: greybox
+kits: [../scenery/kits/endor-dagobah.yaml]
+cells: [3, 4]
+foot: [23, 57]
+footprint: 1
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  bark:  {ramp: mid,   bands: [0.2, 0.55, 0.8]}
+  moss:  {ramp: mid,   bands: [0.1, 0.4, 0.75]}
+  wood:  {ramp: bone,  bands: [0.2, 0.5, 0.85]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  rope:  {ramp: bone,  bands: [0.1, 0.45, 0.8]}
+  shade: {color: shade}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 1}
+box: [48, 16]
+params:
+  lz: 1.5          # how high the log hangs (its underside)
+parts:
+  - {use: log, name: log, at: [0, 0, "=lz"], with: {len: 2.7, r: 0.38, moss: bark}}
+  # two rope slings: a wrap round the log, a pair of ropes up to the branch above
+  - {name: wrap-w, mat: rope, cylinder: {a: [-0.95, 0, "=lz + 0.36"], b: [-0.83, 0, "=lz + 0.36"], r1: 0.4}}
+  - {name: wrap-e, mat: rope, cylinder: {a: [0.83, 0, "=lz + 0.36"], b: [0.95, 0, "=lz + 0.36"], r1: 0.38}}
+  - {name: rope-w, mat: rope, cylinder: {a: [-0.89, 0.0, "=lz + 0.7"], b: [-0.75, 0.1, 3.3], r1: 0.05}}
+  - {name: rope-e, mat: rope, cylinder: {a: [0.89, 0.0, "=lz + 0.7"], b: [0.75, 0.1, 3.3], r1: 0.05}}
+ground:
+  - {name: shadow, mat: shade, cylinder: {a: [0.05, 0.05, 0], b: [0.05, 0.05, 0.01], r1: 1.1}, squash: [1.15, 0.24, 1]}

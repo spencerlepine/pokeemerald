@@ -1,0 +1,67 @@
+# Sandcrawler (art:tatooine:sandcrawler), hit box 8x6, drawn 8x8.
+# Reference: the Jawa sandcrawler (sandcrawler__db_sandcrawler, __web_1-3): a huge rusted box on four
+# track units, its front slanting forward over the tracks, a stepped cabin block on top at the rear, a
+# long boarding ramp let down on the side, a slit window band under the roof. Long side to the south (the
+# side that shows), nose east. Axes: x east (the nose), y north, z up, origin on the ground under the
+# hull's centre; 1 m = 1 cell.
+name: tatooine_sandcrawler
+art: art:tatooine:sandcrawler
+palette: greybox
+cells: [8, 8]
+foot: [64, 102]
+footprint: 6
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  hull:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  top:   {ramp: mid,   bands: [0.1, 0.45, 0.8]}
+  plate: {ramp: light, bands: [0.1, 0.45, 0.8]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  track: {ramp: dark,  bands: [0.05, 0.4, 0.8]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 6}
+box: [128, 96]
+params: {hy: 1.1, zb: 0.7, zt: 3.6, zc: 4.2}
+templates:
+  # one track unit: a dark rounded block with a lighter hub plate on its south face
+  track:
+    parts:
+      - {name: block, mat: track, box: {c: [0, 0, 0.32], half: [0.62, "=hy * 0.9", 0.32], radius: 0.12}}
+      - {name: hub, mat: hull, box: {c: [0, "=-hy * 0.9 - 0.02", 0.34], half: [0.3, 0.03, 0.14], radius: 0.03}}
+parts:
+  # the main hull: the long side a trapezoid, the nose leaning out over the tracks
+  - name: body
+    mat: hull
+    extrude: {axis: y, span: ["=-hy", "=hy"], round: 0.06,
+              profile: [[-3.55, "=zb"], [2.45, "=zb"], [3.85, "=zt - 0.3"], [3.45, "=zt"], [-3.55, "=zt"]]}
+  # the roof deck and the stepped cabin block on top, toward the rear
+  - {name: roof, mat: top, box: {c: [0.0, 0, "=zt + 0.02"], half: [3.45, "=hy - 0.08", 0.04], radius: 0.03}}
+  - name: cabin
+    mat: hull
+    prism: {poly: [[-3.4, "=-hy + 0.35"], [0.4, "=-hy + 0.35"], [0.4, "=hy - 0.2"], [-3.4, "=hy - 0.2"]], z: ["=zt", "=zc"], top: 0.92, round: 0.05}
+  - {name: cabin-top, mat: top, box: {c: [-1.5, 0.05, "=zc"], half: [1.75, "=hy - 0.5", 0.04], radius: 0.03}}
+  - {name: mast, mat: dark, box: {c: [-2.6, 0.3, "=zc + 0.3"], half: [0.08, 0.08, 0.3]}}
+  # the slit windows under the roof and on the cabin, along the south side
+  - {name: windows, mat: dark, box: {c: [0.4, "=-hy - 0.01", "=zt - 0.45"], half: [2.9, 0.03, 0.09]}}
+  - {name: cabin-win, mat: dark, box: {c: [-1.5, "=-hy + 0.33", "=zc - 0.3"], half: [1.6, 0.03, 0.08]}}
+  # the nose: the forward-leaning face carries a big pale plate and a dark hatch
+  - {name: nose-plate, mat: plate, extrude: {axis: y, span: ["=-hy - 0.02", "=-hy + 0.04"], round: 0.02, profile: [[2.2, 1.0], [2.6, 1.0], [3.6, "=zt - 0.6"], [3.15, "=zt - 0.6"]]}}
+  # the side ramp, let down at the front of the south side
+  - {name: ramp-door, mat: dark, box: {c: [1.1, "=-hy - 0.01", 1.5], half: [0.7, 0.03, 0.8]}}
+  - {name: ramp, mat: plate, hull: {points: [[0.4, "=-hy", "=zb + 0.1"], [1.8, "=-hy", "=zb + 0.1"], [0.4, "=-hy - 0.5", 0.02], [1.8, "=-hy - 0.5", 0.02],
+                                              [0.4, "=-hy", "=zb + 0.2"], [1.8, "=-hy", "=zb + 0.2"], [0.4, "=-hy - 0.5", 0.08], [1.8, "=-hy - 0.5", 0.08]], round: 0.02}}
+  # four track units under the hull
+  - {use: track, name: tr-1, at: [-2.7, 0, 0]}
+  - {use: track, name: tr-2, at: [-1.2, 0, 0]}
+  - {use: track, name: tr-3, at: [0.3, 0, 0]}
+  - {use: track, name: tr-4, at: [1.8, 0, 0]}
+variants:
+  crawler: {}
+  # shut up and on the move: the ramp raised
+  ramp-up:
+    drop: ["ramp", "ramp-door"]

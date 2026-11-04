@@ -1,0 +1,53 @@
+# Lava tube arch (art:sullust:lava-tube-arch), hit box 6x2, drawn 6x4.
+# The roof of a lava tube that fell in, leaving a broken arch of black rock across a dead end: a thick
+# ring of rock blocks standing face-on to the south (an arch edge-on is a line), two buttress feet,
+# jagged lumps on its crown, the fallen roof heaped round its feet.
+# Variants: arch, and fallen (its crown gone too, two horns of rock left standing).
+# Axes: x east, y north, z up, origin on the ground at the hit box's south edge, middle.
+name: sullust_lava-tube-arch
+art: art:sullust:lava-tube-arch
+palette: greybox
+cells: [6, 4]
+foot: [48, 64]
+footprint: 2
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  rock:  {ramp: dark,  bands: [0.15, 0.45, 0.75]}
+  crust: {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  under: {ramp: dark,  bands: [0.5, 0.8, 0.98]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 2}
+box: [92, 28]
+parts:
+  # the arch: rock blocks round a half circle, face-on to the south
+  - {name: arch, ring: {c: [0, 1.0, 0.05], axis: y, r: 1.85, n: 9, arc: [183, 357], size: [0.85, 0.75, 1.0], round: 0.04}, mat: rock}
+  # buttress feet
+  - {name: foot-w, mat: rock, hull: {points: [[-2.75, 0.4, 0], [-1.35, 0.45, 0], [-1.4, 1.6, 0], [-2.75, 1.6, 0], [-2.5, 0.6, 0.9], [-1.65, 0.65, 0.75], [-2.3, 1.3, 1.1]], round: 0.03}}
+  - {name: foot-e, mat: rock, hull: {points: [[1.35, 0.45, 0], [2.75, 0.4, 0], [2.75, 1.6, 0], [1.4, 1.6, 0], [2.5, 0.6, 0.85], [1.6, 0.65, 0.7], [2.3, 1.3, 1.0]], round: 0.03}}
+  # jagged crust on the crown where the roof broke away
+  - {name: crown-1, mat: crust, hull: {points: [[-0.9, 0.6, 1.75], [-0.1, 0.6, 1.9], [-0.1, 1.4, 1.9], [-0.9, 1.4, 1.75], [-0.6, 0.8, 2.2], [-0.3, 1.1, 2.15]], round: 0.03}}
+  - {name: crown-2, mat: crust, hull: {points: [[0.3, 0.6, 1.85], [1.05, 0.6, 1.7], [1.05, 1.4, 1.7], [0.3, 1.4, 1.85], [0.6, 0.9, 2.05]], round: 0.03}}
+  # the dark underside of the opening
+  - {name: soffit, mat: under, ring: {c: [0, 1.2, 0.05], axis: y, r: 1.45, n: 7, arc: [190, 350], size: [0.7, 0.12, 0.6], round: 0.02}}
+ground:
+  # the fallen roof, heaped round the feet and under the arch
+  - {name: rubble-w, mat: rock, hull: {points: [[-2.9, 0.1, 0], [-1.9, 0.15, 0], [-2.0, 0.55, 0], [-2.9, 0.5, 0], [-2.5, 0.3, 0.28]], round: 0.03}}
+  - {name: rubble-m, mat: crust, hull: {points: [[-0.6, 0.25, 0], [0.4, 0.2, 0], [0.5, 0.75, 0], [-0.5, 0.8, 0], [-0.1, 0.5, 0.3]], round: 0.03}}
+  - {name: rubble-e, mat: rock, hull: {points: [[1.9, 0.1, 0], [2.85, 0.15, 0], [2.85, 0.5, 0], [2.0, 0.5, 0], [2.4, 0.3, 0.24]], round: 0.03}}
+variants:
+  # the arch still spanning the tube
+  arch: {}
+  # fallen in: the crown gone, two horns of rock left standing, the crown in the rubble
+  fallen:
+    drop: ["arch/3", "arch/4", "arch/5", "crown-*", "soffit/*"]
+    ground:
+      - {name: rubble-w, mat: rock, hull: {points: [[-2.9, 0.1, 0], [-1.9, 0.15, 0], [-2.0, 0.55, 0], [-2.9, 0.5, 0], [-2.5, 0.3, 0.28]], round: 0.03}}
+      - {name: rubble-m, mat: crust, hull: {points: [[-0.9, 0.2, 0], [0.6, 0.15, 0], [0.8, 1.2, 0], [-0.8, 1.3, 0], [-0.2, 0.6, 0.55], [0.3, 0.9, 0.45]], round: 0.03}}
+      - {name: rubble-m2, mat: rock, hull: {points: [[0.5, 0.1, 0], [1.2, 0.15, 0], [1.1, 0.6, 0], [0.45, 0.55, 0], [0.8, 0.35, 0.35]], round: 0.03}}
+      - {name: rubble-e, mat: rock, hull: {points: [[1.9, 0.1, 0], [2.85, 0.15, 0], [2.85, 0.5, 0], [2.0, 0.5, 0], [2.4, 0.3, 0.24]], round: 0.03}}

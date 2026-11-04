@@ -1,0 +1,175 @@
+# Tatooine buildings kit: the adobe pieces the Tatooine town buildings share (greybox).
+# Axes: x east, y north, z up, origin on the ground at the piece's centre. 1 m = 1 cell = 16 px.
+# Materials are named by the model that uses the kit (`adobe`, `trim`, `dark` by default).
+templates:
+  # A round adobe dome on a short drum wall (Mos Eisley, the Lars homestead). `r` plan radius,
+  # `h` the dome's rise above the drum, `drum` the wall under it.
+  dome:
+    params: {r: 1.5, h: 1.2, drum: 0.3, mat: adobe}
+    parts:
+      - {name: drum, mat: "=mat", cylinder: {a: [0, 0, 0], b: [0, 0, "=drum"], r1: "=r"}}
+      - {name: cap, mat: "=mat", ellipsoid: {c: [0, 0, "=drum"], r: ["=r", "=r", "=h"]}}
+
+  # The Lars-style entry block: a box with a round vaulted top, its arched door facing south (-y).
+  # `w` wide, `d` deep, `h` tall at the crown; `dw` / `dh` the doorway.
+  entry:
+    params: {w: 1.0, d: 0.9, h: 1.0, dw: 0.38, dh: 0.66, mat: adobe, door: dark}
+    parts:
+      - {name: block, mat: "=mat", box: {c: [0, 0, "=(h - w / 2) / 2"], half: ["=w / 2", "=d / 2", "=(h - w / 2) / 2"], radius: 0.04}}
+      - {name: vault, mat: "=mat", cylinder: {a: [0, "=-d / 2", "=h - w / 2"], b: [0, "=d / 2", "=h - w / 2"], r1: "=w / 2"}}
+      - {name: door, mat: "=door", box: {c: [0, "=-d / 2 - 0.02", "=(dh - dw / 2) / 2"], half: ["=dw / 2", 0.05, "=(dh - dw / 2) / 2"], radius: 0.01}}
+      - {name: door-top, mat: "=door", cylinder: {a: [0, "=-d / 2 - 0.07", "=dh - dw / 2"], b: [0, "=-d / 2 + 0.03", "=dh - dw / 2"], r1: "=dw / 2"}}
+
+  # A flat-roofed adobe block with soft corners and a parapet lip. `w` x `d` plan, `h` tall.
+  block:
+    params: {w: 2.0, d: 1.5, h: 1.2, mat: adobe, lip: trim, rnd: 0.08}
+    parts:
+      - {name: body, mat: "=mat", box: {c: [0, 0, "=h / 2"], half: ["=w / 2", "=d / 2", "=h / 2"], radius: "=rnd"}}
+      - {name: lip-s, mat: "=lip", box: {c: [0, "=-d / 2 + 0.07", "=h + 0.02"], half: ["=w / 2 - 0.02", 0.07, 0.06], radius: 0.02}}
+      - {name: lip-n, mat: "=lip", box: {c: [0, "=d / 2 - 0.07", "=h + 0.02"], half: ["=w / 2 - 0.02", 0.07, 0.06], radius: 0.02}}
+      - {name: lip-w, mat: "=lip", box: {c: ["=-w / 2 + 0.07", 0, "=h + 0.02"], half: [0.07, "=d / 2 - 0.02", 0.06], radius: 0.02}}
+      - {name: lip-e, mat: "=lip", box: {c: ["=w / 2 - 0.07", 0, "=h + 0.02"], half: [0.07, "=d / 2 - 0.02", 0.06], radius: 0.02}}
+
+  # A plain dark doorway on a south face at y = `y`: square or with a round top (`arch: 1`).
+  doorway:
+    params: {y: 0, w: 0.5, h: 0.8, mat: dark}
+    parts:
+      - {name: door, mat: "=mat", box: {c: [0, "=y - 0.02", "=(h - w / 2) / 2"], half: ["=w / 2", 0.06, "=(h - w / 2) / 2"], radius: 0.01}}
+      - {name: top, mat: "=mat", cylinder: {a: [0, "=y - 0.08", "=h - w / 2"], b: [0, "=y + 0.04", "=h - w / 2"], r1: "=w / 2"}}
+
+  # A small dark window slot on a south face at y = `y`.
+  slot:
+    params: {y: 0, z: 0.8, w: 0.22, h: 0.18, mat: dark}
+    parts:
+      - {name: slot, mat: "=mat", box: {c: [0, "=y - 0.02", "=z"], half: ["=w / 2", 0.05, "=h / 2"], radius: 0.01}}
+
+  # A round vent tower (the cantina's and Mos Eisley's chimney towers): a drum with a capped top.
+  vent-tower:
+    params: {r: 0.35, h: 2.4, mat: adobe, cap: trim}
+    parts:
+      - {name: shaft, mat: "=mat", cylinder: {a: [0, 0, 0], b: [0, 0, "=h"], r1: "=r", r2: "=r * 0.85"}}
+      - {name: collar, mat: "=cap", cylinder: {a: [0, 0, "=h - 0.05"], b: [0, 0, "=h + 0.12"], r1: "=r * 1.12"}}
+      - {name: top, mat: "=cap", ellipsoid: {c: [0, 0, "=h + 0.12"], r: ["=r * 0.8", "=r * 0.8", "=r * 0.55"]}}
+
+  # A parked X-34-style landspeeder, nose to +x: the open wedge tub, the windscreen, three engines at the
+  # back (the third on top), floating a little over the ground. About 1.6 m long.
+  landspeeder:
+    params: {body: trim, eng: mid, dark: dark}
+    parts:
+      - name: tub
+        mat: "=body"
+        hull: {points: [[-0.75, -0.38, 0.12], [-0.75, 0.38, 0.12], [0.55, -0.32, 0.12], [0.55, 0.32, 0.12], [0.85, -0.12, 0.18], [0.85, 0.12, 0.18],
+                        [-0.75, -0.38, 0.38], [-0.75, 0.38, 0.38], [0.5, -0.3, 0.32], [0.5, 0.3, 0.32], [0.8, -0.1, 0.26], [0.8, 0.1, 0.26]], round: 0.03}
+      - {name: seat, mat: "=dark", box: {c: [-0.15, 0, 0.38], half: [0.25, 0.24, 0.04], radius: 0.01}}
+      - {name: screen, mat: "=dark", box: {c: [0.17, 0, 0.44], half: [0.04, 0.26, 0.07], radius: 0.01}, rot: [0, -25, 0]}
+      - {name: eng-l, mat: "=eng", cylinder: {a: [-0.9, 0.3, 0.3], b: [-0.35, 0.3, 0.3], r1: 0.12, r2: 0.1}}
+      - {name: eng-r, mat: "=eng", cylinder: {a: [-0.9, -0.3, 0.3], b: [-0.35, -0.3, 0.3], r1: 0.12, r2: 0.1}}
+      - {name: eng-t, mat: "=eng", cylinder: {a: [-0.9, 0, 0.5], b: [-0.4, 0, 0.5], r1: 0.11, r2: 0.09}}
+
+  # A low sloped-top garage block with a wide dark bay door on the south face.
+  garage:
+    params: {w: 2.0, d: 2.0, h: 1.0, bw: 1.3, bh: 0.7, mat: adobe, door: dark}
+    parts:
+      - name: body
+        mat: "=mat"
+        prism: {poly: [["=-w / 2", "=-d / 2"], ["=w / 2", "=-d / 2"], ["=w / 2", "=d / 2"], ["=-w / 2", "=d / 2"]], z: [0, "=h"], top: [0.92, 0.85], round: 0.06}
+      - {name: bay, mat: "=door", box: {c: [0, "=-d / 2 - 0.01", "=bh / 2"], half: ["=bw / 2", 0.06, "=bh / 2"], radius: 0.02}}
+      - {name: lintel, mat: trim, box: {c: [0, "=-d / 2 - 0.03", "=bh + 0.07"], half: ["=bw / 2 + 0.12", 0.07, 0.07], radius: 0.02}}
+
+  # A heap of scrap on the ground: a lumpy pile with a couple of parts sticking out (an engine can,
+  # a plate). About 1 m across.
+  scrap-pile:
+    params: {pile: mid, part: trim, dark: dark}
+    parts:
+      - name: heap
+        mat: "=pile"
+        hull: {points: [[-0.5, -0.3, 0], [0.45, -0.35, 0], [0.5, 0.3, 0], [-0.4, 0.35, 0], [-0.1, 0.0, 0.42], [0.2, -0.1, 0.35], [-0.3, -0.15, 0.25]], round: 0.03}
+      - {name: can, mat: "=part", cylinder: {a: [-0.35, -0.25, 0.18], b: [0.15, -0.38, 0.3], r1: 0.15, r2: 0.12}}
+      - {name: can-end, mat: "=dark", cylinder: {a: [-0.4, -0.24, 0.17], b: [-0.33, -0.25, 0.18], r1: 0.11}}
+      - {name: plate, mat: "=part", box: {c: [0.25, 0.05, 0.38], half: [0.18, 0.03, 0.16], radius: 0.01}, rot: [15, 20, 0]}
+
+  # A holo board on a post: a dark screen in a light frame facing south. `w` wide, its top at `h`.
+  holo-board:
+    params: {w: 0.9, h: 1.2, sh: 0.55, frame: trim, screen: dark, post: mid}
+    parts:
+      - {name: post, mat: "=post", box: {c: [0, 0, "=(h - sh) / 2"], half: [0.06, 0.06, "=(h - sh) / 2"], radius: 0.01}}
+      - {name: frame, mat: "=frame", box: {c: [0, 0, "=h - sh / 2"], half: ["=w / 2", 0.06, "=sh / 2"], radius: 0.02}}
+      - {name: screen, mat: "=screen", box: {c: [0, -0.04, "=h - sh / 2"], half: ["=w / 2 - 0.07", 0.04, "=sh / 2 - 0.07"], radius: 0.01}}
+
+  # A big arch frame standing proud of a south face: two piers and a round head, the opening dark.
+  # `w` the opening's width, `h` its height to the crown, `t` the frame's thickness.
+  arch-frame:
+    params: {w: 0.9, h: 1.3, t: 0.18, d: 0.25, mat: trim, door: dark}
+    parts:
+      - {name: pier-w, mat: "=mat", box: {c: ["=-w / 2 - t / 2", 0, "=(h - w / 2) / 2"], half: ["=t / 2", "=d / 2", "=(h - w / 2) / 2"], radius: 0.02}}
+      - {name: pier-e, mat: "=mat", box: {c: ["=w / 2 + t / 2", 0, "=(h - w / 2) / 2"], half: ["=t / 2", "=d / 2", "=(h - w / 2) / 2"], radius: 0.02}}
+      - {name: head, mat: "=mat", cylinder: {a: [0, "=-d / 2", "=h - w / 2"], b: [0, "=d / 2", "=h - w / 2"], r1: "=w / 2 + t"}}
+      - {name: open, mat: "=door", box: {c: [0, -0.03, "=(h - w / 2) / 2"], half: ["=w / 2", "=d / 2", "=(h - w / 2) / 2"], radius: 0.01}}
+      - {name: open-top, mat: "=door", cylinder: {a: [0, "=-d / 2 - 0.03", "=h - w / 2"], b: [0, "=d / 2 - 0.03", "=h - w / 2"], r1: "=w / 2"}}
+
+  # A dish antenna on a mast, the bowl tipped up toward the south-sky. `h` the bowl's centre height.
+  dish:
+    params: {r: 0.6, h: 1.6, tip: 40, bowl: trim, mast: mid, feed: dark}
+    parts:
+      - {name: mast, mat: "=mast", cylinder: {a: [0, 0, 0], b: [0, 0, "=h"], r1: 0.08, r2: 0.06}}
+      - {name: bowl, mat: "=bowl", ellipsoid: {c: [0, 0, "=h"], r: ["=r", "=r", "=r * 0.28"]}, rot: [0, 0, "=-tip"]}
+      - {name: feed, mat: "=feed", cylinder: {a: [0, 0, "=h"], b: [0, "=-0.38 * sin(radians(tip))", "=h + 0.38 * cos(radians(tip))"], r1: 0.05}}
+
+  # A solar panel on short legs, tilted up to the south. `w` x `d` panel.
+  solar:
+    params: {w: 1.0, d: 0.7, z: 0.25, tilt: 25, panel: dark, frame: trim}
+    parts:
+      - {name: rim, mat: "=frame", box: {c: [0, 0, "=z"], half: ["=w / 2", "=d / 2", 0.03], radius: 0.01}, rot: [0, 0, "=-tilt"]}
+      - {name: panel, mat: "=panel", box: {c: [0, 0, "=z + 0.03"], half: ["=w / 2 - 0.08", "=d / 2 - 0.08", 0.02], radius: 0.01}, rot: [0, 0, "=-tilt"]}
+      - {name: leg, mat: "=frame", box: {c: [0, 0.1, "=z / 2"], half: ["=w / 2 - 0.1", 0.04, "=z / 2"], radius: 0.01}}
+
+  # A round pillar with a square base and cap.
+  pillar:
+    params: {h: 1.8, r: 0.22, mat: trim, cap: trim}
+    parts:
+      - {name: base, mat: "=cap", box: {c: [0, 0, 0.1], half: ["=r + 0.08", "=r + 0.08", 0.1], radius: 0.02}}
+      - {name: shaft, mat: "=mat", cylinder: {a: [0, 0, 0.15], b: [0, 0, "=h - 0.15"], r1: "=r", r2: "=r * 0.9"}}
+      - {name: cap, mat: "=cap", box: {c: [0, 0, "=h - 0.08"], half: ["=r + 0.1", "=r + 0.1", 0.1], radius: 0.02}}
+
+  # A banner hung flat on a south face at y = `y`: a long strip with a dark emblem near its foot.
+  banner:
+    params: {y: 0, top: 1.5, len: 1.0, w: 0.4, mat: dark, mark: trim}
+    parts:
+      - {name: rod, mat: mid, box: {c: [0, "=y - 0.05", "=top"], half: ["=w / 2 + 0.06", 0.04, 0.03], radius: 0.01}}
+      - {name: cloth, mat: "=mat", box: {c: [0, "=y - 0.03", "=top - len / 2"], half: ["=w / 2", 0.03, "=len / 2"], radius: 0.01}}
+      - {name: tip, mat: "=mat", prism: {poly: [["=-w / 2", "=y - 0.06"], ["=w / 2", "=y - 0.06"], ["=w / 2", "=y"], ["=-w / 2", "=y"]], z: ["=top - len - 0.12", "=top - len + 0.01"], top: [0.1, 1.0]}}
+      - {name: mark, mat: "=mark", box: {c: [0, "=y - 0.07", "=top - len * 0.55"], half: [0.08, 0.02, 0.08], radius: 0.01}}
+
+  # A YT-1300-style light freighter, mandibles to +x, cockpit tube on its south (-y) side so the camera
+  # sees it. `s` scales it (1 = a 3.4 m wide saucer: the size a docking bay holds); `lift` its belly height.
+  freighter:
+    params: {s: 1.0, lift: 0.25, hull: trim, plate: mid, dark: dark}
+    parts:
+      - {name: saucer, mat: "=hull", cylinder: {a: [0, 0, "=lift"], b: [0, 0, "=lift + 0.35 * s"], r1: "=1.7 * s"}}
+      - {name: top, mat: "=hull", ellipsoid: {c: [0, 0, "=lift + 0.33 * s"], r: ["=1.62 * s", "=1.62 * s", "=0.2 * s"]}}
+      - {name: hub, mat: "=plate", cylinder: {a: [-0.1, 0, "=lift + 0.5 * s"], b: [-0.1, 0, "=lift + 0.72 * s"], r1: "=0.62 * s", r2: "=0.52 * s"}}
+      - {name: mand-n, mat: "=hull", box: {c: ["=1.85 * s", "=0.42 * s", "=lift + 0.2 * s"], half: ["=0.55 * s", "=0.24 * s", "=0.15 * s"], radius: 0.02}}
+      - {name: mand-s, mat: "=hull", box: {c: ["=1.85 * s", "=-0.42 * s", "=lift + 0.2 * s"], half: ["=0.55 * s", "=0.24 * s", "=0.15 * s"], radius: 0.02}}
+      - {name: tube, mat: "=hull", cylinder: {a: ["=0.3 * s", "=-1.45 * s", "=lift + 0.25 * s"], b: ["=1.2 * s", "=-1.75 * s", "=lift + 0.25 * s"], r1: "=0.2 * s"}}
+      - {name: cockpit, mat: "=hull", ellipsoid: {c: ["=1.3 * s", "=-1.78 * s", "=lift + 0.25 * s"], r: ["=0.32 * s", "=0.3 * s", "=0.28 * s"]}}
+      - {name: glass, mat: "=dark", ellipsoid: {c: ["=1.45 * s", "=-1.82 * s", "=lift + 0.32 * s"], r: ["=0.2 * s", "=0.2 * s", "=0.14 * s"]}}
+      - {name: dish, mat: "=plate", cylinder: {a: ["=-0.55 * s", "=0.75 * s", "=lift + 0.6 * s"], b: ["=-0.55 * s", "=0.75 * s", "=lift + 0.68 * s"], r1: "=0.3 * s"}}
+      - {name: engine, mat: "=dark", box: {c: ["=-1.62 * s", 0, "=lift + 0.2 * s"], half: ["=0.1 * s", "=1.0 * s", "=0.09 * s"], radius: 0.01}}
+      - {name: gear, mat: "=plate", cylinder: {a: [0, 0, 0], b: [0, 0, "=lift + 0.05"], r1: "=0.5 * s"}}
+
+  # A flag on a thin pole: the pennant hangs from the top toward +x.
+  flag:
+    params: {h: 1.2, w: 0.42, fh: 0.28, pole: dark, cloth: dark}
+    parts:
+      - {name: pole, mat: "=pole", cylinder: {a: [0, 0, 0], b: [0, 0, "=h"], r1: 0.035}}
+      - {name: cloth, mat: "=cloth", prism: {poly: [[0.02, -0.02], ["=w", -0.02], ["=w", 0.02], [0.02, 0.02]], z: ["=h - fh", "=h - 0.02"], top: [1.0, 1.0]}}
+
+  # A Mos Espa round tower: a drum with a ring band and a low dome cap with a finial.
+  round-tower:
+    params: {r: 0.6, h: 2.0, mat: adobe, cap: trim}
+    parts:
+      - {name: drum, mat: "=mat", cylinder: {a: [0, 0, 0], b: [0, 0, "=h"], r1: "=r", r2: "=r * 0.92"}}
+      - {name: band, mat: "=cap", cylinder: {a: [0, 0, "=h * 0.62"], b: [0, 0, "=h * 0.62 + 0.12"], r1: "=r + 0.04"}}
+      - {name: rim, mat: "=cap", cylinder: {a: [0, 0, "=h - 0.04"], b: [0, 0, "=h + 0.1"], r1: "=r * 1.05"}}
+      - {name: dome, mat: "=cap", ellipsoid: {c: [0, 0, "=h + 0.08"], r: ["=r * 0.9", "=r * 0.9", "=r * 0.55"]}}
+      - {name: finial, mat: dark, cylinder: {a: [0, 0, "=h + 0.4"], b: [0, 0, "=h + 0.65"], r1: 0.05}}

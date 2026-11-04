@@ -1,0 +1,61 @@
+# Wookiee bed (art:new:wookiee-bed), hit box 3x2, drawn 3x3. Rwookrrorro huts (Kashyyyk): a big
+# low bed of wroshyr wood. Log rails on stout corner posts, a thick mattress of furs with a rolled
+# pelt pillow at the head, a woven headboard of branches with curled tips on the north side
+# (its face toward the camera), and a fur throw hanging over the foot.
+# Axes: x east, y north from the hit box's south edge, z up; origin at the hit box's south-centre.
+name: new_wookiee-bed
+art: art:new:wookiee-bed
+palette: greybox
+cells: [3, 3]
+foot: [23, 47]
+scale: 0.93
+footprint: 2
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  wood:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  fur:   {ramp: bone,  bands: [0.2, 0.5, 0.85]}
+  pelt:  {ramp: light, bands: [0.2, 0.5, 0.85]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 2}
+box: [46, 30]
+templates:
+  post:
+    parts:
+      - {name: post, mat: wood, cylinder: {a: [0, 0, 0], b: [0, 0, 0.5], r1: 0.14, r2: 0.12}}
+      - {name: cap, mat: pelt, ellipsoid: {c: [0, 0, 0.5], r: [0.13, 0.13, 0.08]}}
+parts:
+  # the frame: side rails as logs, a plank deck between them
+  - {name: deck, mat: dark, box: {c: [0, 0.98, 0.22], half: [1.3, 0.78, 0.1], radius: 0.03}}
+  - {name: rail-s, mat: wood, cylinder: {a: [-1.3, 0.22, 0.3], b: [1.3, 0.22, 0.3], r1: 0.12}}
+  - {name: rail-w, mat: wood, cylinder: {a: [-1.32, 0.22, 0.3], b: [-1.32, 1.72, 0.3], r1: 0.11}}
+  - {name: rail-e, mat: wood, cylinder: {a: [1.32, 0.22, 0.3], b: [1.32, 1.72, 0.3], r1: 0.11}}
+  - {use: post, name: post-sw, at: [-1.32, 0.22, 0]}
+  - {use: post, name: post-se, at: [1.32, 0.22, 0]}
+  # the furs: a thick lumpy mattress, a rolled pelt pillow, a throw over the foot
+  - name: mattress
+    mat: fur
+    hull: {points: [[-1.2, 0.32, 0.3], [1.2, 0.32, 0.3], [-1.2, 1.6, 0.3], [1.2, 1.6, 0.3],
+                    [-1.1, 0.4, 0.5], [1.1, 0.4, 0.52], [-1.12, 1.55, 0.5], [1.1, 1.52, 0.52], [0.2, 0.9, 0.58], [-0.5, 1.2, 0.56]], round: 0.06}
+  - {name: pillow, mat: pelt, cylinder: {a: [-0.95, 1.4, 0.6], b: [0.95, 1.4, 0.6], r1: 0.16}}
+  - name: throw
+    mat: pelt
+    hull: {points: [[-1.24, 0.28, 0.54], [1.24, 0.28, 0.54], [-1.22, 0.75, 0.6], [1.22, 0.75, 0.6],
+                    [-1.26, 0.18, 0.3], [1.26, 0.18, 0.3], [-1.0, 0.2, 0.16], [1.0, 0.2, 0.16]], round: 0.04}
+  # the woven headboard: posts, a top log and upright sticks, curled tips
+  - {name: head-w, mat: wood, cylinder: {a: [-1.32, 1.8, 0.3], b: [-1.32, 1.8, 1.05], r1: 0.13, r2: 0.1}}
+  - {name: head-e, mat: wood, cylinder: {a: [1.32, 1.8, 0.3], b: [1.32, 1.8, 1.05], r1: 0.13, r2: 0.1}}
+  - {name: head-log, mat: wood, cylinder: {a: [-1.36, 1.82, 0.95], b: [1.36, 1.82, 0.95], r1: 0.1}}
+  - {name: head-weave, mat: dark, box: {c: [0, 1.84, 0.65], half: [1.2, 0.05, 0.28], radius: 0.02}}
+  - {name: stick-1, mat: wood, box: {c: [-0.75, 1.8, 0.65], half: [0.05, 0.04, 0.3]}}
+  - {name: stick-2, mat: wood, box: {c: [-0.25, 1.8, 0.65], half: [0.05, 0.04, 0.3]}}
+  - {name: stick-3, mat: wood, box: {c: [0.25, 1.8, 0.65], half: [0.05, 0.04, 0.3]}}
+  - {name: stick-4, mat: wood, box: {c: [0.75, 1.8, 0.65], half: [0.05, 0.04, 0.3]}}
+  - {name: curl-w, mat: pelt, cone: {a: [-1.32, 1.8, 1.02], b: [-1.42, 1.8, 1.17], r1: 0.09, r2: 0.04}}
+  - {name: curl-e, mat: pelt, cone: {a: [1.32, 1.8, 1.02], b: [1.42, 1.8, 1.17], r1: 0.09, r2: 0.04}}

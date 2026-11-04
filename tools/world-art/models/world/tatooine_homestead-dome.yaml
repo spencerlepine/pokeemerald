@@ -1,0 +1,47 @@
+# Homestead dome (art:tatooine:homestead-dome), hit box 5x4, drawn 5x5. The common Tatooine house.
+# Reference: the Lars homestead (A New Hope): a low adobe dome, the round-vaulted entry block with its
+# arched door on the south, a moisture vaporator at the side, and the courtyard pit's rim behind.
+# Axes: x east, y north, z up, origin on the ground at the hit box's centre. Door: column 2 (x = 0).
+name: tatooine_homestead-dome
+art: art:tatooine:homestead-dome
+palette: greybox
+kits: [../scenery/kits/tatooine.yaml, ../scenery/kits/tatooine-buildings.yaml]
+cells: [5, 5]
+foot: [40, 47]
+footprint: 4
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  adobe: {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  trim:  {ramp: light, bands: [0.2, 0.5, 0.85]}
+  light: {ramp: light, bands: [0.15, 0.5, 0.82]}
+  mid:   {ramp: mid,   bands: [0.2, 0.5, 0.85]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+groups:
+  body: {}
+  pit: {}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 4}
+box: [76, 60]
+params:
+  dx: -0.5        # the dome's centre
+  dy: 0.35
+parts:
+  - {use: dome, name: dome, at: ["=dx", "=dy", 0], with: {r: 1.65, h: 1.05, drum: 0.3, mat: adobe}}
+  - {use: entry, name: entry, at: [0, -1.2, 0], with: {w: 1.15, d: 1.05, h: 1.2, mat: trim}}
+  - {use: vaporator, name: vap, at: [1.95, -1.15, 0], with: {h: 1.7}}
+  # the courtyard pit's rim, north-east of the dome
+  - {name: rim, mat: trim, group: pit, cylinder: {a: [1.6, 1.25, 0], b: [1.6, 1.25, 0.18], r1: 0.8}}
+  - {name: hole, mat: trim, group: pit, op: subtract, cylinder: {a: [1.6, 1.25, 0.02], b: [1.6, 1.25, 0.4], r1: 0.62}}
+  - {name: pit, mat: dark, cylinder: {a: [1.6, 1.25, 0], b: [1.6, 1.25, 0.06], r1: 0.64}}
+variants:
+  # the homestead: dome, entry, vaporator and the pit's rim
+  homestead: {}
+  # a town house: the dome and its entry only
+  plain:
+    drop: ["vap/*", "rim", "hole", "pit"]

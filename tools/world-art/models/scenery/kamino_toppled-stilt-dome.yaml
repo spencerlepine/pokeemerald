@@ -1,0 +1,49 @@
+# Toppled stilt dome (art:kamino:toppled-stilt-dome), hit box 6x4, drawn 6x5.
+# Reference: the Tipoca City domes (Attack of the Clones, The Clone Wars). The same dome as the town's
+# stilt dome (the kit's `tipoca-dome`), torn off its stilts: it lies tipped in the waves, its roof
+# leaning toward the camera, stilt stumps snapped short underneath, broken stilts standing in the
+# sea beside it. Axes: x east, y north, z up, origin on the sea at the hit box's centre.
+name: kamino_toppled-stilt-dome
+art: art:kamino:toppled-stilt-dome
+palette: greybox
+kits: [kits/bespin-kamino.yaml]
+cells: [6, 5]
+foot: [48, 50]
+footprint: 4
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  wall: {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  roof: {ramp: light, bands: [0.4, 0.68, 0.93]}
+  dark: {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  foam: {ramp: bone,  bands: [0.05, 0.3, 0.7]}
+  sea:  {color: shade}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 4}
+box: [96, 64]
+params: {r: 2.3}
+parts:
+  - {use: tipoca-dome, name: dome, at: [0, 0, -0.5], with: {r: "=r", sq: 0.85, lift: 0.5, wall: 0.6, roof: 0.6, spire: 0.9}}
+tilt: [-30, 12]
+turn: 14
+pivot: [0, 0]
+sink: 0.55
+ground:
+  - {name: wash, mat: sea, cylinder: {a: [0, -0.2, 0], b: [0, -0.2, 0.01], r1: 2.6}, squash: [1.1, 0.55, 1]}
+  - {name: foam-s, mat: foam, ellipsoid: {c: [-0.6, -1.35, 0], r: [1.2, 0.18, 0.1]}}
+  - {name: foam-e, mat: foam, ellipsoid: {c: [2.3, -0.6, 0], r: [0.45, 0.16, 0.08]}}
+  # the stilts it stood on, snapped, still standing in the sea to the west
+  - {name: stump-1, mat: dark, box: {c: [-2.55, 0.9, 0.55], half: [0.12, 0.12, 0.55], radius: 0.02}, rot: [0, 8, 0]}
+  - {name: stump-2, mat: dark, box: {c: [-2.05, 1.3, 0.35], half: [0.12, 0.12, 0.35], radius: 0.02}}
+variants:
+  # tipped on its side in the waves
+  toppled: {}
+  # sunk deeper, only the roof and spire above the water
+  sinking:
+    tilt: [-40, 18]
+    sink: 1.0

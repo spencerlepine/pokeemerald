@@ -1,0 +1,54 @@
+# Dead tree (art:tatooine:dead-tree), hit box 2x2, drawn 2x3: the top row stands over the cell behind.
+# Reference: bleached dead acacias in a desert pan (Deadvlei) and driftwood on dunes. A short twisted
+# trunk on a sand mound, forking into a few bare, bleached limbs that spread wide in the south-facing
+# plane (so they read in this camera), with snapped stubs. A sparse accent, never a wall.
+# Axes: x east, y north, z up; origin on the ground at the south edge of the hit box.
+name: tatooine_dead-tree
+art: art:tatooine:dead-tree
+palette: greybox
+cells: [2, 3]
+foot: [16, 47]
+footprint: 2
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  wood: {ramp: bone, bands: [0.3, 0.6, 0.88]}
+  bark: {ramp: mid,  bands: [0.25, 0.55, 0.85]}
+  sand: {ramp: bone, bands: [0.6, 0.85, 0.99]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 2}
+box: [28, 26]
+params:
+  ty: 0.75        # the trunk's place (m north of the hit box's south edge)
+parts:
+  # the trunk: two twisted segments
+  - {name: trunk-1, mat: bark, cone: {a: [0.02, "=ty", 0], b: [-0.08, "=ty", 0.75], r1: 0.238, r2: 0.168}}
+  - {name: trunk-2, mat: wood, cone: {a: [-0.08, "=ty", 0.72], b: [0.05, "=ty - 0.05", 1.15], r1: 0.168, r2: 0.126}}
+  # main limbs: spread east and west, then up
+  - {name: limb-w, mat: wood, cone: {a: [-0.06, "=ty", 0.95], b: [-0.6, "=ty - 0.1", 1.45], r1: 0.126, r2: 0.084}}
+  - {name: limb-w2, mat: wood, cone: {a: [-0.6, "=ty - 0.1", 1.45], b: [-0.78, "=ty - 0.12", 2.0], r1: 0.084, r2: 0.056}}
+  - {name: twig-w, mat: wood, cone: {a: [-0.6, "=ty - 0.1", 1.45], b: [-0.9, "=ty - 0.1", 1.66], r1: 0.07, r2: 0.042}}
+  - {name: limb-e, mat: wood, cone: {a: [0.05, "=ty - 0.05", 1.12], b: [0.55, "=ty - 0.15", 1.6], r1: 0.112, r2: 0.077}}
+  - {name: limb-e2, mat: wood, cone: {a: [0.55, "=ty - 0.15", 1.6], b: [0.88, "=ty - 0.15", 1.82], r1: 0.077, r2: 0.049}}
+  - {name: twig-e, mat: wood, cone: {a: [0.55, "=ty - 0.15", 1.6], b: [0.5, "=ty - 0.15", 2.1], r1: 0.063, r2: 0.042}}
+  - {name: limb-c, mat: wood, cone: {a: [0.05, "=ty - 0.05", 1.12], b: [-0.1, "=ty - 0.1", 1.85], r1: 0.098, r2: 0.063}}
+  - {name: twig-c, mat: wood, cone: {a: [-0.1, "=ty - 0.1", 1.85], b: [0.15, "=ty - 0.1", 2.18], r1: 0.056, r2: 0.042}}
+  # a snapped stub low on the trunk
+  - {name: stub, mat: wood, cone: {a: [0.0, "=ty", 0.5], b: [0.32, "=ty - 0.05", 0.68], r1: 0.07, r2: 0.06}}
+ground:
+  - {name: mound, mat: sand, ellipsoid: {c: [0, 0.72, 0], r: [0.45, 0.25, 0.12]}}
+  - {name: root, mat: bark, cone: {a: [0.05, 0.7, 0.05], b: [0.5, 0.55, 0.0], r1: 0.07, r2: 0.04}}
+variants:
+  dead-tree: {}
+  # a limb broken off and lying in the sand
+  broken:
+    drop: ["limb-e", "limb-e2", "twig-e"]
+    ground:
+      - {name: mound, mat: sand, ellipsoid: {c: [0, 0.72, 0], r: [0.45, 0.25, 0.12]}}
+      - {name: fallen, mat: wood, cone: {a: [0.2, 0.3, 0.06], b: [0.78, 0.14, 0.05], r1: 0.08, r2: 0.05}}
+      - {name: fallen-twig, mat: wood, cone: {a: [0.6, 0.22, 0.05], b: [0.75, 0.42, 0.04], r1: 0.04, r2: 0.03}}

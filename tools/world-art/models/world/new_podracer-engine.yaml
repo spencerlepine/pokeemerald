@@ -1,0 +1,63 @@
+# Podracer engine (art:new:podracer-engine), hit box 3x2, drawn 3x3. Mos Espa podrace hangar
+# (The Phantom Menace): one of Anakin's Radon-Ulzer engines up on a maintenance stand. A long round
+# nacelle with a wide flared intake split by three vanes at the front (east), a ring of cooling
+# bands, a tapered exhaust at the back, a small fin on top, resting on two trestles. Turned a little so
+# the intake shows to the camera.
+# Axes: engine built along x (intake +x); origin on the ground at the engine's middle.
+name: new_podracer-engine
+art: art:new:podracer-engine
+palette: greybox
+cells: [3, 3]
+foot: [24, 35]
+turn: -26
+scale: 0.95
+footprint: 2
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  hull:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  trim:  {ramp: light, bands: [0.15, 0.5, 0.82]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 2}
+box: [46, 30]
+groups: {body: {}, vanes: {}}
+params:
+  zc: 0.92        # the engine's axis height
+templates:
+  trestle:
+    parts:
+      - name: a
+        mat: dark
+        extrude: {axis: x, span: [-0.07, 0.07], profile: [[-0.45, 0.0], [-0.3, 0.0], [0.0, 0.5], [0.3, 0.0], [0.45, 0.0], [0.08, 0.62], [-0.08, 0.62]], round: 0.02}
+      - {name: cradle, mat: hull, box: {c: [0, 0, "=zc - 0.36"], half: [0.1, 0.3, 0.06], radius: 0.02}}
+parts:
+  - {use: trestle, name: stand-w, at: [-0.7, 0, 0]}
+  - {use: trestle, name: stand-e, at: [0.55, 0, 0]}
+  # the nacelle
+  - {name: body, mat: hull, cylinder: {a: [-0.9, 0, "=zc"], b: [0.85, 0, "=zc"], r1: 0.38, r2: 0.42}}
+  - {name: band-1, mat: trim, cylinder: {a: [-0.55, 0, "=zc"], b: [-0.45, 0, "=zc"], r1: 0.41}}
+  - {name: band-2, mat: trim, cylinder: {a: [-0.2, 0, "=zc"], b: [-0.1, 0, "=zc"], r1: 0.42}}
+  - {name: band-3, mat: trim, cylinder: {a: [0.15, 0, "=zc"], b: [0.25, 0, "=zc"], r1: 0.43}}
+  # the flared intake and its dark mouth
+  - {name: intake, mat: trim, cylinder: {a: [0.85, 0, "=zc"], b: [1.3, 0, "=zc"], r1: 0.42, r2: 0.56}}
+  - {name: mouth, mat: trim, op: subtract, cylinder: {a: [1.0, 0, "=zc"], b: [1.4, 0, "=zc"], r1: 0.36, r2: 0.48}}
+  - {name: throat, mat: dark, group: vanes, cylinder: {a: [0.95, 0, "=zc"], b: [1.02, 0, "=zc"], r1: 0.42}}
+  # three vanes across the mouth (a Y split)
+  - {name: vane-1, mat: hull, group: vanes, box: {c: [1.12, 0, "=zc + 0.22"], half: [0.16, 0.04, 0.24]}}
+  - {name: vane-2, mat: hull, group: vanes, box: {c: [1.12, 0, "=zc"], half: [0.16, 0.04, 0.24]}, rot: [120, 0, 0], pivot: [1.12, 0, "=zc"]}
+  - {name: vane-3, mat: hull, group: vanes, box: {c: [1.12, 0, "=zc"], half: [0.16, 0.24, 0.04]}}
+  # the exhaust cone at the back and its nozzle
+  - {name: tail, mat: hull, cone: {a: [-0.9, 0, "=zc"], b: [-1.3, 0, "=zc"], r1: 0.38, r2: 0.24}}
+  - {name: nozzle, mat: dark, cylinder: {a: [-1.3, 0, "=zc"], b: [-1.38, 0, "=zc"], r1: 0.24}}
+  # the split-X air brakes along the back half, folded shut (the two upper ones show)
+  - {name: brake-n, mat: trim, box: {c: [-0.45, 0.24, "=zc + 0.3"], half: [0.4, 0.03, 0.14], radius: 0.01}, rot: [-45, 0, 0]}
+  - {name: brake-s, mat: trim, box: {c: [-0.45, -0.24, "=zc + 0.3"], half: [0.4, 0.03, 0.14], radius: 0.01}, rot: [45, 0, 0]}
+  # the fin on top and a side vent
+  - {name: fin, mat: trim, prism: {poly: [[-0.7, -0.04], [0.2, -0.04], [0.2, 0.04], [-0.7, 0.04]], z: ["=zc + 0.36", "=zc + 0.62"], top: [0.5, 1.0], lean: [-0.25, 0], round: 0.02}}
+  - {name: vent, mat: dark, box: {c: [-0.3, -0.4, "=zc - 0.05"], half: [0.25, 0.04, 0.08], radius: 0.01}}

@@ -1,0 +1,41 @@
+# Toppled statue (art:jedha:toppled-statue), hit box 3x3, drawn 3x4.
+# Reference: the fallen Jedi guardian heads in the Jedha desert (Rogue One): a giant hooded stone head
+# lying on its side half in the sand, the face turned to the south so it shows. The headless statue
+# (art:jedha:headless-guardian) is the body it fell from. The head comes from the kit (jedi-head).
+# Axes: x east, y north, z up, origin on the ground at the hit box's centre.
+name: jedha_toppled-statue
+art: art:jedha:toppled-statue
+palette: greybox
+kits: [../scenery/kits/deathstar-arena-jedha.yaml]
+cells: [3, 4]
+foot: [24, 52]
+footprint: 3
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+groups: {body: {}, face: {}}
+materials:
+  stone: {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  face:  {ramp: light, bands: [0.15, 0.5, 0.82]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  sand:  {ramp: bone,  bands: [0.5, 0.8, 0.97]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 3}
+box: [48, 48]
+params:
+  roll: 65
+parts:
+  - {use: jedi-head, name: head, at: [0, 0, 0], with: {s: 0.97}}
+tilt: [12, "=roll"]
+turn: -14
+sink: 0.15
+pivot: [0, 0]
+ground:
+  # sand drifted against the cowl's sides, a chip of stone broken off in the fall
+  - {name: drift-w, mat: sand, hull: {points: [[-1.45, -0.6, 0], [-0.7, -0.65, 0], [-1.4, 0.3, 0], [-0.9, 0.3, 0], [-1.1, -0.2, 0.28]], round: 0.05}}
+  - {name: drift-e, mat: sand, hull: {points: [[0.7, -0.65, 0], [1.25, -0.6, 0], [1.2, 0.0, 0], [0.8, 0.0, 0], [1.0, -0.35, 0.2]], round: 0.05}}
+  - {name: chip, mat: stone, hull: {points: [[1.05, -0.62, 0], [1.4, -0.6, 0], [1.38, -0.35, 0], [1.1, -0.38, 0], [1.25, -0.5, 0.22]], round: 0.03}}

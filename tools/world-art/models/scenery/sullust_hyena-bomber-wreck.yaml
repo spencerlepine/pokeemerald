@@ -1,0 +1,65 @@
+# Hyena bomber wreck (art:sullust:hyena-bomber-wreck), hit box 4x3, drawn 4x4.
+# Reference: the Hyena-class droid bomber (The Clone Wars): the vulture droid's bigger cousin, a long
+# fuselage with a rounded head and red eye slits at the front, and on each side a split wing, an upper
+# and a lower blade joined at the tip by a tall foot (the bracket shape seen from the front). Shot down
+# over the lava rock: it lies on its belly nose to the south, so the head, the eye slits and both
+# bracket wings face the camera; the east wing's upper blade has snapped and lies on the ground.
+# Turned a little off the grid. Axes: x east, y north, z up, origin on the ground at the hit box's
+# south edge, middle.
+name: sullust_hyena-bomber-wreck
+art: art:sullust:hyena-bomber-wreck
+palette: greybox
+cells: [4, 4]
+foot: [32, 64]
+footprint: 3
+drop: ["wing-e/upper"]
+turn: 9
+pivot: [0, 1.6]
+tilt: [-4, 0]
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  hull:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  plate: {ramp: light, bands: [0.15, 0.5, 0.82]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  rock:  {ramp: dark,  bands: [0.15, 0.45, 0.78]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 3}
+box: [60, 44]
+params:
+  wy: 1.75          # the wings' chord centre
+templates:
+  # one split wing, root at the origin, reaching out along +x for `span`: a lower blade flat on the
+  # ground, an upper blade falling from the root to the tip, and the tall foot joining them at the tip
+  wing:
+    params: {span: 1.3, up: 0.78}
+    parts:
+      - {name: lower, mat: hull, prism: {poly: [[0, -0.5], ["=span", -0.38], ["=span", 0.42], [0, 0.55]], z: [0.02, 0.14], round: 0.02}}
+      - {name: upper, mat: plate, hull: {points: [[0, -0.5, "=up"], [0, 0.55, "=up"], ["=span", -0.36, 0.42], ["=span", 0.4, 0.42],
+                                                 [0, -0.5, "=up + 0.1"], [0, 0.55, "=up + 0.1"], ["=span", -0.36, 0.52], ["=span", 0.4, 0.52]], round: 0.02}}
+      - {name: foot, mat: dark, prism: {poly: [["=span - 0.04", -0.46], ["=span + 0.14", -0.46], ["=span + 0.14", 0.5], ["=span - 0.04", 0.5]], z: [0.0, 0.6], top: [1.0, 0.8], round: 0.02}}
+parts:
+  # the fuselage, nose south, tapering to the tail, a dark spine
+  - name: body
+    mat: hull
+    hull: {points: [[-0.36, 1.05, 0.05], [0.36, 1.05, 0.05], [-0.33, 1.05, 0.8], [0.33, 1.05, 0.8],
+                    [-0.2, 2.85, 0.08], [0.2, 2.85, 0.08], [-0.16, 2.85, 0.42], [0.16, 2.85, 0.42]], round: 0.04}
+  - {name: spine, mat: dark, box: {c: [0, 1.95, 0.7], half: [0.07, 0.85, 0.06]}, rot: [0, 0, 6]}
+  # the rounded head and its eye slits, facing the camera
+  - {name: head, mat: hull, ellipsoid: {c: [0, 0.95, 0.47], r: [0.46, 0.5, 0.44]}}
+  - {name: eye-w, mat: dark, box: {c: [-0.16, 0.5, 0.6], half: [0.07, 0.06, 0.14]}}
+  - {name: eye-e, mat: dark, box: {c: [0.16, 0.5, 0.6], half: [0.07, 0.06, 0.14]}}
+  # the wings: the west one whole, the east one's upper blade snapped off
+  - {use: wing, name: wing-w, at: [-0.34, "=wy", 0], turn: 180}
+  - {use: wing, name: wing-e, at: [0.34, "=wy", 0]}
+
+ground:
+  # the snapped blade, and rock heaped where it ploughed in
+  - {name: blade, mat: plate, prism: {poly: [[0.55, 0.15], [1.55, 0.3], [1.5, 0.7], [0.5, 0.6]], z: [0.0, 0.1], round: 0.02}}
+  - {name: heap-1, mat: rock, ellipsoid: {c: [-0.55, 0.4, 0], r: [0.3, 0.18, 0.16]}}
+  - {name: heap-2, mat: rock, ellipsoid: {c: [0.1, 0.3, 0], r: [0.25, 0.14, 0.12]}}

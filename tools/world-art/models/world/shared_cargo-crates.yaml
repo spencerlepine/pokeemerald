@@ -1,0 +1,36 @@
+# Cargo crates (art:shared:cargo-crates), hit box 2x2, drawn 2x3.
+# Reference: durasteel cargo crates stacked in hangars and lots (A New Hope, Rogue One): bevelled
+# boxes with a lighter lid, a handle slot and ribs. A big crate with a smaller one on top in the west,
+# a lower one beside it in the east, a step forward.
+# Axes: x east, y north, z up; origin on the ground at the hit box's south-centre.
+name: shared_cargo-crates
+art: art:shared:cargo-crates
+palette: greybox
+kits: [../scenery/kits/shared-a.yaml]
+cells: [2, 3]
+foot: [16, 47]
+footprint: 2
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  mid:   {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  light: {ramp: light, bands: [0.15, 0.5, 0.82]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  bone:  {ramp: bone,  bands: [0.25, 0.55, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 2}
+box: [30, 30]
+parts:
+  - {use: crate, name: big, at: [-0.46, 0.35, 0], with: {w: 0.9, d: 0.75, h: 0.85}}
+  - {use: crate, name: top, at: [-0.46, 0.45, 0.85], with: {w: 0.72, d: 0.55, h: 0.5, body: bone}}
+  - {use: crate, name: east, at: [0.46, 0.12, 0], with: {w: 0.8, d: 0.8, h: 0.62, body: bone}}
+variants:
+  stack: {}
+  # a lower pile: no crate on top
+  low:
+    drop: ["top/*"]

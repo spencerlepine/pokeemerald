@@ -1,0 +1,58 @@
+# Trapdoor grate (art:new:trapdoor-grate), hit box 4x2, drawn 4x2. Jabba's throne room (Return of
+# the Jedi): the trapdoor in front of the dais that drops visitors into the rancor pit. A heavy floor
+# frame with a round grille set in it (bars over the dark pit, a raised rim and four bolts), flush with
+# the floor. Variant `open`: the two leaves have dropped, the pit gapes.
+# Axes: x east, y north from the hit box's south edge, z up; origin at the hit box's south-centre.
+name: new_trapdoor-grate
+art: art:new:trapdoor-grate
+palette: greybox
+cells: [4, 2]
+foot: [31, 31]
+scale: 0.97
+footprint: 2
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  frame: {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  bar:   {ramp: light, bands: [0.15, 0.5, 0.82]}
+  pit:   {ramp: dark,  bands: [0.3, 0.6, 0.95]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 0}
+box: [62, 30]
+groups: {body: {}, grille: {}}
+templates:
+  bar:
+    params: {x: 0}
+    parts:
+      - {name: b, mat: bar, group: grille, box: {c: [0, 0, 0.06], half: [0.07, "=0.72 * sqrt(1 - (x / 1.5) ** 2)", 0.03], radius: 0.01}}
+parts:
+  # the floor frame with an oval hole, a raised rim round it
+  - {name: frame, mat: frame, box: {c: [0, 0.98, 0.05], half: [1.9, 0.85, 0.05], radius: 0.03}}
+  - {name: hole, mat: frame, op: subtract, ellipsoid: {c: [0, 0.98, 0.04], r: [1.5, 0.72, 0.3]}}
+  - {name: rim, mat: bar, ellipsoid: {c: [0, 0.98, 0.04], r: [1.62, 0.8, 0.08]}}
+  - {name: rim-cut, mat: bar, op: subtract, ellipsoid: {c: [0, 0.98, 0.04], r: [1.48, 0.7, 0.3]}}
+  - {name: pit, mat: pit, group: grille, box: {c: [0, 0.98, 0.01], half: [1.55, 0.76, 0.01]}}
+  # the grille: bars running north-south across the hole, a beam east-west
+  - {use: bar, name: bar-1, at: [-1.05, 0.98, 0], with: {x: -1.05}}
+  - {use: bar, name: bar-2, at: [-0.63, 0.98, 0], with: {x: -0.63}}
+  - {use: bar, name: bar-3, at: [-0.21, 0.98, 0], with: {x: -0.21}}
+  - {use: bar, name: bar-4, at: [0.21, 0.98, 0], with: {x: 0.21}}
+  - {use: bar, name: bar-5, at: [0.63, 0.98, 0], with: {x: 0.63}}
+  - {use: bar, name: bar-6, at: [1.05, 0.98, 0], with: {x: 1.05}}
+  - {name: beam, mat: bar, group: grille, box: {c: [0, 0.98, 0.08], half: [1.5, 0.07, 0.04], radius: 0.01}}
+  - {name: bolt-w, mat: bar, ellipsoid: {c: [-1.75, 0.98, 0.09], r: [0.09, 0.09, 0.05]}}
+  - {name: bolt-e, mat: bar, ellipsoid: {c: [1.75, 0.98, 0.09], r: [0.09, 0.09, 0.05]}}
+  - {name: bolt-sw, mat: bar, ellipsoid: {c: [-1.7, 0.22, 0.09], r: [0.09, 0.07, 0.05]}}
+  - {name: bolt-se, mat: bar, ellipsoid: {c: [1.7, 0.22, 0.09], r: [0.09, 0.07, 0.05]}}
+  - {name: bolt-nw, mat: bar, ellipsoid: {c: [-1.7, 1.74, 0.09], r: [0.09, 0.07, 0.05]}}
+  - {name: bolt-ne, mat: bar, ellipsoid: {c: [1.7, 1.74, 0.09], r: [0.09, 0.07, 0.05]}}
+variants:
+  closed: {}
+  # the leaves have dropped: only the hanging edges of the two leaves show at the rim
+  open:
+    drop: ["bar-*", "beam"]

@@ -1,0 +1,38 @@
+# Interior prop kit (group shared-b1): templates shared by the interior props in models/world/new_*.yaml.
+# Axes: x east, y north, z up; each template stands on z = 0 with its origin at the south-west corner
+# of its own plan unless it says otherwise. Materials are named by the model that uses the template.
+templates:
+  # A sloped console desk, its keyboard face tilted toward the south (the camera), a screen hood at the
+  # back and a dark kick plate. `w` wide (x), `d` deep (y), `h` the front edge height.
+  console-desk:
+    params: {w: 1.0, d: 0.7, h: 0.7, back: 1.05, body: body, face: face, dark: dark, glass: glass, screen: true}
+    parts:
+      - name: base
+        mat: "=body"
+        extrude: {axis: x, profile: [[0.06, 0], ["=d", 0], ["=d", "=back"], ["=d * 0.45", "=back - 0.05"], [0.02, "=h"], [0.02, "=h - 0.12"]], span: [0.02, "=w - 0.02"], round: 0.035}
+      - name: face
+        mat: "=face"
+        extrude: {axis: x, profile: [[0.0, "=h - 0.02"], [0.06, "=h + 0.02"], ["=d * 0.45", "=back - 0.02"], ["=d * 0.45 - 0.05", "=back - 0.07"]], span: [0.08, "=w - 0.08"], round: 0.01}
+      - {name: kick, mat: "=dark", box: {c: ["=w / 2", 0.07, 0.06], half: ["=w / 2 - 0.08", 0.03, 0.06], radius: 0.01}}
+      - {name: keys, mat: "=dark", box: {c: ["=w / 2", "=d * 0.14", "=h + 0.06"], half: ["=w / 2 - 0.22", 0.05, 0.03], radius: 0.01}, rot: [0, 0, -35]}
+      - {name: lamps-l, mat: "=dark", box: {c: ["=w * 0.3", "=d * 0.32", "=h + 0.2"], half: ["=w * 0.12", 0.03, 0.025], radius: 0.01}, rot: [0, 0, -35]}
+      - {name: lamps-r, mat: "=dark", box: {c: ["=w * 0.7", "=d * 0.32", "=h + 0.2"], half: ["=w * 0.12", 0.03, 0.025], radius: 0.01}, rot: [0, 0, -35]}
+  # A two-tier bunk bed running north-south: four corner posts, two mattresses with a pillow at the
+  # north end and a folded blanket at the south, a foot rail on each tier. Origin at its south-west
+  # corner. `w` wide (x), `l` long (y).
+  bunk:
+    params: {w: 1.2, l: 2.4, z1: 0.38, z2: 1.25, post: 1.5, frame: dark, bed: bed, pillow: pillow, blanket: blanket}
+    parts:
+      - {name: post-sw, mat: "=frame", box: {c: [0.05, 0.05, "=post / 2"], half: [0.05, 0.05, "=post / 2"], radius: 0.01}}
+      - {name: post-se, mat: "=frame", box: {c: ["=w - 0.05", 0.05, "=post / 2"], half: [0.05, 0.05, "=post / 2"], radius: 0.01}}
+      - {name: post-nw, mat: "=frame", box: {c: [0.05, "=l - 0.05", "=post / 2"], half: [0.05, 0.05, "=post / 2"], radius: 0.01}}
+      - {name: post-ne, mat: "=frame", box: {c: ["=w - 0.05", "=l - 0.05", "=post / 2"], half: [0.05, 0.05, "=post / 2"], radius: 0.01}}
+      - {name: rail-1, mat: "=frame", box: {c: ["=w / 2", "=l / 2", "=z1 - 0.06"], half: ["=w / 2", "=l / 2", 0.06], radius: 0.01}}
+      - {name: rail-2, mat: "=frame", box: {c: ["=w / 2", "=l / 2", "=z2 - 0.06"], half: ["=w / 2", "=l / 2", 0.06], radius: 0.01}}
+      - {name: mat-1, mat: "=bed", box: {c: ["=w / 2", "=l / 2", "=z1 + 0.06"], half: ["=w / 2 - 0.08", "=l / 2 - 0.08", 0.08], radius: 0.05}}
+      - {name: mat-2, mat: "=bed", box: {c: ["=w / 2", "=l / 2", "=z2 + 0.06"], half: ["=w / 2 - 0.08", "=l / 2 - 0.08", 0.08], radius: 0.05}}
+      - {name: pil-2, mat: "=pillow", box: {c: ["=w / 2", "=l - 0.35", "=z2 + 0.18"], half: ["=w / 2 - 0.2", 0.17, 0.07], radius: 0.06}}
+      - {name: blk-2, mat: "=blanket", box: {c: ["=w / 2", "=l * 0.27", "=z2 + 0.15"], half: ["=w / 2 - 0.1", "=l * 0.16", 0.05], radius: 0.04}}
+      - {name: blk-1, mat: "=blanket", box: {c: ["=w / 2", "=l * 0.27", "=z1 + 0.15"], half: ["=w / 2 - 0.1", "=l * 0.16", 0.05], radius: 0.04}}
+      - {name: foot-1, mat: "=frame", box: {c: ["=w / 2", 0.05, "=z1 + 0.22"], half: ["=w / 2", 0.03, 0.04], radius: 0.01}}
+      - {name: foot-2, mat: "=frame", box: {c: ["=w / 2", 0.05, "=z2 + 0.22"], half: ["=w / 2", 0.03, 0.04], radius: 0.01}}

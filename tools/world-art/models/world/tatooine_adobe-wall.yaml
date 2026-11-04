@@ -1,0 +1,59 @@
+# Adobe wall (art:tatooine:adobe-wall), hit box 1x1, drawn 1x1: the Tatooine fence kit.
+# Reference: the low rounded mud walls of Mos Espa and Anchorhead (adobe-wall__web_1/2): thick, soft-edged,
+# a rounded cap, no planks. Straight runs tile edge to edge east-west; the corner and end pieces turn or
+# stop the run; the gate post is a taller rounded pillar either side of an opening.
+# Axes: x east, y north, z up, origin on the ground at the cell's south-west corner + 0.5 m.
+name: tatooine_adobe-wall
+art: art:tatooine:adobe-wall
+palette: greybox
+cells: [1, 1]
+foot: [8, 15]
+footprint: 1
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  adobe: {ramp: light, bands: [0.3, 0.6, 0.88]}
+  cap:   {ramp: light, bands: [0.2, 0.5, 0.86]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 1}
+box: [16, 16]
+params: {t: 0.15, h: 0.4, yc: 0.2}
+templates:
+  # one run of wall along x from x0 to x1: a slightly battered body and a rounded cap
+  run-x:
+    params: {x0: -0.5, x1: 0.5}
+    parts:
+      - {name: body, mat: adobe, prism: {poly: [["=x0", "=yc - t"], ["=x1", "=yc - t"], ["=x1", "=yc + t"], ["=x0", "=yc + t"]], z: [0, "=h"], top: 0.85}}
+      - {name: cap, mat: cap, box: {c: ["=(x0 + x1) / 2", "=yc", "=h"], half: ["=(x1 - x0) / 2", "=t * 0.8", 0.06], radius: 0.05}}
+  # one run along y (north), drawn so its cap spans the cell from bottom to top and stacks seamlessly
+  run-y:
+    params: {y0: -0.4, y1: 0.6}
+    parts:
+      - {name: body, mat: adobe, prism: {poly: [["=-t", "=y0"], ["=t", "=y0"], ["=t", "=y1"], ["=-t", "=y1"]], z: [0, "=h"], top: 0.85}}
+      - {name: cap, mat: cap, box: {c: [0, "=(y0 + y1) / 2", "=h"], half: ["=t * 0.8", "=(y1 - y0) / 2", 0.06], radius: 0.05}}
+parts:
+  - {use: run-x, name: run}
+variants:
+  # an east-west run; tiles edge to edge
+  straight: {}
+  # a north-south run; stacks edge to edge
+  vertical:
+    parts:
+      - {use: run-y, name: run}
+  # the run comes in from the west and turns north (mirror for the other corners)
+  corner:
+    parts:
+      - {use: run-x, name: run, with: {x0: -0.5, x1: "=t"}}
+      - {use: run-y, name: up, with: {y0: "=yc", y1: 0.6}}
+  # a gate pillar: the run ends in a taller rounded post (mirror it for the far side of the gate)
+  gate-post:
+    parts:
+      - {use: run-x, name: run, with: {x0: -0.5, x1: 0.0}}
+      - {name: post, mat: adobe, prism: {poly: [[-0.02, 0.04], [0.36, 0.04], [0.36, 0.36], [-0.02, 0.36]], z: [0, 0.52], top: 0.8}}
+      - {name: post-cap, mat: cap, ellipsoid: {c: [0.17, 0.2, 0.52], r: [0.17, 0.15, 0.08]}}

@@ -1,0 +1,32 @@
+# Stilt walkway (art:kamino:stilt-walkway), one 1x1 tile of the walkway kit (east-west run).
+# Reference: the walkways between Tipoca City's domes (Attack of the Clones): a grey metal deck on
+# thin stilts above the sea, panel joints across it, a low rail on the north side. The deck runs edge
+# to edge so tiles join. Axes: x east, y north, z up, origin on the sea at the cell's centre.
+name: kamino_stilt-walkway
+art: art:kamino:stilt-walkway
+palette: greybox
+cells: [1, 1]
+foot: [8, 13]
+footprint: 1
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  deck: {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  rail: {ramp: light, bands: [0.15, 0.5, 0.82]}
+  dark: {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+drop_shadow:
+  - {dx: 0, dy: 1, color: shade, below: 1}
+box: [16, 16]
+parts:
+  - {name: deck, mat: deck, box: {c: [0, -0.05, 0.22], half: [0.5, 0.36, 0.06], radius: 0.0}}
+  - {name: joint, mat: dark, box: {c: [0, -0.05, 0.285], half: [0.03, 0.36, 0.01], radius: 0.0}}
+  - {name: edge, mat: dark, box: {c: [0, -0.42, 0.2], half: [0.5, 0.02, 0.05], radius: 0.0}}
+  - {name: stilt-w, mat: dark, box: {c: [-0.3, -0.3, 0.08], half: [0.06, 0.06, 0.1], radius: 0.0}}
+  - {name: stilt-e, mat: dark, box: {c: [0.3, -0.3, 0.08], half: [0.06, 0.06, 0.1], radius: 0.0}}
+  - {name: rail, mat: rail, box: {c: [0, 0.27, 0.48], half: [0.5, 0.03, 0.03], radius: 0.0}}
+  - {name: post, mat: rail, box: {c: [0, 0.27, 0.38], half: [0.03, 0.03, 0.1], radius: 0.0}}

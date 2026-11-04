@@ -1,0 +1,59 @@
+# Parked landspeeder (art:shared:parked-landspeeder), hit box 2x1, drawn 2x2.
+# Reference: Luke's X-34 (A New Hope; databank, set photos): a long flat open-top body with a wedge
+# nose, a split windscreen in front of the two seats, a ribbed grille on the nose's flank, three
+# turbine engines at the back (one each side, one on a pylon above). Modelled at full size, nose
+# east, hovering, then scaled to two cells. Axes: x east, y north, z up; origin on the ground under
+# the body's centre.
+name: shared_parked-landspeeder
+art: art:shared:parked-landspeeder
+palette: greybox
+cells: [2, 2]
+foot: [16, 25]
+footprint: 1
+scale: 0.47
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  body:   {ramp: mid,   bands: [0.1, 0.45, 0.8]}
+  light:  {ramp: light, bands: [0.3, 0.6, 0.9]}
+  dark:   {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  glass:  {ramp: dark,  bands: [0.1, 0.4, 0.75]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 1}
+box: [30, 14]
+params:
+  hz: 0.35           # hover height of the hull's belly
+parts:
+  # the hull: a flat slab behind, a wedge nose in front
+  - name: hull
+    mat: body
+    extrude: {axis: x, span: [-1.5, 0.5], profile: [[-0.72, "=hz"], [0.72, "=hz"], [0.78, "=hz + 0.42"], [-0.78, "=hz + 0.42"]], round: 0.05}
+  - name: nose
+    mat: body
+    extrude: {axis: x, span: [0.5, 1.75], profile: [[-0.72, "=hz"], [0.72, "=hz"], [0.78, "=hz + 0.42"], [-0.78, "=hz + 0.42"]], end: [0.6, 0.45], lean: [0, -0.1], round: 0.05}
+  # the open cockpit and its windscreen
+  - {name: cockpit, mat: dark, box: {c: [-0.1, 0.05, "=hz + 0.44"], half: [0.45, 0.48, 0.05], radius: 0.03}}
+  - {name: seat, mat: body, box: {c: [-0.55, 0.05, "=hz + 0.6"], half: [0.12, 0.45, 0.14], radius: 0.04}}
+  - name: screen
+    mat: glass
+    prism: {poly: [[0.38, -0.6], [0.52, -0.6], [0.52, 0.65], [0.38, 0.65]], z: ["=hz + 0.45", "=hz + 0.78"], top: [0.4, 0.9], lean: [-0.12, 0], round: 0.02}
+  # the ribbed grille on the south flank of the nose
+  - {name: grille, mat: dark, box: {c: [1.0, -0.78, "=hz + 0.22"], half: [0.45, 0.04, 0.12], radius: 0.02}}
+  # three turbines: south, north, and one on a pylon above the north side
+  - {name: eng-s, mat: light, cylinder: {a: [-1.95, -0.86, "=hz + 0.35"], b: [-0.75, -0.86, "=hz + 0.35"], r1: 0.27}}
+  - {name: eng-n, mat: light, cylinder: {a: [-1.95, 0.86, "=hz + 0.35"], b: [-0.75, 0.86, "=hz + 0.35"], r1: 0.27}}
+  - {name: pylon, mat: body, box: {c: [-1.35, 0.4, "=hz + 0.7"], half: [0.25, 0.08, 0.25], radius: 0.03}}
+  - {name: eng-top, mat: light, cylinder: {a: [-2.0, 0.4, "=hz + 1.05"], b: [-0.85, 0.4, "=hz + 1.05"], r1: 0.25}}
+  # the intakes (front rims) and exhausts, dark
+  - {name: in-s, mat: dark, cylinder: {a: [-0.78, -0.86, "=hz + 0.35"], b: [-0.7, -0.86, "=hz + 0.35"], r1: 0.2}}
+  - {name: in-n, mat: dark, cylinder: {a: [-0.78, 0.86, "=hz + 0.35"], b: [-0.7, 0.86, "=hz + 0.35"], r1: 0.2}}
+  - {name: in-top, mat: dark, cylinder: {a: [-0.88, 0.4, "=hz + 1.05"], b: [-0.8, 0.4, "=hz + 1.05"], r1: 0.18}}
+  - {name: ex-s, mat: dark, cylinder: {a: [-2.0, -0.86, "=hz + 0.35"], b: [-1.92, -0.86, "=hz + 0.35"], r1: 0.2}}
+ground:
+  # the dark ground under the hover gap
+  - {name: hover-shade, mat: dark, prism: {poly: [[-0.85, -0.3], [0.7, -0.3], [0.8, -0.1], [0.7, 0.25], [-0.85, 0.25]], z: [0, 0.02], round: 0.0}}

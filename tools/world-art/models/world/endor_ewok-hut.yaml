@@ -1,0 +1,46 @@
+# Ewok hut (art:endor:ewok-hut), hit box 3x3, drawn 3x5.
+# Reference: the huts of Bright Tree Village (Return of the Jedi; the Ralph McQuarrie painting
+# wiki/art/concept/endor/ewok-hut__web_3.jpg). A round hut of upright logs under a tall shaggy thatch
+# cone in three layers, a low round doorway on the south, standing on a round plank platform with a
+# log rim. Retheme of the Fortree tree house. Axes: x east, y north, z up, origin on the ground at
+# the hut's centre (the deck is 0.24 m thick).
+name: endor_ewok-hut
+art: art:endor:ewok-hut
+palette: greybox
+cells: [3, 5]
+foot: [24, 55]
+footprint: 3
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  thatch: {ramp: bone, bands: [0.35, 0.62, 0.9]}
+  thatch2: {ramp: mid, bands: [0.25, 0.55, 0.88]}
+  wall:   {ramp: mid,  bands: [0.1, 0.4, 0.75]}
+  deck:   {ramp: mid,  bands: [0.25, 0.55, 0.85]}
+  rim:    {ramp: dark, bands: [0.1, 0.45, 0.8]}
+  inside: {ramp: dark, bands: [0.5, 0.8, 0.95]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 3}
+box: [48, 48]
+parts:
+  # the platform: a round plank deck with a log rim
+  - {name: deck, mat: deck, cylinder: {a: [0, 0, 0.08], b: [0, 0, 0.24], r1: 1.32}}
+  - {name: deck-rim, mat: rim, cylinder: {a: [0, 0, 0.0], b: [0, 0, 0.16], r1: 1.37}}
+  # plank seams across the deck in front of the hut
+  - {name: seam-1, mat: rim, box: {c: [0, -0.85, 0.24], half: [0.95, 0.025, 0.01]}}
+  - {name: seam-2, mat: rim, box: {c: [0, -1.1, 0.24], half: [0.6, 0.025, 0.01]}}
+  - {name: seam-3, mat: rim, box: {c: [0, 1.0, 0.24], half: [0.9, 0.025, 0.01]}}
+  # the log wall and the doorway, the hut set back so the deck shows in front of it
+  - {name: wall, mat: wall, prism: {poly: [[0.831, 0.644], [0.344, 1.131], [-0.344, 1.131], [-0.831, 0.644], [-0.831, -0.044], [-0.344, -0.531], [0.344, -0.531], [0.831, -0.044]], z: [0.24, 1.5], round: 0.03}}
+  - {name: door-frame, mat: rim, box: {c: [0, -0.55, 0.68], half: [0.3, 0.06, 0.44], radius: 0.12}}
+  - {name: door, mat: inside, box: {c: [0, -0.59, 0.62], half: [0.21, 0.05, 0.38], radius: 0.1}}
+  # the thatch cone in three shaggy layers (eight-sided, low poly), each over the one below
+  - {name: thatch-1, mat: thatch, prism: {poly: [[1.035, 0.729], [0.429, 1.335], [-0.429, 1.335], [-1.035, 0.729], [-1.035, -0.129], [-0.429, -0.735], [0.429, -0.735], [1.035, -0.129]], z: [1.3, 1.85], top: 0.62, round: 0.04}}
+  - {name: thatch-2, mat: thatch2, prism: {poly: [[0.739, 0.606], [0.306, 1.039], [-0.306, 1.039], [-0.739, 0.606], [-0.739, -0.006], [-0.306, -0.439], [0.306, -0.439], [0.739, -0.006]], z: [1.75, 2.3], top: 0.5, round: 0.04}}
+  - {name: thatch-3, mat: thatch, prism: {poly: [[0.462, 0.491], [0.191, 0.762], [-0.191, 0.762], [-0.462, 0.491], [-0.462, 0.109], [-0.191, -0.162], [0.191, -0.162], [0.462, 0.109]], z: [2.2, 2.8], top: 0.05, round: 0.03}}
+  - {name: tip, mat: rim, cylinder: {a: [0, 0.3, 2.7], b: [0, 0.3, 3.0], r1: 0.05}}

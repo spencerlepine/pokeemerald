@@ -1,0 +1,40 @@
+# Star Destroyer bridge tower (art:grand-arena:star-destroyer-bridge), hit box 6x4, drawn 6x8.
+# Reference: the Imperial Star Destroyer's command tower (A New Hope): stepped decks, a narrow neck,
+# the T-shaped bridge with its window band, two shield-generator domes. Lando cut it off a scrapped
+# ship and set it up as a trophy on a slab of its own hull plating, the bridge windows to the south,
+# a plaque on the slab ("Won it at sabacc"). The tower comes from the kit (isd-tower).
+# Axes: x east, y north, z up, origin on the ground at the hit box's centre.
+name: grand-arena_star-destroyer-bridge
+art: art:grand-arena:star-destroyer-bridge
+palette: greybox
+kits: [kits/deathstar-arena-jedha.yaml]
+cells: [6, 8]
+foot: [48, 96]
+footprint: 4
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  hull:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  plate: {ramp: light, bands: [0.15, 0.5, 0.82]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  slab:  {ramp: mid,   bands: [0.4, 0.7, 0.95]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 4}
+box: [96, 64]
+params:
+  s: 0.95
+parts:
+  # the slab of hull plating it stands on: a wedge with a sloped front, the plaque on it
+  - name: slab
+    mat: slab
+    extrude: {axis: x, span: [-2.8, 2.8], end: 1.0, profile: [[-1.75, 0], [1.4, 0], [1.4, 0.5], [-1.25, 0.5], [-1.75, 0.15]], round: 0.05}
+  - {name: seam-1, mat: dark, box: {c: [-1.9, 0.1, 0.5], half: [0.04, 1.2, 0.02]}}
+  - {name: seam-2, mat: dark, box: {c: [1.9, 0.1, 0.5], half: [0.04, 1.2, 0.02]}}
+  - {name: plaque, mat: plate, box: {c: [0, -1.52, 0.2], half: [0.55, 0.06, 0.13], radius: 0.01}}
+  - {name: plaque-text, mat: dark, box: {c: [0, -1.58, 0.2], half: [0.4, 0.02, 0.03]}}
+  - {use: isd-tower, name: tower, at: [0, 0.35, 0.5], with: {s: "=s", nh: 1.6}}

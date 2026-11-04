@@ -1,0 +1,50 @@
+# Prayer candles (art:jedha:prayer-candles), hit box 1x1, drawn 1x1. Replaces Mt. Pyre's graves.
+# Reference: the Holy City of Jedha (Rogue One): candle shrines of the Church of the Force. A low stepped
+# sandstone altar filling the cell, rows of stubby candles on its steps, a kyber crystal shard at the back.
+# Axes: x east, y north, z up, origin on the ground at the cell's centre; 1 m = 1 cell = 16 px.
+name: jedha_prayer-candles
+art: art:jedha:prayer-candles
+palette: greybox
+cells: [1, 1]
+foot: [7, 10]
+footprint: 1
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  stone:  {ramp: mid,   bands: [0.4, 0.7, 0.95]}
+  candle: {ramp: bone,  bands: [0.05, 0.25, 0.55]}
+  flame:  {ramp: light, bands: [0.0, 0.1, 0.3]}
+  kyber:  {ramp: light, bands: [0.15, 0.5, 0.82]}
+  dark:   {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 1}
+box: [16, 16]
+templates:
+  candle:
+    params: {h: 0.16}
+    parts:
+      - {name: wax, mat: candle, cylinder: {a: [0, 0, 0], b: [0, 0, "=h"], r1: 0.065}}
+      - {name: flame, mat: flame, ellipsoid: {c: [0, 0, "=h + 0.04"], r: [0.025, 0.025, 0.045]}}
+parts:
+  # the altar: two sandstone steps, the back one higher
+  - {name: step-low, mat: stone, prism: {poly: [[-0.38, -0.3], [0.47, -0.3], [0.47, 0.0], [-0.38, 0.0]], z: [0, 0.1], round: 0.03}}
+  - {name: step-high, mat: stone, prism: {poly: [[-0.36, -0.08], [0.42, -0.08], [0.42, 0.14], [-0.36, 0.14]], z: [0, 0.24], top: 0.95, round: 0.03}}
+  # the kyber shard in a little niche at the back
+  - {name: shard, mat: kyber, hull: {points: [[-0.07, 0.0, 0.24], [0.07, 0.0, 0.24], [0, 0.08, 0.24], [0.01, 0.03, 0.5]], round: 0.01}}
+  # rows of candles on both steps
+  - {use: candle, name: c1, at: [-0.29, -0.19, 0.1], with: {h: 0.2}}
+  - {use: candle, name: c2, at: [-0.11, -0.2, 0.1], with: {h: 0.14}}
+  - {use: candle, name: c3, at: [0.11, -0.19, 0.1], with: {h: 0.22}}
+  - {use: candle, name: c4, at: [0.32, -0.2, 0.1], with: {h: 0.16}}
+  - {use: candle, name: c5, at: [-0.3, 0.04, 0.24], with: {h: 0.16}}
+  - {use: candle, name: c6, at: [0.28, 0.04, 0.24], with: {h: 0.2}}
+variants:
+  lit: {}
+  # burnt out: the candles stubs, no flames
+  burnt-out:
+    drop: ["c1/flame", "c2/flame", "c3/flame", "c4/flame", "c5/flame", "c6/flame"]

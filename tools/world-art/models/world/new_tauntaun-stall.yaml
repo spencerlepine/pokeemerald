@@ -1,0 +1,85 @@
+# Tauntaun stall (art:new:tauntaun-stall), hit box 12x2, drawn 12x4. Hoth tauntaun shelter (The
+# Empire Strikes Back): the Echo Base pens, set against the north wall. Four stalls in a row: a
+# ribbed back panel, plank partitions between them, a straw floor, a feed trough, and a gate bar
+# across each front. Two tauntauns stand in their stalls facing out: thick white bodies on strong
+# hind legs, long snouts, curled horns. Variant `empty`: the pens with no animals.
+# Axes: x east, y north from the hit box's south edge, z up; origin at the hit box's south-centre.
+name: new_tauntaun-stall
+art: art:new:tauntaun-stall
+palette: greybox
+cells: [12, 4]
+foot: [96, 63]
+footprint: 2
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  panel: {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  rail:  {ramp: light, bands: [0.15, 0.5, 0.82]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  straw: {ramp: bone,  bands: [0.25, 0.55, 0.9]}
+  fur:   {ramp: light, bands: [0.2, 0.5, 0.85]}
+  horn:  {ramp: mid,   bands: [0.15, 0.45, 0.8]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 2}
+box: [190, 30]
+templates:
+  # one stall, 3 m wide, centred on x = 0
+  stall:
+    parts:
+      - {name: straw, mat: straw, box: {c: [0, 1.0, 0.03], half: [1.36, 0.85, 0.03], radius: 0.02}}
+      - {name: back, mat: panel, box: {c: [0, 1.88, 0.85], half: [1.38, 0.1, 0.85], radius: 0.03}}
+      - {name: rib-1, mat: dark, box: {c: [-0.75, 1.77, 0.85], half: [0.05, 0.02, 0.78]}}
+      - {name: rib-2, mat: dark, box: {c: [0.75, 1.77, 0.85], half: [0.05, 0.02, 0.78]}}
+      - {name: lamp, mat: rail, box: {c: [0, 1.77, 1.48], half: [0.3, 0.03, 0.06], radius: 0.02}}
+      - {name: trough, mat: dark, box: {c: [0.75, 1.55, 0.25], half: [0.5, 0.18, 0.12], radius: 0.03}}
+      - {name: feed, mat: straw, ellipsoid: {c: [0.75, 1.55, 0.36], r: [0.42, 0.13, 0.06]}}
+      - {name: gate, mat: rail, box: {c: [0, 0.18, 0.85], half: [1.38, 0.05, 0.06], radius: 0.02}}
+      - {name: gate-lo, mat: rail, box: {c: [0, 0.18, 0.45], half: [1.38, 0.05, 0.05], radius: 0.02}}
+  divider:
+    parts:
+      - {name: wall, mat: panel, box: {c: [0, 1.0, 0.6], half: [0.08, 0.85, 0.6], radius: 0.03}}
+      - {name: post, mat: rail, box: {c: [0, 0.16, 0.65], half: [0.1, 0.1, 0.65], radius: 0.03}}
+      - {name: cap, mat: rail, box: {c: [0, 1.0, 1.22], half: [0.1, 0.85, 0.04], radius: 0.02}}
+  # a tauntaun standing in profile, facing east (+x), origin under its hips
+  tauntaun:
+    parts:
+      - {name: tail, mat: fur, cone: {a: [-0.35, 0, 0.75], b: [-0.95, 0, 0.18], r1: 0.15, r2: 0.04}}
+      - {name: thigh-n, mat: fur, ellipsoid: {c: [-0.1, 0.2, 0.75], r: [0.36, 0.17, 0.38]}}
+      - {name: shin-n, mat: horn, cylinder: {a: [-0.05, 0.22, 0.5], b: [0.1, 0.22, 0.05], r1: 0.09, r2: 0.07}}
+      - {name: foot-n, mat: horn, ellipsoid: {c: [0.2, 0.22, 0.05], r: [0.22, 0.1, 0.05]}}
+      - {name: body, mat: fur, ellipsoid: {c: [0.05, 0, 1.25], r: [0.42, 0.36, 0.58]}, rot: [0, 0, 0]}
+      - {name: thigh-s, mat: fur, ellipsoid: {c: [-0.1, -0.2, 0.75], r: [0.38, 0.17, 0.4]}}
+      - {name: shin-s, mat: horn, cylinder: {a: [-0.05, -0.24, 0.5], b: [0.12, -0.24, 0.05], r1: 0.1, r2: 0.08}}
+      - {name: foot-s, mat: horn, ellipsoid: {c: [0.22, -0.24, 0.05], r: [0.24, 0.1, 0.05]}}
+      - {name: arm-s, mat: fur, cylinder: {a: [0.3, -0.22, 1.42], b: [0.5, -0.22, 1.15], r1: 0.08, r2: 0.06}}
+      - {name: neck, mat: fur, cylinder: {a: [0.18, 0, 1.6], b: [0.4, 0, 2.0], r1: 0.22, r2: 0.16}}
+      - {name: head, mat: fur, ellipsoid: {c: [0.5, 0, 2.06], r: [0.3, 0.22, 0.22]}}
+      - {name: snout, mat: fur, cone: {a: [0.6, 0, 2.04], b: [1.05, 0, 1.92], r1: 0.17, r2: 0.11}}
+      - {name: nose, mat: horn, ellipsoid: {c: [1.05, 0, 1.92], r: [0.07, 0.11, 0.1]}}
+      - {name: eye, mat: dark, ellipsoid: {c: [0.62, -0.19, 2.14], r: [0.05, 0.03, 0.05]}}
+      # the curled horn on the near (south) side: back over the head, then down and forward
+      - {name: horn-1, mat: dark, cylinder: {a: [0.45, -0.2, 2.24], b: [0.22, -0.26, 2.38], r1: 0.07, r2: 0.065}}
+      - {name: horn-2, mat: dark, cylinder: {a: [0.22, -0.26, 2.38], b: [0.08, -0.28, 2.12], r1: 0.065, r2: 0.055}}
+      - {name: horn-3, mat: dark, cylinder: {a: [0.08, -0.28, 2.12], b: [0.24, -0.26, 1.94], r1: 0.055, r2: 0.035}}
+      - {name: horn-far, mat: horn, cylinder: {a: [0.4, 0.17, 2.2], b: [0.22, 0.22, 2.3], r1: 0.06, r2: 0.05}}
+parts:
+  - {use: stall, name: st-1, at: [-4.5, 0, 0]}
+  - {use: stall, name: st-2, at: [-1.5, 0, 0]}
+  - {use: stall, name: st-3, at: [1.5, 0, 0]}
+  - {use: stall, name: st-4, at: [4.5, 0, 0]}
+  - {use: divider, name: dv-0, at: [-5.8, 0, 0]}
+  - {use: divider, name: dv-1, at: [-3.0, 0, 0]}
+  - {use: divider, name: dv-2, at: [0.0, 0, 0]}
+  - {use: divider, name: dv-3, at: [3.0, 0, 0]}
+  - {use: divider, name: dv-4, at: [5.7, 0, 0]}
+  - {use: tauntaun, name: tt-1, at: [-4.6, 0.95, 0], turn: -15}
+  - {use: tauntaun, name: tt-3, at: [1.4, 0.95, 0], turn: 195}
+variants:
+  occupied: {}
+  empty:
+    drop: ["tt-*"]

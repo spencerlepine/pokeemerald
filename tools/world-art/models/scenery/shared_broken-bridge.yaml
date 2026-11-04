@@ -1,0 +1,88 @@
+# Broken bridge (art:shared:broken-bridge), hit box 3x1, drawn 3x2.
+# A plank bridge that ends in mid-air: it leaves the bank on a stone abutment, runs out on two
+# stringers with a post-and-rail on each side, then stops: the last planks are gone or hang down, one
+# stringer is snapped and droops, the end post leans out. Material is left neutral (wood, rope,
+# durasteel or stone come with the planet's final art).
+# Bridge axes: x from the bank (-L/2) out to the broken end (+L/2), y across, z up; origin on the
+# water/ground under the middle of the span. 1 m = 1 cell = 16 px.
+# Facing e/w: it runs east (w is the mirror). Facing n: it runs north, away from the camera.
+# Facing s: it runs south, the broken end toward the camera.
+name: shared_broken-bridge
+art: art:shared:broken-bridge
+palette: greybox
+cells: [3, 2]
+foot: [24, 23]
+footprint: 1
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  plank: {ramp: light, bands: [0.2, 0.5, 0.85]}
+  beam:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  post:  {ramp: mid,   bands: [0.1, 0.45, 0.8]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  stone: {ramp: mid,   bands: [0.3, 0.6, 0.9]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 1}
+box: [44, 12]
+params:
+  L: 2.78          # length of what is left of the span
+  W: 0.78          # deck width
+  dz: 0.36         # deck height
+  rh: 0.36         # rail height above the deck
+  n: 9             # planks across the full span
+templates:
+  plank:
+    params: {i: 0, len: 1.0}
+    parts:
+      - {name: p, mat: plank, box: {c: ["=-L/2 + (i + 0.5) * L / n", 0, "=dz"], half: ["=L / n / 2 - 0.025", "=W / 2 * len", 0.04], radius: 0.012}}
+  post:
+    params: {px: 0, side: 1}
+    parts:
+      - {name: p, mat: post, box: {c: ["=px", "=side * (W / 2 - 0.02)", "=dz + rh / 2"], half: [0.05, 0.05, "=rh / 2 + 0.03"], radius: 0.015}}
+parts:
+  # the bank abutment
+  - {name: abutment, mat: stone, box: {c: ["=-L/2 + 0.12", 0, "=dz / 2"], half: [0.16, "=W / 2 + 0.06", "=dz / 2 + 0.02"], radius: 0.03}}
+  # two stringers under the deck; the south one snaps short and droops
+  - {name: stringer-n, mat: beam, box: {c: ["=-L/2 + (L - 0.25) / 2", "=W / 2 - 0.1", "=dz - 0.09"], half: ["=(L - 0.25) / 2", 0.06, 0.06], radius: 0.015}}
+  - {name: stringer-s, mat: beam, box: {c: ["=-L/2 + (L * 0.72) / 2", "=-W / 2 + 0.1", "=dz - 0.09"], half: ["=L * 0.72 / 2", 0.06, 0.06], radius: 0.015}}
+  - {name: droop, mat: beam, box: {c: ["=L * 0.22 + 0.25", "=-W / 2 + 0.1", "=dz - 0.25"], half: [0.28, 0.055, 0.055], radius: 0.015}, rot: [32, 0, 0]}
+  # a pier under the middle of the span
+  - {name: pier, mat: dark, box: {c: [-0.2, 0, "=dz / 2 - 0.02"], half: [0.07, "=W / 2 - 0.08", "=dz / 2"], radius: 0.02}}
+  # the deck planks, the last ones broken
+  - {use: plank, name: k0, with: {i: 0}}
+  - {use: plank, name: k1, with: {i: 1}}
+  - {use: plank, name: k2, with: {i: 2}}
+  - {use: plank, name: k3, with: {i: 3}}
+  - {use: plank, name: k4, with: {i: 4}}
+  - {use: plank, name: k5, with: {i: 5}}
+  - {use: plank, name: k6, with: {i: 6}}
+  # plank 7 snapped short at the south, plank 8 hangs from the north stringer
+  - {name: k7, mat: plank, box: {c: ["=-L/2 + 7.5 * L / n", "=W * 0.18", "=dz"], half: ["=L / n / 2 - 0.025", "=W * 0.32", 0.04], radius: 0.012}}
+  - {name: k8, mat: plank, box: {c: ["=-L/2 + 8.3 * L / n", "=W * 0.3", "=dz - 0.14"], half: ["=L / n / 2 - 0.03", "=W * 0.2", 0.035], radius: 0.012}, rot: [0, 0, 40]}
+  # rails: posts on both sides, a rail along the top; the end post leans out
+  - {use: post, name: ps0, with: {px: "=-L/2 + 0.1", side: -1}}
+  - {use: post, name: pn0, with: {px: "=-L/2 + 0.1", side: 1}}
+  - {use: post, name: ps1, with: {px: "=-L/2 + L * 0.42", side: -1}}
+  - {use: post, name: pn1, with: {px: "=-L/2 + L * 0.42", side: 1}}
+  - {use: post, name: pn2, with: {px: "=-L/2 + L * 0.74", side: 1}}
+  - {name: rail-s, mat: post, box: {c: ["=-L/2 + L * 0.27", "=-W / 2 + 0.02", "=dz + rh"], half: ["=L * 0.29", 0.035, 0.035], radius: 0.012}}
+  - {name: rail-n, mat: post, box: {c: ["=-L/2 + L * 0.42", "=W / 2 - 0.02", "=dz + rh"], half: ["=L * 0.4", 0.035, 0.035], radius: 0.012}}
+  - {name: lean-post, mat: post, box: {c: ["=-L/2 + L * 0.74 + 0.08", "=-W / 2 + 0.02", "=dz + rh / 2"], half: [0.05, 0.05, "=rh / 2 + 0.03"], radius: 0.015}, rot: [28, 0, 0]}
+variants:
+  # runs east from the bank and stops (w is the mirror)
+  facing-e: {}
+  # runs north, away from the camera: wide and short
+  facing-n:
+    turn: 90
+    params: {L: 1.3, W: 2.0, dz: 0.18, rh: 0.24}
+    foot: [24, 19]
+  # runs south: the broken end toward the camera
+  facing-s:
+    turn: -90
+    params: {L: 1.15, W: 2.0, dz: 0.16, rh: 0.2}
+    foot: [24, 17]

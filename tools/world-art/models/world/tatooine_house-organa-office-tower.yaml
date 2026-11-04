@@ -1,0 +1,62 @@
+# House Organa office tower (art:tatooine:house-organa-office-tower), hit box 8x7, drawn 8x9. Bestine;
+# replaces Devon Corp.
+# Reference: Bestine's capitol (Star Wars Galaxies): a stepped adobe tower of three set-back tiers with rows
+# of windows, a low rear wing, a grand arched entrance with steps in the middle of the front, durasteel bands on each tier
+# and a durasteel crown dome with a spire on top.
+# Axes: x east, y north, z up, origin on the ground at the hit box's centre. Door: column 4 (x = 0.5).
+name: tatooine_house-organa-office-tower
+art: art:tatooine:house-organa-office-tower
+palette: greybox
+kits: [../scenery/kits/tatooine-buildings.yaml]
+cells: [8, 9]
+foot: [64, 88]
+footprint: 7
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  adobe: {ramp: light, bands: [0.25, 0.55, 0.88]}
+  steel: {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  trim:  {ramp: light, bands: [0.2, 0.5, 0.85]}
+  mid:   {ramp: mid,   bands: [0.2, 0.5, 0.85]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 7}
+box: [124, 108]
+parts:
+  # the low rear wing filling the back of the lot
+  - {use: block, name: rear, at: [0, 1.3, 0], with: {w: 7.6, d: 3.9, h: 1.0, mat: steel, lip: adobe}}
+  # three set-back tiers, each with a durasteel band at its top
+  - {use: block, name: tier-1, at: [0, -2.0, 0], with: {w: 7.6, d: 2.6, h: 1.65, mat: adobe, lip: steel}}
+  - {name: band-1, mat: steel, box: {c: [0, -3.31, 1.5], half: [3.8, 0.03, 0.1], radius: 0.01}}
+  - {use: block, name: tier-2, at: [0.2, -1.4, 1.65], with: {w: 5.8, d: 2.0, h: 1.6, mat: adobe, lip: steel}}
+  - {name: band-2, mat: steel, box: {c: [0.2, -2.41, 3.12], half: [2.9, 0.03, 0.1], radius: 0.01}}
+  - {use: block, name: tier-3, at: [0.4, -0.95, 3.25], with: {w: 3.9, d: 1.5, h: 1.5, mat: adobe, lip: steel}}
+  - {name: band-3, mat: steel, box: {c: [0.4, -1.71, 4.62], half: [1.95, 0.03, 0.1], radius: 0.01}}
+  # the crown: a durasteel drum and dome with a spire
+  - {use: dome, name: crown, at: [0.45, -0.9, 4.75], with: {r: 0.72, h: 0.45, drum: 0.3, mat: steel}}
+  - {name: spire, mat: dark, cone: {a: [0.45, -0.9, 5.4], b: [0.45, -0.9, 5.85], r1: 0.08, r2: 0.02}}
+  # the grand entrance: a tall arch frame and the steps before it
+  - {use: arch-frame, name: arch, at: [0.5, -3.2, 0], with: {w: 0.9, h: 1.3, t: 0.2, d: 0.22}}
+  # rows of windows
+  - {use: slot, name: w1-0, at: [-3.1, -3.3, 0], with: {z: 0.85, w: 0.32, h: 0.34}}
+  - {use: slot, name: w1-1, at: [-2.3, -3.3, 0], with: {z: 0.85, w: 0.32, h: 0.34}}
+  - {use: slot, name: w1-2, at: [-1.5, -3.3, 0], with: {z: 0.85, w: 0.32, h: 0.34}}
+  - {use: slot, name: w1-3, at: [2.5, -3.3, 0], with: {z: 0.85, w: 0.32, h: 0.34}}
+  - {use: slot, name: w1-4, at: [3.2, -3.3, 0], with: {z: 0.85, w: 0.32, h: 0.34}}
+  - {use: slot, name: w2-0, at: [-2.2, -2.4, 0], with: {z: 2.55, w: 0.32, h: 0.34}}
+  - {use: slot, name: w2-1, at: [-1.4, -2.4, 0], with: {z: 2.55, w: 0.32, h: 0.34}}
+  - {use: slot, name: w2-2, at: [-0.6, -2.4, 0], with: {z: 2.55, w: 0.32, h: 0.34}}
+  - {use: slot, name: w2-3, at: [1.6, -2.4, 0], with: {z: 2.55, w: 0.32, h: 0.34}}
+  - {use: slot, name: w2-4, at: [2.4, -2.4, 0], with: {z: 2.55, w: 0.32, h: 0.34}}
+  - {use: slot, name: w2-5, at: [3.1, -2.4, 0], with: {z: 2.55, w: 0.32, h: 0.34}}
+  - {use: slot, name: w2b-0, at: [0.5, -2.4, 0], with: {z: 2.55, w: 0.5, h: 0.34}}
+  - {use: slot, name: w3-0, at: [-0.9, -1.7, 0], with: {z: 4.1, w: 0.32, h: 0.34}}
+  - {use: slot, name: w3-1, at: [-0.2, -1.7, 0], with: {z: 4.1, w: 0.32, h: 0.34}}
+  - {use: slot, name: w3-2, at: [1.2, -1.7, 0], with: {z: 4.1, w: 0.32, h: 0.34}}
+  - {use: slot, name: w3-3, at: [1.9, -1.7, 0], with: {z: 4.1, w: 0.32, h: 0.34}}
+  - {use: slot, name: w3b-0, at: [0.5, -1.7, 0], with: {z: 4.1, w: 0.4, h: 0.34}}

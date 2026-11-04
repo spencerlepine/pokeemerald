@@ -1,0 +1,65 @@
+# Gutted sandcrawler (art:tatooine:gutted-sandcrawler), hit box 8x4, drawn 8x7: the top 3 rows stand over
+# the cells behind. Reference: the Jawa sandcrawler burned out by stormtroopers (A New Hope) and the
+# sandcrawler wrecks of The Mandalorian. The tall hull with its forward-leaning nose and the cab on top,
+# sitting on the sand with its treads gone (one tread unit lies beside it), blackened from the fire, its
+# side panels burned through to the dark hold, the big front ramp hanging open.
+# Modelled level, nose east (+x); `mirror` gives the west-facing one.
+# Axes: x east, y north, z up; origin on the ground at the south edge of the hit box, centred.
+name: tatooine_gutted-sandcrawler
+art: art:tatooine:gutted-sandcrawler
+palette: greybox
+kits: [kits/tatooine-rest.yaml]
+cells: [8, 7]
+foot: [62, 111]
+scale: 0.9
+footprint: 4
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  hull:   {ramp: mid,  bands: [0.25, 0.55, 0.85]}
+  scorch: {ramp: dark, bands: [0.2, 0.5, 0.85]}
+  dark:   {ramp: dark, bands: [0.35, 0.7, 0.95]}
+  deck:   {ramp: mid,  bands: [0.3, 0.6, 0.9]}
+  sand:   {ramp: bone, bands: [0.55, 0.8, 0.97]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 4}
+box: [124, 62]
+params:
+  cy: 1.75         # the hull's centre line (m north)
+groups: {body: {}, holes: {}}
+parts:
+  - {use: crawler-hull, name: hull, at: [-0.4, "=cy", 0], with: {L: 7.0, W: 2.2, H: 3.5, z0: 0.25, hull: hull, dark: dark, deck: deck}}
+  # scorch: burned plates round the holes, ragged dark patches on the south face (y = cy - 1.1)
+  - {name: scorch-1, mat: scorch, hull: {round: 0.03, points: [[-2.9, "=cy - 1.16", 1.1], [-0.7, "=cy - 1.16", 0.9], [-0.4, "=cy - 1.16", 2.2], [-1.3, "=cy - 1.16", 3.0], [-2.6, "=cy - 1.16", 2.7],
+                                                                [-2.9, "=cy - 1.05", 1.1], [-0.7, "=cy - 1.05", 0.9], [-0.4, "=cy - 1.05", 2.2], [-1.3, "=cy - 1.05", 3.0], [-2.6, "=cy - 1.05", 2.7]]}}
+  - {name: scorch-2, mat: scorch, hull: {round: 0.03, points: [[0.7, "=cy - 1.16", 2.2], [1.9, "=cy - 1.16", 2.0], [2.1, "=cy - 1.16", 3.0], [1.0, "=cy - 1.16", 3.4],
+                                                              [0.7, "=cy - 1.05", 2.2], [1.9, "=cy - 1.05", 2.0], [2.1, "=cy - 1.05", 3.0], [1.0, "=cy - 1.05", 3.4]]}}
+  # holes burned through the side into the dark hold, ragged
+  - {name: hole-1, mat: dark, hull: {round: 0.02, points: [[-2.3, "=cy - 1.2", 1.5], [-1.0, "=cy - 1.2", 1.3], [-0.9, "=cy - 1.2", 2.1], [-1.6, "=cy - 1.2", 2.55], [-2.2, "=cy - 1.2", 2.3],
+                                                           [-2.3, "=cy - 0.9", 1.5], [-1.0, "=cy - 0.9", 1.3], [-0.9, "=cy - 0.9", 2.1], [-1.6, "=cy - 0.9", 2.55], [-2.2, "=cy - 0.9", 2.3]]}}
+  - {name: hole-2, mat: dark, hull: {round: 0.02, points: [[1.0, "=cy - 1.2", 2.4], [1.7, "=cy - 1.2", 2.3], [1.75, "=cy - 1.2", 2.85], [1.15, "=cy - 1.2", 3.05],
+                                                           [1.0, "=cy - 0.9", 2.4], [1.7, "=cy - 0.9", 2.3], [1.75, "=cy - 0.9", 2.85], [1.15, "=cy - 0.9", 3.05]]}}
+  # panel seams down the side
+  - {name: seam-1, mat: scorch, box: {c: [0.2, "=cy - 1.12", 2.0], half: [0.04, 0.03, 1.7]}}
+  - {name: seam-2, mat: scorch, box: {c: [-3.0, "=cy - 1.12", 2.0], half: [0.04, 0.03, 1.7]}}
+  # the ramp: the lower front, hanging open on the sand
+  - {name: ramp, mat: hull, hull: {round: 0.04, points: [[2.25, "=cy - 0.95", 0.25], [2.25, "=cy + 0.95", 0.25], [2.4, "=cy - 0.95", 0.4], [2.4, "=cy + 0.95", 0.4],
+                                                          [3.75, "=cy - 0.95", 0.0], [3.75, "=cy + 0.95", 0.0], [3.75, "=cy - 0.95", 0.12], [3.75, "=cy + 0.95", 0.12]]}}
+  - {name: ramp-door, mat: dark, box: {c: [2.6, "=cy - 0.0", 1.0], half: [0.4, 0.85, 0.55]}}
+  # a broken spar sticking out of the deck
+  - {name: spar, mat: scorch, cone: {a: [-2.2, "=cy", 3.3], b: [-2.7, "=cy - 0.3", 4.1], r1: 0.09, r2: 0.06}}
+ground:
+  # sand drifted up the south side and the stern, the tread unit it lost
+  - {name: drift-s, mat: sand, ellipsoid: {c: [-1.2, 0.55, 0], r: [2.3, 0.3, 0.3]}}
+  - {name: drift-stern, mat: sand, ellipsoid: {c: [-3.3, 1.75, 0], r: [0.4, 1.1, 0.5]}}
+  - {use: crawler-tread, name: tread, at: [2.4, 0.42, 0], turn: 12, with: {l: 1.7, w: 0.55, h: 0.55, mat: dark, wheel: hull}}
+variants:
+  gutted: {}
+  # stripped further: the cab gone, the front ramp taken, more of the hull burned through
+  stripped:
+    drop: ["hull/cab", "hull/windows", "ramp"]

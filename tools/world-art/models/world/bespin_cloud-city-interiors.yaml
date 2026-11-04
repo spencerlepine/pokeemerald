@@ -1,0 +1,72 @@
+# Cloud City interiors (art:bespin:cloud-city-interiors), a whole room 15x10, seen in the game camera.
+# Reference: Cloud City's halls and lounges (The Empire Strikes Back): white curved walls, a tall band
+# of slanted windows (orange sunset glass in final art) across the north wall, smooth white floors
+# with round inlays, round benches round a planter. No area map names this room: it is the kit room
+# the Cloud City interiors share. North wall face with the window band, side walls edge-on curving
+# into it, a round floor inlay in the middle, four round benches, the door gap in the south wall.
+# Axes: x east, y north, z up, origin on the floor at the middle of the south edge.
+name: bespin_cloud-city-interiors
+art: art:bespin:cloud-city-interiors
+palette: greybox
+cells: [15, 10]
+foot: [120, 160]
+footprint: 1
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  floor: {ramp: light, bands: [0.2, 0.5, 0.9]}
+  wall:  {ramp: light, bands: [0.08, 0.3, 0.65]}
+  trim:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  glass: {ramp: dark,  bands: [0.05, 0.35, 0.7]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+drop_shadow: []
+box: null
+params: {D: 8.0, H: 2.0}
+templates:
+  # a round bench: a white seat ring round a mid-grey planter with a dark bed
+  round-bench:
+    parts:
+      - {name: seat, mat: wall, cylinder: {a: [0, 0, 0], b: [0, 0, 0.32], r1: 0.85, r2: 0.8}}
+      - {name: kick, mat: trim, cylinder: {a: [0, 0, 0], b: [0, 0, 0.12], r1: 0.88}}
+      - {name: planter, mat: trim, cylinder: {a: [0, 0, 0.3], b: [0, 0, 0.6], r1: 0.45}}
+      - {name: bed, mat: dark, cylinder: {a: [0, 0, 0.58], b: [0, 0, 0.62], r1: 0.36}}
+parts:
+  # the floor, a round inlay in the middle
+  - {name: floor, mat: floor, box: {c: [0, "=D / 2", -0.05], half: [7.5, "=D / 2", 0.05], radius: 0.0}}
+  - {name: inlay, mat: trim, cylinder: {a: [0, 3.9, -0.01], b: [0, 3.9, 0.008], r1: 2.0}}
+  - {name: inlay-in, mat: floor, cylinder: {a: [0, 3.9, -0.01], b: [0, 3.9, 0.012], r1: 1.75}}
+  - {name: inlay-dot, mat: trim, cylinder: {a: [0, 3.9, -0.01], b: [0, 3.9, 0.016], r1: 0.5}}
+  - {name: runner, mat: trim, box: {c: [0, 1.0, 0.004], half: [0.6, 1.0, 0.005], radius: 0.0}}
+  # the north wall: the window band, its mullions and sill
+  - {name: wall-n, mat: wall, box: {c: [0, "=D + 0.2", "=H / 2"], half: [7.5, 0.2, "=H / 2"], radius: 0.0}}
+  - {name: windows, mat: glass, box: {c: [0, "=D - 0.01", 1.05], half: [6.1, 0.03, 0.65], radius: 0.0}}
+  - {name: mull-0, mat: wall, box: {c: [-5.40, "=D - 0.02", 1.05], half: [0.08, 0.05, 0.68], radius: 0.02}, rot: [0, 0, 0]}
+  - {name: mull-1, mat: wall, box: {c: [-4.20, "=D - 0.02", 1.05], half: [0.08, 0.05, 0.68], radius: 0.02}, rot: [0, 0, 0]}
+  - {name: mull-2, mat: wall, box: {c: [-3.00, "=D - 0.02", 1.05], half: [0.08, 0.05, 0.68], radius: 0.02}, rot: [0, 0, 0]}
+  - {name: mull-3, mat: wall, box: {c: [-1.80, "=D - 0.02", 1.05], half: [0.08, 0.05, 0.68], radius: 0.02}, rot: [0, 0, 0]}
+  - {name: mull-4, mat: wall, box: {c: [-0.60, "=D - 0.02", 1.05], half: [0.08, 0.05, 0.68], radius: 0.02}, rot: [0, 0, 0]}
+  - {name: mull-5, mat: wall, box: {c: [0.60, "=D - 0.02", 1.05], half: [0.08, 0.05, 0.68], radius: 0.02}, rot: [0, 0, 0]}
+  - {name: mull-6, mat: wall, box: {c: [1.80, "=D - 0.02", 1.05], half: [0.08, 0.05, 0.68], radius: 0.02}, rot: [0, 0, 0]}
+  - {name: mull-7, mat: wall, box: {c: [3.00, "=D - 0.02", 1.05], half: [0.08, 0.05, 0.68], radius: 0.02}, rot: [0, 0, 0]}
+  - {name: mull-8, mat: wall, box: {c: [4.20, "=D - 0.02", 1.05], half: [0.08, 0.05, 0.68], radius: 0.02}, rot: [0, 0, 0]}
+  - {name: mull-9, mat: wall, box: {c: [5.40, "=D - 0.02", 1.05], half: [0.08, 0.05, 0.68], radius: 0.02}, rot: [0, 0, 0]}
+  - {name: sill, mat: trim, box: {c: [0, "=D - 0.08", 0.35], half: [6.3, 0.1, 0.06], radius: 0.02}}
+  - {name: cove, mat: trim, cylinder: {a: [-7.5, "=D - 0.02", "=H - 0.15"], b: [7.5, "=D - 0.02", "=H - 0.15"], r1: 0.16}}
+  # side walls edge-on, curving into the north wall
+  - {name: wall-w, mat: wall, box: {c: [-7.3, "=D / 2", "=H / 2"], half: [0.2, "=D / 2", "=H / 2"], radius: 0.0}}
+  - {name: wall-e, mat: wall, box: {c: [7.3, "=D / 2", "=H / 2"], half: [0.2, "=D / 2", "=H / 2"], radius: 0.0}}
+  - {name: curve-w, mat: wall, cylinder: {a: [-6.6, "=D - 0.4", 0], b: [-6.6, "=D - 0.4", "=H"], r1: 0.9}}
+  - {name: curve-e, mat: wall, cylinder: {a: [6.6, "=D - 0.4", 0], b: [6.6, "=D - 0.4", "=H"], r1: 0.9}}
+  # the south wall, low, with the door gap
+  - {name: wall-sw, mat: trim, box: {c: [-4.15, 0.2, 0.15], half: [3.35, 0.2, 0.15], radius: 0.0}}
+  - {name: wall-se, mat: trim, box: {c: [4.15, 0.2, 0.15], half: [3.35, 0.2, 0.15], radius: 0.0}}
+  # round benches
+  - {use: round-bench, name: bench-0, at: [-4.5, 5.3, 0]}
+  - {use: round-bench, name: bench-1, at: [4.5, 5.3, 0]}
+  - {use: round-bench, name: bench-2, at: [-4.8, 2.2, 0]}
+  - {use: round-bench, name: bench-3, at: [4.8, 2.2, 0]}
