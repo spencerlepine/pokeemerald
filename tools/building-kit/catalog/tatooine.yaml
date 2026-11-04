@@ -393,9 +393,10 @@ buildings:
   art: art:tatooine:homestead-dome
   size: [6, 5]
   door: 1
-  blueprint: tatooine/landing-pad
+  blueprint: shared/landing-pad
   seed: 1
-  about: Round landing pad with a domed control hut and a beacon mast, Mos Espa's pads (TPM).
+  set: {support: plinth, shape: round, booth0: true, prop: tank}
+  about: "An oval landing deck on a solid plinth with a thick front edge and steps up; a control booth and a fuel tank. No ship drawn: ships don't read in this camera."
 - id: bld:tatooine:route-117-creature-nursery
   kind: home
   name: Creature nursery

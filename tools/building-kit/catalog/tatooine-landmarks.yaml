@@ -60,8 +60,8 @@ buildings:
   door: 4
   blueprint: tatooine/docking-bay
   seed: 94
-  set: {ship: freighter}
-  about: 'Docking Bay 94 (A New Hope): the round open-roof pit where the Millennium Falcon waits, blast door on the street.'
+  set: {extra: tank}
+  about: 'Docking Bay 94 (A New Hope): an open-roof ring of battered adobe wall round a sunken floor, a tall gate block with the blast door on the street, a fuel tank inside. No ship: it does not read in this camera.'
 - id: bld:tatooine:mos-eisley-docking-bay-86-kashyyyk-hangar
   kind: hangar
   name: Docking Bay 86 (Kashyyyk hangar)
@@ -71,8 +71,8 @@ buildings:
   door: 4
   blueprint: tatooine/docking-bay
   seed: 86
-  set: {ship: shuttle}
-  about: A Mos Eisley docking bay (A New Hope) like Bay 94, a shuttle parked in the pit, the hangar for Kashyyyk.
+  set: {extra: crates}
+  about: A Mos Eisley docking bay (A New Hope) like Bay 94, crates stacked by the inner wall, the hangar for Kashyyyk. No ship drawn.
 - id: bld:tatooine:mos-eisley-chalmun-s-cantina
   kind: landmark
   name: Chalmun's Cantina
@@ -184,10 +184,10 @@ buildings:
   art: art:shared:landing-pad
   size: [7, 4]
   door: 3
-  blueprint: tatooine/shuttle-pad
+  blueprint: shared/landing-pad
   seed: 1701
-  set: {load: shuttle}
-  about: A ferrocrete pad with the stolen Lambda shuttle Tydirium (Return of the Jedi) waiting for Endor.
+  set: {support: plinth, shape: oct, booth0: true, prop: beacons}
+  about: "An eight-sided landing deck on a solid plinth with a thick front edge and steps up; a control booth and beacon posts. No ship drawn: ships don't read in this camera."
 - id: bld:tatooine:mos-pelgo-prof-korr-s-lab
   kind: landmark
   name: Prof. Korr's lab
@@ -205,10 +205,10 @@ buildings:
   art: art:shared:landing-pad
   size: [4, 4]
   door: 1
-  blueprint: tatooine/shuttle-pad
+  blueprint: shared/landing-pad
   seed: 1702
-  set: {load: cargo}
-  about: A small faceted landing pad with corner lights, cargo and a fuel cell (the Mos Espa pads, The Phantom Menace).
+  set: {support: plinth, shape: square, booth0: false, prop: crates}
+  about: "A square landing deck on a solid plinth with a thick front edge and steps up; cargo crates. No ship drawn: ships don't read in this camera."
 - id: bld:tatooine:tosche-station-tosche-power-station
   kind: landmark
   name: Tosche power station

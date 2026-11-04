@@ -109,9 +109,10 @@ buildings:
   art: art:shared:landing-pad
   size: [6, 3]
   door: 2
-  blueprint: sullust/landing-pad
+  blueprint: shared/landing-pad
   seed: 3
-  about: An eight-sided landing pad with a ring mark and a small dome booth at the path.
+  set: {support: slab, shape: square, booth0: false, prop: crates}
+  about: "A low square landing slab on the rock with a thick front edge and steps up; cargo crates. No ship drawn: ships don't read in this camera."
 - id: bld:sullust:route-114-lanettes-house
   kind: home
   name: Lanettes house

@@ -19,10 +19,10 @@ buildings:
   art: art:shared:landing-pad
   size: [6, 4]
   door: 3
-  blueprint: kamino/platform
+  blueprint: shared/landing-pad
   seed: 101
-  about: The round Tipoca landing pad on pylons where Obi-Wan sets down the Delta-7 (Attack of the Clones).
-  set: {ring: true}
+  about: "An oval landing deck raised on posts with a thick front edge and steps up; a control booth and beacon posts. No ship drawn: ships don't read in this camera."
+  set: {support: posts, shape: round, booth0: true, prop: beacons}
 - id: bld:kamino:tipoca-city-kaminoan-dwelling
   kind: home
   name: Kaminoan dwelling

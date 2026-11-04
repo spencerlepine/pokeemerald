@@ -8,9 +8,10 @@ buildings:
   art: art:shared:landing-pad
   size: [6, 4]
   door: 3
-  blueprint: hoth/pad
+  blueprint: shared/landing-pad
   seed: 200
-  about: A Rebel landing plate laid on the packed snow outside Echo Base (The Empire Strikes Back).
+  set: {support: plinth, shape: square, booth0: true, prop: tank}
+  about: "A square landing deck on a solid plinth with a thick front edge and steps up; a control booth and a fuel tank. No ship drawn: ships don't read in this camera."
 - id: bld:hoth:hoth-tundra-rebel-survey-outpost
   kind: hangar
   name: Rebel survey outpost

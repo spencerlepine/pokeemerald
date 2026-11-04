@@ -1,0 +1,92 @@
+# A landing pad for ships, for every planet (owner 2026-11-04: flat circles and parked ships never read in
+# this camera). So a pad here is a raised deck with a thick front edge that shows head-on, round shapes
+# drawn as ovals 0.7 as deep as wide (the greybox rule for circles), steps up the front, and things that
+# stand up: a control booth, beacon posts, crates or a fuel tank. No markings painted flat on the deck,
+# no ship. `support` picks how it stands: a solid plinth, a low slab (a forest clearing), or a deck on
+# posts (over water, swamp or cloud).
+name: landing-pad
+style: shared
+about: Raised landing deck with a thick front edge, steps, a control booth, beacons, crates or a tank.
+width: [4, 5, 6, 7, 8]
+choose:
+  hh: "=H if H else 4"
+  shape: {pick: [oct, round, square], weights: [3, 2, 2]}
+  support: {pick: [plinth, slab, posts], weights: [4, 1, 2]}
+  lift: "=0.0 if support != 'posts' else 0.45"   # deck underside above the ground
+  ph: "=0.18 if support == 'slab' else (0.32 if support == 'posts' else 0.5)"   # deck edge height
+  zt: "=lift + ph"                               # deck top
+  booth0: {pick: [true, false], weights: [3, 2]}
+  bh: [0.8, 1.0]
+  rx: "=w_max / 2 - 0.05"
+  # how deep the deck may be so its back edge and whatever stands at the back stay inside the lot
+  # (screen rows = y + z; 0.3 m kept for the sprite's foot)
+  ry_deck: "=(hh - 0.65 - zt) / 2"
+  stx0: [-0.6, 0.6]
+  stx: "=door_x if door_x is not None else stx0"
+  side0: {pick: [-1, 1]}
+  side: "=side0 if abs(stx) < 0.2 else (-1 if stx > 0 else 1)"   # the booth stands away from the steps
+  prop: {pick: [crates, tank, beacons, none], weights: [3, 2, 3, 1]}
+  ry_prop: "=(hh - 1.92 - zt) / 1.4 if prop == 'tank' else ((hh - 1.55 - zt) / 1.4 if prop == 'crates' else 99)"
+  ry: "=max(0.6, min(rx * (0.8 if shape == 'square' else 0.7), ry_deck, ry_prop))"
+  cy: "=ry + 0.35"
+  # the booth sits at a back corner, or slides toward the front where the lot is short; it needs a deck
+  # wide enough to stand clear of the steps
+  by: "=min(cy + ry * 0.25, hh - 1.29 - zt - bh)"
+  booth: "=booth0 and rx >= 2.0 and by >= cy - ry + 0.05"
+  c: "=min(rx, ry) * 0.38"                        # corner chamfer of the oct shape
+parts:
+  # the deck: its plan as a polygon, raised from lift to zt
+  - when: "=shape == 'oct'"
+    parts:
+      - name: deck
+        mat: metal
+        prism: {poly: [["=-rx + c", "=cy - ry"], ["=rx - c", "=cy - ry"], ["=rx", "=cy - ry + c"], ["=rx", "=cy + ry - c"],
+                       ["=rx - c", "=cy + ry"], ["=-rx + c", "=cy + ry"], ["=-rx", "=cy + ry - c"], ["=-rx", "=cy - ry + c"]],
+                z: ["=lift", "=zt"], round: 0.04}
+  - when: "=shape == 'square'"
+    parts:
+      - {name: deck, mat: metal, box: {c: [0, "=cy", "=(lift + zt) / 2"], half: ["=rx", "=ry", "=ph / 2"], radius: 0.05}}
+  - when: "=shape == 'round'"
+    parts:
+      - {name: deck, mat: metal, cylinder: {a: [0, "=cy", "=lift"], b: [0, "=cy", "=zt"], r1: "=rx"},
+         squash: {scale: [1, "=ry / rx", 1], center: [0, "=cy", 0]}}
+  # a lighter rim round the top edge, so the deck reads as a slab with a front, not a drawing on the ground
+  - when: "=shape == 'round'"
+    parts:
+      - {name: rim, mat: trim, cylinder: {a: [0, "=cy", "=zt - 0.1"], b: [0, "=cy", "=zt + 0.02"], r1: "=rx + 0.04"},
+         squash: {scale: [1, "=(ry + 0.04) / (rx + 0.04)", 1], center: [0, "=cy", 0]}}
+    else:
+      - {name: rim, mat: trim, box: {c: [0, "=cy - ry + 0.06", "=zt - 0.04"], half: ["=rx - (c if shape == 'oct' else 0) + 0.02", 0.08, 0.07], radius: 0.02}}
+  # posts under a raised deck: the front ones show below its edge
+  - when: "=support == 'posts'"
+    parts:
+      - repeat: 4
+        parts:
+          - {name: "=f'post{i}'", mat: dark, box: {c: ["=-rx * 0.75 + i * rx * 0.5", "=cy - ry + 0.3", "=lift / 2"], half: [0.12, 0.12, "=lift / 2"]}}
+  # steps up the front edge (the door: where the player walks on)
+  - {name: door, mat: trim, prism: {poly: [["=stx - 0.55", "=cy - ry - 0.3"], ["=stx + 0.55", "=cy - ry - 0.3"], ["=stx + 0.55", "=cy - ry + 0.15"], ["=stx - 0.55", "=cy - ry + 0.15"]],
+                                     z: [0, "=zt"], top: [1, 0.35], lean: [0, 0.12], round: 0.03}}
+  # the control booth on a back corner
+  - when: "=booth"
+    parts:
+      - {use: box-block, name: booth, at: ["=side * (rx * 0.62)", "=by", "=zt"], with: {w: 0.95, d: 0.8, h: "=bh", mat: wall}}
+      - {name: booth-roof, mat: trim, box: {c: ["=side * (rx * 0.62)", "=by + 0.4", "=zt + bh + 0.04"], half: [0.56, 0.48, 0.07], radius: 0.02}}
+      - {use: window-slot, name: booth-win, at: ["=side * (rx * 0.62)", "=by", "=zt + bh * 0.65"], with: {w: 0.62, h: 0.22}}
+  - when: "=prop == 'crates'"
+    parts:
+      - {use: crate, name: crate1, at: ["=-side * rx * 0.55", "=cy + ry * 0.35", "=zt"], with: {s: 0.6}}
+      - {use: crate, name: crate2, at: ["=-side * (rx * 0.55 - 0.62)", "=cy + ry * 0.4", "=zt"], with: {s: 0.5}}
+  - when: "=prop == 'tank'"
+    parts:
+      - {name: tank, mat: light, cylinder: {a: ["=-side * rx * 0.55", "=cy + ry * 0.4", "=zt"], b: ["=-side * rx * 0.55", "=cy + ry * 0.4", "=zt + 0.75"], r1: 0.36}}
+      - {name: tank-cap, mat: light, ellipsoid: {c: ["=-side * rx * 0.55", "=cy + ry * 0.4", "=zt + 0.75"], r: [0.36, 0.36, 0.16]}}
+  - when: "=prop == 'beacons'"                      # beacon posts at the front corners, not where the booth stands
+    parts:
+      - when: "=not (booth and side < 0)"
+        parts:
+          - {name: beacon-w, mat: light, box: {c: ["=-rx * 0.82", "=cy - ry * 0.6", "=zt + 0.4"], half: [0.13, 0.13, 0.4]}}
+          - {name: lamp-w, mat: trim, ellipsoid: {c: ["=-rx * 0.82", "=cy - ry * 0.6", "=zt + 0.84"], r: [0.2, 0.2, 0.13]}}
+      - when: "=not (booth and side > 0)"
+        parts:
+          - {name: beacon-e, mat: light, box: {c: ["=rx * 0.82", "=cy - ry * 0.6", "=zt + 0.4"], half: [0.13, 0.13, 0.4]}}
+          - {name: lamp-e, mat: trim, ellipsoid: {c: ["=rx * 0.82", "=cy - ry * 0.6", "=zt + 0.84"], r: [0.2, 0.2, 0.13]}}

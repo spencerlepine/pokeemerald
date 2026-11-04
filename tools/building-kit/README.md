@@ -92,6 +92,18 @@ Everything is written to `output/` (not committed).
 - Axes: x east (0 = the sprite's middle), y north (0 = the front of the building), z up. The sprite is `W`
   cells wide and cropped to whole cells above the art.
 
+## Shared (every planet)
+
+| Blueprint | What | Varies |
+|---|---|---|
+| `landing-pad` | Every landing pad (the ships rows) | eight-sided, oval or square deck; on a plinth, a low slab or posts; steps up the front; a control booth, beacon posts, crates or a fuel tank |
+| `sign` | The sign in front of an arena, Bacta Center or depot | board style per planet |
+
+Round and flat things need care in this camera (owner, 2026-11-04). A flat disc, a parked ship or a
+marking painted on the ground reads as a plan drawing, not a 3/4 view. So pads are raised decks with a
+thick front edge that shows head-on, round shapes are drawn as ovals 0.7 as deep as wide, and what
+stands on a deck stands up (booth, beacons, crates, tank). A ship is never drawn on a pad or in a bay.
+
 ## Tatooine (round 1)
 
 | Blueprint | From the films | Varies |
@@ -107,7 +119,7 @@ Everything is written to `output/` (not committed).
 | `farm-co-op` | Anchorhead | long hall, vaulted, banded or domed roof, storage drum, 2-4 vaporators behind |
 | `gatehouse` | Mos Espa town gates | long block with a big arch, round or square towers, guard room or dome; taller lots, taller towers |
 | `canopy-house` | Mos Espa backstreets | small dome or block beside a sloped shade canopy over crates, a tank or a bench |
-| `landing-pad` | Mos Espa pads | round pad with a ring, dome or block control hut, beacon mast |
+| `docking-bay` | Mos Eisley Docking Bay 94 | open-roof ring of battered wall (8 or 10 facets) round a sunken floor, tall gate block with a blast door, crates, a tank or a vent; no ship |
 | `ruin` | The burned Lars farm | hollow dome with its roof caved in, wall stubs, rubble, a dead vaporator |
 | `speeder-garage` | Watto's yard, podracer hangars | block or vault with a wide bay, a speeder or podracer engine out front |
 | `walled-compound` | Mos Espa back streets | low wall round a yard with a gate, dome, block or twin houses, vaporator or trough |
@@ -124,7 +136,7 @@ Everything is written to `output/` (not committed).
 | `hall` | The Tipoca main complex | great drum or domed capsule centre, capsule or saucer wings, 0-2 spire towers, entry pod |
 | `capsule-block` | Tipoca barracks and store rooms | length, one or two tiers, pod or cargo door, end saucer pod, roof drum or mast, crates |
 | `medbay` | Tipoca medical bays, bacta tanks | saucer, lens or capsule head on a glass drum, 0-2 bacta tanks, hub, entry hood |
-| `platform` | The Tipoca landing pad | landing ring, rim lamps, access tube, control pod or mast; narrow ones are walkway hubs with rails |
+| `platform` | Tipoca's walkway hubs | small round platform on stilts, rails, a mast or control pod (landing pads use `shared/landing-pad`) |
 | `storm-tower` | Tipoca's columns | one or two saucer heads, beacon, side pod |
 
 ## Hoth
@@ -134,7 +146,6 @@ Everything is written to `output/` (not committed).
 | `ice-hangar` | The Echo Base hangar door | cliff skyline, door width and opening, ice overhang or snow lip, hatch, dish or stacks |
 | `prefab` | Echo Base prefab buildings | module, stacked modules, arched quonset (one or two) or dome bunker; hatch or cargo door; drifts, dish, stacks, crates |
 | `shelter` | The tauntaun pens | 1-3 snow-covered arched vaults with a dark mouth, berms, lamp, crates |
-| `pad` | The landing area outside Echo Base | cross or bar markings, control module, fuel tanks or beacon mast, drifts |
 | `sensor-tower` | The Echo Base ridge dishes, the generators | dish post or pole antenna over a hut, or a generator shed with stacks |
 
 ## Ilum
@@ -146,7 +157,6 @@ The Ilum kit uses the Hoth kit (`ice-block`, `drift`).
 | `temple-gate` | The Ilum temple (Jedi: Fallen Order) | cliff skyline, monolith size, flanking pylons, 2-4 kyber clusters, steps |
 | `stone-hall` | Jedi stone buildings, the Coruscant temple | base steps, snow-capped hipped or pyramid roof, stepped tier with a crystal, one or two spires, wing, crystal lamps |
 | `ice-hut` | Shelters cut into the glacier | faceted mound, cut block or two blocks; Jedi or arched door; crystals, crates |
-| `pad` | The landing shelf below the temple | emblem ring, crystal beacons or obelisks, drifts |
 
 ## Bespin
 
@@ -157,7 +167,6 @@ Window bands are a dark ring broken by `oval-pier`s (a `repeat` in the blueprint
 |---|---|---|
 | `cloud-tower` | Cloud City towers | drum, tapered, stacked or flared body; 1-3 window bands; saucer, glass dome, rings, spire or mast top; two wings, one wing, lift pylon or ribs; base ring; plain, canopy or porch door |
 | `cc-hall` | The Galleria, Cloud City halls | long oval hall with bands; lid, saucer or terrace roof; domed atrium, glass front, end drums or plain |
-| `landing-pad` | The Falcon's platform | round or eight-sided deck, landing ring, front ramp, one or two cloud cars or cargo, beacons |
 | `works` | The Tibanna works, the carbon-freezing level | refinery block with stacks and tank, annex under a cone hood, Ugnaught shed, or tank row |
 | `garage` | Cloud car bays | vaulted or oval hangar, wide mouth, a cloud car beside it or fuel and crates |
 

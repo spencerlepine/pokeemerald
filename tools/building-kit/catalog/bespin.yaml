@@ -8,9 +8,10 @@ buildings:
   art: art:bespin:landing-platform
   size: [5, 5]
   door: 2
-  blueprint: bespin/landing-pad
+  blueprint: shared/landing-pad
   seed: 101
-  about: 'The platform the Falcon set down on: a round deck on a pylon over the clouds, a cloud car parked.'
+  set: {support: posts, shape: oct, booth0: true, prop: beacons}
+  about: "An eight-sided landing deck raised on posts with a thick front edge and steps up; a control booth and beacon posts. No ship drawn: ships don't read in this camera."
 - id: bld:bespin:cloud-city-galleria-department-store
   kind: shop
   name: Galleria (department store)

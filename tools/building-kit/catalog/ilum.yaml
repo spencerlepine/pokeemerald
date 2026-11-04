@@ -41,9 +41,10 @@ buildings:
   art: art:shared:landing-pad
   size: [6, 4]
   door: 3
-  blueprint: ilum/pad
+  blueprint: shared/landing-pad
   seed: 303
-  about: 'A six-sided stone landing shelf below the temple, crystal beacons on its corners (Jedi: Fallen Order).'
+  set: {support: plinth, shape: oct, booth0: false, prop: beacons}
+  about: "An eight-sided landing deck on a solid plinth with a thick front edge and steps up; beacon posts. No ship drawn: ships don't read in this camera."
 - id: bld:ilum:fill-pilgrim-shelter
   kind: fill
   name: Pilgrim shelter

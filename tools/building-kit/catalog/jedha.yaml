@@ -58,9 +58,10 @@ buildings:
   art: art:shared:landing-pad
   size: [6, 4]
   door: 3
-  blueprint: jedha/landing-pad
+  blueprint: shared/landing-pad
   seed: 106
-  about: The stone pad where pilgrim shuttles set down outside the holy city (Rogue One).
+  set: {support: plinth, shape: oct, booth0: true, prop: crates}
+  about: "An eight-sided landing deck on a solid plinth with a thick front edge and steps up; a control booth and cargo crates. No ship drawn: ships don't read in this camera."
 - id: bld:jedha:fill-market-stall
   kind: market
   name: Market stall

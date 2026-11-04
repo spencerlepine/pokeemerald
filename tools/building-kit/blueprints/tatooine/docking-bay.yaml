@@ -1,61 +1,67 @@
-# Docking Bay 94 (A New Hope): a round open-roof pit, its ring wall built of flat battered panels,
-# an entry block with a blast door on the south side, sometimes a freighter or a shuttle parked inside.
+# A Mos Eisley docking bay (A New Hope, Docking Bay 94), seen as the street sees it: a wide, low, open-roof
+# ring of battered adobe wall, faceted, its south face head-on with a tall gate block and a big blast door,
+# the inner face of the far wall and the sunken floor showing through the open top. No ship inside (the
+# owner, 2026-11-04: a parked ship never reads in this camera). Some bays get crates by the inner wall,
+# a fuel tank or a vent.
 name: docking-bay
 style: tatooine
-about: Round open-roof bay, a faceted ring wall, an entry block with the door, a ship or crates inside.
+about: Open-roof ring of battered adobe wall with a tall gate block and blast door; crates, tank or crane inside.
 width: [7, 8]
 choose:
-  hh: "=H if H else 8"
-  hr: [0.95, 1.25]                                # ring wall height
-  Rr: "=min(w_max / 2 - 0.05, (hh - 0.6 - hr) / 2)"   # ring outer radius
-  t: [0.5, 0.7]                                  # ring wall thickness
-  n: {pick: [10, 12, 14]}                        # facets
-  cy: "=Rr + 0.35"                               # ring centre, north of the front
-  ex0: [-0.6, 0.6]
+  hh: "=H if H else 7"
+  h: [1.7, 2.1]                                   # wall height
+  t: [0.45, 0.6]                                  # wall thickness
+  n: {pick: [8, 10], weights: [3, 2]}                          # facets
+  rx: "=w_max / 2 - 0.05"                         # outer half-width
+  ry: "=min((hh - h - 1.7) / 2, rx * 0.7)"       # round things show r * 0.7 deep (greybox rule)       # outer half-depth (the lot's height less the wall)
+  cy: "=ry + 0.15"
+  ex0: [-0.8, 0.8]
   ex: "=door_x if door_x is not None else ex0"
-  ew: [1.9, 2.4]
-  eh: "=hr + 0.3"
-  door: {pick: [slab, arch], weights: [3, 1]}
-  ship: {pick: [freighter, shuttle, crates, none], weights: [3, 2, 2, 1]}
-  ribs: {pick: [true, false], weights: [3, 2]}
+  gw: [2.3, 2.8]                                  # gate block width
+  gh: "=h + 0.6"
+  extra: {pick: [crates, tank, none], weights: [3, 2, 1]}
+  vent: {pick: [true, false]}
 parts:
-  - {name: floor, mat: dark, cylinder: {a: [0, "=cy", 0], b: [0, "=cy", 0.05], r1: "=Rr - t + 0.05"}}
-  - ring: {name: wall, mat: wall, c: [0, "=cy", "=hr / 2"], axis: z, r: "=Rr - t / 2", n: "=n",
-           size: ["=2 * pi * Rr / n * 1.02", "=t", "=hr"], round: 0.04}
-  - ring: {name: rim, mat: trim, c: [0, "=cy", "=hr - 0.06"], axis: z, r: "=Rr - t / 2", n: "=n",
-           size: ["=2 * pi * Rr / n * 1.04", "=t + 0.1", 0.14], round: 0.03}
-  - when: "=ribs"                                # buttress ribs between the panels, outside
+  # the sunken floor, a step below the ground
+  - {name: floor, mat: dark, cylinder: {a: [0, "=cy", 0], b: [0, "=cy", 0.04], r1: "=rx - t"}, squash: {scale: [1, "=(ry - t) / (rx - t)", 1], center: [0, "=cy", 0]}}
+  # the ring wall: one battered segment per facet, between the outer and the inner polygon
+  - repeat: "=n"
     parts:
-      - ring: {name: rib, mat: trim, c: [0, "=cy", "=hr * 0.4"], axis: z, r: "=Rr - 0.05", n: "=n", start: "=180 / n",
-               size: [0.28, 0.35, "=hr * 0.8"], round: 0.04}
-  # the entry block on the south side, with the blast door
-  - {use: adobe-block, name: entry, at: ["=ex", -0.05, 0], with: {w: "=ew", d: 1.3, h: "=eh", batter: 0.15, rnd: 0.1}}
-  - {use: roof-lip, name: entry-lip, at: ["=ex", -0.05, 0], with: {w: "=ew", d: 1.3, h: "=eh", batter: 0.15, t: 0.16}}
-  - when: "=door == 'slab'"
+      - name: "=f'wall{i}'"
+        mat: wall
+        prism:
+          poly:
+            - ["=rx * cos(2 * pi * i / n + pi / n)", "=cy + ry * sin(2 * pi * i / n + pi / n)"]
+            - ["=rx * cos(2 * pi * (i + 1) / n + pi / n)", "=cy + ry * sin(2 * pi * (i + 1) / n + pi / n)"]
+            - ["=(rx - t) * cos(2 * pi * (i + 1) / n + pi / n)", "=cy + (ry - t) * sin(2 * pi * (i + 1) / n + pi / n)"]
+            - ["=(rx - t) * cos(2 * pi * i / n + pi / n)", "=cy + (ry - t) * sin(2 * pi * i / n + pi / n)"]
+          z: [0, "=h"]
+          top: 0.96
+          round: 0.04
+      - name: "=f'rim{i}'"
+        mat: trim
+        prism:
+          poly:
+            - ["=(rx + 0.04) * cos(2 * pi * i / n + pi / n)", "=cy + (ry + 0.04) * sin(2 * pi * i / n + pi / n)"]
+            - ["=(rx + 0.04) * cos(2 * pi * (i + 1) / n + pi / n)", "=cy + (ry + 0.04) * sin(2 * pi * (i + 1) / n + pi / n)"]
+            - ["=(rx - t - 0.04) * cos(2 * pi * (i + 1) / n + pi / n)", "=cy + (ry - t - 0.04) * sin(2 * pi * (i + 1) / n + pi / n)"]
+            - ["=(rx - t - 0.04) * cos(2 * pi * i / n + pi / n)", "=cy + (ry - t - 0.04) * sin(2 * pi * i / n + pi / n)"]
+          z: ["=h - 0.14", "=h + 0.04"]
+          round: 0.03
+  # the gate block on the street side, taller than the ring, with the blast door
+  - {use: adobe-block, name: gate, at: ["=ex", 0, 0], with: {w: "=gw", d: 1.0, h: "=gh", batter: 0.16, rnd: 0.1}}
+  - {use: roof-lip, name: gate-lip, at: ["=ex", 0, 0], with: {w: "=gw", d: 1.0, h: "=gh", batter: 0.16, t: 0.18}}
+  - {use: door-slab, name: door, at: ["=ex", 0, 0], with: {w: 1.1, h: "=gh * 0.62"}}
+  # what is in the bay
+  - when: "=extra == 'crates'"
     parts:
-      - {use: door-slab, name: door, at: ["=ex", -0.05, 0], with: {w: 1.0, h: "=eh * 0.7"}}
-    else:
-      - {use: door-arch, name: door, at: ["=ex", -0.05, 0], with: {w: 0.95, h: "=eh * 0.55"}}
-  # what is parked inside
-  - when: "=ship == 'freighter'"                  # a saucer freighter: disc, mandibles south, cockpit tube
+      - {use: crate, name: crate1, at: ["=-rx * 0.45", "=cy + ry - t - 0.45", 0], with: {s: 0.6}}
+      - {use: crate, name: crate2, at: ["=-rx * 0.45 + 0.65", "=cy + ry - t - 0.4", 0], with: {s: 0.5}}
+      - {use: crate, name: crate3, at: ["=rx * 0.4", "=cy + ry - t - 0.5", 0], with: {s: 0.65}}
+  - when: "=extra == 'tank'"
     parts:
-      - {name: ship-disc, mat: light, cylinder: {a: [0.1, "=cy + 0.3", 0.15], b: [0.1, "=cy + 0.3", 0.5], r1: "=Rr * 0.5", r2: "=Rr * 0.46"}}
-      - {name: ship-hump, mat: mid, ellipsoid: {c: [0.1, "=cy + 0.4", 0.5], r: ["=Rr * 0.26", "=Rr * 0.26", 0.22]}}
-      - {name: ship-mand-w, mat: light, box: {c: [-0.35, "=cy + 0.3 - Rr * 0.55", 0.33], half: [0.22, "=Rr * 0.22", 0.13], radius: 0.03}}
-      - {name: ship-mand-e, mat: light, box: {c: [0.55, "=cy + 0.3 - Rr * 0.55", 0.33], half: [0.22, "=Rr * 0.22", 0.13], radius: 0.03}}
-      - {name: ship-cockpit, mat: mid, cylinder: {a: ["=0.1 + Rr * 0.4", "=cy + 0.1", 0.38], b: ["=0.1 + Rr * 0.62", "=cy - 0.25", 0.38], r1: 0.2}}
-  - when: "=ship == 'shuttle'"                     # a wedge shuttle with a tall tail fin
+      - {name: tank, mat: metal, cylinder: {a: ["=-rx + t + 0.55", "=cy + 0.3", 0], b: ["=-rx + t + 0.55", "=cy + 0.3", 1.0], r1: 0.42}}
+      - {name: tank-cap, mat: metal, ellipsoid: {c: ["=-rx + t + 0.55", "=cy + 0.3", 1.0], r: [0.42, 0.42, 0.2]}}
+  - when: "=vent"
     parts:
-      - name: shuttle-hull
-        mat: light
-        prism: {poly: [[0, "=cy - Rr * 0.5"], ["=Rr * 0.32", "=cy + Rr * 0.35"], ["=-Rr * 0.32", "=cy + Rr * 0.35"]], z: [0.1, 0.5], top: 0.8, round: 0.04}
-      - {name: shuttle-fin, mat: mid, box: {c: [0, "=cy + Rr * 0.2", 0.85], half: [0.08, "=Rr * 0.18", 0.4], radius: 0.02}}
-  - when: "=ship == 'crates'"
-    parts:
-      - {use: crate, name: crate1, at: [-0.7, "=cy + 0.6", 0], with: {s: 0.6}}
-      - {use: crate, name: crate2, at: [0.1, "=cy + 0.9", 0], with: {s: 0.7}}
-      - {use: crate, name: crate3, at: [-0.3, "=cy + 1.1", 0.6], with: {s: 0.5}}
-      - {use: crate, name: crate4, at: [0.9, "=cy + 0.4", 0], with: {s: 0.5}}
-  - chance: 0.6                                  # a vent stack on the ring
-    parts:
-      - {use: vent, name: vent, at: ["=-(Rr - t / 2) * 0.7 * (1 if seed % 2 else -1)", "=cy + (Rr - t / 2) * 0.7", "=hr"], with: {r: 0.2, h: 0.4}}
+      - {use: vent, name: vent, at: ["=-(rx - t / 2) * 0.62 * (1 if seed % 2 else -1)", "=cy + (ry - t / 2) * 0.8", "=h"], with: {r: 0.2, h: 0.4}}

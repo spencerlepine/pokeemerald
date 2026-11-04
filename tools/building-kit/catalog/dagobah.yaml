@@ -136,9 +136,10 @@ buildings:
   art: art:shared:landing-pad
   size: [6, 4]
   door: 3
-  blueprint: dagobah/bog-pad
+  blueprint: shared/landing-pad
   seed: 0
-  about: A plank landing platform on stilts over the bog, where Luke would have wanted to land (The Empire Strikes Back).
+  set: {support: posts, shape: square, booth0: false, prop: crates}
+  about: "A square landing deck raised on posts with a thick front edge and steps up; cargo crates. No ship drawn: ships don't read in this camera."
 - id: bld:dagobah:fill-stilt-shack
   kind: home
   name: Swamp stilt shack

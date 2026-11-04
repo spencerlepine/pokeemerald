@@ -162,7 +162,10 @@ def build_one(e, planet):
 
 
 def build(planets=None, wiki=True, only=None):
-    rows = [r for r in _read_csv() if not planets or r["planet"] not in {planet_key(p) for p in planets}]
+    # a full build starts the csv afresh (so removed entries go); --planet / --only keep the other rows,
+    # and a rebuilt entry replaces its old row
+    full = not planets and not only
+    rows = {} if full else {r["id"]: r for r in _read_csv()}
     problems = 0
     made = 0
     shots = {}
@@ -190,7 +193,7 @@ def build(planets=None, wiki=True, only=None):
             os.makedirs(d, exist_ok=True)
             img.save(os.path.join(d, f"{name}.png"))
             row["png"] = os.path.relpath(os.path.join(d, f"{name}.png"), os.path.join(C.ROOT, "wiki")) if wiki else ""
-            rows.append(row)
+            rows[row["id"]] = row
             shots.setdefault(stem, []).append((f"{e.get('name', '')[:22]} {row['size']} fp{row['footprint'].split('x')[1]} "
                                              f"{'' if row['fits'] == 'yes' else 'NO FIT '}{row['tiles']}t", img))
             made += 1
@@ -200,6 +203,7 @@ def build(planets=None, wiki=True, only=None):
         os.makedirs(os.path.dirname(out), exist_ok=True)
         R.sheet(f"{pk}: {len(sh)} buildings (lot size, footprint rows, tiles)", sh, scale=2, max_w=1800).save(out)
         print("->", os.path.relpath(out, C.HERE))
+    rows = list(rows.values())
     if wiki:
         rows.sort(key=lambda r: (r["planet"], KINDS.index(r["kind"]) if r["kind"] in KINDS else 99, r["id"]))
         with open(CSV, "w", newline="") as fh:

@@ -114,9 +114,10 @@ buildings:
   art: art:tatooine:docking-bay
   size: [8, 4]
   door: 4
-  blueprint: endor/forest-pad
+  blueprint: shared/landing-pad
   seed: 7
-  about: A clearing with the stolen Lambda shuttle Tydirium parked, wings folded up (Return of the Jedi).
+  set: {support: slab, shape: oct, booth0: false, prop: crates}
+  about: "A low eight-sided landing slab in a clearing with a thick front edge and steps up; cargo crates. No ship drawn: ships don't read in this camera."
 - id: bld:endor:route-119-house
   kind: landmark
   name: House
@@ -134,10 +135,10 @@ buildings:
   art: art:shared:landing-pad
   size: [5, 4]
   door: 2
-  blueprint: endor/forest-pad
+  blueprint: shared/landing-pad
   seed: 0
-  about: A duracrete landing pad cut into the forest, landing lights at its corners (Return of the Jedi landing platform).
-  set: {kind: slab}
+  about: "A low square landing slab in a clearing with a thick front edge and steps up; beacon posts. No ship drawn: ships don't read in this camera."
+  set: {support: slab, shape: square, booth0: false, prop: beacons}
 - id: bld:endor:route-123-berry-masters-house
   kind: hut
   name: Berry masters house
@@ -156,10 +157,10 @@ buildings:
   art: art:shared:landing-pad
   size: [4, 4]
   door: 1
-  blueprint: endor/forest-pad
+  blueprint: shared/landing-pad
   seed: 1
-  about: A log-ringed forest clearing where pilgrim shuttles set down (Return of the Jedi).
-  set: {kind: logs}
+  about: "A low oval landing slab in a clearing with a thick front edge and steps up; nothing else on it. No ship drawn: ships don't read in this camera."
+  set: {support: slab, shape: round, booth0: false, prop: none}
 - id: bld:endor:fill-ewok-storehouse
   kind: hut
   name: Ewok storehouse
