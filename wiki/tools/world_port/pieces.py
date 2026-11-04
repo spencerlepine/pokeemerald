@@ -3,7 +3,8 @@
 Every building (`buildings:`) and every sized prop (`props:`) of an area covers its cells with its own
 metatiles: the building-kit render (`mapping/buildings.csv` png), else the greybox render (`world_art.csv`
 `greybox`, then `model_png`), else the piece's pink placeholder. Each cell is solid (collision 1); a building's
-door cell (bottom row, `door` column) is walkable and warps (MB_NON_ANIMATED_DOOR).
+door cell (bottom row, `door` column) is walkable and warps (MB_NON_ANIMATED_DOOR). In a vanilla or hybrid
+map only the pieces set on ground vanilla has open are drawn; the vanilla buildings keep their own tiles.
 
 The render is fitted to the piece's cells: scaled down if it is bigger, centred and standing on the bottom row
 if smaller. `facing: w` mirrors the east-facing render. A prop `shown` only after a story flag is always drawn
@@ -70,6 +71,14 @@ def add_pieces(C):
     """Overlay every piece of the area onto its Cells (symbols ("piece", ...)); returns the pieces."""
     area = C.area
     ps = pieces_of(area)
+    if area.mode in ("vanilla", "hybrid"):
+        # a vanilla map already draws its own buildings: a piece over cells vanilla has solid is one of them; only
+        # a piece set on open vanilla ground is new (a hangar on a route)
+        def is_new(p):
+            under = [int(C.coll[yy, xx]) for yy in range(p["y"], p["y"] + p["h"]) for xx in range(p["x"], p["x"] + p["w"])
+                     if 0 <= yy < area.h and 0 <= xx < area.w]
+            return bool(under) and sum(c == 0 for c in under) > len(under) / 2
+        ps = [p for p in ps if is_new(p)]
     for i, p in enumerate(ps):
         for yy in range(p["y"], p["y"] + p["h"]):
             for xx in range(p["x"], p["x"] + p["w"]):
@@ -85,3 +94,27 @@ def add_pieces(C):
                 else:
                     C.coll[yy, xx], C.elev[yy, xx] = 1, 0
     return ps
+
+
+def align_doors(areas):
+    """Line up each building that replaces a vanilla one with the vanilla door (vanilla and hybrid maps).
+
+    Map scripts open, close and walk people through a vanilla door by its cell. When the wiki redraws such a
+    building a cell or two off, the building moves so its door sits on the vanilla door cell. Returns notes.
+    """
+    notes = []
+    for a in areas.values():
+        if a.mode not in ("vanilla", "hybrid"):
+            continue
+        vw = B.base_map(a.replaces).get("warp_events") or []
+        for b in a.buildings:
+            if "door" not in b or b.get("to") not in areas:
+                continue
+            dx, dy = b["at"][0] + int(b["door"]), b["at"][1] + b["size"][1] - 1
+            const = areas[b["to"]].map_const
+            near = sorted((abs(w["x"] - dx) + abs(w["y"] - dy), w["x"], w["y"]) for w in vw if w["dest_map"] == const)
+            if near and 0 < near[0][0] <= 3:
+                _, vx, vy = near[0]
+                b["at"] = [b["at"][0] + vx - dx, b["at"][1] + vy - dy]
+                notes.append(f"{a.id}: {b['name']} moved by ({vx - dx},{vy - dy}) so its door is vanilla's ({vx},{vy})")
+    return notes

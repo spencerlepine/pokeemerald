@@ -129,7 +129,9 @@ def build(area):
     if area.mode in ("vanilla", "hybrid"):
         raw, lay = vanilla_cells(area)
         C.vanilla_raw = raw
-        kit = kit_cells(area)
+        # interiors keep their vanilla cells: the planet kit is for outdoor ground, and blockout reads furniture
+        # as cliffs
+        kit = raw & 0x3FF if area.kind == "interior" else kit_cells(area)
         names = None
         for y in range(area.h):
             for x in range(area.w):

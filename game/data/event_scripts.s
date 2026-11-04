@@ -573,6 +573,15 @@ gStdScripts_End::
 	.include "data/maps/Route119_WeatherInstitute_2F/scripts.inc"
 	.include "data/maps/Route119_House/scripts.inc"
 	.include "data/maps/Route124_DivingTreasureHuntersHouse/scripts.inc"
+@ world_port: new maps (begin)
+	.include "data/maps/SwBensHut/scripts.inc"
+	.include "data/maps/SwBensHutInterior/scripts.inc"
+	.include "data/maps/SwJabbasPalace/scripts.inc"
+	.include "data/maps/SwJabbasPalaceBargeDock/scripts.inc"
+	.include "data/maps/SwJabbasPalaceThroneRoom/scripts.inc"
+	.include "data/maps/SwMosEspaPodraceArena/scripts.inc"
+	.include "data/maps/SwToscheStationPowerStation/scripts.inc"
+@ world_port: new maps (end)
 
 	.include "data/scripts/std_msgbox.inc"
 	.include "data/scripts/trainer_battle.inc"

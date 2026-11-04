@@ -1,17 +1,53 @@
 # world_port
 
-Ports the wiki world (`wiki/world/`) into `../game`: terrain, buildings and props, warps, connections,
-people, signs and wild tables. Work in progress; nothing is installed yet.
+Ports the wiki world (`wiki/world/`) into `../game`: terrain, buildings and props, warps, connections and
+people. Run from the repo root:
 
-The modules:
+```sh
+python3 wiki/tools/port_world.py install TATOOINE -mos-pelgo   # planets or area ids; -AREA leaves one out
+cd game && make -j4
+```
 
-- `base.py`: paths, and the vanilla snapshot (commit `c663bddf`) every pass reads from (`.base/`, not committed).
-- `model.py`: the areas and how each is ported (`vanilla`, `hybrid`, `redraw`, new).
-- `terrain.py`: the metatile, collision and elevation of every cell.
-- `pieces.py`: buildings and props as solid cells drawn with their greybox or kit render.
-- `tiles.py`: the per-area secondary tileset that holds the new metatiles (placeholders included).
-- `pins.py`: what a tileset copy must keep in place (labelled metatiles, animated tiles).
-- `warps.py`: warps and map connections.
+It always starts from the vanilla snapshot (commit `c663bddf`, extracted once into `.base/`, not committed), so
+it can run again and gives the same files. Areas outside the run keep their vanilla maps.
+
+## What it writes
+
+- **Terrain** (`terrain.py`). A vanilla map with the same grid keeps its vanilla cells; a route or cave with a few
+  cells changed (hybrid) keeps vanilla cells where the grid is unchanged; a redrawn town and every new area is
+  drawn from the grid with tile-generator's terrain items. A terrain role the tileset pair has no tile for
+  (Dune Sea, wroshyr trunks...) is the pink placeholder over a grey fill, its own metatile per role. Interiors
+  keep their vanilla cells (no planet kit indoors).
+- **Pieces** (`pieces.py`). Every building and sized prop is solid, drawn with its building-kit render, else its
+  greybox render, else the pink placeholder, one metatile per cell. A building's door cell warps (non-animated
+  door). In a vanilla or hybrid map only pieces set on ground vanilla has open are drawn (vanilla buildings keep
+  their tiles), and a redrawn building moves up to 3 cells so its door is the vanilla door (scripts use it).
+- **Tilesets** (`tiles.py`, `pins.py`). An area with new metatiles gets its own secondary tileset in
+  `data/tilesets/secondary/sw/<area-id>/`, declared in `src/data/tilesets/sw_*.h`. A map that replaces a vanilla
+  one keeps every vanilla metatile id, the tiles scripts name (`metatile_labels.h`) and the animated tiles; new
+  tiles take the unused slots. New tiles use one grey and magenta palette in a free slot.
+- **Layouts**. A map's own vanilla layout is rewritten in place; a shared one or a new area gets
+  `LAYOUT_SW_<ID>`.
+- **Warps and connections** (`warps.py`). A map that replaces a vanilla one keeps every vanilla warp at its index
+  (scripts, heal spots and other maps name warps by index): each wiki door takes the vanilla warp at its cell or
+  to the same place, new doors come after, a vanilla warp with no wiki door stays where it was (inert on a
+  blocked cell in a redrawn map). A map edge in `exits:` connects to the area it names, the offset from the two
+  areas' `pos`.
+- **New maps** go in `gMapGroup_StarWars` (`MAP_SW_<ID>`), with the music and map section of the nearest vanilla
+  map they are reached from.
+- **People and signs** (`events.py`). Vanilla and hybrid maps keep their vanilla objects (one under a new building
+  moves to the nearest open cell, unless a script places it). A yaml person with no vanilla object on its cell,
+  and every person of a new map, is a new object with a script from `mapping/people.csv` (lines, trainer, boss,
+  wild battle, flag). Scripts and texts go in a managed block of the map's `scripts.inc`; a label of the same name
+  written by hand outside the block replaces the generated one.
+
+Redrawn vanilla towns are not ported yet (their vanilla scripts need their events moved by hand).
 
 Art stays pending in the wiki: a placeholder or greybox tile goes in as a real tile in its own slot, so it can
 be redrawn later without touching the maps.
+
+## Check
+
+`tools/play-tester/scripts/world-check.sh SPOTS` teleports to each spot (`name group num x y [KEYS]`), presses
+the keys and screenshots it into `tools/play-tester/out/world/`. `WORLD_TRACE=1` logs the map and cell after every
+step. Run `UI_ROM=$PWD/game/pokeemerald.gba tools/play-tester/scripts/ui-check.sh boot` after each build first.

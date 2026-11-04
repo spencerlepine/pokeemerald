@@ -54,6 +54,14 @@ teleporting before the truck cutscene ends leaves the player invisible; the star
 after START; and never `pkill -f mgba-qt` from a shell whose command line holds that text (it kills the
 shell): use `pkill -x mgba-qt`.
 
+## World check
+
+`scripts/world-check.sh SPOTS [timeout]` checks the ported world on the agbcc build: from ui-check's
+`overworld.ss0` (run `UI_ROM=$PWD/../../game/pokeemerald.gba scripts/ui-check.sh boot` after each build) it
+teleports to each line of SPOTS (`name group num x y [KEYS]`, keys like `RIGHT8 UP2 A`), presses the keys and
+screenshots `out/world/<name>.png`. `log.txt` has the map, cell and layout size the game loaded. `WORLD_TRACE=1`
+logs every step (map crossings, warps). A wild battle can start on a step through grass.
+
 ## Quick start (Ubuntu)
 
 ```bash

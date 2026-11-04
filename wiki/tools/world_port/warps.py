@@ -47,45 +47,90 @@ def map_to_area(areas):
     return {a.map_const: a.id for a in areas.values()}
 
 
+def _inert_cell(area, taken):
+    """A blocked cell with no warp on it, for a vanilla warp the wiki no longer has a door for."""
+    for y in range(area.h):
+        for x in range(area.w):
+            if area.grid[y][x] in "T#x|" and (x, y) not in taken:
+                return x, y
+    return 0, 0
+
+
 def build_warps(areas):
-    """area id -> [Warp] with destinations resolved. Also returns problems."""
+    """area id -> [Warp] with destinations resolved; problems.
+
+    A map that replaces a vanilla one keeps every vanilla warp at its index, so warp ids named by scripts, heal
+    spots and maps outside the port still land where they did. Each wiki door takes the vanilla warp at its cell,
+    else the first unclaimed vanilla warp to the same place; doors left over are added after. A vanilla warp no
+    wiki door claims stays: at its own cell in a vanilla or hybrid map (the cell is vanilla there), on a blocked
+    cell in a redrawn one (inert: a warp only fires on a door or warp tile).
+    """
     m2a = map_to_area(areas)
     problems = []
     lists = {}
     for a in areas.values():
         doors = wiki_doors(a)
-        if a.mode in ("vanilla", "hybrid"):
-            mj = B.base_map(a.replaces)
-            ws = []
-            claimed = set()
-            for w in mj.get("warp_events") or []:
-                x, y = w["x"], w["y"]
-                dest = w["dest_map"]
-                hit = [i for i, d in enumerate(doors) if (d[0], d[1]) == (x, y) and i not in claimed]
-                if dest == "MAP_DYNAMIC" or dest not in m2a:
-                    wp = Warp(x, y, None, "vanilla", vanilla=w)
-                    wp.dest_map, wp.dest_id = dest, w["dest_warp_id"]
-                    ws.append(wp)
-                    if hit:
-                        claimed.add(hit[0])
-                    continue
-                if not hit:
-                    continue                       # cut by the wiki
-                claimed.add(hit[0])
-                d = doors[hit[0]]
-                ws.append(Warp(x, y, d[2], d[3], vanilla=w, kind=d[4]))
-            for i, d in enumerate(doors):
-                if i not in claimed and not any((w.x, w.y) == (d[0], d[1]) for w in ws):
-                    ws.append(Warp(d[0], d[1], d[2], d[3], kind=d[4]))
-            lists[a.id] = ws
-        else:
+        if a.new:
             lists[a.id] = [Warp(d[0], d[1], d[2], d[3], kind=d[4]) for d in doors]
-    # vanilla warp index -> its index in the new list, for maps that keep vanilla warps
-    vmap = {}
-    for a in areas.values():
-        if a.mode in ("vanilla", "hybrid"):
-            v = B.base_map(a.replaces).get("warp_events") or []
-            vmap[a.id] = {i: j for j, w in enumerate(lists[a.id]) for i, vw in enumerate(v) if w.vanilla is vw}
+            continue
+        vw = B.base_map(a.replaces).get("warp_events") or []
+        ws = [None] * len(vw)
+        claimed = set()
+        def keep(i, w, x, y, note):
+            wp = Warp(x, y, None, note, vanilla=w)
+            wp.dest_map, wp.dest_id = w["dest_map"], w["dest_warp_id"]
+            ws[i] = wp
+
+        # 0. warps to places the wiki does not hold (MAP_DYNAMIC, secret bases) stay as they are
+        for i, w in enumerate(vw):
+            if w["dest_map"] not in m2a:
+                keep(i, w, w["x"], w["y"], "vanilla")
+                for j, d in enumerate(doors):
+                    if (d[0], d[1]) == (w["x"], w["y"]):
+                        claimed.add(j)
+        doors = [d if d[2] in areas else None for d in doors]
+        claimed |= {j for j, d in enumerate(doors) if d is None}
+        # 1. same cell
+        for i, w in enumerate(vw):
+            if ws[i] is not None:
+                continue
+            for j, d in enumerate(doors):
+                if j not in claimed and (d[0], d[1]) == (w["x"], w["y"]):
+                    claimed.add(j)
+                    ws[i] = Warp(d[0], d[1], d[2], d[3], vanilla=w, kind=d[4])
+                    break
+        # 2. same destination
+        for i, w in enumerate(vw):
+            if ws[i] is not None:
+                continue
+            for j, d in enumerate(doors):
+                if j not in claimed and m2a.get(w["dest_map"]) == d[2]:
+                    claimed.add(j)
+                    ws[i] = Warp(d[0], d[1], d[2], d[3], vanilla=w, kind=d[4])
+                    break
+        taken = {(d[0], d[1]) for d in doors if d}
+        for i, w in enumerate(vw):
+            if ws[i] is not None:
+                continue
+            # a second vanilla door to a place this map already has a door to (a two-cell door): same cell
+            twin = next((x for x in ws if x is not None and x.to and x.to == m2a.get(w["dest_map"])), None)
+            if twin is not None and a.mode == "redraw":
+                ws[i] = Warp(twin.x, twin.y, twin.to, twin.name, vanilla=w, kind=twin.kind)
+                continue
+            if a.mode == "redraw":
+                x, y = _inert_cell(a, taken)
+                taken.add((x, y))
+                note = "inert"
+            else:
+                x, y = w["x"], w["y"]
+                note = "vanilla"
+            keep(i, w, x, y, note)
+            if note == "inert" and w["dest_map"] in m2a:
+                problems.append(f"{a.id}: vanilla warp {i} to {m2a[w['dest_map']]} has no door in the wiki (inert)")
+        for j, d in enumerate(doors):
+            if j not in claimed and d is not None:
+                ws.append(Warp(d[0], d[1], d[2], d[3], kind=d[4]))
+        lists[a.id] = ws
     for aid, ws in lists.items():
         by_to = defaultdict(list)
         for w in ws:
@@ -98,14 +143,16 @@ def build_warps(areas):
             back = [i for i, w in enumerate(lists[to]) if w.to == aid]
             for k, w in enumerate(mine):
                 w.dest_map = areas[to].map_const
-                # vanilla's own destination, when it still exists on that map
-                if w.vanilla is not None and w.vanilla["dest_map"] == areas[to].map_const and to in vmap:
-                    j = vmap[to].get(int(w.vanilla["dest_warp_id"]))
-                    if j is not None:
-                        w.dest_id = str(j)
-                        continue
+                # vanilla's own destination, when that warp still leads back here
+                if w.vanilla is not None and w.vanilla["dest_map"] == areas[to].map_const:
+                    w.dest_id = w.vanilla["dest_warp_id"]
+                    continue
                 if back:
                     w.dest_id = str(back[min(k, len(back) - 1)])
+                elif w.vanilla is not None:
+                    w.dest_map, w.dest_id = w.vanilla["dest_map"], w.vanilla["dest_warp_id"]
+                    problems.append(f"{aid}: warp at ({w.x},{w.y}) to {to} has no warp back there; kept vanilla's "
+                                    f"{w.dest_map} {w.dest_id}")
                 else:
                     w.dest_id = "0" if lists[to] else None
                     problems.append(f"{aid}: warp at ({w.x},{w.y}) to {to} has no warp back there"

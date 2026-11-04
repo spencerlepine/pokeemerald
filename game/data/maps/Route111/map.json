@@ -14,19 +14,14 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_MAUVILLE_CITY",
-      "offset": 0,
-      "direction": "down"
-    },
-    {
-      "map": "MAP_ROUTE113",
-      "offset": 0,
-      "direction": "left"
-    },
-    {
       "map": "MAP_ROUTE112",
-      "offset": 20,
+      "offset": 17,
       "direction": "left"
+    },
+    {
+      "map": "MAP_SW_JABBAS_PALACE",
+      "offset": 41,
+      "direction": "right"
     }
   ],
   "object_events": [
@@ -675,6 +670,13 @@
       "y": 113,
       "elevation": 0,
       "dest_map": "MAP_TRAINER_HILL_ENTRANCE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 11,
+      "y": 93,
+      "elevation": 0,
+      "dest_map": "MAP_DESERT_UNDERPASS",
       "dest_warp_id": "0"
     }
   ],

@@ -33,7 +33,8 @@
     "gMapGroup_IndoorRoute113",
     "gMapGroup_IndoorRoute123",
     "gMapGroup_IndoorRoute119",
-    "gMapGroup_IndoorRoute124"
+    "gMapGroup_IndoorRoute124",
+    "gMapGroup_StarWars"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -673,5 +674,14 @@
     "SafariZone_Southeast",
     "BattleFrontier_OutsideWest",
     "BattleFrontier_OutsideEast"
+  ],
+  "gMapGroup_StarWars": [
+    "SwBensHut",
+    "SwBensHutInterior",
+    "SwJabbasPalace",
+    "SwJabbasPalaceBargeDock",
+    "SwJabbasPalaceThroneRoom",
+    "SwMosEspaPodraceArena",
+    "SwToscheStationPowerStation"
   ]
 }
