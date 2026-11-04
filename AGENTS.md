@@ -24,6 +24,7 @@ alternate telling. Twelve planets plus a post-game; PokéNAV is called **StarNAV
 | `wiki/mapping/hyperlanes.csv` | The planet graph: one row per ship link (hangar at each end, unlock). `blockout check` validates it; `blockout guide` reports it with the balance check. |
 | `wiki/mapping/terrain.csv` | Every terrain tile the game needs: one row per tileset, item and role (`terrain:general:cliff:ne`), with the vanilla metatile it uses (`use`, empty = missing, placeholder), planets, areas and status. Real-size sheets in `wiki/world/greybox/sheets/`. `terrain_areas.csv` links areas to rows. |
 | `wiki/mapping/rooms.csv` | Interior room shells: every room style and its kit parts (size, hit box, placeholder PNG). Each interior yaml names its style in `room:`. No tool yet ([`wiki/world/interiors/rooms/`](wiki/world/interiors/rooms/README.md)). Furniture and set pieces are the `interior` rows of `world_art.csv`, listed per room in `objects:` ([`wiki/world/interiors/placeholders/`](wiki/world/interiors/placeholders/README.md)). |
+| `wiki/mapping/world_kits.csv` | Everything else the world needs drawn (field objects, mechanics, doors, warps, tile animations, underwater, battle backgrounds, hideouts, popups, StarNAV map, field effects, weather, borders, story props), per planet, wired to areas by `blockout kits` ([`wiki/world/kits/`](wiki/world/kits/README.md)). |
 | `tools/` | One tool per asset group, listed in [`tools/README.md`](tools/README.md); TODO marks the ones with work left. |
 
 ## Standing rules (from the owner)
@@ -40,7 +41,7 @@ alternate telling. Twelve planets plus a post-game; PokéNAV is called **StarNAV
 
 1. **Ask the wiki what to draw:** `cd tools/blockout && python3 -m blockout todo [--status S] [--planet P]
    [--kind K] [--tool T] [--model M]`. Every area (`art_status` and `notes` in its yaml) and every art id (`status`,
-   `build`, `tool`, `notes` in `world_art.csv`) and every terrain item (`terrain.csv`, `--kind terrain`) and every room style and kit part (`rooms.csv`, `--kind room`) is a
+   `build`, `tool`, `notes` in `world_art.csv`) and every terrain item (`terrain.csv`, `--kind terrain`) and every room style and kit part (`rooms.csv`, `--kind room`) and every world kit (`world_kits.csv`, `--kind kit`) is a
    row. Statuses: `pending-mockup` (TODO) → `pending-final-art` (GREYBOX done) → `art-complete` (READY TO
    IMPORT) → `imported-in-game`.
 2. **Use the tool the row names.** `greybox piece`, `greybox terrain` and `greybox room` are in [`tools/greybox/`](tools/greybox/README.md); `tilegen terrain` is in [`tools/tile-generator/`](tools/tile-generator/README.md). A row with no tool needs a tool or a model that doesn't exist yet; its notes say what it needs.

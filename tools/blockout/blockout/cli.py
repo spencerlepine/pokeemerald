@@ -20,6 +20,7 @@ from .area import Area
 from . import vanilla as V
 from . import hyperlanes as H
 from . import rooms as R
+from . import kits as KT
 
 WORLD = V.ROOT / "wiki" / "world"
 
@@ -320,6 +321,9 @@ def cmd_check(a):
         for q in R.check_objects(every, _assets()):
             print(f"world_art.csv: {q}")
             bad += 1
+        for q in KT.check(KT.scan()):
+            print(f"world_kits.csv: {q}")
+            bad += 1
     sys.exit(1 if bad else 0)
 
 
@@ -365,6 +369,8 @@ def cmd_index(a):
                             rrow.get("status", "pending-mockup"), rrow.get("tool", "")])
     print(out)
     R.index([Area(p) for p in _all()])
+    missing = KT.update()
+    print(KT.PATH, f"({len(missing)} scan hits with no row: run `python3 -m blockout kits --add`)" if missing else "")
     # world_art.csv `used_in` and `areas`: how often each piece is placed, and where
     path = V.ROOT / "wiki" / "mapping" / "world_art.csv"
     rows = list(csv.DictReader(open(path)))
@@ -382,6 +388,14 @@ def cmd_index(a):
 STATUSES = ["pending-mockup", "pending-final-art", "art-complete", "imported-in-game"]
 
 
+def cmd_kits(a):
+    """Scan the world for kit items (world_kits.csv): refresh used_in / areas, list or add rows the scan finds."""
+    missing = KT.update(add=a.add)
+    for m in missing:
+        print(("added " if a.add else "no row: ") + m)
+    print(KT.PATH, f"{len(KT.load())} rows")
+
+
 def cmd_todo(a):
     """What to draw next, from the wiki: areas (their yaml), assets (world_art.csv) and terrain items
     (terrain.csv), filtered by status, planet, kind or tool. --set ID STATUS writes a status back (an area id,
@@ -390,9 +404,9 @@ def cmd_todo(a):
         ident, status = a.set
         if status not in STATUSES:
             sys.exit(f"status must be one of {STATUSES}")
-        if ident.startswith(("art:", "terrain:", "room:")):
+        if ident.startswith(("art:", "terrain:", "room:", "kit:")):
             col, name = {"art": ("concept_id", "world_art.csv"), "terrain": ("terrain_id", "terrain.csv"),
-                         "room": ("room_id", "rooms.csv")}[ident.split(":")[0]]
+                         "room": ("room_id", "rooms.csv"), "kit": ("kit_id", "world_kits.csv")}[ident.split(":")[0]]
             path = V.ROOT / "wiki" / "mapping" / name
             rows = list(csv.DictReader(open(path)))
             hit = [r for r in rows if r[col] == ident]
@@ -418,6 +432,9 @@ def cmd_todo(a):
         rows.append({"id": aid, "kind": r["category"], "planet": r["planet"], "status": r["status"], "tool": r["tool"],
                      "build": r["build"], "used_in": r["used_in"], "model": r.get("model_status", ""),
                      "notes": r["notes"] or r["description"][:90]})
+    for kid, r in KT.load().items():         # world kits (world_kits.csv): field objects, doors, anims, battle bgs...
+        rows.append({"id": kid, "kind": f"kit:{r['category']}", "planet": r["planet"], "status": r["status"], "tool": r["tool"],
+                     "build": r["drawn"], "used_in": r["used_in"], "model": "", "notes": r["notes"]})
     for rid, r in R.load().items():          # room shells (rooms.csv): styles and kit parts
         rows.append({"id": rid, "kind": f"room:{r['kind']}", "planet": r["planet"], "status": r["status"], "tool": r["tool"],
                      "build": r["size"], "used_in": r["used_in"], "model": "", "notes": r["notes"]})
@@ -745,10 +762,12 @@ def main(argv=None):
         s = sub.add_parser(name)
         s.add_argument("areas", nargs="*")
     sub.add_parser("index")
+    kt = sub.add_parser("kits", help="scan the world for kit items (wiki/mapping/world_kits.csv)")
+    kt.add_argument("--add", action="store_true", help="write a row for every scan hit that has none")
     td = sub.add_parser("todo", help="what to draw next, from the wiki")
     td.add_argument("--status", choices=STATUSES)
     td.add_argument("--planet")
-    td.add_argument("--kind", help="area, area:town, building, object, interior, nature, landmark, room, room:style, room:part")
+    td.add_argument("--kind", help="area, area:town, building, object, interior, nature, landmark, room, room:style, room:part, kit, kit:door, kit:battle-bg ...")
     td.add_argument("--tool")
     td.add_argument("--model", help="scenery model status: TODO, IN-PROGRESS, IN-REVIEW, APPROVED, or any")
     td.add_argument("--csv", action="store_true")
@@ -763,4 +782,4 @@ def main(argv=None):
     ia.add_argument("--force", action="store_true")
     ia.add_argument("--only", nargs="*")
     a = ap.parse_args(argv)
-    {"new": cmd_new, "world": cmd_world, "layout": cmd_layout, "import-all": cmd_import_all, "render": cmd_render, "check": cmd_check, "index": cmd_index, "todo": cmd_todo, "guide": cmd_guide, "world-tiles": cmd_world_tiles}[a.cmd](a)
+    {"new": cmd_new, "world": cmd_world, "layout": cmd_layout, "import-all": cmd_import_all, "render": cmd_render, "check": cmd_check, "index": cmd_index, "kits": cmd_kits, "todo": cmd_todo, "guide": cmd_guide, "world-tiles": cmd_world_tiles}[a.cmd](a)

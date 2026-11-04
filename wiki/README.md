@@ -170,6 +170,10 @@ in `../game`. Every `source_file` is a path relative to `../game`.
 - **Interior objects:** the `interior` rows of `mapping/world_art.csv` (furniture, machines, set pieces, with drawn size,
   hit box and the Emerald piece each reuses); every room lists the ones it needs in `objects:`. Placeholder tiles only,
   no tool yet: [`world/interiors/placeholders/README.md`](world/interiors/placeholders/README.md).
+- **World kits:** `mapping/world_kits.csv` is everything else the world needs drawn (field objects, floor mechanics,
+  doors, warps, animated tiles, underwater, battle backgrounds, hideouts, popups and the StarNAV map, field effects,
+  weather, map borders, story props), one row per item and planet, wired to areas by a scan of the yamls and
+  `../game`. Placeholder tiles only: [`world/kits/README.md`](world/kits/README.md).
 - **World-building tools:** [`../tools/world-art/README.md`](../tools/world-art/README.md) draws new shapes from 3D models. Only owner-approved models live there (so far the Hoenn tree).
 - **World blockout:** [`world/README.md`](world/README.md) lays out every area in placeholder tiles before any art; `world/INDEX.csv` is the to-do list.
 - **Planet graph:** `mapping/hyperlanes.csv` is every ship link between planets (hangar at each end, unlock); `world/GUIDE.md` reports it with the badges held on first landing and the balance check of every net-new area.

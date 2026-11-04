@@ -29,6 +29,8 @@ The owner's plan (2026-11-02): build the whole world conceptually first, then fi
 - `interiors/placeholders/`: the interior objects (furniture, machines, set pieces): a placeholder PNG per
   `interior` row of `../mapping/world_art.csv` and a sheet per planet ([`interiors/placeholders/README.md`](interiors/placeholders/README.md)).
   Each room lists the objects it needs in `objects:`.
+- `kits/`: placeholder tiles for every row of `../mapping/world_kits.csv` (field objects, doors, warps, animated
+  tiles, battle backgrounds, weather...) and a sheet per category ([`kits/README.md`](kits/README.md)).
 - `greybox/`: rendered greybox pieces (`<planet>_<name>.png`), kit sheets (`_kit-*.png`) and areas in relief
   (`areas/`), written by `tools/greybox`.
 
