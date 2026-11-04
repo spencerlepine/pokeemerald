@@ -1,0 +1,76 @@
+# Office tower floors (art:tatooine:office-tower-floors), a greybox room 15x10, drawn at its size.
+# Reference: House Organa's office tower in Bestine (clean Core-world offices, after the Rebels / Andor
+# office sets): carpeted floor with a walkway, rows of desks each with a glowing holo screen, a reception
+# counter by the door, potted plants, and the lift lobby in the north-east with two lift doors.
+# Placed after the room's area yaml (bestine-organa-tower-1f: the lift up in the north-east, the door in
+# the south-west). Axes: x east, y north, z up; origin at the middle of the room's south edge.
+name: tatooine_office-tower-floors
+art: art:tatooine:office-tower-floors
+palette: greybox
+kits: [../scenery/kits/tatooine-rest.yaml]
+cells: [15, 10]
+foot: [120, 160]
+footprint: 1
+box: null
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  floor:  {ramp: mid,   bands: [0.3, 0.6, 0.95]}
+  walk:   {ramp: light, bands: [0.3, 0.6, 0.95]}
+  wall:   {ramp: light, bands: [0.2, 0.42, 0.9]}
+  cap:    {ramp: dark,  bands: [0.5, 0.8, 0.98]}
+  base:   {ramp: dark,  bands: [0.3, 0.6, 0.9]}
+  desk:   {ramp: light, bands: [0.25, 0.55, 0.85]}
+  metal:  {ramp: mid,   bands: [0.2, 0.5, 0.8]}
+  plant:  {ramp: dark,  bands: [0.15, 0.45, 0.8]}
+  glow:   {ramp: light, emissive: true}
+templates:
+  # a desk with a holo screen standing on it and a chair behind (north of) it
+  desk:
+    parts:
+      - {name: top, mat: desk, box: {c: [0, 0, 0.62], half: [0.75, 0.38, 0.05], radius: 0.02}}
+      - {name: body, mat: metal, box: {c: [0, -0.05, 0.3], half: [0.7, 0.3, 0.28]}}
+      - {name: screen, mat: glow, box: {c: [0, 0.15, 0.95], half: [0.42, 0.03, 0.25]}}
+      - {name: screen-foot, mat: base, box: {c: [0, 0.15, 0.68], half: [0.06, 0.04, 0.06]}}
+      - {name: chair, mat: base, cylinder: {a: [0, 0.65, 0], b: [0, 0.65, 0.45], r1: 0.22}}
+  plant:
+    parts:
+      - {name: pot, mat: metal, cylinder: {a: [0, 0, 0], b: [0, 0, 0.45], r1: 0.25, r2: 0.3}}
+      - {name: leaves, mat: plant, ellipsoid: {c: [0, 0, 0.75], r: [0.38, 0.3, 0.38]}}
+parts:
+  - {use: room-shell, name: shell, with: {W: 15, D: 10, dx: -3.0, dw: 1.8, floor: floor}}
+  - {name: walkway, mat: walk, box: {c: [-3.0, 3.2, 0.045], half: [1.0, 3.2, 0.01]}}
+  - {name: walkway-2, mat: walk, box: {c: [1.5, 6.6, 0.045], half: [5.5, 0.9, 0.01]}}
+  # the lift lobby: two lift doors in the north wall with lit frames and a call panel
+  - {name: lift-1-frame, mat: glow, box: {c: [3.9, 7.96, 0.85], half: [0.62, 0.04, 0.85]}}
+  - {name: lift-1, mat: metal, box: {c: [3.9, 7.92, 0.8], half: [0.52, 0.05, 0.8]}}
+  - {name: lift-1-seam, mat: base, box: {c: [3.9, 7.86, 0.8], half: [0.03, 0.02, 0.8]}}
+  - {name: lift-2-frame, mat: glow, box: {c: [5.7, 7.96, 0.85], half: [0.62, 0.04, 0.85]}}
+  - {name: lift-2, mat: metal, box: {c: [5.7, 7.92, 0.8], half: [0.52, 0.05, 0.8]}}
+  - {name: lift-2-seam, mat: base, box: {c: [5.7, 7.86, 0.8], half: [0.03, 0.02, 0.8]}}
+  - {name: call-panel, mat: base, box: {c: [4.8, 7.93, 0.95], half: [0.1, 0.04, 0.15]}}
+  # a wall screen and a dark window band on the north wall
+  - {name: window, mat: base, box: {c: [-3.5, 7.95, 1.2], half: [3.2, 0.04, 0.4]}}
+  - {name: wall-screen, mat: glow, box: {c: [0.6, 7.95, 1.15], half: [0.8, 0.04, 0.4]}}
+  # rows of desks
+  - {use: desk, name: desk-1, at: [-6.0, 5.6, 0]}
+  - {use: desk, name: desk-2, at: [-6.0, 3.2, 0]}
+  - {use: desk, name: desk-3, at: [0.2, 4.4, 0]}
+  - {use: desk, name: desk-4, at: [2.2, 4.4, 0]}
+  - {use: desk, name: desk-5, at: [4.2, 4.4, 0]}
+  - {use: desk, name: desk-6, at: [0.2, 2.0, 0]}
+  - {use: desk, name: desk-7, at: [2.2, 2.0, 0]}
+  # the reception counter by the door
+  - {name: counter, mat: desk, prism: {poly: [[-5.6, 0.6], [-4.4, 0.6], [-4.2, 1.6], [-5.6, 1.6]], z: [0, 0.8], round: 0.04}}
+  - {name: counter-front, mat: metal, box: {c: [-5.0, 0.58, 0.4], half: [0.55, 0.03, 0.3]}}
+  # potted plants
+  - {use: plant, name: plant-1, at: [-6.9, 7.4, 0]}
+  - {use: plant, name: plant-2, at: [2.7, 7.4, 0]}
+  - {use: plant, name: plant-3, at: [6.9, 1.0, 0]}
+variants:
+  offices: {}

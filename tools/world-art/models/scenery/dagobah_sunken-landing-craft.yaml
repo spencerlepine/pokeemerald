@@ -1,0 +1,74 @@
+# Sunken landing craft (art:dagobah:sunken-landing-craft), hit box 10x4, drawn 10x6.
+# Reference: the C-9979 landing craft (The Phantom Menace; wiki/art/concept/dagobah/
+# sunken-landing-craft__web_1.jpg and __web_2.jpg). The squat central hull with the rounded nose and
+# the big landing gate under it, and two long plank wings sweeping forward from its sides with rounded
+# tips. Modelled level, nose east; posed sunk in the bog and rolled, so the north wing rises out of the
+# water behind the hull and the south wing is under; gnarltree roots have grown over the hull.
+# Axes: x east (forward), y north, z up, origin on the ground under the hull's middle.
+name: dagobah_sunken-landing-craft
+art: art:dagobah:sunken-landing-craft
+palette: greybox
+kits: [kits/endor-dagobah.yaml]
+cells: [10, 6]
+foot: [72, 68]
+footprint: 4
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  hull:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  deck:  {ramp: light, bands: [0.2, 0.5, 0.85]}
+  dark:  {ramp: dark,  bands: [0.3, 0.6, 0.9]}
+  root:  {ramp: dark,  bands: [0.0, 0.35, 0.7]}
+  water: {color: shade}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 4}
+box: [160, 64]
+templates:
+  # one wing: a long thick plank from the hull side forward to a rounded tip; `side` +1 north, -1 south
+  c99-wing:
+    params: {side: 1}
+    parts:
+      - name: plank
+        mat: hull
+        prism: {poly: [[-1.6, "=side * 0.85"], [-0.3, "=side * 0.85"], [4.1, "=side * 2.05"], [4.1, "=side * 2.75"], [2.6, "=side * 2.6"], [-1.4, "=side * 1.55"]],
+                z: [0.55, 0.95], round: 0.05}
+      - {name: top, mat: deck, prism: {poly: [[-1.2, "=side * 1.0"], [-0.2, "=side * 1.0"], [3.8, "=side * 2.15"], [3.8, "=side * 2.6"], [2.5, "=side * 2.45"], [-1.1, "=side * 1.45"]], z: [0.95, 1.0], round: 0.01}}
+      - {name: tip, mat: hull, cylinder: {a: [4.1, "=side * 2.4", 0.55], b: [4.1, "=side * 2.4", 0.95], r1: 0.36}}
+parts:
+  # the central hull: a squat block, the rounded nose with the landing gate, a stub tail
+  - name: body
+    mat: hull
+    hull: {points: [[-2.2, -0.9, 0], [1.0, -0.9, 0], [-2.2, 0.9, 0], [1.0, 0.9, 0],
+                    [-2.0, -0.75, 1.45], [0.9, -0.7, 1.5], [-2.0, 0.75, 1.45], [0.9, 0.7, 1.5]], round: 0.06}
+  - {name: nose, mat: hull, ellipsoid: {c: [1.15, 0, 0.75], r: [0.75, 0.85, 0.75]}}
+  - {name: gate, mat: dark, ellipsoid: {c: [1.75, 0, 0.45], r: [0.18, 0.5, 0.4]}}
+  - {name: roof, mat: deck, box: {c: [-0.6, 0, 1.5], half: [1.3, 0.55, 0.05], radius: 0.02}}
+  - {name: bridge, mat: dark, box: {c: [0.3, 0, 1.65], half: [0.3, 0.3, 0.15], radius: 0.05}}
+  - {use: c99-wing, name: wing-n, with: {side: 1}}
+  - {use: c99-wing, name: wing-s, with: {side: -1}}
+  # gnarltree roots grown over the hull
+  - {use: arch-root, name: root-1, at: [-1.4, 0.3, 1.9], turn: -90, with: {reach: 1.3, r: 0.18, mat: root}}
+  - {use: arch-root, name: root-2, at: [-0.6, 0.5, 1.9], turn: -80, with: {reach: 1.4, r: 0.17, mat: root}}
+  - {name: root-top, mat: root, cone: {a: [-2.3, 0.8, 0.4], b: [0.0, 0.4, 1.95], r1: 0.22, r2: 0.16}}
+ground:
+  - {name: pool, mat: water, cylinder: {a: [0.6, 0, 0], b: [0.6, 0, 0.01], r1: 1.0}, squash: [4.4, 1.25, 1]}
+variants:
+  # sunk and rolled: the north wing up out of the water, the south wing under it
+  sunk:
+    tilt: [0, -12]
+    pivot: [0, 0]
+    sink: 0.8
+    turn: -6
+    scale: 1.1
+    foot: [70, 69]
+  # settled level in the bog to the wings, both wing tops awash
+  settled:
+    sink: 0.55
+    turn: 6
+    scale: 0.92
+    foot: [72, 58]

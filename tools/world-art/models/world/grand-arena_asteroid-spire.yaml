@@ -1,0 +1,56 @@
+# Asteroid spire (art:grand-arena:asteroid-spire), hit box 6x8, drawn 6x11.
+# Reference: the asteroid field of The Empire Strikes Back (the space slug's rock): a pitted, faceted
+# grey asteroid; on it an ancient tapering spire of stacked stone drums with a pointed cap, a dark
+# doorway at its foot and a stair cut up the rock to it. Axes: x east, y north, z up, origin on the
+# ground at the hit box's centre.
+name: grand-arena_asteroid-spire
+art: art:grand-arena:asteroid-spire
+palette: greybox
+cells: [6, 11]
+foot: [47, 111]
+footprint: 8
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+groups: {body: {}, face: {}}
+materials:
+  rock:  {ramp: mid,   bands: [0.3, 0.6, 0.88]}
+  crater: {ramp: dark, bands: [0.3, 0.6, 0.9]}
+  spire: {ramp: light, bands: [0.2, 0.5, 0.82]}
+  band:  {ramp: mid,   bands: [0.15, 0.45, 0.8]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 8}
+box: [96, 128]
+params:
+  rz: 1.6          # the rock's top under the spire
+parts:
+  # the asteroid: one faceted lump filling the hit box, a lower shelf to the south
+  - name: rock
+    mat: rock
+    hull: {points: [[-2.85, -2.6, 0], [-1.2, -3.85, 0], [1.4, -3.8, 0], [2.85, -2.3, 0], [2.8, 2.6, 0], [1.1, 3.8, 0], [-1.5, 3.75, 0], [-2.8, 2.2, 0],
+                    [-2.3, -1.9, 0.9], [1.9, -2.1, 1.0], [2.2, 1.9, 1.3], [-2.1, 2.3, 1.2], [-0.6, 0.6, "=rz + 0.2"], [0.9, 1.3, "=rz + 0.1"], [0.0, -1.2, 1.25]], round: 0.04}
+  - {name: crater-1, mat: crater, op: subtract, ellipsoid: {c: [-1.55, -1.7, 1.05], r: [0.55, 0.5, 0.3]}}
+  - {name: crater-2, mat: crater, op: subtract, ellipsoid: {c: [1.6, -0.6, 1.35], r: [0.4, 0.4, 0.25]}}
+  - {name: crater-3, mat: crater, op: subtract, ellipsoid: {c: [-1.8, 1.4, 1.4], r: [0.35, 0.35, 0.22]}}
+  - {name: crater-1f, mat: crater, group: face, ellipsoid: {c: [-1.55, -1.7, 0.72], r: [0.46, 0.42, 0.2]}}
+  - {name: crater-2f, mat: crater, group: face, ellipsoid: {c: [1.6, -0.6, 1.08], r: [0.34, 0.34, 0.16]}}
+  - {name: crater-3f, mat: crater, group: face, ellipsoid: {c: [-1.8, 1.4, 1.17], r: [0.3, 0.3, 0.14]}}
+  # the stair cut up the rock from the south
+  - {name: stair-1, mat: spire, group: face, box: {c: [0.1, -3.2, 0.25], half: [0.45, 0.3, 0.25], radius: 0.02}}
+  - {name: stair-2, mat: spire, group: face, box: {c: [0.1, -2.6, 0.55], half: [0.42, 0.32, 0.25], radius: 0.02}}
+  - {name: stair-3, mat: spire, group: face, box: {c: [0.1, -2.0, 0.85], half: [0.4, 0.32, 0.25], radius: 0.02}}
+  # the spire: stacked drums tapering up, a pointed cap
+  - {name: plinth, mat: band, group: face, cylinder: {a: [0.1, 0.4, 0.8], b: [0.1, 0.4, "=rz + 0.35"], r1: 1.05, r2: 0.95}}
+  - {name: drum-1, mat: spire, group: face, cylinder: {a: [0.1, 0.4, "=rz + 0.3"], b: [0.1, 0.4, "=rz + 1.9"], r1: 0.8, r2: 0.66}}
+  - {name: ring-1, mat: band, group: face, cylinder: {a: [0.1, 0.4, "=rz + 1.85"], b: [0.1, 0.4, "=rz + 2.05"], r1: 0.74}}
+  - {name: drum-2, mat: spire, group: face, cylinder: {a: [0.1, 0.4, "=rz + 2.0"], b: [0.1, 0.4, "=rz + 3.2"], r1: 0.58, r2: 0.46}}
+  - {name: ring-2, mat: band, group: face, cylinder: {a: [0.1, 0.4, "=rz + 3.15"], b: [0.1, 0.4, "=rz + 3.33"], r1: 0.53}}
+  - {name: drum-3, mat: spire, group: face, cylinder: {a: [0.1, 0.4, "=rz + 3.3"], b: [0.1, 0.4, "=rz + 4.1"], r1: 0.4, r2: 0.3}}
+  - {name: cap, mat: spire, group: face, cylinder: {a: [0.1, 0.4, "=rz + 4.1"], b: [0.1, 0.4, "=rz + 4.75"], r1: 0.33, r2: 0.02}}
+  - {name: door, mat: dark, group: face, box: {c: [0.1, -0.38, "=rz + 0.85"], half: [0.27, 0.05, 0.5], radius: 0.03}}
+  - {name: slit, mat: dark, group: face, box: {c: [0.1, -0.08, "=rz + 2.6"], half: [0.08, 0.04, 0.35]}}

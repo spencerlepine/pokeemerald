@@ -1,0 +1,67 @@
+# Gozanti wreck (art:hoth:gozanti-wreck), hit box 10x4, drawn 10x6.
+# Reference: the Imperial Gozanti-class cruiser (Star Wars Rebels; wiki/art/concept/hoth/gozanti-wreck__web_1.jpg):
+# a long flat hull, the wide blunt bow with the bridge windows, a raised dorsal spine with a sensor dish,
+# two big engine pods on outriggers at the stern, and docking clamps under the belly for walkers.
+# Modelled level, bow east; posed buried in a drift, tipped and sunk. Partly off the map on purpose.
+# Axes: x east (bow), y north, z up, origin on the ground under the hull's middle.
+name: hoth_gozanti-wreck
+art: art:hoth:gozanti-wreck
+palette: greybox
+cells: [10, 6]
+foot: [82, 64]
+scale: 0.93
+footprint: 4
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  hull:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  deck:  {ramp: light, bands: [0.2, 0.5, 0.85]}
+  dark:  {ramp: dark,  bands: [0.3, 0.6, 0.9]}
+  snow:  {ramp: bone,  bands: [0.05, 0.3, 0.7]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 4}
+box: [156, 60]
+parts:
+  # the long flat hull, blunt bow
+  - name: hull
+    mat: hull
+    hull: {points: [[-4.2, -1.2, 0.2], [3.4, -1.2, 0.2], [-4.2, 1.2, 0.2], [3.4, 1.2, 0.2],
+                    [-4.2, -1.1, 1.2], [3.3, -1.1, 1.2], [-4.2, 1.1, 1.2], [3.3, 1.1, 1.2],
+                    [4.4, -0.9, 0.35], [4.4, 0.9, 0.35], [4.3, -0.8, 1.0], [4.3, 0.8, 1.0]], round: 0.05}
+  - {name: deck, mat: deck, box: {c: [-0.6, 0, 1.22], half: [3.6, 1.05, 0.04], radius: 0.02}}
+  - {name: bridge, mat: dark, box: {c: [4.32, 0, 0.8], half: [0.06, 0.7, 0.12], radius: 0.01}}
+  - {name: bow-band, mat: deck, box: {c: [3.85, 0, 1.0], half: [0.4, 1.0, 0.06], radius: 0.02}}
+  # the dorsal spine and dish
+  - {name: spine, mat: hull, prism: {poly: [[-3.0, -0.35], [2.2, -0.3], [2.2, 0.3], [-3.0, 0.35]], z: [1.2, 1.75], top: [0.95, 0.75], round: 0.04}}
+  - {name: dish, mat: deck, cylinder: {a: [1.2, 0, 1.75], b: [1.2, 0, 1.95], r1: 0.35, r2: 0.25}}
+  # engine pods on outriggers at the stern
+  - {name: boom-s, mat: hull, box: {c: [-3.4, -1.45, 0.7], half: [0.5, 0.35, 0.18], radius: 0.03}}
+  - {name: boom-n, mat: hull, box: {c: [-3.4, 1.45, 0.7], half: [0.5, 0.35, 0.18], radius: 0.03}}
+  - {name: pod-s, mat: deck, cylinder: {a: [-4.6, -1.8, 0.75], b: [-2.6, -1.8, 0.75], r1: 0.42, r2: 0.36}}
+  - {name: pod-n, mat: deck, cylinder: {a: [-4.6, 1.8, 0.75], b: [-2.6, 1.8, 0.75], r1: 0.42, r2: 0.36}}
+  - {name: nozzle-s, mat: dark, cylinder: {a: [-4.7, -1.8, 0.75], b: [-4.55, -1.8, 0.75], r1: 0.32}}
+  - {name: nozzle-n, mat: dark, cylinder: {a: [-4.7, 1.8, 0.75], b: [-4.55, 1.8, 0.75], r1: 0.32}}
+  # docking clamps under the belly
+  - {name: clamp-1, mat: dark, box: {c: [-1.2, -0.6, 0.1], half: [0.3, 0.15, 0.15]}}
+  - {name: clamp-2, mat: dark, box: {c: [1.0, -0.6, 0.1], half: [0.3, 0.15, 0.15]}}
+  - {name: hull-side, mat: dark, box: {c: [-0.2, -1.2, 0.55], half: [3.2, 0.03, 0.08]}}
+tilt: [3, -6]
+pivot: [0, 0]
+sink: 0.5
+turn: -4
+ground:
+  # the drift it is buried in, banked against the south side and over the bow
+  - {name: drift-s, mat: snow, ellipsoid: {c: [0.5, -1.4, 0], r: [3.6, 0.55, 0.6]}}
+  - {name: drift-bow, mat: snow, ellipsoid: {c: [4.2, -0.3, 0], r: [0.7, 1.2, 0.7]}}
+  - {name: drift-w, mat: snow, ellipsoid: {c: [-3.8, -2.0, 0], r: [0.9, 0.3, 0.3]}}
+variants:
+  # buried in a drift, tipped to the south
+  buried: {}
+  # the north engine pod torn off and lying in the snow by the stern
+  pod-lost:
+    drop: ["pod-n", "nozzle-n", "boom-n"]

@@ -21,7 +21,7 @@ render:
   margin: 0
   cleanup: true
 materials:
-  floor: {ramp: bone,  bands: [0.3, 0.6, 0.95]}
+  floor: {ramp: bone,  bands: [0.3, 0.6, 0.8]}
   wall:  {ramp: light, bands: [0.2, 0.42, 0.9]}
   cap:   {ramp: dark,  bands: [0.5, 0.8, 0.98]}
   base:  {ramp: dark,  bands: [0.3, 0.6, 0.9]}
@@ -31,8 +31,8 @@ materials:
 parts:
   - {use: room-shell, name: shell, with: {W: 11, D: 8, dx: 3.0, dw: 1.6}}
   # curved plaster: the north corners rounded into the side walls
-  - {name: curve-w, mat: wall, cylinder: {a: [-4.6, 5.1, 0], b: [-4.6, 5.1, 1.8], r1: 0.9}}
-  - {name: curve-e, mat: wall, cylinder: {a: [4.6, 5.1, 0], b: [4.6, 5.1, 1.8], r1: 0.9}}
+  - {name: curve-w, mat: wall, cylinder: {a: [-5.05, 5.55, 0], b: [-5.05, 5.55, 1.8], r1: 0.5}}
+  - {name: curve-e, mat: wall, cylinder: {a: [5.05, 5.55, 0], b: [5.05, 5.55, 1.8], r1: 0.5}}
   # the kitchen alcove in the north-west: a wide dark arch, a counter and pots
   - {use: niche, name: alcove, at: [-3.0, 5.98, 0], with: {w: 2.2, h: 1.6, z0: 0.0}}
   - {name: counter, mat: pot, box: {c: [-3.0, 5.55, 0.42], half: [1.05, 0.38, 0.42], radius: 0.06}}
@@ -54,8 +54,8 @@ parts:
   - {name: rung-3, mat: wood, box: {c: [3.0, 5.85, 1.35], half: [0.3, 0.04, 0.03]}}
   - {name: hatch, mat: base, box: {c: [3.0, 5.98, 1.75], half: [0.45, 0.05, 0.08]}}
   # the round table with stools in the middle
-  - {use: round-table, name: table, at: [-1.4, 2.8, 0], with: {r: 0.6, h: 0.55, top: wood, leg: base, stool: pot}}
+  - {use: round-table, name: table, at: [-1.4, 2.8, 0], with: {r: 0.6, h: 0.55, top: wood, leg: base, stool: wood}}
   # a low bench along the west wall
-  - {name: bench, mat: pot, box: {c: [-4.95, 2.5, 0.22], half: [0.28, 1.0, 0.22], radius: 0.06}}
+  - {name: bench, mat: wood, box: {c: [-4.95, 2.5, 0.22], half: [0.28, 1.0, 0.22], radius: 0.06}}
 variants:
   homestead: {}

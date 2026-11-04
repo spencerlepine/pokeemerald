@@ -7,7 +7,7 @@ art: art:kashyyyk:bowcaster-rack
 palette: greybox
 cells: [1, 2]
 foot: [8, 28]
-scale: 0.92
+scale: 0.86
 footprint: 1
 render:
   light: [-0.55, -0.3, 0.78]

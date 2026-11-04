@@ -1,0 +1,59 @@
+# Jedi temple gate (art:ilum:jedi-temple-gate), hit box 6x5, drawn 6x8.
+# Reference: the Jedi Temple on Ilum (wiki/art/concept/ilum/jedi-temple-gate__web_1.jpg, __web_4.jpg):
+# a tall narrow gate cut into a sheer ice cliff, a ring carved over it, the doors and stepped jambs of
+# carved stone, crystals glowing in the jambs. Stepped approach: three wide steps up to the sill.
+# Axes: x east, y north, z up, origin on the ground at the middle of the hit box's south edge.
+name: ilum_jedi-temple-gate
+art: art:ilum:jedi-temple-gate
+palette: greybox
+kits: [../scenery/kits/yavin-hoth-ilum.yaml]
+cells: [6, 8]
+foot: [48, 127]
+footprint: 5
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  ice:   {ramp: light, bands: [0.3, 0.6, 0.88]}
+  stone: {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  dark:  {ramp: dark,  bands: [0.4, 0.7, 0.9]}
+  glow:  {ramp: light, bands: [0.1, 0.4, 0.75]}
+  snow:  {ramp: bone,  bands: [0.05, 0.3, 0.7]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 5}
+box: [92, 76]
+groups: {body: {}, gate: {}}
+parts:
+  # the ice cliff, faceted, either side of the gate
+  - {name: cliff-w, mat: ice, hull: {points: [[-3.0, 2.0, 0], [-0.95, 2.1, 0], [-3.0, 5.0, 0], [-0.9, 5.0, 0], [-3.0, 2.6, 2.8], [-1.0, 2.3, 3.2], [-3.0, 4.5, 3.0], [-1.0, 4.6, 3.1]], round: 0.04}}
+  - {name: cliff-e, mat: ice, hull: {points: [[0.95, 2.1, 0], [3.0, 2.0, 0], [0.9, 5.0, 0], [3.0, 5.0, 0], [1.0, 2.3, 3.2], [3.0, 2.5, 2.9], [1.0, 4.6, 3.1], [3.0, 4.5, 3.0]], round: 0.04}}
+  - {name: cliff-top, mat: ice, hull: {points: [[-1.1, 2.4, 2.4], [1.1, 2.4, 2.4], [-1.1, 5.0, 2.4], [1.1, 5.0, 2.4], [-1.0, 2.5, 3.2], [1.0, 2.5, 3.2], [-1.0, 4.6, 3.2], [1.0, 4.6, 3.2]], round: 0.04}}
+  # the carved gate: stepped jambs, the tall dark doorway, the ring above
+  - {name: jamb-w, group: gate, mat: stone, box: {c: [-0.75, 2.15, 1.25], half: [0.22, 0.12, 1.25], radius: 0.02}}
+  - {name: jamb-e, group: gate, mat: stone, box: {c: [0.75, 2.15, 1.25], half: [0.22, 0.12, 1.25], radius: 0.02}}
+  - {name: jamb-w2, group: gate, mat: stone, box: {c: [-1.0, 2.25, 1.05], half: [0.12, 0.12, 1.05], radius: 0.02}}
+  - {name: jamb-e2, group: gate, mat: stone, box: {c: [1.0, 2.25, 1.05], half: [0.12, 0.12, 1.05], radius: 0.02}}
+  - {name: doorway, group: gate, mat: dark, box: {c: [0, 2.3, 1.2], half: [0.55, 0.1, 1.2]}}
+  - {name: door-w, group: gate, mat: stone, box: {c: [-0.27, 2.2, 1.1], half: [0.26, 0.04, 1.1], radius: 0.01}}
+  - {name: door-e, group: gate, mat: stone, box: {c: [0.27, 2.2, 1.1], half: [0.26, 0.04, 1.1], radius: 0.01}}
+  - {name: lintel, group: gate, mat: stone, box: {c: [0, 2.15, 2.6], half: [1.15, 0.15, 0.12], radius: 0.02}}
+  - {name: ring, group: gate, mat: stone, ring: {c: [0, 2.12, 3.25], axis: y, r: 0.5, n: 12, size: [0.22, 0.14, 0.12], round: 0.02}}
+  - {name: ring-eye, group: gate, mat: dark, cylinder: {a: [0, 2.14, 3.25], b: [0, 2.2, 3.25], r1: 0.32}}
+  # crystals glowing in the jambs
+  - {use: kyber, name: k-w, at: [-1.3, 2.0, 0.4], rot: [10, 0, 0], with: {h: 0.7, r: 0.1, tip: 0.18}}
+  - {use: kyber, name: k-e, at: [1.3, 2.0, 0.4], rot: [-10, 0, 0], with: {h: 0.7, r: 0.1, tip: 0.18}}
+  # three wide steps up to the sill
+  - {name: step-1, mat: stone, prism: {poly: [[-1.6, 0.6], [1.6, 0.6], [1.6, 2.1], [-1.6, 2.1]], z: [0, 0.14], round: 0.02}}
+  - {name: step-2, mat: stone, prism: {poly: [[-1.4, 1.05], [1.4, 1.05], [1.4, 2.1], [-1.4, 2.1]], z: [0.14, 0.28], round: 0.02}}
+  - {name: step-3, mat: stone, prism: {poly: [[-1.2, 1.5], [1.2, 1.5], [1.2, 2.1], [-1.2, 2.1]], z: [0.28, 0.42], round: 0.02}}
+ground:
+  - {name: drift-w, mat: snow, ellipsoid: {c: [-2.4, 1.6, 0], r: [0.8, 0.5, 0.25]}}
+  - {name: drift-e, mat: snow, ellipsoid: {c: [2.4, 1.6, 0], r: [0.8, 0.5, 0.25]}}
+variants:
+  sealed: {}
+  open:
+    drop: ["door-w", "door-e"]

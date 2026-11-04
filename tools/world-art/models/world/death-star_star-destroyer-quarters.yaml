@@ -1,0 +1,100 @@
+# Star Destroyer quarters (art:death-star:star-destroyer-quarters), a whole room, 18x17 (greybox room).
+# Reference: crew quarters and corridors of an Imperial Star Destroyer (A New Hope, Star Wars Outlaws):
+# grey deck plating, grey panelled walls with light strips, bunks with lockers, a mess table. Drawn as
+# Emerald draws an interior: the floor in plan, the north wall's face across the top three rows, the
+# side walls edge-on, three cabins along the north (low partitions, a bunk and a locker each, doorways
+# to the corridor), a mess corner to the east, crates in the corridor. Axes: x east, y north from the
+# room's south-west corner, z up.
+name: death-star_star-destroyer-quarters
+art: art:death-star:star-destroyer-quarters
+palette: greybox
+kits: [../scenery/kits/deathstar-arena-jedha.yaml]
+cells: [18, 17]
+foot: [0, 272]
+footprint: 1
+box: null
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+groups: {body: {}, face: {}}
+materials:
+  floor: {ramp: mid,   bands: [0.6, 0.88, 0.98]}
+  seam:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  wall:  {ramp: mid,   bands: [0.15, 0.45, 0.8]}
+  panel: {ramp: light, bands: [0.0, 0.1, 0.35]}
+  void:  {ramp: dark,  bands: [0.9, 0.95, 0.99]}
+  dark:  {ramp: dark,  bands: [0.3, 0.6, 0.9]}
+  hull:  {ramp: dark,  bands: [0.1, 0.4, 0.75]}
+  plate: {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  glow:  {ramp: light, bands: [0.0, 0.1, 0.3]}
+  light: {ramp: light, bands: [0.15, 0.5, 0.82]}
+  
+parts:
+  - {name: floor, mat: floor, box: {c: [9, 7, 0.01], half: [9, 7, 0.02]}}
+  - {use: imperial-wall, name: north, at: [0, 14, 0], with: {w: 18, d: 0.12, h: 2.9}}
+  - {name: side-w, mat: void, box: {c: [0.25, 7, 0.04], half: [0.25, 7, 0.04]}}
+  - {name: side-e, mat: void, box: {c: [17.75, 7, 0.04], half: [0.25, 7, 0.04]}}
+  - {name: seam-x3.5, mat: dark, box: {c: [3.5, 7, 0.03], half: [0.03, 7, 0.01]}}
+  - {name: seam-x6.5, mat: dark, box: {c: [6.5, 7, 0.03], half: [0.03, 7, 0.01]}}
+  - {name: seam-x9.5, mat: dark, box: {c: [9.5, 7, 0.03], half: [0.03, 7, 0.01]}}
+  - {name: seam-x12.5, mat: dark, box: {c: [12.5, 7, 0.03], half: [0.03, 7, 0.01]}}
+  - {name: seam-x15.5, mat: dark, box: {c: [15.5, 7, 0.03], half: [0.03, 7, 0.01]}}
+  - {name: seam-y3, mat: dark, box: {c: [9, 3, 0.03], half: [8.5, 0.03, 0.01]}}
+  - {name: seam-y6, mat: dark, box: {c: [9, 6, 0.03], half: [8.5, 0.03, 0.01]}}
+  - {name: seam-y9, mat: dark, box: {c: [9, 9, 0.03], half: [8.5, 0.03, 0.01]}}
+  - {name: seam-y12, mat: dark, box: {c: [9, 12, 0.03], half: [8.5, 0.03, 0.01]}}
+  - {use: imperial-wall, name: part-0, at: [4.5, 8.5, 0], with: {w: 0.3, d: 5.5, h: 1.4}}
+  - {name: bunk-0, mat: plate, box: {c: [1.9, 12.7, 0.3], half: [1.05, 0.55, 0.3], radius: 0.04}}
+  - {name: mattress-0, mat: light, box: {c: [1.9, 12.65, 0.64], half: [0.95, 0.47, 0.07], radius: 0.05}}
+  - {name: pillow-0, mat: light, box: {c: [1.15, 12.65, 0.74], half: [0.2, 0.36, 0.06], radius: 0.04}}
+  - {name: locker-0, mat: wall, box: {c: [3.8, 13.65, 0.95], half: [0.45, 0.3, 0.95], radius: 0.03}}
+  - {name: locker-line-0, mat: dark, box: {c: [3.8, 13.34, 0.95], half: [0.02, 0.02, 0.85]}}
+  - {name: cabin-light-0, mat: glow, box: {c: [1.9, 13.94, 1.9], half: [0.8, 0.04, 0.08]}}
+  - {use: imperial-wall, name: part-1, at: [8.7, 8.5, 0], with: {w: 0.3, d: 5.5, h: 1.4}}
+  - {name: bunk-1, mat: plate, box: {c: [6.1, 12.7, 0.3], half: [1.05, 0.55, 0.3], radius: 0.04}}
+  - {name: mattress-1, mat: light, box: {c: [6.1, 12.65, 0.64], half: [0.95, 0.47, 0.07], radius: 0.05}}
+  - {name: pillow-1, mat: light, box: {c: [5.35, 12.65, 0.74], half: [0.2, 0.36, 0.06], radius: 0.04}}
+  - {name: locker-1, mat: wall, box: {c: [8, 13.65, 0.95], half: [0.45, 0.3, 0.95], radius: 0.03}}
+  - {name: locker-line-1, mat: dark, box: {c: [8, 13.34, 0.95], half: [0.02, 0.02, 0.85]}}
+  - {name: cabin-light-1, mat: glow, box: {c: [6.1, 13.94, 1.9], half: [0.8, 0.04, 0.08]}}
+  - {use: imperial-wall, name: part-2, at: [12.9, 8.5, 0], with: {w: 0.3, d: 5.5, h: 1.4}}
+  - {name: bunk-2, mat: plate, box: {c: [10.3, 12.7, 0.3], half: [1.05, 0.55, 0.3], radius: 0.04}}
+  - {name: mattress-2, mat: light, box: {c: [10.3, 12.65, 0.64], half: [0.95, 0.47, 0.07], radius: 0.05}}
+  - {name: pillow-2, mat: light, box: {c: [9.55, 12.65, 0.74], half: [0.2, 0.36, 0.06], radius: 0.04}}
+  - {name: locker-2, mat: wall, box: {c: [12.2, 13.65, 0.95], half: [0.45, 0.3, 0.95], radius: 0.03}}
+  - {name: locker-line-2, mat: dark, box: {c: [12.2, 13.34, 0.95], half: [0.02, 0.02, 0.85]}}
+  - {name: cabin-light-2, mat: glow, box: {c: [10.3, 13.94, 1.9], half: [0.8, 0.04, 0.08]}}
+  - {use: imperial-wall, name: front-0, at: [0.5, 8.5, 0], with: {w: 1.5, d: 0.3, h: 1.4}}
+  - {use: imperial-wall, name: front-b-0, at: [3.4, 8.5, 0], with: {w: 1.1, d: 0.3, h: 1.4}}
+  - {use: imperial-wall, name: front-1, at: [4.7, 8.5, 0], with: {w: 1.5, d: 0.3, h: 1.4}}
+  - {use: imperial-wall, name: front-b-1, at: [7.6, 8.5, 0], with: {w: 1.1, d: 0.3, h: 1.4}}
+  - {use: imperial-wall, name: front-2, at: [8.9, 8.5, 0], with: {w: 1.5, d: 0.3, h: 1.4}}
+  - {use: imperial-wall, name: front-b-2, at: [11.8, 8.5, 0], with: {w: 1.1, d: 0.3, h: 1.4}}
+  - {name: table, mat: light, box: {c: [15.0, 10.5, 0.45], half: [1.3, 0.75, 0.06], radius: 0.03}}
+  - {name: table-leg, mat: dark, box: {c: [15.0, 10.5, 0.22], half: [0.2, 0.2, 0.22]}}
+  - {name: bench-s, mat: wall, box: {c: [15.0, 9.3, 0.2], half: [1.2, 0.25, 0.2], radius: 0.03}}
+  - {name: bench-n, mat: wall, box: {c: [15.0, 11.7, 0.2], half: [1.2, 0.25, 0.2], radius: 0.03}}
+  - {use: imperial-console, name: con, at: [15.0, 13.0, 0], with: {w: 2.2, bh: 1.7, hull: hull, plate: plate, dark: dark, glow: glow}}
+  - {name: crate-1, mat: light, box: {c: [2.0, 3.0, 0.45], half: [0.6, 0.5, 0.45], radius: 0.04}}
+  - {name: holo-base, mat: wall, cylinder: {a: [9.0, 5.0, 0], b: [9.0, 5.0, 0.7], r1: 1.1, r2: 1.0}}
+  - {name: holo-top, mat: dark, cylinder: {a: [9.0, 5.0, 0.7], b: [9.0, 5.0, 0.76], r1: 0.85}}
+  - {name: holo-glow, mat: glow, cylinder: {a: [9.0, 5.0, 0.76], b: [9.0, 5.0, 0.8], r1: 0.4}}
+  - {name: slocker-0, mat: wall, box: {c: [11.5, 1.0, 0.8], half: [0.46, 0.35, 0.8], radius: 0.03}}
+  - {name: slocker-line-0, mat: dark, box: {c: [11.5, 0.64, 1.1], half: [0.3, 0.02, 0.04]}}
+  - {name: slocker-1, mat: wall, box: {c: [12.5, 1.0, 0.8], half: [0.46, 0.35, 0.8], radius: 0.03}}
+  - {name: slocker-line-1, mat: dark, box: {c: [12.5, 0.64, 1.1], half: [0.3, 0.02, 0.04]}}
+  - {name: slocker-2, mat: wall, box: {c: [13.5, 1.0, 0.8], half: [0.46, 0.35, 0.8], radius: 0.03}}
+  - {name: slocker-line-2, mat: dark, box: {c: [13.5, 0.64, 1.1], half: [0.3, 0.02, 0.04]}}
+  - {name: slocker-3, mat: wall, box: {c: [14.5, 1.0, 0.8], half: [0.46, 0.35, 0.8], radius: 0.03}}
+  - {name: slocker-line-3, mat: dark, box: {c: [14.5, 0.64, 1.1], half: [0.3, 0.02, 0.04]}}
+  - {name: slocker-4, mat: wall, box: {c: [15.5, 1.0, 0.8], half: [0.46, 0.35, 0.8], radius: 0.03}}
+  - {name: slocker-line-4, mat: dark, box: {c: [15.5, 0.64, 1.1], half: [0.3, 0.02, 0.04]}}
+  - {name: slocker-5, mat: wall, box: {c: [16.5, 1.0, 0.8], half: [0.46, 0.35, 0.8], radius: 0.03}}
+  - {name: slocker-line-5, mat: dark, box: {c: [16.5, 0.64, 1.1], half: [0.3, 0.02, 0.04]}}
+  - {name: crate-2, mat: wall, box: {c: [3.0, 2.6, 0.3], half: [0.4, 0.4, 0.3], radius: 0.04}}
+  - {name: rim-w, mat: void, box: {c: [4.0, 0.25, 0.04], half: [4.0, 0.25, 0.04]}}
+  - {name: rim-e, mat: void, box: {c: [14.0, 0.25, 0.04], half: [4.0, 0.25, 0.04]}}

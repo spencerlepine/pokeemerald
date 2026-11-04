@@ -1,0 +1,73 @@
+# Death Star corridors (art:death-star:death-star-corridors), a whole room, 20x20 (greybox room).
+# Reference: the Death Star's corridors (A New Hope, Rogue One): black deck plates, grey wall panels
+# with white light strips, blast doors and wall consoles. Drawn as Emerald draws an interior: the floor
+# in plan, the north wall's face across the top three rows (a blast door in the middle, a turbolift door
+# and consoles on it), the side walls edge-on as dark strips, and four panelled wall blocks that make a
+# grid of corridors (like the DS decks' grids). The block tops are the dark void above the walls.
+# Axes: x east, y north from the room's south-west corner, z up.
+name: death-star_death-star-corridors
+art: art:death-star:death-star-corridors
+palette: greybox
+kits: [../scenery/kits/deathstar-arena-jedha.yaml]
+cells: [20, 20]
+foot: [0, 320]
+footprint: 1
+box: null
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+groups: {body: {}, face: {}}
+materials:
+  floor: {ramp: dark,  bands: [0.6, 0.85, 0.97]}
+  seam:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  wall:  {ramp: mid,   bands: [0.15, 0.45, 0.8]}
+  panel: {ramp: light, bands: [0.0, 0.1, 0.35]}
+  void:  {ramp: dark,  bands: [0.9, 0.95, 0.99]}
+  dark:  {ramp: dark,  bands: [0.3, 0.6, 0.9]}
+  hull:  {ramp: dark,  bands: [0.1, 0.4, 0.75]}
+  plate: {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  glow:  {ramp: light, bands: [0.0, 0.1, 0.3]}
+  light: {ramp: light, bands: [0.15, 0.5, 0.82]}
+  
+parts:
+  - {name: floor, mat: floor, box: {c: [10, 8.5, 0.01], half: [10, 8.5, 0.02]}}
+  - {use: imperial-wall, name: north, at: [0, 17, 0], with: {w: 20, d: 0.12, h: 2.9}}
+  - {name: side-w, mat: void, box: {c: [0.25, 8.5, 0.04], half: [0.25, 8.5, 0.04]}}
+  - {name: side-e, mat: void, box: {c: [19.75, 8.5, 0.04], half: [0.25, 8.5, 0.04]}}
+  - {name: seam-x2.5, mat: seam, box: {c: [2.5, 8.5, 0.03], half: [0.03, 8.5, 0.01]}}
+  - {name: seam-x4.5, mat: seam, box: {c: [4.5, 8.5, 0.03], half: [0.03, 8.5, 0.01]}}
+  - {name: seam-x6.5, mat: seam, box: {c: [6.5, 8.5, 0.03], half: [0.03, 8.5, 0.01]}}
+  - {name: seam-x8.5, mat: seam, box: {c: [8.5, 8.5, 0.03], half: [0.03, 8.5, 0.01]}}
+  - {name: seam-x10.5, mat: seam, box: {c: [10.5, 8.5, 0.03], half: [0.03, 8.5, 0.01]}}
+  - {name: seam-x12.5, mat: seam, box: {c: [12.5, 8.5, 0.03], half: [0.03, 8.5, 0.01]}}
+  - {name: seam-x14.5, mat: seam, box: {c: [14.5, 8.5, 0.03], half: [0.03, 8.5, 0.01]}}
+  - {name: seam-x16.5, mat: seam, box: {c: [16.5, 8.5, 0.03], half: [0.03, 8.5, 0.01]}}
+  - {name: seam-x18.5, mat: seam, box: {c: [18.5, 8.5, 0.03], half: [0.03, 8.5, 0.01]}}
+  - {name: seam-y2, mat: seam, box: {c: [10, 2, 0.03], half: [9.5, 0.03, 0.01]}}
+  - {name: seam-y4, mat: seam, box: {c: [10, 4, 0.03], half: [9.5, 0.03, 0.01]}}
+  - {name: seam-y6, mat: seam, box: {c: [10, 6, 0.03], half: [9.5, 0.03, 0.01]}}
+  - {name: seam-y8, mat: seam, box: {c: [10, 8, 0.03], half: [9.5, 0.03, 0.01]}}
+  - {name: seam-y10, mat: seam, box: {c: [10, 10, 0.03], half: [9.5, 0.03, 0.01]}}
+  - {name: seam-y12, mat: seam, box: {c: [10, 12, 0.03], half: [9.5, 0.03, 0.01]}}
+  - {name: seam-y14, mat: seam, box: {c: [10, 14, 0.03], half: [9.5, 0.03, 0.01]}}
+  - {name: seam-y16, mat: seam, box: {c: [10, 16, 0.03], half: [9.5, 0.03, 0.01]}}
+  - {use: imperial-wall, name: blk-sw, at: [3, 3, 0], with: {w: 5, d: 3, h: 2.5}}
+  - {use: imperial-wall, name: blk-se, at: [12, 3, 0], with: {w: 5, d: 3, h: 2.5}}
+  - {use: imperial-wall, name: blk-nw, at: [3, 9.5, 0], with: {w: 5, d: 3.5, h: 2.5}}
+  - {use: imperial-wall, name: blk-ne, at: [12, 9.5, 0], with: {w: 5, d: 3.5, h: 2.5}}
+  - {use: imperial-door, name: blast-door, at: [10, 17.0, 0], with: {w: 2.2, h: 2.0, frame: light, leaf: plate}}
+  - {name: door-split, mat: dark, group: face, box: {c: [10, 16.97, 1.0], half: [0.04, 0.03, 0.98]}}
+  - {use: imperial-door, name: lift, at: [3.5, 17.0, 0], with: {w: 1.2, h: 1.6, frame: light, leaf: plate}}
+  - {use: imperial-console, name: con-1, at: [15.2, 16.0, 0], with: {w: 1.8, bh: 1.7, hull: hull, plate: plate, dark: dark, glow: glow}}
+  - {use: imperial-console, name: con-2, at: [17.3, 16.0, 0], with: {w: 1.8, bh: 1.7, hull: hull, plate: plate, dark: dark, glow: glow}}
+  - {name: lightbar-0, mat: glow, box: {c: [1.3, 16.95, 1.5], half: [0.25, 0.04, 0.9]}}
+  - {name: lightbar-1, mat: glow, box: {c: [6.4, 16.95, 1.5], half: [0.25, 0.04, 0.9]}}
+  - {name: lightbar-2, mat: glow, box: {c: [13.6, 16.95, 1.5], half: [0.25, 0.04, 0.9]}}
+  - {name: cell-door-1, mat: dark, box: {c: [5.5, 9.45, 0.9], half: [0.6, 0.05, 0.9]}}
+  - {name: cell-door-2, mat: dark, box: {c: [14.5, 2.95, 0.9], half: [0.6, 0.05, 0.9]}}
+  - {name: rim-w, mat: void, box: {c: [4.5, 0.25, 0.04], half: [4.5, 0.25, 0.04]}}
+  - {name: rim-e, mat: void, box: {c: [15.5, 0.25, 0.04], half: [4.5, 0.25, 0.04]}}

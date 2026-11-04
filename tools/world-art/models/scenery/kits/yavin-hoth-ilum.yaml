@@ -65,9 +65,10 @@ templates:
         prism: {poly: [["=-w / 2", "=-d / 2"], ["=w / 2", "=-d / 2"], ["=w / 2", "=d / 2"], ["=-w / 2", "=d / 2"]], z: [0, "=h"], top: "=top", round: 0.03}
 
   # A snow-laden conifer: dark tiers under bone snow caps, a dark trunk stub. `h` tall, `r` wide.
+  # (`tiers` names its parts tier0.. whatever the template, so two pines cannot be dropped apart.)
   snow-pine:
     params: {h: 3.0, r: 0.95, n: 4}
     parts:
       - {name: trunk, mat: dark, cylinder: {a: [0, 0, 0], b: [0, 0, 0.5], r1: 0.14, r2: 0.12}}
-      - tiers: {name: green, mat: dark, count: "=n", base_z: 0.35, top_z: "=h * 0.62", base_r: "=r", top_r: "=r * 0.32", flat: 0.6, tip: 0.1, seed: 3}
-      - tiers: {name: cap, mat: snow, count: "=n", base_z: 0.5, top_z: "=h * 0.62 + 0.15", base_r: "=r * 0.82", top_r: "=r * 0.26", flat: 0.45, tip: 0.1, height: "=h * 0.2", seed: 3}
+      - tiers: {name: green, mat: dark, count: "=n", base_z: 0.35, top_z: "=h * 0.6", base_r: "=r", top_r: "=r * 0.3", flat: 0.55, tip: 0.1, height: "=h * 0.28", seed: 3}
+      - tiers: {name: cap, mat: snow, count: "=n", base_z: 0.5, top_z: "=h * 0.6 + 0.15", base_r: "=r * 0.9", top_r: "=r * 0.27", flat: 0.55, tip: 0.1, height: "=h * 0.28", seed: 3}

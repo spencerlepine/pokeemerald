@@ -1,0 +1,71 @@
+# Lab interior (art:tatooine:lab-interior), a greybox room 13x13, drawn at its size.
+# Reference: Prof. Korr's lab (a moisture-farm workshop turned lab, after the Lars garage and the Star Wars
+# droid workshops): workbenches down the west side, a droid repair rack with an astromech in it, glass
+# specimen tanks along the east wall, a round holo map table in the middle with its projection, consoles
+# on the north wall. Placed after the room's area yaml (mos-pelgo-lab: the professor's place in the
+# middle, the door south).
+# Axes: x east, y north, z up; origin at the middle of the room's south edge. Kit: room-shell, workbench,
+# astromech.
+name: tatooine_lab-interior
+art: art:tatooine:lab-interior
+palette: greybox
+kits: [../scenery/kits/tatooine-rest.yaml]
+cells: [13, 13]
+foot: [104, 208]
+footprint: 1
+box: null
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  floor: {ramp: bone,  bands: [0.3, 0.6, 0.8]}
+  wall:  {ramp: light, bands: [0.2, 0.42, 0.9]}
+  cap:   {ramp: dark,  bands: [0.5, 0.8, 0.98]}
+  base:  {ramp: dark,  bands: [0.3, 0.6, 0.9]}
+  wood:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  metal: {ramp: mid,   bands: [0.2, 0.5, 0.8]}
+  glass: {ramp: dark,  bands: [0.2, 0.45, 0.75]}
+  glow:  {ramp: light, emissive: true}
+parts:
+  - {use: room-shell, name: shell, with: {W: 13, D: 13, dx: 0, dw: 2.0}}
+  # consoles along the north wall: dark cabinets with glowing screens
+  - {name: console-1, mat: metal, box: {c: [-3.6, 10.65, 0.5], half: [1.3, 0.3, 0.5], radius: 0.04}}
+  - {name: screen-1, mat: glow, box: {c: [-3.6, 10.96, 1.2], half: [1.0, 0.04, 0.3]}}
+  - {name: console-2, mat: metal, box: {c: [0.6, 10.65, 0.5], half: [1.3, 0.3, 0.5], radius: 0.04}}
+  - {name: screen-2, mat: glow, box: {c: [0.6, 10.96, 1.2], half: [1.0, 0.04, 0.3]}}
+  # the droid repair rack in the north-east: a frame with an astromech held in it
+  - {name: rack-w, mat: base, box: {c: [3.3, 10.4, 0.9], half: [0.08, 0.3, 0.9]}}
+  - {name: rack-e, mat: base, box: {c: [5.1, 10.4, 0.9], half: [0.08, 0.3, 0.9]}}
+  - {name: rack-top, mat: base, box: {c: [4.2, 10.4, 1.75], half: [0.98, 0.3, 0.08]}}
+  - {name: rack-arm, mat: metal, box: {c: [4.2, 10.3, 1.45], half: [0.06, 0.06, 0.3]}}
+  - {use: astromech, name: droid-1, at: [4.2, 10.2, 0.1], with: {s: 1.3, body: metal, dome: wall, dark: base}}
+  # workbenches down the west side, with a droid on the near one
+  - {use: workbench, name: bench-1, at: [-5.6, 7.6, 0], turn: 90, with: {l: 2.4, d: 0.8, top: wood, body: base, tool: metal}}
+  - {use: workbench, name: bench-2, at: [-5.6, 4.3, 0], turn: 90, with: {l: 2.4, d: 0.8, top: wood, body: base, tool: metal}}
+  - {use: astromech, name: droid-2, at: [-4.6, 4.3, 0], with: {s: 1.1, body: metal, dome: wall, dark: base}}
+  # specimen tanks along the east wall: glass cylinders on bases with lit caps
+  - {name: tank-1, mat: glass, cylinder: {a: [5.6, 7.6, 0.2], b: [5.6, 7.6, 1.5], r1: 0.42}}
+  - {name: tank-1-base, mat: metal, cylinder: {a: [5.6, 7.6, 0], b: [5.6, 7.6, 0.22], r1: 0.5}}
+  - {name: tank-1-cap, mat: wall, cylinder: {a: [5.6, 7.6, 1.5], b: [5.6, 7.6, 1.65], r1: 0.48}}
+  - {name: tank-1-spec, mat: glow, ellipsoid: {c: [5.6, 7.3, 0.85], r: [0.15, 0.1, 0.2]}}
+  - {name: tank-2, mat: glass, cylinder: {a: [5.6, 6.1, 0.2], b: [5.6, 6.1, 1.5], r1: 0.42}}
+  - {name: tank-2-base, mat: metal, cylinder: {a: [5.6, 6.1, 0], b: [5.6, 6.1, 0.22], r1: 0.5}}
+  - {name: tank-2-cap, mat: wall, cylinder: {a: [5.6, 6.1, 1.5], b: [5.6, 6.1, 1.65], r1: 0.48}}
+  - {name: tank-2-spec, mat: glow, ellipsoid: {c: [5.6, 5.8, 0.7], r: [0.12, 0.1, 0.15]}}
+  - {name: tank-3, mat: glass, cylinder: {a: [5.6, 4.6, 0.2], b: [5.6, 4.6, 1.5], r1: 0.42}}
+  - {name: tank-3-base, mat: metal, cylinder: {a: [5.6, 4.6, 0], b: [5.6, 4.6, 0.22], r1: 0.5}}
+  - {name: tank-3-cap, mat: wall, cylinder: {a: [5.6, 4.6, 1.5], b: [5.6, 4.6, 1.65], r1: 0.48}}
+  # the holo map table in the middle: a round table with a glowing disc and the planet floating over it
+  - {name: holo-base, mat: metal, cylinder: {a: [0, 6.2, 0], b: [0, 6.2, 0.7], r1: 0.7, r2: 0.95}}
+  - {name: holo-rim, mat: wall, cylinder: {a: [0, 6.2, 0.7], b: [0, 6.2, 0.8], r1: 1.05}}
+  - {name: holo-disc, mat: glow, cylinder: {a: [0, 6.2, 0.8], b: [0, 6.2, 0.83], r1: 0.75}}
+  - {name: holo-planet, mat: glow, ellipsoid: {c: [0, 6.2, 1.45], r: [0.38, 0.38, 0.38]}}
+  # crates by the door
+  - {name: crate-1, mat: wood, box: {c: [-4.8, 1.0, 0.35], half: [0.45, 0.4, 0.35], radius: 0.04}}
+  - {name: crate-2, mat: wood, box: {c: [-5.6, 1.2, 0.3], half: [0.35, 0.35, 0.3], radius: 0.04}}
+variants:
+  lab: {}

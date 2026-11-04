@@ -1,0 +1,67 @@
+# Mortis statue (art:mortis:statue), hit box 4x2, drawn 4x7, faces south. Three drawings on one row.
+# Reference: the statues of the Mortis gods (The Clone Wars, the Mortis arc; the same three carved on
+# Peridea in Ahsoka): colossal robed figures on plinths. The Father in the middle, bearded, with his
+# pointed crown and one hand held out; the Son bald, his high spiked collar round his neck, arms
+# crossed; the Daughter, her long hair over her shoulders, hands clasped at her breast. One robed
+# body is shared; each variant keeps its own head and arms (`drop` removes the other two).
+# Axes: x east, y north, z up, origin on the ground at the south middle of the hit box.
+name: mortis_statue
+art: art:mortis:statue
+palette: greybox
+cells: [4, 7]
+foot: [32, 110]
+footprint: 2
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  stone: {ramp: bone, bands: [0.25, 0.55, 0.85]}
+  robe:  {ramp: mid,  bands: [0.25, 0.55, 0.85]}
+  plinth: {ramp: mid, bands: [0.3, 0.6, 0.9]}
+  dark:  {ramp: dark, bands: [0.2, 0.5, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 2}
+box: [64, 32]
+params:
+  sy: 1.05          # the figure's line
+  pz: 0.7           # top of the plinth
+parts:
+  # the stepped plinth filling the hit box
+  - {name: plinth, mat: plinth, box: {c: [0, 1.0, 0.25], half: [1.85, 0.9, 0.25], radius: 0.03}}
+  - {name: plinth-top, mat: plinth, box: {c: [0, "=sy", 0.6], half: [1.35, 0.6, 0.12], radius: 0.03}}
+  # the robed body: a wide hem, the robe narrowing to the shoulders, a dark fold down the front
+  - {name: robe, mat: robe, prism: {poly: [[-1.0, "=sy-0.45"], [1.0, "=sy-0.45"], [1.05, "=sy+0.4"], [-1.05, "=sy+0.4"]], z: ["=pz", "=pz+3.70"], top: [0.62, 0.7], round: 0.05}}
+  - {name: fold, mat: dark, box: {c: [0, "=sy-0.4", "=pz+1.15"], half: [0.06, 0.05, 1.1]}, rot: [0, 4, 0]}
+  - {name: shoulders, mat: robe, hull: {points: [[-0.78, "=sy-0.3", "=pz+3.00"], [0.78, "=sy-0.3", "=pz+3.00"], [-0.78, "=sy+0.3", "=pz+3.00"], [0.78, "=sy+0.3", "=pz+3.00"],
+                                                  [-0.45, "=sy-0.22", "=pz+3.40"], [0.45, "=sy-0.22", "=pz+3.40"], [-0.45, "=sy+0.22", "=pz+3.40"], [0.45, "=sy+0.22", "=pz+3.40"]], round: 0.05}}
+  - {name: head, mat: stone, ellipsoid: {c: [0, "=sy-0.05", "=pz+3.72"], r: [0.34, 0.3, 0.4]}}
+  # --- the Father: long beard, pointed crown, one hand held out to the south-east
+  - {name: father-beard, mat: stone, hull: {points: [[-0.24, "=sy-0.28", "=pz+3.60"], [0.24, "=sy-0.28", "=pz+3.60"], [0, "=sy-0.36", "=pz+2.90"], [-0.2, "=sy-0.1", "=pz+3.60"], [0.2, "=sy-0.1", "=pz+3.60"]], round: 0.03}}
+  - name: father-crown
+    mat: stone
+    ring: {c: [0, "=sy-0.05", "=pz+4.15"], axis: z, r: 0.22, n: 5, start: 270, size: [0.14, 0.08, 0.36], round: 0.02}
+  - {name: father-arm, mat: robe, hull: {points: [[0.6, "=sy-0.2", "=pz+3.05"], [0.6, "=sy+0.15", "=pz+3.05"], [0.6, "=sy-0.2", "=pz+2.70"], [1.45, "=sy-0.6", "=pz+2.60"], [1.45, "=sy-0.35", "=pz+2.75"], [1.45, "=sy-0.6", "=pz+1.82"]], round: 0.04}}
+  - {name: father-hand, mat: stone, ellipsoid: {c: [1.58, "=sy-0.52", "=pz+2.60"], r: [0.18, 0.16, 0.12]}}
+  - {name: father-arm-w, mat: robe, box: {c: [-0.72, "=sy-0.05", "=pz+2.35"], half: [0.16, 0.2, 0.7], radius: 0.05}}
+  # --- the Son: bald, a high spiked collar, arms crossed over the chest
+  - name: son-collar
+    mat: stone
+    ring: {c: [0, "=sy", "=pz+3.5"], axis: z, r: 0.5, n: 9, size: [0.24, 0.12, 0.55], round: 0.02}
+  - {name: son-arms, mat: robe, box: {c: [0, "=sy-0.42", "=pz+2.60"], half: [0.66, 0.14, 0.2], radius: 0.06}}
+  - {name: son-brow, mat: dark, box: {c: [0, "=sy-0.33", "=pz+3.80"], half: [0.2, 0.03, 0.03]}}
+  # --- the Daughter: long hair falling over the shoulders, hands clasped at her breast
+  - {name: daughter-hair-w, mat: dark, box: {c: [-0.36, "=sy-0.2", "=pz+3.2"], half: [0.12, 0.12, 0.55], radius: 0.05}}
+  - {name: daughter-hair-e, mat: dark, box: {c: [0.36, "=sy-0.2", "=pz+3.2"], half: [0.12, 0.12, 0.55], radius: 0.05}}
+  - {name: daughter-veil, mat: dark, ellipsoid: {c: [0, "=sy+0.02", "=pz+3.82"], r: [0.38, 0.32, 0.28]}}
+  - {name: daughter-hands, mat: stone, ellipsoid: {c: [0, "=sy-0.45", "=pz+2.70"], r: [0.22, 0.14, 0.18]}}
+variants:
+  father:
+    drop: ["son-*", "son-collar/*", "daughter-*"]
+  son:
+    drop: ["father-*", "father-crown/*", "daughter-*"]
+  daughter:
+    drop: ["father-*", "father-crown/*", "son-*", "son-collar/*"]

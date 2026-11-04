@@ -87,7 +87,11 @@ then rendered by the Emerald camera into a grey sprite. Grey only: no colour, ou
   AT-AT leg in the walker kit is one.
 - **`ring`**: `n` blocks evenly round a circle (`c`, `axis`, `r`, `size`, `arc`): wheel treads, hull
   ribs, a skeleton's rib arc. The tank droid's tread is one.
-- **Kits so far:** `kits/walkers.yaml` (the AT-AT leg), `kits/tatooine.yaml` (the moisture vaporator).
+- **Kits so far:** `kits/walkers.yaml` (the AT-AT leg), `kits/tatooine.yaml` (the moisture vaporator), and one
+  kit per modelling group with the pieces its rows share: `shared-scenery`, `shared-a`, `shared-b1`,
+  `tatooine-objects`, `tatooine-buildings`, `tatooine-rest`, `bespin-kamino`, `sullust-mustafar`,
+  `endor-dagobah`, `kashyyyk-felucia-small`, `yavin-hoth-ilum`, `deathstar-arena-jedha`.
+- **Rooms** (tool `greybox room`) set `footprint: 1` and `box: null`: the scene sheet needs one footprint row.
 - **Variants**: `variants: {name: {overrides}}` makes one model many outputs. Each variant is merged over
   the model: `params` key by key, any other key replaced (`tilt`, `turn`, `sink`, `scale`, `foot`,
   `ground`), and `drop: ["leg-br/*", "head/*"]` leaves parts out by name. The first variant is the one the

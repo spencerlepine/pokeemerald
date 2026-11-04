@@ -20,7 +20,7 @@ render:
   cleanup: true
 materials:
   hull:  {ramp: light, bands: [0.2, 0.5, 0.85]}
-  mid:   {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  mid:   {ramp: dark,  bands: [0.2, 0.5, 0.82]}
   dark:  {ramp: dark,  bands: [0.3, 0.6, 0.9]}
   snow:  {ramp: bone,  bands: [0.05, 0.3, 0.7]}
 drop_shadow:
@@ -38,14 +38,14 @@ parts:
   - {name: engine, mat: mid, box: {c: [-0.95, 0, 0.55], half: [0.3, 0.45, 0.12], radius: 0.03}}
   - {name: harpoon, mat: dark, cylinder: {a: [-1.15, 0, 0.62], b: [-1.4, 0, 0.62], r1: 0.06}}
   # the laser cannons along each side
-  - {name: gun-s, mat: mid, cylinder: {a: [-0.9, -0.78, 0.28], b: [1.0, -0.62, 0.28], r1: 0.07}}
-  - {name: gun-n, mat: mid, cylinder: {a: [-0.9, 0.78, 0.28], b: [1.0, 0.62, 0.28], r1: 0.07}}
+  - {name: gun-s, mat: mid, cylinder: {a: [-0.9, -0.78, 0.28], b: [1.0, -0.62, 0.28], r1: 0.09}}
+  - {name: gun-n, mat: mid, cylinder: {a: [-0.9, 0.78, 0.28], b: [1.0, 0.62, 0.28], r1: 0.09}}
   - {name: tip-s, mat: dark, cylinder: {a: [1.0, -0.62, 0.28], b: [1.25, -0.6, 0.28], r1: 0.035}}
   - {name: tip-n, mat: dark, cylinder: {a: [1.0, 0.62, 0.28], b: [1.25, 0.6, 0.28], r1: 0.035}}
   - {name: flap-s, mat: mid, box: {c: [-1.0, -0.72, 0.3], half: [0.15, 0.05, 0.12]}}
   - {name: flap-n, mat: mid, box: {c: [-1.0, 0.72, 0.3], half: [0.15, 0.05, 0.12]}}
 ground:
-  - {name: drift, mat: snow, ellipsoid: {c: [0.3, -0.8, 0], r: [0.9, 0.15, 0.1]}}
+  - {name: drift, mat: snow, ellipsoid: {c: [0.3, -0.72, 0], r: [0.9, 0.13, 0.08]}}
 variants:
   parked: {}
   # crashed nose-first in the snow (Luke's at the Battle of Hoth)

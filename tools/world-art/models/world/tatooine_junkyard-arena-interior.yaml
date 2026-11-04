@@ -1,0 +1,71 @@
+# Junkyard arena interior (art:tatooine:junkyard-arena-interior), a greybox room 13x13, drawn at its size.
+# Reference: Watto's junkyard behind his shop in Mos Espa (The Phantom Menace) as an arena: a sand floor,
+# a maze of walls heaped from scrap (hull plates, engine drums, crates), charged-fence runs of posts and
+# glowing bars between them, and the leader's raised platform at the north end. Follows the arena's
+# area yaml (mos-espa-arena, vanilla Mauville gym: a maze to the leader, the door south).
+# Axes: x east, y north, z up; origin at the middle of the room's south edge. Kit: room-shell.
+name: tatooine_junkyard-arena-interior
+art: art:tatooine:junkyard-arena-interior
+palette: greybox
+kits: [../scenery/kits/tatooine-rest.yaml]
+cells: [13, 13]
+foot: [104, 208]
+footprint: 1
+box: null
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  floor: {ramp: bone,  bands: [0.3, 0.6, 0.8]}
+  wall:  {ramp: mid,   bands: [0.2, 0.42, 0.9]}
+  cap:   {ramp: dark,  bands: [0.5, 0.8, 0.98]}
+  base:  {ramp: dark,  bands: [0.3, 0.6, 0.9]}
+  scrap: {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  rust:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  plate: {ramp: light, bands: [0.25, 0.55, 0.85]}
+  post:  {ramp: dark,  bands: [0.3, 0.6, 0.9]}
+  glow:  {ramp: light, emissive: true}
+templates:
+  # a run of scrap wall from x0 to x1 at y: heaped plates and drums (l long)
+  scrap-wall:
+    params: {l: 3.0}
+    parts:
+      - {name: heap, mat: scrap, hull: {round: 0.05, points: [["=-l / 2", -0.4, 0], ["=l / 2", -0.4, 0], ["=l / 2", 0.4, 0], ["=-l / 2", 0.4, 0], ["=-l / 2 + 0.2", -0.2, 0.9], ["=l * 0.1", -0.25, 1.05], ["=l / 2 - 0.2", -0.15, 0.8], ["=l * 0.1", 0.2, 1.0]]}}
+      - {name: plate, mat: plate, box: {c: ["=-l * 0.2", -0.36, 0.5], half: ["=l * 0.18", 0.04, 0.3]}, rot: [8, 0, 0]}
+      - {name: drum, mat: rust, cylinder: {a: ["=l * 0.25", -0.5, 0.25], b: ["=l * 0.25", -0.1, 0.25], r1: 0.25}}
+  # a charged fence run along x (l long): posts with two glowing bars
+  fence:
+    params: {l: 3.0}
+    parts:
+      - {name: post-w, mat: post, box: {c: ["=-l / 2", 0, 0.5], half: [0.08, 0.08, 0.5]}}
+      - {name: post-m, mat: post, box: {c: [0, 0, 0.5], half: [0.08, 0.08, 0.5]}}
+      - {name: post-e, mat: post, box: {c: ["=l / 2", 0, 0.5], half: [0.08, 0.08, 0.5]}}
+      - {name: bar-1, mat: glow, box: {c: [0, 0, 0.4], half: ["=l / 2", 0.03, 0.03]}}
+      - {name: bar-2, mat: glow, box: {c: [0, 0, 0.8], half: ["=l / 2", 0.03, 0.03]}}
+parts:
+  - {use: room-shell, name: shell, with: {W: 13, D: 13, dx: 0, dw: 2.0, floor: floor, wall: wall}}
+  # the leader's platform at the north end, with steps
+  - {name: dais, mat: plate, prism: {poly: [[-1.6, 9.2], [1.6, 9.2], [1.8, 10.95], [-1.8, 10.95]], z: [0, 0.4], round: 0.04}}
+  - {name: dais-step, mat: scrap, box: {c: [0, 9.0, 0.12], half: [0.8, 0.25, 0.12]}}
+  - {name: generator, mat: rust, cylinder: {a: [0, 10.5, 0.4], b: [0, 10.5, 1.4], r1: 0.4}}
+  - {name: generator-coil, mat: glow, cylinder: {a: [0, 10.5, 1.4], b: [0, 10.5, 1.55], r1: 0.3}}
+  # the maze: scrap walls and charged fences across the floor, gaps between them
+  - {use: scrap-wall, name: wall-1, at: [-4.0, 8.4, 0], with: {l: 4.0}}
+  - {use: scrap-wall, name: wall-2, at: [4.0, 8.4, 0], with: {l: 4.0}}
+  - {use: fence, name: fence-1, at: [-1.5, 6.6, 0], with: {l: 5.0}}
+  - {use: scrap-wall, name: wall-3, at: [4.5, 6.6, 0], with: {l: 3.0}}
+  - {use: scrap-wall, name: wall-4, at: [-4.2, 4.6, 0], with: {l: 3.6}}
+  - {use: fence, name: fence-2, at: [2.2, 4.6, 0], with: {l: 5.4}}
+  - {use: scrap-wall, name: wall-5, at: [-2.0, 2.6, 0], with: {l: 3.0}}
+  - {use: fence, name: fence-3, at: [4.0, 2.6, 0], with: {l: 3.6}}
+  - {use: scrap-wall, name: wall-6, at: [-5.3, 1.3, 0], turn: 90, with: {l: 1.6}}
+  # junk along the north wall
+  - {name: junk-1, mat: rust, cylinder: {a: [-5.6, 10.6, 0], b: [-5.6, 10.6, 1.0], r1: 0.4}}
+  - {name: junk-2, mat: scrap, box: {c: [5.4, 10.5, 0.45], half: [0.6, 0.4, 0.45], radius: 0.04}, rot: [0, 10, 0]}
+  - {name: junk-3, mat: plate, prism: {poly: [[3.6, 10.2], [4.6, 10.3], [4.4, 10.9], [3.5, 10.8]], z: [0, 0.3], round: 0.03}}
+variants:
+  arena: {}

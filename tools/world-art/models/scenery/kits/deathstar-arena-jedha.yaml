@@ -113,3 +113,15 @@ templates:
       - name: wing-n
         mat: "=frame"
         extrude: {axis: y, span: ["=0.74*s", "=0.86*s"], profile: [["=-0.82*s", "=-0.5*s"], [0, "=-0.98*s"], ["=0.82*s", "=-0.5*s"], ["=0.82*s", "=0.5*s"], [0, "=0.98*s"], ["=-0.82*s", "=0.5*s"]], round: 0.03}
+  # An Imperial wall block for interiors (Death Star, Star Destroyer): grey panelled faces, a dark top
+  # (the void above the walls, as in Emerald's interiors), a light strip down each end of the south
+  # face and a light band across it. Origin on the floor at the block's south-west corner.
+  imperial-wall:
+    params: {w: 4.0, d: 1.0, h: 2.5, wall: wall, panel: panel, void: void, trim: dark}
+    parts:
+      - {name: body, mat: "=wall", box: {c: ["=w/2", "=d/2", "=h/2"], half: ["=w/2", "=d/2", "=h/2"], radius: 0.02}}
+      - {name: top, mat: "=void", box: {c: ["=w/2", "=d/2", "=h + 0.01"], half: ["=w/2", "=d/2", 0.02]}}
+      - {name: kick, mat: "=trim", box: {c: ["=w/2", -0.02, 0.15], half: ["=w/2", 0.03, 0.15]}}
+      - {name: band, mat: "=panel", box: {c: ["=w/2", -0.03, "=h * 0.62"], half: ["=w/2 - 0.3", 0.03, 0.07]}}
+      - {name: strip-w, mat: "=panel", box: {c: [0.3, -0.03, "=h * 0.5"], half: [0.1, 0.03, "=h * 0.32"]}}
+      - {name: strip-e, mat: "=panel", box: {c: ["=w - 0.3", -0.03, "=h * 0.5"], half: [0.1, 0.03, "=h * 0.32"]}}

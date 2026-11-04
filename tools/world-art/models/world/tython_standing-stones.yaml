@@ -36,5 +36,5 @@ variants:
   # one of the four, fallen to a lean
   leaning:
     tilt: [-9, 0]
-    scale: 0.92
+    scale: 0.86
     pivot: [0, 0]

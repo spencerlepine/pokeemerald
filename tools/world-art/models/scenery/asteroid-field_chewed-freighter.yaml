@@ -1,0 +1,73 @@
+# Chewed freighter (art:asteroid-field:chewed-freighter), hit box 7x3, drawn 7x4.
+# Reference: the exogorth of The Empire Strikes Back, the space slug that lives in an asteroid and
+# swallows ships whole. What is left after a bite: a small bulk freighter (a round hull, the cockpit
+# pod on the bow, a boxy engine block) whose stern half is swallowed into the asteroid's rock; the rock
+# closes round it in a lip of tooth-like spurs, the hull crumpled where it goes in. Bow east.
+# Axes: x east, y north, z up, origin on the ground at the south middle of the hit box.
+name: asteroid-field_chewed-freighter
+art: art:asteroid-field:chewed-freighter
+palette: greybox
+cells: [7, 4]
+foot: [56, 62]
+footprint: 3
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  rock:  {ramp: mid,   bands: [0.3, 0.6, 0.9]}
+  tooth: {ramp: bone,  bands: [0.2, 0.5, 0.82]}
+  hull:  {ramp: light, bands: [0.2, 0.5, 0.85]}
+  panel: {ramp: mid,   bands: [0.2, 0.5, 0.8]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 3}
+box: [112, 48]
+params:
+  hy: 1.4           # the freighter's line
+  dx: 0             # how far the freighter is pulled in (m, west)
+templates:
+  tooth:
+    params: {h: 0.6, r: 0.16}
+    parts:
+      - {name: t, mat: tooth, hull: {points: [["=-r", "=-r*0.6", 0], ["=r", "=-r*0.6", 0], ["=-r", "=r*0.6", 0], ["=r", "=r*0.6", 0], [0.04, 0, "=h"]], round: 0.02}}
+parts:
+  # the asteroid rock: a low faceted mass over the west half
+  - name: rock
+    mat: rock
+    hull: {points: [[-3.45, 0.15, 0], [-0.5, 0.2, 0], [0.2, 1.4, 0], [-0.4, 2.85, 0], [-3.4, 2.85, 0],
+                    [-3.0, 0.5, 1.0], [-1.0, 0.55, 1.15], [-0.6, 1.4, 1.5], [-1.3, 2.5, 1.35], [-3.1, 2.4, 1.2], [-2.2, 1.5, 1.85]], round: 0.04}
+  - name: rock-2
+    mat: rock
+    hull: {points: [[-1.2, 2.0, 0], [0.6, 2.2, 0], [0.4, 2.9, 0], [-1.0, 2.9, 0], [-0.4, 2.5, 1.0]], round: 0.04}
+  # the dark maw where the hull goes in
+  - {name: maw, mat: dark, ellipsoid: {c: [-0.35, "=hy", 0.75], r: [0.4, 0.82, 0.85]}}
+  # the freighter: round hull, crumpled where it enters the rock, the cockpit pod at the bow
+  - {name: hull, mat: hull, cylinder: {a: ["=-0.5-dx", "=hy", 0.68], b: ["=2.6-dx", "=hy", 0.68], r1: 0.62, r2: 0.66}}
+  - {name: ring-1, mat: panel, cylinder: {a: ["=0.4-dx", "=hy", 0.68], b: ["=0.55-dx", "=hy", 0.68], r1: 0.68}}
+  - {name: ring-2, mat: panel, cylinder: {a: ["=1.6-dx", "=hy", 0.68], b: ["=1.75-dx", "=hy", 0.68], r1: 0.7}}
+  - {name: crumple, mat: panel, hull: {points: [[-0.2, "=hy-0.7", 0.1], [0.3, "=hy-0.66", 0.2], [-0.1, "=hy-0.7", 1.0], [0.25, "=hy-0.4", 1.3], [-0.15, "=hy-0.2", 1.4], [0.1, "=hy-0.6", 0.6]], round: 0.03}}
+  - {name: nose, mat: hull, ellipsoid: {c: ["=2.65-dx", "=hy", 0.68], r: [0.5, 0.64, 0.6]}}
+  - {name: cockpit, mat: panel, cylinder: {a: ["=2.4-dx", "=hy-0.75", 1.0], b: ["=2.4-dx", "=hy-0.4", 1.0], r1: 0.32}}
+  - {name: glass, mat: dark, cylinder: {a: ["=2.4-dx", "=hy-0.8", 1.0], b: ["=2.4-dx", "=hy-0.74", 1.0], r1: 0.2}}
+  - {name: cargo, mat: panel, box: {c: ["=1.0-dx", "=hy", 1.32], half: [0.85, 0.35, 0.1], radius: 0.03}}
+  - {name: antenna, mat: dark, cylinder: {a: ["=1.9-dx", "=hy", 1.3], b: ["=2.1-dx", "=hy+0.1", 1.75], r1: 0.04}}
+  # the lip of teeth round the bite
+  - {use: tooth, name: tooth-1, at: [-0.15, "=hy-0.85", 0.0], with: {h: 0.7}}
+  - {use: tooth, name: tooth-2, at: [-0.05, "=hy-0.85", 1.0], with: {h: 0.55}}
+  - {use: tooth, name: tooth-3, at: [-0.25, "=hy-0.4", 1.4], with: {h: 0.6}}
+  - {use: tooth, name: tooth-4, at: [-0.3, "=hy+0.3", 1.45], with: {h: 0.55}}
+  - {use: tooth, name: tooth-5, at: [-0.15, "=hy-0.85", 0.5], turn: 0, with: {h: 0.45}}
+ground:
+  - {name: chunk, mat: panel, box: {c: [2.85, 0.3, 0.12], half: [0.28, 0.2, 0.12], radius: 0.02}, rot: [0, 0, 30]}
+  - {name: plate, mat: hull, hull: {points: [[1.0, 0.15, 0], [1.6, 0.2, 0], [1.5, 0.45, 0], [1.05, 0.4, 0.06]], round: 0.02}}
+variants:
+  # half swallowed
+  bitten: {}
+  # swallowed further: only the bow and cockpit stick out
+  deeper:
+    params: {dx: 0.9}
+    drop: ["ring-1", "crumple", "cargo"]

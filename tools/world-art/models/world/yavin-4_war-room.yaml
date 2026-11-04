@@ -1,0 +1,67 @@
+# War room (art:yavin-4:war-room), a whole room 13x10 (walkable; no hit box).
+# Reference: the Rebel briefing room in the Great Temple (A New Hope, Rogue One;
+# wiki/art/concept/yavin-4/war-room__*): rows of benches facing a big tactical screen, and here a round
+# holotable in the middle with the Death Star hologram above it (sphere, dish, equator trench).
+# Drawn in the game camera: the floor in plan, the north wall's face (3 rows) with the screen and
+# consoles along its foot, the side walls edge-on, the door gap in the middle of the south wall.
+# Axes: x east, y north, z up, origin at the room's south-west corner on the floor; 1 cell = 1 m.
+name: yavin-4_war-room
+art: art:yavin-4:war-room
+palette: greybox
+cells: [13, 10]
+foot: [0, 160]
+footprint: 1
+box: null
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  floor: {ramp: mid,   bands: [0.1, 0.4, 0.95]}
+  wall:  {ramp: bone,  bands: [0.25, 0.55, 0.85]}
+  stone: {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  dark:  {ramp: dark,  bands: [0.4, 0.7, 0.9]}
+  metal: {ramp: mid,   bands: [0.2, 0.5, 0.8]}
+  holo:  {ramp: light, bands: [0.1, 0.4, 0.75]}
+  line:  {ramp: light, bands: [0.0, 0.1, 0.2]}
+parts:
+  - {name: floor, mat: floor, box: {c: [6.5, 3.5, 0.03], half: [6.5, 3.5, 0.03]}}
+  # the north wall's face, three rows tall, with the tactical screen and two pillars
+  - {name: wall-n, mat: wall, box: {c: [6.5, 7.1, 1.5], half: [6.5, 0.1, 1.5]}}
+  - {name: screen, mat: dark, box: {c: [6.5, 6.98, 1.75], half: [3.0, 0.04, 0.95], radius: 0.02}}
+  - {name: grid-h, mat: line, box: {c: [6.5, 6.93, 1.75], half: [2.8, 0.01, 0.03]}}
+  - {name: grid-v, mat: line, box: {c: [6.5, 6.93, 1.75], half: [0.03, 0.01, 0.85]}}
+  - {name: target, mat: line, cylinder: {a: [7.8, 6.93, 2.1], b: [7.8, 6.92, 2.1], r1: 0.25}, rot: [0, 0, 90]}
+  - {name: pillar-w, mat: stone, box: {c: [1.6, 6.85, 1.5], half: [0.35, 0.18, 1.5], radius: 0.03}}
+  - {name: pillar-e, mat: stone, box: {c: [11.4, 6.85, 1.5], half: [0.35, 0.18, 1.5], radius: 0.03}}
+  # consoles along the foot of the wall
+  - {name: console-w, mat: metal, prism: {poly: [[2.3, 6.1], [5.2, 6.1], [5.2, 6.9], [2.3, 6.9]], z: [0, 0.7], top: [1.0, 0.7], lean: [0, 0.12], round: 0.03}}
+  - {name: console-e, mat: metal, prism: {poly: [[7.8, 6.1], [10.7, 6.1], [10.7, 6.9], [7.8, 6.9]], z: [0, 0.7], top: [1.0, 0.7], lean: [0, 0.12], round: 0.03}}
+  - {name: screens-w, mat: dark, box: {c: [3.75, 6.25, 0.6], half: [1.3, 0.12, 0.08]}, rot: [0, 0, 35]}
+  - {name: screens-e, mat: dark, box: {c: [9.25, 6.25, 0.6], half: [1.3, 0.12, 0.08]}, rot: [0, 0, 35]}
+  # the side walls edge-on and the south wall either side of the door
+  - {name: wall-w, mat: dark, box: {c: [0.2, 3.5, 0.35], half: [0.2, 3.5, 0.35]}}
+  - {name: wall-e, mat: dark, box: {c: [12.8, 3.5, 0.35], half: [0.2, 3.5, 0.35]}}
+  - {name: wall-sw, mat: dark, box: {c: [2.9, 0.2, 0.35], half: [2.9, 0.2, 0.35]}}
+  - {name: wall-se, mat: dark, box: {c: [10.1, 0.2, 0.35], half: [2.9, 0.2, 0.35]}}
+  # the holotable and the Death Star above it
+  - {name: table, mat: metal, cylinder: {a: [6.5, 3.9, 0], b: [6.5, 3.9, 0.55], r1: 1.45, r2: 1.55}}
+  - {name: table-top, mat: dark, cylinder: {a: [6.5, 3.9, 0.55], b: [6.5, 3.9, 0.6], r1: 1.35}}
+  - {name: emitter, mat: holo, cylinder: {a: [6.5, 3.9, 0.6], b: [6.5, 3.9, 0.7], r1: 0.25}}
+  - {name: deathstar, mat: holo, ellipsoid: {c: [6.5, 3.9, 1.6], r: [0.8, 0.5, 0.6]}}
+  - {name: trench, mat: dark, cylinder: {a: [6.5, 3.9, 1.58], b: [6.5, 3.9, 1.64], r1: 0.82}, squash: [1, 0.64, 1]}
+  - {name: dish, mat: dark, ellipsoid: {c: [6.15, 3.42, 1.85], r: [0.2, 0.06, 0.16]}}
+  # benches for the pilots, two rows each side of the aisle
+  - {name: bench-1, mat: stone, box: {c: [2.6, 2.6, 0.22], half: [1.6, 0.25, 0.22], radius: 0.03}}
+  - {name: bench-2, mat: stone, box: {c: [2.6, 1.4, 0.22], half: [1.6, 0.25, 0.22], radius: 0.03}}
+  - {name: bench-3, mat: stone, box: {c: [10.4, 2.6, 0.22], half: [1.6, 0.25, 0.22], radius: 0.03}}
+  - {name: bench-4, mat: stone, box: {c: [10.4, 1.4, 0.22], half: [1.6, 0.25, 0.22], radius: 0.03}}
+variants:
+  # the briefing: the Death Star hologram up
+  briefing: {}
+  # the holotable dark
+  holo-off:
+    drop: ["deathstar", "trench", "dish"]

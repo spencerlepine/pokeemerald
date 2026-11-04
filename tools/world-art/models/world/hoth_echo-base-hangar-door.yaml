@@ -1,0 +1,56 @@
+# Echo Base hangar door (art:hoth:echo-base-hangar-door), hit box 6x4, drawn 6x6.
+# Reference: Echo Base's main hangar (The Empire Strikes Back; wiki/art/concept/hoth/echo-base-hangar-door__*):
+# a huge armoured blast door set in the face of an ice ridge. An ice cliff of faceted blocks with the
+# door's frame cut into its south face: two heavy grey leaves meeting in the middle, ribbed with
+# horizontal bands, under a dark lintel slot; snow ramps up to the sill.
+# Axes: x east, y north, z up, origin on the ground at the middle of the hit box's south edge.
+name: hoth_echo-base-hangar-door
+art: art:hoth:echo-base-hangar-door
+palette: greybox
+cells: [6, 6]
+foot: [48, 95]
+footprint: 4
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  ice:   {ramp: light, bands: [0.3, 0.6, 0.88]}
+  snow:  {ramp: bone,  bands: [0.05, 0.3, 0.7]}
+  door:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  rib:   {ramp: mid,   bands: [0.1, 0.4, 0.75]}
+  dark:  {ramp: dark,  bands: [0.4, 0.7, 0.9]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 4}
+box: [92, 60]
+groups: {body: {}, door: {}}
+parts:
+  # the ice ridge: faceted blocks, the door bay cut into it
+  - {name: cliff-w, mat: ice, hull: {points: [[-3.0, 1.2, 0], [-2.05, 1.2, 0], [-3.0, 4.0, 0], [-2.05, 4.0, 0], [-3.0, 1.5, 1.9], [-2.1, 1.5, 2.0], [-3.0, 3.6, 2.2], [-2.05, 3.8, 2.1]], round: 0.04}}
+  - {name: cliff-e, mat: ice, hull: {points: [[2.05, 1.2, 0], [3.0, 1.2, 0], [2.05, 4.0, 0], [3.0, 4.0, 0], [2.1, 1.5, 2.0], [3.0, 1.45, 1.8], [2.05, 3.8, 2.1], [3.0, 3.6, 2.2]], round: 0.04}}
+  - {name: cliff-top, mat: ice, hull: {points: [[-2.15, 1.8, 1.85], [2.15, 1.8, 1.85], [-2.15, 4.0, 1.85], [2.15, 4.0, 1.85], [-2.05, 1.95, 2.2], [2.05, 1.95, 2.25], [-2.05, 3.8, 2.35], [2.05, 3.8, 2.35]], round: 0.04}}
+  - {name: cap-w, mat: snow, box: {c: [-2.35, 2.6, 2.12], half: [0.6, 0.9, 0.05], radius: 0.04}}
+  - {name: cap-e, mat: snow, box: {c: [2.3, 2.6, 2.12], half: [0.6, 0.9, 0.05], radius: 0.04}}
+  # the door frame and the two leaves
+  - {name: frame, group: door, mat: dark, box: {c: [0, 2.2, 0.92], half: [2.05, 0.3, 0.95]}}
+  - {name: lintel, group: door, mat: door, box: {c: [0, 1.85, 1.78], half: [2.1, 0.1, 0.12], radius: 0.02}}
+  - {name: leaf-w, group: door, mat: door, box: {c: [-0.95, 1.9, 0.83], half: [0.93, 0.06, 0.83], radius: 0.02}}
+  - {name: leaf-e, group: door, mat: door, box: {c: [0.95, 1.9, 0.83], half: [0.93, 0.06, 0.83], radius: 0.02}}
+  - {name: rib-1, group: door, mat: rib, box: {c: [0, 1.83, 0.35], half: [1.85, 0.03, 0.05]}}
+  - {name: rib-2, group: door, mat: rib, box: {c: [0, 1.83, 0.75], half: [1.85, 0.03, 0.05]}}
+  - {name: rib-3, group: door, mat: rib, box: {c: [0, 1.83, 1.25], half: [1.85, 0.03, 0.05]}}
+  - {name: seam, group: door, mat: dark, box: {c: [0, 1.83, 0.83], half: [0.03, 0.03, 0.83]}}
+ground:
+  # snow ramping up to the sill, and drifts along the cliff foot
+  - {name: apron, mat: snow, ellipsoid: {c: [0, 1.3, 0], r: [2.0, 0.5, 0.08]}}
+  - {name: drift-w, mat: snow, ellipsoid: {c: [-2.4, 1.0, 0], r: [0.7, 0.3, 0.22]}}
+  - {name: drift-e, mat: snow, ellipsoid: {c: [2.4, 1.0, 0], r: [0.7, 0.3, 0.22]}}
+variants:
+  # shut
+  closed: {}
+  # rolled open: the leaves pulled back into the frame, the dark hangar beyond
+  open:
+    drop: ["leaf-*", "rib-*", "seam"]

@@ -33,7 +33,9 @@ templates:
   # a freestanding shelf, 4.4 m long: a dark frame, two light boards, crates and ration packs
   shelf:
     parts:
-      - {name: frame, mat: dark, box: {c: [0, 0, 0.55], half: [2.2, 0.32, 0.55], radius: 0.03}}
+      - {name: end-w, mat: dark, box: {c: [-2.15, 0, 0.6], half: [0.06, 0.32, 0.6], radius: 0.02}}
+      - {name: end-e, mat: dark, box: {c: [2.15, 0, 0.6], half: [0.06, 0.32, 0.6], radius: 0.02}}
+      - {name: back, mat: dark, box: {c: [0, 0.28, 0.6], half: [2.15, 0.04, 0.6]}}
       - {name: board-1, mat: trim, box: {c: [0, -0.02, 0.38], half: [2.15, 0.32, 0.04]}}
       - {name: board-2, mat: trim, box: {c: [0, -0.02, 1.1], half: [2.2, 0.34, 0.05], radius: 0.02}}
       - {name: crate-1, mat: crate, box: {c: [-1.55, -0.05, 0.62], half: [0.45, 0.24, 0.2], radius: 0.03}}
@@ -74,14 +76,20 @@ parts:
   - {use: shelf, name: shelf-n, at: [7.9, 3.5, 0]}
   - {use: shelf, name: shelf-s, at: [7.9, 1.7, 0]}
   # a wall shelf of boxes, west of the rack
-  - {name: wshelf, mat: dark, box: {c: [2.6, 5.62, 0.8], half: [1.4, 0.25, 0.8], radius: 0.03}}
+  - {name: wshelf, mat: dark, box: {c: [2.6, 5.82, 0.8], half: [1.4, 0.06, 0.8]}}
+  - {name: wshelf-w, mat: dark, box: {c: [1.25, 5.6, 0.8], half: [0.06, 0.28, 0.8], radius: 0.02}}
+  - {name: wshelf-e, mat: dark, box: {c: [3.95, 5.6, 0.8], half: [0.06, 0.28, 0.8], radius: 0.02}}
   - {name: wbox-1, mat: crate, box: {c: [1.95, 5.5, 0.45], half: [0.55, 0.2, 0.22], radius: 0.03}}
   - {name: wbox-2, mat: wall, box: {c: [3.15, 5.5, 0.42], half: [0.6, 0.2, 0.18], radius: 0.03}}
   - {name: wboard, mat: trim, box: {c: [2.6, 5.55, 0.8], half: [1.38, 0.24, 0.04]}}
   - {name: wbox-3, mat: crate, box: {c: [2.2, 5.5, 1.08], half: [0.7, 0.2, 0.22], radius: 0.03}}
   - {name: wbox-4, mat: wall, box: {c: [3.35, 5.5, 1.04], half: [0.35, 0.2, 0.18], radius: 0.03}}
   # the power cell rack against the north wall
-  - {name: rack, mat: dark, box: {c: [8.6, 5.55, 0.75], half: [1.6, 0.3, 0.75], radius: 0.03}}
+  - {name: rack-back, mat: dark, box: {c: [8.6, 5.8, 0.75], half: [1.6, 0.06, 0.75]}}
+  - {name: rack-w, mat: dark, box: {c: [7.05, 5.55, 0.75], half: [0.06, 0.3, 0.75], radius: 0.02}}
+  - {name: rack-e, mat: dark, box: {c: [10.15, 5.55, 0.75], half: [0.06, 0.3, 0.75], radius: 0.02}}
+  - {name: rack-floor, mat: trim, box: {c: [8.6, 5.5, 0.06], half: [1.58, 0.3, 0.04]}}
+  - {name: rack-top, mat: trim, box: {c: [8.6, 5.55, 1.46], half: [1.62, 0.32, 0.04], radius: 0.02}}
   - {name: rack-board, mat: trim, box: {c: [8.6, 5.5, 0.72], half: [1.58, 0.3, 0.04]}}
   - {use: cellpack, name: cell-1, at: [7.4, 5.45, 0.1]}
   - {use: cellpack, name: cell-2, at: [7.9, 5.45, 0.1]}

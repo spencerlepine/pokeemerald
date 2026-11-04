@@ -1,0 +1,79 @@
+# Shipyard interior (art:tatooine:shipyard-interior), a greybox room 14x10, drawn at its size.
+# Reference: Ric Olie's hangar in Mos Eisley (the Naboo hangars and Mos Eisley's docking-bay workshops):
+# deck-plate floor with hazard stripes, a needle-nosed starfighter (after the Naboo N-1) standing on its
+# cradle of trestles in the middle, tool racks on the north wall, a droid workbench with an astromech on
+# the east side, crates. Placed after the room's area yaml (mos-eisley-sterns-shipyard-1f: the door in
+# the south-west, the stairs up in the north-west).
+# Axes: x east, y north, z up; origin at the middle of the room's south edge. Kit: room-shell,
+# workbench, astromech.
+name: tatooine_shipyard-interior
+art: art:tatooine:shipyard-interior
+palette: greybox
+kits: [../scenery/kits/tatooine-rest.yaml]
+cells: [14, 10]
+foot: [112, 160]
+footprint: 1
+box: null
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  floor: {ramp: mid,   bands: [0.3, 0.6, 0.95]}
+  stripe: {ramp: light, bands: [0.3, 0.6, 0.95]}
+  wall:  {ramp: light, bands: [0.2, 0.42, 0.9]}
+  cap:   {ramp: dark,  bands: [0.5, 0.8, 0.98]}
+  base:  {ramp: dark,  bands: [0.3, 0.6, 0.9]}
+  wood:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  metal: {ramp: mid,   bands: [0.2, 0.5, 0.8]}
+  ship:  {ramp: light, bands: [0.25, 0.55, 0.85]}
+  glow:  {ramp: light, emissive: true}
+params:
+  sx: 0.5         # the ship's centre
+  sy: 4.4
+  sz: 0.85        # its belly height on the cradle
+parts:
+  - {use: room-shell, name: shell, with: {W: 14, D: 10, dx: -5.0, dw: 1.6, floor: floor}}
+  # deck plates: seams and the hazard-striped landing square under the ship
+  - {name: pad, mat: stripe, box: {c: ["=sx", "=sy", 0.045], half: [3.6, 1.9, 0.01]}}
+  - {name: pad-in, mat: floor, box: {c: ["=sx", "=sy", 0.05], half: [3.3, 1.6, 0.01]}}
+  # the cradle: trestles under the hull
+  - {name: trestle-1, mat: base, prism: {poly: [["=sx - 1.6", "=sy - 0.45"], ["=sx - 1.2", "=sy - 0.45"], ["=sx - 1.2", "=sy + 0.45"], ["=sx - 1.6", "=sy + 0.45"]], z: [0, "=sz"], top: [0.5, 0.8], round: 0.02}}
+  - {name: trestle-2, mat: base, prism: {poly: [["=sx + 1.0", "=sy - 0.45"], ["=sx + 1.4", "=sy - 0.45"], ["=sx + 1.4", "=sy + 0.45"], ["=sx + 1.0", "=sy + 0.45"]], z: [0, "=sz"], top: [0.5, 0.8], round: 0.02}}
+  # the starfighter: a long needle fuselage, the cockpit bump, two engines on short wings, a tail spike
+  - name: fuselage
+    mat: ship
+    extrude: {axis: x, span: ["=sx - 2.2", "=sx + 1.6"], end: 0.9, round: 0.05, profile: [["=sy - 0.32", "=sz"], ["=sy + 0.32", "=sz"], ["=sy + 0.28", "=sz + 0.45"], ["=sy - 0.28", "=sz + 0.45"]]}
+  - {name: nose, mat: ship, hull: {round: 0.03, points: [["=sx + 1.6", "=sy - 0.29", "=sz"], ["=sx + 1.6", "=sy + 0.29", "=sz"], ["=sx + 1.6", "=sy - 0.25", "=sz + 0.4"], ["=sx + 1.6", "=sy + 0.25", "=sz + 0.4"], ["=sx + 3.1", "=sy", "=sz + 0.2"]]}}
+  - {name: canopy, mat: base, ellipsoid: {c: ["=sx + 0.6", "=sy", "=sz + 0.48"], r: [0.55, 0.22, 0.18]}}
+  - {name: tail, mat: ship, cone: {a: ["=sx - 2.2", "=sy", "=sz + 0.22"], b: ["=sx - 3.0", "=sy", "=sz + 0.22"], r1: 0.2, r2: 0.04}}
+  - {name: wing, mat: ship, box: {c: ["=sx - 0.9", "=sy", "=sz + 0.2"], half: [0.55, 1.2, 0.06], radius: 0.02}}
+  - {name: engine-s, mat: metal, cylinder: {a: ["=sx - 2.0", "=sy - 1.3", "=sz + 0.2"], b: ["=sx + 0.4", "=sy - 1.3", "=sz + 0.2"], r1: 0.24, r2: 0.2}}
+  - {name: engine-n, mat: metal, cylinder: {a: ["=sx - 2.0", "=sy + 1.3", "=sz + 0.2"], b: ["=sx + 0.4", "=sy + 1.3", "=sz + 0.2"], r1: 0.24, r2: 0.2}}
+  - {name: engine-s-glow, mat: glow, cylinder: {a: ["=sx - 2.05", "=sy - 1.3", "=sz + 0.2"], b: ["=sx - 1.98", "=sy - 1.3", "=sz + 0.2"], r1: 0.15}}
+  # tool racks on the north wall: boards with tools hanging on them
+  - {name: rack-1, mat: base, box: {c: [-1.5, 7.95, 1.0], half: [1.4, 0.04, 0.55]}}
+  - {name: tool-1a, mat: ship, box: {c: [-2.3, 7.9, 1.0], half: [0.06, 0.03, 0.35]}}
+  - {name: tool-1b, mat: ship, box: {c: [-1.8, 7.9, 1.1], half: [0.15, 0.03, 0.08]}}
+  - {name: tool-1c, mat: ship, box: {c: [-1.2, 7.9, 0.95], half: [0.05, 0.03, 0.3]}}
+  - {name: tool-1d, mat: ship, cylinder: {a: [-0.6, 7.88, 1.0], b: [-0.6, 7.92, 1.0], r1: 0.16}}
+  - {name: rack-2, mat: base, box: {c: [2.6, 7.95, 1.0], half: [1.4, 0.04, 0.55]}}
+  - {name: tool-2a, mat: ship, box: {c: [1.8, 7.9, 1.0], half: [0.15, 0.03, 0.08]}}
+  - {name: tool-2b, mat: ship, box: {c: [2.4, 7.9, 0.95], half: [0.06, 0.03, 0.35]}}
+  - {name: tool-2c, mat: ship, box: {c: [3.1, 7.9, 1.05], half: [0.2, 0.03, 0.12]}}
+  # stairs up in the north-west
+  - {name: stair-1, mat: metal, box: {c: [-5.6, 7.5, 0.2], half: [0.7, 0.45, 0.2]}}
+  - {name: stair-2, mat: metal, box: {c: [-5.6, 7.75, 0.6], half: [0.7, 0.2, 0.2]}}
+  - {name: stair-door, mat: base, box: {c: [-5.6, 7.96, 1.2], half: [0.6, 0.04, 0.55]}}
+  # the droid workbench on the east side with an astromech on it
+  - {use: workbench, name: bench, at: [5.9, 4.8, 0], turn: 90, with: {l: 2.2, d: 0.8, top: wood, body: base, tool: metal}}
+  - {use: astromech, name: droid, at: [5.0, 3.6, 0], with: {s: 1.2, body: metal, dome: wall, dark: base}}
+  # crates and a fuel drum
+  - {name: crate-1, mat: wood, box: {c: [5.6, 1.1, 0.4], half: [0.5, 0.45, 0.4], radius: 0.04}}
+  - {name: crate-2, mat: wood, box: {c: [4.6, 0.9, 0.3], half: [0.38, 0.35, 0.3], radius: 0.04}}
+  - {name: drum, mat: metal, cylinder: {a: [-2.6, 1.0, 0], b: [-2.6, 1.0, 0.8], r1: 0.32}}
+variants:
+  hangar: {}

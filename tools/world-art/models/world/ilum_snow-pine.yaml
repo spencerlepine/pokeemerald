@@ -8,7 +8,7 @@ art: art:ilum:snow-pine
 palette: greybox
 kits: [../scenery/kits/yavin-hoth-ilum.yaml]
 cells: [2, 5]
-foot: [16, 56]
+foot: [16, 58]
 footprint: 3
 render:
   light: [-0.55, -0.3, 0.78]
@@ -28,7 +28,3 @@ parts:
   - {use: snow-pine, name: front, at: [-0.15, -0.8, 0], with: {h: 2.9, r: 0.8, n: 4}}
 ground:
   - {name: drift, mat: snow, ellipsoid: {c: [0, -0.8, 0], r: [0.85, 0.4, 0.12]}}
-variants:
-  pair: {}
-  single:
-    drop: ["back/*"]

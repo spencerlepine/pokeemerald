@@ -60,15 +60,17 @@ ground:
 variants:
   # nose up out of the bog, tail sunk, turned to show the X of the wings
   sunk:
-    tilt: [35, 0]
+    tilt: [-35, 0]
     turn: -65
     pivot: [0, 0]
-    sink: 0.75
-    scale: 0.85
+    sink: -0.2
+    scale: 0.72
+    foot: [26, 60]
   # sunk deeper: only the nose and the two upper wings show
   deeper:
-    tilt: [40, 0]
+    tilt: [-42, 0]
     turn: -65
     pivot: [0, 0]
-    sink: 1.35
-    scale: 0.85
+    sink: 0.35
+    scale: 0.75
+    foot: [26, 62]

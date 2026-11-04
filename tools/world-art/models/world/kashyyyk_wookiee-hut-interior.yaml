@@ -1,0 +1,70 @@
+# Wookiee hut interior (art:kashyyyk:wookiee-hut-interior), a whole room, 10x8 (greybox room).
+# Reference: Wookiee homes (Revenge of the Sith's Kachirho; the Holiday Special's tree house): a round
+# room of wood, the wall of stacked logs bowing round behind, woven rugs on a plank floor, a stone
+# hearth in the middle, a carved bench along the west wall, a hide hung on the wall.
+# Layout from wiki/world/kashyyyk/interiors/kachirho-house-1.yaml (vanilla DewfordTown_House1): rows
+# 0-1 are the north wall (its face shows), rows 2-7 the floor; the 2x2 block at columns 4-5, rows 3-4
+# is the hearth; the door is at columns 3-4 of row 7; the T at column 8, row 1 is the wall hanging.
+# Axes: x east, y north, z up, origin on the floor at the south middle of the room (1 m = 1 cell):
+# column c spans x c-5..c-4, row r spans y 7-r..8-r on the floor.
+name: kashyyyk_wookiee-hut-interior
+art: art:kashyyyk:wookiee-hut-interior
+palette: greybox
+cells: [10, 8]
+foot: [80, 128]
+footprint: 1
+box: null
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  floor: {ramp: bone, bands: [0.3, 0.6, 0.9]}
+  seam:  {ramp: mid,  bands: [0.3, 0.6, 0.9]}
+  log:   {ramp: mid,  bands: [0.25, 0.55, 0.85]}
+  rug:   {ramp: bone, bands: [0.1, 0.35, 0.65]}
+  rug2:  {ramp: mid,  bands: [0.1, 0.4, 0.7]}
+  stone: {ramp: mid,  bands: [0.2, 0.5, 0.8]}
+  dark:  {ramp: dark, bands: [0.2, 0.5, 0.85]}
+  hide:  {ramp: bone, bands: [0.25, 0.55, 0.85]}
+parts:
+  # the plank floor and its seams (planks run north-south)
+  - {name: floor, mat: floor, box: {c: [0, 3.0, -0.05], half: [4.98, 3.0, 0.06]}}
+  - {name: seam-1, mat: seam, box: {c: [-3.0, 3.0, 0.01], half: [0.03, 3.0, 0.01]}}
+  - {name: seam-2, mat: seam, box: {c: [-1.0, 3.0, 0.01], half: [0.03, 3.0, 0.01]}}
+  - {name: seam-3, mat: seam, box: {c: [1.0, 3.0, 0.01], half: [0.03, 3.0, 0.01]}}
+  - {name: seam-4, mat: seam, box: {c: [3.0, 3.0, 0.01], half: [0.03, 3.0, 0.01]}}
+  # the north wall: stacked logs, its face filling rows 0-1, bowing out at the corners (the round room)
+  - {name: log-1, mat: log, cylinder: {a: [-4.6, 6.15, 0.25], b: [4.6, 6.15, 0.25], r1: 0.25}}
+  - {name: log-2, mat: log, cylinder: {a: [-4.7, 6.15, 0.74], b: [4.7, 6.15, 0.74], r1: 0.25}}
+  - {name: log-3, mat: log, cylinder: {a: [-4.8, 6.15, 1.23], b: [4.8, 6.15, 1.23], r1: 0.25}}
+  - {name: log-4, mat: log, cylinder: {a: [-4.9, 6.15, 1.72], b: [4.9, 6.15, 1.72], r1: 0.24}}
+  - {name: corner-w, mat: log, cylinder: {a: [-4.6, 5.75, 0], b: [-4.6, 5.75, 1.98], r1: 0.4}}
+  - {name: corner-e, mat: log, cylinder: {a: [4.6, 5.75, 0], b: [4.6, 5.75, 1.98], r1: 0.4}}
+  # the side walls, edge-on: thin log rails down each side
+  - {name: wall-w, mat: log, box: {c: [-4.88, 2.9, 0.3], half: [0.1, 2.9, 0.3], radius: 0.03}}
+  - {name: wall-e, mat: log, box: {c: [4.88, 2.9, 0.3], half: [0.1, 2.9, 0.3], radius: 0.03}}
+  # the hide on the wall (column 8, row 1)
+  - {name: hanging, mat: hide, box: {c: [3.5, 5.86, 1.15], half: [0.36, 0.04, 0.5], radius: 0.06}}
+  - {name: hanging-bar, mat: dark, box: {c: [3.5, 5.84, 1.68], half: [0.48, 0.05, 0.04]}}
+  # the stone hearth (columns 4-5, rows 3-4): a ring of stones round a dark fire pit
+  - name: hearth
+    mat: stone
+    ring: {c: [0, 4.0, 0], axis: z, r: 0.72, n: 9, size: [0.46, 0.3, 0.3], round: 0.05}
+  - {name: pit, mat: dark, cylinder: {a: [0, 4.0, 0], b: [0, 4.0, 0.08], r1: 0.55}}
+  - {name: embers, mat: stone, ellipsoid: {c: [0.05, 4.0, 0.08], r: [0.26, 0.2, 0.1]}}
+  # woven rugs: a round one round the hearth, a long one in front of the door
+  - {name: rug-round, mat: rug, cylinder: {a: [0, 4.0, 0], b: [0, 4.0, 0.02], r1: 1.55}, squash: [1.25, 1.0, 1]}
+  - {name: rug-ring, mat: rug2, cylinder: {a: [0, 4.0, 0.0], b: [0, 4.0, 0.03], r1: 1.25}, squash: [1.25, 1.0, 1]}
+  - {name: rug-door, mat: rug2, box: {c: [-1.0, 1.1, 0.02], half: [1.0, 0.6, 0.02], radius: 0.04}}
+  - {name: rug-door-band, mat: rug, box: {c: [-1.0, 1.1, 0.03], half: [0.8, 0.12, 0.02]}}
+  # the carved bench along the west wall
+  - {name: bench, mat: log, box: {c: [-4.25, 3.5, 0.38], half: [0.38, 1.4, 0.08], radius: 0.04}}
+  - {name: bench-leg-1, mat: dark, box: {c: [-4.25, 2.35, 0.18], half: [0.3, 0.1, 0.18]}}
+  - {name: bench-leg-2, mat: dark, box: {c: [-4.25, 4.65, 0.18], half: [0.3, 0.1, 0.18]}}
+  - {name: bench-back, mat: log, box: {c: [-4.7, 3.5, 0.75], half: [0.06, 1.4, 0.3], radius: 0.03}}
+  # the doorway in the south wall (columns 3-4, row 7)
+  - {name: door, mat: dark, box: {c: [-1.0, 0.05, 0.01], half: [0.95, 0.06, 0.02]}}

@@ -1,0 +1,59 @@
+# Dragonsnake skeleton (art:dagobah:dragonsnake-skeleton), hit box 7x3, drawn 7x5.
+# Reference: the dragonsnake of the Dagobah bog (The Empire Strikes Back), the long swamp serpent that
+# swallowed and spat out R2-D2; no film shows its bones, so this is the skeleton of that serpent body
+# (wiki/art/concept/dagobah/gnarltree__db_dagobah.jpg for the bog). A row of rib arcs rising out of the
+# water over the sunken spine, tallest in the middle, the long-jawed skull lying half in the water at the
+# east end, the tail vertebrae trailing west. Turned a little off the grid so the arcs read as arcs.
+# Axes: x east (along the spine), y north, z up, origin on the water at the middle of the hit box.
+name: dagobah_dragonsnake-skeleton
+art: art:dagobah:dragonsnake-skeleton
+palette: greybox
+cells: [7, 5]
+foot: [57, 51]
+scale: 0.92
+footprint: 3
+turn: 16
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  bone:  {ramp: bone, bands: [0.25, 0.55, 0.85]}
+  bone2: {ramp: bone, bands: [0.35, 0.65, 0.92]}
+  hole:  {ramp: dark, bands: [0.3, 0.6, 0.9]}
+  water: {color: shade}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 3}
+box: [112, 48]
+parts:
+  # the rib arcs over the sunken spine
+  - {name: rib-0, mat: bone, ring: {c: [-2.4, 0, 0.0], axis: x, r: 0.9, n: 15, size: [0.4, 0.17, 0.2], arc: [188, 352], round: 0.04}}
+  - {name: vert-0, mat: bone2, ellipsoid: {c: [-2.4, 0, 0.90], r: [0.2, 0.17, 0.15]}}
+  - {name: rib-1, mat: bone, ring: {c: [-1.7, 0, 0.0], axis: x, r: 1.2, n: 15, size: [0.4, 0.17, 0.2], arc: [188, 352], round: 0.04}}
+  - {name: vert-1, mat: bone2, ellipsoid: {c: [-1.7, 0, 1.20], r: [0.2, 0.17, 0.15]}}
+  - {name: rib-2, mat: bone, ring: {c: [-1.0, 0, 0.0], axis: x, r: 1.42, n: 15, size: [0.4, 0.17, 0.2], arc: [188, 352], round: 0.04}}
+  - {name: vert-2, mat: bone2, ellipsoid: {c: [-1.0, 0, 1.42], r: [0.2, 0.17, 0.15]}}
+  - {name: rib-3, mat: bone, ring: {c: [-0.3, 0, 0.0], axis: x, r: 1.52, n: 15, size: [0.4, 0.17, 0.2], arc: [188, 352], round: 0.04}}
+  - {name: vert-3, mat: bone2, ellipsoid: {c: [-0.3, 0, 1.52], r: [0.2, 0.17, 0.15]}}
+  - {name: rib-4, mat: bone, ring: {c: [0.4, 0, 0.0], axis: x, r: 1.48, n: 15, size: [0.4, 0.17, 0.2], arc: [188, 352], round: 0.04}}
+  - {name: vert-4, mat: bone2, ellipsoid: {c: [0.4, 0, 1.48], r: [0.2, 0.17, 0.15]}}
+  - {name: rib-5, mat: bone, ring: {c: [1.1, 0, 0.0], axis: x, r: 1.28, n: 15, size: [0.4, 0.17, 0.2], arc: [188, 352], round: 0.04}}
+  - {name: vert-5, mat: bone2, ellipsoid: {c: [1.1, 0, 1.28], r: [0.2, 0.17, 0.15]}}
+  - {name: rib-6, mat: bone, ring: {c: [1.8, 0, 0.0], axis: x, r: 1.0, n: 15, size: [0.4, 0.17, 0.2], arc: [188, 352], round: 0.04}}
+  - {name: vert-6, mat: bone2, ellipsoid: {c: [1.8, 0, 1.00], r: [0.2, 0.17, 0.15]}}
+  # the tail vertebrae trailing west, just above the water
+  - {name: tail-1, mat: bone2, ellipsoid: {c: [-3.0, 0.1, 0.05], r: [0.22, 0.17, 0.14]}}
+  - {name: tail-2, mat: bone2, ellipsoid: {c: [-3.4, 0.25, 0.0], r: [0.18, 0.14, 0.12]}}
+  # the skull: a long low snout with dark eye sockets, the lower jaw dropped into the water
+  - name: skull
+    mat: bone
+    hull: {points: [[2.3, -0.45, 0], [2.3, 0.45, 0], [2.35, -0.4, 0.55], [2.35, 0.4, 0.55], [3.0, -0.35, 0.5], [3.0, 0.35, 0.5],
+                    [3.4, -0.2, 0.0], [3.4, 0.2, 0.0], [3.35, -0.15, 0.25], [3.35, 0.15, 0.25]], round: 0.05}
+  - {name: eye-s, mat: hole, ellipsoid: {c: [2.65, -0.37, 0.38], r: [0.14, 0.06, 0.1]}}
+  - {name: eye-n, mat: hole, ellipsoid: {c: [2.65, 0.37, 0.38], r: [0.14, 0.06, 0.1]}}
+  - {name: jaw, mat: bone2, box: {c: [2.85, -0.05, 0.05], half: [0.5, 0.32, 0.06], radius: 0.03}, rot: [8, 0, 0]}
+ground:
+  - {name: pool, mat: water, cylinder: {a: [0, 0, 0], b: [0, 0, 0.01], r1: 1.0}, squash: [3.1, 0.95, 1]}

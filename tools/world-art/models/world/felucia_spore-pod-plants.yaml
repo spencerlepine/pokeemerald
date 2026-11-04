@@ -6,7 +6,7 @@ name: felucia_spore-pod-plants
 art: art:felucia:spore-pod-plants
 palette: greybox
 cells: [1, 1]
-foot: [8, 15]
+foot: [8, 14]
 footprint: 1
 render:
   light: [-0.55, -0.3, 0.78]

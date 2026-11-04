@@ -1,0 +1,49 @@
+# Tauntaun shelter (art:hoth:tauntaun-shelter), hit box 2x2, drawn 2x3.
+# Reference: the tauntaun (The Empire Strikes Back; wiki/art/concept/hoth/tauntaun-shelter__*): a shaggy
+# grey biped with a long tail, big hind legs, small forelegs, and a head with curled ram horns. Here one
+# stands in a pen dug into the snow: a U of snow walls open to the south, a rail across the front.
+# Axes: x east, y north, z up, origin on the ground at the middle of the hit box.
+name: hoth_tauntaun-shelter
+art: art:hoth:tauntaun-shelter
+palette: greybox
+cells: [2, 3]
+foot: [16, 32]
+footprint: 2
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  snow:  {ramp: bone,  bands: [0.1, 0.4, 0.75]}
+  fur:   {ramp: mid,   bands: [0.2, 0.5, 0.82]}
+  horn:  {ramp: dark,  bands: [0.3, 0.6, 0.9]}
+  rail:  {ramp: dark,  bands: [0.2, 0.5, 0.82]}
+  straw: {ramp: mid,   bands: [0.3, 0.6, 0.9]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 2}
+box: [30, 30]
+parts:
+  # the snow walls: back and two sides
+  - {name: wall-n, mat: snow, hull: {points: [[-1.0, 0.55, 0], [1.0, 0.55, 0], [-1.0, 1.0, 0], [1.0, 1.0, 0], [-0.9, 0.7, 0.75], [0.9, 0.7, 0.75], [-0.9, 0.95, 0.7], [0.9, 0.95, 0.7]], round: 0.06}}
+  - {name: wall-w, mat: snow, hull: {points: [[-1.0, -0.8, 0], [-0.7, -0.8, 0], [-1.0, 1.0, 0], [-0.7, 1.0, 0], [-0.95, -0.6, 0.45], [-0.78, -0.6, 0.45], [-0.95, 0.9, 0.7], [-0.78, 0.9, 0.7]], round: 0.06}}
+  - {name: wall-e, mat: snow, hull: {points: [[0.7, -0.8, 0], [1.0, -0.8, 0], [0.7, 1.0, 0], [1.0, 1.0, 0], [0.78, -0.6, 0.45], [0.95, -0.6, 0.45], [0.78, 0.9, 0.7], [0.95, 0.9, 0.7]], round: 0.06}}
+  - {name: rail, mat: rail, cylinder: {a: [-0.85, -0.75, 0.45], b: [0.85, -0.75, 0.45], r1: 0.04}}
+  # the tauntaun, facing east: hind legs, body leaning forward, neck, head, horns, tail
+  - {name: thigh, mat: fur, ellipsoid: {c: [-0.156, 0.065, 0.65], r: [0.286, 0.26, 0.364]}}
+  - {name: shin, mat: fur, cylinder: {a: [-0.065, 0.065, 0.455], b: [-0.156, 0, 0.065], r1: 0.091}}
+  - {name: body, mat: fur, ellipsoid: {c: [0.065, 0.065, 1.1], r: [0.39, 0.286, 0.325]}, rot: [25, 0, 0]}
+  - {name: neck, mat: fur, cylinder: {a: [0.195, 0.065, 1.23], b: [0.39, 0.065, 1.56], r1: 0.156}}
+  - {name: head, mat: fur, ellipsoid: {c: [0.494, 0.065, 1.62], r: [0.26, 0.169, 0.169]}}
+  - {name: horn-s, mat: horn, ellipsoid: {c: [0.39, -0.156, 1.69], r: [0.104, 0.078, 0.13]}}
+  - {name: horn-n, mat: horn, ellipsoid: {c: [0.39, 0.26, 1.69], r: [0.104, 0.078, 0.13]}}
+  - {name: arm, mat: fur, cylinder: {a: [0.26, -0.065, 1.1], b: [0.39, -0.104, 0.845], r1: 0.052}}
+  - {name: tail, mat: fur, cone: {a: [-0.26, 0.065, 0.91], b: [-0.806, 0.13, 0.325], r1: 0.13, r2: 0.039}}
+ground:
+  - {name: straw, mat: straw, cylinder: {a: [0, 0.1, 0], b: [0, 0.1, 0.01], r1: 0.45}, squash: [1.1, 0.6, 1]}
+variants:
+  occupied: {}
+  empty:
+    drop: ["thigh", "shin", "body", "neck", "head", "horn-*", "arm", "tail"]
