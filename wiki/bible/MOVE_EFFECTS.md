@@ -29,9 +29,9 @@ impact, aftermath, with its sound. Art is drawn last, and only the art the story
    lunge (`WindUpLunge`), rear up (`RotateMonSpriteToSide`), rise (`TranslateMonElliptical` up).
 4. **Sound is half the effect.** Every beat has an SE with pan (`playsewithpan`, `loopsewithpan`,
    `createsoundtask` for a looped sweep from attacker to target). `sfx-generator` already shipped
-   SE_BLASTER_BOLT, SE_SABER_IGNITE, SE_SABER_HUM, SE_HYPERSPACE_JUMP, SE_VADER_BREATH, SE_ASTROMECH_CHATTER;
+   SE_BLASTER_BOLT, SE_SABER_IGNITE, SE_SABER_HUM, SE_HYPERSPACE_JUMP, SE_VADER_BREATH, SE_ASTROMECH_CHATTER, SE_SLICER_SPIKE;
    SE_FORCE_PUSH, SE_FORCE_LIGHTNING, SE_FORCE_CHOKE, SE_SABER_SWING, SE_SABER_CLASH, SE_ION_CANNON,
-   SE_TURBOLASER, SE_VIBROBLADE, SE_SLICER_SPIKE are mapped and specced but not made.
+   SE_TURBOLASER, SE_VIBROBLADE are mapped and specced but not made.
 5. **Three visual languages**, so the player reads a move before the text box does:
    - **The Force** (FORCE type, 28 moves): no projectiles. Pressure, lift, ripple, afterimage. Light side is
      blue-white with a cold ring; dark side is red-violet with a black vignette. One new backdrop,
@@ -397,4 +397,4 @@ these two columns.
 27 net-new SE rows in total (`net:se-*`): 6 are already made and installed by `sfx-generator` (SE_ASTROMECH_CHATTER,
 SE_BLASTER_BOLT, SE_HYPERSPACE_JUMP, SE_SABER_HUM, SE_SABER_IGNITE, SE_VADER_BREATH); the rest are `NEEDS_PLACEHOLDER` for the
 follow-up sound task. Overworld-only sounds (TIE flyby, alarm, slicer spike, saber clash) are in the same table but are not
-move effects.
+move effects. SE_SLICER_SPIKE (276) is installed and plays when a slicer spike jacks into a droid (droid slicing).

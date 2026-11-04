@@ -282,7 +282,7 @@ gSongTable::
 	song se_saber_hum, MUSIC_PLAYER_SE1, 1
 	song se_saber_ignite, MUSIC_PLAYER_SE1, 1
 	song se_vader_breath, MUSIC_PLAYER_SE1, 1
-	song dummy_song_header, MUSIC_PLAYER_BGM, 0
+	song se_slicer_spike, MUSIC_PLAYER_SE1, 1
 	song dummy_song_header, MUSIC_PLAYER_BGM, 0
 	song dummy_song_header, MUSIC_PLAYER_BGM, 0
 	song dummy_song_header, MUSIC_PLAYER_BGM, 0

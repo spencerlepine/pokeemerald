@@ -571,3 +571,4 @@ net:mus-vs-boba-fett,music-generator,sound/songs/midi/mus_vs_boba_fett.mid,MUS_V
 net:mus-vs-vader,music-generator,sound/songs/midi/mus_vs_vader.mid,MUS_VS_VADER (tools/music-generator/song-schemas/vs-vader.yaml),src/pokemon.c GetBattleBGM (SITH LORD with the Vader portrait: TRAINER_MAXIE_*)
 audio:MUS_TITLE,music-generator,sound/songs/midi/mus_title.mid,MUS_TITLE (tools/music-generator/song-schemas/title-throne.yaml),
 audio:MUS_INTRO,music-generator,sound/songs/midi/mus_intro.mid,MUS_INTRO (tools/music-generator/song-schemas/intro-boot.yaml),
+net:se-slicer-spike,sfx-generator,sound/direct_sound_samples/sw_sfx/slicer_spike.wav,song SE_SLICER_SPIKE (276) installed (tools/sfx-generator/specs/slicer_spike.yaml),"src/battle_anim_throw.c SpriteCB_Ball_MonShrink_Step (plays when the slicer spike jacks into a droid, in place of SE_BALL_TRADE)"

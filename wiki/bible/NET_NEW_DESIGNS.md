@@ -80,8 +80,12 @@ catchable, never traded and never joins the party. His companions are droids and
 - No flags. No level band, because it applies everywhere.
 - **In the game (2026-11-04):** `IsDroidSpecies` (`src/pokemon.c`, the 34 droids of `mapping/species.csv`). A pod
   that catches a droid plays `MUS_DROID_SLICED` instead of the capture sting, and the message is "Sliced!\n<name> was
-  sliced!" (`sText_GotchaDroidSlicedPlayer`). Still to do: the slicer-spike throw animation (palette swap) and
-  `SE_SLICER_SPIKE`, which is not made yet.
+  sliced!" (`sText_GotchaDroidSlicedPlayer`). The pod flies as a SLICER SPIKE (`graphics/balls/slicer_spike.png`,
+  drawn by `tools/vfx-generator/slicer/slicer_spike.py`): closed in flight, prongs out when it jacks in, a burst of
+  cyan sparks, the droid fades to cyan as it is pulled in, and `SE_SLICER_SPIKE` (276) plays in place of the pod's
+  open sound. Same for a failed slice (the droid breaks out of the spike). Code: `gSlicerSpike*` in `src/pokeball.c`,
+  `IsSlicingThrow` in `src/battle_anim_throw.c`. The item, catch rate and the ball a caught droid is stored in are
+  the pod's.
 
 ## Death Star construction site (`net:death-star-site`)
 

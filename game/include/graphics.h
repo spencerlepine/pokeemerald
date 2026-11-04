@@ -30,6 +30,9 @@ extern const u32 gBallGfx_Luxury[];
 extern const u32 gBallPal_Luxury[];
 extern const u32 gBallGfx_Premier[];
 extern const u32 gBallPal_Premier[];
+extern const u32 gBallGfx_SlicerSpike[];
+extern const u32 gBallPal_SlicerSpike[];
+extern const u32 gBallParticlesPal_SlicerSpike[];
 extern const u32 gOpenPokeballGfx[];
 
 // Pokémon gfx

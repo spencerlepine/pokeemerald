@@ -41,4 +41,9 @@ void DoHitAnimHealthboxEffect(u8 battler);
 void LoadBallGfx(u8 ballId);
 void FreeBallGfx(u8 ballId);
 
+// Droid slicing: a pod thrown at a droid flies as a slicer spike (same anims and callbacks as a pod).
+extern const struct SpriteTemplate gSlicerSpikeSpriteTemplate;
+void LoadSlicerSpikeGfx(void);
+void FreeSlicerSpikeGfx(void);
+
 #endif // GUARD_POKEBALL_H

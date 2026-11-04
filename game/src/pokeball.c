@@ -56,6 +56,7 @@ static u16 GetBattlerPokeballItemId(u8 battler);
 #define GFX_TAG_TIMER_BALL   55009
 #define GFX_TAG_LUXURY_BALL  55010
 #define GFX_TAG_PREMIER_BALL 55011
+#define GFX_TAG_SLICER_SPIKE 55012
 
 const struct CompressedSpriteSheet gBallSpriteSheets[POKEBALL_COUNT] =
 {
@@ -200,6 +201,22 @@ static const union AffineAnimCmd *const sAffineAnim_BallRotate[] =
     [BALL_ROTATE_LEFT]   = sAffineAnim_BallRotate_Left,
     [BALL_AFFINE_ANIM_3] = sAffineAnim_BallRotate_3,
     [BALL_AFFINE_ANIM_4] = sAffineAnim_BallRotate_4,
+};
+
+// Droid slicing (net:droid-slicing): its frames follow the pod sheet (closed, opening, open), so it runs
+// on the pod anims and callbacks. Frame 2 is drawn in the sheet, not copied from gOpenPokeballGfx.
+static const struct CompressedSpriteSheet sSlicerSpikeSpriteSheet = {gBallGfx_SlicerSpike, 384, GFX_TAG_SLICER_SPIKE};
+static const struct CompressedSpritePalette sSlicerSpikeSpritePalette = {gBallPal_SlicerSpike, GFX_TAG_SLICER_SPIKE};
+
+const struct SpriteTemplate gSlicerSpikeSpriteTemplate =
+{
+    .tileTag = GFX_TAG_SLICER_SPIKE,
+    .paletteTag = GFX_TAG_SLICER_SPIKE,
+    .oam = &sBallOamData,
+    .anims = sBallAnimSequences,
+    .images = NULL,
+    .affineAnims = sAffineAnim_BallRotate,
+    .callback = SpriteCB_BallThrow,
 };
 
 const struct SpriteTemplate gBallSpriteTemplates[POKEBALL_COUNT] =
@@ -1337,6 +1354,21 @@ void FreeBallGfx(u8 ballId)
 {
     FreeSpriteTilesByTag(gBallSpriteSheets[ballId].tag);
     FreeSpritePaletteByTag(gBallSpritePalettes[ballId].tag);
+}
+
+void LoadSlicerSpikeGfx(void)
+{
+    if (GetSpriteTileStartByTag(GFX_TAG_SLICER_SPIKE) == 0xFFFF)
+    {
+        LoadCompressedSpriteSheetUsingHeap(&sSlicerSpikeSpriteSheet);
+        LoadCompressedSpritePaletteUsingHeap(&sSlicerSpikeSpritePalette);
+    }
+}
+
+void FreeSlicerSpikeGfx(void)
+{
+    FreeSpriteTilesByTag(GFX_TAG_SLICER_SPIKE);
+    FreeSpritePaletteByTag(GFX_TAG_SLICER_SPIKE);
 }
 
 static u16 GetBattlerPokeballItemId(u8 battler)

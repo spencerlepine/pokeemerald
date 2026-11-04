@@ -34,4 +34,9 @@ const u32 gBallPal_Luxury[] = INCGFX_U32("graphics/balls/luxury.png", ".gbapal.l
 const u32 gBallGfx_Premier[] = INCGFX_U32("graphics/balls/premier.png", ".4bpp.lz");
 const u32 gBallPal_Premier[] = INCGFX_U32("graphics/balls/premier.png", ".gbapal.lz");
 
+// Droid slicing (net:droid-slicing): the slicer spike thrown at a droid, and its cyan sparks.
+const u32 gBallGfx_SlicerSpike[] = INCGFX_U32("graphics/balls/slicer_spike.png", ".4bpp.lz");
+const u32 gBallPal_SlicerSpike[] = INCGFX_U32("graphics/balls/slicer_spike.png", ".gbapal.lz");
+const u32 gBallParticlesPal_SlicerSpike[] = INCGFX_U32("graphics/balls/slicer_sparks.pal", ".gbapal.lz");
+
 const u32 gOpenPokeballGfx[] = INCGFX_U32("graphics/balls/open.png", ".4bpp.lz");

@@ -81,13 +81,13 @@ else
   local S = {
     sign_outer = {24, 71, 5, 7, nil}, sign_inner = {24, 72, 14, 9, nil},
     sign_inner6 = {24, 72, 14, 19, nil},
-    regirock = {24, 6, 8, 8, 0x3A7}, battle = {24, 6, 8, 8, 0x3A7}, slice = {24, 6, 8, 8, 0x3A7}, regice = {24, 67, 8, 8, 0x3A9}, registeel = {24, 68, 8, 8, 0x3A8},
+    regirock = {24, 6, 8, 8, 0x3A7}, battle = {24, 6, 8, 8, 0x3A7}, slice = {24, 6, 8, 8, 0x3A7}, slice_pod = {24, 6, 8, 8, 0x3A7}, regice = {24, 67, 8, 8, 0x3A9}, registeel = {24, 68, 8, 8, 0x3A8},
   }
   local s = S[SC]
   if SC == "people" then s = {0, 9, 14, 13, nil} end  -- Mos Pelgo (Littleroot Town), among its townsfolk
   if SC == "creatures" then s = {24, 6, 8, 8, 0x3A7} end
   if SC == "tour" or SC:sub(1,3) == "dex" or SC == "creatures_dex" or SC:sub(1,4) == "menu" or SC:sub(1,7) == "starnav" then s = {0, 9, 5, 8, nil} end  -- Mos Pelgo (Littleroot Town): open ground
-  add({fn=function() if SC == "tour" or SC == "battle" or SC == "slice" or SC:sub(1,3) == "dex" or SC:sub(1,4) == "menu" or SC == "people"
+  add({fn=function() if SC == "tour" or SC == "battle" or SC == "slice" or SC == "slice_pod" or SC:sub(1,3) == "dex" or SC:sub(1,4) == "menu" or SC == "people"
                         or SC:sub(1,9) == "creatures" or SC:sub(1,7) == "starnav" then setupParty() end
                      if SC:sub(1,7) == "starnav" then  -- every town visited (fly icons), Battle Frontier on the map
                        for f = SYS + 0xF, SYS + 0x1E do setFlag(f, true) end; setFlag(SYS + 0x48, true) end
@@ -194,23 +194,26 @@ else
       press("START"); add({wait=30}); press("DOWN"); press("A"); add({wait=120}); press("B"); add({wait=120})
       press("B"); add({wait=60}); add({shot=string.format("people_%03d", ids[r])})
     end
-  elseif SC == "slice" then  -- droid slicing: the warden battle, its foe made a droid (B1 DROID), a MASTER BALL thrown
+  elseif SC == "slice" or SC == "slice_pod" then  -- droid slicing: the warden battle, its foe made a droid (B1 DROID), a MASTER BALL thrown
     -- logs which song the SE2 player starts (MUS_DROID_SLICED, not the capture sting) and the BGM after
     local function song(p) local h = emu:read32(sym(p)); for k = 0, 1023 do if emu:read32(sym("gSongTable") + k * 8) == h then return k end end; return -1 end
     add({fn=function() pocketItem(0x650, 1, 5) end})  -- MASTER BALL (KYBER POD) in the Poke Balls pocket
     press("UP", 2); add({wait=20}); press("A", 4); add({wait=500})
     add({wait=300}); press("A"); add({wait=400})  -- past "Wild ... appeared!" to the action menu
-    add({fn=function() emu:write16(sym("gBattleMons") + 0x58, 66); log("foe species -> 66 (B1 DROID)") end})  -- gBattleMons[1].species
+    -- slice_pod: the same throw at the warden as it is (not a droid), for the pod's own look and sound
+    if SC == "slice" then add({fn=function() emu:write16(sym("gBattleMons") + 0x58, 66); log("foe species -> 66 (B1 DROID)") end}) end  -- gBattleMons[1].species
     shot("01_menu", 30); press("RIGHT"); add({wait=20}); press("A"); shot("02_bag", 150); press("RIGHT"); shot("03_balls", 60)
     press("A"); shot("04_use", 60); press("A")
-    for f = 1, 24 do add({wait=40}); add({fn=function() log(string.format("t%02d se2 %d bgm %d", f, song("gMPlayInfo_SE2"), song("gMPlayInfo_BGM"))) end}); add({shot=string.format("slice_%02d", 4 + f)}) end
+    -- the throw, close up (every 6 frames: the spike in flight, jacked in, the sparks and the cyan fade), then the rest
+    for f = 1, 40 do add({wait=6}); add({fn=function() log(string.format("throw%02d se1 %d se2 %d", f, song("gMPlayInfo_SE1"), song("gMPlayInfo_SE2"))) end}); add({shot=string.format("slice_throw_%02d", f)}) end
+    for f = 1, 20 do add({wait=40}); add({fn=function() log(string.format("t%02d se1 %d se2 %d bgm %d", f, song("gMPlayInfo_SE1"), song("gMPlayInfo_SE2"), song("gMPlayInfo_BGM"))) end}); add({shot=string.format("slice_%02d", 4 + f)}) end
   elseif SC == "battle" then
     press("UP", 2); add({wait=20}); press("A", 4); add({wait=500})
     for f = 1, 6 do press("A"); shot(string.format("%02d", f), 60) end
   else
   press("UP", 2); add({wait=20}); press("A", 4)
   end
-  if SC == "tour" or SC == "battle" or SC == "slice" or SC:sub(1,3) == "dex" or SC:sub(1,4) == "menu" or SC:sub(1,9) == "creatures"
+  if SC == "tour" or SC == "battle" or SC == "slice" or SC == "slice_pod" or SC:sub(1,3) == "dex" or SC:sub(1,4) == "menu" or SC:sub(1,9) == "creatures"
      or SC == "people" or SC:sub(1,7) == "starnav" then
   elseif SC:sub(1,4) == "sign" then
     add({wait=150}); add({shot=SC})

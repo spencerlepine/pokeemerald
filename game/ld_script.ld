@@ -981,6 +981,7 @@ SECTIONS {
         sound/songs/midi/se_saber_hum.o(.rodata);
         sound/songs/midi/se_saber_ignite.o(.rodata);
         sound/songs/midi/se_vader_breath.o(.rodata);
+        sound/songs/midi/se_slicer_spike.o(.rodata);
         sound/songs/midi/mus_littleroot_test.o(.rodata);
         sound/songs/midi/mus_gsc_route38.o(.rodata);
         sound/songs/midi/mus_caught.o(.rodata);

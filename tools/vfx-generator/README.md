@@ -30,6 +30,16 @@ python -m vfx story romtest force_push --no-build    # scratch ROM, film the mov
 python -m vfx story install force_push --no-build    # after owner approval: patch ../../game
 ```
 
+## Slicer spike (`slicer/slicer_spike.py`)
+
+Droid slicing: a pod thrown at a droid flies as a slicer spike. The spike is a 16x48 sheet in the pod layout
+(closed, opening, jacked in), drawn as pixel grids in the script; its sparks are the vanilla particle sheet with
+a cyan copy of the circle-impact palette (`slicer_sparks.pal`). `python3 slicer/slicer_spike.py preview` writes
+`output/slicer_spike/preview.png`; `install` writes `graphics/balls/slicer_spike.png` and `slicer_sparks.pal` and
+checks both with the palette enforcer. The code is in `src/pokeball.c` (`gSlicerSpike*`) and
+`src/battle_anim_throw.c` (`IsSlicingThrow`: the spike, a fan of sparks, the cyan fade, `SE_SLICER_SPIKE`).
+Shipped 2026-11-04, checked with `../play-tester/scripts/ui-check.sh slice` (and `slice_pod` for a normal pod).
+
 ## Warden wipes (`transitions/aurebesh_wipes.py`)
 
 The three warden battle wipes (Emerald's Regi Braille dot patterns) spell each warden's element in big

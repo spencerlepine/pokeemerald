@@ -209,3 +209,4 @@
 .include "sound/voicegroups/sw_saber_hum.inc"
 .include "sound/voicegroups/sw_saber_ignite.inc"
 .include "sound/voicegroups/sw_vader_breath.inc"
+.include "sound/voicegroups/sw_slicer_spike.inc"

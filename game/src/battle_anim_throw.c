@@ -101,6 +101,10 @@ static void RepeatBallOpenParticleAnimation(u8);
 static void TimerBallOpenParticleAnimation(u8);
 static void PremierBallOpenParticleAnimation(u8);
 static void SpriteCB_PokeBlock_Throw(struct Sprite *);
+static bool8 IsSlicingThrow(void);
+static u8 GetThrowParticlesId(u8);
+static const struct SpriteTemplate *GetThrowSpriteTemplate(u8);
+static u16 GetBallOpenFadeColor(u8);
 
 struct CaptureStar
 {
@@ -140,8 +144,16 @@ static const struct CaptureStar sCaptureStars[] =
 #define TAG_PARTICLES_TIMERBALL   55029
 #define TAG_PARTICLES_LUXURYBALL  55030
 #define TAG_PARTICLES_PREMIERBALL 55031
+#define TAG_PARTICLES_SLICERSPIKE 55032
 
-static const struct CompressedSpriteSheet sBallParticleSpriteSheets[POKEBALL_COUNT] =
+// Droid slicing (net:droid-slicing): a pod thrown at a droid flies as a slicer spike. The catch is the pod's
+// (gLastUsedItem keeps its ball id); only the look and sound change. The spike's open-burst and fade use this
+// extra particle slot, after the real pods. It is never a ball id.
+#define PARTICLES_SLICER_SPIKE    POKEBALL_COUNT
+#define NUM_BALL_PARTICLE_SLOTS   (POKEBALL_COUNT + 1)
+#define SLICER_SPIKE_FADE_COLOR   RGB(7, 24, 29)
+
+static const struct CompressedSpriteSheet sBallParticleSpriteSheets[NUM_BALL_PARTICLE_SLOTS] =
 {
     [BALL_POKE]    = {gBattleAnimSpriteGfx_Particles, 0x100, TAG_PARTICLES_POKEBALL},
     [BALL_GREAT]   = {gBattleAnimSpriteGfx_Particles, 0x100, TAG_PARTICLES_GREATBALL},
@@ -155,9 +167,10 @@ static const struct CompressedSpriteSheet sBallParticleSpriteSheets[POKEBALL_COU
     [BALL_TIMER]   = {gBattleAnimSpriteGfx_Particles, 0x100, TAG_PARTICLES_TIMERBALL},
     [BALL_LUXURY]  = {gBattleAnimSpriteGfx_Particles, 0x100, TAG_PARTICLES_LUXURYBALL},
     [BALL_PREMIER] = {gBattleAnimSpriteGfx_Particles, 0x100, TAG_PARTICLES_PREMIERBALL},
+    [PARTICLES_SLICER_SPIKE] = {gBattleAnimSpriteGfx_Particles, 0x100, TAG_PARTICLES_SLICERSPIKE},
 };
 
-static const struct CompressedSpritePalette sBallParticlePalettes[POKEBALL_COUNT] =
+static const struct CompressedSpritePalette sBallParticlePalettes[NUM_BALL_PARTICLE_SLOTS] =
 {
     [BALL_POKE]    = {gBattleAnimSpritePal_CircleImpact, TAG_PARTICLES_POKEBALL},
     [BALL_GREAT]   = {gBattleAnimSpritePal_CircleImpact, TAG_PARTICLES_GREATBALL},
@@ -171,6 +184,7 @@ static const struct CompressedSpritePalette sBallParticlePalettes[POKEBALL_COUNT
     [BALL_TIMER]   = {gBattleAnimSpritePal_CircleImpact, TAG_PARTICLES_TIMERBALL},
     [BALL_LUXURY]  = {gBattleAnimSpritePal_CircleImpact, TAG_PARTICLES_LUXURYBALL},
     [BALL_PREMIER] = {gBattleAnimSpritePal_CircleImpact, TAG_PARTICLES_PREMIERBALL},
+    [PARTICLES_SLICER_SPIKE] = {gBallParticlesPal_SlicerSpike, TAG_PARTICLES_SLICERSPIKE},
 };
 
 static const union AnimCmd sAnim_RegularBall[] =
@@ -225,7 +239,7 @@ static const union AnimCmd *const sAnims_BallParticles[] =
     sAnim_UltraRepeatTimerBall,
 };
 
-static const u8 sBallParticleAnimNums[POKEBALL_COUNT] =
+static const u8 sBallParticleAnimNums[NUM_BALL_PARTICLE_SLOTS] =
 {
     [BALL_POKE]    = 0,
     [BALL_GREAT]   = 0,
@@ -239,9 +253,10 @@ static const u8 sBallParticleAnimNums[POKEBALL_COUNT] =
     [BALL_TIMER]   = 5,
     [BALL_LUXURY]  = 4,
     [BALL_PREMIER] = 4,
+    [PARTICLES_SLICER_SPIKE] = 4, // cyan sparkles, flickering
 };
 
-static const TaskFunc sBallParticleAnimationFuncs[POKEBALL_COUNT] =
+static const TaskFunc sBallParticleAnimationFuncs[NUM_BALL_PARTICLE_SLOTS] =
 {
     [BALL_POKE]    = PokeBallOpenParticleAnimation,
     [BALL_GREAT]   = GreatBallOpenParticleAnimation,
@@ -255,9 +270,10 @@ static const TaskFunc sBallParticleAnimationFuncs[POKEBALL_COUNT] =
     [BALL_TIMER]   = TimerBallOpenParticleAnimation,
     [BALL_LUXURY]  = GreatBallOpenParticleAnimation,
     [BALL_PREMIER] = PremierBallOpenParticleAnimation,
+    [PARTICLES_SLICER_SPIKE] = TimerBallOpenParticleAnimation, // a burst of sparks fanning out
 };
 
-static const struct SpriteTemplate sBallParticleSpriteTemplates[POKEBALL_COUNT] =
+static const struct SpriteTemplate sBallParticleSpriteTemplates[NUM_BALL_PARTICLE_SLOTS] =
 {
     [BALL_POKE] = {
         .tileTag = TAG_PARTICLES_POKEBALL,
@@ -361,6 +377,15 @@ static const struct SpriteTemplate sBallParticleSpriteTemplates[POKEBALL_COUNT] 
     [BALL_PREMIER] = {
         .tileTag = TAG_PARTICLES_PREMIERBALL,
         .paletteTag = TAG_PARTICLES_PREMIERBALL,
+        .oam = &gOamData_AffineOff_ObjNormal_8x8,
+        .anims = sAnims_BallParticles,
+        .images = NULL,
+        .affineAnims = gDummySpriteAffineAnimTable,
+        .callback = SpriteCallbackDummy,
+    },
+    [PARTICLES_SLICER_SPIKE] = {
+        .tileTag = TAG_PARTICLES_SLICERSPIKE,
+        .paletteTag = TAG_PARTICLES_SLICERSPIKE,
         .oam = &gOamData_AffineOff_ObjNormal_8x8,
         .anims = sAnims_BallParticles,
         .images = NULL,
@@ -706,6 +731,8 @@ void AnimTask_LoadBallGfx(u8 taskId)
 {
     u8 ballId = ItemIdToBallId(gLastUsedItem);
     LoadBallGfx(ballId);
+    if (IsSlicingThrow())
+        LoadSlicerSpikeGfx();
     DestroyAnimVisualTask(taskId);
 }
 
@@ -713,6 +740,7 @@ void AnimTask_FreeBallGfx(u8 taskId)
 {
     u8 ballId = ItemIdToBallId(gLastUsedItem);
     FreeBallGfx(ballId);
+    FreeSlicerSpikeGfx(); // does nothing when the spike is not loaded
     DestroyAnimVisualTask(taskId);
 }
 
@@ -758,6 +786,28 @@ u8 ItemIdToBallId(u16 ballItem)
     }
 }
 
+// Droid slicing: is the pod being thrown at a droid?
+static bool8 IsSlicingThrow(void)
+{
+    return IsDroidSpecies(gBattleMons[gBattleAnimTarget].species);
+}
+
+// The particle slot of the open burst and fade: the pod's, or the slicer spike's.
+static u8 GetThrowParticlesId(u8 ballId)
+{
+    return IsSlicingThrow() ? PARTICLES_SLICER_SPIKE : ballId;
+}
+
+static const struct SpriteTemplate *GetThrowSpriteTemplate(u8 ballId)
+{
+    return IsSlicingThrow() ? &gSlicerSpikeSpriteTemplate : &gBallSpriteTemplates[ballId];
+}
+
+static u16 GetBallOpenFadeColor(u8 ballId)
+{
+    return ballId == PARTICLES_SLICER_SPIKE ? SLICER_SPIKE_FADE_COLOR : gBallOpenFadeColors[ballId];
+}
+
 #define tSpriteId data[0]
 
 #define sDuration data[0]
@@ -770,7 +820,7 @@ void AnimTask_ThrowBall(u8 taskId)
     u8 spriteId;
 
     ballId = ItemIdToBallId(gLastUsedItem);
-    spriteId = CreateSprite(&gBallSpriteTemplates[ballId], 32, 80, 29);
+    spriteId = CreateSprite(GetThrowSpriteTemplate(ballId), 32, 80, 29);
     gSprites[spriteId].sDuration = 34;
     gSprites[spriteId].sTargetX = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_X);
     gSprites[spriteId].sTargetY = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_Y) - 16;
@@ -808,7 +858,7 @@ void AnimTask_ThrowBall_StandingTrainer(u8 taskId)
 
     ballId = ItemIdToBallId(gLastUsedItem);
     subpriority = GetBattlerSpriteSubpriority(GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT)) + 1;
-    spriteId = CreateSprite(&gBallSpriteTemplates[ballId], x + 32, y | 80, subpriority);
+    spriteId = CreateSprite(GetThrowSpriteTemplate(ballId), x + 32, y | 80, subpriority);
     gSprites[spriteId].sDuration = 34;
     gSprites[spriteId].sTargetX = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_X);
     gSprites[spriteId].sTargetY = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_Y) - 16;
@@ -907,8 +957,8 @@ static void SpriteCB_Ball_Arc(struct Sprite *sprite)
             switch (ballId)
             {
             case 0 ... POKEBALL_COUNT - 1:
-                AnimateBallOpenParticles(sprite->x, sprite->y - 5, 1, 28, ballId);
-                LaunchBallFadeMonTask(FALSE, gBattleAnimTarget, 14, ballId);
+                AnimateBallOpenParticles(sprite->x, sprite->y - 5, 1, 28, GetThrowParticlesId(ballId));
+                LaunchBallFadeMonTask(FALSE, gBattleAnimTarget, 14, GetThrowParticlesId(ballId));
                 break;
             }
         }
@@ -941,7 +991,7 @@ static void SpriteCB_Ball_MonShrink_Step(struct Sprite *sprite)
     taskId = sprite->sTaskId;
 
     if (++gTasks[taskId].sTimer == 11)
-        PlaySE(SE_BALL_TRADE);
+        PlaySE(IsSlicingThrow() ? SE_SLICER_SPIKE : SE_BALL_TRADE);
 
     switch (gTasks[taskId].tState)
     {
@@ -1482,8 +1532,8 @@ static void SpriteCB_Ball_Release_Step(struct Sprite *sprite)
     switch (ballId)
     {
     case 0 ... POKEBALL_COUNT - 1:
-        AnimateBallOpenParticles(sprite->x, sprite->y - 5, 1, 28, ballId);
-        LaunchBallFadeMonTask(TRUE, gBattleAnimTarget, 14, ballId);
+        AnimateBallOpenParticles(sprite->x, sprite->y - 5, 1, 28, GetThrowParticlesId(ballId));
+        LaunchBallFadeMonTask(TRUE, gBattleAnimTarget, 14, GetThrowParticlesId(ballId));
         break;
     }
 
@@ -2003,15 +2053,15 @@ static void DestroyBallOpenAnimationParticle(struct Sprite *sprite)
         gBattleSpritesDataPtr->animationData->numBallParticles--;
         if (gBattleSpritesDataPtr->animationData->numBallParticles == 0)
         {
-            for (i = 0; i < POKEBALL_COUNT; i++)
+            for (i = 0; i < NUM_BALL_PARTICLE_SLOTS; i++)
             {
                 if (FuncIsActiveTask(sBallParticleAnimationFuncs[i]) == TRUE)
                     break;
             }
 
-            if (i == POKEBALL_COUNT)
+            if (i == NUM_BALL_PARTICLE_SLOTS)
             {
-                for (j = 0; j < POKEBALL_COUNT; j++)
+                for (j = 0; j < NUM_BALL_PARTICLE_SLOTS; j++)
                 {
                     FreeSpriteTilesByTag(sBallParticleSpriteSheets[j].tag);
                     FreeSpritePaletteByTag(sBallParticlePalettes[j].tag);
@@ -2047,12 +2097,12 @@ u8 LaunchBallFadeMonTask(bool8 unfadeLater, u8 spritePalNum, u32 selectedPalette
 
     if (!unfadeLater)
     {
-        BlendPalette(OBJ_PLTT_ID(spritePalNum), 16, 0, gBallOpenFadeColors[ballId]);
+        BlendPalette(OBJ_PLTT_ID(spritePalNum), 16, 0, GetBallOpenFadeColor(ballId));
         gTasks[taskId].tdCoeff = 1;
     }
     else
     {
-        BlendPalette(OBJ_PLTT_ID(spritePalNum), 16, 16, gBallOpenFadeColors[ballId]);
+        BlendPalette(OBJ_PLTT_ID(spritePalNum), 16, 16, GetBallOpenFadeColor(ballId));
         gTasks[taskId].tCoeff = 16;
         gTasks[taskId].tdCoeff = -1;
         gTasks[taskId].func = Task_FadeMon_ToNormal;
@@ -2068,7 +2118,7 @@ static void Task_FadeMon_ToBallColor(u8 taskId)
 
     if (gTasks[taskId].tTimer <= 16)
     {
-        BlendPalette(OBJ_PLTT_ID(gTasks[taskId].tPalOffset), 16, gTasks[taskId].tCoeff, gBallOpenFadeColors[ballId]);
+        BlendPalette(OBJ_PLTT_ID(gTasks[taskId].tPalOffset), 16, gTasks[taskId].tCoeff, GetBallOpenFadeColor(ballId));
         gTasks[taskId].tCoeff += gTasks[taskId].tdCoeff;
         gTasks[taskId].tTimer++;
     }
@@ -2096,7 +2146,7 @@ static void Task_FadeMon_ToNormal_Step(u8 taskId)
 
     if (gTasks[taskId].tTimer <= 16)
     {
-        BlendPalette(OBJ_PLTT_ID(gTasks[taskId].tPalOffset), 16, gTasks[taskId].tCoeff, gBallOpenFadeColors[ballId]);
+        BlendPalette(OBJ_PLTT_ID(gTasks[taskId].tPalOffset), 16, gTasks[taskId].tCoeff, GetBallOpenFadeColor(ballId));
         gTasks[taskId].tCoeff += gTasks[taskId].tdCoeff;
         gTasks[taskId].tTimer++;
     }

@@ -284,6 +284,7 @@
 #define SE_SABER_HUM                273
 #define SE_SABER_IGNITE             274
 #define SE_VADER_BREATH             275
+#define SE_SLICER_SPIKE             276
 
 // Music
 #define MUS_LITTLEROOT_TEST         350 // MUS_TETSUJI          // Unused, likely a test track.

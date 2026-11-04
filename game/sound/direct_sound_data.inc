@@ -2205,3 +2205,7 @@ DirectSoundWaveData_sw_saber_ignite::
 	.align 2
 DirectSoundWaveData_sw_vader_breath::
 	.incbin "sound/direct_sound_samples/sw_sfx/vader_breath.bin"
+
+	.align 2
+DirectSoundWaveData_sw_slicer_spike::
+	.incbin "sound/direct_sound_samples/sw_sfx/slicer_spike.bin"

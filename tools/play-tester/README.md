@@ -43,7 +43,9 @@ rebuild. Run `boot` once after every build (savestates do not carry over), then 
   `dex_national`: the Datapad list with the national Datapad on (the REGIONAL and NATIONAL count labels), then the search screen.
 
 - `slice`: the warden battle with its foe turned into a droid (B1 DROID) and a KYBER POD thrown: logs the song
-  the SE2 and BGM players are on (`MUS_DROID_SLICED` 615, then `MUS_CAUGHT`) and shoots the "Sliced!" message.
+  the SE1, SE2 and BGM players are on (`SE_SLICER_SPIKE` 276, `MUS_DROID_SLICED` 615, then `MUS_CAUGHT`), shoots the
+  throw every 6 frames (`slice_throw_*`: the spike, the sparks, the cyan fade) and the "Sliced!" message.
+  `slice_pod` is the same throw at the warden as it is, to check a normal pod still looks and sounds like one.
 - `creatures`: a party of net-new species with the net-new moves (party icons, summary pages, a battle).
   `creatures_dex`: the Datapad list opened at No. 206 (it writes `sLastSelectedPokemon`) and a new species' page.
 - `people`: each net-new walker (object graphics 76-81, 237-239) drawn on the Mos Pelgo townsfolk, one shot each
