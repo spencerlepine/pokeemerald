@@ -24,6 +24,8 @@ The owner's plan (2026-11-02): build the whole world conceptually first, then fi
 - `<planet>/_planet_tiles.png`: the planet's overworld assembled from the greybox terrain renders at 16 px per
   cell, dungeons in rows below (`python3 -m blockout world-tiles`, which also writes `_world_tiles.png`, every
   planet in story order at half size; that file is not committed, 13 MB).
+- `interiors/rooms/`: the room shells: placeholder tiles for every kit part and a sheet per room style, from
+  `../mapping/rooms.csv` ([`interiors/rooms/README.md`](interiors/rooms/README.md)). Each interior yaml names its style in a `room:` block.
 - `greybox/`: rendered greybox pieces (`<planet>_<name>.png`), kit sheets (`_kit-*.png`) and areas in relief
   (`areas/`), written by `tools/greybox`.
 

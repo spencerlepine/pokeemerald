@@ -16,6 +16,7 @@ python3 -m blockout layout TATOOINE   # place a planet's overworld areas from th
 python3 -m blockout world             # <planet>/_planet.png and _world.png (one panel per planet)
 python3 -m blockout world-tiles       # <planet>/_planet_tiles.png (16 px per cell, from the greybox terrain renders) and _world_tiles.png (half size, not committed)
 python3 -m blockout guide             # wiki/world/GUIDE.md and CONNECTIONS.csv: the computed area graph, reachability from the start, and the progression check (planet level bands, net-new area gates and level bands), and the way-home check: areas with no forward path to any hangar
+python3 -m blockout todo --kind room:style         # room shells (rooms.csv): styles, or room:part for the kit parts
 python3 -m blockout todo --kind scenery --model IN-REVIEW   # what to draw next; --model filters scenery rows by their 3D model status (TODO, IN-PROGRESS, IN-REVIEW, APPROVED, any)
 ```
 
@@ -26,3 +27,4 @@ python3 -m blockout todo --kind scenery --model IN-REVIEW   # what to draw next;
 - `blockout/terrain.py`: the terrain legend, one character per cell.
 - `blockout/vanilla.py`: reads a vanilla map (collision, behaviours, doors, people, connections) via `../tile-generator`.
 - `blockout/render.py`: the review sheet.
+- `blockout/rooms.py`: the room shells (`../../wiki/mapping/rooms.csv` and each area's `room:` block, documented at the top of the file). `check` fails if an interior has no room style or a part, size, hit box or placeholder is wrong; `index` writes each row's `used_in` and `areas` and adds a `room` row per area to `INDEX.csv`; `todo --kind room` (or `room:style`, `room:part`) lists the rows and `--set room:<id> <status>` records progress.

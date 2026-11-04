@@ -164,6 +164,9 @@ in `../game`. Every `source_file` is a path relative to `../game`.
   Net-new per-planet items (the planet kit in [`bible/WORLD_ART.md`](bible/WORLD_ART.md): wroshyr, Dune Sea,
   mud, deck, cloud, fungi, void) are rows under `sw-<planet>` sheets, placeholders until drawn.
   Made by `python -m tilegen terrain run` in `tools/tile-generator/`.
+- **Room shells:** `mapping/rooms.csv` lists every interior room style (Tatooine adobe dome, Imperial deck, Cloud City...)
+  and the kit parts each is built from, with size and hit box; every interior yaml names its style and parts in a
+  `room:` block. Placeholder tiles only, no tool yet: [`world/interiors/rooms/README.md`](world/interiors/rooms/README.md).
 - **World-building tools:** [`../tools/world-art/README.md`](../tools/world-art/README.md) draws new shapes from 3D models. Only owner-approved models live there (so far the Hoenn tree).
 - **World blockout:** [`world/README.md`](world/README.md) lays out every area in placeholder tiles before any art; `world/INDEX.csv` is the to-do list.
 - **Planet graph:** `mapping/hyperlanes.csv` is every ship link between planets (hangar at each end, unlock); `world/GUIDE.md` reports it with the badges held on first landing and the balance check of every net-new area.

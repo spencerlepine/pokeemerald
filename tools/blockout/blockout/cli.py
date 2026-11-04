@@ -19,6 +19,7 @@ import yaml
 from .area import Area
 from . import vanilla as V
 from . import hyperlanes as H
+from . import rooms as R
 
 WORLD = V.ROOT / "wiki" / "world"
 
@@ -308,9 +309,13 @@ def cmd_check(a):
         for q in Area(p).check():
             print(f"{p}: {q}")
             bad += 1
-    if not a.areas:   # the whole world: the planet graph too
-        for q in H.check({x.id: x for x in (Area(p) for p in _all())}):
+    if not a.areas:   # the whole world: the planet graph and the room shells too
+        every = [Area(p) for p in _all()]
+        for q in H.check({x.id: x for x in every}):
             print(f"hyperlanes.csv: {q}")
+            bad += 1
+        for q in R.check(every):
+            print(f"rooms.csv: {q}")
             bad += 1
     sys.exit(1 if bad else 0)
 
@@ -322,6 +327,7 @@ def _assets():
 def cmd_index(a):
     """wiki/world/INDEX.csv: every area and every placed piece, with the art status from world_art.csv."""
     art = _assets()
+    rooms = R.load()
     uses = {}
     out = WORLD / "INDEX.csv"
     with open(out, "w", newline="") as fh:
@@ -341,7 +347,14 @@ def cmd_index(a):
                             "x".join(str(v) for v in pc.get("size", [1, 1])), aid, known, st, row.get("tool", "")])
                 if aid:
                     uses.setdefault(aid, []).append(ar.id)
+            room = ar.raw.get("room")
+            if room:   # the room shell: its style row in rooms.csv
+                rrow = rooms.get(room.get("style", ""), {})
+                w.writerow([ar.id, ar.planet, ar.kind, ar.replaces, ar.status, "room", rrow.get("name", ""),
+                            room.get("map", ""), room.get("style", ""), "yes" if rrow else "NEW",
+                            rrow.get("status", "pending-mockup"), rrow.get("tool", "")])
     print(out)
+    R.index([Area(p) for p in _all()])
     # world_art.csv `used_in` and `areas`: how often each piece is placed, and where
     path = V.ROOT / "wiki" / "mapping" / "world_art.csv"
     rows = list(csv.DictReader(open(path)))
@@ -367,9 +380,10 @@ def cmd_todo(a):
         ident, status = a.set
         if status not in STATUSES:
             sys.exit(f"status must be one of {STATUSES}")
-        if ident.startswith(("art:", "terrain:")):
-            col = "concept_id" if ident.startswith("art:") else "terrain_id"
-            path = V.ROOT / "wiki" / "mapping" / ("world_art.csv" if col == "concept_id" else "terrain.csv")
+        if ident.startswith(("art:", "terrain:", "room:")):
+            col, name = {"art": ("concept_id", "world_art.csv"), "terrain": ("terrain_id", "terrain.csv"),
+                         "room": ("room_id", "rooms.csv")}[ident.split(":")[0]]
+            path = V.ROOT / "wiki" / "mapping" / name
             rows = list(csv.DictReader(open(path)))
             hit = [r for r in rows if r[col] == ident]
             if not hit:
@@ -394,6 +408,9 @@ def cmd_todo(a):
         rows.append({"id": aid, "kind": r["category"], "planet": r["planet"], "status": r["status"], "tool": r["tool"],
                      "build": r["build"], "used_in": r["used_in"], "model": r.get("model_status", ""),
                      "notes": r["notes"] or r["description"][:90]})
+    for rid, r in R.load().items():          # room shells (rooms.csv): styles and kit parts
+        rows.append({"id": rid, "kind": f"room:{r['kind']}", "planet": r["planet"], "status": r["status"], "tool": r["tool"],
+                     "build": r["size"], "used_in": r["used_in"], "model": "", "notes": r["notes"]})
     tpath = V.ROOT / "wiki" / "mapping" / "terrain.csv"
     if tpath.exists():                       # terrain items (tile-generator `terrain`): ground, water, ledges...
         for r in csv.DictReader(open(tpath)):
@@ -721,7 +738,7 @@ def main(argv=None):
     td = sub.add_parser("todo", help="what to draw next, from the wiki")
     td.add_argument("--status", choices=STATUSES)
     td.add_argument("--planet")
-    td.add_argument("--kind", help="area, area:town, building, object, interior, nature, landmark")
+    td.add_argument("--kind", help="area, area:town, building, object, interior, nature, landmark, room, room:style, room:part")
     td.add_argument("--tool")
     td.add_argument("--model", help="scenery model status: TODO, IN-PROGRESS, IN-REVIEW, APPROVED, or any")
     td.add_argument("--csv", action="store_true")
