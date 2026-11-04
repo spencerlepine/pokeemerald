@@ -1,0 +1,20 @@
+# Walker kit: templates shared by the Imperial walkers (AT-AT, AT-ST, AT-TE wrecks).
+# Use one with `- {use: walker-leg, name: leg-fl, at: [x, y, z], with: {knee: 20}}`.
+# Axes of the walker itself: x forward (the head), y to its left, z up; it stands on z = 0.
+templates:
+  # An AT-AT leg: hip disc, square thigh, knee disc, long square shin, ankle, round foot pad.
+  # `hip` swings the thigh forward (+) or back (-) from straight down; `knee` bends the shin from the
+  # thigh's line; `ankle` bends the short ankle block. The foot stays flat unless `flat_foot` is false.
+  walker-leg:
+    params: {thigh: 1.4, shin: 2.2, hip: -10, knee: 10, ankle: 0, w: 0.42, d: 0.55, foot: 0.52, flat_foot: true,
+             leg: plate, joint: dark, pad: dark}
+    parts:
+      - name: leg
+        mat: "=leg"
+        limb:
+          root: [0, 0, 0]
+          segments:
+            - {len: "=thigh", w: "=w", d: "=d", bend: "=hip", joint: {r: 0.38, len: "=w + 0.2", mat: "=joint"}}
+            - {len: "=shin", w: "=w * 0.85", d: "=d * 0.8", bend: "=knee", taper: 0.9, joint: {r: 0.32, len: "=w + 0.12", mat: "=joint"}}
+            - {len: 0.28, w: "=w * 0.7", d: "=d * 0.7", bend: "=ankle", joint: {r: 0.22, len: "=w", mat: "=joint"}}
+          foot: {r: "=foot", r2: "=foot * 0.85", h: 0.36, mat: "=pad", flat: "=flat_foot"}

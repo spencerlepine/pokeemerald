@@ -112,6 +112,12 @@ is one convex hull of about 30 jittered points with soft edges. What it taught:
 - The crag texture is a pattern on the faces, not geometry; it comes with final art.
 - Large vehicles read by their silhouette and one light part on a mid body (pods, leg plates), not by
   detail. All-light models wash out next to vanilla's darker houses.
+- In this camera a part lying flat toward the south and a part standing up draw the same way. So a walker
+  on its side with its legs to the south can pass for one standing. What tells them apart: a ground shadow
+  under a standing piece (it shows the height), splayed and bent legs, and turning the fallen piece a little
+  off the grid (10-15 degrees).
+- Model the real object upright and pose it with `tilt` / `turn` / `sink`; posed by hand, part by part,
+  the AT-AT's legs never lined up.
 
 Measured on vanilla (true regardless of method):
 - The Hoenn route tree (General 468/469/476/477) is 2x2 cells. Its crown is about 30x22 px, filling the

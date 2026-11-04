@@ -166,6 +166,8 @@ class Part:
             self.center = pts.mean(0)
             self.radius_bound = float(np.linalg.norm(pts - self.center, axis=1).max())
         self.rot = euler(*spec["rot"]) if "rot" in spec else None
+        fr = spec.get("_frame")             # set by a template's `at` / `turn`: world = R p + t
+        self.frame = None if fr is None else (np.asarray(fr[0], float), np.asarray(fr[1], float))
         sq = spec.get("squash")             # {scale: [sx, sy, sz], center: [..]} or just [sx, sy, sz]
         self.squash = None
         if sq is not None:
@@ -176,6 +178,8 @@ class Part:
             self.radius_bound *= float(s.max())
         # culling sphere centre, in the space the part is evaluated from (after squash)
         self.bcenter = self.center if self.squash is None else self.squash[0] + (self.center - self.squash[0]) * self.squash[1]
+        if self.frame is not None:
+            self.bcenter = self.frame[0] @ self.bcenter + self.frame[1]
         nz = spec.get("noise")
         self.noise = None
         if nz:
@@ -184,6 +188,9 @@ class Part:
 
     def sdf(self, c):
         k = 1.0
+        if self.frame is not None:
+            R, t = self.frame
+            c = (c - t) @ R                  # R^T (c - t), row vectors
         if self.squash is not None:
             sc, s = self.squash
             c = sc + (c - sc) / s
@@ -342,7 +349,63 @@ def gen_lobes(g, rng):
     return out
 
 
-GENERATORS = {"scatter": gen_scatter, "branches": gen_branches, "tiers": gen_tiers, "lobes": gen_lobes}
+def gen_limb(g, rng):
+    """A jointed leg or arm as low-poly boxes: walker legs, droid arms, cranes.
+    root: [x, y, z]            where the first segment starts (the hip)
+    yaw: deg                   the plane the limb bends in: 0 = bends swing the far end toward +x
+    splay: deg                 tips the whole limb sideways, out of that plane (toward -y at yaw 0)
+    segments: [{len, w, d, bend, taper, mat, round, joint: {r, len, mat}}]
+        each starts where the last ended; `bend` (deg) is added to the angle from straight down, so a
+        knee is a bend; `w` is the width across the plane, `d` the depth in it; `taper` scales the far
+        end; `joint` is a disc (cylinder across the plane) at the segment's start
+    foot: {r, r2, h, mat, flat: true}  a round pad at the end; `flat` keeps it level with the ground
+        (a standing walker), otherwise it follows the last segment
+    Part names are <name>/seg0, <name>/joint0, ..., <name>/foot, so `drop: [<name>/*]` removes it."""
+    name = g.get("name", "limb")
+    p = np.asarray(g["root"], float)
+    yaw = math.radians(float(g.get("yaw", 0.0)))
+    f = np.array([math.cos(yaw), math.sin(yaw), 0.0])
+    side = np.array([-math.sin(yaw), math.cos(yaw), 0.0])
+    splay = float(g.get("splay", 0.0))
+    side_s = rot_toward(side, f, splay)
+    ang = 0.0
+    out = []
+    d = np.array([0, 0, -1.0])
+    for i, sg in enumerate(g["segments"]):
+        ang += float(sg.get("bend", 0.0))
+        a = math.radians(ang)
+        d = -math.cos(a) * np.array([0, 0, 1.0]) + math.sin(a) * f
+        d = rot_toward(d, f, splay)
+        v = np.cross(d, side_s)
+        v /= np.linalg.norm(v) + 1e-12
+        L = float(sg["len"])
+        w, dd = float(sg.get("w", 0.3)) / 2, float(sg.get("d", sg.get("w", 0.3))) / 2
+        tp = sg.get("taper", 1.0)
+        tw, td = (tp if isinstance(tp, (list, tuple)) else [tp, tp])
+        q = p + d * L
+        pts = [c + sw * side_s * ww + sv * v * vv
+               for c, ww, vv in ((p, w, dd), (q, w * tw, dd * td)) for sw in (-1, 1) for sv in (-1, 1)]
+        mat = sg.get("mat", g.get("mat"))
+        if sg.get("joint"):
+            j = sg["joint"]
+            jl = float(j.get("len", 2 * w + 0.1)) / 2
+            out.append({"name": f"{name}/joint{i}", "mat": j.get("mat", mat), "group": g.get("group", "body"),
+                        "cylinder": {"a": (p - side_s * jl).tolist(), "b": (p + side_s * jl).tolist(), "r1": float(j["r"])}})
+        out.append({"name": f"{name}/seg{i}", "mat": mat, "group": g.get("group", "body"),
+                    "hull": {"points": np.round(pts, 4).tolist(), "round": float(sg.get("round", g.get("round", 0.03)))}})
+        p = q
+    ft = g.get("foot")
+    if ft:
+        h = float(ft.get("h", 0.3))
+        ax = np.array([0, 0, -1.0]) if ft.get("flat", True) else d
+        top = p - ax * float(ft.get("rise", 0.0))
+        out.append({"name": f"{name}/foot", "mat": ft.get("mat", g.get("mat")), "group": g.get("group", "body"),
+                    "cylinder": {"a": top.tolist(), "b": (top + ax * h).tolist(), "r1": float(ft.get("r2", ft["r"])),
+                                 "r2": float(ft["r"])}})
+    return out
+
+
+GENERATORS = {"limb": gen_limb, "scatter": gen_scatter, "branches": gen_branches, "tiers": gen_tiers, "lobes": gen_lobes}
 
 
 def expand_parts(specs, seed):
@@ -359,7 +422,81 @@ def expand_parts(specs, seed):
             if key in spec and key not in g:
                 g[key] = spec[key]
         rng = np.random.default_rng(int(g.get("seed", i)) + 7919 * int(seed))
-        out.extend(GENERATORS[kind](g, rng))
+        made = GENERATORS[kind](g, rng)
+        if "_frame" in spec:
+            for m in made:
+                m["_frame"] = spec["_frame"]
+        out.extend(made)
+    return out
+
+
+# ------------------------------------------------------------------ params, templates, drop
+
+EXPR_ENV = {k: getattr(math, k) for k in ("sin", "cos", "tan", "radians", "degrees", "sqrt", "pi", "atan2")}
+EXPR_ENV.update(min=min, max=max, abs=abs, round=round)
+
+
+def evaluate(node, params):
+    """Every string starting with `=` becomes the value of the expression after it, with `params`
+    and math (sin, cos, radians, sqrt, pi, min, max) in scope: `len: "=thigh * 1.1"`."""
+    if isinstance(node, str) and node.startswith("="):
+        return eval(node[1:], {"__builtins__": {}}, dict(EXPR_ENV, **params))
+    if isinstance(node, dict):
+        return {k: evaluate(v, params) for k, v in node.items()}
+    if isinstance(node, list):
+        return [evaluate(v, params) for v in node]
+    return node
+
+
+def resolve_params(defaults, over=None):
+    """Params in order; a later one may be an expression of earlier ones."""
+    out = {}
+    for k, v in dict(defaults or {}, **(over or {})).items():
+        out[k] = evaluate(v, out)
+    return out
+
+
+def _compose(frame, R, t):
+    """frame (R0, t0) applied after (R, t): world = R0 (R p + t) + t0."""
+    if frame is None:
+        return R, t
+    R0, t0 = np.asarray(frame[0]), np.asarray(frame[1])
+    return R0 @ R, R0 @ t + t0
+
+
+def expand_templates(parts, templates, params, prefix="", depth=0):
+    """`use: <template>` entries become the template's parts, evaluated with its params (template
+    defaults < the model's params < the entry's `with`), named <entry name>/<part name>, moved by the
+    entry's `at: [x, y, z]` and turned by `turn` (deg about z) and `rot: [pitch, yaw, roll]`.
+    `mirror: y` flips the template north-south (a left leg from a right one)."""
+    if depth > 8:
+        raise ValueError("templates nest more than 8 deep")
+    out = []
+    for i, spec in enumerate(parts or []):
+        if "use" not in spec:
+            p = evaluate(spec, params)
+            if prefix:
+                p["name"] = prefix + p.get("name", f"part{i}")
+            out.append(p)
+            continue
+        t = templates.get(spec["use"])
+        if t is None:
+            raise ValueError(f"unknown template {spec['use']!r} (have {sorted(templates)})")
+        sp = evaluate({k: v for k, v in spec.items() if k != "with"}, params)
+        local = resolve_params(dict(params, **(t.get("params") or {})), evaluate(spec.get("with") or {}, params))
+        name = sp.get("name", f"{spec['use']}{i}")
+        inner = expand_templates(t.get("parts"), templates, local, prefix + name + "/", depth + 1)
+        R = euler(*(sp.get("rot") or [0, 0, 0]))
+        R = euler(0, float(sp.get("turn", 0.0)), 0) @ R
+        if sp.get("mirror") in ("y", True):
+            R = R @ np.diag([1.0, -1.0, 1.0])
+        T = np.asarray(sp.get("at", [0, 0, 0]), float)
+        for p in inner:
+            if "mat" in sp and "mat" not in p:
+                p["mat"] = sp["mat"]
+            Rp, Tp = _compose((R, T), *(p["_frame"] if "_frame" in p else (np.eye(3), np.zeros(3))))
+            p["_frame"] = (Rp.tolist(), Tp.tolist())
+            out.append(p)
     return out
 
 
@@ -393,6 +530,10 @@ class Instance:
         for gname, g in (spec.get("groups") or {"body": {}}).items():
             self.groups[gname] = {"k": float(g.get("k", 0.0)), "join": float(g.get("join", 0.0))}
         expanded = expand_parts(spec.get("parts"), self.seed)
+        drop = spec.get("drop") or []          # name patterns (fnmatch): a variant without some parts
+        if drop:
+            import fnmatch
+            expanded = [p for p in expanded if not any(fnmatch.fnmatch(p.get("name", ""), d) for d in drop)]
         for p in expanded:
             if p.pop("_new_group", False):
                 self.groups.setdefault(p["group"], {"k": 0.0, "join": 0.0})
@@ -522,10 +663,28 @@ def _remat(parts, mapping):
     return out
 
 
+SHAPE_KEYS = SHAPE_KEYS + ("drop",)
+# how a single-shape file is posed: the keys an instance reads besides its shape
+INSTANCE_KEYS = ("foot", "seed", "scale", "stretch", "mirror", "turn", "pivot", "tilt", "sink")
+
+
 class Object:
-    def __init__(self, path):
+    def __init__(self, path, raw=None):
         self.path = os.path.abspath(path)
-        raw = _load_yaml(path)
+        raw = copy.deepcopy(raw) if raw is not None else _load_yaml(path)
+        raw.pop("variants", None)
+        # params, expressions and templates: resolved into plain parts before anything else
+        self.params = resolve_params(raw.get("params"))
+        templates = {}
+        for f in raw.get("kits") or []:                 # shared template files, relative to the model
+            kit = _load_yaml(os.path.join(os.path.dirname(self.path), f))
+            templates.update(kit.get("templates") or {})
+        templates.update(raw.get("templates") or {})
+        for key in ("parts", "ground"):
+            if key in raw:
+                raw[key] = expand_templates(raw[key], templates, self.params)
+        for k in [k for k in raw if k not in ("parts", "ground", "templates", "params", "kits")]:
+            raw[k] = evaluate(raw[k], self.params)
         self.raw = raw
         self.name = raw.get("name") or os.path.basename(path).split(".")[0]
         self.description = raw.get("description", "")
@@ -548,9 +707,14 @@ class Object:
         # instances: the file itself, or a list of them (each may `include` another object file)
         specs = raw.get("instances")
         if specs is None:
-            base = {k: raw[k] for k in SHAPE_KEYS + ("foot", "seed") if k in raw}
+            base = {k: raw[k] for k in SHAPE_KEYS + INSTANCE_KEYS if k in raw}
             base.setdefault("foot", [self.size[0] / 2, self.size[1] - 3])
             specs = [base]
+            # `ground`: parts lying on the ground around the piece (snow drifts, debris, an ice shelf).
+            # They share its foot but are never posed: tilt, turn, sink and scale leave them alone.
+            # Drawn first, so the piece covers them where they meet.
+            if raw.get("ground"):
+                specs.append({"foot": base["foot"], "parts": raw["ground"], "box": None, "seed": base.get("seed", 0)})
         materials = dict(raw.get("materials") or {})
         resolved = []
         for i, s in enumerate(specs):

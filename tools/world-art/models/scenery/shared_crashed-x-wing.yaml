@@ -17,7 +17,7 @@ render:
   margin: 0
   cleanup: true
 materials:
-  hull:   {ramp: light, bands: [0.1, 0.45, 0.8]}
+  hull:   {ramp: light, bands: [0.2, 0.5, 0.86]}
   wing:   {ramp: mid,   bands: [0.25, 0.55, 0.85]}
   metal:  {ramp: mid,   bands: [0.1, 0.45, 0.8]}
   vent:   {ramp: dark,  bands: [0.2, 0.5, 0.85]}
@@ -25,8 +25,6 @@ materials:
 drop_shadow:
   - {dx: 1, dy: 1, color: shade, below: 3}
 box: [92, 44]
-tilt: [-6, 0]
-pivot: [1.5, 1.5]
 sink: 0.08
 parts:
   # fuselage: a long box tapering to the nose
@@ -50,14 +48,34 @@ parts:
     mat: wing
     prism: {poly: [[-2.0, 1.25], [-0.75, 1.25], [-1.25, 0.25], [-2.05, 0.25]], z: [0.0, 0.12], round: 0.02}
   - {name: cannon-s, mat: metal, cylinder: {a: [-2.1, 0.3, 0.08], b: [0.4, 0.3, 0.08], r1: 0.07}}
+  # the south pair still up (the intact variant)
+  - name: wing-s-up
+    mat: wing
+    prism: {poly: [[-2.0, 1.25], [-0.75, 1.25], [-1.2, 0.15], [-2.05, 0.15]], z: [0.18, 0.3], round: 0.02}
+  - {name: cannon-s-up, mat: metal, cylinder: {a: [-2.1, 0.2, 0.25], b: [0.9, 0.2, 0.25], r1: 0.07}}
   # four engines at the wing roots
   - {name: engine-1, mat: metal, cylinder: {a: [-2.85, 1.05, 0.38], b: [-1.35, 1.05, 0.38], r1: 0.19}}
   - {name: engine-2, mat: metal, cylinder: {a: [-2.85, 1.95, 0.38], b: [-1.35, 1.95, 0.38], r1: 0.19}}
   - {name: engine-3, mat: metal, cylinder: {a: [-2.85, 1.15, 0.72], b: [-1.35, 1.15, 0.72], r1: 0.17}}
   - {name: engine-4, mat: metal, cylinder: {a: [-2.85, 1.85, 0.72], b: [-1.35, 1.85, 0.72], r1: 0.17}}
   - {name: nozzles, mat: vent, box: {c: [-2.86, 1.5, 0.55], half: [0.04, 0.68, 0.38], radius: 0.02}}
-  # the snapped-off wing in the south-east corner
+# the snapped-off wing in the south-east corner, lying on the ground (never posed)
+ground:
   - name: lost-wing
     mat: wing
     prism: {poly: [[1.3, 0.15], [2.6, 0.25], [2.55, 0.7], [1.4, 0.85]], z: [0.0, 0.1], round: 0.02}
-  - {name: lost-cannon, mat: metal, cylinder: {a: [1.35, 0.12, 0.07], b: [2.9, 0.22, 0.07], r1: 0.06}}
+  - {name: lost-cannon, mat: metal, cylinder: {a: [1.35, 0.12, 0.07], b: [2.7, 0.2, 0.07], r1: 0.06}}
+variants:
+  # the south S-foils broken flat on the ground, one wing lost
+  broken:
+    drop: ["*-up"]
+  # landed hard but whole: both S-foil pairs open, nothing torn off
+  intact:
+    drop: ["wing-s", "cannon-s"]
+    ground: []
+  # nose dug into the ground, tail up, the south pair broken
+  nose-down:
+    drop: ["*-up"]
+    tilt: [-8, 0]
+    pivot: [2.0, 1.5]
+    sink: 0.1

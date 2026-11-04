@@ -7,7 +7,7 @@ name: shared_crashed-tie-fighter
 art: art:shared:crashed-tie-fighter
 palette: greybox
 cells: [3, 4]
-foot: [24, 64]
+foot: [22, 62]
 footprint: 2
 render:
   light: [-0.55, -0.3, 0.78]

@@ -59,6 +59,11 @@ def main(argv=None):
     s.add_argument("--all", action="store_true")
     s.add_argument("--status", action="store_true")
     s.add_argument("--set", nargs=2, metavar=("ART_ID", "STATUS"))
+    s.add_argument("--variant", action="append", help="only this variant (repeat for more)")
+    s.add_argument("--try", dest="tries", action="append", default=[], metavar="KEY=VALUE",
+                   help="override a key for this render only, e.g. turn=12 or params.fknee=40 (output/ only, the wiki is untouched)")
+    s.add_argument("--sweep", metavar="KEY=V1,V2,...",
+                   help="render each value side by side into output/scenery/<name>/sweep.png (output/ only)")
     a = ap.parse_args(argv)
     if a.cmd == "render":
         for p in a.models:

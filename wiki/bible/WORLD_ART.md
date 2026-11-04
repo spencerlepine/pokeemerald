@@ -121,10 +121,11 @@ an area's grid changes; it redoes every scenery prop). Query the rows with
 and `notes`); each needs its own shape when its category is reviewed.
 
 **3D models.** Each scenery row is also a low-poly grey model in `tools/world-art/models/scenery/`, rendered
-by the Emerald camera (`python3 -m worldart scenery`, [README](../../tools/world-art/README.md)). Four
+by the Emerald camera (`python3 -m worldart scenery`, [README](../../tools/world-art/README.md)). Five
 columns track it: `model` (the yaml), `model_status` (`TODO`, `IN-PROGRESS`, `IN-REVIEW`, `APPROVED`),
-`model_png` (the sprite in `world/models/`, with a `_scene.png` screen check beside it) and `model_tiles`
-(unique 8x8 tiles). Query: `python3 -m blockout todo --model IN-REVIEW`. Nothing is in the game yet.
+`model_png` (the sprite in `world/models/`, with a `_scene.png` screen check beside it), `model_variants`
+(the drawings one model makes: poses, lost parts, angles; all on `<id>_variants.png`) and `model_tiles`
+(unique 8x8 tiles of the first). Each variant is a drawing of its own in the tileset, so it costs tiles. Query: `python3 -m blockout todo --model IN-REVIEW`. Nothing is in the game yet.
 
 | Planet | Pieces (where) | Lore |
 |---|---|---|

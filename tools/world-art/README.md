@@ -65,16 +65,44 @@ then rendered by the Emerald camera into a grey sprite. Grey only: no colour, ou
   facing south (flat on the ground it is a line), a fallen AT-AT's legs point south, not north. A tall light
   part on a mid-grey body (the AAT's pods, the AT-AT's leg plates) reads better than all-light.
 
+- **Model the real thing, then pose it.** Build the object as it stands in the film, in its own axes,
+  then pose the whole model: `tilt: [pitch, roll]` about `pivot` (a walker on its side is `tilt: [0, 90]`),
+  `turn` (deg about z, any angle: the camera is 3D), `sink` (m into the ground; the ground cuts it flat),
+  `scale` (fit it to the drawn size) and `mirror` (the e/w facing). `foot` is where the model's origin
+  lands in the sprite, in px.
+- **`ground`**: parts lying on the ground around the piece (snow, debris, a lost wing, a fallen head).
+  They are never posed, so they stay flat when the piece tilts. Drawn under the piece.
+- **Templates** (`templates:` in the model, or shared in a kit file listed under `kits:`, e.g.
+  `models/scenery/kits/walkers.yaml`): a named list of parts with `params`. Use one with
+  `{use: walker-leg, name: leg-fl, at: [x, y, z], turn: deg, mirror: y, with: {knee: 20}}`. Its parts are
+  named `leg-fl/...`. Templates may use other templates.
+- **Params and expressions**: `params:` at the top of the model; any value written `"=expr"` is computed
+  from them (with sin, cos, radians, sqrt, pi, min, max): `at: ["=hx", "=-hy", "=hip_z"]`.
+- **`limb`**: a jointed leg or arm from low-poly boxes: `{root, yaw, splay, segments: [{len, w, d, bend,
+  taper, joint: {r}}], foot: {r, h, flat}}`. Each `bend` is added to the last, so a knee is a bend. The
+  AT-AT leg in the walker kit is one.
+- **Variants**: `variants: {name: {overrides}}` makes one model many outputs. Each variant is merged over
+  the model: `params` key by key, any other key replaced (`tilt`, `turn`, `sink`, `scale`, `foot`,
+  `ground`), and `drop: ["leg-br/*", "head/*"]` leaves parts out by name. The first variant is the one the
+  wiki row shows. The AT-AT has five: toppled, toppled-three-legs, toppled-headless, standing, kneeling.
+
 ```bash
-python3 -m worldart scenery hoth_frozen-at-at    # render one (or several, or --all)
+python3 -m worldart scenery hoth_frozen-at-at    # render one (or several, or --all), every variant
+python3 -m worldart scenery hoth_frozen-at-at --variant toppled --try turn=10 --try params.fknee=40
+                                                 # one variant with tweaks, to output/ only
+python3 -m worldart scenery hoth_frozen-at-at --variant toppled --sweep "turn=-12,0,12"
+                                                 # each value side by side: output/scenery/<id>/sweep.png
 python3 -m worldart scenery --status             # every scenery row's model status
 python3 -m worldart scenery --set art:hoth:frozen-at-at APPROVED
 ```
 
-A render writes `output/scenery/<id>/{sprite,review,scene}.png`. `scene.png` is the in-game check: one
+A render writes `output/scenery/<id>/{sprite,review,scene}.png` (with variants, one folder per variant).
+It warns when the art touches an edge of the sprite, where it would be cut off. `scene.png` is the in-game check: one
 15x10-cell screen with a greyed vanilla house, the vanilla cone rock and the player standing south of the
-piece, its hit box in red, at 1x and 3x. The sprite and scene are copied to `../../wiki/world/models/`, and
-the wiki row gets `model` (the yaml), `model_png`, `model_tiles` (unique 8x8 tiles after flips) and
+piece, its hit box in red, at 1x and 3x. The sprites (`<id>--<variant>.png`), the first variant's scene and a
+sheet of every variant (`<id>_variants.png`) are copied to `../../wiki/world/models/`. `--variant`, `--try`
+and `--sweep` never touch the wiki. The wiki row gets `model` (the yaml), `model_png`, `model_variants`,
+`model_tiles` (unique 8x8 tiles after flips) and
 `model_status`: `TODO` (no model), `IN-PROGRESS` (a model file exists), `IN-REVIEW` (rendered, for the
 owner), `APPROVED`. List them with `python3 -m blockout todo --model IN-REVIEW` (in `../blockout`).
 None of this goes into `../../game` yet.

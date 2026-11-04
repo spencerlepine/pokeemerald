@@ -1,15 +1,16 @@
 # Frozen AT-AT (art:hoth:frozen-at-at), hit box 9x4, drawn 9x7.
-# Reference: the AT-AT (The Empire Strikes Back). It lies on its left side in the frozen lake, sunk to
-# half its depth: the long boxy body runs east-west along the back of the hit box, its belly faces south,
-# and the four legs stick out south across the ice toward the camera (legs pointing north would hide
-# behind the body), the front knee bent up into the air. The head sits on its neck at the east end.
-# Small drifts of snow bank against the north side and the feet.
-# Axes: x east, y north from the hit box's south edge, z up; 1 m = 1 cell = 16 px.
+# Reference: the AT-AT (The Empire Strikes Back). Modelled standing, like the real walker: the box body
+# with chamfered top and armour skirts, the ribbed neck, the wedge head with cheek guns, four jointed
+# legs from the walker kit. Each variant then poses it: toppled on its side, sunk in the lake ice,
+# legs lost, turned. Snow lies on the ground around it (`ground`), never posed.
+# Walker axes: x forward (head), y to its left, z up, origin on the ground under its middle.
+# 1 m = 1 cell = 16 px; `scale` shrinks the whole walker to fit the drawn size.
 name: hoth_frozen-at-at
 art: art:hoth:frozen-at-at
 palette: greybox
+kits: [kits/walkers.yaml]
 cells: [9, 7]
-foot: [72, 112]
+foot: [64, 104]
 footprint: 4
 render:
   light: [-0.55, -0.3, 0.78]
@@ -20,52 +21,95 @@ render:
   cleanup: true
 materials:
   hull:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
-  plate: {ramp: light, bands: [0.1, 0.45, 0.8]}
+  plate: {ramp: light, bands: [0.15, 0.5, 0.82]}
   dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
   snow:  {ramp: bone,  bands: [0.05, 0.3, 0.7]}
+  shade: {color: shade}
 drop_shadow:
   - {dx: 1, dy: 1, color: shade, below: 4}
 box: [140, 60]
-sink: 0.0
+templates:
+  # the head, its back at the origin: the wedge with the visor and the cheek guns
+  atat-head:
+    parts:
+      - name: shell
+        mat: hull
+        hull: {points: [[0, -0.55, 0], [0, 0.55, 0], [0, -0.55, 1.05], [0, 0.55, 1.05],
+                        [0.95, -0.48, 0.05], [0.95, 0.48, 0.05], [0.8, -0.45, 0.85], [0.8, 0.45, 0.85],
+                        [1.4, -0.3, 0.2], [1.4, 0.3, 0.2], [1.3, -0.3, 0.6], [1.3, 0.3, 0.6]], round: 0.04}
+      - {name: visor, mat: dark, box: {c: [1.1, 0, 0.7], half: [0.2, 0.32, 0.05], radius: 0.01}, rot: [20, 0, 0]}
+      - {name: gun-l, mat: dark, cylinder: {a: [0.75, 0.55, 0.2], b: [1.7, 0.55, 0.2], r1: 0.08}}
+      - {name: gun-r, mat: dark, cylinder: {a: [0.75, -0.55, 0.2], b: [1.7, -0.55, 0.2], r1: 0.08}}
+params:
+  hip_z: 4.25        # hip height: the body's underside
+  hx: 1.55           # hips fore and aft of the middle
+  hy: 1.05           # hips out from the centre line
+  # leg poses (deg): front legs, back legs
+  fhip: -8
+  fknee: 12
+  bhip: 8
+  bknee: -4
 parts:
-  # the body on its side: its flank (now facing up) is the big face seen in plan, the roof is the
-  # tall face to the north, the belly the low face to the south
   - name: body
     mat: hull
-    hull: {points: [[-3.3, 1.7, 0], [2.0, 1.7, 0], [-3.3, 3.85, 0], [2.0, 3.85, 0],
-                    [-3.2, 1.9, 1.3], [1.9, 1.9, 1.3], [-3.2, 3.5, 1.55], [1.9, 3.5, 1.55],
-                    [-3.45, 2.6, 0.9], [2.15, 2.6, 0.9]], round: 0.06}
-  # armour plates on the flank
-  - {name: plate-1, mat: plate, box: {c: [-2.2, 2.7, 1.5], half: [0.75, 0.65, 0.05], radius: 0.03}}
-  - {name: plate-2, mat: plate, box: {c: [-0.35, 2.7, 1.5], half: [0.75, 0.65, 0.05], radius: 0.03}}
-  - {name: plate-3, mat: plate, box: {c: [1.25, 2.7, 1.5], half: [0.55, 0.65, 0.05], radius: 0.03}}
-  # the neck and the head at the east end, chin down on the ice
-  - {name: neck, mat: dark, cylinder: {a: [1.9, 2.8, 0.75], b: [2.9, 2.7, 0.6], r1: 0.3}}
-  - name: head
-    mat: hull
-    hull: {points: [[2.75, 2.2, 0], [3.85, 2.4, 0], [2.75, 3.4, 0], [3.85, 3.2, 0],
-                    [2.8, 2.3, 1.05], [3.6, 2.45, 0.9], [2.8, 3.3, 1.05], [3.6, 3.15, 0.9],
-                    [4.3, 2.6, 0.35], [4.3, 3.0, 0.35]], round: 0.05}
-  - {name: cheek-gun, mat: dark, cylinder: {a: [3.9, 2.4, 0.3], b: [4.45, 2.05, 0.25], r1: 0.07}}
-  - {name: chin-gun, mat: dark, cylinder: {a: [3.95, 2.6, 0.15], b: [4.45, 2.3, 0.12], r1: 0.06}}
-  - {name: viewport, mat: dark, box: {c: [4.05, 2.8, 0.62], half: [0.12, 0.28, 0.06]}}
-  # the legs: three flat on the ice pointing south, the front one bent up at the knee
-  - {name: hip-1, mat: dark, ellipsoid: {c: [-2.8, 1.8, 0.55], r: [0.32, 0.25, 0.32]}}
-  - {name: leg-1, mat: plate, cylinder: {a: [-2.8, 1.8, 0.45], b: [-2.95, 0.45, 0.25], r1: 0.19}}
-  - {name: foot-1, mat: dark, cylinder: {a: [-2.95, 0.35, 0.0], b: [-2.95, 0.35, 0.32], r1: 0.3}}
-  - {name: hip-2, mat: dark, ellipsoid: {c: [-1.6, 1.8, 0.55], r: [0.32, 0.25, 0.32]}}
-  - {name: leg-2, mat: plate, cylinder: {a: [-1.6, 1.8, 0.45], b: [-1.35, 0.5, 0.25], r1: 0.19}}
-  - {name: foot-2, mat: dark, cylinder: {a: [-1.35, 0.4, 0.0], b: [-1.35, 0.4, 0.32], r1: 0.3}}
-  - {name: hip-3, mat: dark, ellipsoid: {c: [0.35, 1.8, 0.55], r: [0.32, 0.25, 0.32]}}
-  - {name: leg-3, mat: plate, cylinder: {a: [0.35, 1.8, 0.45], b: [0.2, 0.45, 0.25], r1: 0.19}}
-  - {name: foot-3, mat: dark, cylinder: {a: [0.2, 0.35, 0.0], b: [0.2, 0.35, 0.32], r1: 0.3}}
-  - {name: hip-4, mat: dark, ellipsoid: {c: [1.55, 1.8, 0.55], r: [0.32, 0.25, 0.32]}}
-  - {name: thigh-4, mat: plate, cylinder: {a: [1.55, 1.8, 0.5], b: [1.75, 1.05, 1.5], r1: 0.2}}
-  - {name: knee-4, mat: dark, ellipsoid: {c: [1.75, 1.05, 1.5], r: [0.24, 0.24, 0.24]}}
-  - {name: shin-4, mat: plate, cylinder: {a: [1.75, 1.05, 1.5], b: [2.3, 0.45, 0.7], r1: 0.17}}
-  - {name: foot-4, mat: dark, cylinder: {a: [2.35, 0.4, 0.45], b: [2.4, 0.3, 0.75], r1: 0.3}}
-  # snow drifts: small, low mounds against the north side and around two feet
-  - {name: drift-1, mat: snow, ellipsoid: {c: [-1.8, 3.9, 0.0], r: [1.2, 0.3, 0.45]}}
-  - {name: drift-2, mat: snow, ellipsoid: {c: [1.0, 3.9, 0.0], r: [1.0, 0.3, 0.4]}}
-  - {name: drift-3, mat: snow, ellipsoid: {c: [-3.05, 0.3, 0.0], r: [0.5, 0.3, 0.16]}}
-  - {name: drift-4, mat: snow, ellipsoid: {c: [0.05, 0.25, 0.0], r: [0.55, 0.28, 0.14]}}
+    hull: {points: [[-2.2, -0.95, 4.0], [2.2, -0.95, 4.0], [-2.2, 0.95, 4.0], [2.2, 0.95, 4.0],
+                    [-2.3, -0.95, 4.9], [2.3, -0.95, 4.9], [-2.3, 0.95, 4.9], [2.3, 0.95, 4.9],
+                    [-1.95, -0.65, 5.6], [1.9, -0.65, 5.6], [-1.95, 0.65, 5.6], [1.9, 0.65, 5.6]], round: 0.05}
+  - {name: skirt-l, mat: plate, box: {c: [0, 0.98, 4.6], half: [1.95, 0.04, 0.42], radius: 0.02}}
+  - {name: skirt-r, mat: plate, box: {c: [0, -0.98, 4.6], half: [1.95, 0.04, 0.42], radius: 0.02}}
+  - {name: roof-plate, mat: plate, box: {c: [-0.05, 0, 5.6], half: [1.6, 0.45, 0.04], radius: 0.02}}
+  - {name: neck, mat: dark, cylinder: {a: [2.1, 0, 4.85], b: [2.85, 0, 4.8], r1: 0.36}}
+  - {use: atat-head, name: head, at: [2.75, 0, 4.25]}
+  - {use: walker-leg, name: leg-fl, at: ["=hx", "=hy", "=hip_z"], with: {hip: "=fhip", knee: "=fknee"}}
+  - {use: walker-leg, name: leg-fr, at: ["=hx", "=-hy", "=hip_z"], with: {hip: "=fhip", knee: "=fknee"}}
+  - {use: walker-leg, name: leg-bl, at: ["=-hx", "=hy", "=hip_z"], with: {hip: "=bhip", knee: "=bknee"}}
+  - {use: walker-leg, name: leg-br, at: ["=-hx", "=-hy", "=hip_z"], with: {hip: "=bhip", knee: "=bknee"}}
+variants:
+  # on its side: the flank faces up, the legs stick out south over the ice, the lower pair buried
+  toppled: &toppled
+    scale: 0.95
+    tilt: [4, 90]
+    turn: -12
+    pivot: [0, 0]
+    sink: 0.4
+    foot: [58, 107]
+    params: {fhip: -12, fknee: 35, bhip: 18, bknee: -6}
+    ground: &toppled-ice
+      - {name: ice-1, mat: snow, hull: {points: [[-2.3, 3.0, 0], [-1.3, 2.9, 0], [-1.5, 3.4, 0], [-2.2, 3.4, 0], [-1.9, 3.15, 0.2]], round: 0.03}}
+      - {name: ice-2, mat: snow, hull: {points: [[0.3, 2.95, 0], [1.2, 2.9, 0], [1.1, 3.35, 0], [0.4, 3.3, 0], [0.7, 3.1, 0.18]], round: 0.03}}
+      - {name: ice-3, mat: snow, hull: {points: [[2.6, 0.5, 0], [3.1, 0.4, 0], [3.0, 0.85, 0], [2.65, 0.8, 0], [2.85, 0.6, 0.18]], round: 0.03}}
+  # the same, one leg torn off at the hip, lying in the snow
+  toppled-three-legs:
+    <<: *toppled
+    drop: ["leg-br/*"]
+    ground:
+      - {name: ice-1, mat: snow, hull: {points: [[-2.3, 3.0, 0], [-1.3, 2.9, 0], [-1.5, 3.4, 0], [-2.2, 3.4, 0], [-1.9, 3.15, 0.2]], round: 0.03}}
+      - {name: lost-shin, mat: plate, box: {c: [-2.0, 1.0, 0.15], half: [0.75, 0.17, 0.15], radius: 0.03}, rot: [0, 35, 0]}
+      - {name: lost-foot, mat: dark, cylinder: {a: [-2.65, 0.5, 0], b: [-2.65, 0.5, 0.3], r1: 0.4}}
+  # the head shot off: it lies in the snow in front, the neck stump open
+  toppled-headless:
+    <<: *toppled
+    drop: ["head/*"]
+    ground:
+      - {name: ice-1, mat: snow, hull: {points: [[-2.3, 3.0, 0], [-1.3, 2.9, 0], [-1.5, 3.4, 0], [-2.2, 3.4, 0], [-1.9, 3.15, 0.2]], round: 0.03}}
+      - {use: atat-head, name: lost-head, at: [2.1, 0.5, 0.0], turn: 25}
+  # frozen where it stood, sunk to the shins in the lake ice; its shadow on the ice shows its height
+  standing:
+    scale: 0.8
+    sink: 0.9
+    foot: [56, 89]
+    ground:
+      - {name: shadow, mat: shade, cylinder: {a: [0.35, 0.3, 0], b: [0.35, 0.3, 0.01], r1: 1.5}, squash: [1.4, 0.6, 1]}
+      - {name: ice-fl, mat: snow, ellipsoid: {c: [1.3, -0.85, 0], r: [0.6, 0.32, 0.16]}}
+      - {name: ice-bl, mat: snow, ellipsoid: {c: [-1.15, -0.85, 0], r: [0.6, 0.32, 0.16]}}
+  # collapsed on its front knees, nose down, the back legs sunk in the ice
+  kneeling:
+    scale: 0.8
+    tilt: [-12, 0]
+    pivot: [-2.0, 0]
+    sink: 1.6
+    foot: [50, 87]
+    params: {fhip: 40, fknee: -120, bhip: 0, bknee: 0}
+    ground:
+      - {name: shadow, mat: shade, cylinder: {a: [0.2, 0.3, 0], b: [0.2, 0.3, 0.01], r1: 1.5}, squash: [1.5, 0.55, 1]}
+      - {name: ice-b, mat: snow, ellipsoid: {c: [-1.3, -0.95, 0], r: [0.45, 0.22, 0.1]}}
