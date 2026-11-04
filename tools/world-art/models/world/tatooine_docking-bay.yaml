@@ -3,6 +3,7 @@
 # Reference: Docking Bay 94 (A New Hope): a round pit open to the sky, ringed by a thick adobe wall with
 # buttresses, the gate block on the south with its door, a light freighter standing on the floor inside.
 # Axes: x east, y north, z up, origin on the ground at the hit box's centre. Door: column 4 (x = 0.5).
+# Standalone: the bay is drawn empty; a ship is its own sprite placed in it (art:tatooine:freighter-parked).
 name: tatooine_docking-bay
 art: art:tatooine:docking-bay
 palette: greybox
@@ -47,12 +48,5 @@ parts:
   - {use: block, name: gate, at: [0.5, -3.38, 0], with: {w: 1.7, d: 0.75, h: 1.35, mat: trim, lip: adobe}}
   - {use: doorway, name: door, at: [0.5, -3.76, 0], with: {w: 0.7, h: 0.95}}
   # the freighter on the floor, and crates
-  - {use: freighter, name: ship, at: [-0.2, 0.35, 0], turn: 25, with: {s: 0.95, lift: 0.28}}
   - {use: block, name: crate-1, at: [2.2, -1.2, 0], with: {w: 0.55, d: 0.5, h: 0.45, mat: mid, lip: mid, rnd: 0.03}}
   - {use: block, name: crate-2, at: [2.4, -0.55, 0], with: {w: 0.45, d: 0.45, h: 0.38, mat: trim, lip: trim, rnd: 0.03}}
-variants:
-  # a freighter in the bay
-  occupied: {}
-  # the bay empty
-  empty:
-    drop: ["ship/*"]

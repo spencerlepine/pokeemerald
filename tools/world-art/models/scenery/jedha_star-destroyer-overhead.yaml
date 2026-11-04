@@ -51,22 +51,12 @@ parts:
   - {name: super-3, mat: hull, prism: {poly: [[6.6, "=yc - 1.6"], ["=sx - 0.5", "=yc - 1.8"], ["=sx - 0.5", "=yc + 1.8"], [6.6, "=yc + 1.6"]], z: ["=hz + 3.2", "=hz + 4.0"], top: 0.9, round: 0.04}}
   # engine glow blocks on the stern face (edge-on, a dark notch at the east end)
   - {name: engines, mat: dark, box: {c: ["=sx + 0.15", "=yc - 4.3", "=hz + 0.5"], half: [0.15, 1.6, 0.35], radius: 0.03}}
-# turned about the nose so the south flank runs gently down to the east
-turn: 9
+# turned about the nose so the south flank runs down to the east at 1 in 4 (14.04 deg): a clean pixel
+# step, so the long edges repeat in 8x8 tiles
+turn: 14.036
 pivot: ["=nx", "=yc"]
 ground:
   # its shadow on the city: a band under the flank, in the hit box rows
   - name: shadow
     mat: shade
-    prism: {poly: [[-9.9, 2.4], [10.5, -0.3], [10.5, 1.2], [-9.0, 2.9]], z: [0, 0.01]}
-variants:
-  # the dagger's nose in view at the west end, the flank running down to the east
-  nose: {}
-  # cheaper in tiles: the flank turned level along the whole sprite, nose off the west edge
-  flank:
-    params: {nx: -14.0, sx: 8.4, yc: 0.9}
-    turn: 16.4
-    ground:
-      - name: shadow
-        mat: shade
-        prism: {poly: [[-10.5, -0.2], [9.2, -0.2], [9.2, 0.9], [-10.5, 0.9]], z: [0, 0.01]}
+    prism: {poly: [[-9.4, 0.4], [10.5, 0.4], [10.5, 1.5], [-8.4, 1.5]], z: [0, 0.01]}

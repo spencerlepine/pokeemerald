@@ -3,6 +3,7 @@
 # wooden jetties of Kachirho. A plank jetty on round posts along the back of the hit box, a mooring
 # bollard, and a catamaran moored alongside on the water in front of it, bow east.
 # Axes: x east, y north, z up, origin on the water at the south middle of the hit box.
+# Standalone: the jetty is drawn empty; a boat is its own sprite placed beside it.
 name: kashyyyk_catamaran-dock
 art: art:kashyyyk:catamaran-dock
 palette: greybox
@@ -45,6 +46,5 @@ parts:
   - {name: post-4, mat: post, cylinder: {a: [1.75, "=jy-0.5", 0], b: [1.75, "=jy-0.5", 0.6], r1: 0.12}}
   - {name: bollard, mat: dark, cylinder: {a: [0.1, "=jy-0.3", 0.6], b: [0.1, "=jy-0.3", 0.82], r1: 0.1}}
   # the moored catamaran, bow east
-  - {use: catamaran, name: boat, at: [-0.05, 0.95, 0], with: {L: 3.7, fy: 0.62}}
 ground:
   - {name: wake, mat: water, cylinder: {a: [0, 0.95, 0], b: [0, 0.95, 0.01], r1: 1.0}, squash: [1.75, 0.5, 1]}

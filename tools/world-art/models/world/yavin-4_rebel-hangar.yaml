@@ -4,6 +4,7 @@
 # A stone block cut into the temple's base with a wide, low hangar mouth in its south face, a stepped
 # ledge over it and the moss line; a landing apron in front with two X-wings (group kit) lined up.
 # Axes: x east, y north, z up, origin on the ground at the middle of the hit box's south edge.
+# Standalone: the apron is drawn empty; X-wings are their own sprite placed on it (art:yavin-4:x-wing-parked).
 name: yavin-4_rebel-hangar
 art: art:yavin-4:rebel-hangar
 palette: greybox
@@ -56,11 +57,3 @@ parts:
   - {name: moss-e, mat: moss, prism: {poly: [[3.45, "=yb - 0.05"], [3.95, "=yb - 0.05"], [3.95, "=yb + 0.1"], [3.45, "=yb + 0.1"]], z: [0.8, 2.0], round: 0.03}}
   # the apron and two X-wings lined up on it, noses east
   - {name: apron, mat: apron, box: {c: [0, 1.15, 0.02], half: [3.9, 1.12, 0.03], radius: 0.01}}
-  - {use: x-wing, name: xw-w, at: [-2.0, 1.1, 0.03], with: {k: 0.72}}
-  - {use: x-wing, name: xw-e, at: [1.75, 1.1, 0.03], with: {k: 0.72}}
-variants:
-  # two X-wings on the apron
-  lined-up: {}
-  # the bay empty, the fighters out on a mission
-  empty:
-    drop: ["xw-*"]

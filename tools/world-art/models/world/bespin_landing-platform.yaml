@@ -3,6 +3,7 @@
 # A round pad on a deep rim, a dark landing ring and centre mark, light lamps round the edge, and a
 # twin-pod cloud car parked on it (the kit's `cloud-car`), nose east.
 # Axes: x east, y north, z up, origin on the ground at the hit box's centre.
+# Standalone: the pad is drawn empty; a ship is its own sprite placed on it.
 name: bespin_landing-platform
 art: art:bespin:landing-platform
 palette: greybox
@@ -35,4 +36,3 @@ parts:
     mat: dark
     ring: {c: [0, 0, "=h + 0.06"], axis: z, r: 2.15, n: 12, size: [0.16, 0.16, 0.1], round: 0.02}
     squash: {scale: [1, "=sq", 1], center: [0, 0, 0]}
-  - {use: cloud-car, name: car, at: [0, -0.15, "=h + 0.04"], turn: -80, with: {k: 1.4, gap: 0.62}}

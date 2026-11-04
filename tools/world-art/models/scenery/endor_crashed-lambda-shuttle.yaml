@@ -1,14 +1,16 @@
 # Crashed Imperial shuttle (art:endor:crashed-lambda-shuttle), hit box 8x4, drawn 8x7.
-# Reference: the Lambda-class shuttle (Return of the Jedi): the boxy hull with the blunt cockpit nose, the
-# tall dorsal fin, and the two side wings that fold up for landing and down for flight. Modelled level,
-# nose along +x, posed side on so the tall fin shows whole. Wings folded wrong: the north wing jammed straight up behind the fin, the south wing
-# snapped down into the ground. Half in the redwoods: a broken trunk stands behind it.
+# Reference: the Lambda-class T-4a shuttle (Return of the Jedi), wiki/art/concept/endor/crashed-lambda-shuttle__web_1-4:
+# a boxy hull with an engine pod along each upper side, a pointed cockpit wedge low at the front, the tall
+# dorsal fin (as tall as the ship is long: leading edge swept back, trailing edge straight up) and two long
+# wings hinged under the pods that fold down for flight and up beside the fin for landing (the inverted Y).
+# Modelled level, nose along +x, then turned nose toward the camera so the Y spreads across the screen
+# (side on, every wing and the fin stand in one plane and draw as one vertical strip).
 # Axes: x forward (the nose), y to its left, z up, origin on the ground under the hull's middle.
 name: endor_crashed-lambda-shuttle
 art: art:endor:crashed-lambda-shuttle
 palette: greybox
 cells: [8, 7]
-foot: [60, 80]
+foot: [64, 82]
 footprint: 4
 render:
   light: [-0.55, -0.3, 0.78]
@@ -18,8 +20,9 @@ render:
   margin: 0
   cleanup: true
 materials:
-  hull:  {ramp: light, bands: [0.2, 0.5, 0.86]}
-  wing:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  hull:  {ramp: light, bands: [0.25, 0.55, 0.85]}
+  plate: {ramp: mid,   bands: [0.2, 0.5, 0.82]}
+  pod:   {ramp: mid,   bands: [0.25, 0.55, 0.85]}
   dark:  {ramp: dark,  bands: [0.3, 0.6, 0.9]}
   bark:  {ramp: mid,   bands: [-0.05, 0.35, 0.7]}
   moss:  {ramp: mid,   bands: [0.1, 0.4, 0.75]}
@@ -27,61 +30,69 @@ drop_shadow:
   - {dx: 1, dy: 1, color: shade, below: 4}
 box: [128, 64]
 params:
-  wl: 58             # left (north) wing: degrees up from level
-  wr: -18            # right (south) wing
-  wrs: 1.1           # its span: snapped off short
+  wl: 40             # left wing: degrees up from level (landing fold is about 80, flight about -55)
+  wr: 40             # right wing
+  sl: 2.6            # left wing span
+  sr: 2.6            # right wing span
 templates:
-  # one wing: a long tapered plate hinged at the hull's lower edge, `side` +1 left, -1 right, raised `ang`
+  # one wing: a long plate hinged under the engine pod, `side` +1 left, -1 right, raised `ang` from level.
+  # Planform from the schematic: root chord about the fin's, trailing edge straight, leading edge swept.
   lambda-wing:
-    params: {side: 1, ang: 0, span: 2.3}
+    params: {side: 1, ang: 0, span: 2.6}
     parts:
       - name: plate
-        mat: wing
-        hull: {points: [[-1.2, "=side * 0.7", 0.7], [0.9, "=side * 0.7", 0.7], [-1.2, "=side * 0.7", 0.82], [0.9, "=side * 0.7", 0.82],
-                        [-1.0, "=side * (0.7 + span * cos(radians(ang)))", "=0.7 + span * sin(radians(ang))"],
-                        [-0.2, "=side * (0.7 + span * cos(radians(ang)))", "=0.7 + span * sin(radians(ang))"],
-                        [-1.0, "=side * (0.7 + span * cos(radians(ang)))", "=0.82 + span * sin(radians(ang))"],
-                        [-0.2, "=side * (0.7 + span * cos(radians(ang)))", "=0.82 + span * sin(radians(ang))"]], round: 0.03}
+        mat: plate
+        hull: {points: [
+          [0.2,  "=side * 0.95", 0.62], [-2.1, "=side * 0.95", 0.62],
+          [0.2,  "=side * 0.95 - side * 0.12 * sin(radians(ang))", "=0.62 + 0.12 * cos(radians(ang))"],
+          [-2.1, "=side * 0.95 - side * 0.12 * sin(radians(ang))", "=0.62 + 0.12 * cos(radians(ang))"],
+          [-1.15, "=side * (0.95 + span * cos(radians(ang)))", "=0.62 + span * sin(radians(ang))"],
+          [-2.1,  "=side * (0.95 + span * cos(radians(ang)))", "=0.62 + span * sin(radians(ang))"],
+          [-1.15, "=side * (0.95 + span * cos(radians(ang))) - side * 0.12 * sin(radians(ang))", "=0.62 + span * sin(radians(ang)) + 0.12 * cos(radians(ang))"],
+          [-2.1,  "=side * (0.95 + span * cos(radians(ang))) - side * 0.12 * sin(radians(ang))", "=0.62 + span * sin(radians(ang)) + 0.12 * cos(radians(ang))"]], round: 0.03}
 parts:
-  # the hull and the blunt cockpit nose
+  # the boxy main hull
   - name: body
     mat: hull
-    hull: {points: [[-2.2, -0.7, 0.55], [1.0, -0.7, 0.55], [-2.2, 0.7, 0.55], [1.0, 0.7, 0.55],
-                    [-2.2, -0.6, 1.5], [0.9, -0.6, 1.5], [-2.2, 0.6, 1.5], [0.9, 0.6, 1.5]], round: 0.05}
+    hull: {points: [[-2.2, -0.7, 0.3], [0.9, -0.6, 0.3], [-2.2, 0.7, 0.3], [0.9, 0.6, 0.3],
+                    [-2.2, -0.62, 1.3], [0.9, -0.55, 1.25], [-2.2, 0.62, 1.3], [0.9, 0.55, 1.25]], round: 0.05}
+  # the engine pods along each upper side, the wings hang under them
+  - {name: pod-l, mat: pod, cylinder: {a: [-2.35, 0.88, 0.92], b: [0.55, 0.88, 0.92], r1: 0.3}}
+  - {name: pod-r, mat: pod, cylinder: {a: [-2.35, -0.88, 0.92], b: [0.55, -0.88, 0.92], r1: 0.3}}
+  - {name: engines, mat: dark, box: {c: [-2.24, 0, 0.95], half: [0.04, 0.45, 0.25], radius: 0.01}}
+  # the pointed cockpit wedge, low at the front, its window band on the sloped top
   - name: nose
     mat: hull
-    hull: {points: [[1.0, -0.6, 0.55], [1.0, 0.6, 0.55], [1.0, -0.55, 1.45], [1.0, 0.55, 1.45],
-                    [1.85, -0.35, 0.65], [1.85, 0.35, 0.65], [1.7, -0.3, 1.15], [1.7, 0.3, 1.15]], round: 0.05}
-  - {name: window, mat: dark, box: {c: [1.72, 0, 0.95], half: [0.08, 0.3, 0.14], radius: 0.02}}
-  - {name: engines, mat: dark, box: {c: [-2.22, 0, 1.0], half: [0.04, 0.5, 0.3], radius: 0.01}}
-  # the tall dorsal fin
+    hull: {points: [[0.85, -0.45, 0.35], [0.85, 0.45, 0.35], [0.85, -0.42, 1.2], [0.85, 0.42, 1.2],
+                    [2.35, -0.22, 0.45], [2.35, 0.22, 0.45], [2.25, -0.2, 0.62], [2.25, 0.2, 0.62]], round: 0.04}
+  - name: window
+    mat: dark
+    hull: {points: [[1.05, -0.38, 1.12], [1.05, 0.38, 1.12], [1.75, -0.28, 0.86], [1.75, 0.28, 0.86],
+                    [1.05, -0.36, 1.2], [1.05, 0.36, 1.2], [1.75, -0.26, 0.93], [1.75, 0.26, 0.93]], round: 0.01}
+  # the tall dorsal fin: root over the rear hull, leading edge swept back, trailing edge straight up
   - name: fin
-    mat: hull
-    prism: {poly: [[-1.4, -0.07], [0.6, -0.07], [0.6, 0.07], [-1.4, 0.07]], z: [1.45, 4.0], top: [0.6, 1], lean: [-0.6, 0], round: 0.03}
-  - {use: lambda-wing, name: wing-l, with: {side: 1, ang: "=wl"}}
-  - {use: lambda-wing, name: wing-r, with: {side: -1, ang: "=wr", span: "=wrs"}}
-  # landing struts, crumpled
-  - {name: strut, mat: dark, cylinder: {a: [0.6, 0, 0.55], b: [0.7, 0, 0.0], r1: 0.08}}
+    mat: plate
+    extrude: {axis: y, span: [-0.08, 0.08], profile: [[-2.15, 1.2], [-0.2, 1.2], [-1.1, 4.0], [-2.25, 4.0]], round: 0.03}
+  - {use: lambda-wing, name: wing-l, with: {side: 1, ang: "=wl", span: "=sl"}}
+  - {use: lambda-wing, name: wing-r, with: {side: -1, ang: "=wr", span: "=sr"}}
 ground:
-  # the broken redwood behind it and ferns at its nose
-  - {name: trunk, mat: bark, cylinder: {a: [3.0, 1.2, 0], b: [3.0, 1.2, 2.2], r1: 0.5, r2: 0.46}}
-  - {name: trunk-top, mat: bark, cone: {a: [3.0, 1.2, 2.15], b: [3.1, 1.25, 2.6], r1: 0.46, r2: 0.12}}
-  - {name: fern-1, mat: moss, ellipsoid: {c: [-1.2, -1.55, 0], r: [0.45, 0.2, 0.2]}}
-  - {name: fern-2, mat: moss, ellipsoid: {c: [2.6, -1.3, 0], r: [0.4, 0.2, 0.18]}}
+  - {name: fern-1, mat: moss, ellipsoid: {c: [-3.2, -1.4, 0], r: [0.45, 0.22, 0.2]}}
+  - {name: fern-2, mat: moss, ellipsoid: {c: [3.0, -1.2, 0], r: [0.4, 0.2, 0.18]}}
 variants:
-  # side on, nose east: the tall fin shows whole, the north wing jammed straight up behind it, the
-  # south wing snapped down into the dirt, the nose dug in
+  # came down hard: nose dug in, the right wing snapped off and lying in the ferns, the left one jammed
+  # half up
   crashed:
-    turn: -8
-    tilt: [-4, 0]
-    pivot: [1.5, 0]
-    sink: 0.15
-    scale: 0.95
-    foot: [64, 82]
-  # both wings jammed up in the landing fold, sitting level
+    turn: -40
+    params: {wl: 35, wr: -10, sr: 0.5}
+    tilt: [-5, -4]
+    pivot: [2.0, 0]
+    sink: 0.2
+    ground:
+      - {name: lost-wing, mat: plate, prism: {poly: [[-2.6, -1.2], [-0.6, -1.0], [-1.0, -1.9], [-2.5, -2.1]], z: [0.0, 0.12], round: 0.02}}
+      - {name: fern-1, mat: moss, ellipsoid: {c: [-3.2, -1.4, 0], r: [0.45, 0.22, 0.2]}}
+      - {name: fern-2, mat: moss, ellipsoid: {c: [3.0, -1.2, 0], r: [0.4, 0.2, 0.18]}}
+  # sitting level, both wings jammed half way up the landing fold
   wings-up:
-    turn: 8
+    turn: -40
     sink: 0.1
-    scale: 1.0
-    foot: [64, 82]
-    params: {wl: 70, wr: 70, wrs: 2.3}
+    params: {wl: 55, wr: 55}
