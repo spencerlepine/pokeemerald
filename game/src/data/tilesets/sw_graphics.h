@@ -176,6 +176,50 @@ const u16 gTilesetPalettes_SwJundlandWastes[][16] =
 	INCGFX_U16("data/tilesets/secondary/sw/jundland-wastes/palettes/15.pal", ".gbapal"),
 };
 
+const u32 gTilesetTiles_SwMosEisley[] = INCGFX_U32("data/tilesets/secondary/sw/mos-eisley/tiles.png", ".4bpp.lz", "-num_tiles 512 -Wnum_tiles");
+
+const u16 gTilesetPalettes_SwMosEisley[][16] =
+{
+	INCGFX_U16("data/tilesets/secondary/sw/mos-eisley/palettes/00.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/sw/mos-eisley/palettes/01.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/sw/mos-eisley/palettes/02.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/sw/mos-eisley/palettes/03.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/sw/mos-eisley/palettes/04.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/sw/mos-eisley/palettes/05.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/sw/mos-eisley/palettes/06.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/sw/mos-eisley/palettes/07.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/sw/mos-eisley/palettes/08.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/sw/mos-eisley/palettes/09.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/sw/mos-eisley/palettes/10.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/sw/mos-eisley/palettes/11.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/sw/mos-eisley/palettes/12.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/sw/mos-eisley/palettes/13.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/sw/mos-eisley/palettes/14.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/sw/mos-eisley/palettes/15.pal", ".gbapal"),
+};
+
+const u32 gTilesetTiles_SwMosEisleyFanClub[] = INCGFX_U32("data/tilesets/secondary/sw/mos-eisley-fan-club/tiles.png", ".4bpp.lz", "-num_tiles 320 -Wnum_tiles");
+
+const u16 gTilesetPalettes_SwMosEisleyFanClub[][16] =
+{
+	INCGFX_U16("data/tilesets/secondary/sw/mos-eisley-fan-club/palettes/00.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/sw/mos-eisley-fan-club/palettes/01.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/sw/mos-eisley-fan-club/palettes/02.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/sw/mos-eisley-fan-club/palettes/03.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/sw/mos-eisley-fan-club/palettes/04.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/sw/mos-eisley-fan-club/palettes/05.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/sw/mos-eisley-fan-club/palettes/06.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/sw/mos-eisley-fan-club/palettes/07.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/sw/mos-eisley-fan-club/palettes/08.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/sw/mos-eisley-fan-club/palettes/09.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/sw/mos-eisley-fan-club/palettes/10.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/sw/mos-eisley-fan-club/palettes/11.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/sw/mos-eisley-fan-club/palettes/12.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/sw/mos-eisley-fan-club/palettes/13.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/sw/mos-eisley-fan-club/palettes/14.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/sw/mos-eisley-fan-club/palettes/15.pal", ".gbapal"),
+};
+
 const u32 gTilesetTiles_SwMosEisleyHangar[] = INCGFX_U32("data/tilesets/secondary/sw/mos-eisley-hangar/tiles.png", ".4bpp.lz", "-num_tiles 512 -Wnum_tiles");
 
 const u16 gTilesetPalettes_SwMosEisleyHangar[][16] =

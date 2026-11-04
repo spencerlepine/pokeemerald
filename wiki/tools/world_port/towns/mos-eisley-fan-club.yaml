@@ -1,0 +1,13 @@
+# Chalmun's Cantina (SlateportCity_PokemonFanClub), 24x16 (was 14x11). The door is a mat at (12,15). The fan club's
+# people become the cantina's: the chairman (friendship rater) is WUHER at the bar, the SWAGGER tutor PONDA BABA.
+# No script places anyone here, so only the events move.
+objects:
+  1: Patron                  # man
+  2: keep                    # twin (1,5)
+  3: [10, 13]                # reporter
+  4: [8, 4]                  # SOOTHE BELL woman
+  5: Wuher                   # the chairman, at the bar
+  6: keep                    # companion (3,9)
+  7: keep                    # companion (8,3)
+  8: [16, 9]                 # companion
+  9: Ponda Baba              # the SWAGGER tutor

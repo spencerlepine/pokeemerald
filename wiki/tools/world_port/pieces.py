@@ -108,8 +108,19 @@ def add_warp_mouths(C):
     placeholder (world_kits.csv). Inside the map it warps when stepped on (MB_NON_ANIMATED_DOOR; the player comes
     back out walking the way they face, so the cell below must be open). On the map's edge it is an arrow warp
     (press toward the edge on it), and the player comes back standing on it. A dungeon's own warps (ladders,
-    holes) wait for their chunk."""
+    holes) wait for their chunk. A redrawn vanilla room's exit on its edge is the room kit's exit mat."""
     area = C.area
+    if area.mode == "redraw" and area.kind == "interior":
+        # a redrawn vanilla room: its exit on the room's edge is the room kit's exit mat (an arrow warp)
+        style = ((area.room or {}).get("style") or "room:generic").split(":", 1)[-1]
+        for w in area.warps:
+            xx, yy = w["at"]
+            d = ("west" if xx == 0 else "east" if xx == area.w - 1 else "north" if yy == 0 else
+                 "south" if yy == area.h - 1 else None)
+            if d and w.get("to"):
+                C.meta[yy, xx] = C.sym(("room", style, "exit-mat", 0, False, d))
+                C.coll[yy, xx], C.elev[yy, xx] = 0, 3
+        return
     if area.mode not in ("redraw", "new") or area.kind in ("interior", "dungeon"):
         return
     planet = area.planet.lower().replace(" ", "-")

@@ -1,0 +1,94 @@
+# Mos Eisley (SlateportCity), 50x50 (was 40x60). One exit, north (route 110), columns 24-25; the sea routes south are
+# cut (Kashyyyk is reached from Docking Bay 86). Docking Bay 94 is the harbor (door 38,40; vanilla's two harbor warps
+# share it), the Spacer Museum the Oceanic Museum (door 38,12), the battle tent door is (30,10).
+#   Ric Olie's HoloNet interview (Capt. Stern) is below Docking Bay 94: Ric at (38,41), the reporters beside and below
+#     him, the player talks to him from (37,41); the crowd stands where vanilla's does relative to him.
+#   The Imperial line (Team Aqua) queues along row 13 west of the museum door and leaves the door free; Scott meets
+#     the player there when they come out, walking up the row.
+#   Scott leaves the battle tent (30,10) and walks west along row 11.
+#   The market stalls (decor, dolls, TMs, energy, effort ribbon, fruit powder) stand on row 36 west of the main road.
+objects:
+  1: keep                    # fat man (21,11)
+  2: keep                    # man (34,29)
+  3: Jawa haggler            # rich boy
+  4: keep                    # woman (26,29)
+  5: [37, 13]                # Imperial 1, first in line at the museum
+  6: [14, 44]                # cook
+  7: keep                    # old woman (20,37)
+  8: [16, 42]                # girl
+  9: [39, 41]                # Ty (the HoloNet camera droid), beside Ric
+  10: {person: Fode and Beed (HoloNet reporter), at: [38, 42]}   # Gabby
+  11: {person: Ric Olie, at: [38, 41]}                           # Capt. Stern, below Docking Bay 94
+  12: Spacer looking for a ship   # sailor (was where the player now stands for the interview)
+  13: keep                   # sailor (28,46)
+  14: [20, 46]               # fan woman
+  15: keep                   # man (16,46)
+  16: keep                   # maniac (8,24)
+  17: [14, 31]               # woman
+  18: [36, 13]               # Imperial 2
+  19: [35, 13]               # Imperial 3
+  20: [14, 36]               # decor clerk (market)
+  21: [16, 36]               # doll clerk
+  22: [33, 30]               # man (the lighthouse)
+  23: [18, 36]               # effort ribbon woman
+  24: [20, 36]               # power TM clerk
+  25: [22, 36]               # energy guru
+  26: [28, 13]               # Imperial 4
+  27: [29, 13]               # Imperial 5
+  28: [30, 13]               # Imperial 6
+  29: [27, 12]               # Imperial 7
+  30: [26, 12]               # Imperial 8
+  31: [32, 13]               # Imperial 9
+  32: [34, 13]               # Imperial 10
+  33: [31, 13]               # Imperial 11
+  34: [15, 37]               # fruit powder clerk
+  35: [30, 10]               # Scott, at the battle tent door (hidden)
+coords:
+  0: [30, 11]                # Scott comes out of the battle tent
+bgs:
+  0: [19, 9]                 # name-changer's sign, beside its door (18,9)
+  1: [18, 33]                # Bacta Center signs, beside its door (17,33)
+  2: [16, 33]
+  3: [30, 34]                # Supply Depot signs, beside its door (29,34)
+  4: Docking Bay 94 sign     # the harbor sign
+  5: [31, 34]
+  6: [13, 37]                # market sign, west of the stalls
+  7: Museum sign
+  8: City holo-sign
+  9: Cantina sign            # the fan club sign
+  10: [31, 10]               # battle tent sign, beside its door (30,10)
+  11: [41, 21]               # shipyard sign, beside its door (40,21)
+  12: [13, 38]               # fruit crush rankings
+sign_texts:
+  Docking Bay 86 sign: "DOCKING BAY 86\\nShips to KASHYYYK."
+  Hangar sign (Millennium Falcon (Han)): "DOCKING BAY 94: MILLENNIUM FALCON\\nOwner: HAN SOLO. Keep clear."
+  Hangar sign (Star liner (S.S. Tidal)): "STAR LINER berth. Boarding by ticket\\nonly."
+heal:
+  HEAL_LOCATION_SLATEPORT_CITY: [17, 34]
+patches:
+  - {old: "setobjectxyperm LOCALID_SLATEPORT_CAPT_STERN, 28, 13", new: "setobjectxyperm LOCALID_SLATEPORT_CAPT_STERN, 38, 41"}
+  - {old: "setobjectxyperm LOCALID_SLATEPORT_OLD_WOMAN, 25, 13", new: "setobjectxyperm LOCALID_SLATEPORT_OLD_WOMAN, 35, 41"}
+  - {old: "setobjectxyperm LOCALID_SLATEPORT_RICH_BOY, 25, 14", new: "setobjectxyperm LOCALID_SLATEPORT_RICH_BOY, 35, 42"}
+  - {old: "setobjectxyperm LOCALID_SLATEPORT_COOK, 27, 16", new: "setobjectxyperm LOCALID_SLATEPORT_COOK, 37, 44"}
+  - {old: "setobjectxyperm LOCALID_SLATEPORT_GIRL, 28, 16", new: "setobjectxyperm LOCALID_SLATEPORT_GIRL, 38, 44"}
+  - {old: "setobjectxyperm LOCALID_SLATEPORT_FAT_MAN, 29, 16", new: "setobjectxyperm LOCALID_SLATEPORT_FAT_MAN, 39, 44"}
+  - {old: "setobjectxyperm LOCALID_SLATEPORT_MAN_1, 31, 14", new: "setobjectxyperm LOCALID_SLATEPORT_MAN_1, 40, 42"}
+  - {old: "setobjectxyperm LOCALID_SLATEPORT_SCOTT, 23, 27", new: "setobjectxyperm LOCALID_SLATEPORT_SCOTT, 30, 13"}
+  - {old: "setobjectxyperm LOCALID_SLATEPORT_SCOTT, 22, 27", new: "setobjectxyperm LOCALID_SLATEPORT_SCOTT, 30, 13"}
+  - {old: "setobjectxyperm LOCALID_SLATEPORT_SCOTT, 10, 12", new: "setobjectxyperm LOCALID_SLATEPORT_SCOTT, 30, 10"}
+  - {old: "opendoor 10, 12", new: "opendoor 30, 10"}
+  - {old: "closedoor 10, 12", new: "closedoor 30, 10"}
+  - {old: "setescapewarp MAP_SLATEPORT_CITY, 28, 13", new: "setescapewarp MAP_SLATEPORT_CITY, 38, 41", file: data/maps/SlateportCity_Harbor/scripts.inc}
+movements:
+  SlateportCity_Movement_ScottExitAfterBattleTent: l8
+  SlateportCity_Movement_PlayerWatchScottExit: D16 ifl
+checks:
+  - {movement: SlateportCity_Movement_GabbyExit, from: [38, 42], to: [28, 43]}
+  - {movement: SlateportCity_Movement_TyExit, from: [39, 41], to: [28, 43]}
+  - {movement: SlateportCity_Movement_SternWatchGabbyAndTyExit, from: [38, 41], to: [37, 42]}
+  - {movement: SlateportCity_Movement_SternEnterHarbor, from: [37, 42], to: [38, 40]}
+  - {movement: SlateportCity_Movement_PlayerEnterHarbor, from: [37, 41], to: [38, 40]}
+  - {movement: SlateportCity_Movement_ScottApproachPlayer, from: [30, 13], to: [37, 13]}
+  - {movement: SlateportCity_Movement_ScottExit, from: [37, 13]}
+  - {movement: SlateportCity_Movement_ScottExitBattleTent, from: [30, 10], to: [30, 11]}
+  - {movement: SlateportCity_Movement_ScottExitAfterBattleTent, from: [30, 11], to: [22, 11]}

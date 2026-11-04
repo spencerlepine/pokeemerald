@@ -24,6 +24,12 @@ const u16 gMetatileAttributes_SwJabbasPalaceThroneRoom[] = INCBIN_U16("data/tile
 const u16 gMetatiles_SwJundlandWastes[] = INCBIN_U16("data/tilesets/secondary/sw/jundland-wastes/metatiles.bin");
 const u16 gMetatileAttributes_SwJundlandWastes[] = INCBIN_U16("data/tilesets/secondary/sw/jundland-wastes/metatile_attributes.bin");
 
+const u16 gMetatiles_SwMosEisley[] = INCBIN_U16("data/tilesets/secondary/sw/mos-eisley/metatiles.bin");
+const u16 gMetatileAttributes_SwMosEisley[] = INCBIN_U16("data/tilesets/secondary/sw/mos-eisley/metatile_attributes.bin");
+
+const u16 gMetatiles_SwMosEisleyFanClub[] = INCBIN_U16("data/tilesets/secondary/sw/mos-eisley-fan-club/metatiles.bin");
+const u16 gMetatileAttributes_SwMosEisleyFanClub[] = INCBIN_U16("data/tilesets/secondary/sw/mos-eisley-fan-club/metatile_attributes.bin");
+
 const u16 gMetatiles_SwMosEisleyHangar[] = INCBIN_U16("data/tilesets/secondary/sw/mos-eisley-hangar/metatiles.bin");
 const u16 gMetatileAttributes_SwMosEisleyHangar[] = INCBIN_U16("data/tilesets/secondary/sw/mos-eisley-hangar/metatile_attributes.bin");
 

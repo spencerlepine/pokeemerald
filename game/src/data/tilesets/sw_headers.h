@@ -88,6 +88,28 @@ const struct Tileset gTileset_SwJundlandWastes =
     .callback = InitTilesetAnim_Rustboro,
 };
 
+const struct Tileset gTileset_SwMosEisley =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SwMosEisley,
+    .palettes = gTilesetPalettes_SwMosEisley,
+    .metatiles = gMetatiles_SwMosEisley,
+    .metatileAttributes = gMetatileAttributes_SwMosEisley,
+    .callback = InitTilesetAnim_Slateport,
+};
+
+const struct Tileset gTileset_SwMosEisleyFanClub =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SwMosEisleyFanClub,
+    .palettes = gTilesetPalettes_SwMosEisleyFanClub,
+    .metatiles = gMetatiles_SwMosEisleyFanClub,
+    .metatileAttributes = gMetatileAttributes_SwMosEisleyFanClub,
+    .callback = NULL,
+};
+
 const struct Tileset gTileset_SwMosEisleyHangar =
 {
     .isCompressed = TRUE,

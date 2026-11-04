@@ -19,6 +19,11 @@
       "direction": "up"
     },
     {
+      "map": "MAP_SLATEPORT_CITY",
+      "offset": -9,
+      "direction": "down"
+    },
+    {
       "map": "MAP_ROUTE103",
       "offset": 60,
       "direction": "left"
