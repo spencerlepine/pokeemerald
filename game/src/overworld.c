@@ -1079,6 +1079,12 @@ static bool16 IsInfiltratedSpaceCenter(struct WarpData *warp)
     return FALSE;
 }
 
+// MUS_UNDERWATER and its per-planet versions (music-generator): an underwater map plays one of these
+static bool8 IsUnderwaterMusic(u16 music)
+{
+    return music == MUS_UNDERWATER || music == MUS_UNDERWATER_KASHYYYK || music == MUS_UNDERWATER_YAVIN_4;
+}
+
 u16 GetLocationMusic(struct WarpData *warp)
 {
     if (NoMusicInSootopolisWithLegendaries(warp) == TRUE)
@@ -1103,35 +1109,14 @@ u16 GetCurrLocationDefaultMusic(void)
      && GetSavedWeather() == WEATHER_SANDSTORM)
         return MUS_DESERT;
 
+    // Route 118 plays its own song (MUS_ROUTE118, Endor Crossing); Emerald split it between ROUTE110 and ROUTE119
     music = GetLocationMusic(&gSaveBlock1Ptr->location);
-    if (music != MUS_ROUTE118)
-    {
-        return music;
-    }
-    else
-    {
-        if (gSaveBlock1Ptr->pos.x < 24)
-            return MUS_ROUTE110;
-        else
-            return MUS_ROUTE119;
-    }
+    return music;
 }
 
 u16 GetWarpDestinationMusic(void)
 {
-    u16 music = GetLocationMusic(&sWarpDestination);
-    if (music != MUS_ROUTE118)
-    {
-        return music;
-    }
-    else
-    {
-        if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_MAUVILLE_CITY)
-         && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_MAUVILLE_CITY))
-            return MUS_ROUTE110;
-        else
-            return MUS_ROUTE119;
-    }
+    return GetLocationMusic(&sWarpDestination);
 }
 
 void Overworld_ResetMapMusic(void)
@@ -1148,7 +1133,7 @@ void Overworld_PlaySpecialMapMusic(void)
         if (gSaveBlock1Ptr->savedMusic)
             music = gSaveBlock1Ptr->savedMusic;
         else if (GetCurrentMapType() == MAP_TYPE_UNDERWATER)
-            music = MUS_UNDERWATER;
+            music = IsUnderwaterMusic(music) ? music : MUS_UNDERWATER; // the planet's own dive song, if the map sets one
         else if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING))
             music = MUS_SURF;
     }
@@ -1175,7 +1160,7 @@ static void TransitionMapMusic(void)
         u16 currentMusic = GetCurrentMapMusic();
         if (newMusic != MUS_ABNORMAL_WEATHER && newMusic != MUS_NONE)
         {
-            if (currentMusic == MUS_UNDERWATER || currentMusic == MUS_SURF)
+            if (IsUnderwaterMusic(currentMusic) || currentMusic == MUS_SURF)
                 return;
             if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING))
                 newMusic = MUS_SURF;

@@ -364,6 +364,7 @@
 #define TRAINER_ENCOUNTER_MUSIC_HIKER       11 // used for other trainer classes too
 #define TRAINER_ENCOUNTER_MUSIC_INTERVIEWER 12
 #define TRAINER_ENCOUNTER_MUSIC_RICH        13 // Rich Boys and Gentlemen
+#define TRAINER_ENCOUNTER_MUSIC_BOBA_FETT   14 // BOBA FETT (Star Wars, music-generator)
 
 #define F_TRAINER_FEMALE (1 << 7)
 

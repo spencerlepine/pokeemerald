@@ -35,7 +35,8 @@ it can run again and gives the same files. Areas outside the run keep their vani
   blocked cell in a redrawn map). A map edge in `exits:` connects to the area it names, the offset from the two
   areas' `pos`.
 - **New maps** go in `gMapGroup_StarWars` (`MAP_SW_<ID>`), with the music and map section of the nearest vanilla
-  map they are reached from.
+  map they are reached from. **Music** set in `mapping/music.csv` `maps` wins on every map the port writes (a new
+  area by `map:<id>`, a vanilla map by its map id): the per-planet splits and the songs of new areas.
 - **People and signs** (`events.py`). Vanilla and hybrid maps keep their vanilla objects (one under a new building
   moves to the nearest open cell, unless a script places it). A yaml person with no vanilla object on its cell,
   and every person of a new map, is a new object with a script from `mapping/people.csv` (lines, trainer, boss,

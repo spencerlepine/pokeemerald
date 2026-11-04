@@ -2,7 +2,7 @@
   "id": "MAP_SW_HOTH_TUNDRA",
   "name": "SwHothTundra",
   "layout": "LAYOUT_SW_HOTH_TUNDRA",
-  "music": "MUS_MT_PYRE",
+  "music": "MUS_MT_PYRE_HOTH",
   "region_map_section": "MAPSEC_SHOAL_CAVE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

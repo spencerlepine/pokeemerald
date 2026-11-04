@@ -2,7 +2,7 @@
   "id": "MAP_SW_NIJEDHA_TEMPLE_OF_THE_KYBER",
   "name": "SwNijedhaTempleOfTheKyber",
   "layout": "LAYOUT_SW_NIJEDHA_TEMPLE_OF_THE_KYBER",
-  "music": "MUS_ROUTE122",
+  "music": "MUS_MT_PYRE",
   "region_map_section": "MAPSEC_ROUTE_122",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

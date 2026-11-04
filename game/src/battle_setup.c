@@ -1495,6 +1495,9 @@ void PlayTrainerEncounterMusic(void)
         case TRAINER_ENCOUNTER_MUSIC_RICH:
             music = MUS_ENCOUNTER_RICH;
             break;
+        case TRAINER_ENCOUNTER_MUSIC_BOBA_FETT:
+            music = MUS_ENCOUNTER_BOBA_FETT;
+            break;
         default:
             music = MUS_ENCOUNTER_SUSPICIOUS;
         }

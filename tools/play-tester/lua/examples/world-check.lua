@@ -5,6 +5,16 @@ local OUT = os.getenv("PLAYTEST_OUT") .. "/"
 local function sym(n) return tonumber(os.getenv("SYM_" .. n), 16) end
 local SB1P, CB2, CB2_LOADMAP = sym("gSaveBlock1Ptr"), sym("gMain") + 4, sym("CB2_LoadMap")
 local MAPHDR = sym("gMapHeader")
+local BGM, SONGS, CURMUS = sym("gMPlayInfo_BGM"), sym("gSongTable"), sym("sCurrentMapMusic")
+-- the song the BGM player is on: its gSongTable index (by header pointer), and whether any track still plays
+local function bgm()
+  if not (BGM and SONGS) then return "" end
+  local hdr, st = emu:read32(BGM), emu:read32(BGM + 4)
+  local id = -1
+  for k = 0, 1023 do if emu:read32(SONGS + k * 8) == hdr then id = k; break end end
+  return string.format(" bgm %d%s map_music %d", id, (st & 0xFFFF) ~= 0 and (st & 0x80000000) == 0 and " playing" or " stopped",
+    CURMUS and emu:read16(CURMUS) or -1)
+end
 local K = {A=0,B=1,SELECT=2,START=3,RIGHT=4,LEFT=5,UP=6,DOWN=7}
 local function sb1() return emu:read32(SB1P) end
 local function log(s) console:log(s); local h = io.open(OUT .. "log.txt", "a"); h:write(s .. "\n"); h:close() end
@@ -49,7 +59,7 @@ for _, s in ipairs(spots) do
     local lay = emu:read32(MAPHDR)
     local b = sb1()
     log(string.format("%s map %d.%d pos %d,%d layout %dx%d cb2 %08x", s[1], emu:read8(b+4), emu:read8(b+5),
-      emu:read16(b+0), emu:read16(b+2), emu:read32(lay), emu:read32(lay + 4), emu:read32(CB2)))
+      emu:read16(b+0), emu:read16(b+2), emu:read32(lay), emu:read32(lay + 4), emu:read32(CB2)) .. bgm())
   end})
   add({shot=s[1]})
 end

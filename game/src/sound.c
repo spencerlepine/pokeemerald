@@ -34,24 +34,25 @@ static void Task_DuckBGMForPokemonCry(u8 taskId);
 static void RestoreBGMVolumeAfterPokemonCry(void);
 
 // The 1st argument in the table is the length of the fanfare, measured in frames. This is calculated by taking the duration of the midi file, multiplying by 59.72750056960583, and rounding up to the next nearest integer.
+// Star Wars fanfares (music-generator): the frame its last note ends, plus 30 frames for the release (as vanilla leaves).
 static const struct Fanfare sFanfares[] = {
-    [FANFARE_LEVEL_UP]            = { MUS_LEVEL_UP,             80 },
-    [FANFARE_OBTAIN_ITEM]         = { MUS_OBTAIN_ITEM,         160 },
-    [FANFARE_EVOLVED]             = { MUS_EVOLVED,             220 },
-    [FANFARE_OBTAIN_TMHM]         = { MUS_OBTAIN_TMHM,         220 },
-    [FANFARE_HEAL]                = { MUS_HEAL,                160 },
-    [FANFARE_OBTAIN_BADGE]        = { MUS_OBTAIN_BADGE,        340 },
-    [FANFARE_MOVE_DELETED]        = { MUS_MOVE_DELETED,        180 },
-    [FANFARE_OBTAIN_BERRY]        = { MUS_OBTAIN_BERRY,        120 },
-    [FANFARE_AWAKEN_LEGEND]       = { MUS_AWAKEN_LEGEND,       710 },
-    [FANFARE_SLOTS_JACKPOT]       = { MUS_SLOTS_JACKPOT,       250 },
-    [FANFARE_SLOTS_WIN]           = { MUS_SLOTS_WIN,           150 },
-    [FANFARE_TOO_BAD]             = { MUS_TOO_BAD,             160 },
+    [FANFARE_LEVEL_UP]            = { MUS_LEVEL_UP,            108 },
+    [FANFARE_OBTAIN_ITEM]         = { MUS_OBTAIN_ITEM,         206 },
+    [FANFARE_EVOLVED]             = { MUS_EVOLVED,             300 },
+    [FANFARE_OBTAIN_TMHM]         = { MUS_OBTAIN_TMHM,         208 },
+    [FANFARE_HEAL]                = { MUS_HEAL,                164 },
+    [FANFARE_OBTAIN_BADGE]        = { MUS_OBTAIN_BADGE,        329 },
+    [FANFARE_MOVE_DELETED]        = { MUS_MOVE_DELETED,        174 },
+    [FANFARE_OBTAIN_BERRY]        = { MUS_OBTAIN_BERRY,        150 },
+    [FANFARE_AWAKEN_LEGEND]       = { MUS_AWAKEN_LEGEND,       717 },
+    [FANFARE_SLOTS_JACKPOT]       = { MUS_SLOTS_JACKPOT,       284 },
+    [FANFARE_SLOTS_WIN]           = { MUS_SLOTS_WIN,           162 },
+    [FANFARE_TOO_BAD]             = { MUS_TOO_BAD,             169 },
     [FANFARE_RG_POKE_FLUTE]       = { MUS_RG_POKE_FLUTE,       450 },
     [FANFARE_RG_OBTAIN_KEY_ITEM]  = { MUS_RG_OBTAIN_KEY_ITEM,  170 },
     [FANFARE_RG_DEX_RATING]       = { MUS_RG_DEX_RATING,       196 },
-    [FANFARE_OBTAIN_B_POINTS]     = { MUS_OBTAIN_B_POINTS,     313 },
-    [FANFARE_OBTAIN_SYMBOL]       = { MUS_OBTAIN_SYMBOL,       318 },
+    [FANFARE_OBTAIN_B_POINTS]     = { MUS_OBTAIN_B_POINTS,     265 },
+    [FANFARE_OBTAIN_SYMBOL]       = { MUS_OBTAIN_SYMBOL,       324 },
     [FANFARE_REGISTER_MATCH_CALL] = { MUS_REGISTER_MATCH_CALL, 135 },
 };
 

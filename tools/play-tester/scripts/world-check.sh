@@ -6,7 +6,7 @@ cd "$(dirname "$0")/.." && source scripts/env.sh
 export PLAYTEST_OUT=$PLAYTEST_ROOT/out/world; mkdir -p $PLAYTEST_OUT; rm -f $PLAYTEST_OUT/*.png $PLAYTEST_OUT/log.txt
 export WORLD_SPOTS=$(realpath "$1") PLAYTEST_ROOT
 ROM=${UI_ROM:-$REPO_ROOT/game/pokeemerald.gba}
-while read -r addr _ name; do export "SYM_$name=$addr"; done < <(arm-none-eabi-nm "${ROM%.gba}.elf" | grep -wE "gSaveBlock1Ptr|gMain|CB2_LoadMap|gMapHeader")
+while read -r addr _ name; do export "SYM_$name=$addr"; done < <(arm-none-eabi-nm "${ROM%.gba}.elf" | grep -wE "gSaveBlock1Ptr|gMain|CB2_LoadMap|gMapHeader|gMPlayInfo_BGM|gSongTable|sCurrentMapMusic")
 # the save block's vars follow its flags, whose size moves with MAX_TRAINERS_COUNT
 FC=$(printf '#include "constants/opponents.h"\n#include "constants/flags.h"\nFLAGS_COUNT\n' | cpp -P -I $REPO_ROOT/game/include - 2>/dev/null | tail -1)
 export SB1_VARS=$(python3 -c "n=0x1270+(($FC)+7)//8; print(n+(n&1))")

@@ -2,7 +2,7 @@
   "id": "MAP_SW_MUSTAFAR_MINING_CONTROL",
   "name": "SwMustafarMiningControl",
   "layout": "LAYOUT_SW_MUSTAFAR_MINING_CONTROL",
-  "music": "MUS_PETALBURG_WOODS",
+  "music": "MUS_MT_CHIMNEY",
   "region_map_section": "MAPSEC_JAGGED_PASS",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

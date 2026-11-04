@@ -2,7 +2,7 @@
   "id": "MAP_SW_KACHIRHO_SUPPLY_DEPOT",
   "name": "SwKachirhoSupplyDepot",
   "layout": "LAYOUT_SW_KACHIRHO_SUPPLY_DEPOT",
-  "music": "MUS_DEWFORD",
+  "music": "MUS_POKE_MART",
   "region_map_section": "MAPSEC_DEWFORD_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

@@ -2,7 +2,7 @@
   "id": "MAP_SW_NIJEDHA_BACTA_CENTER",
   "name": "SwNijedhaBactaCenter",
   "layout": "LAYOUT_SW_NIJEDHA_BACTA_CENTER",
-  "music": "MUS_ROUTE122",
+  "music": "MUS_POKE_CENTER",
   "region_map_section": "MAPSEC_ROUTE_122",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

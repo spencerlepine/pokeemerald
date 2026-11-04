@@ -2,7 +2,7 @@
   "id": "MAP_SW_HANGAR_TATOOINE_SULLUST",
   "name": "SwHangarTatooineSullust",
   "layout": "LAYOUT_SW_HANGAR_TATOOINE_SULLUST",
-  "music": "MUS_ROUTE110",
+  "music": "MUS_HYPERSPACE",
   "region_map_section": "MAPSEC_ROUTE_112",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

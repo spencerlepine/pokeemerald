@@ -10,7 +10,8 @@ database/music.csv has one row per song: every MUS_* track in ../game plus every
   - wiki_title is the song's Star Wars title once it has one (mapping/music.csv sw_title); until then the
     Emerald constant (or the draft constant for net-new songs).
   - rewrite_status is TODO for every song the player hears (HOTSWAP and NET_NEW) and SKIP for ghosts
-    (CUT, never played in Emerald) and MUS_DUMMY. Set it to DONE when the new song is in ../game.
+    (CUT, never played in Emerald) and MUS_DUMMY. GENERATED: composed and stored in wiki/audio. DONE: installed in
+    ../game and played there (mapping/audio_done.csv). INSTALLED: a net-new song in ../game that nothing calls yet.
   - planets come from the maps that set the song in map.json (database/area_progression.csv), plus any
     planets listed by hand in mapping/music.csv.
   - player / voicegroup / volume / reverb / priority come from sound/songs/midi/midi.cfg and
@@ -170,6 +171,8 @@ def main() -> list[str]:
     audio = [r for r in read(DB / "pending_audio.csv") if r["category"] == "music"]
     labels = {r["asset_id"]: r for r in read(MAPPING / "music.csv")}
     maps = {r["map_id"]: r for r in read(DB / "area_progression.csv")} if (DB / "area_progression.csv").exists() else {}
+    entity_maps = {e["id"] for e in read(DB / "entities.csv") if e["entity_type"] == "map"} \
+        if (DB / "entities.csv").exists() else set()
     cfg, players = midi_cfg(), song_players()
     tracks = {r["track_id"]: r for r in read(SOUNDTRACK / "soundtrack_tracks.csv")} \
         if (SOUNDTRACK / "soundtrack_tracks.csv").exists() else {}
@@ -188,7 +191,7 @@ def main() -> list[str]:
         map_ids = [u for u in a["used_by"].split("|") if u.startswith("map:")]
         planned = [m for m in lab.get("maps", "").split("|") if m]  # maps a net-new song takes over
         for m in planned:
-            if m not in maps:
+            if m not in maps and m not in entity_maps:
                 warn(f"mapping/music.csv: {aid} map {m} is not in database/area_progression.csv")
             planned_by.setdefault(m, []).append(aid)
         map_ids = map_ids or planned
@@ -228,6 +231,8 @@ def main() -> list[str]:
                  ref_titles="|".join(tracks[t]["title"] for t in refs if t in tracks), ref_files="|".join(files))
         if a.get("game_status") == "DONE" and not skip:
             r["rewrite_status"] = "DONE"
+        elif a.get("audio_status") == "DONE" and not skip:
+            r["rewrite_status"] = "INSTALLED"  # in ../game with its own song id, but nothing plays it yet
         elif a.get("audio_status") == "AUDIO_READY" and not skip:
             r["rewrite_status"] = "GENERATED"  # composed by tools/music-generator, stored in wiki/audio, not installed
         f = a["asset_file"]
@@ -260,9 +265,12 @@ def main() -> list[str]:
         if not songs and map_music.get(mid) == "MUS_NONE":
             songs = [{"asset_id": "MUS_NONE", "wiki_title": "MUS_NONE", "music_category": "SILENT",
                       "music_form": "SILENT"}]  # map.json plays nothing: a script sets the song, or silence
+        if not songs and mid in planned_by:
+            # a net-new area (mapping/area_progression_extra.csv): its song is the `maps` column of a row in
+            # mapping/music.csv (planned_music), which the world port writes into its map.json
+            songs = [r for r in out if r["asset_id"] in planned_by[mid]]
         if not songs and mid not in map_music:
-            # a net-new area (mapping/area_progression_extra.csv): no map in ../game yet. Its song is the
-            # `maps` column of a net-new row in mapping/music.csv (planned_music); until then it is marked TODO.
+            # a net-new area with no song chosen yet
             songs = [{"asset_id": "", "wiki_title": "TODO", "music_category": "", "music_form": ""}]
         if not songs:
             warn(f"music_by_map: {mid} has no music row")

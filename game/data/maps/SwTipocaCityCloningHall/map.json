@@ -2,7 +2,7 @@
   "id": "MAP_SW_TIPOCA_CITY_CLONING_HALL",
   "name": "SwTipocaCityCloningHall",
   "layout": "LAYOUT_SW_TIPOCA_CITY_CLONING_HALL",
-  "music": "MUS_LILYCOVE",
+  "music": "MUS_LILYCOVE_KAMINO",
   "region_map_section": "MAPSEC_PACIFIDLOG_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

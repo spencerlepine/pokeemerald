@@ -2,7 +2,7 @@
   "id": "MAP_SW_TIPOCA_CITY_HANGAR",
   "name": "SwTipocaCityHangar",
   "layout": "LAYOUT_SW_TIPOCA_CITY_HANGAR",
-  "music": "MUS_LILYCOVE",
+  "music": "MUS_HYPERSPACE",
   "region_map_section": "MAPSEC_PACIFIDLOG_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

@@ -553,8 +553,44 @@
 
 // Star Wars music (music-generator)
 #define MUS_INTRO_CRAWL             610
-
-#define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
+#define MUS_ABANDONED_SHIP_TYTHON   611
+#define MUS_CANTINA_BAND            612
+#define MUS_CAVE_OF_ORIGIN_SULLUST  613
+#define MUS_DEATH_STAR              614
+#define MUS_DROID_SLICED            615
+#define MUS_ENCOUNTER_BOBA_FETT     616
+#define MUS_FORTRESS_VADER          617
+#define MUS_HYPERSPACE              618
+#define MUS_LILYCOVE_KAMINO         619
+#define MUS_MT_CHIMNEY_ASTEROID_FIELD 620
+#define MUS_MT_CHIMNEY_DAGOBAH      621
+#define MUS_MT_CHIMNEY_TATOOINE     622
+#define MUS_MT_PYRE_HOTH            623
+#define MUS_MT_PYRE_TATOOINE        624
+#define MUS_OLDALE_SULLUST          625
+#define MUS_PETALBURG_WOODS_DAGOBAH 626
+#define MUS_PETALBURG_WOODS_ENDOR   627
+#define MUS_PETALBURG_WOODS_GRAND_ARENA 628
+#define MUS_PETALBURG_WOODS_KASHYYYK 629
+#define MUS_PETALBURG_WOODS_SULLUST 630
+#define MUS_RG_SEVII_CAVE_GRAND_ARENA 631
+#define MUS_ROUTE104_KASHYYYK       632
+#define MUS_ROUTE110_SULLUST        633
+#define MUS_ROUTE119_DAGOBAH        634
+#define MUS_ROUTE119_KAMINO         635
+#define MUS_ROUTE120_DAGOBAH        636
+#define MUS_ROUTE120_YAVIN_4        637
+#define MUS_ROUTE122_ENDOR          638
+#define MUS_RUSTBORO_ENDOR          639
+#define MUS_RUSTBORO_YAVIN_4        640
+#define MUS_SEALED_CHAMBER_ENDOR    641
+#define MUS_SEALED_CHAMBER_KAMINO   642
+#define MUS_SEALED_CHAMBER_KASHYYYK 643
+#define MUS_UNDERWATER_KASHYYYK     644
+#define MUS_UNDERWATER_YAVIN_4      645
+#define MUS_VS_BOBA_FETT            646
+#define MUS_VS_VADER                647
+#define MUS_ROUTE118                648 // Endor Crossing: Route 118 plays one song (Emerald split it between ROUTE110 and ROUTE119)
 
 #define MUS_NONE                    0xFFFF
 

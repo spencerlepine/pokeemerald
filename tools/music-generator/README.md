@@ -1,9 +1,26 @@
 # music-generator
 
-**Status:** DONE. Approved by the owner on 2026-11-01. Installed: `MUS_INTRO_CRAWL` (the opening crawl theme), and `MUS_INTRO` (the boot cutscene, scored to picture; with the owner for review). Every other song the player hears (175) is composed in `song-schemas/` and shipped to the wiki
-(`python3 ../../wiki/tools/ship_audio.py song-schemas/<name>.yaml`): `rewrite_status` GENERATED in
-`../../wiki/database/music.csv`, the .mid in `../../wiki/audio/sound/songs/midi/`, an MP3 preview in
-`../../wiki/audio/previews/music/`. None of those are installed in `../../game` yet (`generate.py install`, after a ROM listen).
+**Status:** DONE. Approved by the owner on 2026-11-01. **Every song is in `../../game`** (2026-11-04): all 177 songs the
+player hears (`rewrite_status` DONE in `../../wiki/database/music.csv`, listed in `../../wiki/mapping/audio_done.csv`),
+installed with `generate.py install` from `song-schemas/`, byte-identical to the approved copies in
+`../../wiki/audio/sound/songs/midi/`. `MUS_DROID_SLICED` has its song id but nothing plays it until droid slicing is
+built (`rewrite_status` INSTALLED). A new song still goes: model, render, ROM listen, owner approval, then
+`python3 ../../wiki/tools/ship_audio.py song-schemas/<name>.yaml` (wiki copy and preview) and `generate.py install`.
+
+What the install changed beyond the song files (all in `../../game`):
+- **Net-new ids** 611-647 in `include/constants/songs.h`, `sound/song_table.inc` and `ld_script.ld` (the tool does this).
+- **Two songs that had no slot.** `MUS_DESERT` (song 409, the Route 111 sandstorm) pointed at the vanilla
+  `mus_route111` file: the slot now plays `mus_desert` and `mus_route111.mid` is gone. `MUS_ROUTE118` was a marker
+  (0x7FFF) that split Route 118 between ROUTE110 and ROUTE119: it is now song 648 (Endor Crossing), and
+  `src/overworld.c` no longer splits the route.
+- **Fanfare lengths** in `sFanfares` (`src/sound.c`): the frame the last note ends, plus 30 frames, as vanilla
+  leaves. Re-measure them whenever a fanfare (a `JINGLE` in `sFanfares`) is reinstalled.
+- **Map music** comes from the `maps` column of `../../wiki/mapping/music.csv`: the per-planet splits and the song of
+  each new area. The world port writes it into each `map.json` (`music_overrides` in
+  `../../wiki/tools/world_port/install.py`).
+- **Underwater**: a dive map plays its own `MUS_UNDERWATER_*` song if its `map.json` sets one (`IsUnderwaterMusic`).
+- **Bosses**: Vader (SITH LORD with Maxie's portrait) battles to `MUS_VS_VADER`; BOBA FETT (`TRAINER_MATT`) meets the
+  player with `MUS_ENCOUNTER_BOBA_FETT` (`TRAINER_ENCOUNTER_MUSIC_BOBA_FETT`) and battles to `MUS_VS_BOBA_FETT`.
 
 Known quirks (worked around in the models, not fixed): a section `fill` goes to every drum part in the section,
 so two drum parts with different kits need their fills written into the groove; a part or phrase named `off`
@@ -157,15 +174,14 @@ tones (`+`/`-` octave), `ch` the whole chord, `>` accent, `_` soft, `'` staccato
 | [`fortress-vader.yaml`](song-schemas/fortress-vader.yaml) | `net:mus-fortress-vader` (MUS_FORTRESS_VADER, net-new) | ARRANGE of the Imperial March: 104 bpm (the cue's own 103.4), 2-bar intro, 16-bar loop; trumpet theme, horn an octave down, strings, wave bass, timpani, noise snare, square pulse in the bridge. 7 tracks, 4 Direct Sound notes max, 1.1 KB |
 | [`fallarbor-inyusu-tor.yaml`](song-schemas/fallarbor-inyusu-tor.yaml) | `audio:MUS_FALLARBOR` (hot-swap) | STYLE of Padmé's Destiny: original A minor melody at 88 bpm on the vanilla `fallarbor` voicegroup; flute, harp arpeggios, string pad, fretless bass, square echo. 5 tracks, 0.9 KB |
 
-Both render with no errors or warnings and pass the loop check. Neither is installed in `../../game`; both rows
-stay TODO.
+Both render with no errors or warnings and pass the loop check. Both are installed with the rest.
 
 ## Installed
 
 | Model | Row | Notes |
 | --- | --- | --- |
-| [`intro-boot.yaml`](song-schemas/intro-boot.yaml) | `audio:MUS_INTRO` (hot-swap; with the owner for review, wiki row still TODO) | Original cue in the Star Wars idiom for the boot cutscene (scenes 1-2, 34.6 s), scored to [`cues/intro-boot.yaml`](cues/intro-boot.yaml): 10 tempo zones, 29 cues (drops, camera rise, shuttle and TIE, twin suns, scene cut, the speeder's moves, the last shot), all within 2 frames on the ROM; the raiders pop up over a steady snare groove instead of a stab each (owner's call). 10 tracks (the flute's track is the noise snare in the chase), 5 Direct Sound notes max, 2 KB |
-| [`title-throne.yaml`](song-schemas/title-throne.yaml) | `audio:MUS_TITLE` (hot-swap; with the owner for review, wiki row still TODO) | ARRANGE of the Throne Room march (`soundtrack:new-hope:16`, 0:00-0:50), transcribed from the cue (melody on a 16th grid, harmony per half bar; beat chroma vs the cue 0.60, 0.28 misaligned). 120 bpm in F: 4-bar fanfare once, then a 64 s loop (march, second strain with horn, quiet flute and harp, full tutti ending on the march's own C pickup). Loops, so the title screen no longer times out back to the boot intro. 10 tracks, 5 Direct Sound notes max, 2.3 KB |
+| [`intro-boot.yaml`](song-schemas/intro-boot.yaml) | `audio:MUS_INTRO` (hot-swap) | Original cue in the Star Wars idiom for the boot cutscene (scenes 1-2, 34.6 s), scored to [`cues/intro-boot.yaml`](cues/intro-boot.yaml): 10 tempo zones, 29 cues (drops, camera rise, shuttle and TIE, twin suns, scene cut, the speeder's moves, the last shot), all within 2 frames on the ROM; the raiders pop up over a steady snare groove instead of a stab each (owner's call). 10 tracks (the flute's track is the noise snare in the chase), 5 Direct Sound notes max, 2 KB |
+| [`title-throne.yaml`](song-schemas/title-throne.yaml) | `audio:MUS_TITLE` (hot-swap) | ARRANGE of the Throne Room march (`soundtrack:new-hope:16`, 0:00-0:50), transcribed from the cue (melody on a 16th grid, harmony per half bar; beat chroma vs the cue 0.60, 0.28 misaligned). 120 bpm in F: 4-bar fanfare once, then a 64 s loop (march, second strain with horn, quiet flute and harp, full tutti ending on the march's own C pickup). Loops, so the title screen no longer times out back to the boot intro. 10 tracks, 5 Direct Sound notes max, 2.3 KB |
 | [`intro-crawl.yaml`](song-schemas/intro-crawl.yaml) | `net:mus-intro-crawl` (MUS_INTRO_CRAWL, id 610) | ARRANGE of the 1977 main title from the owner's recording of the original crawl (`wiki/music/concept/intro-crawl-1977.mp3`). Starts as the logo recedes on the title screen (`IntroCrawl_StartMusic`), 75 s of fanfare, theme and ending, then a quiet 4-bar loop; the crawl fades it out at about 77 s. 10 tracks, 2 KB |
 
 ## Files

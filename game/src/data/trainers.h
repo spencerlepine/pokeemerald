@@ -364,7 +364,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_MATT] =
     {
         .trainerClass = TRAINER_CLASS_AQUA_ADMIN,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_BOBA_FETT,
         .trainerPic = TRAINER_PIC_AQUA_ADMIN_M,
         .trainerName = _("BOBA FETT"),
         .items = {ITEM_SUPER_POTION, ITEM_NONE, ITEM_NONE, ITEM_NONE},

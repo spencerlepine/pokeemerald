@@ -2,7 +2,7 @@
   "id": "MAP_SW_NIJEDHA_SUPPLY_DEPOT",
   "name": "SwNijedhaSupplyDepot",
   "layout": "LAYOUT_SW_NIJEDHA_SUPPLY_DEPOT",
-  "music": "MUS_ROUTE122",
+  "music": "MUS_POKE_MART",
   "region_map_section": "MAPSEC_ROUTE_122",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

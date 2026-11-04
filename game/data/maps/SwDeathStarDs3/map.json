@@ -2,7 +2,7 @@
   "id": "MAP_SW_DEATH_STAR_DS_3",
   "name": "SwDeathStarDs3",
   "layout": "LAYOUT_SW_DEATH_STAR_DS_3",
-  "music": "MUS_RUSTBORO",
+  "music": "MUS_DEATH_STAR",
   "region_map_section": "MAPSEC_MOSSDEEP_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

@@ -2,7 +2,7 @@
   "id": "MAP_UNDERWATER_ROUTE125",
   "name": "Underwater_Route125",
   "layout": "LAYOUT_UNDERWATER_ROUTE125",
-  "music": "MUS_UNDERWATER",
+  "music": "MUS_UNDERWATER_YAVIN_4",
   "region_map_section": "MAPSEC_UNDERWATER_125",
   "requires_flash": false,
   "weather": "WEATHER_UNDERWATER_BUBBLES",

@@ -2,7 +2,7 @@
   "id": "MAP_SW_HANGAR_TATOOINE_ENDOR",
   "name": "SwHangarTatooineEndor",
   "layout": "LAYOUT_SW_HANGAR_TATOOINE_ENDOR",
-  "music": "MUS_RUSTBORO",
+  "music": "MUS_HYPERSPACE",
   "region_map_section": "MAPSEC_MAUVILLE_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

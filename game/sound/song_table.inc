@@ -415,7 +415,7 @@ gSongTable::
 	song mus_mt_chimney, MUSIC_PLAYER_BGM, 0
 	song mus_encounter_female, MUSIC_PLAYER_BGM, 0
 	song mus_lilycove, MUSIC_PLAYER_BGM, 0
-	song mus_route111, MUSIC_PLAYER_BGM, 0
+	song mus_desert, MUSIC_PLAYER_BGM, 0
 	song mus_help, MUSIC_PLAYER_BGM, 0
 	song mus_underwater, MUSIC_PLAYER_BGM, 0
 	song mus_victory_trainer, MUSIC_PLAYER_BGM, 0
@@ -617,6 +617,44 @@ gSongTable::
 	song ph_nurse_held, MUSIC_PLAYER_SE2, 2
 	song ph_nurse_solo, MUSIC_PLAYER_SE2, 2
 	song mus_intro_crawl, MUSIC_PLAYER_BGM, 0
+	song mus_abandoned_ship_tython, MUSIC_PLAYER_BGM, 0
+	song mus_cantina_band, MUSIC_PLAYER_BGM, 0
+	song mus_cave_of_origin_sullust, MUSIC_PLAYER_BGM, 0
+	song mus_death_star, MUSIC_PLAYER_BGM, 0
+	song mus_droid_sliced, MUSIC_PLAYER_BGM, 0
+	song mus_encounter_boba_fett, MUSIC_PLAYER_BGM, 0
+	song mus_fortress_vader, MUSIC_PLAYER_BGM, 0
+	song mus_hyperspace, MUSIC_PLAYER_BGM, 0
+	song mus_lilycove_kamino, MUSIC_PLAYER_BGM, 0
+	song mus_mt_chimney_asteroid_field, MUSIC_PLAYER_BGM, 0
+	song mus_mt_chimney_dagobah, MUSIC_PLAYER_BGM, 0
+	song mus_mt_chimney_tatooine, MUSIC_PLAYER_BGM, 0
+	song mus_mt_pyre_hoth, MUSIC_PLAYER_BGM, 0
+	song mus_mt_pyre_tatooine, MUSIC_PLAYER_BGM, 0
+	song mus_oldale_sullust, MUSIC_PLAYER_BGM, 0
+	song mus_petalburg_woods_dagobah, MUSIC_PLAYER_BGM, 0
+	song mus_petalburg_woods_endor, MUSIC_PLAYER_BGM, 0
+	song mus_petalburg_woods_grand_arena, MUSIC_PLAYER_BGM, 0
+	song mus_petalburg_woods_kashyyyk, MUSIC_PLAYER_BGM, 0
+	song mus_petalburg_woods_sullust, MUSIC_PLAYER_BGM, 0
+	song mus_rg_sevii_cave_grand_arena, MUSIC_PLAYER_BGM, 0
+	song mus_route104_kashyyyk, MUSIC_PLAYER_BGM, 0
+	song mus_route110_sullust, MUSIC_PLAYER_BGM, 0
+	song mus_route119_dagobah, MUSIC_PLAYER_BGM, 0
+	song mus_route119_kamino, MUSIC_PLAYER_BGM, 0
+	song mus_route120_dagobah, MUSIC_PLAYER_BGM, 0
+	song mus_route120_yavin_4, MUSIC_PLAYER_BGM, 0
+	song mus_route122_endor, MUSIC_PLAYER_BGM, 0
+	song mus_rustboro_endor, MUSIC_PLAYER_BGM, 0
+	song mus_rustboro_yavin_4, MUSIC_PLAYER_BGM, 0
+	song mus_sealed_chamber_endor, MUSIC_PLAYER_BGM, 0
+	song mus_sealed_chamber_kamino, MUSIC_PLAYER_BGM, 0
+	song mus_sealed_chamber_kashyyyk, MUSIC_PLAYER_BGM, 0
+	song mus_underwater_kashyyyk, MUSIC_PLAYER_BGM, 0
+	song mus_underwater_yavin_4, MUSIC_PLAYER_BGM, 0
+	song mus_vs_boba_fett, MUSIC_PLAYER_BGM, 0
+	song mus_vs_vader, MUSIC_PLAYER_BGM, 0
+	song mus_route118, MUSIC_PLAYER_BGM, 0
 
 	.align 2
 dummy_song_header:

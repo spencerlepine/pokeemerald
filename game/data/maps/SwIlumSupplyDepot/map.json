@@ -2,7 +2,7 @@
   "id": "MAP_SW_ILUM_SUPPLY_DEPOT",
   "name": "SwIlumSupplyDepot",
   "layout": "LAYOUT_SW_ILUM_SUPPLY_DEPOT",
-  "music": "MUS_EVER_GRANDE",
+  "music": "MUS_POKE_MART",
   "region_map_section": "MAPSEC_EVER_GRANDE_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

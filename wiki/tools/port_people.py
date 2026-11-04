@@ -60,13 +60,14 @@ TEXTS = "data/text/sw_people.inc"
 FIRST_NEW_TRAINER = 855  # after TRAINER_MAY_PLACEHOLDER
 MUSIC = {"male": "MALE", "female": "FEMALE", "girl": "GIRL", "suspicious": "SUSPICIOUS", "intense": "INTENSE",
          "cool": "COOL", "aqua": "AQUA", "magma": "MAGMA", "swimmer": "SWIMMER", "twins": "TWINS",
-         "elite-four": "ELITE_FOUR", "hiker": "HIKER", "interviewer": "INTERVIEWER", "rich": "RICH"}
+         "elite-four": "ELITE_FOUR", "hiker": "HIKER", "interviewer": "INTERVIEWER", "rich": "RICH", "boba-fett": "BOBA_FETT"}
 # encounter music id -> the song it plays (src/battle_setup.c, PlayTrainerEncounterMusic)
 SONG = {"MALE": "MUS_ENCOUNTER_MALE", "FEMALE": "MUS_ENCOUNTER_FEMALE", "GIRL": "MUS_ENCOUNTER_GIRL",
         "SUSPICIOUS": "MUS_ENCOUNTER_SUSPICIOUS", "INTENSE": "MUS_ENCOUNTER_INTENSE", "COOL": "MUS_ENCOUNTER_COOL",
         "AQUA": "MUS_ENCOUNTER_AQUA", "MAGMA": "MUS_ENCOUNTER_MAGMA", "SWIMMER": "MUS_ENCOUNTER_SWIMMER",
         "TWINS": "MUS_ENCOUNTER_TWINS", "ELITE_FOUR": "MUS_ENCOUNTER_ELITE_FOUR", "HIKER": "MUS_ENCOUNTER_HIKER",
-        "INTERVIEWER": "MUS_ENCOUNTER_INTERVIEWER", "RICH": "MUS_ENCOUNTER_RICH"}
+        "INTERVIEWER": "MUS_ENCOUNTER_INTERVIEWER", "RICH": "MUS_ENCOUNTER_RICH",
+        "BOBA_FETT": "MUS_ENCOUNTER_BOBA_FETT"}
 STILL_FRAMES = [0, 1, 2, 0, 0, 1, 1, 2, 2]  # a 3-frame still sheet in the 9-frame standard table
 
 

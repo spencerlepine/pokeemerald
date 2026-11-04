@@ -2,7 +2,7 @@
   "id": "MAP_SW_TIPOCA_CITY_SUPPLY_DEPOT",
   "name": "SwTipocaCitySupplyDepot",
   "layout": "LAYOUT_SW_TIPOCA_CITY_SUPPLY_DEPOT",
-  "music": "MUS_LILYCOVE",
+  "music": "MUS_POKE_MART",
   "region_map_section": "MAPSEC_PACIFIDLOG_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

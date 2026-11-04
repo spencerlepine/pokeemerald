@@ -2,7 +2,7 @@
   "id": "MAP_SW_MOS_ESPA_PODRACE_ARENA",
   "name": "SwMosEspaPodraceArena",
   "layout": "LAYOUT_SW_MOS_ESPA_PODRACE_ARENA",
-  "music": "MUS_RUSTBORO",
+  "music": "MUS_ROUTE110",
   "region_map_section": "MAPSEC_MAUVILLE_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

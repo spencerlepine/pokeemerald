@@ -2,7 +2,7 @@
   "id": "MAP_SW_TYTHON_HANGAR",
   "name": "SwTythonHangar",
   "layout": "LAYOUT_SW_TYTHON_HANGAR",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_HYPERSPACE",
   "region_map_section": "MAPSEC_SOUTHERN_ISLAND",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

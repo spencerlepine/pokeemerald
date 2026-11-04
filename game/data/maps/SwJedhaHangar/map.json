@@ -2,7 +2,7 @@
   "id": "MAP_SW_JEDHA_HANGAR",
   "name": "SwJedhaHangar",
   "layout": "LAYOUT_SW_JEDHA_HANGAR",
-  "music": "MUS_ROUTE122",
+  "music": "MUS_HYPERSPACE",
   "region_map_section": "MAPSEC_ROUTE_122",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

@@ -182,6 +182,25 @@ def parent_of(world, a, seen=None):
     return None
 
 
+def music_overrides():
+    """Map music the wiki sets by hand: the `maps` column of mapping/music.csv (a per-planet split of a song
+    Emerald shares, or the song a new area plays). Keyed by vanilla map folder, or `map:<area>` for a new area;
+    the value is the song's constant in ../game (the Emerald id for a hot-swap, the new id for a net-new song)."""
+    import csv
+    songs = {r["asset_id"]: r for r in csv.DictReader(open(B.DATABASE / "music.csv", encoding="utf-8"))}
+    folders = {e["id"]: e["source_file"].split("/")[2] for e in csv.DictReader(open(B.DATABASE / "entities.csv",
+               encoding="utf-8")) if e["entity_type"] == "map" and e["source_file"].startswith("data/maps/")}
+    out = {}
+    for r in csv.DictReader(open(B.MAPPING / "music.csv", encoding="utf-8")):
+        s = songs.get(r["asset_id"])
+        if not s or not r["maps"]:
+            continue
+        const = s["emerald_constant"] if s["swap_kind"] == "HOTSWAP" else s["sw_constant"]
+        for m in r["maps"].split("|"):
+            out[folders.get(m, m)] = const
+    return out
+
+
 def new_map_json(world, a):
     p = parent_of(world, a)
     pm = B.base_map(p.replaces) if p else {}
@@ -306,8 +325,10 @@ def install(scope=None, exclude=(), log=print):
         groups["group_order"].append(M.NEW_GROUP)
         groups[M.NEW_GROUP] = new_maps
     B.write_json(B.GAME / GROUPS_JSON, groups)
+    music = music_overrides()
     for aid, mj in maps_out.items():
         a = world.areas[aid]
+        mj["music"] = music.get(f"map:{a.id}" if a.new else a.replaces, mj.get("music"))
         B.write_json(B.GAME / "data/maps" / a.map_name / "map.json", mj)
         if a.new:
             sp = B.GAME / "data/maps" / a.map_name / "scripts.inc"

@@ -6468,10 +6468,20 @@ u16 GetBattleBGM(void)
         else
             trainerClass = gTrainers[gTrainerBattleOpponent_A].trainerClass;
 
+        // BOBA FETT (TRAINER_MATT's slot) has his own battle theme
+        if (!(gBattleTypeFlags & (BATTLE_TYPE_FRONTIER | BATTLE_TYPE_TRAINER_HILL))
+         && gTrainerBattleOpponent_A == TRAINER_MATT)
+            return MUS_VS_BOBA_FETT;
+
         switch (trainerClass)
         {
         case TRAINER_CLASS_AQUA_LEADER:
+            return MUS_VS_AQUA_MAGMA_LEADER;
         case TRAINER_CLASS_MAGMA_LEADER:
+            // Darth Vader (Maxie's slots and portrait) has his own theme; other SITH LORDs keep the leader theme
+            if (!(gBattleTypeFlags & (BATTLE_TYPE_FRONTIER | BATTLE_TYPE_TRAINER_HILL))
+             && gTrainers[gTrainerBattleOpponent_A].trainerPic == TRAINER_PIC_MAGMA_LEADER_MAXIE)
+                return MUS_VS_VADER;
             return MUS_VS_AQUA_MAGMA_LEADER;
         case TRAINER_CLASS_TEAM_AQUA:
         case TRAINER_CLASS_TEAM_MAGMA:
