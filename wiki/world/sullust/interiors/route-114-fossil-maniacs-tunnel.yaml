@@ -52,3 +52,7 @@ warps:
   to: route-114-fossil-maniacs-house
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Planet border cut: door at [6, 2] to krayt-graveyard; reached by ship instead.', Vanilla layout
     kept; dress with the planet's interior kit in the art phase.]
+room:
+  style: room:sullust-burrow
+  map: 13x26
+  parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, doorway, wall-curve, arch, step, level-edge, level-corner, raised-floor, pool, pool-edge, grate-floor, niche]

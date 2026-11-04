@@ -61,3 +61,7 @@ warps:
   at: [8, 11]
   to: MAP_DYNAMIC
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]
+room:
+  style: room:bacta-center
+  map: 15x12
+  parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, step, wall-curve]

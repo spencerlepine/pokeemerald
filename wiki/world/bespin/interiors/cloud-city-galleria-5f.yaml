@@ -55,3 +55,7 @@ warps:
   at: [16, 1]
   to: cloud-city-galleria-rooftop
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]
+room:
+  style: room:cloud-city
+  map: 18x8
+  parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, window, stairs, doorway, wall-curve, window-round, window-wide, step, level-edge, level-corner, raised-floor, railing, railing-end, counter-wall]

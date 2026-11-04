@@ -31,3 +31,7 @@ warps:
   at: [4, 1]
   to: espa-generator-inside
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']
+room:
+  style: room:tatooine-workshop
+  map: 9x9
+  parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, doorway, catwalk, catwalk-rail, ramp, railing, railing-end, grate-floor, beam, wall-angle]

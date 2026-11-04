@@ -37,3 +37,7 @@ warps:
   at: [7, 9]
   to: tipoca-city
 todo: ['New interior (replaces: new); placeholder room, sized for its contents.']
+room:
+  style: room:supply-depot
+  map: 14x10
+  parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, counter-wall, alcove, room:kamino-tipoca:window, room:kamino-tipoca:floor-alt]

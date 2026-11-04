@@ -51,3 +51,7 @@ warps:
   at: [7, 12]
   to: grand-arena-outside-east
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]
+room:
+  style: room:grand-arena-casino
+  map: 16x13
+  parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, doorway, wall-curve, window-wide, counter-wall, pillar, step, level-edge, level-corner, raised-floor, railing, railing-end]

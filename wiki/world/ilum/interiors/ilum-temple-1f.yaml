@@ -56,3 +56,7 @@ warps:
   at: [1, 7]
   to: ilum-temple-2f
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]
+room:
+  style: room:ilum-jedi-temple
+  map: 19x12
+  parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, stairs, doorway, pillar-wide, step, level-edge, level-corner, raised-floor, niche, light-pool, arch]

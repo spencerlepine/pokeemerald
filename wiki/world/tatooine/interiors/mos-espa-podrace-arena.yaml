@@ -52,3 +52,7 @@ warps:
   to: mos-espa
 todo: ['New interior (replaces: new); placeholder room, sized for its contents.', 'Net-new row net:podrace-sebulba (bible/NET_NEW_DESIGNS.md); gate and level band
     in mapping/area_progression_extra.csv.']
+room:
+  style: room:tatooine-workshop
+  map: 22x14
+  parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, catwalk, catwalk-rail, ramp, railing, railing-end, grate-floor, beam, blast-door, wall-angle]

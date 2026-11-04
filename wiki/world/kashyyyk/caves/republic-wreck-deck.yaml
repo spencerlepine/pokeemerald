@@ -52,3 +52,7 @@ warps:
   at: [12, 5]
   to: republic-wreck-captains-office
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']
+room:
+  style: room:republic-wreck
+  map: 23x21
+  parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, doorway, wall-angle, window-round, blast-door, pool, pool-edge, pit-edge, pit, ladder, beam]

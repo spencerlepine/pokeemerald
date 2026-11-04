@@ -69,3 +69,7 @@ warps:
   at: [12, 14]
   to: mos-eisley
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]
+room:
+  style: room:docking-hangar
+  map: 24x15
+  parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, blast-door, pit-edge, pit, catwalk, catwalk-rail, ramp, viewport, room:tatooine-adobe:window, room:tatooine-adobe:floor-alt]

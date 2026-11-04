@@ -45,3 +45,7 @@ warps:
   at: [2, 4]
   to: sandcrawler-4f
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']
+room:
+  style: room:jawa-sandcrawler
+  map: 21x17
+  parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, window, stairs, wall-angle, grate-floor, conveyor, catwalk, catwalk-rail, pit-edge, pit, floor-hole, ladder, beam]

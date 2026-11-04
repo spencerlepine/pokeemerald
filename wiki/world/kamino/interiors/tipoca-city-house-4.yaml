@@ -41,3 +41,7 @@ warps:
   at: [5, 8]
   to: tipoca-city
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]
+room:
+  style: room:kamino-tipoca
+  map: 10x9
+  parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, wall-curve, window-wide, doorway, step, level-edge, level-corner, raised-floor, railing, railing-end]

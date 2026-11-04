@@ -74,3 +74,7 @@ warps:
   to: mos-eisley
 todo: [Redrawn inside vanilla SlateportCity_PokemonFanClub; its scripts and people move here., 'Vanilla fan club building becomes the cantina (owner''s story notes);
     no story event, Greedo is optional.']
+room:
+  style: room:tatooine-cantina
+  map: 24x16
+  parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, wall-curve, alcove, arch, step, level-edge, level-corner, raised-floor, pillar]

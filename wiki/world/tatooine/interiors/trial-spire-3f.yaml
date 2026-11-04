@@ -49,3 +49,7 @@ warps:
   at: [12, 1]
   to: trial-spire-4f
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]
+room:
+  style: room:tatooine-civic
+  map: 16x21
+  parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, window, stairs, wall-curve, arch, pillar, step, level-edge, level-corner, raised-floor, beam]

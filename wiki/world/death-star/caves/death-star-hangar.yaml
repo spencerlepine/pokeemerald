@@ -59,3 +59,7 @@ warps:
   to: death-star-ds-1
 todo: ['Net-new area net:death-star-site (bible/NET_NEW_DESIGNS.md). Placeholder: Trainer Hill floors, tileset and elevator scripts.', 'Unlocks after the Hall of
     Fame (flag:sys-game-clear); the shuttle NPC in the Rebel hangar sets flag:unused-0x024.']
+room:
+  style: room:imperial-deck
+  map: 26x16
+  parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, stairs, doorway, blast-door, catwalk, catwalk-rail, pit-edge, pit, viewport, pillar, counter-wall, step, level-edge, level-corner, raised-floor, grate-floor]

@@ -34,3 +34,7 @@ warps:
   at: [4, 7]
   to: route-111
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]
+room:
+  style: room:tatooine-adobe
+  map: 10x8
+  parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, wall-curve, niche, alcove, step, level-edge, level-corner, raised-floor, light-pool]

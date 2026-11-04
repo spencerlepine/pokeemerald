@@ -42,3 +42,7 @@ warps:
   to: rwookrrorro
 todo: ['New interior (replaces: new); placeholder room, sized for its contents.', 'Net-new row net:rwookrrorro (bible/NET_NEW_DESIGNS.md); gate and level band in
     mapping/area_progression_extra.csv.']
+room:
+  style: room:kashyyyk-treehome
+  map: 16x12
+  parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, wall-curve, window-round, ramp, railing, railing-end, step, level-edge, level-corner, raised-floor, beam]

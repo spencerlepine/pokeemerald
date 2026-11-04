@@ -66,3 +66,7 @@ warps:
   to: tipoca-city
 todo: ['New interior (replaces: new); placeholder room, sized for its contents.', 'Net-new row net:kamino-cloning-hall (bible/NET_NEW_DESIGNS.md); gate and level
     band in mapping/area_progression_extra.csv.']
+room:
+  style: room:kamino-tipoca
+  map: 26x16
+  parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, wall-curve, window-wide, doorway, step, level-edge, level-corner, raised-floor, railing, railing-end]

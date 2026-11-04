@@ -37,3 +37,7 @@ travel:
 - {to: grand-arena-battle-pike-room-normal, via: script, name: Pike path}
 - {to: grand-arena-battle-pike-room-wild-mons, via: script, name: Pike path}
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]
+room:
+  style: room:grand-arena-casino
+  map: 13x11
+  parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, doorway, wall-curve, window-wide, counter-wall, pillar, railing, railing-end]

@@ -48,3 +48,7 @@ travel:
 - {to: record-corner, via: link, name: Any Bacta Center upstairs (link lounge)}
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', 'Planet border cut: door at [5, 1] to union-room; reached by ship instead.', 'Planet border cut:
     door at [9, 1] to trade-center; reached by ship instead.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]
+room:
+  style: room:bacta-center
+  map: 14x10
+  parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, window, stairs, step, wall-curve, room:tatooine-adobe:window, room:tatooine-adobe:floor-alt]

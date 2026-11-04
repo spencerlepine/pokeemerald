@@ -71,3 +71,7 @@ people:
 signs: []
 warps: []
 todo: [Vanilla layout kept; dress with the planet's interior kit in the art phase.]
+room:
+  style: room:grand-arena-casino
+  map: 20x10
+  parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, wall-curve, window-wide, counter-wall, pillar, step, level-edge, level-corner, raised-floor, railing, railing-end]

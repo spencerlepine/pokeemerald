@@ -37,3 +37,8 @@ warps:
   at: [4, 5]
   to: bright-tree
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]
+room:
+  style: room:ewok-treehut
+  map: 8x6
+  parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, wall-curve, railing, railing-end, beam, step, level-edge, level-corner, raised-floor, ladder]
+  grow: '10x8: a round hut with the trunk in the middle needs more than 8x6 to leave a ring of floor.'

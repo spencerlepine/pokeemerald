@@ -48,3 +48,7 @@ warps:
   to: dagobah
 todo: ['New interior (replaces: new); placeholder room, sized for its contents.', Ship travel menu = vanilla boat/ferry ticket script; the StarNAV console lists unlocked
     planets.]
+room:
+  style: room:docking-hangar
+  map: 16x12
+  parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, blast-door, pit-edge, pit, catwalk, catwalk-rail, ramp, viewport, room:dagobah-mud-hut:window, room:dagobah-mud-hut:floor-alt]

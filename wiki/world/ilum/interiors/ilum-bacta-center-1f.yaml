@@ -47,3 +47,7 @@ warps:
   at: [1, 6]
   to: ilum-bacta-center-2f
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]
+room:
+  style: room:bacta-center
+  map: 14x9
+  parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, stairs, counter-wall, alcove, step, wall-curve, room:ilum-jedi-temple:window, room:ilum-jedi-temple:floor-alt]

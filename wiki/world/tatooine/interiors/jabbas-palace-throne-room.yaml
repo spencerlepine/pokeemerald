@@ -68,3 +68,7 @@ warps:
   to: jabbas-palace-barge-dock
 todo: ['New interior (replaces: new); placeholder room, sized for its contents.', New interior jabbas-palace-rancor-pit (optional battle) under the trapdoor., 'Net-new
     row net:jabbas-palace (bible/NET_NEW_DESIGNS.md); gate and level band in mapping/area_progression_extra.csv.']
+room:
+  style: room:hutt-palace
+  map: 26x18
+  parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, stairs, doorway, pillar-wide, arch, step, level-edge, level-corner, raised-floor, grate-floor, blast-door, wall-curve, ramp]

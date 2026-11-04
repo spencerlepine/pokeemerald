@@ -59,3 +59,7 @@ warps:
   at: [10, 19]
   to: sealed-vault-outer-room
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']
+room:
+  style: room:warden-tomb
+  map: 21x23
+  parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, doorway, pillar, niche, step, level-edge, raised-floor]

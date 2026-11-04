@@ -70,3 +70,7 @@ warps:
   at: [3, 3]
   to: republic-wreck-rooms-2-1f
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']
+room:
+  style: room:republic-wreck
+  map: 18x12
+  parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, stairs, doorway, wall-angle, window-round, blast-door, pit-edge, pit, ladder, beam]

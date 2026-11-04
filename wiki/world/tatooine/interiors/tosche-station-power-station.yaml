@@ -45,3 +45,7 @@ warps:
   at: [9, 11]
   to: tosche-station
 todo: ['New interior (replaces: new); placeholder room, sized for its contents.']
+room:
+  style: room:tatooine-workshop
+  map: 18x12
+  parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, catwalk, catwalk-rail, ramp, pit-edge, pit, railing, railing-end, grate-floor, beam, wall-angle]

@@ -55,3 +55,7 @@ warps:
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']
 travel:
 - {to: republic-wreck-underwater-2, via: dive, name: Dive back down to the flooded deck}
+room:
+  style: room:republic-wreck
+  map: 13x11
+  parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, doorway, wall-angle, window-round, blast-door, pit-edge, pit, ladder, beam]

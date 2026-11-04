@@ -101,3 +101,7 @@ warps:
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']
 travel:
 - {to: underwater-sealed-chamber, via: dive, name: Dive back down from the entrance pool}
+room:
+  style: room:warden-tomb
+  map: 21x23
+  parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, doorway, pillar, niche, step, level-edge, raised-floor]

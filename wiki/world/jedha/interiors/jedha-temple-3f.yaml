@@ -59,3 +59,7 @@ warps:
   at: [6, 12]
   to: jedha-temple-2f
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]
+room:
+  style: room:jedha-holy-city
+  map: 13x13
+  parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, window, stairs, arch, alcove, niche, pillar-wide, step, level-edge, level-corner, raised-floor, light-pool]

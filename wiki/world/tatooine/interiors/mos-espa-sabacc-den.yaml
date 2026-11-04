@@ -118,3 +118,7 @@ warps:
   at: [12, 10]
   to: mos-espa
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]
+room:
+  style: room:tatooine-cantina
+  map: 22x11
+  parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, wall-curve, alcove, arch, step, level-edge, level-corner, raised-floor, pillar]

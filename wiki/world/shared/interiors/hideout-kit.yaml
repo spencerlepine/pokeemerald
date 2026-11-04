@@ -33,3 +33,7 @@ warps:
   to: MAP_DYNAMIC
 todo: ['Stands for all 28 vanilla secret base templates (4 sizes each of red, brown, blue and yellow caves, trees and shrubs).', 'Per-planet hideout spots (Tatooine
     rock hollows, Endor tree hollows, Hoth ice caves) are picked in the art phase.']
+room:
+  style: room:hideout-hollow
+  map: 11x9
+  parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, wall-curve]

@@ -55,3 +55,8 @@ warps:
   at: [4, 3]
   to: MAP_DYNAMIC
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]
+room:
+  style: room:starship-cabin
+  map: 5x5
+  parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, wall-curve, window-round, blast-door, beam, ladder]
+  grow: '7x6: the curved hull and the hatch do not fit 5x5.'

@@ -56,3 +56,7 @@ warps:
   at: [13, 1]
   to: yavin-4-launch-tower-1f
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]
+room:
+  style: room:massassi-rebel-base
+  map: 16x10
+  parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, window, stairs, pillar-wide, ramp, step, level-edge, level-corner, raised-floor, beam, blast-door, arch]

@@ -66,3 +66,7 @@ warps:
   at: [8, 11]
   to: tusken-ruins
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']
+room:
+  style: room:warden-tomb
+  map: 17x33
+  parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, pillar, niche, step, level-edge, raised-floor]

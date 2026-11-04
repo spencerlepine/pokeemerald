@@ -55,3 +55,8 @@ warps:
   at: [8, 2]
   to: mos-pelgo-player-home-2f
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.', Vanilla layout kept; dress with the planet's interior kit in the art phase.]
+room:
+  style: room:tatooine-adobe
+  map: 11x9
+  parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, stairs, wall-curve, niche, alcove, step, level-edge, level-corner, raised-floor, light-pool, ladder]
+  grow: '13x10: the curved dome corners take a tile on each side and the sunken floor needs a step ring; 11x9 leaves too little floor.'

@@ -69,3 +69,7 @@ warps:
   at: [36, 4]
   to: fortress-vader-1f
 todo: ['''#'' cells are cliffs and rock walls kept from vanilla.']
+room:
+  style: room:vader-fortress
+  map: 49x28
+  parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, stairs, wall-angle, pool, pool-edge, catwalk, catwalk-rail, step, level-edge, level-corner, raised-floor, pillar-wide, blast-door]
