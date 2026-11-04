@@ -40,6 +40,20 @@ TILES_OUT = os.path.join(ROOT, "wiki", "world", "models", "tiles")
 TILESETS_OUT = os.path.join(ROOT, "wiki", "world", "models", "tilesets")
 # rows that are not objects: surfaces and ledges drawn as terrain tiles (`mapping/terrain.csv`)
 NOT_MODELS = ("greybox terrain",)
+# rows the building kit draws (tools/building-kit, wiki/mapping/buildings.csv): no world-art model; the row
+# points at the kit's first building for it (owner 2026-11-04: reuse the kit's pads and docking bays)
+BUILDING_KIT = ("art:tatooine:docking-bay", "art:shared:landing-pad", "art:bespin:landing-platform")
+BUILDINGS_CSV = os.path.join(ROOT, "wiki", "mapping", "buildings.csv")
+
+
+def _kit_png(art):
+    if not os.path.exists(BUILDINGS_CSV):
+        return ""
+    with open(BUILDINGS_CSV, newline="") as fh:
+        bs = [b for b in csv.DictReader(fh) if b["art"] == art and b["png"]]
+    # prefer the kit's own blueprint for the subject (tatooine/docking-bay for the docking bay)
+    bs.sort(key=lambda b: not b["blueprint"].endswith(art.split(":")[-1]))
+    return bs[0]["png"] if bs else ""
 
 
 def model_path(name):
@@ -484,6 +498,10 @@ def main(args):
         if r["tool"] in NOT_MODELS:
             r["model_status"] = "N/A"
             continue
+        if r["concept_id"] in BUILDING_KIT:
+            r.update(model_status="N/A", model="tools/building-kit", model_png=_kit_png(r["concept_id"]),
+                     model_tiles="", model_variants="")
+            continue
         if True:
             n = name_of(r["concept_id"])
             if not r["model_status"]:
@@ -518,7 +536,7 @@ def main(args):
         _save(rows)
     if args.status or not names:
         from collections import Counter
-        sc = [r for r in rows if r["tool"] not in NOT_MODELS]
+        sc = [r for r in rows if r["tool"] not in NOT_MODELS and r["concept_id"] not in BUILDING_KIT]
         for r in sc:
             if args.status:
                 print(f"{r['model_status']:12} {r['concept_id']:44} {r['drawn']:6} {r['model_tiles']:>4}  {r['model']}")

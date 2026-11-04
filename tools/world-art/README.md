@@ -91,6 +91,12 @@ then rendered by the Emerald camera into a grey sprite. Grey only: no colour, ou
   kit per modelling group with the pieces its rows share: `shared-scenery`, `shared-a`, `shared-b1`,
   `tatooine-objects`, `tatooine-buildings`, `tatooine-rest`, `bespin-kamino`, `sullust-mustafar`,
   `endor-dagobah`, `kashyyyk-felucia-small`, `yavin-hoth-ilum`, `deathstar-arena-jedha`.
+- **Drawn by the building kit:** the docking bay, the shared landing pad and the Bespin landing platform have no
+  model here (`BUILDING_KIT` in `worldart/scenery.py`). Their rows point at the kit's building
+  (`../building-kit`, `wiki/mapping/buildings.csv`), status `N/A`. Pads, bays, hangars and docks are drawn
+  empty: a ship is its own sprite placed on them.
+- **Round and flat things** follow the 3/4 rule in `../building-kit/README.md`: ovals about 0.7 as deep as wide,
+  raised with a thick south wall, never a flat disc seen from straight above.
 - **Rooms** (tool `greybox room`) set `footprint: 1` and `box: null`: the scene sheet needs one footprint row.
 - **Variants**: `variants: {name: {overrides}}` makes one model many outputs. Each variant is merged over
   the model: `params` key by key, any other key replaced (`tilt`, `turn`, `sink`, `scale`, `foot`,

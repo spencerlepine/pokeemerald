@@ -1,17 +1,18 @@
 # Fallen Massassi head (art:yavin-4:fallen-massassi-head), hit box 4x3, drawn 4x4.
-# Reference: the carved stone of the Massassi temples (wiki/art/concept/yavin-4/massassi-temple__*); the
-# idol itself is this game's own. A blocky stone head: heavy brow over deep eye sockets, a broad flat
-# nose, a slit mouth, cheek plates and a tall stepped headdress. Modelled upright, face to the south;
-# posed fallen on its side in the river (the crown points east, the face still to the camera), sunk to
-# the cheek, with creepers hanging from the eyes. Water rings in shade around it.
-# Axes (upright head): x east, y north, z up, origin on the ground under the head's middle.
+# Reference: the Yavin head sculpture of The Old Republic (fallen-massassi-head__web_1, _2): a severed
+# giant stone head with a domed skull, a carved band across the brow with a plate in the middle, a heavy
+# brow over deep eyes, a big nose, a down-turned mouth, a pointed chin and flat cheek plates; the Massassi
+# themselves (_5) give the brow ridges. How a fallen head reads: the Nemrut Dag heads (_3) sit upright on
+# the ground on their broken necks, face out. So this one sits in the river on its broken neck, face to
+# the south (the camera), sunk to the chin and tipped a little onto its cheek, moss on the dome.
+# Axes (upright head): x east, y north, z up, face toward -y, origin on the ground under the head's middle.
 name: yavin-4_fallen-massassi-head
 art: art:yavin-4:fallen-massassi-head
 palette: greybox
 cells: [4, 4]
-foot: [5, 52]
+foot: [32, 45]
 footprint: 3
-scale: 1.4
+scale: 1.0
 render:
   light: [-0.55, -0.3, 0.78]
   outline: false
@@ -21,46 +22,77 @@ render:
   cleanup: true
 materials:
   stone: {ramp: mid,   bands: [0.25, 0.55, 0.85]}
-  cap:   {ramp: bone,  bands: [0.3, 0.6, 0.88]}
+  cap:   {ramp: light, bands: [0.25, 0.55, 0.85]}
+  face:  {ramp: light, bands: [0.1, 0.22, 0.7]}
   dark:  {ramp: dark,  bands: [0.5, 0.8, 0.95]}
-  moss:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  moss:  {ramp: dark,  bands: [0.05, 0.3, 0.6]}
+  rubble: {ramp: mid,  bands: [0.2, 0.5, 0.8]}
   water: {color: shade}
 drop_shadow:
   - {dx: 1, dy: 1, color: shade, below: 3}
-box: [60, 44]
+box: [64, 44]
 groups: {body: {}, inside: {}}
 parts:
+  # the skull: a broad block, domed on top, the face flat to the south
   - name: skull
     mat: stone
-    hull: {points: [[-0.75, -0.5, 0], [0.75, -0.5, 0], [-0.75, 0.4, 0], [0.75, 0.4, 0],
-                    [-0.9, -0.55, 1.15], [0.9, -0.55, 1.15], [-0.9, 0.45, 1.15], [0.9, 0.45, 1.15],
-                    [-0.75, -0.5, 1.85], [0.75, -0.5, 1.85], [-0.75, 0.38, 1.85], [0.75, 0.38, 1.85]], round: 0.04}
-  # the face: a heavy brow over two big deep eye sockets, a broad nose, a wide slit mouth
-  - {name: brow, mat: cap, box: {c: [0, -0.62, 1.45], half: [0.85, 0.13, 0.13], radius: 0.03}}
-  - {name: eye-cut-w, mat: stone, op: subtract, box: {c: [-0.42, -0.6, 1.08], half: [0.3, 0.25, 0.22]}}
-  - {name: eye-cut-e, mat: stone, op: subtract, box: {c: [0.42, -0.6, 1.08], half: [0.3, 0.25, 0.22]}}
-  - {name: eye-w, group: inside, mat: dark, box: {c: [-0.42, -0.38, 1.08], half: [0.3, 0.04, 0.22]}}
-  - {name: eye-e, group: inside, mat: dark, box: {c: [0.42, -0.38, 1.08], half: [0.3, 0.04, 0.22]}}
+    hull: {points: [[-0.85, -0.55, 0], [0.85, -0.55, 0], [-0.8, 0.5, 0], [0.8, 0.5, 0],
+                    [-1.05, -0.7, 0.9], [1.05, -0.7, 0.9], [-1.0, 0.65, 0.9], [1.0, 0.65, 0.9],
+                    [-1.0, -0.7, 1.75], [1.0, -0.7, 1.75], [-0.95, 0.6, 1.75], [0.95, 0.6, 1.75],
+                    [-0.65, -0.5, 2.25], [0.65, -0.5, 2.25], [-0.6, 0.35, 2.25], [0.6, 0.35, 2.25]], round: 0.06}
+  # the face, a lighter slab on the south side of the skull
+  - name: face-slab
+    mat: face
+    prism: {poly: [[-0.9, -0.62], [0.9, -0.62], [0.9, -0.74], [-0.9, -0.74]], z: [0.05, 1.75], top: [0.95, 1], round: 0.03}
+  # the carved band round the brow, a plate in its middle
+  - {name: band, mat: stone, box: {c: [0, -0.68, 1.86], half: [1.02, 0.08, 0.09], radius: 0.02}}
+  - {name: plate, mat: cap, box: {c: [0, -0.76, 1.95], half: [0.2, 0.08, 0.17], radius: 0.03}}
+  # the heavy brow
+  - {name: brow, mat: cap, prism: {poly: [[-0.95, -0.66], [0.95, -0.66], [0.85, -0.9], [-0.85, -0.9]], z: [1.5, 1.68], top: [1, 0.85], round: 0.03}}
+  # two big deep eye sockets
+  - {name: eye-cut-w, mat: face, op: subtract, box: {c: [-0.45, -0.78, 1.24], half: [0.3, 0.26, 0.22]}}
+  - {name: eye-cut-e, mat: face, op: subtract, box: {c: [0.45, -0.78, 1.24], half: [0.3, 0.26, 0.22]}}
+  - {name: eye-w, group: inside, mat: dark, box: {c: [-0.45, -0.54, 1.24], half: [0.3, 0.04, 0.22]}}
+  - {name: eye-e, group: inside, mat: dark, box: {c: [0.45, -0.54, 1.24], half: [0.3, 0.04, 0.22]}}
+  # the stone eyeballs low in the sockets
+  - {name: ball-w, mat: stone, box: {c: [-0.45, -0.62, 1.14], half: [0.14, 0.06, 0.1], radius: 0.03}}
+  - {name: ball-e, mat: stone, box: {c: [0.45, -0.62, 1.14], half: [0.14, 0.06, 0.1], radius: 0.03}}
+  # the big nose, from between the eyes to above the mouth
   - name: nose
-    mat: cap
-    prism: {poly: [[-0.24, -0.55], [0.24, -0.55], [0.2, -0.78], [-0.2, -0.78]], z: [0.5, 1.1], top: [0.55, 0.55], round: 0.03}
-  - {name: mouth-cut, mat: stone, op: subtract, box: {c: [0, -0.6, 0.28], half: [0.5, 0.15, 0.08]}}
-  - {name: mouth, group: inside, mat: dark, box: {c: [0, -0.47, 0.28], half: [0.5, 0.04, 0.08]}}
-  # the stepped headdress
-  - {name: crown-1, mat: cap, prism: {poly: [[-0.8, -0.52], [0.8, -0.52], [0.8, 0.4], [-0.8, 0.4]], z: [1.85, 2.1], top: 0.95, round: 0.03}}
-  - {name: crown-2, mat: stone, prism: {poly: [[-0.55, -0.42], [0.55, -0.42], [0.55, 0.32], [-0.55, 0.32]], z: [2.1, 2.5], top: 0.7, round: 0.03}}
-  # creepers growing out of the eyes, hanging to the water once the head is on its side
-  - {name: vine-w, group: inside, mat: moss, box: {c: [-0.75, -0.6, 1.0], half: [0.3, 0.05, 0.07], radius: 0.03}}
-  - {name: vine-e, group: inside, mat: moss, box: {c: [0.1, -0.6, 0.95], half: [0.3, 0.05, 0.06], radius: 0.03}}
-# fallen on its side in the river: crown to the east, face to the camera
-tilt: [-90, 0]
-pivot: [0, 0]
-sink: -0.6
+    mat: stone
+    prism: {poly: [[-0.2, -0.66], [0.2, -0.66], [0.3, -1.0], [-0.3, -1.0]], z: [0.72, 1.48], top: [0.55, 0.45], lean: [0, 0.12], round: 0.04}
+  - {name: nostrils, group: inside, mat: dark, box: {c: [0, -0.9, 0.74], half: [0.22, 0.1, 0.04]}}
+  # the down-turned mouth and the pointed chin
+  - {name: mouth-cut, mat: face, op: subtract, box: {c: [0, -0.78, 0.5], half: [0.46, 0.24, 0.12]}}
+  - {name: mouth, group: inside, mat: dark, box: {c: [0, -0.56, 0.5], half: [0.46, 0.04, 0.12]}}
+  - name: chin
+    mat: face
+    prism: {poly: [[-0.4, -0.6], [0.4, -0.6], [0.15, -0.95], [-0.15, -0.95]], z: [0.0, 0.4], top: [1.2, 1], round: 0.03}
+  # the flat cheek plates down each side
+  - {name: cheek-w, mat: cap, box: {c: [-1.0, -0.2, 0.85], half: [0.1, 0.45, 0.55], radius: 0.03}}
+  - {name: cheek-e, mat: cap, box: {c: [1.0, -0.2, 0.85], half: [0.1, 0.45, 0.55], radius: 0.03}}
+  # moss on the dome, a creeper hanging over the brow into the west eye
+  - {name: moss-1, group: inside, mat: moss, ellipsoid: {c: [-0.4, -0.35, 2.2], r: [0.45, 0.25, 0.07]}}
+  - {name: moss-2, group: inside, mat: moss, ellipsoid: {c: [0.55, 0.1, 2.22], r: [0.25, 0.3, 0.05]}}
+  - {name: vine-1, group: inside, mat: moss, box: {c: [-0.6, -0.92, 1.35], half: [0.05, 0.03, 0.3], radius: 0.02}}
+  - {name: vine-2, group: inside, mat: moss, box: {c: [0.72, -0.92, 1.4], half: [0.05, 0.03, 0.22], radius: 0.02}}
+# sat on its broken neck in the river, sunk to the chin, tipped a little onto the east cheek
+tilt: [-8, 6]
+sink: 0.2
 ground:
-  - {name: ring-1, mat: water, cylinder: {a: [1.3, -0.1, 0], b: [1.3, -0.1, 0.01], r1: 1.0}, squash: [1.6, 0.8, 1]}
+  # the river round it, and the broken-off neck lying beside it
+  - {name: ring-1, mat: water, cylinder: {a: [0, -0.3, 0], b: [0, -0.3, 0.01], r1: 1.0}, squash: [1.65, 0.72, 1]}
+  # broken stone from the neck at the waterline, either side of the chin
+  - {name: neck-w, mat: rubble, hull: {points: [[-1.3, -0.75, 0], [-0.9, -0.8, 0], [-1.25, -0.4, 0], [-0.85, -0.45, 0],
+                                                [-1.2, -0.7, 0.22], [-0.95, -0.72, 0.18], [-1.15, -0.45, 0.2]], round: 0.03}}
+  - {name: neck-e, mat: rubble, hull: {points: [[0.9, -0.85, 0], [1.3, -0.8, 0], [0.95, -0.5, 0], [1.32, -0.48, 0],
+                                               [1.0, -0.8, 0.3], [1.22, -0.75, 0.26], [1.05, -0.55, 0.28]], round: 0.03}}
 variants:
-  # on its side, sunk to the cheek in the river
+  # upright on its neck in the river, sunk to the chin
   in-river: {}
-  # rolled face-up a little, the crown still to the east
+  # tipped back, the face looking up out of the water
   face-up:
-    tilt: [-90, -30]
+    tilt: [-6, 38]
+    sink: 0.45
+    scale: 0.95
+    foot: [32, 46]

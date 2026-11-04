@@ -43,56 +43,57 @@ templates:
       - name: plate
         mat: plate
         hull: {points: [
-          [0.2,  "=side * 0.95", 0.62], [-2.1, "=side * 0.95", 0.62],
-          [0.2,  "=side * 0.95 - side * 0.12 * sin(radians(ang))", "=0.62 + 0.12 * cos(radians(ang))"],
-          [-2.1, "=side * 0.95 - side * 0.12 * sin(radians(ang))", "=0.62 + 0.12 * cos(radians(ang))"],
-          [-1.15, "=side * (0.95 + span * cos(radians(ang)))", "=0.62 + span * sin(radians(ang))"],
-          [-2.1,  "=side * (0.95 + span * cos(radians(ang)))", "=0.62 + span * sin(radians(ang))"],
-          [-1.15, "=side * (0.95 + span * cos(radians(ang))) - side * 0.12 * sin(radians(ang))", "=0.62 + span * sin(radians(ang)) + 0.12 * cos(radians(ang))"],
-          [-2.1,  "=side * (0.95 + span * cos(radians(ang))) - side * 0.12 * sin(radians(ang))", "=0.62 + span * sin(radians(ang)) + 0.12 * cos(radians(ang))"]], round: 0.03}
+          [0.0,  "=side * 0.95", 0.62], [-1.9, "=side * 0.95", 0.62],
+          [0.0,  "=side * 0.95 - side * 0.12 * sin(radians(ang))", "=0.62 + 0.12 * cos(radians(ang))"],
+          [-1.9, "=side * 0.95 - side * 0.12 * sin(radians(ang))", "=0.62 + 0.12 * cos(radians(ang))"],
+          [-1.0, "=side * (0.95 + span * cos(radians(ang)))", "=0.62 + span * sin(radians(ang))"],
+          [-1.9,  "=side * (0.95 + span * cos(radians(ang)))", "=0.62 + span * sin(radians(ang))"],
+          [-1.0, "=side * (0.95 + span * cos(radians(ang))) - side * 0.12 * sin(radians(ang))", "=0.62 + span * sin(radians(ang)) + 0.12 * cos(radians(ang))"],
+          [-1.9,  "=side * (0.95 + span * cos(radians(ang))) - side * 0.12 * sin(radians(ang))", "=0.62 + span * sin(radians(ang)) + 0.12 * cos(radians(ang))"]], round: 0.03}
 parts:
   # the boxy main hull
   - name: body
     mat: hull
-    hull: {points: [[-2.2, -0.7, 0.3], [0.9, -0.6, 0.3], [-2.2, 0.7, 0.3], [0.9, 0.6, 0.3],
-                    [-2.2, -0.62, 1.3], [0.9, -0.55, 1.25], [-2.2, 0.62, 1.3], [0.9, 0.55, 1.25]], round: 0.05}
+    hull: {points: [[-1.9, -0.7, 0.3], [0.7, -0.6, 0.3], [-1.9, 0.7, 0.3], [0.7, 0.6, 0.3],
+                    [-1.9, -0.62, 1.3], [0.7, -0.55, 1.25], [-1.9, 0.62, 1.3], [0.7, 0.55, 1.25]], round: 0.05}
   # the engine pods along each upper side, the wings hang under them
-  - {name: pod-l, mat: pod, cylinder: {a: [-2.35, 0.88, 0.92], b: [0.55, 0.88, 0.92], r1: 0.3}}
-  - {name: pod-r, mat: pod, cylinder: {a: [-2.35, -0.88, 0.92], b: [0.55, -0.88, 0.92], r1: 0.3}}
-  - {name: engines, mat: dark, box: {c: [-2.24, 0, 0.95], half: [0.04, 0.45, 0.25], radius: 0.01}}
+  - {name: pod-l, mat: pod, cylinder: {a: [-2.05, 0.88, 0.92], b: [0.45, 0.88, 0.92], r1: 0.3}}
+  - {name: pod-r, mat: pod, cylinder: {a: [-2.05, -0.88, 0.92], b: [0.45, -0.88, 0.92], r1: 0.3}}
+  - {name: engines, mat: dark, box: {c: [-1.94, 0, 0.95], half: [0.04, 0.45, 0.25], radius: 0.01}}
   # the pointed cockpit wedge, low at the front, its window band on the sloped top
   - name: nose
     mat: hull
-    hull: {points: [[0.85, -0.45, 0.35], [0.85, 0.45, 0.35], [0.85, -0.42, 1.2], [0.85, 0.42, 1.2],
-                    [2.35, -0.22, 0.45], [2.35, 0.22, 0.45], [2.25, -0.2, 0.62], [2.25, 0.2, 0.62]], round: 0.04}
+    hull: {points: [[0.65, -0.45, 0.35], [0.65, 0.45, 0.35], [0.65, -0.42, 1.2], [0.65, 0.42, 1.2],
+                    [1.95, -0.22, 0.45], [1.95, 0.22, 0.45], [1.85, -0.2, 0.62], [1.85, 0.2, 0.62]], round: 0.04}
   - name: window
     mat: dark
-    hull: {points: [[1.05, -0.38, 1.12], [1.05, 0.38, 1.12], [1.75, -0.28, 0.86], [1.75, 0.28, 0.86],
-                    [1.05, -0.36, 1.2], [1.05, 0.36, 1.2], [1.75, -0.26, 0.93], [1.75, 0.26, 0.93]], round: 0.01}
+    hull: {points: [[0.85, -0.38, 1.12], [0.85, 0.38, 1.12], [1.45, -0.28, 0.86], [1.45, 0.28, 0.86],
+                    [0.85, -0.36, 1.2], [0.85, 0.36, 1.2], [1.45, -0.26, 0.93], [1.45, 0.26, 0.93]], round: 0.01}
   # the tall dorsal fin: root over the rear hull, leading edge swept back, trailing edge straight up
   - name: fin
     mat: plate
-    extrude: {axis: y, span: [-0.08, 0.08], profile: [[-2.15, 1.2], [-0.2, 1.2], [-1.1, 4.0], [-2.25, 4.0]], round: 0.03}
+    extrude: {axis: y, span: [-0.08, 0.08], profile: [[-1.9, 1.2], [-0.05, 1.2], [-0.95, 3.8], [-2.0, 3.8]], round: 0.03}
   - {use: lambda-wing, name: wing-l, with: {side: 1, ang: "=wl", span: "=sl"}}
   - {use: lambda-wing, name: wing-r, with: {side: -1, ang: "=wr", span: "=sr"}}
 ground:
   - {name: fern-1, mat: moss, ellipsoid: {c: [-3.2, -1.4, 0], r: [0.45, 0.22, 0.2]}}
   - {name: fern-2, mat: moss, ellipsoid: {c: [3.0, -1.2, 0], r: [0.4, 0.2, 0.18]}}
 variants:
-  # came down hard: nose dug in, the right wing snapped off and lying in the ferns, the left one jammed
-  # half up
   crashed:
-    turn: -40
-    params: {wl: 35, wr: -10, sr: 0.5}
-    tilt: [-5, -4]
+    turn: -58
+    scale: 0.62
+    foot: [68, 80]
+    params: {wl: 68, wr: -10, sl: 3.0, sr: 1.8}
+    tilt: [-5, -6]
     pivot: [2.0, 0]
-    sink: 0.2
-    ground:
-      - {name: lost-wing, mat: plate, prism: {poly: [[-2.6, -1.2], [-0.6, -1.0], [-1.0, -1.9], [-2.5, -2.1]], z: [0.0, 0.12], round: 0.02}}
-      - {name: fern-1, mat: moss, ellipsoid: {c: [-3.2, -1.4, 0], r: [0.45, 0.22, 0.2]}}
-      - {name: fern-2, mat: moss, ellipsoid: {c: [3.0, -1.2, 0], r: [0.4, 0.2, 0.18]}}
-  # sitting level, both wings jammed half way up the landing fold
-  wings-up:
-    turn: -40
     sink: 0.1
-    params: {wl: 55, wr: 55}
+    ground:
+      - {name: lost-wing, mat: plate, prism: {poly: [[-4.0, -1.0], [-2.7, -0.8], [-2.4, -1.6], [-3.7, -1.95]], z: [0.0, 0.1], round: 0.02}}
+      - {name: dirt-1, mat: moss, ellipsoid: {c: [1.2, -2.0, 0], r: [0.6, 0.25, 0.18]}}
+      - {name: fern-2, mat: moss, ellipsoid: {c: [3.3, -1.1, 0], r: [0.4, 0.2, 0.18]}}
+  wings-up:
+    turn: -62
+    scale: 0.62
+    foot: [64, 80]
+    sink: 0.1
+    params: {wl: 62, wr: 62, sl: 3.0, sr: 3.0}

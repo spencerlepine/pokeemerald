@@ -1,15 +1,15 @@
 # Player's ship (art:new:player-ship), hit box 8x5, drawn 8x6. Parked in every hangar room.
-# No canon ship is named for this row (the X-wing proposal in bible/FAN_CRITIQUE.md is not approved),
-# so this is a stock light freighter in the films' style (the HWK-290 / YT-series family): a flat
-# wedge hull tapering to the nose, a raised cockpit with dark glass forward, two engine nacelles on
-# stub wings at the back with dark exhausts, a sensor dish on top, landing gear, the boarding ramp
-# down on the south side. Parked broadside, nose east. Recoloured per owner later.
-# Axes: x east, y north, z up; origin on the floor at the middle of the hit box's south edge.
+# The owner's pick (2026-11-04): the Millennium Falcon, Han's YT-1300, which flies the player between
+# planets from Act 1. Same model as art:tatooine:freighter-parked (references there), scaled up to the
+# hangar's 8x5 hit box: the saucer, the two mandibles, the cockpit tube on the south side, the dish,
+# the turret, the engine strip round the stern, landing legs and the boarding ramp.
+# Ship axes: x forward (nose), y to port (north), z up, origin on the ground under the saucer's centre.
 name: new_player-ship
 art: art:new:player-ship
 palette: greybox
 cells: [8, 6]
-foot: [64, 98]
+foot: [64, 48]
+scale: 1.25
 footprint: 5
 render:
   light: [-0.55, -0.3, 0.78]
@@ -19,63 +19,60 @@ render:
   margin: 0
   cleanup: true
 materials:
-  hull:   {ramp: mid,   bands: [0.0, 0.3, 0.75]}
-  plate:  {ramp: light, bands: [-0.1, 0.25, 0.7]}
-  deck:   {ramp: mid,   bands: [0.0, 0.3, 0.7]}
-  glass:  {ramp: dark,  bands: [0.1, 0.4, 0.8]}
-  dark:   {ramp: dark,  bands: [0.2, 0.5, 0.85]}
-  engine: {ramp: light, bands: [0.0, 0.35, 0.75]}
-  ramp:   {ramp: bone,  bands: [0.0, 0.3, 0.7]}
+  hull:  {ramp: light, bands: [0.25, 0.55, 0.88]}
+  plate: {ramp: mid,   bands: [0.15, 0.5, 0.85]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  glass: {ramp: dark,  bands: [0.4, 0.7, 0.95]}
+  shade: {color: shade}
 drop_shadow:
   - {dx: 1, dy: 1, color: shade, below: 5}
 box: [126, 78]
-params:
-  cy: 2.0           # the hull's centre line (y)
-  hb: 0.6           # the hull's belly height
+params: {R: 1.75, zh: 0.3, t: 0.42}
+templates:
+  # one mandible: a flat tapering prong reaching forward from the saucer
+  prong:
+    params: {s: 1}
+    parts:
+      - {name: p, mat: hull, prism: {poly: [[0.9, "=s * 0.32"], [3.05, "=s * 0.36"], [3.05, "=s * 0.98"], [0.9, "=s * 1.45"]], z: ["=zh + 0.04", "=zh + t * 0.85"], top: 0.92, round: 0.03}}
+      - {name: tip, mat: plate, box: {c: [2.9, "=s * 0.67", "=zh + t * 0.8"], half: [0.16, 0.26, 0.04], radius: 0.02}}
+  leg:
+    parts:
+      - {name: l, mat: dark, box: {c: [0, 0, "=zh / 2"], half: [0.08, 0.08, "=zh / 2"]}}
+      - {name: pad, mat: dark, cylinder: {a: [0, 0, 0], b: [0, 0, 0.04], r1: 0.13}}
 parts:
-  # the hull: a flat slab tapering to a wedge nose in the east, a light deck plate on top
-  - name: hull
-    mat: hull
-    extrude: {axis: x, span: [-3.0, 0.9], profile: [["=cy - 1.05", "=hb"], ["=cy + 1.05", "=hb"], ["=cy + 0.9", "=hb + 0.75"], ["=cy - 0.9", "=hb + 0.75"]], round: 0.05}
-  - name: nose
-    mat: hull
-    extrude: {axis: x, span: [0.9, 3.6], profile: [["=cy - 1.05", "=hb"], ["=cy + 1.05", "=hb"], ["=cy + 0.9", "=hb + 0.75"], ["=cy - 0.9", "=hb + 0.75"]], end: [0.35, 0.45], lean: [0, -0.2], round: 0.05}
-  - name: deck
-    mat: deck
-    prism: {poly: [[-2.8, "=cy - 0.75"], [0.8, "=cy - 0.75"], [2.2, "=cy - 0.25"], [2.2, "=cy + 0.25"], [0.8, "=cy + 0.75"], [-2.8, "=cy + 0.75"]], z: ["=hb + 0.74", "=hb + 0.84"], top: 0.97, round: 0.02}
-  # the raised cockpit, forward, glass to the south and east
-  - name: cockpit
-    mat: hull
-    hull: {points: [[0.6, "=cy - 0.55", "=hb + 0.8"], [2.3, "=cy - 0.35", "=hb + 0.8"], [2.3, "=cy + 0.35", "=hb + 0.8"], [0.6, "=cy + 0.55", "=hb + 0.8"],
-                    [0.8, "=cy - 0.45", "=hb + 1.25"], [1.7, "=cy - 0.3", "=hb + 1.25"], [1.7, "=cy + 0.3", "=hb + 1.25"], [0.8, "=cy + 0.45", "=hb + 1.25"]], round: 0.04}
-  - name: canopy
-    mat: glass
-    hull: {points: [[1.45, "=cy - 0.42", "=hb + 0.98"], [2.25, "=cy - 0.36", "=hb + 0.84"], [1.7, "=cy - 0.33", "=hb + 1.2"], [1.45, "=cy - 0.38", "=hb + 1.22"],
-                    [1.45, "=cy - 0.2", "=hb + 1.0"], [2.25, "=cy - 0.2", "=hb + 0.86"]], round: 0.01}
-  - {name: dish-post, mat: dark, cylinder: {a: [-1.1, "=cy + 0.2", "=hb + 0.84"], b: [-1.1, "=cy + 0.2", "=hb + 1.15"], r1: 0.08}}
-  - {name: dish, mat: engine, cylinder: {a: [-1.1, "=cy + 0.2", "=hb + 1.12"], b: [-1.1, "=cy + 0.2", "=hb + 1.2"], r1: 0.42, r2: 0.3}}
-  # stub wings and the two engine nacelles at the back
-  - {name: wing, mat: hull, box: {c: [-1.9, "=cy", "=hb + 0.35"], half: [0.75, 1.75, 0.1], radius: 0.03}}
-  - {name: eng-s, mat: engine, cylinder: {a: [-3.65, "=cy - 1.55", "=hb + 0.45"], b: [-0.95, "=cy - 1.55", "=hb + 0.45"], r1: 0.4}}
-  - {name: eng-n, mat: engine, cylinder: {a: [-3.65, "=cy + 1.55", "=hb + 0.45"], b: [-0.95, "=cy + 1.55", "=hb + 0.45"], r1: 0.4}}
-  - {name: cone-s, mat: engine, cylinder: {a: [-0.95, "=cy - 1.55", "=hb + 0.45"], b: [-0.55, "=cy - 1.55", "=hb + 0.45"], r1: 0.4, r2: 0.2}}
-  - {name: cone-n, mat: engine, cylinder: {a: [-0.95, "=cy + 1.55", "=hb + 0.45"], b: [-0.55, "=cy + 1.55", "=hb + 0.45"], r1: 0.4, r2: 0.2}}
-  - {name: band-s, mat: dark, cylinder: {a: [-2.0, "=cy - 1.55", "=hb + 0.45"], b: [-1.85, "=cy - 1.55", "=hb + 0.45"], r1: 0.42}}
-  - {name: band-n, mat: dark, cylinder: {a: [-2.0, "=cy + 1.55", "=hb + 0.45"], b: [-1.85, "=cy + 1.55", "=hb + 0.45"], r1: 0.42}}
-  - {name: exhaust-s, mat: dark, cylinder: {a: [-3.72, "=cy - 1.55", "=hb + 0.45"], b: [-3.6, "=cy - 1.55", "=hb + 0.45"], r1: 0.3}}
-  # landing gear
-  - {name: gear-sw, mat: dark, box: {c: [-2.2, "=cy - 0.7", "=hb/2"], half: [0.12, 0.12, "=hb/2"]}}
-  - {name: gear-se, mat: dark, box: {c: [1.6, "=cy - 0.6", "=hb/2"], half: [0.12, 0.12, "=hb/2"]}}
-  - {name: gear-nw, mat: dark, box: {c: [-2.2, "=cy + 0.7", "=hb/2"], half: [0.12, 0.12, "=hb/2"]}}
-  - {name: gear-ne, mat: dark, box: {c: [1.6, "=cy + 0.6", "=hb/2"], half: [0.12, 0.12, "=hb/2"]}}
-  # the boarding ramp, down to the floor on the south side, the hatch dark above it
-  - name: ramp
-    mat: ramp
-    hull: {points: [[-0.15, "=cy - 1.0", "=hb + 0.02"], [0.75, "=cy - 1.0", "=hb + 0.02"], [-0.15, "=cy - 2.05", 0.0], [0.75, "=cy - 2.05", 0.0],
-                    [-0.15, "=cy - 1.0", "=hb - 0.06"], [0.75, "=cy - 1.0", "=hb - 0.06"], [-0.15, "=cy - 2.05", 0.0], [0.75, "=cy - 2.05", 0.0]], round: 0.01}
-  - {name: hatch, mat: dark, box: {c: [0.3, "=cy - 1.04", "=hb + 0.33"], half: [0.4, 0.04, 0.28], radius: 0.02}}
+  # the saucer: a low twelve-sided disc with a raised centre
+  - {name: saucer, mat: hull, cylinder: {a: [0, 0, "=zh"], b: [0, 0, "=zh + t"], r1: "=R", r2: "=R - 0.12"}}
+  - {name: rim, mat: plate, cylinder: {a: [0, 0, "=zh"], b: [0, 0, "=zh + 0.12"], r1: "=R + 0.03"}}
+  - {name: crown, mat: plate, cylinder: {a: [0, 0, "=zh + t"], b: [0, 0, "=zh + t + 0.12"], r1: 1.05, r2: 0.95}}
+  # the upper hull plates (a darker trench ring) and the gun turret in the middle
+  - {ring: {name: trench, mat: plate, c: [0, 0, "=zh + t - 0.02"], axis: z, r: 1.35, size: [0.5, 0.18, 0.06], n: 14, round: 0.01}}
+  - {name: turret, mat: dark, cylinder: {a: [0, 0, "=zh + t + 0.1"], b: [0, 0, "=zh + t + 0.2"], r1: 0.32, r2: 0.26}}
+  - {name: guns, mat: dark, box: {c: [0.38, 0, "=zh + t + 0.17"], half: [0.25, 0.1, 0.03]}}
+  # the engine glow strip round the stern
+  - {ring: {name: engine, mat: glass, c: [0, 0, "=zh + 0.22"], axis: z, r: "=R - 0.04", size: [0.5, 0.12, 0.16], n: 18, arc: [130, 230], round: 0.01}}
+  # the two mandibles and the dark slot between them
+  - {use: prong, name: prong-n, with: {s: 1}}
+  - {use: prong, name: prong-s, with: {s: -1}}
+  # the cockpit tube on the starboard (south) side, its glass at the front
+  - {name: neck, mat: hull, box: {c: [0.85, -1.45, "=zh + 0.25"], half: [0.4, 0.35, 0.14], radius: 0.05}}
+  - {name: tube, mat: hull, cylinder: {a: [0.6, -1.85, "=zh + 0.28"], b: [2.2, -1.85, "=zh + 0.28"], r1: 0.27, r2: 0.25}}
+  - {name: canopy, mat: glass, ellipsoid: {c: [2.2, -1.85, "=zh + 0.3"], r: [0.2, 0.22, 0.2]}}
+  # the radar dish, on the upper hull to port of the turret
+  - {name: dish-post, mat: dark, box: {c: [0.75, 0.75, "=zh + t + 0.2"], half: [0.06, 0.06, 0.12]}}
+  - {name: dish, mat: hull, cylinder: {a: [0.75, 0.78, "=zh + t + 0.3"], b: [0.75, 0.72, "=zh + t + 0.4"], r1: 0.4, r2: 0.3}}
+  - {name: dish-hub, mat: dark, ellipsoid: {c: [0.75, 0.7, "=zh + t + 0.42"], r: [0.08, 0.08, 0.06]}}
+  # landing legs
+  - {use: leg, name: leg-1, at: [1.0, 0.7, 0]}
+  - {use: leg, name: leg-2, at: [1.0, -0.7, 0]}
+  - {use: leg, name: leg-3, at: [-1.0, 0, 0]}
+ground:
+  # the ship's shadow on the deck under it, and the boarding ramp let down on the south (starboard) side
+  - {name: under, mat: shade, cylinder: {a: [0.4, -0.25, 0], b: [0.4, -0.25, 0.01], r1: 2.25}}
+  - {name: ramp, mat: plate, hull: {points: [[-1.05, -1.9, "=zh"], [-0.35, -1.9, "=zh"], [-1.1, -2.6, 0.0], [-0.3, -2.6, 0.0],
+                                              [-1.05, -1.9, "=zh + 0.05"], [-0.35, -1.9, "=zh + 0.05"], [-1.1, -2.6, 0.05], [-0.3, -2.6, 0.05]], round: 0.01}}
 variants:
   ramp-down: {}
-  # ramp up, ready to fly
+  # ready to leave: the boarding ramp up
   ramp-up:
-    drop: ["ramp"]
+    ground:
+      - {name: under, mat: shade, cylinder: {a: [0.4, -0.25, 0], b: [0.4, -0.25, 0.01], r1: 2.25}}
