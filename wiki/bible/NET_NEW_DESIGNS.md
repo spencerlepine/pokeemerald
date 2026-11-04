@@ -409,6 +409,7 @@ port needs one small special (`IsLeadMonDroid`) or an inline species check; no f
 
 ### Greedo's battle (`net:cantina-greedo-battle`)
 
+- **In the game** (2026-11-04, `tools/port_people.py`): data, party and the three lines (`SwPeople_Text_Greedo_1` to `_3`). Still to place and script.
 - **Slot:** `TRAINER_TERRY`, which Emerald defines but never places (not on any map, not in any script). Its data changes
   to class POKEMANIAC (GAME HUNTER), pic `TRAINER_PIC_POKEMANIAC` (the Rodian front pic), name `GREEDO`, intense
   encounter music, no items, `AI_SCRIPT_CHECK_BAD_MOVE`. No placed trainer changes.

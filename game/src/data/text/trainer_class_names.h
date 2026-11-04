@@ -66,4 +66,7 @@ const u8 gTrainerClassNames[][13] = {
     [TRAINER_CLASS_PYRAMID_KING] = _("PYRAMID ACE"),
     [TRAINER_CLASS_RS_PROTAG] = _("TRAINER"),
     [TRAINER_CLASS_SKIFF_RIDER] = _("SKIFF RIDER"),
+// BEGIN net-new classes (wiki/tools/port_people.py)
+    [TRAINER_CLASS_RAIDER] = _("RAIDER"),
+// END net-new classes
 };

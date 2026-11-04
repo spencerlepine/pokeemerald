@@ -80,12 +80,12 @@
 #define OBJ_EVENT_GFX_SPENSER                     73
 #define OBJ_EVENT_GFX_NOLAND                      74
 #define OBJ_EVENT_GFX_LUCY                        75
-#define OBJ_EVENT_GFX_UNUSED_NATU_DOLL            76
-#define OBJ_EVENT_GFX_UNUSED_MAGNEMITE_DOLL       77
-#define OBJ_EVENT_GFX_UNUSED_SQUIRTLE_DOLL        78
-#define OBJ_EVENT_GFX_UNUSED_WOOPER_DOLL          79
-#define OBJ_EVENT_GFX_UNUSED_PIKACHU_DOLL         80
-#define OBJ_EVENT_GFX_UNUSED_PORYGON2_DOLL        81
+#define OBJ_EVENT_GFX_SW_EWOK                    76 // net:walker-ewok
+#define OBJ_EVENT_GFX_SW_WUHER                   77 // net:walker-wuher
+#define OBJ_EVENT_GFX_SW_BITH                    78 // net:walker-bith
+#define OBJ_EVENT_GFX_SW_AQUALISH                79 // net:walker-aqualish
+#define OBJ_EVENT_GFX_SW_EVAZAN                  80 // net:walker-evazan
+#define OBJ_EVENT_GFX_SW_ITHORIAN                81 // net:walker-ithorian
 #define OBJ_EVENT_GFX_CUTTABLE_TREE               82
 #define OBJ_EVENT_GFX_MART_EMPLOYEE               83
 #define OBJ_EVENT_GFX_ROOFTOP_SALE_WOMAN          84
@@ -241,6 +241,11 @@
 #define OBJ_EVENT_GFX_LINK_RS_MAY                234
 #define OBJ_EVENT_GFX_LUGIA                      235
 #define OBJ_EVENT_GFX_HOOH                       236
+// BEGIN net-new walkers (wiki/tools/port_people.py)
+#define OBJ_EVENT_GFX_SW_PROTOCOL_DROID          237 // net:walker-protocol-droid
+#define OBJ_EVENT_GFX_SW_SANDTROOPER             238 // net:walker-sandtrooper
+#define OBJ_EVENT_GFX_SW_JAR_JAR                 239 // net:walker-jar-jar
+// END net-new walkers
 
 // NOTE: By default, the max value for NUM_OBJ_EVENT_GFX is 239.
 //
@@ -251,14 +256,14 @@
 // object graphics that can be removed. If more graphics are needed, anything that
 // stores graphics ids will need to be increased in size. See wiki entry below:
 // https://github.com/pret/pokeemerald/wiki/Feature-Branches#overworld-expansion
-#define NUM_OBJ_EVENT_GFX                        237
+#define NUM_OBJ_EVENT_GFX                        240
 
 
 // These are dynamic object gfx ids.
 // They correspond with the values of the VAR_OBJ_GFX_ID_X vars.
 // More info about them in include/constants/vars.h
-#define OBJ_EVENT_GFX_VARS   (NUM_OBJ_EVENT_GFX + 1)
-#define OBJ_EVENT_GFX_VAR_0  (OBJ_EVENT_GFX_VARS + 0x0) // 238
+#define OBJ_EVENT_GFX_VARS   (NUM_OBJ_EVENT_GFX)
+#define OBJ_EVENT_GFX_VAR_0  (OBJ_EVENT_GFX_VARS + 0x0) // 240
 #define OBJ_EVENT_GFX_VAR_1  (OBJ_EVENT_GFX_VARS + 0x1)
 #define OBJ_EVENT_GFX_VAR_2  (OBJ_EVENT_GFX_VARS + 0x2)
 #define OBJ_EVENT_GFX_VAR_3  (OBJ_EVENT_GFX_VARS + 0x3)
@@ -273,7 +278,7 @@
 #define OBJ_EVENT_GFX_VAR_C  (OBJ_EVENT_GFX_VARS + 0xC)
 #define OBJ_EVENT_GFX_VAR_D  (OBJ_EVENT_GFX_VARS + 0xD)
 #define OBJ_EVENT_GFX_VAR_E  (OBJ_EVENT_GFX_VARS + 0xE)
-#define OBJ_EVENT_GFX_VAR_F  (OBJ_EVENT_GFX_VARS + 0xF) // 253
+#define OBJ_EVENT_GFX_VAR_F  (OBJ_EVENT_GFX_VARS + 0xF) // 255
 
 #define SHADOW_SIZE_S   0
 #define SHADOW_SIZE_M   1

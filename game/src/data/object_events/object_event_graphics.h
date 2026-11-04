@@ -180,12 +180,6 @@ const u16 gObjectEventPal_Kyogre[] = INCGFX_U16("graphics/object_events/palettes
 const u16 gObjectEventPal_KyogreReflection[] = INCGFX_U16("graphics/object_events/palettes/kyogre_reflection.pal", ".gbapal");
 const u16 gObjectEventPal_Groudon[] = INCGFX_U16("graphics/object_events/palettes/groudon.pal", ".gbapal");
 const u16 gObjectEventPal_GroudonReflection[] = INCGFX_U16("graphics/object_events/palettes/groudon_reflection.pal", ".gbapal");
-const u32 gObjectEventPic_UnusedNatuDoll[] = INCGFX_U32("graphics/object_events/pics/dolls/unused_natu_doll.png", ".4bpp");
-const u32 gObjectEventPic_UnusedMagnemiteDoll[] = INCGFX_U32("graphics/object_events/pics/dolls/unused_magnemite_doll.png", ".4bpp");
-const u32 gObjectEventPic_UnusedSquirtleDoll[] = INCGFX_U32("graphics/object_events/pics/dolls/unused_squirtle_doll.png", ".4bpp");
-const u32 gObjectEventPic_UnusedWooperDoll[] = INCGFX_U32("graphics/object_events/pics/dolls/unused_wooper_doll.png", ".4bpp");
-const u32 gObjectEventPic_UnusedPikachuDoll[] = INCGFX_U32("graphics/object_events/pics/dolls/unused_pikachu_doll.png", ".4bpp");
-const u32 gObjectEventPic_UnusedPorygon2Doll[] = INCGFX_U32("graphics/object_events/pics/dolls/unused_porygon2_doll.png", ".4bpp");
 const u32 gObjectEventPic_PichuDoll[] = INCGFX_U32("graphics/object_events/pics/dolls/pichu_doll.png", ".4bpp");
 const u32 gObjectEventPic_PikachuDoll[] = INCGFX_U32("graphics/object_events/pics/dolls/pikachu_doll.png", ".4bpp");
 const u32 gObjectEventPic_MarillDoll[] = INCGFX_U32("graphics/object_events/pics/dolls/marill_doll.png", ".4bpp");
@@ -356,3 +350,14 @@ const u32 gObjectEventPic_Lugia[] = INCGFX_U32("graphics/object_events/pics/poke
 const u16 gObjectEventPal_Lugia[] = INCGFX_U16("graphics/object_events/palettes/lugia.pal", ".gbapal");
 const u32 gObjectEventPic_HoOh[] = INCGFX_U32("graphics/object_events/pics/pokemon/ho_oh.png", ".4bpp", "-mwidth 4 -mheight 4");
 const u16 gObjectEventPal_HoOh[] = INCGFX_U16("graphics/object_events/palettes/ho_oh.pal", ".gbapal");
+// BEGIN net-new walkers (wiki/tools/port_people.py)
+const u32 gObjectEventPic_SwEwok[] = INCGFX_U32("graphics/object_events/pics/people/ewok.png", ".4bpp", "-mwidth 2 -mheight 4");
+const u32 gObjectEventPic_SwWuher[] = INCGFX_U32("graphics/object_events/pics/people/wuher.png", ".4bpp", "-mwidth 2 -mheight 4");
+const u32 gObjectEventPic_SwBith[] = INCGFX_U32("graphics/object_events/pics/people/bith.png", ".4bpp", "-mwidth 2 -mheight 4");
+const u32 gObjectEventPic_SwAqualish[] = INCGFX_U32("graphics/object_events/pics/people/ponda_baba.png", ".4bpp", "-mwidth 2 -mheight 4");
+const u32 gObjectEventPic_SwEvazan[] = INCGFX_U32("graphics/object_events/pics/people/evazan.png", ".4bpp", "-mwidth 2 -mheight 4");
+const u32 gObjectEventPic_SwIthorian[] = INCGFX_U32("graphics/object_events/pics/people/momaw_nadon.png", ".4bpp", "-mwidth 2 -mheight 4");
+const u32 gObjectEventPic_SwProtocolDroid[] = INCGFX_U32("graphics/object_events/pics/people/protocol_droid.png", ".4bpp", "-mwidth 2 -mheight 4");
+const u32 gObjectEventPic_SwSandtrooper[] = INCGFX_U32("graphics/object_events/pics/people/sandtrooper.png", ".4bpp", "-mwidth 2 -mheight 4");
+const u32 gObjectEventPic_SwJarJar[] = INCGFX_U32("graphics/object_events/pics/people/jar_jar.png", ".4bpp", "-mwidth 2 -mheight 4");
+// END net-new walkers

@@ -39,6 +39,10 @@ rebuild. Run `boot` once after every build (savestates do not carry over), then 
 
 - `creatures`: a party of net-new species with the net-new moves (party icons, summary pages, a battle).
   `creatures_dex`: the Datapad list opened at No. 206 (it writes `sLastSelectedPokemon`) and a new species' page.
+- `people`: each net-new walker (object graphics 76-81, 237-239) drawn on the Mos Pelgo townsfolk, one shot each
+  (`people_<id>.png`; `PEOPLE_IDS="237 80"` picks some). It writes the NPCs' `graphicsId` in `gObjectEvents` and
+  reloads the field through the party menu. Run `boot` again after any change to the save layout: the scenarios
+  use the system flags at 0x888 (since `MAX_TRAINERS_COUNT` 904) and the VARS and seen2 offsets after flags[].
 
 Without `make modern` (it needs `gcc-arm-none-eabi`), set `UI_ROM=$PWD/../../game/pokeemerald.gba` to run the
 scenarios on the agbcc build.

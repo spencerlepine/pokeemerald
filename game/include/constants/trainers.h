@@ -346,6 +346,9 @@
 #define TRAINER_CLASS_PYRAMID_KING   0x40
 #define TRAINER_CLASS_RS_PROTAG      0x41
 #define TRAINER_CLASS_SKIFF_RIDER    0x42 // Star Wars net-new: the Dune Sea trainers on Route 103
+// BEGIN net-new classes (wiki/tools/port_people.py)
+#define TRAINER_CLASS_RAIDER        0x43 // Star Wars net-new: Tusken Raiders. Prize money copied from RELIC HUNTER.
+// END net-new classes
 
 #define TRAINER_ENCOUNTER_MUSIC_MALE         0 // standard male encounter music
 #define TRAINER_ENCOUNTER_MUSIC_FEMALE       1 // standard female encounter music

@@ -65,6 +65,22 @@ Then run `tools/port_names.py` (names and Datapad text) and `tools/mark_audio_do
 parties and placement of the new species are the world-building pass; `creatures.csv` shows which are not
 wild or in a party yet.
 
+**Every person is ported** (2026-11-04): `python3 tools/port_people.py` puts every person asset the wiki has into
+`../game` and writes `database/persons.csv`, one row per person (1,802: walkers, trainer pics and back pics, trainer
+classes, trainers, Grand Arena trainers, characters and every person of `mapping/people.csv`) with the state of their
+walker, palette tag, portrait, class name, prize money, name, encounter music, Match Call, lines and wiring, and a
+`gaps` column. It installs:
+- The approved people walkers through the walker tool's specs (palette tag and slot included).
+- The 9 net-new walkers (`mapping/new_people.csv`) as new object graphics: 6 in the slots of the unused doll
+  sprites (now ghost rows) and 3 after HO-OH (`NUM_OBJ_EVENT_GFX` 240, the most a byte allows). The sandtrooper
+  and Jar Jar have no art yet and copy the stormtrooper and diplomat sheets.
+- The RAIDER trainer class (0x43), GREEDO in `TRAINER_TERRY`, and the 45 trainers and bosses of the new areas in new
+  slots 855-899 (`trainer_const` in `mapping/people.csv`). `MAX_TRAINERS_COUNT` is 904 (owner, 2026-11-04), so the
+  system flags start at 0x888 and saves from before do not load.
+- The lines of every net-new person in `data/text/sw_people.inc` (labels `SwPeople_Text_*`).
+Placing the new people on maps, their scripts and the balance of their parties are the world-building pass;
+`persons.csv` says what is not placed yet. Query: `grep -v ',$' database/persons.csv | cut -d, -f1,2,24`.
+
 **Names, Datapad entries and descriptions are ported** the same way (2026-11-03):
 - `python3 tools/port_names.py` swaps each renamed entity's display name in `../game` by its C constant
   (creatures, items, moves, abilities, types, trainer classes, trainers, Grand Arena and showcase trainers,
@@ -138,6 +154,7 @@ and field-effect ids are table indexes, so deleting a ghost keeps its slot (poin
 | `timeline_events.csv` | The 45 story events, rewritten. |
 | `net_new.csv` | Net-new content with placeholder, dependencies and balance notes. |
 | `area_progression.csv` | Emerald's balance table (levels, badges, gating) with planet and new map titles, plus every net-new area from `mapping/area_progression_extra.csv` (`net_id` names its design row). |
+| `persons.csv` | Every person in `../game` and the wiki (1,802 rows): walker, palette tag, portrait, back pic, class name and prize money, name, encounter music, Match Call, lines, wiring and `gaps`. Written by `tools/port_people.py`. |
 | `people.csv` | Every person placed by hand in the world (`mapping/people.csv`): new-area NPCs, trainers with parties, bosses, the must-have cast, with planet, map id, level band and the band check. Query: `grep ',boss,' database/people.csv`. |
 | `planets.csv` | One row per planet: role (`main`, `side`, `post`), act, badges on arrival and the hyperlane in (`mapping/planets.csv`), with the badge, trainer and wild bands read from `area_progression.csv`. |
 | `encounters.csv` | Every wild slot on every map (plus the new areas' tables): Emerald's species and the Star Wars one after the Dune Sea and habitat swaps, with rate, levels, source and stat change. Built by `tools/encounters.py` from `mapping/habitat_swaps.csv` and `mapping/wild_extra.csv`. |
@@ -260,6 +277,7 @@ python3 tools/habitats.py   # species_habitats.csv
 python3 tools/sand_skim.py  # sand_skim.csv, dune_sea_encounters.csv (Dune Sea field move)
 python3 tools/obtain.py     # obtain.csv, npcs.csv (who gives what, in story order)
 python3 tools/port_creatures.py check  # creatures.csv (every species slot and its assets in ../game)
+python3 tools/port_people.py check     # persons.csv (every person and their assets in ../game)
 python3 tools/prominence.py # mapping/proposals/prominence*.csv (fan prominence of every starwars-db entity; needs starwars-db)
 python3 wiki/server.py      # browse at http://127.0.0.1:8000
 ```

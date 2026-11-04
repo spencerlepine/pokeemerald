@@ -74,12 +74,6 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Greta;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Spenser;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Noland;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lucy;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedNatuDoll;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedMagnemiteDoll;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedSquirtleDoll;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedWooperDoll;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedPikachuDoll;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedPorygon2Doll;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CuttableTree;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MartEmployee;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RooftopSaleWoman;
@@ -235,6 +229,17 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RubySapphir
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RubySapphireMay;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lugia;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HoOh;
+// BEGIN net-new walker externs (wiki/tools/port_people.py)
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SwEwok;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SwWuher;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SwBith;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SwAqualish;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SwEvazan;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SwIthorian;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SwProtocolDroid;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SwSandtrooper;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SwJarJar;
+// END net-new walker externs
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Bard;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Hipster;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Trader;
@@ -321,12 +326,6 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_SPENSER] =                  &gObjectEventGraphicsInfo_Spenser,
     [OBJ_EVENT_GFX_NOLAND] =                   &gObjectEventGraphicsInfo_Noland,
     [OBJ_EVENT_GFX_LUCY] =                     &gObjectEventGraphicsInfo_Lucy,
-    [OBJ_EVENT_GFX_UNUSED_NATU_DOLL] =         &gObjectEventGraphicsInfo_UnusedNatuDoll,
-    [OBJ_EVENT_GFX_UNUSED_MAGNEMITE_DOLL] =    &gObjectEventGraphicsInfo_UnusedMagnemiteDoll,
-    [OBJ_EVENT_GFX_UNUSED_SQUIRTLE_DOLL] =     &gObjectEventGraphicsInfo_UnusedSquirtleDoll,
-    [OBJ_EVENT_GFX_UNUSED_WOOPER_DOLL] =       &gObjectEventGraphicsInfo_UnusedWooperDoll,
-    [OBJ_EVENT_GFX_UNUSED_PIKACHU_DOLL] =      &gObjectEventGraphicsInfo_UnusedPikachuDoll,
-    [OBJ_EVENT_GFX_UNUSED_PORYGON2_DOLL] =     &gObjectEventGraphicsInfo_UnusedPorygon2Doll,
     [OBJ_EVENT_GFX_CUTTABLE_TREE] =            &gObjectEventGraphicsInfo_CuttableTree,
     [OBJ_EVENT_GFX_MART_EMPLOYEE] =            &gObjectEventGraphicsInfo_MartEmployee,
     [OBJ_EVENT_GFX_ROOFTOP_SALE_WOMAN] =       &gObjectEventGraphicsInfo_RooftopSaleWoman,
@@ -482,6 +481,17 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_LINK_RS_MAY] =              &gObjectEventGraphicsInfo_RubySapphireMay,
     [OBJ_EVENT_GFX_LUGIA] =                    &gObjectEventGraphicsInfo_Lugia,
     [OBJ_EVENT_GFX_HOOH] =                     &gObjectEventGraphicsInfo_HoOh,
+// BEGIN net-new walkers (wiki/tools/port_people.py)
+    [OBJ_EVENT_GFX_SW_EWOK] = &gObjectEventGraphicsInfo_SwEwok,
+    [OBJ_EVENT_GFX_SW_WUHER] = &gObjectEventGraphicsInfo_SwWuher,
+    [OBJ_EVENT_GFX_SW_BITH] = &gObjectEventGraphicsInfo_SwBith,
+    [OBJ_EVENT_GFX_SW_AQUALISH] = &gObjectEventGraphicsInfo_SwAqualish,
+    [OBJ_EVENT_GFX_SW_EVAZAN] = &gObjectEventGraphicsInfo_SwEvazan,
+    [OBJ_EVENT_GFX_SW_ITHORIAN] = &gObjectEventGraphicsInfo_SwIthorian,
+    [OBJ_EVENT_GFX_SW_PROTOCOL_DROID] = &gObjectEventGraphicsInfo_SwProtocolDroid,
+    [OBJ_EVENT_GFX_SW_SANDTROOPER] = &gObjectEventGraphicsInfo_SwSandtrooper,
+    [OBJ_EVENT_GFX_SW_JAR_JAR] = &gObjectEventGraphicsInfo_SwJarJar,
+// END net-new walkers
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

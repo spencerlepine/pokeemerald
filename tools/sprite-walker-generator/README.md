@@ -41,8 +41,10 @@ python -m walker_sprite install art/<name>.yaml               # copy into pokeem
 `install` also handles a spec whose `graphics_info` names several entries (`Latias / Latios`) or carries the
 `gObjectEventGraphicsInfo_` prefix, and a walker with its own palette (`palette: sw_*` on a non-NPC tag such as
 `OBJ_EVENT_PAL_TAG_HO_OH`): it copies `palettes/sw_*.pal` over the palette file that tag loads. The 15 creature
-walkers (A6) were installed this way on 2026-11-04 (Latios then moved to NPC_2 by hand, as its notes ask); people
-walkers are not installed yet.
+walkers (A6) were installed this way on 2026-11-04 (Latios then moved to NPC_2 by hand, as its notes ask). The people
+walkers were installed the same way by `../../wiki/tools/port_people.py` on 2026-11-04. The net-new walker specs
+(`sw_*`) name a vanilla sheet in `replaces:` only as their base: never `install` them, because that would overwrite
+the vanilla person. `port_people.py` puts their sheets in their own object graphics slots (`wiki/mapping/new_people.csv`).
 
 ```bash
 python -m walker_sprite compare output/<x>.png a.yaml b.yaml  # variant review sheet

@@ -828,6 +828,9 @@ Common_EventScript_PlayerHandedOverTheItem::
 	.include "data/text/pkmn_center_nurse.inc"
 	.include "data/text/mart_clerk.inc"
 	.include "data/text/obtain_item.inc"
+@ BEGIN net-new people text (wiki/tools/port_people.py)
+	.include "data/text/sw_people.inc"
+@ END net-new people text
 
 @ The below and surf.inc could be split into some text/notices.inc
 gText_PokemartSign::

@@ -855,12 +855,59 @@
 // 851 and 852 were TRAINER_RED and TRAINER_LEAF (FireRed/LeafGreen link leftovers, deleted); the slots stay empty so later trainer flags keep their numbers.
 #define TRAINER_BRENDAN_PLACEHOLDER         853
 #define TRAINER_MAY_PLACEHOLDER             854
+// BEGIN net-new trainers (wiki/tools/port_people.py)
+#define TRAINER_SW_A_YARK_002               855 // person:bens-hut:002
+#define TRAINER_SW_MAUL_003                 856 // person:bens-hut:003
+#define TRAINER_SW_SEBULBA_016              857 // person:mos-espa-podrace-arena:016
+#define TRAINER_SW_THUG_017                 858 // person:jabbas-palace:017
+#define TRAINER_SW_THUG_018                 859 // person:jabbas-palace:018
+#define TRAINER_SW_THUG_019                 860 // person:jabbas-palace:019
+#define TRAINER_SW_THUG_020                 861 // person:jabbas-palace:020
+#define TRAINER_SW_GAMORREAN_026            862 // person:jabbas-palace-throne-room:026
+#define TRAINER_SW_GAMORREAN_027            863 // person:jabbas-palace-throne-room:027
+#define TRAINER_SW_WEEQUAY_031              864 // person:jabbas-palace-barge-dock:031
+#define TRAINER_SW_KIRLOCCA_035             865 // person:rwookrrorro:035
+#define TRAINER_SW_MERUMERU_036             866 // person:rwookrrorro:036
+#define TRAINER_SW_TK_421_046               867 // person:mustafar-mining-facility:046
+#define TRAINER_SW_TK_710_047               868 // person:mustafar-mining-facility:047
+#define TRAINER_SW_TANBRIS_050              869 // person:mustafar-mining-control:050
+#define TRAINER_SW_TK_585_053               870 // person:endor-battlefield:053
+#define TRAINER_SW_TK_329_054               871 // person:endor-battlefield:054
+#define TRAINER_SW_REX_056                  872 // person:endor-battlefield:056
+#define TRAINER_SW_TK_902_057               873 // person:endor-battlefield-bunker:057
+#define TRAINER_SW_THUG_062                 874 // person:tibanna-refinery:062
+#define TRAINER_SW_THUG_063                 875 // person:tibanna-refinery:063
+#define TRAINER_SW_THUG_065                 876 // person:tibanna-refinery-interior:065
+#define TRAINER_SW_TK_114_070               877 // person:nijedha:070
+#define TRAINER_SW_CAL_081                  878 // person:hoth-tundra:081
+#define TRAINER_SW_TORYN_082                879 // person:hoth-tundra:082
+#define TRAINER_SW_TIGRAN_083               880 // person:hoth-tundra:083
+#define TRAINER_SW_CT_2271_089              881 // person:tipoca-city-cloning-hall:089
+#define TRAINER_SW_CT_4040_090              882 // person:tipoca-city-cloning-hall:090
+#define TRAINER_SW_PIETT_103                883 // person:death-star-hangar:103
+#define TRAINER_SW_TK_411_105               884 // person:death-star-ds-1:105
+#define TRAINER_SW_TK_412_106               885 // person:death-star-ds-1:106
+#define TRAINER_SW_MOTTI_107                886 // person:death-star-ds-1:107
+#define TRAINER_SW_TK_227_108               887 // person:death-star-ds-2:108
+#define TRAINER_SW_TK_228_109               888 // person:death-star-ds-2:109
+#define TRAINER_SW_TAGGE_110                889 // person:death-star-ds-2:110
+#define TRAINER_SW_TK_651_111               890 // person:death-star-ds-3:111
+#define TRAINER_SW_TK_652_112               891 // person:death-star-ds-3:112
+#define TRAINER_SW_OZZEL_113                892 // person:death-star-ds-3:113
+#define TRAINER_SW_TK_880_114               893 // person:death-star-ds-4:114
+#define TRAINER_SW_TK_881_115               894 // person:death-star-ds-4:115
+#define TRAINER_SW_NEEDA_116                895 // person:death-star-ds-4:116
+#define TRAINER_SW_JIR_117                  896 // person:death-star-ds-5:117
+#define TRAINER_SW_DAINE_118                897 // person:death-star-ds-5:118
+#define TRAINER_SW_TK_001_119               898 // person:death-star-ds-5:119
+#define TRAINER_SW_KRENNIC_120              899 // person:death-star-ds-5:120
+// END net-new trainers
 
-// NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
+// NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 4 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT                      855
-#define MAX_TRAINERS_COUNT                  864
+#define TRAINERS_COUNT                      900
+#define MAX_TRAINERS_COUNT                  904
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H

@@ -8,6 +8,9 @@ local SB1P, CB2, CB2_OVERWORLD, CB2_LOADMAP = sym("gSaveBlock1Ptr"), sym("gMain"
 local CB2_INTRO_CRAWL = sym("CB2_IntroCrawl") | 1
 local K = {A=0,B=1,SELECT=2,START=3,RIGHT=4,LEFT=5,UP=6,DOWN=7}
 local function sb1() return emu:read32(SB1P) end
+-- SYSTEM_FLAGS (include/constants/flags.h) moved from 0x860 to 0x888 when MAX_TRAINERS_COUNT went to 904 (2026-11-04);
+-- every SaveBlock1 field after flags[] moved 6 bytes (VARS at 0x13A2, seen2 at 0x3B2A).
+local SYS, VARS, SEEN2 = 0x888, 0x13A2, 0x3B2A
 local function setFlag(id, on)
   local a = sb1() + 0x1270 + (id >> 3); local v = emu:read8(a)
   if on then v = v | (1 << (id & 7)) else v = v & ~(1 << (id & 7)) end
@@ -41,8 +44,8 @@ local function setupParty()
                  base={45,60,40,45,70,50}, nick="SUNCHICK", personality=0})
   E.writeMon(1, {species=406, level=50, exp=156250, moves={337,19,200,245}, pp={15,15,10,5},
                  base={105,150,90,95,150,90}, nick="EXOGORTH", personality=7})
-  setFlag(0x860, true); setFlag(0x861, true); setFlag(0x862, true)  -- COMPANION, DATAPAD, StarNAV menus
-  for f = 0x867, 0x86E do setFlag(f, true) end                        -- badges
+  setFlag(SYS, true); setFlag(SYS + 1, true); setFlag(SYS + 2, true)  -- COMPANION, DATAPAD, StarNAV menus
+  for f = SYS + 7, SYS + 14 do setFlag(f, true) end                        -- badges
   E.addItem(13, 5)                       -- POTION (Items pocket)
   pocketItem(0x650, 4, 10)               -- POKE BALL (Poke Balls pocket)
   pocketItem(0x690, 289, 1)              -- TM01 (TMs & HMs pocket)
@@ -50,7 +53,7 @@ local function setupParty()
   pocketItem(0x5D8, 259, 1)              -- MACH BIKE (Key Items pocket)
   local b2 = emu:read32(E.ADDR.gSaveBlock2Ptr)          -- every DATAPAD entry seen and owned
   for i = 0, 51 do emu:write8(b2 + 0x28 + i, 0xFF); emu:write8(b2 + 0x5C + i, 0xFF)
-                   emu:write8(sb1() + 0x988 + i, 0xFF); emu:write8(sb1() + 0x3B24 + i, 0xFF) end
+                   emu:write8(sb1() + 0x988 + i, 0xFF); emu:write8(sb1() + SEEN2 + i, 0xFF) end
 end
 
 local function log(s) console:log(s); local h = io.open(OUT .. "log.txt", "a"); h:write(s .. "\n"); h:close() end
@@ -81,9 +84,10 @@ else
     regirock = {24, 6, 8, 8, 0x3A7}, battle = {24, 6, 8, 8, 0x3A7}, regice = {24, 67, 8, 8, 0x3A9}, registeel = {24, 68, 8, 8, 0x3A8},
   }
   local s = S[SC]
+  if SC == "people" then s = {0, 9, 14, 13, nil} end  -- Mos Pelgo (Littleroot Town), among its townsfolk
   if SC == "creatures" then s = {24, 6, 8, 8, 0x3A7} end
   if SC == "tour" or SC == "dex" or SC == "creatures_dex" or SC:sub(1,4) == "menu" then s = {0, 9, 5, 8, nil} end  -- Mos Pelgo (Littleroot Town): open ground
-  add({fn=function() if SC == "tour" or SC == "battle" or SC == "dex" or SC:sub(1,4) == "menu"
+  add({fn=function() if SC == "tour" or SC == "battle" or SC == "dex" or SC:sub(1,4) == "menu" or SC == "people"
                         or SC:sub(1,9) == "creatures" then setupParty() end
                      if SC:sub(1,9) == "creatures" then setupCreatures() end
                      if s[5] then setFlag(s[5], false) end; teleport(s[1], s[2], s[3], s[4]) end})
@@ -130,13 +134,28 @@ else
     press("START"); add({wait=30}); press("DOWN"); press("UP"); add({wait=20}); press("A"); add({wait=240})
     shot("02_list_end", 60); press("A"); shot("03_entry", 200); press("RIGHT"); shot("04_area", 100)
     press("RIGHT"); shot("05_cry", 100); press("RIGHT"); shot("06_size", 100)
+  elseif SC == "people" then  -- each net-new walker in turn on the Littleroot NPCs (twin, fat man, boy)
+    -- an object event's graphicsId (offset 5, 0x24 bytes each) is used again when the field reloads from a menu
+    local OBJ, ids = sym("gObjectEvents"), {76, 77, 78, 79, 80, 81, 237, 238, 239}
+    if os.getenv("PEOPLE_IDS") then ids = {}; for n in os.getenv("PEOPLE_IDS"):gmatch("%d+") do ids[#ids + 1] = tonumber(n) end end
+    for r = 1, #ids do
+      add({fn=function()
+        for o = 0, 15 do
+          local a = OBJ + o * 0x24; local g = emu:read8(a + 5)
+          if (emu:read8(a) & 1) == 1 and (g == 6 or g == 17 or g == 9 or (g >= 76 and g <= 81) or g >= 237)
+             then emu:write8(a + 5, ids[r]) end
+        end end})
+      press("START"); add({wait=30}); press("DOWN"); press("A"); add({wait=120}); press("B"); add({wait=120})
+      press("B"); add({wait=60}); add({shot=string.format("people_%03d", ids[r])})
+    end
   elseif SC == "battle" then
     press("UP", 2); add({wait=20}); press("A", 4); add({wait=500})
     for f = 1, 6 do press("A"); shot(string.format("%02d", f), 60) end
   else
   press("UP", 2); add({wait=20}); press("A", 4)
   end
-  if SC == "tour" or SC == "battle" or SC == "dex" or SC:sub(1,4) == "menu" or SC:sub(1,9) == "creatures" then
+  if SC == "tour" or SC == "battle" or SC == "dex" or SC:sub(1,4) == "menu" or SC:sub(1,9) == "creatures"
+     or SC == "people" then
   elseif SC:sub(1,4) == "sign" then
     add({wait=150}); add({shot=SC})
   else
