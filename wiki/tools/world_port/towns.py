@@ -10,7 +10,10 @@ removed), placed by `towns/<area-id>.yaml`:
   bgs:       vanilla sign or hidden item (0-based) -> a yaml sign's name, a cell, or "drop".
   sign_texts: yaml sign name -> text, for a wiki sign with no vanilla sign.
   patches:   script edits, each {old, new, file (default: the map's scripts.inc), count (default 1)}. A patch
-             already applied (new present, old gone) is skipped, so the port can run again.
+             already applied (its new text present) is skipped, so the port can run again.
+  movements: label -> steps, rewriting that movement in the map's scripts.inc: "D8 d7 r21 u ifr" is delay_8,
+             7 x walk_down, 21 x walk_right, walk_up, walk_in_place_faster_right ("inv" is set_invisible).
+             Run again, it writes the same block.
   heal:      HEAL_LOCATION_X -> [x, y] (where the player stands after a blackout or fly).
   checks:    {movement: Label, from: [x, y], to: [x, y]}: the movement is walked on the new layout and
              reported if it crosses a solid cell or does not end at `to`.
@@ -90,13 +93,46 @@ def apply_patches(spec, a, problems):
         t = path.read_text()
         old, new, count = pt["old"], pt["new"], pt.get("count", 1)
         n = t.count(old)
+        if new in t and (old not in new or n == count * new.count(old)):
+            continue  # already applied
         if n == count:
             t = t.replace(old, new)
             B.write_text(path, t)
-        elif n == 0 and new in t:
-            continue
         else:
             problems.append(f"{a.id}: patch for {path.name} found {n} times (expected {count}): {old[:60]!r}")
+
+
+DIRS = {"d": "down", "u": "up", "l": "left", "r": "right"}
+
+
+def expand_steps(spec):
+    """'D8 d7 r21 u ifr' -> movement commands."""
+    out = []
+    for tok in str(spec).split():
+        m = re.match(r"^(if)?([durl])(\d*)$", tok)
+        if m:
+            cmd = ("walk_in_place_faster_" if m.group(1) else "walk_") + DIRS[m.group(2)]
+            out += [cmd] * int(m.group(3) or 1)
+        elif re.match(r"^D\d+$", tok):
+            out.append(f"delay_{tok[1:]}")
+        elif tok == "inv":
+            out.append("set_invisible")
+        else:
+            raise ValueError(f"movement step {tok!r}")
+    return out
+
+
+def apply_movements(spec, a, problems):
+    path = B.GAME / f"data/maps/{a.map_name}/scripts.inc"
+    t = path.read_text()
+    for label, steps in (spec.get("movements") or {}).items():
+        m = re.search(rf"^{re.escape(label)}(:+)\n.*?^\s*step_end\n", t, re.M | re.S)
+        if not m:
+            problems.append(f"{a.id}: movement {label} not found")
+            continue
+        new = f"{label}{m.group(1)}\n" + "".join(f"\t{c}\n" for c in expand_steps(steps)) + "\tstep_end\n"
+        t = t[:m.start()] + new + t[m.end():]
+    B.write_text(path, t)
 
 
 def heal_locations(world):
@@ -128,7 +164,15 @@ def town_events(world, a, r, mj):
     for i, o in enumerate(objs, 1):
         tgt = sobj.get(str(i), sobj.get(o.get("local_id", "-")))
         keep = False
-        if isinstance(tgt, str) and tgt != "keep":
+        if isinstance(tgt, dict):
+            name = tgt.get("person")
+            if name not in people:
+                problems.append(f"{a.id}: object {i} names {name!r}, not a person of the area")
+            else:
+                p, n = people[name]
+                matched.add(f"{p['name']}#{n}")
+            o["x"], o["y"] = tgt["at"]
+        elif isinstance(tgt, str) and tgt != "keep":
             keep = tgt.startswith("=")
             name = tgt.lstrip("=")
             if name not in people:
@@ -218,6 +262,7 @@ def town_events(world, a, r, mj):
     mj["bg_events"] = bgs
     E.write_block(path, blk)
     apply_patches(spec, a, problems)
+    apply_movements(spec, a, problems)
     # movement checks on the new layout
     text = path.read_text()
     for ck in spec.get("checks") or []:

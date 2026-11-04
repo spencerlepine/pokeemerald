@@ -41,7 +41,11 @@ it can run again and gives the same files. Areas outside the run keep their vani
   wild battle, flag). Scripts and texts go in a managed block of the map's `scripts.inc`; a label of the same name
   written by hand outside the block replaces the generated one.
 
-Redrawn vanilla towns are not ported yet (their vanilla scripts need their events moved by hand).
+- **Redrawn towns** (`towns.py`). A redrawn town keeps every vanilla object, trigger and sign; a hand-checked spec,
+  `towns/<area-id>.yaml`, says where each goes on the wiki layout (a yaml person, a cell, or dropped), rewrites the
+  story movements (`movements:`, steps like `D8 d7 r21 u ifr`), patches script lines (also in other maps, such as
+  the gym's warp back to its door), sets the heal spot, and walks each listed movement on the new layout to check it
+  ends where it should and crosses no solid cell. Ported: Mos Pelgo, Tosche Station, Mos Entha.
 
 Art stays pending in the wiki: a placeholder or greybox tile goes in as a real tile in its own slot, so it can
 be redrawn later without touching the maps.
@@ -49,5 +53,5 @@ be redrawn later without touching the maps.
 ## Check
 
 `tools/play-tester/scripts/world-check.sh SPOTS` teleports to each spot (`name group num x y [KEYS]`), presses
-the keys and screenshots it into `tools/play-tester/out/world/`. `WORLD_TRACE=1` logs the map and cell after every
+the keys (`VAR4057=2` and `FLAG2D6=0` among them set a story var or flag before the teleport) and screenshots it into `tools/play-tester/out/world/`. `WORLD_TRACE=1` logs the map and cell after every
 step. Run `UI_ROM=$PWD/game/pokeemerald.gba tools/play-tester/scripts/ui-check.sh boot` after each build first.

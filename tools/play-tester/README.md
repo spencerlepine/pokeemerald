@@ -58,7 +58,7 @@ shell): use `pkill -x mgba-qt`.
 
 `scripts/world-check.sh SPOTS [timeout]` checks the ported world on the agbcc build: from ui-check's
 `overworld.ss0` (run `UI_ROM=$PWD/../../game/pokeemerald.gba scripts/ui-check.sh boot` after each build) it
-teleports to each line of SPOTS (`name group num x y [KEYS]`; group 255 stays where the last step left off, keys like `RIGHT8 UP2 A`), presses the keys and
+teleports to each line of SPOTS (`name group num x y [KEYS]`; group 255 stays where the last step left off, keys like `RIGHT8 UP2 A`; `VAR4057=2` or `FLAG2D6=0` sets a var or flag before the teleport, to start a story scene), presses the keys and
 screenshots `out/world/<name>.png`. `log.txt` has the map, cell and layout size the game loaded. `WORLD_TRACE=1`
 logs every step (map crossings, warps). A wild battle can start on a step through grass.
 

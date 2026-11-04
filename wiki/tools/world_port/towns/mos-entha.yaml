@@ -1,0 +1,77 @@
+# Mos Entha (PetalburgCity), 38x32 (was 30x30). Exits: west and east on rows 15-16 (route 104, route 102).
+# The arena door is (18,8) (was 15,8) and the Lars homestead door (6,8) (was Wally's house, 7,5). The west road is
+# two rows now, so the gym boy and Scott each keep two of their four triggers (cases 2 and 3). Luke's tutorial walks
+# to the east exit: route 102 starts 9 rows lower, so its cell (x, y) is (38 + x, y + 9) here.
+objects:
+  1: [8, 11]                 # Aunt Beru (Wally's mom), by the homestead
+  2: [18, 10]                # Luke (Wally), waits below the arena door with Owen
+  3: Kid with a pit droid
+  4: Farmer                  # the gentleman (full party talk)
+  5: {person: Owen Lars, at: [18, 10]}   # Wally's dad: a script shows him below the arena door
+  6: [17, 2]                 # item ball MAX REVIVE, in the north nook
+  7: [4, 21]                 # item ball ETHER, in the west nook
+  8: Doran's student         # the gym boy; waits at the west road (5,14) until he shows the arena
+  9: [13, 15]                # Scott (hidden; a script places him)
+coords:
+  0: drop
+  1: drop
+  2: [8, 15]                 # gym boy, player on the upper road row
+  3: [8, 16]                 # gym boy, lower row
+  4: drop
+  5: drop
+  6: [4, 15]                 # Scott, upper row
+  7: [4, 16]                 # Scott, lower row
+bgs:
+  0: Arena sign
+  1: [29, 22]                # Supply Depot signs, beside its door (28,22)
+  2: [29, 9]                 # Bacta Center signs, beside its door (28,9)
+  3: Town holo-sign
+  4: [30, 9]
+  5: [30, 22]
+  6: Lars homestead sign
+heal:
+  HEAL_LOCATION_PETALBURG_CITY: [28, 10]
+patches:
+  - old: "setobjectxyperm LOCALID_GYM_BOY, 5, 11"
+    new: "setobjectxyperm LOCALID_GYM_BOY, 5, 14"
+  - old: "\tsetvar VAR_0x8004, 7\n\tsetvar VAR_0x8005, 5\n"
+    new: "\tsetvar VAR_0x8004, 6\n\tsetvar VAR_0x8005, 8\n"
+  - old: "setobjectxy LOCALID_PETALBURG_SCOTT, 13, 12"
+    new: "setobjectxy LOCALID_PETALBURG_SCOTT, 13, 15"
+  - old: "setobjectxy LOCALID_PETALBURG_SCOTT, 13, 13"
+    new: "setobjectxy LOCALID_PETALBURG_SCOTT, 13, 16"
+  - old: "warp MAP_PETALBURG_CITY, 15, 8"
+    new: "warp MAP_PETALBURG_CITY, 18, 8"
+    count: 2
+    file: data/maps/PetalburgCity_Gym/scripts.inc
+movements:
+  # leaving the arena the player steps out to (18,9), Luke waits at (18,10); both walk to route 102 (1,6) and (2,6)
+  PetalburgCity_Movement_WallyTutorialPlayer: D8 d7 r21 u ifr
+  PetalburgCity_Movement_WallyTutorialWally: D8 d6 r21 u r D16 ifu D16 D16 ifr
+  # Owen leads the player from the arena to the homestead door (6,8); row 12 is blocked by the landspeeder
+  PetalburgCity_Movement_WalkToWallyHousePlayer: D8 d4 l12 u3
+  PetalburgCity_Movement_WalkToWallyHouseWallysDad: D8 d3 l12 u4
+  # the gym boy leads the player from the west road to the arena's east side, by the arena sign (22,9)
+  PetalburgCity_Movement_BoyWalkToGym2: r13 u5 ifu
+  PetalburgCity_Movement_BoyWalkToGym3: r13 u6 ifu
+  PetalburgCity_Movement_PlayerWalkToGym2: u r12 u5
+  PetalburgCity_Movement_PlayerWalkToGym3: u r12 u6
+  PetalburgCity_Movement_BoyWalkAway: d l10
+checks:
+  - {movement: PetalburgCity_Movement_WallyTutorialPlayer, from: [18, 9], to: [39, 15]}
+  - {movement: PetalburgCity_Movement_WallyTutorialWally, from: [18, 10], to: [40, 15]}
+  - {movement: PetalburgCity_Movement_WalkToWallyHousePlayer, from: [18, 9], to: [6, 10]}
+  - {movement: PetalburgCity_Movement_WalkToWallyHouseWallysDad, from: [18, 10], to: [6, 9]}
+  - {movement: PetalburgCity_Movement_WalkInsideHouseWallysDad, from: [6, 9], to: [6, 8]}
+  - {movement: PetalburgCity_Movement_WalkInsideHousePlayer, from: [6, 10], to: [6, 8]}
+  - {movement: PetalburgCity_Movement_BoyApproachPlayer2, from: [5, 14], to: [8, 14]}
+  - {movement: PetalburgCity_Movement_BoyApproachPlayer3, from: [5, 14], to: [8, 15]}
+  - {movement: PetalburgCity_Movement_BoyWalkToGym2, from: [8, 14], to: [21, 9]}
+  - {movement: PetalburgCity_Movement_BoyWalkToGym3, from: [8, 15], to: [21, 9]}
+  - {movement: PetalburgCity_Movement_PlayerWalkToGym2, from: [8, 15], to: [20, 9]}
+  - {movement: PetalburgCity_Movement_PlayerWalkToGym3, from: [8, 16], to: [20, 9]}
+  - {movement: PetalburgCity_Movement_BoyWalkAway, from: [21, 9], to: [11, 10]}
+  - {movement: PetalburgCity_Movement_ScottStartWalkLeft, from: [13, 15], to: [9, 15]}
+  - {movement: PetalburgCity_Movement_ScottApproachPlayer, from: [9, 15], to: [5, 15]}
+  - {movement: PetalburgCity_Movement_ScottExit2, from: [5, 15]}
+  - {movement: PetalburgCity_Movement_ScottExit3, from: [5, 16]}

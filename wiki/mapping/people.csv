@@ -134,3 +134,6 @@ person:hangar-tatooine-endor:132,hangar-tatooine-endor,Pilot,,,story,,,,,,"""Str
 person:hangar-tatooine-kashyyyk:133,hangar-tatooine-kashyyyk,Pilot,,,story,character:mr-briney,,,,,"""Punch it, Chewie.""",The ship ride script of the hyperlane into this room (mapping/hyperlanes.csv).,object-gfx:expert-m,,,,
 person:hangar-tatooine-sullust:134,hangar-tatooine-sullust,Pilot,,,story,,,,,,"""Strap in.""",The ship ride script of the hyperlane into this room (mapping/hyperlanes.csv).,object-gfx:expert-m,,,,
 person:ilum-supply-depot:135,ilum-supply-depot,Clerk,,,npc,character:mart-clerk,,,,,,,object-gfx:mart-employee,,,,
+person:mos-entha:001,mos-entha,Market trader,,,npc,,,,,,"""Fresh black melons, dewback hides, power cells! Credits only, no trades today.""",Stall by the crossroads market.,object-gfx:man-4,,,,
+person:mos-entha:002,mos-entha,Spacer admiring the starfighter,,,npc,,,,,,"""That old fighter is DORAN's. He flew it in the Clone Wars, they say. Still keeps it shining.""",By Doran's starfighter on its pad.,object-gfx:sailor,,,,
+person:tosche-station:010,tosche-station,Converter mechanic,,,npc,,,,,,"""Another burnt-out power converter. Out here the sand gets into everything.""",,object-gfx:man-3,,,,

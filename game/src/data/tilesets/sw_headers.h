@@ -77,6 +77,17 @@ const struct Tileset gTileset_SwMosEisleyHangar =
     .callback = NULL,
 };
 
+const struct Tileset gTileset_SwMosEntha =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SwMosEntha,
+    .palettes = gTilesetPalettes_SwMosEntha,
+    .metatiles = gMetatiles_SwMosEntha,
+    .metatileAttributes = gMetatileAttributes_SwMosEntha,
+    .callback = InitTilesetAnim_Petalburg,
+};
+
 const struct Tileset gTileset_SwMosEspaPodraceArena =
 {
     .isCompressed = TRUE,

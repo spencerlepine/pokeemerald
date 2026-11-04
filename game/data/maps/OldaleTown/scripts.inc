@@ -403,7 +403,9 @@ OldaleTown_EventScript_SwPowerStationSign2::
 	end
 
 OldaleTown_Text_SwConverterMechanic_1:
-	.string "CONVERTER MECHANIC$"
+	.string "“Another burnt-out power converter.\n"
+	.string "Out here the sand gets into\p"
+	.string "everything.”$"
 
 OldaleTown_Text_SwPowerStationSign2_1:
 	.string "TOSCHE STATION POWER PLANT\n"
