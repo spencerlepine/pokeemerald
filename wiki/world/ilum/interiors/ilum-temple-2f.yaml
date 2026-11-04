@@ -47,3 +47,4 @@ room:
   style: room:ilum-jedi-temple
   map: 14x10
   parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, window, stairs, pillar-wide, step, level-edge, level-corner, raised-floor, niche, light-pool, arch]
+objects: [art:new:jedi-statue, art:new:kyber-cluster]

@@ -65,3 +65,4 @@ room:
   style: room:tatooine-civic
   map: 15x22
   parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, doorway, wall-curve, arch, pillar, step, level-edge, level-corner, raised-floor, beam]
+objects: [art:new:info-holo-sign, art:new:pottery-shelf]

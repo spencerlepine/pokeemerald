@@ -46,3 +46,4 @@ room:
   style: room:mustafar-collector
   map: 13x12
   parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, wall-angle, window-round, viewport, catwalk, catwalk-rail, pit-edge, pit, grate-floor, counter-wall]
+objects: [art:new:shuttle-controls, art:new:info-holo-sign]

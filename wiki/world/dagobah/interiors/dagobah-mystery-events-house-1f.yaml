@@ -41,3 +41,4 @@ room:
   style: room:dagobah-mud-hut
   map: 11x8
   parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, stairs, wall-curve, beam, step, level-edge, raised-floor, window-round]
+objects: [art:new:yoda-hearth-pot, art:new:root-shelf, art:new:swamp-mat, art:new:swamp-lantern]

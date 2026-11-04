@@ -105,3 +105,4 @@ room:
   style: room:warden-tomb
   map: 21x23
   parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, doorway, pillar, niche, step, level-edge, raised-floor]
+objects: [art:new:warden-relief, art:new:warden-dais]

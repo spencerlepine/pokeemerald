@@ -56,3 +56,4 @@ room:
   style: room:ewok-treehut
   map: 10x9
   parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, wall-curve, railing, railing-end, beam, step, level-edge, level-corner, raised-floor, ladder]
+objects: [art:new:ewok-fur-bed, art:new:ewok-basket, art:new:hanging-gourds, art:new:ewok-totem]

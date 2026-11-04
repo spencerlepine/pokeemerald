@@ -40,3 +40,4 @@ room:
   style: room:bacta-center
   map: 14x10
   parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, counter-wall, alcove, step, wall-curve, room:jedha-holy-city:window, room:jedha-holy-city:floor-alt]
+objects: [art:new:bacta-heal-rack, art:new:storage-terminal, art:new:bacta-tank, art:new:holonet-screen, art:new:chrono-panel]

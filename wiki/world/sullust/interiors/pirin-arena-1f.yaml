@@ -139,3 +139,4 @@ room:
   style: room:sullust-burrow
   map: 17x19
   parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, stairs, wall-curve, arch, step, level-edge, level-corner, raised-floor, pool, pool-edge, grate-floor, niche]
+objects: [art:new:shard-pillar, art:new:basalt-table, art:new:sullust-lamp, art:new:burrow-bed, art:new:spring-bench]

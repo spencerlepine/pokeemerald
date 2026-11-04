@@ -51,3 +51,4 @@ room:
   style: room:organa-office
   map: 19x9
   parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, stairs, window-wide, step, level-edge, level-corner, raised-floor, pillar, counter-wall, doorway]
+objects: [art:new:exec-desk, art:new:alderaan-planter, art:new:storage-terminal, art:new:turbolift-panel]

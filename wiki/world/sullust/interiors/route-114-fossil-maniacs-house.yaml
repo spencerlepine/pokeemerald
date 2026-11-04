@@ -48,3 +48,4 @@ room:
   style: room:sullust-burrow
   map: 10x8
   parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, doorway, wall-curve, arch, step, level-edge, level-corner, raised-floor, pool, pool-edge, grate-floor, niche]
+objects: [art:new:basalt-table, art:new:sullust-lamp, art:new:burrow-bed, art:new:fossil-shelf, art:new:ore-cart]

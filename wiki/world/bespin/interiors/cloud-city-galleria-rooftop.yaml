@@ -52,3 +52,4 @@ room:
   style: room:cloud-city
   map: 18x12
   parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, doorway, wall-curve, window-round, window-wide, step, level-edge, level-corner, raised-floor, railing, railing-end, counter-wall]
+objects: [art:new:cloud-lounge-sofa, art:new:bespin-table, art:new:cloud-art-panel, art:new:vending-unit]

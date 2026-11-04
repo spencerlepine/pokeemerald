@@ -65,3 +65,4 @@ room:
   style: room:imperial-deck
   map: 20x13
   parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, stairs, blast-door, viewport, pillar, counter-wall, step, level-edge, level-corner, raised-floor, grate-floor]
+objects: [art:new:weather-scanner, art:new:imperial-console, art:new:storage-terminal]

@@ -55,3 +55,4 @@ room:
   style: room:imperial-deck
   map: 25x16
   parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, stairs, doorway, blast-door, catwalk, catwalk-rail, pit-edge, pit, pillar, counter-wall, step, level-edge, level-corner, raised-floor, grate-floor]
+objects: [art:new:imperial-console, art:new:mouse-droid-dock, art:new:detention-door, art:new:armor-rack]

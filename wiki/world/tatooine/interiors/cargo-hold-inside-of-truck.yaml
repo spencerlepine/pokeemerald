@@ -60,3 +60,4 @@ room:
   map: 5x5
   parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, wall-curve, window-round, blast-door, beam, ladder]
   grow: '7x6: the curved hull and the hatch do not fit 5x5.'
+objects: [art:new:cargo-crate, art:new:cargo-crate-stack]

@@ -54,3 +54,4 @@ room:
   style: room:starship-cabin
   map: 18x12
   parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, wall-curve, window-round, blast-door, beam, ladder]
+objects: [art:new:pilot-seat, art:new:engineering-panel, art:new:cabin-bunk, art:new:starnav-console]

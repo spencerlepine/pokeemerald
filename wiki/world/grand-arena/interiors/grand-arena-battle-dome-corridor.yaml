@@ -30,3 +30,4 @@ room:
   style: room:grand-arena-casino
   map: 48x7
   parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, doorway, wall-curve, window-wide, counter-wall, pillar, railing, railing-end]
+objects: [art:new:lando-statue, art:new:glow-rod-lamp]

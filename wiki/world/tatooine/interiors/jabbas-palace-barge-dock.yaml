@@ -46,3 +46,4 @@ room:
   style: room:hutt-palace
   map: 22x12
   parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, doorway, pillar-wide, arch, step, level-edge, level-corner, raised-floor, grate-floor, blast-door, wall-curve, ramp]
+objects: [art:new:desert-skiff, art:new:palace-brazier, art:new:cargo-crate-stack]

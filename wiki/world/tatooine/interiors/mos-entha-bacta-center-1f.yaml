@@ -53,3 +53,4 @@ room:
   style: room:bacta-center
   map: 14x9
   parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, stairs, counter-wall, alcove, step, wall-curve, room:tatooine-adobe:window, room:tatooine-adobe:floor-alt]
+objects: [art:new:bacta-heal-rack, art:new:storage-terminal, art:new:bacta-tank, art:new:holonet-screen, art:new:chrono-panel]

@@ -69,3 +69,4 @@ room:
   style: room:bespin-underlevel
   map: 28x30
   parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, stairs, wall-angle, catwalk, catwalk-rail, grate-floor, beam, blast-door, ramp, step]
+objects: [art:new:tibanna-tank, art:new:pipe-valve, art:new:cartel-cot, art:new:cargo-crate-stack, art:new:imperial-console]

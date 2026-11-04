@@ -44,3 +44,4 @@ room:
   style: room:kashyyyk-treehome
   map: 10x8
   parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, wall-curve, window-round, ramp, railing, railing-end, step, level-edge, level-corner, raised-floor, beam]
+objects: [art:new:wookiee-hearth, art:new:woven-basket, art:new:wookiee-table, art:new:bowcaster-rack, art:new:wookiee-hammock, art:new:wookiee-loom]

@@ -48,3 +48,4 @@ room:
   style: room:jedha-holy-city
   map: 13x13
   parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, window, stairs, arch, alcove, niche, pillar-wide, step, level-edge, level-corner, raised-floor, light-pool]
+objects: [art:new:kyber-lamp, art:new:prayer-candles, art:new:guardian-shrine]

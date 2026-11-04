@@ -49,3 +49,4 @@ room:
   style: room:bacta-center
   map: 14x10
   parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, window, stairs, step, wall-curve, room:massassi-rebel-base:window, room:massassi-rebel-base:floor-alt]
+objects: [art:new:holonet-link-console, art:new:info-holo-sign, art:new:glow-rod-lamp]

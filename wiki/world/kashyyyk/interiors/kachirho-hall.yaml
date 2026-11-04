@@ -67,3 +67,4 @@ room:
   style: room:kashyyyk-great-hall
   map: 17x9
   parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, pillar-wide, window-wide, ramp, level-edge, level-corner, raised-floor, step, railing, railing-end, wall-curve]
+objects: [art:new:hall-banner, art:new:trophy-shield]

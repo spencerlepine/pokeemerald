@@ -102,3 +102,4 @@ room:
   style: room:starship-cabin
   map: 36x18
   parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, doorway, wall-curve, window-round, blast-door, beam, ladder]
+objects: [art:new:liner-cabin-bed, art:new:liner-lounge-seat, art:new:ship-galley, art:new:chrono-panel]

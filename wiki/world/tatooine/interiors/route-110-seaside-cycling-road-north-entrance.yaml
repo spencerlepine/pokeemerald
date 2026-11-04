@@ -41,3 +41,4 @@ room:
   style: room:checkpoint-gatehouse
   map: 15x6
   parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, counter-wall, railing, railing-end, room:tatooine-adobe:window, room:tatooine-adobe:floor-alt]
+objects: [art:new:info-holo-sign, art:new:glow-rod-lamp]

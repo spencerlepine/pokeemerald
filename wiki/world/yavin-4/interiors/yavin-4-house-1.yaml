@@ -40,3 +40,4 @@ room:
   style: room:massassi-rebel-base
   map: 11x8
   parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, pillar-wide, ramp, step, level-edge, level-corner, raised-floor, beam, blast-door, arch]
+objects: [art:new:massassi-carving, art:new:rebel-crate, art:new:glow-rod-lamp, art:new:rebel-cot, art:new:comm-station]

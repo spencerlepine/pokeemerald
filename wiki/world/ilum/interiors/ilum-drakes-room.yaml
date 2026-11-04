@@ -44,3 +44,4 @@ room:
   style: room:ilum-vision-chamber
   map: 13x14
   parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, doorway, pit-edge, pit, pillar, step, level-edge, level-corner, raised-floor]
+objects: [art:new:kyber-cluster, art:new:meditation-mat]

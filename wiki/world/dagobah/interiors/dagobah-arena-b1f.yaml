@@ -80,3 +80,4 @@ room:
   style: room:dagobah-root-hollow
   map: 17x26
   parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, window, stairs, wall-curve, pool, pool-edge, step, ledge, beam, floor-hole]
+objects: [art:new:swamp-lantern, art:new:root-shelf]

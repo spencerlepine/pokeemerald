@@ -58,3 +58,4 @@ room:
   style: room:checkpoint-gatehouse
   map: 18x14
   parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, doorway, counter-wall, railing, railing-end, room:ewok-treehut:window, room:ewok-treehut:floor-alt]
+objects: [art:new:info-holo-sign, art:new:glow-rod-lamp]

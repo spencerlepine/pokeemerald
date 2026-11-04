@@ -43,3 +43,4 @@ room:
   style: room:tatooine-adobe
   map: 14x10
   parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, wall-curve, niche, alcove, step, level-edge, level-corner, raised-floor, light-pool, ladder]
+objects: [art:new:adobe-dining-table, art:new:pottery-shelf, art:new:dome-lamp, art:new:sand-rug, art:new:holonet-screen, art:new:hermit-cot, art:new:water-cistern]

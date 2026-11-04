@@ -42,3 +42,4 @@ room:
   style: room:kamino-tipoca
   map: 10x9
   parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, wall-curve, window-wide, doorway, step, level-edge, level-corner, raised-floor, railing, railing-end]
+objects: [art:new:kaminoan-desk, art:new:egg-chair, art:new:holo-wall-display, art:new:bed-pod]

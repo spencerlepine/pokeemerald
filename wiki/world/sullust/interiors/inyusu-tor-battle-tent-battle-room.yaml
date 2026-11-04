@@ -38,3 +38,4 @@ room:
   style: room:tatooine-civic
   map: 10x9
   parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, wall-curve, arch, pillar, step, level-edge, level-corner, raised-floor, beam]
+objects: [art:new:tent-banner, art:new:info-holo-sign]

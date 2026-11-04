@@ -36,3 +36,4 @@ room:
   style: room:republic-wreck
   map: 8x8
   parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, doorway, wall-angle, window-round, blast-door, pool, pool-edge, pit-edge, pit, ladder, beam]
+objects: [art:new:clone-bunk-rack, art:new:dead-console, art:new:wreck-container]

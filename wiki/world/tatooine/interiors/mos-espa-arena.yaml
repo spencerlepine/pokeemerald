@@ -73,3 +73,4 @@ room:
   style: room:tatooine-workshop
   map: 10x21
   parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, catwalk, catwalk-rail, ramp, railing, railing-end, grate-floor, beam, wall-angle]
+objects: [art:new:shard-pillar, art:new:tool-rack, art:new:parts-bin, art:new:scrap-pile, art:new:astromech-charger, art:new:electric-barrier, art:new:barrier-switch]

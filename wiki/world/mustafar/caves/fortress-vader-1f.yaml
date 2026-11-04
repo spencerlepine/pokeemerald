@@ -89,3 +89,4 @@ room:
   style: room:vader-fortress
   map: 37x38
   parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, stairs, wall-angle, pool, pool-edge, catwalk, catwalk-rail, step, level-edge, level-corner, raised-floor, pillar-wide, blast-door]
+objects: [art:new:red-brazier, art:new:imperial-console, art:new:armor-rack, art:new:sith-statue]

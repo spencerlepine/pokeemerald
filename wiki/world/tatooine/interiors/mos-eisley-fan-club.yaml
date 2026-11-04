@@ -78,3 +78,4 @@ room:
   style: room:tatooine-cantina
   map: 24x16
   parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, wall-curve, alcove, arch, step, level-edge, level-corner, raised-floor, pillar]
+objects: [art:new:cantina-table, art:new:drink-dispenser, art:new:no-droids-sign, art:new:cantina-bar, art:new:cantina-booth, art:new:band-stage, art:new:dejarik-table]

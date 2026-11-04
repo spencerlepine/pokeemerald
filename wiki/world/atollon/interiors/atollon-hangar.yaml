@@ -47,3 +47,4 @@ room:
   style: room:docking-hangar
   map: 17x13
   parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, blast-door, pit-edge, pit, catwalk, catwalk-rail, ramp, viewport]
+objects: [art:new:fuel-pump, art:new:cargo-loader, art:new:cargo-crate-stack, art:new:power-droid, art:new:astromech-charger, art:new:starnav-console]

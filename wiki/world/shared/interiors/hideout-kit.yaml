@@ -37,3 +37,4 @@ room:
   style: room:hideout-hollow
   map: 11x9
   parts: [floor, floor-alt, wall-back, wall-side, wall-front, corner-in, corner-out, corner-front, wall-end, exit-mat, window, wall-curve]
+objects: [art:new:hideout-pc]
