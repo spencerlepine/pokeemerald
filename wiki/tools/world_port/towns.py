@@ -66,7 +66,8 @@ def walk(area, coll, doors, steps, start):
     bad = []
     for dx, dy in steps:
         x, y = x + dx, y + dy
-        if not (0 <= x < area.w and 0 <= y < area.h) or (coll[y, x] and (x, y) not in doors):
+        # off the map is fine: a person walks out through an exit into the next map
+        if (0 <= x < area.w and 0 <= y < area.h) and coll[y, x] and (x, y) not in doors:
             bad.append((x, y))
     return (x, y), bad
 

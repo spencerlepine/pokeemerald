@@ -1,0 +1,185 @@
+# Tosche Station (OldaleTown), 28x24 (was 20x20). Exits: north and south on columns 13-14, west on rows 11-12.
+# The supply depot (the Mart) is in the south now, by the route 101 entrance, so the depot clerk waits there
+# before the POTION and walks the player to the depot door (18,18); the rival waits on the south exit and
+# the spacer blocks the west exit one row lower than vanilla.
+objects:
+  1: Station girl
+  2: Depot clerk on a break       # LOCALID_OLDALE_MART_EMPLOYEE; waits at (14,21) until the POTION
+  3: Spacer who walks in circles  # LOCALID_FOOTPRINTS_MAN; blocks the west exit at (1,12) until the adventure starts
+  4: Rival (first meeting)
+coords:
+  0: [0, 11]      # the west exit block
+  1: drop         # the rival's far trigger: the south exit is two cells wide, (12,21) and (13,21) cover it
+  2: [12, 21]
+  3: [13, 21]
+bgs:
+  0: Tosche Station holo-sign
+  1: [7, 18]      # Bacta Center sign, beside its door
+  2: [19, 18]     # Supply Depot sign
+  3: [8, 18]
+  4: [20, 18]
+sign_texts:
+  Power station sign: "TOSCHE STATION POWER PLANT\\nPower converters bought and sold."
+heal:
+  HEAL_LOCATION_OLDALE_TOWN: [6, 19]
+patches:
+  - old: "setobjectxyperm LOCALID_FOOTPRINTS_MAN, 1, 11"
+    new: "setobjectxyperm LOCALID_FOOTPRINTS_MAN, 1, 12"
+  - old: "setobjectxyperm LOCALID_OLDALE_MART_EMPLOYEE, 13, 14"
+    new: "setobjectxyperm LOCALID_OLDALE_MART_EMPLOYEE, 14, 21"
+  - old: "\tcase DIR_EAST, OldaleTown_EventScript_GoToMartEast\n"
+    new: "\tcase DIR_EAST, OldaleTown_EventScript_GoToMartEast\n\tcase DIR_WEST, OldaleTown_EventScript_GoToMartWest\n"
+  - old: |
+      OldaleTown_EventScript_ExplainPokemonMart::
+    new: |
+      @ Tosche Station: the clerk is talked to from the east too (open ground there)
+      OldaleTown_EventScript_GoToMartWest::
+      	applymovement LOCALID_OLDALE_MART_EMPLOYEE, OldaleTown_Movement_EmployeeNorth
+      	applymovement LOCALID_PLAYER, OldaleTown_Movement_PlayerWest
+      	waitmovement 0
+      	goto OldaleTown_EventScript_ExplainPokemonMart
+      	end
+
+      OldaleTown_Movement_PlayerWest:
+      	walk_up
+      	walk_right
+      	walk_right
+      	walk_in_place_faster_up
+      	step_end
+
+      OldaleTown_EventScript_ExplainPokemonMart::
+  - old: |
+      OldaleTown_Movement_EmployeeEast:
+      	walk_up
+      	walk_up
+      	walk_up
+      	walk_up
+      	walk_up
+      	walk_up
+      	walk_up
+      	walk_in_place_faster_down
+      	step_end
+    new: |
+      OldaleTown_Movement_EmployeeEast:
+      	walk_up
+      	walk_up
+      	walk_right
+      	walk_right
+      	walk_right
+      	walk_in_place_faster_down
+      	step_end
+  - old: |
+      OldaleTown_Movement_EmployeeSouth:
+      	walk_left
+      	walk_up
+      	walk_up
+      	walk_right
+      	walk_up
+      	walk_up
+      	walk_up
+      	walk_up
+      	walk_up
+      	walk_in_place_faster_down
+      	step_end
+    new: |
+      OldaleTown_Movement_EmployeeSouth:
+      	walk_right
+      	walk_up
+      	walk_up
+      	walk_right
+      	walk_right
+      	walk_in_place_faster_down
+      	step_end
+  - old: |
+      OldaleTown_Movement_EmployeeNorth:
+      	walk_up
+      	walk_up
+      	walk_up
+      	walk_up
+      	walk_up
+      	walk_up
+      	walk_up
+      	walk_in_place_faster_down
+      	step_end
+    new: |
+      OldaleTown_Movement_EmployeeNorth:
+      	walk_up
+      	walk_up
+      	walk_right
+      	walk_right
+      	walk_right
+      	walk_in_place_faster_down
+      	step_end
+  - old: |
+      OldaleTown_Movement_PlayerEast:
+      	walk_right
+      	walk_up
+      	walk_up
+      	walk_up
+      	walk_up
+      	walk_up
+      	walk_up
+      	step_end
+    new: |
+      OldaleTown_Movement_PlayerEast:
+      	walk_right
+      	walk_up
+      	walk_right
+      	walk_right
+      	walk_right
+      	walk_in_place_faster_up
+      	step_end
+  - old: |
+      OldaleTown_Movement_PlayerSouth:
+      	delay_16
+      	delay_16
+      	delay_16
+      	delay_16
+      	walk_up
+      	walk_up
+      	walk_up
+      	walk_up
+      	walk_up
+      	step_end
+    new: |
+      OldaleTown_Movement_PlayerSouth:
+      	delay_16
+      	delay_16
+      	delay_16
+      	walk_right
+      	walk_right
+      	walk_right
+      	walk_in_place_faster_up
+      	step_end
+  - old: |
+      OldaleTown_Movement_PlayerNorth:
+      	walk_up
+      	walk_up
+      	walk_up
+      	walk_up
+      	walk_up
+      	walk_up
+      	walk_up
+      	step_end
+    new: |
+      OldaleTown_Movement_PlayerNorth:
+      	walk_up
+      	walk_up
+      	walk_right
+      	walk_right
+      	walk_right
+      	walk_in_place_faster_up
+      	step_end
+checks:
+  # the clerk waits at (14,21); the depot door is (18,18): she ends at (17,19), the player at (17,20)
+  - {movement: OldaleTown_Movement_EmployeeNorth, from: [14, 21], to: [17, 19]}
+  - {movement: OldaleTown_Movement_PlayerNorth, from: [14, 22], to: [17, 20]}
+  - {movement: OldaleTown_Movement_EmployeeEast, from: [14, 21], to: [17, 19]}
+  - {movement: OldaleTown_Movement_PlayerEast, from: [13, 21], to: [17, 20]}
+  - {movement: OldaleTown_Movement_EmployeeSouth, from: [14, 21], to: [17, 19]}
+  - {movement: OldaleTown_Movement_PlayerSouth, from: [14, 20], to: [17, 20]}
+  - {movement: OldaleTown_Movement_PlayerWest, from: [15, 21], to: [17, 20]}
+  - {movement: OldaleTown_Movement_RivalApproachPlayer2, from: [14, 21], to: [13, 21]}
+  - {movement: OldaleTown_Movement_RivalExit, from: [13, 21]}
+  - {movement: OldaleTown_Movement_BackUp, from: [1, 12], to: [2, 11]}
+  - {movement: OldaleTown_Movement_ReturnToOriginalPosition, from: [2, 11], to: [1, 12]}

@@ -63,5 +63,8 @@ const u16 gMetatileAttributes_SwRoute117[] = INCBIN_U16("data/tilesets/secondary
 const u16 gMetatiles_SwTerraCaveEnd[] = INCBIN_U16("data/tilesets/secondary/sw/terra-cave-end/metatiles.bin");
 const u16 gMetatileAttributes_SwTerraCaveEnd[] = INCBIN_U16("data/tilesets/secondary/sw/terra-cave-end/metatile_attributes.bin");
 
+const u16 gMetatiles_SwToscheStation[] = INCBIN_U16("data/tilesets/secondary/sw/tosche-station/metatiles.bin");
+const u16 gMetatileAttributes_SwToscheStation[] = INCBIN_U16("data/tilesets/secondary/sw/tosche-station/metatile_attributes.bin");
+
 const u16 gMetatiles_SwToscheStationPowerStation[] = INCBIN_U16("data/tilesets/secondary/sw/tosche-station-power-station/metatiles.bin");
 const u16 gMetatileAttributes_SwToscheStationPowerStation[] = INCBIN_U16("data/tilesets/secondary/sw/tosche-station-power-station/metatile_attributes.bin");

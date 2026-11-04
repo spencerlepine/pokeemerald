@@ -231,6 +231,17 @@ const struct Tileset gTileset_SwTerraCaveEnd =
     .callback = InitTilesetAnim_Cave,
 };
 
+const struct Tileset gTileset_SwToscheStation =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SwToscheStation,
+    .palettes = gTilesetPalettes_SwToscheStation,
+    .metatiles = gMetatiles_SwToscheStation,
+    .metatileAttributes = gMetatileAttributes_SwToscheStation,
+    .callback = InitTilesetAnim_Petalburg,
+};
+
 const struct Tileset gTileset_SwToscheStationPowerStation =
 {
     .isCompressed = TRUE,
