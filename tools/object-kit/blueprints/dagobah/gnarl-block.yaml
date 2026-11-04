@@ -1,0 +1,38 @@
+# Dagobah's gnarltree as a forest block (wiki art:dagobah:gnarltree), from scratch on the vanilla tree's
+# frame. What makes it Dagobah: a dark, heavy crown that droops at the sides and hangs a curtain of moss
+# strands, so a forest of them reads as a gloomy swamp wall, not a park. On the forest edge two thick
+# arching roots stand in the mud under it.
+name: gnarl-block
+style: dagobah
+role: edge
+about: Forest block; dark drooping crown with a curtain of moss strands; arching roots on the forest edge.
+footprint: [2, 1]
+fill: true
+drawn: 2
+foot: [16, 28]
+render: {light: [-0.35, -0.4, 0.85], inner_lines: black, depth_jump: 0.07, supersample: 4}
+materials:
+  leaf:  {ramp: dark, bands: [-0.1, 0.4, 0.8]}
+  moss:  {ramp: mid, bands: [0.1, 0.5, 0.85]}
+  bark:  {ramp: mid, bands: [0.2, 0.5, 0.85]}
+drop_shadow: []
+ground_shadow:
+  - {rx: 16, ry: 9, dy: -5, color: "mid:1", checker: true}
+  - {rx: 14, ry: 7, dy: -4, color: "mid:1"}
+  - {rx: 11, ry: 4, dy: -1, color: "dark:0"}
+choose:
+  m: {int: [3, 4]}
+  mj: [-0.08, 0.08]
+parts:
+  - {name: trunk, mat: bark, cylinder: {a: [0, 0.3, 0], b: [0, 0.3, 0.5], r1: 0.2, r2: 0.18}}
+  - when: "=edge"
+    parts:
+      - {name: root-w, mat: bark, group: root-w, _new_group: true, cone: {a: [-0.2, 0.2, 0.35], b: [-0.72, -0.02, 0.0], r1: 0.13, r2: 0.1}}
+      - {name: root-e, mat: bark, group: root-e, _new_group: true, cone: {a: [0.2, 0.2, 0.35], b: [0.72, -0.02, 0.0], r1: 0.13, r2: 0.1}}
+  - {name: core, mat: leaf, ellipsoid: {c: [0, 0.3, 0.62], r: [0.7, 0.42, 0.4]}}
+  - lobes: {name: lobe, within: {c: [0, 0.3, 0.62], r: [0.96, 0.52, 0.48]}, rows: [[75, 3], [40, 5], [5, 7], [-30, 7]], size: 0.21, k: 0.88, xs: 0.95, squash: [0.95, 0.9, 1.15]}
+    mat: leaf
+  - repeat: "=m"
+    parts:
+      - {name: "='moss' + str(i)", group: "='moss' + str(i)", _new_group: true, mat: moss,
+         box: {c: ["=-0.62 + 1.24 * (i + 0.5) / m + mj", -0.2, "=0.28 - 0.05 * ((i + seed) % 2)"], half: [0.06, 0.04, "=0.16 + 0.04 * ((i + seed) % 2)"], radius: 0.03}}

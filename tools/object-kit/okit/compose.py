@@ -179,7 +179,8 @@ def compose(path, seed, footprint=None, overrides=None):
     W, D = footprint or rng.choice(footprint_options(bp))
     fill = bool(bp.get("fill", False))
     margin = 0.0 if fill else MARGIN
-    params = {"W": W, "D": D, "w_max": W - 2 * margin, "d_max": float(D), "seed": seed, "fill": fill}
+    params = {"W": W, "D": D, "w_max": W - 2 * margin, "d_max": float(D), "seed": seed, "fill": fill,
+              "edge": True}   # trees: True = the front row of a forest (trunk on open ground), False = inside it
     style_kit = {}
     materials = {}
     for k in kit_files(style):
@@ -204,7 +205,7 @@ def compose(path, seed, footprint=None, overrides=None):
         "palette": bp.get("palette", style_kit.get("palette", "greybox")),
         "kits": [f"{k}.yaml" for k in kit_files(style)],
         "cells": [W, tall],
-        "foot": [W * 8, tall * 16 - 2],
+        "foot": M.evaluate(bp["foot"], params) if bp.get("foot") else [W * 8, tall * 16 - 2],
         "footprint": tall,
         "seed": seed,
         "render": render,

@@ -21,7 +21,7 @@ import os
 import numpy as np
 
 # The chunk dial (owner 2026-11-04: "chunkier low poly, rounded, not pointy"). Every generator reads its
-# defaults from here, so one setting moves every family. Levels: `faceted` (round 1), `chunky` (default),
+# defaults from here, so one setting moves every family. Levels: `faceted` (the default, owner pick 2026-11-04), `chunky`,
 # `soft`. Pick one with --chunk on the CLI or OKIT_CHUNK. A blueprint should not set `n`, `round` or `top`
 # unless the shape needs it.
 LEVELS = {
@@ -29,7 +29,7 @@ LEVELS = {
     "chunky":  {"round": 0.09, "facets": 6, "blunt": 0.45, "min_r": 0.16},
     "soft":    {"round": 0.14, "facets": 6, "blunt": 0.6, "min_r": 0.2},
 }
-STYLE = dict(LEVELS[os.environ.get("OKIT_CHUNK", "chunky")])
+STYLE = dict(LEVELS[os.environ.get("OKIT_CHUNK", "faceted")])
 
 
 def set_level(name):

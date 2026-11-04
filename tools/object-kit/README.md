@@ -1,6 +1,6 @@
 # object-kit: small world objects in greybox
 
-Status: **round 2, in review (owner, 2026-11-04: round 1 was too pointy; chunkier, rounder low poly).** Shapes and light only, no colour or texture. Nothing
+Status: **round 3, in review (owner, 2026-11-04: rocks approved at `faceted`; trees rebuilt from scratch as forest blocks).** Shapes and light only, no colour or texture. Nothing
 goes into `../../game` or the wiki yet.
 
 Small and medium world pieces: rocks, trees, plants, ice, crystals, and small structures (comm towers,
@@ -26,6 +26,7 @@ python3 -m okit sheet [--style hoth] -n 6              # variants of every bluep
 python3 -m okit collage [-n 6]                         # every family on one image: output/_collage.png
 python3 -m okit catalog [--planet sullust]             # the object list per planet, and what is designed
 python3 -m okit build [--planet endor]                 # every designed catalog entry at its footprint: output/build/
+python3 -m okit forest ilum/pine-block [--cols 6 --rows 4]   # a forest of blocks on vanilla's grid, beside Petalburg Woods
 ```
 
 Everything is written to `output/` (not committed). Each line printed for a seed gives the hit box, the
@@ -36,7 +37,7 @@ piece stands on more ground than its hit box.
 
 Vanilla's rocks and trees are wide at the base, round on top and built from one to three big masses.
 Nothing ends in a point and nothing is thinner than about 5 px. So the generators take their
-defaults from one dial in `okit/gens.py` (`LEVELS`): `faceted` (round 1), `chunky` (the default) and
+defaults from one dial in `okit/gens.py` (`LEVELS`): `faceted` (the default, owner's pick), `chunky` and
 `soft`. It sets the bevel on every edge, the facets per ring, how far spike tops are cut flat and the
 thinnest spike. Pick a level with `--chunk` on any command or `OKIT_CHUNK`. Blueprints leave `n`,
 `round` and `top` unset unless the shape needs them, so the dial moves every family at once.
@@ -46,6 +47,29 @@ Rules for writing a family under the dial:
 - Width about the same as the height; a tall piece is a stack of chunks, never a cone to a point.
 - Leaf crowns and bushes are clumps lit as balls with dark lines between them (`lobes`, the method
   of the approved Hoenn tree).
+
+## Trees are forest blocks (round 3)
+
+A forest in vanilla is one tree on a plain grid: every tree a 2x2 block, its crown filling the block the
+same way every time, so a wall of them closes up with no gaps. Trees that vary in size or leave gaps look
+broken when tiled (owner, round 2). So every tree family is a forest block:
+
+- `footprint: [2, 1]`, `fill: true`, `drawn: 2`: a 2x2 block, crown edge to edge, hit box the bottom row.
+- `foot: [16, 28]` puts the trunk where vanilla's is; the crown top stays under `y + z` 1.6 m or it is cut.
+- Seeds change small details only (a lean, a shift, a moss strip), never the size or the outline.
+- `edge` (true by default) is the forest's south row: it shows the trunk and roots. The `forest` command
+  draws the rows behind with `edge` false.
+- `cylinder` with `r1`/`r2` is a flat-ended cone (a skirt); `cone` is a capsule with round ends.
+- Give a part its own `group` plus `_new_group: true` to get a dark line around it (tiers, snow, moss).
+
+| Block | What it is |
+|---|---|
+| `hoenn/broadleaf` | the approved Hoenn tree, as the calibration |
+| `kashyyyk/wroshyr-tree` | flat-topped canopy of leaf plates, fronds on the rim, thick trunk and roots |
+| `dagobah/gnarl-block` | dark drooping crown, moss strips, crooked roots on the edge |
+| `felucia/fungus-block` | one big pale cap on a stalk, gills under it, a small side mushroom on the edge |
+| `ilum/pine-block` | three stepped skirts, snow on top of each, green rims |
+| `yavin-4/jungle-block` | wide flat crown, hanging clumps and vines |
 
 ## Hit box and drawn size
 
@@ -93,7 +117,7 @@ approves the look; the scenery thread is greyboxing those rows in `../world-art`
 - `materials`: greybox ramps from `kits/common.yaml` (rock, stone, bark, leaf, ice, fungus, metal,
   dark, light); a blueprint may override one (the snow pine darkens its needles so the snow reads).
 
-## Round 1 families
+## Round 1 families (rocks, structures; the round 1 trees are kept for reference)
 
 | Blueprint | Role | What varies |
 |---|---|---|

@@ -90,6 +90,22 @@ def cmd_variants(a):
     write_family(C.blueprint_path(a.blueprint), a.n, _footprint(a.footprint))
 
 
+def cmd_forest(a):
+    """A grid of one tree family (seeds cycle), the front row drawn as the forest edge."""
+    path = C.blueprint_path(a.blueprint)
+    cache = {}
+
+    def block(c, r, edge):
+        seed = 1 + (c * 7 + r * 3) % a.seeds
+        key = (seed, edge)
+        if key not in cache:
+            cache[key] = make(path, seed, None, {"edge": edge}, quiet=True)[0]
+        return cache[key]
+    bp = C.load(path)
+    out = R.forest(block, a.cols, a.rows, f"{bp['style']}/{bp['name']} as a forest ({a.seeds} seeds; south row = forest edge)")
+    print("->", _save(out, bp["style"], bp["name"], "forest.png"))
+
+
 def cmd_sheet(a):
     for p in C.all_blueprints(a.style):
         write_family(p, a.n)
@@ -125,6 +141,9 @@ def main(argv=None):
     p.add_argument("--set", action="append", metavar="PARAM=VALUE"); p.set_defaults(f=cmd_try)
     p = sub.add_parser("variants", help="n seeds side by side, a screen scene, a border strip for edge pieces")
     p.add_argument("blueprint"); p.add_argument("-n", type=int, default=8); p.add_argument("--footprint", help="WxD"); p.set_defaults(f=cmd_variants)
+    p = sub.add_parser("forest", help="a tree family tiled as a forest next to vanilla's")
+    p.add_argument("blueprint"); p.add_argument("--cols", type=int, default=6); p.add_argument("--rows", type=int, default=4)
+    p.add_argument("--seeds", type=int, default=4); p.set_defaults(f=cmd_forest)
     p = sub.add_parser("sheet", help="variants of every blueprint of a style"); p.add_argument("--style"); p.add_argument("-n", type=int, default=6); p.set_defaults(f=cmd_sheet)
     p = sub.add_parser("collage", help="every family on one image"); p.add_argument("--style"); p.add_argument("-n", type=int, default=6)
     p.add_argument("--scale", type=int, default=2); p.add_argument("--out"); p.set_defaults(f=cmd_collage)

@@ -1,0 +1,33 @@
+# Yavin 4's Massassi jungle tree as a forest block (wiki art:yavin-4:massassi-jungle-tree), from scratch on
+# the vanilla tree's frame. What makes it Yavin: a high canopy of big broad leaves that splay out and down
+# from the centre like a palm (A New Hope's jungle around the temple), with two vines hanging in front.
+name: jungle-block
+style: yavin-4
+role: edge
+about: Forest block; big broad leaves splaying out and down from the centre, two hanging vines.
+footprint: [2, 1]
+fill: true
+drawn: 2
+foot: [16, 28]
+render: {light: [-0.35, -0.4, 0.85], inner_lines: black, depth_jump: 0.06, supersample: 4}
+materials:
+  leaf: {ramp: mid, bands: [-0.05, 0.4, 0.8]}
+  vine: {ramp: dark, bands: [0.2, 0.5, 0.85]}
+  bark: {ramp: dark, bands: [0.2, 0.5, 0.85]}
+drop_shadow: []
+ground_shadow:
+  - {rx: 16, ry: 9, dy: -5, color: "mid:1", checker: true}
+  - {rx: 14, ry: 7, dy: -4, color: "mid:1"}
+  - {rx: 11, ry: 4, dy: -1, color: "dark:0"}
+choose:
+  vx: [0.25, 0.5]
+  vs: {pick: [-1, 1]}
+parts:
+  - {name: trunk, mat: bark, cylinder: {a: [0, 0.3, 0], b: [0, 0.3, 0.6], r1: 0.15, r2: 0.13}}
+  - {name: core, mat: leaf, ellipsoid: {c: [0, 0.3, 0.7], r: [0.66, 0.38, 0.32]}}
+  - lobes: {name: top, within: {c: [0, 0.3, 0.7], r: [0.92, 0.5, 0.4]}, rows: [[75, 3], [40, 6], [8, 7]], size: 0.22, k: 0.9, xs: 1.0, squash: [1.6, 0.9, 0.55]}
+    mat: leaf
+  - lobes: {name: drip, within: {c: [0, 0.3, 0.55], r: [0.9, 0.5, 0.35]}, rows: [[-25, 7]], size: 0.17, k: 0.95, xs: 1.0, squash: [0.75, 0.8, 1.5]}
+    mat: leaf
+  - {name: vine1, mat: vine, group: vine1, _new_group: true, box: {c: ["=vs * vx", -0.22, 0.22], half: [0.05, 0.04, 0.22], radius: 0.02}}
+  - {name: vine2, mat: vine, group: vine2, _new_group: true, box: {c: ["=-vs * vx * 0.5", -0.22, 0.3], half: [0.05, 0.04, 0.14], radius: 0.02}}
