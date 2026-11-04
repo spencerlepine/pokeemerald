@@ -11,9 +11,6 @@ ones nature and small structures need on top. Every one takes `mat` and `name`.
     columns: {c: [x, y], w, d, r: 0.2, h: [lo, hi], sides: 6, round: 0.02, peak: [x, y] | none}
              hexagonal prisms packed to fill w x d (centre c): basalt columns, a crystal bed, stacked
              crates. Heights are random in [lo, hi], tallest near `peak` when given.
-    roots:   {c: [x, y, z], n: 5, reach: [lo, hi], r: 0.1, arc: [a0, a1], kind: arch | wedge, z0: 0, sag: 0.1, bend_at: 0.5}
-             n roots from a point `c` on a trunk out to the ground (arc in degrees, 270 = due south): `arch` =
-             two cones, out to a bend `sag` m above c, then down (a mangrove), `wedge` = a thin buttress fin that widens to the ground (a wroshyr).
 """
 import math
 import os
@@ -135,39 +132,4 @@ def gen_columns(g, rng):
     return out
 
 
-def gen_roots(g, rng):
-    R = _rng_of(rng)
-    c = np.asarray(g.get("c", [0, 0, 0.6]), float)
-    n = int(g.get("n", 5))
-    a0, a1 = (float(v) for v in g.get("arc", [200, 340]))      # degrees, 270 = due south
-    kind = g.get("kind", "arch")
-    rr = max(float(g.get("r", 0.1)), STYLE["min_r"] * 0.8)
-    z0 = float(g.get("z0", 0.0))
-    out = []
-    for i in range(n):
-        t = (i + 0.5) / n
-        a = math.radians(a0 + (a1 - a0) * t + R.uniform(-0.3, 0.3) * (a1 - a0) / n)
-        reach = _f(g.get("reach", [0.6, 1.0]), R)
-        tip = np.array([c[0] + math.cos(a) * reach, c[1] + math.sin(a) * reach, z0])
-        name = f"{g.get('name', 'root')}/{i}"
-        if kind == "wedge":
-            # a thin fin: at the trunk it stands c.z tall, at the tip it is on the ground
-            side = np.array([-math.sin(a), math.cos(a), 0]) * float(g.get("t", 0.12)) / 2
-            base = np.array([c[0] + math.cos(a) * float(g.get("inset", 0.0)), c[1] + math.sin(a) * float(g.get("inset", 0.0)), 0])
-            pts = [base - side, base + side, base - side + [0, 0, c[2]], base + side + [0, 0, c[2]],
-                   tip - side * 0.7, tip + side * 0.7, tip - side * 0.5 + [0, 0, float(g.get("tip_h", 0.12))], tip + side * 0.5 + [0, 0, float(g.get("tip_h", 0.12))]]
-            out.append({"name": name, "mat": g["mat"], "group": g.get("group", "body"),
-                        "hull": {"points": np.round(pts, 3).tolist(), "round": float(g.get("round", STYLE["round"] * 0.6))}})
-        else:
-            # an arch: two cones, out and a little up, then down to the ground
-            # `sag`: how far the bend rises above the root's start (an arch out, then down to the mud)
-            mid = c + (tip - c) * float(g.get("bend_at", 0.5))
-            mid[2] = c[2] + float(g.get("sag", 0.0))
-            out.append({"name": name + "a", "mat": g["mat"], "group": g.get("group", "body"),
-                        "cone": {"a": np.round(c, 3).tolist(), "b": np.round(mid, 3).tolist(), "r1": rr, "r2": rr * 0.85}})
-            out.append({"name": name + "b", "mat": g["mat"], "group": g.get("group", "body"),
-                        "cone": {"a": np.round(mid, 3).tolist(), "b": np.round(tip, 3).tolist(), "r1": rr * 0.85, "r2": rr * 0.6}})
-    return out
-
-
-GENERATORS = {"rock": gen_rock, "spike": gen_spike, "columns": gen_columns, "roots": gen_roots}
+GENERATORS = {"rock": gen_rock, "spike": gen_spike, "columns": gen_columns}

@@ -93,22 +93,6 @@ def cmd_variants(a):
     write_family(C.blueprint_path(a.blueprint), a.n, _footprint(a.footprint))
 
 
-def cmd_forest(a):
-    """A grid of one tree family (seeds cycle), the front row drawn as the forest edge."""
-    path = C.blueprint_path(a.blueprint)
-    cache = {}
-
-    def block(c, r, edge):
-        seed = 1 + (c * 7 + r * 3) % a.seeds
-        key = (seed, edge)
-        if key not in cache:
-            cache[key] = make(path, seed, None, {"edge": edge}, quiet=True)[0]
-        return cache[key]
-    bp = C.load(path)
-    out = R.forest(block, a.cols, a.rows, f"{bp['style']}/{bp['name']} as a forest ({a.seeds} seeds; south row = forest edge)")
-    print("->", _save(out, bp["style"], bp["name"], "forest.png"))
-
-
 def cmd_sheet(a):
     for p in C.all_blueprints(a.style):
         write_family(p, a.n)
@@ -125,18 +109,8 @@ def cmd_collage(a):
     print("->", _save(out, a.out or "_collage.png"))
 
 
-def cmd_catalog(a):
-    from . import catalog as K
-    K.report(a.planet)
-
-
-def cmd_build(a):
-    from . import catalog as K
-    K.build(a.planet, a.wiki)
-
-
 def main(argv=None):
-    ap = argparse.ArgumentParser(prog="okit", description="small world objects (nature, rocks, props, small structures) in greybox, from seeded blueprints")
+    ap = argparse.ArgumentParser(prog="okit", description="rock families in greybox, from seeded blueprints (paused; see README)")
     sub = ap.add_subparsers(dest="cmd", required=True)
     p = sub.add_parser("list", help="every blueprint"); p.add_argument("--style"); p.set_defaults(f=cmd_list)
     p = sub.add_parser("try", help="one seed of a blueprint, 6x, with its hit box")
@@ -144,16 +118,11 @@ def main(argv=None):
     p.add_argument("--set", action="append", metavar="PARAM=VALUE"); p.set_defaults(f=cmd_try)
     p = sub.add_parser("variants", help="n seeds side by side, a screen scene, a border strip for edge pieces")
     p.add_argument("blueprint"); p.add_argument("-n", type=int, default=8); p.add_argument("--footprint", help="WxD"); p.set_defaults(f=cmd_variants)
-    p = sub.add_parser("forest", help="a tree family tiled as a forest next to vanilla's")
-    p.add_argument("blueprint"); p.add_argument("--cols", type=int, default=6); p.add_argument("--rows", type=int, default=4)
-    p.add_argument("--seeds", type=int, default=4); p.set_defaults(f=cmd_forest)
     p = sub.add_parser("sheet", help="variants of every blueprint of a style"); p.add_argument("--style"); p.add_argument("-n", type=int, default=6); p.set_defaults(f=cmd_sheet)
     p = sub.add_parser("collage", help="every family on one image"); p.add_argument("--style"); p.add_argument("-n", type=int, default=6)
     p.add_argument("--scale", type=int, default=2); p.add_argument("--out"); p.set_defaults(f=cmd_collage)
-    p = sub.add_parser("catalog", help="the object list per planet (catalog/<planet>.yaml)"); p.add_argument("--planet"); p.set_defaults(f=cmd_catalog)
-    p = sub.add_parser("build", help="render every designed catalog entry (output/build/, or --wiki)"); p.add_argument("--planet"); p.add_argument("--wiki", action="store_true"); p.set_defaults(f=cmd_build)
     for sp in sub.choices.values():
-        sp.add_argument("--chunk", choices=["faceted", "chunky", "soft"], help="the chunk dial (okit/gens.py LEVELS); default chunky")
+        sp.add_argument("--chunk", choices=["faceted", "chunky", "soft"], help="the chunk dial (okit/gens.py LEVELS); default faceted")
     a = ap.parse_args(argv)
     if a.chunk:
         from . import gens

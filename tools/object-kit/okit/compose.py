@@ -45,7 +45,7 @@ from worldart import model as M  # noqa: E402
 
 from . import gens as G  # noqa: E402
 
-M.GENERATORS.update(G.GENERATORS)   # so templates in kits may use rock, spike, columns, roots too
+M.GENERATORS.update(G.GENERATORS)   # so templates in kits may use rock, spike, columns too
 M.EXPR_ENV.setdefault("str", str)   # part names built in a repeat: "='tier' + str(i)"
 
 TALL = 8          # cells of canvas the render starts with; cropped to the art afterwards
@@ -183,8 +183,7 @@ def compose(path, seed, footprint=None, overrides=None):
     W, D = footprint or rng.choice(footprint_options(bp))
     fill = bool(bp.get("fill", False))
     margin = 0.0 if fill else MARGIN
-    params = {"W": W, "D": D, "w_max": W - 2 * margin, "d_max": float(D), "seed": seed, "fill": fill,
-              "edge": True}   # trees: True = the front row of a forest (trunk on open ground), False = inside it
+    params = {"W": W, "D": D, "w_max": W - 2 * margin, "d_max": float(D), "seed": seed, "fill": fill}
     style_kit = {}
     materials = {}
     for k in kit_files(style):

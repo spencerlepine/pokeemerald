@@ -1,0 +1,79 @@
+object_id,planet,name,role,hit_box,drawn,art,placeholder,status,about
+obj:bespin:promenade-railing,BESPIN,Promenade railing,edge,1x1,1x1,art:bespin:promenade-railing,,in world_art.csv,White curved railing kit.
+obj:bespin:planter,BESPIN,Cloud City planter,noise,1x1,1x2,,world/objects/bespin/planter.png,pending-mockup,Round white planter with a small tree.
+obj:bespin:tibanna-canister,BESPIN,Tibanna canister,noise,1x1,1x2,,world/objects/bespin/tibanna-canister.png,pending-mockup,Gas canister rack on the refinery decks.
+obj:dagobah:gnarltree,DAGOBAH,Gnarltree,edge,2x2,3x5,art:dagobah:gnarltree,,in world_art.csv,Mangrove-like tree on arching prop roots; the swamp wall.
+obj:dagobah:root-tangle,DAGOBAH,Root tangle,edge,2x1,2x1,,world/objects/dagobah/root-tangle.png,pending-mockup,Low knot of mangrove roots in the bog; fills gaps between gnarltrees.
+obj:dagobah:swamp-reeds,DAGOBAH,Swamp reeds,walkable,1x1,1x1,art:dagobah:swamp-reeds,,in world_art.csv,Reed tall-grass in shallow water.
+obj:dagobah:hanging-moss,DAGOBAH,Hanging moss,noise,1x1,1x1,art:dagobah:hanging-moss,,in world_art.csv,"Moss strands, top layer."
+obj:dagobah:bog-stump,DAGOBAH,Bog stump,noise,1x1,1x2,,world/objects/dagobah/bog-stump.png,pending-mockup,Rotten hollow stump sticking out of the mud.
+obj:endor:fallen-log,ENDOR,Fallen log,edge,3x1,3x2,art:endor:fallen-log,,in world_art.csv,Mossy trunk lying east-west with a root plate.
+obj:endor:redwood-trunk,ENDOR,Redwood trunk,edge,3x3,3x6,art:endor:redwood-trunk,,in world_art.csv,Giant redwood base (vanilla trees stay the main wall; this frames clearings).
+obj:endor:fern-undergrowth,ENDOR,Fern undergrowth,walkable,1x1,1x1,art:endor:fern-undergrowth,,in world_art.csv,Fern tall-grass variant.
+obj:endor:stump,ENDOR,Redwood stump,noise,2x1,2x2,,world/objects/endor/stump.png,pending-mockup,Wide cut stump with ring rings; Ewok village edges.
+obj:endor:totem,ENDOR,Ewok totem and drums,noise,1x2,1x3,art:endor:totem-and-drum,,in world_art.csv,Carved pole and log drums.
+obj:endor:rope-railing,ENDOR,Rope railing,edge,1x1,1x2,,world/objects/endor/rope-railing.png,pending-mockup,Rope and post railing along tree platforms.
+obj:felucia:giant-fungus,FELUCIA,Giant fungus,edge,2x1,2x5,art:felucia:giant-fungus,,in world_art.csv,Stalk with a domed cap; single or a cluster; the route wall.
+obj:felucia:spore-pods,FELUCIA,Spore pod plants,walkable,1x1,1x1,art:felucia:spore-pod-plants,,in world_art.csv,"Pod plants, tall-grass variant."
+obj:felucia:tube-coral,FELUCIA,Tube plant,noise,1x1,1x2,,world/objects/felucia/tube-coral.png,pending-mockup,Bundle of hollow tube stalks (Felucia's coral-like plants).
+obj:felucia:frond-cup,FELUCIA,Cup frond,noise,2x1,2x2,,world/objects/felucia/frond-cup.png,pending-mockup,Giant cupped leaf on a short stem; a puddle of colour later.
+obj:hoth:ice-spikes,HOTH,Ice spikes,edge,2x1,1x3,art:hoth:ice-stalagmites,,in world_art.csv,Ice blades out of a snow mound.
+obj:hoth:snow-boulder,HOTH,Snow-capped boulder,edge,2x1,2x2,,world/objects/hoth/snow-boulder.png,pending-mockup,Grey rock under a snow cap; the tundra blocker.
+obj:hoth:snow-drift,HOTH,Snow drift,edge,2x1,2x1,,world/objects/hoth/snow-drift.png,pending-mockup,Wind-carved drift with an overhanging lip.
+obj:hoth:survey-beacon,HOTH,Survey beacon,noise,1x1,1x3,,world/objects/hoth/survey-beacon.png,pending-mockup,Rebel survey pole with a light; marks the safe path.
+obj:ilum:snow-pine,ILUM,Snow pine,edge,1x1,2x5,art:ilum:snow-pine,,in world_art.csv,Snow-laden conifer; the route wall.
+obj:ilum:kyber-outcrop,ILUM,Kyber outcrop,noise,1x1,1x2,art:ilum:kyber-crystal-outcrop,,in world_art.csv,Crystals fanning out of rock.
+obj:ilum:ice-pillar,ILUM,Ice pillar,edge,1x1,1x3,,world/objects/ilum/ice-pillar.png,pending-mockup,Smooth blue ice column in the caves.
+obj:jedha:ruin-pillar,JEDHA,Broken pillar,edge,1x1,1x3,,world/objects/jedha/ruin-pillar.png,pending-mockup,Fallen and standing sandstone pillars of the old holy city.
+obj:jedha:prayer-candles,JEDHA,Prayer candles,noise,1x1,1x1,art:jedha:prayer-candles,,in world_art.csv,Candle rows and kyber shrines.
+obj:jedha:mesa-boulder,JEDHA,Jedha mesa boulder,edge,2x1,2x2,,world/objects/jedha/mesa-boulder.png,pending-mockup,Pale rock blocker (reuses the sandstone boulder family).
+obj:jedha:pilgrim-shrine,JEDHA,Pilgrim shrine,noise,1x2,1x4,,world/objects/jedha/pilgrim-shrine.png,pending-mockup,Small stepped shrine with a niche.
+obj:kamino:rock-stack,KAMINO,Sea rock stack,edge,1x1,1x2,art:kamino:rock-stack,,in world_art.csv,Black sea stack on the rock islets.
+obj:kamino:deck-railing,KAMINO,Deck railing,edge,1x1,1x1,art:kamino:stilt-walkway,,in world_art.csv,Curved metal railing on the platform edge.
+obj:kamino:storm-light,KAMINO,Storm beacon,noise,1x1,1x3,,world/objects/kamino/storm-light.png,pending-mockup,Tall platform light mast.
+obj:kashyyyk:wroshyr-trunk,KASHYYYK,Wroshyr trunk,edge,3x2,3x6,art:kashyyyk:wroshyr-tree,,in world_art.csv,"Giant trunk as the route wall, cut off at the top (the canopy is the top layer)."
+obj:kashyyyk:fern-clump,KASHYYYK,Fern clump,noise,1x1,1x1,art:kashyyyk:fern-clump,,in world_art.csv,Big fern bush; replaces small trees and cuttable bushes.
+obj:kashyyyk:root-arch,KASHYYYK,Root arch,edge,3x2,3x4,art:kashyyyk:root-arch,,in world_art.csv,Roots arching over a path; walk under (top layer).
+obj:kashyyyk:beach-rocks,KASHYYYK,Beach rocks,edge,1x1,1x1,art:kashyyyk:beach-rocks,,in world_art.csv,Dark basalt rocks on the lagoon beaches.
+obj:kashyyyk:canopy-vine,KASHYYYK,Hanging vines,noise,1x1,1x3,,world/objects/kashyyyk/canopy-vine.png,pending-mockup,Thick lianas hanging from the canopy layer over paths (top layer).
+obj:kashyyyk:shelf-fungus,KASHYYYK,Shelf fungus,noise,1x1,1x2,,world/objects/kashyyyk/shelf-fungus.png,pending-mockup,Big bracket fungus on a stump; small edge filler between trunks.
+obj:kashyyyk:bowcaster-rack,KASHYYYK,Bowcaster rack,noise,1x1,1x2,art:kashyyyk:bowcaster-rack,,in world_art.csv,Weapon rack and drying hides outside huts.
+obj:kashyyyk:wookiee-lantern,KASHYYYK,Wookiee lantern post,noise,1x1,1x3,,world/objects/kashyyyk/wookiee-lantern.png,pending-mockup,Carved wood post with a hanging lamp along platforms.
+obj:mustafar:obsidian-spire,MUSTAFAR,Obsidian spire,edge,2x1,2x6,art:mustafar:obsidian-spire,,in world_art.csv,"Black glassy blade, pair or broken stump."
+obj:mustafar:lava-crust-rock,MUSTAFAR,Cooling crust rock,edge,2x1,2x1,,world/objects/mustafar/lava-crust-rock.png,pending-mockup,Cracked crust slab at the lava edge; glowing seams later.
+obj:mustafar:collector-pylon,MUSTAFAR,Collector pylon,noise,1x1,1x3,,world/objects/mustafar/collector-pylon.png,pending-mockup,Short shield pylon along the mining walkways.
+obj:mustafar:ash-geyser,MUSTAFAR,Ash geyser cone,noise,1x1,1x2,,world/objects/mustafar/ash-geyser.png,pending-mockup,Small volcanic cone puffing ash.
+obj:shared:comm-tower,SHARED,Comm tower,landmark,1x1,1x3,,world/objects/shared/comm-tower.png,pending-mockup,"Signal mast; dish, array or sensor ball."
+obj:shared:cargo-crates,SHARED,Cargo crates,noise,2x1,2x3,art:shared:cargo-crates,,in world_art.csv,Durasteel crate stack.
+obj:shared:fuel-tanks,SHARED,Fuel tanks,noise,2x1,2x3,art:shared:fuel-tanks,,in world_art.csv,Upright or lying tanks.
+obj:shared:holo-sign,SHARED,Holo sign,noise,1x1,1x1,art:shared:holo-sign,,in world_art.csv,Sign post that replaces the wooden sign.
+obj:shared:gonk-droid,SHARED,Gonk droid,noise,1x1,1x2,art:shared:gonk-droid,,in world_art.csv,Parked power droid.
+obj:shared:barrier,SHARED,Imperial barrier,edge,1x1,1x2,,world/objects/shared/barrier.png,pending-mockup,Checkpoint barricade block; closes a road until an event.
+obj:shared:lamp-post,SHARED,Lamp post,noise,1x1,1x3,,world/objects/shared/lamp-post.png,pending-mockup,"Street light for towns, recoloured per planet."
+obj:shared:power-generator,SHARED,Power generator,noise,2x1,2x2,,world/objects/shared/power-generator.png,pending-mockup,Squat generator with cooling fins and a cable.
+obj:shared:speeder-parked,SHARED,Parked landspeeder,noise,2x1,2x2,art:shared:parked-landspeeder,,in world_art.csv,X-34 style speeder by a house.
+obj:sullust:basalt-columns,SULLUST,Basalt columns,edge,2x2,2x4,art:sullust:basalt-column,,in world_art.csv,Hex columns stepping down to the path; the tree replacement.
+obj:sullust:ash-dune,SULLUST,Ash drift,walkable,1x1,1x1,art:sullust:ash-dune,,in world_art.csv,Grey ash drifts; ground by recolour.
+obj:sullust:steam-vent,SULLUST,Steam vent,noise,1x1,1x1,art:sullust:steam-vent,,in world_art.csv,Ground vent with an animated steam puff.
+obj:sullust:fungus-stalks,SULLUST,Cave fungus,noise,1x1,1x2,art:sullust:fungus-stalks,,in world_art.csv,Pale fungus clusters in the tunnels.
+obj:sullust:lava-rock,SULLUST,Lava rock boulder,edge,2x1,2x2,,world/objects/sullust/lava-rock.png,pending-mockup,Pitted black boulder; the second route blocker beside the columns.
+obj:sullust:ash-pine,SULLUST,Ash-choked dead pine,noise,1x1,1x3,,world/objects/sullust/ash-pine.png,pending-mockup,Burnt snag standing in the ash fields.
+obj:tatooine:sandstone-boulder,TATOOINE,Sandstone boulder,edge,2x1,2x2,art:tatooine:sandstone-boulder,,in world_art.csv,"Main route blocker in place of the Hoenn tree; round, slab or split."
+obj:tatooine:rock-spire,TATOOINE,Rock spire (hoodoo),edge,2x1,2x5,art:tatooine:rock-spire,,in world_art.csv,Tall eroded hoodoo or needle along canyon walls; walk-behind top.
+obj:tatooine:dead-tree,TATOOINE,Dead tree,noise,1x1,2x3,art:tatooine:dead-tree,,in world_art.csv,"Bleached bare tree on the dunes; sparse accent, never a wall."
+obj:tatooine:desert-scrub,TATOOINE,Desert scrub,walkable,1x1,1x1,art:tatooine:desert-scrub,,in world_art.csv,"Low scrub tufts; the tall-grass variant (recolour done, may keep)."
+obj:tatooine:bantha-skull,TATOOINE,Bantha skull,noise,1x1,1x1,art:tatooine:bantha-skeleton,,in world_art.csv,Bleached skull and curled horns half in sand.
+obj:tatooine:vaporator,TATOOINE,Moisture vaporator,noise,1x1,1x2,art:tatooine:moisture-vaporator,,in world_art.csv,Tall finned vaporator (already a world-art kit template; becomes a blueprint with variants).
+obj:tatooine:vaporator-pipe,TATOOINE,Condenser pipe,walkable,1x1,1x1,art:tatooine:water-condenser-pipe,,in world_art.csv,Ground pipe between vaporators; walk-over decal.
+obj:tatooine:adobe-wall,TATOOINE,Adobe wall kit,edge,1x1,1x1,art:tatooine:adobe-wall,,in world_art.csv,"Low rounded wall: straight, corner, gate; replaces wooden fences."
+obj:tatooine:power-converter,TATOOINE,Power converters,noise,1x1,1x1,art:tatooine:power-converters,,in world_art.csv,Crate-size converter boxes with a glowing strip.
+obj:tatooine:dewback-trough,TATOOINE,Dewback trough,noise,2x1,2x1,art:tatooine:dewback-trough,,in world_art.csv,Stone trough and hitching post in town squares.
+obj:tatooine:market-stall,TATOOINE,Market stall,noise,2x2,2x3,art:tatooine:market-stall,,in world_art.csv,Awning stall with clay pots.
+obj:tatooine:jawa-scrap-pile,TATOOINE,Jawa scrap pile,noise,2x1,2x2,,world/objects/tatooine/jawa-scrap-pile.png,pending-mockup,Heaped droid parts and plating by sandcrawler stops.
+obj:tatooine:sand-mesa-step,TATOOINE,Mesa ledge stones,edge,1x1,1x1,,world/objects/tatooine/sand-mesa-step.png,pending-mockup,Broken flat sandstone slabs that sit on ledges and cliff tops to break up the mesa line.
+obj:tatooine:tusken-banner,TATOOINE,Tusken totem,noise,1x1,1x3,,world/objects/tatooine/tusken-banner.png,pending-mockup,Pole with hide strips and a bantha skull; marks Tusken land on the Jundland routes.
+obj:yavin-4:massassi-tree,YAVIN-4,Massassi jungle tree,edge,2x2,2x5,art:yavin-4:massassi-jungle-tree,,in world_art.csv,Tall twisted tree with buttress roots and vines (vanilla trees kept elsewhere).
+obj:yavin-4:jungle-vines,YAVIN-4,Jungle vines,noise,1x1,1x2,art:yavin-4:jungle-vines,,in world_art.csv,"Hanging vines over paths, top layer."
+obj:yavin-4:temple-stone,YAVIN-4,Fallen temple block,edge,2x1,2x2,,world/objects/yavin-4/temple-stone.png,pending-mockup,Mossy carved stone block from the Massassi temples.
+obj:yavin-4:landing-light,YAVIN-4,Landing light,noise,1x1,1x3,,world/objects/yavin-4/landing-light.png,pending-mockup,Runway marker post by the Rebel hangar.
+obj:tatooine:mesa,TATOOINE,Mesa,edge,4x3,4x5,,world/objects/tatooine/mesa.png,pending-mockup,"Flat-topped sandstone block several cells across: a cap rock over a tapering cliff, a lower step, fallen chunks."
