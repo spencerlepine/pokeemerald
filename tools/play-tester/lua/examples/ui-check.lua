@@ -125,9 +125,9 @@ else
     press("UP", 2); add({wait=20}); press("A", 4); add({wait=500})
     for f = 1, 6 do press("A"); shot(string.format("%02d_battle", 5 + f), 60) end
   elseif SC == "creatures_dex" then  -- the Datapad list's new end (203-214) and a new species' page
+    -- open the list at No. 206 (the list remembers its last position; 0-based)
+    add({fn=function() emu:write16(sym("sLastSelectedPokemon"), 205) end})
     press("START"); add({wait=30}); press("DOWN"); press("UP"); add({wait=20}); press("A"); add({wait=240})
-    shot("01_list", 30)
-    for _ = 1, 204 do press("DOWN", 2) end
     shot("02_list_end", 60); press("A"); shot("03_entry", 200); press("RIGHT"); shot("04_area", 100)
     press("RIGHT"); shot("05_cry", 100); press("RIGHT"); shot("06_size", 100)
   elseif SC == "battle" then

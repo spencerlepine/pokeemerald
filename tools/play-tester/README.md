@@ -38,8 +38,7 @@ rebuild. Run `boot` once after every build (savestates do not carry over), then 
 - `menuN`: start-menu entry N. `battle`: the action and move menus. `dex`: the DATAPAD pages.
 
 - `creatures`: a party of net-new species with the net-new moves (party icons, summary pages, a battle).
-  `creatures_dex`: the Datapad list scrolled to its new end (No. 203-214) and a new species' page. Slow: give it
-  a 1500 s timeout.
+  `creatures_dex`: the Datapad list opened at No. 206 (it writes `sLastSelectedPokemon`) and a new species' page.
 
 Without `make modern` (it needs `gcc-arm-none-eabi`), set `UI_ROM=$PWD/../../game/pokeemerald.gba` to run the
 scenarios on the agbcc build.
