@@ -11,7 +11,7 @@ rooms can be planned on the grid before the interior-object tool exists.
 
 - [`../../../mapping/world_art.csv`](../../../mapping/world_art.csv), `category` `interior`: one row per object
   (`art:new:<name>`) with `planet`, `drawn` (drawn size in cells, W x H), `footprint` (the hit box: the bottom
-  rows that block; `0x0` = walkable), `vanilla_template` (`reused: <the Emerald piece>` or `net-new`),
+  rows that block; `0x0` = walkable), `vanilla_template` (`reused: <Emerald piece>` = carried over with the same job and script, redrawn; `replaces: <Emerald piece>` = a net-new drawing in that piece's slot; `net-new`),
   `placeholder` (its PNG here), `used_in` / `areas`, `status` and `notes` (the hit box in words, what draws over
   the player, and whether it sits on the floor, the back wall, a counter or hangs from the ceiling).
 - Each room's yaml lists the objects it needs in a top-level `objects:` list (art ids). They are placed later;
