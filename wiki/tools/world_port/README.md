@@ -40,14 +40,15 @@ it can run again and gives the same files. Areas outside the run keep their vani
   and every person of a new map, is a new object with a script from `mapping/people.csv` (lines, trainer, boss,
   wild battle, flag). A `character:mart-clerk` sells the `item:` tokens of its party column, else a stock
   set by the planet's badges on arrival; a `character:nurse` heals like a Bacta Center nurse. Scripts and texts go in a managed block of the map's `scripts.inc`; a people.csv row with `npc_id` `npc:<vanilla map>:<n>`
-  takes over vanilla object n: its walker, and its lines when the vanilla script only talks. A label of the same name
+  takes over vanilla object n: its walker, and its lines when the vanilla script only talks. A `flag` of
+  `hide:FLAG_X` makes it the object's flag (a road warden stands until the story sets FLAG_X). A label of the same name
   written by hand outside the block replaces the generated one.
 
 - **Redrawn towns** (`towns.py`). A redrawn town keeps every vanilla object, trigger and sign; a hand-checked spec,
   `towns/<area-id>.yaml`, says where each goes on the wiki layout (a yaml person, a cell, or dropped), rewrites the
   story movements (`movements:`, steps like `D8 d7 r21 u ifr`), patches script lines (also in other maps, such as
   the gym's warp back to its door), sets the heal spot, and walks each listed movement on the new layout to check it
-  ends where it should and crosses no solid cell. Ported: every Tatooine town, Kachirho, Inyusu Tor, Pirin.
+  ends where it should and crosses no solid cell. Ported: every Tatooine town, Kachirho, Inyusu Tor, Pirin, Bright Tree.
 
 Art stays pending in the wiki: a placeholder or greybox tile goes in as a real tile in its own slot, so it can
 be redrawn later without touching the maps.

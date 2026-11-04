@@ -24,7 +24,11 @@ local function add(s) steps[#steps+1] = s end
 add({fn=function() emu:loadStateFile(OUT .. "../ui/overworld.ss0") end}); add({wait=30})
 for _, s in ipairs(spots) do
   -- VAR4057=2 sets a var, FLAG2D6=0 clears a flag (before the teleport's map load runs its scripts)
-  for kind, id, v in s[6]:gmatch("(%u+)(%x+)=(%d+)") do
+  local sets = {}
+  for k, v in s[6]:gmatch("([%u%d]+)=(%d+)") do sets[#sets+1] = {k, v} end
+  for _, kv in ipairs(sets) do
+    local kind, id, v = kv[1]:match("^(VAR)(%x+)$"); if not kind then kind, id = kv[1]:match("^(FLAG)(%x+)$") end
+    v = kv[2]
     add({fn=function() local b = sb1(); local i = tonumber(id, 16); v = tonumber(v)
       if kind == "VAR" then emu:write16(b + tonumber(os.getenv("SB1_VARS")) + (i - 0x4000) * 2, v)
       else local a = b + 0x1270 + (i >> 3); local m = 1 << (i & 7)

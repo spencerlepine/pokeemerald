@@ -11,6 +11,17 @@ const struct Tileset gTileset_SwAnchorhead =
     .callback = InitTilesetAnim_Mauville,
 };
 
+const struct Tileset gTileset_SwAshenPass =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SwAshenPass,
+    .palettes = gTilesetPalettes_SwAshenPass,
+    .metatiles = gMetatiles_SwAshenPass,
+    .metatileAttributes = gMetatileAttributes_SwAshenPass,
+    .callback = InitTilesetAnim_Lavaridge,
+};
+
 const struct Tileset gTileset_SwBensHut =
 {
     .isCompressed = TRUE,
@@ -42,6 +53,50 @@ const struct Tileset gTileset_SwBestine =
     .metatiles = gMetatiles_SwBestine,
     .metatileAttributes = gMetatileAttributes_SwBestine,
     .callback = InitTilesetAnim_Rustboro,
+};
+
+const struct Tileset gTileset_SwBrightTree =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SwBrightTree,
+    .palettes = gTilesetPalettes_SwBrightTree,
+    .metatiles = gMetatiles_SwBrightTree,
+    .metatileAttributes = gMetatileAttributes_SwBrightTree,
+    .callback = InitTilesetAnim_Fortree,
+};
+
+const struct Tileset gTileset_SwEndorBattlefield =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SwEndorBattlefield,
+    .palettes = gTilesetPalettes_SwEndorBattlefield,
+    .metatiles = gMetatiles_SwEndorBattlefield,
+    .metatileAttributes = gMetatileAttributes_SwEndorBattlefield,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_SwEndorBattlefieldBunker =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SwEndorBattlefieldBunker,
+    .palettes = gTilesetPalettes_SwEndorBattlefieldBunker,
+    .metatiles = gMetatiles_SwEndorBattlefieldBunker,
+    .metatileAttributes = gMetatileAttributes_SwEndorBattlefieldBunker,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_SwEndorHangar =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SwEndorHangar,
+    .palettes = gTilesetPalettes_SwEndorHangar,
+    .metatiles = gMetatiles_SwEndorHangar,
+    .metatileAttributes = gMetatileAttributes_SwEndorHangar,
+    .callback = NULL,
 };
 
 const struct Tileset gTileset_SwInyusuTor =
@@ -196,6 +251,39 @@ const struct Tileset gTileset_SwMosPelgo =
     .metatiles = gMetatiles_SwMosPelgo,
     .metatileAttributes = gMetatileAttributes_SwMosPelgo,
     .callback = InitTilesetAnim_Petalburg,
+};
+
+const struct Tileset gTileset_SwMustafarMiningControl =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SwMustafarMiningControl,
+    .palettes = gTilesetPalettes_SwMustafarMiningControl,
+    .metatiles = gMetatiles_SwMustafarMiningControl,
+    .metatileAttributes = gMetatileAttributes_SwMustafarMiningControl,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_SwMustafarMiningFacility =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SwMustafarMiningFacility,
+    .palettes = gTilesetPalettes_SwMustafarMiningFacility,
+    .metatiles = gMetatiles_SwMustafarMiningFacility,
+    .metatileAttributes = gMetatileAttributes_SwMustafarMiningFacility,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_SwMustafarPeak =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SwMustafarPeak,
+    .palettes = gTilesetPalettes_SwMustafarPeak,
+    .metatiles = gMetatiles_SwMustafarPeak,
+    .metatileAttributes = gMetatileAttributes_SwMustafarPeak,
+    .callback = InitTilesetAnim_Lavaridge,
 };
 
 const struct Tileset gTileset_SwPirin =
@@ -482,6 +570,83 @@ const struct Tileset gTileset_SwRoute117 =
     .metatiles = gMetatiles_SwRoute117,
     .metatileAttributes = gMetatileAttributes_SwRoute117,
     .callback = InitTilesetAnim_Mauville,
+};
+
+const struct Tileset gTileset_SwRoute118 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SwRoute118,
+    .palettes = gTilesetPalettes_SwRoute118,
+    .metatiles = gMetatiles_SwRoute118,
+    .metatileAttributes = gMetatileAttributes_SwRoute118,
+    .callback = InitTilesetAnim_Mauville,
+};
+
+const struct Tileset gTileset_SwRoute119 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SwRoute119,
+    .palettes = gTilesetPalettes_SwRoute119,
+    .metatiles = gMetatiles_SwRoute119,
+    .metatileAttributes = gMetatileAttributes_SwRoute119,
+    .callback = InitTilesetAnim_Fortree,
+};
+
+const struct Tileset gTileset_SwRoute120 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SwRoute120,
+    .palettes = gTilesetPalettes_SwRoute120,
+    .metatiles = gMetatiles_SwRoute120,
+    .metatileAttributes = gMetatileAttributes_SwRoute120,
+    .callback = InitTilesetAnim_Fortree,
+};
+
+const struct Tileset gTileset_SwRoute121 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SwRoute121,
+    .palettes = gTilesetPalettes_SwRoute121,
+    .metatiles = gMetatiles_SwRoute121,
+    .metatileAttributes = gMetatileAttributes_SwRoute121,
+    .callback = InitTilesetAnim_Lilycove,
+};
+
+const struct Tileset gTileset_SwRoute121SafariZoneEntrance =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SwRoute121SafariZoneEntrance,
+    .palettes = gTilesetPalettes_SwRoute121SafariZoneEntrance,
+    .metatiles = gMetatiles_SwRoute121SafariZoneEntrance,
+    .metatileAttributes = gMetatileAttributes_SwRoute121SafariZoneEntrance,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_SwRoute123 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SwRoute123,
+    .palettes = gTilesetPalettes_SwRoute123,
+    .metatiles = gMetatiles_SwRoute123,
+    .metatileAttributes = gMetatileAttributes_SwRoute123,
+    .callback = InitTilesetAnim_Lilycove,
+};
+
+const struct Tileset gTileset_SwRoute123Landing =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SwRoute123Landing,
+    .palettes = gTilesetPalettes_SwRoute123Landing,
+    .metatiles = gMetatiles_SwRoute123Landing,
+    .metatileAttributes = gMetatileAttributes_SwRoute123Landing,
+    .callback = NULL,
 };
 
 const struct Tileset gTileset_SwRwookrrorro =

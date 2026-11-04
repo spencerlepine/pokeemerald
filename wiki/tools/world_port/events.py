@@ -155,6 +155,16 @@ def mart_items(row, area):
 
 
 def person_script(blk, key, row, display, area):
+    """As _person_script; a `flag` of `hide:FLAG_X` is the object's flag instead (the person is there until the
+    story sets FLAG_X, like a road warden), and the script does not set it."""
+    if row and (row.get("flag") or "").startswith("hide:"):
+        hide = row["flag"][5:]
+        label, trainer, _ = _person_script(blk, key, dict(row, flag=""), display, area)
+        return label, trainer, hide
+    return _person_script(blk, key, row, display, area)
+
+
+def _person_script(blk, key, row, display, area):
     """The script of one new person; returns (label, trainer fields, object flag).
 
     A row whose character is the mart clerk runs a Supply Depot (stock from mart_items); the Bacta Center nurse heals

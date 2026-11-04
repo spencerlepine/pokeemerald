@@ -1,0 +1,22 @@
+# Bright Tree (FortreeCity), 40x20 (was 40x20, redrawn). Exits west and east on rows 7-10 (routes 119 and 120).
+# The arena door is (22,16), on the lower walk; its only open side is below (22,17), where the unseen companion
+# (Kecleon) sits until the DEVON SCOPE; it still flees one step right.
+objects:
+  1: Ewok hunter             # the man (gigantic companion in the sky)
+  2: Ewok weaver             # the girl
+  3: [20, 17]                # the woman (something blocks the arena), by the arena
+  4: Rebel scout             # the boy
+  5: Ewok elder              # the old man
+  6: [12, 17]                # the kid with the game
+  7: [22, 17]                # the unseen companion, below the arena door
+bgs:
+  0: Village sign
+  1: [2, 15]                 # Bacta Center signs, beside its door (3,15)
+  2: [7, 15]                 # Supply Depot signs, beside its door (8,15)
+  3: Arena sign
+  4: [4, 15]
+  5: [9, 15]
+heal:
+  HEAL_LOCATION_FORTREE_CITY: [3, 16]
+checks:
+  - {movement: FortreeCity_Movement_KecleonFlee, from: [22, 17], to: [23, 17]}

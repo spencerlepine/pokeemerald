@@ -47,7 +47,7 @@
       "width": 40,
       "height": 20,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Fortree",
+      "secondary_tileset": "gTileset_SwBrightTree",
       "border_filepath": "data/layouts/FortreeCity/border.bin",
       "blockdata_filepath": "data/layouts/FortreeCity/map.bin"
     },
@@ -337,7 +337,7 @@
       "width": 80,
       "height": 20,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Mauville",
+      "secondary_tileset": "gTileset_SwRoute118",
       "border_filepath": "data/layouts/Route118/border.bin",
       "blockdata_filepath": "data/layouts/Route118/map.bin"
     },
@@ -347,7 +347,7 @@
       "width": 40,
       "height": 140,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Fortree",
+      "secondary_tileset": "gTileset_SwRoute119",
       "border_filepath": "data/layouts/Route119/border.bin",
       "blockdata_filepath": "data/layouts/Route119/map.bin"
     },
@@ -357,7 +357,7 @@
       "width": 40,
       "height": 100,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Fortree",
+      "secondary_tileset": "gTileset_SwRoute120",
       "border_filepath": "data/layouts/Route120/border.bin",
       "blockdata_filepath": "data/layouts/Route120/map.bin"
     },
@@ -367,7 +367,7 @@
       "width": 80,
       "height": 20,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Lilycove",
+      "secondary_tileset": "gTileset_SwRoute121",
       "border_filepath": "data/layouts/Route121/border.bin",
       "blockdata_filepath": "data/layouts/Route121/map.bin"
     },
@@ -387,7 +387,7 @@
       "width": 140,
       "height": 20,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Lilycove",
+      "secondary_tileset": "gTileset_SwRoute123",
       "border_filepath": "data/layouts/Route123/border.bin",
       "blockdata_filepath": "data/layouts/Route123/map.bin"
     },
@@ -1167,7 +1167,7 @@
       "width": 18,
       "height": 14,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_Shop",
+      "secondary_tileset": "gTileset_SwRoute121SafariZoneEntrance",
       "border_filepath": "data/layouts/Route121_SafariZoneEntrance/border.bin",
       "blockdata_filepath": "data/layouts/Route121_SafariZoneEntrance/map.bin"
     },
@@ -1287,7 +1287,7 @@
       "width": 40,
       "height": 47,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Lavaridge",
+      "secondary_tileset": "gTileset_SwMustafarPeak",
       "border_filepath": "data/layouts/MtChimney/border.bin",
       "blockdata_filepath": "data/layouts/MtChimney/map.bin"
     },
@@ -2727,7 +2727,7 @@
       "width": 30,
       "height": 46,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Lavaridge",
+      "secondary_tileset": "gTileset_SwAshenPass",
       "border_filepath": "data/layouts/JaggedPass/border.bin",
       "blockdata_filepath": "data/layouts/JaggedPass/map.bin"
     },
@@ -4242,6 +4242,36 @@
       "blockdata_filepath": "data/layouts/SwBensHutInterior/map.bin"
     },
     {
+      "id": "LAYOUT_SW_ENDOR_BATTLEFIELD",
+      "name": "SwEndorBattlefield_Layout",
+      "width": 40,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_SwEndorBattlefield",
+      "border_filepath": "data/layouts/SwEndorBattlefield/border.bin",
+      "blockdata_filepath": "data/layouts/SwEndorBattlefield/map.bin"
+    },
+    {
+      "id": "LAYOUT_SW_ENDOR_BATTLEFIELD_BUNKER",
+      "name": "SwEndorBattlefieldBunker_Layout",
+      "width": 20,
+      "height": 14,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_SwEndorBattlefieldBunker",
+      "border_filepath": "data/layouts/SwEndorBattlefieldBunker/border.bin",
+      "blockdata_filepath": "data/layouts/SwEndorBattlefieldBunker/map.bin"
+    },
+    {
+      "id": "LAYOUT_SW_ENDOR_HANGAR",
+      "name": "SwEndorHangar_Layout",
+      "width": 16,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_SwEndorHangar",
+      "border_filepath": "data/layouts/SwEndorHangar/border.bin",
+      "blockdata_filepath": "data/layouts/SwEndorHangar/map.bin"
+    },
+    {
       "id": "LAYOUT_SW_JABBAS_PALACE",
       "name": "SwJabbasPalace_Layout",
       "width": 44,
@@ -4300,6 +4330,36 @@
       "secondary_tileset": "gTileset_SwMosEspaPodraceArena",
       "border_filepath": "data/layouts/SwMosEspaPodraceArena/border.bin",
       "blockdata_filepath": "data/layouts/SwMosEspaPodraceArena/map.bin"
+    },
+    {
+      "id": "LAYOUT_SW_MUSTAFAR_MINING_CONTROL",
+      "name": "SwMustafarMiningControl_Layout",
+      "width": 20,
+      "height": 14,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_SwMustafarMiningControl",
+      "border_filepath": "data/layouts/SwMustafarMiningControl/border.bin",
+      "blockdata_filepath": "data/layouts/SwMustafarMiningControl/map.bin"
+    },
+    {
+      "id": "LAYOUT_SW_MUSTAFAR_MINING_FACILITY",
+      "name": "SwMustafarMiningFacility_Layout",
+      "width": 40,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_SwMustafarMiningFacility",
+      "border_filepath": "data/layouts/SwMustafarMiningFacility/border.bin",
+      "blockdata_filepath": "data/layouts/SwMustafarMiningFacility/map.bin"
+    },
+    {
+      "id": "LAYOUT_SW_ROUTE_123_LANDING",
+      "name": "SwRoute123Landing_Layout",
+      "width": 16,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_SwRoute123Landing",
+      "border_filepath": "data/layouts/SwRoute123Landing/border.bin",
+      "blockdata_filepath": "data/layouts/SwRoute123Landing/map.bin"
     },
     {
       "id": "LAYOUT_SW_RWOOKRRORRO",
