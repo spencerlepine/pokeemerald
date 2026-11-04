@@ -207,7 +207,7 @@ def town_events(world, a, r, mj):
         if f"{p['name']}#{n}" in matched:
             continue
         row = E.row_for(rows, a, p, n)
-        if not row or not row["lines"]:
+        if not row or (not row["lines"] and row.get("character") not in E.SERVICE_CHARACTERS):
             problems.append(f"{a.id}: {p['name']} is new here and has no lines in people.csv; says their name")
         key = E.key_of(p["name"], n, counts[p["name"]] > 1)
         label, trainer, flag = E.person_script(blk, key, row, p["name"].upper(), a)

@@ -579,7 +579,12 @@ gStdScripts_End::
 	.include "data/maps/SwJabbasPalace/scripts.inc"
 	.include "data/maps/SwJabbasPalaceBargeDock/scripts.inc"
 	.include "data/maps/SwJabbasPalaceThroneRoom/scripts.inc"
+	.include "data/maps/SwKachirhoSupplyDepot/scripts.inc"
 	.include "data/maps/SwMosEspaPodraceArena/scripts.inc"
+	.include "data/maps/SwRwookrrorro/scripts.inc"
+	.include "data/maps/SwRwookrrorroChiefHut/scripts.inc"
+	.include "data/maps/SwRwookrrorroHut1/scripts.inc"
+	.include "data/maps/SwRwookrrorroHut2/scripts.inc"
 	.include "data/maps/SwToscheStationPowerStation/scripts.inc"
 @ world_port: new maps (end)
 

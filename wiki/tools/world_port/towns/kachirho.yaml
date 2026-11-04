@@ -1,0 +1,27 @@
+# Kachirho (DewfordTown), 32x28 (was 20x20). Exits: north (15-16,0) to route 106, east on rows 12-13 to route 107.
+# Han (Mr. Briney) waits by the Falcon hangar (23,22). His sail scenes cross to routes 104 and 109, which no longer
+# touch this map; the hyperlane step turns them into Falcon hops.
+objects:
+  1: [7, 12]                 # the woman, by the Bacta Center
+  2: Han Solo                # Mr. Briney (hidden until he flies the player here)
+  3: Wookiee fisher          # the old rod fisherman, on the shore
+  4: [14, 24]                # Han's boat, on the water below him (hidden with him)
+  5: [25, 7]                 # the trendy phrase boy, below the great hall
+bgs:
+  0: Town sign
+  1: Arena sign
+  2: [9, 12]                 # Bacta Center signs, beside its door (10,12)
+  3: [11, 12]
+  4: [23, 5]                 # great hall sign, beside its door (24,5)
+sign_texts:
+  Hangar sign (Millennium Falcon (Han)): "FALCON HANGAR\\nDocking for the MILLENNIUM FALCON.\\nAsk the pilot for a ride."
+heal:
+  HEAL_LOCATION_DEWFORD_TOWN: [10, 13]
+patches:
+  # routes 104 and 109 put Han back on his Kachirho cell after a trip
+  - old: "setobjectxyperm LOCALID_DEWFORD_BRINEY, 12, 8"
+    new: "setobjectxyperm LOCALID_DEWFORD_BRINEY, 14, 22"
+    file: data/maps/Route104/scripts.inc
+  - old: "setobjectxyperm LOCALID_DEWFORD_BRINEY, 12, 8"
+    new: "setobjectxyperm LOCALID_DEWFORD_BRINEY, 14, 22"
+    file: data/maps/Route109/scripts.inc

@@ -15,13 +15,18 @@
   "connections": [
     {
       "map": "MAP_DEWFORD_TOWN",
-      "offset": 0,
+      "offset": -3,
       "direction": "left"
     },
     {
       "map": "MAP_ROUTE108",
       "offset": 0,
       "direction": "right"
+    },
+    {
+      "map": "MAP_SW_RWOOKRRORRO",
+      "offset": 13,
+      "direction": "up"
     }
   ],
   "object_events": [

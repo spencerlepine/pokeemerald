@@ -126,9 +126,53 @@ class Block:
         return BEGIN + "".join(self.scripts) + "".join(self.texts) + END
 
 
+# Supply Depot stock by the badges the player holds on reaching the planet (vanilla marts of the same stage).
+MART_STOCK = [
+    (0, "POKE_BALL POTION ANTIDOTE PARALYZE_HEAL AWAKENING ESCAPE_ROPE REPEL X_SPEED X_ATTACK X_DEFEND"),
+    (2, "POKE_BALL GREAT_BALL POTION SUPER_POTION ANTIDOTE PARALYZE_HEAL AWAKENING ESCAPE_ROPE REPEL X_SPEED X_ATTACK "
+        "X_DEFEND"),
+    (5, "GREAT_BALL ULTRA_BALL SUPER_POTION HYPER_POTION FULL_HEAL REVIVE SUPER_REPEL ESCAPE_ROPE X_ATTACK X_DEFEND"),
+    (7, "ULTRA_BALL HYPER_POTION MAX_POTION FULL_HEAL REVIVE MAX_REPEL ESCAPE_ROPE X_ATTACK X_DEFEND"),
+]
+_BADGES = None
+SERVICE_CHARACTERS = ("character:mart-clerk", "character:pokemon-center-nurse")
+
+
+def planet_badges(planet):
+    global _BADGES
+    if _BADGES is None:
+        _BADGES = {r["planet"]: int(r["arrive_badges"] or 0) for r in M.read_csv(B.MAPPING / "planets.csv")}
+    return _BADGES.get(planet, 0)
+
+
+def mart_items(row, area):
+    """A clerk's stock: `item:<name>` tokens in the row's party column, else the stage's vanilla list."""
+    toks = [x for x in (row.get("party") or "").split("|") if x.startswith("item:")]
+    if toks:
+        return ["ITEM_" + x.split(":", 1)[1].upper().replace("-", "_") for x in toks]
+    stock = [s for b, s in MART_STOCK if b <= planet_badges(area.planet)][-1]
+    return ["ITEM_" + x for x in stock.split()]
+
+
 def person_script(blk, key, row, display, area):
-    """The script of one new person; returns (label, trainer fields, object flag)."""
+    """The script of one new person; returns (label, trainer fields, object flag).
+
+    A row whose character is the mart clerk runs a Supply Depot (stock from mart_items); the Bacta Center nurse heals
+    (Common_EventScript_PkmnCenterNurse, facing the player by VAR_LAST_TALKED)."""
     PP = _port_people()
+    label = blk.label("EventScript", key)
+    ch = (row or {}).get("character", "")
+    if ch == "character:mart-clerk":
+        items = mart_items(row, area)
+        blk.script(label, f"\tlock\n\tfaceplayer\n\tmessage gText_HowMayIServeYou\n\twaitmessage\n"
+                          f"\tpokemart {label}_Stock\n\tmsgbox gText_PleaseComeAgain, MSGBOX_DEFAULT\n\trelease\n\tend\n\n"
+                          f"\t.align 2\n{label}_Stock:\n" + "".join(f"\t.2byte {i}\n" for i in items)
+                   + "\tpokemartlistend\n")
+        return label, False, None
+    if ch == "character:pokemon-center-nurse":
+        blk.script(label, "\tcopyvar VAR_0x800B, VAR_LAST_TALKED\n\tcall Common_EventScript_PkmnCenterNurse\n"
+                          "\twaitmessage\n\twaitbuttonpress\n\trelease\n\tend\n")
+        return label, False, None
     lines = PP.split_lines(row["lines"]) if row and row["lines"] else []
     label = blk.label("EventScript", key)
     flag = flag_const(row["flag"]) if row else None
@@ -240,7 +284,7 @@ def events(world, a, r, mj):
         if not a.new and not row:
             problems.append(f"{a.id}: {p['name']} at {p['at']} has no vanilla object and no people.csv row; left out")
             continue
-        if row and not row["lines"] and row["kind"] not in ("wild",):
+        if row and not row["lines"] and row["kind"] not in ("wild",) and row.get("character") not in SERVICE_CHARACTERS:
             problems.append(f"{a.id}: {p['name']} has no lines in people.csv; says their name")
         if not row:
             problems.append(f"{a.id}: {p['name']} has no people.csv row; says their name")

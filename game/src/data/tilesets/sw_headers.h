@@ -88,6 +88,28 @@ const struct Tileset gTileset_SwJundlandWastes =
     .callback = InitTilesetAnim_Rustboro,
 };
 
+const struct Tileset gTileset_SwKachirho =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SwKachirho,
+    .palettes = gTilesetPalettes_SwKachirho,
+    .metatiles = gMetatiles_SwKachirho,
+    .metatileAttributes = gMetatileAttributes_SwKachirho,
+    .callback = InitTilesetAnim_Dewford,
+};
+
+const struct Tileset gTileset_SwKachirhoSupplyDepot =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SwKachirhoSupplyDepot,
+    .palettes = gTilesetPalettes_SwKachirhoSupplyDepot,
+    .metatiles = gMetatiles_SwKachirhoSupplyDepot,
+    .metatileAttributes = gMetatileAttributes_SwKachirhoSupplyDepot,
+    .callback = NULL,
+};
+
 const struct Tileset gTileset_SwMosEisley =
 {
     .isCompressed = TRUE,
@@ -165,6 +187,83 @@ const struct Tileset gTileset_SwMosPelgo =
     .callback = InitTilesetAnim_Petalburg,
 };
 
+const struct Tileset gTileset_SwRepublicWreckCaptainsOffice =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SwRepublicWreckCaptainsOffice,
+    .palettes = gTilesetPalettes_SwRepublicWreckCaptainsOffice,
+    .metatiles = gMetatiles_SwRepublicWreckCaptainsOffice,
+    .metatileAttributes = gMetatileAttributes_SwRepublicWreckCaptainsOffice,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_SwRepublicWreckDeck =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SwRepublicWreckDeck,
+    .palettes = gTilesetPalettes_SwRepublicWreckDeck,
+    .metatiles = gMetatiles_SwRepublicWreckDeck,
+    .metatileAttributes = gMetatileAttributes_SwRepublicWreckDeck,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_SwRepublicWreckHiddenFloorRooms =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SwRepublicWreckHiddenFloorRooms,
+    .palettes = gTilesetPalettes_SwRepublicWreckHiddenFloorRooms,
+    .metatiles = gMetatiles_SwRepublicWreckHiddenFloorRooms,
+    .metatileAttributes = gMetatileAttributes_SwRepublicWreckHiddenFloorRooms,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_SwRepublicWreckRooms1f =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SwRepublicWreckRooms1f,
+    .palettes = gTilesetPalettes_SwRepublicWreckRooms1f,
+    .metatiles = gMetatiles_SwRepublicWreckRooms1f,
+    .metatileAttributes = gMetatileAttributes_SwRepublicWreckRooms1f,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_SwRepublicWreckRooms21f =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SwRepublicWreckRooms21f,
+    .palettes = gTilesetPalettes_SwRepublicWreckRooms21f,
+    .metatiles = gMetatiles_SwRepublicWreckRooms21f,
+    .metatileAttributes = gMetatileAttributes_SwRepublicWreckRooms21f,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_SwRepublicWreckRooms2B1f =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SwRepublicWreckRooms2B1f,
+    .palettes = gTilesetPalettes_SwRepublicWreckRooms2B1f,
+    .metatiles = gMetatiles_SwRepublicWreckRooms2B1f,
+    .metatileAttributes = gMetatileAttributes_SwRepublicWreckRooms2B1f,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_SwRepublicWreckRoomsB1f =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SwRepublicWreckRoomsB1f,
+    .palettes = gTilesetPalettes_SwRepublicWreckRoomsB1f,
+    .metatiles = gMetatiles_SwRepublicWreckRoomsB1f,
+    .metatileAttributes = gMetatileAttributes_SwRepublicWreckRoomsB1f,
+    .callback = NULL,
+};
+
 const struct Tileset gTileset_SwRoute101 =
 {
     .isCompressed = TRUE,
@@ -218,6 +317,61 @@ const struct Tileset gTileset_SwRoute104HanHangar =
     .metatiles = gMetatiles_SwRoute104HanHangar,
     .metatileAttributes = gMetatileAttributes_SwRoute104HanHangar,
     .callback = NULL,
+};
+
+const struct Tileset gTileset_SwRoute105 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SwRoute105,
+    .palettes = gTilesetPalettes_SwRoute105,
+    .metatiles = gMetatiles_SwRoute105,
+    .metatileAttributes = gMetatileAttributes_SwRoute105,
+    .callback = InitTilesetAnim_Dewford,
+};
+
+const struct Tileset gTileset_SwRoute106 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SwRoute106,
+    .palettes = gTilesetPalettes_SwRoute106,
+    .metatiles = gMetatiles_SwRoute106,
+    .metatileAttributes = gMetatileAttributes_SwRoute106,
+    .callback = InitTilesetAnim_Dewford,
+};
+
+const struct Tileset gTileset_SwRoute107 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SwRoute107,
+    .palettes = gTilesetPalettes_SwRoute107,
+    .metatiles = gMetatiles_SwRoute107,
+    .metatileAttributes = gMetatileAttributes_SwRoute107,
+    .callback = InitTilesetAnim_Dewford,
+};
+
+const struct Tileset gTileset_SwRoute108 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SwRoute108,
+    .palettes = gTilesetPalettes_SwRoute108,
+    .metatiles = gMetatiles_SwRoute108,
+    .metatileAttributes = gMetatileAttributes_SwRoute108,
+    .callback = InitTilesetAnim_Slateport,
+};
+
+const struct Tileset gTileset_SwRoute109 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SwRoute109,
+    .palettes = gTilesetPalettes_SwRoute109,
+    .metatiles = gMetatiles_SwRoute109,
+    .metatileAttributes = gMetatileAttributes_SwRoute109,
+    .callback = InitTilesetAnim_Slateport,
 };
 
 const struct Tileset gTileset_SwRoute110 =
@@ -284,6 +438,50 @@ const struct Tileset gTileset_SwRoute117 =
     .metatiles = gMetatiles_SwRoute117,
     .metatileAttributes = gMetatileAttributes_SwRoute117,
     .callback = InitTilesetAnim_Mauville,
+};
+
+const struct Tileset gTileset_SwRwookrrorro =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SwRwookrrorro,
+    .palettes = gTilesetPalettes_SwRwookrrorro,
+    .metatiles = gMetatiles_SwRwookrrorro,
+    .metatileAttributes = gMetatileAttributes_SwRwookrrorro,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_SwRwookrrorroChiefHut =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SwRwookrrorroChiefHut,
+    .palettes = gTilesetPalettes_SwRwookrrorroChiefHut,
+    .metatiles = gMetatiles_SwRwookrrorroChiefHut,
+    .metatileAttributes = gMetatileAttributes_SwRwookrrorroChiefHut,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_SwRwookrrorroHut1 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SwRwookrrorroHut1,
+    .palettes = gTilesetPalettes_SwRwookrrorroHut1,
+    .metatiles = gMetatiles_SwRwookrrorroHut1,
+    .metatileAttributes = gMetatileAttributes_SwRwookrrorroHut1,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_SwRwookrrorroHut2 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SwRwookrrorroHut2,
+    .palettes = gTilesetPalettes_SwRwookrrorroHut2,
+    .metatiles = gMetatiles_SwRwookrrorroHut2,
+    .metatileAttributes = gMetatileAttributes_SwRwookrrorroHut2,
+    .callback = NULL,
 };
 
 const struct Tileset gTileset_SwTerraCaveEnd =

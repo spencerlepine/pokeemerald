@@ -377,7 +377,7 @@ Route104_EventScript_ArriveInDewford::
 	call Common_EventScript_StopBrineysBoatMusic
 	showobjectat LOCALID_PLAYER, MAP_DEWFORD_TOWN
 	applywaitmovement LOCALID_PLAYER, Route104_Movement_PlayerMoveForBriney
-	setobjectxyperm LOCALID_DEWFORD_BRINEY, 12, 8
+	setobjectxyperm LOCALID_DEWFORD_BRINEY, 14, 22
 	addobject LOCALID_DEWFORD_BRINEY
 	setobjectsubpriority LOCALID_DEWFORD_BRINEY, MAP_DEWFORD_TOWN, 0
 	clearflag FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN

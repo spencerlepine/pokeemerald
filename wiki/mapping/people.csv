@@ -155,3 +155,8 @@ person:mos-eisley-fan-club:001,mos-eisley-fan-club,Greedo,,,trainer,,,,species:w
 person:mos-eisley-fan-club:002,mos-eisley-fan-club,Figrin D'an (band),,,npc,,,,,,"""The Modal Nodes play the same song every night. Nobody has complained yet. Nobody dares.""",The band on the stage.,net:walker-bith,,,,
 person:mos-eisley-fan-club:003,mos-eisley-fan-club,Dr. Evazan,,,npc,,,,,,"""You just watch yourself. I have the death sentence on twelve systems.""",At the bar with Ponda Baba.,net:walker-evazan,,,,
 person:mos-eisley-fan-club:004,mos-eisley-fan-club,Ponda Baba,,,npc,,,,,,"""Negola dewaghi wooldugger!"" (He does not like you.)",Ponda Baba (Aqualish) at the bar.,net:walker-aqualish,,,,
+person:kachirho:001,kachirho,Tarfful,,,npc,,,,,,"""Wyaaaaaa! (Hello, small one. My arena waits at the west tree. Come when you are ready.)""",Tarfful outside his arena before the badge fight.,object-gfx:brawly,,,,
+person:kachirho:002,kachirho,Chewie (after the rescue),,,npc,,,,,,"""Grrgaaggaa! (Thanks again for saving me from those thugs. Han and I owe you one.)""",Chewie by the Falcon hangar.,object-gfx:black-belt,,,,
+person:kachirho:003,kachirho,Wookiee guard,,,npc,,,,,,"""Hrung? (Ready? Tarfful only fights trainers who mean it.)""",Guard below Tarfful's lookout.,object-gfx:black-belt,,,,
+person:kachirho:004,kachirho,Trader from Mos Eisley,,,npc,,,,,,"""I came all the way from Mos Eisley for wroshyr sap. The Wookiees drive a hard bargain, but they never cheat.""",Off-world trader on the east path.,object-gfx:man-4,,,,
+person:kachirho:005,kachirho,Wookiee cub,,,npc,,,,,,"""Uma! Uma! (Yes! Yes! Did you fly here on the Falcon? I want to fly it one day!)""",Cub near the family huts.,object-gfx:tuber-m,,,,

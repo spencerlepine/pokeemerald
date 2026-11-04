@@ -114,10 +114,10 @@
     {
       "id": "LAYOUT_DEWFORD_TOWN",
       "name": "DewfordTown_Layout",
-      "width": 20,
-      "height": 20,
+      "width": 32,
+      "height": 28,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Dewford",
+      "secondary_tileset": "gTileset_SwKachirho",
       "border_filepath": "data/layouts/DewfordTown/border.bin",
       "blockdata_filepath": "data/layouts/DewfordTown/map.bin"
     },
@@ -207,7 +207,7 @@
       "width": 40,
       "height": 80,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Dewford",
+      "secondary_tileset": "gTileset_SwRoute105",
       "border_filepath": "data/layouts/Route105/border.bin",
       "blockdata_filepath": "data/layouts/Route105/map.bin"
     },
@@ -217,7 +217,7 @@
       "width": 80,
       "height": 20,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Dewford",
+      "secondary_tileset": "gTileset_SwRoute106",
       "border_filepath": "data/layouts/Route106/border.bin",
       "blockdata_filepath": "data/layouts/Route106/map.bin"
     },
@@ -227,7 +227,7 @@
       "width": 60,
       "height": 20,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Dewford",
+      "secondary_tileset": "gTileset_SwRoute107",
       "border_filepath": "data/layouts/Route107/border.bin",
       "blockdata_filepath": "data/layouts/Route107/map.bin"
     },
@@ -237,7 +237,7 @@
       "width": 60,
       "height": 20,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Slateport",
+      "secondary_tileset": "gTileset_SwRoute108",
       "border_filepath": "data/layouts/Route108/border.bin",
       "blockdata_filepath": "data/layouts/Route108/map.bin"
     },
@@ -247,7 +247,7 @@
       "width": 40,
       "height": 63,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Slateport",
+      "secondary_tileset": "gTileset_SwRoute109",
       "border_filepath": "data/layouts/Route109/border.bin",
       "blockdata_filepath": "data/layouts/Route109/map.bin"
     },
@@ -1787,7 +1787,7 @@
       "width": 23,
       "height": 21,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Facility",
+      "secondary_tileset": "gTileset_SwRepublicWreckDeck",
       "border_filepath": "data/layouts/AbandonedShip_Deck/border.bin",
       "blockdata_filepath": "data/layouts/AbandonedShip_Deck/map.bin"
     },
@@ -1807,7 +1807,7 @@
       "width": 18,
       "height": 17,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_InsideShip",
+      "secondary_tileset": "gTileset_SwRepublicWreckRooms1f",
       "border_filepath": "data/layouts/AbandonedShip_Rooms_1F/border.bin",
       "blockdata_filepath": "data/layouts/AbandonedShip_Rooms_1F/map.bin"
     },
@@ -1827,7 +1827,7 @@
       "width": 27,
       "height": 8,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_InsideShip",
+      "secondary_tileset": "gTileset_SwRepublicWreckRoomsB1f",
       "border_filepath": "data/layouts/AbandonedShip_Rooms_B1F/border.bin",
       "blockdata_filepath": "data/layouts/AbandonedShip_Rooms_B1F/map.bin"
     },
@@ -1837,7 +1837,7 @@
       "width": 18,
       "height": 8,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_InsideShip",
+      "secondary_tileset": "gTileset_SwRepublicWreckRooms2B1f",
       "border_filepath": "data/layouts/AbandonedShip_Rooms2_B1F/border.bin",
       "blockdata_filepath": "data/layouts/AbandonedShip_Rooms2_B1F/map.bin"
     },
@@ -1867,7 +1867,7 @@
       "width": 9,
       "height": 17,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_InsideShip",
+      "secondary_tileset": "gTileset_SwRepublicWreckRooms21f",
       "border_filepath": "data/layouts/AbandonedShip_Rooms2_1F/border.bin",
       "blockdata_filepath": "data/layouts/AbandonedShip_Rooms2_1F/map.bin"
     },
@@ -1877,7 +1877,7 @@
       "width": 9,
       "height": 7,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Facility",
+      "secondary_tileset": "gTileset_SwRepublicWreckCaptainsOffice",
       "border_filepath": "data/layouts/AbandonedShip_CaptainsOffice/border.bin",
       "blockdata_filepath": "data/layouts/AbandonedShip_CaptainsOffice/map.bin"
     },
@@ -2907,7 +2907,7 @@
       "width": 44,
       "height": 15,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_InsideShip",
+      "secondary_tileset": "gTileset_SwRepublicWreckHiddenFloorRooms",
       "border_filepath": "data/layouts/AbandonedShip_HiddenFloorRooms/border.bin",
       "blockdata_filepath": "data/layouts/AbandonedShip_HiddenFloorRooms/map.bin"
     },
@@ -4272,6 +4272,16 @@
       "blockdata_filepath": "data/layouts/SwJabbasPalaceThroneRoom/map.bin"
     },
     {
+      "id": "LAYOUT_SW_KACHIRHO_SUPPLY_DEPOT",
+      "name": "SwKachirhoSupplyDepot_Layout",
+      "width": 14,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_SwKachirhoSupplyDepot",
+      "border_filepath": "data/layouts/SwKachirhoSupplyDepot/border.bin",
+      "blockdata_filepath": "data/layouts/SwKachirhoSupplyDepot/map.bin"
+    },
+    {
       "id": "LAYOUT_SW_MOS_EISLEY_HANGAR",
       "name": "SwMosEisleyHangar_Layout",
       "width": 24,
@@ -4290,6 +4300,46 @@
       "secondary_tileset": "gTileset_SwMosEspaPodraceArena",
       "border_filepath": "data/layouts/SwMosEspaPodraceArena/border.bin",
       "blockdata_filepath": "data/layouts/SwMosEspaPodraceArena/map.bin"
+    },
+    {
+      "id": "LAYOUT_SW_RWOOKRRORRO",
+      "name": "SwRwookrrorro_Layout",
+      "width": 36,
+      "height": 28,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_SwRwookrrorro",
+      "border_filepath": "data/layouts/SwRwookrrorro/border.bin",
+      "blockdata_filepath": "data/layouts/SwRwookrrorro/map.bin"
+    },
+    {
+      "id": "LAYOUT_SW_RWOOKRRORRO_CHIEF_HUT",
+      "name": "SwRwookrrorroChiefHut_Layout",
+      "width": 16,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_SwRwookrrorroChiefHut",
+      "border_filepath": "data/layouts/SwRwookrrorroChiefHut/border.bin",
+      "blockdata_filepath": "data/layouts/SwRwookrrorroChiefHut/map.bin"
+    },
+    {
+      "id": "LAYOUT_SW_RWOOKRRORRO_HUT_1",
+      "name": "SwRwookrrorroHut1_Layout",
+      "width": 12,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_SwRwookrrorroHut1",
+      "border_filepath": "data/layouts/SwRwookrrorroHut1/border.bin",
+      "blockdata_filepath": "data/layouts/SwRwookrrorroHut1/map.bin"
+    },
+    {
+      "id": "LAYOUT_SW_RWOOKRRORRO_HUT_2",
+      "name": "SwRwookrrorroHut2_Layout",
+      "width": 12,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_SwRwookrrorroHut2",
+      "border_filepath": "data/layouts/SwRwookrrorroHut2/border.bin",
+      "blockdata_filepath": "data/layouts/SwRwookrrorroHut2/map.bin"
     },
     {
       "id": "LAYOUT_SW_TOSCHE_STATION_POWER_STATION",
