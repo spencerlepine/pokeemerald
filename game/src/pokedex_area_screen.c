@@ -89,6 +89,14 @@ struct
     /*0xF70*/ u8 charBuffer[64];
     /*0xFB0*/ struct Sprite *areaUnknownSprites[3];
     /*0xFBC*/ u8 areaUnknownGraphicsBuffer[0x600];
+    // StarNAV: the galaxy (STARNAV_PLANET_NONE) or the planet shown, the planets the species lives on, and the
+    // map background's tilemap (the StarNAV art is an affine map; this screen draws it as a text background)
+    u8 view;
+    u8 numPlanets;
+    u8 planets[24];
+    bool8 hasGlow;
+    u8 switchState;
+    u16 mapTilemap[32 * 32];
 } static EWRAM_DATA *sPokedexAreaScreen = NULL;
 
 static void FindMapsWithMon(u16);
@@ -106,6 +114,10 @@ static void CreateAreaUnknownSprites(void);
 static void Task_HandlePokedexAreaScreenInput(u8);
 static void ResetPokedexAreaMapBg(void);
 static void DestroyAreaScreenSprites(void);
+static void StarNav_FindPlanetsWithMon(void);
+static void StarNav_LoadMapView(void);
+static void StarNav_DestroyAreaMarkers(void);
+static bool8 StarNav_UpdateViewSwitch(void);
 
 static const u32 sAreaGlow_Pal[] = INCGFX_U32("graphics/pokedex/area_glow.png", ".gbapal");
 static const u32 sAreaGlow_Gfx[] = INCGFX_U32("graphics/pokedex/area_glow.png", ".4bpp.lz");
@@ -213,6 +225,7 @@ static bool8 DrawAreaGlow(void)
     {
     case 0:
         FindMapsWithMon(sPokedexAreaScreen->species);
+        StarNav_FindPlanetsWithMon();
         break;
     case 1:
         BuildAreaGlowTilemap();
@@ -426,15 +439,24 @@ static void BuildAreaGlowTilemap(void)
 
     // For each area with this species, scan the region map layout and find any locations that have a matching mapsec.
     // Add a "full glow" indicator for these matching spaces.
+    sPokedexAreaScreen->hasGlow = FALSE;
     for (i = 0; i < sPokedexAreaScreen->numOverworldAreas; i++)
     {
+        // StarNAV: the galaxy has no map sections; a planet glows only the areas that are on it
+        if (sPokedexAreaScreen->view == STARNAV_PLANET_NONE
+         || StarNav_GetMapPlanet(sPokedexAreaScreen->overworldAreasWithMons[i].mapGroup,
+                                 sPokedexAreaScreen->overworldAreasWithMons[i].mapNum) != sPokedexAreaScreen->view)
+            continue;
         j = 0;
         for (y = 0; y < AREA_SCREEN_HEIGHT; y++)
         {
             for (x = 0; x < AREA_SCREEN_WIDTH; x++)
             {
                 if (GetRegionMapSecIdAt(x, y) == sPokedexAreaScreen->overworldAreasWithMons[i].regionMapSectionId)
+                {
                     sPokedexAreaScreen->areaGlowTilemap[j] = GLOW_FULL;
+                    sPokedexAreaScreen->hasGlow = TRUE;
+                }
                 j++;
             }
         }
@@ -507,7 +529,7 @@ static void BuildAreaGlowTilemap(void)
 
 static void StartAreaGlow(void)
 {
-    if (sPokedexAreaScreen->numSpecialAreas && sPokedexAreaScreen->numOverworldAreas == 0)
+    if (sPokedexAreaScreen->numAreaMarkerSprites && !sPokedexAreaScreen->hasGlow)
         sPokedexAreaScreen->showingMarkers = TRUE;
     else
         sPokedexAreaScreen->showingMarkers = FALSE;
@@ -546,7 +568,7 @@ static void DoAreaGlow(void)
             {
                 // Done glowing, reset and try to switch to the special area markers
                 sPokedexAreaScreen->glowTimer = 0;
-                if (sPokedexAreaScreen->numSpecialAreas != 0)
+                if (sPokedexAreaScreen->numAreaMarkerSprites != 0)
                     sPokedexAreaScreen->showingMarkers = TRUE;
             }
         }
@@ -564,14 +586,14 @@ static void DoAreaGlow(void)
             // Flash the marker
             // With a max of 4, the marker will disappear twice
             sPokedexAreaScreen->markerFlashCounter++;
-            for (i = 0; i < sPokedexAreaScreen->numSpecialAreas; i++)
+            for (i = 0; i < sPokedexAreaScreen->numAreaMarkerSprites; i++)
                 sPokedexAreaScreen->areaMarkerSprites[i]->invisible = sPokedexAreaScreen->markerFlashCounter & 1;
 
             if (sPokedexAreaScreen->markerFlashCounter > 4)
             {
                 // Done flashing, reset and try to switch to the area glow
                 sPokedexAreaScreen->markerFlashCounter = 1;
-                if (sPokedexAreaScreen->numOverworldAreas != 0)
+                if (sPokedexAreaScreen->hasGlow)
                     sPokedexAreaScreen->showingMarkers = FALSE;
             }
         }
@@ -614,6 +636,9 @@ static void Task_ShowPokedexAreaScreen(u8 taskId)
         PokedexAreaMapChangeBgY(-8);
         break;
     case 3:
+        sPokedexAreaScreen->view = STARNAV_PLANET_NONE;
+        StarNav_InitDatapadMap(&sPokedexAreaScreen->regionMap);
+        StarNav_LoadMapView();
         ResetDrawAreaGlowState();
         break;
     case 4:
@@ -621,7 +646,6 @@ static void Task_ShowPokedexAreaScreen(u8 taskId)
             return;
         break;
     case 5:
-        ShowRegionMapForPokedexAreaScreen(&sPokedexAreaScreen->regionMap);
         CreateRegionMapPlayerIcon(1, 1);
         PokedexAreaScreen_UpdateRegionMapVariablesAndVideoRegs(0, -8);
         break;
@@ -666,6 +690,18 @@ static void Task_HandlePokedexAreaScreenInput(u8 taskId)
             return;
         break;
     case 1:
+        if (sPokedexAreaScreen->switchState != 0)
+        {
+            StarNav_UpdateViewSwitch();
+            return;
+        }
+        if (JOY_NEW(A_BUTTON) && sPokedexAreaScreen->numPlanets != 0)
+        {
+            // StarNAV: A steps from the galaxy through each planet the species lives on, then back
+            PlaySE(SE_DEX_PAGE);
+            sPokedexAreaScreen->switchState = 1;
+            return;
+        }
         if (JOY_NEW(B_BUTTON))
         {
             gTasks[taskId].data[1] = 1;
@@ -703,35 +739,156 @@ static void ResetPokedexAreaMapBg(void)
     SetBgAttribute(3, BG_ATTR_PALETTEMODE, 0);
 }
 
-// Creates the circular sprites to highlight special areas (like caves) where a Pokémon can be found
+// Creates the circular sprites to highlight special areas (like caves) where a Pokémon can be found.
+// StarNAV: on the galaxy, one on the globe of each planet the species lives on; on a planet, one on the home
+// cell of each special area there.
 static void CreateAreaMarkerSprites(void)
 {
     u8 spriteId;
-    static s16 x;
-    static s16 y;
-    static s16 i;
-    static mapsec_s16_t mapSecId;
-    static s16 numSprites;
+    u16 x, y;
+    u16 i;
+    s16 numSprites = 0;
 
-    LoadSpriteSheet(&sAreaMarkerSpriteSheet);
-    LoadSpritePalette(&sAreaMarkerSpritePalette);
-    numSprites = 0;
-    for (i = 0; i < sPokedexAreaScreen->numSpecialAreas; i++)
+    if (GetSpriteTileStartByTag(TAG_AREA_MARKER) == 0xFFFF)
+        LoadSpriteSheet(&sAreaMarkerSpriteSheet);
+    if (IndexOfSpritePaletteTag(TAG_AREA_MARKER) == 0xFF)
+        LoadSpritePalette(&sAreaMarkerSpritePalette);
+    if (sPokedexAreaScreen->view == STARNAV_PLANET_NONE)
     {
-        mapSecId = sPokedexAreaScreen->specialAreaRegionMapSectionIds[i];
-        x = 8 * (gRegionMapEntries[mapSecId].x + 1) + 4;
-        y = 8 * (gRegionMapEntries[mapSecId].y) + 28;
-        x += 4 * (gRegionMapEntries[mapSecId].width - 1);
-        y += 4 * (gRegionMapEntries[mapSecId].height - 1);
-        spriteId = CreateSprite(&sAreaMarkerSpriteTemplate, x, y, 0);
-        if (spriteId != MAX_SPRITES)
+        for (i = 0; i < sPokedexAreaScreen->numPlanets && numSprites < MAX_AREA_MARKERS; i++)
         {
-            gSprites[spriteId].invisible = TRUE;
-            sPokedexAreaScreen->areaMarkerSprites[numSprites++] = &gSprites[spriteId];
+            StarNav_GetGlobe(sPokedexAreaScreen->planets[i], &x, &y);
+            spriteId = CreateSprite(&sAreaMarkerSpriteTemplate, x, y + 8, 0);
+            if (spriteId != MAX_SPRITES)
+            {
+                gSprites[spriteId].invisible = TRUE;
+                sPokedexAreaScreen->areaMarkerSprites[numSprites++] = &gSprites[spriteId];
+            }
+        }
+    }
+    else
+    {
+        for (i = 0; i < sPokedexAreaScreen->numSpecialAreas && numSprites < MAX_AREA_MARKERS; i++)
+        {
+            if (!StarNav_GetMapSecCell(sPokedexAreaScreen->specialAreaRegionMapSectionIds[i], sPokedexAreaScreen->view, &x, &y))
+                continue;
+            spriteId = CreateSprite(&sAreaMarkerSpriteTemplate, 8 * x + 4, 8 * y + 12, 0);
+            if (spriteId != MAX_SPRITES)
+            {
+                gSprites[spriteId].invisible = TRUE;
+                sPokedexAreaScreen->areaMarkerSprites[numSprites++] = &gSprites[spriteId];
+            }
         }
     }
 
     sPokedexAreaScreen->numAreaMarkerSprites = numSprites;
+}
+
+static void StarNav_DestroyAreaMarkers(void)
+{
+    u16 i;
+
+    for (i = 0; i < sPokedexAreaScreen->numAreaMarkerSprites; i++)
+        DestroySprite(sPokedexAreaScreen->areaMarkerSprites[i]);
+    sPokedexAreaScreen->numAreaMarkerSprites = 0;
+}
+
+// The planets the species lives on, in StarNAV order: from its overworld maps and its special areas
+static void StarNav_FindPlanetsWithMon(void)
+{
+    u16 i, x, y;
+    u8 p;
+    bool8 found;
+
+    sPokedexAreaScreen->numPlanets = 0;
+    for (p = 0; p < 32; p++)
+    {
+        if (!StarNav_PlanetHasMap(p))
+            continue;
+        found = FALSE;
+        for (i = 0; i < sPokedexAreaScreen->numOverworldAreas && !found; i++)
+        {
+            if (StarNav_GetMapPlanet(sPokedexAreaScreen->overworldAreasWithMons[i].mapGroup,
+                                     sPokedexAreaScreen->overworldAreasWithMons[i].mapNum) == p)
+                found = TRUE;
+        }
+        for (i = 0; i < sPokedexAreaScreen->numSpecialAreas && !found; i++)
+        {
+            if (StarNav_GetMapSecCell(sPokedexAreaScreen->specialAreaRegionMapSectionIds[i], p, &x, &y))
+                found = TRUE;
+        }
+        if (found && sPokedexAreaScreen->numPlanets < ARRAY_COUNT(sPokedexAreaScreen->planets))
+            sPokedexAreaScreen->planets[sPokedexAreaScreen->numPlanets++] = p;
+    }
+}
+
+// Draw the galaxy or a planet on BG3: its tiles, its tilemap (the affine map's bytes as text entries), its colours
+static void StarNav_LoadMapView(void)
+{
+    u8 *affine = Alloc(64 * 64);
+    u32 x, y;
+
+    StarNav_SetDatapadView(sPokedexAreaScreen->view);
+    LZ77UnCompVram(StarNav_GetDatapadGfx(), (void *)BG_CHAR_ADDR(3));
+    if (affine != NULL)
+    {
+        LZ77UnCompWram(StarNav_GetDatapadTilemap(), affine);
+        for (y = 0; y < 32; y++)
+            for (x = 0; x < 32; x++)
+                sPokedexAreaScreen->mapTilemap[y * 32 + x] = affine[y * 64 + x];
+        Free(affine);
+        LoadBgTilemap(3, sPokedexAreaScreen->mapTilemap, sizeof(sPokedexAreaScreen->mapTilemap), 0);
+    }
+    CpuCopy16(StarNav_GetDatapadPal(), &gPlttBufferUnfaded[BG_PLTT_ID(7)], 3 * PLTT_SIZE_4BPP);
+}
+
+// A pressed: fade the map out, draw the next view, fade it back in. Returns TRUE while switching.
+static bool8 StarNav_UpdateViewSwitch(void)
+{
+    u8 i;
+    struct Sprite *player = sPokedexAreaScreen->regionMap.playerIconSprite;
+
+    switch (sPokedexAreaScreen->switchState)
+    {
+    case 1:
+        StarNav_DestroyAreaMarkers();
+        if (player != NULL)
+        {
+            player->invisible = TRUE;
+            player->callback = SpriteCallbackDummy;
+        }
+        BeginNormalPaletteFade((1 << 7) | (1 << 8) | (1 << 9) | (1 << GLOW_PALETTE), 0, 0, 16, RGB_BLACK);
+        sPokedexAreaScreen->switchState++;
+        break;
+    case 2:
+        if (gPaletteFade.active)
+            break;
+        // the next planet the species lives on, or back to the galaxy after the last
+        if (sPokedexAreaScreen->view == STARNAV_PLANET_NONE)
+        {
+            sPokedexAreaScreen->view = sPokedexAreaScreen->planets[0];
+        }
+        else
+        {
+            for (i = 0; i < sPokedexAreaScreen->numPlanets && sPokedexAreaScreen->planets[i] != sPokedexAreaScreen->view; i++)
+                ;
+            sPokedexAreaScreen->view = (i + 1 < sPokedexAreaScreen->numPlanets) ? sPokedexAreaScreen->planets[i + 1] : STARNAV_PLANET_NONE;
+        }
+        StarNav_LoadMapView();
+        BuildAreaGlowTilemap();
+        LoadBgTilemap(2, sPokedexAreaScreen->areaGlowTilemap, sizeof(sPokedexAreaScreen->areaGlowTilemap), 0);
+        CreateAreaMarkerSprites();
+        PokedexAreaScreen_UpdateRegionMapVariablesAndVideoRegs(0, -8);
+        StartAreaGlow();
+        BeginNormalPaletteFade((1 << 7) | (1 << 8) | (1 << 9) | (1 << GLOW_PALETTE), 0, 16, 0, RGB_BLACK);
+        sPokedexAreaScreen->switchState++;
+        break;
+    case 3:
+        if (!gPaletteFade.active)
+            sPokedexAreaScreen->switchState = 0;
+        break;
+    }
+    return sPokedexAreaScreen->switchState != 0;
 }
 
 static void DestroyAreaScreenSprites(void)

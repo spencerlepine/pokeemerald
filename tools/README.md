@@ -50,7 +50,7 @@ tool's own README or `TODO.md` says what is missing). A blank status means the t
 | [`object-kit/`](object-kit/) | TODO | Paused 2026-11-04. Rock families only (boulders, spires, mesa, basalt columns, obsidian, ice stalagmites) in greybox, with hit box and drawn size. Nothing goes to the wiki or the game yet. | world | `../wiki/mapping/objects.csv` (the object list, placeholder sheets only) |
 | [`building-kit/`](building-kit/) | TODO | Outdoor buildings from a kit (walls, roofs, doors, windows, decor as templates; blueprints vary them by seed), rendered by the world-art camera. 278 greybox buildings for every planet (every area building plus town fill), in review. | world | `../wiki/mapping/buildings.csv` (one row per building: lot, footprint, door, tiles) |
 | [`world-art/`](world-art/) | TODO | New overworld shapes vanilla does not have, rendered from small 3D models in the vanilla overworld style. Owner-approved models (the Hoenn tree so far), plus grey low-poly scenery models in review (`scenery`). | world | `world_art.csv` rows that need a new shape; `scenery` rows by `model_status` |
-| [`starnav-map/`](starnav-map/) | DONE | StarNAV map screen (region map): mockups played in a browser, and the owner's pick (Holo Globe: a galaxy of globes, each planet a hologram) installed in `../game` by `install.py` (2026-11-04) for the StarNAV, wall map and Fly map. | D8 | `pending_art.csv` `graphics/pokenav/region_map/map.png` and the two cursors |
+| [`starnav-map/`](starnav-map/) | DONE | StarNAV map screen (region map): mockups played in a browser, and the owner's pick (Holo Globe: a galaxy of globes, each planet a hologram) installed in `../game` by `install.py` (2026-11-04) for the StarNAV, wall map, Fly map and Datapad area screen. | D8 | `pending_art.csv` `graphics/pokenav/region_map/map.png`, the two cursors and the Datapad region map |
 | [`title-screen-generator/`](title-screen-generator/) |  | Title screen logo, KYBER VERSION banner, Exogorth, sky, copyright lines. | - | `branding.csv` title_screen and intro copyright rows |
 | [`cutscene-generator/`](cutscene-generator/) |  | Title screen, intro movie, credits, the titan/EXOGORTH scene, evolution, trade and shuttle-ride scenes. | G1, G2, G3, G4 | `pending_art.csv` kinds `title_screen`, `intro`, `credits`, `rayquaza_scene`, `evolution_scene`, `trade`, `cable_car`; 83 PNGs |
 | [`music-generator/`](music-generator/) |  | Background music, battle music and fanfares, from the briefs and film cues in the wiki. | audio: music | `music.csv`: 178 songs TODO (140 HOTSWAP + 38 NET_NEW), each with a film cue (`ref_use` ARRANGE / STYLE / SCRATCH) |
@@ -197,7 +197,7 @@ tool that edits that screen.
 | D5 | Field objects | Boulders, cut trees, breakable rocks, truck, Mirage Tower, rotating gates, fruit trees | 16x16 to 64x64 OBJ frames | 56 | | `vfx-generator` |
 | D6 | Weather overlays | Rain, snow, ash, fog, sandstorm, bubbles | OBJ frames + scrolling layers | 10 | 4 | `vfx-generator` |
 | D7 | Map name popups | Entering a new area | 80x24 frame styles + outlines | 12 | 1 | none (no tool) |
-| D8 | Region map | Town map, comlink map, Fly, Datapad area | tiles + tilemap, map icons and cursors | 14 | 4 | `starnav-map` (the Datapad area map is still Emerald's) |
+| D8 | Region map | Town map, comlink map, Fly, Datapad area | tiles + tilemap, map icons and cursors | 14 | 4 | `starnav-map` |
 
 ### E. Battle
 

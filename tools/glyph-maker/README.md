@@ -44,3 +44,14 @@ bar, from the header's own letters plus a drawn S, and re-tiles it into the same
 python3 starnav_header.py preview   # out/starnav_header.png (before above, after below)
 python3 starnav_header.py install   # writes ../../game/graphics/pokenav/header.png and header.bin (idempotent)
 ```
+
+## StarNAV map strip (`starnav_map_header.py`)
+
+The strip above the StarNAV map (`graphics/pokenav/left_headers/hoenn_map.png`) said HOENN MAP. This script
+rebuilds it from Emerald's image (read from git) as STAR MAP: A, M and P are the strip's own letters, S, T and R
+are drawn to match. GALAXY MAP is too wide for the strip. Installed 2026-11-04.
+
+```sh
+python3 starnav_map_header.py preview   # out/starnav_map_header.png
+python3 starnav_map_header.py install   # writes ../../game/graphics/pokenav/left_headers/hoenn_map.png
+```

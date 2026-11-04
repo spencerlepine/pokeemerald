@@ -273,8 +273,8 @@ graphics/pokedex/cry_meter_needle.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene ar
 graphics/pokedex/cry_screen_bg.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/pokedex/interface.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Baked-in text POKéDEX / HOENN / NATIONAL → DATAPAD / OUTER RIM / GALACTIC.,,,,,,Replace by hand; no generator tool.
 graphics/pokedex/menu.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Baked-in text POKéDEX / HOENN / NATIONAL → DATAPAD / OUTER RIM / GALACTIC.,,,,,,Replace by hand; no generator tool.
-graphics/pokedex/region_map.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Hoenn region map → Outer Rim galaxy map with the game's planets.,,,,,,Replace by hand; no generator tool.
-graphics/pokedex/region_map_affine.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Hoenn region map → Outer Rim galaxy map with the game's planets.,,,,,,Replace by hand; no generator tool.
+graphics/pokedex/region_map.png,HOTSWAP,DRAFT,NO_ART,,Hoenn region map → Outer Rim galaxy map with the game's planets.,,,,,,Not shown any more (2026-11-04): the Datapad area screen draws the StarNAV galaxy and planet holograms (tools/starnav-map). The file stays unused.
+graphics/pokedex/region_map_affine.png,HOTSWAP,DRAFT,NO_ART,,Hoenn region map → Outer Rim galaxy map with the game's planets.,,,,,,Not shown any more (2026-11-04): the Datapad area screen draws the StarNAV galaxy and planet holograms (tools/starnav-map). The file stays unused.
 graphics/pokedex/search_menu.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Baked-in text POKéDEX / HOENN / NATIONAL → DATAPAD / OUTER RIM / GALACTIC.,,,,,,Replace by hand; no generator tool.
 graphics/pokemon_jump/bg.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/pokemon_jump/bonuses.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
@@ -388,7 +388,7 @@ graphics/pokenav/left_headers/beauty.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene
 graphics/pokenav/left_headers/condition.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/pokenav/left_headers/cool.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/pokenav/left_headers/cute.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
-graphics/pokenav/left_headers/hoenn_map.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,'HOENN MAP' label → 'GALAXY MAP'.,,,,,,Replace by hand; no generator tool.
+graphics/pokenav/left_headers/hoenn_map.png,HOTSWAP,DRAFT,ART_READY,,'HOENN MAP' label → 'STAR MAP'.,,,,,,Shipped 2026-11-04 by tools/glyph-maker/starnav_map_header.py: STAR MAP in the strip's own letters (GALAXY MAP did not fit). Waiting for owner review.
 graphics/pokenav/left_headers/main_menu.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/pokenav/left_headers/match_call.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/pokenav/left_headers/party.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,

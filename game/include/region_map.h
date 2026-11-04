@@ -115,6 +115,19 @@ void TrySetPlayerIconBlink(void);
 void BlendRegionMap(u16 color, u32 coeff);
 void SetRegionMapDataForZoom(void);
 
+// StarNAV map on the Datapad area screen (region_map.c)
+#define STARNAV_PLANET_NONE 0xFF
+u8 StarNav_GetMapPlanet(u8 mapGroup, u8 mapNum);
+bool8 StarNav_GetMapSecCell(mapsec_u16_t mapSecId, u8 planet, u16 *x, u16 *y);
+void StarNav_GetGlobe(u8 planet, u16 *x, u16 *y);
+bool8 StarNav_PlanetHasMap(u8 planet);
+const u8 *StarNav_GetPlanetName(u8 planet);
+void StarNav_InitDatapadMap(struct RegionMap *regionMap);
+void StarNav_SetDatapadView(u8 planet);
+const u32 *StarNav_GetDatapadGfx(void);
+const u32 *StarNav_GetDatapadTilemap(void);
+const u16 *StarNav_GetDatapadPal(void);
+
 extern const struct RegionMapLocation gRegionMapEntries[];
 
 #endif //GUARD_REGION_MAP_H

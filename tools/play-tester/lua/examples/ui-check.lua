@@ -110,9 +110,13 @@ else
     add({fn=function() emu:write32(CB2, sym("CB2_FieldShowRegionMap") | 1) end}); shot("01_open", 120)
     press("RIGHT"); shot("02_right", 30); press("A"); shot("03_planet", 120); press("DOWN"); shot("04_cursor", 30)
     press("A"); shot("05_galaxy", 120); press("B"); shot("06_exit", 150)
-  elseif SC == "starnav_dex" then  -- the Datapad area screen keeps Emerald's map (pokedex_area_screen.c)
+  elseif SC:sub(1,11) == "starnav_dex" then  -- the Datapad area screen: galaxy, then A through each planet
+    -- starnav_dex: No. 027 (sea routes on six planets); starnav_dex_cave: No. 063 (caves: area markers)
+    add({fn=function() emu:write16(sym("sLastSelectedPokemon"), SC == "starnav_dex_cave" and 62 or 26) end})
     press("START"); add({wait=30}); press("DOWN"); press("UP"); add({wait=20}); press("A"); add({wait=240})
-    press("A"); shot("01_entry", 200); press("A"); shot("02_area", 200); press("B"); shot("03_back", 120)
+    press("A"); shot("01_entry", 200); press("A"); shot("02_area", 200)
+    for v = 1, 7 do press("A"); shot(string.format("%02d_view", 2 + v), 90) end
+    press("B"); shot("10_back", 120)
   elseif SC == "starnav_reopen" then  -- leave the StarNAV zoomed in, reopen it, then fly from the Fly map
     press("START"); add({wait=30}); press("DOWN"); press("DOWN"); press("DOWN"); press("A"); add({wait=150})
     press("A"); add({wait=150}); press("A"); add({wait=60}); press("B"); add({wait=150})

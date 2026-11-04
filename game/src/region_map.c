@@ -1330,6 +1330,9 @@ static u8 GetMapsecType(mapsec_u16_t mapSecId)
     case MAPSEC_BATTLE_FRONTIER:
         return FlagGet(FLAG_LANDMARK_BATTLE_FRONTIER) ? MAPSECTYPE_BATTLE_FRONTIER : MAPSECTYPE_NONE;
     case MAPSEC_SOUTHERN_ISLAND:
+        // StarNAV: this section is all of Tython, a planet on the galaxy map, so its names always show
+        if (sStarNav->active)
+            return MAPSECTYPE_ROUTE;
         return FlagGet(FLAG_LANDMARK_SOUTHERN_ISLAND) ? MAPSECTYPE_ROUTE : MAPSECTYPE_NONE;
     default:
         return MAPSECTYPE_ROUTE;
@@ -2044,6 +2047,101 @@ static bool8 StarNav_GetHomeCell(mapsec_u16_t mapSecId, u16 *x, u16 *y)
     *x = home->x + MAPCURSOR_X_MIN;
     *y = home->y + MAPCURSOR_Y_MIN;
     return TRUE;
+}
+
+// Datapad area screen: the same galaxy and planet art, drawn on its own text background.
+
+// The planet an overworld map is on: its place on a planet grid, else its map section's home planet
+u8 StarNav_GetMapPlanet(u8 mapGroup, u8 mapNum)
+{
+    u16 map = (mapGroup << 8) | mapNum;
+    mapsec_u16_t mapSecId;
+    u32 i;
+
+    for (i = 0; i < STARNAV_MAP_COUNT; i++)
+    {
+        if (sStarNavMapPlaces[i].map == map)
+            return sStarNavMapPlaces[i].planet;
+    }
+    mapSecId = CorrectSpecialMapSecId_Internal(Overworld_GetMapHeaderByGroupAndId(mapGroup, mapNum)->regionMapSectionId);
+    if (mapSecId < MAPSEC_NONE && sStarNavMapSecHomes[mapSecId].planet != 0)
+        return sStarNavMapSecHomes[mapSecId].planet - 1;
+    return STARNAV_PLANET_NONE;
+}
+
+// A map section's home cell on a planet, as a cursor position (x 1-28, y 2-16)
+bool8 StarNav_GetMapSecCell(mapsec_u16_t mapSecId, u8 planet, u16 *x, u16 *y)
+{
+    const struct StarNavHome *home;
+
+    if (mapSecId >= MAPSEC_NONE)
+        return FALSE;
+    home = &sStarNavMapSecHomes[mapSecId];
+    if (home->planet != planet + 1 || home->x >= MAP_WIDTH || home->y >= MAP_HEIGHT)
+        return FALSE;
+    *x = home->x + MAPCURSOR_X_MIN;
+    *y = home->y + MAPCURSOR_Y_MIN;
+    return TRUE;
+}
+
+// The middle of a planet's globe on the galaxy view, in pixels of the map background
+void StarNav_GetGlobe(u8 planet, u16 *x, u16 *y)
+{
+    *x = sStarNavPlanets[planet].x + STARNAV_MAP_X;
+    *y = sStarNavPlanets[planet].y + STARNAV_MAP_Y;
+}
+
+bool8 StarNav_PlanetHasMap(u8 planet)
+{
+    return planet < STARNAV_PLANET_COUNT && sStarNavPlanets[planet].gfx != NULL;
+}
+
+const u8 *StarNav_GetPlanetName(u8 planet)
+{
+    return sStarNavPlanets[planet].name;
+}
+
+// Use the StarNAV map for the Datapad: find the player and start on the galaxy
+void StarNav_InitDatapadMap(struct RegionMap *regionMap)
+{
+    sRegionMap = regionMap;
+    sStarNav->active = TRUE;
+    sStarNav->planet = 0;
+    sStarNav->zoomStep = 0;
+    sRegionMap->zoomed = FALSE;
+    StarNav_LocatePlayer();
+    sRegionMap->playerIconSpritePosX = sStarNav->playerX;
+    sRegionMap->playerIconSpritePosY = sStarNav->playerY;
+}
+
+// Show the galaxy (STARNAV_PLANET_NONE) or a planet: GetRegionMapSecIdAt and the player icon follow it
+void StarNav_SetDatapadView(u8 planet)
+{
+    if (planet == STARNAV_PLANET_NONE || !StarNav_PlanetHasMap(planet))
+    {
+        sRegionMap->zoomed = FALSE;
+    }
+    else
+    {
+        sRegionMap->zoomed = TRUE;
+        sStarNav->planet = planet;
+    }
+    StarNav_PlacePlayerIcon();
+}
+
+const u32 *StarNav_GetDatapadGfx(void)
+{
+    return StarNav_ViewGfx();
+}
+
+const u32 *StarNav_GetDatapadTilemap(void)
+{
+    return StarNav_ViewTilemap();
+}
+
+const u16 *StarNav_GetDatapadPal(void)
+{
+    return StarNav_ViewPal();
 }
 
 u8 *GetMapName(u8 *dest, mapsec_u16_t regionMapId, u16 padLength)

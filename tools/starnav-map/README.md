@@ -100,11 +100,14 @@ The code is in `../../game/src/region_map.c` (the StarNAV state lives in the unu
 - **Wall map** (Bacta Centers): A zooms in and out, B leaves.
 - **Fly map**: it opens on the player's planet with that planet's fly icons. A flies (Emerald's rules); B goes
   out to the galaxy, where A zooms into another planet and B cancels.
-- The Datapad area screen keeps Emerald's Hoenn map; its habitat marks use Emerald's map sections.
+- **Datapad area screen** (`pokedex_area_screen.c`): it opens on the galaxy with a flashing mark on each planet
+  where the species lives. A steps through those planets one by one (fade out, fade in), each with the pink
+  habitat glow over its areas and the cave marks, then back to the galaxy. A does nothing for AREA UNKNOWN.
+  The glow uses the planet grids, so an area glows only on its own planet.
 
-A map section shows a name only where Emerald's rules allow it: Tython is all `MAPSEC_SOUTHERN_ISLAND`, so its
-name stays hidden until `FLAG_LANDMARK_SOUTHERN_ISLAND` is set. The header strip above the map is Emerald's
-POKéNAV art (a branding row, replaced by hand).
+Map section names follow Emerald's rules, except Tython: it is all `MAPSEC_SOUTHERN_ISLAND`, which Emerald hides
+until `FLAG_LANDMARK_SOUTHERN_ISLAND` is set, so the StarNAV always names it. The header strip above the map says
+STAR MAP (GALAXY MAP did not fit), drawn by `../glyph-maker/starnav_map_header.py`.
 
 Check it in the emulator with `../play-tester/scripts/ui-check.sh starnav` (also `starnav_town`, `starnav_fly`,
-`starnav_reopen`, `starnav_dex`).
+`starnav_reopen`, `starnav_dex`, `starnav_dex_cave`).
