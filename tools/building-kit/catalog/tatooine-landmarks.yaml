@@ -18,9 +18,9 @@ buildings:
   art: art:shared:arena
   size: [6, 5]
   door: 3
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/arena-ring
+  seed: 1001
+  about: A squat round drum like the Mos Espa arena towers (The Phantom Menace), a bold gatehouse in front.
 - id: bld:tatooine:bestine-academy
   kind: landmark
   name: Academy
@@ -80,9 +80,10 @@ buildings:
   art: art:tatooine:cantina
   size: [7, 5]
   door: 3
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/dome-cluster
+  seed: 901
+  set: {tower: true}
+  about: 'Chalmun''s Cantina (A New Hope): a low dome cluster with a dark arched entry block and a tall vent tower.'
 - id: bld:tatooine:mos-eisley-spacer-museum
   kind: landmark
   name: Spacer Museum
@@ -111,9 +112,9 @@ buildings:
   art: art:shared:arena
   size: [6, 5]
   door: 3
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/arena-tent
+  seed: 1101
+  about: 'A big market tent like the Mos Espa awnings (The Phantom Menace): hipped canvas on posts, a wide dark flap.'
 - id: bld:tatooine:mos-entha-mos-entha-arena-doran
   kind: arena
   name: Mos Entha arena (Doran)
@@ -121,9 +122,9 @@ buildings:
   art: art:tatooine:mos-entha-arena
   size: [7, 5]
   door: 3
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/arena-colosseum
+  seed: 1201
+  about: A sandstone arena hall with twin drum pillars and banners, after the Mos Espa arena gates (The Phantom Menace).
 - id: bld:tatooine:mos-espa-watto-s-junk-shop-arena
   kind: arena
   name: Watto's junk shop (arena)
@@ -131,9 +132,10 @@ buildings:
   art: art:tatooine:watto-s-junk-shop
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/junk-shop
+  seed: 1301
+  set: {roof: dome}
+  about: 'Watto''s shop (The Phantom Menace): a domed block, an awning on poles, podracer engines and scrap out front.'
 - id: bld:tatooine:mos-espa-wald-s-hover-bikes
   kind: shop
   name: Wald's hover-bikes
@@ -141,9 +143,10 @@ buildings:
   art: art:tatooine:watto-s-junk-shop
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/junk-shop
+  seed: 1302
+  set: {roof: lip}
+  about: 'A Mos Espa parts shop next to Watto''s (The Phantom Menace): a block with a roof band and vent, an awning, crates and drums.'
 - id: bld:tatooine:mos-espa-mos-espa-grand-arena-podrace-stands
   kind: arena
   name: Mos Espa Grand Arena (podrace stands)
@@ -151,9 +154,9 @@ buildings:
   art: art:tatooine:podrace-arena
   size: [8, 5]
   door: 4
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/arena-grandstand
+  seed: 1401
+  about: 'The Mos Espa Grand Arena grandstand (The Phantom Menace): arcaded outer wall, tiers, pennants, judges'' tower.'
 - id: bld:tatooine:mos-espa-sabacc-den
   kind: landmark
   name: Sabacc den
@@ -161,9 +164,9 @@ buildings:
   art: art:tatooine:sabacc-den
   size: [6, 4]
   door: 3
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/sabacc-den
+  seed: 1501
+  about: A domed Mos Espa hall (The Phantom Menace) turned gambling den, a bright gold door under a canopy.
 - id: bld:tatooine:mos-espa-espa-generator-hatch
   kind: landmark
   name: Espa generator hatch
@@ -171,9 +174,9 @@ buildings:
   art: art:tatooine:power-station
   size: [4, 3]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/power-station
+  seed: 1601
+  about: A domed generator hatch bunker with a power cell and pipes (the power converters, A New Hope).
 - id: bld:tatooine:mos-espa-rebel-shuttle-pad-to-endor
   kind: pad
   name: Rebel shuttle pad (to Endor)
@@ -181,9 +184,10 @@ buildings:
   art: art:shared:landing-pad
   size: [7, 4]
   door: 3
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/shuttle-pad
+  seed: 1701
+  set: {load: shuttle}
+  about: A ferrocrete pad with the stolen Lambda shuttle Tydirium (Return of the Jedi) waiting for Endor.
 - id: bld:tatooine:mos-pelgo-prof-korr-s-lab
   kind: landmark
   name: Prof. Korr's lab
@@ -201,9 +205,10 @@ buildings:
   art: art:shared:landing-pad
   size: [4, 4]
   door: 1
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/shuttle-pad
+  seed: 1702
+  set: {load: cargo}
+  about: A small faceted landing pad with corner lights, cargo and a fuel cell (the Mos Espa pads, The Phantom Menace).
 - id: bld:tatooine:tosche-station-tosche-power-station
   kind: landmark
   name: Tosche power station
@@ -211,6 +216,58 @@ buildings:
   art: art:tatooine:power-station
   size: [6, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/power-station
+  seed: 1602
+  about: 'Tosche Station (A New Hope): a squat converter hall, a cooling fin wall and tall power cells.'
+- id: bld:tatooine:fill-sandcrawler
+  kind: fill
+  name: Jawa sandcrawler shop
+  areas: []
+  art: ''
+  size: [7, 5]
+  door: 3
+  blueprint: tatooine/sandcrawler
+  seed: 1801
+  about: A Jawa sandcrawler (A New Hope) parked with its ramp down, droids for sale in front.
+- id: bld:tatooine:fill-control-tower
+  kind: fill
+  name: Spaceport control tower
+  areas: []
+  art: ''
+  size: [4, 6]
+  door: 1
+  blueprint: tatooine/control-tower
+  seed: 1901
+  about: 'The Mos Eisley spaceport control tower (A New Hope): a slender shaft under a disc cab.'
+- id: bld:tatooine:fill-hutt-townhouse
+  kind: fill
+  name: Hutt townhouse
+  areas: []
+  art: ''
+  size: [9, 6]
+  door: 4
+  blueprint: tatooine/palace
+  seed: 2001
+  about: 'A Hutt''s town house in Mos Espa (The Phantom Menace): Jabba''s palace in small, drum towers and a gatehouse.'
+- id: bld:tatooine:fill-mos-espa-tall-tower
+  kind: fill
+  name: Mos Espa tall tower
+  areas: []
+  art: ''
+  size: [4, 6]
+  door: 1
+  blueprint: tatooine/tower
+  seed: 2101
+  set: {tiers: 3}
+  about: A tall stepped Mos Espa tower (The Phantom Menace), three tiers and a dome.
+- id: bld:tatooine:fill-cargo-warehouse
+  kind: fill
+  name: Cargo warehouse
+  areas: []
+  art: ''
+  size: [7, 4]
+  door: 2
+  blueprint: tatooine/hangar-shed
+  seed: 2201
+  set: {roof: domes, extra: crates}
+  about: 'A Mos Eisley cargo warehouse (A New Hope): a long shed, a row of low domes, a wide loading mouth, crates.'
