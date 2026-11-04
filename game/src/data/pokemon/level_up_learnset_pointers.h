@@ -252,19 +252,19 @@ const u16 *const gLevelUpLearnsets[NUM_SPECIES] =
     [SPECIES_LUGIA] = sLugiaLevelUpLearnset,
     [SPECIES_HO_OH] = sHoOhLevelUpLearnset,
     [SPECIES_CELEBI] = sCelebiLevelUpLearnset,
-    [SPECIES_OLD_UNOWN_B] = sGardevoirLevelUpLearnset, // AURAREAVER: placeholder = GARDEVOIR
-    [SPECIES_OLD_UNOWN_C] = sManectricLevelUpLearnset, // KATHWARDEN: placeholder = MANECTRIC
-    [SPECIES_OLD_UNOWN_D] = sBanetteLevelUpLearnset, // WHILLGUARD: placeholder = BANETTE
-    [SPECIES_OLD_UNOWN_E] = sSpecies255LevelUpLearnset,
-    [SPECIES_OLD_UNOWN_F] = sSpecies256LevelUpLearnset,
-    [SPECIES_OLD_UNOWN_G] = sSpecies257LevelUpLearnset,
-    [SPECIES_OLD_UNOWN_H] = sSpecies258LevelUpLearnset,
-    [SPECIES_OLD_UNOWN_I] = sSpecies259LevelUpLearnset,
+    [SPECIES_OLD_UNOWN_B] = sGardevoirLevelUpLearnset,  // AURAREAVER: learnset of GARDEVOIR
+    [SPECIES_OLD_UNOWN_C] = sManectricLevelUpLearnset,  // KATHWARDEN: learnset of MANECTRIC
+    [SPECIES_OLD_UNOWN_D] = sBanetteLevelUpLearnset,  // WHILLGUARD: learnset of BANETTE
+    [SPECIES_OLD_UNOWN_E] = sAriadosLevelUpLearnset,  // WYYYSCHOKK: learnset of ARIADOS
+    [SPECIES_OLD_UNOWN_F] = sSpinarakLevelUpLearnset,  // KNOBSPIDER: learnset of SPINARAK
+    [SPECIES_OLD_UNOWN_G] = sQuagsireLevelUpLearnset,  // SLEEN: learnset of QUAGSIRE
+    [SPECIES_OLD_UNOWN_H] = sXatuLevelUpLearnset,  // JUBBABIRD: learnset of XATU
+    [SPECIES_OLD_UNOWN_I] = sGulpinLevelUpLearnset,  // SLYYYG: learnset of GULPIN
     [SPECIES_OLD_UNOWN_J] = sSpecies260LevelUpLearnset,
-    [SPECIES_OLD_UNOWN_K] = sSpecies261LevelUpLearnset,
-    [SPECIES_OLD_UNOWN_L] = sSpecies262LevelUpLearnset,
-    [SPECIES_OLD_UNOWN_M] = sSpecies263LevelUpLearnset,
-    [SPECIES_OLD_UNOWN_N] = sSpecies264LevelUpLearnset,
+    [SPECIES_OLD_UNOWN_K] = sSentretLevelUpLearnset,  // JAKRAB: learnset of SENTRET
+    [SPECIES_OLD_UNOWN_L] = sMightyenaLevelUpLearnset,  // BOARWOLF: learnset of MIGHTYENA
+    [SPECIES_OLD_UNOWN_M] = sSandshrewLevelUpLearnset,  // PROFOGG: learnset of SANDSHREW
+    [SPECIES_OLD_UNOWN_N] = sVigorothLevelUpLearnset,  // YUZZUM: learnset of VIGOROTH
     [SPECIES_OLD_UNOWN_O] = sSpecies265LevelUpLearnset,
     [SPECIES_OLD_UNOWN_P] = sSpecies266LevelUpLearnset,
     [SPECIES_OLD_UNOWN_Q] = sSpecies267LevelUpLearnset,

@@ -1,7 +1,10 @@
 # cry-generator
 
-**Status:** DONE. Approved by the owner on 2026-11-01. The first six cries (SUNCHICK, MASSIFF, MYNOCK, EXOGORTH,
-R2 UNIT, PERSUADER) are in `../../game`; the other 380 are generated (specs in `specs/`, files in `../../wiki/audio/`, status AUDIO_READY) and wait for owner review and `install`.
+**Status:** DONE. Approved by the owner on 2026-11-01. All 386 cries are in `../../game` (the first six by
+`install`, the other 380 on 2026-11-04 by `../../wiki/tools/port_creatures.py assets`, which copies every `cry:`
+row of `../../wiki/mapping/audio_ready.csv` and lists it in `audio_done.csv`). Still to make: the 12 net-new
+species' cries (`net:cry-*` in `../../wiki/mapping/audio.csv`); until then each plays its `cry_from` creature's
+cry (`../../wiki/mapping/new_species.csv`).
 
 One cry per companion: creature calls, droid beeps and servos. Wiki rows: `../../wiki/database/pending_audio.csv`,
 category `cry`, HOTSWAP (386 rows). Each row's `sw_subject` is the brief and `asset_file` the slot it replaces.

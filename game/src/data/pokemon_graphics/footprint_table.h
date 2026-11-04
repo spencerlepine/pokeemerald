@@ -252,19 +252,19 @@ const u8 *const gMonFootprintTable[] =
     [SPECIES_LUGIA] = gMonFootprint_Lugia,
     [SPECIES_HO_OH] = gMonFootprint_HoOh,
     [SPECIES_CELEBI] = gMonFootprint_Celebi,
-    [SPECIES_OLD_UNOWN_B] = gMonFootprint_Gardevoir, // AURAREAVER: placeholder = GARDEVOIR
-    [SPECIES_OLD_UNOWN_C] = gMonFootprint_Manectric, // KATHWARDEN: placeholder = MANECTRIC
-    [SPECIES_OLD_UNOWN_D] = gMonFootprint_Banette, // WHILLGUARD: placeholder = BANETTE
-    [SPECIES_OLD_UNOWN_E] = gMonFootprint_QuestionMark,
-    [SPECIES_OLD_UNOWN_F] = gMonFootprint_QuestionMark,
-    [SPECIES_OLD_UNOWN_G] = gMonFootprint_QuestionMark,
-    [SPECIES_OLD_UNOWN_H] = gMonFootprint_QuestionMark,
-    [SPECIES_OLD_UNOWN_I] = gMonFootprint_QuestionMark,
+    [SPECIES_OLD_UNOWN_B] = gMonFootprint_Gardevoir,  // AURAREAVER: placeholder art = GARDEVOIR
+    [SPECIES_OLD_UNOWN_C] = gMonFootprint_Manectric,  // KATHWARDEN: placeholder art = MANECTRIC
+    [SPECIES_OLD_UNOWN_D] = gMonFootprint_Banette,  // WHILLGUARD: placeholder art = BANETTE
+    [SPECIES_OLD_UNOWN_E] = gMonFootprint_Ariados,  // WYYYSCHOKK: placeholder art = ARIADOS
+    [SPECIES_OLD_UNOWN_F] = gMonFootprint_Spinarak,  // KNOBSPIDER: placeholder art = SPINARAK
+    [SPECIES_OLD_UNOWN_G] = gMonFootprint_Quagsire,  // SLEEN: placeholder art = QUAGSIRE
+    [SPECIES_OLD_UNOWN_H] = gMonFootprint_Xatu,  // JUBBABIRD: placeholder art = XATU
+    [SPECIES_OLD_UNOWN_I] = gMonFootprint_Gulpin,  // SLYYYG: placeholder art = GULPIN
     [SPECIES_OLD_UNOWN_J] = gMonFootprint_QuestionMark,
-    [SPECIES_OLD_UNOWN_K] = gMonFootprint_QuestionMark,
-    [SPECIES_OLD_UNOWN_L] = gMonFootprint_QuestionMark,
-    [SPECIES_OLD_UNOWN_M] = gMonFootprint_QuestionMark,
-    [SPECIES_OLD_UNOWN_N] = gMonFootprint_QuestionMark,
+    [SPECIES_OLD_UNOWN_K] = gMonFootprint_Sentret,  // JAKRAB: placeholder art = SENTRET
+    [SPECIES_OLD_UNOWN_L] = gMonFootprint_Mightyena,  // BOARWOLF: placeholder art = MIGHTYENA
+    [SPECIES_OLD_UNOWN_M] = gMonFootprint_Sandshrew,  // PROFOGG: placeholder art = SANDSHREW
+    [SPECIES_OLD_UNOWN_N] = gMonFootprint_Vigoroth,  // YUZZUM: placeholder art = VIGOROTH
     [SPECIES_OLD_UNOWN_O] = gMonFootprint_QuestionMark,
     [SPECIES_OLD_UNOWN_P] = gMonFootprint_QuestionMark,
     [SPECIES_OLD_UNOWN_Q] = gMonFootprint_QuestionMark,

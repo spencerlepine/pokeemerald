@@ -36,6 +36,15 @@ the tool.
 python -m walker_sprite build   art/<name>.yaml               # PNG + previews + lint
 python -m walker_sprite verify  art/<name>.yaml               # round trip through pokeemerald's gbagfx
 python -m walker_sprite install art/<name>.yaml               # copy into pokeemerald, set the palette tag
+```
+
+`install` also handles a spec whose `graphics_info` names several entries (`Latias / Latios`) or carries the
+`gObjectEventGraphicsInfo_` prefix, and a walker with its own palette (`palette: sw_*` on a non-NPC tag such as
+`OBJ_EVENT_PAL_TAG_HO_OH`): it copies `palettes/sw_*.pal` over the palette file that tag loads. The 15 creature
+walkers (A6) were installed this way on 2026-11-04 (Latios then moved to NPC_2 by hand, as its notes ask); people
+walkers are not installed yet.
+
+```bash
 python -m walker_sprite compare output/<x>.png a.yaml b.yaml  # variant review sheet
 python -m walker_sprite lint    <any_sheet.png>               # lint an existing sheet
 python -m walker_sprite corpus                                # re-measure vanilla walkers

@@ -41,7 +41,8 @@ python3 footprint.py --sheet types.png          # every foot type at 3 sizes, fo
 `../../wiki/mapping/art_ready.csv` (386 rows, ART_READY on 2026-11-02). The `question_mark` placeholder print
 is kept vanilla (`keep`).
 
-## Install (not done yet)
+## Install (done 2026-11-04)
 
-Copy each `footprint.png` into `../../game/graphics/pokemon/<species>/`; `footprint_table.h` needs no change.
-Then set `game_status` DONE.
+`python3 ../../wiki/tools/port_creatures.py assets` copies each approved `footprint.png` into
+`../../game/graphics/pokemon/<species>/` (`footprint_table.h` needs no change) and marks the rows
+`game_status` DONE. Re-run it after redrawing a print.

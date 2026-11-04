@@ -200,10 +200,21 @@ def cmd_install(a) -> int:
         return 1
     shutil.copyfile(out_dir(s) / f"{s.name}.png", em / s.replaces)
     print(f"copied -> {em / s.replaces}")
-    if s.palette_tag:
+    # graphics_info may be "Lugia", "gObjectEventGraphicsInfo_Lugia" or several ("Latias / Latios")
+    syms = [x.strip().removeprefix("gObjectEventGraphicsInfo_")
+            for x in str(s.meta.get("graphics_info", "")).split("/") if x.strip()]
+    pal_name = str(s.meta.get("palette", ""))
+    if pal_name.startswith("sw_") and s.palette_tag and not s.palette_tag.startswith("OBJ_EVENT_PAL_TAG_NPC_"):
+        # an own palette (not a shared NPC bank): it replaces the palette file its tag loads
+        dst = em / "graphics/object_events/palettes" / (s.palette_tag.removeprefix("OBJ_EVENT_PAL_TAG_").lower() + ".pal")
+        if not dst.exists():
+            print(f"no palette file {dst} for {s.palette_tag}; install it by hand")
+            return 1
+        shutil.copyfile(Path(__file__).resolve().parent.parent / "palettes" / f"{pal_name}.pal", dst)
+        print(f"copied palettes/{pal_name}.pal -> {dst}")
+    for sym in syms if s.palette_tag else []:
         gi = em / "src/data/object_events/object_event_graphics_info.h"
         src = gi.read_text()
-        sym = s.meta["graphics_info"]
         pat = re.compile(rf"(gObjectEventGraphicsInfo_{sym} = \{{.*?\.paletteTag = )(\w+)(,.*?\.paletteSlot = )(\w+)", re.S)
         slot = s.palette_tag.replace("OBJ_EVENT_PAL_TAG_", "PALSLOT_")
         if not s.palette_tag.startswith("OBJ_EVENT_PAL_TAG_NPC_"):
@@ -217,10 +228,9 @@ def cmd_install(a) -> int:
         gi.write_text(new)
         print(f"set gObjectEventGraphicsInfo_{sym}.paletteTag = {s.palette_tag}, paletteSlot = {slot}")
     kit = spec_mod.KITS[s.kit]
-    if kit["oam"] != "16x32" and "graphics_info" in s.meta:
+    for sym in syms if kit["oam"] != "16x32" else []:
         gi = em / "src/data/object_events/object_event_graphics_info.h"
         src = gi.read_text()
-        sym = s.meta["graphics_info"]
         w, h = kit["frame"]
         pat = re.compile(rf"(gObjectEventGraphicsInfo_{sym} = \{{.*?\.size = )\d+(,\s*\.width = )\d+(,\s*\.height = )\d+(.*?\.oam = &gObjectEventBaseOam_)\w+(,\s*\.subspriteTables = sOamTables_)\w+", re.S)
         new, n = pat.subn(rf"\g<1>{kit['size']}\g<2>{w}\g<3>{h}\g<4>{kit['oam']}\g<5>{kit['oam']}", src)

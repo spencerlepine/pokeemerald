@@ -1978,3 +1978,68 @@ const u8 gDeoxysPokedexText[] = _(
     "A star-born creature of Atollon. It shifts\n"
     "between many forms. Its crystal core fires\n"
     "lasers from its chest.");
+
+const u8 gAurareaverPokedexText[] = _(
+    "An AURADANCER that took a SITH SHARD. Its\n"
+    "aura burns cold and red. It dances to feed\n"
+    "on the fear of all who watch.");
+
+const u8 gKathwardenPokedexText[] = _(
+    "A kath hound raised by the Jedi of\n"
+    "Dantooine. A KYBER CRYSTAL calmed its\n"
+    "storm. It guards the old enclave at night.");
+
+const u8 gWhillguardPokedexText[] = _(
+    "A temple spirit that keeps watch with the\n"
+    "Guardians of the Whills. It hums softly.\n"
+    "Pilgrims on Jedha say it guided them home.");
+
+const u8 gWyyyschokkPokedexText[] = _(
+    "A hunting spider as big as a Wookiee cub.\n"
+    "It spins webs between wroshyr roots and\n"
+    "drops on anything that pulls at them.");
+
+const u8 gKnobspiderPokedexText[] = _(
+    "It begins as a pod on a GNARLTREE and\n"
+    "walks away when ripe. Its white legs are\n"
+    "knobbed like roots. It waits where the\n"
+    "Force is dark.");
+
+const u8 gSleenPokedexText[] = _(
+    "A broad-tailed lizard of the bog. It swims\n"
+    "with its legs folded and surfaces to\n"
+    "breathe through the mud. It is not quick,\n"
+    "and does not need to be.");
+
+const u8 gJubbabirdPokedexText[] = _(
+    "Its soft song settles the bog at dusk.\n"
+    "Anything that listens too long sleeps\n"
+    "where it stands. The Jedi master on\n"
+    "Dagobah hums it.");
+
+const u8 gSlyyygPokedexText[] = _(
+    "A slug the length of an arm that grazes\n"
+    "wroshyr bark. Its trail eats the wood it\n"
+    "crosses. Wookiee cubs dare each other to\n"
+    "touch one.");
+
+const u8 gJakrabPokedexText[] = _(
+    "It outruns sandhawks over the flats of\n"
+    "Route 110. Podrace crews chase them off\n"
+    "the course before a race. They are never\n"
+    "off the course for long.");
+
+const u8 gBoarwolfPokedexText[] = _(
+    "Tusked and shaggy, it hunts the forest\n"
+    "moon alone. The Ewoks build their villages\n"
+    "high because of it. It climbs anyway.");
+
+const u8 gProfoggPokedexText[] = _(
+    "It digs under the vaporator fields and\n"
+    "surfaces to whistle. Farmers swear at it;\n"
+    "children feed it. It knows which is which.");
+
+const u8 gYuzzumPokedexText[] = _(
+    "A round body on two long legs, taller than\n"
+    "an Ewok by half. It walks the forest moon\n"
+    "singing. Its kick fells a sapling.");

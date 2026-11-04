@@ -372,7 +372,10 @@ gBattleAnims_Moves::
 	.4byte Move_DOOM_DESIRE
 	.4byte Move_PSYCHO_BOOST
 	.4byte Move_SAND_SKIM
-	.4byte Move_COUNT @ cannot be reached, because last move is Sand Skim
+	.4byte Move_FORCE_CHOKE
+	.4byte Move_BLASTER_SHOT
+	.4byte Move_SABER_SLASH
+	.4byte Move_COUNT @ cannot be reached, because last move is SABER SLASH
 
 	.align 2
 gBattleAnims_StatusConditions::

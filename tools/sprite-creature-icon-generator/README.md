@@ -40,8 +40,10 @@ banks recolours nothing old. Refitting the banks means redrawing every icon.
   `../../wiki/mapping/art_ready.csv` (413 rows, ART_READY on 2026-11-02).
 - `icon_palette_indices.csv`: species → bank (0-2).
 
-## Install (not done yet)
+## Install (done 2026-11-04)
 
-Copy each `icon.png` and the 3 banks into `../../game/graphics/pokemon/`, and set `gMonIconPaletteIndices` in
-`../../game/src/pokemon_icon.c` from `icon_palette_indices.csv` (Unown letters share `SPECIES_UNOWN_*`
-entries, all bank of `unown/a` unless the csv differs). Then set `game_status` DONE.
+`python3 ../../wiki/tools/port_creatures.py assets` copies each approved `icon.png` and the 3 banks into
+`../../game/graphics/pokemon/`, sets `gMonIconPaletteIndices` in `../../game/src/pokemon_icon.c` from
+`icon_palette_indices.csv` (Unown letters follow `unown/a`) and marks the rows `game_status` DONE. Re-run it
+after redrawing an icon. The net-new species borrow the icon and bank of their `art_from` creature until they
+have their own (`../../wiki/mapping/new_species.csv`).

@@ -1,0 +1,4 @@
+id,constant,sw_name,clone_of,animation,description,notes
+net:move-force-choke,MOVE_FORCE_CHOKE,FORCE CHOKE,MOVE_CRUNCH,Move_FORCE_CHOKE,Grips the foe with the\nForce. May lower SP. DEF.,"Same data as CRUNCH (Dark 80, 100%, 15 PP, 20% SP. DEF down). Learnsets: mapping/move_learnsets.csv."
+net:move-blaster-shot,MOVE_BLASTER_SHOT,BLASTER SHOT,MOVE_SWIFT,Move_BLASTER_SHOT,Fires a volley of bolts\nthat never miss.,"Same data as SWIFT (Normal 60, never misses, 20 PP, both foes)."
+net:move-saber-slash,MOVE_SABER_SLASH,SABER SLASH,MOVE_SLASH,Move_SABER_SLASH,Slashes with a blade. Has\na high critical-hit ratio.,"Same data as SLASH (Normal 70, 100%, 20 PP, high critical-hit ratio)."

@@ -280,9 +280,20 @@
 #define SPECIES_OLD_UNOWN_Y 275
 #define SPECIES_OLD_UNOWN_Z 276
 
-#define SPECIES_AURAREAVER SPECIES_OLD_UNOWN_B // net-new light/dark form (old Unown slot)
-#define SPECIES_KATHWARDEN SPECIES_OLD_UNOWN_C // net-new light/dark form (old Unown slot)
-#define SPECIES_WHILLGUARD SPECIES_OLD_UNOWN_D // net-new light/dark form (old Unown slot)
+// BEGIN net-new species (wiki/tools/port_creatures.py)
+#define SPECIES_AURAREAVER SPECIES_OLD_UNOWN_B // net-new (mapping/new_species.csv)
+#define SPECIES_KATHWARDEN SPECIES_OLD_UNOWN_C // net-new (mapping/new_species.csv)
+#define SPECIES_WHILLGUARD SPECIES_OLD_UNOWN_D // net-new (mapping/new_species.csv)
+#define SPECIES_WYYYSCHOKK SPECIES_OLD_UNOWN_E // net-new (mapping/new_species.csv)
+#define SPECIES_KNOBSPIDER SPECIES_OLD_UNOWN_F // net-new (mapping/new_species.csv)
+#define SPECIES_SLEEN SPECIES_OLD_UNOWN_G // net-new (mapping/new_species.csv)
+#define SPECIES_JUBBABIRD SPECIES_OLD_UNOWN_H // net-new (mapping/new_species.csv)
+#define SPECIES_SLYYYG SPECIES_OLD_UNOWN_I // net-new (mapping/new_species.csv)
+#define SPECIES_JAKRAB SPECIES_OLD_UNOWN_K // net-new (mapping/new_species.csv)
+#define SPECIES_BOARWOLF SPECIES_OLD_UNOWN_L // net-new (mapping/new_species.csv)
+#define SPECIES_PROFOGG SPECIES_OLD_UNOWN_M // net-new (mapping/new_species.csv)
+#define SPECIES_YUZZUM SPECIES_OLD_UNOWN_N // net-new (mapping/new_species.csv)
+// END net-new species
 
 #define SPECIES_TREECKO 277
 #define SPECIES_GROVYLE 278

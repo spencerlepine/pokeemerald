@@ -256,19 +256,19 @@ const struct MonCoords gMonFrontPicCoords[] =
     [SPECIES_LUGIA]       = { .size = MON_COORDS_SIZE(64, 40), .y_offset =  0 },  // TIDEWING (sprite-creature-generator)
     [SPECIES_HO_OH]       = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // DAWNWING (sprite-creature-generator)
     [SPECIES_CELEBI]      = { .size = MON_COORDS_SIZE(40, 56), .y_offset =  0 },  // TIMEWISP (sprite-creature-generator)
-    [SPECIES_OLD_UNOWN_B] = { .size = MON_COORDS_SIZE(24, 64), .y_offset =  0 }, // AURAREAVER: placeholder = GARDEVOIR
-    [SPECIES_OLD_UNOWN_C] = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 }, // KATHWARDEN: placeholder = MANECTRIC
-    [SPECIES_OLD_UNOWN_D] = { .size = MON_COORDS_SIZE(40, 64), .y_offset =  0 }, // WHILLGUARD: placeholder = BANETTE
-    [SPECIES_OLD_UNOWN_E] = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  4 },
-    [SPECIES_OLD_UNOWN_F] = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  4 },
-    [SPECIES_OLD_UNOWN_G] = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  4 },
-    [SPECIES_OLD_UNOWN_H] = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  4 },
-    [SPECIES_OLD_UNOWN_I] = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  4 },
+    [SPECIES_OLD_UNOWN_B] = { .size = MON_COORDS_SIZE(24, 64), .y_offset =  0 },  // AURAREAVER: placeholder art = GARDEVOIR
+    [SPECIES_OLD_UNOWN_C] = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },  // KATHWARDEN: placeholder art = MANECTRIC
+    [SPECIES_OLD_UNOWN_D] = { .size = MON_COORDS_SIZE(40, 64), .y_offset =  0 },  // WHILLGUARD: placeholder art = BANETTE
+    [SPECIES_OLD_UNOWN_E] = { .size = MON_COORDS_SIZE(64, 48), .y_offset =  0 },  // WYYYSCHOKK: placeholder art = ARIADOS
+    [SPECIES_OLD_UNOWN_F] = { .size = MON_COORDS_SIZE(48, 40), .y_offset =  0 },  // KNOBSPIDER: placeholder art = SPINARAK
+    [SPECIES_OLD_UNOWN_G] = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  0 },  // SLEEN: placeholder art = QUAGSIRE
+    [SPECIES_OLD_UNOWN_H] = { .size = MON_COORDS_SIZE(56, 40), .y_offset =  0 },  // JUBBABIRD: placeholder art = XATU
+    [SPECIES_OLD_UNOWN_I] = { .size = MON_COORDS_SIZE(48, 40), .y_offset =  0 },  // SLYYYG: placeholder art = GULPIN
     [SPECIES_OLD_UNOWN_J] = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  4 },
-    [SPECIES_OLD_UNOWN_K] = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  4 },
-    [SPECIES_OLD_UNOWN_L] = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  4 },
-    [SPECIES_OLD_UNOWN_M] = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  4 },
-    [SPECIES_OLD_UNOWN_N] = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  4 },
+    [SPECIES_OLD_UNOWN_K] = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  0 },  // JAKRAB: placeholder art = SENTRET
+    [SPECIES_OLD_UNOWN_L] = { .size = MON_COORDS_SIZE(64, 48), .y_offset =  0 },  // BOARWOLF: placeholder art = MIGHTYENA
+    [SPECIES_OLD_UNOWN_M] = { .size = MON_COORDS_SIZE(48, 24), .y_offset =  0 },  // PROFOGG: placeholder art = SANDSHREW
+    [SPECIES_OLD_UNOWN_N] = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },  // YUZZUM: placeholder art = VIGOROTH
     [SPECIES_OLD_UNOWN_O] = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  4 },
     [SPECIES_OLD_UNOWN_P] = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  4 },
     [SPECIES_OLD_UNOWN_Q] = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  4 },

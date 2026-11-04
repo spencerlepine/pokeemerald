@@ -422,3 +422,5 @@ const u32 gMonFrontPic_UnownY[] = INCGFX_U32("graphics/pokemon/unown/y/anim_fron
 const u32 gMonFrontPic_UnownZ[] = INCGFX_U32("graphics/pokemon/unown/z/anim_front.png", ".4bpp.lz");
 const u32 gMonFrontPic_UnownExclamationMark[] = INCGFX_U32("graphics/pokemon/unown/exclamation_mark/anim_front.png", ".4bpp.lz");
 const u32 gMonFrontPic_UnownQuestionMark[] = INCGFX_U32("graphics/pokemon/unown/question_mark/anim_front.png", ".4bpp.lz");
+// BEGIN net-new species (wiki/tools/port_creatures.py)
+// END net-new species

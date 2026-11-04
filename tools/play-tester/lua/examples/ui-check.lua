@@ -27,6 +27,15 @@ local function pocketItem(off, id, qty)  -- first free slot of a bag pocket (off
   local k = emu:read32(emu:read32(E.ADDR.gSaveBlock2Ptr) + 0xAC) & 0xFFFF
   emu:write16(sb1() + off, id); emu:write16(sb1() + off + 2, (qty ~ k) & 0xFFFF)
 end
+local function setupCreatures()  -- the net-new species (old-Unown slots) with the net-new moves
+  local mons = {{255, "WYYYSCHOKK", {70,95,70,55,55,65}}, {252, "AURAREAVER", {68,65,55,110,135,85}},
+                {257, "SLEEN", {75,70,80,50,50,70}}, {258, "JUBBABIRD", {60,55,60,80,85,80}},
+                {262, "BOARWOLF", {80,95,70,85,50,70}}, {264, "YUZZUM", {85,85,60,75,55,70}}}
+  for i, m in ipairs(mons) do
+    E.writeMon(i - 1, {species=m[1], level=30, exp=27000, moves={356,357,358,33}, pp={15,20,20,35},
+                       base=m[3], nick=m[2], personality=i})
+  end
+end
 local function setupParty()
   E.writeMon(0, {species=280, level=12, exp=1400, moves={10,45,52,0}, pp={35,40,25,0},
                  base={45,60,40,45,70,50}, nick="SUNCHICK", personality=0})
@@ -40,7 +49,7 @@ local function setupParty()
   pocketItem(0x790, 133, 3)              -- CHERI BERRY (Berries pocket)
   pocketItem(0x5D8, 259, 1)              -- MACH BIKE (Key Items pocket)
   local b2 = emu:read32(E.ADDR.gSaveBlock2Ptr)          -- every DATAPAD entry seen and owned
-  for i = 0, 48 do emu:write8(b2 + 0x28 + i, 0xFF); emu:write8(b2 + 0x5C + i, 0xFF)
+  for i = 0, 51 do emu:write8(b2 + 0x28 + i, 0xFF); emu:write8(b2 + 0x5C + i, 0xFF)
                    emu:write8(sb1() + 0x988 + i, 0xFF); emu:write8(sb1() + 0x3B24 + i, 0xFF) end
 end
 
@@ -72,8 +81,11 @@ else
     regirock = {24, 6, 8, 8, 0x3A7}, battle = {24, 6, 8, 8, 0x3A7}, regice = {24, 67, 8, 8, 0x3A9}, registeel = {24, 68, 8, 8, 0x3A8},
   }
   local s = S[SC]
-  if SC == "tour" or SC == "dex" or SC:sub(1,4) == "menu" then s = {0, 9, 5, 8, nil} end  -- Mos Pelgo (Littleroot Town): open ground
-  add({fn=function() if SC == "tour" or SC == "battle" or SC == "dex" or SC:sub(1,4) == "menu" then setupParty() end
+  if SC == "creatures" then s = {24, 6, 8, 8, 0x3A7} end
+  if SC == "tour" or SC == "dex" or SC == "creatures_dex" or SC:sub(1,4) == "menu" then s = {0, 9, 5, 8, nil} end  -- Mos Pelgo (Littleroot Town): open ground
+  add({fn=function() if SC == "tour" or SC == "battle" or SC == "dex" or SC:sub(1,4) == "menu"
+                        or SC:sub(1,9) == "creatures" then setupParty() end
+                     if SC:sub(1,9) == "creatures" then setupCreatures() end
                      if s[5] then setFlag(s[5], false) end; teleport(s[1], s[2], s[3], s[4]) end})
   add({wait=240})
   local function shot(n, w) add({wait=w or 60}); add({shot=SC .. "_" .. n}) end
@@ -104,13 +116,27 @@ else
     local n = tonumber(SC:sub(5)); press("START"); add({wait=30})
     for _ = 1, n do press("DOWN") end
     press("A"); add({fn=function() log(string.format("after A cb2 %08x", emu:read32(CB2))) end}); shot("1", 240); add({fn=function() log(string.format("later cb2 %08x", emu:read32(CB2))) end}); press("A"); shot("2", 120); press("A"); shot("3", 120)
+  elseif SC == "creatures" then  -- party icons, summary pages, then a battle with a new species in front
+    press("START"); press("DOWN"); press("A"); shot("01_party", 90)
+    press("A"); press("A"); shot("02_summary_info", 90)
+    press("RIGHT"); shot("03_summary_skills"); press("RIGHT"); shot("04_summary_moves")
+    press("DOWN"); press("A"); shot("05_move_info", 60)
+    for _ = 1, 6 do press("B"); add({wait=60}) end
+    press("UP", 2); add({wait=20}); press("A", 4); add({wait=500})
+    for f = 1, 6 do press("A"); shot(string.format("%02d_battle", 5 + f), 60) end
+  elseif SC == "creatures_dex" then  -- the Datapad list's new end (203-214) and a new species' page
+    press("START"); add({wait=30}); press("DOWN"); press("UP"); add({wait=20}); press("A"); add({wait=240})
+    shot("01_list", 30)
+    for _ = 1, 204 do press("DOWN", 2) end
+    shot("02_list_end", 60); press("A"); shot("03_entry", 200); press("RIGHT"); shot("04_area", 100)
+    press("RIGHT"); shot("05_cry", 100); press("RIGHT"); shot("06_size", 100)
   elseif SC == "battle" then
     press("UP", 2); add({wait=20}); press("A", 4); add({wait=500})
     for f = 1, 6 do press("A"); shot(string.format("%02d", f), 60) end
   else
   press("UP", 2); add({wait=20}); press("A", 4)
   end
-  if SC == "tour" or SC == "battle" or SC == "dex" or SC:sub(1,4) == "menu" then
+  if SC == "tour" or SC == "battle" or SC == "dex" or SC:sub(1,4) == "menu" or SC:sub(1,9) == "creatures" then
   elseif SC:sub(1,4) == "sign" then
     add({wait=150}); add({shot=SC})
   else

@@ -252,19 +252,19 @@ const struct CompressedSpriteSheet gMonFrontPicTable[] =
     SPECIES_SPRITE(LUGIA, gMonFrontPic_Lugia),
     SPECIES_SPRITE(HO_OH, gMonFrontPic_HoOh),
     SPECIES_SPRITE(CELEBI, gMonFrontPic_Celebi),
-    SPECIES_SPRITE(OLD_UNOWN_B, gMonFrontPic_Gardevoir),
-    SPECIES_SPRITE(OLD_UNOWN_C, gMonFrontPic_Manectric),
-    SPECIES_SPRITE(OLD_UNOWN_D, gMonFrontPic_Banette),
-    SPECIES_SPRITE(OLD_UNOWN_E, gMonFrontPic_DoubleQuestionMark),
-    SPECIES_SPRITE(OLD_UNOWN_F, gMonFrontPic_DoubleQuestionMark),
-    SPECIES_SPRITE(OLD_UNOWN_G, gMonFrontPic_DoubleQuestionMark),
-    SPECIES_SPRITE(OLD_UNOWN_H, gMonFrontPic_DoubleQuestionMark),
-    SPECIES_SPRITE(OLD_UNOWN_I, gMonFrontPic_DoubleQuestionMark),
+    SPECIES_SPRITE(OLD_UNOWN_B, gMonFrontPic_Gardevoir),  // AURAREAVER: placeholder art = GARDEVOIR
+    SPECIES_SPRITE(OLD_UNOWN_C, gMonFrontPic_Manectric),  // KATHWARDEN: placeholder art = MANECTRIC
+    SPECIES_SPRITE(OLD_UNOWN_D, gMonFrontPic_Banette),  // WHILLGUARD: placeholder art = BANETTE
+    SPECIES_SPRITE(OLD_UNOWN_E, gMonFrontPic_Ariados),  // WYYYSCHOKK: placeholder art = ARIADOS
+    SPECIES_SPRITE(OLD_UNOWN_F, gMonFrontPic_Spinarak),  // KNOBSPIDER: placeholder art = SPINARAK
+    SPECIES_SPRITE(OLD_UNOWN_G, gMonFrontPic_Quagsire),  // SLEEN: placeholder art = QUAGSIRE
+    SPECIES_SPRITE(OLD_UNOWN_H, gMonFrontPic_Xatu),  // JUBBABIRD: placeholder art = XATU
+    SPECIES_SPRITE(OLD_UNOWN_I, gMonFrontPic_Gulpin),  // SLYYYG: placeholder art = GULPIN
     SPECIES_SPRITE(OLD_UNOWN_J, gMonFrontPic_DoubleQuestionMark),
-    SPECIES_SPRITE(OLD_UNOWN_K, gMonFrontPic_DoubleQuestionMark),
-    SPECIES_SPRITE(OLD_UNOWN_L, gMonFrontPic_DoubleQuestionMark),
-    SPECIES_SPRITE(OLD_UNOWN_M, gMonFrontPic_DoubleQuestionMark),
-    SPECIES_SPRITE(OLD_UNOWN_N, gMonFrontPic_DoubleQuestionMark),
+    SPECIES_SPRITE(OLD_UNOWN_K, gMonFrontPic_Sentret),  // JAKRAB: placeholder art = SENTRET
+    SPECIES_SPRITE(OLD_UNOWN_L, gMonFrontPic_Mightyena),  // BOARWOLF: placeholder art = MIGHTYENA
+    SPECIES_SPRITE(OLD_UNOWN_M, gMonFrontPic_Sandshrew),  // PROFOGG: placeholder art = SANDSHREW
+    SPECIES_SPRITE(OLD_UNOWN_N, gMonFrontPic_Vigoroth),  // YUZZUM: placeholder art = VIGOROTH
     SPECIES_SPRITE(OLD_UNOWN_O, gMonFrontPic_DoubleQuestionMark),
     SPECIES_SPRITE(OLD_UNOWN_P, gMonFrontPic_DoubleQuestionMark),
     SPECIES_SPRITE(OLD_UNOWN_Q, gMonFrontPic_DoubleQuestionMark),

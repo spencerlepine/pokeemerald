@@ -4643,4 +4643,148 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerScale = 290,
         .trainerOffset = 2,
     },
+
+    [NATIONAL_DEX_OLD_UNOWN_B] = // AURAREAVER (mapping/new_species.csv)
+    {
+        .categoryName = _("DARK AURA"),
+        .height = 16,
+        .weight = 484,
+        .description = gAurareaverPokedexText,
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_OLD_UNOWN_C] = // KATHWARDEN (mapping/new_species.csv)
+    {
+        .categoryName = _("JEDI HOUND"),
+        .height = 15,
+        .weight = 402,
+        .description = gKathwardenPokedexText,
+        .pokemonScale = 256,
+        .pokemonOffset = 3,
+        .trainerScale = 257,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_OLD_UNOWN_D] = // WHILLGUARD (mapping/new_species.csv)
+    {
+        .categoryName = _("WARD SPIRIT"),
+        .height = 11,
+        .weight = 125,
+        .description = gWhillguardPokedexText,
+        .pokemonScale = 262,
+        .pokemonOffset = 9,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_OLD_UNOWN_E] = // WYYYSCHOKK (mapping/new_species.csv)
+    {
+        .categoryName = _("WEB HUNTER"),
+        .height = 14,
+        .weight = 600,
+        .description = gWyyyschokkPokedexText,
+        .pokemonScale = 316,
+        .pokemonOffset = 8,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_OLD_UNOWN_F] = // KNOBSPIDER (mapping/new_species.csv)
+    {
+        .categoryName = _("POD SPIDER"),
+        .height = 5,
+        .weight = 80,
+        .description = gKnobspiderPokedexText,
+        .pokemonScale = 414,
+        .pokemonOffset = 21,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_OLD_UNOWN_G] = // SLEEN (mapping/new_species.csv)
+    {
+        .categoryName = _("BOG LIZARD"),
+        .height = 12,
+        .weight = 450,
+        .description = gSleenPokedexText,
+        .pokemonScale = 256,
+        .pokemonOffset = 4,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_OLD_UNOWN_H] = // JUBBABIRD (mapping/new_species.csv)
+    {
+        .categoryName = _("SONGBIRD"),
+        .height = 5,
+        .weight = 35,
+        .description = gJubbabirdPokedexText,
+        .pokemonScale = 256,
+        .pokemonOffset = 6,
+        .trainerScale = 318,
+        .trainerOffset = 4,
+    },
+
+    [NATIONAL_DEX_OLD_UNOWN_I] = // SLYYYG (mapping/new_species.csv)
+    {
+        .categoryName = _("BARK SLUG"),
+        .height = 8,
+        .weight = 150,
+        .description = gSlyyygPokedexText,
+        .pokemonScale = 593,
+        .pokemonOffset = 23,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_OLD_UNOWN_K] = // JAKRAB (mapping/new_species.csv)
+    {
+        .categoryName = _("FLATS HARE"),
+        .height = 4,
+        .weight = 25,
+        .description = gJakrabPokedexText,
+        .pokemonScale = 439,
+        .pokemonOffset = 12,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_OLD_UNOWN_L] = // BOARWOLF (mapping/new_species.csv)
+    {
+        .categoryName = _("TUSK WOLF"),
+        .height = 13,
+        .weight = 900,
+        .description = gBoarwolfPokedexText,
+        .pokemonScale = 362,
+        .pokemonOffset = 9,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_OLD_UNOWN_M] = // PROFOGG (mapping/new_species.csv)
+    {
+        .categoryName = _("BURROWER"),
+        .height = 3,
+        .weight = 30,
+        .description = gProfoggPokedexText,
+        .pokemonScale = 365,
+        .pokemonOffset = 18,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_OLD_UNOWN_N] = // YUZZUM (mapping/new_species.csv)
+    {
+        .categoryName = _("TALL WALKER"),
+        .height = 15,
+        .weight = 300,
+        .description = gYuzzumPokedexText,
+        .pokemonScale = 301,
+        .pokemonOffset = 2,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
 };

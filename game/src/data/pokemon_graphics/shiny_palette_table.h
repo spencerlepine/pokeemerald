@@ -252,19 +252,19 @@ const struct CompressedSpritePalette gMonShinyPaletteTable[] =
     SPECIES_SHINY_PAL(LUGIA, gMonShinyPalette_Lugia),
     SPECIES_SHINY_PAL(HO_OH, gMonShinyPalette_HoOh),
     SPECIES_SHINY_PAL(CELEBI, gMonShinyPalette_Celebi),
-    SPECIES_SHINY_PAL(OLD_UNOWN_B, gMonShinyPalette_Gardevoir),
-    SPECIES_SHINY_PAL(OLD_UNOWN_C, gMonShinyPalette_Manectric),
-    SPECIES_SHINY_PAL(OLD_UNOWN_D, gMonShinyPalette_Banette),
-    SPECIES_SHINY_PAL(OLD_UNOWN_E, gMonShinyPalette_DoubleQuestionMark),
-    SPECIES_SHINY_PAL(OLD_UNOWN_F, gMonShinyPalette_DoubleQuestionMark),
-    SPECIES_SHINY_PAL(OLD_UNOWN_G, gMonShinyPalette_DoubleQuestionMark),
-    SPECIES_SHINY_PAL(OLD_UNOWN_H, gMonShinyPalette_DoubleQuestionMark),
-    SPECIES_SHINY_PAL(OLD_UNOWN_I, gMonShinyPalette_DoubleQuestionMark),
+    SPECIES_SHINY_PAL(OLD_UNOWN_B, gMonShinyPalette_Gardevoir),  // AURAREAVER: placeholder art = GARDEVOIR
+    SPECIES_SHINY_PAL(OLD_UNOWN_C, gMonShinyPalette_Manectric),  // KATHWARDEN: placeholder art = MANECTRIC
+    SPECIES_SHINY_PAL(OLD_UNOWN_D, gMonShinyPalette_Banette),  // WHILLGUARD: placeholder art = BANETTE
+    SPECIES_SHINY_PAL(OLD_UNOWN_E, gMonShinyPalette_Ariados),  // WYYYSCHOKK: placeholder art = ARIADOS
+    SPECIES_SHINY_PAL(OLD_UNOWN_F, gMonShinyPalette_Spinarak),  // KNOBSPIDER: placeholder art = SPINARAK
+    SPECIES_SHINY_PAL(OLD_UNOWN_G, gMonShinyPalette_Quagsire),  // SLEEN: placeholder art = QUAGSIRE
+    SPECIES_SHINY_PAL(OLD_UNOWN_H, gMonShinyPalette_Xatu),  // JUBBABIRD: placeholder art = XATU
+    SPECIES_SHINY_PAL(OLD_UNOWN_I, gMonShinyPalette_Gulpin),  // SLYYYG: placeholder art = GULPIN
     SPECIES_SHINY_PAL(OLD_UNOWN_J, gMonShinyPalette_DoubleQuestionMark),
-    SPECIES_SHINY_PAL(OLD_UNOWN_K, gMonShinyPalette_DoubleQuestionMark),
-    SPECIES_SHINY_PAL(OLD_UNOWN_L, gMonShinyPalette_DoubleQuestionMark),
-    SPECIES_SHINY_PAL(OLD_UNOWN_M, gMonShinyPalette_DoubleQuestionMark),
-    SPECIES_SHINY_PAL(OLD_UNOWN_N, gMonShinyPalette_DoubleQuestionMark),
+    SPECIES_SHINY_PAL(OLD_UNOWN_K, gMonShinyPalette_Sentret),  // JAKRAB: placeholder art = SENTRET
+    SPECIES_SHINY_PAL(OLD_UNOWN_L, gMonShinyPalette_Mightyena),  // BOARWOLF: placeholder art = MIGHTYENA
+    SPECIES_SHINY_PAL(OLD_UNOWN_M, gMonShinyPalette_Sandshrew),  // PROFOGG: placeholder art = SANDSHREW
+    SPECIES_SHINY_PAL(OLD_UNOWN_N, gMonShinyPalette_Vigoroth),  // YUZZUM: placeholder art = VIGOROTH
     SPECIES_SHINY_PAL(OLD_UNOWN_O, gMonShinyPalette_DoubleQuestionMark),
     SPECIES_SHINY_PAL(OLD_UNOWN_P, gMonShinyPalette_DoubleQuestionMark),
     SPECIES_SHINY_PAL(OLD_UNOWN_Q, gMonShinyPalette_DoubleQuestionMark),

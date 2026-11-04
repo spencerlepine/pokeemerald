@@ -5506,19 +5506,19 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     [SPECIES_LUGIA]       = sAnims_Lugia,
     [SPECIES_HO_OH]       = sAnims_HoOh,
     [SPECIES_CELEBI]      = sAnims_Celebi,
-    [SPECIES_OLD_UNOWN_B] = sAnims_Gardevoir, // AURAREAVER: placeholder = GARDEVOIR
-    [SPECIES_OLD_UNOWN_C] = sAnims_Manectric, // KATHWARDEN: placeholder = MANECTRIC
-    [SPECIES_OLD_UNOWN_D] = sAnims_Banette, // WHILLGUARD: placeholder = BANETTE
-    [SPECIES_OLD_UNOWN_E] = sAnims_OldUnownB,
-    [SPECIES_OLD_UNOWN_F] = sAnims_OldUnownB,
-    [SPECIES_OLD_UNOWN_G] = sAnims_OldUnownB,
-    [SPECIES_OLD_UNOWN_H] = sAnims_OldUnownB,
-    [SPECIES_OLD_UNOWN_I] = sAnims_OldUnownB,
+    [SPECIES_OLD_UNOWN_B] = sAnims_Gardevoir,  // AURAREAVER: placeholder art = GARDEVOIR
+    [SPECIES_OLD_UNOWN_C] = sAnims_Manectric,  // KATHWARDEN: placeholder art = MANECTRIC
+    [SPECIES_OLD_UNOWN_D] = sAnims_Banette,  // WHILLGUARD: placeholder art = BANETTE
+    [SPECIES_OLD_UNOWN_E] = sAnims_Ariados,  // WYYYSCHOKK: placeholder art = ARIADOS
+    [SPECIES_OLD_UNOWN_F] = sAnims_Spinarak,  // KNOBSPIDER: placeholder art = SPINARAK
+    [SPECIES_OLD_UNOWN_G] = sAnims_Quagsire,  // SLEEN: placeholder art = QUAGSIRE
+    [SPECIES_OLD_UNOWN_H] = sAnims_Xatu,  // JUBBABIRD: placeholder art = XATU
+    [SPECIES_OLD_UNOWN_I] = sAnims_Gulpin,  // SLYYYG: placeholder art = GULPIN
     [SPECIES_OLD_UNOWN_J] = sAnims_OldUnownB,
-    [SPECIES_OLD_UNOWN_K] = sAnims_OldUnownB,
-    [SPECIES_OLD_UNOWN_L] = sAnims_OldUnownB,
-    [SPECIES_OLD_UNOWN_M] = sAnims_OldUnownB,
-    [SPECIES_OLD_UNOWN_N] = sAnims_OldUnownB,
+    [SPECIES_OLD_UNOWN_K] = sAnims_Sentret,  // JAKRAB: placeholder art = SENTRET
+    [SPECIES_OLD_UNOWN_L] = sAnims_Mightyena,  // BOARWOLF: placeholder art = MIGHTYENA
+    [SPECIES_OLD_UNOWN_M] = sAnims_Sandshrew,  // PROFOGG: placeholder art = SANDSHREW
+    [SPECIES_OLD_UNOWN_N] = sAnims_Vigoroth,  // YUZZUM: placeholder art = VIGOROTH
     [SPECIES_OLD_UNOWN_O] = sAnims_OldUnownB,
     [SPECIES_OLD_UNOWN_P] = sAnims_OldUnownB,
     [SPECIES_OLD_UNOWN_Q] = sAnims_OldUnownB,

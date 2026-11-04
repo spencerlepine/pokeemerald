@@ -4388,10 +4388,13 @@ bool16 HasAllHoennMons(void)
 {
     u16 i;
 
-    // -2 excludes Jirachi and Deoxys
-    for (i = 0; i < HOENN_DEX_COUNT - 2; i++)
+    // Jirachi and Deoxys do not count. They are no longer the last two: the Star Wars net-new species follow them.
+    for (i = 0; i < HOENN_DEX_COUNT; i++)
     {
-        if (!GetSetPokedexFlag(HoennToNationalOrder(i + 1), FLAG_GET_CAUGHT))
+        u16 dexNum = HoennToNationalOrder(i + 1);
+        if (dexNum == NATIONAL_DEX_JIRACHI || dexNum == NATIONAL_DEX_DEOXYS)
+            continue;
+        if (!GetSetPokedexFlag(dexNum, FLAG_GET_CAUGHT))
             return FALSE;
     }
     return TRUE;
@@ -4428,9 +4431,11 @@ bool16 HasAllMons(void)
             return FALSE;
     }
 
-    // -2 excludes Jirachi and Deoxys
-    for (i = JOHTO_DEX_COUNT; i < NATIONAL_DEX_COUNT - 2; i++)
+    // Jirachi and Deoxys do not count (the Star Wars net-new species come after them)
+    for (i = JOHTO_DEX_COUNT; i < NATIONAL_DEX_COUNT; i++)
     {
+        if (i + 1 == NATIONAL_DEX_JIRACHI || i + 1 == NATIONAL_DEX_DEOXYS)
+            continue;
         if (!GetSetPokedexFlag(i + 1, FLAG_GET_CAUGHT))
             return FALSE;
     }

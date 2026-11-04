@@ -359,8 +359,11 @@
 
 // Star Wars net-new moves
 #define MOVE_SAND_SKIM 355
+#define MOVE_FORCE_CHOKE 356
+#define MOVE_BLASTER_SHOT 357
+#define MOVE_SABER_SLASH 358
 
-#define MOVES_COUNT 356
+#define MOVES_COUNT 359
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF

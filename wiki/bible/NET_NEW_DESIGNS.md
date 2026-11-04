@@ -254,10 +254,10 @@ Items: KYBER CRYSTAL and SITH SHARD are used like evolution stones. Both are sol
 - Tested in the emulator: the bag shows both items, each evolves only its own line ("No use." on the others),
   all three evolution scenes play, and the summary shows the new types.
 
-Still to do (TODO rows): front, back, icon and footprint art for the three forms; their cries
-(`net:cry-*` in `mapping/audio.csv`); item icons; Datapad entries. The Datapad lists 386 species, so the
-old-Unown slots have no Datapad page yet and the forms are not counted in it. More lines can follow the same
-pattern while old-Unown slots remain (B to Z, minus J).
+Datapad entries since 2026-11-04 (No. 203-205, see below). Still to do (TODO rows): front, back, icon and
+footprint art for the three forms; their cries (`net:cry-*` in `mapping/audio.csv`); item icons. More lines can
+follow the same pattern while old-Unown slots remain (B to Z, minus J): add a row to `mapping/new_species.csv`
+and run `tools/port_creatures.py`.
 
 ## New moves (`net:move-force-choke`, `net:move-blaster-shot`, `net:move-saber-slash`)
 
@@ -271,6 +271,14 @@ Each new move clones an existing move's data row. Only the name, description and
 
 - **Placeholder animation:** the source move's animation, recolored (red for FORCE CHOKE, blue bolt for BLASTER SHOT).
 - **No new TMs or tutors**, so there are no changes to the learnset count or the power curve.
+
+**In the game (2026-11-04).** Moves 356-358 (`MOVE_FORCE_CHOKE`, `MOVE_BLASTER_SHOT`, `MOVE_SABER_SLASH`), written
+by `tools/port_creatures.py` from `mapping/new_moves.csv`: battle data copied from the clone, name, description,
+the showcase row (unused) and the animation already in `data/battle_anim_scripts.s`. `mapping/move_learnsets.csv`
+lists the 15 learnsets that swap the old move for the new one at the same level (FORCE CHOKE: the MASSIFF, FYRNOCK,
+OPEE and ZILLO lines; BLASTER SHOT: REMOTE, SEEKERBALL, IG-RM, IG UNIT, VULTURE; SABER SLASH: MAGNAGUARD). The
+MOUSEDROID learns SWIFT but carries no blaster, so it keeps SWIFT. The same swap is made in trainer parties and
+Grand Arena sets of those species. BOARWOLF shares WARMASSIFF's learnset, so it learns FORCE CHOKE too.
 
 ## Sandstorm encounter table (`net:weather-sandstorm-spawns`)
 
@@ -321,9 +329,24 @@ the cry brief in `mapping/audio.csv`.
 | M | PROFOGG | Tatooine | Normal / Ground | 270 | SANDSHREW | Route 116 |
 | N | YUZZUM | Endor | Normal / Fighting | 430 | VIGOROTH | Route 118 |
 
-Twelve slots (O to Z) stay free. In the game each needs the same work as the light/dark forms: species info,
-graphics tables, a cry remap, a name, and the swapped encounter slot (`tools/encounters.py --install`, to be
-written in step 6).
+Twelve slots (O to Z) stay free.
+
+**In the game (2026-11-04).** All twelve new species (the three light/dark forms and these nine) are rows of
+`mapping/new_species.csv` and `tools/port_creatures.py` writes every species table from it: species info
+(copied from the species in `copies`, with the row's stats, types and colour), level-up, TM/HM and egg moves,
+name, pics, palettes, icon and its bank, footprint, coordinates, animations, elevation, the cry remap in
+`SpeciesToCryId`, the `SPECIES_<NAME>` alias, and a Datapad entry. Until a species has its own art in
+`art/graphics/pokemon/<name>/`, it borrows `art_from`'s with a tinted battle palette made once in
+`graphics/pokemon/<name>/normal.pal`; its cry is `cry_from`'s until `net:cry-<name>` is made.
+
+The Datapad lists them after SHIFTSTAR (Deoxys): regional No. 203-214, national No. 387-398, in slot order (B to
+N, J skipped). WHILLSTAR and SHIFTSTAR keep their numbers and still do not count toward a complete Datapad
+(`HasAllHoennMons`, `HasAllMons` and the professor's rating skip them by number), so completing the regional
+Datapad now takes 212 entries. The alphabetical order is rebuilt from the Star Wars names; the weight and height
+orders take the new species by their `height_m` and `weight_kg`.
+
+Not wired yet (the world-building pass): the nine wild slots above (`tools/encounters.py --install`, to be
+written) and any trainer party that uses them.
 
 ## Mos Eisley Cantina (`net:mos-eisley-cantina`)
 

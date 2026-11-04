@@ -252,19 +252,19 @@ const struct CompressedSpritePalette gMonPaletteTable[] =
     SPECIES_PAL(LUGIA, gMonPalette_Lugia),
     SPECIES_PAL(HO_OH, gMonPalette_HoOh),
     SPECIES_PAL(CELEBI, gMonPalette_Celebi),
-    SPECIES_PAL(OLD_UNOWN_B, gMonPalette_Aurareaver),
-    SPECIES_PAL(OLD_UNOWN_C, gMonPalette_Kathwarden),
-    SPECIES_PAL(OLD_UNOWN_D, gMonPalette_Whillguard),
-    SPECIES_PAL(OLD_UNOWN_E, gMonPalette_DoubleQuestionMark),
-    SPECIES_PAL(OLD_UNOWN_F, gMonPalette_DoubleQuestionMark),
-    SPECIES_PAL(OLD_UNOWN_G, gMonPalette_DoubleQuestionMark),
-    SPECIES_PAL(OLD_UNOWN_H, gMonPalette_DoubleQuestionMark),
-    SPECIES_PAL(OLD_UNOWN_I, gMonPalette_DoubleQuestionMark),
+    SPECIES_PAL(OLD_UNOWN_B, gMonPalette_Aurareaver),  // AURAREAVER
+    SPECIES_PAL(OLD_UNOWN_C, gMonPalette_Kathwarden),  // KATHWARDEN
+    SPECIES_PAL(OLD_UNOWN_D, gMonPalette_Whillguard),  // WHILLGUARD
+    SPECIES_PAL(OLD_UNOWN_E, gMonPalette_Wyyyschokk),  // WYYYSCHOKK
+    SPECIES_PAL(OLD_UNOWN_F, gMonPalette_Knobspider),  // KNOBSPIDER
+    SPECIES_PAL(OLD_UNOWN_G, gMonPalette_Sleen),  // SLEEN
+    SPECIES_PAL(OLD_UNOWN_H, gMonPalette_Jubbabird),  // JUBBABIRD
+    SPECIES_PAL(OLD_UNOWN_I, gMonPalette_Slyyyg),  // SLYYYG
     SPECIES_PAL(OLD_UNOWN_J, gMonPalette_DoubleQuestionMark),
-    SPECIES_PAL(OLD_UNOWN_K, gMonPalette_DoubleQuestionMark),
-    SPECIES_PAL(OLD_UNOWN_L, gMonPalette_DoubleQuestionMark),
-    SPECIES_PAL(OLD_UNOWN_M, gMonPalette_DoubleQuestionMark),
-    SPECIES_PAL(OLD_UNOWN_N, gMonPalette_DoubleQuestionMark),
+    SPECIES_PAL(OLD_UNOWN_K, gMonPalette_Jakrab),  // JAKRAB
+    SPECIES_PAL(OLD_UNOWN_L, gMonPalette_Boarwolf),  // BOARWOLF
+    SPECIES_PAL(OLD_UNOWN_M, gMonPalette_Profogg),  // PROFOGG
+    SPECIES_PAL(OLD_UNOWN_N, gMonPalette_Yuzzum),  // YUZZUM
     SPECIES_PAL(OLD_UNOWN_O, gMonPalette_DoubleQuestionMark),
     SPECIES_PAL(OLD_UNOWN_P, gMonPalette_DoubleQuestionMark),
     SPECIES_PAL(OLD_UNOWN_Q, gMonPalette_DoubleQuestionMark),

@@ -3218,7 +3218,7 @@ static const struct TrainerMonItemCustomMoves sParty_Sidney[] = {
     .lvl = 46,
     .species = SPECIES_MIGHTYENA,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_ROAR, MOVE_DOUBLE_EDGE, MOVE_SAND_ATTACK, MOVE_CRUNCH}
+    .moves = {MOVE_ROAR, MOVE_DOUBLE_EDGE, MOVE_SAND_ATTACK, MOVE_FORCE_CHOKE}
     },
     {
     .iv = 250,
@@ -10708,7 +10708,7 @@ static const struct TrainerMonItemCustomMoves sParty_Wattson5[] = {
     .lvl = 50,
     .species = SPECIES_ELECTABUZZ,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_SWIFT, MOVE_FOCUS_PUNCH, MOVE_THUNDER_PUNCH, MOVE_LIGHT_SCREEN}
+    .moves = {MOVE_BLASTER_SHOT, MOVE_FOCUS_PUNCH, MOVE_THUNDER_PUNCH, MOVE_LIGHT_SCREEN}
     },
     {
     .iv = 255,

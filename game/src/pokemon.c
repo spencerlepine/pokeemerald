@@ -1717,7 +1717,7 @@ static const u8 sMonFrontAnimIdsTable[NUM_SPECIES - 1] =
     [SPECIES_HARIYAMA - 1]    = ANIM_ROTATE_UP_TO_SIDES,
     [SPECIES_ELECTRIKE - 1]   = ANIM_V_SQUISH_AND_BOUNCE,
     [SPECIES_MANECTRIC - 1]   = ANIM_V_SQUISH_AND_BOUNCE,
-    [SPECIES_OLD_UNOWN_C - 1] = ANIM_V_SQUISH_AND_BOUNCE, // KATHWARDEN
+    [SPECIES_OLD_UNOWN_C - 1] = ANIM_V_SQUISH_AND_BOUNCE,  // KATHWARDEN: placeholder art = MANECTRIC
     [SPECIES_NUMEL - 1]       = ANIM_V_SLIDE,
     [SPECIES_CAMERUPT - 1]    = ANIM_V_SHAKE,
     [SPECIES_SPHEAL - 1]      = ANIM_SPIN,
@@ -1758,7 +1758,7 @@ static const u8 sMonFrontAnimIdsTable[NUM_SPECIES - 1] =
     [SPECIES_ABSOL - 1]       = ANIM_CIRCULAR_VIBRATE,
     [SPECIES_SHUPPET - 1]     = ANIM_V_SLIDE_WOBBLE,
     [SPECIES_BANETTE - 1]     = ANIM_SWING_CONVEX,
-    [SPECIES_OLD_UNOWN_D - 1] = ANIM_SWING_CONVEX, // WHILLGUARD
+    [SPECIES_OLD_UNOWN_D - 1] = ANIM_SWING_CONVEX,  // WHILLGUARD: placeholder art = BANETTE
     [SPECIES_SEVIPER - 1]     = ANIM_V_STRETCH,
     [SPECIES_ZANGOOSE - 1]    = ANIM_GROW_VIBRATE,
     [SPECIES_RELICANTH - 1]   = ANIM_TIP_MOVE_FORWARD,
@@ -1775,7 +1775,7 @@ static const u8 sMonFrontAnimIdsTable[NUM_SPECIES - 1] =
     [SPECIES_RALTS - 1]       = ANIM_V_SQUISH_AND_BOUNCE_SLOW,
     [SPECIES_KIRLIA - 1]      = ANIM_V_SQUISH_AND_BOUNCE,
     [SPECIES_GARDEVOIR - 1]   = ANIM_V_SQUISH_AND_BOUNCE,
-    [SPECIES_OLD_UNOWN_B - 1] = ANIM_V_SQUISH_AND_BOUNCE, // AURAREAVER
+    [SPECIES_OLD_UNOWN_B - 1] = ANIM_V_SQUISH_AND_BOUNCE,  // AURAREAVER: placeholder art = GARDEVOIR
     [SPECIES_BAGON - 1]       = ANIM_V_SHAKE_TWICE,
     [SPECIES_SHELGON - 1]     = ANIM_V_SLIDE,
     [SPECIES_SALAMENCE - 1]   = ANIM_H_SHAKE,
@@ -1793,6 +1793,15 @@ static const u8 sMonFrontAnimIdsTable[NUM_SPECIES - 1] =
     [SPECIES_JIRACHI - 1]     = ANIM_SWING_CONVEX,
     [SPECIES_DEOXYS - 1]      = ANIM_H_PIVOT,
     [SPECIES_CHIMECHO - 1]    = ANIM_H_SLIDE_WOBBLE,
+    [SPECIES_OLD_UNOWN_E - 1] = ANIM_H_SHAKE,  // WYYYSCHOKK: placeholder art = ARIADOS
+    [SPECIES_OLD_UNOWN_F - 1] = ANIM_CIRCLE_C_CLOCKWISE_SLOW,  // KNOBSPIDER: placeholder art = SPINARAK
+    [SPECIES_OLD_UNOWN_G - 1] = ANIM_H_STRETCH,  // SLEEN: placeholder art = QUAGSIRE
+    [SPECIES_OLD_UNOWN_H - 1] = ANIM_GROW_VIBRATE,  // JUBBABIRD: placeholder art = XATU
+    [SPECIES_OLD_UNOWN_I - 1] = ANIM_V_SQUISH_AND_BOUNCE,  // SLYYYG: placeholder art = GULPIN
+    [SPECIES_OLD_UNOWN_K - 1] = ANIM_V_SQUISH_AND_BOUNCE,  // JAKRAB: placeholder art = SENTRET
+    [SPECIES_OLD_UNOWN_L - 1] = ANIM_V_SHAKE,  // BOARWOLF: placeholder art = MIGHTYENA
+    [SPECIES_OLD_UNOWN_M - 1] = ANIM_SWING_CONCAVE_FAST_SHORT,  // PROFOGG: placeholder art = SANDSHREW
+    [SPECIES_OLD_UNOWN_N - 1] = ANIM_H_JUMPS,  // YUZZUM: placeholder art = VIGOROTH
 };
 
 static const u8 sMonAnimationDelayTable[NUM_SPECIES - 1] =
@@ -5685,12 +5694,32 @@ u16 HoennToNationalOrder(u16 hoennNum)
 
 u16 SpeciesToCryId(u16 species)
 {
+    // BEGIN net-new species cries (wiki/tools/port_creatures.py)
     if (species == SPECIES_OLD_UNOWN_B - 1) // AURAREAVER uses GARDEVOIR's cry until it has its own
         species = SPECIES_GARDEVOIR - 1;
     if (species == SPECIES_OLD_UNOWN_C - 1) // KATHWARDEN uses MANECTRIC's cry until it has its own
         species = SPECIES_MANECTRIC - 1;
     if (species == SPECIES_OLD_UNOWN_D - 1) // WHILLGUARD uses BANETTE's cry until it has its own
         species = SPECIES_BANETTE - 1;
+    if (species == SPECIES_OLD_UNOWN_E - 1) // WYYYSCHOKK uses ARIADOS's cry until it has its own
+        species = SPECIES_ARIADOS - 1;
+    if (species == SPECIES_OLD_UNOWN_F - 1) // KNOBSPIDER uses SPINARAK's cry until it has its own
+        species = SPECIES_SPINARAK - 1;
+    if (species == SPECIES_OLD_UNOWN_G - 1) // SLEEN uses QUAGSIRE's cry until it has its own
+        species = SPECIES_QUAGSIRE - 1;
+    if (species == SPECIES_OLD_UNOWN_H - 1) // JUBBABIRD uses XATU's cry until it has its own
+        species = SPECIES_XATU - 1;
+    if (species == SPECIES_OLD_UNOWN_I - 1) // SLYYYG uses GULPIN's cry until it has its own
+        species = SPECIES_GULPIN - 1;
+    if (species == SPECIES_OLD_UNOWN_K - 1) // JAKRAB uses SENTRET's cry until it has its own
+        species = SPECIES_SENTRET - 1;
+    if (species == SPECIES_OLD_UNOWN_L - 1) // BOARWOLF uses MIGHTYENA's cry until it has its own
+        species = SPECIES_MIGHTYENA - 1;
+    if (species == SPECIES_OLD_UNOWN_M - 1) // PROFOGG uses SANDSHREW's cry until it has its own
+        species = SPECIES_SANDSHREW - 1;
+    if (species == SPECIES_OLD_UNOWN_N - 1) // YUZZUM uses VIGOROTH's cry until it has its own
+        species = SPECIES_VIGOROTH - 1;
+    // END net-new species cries
     if (species <= SPECIES_CELEBI - 1)
         return species;
 

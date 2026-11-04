@@ -1422,6 +1422,18 @@ static const u8 sPsychoBoostDescription[] = _(
     "but sharply lowers SP. ATK.");
 
 // MOVE_NONE is ignored in this table. Make sure to always subtract 1 before getting the right pointer.
+static const u8 sForceChokeDescription[] = _(
+    "Grips the foe with the\n"
+    "Force. May lower SP. DEF.");
+
+static const u8 sBlasterShotDescription[] = _(
+    "Fires a volley of bolts\n"
+    "that never miss.");
+
+static const u8 sSaberSlashDescription[] = _(
+    "Slashes with a blade. Has\n"
+    "a high critical-hit ratio.");
+
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
 {
     [MOVE_POUND - 1] = sPoundDescription,
@@ -1779,4 +1791,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_DOOM_DESIRE - 1] = sDoomDesireDescription,
     [MOVE_PSYCHO_BOOST - 1] = sPsychoBoostDescription,
     [MOVE_SAND_SKIM - 1] = sSandSkimDescription,
+    [MOVE_FORCE_CHOKE - 1] = sForceChokeDescription,
+    [MOVE_BLASTER_SHOT - 1] = sBlasterShotDescription,
+    [MOVE_SABER_SLASH - 1] = sSaberSlashDescription,
 };

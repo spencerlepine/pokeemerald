@@ -2617,7 +2617,20 @@ extern const u32 gMonStillFrontPic_Kirlia[];
 extern const u8 gMonIcon_Kirlia[];
 extern const u8 gMonFootprint_Kirlia[];
 extern const u32 gMonFrontPic_Gardevoir[];
+// BEGIN net-new species (wiki/tools/port_creatures.py)
 extern const u32 gMonPalette_Aurareaver[];
+extern const u32 gMonPalette_Kathwarden[];
+extern const u32 gMonPalette_Whillguard[];
+extern const u32 gMonPalette_Wyyyschokk[];
+extern const u32 gMonPalette_Knobspider[];
+extern const u32 gMonPalette_Sleen[];
+extern const u32 gMonPalette_Jubbabird[];
+extern const u32 gMonPalette_Slyyyg[];
+extern const u32 gMonPalette_Jakrab[];
+extern const u32 gMonPalette_Boarwolf[];
+extern const u32 gMonPalette_Profogg[];
+extern const u32 gMonPalette_Yuzzum[];
+// END net-new species
 extern const u32 gMonPalette_Gardevoir[];
 extern const u32 gMonBackPic_Gardevoir[];
 extern const u32 gMonShinyPalette_Gardevoir[];

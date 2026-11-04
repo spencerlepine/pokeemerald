@@ -48,6 +48,23 @@ the trainer card star for the five paintings now needs a complete Datapad. The C
 the warden tombs), whose font is now Aurebesh (`../tools/glyph-maker/aurebesh.py`): the letters are redrawn in
 place, so the cell numbers, the puzzles and the window sizes are Emerald's.
 
+**Every creature is ported** (2026-11-04): `python3 tools/port_creatures.py` puts every creature asset the wiki
+has into `../game` and writes `database/creatures.csv`, one row per species slot (398: the 386 Emerald species
+and the 12 net-new ones) with the state of its name, Datapad numbers and entry, front, back, animation, icon,
+footprint and cry, and whether it is wild or in a trainer party yet. It installs:
+- The 12 net-new species (`mapping/new_species.csv`) in the free old-Unown slots, with every species table filled.
+  Until their own art and cries are made they borrow another creature's (`art_from`, `cry_from`) with a tinted
+  battle palette. A species whose art lands in `art/graphics/pokemon/<name>/` uses it on the next run.
+- The Datapad: the new species follow SHIFTSTAR (Deoxys) in both lists (regional 203-214, national 387-398), so
+  a full Datapad has 212 regional entries (WHILLSTAR and SHIFTSTAR still do not count). The alphabetical order
+  is rebuilt from the Star Wars names.
+- The net-new moves (`mapping/new_moves.csv`) and the learnsets that swap to them (`mapping/move_learnsets.csv`).
+- The approved icons and their 3 banks, the footprints and the generated cries (`mapping/audio_done.csv`). The
+  battle pics were already in. The creature walkers are installed by the walker tool's `install`.
+Then run `tools/port_names.py` (names and Datapad text) and `tools/mark_audio_done.py`. Wild tables, trainer
+parties and placement of the new species are the world-building pass; `creatures.csv` shows which are not
+wild or in a party yet.
+
 **Names, Datapad entries and descriptions are ported** the same way (2026-11-03):
 - `python3 tools/port_names.py` swaps each renamed entity's display name in `../game` by its C constant
   (creatures, items, moves, abilities, types, trainer classes, trainers, Grand Arena and showcase trainers,
@@ -109,6 +126,7 @@ and field-effect ids are table indexes, so deleting a ghost keeps its slot (poin
 | Table | What it is |
 |---|---|
 | `game_port.csv` | The port checklist (above). |
+| `creatures.csv` | Every species slot in `../game` (398 rows) with the state of each creature asset: name, Datapad numbers and entry, front, anim_front, back, icon, footprint, cry (`DONE`, `PLACEHOLDER` for a net-new species still borrowing art, or the art/audio status), and whether it is wild (`encounters.csv`) or in a trainer party. Written by `tools/port_creatures.py`. |
 | `swap_map.csv` | One row per Emerald entity plus every net-new row: old and new name, title and C constant (`SPECIES_TREECKO` → `SPECIES_WOOKLET`). |
 | `entities.csv` | Emerald's entities with the Star Wars title and description; Emerald's stay in `emerald_title` / `emerald_description`. Stats and game columns are unchanged. |
 | `texts.csv` | Every Emerald text with its Star Wars version (`sw_text_raw`), `source_file` / `source_line`, `overflow_risk` (wider than the 208 px text box) and `ui_wider_px`. |
@@ -241,6 +259,7 @@ python3 tools/encounters.py # encounters.csv (habitat swaps, new-area tables)
 python3 tools/habitats.py   # species_habitats.csv
 python3 tools/sand_skim.py  # sand_skim.csv, dune_sea_encounters.csv (Dune Sea field move)
 python3 tools/obtain.py     # obtain.csv, npcs.csv (who gives what, in story order)
+python3 tools/port_creatures.py check  # creatures.csv (every species slot and its assets in ../game)
 python3 tools/prominence.py # mapping/proposals/prominence*.csv (fan prominence of every starwars-db entity; needs starwars-db)
 python3 wiki/server.py      # browse at http://127.0.0.1:8000
 ```

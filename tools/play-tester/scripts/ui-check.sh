@@ -10,7 +10,7 @@
 cd "$(dirname "$0")/.." && source scripts/env.sh
 export PLAYTEST_OUT=$PLAYTEST_ROOT/out/ui; mkdir -p $PLAYTEST_OUT
 export SCENARIO=$1 PLAYTEST_ROOT
-ROM=$REPO_ROOT/game/pokeemerald_modern.gba
+ROM=${UI_ROM:-$REPO_ROOT/game/pokeemerald_modern.gba}  # UI_ROM=.../pokeemerald.gba uses the agbcc build
 while read -r addr _ name; do export "SYM_$name=$addr"; done < <(arm-none-eabi-nm "${ROM%.gba}.elf" | grep -wE "gSaveBlock1Ptr|gSaveBlock2Ptr|gPlayerParty|gPlayerPartyCount|gMain|CB2_Overworld|CB2_LoadMap|CB2_IntroCrawl")
 rm -f $PLAYTEST_OUT/DONE
 setsid xvfb-run -a /opt/mgba-0.11/bin/mgba-qt --script $PLAYTEST_ROOT/lua/examples/ui-check.lua -l 0 "$ROM" > $PLAYTEST_OUT/mgba_$1.log 2>&1 &
