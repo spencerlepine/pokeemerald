@@ -1,0 +1,213 @@
+# Building catalog for TATOOINE landmarks (arenas, hangars, palace, cantina, shops, pads). See bkit/catalog.py.
+planet: TATOOINE
+buildings:
+- id: bld:tatooine:bestine-house-organa-office-tower
+  kind: landmark
+  name: House Organa office tower
+  areas: [bestine]
+  art: art:tatooine:house-organa-office-tower
+  size: [8, 7]
+  door: 4
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:bestine-bestine-arena-biggs
+  kind: arena
+  name: Bestine arena (Biggs)
+  areas: [bestine]
+  art: art:shared:arena
+  size: [6, 5]
+  door: 3
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:bestine-academy
+  kind: landmark
+  name: Academy
+  areas: [bestine]
+  art: art:tatooine:academy
+  size: [6, 4]
+  door: 3
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:jabbas-palace-jabba-s-palace-gate
+  kind: landmark
+  name: Jabba's palace gate
+  areas: [jabbas-palace]
+  art: art:tatooine:jabbas-palace
+  size: [14, 9]
+  door: 7
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:jabbas-palace-sail-barge-dock-shed
+  kind: hangar
+  name: Sail barge dock shed
+  areas: [jabbas-palace]
+  art: art:tatooine:docking-bay
+  size: [6, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:mos-eisley-docking-bay-94
+  kind: hangar
+  name: Docking Bay 94
+  areas: [mos-eisley]
+  art: art:tatooine:docking-bay
+  size: [8, 8]
+  door: 4
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:mos-eisley-docking-bay-86-kashyyyk-hangar
+  kind: hangar
+  name: Docking Bay 86 (Kashyyyk hangar)
+  areas: [mos-eisley]
+  art: art:tatooine:docking-bay
+  size: [8, 8]
+  door: 4
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:mos-eisley-chalmun-s-cantina
+  kind: landmark
+  name: Chalmun's Cantina
+  areas: [mos-eisley]
+  art: art:tatooine:cantina
+  size: [7, 5]
+  door: 3
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:mos-eisley-spacer-museum
+  kind: landmark
+  name: Spacer Museum
+  areas: [mos-eisley]
+  art: art:tatooine:spacer-museum
+  size: [8, 5]
+  door: 4
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:mos-eisley-ric-olie-s-shipyard
+  kind: hangar
+  name: Ric Olie's shipyard
+  areas: [mos-eisley]
+  art: art:tatooine:docking-bay
+  size: [8, 5]
+  door: 4
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:mos-eisley-battle-tent
+  kind: arena
+  name: Battle tent
+  areas: [mos-eisley]
+  art: art:shared:arena
+  size: [6, 5]
+  door: 3
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:mos-entha-mos-entha-arena-doran
+  kind: arena
+  name: Mos Entha arena (Doran)
+  areas: [mos-entha]
+  art: art:tatooine:mos-entha-arena
+  size: [7, 5]
+  door: 3
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:mos-espa-watto-s-junk-shop-arena
+  kind: arena
+  name: Watto's junk shop (arena)
+  areas: [mos-espa]
+  art: art:tatooine:watto-s-junk-shop
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:mos-espa-wald-s-hover-bikes
+  kind: shop
+  name: Wald's hover-bikes
+  areas: [mos-espa]
+  art: art:tatooine:watto-s-junk-shop
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:mos-espa-mos-espa-grand-arena-podrace-stands
+  kind: arena
+  name: Mos Espa Grand Arena (podrace stands)
+  areas: [mos-espa]
+  art: art:tatooine:podrace-arena
+  size: [8, 5]
+  door: 4
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:mos-espa-sabacc-den
+  kind: landmark
+  name: Sabacc den
+  areas: [mos-espa]
+  art: art:tatooine:sabacc-den
+  size: [6, 4]
+  door: 3
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:mos-espa-espa-generator-hatch
+  kind: landmark
+  name: Espa generator hatch
+  areas: [mos-espa]
+  art: art:tatooine:power-station
+  size: [4, 3]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:mos-espa-rebel-shuttle-pad-to-endor
+  kind: pad
+  name: Rebel shuttle pad (to Endor)
+  areas: [mos-espa]
+  art: art:shared:landing-pad
+  size: [7, 4]
+  door: 3
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:mos-pelgo-prof-korr-s-lab
+  kind: landmark
+  name: Prof. Korr's lab
+  areas: [mos-pelgo]
+  art: art:tatooine:prof-korr-s-lab
+  size: [7, 5]
+  door: 3
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:route-112-sullust-transport-pad-ships
+  kind: pad
+  name: Sullust transport pad (ships)
+  areas: [route-112]
+  art: art:shared:landing-pad
+  size: [4, 4]
+  door: 1
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:tosche-station-tosche-power-station
+  kind: landmark
+  name: Tosche power station
+  areas: [tosche-station]
+  art: art:tatooine:power-station
+  size: [6, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''

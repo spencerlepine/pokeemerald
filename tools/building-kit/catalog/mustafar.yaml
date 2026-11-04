@@ -1,0 +1,13 @@
+# Building catalog for MUSTAFAR: one entry per building design (see bkit/catalog.py).
+planet: MUSTAFAR
+buildings:
+- id: bld:mustafar:mustafar-mining-facility-separatist-control-center
+  kind: landmark
+  name: Separatist control center
+  areas: [mustafar-mining-facility]
+  art: art:mustafar:fortress-halls
+  size: [8, 5]
+  door: 4
+  blueprint: ''
+  seed: 0
+  about: ''

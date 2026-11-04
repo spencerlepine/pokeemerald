@@ -1,0 +1,133 @@
+# Building catalog for DAGOBAH: one entry per building design (see bkit/catalog.py).
+planet: DAGOBAH
+buildings:
+- id: bld:dagobah:dagobah-yoda-s-hut-arena
+  kind: arena
+  name: Yoda's hut (arena)
+  areas: [dagobah]
+  art: art:dagobah:yoda-s-hut
+  size: [8, 6]
+  door: 4
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:dagobah:dagobah-bacta-center
+  kind: bacta
+  name: Bacta Center
+  areas: [dagobah]
+  art: art:shared:bacta-center
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:dagobah:dagobah-supply-depot
+  kind: depot
+  name: Supply Depot
+  areas: [dagobah]
+  art: art:shared:supply-depot
+  size: [4, 4]
+  door: 1
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:dagobah:dagobah-bog-fisher-s-hut
+  kind: hut
+  name: Bog fisher's hut
+  areas: [dagobah]
+  art: art:dagobah:yoda-s-hut
+  size: [4, 3]
+  door: 1
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:dagobah:dagobah-hermit-s-hut
+  kind: hut
+  name: Hermit's hut
+  areas: [dagobah]
+  art: art:dagobah:yoda-s-hut
+  size: [4, 3]
+  door: 1
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:dagobah:dagobah-swamp-healer-s-hut
+  kind: hut
+  name: Swamp healer's hut
+  areas: [dagobah]
+  art: art:dagobah:yoda-s-hut
+  size: [4, 3]
+  door: 1
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:dagobah:dagobah-moss-gatherer-s-hut
+  kind: hut
+  name: Moss gatherer's hut
+  areas: [dagobah]
+  art: art:dagobah:yoda-s-hut
+  size: [4, 3]
+  door: 1
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:dagobah:dagobah-old-smuggler-s-hut
+  kind: hut
+  name: Old smuggler's hut
+  areas: [dagobah]
+  art: art:dagobah:yoda-s-hut
+  size: [4, 3]
+  door: 1
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:dagobah:dagobah-herbalist-s-hut
+  kind: hut
+  name: Herbalist's hut
+  areas: [dagobah]
+  art: art:dagobah:yoda-s-hut
+  size: [4, 3]
+  door: 1
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:dagobah:dagobah-dragonsnake-watcher-s-hut
+  kind: hut
+  name: Dragonsnake watcher's hut
+  areas: [dagobah]
+  art: art:dagobah:yoda-s-hut
+  size: [4, 3]
+  door: 1
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:dagobah:dagobah-gnarltree-keeper-s-hut
+  kind: hut
+  name: Gnarltree keeper's hut
+  areas: [dagobah]
+  art: art:dagobah:yoda-s-hut
+  size: [4, 3]
+  door: 1
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:dagobah:dagobah-old-jedi-outpost-mystery-events
+  kind: landmark
+  name: Old Jedi outpost (mystery events)
+  areas: [dagobah]
+  art: art:dagobah:yoda-s-hut
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:dagobah:dagobah-bog-landing-ships
+  kind: pad
+  name: Bog landing (ships)
+  areas: [dagobah]
+  art: art:shared:landing-pad
+  size: [6, 4]
+  door: 3
+  blueprint: ''
+  seed: 0
+  about: ''

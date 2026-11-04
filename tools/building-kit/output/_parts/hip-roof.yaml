@@ -1,0 +1,7 @@
+name: part-hip-roof
+parts:
+- name: hip-roof
+  use: hip-roof
+style: tatooine
+width:
+- 4

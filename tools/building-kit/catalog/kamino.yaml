@@ -1,0 +1,93 @@
+# Building catalog for KAMINO: one entry per building design (see bkit/catalog.py).
+planet: KAMINO
+buildings:
+- id: bld:kamino:tipoca-city-cloning-hall
+  kind: landmark
+  name: Cloning hall
+  areas: [tipoca-city]
+  art: art:kamino:cloning-hall
+  size: [12, 6]
+  door: 6
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:kamino:tipoca-city-landing-platform-ships
+  kind: pad
+  name: Landing platform (ships)
+  areas: [tipoca-city]
+  art: art:shared:landing-pad
+  size: [6, 4]
+  door: 3
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:kamino:tipoca-city-kaminoan-dwelling
+  kind: home
+  name: Kaminoan dwelling
+  areas: [tipoca-city]
+  art: art:kamino:stilt-dome
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:kamino:tipoca-city-storm-watcher-s-dome
+  kind: home
+  name: Storm watcher's dome
+  areas: [tipoca-city]
+  art: art:kamino:stilt-dome
+  size: [4, 4]
+  door: 1
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:kamino:tipoca-city-bacta-center
+  kind: bacta
+  name: Bacta Center
+  areas: [tipoca-city]
+  art: art:shared:bacta-center
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:kamino:tipoca-city-clone-trainer-s-quarters
+  kind: home
+  name: Clone trainer's quarters
+  areas: [tipoca-city]
+  art: art:kamino:stilt-dome
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:kamino:tipoca-city-kaminoan-dwelling-2
+  kind: home
+  name: Kaminoan dwelling
+  areas: [tipoca-city]
+  art: art:kamino:stilt-dome
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:kamino:tipoca-city-supply-depot
+  kind: depot
+  name: Supply Depot
+  areas: [tipoca-city]
+  art: art:shared:supply-depot
+  size: [4, 4]
+  door: 1
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:kamino:tipoca-city-fisher-s-dome
+  kind: home
+  name: Fisher's dome
+  areas: [tipoca-city]
+  art: art:kamino:stilt-dome
+  size: [4, 4]
+  door: 1
+  blueprint: ''
+  seed: 0
+  about: ''

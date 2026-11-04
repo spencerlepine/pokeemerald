@@ -6,6 +6,9 @@
     python3 -m bkit parts tatooine                         # the kit's pieces, one by one
     python3 -m bkit sheet [--style tatooine] [-n 4]        # every blueprint, n seeds each
     python3 -m bkit street [--style tatooine] [--seed 1]   # a random street in a game screen
+    python3 -m bkit init                                   # catalog entries for every area building
+    python3 -m bkit build [--planet tatooine] [--no-wiki]  # render the catalog (wiki: buildings.csv, pngs)
+    python3 -m bkit collage                                # every built building on one image
 
 Everything goes to output/ (not committed). Nothing here writes the wiki yet.
 """
@@ -42,7 +45,7 @@ def cmd_try(a):
     path = C.blueprint_path(a.blueprint)
     sets = dict(s.split("=", 1) for s in a.set or [])
     img, info, tiles = _one(path, a.seed, a.width, sets)
-    d = os.path.join(OUT, info["blueprint"])
+    d = os.path.join(OUT, info["style"], info["name"])
     os.makedirs(d, exist_ok=True)
     img.save(os.path.join(d, f"seed{a.seed}.png"))
     R.sheet(f"{info['blueprint']} seed {a.seed}: {img.width // 16}x{img.height // 16} cells, {tiles} tiles",
@@ -60,7 +63,7 @@ def cmd_variants(a):
         img, info, tiles = _one(path, s, a.width)
         shots.append((_label(info, tiles), img))
     bp = C.load(path)
-    d = os.path.join(OUT, bp["name"])
+    d = os.path.join(OUT, bp["style"], bp["name"])
     os.makedirs(d, exist_ok=True)
     out = os.path.join(d, "variants.png")
     R.sheet(f"{bp['style']} / {bp['name']}: {a.n} seeds. {bp.get('about', '')}", shots, scale=a.scale).save(out)
@@ -116,6 +119,21 @@ def cmd_street(a):
     print(f"{n} buildings ->", os.path.relpath(out, C.HERE))
 
 
+def cmd_init(a):
+    from . import catalog
+    catalog.init()
+
+
+def cmd_build(a):
+    from . import catalog
+    catalog.build(a.planet, wiki=not a.no_wiki, only=a.only)
+
+
+def cmd_collage(a):
+    from . import catalog
+    catalog.collage()
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(prog="bkit", description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -148,5 +166,14 @@ def main(argv=None):
     s.add_argument("--style")
     s.add_argument("--seed", type=int, default=1)
     s.set_defaults(fn=cmd_street)
+    s = sub.add_parser("init", help="add a catalog entry for every area building that has none")
+    s.set_defaults(fn=cmd_init)
+    s = sub.add_parser("build", help="render the catalog into the wiki")
+    s.add_argument("--planet", action="append")
+    s.add_argument("--no-wiki", action="store_true", help="output/build only, for trying")
+    s.add_argument("--only", action="append", help="only entries whose id contains this")
+    s.set_defaults(fn=cmd_build)
+    s = sub.add_parser("collage")
+    s.set_defaults(fn=cmd_collage)
     a = ap.parse_args(argv)
     a.fn(a)

@@ -1,0 +1,7 @@
+name: part-stilts
+parts:
+- name: stilts
+  use: stilts
+style: tatooine
+width:
+- 4

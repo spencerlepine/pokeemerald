@@ -1,0 +1,7 @@
+name: part-sign
+parts:
+- name: sign
+  use: sign
+style: tatooine
+width:
+- 4

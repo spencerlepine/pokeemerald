@@ -1,0 +1,113 @@
+# Building catalog for KASHYYYK: one entry per building design (see bkit/catalog.py).
+planet: KASHYYYK
+buildings:
+- id: bld:kashyyyk:kachirho-tarfful-s-arena-hall
+  kind: arena
+  name: Tarfful's arena hall
+  areas: [kachirho]
+  art: art:kashyyyk:arena-hall
+  size: [7, 5]
+  door: 3
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:kashyyyk:kachirho-great-hall-holonet-trends
+  kind: landmark
+  name: Great hall (HoloNet trends)
+  areas: [kachirho]
+  art: art:kashyyyk:wookiee-hut
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:kashyyyk:kachirho-bacta-center
+  kind: bacta
+  name: Bacta Center
+  areas: [kachirho]
+  art: art:shared:bacta-center
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:kashyyyk:kachirho-supply-depot
+  kind: depot
+  name: Supply Depot
+  areas: [kachirho]
+  art: art:shared:supply-depot
+  size: [4, 4]
+  door: 1
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:kashyyyk:kachirho-wookiee-family-hut
+  kind: hut
+  name: Wookiee family hut
+  areas: [kachirho]
+  art: art:kashyyyk:wookiee-hut
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:kashyyyk:kachirho-elder-s-hut
+  kind: hut
+  name: Elder's hut
+  areas: [kachirho]
+  art: art:kashyyyk:wookiee-hut
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:kashyyyk:kachirho-falcon-hangar-from-tatooine
+  kind: hangar
+  name: Falcon hangar (from Tatooine)
+  areas: [kachirho]
+  art: art:tatooine:docking-bay
+  size: [8, 4]
+  door: 3
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:kashyyyk:route-109-seashore-house
+  kind: hut
+  name: Seashore house
+  areas: [route-109]
+  art: art:kashyyyk:wookiee-hut
+  size: [6, 3]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:kashyyyk:rwookrrorro-chieftain-s-hut
+  kind: hut
+  name: Chieftain's hut
+  areas: [rwookrrorro]
+  art: art:kashyyyk:wookiee-hut
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:kashyyyk:rwookrrorro-weaver-s-hut
+  kind: hut
+  name: Weaver's hut
+  areas: [rwookrrorro]
+  art: art:kashyyyk:wookiee-hut
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:kashyyyk:rwookrrorro-bowcaster-maker-s-hut
+  kind: hut
+  name: Bowcaster maker's hut
+  areas: [rwookrrorro]
+  art: art:kashyyyk:wookiee-hut
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''

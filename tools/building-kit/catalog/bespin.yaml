@@ -1,0 +1,143 @@
+# Building catalog for BESPIN: one entry per building design (see bkit/catalog.py).
+planet: BESPIN
+buildings:
+- id: bld:bespin:cloud-city-west-landing-platform-ships
+  kind: pad
+  name: West landing platform (ships)
+  areas: [cloud-city]
+  art: art:bespin:landing-platform
+  size: [5, 5]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:bespin:cloud-city-galleria-department-store
+  kind: shop
+  name: Galleria (department store)
+  areas: [cloud-city]
+  art: art:bespin:department-store
+  size: [8, 6]
+  door: 4
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:bespin:cloud-city-museum
+  kind: landmark
+  name: Museum
+  areas: [cloud-city]
+  art: art:bespin:cloud-city-tower
+  size: [5, 6]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:bespin:cloud-city-bacta-center
+  kind: bacta
+  name: Bacta Center
+  areas: [cloud-city]
+  art: art:shared:bacta-center
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:bespin:cloud-city-under-levels-lift-hutt-hideout
+  kind: landmark
+  name: Under-levels lift (Hutt Hideout)
+  areas: [cloud-city]
+  art: art:bespin:cloud-city-tower
+  size: [5, 6]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:bespin:cloud-city-cloud-car-pilot-s-flat
+  kind: landmark
+  name: Cloud car pilot's flat
+  areas: [cloud-city]
+  art: art:bespin:cloud-city-tower
+  size: [5, 6]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:bespin:cloud-city-tibanna-trader-s-flat
+  kind: shop
+  name: Tibanna trader's flat
+  areas: [cloud-city]
+  art: art:bespin:cloud-city-tower
+  size: [5, 6]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:bespin:cloud-city-sky-motel
+  kind: landmark
+  name: Sky motel
+  areas: [cloud-city]
+  art: art:bespin:cloud-city-tower
+  size: [5, 6]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:bespin:cloud-city-move-deleter-s-flat
+  kind: landmark
+  name: Move deleter's flat
+  areas: [cloud-city]
+  art: art:bespin:cloud-city-tower
+  size: [5, 6]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:bespin:cloud-city-companion-fan-club
+  kind: landmark
+  name: Companion fan club
+  areas: [cloud-city]
+  art: art:bespin:cloud-city-tower
+  size: [5, 6]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:bespin:cloud-city-lando-s-flat
+  kind: landmark
+  name: Lando's flat
+  areas: [cloud-city]
+  art: art:bespin:cloud-city-tower
+  size: [5, 6]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:bespin:cloud-city-ugnaught-family-flat
+  kind: landmark
+  name: Ugnaught family flat
+  areas: [cloud-city]
+  art: art:bespin:cloud-city-tower
+  size: [5, 6]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:bespin:tibanna-refinery-gas-refinery
+  kind: landmark
+  name: Gas refinery
+  areas: [tibanna-refinery]
+  art: art:bespin:cloud-city-tower
+  size: [5, 6]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:bespin:tibanna-refinery-carbon-freezing-annex
+  kind: landmark
+  name: Carbon-freezing annex
+  areas: [tibanna-refinery]
+  art: art:bespin:cloud-city-tower
+  size: [5, 6]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''

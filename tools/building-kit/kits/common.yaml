@@ -54,3 +54,55 @@ templates:
     preview: {}
     parts:
       - {name: box, mat: "=mat", box: {c: [0, 0, "=s / 2"], half: ["=s / 2", "=s / 2", "=s / 2"], radius: 0.03}}
+  # A plain block with softened edges, its front at y = 0.
+  box-block:
+    params: {w: 2.0, d: 1.5, h: 1.2, rnd: 0.05, mat: wall}
+    preview: {}
+    parts:
+      - {name: block, mat: "=mat", box: {c: [0, "=d / 2", "=h / 2"], half: ["=w / 2", "=d / 2", "=h / 2"], radius: "=rnd"}}
+  # A hipped roof (four slopes) over a w x d plan at height z; `ridge` is how much of it stays flat on top.
+  hip-roof:
+    params: {w: 2.4, d: 1.8, z: 1.0, rise: 0.8, ridge: 0.3, over: 0.12, mat: roof}
+    preview: {}
+    parts:
+      - name: roof
+        mat: "=mat"
+        prism: {poly: [["=-w / 2 - over", "=-over"], ["=w / 2 + over", "=-over"], ["=w / 2 + over", "=d + over"], ["=-w / 2 - over", "=d + over"]],
+                z: ["=z", "=z + rise"], top: ["=max(ridge, 0.02)", 0.04], round: 0.03}
+  # A gable roof, ridge east-west, over a w x d plan at height z.
+  gable-roof:
+    params: {w: 2.4, d: 1.8, z: 1.0, rise: 0.7, over: 0.12, mat: roof}
+    preview: {}
+    parts:
+      - name: roof
+        mat: "=mat"
+        extrude: {axis: x, profile: [["=-over", "=z"], ["=d + over", "=z"], ["=d / 2", "=z + rise"]], span: ["=-w / 2 - over", "=w / 2 + over"], round: 0.03}
+  # A cone roof (thatch, a Wookiee or Ewok hut) of radius r at height z.
+  cone-roof:
+    params: {r: 1.2, z: 1.0, rise: 1.0, mat: roof}
+    preview: {at: [0, 1.2, 0]}
+    parts:
+      - {name: cone, mat: "=mat", cylinder: {a: [0, 0, "=z"], b: [0, 0, "=z + rise"], r1: "=r", r2: 0.04}}
+  # Four posts under a w x d deck (stilts over water or a swamp).
+  stilts:
+    params: {w: 2.4, d: 1.6, h: 0.6, r: 0.1, mat: metal}
+    preview: {}
+    parts:
+      - {name: sw, mat: "=mat", cylinder: {a: ["=-w / 2 + 0.25", 0.2, 0], b: ["=-w / 2 + 0.25", 0.2, "=h"], r1: "=r"}}
+      - {name: se, mat: "=mat", cylinder: {a: ["=w / 2 - 0.25", 0.2, 0], b: ["=w / 2 - 0.25", 0.2, "=h"], r1: "=r"}}
+      - {name: nw, mat: "=mat", cylinder: {a: ["=-w / 2 + 0.25", "=d - 0.2", 0], b: ["=-w / 2 + 0.25", "=d - 0.2", "=h"], r1: "=r"}}
+      - {name: ne, mat: "=mat", cylinder: {a: ["=w / 2 - 0.25", "=d - 0.2", 0], b: ["=w / 2 - 0.25", "=d - 0.2", "=h"], r1: "=r"}}
+  # A flat deck or platform slab, its front at y = 0, top at z.
+  deck:
+    params: {w: 3.0, d: 2.0, z: 0.6, t: 0.15, mat: metal}
+    preview: {}
+    parts:
+      - {name: deck, mat: "=mat", box: {c: [0, "=d / 2", "=z - t / 2"], half: ["=w / 2", "=d / 2", "=t / 2"], radius: 0.02}}
+  # A sign on a post (what tells the player an arena, a Bacta Center or a depot apart). One cell.
+  sign:
+    params: {w: 0.8, h: 0.5, post: 0.5, mat: trim, face: dark}
+    preview: {}
+    parts:
+      - {name: post, mat: metal, box: {c: [0, 0.1, "=post / 2"], half: [0.06, 0.06, "=post / 2"]}}
+      - {name: board, mat: "=mat", box: {c: [0, 0.05, "=post + h / 2"], half: ["=w / 2", 0.07, "=h / 2"], radius: 0.02}}
+      - {name: face, mat: "=face", box: {c: [0, -0.03, "=post + h / 2"], half: ["=w / 2 - 0.08", 0.03, "=h / 2 - 0.08"]}}

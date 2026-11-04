@@ -27,6 +27,38 @@ def render(raw):
     return img, ind, warnings, tiles
 
 
+def plan_depth(raw):
+    """Cells of ground the building stands on, counted north from its front (the hit box depth):
+    the furthest north any solid reaches at knee height (0.1 m), rounded up to whole cells."""
+    obj = C.obj_from(raw)
+    W = raw["cells"][0]
+    xs = np.arange(-W / 2 + 1 / 32, W / 2, 1 / 16)
+    ys = np.arange(-0.5 + 1 / 32, C.TALL, 1 / 16)
+    X, Y = np.meshgrid(xs, ys)
+    P_ = np.stack([X.ravel(), Y.ravel(), np.full(X.size, 0.1)], 1)
+    inst = obj.instances[0]
+    d = inst.sdf(P_, 0.0)
+    d = d[0] if isinstance(d, tuple) else d
+    inside = Y.ravel()[d < 0]
+    if not len(inside):
+        return 1
+    return max(1, int(np.ceil(inside.max() - 0.05)))
+
+
+def fit(img, ind, H):
+    """Pad the sprite at the top to H cells (empty rows). Returns (img, ind, ok): ok is False when the
+    art is taller than H."""
+    h = img.height // 16
+    if not H or h == H:
+        return img, ind, True
+    if h > H:
+        return img, ind, False
+    pad = (H - h) * 16
+    out = Image.new("RGBA", (img.width, img.height + pad), (0, 0, 0, 0))
+    out.paste(img, (0, pad))
+    return out, np.vstack([np.zeros((pad, ind.shape[1]), ind.dtype), ind]), True
+
+
 def on_ground(img, scale=1, grid=False):
     bg = P.speckled(img.width, img.height, GROUND).convert("RGBA")
     bg.alpha_composite(img)

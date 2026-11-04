@@ -1,7 +1,8 @@
 # building-kit: outdoor buildings from a kit of parts
 
-Status: **round 1, in review with the owner** (started 2026-11-04). Greybox only: shapes and light, no
-colour or texture. Nothing here writes the wiki or `../../game` yet.
+Status: **approved direction (owner, 2026-11-04); drawing every building in greybox.** Shapes and light
+only, no colour or texture. `build` writes `../../wiki/mapping/buildings.csv` and
+`../../wiki/world/buildings/`; nothing goes into `../../game` yet.
 
 Vanilla Emerald has a few square houses copied all over the map. This game has many more towns on very
 different planets, so buildings are made from a **kit**: walls, roofs, doors, windows and decor as
@@ -28,7 +29,47 @@ python3 -m bkit variants block-house -n 12            # 12 seeds side by side
 python3 -m bkit parts tatooine                        # every kit piece alone
 python3 -m bkit sheet --style tatooine -n 4           # every blueprint of a style, 4 seeds each
 python3 -m bkit street --style tatooine --seed 1      # a random street, a vanilla house for scale
+python3 -m bkit init                                  # a catalog entry for every area building that has none
+python3 -m bkit build --planet tatooine --no-wiki     # render a planet's catalog to output/build/ (+ _sheet_<file>.png)
+python3 -m bkit build [--only mos-eisley]             # render into the wiki (buildings.csv, pngs)
+python3 -m bkit collage                               # every building on one image (wiki/world/buildings/_collage.png)
 ```
+
+## The catalog: every building the game needs
+
+`catalog/<file>.yaml` holds one entry per building design, with the planet at the top (a planet may be
+split over several files). `init` makes an entry for each `buildings:` item in the area yamls
+(`../../wiki/world/<planet>/<area>.yaml`): its lot `size` (drawn cells, W x H) and `door` column come from
+the area. Extra buildings that no area places yet (markets, huts, the fill of a town) are entries with
+`areas: []` and kind `fill`, `market` or `hut`. Every entry names its `blueprint` and `seed`, so each
+building is its own design, even when twenty homes share one blueprint. The format is in
+`bkit/catalog.py`.
+
+`build` renders each entry at its lot's width with `H` (lot height) and `door_x` (the area's door) in the
+blueprint's params, then checks it: drawn no taller than the lot (shorter is padded at the top), the
+ground it stands on (`footprint`, W x rows from the front: the hit box) no deeper than the lot, the
+door in the area's column. `buildings.csv` gets `size`, `drawn`, `footprint`, `door`, `door_found`, `fits`,
+`tiles` and the png, so placing a building later only needs that row.
+
+Every kind of building is redrawn per planet in that planet's style: each planet has its own Bacta
+Center (always 5x4), Supply Depot (always 4x4) and arena (any shape). The sign in front of an arena,
+Bacta Center or depot says what it is (the `sign` piece, placed with the building later), so the
+buildings themselves can vary.
+
+## Designing a planet
+
+1. Read the planet's rows in `../../wiki/mapping/world_art.csv` (`description`) and look at its concept
+   images in `../../wiki/art/concept/<planet>/`. Design from the films, never from Earth or Hoenn.
+2. Write the planet's pieces in `kits/<planet>.yaml` (a kit lists `uses:` for other kits) and its
+   building families in `blueprints/<planet>/`. A blueprint should give several clearly different
+   buildings: two or more massing options, roof options, door styles, extras.
+3. Size to the lot. Drawn rows = plan depth + height (+ a dome or roof rising above): a 5x4 lot is about
+   2.3 m deep and 1.4 m of wall plus 0.3 m of roof. Use `H`, `W`, `w_max` in expressions. Put the
+   entry named `door` at `door_x` when it is not None.
+4. Keep it big and simple: doors about a cell wide, windows half a cell or more, nothing thinner than
+   4 px, about 30 to 70 unique tiles a building (a tileset has 512).
+5. `build --planet <p> --no-wiki` and look at `output/build/_sheet_<file>.png` until every entry fits
+   and reads well.
 
 Everything is written to `output/` (not committed).
 
@@ -56,7 +97,7 @@ Everything is written to `output/` (not committed).
 | `dome-cluster` | The Mos Eisley cantina | domes (2-3), entry block, vent tower |
 | `tower` | Mos Espa towers | 2-3 stepped tiers, dome or band on top, door |
 
-## Next
+## Earlier notes
 
 More Tatooine bases (walled courtyard, docking-bay ring, garage, market awning), then a kit per planet
 (Imperial, Wookiee, Ewok, Kamino, Bespin, Sullust, Yavin, Hoth). Once the owner approves the look, the kit

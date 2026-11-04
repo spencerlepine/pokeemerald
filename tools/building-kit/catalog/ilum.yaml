@@ -1,0 +1,43 @@
+# Building catalog for ILUM: one entry per building design (see bkit/catalog.py).
+planet: ILUM
+buildings:
+- id: bld:ilum:ilum-jedi-temple-gate-the-four-trials
+  kind: landmark
+  name: Jedi temple gate (the Four Trials)
+  areas: [ilum]
+  art: art:ilum:jedi-temple-gate
+  size: [12, 7]
+  door: 6
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:ilum:ilum-bacta-center
+  kind: bacta
+  name: Bacta Center
+  areas: [ilum]
+  art: art:shared:bacta-center
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:ilum:ilum-supply-depot
+  kind: depot
+  name: Supply Depot
+  areas: [ilum]
+  art: art:shared:supply-depot
+  size: [4, 4]
+  door: 1
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:ilum:ilum-landing-pad-ships
+  kind: pad
+  name: Landing pad (ships)
+  areas: [ilum]
+  art: art:shared:landing-pad
+  size: [6, 4]
+  door: 3
+  blueprint: ''
+  seed: 0
+  about: ''

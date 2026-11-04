@@ -26,7 +26,7 @@ parts:
          with: {r: "=w * (0.22 if tiers == 3 else 0.32)", ry: 0.62, hk: 0.6}}
   - when: "=door == 'arch'"
     parts:
-      - {use: door-arch, name: door, at: [0, 0, 0], with: {w: 0.85, h: 0.7}}
+      - {use: door-arch, name: door, at: ["=door_x or 0", 0, 0], with: {w: 0.85, h: 0.7}}
     else:
-      - {use: door-slab, name: door, at: [0, 0, 0], with: {w: 0.9, h: 0.9}}
+      - {use: door-slab, name: door, at: ["=door_x or 0", 0, 0], with: {w: 0.9, h: 0.9}}
   - {use: window-round, name: win, at: [0, "=d * 0.2 - 0.02", "=h1 + h2 * 0.55"], with: {r: 0.18}}

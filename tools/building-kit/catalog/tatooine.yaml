@@ -1,0 +1,443 @@
+# Building catalog for TATOOINE: one entry per building design (see bkit/catalog.py).
+planet: TATOOINE
+buildings:
+- id: bld:tatooine:anchorhead-bacta-center
+  kind: bacta
+  name: Bacta Center
+  areas: [anchorhead]
+  art: art:shared:bacta-center
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:anchorhead-farm-co-op
+  kind: landmark
+  name: Farm co-op
+  areas: [anchorhead]
+  art: art:tatooine:farm-co-op
+  size: [6, 4]
+  door: 3
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:anchorhead-supply-depot
+  kind: depot
+  name: Supply Depot
+  areas: [anchorhead]
+  art: art:shared:supply-depot
+  size: [4, 4]
+  door: 1
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:anchorhead-camie-s-family-home
+  kind: home
+  name: Camie's family home
+  areas: [anchorhead]
+  art: art:tatooine:homestead-dome
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:anchorhead-companion-rater-s-home
+  kind: home
+  name: Companion rater's home
+  areas: [anchorhead]
+  art: art:tatooine:homestead-dome
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:anchorhead-old-farmer-s-home
+  kind: landmark
+  name: Old farmer's home
+  areas: [anchorhead]
+  art: art:tatooine:homestead-dome
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:bens-hut-ben-kenobi-s-hut
+  kind: hut
+  name: Ben Kenobi's hut
+  areas: [bens-hut]
+  art: art:tatooine:homestead-dome
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:bestine-bacta-center
+  kind: bacta
+  name: Bacta Center
+  areas: [bestine]
+  art: art:shared:bacta-center
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:bestine-supply-depot
+  kind: depot
+  name: Supply Depot
+  areas: [bestine]
+  art: art:shared:supply-depot
+  size: [4, 4]
+  door: 1
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:bestine-flats-east
+  kind: home
+  name: Flats (east)
+  areas: [bestine]
+  art: art:tatooine:sunken-courtyard-home
+  size: [6, 6]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:bestine-flats-south
+  kind: home
+  name: Flats (south)
+  areas: [bestine]
+  art: art:tatooine:sunken-courtyard-home
+  size: [6, 6]
+  door: 3
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:bestine-vibroblade-smith
+  kind: shop
+  name: Vibroblade smith
+  areas: [bestine]
+  art: art:tatooine:homestead-dome
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:bestine-retired-podracer-s-home
+  kind: home
+  name: Retired podracer's home
+  areas: [bestine]
+  art: art:tatooine:homestead-dome
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:bestine-biggs-s-family-home
+  kind: home
+  name: Biggs's family home
+  areas: [bestine]
+  art: art:tatooine:homestead-dome
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:bestine-trader-s-home
+  kind: shop
+  name: Trader's home
+  areas: [bestine]
+  art: art:tatooine:homestead-dome
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:mos-eisley-bacta-center
+  kind: bacta
+  name: Bacta Center
+  areas: [mos-eisley]
+  art: art:shared:bacta-center
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:mos-eisley-supply-depot
+  kind: depot
+  name: Supply Depot
+  areas: [mos-eisley]
+  art: art:shared:supply-depot
+  size: [4, 4]
+  door: 1
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:mos-eisley-name-changer-s-home
+  kind: home
+  name: Name-changer's home
+  areas: [mos-eisley]
+  art: art:tatooine:homestead-dome
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:mos-eisley-moisture-trader-s-home
+  kind: shop
+  name: Moisture trader's home
+  areas: [mos-eisley]
+  art: art:tatooine:homestead-dome
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:mos-entha-lars-homestead-owen-and-luke
+  kind: home
+  name: Lars homestead (Owen and Luke)
+  areas: [mos-entha]
+  art: art:tatooine:lars-family-home
+  size: [6, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:mos-entha-bacta-center
+  kind: bacta
+  name: Bacta Center
+  areas: [mos-entha]
+  art: art:shared:bacta-center
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:mos-entha-supply-depot
+  kind: depot
+  name: Supply Depot
+  areas: [mos-entha]
+  art: art:shared:supply-depot
+  size: [4, 4]
+  door: 1
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:mos-entha-farmer-s-home
+  kind: landmark
+  name: Farmer's home
+  areas: [mos-entha]
+  art: art:tatooine:homestead-dome
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:mos-entha-pilot-s-widow-s-home
+  kind: home
+  name: Pilot's widow's home
+  areas: [mos-entha]
+  art: art:tatooine:homestead-dome
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:mos-espa-bacta-center
+  kind: bacta
+  name: Bacta Center
+  areas: [mos-espa]
+  art: art:shared:bacta-center
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:mos-espa-supply-depot
+  kind: depot
+  name: Supply Depot
+  areas: [mos-espa]
+  art: art:shared:supply-depot
+  size: [4, 4]
+  door: 1
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:mos-espa-slave-quarters-row-shmi-s-old-home
+  kind: home
+  name: Slave quarters row (Shmi's old home)
+  areas: [mos-espa]
+  art: art:tatooine:homestead-dome
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:mos-espa-pit-droid-mechanic-s-home
+  kind: home
+  name: Pit droid mechanic's home
+  areas: [mos-espa]
+  art: art:tatooine:homestead-dome
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:mos-pelgo-player-s-homestead
+  kind: home
+  name: Player's homestead
+  areas: [mos-pelgo]
+  art: art:tatooine:homestead-dome
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:mos-pelgo-korr-family-home
+  kind: home
+  name: Korr family home
+  areas: [mos-pelgo]
+  art: art:tatooine:sunken-courtyard-home
+  size: [6, 6]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:route-104-flower-shop
+  kind: shop
+  name: Flower shop
+  areas: [route-104]
+  art: art:tatooine:homestead-dome
+  size: [6, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:route-110-entrance
+  kind: home
+  name: Entrance
+  areas: [route-110]
+  art: art:tatooine:homestead-dome
+  size: [6, 7]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:route-110-puzzle-house-entrance
+  kind: home
+  name: Puzzle house entrance
+  areas: [route-110]
+  art: art:tatooine:homestead-dome
+  size: [5, 6]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:route-110-seaside-cycling-road-north-entrance
+  kind: home
+  name: Seaside cycling road north entrance
+  areas: [route-110]
+  art: art:tatooine:homestead-dome
+  size: [8, 6]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:route-110-seaside-cycling-road-south-entrance
+  kind: home
+  name: Seaside cycling road south entrance
+  areas: [route-110]
+  art: art:tatooine:homestead-dome
+  size: [11, 4]
+  door: 5
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:route-111-winstrate-familys-house
+  kind: home
+  name: Winstrate familys house
+  areas: [route-111]
+  art: art:tatooine:homestead-dome
+  size: [8, 5]
+  door: 3
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:route-111-ruins
+  kind: home
+  name: Ruins
+  areas: [route-111]
+  art: art:tatooine:homestead-dome
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:route-111-old-ladys-rest-stop
+  kind: home
+  name: Old ladys rest stop
+  areas: [route-111]
+  art: art:tatooine:homestead-dome
+  size: [4, 5]
+  door: 1
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:route-112-shuttle-station
+  kind: pad
+  name: Shuttle station
+  areas: [route-112]
+  art: art:tatooine:homestead-dome
+  size: [6, 5]
+  door: 1
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:route-117-creature-nursery
+  kind: home
+  name: Creature nursery
+  areas: [route-117]
+  art: art:tatooine:homestead-dome
+  size: [5, 3]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:tosche-station-converter-dealer-s-home
+  kind: shop
+  name: Converter dealer's home
+  areas: [tosche-station]
+  art: art:tatooine:homestead-dome
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:tosche-station-bacta-center
+  kind: bacta
+  name: Bacta Center
+  areas: [tosche-station]
+  art: art:shared:bacta-center
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:tosche-station-supply-depot
+  kind: depot
+  name: Supply Depot
+  areas: [tosche-station]
+  art: art:shared:supply-depot
+  size: [4, 4]
+  door: 1
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:tatooine:tosche-station-station-hand-s-home
+  kind: landmark
+  name: Station hand's home
+  areas: [tosche-station]
+  art: art:tatooine:homestead-dome
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''

@@ -1,0 +1,133 @@
+# Building catalog for GRAND-ARENA: one entry per building design (see bkit/catalog.py).
+planet: GRAND-ARENA
+buildings:
+- id: bld:grand-arena:grand-arena-outside-east-battle-arena-lobby
+  kind: arena
+  name: Battle arena lobby
+  areas: [grand-arena-outside-east]
+  art: art:grand-arena:arena-facilities
+  size: [9, 4]
+  door: 4
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:grand-arena:grand-arena-outside-east-battle-palace-lobby
+  kind: arena
+  name: Battle palace lobby
+  areas: [grand-arena-outside-east]
+  art: art:grand-arena:arena-facilities
+  size: [11, 6]
+  door: 5
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:grand-arena:grand-arena-outside-east-lounge-1
+  kind: arena
+  name: Lounge 1
+  areas: [grand-arena-outside-east]
+  art: art:grand-arena:arena-facilities
+  size: [4, 3]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:grand-arena:grand-arena-outside-east-lounge-5
+  kind: arena
+  name: Lounge 5
+  areas: [grand-arena-outside-east]
+  art: art:grand-arena:arena-facilities
+  size: [6, 3]
+  door: 1
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:grand-arena:grand-arena-outside-east-lounge-6
+  kind: arena
+  name: Lounge 6
+  areas: [grand-arena-outside-east]
+  art: art:grand-arena:arena-facilities
+  size: [4, 3]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:grand-arena:grand-arena-outside-east-lounge-3
+  kind: arena
+  name: Lounge 3
+  areas: [grand-arena-outside-east]
+  art: art:grand-arena:arena-facilities
+  size: [3, 3]
+  door: 1
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:grand-arena:grand-arena-outside-east-lounge-8
+  kind: arena
+  name: Lounge 8
+  areas: [grand-arena-outside-east]
+  art: art:grand-arena:arena-facilities
+  size: [3, 3]
+  door: 1
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:grand-arena:grand-arena-outside-east-lounge-9
+  kind: arena
+  name: Lounge 9
+  areas: [grand-arena-outside-east]
+  art: art:grand-arena:arena-facilities
+  size: [9, 3]
+  door: 3
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:grand-arena:grand-arena-outside-east-bacta-center-1f
+  kind: bacta
+  name: Bacta center 1f
+  areas: [grand-arena-outside-east]
+  art: art:grand-arena:arena-facilities
+  size: [4, 3]
+  door: 1
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:grand-arena:grand-arena-outside-west-battle-pike-lobby
+  kind: arena
+  name: Battle pike lobby
+  areas: [grand-arena-outside-west]
+  art: art:grand-arena:arena-facilities
+  size: [5, 8]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:grand-arena:grand-arena-outside-west-lounge-2
+  kind: arena
+  name: Lounge 2
+  areas: [grand-arena-outside-west]
+  art: art:grand-arena:arena-facilities
+  size: [7, 3]
+  door: 1
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:grand-arena:grand-arena-outside-west-supply-depot
+  kind: depot
+  name: Supply depot
+  areas: [grand-arena-outside-west]
+  art: art:grand-arena:arena-facilities
+  size: [5, 3]
+  door: 1
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:grand-arena:grand-arena-outside-west-lounge-4
+  kind: arena
+  name: Lounge 4
+  areas: [grand-arena-outside-west]
+  art: art:grand-arena:arena-facilities
+  size: [3, 3]
+  door: 1
+  blueprint: ''
+  seed: 0
+  about: ''

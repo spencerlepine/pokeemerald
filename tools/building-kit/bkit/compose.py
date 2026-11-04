@@ -17,7 +17,9 @@ A blueprint (`blueprints/<style>/<name>.yaml`) is a family of buildings, not one
       - {repeat: "=n", parts: [...]}                  # n times, with `i` (0..n-1) in scope
 
 Params always in scope: `W` (cells wide), `w_max` (metres the building may use: W less a margin),
-`seed`. Axes: x east (0 = the middle of the sprite), y north (0 = the south wall's foot), z up,
+`H` (cells tall the catalog asks for, or 0 when free), `door_x` (metres east of the middle where the
+catalog wants the door, or None: then the blueprint picks), `seed`. Name the door entry `door`, so the
+build can find which cell column it is in. Axes: x east (0 = the middle of the sprite), y north (0 = the south wall's foot), z up,
 1 m = 1 cell = 16 px. The sprite is W cells wide and as many cells tall as the art needs.
 """
 import copy
@@ -46,8 +48,14 @@ def load(path):
 
 
 def blueprint_path(name):
+    """`style/name` (always unique) or a bare name (the first style that has it)."""
     if os.path.exists(name):
         return os.path.abspath(name)
+    if "/" in name:
+        p = os.path.join(BLUEPRINTS, f"{name}.yaml")
+        if os.path.exists(p):
+            return p
+        raise SystemExit(f"no blueprint {name} (blueprints/{name}.yaml)")
     for style in sorted(os.listdir(BLUEPRINTS)):
         p = os.path.join(BLUEPRINTS, style, f"{name}.yaml")
         if os.path.exists(p):
@@ -140,15 +148,17 @@ def _bind(part, params):
     return M.evaluate(part, params)
 
 
-def compose(path, seed, width=None, overrides=None):
-    """(raw world-art model, params, info) for one seed of a blueprint."""
+def compose(path, seed, width=None, overrides=None, height=None, door=None):
+    """(raw world-art model, params, info) for one seed of a blueprint. `height` (cells) and `door`
+    (cell column, 0 = west) are what a catalog entry asks for; the blueprint reads them as H, door_x."""
     bp = load(path)
     style = bp["style"]
     rng = random.Random(f"{bp['name']}:{seed}")
     widths = bp.get("width", [5])
     widths = widths if isinstance(widths, list) else [widths]
     W = int(width or rng.choice(widths))
-    params = {"W": W, "w_max": W - 2 * MARGIN, "seed": seed}
+    door_x = None if door is None else float(door) + 0.5 - W / 2
+    params = {"W": W, "w_max": W - 2 * MARGIN, "H": int(height or 0), "door_x": door_x, "seed": seed}
     style_kit = {}
     materials = {}
     for k in kit_files(style):
@@ -181,7 +191,13 @@ def compose(path, seed, width=None, overrides=None):
     }
     if ground:
         raw["ground"] = ground
-    info = {"blueprint": bp["name"], "style": style, "seed": seed, "W": W,
+    dx = None
+    for e in parts:
+        if e.get("name") == "door":
+            at = M.evaluate(e.get("at", [0, 0, 0]), params)
+            dx = float(at[0])
+    info = {"blueprint": f"{style}/{bp['name']}", "name": bp["name"], "style": style, "seed": seed, "W": W,
+            "door_col": None if dx is None else int(math.floor(dx + W / 2)),
             "picked": {k: params[k] for k in (bp.get("choose") or {})}}
     return raw, params, info
 

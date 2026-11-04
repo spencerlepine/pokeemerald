@@ -11,7 +11,7 @@ choose:
   ew: [1.1, 1.35]                                # entry block width
   ed: [0.55, 0.85]                                # entry block depth
   eh: [0.5, 0.65]
-  ex: "=dx"
+  ex: "=door_x if door_x is not None else dx"
   side: {pick: [-1, 1]}                           # where the extras go
 parts:
   - {use: dome, name: dome, at: ["=dx", "=ed * 0.5 + R * ry", 0], with: {r: "=R", ry: "=ry", hk: "=hk"}}

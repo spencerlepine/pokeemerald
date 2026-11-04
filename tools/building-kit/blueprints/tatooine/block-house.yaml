@@ -13,6 +13,7 @@ choose:
   roof: {pick: [lip, dome, step, flat], weights: [3, 3, 2, 1]}
   door: {pick: [arch, slab], weights: [3, 2]}
   doorx: ["=-(w / 2 - 0.9)", "=(w / 2 - 0.9)"]
+  dxx: "=door_x if door_x is not None else doorx"
   wins: {pick: [round, slot, none], weights: [3, 2, 2]}
 parts:
   - {use: adobe-block, name: block, with: {w: "=w", d: "=d", h: "=h", batter: "=batter"}}
@@ -30,18 +31,18 @@ parts:
          with: {w: "=w * 0.52", d: "=d * 0.55", h: 0.75, batter: "=batter * 0.8"}}
   - when: "=door == 'arch'"
     parts:
-      - {use: door-arch, name: door, at: ["=doorx", 0, 0], with: {w: 0.85, h: 0.75}}
+      - {use: door-arch, name: door, at: ["=dxx", 0, 0], with: {w: 0.85, h: 0.75}}
     else:
-      - {use: door-slab, name: door, at: ["=doorx", 0, 0], with: {w: 0.9, h: 0.95}}
+      - {use: door-slab, name: door, at: ["=dxx", 0, 0], with: {w: 0.9, h: 0.95}}
   - when: "=wins != 'none'"
     parts:
       - pick:
           - parts:
               - when: "=wins == 'round'"
                 parts:
-                  - {use: window-round, name: win, at: ["=doorx + (1.15 if doorx < 0 else -1.15)", 0, "=h * 0.6"], with: {r: 0.2}}
+                  - {use: window-round, name: win, at: ["=dxx + (1.15 if dxx < 0 else -1.15)", 0, "=h * 0.6"], with: {r: 0.2}}
                 else:
-                  - {use: window-slot, name: win, at: ["=doorx + (1.25 if doorx < 0 else -1.25)", 0, "=h * 0.62"], with: {w: 0.7}}
+                  - {use: window-slot, name: win, at: ["=dxx + (1.25 if dxx < 0 else -1.25)", 0, "=h * 0.62"], with: {w: 0.7}}
   - chance: 0.55                                  # sloped buttresses at both front corners
     parts:
       - {use: buttress, name: b-w, at: ["=-w / 2 + 0.25", "=batter * 0.3", 0], with: {hh: "=h * 0.75", l: 0.5, t: 0.26}}

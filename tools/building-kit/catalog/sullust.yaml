@@ -1,0 +1,123 @@
+# Building catalog for SULLUST: one entry per building design (see bkit/catalog.py).
+planet: SULLUST
+buildings:
+- id: bld:sullust:inyusu-tor-ash-farm
+  kind: landmark
+  name: Ash farm
+  areas: [inyusu-tor]
+  art: art:sullust:ash-farm
+  size: [6, 4]
+  door: 3
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:sullust:inyusu-tor-bacta-center
+  kind: bacta
+  name: Bacta Center
+  areas: [inyusu-tor]
+  art: art:shared:bacta-center
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:sullust:inyusu-tor-supply-depot
+  kind: depot
+  name: Supply Depot
+  areas: [inyusu-tor]
+  art: art:shared:supply-depot
+  size: [4, 4]
+  door: 1
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:sullust:inyusu-tor-dr-tien-s-observatory
+  kind: landmark
+  name: Dr. Tien's observatory
+  areas: [inyusu-tor]
+  art: art:sullust:sullustan-home
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:sullust:inyusu-tor-move-tutor-s-home
+  kind: home
+  name: Move tutor's home
+  areas: [inyusu-tor]
+  art: art:sullust:sullustan-home
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:sullust:pirin-sabine-s-arena
+  kind: arena
+  name: Sabine's arena
+  areas: [pirin]
+  art: art:sullust:sabine-s-arena
+  size: [7, 5]
+  door: 3
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:sullust:pirin-bacta-center
+  kind: bacta
+  name: Bacta Center
+  areas: [pirin]
+  art: art:shared:bacta-center
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:sullust:pirin-supply-depot
+  kind: depot
+  name: Supply Depot
+  areas: [pirin]
+  art: art:shared:supply-depot
+  size: [4, 4]
+  door: 1
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:sullust:pirin-hot-spring-bathhouse
+  kind: landmark
+  name: Hot-spring bathhouse
+  areas: [pirin]
+  art: art:sullust:hot-spring-bathhouse
+  size: [6, 4]
+  door: 3
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:sullust:pirin-sullustan-home
+  kind: home
+  name: Sullustan home
+  areas: [pirin]
+  art: art:sullust:sullustan-home
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:sullust:route-113-tatooine-landing-zone-ships
+  kind: pad
+  name: Tatooine landing zone (ships)
+  areas: [route-113]
+  art: art:shared:landing-pad
+  size: [6, 3]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:sullust:route-114-lanettes-house
+  kind: home
+  name: Lanettes house
+  areas: [route-114]
+  art: art:sullust:sullustan-home
+  size: [5, 3]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''

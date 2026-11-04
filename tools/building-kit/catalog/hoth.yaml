@@ -1,0 +1,33 @@
+# Building catalog for HOTH: one entry per building design (see bkit/catalog.py).
+planet: HOTH
+buildings:
+- id: bld:hoth:hoth-tundra-survey-shuttle-pad-ships
+  kind: pad
+  name: Survey shuttle pad (ships)
+  areas: [hoth-tundra]
+  art: art:shared:landing-pad
+  size: [6, 4]
+  door: 3
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:hoth:hoth-tundra-rebel-survey-outpost
+  kind: hangar
+  name: Rebel survey outpost
+  areas: [hoth-tundra]
+  art: art:hoth:echo-base-hangar-door
+  size: [8, 5]
+  door: 4
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:hoth:hoth-tundra-tauntaun-shelter
+  kind: hut
+  name: Tauntaun shelter
+  areas: [hoth-tundra]
+  art: art:hoth:tauntaun-shelter
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''

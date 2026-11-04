@@ -1,0 +1,113 @@
+# Building catalog for YAVIN-4: one entry per building design (see bkit/catalog.py).
+planet: YAVIN-4
+buildings:
+- id: bld:yavin-4:route-124-diving-treasure-hunters-house
+  kind: home
+  name: Diving treasure hunters house
+  areas: [route-124]
+  art: art:tatooine:homestead-dome
+  size: [5, 3]
+  door: 1
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:yavin-4:yavin-4-massassi-temple-arena
+  kind: arena
+  name: Massassi Temple (arena)
+  areas: [yavin-4]
+  art: art:yavin-4:massassi-temple
+  size: [10, 8]
+  door: 5
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:yavin-4:yavin-4-bacta-center
+  kind: bacta
+  name: Bacta Center
+  areas: [yavin-4]
+  art: art:shared:bacta-center
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:yavin-4:yavin-4-supply-depot
+  kind: depot
+  name: Supply Depot
+  areas: [yavin-4]
+  art: art:shared:supply-depot
+  size: [4, 4]
+  door: 1
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:yavin-4:yavin-4-rebel-hangar
+  kind: hangar
+  name: Rebel hangar
+  areas: [yavin-4]
+  art: art:yavin-4:rebel-hangar
+  size: [8, 5]
+  door: 4
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:yavin-4:yavin-4-leia-s-quarters
+  kind: hangar
+  name: Leia's quarters
+  areas: [yavin-4]
+  art: art:yavin-4:rebel-hangar
+  size: [8, 5]
+  door: 4
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:yavin-4:yavin-4-pilots-barracks
+  kind: home
+  name: Pilots' barracks
+  areas: [yavin-4]
+  art: art:tatooine:homestead-dome
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:yavin-4:yavin-4-sabacc-den
+  kind: landmark
+  name: Sabacc den
+  areas: [yavin-4]
+  art: art:tatooine:homestead-dome
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:yavin-4:yavin-4-mechanics-barracks
+  kind: home
+  name: Mechanics' barracks
+  areas: [yavin-4]
+  art: art:tatooine:homestead-dome
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:yavin-4:yavin-4-medic-s-hut
+  kind: hut
+  name: Medic's hut
+  areas: [yavin-4]
+  art: art:tatooine:homestead-dome
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
+- id: bld:yavin-4:yavin-4-scout-s-hut
+  kind: hut
+  name: Scout's hut
+  areas: [yavin-4]
+  art: art:tatooine:homestead-dome
+  size: [5, 4]
+  door: 2
+  blueprint: ''
+  seed: 0
+  about: ''
