@@ -1,0 +1,19 @@
+# Anchorhead (VerdanturfTown), 28x22 (was 20x20). Exit east on rows 10-11 (route 117); Beggar's Canyon (the Rusturf
+# Tunnel) is a warp at the west end of the main street (0,10). Verdanturf's scripts place no one, so only the events
+# move.
+objects:
+  1: Water seller            # the man (clean air)
+  2: [1, 9]                  # the twin, by the canyon tunnel mouth, facing it
+  3: Kid playing with a model skyhopper   # the boy (the guy in the tunnel), wanders up and down
+  4: Farmhand                # the camper (battle tent debut), by the co-op
+bgs:
+  0: [25, 7]                 # Supply Depot signs, beside its door (24,7)
+  1: Town holo-sign
+  2: [6, 7]                  # Bacta Center signs, beside its door (5,7)
+  3: [6, 17]                 # Camie's house sign, beside its door (5,17)
+  4: [23, 7]
+  5: [4, 7]
+  6: Co-op sign              # the battle tent sign
+  7: [0, 11]                 # Beggar's Canyon sign, beside the tunnel mouth
+heal:
+  HEAL_LOCATION_VERDANTURF_TOWN: [5, 8]

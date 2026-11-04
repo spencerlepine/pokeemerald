@@ -227,7 +227,7 @@ class Builder:
             _, png, w, h, mirror, cx, cy, under, door = s
             pix = piece_pixels(png, w, h, mirror)[cy * 16:(cy + 1) * 16, cx * 16:(cx + 1) * 16]
             refs = self.bottom_of(under) + [new_ref(t) for t in split16(pix)]
-            beh = mb("MB_NON_ANIMATED_DOOR") if door else mb("MB_NORMAL")
+            beh = mb(door) if isinstance(door, str) else mb("MB_NON_ANIMATED_DOOR") if door else mb("MB_NORMAL")
             return refs, beh | (COVERED << 12)
         raise ValueError(s)
 

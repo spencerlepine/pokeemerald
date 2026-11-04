@@ -99,7 +99,35 @@ def add_pieces(C):
                     C.coll[yy, xx], C.elev[yy, xx] = 0, 3
                 else:
                     C.coll[yy, xx], C.elev[yy, xx] = 1, 0
+    add_warp_mouths(C)
     return ps
+
+
+def add_warp_mouths(C):
+    """A `warps:` cell of a redrawn or new outdoor map is a cave mouth, drawn with the planet's cave-mouth
+    placeholder (world_kits.csv). Inside the map it warps when stepped on (MB_NON_ANIMATED_DOOR; the player comes
+    back out walking the way they face, so the cell below must be open). On the map's edge it is an arrow warp
+    (press toward the edge on it), and the player comes back standing on it. A dungeon's own warps (ladders,
+    holes) wait for their chunk."""
+    area = C.area
+    if area.mode not in ("redraw", "new") or area.kind in ("interior", "dungeon"):
+        return
+    planet = area.planet.lower().replace(" ", "-")
+    png = B.WIKI / f"world/kits/placeholders/warp/{planet}/cave-mouth.png"
+    png = str(png if png.exists() else PLACEHOLDER)
+    for w in area.warps:
+        xx, yy = w["at"]
+        if not (0 <= xx < area.w and 0 <= yy < area.h) or not w.get("to"):
+            continue
+        under = int(C.meta[yy, xx])
+        under = under if under >= 0 else C.symbol(under)
+        edge = ("MB_WEST_ARROW_WARP" if xx == 0 else "MB_EAST_ARROW_WARP" if xx == area.w - 1 else
+                "MB_NORTH_ARROW_WARP" if yy == 0 else "MB_SOUTH_ARROW_WARP" if yy == area.h - 1 else None)
+        C.meta[yy, xx] = C.sym(("piece", png, 1, 1, False, 0, 0, under, edge or True))
+        C.coll[yy, xx], C.elev[yy, xx] = 0, 3
+        if not edge and (yy + 1 >= area.h or C.coll[yy + 1, xx]):
+            C.notes.append(f"warp {w.get('name', '')} at ({xx},{yy}): the cell below is solid, the player comes out "
+                           f"into it")
 
 
 def align_doors(areas):
