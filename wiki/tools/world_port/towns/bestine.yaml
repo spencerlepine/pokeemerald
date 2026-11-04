@@ -1,0 +1,80 @@
+# Bestine (RustboroCity), 48x62 (was 40x60). Exits: north (route 115) on columns 22-24, south (route 104) on 23-24,
+# east (route 116) on rows 12-13 through a two-row corridor (x 44-47). The Organa tower (Devon Corp) door is (12,15),
+# one cell (vanilla's two warps share it); the arena door is (33,21).
+#   Stolen goods: leaving the arena west the player crosses x=28 (rows 20-24); the thief runs from the tower side along
+#     row 19 and up column 25 toward the east road, the Organa clerk after him.
+#   The clerk then waits in the east corridor at (44,12): the player passes beside him (43,12) or below (44,13), both
+#     ways (to route 116 and back with the parts, (45,12) from the east).
+#   The rival waits at (21,57) above the south road; the trigger line is row 60 (x 18-24), offsets -3..+3 as vanilla's.
+objects:
+  1: [27, 23]                # woman (the arena is hard), by the arena
+  2: Guard at the tower      # fat man (Organa talk; saw the thief)
+  3: Academy kid             # ninja boy
+  4: keep                    # twin (21,46)
+  5: keep                    # boy (Han's landing pad, south) (12,45)
+  6: Biggs's student         # man (arena challenge)
+  7: keep                    # little boy (24,51), facing the girl
+  8: keep                    # little girl (25,51)
+  9: [44, 12]                # Organa clerk after the theft (hidden until then)
+  10: [14, 19]               # the thief (hidden; the scene shows him)
+  11: Organa engineer        # Devon employee (who are you?)
+  12: keep                   # item ball X DEFEND (36,51)
+  13: Market trader          # man (traded companions grow fast)
+  14: [21, 57]               # rival
+  15: [12, 15]               # the StarNAV scientist, at the tower door (hidden; a script shows him)
+  16: Speeder racer          # boy (2-on-2 battles)
+coords:
+  0: [28, 20]
+  1: [28, 21]
+  2: [28, 22]
+  3: [28, 23]
+  4: [28, 24]
+  5: drop                    # help: from above (wall now)
+  6: [43, 12]                # help: from the left
+  7: [44, 13]                # help: from below
+  8: drop                    # help: two below (wall now)
+  9: drop                    # return: from above (wall now)
+  10: [45, 12]               # return: from the right
+  11: [44, 13]               # return: from below
+  12: drop                   # return: two below (wall now)
+  13: drop                   # rival, offset -4 (the road is 7 wide here)
+  14: [18, 60]
+  15: [19, 60]
+  16: [20, 60]
+  17: [21, 60]
+  18: [22, 60]
+  19: [23, 60]
+  20: [24, 60]
+bgs:
+  0: Arena sign
+  1: Academy sign
+  2: [29, 42]                # Supply Depot signs, beside its door (28,42)
+  3: [17, 41]                # Bacta Center signs, beside its door (16,41)
+  4: City holo-sign
+  5: [30, 42]
+  6: [18, 41]
+  7: Organa tower sign
+  8: [42, 11]                # Beggar's Canyon sign, above the east road
+  9: [9, 42]                 # vibroblade smith's sign, beside its door (8,42)
+heal:
+  HEAL_LOCATION_RUSTBORO_CITY: [16, 42]
+patches:
+  - old: "setobjectxyperm LOCALID_RUSTBORO_DEVON_EMPLOYEE, 14, 21"
+    new: "setobjectxyperm LOCALID_RUSTBORO_DEVON_EMPLOYEE, 15, 19"
+    count: 5
+  - old: "setobjectxyperm LOCALID_RUSTBORO_DEVON_EMPLOYEE, 30, 10"
+    new: "setobjectxyperm LOCALID_RUSTBORO_DEVON_EMPLOYEE, 44, 12"
+movements:
+  RustboroCity_Movement_GruntEscape: Fr2 fr9 fu6
+  RustboroCity_Movement_EmployeeChaseGrunt1: r10 ifu
+  RustboroCity_Movement_EmployeeChaseGrunt2: u5
+checks:
+  - {movement: RustboroCity_Movement_GruntEscape, from: [14, 19], to: [25, 13]}
+  - {movement: RustboroCity_Movement_EmployeeChaseGrunt1, from: [15, 19], to: [25, 19]}
+  - {movement: RustboroCity_Movement_EmployeeChaseGrunt2, from: [25, 19], to: [25, 14]}
+  - {movement: RustboroCity_Movement_PlayerWalkDown, from: [12, 16], to: [12, 17]}
+  - {movement: RustboroCity_Movement_ScientistApproachPlayer, from: [12, 15], to: [12, 16]}
+  - {movement: RustboroCity_Movement_ScientistLeave, from: [12, 16], to: [12, 15]}
+  - {movement: RustboroCity_Movement_RivalApproachPlayer1, from: [21, 57], to: [18, 59]}
+  - {movement: RustboroCity_Movement_RivalApproachPlayer4, from: [21, 57], to: [21, 59]}
+  - {movement: RustboroCity_Movement_RivalApproachPlayer7, from: [21, 57], to: [24, 59]}

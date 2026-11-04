@@ -12,7 +12,8 @@ removed), placed by `towns/<area-id>.yaml`:
   patches:   script edits, each {old, new, file (default: the map's scripts.inc), count (default 1)}. A patch
              already applied (its new text present) is skipped, so the port can run again.
   movements: label -> steps, rewriting that movement in the map's scripts.inc: "D8 d7 r21 u ifr" is delay_8,
-             7 x walk_down, 21 x walk_right, walk_up, walk_in_place_faster_right ("inv" is set_invisible).
+             7 x walk_down, 21 x walk_right, walk_up, walk_in_place_faster_right ("fr" is walk_fast_right, "Fr"
+             walk_faster_right, "inv" set_invisible).
              Run again, it writes the same block.
   heal:      HEAL_LOCATION_X -> [x, y] (where the player stands after a blackout or fly).
   checks:    {movement: Label, from: [x, y], to: [x, y]}: the movement is walked on the new layout and
@@ -109,9 +110,10 @@ def expand_steps(spec):
     """'D8 d7 r21 u ifr' -> movement commands."""
     out = []
     for tok in str(spec).split():
-        m = re.match(r"^(if)?([durl])(\d*)$", tok)
+        m = re.match(r"^(if|f|F)?([durl])(\d*)$", tok)
         if m:
-            cmd = ("walk_in_place_faster_" if m.group(1) else "walk_") + DIRS[m.group(2)]
+            cmd = {"if": "walk_in_place_faster_", "f": "walk_fast_", "F": "walk_faster_"}.get(m.group(1), "walk_")
+            cmd += DIRS[m.group(2)]
             out += [cmd] * int(m.group(3) or 1)
         elif re.match(r"^D\d+$", tok):
             out.append(f"delay_{tok[1:]}")

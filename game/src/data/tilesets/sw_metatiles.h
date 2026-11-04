@@ -9,6 +9,9 @@ const u16 gMetatileAttributes_SwBensHut[] = INCBIN_U16("data/tilesets/secondary/
 const u16 gMetatiles_SwBensHutInterior[] = INCBIN_U16("data/tilesets/secondary/sw/bens-hut-interior/metatiles.bin");
 const u16 gMetatileAttributes_SwBensHutInterior[] = INCBIN_U16("data/tilesets/secondary/sw/bens-hut-interior/metatile_attributes.bin");
 
+const u16 gMetatiles_SwBestine[] = INCBIN_U16("data/tilesets/secondary/sw/bestine/metatiles.bin");
+const u16 gMetatileAttributes_SwBestine[] = INCBIN_U16("data/tilesets/secondary/sw/bestine/metatile_attributes.bin");
+
 const u16 gMetatiles_SwJabbasPalace[] = INCBIN_U16("data/tilesets/secondary/sw/jabbas-palace/metatiles.bin");
 const u16 gMetatileAttributes_SwJabbasPalace[] = INCBIN_U16("data/tilesets/secondary/sw/jabbas-palace/metatile_attributes.bin");
 

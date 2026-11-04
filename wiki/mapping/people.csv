@@ -139,3 +139,6 @@ person:mos-entha:002,mos-entha,Spacer admiring the starfighter,,,npc,,,,,,"""Tha
 person:tosche-station:010,tosche-station,Converter mechanic,,,npc,,,,,,"""Another burnt-out power converter. Out here the sand gets into everything.""",,object-gfx:man-3,,,,
 person:anchorhead:001,anchorhead,Camie,,,npc,character:wanda,,,,,"""Luke's always racing skyhoppers through BEGGAR'S CANYON. One day he'll fly right into a wall.""","Camie in town; vanilla Wanda stays in her house and the tunnel too.",object-gfx:woman-2,,,,
 person:anchorhead:002,anchorhead,Camie's dad,,,npc,,,,,,"""Fixer's still digging out that canyon pass. Says he's doing it for my daughter. Hmph.""",,object-gfx:man-2,,,,
+person:bestine:001,bestine,Sen. Organa (visiting the tower),,,npc,,,,,,"""House Organa builds here because Bestine's people still trade fairly. Keep it that way, young one.""","Bail Organa, visiting his House's office tower before Act 2.",object-gfx:gentleman,,,,
+person:bestine:002,bestine,Market trader,2,,npc,,,,,,"""Parts from every crashed freighter between here and Mos Eisley! Ask about the hyperdrive motivators.""",Second stall in the market square.,object-gfx:man-4,,,,
+person:bestine:003,bestine,Old spacer,,,npc,,,,,,"""Han Solo's freighter? Fastest hunk of junk I ever saw. Lands south of here when he's dodging the Hutts.""",,object-gfx:old-man,,,,

@@ -33,6 +33,17 @@ const struct Tileset gTileset_SwBensHutInterior =
     .callback = NULL,
 };
 
+const struct Tileset gTileset_SwBestine =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SwBestine,
+    .palettes = gTilesetPalettes_SwBestine,
+    .metatiles = gMetatiles_SwBestine,
+    .metatileAttributes = gMetatileAttributes_SwBestine,
+    .callback = InitTilesetAnim_Rustboro,
+};
+
 const struct Tileset gTileset_SwJabbasPalace =
 {
     .isCompressed = TRUE,
