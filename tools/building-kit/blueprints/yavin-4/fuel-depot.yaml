@@ -1,0 +1,25 @@
+# A Rebel fuel depot on Yavin 4 (starfighter fuel for the hangar): standing tanks with domed caps and
+# lying tanks on saddles, joined by pipes, on a stone apron; a pump hut and a blast barricade.
+name: fuel-depot
+style: yavin-4
+about: Standing and lying Rebel fuel tanks on a stone apron, pipes, a pump hut and a barricade.
+width: [3, 4, 5]
+choose:
+  w: ["=w_max * 0.9", "=w_max"]
+  n: "=1 if W <= 3 else 2"
+  lying: {pick: [true, false], weights: [1, 1]}
+  side: {pick: [-1, 1]}
+  th: [0.75, 1.0]
+parts:
+  - {use: stone-tier, name: apron, with: {w: "=w", d: 1.9, h: 0.12, top: 0.98}}
+  - repeat: "=n"
+    parts:
+      - {use: tank, name: tank, at: ["=side * (w / 2 - 0.5 - i * 0.95)", 1.2, 0.12], with: {r: 0.42, h: "=th - i * 0.15"}}
+  - when: "=lying"
+    parts:
+      - {use: tank-lying, name: lying, at: ["=-side * (w / 2 - 0.95)", 0.6, 0.12], with: {l: "=min(1.8, w * 0.45)", r: 0.32}}
+    else:
+      - {use: module, name: pump, at: ["=-side * (w / 2 - 0.6)", 0.35, 0.12], with: {w: 1.0, d: 0.8, h: 0.55, rise: 0.1}}
+      - {name: pump-door, mat: dark, box: {c: ["=-side * (w / 2 - 0.6)", 0.3, 0.4], half: [0.2, 0.05, 0.25]}}
+  - {name: pipe, mat: metal, box: {c: [0, 0.95, 0.35], half: ["=w / 2 - 0.4", 0.07, 0.07], radius: 0.03}}
+  - {use: barricade, name: barricade, at: ["=side * (w / 2 - 0.75)", 0.0, 0], with: {w: 1.1, h: 0.35}}

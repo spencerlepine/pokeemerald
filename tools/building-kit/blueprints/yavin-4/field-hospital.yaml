@@ -1,0 +1,28 @@
+# The Rebel field hospital on Yavin 4 (the base's medical bay brought outside): a Massassi stone base
+# with a long Rebel prefab ward on it, a big glass bacta tank by the door, a landing light or a mast.
+name: field-hospital
+style: yavin-4
+about: Massassi stone base with a Rebel prefab ward on top, a glass bacta tank by the door, a light or a mast.
+width: [5]
+choose:
+  w: ["=w_max * 0.9", "=w_max"]
+  d: [1.6, 1.85]
+  bh: [0.55, 0.7]
+  side: {pick: [-1, 1]}
+  dx: "=door_x if door_x is not None else 0"
+  top: {pick: [mast, beacon], weights: [1, 1]}
+parts:
+  - {use: stone-tier, name: base, with: {w: "=w", d: "=d", h: "=bh", top: 0.92}}
+  - {use: module, name: ward, at: ["=side * 0.15", 0.25, "=bh"], with: {w: "=w * 0.8", d: "=d - 0.4", h: 0.6, rise: 0.2}}
+  - {use: window-slot, name: ward-win, at: ["=side * 0.15 + (0.8 if dx <= 0 else -0.8)", 0.25, "=bh + 0.38"], with: {w: 0.7, h: 0.2}}
+  - {name: door-frame, mat: prefab, box: {c: ["=dx", -0.02, "=(bh + 0.45) / 2"], half: [0.55, 0.08, "=(bh + 0.45) / 2"], radius: 0.03}}
+  - {use: door-slab, name: door, at: ["=dx", 0, 0], with: {w: 0.8, h: "=bh + 0.35", door: metal, trim: prefab}}
+  - {name: tank-glass, mat: light, cylinder: {a: ["=-side * (w / 2 - 0.45)", 0.3, 0.12], b: ["=-side * (w / 2 - 0.45)", 0.3, 1.05], r1: 0.3}}
+  - {name: tank-base, mat: metal, cylinder: {a: ["=-side * (w / 2 - 0.45)", 0.3, 0], b: ["=-side * (w / 2 - 0.45)", 0.3, 0.16], r1: 0.36}}
+  - {name: tank-cap, mat: metal, cylinder: {a: ["=-side * (w / 2 - 0.45)", 0.3, 1.0], b: ["=-side * (w / 2 - 0.45)", 0.3, 1.18], r1: 0.36}}
+  - {name: tank-core, mat: mid, box: {c: ["=-side * (w / 2 - 0.45)", 0.06, 0.6], half: [0.08, 0.04, 0.3]}}
+  - when: "=top == 'mast'"
+    parts:
+      - {use: mast, name: mast, at: ["=side * (w / 2 - 0.4)", "=d * 0.7", "=bh"], with: {h: 1.0, dish: 0.24}}
+    else:
+      - {name: beacon, mat: light, ellipsoid: {c: ["=side * 0.15", "=d * 0.55", "=bh + 0.82"], r: [0.2, 0.2, 0.16]}}

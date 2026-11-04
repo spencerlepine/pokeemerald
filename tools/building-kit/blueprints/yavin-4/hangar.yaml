@@ -1,0 +1,47 @@
+# A Rebel hangar on Yavin 4 (A New Hope's hangar bay and its doors): a long low Massassi stone bunker
+# with a wide hangar mouth and a half-raised blast door, stone side blocks or Rebel prefab offices at the
+# ends, a comms mast, fuel tanks, crates; or an arched Rebel shelter with the stone only as a plinth.
+name: hangar
+style: yavin-4
+about: Long Massassi stone bunker with a wide hangar mouth and half-raised blast door, or a Rebel arched shelter.
+width: [6, 7, 8]
+choose:
+  w: ["=w_max * 0.94", "=w_max"]
+  form: {pick: [bunker, arch], weights: [3, 2]}
+  D: "=min((H or 5) * 0.55, 2.6)"
+  h: [1.05, 1.3]
+  mw: ["=w * 0.4", "=w * 0.5"]
+  dx: "=door_x if door_x is not None else 0"
+  open: [0.4, 0.75]
+  ends: {pick: [stone, prefab], weights: [1, 1]}
+  side: {pick: [-1, 1]}
+  extra: {pick: [mast, tanks, crates], weights: [2, 2, 1]}
+parts:
+  - when: "=form == 'bunker'"
+    parts:
+      - {use: stone-tier, name: bunker, with: {w: "=w", d: "=D", h: "=h", top: 0.86}}
+      - {use: stone-tier, name: roof-step, at: [0, "=D * 0.3", "=h"], with: {w: "=w * 0.6", d: "=D * 0.5", h: 0.35, top: 0.85}}
+      - {use: hangar-mouth, name: door, at: ["=dx", 0, 0], with: {w: "=mw", h: "=h * 0.7", open: "=open"}}
+      - {use: vines, name: vine, at: ["=side * (w / 2 - 0.6)", -0.02, "=h - 0.03"], with: {w: 0.7, h: 0.55}}
+      - when: "=ends == 'prefab'"
+        parts:
+          - {use: module, name: office, at: ["=-side * (w / 2 - 0.85)", "=D * 0.35", "=h"], with: {w: 1.4, d: "=D * 0.45", h: 0.45, rise: 0.12}}
+          - {use: window-slot, name: office-win, at: ["=-side * (w / 2 - 0.85)", "=D * 0.35", "=h + 0.25"], with: {w: 0.6, h: 0.18}}
+        else:
+          - {use: slot-row, name: slots, at: ["=-side * (w / 2 - (w / 2 - mw / 2) / 2 - 0.1)", 0.05, "=h * 0.5"], with: {w: "=(w / 2 - mw / 2) * 0.7", n: 2, sw: 0.3, sh: 0.3}}
+  - when: "=form == 'arch'"
+    parts:
+      - {use: stone-tier, name: plinth, with: {w: "=w", d: "=D", h: 0.3, top: 0.92}}
+      - {use: arch-hut, name: shell, at: [0, 0.1, 0.3], with: {w: "=w - 0.6", r: "=min(D / 2 - 0.05, 1.15)", sq: 0.85}}
+      - {name: door-frame, mat: metal, box: {c: ["=dx", 0.05, "=0.3 + min(D / 2 - 0.05, 1.15) * 0.42"], half: ["=mw / 2 + 0.12", 0.08, "=min(D / 2 - 0.05, 1.15) * 0.42"], radius: 0.02}}
+      - {name: door, mat: dark, box: {c: ["=dx", -0.0, "=0.3 + min(D / 2 - 0.05, 1.15) * 0.36"], half: ["=mw / 2", 0.06, "=min(D / 2 - 0.05, 1.15) * 0.36"]}}
+  - when: "=extra == 'mast'"
+    parts:
+      - {use: mast, name: mast, at: ["=side * (w / 2 - 0.35)", "=D * 0.7", "=h if form == 'bunker' else 0.3"], with: {h: 1.0, dish: 0.28}}
+  - when: "=extra == 'tanks'"
+    parts:
+      - {use: tank, name: tank, at: ["=side * (w / 2 - 0.4)", 0.35, 0], with: {r: 0.3, h: 0.6}}
+  - when: "=extra == 'crates'"
+    parts:
+      - {use: crate, name: crate, at: ["=side * (w / 2 - 0.35)", 0.0, 0], with: {s: 0.5}}
+      - {use: crate, name: crate2, at: ["=side * (w / 2 - 0.85)", 0.05, 0], with: {s: 0.4}}

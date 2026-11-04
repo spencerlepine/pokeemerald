@@ -8,9 +8,9 @@ buildings:
   art: art:jedha:temple-of-the-kyber
   size: [8, 6]
   door: 4
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: jedha/kyber-temple
+  seed: 101
+  about: 'The Temple of the Kyber (Rogue One): terraced sandstone, pylons at the gate, guardian statues of the Whills.'
 - id: bld:jedha:nijedha-bacta-center
   kind: bacta
   name: Bacta Center
@@ -18,9 +18,9 @@ buildings:
   art: art:shared:bacta-center
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: jedha/domed-hall
+  seed: 102
+  about: 'NiJedha''s Bacta Center: a domed sandstone hall like the holy city''s shrines (Rogue One).'
 - id: bld:jedha:nijedha-supply-depot
   kind: depot
   name: Supply Depot
@@ -28,9 +28,9 @@ buildings:
   art: art:shared:supply-depot
   size: [4, 4]
   door: 1
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: jedha/trade-house
+  seed: 103
+  about: A NiJedha trading house under a deep cloth awning, the market street of Rogue One.
 - id: bld:jedha:nijedha-guardians-quarters
   kind: home
   name: Guardians' quarters
@@ -38,9 +38,9 @@ buildings:
   art: art:tatooine:sunken-courtyard-home
   size: [6, 6]
   door: 3
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: jedha/walled-compound
+  seed: 104
+  about: 'Chirrut and Baze''s Guardians of the Whills: a walled sandstone compound with a gate (Rogue One).'
 - id: bld:jedha:nijedha-pilgrim-hostel
   kind: home
   name: Pilgrim hostel
@@ -48,9 +48,9 @@ buildings:
   art: art:tatooine:homestead-dome
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: jedha/stone-house
+  seed: 105
+  about: A pilgrims' hostel in NiJedha's stacked sandstone blocks, a cloth shade on the roof (Rogue One).
 - id: bld:jedha:route-122-pilgrim-landing-pad-ships
   kind: pad
   name: Pilgrim landing pad (ships)
@@ -58,6 +58,79 @@ buildings:
   art: art:shared:landing-pad
   size: [6, 4]
   door: 3
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: jedha/landing-pad
+  seed: 106
+  about: The stone pad where pilgrim shuttles set down outside the holy city (Rogue One).
+- id: bld:jedha:fill-market-stall
+  kind: market
+  name: Market stall
+  areas: []
+  art: ''
+  size: [3, 3]
+  door: null
+  blueprint: jedha/market-stall
+  seed: 111
+  about: A NiJedha street-market stall under a cloth awning (Rogue One).
+- id: bld:jedha:fill-double-stall
+  kind: market
+  name: Double market stall
+  areas: []
+  art: ''
+  size: [4, 3]
+  door: null
+  blueprint: jedha/market-stall
+  seed: 112
+  about: Two awnings side by side in the market where Jyn meets Saw's partisans (Rogue One).
+  set: {form: double}
+- id: bld:jedha:fill-pilgrim-shrine
+  kind: fill
+  name: Pilgrim shrine
+  areas: []
+  art: ''
+  size: [2, 3]
+  door: null
+  blueprint: jedha/shrine
+  seed: 113
+  about: A street shrine of the Whills with a kyber crystal and candles (Rogue One).
+- id: bld:jedha:fill-statue-shrine
+  kind: fill
+  name: Guardian shrine
+  areas: []
+  art: ''
+  size: [3, 3]
+  door: null
+  blueprint: jedha/shrine
+  seed: 114
+  about: A robed statue of the Whills on a stepped plinth, banners either side (Rogue One).
+  set: {what: statue, flags: true}
+- id: bld:jedha:fill-imperial-checkpoint
+  kind: fill
+  name: Imperial checkpoint
+  areas: []
+  art: ''
+  size: [4, 3]
+  door: null
+  blueprint: jedha/checkpoint
+  seed: 115
+  about: An Imperial pillbox and barrier arm of the occupation (Rogue One).
+- id: bld:jedha:fill-kyber-storehouse
+  kind: fill
+  name: Kyber storehouse
+  areas: []
+  art: ''
+  size: [5, 5]
+  door: null
+  blueprint: jedha/walled-compound
+  seed: 116
+  about: The walled store where the Empire loads kyber for the Death Star (Rogue One).
+  set: {inner: stack, gate: slab, corners: towers}
+- id: bld:jedha:fill-stone-house
+  kind: fill
+  name: Stone house
+  areas: []
+  art: ''
+  size: [4, 4]
+  door: null
+  blueprint: jedha/stone-house
+  seed: 117
+  about: A NiJedha house of stacked sandstone blocks (Rogue One).

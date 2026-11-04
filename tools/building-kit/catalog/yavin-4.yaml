@@ -8,9 +8,10 @@ buildings:
   art: art:tatooine:homestead-dome
   size: [5, 3]
   door: 1
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: yavin-4/prefab
+  seed: 201
+  about: A salvagers' Rebel-surplus shelter by the river, crates of finds outside.
+  set: {form: quonset, extra: crates}
 - id: bld:yavin-4:yavin-4-massassi-temple-arena
   kind: arena
   name: Massassi Temple (arena)
@@ -18,9 +19,9 @@ buildings:
   art: art:yavin-4:massassi-temple
   size: [10, 8]
   door: 5
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: yavin-4/ziggurat
+  seed: 202
+  about: 'The Great Temple of the Massassi (A New Hope): stepped ziggurat, the hangar mouth at its foot.'
 - id: bld:yavin-4:yavin-4-bacta-center
   kind: bacta
   name: Bacta Center
@@ -28,9 +29,9 @@ buildings:
   art: art:shared:bacta-center
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: yavin-4/field-hospital
+  seed: 203
+  about: 'The Rebel medical bay: a prefab ward on Massassi stone, a bacta tank by the door.'
 - id: bld:yavin-4:yavin-4-supply-depot
   kind: depot
   name: Supply Depot
@@ -38,9 +39,10 @@ buildings:
   art: art:shared:supply-depot
   size: [4, 4]
   door: 1
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: yavin-4/prefab
+  seed: 204
+  about: The Rebel quartermaster's prefab store, crates stacked by the door.
+  set: {form: module, extra: crates, footing: true, z0: 0.22}
 - id: bld:yavin-4:yavin-4-rebel-hangar
   kind: hangar
   name: Rebel hangar
@@ -48,19 +50,21 @@ buildings:
   art: art:yavin-4:rebel-hangar
   size: [8, 5]
   door: 4
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: yavin-4/hangar
+  seed: 205
+  about: 'The Rebel hangar bay (A New Hope): a stone bunker with a wide mouth and a half-raised blast door.'
+  set: {form: bunker, ends: prefab, extra: mast}
 - id: bld:yavin-4:yavin-4-leia-s-quarters
-  kind: hangar
+  kind: home
   name: Leia's quarters
   areas: [yavin-4]
   art: art:yavin-4:rebel-hangar
   size: [8, 5]
   door: 4
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: yavin-4/stone-hall
+  seed: 206
+  about: Leia's quarters in a Massassi annex, Rebel kit on its roof (A New Hope).
+  set: {tiers: 2, roof: module, porch: true}
 - id: bld:yavin-4:yavin-4-pilots-barracks
   kind: home
   name: Pilots' barracks
@@ -68,9 +72,10 @@ buildings:
   art: art:tatooine:homestead-dome
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: yavin-4/prefab
+  seed: 207
+  about: 'Rebel pilots'' barracks: prefab modules by the hangar (A New Hope).'
+  set: {form: twin, footing: true, z0: 0.22}
 - id: bld:yavin-4:yavin-4-sabacc-den
   kind: landmark
   name: Sabacc den
@@ -78,9 +83,10 @@ buildings:
   art: art:tatooine:homestead-dome
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: yavin-4/stone-hall
+  seed: 208
+  about: An off-duty sabacc den in an old Massassi hall, a tarp on its roof.
+  set: {roof: tarp, tiers: 1}
 - id: bld:yavin-4:yavin-4-mechanics-barracks
   kind: home
   name: Mechanics' barracks
@@ -88,9 +94,10 @@ buildings:
   art: art:tatooine:homestead-dome
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: yavin-4/prefab
+  seed: 209
+  about: 'The mechanics'' barracks: a Rebel quonset or twin modules, tanks outside.'
+  set: {form: quonset, extra: tank}
 - id: bld:yavin-4:yavin-4-medic-s-hut
   kind: hut
   name: Medic's hut
@@ -98,9 +105,10 @@ buildings:
   art: art:tatooine:homestead-dome
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: yavin-4/stone-hall
+  seed: 210
+  about: 'The medic''s hut: a small Massassi stone room with a Rebel door.'
+  set: {tiers: 1, roof: plain}
 - id: bld:yavin-4:yavin-4-scout-s-hut
   kind: hut
   name: Scout's hut
@@ -108,6 +116,78 @@ buildings:
   art: art:tatooine:homestead-dome
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: yavin-4/prefab
+  seed: 211
+  about: A Rebel scout's prefab hut with a comms mast for jungle patrols.
+  set: {form: twin, extra: mast}
+- id: bld:yavin-4:fill-command-post
+  kind: fill
+  name: Rebel command post
+  areas: []
+  art: ''
+  size: [5, 4]
+  door: null
+  blueprint: yavin-4/stone-hall
+  seed: 221
+  about: A Rebel command post in a Massassi annex, masts on the roof (A New Hope).
+  set: {roof: mast, tiers: 2}
+- id: bld:yavin-4:fill-sensor-tower
+  kind: fill
+  name: Sensor tower
+  areas: []
+  art: ''
+  size: [3, 4]
+  door: null
+  blueprint: yavin-4/sensor-tower
+  seed: 222
+  about: A Rebel long-range sensor mast on a Massassi plinth (A New Hope).
+- id: bld:yavin-4:fill-sensor-mast
+  kind: fill
+  name: Sensor mast
+  areas: []
+  art: ''
+  size: [2, 4]
+  door: null
+  blueprint: yavin-4/sensor-tower
+  seed: 223
+  about: A lone sensor mast watching the jungle canopy.
+- id: bld:yavin-4:fill-fuel-depot
+  kind: fill
+  name: Fuel depot
+  areas: []
+  art: ''
+  size: [5, 3]
+  door: null
+  blueprint: yavin-4/fuel-depot
+  seed: 224
+  about: Starfighter fuel tanks and a pump hut by the hangar (A New Hope).
+- id: bld:yavin-4:fill-ruined-shrine
+  kind: fill
+  name: Ruined Massassi shrine
+  areas: []
+  art: ''
+  size: [4, 4]
+  door: null
+  blueprint: yavin-4/ziggurat
+  seed: 225
+  about: A small Massassi temple swallowed by jungle, before the Rebels came.
+- id: bld:yavin-4:fill-ruined-temple
+  kind: fill
+  name: Ruined Massassi temple
+  areas: []
+  art: ''
+  size: [6, 5]
+  door: null
+  blueprint: yavin-4/ziggurat
+  seed: 226
+  about: A larger broken stepped temple of the Massassi in the jungle.
+- id: bld:yavin-4:fill-prefab-hut
+  kind: fill
+  name: Rebel prefab hut
+  areas: []
+  art: ''
+  size: [4, 3]
+  door: null
+  blueprint: yavin-4/prefab
+  seed: 227
+  about: A one-module Rebel shelter, stores or a workshop.

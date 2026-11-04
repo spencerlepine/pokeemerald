@@ -1,0 +1,52 @@
+# Rebel prefab shelters on Yavin 4 (the base's barracks, workshops, command post and stores, built
+# from the same kit as Echo Base): rounded modules with low arched roofs, or an arched quonset, joined
+# in one to three pieces on a stone footing; slab doors, slot or round windows, masts, tanks, crates.
+name: prefab
+style: yavin-4
+about: Rebel prefab modules or an arched quonset on a stone footing; slab door, windows, mast, tanks, crates.
+width: [3, 4, 5, 6]
+choose:
+  w: ["=w_max * 0.85", "=w_max"]
+  form: {pick: [module, twin, quonset], weights: [3, 3, 2]}
+  d: ["=max(1.2, (H or 4) * 0.38)", "=max(1.4, (H or 4) * 0.48)"]
+  h: [0.85, 1.05]
+  side: {pick: [-1, 1]}
+  dx: "=door_x if door_x is not None else 0"
+  wins: {pick: [slot, round], weights: [3, 2]}
+  extra: {pick: [mast, tank, crates, none], weights: [3, 2, 2, 1]}
+  footing: {pick: [true, false], weights: [2, 3]}
+  z0: "=0.22 if footing else 0"
+  wx: "=dx + (1.1 if dx <= 0 else -1.1)"
+parts:
+  - when: "=footing"
+    parts:
+      - {use: stone-tier, name: footing, with: {w: "=w + 0.05", d: "=d + 0.1", h: "=z0", top: 0.96}}
+  - when: "=form == 'module'"
+    parts:
+      - {use: module, name: main, at: [0, 0.05, "=z0"], with: {w: "=w", d: "=d", h: "=h", rise: 0.25}}
+  - when: "=form == 'twin'"
+    parts:
+      - {use: module, name: main, at: ["=-side * w * 0.18", 0.05, "=z0"], with: {w: "=w * 0.64", d: "=d", h: "=h", rise: 0.25}}
+      - {use: module, name: annex, at: ["=side * w * 0.32", "=d * 0.3", "=z0"], with: {w: "=w * 0.36", d: "=d * 0.7", h: "=h * 0.75", rise: 0.15}}
+  - when: "=form == 'quonset'"
+    parts:
+      - {use: arch-hut, name: main, at: [0, 0.05, "=z0"], with: {w: "=w", r: "=min(d / 2, 1.0)", sq: "=min(1.15, h / min(d / 2, 1.0))"}}
+      - {name: entry, mat: prefab, box: {c: ["=dx", 0.25, "=z0 + 0.42"], half: [0.6, 0.25, 0.42], radius: 0.05}}
+  - {use: door-slab, name: door, at: ["=dx", "=0.05 if form != 'quonset' else 0.0", "=z0"], with: {w: 0.8, h: 0.72, door: metal, trim: metal}}
+  - when: "=abs(wx) < w / 2 - 0.4 and form != 'quonset'"
+    parts:
+      - when: "=wins == 'slot'"
+        parts:
+          - {use: window-slot, name: win, at: ["=wx", 0.05, "=z0 + h * 0.62"], with: {w: 0.65, h: 0.22}}
+        else:
+          - {use: window-round, name: win, at: ["=wx", 0.05, "=z0 + h * 0.6"], with: {r: 0.2}}
+  - when: "=extra == 'mast'"
+    parts:
+      - {use: mast, name: mast, at: ["=side * (w / 2 - 0.35)", "=d * 0.6", "=z0 + h"], with: {h: 0.9, dish: 0.25}}
+  - when: "=extra == 'tank' and W >= 4"
+    parts:
+      - {use: tank, name: tank, at: ["=-side * (w_max / 2 - 0.3)", 0.35, 0], with: {r: 0.27, h: 0.55}}
+  - when: "=extra == 'crates'"
+    parts:
+      - {use: crate, name: crate, at: ["=side * (w / 2 - 0.3)", -0.05, 0], with: {s: 0.45}}
+      - {use: crate, name: crate2, at: ["=side * (w / 2 - 0.3)", -0.02, 0.45], with: {s: 0.32}}
