@@ -77,6 +77,8 @@ static EWRAM_DATA struct {
     u8 tileBuffer[0x1c0];
     u8 nameBuffer[0x26]; // never read
     bool8 choseFlyLocation;
+    u8 numFlyIcons;           // StarNAV: the fly icons of the planet shown, destroyed when it zooms out
+    u8 flyIconSpriteIds[24];
 } *sFlyMap = NULL;
 
 static bool32 sDrawFlyDestTextWindow;
@@ -115,6 +117,10 @@ static void SpriteCB_FlyDestIcon(struct Sprite *sprite);
 static void CB_FadeInFlyMap(void);
 static void CB_HandleFlyMapInput(void);
 static void CB_ExitFlyMap(void);
+static void CB_ZoomFlyMap(void);
+static void StarNav_CreateFlyDestIcons(void);
+static void StarNav_DestroyFlyDestIcons(void);
+static bool8 StarNav_GetHomeCell(mapsec_u16_t mapSecId, u16 *x, u16 *y);
 
 static const u16 sRegionMapCursorPal[] = INCGFX_U16("graphics/pokenav/region_map/cursor.pal", ".gbapal");
 static const u32 sRegionMapCursorSmallGfxLZ[] = INCGFX_U32("graphics/pokenav/region_map/cursor_small.png", ".4bpp.lz");
@@ -129,6 +135,45 @@ static const u8 sRegionMapPlayerIcon_MayGfx[] = INCGFX_U8("graphics/pokenav/regi
 
 #include "data/region_map/region_map_layout.h"
 #include "data/region_map/region_map_entries.h"
+#include "data/region_map/starnav_map.h"
+
+/*
+ *  StarNAV (Holo Globe): zoomed out, the map is the galaxy with one globe per planet and the cursor jumps
+ *  between them. Zoomed in, it is one planet's hologram, with Emerald's cell cursor over that planet's own
+ *  grid of map sections. The art and tables come from tools/starnav-map/install.py.
+ *  The StarNAV, the town map and the Fly map use it. The Pokédex area screen keeps Emerald's map.
+ *  Its state lives in the region map's unused filler.
+ */
+struct StarNavState
+{
+    bool8 active;
+    u8 planet;       // the planet under the galaxy cursor, or the planet shown zoomed in
+    u8 playerPlanet; // STARNAV_PLANET_NONE when the player is not on the map
+    u8 playerX;      // the player's cursor cell on that planet
+    u8 playerY;
+    u8 zoomStep;
+    bool8 toPlanet;  // the zoom running goes from the galaxy to a planet
+};
+STATIC_ASSERT(sizeof(struct StarNavState) <= sizeof(((struct RegionMap *)0)->filler_084), StarNavStateTooBig);
+
+#define sStarNav ((struct StarNavState *)sRegionMap->filler_084)
+
+#define STARNAV_MAP_X 8 // where map pixel (0, 0) is on screen
+#define STARNAV_MAP_Y 16
+#define STARNAV_ZOOM_FRAMES 8
+#define STARNAV_PLANET_CENTER_X (STARNAV_MAP_X + 14 * 8) // the middle of a planet's hologram on screen
+#define STARNAV_PLANET_CENTER_Y (STARNAV_MAP_Y + 7 * 8)
+
+static void StarNav_LocatePlayer(void);
+static void StarNav_SnapPlayerToMapSec(mapsec_u16_t mapSecId);
+static void StarNav_SetGalaxyCursor(void);
+static void StarNav_SetPlanetCursor(void);
+static void StarNav_UpdateCursorMapSec(void);
+static u8 ProcessStarNavInput_Galaxy(void);
+static void StarNav_SetZoomView(bool8 galaxy, u8 t);
+static bool8 StarNav_UpdateZoom(void);
+static void SpriteCB_StarNavGalaxyCursor(struct Sprite *sprite);
+static void StarNav_PlacePlayerIcon(void);
 
 static const mapsec_u16_t sRegionMap_SpecialPlaceLocations[][2] =
 {
@@ -517,6 +562,10 @@ void InitRegionMapData(struct RegionMap *regionMap, const struct BgTemplate *tem
     sRegionMap->initStep = 0;
     sRegionMap->zoomed = zoomed;
     sRegionMap->inputCallback = zoomed == TRUE ? ProcessRegionMapInput_Zoomed : ProcessRegionMapInput_Full;
+    sStarNav->active = TRUE;
+    sStarNav->planet = 0;
+    sStarNav->playerPlanet = STARNAV_PLANET_NONE;
+    sStarNav->zoomStep = 0;
     if (template != NULL)
     {
         sRegionMap->bgNum = template->bg;
@@ -536,35 +585,73 @@ void InitRegionMapData(struct RegionMap *regionMap, const struct BgTemplate *tem
 void ShowRegionMapForPokedexAreaScreen(struct RegionMap *regionMap)
 {
     sRegionMap = regionMap;
+    sStarNav->active = FALSE;
     InitMapBasedOnPlayerLocation();
     sRegionMap->playerIconSpritePosX = sRegionMap->cursorPosX;
     sRegionMap->playerIconSpritePosY = sRegionMap->cursorPosY;
 }
 
+// The StarNAV's tiles, tilemap and palette for the view it shows: the galaxy, or the planet zoomed in.
+static const u32 *StarNav_ViewGfx(void)
+{
+    return sRegionMap->zoomed ? sStarNavPlanets[sStarNav->planet].gfx : sStarNavGalaxyGfxLZ;
+}
+
+static const u32 *StarNav_ViewTilemap(void)
+{
+    return sRegionMap->zoomed ? sStarNavPlanets[sStarNav->planet].tilemap : sStarNavGalaxyTilemapLZ;
+}
+
+static const u16 *StarNav_ViewPal(void)
+{
+    return sRegionMap->zoomed ? sStarNavHoloPal : sStarNavGalaxyPal;
+}
+
 bool8 LoadRegionMapGfx(void)
 {
+    const u32 *gfx = sRegionMapBg_GfxLZ;
+    const u32 *tilemap = sRegionMapBg_TilemapLZ;
+    const u16 *pal = sRegionMapBg_Pal;
+
+    if (sStarNav->active)
+    {
+        if (sRegionMap->initStep == 0)
+        {
+            // Find the player first: the view opens on their planet, or on the galaxy when they are not on the map
+            StarNav_LocatePlayer();
+            if (sStarNav->playerPlanet != STARNAV_PLANET_NONE)
+                sStarNav->planet = sStarNav->playerPlanet;
+            if (sStarNavPlanets[sStarNav->planet].gfx == NULL || sStarNav->playerPlanet == STARNAV_PLANET_NONE)
+                sRegionMap->zoomed = FALSE;
+            sRegionMap->inputCallback = sRegionMap->zoomed ? ProcessRegionMapInput_Full : ProcessStarNavInput_Galaxy;
+        }
+        gfx = StarNav_ViewGfx();
+        tilemap = StarNav_ViewTilemap();
+        pal = StarNav_ViewPal();
+    }
+
     switch (sRegionMap->initStep)
     {
     case 0:
         if (sRegionMap->bgManaged)
-            DecompressAndCopyTileDataToVram(sRegionMap->bgNum, sRegionMapBg_GfxLZ, 0, 0, 0);
+            DecompressAndCopyTileDataToVram(sRegionMap->bgNum, gfx, 0, 0, 0);
         else
-            LZ77UnCompVram(sRegionMapBg_GfxLZ, (u16 *)BG_CHAR_ADDR(2));
+            LZ77UnCompVram(gfx, (u16 *)BG_CHAR_ADDR(2));
         break;
     case 1:
         if (sRegionMap->bgManaged)
         {
             if (!FreeTempTileDataBuffersIfPossible())
-                DecompressAndCopyTileDataToVram(sRegionMap->bgNum, sRegionMapBg_TilemapLZ, 0, 0, 1);
+                DecompressAndCopyTileDataToVram(sRegionMap->bgNum, tilemap, 0, 0, 1);
         }
         else
         {
-            LZ77UnCompVram(sRegionMapBg_TilemapLZ, (u16 *)BG_SCREEN_ADDR(28));
+            LZ77UnCompVram(tilemap, (u16 *)BG_SCREEN_ADDR(28));
         }
         break;
     case 2:
         if (!FreeTempTileDataBuffersIfPossible())
-            LoadPalette(sRegionMapBg_Pal, BG_PLTT_ID(7), 3 * PLTT_SIZE_4BPP);
+            LoadPalette(pal, BG_PLTT_ID(7), 3 * PLTT_SIZE_4BPP);
         break;
     case 3:
         LZ77UnCompWram(sRegionMapCursorSmallGfxLZ, sRegionMap->cursorSmallImage);
@@ -573,6 +660,16 @@ bool8 LoadRegionMapGfx(void)
         LZ77UnCompWram(sRegionMapCursorLargeGfxLZ, sRegionMap->cursorLargeImage);
         break;
     case 5:
+        if (sStarNav->active)
+        {
+            sRegionMap->playerIconSpritePosX = sStarNav->playerX;
+            sRegionMap->playerIconSpritePosY = sStarNav->playerY;
+            if (sRegionMap->zoomed)
+                StarNav_SetPlanetCursor();
+            else
+                StarNav_SetGalaxyCursor();
+            break;
+        }
         InitMapBasedOnPlayerLocation();
         sRegionMap->playerIconSpritePosX = sRegionMap->cursorPosX;
         sRegionMap->playerIconSpritePosY = sRegionMap->cursorPosY;
@@ -581,8 +678,9 @@ bool8 LoadRegionMapGfx(void)
         GetMapName(sRegionMap->mapSecName, sRegionMap->mapSecId, MAP_NAME_LENGTH);
         break;
     case 6:
-        if (sRegionMap->zoomed == FALSE)
+        if (sRegionMap->zoomed == FALSE || sStarNav->active)
         {
+            // Both StarNAV views are drawn at full size
             CalcZoomScrollParams(0, 0, 0, 0, 0x100, 0x100, 0);
         }
         else
@@ -595,7 +693,8 @@ bool8 LoadRegionMapGfx(void)
         }
         break;
     case 7:
-        GetPositionOfCursorWithinMapSec();
+        if (!sStarNav->active)
+            GetPositionOfCursorWithinMapSec();
         UpdateRegionMapVideoRegs();
         sRegionMap->cursorSprite = NULL;
         sRegionMap->playerIconSprite = NULL;
@@ -803,6 +902,15 @@ static u8 MoveRegionMapCursor_Zoomed(void)
 
 void SetRegionMapDataForZoom(void)
 {
+    if (sStarNav->active)
+    {
+        sStarNav->zoomStep = 0;
+        sStarNav->toPlanet = !sRegionMap->zoomed;
+        FreeRegionMapCursorSprite();
+        sRegionMap->cursorSprite = NULL;
+        HideRegionMapPlayerIcon();
+        return;
+    }
     if (sRegionMap->zoomed == FALSE)
     {
         sRegionMap->scrollY = 0;
@@ -840,6 +948,8 @@ bool8 UpdateRegionMapZoom(void)
 {
     bool8 retVal;
 
+    if (sStarNav->active)
+        return StarNav_UpdateZoom();
     if (sRegionMap->unk_06e >= 16)
     {
         return FALSE;
@@ -962,6 +1072,13 @@ static mapsec_u16_t GetMapSecIdAt(u16 x, u16 y)
     }
     y -= MAPCURSOR_Y_MIN;
     x -= MAPCURSOR_X_MIN;
+    if (sStarNav->active)
+    {
+        // The galaxy has no map sections; a planet has its own grid
+        if (!sRegionMap->zoomed || sStarNavPlanets[sStarNav->planet].gfx == NULL)
+            return MAPSEC_NONE;
+        return sStarNavLayouts[sStarNav->planet][y][x];
+    }
     return sRegionMap_MapSectionLayout[y][x];
 }
 
@@ -1302,7 +1419,7 @@ static void GetPositionOfCursorWithinMapSec(void)
         sRegionMap->posWithinMapSec = 0;
         return;
     }
-    if (!sRegionMap->zoomed)
+    if (!sRegionMap->zoomed || sStarNav->active)
     {
         x = sRegionMap->cursorPosX;
         y = sRegionMap->cursorPosY;
@@ -1336,6 +1453,9 @@ static void GetPositionOfCursorWithinMapSec(void)
             }
         }
     }
+    // A StarNAV planet can give a section more cells than Emerald did; Ever Grande has two names (fly map)
+    if (sStarNav->active && sRegionMap->mapSecId == MAPSEC_EVER_GRANDE_CITY && posWithinMapSec > 1)
+        posWithinMapSec = 1;
     sRegionMap->posWithinMapSec = posWithinMapSec;
 }
 
@@ -1375,10 +1495,13 @@ static void SpriteCB_CursorMapZoomed(struct Sprite *sprite)
 void CreateRegionMapCursor(u16 tileTag, u16 paletteTag)
 {
     u8 spriteId;
+    bool8 large;
     struct SpriteTemplate template;
     struct SpritePalette palette;
     struct SpriteSheet sheet;
 
+    // Emerald's zoomed-in view has the large cursor; the StarNAV galaxy has it (a ring around a globe)
+    large = sStarNav->active ? !sRegionMap->zoomed : sRegionMap->zoomed;
     palette = sRegionMapCursorSpritePalette;
     template = sRegionMapCursorSpriteTemplate;
     sheet.tag = tileTag;
@@ -1387,7 +1510,7 @@ void CreateRegionMapCursor(u16 tileTag, u16 paletteTag)
     palette.tag = paletteTag;
     template.paletteTag = paletteTag;
     sRegionMap->cursorPaletteTag = paletteTag;
-    if (!sRegionMap->zoomed)
+    if (!large)
     {
         sheet.data = sRegionMap->cursorSmallImage;
         sheet.size = sizeof(sRegionMap->cursorSmallImage);
@@ -1397,7 +1520,7 @@ void CreateRegionMapCursor(u16 tileTag, u16 paletteTag)
     {
         sheet.data = sRegionMap->cursorLargeImage;
         sheet.size = sizeof(sRegionMap->cursorLargeImage);
-        template.callback = SpriteCB_CursorMapZoomed;
+        template.callback = sStarNav->active ? SpriteCB_StarNavGalaxyCursor : SpriteCB_CursorMapZoomed;
     }
     LoadSpriteSheet(&sheet);
     LoadSpritePalette(&palette);
@@ -1405,7 +1528,15 @@ void CreateRegionMapCursor(u16 tileTag, u16 paletteTag)
     if (spriteId != MAX_SPRITES)
     {
         sRegionMap->cursorSprite = &gSprites[spriteId];
-        if (sRegionMap->zoomed == TRUE)
+        if (large && sStarNav->active)
+        {
+            sRegionMap->cursorSprite->oam.size = SPRITE_SIZE(32x32);
+            CalcCenterToCornerVec(sRegionMap->cursorSprite, SPRITE_SHAPE(32x32), SPRITE_SIZE(32x32), ST_OAM_AFFINE_OFF);
+            sRegionMap->cursorSprite->x = sStarNavPlanets[sStarNav->planet].x + STARNAV_MAP_X;
+            sRegionMap->cursorSprite->y = sStarNavPlanets[sStarNav->planet].y + STARNAV_MAP_Y;
+            StartSpriteAnim(sRegionMap->cursorSprite, 1);
+        }
+        else if (large)
         {
             sRegionMap->cursorSprite->oam.size = SPRITE_SIZE(32x32);
             sRegionMap->cursorSprite->x -= 8;
@@ -1422,6 +1553,20 @@ void CreateRegionMapCursor(u16 tileTag, u16 paletteTag)
         sRegionMap->cursorSprite->data[2] = OBJ_PLTT_ID(IndexOfSpritePaletteTag(paletteTag)) + 1;
         sRegionMap->cursorSprite->data[3] = TRUE;
     }
+}
+
+// The galaxy cursor glides to the globe under it
+static void SpriteCB_StarNavGalaxyCursor(struct Sprite *sprite)
+{
+    s16 x = sStarNavPlanets[sStarNav->planet].x + STARNAV_MAP_X;
+    s16 y = sStarNavPlanets[sStarNav->planet].y + STARNAV_MAP_Y;
+
+    sprite->x += (x - sprite->x) / 2;
+    sprite->y += (y - sprite->y) / 2;
+    if (sprite->x - x == 1 || sprite->x - x == -1)
+        sprite->x = x;
+    if (sprite->y - y == 1 || sprite->y - y == -1)
+        sprite->y = y;
 }
 
 static void FreeRegionMapCursorSprite(void)
@@ -1465,6 +1610,11 @@ void CreateRegionMapPlayerIcon(u16 tileTag, u16 paletteTag)
     LoadSpritePalette(&palette);
     spriteId = CreateSprite(&template, 0, 0, 1);
     sRegionMap->playerIconSprite = &gSprites[spriteId];
+    if (sStarNav->active)
+    {
+        StarNav_PlacePlayerIcon();
+        return;
+    }
     if (!sRegionMap->zoomed)
     {
         sRegionMap->playerIconSprite->x = sRegionMap->playerIconSpritePosX * 8 + 4;
@@ -1490,6 +1640,11 @@ static void HideRegionMapPlayerIcon(void)
 
 static void UnhideRegionMapPlayerIcon(void)
 {
+    if (sRegionMap->playerIconSprite != NULL && sStarNav->active)
+    {
+        StarNav_PlacePlayerIcon();
+        return;
+    }
     if (sRegionMap->playerIconSprite != NULL)
     {
         if (sRegionMap->zoomed == TRUE)
@@ -1564,6 +1719,332 @@ void TrySetPlayerIconBlink(void)
 #undef sX
 #undef sVisible
 #undef sTimer
+
+// Where the player is on the StarNAV: their planet and cell, from the map section's home cell first, then from
+// the overworld map they stand on (or left to come inside), which gives the exact cell.
+static void StarNav_LocatePlayer(void)
+{
+    const struct WarpData *warp = NULL;
+    const struct StarNavHome *home;
+    mapsec_u16_t mapSecId;
+    u16 map = MAP_UNDEFINED;
+    s32 x = gSaveBlock1Ptr->pos.x;
+    s32 y = gSaveBlock1Ptr->pos.y;
+    u32 i;
+
+    sStarNav->playerPlanet = STARNAV_PLANET_NONE;
+    sStarNav->playerX = MAPCURSOR_X_MIN + MAP_WIDTH / 2;
+    sStarNav->playerY = MAPCURSOR_Y_MIN + MAP_HEIGHT / 2;
+
+    InitMapBasedOnPlayerLocation();
+    mapSecId = CorrectSpecialMapSecId_Internal(sRegionMap->mapSecId);
+    if (mapSecId < MAPSEC_NONE && sStarNavMapSecHomes[mapSecId].planet != 0)
+    {
+        home = &sStarNavMapSecHomes[mapSecId];
+        sStarNav->playerPlanet = home->planet - 1;
+        if (home->x < MAP_WIDTH && home->y < MAP_HEIGHT)
+        {
+            sStarNav->playerX = home->x + MAPCURSOR_X_MIN;
+            sStarNav->playerY = home->y + MAPCURSOR_Y_MIN;
+        }
+    }
+
+    switch (GetMapTypeByGroupAndId(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum))
+    {
+    case MAP_TYPE_UNDERGROUND:
+    case MAP_TYPE_UNKNOWN:
+        if (gMapHeader.allowEscaping)
+            warp = &gSaveBlock1Ptr->escapeWarp;
+        break;
+    case MAP_TYPE_SECRET_BASE:
+        warp = &gSaveBlock1Ptr->dynamicWarp;
+        break;
+    case MAP_TYPE_INDOOR:
+        if (gMapHeader.regionMapSectionId == MAPSEC_DYNAMIC)
+            warp = &gSaveBlock1Ptr->dynamicWarp;
+        else
+            warp = &gSaveBlock1Ptr->escapeWarp;
+        break;
+    default:
+        map = ((u8)gSaveBlock1Ptr->location.mapGroup << 8) | (u8)gSaveBlock1Ptr->location.mapNum;
+        break;
+    }
+    if (warp != NULL)
+    {
+        map = ((u8)warp->mapGroup << 8) | (u8)warp->mapNum;
+        x = warp->x;
+        y = warp->y;
+    }
+    if (map == MAP_UNDEFINED)
+    {
+        StarNav_SnapPlayerToMapSec(mapSecId);
+        return;
+    }
+
+    for (i = 0; i < STARNAV_MAP_COUNT; i++)
+    {
+        if (sStarNavMapPlaces[i].map != map)
+            continue;
+        if (x < 0)
+            x = 0;
+        if (y < 0)
+            y = 0;
+        x = (sStarNavMapPlaces[i].baseX + x * sStarNavMapPlaces[i].step) / 256 / 8;
+        y = (sStarNavMapPlaces[i].baseY + y * sStarNavMapPlaces[i].step) / 256 / 8;
+        if (x > MAP_WIDTH - 1)
+            x = MAP_WIDTH - 1;
+        if (y > MAP_HEIGHT - 1)
+            y = MAP_HEIGHT - 1;
+        sStarNav->playerPlanet = sStarNavMapPlaces[i].planet;
+        sStarNav->playerX = x + MAPCURSOR_X_MIN;
+        sStarNav->playerY = y + MAPCURSOR_Y_MIN;
+        break;
+    }
+    StarNav_SnapPlayerToMapSec(mapSecId);
+}
+
+// A map's pixel can land on a neighbour's cell (a town drawn beside its route): move the player onto the
+// nearest cell of their own map section, if one is close by
+static void StarNav_SnapPlayerToMapSec(mapsec_u16_t mapSecId)
+{
+    const mapsec_u8_t (*layout)[MAP_WIDTH];
+    s32 x, y, dx, dy, d, best = 9;
+    u8 bestX = 0, bestY = 0;
+
+    if (sStarNav->playerPlanet == STARNAV_PLANET_NONE || mapSecId >= MAPSEC_NONE)
+        return;
+    layout = sStarNavLayouts[sStarNav->playerPlanet];
+    for (y = 0; y < MAP_HEIGHT; y++)
+    {
+        for (x = 0; x < MAP_WIDTH; x++)
+        {
+            if (layout[y][x] != mapSecId)
+                continue;
+            dx = x + MAPCURSOR_X_MIN - sStarNav->playerX;
+            dy = y + MAPCURSOR_Y_MIN - sStarNav->playerY;
+            d = dx * dx + dy * dy;
+            if (d < best)
+            {
+                best = d;
+                bestX = x + MAPCURSOR_X_MIN;
+                bestY = y + MAPCURSOR_Y_MIN;
+            }
+        }
+    }
+    if (best < 9)
+    {
+        sStarNav->playerX = bestX;
+        sStarNav->playerY = bestY;
+    }
+}
+
+// Galaxy view: the cursor is on a globe, named after its planet
+static void StarNav_SetGalaxyCursor(void)
+{
+    sRegionMap->mapSecId = MAPSEC_NONE;
+    sRegionMap->mapSecType = MAPSECTYPE_ROUTE;
+    sRegionMap->posWithinMapSec = 0;
+    StringCopyPadded(sRegionMap->mapSecName, sStarNavPlanets[sStarNav->planet].name, CHAR_SPACE, MAP_NAME_LENGTH);
+}
+
+// Planet view: the cell cursor starts on the player, or on the mapped cell nearest the planet's middle
+static void StarNav_SetPlanetCursor(void)
+{
+    s32 x, y, d, best;
+
+    if (sStarNav->planet == sStarNav->playerPlanet)
+    {
+        sRegionMap->cursorPosX = sStarNav->playerX;
+        sRegionMap->cursorPosY = sStarNav->playerY;
+    }
+    else
+    {
+        best = 0x7FFF;
+        sRegionMap->cursorPosX = MAPCURSOR_X_MIN + MAP_WIDTH / 2;
+        sRegionMap->cursorPosY = MAPCURSOR_Y_MIN + MAP_HEIGHT / 2;
+        for (y = 0; y < MAP_HEIGHT; y++)
+        {
+            for (x = 0; x < MAP_WIDTH; x++)
+            {
+                if (sStarNavLayouts[sStarNav->planet][y][x] == MAPSEC_NONE)
+                    continue;
+                d = (x - MAP_WIDTH / 2) * (x - MAP_WIDTH / 2) + (y - MAP_HEIGHT / 2) * (y - MAP_HEIGHT / 2);
+                if (d < best)
+                {
+                    best = d;
+                    sRegionMap->cursorPosX = x + MAPCURSOR_X_MIN;
+                    sRegionMap->cursorPosY = y + MAPCURSOR_Y_MIN;
+                }
+            }
+        }
+    }
+    StarNav_UpdateCursorMapSec();
+}
+
+static void StarNav_UpdateCursorMapSec(void)
+{
+    sRegionMap->mapSecId = GetMapSecIdAt(sRegionMap->cursorPosX, sRegionMap->cursorPosY);
+    sRegionMap->mapSecType = GetMapsecType(sRegionMap->mapSecId);
+    GetMapName(sRegionMap->mapSecName, sRegionMap->mapSecId, MAP_NAME_LENGTH);
+    GetPositionOfCursorWithinMapSec();
+}
+
+// Galaxy view: the D-pad jumps to the nearest globe that way; A zooms into a planet that has a map
+static u8 ProcessStarNavInput_Galaxy(void)
+{
+    u8 dir, next;
+
+    if (JOY_NEW(A_BUTTON))
+        return sStarNavPlanets[sStarNav->planet].gfx != NULL ? MAP_INPUT_A_BUTTON : MAP_INPUT_NONE;
+    if (JOY_NEW(B_BUTTON))
+        return MAP_INPUT_B_BUTTON;
+
+    if (JOY_REPEAT(DPAD_UP))
+        dir = 0;
+    else if (JOY_REPEAT(DPAD_DOWN))
+        dir = 1;
+    else if (JOY_REPEAT(DPAD_LEFT))
+        dir = 2;
+    else if (JOY_REPEAT(DPAD_RIGHT))
+        dir = 3;
+    else
+        return MAP_INPUT_NONE;
+
+    next = sStarNavPlanets[sStarNav->planet].jump[dir];
+    if (next == STARNAV_PLANET_NONE || next == sStarNav->planet)
+        return MAP_INPUT_NONE;
+    sStarNav->planet = next;
+    StarNav_SetGalaxyCursor();
+    return MAP_INPUT_MOVE_END;
+}
+
+// One frame of the zoom. t runs from 0 (the view at rest) to STARNAV_ZOOM_FRAMES: the galaxy magnified into the
+// globe, or the planet shrunk onto it.
+static void StarNav_SetZoomView(bool8 galaxy, u8 t)
+{
+    s32 globeX = sStarNavPlanets[sStarNav->planet].x + STARNAV_MAP_X;
+    s32 globeY = sStarNavPlanets[sStarNav->planet].y + STARNAV_MAP_Y;
+    s32 texX, texY, screenX, screenY, scale;
+
+    if (galaxy)
+    {
+        texX = globeX;
+        texY = globeY;
+        screenX = globeX + (DISPLAY_WIDTH / 2 - globeX) * t / STARNAV_ZOOM_FRAMES;
+        screenY = globeY + (DISPLAY_HEIGHT / 2 - globeY) * t / STARNAV_ZOOM_FRAMES;
+        scale = 0x100 - 0xC0 * t / STARNAV_ZOOM_FRAMES;
+    }
+    else
+    {
+        texX = STARNAV_PLANET_CENTER_X;
+        texY = STARNAV_PLANET_CENTER_Y;
+        screenX = texX + (globeX - texX) * t / STARNAV_ZOOM_FRAMES;
+        screenY = texY + (globeY - texY) * t / STARNAV_ZOOM_FRAMES;
+        scale = 0x100 + 0x100 * t / STARNAV_ZOOM_FRAMES;
+    }
+    CalcZoomScrollParams(texX - screenX, texY - screenY, screenX, screenY, scale, scale, 0);
+}
+
+// The zoom between the galaxy and a planet: the old view zooms and fades out, the art is swapped while the map
+// is black, then the new view zooms and fades in. Returns FALSE once it is done.
+static bool8 StarNav_UpdateZoom(void)
+{
+    u8 step = sStarNav->zoomStep;
+    u8 t;
+
+    if (step > STARNAV_ZOOM_FRAMES * 2 + 1)
+        return FALSE;
+    sStarNav->zoomStep++;
+
+    if (step < STARNAV_ZOOM_FRAMES)
+    {
+        t = step + 1;
+        StarNav_SetZoomView(!sRegionMap->zoomed, t);
+        BlendPalettes(0x380, t * 2, RGB_BLACK);
+        return TRUE;
+    }
+    if (step == STARNAV_ZOOM_FRAMES)
+    {
+        sRegionMap->zoomed = sStarNav->toPlanet;
+        LZ77UnCompVram(StarNav_ViewGfx(), (u16 *)BG_CHAR_ADDR(sRegionMap->charBaseIdx));
+        return TRUE;
+    }
+    if (step == STARNAV_ZOOM_FRAMES + 1)
+    {
+        LZ77UnCompVram(StarNav_ViewTilemap(), (u16 *)BG_SCREEN_ADDR(sRegionMap->mapBaseIdx));
+        LoadPalette(StarNav_ViewPal(), BG_PLTT_ID(7), 3 * PLTT_SIZE_4BPP);
+        BlendPalettes(0x380, 16, RGB_BLACK);
+        StarNav_SetZoomView(!sRegionMap->zoomed, STARNAV_ZOOM_FRAMES);
+        return TRUE;
+    }
+
+    t = STARNAV_ZOOM_FRAMES * 2 + 1 - step;
+    StarNav_SetZoomView(!sRegionMap->zoomed, t);
+    BlendPalettes(0x380, t * 2, RGB_BLACK);
+    if (t != 0)
+        return TRUE;
+
+    if (sRegionMap->zoomed)
+    {
+        sRegionMap->inputCallback = ProcessRegionMapInput_Full;
+        StarNav_SetPlanetCursor();
+    }
+    else
+    {
+        sRegionMap->inputCallback = ProcessStarNavInput_Galaxy;
+        StarNav_SetGalaxyCursor();
+    }
+    CreateRegionMapCursor(sRegionMap->cursorTileTag, sRegionMap->cursorPaletteTag);
+    UnhideRegionMapPlayerIcon();
+    return FALSE;
+}
+
+// The player icon sits beside their planet's globe in the galaxy, and on their cell on their own planet
+static void StarNav_PlacePlayerIcon(void)
+{
+    struct Sprite *sprite = sRegionMap->playerIconSprite;
+    const struct StarNavPlanet *planet;
+
+    if (sprite == NULL)
+        return;
+    sprite->x2 = 0;
+    sprite->y2 = 0;
+    if (sStarNav->playerPlanet == STARNAV_PLANET_NONE
+     || (sRegionMap->zoomed && sStarNav->planet != sStarNav->playerPlanet))
+    {
+        sprite->invisible = TRUE;
+        sprite->callback = SpriteCallbackDummy;
+        return;
+    }
+    if (sRegionMap->zoomed)
+    {
+        sprite->x = sStarNav->playerX * 8 + 4;
+        sprite->y = sStarNav->playerY * 8 + 4;
+    }
+    else
+    {
+        planet = &sStarNavPlanets[sStarNav->playerPlanet];
+        sprite->x = planet->x + STARNAV_MAP_X + planet->radius + 4;
+        sprite->y = planet->y + STARNAV_MAP_Y - planet->radius - 2;
+    }
+    sprite->invisible = FALSE;
+    sprite->callback = SpriteCB_PlayerIconMapFull;
+}
+
+// A map section's home cell on the planet shown zoomed in, as a cursor position
+static bool8 StarNav_GetHomeCell(mapsec_u16_t mapSecId, u16 *x, u16 *y)
+{
+    const struct StarNavHome *home;
+
+    if (!sRegionMap->zoomed || mapSecId >= MAPSEC_NONE)
+        return FALSE;
+    home = &sStarNavMapSecHomes[mapSecId];
+    if (home->planet != sStarNav->planet + 1 || home->x >= MAP_WIDTH || home->y >= MAP_HEIGHT)
+        return FALSE;
+    *x = home->x + MAPCURSOR_X_MIN;
+    *y = home->y + MAPCURSOR_Y_MIN;
+    return TRUE;
+}
 
 u8 *GetMapName(u8 *dest, mapsec_u16_t regionMapId, u16 padLength)
 {
@@ -1666,6 +2147,7 @@ void CB2_OpenFlyMap(void)
         }
         else
         {
+            sFlyMap->numFlyIcons = 0;
             ResetPaletteFade();
             ResetSpriteData();
             FreeSpriteTileRanges();
@@ -1689,7 +2171,7 @@ void CB2_OpenFlyMap(void)
         gMain.state++;
         break;
     case 4:
-        InitRegionMap(&sFlyMap->regionMap, FALSE);
+        InitRegionMap(&sFlyMap->regionMap, TRUE); // StarNAV: open on the player's planet
         CreateRegionMapCursor(TAG_CURSOR, TAG_CURSOR);
         CreateRegionMapPlayerIcon(TAG_PLAYER_ICON, TAG_PLAYER_ICON);
         sFlyMap->mapSecId = sFlyMap->regionMap.mapSecId;
@@ -1741,6 +2223,8 @@ static void VBlankCB_FlyMap(void)
     LoadOam();
     ProcessSpriteCopyRequests();
     TransferPlttBuffer();
+    if (sFlyMap != NULL)
+        UpdateRegionMapVideoRegs();
 }
 
 static void CB2_FlyMap(void)
@@ -1847,6 +2331,11 @@ static void CreateFlyDestIcons(void)
     u16 shape;
     u8 spriteId;
 
+    if (sStarNav->active)
+    {
+        StarNav_CreateFlyDestIcons();
+        return;
+    }
     canFlyFlag = FLAG_VISITED_LITTLEROOT_TOWN;
     for (mapSecId = MAPSEC_LITTLEROOT_TOWN; mapSecId <= MAPSEC_EVER_GRANDE_CITY; mapSecId++)
     {
@@ -1890,6 +2379,8 @@ static void TryCreateRedOutlineFlyDestIcons(void)
     mapsec_u16_t mapSecId;
     u8 spriteId;
 
+    if (sStarNav->active) // made with the other icons
+        return;
     for (i = 0; sRedOutlineFlyDestinations[i][1] != MAPSEC_NONE; i++)
     {
         if (FlagGet(sRedOutlineFlyDestinations[i][0]))
@@ -1908,6 +2399,61 @@ static void TryCreateRedOutlineFlyDestIcons(void)
             }
         }
     }
+}
+
+// StarNAV: the fly icons of the planet shown zoomed in, one cell each at the town's home cell
+static void StarNav_CreateFlyDestIcons(void)
+{
+    u16 canFlyFlag = FLAG_VISITED_LITTLEROOT_TOWN;
+    mapsec_u16_t mapSecId;
+    u16 x, y, i;
+    u8 spriteId;
+
+    sFlyMap->numFlyIcons = 0;
+    for (mapSecId = MAPSEC_LITTLEROOT_TOWN; mapSecId <= MAPSEC_EVER_GRANDE_CITY; mapSecId++, canFlyFlag++)
+    {
+        if (!StarNav_GetHomeCell(mapSecId, &x, &y) || sFlyMap->numFlyIcons >= ARRAY_COUNT(sFlyMap->flyIconSpriteIds))
+            continue;
+        spriteId = CreateSprite(&sFlyDestIconSpriteTemplate, x * 8 + 4, y * 8 + 4, 10);
+        if (spriteId == MAX_SPRITES)
+            continue;
+        gSprites[spriteId].oam.shape = SPRITE_SHAPE(8x8);
+        if (FlagGet(canFlyFlag))
+        {
+            gSprites[spriteId].callback = SpriteCB_FlyDestIcon;
+            StartSpriteAnim(&gSprites[spriteId], SPRITE_SHAPE(8x8));
+        }
+        else
+        {
+            StartSpriteAnim(&gSprites[spriteId], SPRITE_SHAPE(8x8) + 3);
+        }
+        gSprites[spriteId].sIconMapSec = mapSecId;
+        sFlyMap->flyIconSpriteIds[sFlyMap->numFlyIcons++] = spriteId;
+    }
+    for (i = 0; sRedOutlineFlyDestinations[i][1] != MAPSEC_NONE; i++)
+    {
+        mapSecId = sRedOutlineFlyDestinations[i][1];
+        if (!FlagGet(sRedOutlineFlyDestinations[i][0]) || !StarNav_GetHomeCell(mapSecId, &x, &y)
+         || sFlyMap->numFlyIcons >= ARRAY_COUNT(sFlyMap->flyIconSpriteIds))
+            continue;
+        spriteId = CreateSprite(&sFlyDestIconSpriteTemplate, x * 8, y * 8, 10);
+        if (spriteId == MAX_SPRITES)
+            continue;
+        gSprites[spriteId].oam.size = SPRITE_SIZE(16x16);
+        gSprites[spriteId].callback = SpriteCB_FlyDestIcon;
+        StartSpriteAnim(&gSprites[spriteId], FLYDESTICON_RED_OUTLINE);
+        gSprites[spriteId].sIconMapSec = mapSecId;
+        sFlyMap->flyIconSpriteIds[sFlyMap->numFlyIcons++] = spriteId;
+    }
+}
+
+static void StarNav_DestroyFlyDestIcons(void)
+{
+    u32 i;
+
+    for (i = 0; i < sFlyMap->numFlyIcons; i++)
+        DestroySprite(&gSprites[sFlyMap->flyIconSpriteIds[i]]);
+    sFlyMap->numFlyIcons = 0;
 }
 
 // Flickers fly destination icon color (by hiding the fly icon sprite) if the cursor is currently on it
@@ -1962,6 +2508,12 @@ static void CB_HandleFlyMapInput(void)
             DrawFlyDestTextWindow();
             break;
         case MAP_INPUT_A_BUTTON:
+            if (sStarNav->active && !sFlyMap->regionMap.zoomed)
+            {
+                // StarNAV galaxy: A zooms into the planet under the cursor
+                SetFlyMapCallback(CB_ZoomFlyMap);
+                break;
+            }
             if (sFlyMap->regionMap.mapSecType == MAPSECTYPE_CITY_CANFLY || sFlyMap->regionMap.mapSecType == MAPSECTYPE_BATTLE_FRONTIER)
             {
                 m4aSongNumStart(SE_SELECT);
@@ -1970,11 +2522,40 @@ static void CB_HandleFlyMapInput(void)
             }
             break;
         case MAP_INPUT_B_BUTTON:
+            if (sStarNav->active && sFlyMap->regionMap.zoomed)
+            {
+                // StarNAV planet: B goes back out to the galaxy
+                SetFlyMapCallback(CB_ZoomFlyMap);
+                break;
+            }
             m4aSongNumStart(SE_SELECT);
             sFlyMap->choseFlyLocation = FALSE;
             SetFlyMapCallback(CB_ExitFlyMap);
             break;
         }
+    }
+}
+
+// StarNAV: zoom between the galaxy and a planet, with that planet's fly icons
+static void CB_ZoomFlyMap(void)
+{
+    switch (sFlyMap->state)
+    {
+    case 0:
+        m4aSongNumStart(SE_SELECT);
+        StarNav_DestroyFlyDestIcons();
+        SetRegionMapDataForZoom();
+        sFlyMap->state++;
+        break;
+    case 1:
+        if (!UpdateRegionMapZoom())
+        {
+            if (sFlyMap->regionMap.zoomed)
+                StarNav_CreateFlyDestIcons();
+            DrawFlyDestTextWindow();
+            SetFlyMapCallback(CB_HandleFlyMapInput);
+        }
+        break;
     }
 }
 

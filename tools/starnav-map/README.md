@@ -1,10 +1,12 @@
-# starnav-map: StarNAV map screen mockups
+# starnav-map: the StarNAV map screen
 
-Mockups of the StarNAV map screen (Emerald's region map, category D8), made without building the ROM. The
-screen is drawn at the GBA's 240x160 and played in a browser: the cursor moves, A zooms in, B zooms out.
-Nothing in `../../game` is built or changed. Round 1 (2026-11-04): five styles. Round 2 (owner, 2026-11-04): the
-Galaxy Chart and the Holotable combined, all planets first and the planet opening as a cyan hologram, with a
-faint pink nebula; three variants, waiting for the owner's pick. The page keeps every round, newest first.
+The StarNAV map screen (Emerald's region map, category D8). Mockups are drawn at the GBA's 240x160 and played in
+a browser without building the ROM: the cursor moves, A zooms in, B zooms out. Round 1 (2026-11-04): five styles.
+Round 2 (owner, 2026-11-04): the Galaxy Chart and the Holotable combined, all planets first and the planet opening
+as a cyan hologram, with a faint pink nebula; three variants. The page keeps every round, newest first.
+
+The owner picked **Holo Globe** (round 2, style 3), and `install.py` puts it in the game (2026-11-04). See
+[In the game](#in-the-game).
 
 ```sh
 python3 build.py      # out/starnav_map.html (the player, one self-contained page) and out/<style>/ layers
@@ -56,3 +58,53 @@ All three need the galaxy -> planet code of Galaxy Chart.
 
 To add a style, write a `style_<name>(world)` in `variants.py` that returns its layers and add it to a round in
 `ROUNDS`.
+
+## In the game
+
+```sh
+python3 install.py    # writes the art and tables below into ../../game, then: cd ../../game && make
+```
+
+It writes, every time from the wiki world (the run gives the same files each time):
+
+| File in `../../game` | What it is |
+|---|---|
+| `graphics/pokenav/region_map/starnav/galaxy.png`, `.bin`, `.pal` | The galaxy view: 8bpp, 256 tiles at most, 64x64 affine tilemap, 45 colours in BG palettes 7-9 |
+| `graphics/pokenav/region_map/starnav/planet_<planet>.png`, `.bin`, `holo.pal` | Each planet's hologram (18; the Death Star has none). All share `holo.pal` |
+| `graphics/pokenav/region_map/cursor_small.png`, `cursor_large.png`, `cursor.pal` | Gold cell brackets (planet view) and the cyan ring around a globe (galaxy view) |
+| `src/data/region_map/starnav_map.h` | Planet names, globe places and the D-pad jump from each globe, each planet's 28x15 grid of map sections, each map section's home cell, and where each overworld map lands on its planet |
+
+What is made from data and what is set by hand:
+
+- From the wiki: each planet's hologram, its grid of map sections and the names (the area yamls with a `pos`,
+  their `map`, and the map section in each map's `map.json`); where the player stands (each map's place on the
+  grid); the hyperlanes drawn between globes (`hyperlanes.csv`).
+- By hand in `variants.py`: the globe of each planet in the galaxy (`GALAXY_POS`, `GLOBE_R`) and the colours.
+  The D-pad jumps are worked out from the globe places.
+
+The art has to fit Emerald's affine background: 256 tiles of 8x8 and 48 colours. Plain space becomes a few
+shared star tiles, the hologram textures repeat every 8 px, and when the galaxy has more than 256 tiles the
+rarest tiles are merged into their nearest look-alike. Colours are cut to 45 with a median cut.
+
+The code is in `../../game/src/region_map.c` (the StarNAV state lives in the unused `filler_084` of
+`struct RegionMap`), with small changes to `pokenav_region_map.c` and `field_region_map.c`:
+
+- **Galaxy** (zoomed out): the ring cursor jumps from globe to globe with the D-pad; the name box shows the
+  planet. The player's head sits beside their planet's globe. A zooms in (not on the Death Star).
+- **Planet** (zoomed in): the planet's hologram at full size with Emerald's cell cursor over its own grid; the
+  name box shows the map section. The cursor starts on the player on their planet, else near the middle.
+- **Zoom**: the old view zooms into the globe (or shrinks onto it) and fades out, the new art is loaded while
+  the map is black, and the new view zooms and fades in (18 frames).
+- **StarNAV**: A zooms in and out, B leaves (Emerald's buttons and help bar). The side panel stays folded
+  down to the name box in both views. The last view is remembered.
+- **Wall map** (Bacta Centers): A zooms in and out, B leaves.
+- **Fly map**: it opens on the player's planet with that planet's fly icons. A flies (Emerald's rules); B goes
+  out to the galaxy, where A zooms into another planet and B cancels.
+- The Datapad area screen keeps Emerald's Hoenn map; its habitat marks use Emerald's map sections.
+
+A map section shows a name only where Emerald's rules allow it: Tython is all `MAPSEC_SOUTHERN_ISLAND`, so its
+name stays hidden until `FLAG_LANDMARK_SOUTHERN_ISLAND` is set. The header strip above the map is Emerald's
+POKéNAV art (a branding row, replaced by hand).
+
+Check it in the emulator with `../play-tester/scripts/ui-check.sh starnav` (also `starnav_town`, `starnav_fly`,
+`starnav_reopen`, `starnav_dex`).

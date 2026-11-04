@@ -272,7 +272,7 @@ def planet_detail(world, planet, bw=224, bh=120):
     areas = world.areas.get(planet) or []
     if not areas:
         return None
-    cls, owner, _ = planet_class_map(areas, bw, bh)
+    cls, owner, xf = planet_class_map(areas, bw, bh)
     land = [[cls[y][x] != SPACE for x in range(bw)] for y in range(bh)]
     wild = dilate(land, bw, bh, 3)
     out = [[(cls[y][x] if land[y][x] else (WILD if wild[y][x] else SPACE)) for x in range(bw)] for y in range(bh)]
@@ -295,4 +295,4 @@ def planet_detail(world, planet, bw=224, bh=120):
             cells[c[1]][c[0]] = a
         elif a not in {v for row in cells for v in row}:
             cells[c[1]][c[0]] = a
-    return {"cls": out, "cells": cells, "towns": towns, "w": bw, "h": bh}
+    return {"cls": out, "cells": cells, "towns": towns, "w": bw, "h": bh, "xf": xf}

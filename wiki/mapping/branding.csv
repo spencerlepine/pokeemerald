@@ -419,11 +419,11 @@ graphics/pokenav/options/switch_off.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene 
 graphics/pokenav/options/tough.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/pokenav/region_map/brendan_icon.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Player head on the map → KAEL / MIRA.,,,,,,Replace by hand; no generator tool.
 graphics/pokenav/region_map/city_zoom_text.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Map legend text POKéMON CENTER / POKé MART / POKéMON GYM / POKéMON CONTEST → BACTA CENTER / SUPPLY DEPOT / ARENA / SHOWCASE.,,,,,,Replace by hand; no generator tool.
-graphics/pokenav/region_map/cursor_large.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
-graphics/pokenav/region_map/cursor_small.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
+graphics/pokenav/region_map/cursor_large.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Redrawn 2026-11-04 by tools/starnav-map/install.py: the cyan ring around a globe in the StarNAV galaxy view.
+graphics/pokenav/region_map/cursor_small.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,Redrawn 2026-11-04 by tools/starnav-map/install.py: gold cell brackets for the StarNAV planet view.
 graphics/pokenav/region_map/fly_target_icons.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/pokenav/region_map/frame.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
-graphics/pokenav/region_map/map.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Hoenn region map → Outer Rim galaxy map with the game's planets.,,,,,,Replace by hand; no generator tool.
+graphics/pokenav/region_map/map.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Hoenn region map → Outer Rim galaxy map with the game's planets.,,,,,,"Done 2026-11-04 by tools/starnav-map/install.py: the StarNAV, town map and Fly map draw the Holo Globe galaxy and planet holograms from graphics/pokenav/region_map/starnav/ instead. This file is no longer shown there."
 graphics/pokenav/region_map/may_icon.png,HOTSWAP,DRAFT,PENDING_ART,HUMAN-TODO,Player head on the map → KAEL / MIRA.,,,,,,Replace by hand; no generator tool.
 graphics/pokenav/region_map/zoom_tiles.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,
 graphics/pokenav/ribbons/icons.png,KEEP,DRAFT,KEEP_ART,,Generic UI / scene art with no Pokémon branding: keep as is.,,,,,,

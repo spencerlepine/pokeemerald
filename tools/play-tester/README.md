@@ -36,6 +36,10 @@ rebuild. Run `boot` once after every build (savestates do not carry over), then 
 - `sign_outer`, `sign_inner`: the Aurebesh signs. `regirock`, `regice`, `registeel`: the warden wipes.
 - `tour`: start menu, party, summary pages, bag pockets, StarNAV, trainer card, save, options.
 - `menuN`: start-menu entry N. `battle`: the action and move menus. `dex`: the DATAPAD pages.
+- `starnav`: the StarNAV map (galaxy, cursor jumps, zoom into Tatooine and out, another planet).
+  `starnav_town`: the wall map (it calls `CB2_FieldShowRegionMap`). `starnav_fly`: the Fly map (it calls
+  `CB2_OpenFlyMap`). `starnav_reopen`: the StarNAV reopened zoomed in, then a flight to Mos Pelgo.
+  `starnav_dex`: the Datapad area screen, which keeps Emerald's map.
 
 - `creatures`: a party of net-new species with the net-new moves (party icons, summary pages, a battle).
   `creatures_dex`: the Datapad list opened at No. 206 (it writes `sLastSelectedPokemon`) and a new species' page.
@@ -47,7 +51,7 @@ rebuild. Run `boot` once after every build (savestates do not carry over), then 
 Without `make modern` (it needs `gcc-arm-none-eabi`), set `UI_ROM=$PWD/../../game/pokeemerald.gba` to run the
 scenarios on the agbcc build.
 
-`tour`, `battle`, `dex` and `creatures*` give the player a party, badges, items and Datapad entries first. Screenshots land
+`tour`, `battle`, `dex`, `starnav*` and `creatures*` give the player a party, badges, items and Datapad entries first. Screenshots land
 in `out/ui/`. Use it to check that no label is cut off after a text change. Only mGBA is needed (setup step 2).
 Notes from 2026-11-03: the intro crawl asks "skip?" with NO selected, so mashing A never leaves it;
 teleporting before the truck cutscene ends leaves the player invisible; the start menu ignores A pressed right

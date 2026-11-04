@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import math
 import random
+import zlib
 
 from PIL import Image, ImageDraw
 
@@ -117,17 +118,18 @@ def land_image(world, colour, outline=None, shadow=None, highlight=None, cls=Non
 
 
 def texture(c, base, x, y):
-    """A little pixel texture per class: tree checker, grass flecks, water stripes, path flat."""
+    """A little pixel texture per class: tree checker, grass flecks, water stripes, path flat.
+    Every pattern repeats within 8 px, so the GBA can reuse a tile for the inside of a field."""
     if c == TREE:
         return base if (x + y) % 2 else mix(base, (0, 0, 0), 0.25)
     if c == GRASS:
-        return mix(base, (255, 255, 255), 0.18) if (x * 7 + y * 3) % 5 == 0 else base
+        return mix(base, (255, 255, 255), 0.18) if (x % 4, y % 4) in ((0, 2), (2, 0)) else base
     if c == WATER:
-        return mix(base, (255, 255, 255), 0.2) if (y % 3 == 0 and (x + y // 3) % 4 < 2) else base
+        return mix(base, (255, 255, 255), 0.2) if (y % 4 == 0 and (x + y // 4) % 4 < 2) else base
     if c == ROCK:
         return mix(base, (0, 0, 0), 0.2) if (x + 2 * y) % 4 == 0 else base
     if c == WILD:
-        return mix(base, (0, 0, 0), 0.25) if (x + y) % 2 == 0 and (x // 2 + y) % 3 == 0 else base
+        return mix(base, (0, 0, 0), 0.25) if (x + y) % 2 == 0 and (x // 2 + y) % 4 == 0 else base
     return base
 
 
@@ -459,7 +461,7 @@ def style_galaxy(world):
         if not det:
             continue
         d = Image.new("RGBA", (224, 120), g((8, 8, 16)) + (255,))
-        starfield(d, hash(p) & 255, [(120, 128, 160), (64, 72, 96)], 0.01)
+        starfield(d, zlib.crc32(p.encode()) & 255, [(120, 128, 160), (64, 72, 96)], 0.01)
 
         def colour(c, _p, x, y, p=p):
             return texture(c, BIOMES[p][SLOT[c]], x, y)
@@ -585,13 +587,14 @@ def holo_planets(world, backing=None, inner=None):
             cells = [[None] * 28 for _ in range(15)]
             for y, row in enumerate(det["cells"]):
                 cells[iy + y][ix:ix + len(row)] = row
-            det = {"cls": cls, "cells": cells, "towns": {a: [c[0] + ix, c[1] + iy] for a, c in det["towns"].items()}}
+            det = {"cls": cls, "cells": cells, "towns": {a: [c[0] + ix, c[1] + iy] for a, c in det["towns"].items()},
+                   "xf": det["xf"][:3] + (det["xf"][3] + ix * CELL, det["xf"][4] + iy * CELL)}
         else:
             det = planet_detail(world, p)
         if not det:
             continue
         d = Image.new("RGBA", (224, 120), g((8, 8, 16)) + (255,))
-        starfield(d, hash(p) & 255, [(32, 48, 72), (48, 72, 104)], 0.015)
+        starfield(d, zlib.crc32(p.encode()) & 255, [(32, 48, 72), (48, 72, 104)], 0.015)
         if backing:
             backing(d, p)
         land = land_image(world, mono(HOLO), outline=CYAN, highlight=lambda c: mix(c, (255, 255, 255), 0.25),
@@ -600,7 +603,7 @@ def holo_planets(world, backing=None, inner=None):
         town_marks(d, world, DIAMOND, {"o": (24, 64, 112), "H": (248, 248, 248), "h": (184, 240, 248), "s": CYAN},
                    towns={a: tuple(v) for a, v in det["towns"].items()})
         scanlines(d, 0.3)
-        out[p] = {"img": d, "cells": det["cells"], "towns": det["towns"]}
+        out[p] = {"img": d, "cells": det["cells"], "towns": det["towns"], "xf": det.get("xf")}
     return out
 
 

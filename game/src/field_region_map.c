@@ -4,6 +4,7 @@
 #include "international_string_util.h"
 #include "main.h"
 #include "malloc.h"
+#include "m4a.h"
 #include "menu.h"
 #include "palette.h"
 #include "region_map.h"
@@ -12,11 +13,12 @@
 #include "text_window.h"
 #include "window.h"
 #include "constants/rgb.h"
+#include "constants/songs.h"
 
 /*
  *  This is the type of map shown when interacting with the metatiles for
  *  a wall-mounted Region Map (on the wall of the Pokemon Centers near the PC)
- *  It does not zoom, and pressing A or B closes the map
+ *  StarNAV: A zooms between the galaxy and a planet, B closes the map
  *
  *  For the region map in the pokenav, see pokenav_region_map.c
  *  For the region map in the pokedex, see pokdex_area_screen.c/pokedex_area_region_map.c
@@ -126,6 +128,8 @@ static void VBCB_FieldUpdateRegionMap(void)
     LoadOam();
     ProcessSpriteCopyRequests();
     TransferPlttBuffer();
+    if (sFieldRegionMapHandler != NULL && sFieldRegionMapHandler->state != 0)
+        UpdateRegionMapVideoRegs();
 }
 
 static void MCB2_FieldUpdateRegionMap(void)
@@ -178,6 +182,10 @@ static void FieldUpdateRegionMap(void)
                     PrintRegionMapSecName();
                     break;
                 case MAP_INPUT_A_BUTTON:
+                    m4aSongNumStart(SE_SELECT);
+                    SetRegionMapDataForZoom();
+                    sFieldRegionMapHandler->state = 7;
+                    break;
                 case MAP_INPUT_B_BUTTON:
                     sFieldRegionMapHandler->state++;
                     break;
@@ -194,6 +202,13 @@ static void FieldUpdateRegionMap(void)
                 SetMainCallback2(sFieldRegionMapHandler->callback);
                 TRY_FREE_AND_SET_NULL(sFieldRegionMapHandler);
                 FreeAllWindowBuffers();
+            }
+            break;
+        case 7:
+            if (!UpdateRegionMapZoom())
+            {
+                PrintRegionMapSecName();
+                sFieldRegionMapHandler->state = 4;
             }
             break;
     }

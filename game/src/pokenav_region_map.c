@@ -400,18 +400,19 @@ static u32 LoopedTask_RegionMapZoomOut(s32 taskState)
     switch (taskState)
     {
     case 0:
+        // StarNAV: the info panel stays folded down to the name in both views
         PlaySE(SE_SELECT);
-        ChangeBgYForZoom(FALSE);
         SetRegionMapDataForZoom();
         return LT_INC_AND_PAUSE;
     case 1:
         if (UpdateRegionMapZoom() || IsChangeBgYForZoomActive())
             return LT_PAUSE;
 
+        UpdateMapSecInfoWindow(GetSubstructPtr(POKENAV_SUBSTRUCT_REGION_MAP_ZOOM));
         PrintHelpBarText(HELPBAR_MAP_ZOOMED_OUT);
         return LT_INC_AND_PAUSE;
     case 2:
-        if (WaitForHelpBar())
+        if (WaitForHelpBar() || IsDma3ManagerBusyWithBgCopy())
             return LT_PAUSE;
 
         UpdateRegionMapRightHeaderTiles(POKENAV_GFX_MAP_MENU_ZOOMED_OUT);
@@ -427,18 +428,18 @@ static u32 LoopedTask_RegionMapZoomIn(s32 taskState)
     switch (taskState)
     {
     case 0:
+        // StarNAV: the info panel stays folded down to the name in both views
         PlaySE(SE_SELECT);
-        UpdateMapSecInfoWindow(state);
-        return LT_INC_AND_PAUSE;
-    case 1:
-        if (IsDma3ManagerBusyWithBgCopy_(state))
-            return LT_PAUSE;
-
-        ChangeBgYForZoom(TRUE);
         SetRegionMapDataForZoom();
         return LT_INC_AND_PAUSE;
-    case 2:
+    case 1:
         if (UpdateRegionMapZoom() || IsChangeBgYForZoomActive())
+            return LT_PAUSE;
+
+        UpdateMapSecInfoWindow(state);
+        return LT_INC_AND_PAUSE;
+    case 2:
+        if (IsDma3ManagerBusyWithBgCopy_(state))
             return LT_PAUSE;
 
         PrintHelpBarText(HELPBAR_MAP_ZOOMED_IN);
@@ -517,10 +518,8 @@ static void LoadPokenavRegionMapGfx(struct Pokenav_RegionMapGfx *state)
     CopyWindowToVram(state->infoWindowId, COPYWIN_FULL);
     CopyPaletteIntoBufferUnfaded(sMapSecInfoWindow_Pal, BG_PLTT_ID(1), sizeof(sMapSecInfoWindow_Pal));
     CopyPaletteIntoBufferUnfaded(gRegionMapCityZoomTiles_Pal, BG_PLTT_ID(3), PLTT_SIZE_4BPP);
-    if (!IsRegionMapZoomed())
-        ChangeBgY(1, -0x6000, BG_COORD_SET);
-    else
-        ChangeBgY(1, 0, BG_COORD_SET);
+    // StarNAV: the panel is always folded down to the name box, zoomed in or out
+    ChangeBgY(1, -0x6000, BG_COORD_SET);
 
     ChangeBgX(1, 0, BG_COORD_SET);
 }
@@ -575,7 +574,7 @@ static bool32 IsDma3ManagerBusyWithBgCopy_(struct Pokenav_RegionMapGfx *state)
 
 #define tZoomIn data[0]
 
-static void ChangeBgYForZoom(bool32 zoomIn)
+static void UNUSED ChangeBgYForZoom(bool32 zoomIn)
 {
     u8 taskId = CreateTask(Task_ChangeBgYForZoom, 3);
     gTasks[taskId].tZoomIn = zoomIn;
@@ -669,11 +668,9 @@ static void CreateCityZoomTextSprites(void)
     struct Sprite *sprite;
     struct Pokenav_RegionMapGfx *state = GetSubstructPtr(POKENAV_SUBSTRUCT_REGION_MAP_ZOOM);
 
-    // When not zoomed in the text is still created but its pushed off screen
-    if (!IsRegionMapZoomed())
-        y = 228;
-    else
-        y = 132;
+    // When not zoomed in the text is still created but its pushed off screen.
+    // StarNAV: the panel never opens, so the text always stays off screen.
+    y = 228;
 
     for (i = 0; i < (int)ARRAY_COUNT(state->cityZoomTextSprites); i++)
     {

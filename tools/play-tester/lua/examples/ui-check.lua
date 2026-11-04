@@ -86,14 +86,46 @@ else
   local s = S[SC]
   if SC == "people" then s = {0, 9, 14, 13, nil} end  -- Mos Pelgo (Littleroot Town), among its townsfolk
   if SC == "creatures" then s = {24, 6, 8, 8, 0x3A7} end
-  if SC == "tour" or SC == "dex" or SC == "creatures_dex" or SC:sub(1,4) == "menu" then s = {0, 9, 5, 8, nil} end  -- Mos Pelgo (Littleroot Town): open ground
+  if SC == "tour" or SC == "dex" or SC == "creatures_dex" or SC:sub(1,4) == "menu" or SC:sub(1,7) == "starnav" then s = {0, 9, 5, 8, nil} end  -- Mos Pelgo (Littleroot Town): open ground
   add({fn=function() if SC == "tour" or SC == "battle" or SC == "dex" or SC:sub(1,4) == "menu" or SC == "people"
-                        or SC:sub(1,9) == "creatures" then setupParty() end
+                        or SC:sub(1,9) == "creatures" or SC:sub(1,7) == "starnav" then setupParty() end
+                     if SC:sub(1,7) == "starnav" then  -- every town visited (fly icons), Battle Frontier on the map
+                       for f = SYS + 0xF, SYS + 0x1E do setFlag(f, true) end; setFlag(SYS + 0x48, true) end
                      if SC:sub(1,9) == "creatures" then setupCreatures() end
                      if s[5] then setFlag(s[5], false) end; teleport(s[1], s[2], s[3], s[4]) end})
   add({wait=240})
   local function shot(n, w) add({wait=w or 60}); add({shot=SC .. "_" .. n}) end
-  if SC == "tour" then
+  if SC == "starnav" then  -- StarNAV map: galaxy, cursor jumps, zoom into a planet and out again
+    local function frames(name, n, gap) for f = 1, n do add({wait=gap}); add({shot=string.format("%s_%s_%02d", SC, name, f)}) end end
+    press("START"); add({wait=30}); press("DOWN"); press("DOWN"); press("DOWN"); press("A"); shot("01_menu", 150)
+    press("A"); shot("02_galaxy", 150)
+    press("RIGHT"); shot("03_right", 30); press("UP"); shot("04_up", 30); press("LEFT"); shot("05_left", 30)
+    press("DOWN"); shot("06_down", 30)
+    add({key="A", n=2}); frames("07_zoom_in", 12, 2); shot("08_planet", 60)
+    press("RIGHT"); press("RIGHT"); press("UP"); shot("09_planet_cursor", 30)
+    add({key="A", n=2}); frames("10_zoom_out", 12, 2); shot("11_galaxy_again", 60)
+    for _ = 1, 3 do press("RIGHT") end; press("A"); shot("12_other_planet", 120)
+    press("B"); shot("13_exit", 150)
+  elseif SC == "starnav_town" then  -- the wall map in a Bacta Center (field_region_map.c)
+    add({fn=function() emu:write32(CB2, sym("CB2_FieldShowRegionMap") | 1) end}); shot("01_open", 120)
+    press("RIGHT"); shot("02_right", 30); press("A"); shot("03_planet", 120); press("DOWN"); shot("04_cursor", 30)
+    press("A"); shot("05_galaxy", 120); press("B"); shot("06_exit", 150)
+  elseif SC == "starnav_dex" then  -- the Datapad area screen keeps Emerald's map (pokedex_area_screen.c)
+    press("START"); add({wait=30}); press("DOWN"); press("UP"); add({wait=20}); press("A"); add({wait=240})
+    press("A"); shot("01_entry", 200); press("A"); shot("02_area", 200); press("B"); shot("03_back", 120)
+  elseif SC == "starnav_reopen" then  -- leave the StarNAV zoomed in, reopen it, then fly from the Fly map
+    press("START"); add({wait=30}); press("DOWN"); press("DOWN"); press("DOWN"); press("A"); add({wait=150})
+    press("A"); add({wait=150}); press("A"); add({wait=60}); press("B"); add({wait=150})
+    press("A"); shot("01_reopened", 150); press("B"); add({wait=150}); press("B"); add({wait=150})
+    press("B"); add({wait=120})
+    add({fn=function() emu:write8(sym("gMain") + 0x438, 0); emu:write32(CB2, sym("CB2_OpenFlyMap") | 1) end})
+    shot("02_fly", 150); press("A"); shot("03_flying", 200); shot("04_landed", 300)
+  elseif SC == "starnav_fly" then  -- the Fly map (region_map.c), opened straight from the field
+    add({fn=function() emu:write8(sym("gMain") + 0x438, 0); emu:write32(CB2, sym("CB2_OpenFlyMap") | 1) end})
+    shot("01_open", 150); press("RIGHT"); shot("02_cursor", 30)
+    press("B"); shot("03_galaxy", 120); press("UP"); shot("04_jump", 30); press("A"); shot("05_planet", 120)
+    press("B"); shot("06_galaxy", 120)
+  elseif SC == "tour" then
     press("START"); shot("01_start_menu")
     press("DOWN"); press("A"); shot("02_party", 90)
     press("A"); shot("03_party_action", 30)
@@ -155,7 +187,7 @@ else
   press("UP", 2); add({wait=20}); press("A", 4)
   end
   if SC == "tour" or SC == "battle" or SC == "dex" or SC:sub(1,4) == "menu" or SC:sub(1,9) == "creatures"
-     or SC == "people" then
+     or SC == "people" or SC:sub(1,7) == "starnav" then
   elseif SC:sub(1,4) == "sign" then
     add({wait=150}); add({shot=SC})
   else
