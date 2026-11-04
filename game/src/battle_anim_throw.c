@@ -11,6 +11,7 @@
 #include "main.h"
 #include "palette.h"
 #include "pokeball.h"
+#include "pokemon.h"
 #include "sound.h"
 #include "sprite.h"
 #include "task.h"
@@ -1329,7 +1330,11 @@ static void SpriteCB_Ball_Capture_Step(struct Sprite *sprite)
         gDoingBattleAnim = FALSE;
         UpdateOamPriorityInAllHealthboxes(1);
         m4aMPlayAllStop();
-        PlaySE(MUS_RG_CAUGHT_INTRO);
+        // a droid is sliced, not caught: its own sting (same length as the capture one)
+        if (IsDroidSpecies(gBattleMons[*battler].species))
+            PlaySE(MUS_DROID_SLICED);
+        else
+            PlaySE(MUS_RG_CAUGHT_INTRO);
     }
     else if (sprite->sTimer == 315)
     {

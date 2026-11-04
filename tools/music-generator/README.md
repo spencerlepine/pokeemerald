@@ -1,10 +1,10 @@
 # music-generator
 
-**Status:** DONE. Approved by the owner on 2026-11-01. **Every song is in `../../game`** (2026-11-04): all 177 songs the
+**Status:** DONE. Approved by the owner on 2026-11-01. **Every song is in `../../game`** (2026-11-04): all 178 songs the
 player hears (`rewrite_status` DONE in `../../wiki/database/music.csv`, listed in `../../wiki/mapping/audio_done.csv`),
 installed with `generate.py install` from `song-schemas/`, byte-identical to the approved copies in
-`../../wiki/audio/sound/songs/midi/`. `MUS_DROID_SLICED` has its song id but nothing plays it until droid slicing is
-built (`rewrite_status` INSTALLED). A new song still goes: model, render, ROM listen, owner approval, then
+`../../wiki/audio/sound/songs/midi/`. `MUS_DROID_SLICED` plays instead of the capture sting when a droid is caught
+(`IsDroidSpecies`, below). A new song still goes: model, render, ROM listen, owner approval, then
 `python3 ../../wiki/tools/ship_audio.py song-schemas/<name>.yaml` (wiki copy and preview) and `generate.py install`.
 
 What the install changed beyond the song files (all in `../../game`):
@@ -19,6 +19,8 @@ What the install changed beyond the song files (all in `../../game`):
   each new area. The world port writes it into each `map.json` (`music_overrides` in
   `../../wiki/tools/world_port/install.py`).
 - **Underwater**: a dive map plays its own `MUS_UNDERWATER_*` song if its `map.json` sets one (`IsUnderwaterMusic`).
+- **Droids**: catching one of the 34 droid species (`sDroidSpecies` in `src/pokemon.c`, from the wiki's
+  `mapping/species.csv`) plays `MUS_DROID_SLICED` on the SE2 player and says "Sliced! X was sliced!".
 - **Bosses**: Vader (SITH LORD with Maxie's portrait) battles to `MUS_VS_VADER`; BOBA FETT (`TRAINER_MATT`) meets the
   player with `MUS_ENCOUNTER_BOBA_FETT` (`TRAINER_ENCOUNTER_MUSIC_BOBA_FETT`) and battles to `MUS_VS_BOBA_FETT`.
 

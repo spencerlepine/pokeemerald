@@ -621,7 +621,7 @@ gSongTable::
 	song mus_cantina_band, MUSIC_PLAYER_BGM, 0
 	song mus_cave_of_origin_sullust, MUSIC_PLAYER_BGM, 0
 	song mus_death_star, MUSIC_PLAYER_BGM, 0
-	song mus_droid_sliced, MUSIC_PLAYER_BGM, 0
+	song mus_droid_sliced, MUSIC_PLAYER_SE2, 2
 	song mus_encounter_boba_fett, MUSIC_PLAYER_BGM, 0
 	song mus_fortress_vader, MUSIC_PLAYER_BGM, 0
 	song mus_hyperspace, MUSIC_PLAYER_BGM, 0

@@ -326,7 +326,9 @@ def install(path: Path, game: Path) -> list[str]:
             tl = st.read_text().splitlines()
             last = max(i for i, l in enumerate(tl) if l.strip().startswith("song "))
             assert last - tl.index("gSongTable::") == sid, "song_table.inc and songs.h disagree on the song count"
-            tl.insert(last + 1, f"\tsong {stem}, MUSIC_PLAYER_BGM, 0")
+            # a jingle on an SE player (`player: SE2`, like the capture sting) gets that player and priority 2
+            player = str(song.model.get("player", "BGM")).upper()
+            tl.insert(last + 1, f"\tsong {stem}, MUSIC_PLAYER_{player}, {0 if player == 'BGM' else 2}")
             st.write_text("\n".join(tl) + "\n")
             tag = "// Star Wars music (music-generator)"
             hl = h.split("\n")

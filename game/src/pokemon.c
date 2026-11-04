@@ -6443,6 +6443,57 @@ void ClearBattleMonForms(void)
         gBattleMonForms[i] = 0;
 }
 
+// Droid companions are "sliced" with a slicer spike instead of caught in a pod (net:droid-slicing):
+// every species whose Star Wars version is a droid (wiki/mapping/species.csv, sw_basis or description).
+static const u16 sDroidSpecies[] =
+{
+    SPECIES_MAWILE, // BUZZDROID
+    SPECIES_ARON, // SPIDROID
+    SPECIES_LAIRON, // OCTUPTARRA
+    SPECIES_AGGRON, // PERSUADER
+    SPECIES_MACHOP, // B1 DROID
+    SPECIES_MACHOKE, // B2 DROID
+    SPECIES_MACHAMP, // BX DROID
+    SPECIES_PLUSLE, // PIT DROID
+    SPECIES_MINUN, // GONK
+    SPECIES_MAGNEMITE, // MOUSEDROID
+    SPECIES_MAGNETON, // MOUSESWARM
+    SPECIES_TORKOAL, // SMELTER
+    SPECIES_SKARMORY, // VULTURE
+    SPECIES_CORPHISH, // CRABDROID
+    SPECIES_CRAWDAUNT, // MUCKRAKER
+    SPECIES_CASTFORM, // CLIMADROID
+    SPECIES_BELDUM, // R1 UNIT
+    SPECIES_METANG, // R4 UNIT
+    SPECIES_METAGROSS, // R2 UNIT
+    SPECIES_DROWZEE, // MINDPROBE
+    SPECIES_HYPNO, // INTERROGTR
+    SPECIES_HITMONLEE, // KICKDROID
+    SPECIES_HITMONCHAN, // PUNCHDROID
+    SPECIES_CHANSEY, // FX-6 UNIT
+    SPECIES_ELECTABUZZ, // IG UNIT
+    SPECIES_PORYGON, // 3PO UNIT
+    SPECIES_PINECO, // DEKALET
+    SPECIES_FORRETRESS, // DROIDEKA
+    SPECIES_SCIZOR, // MAGNAGUARD
+    SPECIES_PORYGON2, // TC UNIT
+    SPECIES_TYROGUE, // TRAINDROID
+    SPECIES_HITMONTOP, // SPINDROID
+    SPECIES_ELEKID, // IG-RM
+    SPECIES_BLISSEY, // 2-1B UNIT
+};
+
+bool8 IsDroidSpecies(u16 species)
+{
+    u32 i;
+    for (i = 0; i < ARRAY_COUNT(sDroidSpecies); i++)
+    {
+        if (sDroidSpecies[i] == species)
+            return TRUE;
+    }
+    return FALSE;
+}
+
 u16 GetBattleBGM(void)
 {
     if (gBattleTypeFlags & BATTLE_TYPE_KYOGRE_GROUDON)

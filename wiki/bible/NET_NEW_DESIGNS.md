@@ -78,6 +78,10 @@ catchable, never traded and never joins the party. His companions are droids and
 - Step 4 needs a list of droid species. It comes from `mapping/species.csv` (sw_basis or description says droid).
 - Placeholders: the POKé BALL throw animation with a palette swap; item icon from `item:poke-ball`.
 - No flags. No level band, because it applies everywhere.
+- **In the game (2026-11-04):** `IsDroidSpecies` (`src/pokemon.c`, the 34 droids of `mapping/species.csv`). A pod
+  that catches a droid plays `MUS_DROID_SLICED` instead of the capture sting, and the message is "Sliced!\n<name> was
+  sliced!" (`sText_GotchaDroidSlicedPlayer`). Still to do: the slicer-spike throw animation (palette swap) and
+  `SE_SLICER_SPIKE`, which is not made yet.
 
 ## Death Star construction site (`net:death-star-site`)
 

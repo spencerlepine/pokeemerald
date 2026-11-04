@@ -470,6 +470,7 @@ static const u8 sText_ItAppearedCaught[] = _("Aww!\nIt appeared to be caught!");
 static const u8 sText_AarghAlmostHadIt[] = _("Aargh!\nAlmost had it!");
 static const u8 sText_ShootSoClose[] = _("Shoot!\nIt was so close, too!");
 static const u8 sText_GotchaPkmnCaughtPlayer[] = _("Gotcha!\n{B_OPPONENT_MON1_NAME} was caught!{WAIT_SE}{PLAY_BGM MUS_CAUGHT}\p");
+static const u8 sText_GotchaDroidSlicedPlayer[] = _("Sliced!\n{B_OPPONENT_MON1_NAME} was sliced!{WAIT_SE}{PLAY_BGM MUS_CAUGHT}\p");
 static const u8 sText_GotchaPkmnCaughtWally[] = _("Gotcha!\n{B_OPPONENT_MON1_NAME} was caught!{WAIT_SE}{PLAY_BGM MUS_CAUGHT}{PAUSE 127}");
 static const u8 sText_GiveNicknameCaptured[] = _("Give a nickname to the\ncaptured {B_OPPONENT_MON1_NAME}?");
 static const u8 sText_PkmnSentToPC[] = _("{B_OPPONENT_MON1_NAME} was sent to\n{B_PC_CREATOR_NAME} TERMINAL.");
@@ -2231,6 +2232,12 @@ void BufferStringBattle(u16 stringID)
                 }
             }
         }
+        break;
+    case STRINGID_GOTCHAPKMNCAUGHTPLAYER: // a droid is sliced, not caught (net:droid-slicing)
+        if (IsDroidSpecies(gBattleMons[gBattlerTarget].species))
+            stringPtr = sText_GotchaDroidSlicedPlayer;
+        else
+            stringPtr = gBattleStringsTable[stringID - BATTLESTRINGS_TABLE_START];
         break;
     default: // load a string from the table
         if (stringID >= BATTLESTRINGS_COUNT)

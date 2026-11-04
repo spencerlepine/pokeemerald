@@ -42,6 +42,8 @@ rebuild. Run `boot` once after every build (savestates do not carry over), then 
   `starnav_dex`: the Datapad area screen: the galaxy, then A through each planet the species lives on.
   `dex_national`: the Datapad list with the national Datapad on (the REGIONAL and NATIONAL count labels), then the search screen.
 
+- `slice`: the warden battle with its foe turned into a droid (B1 DROID) and a KYBER POD thrown: logs the song
+  the SE2 and BGM players are on (`MUS_DROID_SLICED` 615, then `MUS_CAUGHT`) and shoots the "Sliced!" message.
 - `creatures`: a party of net-new species with the net-new moves (party icons, summary pages, a battle).
   `creatures_dex`: the Datapad list opened at No. 206 (it writes `sLastSelectedPokemon`) and a new species' page.
 - `people`: each net-new walker (object graphics 76-81, 237-239) drawn on the Mos Pelgo townsfolk, one shot each
