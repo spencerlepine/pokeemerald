@@ -165,7 +165,10 @@ ROOM_FILL = {"floor": FILL["floor"], "floor-alt": FILL["floor"], "exit-mat": FIL
 
 
 class Ref:
-    """One tile of a metatile: ('P', id) primary tile, ('S', i) vanilla secondary tile i, ('N', bytes) new tile."""
+    """One tile of a metatile: ('P', id) primary tile, ('S', i) vanilla secondary tile i, ('N', bytes) new tile.
+
+    A new tile's `pal` is "SW" (the area's SW_PAL slot) or a palette slot number (a neighbour's tile, see
+    `Builder.foreign_refs`)."""
     __slots__ = ("src", "key", "pal", "hf", "vf")
 
     def __init__(self, src, key, pal, hf=0, vf=0):
@@ -188,9 +191,10 @@ def new_ref(tile):
 class Builder:
     """Builds one area's secondary tileset and its final metatile ids."""
 
-    def __init__(self, C, P, S, mode):
+    def __init__(self, C, P, S, mode, foreign=()):
         self.C, self.P, self.S, self.mode = C, P, S, mode
         self.defs = []          # per symbol: (refs[8], attr)
+        self.foreign = list(foreign)   # neighbours' metatiles shown at this map's edges (seams.py)
 
     def vanilla_meta(self, mid):
         if mid < N_PRIM_META:
@@ -271,6 +275,12 @@ class Builder:
         if not free:
             raise RuntimeError(f"{C.area.id}: no free secondary palette slot (used {sorted(used_pals)})")
         sw_pal = free[-1]
+        pals = [list(p) for p in S.palettes]
+        pals[sw_pal] = list(SW_PAL)
+        spare = free[:-1]
+        foreign_defs = [(self.foreign_refs(refs, pals, spare), attr) for refs, attr in self.foreign]
+        n_sym = len(self.defs)
+        self.defs = self.defs + foreign_defs
 
         # --- new tiles (dedup with flips), merged down to the free slots if needed
         def canon(key):
@@ -286,11 +296,14 @@ class Builder:
             return best
 
         counts = Counter()
+        keep = set()
         for refs, _ in self.defs:
             for r in refs:
                 if r.src == "N":
                     counts[canon(r.key)[0]] += 1
-        merge = reduce_tiles(list(counts), counts, len(free_slots))
+                    if r.pal != "SW":
+                        keep.add(canon(r.key)[0])
+        merge = reduce_tiles(list(counts), counts, len(free_slots), keep)
         if merge:
             C.notes.append(f"{len(merge)} similar new tiles merged to fit the tile budget")
         new_slot = {}
@@ -307,7 +320,8 @@ class Builder:
                 return t | (r.hf << 10) | (r.vf << 11) | (r.pal << 12)
             k, hf, vf = canon(r.key)
             k = merge.get(k, k)
-            return (N_PRIM_TILES + new_slot[k]) | ((hf ^ r.hf) << 10) | ((vf ^ r.vf) << 11) | (sw_pal << 12)
+            pal = sw_pal if r.pal == "SW" else r.pal
+            return (N_PRIM_TILES + new_slot[k]) | ((hf ^ r.hf) << 10) | ((vf ^ r.vf) << 11) | (pal << 12)
 
         # --- metatiles
         if self.mode == "pinned":
@@ -319,18 +333,27 @@ class Builder:
                 ent = S.metatiles[mid - N_PRIM_META].reshape(-1)
                 metas[meta_map[mid] - N_PRIM_META] = np.array([entry(r) for r in refs_of_vanilla(ent)], np.uint16)
                 attrs[meta_map[mid] - N_PRIM_META] = int(S.attributes[mid - N_PRIM_META])
-        sym_ids, uniq = {}, {}
+        sym_ids, uniq, foreign_ids = {}, {}, []
         for i, (refs, attr) in enumerate(self.defs):
             ent = tuple(entry(r) for r in refs)
-            key = (ent, attr, C.syms[i] if C.syms[i][0] != "piece" else None)
+            if i >= n_sym:
+                key = (ent, attr, "foreign")
+            else:
+                key = (ent, attr, C.syms[i] if C.syms[i][0] != "piece" else None)
             if key not in uniq:
+                if not free_meta and i >= n_sym:
+                    foreign_ids.append(None)      # no room: seams.py draws the nearest metatile instead
+                    continue
                 if not free_meta:
                     raise RuntimeError(f"{C.area.id}: no free secondary metatile slot")
                 slot = free_meta.pop(0)
                 uniq[key] = N_PRIM_META + slot
                 metas[slot] = np.array(ent, np.uint16)
                 attrs[slot] = attr
-            sym_ids[i] = uniq[key]
+            if i >= n_sym:
+                foreign_ids.append(uniq[key])
+            else:
+                sym_ids[i] = uniq[key]
         n_meta = max(metas) + 1
         meta_arr = np.zeros((n_meta, 8), np.uint16)
         attr_arr = np.zeros(n_meta, np.uint16)
@@ -350,8 +373,6 @@ class Builder:
                     tiles[i] = S.tiles[t]
         for k, slot in new_slot.items():
             tiles[slot] = np.frombuffer(k, np.uint8).reshape(8, 8)
-        pals = [list(p) for p in S.palettes]
-        pals[sw_pal] = list(SW_PAL)
         # --- final cells
         final = np.zeros(C.meta.shape, np.uint16)
         for (y, x), v in np.ndenumerate(C.meta):
@@ -364,17 +385,62 @@ class Builder:
                 final[y, x] = meta_map[v]
         return dict(tiles=tiles, palettes=pals, metatiles=meta_arr, attributes=attr_arr, cells=final,
                     sw_pal=sw_pal, n_new_tiles=len(new_slot), n_new_meta=len(uniq), callback=self.callback,
-                    sym_ids=sym_ids)
+                    sym_ids=sym_ids, foreign_ids=foreign_ids, n_approx=self.n_approx)
+
+    n_approx = 0
+
+    def foreign_refs(self, refs, pals, spare):
+        """A neighbour's metatile in this tileset: each tile as (8x8 indices, its 16 colours, hf, vf, primary id or
+        None). Its palette goes to a slot here with the same colours, else a spare slot, else the nearest slot
+        (the tile's colours remapped to it)."""
+        out = []
+        for pix, colours, hf, vf, prim in refs:
+            pix = np.asarray(pix, np.uint8)
+            used = sorted({int(v) for v in np.unique(pix)} - {0})
+            col = [snap(c) for c in colours]
+            slot = None
+            for s in range(13):
+                bank = self.P.palettes[s] if s < 6 else pals[s]
+                if all(snap(bank[i]) == col[i] for i in used):
+                    slot = s
+                    break
+            if slot is None and spare:
+                slot = spare.pop(0)
+                pals[slot] = [tuple(c) for c in colours]
+            if slot is None:
+                best = None
+                for s in range(13):
+                    bank = np.array([snap(c) for c in (self.P.palettes[s] if s < 6 else pals[s])], float)
+                    lut = {i: 1 + int(np.abs(bank[1:] - np.array(col[i], float)).sum(1).argmin()) for i in used}
+                    err = sum(np.abs(bank[lut[i]] - np.array(col[i], float)).sum() for i in used)
+                    if best is None or err < best[0]:
+                        best = (err, s, lut)
+                _, slot, lut = best
+                pix = pix.copy()
+                for i, j in lut.items():
+                    pix[pix == i] = j
+                self.n_approx += 1
+                prim = None
+            if prim is not None:
+                out.append(Ref("P", prim, slot, hf, vf))
+            else:
+                out.append(Ref("N", np.ascontiguousarray(pix).tobytes(), slot, hf, vf))
+        return out
 
 
-def reduce_tiles(keys, counts, budget):
-    """Merge the least used new tiles into their nearest neighbour until they fit the budget. {old: kept}."""
+def snap(c):
+    return tuple(int(v) >> 3 for v in c[:3])
+
+
+def reduce_tiles(keys, counts, budget, keep=()):
+    """Merge the least used new tiles into their nearest neighbour until they fit the budget. {old: kept}.
+    Tiles in `keep` (a neighbour's tiles, in their own palettes) are never merged away."""
     if len(keys) <= budget:
         return {}
-    if budget <= 0:
+    if budget <= 0 or len(set(keep)) > budget:
         raise RuntimeError("no room for new tiles")
     arr = {k: LUM[np.frombuffer(k, np.uint8)].reshape(8, 8) for k in keys}
-    alive = sorted(keys, key=lambda k: -counts[k])
+    alive = sorted(keys, key=lambda k: (0 if k in keep else 1, -counts[k]))
     merge = {}
     while len(alive) > budget:
         k = alive.pop()                       # least used

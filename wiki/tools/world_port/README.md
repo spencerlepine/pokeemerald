@@ -64,6 +64,17 @@ be redrawn later without touching the maps.
   first hop, the cable car, the S.S. Tidal and its ticket islands. Han's boat sails are hyperspace hops
   (patches in `towns/kachirho.yaml`). A new `unlock` token needs its game flag in `lanes.UNLOCK`.
 
+- **Map seams** (`seams.py`). Near a map edge the game shows the next map's cells (7 rows or columns, 8 to the
+  east) but draws them with the current map's tilesets, and many areas now have their own. After the install,
+  `port` renders every neighbour cell that shows across every connection in both tileset pairs. A cell that
+  would look or behave differently is swapped for a metatile of this map that looks and behaves the same; when
+  there is none, the neighbour's metatile is added to this map's tileset (its palette goes to a slot with the
+  same colours, or a spare slot) and the install runs again. The swaps are written to
+  `src/data/sw_seam_remap.h`, which `fieldmap.c` applies when it copies the neighbour's cells. When the player
+  crosses into a map with other tilesets, `field_camera.c` redraws the whole view. `port` then checks every
+  seam and fails on any cell that still differs (a cell drawn in the nearest palette, when no slot was free, is
+  reported and allowed).
+
 The game's `ld_script.ld` no longer pins the creature pics to fixed addresses: the full world does not fit
 below them.
 
@@ -72,3 +83,9 @@ below them.
 `tools/play-tester/scripts/world-check.sh SPOTS` teleports to each spot (`name group num x y [KEYS]`), presses
 the keys (`VAR4057=2` and `FLAG2D6=0` among them set a story var or flag before the teleport) and screenshots it into `tools/play-tester/out/world/`. `WORLD_TRACE=1` logs the map and cell after every
 step. Run `UI_ROM=$PWD/game/pokeemerald.gba tools/play-tester/scripts/ui-check.sh boot` after each build first.
+
+Seams in the game: `python3 wiki/tools/port_world.py seams spots FILE` writes one walk per connection (4 steps to
+the edge and 3 beyond, on plain ground with nobody about; a seam over water or cliffs only loads the map there),
+`tools/play-tester/scripts/seam-check.sh FILE` runs them in mGBA, and `python3 wiki/tools/port_world.py seams
+verify` compares the dumps: the neighbour cells in the game's map buffer against the remap table, and the screen
+after walking across against the same place loaded afresh.

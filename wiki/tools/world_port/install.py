@@ -63,16 +63,18 @@ class World:
         return not a.new or area_id in self.scope
 
     # ------------------------------------------------------------------ terrain and tilesets
-    def build_area(self, a):
+    def build_area(self, a, foreign=()):
         from tilegen import gba
         C = TR.build(a)
         pieces = PC.add_pieces(C)
         out = None
-        if C.syms:
+        if C.syms or foreign:
             P = gba.load_tileset_by_header(C.prim)
             S = gba.load_tileset_by_header(C.sec)
             mode = "compact" if a.new else "pinned"
-            out = TL.Builder(C, P, S, mode).build()
+            out = TL.Builder(C, P, S, mode, foreign).build()
+            if out["n_approx"]:
+                C.notes.append(f"{out['n_approx']} tiles of a neighbour's edge drawn in the nearest palette")
             cells = out["cells"]
         else:
             cells = C.meta.astype(np.uint16)
@@ -257,8 +259,29 @@ def write_tileset_c(world, written):
             p.write_text(t.rstrip("\n") + "\n\n" + line)
 
 
-def install(scope=None, exclude=(), log=print):
+def port(scope=None, exclude=(), log=print, rounds=4):
+    """Install, then fix the map seams: add the neighbours' edge metatiles each map is missing and install
+    again until none is missing, then write the remap table and check every seam (seams.py)."""
+    from . import seams as SM
+    foreign = {}
+    for _ in range(rounds):
+        world, report = install(scope, exclude, foreign={k: list(v.values()) for k, v in foreign.items()})
+        seams = SM.Seams(world, foreign)
+        if not seams.missing:
+            break
+        for aid, defs in seams.missing.items():
+            foreign.setdefault(aid, {}).update(defs)
+    else:
+        raise RuntimeError(f"map seams still missing metatiles after {rounds} rounds: {dict(seams.missing)}")
+    SM.write_header(seams)
+    world.seams = seams
+    world.seam_problems = seams.check()
+    return world, report
+
+
+def install(scope=None, exclude=(), log=print, foreign=None):
     from . import events as E, towns as T
+    foreign = foreign or {}
     world = World(scope, exclude)
     problems = []
     B.ensure_base()
@@ -268,7 +291,7 @@ def install(scope=None, exclude=(), log=print):
     maps_out = {}
     for aid in sorted(world.scope):
         a = world.areas[aid]
-        r = world.build_area(a)
+        r = world.build_area(a, foreign.get(aid, ()))
         lay = world.layout_for(a, r)
         if r["tileset"]:
             TL.write_tileset(r["tileset"], B.GAME / f"data/tilesets/secondary/sw/{aid}")

@@ -73,6 +73,12 @@ the BGM player is on (`bgm <song id> playing|stopped map_music <id>`), so map mu
 music can be checked. `WORLD_TRACE=1`
 logs every step (map crossings, warps). A wild battle can start on a step through grass.
 
+`scripts/seam-check.sh SPOTS [timeout]` checks the map seams: for each line (`name group num x y DIR steps`,
+written by `python3 wiki/tools/port_world.py seams spots`) it loads the map there, dumps the map buffer the game
+built, walks the steps across the edge (lead at level 100 and a repel, so no wild battle), dumps the field BG
+tilemaps, loads the same place afresh and dumps them again, into `out/seams/`. `python3 wiki/tools/port_world.py
+seams verify` compares them.
+
 ## Quick start (Ubuntu)
 
 ```bash

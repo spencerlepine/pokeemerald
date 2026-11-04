@@ -36,6 +36,7 @@ void GetCameraFocusCoords(u16 *x, u16 *y);
 u8 MapGridGetMetatileLayerTypeAt(s32 x, s32 y);
 u8 MapGridGetElevationAt(s32 x, s32 y);
 bool8 CameraMove(s32 x, s32 y);
+bool8 TakeSeamRedrawMapView(void);
 void SaveMapView(void);
 void SetCameraFocusCoords(u16 x, u16 y);
 void InitMap(void);
