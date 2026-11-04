@@ -8412,7 +8412,7 @@ gText_WhatWillPkmnDo,,src/battle_message.c,1271,,c,battle_message,What will\n{B_
 gText_WhatWillPkmnDo2,,src/battle_message.c,1272,,c,battle_message,What will\n{B_PLAYER_NAME} do?,What will\n{B_PLAYER_NAME} do?,CURATED,,,,"reviewed, no change needed",DONE
 gText_WhatWillWallyDo,,src/battle_message.c,1273,,c,battle_message,What will\nWALLY do?,What will\nLUKE do?,CURATED,WALLY,,,reviewed AUTO draft,DONE
 gText_LinkStandby,,src/battle_message.c,1274,,c,battle_message,{PAUSE 16}Link standby…,{PAUSE 16}Link standby…,CURATED,,,,"reviewed, no change needed",DONE
-gText_BattleMenu,,src/battle_message.c,1275,,c,battle_message,FIGHT{CLEAR_TO 56}BAG\nPOKéMON{CLEAR_TO 56}RUN,FIGHT{CLEAR_TO 56}BAG\nCOMPANION{CLEAR_TO 56}RUN,CURATED,POKéMON,,12,reviewed AUTO draft,DONE
+gText_BattleMenu,,src/battle_message.c,1275,,c,battle_message,FIGHT{CLEAR_TO 56}BAG\nPOKéMON{CLEAR_TO 56}RUN,FIGHT{CLEAR_TO 56}BAG\nTEAM{CLEAR_TO 56}RUN,CURATED,POKéMON,,,"too wide for its window: shortened, 2026-11-04",DONE
 gText_SafariZoneMenu,,src/battle_message.c,1276,,c,battle_message,BALL{CLEAR_TO 56}{POKEBLOCK}\nGO NEAR{CLEAR_TO 56}RUN,POD{CLEAR_TO 56}{POKEBLOCK}\nGO NEAR{CLEAR_TO 56}RUN,CURATED,,,,,NOT_STARTED
 gText_MoveInterfacePP,,src/battle_message.c,1277,,c,battle_message,PP ,PP ,CURATED,,,,"reviewed, no change needed",DONE
 gText_MoveInterfaceType,,src/battle_message.c,1278,,c,battle_message,TYPE/,TYPE/,CURATED,,,,"reviewed, no change needed",DONE
@@ -8778,12 +8778,12 @@ gText_MatchCallTuber_Lola_Pokemon,,src/data/text/match_call_messages.h,17,LOLA,c
 gText_MatchCallTuber_Lola_Intro1,,src/data/text/match_call_messages.h,18,LOLA,c,match_call_profile,I wish I could swim without,I wish I could swim without,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallTuber_Lola_Intro2,,src/data/text/match_call_messages.h,19,LOLA,c,match_call_profile,using an inner tube.,using an inner tube.,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallTuber_Ricky_Strategy,,src/data/text/match_call_messages.h,21,RICKY,c,match_call_profile,I don't know. I'll try hard.,I don't know. I'll try hard.,CURATED,,,,"reviewed, no change needed",DONE
-gText_MatchCallTuber_Ricky_Pokemon,,src/data/text/match_call_messages.h,22,RICKY,c,match_call_profile,WATER POKéMON are buddies.,WATER COMPANIONS are buddies.,CURATED,POKéMON,,18,reviewed AUTO draft,DONE
+gText_MatchCallTuber_Ricky_Pokemon,,src/data/text/match_call_messages.h,22,RICKY,c,match_call_profile,WATER POKéMON are buddies.,WATER ones are my buddies.,CURATED,POKéMON,,,"too wide for its window: shortened, 2026-11-04",DONE
 gText_MatchCallTuber_Ricky_Intro1,,src/data/text/match_call_messages.h,23,RICKY,c,match_call_profile,It's not like I can't swim.,It's not like I can't swim.,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallTuber_Ricky_Intro2,,src/data/text/match_call_messages.h,24,RICKY,c,match_call_profile,I just like my inner tube.,I just like my inner tube.,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallSisAndBro_LilaAndRoy_Strategy,,src/data/text/match_call_messages.h,26,LILAANDROY,c,match_call_profile,We split our duties.,We split our duties.,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallSisAndBro_LilaAndRoy_Pokemon,,src/data/text/match_call_messages.h,27,LILAANDROY,c,match_call_profile,We like friendly POKéMON.,We like friendly COMPANION.,CURATED,POKéMON,,12,reviewed AUTO draft,DONE
-gText_MatchCallSisAndBro_LilaAndRoy_Intro1,,src/data/text/match_call_messages.h,28,LILAANDROY,c,match_call_profile,We enjoy POKéMON together,We enjoy COMPANION together,CURATED,POKéMON,,12,reviewed AUTO draft,DONE
+gText_MatchCallSisAndBro_LilaAndRoy_Intro1,,src/data/text/match_call_messages.h,28,LILAANDROY,c,match_call_profile,We enjoy POKéMON together,We raise our TEAM together,CURATED,POKéMON,,,"too wide for its window: shortened, 2026-11-04",DONE
 gText_MatchCallSisAndBro_LilaAndRoy_Intro2,,src/data/text/match_call_messages.h,29,LILAANDROY,c,match_call_profile,as sister and brother.,as sister and brother.,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallCooltrainer_Cristin_Strategy,,src/data/text/match_call_messages.h,31,CRISTIN,c,match_call_profile,I finish with power moves!,I finish with power moves!,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallCooltrainer_Cristin_Pokemon,,src/data/text/match_call_messages.h,32,CRISTIN,c,match_call_profile,A mix of different types.,A mix of different types.,CURATED,,,,"reviewed, no change needed",DONE
@@ -8847,7 +8847,7 @@ gText_MatchCallKindler_Bernie_Intro1,,src/data/text/match_call_messages.h,103,BE
 gText_MatchCallKindler_Bernie_Intro2,,src/data/text/match_call_messages.h,104,BERNIE,c,match_call_profile,be sure there's some water.,be sure there's some water.,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallCamper_Ethan_Strategy,,src/data/text/match_call_messages.h,106,ETHAN,c,match_call_profile,Hang in and be tenacious!,Hang in and be tenacious!,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallCamper_Ethan_Pokemon,,src/data/text/match_call_messages.h,107,ETHAN,c,match_call_profile,I'll raise any POKéMON.,I'll raise any COMPANION.,CURATED,POKéMON,,12,reviewed AUTO draft,DONE
-gText_MatchCallCamper_Ethan_Intro1,,src/data/text/match_call_messages.h,108,ETHAN,c,match_call_profile,POKéMON raised in the wild,COMPANION raised in the wild,CURATED,POKéMON,,12,reviewed AUTO draft,DONE
+gText_MatchCallCamper_Ethan_Intro1,,src/data/text/match_call_messages.h,108,ETHAN,c,match_call_profile,POKéMON raised in the wild,A TEAM raised in the wild,CURATED,POKéMON,,,"too wide for its window: shortened, 2026-11-04",DONE
 gText_MatchCallCamper_Ethan_Intro2,,src/data/text/match_call_messages.h,109,ETHAN,c,match_call_profile,grow strong!,grow strong!,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallOldCouple_JohnAndJay_Strategy,,src/data/text/match_call_messages.h,111,JOHNANDJAY,c,match_call_profile,Our love lets us prevail.,Our love lets us prevail.,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallOldCouple_JohnAndJay_Pokemon,,src/data/text/match_call_messages.h,112,JOHNANDJAY,c,match_call_profile,We've had them for years.,We've had them for years.,CURATED,,,,"reviewed, no change needed",DONE
@@ -8856,13 +8856,13 @@ gText_MatchCallOldCouple_JohnAndJay_Intro2,,src/data/text/match_call_messages.h,
 gText_MatchCallBugManiac_Jeffrey_Strategy,,src/data/text/match_call_messages.h,116,JEFFREY,c,match_call_profile,Attack in waves!,Attack in waves!,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallBugManiac_Jeffrey_Pokemon,,src/data/text/match_call_messages.h,117,JEFFREY,c,match_call_profile,BUG POKéMON are cool.,BUG COMPANIONS are cool.,CURATED,POKéMON,,18,reviewed AUTO draft,DONE
 gText_MatchCallBugManiac_Jeffrey_Intro1,,src/data/text/match_call_messages.h,118,JEFFREY,c,match_call_profile,I go into the forest every,I go into the forest every,CURATED,,,,"reviewed, no change needed",DONE
-gText_MatchCallBugManiac_Jeffrey_Intro2,,src/data/text/match_call_messages.h,119,JEFFREY,c,match_call_profile,day to catch BUG POKéMON.,day to catch BUG COMPANIONS.,CURATED,POKéMON,,18,reviewed AUTO draft,DONE
+gText_MatchCallBugManiac_Jeffrey_Intro2,,src/data/text/match_call_messages.h,119,JEFFREY,c,match_call_profile,day to catch BUG POKéMON.,day to catch BUG types.,CURATED,POKéMON,,,"too wide for its window: shortened, 2026-11-04",DONE
 gText_MatchCallPsychic_Cameron_Strategy,,src/data/text/match_call_messages.h,121,CAMERON,c,match_call_profile,Daze and confuse!,Daze and confuse!,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallPsychic_Cameron_Pokemon,,src/data/text/match_call_messages.h,122,CAMERON,c,match_call_profile,Ones with weird powers.,Ones with weird powers.,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallPsychic_Cameron_Intro1,,src/data/text/match_call_messages.h,123,CAMERON,c,match_call_profile,I can see through exactly,I can see through exactly,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallPsychic_Cameron_Intro2,,src/data/text/match_call_messages.h,124,CAMERON,c,match_call_profile,what you're thinking!,what you're thinking!,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallPsychic_Jacki_Strategy,,src/data/text/match_call_messages.h,126,JACKI,c,match_call_profile,Battle at full power.,Battle at full power.,CURATED,,,,"reviewed, no change needed",DONE
-gText_MatchCallPsychic_Jacki_Pokemon,,src/data/text/match_call_messages.h,127,JACKI,c,match_call_profile,POKéMON of many mysteries.,COMPANION of many mysteries.,CURATED,POKéMON,,12,reviewed AUTO draft,DONE
+gText_MatchCallPsychic_Jacki_Pokemon,,src/data/text/match_call_messages.h,127,JACKI,c,match_call_profile,POKéMON of many mysteries.,Ones of many mysteries.,CURATED,POKéMON,,,"too wide for its window: shortened, 2026-11-04",DONE
 gText_MatchCallPsychic_Jacki_Intro1,,src/data/text/match_call_messages.h,128,JACKI,c,match_call_profile,"When we spoke, I was really","When we spoke, I was really",CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallPsychic_Jacki_Intro2,,src/data/text/match_call_messages.h,129,JACKI,c,match_call_profile,using telepathy.,using telepathy.,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallGentleman_Walter_Strategy,,src/data/text/match_call_messages.h,131,WALTER,c,match_call_profile,Calm and collected.,Calm and collected.,CURATED,,,,"reviewed, no change needed",DONE
@@ -8870,7 +8870,7 @@ gText_MatchCallGentleman_Walter_Pokemon,,src/data/text/match_call_messages.h,132
 gText_MatchCallGentleman_Walter_Intro1,,src/data/text/match_call_messages.h,133,WALTER,c,match_call_profile,We enjoy a spot of tea,We enjoy a spot of tea,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallGentleman_Walter_Intro2,,src/data/text/match_call_messages.h,134,WALTER,c,match_call_profile,every day. It's imported.,every day. It's imported.,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallSchoolKid_Karen_Strategy,,src/data/text/match_call_messages.h,136,KAREN,c,match_call_profile,I use my head to battle.,I use my head to battle.,CURATED,,,,"reviewed, no change needed",DONE
-gText_MatchCallSchoolKid_Karen_Pokemon,,src/data/text/match_call_messages.h,137,KAREN,c,match_call_profile,I love any kind of POKéMON!,I love any kind of COMPANIONS!,CURATED,POKéMON,,18,,DONE
+gText_MatchCallSchoolKid_Karen_Pokemon,,src/data/text/match_call_messages.h,137,KAREN,c,match_call_profile,I love any kind of POKéMON!,I love any kind at all!,CURATED,POKéMON,,,"too wide for its window: shortened, 2026-11-04",DONE
 gText_MatchCallSchoolKid_Karen_Intro1,,src/data/text/match_call_messages.h,138,KAREN,c,match_call_profile,My daddy gives me spending,My daddy gives me spending,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallSchoolKid_Karen_Intro2,,src/data/text/match_call_messages.h,139,KAREN,c,match_call_profile,money if I ace a test.,money if I ace a test.,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallSchoolKid_Jerry_Strategy,,src/data/text/match_call_messages.h,141,JERRY,c,match_call_profile,My knowledge rules!,My knowledge rules!,CURATED,,,,"reviewed, no change needed",DONE
@@ -8878,7 +8878,7 @@ gText_MatchCallSchoolKid_Jerry_Pokemon,,src/data/text/match_call_messages.h,142,
 gText_MatchCallSchoolKid_Jerry_Intro1,,src/data/text/match_call_messages.h,143,JERRY,c,match_call_profile,I want to be a POKéMON,I want to be a COMPANION,CURATED,POKéMON,,12,reviewed AUTO draft,DONE
 gText_MatchCallSchoolKid_Jerry_Intro2,,src/data/text/match_call_messages.h,144,JERRY,c,match_call_profile,researcher in the future.,researcher in the future.,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallSrAndJr_AnnaAndMeg_Strategy,,src/data/text/match_call_messages.h,146,ANNAANDMEG,c,match_call_profile,We talk it over first.,We talk it over first.,CURATED,,,,"reviewed, no change needed",DONE
-gText_MatchCallSrAndJr_AnnaAndMeg_Pokemon,,src/data/text/match_call_messages.h,147,ANNAANDMEG,c,match_call_profile,POKéMON that we both like.,COMPANION that we both like.,CURATED,POKéMON,,12,reviewed AUTO draft,DONE
+gText_MatchCallSrAndJr_AnnaAndMeg_Pokemon,,src/data/text/match_call_messages.h,147,ANNAANDMEG,c,match_call_profile,POKéMON that we both like.,Ones that we both like.,CURATED,POKéMON,,,"too wide for its window: shortened, 2026-11-04",DONE
 gText_MatchCallSrAndJr_AnnaAndMeg_Intro1,,src/data/text/match_call_messages.h,148,ANNAANDMEG,c,match_call_profile,We're senior and junior,We're senior and junior,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallSrAndJr_AnnaAndMeg_Intro2,,src/data/text/match_call_messages.h,149,ANNAANDMEG,c,match_call_profile,students into POKéMON!,students into COMPANION!,CURATED,POKéMON,,12,reviewed AUTO draft,DONE
 gText_MatchCallPokefan_Isabel_Strategy,,src/data/text/match_call_messages.h,151,ISABEL,c,match_call_profile,"Go for it, my dears!","Go for it, my dears!",CURATED,,,,"reviewed, no change needed",DONE
@@ -8886,7 +8886,7 @@ gText_MatchCallPokefan_Isabel_Pokemon,,src/data/text/match_call_messages.h,152,I
 gText_MatchCallPokefan_Isabel_Intro1,,src/data/text/match_call_messages.h,153,ISABEL,c,match_call_profile,While out shopping for,While out shopping for,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallPokefan_Isabel_Intro2,,src/data/text/match_call_messages.h,154,ISABEL,c,match_call_profile,"supper, I battle too.","supper, I battle too.",CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallPokefan_Miguel_Strategy,,src/data/text/match_call_messages.h,156,MIGUEL,c,match_call_profile,I battle with love!,I battle with love!,CURATED,,,,"reviewed, no change needed",DONE
-gText_MatchCallPokefan_Miguel_Pokemon,,src/data/text/match_call_messages.h,157,MIGUEL,c,match_call_profile,A POKéMON raised with love!,A COMPANION raised with love!,CURATED,POKéMON,,12,reviewed AUTO draft,DONE
+gText_MatchCallPokefan_Miguel_Pokemon,,src/data/text/match_call_messages.h,157,MIGUEL,c,match_call_profile,A POKéMON raised with love!,A TEAM raised with love!,CURATED,POKéMON,,,"too wide for its window: shortened, 2026-11-04",DONE
 gText_MatchCallPokefan_Miguel_Intro1,,src/data/text/match_call_messages.h,158,MIGUEL,c,match_call_profile,It's important to build,It's important to build,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallPokefan_Miguel_Intro2,,src/data/text/match_call_messages.h,159,MIGUEL,c,match_call_profile,trust with your POKéMON.,trust with your COMPANIONS.,CURATED,POKéMON,,18,,DONE
 gText_MatchCallExpert_Timothy_Strategy,,src/data/text/match_call_messages.h,161,TIMOTHY,c,match_call_profile,I see through your moves!,I see through your moves!,CURATED,,,,"reviewed, no change needed",DONE
@@ -8900,7 +8900,7 @@ gText_MatchCallExpert_Shelby_Intro2,,src/data/text/match_call_messages.h,169,SHE
 gText_MatchCallYoungster_Calvin_Strategy,,src/data/text/match_call_messages.h,171,CALVIN,c,match_call_profile,I do what I can.,I do what I can.,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallYoungster_Calvin_Pokemon,,src/data/text/match_call_messages.h,172,CALVIN,c,match_call_profile,I use different types.,I use different types.,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallYoungster_Calvin_Intro1,,src/data/text/match_call_messages.h,173,CALVIN,c,match_call_profile,I'm going to keep working,I'm going to keep working,CURATED,,,,"reviewed, no change needed",DONE
-gText_MatchCallYoungster_Calvin_Intro2,,src/data/text/match_call_messages.h,174,CALVIN,c,match_call_profile,until I beat a GYM LEADER.,until I beat an ARENA LEADER.,CURATED,a GYM,,18,reviewed AUTO draft,DONE
+gText_MatchCallYoungster_Calvin_Intro2,,src/data/text/match_call_messages.h,174,CALVIN,c,match_call_profile,until I beat a GYM LEADER.,until I beat a LEADER.,CURATED,a GYM,,,"too wide for its window: shortened, 2026-11-04",DONE
 gText_MatchCallFisherman_Elliot_Strategy,,src/data/text/match_call_messages.h,176,ELLIOT,c,match_call_profile,I battle patiently.,I battle patiently.,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallFisherman_Elliot_Pokemon,,src/data/text/match_call_messages.h,177,ELLIOT,c,match_call_profile,WATER POKéMON to battle!,WATER COMPANIONS to battle!,CURATED,POKéMON,,18,reviewed AUTO draft,DONE
 gText_MatchCallFisherman_Elliot_Intro1,,src/data/text/match_call_messages.h,178,ELLIOT,c,match_call_profile,I'm the world's only guy to,I'm the world's only guy to,CURATED,,,,"reviewed, no change needed",DONE
@@ -8930,16 +8930,16 @@ gText_MatchCallTriathlete_Benjamin_Pokemon,,src/data/text/match_call_messages.h,
 gText_MatchCallTriathlete_Benjamin_Intro1,,src/data/text/match_call_messages.h,208,BENJAMIN,c,match_call_profile,"If you're sweating, get","If you're sweating, get",CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallTriathlete_Benjamin_Intro2,,src/data/text/match_call_messages.h,209,BENJAMIN,c,match_call_profile,fluids into you regularly.,fluids into you regularly.,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallTriathlete_Pablo_Strategy,,src/data/text/match_call_messages.h,211,PABLO,c,match_call_profile,Draw the power of WATER.,Draw the power of WATER.,CURATED,,,,"reviewed, no change needed",DONE
-gText_MatchCallTriathlete_Pablo_Pokemon,,src/data/text/match_call_messages.h,212,PABLO,c,match_call_profile,Toughened WATER POKéMON.,Toughened WATER COMPANIONS.,CURATED,POKéMON,,18,reviewed AUTO draft,DONE
+gText_MatchCallTriathlete_Pablo_Pokemon,,src/data/text/match_call_messages.h,212,PABLO,c,match_call_profile,Toughened WATER POKéMON.,Toughened WATER types.,CURATED,POKéMON,,,"too wide for its window: shortened, 2026-11-04",DONE
 gText_MatchCallTriathlete_Pablo_Intro1,,src/data/text/match_call_messages.h,213,PABLO,c,match_call_profile,"Training POKéMON is good,","Training COMPANION is good,",CURATED,POKéMON,,12,reviewed AUTO draft,DONE
 gText_MatchCallTriathlete_Pablo_Intro2,,src/data/text/match_call_messages.h,214,PABLO,c,match_call_profile,but don't neglect yourself.,but don't neglect yourself.,CURATED,,,,"reviewed, no change needed",DONE
-gText_MatchCallDragonTamer_Nicolas_Strategy,,src/data/text/match_call_messages.h,216,NICOLAS,c,match_call_profile,It's about POKéMON power!,It's about COMPANIONS power!,CURATED,POKéMON,,18,reviewed AUTO draft,DONE
+gText_MatchCallDragonTamer_Nicolas_Strategy,,src/data/text/match_call_messages.h,216,NICOLAS,c,match_call_profile,It's about POKéMON power!,It's about raw power!,CURATED,POKéMON,,,"too wide for its window: shortened, 2026-11-04",DONE
 gText_MatchCallDragonTamer_Nicolas_Pokemon,,src/data/text/match_call_messages.h,217,NICOLAS,c,match_call_profile,See the power of DRAGONS!,See the power of DRAGONS!,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallDragonTamer_Nicolas_Intro1,,src/data/text/match_call_messages.h,218,NICOLAS,c,match_call_profile,I'll become legendary as the,I'll become legendary as the,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallDragonTamer_Nicolas_Intro2,,src/data/text/match_call_messages.h,219,NICOLAS,c,match_call_profile,strongest one day!,strongest one day!,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallBirdKeeper_Robert_Strategy,,src/data/text/match_call_messages.h,221,ROBERT,c,match_call_profile,I'll show you my technique!,I'll show you my technique!,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallBirdKeeper_Robert_Pokemon,,src/data/text/match_call_messages.h,222,ROBERT,c,match_call_profile,Elegantly wheeling BIRDS.,Elegantly wheeling BIRDS.,CURATED,,,,"reviewed, no change needed",DONE
-gText_MatchCallBirdKeeper_Robert_Intro1,,src/data/text/match_call_messages.h,223,ROBERT,c,match_call_profile,"My BIRD POKéMON, deliver my","My BIRD COMPANIONS, deliver my",CURATED,POKéMON,,18,reviewed AUTO draft,DONE
+gText_MatchCallBirdKeeper_Robert_Intro1,,src/data/text/match_call_messages.h,223,ROBERT,c,match_call_profile,"My BIRD POKéMON, deliver my","My BIRD TEAM, deliver my",CURATED,POKéMON,,,"too wide for its window: shortened, 2026-11-04",DONE
 gText_MatchCallBirdKeeper_Robert_Intro2,,src/data/text/match_call_messages.h,224,ROBERT,c,match_call_profile,love to that girl!,love to that girl!,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallNinjaBoy_Lao_Strategy,,src/data/text/match_call_messages.h,226,LAO,c,match_call_profile,You'll suffer from poison!,You'll suffer from poison!,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallNinjaBoy_Lao_Pokemon,,src/data/text/match_call_messages.h,227,LAO,c,match_call_profile,Poisonous POKéMON.,Poisonous COMPANION.,CURATED,POKéMON,,12,reviewed AUTO draft,DONE
@@ -8956,7 +8956,7 @@ gText_MatchCallParasolLady_Madeline_Intro2,,src/data/text/match_call_messages.h,
 gText_MatchCallSwimmer_Jenny_Strategy,,src/data/text/match_call_messages.h,241,JENNY,c,match_call_profile,No mercy!,No mercy!,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallSwimmer_Jenny_Pokemon,,src/data/text/match_call_messages.h,242,JENNY,c,match_call_profile,Cute WATER POKéMON.,Cute WATER COMPANIONS.,CURATED,POKéMON,,18,reviewed AUTO draft,DONE
 gText_MatchCallSwimmer_Jenny_Intro1,,src/data/text/match_call_messages.h,243,JENNY,c,match_call_profile,I have too many fans.,I have too many fans.,CURATED,,,,"reviewed, no change needed",DONE
-gText_MatchCallSwimmer_Jenny_Intro2,,src/data/text/match_call_messages.h,244,JENNY,c,match_call_profile,I was interviewed on TV.,I was interviewed on the HOLONET.,CURATED,on TV,,51,,DONE
+gText_MatchCallSwimmer_Jenny_Intro2,,src/data/text/match_call_messages.h,244,JENNY,c,match_call_profile,I was interviewed on TV.,I was on the HOLONET.,CURATED,on TV,,,"too wide for its window: shortened, 2026-11-04",DONE
 gText_MatchCallPicnicker_Diana_Strategy,,src/data/text/match_call_messages.h,246,DIANA,c,match_call_profile,I think about this & that.,I think about this & that.,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallPicnicker_Diana_Pokemon,,src/data/text/match_call_messages.h,247,DIANA,c,match_call_profile,I like all POKéMON.,I like all COMPANIONS.,CURATED,POKéMON,,18,reviewed AUTO draft,DONE
 gText_MatchCallPicnicker_Diana_Intro1,,src/data/text/match_call_messages.h,248,DIANA,c,match_call_profile,What lies beyond that,What lies beyond that,CURATED,,,,"reviewed, no change needed",DONE
@@ -8970,10 +8970,10 @@ gText_MatchCallSailor_Ernest_Pokemon,,src/data/text/match_call_messages.h,257,ER
 gText_MatchCallSailor_Ernest_Intro1,,src/data/text/match_call_messages.h,258,ERNEST,c,match_call_profile,Seamen are rough spirits!,Seamen are rough spirits!,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallSailor_Ernest_Intro2,,src/data/text/match_call_messages.h,259,ERNEST,c,match_call_profile,Any complaints?,Any complaints?,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallSailor_Cory_Strategy,,src/data/text/match_call_messages.h,261,CORY,c,match_call_profile,Up for a fight anytime!,Up for a fight anytime!,CURATED,,,,"reviewed, no change needed",DONE
-gText_MatchCallSailor_Cory_Pokemon,,src/data/text/match_call_messages.h,262,CORY,c,match_call_profile,WATER POKéMON are my faves!,WATER COMPANIONS are my faves!,CURATED,POKéMON,,18,reviewed AUTO draft,DONE
+gText_MatchCallSailor_Cory_Pokemon,,src/data/text/match_call_messages.h,262,CORY,c,match_call_profile,WATER POKéMON are my faves!,WATER types are my faves!,CURATED,POKéMON,,,"too wide for its window: shortened, 2026-11-04",DONE
 gText_MatchCallSailor_Cory_Intro1,,src/data/text/match_call_messages.h,263,CORY,c,match_call_profile,"If you want to shout loud,","If you want to shout loud,",CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallSailor_Cory_Intro2,,src/data/text/match_call_messages.h,264,CORY,c,match_call_profile,suck in air with your belly!,suck in air with your belly!,CURATED,,,,"reviewed, no change needed",DONE
-gText_MatchCallCollector_Edwin_Strategy,,src/data/text/match_call_messages.h,266,EDWIN,c,match_call_profile,Protect POKéMON from harm.,Protect COMPANION from harm.,CURATED,POKéMON,,12,reviewed AUTO draft,DONE
+gText_MatchCallCollector_Edwin_Strategy,,src/data/text/match_call_messages.h,266,EDWIN,c,match_call_profile,Protect POKéMON from harm.,Protect my TEAM from harm.,CURATED,POKéMON,,,"too wide for its window: shortened, 2026-11-04",DONE
 gText_MatchCallCollector_Edwin_Pokemon,,src/data/text/match_call_messages.h,267,EDWIN,c,match_call_profile,I love rare POKéMON.,I love rare COMPANIONS.,CURATED,POKéMON,,18,reviewed AUTO draft,DONE
 gText_MatchCallCollector_Edwin_Intro1,,src/data/text/match_call_messages.h,268,EDWIN,c,match_call_profile,I want to collect all the,I want to collect all the,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallCollector_Edwin_Intro2,,src/data/text/match_call_messages.h,269,EDWIN,c,match_call_profile,world's rare POKéMON.,world's rare COMPANIONS.,CURATED,POKéMON,,18,reviewed AUTO draft,DONE
@@ -8985,7 +8985,7 @@ gText_MatchCallPkmnBreeder_Isaac_Strategy,,src/data/text/match_call_messages.h,2
 gText_MatchCallPkmnBreeder_Isaac_Pokemon,,src/data/text/match_call_messages.h,277,ISAAC,c,match_call_profile,Anything. I'll raise it.,Anything. I'll raise it.,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallPkmnBreeder_Isaac_Intro1,,src/data/text/match_call_messages.h,278,ISAAC,c,match_call_profile,I give them {POKEBLOCK}S for,I raise them with care so,CURATED,,,42,Showcases and treats removed,NOT_STARTED
 gText_MatchCallPkmnBreeder_Isaac_Intro2,,src/data/text/match_call_messages.h,279,ISAAC,c,match_call_profile,going after CONTEST titles.,they grow up strong.,CURATED,CONTEST,,,Showcases and treats removed,DONE
-gText_MatchCallPkmnBreeder_Gabrielle_Strategy,,src/data/text/match_call_messages.h,281,GABRIELLE,c,match_call_profile,I raise POKéMON with care.,I raise COMPANIONS with care.,CURATED,POKéMON,,18,reviewed AUTO draft,DONE
+gText_MatchCallPkmnBreeder_Gabrielle_Strategy,,src/data/text/match_call_messages.h,281,GABRIELLE,c,match_call_profile,I raise POKéMON with care.,I raise my TEAM with care.,CURATED,POKéMON,,,"too wide for its window: shortened, 2026-11-04",DONE
 gText_MatchCallPkmnBreeder_Gabrielle_Pokemon,,src/data/text/match_call_messages.h,282,GABRIELLE,c,match_call_profile,Fun-to-raise POKéMON.,Fun-to-raise COMPANIONS.,CURATED,POKéMON,,18,reviewed AUTO draft,DONE
 gText_MatchCallPkmnBreeder_Gabrielle_Intro1,,src/data/text/match_call_messages.h,283,GABRIELLE,c,match_call_profile,Treat every POKéMON you,Treat every COMPANION you,CURATED,POKéMON,,12,reviewed AUTO draft,DONE
 gText_MatchCallPkmnBreeder_Gabrielle_Intro2,,src/data/text/match_call_messages.h,284,GABRIELLE,c,match_call_profile,meet with respect.,meet with respect.,CURATED,,,,"reviewed, no change needed",DONE
@@ -8998,11 +8998,11 @@ gText_MatchCallPkmnRanger_Jackson_Pokemon,,src/data/text/match_call_messages.h,2
 gText_MatchCallPkmnRanger_Jackson_Intro1,,src/data/text/match_call_messages.h,293,JACKSON,c,match_call_profile,Those who destroy nature,Those who destroy nature,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallPkmnRanger_Jackson_Intro2,,src/data/text/match_call_messages.h,294,JACKSON,c,match_call_profile,must never be forgiven!,must never be forgiven!,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallLass_Haley_Strategy,,src/data/text/match_call_messages.h,296,HALEY,c,match_call_profile,I'll show you some guts!,I'll show you some guts!,CURATED,,,,"reviewed, no change needed",DONE
-gText_MatchCallLass_Haley_Pokemon,,src/data/text/match_call_messages.h,297,HALEY,c,match_call_profile,Cute POKéMON are my faves!,Cute COMPANIONS are my faves!,CURATED,POKéMON,,18,reviewed AUTO draft,DONE
+gText_MatchCallLass_Haley_Pokemon,,src/data/text/match_call_messages.h,297,HALEY,c,match_call_profile,Cute POKéMON are my faves!,Cute ones are my faves!,CURATED,POKéMON,,,"too wide for its window: shortened, 2026-11-04",DONE
 gText_MatchCallLass_Haley_Intro1,,src/data/text/match_call_messages.h,298,HALEY,c,match_call_profile,"After a battle, I always","After a battle, I always",CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallLass_Haley_Intro2,,src/data/text/match_call_messages.h,299,HALEY,c,match_call_profile,bathe with my POKéMON.,bathe with my COMPANION.,CURATED,POKéMON,,12,reviewed AUTO draft,DONE
 gText_MatchCallBugCatcher_James_Strategy,,src/data/text/match_call_messages.h,301,JAMES,c,match_call_profile,Lightning-fast attack!,Lightning-fast attack!,CURATED,,,,"reviewed, no change needed",DONE
-gText_MatchCallBugCatcher_James_Pokemon,,src/data/text/match_call_messages.h,302,JAMES,c,match_call_profile,BUG POKéMON are number 1!,BUG COMPANIONS are number 1!,CURATED,POKéMON,,18,reviewed AUTO draft,DONE
+gText_MatchCallBugCatcher_James_Pokemon,,src/data/text/match_call_messages.h,302,JAMES,c,match_call_profile,BUG POKéMON are number 1!,BUG types are number 1!,CURATED,POKéMON,,,"too wide for its window: shortened, 2026-11-04",DONE
 gText_MatchCallBugCatcher_James_Intro1,,src/data/text/match_call_messages.h,303,JAMES,c,match_call_profile,If you want to catch BUG,If you want to catch BUG,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallBugCatcher_James_Intro2,,src/data/text/match_call_messages.h,304,JAMES,c,match_call_profile,"POKéMON, wake up early.","COMPANION, wake up early.",CURATED,POKéMON,,12,reviewed AUTO draft,DONE
 gText_MatchCallHiker_Trent_Strategy,,src/data/text/match_call_messages.h,306,TRENT,c,match_call_profile,I battle with power.,I battle with power.,CURATED,,,,"reviewed, no change needed",DONE
@@ -9011,7 +9011,7 @@ gText_MatchCallHiker_Trent_Intro1,,src/data/text/match_call_messages.h,308,TRENT
 gText_MatchCallHiker_Trent_Intro2,,src/data/text/match_call_messages.h,309,TRENT,c,match_call_profile,for today's hike.,for today's hike.,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallHiker_Sawyer_Strategy,,src/data/text/match_call_messages.h,311,SAWYER,c,match_call_profile,I like it hot!,I like it hot!,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallHiker_Sawyer_Pokemon,,src/data/text/match_call_messages.h,312,SAWYER,c,match_call_profile,Hot POKéMON!,Hot COMPANION!,CURATED,POKéMON,,12,reviewed AUTO draft,DONE
-gText_MatchCallHiker_Sawyer_Intro1,,src/data/text/match_call_messages.h,313,SAWYER,c,match_call_profile,"As much as I love POKéMON,","As much as I love COMPANIONS,",CURATED,POKéMON,,18,reviewed AUTO draft,DONE
+gText_MatchCallHiker_Sawyer_Intro1,,src/data/text/match_call_messages.h,313,SAWYER,c,match_call_profile,"As much as I love POKéMON,","As much as I love my TEAM,",CURATED,POKéMON,,,"too wide for its window: shortened, 2026-11-04",DONE
 gText_MatchCallHiker_Sawyer_Intro2,,src/data/text/match_call_messages.h,314,SAWYER,c,match_call_profile,I surely like hiking!,I surely like hiking!,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallYoungCouple_LoisAndHal_Strategy,,src/data/text/match_call_messages.h,316,LOISANDHAL,c,match_call_profile,Lovey-dovey strategy!,Lovey-dovey strategy!,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallYoungCouple_LoisAndHal_Pokemon,,src/data/text/match_call_messages.h,317,LOISANDHAL,c,match_call_profile,Lovey-dovey POKéMON!,Lovey-dovey COMPANION!,CURATED,POKéMON,,12,reviewed AUTO draft,DONE
@@ -9022,8 +9022,8 @@ gText_MatchCallPkmnTrainer_Wally_Pokemon,,src/data/text/match_call_messages.h,32
 gText_MatchCallPkmnTrainer_Wally_Intro1,,src/data/text/match_call_messages.h,323,WALLY,c,match_call_profile,POKéMON and I have grown,COMPANION and I have grown,CURATED,POKéMON,,12,reviewed AUTO draft,DONE
 gText_MatchCallPkmnTrainer_Wally_Intro2,,src/data/text/match_call_messages.h,324,WALLY,c,match_call_profile,stronger together.,stronger together.,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallRockinWhiz_Roxanne_Strategy,,src/data/text/match_call_messages.h,326,ROXANNE,c,match_call_profile,ROCK-type power attack.,ROCK-type power attack.,CURATED,,,,"reviewed, no change needed",DONE
-gText_MatchCallRockinWhiz_Roxanne_Pokemon,,src/data/text/match_call_messages.h,327,ROXANNE,c,match_call_profile,I prefer rock-hard POKéMON.,I prefer rock-hard COMPANION.,CURATED,POKéMON,,12,reviewed AUTO draft,DONE
-gText_MatchCallRockinWhiz_Roxanne_Intro1,,src/data/text/match_call_messages.h,328,ROXANNE,c,match_call_profile,A LEADER of a big GYM bears,A LEADER of a big ARENA bears,CURATED,GYM,,12,reviewed AUTO draft,DONE
+gText_MatchCallRockinWhiz_Roxanne_Pokemon,,src/data/text/match_call_messages.h,327,ROXANNE,c,match_call_profile,I prefer rock-hard POKéMON.,I prefer rock-hard types.,CURATED,POKéMON,,,"too wide for its window: shortened, 2026-11-04",DONE
+gText_MatchCallRockinWhiz_Roxanne_Intro1,,src/data/text/match_call_messages.h,328,ROXANNE,c,match_call_profile,A LEADER of a big GYM bears,A big ARENA's LEADER bears,CURATED,GYM,,,"too wide for its window: shortened, 2026-11-04",DONE
 gText_MatchCallRockinWhiz_Roxanne_Intro2,,src/data/text/match_call_messages.h,329,ROXANNE,c,match_call_profile,a lot of responsibility.,a lot of responsibility.,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallTheBigHit_Brawly_Strategy,,src/data/text/match_call_messages.h,331,BRAWLY,c,match_call_profile,Direct physical action!,Direct physical action!,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallTheBigHit_Brawly_Pokemon,,src/data/text/match_call_messages.h,332,BRAWLY,c,match_call_profile,FIGHTING POKéMON rule!,FIGHTING COMPANIONS rule!,CURATED,POKéMON,,18,reviewed AUTO draft,DONE
@@ -9070,7 +9070,7 @@ gText_MatchCallEliteFour_Drake_Pokemon,,src/data/text/match_call_messages.h,382,
 gText_MatchCallEliteFour_Drake_Intro1,,src/data/text/match_call_messages.h,383,DRAKE,c,match_call_profile,I dedicate myself to the,I dedicate myself to the,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallEliteFour_Drake_Intro2,,src/data/text/match_call_messages.h,384,DRAKE,c,match_call_profile,POKéMON that saved me.,COMPANION that saved me.,CURATED,POKéMON,,12,reviewed AUTO draft,DONE
 gText_MatchCallChampion_Wallace_Strategy,,src/data/text/match_call_messages.h,386,WALLACE,c,match_call_profile,Dignity and respect.,Dignity and respect.,CURATED,,,,"reviewed, no change needed",DONE
-gText_MatchCallChampion_Wallace_Pokemon,,src/data/text/match_call_messages.h,387,WALLACE,c,match_call_profile,I prefer POKéMON of grace.,I prefer COMPANION of grace.,CURATED,POKéMON,,12,reviewed AUTO draft,DONE
+gText_MatchCallChampion_Wallace_Pokemon,,src/data/text/match_call_messages.h,387,WALLACE,c,match_call_profile,I prefer POKéMON of grace.,I prefer ones of grace.,CURATED,POKéMON,,,"too wide for its window: shortened, 2026-11-04",DONE
 gText_MatchCallChampion_Wallace_Intro1,,src/data/text/match_call_messages.h,388,WALLACE,c,match_call_profile,I represent beauty as,I represent beauty as,CURATED,,,,"reviewed, no change needed",DONE
 gText_MatchCallChampion_Wallace_Intro2,,src/data/text/match_call_messages.h,389,WALLACE,c,match_call_profile,well as intelligence.,well as intelligence.,CURATED,,,,"reviewed, no change needed",DONE
 sText_EmptyString,,src/data/union_room.h,1,,c,union_room,,,CURATED,,,,"reviewed, no change needed",DONE
@@ -9349,7 +9349,7 @@ LandmarkName_MeteorFalls,,src/landmark.c,33,,c,landmark,METEOR FALLS,STARFALL CA
 LandmarkName_TunnelersRestHouse,,src/landmark.c,34,,c,landmark,TUNNELER'S RESTHOUSE,TUNNELER'S RESTHOUSE,CURATED,,,,"reviewed, no change needed",DONE
 LandmarkName_RusturfTunnel,,src/landmark.c,35,,c,landmark,RUSTURF TUNNEL,BEGGAR'S CANYON,CURATED,RUSTURF TUNNEL,,3,reviewed AUTO draft,DONE
 LandmarkName_PokemonDayCare,,src/landmark.c,36,,c,landmark,POKéMON DAY CARE,COMPANION NURSERY,CURATED,POKéMON DAY CARE,,9,reviewed AUTO draft,DONE
-LandmarkName_SafariZoneEntrance,,src/landmark.c,37,,c,landmark,SAFARI ZONE ENTRANCE,FELUCIA RESERVE ENTRANCE,CURATED,SAFARI ZONE,,24,reviewed AUTO draft,DONE
+LandmarkName_SafariZoneEntrance,,src/landmark.c,37,,c,landmark,SAFARI ZONE ENTRANCE,RESERVE ENTRANCE,CURATED,SAFARI ZONE,,,"too wide for its window: shortened, 2026-11-04",DONE
 LandmarkName_MtPyre,,src/landmark.c,38,,c,landmark,MT. PYRE,JEDHA TEMPLE,CURATED,MT. PYRE,,27,reviewed AUTO draft,DONE
 LandmarkName_ShoalCave,,src/landmark.c,39,,c,landmark,SHOAL CAVE,WAMPA CAVE,CURATED,SHOAL CAVE,,,reviewed AUTO draft,DONE
 LandmarkName_SeafloorCavern,,src/landmark.c,40,,c,landmark,SEAFLOOR CAVERN,DROWNED CAVERN,CURATED,SEAFLOOR CAVERN,,,reviewed AUTO draft,DONE
@@ -9662,7 +9662,7 @@ gText_TheShop,,src/strings.c,254,,c,ui_string,the shop,the shop,CURATED,,,,"revi
 gText_ThePC,,src/strings.c,255,,c,ui_string,the PC,the TERMINAL,CURATED,PC,,36,,DONE
 gText_ReturnToVar1,,src/strings.c,281,,c,ui_string,Return to\n{STR_VAR_1}.,Return to\n{STR_VAR_1}.,CURATED,,,,"reviewed, no change needed",DONE
 gText_ItemsPocket,,src/strings.c,282,,c,ui_string,ITEMS,ITEMS,CURATED,,,,"reviewed, no change needed",DONE
-gText_PokeBallsPocket,,src/strings.c,283,,c,ui_string,POKé BALLS,CAPTURE PODS,CURATED,POKé BALLS,,12,reviewed AUTO draft,DONE
+gText_PokeBallsPocket,,src/strings.c,283,,c,ui_string,POKé BALLS,PODS,CURATED,POKé BALLS,,,"too wide for its window: shortened, 2026-11-04",DONE
 gText_TMHMPocket,,src/strings.c,284,,c,ui_string,TMs & HMs,TMs & HMs,CURATED,,,,"reviewed, no change needed",DONE
 gText_BerriesPocket,,src/strings.c,285,,c,ui_string,BERRIES,FRUIT,CURATED,BERRIES,,,reviewed AUTO draft,DONE
 gText_KeyItemsPocket,,src/strings.c,286,,c,ui_string,KEY ITEMS,KEY ITEMS,CURATED,,,,"reviewed, no change needed",DONE
@@ -9800,7 +9800,7 @@ gText_MoveToWhere,,src/strings.c,430,,c,ui_string,Move to where?,Move to where?,
 gText_TeachWhichPokemon,,src/strings.c,431,,c,ui_string,Teach which POKéMON?,Teach which COMPANION?,CURATED,POKéMON,,12,reviewed AUTO draft,DONE
 gText_UseOnWhichPokemon,,src/strings.c,432,,c,ui_string,Use on which POKéMON?,Use on which COMPANION?,CURATED,POKéMON,,12,reviewed AUTO draft,DONE
 gText_GiveToWhichPokemon,,src/strings.c,433,,c,ui_string,Give to which POKéMON?,Give to which COMPANION?,CURATED,POKéMON,,12,reviewed AUTO draft,DONE
-gText_DoWhatWithPokemon,,src/strings.c,434,,c,ui_string,Do what with this {PKMN}?,Do what with this {COMPANION}?,CURATED,{PKMN},,21,"{PKMN} glyph -> {COMPANION} glyph (tools/glyph-maker), 2026-11-03",DONE
+gText_DoWhatWithPokemon,,src/strings.c,434,,c,ui_string,Do what with this {PKMN}?,Do what with this one?,CURATED,{PKMN},,2,"{PKMN} glyph -> {COMPANION} glyph (tools/glyph-maker), 2026-11-03; too wide for its window: shortened, 2026-11-04",DONE
 gText_NothingToCut,,src/strings.c,435,,c,ui_string,There's nothing to CUT.,There's nothing to slice here.,CURATED,CUT,,34,,DONE
 gText_CantSurfHere,,src/strings.c,436,,c,ui_string,You can't SURF here.,You can't SURF here.,CURATED,,,,"reviewed, no change needed",DONE
 gText_AlreadySurfing,,src/strings.c,437,,c,ui_string,You're already SURFING.,You're already SURFING.,CURATED,,,,"reviewed, no change needed",DONE
@@ -9874,7 +9874,7 @@ gText_EmptyString5,,src/strings.c,504,,c,ui_string,,,CURATED,,,,"reviewed, no ch
 gText_Events,,src/strings.c,505,,c,ui_string,EVENTS,EVENTS,CURATED,,,,"reviewed, no change needed",DONE
 gText_Switch,,src/strings.c,506,,c,ui_string,SWITCH,SWITCH,CURATED,,,,"reviewed, no change needed",DONE
 gText_PkmnInfo,,src/strings.c,507,,c,ui_string,POKéMON INFO,COMPANION INFO,CURATED,POKéMON,,12,reviewed AUTO draft,DONE
-gText_PkmnSkills,,src/strings.c,508,,c,ui_string,POKéMON SKILLS,COMPANION SKILLS,CURATED,POKéMON,,12,reviewed AUTO draft,DONE
+gText_PkmnSkills,,src/strings.c,508,,c,ui_string,POKéMON SKILLS,SKILLS,CURATED,POKéMON,,,"too wide for its window: shortened, 2026-11-04",DONE
 gText_BattleMoves,,src/strings.c,509,,c,ui_string,BATTLE MOVES,BATTLE MOVES,CURATED,,,,"reviewed, no change needed",DONE
 gText_ContestMoves,,src/strings.c,510,,c,ui_string,C0NTEST MOVES,C0NTEST MOVES,CURATED,,,,"reviewed, no change needed",DONE
 gText_Info,,src/strings.c,511,,c,ui_string,INFO,INFO,CURATED,,,,"reviewed, no change needed",DONE
@@ -10096,7 +10096,7 @@ gText_AboutG_Mode,,src/strings.c,726,,c,ui_string,ABOUT G-MODE,ABOUT G-MODE,CURA
 gText_E_Mode,,src/strings.c,727,,c,ui_string,E-MODE,E-MODE,CURATED,,,,"reviewed, no change needed",DONE
 gText_G_Mode,,src/strings.c,728,,c,ui_string,G-MODE,G-MODE,CURATED,,,,"reviewed, no change needed",DONE
 gText_MenuOptionPokedex,,src/strings.c,729,,c,ui_string,POKéDEX,DATAPAD,CURATED,POKéDEX,,,reviewed AUTO draft,DONE
-gText_MenuOptionPokemon,,src/strings.c,730,,c,ui_string,POKéMON,COMPANION,CURATED,POKéMON,,12,reviewed AUTO draft,DONE
+gText_MenuOptionPokemon,,src/strings.c,730,,c,ui_string,POKéMON,TEAM,CURATED,POKéMON,,,"too wide for its window: shortened, 2026-11-04",DONE
 gText_MenuOptionBag,,src/strings.c,731,,c,ui_string,BAG,BAG,CURATED,,,,"reviewed, no change needed",DONE
 gText_MenuOptionPokenav,,src/strings.c,732,,c,ui_string,POKéNAV,StarNAV,CURATED,POKéNAV,,,reviewed AUTO draft,DONE
 gText_Blank,,src/strings.c,733,,c,ui_string,,,CURATED,,,,"reviewed, no change needed",DONE
@@ -10310,7 +10310,7 @@ gText_SeeYaDescription,,src/strings.c,940,,c,ui_string,Return to the previous me
 gText_JustOnePkmn,,src/strings.c,941,,c,ui_string,There is just one POKéMON with you.,There is just one COMPANION with you.,CURATED,POKéMON,,12,reviewed AUTO draft,DONE
 gText_PartyFull,,src/strings.c,942,,c,ui_string,Your party is full!,Your party is full!,CURATED,,,,"reviewed, no change needed",DONE
 gText_Box,,src/strings.c,943,,c,ui_string,BOX,BOX,CURATED,,,,"reviewed, no change needed",DONE
-gText_CheckMapOfHoenn,,src/strings.c,944,,c,ui_string,Check the map of the HOENN region.,Check the map of the OUTER RIM region.,CURATED,HOENN,,21,reviewed AUTO draft,DONE
+gText_CheckMapOfHoenn,,src/strings.c,944,,c,ui_string,Check the map of the HOENN region.,Check the OUTER RIM map.,CURATED,HOENN,,,"too wide for its window: shortened, 2026-11-04",DONE
 gText_CheckPokemonInDetail,,src/strings.c,945,,c,ui_string,Check POKéMON in detail.,Check COMPANION in detail.,CURATED,POKéMON,,12,reviewed AUTO draft,DONE
 gText_CallRegisteredTrainer,,src/strings.c,946,,c,ui_string,Call a registered TRAINER.,Call a registered TRAINER.,CURATED,,,,"reviewed, no change needed",DONE
 gText_CheckObtainedRibbons,,src/strings.c,947,,c,ui_string,Check obtained RIBBONS.,Check obtained RIBBONS.,CURATED,,,,"reviewed, no change needed",DONE
@@ -10872,7 +10872,7 @@ gText_GameTime,,src/strings.c,1507,,c,ui_string,Game time,Game time,CURATED,,,,"
 gText_RTCTime,,src/strings.c,1508,,c,ui_string,RTC time,RTC time,CURATED,,,,"reviewed, no change needed",DONE
 gText_UpdatedTime,,src/strings.c,1509,,c,ui_string,Updated time,Updated time,CURATED,,,,"reviewed, no change needed",DONE
 gText_MenuPokedex,,src/strings.c,1510,,c,ui_string,POKéDEX,DATAPAD,CURATED,POKéDEX,,,reviewed AUTO draft,DONE
-gText_MenuPokemon,,src/strings.c,1511,,c,ui_string,POKéMON,COMPANION,CURATED,POKéMON,,12,reviewed AUTO draft,DONE
+gText_MenuPokemon,,src/strings.c,1511,,c,ui_string,POKéMON,TEAM,CURATED,POKéMON,,,"too wide for its window: shortened, 2026-11-04",DONE
 gText_MenuBag,,src/strings.c,1512,,c,ui_string,BAG,BAG,CURATED,,,,"reviewed, no change needed",DONE
 gText_MenuPokenav,,src/strings.c,1513,,c,ui_string,POKéNAV,StarNAV,CURATED,POKéNAV,,,reviewed AUTO draft,DONE
 gText_MenuPlayer,,src/strings.c,1514,,c,ui_string,{PLAYER},{PLAYER},CURATED,,,,"reviewed, no change needed",DONE
@@ -10991,7 +10991,7 @@ gText_Rechoose,,src/strings.c,1629,,c,ui_string,RECHOOSE,RECHOOSE,CURATED,,,,"re
 gText_QuitSwapping,,src/strings.c,1630,,c,ui_string,Quit swapping?,Quit swapping?,CURATED,,,,"reviewed, no change needed",DONE
 gText_Yes3,,src/strings.c,1631,,c,ui_string,YES,YES,CURATED,,,,"reviewed, no change needed",DONE
 gText_No3,,src/strings.c,1632,,c,ui_string,NO,NO,CURATED,,,,"reviewed, no change needed",DONE
-gText_PkmnForSwap,,src/strings.c,1633,,c,ui_string,{PKMN} FOR SWAP,{COMPANION} FOR SWAP,CURATED,{PKMN},,21,"{PKMN} glyph -> {COMPANION} glyph (tools/glyph-maker), 2026-11-03",DONE
+gText_PkmnForSwap,,src/strings.c,1633,,c,ui_string,{PKMN} FOR SWAP,SWAP THIS,CURATED,{PKMN},,,"{PKMN} glyph -> {COMPANION} glyph (tools/glyph-maker), 2026-11-03; too wide for its window: shortened, 2026-11-04",DONE
 gText_Cancel3,,src/strings.c,1634,,c,ui_string,CANCEL,CANCEL,CURATED,,,,"reviewed, no change needed",DONE
 gText_Swap2,,src/strings.c,1635,,c,ui_string,SWAP,SWAP,CURATED,,,,"reviewed, no change needed",DONE
 gText_Accept,,src/strings.c,1636,,c,ui_string,ACCEPT,ACCEPT,CURATED,,,,"reviewed, no change needed",DONE

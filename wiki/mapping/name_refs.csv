@@ -11,16 +11,16 @@ character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/LavaridgeTown/script
 character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/LavaridgeTown/scripts.inc,276,LavaridgeTown_Text_MayExplainGoGogglesChallengeDad,1,"MIRA: With those SAND GOGGLES, you'll\n"
 character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/LavaridgeTown/scripts.inc,288,LavaridgeTown_Text_BrendanNiceBadgesTakeThis,1,"KAEL: {PLAYER}, hey, it's been a while.\n"
 character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/LavaridgeTown/scripts.inc,296,LavaridgeTown_Text_BrendanExplainGoGogglesChallengeDad,1,KAEL: Keep those with you if you're\n
-character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/LilycoveCity/scripts.inc,410,LilycoveCity_Text_MayShoppingLetsBattle,1,"MIRA: Oh, hey?\n"
-character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/LilycoveCity/scripts.inc,423,LilycoveCity_Text_MayNotRaisingPokemon,1,"MIRA: Oh, why? {PLAYER}{KUN}, haven't you\n"
-character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/LilycoveCity/scripts.inc,429,LilycoveCity_Text_MayBattleMe,1,"MIRA: Come on, battle with me, so I can\n"
-character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/LilycoveCity/scripts.inc,433,LilycoveCity_Text_MayWontBeBeaten,1,MIRA: The COMPANIONS I raised won't be\n
-character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/LilycoveCity/scripts.inc,444,LilycoveCity_Text_MayGoingBackToLittleroot,1,MIRA: I'm thinking of going back to\n
-character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/LilycoveCity/scripts.inc,480,LilycoveCity_Text_BrendanShoppingLetsBattle,1,"KAEL: Oh, hey, it's {PLAYER}.\p"
-character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/LilycoveCity/scripts.inc,488,LilycoveCity_Text_BrendanNoConfidence,1,"KAEL: Oh, what's the matter?\n"
-character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/LilycoveCity/scripts.inc,492,LilycoveCity_Text_BrendanBattleMe,1,KAEL: Want to battle to see who's\n
-character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/LilycoveCity/scripts.inc,496,LilycoveCity_Text_BrendanWontBeBeaten,1,"KAEL: Aww, but you know I'm not\n"
-character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/LilycoveCity/scripts.inc,506,LilycoveCity_Text_BrendanGoingBackToLittleroot,1,KAEL: I…\n
+character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/LilycoveCity/scripts.inc,637,LilycoveCity_Text_MayShoppingLetsBattle,1,"MIRA: Oh, hey?\n"
+character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/LilycoveCity/scripts.inc,650,LilycoveCity_Text_MayNotRaisingPokemon,1,"MIRA: Oh, why? {PLAYER}{KUN}, haven't you\n"
+character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/LilycoveCity/scripts.inc,656,LilycoveCity_Text_MayBattleMe,1,"MIRA: Come on, battle with me, so I can\n"
+character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/LilycoveCity/scripts.inc,660,LilycoveCity_Text_MayWontBeBeaten,1,MIRA: The COMPANIONS I raised won't be\n
+character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/LilycoveCity/scripts.inc,671,LilycoveCity_Text_MayGoingBackToLittleroot,1,MIRA: I'm thinking of going back to\n
+character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/LilycoveCity/scripts.inc,707,LilycoveCity_Text_BrendanShoppingLetsBattle,1,"KAEL: Oh, hey, it's {PLAYER}.\p"
+character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/LilycoveCity/scripts.inc,715,LilycoveCity_Text_BrendanNoConfidence,1,"KAEL: Oh, what's the matter?\n"
+character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/LilycoveCity/scripts.inc,719,LilycoveCity_Text_BrendanBattleMe,1,KAEL: Want to battle to see who's\n
+character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/LilycoveCity/scripts.inc,723,LilycoveCity_Text_BrendanWontBeBeaten,1,"KAEL: Aww, but you know I'm not\n"
+character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/LilycoveCity/scripts.inc,733,LilycoveCity_Text_BrendanGoingBackToLittleroot,1,KAEL: I…\n
 character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/LittlerootTown_MaysHouse_1F/scripts.inc,356,RivalsHouse_1F_Text_MayWhoAreYou,1,Um… I'm MIRA.\n
 character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/LittlerootTown_MaysHouse_1F/scripts.inc,383,RivalsHouse_1F_Text_BrendanWhoAreYou,1,My name's KAEL.\n
 character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/LittlerootTown_MaysHouse_2F/scripts.inc,304,RivalsHouse_2F_Text_MayWhoAreYou,1,Um… I'm MIRA.\n
@@ -166,7 +166,6 @@ character:rival,MIRA / KAEL,code,KEEP,,,data/maps/BattleFrontier_Mart/scripts.in
 character:rival,MIRA / KAEL,code,KEEP,,,data/maps/BattleFrontier_OutsideWest/scripts.inc,13,,2,BattleFrontier_OutsideWest_Text_MayISeeYourTicket
 character:rival,MIRA / KAEL,code,KEEP,,,data/maps/BattleFrontier_ScottsHouse/scripts.inc,82,,2,BattleFrontier_ScottsHouse_Text_MayFindWildMonsInFrontier
 character:rival,MIRA / KAEL,code,KEEP,,,data/maps/BirthIsland_Exterior/scripts.inc,13,,1,OBJ_EVENT_GFX_RIVAL_BRENDAN_NORMAL
-character:rival,MIRA / KAEL,code,KEEP,,,data/maps/ContestHall/scripts.inc,439,,4,LilycoveCity_ContestLobby_EventScript_SetPlayerGfxBrendan | OBJ_EVENT_GFX_RIVAL_BRENDAN_NORMAL | OBJ_EVENT_GFX_RIVAL_MAY_NORMAL
 character:rival,MIRA / KAEL,code,KEEP,,,data/maps/EverGrandeCity_ChampionsRoom/scripts.inc,54,,26,EverGrandeCity_ChampionsRoom_EventScript_PlayMayMusic | EverGrandeCity_ChampionsRoom_EventScript_PlayBrendanMusic | EverGrandeCity_ChampionsRoom_EventScript_MayAdvice | EverGrandeCity_ChampionsRoom_EventScript_BrendanAdvice | +10 more
 character:rival,MIRA / KAEL,code,KEEP,,,data/maps/EverGrandeCity_HallOfFame/scripts.inc,52,,1,HEAL_LOCATION_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F
 character:rival,MIRA / KAEL,code,KEEP,,,data/maps/EverGrandeCity_PokemonLeague_1F/scripts.inc,28,,1,gText_HowMayIServeYou
@@ -178,7 +177,7 @@ character:rival,MIRA / KAEL,code,KEEP,,,data/maps/FortreeCity_Mart/scripts.inc,7
 character:rival,MIRA / KAEL,code,KEEP,,,data/maps/InsideOfTruck/scripts.inc,25,,8,HEAL_LOCATION_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F | FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_MOM | FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_SIBLING | FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F_POKE_BALL | +4 more
 character:rival,MIRA / KAEL,code,KEEP,,,data/maps/LavaridgeTown/scripts.inc,51,,18,LavaridgeTown_EventScript_PlayMayMusic | LavaridgeTown_EventScript_PlayBrendanMusic | LavaridgeTown_EventScript_MayGiveGoGoggles | LavaridgeTown_EventScript_BrendanGiveGoGoggles | +6 more
 character:rival,MIRA / KAEL,code,KEEP,,,data/maps/LavaridgeTown_Mart/scripts.inc,7,,1,gText_HowMayIServeYou
-character:rival,MIRA / KAEL,code,KEEP,,,data/maps/LilycoveCity/scripts.inc,232,,92,LilycoveCity_EventScript_Brendan | MUS_ENCOUNTER_MAY | LilycoveCity_EventScript_MayAskToBattleAgain | LilycoveCity_EventScript_MayAskToBattle | +44 more
+character:rival,MIRA / KAEL,code,KEEP,,,data/maps/LilycoveCity/scripts.inc,461,,92,LilycoveCity_EventScript_Brendan | MUS_ENCOUNTER_MAY | LilycoveCity_EventScript_MayAskToBattleAgain | LilycoveCity_EventScript_MayAskToBattle | +44 more
 character:rival,MIRA / KAEL,code,KEEP,,,data/maps/LilycoveCity_DepartmentStoreRooftop/scripts.inc,22,,1,gText_HowMayIServeYou
 character:rival,MIRA / KAEL,code,KEEP,,,data/maps/LilycoveCity_DepartmentStore_2F/scripts.inc,19,,2,gText_HowMayIServeYou
 character:rival,MIRA / KAEL,code,KEEP,,,data/maps/LilycoveCity_DepartmentStore_3F/scripts.inc,7,,2,gText_HowMayIServeYou
@@ -216,7 +215,7 @@ character:rival,MIRA / KAEL,code,KEEP,,,data/maps/TrainerHill_Entrance/scripts.i
 character:rival,MIRA / KAEL,code,KEEP,,,data/maps/VerdanturfTown_BattleTentBattleRoom/scripts.inc,22,,4,OBJ_EVENT_GFX_RIVAL_BRENDAN_NORMAL | OBJ_EVENT_GFX_RIVAL_MAY_NORMAL
 character:rival,MIRA / KAEL,code,KEEP,,,data/maps/VerdanturfTown_Mart/scripts.inc,7,,1,gText_HowMayIServeYou
 character:rival,MIRA / KAEL,code,KEEP,,,data/scripts/hall_of_fame.inc,22,,3,FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_BEDROOM | VAR_LITTLEROOT_HOUSES_STATE_MAY | VAR_LITTLEROOT_HOUSES_STATE_BRENDAN
-character:rival,MIRA / KAEL,code,KEEP,,,data/scripts/new_game.inc,150,,4,FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_BRENDAN | FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_MAY | FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_BEDROOM | FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F_SWABLU_DOLL
+character:rival,MIRA / KAEL,code,KEEP,,,data/scripts/new_game.inc,132,,4,FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_BRENDAN | FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_MAY | FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_BEDROOM | FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F_SWABLU_DOLL
 character:rival,MIRA / KAEL,code,KEEP,,,data/scripts/players_house.inc,40,,6,LittlerootTown_BrendansHouse_2F_EventScript_WallClock | LittlerootTown_MaysHouse_2F_EventScript_WallClock | VAR_LITTLEROOT_HOUSES_STATE_MAY | VAR_LITTLEROOT_HOUSES_STATE_BRENDAN
 character:rival,MIRA / KAEL,code,KEEP,,,data/scripts/profile_man.inc,10,,4,ProfileMan_Text_MayISeeYourProfile | ProfileMan_Text_MayISeeYourNewProfile
 character:rival,MIRA / KAEL,code,KEEP,,,data/scripts/rival_graphics.inc,8,,6,OBJ_EVENT_GFX_RIVAL_MAY_NORMAL | OBJ_EVENT_GFX_RIVAL_BRENDAN_NORMAL | OBJ_EVENT_GFX_RIVAL_MAY_MACH_BIKE | OBJ_EVENT_GFX_RIVAL_BRENDAN_MACH_BIKE
@@ -248,7 +247,7 @@ character:rival,MIRA / KAEL,code,KEEP,,,src/battle_tower.c,328,,12,RS_FACILITY_C
 character:rival,MIRA / KAEL,code,KEEP,,,src/battle_transition.c,302,,16,sUnusedBrendan_Gfx | sOam_UnusedBrendanLass | sImageTable_UnusedBrendan | sSpriteAnim_UnusedBrendanLass | +3 more
 character:rival,MIRA / KAEL,code,KEEP,,,src/cable_car.c,790,,2,OBJ_EVENT_GFX_RIVAL_BRENDAN_NORMAL | OBJ_EVENT_GFX_RIVAL_MAY_NORMAL
 character:rival,MIRA / KAEL,code,KEEP,,,src/contest.c,2792,,2,OBJ_EVENT_GFX_LINK_BRENDAN | OBJ_EVENT_GFX_LINK_MAY
-character:rival,MIRA / KAEL,code,KEEP,,,src/contest_util.c,2496,,4,OBJ_EVENT_GFX_LINK_RS_BRENDAN | OBJ_EVENT_GFX_LINK_RS_MAY | gObjectEventPal_RubySapphireBrendan | gObjectEventPal_Brendan
+character:rival,MIRA / KAEL,code,KEEP,,,src/contest_util.c,2502,,4,OBJ_EVENT_GFX_LINK_RS_BRENDAN | OBJ_EVENT_GFX_LINK_RS_MAY | gObjectEventPal_RubySapphireBrendan | gObjectEventPal_Brendan
 character:rival,MIRA / KAEL,code,KEEP,,,src/credits.c,1212,,6,gSpriteSheet_CreditsBrendan | CreateIntroBrendanSprite | CreateIntroMaySprite | gSpriteSheet_CreditsRivalBrendan
 character:rival,MIRA / KAEL,code,KEEP,,,src/data.c,48,,10,gTrainerBackPicTable_Brendan | gTrainerBackPic_Brendan | gTrainerBackPicTable_RubySapphireBrendan | gTrainerBackPic_RubySapphireBrendan
 character:rival,MIRA / KAEL,code,KEEP,,,src/data/graphics/intro_scene.h,10,,2,gIntroBrendan_Gfx | gIntroMay_Gfx
@@ -355,7 +354,7 @@ character:prof-birch,PROF. KORR,code,KEEP,,,data/maps/Route101/scripts.inc,7,,25
 character:prof-birch,PROF. KORR,code,KEEP,,,data/maps/Route103/scripts.inc,8,,3,ProfBirch_EventScript_UpdateLocation | VAR_BIRCH_LAB_STATE | FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_RIVAL
 character:prof-birch,PROF. KORR,code,KEEP,,,data/maps/Route110/scripts.inc,559,,63,Route110_EventScript_BirchScene1 | Route110_EventScript_BirchScene | Route110_EventScript_BirchScene2 | Route110_EventScript_BirchScene3 | +22 more
 character:prof-birch,PROF. KORR,code,KEEP,,,data/maps/SlateportCity_OceanicMuseum_2F/scripts.inc,71,,4,VAR_REGISTER_BIRCH_STATE | SlateportCity_OceanicMuseum_2F_EventScript_ReadyRegisterBirch
-character:prof-birch,PROF. KORR,code,KEEP,,,data/scripts/new_game.inc,120,,11,FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_BIRCH | FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_RIVAL | FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_POKEBALL_CYNDAQUIL | FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_POKEBALL_TOTODILE | +7 more
+character:prof-birch,PROF. KORR,code,KEEP,,,data/scripts/new_game.inc,102,,11,FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_BIRCH | FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_RIVAL | FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_POKEBALL_CYNDAQUIL | FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_POKEBALL_TOTODILE | +7 more
 character:prof-birch,PROF. KORR,code,KEEP,,,data/scripts/players_house.inc,281,,4,FLAG_RESCUED_BIRCH | PlayersHouse_1F_EventScript_DidYouMeetProfBirch | PlayersHouse_1F_Text_DidYouMeetProfBirch
 character:prof-birch,PROF. KORR,code,KEEP,,,data/scripts/prof_birch.inc,1,,48,ProfBirch_EventScript_UpdateLocation | ProfBirch_EventScript_MoveToLab | VAR_BIRCH_STATE | ProfBirch_EventScript_MoveToRoute101 | +16 more
 character:prof-birch,PROF. KORR,code,KEEP,,,data/specials.inc,230,,1,InitBirchState

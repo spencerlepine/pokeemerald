@@ -37,7 +37,7 @@ Aurebesh letters, ICE / DURA / ROCK, from the approved letters in `../glyph-make
 `python3 transitions/aurebesh_wipes.py preview` writes `output/aurebesh_wipes/before_after.png`; `install`
 writes `regis.png`, `regice/registeel/regirock.bin` and the tile count in `src/battle_transition.c`.
 Palettes and code are Emerald's. Shipped 2026-11-03, checked in the ROM with
-`../play-tester/scripts/aurebesh-check.sh regirock` (and `regice`, `registeel`).
+`../play-tester/scripts/ui-check.sh regirock` (and `regice`, `registeel`).
 
 ## Storyboards (move effects)
 

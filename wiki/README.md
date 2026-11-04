@@ -138,6 +138,10 @@ in `../game`. Every `source_file` is a path relative to `../game`.
 - Named characters are people, never companions. COMPANION replaces POKéMON; PC is a TERMINAL, TV is the HOLONET.
 - New flags and vars use only Emerald's unused slots (listed in `bible/NET_NEW_DESIGNS.md`).
 - Name limits: creature 10, move 12, item 14, ability 12, type 6, trainer class 12, trainer name 10, map name 16.
+- Menu labels must fit Emerald's windows, which were sized for "POKéMON" and the 16 px {PKMN} glyph. COMPANION
+  is wider, so menu labels say TEAM (start menu, battle menu, options) and tight lines are reworded
+  (2026-11-04). StarNAV profile lines must stay within 126 px in the narrow font. Check a changed label in the
+  emulator with `../tools/play-tester/scripts/ui-check.sh tour`.
 - [`bible/STORY.md`](bible/STORY.md) is the story: planets, factions, cast, acts.
 - [`bible/ALIEN_LANGUAGES.md`](bible/ALIEN_LANGUAGES.md) is the phrasebook for background NPCs who speak their own
   language (Jawas, Rodians, Twi'leks, Wookiees, Ewoks): every word, its meaning and its source. The lines are

@@ -272,7 +272,7 @@ gText_ThePokemonList,the COMPANION LIST,reviewed AUTO draft
 gText_TheShop,the shop,"reviewed, no change needed"
 gText_ReturnToVar1,Return to\n{STR_VAR_1}.,"reviewed, no change needed"
 gText_ItemsPocket,ITEMS,"reviewed, no change needed"
-gText_PokeBallsPocket,CAPTURE PODS,reviewed AUTO draft
+gText_PokeBallsPocket,PODS,"too wide for its window: shortened, 2026-11-04"
 gText_TMHMPocket,TMs & HMs,"reviewed, no change needed"
 gText_BerriesPocket,FRUIT,reviewed AUTO draft
 gText_KeyItemsPocket,KEY ITEMS,"reviewed, no change needed"
@@ -405,7 +405,7 @@ gText_MoveToWhere,Move to where?,"reviewed, no change needed"
 gText_TeachWhichPokemon,Teach which COMPANION?,reviewed AUTO draft
 gText_UseOnWhichPokemon,Use on which COMPANION?,reviewed AUTO draft
 gText_GiveToWhichPokemon,Give to which COMPANION?,reviewed AUTO draft
-gText_DoWhatWithPokemon,Do what with this {COMPANION}?,"{PKMN} glyph -> {COMPANION} glyph (tools/glyph-maker), 2026-11-03"
+gText_DoWhatWithPokemon,Do what with this one?,"{PKMN} glyph -> {COMPANION} glyph (tools/glyph-maker), 2026-11-03; too wide for its window: shortened, 2026-11-04"
 gText_CantSurfHere,You can't SURF here.,"reviewed, no change needed"
 gText_AlreadySurfing,You're already SURFING.,"reviewed, no change needed"
 gText_CantUseHere,Can't use that here.,"reviewed, no change needed"
@@ -477,7 +477,7 @@ gText_EmptyString5,,"reviewed, no change needed"
 gText_Events,EVENTS,"reviewed, no change needed"
 gText_Switch,SWITCH,"reviewed, no change needed"
 gText_PkmnInfo,COMPANION INFO,reviewed AUTO draft
-gText_PkmnSkills,COMPANION SKILLS,reviewed AUTO draft
+gText_PkmnSkills,SKILLS,"too wide for its window: shortened, 2026-11-04"
 gText_BattleMoves,BATTLE MOVES,"reviewed, no change needed"
 gText_ContestMoves,C0NTEST MOVES,"reviewed, no change needed"
 gText_Info,INFO,"reviewed, no change needed"
@@ -690,7 +690,7 @@ gText_AboutG_Mode,ABOUT G-MODE,"reviewed, no change needed"
 gText_E_Mode,E-MODE,"reviewed, no change needed"
 gText_G_Mode,G-MODE,"reviewed, no change needed"
 gText_MenuOptionPokedex,DATAPAD,reviewed AUTO draft
-gText_MenuOptionPokemon,COMPANION,reviewed AUTO draft
+gText_MenuOptionPokemon,TEAM,"too wide for its window: shortened, 2026-11-04"
 gText_MenuOptionBag,BAG,"reviewed, no change needed"
 gText_MenuOptionPokenav,StarNAV,reviewed AUTO draft
 gText_Blank,,"reviewed, no change needed"
@@ -903,7 +903,7 @@ gText_SeeYaDescription,Return to the previous menu.,"reviewed, no change needed"
 gText_JustOnePkmn,There is just one COMPANION with you.,reviewed AUTO draft
 gText_PartyFull,Your party is full!,"reviewed, no change needed"
 gText_Box,BOX,"reviewed, no change needed"
-gText_CheckMapOfHoenn,Check the map of the OUTER RIM region.,reviewed AUTO draft
+gText_CheckMapOfHoenn,Check the OUTER RIM map.,"too wide for its window: shortened, 2026-11-04"
 gText_CheckPokemonInDetail,Check COMPANION in detail.,reviewed AUTO draft
 gText_CallRegisteredTrainer,Call a registered TRAINER.,"reviewed, no change needed"
 gText_CheckObtainedRibbons,Check obtained RIBBONS.,"reviewed, no change needed"
@@ -1464,7 +1464,7 @@ gText_GameTime,Game time,"reviewed, no change needed"
 gText_RTCTime,RTC time,"reviewed, no change needed"
 gText_UpdatedTime,Updated time,"reviewed, no change needed"
 gText_MenuPokedex,DATAPAD,reviewed AUTO draft
-gText_MenuPokemon,COMPANION,reviewed AUTO draft
+gText_MenuPokemon,TEAM,"too wide for its window: shortened, 2026-11-04"
 gText_MenuBag,BAG,"reviewed, no change needed"
 gText_MenuPokenav,StarNAV,reviewed AUTO draft
 gText_MenuPlayer,{PLAYER},"reviewed, no change needed"
@@ -1581,7 +1581,7 @@ gText_Rechoose,RECHOOSE,"reviewed, no change needed"
 gText_QuitSwapping,Quit swapping?,"reviewed, no change needed"
 gText_Yes3,YES,"reviewed, no change needed"
 gText_No3,NO,"reviewed, no change needed"
-gText_PkmnForSwap,{COMPANION} FOR SWAP,"{PKMN} glyph -> {COMPANION} glyph (tools/glyph-maker), 2026-11-03"
+gText_PkmnForSwap,SWAP THIS,"{PKMN} glyph -> {COMPANION} glyph (tools/glyph-maker), 2026-11-03; too wide for its window: shortened, 2026-11-04"
 gText_Cancel3,CANCEL,"reviewed, no change needed"
 gText_Swap2,SWAP,"reviewed, no change needed"
 gText_Accept,ACCEPT,"reviewed, no change needed"

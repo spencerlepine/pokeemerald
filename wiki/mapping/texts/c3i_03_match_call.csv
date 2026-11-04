@@ -17,9 +17,9 @@ MatchCall_Text_Scott1,"LANDO: Howdy, {PLAYER}{KUN}!\pYou know how COMPANIONS can
 MatchCall_Text_May1,"MIRA: Hi, {PLAYER}{KUN}!\pHAN says he's retired from smuggling,\nbut I still see him flying around\lwith CHEWIE sometimes.\pHe must love flying still.$","Han (Briney) is a retired smuggler; Chewie (Peeko) is his co-pilot, not a pet"
 MatchCall_Text_Brendan1,"KAEL: Hey, {PLAYER}!\pHAN says he's retired from smuggling,\nbut I still see him flying around\lwith CHEWIE sometimes.\pI guess he must love\nflying still.$",
 MatchCall_Text_Steven1,"LEIA: Hi, {PLAYER}{KUN}!\pHave you been to MOS ESPA\nalready?\pYou should visit the bike shop\nand get a SWOOP BIKE.\pThen, try exploring the SHADOWLANDS\nof KASHYYYK thoroughly.\pYou may make a new discovery\nthere.$",
-gText_MatchCallSchoolKid_Karen_Pokemon,I love any kind of COMPANIONS!,
+gText_MatchCallSchoolKid_Karen_Pokemon,I love any kind at all!,"too wide for its window: shortened, 2026-11-04"
 gText_MatchCallPokefan_Miguel_Intro2,trust with your COMPANIONS.,
-gText_MatchCallSwimmer_Jenny_Intro2,I was interviewed on the HOLONET.,
+gText_MatchCallSwimmer_Jenny_Intro2,I was on the HOLONET.,"too wide for its window: shortened, 2026-11-04"
 MatchCall_PersonalizedText25,Snivel… It's… {STR_VAR_1}…\n…Sob…\pBIGGS chewed me out in class\ntoday.\pBut I don't dislike him or anything.\pBIGGS tells me exactly what\nI did wrong so I can learn from it.\pYou bet I'll be going to\nthe ACADEMY tomorrow!\pSee you later!$,
 MatchCall_PersonalizedText26,"It's {STR_VAR_1}!\pBIGGS let me battle with him\nyesterday.\pThe results…\nTerrible, like you needed to ask.\pBut I was delighted that BIGGS\nwould even let me challenge him!\pYou wouldn't believe how much\nmore I admire him!\pI'm going to really focus and work!\nI'd better go!$",
 MatchCall_WildBattleText1,"Hi! {PLAYER}{KUN}, hello!\nThis is {STR_VAR_1}.\pI saw this {STR_VAR_2} a while back\nbut I couldn't catch it.\pIt was so close, too!\nWell, see you again!$","reviewed, no change needed"
@@ -336,12 +336,12 @@ gText_MatchCallTuber_Lola_Pokemon,Good swimmer COMPANION.,reviewed AUTO draft
 gText_MatchCallTuber_Lola_Intro1,I wish I could swim without,"reviewed, no change needed"
 gText_MatchCallTuber_Lola_Intro2,using an inner tube.,"reviewed, no change needed"
 gText_MatchCallTuber_Ricky_Strategy,I don't know. I'll try hard.,"reviewed, no change needed"
-gText_MatchCallTuber_Ricky_Pokemon,WATER COMPANIONS are buddies.,reviewed AUTO draft
+gText_MatchCallTuber_Ricky_Pokemon,WATER ones are my buddies.,"too wide for its window: shortened, 2026-11-04"
 gText_MatchCallTuber_Ricky_Intro1,It's not like I can't swim.,"reviewed, no change needed"
 gText_MatchCallTuber_Ricky_Intro2,I just like my inner tube.,"reviewed, no change needed"
 gText_MatchCallSisAndBro_LilaAndRoy_Strategy,We split our duties.,"reviewed, no change needed"
 gText_MatchCallSisAndBro_LilaAndRoy_Pokemon,We like friendly COMPANION.,reviewed AUTO draft
-gText_MatchCallSisAndBro_LilaAndRoy_Intro1,We enjoy COMPANION together,reviewed AUTO draft
+gText_MatchCallSisAndBro_LilaAndRoy_Intro1,We raise our TEAM together,"too wide for its window: shortened, 2026-11-04"
 gText_MatchCallSisAndBro_LilaAndRoy_Intro2,as sister and brother.,"reviewed, no change needed"
 gText_MatchCallCooltrainer_Cristin_Strategy,I finish with power moves!,"reviewed, no change needed"
 gText_MatchCallCooltrainer_Cristin_Pokemon,A mix of different types.,"reviewed, no change needed"
@@ -405,7 +405,7 @@ gText_MatchCallKindler_Bernie_Intro1,"When you light a campfire,","reviewed, no 
 gText_MatchCallKindler_Bernie_Intro2,be sure there's some water.,"reviewed, no change needed"
 gText_MatchCallCamper_Ethan_Strategy,Hang in and be tenacious!,"reviewed, no change needed"
 gText_MatchCallCamper_Ethan_Pokemon,I'll raise any COMPANION.,reviewed AUTO draft
-gText_MatchCallCamper_Ethan_Intro1,COMPANION raised in the wild,reviewed AUTO draft
+gText_MatchCallCamper_Ethan_Intro1,A TEAM raised in the wild,"too wide for its window: shortened, 2026-11-04"
 gText_MatchCallCamper_Ethan_Intro2,grow strong!,"reviewed, no change needed"
 gText_MatchCallOldCouple_JohnAndJay_Strategy,Our love lets us prevail.,"reviewed, no change needed"
 gText_MatchCallOldCouple_JohnAndJay_Pokemon,We've had them for years.,"reviewed, no change needed"
@@ -414,13 +414,13 @@ gText_MatchCallOldCouple_JohnAndJay_Intro2,devotedly raised COMPANION.,reviewed 
 gText_MatchCallBugManiac_Jeffrey_Strategy,Attack in waves!,"reviewed, no change needed"
 gText_MatchCallBugManiac_Jeffrey_Pokemon,BUG COMPANIONS are cool.,reviewed AUTO draft
 gText_MatchCallBugManiac_Jeffrey_Intro1,I go into the forest every,"reviewed, no change needed"
-gText_MatchCallBugManiac_Jeffrey_Intro2,day to catch BUG COMPANIONS.,reviewed AUTO draft
+gText_MatchCallBugManiac_Jeffrey_Intro2,day to catch BUG types.,"too wide for its window: shortened, 2026-11-04"
 gText_MatchCallPsychic_Cameron_Strategy,Daze and confuse!,"reviewed, no change needed"
 gText_MatchCallPsychic_Cameron_Pokemon,Ones with weird powers.,"reviewed, no change needed"
 gText_MatchCallPsychic_Cameron_Intro1,I can see through exactly,"reviewed, no change needed"
 gText_MatchCallPsychic_Cameron_Intro2,what you're thinking!,"reviewed, no change needed"
 gText_MatchCallPsychic_Jacki_Strategy,Battle at full power.,"reviewed, no change needed"
-gText_MatchCallPsychic_Jacki_Pokemon,COMPANION of many mysteries.,reviewed AUTO draft
+gText_MatchCallPsychic_Jacki_Pokemon,Ones of many mysteries.,"too wide for its window: shortened, 2026-11-04"
 gText_MatchCallPsychic_Jacki_Intro1,"When we spoke, I was really","reviewed, no change needed"
 gText_MatchCallPsychic_Jacki_Intro2,using telepathy.,"reviewed, no change needed"
 gText_MatchCallGentleman_Walter_Strategy,Calm and collected.,"reviewed, no change needed"
@@ -435,7 +435,7 @@ gText_MatchCallSchoolKid_Jerry_Pokemon,Any smart COMPANIONS!,reviewed AUTO draft
 gText_MatchCallSchoolKid_Jerry_Intro1,I want to be a COMPANION,reviewed AUTO draft
 gText_MatchCallSchoolKid_Jerry_Intro2,researcher in the future.,"reviewed, no change needed"
 gText_MatchCallSrAndJr_AnnaAndMeg_Strategy,We talk it over first.,"reviewed, no change needed"
-gText_MatchCallSrAndJr_AnnaAndMeg_Pokemon,COMPANION that we both like.,reviewed AUTO draft
+gText_MatchCallSrAndJr_AnnaAndMeg_Pokemon,Ones that we both like.,"too wide for its window: shortened, 2026-11-04"
 gText_MatchCallSrAndJr_AnnaAndMeg_Intro1,We're senior and junior,"reviewed, no change needed"
 gText_MatchCallSrAndJr_AnnaAndMeg_Intro2,students into COMPANION!,reviewed AUTO draft
 gText_MatchCallPokefan_Isabel_Strategy,"Go for it, my dears!","reviewed, no change needed"
@@ -443,7 +443,7 @@ gText_MatchCallPokefan_Isabel_Pokemon,I have no likes or dislikes.,"reviewed, no
 gText_MatchCallPokefan_Isabel_Intro1,While out shopping for,"reviewed, no change needed"
 gText_MatchCallPokefan_Isabel_Intro2,"supper, I battle too.","reviewed, no change needed"
 gText_MatchCallPokefan_Miguel_Strategy,I battle with love!,"reviewed, no change needed"
-gText_MatchCallPokefan_Miguel_Pokemon,A COMPANION raised with love!,reviewed AUTO draft
+gText_MatchCallPokefan_Miguel_Pokemon,A TEAM raised with love!,"too wide for its window: shortened, 2026-11-04"
 gText_MatchCallPokefan_Miguel_Intro1,It's important to build,"reviewed, no change needed"
 gText_MatchCallExpert_Timothy_Strategy,I see through your moves!,"reviewed, no change needed"
 gText_MatchCallExpert_Timothy_Pokemon,The essence of FIGHTING.,"reviewed, no change needed"
@@ -456,7 +456,7 @@ gText_MatchCallExpert_Shelby_Intro2,style of battling.,"reviewed, no change need
 gText_MatchCallYoungster_Calvin_Strategy,I do what I can.,"reviewed, no change needed"
 gText_MatchCallYoungster_Calvin_Pokemon,I use different types.,"reviewed, no change needed"
 gText_MatchCallYoungster_Calvin_Intro1,I'm going to keep working,"reviewed, no change needed"
-gText_MatchCallYoungster_Calvin_Intro2,until I beat an ARENA LEADER.,reviewed AUTO draft
+gText_MatchCallYoungster_Calvin_Intro2,until I beat a LEADER.,"too wide for its window: shortened, 2026-11-04"
 gText_MatchCallFisherman_Elliot_Strategy,I battle patiently.,"reviewed, no change needed"
 gText_MatchCallFisherman_Elliot_Pokemon,WATER COMPANIONS to battle!,reviewed AUTO draft
 gText_MatchCallFisherman_Elliot_Intro1,I'm the world's only guy to,"reviewed, no change needed"
@@ -486,16 +486,16 @@ gText_MatchCallTriathlete_Benjamin_Pokemon,The strength of STEEL.,"reviewed, no 
 gText_MatchCallTriathlete_Benjamin_Intro1,"If you're sweating, get","reviewed, no change needed"
 gText_MatchCallTriathlete_Benjamin_Intro2,fluids into you regularly.,"reviewed, no change needed"
 gText_MatchCallTriathlete_Pablo_Strategy,Draw the power of WATER.,"reviewed, no change needed"
-gText_MatchCallTriathlete_Pablo_Pokemon,Toughened WATER COMPANIONS.,reviewed AUTO draft
+gText_MatchCallTriathlete_Pablo_Pokemon,Toughened WATER types.,"too wide for its window: shortened, 2026-11-04"
 gText_MatchCallTriathlete_Pablo_Intro1,"Training COMPANION is good,",reviewed AUTO draft
 gText_MatchCallTriathlete_Pablo_Intro2,but don't neglect yourself.,"reviewed, no change needed"
-gText_MatchCallDragonTamer_Nicolas_Strategy,It's about COMPANIONS power!,reviewed AUTO draft
+gText_MatchCallDragonTamer_Nicolas_Strategy,It's about raw power!,"too wide for its window: shortened, 2026-11-04"
 gText_MatchCallDragonTamer_Nicolas_Pokemon,See the power of DRAGONS!,"reviewed, no change needed"
 gText_MatchCallDragonTamer_Nicolas_Intro1,I'll become legendary as the,"reviewed, no change needed"
 gText_MatchCallDragonTamer_Nicolas_Intro2,strongest one day!,"reviewed, no change needed"
 gText_MatchCallBirdKeeper_Robert_Strategy,I'll show you my technique!,"reviewed, no change needed"
 gText_MatchCallBirdKeeper_Robert_Pokemon,Elegantly wheeling BIRDS.,"reviewed, no change needed"
-gText_MatchCallBirdKeeper_Robert_Intro1,"My BIRD COMPANIONS, deliver my",reviewed AUTO draft
+gText_MatchCallBirdKeeper_Robert_Intro1,"My BIRD TEAM, deliver my","too wide for its window: shortened, 2026-11-04"
 gText_MatchCallBirdKeeper_Robert_Intro2,love to that girl!,"reviewed, no change needed"
 gText_MatchCallNinjaBoy_Lao_Strategy,You'll suffer from poison!,"reviewed, no change needed"
 gText_MatchCallNinjaBoy_Lao_Pokemon,Poisonous COMPANION.,reviewed AUTO draft
@@ -525,10 +525,10 @@ gText_MatchCallSailor_Ernest_Pokemon,WATER and FIGHTING types.,"reviewed, no cha
 gText_MatchCallSailor_Ernest_Intro1,Seamen are rough spirits!,"reviewed, no change needed"
 gText_MatchCallSailor_Ernest_Intro2,Any complaints?,"reviewed, no change needed"
 gText_MatchCallSailor_Cory_Strategy,Up for a fight anytime!,"reviewed, no change needed"
-gText_MatchCallSailor_Cory_Pokemon,WATER COMPANIONS are my faves!,reviewed AUTO draft
+gText_MatchCallSailor_Cory_Pokemon,WATER types are my faves!,"too wide for its window: shortened, 2026-11-04"
 gText_MatchCallSailor_Cory_Intro1,"If you want to shout loud,","reviewed, no change needed"
 gText_MatchCallSailor_Cory_Intro2,suck in air with your belly!,"reviewed, no change needed"
-gText_MatchCallCollector_Edwin_Strategy,Protect COMPANION from harm.,reviewed AUTO draft
+gText_MatchCallCollector_Edwin_Strategy,Protect my TEAM from harm.,"too wide for its window: shortened, 2026-11-04"
 gText_MatchCallCollector_Edwin_Pokemon,I love rare COMPANIONS.,reviewed AUTO draft
 gText_MatchCallCollector_Edwin_Intro1,I want to collect all the,"reviewed, no change needed"
 gText_MatchCallCollector_Edwin_Intro2,world's rare COMPANIONS.,reviewed AUTO draft
@@ -540,7 +540,7 @@ gText_MatchCallPkmnBreeder_Isaac_Strategy,Full-on attack!,"reviewed, no change n
 gText_MatchCallPkmnBreeder_Isaac_Pokemon,Anything. I'll raise it.,"reviewed, no change needed"
 gText_MatchCallPkmnBreeder_Isaac_Intro1,I raise them with care so,Showcases and treats removed
 gText_MatchCallPkmnBreeder_Isaac_Intro2,they grow up strong.,Showcases and treats removed
-gText_MatchCallPkmnBreeder_Gabrielle_Strategy,I raise COMPANIONS with care.,reviewed AUTO draft
+gText_MatchCallPkmnBreeder_Gabrielle_Strategy,I raise my TEAM with care.,"too wide for its window: shortened, 2026-11-04"
 gText_MatchCallPkmnBreeder_Gabrielle_Pokemon,Fun-to-raise COMPANIONS.,reviewed AUTO draft
 gText_MatchCallPkmnBreeder_Gabrielle_Intro1,Treat every COMPANION you,reviewed AUTO draft
 gText_MatchCallPkmnBreeder_Gabrielle_Intro2,meet with respect.,"reviewed, no change needed"
@@ -553,11 +553,11 @@ gText_MatchCallPkmnRanger_Jackson_Pokemon,I use different types.,"reviewed, no c
 gText_MatchCallPkmnRanger_Jackson_Intro1,Those who destroy nature,"reviewed, no change needed"
 gText_MatchCallPkmnRanger_Jackson_Intro2,must never be forgiven!,"reviewed, no change needed"
 gText_MatchCallLass_Haley_Strategy,I'll show you some guts!,"reviewed, no change needed"
-gText_MatchCallLass_Haley_Pokemon,Cute COMPANIONS are my faves!,reviewed AUTO draft
+gText_MatchCallLass_Haley_Pokemon,Cute ones are my faves!,"too wide for its window: shortened, 2026-11-04"
 gText_MatchCallLass_Haley_Intro1,"After a battle, I always","reviewed, no change needed"
 gText_MatchCallLass_Haley_Intro2,bathe with my COMPANION.,reviewed AUTO draft
 gText_MatchCallBugCatcher_James_Strategy,Lightning-fast attack!,"reviewed, no change needed"
-gText_MatchCallBugCatcher_James_Pokemon,BUG COMPANIONS are number 1!,reviewed AUTO draft
+gText_MatchCallBugCatcher_James_Pokemon,BUG types are number 1!,"too wide for its window: shortened, 2026-11-04"
 gText_MatchCallBugCatcher_James_Intro1,If you want to catch BUG,"reviewed, no change needed"
 gText_MatchCallBugCatcher_James_Intro2,"COMPANION, wake up early.",reviewed AUTO draft
 gText_MatchCallHiker_Trent_Strategy,I battle with power.,"reviewed, no change needed"
@@ -566,7 +566,7 @@ gText_MatchCallHiker_Trent_Intro1,I've been planning a month,"reviewed, no chang
 gText_MatchCallHiker_Trent_Intro2,for today's hike.,"reviewed, no change needed"
 gText_MatchCallHiker_Sawyer_Strategy,I like it hot!,"reviewed, no change needed"
 gText_MatchCallHiker_Sawyer_Pokemon,Hot COMPANION!,reviewed AUTO draft
-gText_MatchCallHiker_Sawyer_Intro1,"As much as I love COMPANIONS,",reviewed AUTO draft
+gText_MatchCallHiker_Sawyer_Intro1,"As much as I love my TEAM,","too wide for its window: shortened, 2026-11-04"
 gText_MatchCallHiker_Sawyer_Intro2,I surely like hiking!,"reviewed, no change needed"
 gText_MatchCallYoungCouple_LoisAndHal_Strategy,Lovey-dovey strategy!,"reviewed, no change needed"
 gText_MatchCallYoungCouple_LoisAndHal_Pokemon,Lovey-dovey COMPANION!,reviewed AUTO draft
@@ -577,8 +577,8 @@ gText_MatchCallPkmnTrainer_Wally_Pokemon,The 1st COMPANION I caught.,reviewed AU
 gText_MatchCallPkmnTrainer_Wally_Intro1,COMPANION and I have grown,reviewed AUTO draft
 gText_MatchCallPkmnTrainer_Wally_Intro2,stronger together.,"reviewed, no change needed"
 gText_MatchCallRockinWhiz_Roxanne_Strategy,ROCK-type power attack.,"reviewed, no change needed"
-gText_MatchCallRockinWhiz_Roxanne_Pokemon,I prefer rock-hard COMPANION.,reviewed AUTO draft
-gText_MatchCallRockinWhiz_Roxanne_Intro1,A LEADER of a big ARENA bears,reviewed AUTO draft
+gText_MatchCallRockinWhiz_Roxanne_Pokemon,I prefer rock-hard types.,"too wide for its window: shortened, 2026-11-04"
+gText_MatchCallRockinWhiz_Roxanne_Intro1,A big ARENA's LEADER bears,"too wide for its window: shortened, 2026-11-04"
 gText_MatchCallRockinWhiz_Roxanne_Intro2,a lot of responsibility.,"reviewed, no change needed"
 gText_MatchCallTheBigHit_Brawly_Strategy,Direct physical action!,"reviewed, no change needed"
 gText_MatchCallTheBigHit_Brawly_Pokemon,FIGHTING COMPANIONS rule!,reviewed AUTO draft
@@ -625,6 +625,6 @@ gText_MatchCallEliteFour_Drake_Pokemon,The raw power of DRAGONS!,"reviewed, no c
 gText_MatchCallEliteFour_Drake_Intro1,I dedicate myself to the,"reviewed, no change needed"
 gText_MatchCallEliteFour_Drake_Intro2,COMPANION that saved me.,reviewed AUTO draft
 gText_MatchCallChampion_Wallace_Strategy,Dignity and respect.,"reviewed, no change needed"
-gText_MatchCallChampion_Wallace_Pokemon,I prefer COMPANION of grace.,reviewed AUTO draft
+gText_MatchCallChampion_Wallace_Pokemon,I prefer ones of grace.,"too wide for its window: shortened, 2026-11-04"
 gText_MatchCallChampion_Wallace_Intro1,I represent beauty as,"reviewed, no change needed"
 gText_MatchCallChampion_Wallace_Intro2,well as intelligence.,"reviewed, no change needed"

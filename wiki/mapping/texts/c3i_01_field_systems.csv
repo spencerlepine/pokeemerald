@@ -835,7 +835,7 @@ gText_WhatWillPkmnDo,What will\n{B_ACTIVE_NAME_WITH_PREFIX} do?,"reviewed, no ch
 gText_WhatWillPkmnDo2,What will\n{B_PLAYER_NAME} do?,"reviewed, no change needed"
 gText_WhatWillWallyDo,What will\nLUKE do?,reviewed AUTO draft
 gText_LinkStandby,{PAUSE 16}Link standby…,"reviewed, no change needed"
-gText_BattleMenu,FIGHT{CLEAR_TO 56}BAG\nCOMPANION{CLEAR_TO 56}RUN,reviewed AUTO draft
+gText_BattleMenu,FIGHT{CLEAR_TO 56}BAG\nTEAM{CLEAR_TO 56}RUN,"too wide for its window: shortened, 2026-11-04"
 gText_MoveInterfacePP,PP ,"reviewed, no change needed"
 gText_MoveInterfaceType,TYPE/,"reviewed, no change needed"
 gText_MoveInterfacePPType,{PALETTE 5}{COLOR_HIGHLIGHT_SHADOW DYNAMIC_COLOR4 DYNAMIC_COLOR5 DYNAMIC_COLOR6}PP\nTYPE/,"reviewed, no change needed"
