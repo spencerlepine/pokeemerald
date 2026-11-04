@@ -65,34 +65,35 @@ parts:
   - {use: walker-leg, name: leg-bl, at: ["=-hx", "=hy", "=hip_z"], with: {hip: "=bhip", knee: "=bknee"}}
   - {use: walker-leg, name: leg-br, at: ["=-hx", "=-hy", "=hip_z"], with: {hip: "=bhip", knee: "=bknee"}}
 variants:
-  # on its side: the flank faces up, the legs stick out south over the ice, the lower pair buried
+  # on its side, belly to the north: the body lies in the hit box, the upper pair of legs sticks up
+  # into the air behind it (the walk-behind rows), the lower pair is buried in the ice
   toppled: &toppled
-    scale: 0.95
-    tilt: [4, 90]
+    scale: 0.85
+    tilt: [4, -90]
     turn: -12
     pivot: [0, 0]
     sink: 0.4
-    foot: [58, 107]
-    params: {fhip: -12, fknee: 35, bhip: 18, bknee: -6}
-    ground: &toppled-ice
-      - {name: ice-1, mat: snow, hull: {points: [[-2.3, 3.0, 0], [-1.3, 2.9, 0], [-1.5, 3.4, 0], [-2.2, 3.4, 0], [-1.9, 3.15, 0.2]], round: 0.03}}
-      - {name: ice-2, mat: snow, hull: {points: [[0.3, 2.95, 0], [1.2, 2.9, 0], [1.1, 3.35, 0], [0.4, 3.3, 0], [0.7, 3.1, 0.18]], round: 0.03}}
-      - {name: ice-3, mat: snow, hull: {points: [[2.6, 0.5, 0], [3.1, 0.4, 0], [3.0, 0.85, 0], [2.65, 0.8, 0], [2.85, 0.6, 0.18]], round: 0.03}}
-  # the same, one leg torn off at the hip, lying in the snow
+    foot: [60, 22]
+    params: {fhip: 30, fknee: -50, bhip: -20, bknee: 40}
+    ground:
+      - {name: ice-1, mat: snow, hull: {points: [[-3.6, -5.00, 0], [-2.7, -5.10, 0], [-2.9, -4.55, 0], [-3.5, -4.60, 0], [-3.2, -4.80, 0.2]], round: 0.03}}
+      - {name: ice-2, mat: snow, hull: {points: [[0.4, -5.15, 0], [1.3, -5.20, 0], [1.2, -4.75, 0], [0.5, -4.80, 0], [0.8, -4.95, 0.16]], round: 0.03}}
+  # the same, one raised leg torn off: it lies on the ice by the head
   toppled-three-legs:
     <<: *toppled
-    drop: ["leg-br/*"]
+    drop: ["leg-fl/*"]
     ground:
-      - {name: ice-1, mat: snow, hull: {points: [[-2.3, 3.0, 0], [-1.3, 2.9, 0], [-1.5, 3.4, 0], [-2.2, 3.4, 0], [-1.9, 3.15, 0.2]], round: 0.03}}
-      - {name: lost-shin, mat: plate, box: {c: [-2.0, 1.0, 0.15], half: [0.75, 0.17, 0.15], radius: 0.03}, rot: [0, 35, 0]}
-      - {name: lost-foot, mat: dark, cylinder: {a: [-2.65, 0.5, 0], b: [-2.65, 0.5, 0.3], r1: 0.4}}
-  # the head shot off: it lies in the snow in front, the neck stump open
+      - {name: ice-1, mat: snow, hull: {points: [[-3.6, -5.00, 0], [-2.7, -5.10, 0], [-2.9, -4.55, 0], [-3.5, -4.60, 0], [-3.2, -4.80, 0.2]], round: 0.03}}
+      - {name: lost-shin, mat: plate, box: {c: [2.9, -3.1, 0.16], half: [0.8, 0.17, 0.16], radius: 0.03}, rot: [0, 25, 0]}
+      - {name: lost-knee, mat: dark, cylinder: {a: [2.2, -3.55, 0], b: [2.2, -3.55, 0.36], r1: 0.28}}
+      - {name: lost-foot, mat: dark, cylinder: {a: [3.65, -2.75, 0], b: [3.65, -2.75, 0.34], r1: 0.42}}
+  # the head shot off: it lies in the snow south-east of the neck stump
   toppled-headless:
     <<: *toppled
     drop: ["head/*"]
     ground:
-      - {name: ice-1, mat: snow, hull: {points: [[-2.3, 3.0, 0], [-1.3, 2.9, 0], [-1.5, 3.4, 0], [-2.2, 3.4, 0], [-1.9, 3.15, 0.2]], round: 0.03}}
-      - {use: atat-head, name: lost-head, at: [2.1, 0.5, 0.0], turn: 25}
+      - {name: ice-1, mat: snow, hull: {points: [[-3.6, -5.00, 0], [-2.7, -5.10, 0], [-2.9, -4.55, 0], [-3.5, -4.60, 0], [-3.2, -4.80, 0.2]], round: 0.03}}
+      - {use: atat-head, name: lost-head, at: [2.6, -4.9, 0.0], turn: 20}
   # frozen where it stood, sunk to the shins in the lake ice; its shadow on the ice shows its height
   standing:
     scale: 0.8
@@ -102,14 +103,17 @@ variants:
       - {name: shadow, mat: shade, cylinder: {a: [0.35, 0.3, 0], b: [0.35, 0.3, 0.01], r1: 1.5}, squash: [1.4, 0.6, 1]}
       - {name: ice-fl, mat: snow, ellipsoid: {c: [1.3, -0.85, 0], r: [0.6, 0.32, 0.16]}}
       - {name: ice-bl, mat: snow, ellipsoid: {c: [-1.15, -0.85, 0], r: [0.6, 0.32, 0.16]}}
-  # collapsed on its front knees, nose down, the back legs sunk in the ice
-  kneeling:
-    scale: 0.8
-    tilt: [-12, 0]
-    pivot: [-2.0, 0]
-    sink: 1.6
-    foot: [50, 87]
-    params: {fhip: 40, fknee: -120, bhip: 0, bknee: 0}
+  # broken through the lake ice: only the roof, the top of the head and the hip joints show, tipped
+  # to one side, with ice plates pushed up around it
+  sunk:
+    scale: 1.0
+    tilt: [-5, 14]
+    pivot: [0, 0]
+    sink: 4.55
+    foot: [64, 82]
     ground:
-      - {name: shadow, mat: shade, cylinder: {a: [0.2, 0.3, 0], b: [0.2, 0.3, 0.01], r1: 1.5}, squash: [1.5, 0.55, 1]}
-      - {name: ice-b, mat: snow, ellipsoid: {c: [-1.3, -0.95, 0], r: [0.45, 0.22, 0.1]}}
+      - {name: plate-1, mat: snow, hull: {points: [[-3.2, -1.35, 0], [-1.6, -1.45, 0], [-1.8, -0.85, 0], [-3.0, -0.90, 0], [-2.6, -1.15, 0.22]], round: 0.03}}
+      - {name: plate-2, mat: snow, hull: {points: [[-0.6, -1.50, 0], [0.9, -1.40, 0], [0.7, -0.90, 0], [-0.5, -0.95, 0], [0.1, -1.20, 0.18]], round: 0.03}}
+      - {name: plate-3, mat: snow, hull: {points: [[1.5, -1.25, 0], [2.8, -1.05, 0], [2.6, -0.95, 0], [1.6, -0.80, 0], [2.1, -0.95, 0.2]], round: 0.03}}
+      - {name: plate-4, mat: snow, hull: {points: [[-3.4, 0.6, 0], [-2.6, 0.4, 0], [-2.5, 1.0, 0], [-3.3, 1.1, 0], [-2.9, 0.8, 0.25]], round: 0.03}}
+      - {name: hole, mat: shade, cylinder: {a: [0.3, -0.1, 0], b: [0.3, -0.1, 0.01], r1: 1.0}, squash: [2.9, 1.15, 1]}

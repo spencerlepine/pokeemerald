@@ -81,10 +81,14 @@ then rendered by the Emerald camera into a grey sprite. Grey only: no colour, ou
 - **`limb`**: a jointed leg or arm from low-poly boxes: `{root, yaw, splay, segments: [{len, w, d, bend,
   taper, joint: {r}}], foot: {r, h, flat}}`. Each `bend` is added to the last, so a knee is a bend. The
   AT-AT leg in the walker kit is one.
+- **`ring`**: `n` blocks evenly round a circle (`c`, `axis`, `r`, `size`, `arc`): wheel treads, hull
+  ribs, a skeleton's rib arc. The tank droid's tread is one.
+- **Kits so far:** `kits/walkers.yaml` (the AT-AT leg), `kits/tatooine.yaml` (the moisture vaporator).
 - **Variants**: `variants: {name: {overrides}}` makes one model many outputs. Each variant is merged over
   the model: `params` key by key, any other key replaced (`tilt`, `turn`, `sink`, `scale`, `foot`,
   `ground`), and `drop: ["leg-br/*", "head/*"]` leaves parts out by name. The first variant is the one the
-  wiki row shows. The AT-AT has five: toppled, toppled-three-legs, toppled-headless, standing, kneeling.
+  wiki row shows. The AT-AT has five: toppled (on its side, legs up in the air behind it), toppled-three-legs,
+  toppled-headless, standing, sunk (through the lake ice).
 
 ```bash
 python3 -m worldart scenery hoth_frozen-at-at    # render one (or several, or --all), every variant
@@ -92,6 +96,8 @@ python3 -m worldart scenery hoth_frozen-at-at --variant toppled --try turn=10 --
                                                  # one variant with tweaks, to output/ only
 python3 -m worldart scenery hoth_frozen-at-at --variant toppled --sweep "turn=-12,0,12"
                                                  # each value side by side: output/scenery/<id>/sweep.png
+python3 -m worldart scenery hoth_frozen-at-at --sweep 'params={fknee: 20};{fknee: 60}'
+                                                 # use ";" between values that hold commas; a dict merges
 python3 -m worldart scenery --status             # every scenery row's model status
 python3 -m worldart scenery --set art:hoth:frozen-at-at APPROVED
 ```

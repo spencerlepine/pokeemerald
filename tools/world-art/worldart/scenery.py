@@ -171,7 +171,8 @@ def _override(raw, key, value):
     ks = key.split(".")
     for k in ks[:-1]:
         d = d.setdefault(k, {})
-    d[ks[-1]] = yaml.safe_load(value) if isinstance(value, str) else value
+    v = yaml.safe_load(value) if isinstance(value, str) else value
+    d[ks[-1]] = M.deep_merge(d[ks[-1]], v) if isinstance(v, dict) and isinstance(d.get(ks[-1]), dict) else v
     return raw
 
 
@@ -179,7 +180,7 @@ def sweep(name, spec, only=None, tries=()):
     """One key over several values, every chosen variant: a contact sheet to pick from."""
     path = os.path.join(MODELS, f"{name}.yaml")
     key, vals = spec.split("=", 1)
-    vals = [v.strip() for v in vals.split(",")]
+    vals = [v.strip() for v in vals.split(";" if ";" in vals else ",")]   # ";" when a value has commas
     shots = []
     for vn, raw in variants_of(path):
         if only and vn not in only:
@@ -187,7 +188,7 @@ def sweep(name, spec, only=None, tries=()):
         for t in tries:
             raw = _override(raw, *t.split("=", 1))
         for v in vals:
-            obj = M.Object(path, _override(raw, key, v))
+            obj = M.Object(path, _override(raw, key, v))   # a dict value merges (params)
             img, ind, _ = R.render_object(obj)
             cut = clipped(img)
             label = f"{vn} {key}={v}" + (f"  CUT {'/'.join(cut)}" if cut else "")

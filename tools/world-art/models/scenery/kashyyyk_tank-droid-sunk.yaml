@@ -1,0 +1,71 @@
+# Sunk tank droid (art:kashyyyk:tank-droid-sunk), hit box 4x4, drawn 4x6.
+# Reference: the NR-N99 Persuader tank droid (Revenge of the Sith, the Battle of Kashyyyk). One huge
+# treaded wheel with the hub in its middle, two outrigger arms reaching forward to the gun pods.
+# Modelled upright, rolling east (+x), the wheel's face to the south; posed fallen over in the lagoon.
+# Axes: x east, y north, z up, origin on the ground under the wheel's centre.
+name: kashyyyk_tank-droid-sunk
+art: art:kashyyyk:tank-droid-sunk
+palette: greybox
+cells: [4, 6]
+foot: [28, 74]
+scale: 0.85
+footprint: 4
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  wheel: {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  tread: {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  hull:  {ramp: light, bands: [0.2, 0.5, 0.85]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  water: {color: shade}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 4}
+box: [60, 60]
+params:
+  R: 1.45          # wheel radius
+  W: 0.85          # wheel width
+parts:
+  - {name: wheel, mat: wheel, cylinder: {a: [0, "=-W / 2", "=R + 0.05"], b: [0, "=W / 2", "=R + 0.05"], r1: "=R - 0.1"}}
+  - name: tread
+    mat: tread
+    ring: {c: [0, 0, "=R + 0.05"], axis: y, r: "=R", n: 22, size: [0.36, 0.2, "=W + 0.08"], round: 0.02}
+  - {name: hub, mat: hull, cylinder: {a: [0, "=-W / 2 - 0.25", "=R + 0.05"], b: [0, "=W / 2 + 0.25", "=R + 0.05"], r1: 0.62, r2: 0.62}}
+  - {name: hub-cap, mat: dark, cylinder: {a: [0, "=-W / 2 - 0.3", "=R + 0.05"], b: [0, "=-W / 2 - 0.25", "=R + 0.05"], r1: 0.32}}
+  # outrigger arms from the hub forward and down to the gun pods, one each side
+  - name: arm-s
+    mat: hull
+    hull: {points: [[0.2, -0.95, 1.75], [0.2, -0.65, 1.75], [0.2, -0.95, 1.35], [0.2, -0.65, 1.35],
+                    [1.85, -1.0, 0.75], [1.85, -0.7, 0.75], [1.85, -1.0, 0.4], [1.85, -0.7, 0.4]], round: 0.03}
+  - name: arm-n
+    mat: hull
+    hull: {points: [[0.2, 0.95, 1.75], [0.2, 0.65, 1.75], [0.2, 0.95, 1.35], [0.2, 0.65, 1.35],
+                    [1.85, 1.0, 0.75], [1.85, 0.7, 0.75], [1.85, 1.0, 0.4], [1.85, 0.7, 0.4]], round: 0.03}
+  - {name: pod-s, mat: hull, cylinder: {a: [1.6, -0.85, 0.55], b: [2.05, -0.85, 0.55], r1: 0.26, r2: 0.2}}
+  - {name: pod-n, mat: hull, cylinder: {a: [1.6, 0.85, 0.55], b: [2.05, 0.85, 0.55], r1: 0.26, r2: 0.2}}
+  - {name: gun-s, mat: dark, cylinder: {a: [2.0, -0.85, 0.55], b: [2.3, -0.85, 0.55], r1: 0.07}}
+  - {name: gun-n, mat: dark, cylinder: {a: [2.0, 0.85, 0.55], b: [2.3, 0.85, 0.55], r1: 0.07}}
+ground:
+  # ripples where it broke the water
+  - {name: ripple-1, mat: water, cylinder: {a: [0.1, -0.2, 0], b: [0.1, -0.2, 0.01], r1: 1.0}, squash: [1.5, 0.65, 1]}
+variants:
+  # fallen over toward the camera, half under the lagoon: the wheel rises from the water
+  sunk:
+    tilt: [0, 30]
+    pivot: [0, 0]
+    turn: 10
+    sink: 0.75
+  # rolled on, upright, stuck to the hub in the mud
+  stuck:
+    sink: 0.55
+    turn: -8
+  # on its side, the arms broken off and the wheel up
+  on-side:
+    tilt: [0, 60]
+    pivot: [0, 0]
+    sink: 0.5
+    drop: ["arm-*", "pod-*", "gun-*"]

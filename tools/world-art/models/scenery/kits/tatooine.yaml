@@ -1,0 +1,14 @@
+# Tatooine kit: small pieces shared by the Tatooine scenery and buildings.
+# Axes: x east, y north, z up, origin on the ground at the piece's centre.
+templates:
+  # A moisture vaporator (A New Hope): a tall thin shaft on a squat base, three condenser fin rings, a
+  # cap. `h` is its height; `lean` tips it (deg, toward +x) for a dead one.
+  vaporator:
+    params: {h: 1.9, body: light, fins: mid, base: mid}
+    parts:
+      - {name: base, mat: "=base", cylinder: {a: [0, 0, 0], b: [0, 0, 0.35], r1: 0.24, r2: 0.2}}
+      - {name: shaft, mat: "=body", cylinder: {a: [0, 0, 0.3], b: [0, 0, "=h"], r1: 0.1}}
+      - {name: fin-1, mat: "=fins", cylinder: {a: [0, 0, "=h * 0.45"], b: [0, 0, "=h * 0.45 + 0.08"], r1: 0.3}}
+      - {name: fin-2, mat: "=fins", cylinder: {a: [0, 0, "=h * 0.62"], b: [0, 0, "=h * 0.62 + 0.08"], r1: 0.26}}
+      - {name: fin-3, mat: "=fins", cylinder: {a: [0, 0, "=h * 0.79"], b: [0, 0, "=h * 0.79 + 0.08"], r1: 0.22}}
+      - {name: cap, mat: "=fins", cylinder: {a: [0, 0, "=h"], b: [0, 0, "=h + 0.12"], r1: 0.14, r2: 0.06}}

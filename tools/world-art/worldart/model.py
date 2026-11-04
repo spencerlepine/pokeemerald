@@ -405,7 +405,36 @@ def gen_limb(g, rng):
     return out
 
 
-GENERATORS = {"limb": gen_limb, "scatter": gen_scatter, "branches": gen_branches, "tiers": gen_tiers, "lobes": gen_lobes}
+def gen_ring(g, rng):
+    """`n` blocks evenly round a circle: wheel treads, hull ribs, a skeleton's rib arc, a crown of spikes.
+    c: [x, y, z] centre;  axis: x|y|z (or [ax, ay, az]) the circle's axis;  r: radius to the block centres
+    size: [along the circle, out from the centre, along the axis] full sizes of one block
+    n: count;  arc: [deg0, deg1] the part of the circle to fill (default all);  start: deg offset
+    round: edge bevel.  Parts are named <name>/0, <name>/1, ..."""
+    c = np.asarray(g["c"], float)
+    ax = g.get("axis", "z")
+    ax = np.asarray({"x": [1, 0, 0], "y": [0, 1, 0], "z": [0, 0, 1]}.get(ax, ax) if isinstance(ax, str) else ax, float)
+    ax /= np.linalg.norm(ax)
+    ref = np.array([0, 0, 1.0]) if abs(ax[2]) < 0.9 else np.array([1.0, 0, 0])
+    u = np.cross(ax, ref); u /= np.linalg.norm(u)
+    v = np.cross(ax, u)
+    n, R = int(g["n"]), float(g["r"])
+    a0, a1 = (float(t) for t in g.get("arc", [0, 360]))
+    full = abs((a1 - a0) % 360) < 1e-6
+    sa, sr, sx = (float(t) / 2 for t in g["size"])
+    out = []
+    for i in range(n):
+        t = math.radians(float(g.get("start", 0)) + a0 + (a1 - a0) * (i / n if full else i / max(n - 1, 1)))
+        rad = math.cos(t) * u + math.sin(t) * v
+        tan = np.cross(ax, rad)
+        p = c + rad * R
+        pts = [p + da * tan * sa + dr * rad * sr + dx * ax * sx for da in (-1, 1) for dr in (-1, 1) for dx in (-1, 1)]
+        out.append({"name": f"{g.get('name', 'ring')}/{i}", "mat": g.get("mat"), "group": g.get("group", "body"),
+                    "hull": {"points": np.round(pts, 4).tolist(), "round": float(g.get("round", 0.02))}})
+    return out
+
+
+GENERATORS = {"ring": gen_ring, "limb": gen_limb, "scatter": gen_scatter, "branches": gen_branches, "tiers": gen_tiers, "lobes": gen_lobes}
 
 
 def expand_parts(specs, seed):

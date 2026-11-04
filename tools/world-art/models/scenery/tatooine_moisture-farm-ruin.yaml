@@ -1,0 +1,61 @@
+# Abandoned homestead (art:tatooine:moisture-farm-ruin), hit box 4x3, drawn 4x4.
+# Reference: the Lars homestead's domed huts (A New Hope). A low adobe dome with its roof fallen in,
+# rubble inside, the round entry block on the south side, sand drifted against it, and a dead
+# vaporator from the Tatooine kit. Axes: x east, y north, z up, origin on the ground at the hut's centre.
+name: tatooine_moisture-farm-ruin
+art: art:tatooine:moisture-farm-ruin
+palette: greybox
+kits: [kits/tatooine.yaml]
+cells: [4, 4]
+foot: [26, 39]
+footprint: 3
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  adobe:  {ramp: light, bands: [0.3, 0.6, 0.9]}
+  inside: {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  light:  {ramp: light, bands: [0.15, 0.5, 0.82]}
+  mid:    {ramp: mid,   bands: [0.2, 0.5, 0.85]}
+  sand:   {ramp: bone,  bands: [0.35, 0.65, 0.93]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 3}
+box: [60, 44]
+params:
+  vx: 1.45          # the vaporator's place
+  vy: 0.35
+  vlean: 9
+parts:
+  # the dome: a hollow shell with a ragged hole where the roof fell in
+  - {name: dome, mat: adobe, ellipsoid: {c: [-0.2, 0, 0], r: [1.25, 1.0, 0.8]}}
+  - {name: hollow, mat: adobe, op: subtract, ellipsoid: {c: [-0.2, 0, 0], r: [1.08, 0.84, 0.66]}}
+  - {name: pit, mat: inside, ellipsoid: {c: [-0.2, 0, 0], r: [1.04, 0.8, 0.5]}}
+  - {name: cave-in, mat: adobe, op: subtract, hull: {points: [[-0.9, -0.35, 0.45], [0.35, -0.5, 0.55], [0.55, 0.6, 0.5], [-0.75, 0.55, 0.4],
+                                                             [-1.0, -0.5, 1.1], [0.5, -0.6, 1.1], [0.7, 0.75, 1.1], [-0.9, 0.7, 1.1]], round: 0.0}}
+  - {name: rubble, mat: inside, hull: {points: [[-0.9, -0.5, 0], [0.5, -0.55, 0], [0.6, 0.5, 0], [-0.85, 0.55, 0], [-0.3, 0.0, 0.45], [0.1, 0.2, 0.38]], round: 0.04}}
+  # the round entry block on the south, its doorway dark
+  - {name: entry, mat: adobe, cylinder: {a: [-0.45, -0.72, 0], b: [-0.45, -0.72, 0.55], r1: 0.42, r2: 0.36}}
+  - {name: entry-top, mat: adobe, ellipsoid: {c: [-0.45, -0.72, 0.55], r: [0.36, 0.36, 0.12]}}
+  - {name: door, mat: inside, box: {c: [-0.45, -1.1, 0.25], half: [0.17, 0.08, 0.25], radius: 0.02}}
+  # the dead vaporator, leaning
+  - {use: vaporator, name: vap, at: ["=vx", "=vy", 0], rot: ["=-vlean", 0, 0], with: {h: 1.8}}
+ground:
+  - {name: drift-w, mat: sand, ellipsoid: {c: [-1.3, 0.3, 0], r: [0.25, 0.6, 0.22]}}
+  - {name: drift-s, mat: sand, ellipsoid: {c: [0.35, -0.95, 0], r: [0.6, 0.22, 0.14]}}
+  - {name: chunk, mat: adobe, hull: {points: [[0.75, -0.75, 0], [1.05, -0.8, 0], [1.0, -0.5, 0], [0.8, -0.55, 0], [0.9, -0.65, 0.16]], round: 0.03}}
+variants:
+  # the roof fallen in, the dead vaporator leaning beside it
+  ruin: {}
+  # the vaporator down too, lying in the sand
+  vaporator-down:
+    drop: ["vap/*"]
+    ground:
+      - {name: drift-w, mat: sand, ellipsoid: {c: [-1.3, 0.3, 0], r: [0.25, 0.6, 0.22]}}
+      - {use: vaporator, name: vap-down, at: [0.55, -0.7, 0.24], rot: [-90, 0, 0], with: {h: 1.5}}
+  # whole roof, just abandoned: sand to the door
+  abandoned:
+    drop: ["cave-in", "rubble", "pit"]
