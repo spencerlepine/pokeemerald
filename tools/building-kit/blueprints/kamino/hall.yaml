@@ -21,7 +21,7 @@ choose:
   wd: [1.5, 1.9]
   wh: [0.7, 0.9]
   spires: {int: [0, 2]}
-  sh: [1.4, 2.0]
+  sh: [0.8, 1.2]
   upper: {pick: [true, false], weights: [1, 2]}
   flip: {pick: [-1, 1]}
 parts:

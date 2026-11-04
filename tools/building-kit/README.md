@@ -115,6 +115,38 @@ Everything is written to `output/` (not committed).
 | `jawa-stand` | The Jawas' droid sale | sloped tarp over salvage, an astromech or labour droid, a crate counter |
 | `dome-row` | Mos Espa slave quarters | long low block with 2-4 small domes, a door under each |
 
+## Kamino
+
+| Blueprint | From the films | Varies |
+|---|---|---|
+| `stilt-dome` | Tipoca City saucers on stilts | plain, two-tier, twin pod, mast or lens body; dome, hub or cupola top; window band; 2-4 stilts |
+| `hall` | The Tipoca main complex | great drum or domed capsule centre, capsule or saucer wings, 0-2 spire towers, entry pod |
+| `capsule-block` | Tipoca barracks and store rooms | length, one or two tiers, pod or cargo door, end saucer pod, roof drum or mast, crates |
+| `medbay` | Tipoca medical bays, bacta tanks | saucer, lens or capsule head on a glass drum, 0-2 bacta tanks, hub, entry hood |
+| `platform` | The Tipoca landing pad | landing ring, rim lamps, access tube, control pod or mast; narrow ones are walkway hubs with rails |
+| `storm-tower` | Tipoca's columns | one or two saucer heads, beacon, side pod |
+
+## Hoth
+
+| Blueprint | From the films | Varies |
+|---|---|---|
+| `ice-hangar` | The Echo Base hangar door | cliff skyline, door width and opening, ice overhang or snow lip, hatch, dish or stacks |
+| `prefab` | Echo Base prefab buildings | module, stacked modules, arched quonset (one or two) or dome bunker; hatch or cargo door; drifts, dish, stacks, crates |
+| `shelter` | The tauntaun pens | 1-3 snow-covered arched vaults with a dark mouth, berms, lamp, crates |
+| `pad` | The landing area outside Echo Base | cross or bar markings, control module, fuel tanks or beacon mast, drifts |
+| `sensor-tower` | The Echo Base ridge dishes, the generators | dish post or pole antenna over a hut, or a generator shed with stacks |
+
+## Ilum
+
+The Ilum kit uses the Hoth kit (`ice-block`, `drift`).
+
+| Blueprint | From the films | Varies |
+|---|---|---|
+| `temple-gate` | The Ilum temple (Jedi: Fallen Order) | cliff skyline, monolith size, flanking pylons, 2-4 kyber clusters, steps |
+| `stone-hall` | Jedi stone buildings, the Coruscant temple | base steps, snow-capped hipped or pyramid roof, stepped tier with a crystal, one or two spires, wing, crystal lamps |
+| `ice-hut` | Shelters cut into the glacier | faceted mound, cut block or two blocks; Jedi or arched door; crystals, crates |
+| `pad` | The landing shelf below the temple | emblem ring, crystal beacons or obelisks, drifts |
+
 ## Earlier notes
 
 More Tatooine bases (walled courtyard, docking-bay ring, garage, market awning), then a kit per planet

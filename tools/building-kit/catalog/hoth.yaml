@@ -8,9 +8,9 @@ buildings:
   art: art:shared:landing-pad
   size: [6, 4]
   door: 3
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: hoth/pad
+  seed: 200
+  about: A Rebel landing plate laid on the packed snow outside Echo Base (The Empire Strikes Back).
 - id: bld:hoth:hoth-tundra-rebel-survey-outpost
   kind: hangar
   name: Rebel survey outpost
@@ -18,9 +18,9 @@ buildings:
   art: art:hoth:echo-base-hangar-door
   size: [8, 5]
   door: 4
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: hoth/ice-hangar
+  seed: 201
+  about: 'The Echo Base hangar door: a two-leaf blast door in an ice cliff (The Empire Strikes Back).'
 - id: bld:hoth:hoth-tundra-tauntaun-shelter
   kind: hut
   name: Tauntaun shelter
@@ -28,6 +28,72 @@ buildings:
   art: art:hoth:tauntaun-shelter
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: hoth/shelter
+  seed: 202
+  about: Snow-banked tauntaun pen under ribbed tarp vaults, like the Echo Base pens (The Empire Strikes Back).
+- id: bld:hoth:fill-bacta-outpost
+  kind: bacta
+  name: Bacta outpost
+  areas: []
+  art: ''
+  size: [5, 4]
+  door: 2
+  blueprint: hoth/prefab
+  seed: 203
+  about: A dug-in Rebel dome bunker with an entry module, like the Echo Base medical centre (The Empire Strikes Back).
+  set: {form: bunker, h: 0, doorkind: hatch}
+- id: bld:hoth:fill-supply-depot
+  kind: depot
+  name: Supply Depot
+  areas: []
+  art: ''
+  size: [4, 4]
+  door: 1
+  blueprint: hoth/prefab
+  seed: 204
+  about: A ribbed Rebel prefab vault with a cargo door, half buried in a drift (The Empire Strikes Back).
+  set: {form: quonset, h: 0, doorkind: cargo}
+- id: bld:hoth:fill-prefab-hut
+  kind: fill
+  name: Prefab hut
+  areas: []
+  art: ''
+  size: [4, 4]
+  door: 1
+  blueprint: hoth/prefab
+  seed: 205
+  about: A grey Rebel prefab module with a chamfered roof (The Empire Strikes Back).
+  set: {form: module, h: 1.0}
+- id: bld:hoth:fill-prefab-quarters
+  kind: fill
+  name: Prefab quarters
+  areas: []
+  art: ''
+  size: [5, 4]
+  door: 2
+  blueprint: hoth/prefab
+  seed: 206
+  about: Two stacked Rebel prefab modules, the survey team's bunks (The Empire Strikes Back).
+  set: {form: stacked, h: 0.85}
+- id: bld:hoth:fill-sensor-tower
+  kind: fill
+  name: Sensor tower
+  areas: []
+  art: ''
+  size: [3, 5]
+  door: null
+  blueprint: hoth/sensor-tower
+  seed: 207
+  about: A Rebel sensor dish on a post over a prefab hut, like those on the Echo Base ridge (The Empire Strikes Back).
+  set: {form: dish}
+- id: bld:hoth:fill-generator-shed
+  kind: fill
+  name: Generator shed
+  areas: []
+  art: ''
+  size: [4, 4]
+  door: null
+  blueprint: hoth/sensor-tower
+  seed: 208
+  about: The shield generator shed with heater stacks (The Empire Strikes Back).
+  set: {form: generator}

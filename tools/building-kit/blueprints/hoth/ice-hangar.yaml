@@ -1,0 +1,47 @@
+# The Echo Base hangar door (The Empire Strikes Back): an ice cliff cut flat where a huge two-leaf blast
+# door sits in a heavy angled frame, the leaves part open on the dark hangar. Snow drifts heaped at the
+# foot, an ice overhang above.
+# Varies: the cliff's skyline (four to six faceted ice slabs), door width and how far it is open, an ice
+# overhang or a snow lip over the frame, a personnel hatch, a sensor dish or heater stacks on the cliff.
+name: ice-hangar
+style: hoth
+about: Ice cliff with a huge two-leaf blast door in an angled frame; drifts, overhang, hatch, dish or stacks.
+width: [7, 8, 9]
+choose:
+  n: {int: [4, 6]}
+  ch: ["=max(2.0, (H or 5) - 2.9)", "=max(2.2, (H or 5) - 2.6)"]       # cliff height
+  cd: [1.3, 1.6]                                                       # cliff depth
+  dw: ["=min(3.0, w_max * 0.42)", "=min(3.9, w_max * 0.5)"]
+  dh: [1.45, 1.7]
+  open: [0.25, 0.6]
+  dx0: [-0.5, 0.5]
+  dx: "=door_x if door_x is not None else dx0"
+  top: {pick: [overhang, lip], weights: [3, 2]}
+  extra: {pick: [hatch, dish, stacks, none], weights: [2, 2, 2, 1]}
+  side: "=1 if dx < 0 else -1"
+  ph: "=seed * 1.7"
+parts:
+  - repeat: "=n"
+    parts:
+      - {use: ice-block, name: "=f'cliff{i}'",
+         at: ["=-w_max / 2 + (i + 0.5) * w_max / n + (0.17 if i == 0 else (-0.17 if i == n - 1 else 0))", "=0.2 + 0.08 * sin(ph + i * 2.1)", 0],
+         with: {w: "=w_max / n * 1.35 - (0.35 if i in (0, n - 1) else 0)", d: "=cd", h: "=ch * (0.8 + 0.18 * sin(ph + i * 2.7)) * (0.85 if i in (0, n - 1) else 1)",
+                top: "=0.7 + 0.12 * sin(ph * 1.3 + i)", lean: "=0.15 * sin(ph + i * 1.9)"}}
+  - {use: hangar-door, name: door, at: ["=dx", 0, 0], with: {w: "=dw", h: "=dh", open: "=open"}}
+  - when: "=top == 'overhang'"
+    parts:
+      - {use: ice-block, name: overhang, at: ["=dx", 0.1, "=dh + 0.3"], with: {w: "=dw + 1.2", d: "=cd * 0.8", h: "=max(0.3, ch * 0.88 - dh - 0.3)", top: 0.8, lean: 0.0}}
+    else:
+      - {use: drift, name: lip, at: ["=dx", 0.5, "=dh + 0.35"], with: {rx: "=dw / 2 + 0.6", ry: 0.45, hz: 0.28}}
+  - {use: drift, name: drift-w, at: ["=-w_max / 2 + max(0.5, (w_max / 2 - dw / 2 + dx) * 0.5)", 0.1, 0], with: {rx: "=max(0.5, (w_max / 2 - dw / 2 + dx) * 0.5) - 0.02", ry: 0.35, hz: 0.42}}
+  - {use: drift, name: drift-e, at: ["=w_max / 2 - max(0.5, (w_max / 2 - dw / 2 - dx) * 0.5)", 0.15, 0], with: {rx: "=max(0.5, (w_max / 2 - dw / 2 - dx) * 0.5) - 0.02", ry: 0.32, hz: 0.36}}
+  - when: "=extra == 'hatch'"
+    parts:
+      - {use: door-hatch, name: hatch, at: ["=dx + side * (dw / 2 + 0.95)", 0.22, 0], with: {w: 0.7, h: 0.85}}
+  - when: "=extra == 'dish'"
+    parts:
+      - {use: dish, name: dish, at: ["=side * (w_max / 2 - 0.9)", "=cd * 0.6", "=ch * 0.8"], with: {h: 0.6, r: 0.5}}
+  - when: "=extra == 'stacks'"
+    parts:
+      - {use: stack, name: stack1, at: ["=side * (w_max / 2 - 1.0)", "=cd * 0.7", "=ch * 0.75"], with: {h: 0.5, r: 0.2}}
+      - {use: stack, name: stack2, at: ["=side * (w_max / 2 - 1.6)", "=cd * 0.75", "=ch * 0.75"], with: {h: 0.35, r: 0.17}}

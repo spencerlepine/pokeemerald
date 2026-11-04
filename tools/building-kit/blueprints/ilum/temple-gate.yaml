@@ -1,0 +1,45 @@
+# The Ilum Jedi temple gate (Jedi: Fallen Order, The Clone Wars "The Gathering"): a tall dark monolith
+# cut into an ice cliff, a narrow doorway with a round emblem over it, kyber crystals breaking out of the
+# ice at its feet, broad steps up to the door.
+# Varies: the cliff's skyline, monolith width and height, flanking pylons, crystal clusters (two to four),
+# steps, a frozen overhang on one side.
+name: temple-gate
+style: ilum
+about: Dark monolith with a narrow door and round emblem in an ice cliff; crystals, steps, flanking pylons.
+width: [10, 12]
+choose:
+  n: {int: [5, 7]}
+  ch: ["=max(2.6, (H or 7) - 3.6)", "=max(2.8, (H or 7) - 3.1)"]
+  cd: [1.3, 1.7]
+  mw: [2.0, 2.6]
+  mh: "=ch + [0.6, 1.0][seed % 2]"
+  dx0: [-0.5, 0.5]
+  dx: "=door_x if door_x is not None else dx0"
+  pylons: {pick: [true, false], weights: [2, 1]}
+  nc: {int: [2, 4]}
+  steps: {pick: [2, 3]}
+  ph: "=seed * 2.3"
+parts:
+  - repeat: "=n"
+    parts:
+      - {use: ice-block, name: "=f'cliff{i}'",
+         at: ["=-w_max / 2 + (i + 0.5) * w_max / n + (0.2 if i == 0 else (-0.2 if i == n - 1 else 0))", "=0.45 + 0.1 * sin(ph + i * 2.1)", 0],
+         with: {w: "=w_max / n * 1.3 - (0.4 if i in (0, n - 1) else 0)", d: "=cd", h: "=ch * (0.78 + 0.2 * sin(ph + i * 2.7)) * (0.8 if i in (0, n - 1) else 1)",
+                top: "=0.7 + 0.12 * sin(ph * 1.3 + i)", lean: "=0.15 * sin(ph + i * 1.9)"}}
+  - {use: monolith, name: gate, at: ["=dx", 0.32, 0], with: {w: "=mw", d: 0.9, h: "=mh", dw: 0.9, dh: 1.45, er: "=mw * 0.24"}}
+  - when: "=pylons"
+    parts:
+      - repeat: 2
+        parts:
+          - {use: monolith, name: "=f'pylon{i}'", at: ["=dx + (1 if i else -1) * (mw / 2 + 0.55)", 0.5, 0], with: {w: 0.7, d: 0.6, h: "=mh * 0.6", dh: 0.0, er: 0.18}}
+  - repeat: "=steps"
+    parts:
+      - {use: stepped, name: "=f'step{i}'", at: ["=dx", "=-0.05 + 0.0 * i", 0], with: {w: "=mw + 1.6 - i * 0.5", d: "=0.7 - i * 0.18", h: "=0.12 * (i + 1)", s: 0.96}}
+  - {use: door-jedi, name: door, at: ["=dx", 0.3, "=0.12 * steps"], with: {w: 0.85, h: 1.3}}
+  - repeat: "=nc"
+    parts:
+      - {use: crystal-cluster, name: "=f'kyber{i}'",
+         at: ["=dx + (1 if i % 2 else -1) * (mw / 2 + 1.45 + (i // 2) * 1.9)", "=0.25 + 0.1 * (i // 2)", 0],
+         rot: [0, 0, "=12 * sin(ph + i)"], with: {s: "=1.9 - 0.35 * (i // 2)"}}
+  - {use: drift, name: drift-w, at: ["=-w_max / 2 + 0.75", 0.25, 0], with: {rx: 0.7, ry: 0.35, hz: 0.4}}
+  - {use: drift, name: drift-e, at: ["=w_max / 2 - 0.75", 0.25, 0], with: {rx: 0.7, ry: 0.35, hz: 0.4}}

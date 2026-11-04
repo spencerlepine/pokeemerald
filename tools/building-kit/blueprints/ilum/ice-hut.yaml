@@ -1,0 +1,52 @@
+# Ice-carved shelters on the Ilum pilgrims' path (The Clone Wars "The Gathering", Jedi: Fallen Order: the
+# temple cut straight into the glacier): a mound or block of ice with a doorway carved into it under a
+# stone lintel, kyber crystals growing out of the ice, drifts against it.
+# Varies: the body (faceted mound, cut block with a snow cap, two blocks), the doorway (pointed Jedi door
+# or a round arch), crystals (none to three), a stone post, crates (for a store).
+name: ice-hut
+style: ilum
+about: Faceted ice mound or cut ice block with a carved doorway; crystals growing out, drifts, crates.
+width: [3, 4, 5]
+choose:
+  form: {pick: [mound, block, twin], weights: [3, 2, 2]}
+  w: ["=w_max * 0.8", "=w_max * 0.95"]
+  d: [1.4, 1.8]
+  h: [1.2, 1.6]
+  dx: "=door_x if door_x is not None else 0"
+  side: "=1 if dx <= 0 else -1"
+  doorkind: {pick: [jedi, arch]}
+  kyber: {int: [0, 3]}
+  crates: {pick: [0, 2], weights: [3, 1]}
+  ph: "=seed * 1.9"
+parts:
+  - when: "=form == 'mound'"
+    parts:
+      - name: mound
+        mat: ice
+        hull: {points: [["=-w / 2", 0.3, 0], ["=w / 2", 0.3, 0], ["=-w / 2", "=d", 0], ["=w / 2", "=d", 0], ["=-w * 0.42", 0.15, "=h * 0.45"], ["=w * 0.42", 0.15, "=h * 0.5"],
+                        ["=-w * 0.3", "=d * 0.5", "=h * (0.95 + 0.05 * sin(ph))"], ["=w * 0.25", "=d * 0.55", "=h"], ["=-w * 0.35", "=d", "=h * 0.6"], ["=w * 0.35", "=d", "=h * 0.55"], [0, 0.1, "=h * 0.55"]], round: 0.05}
+      - {use: drift, name: cap, at: ["=-side * w * 0.05", "=d * 0.55", "=h * 0.88"], with: {rx: "=w * 0.3", ry: "=d * 0.28", hz: 0.16}}
+  - when: "=form == 'block'"
+    parts:
+      - {use: ice-block, name: body, at: [0, 0.2, 0], with: {w: "=w", d: "=d - 0.2", h: "=h", top: 0.82, lean: "=0.12 * sin(ph)"}}
+      - {use: drift, name: cap, at: [0, "=0.2 + (d - 0.2) * 0.5", "=h - 0.02"], with: {rx: "=w * 0.4", ry: "=(d - 0.2) * 0.38", hz: 0.18}}
+  - when: "=form == 'twin'"
+    parts:
+      - {use: ice-block, name: body, at: ["=dx", 0.2, 0], with: {w: "=w * 0.6", d: "=d - 0.2", h: "=h", top: 0.8, lean: 0.05}}
+      - {use: ice-block, name: body2, at: ["=side * (w / 2 - w * 0.22)", 0.45, 0], with: {w: "=w * 0.45", d: "=d - 0.45", h: "=h * 0.75", top: 0.75, lean: "=side * 0.1"}}
+      - {use: drift, name: cap, at: ["=dx", "=0.2 + (d - 0.2) * 0.5", "=h - 0.02"], with: {rx: "=w * 0.22", ry: "=(d - 0.2) * 0.35", hz: 0.16}}
+  # the stone lintel and the doorway
+  - {name: lintel, mat: stone, box: {c: ["=dx", 0.12, 1.08], half: [0.62, 0.1, 0.1], radius: 0.02}}
+  - when: "=doorkind == 'jedi'"
+    parts:
+      - {use: door-jedi, name: door, at: ["=dx", 0.22, 0], with: {w: 0.78, h: 0.95, trim: stone}}
+    else:
+      - {use: door-arch, name: door, at: ["=dx", 0.2, 0], with: {w: 0.8, h: 0.6, trim: stone, door: hole}}
+  - repeat: "=kyber"
+    parts:
+      - {use: crystal-cluster, name: "=f'kyber{i}'", at: ["=(-side if i != 1 else side) * (w / 2 - 0.3) * (1 if i < 2 else 0.4)", "=0.25 + (0.4 if i == 2 else 0)", "=0 if i < 2 else h * 0.75"],
+         rot: [0, 0, "=(-side if i != 1 else side) * -15"], with: {s: "=1.0 - 0.15 * i"}}
+  - {use: drift, name: drift, at: ["=side * (w_max / 2 - 0.45)", 0.4, 0], with: {rx: 0.44, ry: 0.4, hz: 0.35}}
+  - repeat: "=crates"
+    parts:
+      - {use: crate, name: "=f'crate{i}'", at: ["=dx + side * (0.85 + i * 0.05)", "=-0.05", "=i * 0.4"], with: {s: "=0.42 - i * 0.08", mat: stone}}

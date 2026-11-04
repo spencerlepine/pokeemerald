@@ -38,19 +38,22 @@ templates:
       - {name: hole, mat: hole, box: {c: [0, -0.04, "=h / 2"], half: ["=w / 2", 0.06, "=h / 2"]}}
       - {name: leaf-top, mat: "=mat", box: {c: [0, -0.1, "=h - h * (1 - open) / 4"], half: ["=w / 2 - 0.04", 0.05, "=h * (1 - open) / 4"], radius: 0.02}}
       - {name: leaf-low, mat: "=mat", box: {c: [0, -0.1, "=h * (1 - open) / 4"], half: ["=w / 2 - 0.04", 0.05, "=h * (1 - open) / 4"], radius: 0.02}}
-  # A ribbed half-cylinder shelter (prefab or a tarp over a snow pen), ridge east-west. Front at y = 0.
+  # A ribbed half-cylinder vault running north (prefab or a tarp over a snow pen): its arched end faces
+  # south, with a hoop at the front. Front at y = 0, half-width r, rise r * k, `d` deep.
   quonset:
-    params: {w: 3.0, d: 1.8, k: 0.75, ribs: 3, mat: prefab}
+    params: {r: 1.0, d: 1.8, k: 0.9, mat: prefab, hoop: plate}
     preview: {}
     parts:
-      - {name: vault, mat: "=mat", cylinder: {a: ["=-w / 2", "=d / 2", 0], b: ["=w / 2", "=d / 2", 0], r1: "=d / 2"},
-         squash: {scale: [1, 1, "=k"], center: [0, "=d / 2", 0]}}
-  # A rib hoop round a quonset at x (a little proud of it).
-  quonset-rib:
-    params: {d: 1.8, k: 0.75, t: 0.12, mat: plate}
+      - {name: vault, mat: "=mat", cylinder: {a: [0, 0.04, 0], b: [0, "=d", 0], r1: "=r"},
+         squash: {scale: [1, 1, "=k"], center: [0, 0, 0]}}
+      - {name: hoop, mat: "=hoop", cylinder: {a: [0, -0.04, 0], b: [0, 0.14, 0], r1: "=r + 0.07"},
+         squash: {scale: [1, 1, "=k"], center: [0, 0, 0]}}
+  # A dark arched mouth on a quonset's front (an open end).
+  arch-mouth:
+    params: {r: 0.55, k: 0.9, mat: hole}
     parts:
-      - {name: rib, mat: "=mat", cylinder: {a: ["=-t / 2", "=d / 2", 0], b: ["=t / 2", "=d / 2", 0], r1: "=d / 2 + 0.05"},
-         squash: {scale: [1, 1, "=k"], center: [0, "=d / 2", 0]}}
+      - {name: mouth, mat: "=mat", cylinder: {a: [0, -0.1, 0], b: [0, -0.02, 0], r1: "=r"},
+         squash: {scale: [1, 1, "=k"], center: [0, 0, 0]}}
   # A prefab module: a box with chamfered roof edges (the Echo Base panels). Front at y = 0.
   module:
     params: {w: 2.4, d: 1.6, h: 1.0, ch: 0.3, mat: prefab, roof: plate}

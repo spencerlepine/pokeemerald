@@ -1,0 +1,35 @@
+# A tauntaun shelter (The Empire Strikes Back: the tauntaun pens in Echo Base, the snow trenches of the
+# patrols): snow dug out and banked into walls, ribbed tarp vaults running back into the drift, their
+# arched ends open to the south, dark inside.
+# Varies: one, two or three vaults, which one is open, berm height, a lamp post, feed crates.
+name: shelter
+style: hoth
+about: Snow-banked pen of ribbed tarp vaults with open arched mouths; 1-3 vaults, lamp, crates.
+width: [4, 5, 6]
+choose:
+  nv: {pick: [1, 2, 3], weights: [2, 3, 1]}
+  d: [1.6, 2.1]
+  k: [0.75, 0.95]
+  bh: [0.35, 0.55]
+  dx0: [-0.4, 0.4]
+  dx: "=door_x if door_x is not None else dx0"
+  vr: "=min(1.15, (w_max / 2 - abs(dx) - 0.08) / (1 if nv == 1 else 2.97))"
+  lamp: {pick: [true, false]}
+  crates: {pick: [0, 1, 2]}
+  side: "=1 if dx < 0 else -1"
+parts:
+  - {use: drift, name: berm-n, at: [0, "=d + 0.1", 0], with: {rx: "=w_max / 2 - 0.05", ry: 0.5, hz: "=bh + 0.3"}}
+  - {use: drift, name: berm-w, at: ["=-w_max / 2 + 0.4", "=d * 0.55", 0], with: {rx: 0.38, ry: "=d * 0.55", hz: "=bh + 0.25"}}
+  - {use: drift, name: berm-e, at: ["=w_max / 2 - 0.4", "=d * 0.55", 0], with: {rx: 0.38, ry: "=d * 0.55", hz: "=bh + 0.25"}}
+  - repeat: "=nv"
+    parts:
+      - {use: quonset, name: "=f'vault{i}'", at: ["=dx + (0 if i == 0 else (side if i == 1 else -side)) * vr * 2.05", "=0.15 + (0 if i == 0 else 0.25)", 0],
+         with: {r: "=vr if i == 0 else vr * 0.92", d: "=d", k: "=k", mat: snow, hoop: prefab}}
+  - {use: arch-mouth, name: door, at: ["=dx", 0.15, 0], with: {r: "=vr * 0.7", k: "=k * 1.05"}}
+  - when: "=lamp"
+    parts:
+      - {name: lamp-post, mat: prefab, cylinder: {a: ["=side * (w_max / 2 - 0.15)", 0.0, 0], b: ["=side * (w_max / 2 - 0.15)", 0.0, 1.3], r1: 0.07}}
+      - {name: lamp, mat: plate, box: {c: ["=side * (w_max / 2 - 0.15)", -0.05, 1.32], half: [0.13, 0.1, 0.1], radius: 0.03}}
+  - repeat: "=crates"
+    parts:
+      - {use: crate, name: "=f'crate{i}'", at: ["=-side * (w_max / 2 - 0.3)", "=-0.05 + i * 0.05", "=i * 0.42"], with: {s: "=0.45 - i * 0.08", mat: plate}}

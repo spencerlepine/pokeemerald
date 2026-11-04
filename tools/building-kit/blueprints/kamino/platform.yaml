@@ -8,11 +8,13 @@ about: Round deck on pylons; landing ring, rim lamps, access tube, control pod o
 width: [3, 4, 5, 6]
 choose:
   R: "=w_max / 2 - 0.02"
-  ry: "=[0.55, 0.62][seed % 2]"
   z: [0.4, 0.55]
+  ry: "=min([0.55, 0.62][seed % 2], (H - 0.75 - z) / (2 * R)) if H else [0.55, 0.62][seed % 2]"
   cy: "=R * ry + 0.05"
-  ring: {pick: [true, false], weights: "=[3, 1] if W >= 5 else [0, 1]"}
-  extra: {pick: [tube, pod, mast, none], weights: "=[3, 2, 2, 1] if W >= 5 else [0, 0, 3, 1]"}
+  ring0: {pick: [true, false], weights: [3, 1]}
+  ring: "=ring0 and W >= 5"
+  extra0: {pick: [tube, pod, mast, none], weights: [3, 2, 2, 1]}
+  extra: "=extra0 if W >= 5 else ('mast' if extra0 != 'none' else 'none')"
   side: {pick: [-1, 1]}
   lamps: {pick: [2, 4], weights: [2, 1]}
 parts:
@@ -34,10 +36,11 @@ parts:
       - {name: "=f'lamphead{i}'", mat: shell, ellipsoid: {c: ["=R * 0.88 * cos(radians(200 + i * 140 / max(1, n - 1)))", "=cy + R * ry * 0.88 * sin(radians(200 + i * 140 / max(1, n - 1)))", "=z + 0.32"], r: [0.12, 0.1, 0.08]}}
   - when: "=extra == 'tube'"
     parts:
-      - {name: tube, mat: shell, cylinder: {a: ["=side * R * 0.55", "=cy + R * ry * 0.3", "=z + 0.3"], b: ["=side * (R + 0.2)", "=cy + R * ry + 0.6", "=z + 0.3"], r1: 0.32}}
-      - {name: tube-band, mat: glass, cylinder: {a: ["=side * R * 0.7", "=cy + R * ry * 0.45", "=z + 0.3"], b: ["=side * (R + 0.2)", "=cy + R * ry + 0.6", "=z + 0.3"], r1: 0.34},
-         squash: {scale: [1, 1, 0.35], center: [0, 0, "=z + 0.3"]}}
-      - {name: tube-mouth, mat: glass, ellipsoid: {c: ["=side * R * 0.55", "=cy + R * ry * 0.3", "=z + 0.3"], r: [0.3, 0.12, 0.3]}}
+      - {name: tube, mat: shell, cylinder: {a: ["=side * R * 0.2", "=cy + R * ry * 0.55", "=z + 0.32"], b: ["=side * (R - 0.05)", "=cy + R * ry * 0.55", "=z + 0.32"], r1: 0.34}}
+      - {name: tube-band, mat: glass, cylinder: {a: ["=side * R * 0.3", "=cy + R * ry * 0.55 - 0.02", "=z + 0.3"], b: ["=side * (R - 0.15)", "=cy + R * ry * 0.55 - 0.02", "=z + 0.3"], r1: 0.35},
+         squash: {scale: [1, 1, 0.3], center: [0, 0, "=z + 0.3"]}}
+      - {name: tube-mouth, mat: glass, ellipsoid: {c: ["=side * R * 0.2", "=cy + R * ry * 0.55", "=z + 0.32"], r: [0.1, 0.3, 0.3]}}
+      - {name: tube-leg, mat: pylon, cylinder: {a: ["=side * (R - 0.4)", "=cy + R * ry * 0.55", 0], b: ["=side * (R - 0.4)", "=cy + R * ry * 0.55", "=z"], r1: 0.14}}
   - when: "=extra == 'pod'"
     parts:
       - {use: saucer, name: pod, at: ["=side * R * 0.62", "=cy + R * ry * 0.55", 0], with: {R: 0.62, ry: 0.7, z0: "=z", skirt: 0.0, wall: 0.42, hk: 0.45}}

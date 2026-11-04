@@ -1,0 +1,59 @@
+# Ilum kit: the Jedi temple and the pilgrims' path (Jedi: Fallen Order, The Clone Wars "The Gathering").
+# Ice cliffs (the Hoth ice-block and drift), a tall dark stone monolith with a round emblem cut into the
+# cliff, Jedi stepped stone bases with sloped roofs and short spires, and kyber crystals: pointed
+# six-sided spikes that are the brightest thing on the planet.
+uses: [hoth]
+materials:
+  stone:   {ramp: mid,   bands: [0.22, 0.52, 0.84]}   # carved temple stone
+  darkst:  {ramp: dark,  bands: [0.2, 0.5, 0.82]}     # the monolith, deep carving
+  crystal: {ramp: light, bands: [0.04, 0.22, 0.55]}   # kyber: almost all in the two lightest tones
+templates:
+  # A kyber crystal: a six-sided spike, `h` tall, radius `r`. Tip it with `rot` on the use.
+  crystal:
+    params: {h: 0.9, r: 0.16, mat: crystal}
+    preview: {}
+    parts:
+      - name: spike
+        mat: "=mat"
+        hull: {points: [["=r", 0, 0], ["=r / 2", "=r * 0.87", 0], ["=-r / 2", "=r * 0.87", 0], ["=-r", 0, 0], ["=-r / 2", "=-r * 0.87", 0], ["=r / 2", "=-r * 0.87", 0],
+                        ["=r", 0, "=h * 0.72"], ["=r / 2", "=r * 0.87", "=h * 0.72"], ["=-r / 2", "=r * 0.87", "=h * 0.72"], ["=-r", 0, "=h * 0.72"], ["=-r / 2", "=-r * 0.87", "=h * 0.72"], ["=r / 2", "=-r * 0.87", "=h * 0.72"],
+                        [0, 0, "=h"]], round: 0.02}
+  # Three crystals leaning out of one root (a kyber cluster), `s` scales it.
+  crystal-cluster:
+    params: {s: 1.0, mat: crystal}
+    preview: {}
+    parts:
+      - {use: crystal, name: c1, with: {h: "=0.95 * s", r: "=0.17 * s", mat: "=mat"}}
+      - {use: crystal, name: c2, at: ["=-0.18 * s", "=0.05 * s", 0], rot: [0, 0, -28], with: {h: "=0.62 * s", r: "=0.13 * s", mat: "=mat"}}
+      - {use: crystal, name: c3, at: ["=0.2 * s", "=0.08 * s", 0], rot: [0, 0, 32], with: {h: "=0.5 * s", r: "=0.12 * s", mat: "=mat"}}
+  # The Ilum temple monolith (Fallen Order): a tall dark slab, a tall narrow doorway, a round emblem
+  # above it and a vertical channel up the middle. Front at y = 0.
+  monolith:
+    params: {w: 2.2, d: 0.8, h: 4.0, dw: 0.9, dh: 1.5, er: 0.55, mat: darkst}
+    preview: {}
+    parts:
+      - name: slab
+        mat: "=mat"
+        prism: {poly: [["=-w / 2", 0], ["=w / 2", 0], ["=w / 2", "=d"], ["=-w / 2", "=d"]], z: [0, "=h"], top: [0.82, 0.9], lean: [0, 0.08], round: 0.04}
+      - {name: cap, mat: "=mat", hull: {points: [["=-w * 0.41", 0.04, "=h"], ["=w * 0.41", 0.04, "=h"], ["=-w * 0.41", "=d * 0.9", "=h"], ["=w * 0.41", "=d * 0.9", "=h"],
+                                                 ["=-w * 0.12", 0.2, "=h + 0.55"], ["=w * 0.3", 0.25, "=h + 0.35"], ["=-w * 0.12", "=d * 0.7", "=h + 0.55"], ["=w * 0.3", "=d * 0.7", "=h + 0.35"]], round: 0.03}}
+      - {name: channel, mat: stone, box: {c: [0, -0.02, "=(dh + h) / 2 + er"], half: [0.1, 0.05, "=(h - dh) / 2 - er - 0.15"]}}
+      - {name: ring, mat: stone, cylinder: {a: [0, -0.08, "=dh + er + 0.35"], b: [0, 0.04, "=dh + er + 0.35"], r1: "=er"}}
+      - {name: ring-in, mat: "=mat", cylinder: {a: [0, -0.12, "=dh + er + 0.35"], b: [0, -0.04, "=dh + er + 0.35"], r1: "=er * 0.62"}}
+  # A tall narrow Jedi doorway: a pointed-top dark opening in a stone frame.
+  door-jedi:
+    params: {w: 0.8, h: 1.1, frame: 0.12, door: hole, trim: stone}
+    preview: {}
+    parts:
+      - name: frame
+        mat: "=trim"
+        prism: {poly: [["=-w / 2 - frame", -0.1], ["=w / 2 + frame", -0.1], ["=w / 2 + frame", 0.05], ["=-w / 2 - frame", 0.05]], z: [0, "=h + frame"], top: [0.85, 1], round: 0.02}
+      - {name: hole, mat: "=door", box: {c: [0, -0.13, "=h / 2"], half: ["=w / 2", 0.04, "=h / 2"]}}
+  # A Jedi stepped base: a block whose walls slope in (a stump), front at y = 0.
+  stepped:
+    params: {w: 3.0, d: 2.0, h: 0.6, s: 0.85, mat: stone}
+    preview: {}
+    parts:
+      - name: block
+        mat: "=mat"
+        prism: {poly: [["=-w / 2", 0], ["=w / 2", 0], ["=w / 2", "=d"], ["=-w / 2", "=d"]], z: [0, "=h"], top: ["=s", "=s * 0.95"], round: 0.03}

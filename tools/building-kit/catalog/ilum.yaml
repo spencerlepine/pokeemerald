@@ -8,9 +8,10 @@ buildings:
   art: art:ilum:jedi-temple-gate
   size: [12, 7]
   door: 6
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: ilum/temple-gate
+  seed: 300
+  about: 'The Ilum Jedi temple: a dark monolith with a round emblem cut into the ice cliff, kyber at its feet (Jedi: Fallen Order).'
+  set: {nc: 2, n: 5}
 - id: bld:ilum:ilum-bacta-center
   kind: bacta
   name: Bacta Center
@@ -18,9 +19,10 @@ buildings:
   art: art:shared:bacta-center
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: ilum/stone-hall
+  seed: 301
+  about: A stepped Jedi stone hall with a kyber crystal on its upper tier (the Coruscant temple's ziggurat, The Phantom Menace).
+  set: {roof: step, lamps: 2}
 - id: bld:ilum:ilum-supply-depot
   kind: depot
   name: Supply Depot
@@ -28,9 +30,10 @@ buildings:
   art: art:shared:supply-depot
   size: [4, 4]
   door: 1
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: ilum/ice-hut
+  seed: 302
+  about: 'A store cut into a block of glacier ice under a stone lintel (Jedi: Fallen Order).'
+  set: {form: block, crates: 2}
 - id: bld:ilum:ilum-landing-pad-ships
   kind: pad
   name: Landing pad (ships)
@@ -38,6 +41,39 @@ buildings:
   art: art:shared:landing-pad
   size: [6, 4]
   door: 3
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: ilum/pad
+  seed: 303
+  about: 'A six-sided stone landing shelf below the temple, crystal beacons on its corners (Jedi: Fallen Order).'
+- id: bld:ilum:fill-pilgrim-shelter
+  kind: fill
+  name: Pilgrim shelter
+  areas: []
+  art: ''
+  size: [4, 4]
+  door: 1
+  blueprint: ilum/stone-hall
+  seed: 304
+  about: A snow-roofed stone shelter on the pilgrims' path to the temple (The Clone Wars, The Gathering).
+  set: {roof: pyramid}
+- id: bld:ilum:fill-ice-carved-hut
+  kind: fill
+  name: Ice-carved hut
+  areas: []
+  art: ''
+  size: [4, 4]
+  door: 1
+  blueprint: ilum/ice-hut
+  seed: 305
+  about: 'A faceted ice mound hollowed into a hut, kyber growing from it (Jedi: Fallen Order).'
+  set: {form: mound}
+- id: bld:ilum:fill-meditation-shrine
+  kind: fill
+  name: Meditation shrine
+  areas: []
+  art: ''
+  size: [3, 4]
+  door: 1
+  blueprint: ilum/stone-hall
+  seed: 306
+  about: A small Jedi stone shrine with a spire (the Jedi Temple's towers, The Phantom Menace).
+  set: {roof: spire}

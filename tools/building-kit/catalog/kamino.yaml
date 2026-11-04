@@ -8,9 +8,10 @@ buildings:
   art: art:kamino:cloning-hall
   size: [12, 6]
   door: 6
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: kamino/hall
+  seed: 100
+  about: 'Tipoca City''s main complex (Attack of the Clones): great white drum, capsule wings, spire towers, on stilts.'
+  set: {centre: drum, wings: capsule, spires: 1}
 - id: bld:kamino:tipoca-city-landing-platform-ships
   kind: pad
   name: Landing platform (ships)
@@ -18,9 +19,10 @@ buildings:
   art: art:shared:landing-pad
   size: [6, 4]
   door: 3
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: kamino/platform
+  seed: 101
+  about: The round Tipoca landing pad on pylons where Obi-Wan sets down the Delta-7 (Attack of the Clones).
+  set: {ring: true}
 - id: bld:kamino:tipoca-city-kaminoan-dwelling
   kind: home
   name: Kaminoan dwelling
@@ -28,9 +30,9 @@ buildings:
   art: art:kamino:stilt-dome
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: kamino/stilt-dome
+  seed: 102
+  about: A Tipoca saucer dwelling on stilts over the storm sea (Attack of the Clones).
 - id: bld:kamino:tipoca-city-storm-watcher-s-dome
   kind: home
   name: Storm watcher's dome
@@ -38,9 +40,10 @@ buildings:
   art: art:kamino:stilt-dome
   size: [4, 4]
   door: 1
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: kamino/stilt-dome
+  seed: 103
+  about: A small Tipoca saucer with a storm mast on its dome (Attack of the Clones).
+  set: {form: mast}
 - id: bld:kamino:tipoca-city-bacta-center
   kind: bacta
   name: Bacta Center
@@ -48,9 +51,9 @@ buildings:
   art: art:shared:bacta-center
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: kamino/medbay
+  seed: 104
+  about: 'A Tipoca medical bay: saucer on a glass drum with bacta tanks at its corners (Attack of the Clones).'
 - id: bld:kamino:tipoca-city-clone-trainer-s-quarters
   kind: home
   name: Clone trainer's quarters
@@ -58,9 +61,10 @@ buildings:
   art: art:kamino:stilt-dome
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: kamino/stilt-dome
+  seed: 105
+  about: A two-tier Tipoca saucer where the clone trainers live (Attack of the Clones).
+  set: {form: tier}
 - id: bld:kamino:tipoca-city-kaminoan-dwelling-2
   kind: home
   name: Kaminoan dwelling
@@ -68,9 +72,10 @@ buildings:
   art: art:kamino:stilt-dome
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: kamino/stilt-dome
+  seed: 106
+  about: A Tipoca dwelling of two joined saucers on stilts (Attack of the Clones).
+  set: {form: twin}
 - id: bld:kamino:tipoca-city-supply-depot
   kind: depot
   name: Supply Depot
@@ -78,9 +83,10 @@ buildings:
   art: art:shared:supply-depot
   size: [4, 4]
   door: 1
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: kamino/capsule-block
+  seed: 107
+  about: 'A Tipoca store room: a white capsule hall on stilts with a cargo door (Attack of the Clones).'
+  set: {doorkind: cargo, crates: 1}
 - id: bld:kamino:tipoca-city-fisher-s-dome
   kind: home
   name: Fisher's dome
@@ -88,6 +94,58 @@ buildings:
   art: art:kamino:stilt-dome
   size: [4, 4]
   door: 1
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: kamino/stilt-dome
+  seed: 108
+  about: A low lens-shaped Tipoca pod on stilts by the water (Attack of the Clones).
+  set: {form: lens}
+- id: bld:kamino:fill-walkway-hub
+  kind: fill
+  name: Walkway hub
+  areas: []
+  art: ''
+  size: [3, 3]
+  door: null
+  blueprint: kamino/platform
+  seed: 109
+  about: A round Tipoca walkway junction on a pylon with rails and a lamp mast (Attack of the Clones).
+- id: bld:kamino:fill-storm-tower
+  kind: fill
+  name: Storm tower
+  areas: []
+  art: ''
+  size: [3, 5]
+  door: null
+  blueprint: kamino/storm-tower
+  seed: 110
+  about: A Tipoca column with a saucer head over the city (Attack of the Clones).
+- id: bld:kamino:fill-relay-mast
+  kind: fill
+  name: Relay mast
+  areas: []
+  art: ''
+  size: [2, 5]
+  door: null
+  blueprint: kamino/storm-tower
+  seed: 111
+  about: A thin Tipoca beacon column on a round deck (Attack of the Clones).
+- id: bld:kamino:fill-clone-barracks
+  kind: fill
+  name: Clone barracks
+  areas: []
+  art: ''
+  size: [8, 4]
+  door: 3
+  blueprint: kamino/capsule-block
+  seed: 112
+  about: A long white capsule barracks block on stilts, the clone cadets' quarters (Attack of the Clones).
+- id: bld:kamino:fill-store-hall
+  kind: fill
+  name: Store hall
+  areas: []
+  art: ''
+  size: [6, 4]
+  door: 2
+  blueprint: kamino/capsule-block
+  seed: 113
+  about: A two-tier Tipoca capsule hall on stilts (Attack of the Clones).
+  set: {tiers: 2}

@@ -65,8 +65,9 @@ parts:
           - {name: hub-cap, mat: dome, ellipsoid: {c: ["=cx", "=cy", "=z0 + wall + R * hk + 0.22"], r: ["=R * 0.3", "=R * 0.3 * ry", 0.14]}}
       - when: "=top == 'cupola'"              # a glass cupola ring with a cap
         parts:
-          - {name: cupola, mat: glass, cylinder: {a: ["=cx", "=cy", "=z0 + wall"], b: ["=cx", "=cy - 0.1", "=z0 + wall + R * hk + 0.36"], r1: "=R * 0.24"}}
-          - {name: cupola-cap, mat: dome, ellipsoid: {c: ["=cx", "=cy - 0.1", "=z0 + wall + R * hk + 0.36"], r: ["=R * 0.32", "=R * 0.32 * 0.8", 0.12]}}
+          - {name: cupola, mat: shell, cylinder: {a: ["=cx", "=cy - 0.1", "=z0 + wall"], b: ["=cx", "=cy - 0.1", "=z0 + wall + R * hk + 0.36"], r1: "=R * 0.27"}}
+          - {name: cupola-band, mat: glass, cylinder: {a: ["=cx", "=cy - 0.1", "=z0 + wall + R * hk + 0.1"], b: ["=cx", "=cy - 0.1", "=z0 + wall + R * hk + 0.26"], r1: "=R * 0.27 + 0.03"}}
+          - {name: cupola-cap, mat: dome, ellipsoid: {c: ["=cx", "=cy - 0.1", "=z0 + wall + R * hk + 0.36"], r: ["=R * 0.3", "=R * 0.3 * 0.8", 0.14]}}
   - {name: deck, mat: shell, box: {c: ["=dx", "=yf / 2", "=st"], half: [0.55, "=yf / 2 + 0.02", 0.07], radius: 0.04}}
   - {use: pylon, name: deck-post, at: ["=dx", 0.14, 0], with: {h: "=st - 0.05", r: 0.1}}
   - {use: door-pod, name: door, at: ["=dx", "=yf + 0.04", "=st + 0.07"], with: {w: 0.72, h: "=min(0.86, (wall + skirt if form != 'lens' else 0.62) * 0.9)"}}
