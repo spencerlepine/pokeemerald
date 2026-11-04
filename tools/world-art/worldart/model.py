@@ -90,8 +90,42 @@ REGION_ENV = {"abs": np.abs, "sqrt": np.sqrt, "minimum": np.minimum, "maximum": 
 
 # ------------------------------------------------------------------ parts
 
+def hull_points(kind, g):
+    """Points of a low-poly solid.
+    hull:    {points: [[x, y, z], ...]}                       any convex solid
+    prism:   {poly: [[x, y], ...], z: [z0, z1], top: s}        a plan outline raised from z0 to z1; `top`
+             scales the top face about its centre (number or [sx, sy]) and `lean: [dx, dy]` shifts it,
+             so one prism makes slabs, trapezoids, pyramids (top: 0.01) and sloped roofs
+    extrude: {axis: x|y, profile: [[a, z], ...], span: [s0, s1], end: s}   a side profile (y-z for an x
+             extrusion, x-z for a y extrusion) pushed along the axis; `end` scales the far end's profile
+             about its centre: noses, wings, hulls and ramps"""
+    if kind == "hull":
+        return np.asarray(g["points"], float)
+    if kind == "prism":
+        poly = np.asarray(g["poly"], float)
+        z0, z1 = (float(v) for v in g["z"])
+        top = g.get("top", 1.0)
+        top = np.asarray(top if isinstance(top, (list, tuple)) else [top, top], float)
+        lean = np.asarray(g.get("lean", [0, 0]), float)
+        c = poly.mean(0)
+        up = c + (poly - c) * top + lean
+        return np.vstack([np.c_[poly, np.full(len(poly), z0)], np.c_[up, np.full(len(up), z1)]])
+    prof = np.asarray(g["profile"], float)
+    s0, s1 = (float(v) for v in g["span"])
+    end = g.get("end", 1.0)
+    end = np.asarray(end if isinstance(end, (list, tuple)) else [end, end], float)
+    c = prof.mean(0)
+    far = c + (prof - c) * end + np.asarray(g.get("lean", [0, 0]), float)
+    if g.get("axis", "x") == "x":
+        a = np.c_[np.full(len(prof), s0), prof[:, 0], prof[:, 1]]
+        b = np.c_[np.full(len(far), s1), far[:, 0], far[:, 1]]
+    else:
+        a = np.c_[prof[:, 0], np.full(len(prof), s0), prof[:, 1]]
+        b = np.c_[far[:, 0], np.full(len(far), s1), far[:, 1]]
+    return np.vstack([a, b])
+
 class Part:
-    KINDS = ("ellipsoid", "cone", "cylinder", "box")
+    KINDS = ("ellipsoid", "cone", "cylinder", "box", "hull", "prism", "extrude")
 
     def __init__(self, spec, mat_names, where="part"):
         self.name = spec.get("name", where)
@@ -120,10 +154,17 @@ class Part:
                 self.b = self.a + [0, 0, 1e-3]
             self.center = 0.5 * (self.a + self.b)
             self.radius_bound = 0.5 * float(np.linalg.norm(self.b - self.a)) + max(self.r1, self.r2)
-        else:
+        elif self.kind == "box":
             self.c, self.half = np.asarray(g["c"], float), np.asarray(g["half"], float)
             self.round = float(g.get("radius", 0.0))
             self.center, self.radius_bound = self.c, float(np.linalg.norm(self.half))
+        else:
+            # low-poly solids: the convex hull of some points, with optionally rounded edges (`round`, m)
+            pts = hull_points(self.kind, g)
+            self.planes = sdf.hull_planes(pts)
+            self.round = float(g.get("round", 0.0))
+            self.center = pts.mean(0)
+            self.radius_bound = float(np.linalg.norm(pts - self.center, axis=1).max())
         self.rot = euler(*spec["rot"]) if "rot" in spec else None
         sq = spec.get("squash")             # {scale: [sx, sy, sz], center: [..]} or just [sx, sy, sz]
         self.squash = None
@@ -155,8 +196,10 @@ class Part:
             d = sdf.round_cone(c, self.a, self.b, self.r1, self.r2)
         elif self.kind == "cylinder":
             d = sdf.capped_cone(c, self.a, self.b, self.r1, self.r2)
-        else:
+        elif self.kind == "box":
             d = sdf.round_box(c, self.c, self.half, self.round)
+        else:
+            d = sdf.convex(c, self.planes, self.round)
         if self.noise is not None:
             amp, freq, seed = self.noise
             d = d + amp * sdf.value_noise(c * freq, seed)
@@ -620,6 +663,17 @@ class Object:
             self.ground_shadow.append({"rx": float(g["rx"]), "ry": float(g["ry"]), "dx": float(g.get("dx", 0)),
                                        "dy": float(g.get("dy", 0)), "idx": colors.index(tuple(c), 1),
                                        "checker": bool(g.get("checker", False))})
+        # `drop_shadow`: the silhouette shifted by (dx, dy) px, painted on empty ground in one colour,
+        # like the grey band vanilla rocks and buildings cast to the lower right
+        self.drop_shadow = []
+        for g in raw.get("drop_shadow", []) or []:
+            c = g["color"]
+            c = lib["singles"][c] if isinstance(c, str) else c
+            c = snap(c)
+            if tuple(c) not in colors[1:]:
+                colors.append(tuple(c))
+            self.drop_shadow.append({"dx": int(g.get("dx", 1)), "dy": int(g.get("dy", 1)), "idx": colors.index(tuple(c), 1),
+                                     "below": float(g.get("below", 0.0))})
         extra = len(colors) - len(self.palette)
         if extra:
             self.palette = np.array(colors, dtype=np.uint8)

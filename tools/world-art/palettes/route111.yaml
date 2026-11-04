@@ -1,0 +1,8 @@
+# Vanilla Route 111 rock colours (Mauville secondary), measured from the rendered map, darkest first.
+outline: [98, 65, 82]
+shadow: [131, 131, 139, 255]
+ramps:
+  rock: [[98, 65, 82], [131, 90, 90], [156, 115, 115], [189, 148, 139], [222, 180, 164], [238, 213, 205]]
+singles:
+  ground: [222, 205, 131]
+  shade: [131, 131, 139]

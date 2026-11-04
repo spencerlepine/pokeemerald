@@ -1,0 +1,47 @@
+# Droid tank wreck (art:shared:droid-tank-wreck), hit box 4x3, drawn 4x4.
+# Reference: the Trade Federation AAT (The Phantom Menace). A wide hover hull with a blunt prow and a
+# side pod on each flank, the turret at the back with its long cannon pointing east. Sunk to its skirts,
+# the turret knocked askew.
+name: shared_droid-tank-wreck
+art: art:shared:droid-tank-wreck
+palette: greybox
+cells: [4, 4]
+foot: [32, 64]
+footprint: 3
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  hull:  {ramp: mid,  bands: [0.25, 0.55, 0.85]}
+  armor: {ramp: light, bands: [0.1, 0.45, 0.8]}
+  dark:  {ramp: dark, bands: [0.2, 0.5, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 3}
+box: [60, 44]
+tilt: [0, 4]
+pivot: [0, 1.5]
+sink: 0.1
+parts:
+  # one hull: a tall flat rear deck, the front slopes down east to a blunt wedge nose
+  - name: hull
+    mat: hull
+    hull: {points: [[-1.75, 0.45, 0], [-1.75, 2.55, 0], [1.1, 0.35, 0], [1.1, 2.65, 0], [1.85, 0.9, 0], [1.85, 2.1, 0],
+                    [-1.7, 0.55, 0.62], [-1.7, 2.45, 0.62], [0.2, 0.5, 0.58], [0.2, 2.5, 0.58],
+                    [1.75, 0.95, 0.2], [1.75, 2.05, 0.2]], round: 0.05}
+  # side pods (the AAT's twin flank tubes), their noses forward
+  - {name: pod-s, mat: armor, cylinder: {a: [-1.45, 0.3, 0.3], b: [1.2, 0.3, 0.26], r1: 0.27, r2: 0.2}}
+  - {name: pod-n, mat: armor, cylinder: {a: [-1.45, 2.7, 0.3], b: [1.2, 2.7, 0.26], r1: 0.27, r2: 0.2}}
+  - {name: pod-tip-s, mat: dark, ellipsoid: {c: [1.25, 0.3, 0.26], r: [0.08, 0.18, 0.18]}}
+  - {name: pod-tip-n, mat: dark, ellipsoid: {c: [1.25, 2.7, 0.26], r: [0.08, 0.18, 0.18]}}
+  # the turret at the back, knocked askew
+  - name: turret
+    mat: armor
+    prism: {poly: [[-1.5, 1.05], [-0.4, 1.0], [-0.1, 1.5], [-0.4, 2.0], [-1.5, 1.95]], z: [0.58, 0.98], top: 0.82, round: 0.06}
+    rot: [0, 14, 0]
+  - {name: cannon, mat: dark, cylinder: {a: [-0.3, 1.55, 0.82], b: [1.6, 2.0, 0.82], r1: 0.09}}
+  - {name: muzzle, mat: dark, cylinder: {a: [1.5, 1.98, 0.82], b: [1.7, 2.02, 0.82], r1: 0.13}}
+  - {name: hatch, mat: dark, ellipsoid: {c: [-1.0, 1.5, 0.98], r: [0.22, 0.2, 0.05]}}

@@ -120,6 +120,12 @@ an area's grid changes; it redoes every scenery prop). Query the rows with
 `python3 -m blockout todo --kind scenery`. Greybox renders use a stand-in model per piece (named in `build`
 and `notes`); each needs its own shape when its category is reviewed.
 
+**3D models.** Each scenery row is also a low-poly grey model in `tools/world-art/models/scenery/`, rendered
+by the Emerald camera (`python3 -m worldart scenery`, [README](../../tools/world-art/README.md)). Four
+columns track it: `model` (the yaml), `model_status` (`TODO`, `IN-PROGRESS`, `IN-REVIEW`, `APPROVED`),
+`model_png` (the sprite in `world/models/`, with a `_scene.png` screen check beside it) and `model_tiles`
+(unique 8x8 tiles). Query: `python3 -m blockout todo --model IN-REVIEW`. Nothing is in the game yet.
+
 | Planet | Pieces (where) | Lore |
 |---|---|---|
 | Every planet | Crashed X-wing, Crashed TIE fighter, Y-wing wreck, Vulture droid wreck, Droid tank wreck, AT-TE wreck, Republic gunship wreck, Hull debris, Fallen comm tower, Broken bridge, Collapsed stairs, Ruined wall, Rubble pile | Clone Wars wrecks seventeen years on, and the first Rebel and Imperial losses. One drawing each, recoloured per planet. |

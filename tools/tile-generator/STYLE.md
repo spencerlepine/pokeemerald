@@ -102,6 +102,17 @@ shapes (clumps, logs) rather than painting patterns onto a smooth shape.
 
 Not approved yet: buildings. The Fortree tree house is the next calibration.
 
+**Low-poly scenery (2026-11-04, in review).** The Route 111 cone rock (`models/calibration/cone-rock.yaml`)
+is one convex hull of about 30 jittered points with soft edges. What it taught:
+- Vanilla rocks are faceted: flat faces, light from the upper left, dark right sides, and a grey-blue drop
+  shadow band (#83838b) one pixel right and below. A convex hull with edges rounded by 0.02-0.03 m gives the
+  facets; 0.08 m blurs them into a blob.
+- A tall object needs a shallow plan. The plan takes full depth and the height adds rows, so a round base
+  as deep as it is wide renders as an egg. The cone rock is 2 cells wide, half a cell deep.
+- The crag texture is a pattern on the faces, not geometry; it comes with final art.
+- Large vehicles read by their silhouette and one light part on a mid body (pods, leg plates), not by
+  detail. All-light models wash out next to vanilla's darker houses.
+
 Measured on vanilla (true regardless of method):
 - The Hoenn route tree (General 468/469/476/477) is 2x2 cells. Its crown is about 30x22 px, filling the
   cell width with no margin, so trees tile edge to edge. It is mirrored left/right, made of about 5x4 px leaf

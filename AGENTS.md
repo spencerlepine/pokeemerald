@@ -38,7 +38,7 @@ alternate telling. Twelve planets plus a post-game; PokéNAV is called **StarNAV
 ## How work flows now (owner, 2026-11-02)
 
 1. **Ask the wiki what to draw:** `cd tools/blockout && python3 -m blockout todo [--status S] [--planet P]
-   [--kind K] [--tool T]`. Every area (`art_status` and `notes` in its yaml) and every art id (`status`,
+   [--kind K] [--tool T] [--model M]`. Every area (`art_status` and `notes` in its yaml) and every art id (`status`,
    `build`, `tool`, `notes` in `world_art.csv`) and every terrain item (`terrain.csv`, `--kind terrain`) is a
    row. Statuses: `pending-mockup` (TODO) → `pending-final-art` (GREYBOX done) → `art-complete` (READY TO
    IMPORT) → `imported-in-game`.

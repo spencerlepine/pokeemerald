@@ -242,6 +242,18 @@ def render_object(obj, yaw=0.0):
             ind = outline(obj, ind, holes)
         sel = ind > 0
         canvas[sel] = ind[sel]
+    if obj.rnd.get("cleanup"):
+        canvas = cleanup(canvas)
+    if obj.drop_shadow:
+        body = canvas > 0
+        H_, W_ = canvas.shape
+        for g in obj.drop_shadow:
+            sh = np.zeros_like(body)
+            dx, dy = g["dx"], g["dy"]
+            sh[max(dy, 0):H_ + min(dy, 0), max(dx, 0):W_ + min(dx, 0)] = body[max(-dy, 0):H_ - max(dy, 0), max(-dx, 0):W_ - max(dx, 0)]
+            if g["below"]:      # only the lower part of the object casts on the ground (its footprint rows)
+                sh[: int(H_ - g["below"] * 16)] = False
+            canvas[sh & (canvas == 0)] = g["idx"]
     rgb = obj.palette[canvas]
     a = np.where(canvas > 0, 255, 0).astype(np.uint8)
     yy, xx = np.mgrid[0:H, 0:W]
@@ -261,3 +273,16 @@ def render_object(obj, yaw=0.0):
     rgb[sel] = obj.palette[canvas[sel]]
     a[sel] = 255
     return Image.fromarray(np.dstack([rgb, a]), "RGBA"), canvas, warnings
+
+
+def cleanup(ind):
+    """Pleasant shapes: a lone pixel whose four neighbours share one other tone takes that tone, and a
+    lone empty pixel inside the object is filled. Vanilla never has single-pixel speckle in a flat face."""
+    out = ind.copy()
+    p = np.pad(ind, 1)
+    H, W = ind.shape
+    nb = [p[1 + dr:1 + dr + H, 1 + dc:1 + dc + W] for dr, dc in ((-1, 0), (1, 0), (0, -1), (0, 1))]
+    same = (nb[0] == nb[1]) & (nb[1] == nb[2]) & (nb[2] == nb[3]) & (nb[0] != ind)
+    sel = same & ((ind > 0) | (nb[0] > 0))
+    out[sel] = nb[0][sel]
+    return out

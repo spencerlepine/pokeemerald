@@ -1,0 +1,12 @@
+# Greybox for the scenery models: shapes and light only, no colour yet (owner 2026-11-03). Every
+# material is a 4-tone grey ramp, darkest first; parts tell apart by value, as a painted model would.
+outline: [40, 40, 44]
+shadow: [92, 100, 112, 255]
+ramps:
+  light: [[96, 96, 100], [150, 150, 154], [200, 200, 204], [240, 240, 244]]   # white hull, armour
+  mid:   [[72, 72, 76], [112, 112, 116], [156, 156, 160], [196, 196, 200]]    # bare metal, rock
+  dark:  [[40, 40, 44], [64, 64, 68], [92, 92, 96], [124, 124, 128]]          # engines, glass, scorch
+  bone:  [[110, 104, 96], [164, 158, 150], [210, 204, 196], [236, 232, 224]]  # fossils, sandstone
+singles:
+  ground: [176, 176, 168]
+  shade: [120, 124, 132]          # drop shadow on the ground (vanilla's grey-blue band, in grey)

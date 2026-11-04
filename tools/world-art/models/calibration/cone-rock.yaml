@@ -1,0 +1,61 @@
+# Calibration: the vanilla Route 111 cone rock (Mauville secondary), 2x2 cells. A low-poly cone: an
+# eight-sided pyramid with softened edges, lit from the upper left, sitting in a grey shade ring.
+name: cone-rock
+palette: route111
+cells: [2, 2]
+foot: [15, 31]
+footprint: 2
+render:
+  light: [-0.6, -0.25, 0.76]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  rock: {ramp: rock, bands: [0.2, 0.5, 0.7, 0.84, 0.94]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 1}
+  - {dx: -1, dy: 1, color: shade, below: 1}
+parts:
+- hull:
+    points:
+    - [0.801, 0.633, 0]
+    - [0.476, 0.943, 0]
+    - [-0.138, 1.037, 0]
+    - [-0.723, 0.847, 0]
+    - [-0.854, 0.466, 0]
+    - [-0.484, 0.151, 0]
+    - [0.14, 0.081, 0]
+    - [0.665, 0.249, 0]
+    - [0.81, 0.82, 0.2]
+    - [0.241, 1.034, 0.2]
+    - [-0.44, 1.007, 0.2]
+    - [-0.894, 0.69, 0.2]
+    - [-0.815, 0.303, 0.2]
+    - [-0.236, 0.037, 0.2]
+    - [0.45, 0.117, 0.2]
+    - [0.867, 0.422, 0.2]
+    - [0.776, 0.588, 0.62]
+    - [0.478, 0.864, 0.62]
+    - [-0.068, 0.972, 0.62]
+    - [-0.593, 0.831, 0.62]
+    - [-0.738, 0.514, 0.62]
+    - [-0.481, 0.231, 0.62]
+    - [0.062, 0.141, 0.62]
+    - [0.588, 0.295, 0.62]
+    - [0.343, 0.653, 1.05]
+    - [0.034, 0.79, 1.05]
+    - [-0.327, 0.685, 1.05]
+    - [-0.384, 0.452, 1.05]
+    - [-0.034, 0.319, 1.05]
+    - [0.333, 0.416, 1.05]
+    - [0.077, 0.561, 1.38]
+    - [-0.014, 0.61, 1.38]
+    - [-0.083, 0.54, 1.38]
+    - [0.013, 0.493, 1.38]
+    round: 0.03
+  mat: rock
+  name: cone
+box: [28, 14]
+vanilla: {layout: Route111_Layout, rect: [16, 100, 18, 102], context: [12, 97, 22, 104], ground: [222, 205, 131]}

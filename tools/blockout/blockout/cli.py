@@ -392,19 +392,20 @@ def cmd_todo(a):
     rows = []
     for aid, r in _assets().items():
         rows.append({"id": aid, "kind": r["category"], "planet": r["planet"], "status": r["status"], "tool": r["tool"],
-                     "build": r["build"], "used_in": r["used_in"], "notes": r["notes"] or r["description"][:90]})
+                     "build": r["build"], "used_in": r["used_in"], "model": r.get("model_status", ""),
+                     "notes": r["notes"] or r["description"][:90]})
     tpath = V.ROOT / "wiki" / "mapping" / "terrain.csv"
     if tpath.exists():                       # terrain items (tile-generator `terrain`): ground, water, ledges...
         for r in csv.DictReader(open(tpath)):
             rows.append({"id": r["terrain_id"], "kind": f"terrain:p{r['phase']}", "planet": r["planets"],
-                         "status": r["status"], "tool": r["tool"], "build": r.get("art", ""), "used_in": r["areas"],
+                         "status": r["status"], "tool": r["tool"], "build": r.get("art", ""), "used_in": r["areas"], "model": "",
                          "notes": r["notes"] or f"{r['metatiles']} metatiles, {r['areas']} areas"})
     for p in _all():
         d = yaml.safe_load(open(p))
         rows.append({"id": d["id"], "kind": "area:" + d["kind"], "planet": d["planet"],
                      "status": d.get("art_status", "pending-mockup"),
                      "tool": "greybox room" if d["kind"] == "interior" else "greybox terrain", "build": "",
-                     "used_in": "", "notes": (d.get("notes") or "")[:90]})
+                     "used_in": "", "model": "", "notes": (d.get("notes") or "")[:90]})
     if a.status:
         rows = [r for r in rows if r["status"] == a.status]
     if a.planet:
@@ -413,13 +414,15 @@ def cmd_todo(a):
         rows = [r for r in rows if r["kind"] == a.kind or r["kind"].startswith(a.kind + ":")]
     if a.tool:
         rows = [r for r in rows if r["tool"].startswith(a.tool)]
+    if a.model:      # scenery 3D models (world-art `scenery`): TODO, IN-PROGRESS, IN-REVIEW, APPROVED; "any" = has one
+        rows = [r for r in rows if r["model"] and (a.model == "any" or r["model"] == a.model)]
     if a.csv:
         w = csv.DictWriter(sys.stdout, fieldnames=list(rows[0].keys()) if rows else ["id"])
         w.writeheader()
         w.writerows(rows)
         return
     for r in rows:
-        print(f"{r['status']:18} {r['kind']:14} {r['planet']:14} {r['id']:44} {r['tool']:16} {r['build']:14} {r['notes']}")
+        print(f"{r['status']:18} {r['kind']:14} {r['planet']:14} {r['id']:44} {r['tool']:16} {r['build']:14} {(r['model'] + ' ') if r['model'] else ''}{r['notes']}")
     print(f"{len(rows)} rows")
 
 
@@ -720,6 +723,7 @@ def main(argv=None):
     td.add_argument("--planet")
     td.add_argument("--kind", help="area, area:town, building, object, interior, nature, landmark")
     td.add_argument("--tool")
+    td.add_argument("--model", help="scenery model status: TODO, IN-PROGRESS, IN-REVIEW, APPROVED, or any")
     td.add_argument("--csv", action="store_true")
     td.add_argument("--set", nargs=2, metavar=("ID", "STATUS"))
     sub.add_parser("world")

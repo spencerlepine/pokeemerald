@@ -3,6 +3,8 @@
 Forked from .claude/tools/art/characters/body-sheets/spritegen/sdf.py; `value_noise` is new here (it is what roughens a
 crown or a rock without hand-placing every bump).
 """
+import math
+
 import numpy as np
 
 
@@ -104,3 +106,42 @@ def capped_cone(p, a, b, ra, rb):
     cby = paba - f
     s = np.where((cbx < 0.0) & (cay < 0.0), -1.0, 1.0)
     return s * np.sqrt(np.minimum(cax * cax + cay * cay * baba, cbx * cbx + cby * cby * baba))
+
+
+# ------------------------------------------------------------------ low-poly solids (scenery models)
+
+def hull_planes(points):
+    """Face planes (n, d) of the convex hull of a few points, n unit and outward: inside is n.p <= d.
+    Brute force over point triples, fine for the dozens of points a low-poly part has."""
+    P = np.asarray(points, float)
+    n = len(P)
+    c = P.mean(0)
+    planes = []
+    for i in range(n):
+        for j in range(i + 1, n):
+            for k in range(j + 1, n):
+                nv = np.cross(P[j] - P[i], P[k] - P[i])
+                ln = np.linalg.norm(nv)
+                if ln < 1e-9:
+                    continue
+                nv = nv / ln
+                d = nv @ P[i]
+                if nv @ c > d:
+                    nv, d = -nv, -d
+                s = P @ nv - d
+                if (s <= 1e-7).all():
+                    if not any(np.allclose(nv, q[:3], atol=1e-6) and abs(d - q[3]) < 1e-6 for q in planes):
+                        planes.append(np.array([*nv, d]))
+    if len(planes) < 4:
+        raise ValueError("hull: the points are flat or too few (need a solid)")
+    return np.array(planes)
+
+
+def convex(p, planes, r=0.0):
+    """Distance bound of a convex polyhedron. With r > 0 the edges and corners are rounded by about
+    r (a soft maximum of the face distances): the large friendly bevels of the vanilla shapes."""
+    s = p @ planes[:, :3].T - planes[:, 3]
+    if r <= 0:
+        return s.max(axis=1)
+    m = s.max(axis=1, keepdims=True)
+    return m[:, 0] + r * np.log(np.exp((s - m) / r).sum(axis=1))   # faces exact, edges rounded inside the hull

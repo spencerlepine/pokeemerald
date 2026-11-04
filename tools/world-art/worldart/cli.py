@@ -54,6 +54,11 @@ def main(argv=None):
     c.add_argument("models", nargs="+")
     b = sub.add_parser("budget")
     b.add_argument("models", nargs="+")
+    s = sub.add_parser("scenery", help="scenery models: render, review in a game screen, track in the wiki")
+    s.add_argument("names", nargs="*")
+    s.add_argument("--all", action="store_true")
+    s.add_argument("--status", action="store_true")
+    s.add_argument("--set", nargs=2, metavar=("ART_ID", "STATUS"))
     a = ap.parse_args(argv)
     if a.cmd == "render":
         for p in a.models:
@@ -63,6 +68,9 @@ def main(argv=None):
             obj = M.Object(p)
             _, ind, _ = R.render_object(obj)
             print(obj.name, T.budget(ind, obj.palette))
+    elif a.cmd == "scenery":
+        from . import scenery as S
+        S.main(a)
     elif a.cmd == "compare":
         from . import compare as C
         for p in a.models:
