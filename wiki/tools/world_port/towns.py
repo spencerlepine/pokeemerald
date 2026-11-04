@@ -227,6 +227,11 @@ def town_events(world, a, r, mj):
     if len(objs) > 64:
         problems.append(f"{a.id}: {len(objs)} objects, the game holds 64; the last ones are left out")
         objs = objs[:64]
+    # a redrawn town's ground has its own elevation (3, water 1): people and triggers stand at the new cell's
+    for o in objs:
+        x, y = o["x"], o["y"]
+        if 0 <= x < a.w and 0 <= y < a.h and not C.coll[y, x] and C.elev[y, x]:
+            o["elevation"] = int(C.elev[y, x])
     mj["object_events"] = objs
     # triggers
     coords = []
@@ -240,6 +245,8 @@ def town_events(world, a, r, mj):
             c["x"], c["y"] = tgt
         if not (0 <= c["x"] < a.w and 0 <= c["y"] < a.h) or C.coll[c["y"], c["x"]]:
             problems.append(f"{a.id}: trigger {i} ({c.get('script')}) on a solid or outside cell ({c['x']},{c['y']})")
+        elif c.get("elevation"):
+            c["elevation"] = int(C.elev[c["y"], c["x"]])
         coords.append(c)
     mj["coord_events"] = coords
     # signs and hidden items
@@ -262,6 +269,7 @@ def town_events(world, a, r, mj):
             b["x"], b["y"] = tgt
         if not (0 <= b["x"] < a.w and 0 <= b["y"] < a.h):
             problems.append(f"{a.id}: bg event {i} outside the map ({b['x']},{b['y']})")
+        b["elevation"] = 0          # read from any height: the redrawn ground is not vanilla's
         bgs.append(b)
     texts = spec.get("sign_texts") or {}
     for i, (name, s) in enumerate(signs.items(), 1):

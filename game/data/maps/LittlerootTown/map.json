@@ -78,7 +78,7 @@
       "graphics_id": "OBJ_EVENT_GFX_TRUCK",
       "x": 2,
       "y": 10,
-      "elevation": 4,
+      "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
@@ -91,7 +91,7 @@
       "graphics_id": "OBJ_EVENT_GFX_TRUCK",
       "x": 11,
       "y": 10,
-      "elevation": 4,
+      "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
@@ -256,7 +256,7 @@
       "type": "sign",
       "x": 8,
       "y": 8,
-      "elevation": 3,
+      "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "LittlerootTown_EventScript_BrendansHouseSign"
     },
@@ -264,7 +264,7 @@
       "type": "sign",
       "x": 18,
       "y": 8,
-      "elevation": 3,
+      "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "LittlerootTown_EventScript_MaysHouseSign"
     }
