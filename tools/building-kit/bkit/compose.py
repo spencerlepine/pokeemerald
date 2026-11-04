@@ -170,10 +170,11 @@ def compose(path, seed, width=None, overrides=None, height=None, door=None):
         params.update({kk: v for kk, v in (kit.get("defaults") or {}).items() if kk not in params})
         style_kit = kit
     materials.update(bp.get("materials") or {})
+    over = {k: (yaml.safe_load(v) if isinstance(v, str) else v) for k, v in (overrides or {}).items()}
     for k, v in (bp.get("choose") or {}).items():
-        params[k] = _pick(v, rng, params)
-    for k, v in (overrides or {}).items():
-        params[k] = yaml.safe_load(v) if isinstance(v, str) else v
+        picked = _pick(v, rng, params)          # always drawn, so the seed's other picks stay the same
+        params[k] = over[k] if k in over else picked   # an override comes in before later params use it
+    params.update(over)
     parts = _expand(bp.get("parts"), params, rng)
     ground = _expand(bp.get("ground"), params, rng)
     render = {"light": [-0.55, -0.3, 0.78], "outline": False, "inner_lines": "none",
@@ -197,8 +198,17 @@ def compose(path, seed, width=None, overrides=None, height=None, door=None):
     dx = None
     for e in parts:
         if e.get("name") == "door":
-            at = M.evaluate(e.get("at", [0, 0, 0]), params)
-            dx = float(at[0])
+            if "at" in e or "use" in e:
+                dx = float(M.evaluate(e.get("at", [0, 0, 0]), params)[0])
+            else:                               # a plain part: the x of its shape
+                g = M.evaluate(next((e[k] for k in ("box", "ellipsoid", "cylinder", "hull", "prism") if k in e), {}), params)
+                if "c" in g:
+                    dx = float(g["c"][0])
+                elif "a" in g:
+                    dx = float(g["a"][0])
+                elif "points" in g or "poly" in g:
+                    pts = g.get("points") or g.get("poly")
+                    dx = sum(float(p[0]) for p in pts) / len(pts)
     info = {"blueprint": f"{style}/{bp['name']}", "name": bp["name"], "style": style, "seed": seed, "W": W,
             "door_col": None if dx is None else int(math.floor(dx + W / 2)),
             "picked": {k: params[k] for k in (bp.get("choose") or {})}}

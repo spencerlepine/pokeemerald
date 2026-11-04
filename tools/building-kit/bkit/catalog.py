@@ -146,7 +146,7 @@ def build_one(e, planet):
         msgs.append(f"{e['id']}: stands on {depth} rows, deeper than its lot ({H})")
     if e.get("door") is not None and info["door_col"] is not None and info["door_col"] != int(e["door"]):
         msgs.append(f"{e['id']}: door in column {info['door_col']}, the area wants {e['door']}")
-    if info["door_col"] is None and e.get("kind") not in ("landmark", "fill", "pad", "market"):
+    if info["door_col"] is None and e.get("kind") not in ("landmark", "fill", "pad", "market", "tower"):
         msgs.append(f"{e['id']}: no part named `door`")
     row = {
         "id": e["id"], "planet": planet, "kind": e.get("kind", ""), "name": e.get("name", ""),
