@@ -1,0 +1,15 @@
+# Tipoca City (PacifidlogTown), 36x30 (was 20x40). Exits west and east on rows 15-16 (routes 132 and 131). The
+# town's scripts place no one, so only the events move.
+objects:
+  1: Kaminoan scientist      # the girl
+  2: Stilt fisher            # the fisherman
+  3: Dock worker             # the ninja boy
+bgs:
+  0: [4, 21]                 # Bacta Center signs, beside its door (5,21)
+  1: City holo-sign
+  2: [6, 21]
+heal:
+  HEAL_LOCATION_PACIFIDLOG_TOWN: [5, 22]
+sign_texts:
+  Cloning hall sign: "TIPOCA CITY CLONING HALL\\nAuthorized visitors only."
+  Hangar sign (Rebel transport): "LANDING PLATFORM\\nRebel transport flights. Ask the\\ncrew chief inside."

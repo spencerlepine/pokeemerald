@@ -71,15 +71,20 @@ Route104_MrBrineysHouse_EventScript_DeclineSailing::
 Route104_MrBrineysHouse_EventScript_SailToDewford::
 	msgbox Route104_MrBrineysHouse_Text_SetSailForDewford, MSGBOX_DEFAULT
 	call EventScript_BackupMrBrineyLocation
-	setvar VAR_BOARD_BRINEY_BOAT_STATE, 1
-	clearflag FLAG_HIDE_ROUTE_104_MR_BRINEY
+	setflag FLAG_HIDE_ROUTE_104_MR_BRINEY
 	setflag FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY
 	setflag FLAG_HIDE_BRINEYS_HOUSE_PEEKO
 	setvar VAR_RUSTBORO_CITY_STATE, 8
 	setvar VAR_ROUTE104_STATE, 2
 	setflag FLAG_HIDE_RUSTBORO_CITY_RIVAL
 	setflag FLAG_HIDE_ROUTE_104_RIVAL
-	warp MAP_ROUTE104, 13, 51
+	setflag FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT
+	clearflag FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN
+	clearflag FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN
+	copyvar VAR_BRINEY_LOCATION, VAR_0x8008
+	playse SE_HYPERSPACE_JUMP
+	waitse
+	warp MAP_DEWFORD_TOWN, 23, 23
 	waitstate
 	releaseall
 	end

@@ -270,6 +270,13 @@
       "dest_warp_id": "0"
     },
     {
+      "x": 94,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_SW_HANGAR_TATOOINE_SULLUST",
+      "dest_warp_id": "1"
+    },
+    {
       "x": 74,
       "y": 18,
       "elevation": 0,

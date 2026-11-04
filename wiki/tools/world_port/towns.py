@@ -57,6 +57,10 @@ def movement_steps(text, label):
         if mm and "in_place" not in cmd:
             out.append(STEP[mm.group(2)])
             continue
+        mm = re.match(r"walk_(slow_)?diag_(north|south)(east|west)$", cmd)
+        if mm:
+            out.append((1 if mm.group(3) == "east" else -1, -1 if mm.group(2) == "north" else 1))
+            continue
         mm = re.match(r"jump_(2_)?(up|down|left|right)$", cmd)
         if mm:
             dx, dy = STEP[mm.group(2)]
@@ -107,14 +111,21 @@ DIRS = {"d": "down", "u": "up", "l": "left", "r": "right"}
 
 
 def expand_steps(spec):
-    """'D8 d7 r21 u ifr' -> movement commands."""
+    """'D8 d7 r21 u ifr' -> movement commands. A step is an optional speed (f fast, F faster, s slow, if / is
+    walk in place faster / slow, face: turn) then d u l r, or a diagonal ne nw se sw (walk or s slow), then a count."""
     out = []
+    diag = {"ne": "northeast", "nw": "northwest", "se": "southeast", "sw": "southwest"}
     for tok in str(spec).split():
-        m = re.match(r"^(if|f|F)?([durl])(\d*)$", tok)
+        m = re.match(r"^(if|is|face|f|F|s)?([durl])(\d*)$", tok)
+        md = re.match(r"^(s)?(ne|nw|se|sw)(\d*)$", tok)
         if m:
-            cmd = {"if": "walk_in_place_faster_", "f": "walk_fast_", "F": "walk_faster_"}.get(m.group(1), "walk_")
+            cmd = {"if": "walk_in_place_faster_", "is": "walk_in_place_slow_", "face": "face_", "f": "walk_fast_",
+                   "F": "walk_faster_", "s": "walk_slow_"}.get(m.group(1), "walk_")
             cmd += DIRS[m.group(2)]
             out += [cmd] * int(m.group(3) or 1)
+        elif md:
+            cmd = ("walk_slow_diag_" if md.group(1) else "walk_diag_") + diag[md.group(2)]
+            out += [cmd] * int(md.group(3) or 1)
         elif re.match(r"^D\d+$", tok):
             out.append(f"delay_{tok[1:]}")
         elif tok == "inv":
@@ -214,7 +225,8 @@ def town_events(world, a, r, mj):
         objs.append(E.new_object(a, C, p, row, label, trainer, flag, taken, problems))
     E.apply_takeovers(a, objs, blk, rows, problems)
     if len(objs) > 64:
-        problems.append(f"{a.id}: {len(objs)} objects, the game holds 64")
+        problems.append(f"{a.id}: {len(objs)} objects, the game holds 64; the last ones are left out")
+        objs = objs[:64]
     mj["object_events"] = objs
     # triggers
     coords = []

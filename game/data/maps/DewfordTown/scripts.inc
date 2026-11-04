@@ -111,27 +111,15 @@ DewfordTown_EventScript_FishingNotSoGood::
 
 DewfordTown_EventScript_SailToPetalburg::
 	call EventScript_BackupMrBrineyLocation
-	setobjectsubpriority LOCALID_DEWFORD_BRINEY, MAP_DEWFORD_TOWN, 0
-	setobjectsubpriority LOCALID_PLAYER, MAP_DEWFORD_TOWN, 0
-	applywaitmovement LOCALID_DEWFORD_BRINEY, DewfordTown_Movement_BrineyBoardBoat
 	removeobject LOCALID_DEWFORD_BRINEY
-	applywaitmovement LOCALID_PLAYER, DewfordTown_Movement_PlayerBoardBoat
-	hideobjectat LOCALID_PLAYER, MAP_DEWFORD_TOWN
-	call Common_EventScript_PlayBrineysBoatMusic
-	applymovement LOCALID_DEWFORD_BOAT, DewfordTown_Movement_SailToPetalburg
-	applymovement LOCALID_PLAYER, DewfordTown_Movement_SailToPetalburg
-	waitmovement 0
-	showobjectat LOCALID_PLAYER, MAP_ROUTE104
-	call Common_EventScript_StopBrineysBoatMusic
-	applywaitmovement LOCALID_PLAYER, DewfordTown_Movement_ExitBoatPetalburg
-	showobjectat LOCALID_PLAYER, MAP_ROUTE104
 	clearflag FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY
 	clearflag FLAG_HIDE_BRINEYS_HOUSE_PEEKO
 	clearflag FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT
 	setflag FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN
 	hideobjectat LOCALID_DEWFORD_BOAT, MAP_DEWFORD_TOWN
 	setvar VAR_BOARD_BRINEY_BOAT_STATE, 2
-	resetobjectsubpriority LOCALID_PLAYER, MAP_DEWFORD_TOWN
+	playse SE_HYPERSPACE_JUMP
+	waitse
 	warp MAP_ROUTE104_MR_BRINEYS_HOUSE, 5, 4
 	copyvar VAR_BRINEY_LOCATION, VAR_0x8008
 	waitstate
@@ -139,6 +127,14 @@ DewfordTown_EventScript_SailToPetalburg::
 	end
 
 DewfordTown_EventScript_SailToSlateport::
+	playse SE_HYPERSPACE_JUMP
+	waitse
+	warp MAP_SLATEPORT_CITY, 10, 42
+	waitstate
+	release
+	end
+
+DewfordTown_EventScript_SailToSlateportUnused::
 	call EventScript_BackupMrBrineyLocation
 	setobjectsubpriority LOCALID_DEWFORD_BRINEY, MAP_DEWFORD_TOWN, 0
 	setobjectsubpriority LOCALID_PLAYER, MAP_DEWFORD_TOWN, 1

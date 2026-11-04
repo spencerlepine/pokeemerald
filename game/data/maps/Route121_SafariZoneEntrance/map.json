@@ -82,6 +82,13 @@
       "elevation": 0,
       "dest_map": "MAP_ROUTE121",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_SW_FELUCIA_HANGAR",
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [

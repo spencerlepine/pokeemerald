@@ -1,0 +1,130 @@
+# Dagobah (SootopolisCity), 60x60 (was 60x60, redrawn). Exit south down the river (columns 29-30) to route 126.
+# Yoda's hut (the gym) is (30,13), the Bacta Center (42,13), the Cave of Evil (Cave of Origin) mouth (5,7) at the top
+# of a one-cell path up from the street corner (5,18). Obi-Wan (the cave expert) stands on that corner and closes
+# the path; he steps aside to (6,19), with Steven (7,19) and Wallace (8,19) below the street. The titans (Groudon,
+# Kyogre) fight in the lake round (30,36), Rayquaza comes down at (30,33); the camera pans there from the Bacta
+# Center door (42,14) or from the river mouth (the old dive arrival, 29,59). The legends' second layout is not used.
+# The scripted people with no story place were placed by scaling their vanilla cell and taking the nearest open cell.
+objects:
+  1:
+    person: Obi-Wan (guarding the cave)
+    at: [5, 18]
+  2:
+    person: Bog fisher
+    at: [17, 30]
+  3: Herbalist
+  4: [50, 14]
+  5: Smuggler stranded here
+  6: [26, 5]
+  7: [40, 15]
+  8: Swamp hermit
+  9: [27, 36]
+  10: [33, 36]
+  11: [30, 33]
+  12: [17, 44]
+  13: [14, 42]
+  14: [17, 40]
+  15: [19, 37]
+  16: [32, 15]
+  17: [33, 15]
+  18: [8, 19]
+bgs:
+  0: Arena sign
+  1: [15, 13]
+  2: [41, 13]
+  3: [43, 13]
+  4: [17, 13]
+  5: Hollow sign
+sign_texts: {Hangar sign (Rebel transport): BOG LANDING\nRebel transport flights. Mind the mud.}
+heal:
+  HEAL_LOCATION_SOOTOPOLIS_CITY: [42, 14]
+patches:
+- {old: "\tsetmaplayoutindex LAYOUT_SOOTOPOLIS_CITY_LEGENDS_BATTLE\n", new: "\t@ Dagobah keeps one layout through the titans'\
+    \ battle (world_port)\n"}
+- {old: 'setmetatile 31, 32, METATILE_Sootopolis_GymDoor_Closed', new: 'setmetatile 30, 13, METATILE_Sootopolis_GymDoor_Closed'}
+- {old: 'setmetatile 9, 6, METATILE_Sootopolis_Door_Closed', new: 'setmetatile 3, 24, METATILE_Sootopolis_Door_Closed'}
+- {old: 'setmetatile 45, 6, METATILE_Sootopolis_Door_Closed', new: 'setmetatile 55, 24, METATILE_Sootopolis_Door_Closed'}
+- {old: 'setmetatile 9, 17, METATILE_Sootopolis_Door_Closed', new: 'setmetatile 3, 34, METATILE_Sootopolis_Door_Closed'}
+- {old: 'setmetatile 44, 17, METATILE_Sootopolis_Door_Closed', new: 'setmetatile 55, 34, METATILE_Sootopolis_Door_Closed'}
+- {old: 'setmetatile 9, 26, METATILE_Sootopolis_Door_Closed', new: 'setmetatile 15, 52, METATILE_Sootopolis_Door_Closed'}
+- {old: 'setmetatile 53, 28, METATILE_Sootopolis_Door_Closed', new: 'setmetatile 47, 51, METATILE_Sootopolis_Door_Closed'}
+- {old: 'setmetatile 8, 35, METATILE_Sootopolis_Door_Closed', new: 'setmetatile 22, 54, METATILE_Sootopolis_Door_Closed'}
+- {old: 'setmetatile 48, 25, METATILE_Sootopolis_Door_Closed', new: 'setmetatile 55, 43, METATILE_Sootopolis_Door_Closed'}
+- {old: 'setmetatile 51, 36, METATILE_Sootopolis_Door_Closed', new: 'setmetatile 4, 44, METATILE_Sootopolis_Door_Closed'}
+- {old: "\tsetmetatile 27, 43, METATILE_Sootopolis_RoughWater, FALSE\n\tsetmetatile 28, 43, METATILE_Sootopolis_RoughWater,\
+    \ FALSE\n\tsetmetatile 29, 43, METATILE_Sootopolis_RoughWater, FALSE\n\tsetmetatile 30, 43, METATILE_Sootopolis_RoughWater,\
+    \ FALSE\n\tsetmetatile 27, 44, METATILE_Sootopolis_RoughWater, FALSE\n\tsetmetatile 28, 44, METATILE_Sootopolis_RoughWater,\
+    \ FALSE\n\tsetmetatile 29, 44, METATILE_Sootopolis_RoughWater, FALSE\n\tsetmetatile 30, 44, METATILE_Sootopolis_RoughWater,\
+    \ FALSE\n\tsetmetatile 27, 45, METATILE_Sootopolis_RoughWater, FALSE\n\tsetmetatile 28, 45, METATILE_Sootopolis_RoughWater,\
+    \ FALSE\n\tsetmetatile 29, 45, METATILE_Sootopolis_RoughWater, FALSE\n\tsetmetatile 30, 45, METATILE_Sootopolis_RoughWater,\
+    \ FALSE\n\tsetmetatile 32, 43, METATILE_Sootopolis_RoughWater, FALSE\n\tsetmetatile 33, 43, METATILE_Sootopolis_RoughWater,\
+    \ FALSE\n\tsetmetatile 34, 43, METATILE_Sootopolis_RoughWater, FALSE\n\tsetmetatile 35, 43, METATILE_Sootopolis_RoughWater,\
+    \ FALSE\n\tsetmetatile 32, 44, METATILE_Sootopolis_RoughWater, FALSE\n\tsetmetatile 33, 44, METATILE_Sootopolis_RoughWater,\
+    \ FALSE\n\tsetmetatile 34, 44, METATILE_Sootopolis_RoughWater, FALSE\n\tsetmetatile 35, 44, METATILE_Sootopolis_RoughWater,\
+    \ FALSE\n\tsetmetatile 32, 45, METATILE_Sootopolis_RoughWater, FALSE\n\tsetmetatile 33, 45, METATILE_Sootopolis_RoughWater,\
+    \ FALSE\n\tsetmetatile 34, 45, METATILE_Sootopolis_RoughWater, FALSE\n\tsetmetatile 35, 45, METATILE_Sootopolis_RoughWater,\
+    \ FALSE\n", new: "\tsetmetatile 26, 35, METATILE_Sootopolis_RoughWater, FALSE\n\tsetmetatile 27, 35, METATILE_Sootopolis_RoughWater,\
+    \ FALSE\n\tsetmetatile 28, 35, METATILE_Sootopolis_RoughWater, FALSE\n\tsetmetatile 29, 35, METATILE_Sootopolis_RoughWater,\
+    \ FALSE\n\tsetmetatile 26, 36, METATILE_Sootopolis_RoughWater, FALSE\n\tsetmetatile 27, 36, METATILE_Sootopolis_RoughWater,\
+    \ FALSE\n\tsetmetatile 28, 36, METATILE_Sootopolis_RoughWater, FALSE\n\tsetmetatile 29, 36, METATILE_Sootopolis_RoughWater,\
+    \ FALSE\n\tsetmetatile 26, 37, METATILE_Sootopolis_RoughWater, FALSE\n\tsetmetatile 27, 37, METATILE_Sootopolis_RoughWater,\
+    \ FALSE\n\tsetmetatile 28, 37, METATILE_Sootopolis_RoughWater, FALSE\n\tsetmetatile 29, 37, METATILE_Sootopolis_RoughWater,\
+    \ FALSE\n\tsetmetatile 31, 35, METATILE_Sootopolis_RoughWater, FALSE\n\tsetmetatile 32, 35, METATILE_Sootopolis_RoughWater,\
+    \ FALSE\n\tsetmetatile 33, 35, METATILE_Sootopolis_RoughWater, FALSE\n\tsetmetatile 34, 35, METATILE_Sootopolis_RoughWater,\
+    \ FALSE\n\tsetmetatile 31, 36, METATILE_Sootopolis_RoughWater, FALSE\n\tsetmetatile 32, 36, METATILE_Sootopolis_RoughWater,\
+    \ FALSE\n\tsetmetatile 33, 36, METATILE_Sootopolis_RoughWater, FALSE\n\tsetmetatile 34, 36, METATILE_Sootopolis_RoughWater,\
+    \ FALSE\n\tsetmetatile 31, 37, METATILE_Sootopolis_RoughWater, FALSE\n\tsetmetatile 32, 37, METATILE_Sootopolis_RoughWater,\
+    \ FALSE\n\tsetmetatile 33, 37, METATILE_Sootopolis_RoughWater, FALSE\n\tsetmetatile 34, 37, METATILE_Sootopolis_RoughWater,\
+    \ FALSE\n"}
+- {old: 'setobjectxyperm LOCALID_KIRI, 13, 48', new: 'setobjectxyperm LOCALID_KIRI, 14, 40'}
+- {old: 'setobjectxyperm LOCALID_SOOTOPOLIS_BOY_1, 46, 32', new: 'setobjectxyperm LOCALID_SOOTOPOLIS_BOY_1, 44, 30'}
+- {old: 'setobjectxyperm LOCALID_SOOTOPOLIS_NINJA_BOY, 48, 41', new: 'setobjectxyperm LOCALID_SOOTOPOLIS_NINJA_BOY, 44, 36'}
+- {old: 'setobjectxyperm LOCALID_SOOTOPOLIS_WOMAN_1, 45, 43', new: 'setobjectxyperm LOCALID_SOOTOPOLIS_WOMAN_1, 43, 40'}
+- {old: 'setobjectxyperm LOCALID_SOOTOPOLIS_EXPERT, 30, 18', new: 'setobjectxyperm LOCALID_SOOTOPOLIS_EXPERT, 6, 19', count: 2}
+- {old: 'setobjectxyperm LOCALID_SOOTOPOLIS_STEVEN, 32, 18', new: 'setobjectxyperm LOCALID_SOOTOPOLIS_STEVEN, 7, 19', count: 2}
+- {old: 'setobjectxyperm LOCALID_SOOTOPOLIS_WALLACE, 31, 18', new: 'setobjectxyperm LOCALID_SOOTOPOLIS_WALLACE, 8, 19'}
+- {old: 'setobjectxyperm LOCALID_SOOTOPOLIS_EXPERT, 31, 18', new: 'setobjectxyperm LOCALID_SOOTOPOLIS_EXPERT, 5, 18', count: 2}
+- {old: 'setobjectxyperm LOCALID_SOOTOPOLIS_STEVEN, 29, 33', new: 'setobjectxyperm LOCALID_SOOTOPOLIS_STEVEN, 28, 14'}
+- {old: 'setobjectxyperm LOCALID_SOOTOPOLIS_MAXIE, 33, 35', new: 'setobjectxyperm LOCALID_SOOTOPOLIS_MAXIE, 32, 15'}
+- {old: 'setobjectxyperm LOCALID_SOOTOPOLIS_ARCHIE, 34, 35', new: 'setobjectxyperm LOCALID_SOOTOPOLIS_ARCHIE, 33, 15'}
+- {old: 'setobjectxyperm LOCALID_SOOTOPOLIS_WALLACE, 31, 33', new: 'setobjectxyperm LOCALID_SOOTOPOLIS_WALLACE, 30, 14'}
+- {old: 'setobjectxyperm LOCALID_SOOTOPOLIS_WALLACE, 32, 33', new: 'setobjectxyperm LOCALID_SOOTOPOLIS_WALLACE, 31, 14'}
+- {old: 'setobjectxyperm LOCALID_SOOTOPOLIS_WALLACE, 30, 33', new: 'setobjectxyperm LOCALID_SOOTOPOLIS_WALLACE, 29, 14'}
+- {old: 'goto_if_ne VAR_0x8004, 43,', new: 'goto_if_ne VAR_0x8004, 42,', count: 2}
+- {old: 'goto_if_ne VAR_0x8005, 32,', new: 'goto_if_ne VAR_0x8005, 14,', count: 2}
+- {old: 'warpwhitefade MAP_SOOTOPOLIS_CITY, 43, 32', new: 'warpwhitefade MAP_SOOTOPOLIS_CITY, 42, 14'}
+- {old: 'setescapewarp MAP_SOOTOPOLIS_CITY, 31, 17', new: 'setescapewarp MAP_SOOTOPOLIS_CITY, 5, 8', file: data/maps/CaveOfOrigin_Entrance/scripts.inc}
+movements: {SootopolisCity_Movement_PanToActionFromPokeCenter: ssw12 sd10, SootopolisCity_Movement_PanBackToPokeCenter: su10
+    sne12, SootopolisCity_Movement_PanToActionFromDive: sne u21, SootopolisCity_Movement_PanBackToDive: d21 ssw, SootopolisCity_Movement_StevenStartWalkToCaveOfOrigin: l,
+  SootopolisCity_Movement_PlayerStartWalkToCaveOfOriginWest: l, SootopolisCity_Movement_PlayerStartWalkToCaveOfOriginNorth: u,
+  SootopolisCity_Movement_StevenWalkToCaveOfOrigin: d3 l32 ifl, SootopolisCity_Movement_PlayerWalkToCaveOfOrigin: l d3 l31,
+  SootopolisCity_Movement_ExpertMoveAside: sr sd ifl, SootopolisCity_Movement_StevenArriveCaveEntrance: d ifu, SootopolisCity_Movement_PlayerArriveCaveEntrance: D16
+    D16 D16 D8 l3 ifu, SootopolisCity_Movement_PlayerEnterCaveOfOrigin: u10}
+checks:
+- movement: SootopolisCity_Movement_StevenWalkToCaveOfOrigin
+  from: [39, 15]
+  to: [7, 18]
+- movement: SootopolisCity_Movement_PlayerWalkToCaveOfOrigin
+  from: [40, 15]
+  to: [8, 18]
+- movement: SootopolisCity_Movement_ExpertMoveAside
+  from: [5, 18]
+  to: [6, 19]
+- movement: SootopolisCity_Movement_StevenArriveCaveEntrance
+  from: [7, 18]
+  to: [7, 19]
+- movement: SootopolisCity_Movement_PlayerArriveCaveEntrance
+  from: [8, 18]
+  to: [5, 18]
+- movement: SootopolisCity_Movement_PlayerEnterCaveOfOrigin
+  from: [5, 18]
+  to: [5, 8]
+- movement: SootopolisCity_Movement_WallaceMoveFromGym
+  from: [30, 14]
+  to: [31, 14]
+- movement: SootopolisCity_Movement_WallaceMoveFromGymWest
+  from: [30, 14]
+  to: [29, 14]
+- movement: SootopolisCity_Movement_PlayerApproachLegendaries
+  from: [29, 59]
+  to: [29, 55]

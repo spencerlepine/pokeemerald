@@ -54,6 +54,8 @@ class World:
         self.results = {}
         from . import events as E
         self.people_rows = E.people_rows()
+        from . import lanes as L
+        self.lanes = L.Lanes(self)
 
     def installed(self, area_id):
         """Whether the area exists in the game after this run (vanilla maps always do)."""

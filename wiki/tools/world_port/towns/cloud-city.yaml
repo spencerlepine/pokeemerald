@@ -1,0 +1,95 @@
+# Cloud City (LilycoveCity), 58x40 (was 80x32). Exit north on columns 28-29 (the Tibanna refinery). The galleria
+# (department store) door is (12,19), the Bacta Center (44,19), the under-levels lift to the Hutt Hideout (51,19).
+# The showcase hall is gone: its judges, hosts and fans stand on the plaza (act5_02_cloud_city.csv). Vanilla has 63
+# objects, so the new people take over vanilla ones and only Lando is a new object (64, the most a map holds). The
+# people with no story here were placed by scaling their vanilla cell onto this map and taking the nearest open
+# cell, then checked by hand.
+objects:
+  1: [23, 20]   # Sailor2
+  2: [11, 20]   # Girl
+  3: [20, 28]   # Man3
+  4: [16, 15]   # RichBoy
+  5: [12, 9]   # Man2
+  6: [25, 27]   # Woman2
+  8: [25, 36]   # ExpertF
+  9: [41, 17]   # ExpertM2
+  18: [13, 23]   # SchoolKidM
+  19: [30, 25]   # Woman1
+  20: [29, 25]   # Man1
+  21: [13, 34]   # Sailor1
+  22: [12, 36]   # FatMan
+  23: [15, 20]   # ShowcaseReceptionist
+  24: [18, 20]   # ShowcaseLinkReceptionist
+  27: [14, 23]   # PlazaTwin
+  29: [14, 24]   # Reporter
+  30: [14, 26]   # PlazaBoy
+  31: [20, 26]   # PlazaGirl
+  32: [9, 9]   # Artist
+  33: [19, 17]   # LittleGirl
+  34: [25, 17]   # Girl2
+  35: [32, 22]   # FatMan2
+  36: [35, 24]   # NinjaBoy
+  38: [30, 36]   # Fisherman
+  40: [22, 31]   # Boy1
+  41: [6, 27]   # Boy2
+  42: [7, 26]   # Girl3
+  43: [7, 14]   # Judge1
+  44: [6, 16]   # Judge2
+  45: [38, 13]   # Judge3
+  46: [15, 9]   # Host1
+  47: [24, 9]   # Host2
+  48: [28, 18]   # Host3
+  49: [6, 23]   # TeaFan1
+  50: [4, 33]   # TeaFan2
+  51: [16, 17]   # TeaFan3
+  52: [32, 25]   # TeaFan4
+  53: [4, 19]   # TeaFan5
+  54: [22, 24]   # TeaFan6
+  55: [6, 26]   # OldTimer
+  56: [22, 16]   # Sketcher1
+  57: [7, 16]   # Sketcher2
+  59: [7, 34]   # Trainer2
+  60: [23, 27]   # Trainer3
+  61: [32, 36]   # Trainer4
+  62: [27, 35]   # Trainer5
+  7: [27, 22]               # the harbor expert (Lobot takes him over), on the plaza
+  10: [56, 13]               # the Hutt thug training by the east edge (Wailmer trainer)
+  11: [49, 35]               # item ball MAX REPEL
+  12: [49, 21]               # Hutt thugs round the under-levels lift (hidden after the hideout)
+  13: [52, 21]
+  14: [53, 20]
+  15: [48, 22]
+  16: [45, 10]               # the berry gentleman
+  17: [13, 20]               # the rival, by the galleria door (hidden until the meeting)
+  25: Blend master
+  26: "Plaza crowd (the old Showcase hall people)"
+  28: Tourist                # the plaza pokefan
+  37: Ugnaught worker        # the black belt
+  39: Cloud car pilot        # the harbor sailor
+  58: Wing guard             # the plaza trainers
+  63: {person: "Wing guard#2", at: [31, 33]}
+bgs:
+  0: [37, 19]                # museum sign, beside its door (38,19)
+  1: [43, 19]                # Bacta Center signs, beside its door (44,19)
+  2: Galleria sign           # the department store sign
+  3: [45, 19]
+  4: City sign
+  5: [16, 27]                # sky motel sign, beside its door (17,27)
+  6: Hangar sign (Cloud City shuttle)   # the harbor sign
+  7: [44, 27]                # fan club sign, beside its door (45,27)
+  8: [37, 27]                # move deleter's sign, beside his door (38,27)
+  9: [40, 32]                # hidden HEART SCALE
+  10: [50, 10]               # hidden PP UP
+  11: [55, 30]               # hidden POKE BALL
+sign_texts:
+  Lift sign (under-levels): "UNDER-LEVELS LIFT\\nMaintenance crews only."
+heal:
+  HEAL_LOCATION_LILYCOVE_CITY: [44, 20]
+patches:
+  # the Wailmer tiles sat east of the vanilla cove; Cloud City has none
+  - old: "\tcall_if_unset FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE, LilycoveCity_EventScript_SetWailmerMetatiles\n"
+    new: "\t@ no Wailmer tiles in Cloud City (world_port)\n"
+  # an escape rope in the shuttle hangar (the harbor) brings the player out in front of its door (3,18)
+  - old: "setescapewarp MAP_LILYCOVE_CITY, 12, 33"
+    new: "setescapewarp MAP_LILYCOVE_CITY, 3, 19"
+    file: data/maps/LilycoveCity_Harbor/scripts.inc

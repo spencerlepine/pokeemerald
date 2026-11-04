@@ -16,19 +16,19 @@ SootopolisCity_EventScript_LegendariesNotArrived::
 	end
 
 SootopolisCity_EventScript_LockHouseDoors::
-	setmetatile 9, 6, METATILE_Sootopolis_Door_Closed, TRUE
-	setmetatile 9, 17, METATILE_Sootopolis_Door_Closed, TRUE
-	setmetatile 9, 26, METATILE_Sootopolis_Door_Closed, TRUE
-	setmetatile 44, 17, METATILE_Sootopolis_Door_Closed, TRUE
-	setmetatile 8, 35, METATILE_Sootopolis_Door_Closed, TRUE
-	setmetatile 53, 28, METATILE_Sootopolis_Door_Closed, TRUE
-	setmetatile 45, 6, METATILE_Sootopolis_Door_Closed, TRUE
-	setmetatile 48, 25, METATILE_Sootopolis_Door_Closed, TRUE
-	setmetatile 51, 36, METATILE_Sootopolis_Door_Closed, TRUE
+	setmetatile 3, 24, METATILE_Sootopolis_Door_Closed, TRUE
+	setmetatile 3, 34, METATILE_Sootopolis_Door_Closed, TRUE
+	setmetatile 15, 52, METATILE_Sootopolis_Door_Closed, TRUE
+	setmetatile 55, 34, METATILE_Sootopolis_Door_Closed, TRUE
+	setmetatile 22, 54, METATILE_Sootopolis_Door_Closed, TRUE
+	setmetatile 47, 51, METATILE_Sootopolis_Door_Closed, TRUE
+	setmetatile 55, 24, METATILE_Sootopolis_Door_Closed, TRUE
+	setmetatile 55, 43, METATILE_Sootopolis_Door_Closed, TRUE
+	setmetatile 4, 44, METATILE_Sootopolis_Door_Closed, TRUE
 	return
 
 SootopolisCity_EventScript_LockGymDoor::
-	setmetatile 31, 32, METATILE_Sootopolis_GymDoor_Closed, TRUE
+	setmetatile 30, 13, METATILE_Sootopolis_GymDoor_Closed, TRUE
 	return
 
 SootopolisCity_OnTransition:
@@ -54,10 +54,10 @@ SootopolisCity_EventScript_HideMapNamePopup::
 	return
 
 SootopolisCity_EventScript_SetBattleSpectators::
-	setobjectxyperm LOCALID_KIRI, 13, 48
-	setobjectxyperm LOCALID_SOOTOPOLIS_BOY_1, 46, 32
-	setobjectxyperm LOCALID_SOOTOPOLIS_NINJA_BOY, 48, 41
-	setobjectxyperm LOCALID_SOOTOPOLIS_WOMAN_1, 45, 43
+	setobjectxyperm LOCALID_KIRI, 14, 40
+	setobjectxyperm LOCALID_SOOTOPOLIS_BOY_1, 44, 30
+	setobjectxyperm LOCALID_SOOTOPOLIS_NINJA_BOY, 44, 36
+	setobjectxyperm LOCALID_SOOTOPOLIS_WOMAN_1, 43, 40
 	setobjectmovementtype LOCALID_KIRI, MOVEMENT_TYPE_FACE_UP
 	setobjectmovementtype LOCALID_SOOTOPOLIS_BOY_1, MOVEMENT_TYPE_FACE_LEFT
 	setobjectmovementtype LOCALID_SOOTOPOLIS_NINJA_BOY, MOVEMENT_TYPE_FACE_LEFT
@@ -78,7 +78,7 @@ SootopolisCity_EventScript_SetNormalLayout::
 	return
 
 SootopolisCity_EventScript_SetLegendariesLayout::
-	setmaplayoutindex LAYOUT_SOOTOPOLIS_CITY_LEGENDS_BATTLE
+	@ Dagobah keeps one layout through the titans' battle (world_port)
 	return
 
 SootopolisCity_EventScript_SetWeather::
@@ -101,43 +101,43 @@ SootopolisCity_EventScript_CheckSetEnterCaveOfOriginObjPos::
 	return
 
 SootopolisCity_EventScript_SetEnterCaveOfOriginObjPos::
-	setobjectxyperm LOCALID_SOOTOPOLIS_EXPERT, 30, 18
-	setobjectxyperm LOCALID_SOOTOPOLIS_STEVEN, 32, 18
+	setobjectxyperm LOCALID_SOOTOPOLIS_EXPERT, 6, 19
+	setobjectxyperm LOCALID_SOOTOPOLIS_STEVEN, 7, 19
 	return
 
 SootopolisCity_EventScript_SetExitCaveOfOriginObjPos::
-	setobjectxyperm LOCALID_SOOTOPOLIS_EXPERT, 30, 18
-	setobjectxyperm LOCALID_SOOTOPOLIS_WALLACE, 31, 18
-	setobjectxyperm LOCALID_SOOTOPOLIS_STEVEN, 32, 18
+	setobjectxyperm LOCALID_SOOTOPOLIS_EXPERT, 6, 19
+	setobjectxyperm LOCALID_SOOTOPOLIS_WALLACE, 8, 19
+	setobjectxyperm LOCALID_SOOTOPOLIS_STEVEN, 7, 19
 	end
 
 SootopolisCity_EventScript_SetOutsideGymObjPos::
-	setobjectxyperm LOCALID_SOOTOPOLIS_EXPERT, 31, 18
-	setobjectxyperm LOCALID_SOOTOPOLIS_STEVEN, 29, 33
-	setobjectxyperm LOCALID_SOOTOPOLIS_MAXIE, 33, 35
-	setobjectxyperm LOCALID_SOOTOPOLIS_ARCHIE, 34, 35
+	setobjectxyperm LOCALID_SOOTOPOLIS_EXPERT, 5, 18
+	setobjectxyperm LOCALID_SOOTOPOLIS_STEVEN, 28, 14
+	setobjectxyperm LOCALID_SOOTOPOLIS_MAXIE, 32, 15
+	setobjectxyperm LOCALID_SOOTOPOLIS_ARCHIE, 33, 15
 	call_if_eq VAR_SOOTOPOLIS_WALLACE_STATE, 0, SootopolisCity_EventScript_SetWallaceMiddle
 	call_if_eq VAR_SOOTOPOLIS_WALLACE_STATE, 1, SootopolisCity_EventScript_SetWallaceRight
 	call_if_eq VAR_SOOTOPOLIS_WALLACE_STATE, 2, SootopolisCity_EventScript_SetWallaceLeft
 	return
 
 SootopolisCity_EventScript_SetWallaceMiddle::
-	setobjectxyperm LOCALID_SOOTOPOLIS_WALLACE, 31, 33
+	setobjectxyperm LOCALID_SOOTOPOLIS_WALLACE, 30, 14
 	setobjectmovementtype LOCALID_SOOTOPOLIS_WALLACE, MOVEMENT_TYPE_FACE_DOWN
 	return
 
 SootopolisCity_EventScript_SetWallaceRight::
-	setobjectxyperm LOCALID_SOOTOPOLIS_WALLACE, 32, 33
+	setobjectxyperm LOCALID_SOOTOPOLIS_WALLACE, 31, 14
 	setobjectmovementtype LOCALID_SOOTOPOLIS_WALLACE, MOVEMENT_TYPE_FACE_DOWN
 	return
 
 SootopolisCity_EventScript_SetWallaceLeft::
-	setobjectxyperm LOCALID_SOOTOPOLIS_WALLACE, 30, 33
+	setobjectxyperm LOCALID_SOOTOPOLIS_WALLACE, 29, 14
 	setobjectmovementtype LOCALID_SOOTOPOLIS_WALLACE, MOVEMENT_TYPE_FACE_DOWN
 	return
 
 SootopolisCity_EventScript_SetExpertBlockCaveEntrance::
-	setobjectxyperm LOCALID_SOOTOPOLIS_EXPERT, 31, 18
+	setobjectxyperm LOCALID_SOOTOPOLIS_EXPERT, 5, 18
 	return
 
 SootopolisCity_OnWarp:
@@ -171,8 +171,8 @@ SootopolisCity_OnFrame:
 SootopolisCity_EventScript_StartLegendariesScene::
 	lockall
 	special StorePlayerCoordsInVars
-	goto_if_ne VAR_0x8004, 43, SootopolisCity_EventScript_LegendariesSceneFromDive
-	goto_if_ne VAR_0x8005, 32, SootopolisCity_EventScript_LegendariesSceneFromDive
+	goto_if_ne VAR_0x8004, 42, SootopolisCity_EventScript_LegendariesSceneFromDive
+	goto_if_ne VAR_0x8005, 14, SootopolisCity_EventScript_LegendariesSceneFromDive
 	goto SootopolisCity_EventScript_LegendariesSceneFromPokeCenter
 	end
 
@@ -257,9 +257,29 @@ SootopolisCity_Movement_PanToActionFromPokeCenter:
 	walk_slow_diag_southwest
 	walk_slow_diag_southwest
 	walk_slow_diag_southwest
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
 	step_end
 
 SootopolisCity_Movement_PanBackToPokeCenter:
+	walk_slow_up
+	walk_slow_up
+	walk_slow_up
+	walk_slow_up
+	walk_slow_up
+	walk_slow_up
+	walk_slow_up
+	walk_slow_up
+	walk_slow_up
+	walk_slow_up
 	walk_slow_diag_northeast
 	walk_slow_diag_northeast
 	walk_slow_diag_northeast
@@ -344,7 +364,20 @@ SootopolisCity_EventScript_LegendariesSceneFromDive::
 
 SootopolisCity_Movement_PanToActionFromDive:
 	walk_slow_diag_northeast
-	walk_slow_diag_northeast
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
 	walk_up
 	walk_up
 	walk_up
@@ -362,7 +395,20 @@ SootopolisCity_Movement_PanBackToDive:
 	walk_down
 	walk_down
 	walk_down
-	walk_slow_diag_southwest
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
 	walk_slow_diag_southwest
 	step_end
 
@@ -456,8 +502,8 @@ SootopolisCity_Movement_GroudonIdle:
 SootopolisCity_EventScript_StartRayquazaScene::
 	lockall
 	special StorePlayerCoordsInVars
-	goto_if_ne VAR_0x8004, 43, SootopolisCity_EventScript_RayquazaSceneFromDive
-	goto_if_ne VAR_0x8005, 32, SootopolisCity_EventScript_RayquazaSceneFromDive
+	goto_if_ne VAR_0x8004, 42, SootopolisCity_EventScript_RayquazaSceneFromDive
+	goto_if_ne VAR_0x8005, 14, SootopolisCity_EventScript_RayquazaSceneFromDive
 	goto SootopolisCity_EventScript_RayquazaSceneFromPokeCenter
 	end
 
@@ -505,7 +551,7 @@ SootopolisCity_EventScript_RayquazaSceneFromPokeCenter::
 	fadenewbgm MUS_SOOTOPOLIS
 	delay 120
 	clearflag FLAG_HIDE_MAP_NAME_POPUP
-	warpwhitefade MAP_SOOTOPOLIS_CITY, 43, 32
+	warpwhitefade MAP_SOOTOPOLIS_CITY, 42, 14
 	waitstate
 	end
 
@@ -559,30 +605,30 @@ SootopolisCity_EventScript_RayquazaSceneFromDive::
 	end
 
 SootopolisCity_EventScript_SetRoughWater::
-	setmetatile 27, 43, METATILE_Sootopolis_RoughWater, FALSE
-	setmetatile 28, 43, METATILE_Sootopolis_RoughWater, FALSE
-	setmetatile 29, 43, METATILE_Sootopolis_RoughWater, FALSE
-	setmetatile 30, 43, METATILE_Sootopolis_RoughWater, FALSE
-	setmetatile 27, 44, METATILE_Sootopolis_RoughWater, FALSE
-	setmetatile 28, 44, METATILE_Sootopolis_RoughWater, FALSE
-	setmetatile 29, 44, METATILE_Sootopolis_RoughWater, FALSE
-	setmetatile 30, 44, METATILE_Sootopolis_RoughWater, FALSE
-	setmetatile 27, 45, METATILE_Sootopolis_RoughWater, FALSE
-	setmetatile 28, 45, METATILE_Sootopolis_RoughWater, FALSE
-	setmetatile 29, 45, METATILE_Sootopolis_RoughWater, FALSE
-	setmetatile 30, 45, METATILE_Sootopolis_RoughWater, FALSE
-	setmetatile 32, 43, METATILE_Sootopolis_RoughWater, FALSE
-	setmetatile 33, 43, METATILE_Sootopolis_RoughWater, FALSE
-	setmetatile 34, 43, METATILE_Sootopolis_RoughWater, FALSE
-	setmetatile 35, 43, METATILE_Sootopolis_RoughWater, FALSE
-	setmetatile 32, 44, METATILE_Sootopolis_RoughWater, FALSE
-	setmetatile 33, 44, METATILE_Sootopolis_RoughWater, FALSE
-	setmetatile 34, 44, METATILE_Sootopolis_RoughWater, FALSE
-	setmetatile 35, 44, METATILE_Sootopolis_RoughWater, FALSE
-	setmetatile 32, 45, METATILE_Sootopolis_RoughWater, FALSE
-	setmetatile 33, 45, METATILE_Sootopolis_RoughWater, FALSE
-	setmetatile 34, 45, METATILE_Sootopolis_RoughWater, FALSE
-	setmetatile 35, 45, METATILE_Sootopolis_RoughWater, FALSE
+	setmetatile 26, 35, METATILE_Sootopolis_RoughWater, FALSE
+	setmetatile 27, 35, METATILE_Sootopolis_RoughWater, FALSE
+	setmetatile 28, 35, METATILE_Sootopolis_RoughWater, FALSE
+	setmetatile 29, 35, METATILE_Sootopolis_RoughWater, FALSE
+	setmetatile 26, 36, METATILE_Sootopolis_RoughWater, FALSE
+	setmetatile 27, 36, METATILE_Sootopolis_RoughWater, FALSE
+	setmetatile 28, 36, METATILE_Sootopolis_RoughWater, FALSE
+	setmetatile 29, 36, METATILE_Sootopolis_RoughWater, FALSE
+	setmetatile 26, 37, METATILE_Sootopolis_RoughWater, FALSE
+	setmetatile 27, 37, METATILE_Sootopolis_RoughWater, FALSE
+	setmetatile 28, 37, METATILE_Sootopolis_RoughWater, FALSE
+	setmetatile 29, 37, METATILE_Sootopolis_RoughWater, FALSE
+	setmetatile 31, 35, METATILE_Sootopolis_RoughWater, FALSE
+	setmetatile 32, 35, METATILE_Sootopolis_RoughWater, FALSE
+	setmetatile 33, 35, METATILE_Sootopolis_RoughWater, FALSE
+	setmetatile 34, 35, METATILE_Sootopolis_RoughWater, FALSE
+	setmetatile 31, 36, METATILE_Sootopolis_RoughWater, FALSE
+	setmetatile 32, 36, METATILE_Sootopolis_RoughWater, FALSE
+	setmetatile 33, 36, METATILE_Sootopolis_RoughWater, FALSE
+	setmetatile 34, 36, METATILE_Sootopolis_RoughWater, FALSE
+	setmetatile 31, 37, METATILE_Sootopolis_RoughWater, FALSE
+	setmetatile 32, 37, METATILE_Sootopolis_RoughWater, FALSE
+	setmetatile 33, 37, METATILE_Sootopolis_RoughWater, FALSE
+	setmetatile 34, 37, METATILE_Sootopolis_RoughWater, FALSE
 	return
 
 SootopolisCity_Movement_RayquazaFlyOff:
@@ -917,148 +963,18 @@ SootopolisCity_EventScript_StartWalkToCaveOfOriginNorth::
 	return
 
 SootopolisCity_Movement_StevenStartWalkToCaveOfOrigin:
-	walk_up
-	walk_up
-	walk_up
-	walk_right
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
 	walk_left
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_in_place_faster_down
 	step_end
 
 SootopolisCity_Movement_PlayerStartWalkToCaveOfOriginWest:
 	walk_left
-	walk_up
-	walk_up
-	walk_up
-	walk_right
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_left
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
 	step_end
 
 SootopolisCity_Movement_PlayerStartWalkToCaveOfOriginNorth:
 	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_right
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_left
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
 	step_end
 
 SootopolisCity_Movement_StevenWalkToCaveOfOrigin:
-	walk_up
-	walk_up
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_down
-	walk_down
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_up
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_down
-	walk_down
-	walk_down
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_down
 	walk_down
 	walk_down
 	walk_down
@@ -1070,56 +986,35 @@ SootopolisCity_Movement_StevenWalkToCaveOfOrigin:
 	walk_left
 	walk_left
 	walk_left
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	delay_4
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
 	walk_in_place_faster_left
-	delay_16
-	delay_16
-	walk_right
-	walk_up
-	walk_up
 	step_end
 
 SootopolisCity_Movement_PlayerWalkToCaveOfOrigin:
-	walk_up
-	walk_up
-	walk_up
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_down
-	walk_down
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_up
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_down
-	walk_down
-	walk_down
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_down
+	walk_left
 	walk_down
 	walk_down
 	walk_down
@@ -1131,35 +1026,40 @@ SootopolisCity_Movement_PlayerWalkToCaveOfOrigin:
 	walk_left
 	walk_left
 	walk_left
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_right
-	walk_right
-	walk_right
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
 	step_end
 
 SootopolisCity_Movement_ExpertMoveAside:
-	walk_slow_left
-	walk_in_place_faster_right
+	walk_slow_right
+	walk_slow_down
+	walk_in_place_faster_left
 	step_end
 
 SootopolisCity_Movement_StevenArriveCaveEntrance:
 	walk_down
-	walk_down
-	walk_left
-	delay_8
-	walk_right
-	walk_up
-	walk_up
-	walk_up
-	walk_right
-	walk_in_place_faster_left
+	walk_in_place_faster_up
 	step_end
 
 SootopolisCity_Movement_PlayerArriveCaveEntrance:
@@ -1167,15 +1067,21 @@ SootopolisCity_Movement_PlayerArriveCaveEntrance:
 	delay_16
 	delay_16
 	delay_8
-	walk_right
-	walk_right
-	walk_up
-	walk_up
-	walk_up
-	walk_in_place_faster_right
+	walk_left
+	walk_left
+	walk_left
+	walk_in_place_faster_up
 	step_end
 
 SootopolisCity_Movement_PlayerEnterCaveOfOrigin:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
 	walk_up
 	walk_up
 	step_end
@@ -1676,3 +1582,37 @@ SootopolisCity_Text_DazzledByMentor:
 	.string "OBI-WAN: I'm sure that you will be\n"
 	.string "dazzled by my old master's battle\l"
 	.string "style. Size matters not.$"
+
+@ world_port begin (generated by wiki/tools/world_port, do not edit inside)
+SootopolisCity_EventScript_SwYoda::
+	lock
+	faceplayer
+	msgbox SootopolisCity_Text_SwYoda_1, MSGBOX_DEFAULT
+	release
+	end
+
+SootopolisCity_EventScript_SwDagobahPilgrim::
+	lock
+	faceplayer
+	msgbox SootopolisCity_Text_SwDagobahPilgrim_1, MSGBOX_DEFAULT
+	release
+	end
+
+SootopolisCity_EventScript_SwHangarSignRebelTransport3::
+	msgbox SootopolisCity_Text_SwHangarSignRebelTransport3_1, MSGBOX_SIGN
+	end
+
+SootopolisCity_Text_SwYoda_1:
+	.string "“Hmm. Come to my hut, you have. Train\n"
+	.string "you, my arena will. Ready, are you? Hmm?”$"
+
+SootopolisCity_Text_SwDagobahPilgrim_1:
+	.string "“I came to find a Jedi master in this\n"
+	.string "swamp. So far I have found mud, more\p"
+	.string "mud, and a very rude dragonsnake.”$"
+
+SootopolisCity_Text_SwHangarSignRebelTransport3_1:
+	.string "BOG LANDING\n"
+	.string "Rebel transport flights. Mind the mud.$"
+
+@ world_port end

@@ -45,26 +45,26 @@
     {
       "id": "HEAL_LOCATION_LILYCOVE_CITY",
       "map": "MAP_LILYCOVE_CITY",
-      "x": 24,
-      "y": 15
+      "x": 44,
+      "y": 20
     },
     {
       "id": "HEAL_LOCATION_MOSSDEEP_CITY",
       "map": "MAP_MOSSDEEP_CITY",
-      "x": 28,
-      "y": 17
+      "x": 27,
+      "y": 18
     },
     {
       "id": "HEAL_LOCATION_SOOTOPOLIS_CITY",
       "map": "MAP_SOOTOPOLIS_CITY",
-      "x": 43,
-      "y": 32
+      "x": 42,
+      "y": 14
     },
     {
       "id": "HEAL_LOCATION_EVER_GRANDE_CITY",
       "map": "MAP_EVER_GRANDE_CITY",
-      "x": 27,
-      "y": 49
+      "x": 10,
+      "y": 47
     },
     {
       "id": "HEAL_LOCATION_LITTLEROOT_TOWN_BRENDANS_HOUSE",
@@ -111,14 +111,14 @@
     {
       "id": "HEAL_LOCATION_PACIFIDLOG_TOWN",
       "map": "MAP_PACIFIDLOG_TOWN",
-      "x": 8,
-      "y": 16
+      "x": 5,
+      "y": 22
     },
     {
       "id": "HEAL_LOCATION_EVER_GRANDE_CITY_POKEMON_LEAGUE",
       "map": "MAP_EVER_GRANDE_CITY",
-      "x": 18,
-      "y": 6
+      "x": 22,
+      "y": 11
     },
     {
       "id": "HEAL_LOCATION_SOUTHERN_ISLAND_EXTERIOR",

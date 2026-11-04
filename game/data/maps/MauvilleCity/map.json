@@ -305,6 +305,13 @@
       "elevation": 0,
       "dest_map": "MAP_NEW_MAUVILLE_ENTRANCE",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 43,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_SW_HANGAR_TATOOINE_ENDOR",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],

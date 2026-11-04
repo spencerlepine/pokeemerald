@@ -342,6 +342,10 @@ def events(world, a, r, mj):
             vpos[tuple(p["at"])] -= 1
             continue
         row = row_for(rows, a, p, nth)
+        if p["name"] == "Pilot" and world.lanes.has_pilot(a):
+            label = world.lanes.pilot_script(blk, a, key_of(p["name"], nth, counts[p["name"]] > 1))
+            objs.append(new_object(a, C, p, row, label, False, None, taken, problems))
+            continue
         if not a.new and not row:
             problems.append(f"{a.id}: {p['name']} at {p['at']} has no vanilla object and no people.csv row; left out")
             continue
@@ -369,6 +373,9 @@ def events(world, a, r, mj):
                         "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY", "script": lab})
         mj["bg_events"] = bgs
         header = f"{a.map_name}_MapScripts::\n\t.byte 0\n"
+        if a.id in world.lanes.shared:
+            header = world.lanes.cabin_map_scripts(a)
+            mj["coord_events"] = world.lanes.cabin_triggers(blk, a)
         if f"{a.map_name}_MapScripts" not in labels:
             blk.scripts.insert(0, header + "\n")
         write_block(path, blk)

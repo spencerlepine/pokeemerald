@@ -37,6 +37,9 @@ props:
   at: [1, 11]
   size: [1, 1]
 people:
+- name: Pilot
+  at: [15, 12]
+  role: story
 - name: Ferry Attendant
   at: [8, 10]
   role: npc

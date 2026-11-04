@@ -16,8 +16,9 @@ it can run again and gives the same files. Areas outside the run keep their vani
 - **Terrain** (`terrain.py`). A vanilla map with the same grid keeps its vanilla cells; a route or cave with a few
   cells changed (hybrid) keeps vanilla cells where the grid is unchanged; a redrawn town and every new area is
   drawn from the grid with tile-generator's terrain items. A terrain role the tileset pair has no tile for
-  (Dune Sea, wroshyr trunks...) is the pink placeholder over a grey fill, its own metatile per role. Interiors
-  keep their vanilla cells (no planet kit indoors).
+  (Dune Sea, wroshyr trunks...) is the pink placeholder over a grey fill, its own metatile per role. So is a
+  ground or water cell whose learned vanilla tile does something underfoot (a door, warp, slide, ladder...).
+  Interiors keep their vanilla cells (no planet kit indoors).
 - **Pieces** (`pieces.py`). Every building and sized prop is solid, drawn with its building-kit render, else its
   greybox render, else the pink placeholder, one metatile per cell. A building's door cell warps (non-animated
   door). In a vanilla or hybrid map only pieces set on ground vanilla has open are drawn (vanilla buildings keep
@@ -48,10 +49,21 @@ it can run again and gives the same files. Areas outside the run keep their vani
   `towns/<area-id>.yaml`, says where each goes on the wiki layout (a yaml person, a cell, or dropped), rewrites the
   story movements (`movements:`, steps like `D8 d7 r21 u ifr`), patches script lines (also in other maps, such as
   the gym's warp back to its door), sets the heal spot, and walks each listed movement on the new layout to check it
-  ends where it should and crosses no solid cell. Ported: every Tatooine town, Kachirho, Inyusu Tor, Pirin, Bright Tree.
+  ends where it should and crosses no solid cell. Ported: every Tatooine town, Kachirho, Inyusu Tor, Pirin, Bright Tree, Yavin 4, Tipoca City, Ilum, Cloud City,
+  Dagobah. A map holds at most 64 objects; the rest are left out with a note.
 
 Art stays pending in the wiki: a placeholder or greybox tile goes in as a real tile in its own slot, so it can
 be redrawn later without touching the maps.
+
+- **Hyperlanes** (`lanes.py`, from `mapping/hyperlanes.csv`). A shared cabin (one room for both ends) shuts the
+  exit the player did not come in by until its pilot has flown; the pilot flies only once the lane's `unlock` is
+  met (the way back is always open). A one-door hangar's pilot offers every lane that touches the room, one by
+  one, and lands the player on the far room's first warp. Lanes vanilla already flies are left alone: Han's
+  first hop, the cable car, the S.S. Tidal and its ticket islands. Han's boat sails are hyperspace hops
+  (patches in `towns/kachirho.yaml`). A new `unlock` token needs its game flag in `lanes.UNLOCK`.
+
+The game's `ld_script.ld` no longer pins the creature pics to fixed addresses: the full world does not fit
+below them.
 
 ## Check
 

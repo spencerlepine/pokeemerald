@@ -6,6 +6,36 @@ const u16 gMetatileAttributes_SwAnchorhead[] = INCBIN_U16("data/tilesets/seconda
 const u16 gMetatiles_SwAshenPass[] = INCBIN_U16("data/tilesets/secondary/sw/ashen-pass/metatiles.bin");
 const u16 gMetatileAttributes_SwAshenPass[] = INCBIN_U16("data/tilesets/secondary/sw/ashen-pass/metatile_attributes.bin");
 
+const u16 gMetatiles_SwAsteroidSpire1f[] = INCBIN_U16("data/tilesets/secondary/sw/asteroid-spire-1f/metatiles.bin");
+const u16 gMetatileAttributes_SwAsteroidSpire1f[] = INCBIN_U16("data/tilesets/secondary/sw/asteroid-spire-1f/metatile_attributes.bin");
+
+const u16 gMetatiles_SwAsteroidSpire2f[] = INCBIN_U16("data/tilesets/secondary/sw/asteroid-spire-2f/metatiles.bin");
+const u16 gMetatileAttributes_SwAsteroidSpire2f[] = INCBIN_U16("data/tilesets/secondary/sw/asteroid-spire-2f/metatile_attributes.bin");
+
+const u16 gMetatiles_SwAsteroidSpire3f[] = INCBIN_U16("data/tilesets/secondary/sw/asteroid-spire-3f/metatiles.bin");
+const u16 gMetatileAttributes_SwAsteroidSpire3f[] = INCBIN_U16("data/tilesets/secondary/sw/asteroid-spire-3f/metatile_attributes.bin");
+
+const u16 gMetatiles_SwAsteroidSpire4f[] = INCBIN_U16("data/tilesets/secondary/sw/asteroid-spire-4f/metatiles.bin");
+const u16 gMetatileAttributes_SwAsteroidSpire4f[] = INCBIN_U16("data/tilesets/secondary/sw/asteroid-spire-4f/metatile_attributes.bin");
+
+const u16 gMetatiles_SwAsteroidSpire5f[] = INCBIN_U16("data/tilesets/secondary/sw/asteroid-spire-5f/metatiles.bin");
+const u16 gMetatileAttributes_SwAsteroidSpire5f[] = INCBIN_U16("data/tilesets/secondary/sw/asteroid-spire-5f/metatile_attributes.bin");
+
+const u16 gMetatiles_SwAsteroidSpireEntrance[] = INCBIN_U16("data/tilesets/secondary/sw/asteroid-spire-entrance/metatiles.bin");
+const u16 gMetatileAttributes_SwAsteroidSpireEntrance[] = INCBIN_U16("data/tilesets/secondary/sw/asteroid-spire-entrance/metatile_attributes.bin");
+
+const u16 gMetatiles_SwAsteroidSpireHangar[] = INCBIN_U16("data/tilesets/secondary/sw/asteroid-spire-hangar/metatiles.bin");
+const u16 gMetatileAttributes_SwAsteroidSpireHangar[] = INCBIN_U16("data/tilesets/secondary/sw/asteroid-spire-hangar/metatile_attributes.bin");
+
+const u16 gMetatiles_SwAsteroidSpireOutside[] = INCBIN_U16("data/tilesets/secondary/sw/asteroid-spire-outside/metatiles.bin");
+const u16 gMetatileAttributes_SwAsteroidSpireOutside[] = INCBIN_U16("data/tilesets/secondary/sw/asteroid-spire-outside/metatile_attributes.bin");
+
+const u16 gMetatiles_SwAsteroidSpireTop[] = INCBIN_U16("data/tilesets/secondary/sw/asteroid-spire-top/metatiles.bin");
+const u16 gMetatileAttributes_SwAsteroidSpireTop[] = INCBIN_U16("data/tilesets/secondary/sw/asteroid-spire-top/metatile_attributes.bin");
+
+const u16 gMetatiles_SwAtollonExterior[] = INCBIN_U16("data/tilesets/secondary/sw/atollon-exterior/metatiles.bin");
+const u16 gMetatileAttributes_SwAtollonExterior[] = INCBIN_U16("data/tilesets/secondary/sw/atollon-exterior/metatile_attributes.bin");
+
 const u16 gMetatiles_SwBensHut[] = INCBIN_U16("data/tilesets/secondary/sw/bens-hut/metatiles.bin");
 const u16 gMetatileAttributes_SwBensHut[] = INCBIN_U16("data/tilesets/secondary/sw/bens-hut/metatile_attributes.bin");
 
@@ -18,6 +48,60 @@ const u16 gMetatileAttributes_SwBestine[] = INCBIN_U16("data/tilesets/secondary/
 const u16 gMetatiles_SwBrightTree[] = INCBIN_U16("data/tilesets/secondary/sw/bright-tree/metatiles.bin");
 const u16 gMetatileAttributes_SwBrightTree[] = INCBIN_U16("data/tilesets/secondary/sw/bright-tree/metatile_attributes.bin");
 
+const u16 gMetatiles_SwCloudCity[] = INCBIN_U16("data/tilesets/secondary/sw/cloud-city/metatiles.bin");
+const u16 gMetatileAttributes_SwCloudCity[] = INCBIN_U16("data/tilesets/secondary/sw/cloud-city/metatile_attributes.bin");
+
+const u16 gMetatiles_SwCloudCityHangar[] = INCBIN_U16("data/tilesets/secondary/sw/cloud-city-hangar/metatiles.bin");
+const u16 gMetatileAttributes_SwCloudCityHangar[] = INCBIN_U16("data/tilesets/secondary/sw/cloud-city-hangar/metatile_attributes.bin");
+
+const u16 gMetatiles_SwDagobah[] = INCBIN_U16("data/tilesets/secondary/sw/dagobah/metatiles.bin");
+const u16 gMetatileAttributes_SwDagobah[] = INCBIN_U16("data/tilesets/secondary/sw/dagobah/metatile_attributes.bin");
+
+const u16 gMetatiles_SwDagobahHangar[] = INCBIN_U16("data/tilesets/secondary/sw/dagobah-hangar/metatiles.bin");
+const u16 gMetatileAttributes_SwDagobahHangar[] = INCBIN_U16("data/tilesets/secondary/sw/dagobah-hangar/metatile_attributes.bin");
+
+const u16 gMetatiles_SwDeathStarDs1[] = INCBIN_U16("data/tilesets/secondary/sw/death-star-ds-1/metatiles.bin");
+const u16 gMetatileAttributes_SwDeathStarDs1[] = INCBIN_U16("data/tilesets/secondary/sw/death-star-ds-1/metatile_attributes.bin");
+
+const u16 gMetatiles_SwDeathStarDs2[] = INCBIN_U16("data/tilesets/secondary/sw/death-star-ds-2/metatiles.bin");
+const u16 gMetatileAttributes_SwDeathStarDs2[] = INCBIN_U16("data/tilesets/secondary/sw/death-star-ds-2/metatile_attributes.bin");
+
+const u16 gMetatiles_SwDeathStarDs3[] = INCBIN_U16("data/tilesets/secondary/sw/death-star-ds-3/metatiles.bin");
+const u16 gMetatileAttributes_SwDeathStarDs3[] = INCBIN_U16("data/tilesets/secondary/sw/death-star-ds-3/metatile_attributes.bin");
+
+const u16 gMetatiles_SwDeathStarDs4[] = INCBIN_U16("data/tilesets/secondary/sw/death-star-ds-4/metatiles.bin");
+const u16 gMetatileAttributes_SwDeathStarDs4[] = INCBIN_U16("data/tilesets/secondary/sw/death-star-ds-4/metatile_attributes.bin");
+
+const u16 gMetatiles_SwDeathStarDs5[] = INCBIN_U16("data/tilesets/secondary/sw/death-star-ds-5/metatiles.bin");
+const u16 gMetatileAttributes_SwDeathStarDs5[] = INCBIN_U16("data/tilesets/secondary/sw/death-star-ds-5/metatile_attributes.bin");
+
+const u16 gMetatiles_SwDeathStarHangar[] = INCBIN_U16("data/tilesets/secondary/sw/death-star-hangar/metatiles.bin");
+const u16 gMetatileAttributes_SwDeathStarHangar[] = INCBIN_U16("data/tilesets/secondary/sw/death-star-hangar/metatile_attributes.bin");
+
+const u16 gMetatiles_SwDrownedCavernEntrance[] = INCBIN_U16("data/tilesets/secondary/sw/drowned-cavern-entrance/metatiles.bin");
+const u16 gMetatileAttributes_SwDrownedCavernEntrance[] = INCBIN_U16("data/tilesets/secondary/sw/drowned-cavern-entrance/metatile_attributes.bin");
+
+const u16 gMetatiles_SwDrownedCavernRoom1[] = INCBIN_U16("data/tilesets/secondary/sw/drowned-cavern-room-1/metatiles.bin");
+const u16 gMetatileAttributes_SwDrownedCavernRoom1[] = INCBIN_U16("data/tilesets/secondary/sw/drowned-cavern-room-1/metatile_attributes.bin");
+
+const u16 gMetatiles_SwDrownedCavernRoom2[] = INCBIN_U16("data/tilesets/secondary/sw/drowned-cavern-room-2/metatiles.bin");
+const u16 gMetatileAttributes_SwDrownedCavernRoom2[] = INCBIN_U16("data/tilesets/secondary/sw/drowned-cavern-room-2/metatile_attributes.bin");
+
+const u16 gMetatiles_SwDrownedCavernRoom3[] = INCBIN_U16("data/tilesets/secondary/sw/drowned-cavern-room-3/metatiles.bin");
+const u16 gMetatileAttributes_SwDrownedCavernRoom3[] = INCBIN_U16("data/tilesets/secondary/sw/drowned-cavern-room-3/metatile_attributes.bin");
+
+const u16 gMetatiles_SwDrownedCavernRoom4[] = INCBIN_U16("data/tilesets/secondary/sw/drowned-cavern-room-4/metatiles.bin");
+const u16 gMetatileAttributes_SwDrownedCavernRoom4[] = INCBIN_U16("data/tilesets/secondary/sw/drowned-cavern-room-4/metatile_attributes.bin");
+
+const u16 gMetatiles_SwDrownedCavernRoom5[] = INCBIN_U16("data/tilesets/secondary/sw/drowned-cavern-room-5/metatiles.bin");
+const u16 gMetatileAttributes_SwDrownedCavernRoom5[] = INCBIN_U16("data/tilesets/secondary/sw/drowned-cavern-room-5/metatile_attributes.bin");
+
+const u16 gMetatiles_SwDrownedCavernRoom8[] = INCBIN_U16("data/tilesets/secondary/sw/drowned-cavern-room-8/metatiles.bin");
+const u16 gMetatileAttributes_SwDrownedCavernRoom8[] = INCBIN_U16("data/tilesets/secondary/sw/drowned-cavern-room-8/metatile_attributes.bin");
+
+const u16 gMetatiles_SwDrownedCavernRoom9[] = INCBIN_U16("data/tilesets/secondary/sw/drowned-cavern-room-9/metatiles.bin");
+const u16 gMetatileAttributes_SwDrownedCavernRoom9[] = INCBIN_U16("data/tilesets/secondary/sw/drowned-cavern-room-9/metatile_attributes.bin");
+
 const u16 gMetatiles_SwEndorBattlefield[] = INCBIN_U16("data/tilesets/secondary/sw/endor-battlefield/metatiles.bin");
 const u16 gMetatileAttributes_SwEndorBattlefield[] = INCBIN_U16("data/tilesets/secondary/sw/endor-battlefield/metatile_attributes.bin");
 
@@ -26,6 +110,63 @@ const u16 gMetatileAttributes_SwEndorBattlefieldBunker[] = INCBIN_U16("data/tile
 
 const u16 gMetatiles_SwEndorHangar[] = INCBIN_U16("data/tilesets/secondary/sw/endor-hangar/metatiles.bin");
 const u16 gMetatileAttributes_SwEndorHangar[] = INCBIN_U16("data/tilesets/secondary/sw/endor-hangar/metatile_attributes.bin");
+
+const u16 gMetatiles_SwFeluciaHangar[] = INCBIN_U16("data/tilesets/secondary/sw/felucia-hangar/metatiles.bin");
+const u16 gMetatileAttributes_SwFeluciaHangar[] = INCBIN_U16("data/tilesets/secondary/sw/felucia-hangar/metatile_attributes.bin");
+
+const u16 gMetatiles_SwFeluciaReserveNorth[] = INCBIN_U16("data/tilesets/secondary/sw/felucia-reserve-north/metatiles.bin");
+const u16 gMetatileAttributes_SwFeluciaReserveNorth[] = INCBIN_U16("data/tilesets/secondary/sw/felucia-reserve-north/metatile_attributes.bin");
+
+const u16 gMetatiles_SwFeluciaReserveNortheast[] = INCBIN_U16("data/tilesets/secondary/sw/felucia-reserve-northeast/metatiles.bin");
+const u16 gMetatileAttributes_SwFeluciaReserveNortheast[] = INCBIN_U16("data/tilesets/secondary/sw/felucia-reserve-northeast/metatile_attributes.bin");
+
+const u16 gMetatiles_SwFeluciaReserveNorthwest[] = INCBIN_U16("data/tilesets/secondary/sw/felucia-reserve-northwest/metatiles.bin");
+const u16 gMetatileAttributes_SwFeluciaReserveNorthwest[] = INCBIN_U16("data/tilesets/secondary/sw/felucia-reserve-northwest/metatile_attributes.bin");
+
+const u16 gMetatiles_SwFeluciaReserveSouth[] = INCBIN_U16("data/tilesets/secondary/sw/felucia-reserve-south/metatiles.bin");
+const u16 gMetatileAttributes_SwFeluciaReserveSouth[] = INCBIN_U16("data/tilesets/secondary/sw/felucia-reserve-south/metatile_attributes.bin");
+
+const u16 gMetatiles_SwFeluciaReserveSoutheast[] = INCBIN_U16("data/tilesets/secondary/sw/felucia-reserve-southeast/metatiles.bin");
+const u16 gMetatileAttributes_SwFeluciaReserveSoutheast[] = INCBIN_U16("data/tilesets/secondary/sw/felucia-reserve-southeast/metatile_attributes.bin");
+
+const u16 gMetatiles_SwFeluciaReserveSouthwest[] = INCBIN_U16("data/tilesets/secondary/sw/felucia-reserve-southwest/metatiles.bin");
+const u16 gMetatileAttributes_SwFeluciaReserveSouthwest[] = INCBIN_U16("data/tilesets/secondary/sw/felucia-reserve-southwest/metatile_attributes.bin");
+
+const u16 gMetatiles_SwGrandArenaOutsideEast[] = INCBIN_U16("data/tilesets/secondary/sw/grand-arena-outside-east/metatiles.bin");
+const u16 gMetatileAttributes_SwGrandArenaOutsideEast[] = INCBIN_U16("data/tilesets/secondary/sw/grand-arena-outside-east/metatile_attributes.bin");
+
+const u16 gMetatiles_SwGrandArenaOutsideWest[] = INCBIN_U16("data/tilesets/secondary/sw/grand-arena-outside-west/metatiles.bin");
+const u16 gMetatileAttributes_SwGrandArenaOutsideWest[] = INCBIN_U16("data/tilesets/secondary/sw/grand-arena-outside-west/metatile_attributes.bin");
+
+const u16 gMetatiles_SwHangarTatooineEndor[] = INCBIN_U16("data/tilesets/secondary/sw/hangar-tatooine-endor/metatiles.bin");
+const u16 gMetatileAttributes_SwHangarTatooineEndor[] = INCBIN_U16("data/tilesets/secondary/sw/hangar-tatooine-endor/metatile_attributes.bin");
+
+const u16 gMetatiles_SwHangarTatooineKashyyyk[] = INCBIN_U16("data/tilesets/secondary/sw/hangar-tatooine-kashyyyk/metatiles.bin");
+const u16 gMetatileAttributes_SwHangarTatooineKashyyyk[] = INCBIN_U16("data/tilesets/secondary/sw/hangar-tatooine-kashyyyk/metatile_attributes.bin");
+
+const u16 gMetatiles_SwHangarTatooineSullust[] = INCBIN_U16("data/tilesets/secondary/sw/hangar-tatooine-sullust/metatiles.bin");
+const u16 gMetatileAttributes_SwHangarTatooineSullust[] = INCBIN_U16("data/tilesets/secondary/sw/hangar-tatooine-sullust/metatile_attributes.bin");
+
+const u16 gMetatiles_SwHothHangar[] = INCBIN_U16("data/tilesets/secondary/sw/hoth-hangar/metatiles.bin");
+const u16 gMetatileAttributes_SwHothHangar[] = INCBIN_U16("data/tilesets/secondary/sw/hoth-hangar/metatile_attributes.bin");
+
+const u16 gMetatiles_SwHothSurveyOutpost[] = INCBIN_U16("data/tilesets/secondary/sw/hoth-survey-outpost/metatiles.bin");
+const u16 gMetatileAttributes_SwHothSurveyOutpost[] = INCBIN_U16("data/tilesets/secondary/sw/hoth-survey-outpost/metatile_attributes.bin");
+
+const u16 gMetatiles_SwHothTauntaunShelter[] = INCBIN_U16("data/tilesets/secondary/sw/hoth-tauntaun-shelter/metatiles.bin");
+const u16 gMetatileAttributes_SwHothTauntaunShelter[] = INCBIN_U16("data/tilesets/secondary/sw/hoth-tauntaun-shelter/metatile_attributes.bin");
+
+const u16 gMetatiles_SwHothTundra[] = INCBIN_U16("data/tilesets/secondary/sw/hoth-tundra/metatiles.bin");
+const u16 gMetatileAttributes_SwHothTundra[] = INCBIN_U16("data/tilesets/secondary/sw/hoth-tundra/metatile_attributes.bin");
+
+const u16 gMetatiles_SwIlum[] = INCBIN_U16("data/tilesets/secondary/sw/ilum/metatiles.bin");
+const u16 gMetatileAttributes_SwIlum[] = INCBIN_U16("data/tilesets/secondary/sw/ilum/metatile_attributes.bin");
+
+const u16 gMetatiles_SwIlumHangar[] = INCBIN_U16("data/tilesets/secondary/sw/ilum-hangar/metatiles.bin");
+const u16 gMetatileAttributes_SwIlumHangar[] = INCBIN_U16("data/tilesets/secondary/sw/ilum-hangar/metatile_attributes.bin");
+
+const u16 gMetatiles_SwIlumSupplyDepot[] = INCBIN_U16("data/tilesets/secondary/sw/ilum-supply-depot/metatiles.bin");
+const u16 gMetatileAttributes_SwIlumSupplyDepot[] = INCBIN_U16("data/tilesets/secondary/sw/ilum-supply-depot/metatile_attributes.bin");
 
 const u16 gMetatiles_SwInyusuTor[] = INCBIN_U16("data/tilesets/secondary/sw/inyusu-tor/metatiles.bin");
 const u16 gMetatileAttributes_SwInyusuTor[] = INCBIN_U16("data/tilesets/secondary/sw/inyusu-tor/metatile_attributes.bin");
@@ -39,6 +180,15 @@ const u16 gMetatileAttributes_SwJabbasPalaceBargeDock[] = INCBIN_U16("data/tiles
 const u16 gMetatiles_SwJabbasPalaceThroneRoom[] = INCBIN_U16("data/tilesets/secondary/sw/jabbas-palace-throne-room/metatiles.bin");
 const u16 gMetatileAttributes_SwJabbasPalaceThroneRoom[] = INCBIN_U16("data/tilesets/secondary/sw/jabbas-palace-throne-room/metatile_attributes.bin");
 
+const u16 gMetatiles_SwJedhaHangar[] = INCBIN_U16("data/tilesets/secondary/sw/jedha-hangar/metatiles.bin");
+const u16 gMetatileAttributes_SwJedhaHangar[] = INCBIN_U16("data/tilesets/secondary/sw/jedha-hangar/metatile_attributes.bin");
+
+const u16 gMetatiles_SwJedhaTempleExterior[] = INCBIN_U16("data/tilesets/secondary/sw/jedha-temple-exterior/metatiles.bin");
+const u16 gMetatileAttributes_SwJedhaTempleExterior[] = INCBIN_U16("data/tilesets/secondary/sw/jedha-temple-exterior/metatile_attributes.bin");
+
+const u16 gMetatiles_SwJedhaTempleSummit[] = INCBIN_U16("data/tilesets/secondary/sw/jedha-temple-summit/metatiles.bin");
+const u16 gMetatileAttributes_SwJedhaTempleSummit[] = INCBIN_U16("data/tilesets/secondary/sw/jedha-temple-summit/metatile_attributes.bin");
+
 const u16 gMetatiles_SwJundlandWastes[] = INCBIN_U16("data/tilesets/secondary/sw/jundland-wastes/metatiles.bin");
 const u16 gMetatileAttributes_SwJundlandWastes[] = INCBIN_U16("data/tilesets/secondary/sw/jundland-wastes/metatile_attributes.bin");
 
@@ -47,6 +197,12 @@ const u16 gMetatileAttributes_SwKachirho[] = INCBIN_U16("data/tilesets/secondary
 
 const u16 gMetatiles_SwKachirhoSupplyDepot[] = INCBIN_U16("data/tilesets/secondary/sw/kachirho-supply-depot/metatiles.bin");
 const u16 gMetatileAttributes_SwKachirhoSupplyDepot[] = INCBIN_U16("data/tilesets/secondary/sw/kachirho-supply-depot/metatile_attributes.bin");
+
+const u16 gMetatiles_SwMarineCaveEnd[] = INCBIN_U16("data/tilesets/secondary/sw/marine-cave-end/metatiles.bin");
+const u16 gMetatileAttributes_SwMarineCaveEnd[] = INCBIN_U16("data/tilesets/secondary/sw/marine-cave-end/metatile_attributes.bin");
+
+const u16 gMetatiles_SwMarineCaveEntrance[] = INCBIN_U16("data/tilesets/secondary/sw/marine-cave-entrance/metatiles.bin");
+const u16 gMetatileAttributes_SwMarineCaveEntrance[] = INCBIN_U16("data/tilesets/secondary/sw/marine-cave-entrance/metatile_attributes.bin");
 
 const u16 gMetatiles_SwMosEisley[] = INCBIN_U16("data/tilesets/secondary/sw/mos-eisley/metatiles.bin");
 const u16 gMetatileAttributes_SwMosEisley[] = INCBIN_U16("data/tilesets/secondary/sw/mos-eisley/metatile_attributes.bin");
@@ -77,6 +233,24 @@ const u16 gMetatileAttributes_SwMustafarMiningFacility[] = INCBIN_U16("data/tile
 
 const u16 gMetatiles_SwMustafarPeak[] = INCBIN_U16("data/tilesets/secondary/sw/mustafar-peak/metatiles.bin");
 const u16 gMetatileAttributes_SwMustafarPeak[] = INCBIN_U16("data/tilesets/secondary/sw/mustafar-peak/metatile_attributes.bin");
+
+const u16 gMetatiles_SwNijedha[] = INCBIN_U16("data/tilesets/secondary/sw/nijedha/metatiles.bin");
+const u16 gMetatileAttributes_SwNijedha[] = INCBIN_U16("data/tilesets/secondary/sw/nijedha/metatile_attributes.bin");
+
+const u16 gMetatiles_SwNijedhaBactaCenter[] = INCBIN_U16("data/tilesets/secondary/sw/nijedha-bacta-center/metatiles.bin");
+const u16 gMetatileAttributes_SwNijedhaBactaCenter[] = INCBIN_U16("data/tilesets/secondary/sw/nijedha-bacta-center/metatile_attributes.bin");
+
+const u16 gMetatiles_SwNijedhaGuardiansQuarters[] = INCBIN_U16("data/tilesets/secondary/sw/nijedha-guardians-quarters/metatiles.bin");
+const u16 gMetatileAttributes_SwNijedhaGuardiansQuarters[] = INCBIN_U16("data/tilesets/secondary/sw/nijedha-guardians-quarters/metatile_attributes.bin");
+
+const u16 gMetatiles_SwNijedhaHostel[] = INCBIN_U16("data/tilesets/secondary/sw/nijedha-hostel/metatiles.bin");
+const u16 gMetatileAttributes_SwNijedhaHostel[] = INCBIN_U16("data/tilesets/secondary/sw/nijedha-hostel/metatile_attributes.bin");
+
+const u16 gMetatiles_SwNijedhaSupplyDepot[] = INCBIN_U16("data/tilesets/secondary/sw/nijedha-supply-depot/metatiles.bin");
+const u16 gMetatileAttributes_SwNijedhaSupplyDepot[] = INCBIN_U16("data/tilesets/secondary/sw/nijedha-supply-depot/metatile_attributes.bin");
+
+const u16 gMetatiles_SwNijedhaTempleOfTheKyber[] = INCBIN_U16("data/tilesets/secondary/sw/nijedha-temple-of-the-kyber/metatiles.bin");
+const u16 gMetatileAttributes_SwNijedhaTempleOfTheKyber[] = INCBIN_U16("data/tilesets/secondary/sw/nijedha-temple-of-the-kyber/metatile_attributes.bin");
 
 const u16 gMetatiles_SwPirin[] = INCBIN_U16("data/tilesets/secondary/sw/pirin/metatiles.bin");
 const u16 gMetatileAttributes_SwPirin[] = INCBIN_U16("data/tilesets/secondary/sw/pirin/metatile_attributes.bin");
@@ -171,11 +345,47 @@ const u16 gMetatileAttributes_SwRoute121[] = INCBIN_U16("data/tilesets/secondary
 const u16 gMetatiles_SwRoute121SafariZoneEntrance[] = INCBIN_U16("data/tilesets/secondary/sw/route-121-safari-zone-entrance/metatiles.bin");
 const u16 gMetatileAttributes_SwRoute121SafariZoneEntrance[] = INCBIN_U16("data/tilesets/secondary/sw/route-121-safari-zone-entrance/metatile_attributes.bin");
 
+const u16 gMetatiles_SwRoute122[] = INCBIN_U16("data/tilesets/secondary/sw/route-122/metatiles.bin");
+const u16 gMetatileAttributes_SwRoute122[] = INCBIN_U16("data/tilesets/secondary/sw/route-122/metatile_attributes.bin");
+
 const u16 gMetatiles_SwRoute123[] = INCBIN_U16("data/tilesets/secondary/sw/route-123/metatiles.bin");
 const u16 gMetatileAttributes_SwRoute123[] = INCBIN_U16("data/tilesets/secondary/sw/route-123/metatile_attributes.bin");
 
 const u16 gMetatiles_SwRoute123Landing[] = INCBIN_U16("data/tilesets/secondary/sw/route-123-landing/metatiles.bin");
 const u16 gMetatileAttributes_SwRoute123Landing[] = INCBIN_U16("data/tilesets/secondary/sw/route-123-landing/metatile_attributes.bin");
+
+const u16 gMetatiles_SwRoute124[] = INCBIN_U16("data/tilesets/secondary/sw/route-124/metatiles.bin");
+const u16 gMetatileAttributes_SwRoute124[] = INCBIN_U16("data/tilesets/secondary/sw/route-124/metatile_attributes.bin");
+
+const u16 gMetatiles_SwRoute125[] = INCBIN_U16("data/tilesets/secondary/sw/route-125/metatiles.bin");
+const u16 gMetatileAttributes_SwRoute125[] = INCBIN_U16("data/tilesets/secondary/sw/route-125/metatile_attributes.bin");
+
+const u16 gMetatiles_SwRoute126[] = INCBIN_U16("data/tilesets/secondary/sw/route-126/metatiles.bin");
+const u16 gMetatileAttributes_SwRoute126[] = INCBIN_U16("data/tilesets/secondary/sw/route-126/metatile_attributes.bin");
+
+const u16 gMetatiles_SwRoute127[] = INCBIN_U16("data/tilesets/secondary/sw/route-127/metatiles.bin");
+const u16 gMetatileAttributes_SwRoute127[] = INCBIN_U16("data/tilesets/secondary/sw/route-127/metatile_attributes.bin");
+
+const u16 gMetatiles_SwRoute128[] = INCBIN_U16("data/tilesets/secondary/sw/route-128/metatiles.bin");
+const u16 gMetatileAttributes_SwRoute128[] = INCBIN_U16("data/tilesets/secondary/sw/route-128/metatile_attributes.bin");
+
+const u16 gMetatiles_SwRoute129[] = INCBIN_U16("data/tilesets/secondary/sw/route-129/metatiles.bin");
+const u16 gMetatileAttributes_SwRoute129[] = INCBIN_U16("data/tilesets/secondary/sw/route-129/metatile_attributes.bin");
+
+const u16 gMetatiles_SwRoute130[] = INCBIN_U16("data/tilesets/secondary/sw/route-130/metatiles.bin");
+const u16 gMetatileAttributes_SwRoute130[] = INCBIN_U16("data/tilesets/secondary/sw/route-130/metatile_attributes.bin");
+
+const u16 gMetatiles_SwRoute131[] = INCBIN_U16("data/tilesets/secondary/sw/route-131/metatiles.bin");
+const u16 gMetatileAttributes_SwRoute131[] = INCBIN_U16("data/tilesets/secondary/sw/route-131/metatile_attributes.bin");
+
+const u16 gMetatiles_SwRoute132[] = INCBIN_U16("data/tilesets/secondary/sw/route-132/metatiles.bin");
+const u16 gMetatileAttributes_SwRoute132[] = INCBIN_U16("data/tilesets/secondary/sw/route-132/metatile_attributes.bin");
+
+const u16 gMetatiles_SwRoute133[] = INCBIN_U16("data/tilesets/secondary/sw/route-133/metatiles.bin");
+const u16 gMetatileAttributes_SwRoute133[] = INCBIN_U16("data/tilesets/secondary/sw/route-133/metatile_attributes.bin");
+
+const u16 gMetatiles_SwRoute134[] = INCBIN_U16("data/tilesets/secondary/sw/route-134/metatiles.bin");
+const u16 gMetatileAttributes_SwRoute134[] = INCBIN_U16("data/tilesets/secondary/sw/route-134/metatile_attributes.bin");
 
 const u16 gMetatiles_SwRwookrrorro[] = INCBIN_U16("data/tilesets/secondary/sw/rwookrrorro/metatiles.bin");
 const u16 gMetatileAttributes_SwRwookrrorro[] = INCBIN_U16("data/tilesets/secondary/sw/rwookrrorro/metatile_attributes.bin");
@@ -189,11 +399,59 @@ const u16 gMetatileAttributes_SwRwookrrorroHut1[] = INCBIN_U16("data/tilesets/se
 const u16 gMetatiles_SwRwookrrorroHut2[] = INCBIN_U16("data/tilesets/secondary/sw/rwookrrorro-hut-2/metatiles.bin");
 const u16 gMetatileAttributes_SwRwookrrorroHut2[] = INCBIN_U16("data/tilesets/secondary/sw/rwookrrorro-hut-2/metatile_attributes.bin");
 
+const u16 gMetatiles_SwSealedVaultInnerRoom[] = INCBIN_U16("data/tilesets/secondary/sw/sealed-vault-inner-room/metatiles.bin");
+const u16 gMetatileAttributes_SwSealedVaultInnerRoom[] = INCBIN_U16("data/tilesets/secondary/sw/sealed-vault-inner-room/metatile_attributes.bin");
+
+const u16 gMetatiles_SwSealedVaultOuterRoom[] = INCBIN_U16("data/tilesets/secondary/sw/sealed-vault-outer-room/metatiles.bin");
+const u16 gMetatileAttributes_SwSealedVaultOuterRoom[] = INCBIN_U16("data/tilesets/secondary/sw/sealed-vault-outer-room/metatile_attributes.bin");
+
 const u16 gMetatiles_SwTerraCaveEnd[] = INCBIN_U16("data/tilesets/secondary/sw/terra-cave-end/metatiles.bin");
 const u16 gMetatileAttributes_SwTerraCaveEnd[] = INCBIN_U16("data/tilesets/secondary/sw/terra-cave-end/metatile_attributes.bin");
+
+const u16 gMetatiles_SwTibannaRefinery[] = INCBIN_U16("data/tilesets/secondary/sw/tibanna-refinery/metatiles.bin");
+const u16 gMetatileAttributes_SwTibannaRefinery[] = INCBIN_U16("data/tilesets/secondary/sw/tibanna-refinery/metatile_attributes.bin");
+
+const u16 gMetatiles_SwTibannaRefineryAnnex[] = INCBIN_U16("data/tilesets/secondary/sw/tibanna-refinery-annex/metatiles.bin");
+const u16 gMetatileAttributes_SwTibannaRefineryAnnex[] = INCBIN_U16("data/tilesets/secondary/sw/tibanna-refinery-annex/metatile_attributes.bin");
+
+const u16 gMetatiles_SwTibannaRefineryInterior[] = INCBIN_U16("data/tilesets/secondary/sw/tibanna-refinery-interior/metatiles.bin");
+const u16 gMetatileAttributes_SwTibannaRefineryInterior[] = INCBIN_U16("data/tilesets/secondary/sw/tibanna-refinery-interior/metatile_attributes.bin");
+
+const u16 gMetatiles_SwTipocaCity[] = INCBIN_U16("data/tilesets/secondary/sw/tipoca-city/metatiles.bin");
+const u16 gMetatileAttributes_SwTipocaCity[] = INCBIN_U16("data/tilesets/secondary/sw/tipoca-city/metatile_attributes.bin");
+
+const u16 gMetatiles_SwTipocaCityCloningHall[] = INCBIN_U16("data/tilesets/secondary/sw/tipoca-city-cloning-hall/metatiles.bin");
+const u16 gMetatileAttributes_SwTipocaCityCloningHall[] = INCBIN_U16("data/tilesets/secondary/sw/tipoca-city-cloning-hall/metatile_attributes.bin");
+
+const u16 gMetatiles_SwTipocaCityHangar[] = INCBIN_U16("data/tilesets/secondary/sw/tipoca-city-hangar/metatiles.bin");
+const u16 gMetatileAttributes_SwTipocaCityHangar[] = INCBIN_U16("data/tilesets/secondary/sw/tipoca-city-hangar/metatile_attributes.bin");
+
+const u16 gMetatiles_SwTipocaCitySupplyDepot[] = INCBIN_U16("data/tilesets/secondary/sw/tipoca-city-supply-depot/metatiles.bin");
+const u16 gMetatileAttributes_SwTipocaCitySupplyDepot[] = INCBIN_U16("data/tilesets/secondary/sw/tipoca-city-supply-depot/metatile_attributes.bin");
 
 const u16 gMetatiles_SwToscheStation[] = INCBIN_U16("data/tilesets/secondary/sw/tosche-station/metatiles.bin");
 const u16 gMetatileAttributes_SwToscheStation[] = INCBIN_U16("data/tilesets/secondary/sw/tosche-station/metatile_attributes.bin");
 
 const u16 gMetatiles_SwToscheStationPowerStation[] = INCBIN_U16("data/tilesets/secondary/sw/tosche-station-power-station/metatiles.bin");
 const u16 gMetatileAttributes_SwToscheStationPowerStation[] = INCBIN_U16("data/tilesets/secondary/sw/tosche-station-power-station/metatile_attributes.bin");
+
+const u16 gMetatiles_SwTythonHangar[] = INCBIN_U16("data/tilesets/secondary/sw/tython-hangar/metatiles.bin");
+const u16 gMetatileAttributes_SwTythonHangar[] = INCBIN_U16("data/tilesets/secondary/sw/tython-hangar/metatile_attributes.bin");
+
+const u16 gMetatiles_SwTythonIsleExterior[] = INCBIN_U16("data/tilesets/secondary/sw/tython-isle-exterior/metatiles.bin");
+const u16 gMetatileAttributes_SwTythonIsleExterior[] = INCBIN_U16("data/tilesets/secondary/sw/tython-isle-exterior/metatile_attributes.bin");
+
+const u16 gMetatiles_SwTythonIsleInterior[] = INCBIN_U16("data/tilesets/secondary/sw/tython-isle-interior/metatiles.bin");
+const u16 gMetatileAttributes_SwTythonIsleInterior[] = INCBIN_U16("data/tilesets/secondary/sw/tython-isle-interior/metatile_attributes.bin");
+
+const u16 gMetatiles_SwWellspringEntrance[] = INCBIN_U16("data/tilesets/secondary/sw/wellspring-entrance/metatiles.bin");
+const u16 gMetatileAttributes_SwWellspringEntrance[] = INCBIN_U16("data/tilesets/secondary/sw/wellspring-entrance/metatile_attributes.bin");
+
+const u16 gMetatiles_SwWellspringInterior[] = INCBIN_U16("data/tilesets/secondary/sw/wellspring-interior/metatiles.bin");
+const u16 gMetatileAttributes_SwWellspringInterior[] = INCBIN_U16("data/tilesets/secondary/sw/wellspring-interior/metatile_attributes.bin");
+
+const u16 gMetatiles_SwYavin4[] = INCBIN_U16("data/tilesets/secondary/sw/yavin-4/metatiles.bin");
+const u16 gMetatileAttributes_SwYavin4[] = INCBIN_U16("data/tilesets/secondary/sw/yavin-4/metatile_attributes.bin");
+
+const u16 gMetatiles_SwYavin4LaunchTower1f[] = INCBIN_U16("data/tilesets/secondary/sw/yavin-4-launch-tower-1f/metatiles.bin");
+const u16 gMetatileAttributes_SwYavin4LaunchTower1f[] = INCBIN_U16("data/tilesets/secondary/sw/yavin-4-launch-tower-1f/metatile_attributes.bin");

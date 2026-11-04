@@ -92,9 +92,27 @@ def autotile_items(area, prim, sec):
         for x, item in enumerate(row):
             role = roles[y][x]
             mid = None if item in T.NEW_ITEMS else T.lookup(prim, sec, item, role, c["stats"], p)
+            if mid is not None and unsafe(T, p, mid, area.grid[y][x]):
+                mid = None          # a door, warp, slide or ladder tile learned as ground: placeholder instead
             line.append((item, role, mid))
         out.append(line)
     return out
+
+
+# behaviours that do something when the player stands on or walks onto the cell: never plain ground or water
+UNSAFE = ("DOOR", "WARP", "WALK_", "SLIDE_", "JUMP_", "ICE", "LADDER", "STAIRS", "ESCALATOR", "CRACKED", "HOLE",
+          "WATERFALL", "CURRENT", "MUDDY_SLOPE", "SECRET_BASE", "TRICK_HOUSE", "MOSSDEEP_GYM", "LAVARIDGE",
+          "AQUA_HIDEOUT", "BRIDGE_OVER", "SPIN", "STOP", "UNION_ROOM", "MUD")
+_BEH = {}
+
+
+def unsafe(T, p, mid, ch):
+    if ch not in WALK and ch != "~":
+        return False
+    if not _BEH:
+        _BEH.update(T.behaviours())
+    name = _BEH.get(T.behaviour_of(p, mid), "")
+    return any(k in name for k in UNSAFE)
 
 
 def sheet_for(area, item, prim, sec):

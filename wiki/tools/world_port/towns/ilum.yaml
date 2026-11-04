@@ -1,0 +1,26 @@
+# Ilum (EverGrandeCity), 44x60 (was 40x80). No walkable exit: the player lands at the pad (29,53) and leaves the
+# same way. The temple gate (the Pokemon League) is (22,10); the Crystal Caves (Victory Road) mouths are (32,27)
+# and (12,38). The eleven "visited" triggers (the fly spot) cover the pad and the main road.
+coords:
+  0: [29, 54]                # visited: the landing pad, the main road and the Bacta Center path
+  1: [28, 54]
+  2: [30, 54]
+  3: [27, 54]
+  4: [29, 55]
+  5: [22, 47]
+  6: [23, 47]
+  7: [22, 48]
+  8: [23, 48]
+  9: [22, 49]
+  10: [23, 49]
+bgs:
+  0: Crystal Caves sign      # the Victory Road sign
+  1: [9, 46]                 # Bacta Center signs, beside its door (10,46)
+  2: [27, 53]                # the city sign, beside the landing pad
+  3: Temple sign             # the Pokemon League sign
+  4: [11, 46]
+sign_texts:
+  Hangar sign (Player's ship): "ILUM LANDING PAD\\nYour ship. Lift off any time."
+heal:
+  HEAL_LOCATION_EVER_GRANDE_CITY: [10, 47]
+  HEAL_LOCATION_EVER_GRANDE_CITY_POKEMON_LEAGUE: [22, 11]

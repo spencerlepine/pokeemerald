@@ -8,10 +8,34 @@ SwRoute123Landing_EventScript_SwPilot::
 	lock
 	faceplayer
 	msgbox SwRoute123Landing_Text_SwPilot_1, MSGBOX_DEFAULT
+	msgbox SwRoute123Landing_Text_SwPilot_11, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, SwRoute123Landing_EventScript_SwPilot_Fly1
+SwRoute123Landing_EventScript_SwPilot_Next1:
+	msgbox SwRoute123Landing_Text_SwPilot_2, MSGBOX_DEFAULT
+	release
+	end
+
+SwRoute123Landing_EventScript_SwPilot_Fly1:
+	msgbox SwRoute123Landing_Text_SwPilot_3, MSGBOX_DEFAULT
+	closemessage
+	playse SE_HYPERSPACE_JUMP
+	waitse
+	warp MAP_SW_JEDHA_HANGAR, 0
+	waitstate
 	release
 	end
 
 SwRoute123Landing_Text_SwPilot_1:
-	.string "“Strap in.”$"
+	.string "PILOT: Strap in. Where are we headed?$"
+
+SwRoute123Landing_Text_SwPilot_11:
+	.string "PILOT: JEDHA?$"
+
+SwRoute123Landing_Text_SwPilot_2:
+	.string "PILOT: No clearance for anywhere else\n"
+	.string "yet. I will be right here.$"
+
+SwRoute123Landing_Text_SwPilot_3:
+	.string "PILOT: Punch it!$"
 
 @ world_port end

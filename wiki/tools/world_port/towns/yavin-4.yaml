@@ -1,0 +1,63 @@
+# Yavin 4 base (MossdeepCity), 56x36 (was 80x40). Exits: west on rows 18-19 (route 124), north on columns 46-47
+# (route 125). The launch tower (the Space Center) door is (40,17), the Bacta Center (27,17), Leia's quarters
+# (Steven's house) (10,25). The Imperial raid (Team Magma) stands in front of the launch tower door, so the door is
+# shut until the player walks up to them; the six triggers ring the group and they file in through the door.
+objects:
+  1: Rebel pilot             # the sailor (Wedge takes him over)
+  2: [5, 28]                 # the expert
+  3: [26, 11]                # the pokefan
+  4: [20, 21]                # the ninja boy
+  5: [52, 15]                # the girl
+  6: [50, 33]                # item ball NET BALL
+  7: Rebel mechanic          # the man (Janson takes him over)
+  8: [53, 21]                # the woman
+  9: Ezra Bridger            # the King's Rock boy
+  10: [39, 18]               # the raid: four grunts round the leader at the door
+  11: [41, 18]
+  12: [39, 19]
+  13: [41, 19]
+  14: [40, 18]               # the raid leader (Maxie), on the door's step
+  15: Kanan Jarrus           # the DYNAMICPUNCH tutor
+  16: [50, 29]               # Scott (hidden; shown after the raid)
+  17: Rebel trooper          # the black belt
+coords:
+  0: [0, 18]                 # visited (fly spot): the west road and the north road
+  1: [0, 19]
+  2: [46, 0]
+  3: [47, 0]
+  4: [40, 20]                # the raid: every cell next to the group
+  5: [40, 19]
+  6: [38, 18]
+  7: [38, 19]
+  8: [42, 18]
+  9: [41, 20]
+bgs:
+  0: Base sign
+  1: Temple sign
+  2: [26, 17]                # Bacta Center signs, beside its door (27,17)
+  3: [31, 17]                # Supply Depot signs, beside its door (32,17)
+  4: [41, 17]                # launch tower sign, beside its door (40,17)
+  5: [28, 17]
+  6: [33, 17]
+  7: [1, 10]                 # the white rock
+sign_texts:
+  Hangar sign (Rebel transport): "REBEL TRANSPORT PAD\\nFlights to friendly worlds. Ask the\\ncrew chief inside the hangar."
+heal:
+  HEAL_LOCATION_MOSSDEEP_CITY: [27, 18]
+movements:
+  MossdeepCity_Movement_MaxieEnterSpaceCenter: u
+  MossdeepCity_Movement_Grunt1EnterSpaceCenter: D16 r u
+  MossdeepCity_Movement_Grunt2EnterSpaceCenter: D16 D16 l u
+  MossdeepCity_Movement_Grunt3EnterSpaceCenter: D16 D16 D16 u r u
+  MossdeepCity_Movement_Grunt4EnterSpaceCenter: D16 D16 D16 D16 D16 u l u
+  # Scott walks off west along the plaza (the player faced north: Scott was above them)
+  MossdeepCity_Movement_ScottExitNorth: l9
+  MossdeepCity_Movement_ScottExitEast: d l9
+checks:
+  - {movement: MossdeepCity_Movement_MaxieEnterSpaceCenter, from: [40, 18], to: [40, 17]}
+  - {movement: MossdeepCity_Movement_Grunt1EnterSpaceCenter, from: [39, 18], to: [40, 17]}
+  - {movement: MossdeepCity_Movement_Grunt2EnterSpaceCenter, from: [41, 18], to: [40, 17]}
+  - {movement: MossdeepCity_Movement_Grunt3EnterSpaceCenter, from: [39, 19], to: [40, 17]}
+  - {movement: MossdeepCity_Movement_Grunt4EnterSpaceCenter, from: [41, 19], to: [40, 17]}
+  - {movement: MossdeepCity_Movement_ScottExitNorth, from: [50, 29], to: [41, 29]}
+  - {movement: MossdeepCity_Movement_ScottExitEast, from: [50, 29], to: [41, 30]}

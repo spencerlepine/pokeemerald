@@ -200,6 +200,13 @@
       "elevation": 0,
       "dest_map": "MAP_SW_KACHIRHO_SUPPLY_DEPOT",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 23,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_SW_HANGAR_TATOOINE_KASHYYYK",
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [],
