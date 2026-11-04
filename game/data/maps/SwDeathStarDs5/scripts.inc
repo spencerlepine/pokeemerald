@@ -29,11 +29,8 @@ SwDeathStarDs5_EventScript_SwGrandMoffSAideFinalBattle::
 	msgbox SwDeathStarDs5_Text_SwGrandMoffSAideFinalBattle_1, MSGBOX_AUTOCLOSE
 	end
 
-SwDeathStarDs5_EventScript_SwItemBall::
-	lock
-	faceplayer
-	msgbox SwDeathStarDs5_Text_SwItemBall_1, MSGBOX_DEFAULT
-	release
+SwDeathStarDs5_EventScript_SwItem1::
+	finditem ITEM_CHOICE_BAND
 	end
 
 SwDeathStarDs5_Text_SwImperialOfficer1_1:
@@ -52,8 +49,5 @@ SwDeathStarDs5_Text_SwGrandMoffSAideFinalBattle_1:
 	.string "“Director Krennic. We stand here amidst\n"
 	.string "my achievement, not yours. ...get out.\p"
 	.string "Before Lord Vader hears of this.”$"
-
-SwDeathStarDs5_Text_SwItemBall_1:
-	.string "ITEM BALL$"
 
 @ world_port end

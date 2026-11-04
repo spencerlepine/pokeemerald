@@ -272,7 +272,7 @@ needs, copied into this repo. Nothing outside the repo is needed; starwars-db is
 ```sh
 python3 tools/scan_game_assets.py   # mapping/asset_inventory.csv from ../game (re-run after the game changes)
 python3 tools/build.py              # optional: STARWARS_DB_DIR=/path/to/starwars-db/database
-python3 tools/encounters.py # encounters.csv (habitat swaps, new-area tables)
+python3 tools/encounters.py # encounters.csv (habitat swaps, new-area tables); --install writes them into ../game
 python3 tools/habitats.py   # species_habitats.csv
 python3 tools/sand_skim.py  # sand_skim.csv, dune_sea_encounters.csv (Dune Sea field move)
 python3 tools/obtain.py     # obtain.csv, npcs.csv (who gives what, in story order)

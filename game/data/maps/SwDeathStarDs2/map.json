@@ -54,7 +54,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAN_1",
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 22,
       "y": 14,
       "elevation": 3,
@@ -63,8 +63,8 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SwDeathStarDs2_EventScript_SwItemBall",
-      "flag": "0"
+      "script": "SwDeathStarDs2_EventScript_SwItem1",
+      "flag": "FLAG_UNUSED_0x035"
     }
   ],
   "warp_events": [

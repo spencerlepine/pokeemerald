@@ -220,6 +220,26 @@ def _person_script(blk, key, row, display, area):
     return label, False, None
 
 
+_BALLS = {}
+
+
+def item_ball(area, p, nth):
+    """(ITEM_X, FLAG_X) of the nth item ball of an area, from mapping/obtain_extra.csv (kind item_ball,
+    map:<area id>, in file order), or None."""
+    if p["name"].lower() not in ("item ball", "item"):
+        return None
+    if not _BALLS:
+        import csv
+        with open(B.MAPPING / "obtain_extra.csv", newline="") as f:
+            for r in csv.DictReader(f):
+                if r["kind"] == "item_ball" and r["map_id"].startswith("map:") and r["flag"]:
+                    item = "ITEM_" + r["what"].split(":", 1)[1].upper().replace("-", "_")
+                    _BALLS.setdefault(r["map_id"][4:], []).append((item, r["flag"]))
+        _BALLS.setdefault("", [])
+    balls = _BALLS.get(area.id) or []
+    return balls[nth - 1] if nth <= len(balls) else None
+
+
 def new_object(area, C, p, row, label, trainer, flag, taken, problems):
     x, y = p["at"]
     if not (0 <= x < area.w and 0 <= y < area.h) or C.coll[y, x] or area.grid[y][x] not in WALKABLE:
@@ -342,6 +362,14 @@ def events(world, a, r, mj):
             vpos[tuple(p["at"])] -= 1
             continue
         row = row_for(rows, a, p, nth)
+        ball = item_ball(a, p, nth) if not row else None
+        if ball:
+            item, flag = ball
+            label = blk.script(blk.label("EventScript", key_of("Item", nth, True)), f"\tfinditem {item}\n\tend\n")
+            o = new_object(a, C, p, None, label, False, flag, taken, problems)
+            o["graphics_id"] = "OBJ_EVENT_GFX_ITEM_BALL"
+            objs.append(o)
+            continue
         if p["name"] == "Pilot" and world.lanes.has_pilot(a):
             label = world.lanes.pilot_script(blk, a, key_of(p["name"], nth, counts[p["name"]] > 1))
             objs.append(new_object(a, C, p, row, label, False, None, taken, problems))

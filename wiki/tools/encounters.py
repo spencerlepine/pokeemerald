@@ -13,6 +13,11 @@ home planet is the swap's planet, and the base stat total moves by at most 150. 
 the result, so species_habitats.csv explains what the player actually meets.
 
   python3 tools/encounters.py            # database/encounters.csv (+ warnings, exit 1 if any)
+  python3 tools/encounters.py --install  # also write the species into ../game/src/data/wild_encounters.json
+
+The install changes only species (rates and levels are the game's), matching each slot by the Emerald species it
+still holds, and adds the tables of the new areas (wild_extra.csv) as new headers. Run tools/sand_skim.py first:
+its Dune Sea tables are already in the game and are left as they are.
 """
 import collections
 import csv
@@ -108,5 +113,91 @@ def main() -> int:
     return 1 if warnings else 0
 
 
+METHODS = {"land": "land_mons", "water": "water_mons", "rock_smash": "rock_smash_mons"}
+RODS = {"old_rod": 0, "good_rod": 2, "super_rod": 5}
+
+
+def install():
+    """Write database/encounters.csv's species into ../game (see the module doc). Returns the problems."""
+    import json
+    sys.path.insert(0, str(ROOT / "tools"))
+    import sand_skim as SK
+    gj = ROOT.parent / "game/src/data/wild_encounters.json"
+    text = gj.read_text()
+    data = json.loads(text)
+    assert SK.dump_json(data) == text, "wild_encounters.json layout changed; fix sand_skim.dump_json"
+    enc = read(DB / "encounters.csv")
+    label_map = {r["base_label"]: r["map_id"] for r in read(EMERALD / "wild_encounters.csv")}
+    by = {(r["map_id"], r["method"], int(r["slot"])): r for r in enc}
+    problems, changed = [], 0
+    heads = data["wild_encounter_groups"][0]["encounters"]
+    for h in heads:
+        mid = label_map.get(h["base_label"])
+        if not mid:
+            continue
+        for method, field in [*METHODS.items(), *((m, "fishing_mons") for m in RODS)]:
+            mons = (h.get(field) or {}).get("mons") or []
+            slots = range(len(mons)) if field != "fishing_mons" else range(RODS[method], RODS[method] + (2, 3, 5)[list(RODS).index(method)])
+            for i in slots:
+                if i >= len(mons):
+                    continue
+                r = by.get((mid, method, i))
+                if not r or r["source"] in ("emerald", "dune-sea"):
+                    continue
+                want = "SPECIES_" + SK.key(r["sw_species"])
+                if mons[i]["species"] == want:
+                    continue
+                if mons[i]["species"] != "SPECIES_" + SK.key(r["emerald_species"]):
+                    problems.append(f"{h['base_label']} {method} {i}: game has {mons[i]['species']}, not "
+                                    f"{r['emerald_species']}; left as is")
+                    continue
+                mons[i]["species"] = want
+                changed += 1
+    # new areas: one header each, after Emerald's
+    new = collections.defaultdict(list)
+    for r in enc:
+        if r["source"] == "new":
+            new[r["map_id"]].append(r)
+    rates = collections.defaultdict(dict)
+    for r in read(MAPPING / "wild_extra.csv"):
+        rates[r["map_id"]][r["method"]] = int(r["area_rate"])
+    for mid, rows in new.items():
+        area = mid.split(":", 1)[1]
+        const = "MAP_SW_" + area.upper().replace("-", "_")
+        label = "gSw" + "".join(w.capitalize() for w in area.split("-"))
+        h = {"map": const, "base_label": label}
+        def mons(rs):
+            return [{"min_level": int(r["min_level"]), "max_level": int(r["max_level"]),
+                     "species": "SPECIES_" + SK.key(r["sw_species"])} for r in sorted(rs, key=lambda r: int(r["slot"]))]
+        for method, field in METHODS.items():
+            rs = [r for r in rows if r["method"] == method]
+            if rs:
+                h[field] = {"encounter_rate": rates[mid][method], "mons": mons(rs)}
+        rods = [x for m in RODS for x in mons([r for r in rows if r["method"] == m])]   # old, good, super
+        if rods:
+            if len(rods) != 10:
+                problems.append(f"{mid}: {len(rods)} rod slots, the game needs 10 (2 old, 3 good, 5 super)")
+            else:
+                h["fishing_mons"] = {"encounter_rate": rates[mid].get("old_rod") or rates[mid].get("good_rod"),
+                                     "mons": rods}
+        old = [i for i, x in enumerate(heads) if x["base_label"] == label]
+        if old:
+            if heads[old[0]] != h:
+                heads[old[0]] = h
+                changed += 1
+        else:
+            heads.append(h)
+            changed += 1
+    if changed:
+        gj.write_text(SK.dump_json(data))
+    print(f"installed into ../game: {changed} changes")
+    return problems
+
+
 if __name__ == "__main__":
-    sys.exit(main())
+    rc = main()
+    if "--install" in sys.argv:
+        for p_ in install():
+            print("  !", p_)
+            rc = 1
+    sys.exit(rc)

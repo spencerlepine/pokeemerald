@@ -19,11 +19,8 @@ SwDeathStarDs3_EventScript_SwStormtrooper2::
 	msgbox SwDeathStarDs3_Text_SwStormtrooper2_1, MSGBOX_AUTOCLOSE
 	end
 
-SwDeathStarDs3_EventScript_SwItemBall::
-	lock
-	faceplayer
-	msgbox SwDeathStarDs3_Text_SwItemBall_1, MSGBOX_DEFAULT
-	release
+SwDeathStarDs3_EventScript_SwItem1::
+	finditem ITEM_MAX_REVIVE
 	end
 
 SwDeathStarDs3_Text_SwStormtrooper1_1:
@@ -37,8 +34,5 @@ SwDeathStarDs3_Text_SwImperialOfficer_1:
 SwDeathStarDs3_Text_SwStormtrooper2_1:
 	.string "“The scaffolds are not rated for a\n"
 	.string "fight. We fight anyway.”$"
-
-SwDeathStarDs3_Text_SwItemBall_1:
-	.string "ITEM BALL$"
 
 @ world_port end
