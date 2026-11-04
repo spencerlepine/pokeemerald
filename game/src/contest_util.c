@@ -46,6 +46,12 @@
 #include "constants/songs.h"
 #include "contest.h"
 
+// The Showcase stage map is deleted, so its local ids are no longer generated. This code is never reached.
+#define LOCALID_CONTESTANT_1 3
+#define LOCALID_CONTESTANT_2 4
+#define LOCALID_CONTESTANT_3 5
+#define LOCALID_CONTESTANT_4 14
+
 enum {
     SLIDING_TEXT_OFFSCREEN,
     SLIDING_TEXT_ENTERING,
