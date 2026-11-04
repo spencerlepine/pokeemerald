@@ -1,0 +1,43 @@
+# A sandstone arena hall (the Mos Espa arena gates, The Phantom Menace): a wide battered hall, a tall
+# portal block with twin drum pillars flanking a big arched doorway, banners on masts, a low dome behind.
+name: arena-colosseum
+style: tatooine
+about: Wide battered hall, tall portal with twin drum pillars and a big arched door, banners, a dome behind.
+width: [6, 7, 8]
+choose:
+  hh: "=H if H else 5"
+  w: ["=w_max * 0.9", "=w_max"]
+  d: ["=hh * 0.42", "=hh * 0.48"]
+  h: ["=hh * 0.24", "=hh * 0.28"]
+  px0: [-0.4, 0.4]
+  px: "=door_x if door_x is not None else px0"
+  pw: [2.2, 2.6]                                # portal width
+  ph: ["=h + 0.5", "=h + 0.75"]
+  pr: [0.32, 0.4]                               # pillar radius
+  back: {pick: [dome, step, none], weights: [3, 2, 1]}
+  flags: {pick: [true, false], weights: [3, 1]}
+parts:
+  - {use: adobe-block, name: hall, with: {w: "=w", d: "=d", h: "=h", batter: 0.16}}
+  - {use: roof-lip, name: hall-lip, with: {w: "=w", d: "=d", h: "=h", batter: 0.16, t: 0.18}}
+  - when: "=back == 'dome'"
+    parts:
+      - {use: dome, name: dome, at: ["=-px * 0.5", "=d * 0.6", "=h"], with: {r: "=min(w * 0.22, d * 0.45)", ry: 0.85, hk: "=min(0.7, (hh - d - h - 0.3) / max(0.5, min(w * 0.22, d * 0.45)))"}}
+  - when: "=back == 'step'"
+    parts:
+      - {use: adobe-block, name: upper, at: [0, "=d * 0.4", "=h"], with: {w: "=w * 0.6", d: "=d * 0.5", h: "=min(0.7, hh - d - h - 0.3)", batter: 0.1}}
+  # the portal: a tall block with twin drum pillars and the big arched door
+  - {use: adobe-block, name: portal, at: ["=px", -0.02, 0], with: {w: "=pw", d: "=d * 0.6", h: "=ph", batter: 0.14}}
+  - {use: roof-lip, name: portal-lip, at: ["=px", -0.02, 0], with: {w: "=pw", d: "=d * 0.6", h: "=ph", batter: 0.14, t: 0.2}}
+  - {use: door-arch, name: door, at: ["=px", -0.02, 0], with: {w: 1.05, h: "=ph * 0.55", frame: 0.2}}
+  - repeat: 2
+    parts:
+      - {use: drum, name: pillar, at: ["=px + (i * 2 - 1) * (pw / 2 + pr * 0.6)", "=pr * 0.4", 0], with: {r: "=pr", h: "=ph + 0.2"}}
+      - {name: pillar-cap, mat: trim, cylinder: {a: ["=px + (i * 2 - 1) * (pw / 2 + pr * 0.6)", "=pr * 0.4", "=ph + 0.2"], b: ["=px + (i * 2 - 1) * (pw / 2 + pr * 0.6)", "=pr * 0.4", "=ph + 0.36"], r1: "=pr + 0.08"}}
+  - when: "=flags"
+    parts:
+      - repeat: 2
+        parts:
+          - {use: banner, name: flag, at: ["=(i * 2 - 1) * (w / 2 - 0.45)", 0.15, 0], with: {h: "=h + 0.7", w: 0.45, l: 0.75}}
+  - repeat: 2
+    parts:
+      - {use: window-slot, name: win, at: ["=px + (i * 2 - 1) * (pw / 2 + 1.0)", 0.05, "=h * 0.6"], with: {w: 0.6, h: 0.26}}

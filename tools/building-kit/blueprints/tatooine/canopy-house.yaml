@@ -14,8 +14,8 @@ choose:
   bx: "=dx"
   bd: "=min(1.5, hh * 0.38)"
   bh: "=min(1.05, hh * 0.3)"
-  cw: "=w_max - bw - 0.05"                         # the canopy's width
-  cx: "=bx + side * (bw / 2 + cw / 2)"
+  cw: "=w_max / 2 - side * bx - bw / 2 - 0.3"      # the canopy's width, up to the far edge
+  cx: "=bx + side * (bw / 2 + 0.05 + cw / 2)"
   cd: "=min(1.15, hh * 0.3)"
   ch: [0.8, 0.95]
   under: {pick: [crates, tank, bench], weights: [2, 2, 2]}

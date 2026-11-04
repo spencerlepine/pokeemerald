@@ -1,0 +1,33 @@
+# A water tower or condenser (the Anchorhead and Mos Espa water sellers, the cistern towers of Tosche
+# Station): a tall battered drum or a tank raised on legs over a small pump house, pipes running down,
+# a cap dome or flat top.
+name: water-tower
+style: tatooine
+about: Tall battered drum or a tank on legs over a pump house, a cap, a pipe running down.
+width: [3, 4]
+choose:
+  hh: "=H or 4"
+  form: {pick: [drum, legs], weights: [1, 1]}
+  r: "=min(w_max * 0.36, 0.8)"
+  th: "=max(1.2, min(2.0, hh - 2 * r * 0.9 - 0.8))"
+  cap: {pick: [dome, flat], weights: [2, 1]}
+  dx: "=door_x if door_x is not None else 0"
+parts:
+  - when: "=form == 'drum'"
+    parts:
+      - {use: drum, name: tank, at: [0, "=r + 0.15", 0], with: {r: "=r", h: "=th"}}
+      - {name: band, mat: trim, cylinder: {a: [0, "=r + 0.15", "=th * 0.55"], b: [0, "=r + 0.15", "=th * 0.55 + 0.14"], r1: "=r * 0.97 + 0.04"}}
+      - {use: door-arch, name: door, at: ["=dx", 0.17, 0], with: {w: 0.62, h: 0.5}}
+  - when: "=form == 'legs'"
+    parts:
+      - {use: adobe-block, name: pump, at: [0, 0.1, 0], with: {w: "=r * 2.1", d: "=r * 1.6", h: 0.7, batter: 0.08}}
+      - {name: leg-w, mat: metal, box: {c: ["=-r * 0.75", "=r + 0.15", "=th / 2"], half: [0.08, 0.08, "=th / 2"]}}
+      - {name: leg-e, mat: metal, box: {c: ["=r * 0.75", "=r + 0.15", "=th / 2"], half: [0.08, 0.08, "=th / 2"]}}
+      - {name: tank, mat: wall, cylinder: {a: [0, "=r + 0.15", "=th * 0.62"], b: [0, "=r + 0.15", "=th"], r1: "=r * 0.98"}}
+      - {use: door-slab, name: door, at: ["=dx", 0.1, 0], with: {w: 0.62, h: 0.55}}
+  - when: "=cap == 'dome'"
+    parts:
+      - {use: dome, name: cap, at: [0, "=r + 0.15", "=th"], with: {r: "=r * 0.92", ry: 1.0, hk: 0.5}}
+    else:
+      - {use: vent, name: cap, at: [0, "=r + 0.15", "=th"], with: {r: "=r * 0.45", h: 0.18}}
+  - {name: pipe, mat: metal, cylinder: {a: ["=r * 0.85 * (1 if seed % 2 else -1)", "=r * 0.6", 0], b: ["=r * 0.85 * (1 if seed % 2 else -1)", "=r * 0.6", "=th * 0.9"], r1: 0.08}}

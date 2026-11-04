@@ -1,0 +1,36 @@
+# A Jawa sandcrawler parked as a shop (A New Hope): a huge slope-fronted hull on two dark tread blocks,
+# a raised cab at the back, the side ramp let down as the door, droids for sale in front.
+name: sandcrawler
+style: tatooine
+about: Huge slope-fronted crawler hull on dark treads, a raised cab, the ramp let down as the door.
+width: [6, 7, 8]
+choose:
+  hh: "=H if H else 5"
+  L: "=w_max - 0.1"                             # hull length, east-west
+  D: ["=hh * 0.3", "=hh * 0.36"]               # hull depth, north-south
+  th: [0.4, 0.5]                                # tread height
+  bh: "=min(1.9, hh - D - 0.9)"                 # hull height above the treads
+  face: {pick: [-1, 1]}                         # which end the sloped nose points
+  dx: "=door_x if door_x is not None else -face * L * 0.12"
+  cab: {pick: [true, false], weights: [3, 1]}
+parts:
+  - repeat: 2
+    parts:
+      - {name: tread, mat: dark, box: {c: ["=(i * 2 - 1) * L * 0.27", "=D / 2", "=th / 2"], half: ["=L * 0.2", "=D / 2 - 0.05", "=th / 2"], radius: 0.05}}
+  - name: hull
+    mat: metal
+    extrude: {axis: y, span: [0.05, "=D - 0.05"], end: 0.94, round: 0.04,
+              profile: [["=-face * L / 2", "=th"], ["=face * (L / 2 - 0.5)", "=th"], ["=face * L / 2", "=th + bh * 0.35"],
+                        ["=face * (L / 2 - 1.6)", "=th + bh"], ["=-face * L / 2", "=th + bh"]]}
+  - {name: band, mat: light, box: {c: [0, -0.02, "=th + bh * 0.62"], half: ["=L * 0.32", 0.06, 0.14]}}
+  - when: "=cab"
+    parts:
+      - {name: cab, mat: metal, box: {c: ["=-face * L * 0.25", "=D * 0.55", "=th + bh + 0.25"], half: ["=L * 0.17", "=D * 0.3", 0.25], radius: 0.04}}
+      - {name: cab-win, mat: dark, box: {c: ["=-face * L * 0.25", "=D * 0.25 - 0.03", "=th + bh + 0.3"], half: ["=L * 0.12", 0.04, 0.08]}}
+  # the ramp let down to the ground, the hold behind it
+  - {use: hangar-mouth, name: door, at: ["=dx", 0.02, "=th"], with: {w: 1.0, h: "=bh * 0.55", frame: 0.12, trim: mid}}
+  - {name: ramp, mat: mid, extrude: {axis: x, span: ["=dx - 0.5", "=dx + 0.5"], profile: [[-0.45, 0], [0.0, 0], [0.0, "=th + 0.05"]], round: 0.02}}
+  - repeat: 2
+    parts:
+      - {name: droid, mat: light, cylinder: {a: ["=dx + (i * 2 - 1) * 0.95", -0.25, 0], b: ["=dx + (i * 2 - 1) * 0.95", -0.25, 0.45], r1: 0.17}}
+      - {name: droid-head, mat: mid, ellipsoid: {c: ["=dx + (i * 2 - 1) * 0.95", -0.25, 0.45], r: [0.17, 0.17, 0.13]}}

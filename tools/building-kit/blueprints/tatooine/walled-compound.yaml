@@ -1,0 +1,53 @@
+# A walled courtyard compound (Mos Espa's back streets, Anakin's quarter, the Bestine flats): a low
+# rounded adobe wall around a sand yard, a gate gap with buttressed posts, a dome hut or a block house
+# against the back wall, a vaporator or a water trough in the yard.
+name: walled-compound
+style: tatooine
+about: Low rounded adobe wall round a yard, a gate with posts, a dome or block house at the back, a vaporator.
+width: [5, 6, 7]
+choose:
+  hh: "=H or 5"
+  yd: "=min(hh - 1.6, 3.6)"                       # yard depth (outer)
+  wt: [0.22, 0.3]                                 # wall thickness
+  wh: [0.45, 0.6]                                 # wall height
+  gx: "=door_x if door_x is not None else 0"
+  gw: 1.0                                          # gate width
+  house: {pick: [dome, block, twin], weights: [3, 2, 2]}
+  hx: ["=-(w_max / 2 - 1.2) * 0.5", "=(w_max / 2 - 1.2) * 0.5"]
+  yard: {pick: [vap, trough, crates], weights: [2, 2, 1]}
+  side: "=1 if hx <= 0 else -1"
+parts:
+  # the wall: back, sides and the two front halves either side of the gate
+  - {name: wall-back, mat: wall, box: {c: [0, "=yd - wt / 2", "=wh / 2"], half: ["=w_max / 2", "=wt / 2", "=wh / 2"], radius: 0.08}}
+  - {name: wall-w, mat: wall, box: {c: ["=-w_max / 2 + wt / 2", "=yd / 2", "=wh / 2"], half: ["=wt / 2", "=yd / 2", "=wh / 2"], radius: 0.08}}
+  - {name: wall-e, mat: wall, box: {c: ["=w_max / 2 - wt / 2", "=yd / 2", "=wh / 2"], half: ["=wt / 2", "=yd / 2", "=wh / 2"], radius: 0.08}}
+  - {name: front-w, mat: wall, box: {c: ["=(-w_max / 2 + gx - gw / 2) / 2", "=wt / 2", "=wh / 2"], half: ["=(gx - gw / 2 + w_max / 2) / 2", "=wt / 2", "=wh / 2"], radius: 0.08}}
+  - {name: front-e, mat: wall, box: {c: ["=(w_max / 2 + gx + gw / 2) / 2", "=wt / 2", "=wh / 2"], half: ["=(w_max / 2 - gx - gw / 2) / 2", "=wt / 2", "=wh / 2"], radius: 0.08}}
+  - {name: gp-w, mat: trim, box: {c: ["=gx - gw / 2 - 0.12", "=wt / 2", "=wh / 2 + 0.1"], half: [0.16, "=wt / 2 + 0.04", "=wh / 2 + 0.1"], radius: 0.05}}
+  - {name: gp-e, mat: trim, box: {c: ["=gx + gw / 2 + 0.12", "=wt / 2", "=wh / 2 + 0.1"], half: [0.16, "=wt / 2 + 0.04", "=wh / 2 + 0.1"], radius: 0.05}}
+  - {use: gate-gap, name: door, at: ["=gx", 0.1, 0], with: {w: "=gw - 0.1"}}
+  # the house against the back wall
+  - when: "=house == 'dome'"
+    parts:
+      - {use: dome, name: house, at: ["=hx", "=yd - 0.75", 0], with: {r: 1.0, ry: 0.72, hk: 0.85}}
+      - {use: entry-vault, name: entry, at: ["=hx", "=yd - 1.55", 0], with: {w: 0.95, d: 0.5, h: 0.5}}
+      - {use: door-arch, name: hdoor, at: ["=hx", "=yd - 1.55", 0], with: {w: 0.62, h: 0.42}}
+  - when: "=house == 'block'"
+    parts:
+      - {use: adobe-block, name: house, at: ["=hx", "=yd - 1.35", 0], with: {w: 2.0, d: 1.2, h: 1.0, batter: 0.12}}
+      - {use: roof-lip, name: lip, at: ["=hx", "=yd - 1.35", 0], with: {w: 2.0, d: 1.2, h: 1.0, batter: 0.12, t: 0.13}}
+      - {use: door-arch, name: hdoor, at: ["=hx", "=yd - 1.35", 0], with: {w: 0.7, h: 0.6}}
+  - when: "=house == 'twin'"
+    parts:
+      - {use: dome, name: house-w, at: ["=-w_max * 0.22", "=yd - 0.7", 0], with: {r: 0.8, ry: 0.8, hk: 0.85}}
+      - {use: dome, name: house-e, at: ["=w_max * 0.22", "=yd - 0.75", 0], with: {r: 0.7, ry: 0.85, hk: 0.85}}
+      - {use: door-arch, name: hdoor, at: ["=-w_max * 0.22", "=yd - 1.3", 0], with: {w: 0.6, h: 0.42}}
+  - when: "=yard == 'vap'"
+    parts:
+      - {use: vaporator, name: vap, at: ["=side * (w_max / 2 - 0.65)", "=yd * 0.4", 0], with: {h: 1.3}}
+  - when: "=yard == 'trough'"
+    parts:
+      - {name: trough, mat: mid, box: {c: ["=side * (w_max / 2 - 0.75)", "=yd * 0.38", 0.18], half: [0.32, 0.22, 0.18], radius: 0.05}}
+  - when: "=yard == 'crates'"
+    parts:
+      - {use: crate, name: crate, at: ["=side * (w_max / 2 - 0.6)", "=yd * 0.35", 0], with: {s: 0.48}}

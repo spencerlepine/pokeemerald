@@ -86,3 +86,17 @@ templates:
     parts:
       - {name: mast, mat: metal, cylinder: {a: [0, 0, 0], b: [0, 0, "=h"], r1: 0.06}}
       - {name: flag, mat: "=mat", box: {c: [0, -0.05, "=h - 0.05 - l / 2"], half: ["=w / 2", 0.04, "=l / 2"], radius: 0.02}}
+  # A flat dark doorway on the ground (the gate gap of a walled yard). Placed with `at`, so the build
+  # finds its column when it is named `door`.
+  gate-gap:
+    params: {w: 0.9, d: 0.1, mat: dark}
+    preview: {}
+    parts:
+      - {name: gap, mat: "=mat", box: {c: [0, 0, 0.01], half: ["=w / 2", "=d / 2", 0.01]}}
+  # A wide dark vehicle bay in a south wall, with a lintel over it (garages, hangars). Foot at y = 0.
+  bay-door:
+    params: {w: 2.0, h: 0.8, trim: trim, door: dark}
+    preview: {}
+    parts:
+      - {name: bay, mat: "=door", box: {c: [0, -0.05, "=h / 2"], half: ["=w / 2", 0.06, "=h / 2"]}}
+      - {name: lintel, mat: "=trim", box: {c: [0, -0.08, "=h + 0.06"], half: ["=w / 2 + 0.12", 0.08, 0.08]}}

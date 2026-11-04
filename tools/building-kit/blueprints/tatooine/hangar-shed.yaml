@@ -38,7 +38,7 @@ parts:
   - when: "=roof == 'domes'"
     parts:
       - {use: roof-lip, name: lip, with: {w: "=w", d: "=d", h: "=h", batter: 0.14, t: 0.16}}
-      - repeat: "=max(2, int(w // 1.8))"
+      - repeat: "=max(2, w // 1.8)"
         parts:
           - {use: dome, name: dome, at: ["=-w / 2 + (i + 0.5) * w / n", "=d * 0.52", "=h"],
              with: {r: "=min(w / n * 0.42, d * 0.4)", ry: 0.9, hk: "=min(0.6, rise / max(0.3, min(w / n * 0.42, d * 0.4)))"}}

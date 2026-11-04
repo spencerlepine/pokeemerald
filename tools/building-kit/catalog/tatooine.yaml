@@ -8,9 +8,9 @@ buildings:
   art: art:shared:bacta-center
   size: [5, 4]
   door: 2
-  blueprint: ''
+  blueprint: tatooine/bacta-center
   seed: 0
-  about: ''
+  about: Civic hall with a big low dome and a vaulted porch, like the Mos Espa public blocks (TPM).
 - id: bld:tatooine:anchorhead-farm-co-op
   kind: landmark
   name: Farm co-op
@@ -18,9 +18,9 @@ buildings:
   art: art:tatooine:farm-co-op
   size: [6, 4]
   door: 3
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/farm-co-op
+  seed: 2
+  about: Long hall with roof domes, a storage drum and vaporators behind, the farmers' co-op (ANH).
 - id: bld:tatooine:anchorhead-supply-depot
   kind: depot
   name: Supply Depot
@@ -28,9 +28,9 @@ buildings:
   art: art:shared:supply-depot
   size: [4, 4]
   door: 1
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/supply-depot
+  seed: 3
+  about: Trader's block with a shade canopy and a roof dome, Anchorhead's stores (ANH).
 - id: bld:tatooine:anchorhead-camie-s-family-home
   kind: home
   name: Camie's family home
@@ -38,9 +38,9 @@ buildings:
   art: art:tatooine:homestead-dome
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/dome-hut
+  seed: 3
+  about: Low adobe dome with a vaulted entry, a moisture-farm hut like the Lars homestead (ANH).
 - id: bld:tatooine:anchorhead-companion-rater-s-home
   kind: home
   name: Companion rater's home
@@ -48,9 +48,9 @@ buildings:
   art: art:tatooine:homestead-dome
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/block-house
+  seed: 2
+  about: Battered block with a stepped upper room, an Anchorhead townhouse (ANH).
 - id: bld:tatooine:anchorhead-old-farmer-s-home
   kind: landmark
   name: Old farmer's home
@@ -58,9 +58,9 @@ buildings:
   art: art:tatooine:homestead-dome
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/dome-hut
+  seed: 6
+  about: Old farmer's dome hut with a side dome and a vaporator (ANH).
 - id: bld:tatooine:bens-hut-ben-kenobi-s-hut
   kind: hut
   name: Ben Kenobi's hut
@@ -68,9 +68,9 @@ buildings:
   art: art:tatooine:homestead-dome
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/dome-hut
+  seed: 11
+  about: Ben Kenobi's lone dome hut on the edge of the Jundland Wastes (ANH).
 - id: bld:tatooine:bestine-bacta-center
   kind: bacta
   name: Bacta Center
@@ -78,9 +78,9 @@ buildings:
   art: art:shared:bacta-center
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/bacta-center
+  seed: 2
+  about: Battered hall with a dark glass band under its dome, a Mos Eisley civic block (ANH).
 - id: bld:tatooine:bestine-supply-depot
   kind: depot
   name: Supply Depot
@@ -88,9 +88,9 @@ buildings:
   art: art:shared:supply-depot
   size: [4, 4]
   door: 1
-  blueprint: ''
+  blueprint: tatooine/supply-depot
   seed: 0
-  about: ''
+  about: Stepped shop block with buttressed door jambs and a vent, a Mos Espa storefront (TPM).
 - id: bld:tatooine:bestine-flats-east
   kind: home
   name: Flats (east)
@@ -98,9 +98,10 @@ buildings:
   art: art:tatooine:sunken-courtyard-home
   size: [6, 6]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/courtyard-home
+  seed: 3
+  about: Sunken courtyard flats with a block entrance, Bestine's pit homes (after the Lars courtyard, ANH).
+  set: {ent: block}
 - id: bld:tatooine:bestine-flats-south
   kind: home
   name: Flats (south)
@@ -108,9 +109,10 @@ buildings:
   art: art:tatooine:sunken-courtyard-home
   size: [6, 6]
   door: 3
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/courtyard-home
+  seed: 5
+  about: Sunken courtyard flats with a drum-and-dome entrance (after the Lars courtyard, ANH).
+  set: {ent: drum}
 - id: bld:tatooine:bestine-vibroblade-smith
   kind: shop
   name: Vibroblade smith
@@ -118,9 +120,9 @@ buildings:
   art: art:tatooine:homestead-dome
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/block-house
+  seed: 5
+  about: Smith's battered workshop block with a vent stack, a Mos Espa forge (TPM).
 - id: bld:tatooine:bestine-retired-podracer-s-home
   kind: home
   name: Retired podracer's home
@@ -128,9 +130,9 @@ buildings:
   art: art:tatooine:homestead-dome
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/speeder-garage
+  seed: 3
+  about: Vaulted garage home with a speeder in the bay, like the Mos Espa podracer hangars (TPM).
 - id: bld:tatooine:bestine-biggs-s-family-home
   kind: home
   name: Biggs's family home
@@ -138,9 +140,9 @@ buildings:
   art: art:tatooine:homestead-dome
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/dome-hut
+  seed: 8
+  about: Family dome hut with an annex, a Tatooine homestead (ANH).
 - id: bld:tatooine:bestine-trader-s-home
   kind: shop
   name: Trader's home
@@ -148,9 +150,9 @@ buildings:
   art: art:tatooine:homestead-dome
   size: [5, 4]
   door: 2
-  blueprint: ''
+  blueprint: tatooine/canopy-house
   seed: 0
-  about: ''
+  about: Trader's block home with a shade canopy over a water tank, a Mos Espa backstreet (TPM).
 - id: bld:tatooine:mos-eisley-bacta-center
   kind: bacta
   name: Bacta Center
@@ -158,9 +160,9 @@ buildings:
   art: art:shared:bacta-center
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/bacta-center
+  seed: 5
+  about: Hall between two domed drum towers, like the Mos Eisley spaceport offices (ANH).
 - id: bld:tatooine:mos-eisley-supply-depot
   kind: depot
   name: Supply Depot
@@ -168,9 +170,9 @@ buildings:
   art: art:shared:supply-depot
   size: [4, 4]
   door: 1
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/supply-depot
+  seed: 7
+  about: Big dome behind a flat-fronted shop under a canopy, like Watto's shop (TPM).
 - id: bld:tatooine:mos-eisley-name-changer-s-home
   kind: home
   name: Name-changer's home
@@ -178,9 +180,9 @@ buildings:
   art: art:tatooine:homestead-dome
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/block-house
+  seed: 7
+  about: Mos Eisley adobe block with a roof dome and buttresses (ANH).
 - id: bld:tatooine:mos-eisley-moisture-trader-s-home
   kind: shop
   name: Moisture trader's home
@@ -188,9 +190,10 @@ buildings:
   art: art:tatooine:homestead-dome
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/canopy-house
+  seed: 7
+  about: Dome home with a canopy over a water tank, the Mos Eisley water sellers (ANH).
+  set: {under: tank}
 - id: bld:tatooine:mos-entha-lars-homestead-owen-and-luke
   kind: home
   name: Lars homestead (Owen and Luke)
@@ -198,9 +201,9 @@ buildings:
   art: art:tatooine:lars-family-home
   size: [6, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/lars-home
+  seed: 2
+  about: 'The Lars homestead: entrance dome on a drum, garage vault with the X-34 landspeeder (ANH).'
 - id: bld:tatooine:mos-entha-bacta-center
   kind: bacta
   name: Bacta Center
@@ -208,9 +211,9 @@ buildings:
   art: art:shared:bacta-center
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/bacta-center
+  seed: 1
+  about: Domed rotunda between two low wings, after the Mos Eisley cantina's domes (ANH).
 - id: bld:tatooine:mos-entha-supply-depot
   kind: depot
   name: Supply Depot
@@ -218,9 +221,9 @@ buildings:
   art: art:shared:supply-depot
   size: [4, 4]
   door: 1
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/supply-depot
+  seed: 4
+  about: Stepped block under a canopy with crates by the wall, a Mos Eisley street shop (ANH).
 - id: bld:tatooine:mos-entha-farmer-s-home
   kind: landmark
   name: Farmer's home
@@ -228,9 +231,9 @@ buildings:
   art: art:tatooine:homestead-dome
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/dome-hut
+  seed: 4
+  about: Farmer's dome hut beside the vaporators (ANH).
 - id: bld:tatooine:mos-entha-pilot-s-widow-s-home
   kind: home
   name: Pilot's widow's home
@@ -238,9 +241,9 @@ buildings:
   art: art:tatooine:homestead-dome
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/block-house
+  seed: 9
+  about: Quiet battered block with a roof band and round window (ANH).
 - id: bld:tatooine:mos-espa-bacta-center
   kind: bacta
   name: Bacta Center
@@ -248,9 +251,9 @@ buildings:
   art: art:shared:bacta-center
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/bacta-center
+  seed: 3
+  about: Rotunda with a keyhole arch, a Mos Espa dome over low wings (TPM).
 - id: bld:tatooine:mos-espa-supply-depot
   kind: depot
   name: Supply Depot
@@ -258,9 +261,9 @@ buildings:
   art: art:shared:supply-depot
   size: [4, 4]
   door: 1
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/supply-depot
+  seed: 1
+  about: 'Watto''s junk shop: a big dome behind a low shop block (TPM).'
 - id: bld:tatooine:mos-espa-slave-quarters-row-shmi-s-old-home
   kind: home
   name: Slave quarters row (Shmi's old home)
@@ -268,9 +271,9 @@ buildings:
   art: art:tatooine:homestead-dome
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/dome-row
+  seed: 3
+  about: 'Mos Espa slave quarters: a low block under small domes, Shmi''s home (TPM).'
 - id: bld:tatooine:mos-espa-pit-droid-mechanic-s-home
   kind: home
   name: Pit droid mechanic's home
@@ -278,9 +281,10 @@ buildings:
   art: art:tatooine:homestead-dome
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/speeder-garage
+  seed: 1
+  about: Mechanic's shed with a podracer engine on blocks in the bay (TPM).
+  set: {out: engine}
 - id: bld:tatooine:mos-pelgo-player-s-homestead
   kind: home
   name: Player's homestead
@@ -288,9 +292,9 @@ buildings:
   art: art:tatooine:homestead-dome
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/dome-hut
+  seed: 1
+  about: 'The player''s homestead: a big low dome with a vaulted entry, the Lars hut (ANH).'
 - id: bld:tatooine:mos-pelgo-korr-family-home
   kind: home
   name: Korr family home
@@ -298,9 +302,9 @@ buildings:
   art: art:tatooine:sunken-courtyard-home
   size: [6, 6]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/courtyard-home
+  seed: 2
+  about: 'The Lars sunken courtyard: a round pit with inner doorways and a domed entrance (ANH).'
 - id: bld:tatooine:route-104-flower-shop
   kind: shop
   name: Flower shop
@@ -308,9 +312,10 @@ buildings:
   art: art:tatooine:homestead-dome
   size: [6, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/canopy-house
+  seed: 1
+  about: Dome shop with a wide shade canopy over its wares, a Mos Espa market stall (TPM).
+  set: {under: crates}
 - id: bld:tatooine:route-110-entrance
   kind: home
   name: Entrance
@@ -318,9 +323,9 @@ buildings:
   art: art:tatooine:homestead-dome
   size: [6, 7]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/gatehouse
+  seed: 1
+  about: Town gate with drum towers and a guard room over the arch, the Mos Espa gates (TPM).
 - id: bld:tatooine:route-110-puzzle-house-entrance
   kind: home
   name: Puzzle house entrance
@@ -328,9 +333,9 @@ buildings:
   art: art:tatooine:homestead-dome
   size: [5, 6]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/gatehouse
+  seed: 2
+  about: Square-towered gate block with a guard room (TPM).
 - id: bld:tatooine:route-110-seaside-cycling-road-north-entrance
   kind: home
   name: Seaside cycling road north entrance
@@ -338,9 +343,9 @@ buildings:
   art: art:tatooine:homestead-dome
   size: [8, 6]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/gatehouse
+  seed: 4
+  about: Long gatehouse between drum towers, the Mos Eisley town wall (ANH).
 - id: bld:tatooine:route-110-seaside-cycling-road-south-entrance
   kind: home
   name: Seaside cycling road south entrance
@@ -348,9 +353,9 @@ buildings:
   art: art:tatooine:homestead-dome
   size: [11, 4]
   door: 5
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/gatehouse
+  seed: 7
+  about: Long, low gate wall with square towers and a dome (ANH).
 - id: bld:tatooine:route-111-winstrate-familys-house
   kind: home
   name: Winstrate familys house
@@ -358,9 +363,9 @@ buildings:
   art: art:tatooine:homestead-dome
   size: [8, 5]
   door: 3
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/walled-compound
+  seed: 1
+  about: Walled family compound with a dome house and a vaporator in the yard (TPM).
 - id: bld:tatooine:route-111-ruins
   kind: home
   name: Ruins
@@ -368,9 +373,9 @@ buildings:
   art: art:tatooine:homestead-dome
   size: [5, 4]
   door: 2
-  blueprint: ''
+  blueprint: tatooine/ruin
   seed: 0
-  about: ''
+  about: A homestead dome with its roof caved in, like the burned Lars farm (ANH).
 - id: bld:tatooine:route-111-old-ladys-rest-stop
   kind: home
   name: Old ladys rest stop
@@ -378,9 +383,9 @@ buildings:
   art: art:tatooine:homestead-dome
   size: [4, 5]
   door: 1
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/canopy-house
+  seed: 2
+  about: Wayside block with a shade canopy over crates, a desert rest stop (ANH).
 - id: bld:tatooine:route-112-shuttle-station
   kind: pad
   name: Shuttle station
@@ -388,9 +393,9 @@ buildings:
   art: art:tatooine:homestead-dome
   size: [6, 5]
   door: 1
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/landing-pad
+  seed: 1
+  about: Round landing pad with a domed control hut and a beacon mast, Mos Espa's pads (TPM).
 - id: bld:tatooine:route-117-creature-nursery
   kind: home
   name: Creature nursery
@@ -398,9 +403,10 @@ buildings:
   art: art:tatooine:homestead-dome
   size: [5, 3]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/canopy-house
+  seed: 5
+  about: Low block with a shade canopy over a bench, where creatures rest (TPM).
+  set: {under: bench}
 - id: bld:tatooine:tosche-station-converter-dealer-s-home
   kind: shop
   name: Converter dealer's home
@@ -408,9 +414,9 @@ buildings:
   art: art:tatooine:homestead-dome
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/block-house
+  seed: 10
+  about: Dealer's battered block with a slab door, Tosche Station (ANH).
 - id: bld:tatooine:tosche-station-bacta-center
   kind: bacta
   name: Bacta Center
@@ -418,9 +424,9 @@ buildings:
   art: art:shared:bacta-center
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/bacta-center
+  seed: 9
+  about: Towered hall with a porch, the Tosche Station power-station look (ANH).
 - id: bld:tatooine:tosche-station-supply-depot
   kind: depot
   name: Supply Depot
@@ -428,9 +434,9 @@ buildings:
   art: art:shared:supply-depot
   size: [4, 4]
   door: 1
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: tatooine/supply-depot
+  seed: 8
+  about: Plain battered shop block with a roof dome, the Tosche Station stores (ANH).
 - id: bld:tatooine:tosche-station-station-hand-s-home
   kind: landmark
   name: Station hand's home
@@ -438,6 +444,138 @@ buildings:
   art: art:tatooine:homestead-dome
   size: [5, 4]
   door: 2
-  blueprint: ''
+  blueprint: tatooine/dome-hut
+  seed: 9
+  about: Station hand's dome hut with a vent (ANH).
+- id: bld:tatooine:fill-market-row
+  kind: market
+  name: Market stall row
+  areas: []
+  art: ''
+  size: [7, 3]
+  door: null
+  blueprint: tatooine/market-row
+  seed: 3
+  about: Four stalls under sloped awnings, the Mos Espa marketplace (TPM).
+- id: bld:tatooine:fill-market-row-walled
+  kind: market
+  name: Market row with back wall
+  areas: []
+  art: ''
+  size: [6, 3]
+  door: null
+  blueprint: tatooine/market-row
+  seed: 2
+  about: Three stalls against an adobe wall, the Mos Eisley street market (ANH).
+- id: bld:tatooine:fill-market-row-short
+  kind: market
+  name: Short market row
+  areas: []
+  art: ''
+  size: [5, 3]
+  door: null
+  blueprint: tatooine/market-row
+  seed: 5
+  about: Three small stalls with awnings (TPM).
+- id: bld:tatooine:fill-speeder-garage
+  kind: fill
+  name: Speeder garage
+  areas: []
+  art: ''
+  size: [5, 4]
+  door: null
+  blueprint: tatooine/speeder-garage
+  seed: 5
+  about: Battered shed with a wide bay and a landspeeder, a Mos Eisley garage (ANH).
+  set: {out: speeder}
+- id: bld:tatooine:fill-podracer-hangar
+  kind: fill
+  name: Podracer hangar
+  areas: []
+  art: ''
+  size: [6, 4]
+  door: null
+  blueprint: tatooine/speeder-garage
   seed: 0
-  about: ''
+  about: Vaulted hangar with a podracer engine out front (TPM).
+  set: {out: engine}
+- id: bld:tatooine:fill-walled-compound
+  kind: fill
+  name: Walled compound
+  areas: []
+  art: ''
+  size: [7, 5]
+  door: 3
+  blueprint: tatooine/walled-compound
+  seed: 4
+  about: Adobe-walled yard with two domed houses, Anakin's quarter in Mos Espa (TPM).
+- id: bld:tatooine:fill-walled-yard
+  kind: fill
+  name: Walled yard
+  areas: []
+  art: ''
+  size: [5, 5]
+  door: 2
+  blueprint: tatooine/walled-compound
+  seed: 2
+  about: Small walled yard with a block house and a water trough (TPM).
+- id: bld:tatooine:fill-water-tower
+  kind: fill
+  name: Water tower
+  areas: []
+  art: ''
+  size: [3, 4]
+  door: 1
+  blueprint: tatooine/water-tower
+  seed: 2
+  about: Tall battered cistern drum with a dome cap, the Anchorhead water sellers (ANH).
+- id: bld:tatooine:fill-condenser-tank
+  kind: fill
+  name: Condenser tank
+  areas: []
+  art: ''
+  size: [4, 4]
+  door: 1
+  blueprint: tatooine/water-tower
+  seed: 1
+  about: Water tank on legs over a pump house, a Tosche Station condenser (ANH).
+- id: bld:tatooine:fill-jawa-stand
+  kind: market
+  name: Jawa trader stand
+  areas: []
+  art: ''
+  size: [4, 3]
+  door: null
+  blueprint: tatooine/jawa-stand
+  seed: 2
+  about: 'Jawa salvage stall: a tarp over junk and an astromech for sale (ANH).'
+- id: bld:tatooine:fill-jawa-stand-wide
+  kind: market
+  name: Jawa salvage heap
+  areas: []
+  art: ''
+  size: [5, 3]
+  door: null
+  blueprint: tatooine/jawa-stand
+  seed: 5
+  about: Wider Jawa stall with a labour droid for sale (ANH).
+- id: bld:tatooine:fill-dome-row
+  kind: hut
+  name: Domed quarters row
+  areas: []
+  art: ''
+  size: [7, 4]
+  door: 3
+  blueprint: tatooine/dome-row
+  seed: 0
+  about: Row of small domed dwellings, the Mos Espa slave quarters (TPM).
+- id: bld:tatooine:fill-small-shop
+  kind: shop
+  name: Small shop
+  areas: []
+  art: ''
+  size: [4, 4]
+  door: 1
+  blueprint: tatooine/canopy-house
+  seed: 6
+  about: Small block shop with a canopy over a tank (TPM).

@@ -1,0 +1,41 @@
+# The Mos Espa Grand Arena (The Phantom Menace): a long outer grandstand wall with a dark arcade of
+# arches, the seating stepping up behind it, pennant masts along the top, a big central gate, a tall
+# judges' tower at one end.
+name: arena-grandstand
+style: tatooine
+about: Long outer grandstand wall with an arcade, stepped seating behind, pennants, a big gate, a judges' tower.
+width: [7, 8, 9]
+choose:
+  hh: "=H if H else 5"
+  w: ["=w_max * 0.94", "=w_max"]
+  d: ["=hh * 0.3", "=hh * 0.34"]
+  h: ["=hh * 0.2", "=hh * 0.24"]
+  gx0: [-0.5, 0.5]
+  gx: "=door_x if door_x is not None else gx0"
+  side: {pick: [-1, 1]}
+  tiers: {pick: [2, 3], weights: [2, 3]}
+  tower: {pick: [true, false], weights: [3, 1]}
+  na: "=max(2, w // 1.6)"
+parts:
+  - {use: adobe-block, name: wall, with: {w: "=w", d: "=d", h: "=h", batter: 0.12}}
+  - {use: roof-lip, name: wall-lip, with: {w: "=w", d: "=d", h: "=h", batter: 0.12, t: 0.16}}
+  # the seating stepping up behind the wall
+  - repeat: "=tiers"
+    parts:
+      - {use: adobe-block, name: tier, at: [0, "=d * (0.55 + i * 0.35)", "=h * (0.6 + i * 0.35)"], with: {w: "=w - 0.3 - i * 0.4", d: "=d * 0.45", h: "=h * 0.4", batter: 0.06, mat: roof}}
+  # the arcade: dark arches along the wall, skipping the gate
+  - repeat: "=na"
+    parts:
+      - when: "=abs((-w / 2 + (i + 0.5) * w / n) - gx) > 1.35"
+        parts:
+          - {use: door-arch, name: arch, at: ["=-w / 2 + (i + 0.5) * w / n", 0.02, "=h * 0.22"], with: {w: 0.55, h: "=h * 0.38", frame: 0.08}}
+  - {use: adobe-block, name: gate, at: ["=gx", -0.04, 0], with: {w: 2.0, d: "=d * 0.8", h: "=h + 0.45", batter: 0.12}}
+  - {use: roof-lip, name: gate-lip, at: ["=gx", -0.04, 0], with: {w: 2.0, d: "=d * 0.8", h: "=h + 0.45", batter: 0.12, t: 0.18}}
+  - {use: door-slab, name: door, at: ["=gx", -0.04, 0], with: {w: 1.2, h: "=h * 0.8"}}
+  - repeat: 3
+    parts:
+      - {use: banner, name: flag, at: ["=-w / 2 + 0.5 + i * (w - 1.0) / 2", "=d * 0.3", "=h"], with: {h: 1.0, w: 0.38, l: 0.55}}
+  - when: "=tower"
+    parts:
+      - {use: drum, name: tower, at: ["=side * (w / 2 - 0.7)", "=d * 0.6", 0], with: {r: 0.55, h: "=min(hh - d * 0.6 - 1.2, h * 2.2)"}}
+      - {use: dome, name: tower-cap, at: ["=side * (w / 2 - 0.7)", "=d * 0.6", "=min(hh - d * 0.6 - 1.2, h * 2.2)"], with: {r: 0.62, ry: 1.0, hk: 0.45}}

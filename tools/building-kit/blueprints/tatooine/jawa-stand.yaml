@@ -1,0 +1,33 @@
+# A Jawa trader's stand (A New Hope: the Jawas selling droids off the sandcrawler): a rusty sloped
+# tarp on poles over heaps of salvage, a droid or two for sale, a crate counter. All junk, no house.
+name: jawa-stand
+style: tatooine
+about: Sloped tarp on poles over salvage heaps, a droid for sale, a crate counter.
+width: [3, 4, 5]
+choose:
+  tw: "=w_max * 0.8"
+  td: "=min(1.1, (H or 3) * 0.3)"
+  th: [0.82, 0.92]
+  tx: ["=-(w_max - tw) / 2", "=(w_max - tw) / 2"]
+  droid: {pick: [astromech, tall, none], weights: [3, 2, 1]}
+  side: {pick: [-1, 1]}
+parts:
+  - {name: tarp, mat: dark, extrude: {axis: x, profile: [[0.1, "=th"], ["=td + 0.2", "=th + 0.25"], ["=td + 0.2", "=th + 0.33"], [0.1, "=th + 0.08"]],
+                                     span: ["=tx - tw / 2", "=tx + tw / 2"], round: 0.02}}
+  - {name: pole-w, mat: metal, box: {c: ["=tx - tw / 2 + 0.1", 0.2, "=th / 2"], half: [0.05, 0.05, "=th / 2"]}}
+  - {name: pole-e, mat: metal, box: {c: ["=tx + tw / 2 - 0.1", 0.2, "=th / 2"], half: [0.05, 0.05, "=th / 2"]}}
+  - name: heap
+    mat: mid
+    hull: {points: [["=tx - tw * 0.4", "=td * 0.5", 0], ["=tx + tw * 0.1", "=td * 0.4", 0], ["=tx - tw * 0.1", "=td + 0.3", 0],
+                    ["=tx - tw * 0.2", "=td * 0.7", 0.55], ["=tx - tw * 0.35", "=td + 0.2", 0.3]], round: 0.04}
+  - {use: crate, name: counter, at: ["=tx + side * tw * 0.22", 0.4, 0], with: {s: 0.5}}
+  - {use: crate, name: crate-top, at: ["=tx + side * tw * 0.22", 0.4, 0.5], with: {s: 0.32, mat: light}}
+  - when: "=droid == 'astromech'"                 # an R-unit: drum body, dome head
+    parts:
+      - {name: r2-body, mat: light, cylinder: {a: ["=tx - side * tw * 0.15", 0.35, 0.05], b: ["=tx - side * tw * 0.15", 0.35, 0.5], r1: 0.2}}
+      - {name: r2-head, mat: trim, ellipsoid: {c: ["=tx - side * tw * 0.15", 0.35, 0.5], r: [0.2, 0.2, 0.17]}}
+  - when: "=droid == 'tall'"                      # a tall labour droid: box body on a post
+    parts:
+      - {name: droid-leg, mat: metal, box: {c: ["=tx - side * tw * 0.15", 0.35, 0.3], half: [0.08, 0.08, 0.3]}}
+      - {name: droid-body, mat: light, box: {c: ["=tx - side * tw * 0.15", 0.35, 0.75], half: [0.2, 0.14, 0.2], radius: 0.04}}
+      - {name: droid-head, mat: trim, ellipsoid: {c: ["=tx - side * tw * 0.15", 0.35, 1.03], r: [0.12, 0.12, 0.1]}}

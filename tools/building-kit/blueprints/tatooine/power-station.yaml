@@ -1,0 +1,43 @@
+# A Tatooine power station (Tosche Station, A New Hope; the power converters Luke wanted): a squat
+# battered converter hall with a row of tall power cells and a cooling fin wall. Narrow lots (4 wide or
+# less) get the generator hatch instead: a low domed hatch bunker with pipes and one power cell.
+name: power-station
+style: tatooine
+about: Squat converter hall, tall power cells, a cooling fin wall; on small lots a domed generator hatch.
+width: [4, 5, 6]
+choose:
+  hh: "=H if H else 4"
+  hatch: "=W <= 4"
+  w: ["=w_max * (0.62 if W <= 4 else 0.55)", "=w_max * (0.72 if W <= 4 else 0.65)"]
+  d: ["=hh * 0.42", "=hh * 0.5"]
+  h: ["=hh * (0.2 if W <= 4 else 0.24)", "=hh * (0.24 if W <= 4 else 0.3)"]
+  side: {pick: [-1, 1]}
+  dx0: [-0.4, 0.4]
+  bx: "=(door_x if door_x is not None else 0) * 0.3 - side * (w_max - w) * 0.3"
+  dx: "=door_x if door_x is not None else bx + dx0"
+  cells: {int: [2, 3]}
+  fins: {int: [4, 6]}
+  cx: "=side * (w_max / 2 - 0.45)"
+parts:
+  - when: "=not hatch"
+    parts:
+      - {use: adobe-block, name: hall, at: ["=bx", 0, 0], with: {w: "=w", d: "=d", h: "=h", batter: 0.14}}
+      - {use: roof-lip, name: lip, at: ["=bx", 0, 0], with: {w: "=w", d: "=d", h: "=h", batter: 0.14, mat: metal}}
+      - {use: door-slab, name: door, at: ["=dx", 0, 0], with: {w: 0.9, h: "=h * 0.68"}}
+      # the cooling fin wall on the roof: thin plates standing east-west
+      - repeat: "=fins"
+        parts:
+          - {name: fin, mat: light, box: {c: ["=bx - w * 0.32 + i * (w * 0.64 / max(1, n - 1))", "=d * 0.55", "=h + 0.3"], half: [0.07, "=d * 0.3", 0.3], radius: 0.02}}
+      # the power cells beside it
+      - repeat: "=cells"
+        parts:
+          - {use: power-cell, name: cell, at: ["=cx - side * i * 0.0", "=0.4 + i * 0.75", 0], with: {r: 0.3, h: "=h + 0.6 - i * 0.2"}}
+      - {name: pipe, mat: metal, cylinder: {a: ["=cx", 0.5, "=h * 0.5"], b: ["=bx + side * w / 2", 0.5, "=h * 0.5"], r1: 0.1}}
+    else:
+      # the generator hatch: a low battered bunker with a domed hatch, pipes and one cell
+      - {use: adobe-block, name: bunker, at: ["=bx", 0.1, 0], with: {w: "=w", d: "=d", h: "=h", batter: 0.16, rnd: 0.1}}
+      - {use: roof-lip, name: lip, at: ["=bx", 0.1, 0], with: {w: "=w", d: "=d", h: "=h", batter: 0.16, mat: metal}}
+      - {use: dome, name: hatch, at: ["=bx", "=0.1 + d * 0.55", "=h"], with: {r: "=min(w * 0.3, d * 0.4)", ry: 1.0, hk: 0.45, mat: metal}}
+      - {use: door-slab, name: door, at: ["=dx", 0.1, 0], with: {w: 0.8, h: "=h * 0.75"}}
+      - {use: power-cell, name: cell, at: ["=cx", 0.6, 0], with: {r: 0.28, h: "=h + 0.4"}}
+      - {name: pipe, mat: metal, cylinder: {a: ["=cx", 0.6, "=h * 0.55"], b: ["=bx", 0.6, "=h * 0.55"], r1: 0.09}}

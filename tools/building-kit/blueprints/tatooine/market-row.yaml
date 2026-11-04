@@ -1,0 +1,31 @@
+# A row of market stalls (the Mos Espa marketplace, The Phantom Menace; the Mos Eisley street stalls,
+# A New Hope): two to four counters under sloped cloth awnings on posts, each awning a little different,
+# pots and crates in front, sometimes a back wall of adobe.
+name: market-row
+style: tatooine
+about: Two to four stall counters under sloped awnings on posts, pots and crates, an adobe back wall on some.
+width: [5, 6, 7]
+choose:
+  n: "=max(2, min(4, round(w_max / 1.45 - 0.5)))"
+  sw: "=w_max / n"                                # each stall's width
+  sd: "=min(1.25, (H or 3) * 0.32)"                                  # awning depth
+  back: {pick: [true, false], weights: [3, 2]}
+  y0: "=0.35 if back else 0.15"
+parts:
+  - when: "=back"
+    parts:
+      - {use: adobe-block, name: wall, at: [0, "=y0 + sd - 0.15", 0], with: {w: "=w_max", d: 0.45, h: 1.15, batter: 0.06}}
+  - repeat: "=n"
+    parts:
+      - {name: "=f'counter-{i}'", mat: wall, box: {c: ["=-w_max / 2 + sw * (i + 0.5)", "=y0 + 0.3", 0.25], half: ["=sw / 2 - 0.18", 0.24, 0.25], radius: 0.05}}
+      - {name: "=f'awning-{i}'", mat: "=['mid', 'trim', 'roof'][(seed + i) % 3]",
+         extrude: {axis: x, profile: [[0.0, "=0.7 + 0.05 * ((seed * 3 + i) % 3)"], ["=sd", "=0.86 + 0.05 * ((seed * 3 + i) % 3)"],
+                                      ["=sd", "=0.94 + 0.05 * ((seed * 3 + i) % 3)"], [0.0, "=0.78 + 0.05 * ((seed * 3 + i) % 3)"]],
+                   span: ["=-w_max / 2 + sw * i + 0.04", "=-w_max / 2 + sw * (i + 1) - 0.04"], round: 0.02}}
+      - {name: "=f'post-{i}'", mat: dark, box: {c: ["=-w_max / 2 + sw * i + 0.12", 0.1, 0.36], half: [0.06, 0.06, 0.36]}}
+      - when: "=(seed + i) % 2 == 0"
+        parts:
+          - {name: "=f'pot-{i}'", mat: roof, ellipsoid: {c: ["=-w_max / 2 + sw * (i + 0.5)", "=y0 + 0.3", 0.62], r: [0.2, 0.2, 0.16]}}
+        else:
+          - {use: crate, name: "=f'crate-{i}'", at: ["=-w_max / 2 + sw * (i + 0.5) + 0.2", "=y0 + 0.3", 0.5], with: {s: 0.32}}
+  - {name: post-end, mat: dark, box: {c: ["=w_max / 2 - 0.12", 0.1, 0.36], half: [0.06, 0.06, 0.36]}}

@@ -1,0 +1,25 @@
+# A row of small domed dwellings (the Mos Espa slave quarters, The Phantom Menace: Shmi's home): a long
+# low adobe block with two to four small domes along its roof, a door under each, sometimes a stair
+# block or a rooftop vent between them.
+name: dome-row
+style: tatooine
+about: Long low adobe block with two to four small domes on top, a door under each, vents.
+width: [5, 6, 7]
+choose:
+  n: "=max(2, min(4, round(w_max / 1.5 - 0.5)))"
+  sw: "=w_max / n"
+  d: [1.2, 1.45]
+  h: [0.8, 0.95]
+  hk: [0.6, 0.8]
+  main: "=(n - 1) // 2 if door_x is None else min(n - 1, max(0, round((door_x + w_max / 2) / sw - 0.5)))"
+parts:
+  - {use: adobe-block, name: row, with: {w: "=w_max", d: "=d", h: "=h", batter: 0.1}}
+  - {use: roof-lip, name: lip, with: {w: "=w_max", d: "=d", h: "=h", batter: 0.1, t: 0.13}}
+  - repeat: "=n"
+    parts:
+      - {use: dome, name: "=f'dome-{i}'", at: ["=-w_max / 2 + sw * (i + 0.5)", "=d * 0.52", "=h"],
+         with: {r: "=sw * (0.36 + 0.05 * ((seed + i) % 2))", ry: 0.85, hk: "=hk"}}
+      - when: "=i != main"
+        parts:
+          - {use: door-arch, name: "=f'door-{i}'", at: ["=-w_max / 2 + sw * (i + 0.5)", 0, 0], with: {w: 0.6, h: "=h * 0.62"}}
+  - {use: door-arch, name: door, at: ["=door_x if door_x is not None else -w_max / 2 + sw * (main + 0.5)", 0, 0], with: {w: 0.72, h: "=h * 0.7"}}

@@ -1,0 +1,44 @@
+# A Mos Espa gambling den (The Phantom Menace's domed halls): one big dome on a low battered drum ring,
+# a deep entry block with a bright gold door under a canopy, porthole windows, lamps or vent towers.
+name: sabacc-den
+style: tatooine
+about: Big dome on a battered base, a deep entry block with a bright gold door and canopy, portholes, lamps.
+width: [5, 6, 7]
+choose:
+  hh: "=H if H else 4"
+  bw: ["=w_max * 0.85", "=w_max"]
+  bd: ["=hh * 0.5", "=hh * 0.56"]
+  bh: ["=hh * 0.17", "=hh * 0.22"]
+  R: "=min(bw * 0.36, bd * 0.5)"
+  hk: "=min(0.85, (hh - bd * 0.55 - bh - R * 0.0 - 0.35) / R - 0.15)"
+  ex0: [-0.4, 0.4]
+  ex: "=door_x if door_x is not None else ex0"
+  extra: {pick: [lamps, towers, domes], weights: [2, 2, 1]}
+parts:
+  - {use: adobe-block, name: base, at: [0, 0.15, 0], with: {w: "=bw", d: "=bd", h: "=bh", batter: 0.14, rnd: 0.12}}
+  - {use: roof-lip, name: base-lip, at: [0, 0.15, 0], with: {w: "=bw", d: "=bd", h: "=bh", batter: 0.14}}
+  - {use: dome, name: dome, at: [0, "=0.15 + bd * 0.55", "=bh"], with: {r: "=R", ry: 0.95, hk: "=hk"}}
+  - {name: dome-band, mat: trim, cylinder: {a: [0, "=0.15 + bd * 0.55", "=bh"], b: [0, "=0.15 + bd * 0.55", "=bh + 0.14"], r1: "=R * 1.02"}}
+  - {use: adobe-block, name: entry, at: ["=ex", -0.05, 0], with: {w: 1.6, d: 0.9, h: "=bh + 0.45", batter: 0.12, rnd: 0.08}}
+  - {use: roof-lip, name: entry-lip, at: ["=ex", -0.05, 0], with: {w: 1.6, d: 0.9, h: "=bh + 0.45", batter: 0.12, t: 0.16, mat: light}}
+  - {use: door-arch, name: door, at: ["=ex", -0.05, 0], with: {w: 0.85, h: "=bh + 0.05", door: light, trim: metal, frame: 0.14}}
+  - repeat: 2
+    parts:
+      - {use: window-round, name: port, at: ["=ex + (i * 2 - 1) * 1.45", 0.18, "=bh * 0.6"], with: {r: 0.17}}
+  - when: "=extra == 'lamps'"
+    parts:
+      - repeat: 2
+        parts:
+          - {name: lamp-post, mat: metal, box: {c: ["=ex + (i * 2 - 1) * 1.05", -0.25, 0.45], half: [0.06, 0.06, 0.45]}}
+          - {name: lamp, mat: light, ellipsoid: {c: ["=ex + (i * 2 - 1) * 1.05", -0.25, 0.95], r: [0.15, 0.15, 0.15]}}
+  - when: "=extra == 'towers'"
+    parts:
+      - repeat: 2
+        parts:
+          - {use: drum, name: tower, at: ["=(i * 2 - 1) * (bw / 2 - 0.35)", "=0.15 + bd * 0.5", 0], with: {r: 0.28, h: "=bh + 0.9"}}
+          - {use: vent, name: tower-cap, at: ["=(i * 2 - 1) * (bw / 2 - 0.35)", "=0.15 + bd * 0.5", "=bh + 0.9"], with: {r: 0.2, h: 0.12}}
+  - when: "=extra == 'domes'"
+    parts:
+      - repeat: 2
+        parts:
+          - {use: dome, name: small, at: ["=(i * 2 - 1) * (bw / 2 - 0.45)", "=0.15 + bd * 0.5", "=bh"], with: {r: 0.4, ry: 0.9, hk: 0.75}}

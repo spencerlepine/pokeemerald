@@ -1,0 +1,34 @@
+# A battle tent in the market (the Mos Espa and Mos Eisley awnings, The Phantom Menace): a big hipped
+# canvas roof on stout posts over a low adobe skirt wall, a wide dark front flap, pennants on poles.
+name: arena-tent
+style: tatooine
+about: Big hipped canvas tent on posts over a low skirt wall, a wide dark front flap, pennant poles.
+width: [5, 6, 7]
+choose:
+  hh: "=H if H else 5"
+  w: ["=w_max * 0.82", "=w_max * 0.92"]
+  d: ["=hh * 0.42", "=hh * 0.5"]
+  sh: [0.55, 0.75]                             # skirt wall height
+  z: "=sh + 0.35"                              # eaves
+  rise: ["=min(1.2, hh - d - z - 0.35)", "=min(1.5, hh - d - z - 0.25)"]
+  ridge: [0.15, 0.45]
+  dx0: [-0.5, 0.5]
+  dx: "=door_x if door_x is not None else dx0"
+  peak: {pick: [ridge, cone], weights: [2, 1]}
+parts:
+  - {use: adobe-block, name: skirt, with: {w: "=w", d: "=d", h: "=sh", batter: 0.08, rnd: 0.1}}
+  - repeat: 2
+    parts:
+      - {name: post, mat: metal, box: {c: ["=(i * 2 - 1) * (w / 2 - 0.15)", 0.0, "=z / 2"], half: [0.1, 0.1, "=z / 2"]}}
+  - when: "=peak == 'ridge'"
+    parts:
+      - {use: hip-roof, name: canvas, with: {w: "=w", d: "=d", z: "=z", rise: "=rise", ridge: "=ridge", over: 0.18, mat: light}}
+    else:
+      - {use: hip-roof, name: canvas, with: {w: "=w", d: "=d", z: "=z", rise: "=rise * 0.55", ridge: 0.5, over: 0.18, mat: light}}
+      - {name: cone, mat: light, cylinder: {a: [0, "=d / 2", "=z + rise * 0.5"], b: [0, "=d / 2", "=z + rise"], r1: "=min(w, d) * 0.3", r2: 0.05}}
+  # the front flap: a dark opening under a lifted canvas awning
+  - {use: hangar-mouth, name: door, at: ["=dx", 0, 0], with: {w: 1.2, h: "=z", frame: 0.12, trim: mid}}
+  - {name: awning, mat: light, box: {c: ["=dx", -0.35, "=z + 0.05"], half: [0.85, 0.35, 0.06], radius: 0.02}}
+  - repeat: 2
+    parts:
+      - {use: banner, name: pennant, at: ["=dx + (i * 2 - 1) * 1.05", -0.2, 0], with: {h: "=z + 0.6", w: 0.3, l: 0.5, mat: mid}}

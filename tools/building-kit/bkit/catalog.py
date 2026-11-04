@@ -178,7 +178,7 @@ def build(planets=None, wiki=True, only=None):
                 continue
             try:
                 row, img, msgs = build_one(e, pk)
-            except SystemExit as ex:
+            except (SystemExit, Exception) as ex:
                 print("ERROR", e["id"], ex)
                 problems += 1
                 continue

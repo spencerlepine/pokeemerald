@@ -1,0 +1,48 @@
+# Watto's shop (The Phantom Menace): a domed adobe block opening onto a yard of scrap, a cloth awning on
+# poles over the door, a hanging sign, piles of engine parts and crates out front.
+name: junk-shop
+style: tatooine
+about: Domed or vaulted adobe block, a cloth awning on poles, a hanging sign, scrap piles and crates in front.
+width: [4, 5, 6]
+choose:
+  hh: "=H if H else 4"
+  w: ["=w_max * 0.7", "=w_max * 0.82"]
+  d: ["=hh * 0.42", "=hh * 0.5"]
+  h: ["=hh * 0.27", "=hh * 0.32"]
+  side: {pick: [-1, 1]}
+  bx: "=-side * (w_max - w) / 2"
+  dx0: [-0.4, 0.4]
+  dx: "=door_x if door_x is not None else bx + dx0"
+  roof: {pick: [dome, vault, lip], weights: [3, 2, 1]}
+  scrap: {pick: [engines, crates, both], weights: [2, 1, 2]}
+  sx: "=side * (w_max / 2 - 0.45)"
+parts:
+  - {use: adobe-block, name: shop, at: ["=bx", 0.15, 0], with: {w: "=w", d: "=d", h: "=h", batter: 0.16, rnd: 0.1}}
+  - when: "=roof == 'dome'"
+    parts:
+      - {use: roof-lip, name: lip, at: ["=bx", 0.15, 0], with: {w: "=w", d: "=d", h: "=h", batter: 0.16}}
+      - {use: dome, name: dome, at: ["=bx", "=0.15 + d * 0.52", "=h"], with: {r: "=min(w * 0.36, d * 0.5)", ry: 0.9, hk: "=min(0.7, (hh - d - h - 0.4) / max(0.4, min(w * 0.36, d * 0.5)))"}}
+  - when: "=roof == 'vault'"
+    parts:
+      - {use: entry-vault, name: vault, at: ["=bx", "=0.15 + d * 0.15", "=h - 0.35"], with: {w: "=max(0.8, min(w * 0.8, 2 * (hh - 0.35 - 0.85 * d - h)))", d: "=d * 0.7", h: 0.35}}
+  - when: "=roof == 'lip'"
+    parts:
+      - {use: roof-lip, name: lip, at: ["=bx", 0.15, 0], with: {w: "=w", d: "=d", h: "=h", batter: 0.16}}
+      - {use: vent, name: vent, at: ["=bx - side * w * 0.25", "=0.15 + d * 0.6", "=h"], with: {r: 0.18, h: 0.4}}
+  - {use: door-slab, name: door, at: ["=dx", 0.15, 0], with: {w: 0.9, h: "=h * 0.68"}}
+  # the awning and the hanging sign
+  - {name: awning, mat: light, box: {c: ["=dx", -0.2, "=h * 0.82"], half: [0.75, 0.38, 0.05], radius: 0.02}}
+  - repeat: 2
+    parts:
+      - {name: pole, mat: metal, box: {c: ["=dx + (i * 2 - 1) * 0.68", -0.5, "=h * 0.41"], half: [0.06, 0.06, "=h * 0.41"]}}
+  - {name: sign, mat: trim, box: {c: ["=dx - side * 0.95", 0.05, "=h * 0.72"], half: [0.28, 0.06, 0.2], radius: 0.02}}
+  # the scrap out front, on the yard side
+  - when: "=scrap in ('engines', 'both')"
+    parts:
+      - {name: engine, mat: metal, cylinder: {a: ["=sx", 0.9, 0.22], b: ["=sx", -0.1, 0.22], r1: 0.24, r2: 0.18}}
+      - {name: engine-intake, mat: dark, cylinder: {a: ["=sx", -0.1, 0.22], b: ["=sx", -0.16, 0.22], r1: 0.15}}
+      - {name: heap, mat: mid, hull: {round: 0.04, points: [["=sx - 0.4", 1.1, 0], ["=sx + 0.4", 1.2, 0], ["=sx", 1.6, 0], ["=sx - 0.1", 1.25, 0.5], ["=sx + 0.2", 1.35, 0.4]]}}
+  - when: "=scrap in ('crates', 'both')"
+    parts:
+      - {use: crate, name: crate, at: ["=sx", "=0.4 if scrap == 'crates' else 1.9", 0], with: {s: 0.5}}
+      - {name: drum, mat: light, cylinder: {a: ["=sx - side * 0.35", "=1.3 if scrap == 'crates' else 0.15", 0], b: ["=sx - side * 0.35", "=1.3 if scrap == 'crates' else 0.15", 0.5], r1: 0.2}}

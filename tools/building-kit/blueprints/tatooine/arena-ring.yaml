@@ -1,0 +1,36 @@
+# A round fighting ring (a squat Mos Espa drum like the Grand Arena's towers, The Phantom Menace): a
+# wide low battered drum, a stepped inner tier, a bold gatehouse with a big square or arched doorway,
+# buttresses round the drum.
+name: arena-ring
+style: tatooine
+about: Wide squat drum with a stepped inner tier, a bold gatehouse, buttresses round the drum.
+width: [5, 6, 7]
+choose:
+  hh: "=H if H else 5"
+  R: "=min(w_max / 2 - 0.05, (hh - 0.55 - 1.0) / 2 + 0.3)"
+  dh: [0.9, 1.15]
+  cy: "=R * 0.78 + 0.3"
+  gx0: [-0.5, 0.5]
+  gx: "=door_x if door_x is not None else gx0"
+  gw: [1.9, 2.3]
+  gate: {pick: [arch, slab]}
+  inner: {pick: [tier, dome], weights: [2, 1]}
+  n: {pick: [8, 10, 12]}
+parts:
+  - {name: drum, mat: wall, cylinder: {a: [0, "=cy", 0], b: [0, "=cy", "=dh"], r1: "=R", r2: "=R - 0.15"}}
+  - {name: drum-lip, mat: trim, cylinder: {a: [0, "=cy", "=dh - 0.14"], b: [0, "=cy", "=dh + 0.03"], r1: "=R - 0.1"}}
+  - when: "=inner == 'tier'"
+    parts:
+      - {name: tier, mat: roof, cylinder: {a: [0, "=cy + 0.1", "=dh"], b: [0, "=cy + 0.1", "=dh + 0.3"], r1: "=R * 0.68", r2: "=R * 0.6"}}
+      - {name: pit, mat: dark, cylinder: {a: [0, "=cy + 0.1", "=dh + 0.3"], b: [0, "=cy + 0.1", "=dh + 0.33"], r1: "=R * 0.42"}}
+    else:
+      - {use: dome, name: roof, at: [0, "=cy", "=dh"], with: {r: "=R * 0.8", ry: 1.0, hk: 0.32}}
+  - ring: {name: rib, mat: trim, c: [0, "=cy", "=dh * 0.4"], axis: z, r: "=R - 0.02", n: "=n", start: 90,
+           size: [0.28, 0.32, "=dh * 0.8"], round: 0.04}
+  - {use: adobe-block, name: gatehouse, at: ["=gx", -0.04, 0], with: {w: "=gw", d: 1.1, h: "=dh + 0.45", batter: 0.16}}
+  - {use: roof-lip, name: gate-lip, at: ["=gx", -0.04, 0], with: {w: "=gw", d: 1.1, h: "=dh + 0.45", batter: 0.16, t: 0.18}}
+  - when: "=gate == 'arch'"
+    parts:
+      - {use: door-arch, name: door, at: ["=gx", -0.04, 0], with: {w: 1.1, h: "=dh * 0.65", frame: 0.2}}
+    else:
+      - {use: door-slab, name: door, at: ["=gx", -0.04, 0], with: {w: 1.15, h: "=dh + 0.05", frame: 0.18}}

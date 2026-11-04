@@ -1,0 +1,56 @@
+# A Tatooine landing pad for a shuttle (Return of the Jedi's Lambda shuttle, the Mos Espa pads): a
+# low faceted ferrocrete platform with landing lights at the corners, a ramp, sometimes a shuttle on it
+# seen nose-on (tall fin, wings folded up) or a stack of cargo and a fuel cell.
+name: shuttle-pad
+style: tatooine
+about: Low faceted ferrocrete pad with corner lights and a ramp; a nose-on Lambda shuttle or cargo on it.
+width: [4, 5, 6, 7]
+choose:
+  hh: "=H if H else 4"
+  pw: "=w_max - 0.1"
+  pd: "=min(hh * 0.55, pw * 0.7)"
+  pz: [0.22, 0.32]
+  cut: "=min(0.7, pw * 0.18)"
+  dx: "=door_x if door_x is not None else 0"
+  load: {pick: [shuttle, cargo, empty], weights: [3, 2, 1]}
+  sx: "=0 if W <= 5 else (0.8 if dx < 0 else -0.8)"
+  ss: "=min(1.3, pw / 4.0, (hh - 0.45 - pd * 0.5 - pz) / 2.35)"   # shuttle scale
+parts:
+  - name: pad
+    mat: trim
+    prism: {poly: [["=-pw / 2 + cut", 0.1], ["=pw / 2 - cut", 0.1], ["=pw / 2", "=0.1 + cut"], ["=pw / 2", "=0.1 + pd - cut"],
+                   ["=pw / 2 - cut", "=0.1 + pd"], ["=-pw / 2 + cut", "=0.1 + pd"], ["=-pw / 2", "=0.1 + pd - cut"], ["=-pw / 2", "=0.1 + cut"]],
+            z: [0, "=pz"], top: 0.97, round: 0.03}
+  - when: "=load != 'shuttle'"
+    parts:
+      - name: ring
+        mat: mid
+        cylinder: {a: [0, "=0.1 + pd / 2", "=pz - 0.02"], b: [0, "=0.1 + pd / 2", "=pz + 0.01"], r1: "=min(pw, pd) * 0.38"}
+      - name: ring-in
+        mat: trim
+        cylinder: {a: [0, "=0.1 + pd / 2", "=pz - 0.01"], b: [0, "=0.1 + pd / 2", "=pz + 0.02"], r1: "=min(pw, pd) * 0.3"}
+  - repeat: 4
+    parts:
+      - {name: light, mat: light, box: {c: ["=(1 if i % 2 else -1) * (pw / 2 - 0.3)", "=0.1 + (0.3 if i < 2 else pd - 0.3)", "=pz + 0.1"], half: [0.12, 0.12, 0.1], radius: 0.03}}
+  - name: ramp
+    mat: trim
+    extrude: {axis: x, span: ["=dx - 0.45", "=dx + 0.45"], profile: [[-0.25, 0], [0.12, 0], [0.12, "=pz"]], round: 0.02}
+  - when: "=load == 'shuttle'"                   # a Lambda shuttle nose-on: body, tall fin, two wings folded up
+    parts:
+      - {name: sh-body, mat: light, box: {c: ["=sx", "=0.1 + pd * 0.5", "=pz + 0.35 * ss"], half: ["=0.5 * ss", "=0.75 * ss", "=0.32 * ss"], radius: 0.04}}
+      - {name: sh-nose, mat: dark, box: {c: ["=sx", "=0.1 + pd * 0.5 - 0.7 * ss", "=pz + 0.42 * ss"], half: ["=0.32 * ss", 0.05, "=0.14 * ss"]}}
+      - {name: sh-fin, mat: light, box: {c: ["=sx", "=0.1 + pd * 0.5 + 0.2 * ss", "=pz + 1.15 * ss"], half: [0.13, "=0.45 * ss", "=0.55 * ss"], radius: 0.02}}
+      - repeat: 2
+        parts:
+          - name: sh-wing
+            mat: mid
+            hull: {round: 0.02, points: [
+              ["=sx + (i * 2 - 1) * 0.45 * ss", "=0.1 + pd * 0.5 - 0.2 * ss", "=pz + 0.45 * ss"], ["=sx + (i * 2 - 1) * 0.6 * ss", "=0.1 + pd * 0.5 - 0.2 * ss", "=pz + 0.45 * ss"],
+              ["=sx + (i * 2 - 1) * 0.45 * ss", "=0.1 + pd * 0.5 + 0.35 * ss", "=pz + 0.45 * ss"], ["=sx + (i * 2 - 1) * 0.6 * ss", "=0.1 + pd * 0.5 + 0.35 * ss", "=pz + 0.45 * ss"],
+              ["=sx + (i * 2 - 1) * 1.0 * ss", "=0.1 + pd * 0.5 - 0.1 * ss", "=pz + 1.35 * ss"], ["=sx + (i * 2 - 1) * 1.18 * ss", "=0.1 + pd * 0.5 - 0.1 * ss", "=pz + 1.35 * ss"],
+              ["=sx + (i * 2 - 1) * 1.0 * ss", "=0.1 + pd * 0.5 + 0.2 * ss", "=pz + 1.35 * ss"], ["=sx + (i * 2 - 1) * 1.18 * ss", "=0.1 + pd * 0.5 + 0.2 * ss", "=pz + 1.35 * ss"]]}
+  - when: "=load == 'cargo'"
+    parts:
+      - {use: crate, name: c1, at: ["=-pw * 0.2", "=0.1 + pd * 0.45", "=pz"], with: {s: 0.6}}
+      - {use: crate, name: c2, at: ["=-pw * 0.2 + 0.65", "=0.1 + pd * 0.55", "=pz"], with: {s: 0.5}}
+      - {use: power-cell, name: fuel, at: ["=pw * 0.22", "=0.1 + pd * 0.6", "=pz"], with: {r: 0.28, h: 0.8}}

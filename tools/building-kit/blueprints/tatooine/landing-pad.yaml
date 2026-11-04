@@ -9,7 +9,7 @@ choose:
   side: "=1 if dx <= 0 else -1"
   hut: {pick: [dome, block], weights: [1, 1]}
   hw: [1.35, 1.6]
-  pr: "=min((w_max - hw - 0.1) / 2, ((H or 5) - 0.6) / 2, 2.0)"   # pad radius
+  pr: "=min((w_max / 2 - side * dx - hw / 2 - 0.15) / 2, ((H or 5) - 1.2) / 2, 2.0)"   # pad radius
   px: "=dx + side * (hw / 2 + 0.05 + pr)"
   ph: [0.22, 0.32]
   mast: {pick: [true, false], weights: [3, 1]}

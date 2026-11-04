@@ -38,6 +38,9 @@ WORLDART = os.environ.get("WORLDART_DIR", os.path.join(ROOT, "tools", "world-art
 sys.path.insert(0, WORLDART)
 from worldart import model as M  # noqa: E402
 
+# blueprints may also use int() and float() in expressions
+M.EXPR_ENV.update(int=int, float=float)
+
 TALL = 9          # cells of canvas the render starts with; cropped to the art afterwards
 MARGIN = 0.25     # metres kept clear on each side of the sprite
 

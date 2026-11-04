@@ -77,6 +77,9 @@ Everything is written to `output/` (not committed).
 
 - `kits/common.yaml`: materials (greybox ramps) and the pieces every style uses: `door-arch`, `door-slab`,
   `window-round`, `window-slot`, `vent`, `crate`.
+- A blueprint part can carve with `op: subtract`; to carve only some parts, give them their own
+  `group` plus `_new_group: true` (the pit of `courtyard-home`, the shell of `ruin`). The build finds the
+  door from the `at` of the entry named `door`, so make the door a template use (`gate-gap`, `bay-door`).
 - `kits/<style>.yaml`: a planet's pieces. `uses:` pulls in other kit files (Tatooine uses the world-art
   vaporator). A template with `preview:` shows on `parts`.
 - `blueprints/<style>/<name>.yaml`: a building family. The format is in `bkit/compose.py`:
@@ -96,6 +99,21 @@ Everything is written to `output/` (not committed).
 | `block-house` | Mos Eisley / Mos Espa blocks | size, wall lean, roof (band, dome, stepped upper block, flat), arch or slab door, round or slot window, buttresses, vent |
 | `dome-cluster` | The Mos Eisley cantina | domes (2-3), entry block, vent tower |
 | `tower` | Mos Espa towers | 2-3 stepped tiers, dome or band on top, door |
+| `bacta-center` | Mos Espa / Mos Eisley civic blocks | hall with a big dome, rotunda between wings, or hall between drum towers; wide slab, arch or porch door; beacon |
+| `supply-depot` | Watto's shop | shop block, big dome behind a shop front, or stepped block; shade canopy or buttressed jambs; crates |
+| `courtyard-home` | The Lars sunken courtyard | round pit with a rim, inner doorways, dome, drum or block entrance, rim vents or a store dome |
+| `lars-home` | The Lars homestead garage | entrance dome on a drum, garage vault with a wide bay, the X-34 out front, vaporators |
+| `farm-co-op` | Anchorhead | long hall, vaulted, banded or domed roof, storage drum, 2-4 vaporators behind |
+| `gatehouse` | Mos Espa town gates | long block with a big arch, round or square towers, guard room or dome; taller lots, taller towers |
+| `canopy-house` | Mos Espa backstreets | small dome or block beside a sloped shade canopy over crates, a tank or a bench |
+| `landing-pad` | Mos Espa pads | round pad with a ring, dome or block control hut, beacon mast |
+| `ruin` | The burned Lars farm | hollow dome with its roof caved in, wall stubs, rubble, a dead vaporator |
+| `speeder-garage` | Watto's yard, podracer hangars | block or vault with a wide bay, a speeder or podracer engine out front |
+| `walled-compound` | Mos Espa back streets | low wall round a yard with a gate, dome, block or twin houses, vaporator or trough |
+| `market-row` | Mos Espa marketplace | 2-4 stalls under sloped awnings, pots or crates, a back wall on some |
+| `water-tower` | Anchorhead water sellers | tall drum or tank on legs over a pump house, dome or flat cap, pipe |
+| `jawa-stand` | The Jawas' droid sale | sloped tarp over salvage, an astromech or labour droid, a crate counter |
+| `dome-row` | Mos Espa slave quarters | long low block with 2-4 small domes, a door under each |
 
 ## Earlier notes
 
