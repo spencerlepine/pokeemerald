@@ -575,11 +575,11 @@ MtPyre_Summit_Text_MaxieSilence:
 
 MtPyre_Summit_Text_HearTheNewLegendOfHoenn:
 	.string "It is my role to pass on the legends\n"
-	.string "of OUTER RIM to future generations.\p"
+	.string "of the OUTER RIM to new generations.\p"
 	.string "And the crisis that just ended on\n"
 	.string "DAGOBAH rewrote a legend…\p"
 	.string "Have you the time to hear the new\n"
-	.string "legend of OUTER RIM?$"
+	.string "legend of the OUTER RIM?$"
 
 MtPyre_Summit_Text_HoennTrioTale:
 	.string "It happened long, long ago…\p"

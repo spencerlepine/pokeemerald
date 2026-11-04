@@ -274,8 +274,8 @@ SafariZone_Southeast_Text_FatMan:
 	.string "COMPANIONS! Too cool!$"
 
 SafariZone_Southeast_Text_RichBoy:
-	.string "The COMPANION around here seem to be\n"
-	.string "from somewhere other than OUTER RIM.$"
+	.string "The COMPANIONS around here seem to\n"
+	.string "have come from beyond the OUTER RIM.$"
 
 SafariZone_Northeast_Text_Boy:
 	.string "I only have a couple SAFARI PODS left.\p"

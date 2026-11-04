@@ -86,8 +86,8 @@ else
   local s = S[SC]
   if SC == "people" then s = {0, 9, 14, 13, nil} end  -- Mos Pelgo (Littleroot Town), among its townsfolk
   if SC == "creatures" then s = {24, 6, 8, 8, 0x3A7} end
-  if SC == "tour" or SC == "dex" or SC == "creatures_dex" or SC:sub(1,4) == "menu" or SC:sub(1,7) == "starnav" then s = {0, 9, 5, 8, nil} end  -- Mos Pelgo (Littleroot Town): open ground
-  add({fn=function() if SC == "tour" or SC == "battle" or SC == "dex" or SC:sub(1,4) == "menu" or SC == "people"
+  if SC == "tour" or SC:sub(1,3) == "dex" or SC == "creatures_dex" or SC:sub(1,4) == "menu" or SC:sub(1,7) == "starnav" then s = {0, 9, 5, 8, nil} end  -- Mos Pelgo (Littleroot Town): open ground
+  add({fn=function() if SC == "tour" or SC == "battle" or SC:sub(1,3) == "dex" or SC:sub(1,4) == "menu" or SC == "people"
                         or SC:sub(1,9) == "creatures" or SC:sub(1,7) == "starnav" then setupParty() end
                      if SC:sub(1,7) == "starnav" then  -- every town visited (fly icons), Battle Frontier on the map
                        for f = SYS + 0xF, SYS + 0x1E do setFlag(f, true) end; setFlag(SYS + 0x48, true) end
@@ -119,6 +119,14 @@ else
       press("A"); shot(string.format("%02d_view", 2 + v), 90); shot(string.format("%02d_view_b", 2 + v), 12)
     end
     press("B"); shot("10_back", 120)
+  elseif SC == "dex_national" then  -- national Datapad on: the list shows the REGIONAL and NATIONAL count labels
+    add({fn=function()
+      setFlag(SYS + 0x36, true); emu:write16(sb1() + VARS + 0x46 * 2, 0x302)
+      local b = emu:read32(E.ADDR.gSaveBlock2Ptr); emu:write8(b + 0x1A, 0xDA)
+      for i = 0, 11 do emu:write8(b + 0x28 + i, 0xFF); emu:write8(b + 0x5C + i, 0xFF) end
+    end})
+    press("START"); add({wait=30}); press("DOWN"); press("UP"); add({wait=20}); press("A"); shot("01_list", 240)
+    press("SELECT"); shot("02_search", 120)
   elseif SC == "starnav_reopen" then  -- leave the StarNAV zoomed in, reopen it, then fly from the Fly map
     press("START"); add({wait=30}); press("DOWN"); press("DOWN"); press("DOWN"); press("A"); add({wait=150})
     press("A"); add({wait=150}); press("A"); add({wait=60}); press("B"); add({wait=150})
@@ -192,7 +200,7 @@ else
   else
   press("UP", 2); add({wait=20}); press("A", 4)
   end
-  if SC == "tour" or SC == "battle" or SC == "dex" or SC:sub(1,4) == "menu" or SC:sub(1,9) == "creatures"
+  if SC == "tour" or SC == "battle" or SC:sub(1,3) == "dex" or SC:sub(1,4) == "menu" or SC:sub(1,9) == "creatures"
      or SC == "people" or SC:sub(1,7) == "starnav" then
   elseif SC:sub(1,4) == "sign" then
     add({wait=150}); add({shot=SC})

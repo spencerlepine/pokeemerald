@@ -40,6 +40,7 @@ rebuild. Run `boot` once after every build (savestates do not carry over), then 
   `starnav_town`: the wall map (it calls `CB2_FieldShowRegionMap`). `starnav_fly`: the Fly map (it calls
   `CB2_OpenFlyMap`). `starnav_reopen`: the StarNAV reopened zoomed in, then a flight to Mos Pelgo.
   `starnav_dex`: the Datapad area screen: the galaxy, then A through each planet the species lives on.
+  `dex_national`: the Datapad list with the national Datapad on (the REGIONAL and NATIONAL count labels), then the search screen.
 
 - `creatures`: a party of net-new species with the net-new moves (party icons, summary pages, a battle).
   `creatures_dex`: the Datapad list opened at No. 206 (it writes `sLastSelectedPokemon`) and a new species' page.

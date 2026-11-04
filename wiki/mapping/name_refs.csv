@@ -7,10 +7,10 @@ character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/EverGrandeCity_C
 character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/EverGrandeCity_ChampionsRoom/scripts.inc,272,EverGrandeCity_ChampionsRoom_Text_BrendanYouveWon,1,KAEL: {PLAYER}…\p
 character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/EverGrandeCity_ChampionsRoom/scripts.inc,311,EverGrandeCity_ChampionsRoom_Text_MayCongratulations,1,MIRA: Groan…\p
 character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/EverGrandeCity_ChampionsRoom/scripts.inc,320,EverGrandeCity_ChampionsRoom_Text_BrendanCongratulations,1,KAEL: Whaaaat?! … … … … …\n
-character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/LavaridgeTown/scripts.inc,266,LavaridgeTown_Text_MayNiceBadgesTakeThis,1,MIRA: {PLAYER}{KUN}! Long time no see!\p
-character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/LavaridgeTown/scripts.inc,276,LavaridgeTown_Text_MayExplainGoGogglesChallengeDad,1,"MIRA: With those SAND GOGGLES, you'll\n"
-character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/LavaridgeTown/scripts.inc,288,LavaridgeTown_Text_BrendanNiceBadgesTakeThis,1,"KAEL: {PLAYER}, hey, it's been a while.\n"
-character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/LavaridgeTown/scripts.inc,296,LavaridgeTown_Text_BrendanExplainGoGogglesChallengeDad,1,KAEL: Keep those with you if you're\n
+character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/LavaridgeTown/scripts.inc,288,LavaridgeTown_Text_MayNiceBadgesTakeThis,1,MIRA: {PLAYER}{KUN}! Long time no see!\p
+character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/LavaridgeTown/scripts.inc,298,LavaridgeTown_Text_MayExplainGoGogglesChallengeDad,1,"MIRA: With those SAND GOGGLES, you'll\n"
+character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/LavaridgeTown/scripts.inc,310,LavaridgeTown_Text_BrendanNiceBadgesTakeThis,1,"KAEL: {PLAYER}, hey, it's been a while.\n"
+character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/LavaridgeTown/scripts.inc,318,LavaridgeTown_Text_BrendanExplainGoGogglesChallengeDad,1,KAEL: Keep those with you if you're\n
 character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/LilycoveCity/scripts.inc,637,LilycoveCity_Text_MayShoppingLetsBattle,1,"MIRA: Oh, hey?\n"
 character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/LilycoveCity/scripts.inc,650,LilycoveCity_Text_MayNotRaisingPokemon,1,"MIRA: Oh, why? {PLAYER}{KUN}, haven't you\n"
 character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/LilycoveCity/scripts.inc,656,LilycoveCity_Text_MayBattleMe,1,"MIRA: Come on, battle with me, so I can\n"
@@ -43,8 +43,8 @@ character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/LittlerootTown_Profe
 character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/LittlerootTown_ProfessorBirchsLab/scripts.inc,960,LittlerootTown_ProfessorBirchsLab_Text_BrendanPreferCollectingSlowly,1,KAEL: Rather than collecting\n
 character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/LittlerootTown_ProfessorBirchsLab/scripts.inc,965,LittlerootTown_ProfessorBirchsLab_Text_MayHaveYouGoneToBattleFrontier,1,"MIRA: Oh, hi, {PLAYER}{KUN}!\n"
 character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/LittlerootTown_ProfessorBirchsLab/scripts.inc,970,LittlerootTown_ProfessorBirchsLab_Text_BrendanHaveYouGoneToBattleFrontier,1,"KAEL: Hey, {PLAYER}!\n"
-character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/OldaleTown/scripts.inc,376,OldaleTown_Text_MayLetsGoBack,1,MIRA: {PLAYER}{KUN}!\n
-character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/OldaleTown/scripts.inc,381,OldaleTown_Text_BrendanLetsGoBack,1,KAEL: I'm heading back to my dad's\n
+character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/OldaleTown/scripts.inc,380,OldaleTown_Text_MayLetsGoBack,1,MIRA: {PLAYER}{KUN}!\n
+character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/OldaleTown/scripts.inc,385,OldaleTown_Text_BrendanLetsGoBack,1,KAEL: I'm heading back to my dad's\n
 character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/Route103/scripts.inc,280,Route103_Text_MayRoute103Pokemon,1,MIRA: Let's see… The COMPANIONS found\n
 character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/Route103/scripts.inc,297,Route103_Text_MayTimeToHeadBack,1,MIRA: I think I know why my dad has\n
 character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/Route103/scripts.inc,307,Route103_Text_BrendanRoute103Pokemon,1,"KAEL: Okay, so it's this one and\n"
@@ -75,20 +75,20 @@ character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/Route119/scripts.inc
 character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/Route119/scripts.inc,503,Route119_Text_BrendanIntro,1,KAEL: {PLAYER}! So this is where\n
 character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/Route119/scripts.inc,515,Route119_Text_BrendanIllGiveYouThis,1,KAEL: I'd say you're good enough\n
 character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/Route119/scripts.inc,521,Route119_Text_BrendanExplainFly,1,"KAEL: Use FLY, and your COMPANION\n"
-character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/RustboroCity/scripts.inc,1031,RustboroCity_Text_MayHiLetsRegister,1,"MIRA: Oh, hi, {PLAYER}{KUN}!\p"
-character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/RustboroCity/scripts.inc,1039,RustboroCity_Text_RegisteredMay,1,Registered MIRA\n
-character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/RustboroCity/scripts.inc,1043,RustboroCity_Text_MayPassedBrineyWantToBattle,1,"MIRA: Oh, by the way, I passed\n"
-character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/RustboroCity/scripts.inc,1053,RustboroCity_Text_MayOhHaventRaisedPokemonEnough,1,"MIRA: Oh, what's the matter?\p"
-character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/RustboroCity/scripts.inc,1059,RustboroCity_Text_MayWantToBattle,1,"MIRA: So, what do you think?\n"
-character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/RustboroCity/scripts.inc,1063,RustboroCity_Text_MayImNotGoingToLose,1,"MIRA: You just became a TRAINER,\n"
-character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/RustboroCity/scripts.inc,1071,RustboroCity_Text_MayMrBrineyHint,1,"MIRA: Oh, by the way, HAN, who\n"
-character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/RustboroCity/scripts.inc,1078,RustboroCity_Text_BrendanHiLetsRegister,1,"KAEL: Oh, hey, {PLAYER}!\p"
-character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/RustboroCity/scripts.inc,1086,RustboroCity_Text_RegisteredBrendan,1,Registered KAEL\n
-character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/RustboroCity/scripts.inc,1090,RustboroCity_Text_BrendanPassedBrineyWantToBattle,1,"KAEL: By the way, {PLAYER}, I walked\n"
-character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/RustboroCity/scripts.inc,1101,RustboroCity_Text_BrendanNoConfidenceInPokemon,1,KAEL: What's the matter? Don't have\n
-character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/RustboroCity/scripts.inc,1105,RustboroCity_Text_BrendanWantToBattle,1,KAEL: What's up?\n
-character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/RustboroCity/scripts.inc,1109,RustboroCity_Text_BrendanIWontGoEasy,1,KAEL: I know you just became\n
-character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/RustboroCity/scripts.inc,1117,RustboroCity_Text_BrendanMrBrineyHint,1,"KAEL: By the way, you know\n"
+character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/RustboroCity/scripts.inc,1034,RustboroCity_Text_MayHiLetsRegister,1,"MIRA: Oh, hi, {PLAYER}{KUN}!\p"
+character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/RustboroCity/scripts.inc,1042,RustboroCity_Text_RegisteredMay,1,Registered MIRA\n
+character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/RustboroCity/scripts.inc,1046,RustboroCity_Text_MayPassedBrineyWantToBattle,1,"MIRA: Oh, by the way, I passed\n"
+character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/RustboroCity/scripts.inc,1056,RustboroCity_Text_MayOhHaventRaisedPokemonEnough,1,"MIRA: Oh, what's the matter?\p"
+character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/RustboroCity/scripts.inc,1062,RustboroCity_Text_MayWantToBattle,1,"MIRA: So, what do you think?\n"
+character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/RustboroCity/scripts.inc,1066,RustboroCity_Text_MayImNotGoingToLose,1,"MIRA: You just became a TRAINER,\n"
+character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/maps/RustboroCity/scripts.inc,1074,RustboroCity_Text_MayMrBrineyHint,1,"MIRA: Oh, by the way, HAN, who\n"
+character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/RustboroCity/scripts.inc,1081,RustboroCity_Text_BrendanHiLetsRegister,1,"KAEL: Oh, hey, {PLAYER}!\p"
+character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/RustboroCity/scripts.inc,1089,RustboroCity_Text_RegisteredBrendan,1,Registered KAEL\n
+character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/RustboroCity/scripts.inc,1093,RustboroCity_Text_BrendanPassedBrineyWantToBattle,1,"KAEL: By the way, {PLAYER}, I walked\n"
+character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/RustboroCity/scripts.inc,1104,RustboroCity_Text_BrendanNoConfidenceInPokemon,1,KAEL: What's the matter? Don't have\n
+character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/RustboroCity/scripts.inc,1108,RustboroCity_Text_BrendanWantToBattle,1,KAEL: What's up?\n
+character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/RustboroCity/scripts.inc,1112,RustboroCity_Text_BrendanIWontGoEasy,1,KAEL: I know you just became\n
+character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/maps/RustboroCity/scripts.inc,1120,RustboroCity_Text_BrendanMrBrineyHint,1,"KAEL: By the way, you know\n"
 character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/text/match_call.inc,2312,MatchCall_Text_MayRayquazaCall,1,"MIRA: Hi, {PLAYER}{KUN}!\p"
 character:rival,MIRA / KAEL,text,SWAPPED,BRENDAN,KAEL,data/text/match_call.inc,2327,MatchCall_Text_BrendanRayquazaCall,1,"KAEL: Hey, {PLAYER}!\n"
 character:rival,MIRA / KAEL,text,SWAPPED,MAY,MIRA,data/text/match_call.inc,2339,MatchCall_Text_May1,1,"MIRA: Hi, {PLAYER}{KUN}!\p"
@@ -193,7 +193,7 @@ character:rival,MIRA / KAEL,code,KEEP,,,data/maps/LittlerootTown_ProfessorBirchs
 character:rival,MIRA / KAEL,code,KEEP,,,data/maps/MauvilleCity_Mart/scripts.inc,7,,1,gText_HowMayIServeYou
 character:rival,MIRA / KAEL,code,KEEP,,,data/maps/MossdeepCity_Mart/scripts.inc,7,,1,gText_HowMayIServeYou
 character:rival,MIRA / KAEL,code,KEEP,,,data/maps/MossdeepCity_SpaceCenter_2F/scripts.inc,325,,6,MossdeepCity_SpaceCenter_2F_EventScript_MayRayquazaCall | MossdeepCity_SpaceCenter_2F_EventScript_BrendanRayquazaCall | MatchCall_Text_MayRayquazaCall | MatchCall_Text_BrendanRayquazaCall
-character:rival,MIRA / KAEL,code,KEEP,,,data/maps/OldaleTown/scripts.inc,249,,8,OldaleTown_EventScript_ShowMayMessage | OldaleTown_EventScript_ShowBrendanMessage | OldaleTown_Text_MayLetsGoBack | OldaleTown_Text_BrendanLetsGoBack
+character:rival,MIRA / KAEL,code,KEEP,,,data/maps/OldaleTown/scripts.inc,253,,8,OldaleTown_EventScript_ShowMayMessage | OldaleTown_EventScript_ShowBrendanMessage | OldaleTown_Text_MayLetsGoBack | OldaleTown_Text_BrendanLetsGoBack
 character:rival,MIRA / KAEL,code,KEEP,,,data/maps/OldaleTown_Mart/scripts.inc,7,,1,gText_HowMayIServeYou
 character:rival,MIRA / KAEL,code,KEEP,,,data/maps/PetalburgCity_Mart/scripts.inc,7,,1,gText_HowMayIServeYou
 character:rival,MIRA / KAEL,code,KEEP,,,data/maps/Route101/scripts.inc,234,,5,Route101_EventScript_HideMayInBedroom | Route101_EventScript_HideBrendanInBedroom | FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_BEDROOM
@@ -203,7 +203,7 @@ character:rival,MIRA / KAEL,code,KEEP,,,data/maps/Route110/scripts.inc,369,,56,R
 character:rival,MIRA / KAEL,code,KEEP,,,data/maps/Route111/scripts.inc,58,,2,OBJ_EVENT_GFX_RIVAL_BRENDAN_NORMAL | OBJ_EVENT_GFX_RIVAL_MAY_NORMAL
 character:rival,MIRA / KAEL,code,KEEP,,,data/maps/Route116/scripts.inc,169,,2,Route116_Text_MayISeeThoseGlasses
 character:rival,MIRA / KAEL,code,KEEP,,,data/maps/Route119/scripts.inc,43,,50,Route119_EventScript_PlayMayMusic | Route119_EventScript_PlayBrendanMusic | Route119_EventScript_BattleBrendan | MUS_ENCOUNTER_MAY | +22 more
-character:rival,MIRA / KAEL,code,KEEP,,,data/maps/RustboroCity/scripts.inc,622,,81,RustboroCity_EventScript_PlayMayMusic | RustboroCity_EventScript_PlayBrendanMusic | MUS_ENCOUNTER_MAY | MUS_ENCOUNTER_BRENDAN | +34 more
+character:rival,MIRA / KAEL,code,KEEP,,,data/maps/RustboroCity/scripts.inc,625,,81,RustboroCity_EventScript_PlayMayMusic | RustboroCity_EventScript_PlayBrendanMusic | MUS_ENCOUNTER_MAY | MUS_ENCOUNTER_BRENDAN | +34 more
 character:rival,MIRA / KAEL,code,KEEP,,,data/maps/RustboroCity_Mart/scripts.inc,7,,1,gText_HowMayIServeYou
 character:rival,MIRA / KAEL,code,KEEP,,,data/maps/SlateportCity/scripts.inc,458,,3,gText_HowMayIServeYou
 character:rival,MIRA / KAEL,code,KEEP,,,data/maps/SlateportCity_BattleTentBattleRoom/scripts.inc,23,,2,OBJ_EVENT_GFX_RIVAL_BRENDAN_NORMAL | OBJ_EVENT_GFX_RIVAL_MAY_NORMAL
@@ -211,6 +211,10 @@ character:rival,MIRA / KAEL,code,KEEP,,,data/maps/SlateportCity_Harbor/scripts.i
 character:rival,MIRA / KAEL,code,KEEP,,,data/maps/SlateportCity_Mart/scripts.inc,7,,1,gText_HowMayIServeYou
 character:rival,MIRA / KAEL,code,KEEP,,,data/maps/SootopolisCity_Mart/scripts.inc,7,,1,gText_HowMayIServeYou
 character:rival,MIRA / KAEL,code,KEEP,,,data/maps/SouthernIsland_Interior/scripts.inc,34,,6,SouthernIsland_Interior_EventScript_SetBrendanGfx | SouthernIsland_Interior_EventScript_SetMayGfx | OBJ_EVENT_GFX_RIVAL_BRENDAN_NORMAL | OBJ_EVENT_GFX_RIVAL_MAY_NORMAL
+character:rival,MIRA / KAEL,code,KEEP,,,data/maps/SwIlumSupplyDepot/scripts.inc,10,,1,gText_HowMayIServeYou
+character:rival,MIRA / KAEL,code,KEEP,,,data/maps/SwKachirhoSupplyDepot/scripts.inc,10,,1,gText_HowMayIServeYou
+character:rival,MIRA / KAEL,code,KEEP,,,data/maps/SwNijedhaSupplyDepot/scripts.inc,10,,1,gText_HowMayIServeYou
+character:rival,MIRA / KAEL,code,KEEP,,,data/maps/SwTipocaCitySupplyDepot/scripts.inc,10,,1,gText_HowMayIServeYou
 character:rival,MIRA / KAEL,code,KEEP,,,data/maps/TrainerHill_Entrance/scripts.inc,238,,1,gText_HowMayIServeYou
 character:rival,MIRA / KAEL,code,KEEP,,,data/maps/VerdanturfTown_BattleTentBattleRoom/scripts.inc,22,,4,OBJ_EVENT_GFX_RIVAL_BRENDAN_NORMAL | OBJ_EVENT_GFX_RIVAL_MAY_NORMAL
 character:rival,MIRA / KAEL,code,KEEP,,,data/maps/VerdanturfTown_Mart/scripts.inc,7,,1,gText_HowMayIServeYou
@@ -232,7 +236,7 @@ character:rival,MIRA / KAEL,code,KEEP,,,include/constants/trainers.h,90,,22,TRAI
 character:rival,MIRA / KAEL,code,KEEP,,,include/constants/vars.h,150,,2,VAR_LITTLEROOT_HOUSES_STATE_MAY | VAR_LITTLEROOT_HOUSES_STATE_BRENDAN
 character:rival,MIRA / KAEL,code,KEEP,,,include/data.h,103,,2,gTrainerBackPicTable_Brendan | gTrainerBackPicTable_RubySapphireBrendan
 character:rival,MIRA / KAEL,code,KEEP,,,include/event_scripts.h,382,,4,LittlerootTown_BrendansHouse_2F_EventScript_TurnOffPlayerPC | LittlerootTown_MaysHouse_2F_EventScript_TurnOffPlayerPC | LittlerootTown_BrendansHouse_2F_EventScript_PC | LittlerootTown_MaysHouse_2F_EventScript_PC
-character:rival,MIRA / KAEL,code,KEEP,,,include/graphics.h,2946,,12,gTrainerFrontPic_Brendan | gTrainerFrontPic_RubySapphireBrendan | gTrainerPalette_Brendan | gTrainerPalette_RubySapphireBrendan | +8 more
+character:rival,MIRA / KAEL,code,KEEP,,,include/graphics.h,2959,,12,gTrainerFrontPic_Brendan | gTrainerFrontPic_RubySapphireBrendan | gTrainerPalette_Brendan | gTrainerPalette_RubySapphireBrendan | +8 more
 character:rival,MIRA / KAEL,code,KEEP,,,include/intro_credits_graphics.h,24,,5,gSpriteSheet_IntroBrendan | gSpriteSheet_CreditsBrendan | gSpriteSheet_CreditsRivalBrendan | CreateIntroBrendanSprite | +1 more
 character:rival,MIRA / KAEL,code,KEEP,,,include/match_call.h,9,,1,MATCH_CALL_TYPE_MAY_BRENDAN
 character:rival,MIRA / KAEL,code,KEEP,,,include/pokenav.h,190,,2,MC_HEADER_BRENDAN | MC_HEADER_MAY
@@ -242,7 +246,7 @@ character:rival,MIRA / KAEL,code,KEEP,,,src/battle_controller_link_opponent.c,12
 character:rival,MIRA / KAEL,code,KEEP,,,src/battle_controller_link_partner.c,1129,,2,TRAINER_BACK_PIC_RUBY_SAPPHIRE_BRENDAN
 character:rival,MIRA / KAEL,code,KEEP,,,src/battle_controller_player.c,2280,,5,TRAINER_BACK_PIC_RUBY_SAPPHIRE_BRENDAN | TRAINER_BACK_PIC_BRENDAN
 character:rival,MIRA / KAEL,code,KEEP,,,src/battle_dome.c,4402,,1,FACILITY_CLASS_BRENDAN
-character:rival,MIRA / KAEL,code,KEEP,,,src/battle_main.c,4127,,3,STATE_SELECTION_SCRIPT_MAY_RUN
+character:rival,MIRA / KAEL,code,KEEP,,,src/battle_main.c,4130,,3,STATE_SELECTION_SCRIPT_MAY_RUN
 character:rival,MIRA / KAEL,code,KEEP,,,src/battle_tower.c,328,,12,RS_FACILITY_CLASS_BRENDAN_1 | FACILITY_CLASS_BRENDAN | RS_FACILITY_CLASS_BRENDAN_2 | FACILITY_CLASS_BRENDAN_2 | +8 more
 character:rival,MIRA / KAEL,code,KEEP,,,src/battle_transition.c,302,,16,sUnusedBrendan_Gfx | sOam_UnusedBrendanLass | sImageTable_UnusedBrendan | sSpriteAnim_UnusedBrendanLass | +3 more
 character:rival,MIRA / KAEL,code,KEEP,,,src/cable_car.c,790,,2,OBJ_EVENT_GFX_RIVAL_BRENDAN_NORMAL | OBJ_EVENT_GFX_RIVAL_MAY_NORMAL
@@ -278,10 +282,10 @@ character:rival,MIRA / KAEL,code,KEEP,,,src/intro.c,1326,,3,gSpriteSheet_IntroBr
 character:rival,MIRA / KAEL,code,KEEP,,,src/intro_credits_graphics.c,21,,41,TAG_BRENDAN | TAG_MAY | sBrendanCredits_Pal | sBrendanCredits_Gfx | +12 more
 character:rival,MIRA / KAEL,code,KEEP,,,src/main_menu.c,1224,,17,tBrendanSpriteId | tMaySpriteId | FACILITY_CLASS_BRENDAN | FACILITY_CLASS_MAY
 character:rival,MIRA / KAEL,code,KEEP,,,src/player_pc.c,497,,2,LittlerootTown_BrendansHouse_2F_EventScript_TurnOffPlayerPC | LittlerootTown_MaysHouse_2F_EventScript_TurnOffPlayerPC
-character:rival,MIRA / KAEL,code,KEEP,,,src/pokemon.c,1985,,8,TRAINER_BACK_PIC_BRENDAN | gTrainerBackPicTable_Brendan | TRAINER_BACK_PIC_MAY | TRAINER_BACK_PIC_RUBY_SAPPHIRE_BRENDAN | +4 more
+character:rival,MIRA / KAEL,code,KEEP,,,src/pokemon.c,1994,,8,TRAINER_BACK_PIC_BRENDAN | gTrainerBackPicTable_Brendan | TRAINER_BACK_PIC_MAY | TRAINER_BACK_PIC_RUBY_SAPPHIRE_BRENDAN | +4 more
 character:rival,MIRA / KAEL,code,KEEP,,,src/pokenav_match_call_data.c,275,,33,sMayTextScripts | sMayMatchCallHeader | gText_MayBrendanMatchCallDesc | sBrendanTextScripts | +22 more
 character:rival,MIRA / KAEL,code,KEEP,,,src/post_battle_event_funcs.c,39,,1,HEAL_LOCATION_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F
-character:rival,MIRA / KAEL,code,KEEP,,,src/region_map.c,125,,10,sRegionMapPlayerIcon_BrendanPal | sRegionMapPlayerIcon_BrendanGfx | sRegionMapPlayerIcon_MayPal | sRegionMapPlayerIcon_MayGfx | +2 more
+character:rival,MIRA / KAEL,code,KEEP,,,src/region_map.c,131,,10,sRegionMapPlayerIcon_BrendanPal | sRegionMapPlayerIcon_BrendanGfx | sRegionMapPlayerIcon_MayPal | sRegionMapPlayerIcon_MayGfx | +2 more
 character:rival,MIRA / KAEL,code,KEEP,,,src/rtc.c,25,,1,MONTH_MAY
 character:rival,MIRA / KAEL,code,KEEP,,,src/string_util.c,461,,1,gText_ExpandedPlaceholder_Brendan
 character:rival,MIRA / KAEL,code,KEEP,,,src/trainer_card.c,305,,6,FACILITY_CLASS_BRENDAN | FACILITY_CLASS_MAY | FACILITY_CLASS_RS_BRENDAN | FACILITY_CLASS_RS_MAY
@@ -376,9 +380,9 @@ character:prof-birch,PROF. KORR,code,KEEP,,,include/starter_choose.h,4,,4,gBirch
 character:prof-birch,PROF. KORR,code,KEEP,,,include/strings.h,340,,34,gText_Birch_Welcome | gText_Birch_MainSpeech | gText_Birch_AndYouAre | gText_Birch_BoyOrGirl | +30 more
 character:prof-birch,PROF. KORR,code,KEEP,,,include/time_events.h,6,,1,UpdateBirchState
 character:prof-birch,PROF. KORR,code,KEEP,,,src/battle_controllers.c,42,,1,SetUpBattleVarsAndBirchZigzagoon
-character:prof-birch,PROF. KORR,code,KEEP,,,src/battle_main.c,685,,2,SetUpBattleVarsAndBirchZigzagoon | B_MSG_DONT_LEAVE_BIRCH
+character:prof-birch,PROF. KORR,code,KEEP,,,src/battle_main.c,688,,2,SetUpBattleVarsAndBirchZigzagoon | B_MSG_DONT_LEAVE_BIRCH
 character:prof-birch,PROF. KORR,code,KEEP,,,src/battle_message.c,734,,4,STRINGID_DONTLEAVEBIRCH | sText_DontLeaveBirch | B_MSG_DONT_LEAVE_BIRCH
-character:prof-birch,PROF. KORR,code,KEEP,,,src/birch_pc.c,27,,26,gBirchDexRatingText_LessThan10 | gBirchDexRatingText_LessThan20 | gBirchDexRatingText_LessThan30 | gBirchDexRatingText_LessThan40 | +17 more
+character:prof-birch,PROF. KORR,code,KEEP,,,src/birch_pc.c,27,,22,gBirchDexRatingText_LessThan10 | gBirchDexRatingText_LessThan20 | gBirchDexRatingText_LessThan30 | gBirchDexRatingText_LessThan40 | +17 more
 character:prof-birch,PROF. KORR,code,KEEP,,,src/clock.c,50,,1,UpdateBirchState
 character:prof-birch,PROF. KORR,code,KEEP,,,src/credits.c,550,,3,gBirchBagGrass_Gfx | gBirchGrassTilemap | gBirchBagGrass_Pal
 character:prof-birch,PROF. KORR,code,KEEP,,,src/data/object_events/object_event_graphics.h,127,,2,gObjectEventPic_ProfBirch | gObjectEventPic_BirchsBag
@@ -405,15 +409,15 @@ character:brandon,DEXTER,code,KEEP,,,data/text/frontier_brain.inc,94,,4,gText_Br
 character:brandon,DEXTER,code,KEEP,,,include/constants/event_objects.h,239,,1,OBJ_EVENT_GFX_BRANDON
 character:brandon,DEXTER,code,KEEP,,,include/constants/opponents.h,815,,1,TRAINER_BRANDON
 character:brandon,DEXTER,code,KEEP,,,include/constants/trainers.h,107,,1,TRAINER_PIC_PYRAMID_KING_BRANDON
-character:brandon,DEXTER,code,KEEP,,,include/graphics.h,2963,,2,gTrainerFrontPic_PyramidKingBrandon | gTrainerPalette_PyramidKingBrandon
+character:brandon,DEXTER,code,KEEP,,,include/graphics.h,2976,,2,gTrainerFrontPic_PyramidKingBrandon | gTrainerPalette_PyramidKingBrandon
 character:brandon,DEXTER,code,KEEP,,,include/strings.h,1342,,4,gText_BrandonWonSilver | gText_BrandonDefeatSilver | gText_BrandonWonGold | gText_BrandonDefeatGold
 character:brandon,DEXTER,code,KEEP,,,src/data/graphics/trainers.h,265,,2,gTrainerFrontPic_PyramidKingBrandon | gTrainerPalette_PyramidKingBrandon
-character:brandon,DEXTER,code,KEEP,,,src/data/object_events/object_event_graphics.h,354,,1,gObjectEventPic_Brandon
-character:brandon,DEXTER,code,KEEP,,,src/data/object_events/object_event_graphics_info.h,4523,,2,gObjectEventGraphicsInfo_Brandon | sPicTable_Brandon
-character:brandon,DEXTER,code,KEEP,,,src/data/object_events/object_event_graphics_info_pointers.h,233,,3,gObjectEventGraphicsInfo_Brandon | OBJ_EVENT_GFX_BRANDON
-character:brandon,DEXTER,code,KEEP,,,src/data/object_events/object_event_pic_tables.h,2092,,10,sPicTable_Brandon | gObjectEventPic_Brandon
+character:brandon,DEXTER,code,KEEP,,,src/data/object_events/object_event_graphics.h,348,,1,gObjectEventPic_Brandon
+character:brandon,DEXTER,code,KEEP,,,src/data/object_events/object_event_graphics_info.h,4409,,2,gObjectEventGraphicsInfo_Brandon | sPicTable_Brandon
+character:brandon,DEXTER,code,KEEP,,,src/data/object_events/object_event_graphics_info_pointers.h,227,,3,gObjectEventGraphicsInfo_Brandon | OBJ_EVENT_GFX_BRANDON
+character:brandon,DEXTER,code,KEEP,,,src/data/object_events/object_event_pic_tables.h,2068,,10,sPicTable_Brandon | gObjectEventPic_Brandon
 character:brandon,DEXTER,code,KEEP,,,src/data/trainer_graphics/front_pic_anims.h,353,,3,sAnims_PyramidKingBrandon | TRAINER_PIC_PYRAMID_KING_BRANDON
 character:brandon,DEXTER,code,KEEP,,,src/data/trainer_graphics/front_pic_tables.h,91,,5,TRAINER_PIC_PYRAMID_KING_BRANDON | PYRAMID_KING_BRANDON | gTrainerFrontPic_PyramidKingBrandon | gTrainerPalette_PyramidKingBrandon
-character:brandon,DEXTER,code,KEEP,,,src/data/trainer_parties.h,11691,,1,sParty_Brandon
+character:brandon,DEXTER,code,KEEP,,,src/data/trainer_parties.h,11696,,1,sParty_Brandon
 character:brandon,DEXTER,code,KEEP,,,src/data/trainers.h,9736,,3,TRAINER_BRANDON | TRAINER_PIC_PYRAMID_KING_BRANDON | sParty_Brandon
 character:brandon,DEXTER,code,KEEP,,,src/frontier_util.c,676,,6,OBJ_EVENT_GFX_BRANDON | TRAINER_BRANDON | gText_BrandonWonSilver | gText_BrandonDefeatSilver | +2 more

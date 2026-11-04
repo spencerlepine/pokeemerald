@@ -55,3 +55,24 @@ are drawn to match. GALAXY MAP is too wide for the strip. Installed 2026-11-04.
 python3 starnav_map_header.py preview   # out/starnav_map_header.png
 python3 starnav_map_header.py install   # writes ../../game/graphics/pokenav/left_headers/hoenn_map.png
 ```
+
+## StarNAV menu button (`starnav_menu_button.py`)
+
+The StarNAV main menu's map button (`graphics/pokenav/options/hoenn_map.png`, four 32x16 frames side by side)
+said HOENN MAP. This script rebuilds it as STAR MAP with the same letters as the map strip. Installed 2026-11-04.
+
+```sh
+python3 starnav_menu_button.py preview   # out/starnav_menu_button.png
+python3 starnav_menu_button.py install   # writes ../../game/graphics/pokenav/options/hoenn_map.png
+```
+
+## Datapad count label (`datapad_dex_label.py`)
+
+With the national Datapad, the list screen shows two count labels, HOENN and NATIONAL, as 32x8 sprite frames in
+`graphics/pokedex/interface.png`. OUTER RIM does not fit 32 px in that font, so the label says REGIONAL: IONAL
+is copied from NATIONAL, and R, E and G are drawn to match. Installed 2026-11-04.
+
+```sh
+python3 datapad_dex_label.py preview   # out/datapad_dex_label.png
+python3 datapad_dex_label.py install   # writes ../../game/graphics/pokedex/interface.png
+```

@@ -2454,8 +2454,8 @@ MatchCall_Text_May14::
 
 MatchCall_Text_May15::
 	.string "MIRA: There isn't a single TRAINER\n"
-	.string "left in OUTER RIM who doesn't know who\l"
-	.string "you are, {PLAYER}{KUN}!\p"
+	.string "left in the OUTER RIM who doesn't\l"
+	.string "know who you are, {PLAYER}{KUN}!\p"
 	.string "When I tell people that I'm friends\n"
 	.string "with you, {PLAYER}{KUN}, they're all\l"
 	.string "surprised!$"
@@ -2580,8 +2580,8 @@ MatchCall_Text_Brendan14::
 
 MatchCall_Text_Brendan15::
 	.string "KAEL: There isn't a TRAINER in\n"
-	.string "all of OUTER RIM who doesn't know who\l"
-	.string "you are, {PLAYER}!\p"
+	.string "the whole OUTER RIM who doesn't\l"
+	.string "know who you are, {PLAYER}!\p"
 	.string "When I tell people that I'm friends\n"
 	.string "with you, {PLAYER}, they get pretty\l"
 	.string "envious!$"

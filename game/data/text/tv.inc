@@ -663,7 +663,7 @@ gTVTrainerFanClubSpecialText00::
 	.string "TRAINER FAN CLUB\n"
 	.string "{STR_VAR_1} SPECIAL!\p"
 	.string "This is a special presentation for the\n"
-	.string "fans of {STR_VAR_1} all over OUTER RIM!\p"
+	.string "fans of {STR_VAR_1} across the OUTER RIM!\p"
 	.string "Today, we ask the question, “What do\n"
 	.string "people think of {STR_VAR_1}?”\p"
 	.string "We posed the question to {STR_VAR_2}\n"
@@ -1615,7 +1615,7 @@ gTVPokemonLotteryWinnerFlashReportText00::
 	.string "This has been a live broadcast from\n"
 	.string "the CLOUD CITY DEPARTMENT STORE,\l"
 	.string "offering you the greatest selection\l"
-	.string "in all OUTER RIM!$"
+	.string "in the whole OUTER RIM!$"
 
 gTVThePokemonBattleSeminarText00::
 	.string "THE COMPANION BATTLE SEMINAR!\p"
@@ -2015,7 +2015,7 @@ gTVPokemonNewsBattleFrontierText18::
 	.string "That's the news on HOLONET NEWS!$"
 
 gTVWhatsNo1InHoennTodayText00::
-	.string "WHAT'S NO. 1 IN OUTER RIM TODAY?\n"
+	.string "WHAT'S NO. 1 IN THE OUTER RIM TODAY?\n"
 	.string "Yes, it's that time again!\p"
 	.string "Hello, viewers! Are you giving your\n"
 	.string "best at whatever you do?\p"
