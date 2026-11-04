@@ -1,0 +1,56 @@
+# Sabine Wren's arena (Rebels): a painted durasteel hall in the Mandalorian manner. A long block with a
+# chamfered brow, a T-visor for a door, slanted paint stripes (shapes only, colour comes later),
+# shoulder plates at the ends like pauldrons, a helmet crest on the roof, a rangefinder mast.
+name: mando-hall
+style: sullust
+about: Chamfered durasteel hall, T-visor door, slanted stripes, pauldron or fin ends, crest, rangefinder.
+width: [6, 7, 8]
+choose:
+  Hb: "=H if H else 5"
+  w: ["=w_max * 0.72", "=w_max * 0.8"]
+  d: [1.9, 2.3]
+  h: [1.45, 1.7]
+  cham: [0.22, 0.38]
+  ex: "=door_x if door_x is not None else 0"
+  ends: {pick: [pauldron, fins, towers], weights: [3, 2, 2]}
+  crest: {pick: [helm, ridge, none], weights: [3, 2, 1]}
+  stripes: {int: [1, 2]}
+  slant: [0.3, 0.55]
+  side: {pick: [-1, 1]}
+  range: {pick: [true, false], weights: [3, 2]}
+parts:
+  - {use: steel-hall, name: hall, with: {w: "=w", d: "=d", h: "=h", cham: "=cham"}}
+  - {use: t-visor, name: door, at: ["=ex", 0, 0], with: {bw: "=min(2.2, w * 0.4)", dw: 0.9, dh: "=h * 0.62", bh: 0.3}}
+  - repeat: "=stripes"
+    parts:
+      - {use: stripe, name: "=f'sw{i}'", at: ["=ex - min(2.2, w * 0.4) / 2 - 0.5 - i * 0.75", 0, 0.05], with: {w: 0.45, h: "=h * 0.85", slant: "=-slant"}}
+      - {use: stripe, name: "=f'se{i}'", at: ["=ex + min(2.2, w * 0.4) / 2 + 0.5 + i * 0.75", 0, 0.05], with: {w: 0.45, h: "=h * 0.85", slant: "=slant"}}
+  - when: "=ends == 'pauldron'"
+    parts:
+      - name: pw
+        mat: steel
+        hull: {points: [["=-w / 2 - 0.55", 0.1, 0], ["=-w / 2 + 0.15", 0.0, 0], ["=-w / 2 - 0.55", "=d - 0.1", 0], ["=-w / 2 + 0.15", "=d", 0],
+                        ["=-w / 2 + 0.15", 0.15, "=h * 0.85"], ["=-w / 2 + 0.15", "=d - 0.2", "=h * 0.85"], ["=-w / 2 - 0.2", 0.1, "=h * 0.45"], ["=-w / 2 - 0.2", "=d - 0.15", "=h * 0.45"]], round: 0.05}
+      - name: pe
+        mat: steel
+        hull: {points: [["=w / 2 + 0.55", 0.1, 0], ["=w / 2 - 0.15", 0.0, 0], ["=w / 2 + 0.55", "=d - 0.1", 0], ["=w / 2 - 0.15", "=d", 0],
+                        ["=w / 2 - 0.15", 0.15, "=h * 0.85"], ["=w / 2 - 0.15", "=d - 0.2", "=h * 0.85"], ["=w / 2 + 0.2", 0.1, "=h * 0.45"], ["=w / 2 + 0.2", "=d - 0.15", "=h * 0.45"]], round: 0.05}
+  - when: "=ends == 'fins'"
+    parts:
+      - {name: fw, mat: metal, prism: {poly: [["=-w / 2 - 0.4", 0.3], ["=-w / 2 + 0.05", 0.3], ["=-w / 2 + 0.05", "=d - 0.2"], ["=-w / 2 - 0.4", "=d - 0.2"]], z: [0, "=h + 0.45"], top: [0.35, 0.6], lean: [0.12, 0], round: 0.04}}
+      - {name: fe, mat: metal, prism: {poly: [["=w / 2 - 0.05", 0.3], ["=w / 2 + 0.4", 0.3], ["=w / 2 + 0.4", "=d - 0.2"], ["=w / 2 - 0.05", "=d - 0.2"]], z: [0, "=h + 0.45"], top: [0.35, 0.6], lean: [-0.12, 0], round: 0.04}}
+  - when: "=ends == 'towers'"
+    parts:
+      - {use: steel-hall, name: tw, at: ["=-w / 2", 0.2, 0], with: {w: 0.9, d: "=d - 0.4", h: "=h + 0.4", cham: 0.2, mat: metal}}
+      - {use: steel-hall, name: te, at: ["=w / 2", 0.2, 0], with: {w: 0.9, d: "=d - 0.4", h: "=h + 0.4", cham: 0.2, mat: metal}}
+  - when: "=crest == 'helm'"
+    parts:
+      - {use: steel-hall, name: helm, at: [0, "=d * 0.3", "=h - 0.02"], with: {w: "=w * 0.38", d: "=d * 0.5", h: 0.5, cham: 0.2, mat: metal}}
+      - {name: helm-visor, mat: dark, box: {c: [0, "=d * 0.3 - 0.04", "=h + 0.28"], half: ["=w * 0.13", 0.05, 0.08]}}
+  - when: "=crest == 'ridge'"
+    parts:
+      - {name: ridge, mat: metal, extrude: {axis: x, profile: [["=cham + 0.05", "=h - 0.02"], ["=d - cham - 0.05", "=h - 0.02"], ["=d / 2", "=h + 0.42"]], span: ["=-w * 0.3", "=w * 0.3"], round: 0.03}}
+  - when: "=range"
+    parts:
+      - {name: mast, mat: metal, box: {c: ["=side * w * 0.36", "=d * 0.55", "=h + 0.35"], half: [0.13, 0.13, 0.42]}}
+      - {name: mast-arm, mat: trim, box: {c: ["=side * (w * 0.36 - 0.25)", "=d * 0.55 - 0.05", "=h + 0.72"], half: [0.34, 0.13, 0.13]}}

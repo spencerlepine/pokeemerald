@@ -1,0 +1,31 @@
+# A Mustafar lava collector (Revenge of the Sith; the mining-collector concept): a tall tapered pylon on
+# a deck on legs over the lava, a long arm reaching out with a scoop or a shield at its end, a small
+# control hut on the deck.
+name: collector
+style: mustafar
+about: Tall pylon on a legged deck, a long arm with a scoop or a shield; control hut; shield plates.
+width: [3, 4, 5]
+choose:
+  Hb: "=H if H else 6"
+  dw: "=w_max * 0.9"
+  dd: [1.3, 1.6]
+  ph: "=Hb - dd - 1.3"
+  side: {pick: [-1, 1]}
+  head: {pick: [scoop, shield], weights: [3, 2]}
+  hut: {pick: [true, false], weights: [3, 2]}
+  ex: "=door_x if door_x is not None else -side * (dw / 2 - 0.55)"
+parts:
+  - {use: stilts, name: legs, at: [0, 0.1, 0], with: {w: "=dw", d: "=dd", h: 0.55, r: 0.11}}
+  - {use: deck, name: deck, at: [0, 0.05, 0], with: {w: "=dw + 0.05", d: "=dd + 0.05", z: 0.65, t: 0.16, mat: plate}}
+  - {use: pylon, name: pylon, at: ["=side * dw * 0.18", "=dd * 0.6", 0.6], with: {r: 0.36, h: "=ph"}}
+  - {name: arm, mat: plate, box: {c: ["=side * dw * 0.18 - side * 0.65", "=dd * 0.6 - 0.15", "=0.6 + ph - 0.25"], half: [0.85, 0.17, 0.15]}, rot: [0, 0, "=-side * 28"]}
+  - when: "=head == 'scoop'"
+    parts:
+      - {name: scoop, mat: iron, box: {c: ["=side * dw * 0.18 - side * 1.35", "=dd * 0.6 - 0.25", "=0.6 + ph - 0.95"], half: [0.25, 0.25, 0.32], radius: 0.05}}
+    else:
+      - {use: shield, name: hshield, at: ["=side * dw * 0.18 - side * 1.3", "=dd * 0.6 - 0.45", "=0.6 + ph - 1.5"], with: {w: 0.6, h: 1.0, lean: 0.15}}
+  - {name: brace, mat: iron, box: {c: ["=side * dw * 0.18", "=dd * 0.6 - 0.4", "=0.6 + ph * 0.45"], half: [0.42, 0.06, 0.12]}}
+  - when: "=hut"
+    parts:
+      - {use: bastion, name: hut, at: ["=ex", 0.1, 0.62], with: {w: 0.95, d: 0.75, h: 0.75, batter: 0.08, front: 0.15}}
+      - {use: door-slab, name: door, at: ["=ex", 0.08, 0.62], with: {w: 0.6, h: 0.55, door: dark}}

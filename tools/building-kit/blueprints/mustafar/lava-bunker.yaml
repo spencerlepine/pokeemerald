@@ -1,0 +1,33 @@
+# An Imperial lava bunker on Mustafar (after the Empire took the works; Rogue One's Fortress Vader
+# outbuildings): a low dark mass sloped on every side, a recessed blast door, a slit of lit window,
+# heavy shield fins or a heat dome on top.
+name: lava-bunker
+style: mustafar
+about: Low pyramid-stump bunker, recessed blast door, lit slit, shield fins or heat dome or antenna.
+width: [3, 4, 5, 6]
+choose:
+  Hb: "=H if H else 3"
+  w: ["=w_max * 0.8", "=w_max * 0.95"]
+  d: "=min(1.8, Hb * 0.5)"
+  h: "=min(0.95, Hb * 0.3)"
+  top: {pick: [fins, dome, antenna, none], weights: [3, 2, 2, 1]}
+  ex: "=door_x if door_x is not None else 0"
+  wmat: {pick: [iron, plate], weights: [3, 2]}
+parts:
+  - {name: mass, mat: "=wmat", prism: {poly: [["=-w / 2", 0], ["=w / 2", 0], ["=w / 2", "=d"], ["=-w / 2", "=d"]], z: [0, "=h"], top: [0.72, 0.55], lean: [0, 0.18], round: 0.04}}
+  - {name: porch, mat: iron, box: {c: ["=ex", 0.2, 0.42], half: [0.62, 0.3, 0.42], radius: 0.03}}
+  - {use: door-slab, name: door, at: ["=ex", -0.12, 0], with: {w: 0.85, h: 0.7, door: dark}}
+  - when: "=w > 2.6"
+    parts:
+      - {use: window-band, name: slit, at: ["=ex + (1.15 if ex <= 0 else -1.15)", 0.12, "=h * 0.5"], with: {w: 0.6, h: 0.22}}
+  - when: "=top == 'fins'"
+    parts:
+      - {use: shield, name: fin-w, at: ["=-w / 2 + 0.15", 0.05, 0], with: {w: 0.45, h: "=h + 0.35", lean: 0.35, mat: plate}}
+      - {use: shield, name: fin-e, at: ["=w / 2 - 0.15", 0.05, 0], with: {w: 0.45, h: "=h + 0.35", lean: 0.35, mat: plate}}
+  - when: "=top == 'dome'"
+    parts:
+      - {name: dome, mat: plate, ellipsoid: {c: [0, "=d * 0.55", "=h - 0.05"], r: ["=w * 0.18", "=d * 0.22", 0.35]}}
+  - when: "=top == 'antenna'"
+    parts:
+      - {name: mast, mat: plate, box: {c: ["=w * 0.25", "=d * 0.6", "=h + 0.35"], half: [0.1, 0.1, 0.4]}}
+      - {name: mast-bar, mat: trim, box: {c: ["=w * 0.25", "=d * 0.6 - 0.05", "=h + 0.7"], half: [0.32, 0.1, 0.1]}}

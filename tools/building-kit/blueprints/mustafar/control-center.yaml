@@ -1,0 +1,59 @@
+# The Separatist control center on Mustafar (Revenge of the Sith): a dark battered complex on an
+# obsidian outcrop, its front a sloped glass-walled conference wing with a long band of lit windows,
+# needle spires or shield plates at the ends, a collector arm or a landing deck to one side.
+name: control-center
+style: mustafar
+about: Dark battered complex on an outcrop; sloped lit-window front wing; spires or shield plates; arm or deck.
+width: [7, 8, 9]
+choose:
+  Hb: "=H if H else 5"
+  w: ["=w_max * 0.66", "=w_max * 0.76"]
+  d: [1.7, 2.0]
+  h: [1.2, 1.45]
+  ex: "=door_x if door_x is not None else 0"
+  ends: {pick: [spires, shields, towers], weights: [3, 2, 2]}
+  wing: {pick: [glass, stepped], weights: [3, 2]}
+  extra: {pick: [arm, deck, none], weights: [2, 2, 1]}
+  side: {pick: [-1, 1]}
+parts:
+  - {use: outcrop, name: base, with: {w: "=w + 0.6", d: "=d + 0.5", h: 0.3}}
+  - {use: bastion, name: hall, at: [0, 0.45, 0.28], with: {w: "=w", d: "=d", h: "=h", batter: 0.18, front: 0.25}}
+  - {use: bastion, name: upper, at: ["=-side * w * 0.12", "=0.45 + d * 0.3", "=h + 0.25"], with: {w: "=w * 0.48", d: "=d * 0.5", h: 0.55, batter: 0.1, front: 0.2, mat: plate}}
+  - when: "=wing == 'glass'"
+    parts:
+      - name: wing
+        mat: iron
+        extrude: {axis: x, profile: [[0.05, 0.28], [0.9, 0.28], [0.9, "=h * 0.95"], [0.45, "=h * 0.95"], [0.05, 0.62]], span: ["=-w * 0.36", "=w * 0.36"], round: 0.03}
+      - name: wing-glass
+        mat: glow
+        extrude: {axis: x, profile: [[0.0, 0.66], [0.06, 0.66], [0.47, "=h * 0.92"], [0.41, "=h * 0.92"]], span: ["=-w * 0.33", "=w * 0.33"], round: 0.01}
+    else:
+      - {use: bastion, name: wing, at: [0, 0.05, 0.28], with: {w: "=w * 0.7", d: 0.8, h: "=h * 0.55", batter: 0.08, front: 0.12, mat: plate}}
+      - {use: window-band, name: wing-glass, at: ["=-side * w * 0.2", 0.06, "=0.28 + h * 0.36"], with: {w: "=w * 0.22", h: 0.34}}
+      - {use: window-band, name: hall-glass, at: [0, 0.75, "=0.28 + h * 0.8"], with: {w: "=w * 0.55", h: 0.32}}
+  - {use: door-slab, name: door, at: ["=ex", -0.02, 0], with: {w: 0.9, h: 0.75, door: dark}}
+  - {name: ramp, mat: plate, box: {c: ["=ex", 0.0, 0.1], half: [0.55, 0.2, 0.1], radius: 0.02}}
+  - when: "=ends == 'spires'"
+    parts:
+      - {use: spire, name: sp-w, at: ["=-w / 2 - 0.05", "=0.45 + d * 0.5", 0.28], with: {r: 0.42, h: "=h + 1.1", top: 0.12}}
+      - {use: spire, name: sp-e, at: ["=w / 2 + 0.05", "=0.45 + d * 0.5", 0.28], with: {r: 0.42, h: "=h + 1.1", top: 0.12}}
+  - when: "=ends == 'shields'"
+    parts:
+      - {use: shield, name: sh-w1, at: ["=-w / 2 + 0.1", 0.3, 0.28], with: {w: 0.6, h: "=h + 0.4", lean: 0.5}}
+      - {use: shield, name: sh-w2, at: ["=-w / 2 + 0.75", 0.3, 0.28], with: {w: 0.55, h: "=h + 0.15", lean: 0.45}}
+      - {use: shield, name: sh-e1, at: ["=w / 2 - 0.1", 0.3, 0.28], with: {w: 0.6, h: "=h + 0.4", lean: 0.5}}
+      - {use: shield, name: sh-e2, at: ["=w / 2 - 0.75", 0.3, 0.28], with: {w: 0.55, h: "=h + 0.15", lean: 0.45}}
+  - when: "=ends == 'towers'"
+    parts:
+      - {use: bastion, name: tw-w, at: ["=-w / 2", "=0.45 + d * 0.2", 0.28], with: {w: 0.9, d: "=d * 0.6", h: "=h + 0.75", batter: 0.12, front: 0.2, mat: plate}}
+      - {use: bastion, name: tw-e, at: ["=w / 2", "=0.45 + d * 0.2", 0.28], with: {w: 0.9, d: "=d * 0.6", h: "=h + 0.75", batter: 0.12, front: 0.2, mat: plate}}
+      - {use: window-band, name: tw-w-win, at: ["=-w / 2", "=0.45 + d * 0.2 + 0.05", "=0.28 + h + 0.35"], with: {w: 0.45, h: 0.22}}
+      - {use: window-band, name: tw-e-win, at: ["=w / 2", "=0.45 + d * 0.2 + 0.05", "=0.28 + h + 0.35"], with: {w: 0.45, h: 0.22}}
+  - when: "=extra == 'arm'"
+    parts:
+      - {use: pylon, name: pylon, at: ["=side * (w_max / 2 - 0.4)", "=0.45 + d * 0.75", 0], with: {r: 0.3, h: "=min(2.4, Hb - 0.45 - d * 0.75 - 1.0)"}}
+      - {name: arm, mat: plate, box: {c: ["=side * (w_max / 2 - 1.0)", "=0.45 + d * 0.75", "=min(2.4, Hb - 0.45 - d * 0.75 - 1.0) - 0.05"], half: [0.75, 0.16, 0.13]}, rot: [0, 0, "=side * 12"]}
+  - when: "=extra == 'deck'"
+    parts:
+      - {use: stilts, name: legs, at: ["=side * (w / 2 + 0.55)", 0.15, 0], with: {w: 1.0, d: 1.2, h: 0.75, r: 0.1}}
+      - {use: deck, name: deck, at: ["=side * (w / 2 + 0.55)", 0.15, 0], with: {w: 1.05, d: 1.25, z: 0.85, t: 0.14, mat: plate}}

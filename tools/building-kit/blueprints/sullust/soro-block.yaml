@@ -51,7 +51,7 @@ parts:
       - {use: window-round, name: win, at: ["=dxx + side * 1.15", 0.02, "=h * 0.58"], with: {r: 0.21}}
   - repeat: "=stacks"
     parts:
-      - {use: stack, name: "=f'stack{i}'", at: ["=-side * (w / 2 - 0.45 - i * 0.6)", "=d - 0.45", "=h - 0.05"], with: {r: 0.19, h: "=0.95 - i * 0.3"}}
+      - {use: stack, name: "=f'stack{i}'", at: ["=-side * (w / 2 - 0.45 - i * 0.6)", "=d - 0.45", "=h - 0.05"], with: {r: 0.19, h: "=max(0.3, min(0.95, Hb - 0.5 - d - h) - i * 0.2)"}}
   - when: "=tank"
     parts:
       - {name: tank, mat: metal, cylinder: {a: ["=side * min(w / 2 + 0.1, w_max / 2 - 0.36)", "=d * 0.55", 0], b: ["=side * min(w / 2 + 0.1, w_max / 2 - 0.36)", "=d * 0.55", "=h * 0.8"], r1: 0.32}}

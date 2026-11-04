@@ -8,6 +8,103 @@ buildings:
   art: art:mustafar:fortress-halls
   size: [8, 5]
   door: 4
-  blueprint: ''
+  blueprint: mustafar/control-center
   seed: 0
-  about: ''
+  about: 'The Separatist control center (Revenge of the Sith): a dark complex on an obsidian outcrop, a sloped glass-walled conference wing, shield
+    plates, a landing deck.'
+- id: bld:mustafar:fill-mining-hall
+  kind: fill
+  name: Mining hall
+  areas: []
+  art: ''
+  size: [7, 4]
+  door: null
+  blueprint: mustafar/mining-hall
+  seed: 3
+  about: 'A Klegger Corp smelting hall: dark battered walls, a lit window band, shield plates against the heat.'
+- id: bld:mustafar:fill-ore-hall
+  kind: fill
+  name: Ore hall
+  areas: []
+  art: ''
+  size: [6, 5]
+  door: null
+  blueprint: mustafar/mining-hall
+  seed: 1
+  set: {roof: gantry}
+  about: An ore hall with a collector arm on a roof gantry.
+- id: bld:mustafar:fill-refinery-shed
+  kind: fill
+  name: Refinery shed
+  areas: []
+  art: ''
+  size: [5, 4]
+  door: null
+  blueprint: mustafar/mining-hall
+  seed: 6
+  set: {roof: shed}
+  about: A refinery shed with a roof sloping away from the lava.
+- id: bld:mustafar:fill-collector-tower
+  kind: fill
+  name: Collector tower
+  areas: []
+  art: ''
+  size: [4, 6]
+  door: null
+  blueprint: mustafar/collector
+  seed: 0
+  about: 'A lava collector: a tall pylon on a deck over the lava with a long scoop arm (Revenge of the Sith).'
+- id: bld:mustafar:fill-collector-platform
+  kind: fill
+  name: Collector platform
+  areas: []
+  art: ''
+  size: [5, 5]
+  door: null
+  blueprint: mustafar/collector
+  seed: 3
+  set: {head: shield}
+  about: A collector platform with a shield on its arm and a control hut.
+- id: bld:mustafar:fill-lava-bunker
+  kind: fill
+  name: Lava bunker
+  areas: []
+  art: ''
+  size: [5, 3]
+  door: null
+  blueprint: mustafar/lava-bunker
+  seed: 2
+  about: An Imperial bunker sloped against the heat, a heat dome on its roof.
+- id: bld:mustafar:fill-shield-bunker
+  kind: fill
+  name: Shield bunker
+  areas: []
+  art: ''
+  size: [4, 3]
+  door: null
+  blueprint: mustafar/lava-bunker
+  seed: 4
+  set: {top: fins}
+  about: A small Imperial bunker behind leaning shield fins.
+- id: bld:mustafar:fill-bacta-outpost
+  kind: bacta
+  name: Bacta outpost
+  areas: []
+  art: ''
+  size: [5, 4]
+  door: null
+  blueprint: mustafar/mining-hall
+  seed: 5
+  set: {roof: step, shields: 2}
+  about: 'A field Bacta outpost: a stepped dark hall shielded by leaning plates.'
+- id: bld:mustafar:fill-supply-depot
+  kind: depot
+  name: Supply Depot
+  areas: []
+  art: ''
+  size: [4, 4]
+  door: null
+  blueprint: mustafar/lava-bunker
+  seed: 7
+  set: {top: antenna}
+  about: An Imperial supply bunker with a comm mast.
