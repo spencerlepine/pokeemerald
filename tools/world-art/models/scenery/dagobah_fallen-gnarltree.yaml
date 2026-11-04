@@ -9,7 +9,8 @@ art: art:dagobah:fallen-gnarltree
 palette: greybox
 kits: [kits/endor-dagobah.yaml]
 cells: [7, 3]
-foot: [59, 32]
+foot: [59, 30]
+scale: 0.92
 footprint: 2
 render:
   light: [-0.55, -0.3, 0.78]

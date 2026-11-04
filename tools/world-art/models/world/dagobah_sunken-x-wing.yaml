@@ -1,0 +1,74 @@
+# Sunken X-wing (art:dagobah:sunken-x-wing), hit box 3x3, drawn 3x5.
+# Reference: Luke's T-65 X-wing sunk in the Dagobah bog (The Empire Strikes Back;
+# wiki/art/concept/dagobah/sunken-x-wing__web_1.jpg; shapes after the shared crashed X-wing model).
+# Modelled level, nose along +x: the long fuselage tapering to the nose, the canopy, the astromech dome,
+# four engines at the back, the S-foils open in an X with a laser cannon at each tip. Posed nose up out
+# of the water, the tail and engines sunk; ripples ring it.
+# Axes: x forward (the nose), y to its left, z up, origin at the fuselage's middle.
+name: dagobah_sunken-x-wing
+art: art:dagobah:sunken-x-wing
+palette: greybox
+cells: [3, 5]
+foot: [24, 58]
+footprint: 3
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  hull:   {ramp: light, bands: [0.2, 0.5, 0.86]}
+  wing:   {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  metal:  {ramp: mid,   bands: [0.1, 0.45, 0.8]}
+  vent:   {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  glass:  {ramp: dark,  bands: [0.3, 0.6, 0.9]}
+  water:  {color: shade}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 3}
+box: [48, 48]
+templates:
+  # one S-foil: a tapered wing from the root out to `side`, raised `up`, the cannon on its tip
+  s-foil:
+    params: {side: 1, up: 1}
+    parts:
+      - name: wing
+        mat: wing
+        hull: {points: [[-1.9, 0, 0], [-0.75, 0, 0], [-1.9, "=side * 1.35", "=up * 0.55"], [-1.3, "=side * 1.35", "=up * 0.55"],
+                        [-1.9, 0, 0.08], [-0.75, 0, 0.08], [-1.9, "=side * 1.35", "=up * 0.55 + 0.08"], [-1.3, "=side * 1.35", "=up * 0.55 + 0.08"]], round: 0.02}
+      - {name: cannon, mat: metal, cylinder: {a: [-1.95, "=side * 1.38", "=up * 0.57"], b: [0.9, "=side * 1.38", "=up * 0.57"], r1: 0.06}}
+parts:
+  - name: body
+    mat: hull
+    extrude: {axis: x, span: [-2.0, 0.7], profile: [[-0.3, -0.22], [0.3, -0.22], [0.34, 0.22], [-0.26, 0.22]], round: 0.05}
+  - name: nose
+    mat: hull
+    extrude: {axis: x, span: [0.7, 2.6], profile: [[-0.3, -0.22], [0.3, -0.22], [0.34, 0.22], [-0.26, 0.22]], end: [0.35, 0.45], round: 0.04}
+  - {name: canopy, mat: glass, prism: {poly: [[0.1, -0.2], [0.85, -0.16], [0.85, 0.16], [0.1, 0.2]], z: [0.2, 0.45], top: [0.7, 0.75], round: 0.04}}
+  - {name: droid, mat: metal, ellipsoid: {c: [-0.5, 0, 0.3], r: [0.17, 0.17, 0.15]}}
+  - {use: s-foil, name: foil-ul, with: {side: 1, up: 1}}
+  - {use: s-foil, name: foil-ur, with: {side: -1, up: 1}}
+  - {use: s-foil, name: foil-ll, with: {side: 1, up: -1}}
+  - {use: s-foil, name: foil-lr, with: {side: -1, up: -1}}
+  - {name: engine-1, mat: metal, cylinder: {a: [-2.6, 0.45, 0.25], b: [-1.2, 0.45, 0.25], r1: 0.18}}
+  - {name: engine-2, mat: metal, cylinder: {a: [-2.6, -0.45, 0.25], b: [-1.2, -0.45, 0.25], r1: 0.18}}
+  - {name: engine-3, mat: metal, cylinder: {a: [-2.6, 0.45, -0.2], b: [-1.2, 0.45, -0.2], r1: 0.18}}
+  - {name: engine-4, mat: metal, cylinder: {a: [-2.6, -0.45, -0.2], b: [-1.2, -0.45, -0.2], r1: 0.18}}
+ground:
+  - {name: ripple, mat: water, cylinder: {a: [0, 0, 0], b: [0, 0, 0.01], r1: 1.0}, squash: [1.2, 0.5, 1]}
+variants:
+  # nose up out of the bog, tail sunk, turned to show the X of the wings
+  sunk:
+    tilt: [35, 0]
+    turn: -65
+    pivot: [0, 0]
+    sink: 0.75
+    scale: 0.85
+  # sunk deeper: only the nose and the two upper wings show
+  deeper:
+    tilt: [40, 0]
+    turn: -65
+    pivot: [0, 0]
+    sink: 1.35
+    scale: 0.85

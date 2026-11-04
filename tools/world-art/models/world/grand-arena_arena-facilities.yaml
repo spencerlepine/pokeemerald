@@ -1,0 +1,81 @@
+# Arena facilities (art:grand-arena:arena-facilities), hit box 8x6, drawn 8x8.
+# Reference: Cloud City's buildings (The Empire Strikes Back) and Lando's arena (concept art in the wiki):
+# round, white, banded towers with flat saucer roofs that overhang the walls, a low dome on top, a ring of
+# window bands, a curved canopy over a wide doorway. Variants are the greybox plan shapes the facilities
+# use: oct (one round hall), L (a hall with a wing to the west), notch (a hall with a forecourt cut into
+# its front), T (a hall with wings both sides). Axes: x east, y north, z up, origin on the ground at the
+# hit box's centre.
+name: grand-arena_arena-facilities
+art: art:grand-arena:arena-facilities
+palette: greybox
+cells: [8, 8]
+foot: [63, 79]
+footprint: 6
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  wall:  {ramp: light, bands: [0.25, 0.55, 0.85]}
+  band:  {ramp: mid,   bands: [0.2, 0.5, 0.85]}
+  roof:  {ramp: light, bands: [0.1, 0.45, 0.8]}
+  trim:  {ramp: bone,  bands: [0.25, 0.55, 0.85]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 6}
+box: [128, 96]
+params:
+  hz: 2.3          # the hall's wall height
+  cy: 0.3          # the hall's centre (north of the hit box centre)
+templates:
+  # a round hall: banded drum, overhanging saucer roof, low dome, door with a canopy to the south
+  hall:
+    params: {r: 2.4, h: 2.3}
+    parts:
+      - {name: drum, mat: wall, cylinder: {a: [0, 0, 0], b: [0, 0, "=h"], r1: "=r"}}
+      - {name: windows, mat: dark, cylinder: {a: [0, 0, "=h * 0.55"], b: [0, 0, "=h * 0.72"], r1: "=r + 0.03"}}
+      - {name: base-band, mat: band, cylinder: {a: [0, 0, 0], b: [0, 0, 0.3], r1: "=r + 0.08"}}
+      - {name: saucer, mat: trim, cylinder: {a: [0, 0, "=h"], b: [0, 0, "=h + 0.25"], r1: "=r + 0.35", r2: "=r + 0.15"}}
+      - {name: dome, mat: roof, ellipsoid: {c: [0, 0, "=h + 0.2"], r: ["=r * 0.62", "=r * 0.62", 0.75]}}
+      - {name: cap, mat: band, cylinder: {a: [0, 0, "=h + 0.85"], b: [0, 0, "=h + 1.05"], r1: 0.3}}
+  # a straight wing: a banded block with a saucer-edged flat roof
+  wing:
+    params: {w: 2.2, d: 2.6, h: 1.7}
+    parts:
+      - {name: block, mat: wall, box: {c: [0, 0, "=h/2"], half: ["=w/2", "=d/2", "=h/2"], radius: 0.25}}
+      - {name: windows, mat: dark, box: {c: [0, 0, "=h * 0.6"], half: ["=w/2 + 0.02", "=d/2 + 0.02", 0.15], radius: 0.25}}
+      - {name: roof, mat: trim, box: {c: [0, 0, "=h + 0.1"], half: ["=w/2 + 0.15", "=d/2 + 0.15", 0.1], radius: 0.25}}
+parts:
+  - {use: hall, name: hall, at: [0, "=cy", 0], with: {r: 2.45, h: "=hz"}}
+  # the entrance: a dark doorway under a curved canopy on two posts
+  - {name: door, mat: dark, box: {c: [0, "=cy - 2.4", 0.7], half: [0.75, 0.12, 0.7], radius: 0.05}}
+  - {name: canopy, mat: trim, cylinder: {a: [0, "=cy - 2.4", 1.55], b: [0, "=cy - 2.4", 1.7], r1: 1.25}, squash: [1, 0.55, 1]}
+  - {name: post-w, mat: band, cylinder: {a: [-0.95, "=cy - 2.9", 0], b: [-0.95, "=cy - 2.9", 1.55], r1: 0.08}}
+  - {name: post-e, mat: band, cylinder: {a: [0.95, "=cy - 2.9", 0], b: [0.95, "=cy - 2.9", 1.55], r1: 0.08}}
+  - {name: step, mat: band, box: {c: [0, "=cy - 2.75", 0.06], half: [1.1, 0.35, 0.06], radius: 0.02}}
+variants:
+  oct: {}
+  L:
+    parts:
+      - {use: hall, name: hall, at: [1.0, "=cy", 0], with: {r: 2.35, h: "=hz"}}
+      - {use: wing, name: wing-w, at: [-2.4, "=cy - 0.6", 0], with: {w: 3.0, d: 3.2, h: 1.7}}
+      - {name: door, mat: dark, box: {c: [1.0, "=cy - 2.3", 0.7], half: [0.75, 0.12, 0.7], radius: 0.05}}
+      - {name: canopy, mat: trim, cylinder: {a: [1.0, "=cy - 2.3", 1.55], b: [1.0, "=cy - 2.3", 1.7], r1: 1.2}, squash: [1, 0.55, 1]}
+      - {name: step, mat: band, box: {c: [1.0, "=cy - 2.65", 0.06], half: [1.1, 0.35, 0.06], radius: 0.02}}
+  notch:
+    parts:
+      - {use: hall, name: hall, at: [0, 0.9, 0], with: {r: 2.2, h: "=hz"}}
+      - {use: wing, name: wing-w, at: [-2.7, -0.4, 0], with: {w: 2.3, d: 3.6, h: 1.6}}
+      - {use: wing, name: wing-e, at: [2.7, -0.4, 0], with: {w: 2.3, d: 3.6, h: 1.6}}
+      - {name: court, mat: band, box: {c: [0, -1.9, 0.04], half: [1.5, 0.9, 0.04], radius: 0.02}}
+      - {name: door, mat: dark, box: {c: [0, -1.25, 0.7], half: [0.75, 0.12, 0.7], radius: 0.05}}
+      - {name: canopy, mat: trim, cylinder: {a: [0, -1.25, 1.55], b: [0, -1.25, 1.7], r1: 1.1}, squash: [1, 0.55, 1]}
+  T:
+    parts:
+      - {use: hall, name: hall, at: [0, 0.7, 0], with: {r: 2.1, h: 2.6}}
+      - {use: wing, name: wing, at: [0, -1.2, 0], with: {w: 7.4, d: 2.6, h: 1.5}}
+      - {name: door, mat: dark, box: {c: [0, -2.5, 0.65], half: [0.75, 0.1, 0.65], radius: 0.05}}
+      - {name: canopy, mat: trim, cylinder: {a: [0, -2.55, 1.35], b: [0, -2.55, 1.5], r1: 1.1}, squash: [1, 0.5, 1]}

@@ -1,0 +1,31 @@
+# Kyber crystal outcrop (art:ilum:kyber-crystal-outcrop), hit box 1x1, drawn 1x2.
+# Reference: Ilum's Crystal Cave (wiki/art/concept/ilum/kyber-crystal-outcrop__web_1.jpg): clusters of
+# long six-sided crystals with pointed tips growing out of the ice. Four crystals from the group kit
+# fanning out of a low ice rock; the crystals light (they glow), the rock mid.
+# Axes: x east, y north, z up, origin on the ground at the middle of the cell.
+name: ilum_kyber-crystal-outcrop
+art: art:ilum:kyber-crystal-outcrop
+palette: greybox
+kits: [../scenery/kits/yavin-hoth-ilum.yaml]
+cells: [1, 2]
+foot: [8, 24]
+footprint: 1
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  glow:  {ramp: light, bands: [0.2, 0.5, 0.82]}
+  rock:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+drop_shadow:
+  - {dx: 1, dy: 1, color: shade, below: 1}
+box: [14, 14]
+parts:
+  - {name: rock, mat: rock, hull: {points: [[-0.45, -0.35, 0], [0.45, -0.35, 0], [0.45, 0.35, 0], [-0.45, 0.35, 0], [-0.25, -0.15, 0.25], [0.25, -0.1, 0.22], [0.0, 0.15, 0.3]], round: 0.03}}
+  - {use: kyber, name: c1, at: [-0.05, 0.05, 0.1], rot: [-4, 10, 0], with: {h: 1.15, r: 0.13, tip: 0.25}}
+  - {use: kyber, name: c2, at: [-0.25, -0.05, 0.05], rot: [28, -20, 0], with: {h: 0.75, r: 0.1, tip: 0.2}}
+  - {use: kyber, name: c3, at: [0.22, -0.05, 0.05], rot: [-30, 15, 0], with: {h: 0.8, r: 0.1, tip: 0.2}}
+  - {use: kyber, name: c4, at: [0.05, -0.2, 0.0], rot: [-8, 30, -20], with: {h: 0.5, r: 0.08, tip: 0.15}}

@@ -9,6 +9,7 @@ art: art:tython:ruined-temple-arch
 palette: greybox
 cells: [6, 5]
 foot: [48, 78]
+scale: 0.9
 footprint: 3
 render:
   light: [-0.55, -0.3, 0.78]
@@ -27,8 +28,8 @@ box: [96, 48]
 params:
   ay: 1.45          # the arch's line
   px: 1.75          # pillars out from the middle
-  ph: 1.75          # pillar height (the arch springs from here)
-  R: 1.4            # the arch's radius to the block centres
+  ph: 1.55          # pillar height (the arch springs from here)
+  R: 1.25           # the arch's radius to the block centres
 templates:
   # a square pillar on a stepped plinth with a stepped capital
   pillar:
@@ -49,7 +50,6 @@ parts:
   - {name: springer-e, mat: stone, hull: {points: [["=px-0.4", "=ay-0.3", "=ph*0.82"], ["=px+0.4", "=ay-0.3", "=ph*0.82"], ["=px-0.4", "=ay+0.3", "=ph*0.82"], ["=px+0.4", "=ay+0.3", "=ph*0.82"],
                                                   ["=px-0.05", "=ay-0.3", "=ph*0.82+0.55"], ["=px+0.35", "=ay-0.3", "=ph*0.82+0.4"], ["=px-0.05", "=ay+0.3", "=ph*0.82+0.55"], ["=px+0.35", "=ay+0.3", "=ph*0.82+0.4"]], round: 0.03}}
   # the dark of the gateway's floor slab
-  - {name: sill, mat: worn, box: {c: [0, "=ay", 0.05], half: [1.3, 0.42, 0.05], radius: 0.02}}
 ground:
   # fallen voussoirs in the grass east and south of the arch
   - {name: block-1, mat: stone, box: {c: [1.0, 0.55, 0.26], half: [0.36, 0.28, 0.26], radius: 0.03}, rot: [0, 0, 24]}

@@ -1,0 +1,61 @@
+# Homestead interior (art:tatooine:homestead-interior), a greybox room 11x8, drawn at its size.
+# Reference: the Lars homestead's rooms (A New Hope): smooth curved plaster walls, round-topped niches
+# with shelves cut into them, a kitchen alcove with a counter and pots, a round table with stools in the
+# middle, a ladder up to the room above. Placed after the room's area yaml (mos-pelgo-player-home-1f:
+# the ladder up in the north-east, the door in the south-east).
+# Axes: x east, y north, z up; origin at the middle of the room's south edge. Kit: room-shell, niche,
+# round-table.
+name: tatooine_homestead-interior
+art: art:tatooine:homestead-interior
+palette: greybox
+kits: [../scenery/kits/tatooine-rest.yaml]
+cells: [11, 8]
+foot: [88, 128]
+footprint: 1
+box: null
+render:
+  light: [-0.55, -0.3, 0.78]
+  outline: false
+  inner_lines: none
+  ao: {strength: 0.0, threshold: 0.3}
+  margin: 0
+  cleanup: true
+materials:
+  floor: {ramp: bone,  bands: [0.3, 0.6, 0.95]}
+  wall:  {ramp: light, bands: [0.2, 0.42, 0.9]}
+  cap:   {ramp: dark,  bands: [0.5, 0.8, 0.98]}
+  base:  {ramp: dark,  bands: [0.3, 0.6, 0.9]}
+  wood:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
+  metal: {ramp: mid,   bands: [0.2, 0.5, 0.8]}
+  pot:   {ramp: bone,  bands: [0.25, 0.55, 0.85]}
+parts:
+  - {use: room-shell, name: shell, with: {W: 11, D: 8, dx: 3.0, dw: 1.6}}
+  # curved plaster: the north corners rounded into the side walls
+  - {name: curve-w, mat: wall, cylinder: {a: [-4.6, 5.1, 0], b: [-4.6, 5.1, 1.8], r1: 0.9}}
+  - {name: curve-e, mat: wall, cylinder: {a: [4.6, 5.1, 0], b: [4.6, 5.1, 1.8], r1: 0.9}}
+  # the kitchen alcove in the north-west: a wide dark arch, a counter and pots
+  - {use: niche, name: alcove, at: [-3.0, 5.98, 0], with: {w: 2.2, h: 1.6, z0: 0.0}}
+  - {name: counter, mat: pot, box: {c: [-3.0, 5.55, 0.42], half: [1.05, 0.38, 0.42], radius: 0.06}}
+  - {name: counter-top, mat: wood, box: {c: [-3.0, 5.55, 0.86], half: [1.1, 0.42, 0.04]}}
+  - {name: pot-1, mat: metal, cylinder: {a: [-3.5, 5.6, 0.9], b: [-3.5, 5.6, 1.12], r1: 0.17, r2: 0.15}}
+  - {name: pot-2, mat: pot, ellipsoid: {c: [-2.7, 5.6, 1.02], r: [0.16, 0.14, 0.14]}}
+  # shelf niches in the north wall, with jars on their shelves
+  - {use: niche, name: niche-1, at: [-0.4, 5.98, 0], with: {w: 0.9, h: 1.2, z0: 0.45}}
+  - {use: niche, name: niche-2, at: [0.9, 5.98, 0], with: {w: 0.9, h: 1.2, z0: 0.45}}
+  - {name: shelf-1, mat: wood, box: {c: [-0.4, 5.93, 0.9], half: [0.42, 0.06, 0.03]}}
+  - {name: shelf-2, mat: wood, box: {c: [0.9, 5.93, 0.9], half: [0.42, 0.06, 0.03]}}
+  - {name: jar-1, mat: pot, cylinder: {a: [-0.55, 5.93, 0.93], b: [-0.55, 5.93, 1.13], r1: 0.09}}
+  - {name: jar-2, mat: pot, cylinder: {a: [1.05, 5.93, 0.93], b: [1.05, 5.93, 1.1], r1: 0.1}}
+  # the ladder up to the room above, against the north wall in the north-east
+  - {name: rail-w, mat: wood, box: {c: [2.7, 5.75, 0.95], half: [0.05, 0.05, 0.95]}, rot: [-12, 0, 0]}
+  - {name: rail-e, mat: wood, box: {c: [3.3, 5.75, 0.95], half: [0.05, 0.05, 0.95]}, rot: [-12, 0, 0]}
+  - {name: rung-1, mat: wood, box: {c: [3.0, 5.65, 0.45], half: [0.3, 0.04, 0.03]}}
+  - {name: rung-2, mat: wood, box: {c: [3.0, 5.75, 0.9], half: [0.3, 0.04, 0.03]}}
+  - {name: rung-3, mat: wood, box: {c: [3.0, 5.85, 1.35], half: [0.3, 0.04, 0.03]}}
+  - {name: hatch, mat: base, box: {c: [3.0, 5.98, 1.75], half: [0.45, 0.05, 0.08]}}
+  # the round table with stools in the middle
+  - {use: round-table, name: table, at: [-1.4, 2.8, 0], with: {r: 0.6, h: 0.55, top: wood, leg: base, stool: pot}}
+  # a low bench along the west wall
+  - {name: bench, mat: pot, box: {c: [-4.95, 2.5, 0.22], half: [0.28, 1.0, 0.22], radius: 0.06}}
+variants:
+  homestead: {}
