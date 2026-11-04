@@ -379,9 +379,52 @@ def _job(a):
     return art, {c: r[c] for c in COLS}
 
 
+def _sheet_tiles(path):
+    """The 8x8 RGBA tiles of a model's tile sheet in wiki/world/models/tiles/ (empty ones left out)."""
+    a = np.asarray(Image.open(path).convert("RGBA"))
+    out = []
+    for y in range(0, a.shape[0], 8):
+        for x in range(0, a.shape[1], 8):
+            t = a[y:y + 8, x:x + 8]
+            if t[..., 3].any():
+                out.append(t)
+    return out
+
+
+def _tile_key(t):
+    """The same tile under any flip gives the same key (the game flips tiles for free)."""
+    return min(v.tobytes() for v in (t, t[:, ::-1], t[::-1], t[::-1, ::-1]))
+
+
+def reuse(name, rows):
+    """Fill a row's wiki columns from the renders already in the wiki (sprites and tile sheets), without
+    rendering again. Use it after a run whose csv write was lost; it stops if a variant has no render."""
+    path = model_path(name)
+    vs = variants_of(path)
+    art = vs[0][1].get("art")
+    row = next((r for r in rows if r["concept_id"] == art), None)
+    if row is None:
+        raise SystemExit(f"{path}: `art: {art}` is not a row in world_art.csv")
+    tags = [name if vn == "base" else f"{name}--{vn}" for vn, _ in vs]
+    for tag in tags:
+        for d in (WIKI_OUT, TILES_OUT):
+            if not os.path.exists(os.path.join(d, f"{tag}.png")):
+                raise SystemExit(f"{tag}: no render in {os.path.relpath(d, ROOT)}; render it first")
+    row["model_png"] = f"world/models/{tags[0]}.png"
+    row["model_tiles"] = str(len(_sheet_tiles(os.path.join(TILES_OUT, f"{tags[0]}.png"))))
+    if not row["drawn"] and row["tool"] != "greybox room":
+        obj = M.Object(path, vs[0][1])
+        row["drawn"] = f"{obj.cells[0]}x{obj.cells[1]}"
+    row["model"] = os.path.relpath(path, ROOT)
+    row["model_variants"] = " ".join(v for v, _ in vs) if len(vs) > 1 else ""
+    if row["model_status"] in ("", "TODO", "IN-PROGRESS"):
+        row["model_status"] = "IN-REVIEW"
+
+
 def tilesets(rows):
     """One tileset sheet per planet: the unique 8x8 tiles of every model drawn for it (every variant,
-    flips shared), 128 px wide like a game tiles.png, and the count against the 512 a tileset holds."""
+    flips shared), 128 px wide like a game tiles.png, and the count against the 512 a tileset holds.
+    Read from the tile sheets in wiki/world/models/tiles/, so nothing is rendered again."""
     from collections import defaultdict
     by = defaultdict(list)
     for r in rows:
@@ -390,25 +433,25 @@ def tilesets(rows):
     os.makedirs(TILESETS_OUT, exist_ok=True)
     report = []
     for planet, rs in sorted(by.items()):
-        seen, keep, pal = set(), [], None
+        seen, keep = set(), []
         for r in rs:
             name = name_of(r["concept_id"])
-            for vn, raw in variants_of(model_path(name)):
-                obj = M.Object(model_path(name), raw)
-                _, ind, _ = R.render_object(obj)
-                pal = obj.palette          # the greybox palette is shared, so indices agree enough to preview
-                for t in T.split_tiles(ind):
-                    if t.any():
-                        k = (tuple(map(tuple, obj.palette.tolist())), T._canon(t))
-                        if k not in seen:
-                            seen.add(k)
-                            keep.append(obj.palette[t])
+            for vn, _ in variants_of(model_path(name)):
+                tag = name if vn == "base" else f"{name}--{vn}"
+                p = os.path.join(TILES_OUT, f"{tag}.png")
+                if not os.path.exists(p):
+                    print(f"WARNING {tag}: no tile sheet, left out of the {planet} tileset")
+                    continue
+                for t in _sheet_tiles(p):
+                    k = _tile_key(t)
+                    if k not in seen:
+                        seen.add(k)
+                        keep.append(t)
         n = len(keep)
         sheet = np.zeros((((n + 15) // 16) * 8, 128, 4), np.uint8)
         for i, t in enumerate(keep):
             y, x = (i // 16) * 8, (i % 16) * 8
-            sheet[y:y + 8, x:x + 8, :3] = t
-            sheet[y:y + 8, x:x + 8, 3] = 255
+            sheet[y:y + 8, x:x + 8] = t
         slug = planet.lower().replace(" ", "-")
         Image.fromarray(sheet, "RGBA").save(os.path.join(TILESETS_OUT, f"{slug}.png"))
         report.append((planet, len(rs), n))
@@ -416,7 +459,9 @@ def tilesets(rows):
     with open(os.path.join(TILESETS_OUT, "README.md"), "w") as fh:
         fh.write("# Model tilesets (greybox)\n\nOne sheet per planet: the unique 8x8 tiles of every world-art model drawn\n"
                  "for it, all variants, 128 px wide like a game `tiles.png`. Made by `python3 -m worldart scenery --tilesets`\n"
-                 "in `tools/world-art`. A tileset holds 512 tiles, shared with the planet's terrain and buildings.\n\n"
+                 "in `tools/world-art`. A tileset holds 512 tiles, shared with the terrain and buildings. The game's limit is\n"
+                 "per loaded map, not per planet: at import each map's secondary tileset gets only the pieces it shows\n"
+                 "(see `wiki/bible/WORLD_ART.md`, Tile budget).\n\n"
                  "| Planet | Models | Unique tiles |\n|---|---|---|\n")
         for planet, m, n in report:
             fh.write(f"| {planet} | {m} | {n} |\n")
@@ -452,13 +497,16 @@ def main(args):
         return
     wiki = not getattr(args, "no_csv", False)
     jobs = int(getattr(args, "jobs", 1) or 1)
-    if jobs > 1 and len(names) > 1:            # render in parallel; this process alone writes the csv
+    if jobs > 1 and len(names) > 1 and not getattr(args, "reuse", False):   # render in parallel; this process alone writes the csv
         from multiprocessing import Pool
         by = {r["concept_id"]: r for r in rows}
         with Pool(jobs) as pool:
             for art, cols in pool.imap_unordered(_job, [(n, getattr(args, "variant", None), getattr(args, "tries", ()), wiki)
                                                         for n in names]):
                 by[art].update(cols)
+    elif getattr(args, "reuse", False):
+        for n in names:
+            reuse(n, rows)
     else:
         for n in names:
             render(n, rows, getattr(args, "variant", None), getattr(args, "tries", ()), wiki)

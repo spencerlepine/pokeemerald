@@ -114,6 +114,13 @@ player can walk. Every one is a `scenery` row in `world_art.csv` and a prop in i
   512 (Hoth, Felucia and Yavin 4 near 900). So the big pieces must be drawn from repeated tiles (hull plating,
   rib arcs, rock), the way vanilla draws its cliffs, and each planet's tileset is checked when its pieces are
   drawn. If one is still over, the heaviest piece moves to a map with room or shrinks.
+- **The limit is per loaded map, not per planet** (`include/fieldmap.h`): one map loads a primary and a
+  secondary tileset, at most 512 + 512 tiles, 1024 metatiles and 13 BG palettes. This is the GBA's BG video
+  memory, so the emulator holds to it too. The greybox planet sheets (`world/models/tilesets/`) hold every
+  model of a planet and go over 512 on most planets (Tatooine about 4,200). At import, each map's secondary
+  tileset gets only the pieces that map shows (Emerald already gives each town its own); a town that still
+  overflows gets its own secondary, draws its largest piece as a sprite (OBJ memory is separate, like the
+  vanilla truck), or shrinks the piece.
 
 Review sheets: `world/greybox/scenery/placements-*.png`, one screen-sized crop (15x10 cells) per placement with its hit box in red. Placements are made by `tools/blockout/drafts/scenery.py` from the catalog in `scenery_spec.py` (rerun it after
 an area's grid changes; it redoes every scenery prop). Query the rows with

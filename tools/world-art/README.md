@@ -120,7 +120,10 @@ sheet of every variant (`<id>_variants.png`) are copied to `../../wiki/world/mod
 and `--sweep` never touch the wiki, nor does `--no-csv` (for several people or agents working at once:
 one final `--all` run writes the wiki). Each render also writes the model's unique 8x8 tiles as a
 128 px wide sheet, `wiki/world/models/tiles/<id>.png`, and `--tilesets` writes one sheet per planet with
-every model's tiles (`wiki/world/models/tilesets/`, with a README of the counts against 512). The wiki row gets `model` (the yaml), `model_png`, `model_variants`,
+every model's tiles (`wiki/world/models/tilesets/`, with a README of the counts against 512; the game's limit is
+per loaded map, so each map gets a subset at import: see WORLD_ART "Tile budget"). `--tilesets` and `--collage`
+read the renders already in the wiki. `--reuse` fills the wiki columns from those renders without rendering again
+(after `--no-csv` work, or a run whose csv write was lost): `scenery --all --reuse --tilesets --collage` takes seconds. The wiki row gets `model` (the yaml), `model_png`, `model_variants`,
 `model_tiles` (unique 8x8 tiles after flips) and
 `model_status`: `TODO` (no model), `IN-PROGRESS` (a model file exists), `IN-REVIEW` (rendered, for the
 owner), `APPROVED`. List them with `python3 -m blockout todo --model IN-REVIEW` (in `../blockout`).
