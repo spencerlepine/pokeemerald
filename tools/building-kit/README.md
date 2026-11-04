@@ -1,6 +1,7 @@
 # building-kit: outdoor buildings from a kit of parts
 
-Status: **approved direction (owner, 2026-11-04); drawing every building in greybox.** Shapes and light
+Status: **278 greybox buildings drawn (2026-11-04), in review with the owner**: every building the areas
+place (177) plus 97 town fill pieces and 4 signs, on 14 planets, all fitting their lots. Shapes and light
 only, no colour or texture. `build` writes `../../wiki/mapping/buildings.csv` and
 `../../wiki/world/buildings/`; nothing goes into `../../game` yet.
 
