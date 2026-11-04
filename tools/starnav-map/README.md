@@ -2,11 +2,14 @@
 
 Mockups of the StarNAV map screen (Emerald's region map, category D8), made without building the ROM. The
 screen is drawn at the GBA's 240x160 and played in a browser: the cursor moves, A zooms in, B zooms out.
-Nothing in `../../game` is built or changed. Round 1 (2026-11-04): five styles, waiting for the owner's pick.
+Nothing in `../../game` is built or changed. Round 1 (2026-11-04): five styles. Round 2 (owner, 2026-11-04): the
+Galaxy Chart and the Holotable combined, all planets first and the planet opening as a cyan hologram, with a
+faint pink nebula; three variants, waiting for the owner's pick. The page keeps every round, newest first.
 
 ```sh
 python3 build.py      # out/starnav_map.html (the player, one self-contained page) and out/<style>/ layers
-python3 capture.py    # out/previews/: a zoom tour GIF and an out|in still per style, all_styles.png
+python3 capture.py    # out/previews/round<N>/: a zoom tour GIF and an out|in still per style, all_styles.png
+                      # (--round N picks a round; the newest by default)
 ```
 
 `capture.py` runs `capture.js` with node and the pre-installed Playwright Chromium. Both runs take under a minute.
@@ -41,4 +44,15 @@ Styles 1-4 work with Emerald's region map code as it is (one 8bpp affine BG, a 2
 only the art, the section table and the cursor change. Style 5 needs new code: a second map per planet and
 cursor jumps between planets.
 
-To add a style, write a `style_<name>(world)` in `variants.py` that returns its layers and add it to `STYLES`.
+Round 2:
+
+| # | Style | Galaxy | Planet |
+|---|---|---|---|
+| 1 | Holo Projection | colour globes, steel and gold frame | the planet's map as a cyan hologram, gold bracket cursor |
+| 2 | Full Holo | wireframe holo globes, the holotable frame | the same hologram |
+| 3 | Holo Globe | as 1 | the hologram smaller, inside a wireframe sphere over a holo projector |
+
+All three need the galaxy -> planet code of Galaxy Chart.
+
+To add a style, write a `style_<name>(world)` in `variants.py` that returns its layers and add it to a round in
+`ROUNDS`.

@@ -17,10 +17,18 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 
 import font  # noqa: E402
-from variants import STYLES, VIEW  # noqa: E402
+from variants import ROUNDS, VIEW  # noqa: E402
 from world import World  # noqa: E402
 
 OUT = HERE / "out"
+
+NOTES = {  # round 1 notes, shown under the tabs
+    "holotable": "Holotable: a Rebel briefing hologram. One cyan hue on black with scanlines, gold corner brackets.",
+    "atlas": "Star Atlas: every planet in its own colours, floating in space on gold hyperlanes. Closest to Emerald's map.",
+    "imperial": "Imperial Tactical: a fleet display. Greys on black, the section grid shown, red marks and a crosshair.",
+    "targeting": "Targeting Computer: the X-wing's amber screen in a rounded bezel, with a reticle cursor.",
+    "galaxy": "Galaxy Chart: zoomed out is the galaxy, one globe per planet. A opens that planet's own map, B goes back.",
+}
 
 
 def uri(img):
@@ -33,13 +41,15 @@ def build(capture=False):
     world = World()
     secs = world.sections()
     styles = []
-    for key, fn in STYLES:
+    for rnd, key, fn in [(r, k, f) for r in sorted(ROUNDS, reverse=True) for k, f in ROUNDS[r]]:
         r = fn(world)
-        d = OUT / key
+        r["style"].setdefault("note", NOTES.get(key, ""))
+        r["style"]["round"] = rnd
+        d = OUT / f"round{rnd}" / key
         d.mkdir(parents=True, exist_ok=True)
         r["map"].save(d / "map.png")
         r["chrome"].save(d / "chrome.png")
-        entry = {"key": key, "map": uri(r["map"]), "chrome": uri(r["chrome"]), "style": r["style"]}
+        entry = {"key": key, "round": rnd, "map": uri(r["map"]), "chrome": uri(r["chrome"]), "style": r["style"]}
         if r.get("planets"):
             (d / "planets").mkdir(exist_ok=True)
             entry["planets"] = {}

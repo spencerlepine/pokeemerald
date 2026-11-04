@@ -15,6 +15,7 @@ p { margin: 0; color: var(--dim); line-height: 1.5; max-width: 65ch; }
 .tabs { display: flex; flex-wrap: wrap; gap: 6px; }
 .tabs button { font: 13px var(--body); background: var(--panel); color: var(--fg); border: 1px solid var(--line); padding: 7px 11px; cursor: pointer; }
 .tabs button[aria-pressed="true"] { border-color: var(--gold); color: var(--gold); }
+.tabs .round { flex-basis: 100%; font: 12px var(--display); color: var(--dim); letter-spacing: .08em; margin-top: 4px; }
 .tabs button:focus-visible, .pad button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 .gba { background: #000; border: 1px solid var(--line); padding: 8px; justify-self: center; max-width: 100%; box-sizing: border-box; }
 canvas { display: block; width: 720px; max-width: 100%; aspect-ratio: 3 / 2; image-rendering: pixelated; }
@@ -30,7 +31,7 @@ canvas { display: block; width: 720px; max-width: 100%; aspect-ratio: 3 / 2; ima
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=Silkscreen&display=swap">
 <div class="wrap">
   <h1>STARNAV MAP</h1>
-  <p>Five styles for the StarNAV map screen, drawn at the GBA's 240x160 from the world blockout. Move the cursor, zoom in with A and out with B.</p>
+  <p>Styles for the StarNAV map screen, drawn at the GBA's 240x160 from the world blockout. Move the cursor, zoom in with A and out with B.</p>
   <div class="tabs" id="tabs"></div>
   <p id="note"></p>
   <div class="gba"><canvas id="screen" width="240" height="160"></canvas></div>
@@ -42,26 +43,25 @@ canvas { display: block; width: 720px; max-width: 100%; aspect-ratio: 3 / 2; ima
     </div>
     <div class="ab"><button id="k-b">B</button><button id="k-a">A</button></div>
   </div>
-  <div class="keys">Keyboard: arrows move, Z or Enter zooms in, X or Esc zooms out, 1 to 5 switch style.</div>
+  <div class="keys">Keyboard: arrows move, Z or Enter zooms in, X or Esc zooms out, number keys switch style.</div>
 </div>
 <script>/*DATA*/</script>
 <script>/*PLAYER*/</script>
 <script>
 (function () {
-  const notes = [
-    "Holotable: a Rebel briefing hologram. One cyan hue on black with scanlines, gold corner brackets.",
-    "Star Atlas: every planet in its own colours, floating in space on gold hyperlanes. Closest to Emerald's map.",
-    "Imperial Tactical: a fleet display. Greys on black, the section grid shown, red marks and a crosshair.",
-    "Targeting Computer: the X-wing's amber screen in a rounded bezel, with a reticle cursor.",
-    "Galaxy Chart: zoomed out is the galaxy, one globe per planet. A opens that planet's own map, B goes back."
-  ];
   const tabs = document.getElementById("tabs");
   const note = document.getElementById("note");
   function sync() {
-    [...tabs.children].forEach((b, i) => b.setAttribute("aria-pressed", i === SN.state.style));
-    note.textContent = notes[SN.state.style];
+    [...tabs.querySelectorAll("button")].forEach((b, i) => b.setAttribute("aria-pressed", i === SN.state.style));
+    note.textContent = STARNAV_DATA.styles[SN.state.style].style.note;
   }
+  let lastRound = null;
   STARNAV_DATA.styles.forEach((s, i) => {
+    if (s.round !== lastRound) {
+      lastRound = s.round;
+      const l = document.createElement("span"); l.className = "round"; l.textContent = "Round " + s.round;
+      tabs.appendChild(l);
+    }
     const b = document.createElement("button");
     b.textContent = (i + 1) + " " + s.style.title;
     b.onclick = () => { SN.setStyle(i); sync(); };

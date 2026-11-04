@@ -495,5 +495,221 @@ def style_galaxy(world):
     }}
 
 
-STYLES = [("holotable", style_holo), ("atlas", style_atlas), ("imperial", style_imperial),
-          ("targeting", style_amber), ("galaxy", style_galaxy)]
+
+
+# ---------------------------------------------------------------- round 2: galaxy first, hologram planets (owner, 2026-11-04)
+
+HOLO = [(16, 40, 64), (24, 64, 112), (40, 96, 136), (32, 80, 120), (56, 120, 160), (72, 144, 184), (160, 232, 248)]
+CYAN = (88, 200, 248)
+
+
+def galaxy_backdrop():
+    """The Galaxy Chart's space with the nebula arms in a faint pink."""
+    m = Image.new("RGBA", (MAP_W, MAP_H), g((8, 8, 16)) + (255,))
+    px = m.load()
+    rnd = random.Random(5)
+    cx, cy = 112, 62
+    for t in [i / 400 for i in range(2400)]:
+        for arm in (0, math.pi):
+            if rnd.random() < 0.35:
+                continue
+            a = t * 2.4 + arm
+            rr = 6 + t * 26
+            x = int(cx + math.cos(a) * rr * 1.7 + rnd.gauss(0, 3 + t))
+            y = int(cy + math.sin(a) * rr * 0.9 + rnd.gauss(0, 2 + t * 0.6))
+            if 0 <= x < MAP_W and 0 <= y < MAP_H:
+                col = mix((88, 40, 72), (32, 16, 40), min(1, t / 5))
+                if rnd.random() < 0.06:
+                    col = g((152, 96, 128))
+                px[x, y] = col + (255,)
+    for y in range(cy - 3, cy + 4):
+        for x in range(cx - 6, cx + 7):
+            if ((x - cx) / 6) ** 2 + ((y - cy) / 3) ** 2 <= 1:
+                inner = ((x - cx) / 3) ** 2 + ((y - cy) / 1.5) ** 2 <= 1
+                px[x, y] = g((240, 216, 216) if inner else (136, 80, 112)) + (255,)
+    starfield(m, 6, [(120, 128, 160), (248, 248, 240)], 0.008)
+    return m
+
+
+def holo_globe(img, cx, cy, r):
+    """A wireframe hologram globe: dark fill, cyan rim, two meridians and the equator."""
+    px = img.load()
+    for y in range(int(cy - r - 1), int(cy + r + 2)):
+        for x in range(int(cx - r - 1), int(cx + r + 2)):
+            dx, dy = x + 0.5 - cx, y + 0.5 - cy
+            dd = math.hypot(dx, dy)
+            if dd > r:
+                continue
+            col = (16, 40, 64)
+            if dd > r - 1:
+                col = CYAN
+            elif abs(dy) < 0.5 or abs(abs(dx) - r * 0.45 * math.sqrt(max(0, 1 - (dy / r) ** 2))) < 0.5:
+                col = (40, 120, 168)
+            elif (-dx - dy) / r > 0.7:
+                col = (56, 120, 160)
+            px[x, y] = g(col) + (255,)
+
+
+def galaxy_map(world, globes="colour", lane=CYAN):
+    m = galaxy_backdrop()
+    for a, b in world.lanes:
+        dotted(m, GALAXY_POS[a], GALAXY_POS[b], g(lane) + (255,), 1, 2)
+    for p, (x, y) in GALAXY_POS.items():
+        r = GLOBE_R.get(p, 5)
+        if globes == "holo":
+            holo_globe(m, x, y, r)
+            if p == "DEATH STAR":
+                stamp(m, "oo\noo", x - 3, y - 3, {"o": CYAN})
+        elif p == "DEATH STAR":
+            globe(m, x, y, 5, (128, 136, 144), (72, 80, 88), (184, 192, 200))
+            stamp(m, "oo\noo", x - 3, y - 3, {"o": (48, 56, 64)})
+        else:
+            b = BIOMES[p]
+            globe(m, x, y, r, b[5], b[0], b[6], ring=(p == "BESPIN"))
+    return m
+
+
+def holo_planets(world, backing=None, inner=None):
+    """Each planet's own map as a cyan hologram. backing(img, planet) draws behind the land.
+    inner = (cx, cy, cw, ch) in cells shrinks the planet into that part of the 28x15 grid."""
+    out = {}
+    for p in LAYOUT:
+        if inner:
+            ix, iy, iw, ih = inner
+            det = planet_detail(world, p, iw * CELL, ih * CELL)
+            if not det:
+                continue
+            cls = [[SPACE] * 224 for _ in range(120)]
+            for y, row in enumerate(det["cls"]):
+                cls[iy * CELL + y][ix * CELL:ix * CELL + len(row)] = row
+            cells = [[None] * 28 for _ in range(15)]
+            for y, row in enumerate(det["cells"]):
+                cells[iy + y][ix:ix + len(row)] = row
+            det = {"cls": cls, "cells": cells, "towns": {a: [c[0] + ix, c[1] + iy] for a, c in det["towns"].items()}}
+        else:
+            det = planet_detail(world, p)
+        if not det:
+            continue
+        d = Image.new("RGBA", (224, 120), g((8, 8, 16)) + (255,))
+        starfield(d, hash(p) & 255, [(32, 48, 72), (48, 72, 104)], 0.015)
+        if backing:
+            backing(d, p)
+        land = land_image(world, mono(HOLO), outline=CYAN, highlight=lambda c: mix(c, (255, 255, 255), 0.25),
+                          cls=det["cls"], planet=p, size=(224, 120))
+        d.alpha_composite(land)
+        town_marks(d, world, DIAMOND, {"o": (24, 64, 112), "H": (248, 248, 248), "h": (184, 240, 248), "s": CYAN},
+                   towns={a: tuple(v) for a, v in det["towns"].items()})
+        scanlines(d, 0.3)
+        out[p] = {"img": d, "cells": det["cells"], "towns": det["towns"]}
+    return out
+
+
+def chrome_galaxy(hint="A OPEN  B BACK"):
+    c = Image.new("RGBA", SCREEN, g((40, 56, 64)) + (255,))
+    d = ImageDraw.Draw(c)
+    gold, gold_o, steel = g((248, 208, 0)), g((96, 64, 0)), g((144, 176, 200))
+    d.rectangle((0, 0, 239, 17), fill=g((16, 24, 40)))
+    d.line((0, 17, 239, 17), fill=steel)
+    d.rectangle((0, 143, 239, 159), fill=g((16, 24, 40)))
+    d.line((0, 143, 239, 143), fill=steel)
+    x, y, w, h = VIEW
+    d.rounded_rectangle((x - 3, y - 2, x + w + 2, y + h + 1), radius=3, fill=g((8, 8, 16)), outline=steel)
+    clear_view(c)
+    font.draw(c, 8, 145, "STARNAV", gold, gold_o, "normal")
+    font.draw(c, 232 - font.text_width(hint, "small"), 147, hint, steel, g((16, 24, 40)), "small")
+    return c
+
+
+def chrome_holo(hint="A OPEN  B BACK"):
+    c = Image.new("RGBA", SCREEN, g((8, 8, 16)) + (255,))
+    d = ImageDraw.Draw(c)
+    cy, dim = g(CYAN), g((32, 80, 120))
+    d.line((0, 17, 239, 17), fill=dim)
+    d.line((0, 143, 239, 143), fill=dim)
+    clear_view(c)
+    x, y, w, h = VIEW
+    d.rectangle((x - 1, y - 1, x + w, y + h), outline=dim)
+    corners(d, x - 2, y - 2, x + w + 1, y + h + 1, cy, 7)
+    font.draw(c, 8, 145, "STARNAV", cy, None, "aurebesh")
+    font.draw(c, 232 - font.text_width(hint, "small"), 146, hint, cy, g((16, 40, 64)), "small")
+    scanlines(c, 0.25)
+    return c
+
+
+def gstyle(title, note, name_ink, name_shadow, sub_ink, sub_shadow, cursor, panel):
+    return {"title": title, "note": note, "zoom": "planet",
+            "galaxy": {p: list(v) for p, v in GALAXY_POS.items()},
+            "radius": {p: GLOBE_R.get(p, 5) for p in GALAXY_POS},
+            "name": {"x": 8, "y": 1, "font": "normal", "ink": g(name_ink), "shadow": g(name_shadow)},
+            "sub": {"x": 232, "y": 3, "font": "small", "ink": g(sub_ink), "shadow": sub_shadow and g(sub_shadow), "align": "right"},
+            "cursor": cursor, "panel": panel, "empty": ""}
+
+
+HOLO_PANEL = {"fill": g((8, 16, 32)), "edge": g(CYAN), "ink": g((184, 240, 248)), "shadow": g((16, 48, 80)), "dim": g((40, 120, 168))}
+
+
+def style_holo_projection(world):
+    """2A: the Galaxy Chart as it was (colour globes, steel and gold frame); a planet opens as a hologram."""
+    return {"map": galaxy_map(world), "chrome": chrome_galaxy(), "planets": holo_planets(world), "style": gstyle(
+        "Holo Projection",
+        "Galaxy Chart outside, hologram inside: colour globes, and A projects the planet's map in cyan.",
+        (248, 248, 240), (64, 72, 96), (248, 208, 0), (96, 64, 0),
+        {"kind": "brackets", "col": g((248, 208, 0)), "col2": g((248, 240, 160)), "ring": g(CYAN)}, HOLO_PANEL)}
+
+
+def style_full_holo(world):
+    """2B: everything is the hologram: wireframe globes in the galaxy and the cyan holotable frame."""
+    return {"map": galaxy_map(world, globes="holo", lane=(40, 120, 168)), "chrome": chrome_holo(),
+            "planets": holo_planets(world), "style": gstyle(
+        "Full Holo",
+        "All hologram: wireframe globes in the galaxy, the holotable frame, and the planet in cyan.",
+        CYAN, (16, 48, 80), (40, 120, 168), None,
+        {"kind": "brackets", "col": g((248, 208, 0)), "col2": g((248, 240, 160)), "ring": g((248, 208, 0))}, HOLO_PANEL)}
+
+
+def projector(img, planet):
+    """Behind the planet: a faint wireframe sphere and a projector beam rising from the bottom."""
+    px = img.load()
+    cx, cy, r = 112, 56, 54
+    for y in range(120):
+        for x in range(224):
+            dx, dy = (x + 0.5 - cx) / 1.0, y + 0.5 - cy
+            dd = math.hypot(dx, dy)
+            col = None
+            if abs(dd - r) < 0.6:
+                col = (32, 88, 128)
+            elif dd < r:
+                # meridians and parallels on the sphere
+                lat = dy / r
+                k = math.sqrt(max(0.0001, 1 - lat * lat))
+                for f in (-0.75, -0.4, 0, 0.4, 0.75):
+                    if abs(dx - f * r * k) < 0.5:
+                        col = (24, 64, 96)
+                for f in (-0.66, -0.33, 0.33, 0.66):
+                    if abs(lat - f) * r < 0.5:
+                        col = (24, 64, 96)
+            # beam: a dithered wedge from the projector at the bottom
+            if col is None and y > 96:
+                spread = (y - 96) * 1.6 + 4
+                if abs(x + 0.5 - cx) < spread and (x + y) % 2 == 0 and (y - 96) / 24 > abs(x + 0.5 - cx) / (spread * 1.6):
+                    col = (16, 48, 80)
+            if col:
+                px[x, y] = g(col) + (255,)
+    stamp(img, "..oooooooo..\n.oHhhhhhhho.\noooooooooooo", 106, 117, {"o": (40, 56, 72), "H": (248, 248, 248), "h": CYAN})
+
+
+def style_holo_globe(world):
+    """2C: like 2A, but the planet is projected inside a wireframe sphere above a holo projector."""
+    return {"map": galaxy_map(world), "chrome": chrome_galaxy(), "planets": holo_planets(world, backing=projector, inner=(7, 1, 14, 12)),
+            "style": gstyle(
+        "Holo Globe",
+        "Like Holo Projection, but the planet floats inside a wireframe sphere over a holo projector.",
+        (248, 248, 240), (64, 72, 96), (248, 208, 0), (96, 64, 0),
+        {"kind": "box", "col": g((248, 208, 0)), "col2": g((248, 248, 240)), "ring": g(CYAN)}, HOLO_PANEL)}
+
+
+ROUNDS = {
+    1: [("holotable", style_holo), ("atlas", style_atlas), ("imperial", style_imperial),
+        ("targeting", style_amber), ("galaxy", style_galaxy)],
+    2: [("holo-projection", style_holo_projection), ("full-holo", style_full_holo), ("holo-globe", style_holo_globe)],
+}

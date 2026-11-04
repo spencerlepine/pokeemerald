@@ -1,5 +1,5 @@
 // StarNAV map player: draws one 240x160 GBA screen per frame from the layers build.py made.
-// D-pad / arrows move, A (Z, Enter) zooms in, B (X, Esc) zooms out, 1-5 pick the style.
+// D-pad / arrows move, A (Z, Enter) zooms in, B (X, Esc) zooms out, 1-9 pick the style.
 // window.SN exposes setStyle / key / step / canvas for capture.py.
 (function () {
   const DATA = window.STARNAV_DATA;
@@ -243,7 +243,7 @@
   const keys = { ArrowLeft: "left", ArrowRight: "right", ArrowUp: "up", ArrowDown: "down", z: "a", Z: "a", Enter: "a", x: "b", X: "b", Escape: "b" };
   window.addEventListener("keydown", (e) => {
     if (keys[e.key]) { SN.key(keys[e.key]); e.preventDefault(); }
-    if (e.key >= "1" && e.key <= "5") { SN.setStyle(+e.key - 1); if (window.onStyle) window.onStyle(); }
+    if (e.key >= "1" && e.key <= "9" && +e.key <= DATA.styles.length) { SN.setStyle(+e.key - 1); if (window.onStyle) window.onStyle(); }
   });
   if (!DATA.capture) {
     SN.onready = () => { const loop = () => { SN.step(1); requestAnimationFrame(loop); }; loop(); };

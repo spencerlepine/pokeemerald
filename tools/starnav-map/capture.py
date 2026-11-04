@@ -1,6 +1,6 @@
 """Film every style from out/capture.html (built for you).
 
-    python3 capture.py [--out DIR]     # DIR/<n>_<style>.gif (a tour with zoom), DIR/<n>_<style>.png (out | in),
+    python3 capture.py [--out DIR] [--round N]     # DIR/round<N>/<n>_<style>.gif (a tour with zoom), DIR/<n>_<style>.png (out | in),
                                        # DIR/all_styles.png (every style, zoomed out and in)
 
 The browser part is capture.js, run with node and the pre-installed Playwright Chromium. Frames are stepped by
@@ -46,19 +46,23 @@ def main():
     out.mkdir(parents=True, exist_ok=True)
     html = build.build(capture=True)
     styles = json.loads(html.read_text().split("window.STARNAV_DATA = ", 1)[1].split(";</script>", 1)[0])["styles"]
+    rnd = int(sys.argv[sys.argv.index("--round") + 1]) if "--round" in sys.argv else max(s["round"] for s in styles)
+    out = out / f"round{rnd}"
+    out.mkdir(parents=True, exist_ok=True)
+    picked = [(i, s) for i, s in enumerate(styles) if s["round"] == rnd]
     tours = []
-    for i, s in enumerate(styles):
+    for n, (i, s) in enumerate(picked):
         galaxy = s["style"]["zoom"] == "planet"
-        tours.append({"name": f"{i + 1}_{s['key']}", "style": i, "steps": TOUR_GALAXY if galaxy else TOUR_SCALE})
-        tours.append({"name": f"{i + 1}_{s['key']}_stills", "style": i, "steps": STILLS_GALAXY if galaxy else STILLS_SCALE})
+        tours.append({"name": f"{n + 1}_{s['key']}", "style": i, "steps": TOUR_GALAXY if galaxy else TOUR_SCALE})
+        tours.append({"name": f"{n + 1}_{s['key']}_stills", "style": i, "steps": STILLS_GALAXY if galaxy else STILLS_SCALE})
     frames = HERE / "out" / "frames"
     shutil.rmtree(frames, ignore_errors=True)
     tf = HERE / "out" / "tours.json"
     tf.write_text(json.dumps(tours))
     subprocess.run(["node", str(HERE / "capture.js"), str(html), str(frames), str(tf)], check=True)
     sheets = []
-    for i, s in enumerate(styles):
-        name = f"{i + 1}_{s['key']}"
+    for n, (i, s) in enumerate(picked):
+        name = f"{n + 1}_{s['key']}"
         fs = sorted((frames / name).glob("*.png"))
         big = [Image.open(f).convert("RGB").resize((240 * K, 160 * K), Image.NEAREST) for f in fs]
         big[0].save(out / f"{name}.gif", save_all=True, append_images=big[1:], duration=33, loop=0)
