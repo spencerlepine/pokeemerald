@@ -1,0 +1,7 @@
+name: part-vent
+parts:
+- name: vent
+  use: vent
+style: tatooine
+width:
+- 3

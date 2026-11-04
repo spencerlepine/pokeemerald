@@ -1,0 +1,56 @@
+# Common kit: doors, windows and roof pieces every style may use.
+# Axes: x east, y north, z up, 1 m = 1 cell = 16 px. Facade pieces sit on a south wall whose foot is
+# at y = 0; they stand a little south of it (y < 0), because only south faces show head-on.
+# Keep pieces big: a door is about one cell wide, a window at least half a cell. No fine detail.
+materials:
+  wall:  {ramp: bone,  bands: [0.22, 0.55, 0.88]}
+  roof:  {ramp: bone,  bands: [0.12, 0.42, 0.72]}
+  trim:  {ramp: light, bands: [0.25, 0.55, 0.85]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  metal: {ramp: mid,   bands: [0.2, 0.5, 0.85]}
+  light: {ramp: light, bands: [0.15, 0.5, 0.82]}
+  mid:   {ramp: mid,   bands: [0.2, 0.5, 0.85]}
+templates:
+  # An arched doorway: a dark opening with a round top, in a thick frame.
+  door-arch:
+    params: {w: 0.85, h: 0.8, frame: 0.12, door: dark, trim: trim}
+    preview: {}
+    parts:
+      - {name: frame, mat: "=trim", box: {c: [0, -0.03, "=h / 2"], half: ["=w / 2 + frame", 0.07, "=h / 2"], radius: 0.03}}
+      - {name: frame-top, mat: "=trim", cylinder: {a: [0, -0.1, "=h"], b: [0, 0.04, "=h"], r1: "=w / 2 + frame"}}
+      - {name: hole, mat: "=door", box: {c: [0, -0.08, "=h / 2"], half: ["=w / 2", 0.05, "=h / 2"]}}
+      - {name: hole-top, mat: "=door", cylinder: {a: [0, -0.13, "=h"], b: [0, -0.03, "=h"], r1: "=w / 2"}}
+  # A square blast door with a heavy lintel (Mos Eisley, Imperial).
+  door-slab:
+    params: {w: 0.9, h: 1.05, frame: 0.12, door: metal, trim: trim}
+    preview: {}
+    parts:
+      - {name: frame, mat: "=trim", box: {c: [0, -0.03, "=(h + frame) / 2"], half: ["=w / 2 + frame", 0.07, "=(h + frame) / 2"], radius: 0.02}}
+      - {name: slab, mat: "=door", box: {c: [0, -0.08, "=h / 2"], half: ["=w / 2", 0.05, "=h / 2"]}}
+  # A round window (porthole).
+  window-round:
+    params: {r: 0.22, frame: 0.07, glass: dark, trim: trim}
+    preview: {at: [0, 0, 0.6]}
+    parts:
+      - {name: ring, mat: "=trim", cylinder: {a: [0, -0.07, 0], b: [0, 0.05, 0], r1: "=r + frame"}}
+      - {name: glass, mat: "=glass", cylinder: {a: [0, -0.1, 0], b: [0, -0.02, 0], r1: "=r"}}
+  # A wide slot window.
+  window-slot:
+    params: {w: 0.7, h: 0.25, frame: 0.06, glass: dark, trim: trim}
+    preview: {at: [0, 0, 0.7]}
+    parts:
+      - {name: frame, mat: "=trim", box: {c: [0, -0.03, 0], half: ["=w / 2 + frame", 0.06, "=h / 2 + frame"], radius: 0.02}}
+      - {name: glass, mat: "=glass", box: {c: [0, -0.07, 0], half: ["=w / 2", 0.04, "=h / 2"]}}
+  # A short round vent stack with a cap, for roofs.
+  vent:
+    params: {r: 0.16, h: 0.45, mat: metal}
+    preview: {}
+    parts:
+      - {name: pipe, mat: "=mat", cylinder: {a: [0, 0, 0], b: [0, 0, "=h"], r1: "=r"}}
+      - {name: cap, mat: "=mat", cylinder: {a: [0, 0, "=h"], b: [0, 0, "=h + 0.1"], r1: "=r + 0.07"}}
+  # A cargo crate.
+  crate:
+    params: {s: 0.55, mat: metal}
+    preview: {}
+    parts:
+      - {name: box, mat: "=mat", box: {c: [0, 0, "=s / 2"], half: ["=s / 2", "=s / 2", "=s / 2"], radius: 0.03}}

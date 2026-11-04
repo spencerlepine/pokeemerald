@@ -1,0 +1,11 @@
+name: part-dome
+parts:
+- at:
+  - 0
+  - 0.8
+  - 0
+  name: dome
+  use: dome
+style: tatooine
+width:
+- 3

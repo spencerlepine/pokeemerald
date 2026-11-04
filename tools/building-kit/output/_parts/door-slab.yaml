@@ -1,0 +1,7 @@
+name: part-door-slab
+parts:
+- name: door-slab
+  use: door-slab
+style: tatooine
+width:
+- 3

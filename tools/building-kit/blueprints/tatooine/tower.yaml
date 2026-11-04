@@ -1,0 +1,32 @@
+# A Mos Espa town tower: two or three battered blocks stacked, each stepping back, a dome or a vent
+# on top. Tall, so it takes a shallow plan.
+name: tower
+style: tatooine
+about: Two or three stacked battered blocks stepping back, dome or roof band on top.
+width: [3, 4]
+choose:
+  w: ["=w_max * 0.85", "=w_max"]
+  d: [1.2, 1.6]
+  h1: [1.1, 1.4]
+  h2: [0.8, 1.1]
+  tiers: {pick: [2, 3], weights: [3, 2]}
+  top: {pick: [dome, lip], weights: [3, 2]}
+  door: {pick: [arch, slab]}
+parts:
+  - {use: adobe-block, name: t1, with: {w: "=w", d: "=d", h: "=h1", batter: 0.12}}
+  - {use: roof-lip, name: l1, with: {w: "=w", d: "=d", h: "=h1", batter: 0.12, t: 0.14}}
+  - {use: adobe-block, name: t2, at: [0, "=d * 0.2", "=h1"], with: {w: "=w * 0.72", d: "=d * 0.62", h: "=h2", batter: 0.1}}
+  - when: "=tiers == 3"
+    parts:
+      - {use: roof-lip, name: l2, at: [0, "=d * 0.2", "=h1"], with: {w: "=w * 0.72", d: "=d * 0.62", h: "=h2", batter: 0.1, t: 0.12}}
+      - {use: adobe-block, name: t3, at: [0, "=d * 0.3", "=h1 + h2"], with: {w: "=w * 0.48", d: "=d * 0.4", h: 0.6, batter: 0.08}}
+  - when: "=top == 'dome'"
+    parts:
+      - {use: dome, name: cap, at: [0, "=d * 0.5", "=h1 + h2 + (0.6 if tiers == 3 else 0)"],
+         with: {r: "=w * (0.22 if tiers == 3 else 0.32)", ry: 0.62, hk: 0.6}}
+  - when: "=door == 'arch'"
+    parts:
+      - {use: door-arch, name: door, at: [0, 0, 0], with: {w: 0.85, h: 0.7}}
+    else:
+      - {use: door-slab, name: door, at: [0, 0, 0], with: {w: 0.9, h: 0.9}}
+  - {use: window-round, name: win, at: [0, "=d * 0.2 - 0.02", "=h1 + h2 * 0.55"], with: {r: 0.18}}

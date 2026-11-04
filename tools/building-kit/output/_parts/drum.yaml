@@ -1,0 +1,11 @@
+name: part-drum
+parts:
+- at:
+  - 0
+  - 0.7
+  - 0
+  name: drum
+  use: drum
+style: tatooine
+width:
+- 3

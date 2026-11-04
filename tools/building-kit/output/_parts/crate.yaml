@@ -1,0 +1,7 @@
+name: part-crate
+parts:
+- name: crate
+  use: crate
+style: tatooine
+width:
+- 3

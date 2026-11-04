@@ -1,0 +1,11 @@
+name: part-window-slot
+parts:
+- at:
+  - 0
+  - 0
+  - 0.7
+  name: window-slot
+  use: window-slot
+style: tatooine
+width:
+- 3

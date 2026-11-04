@@ -1,0 +1,38 @@
+# The Lars homestead hut (A New Hope): a low adobe dome with a barrel-vaulted entry block in front.
+name: dome-hut
+style: tatooine
+about: Low adobe dome with a vaulted entry block; sometimes a second small dome, a vaporator, a vent.
+width: [4, 5]
+choose:
+  R: ["=w_max * 0.33", "=w_max * 0.42"]          # dome radius (east-west)
+  ry: [0.62, 0.78]                                # plan squash north-south
+  hk: [0.7, 0.9]                                  # dome height / radius
+  dx: ["=-(w_max / 2 - R) * 0.8", "=(w_max / 2 - R) * 0.8"]
+  ew: [1.1, 1.35]                                # entry block width
+  ed: [0.55, 0.85]                                # entry block depth
+  eh: [0.5, 0.65]
+  ex: "=dx"
+  side: {pick: [-1, 1]}                           # where the extras go
+parts:
+  - {use: dome, name: dome, at: ["=dx", "=ed * 0.5 + R * ry", 0], with: {r: "=R", ry: "=ry", hk: "=hk"}}
+  - {use: entry-vault, name: entry, at: ["=ex", 0, 0], with: {w: "=ew", d: "=ed * 0.6 + 0.1", h: "=eh"}}
+  - {use: door-arch, name: door, at: ["=ex", 0, 0], with: {w: 0.75, h: "=eh * 0.8"}}
+  - pick:
+      - weight: 2
+        parts: []
+      - weight: 2                                 # a second, smaller dome to one side
+        set: {r2: ["=R * 0.5", "=R * 0.65"]}
+        parts:
+          - {use: dome, name: dome2, at: ["=dx + side * (R * 0.75 + r2 * 0.35)", "=ed * 0.5 + R * ry + 0.15", 0],
+             with: {r: "=r2", ry: "=ry", hk: "=hk * 0.95"}}
+      - weight: 1                                 # a small vaulted side block
+        parts:
+          - {use: entry-vault, name: annex, at: ["=dx + side * (R * 0.85)", "=ed * 0.6", 0], turn: "=side * 90",
+             with: {w: 0.95, d: 0.9, h: 0.6}}
+  - chance: 0.45                                  # a vent on the dome (z: the dome's surface there)
+    parts:
+      - {use: vent, name: vent, at: ["=dx - side * R * 0.4", "=ed * 0.5 + R * ry * 1.15", "=R * hk * sqrt(max(0, 1 - 0.16 - 0.0225)) - 0.08"], with: {r: 0.17, h: 0.3}}
+  - chance: 0.5                                   # a moisture vaporator beside it
+    parts:
+      - {use: vaporator, name: vap, at: ["=-side * (w_max / 2 - 0.3)", 0.35, 0], with: {h: 1.5}}
+ground: []

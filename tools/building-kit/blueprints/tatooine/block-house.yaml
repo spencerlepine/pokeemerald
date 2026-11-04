@@ -1,0 +1,51 @@
+# Mos Eisley and Mos Espa town blocks (A New Hope, The Phantom Menace): a battered adobe block with a
+# thick roof band, then one of several roofs, an arched or slab door, round or slot windows, and
+# sloped buttresses at the corners.
+name: block-house
+style: tatooine
+about: Battered adobe block; roof band, dome, stepped upper block or flat; buttresses, windows, vents.
+width: [4, 5, 6]
+choose:
+  w: ["=w_max * 0.72", "=w_max"]
+  d: [1.6, 2.4]
+  h: [1.15, 1.6]
+  batter: [0.08, 0.2]
+  roof: {pick: [lip, dome, step, flat], weights: [3, 3, 2, 1]}
+  door: {pick: [arch, slab], weights: [3, 2]}
+  doorx: ["=-(w / 2 - 0.9)", "=(w / 2 - 0.9)"]
+  wins: {pick: [round, slot, none], weights: [3, 2, 2]}
+parts:
+  - {use: adobe-block, name: block, with: {w: "=w", d: "=d", h: "=h", batter: "=batter"}}
+  - when: "=roof == 'lip'"
+    parts:
+      - {use: roof-lip, name: lip, with: {w: "=w", d: "=d", h: "=h", batter: "=batter"}}
+  - when: "=roof == 'dome'"
+    parts:
+      - {use: roof-lip, name: lip, with: {w: "=w", d: "=d", h: "=h", batter: "=batter"}}
+      - {use: dome, name: dome, at: ["=(w * 0.2) * (1 if seed % 2 else -1)", "=d / 2 + 0.1", "=h"],
+         with: {r: "=min(w * 0.3, d * 0.55)", ry: 0.85, hk: 0.75}}
+  - when: "=roof == 'step'"
+    parts:
+      - {use: adobe-block, name: upper, at: ["=(w * 0.18) * (1 if seed % 2 else -1)", "=d * 0.35", "=h - 0.05"],
+         with: {w: "=w * 0.52", d: "=d * 0.55", h: 0.75, batter: "=batter * 0.8"}}
+  - when: "=door == 'arch'"
+    parts:
+      - {use: door-arch, name: door, at: ["=doorx", 0, 0], with: {w: 0.85, h: 0.75}}
+    else:
+      - {use: door-slab, name: door, at: ["=doorx", 0, 0], with: {w: 0.9, h: 0.95}}
+  - when: "=wins != 'none'"
+    parts:
+      - pick:
+          - parts:
+              - when: "=wins == 'round'"
+                parts:
+                  - {use: window-round, name: win, at: ["=doorx + (1.15 if doorx < 0 else -1.15)", 0, "=h * 0.6"], with: {r: 0.2}}
+                else:
+                  - {use: window-slot, name: win, at: ["=doorx + (1.25 if doorx < 0 else -1.25)", 0, "=h * 0.62"], with: {w: 0.7}}
+  - chance: 0.55                                  # sloped buttresses at both front corners
+    parts:
+      - {use: buttress, name: b-w, at: ["=-w / 2 + 0.25", "=batter * 0.3", 0], with: {hh: "=h * 0.75", l: 0.5, t: 0.26}}
+      - {use: buttress, name: b-e, at: ["=w / 2 - 0.25", "=batter * 0.3", 0], with: {hh: "=h * 0.75", l: 0.5, t: 0.26}}
+  - chance: 0.5
+    parts:
+      - {use: vent, name: vent, at: ["=-(w * 0.3) * (1 if seed % 2 else -1)", "=d * 0.7", "=h"], with: {r: 0.16, h: 0.4}}

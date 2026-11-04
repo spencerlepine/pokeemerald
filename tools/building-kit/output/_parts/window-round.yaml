@@ -1,0 +1,11 @@
+name: part-window-round
+parts:
+- at:
+  - 0
+  - 0
+  - 0.6
+  name: window-round
+  use: window-round
+style: tatooine
+width:
+- 3
