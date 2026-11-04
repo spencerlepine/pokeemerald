@@ -1,0 +1,78 @@
+# The Tibanna works under and beside Cloud City (The Empire Strikes Back: the carbon-freezing chamber
+# level, the Ugnaught furnaces and gas refinery): bare-metal blocks with sloped shoulders, standing and
+# lying Tibanna tanks, exhaust stacks, fat pipe runs and vents. `mode` picks the family: a refinery
+# core, the carbon-freezing annex under its cone hood, an Ugnaught workshop or a tank block.
+name: works
+style: bespin
+about: Bare-metal Tibanna works; refinery core with stacks, freezing annex with a cone hood, Ugnaught shed or tank block.
+width: [4, 5, 6]
+choose:
+  Hc: "=H if H else 5"
+  mode: {pick: [refinery, annex, workshop, tanks], weights: [2, 2, 2, 2]}
+  side: {pick: [-1, 1]}
+  dx0: "=door_x if door_x is not None else 0"
+  d: ["=min(2.0, Hc * 0.34)", "=min(2.4, Hc * 0.42)"]
+  w: ["=w_max * 0.62", "=w_max * 0.78"]
+  hmax: "=Hc - 0.35 - d"
+  h: ["=hmax * 0.45", "=hmax * 0.62"]
+  ntank: {int: [1, 3]}
+  roof: {pick: [shoulder, flat, vault], weights: [3, 2, 2]}
+parts:
+  - when: "=mode in ('refinery', 'workshop')"
+    parts:
+      # the main block, centred on the door, with sloped shoulders or a vault
+      - {name: block, mat: works, at: ["=dx0 * 0.5", 0, 0], box: {c: [0, "=d / 2", "=h / 2"], half: ["=w / 2", "=d / 2", "=h / 2"], radius: 0.04}}
+      - when: "=roof == 'shoulder'"
+        parts:
+          - name: shoulder
+            mat: works
+            at: ["=dx0 * 0.5", 0, 0]
+            prism: {poly: [["=-w / 2", 0], ["=w / 2", 0], ["=w / 2", "=d"], ["=-w / 2", "=d"]], z: ["=h", "=h + 0.45"], top: [0.72, 0.5], round: 0.03}
+      - when: "=roof == 'vault'"
+        parts:
+          - {name: vault, mat: works, at: ["=dx0 * 0.5", 0, 0], cylinder: {a: ["=-w / 2", "=d / 2", "=h - 0.1"], b: ["=w / 2", "=d / 2", "=h - 0.1"], r1: "=min(d / 2, 0.75)"}}
+      - when: "=roof == 'flat'"
+        parts:
+          - {name: lid, mat: works-dk, at: ["=dx0 * 0.5", 0, 0], box: {c: [0, "=d / 2", "=h + 0.1"], half: ["=w / 2 + 0.06", "=d / 2 + 0.06", 0.12], radius: 0.02}}
+          - {use: vent, name: vent, at: ["=dx0 * 0.5 - side * w * 0.25", "=d * 0.55", "=h + 0.2"], with: {r: 0.2, h: 0.35}}
+      - {name: slot, mat: works-dk, at: ["=dx0 * 0.5", 0, 0], box: {c: ["=-side * w * 0.3", -0.03, "=h * 0.72"], half: [0.4, 0.06, 0.16], radius: 0.02}}
+      - {use: door-slab, name: door, at: ["=dx0", 0, 0], with: {w: 0.9, h: "=min(1.05, h * 0.75)", door: works-dk, trim: works}}
+  - when: "=mode == 'refinery'"
+    parts:
+      - {use: stack, name: stack1, at: ["=side * (w_max / 2 - 0.4)", "=d * 0.55", 0], with: {r: 0.3, h: "=hmax - 0.15 + (d - d * 0.55) * 0"}}
+      - {use: stack, name: stack2, at: ["=side * (w_max / 2 - 1.05)", "=d * 0.75", 0], with: {r: 0.24, h: "=hmax * 0.8"}}
+      - {use: tank, name: tank, at: ["=-side * (w_max / 2 - 0.55)", "=0.6", 0], with: {r: 0.5, h: "=h * 0.75"}}
+      - {use: pipe, name: pipe, at: ["=dx0 * 0.5", -0.12, 0], with: {l: "=w + 0.4", z: "=h * 0.5 + 0.35", r: 0.15}}
+  - when: "=mode == 'workshop'"
+    parts:
+      - {use: tank-lying, name: tank, at: ["=-side * (w_max / 2 - 0.85)", "=d + 0.0 - 0.5", "=h"], with: {l: 1.6, r: 0.35}}
+      - {use: crate, name: crate1, at: ["=side * (w_max / 2 - 0.35)", 0.25, 0], with: {s: 0.55}}
+      - {use: crate, name: crate2, at: ["=side * (w_max / 2 - 0.4)", 0.85, 0], with: {s: 0.45, mat: works-dk}}
+      - {name: hood, mat: works-dk, at: ["=dx0", 0, 0], box: {c: [0, -0.2, "=min(1.05, h * 0.75) + 0.2"], half: [0.7, 0.24, 0.1], radius: 0.02}}
+  - when: "=mode == 'annex'"                         # an eight-sided block under a cone hood with a vent ring
+    parts:
+      - pick:
+          - set: {aw: "=w_max * 0.8"}
+            parts:
+              - name: block
+                mat: works
+                prism: {poly: [["=-aw * 0.3", 0], ["=aw * 0.3", 0], ["=aw / 2", "=d * 0.25"], ["=aw / 2", "=d * 0.75"], ["=aw * 0.3", "=d"],
+                               ["=-aw * 0.3", "=d"], ["=-aw / 2", "=d * 0.75"], ["=-aw / 2", "=d * 0.25"]], z: [0, "=h"], round: 0.03}
+              - name: hood
+                mat: works-dk
+                prism: {poly: [["=-aw * 0.3", 0], ["=aw * 0.3", 0], ["=aw / 2", "=d * 0.25"], ["=aw / 2", "=d * 0.75"], ["=aw * 0.3", "=d"],
+                               ["=-aw * 0.3", "=d"], ["=-aw / 2", "=d * 0.75"], ["=-aw / 2", "=d * 0.25"]], z: ["=h", "=h + min(0.9, hmax - h - 0.5)"], top: 0.35, round: 0.03}
+              - {use: stack, name: vent, at: [0, "=d / 2", "=h + min(0.9, hmax - h - 0.5) - 0.1"], with: {r: 0.32, h: 0.5}}
+              - {name: band, mat: works-dk, prism: {poly: [["=-aw * 0.31", -0.04], ["=aw * 0.31", -0.04], ["=aw / 2 + 0.04", "=d * 0.25"], ["=aw / 2 + 0.04", "=d * 0.75"], ["=aw * 0.31", "=d + 0.04"],
+                               ["=-aw * 0.31", "=d + 0.04"], ["=-aw / 2 - 0.04", "=d * 0.75"], ["=-aw / 2 - 0.04", "=d * 0.25"]], z: ["=h * 0.55", "=h * 0.55 + 0.3"]}}
+              - {use: door-slab, name: door, at: ["=dx0", -0.04, 0], with: {w: 1.0, h: "=min(1.1, h * 0.5)", door: works-dk, trim: works}}
+              - {use: pipe, name: pipe, at: [0, "=d * 0.5", 0], with: {l: "=w_max - 0.1", z: 0.55, r: 0.2}}
+  - when: "=mode == 'tanks'"                          # a row of standing tanks on a plinth, joined by a pipe
+    parts:
+      - {name: plinth, mat: works-dk, box: {c: [0, "=d / 2", 0.12], half: ["=w_max / 2 - 0.05", "=d / 2", 0.12], radius: 0.02}}
+      - repeat: "=ntank + 1"
+        parts:
+          - {use: tank, name: "=f'tank{i}'", at: ["=(i - (n - 1) / 2) * (w_max - 0.2) / n", "=d / 2 + 0.05 * (i % 2)", 0.22],
+             with: {r: "=min(0.62, (w_max - 0.3) / n / 2 - 0.04, d / 2 - 0.1)", h: "=hmax * (0.55 + 0.15 * ((i + seed) % 2))"}}
+      - {use: pipe, name: pipe, at: [0, -0.08, 0], with: {l: "=w_max - 0.2", z: 0.6, r: 0.16}}
+      - {use: door-slab, name: door, at: ["=dx0", -0.12, 0], with: {w: 0.8, h: 0.7, door: works-dk, trim: works}}

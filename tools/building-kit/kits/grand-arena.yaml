@@ -1,0 +1,31 @@
+# Grand Arena kit: Lando's arena island (post-game), a resort in gold-and-white Cloud City style.
+# Uses the Bespin kit (ovals, window bands, saucers, cupolas, doors) and adds gold: column porticoes,
+# broad overhanging disc roofs, gold domes and lanterns, steps up to every door.
+uses: [bespin]
+materials:
+  ga-wall: {ramp: light, bands: [0.04, 0.26, 0.6]}       # white
+  ga-gold: {ramp: bone,  bands: [0.16, 0.45, 0.8]}       # gold trim, domes, columns (warm, a step darker)
+  ga-glass: {ramp: dark, bands: [0.15, 0.45, 0.8]}
+templates:
+  # A round gold column with a base and a capital, h tall.
+  ga-column:
+    params: {h: 1.3, r: 0.15, mat: ga-gold}
+    preview: {}
+    parts:
+      - {name: base, mat: "=mat", cylinder: {a: [0, 0, 0], b: [0, 0, 0.12], r1: "=r + 0.07"}}
+      - {name: shaft, mat: "=mat", cylinder: {a: [0, 0, 0.1], b: [0, 0, "=h - 0.12"], r1: "=r"}}
+      - {name: cap, mat: "=mat", cylinder: {a: [0, 0, "=h - 0.14"], b: [0, 0, "=h"], r1: "=r + 0.09"}}
+  # A broad disc roof overhanging an oval of w x d by `over`, t thick, its rim gold.
+  disc-roof:
+    params: {w: 3.0, d: 1.6, z: 1.5, over: 0.25, t: 0.24, mat: ga-wall, rim: ga-gold}
+    preview: {}
+    parts:
+      - {use: oval, name: rim, at: [0, "=-over", 0], with: {w: "=w + 2 * over", d: "=d + 2 * over", z0: "=z", z1: "=z + t * 0.55", mat: "=rim", top: 1.0}}
+      - {use: oval, name: top, at: [0, "=-over + 0.04", 0], with: {w: "=w + 2 * over - 0.08", d: "=d + 2 * over - 0.08", z0: "=z + t * 0.5", z1: "=z + t", mat: "=mat", top: 0.9}}
+  # Two low steps up to a door, w wide, their front at y = 0.
+  ga-steps:
+    params: {w: 1.4, mat: ga-wall}
+    preview: {}
+    parts:
+      - {name: s1, mat: "=mat", box: {c: [0, 0.2, 0.06], half: ["=w / 2", 0.2, 0.06], radius: 0.02}}
+      - {name: s2, mat: "=mat", box: {c: [0, 0.3, 0.16], half: ["=w / 2 - 0.12", 0.12, 0.06], radius: 0.02}}

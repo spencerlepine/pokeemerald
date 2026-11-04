@@ -147,6 +147,33 @@ The Ilum kit uses the Hoth kit (`ice-block`, `drift`).
 | `ice-hut` | Shelters cut into the glacier | faceted mound, cut block or two blocks; Jedi or arched door; crystals, crates |
 | `pad` | The landing shelf below the temple | emblem ring, crystal beacons or obelisks, drifts |
 
+## Bespin
+
+The Bespin kit's `oval` is a 12-sided squashed prism: a round tower shows five lit facets from the front.
+Window bands are a dark ring broken by `oval-pier`s (a `repeat` in the blueprint).
+
+| Blueprint | From the films | Varies |
+|---|---|---|
+| `cloud-tower` | Cloud City towers | drum, tapered, stacked or flared body; 1-3 window bands; saucer, glass dome, rings, spire or mast top; two wings, one wing, lift pylon or ribs; base ring; plain, canopy or porch door |
+| `cc-hall` | The Galleria, Cloud City halls | long oval hall with bands; lid, saucer or terrace roof; domed atrium, glass front, end drums or plain |
+| `landing-pad` | The Falcon's platform | round or eight-sided deck, landing ring, front ramp, one or two cloud cars or cargo, beacons |
+| `works` | The Tibanna works, the carbon-freezing level | refinery block with stacks and tank, annex under a cone hood, Ugnaught shed, or tank row |
+| `garage` | Cloud car bays | vaulted or oval hangar, wide mouth, a cloud car beside it or fuel and crates |
+
+## Grand Arena
+
+Lando's island in gold and white. The kit uses the Bespin kit and adds `ga-column`, `disc-roof` and `ga-steps`.
+
+| Blueprint | From the films | Varies |
+|---|---|---|
+| `resort-hall` | Cloud City halls, gold-trimmed | disc, stepped or gold roof; column portico, glazed arcade, window band or door columns; rotunda, twin towers, gold dome or lantern |
+| `pavilion` | Cloud City pods | mushroom disc, gold dome, stepped crown or cone roof; door columns, window band or plain |
+| `spire-hall` | Stacked saucers of the concept art | 2-3 drums under gold-rimmed discs; gold dome, spire or saucer top; column or canopy porch |
+
+A catalog `set:` is applied after every `choose` is worked out, so expressions that read a set param (sizes,
+height budgets) still see the seed's own pick. The Bespin and Grand Arena entries use seeds whose own picks
+are the wanted ones, with no `set`.
+
 ## Earlier notes
 
 More Tatooine bases (walled courtyard, docking-bay ring, garage, market awning), then a kit per planet

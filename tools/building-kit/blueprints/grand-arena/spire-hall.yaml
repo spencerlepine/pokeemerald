@@ -1,0 +1,56 @@
+# A tall Grand Arena lobby: the stacked-disc towers of the concept art, Cloud City's saucers piled up.
+# A white drum with a gold-column porch, a broad gold-rimmed disc halfway, a narrower upper drum ringed
+# with windows, a top disc and a gold dome or a spire. Shallow plan, tall.
+name: spire-hall
+style: grand-arena
+about: Stacked white drums under broad gold-rimmed discs; gold dome or spire on top; column porch.
+width: [5, 6]
+choose:
+  Hc: "=H if H else 8"
+  av: "=Hc - 0.32"
+  w: ["=w_max * 0.72", "=w_max * 0.8"]
+  d: [1.4, 1.7]
+  top: {pick: [dome, spire, saucer], weights: [3, 2, 2]}
+  tiers: {pick: [2, 3], weights: [2, 3]}
+  dt: "=d * 0.72"
+  need: "=d / 2 + (0.22 + sqrt((dt * 0.4) ** 2 + 0.36) if top == 'dome' else (0.22 + 1.1 if top == 'spire' else dt * 0.75 + 0.6))"
+  ht: "=av - need"
+  h1: "=ht * (0.42 if tiers == 3 else 0.55)"
+  h2: "=ht * 0.72"
+  porch: {pick: [columns, canopy], weights: [3, 2]}
+parts:
+  - {use: oval, name: t1, with: {w: "=w", d: "=d", z0: 0, z1: "=h1", mat: ga-wall}}
+  - {use: window-band, name: b1, with: {w: "=w", d: "=d", z0: "=h1 - 0.65", z1: "=h1 - 0.32"}}
+  - repeat: "=max(3, round(w / 0.75))"
+    parts:
+      - {use: oval-pier, name: "=f'p1-{i}'", with: {x: "=(i - (n - 1) / 2) * (w * 0.86 / n)", wk: "=w", dk: "=d", z0: "=h1 - 0.68", z1: "=h1 - 0.29", mat: ga-gold}}
+  - {use: disc-roof, name: disc1, with: {w: "=w", d: "=d", z: "=h1", over: "=min(0.4, (w_max - w) / 2 - 0.02)", t: 0.24}}
+  - {use: oval, name: t2, at: [0, "=(d - dt) / 2", 0], with: {w: "=w * 0.72", d: "=dt", z0: "=h1 + 0.2", z1: "=ht if tiers == 2 else h2", mat: ga-wall}}
+  - {use: window-band, name: b2, at: [0, "=(d - dt) / 2", 0], with: {w: "=w * 0.72", d: "=dt", z0: "=(ht if tiers == 2 else h2) - 0.65", z1: "=(ht if tiers == 2 else h2) - 0.32"}}
+  - when: "=tiers == 3"
+    parts:
+      - {use: disc-roof, name: disc2, at: [0, "=(d - dt) / 2", 0], with: {w: "=w * 0.72", d: "=dt", z: "=h2", over: 0.24, t: 0.22}}
+      - {use: oval, name: t3, at: [0, "=(d - dt * 0.75) / 2", 0], with: {w: "=w * 0.48", d: "=dt * 0.75", z0: "=h2 + 0.2", z1: "=ht", mat: ga-wall}}
+      - {use: window-band, name: b3, at: [0, "=(d - dt * 0.75) / 2", 0], with: {w: "=w * 0.48", d: "=dt * 0.75", z0: "=ht - 0.6", z1: "=ht - 0.3"}}
+  - pick:
+      - set: {tw: "=w * (0.48 if tiers == 3 else 0.72)", td: "=dt * (0.75 if tiers == 3 else 1.0)"}
+        parts:
+          - when: "=top == 'dome'"
+            parts:
+              - {use: oval, name: tlid, at: [0, "=(d - td) / 2 - 0.08", 0], with: {w: "=tw + 0.16", d: "=td + 0.16", z0: "=ht - 0.04", z1: "=ht + 0.22", mat: ga-gold}}
+              - {use: cupola, name: tdome, at: [0, "=d / 2", "=ht + 0.2"], with: {rx: "=tw * 0.42", ry: "=dt * 0.4", rz: 0.6, mat: ga-gold}}
+          - when: "=top == 'spire'"
+            parts:
+              - {use: oval, name: tlid, at: [0, "=(d - td) / 2 - 0.08", 0], with: {w: "=tw + 0.16", d: "=td + 0.16", z0: "=ht - 0.04", z1: "=ht + 0.22", mat: ga-gold}}
+              - {use: oval, name: tspire, at: [0, "=(d - td) / 2", 0], with: {w: "=tw * 0.8", d: "=td * 0.8", z0: "=ht + 0.2", z1: "=ht + 1.3", top: 0.1, mat: ga-wall}}
+          - when: "=top == 'saucer'"
+            parts:
+              - {use: saucer, name: tsaucer, at: [0, "=(d - td) / 2", 0], with: {w: "=tw", d: "=td", wc: "=tw * 1.45", dc: "=td * 1.4", z: "=ht", t0: 0.35, t1: 0.22, lid: ga-gold}}
+  - {use: door-cc, name: door, at: ["=door_x or 0", 0, 0], with: {w: 0.9, h: 1.05, trim: ga-gold}}
+  - when: "=porch == 'columns'"
+    parts:
+      - {use: ga-column, name: c-w, at: ["=(door_x or 0) - 0.75", -0.03, 0], with: {h: 1.4}}
+      - {use: ga-column, name: c-e, at: ["=(door_x or 0) + 0.75", -0.03, 0], with: {h: 1.4}}
+      - {name: lintel, mat: ga-gold, box: {c: ["=door_x or 0", 0.05, 1.5], half: [0.98, 0.14, 0.12], radius: 0.03}}
+    else:
+      - {use: canopy, name: canopy, at: ["=door_x or 0", 0, 0], with: {w: 1.8, d: 0.4, z: 1.22, mat: ga-gold}}

@@ -1,0 +1,102 @@
+# A Grand Arena facility hall: Lando's resort in gold-and-white Cloud City style. A long white oval
+# hall under a broad disc roof with a gold rim, a stepped roof or a gold lid; its front a gold-column
+# portico, a glazed arcade or a band of windows; on the bigger lots a feature rising from it: a round
+# rotunda under a gold dome, twin end towers, or a broad gold dome. Steps up to the door.
+name: resort-hall
+style: grand-arena
+about: White oval hall; disc, stepped or gold roof; portico, arcade or windows; rotunda, twin towers or gold dome.
+width: [6, 7, 9, 11]
+choose:
+  Hc: "=H if H else 4"
+  av: "=Hc - 0.32"
+  w: ["=w_max * 0.9", "=w_max * 0.97"]
+  front: {pick: "=['portico', 'arcade', 'plain'] if Hc >= 4 else ['arcade', 'plain', 'columns']"}
+  feat: {pick: "=['rotunda', 'twin', 'dome', 'none'] if Hc >= 4 else ['none', 'lantern', 'lantern']"}
+  roof: {pick: [disc, step, gold], weights: [3, 2, 2]}
+  yb: "=0.6 if front == 'portico' else 0.0"
+  d: ["=max(0.95, (av - yb) * (0.28 if yb else 0.34))", "=max(1.0, (av - yb) * (0.34 if yb else 0.42))"]
+  over: "=0.22 if roof == 'disc' else 0.08"
+  rt: "=0.24 if roof != 'step' else 0.42"
+  hfull: "=av - yb - d - over - rt"
+  hb: "=hfull if feat in ('none', 'lantern') else max(1.2, min(hfull, hfull * 0.62))"
+  fx: "=max(-w / 2 + 1.6, min(w / 2 - 1.6, door_x or 0))"
+  wr: "=min(w * 0.34, 3.4) if feat == 'rotunda' else 1.4"
+  dr: "=d * 0.82"
+  yr: "=yb + (d - dr) / 2"
+  hr: "=av - (yr + dr / 2) - 0.22 - sqrt((dr * 0.42) ** 2 + 0.45 ** 2) if feat == 'rotunda' else av - (yr + dr / 2) - 0.2 - sqrt((dr * 0.4) ** 2 + 0.4 ** 2)"
+  ph: "=max(1.1, min(hb - 0.3, 1.35))"
+  bh: [0.3, 0.38]
+parts:
+  - {use: oval, name: body, at: [0, "=yb", 0], with: {w: "=w", d: "=d", z0: 0, z1: "=hb", mat: ga-wall}}
+  # the roof
+  - when: "=roof == 'disc'"
+    parts:
+      - {use: disc-roof, name: roof, at: [0, "=yb", 0], with: {w: "=w - 0.44", d: "=d", z: "=hb", over: "=over", t: "=rt"}}
+  - when: "=roof == 'step'"
+    parts:
+      - {use: oval, name: lid, at: [0, "=yb - 0.08", 0], with: {w: "=w + 0.16", d: "=d + 0.16", z0: "=hb - 0.04", z1: "=hb + 0.2", mat: ga-gold}}
+      - {use: oval, name: lid2, at: [0, "=yb + d * 0.12", 0], with: {w: "=w * 0.8", d: "=d * 0.76", z0: "=hb + 0.18", z1: "=hb + rt", mat: ga-wall, top: 0.92}}
+  - when: "=roof == 'gold'"
+    parts:
+      - {use: oval, name: lid, at: [0, "=yb - 0.08", 0], with: {w: "=w + 0.16", d: "=d + 0.16", z0: "=hb - 0.04", z1: "=hb + rt", mat: ga-gold, top: 0.94}}
+  # the front
+  - when: "=front == 'plain'"
+    parts:
+      - pick:
+          - set: {bz: "=max(0.6, hb - 0.26 - bh)"}
+            parts:
+              - {use: window-band, name: band, at: [0, "=yb", 0], with: {w: "=w", d: "=d", z0: "=bz", z1: "=bz + bh"}}
+              - repeat: "=max(4, round(w / 0.8))"
+                parts:
+                  - {use: oval-pier, name: "=f'pier{i}'", at: [0, "=yb", 0], with: {x: "=(i - (n - 1) / 2) * (w * 0.88 / n)", wk: "=w", dk: "=d", z0: "=bz - 0.03", z1: "=bz + bh + 0.03", mat: ga-gold}}
+  - when: "=front in ('arcade', 'columns')"
+    parts:
+      - {use: window-band, name: arcade, at: [0, "=yb", 0], with: {w: "=w * 0.98", d: "=d * 0.98", z0: 0.12, z1: "=hb - 0.26", glass: ga-glass}}
+      - repeat: "=max(4, round(w / (0.85 if front == 'arcade' else 1.2)))"
+        parts:
+          - {use: oval-pier, name: "=f'pier{i}'", at: [0, "=yb", 0], with: {x: "=(i - (n - 1) / 2) * (w * 0.9 / n)", wk: "=w * 0.98", dk: "=d * 0.98", z0: 0.1, z1: "=hb - 0.24", mat: "=('ga-gold' if front == 'arcade' else 'ga-wall')", pw: "=0.3 if front == 'arcade' else 0.5"}}
+  - when: "=front == 'portico'"
+    parts:
+      - repeat: "=max(4, round(w / 1.05))"
+        parts:
+          - when: "=abs((i - (n - 1) / 2) * ((w - 0.7) / (n - 1)) - (door_x or 0)) > 0.65"
+            parts:
+              - {use: ga-column, name: "=f'col{i}'", at: ["=(i - (n - 1) / 2) * ((w - 0.7) / (n - 1))", 0.12, 0], with: {h: "=ph"}}
+      - {name: entab, mat: ga-wall, box: {c: [0, "=yb / 2 + 0.05", "=ph + 0.12"], half: ["=w / 2 - 0.12", "=yb / 2 + 0.07", 0.14], radius: 0.03}}
+      - {name: entab-rim, mat: ga-gold, box: {c: [0, -0.02, "=ph + 0.12"], half: ["=w / 2 - 0.1", 0.06, 0.15], radius: 0.02}}
+      - when: "=hb - ph > 0.75"
+        parts:
+          - {use: window-band, name: band, at: [0, "=yb", 0], with: {w: "=w", d: "=d", z0: "=ph + 0.36", z1: "=min(hb - 0.12, ph + 0.68)"}}
+  # the feature above the roof
+  - when: "=feat == 'rotunda'"
+    parts:
+      - {use: oval, name: rotunda, at: ["=fx", "=yr", 0], with: {w: "=wr", d: "=dr", z0: "=hb", z1: "=hr", mat: ga-wall}}
+      - {use: window-band, name: rband, at: ["=fx", "=yr", 0], with: {w: "=wr", d: "=dr", z0: "=hr - 0.62", z1: "=hr - 0.3"}}
+      - repeat: "=max(3, round(wr / 0.7))"
+        parts:
+          - {use: oval-pier, name: "=f'rpier{i}'", at: ["=fx", "=yr", 0], with: {x: "=(i - (n - 1) / 2) * (wr * 0.84 / n)", wk: "=wr", dk: "=dr", z0: "=hr - 0.65", z1: "=hr - 0.27", mat: ga-gold}}
+      - {use: disc-roof, name: rroof, at: ["=fx", "=yr", 0], with: {w: "=wr", d: "=dr", z: "=hr", over: 0.14, t: 0.22}}
+      - {use: cupola, name: rdome, at: ["=fx", "=yr + dr / 2", "=hr + 0.2"], with: {rx: "=wr * 0.36", ry: "=dr * 0.42", rz: 0.45, mat: ga-gold}}
+  - when: "=feat == 'twin'"
+    parts:
+      - repeat: 2
+        parts:
+          - {use: oval, name: "=f'tw{i}'", at: ["=(w / 2 - 0.85) * (2 * i - 1)", "=yr", 0], with: {w: 1.4, d: "=dr", z0: 0, z1: "=hr"}}
+          - {use: window-band, name: "=f'twb{i}'", at: ["=(w / 2 - 0.85) * (2 * i - 1)", "=yr", 0], with: {w: 1.4, d: "=dr", z0: "=hr - 0.6", z1: "=hr - 0.3"}}
+          - {use: oval, name: "=f'twl{i}'", at: ["=(w / 2 - 0.85) * (2 * i - 1)", "=yr - 0.08", 0], with: {w: 1.56, d: "=dr + 0.16", z0: "=hr - 0.04", z1: "=hr + 0.2", mat: ga-gold}}
+          - {use: cupola, name: "=f'twd{i}'", at: ["=(w / 2 - 0.85) * (2 * i - 1)", "=yr + dr / 2", "=hr + 0.18"], with: {rx: 0.5, ry: "=dr * 0.4", rz: 0.4, mat: ga-gold}}
+  - when: "=feat == 'dome'"
+    parts:
+      - {use: cupola, name: dome, at: ["=fx", "=yb + d / 2", "=hb + rt - 0.05"], with: {rx: "=min(w * 0.3, 2.6)", ry: "=d * 0.42", rz: "=min(0.9, av - yb - d / 2 - hb - rt - d * 0.42 - 0.05)", mat: ga-gold}}
+  - when: "=feat == 'lantern'"
+    parts:
+      - {use: cupola, name: lantern, at: ["=-(door_x or 0) * 0.5", "=yb + d / 2", "=hb + rt - 0.04"], with: {rx: 0.42, ry: "=min(0.3, d * 0.3)", rz: 0.3, mat: ga-gold}}
+  # the door
+  - {use: door-cc, name: door, at: ["=door_x or 0", "=yb", 0], with: {w: 0.9, h: "=min(1.0, hb - 0.3)", trim: ga-gold}}
+  - when: "=front == 'columns'"
+    parts:
+      - {use: ga-column, name: dcol-w, at: ["=(door_x or 0) - 0.72", -0.02, 0], with: {h: "=min(1.25, hb - 0.1)"}}
+      - {use: ga-column, name: dcol-e, at: ["=(door_x or 0) + 0.72", -0.02, 0], with: {h: "=min(1.25, hb - 0.1)"}}
+  - when: "=yb > 0.3"
+    parts:
+      - {use: ga-steps, name: steps, at: ["=door_x or 0", "=yb - 0.42", 0], with: {w: 1.3}}

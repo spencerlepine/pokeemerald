@@ -1,0 +1,47 @@
+# A small Grand Arena lounge or kiosk: a white oval pod under a broad mushroom disc roof with a gold
+# rim (the Cloud City saucer), a gold dome, a stepped crown or a low cone, sometimes gold columns at the
+# door or a ring of windows. Lando's resort cabanas.
+name: pavilion
+style: grand-arena
+about: White oval pod; mushroom disc, gold dome, stepped crown or cone roof; columns or windows.
+width: [3, 4, 5]
+choose:
+  Hc: "=H if H else 3"
+  av: "=Hc - 0.3"
+  roof: {pick: [mushroom, dome, crown, cone], weights: [3, 2, 2, 2]}
+  w: "=w_max * (0.7 if roof == 'mushroom' else 0.92)"
+  d: ["=min(1.2, av * 0.38)", "=min(1.4, av * 0.44)"]
+  over: "=min((w_max - w) / 2, 0.42) if roof == 'mushroom' else 0.07"
+  rx: "=d * 0.42"
+  extra: "=over + 0.26 if roof == 'mushroom' else (0.2 - d / 2 + sqrt(rx ** 2 + 0.36) if roof == 'dome' else (0.2 + max(0.18, 0.38 - d * 0.2) if roof == 'crown' else max(0.2, 0.75 - d / 2)))"
+  hb: "=av - d - extra"
+  look: {pick: [columns, band, plain], weights: [2, 2, 1]}
+  dx: "=door_x or 0"
+parts:
+  - {use: oval, name: body, with: {w: "=w", d: "=d", z0: 0, z1: "=hb", mat: ga-wall}}
+  - when: "=look == 'band'"
+    parts:
+      - {use: window-band, name: band, with: {w: "=w", d: "=d", z0: "=hb - 0.62", z1: "=hb - 0.3"}}
+      - repeat: "=max(3, round(w / 0.7))"
+        parts:
+          - {use: oval-pier, name: "=f'pier{i}'", with: {x: "=(i - (n - 1) / 2) * (w * 0.86 / n)", wk: "=w", dk: "=d", z0: "=hb - 0.65", z1: "=hb - 0.27", mat: ga-gold}}
+  - when: "=roof == 'mushroom'"
+    parts:
+      - {use: disc-roof, name: roof, with: {w: "=w", d: "=d", z: "=hb", over: "=over", t: 0.26}}
+  - when: "=roof == 'dome'"
+    parts:
+      - {use: oval, name: lid, at: [0, -0.07, 0], with: {w: "=w + 0.14", d: "=d + 0.14", z0: "=hb - 0.04", z1: "=hb + 0.2", mat: ga-gold}}
+      - {use: cupola, name: dome, at: [0, "=d / 2", "=hb + 0.18"], with: {rx: "=w * 0.4", ry: "=rx", rz: 0.6, mat: ga-gold}}
+  - when: "=roof == 'crown'"
+    parts:
+      - {use: oval, name: lid, at: [0, -0.07, 0], with: {w: "=w + 0.14", d: "=d + 0.14", z0: "=hb - 0.04", z1: "=hb + 0.2", mat: ga-gold}}
+      - {use: oval, name: crown, at: [0, "=d * 0.15", 0], with: {w: "=w * 0.62", d: "=d * 0.7", z0: "=hb + 0.18", z1: "=hb + 0.2 + max(0.18, 0.38 - d * 0.2)", mat: ga-wall, top: 0.9}}
+  - when: "=roof == 'cone'"
+    parts:
+      - {use: oval, name: lid, at: [0, -0.07, 0], with: {w: "=w + 0.14", d: "=d + 0.14", z0: "=hb - 0.04", z1: "=hb + 0.12", mat: ga-gold}}
+      - {use: oval, name: cone, with: {w: "=w", d: "=d", z0: "=hb + 0.1", z1: "=hb + max(0.2, 0.75 - d / 2)", top: 0.2, mat: ga-wall}}
+  - {use: door-cc, name: door, at: ["=dx", 0, 0], with: {w: 0.85, h: "=min(0.95, hb - 0.2)", trim: ga-gold}}
+  - when: "=look == 'columns'"
+    parts:
+      - {use: ga-column, name: col-w, at: ["=max(-w / 2 + 0.25, dx - 0.68)", -0.04, 0], with: {h: "=hb - 0.02"}}
+      - {use: ga-column, name: col-e, at: ["=min(w / 2 - 0.25, dx + 0.68)", -0.04, 0], with: {h: "=hb - 0.02"}}

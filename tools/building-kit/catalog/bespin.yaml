@@ -8,9 +8,9 @@ buildings:
   art: art:bespin:landing-platform
   size: [5, 5]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: bespin/landing-pad
+  seed: 101
+  about: 'The platform the Falcon set down on: a round deck on a pylon over the clouds, a cloud car parked.'
 - id: bld:bespin:cloud-city-galleria-department-store
   kind: shop
   name: Galleria (department store)
@@ -18,9 +18,9 @@ buildings:
   art: art:bespin:department-store
   size: [8, 6]
   door: 4
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: bespin/cc-hall
+  seed: 100
+  about: Cloud City's long white shopping hall with a round domed atrium over the doors.
 - id: bld:bespin:cloud-city-museum
   kind: landmark
   name: Museum
@@ -28,9 +28,9 @@ buildings:
   art: art:bespin:cloud-city-tower
   size: [5, 6]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: bespin/cloud-tower
+  seed: 148
+  about: A stepped white tower with stepped rings on top and low wings, like the city's civic halls.
 - id: bld:bespin:cloud-city-bacta-center
   kind: bacta
   name: Bacta Center
@@ -38,9 +38,9 @@ buildings:
   art: art:shared:bacta-center
   size: [5, 4]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: bespin/cc-hall
+  seed: 188
+  about: A low white Cloud City hall with a flared saucer edge and a glazed front.
 - id: bld:bespin:cloud-city-under-levels-lift-hutt-hideout
   kind: landmark
   name: Under-levels lift (Hutt Hideout)
@@ -48,9 +48,9 @@ buildings:
   art: art:bespin:cloud-city-tower
   size: [5, 6]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: bespin/cloud-tower
+  seed: 1196
+  about: A plain service tower with a lift shaft beside it, going down to the under-levels.
 - id: bld:bespin:cloud-city-cloud-car-pilot-s-flat
   kind: landmark
   name: Cloud car pilot's flat
@@ -58,9 +58,9 @@ buildings:
   art: art:bespin:cloud-city-tower
   size: [5, 6]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: bespin/cloud-tower
+  seed: 399
+  about: A tapering flat tower under a saucer top, one curved wing (the Wing Guard's quarters).
 - id: bld:bespin:cloud-city-tibanna-trader-s-flat
   kind: shop
   name: Tibanna trader's flat
@@ -68,9 +68,9 @@ buildings:
   art: art:bespin:cloud-city-tower
   size: [5, 6]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: bespin/cloud-tower
+  seed: 183
+  about: A round tower ribbed up the front, under a sunset-glass dome.
 - id: bld:bespin:cloud-city-sky-motel
   kind: landmark
   name: Sky motel
@@ -78,9 +78,9 @@ buildings:
   art: art:bespin:cloud-city-tower
   size: [5, 6]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: bespin/cloud-tower
+  seed: 382
+  about: A many-windowed stacked tower with wings, rows of rooms under a saucer.
 - id: bld:bespin:cloud-city-move-deleter-s-flat
   kind: landmark
   name: Move deleter's flat
@@ -88,9 +88,9 @@ buildings:
   art: art:bespin:cloud-city-tower
   size: [5, 6]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: bespin/cloud-tower
+  seed: 539
+  about: A narrow tower flaring out to an oval spire, Cloud City's mushroom shape.
 - id: bld:bespin:cloud-city-companion-fan-club
   kind: landmark
   name: Companion fan club
@@ -98,9 +98,9 @@ buildings:
   art: art:bespin:cloud-city-tower
   size: [5, 6]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: bespin/cloud-tower
+  seed: 593
+  about: A flared tower under a big glass dome, two low wings, an entry block.
 - id: bld:bespin:cloud-city-lando-s-flat
   kind: landmark
   name: Lando's flat
@@ -108,9 +108,9 @@ buildings:
   art: art:bespin:cloud-city-tower
   size: [5, 6]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: bespin/cloud-tower
+  seed: 1235
+  about: 'The Baron Administrator''s tower: flared, ribbed, a saucer and glass cupola on top.'
 - id: bld:bespin:cloud-city-ugnaught-family-flat
   kind: landmark
   name: Ugnaught family flat
@@ -118,9 +118,9 @@ buildings:
   art: art:bespin:cloud-city-tower
   size: [5, 6]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: bespin/cloud-tower
+  seed: 292
+  about: A modest tapering tower with stepped rings and a side wing.
 - id: bld:bespin:tibanna-refinery-gas-refinery
   kind: landmark
   name: Gas refinery
@@ -128,9 +128,9 @@ buildings:
   art: art:bespin:cloud-city-tower
   size: [5, 6]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: bespin/works
+  seed: 108
+  about: 'The Tibanna gas works: a bare-metal block, two exhaust stacks, a tank and a pipe run.'
 - id: bld:bespin:tibanna-refinery-carbon-freezing-annex
   kind: landmark
   name: Carbon-freezing annex
@@ -138,6 +138,76 @@ buildings:
   art: art:bespin:cloud-city-tower
   size: [5, 6]
   door: 2
-  blueprint: ''
-  seed: 0
-  about: ''
+  blueprint: bespin/works
+  seed: 112
+  about: 'The carbon-freezing annex: an eight-sided block under a cone hood and vent.'
+- id: bld:bespin:fill-ugnaught-workshop
+  kind: fill
+  name: Ugnaught workshop
+  areas: []
+  art: ''
+  size: [5, 4]
+  door: 2
+  blueprint: bespin/works
+  seed: 107
+  about: 'An Ugnaught shed from the city''s works: a vaulted metal block, a lying tank and crates.'
+- id: bld:bespin:fill-ugnaught-smelter
+  kind: fill
+  name: Ugnaught smelter
+  areas: []
+  art: ''
+  size: [4, 4]
+  door: 1
+  blueprint: bespin/works
+  seed: 129
+  about: A flat-roofed Ugnaught furnace shed with a vent and crates.
+- id: bld:bespin:fill-tibanna-tanks
+  kind: fill
+  name: Tibanna tank block
+  areas: []
+  art: ''
+  size: [5, 4]
+  door: null
+  blueprint: bespin/works
+  seed: 113
+  about: Standing Tibanna gas tanks on a plinth, joined by a pipe.
+- id: bld:bespin:fill-tibanna-tanks-small
+  kind: fill
+  name: Tibanna tank pair
+  areas: []
+  art: ''
+  size: [4, 4]
+  door: null
+  blueprint: bespin/works
+  seed: 102
+  about: Two Tibanna tanks on a plinth.
+- id: bld:bespin:fill-cloud-car-garage
+  kind: fill
+  name: Cloud car garage
+  areas: []
+  art: ''
+  size: [5, 4]
+  door: 2
+  blueprint: bespin/garage
+  seed: 116
+  about: A white vaulted hangar with a cloud car parked out front.
+- id: bld:bespin:fill-cloud-car-bay
+  kind: fill
+  name: Cloud car bay
+  areas: []
+  art: ''
+  size: [6, 4]
+  door: 3
+  blueprint: bespin/garage
+  seed: 114
+  about: A round-shelled cloud car bay, a car parked beside it.
+- id: bld:bespin:fill-depot
+  kind: depot
+  name: Supply depot
+  areas: []
+  art: ''
+  size: [4, 4]
+  door: 1
+  blueprint: bespin/cc-hall
+  seed: 115
+  about: A small white Cloud City store under a saucer edge.

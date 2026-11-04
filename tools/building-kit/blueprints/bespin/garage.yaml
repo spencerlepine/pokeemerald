@@ -1,0 +1,35 @@
+# A cloud-car garage on a Cloud City platform (The Empire Strikes Back): a low white half-shell hangar
+# with a wide dark mouth facing south, a cloud car parked beside it, or a fuel tank and crates.
+name: garage
+style: bespin
+about: Low white vaulted or oval hangar with a wide dark mouth; a cloud car parked beside it, or fuel and crates.
+width: [4, 5, 6]
+choose:
+  Hc: "=H if H else 4"
+  car: {pick: [beside, none], weights: [3, 2]}
+  side: {pick: [-1, 1]}
+  w: "=(w_max - 1.45 if car == 'beside' else w_max * 0.92) if W >= 5 else w_max * 0.92"
+  hx: "=(-side * (w_max - w) / 2) if (car == 'beside' and W >= 5) else 0"
+  d: ["=min(2.2, Hc * 0.46)", "=min(2.6, Hc * 0.55)"]
+  vr: "=min(w * 0.42, Hc - 0.4 - d, 1.6)"
+  shell: {pick: [vault, oval], weights: [3, 2]}
+  mx: "=door_x if door_x is not None else hx"
+  mw: "=min(w * 0.3, 1.0)"
+  mh: "=min(vr * 0.68, 1.0)"
+parts:
+  - when: "=shell == 'vault'"
+    parts:
+      - {name: shell, mat: cc-wall, at: ["=hx", 0, 0], extrude: {axis: y, profile: [["=-w / 2", 0], ["=w / 2", 0], ["=w * 0.46", "=vr * 0.5"], ["=w * 0.34", "=vr * 0.85"], ["=w * 0.14", "=vr"], ["=-w * 0.14", "=vr"], ["=-w * 0.34", "=vr * 0.85"], ["=-w * 0.46", "=vr * 0.5"]], span: [0.1, "=d"], round: 0.04}}
+      - {name: rib, mat: cc-trim, at: ["=hx", 0, 0], extrude: {axis: y, profile: [["=-w / 2 - 0.06", 0], ["=w / 2 + 0.06", 0], ["=w * 0.46 + 0.06", "=vr * 0.5 + 0.03"], ["=w * 0.34 + 0.05", "=vr * 0.85 + 0.06"], ["=w * 0.14", "=vr + 0.08"], ["=-w * 0.14", "=vr + 0.08"], ["=-w * 0.34 - 0.05", "=vr * 0.85 + 0.06"], ["=-w * 0.46 - 0.06", "=vr * 0.5 + 0.03"]], span: [-0.02, 0.3], round: 0.04}}
+    else:
+      - {use: oval, name: shell, at: ["=hx", 0, 0], with: {w: "=w", d: "=d", z0: 0, z1: "=vr * 0.8", top: 0.84}}
+      - {use: oval, name: lid, at: ["=hx", "=d * 0.08", 0], with: {w: "=w * 0.84", d: "=d * 0.84", z0: "=vr * 0.8", z1: "=vr * 0.8 + 0.2", mat: cc-trim}}
+  # the mouth: wide and dark, the `door` the player walks into
+  - {name: door, at: ["=mx", 0, 0], mat: cc-glass, box: {c: [0, -0.06, "=mh / 2"], half: ["=mw", 0.1, "=mh / 2"], radius: 0.06}}
+  - {name: lintel, at: ["=mx", 0, 0], mat: cc-trim, box: {c: [0, -0.08, "=mh + 0.12"], half: ["=mw + 0.12", 0.1, 0.13], radius: 0.03}}
+  - when: "=car == 'beside' and W >= 5"
+    parts:
+      - {use: cloud-car, name: car, at: ["=side * (w_max / 2 - 0.62)", 0.75, 0], with: {s: 0.95}}
+    else:
+      - {use: tank-lying, name: fuel, at: ["=hx + side * (w / 2 - 0.65)", "=d + 0.3", "=vr * 0.5 - 0.1"], with: {l: 1.0, r: 0.28}}
+      - {use: crate, name: crate, at: ["=hx - side * (w / 2 - 0.4)", 0.25, 0], with: {s: 0.5, mat: cc-trim}}

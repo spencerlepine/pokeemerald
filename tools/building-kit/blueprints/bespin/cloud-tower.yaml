@@ -133,9 +133,9 @@ parts:
       - {use: oval, name: base, at: [0, -0.16, 0], with: {w: "=min(w_max - 0.1, w + 0.5)", d: "=d + 0.32", z0: 0, z1: 0.3, mat: cc-trim}}
   - when: "=door == 'porch'"
     parts:
-      - {use: oval, name: porch, at: ["=door_x or 0", -0.45, 0], with: {w: 1.5, d: 1.0, z0: 0, z1: 1.3, mat: cc-wall}}
-      - {use: oval, name: porch-lid, at: ["=door_x or 0", -0.5, 0], with: {w: 1.62, d: 1.1, z0: 1.3, z1: 1.48, mat: cc-trim}}
-      - {use: door-cc, name: door, at: ["=door_x or 0", -0.45, 0], with: {w: 0.85, h: 0.95}}
+      - {use: oval, name: porch, at: ["=door_x or 0", -0.05, 0], with: {w: 1.5, d: 0.75, z0: 0, z1: 1.3, mat: cc-wall}}
+      - {use: oval, name: porch-lid, at: ["=door_x or 0", -0.11, 0], with: {w: 1.62, d: 0.87, z0: 1.3, z1: 1.48, mat: cc-trim}}
+      - {use: door-cc, name: door, at: ["=door_x or 0", -0.05, 0], with: {w: 0.85, h: 0.95}}
   - when: "=door == 'canopy'"
     parts:
       - {use: door-cc, name: door, at: ["=door_x or 0", "=-0.16 if base else 0", 0], with: {w: 0.9, h: 1.0}}
