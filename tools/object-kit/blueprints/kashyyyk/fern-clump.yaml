@@ -1,0 +1,24 @@
+# Large Kashyyyk fern bush (wiki art:kashyyyk:fern-clump): replaces small trees and cuttable bushes. Broad
+# fronds fanning up and out of a dense heart (a back row high, a front row low), so it reads as a bush.
+name: fern-clump
+style: kashyyyk
+role: noise
+about: Big fern bush; broad fronds fanning up and out of a dense heart.
+footprint: [[1, 1], [2, 1]]
+choose:
+  n: {int: [5, 7]}
+  L: ["=w_max * 0.46", "=w_max * 0.52"]
+  rise: [0.75, 1.0]
+  yc: "=D * 0.55"
+parts:
+  - {name: heart, mat: leaf, ellipsoid: {c: [0, "=yc", 0.2], r: ["=w_max * 0.2", 0.2, 0.22]}}
+  - repeat: "=n"
+    parts:
+      - name: back
+        mat: leaf
+        cone: {a: [0, "=yc", 0.15], b: ["=L * cos(pi * (i + 0.5) / n)", "=yc + 0.1", "=0.25 + rise * sin(pi * (i + 0.5) / n)"], r1: 0.15, r2: 0.05}
+  - repeat: "=n - 2"
+    parts:
+      - name: front
+        mat: leaf
+        cone: {a: [0, "=yc", 0.12], b: ["=L * 0.85 * cos(pi * (i + 0.5) / (n - 2))", "=yc - 0.3", "=0.15 + rise * 0.45 * sin(pi * (i + 0.5) / (n - 2))"], r1: 0.14, r2: 0.05}

@@ -1,0 +1,31 @@
+# Every small object ilum needs. `art` is its world_art.csv row (empty = new, not in the wiki yet);
+# `blueprint` is the family that draws it (empty = still to design).
+planet: ILUM
+objects:
+- id: obj:ilum:snow-pine
+  name: Snow pine
+  role: edge
+  footprint:
+  - 1
+  - 1
+  art: art:ilum:snow-pine
+  blueprint: ilum/snow-pine
+  about: Snow-laden conifer; the route wall.
+- id: obj:ilum:kyber-outcrop
+  name: Kyber outcrop
+  role: noise
+  footprint:
+  - 1
+  - 1
+  art: art:ilum:kyber-crystal-outcrop
+  blueprint: ilum/kyber-outcrop
+  about: Crystals fanning out of rock.
+- id: obj:ilum:ice-pillar
+  name: Ice pillar
+  role: edge
+  footprint:
+  - 1
+  - 1
+  art: ''
+  blueprint: ''
+  about: Smooth blue ice column in the caves.

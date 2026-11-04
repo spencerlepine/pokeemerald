@@ -1,0 +1,20 @@
+# Hoth ice spikes (wiki art:hoth:ice-stalagmites): blue ice blades leaning out of a snow mound; a route edge
+# in the tundra and the ice caves.
+name: ice-spikes
+style: hoth
+role: edge
+about: Ice blades leaning out of a snow mound; a few tall ones or many short ones.
+footprint: [[1, 1], [2, 1], [2, 2]]
+fill: true
+choose:
+  n: {int: ["=W + 1", "=2 * W + 1"]}
+  h: ["=0.9 + 0.3 * D", "=1.4 + 0.4 * D"]
+parts:
+  - {name: mound, mat: light, ellipsoid: {c: [0, "=D * 0.5", 0], r: ["=w_max * 0.46", "=D * 0.42", 0.16]}}
+  - repeat: "=n"
+    parts:
+      - spike: {c: ["=w_max * (-0.36 + 0.72 * ((i * 0.618 + seed * 0.37) % 1))", "=D * (0.35 + 0.35 * ((i * 0.41 + seed * 0.13) % 1))", 0.05],
+                r: "=0.2 + 0.1 * ((i * 0.77) % 1)", h: "=h * (0.45 + 0.55 * ((i * 0.53 + seed * 0.29) % 1))",
+                lean: ["=0.35 * (((i * 0.618 + seed * 0.37) % 1) - 0.5)", 0], sides: 4, ry: 0.7}
+        mat: ice
+        name: spike

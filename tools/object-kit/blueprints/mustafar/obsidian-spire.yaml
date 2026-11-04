@@ -1,0 +1,27 @@
+# Mustafar's obsidian spires (wiki art:mustafar:obsidian-spire): black glassy rock, sharp and faceted, the
+# planet's route edge. One leaning blade, a pair, or a broken stump with shards.
+name: obsidian-spire
+style: mustafar
+role: edge
+about: Black glassy spire; a leaning blade, a pair of blades, or a broken stump with shards.
+footprint: [[2, 1], [2, 2], [1, 1]]
+fill: true
+materials:
+  glass: {ramp: dark, bands: [0.0, 0.35, 0.7]}
+choose:
+  kind: {pick: [blade, pair, stump], weights: "=[3, 3, 2] if W > 1 else [3, 0, 2]"}
+  h: ["=1.6 + 0.3 * D", "=2.4 + 0.4 * D"]
+  lean: [-0.35, 0.35]
+parts:
+  - {rock: {c: [0, "=D * 0.5", 0], r: ["=w_max * 0.5", "=D * 0.44", 0.3], n: 8, jitter: 0.15}, mat: rock, name: base}
+  - when: "=kind == 'blade'"
+    parts:
+      - {spike: {c: [0, "=D * 0.5", 0.1], r: "=w_max * 0.36", h: "=h", lean: ["=lean", 0], sides: 5, ry: "=min(1, D * 0.8)"}, mat: glass, name: blade}
+  - when: "=kind == 'pair'"
+    parts:
+      - {spike: {c: ["=-w_max * 0.2", "=D * 0.55", 0.1], r: "=w_max * 0.24", h: "=h", lean: ["=-abs(lean) - 0.1", 0], sides: 5, ry: 0.8}, mat: glass, name: west}
+      - {spike: {c: ["=w_max * 0.22", "=D * 0.42", 0.1], r: "=w_max * 0.2", h: "=h * 0.65", lean: ["=abs(lean) + 0.1", 0], sides: 5, ry: 0.8}, mat: glass, name: east}
+  - when: "=kind == 'stump'"
+    parts:
+      - {spike: {c: [0, "=D * 0.5", 0.1], r: "=w_max * 0.36", h: "=h * 0.55", lean: ["=lean * 0.4", 0], sides: 6, top: "=w_max * 0.16", ry: "=min(1, D * 0.8)"}, mat: glass, name: stump}
+      - {spike: {c: ["=w_max * 0.36", "=D * 0.25", 0], r: 0.12, h: 0.45, lean: [0.2, 0], sides: 4}, mat: glass, name: shard}

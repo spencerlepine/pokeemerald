@@ -1,0 +1,40 @@
+# Every small object hoth needs. `art` is its world_art.csv row (empty = new, not in the wiki yet);
+# `blueprint` is the family that draws it (empty = still to design).
+planet: HOTH
+objects:
+- id: obj:hoth:ice-spikes
+  name: Ice spikes
+  role: edge
+  footprint:
+  - 2
+  - 1
+  art: art:hoth:ice-stalagmites
+  blueprint: hoth/ice-spikes
+  about: Ice blades out of a snow mound.
+- id: obj:hoth:snow-boulder
+  name: Snow-capped boulder
+  role: edge
+  footprint:
+  - 2
+  - 1
+  art: ''
+  blueprint: ''
+  about: Grey rock under a snow cap; the tundra blocker.
+- id: obj:hoth:snow-drift
+  name: Snow drift
+  role: edge
+  footprint:
+  - 2
+  - 1
+  art: ''
+  blueprint: ''
+  about: Wind-carved drift with an overhanging lip.
+- id: obj:hoth:survey-beacon
+  name: Survey beacon
+  role: noise
+  footprint:
+  - 1
+  - 1
+  art: ''
+  blueprint: ''
+  about: Rebel survey pole with a light; marks the safe path.

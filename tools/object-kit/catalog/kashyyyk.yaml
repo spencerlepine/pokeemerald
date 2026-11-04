@@ -1,0 +1,76 @@
+# Every small object kashyyyk needs. `art` is its world_art.csv row (empty = new, not in the wiki yet);
+# `blueprint` is the family that draws it (empty = still to design).
+planet: KASHYYYK
+objects:
+- id: obj:kashyyyk:wroshyr-trunk
+  name: Wroshyr trunk
+  role: edge
+  footprint:
+  - 3
+  - 2
+  art: art:kashyyyk:wroshyr-tree
+  blueprint: kashyyyk/wroshyr-trunk
+  about: Giant trunk as the route wall, cut off at the top (the canopy is the top layer).
+- id: obj:kashyyyk:fern-clump
+  name: Fern clump
+  role: noise
+  footprint:
+  - 1
+  - 1
+  art: art:kashyyyk:fern-clump
+  blueprint: kashyyyk/fern-clump
+  about: Big fern bush; replaces small trees and cuttable bushes.
+- id: obj:kashyyyk:root-arch
+  name: Root arch
+  role: edge
+  footprint:
+  - 3
+  - 2
+  art: art:kashyyyk:root-arch
+  blueprint: ''
+  about: Roots arching over a path; walk under (top layer).
+- id: obj:kashyyyk:beach-rocks
+  name: Beach rocks
+  role: edge
+  footprint:
+  - 1
+  - 1
+  art: art:kashyyyk:beach-rocks
+  blueprint: ''
+  about: Dark basalt rocks on the lagoon beaches.
+- id: obj:kashyyyk:canopy-vine
+  name: Hanging vines
+  role: noise
+  footprint:
+  - 1
+  - 1
+  art: ''
+  blueprint: ''
+  about: Thick lianas hanging from the canopy layer over paths (top layer).
+- id: obj:kashyyyk:shelf-fungus
+  name: Shelf fungus
+  role: noise
+  footprint:
+  - 1
+  - 1
+  art: ''
+  blueprint: ''
+  about: Big bracket fungus on a stump; small edge filler between trunks.
+- id: obj:kashyyyk:bowcaster-rack
+  name: Bowcaster rack
+  role: noise
+  footprint:
+  - 1
+  - 1
+  art: art:kashyyyk:bowcaster-rack
+  blueprint: ''
+  about: Weapon rack and drying hides outside huts.
+- id: obj:kashyyyk:wookiee-lantern
+  name: Wookiee lantern post
+  role: noise
+  footprint:
+  - 1
+  - 1
+  art: ''
+  blueprint: ''
+  about: Carved wood post with a hanging lamp along platforms.

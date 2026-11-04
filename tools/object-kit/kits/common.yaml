@@ -1,0 +1,31 @@
+# Common kit: greybox materials and the small pieces every style may use.
+# Axes: x east, y north, z up, 1 m = 1 cell = 16 px. An object stands on 0 <= y <= D (its hit box).
+# Keep pieces big and simple: nothing thinner than 3 px (0.2 m) unless it is a post or an antenna.
+palette: greybox
+materials:
+  rock:   {ramp: mid,   bands: [0.2, 0.5, 0.84]}     # grey stone, faceted
+  stone:  {ramp: bone,  bands: [0.2, 0.5, 0.84]}     # sandstone, bleached bone
+  bark:   {ramp: mid,   bands: [0.3, 0.62, 0.9]}     # trunks and roots: darker than rock
+  leaf:   {ramp: mid,   bands: [0.15, 0.45, 0.8]}    # crowns and clumps
+  ice:    {ramp: light, bands: [0.15, 0.45, 0.8]}    # ice, snow, pale caps
+  fungus: {ramp: light, bands: [0.25, 0.55, 0.85]}
+  metal:  {ramp: mid,   bands: [0.2, 0.5, 0.85]}     # durasteel
+  dark:   {ramp: dark,  bands: [0.2, 0.5, 0.85]}     # glass, scorch, holes
+  light:  {ramp: light, bands: [0.25, 0.55, 0.85]}
+templates:
+  # A small faceted rock, centred at `at`.
+  pebble:
+    params: {r: 0.22, h: 0.2, mat: rock}
+    parts:
+      - {rock: {c: [0, 0, 0], r: ["=r", "=r * 0.8", "=h"], n: 6, jitter: 0.15}, mat: "=mat", name: pebble}
+  # A post (sign, fence, lamp).
+  post:
+    params: {h: 0.8, r: 0.07, mat: metal}
+    parts:
+      - {name: post, mat: "=mat", cylinder: {a: [0, 0, 0], b: [0, 0, "=h"], r1: "=r"}}
+  # A dish antenna tipped up toward the south-west sky.
+  dish:
+    params: {r: 0.3, mat: light}
+    parts:
+      - {name: dish, mat: "=mat", cylinder: {a: [0, 0, 0], b: [0, -0.06, 0.04], r1: "=r", r2: "=r * 0.9"}, rot: [0, 0, -50]}
+      - {name: feed, mat: dark, cylinder: {a: [0, 0, 0], b: [0, -0.12, 0.14], r1: 0.03}}

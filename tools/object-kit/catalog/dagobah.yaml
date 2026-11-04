@@ -1,0 +1,49 @@
+# Every small object dagobah needs. `art` is its world_art.csv row (empty = new, not in the wiki yet);
+# `blueprint` is the family that draws it (empty = still to design).
+planet: DAGOBAH
+objects:
+- id: obj:dagobah:gnarltree
+  name: Gnarltree
+  role: edge
+  footprint:
+  - 2
+  - 2
+  art: art:dagobah:gnarltree
+  blueprint: dagobah/gnarltree
+  about: Mangrove-like tree on arching prop roots; the swamp wall.
+- id: obj:dagobah:root-tangle
+  name: Root tangle
+  role: edge
+  footprint:
+  - 2
+  - 1
+  art: ''
+  blueprint: ''
+  about: Low knot of mangrove roots in the bog; fills gaps between gnarltrees.
+- id: obj:dagobah:swamp-reeds
+  name: Swamp reeds
+  role: walkable
+  footprint:
+  - 1
+  - 1
+  art: art:dagobah:swamp-reeds
+  blueprint: ''
+  about: Reed tall-grass in shallow water.
+- id: obj:dagobah:hanging-moss
+  name: Hanging moss
+  role: noise
+  footprint:
+  - 1
+  - 1
+  art: art:dagobah:hanging-moss
+  blueprint: ''
+  about: Moss strands, top layer.
+- id: obj:dagobah:bog-stump
+  name: Bog stump
+  role: noise
+  footprint:
+  - 1
+  - 1
+  art: ''
+  blueprint: ''
+  about: Rotten hollow stump sticking out of the mud.

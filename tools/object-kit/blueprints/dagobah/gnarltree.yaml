@@ -1,0 +1,30 @@
+# Dagobah's gnarltree, mangrove-like (wiki art:dagobah:gnarltree): the swamp's route wall. Arching prop
+# roots lift a twisted trunk out of the mud; a lumpy, low crown; on some seeds hanging moss.
+name: gnarltree
+style: dagobah
+role: edge
+about: Mangrove-like gnarltree; arching prop roots, a twisted trunk, a lumpy crown, hanging moss.
+footprint: [[2, 2], [3, 2]]
+fill: true
+choose:
+  yc: "=D * 0.55"
+  rootz: [0.6, 0.95]
+  nroot: {int: [3, 5]}
+  bend: [-0.45, 0.45]
+  th: [1.5, 2.0]
+  cw: ["=w_max * 0.42", "=w_max * 0.5"]
+  moss: {pick: [true, false]}
+parts:
+  - roots: {c: [0, "=yc", "=rootz"], n: "=nroot", reach: ["=w_max * 0.36", "=w_max * 0.5"], arc: [165, 375], kind: arch, r: 0.13, sag: 0.12, bend_at: 0.45}
+    mat: bark
+    name: root
+  - {name: trunk1, mat: bark, cone: {a: [0, "=yc", "=rootz - 0.1"], b: ["=bend", "=yc", "=rootz + th * 0.55"], r1: 0.22, r2: 0.18}}
+  - {name: trunk2, mat: bark, cone: {a: ["=bend", "=yc", "=rootz + th * 0.55"], b: ["=-bend * 0.4", "=yc", "=rootz + th"], r1: 0.18, r2: 0.15}}
+  - scatter: {within: {c: ["=-bend * 0.3", "=yc", "=rootz + th + 0.25"], r: ["=cw", "=D * 0.36", 0.3]}, count: 14, size: [0.24, 0.32], shell: 0.6, squash: [1.5, 1, 0.5]}
+    mat: leaf
+    name: crown
+  - when: "=moss"
+    parts:
+      - repeat: 3
+        parts:
+          - {name: moss, mat: dark, cone: {a: ["=-cw * 0.7 + i * cw * 0.65", "=yc - D * 0.36", "=rootz + th + 0.05"], b: ["=-cw * 0.7 + i * cw * 0.65", "=yc - D * 0.38", "=rootz + th - 0.45 - 0.15 * (i % 2)"], r1: 0.07, r2: 0.03}}

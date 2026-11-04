@@ -1,0 +1,27 @@
+# Ilum's snow-laden pine (wiki art:ilum:snow-pine): the route wall. Stacked drooping skirts, each capped with
+# snow, on a short trunk.
+name: snow-pine
+style: ilum
+role: edge
+about: Snow-laden conifer; stacked skirts each capped with snow; tall and narrow or short and wide.
+footprint: [[1, 1], [2, 2]]
+fill: true
+choose:
+  tiers: {int: [4, 5]}
+  top: ["=1.8 + 0.3 * W", "=2.3 + 0.4 * W"]
+  rad: ["=min(w_max, D) * 0.44", "=min(w_max, D) * 0.5"]
+materials:
+  leaf: {ramp: dark, bands: [0.1, 0.4, 0.75]}    # dark needles so the snow caps read
+templates:
+  pine:
+    params: {tiers: 4, top: 2.0, rad: 0.5}
+    parts:
+      - {name: trunk, mat: bark, cylinder: {a: [0, 0, 0], b: [0, 0, 0.4], r1: 0.1}}
+      - tiers: {count: "=tiers", base_z: 0.3, top_z: "=top * 0.8", base_r: "=rad", top_r: "=rad * 0.3", flat: 0.6, tip: 0.05, tufts: 7, tuft_size: [0.1, 0.13], droop: 0.06}
+        mat: leaf
+        name: green
+      - tiers: {count: "=tiers", base_z: 0.42, top_z: "=top * 0.8 + 0.12", base_r: "=rad * 0.88", top_r: "=rad * 0.26", flat: 0.22, tip: 0.3}
+        mat: ice
+        name: snow
+parts:
+  - {use: pine, name: pine, at: [0, "=D * 0.5", 0], with: {tiers: "=tiers", top: "=top", rad: "=rad"}}

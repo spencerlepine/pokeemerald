@@ -1,0 +1,31 @@
+# Every small object bespin needs. `art` is its world_art.csv row (empty = new, not in the wiki yet);
+# `blueprint` is the family that draws it (empty = still to design).
+planet: BESPIN
+objects:
+- id: obj:bespin:promenade-railing
+  name: Promenade railing
+  role: edge
+  footprint:
+  - 1
+  - 1
+  art: art:bespin:promenade-railing
+  blueprint: ''
+  about: White curved railing kit.
+- id: obj:bespin:planter
+  name: Cloud City planter
+  role: noise
+  footprint:
+  - 1
+  - 1
+  art: ''
+  blueprint: ''
+  about: Round white planter with a small tree.
+- id: obj:bespin:tibanna-canister
+  name: Tibanna canister
+  role: noise
+  footprint:
+  - 1
+  - 1
+  art: ''
+  blueprint: ''
+  about: Gas canister rack on the refinery decks.

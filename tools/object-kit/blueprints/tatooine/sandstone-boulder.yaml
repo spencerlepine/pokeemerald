@@ -1,0 +1,29 @@
+# Tatooine's main route blocker in place of the Hoenn tree (wiki art:tatooine:sandstone-boulder): wind-cut
+# sandstone, faceted like the vanilla cone rock, sometimes split, sometimes with a smaller rock beside it.
+name: sandstone-boulder
+style: tatooine
+role: edge
+about: Wind-cut sandstone boulder; round, slab or split, with a smaller rock beside it on some seeds.
+footprint: [[1, 1], [2, 1], [2, 2]]
+fill: true
+choose:
+  shape: {pick: [round, slab, split], weights: "=[3, 2, 2] if W > 1 else [3, 2, 0]"}
+  h: ["=0.55 + 0.25 * D", "=0.8 + 0.35 * D"]
+  sx: [-0.12, 0.12]
+parts:
+  - when: "=shape == 'round'"
+    parts:
+      - {rock: {c: ["=sx", "=D * 0.5", 0], r: ["=w_max * 0.5", "=D * 0.42", "=h"], n: 8, jitter: 0.14}, mat: stone, name: body}
+  - when: "=shape == 'slab'"
+    parts:
+      - rock: {c: ["=sx", "=D * 0.5", 0], r: ["=w_max * 0.5", "=D * 0.44", "=h * 0.8"], n: 7, jitter: 0.1,
+               rings: [[0, 0.95], [0.2, 1.0], [0.75, 0.96], [1.0, 0.72]]}
+        mat: stone
+        name: body
+  - when: "=shape == 'split'"
+    parts:
+      - {rock: {c: ["=-w_max * 0.2", "=D * 0.52", 0], r: ["=w_max * 0.3", "=D * 0.4", "=h"], n: 7, jitter: 0.14, lean: [-0.08, 0]}, mat: stone, name: left}
+      - {rock: {c: ["=w_max * 0.24", "=D * 0.45", 0], r: ["=w_max * 0.26", "=D * 0.38", "=h * 0.8"], n: 7, jitter: 0.14, lean: [0.08, 0]}, mat: stone, name: right}
+  - chance: "=0.5 if W > 1 else 0"
+    parts:
+      - {use: pebble, at: ["=w_max * 0.36 * (1 if sx < 0 else -1)", 0.2, 0], with: {r: 0.2, h: 0.22, mat: stone}}

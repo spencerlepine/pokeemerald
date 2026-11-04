@@ -1,0 +1,40 @@
+# Every small object mustafar needs. `art` is its world_art.csv row (empty = new, not in the wiki yet);
+# `blueprint` is the family that draws it (empty = still to design).
+planet: MUSTAFAR
+objects:
+- id: obj:mustafar:obsidian-spire
+  name: Obsidian spire
+  role: edge
+  footprint:
+  - 2
+  - 1
+  art: art:mustafar:obsidian-spire
+  blueprint: mustafar/obsidian-spire
+  about: Black glassy blade, pair or broken stump.
+- id: obj:mustafar:lava-crust-rock
+  name: Cooling crust rock
+  role: edge
+  footprint:
+  - 2
+  - 1
+  art: ''
+  blueprint: ''
+  about: Cracked crust slab at the lava edge; glowing seams later.
+- id: obj:mustafar:collector-pylon
+  name: Collector pylon
+  role: noise
+  footprint:
+  - 1
+  - 1
+  art: ''
+  blueprint: ''
+  about: Short shield pylon along the mining walkways.
+- id: obj:mustafar:ash-geyser
+  name: Ash geyser cone
+  role: noise
+  footprint:
+  - 1
+  - 1
+  art: ''
+  blueprint: ''
+  about: Small volcanic cone puffing ash.

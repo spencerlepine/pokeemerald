@@ -1,0 +1,31 @@
+# Every small object kamino needs. `art` is its world_art.csv row (empty = new, not in the wiki yet);
+# `blueprint` is the family that draws it (empty = still to design).
+planet: KAMINO
+objects:
+- id: obj:kamino:rock-stack
+  name: Sea rock stack
+  role: edge
+  footprint:
+  - 1
+  - 1
+  art: art:kamino:rock-stack
+  blueprint: ''
+  about: Black sea stack on the rock islets.
+- id: obj:kamino:deck-railing
+  name: Deck railing
+  role: edge
+  footprint:
+  - 1
+  - 1
+  art: art:kamino:stilt-walkway
+  blueprint: ''
+  about: Curved metal railing on the platform edge.
+- id: obj:kamino:storm-light
+  name: Storm beacon
+  role: noise
+  footprint:
+  - 1
+  - 1
+  art: ''
+  blueprint: ''
+  about: Tall platform light mast.

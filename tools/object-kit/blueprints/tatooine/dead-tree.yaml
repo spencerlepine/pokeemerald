@@ -1,0 +1,20 @@
+# Bleached dead tree on the dunes (wiki art:tatooine:dead-tree): a sparse accent, never a wall. Bare
+# forked limbs from a short trunk, some seeds with a fallen limb or a rock at the foot.
+name: dead-tree
+style: tatooine
+role: noise
+about: Bare bleached tree, forked limbs; leaning or upright; a rock or fallen limb at the foot.
+footprint: [[1, 1], [2, 1]]
+choose:
+  len: ["=0.7 + 0.1 * W", "=0.85 + 0.15 * W"]
+  lean: [-0.25, 0.25]
+  spread: [28, 42]
+parts:
+  - branches: {start: [0, "=D * 0.55", 0], dir: ["=lean", 0, 1], length: "=len", radius: 0.16, depth: 2,
+               split: [2, 3], spread: ["=spread", "=spread + 18"], shrink: [0.6, 0.78], taper: 0.7, min_radius: 0.065,
+               gravity: 0.05}
+    mat: stone
+    name: limb
+  - chance: 0.4
+    parts:
+      - {use: pebble, at: ["=0.3 if lean < 0 else -0.3", 0.25, 0], with: {r: 0.18, h: 0.16, mat: rock}}

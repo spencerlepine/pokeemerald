@@ -1,0 +1,34 @@
+# Felucia's giant fungi (wiki art:felucia:giant-fungus): the planet's route wall in place of trees. A tall
+# stalk with a domed cap and a dark gill ring under it; or a cluster of two or three at different heights.
+name: giant-fungus
+style: felucia
+role: edge
+about: Tall fungus stalk with a domed cap and gills; single, or a cluster of two or three; spotted caps.
+footprint: [[2, 1], [2, 2], [1, 1]]
+fill: true
+choose:
+  kind: {pick: [single, cluster], weights: "=[2, 3] if W > 1 else [1, 0]"}
+  h: [1.4, 2.3]
+  cap: ["=w_max * 0.42", "=w_max * 0.5"]
+  flat: [0.35, 0.6]
+  spots: {pick: [true, false]}
+templates:
+  shroom:
+    params: {h: 1.6, cap: 0.8, flat: 0.45, stalk: 0.14, spots: true}
+    parts:
+      - {name: stalk, mat: light, cone: {a: [0, 0, 0], b: [0, 0, "=h"], r1: "=stalk * 1.4", r2: "=stalk"}}
+      - {name: gills, mat: dark, cylinder: {a: [0, 0, "=h - 0.06"], b: [0, 0, "=h + 0.02"], r1: "=cap * 0.92", r2: "=cap * 0.92"}, squash: {scale: [1, 0.55, 1], center: [0, 0, "=h"]}}
+      - {name: cap, mat: fungus, ellipsoid: {c: [0, 0, "=h"], r: ["=cap", "=cap * 0.55", "=cap * flat"]}}
+      - {name: spot1, mat: light, ellipsoid: {c: ["=-cap * 0.35", "=-cap * 0.25", "=h + cap * flat * 0.8"], r: ["=0.1 if spots else 0.001", 0.07, 0.05]}}
+      - {name: spot2, mat: light, ellipsoid: {c: ["=cap * 0.3", "=-cap * 0.3", "=h + cap * flat * 0.75"], r: ["=0.08 if spots else 0.001", 0.06, 0.05]}}
+parts:
+  - when: "=kind == 'single'"
+    parts:
+      - {use: shroom, name: a, at: [0, "=D * 0.5", 0], with: {h: "=h", cap: "=cap", flat: "=flat", stalk: "=0.12 + 0.03 * W", spots: "=spots"}}
+  - when: "=kind == 'cluster'"
+    parts:
+      - {use: shroom, name: a, at: ["=-w_max * 0.18", "=D * 0.6", 0], with: {h: "=h", cap: "=cap * 0.7", flat: "=flat", stalk: 0.12, spots: "=spots"}}
+      - {use: shroom, name: b, at: ["=w_max * 0.22", "=D * 0.42", 0], with: {h: "=h * 0.6", cap: "=cap * 0.55", flat: "=flat", stalk: 0.1, spots: "=spots"}}
+      - chance: 0.6
+        parts:
+          - {use: shroom, name: c, at: ["=-w_max * 0.32", "=D * 0.25", 0], with: {h: "=h * 0.32", cap: "=cap * 0.32", flat: 0.5, stalk: 0.06, spots: false}}
