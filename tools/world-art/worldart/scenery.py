@@ -34,7 +34,48 @@ from . import model as M, render as R, preview as P, tiles as T
 
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))
-MODELS = os.path.join(HERE, "models", "scenery")
+MODELS = os.path.join(HERE, "models", "scenery")          # scenery rows
+WORLD_MODELS = os.path.join(HERE, "models", "world")      # every other category
+TILES_OUT = os.path.join(ROOT, "wiki", "world", "models", "tiles")
+TILESETS_OUT = os.path.join(ROOT, "wiki", "world", "models", "tilesets")
+# rows that are not objects: surfaces and ledges drawn as terrain tiles (`mapping/terrain.csv`)
+NOT_MODELS = ("greybox terrain",)
+
+
+def model_path(name):
+    for d in (MODELS, WORLD_MODELS):
+        p = os.path.join(d, f"{name}.yaml")
+        if os.path.exists(p):
+            return p
+    raise SystemExit(f"no model {name}.yaml in models/scenery/ or models/world/")
+
+
+def _have():
+    out = set()
+    for d in (MODELS, WORLD_MODELS):
+        if os.path.isdir(d):
+            out |= {f[:-5] for f in os.listdir(d) if f.endswith(".yaml")}
+    return out
+
+
+def tile_sheet(ind, palette):
+    """The model's unique 8x8 tiles (after flips), 16 to a row: what it adds to a tileset (128 px wide)."""
+    tiles = T.split_tiles(ind)
+    seen, keep = set(), []
+    for t in tiles:
+        if not t.any():
+            continue
+        k = T._canon(t)
+        if k not in seen:
+            seen.add(k)
+            keep.append(t)
+    n = max(len(keep), 1)
+    sheet = np.zeros((((n + 15) // 16) * 8, 128), np.int32)
+    for i, t in enumerate(keep):
+        sheet[(i // 16) * 8:(i // 16) * 8 + 8, (i % 16) * 8:(i % 16) * 8 + 8] = t
+    rgb = palette[sheet]
+    a = np.where(sheet > 0, 255, 0).astype(np.uint8)
+    return Image.fromarray(np.dstack([rgb, a]), "RGBA"), keep
 OUT = os.path.join(HERE, "output", "scenery")
 WIKI_OUT = os.path.join(ROOT, "wiki", "world", "models")
 CSV = os.path.join(ROOT, "wiki", "mapping", "world_art.csv")
@@ -93,9 +134,9 @@ def _vanilla_refs():
 def scene(sprite, obj, row):
     """The piece on a 15x10-cell screen, south of the middle, with the player in front of it."""
     rock, house = _vanilla_refs()
-    W, H = 15 * 16, 10 * 16
+    W, H = max(15 * 16, sprite.width + 32), max(10 * 16, sprite.height + 40)
     bg = P.speckled(W, H, (176, 176, 168)).convert("RGBA")       # plain grey ground with sparse specks
-    sy = max(H - 16 * 2 - sprite.height, 0)
+    sy = max(H - 16 * 2 - sprite.height, 8)
     # scale references: a vanilla house on the left when there is room, a vanilla rock on the right;
     # the piece between them, the player standing just south of it
     room = sprite.width <= W - 5 * 16 - 3 * 16
@@ -178,7 +219,7 @@ def _override(raw, key, value):
 
 def sweep(name, spec, only=None, tries=()):
     """One key over several values, every chosen variant: a contact sheet to pick from."""
-    path = os.path.join(MODELS, f"{name}.yaml")
+    path = model_path(name)
     key, vals = spec.split("=", 1)
     vals = [v.strip() for v in vals.split(";" if ";" in vals else ",")]   # ";" when a value has commas
     shots = []
@@ -205,29 +246,37 @@ def vs_art(path):
     return (yaml.safe_load(open(path)) or {}).get("art", "")
 
 
-def render(name, rows, only=None, tries=()):
-    path = os.path.join(MODELS, f"{name}.yaml")
+def render(name, rows, only=None, tries=(), wiki=True):
+    path = model_path(name)
     vs = variants_of(path)
     if only:
         vs = [v for v in vs if v[0] in only]
         if not vs:
             raise SystemExit(f"{name}: no variant {only}")
-    dry = bool(tries) or bool(only)          # a partial or tweaked render never touches the wiki
+    dry = bool(tries) or bool(only) or not wiki   # a partial or tweaked render never touches the wiki
     for t in tries:
         vs = [(vn, _override(raw, *t.split("=", 1))) for vn, raw in vs]
     art = vs[0][1].get("art")
     row = next((r for r in rows if r["concept_id"] == art), None)
     if row is None:
         raise SystemExit(f"{path}: `art: {art}` is not a row in world_art.csv")
-    dw, dh = (int(v) for v in row["drawn"].split("x"))
     fw, fd = (int(v) for v in row["footprint"].split("x"))
+    room = row["tool"] == "greybox room"       # a whole room: walkable, so it has no hit box rows
     shots = []
     for k, (vn, raw) in enumerate(vs):
         obj = M.Object(path, raw)
         tag = name if vn == "base" else f"{name}--{vn}"
-        if obj.cells != (dw, dh):
-            raise SystemExit(f"{tag}: cells {list(obj.cells)} but the wiki row is drawn {row['drawn']}")
-        if len(obj.footprint_rows()) != fd:
+        if row["drawn"]:                       # scenery rows fix the drawn size
+            dw, dh = (int(v) for v in row["drawn"].split("x"))
+            if obj.cells != (dw, dh):
+                raise SystemExit(f"{tag}: cells {list(obj.cells)} but the wiki row is drawn {row['drawn']}")
+        elif room:
+            if obj.cells != (fw, fd):
+                raise SystemExit(f"{tag}: a room is drawn at its size: cells {list(obj.cells)}, the row is {row['footprint']}")
+        else:                                  # other rows: the footprint's width, as tall as it needs
+            if obj.cells[0] != fw or obj.cells[1] < fd:
+                raise SystemExit(f"{tag}: cells {list(obj.cells)} must be {fw} wide and at least {fd} tall (footprint {row['footprint']})")
+        if not room and len(obj.footprint_rows()) != fd:
             raise SystemExit(f"{tag}: footprint {len(obj.footprint_rows())} rows but the wiki row's hit box is {fd} deep")
         img, ind, warnings = R.render_object(obj)
         for w in warnings:
@@ -248,11 +297,15 @@ def render(name, rows, only=None, tries=()):
         if dry:
             continue
         os.makedirs(WIKI_OUT, exist_ok=True)
+        os.makedirs(TILES_OUT, exist_ok=True)
         img.save(os.path.join(WIKI_OUT, f"{tag}.png"))
+        tile_sheet(ind, obj.palette)[0].save(os.path.join(TILES_OUT, f"{tag}.png"))
         if k == 0:                                   # the first variant is the one the row shows
             sc.save(os.path.join(WIKI_OUT, f"{name}_scene.png"))
             row["model_png"] = f"world/models/{tag}.png"
             row["model_tiles"] = str(b["unique_tiles"])
+            if not row["drawn"] and not room:
+                row["drawn"] = f"{obj.cells[0]}x{obj.cells[1]}"
     if dry:
         print("(--variant / --try: output/ only, the wiki is not changed)")
         return
@@ -262,6 +315,49 @@ def render(name, rows, only=None, tries=()):
     row["model_variants"] = " ".join(v for v, _, _ in shots) if len(shots) > 1 else ""
     if row["model_status"] in ("", "TODO", "IN-PROGRESS"):
         row["model_status"] = "IN-REVIEW"
+
+
+def tilesets(rows):
+    """One tileset sheet per planet: the unique 8x8 tiles of every model drawn for it (every variant,
+    flips shared), 128 px wide like a game tiles.png, and the count against the 512 a tileset holds."""
+    from collections import defaultdict
+    by = defaultdict(list)
+    for r in rows:
+        if r.get("model") and r["model_status"] in ("IN-REVIEW", "APPROVED"):
+            by[r["planet"]].append(r)
+    os.makedirs(TILESETS_OUT, exist_ok=True)
+    report = []
+    for planet, rs in sorted(by.items()):
+        seen, keep, pal = set(), [], None
+        for r in rs:
+            name = name_of(r["concept_id"])
+            for vn, raw in variants_of(model_path(name)):
+                obj = M.Object(model_path(name), raw)
+                _, ind, _ = R.render_object(obj)
+                pal = obj.palette          # the greybox palette is shared, so indices agree enough to preview
+                for t in T.split_tiles(ind):
+                    if t.any():
+                        k = (tuple(map(tuple, obj.palette.tolist())), T._canon(t))
+                        if k not in seen:
+                            seen.add(k)
+                            keep.append(obj.palette[t])
+        n = len(keep)
+        sheet = np.zeros((((n + 15) // 16) * 8, 128, 4), np.uint8)
+        for i, t in enumerate(keep):
+            y, x = (i // 16) * 8, (i % 16) * 8
+            sheet[y:y + 8, x:x + 8, :3] = t
+            sheet[y:y + 8, x:x + 8, 3] = 255
+        slug = planet.lower().replace(" ", "-")
+        Image.fromarray(sheet, "RGBA").save(os.path.join(TILESETS_OUT, f"{slug}.png"))
+        report.append((planet, len(rs), n))
+        print(f"tileset {slug}: {len(rs)} models, {n} unique tiles ({'over' if n > 512 else 'within'} 512)")
+    with open(os.path.join(TILESETS_OUT, "README.md"), "w") as fh:
+        fh.write("# Model tilesets (greybox)\n\nOne sheet per planet: the unique 8x8 tiles of every world-art model drawn\n"
+                 "for it, all variants, 128 px wide like a game `tiles.png`. Made by `python3 -m worldart scenery --tilesets`\n"
+                 "in `tools/world-art`. A tileset holds 512 tiles, shared with the planet's terrain and buildings.\n\n"
+                 "| Planet | Models | Unique tiles |\n|---|---|---|\n")
+        for planet, m, n in report:
+            fh.write(f"| {planet} | {m} | {n} |\n")
 
 
 def main(args):
@@ -275,10 +371,13 @@ def main(args):
         _save(rows)
         print(ident, st)
         return
-    # every scenery row is tracked: TODO until a model file exists
-    have = {f[:-5] for f in os.listdir(MODELS) if f.endswith(".yaml")} if os.path.isdir(MODELS) else set()
+    # every row is tracked: TODO until a model file exists; terrain surfaces are not models (N/A)
+    have = _have()
     for r in rows:
-        if r["category"] == "scenery":
+        if r["tool"] in NOT_MODELS:
+            r["model_status"] = "N/A"
+            continue
+        if True:
             n = name_of(r["concept_id"])
             if not r["model_status"]:
                 r["model_status"] = "IN-PROGRESS" if n in have else "TODO"
@@ -289,12 +388,16 @@ def main(args):
         for n in names:
             sweep(n, args.sweep, args.variant, args.tries)
         return
+    wiki = not getattr(args, "no_csv", False)
     for n in names:
-        render(n, rows, getattr(args, "variant", None), getattr(args, "tries", ()))
-    _save(rows)
+        render(n, rows, getattr(args, "variant", None), getattr(args, "tries", ()), wiki)
+    if getattr(args, "tilesets", False):
+        tilesets(rows)
+    if wiki:
+        _save(rows)
     if args.status or not names:
         from collections import Counter
-        sc = [r for r in rows if r["category"] == "scenery"]
+        sc = [r for r in rows if r["tool"] not in NOT_MODELS]
         for r in sc:
             if args.status:
                 print(f"{r['model_status']:12} {r['concept_id']:44} {r['drawn']:6} {r['model_tiles']:>4}  {r['model']}")

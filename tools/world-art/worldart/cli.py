@@ -54,7 +54,7 @@ def main(argv=None):
     c.add_argument("models", nargs="+")
     b = sub.add_parser("budget")
     b.add_argument("models", nargs="+")
-    s = sub.add_parser("scenery", help="scenery models: render, review in a game screen, track in the wiki")
+    s = sub.add_parser("scenery", help="world models (every world_art.csv row): render, review in a game screen, track in the wiki")
     s.add_argument("names", nargs="*")
     s.add_argument("--all", action="store_true")
     s.add_argument("--status", action="store_true")
@@ -62,6 +62,9 @@ def main(argv=None):
     s.add_argument("--variant", action="append", help="only this variant (repeat for more)")
     s.add_argument("--try", dest="tries", action="append", default=[], metavar="KEY=VALUE",
                    help="override a key for this render only, e.g. turn=12 or params.fknee=40 (output/ only, the wiki is untouched)")
+    s.add_argument("--no-csv", dest="no_csv", action="store_true",
+                   help="render to output/ only; never write the wiki (for parallel work: one final run writes it)")
+    s.add_argument("--tilesets", action="store_true", help="also write one tileset sheet per planet (wiki/world/models/tilesets/)")
     s.add_argument("--sweep", metavar="KEY=V1,V2,...",
                    help="render each value side by side into output/scenery/<name>/sweep.png (output/ only)")
     a = ap.parse_args(argv)
