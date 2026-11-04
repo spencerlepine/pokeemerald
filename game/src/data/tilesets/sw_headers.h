@@ -110,6 +110,17 @@ const struct Tileset gTileset_SwMosEntha =
     .callback = InitTilesetAnim_Petalburg,
 };
 
+const struct Tileset gTileset_SwMosEspa =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SwMosEspa,
+    .palettes = gTilesetPalettes_SwMosEspa,
+    .metatiles = gMetatiles_SwMosEspa,
+    .metatileAttributes = gMetatileAttributes_SwMosEspa,
+    .callback = InitTilesetAnim_Mauville,
+};
+
 const struct Tileset gTileset_SwMosEspaPodraceArena =
 {
     .isCompressed = TRUE,
