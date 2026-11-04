@@ -3,8 +3,10 @@
 # a boxy hull with an engine pod along each upper side, a pointed cockpit wedge low at the front, the tall
 # dorsal fin (as tall as the ship is long: leading edge swept back, trailing edge straight up) and two long
 # wings hinged under the pods that fold down for flight and up beside the fin for landing (the inverted Y).
-# Modelled level, nose along +x, then turned nose toward the camera so the Y spreads across the screen
-# (side on, every wing and the fin stand in one plane and draw as one vertical strip).
+# Modelled level, nose along +x, then turned nose toward the camera (south) so the Y spreads across the
+# screen: this camera draws a point at row -(y + z), so side on the fin and both wings fall into one
+# vertical strip. Nose south, the wings show whole and the fin as the middle prong (the front-view trident);
+# turned 60-70 degrees the fin also shows its face. Folded straight up (80+) a wing goes edge-on: keep 45-60.
 # Axes: x forward (the nose), y to its left, z up, origin on the ground under the hull's middle.
 name: endor_crashed-lambda-shuttle
 art: art:endor:crashed-lambda-shuttle
@@ -20,7 +22,7 @@ render:
   margin: 0
   cleanup: true
 materials:
-  hull:  {ramp: light, bands: [0.25, 0.55, 0.85]}
+  hull:  {ramp: light, bands: [0.3, 0.6, 0.9]}
   plate: {ramp: mid,   bands: [0.2, 0.5, 0.82]}
   pod:   {ramp: mid,   bands: [0.25, 0.55, 0.85]}
   dark:  {ramp: dark,  bands: [0.3, 0.6, 0.9]}
@@ -79,25 +81,31 @@ ground:
   - {name: fern-1, mat: moss, ellipsoid: {c: [-3.2, -1.4, 0], r: [0.45, 0.22, 0.2]}}
   - {name: fern-2, mat: moss, ellipsoid: {c: [3.0, -1.2, 0], r: [0.4, 0.2, 0.18]}}
 variants:
-  # came down nose first: the left wing jammed straight up beside the fin, the right wing snapped at the
+  # came down nose first: the left wing jammed half up beside the fin, the right wing snapped at the
   # hinge and its plate thrown flat into the ferns to the west
   crashed:
-    turn: -76
+    turn: -62
     scale: 0.78
     foot: [72, 72]
     params: {wl: 50, wr: -8, sl: 3.0, sr: 0.9}
     tilt: [-7, -10]
-    pivot: [1.8, 0]
+    pivot: [0, -0.9]
     sink: 0.12
     ground:
-      - {name: lost-wing, mat: plate, prism: {poly: [[-2.0, 0.6], [-2.0, 2.6], [-3.9, 2.1], [-3.9, 1.2]], z: [0.0, 0.1], round: 0.02}}
-      - {name: dirt-1, mat: moss, ellipsoid: {c: [0.2, -1.9, 0], r: [0.7, 0.25, 0.18]}}
-      - {name: fern-1, mat: moss, ellipsoid: {c: [-3.4, -1.1, 0], r: [0.45, 0.22, 0.2]}}
-      - {name: fern-2, mat: moss, ellipsoid: {c: [2.9, -1.3, 0], r: [0.4, 0.2, 0.18]}}
+      # the snapped right wing, flat in the ferns with its root edge propped on debris
+      - name: lost-wing
+        mat: plate
+        hull: {points: [[-1.9, -0.2, 0.3], [-1.9, 1.8, 0.3], [-1.9, -0.2, 0.42], [-1.9, 1.8, 0.42],
+                        [-3.9, -0.1, 0.0], [-3.9, 0.8, 0.0], [-3.9, -0.1, 0.12], [-3.9, 0.8, 0.12]], round: 0.03}
+      - {name: wing-debris, mat: dark, box: {c: [-1.9, 0.8, 0.12], half: [0.15, 0.7, 0.14], radius: 0.04}}
   # sat down level in the landing fold, both wings half up: the Lambda's trident seen from the front
   wings-up:
     turn: -90
     scale: 0.78
     foot: [64, 76]
     sink: 0.1
-    params: {wl: 58, wr: 58, sl: 3.0, sr: 3.0}
+    params: {wl: 48, wr: 48, sl: 3.0, sr: 3.0}
+    ground:
+      - {name: fern-1, mat: moss, ellipsoid: {c: [-3.4, -1.0, 0], r: [0.5, 0.24, 0.22]}}
+      - {name: fern-2, mat: moss, ellipsoid: {c: [3.3, -0.9, 0], r: [0.45, 0.22, 0.2]}}
+      - {name: fern-3, mat: moss, ellipsoid: {c: [-1.4, -1.5, 0], r: [0.4, 0.2, 0.18]}}

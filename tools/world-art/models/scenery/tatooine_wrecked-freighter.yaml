@@ -2,15 +2,18 @@
 # the cells behind. Reference: the Corellian YT-series light freighters (A New Hope's docking bay 94, the
 # parked freighter concepts): a flat round saucer hull with a raised centre, two forward mandibles with a
 # slot between them, the cockpit tube on one side, the engine band round the back. This one came in too
-# low on the coast cliffs: it lies tipped up toward the camera, its south rim dug into the sand, a
-# mandible broken off, sand drifted over the low side.
+# low on the coast cliffs: it lies nose-down in the sand, rolled a little, a mandible broken off, sand
+# drifted over the low side. Drawn for the 3/4 camera (owner, 2026-11-04): the saucer is the oval
+# `yt1300` hull from kits/freighters.yaml on its thick side wall, so it never reads as a disc facing the
+# camera; the cockpit tube shows on the south side.
 # Modelled level, bow east (+x); posed tipped. `mirror` gives the west-facing one.
 # Axes: x east, y north, z up; origin on the ground at the south edge of the hit box, centred.
 name: tatooine_wrecked-freighter
 art: art:tatooine:wrecked-freighter
 palette: greybox
+kits: [kits/freighters.yaml]
 cells: [8, 6]
-foot: [62, 93]
+foot: [52, 93]
 footprint: 4
 render:
   light: [-0.55, -0.3, 0.78]
@@ -20,51 +23,35 @@ render:
   margin: 0
   cleanup: true
 materials:
-  hull:  {ramp: mid,   bands: [0.25, 0.55, 0.85]}
-  top:   {ramp: light, bands: [0.25, 0.55, 0.85]}
-  panel: {ramp: light, bands: [0.3, 0.6, 0.9]}
-  rim:   {ramp: dark,  bands: [0.2, 0.5, 0.85]}
-  dark:  {ramp: dark,  bands: [0.3, 0.6, 0.9]}
+  hull:  {ramp: light, bands: [0.3, 0.6, 0.9]}
+  plate: {ramp: mid,   bands: [0.15, 0.5, 0.85]}
+  dark:  {ramp: dark,  bands: [0.2, 0.5, 0.85]}
+  glass: {ramp: dark,  bands: [0.3, 0.6, 0.9]}
   sand:  {ramp: bone,  bands: [0.55, 0.8, 0.97]}
 drop_shadow:
   - {dx: 1, dy: 1, color: shade, below: 4}
 box: [124, 62]
-tilt: [0, -26]
-pivot: [0, 0.6]
-sink: 0.55
-params:
-  cy: 2.15         # the saucer's centre (m north)
-  R: 2.0         # its radius
+tilt: [12, 4]
+pivot: [0, 2.25]
+sink: 0.15
+params: {cy: 2.25}
 groups: {body: {}, saucer: {}, engines: {}}
 parts:
-  # the saucer: a thick round hull, raised in the middle, the slot between the mandibles cut out
-  - {name: saucer, mat: hull, group: saucer, cylinder: {a: [0, "=cy", 0.2], b: [0, "=cy", 0.75], r1: "=R", r2: "=R - 0.15"}}
-  - {name: rim, mat: rim, group: saucer, cylinder: {a: [0, "=cy", 0.0], b: [0, "=cy", 0.25], r1: "=R - 0.25", r2: "=R"}}
-  - {name: crown, mat: top, group: saucer, cylinder: {a: [0, "=cy", 0.7], b: [0, "=cy", 1.0], r1: "=R * 0.55", r2: "=R * 0.42"}}
-  - {name: mandible-n, mat: top, group: saucer, prism: {poly: [["=R * 0.6", "=cy + 0.18"], ["=R + 1.15", "=cy + 0.25"], ["=R + 1.15", "=cy + 0.95"], ["=R * 0.6", "=cy + 1.6"]], z: [0.15, 0.7], top: [0.95, 0.9], round: 0.04}}
-  - {name: mandible-s, mat: top, group: saucer, prism: {poly: [["=R * 0.6", "=cy - 0.18"], ["=R + 1.15", "=cy - 0.25"], ["=R + 1.15", "=cy - 0.95"], ["=R * 0.6", "=cy - 1.6"]], z: [0.15, 0.7], top: [0.95, 0.9], round: 0.04}}
-  - {name: slot, mat: dark, group: saucer, op: subtract, box: {c: ["=R + 0.4", "=cy", 0.5], half: [0.9, 0.2, 0.6]}}
-  # top details: the dish, two dark hatches and the radial panels
-  - {name: dish, mat: panel, cylinder: {a: [-0.55, "=cy - 0.5", 1.0], b: [-0.55, "=cy - 0.5", 1.1], r1: 0.38, r2: 0.3}}
-  - {name: hatch, mat: dark, cylinder: {a: [0.0, "=cy", 0.98], b: [0.0, "=cy", 1.03], r1: 0.32}}
-  - {name: panel-1, mat: panel, box: {c: [-1.15, "=cy + 0.7", 0.74], half: [0.55, 0.3, 0.04]}, rot: [0, 30, 0]}
-  - {name: panel-2, mat: panel, box: {c: [0.9, "=cy - 1.0", 0.74], half: [0.45, 0.25, 0.04]}, rot: [0, -30, 0]}
-  - {name: panel-3, mat: panel, box: {c: [-1.1, "=cy - 0.95", 0.74], half: [0.45, 0.25, 0.04]}, rot: [0, 35, 0]}
-  # the engine band round the back
-  - {name: engines, mat: dark, group: engines, cylinder: {a: [0, "=cy", 0.3], b: [0, "=cy", 0.62], r1: "=R + 0.03"}}
-  - {name: engine-cut, mat: dark, group: engines, op: subtract, box: {c: [0.9, "=cy", 0.45], half: [2.0, 3.0, 0.4]}}
-  # the cockpit: a tube on the north side, its round glass nose forward
-  - {name: cockpit-arm, mat: top, box: {c: ["=R * 0.35", "=cy + R - 0.1", 0.5], half: [0.6, 0.25, 0.22], radius: 0.06}}
-  - {name: cockpit, mat: top, cylinder: {a: ["=R * 0.6", "=cy + R + 0.15", 0.5], b: ["=R + 0.35", "=cy + R + 0.15", 0.5], r1: 0.32, r2: 0.3}}
-  - {name: glass, mat: dark, cylinder: {a: ["=R + 0.33", "=cy + R + 0.15", 0.5], b: ["=R + 0.45", "=cy + R + 0.15", 0.5], r1: 0.27, r2: 0.18}}
+  - {use: yt1300, name: ship, at: [0, "=cy", 0], with: {R: 2.45, k: 0.68, zh: 0.05, w: 0.62, d: 0.28, reach: 1.35}}
+  # a scorched breach in the aft deck and a bent hull plate sticking up out of it
+  - {name: breach, mat: dark, ellipsoid: {c: [-1.2, "=cy - 0.35", 1.0], r: [0.42, 0.3, 0.12]}}
+  - {name: bent-plate, mat: plate, box: {c: [-1.05, "=cy - 0.5", 1.08], half: [0.3, 0.05, 0.16], radius: 0.02}, rot: [-35, 0, 0]}
 ground:
-  # sand drifted over the buried south rim, and the snapped-off mandible
-  - {name: drift-s, mat: sand, ellipsoid: {c: [-0.4, 0.5, 0], r: [2.6, 0.42, 0.3]}}
+  # sand drifted over the buried nose and the low south side
+  - {name: drift-s, mat: sand, ellipsoid: {c: [0.6, 0.45, 0], r: [2.9, 0.45, 0.28]}}
+  - {name: drift-e, mat: sand, ellipsoid: {c: [3.5, 1.5, 0], r: [0.9, 0.55, 0.22]}}
+drop: ["ship/leg-1", "ship/leg-2", "ship/leg-3", "ship/dish-post"]
 variants:
   tipped: {}
   # the south mandible snapped off and lying in the sand in front
   mandible-lost:
-    drop: ["mandible-s"]
+    drop: ["ship/leg-1", "ship/leg-2", "ship/leg-3", "ship/dish-post", "ship/mandible-s", "ship/tip-s"]
     ground:
-      - {name: drift-s, mat: sand, ellipsoid: {c: [-0.4, 0.5, 0], r: [2.6, 0.42, 0.3]}}
-      - {name: lost-mandible, mat: top, prism: {poly: [[2.1, 0.15], [3.4, 0.1], [3.4, 0.55], [2.3, 0.7]], z: [0, 0.35], top: 0.9, round: 0.04}}
+      - {name: drift-s, mat: sand, ellipsoid: {c: [0.6, 0.45, 0], r: [2.9, 0.45, 0.28]}}
+      - {name: drift-e, mat: sand, ellipsoid: {c: [3.5, 1.5, 0], r: [0.9, 0.55, 0.22]}}
+      - {name: lost-mandible, mat: hull, prism: {poly: [[2.4, 0.15], [3.7, 0.1], [3.7, 0.55], [2.6, 0.75]], z: [0, 0.4], top: 0.9, round: 0.04}}

@@ -1,0 +1,58 @@
+# Freighter kit: the Corellian YT-1300 (the Millennium Falcon), shared by art:new:player-ship,
+# art:tatooine:freighter-parked and art:tatooine:wrecked-freighter.
+# Drawn for the Emerald 3/4 camera (owner, 2026-11-04): the round saucer is an oval `k` (about 0.7) as
+# deep north-south as it is wide, raised on a thick side wall that shows head-on on the south side; the
+# mandibles are raised prongs with south faces, the cockpit tube stands proud on the south side, the dish
+# stands up facing south, the engine strip runs round the stern edge of the wall.
+# Ship axes: x forward (nose), y to port (north), z up, origin on the ground under the saucer's centre.
+# Parts: wall, deck, crown, turret, guns, hatch-*, panel-*, engine (+ engine-cut), mandible-n, mandible-s,
+# tip-n, tip-s, slot, slot-back, neck, tube, canopy, dish-post, dish, dish-hub, leg-*.
+templates:
+  yt1300:
+    # R: saucer radius (x); k: depth ratio; zh: belly height; w: side wall; d: deck rise
+    params: {R: 2.0, k: 0.7, zh: 0.3, w: 0.5, d: 0.3, reach: 1.25, legs: 1}
+    parts:
+      # the saucer: a thick oval side wall, the sloped upper deck, the raised centre
+      - {name: wall, mat: plate, group: saucer, cylinder: {a: [0, 0, "=zh"], b: [0, 0, "=zh + w"], r1: "=R - 0.1", r2: "=R"}, squash: {scale: [1, "=k", 1], center: [0, 0, 0]}}
+      - {name: deck, mat: hull, group: saucer, cylinder: {a: [0, 0, "=zh + w - 0.01"], b: [0, 0, "=zh + w + d"], r1: "=R", r2: "=R * 0.78"}, squash: {scale: [1, "=k", 1], center: [0, 0, 0]}}
+      # the slot between the mandibles, cut out of the saucer's nose
+      - {name: slot-cut, mat: dark, group: saucer, op: subtract, box: {c: ["=R", 0, "=zh + w"], half: ["=R * 0.3", 0.24, 1.0]}}
+      - {name: slot-back, mat: dark, box: {c: ["=R * 0.7", 0, "=zh + w * 0.5"], half: [0.06, 0.24, "=w * 0.45"]}}
+      - {name: crown, mat: plate, cylinder: {a: [0, 0, "=zh + w + d - 0.03"], b: [0, 0, "=zh + w + d + 0.12"], r1: "=R * 0.46", r2: "=R * 0.4"}, squash: {scale: [1, "=k", 1], center: [0, 0, 0]}}
+      - {name: turret, mat: dark, cylinder: {a: [0, 0, "=zh + w + d + 0.1"], b: [0, 0, "=zh + w + d + 0.26"], r1: 0.3, r2: 0.24}}
+      - {name: guns, mat: dark, box: {c: [0.35, 0, "=zh + w + d + 0.22"], half: [0.28, 0.09, 0.035]}}
+      # the plated trench ring round the crown: blocks on an oval
+      - {name: trench-1, mat: plate, box: {c: ["=R * 0.63 * cos(radians(60))", "=R * k * 0.63 * sin(radians(60))", "=zh + w + d"], half: [0.13, 0.1, 0.04], radius: 0.015}}
+      - {name: trench-2, mat: plate, box: {c: ["=R * 0.63 * cos(radians(90))", "=R * k * 0.63 * sin(radians(90))", "=zh + w + d"], half: [0.13, 0.1, 0.04], radius: 0.015}}
+      - {name: trench-3, mat: plate, box: {c: ["=R * 0.63 * cos(radians(120))", "=R * k * 0.63 * sin(radians(120))", "=zh + w + d"], half: [0.13, 0.1, 0.04], radius: 0.015}}
+      - {name: trench-4, mat: plate, box: {c: ["=R * 0.63 * cos(radians(150))", "=R * k * 0.63 * sin(radians(150))", "=zh + w + d"], half: [0.13, 0.1, 0.04], radius: 0.015}}
+      - {name: trench-5, mat: plate, box: {c: ["=R * 0.63 * cos(radians(180))", "=R * k * 0.63 * sin(radians(180))", "=zh + w + d"], half: [0.13, 0.1, 0.04], radius: 0.015}}
+      - {name: trench-6, mat: plate, box: {c: ["=R * 0.63 * cos(radians(210))", "=R * k * 0.63 * sin(radians(210))", "=zh + w + d"], half: [0.13, 0.1, 0.04], radius: 0.015}}
+      - {name: trench-7, mat: plate, box: {c: ["=R * 0.63 * cos(radians(240))", "=R * k * 0.63 * sin(radians(240))", "=zh + w + d"], half: [0.13, 0.1, 0.04], radius: 0.015}}
+      - {name: trench-8, mat: plate, box: {c: ["=R * 0.63 * cos(radians(270))", "=R * k * 0.63 * sin(radians(270))", "=zh + w + d"], half: [0.13, 0.1, 0.04], radius: 0.015}}
+      - {name: trench-9, mat: plate, box: {c: ["=R * 0.63 * cos(radians(300))", "=R * k * 0.63 * sin(radians(300))", "=zh + w + d"], half: [0.13, 0.1, 0.04], radius: 0.015}}
+      # deck detail: two dark hatches aft, light plates on the mid deck
+      - {name: hatch-1, mat: dark, cylinder: {a: ["=-R * 0.62", "=R * k * 0.3", "=zh + w + d * 0.35"], b: ["=-R * 0.62", "=R * k * 0.3", "=zh + w + d * 0.45"], r1: 0.2}}
+      - {name: hatch-2, mat: dark, cylinder: {a: ["=-R * 0.62", "=-R * k * 0.3", "=zh + w + d * 0.35"], b: ["=-R * 0.62", "=-R * k * 0.3", "=zh + w + d * 0.45"], r1: 0.2}}
+      - {name: panel-1, mat: plate, box: {c: ["=-R * 0.3", "=-R * k * 0.62", "=zh + w + d * 0.4"], half: [0.4, 0.16, 0.05], radius: 0.02}}
+      - {name: panel-2, mat: plate, box: {c: ["=R * 0.25", "=-R * k * 0.62", "=zh + w + d * 0.4"], half: [0.3, 0.16, 0.05], radius: 0.02}}
+      # the engine glow strip round the stern edge of the wall
+      - {name: engine, mat: glass, group: engines, cylinder: {a: [0, 0, "=zh + 0.1"], b: [0, 0, "=zh + w - 0.1"], r1: "=R + 0.04"}, squash: {scale: [1, "=k", 1], center: [0, 0, 0]}}
+      - {name: engine-cut, mat: glass, group: engines, op: subtract, box: {c: ["=R * 0.55", 0, "=zh + w / 2"], half: ["=R * 1.25", "=R * 2", 1.0]}}
+      # the two mandibles: raised prongs as thick as the wall, their south faces showing
+      - {name: mandible-n, mat: hull, prism: {poly: [["=R * 0.55", 0.24], ["=R + reach", 0.27], ["=R + reach", 0.78], ["=R * 0.55", "=R * k * 0.9"]], z: ["=zh + 0.02", "=zh + w + 0.06"], top: 0.94, round: 0.03}}
+      - {name: mandible-s, mat: hull, prism: {poly: [["=R * 0.55", -0.24], ["=R + reach", -0.27], ["=R + reach", -0.78], ["=R * 0.55", "=-R * k * 0.9"]], z: ["=zh + 0.02", "=zh + w + 0.06"], top: 0.94, round: 0.03}}
+      - {name: tip-n, mat: plate, box: {c: ["=R + reach - 0.2", 0.52, "=zh + w + 0.07"], half: [0.18, 0.2, 0.04], radius: 0.02}}
+      - {name: tip-s, mat: plate, box: {c: ["=R + reach - 0.2", -0.52, "=zh + w + 0.07"], half: [0.18, 0.2, 0.04], radius: 0.02}}
+      # the cockpit tube on the starboard (south) side, standing proud of the wall, glass forward
+      - {name: neck, mat: hull, box: {c: ["=R * 0.4", "=-R * k + 0.05", "=zh + w * 0.6"], half: [0.3, 0.26, "=w * 0.34"], radius: 0.05}}
+      - {name: tube, mat: hull, cylinder: {a: ["=R * 0.2", "=-R * k - 0.28", "=zh + w * 0.6"], b: ["=R + 0.1", "=-R * k - 0.28", "=zh + w * 0.6"], r1: 0.28, r2: 0.25}}
+      - {name: canopy, mat: glass, cylinder: {a: ["=R + 0.08", "=-R * k - 0.28", "=zh + w * 0.6"], b: ["=R + 0.25", "=-R * k - 0.28", "=zh + w * 0.6"], r1: 0.24, r2: 0.13}}
+      # the radar dish on the forward port deck, standing up and facing south
+      - {name: dish-post, mat: dark, box: {c: ["=R * 0.42", "=R * k * 0.42", "=zh + w + d + 0.12"], half: [0.06, 0.06, 0.16]}}
+      - {name: dish, mat: hull, cylinder: {a: ["=R * 0.42", "=R * k * 0.42 + 0.05", "=zh + w + d + 0.42"], b: ["=R * 0.42", "=R * k * 0.42 - 0.05", "=zh + w + d + 0.47"], r1: 0.4, r2: 0.3}}
+      - {name: dish-hub, mat: dark, ellipsoid: {c: ["=R * 0.42", "=R * k * 0.42 - 0.08", "=zh + w + d + 0.46"], r: [0.08, 0.06, 0.08]}}
+      # landing legs under the belly (legs: 0 for a wreck)
+      - {name: leg-1, mat: dark, box: {c: ["=R * 0.5", "=-R * k * 0.55", "=zh / 2"], half: [0.1, 0.1, "=zh / 2 * legs + 0.001"]}}
+      - {name: leg-2, mat: dark, box: {c: ["=-R * 0.5", "=-R * k * 0.55", "=zh / 2"], half: [0.1, 0.1, "=zh / 2 * legs + 0.001"]}}
+      - {name: leg-3, mat: dark, box: {c: [0, "=R * k * 0.55", "=zh / 2"], half: [0.1, 0.1, "=zh / 2 * legs + 0.001"]}}
