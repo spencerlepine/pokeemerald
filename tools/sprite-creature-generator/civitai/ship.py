@@ -33,6 +33,11 @@ CASTFORM_C = GAME / "src" / "battle_anim_mons.c"
 PENDING = REPO / "wiki" / "database" / "pending_art.csv"
 PORT = REPO / "wiki" / "database" / "game_port.csv"
 FILES = ("front.png", "anim_front.png", "back.png")
+
+
+def cc_size(path):
+    from PIL import Image
+    return Image.open(path).size
 CAST = {"normal": "CASTFORM_NORMAL", "sunny": "CASTFORM_FIRE", "rainy": "CASTFORM_WATER", "snowy": "CASTFORM_ICE"}
 NOTE = ("Shipped 2026-11-01 by tools/sprite-creature-generator/civitai (ship.py): battle sprite, owner-approved; "
         "normal.pal + shiny.pal copied too, front/back y_offset set from the sprite.")
@@ -89,6 +94,10 @@ def main():
         src, dst = ART / key, GAME / "graphics" / "pokemon" / key
         dst.mkdir(parents=True, exist_ok=True)
         for n in FILES:
+            if sp == "castform" and n == "anim_front.png" and cc_size(src / n) != (64, 64):
+                # the 4 forms are joined into one sheet whose frame N is form N (graphics_file_rules.mk); a second
+                # frame per form makes it 16 KB, overflows the 8 KB pic buffer and resets the game
+                raise SystemExit(f"{src / n}: Castform forms have one 64x64 frame, no animation frame")
             shutil.copyfile(src / n, dst / n)
         pal_src = src.parent if sp == "unown" else src
         pal_dst = dst.parent if sp == "unown" else dst
