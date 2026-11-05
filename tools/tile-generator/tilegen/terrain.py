@@ -414,7 +414,7 @@ def _usual(prim: str, sec: str, pred, default: str) -> str:
 
 def grid_items(grid: list[str], prim: str, sec: str, indoor: bool, kind: str) -> list[list[str]]:
     """Grid characters -> item names, with the pair's usual ground, path, water and wild grass."""
-    plain = lambda k: R.group(k) == "ground" and k not in ("ground-path", "ground-stone", "bridge", "tree", "structure") \
+    plain = lambda k: R.group(k) == "ground" and k not in ("ground-path", "ground-stone", "bridge", "tree", "structure", "shallow-water") \
         and not k.startswith("ledge-")           # not the path, not stairs and stone (ground-stone)
     ground = _usual(prim, sec, plain, "floor" if indoor else "ground-grass")
     path = _usual(prim, sec, lambda k: k == "ground-path", ground)

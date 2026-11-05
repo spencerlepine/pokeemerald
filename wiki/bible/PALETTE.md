@@ -297,6 +297,26 @@ Storm-grey ocean, white-grey platforms. Ground -> wet grey deck; canopies -> gre
 | Water Light | `#607888` | 96, 120, 136 | accent |
 | Water Deep | `#002038` | 0, 32, 56 | neutral |
 
+## World terrain (ground, paths, rock, liquids): rules — 2026-11-05, in review
+
+The rules every planet's terrain follows. The colours are in `tools/tile-generator/tilegen/paint.py` (`MATERIALS`,
+`PLANETS`); preview them in the [Town Map Viewer](https://claude.ai/artifact/UT4kw8Y7anvMMvvJHw5Gwf) (looks A, B, C).
+
+- **One world palette.** Terrain colours come from a fixed list of materials (dune sand, hardpan, canyon rock, snow,
+  ice, ash, basalt, lava, moss, jungle, bog, mud, river, storm sea, deck plate, durasteel, cloud, void...). Each
+  material is a ramp of 5 tones, dark to light, every channel a multiple of 8. A planet picks materials; it never
+  invents colours.
+- **Six slots per planet.** Ground, path (dirt), sand, rock (cliffs), wild grass and trees (foliage), liquid (water).
+  That fits the 6 banks of the planet's own General copy.
+- **Vanilla shapes, new colours.** Pixels stay Emerald's. Each vanilla colour is sorted by what it draws and snapped
+  to the tone of the planet's material at the same place in its light range, so shading and texture are kept.
+- **Calmer than Emerald.** Grounds are dusty and low in chroma. Saturation is for liquids that glow or read at a glance
+  (lava, sulphur springs, ice), and for the creatures and people that stand on the ground.
+- **Paths read against ground.** A planet's path material is lighter or warmer than its ground by at least one tone.
+- **Grey until its phase.** Buildings, roofs, signs and structures stay grey; they get colour in their own pass.
+- **Net-new terrain is a vanilla item in other colours.** The Dune Sea is the sea drawn in dune sand, mud is the sand
+  in mud, the cloud sea is the sea in cloud, walkways are the bridge in bark or deck plate.
+
 ## Rules of thumb
 
 - **Creatures pop, chrome recedes.** Menus stay low saturation, so the only saturated things on screen are creatures, HP and the gold cursor.
