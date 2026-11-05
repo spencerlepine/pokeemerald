@@ -66,6 +66,23 @@ Then run `tools/port_names.py` (names and Datapad text) and `tools/mark_audio_do
 parties and placement of the new species are the world-building pass; `creatures.csv` shows which are not
 wild or in a party yet.
 
+**Creature sizes are ported** (2026-11-05): every creature has a Star Wars height and weight, drafted from canon
+sizes where they exist (`mapping/creature_sizes.csv` for the 386 Emerald species, `new_species.csv` for the 12
+net-new ones). `python3 tools/port_sizes.py` (run after `port_creatures.py`) writes them into the Datapad, sorts the
+height and weight orders again and works out the size screen ("SIZE COMPARED TO KAEL") from the drawn art:
+- `basis` says where each size comes from: `canon`, `scaled` (a canon giant cut down to the Datapad limits, or a
+  young form sized to its line) or `emerald` (an original design built on the Emerald creature keeps its size).
+  `notes` give the canon figure. Limits: 30.4 m (the Datapad prints feet with two digits) and 2,000 kg.
+- The size screen draws the player's front portrait (KAEL or MIRA, 1.6 m) and the creature's front as black
+  silhouettes. The tool measures each figure's real outline, so a new sprite gets the right scale. The figure's
+  height spans `height_m`; for long bodies (fish, serpents, whales, wings spread) `screen_m` is what the figure's
+  longest side spans. The bigger one is drawn full size and the other is shrunk to match, both on one ground line.
+- Low Kick still reads Emerald's weights (`src/data/pokemon/battle_weights.h`, written by the tool), so the new
+  weights change no battle damage. The size records (Bogling and Acornlet) read heights that kept Emerald's.
+- `python3 tools/port_sizes.py check` fails if `../game` is out of date; `report` also writes
+  `database/creature_sizes.csv` (every entry with the figure size and the scales used). Check the screen in the
+  emulator with `../tools/play-tester/scripts/ui-check.sh dex_size`.
+
 **Every person is ported** (2026-11-04): `python3 tools/port_people.py` puts every person asset the wiki has into
 `../game` and writes `database/persons.csv`, one row per person (1,802: walkers, trainer pics and back pics, trainer
 classes, trainers, Grand Arena trainers, characters and every person of `mapping/people.csv`) with the state of their
@@ -143,6 +160,7 @@ and field-effect ids are table indexes, so deleting a ghost keeps its slot (poin
 | Table | What it is |
 |---|---|
 | `game_port.csv` | The port checklist (above). |
+| `creature_sizes.csv` | Every Datapad entry (398) with its Star Wars height and weight, `basis`, `screen_m`, the front pic and figure size measured, the size-screen scales and offsets, and `battle` (the weight Low Kick reads). Written by `tools/port_sizes.py report`. |
 | `creatures.csv` | Every species slot in `../game` (398 rows) with the state of each creature asset: name, Datapad numbers and entry, front, anim_front, back, icon, footprint, cry (`DONE`, `PLACEHOLDER` for a net-new species still borrowing art, or the art/audio status), and whether it is wild (`encounters.csv`) or in a trainer party. Written by `tools/port_creatures.py`. |
 | `swap_map.csv` | One row per Emerald entity plus every net-new row: old and new name, title and C constant (`SPECIES_TREECKO` → `SPECIES_WOOKLET`). |
 | `entities.csv` | Emerald's entities with the Star Wars title and description; Emerald's stay in `emerald_title` / `emerald_description`. Stats and game columns are unchanged. |
@@ -278,6 +296,7 @@ python3 tools/habitats.py   # species_habitats.csv
 python3 tools/sand_skim.py  # sand_skim.csv, dune_sea_encounters.csv (Dune Sea field move)
 python3 tools/obtain.py     # obtain.csv, npcs.csv (who gives what, in story order)
 python3 tools/port_creatures.py check  # creatures.csv (every species slot and its assets in ../game)
+python3 tools/port_sizes.py report     # creature_sizes.csv (Datapad heights, weights and the size screen in ../game)
 python3 tools/port_people.py check     # persons.csv (every person and their assets in ../game)
 python3 tools/prominence.py # mapping/proposals/prominence*.csv (fan prominence of every starwars-db entity; needs starwars-db)
 python3 wiki/server.py      # browse at http://127.0.0.1:8000

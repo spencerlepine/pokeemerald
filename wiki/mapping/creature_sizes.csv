@@ -1,0 +1,387 @@
+emerald_id,sw_name,height_m,weight_kg,screen_m,basis,emerald_height_m,emerald_weight_kg,notes
+species:treecko,KATARNKIT,0.5,5,,emerald,0.5,5.0,
+species:grovyle,KATARNJAW,0.9,21.6,,emerald,0.9,21.6,
+species:sceptile,KATARN,1.7,52.2,,emerald,1.7,52.2,
+species:torchic,SUNCHICK,0.4,2.5,,emerald,0.4,2.5,
+species:combusken,SUNSTRIDER,0.9,19.5,,emerald,0.9,19.5,
+species:blaziken,SUNBLAZER,1.9,52,,emerald,1.9,52.0,
+species:mudkip,MARSHLET,0.4,7.6,,emerald,0.4,7.6,
+species:marshtomp,MARSHRUNNR,0.7,28,,emerald,0.7,28.0,
+species:swampert,MARSHTITAN,1.5,81.9,,emerald,1.5,81.9,
+species:poochyena,MASSIFF,0.7,30,,canon,0.5,13.6,massiff
+species:mightyena,WARMASSIFF,1.2,70,,scaled,1.0,37.0,pack alpha massiff
+species:zigzagoon,SCURRIER,0.4,17.5,,emerald,0.4,17.5,
+species:linoone,SCURRYDASH,0.5,32.5,,emerald,0.5,32.5,
+species:wurmple,SANDGRUB,0.3,3.6,,emerald,0.3,3.6,
+species:silcoon,SILKPOD,0.6,10,,emerald,0.6,10.0,
+species:beautifly,SANDMOTH,1,28.4,1,emerald,1.0,28.4,
+species:cascoon,VENOMPOD,0.7,11.5,,emerald,0.7,11.5,
+species:dustox,DUSTMOTH,1.2,31.6,,emerald,1.2,31.6,
+species:lotad,BOGLING,0.5,2.6,,emerald,0.5,2.6,
+species:lombre,BOGTROT,1.2,32.5,,emerald,1.2,32.5,
+species:ludicolo,FAMBAA,8,2000,,canon,1.5,55.0,"fambaa, a huge swamp beast"
+species:seedot,ACORNLET,0.5,4,,emerald,0.5,4.0,
+species:nuzleaf,LEAFTRICK,1,28,,emerald,1.0,28.0,
+species:shiftry,GALELORD,1.3,59.6,,emerald,1.3,59.6,
+species:taillow,HAWKBATKIT,0.3,2.3,,emerald,0.3,2.3,
+species:swellow,HAWKBAT,0.7,19.8,,emerald,0.7,19.8,
+species:wingull,SHYYYOLET,0.8,10,,scaled,0.6,9.5,shyyyo chick
+species:pelipper,SHYYYO,4,300,4,canon,1.2,28.0,"shyyyo bird, carries riders"
+species:ralts,AURALET,0.4,6.6,,emerald,0.4,6.6,
+species:kirlia,AURADANCER,0.8,20.2,,emerald,0.8,20.2,
+species:gardevoir,AURAWARDEN,1.6,48.4,,emerald,1.6,48.4,
+species:surskit,SKIMBUG,0.5,1.7,,emerald,0.5,1.7,
+species:masquerain,BOGWING,0.8,3.6,,emerald,0.8,3.6,
+species:shroomish,FELUSPORE,0.4,4.5,,emerald,0.4,4.5,
+species:breloom,SPOREFIST,1.2,39.2,,emerald,1.2,39.2,
+species:slakoth,SLOTHLET,0.8,24,,emerald,0.8,24.0,
+species:vigoroth,SLOTHFURY,1.4,46.5,,emerald,1.4,46.5,
+species:slaking,SLOTHKING,2,130.5,,emerald,2.0,130.5,
+species:abra,MISTKIN,0.9,19.5,,emerald,0.9,19.5,
+species:kadabra,MISTWEAVER,1.3,56.5,,emerald,1.3,56.5,
+species:alakazam,MISTSAGE,1.5,48,,emerald,1.5,48.0,
+species:nincada,HIVEGRUB,0.5,5.5,,emerald,0.5,5.5,
+species:ninjask,HIVEDART,0.8,12,,emerald,0.8,12.0,
+species:shedinja,GEOZOMBIE,1.7,5,,canon,0.8,1.2,a Geonosian is about 1.7 m; the shell is empty
+species:whismur,KOWAKIAN,0.6,16.3,,emerald,0.6,16.3,
+species:loudred,CACKLER,1,40.5,,emerald,1.0,40.5,
+species:exploud,BOOMCACKLE,1.5,84,,emerald,1.5,84.0,
+species:makuhita,MOGUCUB,1,86.4,,emerald,1.0,86.4,
+species:hariyama,MOGU,2.3,253.8,,emerald,2.3,253.8,
+species:goldeen,HORNFIN,0.6,15,0.6,emerald,0.6,15.0,
+species:seaking,KINGFIN,1.3,39,1.3,emerald,1.3,39.0,
+species:magikarp,COLOFRY,0.9,10,0.9,emerald,0.9,10.0,
+species:gyarados,COLOCLAW,20,2000,10,scaled,6.5,235.0,"colo claw fish, about 40 m in canon, halved"
+species:azurill,BLOOPKIT,0.2,2,,emerald,0.2,2.0,
+species:marill,BLOOPRAT,0.4,8.5,,emerald,0.4,8.5,
+species:azumarill,BLOOPHARE,0.8,28.5,,emerald,0.8,28.5,
+species:geodude,ROCKWART,0.4,20,,emerald,0.4,20.0,
+species:graveler,BOULDWART,1,105,,emerald,1.0,105.0,
+species:golem,MEGAWART,1.4,300,,emerald,1.4,300.0,
+species:nosepass,LODESTAR,1,97,,emerald,1.0,97.0,
+species:skitty,LOTHKIT,0.6,11,,emerald,0.6,11.0,
+species:delcatty,LOTHCAT,1.1,32.6,,emerald,1.1,32.6,
+species:zubat,MYNOCK,0.8,7.5,,emerald,0.8,7.5,
+species:golbat,MYNOCKMAW,1.6,55,1.6,emerald,1.6,55.0,
+species:crobat,VOIDMYNOCK,1.8,75,,emerald,1.8,75.0,
+species:tentacool,DIANOGLET,1.5,20,,scaled,0.9,45.5,young dianoga
+species:tentacruel,DIANOGA,7,300,,canon,1.6,55.0,dianogas grow to about 7 m
+species:sableye,KYBERIMP,0.5,11,,emerald,0.5,11.0,
+species:mawile,BUZZDROID,0.3,2,,canon,0.6,11.5,buzz droid
+species:aron,SPIDROID,2,400,,canon,0.4,60.0,"dwarf spider droid, 1.98 m"
+species:lairon,OCTUPTARRA,3.8,800,,canon,0.9,120.0,"octuptarra droid, 3.8 m"
+species:aggron,PERSUADER,13.5,2000,13.5,canon,2.1,360.0,"NR-N99 Persuader tank droid, 13.5 m long"
+species:machop,B1 DROID,1.9,50,,canon,0.8,19.5,"B1 battle droid, 1.91 m"
+species:machoke,B2 DROID,2,150,,canon,1.5,70.5,"B2 super battle droid, about 2 m and heavy"
+species:machamp,BX DROID,1.9,90,,canon,1.6,130.0,"BX commando droid, 1.91 m"
+species:meditite,ZENKIT,0.6,11.2,,emerald,0.6,11.2,
+species:medicham,ZENAPE,1.3,31.5,,emerald,1.3,31.5,
+species:electrike,KATHPUP,0.6,15.2,,emerald,0.6,15.2,
+species:manectric,KATHHOUND,1.5,40.2,,emerald,1.5,40.2,
+species:plusle,PIT DROID,1.2,30,,canon,0.4,4.2,"pit droid, 1.19 m"
+species:minun,GONK,1.1,80,,canon,0.4,4.2,GNK power droid
+species:magnemite,MOUSEDROID,0.3,6,,emerald,0.3,6.0,
+species:magneton,MOUSESWARM,1,60,,emerald,1.0,60.0,
+species:voltorb,REMOTE,0.1,0.5,,canon,0.5,10.4,"Jedi training remote, fist-sized"
+species:electrode,SEEKERBALL,0.3,3,,scaled,1.2,66.6,"combat remote, bigger than a training remote"
+species:volbeat,GLOWFLY,0.7,17.7,,emerald,0.7,17.7,
+species:illumise,LUMIFLY,0.6,17.7,,emerald,0.6,17.7,
+species:oddish,GNARLSPAWN,0.5,5.4,,emerald,0.5,5.4,
+species:gloom,STINKROOT,0.8,8.6,,emerald,0.8,8.6,
+species:vileplume,STINKBLOOM,1.2,18.6,,emerald,1.2,18.6,
+species:bellossom,SUNBLOOM,0.4,5.8,,emerald,0.4,5.8,
+species:doduo,KAADU,2,150,,canon,1.4,39.2,"kaadu, about 2 m"
+species:dodrio,KAADULORD,2.4,220,,scaled,1.8,85.2,kaadu herd leader
+species:roselia,FELUROSE,0.3,2,,emerald,0.3,2.0,
+species:gulpin,SARLACLET,0.4,10.3,,emerald,0.4,10.3,
+species:swalot,SARLACC,3,1500,,scaled,1.7,80.0,sarlacc mouth; canon bodies run far underground
+species:carvanha,OPEEFRY,1,30,1,scaled,0.8,20.8,opee fry
+species:sharpedo,OPEEKILLER,20,2000,20,canon,1.8,88.8,"opee sea killer, about 20 m"
+species:wailmer,AIWHALET,3,300,3,scaled,2.0,130.0,aiwha calf
+species:wailord,AIWHA,15,2000,15,canon,14.5,398.0,"aiwha, about 15 m"
+species:numel,BANTHACALF,0.9,80,,scaled,0.7,24.0,bantha calf
+species:camerupt,BANTHA,2.5,2000,,canon,1.9,220.0,"bantha, about 2.5 m; canon weight is higher, 2,000 kg is the Datapad limit"
+species:slugma,LAVAGRUB,0.7,35,,emerald,0.7,35.0,
+species:magcargo,LAVAFLEA,3,600,,canon,0.8,55.0,"lava flea, big enough to ride"
+species:torkoal,SMELTER,0.5,80.4,,emerald,0.5,80.4,
+species:grimer,MUCKLING,0.9,30,,emerald,0.9,30.0,
+species:muk,MUCKMOUND,1.2,30,,emerald,1.2,30.0,
+species:koffing,BELDONLET,1.2,2,,scaled,0.6,1.0,beldon calf (canon beldons are kilometres wide)
+species:weezing,BELDON,20,500,,scaled,1.2,9.5,"beldon, scaled down from kilometres; a gas-bag, light for its size"
+species:spoink,PUFFERPIG,0.7,30.6,,emerald,0.7,30.6,
+species:grumpig,PUFFERBOAR,0.9,71.5,,emerald,0.9,71.5,
+species:sandshrew,DEWLING,0.5,15,,scaled,0.6,12.0,dewback hatchling
+species:sandslash,DEWBACK,1.5,350,,canon,1.0,29.5,dewbacks carry an armoured trooper
+species:spinda,WOBBLEKIT,1.1,5,,emerald,1.1,5.0,
+species:skarmory,VULTURE,3.5,1200,,canon,1.7,50.5,"vulture droid, 3.5 m long"
+species:trapinch,KRAYTHATCH,0.7,15,,emerald,0.7,15.0,
+species:vibrava,KRAYTLING,3,150,,scaled,1.1,15.3,young krayt
+species:flygon,KRAYT,20,2000,20,scaled,2.0,82.0,"krayt dragon, longer in canon"
+species:cacnea,FUNNELBUD,0.4,51.3,,emerald,0.4,51.3,
+species:cacturne,DUNEHUSK,1.3,77.4,,emerald,1.3,77.4,
+species:swablu,VELKLET,0.4,1.2,,emerald,0.4,1.2,
+species:altaria,VELKER,8,600,8,scaled,1.1,20.6,"velker, a large cloud predator"
+species:zangoose,NEXU,1,90,,canon,1.3,40.3,"nexu, about 1 m tall"
+species:seviper,KOUHUN,0.3,0.2,0.3,canon,2.7,52.5,"kouhun, a small centipede"
+species:lunatone,KYBERMOON,1,168,,emerald,1.0,168.0,
+species:solrock,KYBERSUN,1.2,154,,emerald,1.2,154.0,
+species:barboach,BOGWHISKR,0.4,1.9,0.4,emerald,0.4,1.9,
+species:whiscash,BOGTITAN,0.9,23.6,0.9,emerald,0.9,23.6,
+species:corphish,CRABDROID,0.6,11.5,,emerald,0.6,11.5,
+species:crawdaunt,MUCKRAKER,1.5,200,,canon,1.1,32.8,"LM-432 crab droid, 1.49 m"
+species:baltoy,HOLOSHARD,0.1,0.5,,canon,0.5,21.5,a holocron shard fits in a hand
+species:claydol,HOLOCRON,0.3,2,,canon,1.5,108.0,holocrons are hand-held
+species:lileep,SEAFROND,1,23.8,,emerald,1.0,23.8,
+species:cradily,FRONDTITAN,1.5,60.4,,emerald,1.5,60.4,
+species:anorith,SHELLHUSK,0.7,12.5,,emerald,0.7,12.5,
+species:armaldo,ARMORCLAW,1.5,68.2,,emerald,1.5,68.2,
+species:igglybuff,LULLAKIT,0.3,1,,emerald,0.3,1.0,
+species:jigglypuff,LULLAPUFF,0.5,5.5,,emerald,0.5,5.5,
+species:wigglytuff,LULLADIVA,1,12,,emerald,1.0,12.0,
+species:feebas,DULLFIN,0.6,7.4,0.6,emerald,0.6,7.4,
+species:milotic,SHIMMERFIN,6.2,162,6.2,emerald,6.2,162.0,
+species:castform,CLIMADROID,0.3,0.8,,emerald,0.3,0.8,
+species:staryu,STARCORAL,0.8,34.5,,emerald,0.8,34.5,
+species:starmie,NOVACORAL,1.1,80,,emerald,1.1,80.0,
+species:kecleon,TAOZIN,2.5,300,,canon,1.0,22.0,taozin
+species:shuppet,ECHOWISP,0.6,2.3,,emerald,0.6,2.3,
+species:banette,HOLLOWDOLL,1.1,12.5,,emerald,1.1,12.5,
+species:duskull,WRAITHLET,0.8,15,,emerald,0.8,15.0,
+species:dusclops,SITHWRAITH,1.6,30.6,,emerald,1.6,30.6,
+species:tropius,THRANTA,6,800,6,canon,2.0,100.0,thranta
+species:chimecho,TEMPLEBELL,0.6,1,,emerald,0.6,1.0,
+species:absol,LOTHWOLF,2.4,400,,canon,1.2,47.0,loth-wolf
+species:vulpix,VULPTEX,0.6,9.9,,emerald,0.6,9.9,
+species:ninetales,VULPTEXA,1.1,19.9,,emerald,1.1,19.9,
+species:pichu,IONKIT,0.3,2,,emerald,0.3,2.0,
+species:pikachu,IONRAT,0.4,6,,emerald,0.4,6.0,
+species:raichu,IONLORD,0.8,30,,emerald,0.8,30.0,
+species:psyduck,BOGDUCK,0.8,19.6,,emerald,0.8,19.6,
+species:golduck,BOGDRAKE,1.7,76.6,,emerald,1.7,76.6,
+species:wynaut,YSALAKIT,0.2,0.5,0.2,canon,0.6,14.0,ysalamiri hatchling
+species:wobbuffet,YSALAMIRI,0.5,3,0.5,canon,1.3,28.5,"ysalamiri, half a metre"
+species:natu,CONVORLET,0.2,2,,emerald,0.2,2.0,
+species:xatu,CONVOR,0.5,3,0.5,canon,1.5,15.0,convors are small owls
+species:girafarig,FALUMPASET,3,900,,canon,1.5,41.5,falumpaset
+species:phanpy,MUDHORNLET,0.8,80,,scaled,0.5,33.5,mudhorn calf
+species:donphan,MUDHORN,3,1500,,canon,1.1,120.0,mudhorn
+species:pinsir,KILLIK,1.5,55,,emerald,1.5,55.0,
+species:heracross,HORNBEETLE,1.5,54,,emerald,1.5,54.0,
+species:rhyhorn,RANCORPUP,1.5,200,,scaled,1.0,115.0,rancor pup
+species:rhydon,RANCOR,5,1650,,canon,1.9,120.0,"rancor, 5 m and 1,650 kg"
+species:snorunt,WAMPLET,0.9,30,,scaled,0.7,16.8,wampa cub
+species:glalie,WAMPA,3,150,,canon,1.5,256.5,"wampa, about 3 m"
+species:spheal,SNOWSEAL,0.8,39.5,,emerald,0.8,39.5,
+species:sealeo,ICESEAL,1.1,87.6,,emerald,1.1,87.6,
+species:walrein,TUSKWALRUS,1.4,150.6,,emerald,1.4,150.6,
+species:clamperl,PEARLCLAM,0.4,52.5,,emerald,0.4,52.5,
+species:huntail,DEEPEEL,1.7,27,1.7,emerald,1.7,27.0,
+species:gorebyss,SILKEEL,1.8,22.6,1.8,emerald,1.8,22.6,
+species:relicanth,RELICFISH,1,23.4,1,emerald,1.0,23.4,
+species:corsola,CORALITH,0.6,5,,emerald,0.6,5.0,
+species:chinchou,LUMIRAY,0.5,12,0.5,emerald,0.5,12.0,
+species:lanturn,LUMIDEEP,1.2,22.5,1.2,emerald,1.2,22.5,
+species:luvdisc,HEARTFIN,0.6,8.7,0.6,emerald,0.6,8.7,
+species:horsea,SEASTEED,0.4,8,,emerald,0.4,8.0,
+species:seadra,SPINESTEED,1.2,25,,emerald,1.2,25.0,
+species:kingdra,STORMSTEED,1.8,152,1.8,emerald,1.8,152.0,
+species:bagon,DACTHATCH,0.6,15,,scaled,0.6,42.1,dactillion hatchling
+species:shelgon,DACTSHELL,1.5,150,,scaled,1.1,110.5,dactillion in its molt
+species:salamence,DACTILLION,4,400,4,canon,1.5,102.6,"dactillion, ridden by Utapauns"
+species:beldum,R1 UNIT,1.8,120,,canon,0.6,95.2,"R1 astromech, a tall droid"
+species:metang,R4 UNIT,1,40,,canon,1.2,202.5,R4 astromech
+species:metagross,R2 UNIT,1,32,,canon,1.6,550.0,"R2 astromech, 0.96 m and 32 kg"
+species:regirock,ROCKWARDEN,1.7,230,,emerald,1.7,230.0,
+species:regice,ICEWARDEN,1.8,175,,emerald,1.8,175.0,
+species:registeel,DURAWARDEN,1.9,205,,emerald,1.9,205.0,
+species:latias,ASHLA,1.4,40,,emerald,1.4,40.0,
+species:latios,BOGAN,2,60,,emerald,2.0,60.0,
+species:kyogre,SANDO,25,2000,25,scaled,4.5,352.0,"sando aqua monster, about 160 m in canon"
+species:groudon,GREATKRAYT,28,2000,28,scaled,3.5,950.0,"greater krayt dragon, hundreds of metres in canon"
+species:rayquaza,EXOGORTH,30,2000,,scaled,7.0,206.5,"exogorth, about 900 m in canon, at the Datapad limit"
+species:jirachi,WHILLSTAR,0.3,1.1,,emerald,0.3,1.1,
+species:deoxys,SHIFTSTAR,1.7,60.8,,emerald,1.7,60.8,
+species:bulbasaur,SPROUTLIZ,0.7,6.9,,emerald,0.7,6.9,
+species:ivysaur,BUDLIZARD,1,13,,emerald,1.0,13.0,
+species:venusaur,BLOOMBEAST,2,100,,emerald,2.0,100.0,
+species:charmander,EMBERLIZ,0.6,8.5,,emerald,0.6,8.5,
+species:charmeleon,MAGMANDER,1.1,19,,emerald,1.1,19.0,
+species:charizard,LAVADRAGON,1.7,90.5,,emerald,1.7,90.5,
+species:squirtle,SHELLPUP,0.5,9,,emerald,0.5,9.0,
+species:wartortle,SHELLWARD,1,22.5,,emerald,1.0,22.5,
+species:blastoise,TORPEDTURT,1.6,85.5,,emerald,1.6,85.5,
+species:caterpie,NEEDLEWORM,0.3,2.9,,emerald,0.3,2.9,
+species:metapod,HUSKPOD,0.7,9.9,,emerald,0.7,9.9,
+species:butterfree,SKYMOTH,1.1,32,1.1,emerald,1.1,32.0,
+species:weedle,STINGWORM,0.3,3.2,,emerald,0.3,3.2,
+species:kakuna,STINGPOD,0.6,10,,emerald,0.6,10.0,
+species:beedrill,STINGWASP,1,29.5,,emerald,1.0,29.5,
+species:pidgey,PORGLET,0.15,0.4,,canon,0.3,1.8,porg chicks fit in a hand
+species:pidgeotto,PORG,0.35,2,,canon,1.1,30.0,a grown porg is about a third of a metre
+species:pidgeot,PORGMAJOR,0.6,5,0.6,scaled,1.5,39.5,"an elder porg, bigger than canon porgs"
+species:rattata,WOMPRAT,0.9,20,,canon,0.3,3.5,womp rats are about 2 m long nose to tail
+species:raticate,WOMPMAW,1.5,60,,scaled,0.7,18.5,a huge womp rat
+species:spearow,SANDHAWK,0.3,2,,emerald,0.3,2.0,
+species:fearow,DUNECONDOR,1.2,38,1.2,emerald,1.2,38.0,
+species:ekans,SANDASP,2,6.9,1,emerald,2.0,6.9,
+species:arbok,DUNECOBRA,3.5,65,1.8,emerald,3.5,65.0,
+species:nidoran-f,RONTOCALF,1.5,60,,scaled,0.4,7.0,ronto calf
+species:nidorina,RONTOLING,4,400,,scaled,0.8,20.0,young ronto
+species:nidoqueen,RONTO,10,1800,,canon,1.3,60.0,rontos stand about 10 m
+species:nidoran-m,REEKCALF,0.7,60,,scaled,0.5,9.0,reek calf
+species:nidorino,REEKHORN,1.4,400,,scaled,0.9,19.5,young reek
+species:nidoking,REEK,2.4,1500,,canon,1.4,62.0,"arena reek, over 2 m at the shoulder"
+species:clefairy,MOONLET,0.6,7.5,,emerald,0.6,7.5,
+species:clefable,MOONDANCER,1.3,40,,emerald,1.3,40.0,
+species:paras,GELAGRUB,0.3,5.4,,emerald,0.3,5.4,
+species:parasect,GELASPORE,1,29.5,,emerald,1.0,29.5,
+species:venonat,GNATLING,1,30,,emerald,1.0,30.0,
+species:venomoth,GNATMOTH,1.5,12.5,,emerald,1.5,12.5,
+species:diglett,BURROWNUB,0.2,0.8,,emerald,0.2,0.8,
+species:dugtrio,BURROWTRIO,0.7,33.3,,emerald,0.7,33.3,
+species:meowth,TUSKCAT,0.4,4.2,,emerald,0.4,4.2,
+species:persian,TUSKLYNX,1,32,,emerald,1.0,32.0,
+species:mankey,GUNDARKLET,0.8,30,,scaled,0.5,28.0,gundark young
+species:primeape,GUNDARK,2,150,,canon,1.0,32.0,"four-armed gundark, about 2 m"
+species:growlithe,AKKPUP,0.7,19,,emerald,0.7,19.0,
+species:arcanine,AKKDOG,1.9,155,,emerald,1.9,155.0,
+species:poliwag,WORRTLET,0.6,12.4,,emerald,0.6,12.4,
+species:poliwhirl,WORRT,1,20,,emerald,1.0,20.0,
+species:poliwrath,WORRTBRUTE,1.3,54,,emerald,1.3,54.0,
+species:bellsprout,SNAPBUD,0.7,4,,emerald,0.7,4.0,
+species:weepinbell,SNAPTRAP,1,6.4,,emerald,1.0,6.4,
+species:victreebel,MAWFLOWER,1.7,15.5,,emerald,1.7,15.5,
+species:ponyta,EOPIE,1.6,250,,canon,1.0,30.0,"eopie, about 1.6 m"
+species:rapidash,FATHIER,3,900,,canon,1.7,95.0,racing fathier
+species:slowpoke,SWAMPSLUG,1.2,36,,emerald,1.2,36.0,
+species:slowbro,SLUGSHELL,1.6,78.5,,emerald,1.6,78.5,
+species:farfetchd,NUNA,0.8,15,,emerald,0.8,15.0,
+species:seel,SIRENPUP,1.1,90,,emerald,1.1,90.0,
+species:dewgong,THALASIREN,2.5,400,,canon,1.7,120.0,thala-siren
+species:shellder,SPIKECLAM,0.3,4,,emerald,0.3,4.0,
+species:cloyster,FORTCLAM,1.5,132.5,,emerald,1.5,132.5,
+species:gastly,SITHWISP,1.3,0.1,,emerald,1.3,0.1,
+species:haunter,SITHSHADE,1.6,0.1,,emerald,1.6,0.1,
+species:gengar,SITHSPECTR,1.5,40.5,,emerald,1.5,40.5,
+species:onix,DURASLUG,8.8,210,4.5,emerald,8.8,210.0,
+species:drowzee,MINDPROBE,0.3,4,,canon,1.0,32.4,floating interrogation droid
+species:hypno,INTERROGTR,0.5,15,,canon,1.6,75.6,IT-O interrogator droid
+species:krabby,SANDCRAB,0.4,6.5,,emerald,0.4,6.5,
+species:kingler,KINGCRAB,1.3,60,,emerald,1.3,60.0,
+species:exeggcute,WROSEED,0.4,2.5,,emerald,0.4,2.5,
+species:exeggutor,WROSHYR,2,120,,emerald,2.0,120.0,
+species:cubone,SKULLKIT,0.4,6.5,,emerald,0.4,6.5,
+species:marowak,BONELORD,1,45,,emerald,1.0,45.0,
+species:hitmonlee,KICKDROID,1.5,49.8,,emerald,1.5,49.8,
+species:hitmonchan,PUNCHDROID,1.4,50.2,,emerald,1.4,50.2,
+species:lickitung,LAPLIZARD,1.2,65.5,,emerald,1.2,65.5,
+species:chansey,FX-6 UNIT,1.7,70,,canon,1.1,34.6,FX-6 medical droid
+species:tangela,RATHTAR,3,500,,canon,1.0,35.0,rathtar
+species:kangaskhan,BROODBEAST,2.2,80,,emerald,2.2,80.0,
+species:mr-mime,WALLMIMIC,1.3,54.5,,emerald,1.3,54.5,
+species:scyther,ACKLAY,3,1500,,canon,1.5,56.0,"acklay, about 3 m"
+species:jynx,NARGLATCH,1.8,250,,canon,1.4,40.6,narglatch
+species:electabuzz,IG UNIT,2,140,,canon,1.1,30.0,"IG-series droid, IG-88 is 1.96 m"
+species:magmar,LAVASPITTR,1.3,44.5,,emerald,1.3,44.5,
+species:tauros,ORRAY,2.2,600,,canon,1.4,88.4,orray
+species:lapras,PURRGIL,20,2000,20,scaled,2.5,220.0,"purrgil, hundreds of metres in canon"
+species:ditto,SHIFTBLOB,0.3,4,,emerald,0.3,4.0,
+species:eevee,TOOKA,0.4,5,,canon,0.3,6.5,tooka cat
+species:vaporeon,TIDETOOKA,1,29,,emerald,1.0,29.0,
+species:jolteon,VOLTTOOKA,0.8,24.5,,emerald,0.8,24.5,
+species:flareon,FLARETOOKA,0.9,25,,emerald,0.9,25.0,
+species:porygon,3PO UNIT,1.7,75,,canon,0.8,36.5,"3PO protocol droid, C-3PO is 1.67 m"
+species:omanyte,SPIRALITH,0.4,7.5,,emerald,0.4,7.5,
+species:omastar,SPIRALORD,1,35,,emerald,1.0,35.0,
+species:kabuto,DOMESHELL,0.5,11.5,,emerald,0.5,11.5,
+species:kabutops,SCYTHESHEL,1.3,40.5,,emerald,1.3,40.5,
+species:aerodactyl,FOSSILWING,1.8,59,1.8,emerald,1.8,59.0,
+species:snorlax,HAPPABORE,3.2,1200,,canon,2.1,460.0,happabore
+species:articuno,FROSTHAWK,1.7,55.4,,emerald,1.7,55.4,
+species:zapdos,STORMHAWK,1.6,52.6,,emerald,1.6,52.6,
+species:moltres,EMBERHAWK,2,60,,emerald,2.0,60.0,
+species:dratini,WYRMLING,1.8,3.3,0.9,emerald,1.8,3.3,
+species:dragonair,DRAGNSNAKE,4,16.5,2.5,emerald,4.0,16.5,
+species:dragonite,VARACTYL,4,900,,canon,2.2,210.0,varactyl
+species:mewtwo,PROTOCLONE,2,122,,emerald,2.0,122.0,
+species:mew,PRIMORDIAL,0.4,4,,emerald,0.4,4.0,
+species:chikorita,LEAFKIT,0.9,6.4,,emerald,0.9,6.4,
+species:bayleef,BUDFAWN,1.2,15.8,,emerald,1.2,15.8,
+species:meganium,BLOOMSTAG,1.8,100.5,,emerald,1.8,100.5,
+species:cyndaquil,CINDERMOLE,0.5,7.9,,emerald,0.5,7.9,
+species:quilava,FLAMEMOLE,0.9,19,,emerald,0.9,19.0,
+species:typhlosion,BLAZEMOLE,1.7,79.5,,emerald,1.7,79.5,
+species:totodile,SNAPPER,0.6,9.5,,emerald,0.6,9.5,
+species:croconaw,BOGCROC,1.1,25,,emerald,1.1,25.0,
+species:feraligatr,SWAMPJAW,2.3,88.8,,emerald,2.3,88.8,
+species:sentret,SANDMEER,0.8,6,,emerald,0.8,6.0,
+species:furret,DUNEFERRET,1.8,32.5,1.8,emerald,1.8,32.5,
+species:hoothoot,DUSKOWL,0.7,21.2,,emerald,0.7,21.2,
+species:noctowl,NIGHTOWL,1.6,40.8,,emerald,1.6,40.8,
+species:ledyba,DOTBUG,1,10.8,,emerald,1.0,10.8,
+species:ledian,DOTFLYER,1.4,35.6,,emerald,1.4,35.6,
+species:spinarak,KRYKLING,0.5,8.5,,emerald,0.5,8.5,
+species:ariados,KRYKNA,2,250,,canon,1.1,33.5,"krykna, a giant spider"
+species:cleffa,MOONSPECK,0.3,3,,emerald,0.3,3.0,
+species:togepi,LUCKEGG,0.3,1.5,,emerald,0.3,1.5,
+species:togetic,LUCKWING,0.6,3.2,,emerald,0.6,3.2,
+species:mareep,NERFLET,0.7,30,,scaled,0.6,7.8,nerf lamb
+species:flaaffy,NERF,1.4,300,,canon,0.8,13.3,"nerf, the size of a cow"
+species:ampharos,NERFBEACON,1.8,450,,scaled,1.4,61.5,big nerf
+species:sudowoodo,GNARLTREE,1.2,38,,emerald,1.2,38.0,
+species:politoed,WORRTKING,1.1,33.9,,emerald,1.1,33.9,
+species:hoppip,PUFFSEED,0.4,0.5,,emerald,0.4,0.5,
+species:skiploom,PUFFBLOOM,0.6,1,,emerald,0.6,1.0,
+species:jumpluff,PUFFCLOUD,0.8,3,,emerald,0.8,3.0,
+species:aipom,TAILMONK,0.8,11.5,,emerald,0.8,11.5,
+species:sunkern,SUNSEED,0.3,1.8,,emerald,0.3,1.8,
+species:sunflora,TWINSUNFLR,0.8,8.5,,emerald,0.8,8.5,
+species:yanma,CAN-CELL,1.2,38,1.2,emerald,1.2,38.0,
+species:wooper,OGGDOLET,0.4,8.5,,emerald,0.4,8.5,
+species:quagsire,OGGDO,2,250,,canon,1.4,75.0,oggdo
+species:espeon,JEDITOOKA,0.9,26.5,,emerald,0.9,26.5,
+species:umbreon,SITHTOOKA,1,27,,emerald,1.0,27.0,
+species:murkrow,RAWKA,0.5,2.1,,emerald,0.5,2.1,
+species:slowking,SLUGSAGE,2,79.5,,emerald,2.0,79.5,
+species:misdreavus,WAILWISP,0.7,1,,emerald,0.7,1.0,
+species:unown,AUREBESH,0.5,5,,emerald,0.5,5.0,
+species:pineco,DEKALET,0.8,50,,canon,0.6,7.2,droideka rolled up
+species:forretress,DROIDEKA,1.8,70,,canon,1.2,125.8,"droideka standing, 1.83 m"
+species:dunsparce,JOOPA,3,200,3,scaled,1.5,14.0,young joopa (adults are enormous)
+species:gligar,SCORPWING,1.1,64.8,,emerald,1.1,64.8,
+species:steelix,STEELSLUG,9.2,400,5,emerald,9.2,400.0,
+species:snubbull,ANOOBLET,0.6,7.8,,emerald,0.6,7.8,
+species:granbull,ANOOBA,1.4,48.7,,emerald,1.4,48.7,
+species:qwilfish,SPINEPUFF,0.5,3.9,0.5,emerald,0.5,3.9,
+species:scizor,MAGNAGUARD,2,150,,canon,1.8,118.0,"IG-100 MagnaGuard, 1.95 m"
+species:shuckle,SHELLSAP,0.6,20.5,,emerald,0.6,20.5,
+species:sneasel,SCRABBLER,0.5,5,,canon,0.9,28.0,ice scrabbler
+species:teddiursa,GORAXCUB,1.5,100,,scaled,0.6,8.8,gorax cub
+species:ursaring,GORAX,15,2000,,scaled,1.8,125.8,"gorax, about 30 m in canon, halved"
+species:swinub,TAUNKIT,0.6,20,,scaled,0.4,6.5,tauntaun kit
+species:piloswine,TAUNTAUN,2,400,,canon,1.1,55.8,tauntaun
+species:remoraid,JETSQUID,0.6,12,0.6,emerald,0.6,12.0,
+species:octillery,OCTOCANNON,0.9,28.5,,emerald,0.9,28.5,
+species:delibird,LIFEDAY,0.9,16,,emerald,0.9,16.0,
+species:mantine,NEEBRAY,8,600,8,scaled,2.1,220.0,"neebray, larger in canon"
+species:houndour,FYRNOCK,0.6,10.8,,emerald,0.6,10.8,
+species:houndoom,FYRNALPHA,1.4,35,,emerald,1.4,35.0,
+species:porygon2,TC UNIT,1.7,70,,canon,0.6,32.5,TC protocol droid
+species:stantler,IKOPI,1.4,71.2,,emerald,1.4,71.2,
+species:smeargle,PAINTKIT,1.2,58,,emerald,1.2,58.0,
+species:tyrogue,TRAINDROID,0.7,21,,emerald,0.7,21.0,
+species:hitmontop,SPINDROID,1.4,48,,emerald,1.4,48.0,
+species:smoochum,NARGLET,0.6,20,,scaled,0.4,6.0,narglatch cub
+species:elekid,IG-RM,1.5,70,,scaled,0.6,23.5,"IG-RM thug droid, a little shorter than canon"
+species:magby,COALKIT,0.7,21.4,,emerald,0.7,21.4,
+species:miltank,SHAAK,1.5,400,,canon,1.2,75.5,shaak
+species:blissey,2-1B UNIT,1.8,100,,canon,1.5,46.8,2-1B surgical droid
+species:raikou,STORMCAT,1.9,178,,emerald,1.9,178.0,
+species:entei,MAGMACAT,2.1,198,,emerald,2.1,198.0,
+species:suicune,TIDECAT,2,187,,emerald,2.0,187.0,
+species:larvitar,ZILLOPUP,1.5,200,,scaled,0.6,72.0,Zillo hatchling
+species:pupitar,ZILLOSHELL,6,1000,,scaled,1.2,152.0,Zillo in its shell
+species:tyranitar,ZILLOBEAST,30,2000,,scaled,2.0,202.0,"Zillo Beast, about 100 m in canon, at the Datapad limit"
+species:lugia,TIDEWING,5.2,216,5.2,emerald,5.2,216.0,
+species:ho-oh,DAWNWING,3.8,199,,emerald,3.8,199.0,
+species:celebi,TIMEWISP,0.6,5,,emerald,0.6,5.0,

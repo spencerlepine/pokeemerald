@@ -10,7 +10,7 @@ Steps (run all with no argument, or name some):
            a tinted battle palette (graphics/pokemon/<name>/normal.pal, made once, never overwritten).
   dex      The Datapad: the new species go after DEOXYS in both lists (regional and national, numbers in
            new_species.csv), the alphabetical order is rebuilt from the Star Wars names, and the new species
-           are sorted into the weight and height orders.
+           are sorted into the weight and height orders. tools/port_sizes.py owns the sizes after that (run it next).
   moves    The net-new moves (mapping/new_moves.csv: a clone of an existing move with a new name, description
            and animation) and the learnset swaps in mapping/move_learnsets.csv (level-up learnsets, trainer
            parties and Grand Arena sets).
@@ -463,6 +463,8 @@ def port_dex(rows, stats):
         old = get_block_dex(ent.text, f"NATIONAL_DEX_{k}")
         if old:
             cat = re.search(r'\.categoryName = _\("([^"]*)"\)', old).group(1)  # port_names.py owns the category
+            # port_sizes.py owns the size screen: keep its scales once the entry exists
+            scale = {f: re.search(rf"\.{f} = (-?\d+)", old).group(1) for f in scale}
         block = (f"    [NATIONAL_DEX_{k}] = // {r['sw_name']} (mapping/new_species.csv)\n    {{\n"
                  f'        .categoryName = _("{cat}"),\n'
                  f"        .height = {round(float(r['height_m']) * 10)},\n"
@@ -506,10 +508,8 @@ def port_orders(rows):
     for order, idx in (("Weight", 1), ("Height", 0)):
         m = re.search(rf"(const u16 gPokedexOrder_{order}\[\] =\n\{{\n)(.*?)(\}};)", o.text, re.S)
         cur = [c for c in re.findall(r"NATIONAL_DEX_(\w+)", m.group(2)) if c not in [r["slot_key"] for r in rows]]
-        for r in rows:
-            v = hw[r["slot_key"]][idx]
-            i = next((j for j, c in enumerate(cur) if hw[c][idx] > v), len(cur))
-            cur.insert(i, r["slot_key"])
+        cur += [r["slot_key"] for r in rows]
+        cur.sort(key=lambda c: (hw[c][idx], nat.index(c)))  # the same order port_sizes.py writes
         o.text = o.text[:m.start(2)] + "".join(f"    NATIONAL_DEX_{c},\n" for c in cur) + o.text[m.end(2):]
 
 

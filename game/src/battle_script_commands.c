@@ -771,6 +771,9 @@ static const u16 sNaturePowerMoves[] =
 };
 
 // format: min. weight (hectograms), base power
+// Low Kick reads Emerald's weights, not the Star Wars Datapad weights (wiki/tools/port_sizes.py)
+#include "data/pokemon/battle_weights.h"
+
 static const u16 sWeightToDamageTable[] =
 {
     100, 20,
@@ -9469,7 +9472,7 @@ static void Cmd_weightdamagecalculation(void)
     s32 i;
     for (i = 0; sWeightToDamageTable[i] != 0xFFFF; i += 2)
     {
-        if (sWeightToDamageTable[i] > GetPokedexHeightWeight(SpeciesToNationalPokedexNum(gBattleMons[gBattlerTarget].species), 1))
+        if (sWeightToDamageTable[i] > sBattleWeights[SpeciesToNationalPokedexNum(gBattleMons[gBattlerTarget].species)])
             break;
     }
 

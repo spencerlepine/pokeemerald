@@ -47,6 +47,9 @@ rebuild. Run `boot` once after every build (savestates do not carry over), then 
   throw every 6 frames (`slice_throw_*`: the spike, the sparks, the cyan fade) and the "Sliced!" message.
   `slice_pod` is the same throw at the warden as it is, to check a normal pod still looks and sounds like one.
 - `creatures`: a party of net-new species with the net-new moves (party icons, summary pages, a battle).
+  `dex_size`: the Datapad size page ("SIZE COMPARED TO ...") for each national No. in `DEX_SIZE_NUMS` (default
+  `1 25 382 383 384`), one shot each (`dex_size_<No>.png`); `DEX_GENDER=1` shows MIRA instead of KAEL; `DEX_SIZE_DEBUG=1` also shoots each B on the way out. It turns
+  the national Datapad on and reopens the Datapad at each number (about 20 s each).
   `creatures_dex`: the Datapad list opened at No. 206 (it writes `sLastSelectedPokemon`) and a new species' page.
 - `people`: each net-new walker (object graphics 76-81, 237-239) drawn on the Mos Pelgo townsfolk, one shot each
   (`people_<id>.png`; `PEOPLE_IDS="237 80"` picks some). It writes the NPCs' `graphicsId` in `gObjectEvents` and

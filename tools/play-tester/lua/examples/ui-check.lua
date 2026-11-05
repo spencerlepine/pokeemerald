@@ -127,6 +127,24 @@ else
     end})
     press("START"); add({wait=30}); press("DOWN"); press("UP"); add({wait=20}); press("A"); shot("01_list", 240)
     press("SELECT"); shot("02_search", 120)
+  elseif SC == "dex_size" then  -- the Datapad size page ("SIZE COMPARED TO ...") for each national No. in DEX_SIZE_NUMS
+    -- national Datapad on and selected; DEX_GENDER=1 shows MIRA's silhouette instead of KAEL's
+    local nums = {}; for n in (os.getenv("DEX_SIZE_NUMS") or "1 25 382 383 384"):gmatch("%d+") do nums[#nums + 1] = tonumber(n) end
+    add({fn=function()
+      setFlag(SYS + 0x36, true); emu:write16(sb1() + VARS + 0x46 * 2, 0x302)
+      local b = emu:read32(E.ADDR.gSaveBlock2Ptr); emu:write8(b + 0x1A, 0xDA); emu:write8(b + 0x19, 1)
+      emu:write8(b + 8, tonumber(os.getenv("DEX_GENDER") or "0"))
+    end})
+    for _, n in ipairs(nums) do
+      add({fn=function() emu:write16(sym("sLastSelectedPokemon"), n - 1) end})
+      press("START"); add({wait=30}); press("DOWN"); press("UP"); add({wait=20}); press("A"); add({wait=240})
+      press("A"); add({wait=200}); press("RIGHT"); add({wait=30}); press("RIGHT"); add({wait=30}); press("A")  -- top bar: AREA CRY SIZE
+      shot(string.format("%03d", n), 150)
+      -- B: size page -> entry -> list -> start menu -> field
+      for b = 1, 4 do press("B"); add({wait=150})
+        if os.getenv("DEX_SIZE_DEBUG") then add({shot=string.format("dex_size_%03d_b%d", n, b)}) end end
+      add({fn=function() log(string.format("dex_size %03d done cb2 %08x", n, emu:read32(CB2))) end})
+    end
   elseif SC == "starnav_reopen" then  -- leave the StarNAV zoomed in, reopen it, then fly from the Fly map
     press("START"); add({wait=30}); press("DOWN"); press("DOWN"); press("DOWN"); press("A"); add({wait=150})
     press("A"); add({wait=150}); press("A"); add({wait=60}); press("B"); add({wait=150})
