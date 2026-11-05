@@ -20,4 +20,7 @@ Work in progress (2026-11-05). The titans are drawn from the films, not from the
   redrawn by the PixelArt Sprite XL LoRA at denoise 0.45-0.6 (`mockups/r7_xl512.py`): at 512 px the model's pixel is
   one chunky pixel, so teeth and eyes survive. `mockups/snap.py` reads it back to 64x48 in 6 colours (5 tones and
   teeth), merges islands under 3 px and outlines it; shown at 2x. `sprites/round6/` holds the nine 128x96 results.
+- Draw, then pixelate (round 7, the owner's method): DreamShaper XL (`112902@126688`) image to image from the
+  picked pose at denoise 0.5-0.8 with a bold cel-shaded illustration prompt (`mockups/r10.py`), then
+  `mockups/illpx.py` turns the drawing into pixel art (cut the page, shrink, quantise, merge islands, outline).
 - `review/round1`: silhouettes from the battle sprites (dropped). `review/round2`: film references, sized to the frame.
