@@ -75,6 +75,16 @@ be redrawn later without touching the maps.
   seam and fails on any cell that still differs (a cell drawn in the nearest palette, when no slot was free, is
   reported and allowed).
 
+- **Layout variants** (`install.write_variants`). Some maps swap to a second layout by script
+  (`setmaplayoutindex`): Route 111 without the Mirage Tower, Route 130's Mirage Island, Route 131's Sky Pillar,
+  the clean Sky Pillar floors, the Shoal Cave high-tide rooms and a few rooms. Each variant gets the ported
+  cells of its map, keeps its own cells only where they differ from vanilla and the port left the cell vanilla,
+  and takes the map's tilesets and border. Their tiles stay in the tileset.
+
+- **Borders** (`install.border_for`). The 2x2 cells drawn past a map's edge. A redrawn area uses an inner blocked
+  cell of its own grid (all 8 neighbours blocked), else its cliff, wall or tree fill tile, else its most common
+  blocked edge tile. Other areas keep the vanilla border.
+
 The game's `ld_script.ld` no longer pins the creature pics to fixed addresses: the full world does not fit
 below them.
 

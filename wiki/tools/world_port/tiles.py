@@ -245,7 +245,8 @@ class Builder:
         if self.mode == "pinned":
             # every vanilla metatile keeps its id; only the tiles of the ones in use (or named by scripts) and
             # the animated slots keep their place, the other slots take the new tiles
-            labelled = {m - N_PRIM_META for m in pins.labels().get(C.sec, set()) if N_PRIM_META <= m < N_PRIM_META + n_sec}
+            labelled = {m - N_PRIM_META for m in pins.labels().get(C.sec, set()) | getattr(C, "extra_live", set())
+                        if N_PRIM_META <= m < N_PRIM_META + n_sec}
             live = sorted({m - N_PRIM_META for m in used} | labelled)
             meta_map = {N_PRIM_META + i: N_PRIM_META + i for i in range(n_sec)}
             kept_tiles = {(int(e) & 0x3FF) - N_PRIM_TILES for i in live for e in S.metatiles[i].reshape(-1)

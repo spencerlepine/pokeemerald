@@ -264,7 +264,7 @@ const u16 gTilesetPalettes_SwAtollonExterior[][16] =
 	INCGFX_U16("data/tilesets/secondary/sw/atollon-exterior/palettes/15.pal", ".gbapal"),
 };
 
-const u32 gTilesetTiles_SwBensHut[] = INCGFX_U32("data/tilesets/secondary/sw/bens-hut/tiles.png", ".4bpp.lz", "-num_tiles 87 -Wnum_tiles");
+const u32 gTilesetTiles_SwBensHut[] = INCGFX_U32("data/tilesets/secondary/sw/bens-hut/tiles.png", ".4bpp.lz", "-num_tiles 86 -Wnum_tiles");
 
 const u16 gTilesetPalettes_SwBensHut[][16] =
 {
@@ -1254,7 +1254,7 @@ const u16 gTilesetPalettes_SwInyusuTor[][16] =
 	INCGFX_U16("data/tilesets/secondary/sw/inyusu-tor/palettes/15.pal", ".gbapal"),
 };
 
-const u32 gTilesetTiles_SwJabbasPalace[] = INCGFX_U32("data/tilesets/secondary/sw/jabbas-palace/tiles.png", ".4bpp.lz", "-num_tiles 364 -Wnum_tiles");
+const u32 gTilesetTiles_SwJabbasPalace[] = INCGFX_U32("data/tilesets/secondary/sw/jabbas-palace/tiles.png", ".4bpp.lz", "-num_tiles 363 -Wnum_tiles");
 
 const u16 gTilesetPalettes_SwJabbasPalace[][16] =
 {
@@ -1562,7 +1562,7 @@ const u16 gTilesetPalettes_SwMosEisleyHangar[][16] =
 	INCGFX_U16("data/tilesets/secondary/sw/mos-eisley-hangar/palettes/15.pal", ".gbapal"),
 };
 
-const u32 gTilesetTiles_SwMosEntha[] = INCGFX_U32("data/tilesets/secondary/sw/mos-entha/tiles.png", ".4bpp.lz", "-num_tiles 385 -Wnum_tiles");
+const u32 gTilesetTiles_SwMosEntha[] = INCGFX_U32("data/tilesets/secondary/sw/mos-entha/tiles.png", ".4bpp.lz", "-num_tiles 384 -Wnum_tiles");
 
 const u16 gTilesetPalettes_SwMosEntha[][16] =
 {
@@ -1628,7 +1628,7 @@ const u16 gTilesetPalettes_SwMosEspaPodraceArena[][16] =
 	INCGFX_U16("data/tilesets/secondary/sw/mos-espa-podrace-arena/palettes/15.pal", ".gbapal"),
 };
 
-const u32 gTilesetTiles_SwMosPelgo[] = INCGFX_U32("data/tilesets/secondary/sw/mos-pelgo/tiles.png", ".4bpp.lz", "-num_tiles 271 -Wnum_tiles");
+const u32 gTilesetTiles_SwMosPelgo[] = INCGFX_U32("data/tilesets/secondary/sw/mos-pelgo/tiles.png", ".4bpp.lz", "-num_tiles 270 -Wnum_tiles");
 
 const u16 gTilesetPalettes_SwMosPelgo[][16] =
 {
@@ -2024,7 +2024,7 @@ const u16 gTilesetPalettes_SwRepublicWreckRoomsB1f[][16] =
 	INCGFX_U16("data/tilesets/secondary/sw/republic-wreck-rooms-b1f/palettes/15.pal", ".gbapal"),
 };
 
-const u32 gTilesetTiles_SwRoute101[] = INCGFX_U32("data/tilesets/secondary/sw/route-101/tiles.png", ".4bpp.lz", "-num_tiles 185 -Wnum_tiles");
+const u32 gTilesetTiles_SwRoute101[] = INCGFX_U32("data/tilesets/secondary/sw/route-101/tiles.png", ".4bpp.lz", "-num_tiles 184 -Wnum_tiles");
 
 const u16 gTilesetPalettes_SwRoute101[][16] =
 {
@@ -2068,7 +2068,7 @@ const u16 gTilesetPalettes_SwRoute102[][16] =
 	INCGFX_U16("data/tilesets/secondary/sw/route-102/palettes/15.pal", ".gbapal"),
 };
 
-const u32 gTilesetTiles_SwRoute103[] = INCGFX_U32("data/tilesets/secondary/sw/route-103/tiles.png", ".4bpp.lz", "-num_tiles 175 -Wnum_tiles");
+const u32 gTilesetTiles_SwRoute103[] = INCGFX_U32("data/tilesets/secondary/sw/route-103/tiles.png", ".4bpp.lz", "-num_tiles 174 -Wnum_tiles");
 
 const u16 gTilesetPalettes_SwRoute103[][16] =
 {
@@ -3146,7 +3146,7 @@ const u16 gTilesetPalettes_SwTipocaCitySupplyDepot[][16] =
 	INCGFX_U16("data/tilesets/secondary/sw/tipoca-city-supply-depot/palettes/15.pal", ".gbapal"),
 };
 
-const u32 gTilesetTiles_SwToscheStation[] = INCGFX_U32("data/tilesets/secondary/sw/tosche-station/tiles.png", ".4bpp.lz", "-num_tiles 316 -Wnum_tiles");
+const u32 gTilesetTiles_SwToscheStation[] = INCGFX_U32("data/tilesets/secondary/sw/tosche-station/tiles.png", ".4bpp.lz", "-num_tiles 315 -Wnum_tiles");
 
 const u16 gTilesetPalettes_SwToscheStation[][16] =
 {

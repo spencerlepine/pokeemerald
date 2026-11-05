@@ -67,6 +67,10 @@ class World:
         from tilegen import gba
         C = TR.build(a)
         pieces = PC.add_pieces(C)
+        if not a.new:
+            # metatiles only a script-swapped layout of this map uses (layout_variants) keep their tiles
+            C.extra_live = {int(v) & 0x3FF for lid in layout_variants().get(a.replaces, ())
+                            for v in variant_cells(lid).ravel()}
         out = None
         if C.syms or foreign:
             P = gba.load_tileset_by_header(C.prim)
@@ -110,17 +114,29 @@ class World:
     def border_for(self, a, r):
         C = r["C"]
         out = r["tileset"]
-        if not a.new:
+        if not a.new and a.mode != "redraw":
             lid = B.base_map(a.replaces)["layout"]
             border = np.frombuffer((B.BASE_GAME / self.base_layouts[lid]["border_filepath"]).read_bytes(), "<u2")
             mids = [int(v) & 0x3FF for v in border]
             if out is None or all(m < TL.N_PRIM_META + len(out["metatiles"]) for m in mids):
                 return border.astype(np.uint16).tobytes()
-        # the most common blocked metatile on the map's edge
+        # a redrawn or new map: what lies beyond its edge is the inside of its own border mass (the most common
+        # blocked metatile with blocked cells all round), else the most common blocked metatile on the edge
         cells = r["raw"] & 0x3FF
         coll = C.coll
-        edge = [(y, x) for y in range(a.h) for x in range(a.w) if y in (0, a.h - 1) or x in (0, a.w - 1)]
-        c = Counter(int(cells[y, x]) for y, x in edge if coll[y, x])
+        inner = [(y, x) for y in range(1, a.h - 1) for x in range(1, a.w - 1)
+                 if all(coll[y + dy, x + dx] for dy in (-1, 0, 1) for dx in (-1, 0, 1))
+                 and (x, y) not in r["piece_cells"]]
+        c = Counter(int(cells[y, x]) for y, x in inner)
+        if not c and a.kind != "interior":
+            # a thin border: the fill tile of its blocked terrain
+            items = TR.autotile_items(a, C.prim, C.sec)
+            c = Counter(mid for row in items for item, role, mid in row
+                        if role == "fill" and mid is not None and item in ("cliff", "wall", "tree")
+                        and (mid < TL.N_PRIM_META or not a.new))     # a new area renumbers secondary ids
+        if not c:
+            edge = [(y, x) for y in range(a.h) for x in range(a.w) if y in (0, a.h - 1) or x in (0, a.w - 1)]
+            c = Counter(int(cells[y, x]) for y, x in edge if coll[y, x])
         if not c:
             c = Counter(int(v) for v in cells.ravel())
         m = c.most_common(1)[0][0] | (1 << 10)
@@ -159,6 +175,54 @@ class World:
                     continue
             out.append(c)
         return out or None
+
+
+_VARIANTS = {}
+
+
+def layout_variants():
+    """{map: [layout ids]}: the other layouts a map's script swaps in (`setmaplayoutindex`), such as Route 111
+    without the Mirage Tower or the Sky Pillar floors once cracked."""
+    if not _VARIANTS:
+        for f in sorted((B.BASE_GAME / "data/maps").glob("*/scripts.inc")):
+            own = B.base_map(f.parent.name)["layout"]
+            ids = sorted(set(re.findall(r"setmaplayoutindex (LAYOUT_\w+)", f.read_text())) - {own})
+            if ids:
+                _VARIANTS[f.parent.name] = ids
+    return _VARIANTS
+
+
+def variant_cells(lid):
+    l = {x["id"]: x for x in B.base_json(LAYOUTS_JSON)["layouts"] if x}[lid]
+    raw = np.frombuffer((B.BASE_GAME / l["blockdata_filepath"]).read_bytes(), "<u2")
+    return raw[:l["height"] * l["width"]].reshape(l["height"], l["width"])     # some vanilla map.bin files carry a spare cell
+
+
+def write_variants(world, a, r, lay, layouts):
+    """A ported map's script-swapped layouts: the port's cells, with the cells the variant changes from the
+    vanilla map taken from the variant where the port left that cell vanilla; same tilesets as the map."""
+    notes = []
+    vmain = r["C"].vanilla_raw
+    if vmain is None:
+        lid = B.base_map(a.replaces)["layout"]
+        vmain = variant_cells(lid)
+    for vid in layout_variants().get(a.replaces, ()):
+        vv = variant_cells(vid)
+        out = r["raw"].copy()
+        if vv.shape == out.shape and vmain.shape == out.shape:
+            take = (vv != vmain) & (out == vmain)
+            out[take] = vv[take]
+            if ((vv != vmain) & ~take).any():
+                notes.append(f"{vid}: {int(((vv != vmain) & ~take).sum())} cells the variant changes are redrawn by the port")
+        else:
+            notes.append(f"{vid}: the map was resized, so the variant is the ported map unchanged")
+        for i, x in enumerate(layouts["layouts"]):
+            if x and x["id"] == vid:
+                layouts["layouts"][i] = dict(x, width=a.w, height=a.h, primary_tileset=lay["primary_tileset"],
+                                             secondary_tileset=lay["secondary_tileset"])
+                B.write_bytes(B.GAME / x["blockdata_filepath"], out.astype("<u2").tobytes())
+                B.write_bytes(B.GAME / x["border_filepath"], world.border_for(a, r))
+    return notes
 
 
 def parent_of(world, a, seen=None):
@@ -308,6 +372,8 @@ def install(scope=None, exclude=(), log=print, foreign=None):
                     if x and x["id"] == l["id"]:
                         layouts["layouts"][i] = l
             layout_id = l["id"]
+            if not a.new and a.replaces in layout_variants():
+                r["C"].notes += write_variants(world, a, r, l, layouts)
         mj = new_map_json(world, a) if a.new else json.loads(json.dumps(B.base_map(a.replaces)))
         if layout_id:
             mj["layout"] = layout_id

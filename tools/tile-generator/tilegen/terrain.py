@@ -429,6 +429,7 @@ def grid_items(grid: list[str], prim: str, sec: str, indoor: bool, kind: str) ->
     return out
 
 
+MIN_OWN_CELLS = 20                     # a secondary's own learned tile counts from this many cells
 THIN = {"strip-h", "strip-v", "tip-n", "tip-e", "tip-s", "tip-w", "single"}
 FILL_FALLBACK = {"ground-path"}        # items whose thin roles vanilla draws with the plain fill tile
 
@@ -448,6 +449,8 @@ def lookup(prim: str, sec: str, item: str, role: str, stats: dict, p: gba.Tilese
     order = ("*", sec) if item.startswith("ground-") else (sec, "*")
     for s in order:
         c = stats.get((prim, s, item, role))
+        if c and s != "*" and sum(c.values()) < MIN_OWN_CELLS and stats.get((prim, "*", item, role)):
+            continue        # a handful of cells in one map is a one-off (a corner by the sea), not the pair's tile
         if c:
             votes = LAYOUT_VOTES.get((prim, s, item, role), Counter())
             return max(c, key=lambda m: (votes[m], c[m]))     # most layouts, then most cells

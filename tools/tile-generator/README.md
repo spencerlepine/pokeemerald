@@ -31,7 +31,8 @@ python -m tilegen terrain build --planet HOTH        # game-format greybox tiles
   and given its role from its neighbours. Its metatile is filed under `terrain:<tileset>:<item>:<role>` in
   `wiki/mapping/terrain.csv`: `metatile_ids` (every vanilla metatile seen, the chosen one first), `use` (the one
   the autotiler draws), `use_set` (`learned`, or `hand` when you set `use` yourself: a hand value is kept across
-  runs and wins; `fill` for a thin path drawn with the plain path tile), `cells`, `planets`, `areas`, `needed_by` (redesigned areas that need it), `status`, `art`
+  runs and wins; `fill` for a thin path drawn with the plain path tile; a secondary's own learned tile seen in fewer
+  than 20 cells, a one-off such as a rock corner by the sea, gives way to the primary's), `cells`, `planets`, `areas`, `needed_by` (redesigned areas that need it), `status`, `art`
   (how the final art is made: `recolour` a vanilla tile in the planet's colours, or `redraw` new pixels),
   `art_from` (the source: the `use` tile, the vanilla item a net-new item is recoloured from, or the fill a
   missing role is drawn from), `art_set` (`planned`, or `hand` when you set `art` yourself: kept across runs),

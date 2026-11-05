@@ -54,7 +54,7 @@ for line in io.lines(os.getenv("SEAM_SPOTS")) do
       teleport(g2, n2, x2, y2)
     end})
     add({wait=150})
-    add({fn=function() dump_tilemaps(name .. ".ref"); emu:screenshot(OUT .. name .. ".ref.png") end})
+    add({fn=function() dump_tilemaps(name .. ".ref"); dump_backup(name .. ".refload"); emu:screenshot(OUT .. name .. ".ref.png") end})
   end
 end
 local i, t = 1, 0
