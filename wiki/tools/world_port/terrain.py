@@ -86,12 +86,27 @@ def autotile_items(area, prim, sec):
     c = catalog()
     ar = c["A"][area.id]
     p = T.pair(prim, sec)
-    names = T.grid_items(area.grid, prim, sec, ar["indoor"], area.kind)
+    names = T.grid_items(visual_grid(area), prim, sec, ar["indoor"], area.kind)
     names = [[T.kit_item(area.planet, n) for n in row] for row in names]
     roles = R.roles(names)
     # a door, warp, slide or ladder tile learned as ground is never used: placeholder instead
     mids = S.tile(names, prim, sec, c["stats"], p, ok=lambda y, x, m: not unsafe(T, p, m, area.grid[y][x]))
     return [[(item, roles[y][x], mids[y][x]) for x, item in enumerate(row)] for y, row in enumerate(names)]
+
+
+def visual_grid(area):
+    """The grid as the tiler draws it: in a redrawn or new area, a building, prop or sign set on rock or trees
+    stands on open ground, so the rock around it is drawn with edges instead of running behind the piece (a statue
+    half sunk into a cliff). Only the look changes: the piece cells stay solid."""
+    g = [list(r) for r in area.grid]
+    if area.mode not in ("vanilla", "hybrid"):
+        from . import pieces as P
+        for p in P.pieces_of(area):
+            for yy in range(p["y"], p["y"] + p["h"]):
+                for xx in range(p["x"], p["x"] + p["w"]):
+                    if 0 <= yy < area.h and 0 <= xx < area.w and g[yy][xx] in "#T":
+                        g[yy][xx] = "."
+    return ["".join(r) for r in g]
 
 
 # behaviours that do something when the player stands on or walks onto the cell: never plain ground or water
