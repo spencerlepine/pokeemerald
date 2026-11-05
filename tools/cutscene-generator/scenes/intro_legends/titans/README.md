@@ -41,6 +41,8 @@ colours into banks 1, 2 and 5 and draws each titan:
   copies share tiles (102 and 112 of the 256 an affine sheet may hold). The camera cuts between the copies as
   it did between Emerald's poses.
 - The EXOGORTH (bank 5) keeps off entries 8, 12, 13 and 14, which the code flashes (13 is the sky band), so it
-  is cut down to 11 colours. It sits on the sky band at (124, 80) as Rayquaza did.
+  is cut down to 11 colours. It stands at the right edge of the sky band, jaws turned to the middle: the code's
+  orb sprite grows there (Rayquaza coiled round it) and would hide a titan in the middle.
+- Framing was measured in the ROM (`scripts/rom-preview.sh`); `review/shipped/` holds the real-speed capture.
 
 To change a titan: replace its PNG in `sprites/final/`, run `export.py`, then build the scene as usual.
