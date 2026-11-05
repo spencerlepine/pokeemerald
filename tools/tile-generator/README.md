@@ -58,8 +58,9 @@ python -m tilegen terrain build --planet HOTH        # game-format greybox tiles
   the plain path. A planet-kit swap on a vanilla layout is placed the same way around the vanilla cells it keeps.
   Cliffs on the General tileset don't use patterns (patterns mixed pieces of different vanilla mountains): they
   take `ROCK_KITS`, the General rock set read off the tileset (0x68-0xAF): edges, outer and inner corners and
-  fill by which of the 8 neighbours are open, a grass and a sand version by the ground beside them, a boulder
-  (0xE0, 0xE2) for a one-cell-wide or lone rock; 0xBE and 0xBF where a side wall meets a rim (read from vanilla
+  fill by which of the 8 neighbours are open, a grass and a sand version by the ground beside them. Rock one
+  cell tall or wide (open on both sides) has no piece, so it is a boulder (0xE0, 0xE2) and the rock behind it is
+  drawn as if it were open, until every rock left is two cells thick; 0xBE and 0xBF where a side wall meets a rim (read from vanilla
   adjacency). Then a repair pass: where two set pieces meet in a way no vanilla General map draws, the cell takes
   the rock piece vanilla does put beside its four neighbours. A cliff by water or on a pair's own ground
   (Lavaridge ash) keeps its pattern tile. `PAIR_OVERRIDE` picks the pair for a redesigned area whose

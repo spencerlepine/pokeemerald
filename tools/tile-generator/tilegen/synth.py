@@ -207,17 +207,29 @@ def rock_kit(names, prim, cand, fixed=None):
     area_kit = grounds.most_common(1)[0][0]
     if area_kit is None:
         return
+    # Peel thin rock: a cell one cell tall or wide (open on both sides) has no piece in the set, so it is a
+    # boulder, and the rock behind it is drawn as if the boulder were open ground. Repeat until every rock left is
+    # at least two cells thick, which the set always joins.
+    mine = lambda y, x: names[y][x] == "cliff" and (fixed is None or fixed[y, x] == T.MISSING) \
+        and kit_of.get((y, x), area_kit) is not None
+    boulders = set()
+    op = lambda y, x: (y, x) in boulders or is_open(y, x)
+    while True:
+        new = {(y, x) for y in range(H) for x in range(W) if mine(y, x) and (y, x) not in boulders
+               and ((op(y - 1, x) and op(y + 1, x)) or (op(y, x - 1) and op(y, x + 1)))}
+        if not new:
+            break
+        boulders |= new
     kitted = set()
     for y in range(H):
         for x in range(W):
-            if names[y][x] != "cliff" or (fixed is not None and fixed[y, x] != T.MISSING):
+            if not mine(y, x):
                 continue
             k = kit_of.get((y, x), area_kit)
-            if k is None:
-                continue
-            r = rock_role(lambda dy, dx: is_open(y + dy, x + dx))
+            r = "tip" if (y, x) in boulders else rock_role(lambda dy, dx: op(y + dy, x + dx))
             cand[y][x] = [(ROCK_KITS[k][r], 1.0)]
-            kitted.add((y, x))
+            if (y, x) not in boulders:
+                kitted.add((y, x))
     _repair(cand, kitted, H, W)
 
 
