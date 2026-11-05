@@ -16,4 +16,8 @@ Work in progress (2026-11-05). The titans are drawn from the films, not from the
   `titan_gen.i2i_xl`, denoise 0.6) from the smooth reference on white at 1024x768 (128x96 game pixels x 8), then
   `mockups/fin.py` block-votes it back to 128x96 (or 64x48 doubled for the chunky look). Pixel Art XL and Soft Pixel
   Art XL are not enabled for generation on Civitai. The cel-shading script (`mockups/cel.py`) looked muddy.
+- 2x chunky pass (round 6): the reference is form-shaded at 64x48 (`mockups/form.py`), upscaled x8 to 512x384, and
+  redrawn by the PixelArt Sprite XL LoRA at denoise 0.45-0.6 (`mockups/r7_xl512.py`): at 512 px the model's pixel is
+  one chunky pixel, so teeth and eyes survive. `mockups/snap.py` reads it back to 64x48 in 6 colours (5 tones and
+  teeth), merges islands under 3 px and outlines it; shown at 2x. `sprites/round6/` holds the nine 128x96 results.
 - `review/round1`: silhouettes from the battle sprites (dropped). `review/round2`: film references, sized to the frame.
