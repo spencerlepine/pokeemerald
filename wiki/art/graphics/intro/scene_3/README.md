@@ -1,18 +1,18 @@
-# Intro scene 3 titans: follow-up task (HUMAN-TODO)
+# Intro scene 3 titans
 
-**Status (2026-11-01):** GREATKRAYT, SANDO and the EXOGORTH are **not drawn yet**. The game shows the
-project placeholder sprite (the magenta circle with a slash from `z-day/.dev/assets/16x16-placeholder-image-sprite.png`,
-scaled up) where each creature stands, so the opening plays end to end. The rest of scene 3 is in the game:
-the capture pod (`pokeball.png`) and the sand and sea backgrounds (`legend_bg.png`). The clouds, lightning,
-bubbles and Rayquaza's orb are still Emerald's.
+**Status (2026-11-05):** GREATKRAYT, SANDO and the EXOGORTH are drawn and in the game (owner: "ship it"). They
+are drawn from the films (the Mandalorian krayt, the Phantom Menace sando, the Empire Strikes Back slug), not
+from the battle sprites. How they were made and how they go in: `tools/cutscene-generator/scenes/intro_legends/titans/README.md`.
+The rest of scene 3 is in the game too: the capture pod (`pokeball.png`) and the sand and sea backgrounds
+(`legend_bg.png`). The clouds, lightning, bubbles and Rayquaza's orb are still Emerald's.
 
-Rows in `database/pending_art.csv` (each one's `art_notes` points here):
+Rows in `database/pending_art.csv` (from `mapping/branding.csv`):
 
 | File | Becomes | In the game now |
 |---|---|---|
-| `graphics/intro/scene_3/groudon.png` + `groudon.bin` | GREATKRAYT (land titan) | placeholder |
-| `graphics/intro/scene_3/kyogre.png` + `kyogre.bin` | SANDO (sea titan) | placeholder |
-| `graphics/intro/scene_3/rayquaza.png` + `rayquaza.bin` | the EXOGORTH | placeholder on the light sky band |
+| `graphics/intro/scene_3/groudon.png` + `groudon.bin` | GREATKRAYT (land titan) | drawn, one sprite at all three pose spots |
+| `graphics/intro/scene_3/kyogre.png` + `kyogre.bin` | SANDO (sea titan) | drawn, one sprite at all three pose spots |
+| `graphics/intro/scene_3/rayquaza.png` + `rayquaza.bin` | the EXOGORTH | drawn, on the light sky band |
 
 ## The subjects (from the wiki)
 
@@ -25,7 +25,7 @@ Rows in `database/pending_art.csv` (each one's `art_notes` points here):
 ## How Emerald's scene is built (what the art has to fit)
 
 Code: `game/src/intro.c`, `Task_Scene3_*`. Art pipeline: `tools/cutscene-generator/scenes/intro_legends/`
-(`intro_legends.px.js`; the placeholder section is marked).
+(`intro_legends.px.js`, the titans section).
 
 - **Groudon and Kyogre are affine (rotate/zoom) backgrounds**: 8bpp tiles, a 512x512 map with one byte per
   tile, no tile flips, **at most 256 unique tiles** for the whole sheet. Pixels index the scene's 256-color
@@ -66,6 +66,7 @@ They are also in git history (any commit before `1124dd64`).
   like a silhouette."
 - 2026-11-01: placeholders in, titans parked as this follow-up task. Captures of both rounds are in
   `tools/cutscene-generator/scenes/intro_legends/review/`.
+- 2026-11-05: drawn from film references over many rounds (`titans/review/`), shipped.
 
 ## Tools on hand
 

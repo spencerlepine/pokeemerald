@@ -22,12 +22,12 @@ const D = "graphics/intro/scene_3/"
 // ------------------------------------------------------------------ palettes (GBA steps of 8)
 
 // bg.pal: banks 0, 2, 4-7 and 12-15 are Emerald's (kyogre, clouds, Rayquaza and the glow ramp), truncated to
-// GBA steps exactly as the game reads them. Bank 1 (the krayt) and bank 3 (the sand) are new.
+// GBA steps exactly as the game reads them. Bank 3 (the sand) is new; the titans' colours are put into banks 1, 2 and 5 below.
 const V = (s) => s.split(" ").map((h) => "#" + h)
 const BANKS = {
   0: V("000000 000000 000000 000000 000000 000000 000000 000000 000000 000000 000000 000000 000000 000000 000000 000000"),
-  // 1  the krayt slot (Groudon's bank). PLACEHOLDER art for now: 2 is the placeholder magenta; the rest is
-  //    Emerald's (1 body black, 14 eye white, 15 the glow the game pulses blue -> red)
+  // 1  the krayt (Groudon's bank). Entries 1-14 are set from the sprite below (titanBank); 15 is the glow
+  //    the game pulses blue -> red, which the krayt does not use
   1: V("8890f8 000000 f800e8 e87800 e88000 e88800 e89000 e89800 e8a000 e8a800 e8b000 e8b800 e8c000 e8d000 f8f8f8 0020c8"),
   2: V("8890f8 000000 0000f8 0810f8 1828f8 2838f8 3850f8 4860f8 5878f8 6890f8 f800e8 000000 000000 000000 f8f8f8 b00000"),
   // 3  sand: 1 deep shade .. 6 lit crest, 7-8 pebbles
@@ -76,43 +76,46 @@ scene("pod", { w: 256, h: 256 }, (c) => {
   c.rect(cx - 9, cy - 10, 4, 3, 15); c.px(cx - 10, cy - 8, 15)
 })
 
-// ------------------------------------------------------------------ the titans: PLACEHOLDERS
+// ------------------------------------------------------------------ the titans
 
-// GREATKRAYT, SANDO and the EXOGORTH are NOT drawn yet (owner, 2026-11-01: two hand-drawn rounds of the
-// krayt were rejected; the titans are a follow-up task, see wiki/art/intro_titans.md). Until then each
-// pose shows the project's placeholder sprite (z-day .dev/assets/16x16-placeholder-image-sprite.png,
-// a magenta circle with a slash) scaled up, centred where Emerald's creature stood, so the scene runs
-// and every camera move still lands on something.
-const PLACEHOLDER = `
-.....XXXXXX.....
-...XX......XX...
-..X.........XX..
-.X.........XX.X.
-.X........XX..X.
-X........XX....X
-X.......XX.....X
-X......XX......X
-X.....XX.......X
-X....XX........X
-XX..XX.........X
-.X.XX.........X.
-.XXX..........X.
-..X..........X..
-...XX......XX...
-.....XXXXXX.....`
-function placeholder(c, cx, cy, scale, key) {
-  const rows = PLACEHOLDER.trim().split("\n"), x0 = Math.round(cx - 8 * scale), y0 = Math.round(cy - 8 * scale)
-  rows.forEach((row, y) => [...row].forEach((ch, x) => { if (ch === "X") c.rect(x0 + x * scale, y0 + y * scale, scale, scale, key) }))
+// GREATKRAYT, SANDO and the EXOGORTH (owner-approved, 2026-11-05) are drawn as flat cel art and turned into
+// 128x96 pixel sprites (titans/README.md says how). titans/export.py writes them, already in bank colours,
+// to titans/titans.data.js: TITANS[name] = { pal: { entry: hex }, rows: [index chars] }.
+include("titans/titans.data.js")
+// Put a titan's colours into its bank. Entries it does not use stay as they are.
+function titanBank(bank, name) {
+  const b = bank.slice()
+  for (const [i, hex] of Object.entries(TITANS[name].pal)) b[+i] = hex
+  return b
 }
-// Centres of Emerald's poses on the 512x512 affine maps (pixel bounding boxes of groudon.bin / kyogre.bin).
+BANKS[1] = titanBank(BANKS[1], "krayt")
+BANKS[2] = titanBank(BANKS[2], "sando")
+BANKS[5] = titanBank(BANKS[5], "exogorth")
+// Draw a titan with its top-left corner at (x0, y0), wrapping round the map like the BG does. On the affine
+// maps every corner is on the 8 px tile grid, so the three copies share their tiles (an affine BG holds at most 256).
+function titan(c, name, x0, y0, size) {
+  TITANS[name].rows.forEach((row, y) => [...row].forEach((ch, x) => {
+    if (ch !== "0") c.px((x0 + x + size) % size, (y0 + y + size) % size, parseInt(ch, 16))
+  }))
+}
+// Where each copy goes. intro.c's PanFadeAndZoomScreen(X, Y) shows map point (128, 128) at screen (X, Y), so
+// the letterbox (screen rows 32-127) shows map x 128-X.., y 160-Y... Each copy sits where Emerald's pose did
+// and fills the 240x96 window (sprites are 128x96; 56 px of sand either side).
+// GREATKRAYT: (80, 40) -> pose B at map (48, 120); (-96, 169) -> pose A at (224, -9); the pan at Y -175 ->
+// pose C at y 335 (the pan stops at X 160, which shows map x -32..). The closing zoom (X, Y -> 120) lands
+// on map (128, 128): the krayt's head on pose B.
 use(BANKS[1])
-scene("krayt", { w: 512, h: 512 }, (c) => { for (const [x, y] of [[379, 44], [203, 169], [124, 392]]) placeholder(c, x, y, 5, "2") })
+scene("krayt", { w: 512, h: 512 }, (c) => { for (const [x, y] of [[280, -8], [104, 120], [24, 336]]) titan(c, "krayt", x, y, 512) })
+// SANDO: the camera sways round three spots 256 px apart; measured in the ROM, these corners put the titan in
+// the middle of the window with its tail tip just above the top edge.
 use(BANKS[2])
-scene("sando", { w: 512, h: 512 }, (c) => { for (const [x, y] of [[176, 128], [176, 380], [432, 384]]) placeholder(c, x, y, 5, "a") })
+scene("sando", { w: 512, h: 512 }, (c) => { for (const [x, y] of [[96, 72], [96, 328], [352, 328]]) titan(c, "sando", x, y, 512) })
 // rayquaza.png is a text BG in bank 5: the light sky band (rows 32-127, index 13, which the game dims
-// and flashes) with the creature on it, centred at (124, 80).
+// and flashes) with the creature on it. Rayquaza coiled round the middle, where the code's orb sprite (misc.png)
+// grows to about 110 px wide; the EXOGORTH stands at the right edge instead, its open jaws turned to the orb,
+// so the orb does not hide it.
 use(BANKS[5])
-scene("exogorth", { w: 256, h: 256 }, (c) => { c.rect(0, 32, 240, 96, "d"); placeholder(c, 124, 80, 4, "4") })
+scene("exogorth", { w: 256, h: 256 }, (c) => { c.rect(0, 32, 240, 96, "d"); titan(c, "exogorth", 140, 32, 256) })
 
 // ------------------------------------------------------------------ the ground behind them (legend_bg.png)
 

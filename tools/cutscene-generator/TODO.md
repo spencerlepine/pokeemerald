@@ -4,9 +4,9 @@
 (the bike ride) is in the game as KAEL/MIRA's speeder ride on Tatooine with Tusken raiders (round 3, APPROVED and
 shipped 2026-11-01; review files in `scenes/intro_bike/review/`). Intro scene 1 (`scenes/intro_drops`: dry canyon at dawn, round 3 drops the water and plants,
 pan up to the twin suns, ship flyover, no logo) is in the game, round 1 APPROVED and shipped 2026-11-01 (`scenes/intro_drops/review/`).
-Intro scene 3 (`scenes/intro_legends`) is in the game: capture pod, sand and sea backgrounds shipped 2026-11-01. The three
-titans (GREATKRAYT, SANDO, EXOGORTH) are PLACEHOLDERS, parked as a follow-up task: see
-`../../wiki/art/graphics/intro/scene_3/README.md`. Next: the credits ride.
+Intro scene 3 (`scenes/intro_legends`) is in the game: capture pod, sand and sea backgrounds shipped 2026-11-01, the three
+titans (GREATKRAYT, SANDO, EXOGORTH) on 2026-11-05 (`scenes/intro_legends/titans/`). The clouds, lightning, bubbles
+and the orb are still Emerald's. Next: the credits ride.
 Start with [GBA.md](GBA.md) (how art becomes game files) and [STYLE.md](STYLE.md) (what to match).
 
 Title screen, intro movie, credits, the titan/EXOGORTH scene, evolution, trade and shuttle-ride scenes.
