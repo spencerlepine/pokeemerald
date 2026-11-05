@@ -1628,3 +1628,7 @@ const u16 gTilesetPalettes_UnionRoom[][16] =
 const u32 gTilesetTiles_UnionRoom[] = INCGFX_U32("data/tilesets/secondary/union_room/tiles.png", ".4bpp.lz");
 
 #include "sw_graphics.h"
+
+#define SW_PAINT_GRAPHICS
+#include "sw_paint.h"
+#undef SW_PAINT_GRAPHICS

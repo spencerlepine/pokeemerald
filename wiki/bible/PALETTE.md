@@ -297,7 +297,7 @@ Storm-grey ocean, white-grey platforms. Ground -> wet grey deck; canopies -> gre
 | Water Light | `#607888` | 96, 120, 136 | accent |
 | Water Deep | `#002038` | 0, 32, 56 | neutral |
 
-## World terrain (ground, paths, rock, liquids): rules — 2026-11-05, in review
+## World terrain (ground, paths, rock, liquids): rules — 2026-11-05, look A approved and in the game
 
 The rules every planet's terrain follows. The colours are in `tools/tile-generator/tilegen/paint.py` (`MATERIALS`,
 `PLANETS`); preview them in the [Town Map Viewer](https://claude.ai/artifact/UT4kw8Y7anvMMvvJHw5Gwf) (looks A, B, C).

@@ -28,6 +28,13 @@ def main(argv):
         if world.seam_problems:
             return 1
         print(f"{len(report)} areas written, {sum(1 for r in report if r[3])} with their own tileset")
+        from world_port import paint as PA
+        PA.paint(world)
+        return 0
+    if cmd == "paint":
+        # the paint step alone, on an installed game (install runs it too)
+        from world_port import paint as PA
+        PA.paint(I.World())
         return 0
     if cmd == "seams":
         return seams(argv[1:])

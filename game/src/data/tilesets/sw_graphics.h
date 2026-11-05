@@ -1672,7 +1672,7 @@ const u16 gTilesetPalettes_SwMustafarMiningControl[][16] =
 	INCGFX_U16("data/tilesets/secondary/sw/mustafar-mining-control/palettes/15.pal", ".gbapal"),
 };
 
-const u32 gTilesetTiles_SwMustafarMiningFacility[] = INCGFX_U32("data/tilesets/secondary/sw/mustafar-mining-facility/tiles.png", ".4bpp.lz", "-num_tiles 138 -Wnum_tiles");
+const u32 gTilesetTiles_SwMustafarMiningFacility[] = INCGFX_U32("data/tilesets/secondary/sw/mustafar-mining-facility/tiles.png", ".4bpp.lz", "-num_tiles 133 -Wnum_tiles");
 
 const u16 gTilesetPalettes_SwMustafarMiningFacility[][16] =
 {
@@ -2068,7 +2068,7 @@ const u16 gTilesetPalettes_SwRoute102[][16] =
 	INCGFX_U16("data/tilesets/secondary/sw/route-102/palettes/15.pal", ".gbapal"),
 };
 
-const u32 gTilesetTiles_SwRoute103[] = INCGFX_U32("data/tilesets/secondary/sw/route-103/tiles.png", ".4bpp.lz", "-num_tiles 174 -Wnum_tiles");
+const u32 gTilesetTiles_SwRoute103[] = INCGFX_U32("data/tilesets/secondary/sw/route-103/tiles.png", ".4bpp.lz", "-num_tiles 169 -Wnum_tiles");
 
 const u16 gTilesetPalettes_SwRoute103[][16] =
 {
@@ -2838,7 +2838,7 @@ const u16 gTilesetPalettes_SwRoute134[][16] =
 	INCGFX_U16("data/tilesets/secondary/sw/route-134/palettes/15.pal", ".gbapal"),
 };
 
-const u32 gTilesetTiles_SwRwookrrorro[] = INCGFX_U32("data/tilesets/secondary/sw/rwookrrorro/tiles.png", ".4bpp.lz", "-num_tiles 183 -Wnum_tiles");
+const u32 gTilesetTiles_SwRwookrrorro[] = INCGFX_U32("data/tilesets/secondary/sw/rwookrrorro/tiles.png", ".4bpp.lz", "-num_tiles 179 -Wnum_tiles");
 
 const u16 gTilesetPalettes_SwRwookrrorro[][16] =
 {
@@ -2992,7 +2992,7 @@ const u16 gTilesetPalettes_SwTerraCaveEnd[][16] =
 	INCGFX_U16("data/tilesets/secondary/sw/terra-cave-end/palettes/15.pal", ".gbapal"),
 };
 
-const u32 gTilesetTiles_SwTibannaRefinery[] = INCGFX_U32("data/tilesets/secondary/sw/tibanna-refinery/tiles.png", ".4bpp.lz", "-num_tiles 234 -Wnum_tiles");
+const u32 gTilesetTiles_SwTibannaRefinery[] = INCGFX_U32("data/tilesets/secondary/sw/tibanna-refinery/tiles.png", ".4bpp.lz", "-num_tiles 228 -Wnum_tiles");
 
 const u16 gTilesetPalettes_SwTibannaRefinery[][16] =
 {
@@ -3146,7 +3146,7 @@ const u16 gTilesetPalettes_SwTipocaCitySupplyDepot[][16] =
 	INCGFX_U16("data/tilesets/secondary/sw/tipoca-city-supply-depot/palettes/15.pal", ".gbapal"),
 };
 
-const u32 gTilesetTiles_SwToscheStation[] = INCGFX_U32("data/tilesets/secondary/sw/tosche-station/tiles.png", ".4bpp.lz", "-num_tiles 315 -Wnum_tiles");
+const u32 gTilesetTiles_SwToscheStation[] = INCGFX_U32("data/tilesets/secondary/sw/tosche-station/tiles.png", ".4bpp.lz", "-num_tiles 310 -Wnum_tiles");
 
 const u16 gTilesetPalettes_SwToscheStation[][16] =
 {

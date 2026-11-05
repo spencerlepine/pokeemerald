@@ -29,6 +29,16 @@ it can run again and gives the same files. Areas outside the run keep their vani
   `data/tilesets/secondary/sw/<area-id>/`, declared in `src/data/tilesets/sw_*.h`. A map that replaces a vanilla
   one keeps every vanilla metatile id, the tiles scripts name (`metatile_labels.h`) and the animated tiles; new
   tiles take the unused slots. New tiles use one grey and magenta palette in a free slot.
+- **Terrain colours** (`paint.py`, run after the install; owner approved look A, 2026-11-05). Every outdoor map
+  is painted in its planet's colours by tile-generator's `tilegen/paint.py` (one world palette of material ramps,
+  rules in `wiki/bible/PALETTE.md`, "World terrain"). Only palettes change: each planet gets a copy of every
+  vanilla tileset its maps use (`gTileset_General_Tatooine`: the vanilla tiles, metatiles and animation, palettes
+  from `data/tilesets/sw_paint/<planet>/<tileset>/`, declared in `src/data/tilesets/sw_paint.h`), and a per-area
+  tileset has its palettes painted in place. A bank that draws a net-new item, a grey vanilla ground or a
+  walkway takes that item's colours. Buildings and interiors stay grey or vanilla. Net-new terrain (the Dune
+  Sea, mud, cloud, deck, wroshyr trunks and platforms, gnarltrees, fungi, cloud and void edges, rails, durasteel
+  walls) is drawn with the tiles of the vanilla item named in `ITEM_PAINT` (`tiles.ph_source`) and keeps its
+  own metatile and behaviour; only roles vanilla never drew are still the pink placeholder.
 - **Layouts**. A map's own vanilla layout is rewritten in place; a shared one or a new area gets
   `LAYOUT_SW_<ID>`.
 - **Warps and connections** (`warps.py`). A map that replaces a vanilla one keeps every vanilla warp at its index

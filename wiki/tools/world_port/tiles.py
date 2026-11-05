@@ -161,6 +161,24 @@ def ph_behaviour(item, role):
     return mb("MB_NORMAL")
 
 
+def ph_source(C, item, role):
+    """The vanilla metatile a net-new terrain item is drawn with (the Dune Sea is the sea, mud the sand...),
+    or None: then it stays the placeholder."""
+    from tilegen import paint as PT
+    from . import terrain as TR
+    if item not in PT.ITEM_PAINT or not getattr(C, "prim", None):
+        return None
+    T, R, gba = TR._tilegen()
+    src = PT.ITEM_PAINT[item][0]
+    p = T.pair(C.prim, C.sec)
+    for s in ((src,) if isinstance(src, str) else src):
+        for r in (role, "fill"):
+            m = T.lookup(C.prim, C.sec, s, r, TR.catalog()["stats"], p)
+            if m is not None and m != T.MISSING:
+                return int(m) & 0x3FF
+    return None
+
+
 ROOM_FILL = {"floor": FILL["floor"], "floor-alt": FILL["floor"], "exit-mat": FILL["path"]}
 
 
@@ -195,6 +213,7 @@ class Builder:
         self.C, self.P, self.S, self.mode = C, P, S, mode
         self.defs = []          # per symbol: (refs[8], attr)
         self.foreign = list(foreign)   # neighbours' metatiles shown at this map's edges (seams.py)
+        self.extra_src = set()         # vanilla secondary metatiles drawn by net-new terrain (ph_source)
 
     def vanilla_meta(self, mid):
         if mid < N_PRIM_META:
@@ -215,6 +234,13 @@ class Builder:
         top_ph = ph_top()
         if kind == "ph":
             _, sheet, item, role = s
+            src = ph_source(self.C, item, role)
+            if src is not None:
+                # net-new terrain drawn with a vanilla item's tiles (tilegen.paint.ITEM_PAINT); its own behaviour
+                if src >= N_PRIM_META:
+                    self.extra_src.add(src)
+                ent, attr = self.vanilla_meta(src)
+                return refs_of_vanilla(ent), ph_behaviour(item, role) | (attr & 0xF000)
             fill = group_fill(item)
             refs = [new_ref(flat_tile(fill))] * 4 + [new_ref(t) for t in top_ph]
             return refs, ph_behaviour(item, role) | (COVERED << 12)
@@ -239,8 +265,8 @@ class Builder:
         """Lay out the area's secondary tileset. Returns tiles, palettes, metatiles, attributes and final cells."""
         from . import pins
         C, S = self.C, self.S
-        used = sorted({int(v) for v in np.unique(C.meta) if v >= N_PRIM_META})
         self.defs = [self.sym_def(s) for s in C.syms]
+        used = sorted({int(v) for v in np.unique(C.meta) if v >= N_PRIM_META} | self.extra_src)
         n_sec = S.n_metatiles
         if self.mode == "pinned":
             # every vanilla metatile keeps its id; only the tiles of the ones in use (or named by scripts) and

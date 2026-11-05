@@ -827,3 +827,5 @@ const struct Tileset gTileset_UnionRoom =
 };
 
 #include "sw_headers.h"
+
+#include "sw_paint.h"

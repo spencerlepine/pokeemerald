@@ -121,6 +121,9 @@ def paint_bank(pal, assign: dict, key: str = "") -> list:
         L = lch[i][0]
         if c == "grey" and waterbank and L >= 85 and "water" in assign:
             c, L = "water", 100                     # foam
+        if c is None and lch[i][1] >= 100:
+            out.append(trunc(pal[i]))              # magenta: vanilla's unused slots, the placeholder pink
+            continue
         mat = assign.get(c or "other")
         if not mat:
             # not terrain (roofs, walls, signs): greybox grey, like the rest of the world for now
@@ -213,8 +216,8 @@ ITEM_PAINT = {
     "cloud":            ("water-ocean", {"water": "cloud"}),
     "mud":              ("sand", {"sand": "mud", "dirt": "mud"}),
     "deck":             ("ground-path", {"dirt": "deck", "ground": "deck"}),
-    "wroshyr-platform": (("bridge", "ground-path"), {"dirt": "bark", "sand": "bark", "rock": "bark"}),
-    "wroshyr":          ("tree", {"foliage": "canopy", "dirt": "bark", "rock": "bark"}),
+    "wroshyr-platform": (("bridge", "ground-path"), {}),
+    "wroshyr":          ("tree", {"foliage": "canopy", "rock": "bark"}),
     "gnarltree":        ("tree", {"foliage": "bogmoss", "dirt": "mud"}),
     "fungus":           ("tree", {"foliage": "fungus"}),
     "cloud-edge":       ("cliff", {"rock": "cloud"}),
@@ -241,7 +244,8 @@ def look(planet: str, variant: str = "A", item: str | None = None) -> dict:
         base.update(ITEM_PAINT[item][1])
     if item in ITEM_ALL:
         m = "deck" if planet in METAL_WORLDS and item == "bridge" else ITEM_ALL[item]
-        base.update({c: m for c in CLASSES})
+        # only the classes ground and paths never use: a walkway's bank is often the ground's bank too
+        base.update({c: m for c in ("grey", "other", "roof")})
     if item in GREY_GROUNDS and "ground" in base:
         base["grey"] = base["ground"]
     return base

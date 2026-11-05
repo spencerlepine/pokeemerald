@@ -89,7 +89,7 @@ python -m tilegen terrain build --planet HOTH        # game-format greybox tiles
 - **Build.** `terrain build` writes the planet's greybox pairs in game format through the palette gate (all 19
   planets pass). Nothing is installed: the map work writes the autotiled map.bin later.
 
-## Paint: Star Wars colours for the terrain (2026-11-05, prototype, in review)
+## Paint: Star Wars colours for the terrain (2026-11-05; look A approved and in the game)
 
 `tilegen/paint.py` gives every planet's ground, paths, sand, rock, trees and liquids their Star Wars colours.
 Pixels stay vanilla; only the palette banks change, so the result can go straight into a planet's General copy.
@@ -103,8 +103,9 @@ Pixels stay vanilla; only the palette banks change, so the result can go straigh
   take the planet's ground. Bridges are bark, or deck plate on the metal worlds.
 - `paint_pair(pair, look(planet, "A", item))` returns the painted pair; render it with `render_metatile`.
 
-Not done yet: picking one look per planet, writing the painted banks into each planet's General copy, the
-redraws (wroshyr trunk, gnarltree, fungus, cloud edge, void edge, rail, durasteel wall: drawn now as recoloured
+Look A is the one in the game (owner, 2026-11-05): the world port's `paint.py` writes each planet's painted
+tileset copies (`wiki/tools/world_port/README.md`, "Terrain colours"). B and C stay for comparison.
+Not done yet: the redraws (wroshyr trunk, gnarltree, fungus, cloud edge, void edge, rail, durasteel wall: drawn now as recoloured
 trees and cliffs) and new textures (dune ripples, snow sparkle).
 A redesigned area's ground is no longer Mossdeep's shallow water (`grid_items` skips `shallow-water` as a ground).
 
