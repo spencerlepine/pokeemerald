@@ -12,4 +12,8 @@ Work in progress (2026-11-05). The titans are drawn from the films, not from the
 - `titan_gen.py`: Civitai image to image at the scene's grid (1008x672 = 144x96 x 7, the API caps a side at 1024)
   and SDXL text to image. Pay with `--currency green`. Findings: image to image at 0.35-0.5 drifts away from the
   film creature; SDXL text to image does not know these creatures (generic monsters), so it is not used.
+- Pixel art pass (round 4): SDXL image to image with the Super PixelArt Sprite XL LoRA (`urn:air:sdxl:lora:civitai:579244@646044`,
+  `titan_gen.i2i_xl`, denoise 0.6) from the smooth reference on white at 1024x768 (128x96 game pixels x 8), then
+  `mockups/fin.py` block-votes it back to 128x96 (or 64x48 doubled for the chunky look). Pixel Art XL and Soft Pixel
+  Art XL are not enabled for generation on Civitai. The cel-shading script (`mockups/cel.py`) looked muddy.
 - `review/round1`: silhouettes from the battle sprites (dropped). `review/round2`: film references, sized to the frame.

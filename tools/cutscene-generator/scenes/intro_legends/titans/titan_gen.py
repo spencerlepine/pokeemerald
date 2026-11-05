@@ -145,3 +145,44 @@ def t2i(species, prompt, negative, n=4, w=1024, h=576, seed=None, currency='gree
         p.with_suffix('.json').write_text(json.dumps({'prompt': prompt, 'negative': negative, 'seed': im.get('seed') or seed + i, 'workflow': wid}, indent=1))
         print(p, flush=True); paths.append(p)
     return paths
+
+
+PIXEL_XL = "urn:air:sdxl:lora:civitai:120096@135931"  # Pixel Art XL (nerijs)
+
+
+def i2i_xl(species, init_png, prompt, negative, denoise=0.55, n=2, lora=PIXEL_XL, strength=1.0,
+           currency='green', tag='xl', seed=None, cfg=6):
+    """SDXL image to image with a pixel-art LoRA. init_png is already at the output size (multiples of 8)."""
+    seed = seed or random.randrange(1, 2**31 - 1)
+    w, h = Image.open(init_png).size
+    step = {"$type": "imageGen", "input": {
+        "engine": "comfy", "ecosystem": "sdxl", "operation": "createVariant",
+        "checkpointModel": cc.CHECKPOINTS['sdxl'], "loras": {lora: strength} if lora else {},
+        "image": data_uri(init_png), "denoiseStrength": denoise, "prompt": prompt,
+        "negativePrompt": negative, "sampler": "euler_ancestral", "scheduler": "normal",
+        "steps": 30, "cfgScale": cfg, "seed": seed, "width": w, "height": h,
+        "quantity": n, "outputFormat": "jpeg"}}
+    wf = {"steps": [step], "currencies": currency.split(',')}
+    url = f"{cc.ORCHESTRATOR}/v2/consumer/workflows"
+    r = cc.http('POST', url, json=wf).json(); wid = r['id']; print('submitted', wid, cc._cost(r), flush=True)
+    t0 = time.time()
+    while True:
+        s = cc.http('GET', f'{url}/{wid}').json(); st = s.get('status')
+        imgs = (s.get('steps') or [{}])[0].get('output', {}).get('images', [])
+        if st in ('failed', 'expired', 'canceled'):
+            print(f'{wid} {st}: {json.dumps(s)[:1500]}'); return []
+        if st == 'succeeded' and imgs and all(i.get('available') for i in imgs):
+            break
+        if time.time() - t0 > 600:
+            print('timeout ' + wid); return []
+        time.sleep(3)
+    out = HERE / 'runs' / species / 'raw'; out.mkdir(parents=True, exist_ok=True)
+    stamp = dt.datetime.now().strftime('%Y%m%d-%H%M%S'); paths = []
+    for i, im in enumerate(imgs):
+        d = requests.get(im['url'], timeout=120); d.raise_for_status()
+        p = out / f"{stamp}_{tag}_d{denoise}_s{im.get('seed') or seed + i}.png"
+        Image.open(io.BytesIO(d.content)).convert('RGB').save(p)
+        p.with_suffix('.json').write_text(json.dumps({'prompt': prompt, 'init': str(init_png), 'denoise': denoise,
+                                                      'lora': lora, 'seed': im.get('seed') or seed + i, 'workflow': wid}, indent=1))
+        print(p, flush=True); paths.append(p)
+    return paths
