@@ -23,4 +23,9 @@ Work in progress (2026-11-05). The titans are drawn from the films, not from the
 - Draw, then pixelate (round 7, the owner's method): DreamShaper XL (`112902@126688`) image to image from the
   picked pose at denoise 0.5-0.8 with a bold cel-shaded illustration prompt (`mockups/r10.py`), then
   `mockups/illpx.py` turns the drawing into pixel art (cut the page, shrink, quantise, merge islands, outline).
+- **Final candidate** (`sprites/final/`, 128x96, 12-13 colours each, under the 15-colour bank limit): DreamShaper XL
+  image to image from the picked pose with a flat anime cel prompt (Ken Sugimori style, 2-tone shading; `mockups/r12.py`,
+  `r13.py`), then `mockups/flatpx.py` (box shrink, 12 colours, island merge, 2 majority passes, one outline colour,
+  bright specks kept as a tooth accent). Sources: krayt `s755866184`, sando `s1778252834` (saturation 0.9),
+  exogorth `s1492340030`. `mockups/final.py` builds them. Not installed in the game yet.
 - `review/round1`: silhouettes from the battle sprites (dropped). `review/round2`: film references, sized to the frame.
