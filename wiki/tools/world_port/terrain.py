@@ -78,25 +78,20 @@ def pair_of(area):
 
 
 def autotile_items(area, prim, sec):
-    """Item and role of every cell of the area's grid, and the vanilla metatile for it (None: missing)."""
+    """Item and role of every cell of the area's grid, and the vanilla metatile for it (None: missing).
+    Tiles come from tile-generator's pattern tiler (`tilegen/synth.py`): each cell takes the metatile vanilla
+    uses where the surroundings look the same, so cliff, path and shore pieces join the way they do in Hoenn."""
     T, R, gba = _tilegen()
+    from tilegen import synth as S
     c = catalog()
     ar = c["A"][area.id]
     p = T.pair(prim, sec)
     names = T.grid_items(area.grid, prim, sec, ar["indoor"], area.kind)
     names = [[T.kit_item(area.planet, n) for n in row] for row in names]
     roles = R.roles(names)
-    out = []
-    for y, row in enumerate(names):
-        line = []
-        for x, item in enumerate(row):
-            role = roles[y][x]
-            mid = None if item in T.NEW_ITEMS else T.lookup(prim, sec, item, role, c["stats"], p)
-            if mid is not None and unsafe(T, p, mid, area.grid[y][x]):
-                mid = None          # a door, warp, slide or ladder tile learned as ground: placeholder instead
-            line.append((item, role, mid))
-        out.append(line)
-    return out
+    # a door, warp, slide or ladder tile learned as ground is never used: placeholder instead
+    mids = S.tile(names, prim, sec, c["stats"], p, ok=lambda y, x, m: not unsafe(T, p, m, area.grid[y][x]))
+    return [[(item, roles[y][x], mids[y][x]) for x, item in enumerate(row)] for y, row in enumerate(names)]
 
 
 # behaviours that do something when the player stands on or walks onto the cell: never plain ground or water

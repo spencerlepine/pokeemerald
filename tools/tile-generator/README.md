@@ -47,7 +47,22 @@ python -m tilegen terrain build --planet HOTH        # game-format greybox tiles
   that item and role in that tileset pair (voted by the number of layouts that use it, so one big map cannot win
   alone; grounds take the shared primary tiles first, cliffs, walls and water the pair's own). A role vanilla
   never drew in that pair has no tile: the cell shows the placeholder and the row is added as TODO
-  (`pending-mockup`) with the areas that need it. `PAIR_OVERRIDE` picks the pair for a redesigned area whose
+  (`pending-mockup`) with the areas that need it.
+  The cells the game gets are placed by pattern (`tilegen/synth.py`): one role per cell cannot say which
+  piece of a multi-cell Hoenn cliff, shore or path edge goes where. Each cliff, wall, water, tree and path cell
+  takes the metatile vanilla puts where the 5x5 cells around it look most alike (items by name, so an edge tile
+  has the right ground drawn in beside it). An area uses one set per item: the primary's shared tiles, or the
+  pair's own when they match closer overall (Lavaridge's ash cliffs). Then each tile is checked against its four
+  neighbours and swapped for another candidate where vanilla never puts that pair side by side. Grounds and wild
+  grass are their plain fill (no copied flowers); a one-cell path, or a path with only path or sand around it, is
+  the plain path. A planet-kit swap on a vanilla layout is placed the same way around the vanilla cells it keeps.
+  Cliffs on the General tileset don't use patterns (patterns mixed pieces of different vanilla mountains): they
+  take `ROCK_KITS`, the General rock set read off the tileset (0x68-0xAF): edges, outer and inner corners and
+  fill by which of the 8 neighbours are open, a grass and a sand version by the ground beside them, a boulder
+  (0xE0, 0xE2) for a one-cell-wide or lone rock; 0xBE and 0xBF where a side wall meets a rim (read from vanilla
+  adjacency). Then a repair pass: where two set pieces meet in a way no vanilla General map draws, the cell takes
+  the rock piece vanilla does put beside its four neighbours. A cliff by water or on a pair's own ground
+  (Lavaridge ash) keeps its pattern tile. `PAIR_OVERRIDE` picks the pair for a redesigned area whose
   vanilla pair is wrong for it (NiJedha: Rustboro's stone city, not Mt. Pyre).
 - **Planet kit.** `PLANET_KIT` swaps vanilla items per planet (owner: no Hoenn tree border outside Endor and
   Yavin 4): trees become cliffs on Tatooine, Sullust, Hoth, Jedha and the rock worlds, wroshyr on Kashyyyk,

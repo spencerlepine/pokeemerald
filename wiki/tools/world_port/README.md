@@ -15,7 +15,8 @@ it can run again and gives the same files. Areas outside the run keep their vani
 
 - **Terrain** (`terrain.py`). A vanilla map with the same grid keeps its vanilla cells; a route or cave with a few
   cells changed (hybrid) keeps vanilla cells where the grid is unchanged; a redrawn town and every new area is
-  drawn from the grid with tile-generator's terrain items. A terrain role the tileset pair has no tile for
+  drawn from the grid with tile-generator's terrain items, each cell placed by the vanilla pattern it matches
+  (`tilegen/synth.py`), so cliff, shore and path pieces join as in Hoenn. A terrain role the tileset pair has no tile for
   (Dune Sea, wroshyr trunks...) is the pink placeholder over a grey fill, its own metatile per role. So is a
   ground or water cell whose learned vanilla tile does something underfoot (a door, warp, slide, ladder...).
   Interiors keep their vanilla cells (no planet kit indoors).

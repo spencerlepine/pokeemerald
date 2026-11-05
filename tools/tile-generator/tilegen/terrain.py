@@ -468,10 +468,12 @@ def autotile(grid: list[str], prim: str, sec: str, stats: dict, indoor: bool = F
 
 def _tile_names(names, prim, sec, stats, p, base=None):
     """Item grid -> cells. `base` (vanilla metatiles) is kept where the item is the vanilla one."""
+    from . import synth
     role_grid = R.roles(names)
     H, W = len(names), len(names[0])
     out = np.full((H, W), MISSING, np.uint16)
     needs: dict = {}
+    picks = synth.tile(names, prim, sec, stats, p, fixed=base)     # each cell by its vanilla pattern
     for y in range(H):
         for x in range(W):
             if base is not None and base[y, x] != MISSING:
@@ -480,7 +482,8 @@ def _tile_names(names, prim, sec, stats, p, base=None):
             key = (names[y][x], role_grid[y][x])
             if key not in needs:
                 needs[key] = None if key[0] in NEW_ITEMS else lookup(prim, sec, key[0], key[1], stats, p)
-            out[y, x] = needs[key] if needs[key] is not None else ph_code(key[0])
+            m = picks[y][x] if key[0] not in NEW_ITEMS else None
+            out[y, x] = m if m is not None else ph_code(key[0])
     return out, needs
 
 
